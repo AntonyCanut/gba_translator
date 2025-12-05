@@ -162,7 +162,7 @@
 0xA4CAA9: Black 
 0xA4CAB0: unknown location
 0xA4CAC1: Ex Shadow Admin
-0xA4CAD1:  FばINSTANT
+0xA4CAD1: FばINSTANT
 0xA4CADC: FAST
 0xA4CAF9: Power: 
 0xA4CB01: OHKO
@@ -177,9 +177,9 @@
 0xA4CB72: Heal Replacement HP
 0xA4CB86: Protect Self
 0xA4CB93: + Team {UNKNOWN_STR}
-0xA4CB9D:  Foes
-0xA4CBA8:  Weather
-0xA4CBB1:  Terrain
+0xA4CB9D: Foes
+0xA4CBA8: Weather
+0xA4CBB1: Terrain
 0xA4CBBA: Sunny
 0xA4CBC0: Rainy
 0xA4CBC6: Sandstorm
@@ -214,7 +214,7 @@
 0xA4CD94: -- Speed Foes
 0xA4CDA2: Ignore Foe Ability
 0xA4CDB5: Bypass Protection
-0xA4CDC7:  WRONG SAVE TYPE!\nPlease change to Flash 128k.\pIf you are using VBA, consider\nswitching to the superior {COLOR}ÉmGBA{COLOR}Á.\pIf you do not wish to, then follow\nthese instructions to fix the Save Type.\p{COLOR}ÇVBA Instructions{COLOR}Á:\pFirst, click {COLOR}ÉOptions{COLOR}Á on the top bar.\pNext, under {COLOR}ÉEmulator{COLOR}Á, select the\n{COLOR}ÉSave Type{COLOR}Á option.\pAnd then, click {COLOR}ÉFlash 128K{COLOR}Á.\pFinally, completely close and restart\nthe emulator.\p{COLOR}Ç3DS Instructions{COLOR}Á:\pUse the {COLOR}ÉNew Super Ultimate VC Injector\nfor 3DS{COLOR}Á to create the CIA file.\pOnce open, confirm the {COLOR}ÉROM Save Type{COLOR}Á\nis set to the following:\p{COLOR}ÉFlash 1Mbit (Macronix, ID: 0x09C2)\n+ RTC{COLOR}Á.\pThe {COLOR}Éinjection method{COLOR}Á must also be\nset to {COLOR}ÉGBA Virtual Console{COLOR}Á.\pIf your emulator was not mentioned,\nplease change emulators.
+0xA4CDC7: WRONG SAVE TYPE!\nPlease change to Flash 128k.\pIf you are using VBA, consider\nswitching to the superior {COLOR}ÉmGBA{COLOR}Á.\pIf you do not wish to, then follow\nthese instructions to fix the Save Type.\p{COLOR}ÇVBA Instructions{COLOR}Á:\pFirst, click {COLOR}ÉOptions{COLOR}Á on the top bar.\pNext, under {COLOR}ÉEmulator{COLOR}Á, select the\n{COLOR}ÉSave Type{COLOR}Á option.\pAnd then, click {COLOR}ÉFlash 128K{COLOR}Á.\pFinally, completely close and restart\nthe emulator.\p{COLOR}Ç3DS Instructions{COLOR}Á:\pUse the {COLOR}ÉNew Super Ultimate VC Injector\nfor 3DS{COLOR}Á to create the CIA file.\pOnce open, confirm the {COLOR}ÉROM Save Type{COLOR}Á\nis set to the following:\p{COLOR}ÉFlash 1Mbit (Macronix, ID: 0x09C2)\n+ RTC{COLOR}Á.\pThe {COLOR}Éinjection method{COLOR}Á must also be\nset to {COLOR}ÉGBA Virtual Console{COLOR}Á.\pIf your emulator was not mentioned,\nplease change emulators.
 0xA4D0BF: WARNING!\pThe correct system time could\nnot be read.\pEnable the Real Time Clock (RTC),\nand make sure the time is correct.
 0xA4D138: WARNING!\pThe correct system time could\nnot be read.\pEnable the Real Time Clock (RTC),\nand make sure the time is correct.\pIf you are using VBA, consider\nswitching to the superior {COLOR}ÉmGBA{COLOR}Á.\pIf you do not wish to, then follow\nthese instructions to enable the RTC.\p{COLOR}ÇVBA Instructions{COLOR}Á:\pFirst, click {COLOR}ÉOptions{COLOR}Á on the top bar.\pNext, under {COLOR}ÉEmulator{COLOR}Á, select the\n{COLOR}ÉReal Time Clock{COLOR}Á option.\pFinally, completely close and restart\nthe emulator.\p{COLOR}Ç3DS Instructions{COLOR}Á:\pUse the {COLOR}ÉNew Super Ultimate VC Injector\nfor 3DS{COLOR}Á to create the CIA file.\pOnce open, confirm the {COLOR}ÉROM Save Type{COLOR}Á\nis set to the following:\p{COLOR}ÉFlash 1Mbit (Macronix, ID: 0x09C2)\n+ RTC{COLOR}Á.\pThe {COLOR}Éinjection method{COLOR}Á must also be\nset to {COLOR}ÉGBA Virtual Console{COLOR}Á.\p{COLOR}ÇDelta Instructions{COLOR}Á:\pUse the premium version of Delta\nor switch to {COLOR}ÉGBA4iOS{COLOR}Á.
 0xA4D475: WARNING!\pRTC tampering has been detected\nin your save file!\pThe current ingame date is set to\n{STR_VAR_1}/{STR_VAR_2}/{STR_VAR_3}.\pAll daily events such as gifts\nand Raids may cease to function\lproperly until the day after.\pPlease refrain from tampering\nwith the RTC again.

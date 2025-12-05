@@ -1,250 +1,250 @@
-0x416B86: The Mail was sent to your PC.{PAUSE_UNTIL_PRESS}
-0x416BA6: Your PC’s Mailbox is full.{PAUSE_UNTIL_PRESS}
-0x416BC3: If the Mail is removed, the\nmessage will be lost. Okay?
-0x416BFB: Mail must be removed before\nholding an item.{PAUSE_UNTIL_PRESS}
-0x416C2A: {STR_VAR_1} was given the\n{STR_VAR_2} to hold.{PAUSE_UNTIL_PRESS}
-0x416C49: {STR_VAR_1} is already holding\none {STR_VAR_2}.\pWould you like to switch the\ntwo items?
-0x416C8F: {STR_VAR_1} isn’t holding\nanything.{PAUSE_UNTIL_PRESS}
-0x416CAC: Received the {STR_VAR_2}\nfrom {STR_VAR_1}.{PAUSE_UNTIL_PRESS}
-0x416CC7: Mail was taken from the\nPokémon.{PAUSE_UNTIL_PRESS}
-0x416CEA: The {STR_VAR_2} was taken and\nreplaced with the {STR_VAR_1}.{PAUSE_UNTIL_PRESS}
-0x416D17: This Pokémon is holding an\nitem. It cannot hold Mail.{PAUSE_UNTIL_PRESS}
-0x416D4F: Mail was transferred from\nthe Mailbox.{PAUSE_UNTIL_PRESS}
-0x416D78: The {STR_VAR_1} is full. The Pokémon’s\nitem could not be removed.{PAUSE_UNTIL_PRESS}
-0x416DB3: {STR_VAR_1} learned\n{STR_VAR_2}!
-0x416DC2: {STR_VAR_1} and {STR_VAR_2}\nare not compatible.\p{STR_VAR_2} can’t be\nlearned.{PAUSE_UNTIL_PRESS}
-0x416DF7: {STR_VAR_1} wants to learn the\nmove {STR_VAR_2}.\pHowever, {STR_VAR_1} already\nknows four moves.\pShould a move be deleted and\nreplaced with {STR_VAR_2}?
-0x416E6B: Stop trying to teach\n{STR_VAR_2}?
-0x416E84: {STR_VAR_1} did not learn the\nmove {STR_VAR_2}.{PAUSE_UNTIL_PRESS}
-0x416EA4: Which move should be forgotten?{PAUSE_UNTIL_PRESS}
-0x416F10: {STR_VAR_1} already knows\n{STR_VAR_2}.{PAUSE_UNTIL_PRESS}
-0x416F27: {STR_VAR_1}’s HP was restored\nby {STR_VAR_2} point(s).{PAUSE_UNTIL_PRESS}
-0x416F4E: {STR_VAR_1} was cured of its\npoisoning.{PAUSE_UNTIL_PRESS}
-0x416F6F: {STR_VAR_1} was cured of\nparalysis.{PAUSE_UNTIL_PRESS}
-0x416F8C: {STR_VAR_1} woke up.{PAUSE_UNTIL_PRESS}
-0x416F9A: {STR_VAR_1}’s burn was healed.{PAUSE_UNTIL_PRESS}
-0x416FB2: {STR_VAR_1} was thawed out.{PAUSE_UNTIL_PRESS}
-0x416FC7: PP was restored.{PAUSE_UNTIL_PRESS}
-0x416FED: {STR_VAR_1} became healthy.{PAUSE_UNTIL_PRESS}
-0x417002: {STR_VAR_1}’s PP increased.{PAUSE_UNTIL_PRESS}
-0x417017: {STR_VAR_1} was elevated to\nLv. {STR_VAR_2}.
-0x417032: {STR_VAR_1}’s base {STR_VAR_2}\nstat was raised.{PAUSE_UNTIL_PRESS}
-0x417052: {STR_VAR_1} snapped out of its\nconfusion.{PAUSE_UNTIL_PRESS}
-0x417075: {STR_VAR_1} got over its\ninfatuation.{PAUSE_UNTIL_PRESS}
-0x417094: That’s your only\nPokémon for battle.
-0x4170B9:    That Pokémon can’t be traded\nnow.
-0x4170DE:   An Egg can’t be traded now.
-0x4170FC: The other Trainer’s Pokémon\ncan’t be traded now.
-0x41712D:    The other Trainer can’t accept\nthat Pokémon now.
-0x417161:    You can’t trade with that\nTrainer now.
-0x41718B:  That isn’t the type of Pokémon\nthat the other Trainer wants.
-0x4171C9:    That isn’t an Egg.
-0x4171DF: Choose a Pokémon.
-0x4171F1: Move to where?
-0x417200: Teach which Pokémon?
-0x417215: Use on which Pokémon?
-0x41722B: Give to which Pokémon?
-0x417242: Do what with this {PKMN}?
-0x417258: There’s nothing to Cut.
-0x417270: No Surfing here!
-0x417281: You’re already Surfing.
-0x417299: Can’t use that here.
-0x4172AE: Restore which move?
-0x4172C2: Boost PP of which?
-0x4172D5: Do what with an item?
-0x4172EB: No battling this way!
-0x417301: Choose a Pokémon.
-0x417313: Not enough HP…
-0x417322: Three {PKMN} are needed.
-0x417337: {PKMN} can’t be the same.
-0x41734D: No same hold items!
-0x417361: The current is much too fast!
-0x41737F: Do what with the Mail?
-0x417396: Choose Pokémon or Cancel.
-0x4173B0: Choose Pokémon and confirm.
-0x4173CC: Two Pokémon are needed.
-0x4173E4: Let’s enjoy cycling!
-0x4173F9: This is in use already.
-0x417411: No use.
-0x417419: ABLE
-0x41741E: FIRST
+0x416B86: Courrier envoyé sur ton\nPC.{PAUSE_UNTIL_PRESS}
+0x416BA6: La Boîte Mail du PC est\npleine.{PAUSE_UNTIL_PRESS}
+0x416BC3: Retirer le Courrier effacera\nle message. D'accord ?
+0x416BFB: Retire le Courrier avant de\nfaire tenir un objet.\n{PAUSE_UNTIL_PRESS}
+0x416C2A: {STR_VAR_1} tient\n{STR_VAR_2}.{PAUSE_UNTIL_PRESS}
+0x416C49: {STR_VAR_1} tient déjà\n{STR_VAR_2}.\pÉchanger les deux\nobjets ?
+0x416C8F: {STR_VAR_1} ne tient rien.\n{PAUSE_UNTIL_PRESS}
+0x416CAC: Reçu {STR_VAR_2}\nde {STR_VAR_1}.{PAUSE_UNTIL_PRESS}
+0x416CC7: Courrier retiré du Pokémon.\n{PAUSE_UNTIL_PRESS}
+0x416CEA: {STR_VAR_2} retiré, remplacé\npar {STR_VAR_1}.{PAUSE_UNTIL_PRESS}
+0x416D17: Ce Pokémon tient un objet.\nIl ne peut pas porter de\nCourrier.\n{PAUSE_UNTIL_PRESS}
+0x416D4F: Courrier transféré de la\nBoîte Mail.{PAUSE_UNTIL_PRESS}
+0x416D78: {STR_VAR_1} est plein.\nObjet du Pokémon non\nretiré.\n{PAUSE_UNTIL_PRESS}
+0x416DB3: {STR_VAR_1} a appris\n{STR_VAR_2} !
+0x416DC2: {STR_VAR_1} et {STR_VAR_2}\nne sont pas compatibles.\p{STR_VAR_2}\nne peut pas être\napprise.{PAUSE_UNTIL_PRESS}
+0x416DF7: {STR_VAR_1} veut apprendre la\ncapacité {STR_VAR_2}.\p\n{STR_VAR_1} connaît déjà\nquatre capacités.\p\nOublier une capacité pour\napprendre {STR_VAR_2} ?
+0x416E6B: Arrêter d'enseigner\n{STR_VAR_2} ?
+0x416E84: {STR_VAR_1} n'a pas appris\n{STR_VAR_2}.{PAUSE_UNTIL_PRESS}
+0x416EA4: Quelle capacité oublier ?\n{PAUSE_UNTIL_PRESS}
+0x416F10: {STR_VAR_1} connaît déjà\n{STR_VAR_2}.{PAUSE_UNTIL_PRESS}
+0x416F27: PV de {STR_VAR_1} restaurés de\n{STR_VAR_2} point(s).\n{PAUSE_UNTIL_PRESS}
+0x416F4E: {STR_VAR_1} guéri du poison.\n{PAUSE_UNTIL_PRESS}
+0x416F6F: {STR_VAR_1} guéri de la paralysie.\n{PAUSE_UNTIL_PRESS}
+0x416F8C: {STR_VAR_1} s'est réveillé.\n{PAUSE_UNTIL_PRESS}
+0x416F9A: Brûlure de {STR_VAR_1} guérie.\n{PAUSE_UNTIL_PRESS}
+0x416FB2: {STR_VAR_1} a dégelé.\n{PAUSE_UNTIL_PRESS}
+0x416FC7: PP restaurés.{PAUSE_UNTIL_PRESS}
+0x416FED: {STR_VAR_1} est en pleine forme.\n{PAUSE_UNTIL_PRESS}
+0x417002: PP de {STR_VAR_1} augmentés.\n{PAUSE_UNTIL_PRESS}
+0x417017: {STR_VAR_1} monte au\nN. {STR_VAR_2}.
+0x417032: Stat de base {STR_VAR_2} de\n{STR_VAR_1} augmentée.\n{PAUSE_UNTIL_PRESS}
+0x417052: {STR_VAR_1} n'est plus confus.\n{PAUSE_UNTIL_PRESS}
+0x417075: {STR_VAR_1} n'est plus amoureux.\n{PAUSE_UNTIL_PRESS}
+0x417094: C'est ton seul Pokémon\npour combattre.
+0x4170B9: Ce Pokémon ne peut pas être\ntroqué maintenant.
+0x4170DE: Un Œuf ne peut pas être troqué\nmaintenant.
+0x4170FC: Le Pokémon de l'autre\nDresseur ne peut pas être troqué.
+0x41712D: L'autre Dresseur ne peut pas\naccepter ce Pokémon.
+0x417161: Tu ne peux pas échanger avec ce\nDresseur maintenant.
+0x41718B: Ce n'est pas le type de Pokémon\nvoulu par l'autre Dresseur.
+0x4171C9: Ce n'est pas un Œuf.
+0x4171DF: Choisis un Pokémon.
+0x4171F1: Déplacer où ?
+0x417200: Enseigner à quel Pokémon ?
+0x417215: Utiliser sur quel Pokémon ?
+0x41722B: Donner à quel Pokémon ?
+0x417242: Que faire de ce {PKMN} ?
+0x417258: Rien à Coupe.
+0x417270: Surf impossible ici !
+0x417281: Tu surfes déjà.
+0x417299: Inutilisable ici.
+0x4172AE: Restaurer quelle capacité ?
+0x4172C2: Booster les PP de quoi ?
+0x4172D5: Que faire avec cet objet ?
+0x4172EB: Pas de combat par ici !
+0x417301: Choisis un Pokémon.
+0x417313: PV insuffisants…
+0x417322: Trois {PKMN} sont requis.
+0x417337: Pas de {PKMN} identiques.
+0x41734D: Pas d'objets identiques !
+0x417361: Le courant est trop rapide !
+0x41737F: Que faire du Courrier ?
+0x417396: Choisis Pokémon ou Annuler.
+0x4173B0: Choisis Pokémon et confirme.
+0x4173CC: Deux Pokémon sont requis.
+0x4173E4: Profitons du vélo !
+0x4173F9: Déjà en cours d'utilisation.
+0x417411: Inutilisable.
+0x417419: APTE
+0x41741E: PREMIER
 0x417424: SECOND
-0x41742B: THIRD
-0x417431: ABLE
-0x417436: NOT ABLE
-0x41743F: ABLE!
-0x417445: NOT ABLE!
-0x41744F: LEARNED
-0x417457: OAK: It’s important to get to know\nyour Pokémon thoroughly.\p
-0x417494: This is a list of your Pokémon,\n{PLAYER}.\pOpen this to check the skills\nand moves of your Pokémon.\pYou also choose Pokémon here if\nyou want to use an item on one.{PAUSE_UNTIL_PRESS}
-0x417533: Cut a tree or grass.
-0x417548: Fly to a known town.
-0x41755D: Travel on water.
-0x41756E: Move heavy boulders.
-0x417583: Light up darkness.
-0x417596: Shatter a cracked rock.
-0x4175AE: Climb a waterfall.
-0x4175CC: Escape from here.
-0x4175DE: Lure wild Pokémon.
-0x4175F1: Share HP.
-0x4175FB: Return to a healing spot.
-0x417615: Want to escape from here and return\nto {STR_VAR_1}?
-0x417640: Want to return to the healing spot\nused last in {STR_VAR_1}?
-0x417674: Attack
-0x41767B: Defense
-0x41768D: Speed
-0x417696: That Pokémon can’t participate.{PAUSE_UNTIL_PRESS}
-0x4176B8: Cancel participation?
-0x4176CF: Cancel the battle?
-0x4176E2: Turn Off
-0x4176F1: Item Storage
-0x4176FE: Mailbox
-0x417706: Deposit Item
-0x417713: Withdraw Item
-0x41772A: Store items in the PC.
-0x417741: Take out items from the PC.
-0x417774: There are no items.{PAUSE_UNTIL_PRESS}
-0x41778A: There is no more\nroom in the BAG.
-0x4177AC: Withdraw how many\n{STR_VAR_1}(s)?
-0x4177D8: Read
-0x4177DD: Move To Bag
-0x4177E9: Give
-0x4177EE: There’s no Mail here.{PAUSE_UNTIL_PRESS}
-0x417806: What would you like to do with\n{STR_VAR_1}’s Mail?
-0x417830: The message will be lost.\nIs that okay?
-0x417858: The BAG is full.{PAUSE_UNTIL_PRESS}
-0x41786B: The Mail was returned to the BAG\nwith its message erased.{PAUSE_UNTIL_PRESS}
-0x4178A7: Withdraw\nItem
-0x4178B5: Withdraw
-0x4178BE: Return to the PC.
-0x4178D0: LT. SURGE
+0x41742B: TROISIÈME
+0x417431: APTE
+0x417436: INAPTE
+0x41743F: APTE !
+0x417445: INAPTE !
+0x41744F: APPRISE
+0x417457: CHEN : Il faut bien connaître\nses Pokémon.\p
+0x417494: Liste de tes Pokémon,\n{PLAYER}.\pOuvre-la pour voir les\ncapacités de tes Pokémon.\p\nChoisis un Pokémon ici si tu\nveux utiliser un objet.\n{PAUSE_UNTIL_PRESS}
+0x417533: Coupe un arbre ou de l'herbe.
+0x417548: Vol vers une ville connue.
+0x41755D: Voyage sur l'eau.
+0x41756E: Bouge des rochers lourds.
+0x417583: Éclaire l'obscurité.
+0x417596: Brise un rocher fissuré.
+0x4175AE: Escalade une cascade.
+0x4175CC: Fuis d'ici.
+0x4175DE: Attire des Pokémon sauvages.
+0x4175F1: Partage les PV.
+0x4175FB: Retourne au point de soin.
+0x417615: Quitter et revenir à\n{STR_VAR_1} ?
+0x417640: Revenir au dernier point\nde soin à {STR_VAR_1} ?
+0x417674: Attaque
+0x41767B: Défense
+0x41768D: Vitesse
+0x417696: Ce Pokémon ne peut participer.\n{PAUSE_UNTIL_PRESS}
+0x4176B8: Annuler la participation ?
+0x4176CF: Annuler le combat ?
+0x4176E2: Éteindre
+0x4176F1: Stockage d'objets
+0x4176FE: Boîte aux lettres
+0x417706: Déposer objet
+0x417713: Retirer objet
+0x41772A: Ranger des objets dans le PC.
+0x417741: Sortir des objets du PC.
+0x417774: Aucun objet.{PAUSE_UNTIL_PRESS}
+0x41778A: Plus de place dans le SAC.
+0x4177AC: Retirer combien de\n{STR_VAR_1} ?
+0x4177D8: Lire
+0x4177DD: Mettre au Sac
+0x4177E9: Donner
+0x4177EE: Aucun Courrier ici.\n{PAUSE_UNTIL_PRESS}
+0x417806: Que faire du Courrier de\n{STR_VAR_1} ?
+0x417830: Le message sera perdu.\nEst-ce OK ?
+0x417858: Le SAC est plein.\n{PAUSE_UNTIL_PRESS}
+0x41786B: Courrier rendu au SAC,\nmessage effacé.{PAUSE_UNTIL_PRESS}
+0x4178A7: Retirer\nObjet
+0x4178B5: Retirer
+0x4178BE: Retour au PC.
+0x4178D0: MAJOR BOB
 0x4178DA: KOGA
-0x4178E6: Info
-0x4178EB: EggS
-0x4178F0: HALL OF FAME
-0x4178FD: VICTORIES
-0x417907: QUIT
-0x417920: TOXIC
-0x417929: QUIT
-0x417944: SINGLE BATTLE
-0x417952: DOUBLE BATTLE
-0x417960: MULTI BATTLE
-0x41796D: Make a challenge.
-0x41797F: Info
-0x417984: FRESH WATER{CLEAR_TO}キ{FONT_SMALL}¥200
-0x4179C0: {FONT_SMALL} 50 COINS{CLEAR_TO}ど¥1,000
-0x4179D6: {FONT_SMALL}500 COINS{CLEAR_TO}ぞ¥10,000
+0x4178E6: Infos
+0x4178EB: Œufs
+0x4178F0: PANTHÉON
+0x4178FD: VICTOIRES
+0x417907: QUITTER
+0x417920: TOXIK
+0x417929: QUITTER
+0x417944: COMBAT SOLO
+0x417952: COMBAT DUO
+0x417960: COMBAT MULTI
+0x41796D: Lancer un défi.
+0x41797F: Infos
+0x417984: EAU FRAÎCHE{CLEAR_TO}キ{FONT_SMALL}¥200
+0x4179C0: {FONT_SMALL} 50 JETONS{CLEAR_TO}ど¥1,000
+0x4179D6: {FONT_SMALL}500 JETONS{CLEAR_TO}ぞ¥10,000
 0x4179ED: Excellent
-0x4179F7: Not so bad
-0x417A02: RED SHARD
-0x417A0C: YELLOW SHARD
-0x417A19: BLUE SHARD
-0x417A24: GREEN SHARD
-0x417A37: Right
-0x417A3D: Left
-0x417A42: TM13{CLEAR_TO}ぶ{FONT_SMALL}4,000 COINS
-0x417A58: TM23{CLEAR_TO}ぶ{FONT_SMALL}3,500 COINS
-0x417A6E: TM24{CLEAR_TO}ぶ{FONT_SMALL}4,000 COINS
-0x417A84: TM30{CLEAR_TO}ぶ{FONT_SMALL}4,500 COINS
-0x417A9A: TM35{CLEAR_TO}ぶ{FONT_SMALL}4,000 COINS
+0x4179F7: Pas si mal
+0x417A02: TESSON ROUGE
+0x417A0C: TESSON JAUNE
+0x417A19: TESSON BLEU
+0x417A24: TESSON VERT
+0x417A37: Droite
+0x417A3D: Gauche
+0x417A42: CT13{CLEAR_TO}ぶ{FONT_SMALL}4,000 JETONS
+0x417A58: CT23{CLEAR_TO}ぶ{FONT_SMALL}3,500 JETONS
+0x417A6E: CT24{CLEAR_TO}ぶ{FONT_SMALL}4,000 JETONS
+0x417A84: CT30{CLEAR_TO}ぶ{FONT_SMALL}4,500 JETONS
+0x417A9A: CT35{CLEAR_TO}ぶ{FONT_SMALL}4,000 JETONS
 0x417ABF: COOL
-0x417AC4: BEAUTY
-0x417ACB: CUTE
-0x417AD0: SMART
-0x417AD6: TOUGH
+0x417AC4: BEAUTÉ
+0x417ACB: MIGNON
+0x417AD0: INTELLO
+0x417AD6: COSTAUD
 0x417ADC: Normal
-0x417AE3: Black
-0x417AE9: Pink
-0x417AEE: Sepia
+0x417AE3: Noir
+0x417AE9: Rose
+0x417AEE: Sépia
 0x417AF4: COOL
-0x417AF9: BEAUTY
-0x417B00: CUTE
-0x417B05: SMART
-0x417B0B: TOUGH
-0x417B11: Items
-0x417B17: Key Items
+0x417AF9: BEAUTÉ
+0x417B00: MIGNON
+0x417B05: INTELLO
+0x417B0B: COSTAUD
+0x417B11: Objets
+0x417B17: Objets rares
 0x417B21: Poké Balls
-0x417B36: BERRIES
-0x417B3E: BOULDERBADGE
-0x417B4B: CASCADEBADGE
-0x417B58: THUNDERBADGE
-0x417B65: RAINBOWBADGE
-0x417B72: SOULBADGE
-0x417B7C: MARSHBADGE
-0x417B87: VOLCANOBADGE
-0x417B94: EARTHBADGE
-0x417B9F: Someone’s PC
-0x417BAC: Ayla’s PC
-0x417BBE: Hall of Fame
-0x417BCB: Log Off
-0x417BD3: Prof. Log’s PC
-0x417BE2: EEVEE
-0x417BE8: FLAREON
-0x417BF0: JOLTEON
-0x417BF8: VAPOREON
-0x417C01: Quit looking.
-0x417C0F: Fresh Water
-0x417C1B: Soda Pop
-0x417C24: Lemonade
-0x417C2D: Coins
-0x417C33: Bicycle{CLEAR_TO}べ{FONT_SMALL}¥1,000,000
-0x417C4B: NO THANKS
-0x417C55: ABRA{CLEAR_TO}オ{FONT_SMALL} 180 COINS
-0x417C6A: CLEFAIRY{CLEAR_TO}オ{FONT_SMALL} 500 COINS
-0x417C83: DRATINI{CLEAR_TO}ぱ{FONT_SMALL} 2,800 COINS
-0x417C9D: SCYTHER{CLEAR_TO}ぱ{FONT_SMALL} 5,500 COINS
-0x417CB7: PORYGON{CLEAR_TO}ぱ{FONT_SMALL} 9,999 COINS
-0x417CD1: ABRA{CLEAR_TO}オ{FONT_SMALL} 120 COINS
-0x417CE6: CLEFAIRY{CLEAR_TO}オ{FONT_SMALL} 750 COINS
-0x417CFF: PINSIR{CLEAR_TO}ぱ{FONT_SMALL} 2,500 COINS
-0x417D18: DRATINI{CLEAR_TO}ぱ{FONT_SMALL} 4,600 COINS
-0x417D32: PORYGON{CLEAR_TO}ぱ{FONT_SMALL} 6,500 COINS
-0x417D4C: NO THANKS
-0x417D56: HELIX FOSSIL
-0x417D63: DOME FOSSIL
-0x417D6F: OLD AMBER
-0x417D79: Trade Center
-0x417D86: Colosseum
-0x417D90: Game Link cable
-0x417DA0: Wireless
-0x417DA9: Items Sector
-0x417DB6: Key Items Sector
-0x417DC7: Poké Balls Sector
-0x417DD9: TM Case
-0x417DE1: Berry Pouch
-0x417DED: Other
-0x417DF3: ONE ISLAND
-0x417DFE: TWO ISLAND
-0x417E09: THREE ISLAND
-0x417E16: FOUR ISLAND
-0x417E22: FIVE ISLAND
-0x417E2E: SIX ISLAND
-0x417E39: SEVEN ISLAND
-0x417E46: VERMILION
+0x417B36: BAIES
+0x417B3E: BADGE ROCHE
+0x417B4B: BADGE CASCADE
+0x417B58: BADGE FOUDRE
+0x417B65: BADGE PRISME
+0x417B72: BADGE ÂME
+0x417B7C: BADGE MARAIS
+0x417B87: BADGE VOLCAN
+0x417B94: BADGE TERRE
+0x417B9F: PC de quelqu'un
+0x417BAC: PC d'Ayla
+0x417BBE: Panthéon
+0x417BCB: Se déconnecter
+0x417BD3: PC Prof. Log
+0x417BE2: EVOLI
+0x417BE8: PYROLI
+0x417BF0: VOLTALI
+0x417BF8: AQUALI
+0x417C01: Arrêter de regarder.
+0x417C0F: Eau fraîche
+0x417C1B: Soda Cool
+0x417C24: Limonade
+0x417C2D: Jetons
+0x417C33: Vélo{CLEAR_TO}べ{FONT_SMALL}¥1,000,000
+0x417C4B: NON MERCI
+0x417C55: ABRA{CLEAR_TO}オ{FONT_SMALL} 180 JETONS
+0x417C6A: MÉLOFÉE{CLEAR_TO}オ{FONT_SMALL} 500 JETONS
+0x417C83: MINIDRACO{CLEAR_TO}ぱ{FONT_SMALL} 2,800 JETONS
+0x417C9D: INSECATEUR{CLEAR_TO}ぱ{FONT_SMALL} 5,500 JETONS
+0x417CB7: PORYGON{CLEAR_TO}ぱ{FONT_SMALL} 9,999 JETONS
+0x417CD1: ABRA{CLEAR_TO}オ{FONT_SMALL} 120 JETONS
+0x417CE6: MÉLOFÉE{CLEAR_TO}オ{FONT_SMALL} 750 JETONS
+0x417CFF: SCARABRUTE{CLEAR_TO}ぱ{FONT_SMALL} 2,500 JETONS
+0x417D18: MINIDRACO{CLEAR_TO}ぱ{FONT_SMALL} 4,600 JETONS
+0x417D32: PORYGON{CLEAR_TO}ぱ{FONT_SMALL} 6,500 JETONS
+0x417D4C: NON MERCI
+0x417D56: FOSSILE NAUTILUS
+0x417D63: FOSSILE DOME
+0x417D6F: VIEIL AMBRE
+0x417D79: Centre d'Échange
+0x417D86: Colisée
+0x417D90: Câble Link
+0x417DA0: Sans-fil
+0x417DA9: Zone Objets
+0x417DB6: Zone Objets clés
+0x417DC7: Zone Poké Balls
+0x417DD9: Boîtier CT
+0x417DE1: Pochette Baies
+0x417DED: Autres
+0x417DF3: ÎLE 1
+0x417DFE: ÎLE 2
+0x417E09: ÎLE 3
+0x417E16: ÎLE 4
+0x417E22: ÎLE 5
+0x417E2E: ÎLE 6
+0x417E39: ÎLE 7
+0x417E46: CARMIN-SUR-MER
 0x417E50: COLOSSEUM
-0x417E5A: BERRY CRUSH
-0x417E72: Pokémon JUMP
-0x417E7F: DODRIO BERRY-PICKING
-0x417E94: 2 TINYMUSHROOMS
-0x417EA4: 1 BIG MUSHROOM
-0x417EB3: SEVII ISLANDS
-0x417EC1: NAVEL ROCK
-0x417ECC: BIRTH ISLAND
-0x417ED9: MIRACLE SEED{CLEAR_TO}っ{FONT_SMALL}1,000 COINS
-0x417EF7: CHARCOAL{CLEAR_TO}っ{FONT_SMALL}1,000 COINS
-0x417F11: MYSTIC WATER{CLEAR_TO}っ{FONT_SMALL}1,000 COINS
-0x417F2F: YELLOW FLUTE{CLEAR_TO}っ{FONT_SMALL}1,600 COINS
-0x417F4D: SMOKE BALL{CLEAR_TO}Í{FONT_SMALL}800 COINS
-0x417F69: BECOME LEADER
-0x417F77: JOIN GROUP
-0x417F82: SINGLE
-0x417F89: DOUBLE
-0x417F90: KNOCKOUT
-0x417F99: MIXED
-0x417FBB: Big guy
-0x417FC3: Big girl
-0x417FD0: daughter
-0x417FD9: BOULDERBADGE
-0x417FE6: CASCADEBADGE
-0x417FF3: THUNDERBADGE
-0x418000: RAINBOWBADGE
+0x417E5A: BROYEUR DE BAIES
+0x417E72: SAUT POKÉMON
+0x417E7F: RÉCOLTE DE BAIES DODRIO
+0x417E94: 2 PETITS CHAMPI
+0x417EA4: 1 GROS CHAMPI
+0x417EB3: ÎLES SEVII
+0x417EC1: ROCHE OMBELINE
+0x417ECC: ÎLE ORIGINE
+0x417ED9: GRAINE MIRACLE{CLEAR_TO}っ{FONT_SMALL}1,000 JETONS
+0x417EF7: CHARBON{CLEAR_TO}っ{FONT_SMALL}1,000 JETONS
+0x417F11: EAU MYSTIQUE{CLEAR_TO}っ{FONT_SMALL}1,000 JETONS
+0x417F2F: FLÛTE JAUNE{CLEAR_TO}っ{FONT_SMALL}1,600 JETONS
+0x417F4D: BALLE FUMEE{CLEAR_TO}Í{FONT_SMALL}800 JETONS
+0x417F69: DEVENIR CHEF
+0x417F77: REJOINDRE GROUPE
+0x417F82: SOLO
+0x417F89: DUO
+0x417F90: K.O.
+0x417F99: MIXTE
+0x417FBB: Grand gars
+0x417FC3: Grande fille
+0x417FD0: fille
+0x417FD9: BADGE ROCHE
+0x417FE6: BADGE CASCADE
+0x417FF3: BADGE FOUDRE
+0x418000: BADGE PRISME

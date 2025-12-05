@@ -1,250 +1,239 @@
-0x41800D: SOULBADGE
-0x418017: MARSHBADGE
-0x418022: VOLCANOBADGE
-0x41802F: EARTHBADGE
-0x41806D: ROOFTOP
-0x418075: Now on:
-0x41807D: LINKED GAME PLAY
-0x41808E: DIRECT CORNER
-0x41809C: UNION ROOM
-0x4180A7: ENERGYPOWDER{CLEAR_TO}ヤ{FONT_SMALL}50
-0x4180BC: ENERGY ROOT{CLEAR_TO}ヤ{FONT_SMALL}80
-0x4180D0: HEAL POWDER{CLEAR_TO}ヤ{FONT_SMALL}50
-0x4180E4: REVIVAL HERB{CLEAR_TO}í{FONT_SMALL}300
-0x4180FA: PROTEIN{CLEAR_TO}ナ{FONT_SMALL}1,000
-0x41810D: IRON{CLEAR_TO}ナ{FONT_SMALL}1,000
-0x41811D: CARBOS{CLEAR_TO}ナ{FONT_SMALL}1,000
+0x41800D: BADGE ÂME
+0x418017: BADGE MARAIS
+0x418022: BADGE VOLCAN
+0x41802F: BADGE TERRE
+0x41806D: TOIT
+0x418075: Maintenant :
+0x41807D: JEU CONNECTÉ
+0x41808E: COIN DIRECT
+0x41809C: SALON UNION
+0x4180A7: PDR ENERG{CLEAR_TO}ヤ{FONT_SMALL}50
+0x4180BC: RAC ENERG{CLEAR_TO}ヤ{FONT_SMALL}80
+0x4180D0: PDR SOIN{CLEAR_TO}ヤ{FONT_SMALL}50
+0x4180E4: HERB RAPP{CLEAR_TO}í{FONT_SMALL}300
+0x4180FA: PROTÉINE{CLEAR_TO}ナ{FONT_SMALL}1000
+0x41810D: FER{CLEAR_TO}ナ{FONT_SMALL}1,000
+0x41811D: CARBONE{CLEAR_TO}ナ{FONT_SMALL}1,000
 0x41812F: CALCIUM{CLEAR_TO}ナ{FONT_SMALL}1,000
 0x418142: ZINC{CLEAR_TO}ナ{FONT_SMALL}1,000
-0x418152: HP UP{CLEAR_TO}ナ{FONT_SMALL}1,000
-0x418163: PP UP{CLEAR_TO}ナ{FONT_SMALL}3,000
-0x418174: {PLAYER}’s BATTLE RESULTS
-0x418188: TOTAL RECORD W:{STR_VAR_1} L:{STR_VAR_2} D:{STR_VAR_3}
-0x4181C3: The FAME CHECKER will be closed.
-0x418208: Exit from the Box.
-0x41821B: What do you want to do?
-0x418233: Please pick a theme.
-0x418248: Pick the wallpaper.
-0x41825C: {DYNAMIC}  is selected.
-0x41826C: Jump to which Box?
-0x41827F: Deposit in which Box?
-0x418295: {DYNAMIC}  was deposited.
-0x4182A7: The Box is full.
-0x4182B8: Release this Pokémon?
-0x4182CE: {DYNAMIC}  was released.
-0x4182DF: Bye-bye, {DYNAMIC} !
-0x4182EC: Mark your Pokémon.
-0x4182FF: That’s your last Pokémon!
-0x418319: Your party’s full!
-0x41832C: You’re holding a Pokémon!
-0x418346: Which one will you take?
-0x41835F: You can’t release an Egg.
-0x418379: Continue Box operations?
-0x418392: {DYNAMIC}  came back!
-0x4183A0: Was it worried about you?
-0x4183C5: Please remove the Mail.
-0x4183DD: Give to a Pokémon?
-0x4183F0: Placed item in Cube V3.
-0x418408: Cube V3 is full.
-0x418419: Put this item in Cube V3?
-0x418433: {DYNAMIC}  is now held.
-0x418443: Changed to {DYNAMIC} .
-0x418452: Mail can’t be stored!
-0x418468: Cancel
-0x41846F: Store
-0x418475: Withdraw
-0x41847E: Shift
-0x418484: Move
-0x418489: Place
-0x41848F: Summary
-0x418497: Release
-0x41849F: Mark
-0x4184A4: Name
-0x4184A9: Jump
-0x4184AE: Wallpaper
-0x4184B8: Take
-0x4184BD: Give
-0x4184C2: Switch
-0x4184CD: Info
-0x4184D2: Scenery 1
-0x4184DC: Scenery 2
-0x4184E6: Scenery 3
-0x4184F0: Etcetera
-0x4184F9: Forest
-0x418500: City
-0x418505: Desert
-0x41850C: Savanna
-0x418514: Crag
-0x418519: Volcano
-0x418521: Snow
-0x418526: Cave
-0x41852B: Beach
-0x418531: Seafloor
-0x41853A: River
-0x418544: Stars
-0x41854A: PokéCenter
-0x418555: Tiles
+0x418152: PV PLUS{CLEAR_TO}ナ{FONT_SMALL}1,000
+0x418163: PP PLUS{CLEAR_TO}ナ{FONT_SMALL}3,000
+0x418174: Résultats combat de {PLAYER}
+0x418188: TOTAL V:{STR_VAR_1} D:{STR_VAR_2}\nN:{STR_VAR_3}
+0x4181C3: Fermeture du Mémo Dresseur.
+0x418208: Quitter la Boîte.
+0x41821B: Que veux-tu faire ?
+0x418233: Choisis un thème.
+0x418248: Choisis le décor.
+0x41825C: {DYNAMIC}  est choisi.
+0x41826C: Aller à quelle Boîte ?
+0x41827F: Déposer dans quelle Boîte ?
+0x418295: {DYNAMIC}  a été déposé.
+0x4182A7: La Boîte est pleine.
+0x4182B8: Relâcher ce Pokémon ?
+0x4182CE: {DYNAMIC}  relâché.
+0x4182DF: Adieu, {DYNAMIC} !
+0x4182EC: Marque ton Pokémon.
+0x4182FF: C'est ton dernier Pokémon !
+0x418319: Ton équipe est pleine !
+0x41832C: Tu tiens un Pokémon !
+0x418346: Lequel prends-tu ?
+0x41835F: Tu ne peux pas relâcher un Œuf.
+0x418379: Continuer dans les Boîtes ?
+0x418392: {DYNAMIC}  est revenu !
+0x4183A0: Il s'inquiétait pour toi ?
+0x4183C5: Retire le Courrier.
+0x4183DD: Donner à un Pokémon ?
+0x4183F0: Objet placé dans le Cube V3.
+0x418408: Cube V3 plein.
+0x418419: Mettre cet objet\ndans le Cube V3 ?
+0x418433: {DYNAMIC}  est porté.
+0x418443: Passé à {DYNAMIC} .
+0x418452: Courrier non stockable !
+0x418468: Annuler
+0x41846F: Stocker
+0x418475: Retirer
+0x41847E: Échanger
+0x418484: Déplacer
+0x418489: Placer
+0x41848F: Résumé
+0x418497: Relâcher
+0x41849F: Marquer
+0x4184A4: Nommer
+0x4184A9: Aller
+0x4184AE: Fond
+0x4184B8: Prendre
+0x4184BD: Donner
+0x4184C2: Permuter
+0x4184CD: Infos
+0x4184D2: Décor 1
+0x4184DC: Décor 2
+0x4184E6: Décor 3
+0x4184F0: Divers
+0x4184F9: Forêt
+0x418500: Ville
+0x418505: Désert
+0x41850C: Savane
+0x418514: Ravin
+0x418519: Volcan
+0x418521: Neige
+0x418526: Grotte
+0x41852B: Plage
+0x418531: Fond marin
+0x41853A: Rivière
+0x418544: Étoiles
+0x41854A: Centre Pokémon
+0x418555: Dalles
 0x41855B: Simple
-0x41856C: Withdraw Pokémon
-0x41857D: Deposit Pokémon
-0x41858D: Move Pokémon
-0x41859A: Move Items
-0x4185A5: See Ya!
-0x4185AD: You can withdraw a Pokémon if you\nhave any in a Box.
-0x4185E2: You can deposit your party\nPokémon in any Box.
-0x418611: You can move Pokémon that are\nstored in any Box.
-0x418642: You can move items held by any\nPokémon in a Box or your party.
-0x418681: See you later!
-0x418690: Can’t deposit the last Pokémon!
-0x4186B0: Can’t take any more Pokémon.
-0x4186D1: Combine four words or phrases
-0x4186EF: and make your profile.
-0x418706: Make a message of six phrases.
-0x418725: Max two 12-letter phrases/line.
-0x418745: Find words that describe your
-0x418763: feelings right now.
-0x418780: Combine nine words or phrases
-0x41879E: and make a message.
-0x4187B2: Change just one word or phrase
-0x4187D1: and improve the BARD’s song.
-0x4187EE: and fill out the questionnaire.
-0x41880E: Your profile
-0x41881B: Your feeling at the battle’s start
-0x41883E: What you say if you win a battle
-0x41885F: What you say if you lose a battle
-0x418881: The answer
-0x41888C: The Mail message
-0x4188AC: The new song
-0x4188B9: Combine two words or phrases
-0x4188D6: and make a trendy saying.
-0x4188F0: The trendy saying
-0x418902: is as shown. Okay?
-0x418937: All the text being edited will
-0x418956: be deleted. Is that okay?
-0x4189E0: Quit editing?
-0x4189EE: Stop giving the Pokémon Mail?
-0x418A2B: PROFILE
-0x418A33: At the battle’s start:
-0x418A4A: Upon winning a battle:
-0x418A61: Upon losing a battle:
-0x418A77: The BARD’s Song
-0x418A87: What’s hip and happening?
+0x41856C: Retirer Pokémon
+0x41857D: Déposer Pokémon
+0x41858D: Déplacer Pokémon
+0x41859A: Déplacer objets
+0x4185A5: À plus !
+0x4185AD: Tu peux retirer un Pokémon si tu\nen as dans une Boîte.
+0x4185E2: Dépose ton équipe dans n'importe\nquelle Boîte.
+0x418611: Déplace les Pokémon stockés dans\nn'importe quelle Boîte.
+0x418642: Tu peux déplacer les objets tenus\npar un Pokémon d'une Boîte ou\nde ton équipe.
+0x418681: À plus tard !
+0x418690: Impossible de déposer le dernier\nPokémon !
+0x4186B0: Impossible de prendre plus de\nPokémon.
+0x4186D1: Combine quatre mots ou phrases
+0x4186EF: et crée ton profil.
+0x418706: Compose un message de six\nphrases.
+0x418725: 2 phrases de 12 lettres\nmax/ligne.
+0x418745: Trouve des mots qui décrivent
+0x418763: tes sentiments du moment.
+0x418780: Combine neuf mots ou phrases
+0x41879E: et fais un message.
+0x4187B2: Change un seul mot ou une phrase
+0x4187D1: et améliore la chanson du BARDE.
+0x4187EE: et remplis le questionnaire.
+0x41880E: Ton profil
+0x41881B: Ton ressenti au début du combat
+0x41883E: Ce que tu dis en cas de victoire
+0x41885F: Ce que tu dis en cas de défaite
+0x418881: La réponse
+0x41888C: Le message du Courrier
+0x4188AC: La nouvelle chanson
+0x4188B9: Combine deux mots ou phrases
+0x4188D6: et crée une expression tendance.
+0x4188F0: L'expression tendance
+0x418902: est comme affiché. OK ?
+0x418937: Tout le texte en cours d'édition\nsera effacé. D'accord ?
+0x4189E0: Quitter l'édition ?
+0x4189EE: Arrêter de donner du Courrier\nau Pokémon ?
+0x418A2B: PROFIL
+0x418A33: Début du combat :
+0x418A4A: Après une victoire :
+0x418A61: Après une défaite :
+0x418A77: Chanson du BARDE
+0x418A87: Quoi de branché ?
 0x418AA1: Interview
-0x418C1B: Pokémon CENTER
-0x418C83: Save failed.\nChecking the backup memory…\nPlease wait.\n“Time required:\nabout 1 minute”
-0x418CD9: The backup memory is damaged or\nthe game’s battery has run dry.\nThe game can be played, but its\nprogress cannot be saved.\n“Please press the A Button.”
-0x418E09: Save completed.\n“Please press the A Button.”
-0x418E47: Your Name?
-0x418E52: Box Name?
-0x418E5C: ’s nickname?
-0x418E69: Rival’s Name?
-0x418E77: {DPAD_ANY}Move {SE_SHOP}OK {B_BUTTON}Back
+0x418C1B: CENTRE POKÉMON
+0x418C83: Échec de la sauvegarde.\nVérification de la sauvegarde…\nPatiente.\n"Temps estimé :\nenviron 1 minute"
+0x418CD9: La mémoire de sauvegarde est\nendommagée ou la pile est vide.\nLe jeu peut continuer mais on ne\npeut pas sauvegarder.\n"Appuie sur le bouton A."
+0x418E09: Sauvegarde terminée.\n"Appuie sur le bouton A."
+0x418E47: Ton nom ?
+0x418E52: Nom de la Boîte ?
+0x418E5C: : surnom ?
+0x418E69: Nom du Rival ?
+0x418E77: {DPAD_ANY}Déplacer {SE_SHOP}OK\n{B_BUTTON}Retour
 0x418E8D: {SE_SHOP}Guide
-0x418E95: {SE_SHOP}Cancel
-0x418E9E: {SE_SHOP}Cancel
-0x418EA7: {SE_SHOP}Switch
-0x418EB5: {DPAD_ANY}Move
-0x418EBC: {DPAD_UPDOWN}Pick
-0x418EC3: No data
-0x418ECB: A deep and sprawling forest that\nextends around VIRIDIAN CITY.\nA natural maze, many people\nbecome lost inside.
-0x418F3A: A mystical mountain that is known\nfor its frequent meteor falls.\nThe shards of stars that fall\nhere are known as MOON STONES.
-0x418FB8: A seemingly plain tunnel that was\ndug by wild DIGLETT.\nIt is famous for connecting\nROUTES 2 and 11.
-0x41901C: A tunnel situated on ROUTE 23.\nIt earned its name because it\nmust be traveled by all Trainers\naiming for the top.
-0x41908E: A decrepit, burned-down mansion\non CINNABAR ISLAND.\nIt got its name because a famous\nPokémon researcher lived there.
-0x419103: An amusement park outside FUCHSIA\nCITY where many rare Pokémon can\nbe observed in the wild.\nCatch them in a popular game!
-0x41917D: A naturally formed underground\ntunnel. Because it has not been\ndeveloped, it is inky dark inside.\nA light is needed to get through.
-0x419201: A pair of islands that is situated\non ROUTE 20.\nThe two islands are shaped the\nsame, as if they were twins.
-0x41926D: A tower that houses the graves of\ncountless Pokémon.\nMany people visit it daily to pay\ntheir respects to the fallen.
-0x4192E2: A mysterious cave that is filled\nwith terribly tough Pokémon.\nIt is so dangerous, the Pokémon\nLEAGUE is in charge of it.
-0x41935B: A power plant that was abandoned\nyears ago, though some of the\nmachines still work. It is infested\nwith electric Pokémon.
-0x4193D5: Supposedly an inactive volcano.\nHowever, there are persistent\nreports that the peak blazes\nwith fire at night.
-0x419444: A forest on a small islet off the\ncoast of THREE ISLAND. BERRIES\ngrow wildly in profusion, quickly\nreplenishing those that fall off.
-0x4194C9: A cave which is covered by water\nand ice on FOUR ISLAND.\nIt seems like the end of the cave\nis connected to the ocean.
-0x41953F: A bewildering cave off the coast\nof RESORT GORGEOUS.\nSome curious thrill seekers have\nnever emerged from it.
-0x4195AC: An ancient ruin that is rumored to\nbe home to a peculiar Pokémon.\nHowever, so far, the Pokémon\nremains an unconfirmed rumor.
-0x419629: This island has been known by this\nname since the distant past.\nNo one today knows where it got\nthis name, however.
-0x41969D: A lush and bush-like area. \nIn it are patterns where no grass\ngrows. Some study it in the belief\nthat a secret is concealed.
-0x41971A: A mysterious, just-discovered\nruin from an ancient time.\nIt got its name from the six dots\non its door.
-0x419782: {DYNAMIC}  nature.\nMet in a trade.
-0x41979D: {DYNAMIC}  nature.\nMet in a trade.
-0x4197B8: {DYNAMIC}  nature.\nMet in a fateful encounter when\nat {LV_2} {DYNAMIC}À.
-0x4197ED: {DYNAMIC}  nature.\nMet in a fateful encounter when\nat {LV_2} {DYNAMIC}À.
-0x419822: {DYNAMIC}  nature.\nMet in {DYNAMIC}Á at {LV_2} {DYNAMIC}À.
-0x419841: {DYNAMIC}  nature.\nMet in {DYNAMIC}Á at {LV_2} {DYNAMIC}À.
-0x419860: {DYNAMIC}  nature.\nApparently met in {DYNAMIC}Á\nat {LV_2} {DYNAMIC}À.
-0x41988A: {DYNAMIC}  nature.\nApparently met in {DYNAMIC}Á\nat {LV_2} {DYNAMIC}À.
-0x41992F: {DYNAMIC}  nature. Met in a fateful\nencounter (hatched: {DYNAMIC}Á\nat {LV_2} {DYNAMIC}À).
-0x41996D: {DYNAMIC}  nature. Met in a fateful\nencounter (hatched: {DYNAMIC}Á\nat {LV_2} {DYNAMIC}À).
-0x4199AB: {DYNAMIC}  nature. Apparently met in\na fateful encounter (hatched:\n{DYNAMIC}Á at {LV_2} {DYNAMIC}À).
-0x4199F4: {DYNAMIC}  nature. Apparently met in\na fateful encounter (hatched:\n{DYNAMIC}Á at {LV_2} {DYNAMIC}À).
-0x419A3D: An odd Pokémon Egg found by the\nDay-Care couple.
-0x419A6E: An odd Pokémon Egg obtained from\nthe traveling man.
-0x419AA2: A wondrously peculiar Pokémon Egg\nobtained at a nice place.
-0x419ADE: An odd Pokémon Egg obtained from\nan old woman at the SPA.
-0x419B18: A peculiar Pokémon Egg obtained\nin a trade.
-0x419B44: It looks like this\nEgg will take a\nlong time to hatch.
-0x419B7B: What will hatch\nfrom this? It will\ntake some time.
-0x419BAE: It occasionally\nmoves. It should\nhatch soon.
-0x419BDB: It’s making sounds.\nIt’s almost ready\nto hatch!
-0x419C0B: a trade
-0x419C13: Somewhere
-0x419C1D: Pokémon Info
-0x419C2A: Pokémon Skills
-0x419C39: Known Moves
-0x419C45: No data
-0x419C4D:              Confirm
-0x419C62: {DPAD_RIGHT}Page {SE_SHOP}Cancel
-0x419C72: {SE_SHOP}Cancel
+0x418E95: {SE_SHOP}Annuler
+0x418E9E: {SE_SHOP}Annuler
+0x418EA7: {SE_SHOP}Changer
+0x418EB5: {DPAD_ANY}Déplacer
+0x418EBC: {DPAD_UPDOWN}Choisir
+0x418EC3: Aucune donnée
+0x418ECB: Une vaste forêt dense autour de\nJADIELLE.\nUn labyrinthe naturel où beaucoup\nse perdent.
+0x418F3A: Une montagne mystique célèbre\npour ses chutes de météores.\nLes éclats d'étoiles qui tombent\nici sont des PIERRES LUNE.
+0x418FB8: Un tunnel apparemment banal creusé\npar des TAUPIQUEUR.\nCélèbre car il relie les ROUTES 2\net 11.
+0x41901C: Un tunnel sur la ROUTE 23.\nIl doit son nom à tous les\nDresseurs qui le traversent pour\nviser le sommet.
+0x41908E: Un manoir délabré et brûlé sur\nCRAMOIS'ÎLE.\nNommé ainsi car un célèbre\nchercheur Pokémon y vivait.
+0x419103: Un parc d'attractions près de\nPARMANIE où beaucoup de Pokémon\nrares peuvent être observés.\nAttrape-les dans un jeu prisé !
+0x41917D: Un tunnel souterrain naturel.\nNon aménagé, il est noir sombre.\nUne lumière est nécessaire pour\nle traverser.
+0x419201: Une paire d'îles sur la ROUTE 20.\nLes deux îles ont la même forme,\ncomme si elles étaient jumelles.
+0x41926D: Une tour qui abrite d'innombrables\ntombes de Pokémon.\nBeaucoup viennent chaque jour\nrendre hommage aux disparus.
+0x4192E2: Une caverne mystérieuse pleine de\nPokémon redoutables.\nTellement dangereuse que la LIGUE\nPOKÉMON la surveille.
+0x41935B: Une Centrale abandonnée depuis des\nannées, mais certaines machines\nfonctionnent encore. Elle est\ninfestée de Pokémon Électrik.
+0x4193D5: Un volcan dit inactif.\nPourtant, on rapporte souvent que\nle sommet s'embrase la nuit.
+0x419444: Une forêt sur un îlot au large de\nl'ÎLE 3. Des BAIES poussent en\nmasse, remplaçant vite celles qui\nchutent.
+0x4194C9: Une grotte couverte d'eau et de\nglace sur l'ÎLE 4.\nIl semble que la fin de la grotte\nsoit reliée à l'océan.
+0x41953F: Une grotte déroutante au large du\nRESORT DÉTENTE.\nCertains curieux en quête de\nsensations n'en sont jamais sortis.
+0x4195AC: Une ruine antique où vivrait un\nPokémon particulier.\nCependant, ce Pokémon reste\nau stade de rumeur.
+0x419629: Cette île porte ce nom depuis\nles temps anciens.\nPersonne ne sait d'où vient\nce nom.
+0x41969D: Un endroit dense en buissons.\nOn y voit des motifs sans herbe.\nCertains pensent qu'un secret y\nest caché.
+0x41971A: Une ruine mystérieuse tout juste\ndécouverte, venue d'un temps\nancien.\nSon nom vient des six points sur\nsa porte.
+0x419782: Nature {DYNAMIC}.\nRencontré par échange.
+0x41979D: Nature {DYNAMIC}.\nRencontré par échange.
+0x4197B8: Nature {DYNAMIC}.\nRencontre fatidique au\nN. {LV_2} {DYNAMIC}À.
+0x4197ED: Nature {DYNAMIC}.\nRencontre fatidique au\nN. {LV_2} {DYNAMIC}À.
+0x419822: Nature {DYNAMIC}.\nRencontré à {DYNAMIC}Á au\nN. {LV_2} {DYNAMIC}À.
+0x419841: Nature {DYNAMIC}.\nRencontré à {DYNAMIC}Á au\nN. {LV_2} {DYNAMIC}À.
+0x419860: Nature {DYNAMIC}.\nApparemment rencontré à\n{DYNAMIC}Á au N. {LV_2} {DYNAMIC}À.
+0x41988A: Nature {DYNAMIC}.\nApparemment rencontré à\n{DYNAMIC}Á au N. {LV_2} {DYNAMIC}À.
+0x41992F: Nature {DYNAMIC}.\nRencontre fatidique (éclos :\n{DYNAMIC}Á au N. {LV_2} {DYNAMIC}À).
+0x41996D: Nature {DYNAMIC}.\nRencontre fatidique (éclos :\n{DYNAMIC}Á au N. {LV_2} {DYNAMIC}À).
+0x4199AB: Nature {DYNAMIC}.\nApparemment rencontre fatidique\n(éclos : {DYNAMIC}Á au\nN. {LV_2} {DYNAMIC}À).
+0x4199F4: Nature {DYNAMIC}.\nApparemment rencontre fatidique\n(éclos : {DYNAMIC}Á au\nN. {LV_2} {DYNAMIC}À).
+0x419A3D: Un Œuf de Pokémon trouvé par le\ncouple de la Pension.
+0x419A6E: Œuf étrange obtenu auprès de\nl'homme itinérant.
+0x419AA2: Œuf de Pokémon vraiment curieux\nobtenu dans un bel endroit.
+0x419ADE: Œuf étrange obtenu d'une vieille\nfemme aux thermes.
+0x419B18: Œuf de Pokémon particulier obtenu\npar échange.
+0x419B44: On dirait que cet\nŒuf mettra longtemps\nà éclore.
+0x419B7B: Que sortira-t-il\nde cet Œuf ? Ça\nprendra du temps.
+0x419BAE: Il bouge parfois.\nIl devrait éclore\nbientôt.
+0x419BDB: Il fait du bruit.\nIl est presque prêt\nà éclore !
+0x419C0B: un échange
+0x419C13: Quelque part
+0x419C1D: Infos Pokémon
+0x419C2A: Capacités Pokémon
+0x419C39: Capacités connues
+0x419C45: Aucune donnée
+0x419C4D: Confirmer
+0x419C62: {DPAD_RIGHT}Page {SE_SHOP}Annuler
+0x419C72: {SE_SHOP}Annuler
 0x419C7B: {DPAD_LEFTRIGHT}Page
-0x419C82: {DPAD_LEFT}Page {SE_SHOP}Detail
-0x419C92: {DPAD_UPDOWN}Pick {SE_SHOP}Switch
-0x419CA2: {DPAD_UPDOWN}Pick
-0x419CA9: {DPAD_UPDOWN}Pick {SE_SHOP}DELETE
-0x419CB9: HM moves can’t be\nforgotten now.
-0x419CDA: Name: 
-0x419CE1: IDNo.
-0x419CE7: Money
+0x419C82: {DPAD_LEFT}Page {SE_SHOP}Détails
+0x419C92: {DPAD_UPDOWN}Choix {SE_SHOP}Changer
+0x419CA2: {DPAD_UPDOWN}Choix
+0x419CA9: {DPAD_UPDOWN}Choix {SE_SHOP}EFFACER
+0x419CB9: Les CS ne peuvent pas être\noubliées maintenant.
+0x419CDA: Nom : 
+0x419CE1: N° ID
+0x419CE7: Argent
 0x419CEF: Pokédex
-0x419CFD: TIME
-0x419D0A: ’s Trainer Card
-0x419D1A: HALL OF FAME DEBUT  
-0x419D2F: LINK BATTLES
-0x419D3C: LINK CABLE BATTLES
-0x419D57: Pokémon TRADES
-0x419D66: UNION TRADES & BATTLES
-0x419D7D: BERRY CRUSH
-0x419D89: Waiting for the other Trainer to\nfinish reading your Trainer Card.
-0x419DCC: Option
-0x419DD3: Text Speed
-0x419DDE: Battle Scene
-0x419DEB: Battle Style
-0x419DF8: Sound
-0x419DFE: Button Mode
-0x419E0A: Frame
-0x419E17: Slow
-0x419E20: Fast
-0x419E2C: Shift
+0x419CFD: TEMPS
+0x419D0A: : Carte Dresseur
+0x419D1A: PREMIÈRE ENTRÉE PANTHÉON  
+0x419D2F: COMBATS LINK
+0x419D3C: COMBATS CÂBLE LINK
+0x419D57: ÉCHANGES POKÉMON
+0x419D66: ÉCHANGES & COMBATS UNION
+0x419D7D: BROYEUR DE BAIES
+0x419D89: En attente que l'autre Dresseur\nfinisse de lire ta Carte\nDresseur.
+0x419DCC: Options
+0x419DD3: Vitesse texte
+0x419DDE: Animations combat
+0x419DEB: Mode de combat
+0x419DF8: Son
+0x419DFE: Mode des boutons
+0x419E0A: Cadre
+0x419E17: Lent
+0x419E20: Rapide
+0x419E2C: Changer
 0x419E36: Mono
-0x419E3B: Stereo
-0x419E46: Help
+0x419E3B: Stéréo
+0x419E46: Aide
 0x419E52: Type
-0x419E57: {DPAD_UPDOWN}PICK {DPAD_LEFTRIGHT}SWITCH {SE_SHOP}{B_BUTTON}Cancel
-0x419F54: SAVING…\nDON’T TURN OFF THE POWER.
-0x419F76: A device that records Pokémon secrets\nupon meeting or catching them.
-0x419FBB: Check and organize Pokémon that are\ntraveling with you in your party.
-0x41A001: Complete with sectors for storing items\nyou bought, received, or found.
-0x41A049: Check your money and other game data.
-0x41A06F: Save your game with a complete record\nof your progress to take a break.
-0x41A0B7: Adjust various game settings such as text\nspeed, game rules, etc.
-0x41A0F9: Close this Menu window.
-0x41A111: Retire from the SAFARI GAME and return to\nthe registration counter.
-0x41A155: Previously on your quest…
-0x41A16F: {PLAYER} switched the Pokémon\n{STR_VAR_1} with {STR_VAR_2}.
-0x41A193: Took the item {STR_VAR_2} from\n{STR_VAR_1} and gave it the item\n{STR_VAR_3} to hold.
-0x41A1CD: Took the item {STR_VAR_2} from\n{STR_VAR_1}.
-0x41A1E7: Used the item {STR_VAR_1} on {STR_VAR_2}\nat this location.
-0x41A210: {PLAYER} used the\n{STR_VAR_1}.
-0x41A220: Used the item {STR_VAR_1}, which was\nin the Key Items Sector.
-0x41A255: {STR_VAR_1} learned the move\n{STR_VAR_2} from a TM.
-0x41A277: {STR_VAR_1} learned the move\n{STR_VAR_2} from a TM and forgot\nthe move {STR_VAR_3}.
-0x41A2B0: Pokémon were fully restored\nat a Pokémon CENTER.
+0x419E57: {DPAD_UPDOWN}Choix\n{DPAD_LEFTRIGHT}Changer\n{SE_SHOP}{B_BUTTON}Annuler
+0x419F54: SAUVEGARDE…\nNE PAS ÉTEINDRE.
+0x419F76: Appareil qui enregistre les infos\nPokémon rencontrés ou capturés.
+0x419FBB: Gérer les Pokémon qui voyagent\navec toi dans l'équipe.
+0x41A001: Compartiments pour stocker les\nobjets achetés, reçus ou trouvés.
+0x41A049: Voir ton argent et autres données.
+0x41A06F: Sauvegarde ta progression pour\nfaire une pause.
+0x41A0B7: Régle divers paramètres comme la\nvitesse du texte, les règles, etc.
+0x41A0F9: Ferme cette fenêtre de Menu.
+0x41A111: Quitte le JEU SAFARI et retourne\nau comptoir d'inscription.
