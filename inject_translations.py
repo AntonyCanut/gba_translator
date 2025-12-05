@@ -136,6 +136,57 @@ def encode_text(text: str, value_to_seq: Dict[str, Tuple[int, ...]]) -> bytes:
     return bytes(out)
 
 
+def encode_text_truncate(
+    text: str, max_len: int, value_to_seq: Dict[str, Tuple[int, ...]]
+) -> bytes:
+    """Encode en respectant la limite max_len (0xFF inclus) en coupant avant dépassement."""
+    text = (
+        text.replace("\xa0", " ")
+        .replace("\u200b", "")
+        .replace("’", "'")
+        .replace("‘", "'")
+        .replace("«", "“")
+        .replace("»", "”")
+        .replace('"', "”")
+        .replace("—", "-")
+        .replace("–", "-")
+        .replace("‐", "-")
+        .replace("‑", "-")
+        .replace("・", ".")
+        .replace("•", ".")
+        .replace("𝑂", "O")
+    )
+    out: List[int] = []
+    i = 0
+    length = len(text)
+    while i < length:
+        ch = text[i]
+        key: str
+        if ch == "\\" and i + 1 < length and text[i + 1] in {"n", "p", "l"}:
+            key = "\\" + text[i + 1]
+            i += 2
+        elif ch == "{":
+            end = text.find("}", i)
+            if end == -1:
+                break
+            key = text[i : end + 1]
+            i = end + 1
+        else:
+            key = ch
+            i += 1
+        seq = value_to_seq.get(key)
+        if seq is None and len(key) == 1:
+            seq = value_to_seq.get(" ") or value_to_seq.get("?")
+        if seq is None:
+            continue
+        if len(out) + len(seq) + 1 > max_len:  # +1 pour le 0xFF final
+            break
+        out.extend(seq)
+    if len(out) < max_len:
+        out.append(0xFF)
+    return bytes(out[:max_len])
+
+
 def try_fit_text(text: str, max_len: int, value_to_seq: Dict[str, Tuple[int, ...]]) -> bytes | None:
     """Tente de compresser/abréger le texte pour tenir dans max_len bytes encodés."""
     # Essai direct
@@ -202,6 +253,21 @@ def main() -> None:
     parser.add_argument("--charmap", type=Path, default=DEFAULT_CHARMAP, help="Charmap utilisée")
     parser.add_argument("--text", type=Path, default=DEFAULT_TEXT, help="Fichier de texte traduit")
     parser.add_argument("--out", type=Path, default=DEFAULT_OUT, help="ROM de sortie (écrasée si existe)")
+    parser.add_argument(
+        "--no-relocate",
+        action="store_true",
+        help="N'écrit pas hors emplacement original (laisse le texte d'origine si trop long).",
+    )
+    parser.add_argument(
+        "--reuse-old-space",
+        action="store_true",
+        help="Lors du relogement, libère l'ancien emplacement (par défaut on le conserve pour que d'éventuels pointeurs non trouvés restent valides).",
+    )
+    parser.add_argument(
+        "--use-holes",
+        action="store_true",
+        help="Utilise les blocs de 0xFF internes pour reloger (sinon on ajoute en fin de ROM).",
+    )
     args = parser.parse_args()
 
     rom_bytes = bytearray(args.rom.read_bytes())
@@ -223,9 +289,8 @@ def main() -> None:
     # Construire un index pointeur -> positions (une seule passe sur le ROM)
     target_ptrs = {POINTER_BASE + off for off in original_lengths.keys()}
     pointer_index: Dict[int, List[int]] = {ptr: [] for ptr in target_ptrs}
-    mv = memoryview(rom_bytes)
     for i in range(len(rom_bytes) - 3):
-        val = struct.unpack_from("<I", mv, i)[0]
+        val = int.from_bytes(rom_bytes[i : i + 4], "little")
         if val in target_ptrs:
             pointer_index[val].append(i)
 
@@ -233,8 +298,9 @@ def main() -> None:
     moved = 0
     errors: List[str] = []
 
-    free_blocks = list(find_free_blocks(rom_bytes, min_size=16, align=4))
+    free_blocks = list(find_free_blocks(rom_bytes, min_size=16, align=4)) if (not args.no_relocate and args.use_holes) else []
     free_index = 0
+    append_offset = (len(rom_bytes) + 3) // 4 * 4  # align fin de rom
 
     for line_no, line in enumerate(args.text.read_text(encoding="utf-8").splitlines(), 1):
         if ": " not in line:
@@ -259,22 +325,34 @@ def main() -> None:
             replaced += 1
             continue
 
-        # Texte trop long : relogement dans une zone libre
+        # Texte trop long
+        if args.no_relocate:
+            end_pos = offset + len(encoded)
+            if end_pos > len(rom_bytes):
+                rom_bytes.extend(b"\xFF" * (end_pos - len(rom_bytes)))
+            rom_bytes[offset:end_pos] = encoded
+            replaced += 1
+            continue
+
+        # Texte trop long : relogement
         needed = len(encoded)
         dest_offset = None
-        while free_index < len(free_blocks):
-            start, size = free_blocks[free_index]
-            if size >= needed:
-                dest_offset = start
-                free_blocks[free_index] = (start + needed, size - needed)
-                break
-            free_index += 1
+
+        if args.use_holes:
+            while free_index < len(free_blocks):
+                start, size = free_blocks[free_index]
+                if size >= needed:
+                    dest_offset = start
+                    free_blocks[free_index] = (start + needed, size - needed)
+                    break
+                free_index += 1
 
         if dest_offset is None:
-            errors.append(
-                f"Ligne {line_no}: pas d'espace libre pour {len(encoded)} octets (offset {hex(offset)})"
-            )
-            continue
+            # append en fin de ROM (zone sûre)
+            dest_offset = append_offset
+            append_offset += needed
+            if append_offset > len(rom_bytes):
+                rom_bytes.extend(b"\xFF" * (append_offset - len(rom_bytes)))
 
         rom_bytes[dest_offset : dest_offset + needed] = encoded
 
@@ -307,12 +385,13 @@ def main() -> None:
             free_blocks[free_index] = (dest_offset, free_blocks[free_index][1] + needed)
             continue
 
-        # Libérer l'ancien emplacement pour de futurs relogements
-        rom_bytes[offset : offset + orig_len] = b"\xFF" * orig_len
-        aligned_old = (offset + 3) // 4 * 4
-        usable = orig_len - (aligned_old - offset)
-        if usable > 0:
-            free_blocks.append((aligned_old, usable))
+        # Optionnel : libérer l'ancien emplacement pour de futurs relogements (si on utilise les trous)
+        if args.reuse_old_space and args.use_holes:
+            rom_bytes[offset : offset + orig_len] = b"\xFF" * orig_len
+            aligned_old = (offset + 3) // 4 * 4
+            usable = orig_len - (aligned_old - offset)
+            if usable > 0:
+                free_blocks.append((aligned_old, usable))
 
         moved += 1
         replaced += 1
