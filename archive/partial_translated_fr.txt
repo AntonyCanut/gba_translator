@@ -36,7 +36,7 @@
 0x17FF1C: Tu ne cuis pas dans ces vêtements ?
 0x17FF49: Je n'arrête pas de faire du shopping\n!\pIl y a tellement de choix au\n{COLOR}ÉGrand Magasin de\nDehara{COLOR}Ç !
 0x180300: Mmm…\pUn parc au milieu d'une ville du\ndésert, c'est si relaxant.\pDehara City est vraiment une oasis\nparadisiaque !
-0x180AF3: jiy:kii Œky
+0x180AF3:  jiy:kii Œky
 0x182E42: j iyökiiオkざy
 0x183387: {PLAYER} range la POTION dans le\n​​secteur des objets du SAC.
 0x183482: Grotte de la vallée
@@ -661,10 +661,10 @@
 0x1C5A04: In the world which you are about to\nenter, you will embark on a grand\nadventure with you as the hero.
 0x1C5A6B: Speak to people and check things\nwherever you go, be it towns, roads,\nor caves. Gather information and\nhints from every source.
 0x1C5AEB: During your adventure, you will\nhave the opportunity to make many\ndecisions.\n\nAlways remember, your actions can\naffect and change the world around\nyou.
-0x1EAF1A: FgFüF
-0x1EAF3A: FüFgF
-0x1EB09A: FíFgF
-0x1EB11A: FíFgF
+0x1EAF1A:         FgFüF
+0x1EAF3A:         FüFgF
+0x1EB09A:         FíFgF
+0x1EB11A:         FíFgF
 0x1EB1C6: FgFüF
 0x1EB1E6: FüFgF
 0x1EB246: FgFüF
@@ -674,42 +674,42 @@
 0x1EB3C6: FgFüF
 0x1EB3E6: FüFgF
 0x1EB5AC: %a!v%a!v
-0x1F3C88: E{STRING}E{STRING}%a!u E{STRING}E
+0x1F3C88: E{STRING}E{STRING}%a!u                E{STRING}E\n
 0x1F47AC:                       gカgニヒニíカ·8E{STRING}カü                ニüニgカg9w                          FüFfFgFgFgFgFg                FgFgFgFgFrF\lF
 0x1F6CC7: bEaía%aヒa                ·aEb
-0x1F7208: E{STRING}E{STRING}%a!u E{STRING}E
-0x1FFE88: E{STRING}E{STRING}%a!u E{STRING}E
+0x1F7208: E{STRING}E{STRING}%a!u                E{STRING}E\n
+0x1FFE88: E{STRING}E{STRING}%a!u                E{STRING}E\n
 0x2009AC:                       gカgニヒニíカ·8E{STRING}カü                ニüニgカg9w                          FüFfFgFgFgFgFg                FgFgFgFgFrF\lF
 0x202EC7: bEaía%aヒa                ·aEb
-0x203408: E{STRING}E{STRING}%a!u E{STRING}E
+0x203408: E{STRING}E{STRING}%a!u                E{STRING}E\n
 0x207D86: ggbgノeDカ
-0x208B85: bEuE
+0x208B85: bEuE\n
 0x209408:          … … : :        egbヒf·w
-0x209428: {SUPER_RE} … : : ügÍg!aEv … : : :
-0x2094E4: ·{STRING}E F F F F
-0x209D0A: ♀e♀e♀e F F F F F F F
-0x209DEB: g%a5f ♀vf
+0x209428:          {SUPER_RE} … : :        ügÍg!aEv         … : : :        
+0x2094E4: ·{STRING}E\n         F F F F        
+0x209D0A: ♀e♀e♀e F F F F F F F F
+0x209DEB: g%a5f                ♀vf
 0x209F82: íöパfggggヒu·{STRING}E{UNKNOWN_STR}F F F F F F F F    
-0x20A062: FüFüF\lE E{STRING}E{STRING}E F F F F
-0x2101A0: E{STRING}E{STRING}%a!u E{STRING}E
+0x20A062: FüFüF\l                        E\nE{STRING}E{STRING}E\n         F F F F        
+0x2101A0: E{STRING}E{STRING}%a!u                E{STRING}E\n
 0x210CC4:                       gカgニヒニíカ·8E{STRING}カü                ニüニgカg9w                          FüFfFgFgFgFgFg                FgFgFgFgFrF\lF
 0x2131DF: bEaía%aヒa                ·aEb
-0x213720: E{STRING}E{STRING}%a!u E{STRING}E
+0x213720: E{STRING}E{STRING}%a!u                E{STRING}E\n
 0x21809C: ggggオe9カ
 0x218440: %{STRING}!\nカa8v F F F F F F F ィ
 0x219759: gagハa·v         タ {SUPER_RE} … :        
-0x2197FC: ·{STRING}E\lF F F F
+0x2197FC: ·{STRING}E\l         F F F F        
 0x2198E6: カa F F F F F F F F
 0x2199DC: カa9v         F F F F        
-0x21A05A: B{STRING}BaBuB{STRING}B{STRING}B{STRING}B{UNKNOWN_STR}
-0x21A0E1: g%e5byv
-0x21A101: g%e5büf {STRING}
-0x2204B8: E{STRING}E{STRING}%a!u E{STRING}E
+0x21A05A: B{STRING}BaBuB{STRING}B{STRING}B{STRING}B{UNKNOWN_STR}               
+0x21A0E1: g%e5büv                
+0x21A101: g%e5büf                {STRING}
+0x2204B8: E{STRING}E{STRING}%a!u                E{STRING}E\n
 0x220FDC:                       gカgニヒニíカ·8E{STRING}カü                ニüニgカg9w                          FüFfFgFgFgFgFg                FgFgFgFgFrF\lF
 0x2234F7: bEaía%aヒa                ·aEb
-0x223A38: E{STRING}E{STRING}%a!u E{STRING}E
+0x223A38: E{STRING}E{STRING}%a!u                E{STRING}E\n
 0x229B7A: カa9uE{UNKNOWN_STR}F F F F F F F F
-0x22A694: FbFv · í{STRING}í{STRING}· F F F\nFífig·qE\l: : : :
+0x22A694: FbFv                        ·\ní{STRING}í{STRING}·\n         F F F F        ífíg·qE\l         : : : :  
 0x236632: Ces lunettes protègent le support\ndes dommages liés aux intempéries et\nde la poudre.
 0x236C40: Un objet destiné à être détenu par\nun Pokémon. Il est une tablette de\npierre qui augmente la puissance des\nmouvements de type Combat.
 0x236CA4: Un objet destiné à être détenu par\nun Pokémon. Il est une tablette de\npierre qui augmente la puissance des\nmouvements de type Vol.
@@ -1083,22 +1083,22 @@
 0x28BA06: ‘ぜベ9fでBぃÂgRグÈ.グ9 SR8/Sh8fこRQ8fÇJgÀsQィ ÂAhiRRQy hRRxhiSxKÉwÉªRyグ Eブ Eオe Et Eu Eu Eエu Eu ElÂぎli ?9iC!/TA /QDAARDQ RhTBgSTA
 0x28BCC5: ÈÂ ÂどxÇnhTu Et Eオu Et Eu Eu EチO E éSTRjぃÀ izRzizzl yzjlz▶i À
 0x2A49C5: kiiii
-0x2B6E56: A g SBQVBAÁ{STRING}SAAQQ\nÂAÚBAxŒÂQhŒÂB xR
+0x2B6E56: A g SBQVBAÁ{STRING}SAAQQ ÂAÚBAxŒÂQhŒÂB xR
 0x2B6F47: ィ oR URR:B RRVQQRk♂ AR
 0x2C486A: RRBöRBQ RRAAÜ
 0x2C87B0:  :wo :wzÔEAパ\pA▶Dw\pzzA\pzz×\pzzAAパzペパ\p oAAÔzAAÔAA×ÔA×A\p×AwzDAペパ×ADA                    Ô   \n   DÔ                                  EAAAポAAA:
-0x2C89B0: C'est :wo :wz
+0x2C89B0:   Ez :wo :wz
 0x2C89BD: EAパwA▶DA\pzz×\pzzAAパz×パ\p ペAAÔoAAÔzA×ÔA×A\p×AAzDAw××ADA                    Ô   {SE_SS_ANNE_HORN}  wÔ     :                            AAAAポAAA:
 0x2F9A95:    {UNKNOWN_STR}  Ô     :S  :R  UR :RR :Rh  ぜぉ  lz  ぁïピORzRRyth
-0x2F9AF8: RyjjSxij Oh Oh
+0x2F9AF8: RyjjSxij    Ô   Ô               
 0x2F9B58:         Xjyiぇjy
 0x2F9C99:    {UNKNOWN_STR}    :y  :S  :R  UR :RR :Rh  ぜぉ  ▶zxuRxピORzRRyth
-0x353F9E: z AAR
-0x354081: GÉNIAL
-0x3616F4: ZyUiz
+0x353F9E: z\nAAR
+0x354081: RAAUAAA
+0x3616F4: ZyUízz
 0x3652FE:   \pÔ  +                                                                    röz rrK タU( 5K
-0x369D6A: ii:QA:A:AIi ABÔ hSÔ :C
-0x369E04: AAÔ AA\lAA7ÔAA7ÔAAPÔRRhÔ
+0x369D6A:   É   É   É   É   É   É   É                                                    iii:QQA:hiS:ACA                ii  ABÔ hSÔ AAÔ :×CA:ACA:8CA:9CA:ACA:RSR 
+0x369E04:     AAÔ AA\l AA7ÔAA7ÔAAPÔRRhÔ
 0x36AA7C:   ki :hi ミSh                
 0x36AEF6: B?  .A  U\l  :Ô    でCÒ QCa 8iqÒPQ
 0x36B0E1: 9\l ·9\l   iS  SE  ポ▶  ·f  :A  :P   
@@ -1113,61 +1113,61 @@
 0x3849C4: {SUPER_RE}ぐボでRAh AAhÒAAQÒRhiiiiiiii
 0x384DC8: RBh RAQÒAAAhBARiRhiÒii{UNKNOWN_STR}i{STRING}ぽ 
 0x384EC8: RBh RAQÒAAAhBARiRhiÒii{UNKNOWN_STR}i{STRING}ぽ 
-0x38867F: i :ii Vii I Heire i{UNKNOWN_STR} kiX\npas áRo
+0x38867F: i :ii Vii                Ô   iÔ  i{UNKNOWN_STR} iiÔ  kii kiX áÙò 
 0x38E73A: ▶i iyi Vii  iiRi{UNKNOWN_STR}ii{UNKNOWN_STR}ii{UNKNOWN_STR}iiÔ 
 0x38F175: RAB\nBRBlUAR zUザ lzzAQパdAQRdBAQeQAR
 0x38F86F: RCAS
 0x38FBDF: zAABzEAgAzh▶zz\p▶zz
-0x38FBF6: VA CA EAADBAAgAA
-0x38FDDF: z\pOf de zABzAAgAzÏ avec
+0x38FBF6: VA\n\nCA\nEAADBAAgAA
+0x38FDDF: zzABzAAgAzÏÔ z\pÔ z
 0x38FDF6:   \n\nÒ \nEgiDBwTgAAw                        Ò   i     Vz  :z  :D   y   E   :        zRAizzピAzzペベDzペベwDj{STRING}ywCÔ:
 0x38FE63:      CQxzパxzzベzzDベzDziDzAEyw{STRING}:
 0x390D02:         U\p {SUPER_RE}e{NAME_END}{SUPER_RE}7Ô  9                                                                                                                                                                        :   :           V  VC iCAiQAAAQAゴ×Qザギ
 0x391017:  DラÔ ラ{DYNAMIC}  :Ô                                                                                         R  iA VAQ VRA                R   Bi  AAÒ BRÒ  SAA CAAVRAAVRRAVRRR SRRVRSR ikRAAh AAg AARÒARRÒRRRÒRRh RhRÒR{STRING}i  :ヨァ ァばニぞモEヌ 
-0x392687: ARRO Rh ARRO ARRO ARRO RBg HS
-0x3926A6: Oh VC VQ
+0x392687:  ARÒ Rh  ARÒ AQÒ ARg RBg hSh  
+0x3926A6: Ô        V   C  VQ  VQFiSgFARC BBC    iÒ  AÒ  hiÒ CAÒ Qh  RhVÒRkCÒ SABVAAgSABAC\pDQFAgB iTB  iD   
 0x39270D: ARÏBAAÒBAQÒQQBÒQRAghiygÔ :Ô          Êラ 
 0x39526D: dji dci ゼtz ソö
-0x399871: siAE·9w
-0x399A71: siAE·9w
+0x399871: ifAE·9w
+0x399A71: ifAE·9w
 0x39BF30: zzzz
 0x39C044: zzzz
 0x39C178: zzzz
 0x39C2AC: zzzz
 0x39C3C0: zzzz
 0x39C4F8: zzzz
-0x3ABDE6: EUzzzzzzz zz zEgii\p·kiA
+0x3ABDE6: EUzzzzzzz\nzz\nzEgii\p·kiA
 0x3ABE36: EÍ9AA94/9a!9aiEオgi.{STRING}A
 0x3ABE50: fCE\piCAAi{STRING}AEi{STRING}
 0x3ABE6E: giE\pgfAAgi\pAki
-0x3ABE86: Giice__POC____POCA__PH0SP0________EE_PA0PH0__
-0x3ABE9C: Iiii{STRING}
+0x3ABE86: giiCE\piCAA{STRING}{STRING}AE{STRING}i
+0x3ABE9C: iiiiii{STRING}
 0x3ABEA4: iiiiE\pgiAAgi\pAkk
-0x3ABEB9: k__ap0__
-0x3ABEC1: kiiiiiiizzzzzzzzzzA{STRING}iAEi9
+0x3ABEB9: k{STRING}iiiii
+0x3ABEC1: kiiiiiizzzzzzzzzzzA{STRING}iAEi9
 0x3ABEE6: \pUzzzzzzzzAzzz\pAikA
-0x3ABF46: Giiii_p___i_IP_IP01_P0_ph0__
+0x3ABF46: giiCE\pi/AAi{STRING}AEi{STRING}
 0x3ABF60: iCE\piCAAE\p!iAAgi\pAki
 0x3ABF7E: giE\pgiAAgii{STRING}AEi{STRING}
-0x3ABF9C: iiii{STRING}iiii
-0x3ABFB9: kiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiii
-0x3AC023: AICEAAAAAAAAAAEAAE'E
+0x3ABF9C: iiiii{STRING}iiii
+0x3ABFB9: kikiiiiiiki
+0x3AC023: AiCAAA\pE%A
 0x3AC02E: EÍ9AA94/9a!9aiAオgiE\pgiAAgi.{STRING}AEi{STRING}
-0x3AC05C: Et g___ , _ _p________.
-0x3AC07A: Gie__pp :GEAGi_____PI8 !_PH0
-0x3AC094: je l'ai fait__pin__paiiiiiii
-0x3AC0B2: giEAiiAgiiiiiiiiiiiiiiiiizzzzzzzzzA{STRING}iAEi9
+0x3AC05C: iCE\piCAAi{STRING}AE\pAk.
+0x3AC07A: giE\pgiAAgi\pAkii{STRING}
+0x3AC094: iiA\piiCAiiiiiiiiiiii
+0x3AC0B2: giEAiiAgiiiiiiiiiiiiiizzzzzzzzzzzA{STRING}iAEi9
 0x3AC0E6: \pUzzzzzzzzAzzz\pAikA
 0x3AC154: iCE\piCAAi{STRING}AEi{STRING}
 0x3AC172: giE\pg.AAgi\pAki
 0x3AC186: kiiC
-0x3AC18C: Glace nonpie nopkex0__
-0x3AC19C: Je miniiiiiiiiiiiiiiiiiiiiiiiii
+0x3AC18C: iCE\piCAAiiAEii{STRING}
+0x3AC19C: iiiiiiiiiiii
 0x3AC1AA: giE\pgiAAgi\pAii
 0x3C38C5: ▶z\nzzzzzzyijyijiiiicラciラcii
 0x3CAE18: hiiÔRhiÔhiiÔRiiÔihi{STRING}iii{B_ATK_NAME_WITH_PREFIX}   Ô                                                                                                                                                            :ii ·9f ki.ぞ
-0x3CAF09: III{STRING}999999999.I.I.9F
-0x3CEEC8: zÒ9 zjÀi z
+0x3CAF09:        iii{STRING}i999.ii.i.9f
+0x3CEEC8:  zÒ9 zjÀi z
 0x3D4F26: Une balle de très haute qualité qui\noffre un taux de capture de Pokémon\nplus élevé que une Grande Balle.
 0x3D4F78: Une balle de bonne qualité qui offre\nun taux de capture de Pokémon plus\nélevé que une Poké Ball standard.
 0x3D4FD0: Une balle lancée pour attraper un\nPokémon sauvage . Il est conçu dans\nun style capsule .
@@ -8466,23 +8466,23 @@
 0x951345: Une mystérieuse masse évolutive. Il\naugmente la Défense et le Sp. Def\nd'un Pokémon pouvant évoluer.
 0x9513B0: Dessine des mouvements de type Eau.
 0x9513D0: Renforce les mouvements de type\nTénèbres.
-0x95F9F4: iiiiii{STRING}
+0x95F9F4: iiiii{STRING}
 0x95FA00:         ラララÊiiiヲkiii{STRING}kiii{STRING}kiiikii{STRING}iiiikiii
-0x95FA2B: iii
-0x95FA30: Je 9jiille ilq kiiis Kiiii19PH0PH
-0x95FA4B: iiiiii
-0x95FA54: iiiizzzz\nki{STRING}iikii{STRING}ki{STRING}kiikiiiiiiiyzzzÓ\n:
-0x95FC34: iiiiii{STRING}
+0x95FA2B: iiii
+0x95FA30: iiiijiiilzzz    kiii{STRING}ki
+0x95FA4B: iiiii
+0x95FA54: iiiizzzz    ki{STRING}iiikii{STRING}ki{STRING}kiikiiiiiiyzzzÓ            :
+0x95FC34: iiiii{STRING}
 0x95FC40:         ラララÊiiiヲkiii{STRING}kiii{STRING}kiiikii{STRING}iiiikiii
-0x95FC6B: iii
-0x95FC70: Je 9jiille ilq kiiis Kiiii19PH0PH
-0x95FC8B: iiiiii
-0x95FC94: iiiizzzz\nki{STRING}iikii{STRING}ki{STRING}kiikiiiiiiiyzzzÓ\n:
-0x95FE74: iiiiii{STRING}
+0x95FC6B: iiii
+0x95FC70: iiiijiiilzzz    kiii{STRING}ki
+0x95FC8B: iiiii
+0x95FC94: iiiizzzz    ki{STRING}iiikii{STRING}ki{STRING}kiikiiiiiiyzzzÓ            :
+0x95FE74: iiiii{STRING}
 0x95FE80:         ラララÊiiiヲkiii{STRING}kiii{STRING}kiiikii{STRING}iiiikiii
-0x95FEAB: iii
-0x95FEB0: Je 9jiille ilq kiiis Kiiii19PH0PH
-0x95FECB: iiiiii
+0x95FEAB: iiii
+0x95FEB0: iiiijiiilzzz    kiii{STRING}ki
+0x95FECB: iiiii
 0x961B50: Normale
 0x961B57: Lutte
 0x961B5D: Vol
@@ -8506,7 +8506,7 @@
 0x962723: zwDzDAAAAAAAA                \n▶\nDwzwDAAAAAAAA                ▶
 0x962D56: ▶\lj▶z{STRING}i▶i{STRING}999こ9999-999-999-999-999jiiijiiiViiiiiiiiii
 0x962F24: izyziiiiiiii                ▶
-0x962F43: zzzziiiiiiiii
+0x962F43: \nzzzziiiiiiii                
 0x962F61: ▶iizziiiiiiiiiÒ                iii
 0x962F84: iiiziiiiViii                ▶\nj▶zyjziiiiiiii                ▶{STRING}\njzyzjiiiiiiii                ▶iiiziiiiiiiiiiÒ                ミラララララララ{DYNAMIC}
 0x964160: Type de mouvement personnel : Fée
@@ -11941,45 +11941,45 @@
 0xA4F04A: Maelström Menaçant Moonraze
 0xA4F066: Lumière qui brûle le ciel
 0xA4F07F: Frappe 7 étoiles de vol d'âme
-0xA95C4D: kÀsiig
+0xA95C4D: kÀsiig 
 0xA97306: j{UNKNOWN_STR}{STRING}▶iyzzRh hjh/gii8 OSiBQi\nS hyzSxiyC hjxByzyR i\nzBRy{STRING}B gyykBQBj RQAShRBRîii ÁiR
 0xAA7906:  RYフURテU
 0xABBB25: jiizzizzz\nぁzz▶Kz
-0xABC343: ïjiiiiiii jy nz
-0xABCB23: Z_PH0__II{UNKNOWN_STR}II_ PH0__IY
-0xAC9BEC: II1PH0__{STRING}PH0__šiškiš
-0xAC9C08: iiiiii
-0xAC9C14: je{STRING}kii{STRING}ki
-0xAC9C20: Iiije
-0xAC9C29: IiiIkiIII____xj0st__ Mais erreur\n;______9____
-0xAC9C48: C'est un 200
-0xAC9C63: iiiiii
-0xAC9C6C: IiiiII
-0xAC9C85: iiiiiiiiiÒ {SUPER_RE}9999999999\l999·99\l999\l999\l9999·9999\l
+0xABC343: ïjiiiiii\njy\nnz
+0xABCB23: zii{UNKNOWN_STR}ii{UNKNOWN_STR}ii{UNKNOWN_STR}iy
+0xAC9BEC: ii{STRING}iiikiiik{STRING}iik{STRING}iikiiiii
+0xAC9C08: iiiii
+0xAC9C14: i{STRING}kii{STRING}ki
+0xAC9C20: iiiÒiiii
+0xAC9C29: iiiikiii{STRING}iik{STRING}iik{STRING}iii{STRING}iiii{STRING}iiii
+0xAC9C48: iiiiViii                i
+0xAC9C63: iiiii
+0xAC9C6C: iiii                ikii
+0xAC9C85: iiiiiiiiiiÒ                {SUPER_RE}9999999999\l999·99\l999\l999\l9999·9999\l
 0xACCB3D: Ô  Ô                                                                                                                                                                                                                                          R  RR                        Ï   RÏ                                                                   FRR SRR:SRR▶SRRkiRRkiSR▶jii
 0xACCCAD: ▶iiRR  RRÒ RR{UNKNOWN_STR}RRyÔRhiÔRiiÔiizÔiy
 0xACCD41:                                                                                                                                                                                                                                          FR FRR                        RÏ  RRÏ                                                                  SRRVRRRVRRRkRRRkSRRkiRR▶iii
-0xACCEAD: jiiRRh\nRRhÒRRh{STRING}RRhyRRizRhiziiy
+0xACCEAD: jiiRRh RRhÒRRh{STRING}RRhyRRizRhiziiy
 0xAD22FB: òÖAAぁEAA\p            Ô   Ô   Ô   Ô                                                                         :9  :9  :!   E   E   E   E   E999999999999!999AA99AAAAAAAAAAAA/99999999!999A!9/RBAAA\pBAQA
-0xAD23C0: AQAÔ9/O 99/ 999Q999P99/AAAAAAAAA
-0xAD23E1: AALAS__PP_MPP__EAD_MPP_BPEA_GPB_VPB_PPB_PPB_GPB_GPB_AVI_PB_PPB_PPB_PP_PP_PP_PP__E\n: : : : : : : : : : : : : : : : : :\n: : : : : : : : : : : : : : : : : :\n: : : : : : : : : : : : : : : : : :\n: : : : : : : : : : : : : : : : : :\n: : : : : : : : : : : : : : : : : :\n: : : : : : : : : : : À ET : ÉTAIT\nET FALLY\nQAAQAQAQAQAQAQAQAQAQAQAQAQAQAQAVA__PPV_\n:
-0xAD24CB: A E : AAA\pAAA
+0xAD23C0: AQAÔ9/Ô 99/ 999Q999P99/AAAAAAAAA
+0xAD23E1: AAAEAA\pEAA\pEAA\pBAA\pQQB\pABA\pAQB\pAAQ\p                                                                                                   E   :   :   :   :   :   :   :AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAÔAQAÔAQAÔAQAÔAQAÔAQAÔAQAÔAQA\p UAA  
+0xAD24CB: A   E   :                AAA\pAAA
 0xAD2B37: A  EA :AA :AAòÔ  ぇÔ  U   Q   AÔ  A\p  AAÔ AA\p   :A  :\p  
-0xAD2B6F: Error 500 (Server\nError)!!1500.That’s an error.There\nwas an error. Please try again\nlater.That’s all we know.
-0xAD2BE0: Q{NAME_END} PRR\pA!9R999A9AAAAAAAAAAAA
-0xAD2D69: EA EA :A :A :A :A :A\n:AAAAQAAAQAAAQAAAAAAAAAAAAAAAAAAAAAAÔ\nAA
-0xAD3145: Et oui oui oui oui oui non 1Appa\naka. A2PP :
+0xAD2B6F: \p :B\p :AA EAA:BAAEAAA!999999999999999!999?999?999B!9999BA99BA99AA99BA99BA99PA99PAAAAB9999A99AAAAAAA!9AAAAAAAAAQ
+0xAD2BE0: Q{NAME_END} PRR\pA!9R999A9AAAAAAAAAAA
+0xAD2D69:                              EA  EA  :A  :A  :A  :A  :A  :AAAAQAAAQAAAQAAAAAAAAAAAAAAAAAAAAAAÔ AA
+0xAD3145:    AÔ  A\p  A\p  AAÔ AAÔ AA\p AA\p                                   :
 0xAD31E2: Ô ÙïÂ ぇぇ  òÔ  Ö   Ô                                                 :A   E   :   :                AAAÏAAA\pAAAABAAQEAA?:AQA:AQA EQA       :Ô
-0xAD3289: R!9AA!9AA99AA99AQ99AQ99AQ99UB\pE9/A\p9999999999999999999999/9999AAÔ
-0xAD3354: AAAAAA
-0xAD336E: Error 500 (Server\nError)!!1500.That’s an error.There\nwas an error. Please try again\nlater.That’s all we know.
-0xAD34DB: QAÔ QR
-0xAD3522: AO : OK : AA : AA : AA :\nAABEQEEBOO__,
-0xAD39C1: /AAAAAAAAAA\p
+0xAD3289: R!9AA!9AA99AA99AQ99AQ99AQ99UB\pE9/A\p9999999999999999999/9999AAÔ 
+0xAD3354:                 AAAAAA
+0xAD336E:   Ô                   AQ99AA99
+0xAD34DB:  QAÔ QR
+0xAD3522: Ô                                                                                                  :AA EAA EAA EAA:AAA:AAA://A·9!!\pAQA\pAQAAEBAA\pEAAQ\p
+0xAD39C1:    /AAAAAAAAA\p
 0xAD3A8B:  ナ{FILL_WINDOW} í{FILL_WINDOW} í{NAME_END} \l{NAME_END} \l{NAME_END} \l{NAME_END}                                                                                                                                                :   :   E   E  :A:!99EA!9EAAAAAAAAAAQAAAQAAAEAA\p?999·99\l9?9\l9?99·999·999\l999\l999\l\l{NAME_END} 9
-0xAD3B92: 8ème : Y : AQ : AQU · A. / AN EXP?】\n999
+0xAD3B92:   9Ô  9Ô  /Ô  \l                                                                                                                                     EA  EA :AQ :AA EQR ·?9 ·99 ·99AAE?AAEBB
 0xAD42C3:                                                                                                                         :   E  :E  ?9 :99 E99:A!9EA!9AAA!AAAQAAAB9?9\l9?9\l9999P9999999?9999999?99999ソ··9ソ!\p·ソ!/·\l\p\l9\l\p·9\l\p·9\l··9\l·EBA
-0xAD44C5: A99 EA9 :AA EA :A :A E EPÏ 9PÏ\n99PÏA9
+0xAD44C5: A99 EA9 :AA  EA  :A  :A   E   EPÏ  9PÏ 99PÏA9
 0xAD49D6:   Ô   Ô   Ô   zÓ  Aw                                                                                                                            ニニ  ♀A               ニ  タi ニbCニAAAAgCA biニタiiCbiCACwzDiAgyiiiigiiiAAiiòòツ♀ニニbAAACAAgAgDAAiyzgCiizCiiiAAAÓ AyÂ iìぇ yÙÙÂwÙÙぇwÚÙぅwÚÙïA+ÙÙ                        Â   Â                                                                     タニ               ニ  タA   b   タiiDAニyAAljAAjiiCiiiigiiiAAgiiAiyAAAgAACAAACAAgAAiiAAiyAAyjiAjjiiiCAAAAAgAAgAAAgAAAgAAACAAACAiizgAwÙÙAAzÙDAAzwCAAAziAAgホニgiùÚiiヘòÂ   Â   ぅ   ず   ず   ;   ÙÔ  Ùぜぉ                                                                                                 ニiyj ニji :ii :ii kii kiy:jiy▶iijiyiiiyAAiiDAiijAiiyiiiyyiiijiiiiiyizAjiiwiiiyiiijiiiiiiiiiiiiijiiiiニDAAAyCAAizCgiizニiiiぁiiiぁiiiぁÚまÙÂù{DYNAMIC}ïぅヒÖÚぅùメまぅòò{DYNAMIC}ぅòòÖぅòòメぜòòòÔ                                                                   :   ▶  :z   
 0xAD4D7D: ホii ▶ii ▶bi ▶biiiiiiyiiiyiiiyiiiziiiziiyziizzziiijiiijiiyjiiyjiiyziizziizzjizzziii{STRING}iii{STRING}jii{STRING}jii{STRING}zii{STRING}ziiizjiizziiòòòÔぁòòÔö
 0xAD51DD: Â  Ô   zÓ  Aw                                                                                                                        ニニ  ♀A  タニ       タ   ♀  タC ニbiニAAAAgCAiiDAニiiニiiiCiiCAAwzDiAgyiiiigiiiAAiiòòツ♀ニニbAAACAAgAgDAAgyzgCiijCiiiAAAÓ gwÂ iìぇ yÙÙÂ+ÙÙぇ+ÙÙぅ+ÙÙï+ÙÙÙ                        Â   Â                                                                                  ニ  タA   b   タ    ニyAAljAAjiiCiiiCgiiiAAgiiAiiニiyzAAAgAACAAACAAgAAiCAAiDAAyiCAjiiiiCAAAAAAAAAAAAAAAAAgAgAgAgAAiyCAwÙÙÙwÙÙÙAìÙÙA+ÙÙA+ÙÙAwÚÙCyÚÙCi+ÙÂ   Â   ぅ   ぅ   ぅ   ぅ   ÙÔ  Ùぜぉ                                                                                                  ニji :ii :ii :ii kii kiy:jiy▶iijijiiiDAAiyAAiyCgiijyiijjiiyiiiiiijjiwijijiyCjiyCiiiDiiiDiiiyiijyji+ÙjA+ÚwAwÚwCwòwzzòwiiぁwiiぁjiiぁÙまÙÂÙ{DYNAMIC}ïぅïÖÚぅòメまぅòò{DYNAMIC}ぅòòÖぅòòメぜòòòÔ                                                                   :   ▶  :z   
@@ -11987,175 +11987,175 @@
 0xAD5D7D: ホii ▶ii ▶bi ▶biiiiiiyiiiyiiiyiiiziiiziiyziizzziiijiiijiiyjiiyjiiyziizziizzjizzzjiiソiiiソjiiソjiiソziiソzii{STRING}zji{STRING}zzi{STRING}オ
 0xAD6331:                                           ニ  タA   b   タ    ニyAAljAAjiiCiiiCgiiiAAgiiAiiニiyzAAAgAACAAACAAgAAiCAAiDAAyiCAjiiiiCAAAAAgAAgAAAgAAAgAAACAAACgiyzzAwòòAAzÖDAAzwCAAAziAAgホニgiùÖiiヘÖÔ       Ó   w   Ó                                                                                                                ニji :ii :ii :ii kii kiy:jiy▶iijijiiiDAAiyAAiyCgiijyiijjiiyiiiiiijiywiiijiiijiiiiiiiiiiiiiiiiijijiiニzDAAizCAiizgiiiニiiiソiiiソiiiソ    É   ヒ   ü   ö   ö   ö   オÔ                                                                     :   ▶  :z   
 0xAD6B31:                              タニ               ニ  タA   b   タiiDAニyAAljAAjiiCiiiigiiiAAgiiAiyAAAgAACAAACAAgAAiiAAiyAAyjiAjjiiiCAAAAAgAAgAAAgAAAgAAACAAACAiizgAwòòAAzÖDAAzwCAAAziAAgホニgiùÖiiヘÖÔ   Ô       w   Ó                                                                                                               ニiyj ニji :ii :ii kii kiy:jiy▶iijiyiiiyAAiiDAiijAiiyiiiyyiiijiiiiiyizAjiiwiiiyiiijiiiiiiiiiiiiijiiiiニDAAAyCAAizCgiizニiiソオiiソオiiソオ    É   ヒ   ü   ö   ö   ö   オÔ                                                                     :   ▶  :z   
-0xAD745B: jiyÉziiÉziiÉ
-0xAD7C5B: jiyÉziiÉziiÉ
+0xAD745B:  jiyÉziiÉziiÉ
+0xAD7C5B:  jiyÉziiÉziiÉ
 0xADB71A: RR:RRRURRR        ゾベベベORRRRRRRRRRBRRピARRAA        Ì   ピ{SE_SS_ANNE_HORN} RA
 0xADB781: オÔ                                                                                                        :   :   :   ゾ   ポ   U   ポORRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRピAARBAAR×AARAAARAAARAAAピAAAピAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA\pぽ
-0xADB90F: Augmenter
+0xADB90F: RAAA
 0xADB914: AAAAAAAA9/AA
 0xADBB1D: iiiポiii▶j9òzii\lzzzziiiiiii·ii
 0xADC00B: R :RR URR ORR:RRR:RRR:RRRRRRRRRRRRRRピRRRARRピARRBARR×ARRAARRA
 0xADC048: BAAAAAAAAAAAAAAAAAAAAAAAAAAA    Ô:ニニ\pどでä\p
 0xADC227: AAAA
-0xADC3FA: Oui à YOCO__D__ :::::
+0xADC3FA: Ô EA\p AA\p    :   :   :   
 0xADC41C:    ▶  :-jiiiiiiijiiyeiyペブベベ
 0xADC957: AAAA
 0xADCB6C: i-Ô 9vこ ii- iiyこDAwこ
 0xADCF5D:    AÔ:ニ                            ニ                                                                                                     :R  UR  OR :RR :RR :RR ゾRR URRRRRRRRRRRRRピRRRBRRR×RRRARRRARRRAピAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA\pどでA\p
-0xADD11A: Eaa9__
+0xADD11A: EAAA\p
 0xADD2ED: .jii.ii\l
 0xADD812: RR:RRRURRRORRRRRRRゾベベベORRRRRRRRRRBRRピARRAARピAARBAAÌ   ピ{SE_SS_ANNE_HORN} RA
 0xADD84F:  AAAÔAAA\pAAA\pAAAAAAAA            :ニニ どでä 
 0xADD87E:   ぽでÉ                                                                                                    :   :   ゾ   U   U   ポ   ポ   ポRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRR×AARAAARAAARAAAピAAAピAAAピAAAピAAAAAAAAAAAAAAAAAAAAAAAAAA\pAAA
-0xADDA07: Augmenter
+0xADDA07: RAAA
 0xADDA0C: AAAAAAAA9/AA
-0xADDB1C: iii
+0xADDB1C: iiii
 0xADDF42: RR:RRRURRR        ゾベベベORRRRRRRRRRBRRピARRAA        Ì   ピ{SE_SS_ANNE_HORN} RA
 0xADDFA9: オÔ                                                                                                        :   :   :   ゾ   ポ   U   ポORRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRピAARBAAR×AARAAARAAARAAAピAAAピAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA\pぽ
-0xADE137: Augmenter
+0xADE137: RAAA
 0xADE13C: AAAAAAAA9/AA
 0xADE345: iiiポiii▶j9òzii\lzzzziiiiiii·ii
 0xADE833: R :RR URR ORR:RRR:RRR:RRRRRRRRRRRRRRピRRRARRピARRBARR×ARRAARRA
 0xADE870: BAAAAAAAAAAAAAAAAAAAAAAAAAAA    Ô:ニニ\pどでä\p
 0xADEA4F: AAAA
-0xADEC22: Oui à YOCO__D__ :::::
+0xADEC22: Ô EA\p AA\p    :   :   :   
 0xADEC44:    ▶  :-jiiiiiiijiiyeiyペブベベ
 0xADF17F: AAAA
 0xADF394: i-Ô 9vこ ii- iiyこDAwこ
 0xADF785:    AÔ:ニ                            ニ                                                                                                     :R  UR  OR :RR :RR :RR ゾRR URRRRRRRRRRRRRピRRRBRRR×RRRARRRARRRAピAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA\pどでA\p
-0xADF942: Eaa9__
+0xADF942: EAAA\p
 0xADFB15: .jii.ii\l
 0xAE003A: RR:RRRURRRORRRRRRRゾベベベORRRRRRRRRRBRRピARRAARピAARBAAÌ   ピ{SE_SS_ANNE_HORN} RA
 0xAE0077:  AAAÔAAA\pAAA\pAAAAAAAA            :ニニ どでä 
 0xAE00A6:   ぽでÉ                                                                                                    :   :   ゾ   U   U   ポ   ポ   ポRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRR×AARAAARAAARAAAピAAAピAAAピAAAピAAAAAAAAAAAAAAAAAAAAAAAAAA\pAAA
-0xAE022F: Augmenter
+0xAE022F: RAAA
 0xAE0234: AAAAAAAA9/AA
-0xAE0344: iii
+0xAE0344: iiii
 0xAE5EFC: A999AAAA
-0xAE7ED8: A9/ÔA!/ÔA!\l99999999A999AAAA
-0xAE8214: €€€€
+0xAE7ED8: A9/ÔA!/ÔA!\l 99999999A999AAAA
+0xAE8214: RRRR
 0xAE8A3C: BAAARRRR
 0xAE8E1D: zzzz▶zzz▶zzu▶zzz\nXぁzz
 0xAE8F1A: zzuk
-0xAE98F3: ÔaA\nAAA________________________________
+0xAE98F3: ÔAAA\pAAAABAAARAAARBAARBAA        
 0xAE9A0A: RRAA{DYNAMIC} AA{SE_SHOP}A{LEFT_ARROW}{DYNAMIC} Aゴ\p Aゴ\p ギギ{DYNAMIC}ÔAAA\pRRRR                        Ô   {NAME_END}                                 :                      :  
 0xAEA00A: RR:RRRURRR        ゾベベベORRRRRRRRRRBRRピARRAA        Ì   ピ{SE_SS_ANNE_HORN} RA
 0xAEA071: オÔ                                                                                                        :   :   :   ゾ   ポ   U   ポORRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRピAARBAAR×AARAAARAAARAAAピAAAピAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA\pぽ
-0xAEA1FF: Augmenter
+0xAEA1FF: RAAA
 0xAEA204: AAAAAAAA9/AA
 0xAEA40D: iiiポiii▶j9òzii\lzzzziiiiiii·ii
 0xAEA8FB: R :RR URR ORR:RRR:RRR:RRRRRRRRRRRRRRピRRRARRピARRBARR×ARRAARRA
 0xAEA938: BAAAAAAAAAAAAAAAAAAAAAAAAAAA    Ô:ニニ\pどでä\p
 0xAEAB17: AAAA
-0xAEACEA: Oui à YOCO__D__ :::::
+0xAEACEA: Ô EA\p AA\p    :   :   :   
 0xAEAD0C:    ▶  :-jiiiiiiijiiyeiyペブベベ
 0xAEB247: AAAA
 0xAEB45C: i-Ô 9vこ ii- iiyこDAwこ
 0xAEB84D:    AÔ:ニ                            ニ                                                                                                     :R  UR  OR :RR :RR :RR ゾRR URRRRRRRRRRRRRピRRRBRRR×RRRARRRARRRAピAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA\pどでA\p
-0xAEBA0A: Eaa9__
+0xAEBA0A: EAAA\p
 0xAEBBDD: .jii.ii\l
 0xAEC102: RR:RRRURRRORRRRRRRゾベベベORRRRRRRRRRBRRピARRAARピAARBAAÌ   ピ{SE_SS_ANNE_HORN} RA
 0xAEC13F:  AAAÔAAA\pAAA\pAAAAAAAA            :ニニ どでä 
 0xAEC16E:   ぽでÉ                                                                                                    :   :   ゾ   U   U   ポ   ポ   ポRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRR×AARAAARAAARAAAピAAAピAAAピAAAピAAAAAAAAAAAAAAAAAAAAAAAAAA\pAAA
-0xAEC2F7: Augmenter
+0xAEC2F7: RAAA
 0xAEC2FC: AAAAAAAA9/AA
-0xAEC40C: iii
-0xAECF5F: EAÔ AAE
+0xAEC40C: iiii
+0xAECF5F:  EAÔ AAE 
 0xAED7AA: Ô                                                                                                                                                                    {SUPER_RE}  {SUPER_RE}v  fy {SUPER_RE}ii       {SUPER_RE} lzj{SUPER_RE}viifyiiiyzjijiiziii    999こiiiyiiiiiiiiiiiizjiiiyji        9   z\l  y-Ô yz\l yz\n zz-Ô                                                                                                                       っ  っど  どで fii fij{SUPER_RE}iii{SUPER_RE}iyiÍオyオどでカでででばででニででiiiiiiiiiiiiオaiiでエaiででエiででエiでトカiiiyiiiiziiiyiii-iii-iiy-iiz-iyzvzzzÔzzzÔzzzÔzz-Ôzz\n zz{SE_SS_ANNE_HORN}zベ{SE_SHOP}ペギ{SE_SHOP}                                     
-0xAF2F4B: zzzz
+0xAF2F4B: zzzz\n
 0xAF2FB6: ai▶\nオiR\nオaRxソオRRソオRRソオiiiiiiiiiiiiiiiiiiiiiiiiaiiiオiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiii{UNKNOWN_STR}ii{UNKNOWN_STR}ii
-0xAF36D2: i{UNKNOWN_STR} iiÔ à
+0xAF36D2:   i{UNKNOWN_STR} iiÔ ki
 0xAF36DF:  ki{UNKNOWN_STR}ii{UNKNOWN_STR}ii{B_ATK_NAME_WITH_PREFIX}                                                                :オ
-0xAF374B: zzzz
+0xAF374B: zzzz\n
 0xAF37B6: ii▶\niiR\niiRxkiRRkiRRkiiiiÔiii
-0xAF3F4B: zzzz
+0xAF3F4B: zzzz\n
 0xAF3FB6: ai▶\nオiR\nオaRxソオRRソオRRソオiiiiiiiiiiiiiiiiiiiiiiiiaiiiオiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiii{UNKNOWN_STR}ii{UNKNOWN_STR}ii
-0xAF5773: zzzz
+0xAF5773: zzzz\n
 0xAF57DE: ai▶\nオiR\nオaRxソオRRソオRRソオiiiiiiiiiiiiiiiiiiiiiiiiaiiiオiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiii{UNKNOWN_STR}ii{UNKNOWN_STR}ii
-0xAF5EFA: i{UNKNOWN_STR} iiÔ à
+0xAF5EFA:   i{UNKNOWN_STR} iiÔ ki
 0xAF5F07:  ki{UNKNOWN_STR}ii{UNKNOWN_STR}ii{B_ATK_NAME_WITH_PREFIX}                                                                :オ
-0xAF5F73: zzzz
+0xAF5F73: zzzz\n
 0xAF5FDE: ii▶\niiR\niiRxkiRRkiRRkiiiiÔiii
-0xAF6773: zzzz
+0xAF6773: zzzz\n
 0xAF67DE: ai▶\nオiR\nオaRxソオRRソオRRソオiiiiiiiiiiiiiiiiiiiiiiiiaiiiオiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiii{UNKNOWN_STR}ii{UNKNOWN_STR}ii
 0xAF782D: RRRÔURRÔURRÔ
-0xAF7D1C: RRRRRRRRRRU
-0xAF851C: RRRRRRRRRRU
-0xAF8D1C: RRRRRRRRRRU
+0xAF7D1C: RRURRRURRRU
+0xAF851C: RRURRRURRRU
+0xAF8D1C: RRURRRURRRU
 0xAFA055: RRRÔURRÔURRÔ
 0xAFCB5E: Ô Ç   Ç   ぇÂ                                                                                                     z   T   :                    zizzRRRRRRRi
 0xAFCBF9: kii :ii kiy :
 0xAFD2F4: i\pjyRRiiRRRyRRRhRRRRSRRiニニニニ
-0xAFD3DC: : yzjiRRhiRhiiiiiiykiiziiz
+0xAFD3DC:        :        yzjiRRhiRhiiiiiykiiziiz\n
 0xAFDAF4: i\pjyRRiiRRRyRRRhRRRRSRRiニニニニ
-0xAFDBDC: : yzjiRRhiRhiiiiiiykiiziiz
-0xAFF4A6: iyUzii
-0xB01CCE: iyUzii
-0xB051C3: R : 2.
-0xB051DC: AFARABO TVH)
+0xAFDBDC:        :        yzjiRRhiRhiiiiiykiiziiz\n
+0xAFF4A6: iyÜzii
+0xB01CCE: iyÜzii
+0xB051C3: A :AA UAA            
+0xB051DC: AARBAAAQAAAAAAAA            Ô   \p
 0xB052CB: RAAAAAAAAAAAAAAAAAAAABAAARRAARRRRAQA\pAQAgAABgAABgAABぱAABぱAARRRRRR    Ô   Ô   Ô   Ô   ä   ä   ä                                                                                                              :   ポ  :9   
-0xB053A4: URRR
+0xB053A4:         URRR
 0xB057B0: zzzz
 0xB05FDC: zzzz
-0xB06228: AQQQ
+0xB06228: AQBQ                            
 0xB067CF: ▶zzzz
-0xB069C4: :EAE:EAU
-0xB069E8: Arara ô __ph0__ : u u :r :r :du\nreaaabaabaaraaarbarba
+0xB069C4:  :EA:EAA                    
+0xB069E8: AARA                        Ô   {FILL_WINDOW}                                                                                                                                         :   U   U  :R  :R  :R  :REAAABAAABAAARAAARAAARBAARRAA
 0xB06AC9: RRAAAABAAAQAAAAAAAAAAAAAAAAAAAAAAAAA{NAME_END} AQÔ BAÔ BA{UNKNOWN_STR}QA{UNKNOWN_STR}QA{UNKNOWN_STR}QAä QAでÔ                                                                                                                                  :{NAME_END} :{NAME_END} :R  :
 0xB06BB1: URRRRRR
-0xB07616: Ô AÎ RC\pest
+0xB07616: Ô AÎ  RC\p iS
 0xB077D8: zzzz
-0xB07C4C: Aiiii
-0xB07DFF: òÀÝ kia : je : je
+0xB07C4C: Aiii
+0xB07DFF: ò  EA  ki  :i  :i  
 0xB08004: zzzz
-0xB08468: Aegiiü
+0xB08468: Egiiü
 0xB087F7: ▶zzzz
-0xB0960B: TTRRRzUxzz RTzTRxi
+0xB0960B: TTRRRzUxzz\nRTzTRxi
 0xB09713: ▶▶z\nz▶TxRTRxUzRzUzz
 0xB09740: RRRRRRRRTRRRTRRRzRRRzzRRz▶zRUÔ  R{NAME_END} R{NAME_END} R{NAME_END} R{NAME_END} R{NAME_END} R{NAME_END} R{NAME_END}                                                                                    :   :   :   :▶zzz▶zzz▶zzz▶zz\nzzz
 0xB0985B: \nR{NAME_END} R{NAME_END} RRÔ RxÔ RxÔ UzÔ ▶TÔ zRÔ                                                                    :   :                        zzzÔzzzÔ▶zzÔ▶zzÔ:zz\n:vz\n:99\l:99\l ▶
-0xB09E72: URRES ANRINGÏ\n________________________________/LR
+0xB09E72: URRRRRRRRR        Ï   \nÔ  z\nÔ RR\nÔRRR
 0xB09E98: zRRR                        Ô   x   :zz{NAME_END}▶R{SE_SS_ANNE_HORN}Uボベ :98  ·9  ·v  :z   ▶        Ï  :\l  :z
 0xB09F07: zzzz
 0xB09F0C: zzzTzzzUzz\nzzzÔ▶zzTRzzRRzzTRzzzz
 0xB0A631: zzTz
 0xB0A8B6: Ô ぉÙÖ                                                                   :z  ▶z  ▶z  ▶z  ▶\n :z\n :z▶ :z▶\nzzz▶zzz▶zzz▶zzzzzzzzzzzzzzzzzzzzURzz▶xzz\n▶zzz\n
 0xB0A96E: zTzz
-0xB0B606: kitTR
+0xB0B606: kiTR
 0xB0B624: iCベベiCwAiAwACAD\pAADEAAポEò
 0xB0B6F5: Uzzzz
 0xB0B728: AwA\pAwA\pADA\pADAxADA▶▶zzz▶zzzzzzz▶zzz
 0xB0B753: ▶\n  :\n   \n   zÔ  z\n  z\nÔ zR{NAME_END}TRRÔzRRR▶zRボ                        Ï   OÔ                                   :zz :zz :zz ▶Rz URR URR URR URRz\n▶zz▶zz\nz\n▶\n
-0xB0C973: kiiiiiiiiiiiiiiiiiii__sph0
+0xB0C973: kiiiikii{STRING}{STRING}
 0xB0CE6B: ぁRRR\pRRBARRBwRRAwRRAìRBAìÖ   Ö   
 0xB1607F: k{DYNAMIC}QgiリAhy            :
-0xB16554: Ce n'est pas une blague
-0xB1657A: Ô\nii{UNKNOWN_STR}ii{B_ATK_NAME_WITH_PREFIX}zzi\n: k k : zzzzzzzzzzz zz
-0xB16AAA: k_{B_ATK_NAME_WITH_PREFIX}_ yÔ\nx_NL__ ________i :iii
+0xB16554: Ò kihÒki
+0xB1657A: Ô ii{UNKNOWN_STR}ii{B_ATK_NAME_WITH_PREFIX}zzi\n                                   :   k   k   :                zzzzzzzzzzz\nzz
+0xB16AAA:   k{B_ATK_NAME_WITH_PREFIX} kyÔ ki\n :ii
 0xB16B86:                                   :jiikiiikiiz▶jzz:zz\n ▶\nS :UR :RRiソででzíばで\n:íニ
-0xB16FBE: RBUR :i :U
-0xB1708F: :JYô{STRING}III{STRING}IZ IYZ IZZ
+0xB16FBE: RB  UR  :i   :   U  
+0xB1708F:  :jyÔkii{STRING}iii{STRING}iiz\niyz\nizz
 0xB17392: iÔkiyÔiy
-0xB17510: ASRAQ
-0xB17F5C: AgÒ AAg AA
+0xB17510: AASRAQ
+0xB17F5C:             AgÒ AAg AA
 0xB17F7D: iji:iz
-0xB17F84: kyzz Ô iÔ i{B_ATK_NAME_WITH_PREFIX}\nj{STRING}{B_ATK_NAME_WITH_PREFIX}
+0xB17F84: kyzz            Ô   iÔ  i{B_ATK_NAME_WITH_PREFIX} j{STRING}{B_ATK_NAME_WITH_PREFIX}
 0xB185A2: \piyC\pijA▶i\nA▶z            Ô   {UNKNOWN_STR}  y
 0xB18D0C: :ziz  :R  iU :BA  EQ:Ô:ik{STRING}:Ai{STRING}EAjÔUQAAQRRAAAAAAAAAAARAAQAQABAhQRhSRQBABARAAgAAAAAAAAAAAAAABAAQRQRRRR&ÚÁ òぇ  じÔ  g{STRING}
-0xB197E6: RBUR :i :U
-0xB1A03F: M U :\pUÔ AUh A
-0xB1A065: WID le VID AAg IAg AAg\nARRB_PPP_PP_PP_PP_PP_PPP_PPP_PPP_PPP.
+0xB197E6: RB  UR  :i   :   U  
+0xB1A03F: M   U   :        \pUÔ AUh A
+0xB1A065: Ô i   V     VCÒ Cg iAg AAgÔARRÔQRB\pR
 0xB1A656: jk▶zUAzzERz\nR
-0xB1A789: {NAME_END} AhÒ AAh AA
+0xB1A789:    {NAME_END}  AhÒ AAh AA
 0xB1A7A5: iji:iz
-0xB1A7AC: kyzz
+0xB1A7AC: kyzz            
 0xB1F6F0: AAA▶AAA▶AAA
 0xB1F907: zwDzDAAAAAAAA                \n▶\nDwzwDAAAAAAAA                ▶AAAzAAAAAAAAAAA                w
 0xB1F966: z▶AzDzAAAAAAAA                \pz
 0xB1F987: zwDzDAAAAAAAA                \n▶\nDwzwDAAAAAAAA                ▶
 0xB1FFBA: ▶\lj▶z{STRING}i▶i{STRING}99999999-999-999-999-999jiiijiiiiiiiiiiiiii
 0xB20188: izyziiiiiiii                ▶
-0xB201A7: zzzziiiiiiiii
+0xB201A7: \nzzzziiiiiiii                
 0xB201C5: ▶iizziiiiiiiiii                iii
 0xB201E8: iiiziiiiiiii                ▶\nj▶zyjziiiiiiii                ▶{STRING}\njzyzjiiiiiiii                ▶iiiziiiiiiiiiii                ララララララララ{DYNAMIC}
 0xB50020: Le livre de Coote
@@ -12181,60 +12181,60 @@
 0xB9BD2D: j9 ベjSh9zhi y
 0xC0B170: i RSzORCzOづhÈQCAzOÂ
 0xC0EBA8: jiy{NAME_END}kiiRky
-0xC132FB: S\pŒÂ· S{STRING}9 VOUS ShiRBQRgÇzzi
+0xC132FB:  S\pŒÂ·  S{STRING}9 VÒ i ShiRBQRgÇzzi
 0xC47C2D: ÀozQz
 0xC4956B: URh▶Shyィ 1R
-0xC725E1: À\lÖumeZWXbgkpuwywtpligfcbacfimosx:Üö{EMOJI_SHOCKED}
-0xC86F3E: fke / eiquky
+0xC725E1: À\n\lÖumeZWXbgkpuwywtpligfcbacfimosx:Üö{EMOJI_SHOCKED}
+0xC86F3E: fKE/EINQUky
 0xC8E914: :omfp
 0xC900EB: Üulmw
 0xC92EB6: öxkdfhnow
 0xC9B7DB: yrlno▶
-0xCB096B: uraUZiuü
+0xCB096B: üraUZiuü
 0xCC497B: yrlno▶
 0xCD0F2D: ÖsvÊÎ{EMOJI_MINUS}evÀÂÄqoqhZjqmovumnvzoSCWz{EMOJI_LEFT_FIST}qcUWdXOQapvidWMOYUECXrpYSUVQYhZNRfZHPiqeTdfaWitmcgs▶thituegu{PLUS}ÁöäöxÖÂÈ\l:{B_LAST_MOVE}ÚöÄこÒ
-0xCE5B57: À {STRING}_______
+0xCE5B57:  ÁÀ {STRING}{EMOJI_HAPPY}ÖzvrojeYSNKGGHLOSVYcfhknpqrstuvx:ä\l
 0xCF90C0: \läztojfbXTQOLKJJJKMORVYdinrwÄ{DYNAMIC}{COLOR}Ê    ざ  :äTË
 0xCF9ECB: Ás3 E3 AY ÂカZ EZ EZ EÛ
 0xCFB5D7: jg  A! Â B VRw VSぞhÔM\nhii{STRING}QÔiy
-0xD5D7E4: \lU zU F
+0xD5D7E4:   \lU   zU  F
 0xD5D7F6: RRh▶i i
 0xD64273:  UiiRhiiA ぱでÙ
 0xD64519: iähRiäi iぷUii
-0xD64548: kiS
+0xD64548: kiiS
 0xD847A6: kyVi
 0xDA11C7: ▶zz zzzzzzSz zTizzjiz zjyzzjyz zjyzzjyz zzセzzzzy zzzizzzh yzzTSzペz iz+zizñô    Á   Á    Á   Áì   ÜÑöqö{DYNAMIC}üÌ        n À  n   îüª   zzzDzzÁz\nzzz
-0xDA28F1: je {NAME_END}kiF
+0xDA28F1: i {NAME_END}kiF
 0xDA4DB8: ▶zÜ▶ zzozzz99 999999じ9 99z299zず 9げzz2Üzz .ozzjz99 999fi9f{UNKNOWN_STR}
-0xDC3EA8: Vk lk je
+0xDC3EA8:   Vk   lk     i   
 0xDD085E:  ▶        i òizX
 0xDD0884:     iyz zzziyiiz z▶zzz
 0xDE533F:  ORRRRベRR RRRRRRRR RRRRRRRR RRRRRRRRËRRベベ:ìRRR RRRRRRRR RRRRÁRRR ÁRRRÁRRR ÁRRRÁRRR ÁRR?ÁRR? Áî
 0xDEF754:   ’{UNKNOWN_STR}  トf  ヤ!   ヤ3  ぞ5ii RikRiiRi iSkiSB
-0xDF9484: Aieaa
-0xDF955F: Edaamaa Aàmzz
-0xDF956F: \p\pAEEEA
+0xDF9484:  AAAAEAAA 
+0xDF955F:  EDAAAmAA Aàmzz
+0xDF956F: \p\p AEEEA
 0xE10847: …wRhっ RTR KRR  KAK オ っ     
 0xE15F29: pzzzA9
 0xE195C7: kラ ラ   i Vi zVyz
-0xE29535: je suis
-0xE29739: je suis
-0xE2C4CC: lR UR Ux :D E Ô\p\p\pÔ
+0xE29535: iijk
+0xE29739: iijk
+0xE2C4CC:   lR  UR  Ux  :D   E        Ô   \n   \p   \p   \p   Ô                      
 0xE2D537: R:wQR ▶RRzA\p AA\p zAÔ ,AÔ ギ{SE_SHOP} グzÔ xA\pÔDéA\n                                                                :wRR:ATR:“wT E“x :GR  
 0xE2D8A6: RB:RRRURRRURBBURぜARざず\pR“A▶    
-0xE2D9B8: Peut
-0xE2DBB8: Là'
-0xE2F8D8: __ __P___:UR___EGE _PH00__
+0xE2D9B8:         xìÙ“DwDéBwwAADADzAA\nAA\pÔ
+0xE2DBB8:         RìÙ“mwDéBwwAADADzAA\nAA\pÔ
+0xE2F8D8: \p:UR\pUR{NAME_END}                       Ô                          :            EAwx:wU{NAME_END}UUU
 0xE2F95A: A\p\pAA\nÔ                           Ô                                   :RA\p:o\n▶ E\pl 
-0xE2FB23: xEAwx : wU{NAME_END}UUU
+0xE2FB23: xEAwx:wU{NAME_END}UUU
 0xE2FB5E: A\nÔ       Ô                   Ô                                   UR·o:RA\p:o\n▶ 
 0xE2FD52: A\pAADDEAADEzww                    Ô   Ô   Ô      U   ▶   :                    RBA
 0xE2FF56: ADAADDEzww                    Ô   Ô   Ô      :   U   ▶   :                RxぜARBA
 0xE300FA:   EAÔ   ▶T  UB 
 0xE3010A: Rx:\pRRぜ\pRREAUwEo
-0xE301B0: R__p__r__r____
+0xE301B0:                 R\pR\pAUR\p
 0xE302FE:     Ew  ▶T  UB :Rx 
-0xE303B0: BER\p\pQR\p
+0xE303B0:                 BER\p\pQR\p
 0xE304DC: A/ヒü                                                                 E\p·:げAA:\pAご·AA\pぜAÙA·“9A:AAA:/A\pAAヒ\nAAwE!AzE!ヒ\n9/A\l0AA9z“A9-‘!9-Ô   \p   Ô   Ô   \l   \n   Ô   Ô                                    ·AAln99:
 0xE306E0:                                                                  E·\p E\p·:げAA:\pAご·AA\pぜAÙA·“AA:AAAA/ヒüAAヒ\nAAwE!AzE!w\n9/A\l0AA9z“A9-    Ô   \p   Ô   Ô   \l   \n   Ô                                   :/A\pln/A:
 0xE308D8: !/A\lAAAÔ            Ô   Ô                  :   E   ·   :                :ごAA·\lA‘DéAEDAÙ!EA/AEAAw·AAD:AADAA\p\l/!í5/A·ハAA\l5A!\l\lA0\l-ì9v599v5Ô   \l   Ô   \l   Ô   Ô   Ô   Ô                                   :/Av:-99 ▶-9 ぁm0 :
@@ -12245,47 +12245,47 @@
 0xE314B0:  ·DA ▶AA :A! ▶Az            Ô   \l   !
 0xE316B4:  ·DA ▶AA :A!                Ô   \l   !
 0xE338CF:  ずz{NAME_END}oRÔ TBÔ TB{NAME_END}                                                                 koo:.Qo:/RBECQ!E-yfE2v.:\poi:♀
-0xE339B3: E l EAA\pDAw\p¥DwÔAD
-0xE33BB3: D {STRING}ABAAA___PP_PP_PP\p_¥DwÔw♀
+0xE339B3: E   l        EAA\pDAw\p¥DwÔAD
+0xE33BB3: D   l        {STRING}ABAEAA\pDAw\p¥DwÔw♀
 0xE34CD7: :   :Ô  U        Ô   Ô   \p   \p   \p   {NAME_END}     ▶   :  l\n  T{NAME_END} l\n  TE  :E   :z
 0xE34ED8:    :   :    Ô   \p   {SE_SS_ANNE_HORN}  UÔ  BÔ  AÔ  \p      ▶   ▶   :  l\n  T{NAME_END} l\n  TE  :E\n :zz
 0xE34F26: ▶zDAzベYAペuジARuAパzxAjヅAAhIzÔ  U\n 
 0xE351CC: zペ{NAME_END}OOÔ zz          {SE_SS_ANNE_HORN}  Ô                                                                                                                                                                                                      :   :     lz
-0xE3815F: UR :jR :ii k{STRING}
+0xE3815F:                                                                    UR :jR :ii k{STRING}
 0xE383A3: R  ▶R :iR k{STRING}
-0xE38508: Ex :QQ :BB :Q\pEA :·
-0xE38704: Ex :QQ :BB :Q\pEA :· :AUTR
-0xE38729: RR·EUDAA AAAT
-0xE3890C: UTT UTT :y{UNKNOWN_STR}
-0xE3892F: Royaume-UniRxR{STRING}RxRiUxS
+0xE38508:   Ex :QQ :BB :Q\p  EA  :·
+0xE38704:   Ex :QQ :BB :Q\p  EA  :·   :AUTR
+0xE38729: RR·EUDAA\nAAAT
+0xE3890C:  UTT UTT :y{UNKNOWN_STR} 
+0xE3892F: UkRxR{STRING}RxRiUxS
 0xE38953: RRh{STRING}zRjUTz
-0xE38B10: UTT UTT :y{UNKNOWN_STR}
+0xE38B10:  UTT UTT :y{UNKNOWN_STR} 
 0xE38B37: U{STRING}RxRiUxSëi{STRING}k¿Wi{STRING}どWjiäiyTkikRhi
-0xE3CD40: z lz z
-0xE42698: lzz lz
-0xE454F4: lzz lz
+0xE3CD40:    z  lz   z            
+0xE42698:  lzz  lz                
+0xE454F4:  lzz  lz                
 0xE4BF1B:  ゲ\lUSAAA
 0xE4EE55: d{DYNAMIC}..dk 9fdピhi
 0xE52B52: AQABっÂBËBABR ÌRRRÁQz
-0xE5B398: zlDw
+0xE5B398: zlDw 
 0xE5CB55: ixzBz ÂîTz ÂjiBxjÈzAyiyÀájŒo
-0xE6CB4B: ABARBQRRBQRRBQRRBQRRBQRRBQRRBQRRBQR\nRRRST Â BÏ ARE AAâ€AR RA____0__LY
+0xE6CB4B: ABARBRABQRRAQRRBQÜÜ  Â   BÏ  AQ  AAÎ AAQ AQR RA{SE_SS_ANNE_HORN}                                                                                                                                                                 :RR  
 0xE6CE94: NABAギBQA            Ô
-0xE6D2F8: EAA :Ô U{NAME_END}_ A_PH0____ AÔ
-0xE6D38E: ____Shothoty_a : __ph : Aa r qô :__\n__pp :
-0xE6D8D4: QAAAAAA
-0xE6DE92: Ranqânaba
-0xE6E18C: :UA UAA9AAAAAAQ :Ô
-0xE6E275: BARQQARQA
-0xE6E28A: UN:
-0xE6E294: R{NAME_END} UÔ {NAME_END} Qô A\pU\p:Ô\l:R UR UR U
+0xE6D2F8:  EAA                :Ô  U{NAME_END} A{NAME_END} AÔ     
+0xE6D38E: Ô AA\p AAAÔUAA\p                                                                 EAA:BAA:AAA EAA EAQ :BB  UA  EAQÔ  \p   {NAME_END}  Ô   Ô   Ô   {NAME_END}  \p     
+0xE6D8D4: QAAAAAAA                
+0xE6DE92: RANAQANABA     
+0xE6E18C:  :UA UAA9AAAAAAQ     :Ô
+0xE6E275:        BAARQAQRQABA
+0xE6E28A: AA :UA  :
+0xE6E294:         R{NAME_END} UÔ  {NAME_END}  QÔ  A\p  U\p  :Ô                                                 \l  :R  UR  UR  U
 0xE6E310: RRAQ?RBA
 0xE6EC24: RQABRAABRARB
 0xE75D29: {SUPER_E}ii ゼii :ii :ii :iiニニニdニニdSâdiSiiiSiiiSiぷiiiジiii{STRING}iiザ   RË  RË  R{NAME_END} R{NAME_END} R{NAME_END} RÔ  iÔ                                
 0xE7647A:                                                                                              ィ   ね :kヘ Uiジ UhiィRhiィRiiNRi
 0xE84ECE: ii{LV}YRROÄ
 0xE9F7A0:   …g  …A   A                    ベベベベAAAAAAAA                    ×Î  AÎ  A                          T   l                        RRRRzzzz                        x   Ó                                                                                      Ä  :
-0xE9FC40: zzzziiiizzzziiiiizzziiiiizzzziiii :
+0xE9FC40: zzzziiiizzzziiiizzzziiiizzzziiii  
 0xEB1A94: BÔ ÂßèwËねびFばA case for holding Coins obtained\nat the Game Corner.\nIt holds up to 999,999,999 Coins.
 0xEB1AF8: Il vérifie les éléments invisibles\ndans la zone et fait du bruit et des\nlumières lorsqu'il trouve quelque\nchose.
 0xEB1B53: Une carte qui répertorie les Battle\nPoints que vous avez gagnés et les\nimpressions d'installations de\ncombat que vous avez reçues.
@@ -17784,21 +17784,21 @@
 0x1F10F55: Comme vous l'avez déjà fait,\nvoudriez-vous sauter les\ncinématiques d'ouverture ?
 0x1F10F9C: Les cinématiques d'ouverture seront\nignorées.\pSi vous souhaitez ignorer toutes les\ncinématiques, veuillez activer cette\ldans le menu Options.
 0x1F11016: Il y a longtemps…
-0x1F11020: La région de Borrius a été engloutie\npar une grande guerre avec un pays\nétranger. Ce fut une guerre brutale,\nqui a duré de nombreuses années.\nPendant ce temps, l'ennemi a réussi\nà prendre le dessus…
+0x1F11020: La région de Borrius a été engloutie\npar une grande guerre avec la région\nde Kalos. Ce fut une guerre brutale,\nqui a duré de nombreuses années. À\ncette époque, Kalos a réussi à\nprendre le dessus…
 0x1F110D5: Au bord de la défaite, le roi\nBorrian a invoqué une force obscure\npour l'aider\là renverser le cours de la\nbataille...
-0x1F11136: L’avantage de l’armée étrangère a\nété perdu presque instantanément.\pDès son entrée sur le champ de\nbataille, la force obscure a utilisé\nson pouvoir pour\lcréer des portails et transporter\nl’armée d’invasion\lchez elle…
+0x1F11136: L’avantage de l’armée kalosienne a\nété perdu presque instantanément.\pDès son entrée sur le champ de\nbataille, la force obscure a utilisé\nson pouvoir pour\lcréer des portails et transporter\nl’armée d’invasion\là Kalos…
 0x1F111F0: L'armée étrangère étant partie, la\nguerre semblait terminée pour\nBorrius.\pCependant, leur roi, vaincu par sa\nsoif de pouvoir, envoya également\nl'armée Borrian\là travers les portails…
-0x1F1129A: La guerre a continué à faire rage\ndans les terres étrangères pendant\nplusieurs années.\pDe nombreux autres hommes et Pokémon\nont été enrôlés pour combattre et\ninévitablement\lont connu leur fin sur le champ de\nbataille.\pL'un de ces Pokémon avait été un ami\ncher du roi ennemi…
-0x1F1137E: Accablé par le chagrin, le roi a\nconstruit un appareil pour lui\nredonner la vie, s'accordant ainsi\nl'immortalité.
+0x1F1129A: La guerre a continué à faire rage à\nKalos pendant plusieurs années.\pDe nombreux autres hommes et Pokémon\nont été enrôlés pour combattre et\ninévitablement\lont connu leur fin sur le champ de\nbataille.\pL'un de ces Pokémon avait été un ami\ncher du roi Kalosien…
+0x1F1137E: Accablé par le chagrin, le roi a\nconstruit un appareil pour lui\nredonner vie, s'accordant ainsi\nl'immortalité à\l.
 0x1F113ED: Mais cet événement traumatisant l'a\nlaissé marqué et rempli de colère.\pIncapable de pardonner au monde que\navait blessé son précieux Pokémon,\nil\la transformé sa machine en une arme\ngéante\l, l'arme ultime.\pLe roi est devenu un porteur de\ndestruction qui a mis fin à la\nguerre.
 0x1F114EB: Une fois la guerre terminée, le peu\nqui restait de l'armée borrienne\lrentre chez lui.\pLe Pokémon du roi l'a quitté, et le\n​​champ de bataille est devenu\nsilencieux…
 0x1F11576: Pourtant, la paix était encore à\nvenir.
-0x1F11594: Enragés par la guerre infructueuse\nmenée, les survivants de la guerre\nsouhaitaient\lune large compensation de la part du\lroi Borrien.\pQuand il n'avait rien à leur offrir,\nils commencèrent à manipuler la\nforce obscure\lpour attaquer le royaume Borrien\ldans une tentative de coup d'État.
-0x1F11684: Dans un effort pour arrêter cette\nfolie, le ​​roi Borrian a rassemblé\nles\lPokémon légendaires :
+0x1F11594: La force obscure de Borrius voulait\ncompensation pour son aide.\pLorsque le roi n'avait rien à offrir\nelle, la force obscure était\nenragée.\pElle a commencé à détruire\nd'innombrables villes et villages.
+0x1F11684: Dans un effort pour arrêter sa\nfolie, le ​​roi Borrien a rassemblé\nles\lPokémon légendaires :
 0x1F116D7: Artikodin!
 0x1F116E1: Électhor!
 0x1F116E9: Sulfura !
-0x1F116F2: En utilisant le pouvoir des trois\noiseaux, une prison a été créée pour\nla force obscure\l, scellant ainsi son pouvoir.
+0x1F116F2: En utilisant le pouvoir des trois\noiseaux combiné à une bouteille\ndivine donnée\lpar Arceus, créateur de tous\lPokémon, la force obscure fut liée.
 0x1F11752: Il est devenu l’ombre de lui-même.
 0x1F11779: Dépouillé de son pouvoir, il fut\nrepris par le roi, et supervisé par\lsa progéniture, jusqu'au jour\nfatidique…
 0x1F117E3: Dépouillé de son pouvoir, il fut\nrepris par le roi et surveillé par\nsa progéniture jusqu'à ce jour.
@@ -17806,10 +17806,10 @@
 0x1F11864: 15 ans plus tard
 0x1F11888: Hoopa…\pI worry, old friend, for the future\n- for if, no…{PAUSE}ね when SHE arrives.
 0x1F118D6: I won’t be able to protect you if\nshe tries something.\pNo…{PAUSE}ね she will try something.\pIt’s a matter of what it will be.
-0x1F1194E: C'est pourquoi, mon ami, tu dois\naller te cacher.\pJ'enverrai ta Poké Ball à la dérive,\nau milieu des vagues…\pTu seras sûrement plus en sécurité\nperdu en mer, que si tu restais avec\nmoi.\pSi je me trompe et que rien ne se\npasse, Je te rappellerai.\pMais si c'est notre dernière fois\nensemble…\pProtégez mon {STR_VAR_3} si\n{STR_VAR_2} est jamais en danger.\pEt à son tour, si le mauvais type\nessaye de forcer votre véritable\npouvoir à se libérer…\pAlors faites confiance à {STR_VAR_1}\npour vous protéger.\pAdieu, mon bon ami.
-0x1F11B03: C'est parti…
-0x1F11B0E: Donc, tu es venu après tout.\pFinissons-en.
-0x1F11B40: ARGH!\pComment puis-je réaliser le souhait\nde grand-père si je ne parviens pas\nà attraper un seul Pokémon ?
+0x1F1194E: That’s why, my friend, you must\ngo into hiding.\pI’ll send your Poké Ball adrift,\namidst the waves…\pYou’ll surely be safer lost at sea,\nthan if you were to remain with me.\pIf I’m wrong, and nothing happens,\nI’ll call you back.\pBut if this is to be our final time\ntogether…\pProtect my {STR_VAR_3} if {STR_VAR_2} is\never in danger.\pAnd in turn, should the wrong sort\ntry to force your true power free…\pThen trust {STR_VAR_1} to protect you.\pFarewell, my good friend.
+0x1F11B03: It’s gone…
+0x1F11B0E: So, you came after all.\pLet’s get this over with.
+0x1F11B40: ARGH!\pHow can I fulfill Grandpapa’s wish\nif I cannot catch a single Pokémon?
 0x1F11B8D: Je lui ai promis… {PAUSE}î J'ai\npromis que je terminerais la guerre,\nmais pour le moment…\pJe ne peux même pas commencer à\ncomprendre la possibilité !
 0x1F11C01: Que dois-je faire…?
 0x1F11C19: Une Poké Ball ? Ici? Maintenant?
@@ -18742,7 +18742,7 @@
 0x1F298F4: Ah, tu es une telle bouée de\nsauvetage, sérieusement !
 0x1F2991C: Au fait, comment prends-tu\nhabituellement ton café, de toute\nfaçon ?\pLe mien est tout noir, sans sucre.\pJe veux SENTIR que ça me donne du\njus, donne-moi le ​​choc pour finir\nce que je commence.
 0x1F299B9: Ha ha ha ha ! Si ce n'est pas\n{PLAYER}!\pJ'ai entendu dire que c'était le\nmeilleur endroit pour un café de ce\ncôté de Borrius, alors\lme voici.\pDites, aucun des autres clients n'en\navait , mais…\pSi vous transportez un\n{COLOR}É{STR_VAR_1}{COLOR}Ë,\nêtes-vous prêt à l'échanger ?\pJe cherchais à me débarrasser de mon\n{COLOR}É {STR_VAR_2}{COLOR}Ë, donc\nsi tu veux le faire\lpour ça, alors je suis déprimé.
-0x1F29AEE: Grr… well that’s…{PAUSE}ね fine…
+0x1F29AEE: Grr… bien c'est…{PAUSE}ね bien…
 0x1F29B09: Quoi… tu essaies de te moquer de\nmoi, ya punk morveux !?\pÇa ne ressemble pas du tout à un\n{COLOR}É {STR_VAR_1}{COLOR}Ë !
 0x1F29B6B: Hé hé… tu apprécies ça {COLOR}É\n{STR_VAR_2}{COLOR}Ë, d'accord ?
 0x1F29B97: C'est vraiment bien, ce truc - ils\nne mentaient pas à ce sujet…\pHa ! Si un pauvre con comme le\nTerror Granbull essayait de prendre\nce\ljoint…\pEh bien, personnellement… ils\nn'apprendraient plus jamais à\nrecommencer, s'ils savaient ce que\létait bon pour eux.
@@ -18754,41 +18754,41 @@
 0x1F29F13: Ah, {PLAYER}… Je ne t'ai pas vu\nlà-bas.\pJe pensais juste rendre visite à\nquelques vieux amis, ici dans cet\nétablissement,\let prendre un café à côté.\pAh, oui… J'avais l'intention de te\ndemander, la prochaine fois que je\nte verrais…\pArais-tu le Pokémon connu sous le\nnom de {COLOR}É{STR_VAR_1}{COLOR}Ë à\néchanger moi ?\pJe peux l'échanger contre un\n{COLOR}É{STR_VAR_2}{COLOR}Ë, si ça\nte va.
 0x1F2A052: Je vois… peut-être une autre fois,\nalors ?
 0x1F2A075: J'ai bien peur que ce ne soit pas\ntout à fait ça… Je cherchais\n{COLOR}É{STR_VAR_1}{COLOR}Ë…\pJe préférerais une réponse directe\npar oui ou par non, si cela ne vous\ndérange pas.
-0x1F2A0F0: Ah, c'est le ticket !
-0x1F2A107: Je ne visite le café qu'avant\nd'avoir pour exercer mes fonctions\nde responsable du gymnase.\pLa dernière fois, j'ai régressé à un\nâge plus jeune , et le personnel ne\nm'a pas laissé\lentrer, vous voyez.\pIls m'ont offert une boîte de jus et\nm'ont demandé si j'étais séparé de\nmes\lparents.\pHmph ! Comme c'est impoli de leur\npart.
-0x1F2A205: Qui ose s'immiscer dans la pause\ncafé de l'Homme-Taupe ?\pOh, c'est toi, habitant de la\nsurface…!\pHmph. La Ligue m'a demandé de donner\ncet objet rare au\lnouveau champion.\pPrenez-le et laissez-moi dans ma\nsolitude, habitant de la surface.
-0x1F2A2E9: C'est le {COLOR}ÉGroundium\nZ{COLOR}Ë, la précieuse possession\ndu peuple-taupe.\pC'était notre plus grande arme\ncontre nos oppresseurs, avant qu'ils\nne nous conduisent\là la clandestinité…\pTch… mais cela ne vous sera d'aucune\nutilité, habitant de la surface, car\nmoi et mes\lcompagnons taupes surpasserons\lsa grande puissance.\pJe le jure, au nom de all taupes !
-0x1F2A424: J'avoue que le café ici… n'est pas\nquelque chose que je n'aime pas.\pIl me rappelle beaucoup les\nassiettes de terre que ma mère\npréparait\ldans ma jeunesse.\pPeut-être en ferais-je l'unique\nréserve du monde de la surface,\lune fois que notre vengeance sera à\nportée de main…
-0x1F2A508: Oh, hé, {PLAYER}… drôle d'endroit\npour rencontrer, hein ?\pAlors… on m'a dit - ou plutôt, on a\ndit au Pokémon qui habitait mon\ncorps\l…\pque je devais transmettre ça, comme\nle ​​prix pour m'avoir battu la\ndernière fois.\p« Mieux vaut tard que jamais »,\nont-ils dit… hah…
-0x1F2A5E9: Ce {COLOR}ÉGhostium Z{COLOR}Ë est un\nclient effrayant, je vais vous le\ndire.\pTout mouvement de type\n{COLOR}ÉGhostium{COLOR}Ë se\ntransforme en une attaque si\neffrayante…\pCela pourrait presque effrayer le\nPokémon traîner cette prison de\nchair autour\lhors de ma peau…\pPresque…
-0x1F2A6BE: Saviez-vous que la Ligue ne me paie\nplus pour quoi que ce soit ?\pJe suis mort, donc je n'ai pas\nbesoin de nourriture, et Je ne suis\npas fatigué, donc je ne dors pas,\ldonc je n'ai pas besoin d'abri, donc\nje n'ai pas\lbesoin d'argent pour le loyer.\pJe dois passer, je ne sais pas\ncombien de temps, à faire tout ce\nque la Ligue et cette\lchose stupide veut…\pCe qui inclut obtenir café…\pCe qui n'est même pas pour moi…\pEt a été payé par mon hôte en volant\naux autres clients.
-0x1F2A844: {PLAYER}!\pTu es venu pour notre goûter !\pHein ?\pOù est papa ?\pEh bien… il est de retour à la\nmaison, à la recherche un autre\ntravail.\pMais tant que je suis de retour\navant la nuit, ça ne le dérange pas,\nje le promets !\pTiens, j'ai un cadeau, pour notre\ninvité inattendu !
-0x1F2A91C: Le {COLOR}ÉFairium Z{COLOR}Ç\ncontient toute la puissance de mes\namis {COLOR}ÉFairy{COLOR}Ç !\pLe pouvoir Pixie enverra vos ennemis\nvoler !
-0x1F2A98E: Hein? Tu veux savoir pourquoi je\nprends tout ce thé ici ?\pPapa a dit que je ne devrais pas\napporter de nourriture ni de\nboissons que je n'ai pas achetées au\ncafé\lici, parce que c'est impoli.\pAlors j'ai juste acheté tous les\ndifférents thé ici et j'ai organisé\nune grande fête de thé\lavec tous mes amis !\pPas de café, cependant.\pPapa dit que je ne suis pas encore\nassez vieux.
-0x1F2AAB5: WROOOOOAR !\p…\pOh, désolé, {PLAYER} - Je viens de\nrecevoir de retour de la DragonCon.\pC'est ce qu'ils ont dit, un dragon\nrécemment découvert appelé\l« Éthernatos » ressemble à.\pUn véritable carburant de cauchemar\nsi vous me demandez. Ne ressemble\nmême pas à un dragon !\pC'est une bonne chose que vous ne\npuissiez pas le trouver ici à\nBorrius, alors !\pMais je sais autre chose que vous\nPOUVEZ trouver, et c'est ça !
-0x1F2ABFD: Ce {COLOR}ÉDragonium Z{COLOR}Ç est\nplus puissant que n'importe quel\nfaux {COLOR}ÉDragon{COLOR}Ç!\pQui a besoin de choses qui\nressemblent à ça, quand vous pouvez\npercer un trou\là travers vos adversaires avec ce\lZ-Cristal!\pJe parie qu'ils n'ont pas ceux d'où\nce faux Dragon vient.
-0x1F2ACF4: Vous savez, tous ceux qui me\nrencontrent pour la première fois\ndisent la même chose…\pIls s'attendaient à ce qu'un Trainer\nde type Dragon soit plus élégant et\lmature…\pPfft ! Je suis totalement mature -\ncette cassette j'ai dit qu'elle est\nclassée « Mature » !
+0x1F2A0F0: Ah, that’s the ticket!
+0x1F2A107: I only visit the café before I have\nto attend my duties as Gym Leader.\pLast time, I regressed to a younger\nage, and the staff wouldn’t let me\lin, you see.\pThey offered me a juice box, and\nasked if I was separated from my\lparents.\pHmph! How rude of them.
+0x1F2A205: Who dares intrude upon the coffee\nbreak of the Mole-Man?\pOh, it’s you, surface dweller…!\pHmph. I was instructed by the League\nto give this rare item to the\lnewest Champion.\pTake it, and leave me to my\nsolitude, surface dweller.
+0x1F2A2E9: That is the {COLOR}ÉGroundium Z{COLOR}Ë, the prized\npossession of the mole people.\pIt was our greatest weapon against\nour oppressors, before they drove\lus underground…\pTch… but it shall not avail you,\nsurface dweller, for I and my\lfellow mole people shall surpass\lits great power.\pThis I swear, on behalf of all\nmole people!
+0x1F2A424: I admit that the coffee here…\nis not something I dislike.\pIt reminds me very much of the\nplatefuls of dirt my mother made\lin my youth.\pPerhaps I shall make it the sole\npreserve of the surface world,\lonce our revenge is at hand…
+0x1F2A508: Oh, hey, {PLAYER}… funny place to\nmeet up, huh?\pSo… I was told - or rather,\nthe Pokémon inhabiting my body\lwas told…\pThat I ought to pass this along, as\nthe prize for beating me last time.\p“Better late than never”, they said…\nhah…
+0x1F2A5E9: That {COLOR}ÉGhostium Z{COLOR}Ë’s one spooky\ncustomer, I’ll tell you that.\pAny {COLOR}ÉGhost{COLOR}Ë-type move turns into an\nattack so scary…\pIt could almost scare the Pokémon\ndragging this flesh prison around\loutta my skin…\pAlmost…
+0x1F2A6BE: Did you know the League doesn’t pay\nme for anything anymore?\pI’m dead, so I don’t need food, and\nI don’t get tired, so I don’t sleep,\lso I don’t need shelter, so I don’t\lneed rent money.\pGotta spend I dunno how long doing\nwhatever the League and this\lstupid thing wants…\pWhich includes getting coffee…\pWhich isn’t even for me…\pAnd was paid for by my host stealing\nfrom the other customers.
+0x1F2A844: {PLAYER}!\pYou came for our tea party!\pHuh?\pWhere’s daddy?\pWell… he’s back home, looking for\nanother job.\pBut as long as I’m back before\ndark, he doesn’t mind, I promise!\pHere, I’ve got a present, for our\nunexpected guest!
+0x1F2A91C: The {COLOR}ÉFairium Z{COLOR}Ç has all the power\nof my {COLOR}ÉFairy{COLOR}Ç friends in it!\pPixie power will send your enemies\nflying!
+0x1F2A98E: Huh? You want to know why I have\nall this tea here?\pDaddy said I shouldn’t bring any food\nor drink I didn’t buy from the café\lhere, because it’s rude.\pSo I just bought all the different\ntea here, and had a big tea party\lwith all my friends!\pNo coffee, though.\pDaddy says I’m not old enough yet.
+0x1F2AAB5: WROOOOOAR!\p…\pOh, sorry, {PLAYER} - I just got\nback from DragonCon.\pThat’s what they said some newly\ndiscovered Dragon called\l“Eternatus” sounds like.\pReal Nightmare Fuel if you ask me.\nDoesn’t even look like a Dragon!\pIt’s a good thing you can’t find it\nhere in Borrius, then!\pBut I know something else you CAN\nfind, and that’s this!
+0x1F2ABFD: That {COLOR}ÉDragonium Z{COLOR}Ç is more powerful\nthan any fake looking {COLOR}ÉDragon{COLOR}Ç!\pWho needs things that look like\nthat, when you can punch a hole\lthrough your opponents with this\lZ-Crystal!\pI bet they don’t have those where\nthat fake Dragon comes from.
+0x1F2ACF4: Y’know, everyone who meets me for\nthe first time says the same thing…\pThey were expecting a Dragon-type\nTrainer to be more elegant and\lmature…\pPfft! I’m totally mature - this tape\nI got says it’s rated “Mature”!
 0x1F2ADC8: {COLOR}ÁYou inspect the cover of the\nvideo’s box…\pThat…{PAUSE}ね is NOT a comfortable thing to\ndo to a Goomy.
 0x1F2AE2B: Pikachu
-0x1F2AE37: Feuille
-0x1F2AE3C: …\p{COLOR}ÁLe garçon propose un\néchange.\pVoulez-vous échanger un\n{COLOR}É{STR_VAR_1}{COLOR}Á contre\nson {COLOR}É{STR_VAR_2}{COLOR}Á ?
-0x1F2AE94: {COLOR}ÁLe garçon ne cherche pas ce\nPokémon.\pIl veut un\n{COLOR}É{STR_VAR_1}{COLOR}Á.
-0x1F2AED5: {COLOR}ÁHuh ?\pPikachu semble tenir des vêtements.
-0x1F2AF07: La tenue de {COLOR}Á{STR_VAR_1} est\ndésormais disponible dans la boîte\nde costumes !
+0x1F2AE37: Leaf
+0x1F2AE3C: …\p{COLOR}ÁThe boy is proposing a trade.\pWould you like to trade a\n{COLOR}É{STR_VAR_1}{COLOR}Á for his {COLOR}É{STR_VAR_2}{COLOR}Á?
+0x1F2AE94: {COLOR}ÁThe boy is not looking for that\nPokémon.\pHe wants a {COLOR}É{STR_VAR_1}{COLOR}Á.
+0x1F2AED5: {COLOR}ÁHuh?\pPikachu seems to be holding\nsome clothes.
+0x1F2AF07: {COLOR}Á{STR_VAR_1}’s outfit is now available\nin the Costume Box!
 0x1F2AF3D: What’s this?\nYou have quite the intense aura.\pWhat’s your name?\p…\pOkay. I’ll remember that!\n{PLAYER}, nice to meet you.\pI’m Cynthia.\pI’m currently travelling the world,\nstudying the various mythology of\lthe world’s Pokémon.\pAnd Borrius in particular…{PAUSE}ね well,\nthere’s no shortage of fascinating\lfinds here.\pOld tombs, mysterious tablets… not to\nmention, a rich history concerning\lanother faraway region…\pOh, but I’m rambling - was there\nsomething else you wanted from me?
-0x1F2B10F: Je suis sûr que vous pouvez le dire\n: je suis aussi un entraîneur,\nmoi-même.\pEt lorsque deux entraîneurs se\nrencontrent, il est habituel de leur\noffrir la chance de\lse battre.\pSi vous le souhaitez, voudriez-vous\nêtre mon adversaire ?
-0x1F2B1C2: Peu importe combien de fois je lance\nma première Poké Ball,\nl'anticipation\lest toujours aussi intense…\pVos yeux… ils brûlent avec une telle\nconcentration calme.\pC'est comme si rien d'autre\nn'existait, sauf ce moment de\nbataille…\pAlors moi, Cynthia, je devrai égaler\nvotre passion avec la même force !\pIl n'y aura aucun répit de ma part !
-0x1F2B2E4: Mon cœur bat si fort parce que j'ai\neu une bataille tellement passionnée\lavec toi.\pTu es un très bon entraîneur !
+0x1F2B10F: I’m sure you can tell - I’m also\na Trainer, myself.\pAnd when two Trainers meet, it’s\ncustomary to offer the chance to\lbattle.\pIf you’re willing, would you care to\nbe my opponent?
+0x1F2B1C2: No matter how many times I throw\nmy first Poké Ball, the anticipation\lis always so intense…\pYour eyes… they burn with such\ncalm focus.\pIt’s like nothing else exists,\nexcept this moment of battle…\pThen I, Cynthia, shall match your\npassion with equal force!\pThere won’t be any letup from me!
+0x1F2B2E4: My heart is pounding so hard\nbecause I had such a heated\lbattle with you.\pYou are a really great Trainer!
 0x1F2B34E: That was quite the exceptional\nstrength you displayed.\pAnd yet…\pVictory, defeat…{PAUSE}ね you don’t\nseem to be focused on such things.\pThere’s something else that you\nseek, some other answer…\pIt would make me truly happy to\nsee such a fascinating Trainer\lagain sometime.
-0x1F2B457: Ah, je vois… c'était une offre un\npeu hâtive, n'est-ce pas ? Ha ha…\pIl n'y a pas de honte à y aller\nlentement et rationnellement.\pReviens me voir quand tu seras prêt.
-0x1F2B4EB: Pourquoi Magnolia Town est-elle\nconnue ?\pEh bien, cette ville est l'ancienne\nmaison du chef du gymnase de Polder\nTown !\pEt si cela ne suffit pas, nous avons\naussi la célèbre ferme Moomoo !\pNous sommes la principale source de\nBorrius en Lait Moomoo.\pVous êtes sûr de le trouver moins\ncher ici que partout ailleurs !
-0x1F2B5F0: Notre ville est si petite qu'elle\nn'a même pas de son propre bâtiment\npour le Mart !\pCependant…\pNous avons un café ! C'est ce\nbâtiment ici.\pLes formateurs viennent de partout\npour manger ici.\pVous êtes sûr de rencontrer des gens\nsympas tous les jours si vous mangez\lici aussi.
-0x1F2B6D6: Cette ferme ici est la fierté et la\njoie de Magnolia Town.\pSans ces Écrémeuh, notre ville ne\nserait pas aussi connue !
-0x1F2B747: Des hooligans se sont levés et ont\nattrapé notre Écrémeuh !\pJe parie que les Miss Moomoo sont\ntoutes en larmes en ce moment…
+0x1F2B457: Ah, I see… it was a rather hasty\noffer, wasn’t it? Ha ha…\pThere’s no shame in taking it slowly\nand rationally.\pCome see me again when you’re ready.
+0x1F2B4EB: What’s Magnolia Town known for?\pWell, this here town is the ol’ home\nof the Polder Town Gym Leader!\pAnd if that ain’t enough, we got\nthe famous Moomoo farm, too!\pWe’re Borrius’ main supply of\nMoomoo Milk.\pYou’re sure to find it cheaper\nhere than anywhere else!
+0x1F2B5F0: Our town is so tiny, it don’t even\ngot its own building for the Mart!\pHowever…\pWe have a Café!\nIt’s this here building.\pTrainers come from all over to\neat here.\pYou’re sure to meet some cool\npeople every day if you eat\lhere, too.
+0x1F2B6D6: This here farm is the pride and joy\nof Magnolia Town.\pWithout these Miltank, our town\nwouldn’t be known as well!
+0x1F2B747: Some hooligans up and nabbed our\nMiltank!\pI bet the Moomoo Misses is all up\nin tears right about now…
 0x1F2B7AD: {COLOR}ÉMoooooo!
-0x1F2B7B9: {COLOR}ÁLe {STR_VAR_1} dort.
-0x1F2B7D8: Idem
-0x1F2B7DE: {COLOR}ÇSalut ! Par ici, s'il vous\nplaît !
+0x1F2B7B9: {COLOR}ÁThe {STR_VAR_1} is sleeping.
+0x1F2B7D8: Ditoh
+0x1F2B7DE: {COLOR}ÇHi!\nThis way, pleeeease!
 0x1F2B7FA: {COLOR}ÇExcitant ! Palpitant! Zippy!\nChilling! C'est « Pep Quiz » !\pLe challenger d'aujourd'hui est...\ncette personne !
 0x1F2B858: {COLOR}ËBonjour, bienvenue !\pLe "Pep Quiz" commence MAINTENANT !\pRépondez à de nombreuses questions\nquizz, et regardez votre cerveau\ndevenir plus intelligent !\pCommençons... par... une question !
 0x1F2B8E4: {COLOR}ÇBonne chance !

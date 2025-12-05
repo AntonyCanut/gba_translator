@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""
+r"""
 Réinjecte les textes traduits dans le ROM GBA.
 
 Hypothèses :
@@ -302,6 +302,11 @@ def main() -> None:
         help="Autorise l'extension de la ROM en fin de fichier si aucune zone libre suffisante n'est trouvée (désactivé par défaut, ROM reste à taille fixe).",
     )
     parser.add_argument(
+        "--ignore-sensitive",
+        action="store_true",
+        help="Ignore la liste des lignes sensibles et la protection des offsets bas.",
+    )
+    parser.add_argument(
         "--free-map",
         type=Path,
         help="Fichier rom_usage.txt (issu de dump_rom_usage.py) pour forcer les blocs libres à utiliser.",
@@ -359,8 +364,9 @@ def main() -> None:
                 "encoded": encoded,
                 "enc_len": len(encoded),
                 "orig_len": orig_len,
-                "sensitive": (line_no in sensitive_lines) or (offset < SENSITIVE_OFFSET_MAX),
-                "force_shrink": offset in FORCE_SHRINK_OFFSETS,
+                "sensitive": (not args.ignore_sensitive)
+                and ((line_no in sensitive_lines) or (offset < SENSITIVE_OFFSET_MAX)),
+                "force_shrink": (not args.ignore_sensitive) and (offset in FORCE_SHRINK_OFFSETS),
             }
         )
 
@@ -422,7 +428,7 @@ def main() -> None:
         encoded = entry["encoded"]
         orig_len = entry["orig_len"]
 
-        # Cas sensible : ne jamais reloger ni changer de pointeur
+        # Cas sensible : ne jamais reloger ni changer de pointeur (sauf ignore_sensitive)
         if entry["sensitive"] or args.no_relocate or entry.get("force_shrink"):
             if len(encoded) <= orig_len:
                 rom_bytes[offset : offset + len(encoded)] = encoded

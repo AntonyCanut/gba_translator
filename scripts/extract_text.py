@@ -9,6 +9,7 @@ from typing import Dict, Iterable, List, Sequence, Tuple
 DEFAULT_ROM = Path("totranslate.gba")
 DEFAULT_CHARMAP = Path("charmap_firered.txt")
 DEFAULT_OUTPUT = Path("extracted_text.txt")
+SENSITIVE_FILE = Path("sensitive_lines.txt")
 
 
 def load_charmap(path: Path) -> Tuple[Dict[Tuple[int, ...], str], int]:
@@ -121,12 +122,35 @@ def iter_segments(data: bytes) -> Iterable[Tuple[int, memoryview]]:
             start = idx + 1
 
 
-def extract_text(rom_path: Path, charmap_path: Path, output_path: Path) -> None:
+def load_sensitive() -> set[int]:
+    if not SENSITIVE_FILE.exists():
+        return set()
+    out: set[int] = set()
+    for raw in SENSITIVE_FILE.read_text(encoding="utf-8").splitlines():
+        raw = raw.strip()
+        if not raw:
+            continue
+        try:
+            out.add(int(raw))
+        except Exception:
+            continue
+    return out
+
+
+def extract_text(
+    rom_path: Path,
+    charmap_path: Path,
+    output_path: Path,
+    include_sensitive: bool = False,
+) -> None:
     mapping, max_len = load_charmap(charmap_path)
     data = rom_path.read_bytes()
+    sensitive = set() if include_sensitive else load_sensitive()
 
     results: List[Tuple[int, str]] = []
     for offset, segment in iter_segments(data):
+        if offset in sensitive:
+            continue
         tokens = decode_segment(segment, mapping, max_len)
         if tokens and looks_text(tokens):
             text = "".join(tokens)
@@ -147,9 +171,14 @@ def main() -> None:
         default=DEFAULT_OUTPUT,
         help="Where to write the extracted text",
     )
+    parser.add_argument(
+        "--include-sensitive",
+        action="store_true",
+        help="Inclure aussi les offsets sensibles (par défaut ils sont ignorés si listés dans sensitive_lines.txt).",
+    )
     args = parser.parse_args()
 
-    extract_text(args.rom, args.charmap, args.output)
+    extract_text(args.rom, args.charmap, args.output, include_sensitive=args.include_sensitive)
 
 
 if __name__ == "__main__":
