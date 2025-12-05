@@ -36,6 +36,8 @@ FORCE_SHRINK_OFFSETS = {0x8CEB24, 0x1F0F874}
 PLACEHOLDER_RE = re.compile(r"\{[^}]+\}")
 POINTER_BASE = 0x08000000
 GAP_BYTES = 4  # laisser un petit bloc libre entre deux blocs utilisés
+# Offsets à ne jamais toucher (gibberish/données brutes)
+IMMUTABLE_OFFSETS = {0x4FDAC2}
 
 
 def find_free_blocks(data: bytes, min_size: int, align: int = 4):
@@ -269,13 +271,15 @@ def main() -> None:
             continue
         original_lengths[offset] = end - offset + 1  # inclut le 0xFF
 
-    # Construire un index pointeur -> positions (une seule passe sur le ROM)
-    target_ptrs = {POINTER_BASE + off for off in original_lengths.keys()}
-    pointer_index: Dict[int, List[int]] = {ptr: [] for ptr in target_ptrs}
+    # Construire un index pointeur -> positions (supporte bit Thumb LSB=1)
+    pointer_index: Dict[int, List[Tuple[int, int]]] = {off: [] for off in original_lengths.keys()}
     for i in range(len(rom_bytes) - 3):
         val = int.from_bytes(rom_bytes[i : i + 4], "little")
-        if val in target_ptrs:
-            pointer_index[val].append(i)
+        base = val & ~1  # masque le bit Thumb éventuel
+        lsb = val & 1
+        off = base - POINTER_BASE  # l'offset pointé (LSB sert juste de flag)
+        if off in pointer_index:
+            pointer_index[off].append((i, lsb))
 
     # Prépare les lignes triées par longueur encodée décroissante (priorité aux plus longues)
     sensitive_lines = load_sensitive_lines()
@@ -295,6 +299,9 @@ def main() -> None:
         orig_len = original_lengths.get(offset)
         if orig_len is None:
             errors.append(f"Ligne {line_no}: offset {hex(offset)} introuvable ou sans terminator")
+            continue
+        if offset in IMMUTABLE_OFFSETS:
+            warnings.append(f"Ligne {line_no}: offset {hex(offset)} marqué immuable, texte laissé intact")
             continue
         line_to_offset[line_no] = offset
         entries.append(
@@ -403,7 +410,7 @@ def main() -> None:
             continue
 
         old_ptr_val = POINTER_BASE + offset
-        positions = pointer_index.get(old_ptr_val, [])
+        positions = pointer_index.get(offset, [])
         if not positions:
             # tenter une extension locale si un run de 0xFF suit la chaîne
             end = rom_bytes.find(b"\xFF", offset)
@@ -448,10 +455,10 @@ def main() -> None:
 
         rom_bytes[dest_offset : dest_offset + needed] = encoded
 
-        new_ptr = (POINTER_BASE + dest_offset).to_bytes(4, "little")
-        for idx in positions:
-            rom_bytes[idx : idx + 4] = new_ptr
-        pointer_index[old_ptr_val] = []
+        for idx, lsb in positions:
+            new_ptr_val = (POINTER_BASE + dest_offset) | lsb
+            rom_bytes[idx : idx + 4] = new_ptr_val.to_bytes(4, "little")
+        pointer_index[offset] = []
 
         # Libérer l'ancien emplacement pour de futurs relogements
         if args.reuse_old_space:
