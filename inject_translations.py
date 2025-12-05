@@ -29,9 +29,13 @@ DEFAULT_ROM = Path("totranslate.gba")
 DEFAULT_CHARMAP = Path("charmap_firered.txt")
 DEFAULT_TEXT = Path("extracted_text_fr.txt")
 DEFAULT_OUT = Path("totranslate_fr.gba")
+SENSITIVE_FILE = Path("sensitive_lines.txt")
+SENSITIVE_OFFSET_MAX = 0x220000  # zones basses à ne pas reloger (écran de nom, scripts précoces, etc.)
+FORCE_SHRINK_OFFSETS = {0x8CEB24, 0x1F0F874}
 
 PLACEHOLDER_RE = re.compile(r"\{[^}]+\}")
 POINTER_BASE = 0x08000000
+GAP_BYTES = 4  # laisser un petit bloc libre entre deux blocs utilisés
 
 
 def find_free_blocks(data: bytes, min_size: int, align: int = 4):
@@ -247,6 +251,21 @@ def try_fit_text(text: str, max_len: int, value_to_seq: Dict[str, Tuple[int, ...
     return None
 
 
+def load_sensitive_lines() -> set[int]:
+    if not SENSITIVE_FILE.exists():
+        return set()
+    out = set()
+    for raw in SENSITIVE_FILE.read_text(encoding="utf-8").splitlines():
+        raw = raw.strip()
+        if not raw:
+            continue
+        try:
+            out.add(int(raw))
+        except Exception:
+            continue
+    return out
+
+
 def main() -> None:
     parser = argparse.ArgumentParser(description="Réinjecte les traductions dans le ROM GBA.")
     parser.add_argument("--rom", type=Path, default=DEFAULT_ROM, help="ROM source (.gba)")
@@ -259,14 +278,33 @@ def main() -> None:
         help="N'écrit pas hors emplacement original (laisse le texte d'origine si trop long).",
     )
     parser.add_argument(
-        "--reuse-old-space",
-        action="store_true",
-        help="Lors du relogement, libère l'ancien emplacement (par défaut on le conserve pour que d'éventuels pointeurs non trouvés restent valides).",
+        "--no-reuse-old-space",
+        dest="reuse_old_space",
+        action="store_false",
+        default=True,
+        help="Ne pas réutiliser l'ancien emplacement après relogement.",
     )
     parser.add_argument(
         "--use-holes",
         action="store_true",
-        help="Utilise les blocs de 0xFF internes pour reloger (sinon on ajoute en fin de ROM).",
+        default=True,
+        help="Utilise les blocs de 0xFF internes pour reloger (activé par défaut).",
+    )
+    parser.add_argument(
+        "--no-use-holes",
+        dest="use_holes",
+        action="store_false",
+        help="N'utilise pas les blocs 0xFF internes (relogement uniquement en append si autorisé).",
+    )
+    parser.add_argument(
+        "--allow-append",
+        action="store_true",
+        help="Autorise l'extension de la ROM en fin de fichier si aucune zone libre suffisante n'est trouvée (désactivé par défaut, ROM reste à taille fixe).",
+    )
+    parser.add_argument(
+        "--free-map",
+        type=Path,
+        help="Fichier rom_usage.txt (issu de dump_rom_usage.py) pour forcer les blocs libres à utiliser.",
     )
     args = parser.parse_args()
 
@@ -294,14 +332,11 @@ def main() -> None:
         if val in target_ptrs:
             pointer_index[val].append(i)
 
-    replaced = 0
-    moved = 0
+    # Prépare les lignes triées par longueur encodée décroissante (priorité aux plus longues)
+    sensitive_lines = load_sensitive_lines()
+    entries = []
+    line_to_offset: Dict[int, int] = {}
     errors: List[str] = []
-
-    free_blocks = list(find_free_blocks(rom_bytes, min_size=16, align=4)) if (not args.no_relocate and args.use_holes) else []
-    free_index = 0
-    append_offset = (len(rom_bytes) + 3) // 4 * 4  # align fin de rom
-
     for line_no, line in enumerate(args.text.read_text(encoding="utf-8").splitlines(), 1):
         if ": " not in line:
             continue
@@ -311,11 +346,106 @@ def main() -> None:
         except Exception as e:  # capture encode errors
             errors.append(f"Ligne {line_no}: {e}")
             continue
-
         orig_len = original_lengths.get(offset)
         if orig_len is None:
             errors.append(f"Ligne {line_no}: offset {hex(offset)} introuvable ou sans terminator")
             continue
+        line_to_offset[line_no] = offset
+        entries.append(
+            {
+                "line_no": line_no,
+                "offset": offset,
+                "text": text,
+                "encoded": encoded,
+                "enc_len": len(encoded),
+                "orig_len": orig_len,
+                "sensitive": (line_no in sensitive_lines) or (offset < SENSITIVE_OFFSET_MAX),
+                "force_shrink": offset in FORCE_SHRINK_OFFSETS,
+            }
+        )
+
+    entries.sort(key=lambda e: e["enc_len"], reverse=True)
+
+    replaced = 0
+    moved = 0
+    reuse_from_old = 0
+
+    # free_blocks: liste de (start, size, source) où source ∈ {"hole", "old"}
+    if args.free_map:
+        free_blocks = []
+        for raw in args.free_map.read_text(encoding="utf-8").splitlines():
+            parts = raw.split()
+            if len(parts) != 4:
+                continue
+            start, end, size_str, typ = parts
+            if typ != "free":
+                continue
+            try:
+                s = int(start, 16)
+                sz = int(size_str)
+            except Exception:
+                continue
+            # align
+            aligned_start = (s + 3) // 4 * 4
+            usable = sz - (aligned_start - s)
+            if usable >= 4:
+                free_blocks.append((aligned_start, usable, "hole"))
+    else:
+        free_blocks = (
+            [(start, size, "hole") for start, size in find_free_blocks(rom_bytes, min_size=16, align=4)]
+            if (not args.no_relocate and args.use_holes)
+            else []
+        )
+    append_offset = (len(rom_bytes) + 3) // 4 * 4  # align fin de rom
+    max_rom_size = len(rom_bytes)
+
+    def take_block(needed: int):
+        """Retourne un bloc en laissant un écart GAP_BYTES après l'écriture."""
+        nonlocal free_blocks
+        required = needed + GAP_BYTES
+        free_blocks.sort(key=lambda b: (b[2] != "old", b[1]))  # privilégie les blocs libérés, puis best-fit
+        for idx, (start, size, src) in enumerate(free_blocks):
+            if size >= required:
+                alloc_start = start
+                remaining_start = start + required
+                remaining_size = size - required
+                free_blocks[idx] = (remaining_start, remaining_size, src)
+                if free_blocks[idx][1] <= 0:
+                    free_blocks.pop(idx)
+                return alloc_start, src
+        return None, None
+
+    for entry in entries:
+        line_no = entry["line_no"]
+        offset = entry["offset"]
+        text = entry["text"]
+        encoded = entry["encoded"]
+        orig_len = entry["orig_len"]
+
+        # Cas sensible : ne jamais reloger ni changer de pointeur
+        if entry["sensitive"] or args.no_relocate or entry.get("force_shrink"):
+            if len(encoded) <= orig_len:
+                rom_bytes[offset : offset + len(encoded)] = encoded
+                if len(encoded) < orig_len:
+                    rom_bytes[offset + len(encoded) : offset + orig_len] = b"\xFF" * (
+                        orig_len - len(encoded)
+                    )
+                replaced += 1
+            else:
+                fitted = try_fit_text(text, orig_len, value_to_seq)
+                if fitted is not None:
+                    rom_bytes[offset : offset + len(fitted)] = fitted
+                    if len(fitted) < orig_len:
+                        rom_bytes[offset + len(fitted) : offset + orig_len] = b"\xFF" * (
+                            orig_len - len(fitted)
+                        )
+                    replaced += 1
+                else:
+                    errors.append(
+                        f"Ligne {line_no}: texte trop long (sensible/force_shrink/no-relo), laissé inchangé (offset {hex(offset)})"
+                    )
+            continue
+
         if len(encoded) <= orig_len:
             rom_bytes[offset : offset + len(encoded)] = encoded
             if len(encoded) < orig_len:
@@ -336,39 +466,35 @@ def main() -> None:
 
         # Texte trop long : relogement
         needed = len(encoded)
-        dest_offset = None
-
-        if args.use_holes:
-            while free_index < len(free_blocks):
-                start, size = free_blocks[free_index]
-                if size >= needed:
-                    dest_offset = start
-                    free_blocks[free_index] = (start + needed, size - needed)
-                    break
-                free_index += 1
+        dest_offset, source = take_block(needed)
 
         if dest_offset is None:
-            # append en fin de ROM (zone sûre)
-            dest_offset = append_offset
-            append_offset += needed
-            if append_offset > len(rom_bytes):
-                rom_bytes.extend(b"\xFF" * (append_offset - len(rom_bytes)))
+            if args.allow_append:
+                dest_offset = append_offset
+                append_offset += needed
+                if append_offset > len(rom_bytes):
+                    rom_bytes.extend(b"\xFF" * (append_offset - len(rom_bytes)))
+                    if len(rom_bytes) > max_rom_size:
+                        max_rom_size = len(rom_bytes)
+                source = "append"
+            else:
+                errors.append(
+                    f"Ligne {line_no}: pas d'espace libre pour {len(encoded)} octets (offset {hex(offset)}), laissé inchangé"
+                )
+                continue
 
         rom_bytes[dest_offset : dest_offset + needed] = encoded
 
         old_ptr_val = POINTER_BASE + offset
-        old_ptr = old_ptr_val.to_bytes(4, "little")
         new_ptr = (POINTER_BASE + dest_offset).to_bytes(4, "little")
         positions = pointer_index.get(old_ptr_val, [])
         ptr_replacements = len(positions)
         for idx in positions:
             rom_bytes[idx : idx + 4] = new_ptr
-        # éviter de retraiter le même pointeur si jamais rencontré plus tard
         if positions:
             pointer_index[old_ptr_val] = []
         if ptr_replacements == 0:
-            # Impossible de reloger sans pointeur : on annule l'écriture et on laisse le texte d'origine
-            # tenter d'abord de compresser pour tenir dans l'emplacement d'origine
+            # Impossible de reloger sans pointeur : essayer de compresser sinon laisser
             fitted = try_fit_text(text, orig_len, value_to_seq)
             if fitted is not None:
                 rom_bytes[offset : offset + len(fitted)] = fitted
@@ -381,23 +507,25 @@ def main() -> None:
             errors.append(
                 f"Ligne {line_no}: texte trop long et aucun pointeur trouvé (offset {hex(offset)}), laissé inchangé"
             )
-            # restaurer l'ancienne zone libre (ne pas consommer le bloc)
-            free_blocks[free_index] = (dest_offset, free_blocks[free_index][1] + needed)
+            # restituer le bloc
+            free_blocks.append((dest_offset, needed, source or "hole"))
             continue
 
-        # Optionnel : libérer l'ancien emplacement pour de futurs relogements (si on utilise les trous)
-        if args.reuse_old_space and args.use_holes:
+        # Libérer l'ancien emplacement pour de futurs relogements
+        if args.reuse_old_space:
             rom_bytes[offset : offset + orig_len] = b"\xFF" * orig_len
             aligned_old = (offset + 3) // 4 * 4
             usable = orig_len - (aligned_old - offset)
             if usable > 0:
-                free_blocks.append((aligned_old, usable))
+                free_blocks.append((aligned_old, usable, "old"))
 
+        if source == "old":
+            reuse_from_old += 1
         moved += 1
         replaced += 1
 
     args.out.write_bytes(rom_bytes)
-    print(f"Chaînes remplacées: {replaced} (déplacées: {moved})")
+    print(f"Chaînes remplacées: {replaced} (déplacées: {moved}, réutilisation anciens emplacements: {reuse_from_old})")
     if errors:
         print(f"Erreurs ({len(errors)}):")
         for msg in errors[:20]:
