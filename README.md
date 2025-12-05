@@ -46,6 +46,11 @@ Pour la traduction automatique (non utilisée dans les étapes ci‑dessus) :
    - Traduire la partie droite de chaque ligne (après `: `) en gardant les marqueurs (`\n`, `\p`, `\l`, `{STR_VAR_x}`, `{COLOR}`, etc.).
    - Si certaines lignes doivent rester en anglais, conserver la ligne originale.
 
+### Variante simple avec `make`
+
+- `make extract` : extrait les textes, les découpe en chunks de 250 lignes dans `origin_chuncks/`, copie ces chunks dans `fr_chunks/` si ce dossier est vide, et génère `rom_usage.txt`.
+- `make build-fr` : recolle les chunks de `fr_chunks/` dans `combined_fr.txt` puis injecte le résultat dans `totranslate_fr.gba` en utilisant les zones libres décrites dans `rom_usage.txt`.
+
 4) Injection (ex. version partielle stable) :
 ```
 .venv/bin/python3 scripts/inject_translations.py \

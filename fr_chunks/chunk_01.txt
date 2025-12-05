@@ -1,500 +1,250 @@
-0x028780: Le type de {B_ATK_NAME_WITH_PREFIX} devient\nle même que celui de {B_DEF_NAME_WITH_PREFIX} !
-0x172482: Je suis peut-être petite, mais je n'apprécierai pas\nque tu me ménages !
-0x1724BF: Oh, zut.\nRien n'a marché.
-0x1724DC: J'ai perdu une partie de mon argent de poche…
-0x1724F9: Tu savais que les Pokémon évoluent ?
-0x17251B: Oh !\nJ'ai perdu !
-0x172FC3: Seuls les dresseurs qui ont prouvé\leur valeur au combat peuvent\lpasser par ici.\p...\pTu n'es pas digne.
-0x1737AF: {PLAYER} a reçu la CS01\ndu CAPITAINE !
-0x1762D7: {PLAYER} a reçu un LOKHLASS de\nl'employé de SYLPHE SARL !
-0x176FBD: {PLAYER} a reçu une MASTER BALL\ndu PRÉSIDENT !
+0x028780: {B_ATK_NAME_WITH_PREFIX} est du même type\nque {B_DEF_NAME_WITH_PREFIX} !
+0x172482: Je suis peut-être petit, mais je\nne veux pas que tu me ménages !
+0x1724BF: Oh, mince.\nRien n’a marché.
+0x1724DC: J’ai perdu de mon argent de poche…
+0x1724F9: Savais-tu que les Pokémon évoluent ?
+0x17251B: Oh !\nJ’ai perdu !
+0x172FC3: Seuls les dresseurs qui ont\nprouvé leur valeur en combat peuvent\lpasser ici.\p...\pTu n’es pas digne.
+0x1737AF: {PLAYER} a obtenu CS01\nauprès du CAPITAINE !
+0x1762D7: {PLAYER} a reçu un LOKHLASS de\nl’employé de SILPH !
+0x176FBD: {PLAYER} a obtenu une MASTER BALL\ndu PRÉSIDENT !
 0x177364: Qui es-tu ?\nQue fais-tu ici ?
 0x177391: Ouah !
 0x177397: Une statue avec un interrupteur ?\nJamais entendu parler.
-0x1773C6: Tu connais les secrets que cache\nce manoir ?
-0x1773FD: Je vais te le dire.
-0x177460: Un interrupteur secret !\pAppuyer dessus ?
-0x17747B: Qui ne le ferait pas ?
+0x1773C6: Connais-tu les secrets de ce\nmanoir ?
+0x1773FD: Je vais te dire.
+0x177460: Un interrupteur secret !\pL’actionner ?
+0x17747B: Qui dirait non ?
 0x177489: Pas tout de suite !
-0x177498: Je ne trouve pas la Successeur Maxima !
-0x1774CB: Oh non ! J'ai perdu !
-0x1774E3: Il y a un interrupteur quelque part qui\nouvre un chemin vers Maxima.
-0x1776D7: Awooh !
-0x1776DE: Je n'irai probablement nulle part si je reste ici.
-0x179396: Attention aux ONIX.\nIls n'apparaissent que rarement.\pLes ONIX de haut niveau peuvent t'écraser !
+0x177498: Je ne trouve pas Successeur Maxima !
+0x1774CB: Oh, non ! J’ai perdu !
+0x1774E3: Il y a un interrupteur quelque part\nqui ouvre un passage vers Maxima.
+0x1776D7: Ahou !
+0x1776DE: Je n’irai sûrement nulle part si je\nreste planté ici.
+0x179396: Attention aux ONIX.\nIls n’apparaissent que rarement.\pLes plus puissants peuvent te\nserrer fort !
 0x179FA0: Disparais !\nEsprit malveillant !
-0x179FBC: Ouf !\nL'esprit est parti !
-0x179FD3: Les autres…\nIls devaient être possédés.
-0x17A004: Fantôme! Non !\nKwaaah !
+0x179FBC: Ouf !\nL’esprit est parti !
+0x179FD3: Les autres…\nIls ont dû être possédés.
+0x17A004: Fantôme ! Oh non !\nKwaaah !
 0x17A017: Où est le fantôme ?
-0x17A02B: J'ai dû rêver…
-0x17CC56: {STR_VAR_1}min. {STR_VAR_2}.{STR_VAR_3} sec.
-0x17D80D: Hé !\nComment allez-vous ?\pAvez-vous déjà visité le laboratoire\ndu professeur Log ?
-0x17D866: Laboratoire de recherche du Prof. Log
-0x17D87F: La maison de {PLAYER}
-0x17D88A: La maison de {RIVAL}
-0x17FF1C: Tu ne cuis pas dans ces vêtements ?
-0x17FF49: Je n'arrête pas de faire du shopping !\pIl y a tellement de choix au\n{COLOR}ÉGrand Magasin de Dehara{COLOR}Ç !
-0x180300: Mmm…\pUn parc au milieu d'une ville du désert, c'est si relaxant.\pDehara City est vraiment une oasis paradisiaque !
-0x180AF3: jiy:kii Œky
+0x17A02B: J’ai dû rêver…
+0x17CC56: {STR_VAR_1} min. {STR_VAR_2}.{STR_VAR_3} s.
+0x17D80D: Salut !\nComment ça va ?\pAs-tu déjà visité le laboratoire du\nProfesseur Log ?
+0x17D866: Labo de recherche du Prof. Log
+0x17D87F: Maison de {PLAYER}
+0x17D88A: Maison de {RIVAL}
+0x17FF1C: Tu ne cuis pas dans ces\nvêtements ?
+0x17FF49: 9Je ne peux pas arrêter d’acheter !\pIl y a tellement de choix au\n{COLOR}ÉGrand Magasin de Dehara{COLOR}Ç !
+0x180300: Mmm…\pUn parc en plein milieu d’une ville\ndu désert, c’est si reposant.\pDehara est vraiment un merveilleux\nparadis oasien !
+0x180AF3:  jiy:kii Œky
 0x182E42: j iyökiiオkざy
-0x183387: {PLAYER} range la POTION dans\nle ​​secteur des objets du SAC.
-0x183482: Grotte de la vallée
-0x183509: Tu m'as battu.
-0x18351C: Je suis fier de mes connaissances\nsur les bugs.
-0x183560: Salut !\nJ'aime les shorts !\pIls sont délicieusement confortables et\nfaciles à porter !
-0x1835A0: Je n'y crois pas !
-0x1835B4: Utilisez-vous le \nPC d'un Centre Pokémon pour stocker vos Pokémon ?\pChaque boîte peut contenir jusqu'à\n30 Pokémon.
-0x18364C: S'il vous plaît, ne me regardez pas.
-0x183682: Êtes-vous un formateur ?\nAllons-y tout de suite !
-0x1836B3: Si j'avais eu un nouveau Pokémon, j'aurais\ngagner !
-0x1836D9: Si une Pokémon Box sur le PC devient \n pleine, passez simplement à une autre Boîte.
-0x18371B: Ce regard que tu m'as lancé…\nC'est tellement intrigant !
-0x183746: Soyez gentil !
-0x18374F: Vous pouvez éviter les combats en ne laissant pas \n les entraîneurs vous voir.
-0x183786: Ne pense pas que tu peux me dépasser si facilement.
-0x1837BD: Perdu !\nPerdu ! Perdu!
-0x1837CF: Et je pensais pouvoir attraper n'importe qui.
-0x183807: Je vais vous affronter avec le Pokémon\nque je viens d'attraper.
+0x183387: {PLAYER} a rangé la POTION dans\nla section Objet du SAC.
+0x183482: Grotte Vallée
+0x183509: Tu m’as battu.
+0x18351C: Je suis fière de mes grandes\nconnaissances en insectes.
+0x183560: Salut !\nJ’aime les shorts !\pIls sont tellement confortables et\nfaciles à porter !
+0x1835A0: Je n’y crois pas !
+0x1835B4: Tu utilises le PC du Centre Pokémon\npour stocker tes Pokémon ?\pChaque Boîte peut contenir jusqu’à\n30 Pokémon.
+0x18364C: S’il te plaît, ne me fixe pas.
+0x183682: Tu es Dresseur ?\nOn s’y met tout de suite !
+0x1836B3: Avec de nouveaux Pokémon, j’aurais\ngagné !
+0x1836D9: Si une Boîte PC est pleine,\nchange juste de Boîte.
+0x18371B: Le regard que tu m’as lancé…\nTellement intrigant !
+0x183746: Sois sympa !
+0x18374F: Tu peux éviter les combats en\névitant le regard des Dresseurs.
+0x183786: Ne crois pas pouvoir passer si\nfacilement.
+0x1837BD: Perdu !\nPerdu ! Perdu !
+0x1837CF: Je croyais pouvoir tout attraper.
+0x183807: Je vais te combattre avec les\nPokémon que je viens d’attraper.
 0x183837: Cuit comme un rôti !
-0x183849: Les Pokémon entraînés sont plus forts que les Pokémon sauvages.
-0x18387A: Eek!\nTu m'as touché?
-0x183891: C'est ça?
-0x185402: Ouais !\nJ'ai eu une bouchée ici !
-0x18541B: Tch!\nJuste une petite frite…
-0x185432: Attendez !\nMa ligne est bloquée !
-0x18544E: Soyez patient.\nLa pêche est un jeu d'attente.
-0x185475: Celui-là s'est enfui !
-0x185488: Avec une meilleure canne, je pourrais attraper\nmeilleurs Pokémon…
-0x1855E1: Le flop de la pêche contre Pokémon Soleil !
-0x185606: Touchez trop !
-0x185616: Je suppose que tu dois être bon dans \nce que tu aimes.\pEh bien, tu m'as battu à Pokémon,\nmais tu ne peux pas me battre à la pêche.
-0x185682: J'adore pêcher, ne vous méprenez pas.\pMais ce serait mieux si j'avais aussi plus de\ntravail.
-0x1856D0: Ce n'est pas facile…
-0x1856DF: Tout va bien.\nPerdre ne me dérange plus.
-0x185A37: Wow !\nVos badges sont trop cool !
-0x185A56: Pas assez!
-0x185A62: Vous avez obtenu ces badges des Gym\nLeaders. Je sais!
-0x18650B: Hmm…\pCe doit être le chemin vers Dehara\nCity !\pJe le sais !
-0x186549: Je ne peux pas être perdu…
-0x18655A: Une belle entraîneuse comme moi, perd\nson chemin ?\pImpossible !\pJe sais exactement où je vais…
-0x18664F: Quand je siffle, j'entends un écho.
-0x18667A: Aïe !\nC'est tragique !
-0x1866D1: Savez-vous où vous allez ?
-0x186707: Vous devez savoir.
-0x18671A: Vous ne pouvez pas le voir d’en haut, mais\nil y a un passage qui passe sous\lle ​​pont !
-0x18678B: Il fait de plus en plus chaud…
-0x1867C1: Pas de chaleur, pas d'aide.
-0x1867DA: Plus il fait chaud, plus je deviens fort !
-0x18680C: Mes pouvoirs psychiques prédisent ma\nvictoire !
-0x186841: Je… j'avais tort ?
-0x18686F: Je dois aiguiser mes sens psychiques\nplus loin.\pLa prochaine fois, je ne me tromperai pas.
-0x1868B6: Je ne voudrais pas tomber dans l’océan\n, ici.
-0x186936: L'océan au large de la côte est vraiment \nprofond !
+0x183849: Les Pokémon dressés sont plus\nforts que les sauvages.
+0x18387A: Aah !\nTu m’as touchée ?
+0x183891: C’est tout ?
+0x185402: Ouais !\nÇa mord ici !
+0x18541B: Tch !\nJuste un petit…
+0x185432: Attends !\nMa ligne est coincée !
+0x18544E: Sois patient.\nLa pêche est affaire de patience.
+0x185475: Celui-là s’est échappé !
+0x185488: Avec une meilleure canne, je\npourrais attraper de bons Pokémon…
+0x1855E1: Le Bide de la Pêche contre Pokémon\nSoleil !
+0x185606: Ça mord trop !
+0x185616: On devient doué dans ce qu’on\naime.\pTu m’as battu aux Pokémon,\nmais tu ne me bats pas à la pêche.
+0x185682: J’adore la pêche, ne te trompe pas.\pMais ce serait mieux si j’avais\nplus de travail aussi.
+0x1856D0: Ce n’est pas facile…
+0x1856DF: Ça va.\nPerdre ne me dérange plus.
+0x185A37: Wow !\nTes Badges sont trop classes !
+0x185A56: Pas assez !
+0x185A62: Tu as eu ces Badges auprès des\nChampions d’Arène. Je le sais !
+0x18650B: Hmm…\pÇa doit être le chemin vers la\nVille de Dehara !\pJ’en suis sûr !
+0x186549: Je ne peux pas être perdue…
+0x18655A: Une belle dresseuse comme moi,\nse perdre ?\pImpossible !\pJe sais exactement où je vais…
+0x18664F: Quand je siffle, j’entends un écho.
+0x18667A: Aïe !\nC’est tragique !
+0x1866D1: Tu sais où tu vas ?
+0x186707: Tu dois savoir.
+0x18671A: On ne le voit pas d’en haut, mais\nil y a un passage qui va sous\lle pont !
+0x18678B: Il fait de plus en plus chaud ici…
+0x1867C1: Pas de chaleur, pas d’aide.
+0x1867DA: Plus il fait chaud, plus je deviens\nfort !
+0x18680C: Mes pouvoirs psy prédisent ma\nvictoire !
+0x186841: Je… je me suis trompé ?
+0x18686F: Je dois affiner encore mes sens\npsy.\pLa prochaine fois, je ne me\ntromperai pas.
+0x1868B6: Je ne voudrais pas tomber dans\nl’océan, ici.
+0x186936: L’océan au large est vraiment\nprofond !
 0x186968: Je vais continuer à pêcher.
-0x18697C: J’aurais juré que quelqu’un avait juste été poussé dans l’océan…
-0x186A22: Vérifiez-les !
-0x186A40: Ne sont-ils pas cool ?
-0x186A55: J'adore montrer mes Pokémon !
-0x18768C: Kurukkoo !\nComment aimez-vous mon chant d'oiseau ?
-0x1876B3: J'ai dû t'embêter !
-0x1876C5: Je collectionne des Pokémon marins le week-end\nparce que la mer est si proche.
-0x187884: J'adore nager !\nEt vous ?
-0x1878A5: Ventre flop !
-0x1878B1: Je peux même battre des Pokémon marins\nen nageant.
+0x18697C: Je pourrais jurer que quelqu’un\nvient d’être poussé dans l’océan…
+0x186A22: Regarde-les !
+0x186A40: Ils sont pas classes ?
+0x186A55: J’adore exhiber mes Pokémon !
+0x18768C: Kurukkoo !\nTu aimes mon cri d’oiseau ?
+0x1876B3: Fallait que je t’embête !
+0x1876C5: Je capture des Pokémon marins le\nweek-end car la mer est tout près.
+0x187884: J’adore nager !\nEt toi ?
+0x1878A5: Plongeon ventral !
+0x1878B1: Je nage mieux que les Pokémon\nmarins.
 0x1878DD: Qu’y a-t-il au-delà de l’horizon ?
-0x1878F8: Glub!
-0x1878FE: Je vois les Ruines du Vide là-bas !
-0x187925: J'ai essayé de plonger pour des Pokémon, et ça a marché !
-0x187955: Aide!
-0x18795B: Vous ne pouvez plonger que là où la mer est \nsombre.
-0x187985: Je regarde la mer pour oublier toutes les mauvaises choses qui se sont produites.
-0x1879C3: Ooh !\nTraumatique !
-0x1879D3: Je regarde la mer pour oublier\nla mauvaise chose qui s'est produite !
-0x187A11: Oh, j'adore ta balade !\nPuis-je l'avoir si je gagne ?
-0x187A44: Oh! J'ai perdu!
-0x187A50: Le chemin est encore long jusqu'aux \nLes Ruines du Vide.\pJe veux retourner à Dresco Town.
-0x187A9E: Nager, c'est génial !\nLes coups de soleil ne le sont pas !
-0x187AC1: Choquant!
-0x187ACA: Mon ami voulait nager jusqu'à\nLes Ruines du Vide.
-0x187AFA: Ohé, là !\nCes eaux sont traîtres !
-0x187B25: Ooh !\nDangereux !
-0x187B35: M-mes jambes ! Elles se sont crispées !\nBloub, bloub…
-0x187B5D: J'ai nagé ici avec mes amis…\nJe suis fatigué…
-0x187B85: Je suis épuisé…
-0x187B94: Si je devais chevaucher un Pokémon sur la mer, je voudrais un Lokhlass.\pLokhlass est si grand, je parie qu'il me garderait au sec.
-0x187E40: L'eau est peu profonde ici.\nIl y a beaucoup de gens qui nagent.
-0x187E7B: Éclabousser!
-0x187E83: J'aimerais pouvoir monter mon Pokémon.\nJe parie que tu n'es pas fatigué.
-0x187FDB: Découvrez mon physique de chamois !
-0x187FF7: Wimpy!
-0x187FFE: J'aurais dû améliorer mon \nPokémon, pas moi !
-0x18802E: Pourquoi chevauches-tu un Pokémon ?\nTu ne sais pas nager ?
-0x18805C: Aïe !\nTorpillé !
-0x18806D: Chevaucher un Pokémon a vraiment l'air amusant !
-0x1880F8: Mon copain m'a offert de grosses perles.
-0x188119: Oh non !\nMes perles étaient dedans !
-0x188139: Mes perles grossiront-elles à l'intérieur de \nCloyster ?
-0x18851F: En ce moment, je participe à une compétition de triathlon.
-0x188543: Pantalon…\nPantalon… Pantalon…
-0x188555: Je suis crevé ! Mais il me reste la course de vélo et le marathon !
-0x188ED9: Je vais t'écraser !
-0x188EFA: Waouh !\nTrop !
-0x188F0A: J'ai fait de mon mieux. Je n'ai aucun regret !
-0x188F53: J'ai fait de mon mieux, donc je ne regrette rien !
-0x18901B: J'adore l'odeur de la mer !
-0x18908C: Whoo !\nBonne chose !
+0x1878F8: Glou !
+0x1878FE: Je vois les Ruines du Vide\nlà-bas !
+0x187925: J’ai essayé de plonger pour des\nPokémon, et ça a marché !
+0x187955: À l’aide !
+0x18795B: Tu ne peux plonger que là où la\nmer est sombre.
+0x187985: Je regarde la mer pour oublier\nles mauvaises choses arrivées.
+0x1879C3: Ooh !\nTraumatisant !
+0x1879D3: Je regarde la mer pour oublier\nle mauvais truc arrivé !
+0x187A11: Oh, j’adore ta monture !\nJe peux l’avoir si je gagne ?
+0x187A44: Oh ! J’ai perdu !
+0x187A50: Il y a encore du chemin jusqu’aux\nRuines du Vide.\pJe veux retourner à Bourg Dresco.
+0x187A9E: La natation, c’est top !\nLes coups de soleil, moins !
+0x187AC1: Choqué !
+0x187ACA: Mon ami voulait nager jusqu’aux\nRuines du Vide.
+0x187AFA: Ohé, toi !\nCes eaux sont traîtresses !
+0x187B25: Ooh !\nDangereux !
+0x187B35: M-mes jambes ! Crampes !\nGlou, glou…
+0x187B5D: J’ai nagé ici avec mes amis…\nJe suis fatigué…
+0x187B85: Je suis exténué…
+0x187B94: Si je devais chevaucher un Pokémon\nsur la mer, j’aimerais un Lokhlass.\pLokhlass est si grand que je parie\nqu’il me garderait au sec sur l’eau.
+0x187E40: L’eau est peu profonde ici.\nBeaucoup de gens nagent.
+0x187E7B: Plouf !
+0x187E83: J’aimerais monter mon Pokémon.\nJe parie que tu n’es pas fatigué.
+0x187FDB: Admire ma musculature !
+0x187FF7: Mauviette !
+0x187FFE: J’aurais dû muscler mes Pokémon,\npas moi !
+0x18802E: Pourquoi montes-tu un Pokémon ?\nTu ne sais pas nager ?
+0x18805C: Aïe !\nTorpillé !
+0x18806D: Monter un Pokémon a l’air trop fun !
+0x1880F8: Mon copain m’a offert de grosses\nperles.
+0x188119: Oh, non !\nMes perles étaient dedans !
+0x188139: Mes perles grandiront-elles dans\nCrustabri ?
+0x18851F: Je participe à un triathlon.
+0x188543: Ouf…\nOuf… Ouf…
+0x188555: Je suis vidé ! Et il me reste\nla course de vélo et le marathon !
+0x188ED9: Je vais t’écraser !
+0x188EFA: Ouah !\nTrop fort !
+0x188F0A: J’ai tout donné. Aucun regret !
+0x188F53: J’ai fait de mon mieux, donc aucun\nregret !
+0x18901B: J’adore l’odeur de la mer !
+0x18908C: Wouh !\nTrop bien !
 0x18909E: Cet air est magnifique !
-0x1890C0: Les formateurs locaux viennent ici pour \npratiquer.
-0x1890E6: Tu es décent.
-0x1890F5: Tous les Pokémon ont des faiblesses, même les plus forts.\pC'est pour ça qu'il vaut mieux élever des Pokémon de types différents.
-0x189165: J'adore rester ici et regarder\nl'océan.
-0x1891A6: Je ne suis pas en colère !
-0x1891B3: La vue n'est-elle pas superbe ?
-0x189247: Salut !\nTu descends !
-0x189261: Mon conditionnement n’est pas le meilleur…
-0x189281: J'aurais aimé être aussi bon\nque toi.
-0x1892A9: J'avais ce pressentiment… Je savais que je devais me battre avec toi !
-0x1892D9: Je savais que j'allais perdre aussi !
-0x1892EF: Si ton Pokémon est confus, remplace-le.\pC'est une bonne tactique.
+0x1890C0: Les Dresseurs du coin viennent ici\ns’entraîner.
+0x1890E6: Tu es correct.
+0x1890F5: Tous les Pokémon ont des faiblesses.\nMême les plus forts.\pC’est pour ça qu’il vaut mieux\nélever des Pokémon de types variés.
+0x189165: J’adore rester ici à regarder\nl’océan.
+0x1891A6: Je ne suis pas fâchée !
+0x1891B3: C’est beau, hein ?
+0x189247: Salut !\nTu vas perdre !
+0x189261: Ma condition n’est pas la meilleure…
+0x189281: J’aimerais être aussi bon\nque toi.
+0x1892A9: Je le sentais…\nJe devais te combattre !
+0x1892D9: Je savais que je perdrais aussi !
+0x1892EF: Si ton Pokémon est confus,\nchange-le.\pC’est une bonne tactique.
 0x189364: Je ne suis pas si jaloux !
-0x1893EA: Vous avez travaillé dur !
-0x189423: Si c'est une bataille que vous voulez, c'est une bataille \n que vous obtiendrez !
-0x189459: Vous m'avez eu, et vraiment bien,\n aussi !
-0x18947E: Je devrais vraiment arrêter d'attaquer les dresseurs et de les blâmer…
-0x18961F: Le temps est magnifique !\nParfait pour un combat !
-0x18964D: Aiiieeeh !
-0x189657: S'il vous plaît, ne m'éclaboussez pas le visage !\nVous allez gâcher le maquillage.
+0x1893EA: Tu as bien travaillé !
+0x189423: Si tu veux un combat, tu auras\nun combat !
+0x189459: Tu m’as eu, et bien comme il\nfaut !
+0x18947E: Je devrais arrêter d’attaquer les\nDresseurs et de les blâmer…
+0x18961F: Quel temps splendide !\nParfait pour un combat !
+0x18964D: Aïeeeeh !
+0x189657: Ne m’éclabousse pas le visage !\nTu vas ruiner mon maquillage.
 0x189E42: La saveur salée de la mer…\nÇa me chatouille le cœur.
-0x189E72: …Renifle, renifle…\nQuelque chose sent désagréable…
-0x189E9E: Peut-être que cette puanteur est l’odeur corporelle de votre Pokémon en sueur \n…
-0x189F63: Ma maman a dit que je ne pouvais pas nager\nsans mon anneau flottant.
-0x189F9A: Waouh !\nWaouh !
-0x189FA8: Cette année, je vais enfin\napprendre à nager !
-0x189FDB: Ouais, ouais !\nPokémon !
+0x189E72: …Snif, snif…\nQuelque chose sent mauvais…
+0x189E9E: Peut-être que cette puanteur,\nc’est l’odeur de tes Pokémon suants…
+0x189F63: Maman a dit que je ne peux pas\nnager sans ma bouée.
+0x189F9A: Ouin !\nOuin !
+0x189FA8: Cette année, je vais enfin\napprendre à nager !
+0x189FDB: Youpi, youpi !\nPokémon !
 0x189FEE: Que se passe-t-il maintenant ?
-0x18A000: Je viens de gagner ? Ou j'ai perdu ?
-0x18BA86: Mon petit ami est toujours occupé, alors je\nviens nager seul.
-0x18BAC0: Awww, je savais que cela arriverait !
-0x18BAE0: Quand je ne peux pas être avec mon petit ami,\nje passe du temps avec le Pokémon qu'il\lm'a donné.
-0x18C1ED: J'ai senti votre approche.
-0x18C205: Abandonner…
-0x18C20E: Dans ton avenir, je sens que tu feras beaucoup de rencontres.\pJe pense que vous serez liés par une force étrange.
-0x18CA2F: Je travaille pour protéger l'environnement.\nÀ son tour, la nature me protège !
-0x18CA6F: Waouh ! Tu es dur !\nEt si tu me protégeais ?
-0x18CA9C: De loin parmi les étoiles, notre planète\nn'est qu'une goutte d'eau.\pMais nous voulons protéger cette goutte\nd'eau pour tout le monde.
-0x18CB16: Ces chaussures que tu as sont vraiment classes.
-0x18CB3E: Tu en imposes malgré ton air mignon.
-0x18CB6C: Ta mère t'a acheté ces baskets élégantes ?\pElle doit t'adorer.
-0x18D3D1: {PLAYER}!\nVous devriez vous reposer rapidement.
-0x18D3F8: Oh, parfait ! Toi et tes Pokémon avez l'air en pleine forme.\pPrends soin de toi !
-0x18D43D: 9Il y a un film à la télé.\nQuatre garçons marchent sur des rails.\p…Je ferais mieux d'y aller aussi.
-0x18D492: Il y a un film à la télé.\nUne fille aux couettes marche sur une route pavée.\p…Je ferais mieux d'y aller aussi.
+0x18A000: Je viens de gagner ?\nOu de perdre ?
+0x18BA86: Mon copain est toujours occupé, du\ncoup je viens nager seule.
+0x18BAC0: Awww, je savais que ça arriverait !
+0x18BAE0: Quand je ne peux pas être avec mon\ncopain, je passe du temps avec les\lPokémon qu’il m’a offerts.
+0x18C1ED: J’ai senti ton approche.
+0x18C205: Abandonne…
+0x18C20E: Dans ton futur, je sens que tu\nferas beaucoup de rencontres.\pJe pense que vous serez liés les uns\naux autres par un pouvoir étrange.
+0x18CA2F: Je protège l’environnement.\nEn retour, la nature me protège !
+0x18CA6F: Ouah ! Tu es solide !\nEt si tu me protégeais ?
+0x18CA9C: Vu des étoiles, notre monde n’est\nqu’une goutte d’eau.\pMais nous voulons protéger cette\ngoutte d’eau pour tous.
+0x18CB16: Les chaussures que tu as sont\nsacrément classes.
+0x18CB3E: Tu assures malgré ton côté tout\nmignon.
+0x18CB6C: Ta maman t’a acheté ces super\nChaussures de Course ?\pElle doit t’adorer.
+0x18D3D1: {PLAYER} !\nTu devrais te reposer un peu.
+0x18D3F8: Ah, parfait ! Toi et tes\nPokémon êtes en pleine forme.\pPrends soin de toi maintenant !
+0x18D43D: 9Il y a un film à la télé.\nQuatre garçons marchent sur des\lrails.\p…Je ferais bien pareil.
+0x18D492: Il y a un film à la télé.\nUne fille aux couettes est en train\lde marcher sur une route pavée.\p…Je ferais bien pareil.
 0x18D4F9: Oups, mauvais côté…
-0x18D50B: {PLAYER} a joué avec la Wii.\p…D'accord !\nIl est temps d'y aller !
-0x18D53B: C'est un avis affiché…\pSi tu es perdu, demande de l'aide !\nParle aux gens !
-0x18EA44: 9C’est le Pokémon du professeur Log.
-0x18EA65: 9Appuyez sur Démarrer pour ouvrir le menu !
-0x18EA84: L'option Enregistrer est au menu.\nUtilisez-la régulièrement.
-0x18EAB6: Tous les types de Pokémon ont des points forts et des points faibles contre les autres.
-0x18EAF4: C'est un nouvel ordinateur.\pOoh…\nChic.
-0x18EBE5: 9J’étudie les Pokémon en tant qu’aide du professeur Log.
-0x18ED80: 9Le Prof. Log a passé de nombreuses années à étudier les stats des Pokémon.\pBeaucoup de Dresseurs viennent le voir pour se renseigner.
-0x1902BF: Merci !\nPasse le bonjour au Prof. Log pour moi !
-0x19032C: Le gars tout en noir d'avant était effrayant.\pC'était qui ?
-0x190365: Tu devrais faire des réserves de {COLOR}ÉPotions{COLOR}Ë.\pOn ne sait jamais quand on aura besoin de soins rapides.
-0x190450: Les Centres Pokémon soignent tes Pokémon fatigués.\pIls les remettent complètement en forme.\pLa plupart sont gratuits, alors n'hésite pas à soigner tes Pokémon.
-0x1904EE: Les capacités gagnent en puissance si elles correspondent au type du coup.\pOn appelle ça le Bonus d'Attaque de Même Type, ou {COLOR}ÉSTAB{COLOR}Ë.
-0x19056C: Tous les Pokémon ont des {COLOR}ÉTypes{COLOR}Ë spéciaux, comme Feu ou Eau.\pIls déterminent leur efficacité face aux autres.\pLes Types donnent aussi aux capacités un bonus de puissance si elles correspondent au type du coup.\pOn appelle ça le Bonus d'Attaque de Même Type, ou {COLOR}ÉSTAB{COLOR}Ë.
-0x190687: Je ne sais pas quoi faire.\pTous les quelques jours, ce Pokémon horrible entre chez moi et vole ma nourriture.\pSi j'avais un Pokédex, je saurais ce que c'est et comment l'arrêter…
-0x19073F: Certains objets existent seulement pour être vendus.\pSi tu en obtiens un, tu devrais le vendre immédiatement.\pJ'ai même entendu dire que certains maniaques les achèteraient encore plus cher que les Boutiques Pokémon.
-0x191840: Mon grand-père a survécu à la météorite\nil y a de nombreuses années !\pIl est trop cool !
-0x192079: Le Champion Mirskle utilise des Pokémon qu'on trouve au {COLOR}ÉFlower Paradise{COLOR}Ë.\pCapturer de bons Pokémon de type Glace dans la {COLOR}ÉIcicle Cave{COLOR}Ë peut vraiment te donner l'avantage contre lui.
-0x1929C2: Le Repousse ne chasse pas que les insectes, il marche aussi sur les Pokémon faibles.\pMets ton Pokémon le plus fort en tête de ta liste.\pSi ton premier Pokémon est fort, l'effet du Repousse est renforcé.
-0x192A79: Tu devrais battre autant d'Arènes que possible.\pLes Boutiques te vendront plus d'objets si tu as plus de Badges.
-0x193465: Cette ville est assez calme.\pPeu de gens aiment traîner dans\nune ville située au milieu d'une forêt.
-0x193A4B: Yo, yo !\nJe suis le {COLOR}ÉJuge des Noms{COLOR}Ë officiel !\pTu veux que j'évalue les surnoms de tes Pokémon ?
-0x193AA6: Le surnom de quel Pokémon dois-je voir ?
-0x193AD2: {STR_VAR_1}, c'est ça ?\nC'est un surnom stylé !\pMais tu veux que je lui donne un nom encore plus swag ?\pQu'en dis-tu ?
-0x193B36: Cool. Alors, quel sera le nouveau surnom ?
-0x193B66: Fait ! Désormais, ce Pokémon s'appellera {STR_VAR_1} !\pC'est un bien meilleur nom qu'avant !\nTu es tellement swag !
-0x193BD4: D'accord.\nReviens quand tu veux.
-0x193BF0: Fait ! Désormais, ce Pokémon s'appellera {STR_VAR_1} !\pIl paraît identique, mais il est dix fois plus cool !\pTu as de la chance !
-0x193C82: {STR_VAR_1}, c'est ça ?\nQuel nom swagissime !\pPrends bien soin de {STR_VAR_1} !
-0x193CC4: Vraiment ?\nC'est un œuf !
-0x193EC1: Je suis le Mec de la Pêche !\pJ'adore la pêche !\nJe ne peux pas m'en passer.\pDis-moi, tu aimes pêcher ?
-0x193F2A: Génial ! J'aime ton style.\nJe pense qu'on peut être amis.\pPrends ça et pêche, jeune ami !
-0x193F81: {PLAYER} a reçu une Vieille Canne du Mec de la Pêche.
-0x193FAF: La pêche est un art de vivre !\nC'est comme la plus belle poésie.\pDes mers aux rivières, va et attrape le gros, mon ami.
-0x194028: Oh…\nQuelle déception…
+0x18D50B: {PLAYER} a joué à la Wii.\p…D’accord !\nIl est temps d’y aller !
+0x18D53B: C’est un avis affiché…\pSi tu es perdu, demande de l’aide !\nParle aux gens !
+0x18EA44: 9C’est le Pokémon du Prof. Log.
+0x18EA65: 9Appuie sur Start pour le menu !
+0x18EA84: L’option Sauvegarde est dans le\nmenu, utilise-la souvent.
+0x18EAB6: Tous les types ont des forces et\ndes faiblesses face aux autres.
+0x18EAF4: C’est un nouvel ordinateur.\pOoh…\nClasse.
+0x18EBE5: 9J’étudie les Pokémon en tant\nqu’Aide du Prof. Log.
+0x18ED80: 9Le Prof. Log a passé de longues\nannées à étudier les stats Pokémon.\pBeaucoup de Dresseurs viennent le\nvoir pour se renseigner.
+0x1902BF: Merci !\nSalue le Prof. Log de ma part !
+0x19032C: Ce type tout en noir de tout à\nl’heure faisait peur.\pQui était-ce ?
+0x190365: Tu devrais faire le plein de\n{COLOR}ÉPotions{COLOR}Ë.\pOn ne sait jamais quand tu seras en\npanne et auras besoin de soins vite.
+0x190450: Les Centres Pokémon soignent tes\nPokémon fatigués et exténués.\pIls remettent tous les Pokémon en\nparfaite santé.\pLa plupart sont gratuits, alors\nn’hésite pas à soigner tes Pokémon.
+0x1904EE: Les capacités gagnent en puissance\nsi elles ont le Type de l’attaque.\pOn appelle ça le Bonus Attaque de\nMême Type, ou {COLOR}ÉSTAB{COLOR}Ë en bref.
+0x19056C: Tous les Pokémon ont des {COLOR}ÉTypes{COLOR}Ë,\ncomme Feu ou Eau.\pIls déterminent à quel point ils se\nplacent face aux autres Pokémon.\pLes Types donnent aussi aux attaques\nun bonus de puissance si elles\lont le même Type que l’attaque.\pOn appelle ça le Bonus Attaque de\nMême Type, ou {COLOR}ÉSTAB{COLOR}Ë en bref.
+0x190687: Je ne sais vraiment pas quoi faire.\pTous les quelques jours, ce\nPokémon horrible entre dans ma\lmaison et vole ma nourriture.\pAvec un Pokédex, je saurais ce que\nc’est et comment l’arrêter…
+0x19073F: Certains objets existent seulement\npour être vendus.\pSi tu obtiens l’un de ces objets,\ntu devrais le vendre aussitôt.\pJ’ai même entendu dire que des\nmaniaques voudraient acheter ces\lobjets encore plus cher que dans\lles Boutiques Pokémon.
+0x191840: Mon grand-père a survécu au\nmétéorite il y a des années !\pIl est trop cool !
+0x192079: Le Champion d’Arène, Mirskle,\nutilise des Pokémon trouvables au\l{COLOR}ÉParadis Floral{COLOR}Ë.\pAttraper de bons Pokémon Glace dans\nla {COLOR}ÉGrotte Stalactite{COLOR}Ë peut\lvraiment te donner l’avantage sur\llui.
+0x1929C2: Le Repousse marche aussi sur les\nPokémon faibles.\pPlace ton Pokémon le plus fort à\nla gauche de la Liste Pokémon.\pSi ton premier Pokémon est fort,\nle Repousse est plus efficace.
+0x192A79: Essaie de battre le plus\nd’Arènes possible.\pLes Boutiques Pokémon vendront\nplus d’objets avec plus de Badges.
+0x193465: Cette ville est plutôt calme.\pPeu de gens aiment traîner dans\nune ville au milieu d’une forêt.
+0x193A4B: Yo, yo !\nJe suis le {COLOR}ÉJuge des Noms{COLOR}Ë officiel !\pTu veux que j’évalue les surnoms\nde tes Pokémon ?
+0x193AA6: Quel surnom de Pokémon dois-je\nexaminer ?
+0x193AD2: {STR_VAR_1}, c’est ça ?\nC’est un blaze stylé !\pMais tu veux que je lui donne un\nnom encore plus swag ?\pQu’en dis-tu ?
+0x193B36: Cool. Alors, quel sera le nouveau\nsurnom ?
+0x193B66: Voilà ! Désormais, ce Pokémon\ns’appellera {STR_VAR_1} !\pCe nom est bien meilleur qu’avant !\nTu es trop swag !
+0x193BD4: Ouais.\nReviens.
+0x193BF0: Voilà ! Désormais, ce Pokémon\ns’appellera {STR_VAR_1} !\pIl ressemble à avant, mais il a\nl’air dix fois plus stylé !\pTu as trop de chance !
+0x193C82: {STR_VAR_1}, c’est ça ?\nQuel nom ultra swag !\pPrends bien soin de {STR_VAR_1} !
+0x193CC4: Vraiment ?\nC’est un Œuf !
+0x193EC1: Je suis le Mec de la Pêche !\pJ’adoooore pêcher !\nJe ne peux pas m’en passer.\pDis-moi, tu aimes pêcher ?
+0x193F2A: Génial ! J’aime ton style.\nJe pense qu’on peut être amis.\pPrends ça et pêche, jeune ami !
+0x193F81: {PLAYER} a reçu une Canne à Pêche\ndu Mec de la Pêche.
+0x193FAF: La pêche est un art de vivre !\nC’est comme la plus belle poésie.\pDes mers aux rivières, va\nfaire une grosse prise, mon ami.
+0x194028: Oh…\nC’est tellement décevant…
 0x194045: Salut, {PLAYER} !\pÇa mord bien ?
-0x19406F: Oh, non !\pJ'avais un beau cadeau pour toi, mais tu n'as pas de place pour ça !
-0x194234: L'envie de combattre quelqu'un que tu as déjà affronté…\pTu as déjà eu cette envie ?\nJ'en suis sûr.\pMoi aussi je voulais revivre certains combats encore et encore.\pAlors je distribue ceci.\nTiens !
-0x19430F: Utilise cet appareil et tu trouveras des Dresseurs qui veulent une revanche.\pIl faut recharger sa batterie pour l'utiliser, cependant.
-0x194381: Comment utiliser le Cherche VS ?\nC'est tout simple.\pTu fais bip-bip-bip et les Dresseurs autour de toi le remarqueront.\pSi un Dresseur veut une revanche, il te le dira immédiatement.\pRecharge sa batterie et utilise-le en route.
-0x1949CB: Salut !\nTu as un {STR_VAR_1} ?\pTu veux l'échanger contre mon {STR_VAR_2} ?
-0x1949FD: C'est dommage.
-0x194A0D: …Ce n'est pas un {STR_VAR_1}.\pSi tu en obtiens un, échange-le-moi !
-0x194A44: Merci!
-0x194A4F: Comment va mon ancien {STR_VAR_2} ?\pMon {STR_VAR_1} se porte très bien !
-0x195471: Beaucoup de gens à Blizzard City aiment les délices de la vie.\pLes Pokémon rôtis, par exemple.
-0x1954DD: Bonjour !\nBienvenue au Grand Magasin de Dehara !\pLe panneau sur le mur décrit l'agencement du magasin.
-0x195638: 2F : Marché des Dresseurs\pArticles haut de gamme pour Dresseurs !
-0x195BBA: Les boosters de stats Pokémon ne s'achètent qu'ici.\pPV Plus augmente les PV de base d'un Pokémon.\pCalcium augmente la base Att. Spé.\pZinc augmente la base Déf. Spé.\pCarbos augmente la base Vitesse.
-0x195CA0: Je suis ici pour les boosters de stats.\pProtéine augmente l'Attaque de base.\pFer augmente la Défense de base.
+0x19406F: Oh, non !\pJ’avais un beau cadeau pour toi,\nmais tu n’as pas de place !
+0x194234: L’envie de combattre quelqu’un\nque tu as déjà affronté…\pTu as déjà ressenti ça ?\nJe suis sûr que oui.\pJe voulais aussi me battre encore\net encore contre certains.\pAlors j’offre ces trucs.\nTiens, prends-en un !
+0x19430F: Utilise cet appareil et tu trouveras\ndes Dresseurs voulant une revanche.\pIl faut recharger sa batterie pour\nl’utiliser, par contre.
+0x194381: Comment utiliser le Cherche VS ?\nRien de plus simple.\pFais bip-bip-bip et les Dresseurs\nautour de toi le verront.\pSi un Dresseur veut une revanche,\nil te le dira aussitôt.\pRecharge sa batterie et utilise-le\nquand tu es sur une route.
+0x1949CB: Salut !\nTu as un {STR_VAR_1} ?\pTu veux l’échanger contre mon\n{STR_VAR_2} ?
+0x1949FD: Dommage.
+0x194A0D: …Ce n’est pas un {STR_VAR_1}.\pSi tu en obtiens un, échange-le moi\ns’il te plaît !
+0x194A44: Merci !
+0x194A4F: Alors, mon ancien {STR_VAR_2} ?\pMon {STR_VAR_1} va super bien !
+0x195471: Beaucoup de gens à Ville Blizzard\napprécient les délices raffinés.\pLes Pokémon rôtis, par exemple.
+0x1954DD: Bonjour !\nBienvenue au Magasin de Dehara !\pLe panneau au mur décrit\nl’organisation du magasin.
+0x195638: 2F: Marché du Dresseur\pObjets premium pour Dresseurs !
+0x195BBA: Les boosts de stats Pokémon\nne s’achètent qu’ici.\pPV Plus augmente les PV de base\nd’un Pokémon.\pCalcium augmente l’Att. Spé de base\nd’un Pokémon.\pZinc renforce la Déf. Spé de base\nd’un Pokémon.\pCarbone améliore la Vitesse de\nbase.
+0x195CA0: Je viens pour des boosts de stats\nPokémon.\pProtéine augmente l’Attaque de\nbase.\pLe Fer augmente la Défense de\nbase.
 0x1962BF: Bonne nuit tout le monde.
-0x1962D7: Je suis l'artiste des sprites !\nJe t'ai dessiné !
-0x1962FB: Je suis le graphiste !\pJ'ai réalisé les super illustrations et le logo !
-0x196356: Je suis le créateur du jeu !\pRemplir le Pokédex est difficile, mais n'abandonne pas !\pQuand tu auras fini, viens me le dire !
-0x1963CD: Ouah ! Excellent !\nTu as complété ton Pokédex !\lFélicitations !\l…
-0x1964A8: Salle de développement Unbound
-0x196591: {PLAYER} a obtenu un ÉEVEE !
-0x196984: Bienvenue au Casino de Dehara !\pAs-tu besoin de jetons ?\nVeux-tu en acheter ?
-0x1969DC: Non ?\nViens jouer quand tu veux !
-0x1969FB: Oh, désolé.\nTu n'as pas de Boîte à Jetons.
-0x196A26: Oups !\nTa Boîte à Jetons est pleine.
-0x196A46: Tu n'as pas assez d'argent pour les jetons.
-0x196A62: Merci.\nVoici tes jetons !
-0x196A82: Gardez ça silencieux.\pLa rumeur dit que ces machines sont\ntruquées.
-0x196AC7: Je pense que ces machines ont des chances différentes.
-0x196AF3: Gamin, tu veux jouer ?
-0x196B0D: {PLAYER} a reçu 10 jetons de l'homme.
-0x196B30: Tu n'as pas besoin de mes jetons !
-0x196B49: Les gains vont et viennent. Rien n'est garanti.
-0x196B7B: Ces machines à sous…\nGagné ou perdu, c'est juste de la chance.
-0x196CFE: Les jeux, c'est dangereux !\nC'est si facile de devenir accro !
-0x196D2B: Quoi de neuf ?\nTu veux des jetons ?
-0x196D47: {PLAYER} a reçu 20 jetons du gentil monsieur.
-0x196D6F: Tu as déjà plein de jetons !
-0x196D87: Zut ! Il me faut plus de jetons pour le Pokémon que je veux !
-0x196DB7: Hé quoi ? Tu me déconcentres !\nVoilà des jetons, maintenant ouste !
-0x196DF8: {PLAYER} a reçu 20 jetons de l'homme.
-0x196E1B: Tu as déjà plein de jetons !
-0x196E40: Le truc, c'est de bien observer les rouleaux.
-0x196F0D: Une Boîte à Jetons est nécessaire…
-0x196F26: Oups !\nPas de Boîte à Jetons !
-0x196F46: Une machine à sous !\nTu veux jouer ?
-0x196F64: HORS SERVICE\nCassée.
-0x196F81: PAUSE DÉJEUNER\nRéservé.
-0x196FA0: Des clés !\nIls reviendront.
-0x19703E: Une Boîte à Jetons est nécessaire…
-0x197057: Nous échangeons tes jetons contre des lots.
-0x19707A: Quel lot veux-tu ?
-0x19709D: Alors, tu veux le {STR_VAR_1} ?
-0x1970B2: D'accord, tu veux une CT de {STR_VAR_2} ?
-0x1970D5: Désolé, il te faut plus de jetons que ça.
-0x19745D: Tu devrais faire de la place pour ça.
-0x197873: 9Arène Pokémon de Dehara\nChampion : Galavan\pDresseurs victorieux :\n{RIVAL}
-0x1978AC: Arène Pokémon de Dehara\nChampion : Galavan\pDresseurs victorieux :\n{RIVAL}, {PLAYER}
-0x1979C1: Oh non…\pJ'ai cramé tout mon fric au Casino !\pOn dirait que je n'aurai plus besoin de ça !
-0x197A38: {PLAYER} a reçu une Boîte à Jetons du gars.
-0x197A5E: Fais de la place pour ça !
-0x197A72: J'ai toujours pensé que je pouvais gagner…
-0x1980BC: J'aurais juré avoir vu le caissier voler dans la caisse…
-0x198BBA: 9Un jour, je serai un ninja !\pMes parents frappent avec force,\nmais je vais être sournois !
-0x198C1F: Houa ! Déplace les rochers à la seule force !\pPrends ça !
-0x19918E: Je suis le frère aîné\ndu gourou de la pêche.\pJ'adore pêcher !\nJe ne peux pas supporter de m'en passer.\pDites-moi, aimez-vous pêcher ?
-0x199207: Grandiose! J'aime ton style.\nJe pense que nous pouvons être amis.\pPrends ça et pêche, jeune ami !
-0x19925E: {PLAYER} a reçu une bonne canne de la part de\nle ​​frère du gourou de la pêche.
-0x199296: La pêche est un mode de vie !\nC'est comme la meilleure poésie.\pUne vieille canne minable ne pouvait attraper que\nMagikarpe, oui ?\pMais avec une bonne canne, vous pouvez\nattraper de bien meilleurs Pokémon.
-0x199337: Oh…\nC'est tellement décevant…
-0x199354: Bonjour, {PLAYER}!\pComment les poissons mordent-ils ?
-0x19937E: Oh, non !\pJ'avais un cadeau pour toi, mais tu n'as\npas de place pour cela !
-0x1993B9: Euh…\nEuh, oui, je suis le Move Supprer.\pJe peux faire oublier à Pokémon leurs\nmoves.\pVoulez-vous que je fasse ça ?
-0x199421: Quel Pokémon devrait oublier un mouvement \n ?
-0x199445: Quel geste faut-il oublier ?
-0x199465: {STR_VAR_1} semble ne connaître qu'un seul mouvement \n…
-0x199485: Hum ! {STR_VAR_1}'s {STR_VAR_2}?\nCe mouvement devrait être oublié ?
-0x1994B1: Cela a fonctionné à la perfection !\p{STR_VAR_1} a complètement oublié\n{STR_VAR_2}.
-0x1994EA: Revenez s'il y a d'autres mouvements \n à oublier.
-0x19951F: Quoi ?\nAucun œuf ne devrait connaître aucun mouvement.
-0x19A4F7: 9Cette ville a un problème avec \ncauchemars depuis très longtemps.\pSi vous devez choisir un endroit\npour vivre, il serait probablement\lmieux de vivre ailleurs.
-0x19A5BD: 9Tu as besoin d'un moyen de redescendre la montagne ?\pMon Abra et moi serions ravis de te téléporter en bas.\pQu'en dis-tu ? Voulez-vous être téléporté ?
-0x19A650: Attention, tu auras besoin de force pour continuer ensuite.
-0x19A79F: 9Ils n'ont pas des Attaques X ?\pJ'aime ça parce que ça augmente l'Attaque en combat.
-0x19A7F1: Ça ne fait jamais de mal d'avoir des objets en rab.\nOn ne sait jamais ce qui peut arriver.
-0x19B86A: J'y suis presque !
-0x19B8B9: Je ne suis pas trop jeune pour Mel !\nLaisse-moi tranquille !
-0x19BA45: Mauvaise façon!
-0x19BAB4: Mel a besoin de quelqu'un pour peindre sa beauté !
-0x19BB49: Impasse !
-0x19BB53: Cette campeuse a menti, ce n'est pas le bon chemin !
-0x19BBB3: Tu adores la conception de cette arène ?\pElle est tellement bien que seul un génie a pu l'inventer !
-0x19BC57: Tu es presque arrivé jusqu'à Mel !\nEncore un peu !
-0x19BDFE: Arène Pokémon de Fallshore\nChampion : Mel\pDresseurs victorieux :\n{RIVAL}
-0x19BE37: Arène Pokémon de Fallshore\nChampion : Mel\pDresseurs victorieux :\n{RIVAL}, {PLAYER}
-0x19BF8F: Le Repousse Max empêche les Pokémon faibles d'apparaître.\pIl dure plus longtemps que le Super Repousse.
-0x19BFF1: Si tu as le {COLOR}ÉBadge Fall{COLOR}Ç, tu peux acheter des {COLOR}ÉHyper Balls{COLOR}Ç !\pElles sont bien meilleures pour capturer les Pokémon que les Super Balls.
-0x19C0B4: J'ai entendu dire que des gens font de mauvaises choses sur la {COLOR}ÉRoute 9{COLOR}Ë.
-0x19C0F7: Chaque pas que tu fais rapproche ton Pokémon de toi.\pSi tu as un Pokémon à la Pension, il deviendra plus fort aussi.
-0x19C177: Tu as entendu ?\pQuelqu'un s'est occupé des fauteurs de troubles sur la Route 9 !
-0x19E9E5: Salut !\nJe suis l'un des {COLOR}Éassistants du Prof. Log{COLOR}Ç.\pSi ton Pokédex contient des données complètes sur {COLOR}É{STR_VAR_1}{COLOR}Ç espèces, je suis censé te donner une récompense.\pAlors, {PLAYER}, dis-moi.\pAs-tu rassemblé des données sur au moins{COLOR}É\n{STR_VAR_1}{COLOR}Ç types de Pokémon ?
-0x19EABE: …sur au moins\n{STR_VAR_1} types de Pokémon ?
-0x19EAE4: Génial ! Tu as capturé {COLOR}É{STR_VAR_3}{COLOR}Ç\ntypes de Pokémon !\pFélicitations !\nTiens !
-0x19EB59: Il existe des objets au sol qui peuvent être cachés.\pUtilise le {COLOR}ÉCherch'Objets{COLOR}Ç pour détecter les objets cachés à proximité.\pLa machine est un peu limitée : elle ne peut pas pointer l'emplacement exact.\pElle te montre la direction de l'objet.\pSers-t'en pour t'orienter, puis cherche à la main.
-0x19EFE0: Je suis le petit frère du Pêcheur.\pJ'adoooore la pêche !\nJe ne peux pas m'en passer.\pDis-moi, tu aimes pêcher ?
-0x19F05B: Génial ! J'aime ton style.\nJe pense qu'on peut être amis.\pPrends ça et pêche, jeune ami !
-0x19F0B2: {PLAYER} a reçu une Méga Canne du frère du Pêcheur.
-0x19F0EB: La pêche est un art de vivre !\nC'est comme la plus belle poésie.\pDes mers aux rivières, sors et attrape le gros, mon ami.\pMaintenant, j'ai une demande.\pSi tu attrapes un gros Magicarpe avec cette canne, je veux le voir.\pJ'adore voir d'immenses Magicarpe.
-0x19F1FA: Oh…\nC'est tellement décevant…
-0x19F217: Bonjour, {PLAYER} !\nAs-tu pêché ?\pEssaie la Méga Canne dans n'importe quel plan d'eau.\pTu trouveras des Pokémon différents selon les endroits.\pOh, et n'oublie pas de m'apporter d'immenses Magicarpe.
-0x19F2DB: Oh? {PLAYER}?\nPourquoi, si ce n'est pas un Magikarpe !\pPermettez-moi de le voir, vite !
-0x19F31B: … … … Ouah !\n{STR_VAR_2} pouces !\pTu as un vrai sens poétique de la pêche !\pTu dois prendre ceci.\nJ'insiste !
-0x19F395: J'ai hâte de voir de meilleurs records de ta part !
-0x19F3CB: Hein ?\n{STR_VAR_2} pouces ?\pC'est la même taille que celui que j'ai vu avant.
-0x19F40A: Hmm…\nCelui-ci mesure {STR_VAR_2} pouces.\pIl n'égale pas celui de {STR_VAR_3} pouces que tu as apporté avant.
-0x19F468: Euh… Ça ne ressemble pas beaucoup à un Magicarpe.
-0x19F494: Oh, non !\pJ'avais un cadeau pour toi, mais tu n'as pas de place.
-0x19F4CF: Le Magicarpe le plus gigantesque que j'ai jamais vu…\p{STR_VAR_3} pouces !
-0x19F50C: C'est une sorte de tableau vierge. \pIl comporte des espaces pour écrire des enregistrements \n d'une certaine sorte.
-0x1A1B8E: Obtenu une page supplémentaire pour la CARTE !
-0x1A231B: Obtenu le TRI-PASS !
-0x1A2B88: Je suis le Maître des Capacités Pokémon.\pJe connais toutes les capacités qu'un Pokémon apprend en grandissant.\pJe suis aussi fan des Écailles Cœur.\pApporte-moi une Écaille Cœur.\pSi tu fais ça, j'apprendrai une capacité à un Pokémon.
-0x1A2C63: Oh ! C'est une Écaille Cœur authentique !\pLaisse-moi deviner, tu veux que j'enseigne une capacité ?
-0x1A2CC3: Quel Pokémon a besoin d'un cours ?
-0x1A2CE1: Quelle capacité dois-je enseigner ?
-0x1A2CFC: Désolé…\pIl ne semble pas que j'aie une capacité à enseigner à ce Pokémon.
-0x1A2D43: Alors, il me faut une Écaille Cœur.\nQue me donnes-tu ?
-0x1A2D85: {PLAYER} a donné une Écaille Cœur en échange.
-0x1A2DE0: Si tes Pokémon doivent apprendre une capacité, j'ai besoin d'une Écaille Cœur.
-0x1A2E20: Hein ? Je n'ai aucune capacité à enseigner à un Œuf.
-0x1A505B: Nous espérons vous revoir!
-0x1A5075: {PLAYER} a démarré le PC.
-0x1A508A: À quel PC faut-il accéder ?
-0x1A50A7: J'ai accédé au PC de quelqu'un.
-0x1A50BE: Le système de stockage Pokémon est ouvert.
-0x1A50DD: J'ai accédé au PC de {PLAYER}.
-0x1A50EF: J'ai accédé au PC d'Ayla.
-0x1A5103: Bienvenue au Pokémon Cable Club\nTrade Center.
-0x1A5133: Bienvenue au Pokémon Cable Club\nColosseum.
-0x1A5160: Bienvenue au Pokémon Cable Club\nTime Capsule.
-0x1A5190: S'il vous plaît, revenez !
-0x1A51A3: Bienvenue !\pNous faisons une promotion aujourd'hui !
-0x1A51D0: {PLAYER}{KUN}, bienvenue !\pQue puis-je faire pour toi ?
-0x1A51F6: Obtenu le {STR_VAR_2} !
-0x1A5207: Le Sac est plein…
-0x1A5218: {PLAYER} a rangé le {STR_VAR_2} dans le {STR_VAR_3}.
-0x1A5231: {PLAYER} a trouvé un {STR_VAR_2} !
-0x1A5242: Dommage !\nLe Sac est plein…
-0x1A526C: {PLAYER} a rangé les jetons dans la Boîte à Jetons.
-0x1A5294: Dommage !\nLa Boîte à Jetons est pleine…
-0x1A52B4: Dommage !\nIl n'y a rien pour les mettre…
-0x1A52F0: Obtenu le {STR_VAR_2} !
-0x1A5301: Dommage ! Pas de place pour un autre {STR_VAR_2}…
-0x1A532F: Le {STR_VAR_2} a été transféré sur le PC.
-0x1A5375: Un objet du Cube V3 peut être enregistré sur Select pour un accès rapide.
-0x1A5420: {PLAYER} a démarré le PC.
-0x1A5446: Donner un surnom au {STR_VAR_2} que tu as reçu ?
-0x1A5483: Bienvenue au Centre Pokémon !\pVeux-tu que je remette tes Pokémon en parfaite santé ?
-0x1A54E1: D'accord, je prends tes Pokémon pour quelques secondes.
-0x1A5511: Reste prudent dehors !
-0x1A552B: Merci d'avoir attendu.\nNous avons rétabli tes Pokémon à pleine santé.
-0x1A556E: L'eau est d'un bleu profond…\nUtiliser Surf ?
-0x1A55A5: {STR_VAR_1} utilise Surf !
-0x1A55B3: Le courant est bien trop fort !\nSurf ne peut pas être utilisé ici…
-0x1A561A: Je suis terriblement désolé.\nLe Pokémon Wireless Club est\len cours d'ajustements actuellement.
-0x1A5667: Il semble être en train de subir des ajustements\n…
-0x1A5690: {PLAYER} a remis le\n{STR_VAR_1}.
-0x1A56A7: Voulez-vous donner un surnom à\nce {STR_VAR_1} ?
-0x1A5700: {PLAYER} a déterré un {STR_VAR_2} profondément sous terre.
-0x1A58A7: Voyons voir…\nOups ! Tu n'as attrapé que {COLOR}É{STR_VAR_3}{COLOR}Ç types de Pokémon !\pIl t'en faut {COLOR}É{STR_VAR_1}{COLOR}Ç.
-0x1A5909: …Oh. Je vois.\pQuand tu auras {COLOR}É{STR_VAR_1}{COLOR}Ç types de Pokémon, reviens.
-0x1A594D: Oh ! Je vois que tu n'as pas de place pour le {STR_VAR_2}.
-0x1A597B: Je cherche le Pokémon {STR_VAR_1} !\pTu veux en échanger un contre mon {STR_VAR_2} ?
-0x1A59B6: Aaaah !\nTant pis…
-0x1A59C6: Quoi ? Ce n'est pas un {STR_VAR_1} !
-0x1A59DA: Merci !
-0x1A59E7: Mon ancien {STR_VAR_2} n'est-il pas génial ?
-0x1A5AD5: 9Salut !\nTu as un {STR_VAR_1} ?\pTu veux l'échanger contre mon {STR_VAR_2} ?
-0x1A5B08: Dommage.
-0x1A5B18: …Ce n'est pas un {STR_VAR_1}.\pSi tu en obtiens un, échange-le avec moi.
-0x1A5B4A: Merci, t'es un pote !
-0x1A5B60: Comment va mon ancien {STR_VAR_2} ?\nMon {STR_VAR_1} se porte super !
-0x1A5B88: Bingo !\nLa Carte Magnétique a ouvert la porte !
-0x1A5BC5: 9Connexion au PC du Prof. Log…\pAccès au système d'évaluation du Pokédex…
-0x1A5C03: Voulez-vous faire évaluer votre Pokédex ?
-0x1A5C2E: Lien avec le PC du Prof. Log fermé.
-0x1A5C4D: La voix de quelqu’un retentit : \n « Ne t’enfuis pas ! »
-0x1A5CDF: La porte est ouverte…
-0x1A5CF1: {STR_VAR_2} a été transféré sur le PC de Someone.\pIl a été placé dans la\nBoîte “{STR_VAR_1}.”
-0x1A5D31: {STR_VAR_2} a été transféré sur le PC d'Ayla.\pIl a été placé dans la\nBoîte “{STR_VAR_1}.”
-0x1A5D6E: La Boîte “{STR_VAR_3}” sur le PC de Someone était pleine.\p{STR_VAR_2} a été transféré dans\nla Boîte “{STR_VAR_1}.”
-0x1A5DB1: La Boîte “{STR_VAR_3}” sur le PC d'Ayla était pleine.\p{STR_VAR_2} a été transféré dans\nla Boîte “{STR_VAR_1}.”
-0x1A5DF1: {PLAYER} a obtenu le {STR_VAR_1} !
-0x1A5E31: Il n'y a plus de place pour les Pokémon !\pLes Boîtes sont pleines et ne peuvent pas en accepter plus !
-0x1A5E89: D'abord, tu devrais soigner tes Pokémon.
-0x1A5EC0: Tes Pokémon ont été soignés.\pSi leur énergie, leurs PV, sont bas, viens nous voir.\pSi tu pars loin, achète des Potions au Magasin Pokémon.\pBonne chance !
-0x1A5F9B: Tes Pokémon ont été soignés.\pBonne chance !
-0x1A5FDF: {PLAYER} !\nBienvenue à la maison.\pOn dirait que tu as vécu une belle aventure.\pTu devrais te reposer un peu.
-0x1A6046: Oh, parfait !\pToi et tes Pokémon avez bien meilleure mine.\pSi les PV de tes Pokémon sont bas, soigne-les dans un {COLOR}ÉCentre Pokémon{COLOR}Ç !\pLe plus proche doit être à {COLOR}ÉBellin Town{COLOR}Ç.\pOu achète des {COLOR}ÉPotions{COLOR}Ç au {COLOR}ÉMagasin{COLOR}Ç !\pIl n'est jamais mauvais d'être préparé.\pRends-moi fier, chéri !\pPrends soin de toi !
-0x1A6196: 9{PLAYER} n'a plus de Pokémon utilisables !\p{PLAYER} a paniqué et a perdu ¥{STR_VAR_1}…\p… … … …\p{PLAYER} s'est évanoui !
-0x1A61E5: {PLAYER} n'a plus de Pokémon utilisables !\p{PLAYER} s'est évanoui !
-0x1A6211: Salut !\nPuis-je t'aider ?
-0x1A622C: Il y a un questionnaire.\nVeux-tu le remplir ?
-0x1A6265: Merci d'avoir pris le temps de remplir notre questionnaire.\pTes réponses serviront de référence.
-0x1A62D3: Oh, salut !\nTu connais ces mots ?\pÇa veut dire que tu dois connaître le CADEAU MYSTÈRE.\pDésormais, tu devrais recevoir des CADEAUX MYSTÈRES !
-0x1A6359: Une fois ta partie sauvegardée, tu peux accéder au CADEAU MYSTÈRE.
-0x1A6393: Merci d'avoir accédé au système CADEAU MYSTÈRE.
-0x1A63C4: Le {STR_VAR_1} s'est envolé !
-0x1A63E8: {PLAYER} a trouvé un {STR_VAR_2} !\nIl contient {STR_VAR_1}.
-0x1A6447: 9Gyaoo !
-0x1A6CA2: 9Ton avancement dans le Pokédex est :\p{STR_VAR_1} Pokémon vus et\n{STR_VAR_2} Pokémon attrapés.\p{FONT_NORMAL}Évaluation du Prof. Log :
-0x1A6D17: Il te reste encore beaucoup à faire.\pVa dans chaque parcelle d'herbe que tu vois et cherche des Pokémon !
-0x1A6D6D: On dirait que tu es sur la bonne voie !\pJ'ai donné une CS FLASH à l'un de mes assistants. Assure-toi de la récupérer !
-0x1A6DDF: Ton Pokédex manque encore un peu de volume !\pEssaye d'attraper d'autres espèces de Pokémon !
-0x1A6E36: Bien, on voit que tu travailles dur !\pJ'ai donné un Cherch'Objet à l'un de mes assistants. Assure-toi de le récupérer !
-0x1A6EA4: Ton Pokédex avance plutôt bien !\pJ'ai donné une Pièce Rune à l'un de mes assistants. Assure-toi de la récupérer !
-0x1A6F0B: Ah, tu as enfin dépassé 50 espèces !\pJ'ai donné un Multi Exp. à l'un de mes assistants. Assure-toi de le récupérer !
-0x1A6F71: Hoho ! Ça devient un Pokédex respectable !
-0x1A6FAB: Très bien !\pJe pense que tu attraperas encore plus de Pokémon en pêchant !
-0x1A6FF1: Super ! Laisse-moi deviner… Tu aimes collectionner, non ?
-0x1A7031: Je suis impressionné !\nÇa a dû être difficile !
-0x1A7063: Tu as enfin atteint 100 espèces !\nJe n'arrive pas à croire à quel point tu es bon !
-0x1A70A5: Tu as même les formes évoluées des Pokémon ! Super !
-0x1A70D8: Excellent ! Échange avec des amis pour en avoir d'autres !
-0x1A7108: Exceptionnel !\nTu es devenu un vrai pro !
-0x1A7137: Je n'ai plus rien à dire !\nTu es le PROFESSEUR Pokémon maintenant !
-0x1A7175: Ton Pokédex est entièrement complet !\nFélicitations !!
-0x1A71AA: Et ton Pokédex National est :\p{STR_VAR_1} Pokémon vus et\n{STR_VAR_2} Pokémon attrapés.
-0x1A71EE: J'ai hâte de te voir remplir le Pokédex National !
-0x1A722F: Enfin…\pTu as enfin complété le Pokédex !\pC'est magnifique !\nC'est vraiment un exploit fantastique !
-0x1B1D7C: 9C'est une Imprimante Pokémon !\pElle peut imprimer ton Pokémon au dos de ta Carte de Dresseur.\pÇa ne coûte que 50 ¥.\nVeux-tu essayer ?
-0x1B1E07: Vous n'avez pas assez d'argent.
-0x1B1E24: Veuillez choisir le type d'impression.
-0x1B1E42: Un grand sourire pour la photo, s'il te plaît !\nTrois… Deux… Un…\pFlash !
-0x1B1E7D: Ton impression Pokémon est prête !\nVérifie ta Carte de Dresseur.
-0x1BC310: 9Bienvenue au Pokémon Cable\nClub.\pLequel de nos services souhaitez-vous\nutiliser ?
-0x1BC35E: Lequel de nos services souhaitez-vous\nutiliser ?
-0x1BC388: Échange des Pokémon avec un autre joueur à l'aide d'un câble Game Link GBA.
-0x1BC3C7: Tu peux combattre un autre dresseur à l'aide d'un câble Game Link GBA.
-0x1BC409: Pour une Double Bataille, vous devez\navoir au moins deux Pokémon.
-0x1BC442: Pour échanger, vous devez avoir au moins deux Pokémon avec vous.
-0x1BC47C: Un Pokémon détenant la {STR_VAR_1}\nBerry ne peut pas être échangé.
-0x1BC4AC: Veuillez patienter.\n… … Bouton B : Annuler
-0x1BC4CE: Lorsque tous les joueurs sont prêts…\nA Bouton : Confirmer\lB Bouton : Annuler
-0x1BC50D: Démarrer le lien avec les joueurs {STR_VAR_1}.\nA Bouton : Confirmer\lB Bouton : Annuler
-0x1BC54C: En attente de liaison…\n… … Bouton B : Annuler
-0x1BC590: Veuillez entrer.
-0x1BC59E: Je vais vous diriger vers votre chambre maintenant.
-0x1BC5C0: Quelqu'un n'est pas prêt à créer un lien.\pVeuillez revenir une fois que tout le monde\naura fait les préparatifs.
-0x1BC615: Désolé, nous avons une erreur de lien…\nVeuillez réinitialiser et réessayer.
-0x1BC64E: Les partenaires de liaison semblent avoir\nfait des sélections différentes.
-0x1BC68A: Merci de revenir nous voir.
-0x1BC6A1: Le nombre de participants est\nincorrect.
-0x1BC6CA: Le mode Bataille Unique ne peut pas être\njoué par {STR_VAR_1} joueurs.
-0x1BC700: Le mode Double Battle ne peut pas être\njoué par {STR_VAR_1} joueurs.
-0x1BC736: Il faut quatre joueurs pour ce mode de combat.
-0x1BC76B: Confirme le nombre de joueurs et recommence.
-0x1BC7A1: Le lien sera interrompu si tu quittes la pièce. D'accord ?
-0x1BC7E2: Interruption du lien…\nTu seras escorté hors de la pièce. Merci de patienter.
-0x1BC827: Ce dresseur est trop occupé pour remarquer…
-0x1BC84B: Score ! J'ai pu regarder la Carte de Dresseur de {STR_VAR_1} !
-0x1BC874: Score ! J'ai pu regarder la Carte de Dresseur de {STR_VAR_1} !\pC'est une carte {STR_VAR_2} !
-0x1BC8AD: Veuillez vous asseoir et commencer\nvotre bataille.
-0x1BC8DA: Veuillez vous asseoir et commencer\nvotre échange.
-0x1BC918: Les données de la Carte de Dresseur seront écrasées.
-0x1BC943: J'espère te revoir !
-0x1BC95C: Je suis vraiment désolé.\pNous ne sommes pas encore prêts à échanger avec des dresseurs d'une autre région…
-0x1BC9C0: L'autre Dresseur n'est pas prêt.
-0x1BC9E0: Vous avez au moins un Pokémon\nqui ne peut pas être pris.
-0x1BCA13: L'adaptateur sans fil n'est pas\nconnecté correctement.
+0x1962D7: Je suis le graphiste sprites !\nJe t’ai dessiné !
+0x1962FB: Je suis le graphiste !\pJ’ai fait les super artworks de\nsoutien et le logo !
+0x196356: Je suis le créateur du jeu !\pRemplir ton Pokédex est difficile,\nmais abandonne pas !\pQuand tu auras fini, viens me voir !
+0x1963CD: Waouh ! Excellent !\nTu as complété ton Pokédex !\lFélicitations !\l…
+0x1964A8: Salle de Développement Unbound
