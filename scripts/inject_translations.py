@@ -191,66 +191,6 @@ def encode_text_truncate(
     return bytes(out[:max_len])
 
 
-def try_fit_text(text: str, max_len: int, value_to_seq: Dict[str, Tuple[int, ...]]) -> bytes | None:
-    """Tente de compresser/abréger le texte pour tenir dans max_len bytes encodés."""
-    # Essai direct
-    try:
-        enc = encode_text(text, value_to_seq)
-        if len(enc) <= max_len:
-            return enc
-    except Exception:
-        pass
-
-    # Remplacements rapides pour gagner de la place
-    replacements = [
-        ("Pokémon", "PKMN"),
-        ("Poké ", "Poke "),
-        ("Poké", "Poke"),
-        ("Centre PKMN", "Ctr PKMN"),
-        ("Centre Pokémon", "Ctr PKMN"),
-        ("Boutique", "BTQ"),
-        ("Champions", "Champs"),
-        ("Champion", "Champ."),
-        ("dresseurs", "dres."),
-        ("dresseur", "dres."),
-        ("Poké Balls", "Poke Balls"),
-        ("Poké Ball", "Poke Ball"),
-    ]
-    comp = text
-    for old, new in replacements:
-        comp = comp.replace(old, new)
-    try:
-        enc = encode_text(comp, value_to_seq)
-        if len(enc) <= max_len:
-            return enc
-    except Exception:
-        pass
-
-    # Troncature par mots
-    words = comp.split()
-    while words:
-        truncated = " ".join(words)
-        try:
-            enc = encode_text(truncated, value_to_seq)
-            if len(enc) <= max_len:
-                return enc
-        except Exception:
-            pass
-        words.pop()  # retire un mot et réessaie
-
-    # Dernier recours : troncature caractère par caractère (évite de laisser l'original)
-    trimmed = comp
-    while trimmed:
-        trimmed = trimmed[:-1]
-        try:
-            enc = encode_text(trimmed, value_to_seq)
-            if len(enc) <= max_len:
-                return enc
-        except Exception:
-            continue
-    return None
-
-
 def load_sensitive_lines() -> set[int]:
     if not SENSITIVE_FILE.exists():
         return set()
@@ -342,6 +282,7 @@ def main() -> None:
     entries = []
     line_to_offset: Dict[int, int] = {}
     errors: List[str] = []
+    warnings: List[str] = []
     for line_no, line in enumerate(args.text.read_text(encoding="utf-8").splitlines(), 1):
         if ": " not in line:
             continue
@@ -421,37 +362,30 @@ def main() -> None:
                 return alloc_start, src
         return None, None
 
+    def consume_free(start: int, length: int) -> None:
+        """Retire une plage [start, start+length) des blocs libres pour éviter les collisions."""
+        if length <= 0:
+            return
+        end = start + length
+        new_blocks = []
+        for b_start, b_size, src in free_blocks:
+            b_end = b_start + b_size
+            if end <= b_start or start >= b_end:
+                new_blocks.append((b_start, b_size, src))
+                continue
+            if start > b_start:
+                new_blocks.append((b_start, start - b_start, src))
+            if end < b_end:
+                new_blocks.append((end, b_end - end, src))
+        free_blocks[:] = [b for b in new_blocks if b[1] > 0]
+
     for entry in entries:
         line_no = entry["line_no"]
         offset = entry["offset"]
         text = entry["text"]
         encoded = entry["encoded"]
         orig_len = entry["orig_len"]
-
-        # Cas sensible : ne jamais reloger ni changer de pointeur (sauf ignore_sensitive)
-        if entry["sensitive"] or args.no_relocate or entry.get("force_shrink"):
-            if len(encoded) <= orig_len:
-                rom_bytes[offset : offset + len(encoded)] = encoded
-                if len(encoded) < orig_len:
-                    rom_bytes[offset + len(encoded) : offset + orig_len] = b"\xFF" * (
-                        orig_len - len(encoded)
-                    )
-                replaced += 1
-            else:
-                fitted = try_fit_text(text, orig_len, value_to_seq)
-                if fitted is not None:
-                    rom_bytes[offset : offset + len(fitted)] = fitted
-                    if len(fitted) < orig_len:
-                        rom_bytes[offset + len(fitted) : offset + orig_len] = b"\xFF" * (
-                            orig_len - len(fitted)
-                        )
-                    replaced += 1
-                else:
-                    errors.append(
-                        f"Ligne {line_no}: texte trop long (sensible/force_shrink/no-relo), laissé inchangé (offset {hex(offset)})"
-                    )
-            continue
-
+        # Essai en place
         if len(encoded) <= orig_len:
             rom_bytes[offset : offset + len(encoded)] = encoded
             if len(encoded) < orig_len:
@@ -461,16 +395,39 @@ def main() -> None:
             replaced += 1
             continue
 
-        # Texte trop long
+        # Texte trop long : il faut reloger (pas de troncature)
         if args.no_relocate:
-            end_pos = offset + len(encoded)
-            if end_pos > len(rom_bytes):
-                rom_bytes.extend(b"\xFF" * (end_pos - len(rom_bytes)))
-            rom_bytes[offset:end_pos] = encoded
+            errors.append(
+                f"Ligne {line_no}: texte trop long ({len(encoded)}>{orig_len}) et --no-relocate actif (offset {hex(offset)})"
+            )
+            continue
+
+        old_ptr_val = POINTER_BASE + offset
+        positions = pointer_index.get(old_ptr_val, [])
+        if not positions:
+            # tenter une extension locale si un run de 0xFF suit la chaîne
+            end = rom_bytes.find(b"\xFF", offset)
+            if end == -1:
+                errors.append(
+                    f"Ligne {line_no}: texte trop long ({len(encoded)}>{orig_len}) et aucun pointeur trouvé pour {hex(offset)}"
+                )
+                continue
+            extra_needed = len(encoded) - (end - offset + 1)
+            run = 0
+            while end + 1 + run < len(rom_bytes) and rom_bytes[end + 1 + run] == 0xFF:
+                run += 1
+                if run >= extra_needed:
+                    break
+            if run < extra_needed:
+                errors.append(
+                    f"Ligne {line_no}: texte trop long ({len(encoded)}>{orig_len}) sans pointeur et pas assez d'espace libre après {hex(offset)}"
+                )
+                continue
+            consume_free(end + 1, extra_needed)
+            rom_bytes[offset : offset + len(encoded)] = encoded
             replaced += 1
             continue
 
-        # Texte trop long : relogement
         needed = len(encoded)
         dest_offset, source = take_block(needed)
 
@@ -485,37 +442,16 @@ def main() -> None:
                 source = "append"
             else:
                 errors.append(
-                    f"Ligne {line_no}: pas d'espace libre pour {len(encoded)} octets (offset {hex(offset)}), laissé inchangé"
+                    f"Ligne {line_no}: pas d'espace libre pour {needed} octets (offset {hex(offset)}), relogement impossible"
                 )
                 continue
 
         rom_bytes[dest_offset : dest_offset + needed] = encoded
 
-        old_ptr_val = POINTER_BASE + offset
         new_ptr = (POINTER_BASE + dest_offset).to_bytes(4, "little")
-        positions = pointer_index.get(old_ptr_val, [])
-        ptr_replacements = len(positions)
         for idx in positions:
             rom_bytes[idx : idx + 4] = new_ptr
-        if positions:
-            pointer_index[old_ptr_val] = []
-        if ptr_replacements == 0:
-            # Impossible de reloger sans pointeur : essayer de compresser sinon laisser
-            fitted = try_fit_text(text, orig_len, value_to_seq)
-            if fitted is not None:
-                rom_bytes[offset : offset + len(fitted)] = fitted
-                if len(fitted) < orig_len:
-                    rom_bytes[offset + len(fitted) : offset + orig_len] = b"\xFF" * (
-                        orig_len - len(fitted)
-                    )
-                replaced += 1
-                continue
-            errors.append(
-                f"Ligne {line_no}: texte trop long et aucun pointeur trouvé (offset {hex(offset)}), laissé inchangé"
-            )
-            # restituer le bloc
-            free_blocks.append((dest_offset, needed, source or "hole"))
-            continue
+        pointer_index[old_ptr_val] = []
 
         # Libérer l'ancien emplacement pour de futurs relogements
         if args.reuse_old_space:
@@ -538,6 +474,13 @@ def main() -> None:
             print(" -", msg)
         if len(errors) > 20:
             print(f" … {len(errors)-20} autres")
+        raise SystemExit(1)
+    if warnings:
+        print(f"Avertissements ({len(warnings)}):")
+        for msg in warnings[:20]:
+            print(" -", msg)
+        if len(warnings) > 20:
+            print(f" … {len(warnings)-20} autres")
 
 
 if __name__ == "__main__":
