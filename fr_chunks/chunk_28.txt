@@ -67,6 +67,7 @@
 0x7CF732: ま & È\pü{RIGHT_ARROW}Ë???: {COLOR}ËC'est quoi ça, Hoopa ?\pJe t'ai demandé d'invoquer un\nPokémon puissant capable de nous\nporter aux Ruines du Néant, et tu\nm'apportes ça ?\pPathétique !\pCe Pokémon est juste... tellement...\ntellement nebby !\pUne piètre excuse de Pokémon\nlégendaire.
 0x7CF825: {COLOR}ËReste dans le sac, Pokémon inutile.
 0x7CF84E: {COLOR}ËOn n'a pas le choix, Hoopa.\pJe n'avais pas envie, mais il faut\nque tu m'envoies par un de tes\nanneaux aux Ruines du Néant.\pJe passe devant, et comme tu ne peux\npas traverser tes propres anneaux\nsans ancrage, accroche-toi au\nsignal de mon Cube quand j'arrive.\pEssaie de rester discret, s'il te\nplaît.\pJe ne veux pas que Zeph découvre notre\nplan.\pNe traîne pas, Hoopa.
+0x7CF8D5:  {COLOR}ËNous n'avons plus de temps à\nperdre, Hoopa.\pJe sais que je ne voulais pas suivre\ncette voie, mais j'ai besoin que tu\nm'envoies\là travers l'un de tes anneaux vers\lles Ruines du Vide.\pJe vais y aller, et comme tu ne peux\npas voyager à travers tes propres\nanneaux\lsans attache, accroche-toi au signal\nde mon\lCube une fois que j'arrive là.\pEssayez juste de le rendre discret,\ns'il vous plaît.\pJe ne peux pas laisser Zeph\ncomprendre notre plan.\pNe tardez pas trop, Hoopa.
 0x7CFA6A: Hoopa.
 0x7CFA80: Il semble qu'il y ait un Pokémon\ndans le sac.\pVeux-tu le prendre ?
 0x7CFAC5: Tu n'as pas assez de place pour ce\nPokémon.
@@ -197,3 +198,53 @@
 0x7D6CD7: Marlon : {COLOR}ËOh non, tu ne t'enfuis pas !\pTu ne pars pas encore !
 0x7D6D10: Véga : {COLOR}ËTu ne peux pas me retenir !
 0x7D701D: {LV}ò{UP_ARROW}Ë¿  Ô っラヲËÌÉ=ぽÁ JリヲË¿  {PK}Á œÑÀàÏっû º{SUPER_ER}ÌºベŒ{PK}Ì {PK}こ オÈ ÁMarlon : {COLOR}ËNulle part où fuir, Véga.\pEncore un pas et tu brûles vif.\pDonc si tu veux vivre, dis-moi où\nAklove cache les Guerriers de\nl'Ombre.
+0x7D7109:  Véga : {COLOR}ËHuh.\pJe suppose que je n'ai pas le choix\nalors.\p…\p…\pMaintenant, si seulement il pouvait\nse dépêcher…
+0x7D7159:  Marlon : {COLOR}ËQu'est-ce que…
+0x7D716E:  {COLOR}ËAvez-vous vu ça ?\pIl vient de disparaître dans ce\nportail…
+0x7D71A9:  {COLOR}ËSuivez mon exemple,\n{PLAYER}.\pNous le poursuivons.
+0x7D71F3:  Marlon : {COLOR}ËOof !
+0x7D7203:  Véga : {COLOR}ËHé, désolé, je viens\nd'aller chercher quelque chose à\nchez Aklove à Hoenn.\pPas besoin d'être aussi violent,\nMarlon.
+0x7D726D:  Véga : {COLOR}ËTu sais, j'ai entendu\nune petite information intéressante\lde l'époque où Aklove était gardien\lici.
+0x7D72D5:  {COLOR}ËApparemment, lorsque Zeph\nfaisait cette grotte, les\ngrognements\lqui creusaient ont trouvé l'ancien\nPokémon\lGroudon profondément endormi sous le\lmagma.\pMais au lieu de le signaler à Zeph,\nils l'ont rapidement recouvert\let ont commencé à creuser autour de\nlui.\pCependant, s'ils possédaient le\nobjet correct à l'époque, peut-être\nque\lZeph n'aurait jamais perdu le\ndessus.
+0x7D742F:  {COLOR}ËGroudon !\pRépondez à l'Orbe rouge !\pÉveillez-vous et revenez à votre\nétat primordial !
+0x7D7480:  Véga : {COLOR}ËQue vas-tu faire,\nMarlon ?\pSi tu continues à me retenir ici, je\nvais mourir et ta seule source\nd'informations\lsur l'endroit où se trouvent les\nShadow\lWarriors disparaîtra dans une\nbouffée de\lfumée.
+0x7D752F:  Marlon : {COLOR}ËMême si tu meurs,\nVéga, je connaîtrai toujours\nl'emplacement de\lta base.\pTu as ordonné à tes sbires de se\nretirer à {COLOR}ÉBourg Vivill{COLOR}Ë,\nn'est-ce pas ?\pAprès avoir récupéré Zeph aux\n{COLOR}ÉHauteurs Gelées{COLOR}Ë,\nj'irai là-bas pour chercher les\nGuerriers de l'Ombre.
+0x7D761F:  Véga: {COLOR}ËGroudon!\pShake the earth!
+0x7D7642:  Véga : {COLOR}ËTu n'arrives pas à\ntenir, Marlon ?\pDans ce cas, jusqu'à ce qu'on se\nretrouve.
+0x7D768F:  {COLOR}Ë{PLAYER}, vous devez\nempêcher Groudon de se déchaîner.\pSi vous ne le faites pas, la grotte\ns'effondrera et nous serons piégés\lici !
+0x7D770E:  Le {STR_VAR_1} s'enfonça dans la\nlave et retomba dans un profond\nsommeil.
+0x7D7750:  {COLOR}ËPas mal, {PLAYER}.\pJe comprends maintenant pourquoi\nArceus vous a renvoyé également.\pMais à partir de maintenant, je dois\nfaire les choses seul.\pSi vous venez à notre base à\n{COLOR}ÉFrozen Heights\n{COLOR}Ëaussi, Zeph n'acceptera pas\nde\lm'aider à trouver les Shadow\nWarriors.\pJe suis reconnaissant pour votre\naidez-moi, mais s'il vous plaît,\n{PLAYER}, ne me suivez pas jusqu'à\l{COLOR}Énotre base à Frozen\nHeights{COLOR}Ë.
+0x7D79F3:  î Ú ûィ ÁIt looks like someone left their\nuniform on the floor.\pWould you like to put it on?
+0x7D7A4F:  Vous mettez les vêtements.
+0x7D7A67:  Vos vêtements sont par terre.\nVoulez-vous les enfiler ?
+0x7D7AA6:  Vous avez enfilé les vêtements et\nplacé l’uniforme de Marlon dans le\nCube.
+0x7D808F:  ハÍÔ dィヲËÌÈïÒィ  ÉÀIィヲË(ÂリÀ  ミェヲËÔ ポゥヲËÌÇâぽこ ぺà{RIGHT_ARROW}Ë¿  フÁÔ éェヲËÌÇâぽこ ぺà{RIGHT_ARROW}Ë¿  フÁWith most of the other grunts gone,\nour manpower has become very\llimited.\pSo it is essential that each of us\nbecome as strong as possible.\pWould you allow me the privilege of\nbattling with you, sir?
+0x7D819F:  Merci de vous être battu avec moi,\nmonsieur.\pMaintenant, nous sommes tous les\ndeux mieux préparés pour\nl'inévitable confrontation avec\lla Lumière de la Ruine.
+0x7D821B:  Bien sûr, monsieur.\pJe ne m'attendrais pas à ce que vous\nperdiez votre temps avec un\ngrognement comme moi.
+0x7D8270:  Je n'en attendais pas moins de vous,\nmonsieur.
+0x7D8297:  La base a toujours été si calme\ndepuis que la plupart des\ngrognements ont prêté\lallégeance à la Lumière de\lRuine.\pPour être honnête, monsieur, on m'a\ndemandé de rejoindre aussi, mais\nj'ai refusé.\pJe vous aurais parlé de la trahison,\nmais ils ont menacé de\ltuer ma famille si je disais quoi\nque ce soit.\pJe suis désolé monsieur, mais je je\nne pouvais pas sacrifier ma famille.\pVous comprenez, n'est-ce pas ?
+0x7D84B0:  Ô I{SUPER_E}ヲËÌÁぽÁ ぺà{RIGHT_ARROW}Ë¿  ÁI’m using a complicated algorithm\nto determine the approximate\llocation of the Light of Ruin HQ.\pOnce I have the results, Zeph plans\non using the information to take\lhis revenge on the Light of Ruin.\pThe only thing is, I don’t know how\nlong it will take to finish…
+0x7D85CC:  Ô k<ヲËÌÁぽÇ ぺà{RIGHT_ARROW}Ë¿  ÁI’m sorry about the huge mess in\nthe base, sir.\pWhen most of the grunts left to\njoin the Light of Ruin, they just\ldropped all of their things on the\lfloor.\pI’m sure some of them even left\ntheir clearance cards behind…
+0x7D86B9:  La porte nécessite une carte-clé\navec niveau d'autorisation :\n{COLOR}É{STR_VAR_1}{COLOR}Á pour\nêtre ouverte.
+0x7D8704:  La porte nécessite une carte-clé\navec Niveau d'autorisation :\n{COLOR}É{STR_VAR_1}{COLOR}Á, pour\nêtre ouverte.\pVoulez-vous ouvrir la porte ?
+0x7D88A8:  Êtes-vous impressionné, monsieur?
+0x7D88C0:  Pour avoir passé votre temps\nprécieux à me combattre, j'aimerais\nvous remercier\len soignant votre Pokémon.
+0x7D891C:  Bien sûr, monsieur.\pJe suis sûr que vous avez bien\nd’autres affaires, importantes, à\nrégler.
+0x7D896B:  Le dernier lot de Shadow Warriors\nque Zeph a demandé est presque\lentièrement synthétisé.\pUne fois le processus terminé, il\ndevrait nous donner suffisamment de\npuissance de combat\lpour vaincre la Lumière de\lRuine.
+0x7D8A3B:  Ô ぺゲヲËÌÁぽÀ ぺà{RIGHT_ARROW}Ë¿  ÁFor this final batch of Shadow\nWarriors, Zeph requested that only\lthe strongest of Pokémon be used,\lto get the greatest results.
+0x7D8ACF:  La cage est vide.
+0x7D8AE2:  Hé, hé, gamin ! C'est dangereux !
+0x7D8B1C:  9Ô AゴヲËÌÁぽÀ ぺà{RIGHT_ARROW}Ë¿  ÁSir!\pZeph has ordered me to stop anyone\nwithout the proper clearance from\lentering the lab.\pHowever, I’m sure it’s fine if I\nallow you in.
+0x7D8BBB:  N'hésitez pas à entrer dans le\nlaboratoire, monsieur.
+0x7D8BEA:  Mes supérieurs m'ont demandé de\nremettre cette CS à\ltous les entraîneurs venant par ici.\pJusqu'à ce que le pont soit réparé,\nvous devrez utiliser cette CS pour\n{COLOR}ÉRescalade de roche{COLOR}Ë\lsi vous voulez vous rendre à la\n{COLOR}ÉVille Portuaire{COLOR}Ë.\pIl suffit d'affronter la paroi\nrocheuse au-dessus pour\nl'utiliser.
+0x7D8F5A:  Quel étage souhaitez-vous ?
+0x7D8F73:  Vous êtes déjà à cet étage.
+0x7D8FFD:  Non !\pJe préfère me noyer plutôt que\nd'être transformé en une de ces…\nchoses !
+0x7D904F:  Maintenant, je te dois le double.
+0x7D990E:  Zeph : {COLOR}ËMarlon a disparu…\pIvory m'a quitté pour retrouver son\nfils…\pÇa ne sert à rien de continuer plus…
+0x7D9974:  Marlon : {COLOR}ËSortez-en, Zeph !\pReprenez vos esprits !\pC'est moi, Marlon !
+0x7D99C0:  Zeph : {COLOR}ËMarlon ?\pEst-ce vraiment toi ?\pTu as l'air différent…\pCette cicatrice sur ton visage a\ndisparu…\pEt où est ton uniforme ?
+0x7D9A33:  Marlon : {COLOR}ËOui, c'est moi,\nZeph.\pJ'ai enlevé mon uniforme après que\nje me sois frayé un chemin ici.\pCe n'est pas comme si j'en aurais\nplus besoin …\pD'après ce que j'ai entendu des\ngrunts restants, les Shadows ont\lessentiellement dissous…
+0x7D9B0D:  Zeph : {COLOR}ËNous n’avons pas\nencore terminé…\pIl nous reste encore une mission à\naccomplir…
+0x7D9B56:  Marlon : {COLOR}ËQue s'est-il passé,\nZeph ?\pPourquoi avons-nous été abandonnés ?
+0x7D9B8D:  Zeph : {COLOR}ËAprès qu'Aklove se\nsoit moqué de moi et ait effectué la\ldéliaison, de nombreux grognements\nont été\lémerveillés par son pouvoir et ont\nprêté\lallégeance à la Lumière de la Ruine.\pCes imbéciles n'ont aucune idée de\nce qu'ils ont fait…\pIls l'aident à détruire leurs\nmaisons…

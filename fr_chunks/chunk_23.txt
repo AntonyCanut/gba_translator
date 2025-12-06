@@ -70,8 +70,8 @@
 0x764C82: áÛラË¿  ÂVoleur : {COLOR}ËHein, t'es qui ?\nQue fais-tu ici ?\pC'est mon coin tranquille pour\nentraîner mes précieux Pokémon.\pJe n'aime pas quand on vient\nm'importuner.\p…\pTu es venu prendre mon Pokémon,\nc'est ça ?\pJe ne te laisserai pas me le prendre !
 0x764D96: Tu... tu... tu as battu mon trésor !
 0x764DB4: As-tu déjà entendu parler d'{COLOR}ÉAyla{COLOR}Ç ?\pC'est elle qui a porté le PC de Bill\nen Borrius !\pGrâce à elle, on peut stocker nos\nPokémon !
-0x764E54: Ô fpヲËÌÂÁArène Pokémon de Crater Town\nChampion : Véga\pDresseurs vainqueurs :\n{RIVAL}
-0x764E97: Arène Pokémon de Crater Town\nChampion : Véga\pDresseurs vainqueurs :\n{RIVAL}, {PLAYER}
+0x764E54: Ô fpヲËÌÂÁArène Pokémon de Bourg Cratère\nChampion : Véga\pDresseurs vainqueurs :\n{RIVAL}
+0x764E97: Arène Pokémon de Bourg Cratère\nChampion : Véga\pDresseurs vainqueurs :\n{RIVAL}, {PLAYER}
 0x764ED5: Tu penses avoir ce qu'il faut pour\naffronter Véga ?
 0x764F0A: Hmph.\nTu pourrais bien en être capable.
 0x764F31: Avec tes compétences, tu iras loin !
@@ -98,7 +98,7 @@
 0x765AC4: {COLOR}ËOh, ce n'était rien finalement…
 0x765AE5: {COLOR}ËDonc, comme je disais…
 0x765AFE: {COLOR}ËWaaah ! Le monstre qui vit dans la\nforêt !\p{COLOR}ÉLe Crabe Yéti{COLOR}Ë !\pSauvez-vous !
-0x765B7E: Route 17\p{LEFT_ARROW} Route 16\n{RIGHT_ARROW} Seaport City
+0x765B7E: Route 17\p{LEFT_ARROW} Route 16\n{RIGHT_ARROW} Ville Portuaire
 0x765BFF: Allez !
 0x76CE9D: Prépare-toi à être secoué, gamin.\pJe viens de rappeler tous les sbires\nau barrage, on contrôle toute cette\nroute maintenant !
 0x76CF22: Wow, mec…\pJe suis peut-être haut dans le ciel,\nmais tu es sur un tout autre plan !
@@ -109,7 +109,7 @@
 0x76D0C7: On dirait que j'ai perdu. Je devrais\nmieux pêcher.
 0x76D100: Pour être honnête, je suis ici\ndepuis des jours aussi.
 0x76D12B: La Route 5 est au pied du\nVolcan Cendreux.
-0x76D155: terfall.
+0x76D155: Cascade.
 0x76D29F: Marmonne… Marmonne…\p…attends le signal…\pChuchote… Chuchote…\p…agent en surveillance…\pMarmonne… Marmonne…
 0x76D2F4: Crabominable : {COLOR}ÉCrah rah rah rah rah !
 0x76D393: Tant pis, dommage.
@@ -127,7 +127,7 @@
 0x770D2A: J'aime flâner tranquillement dans\ncette grotte.
 0x770D5C: Agréable.
 0x770D67: Laisse-moi marcher en paix.
-0x770D88: Personne n'entre à Tehl Town pour\nl'instant.\pOuste, gamin !
+0x770D88: Personne n'entre à Ville de Tehl\npour l'instant.\pOuste, gamin !
 0x770F6D: Temps de soigner !
 0x770F7B: On se remet d'aplomb !
 0x771077: La technologie est incroyable !\pTu peux jouer aux ROM GBA sur ton\nportable et ton ordinateur !
@@ -169,7 +169,7 @@
 0x77262A: ¿iユË¿  áèっÀ ォÁèっぅÏÀヌびタラËニぇâÂÂÔ L{SUPER_ER}ラËÌÉÁMon frère !\pAide-moi s'il te plaît !\pJe le gardais quand il a dévalé la\nmontagne !\pS'il te plaît, aide-moi à le\nretrouver !
 0x7726C1: Jax : {COLOR}Ë{PLAYER} !\pJ'ai volé ici dès que la barrière est\ntombée.\pQue s'est-il passé ?\p…\pLes Ombres se sont encore échappées…
 0x772790: Salle de pause
-0x7727B8: 9ÍÔ KúラËÌÉÁフÁFallshore City abrite l'{COLOR}ÉInverse\nBattle House{COLOR}Ë et le {COLOR}ÉQG des\nMissions{COLOR}Ë.\pSympa, non ?\nC'est trop cool de vivre ici !
+0x7727B8: 9ÍÔ KúラËÌÉÁフÁVille de Fallshore abrite l'{COLOR}ÉInverse\nBattle House{COLOR}Ë et le {COLOR}ÉQG des\nMissions{COLOR}Ë.\pSympa, non ?\nC'est trop cool de vivre ici !
 0x772874: Va-t'en.
 0x77287D: Huah, confrère dresseur !\pJ'entraîne corps et âme en fixant\ncet arbre intensément !\pToi aussi, entraîne-toi avec ceci !
 0x7728F3: Un jour, je serai le dresseur le\nplus concentré.
@@ -196,55 +196,55 @@
 0x77355B: Tu ne pensais pas passer aussi\nfacilement, si ?
 0x773596: Bon, je ne te barrerai plus le\npassage.
 0x7735C5: Je veux rentrer chez moi.\pJ'ai fui ma méchante sœur, mais elle\nme manque maintenant…
-0x773613: Ramène-moi à {COLOR}ÉBlizzard City{COLOR}Ë.\pJe te suivrai là-bas.
+0x773613: Ramène-moi à {COLOR}ÉVille Blizzard{COLOR}Ë.\pJe te suivrai là-bas.
 0x77365A: Tu vois ces rochers au mur ?\pAvec un Pokémon connaissant\n{COLOR}ÉEscalade{COLOR}Ë, tu peux les gravir !
-0x773719: Na na na na na na na…\nHe lost!
-0x77373A: I like pretending I’m meant for\nsomething greater than just standing\lhere in this cave.
-0x7737C6: Just a little further!
-0x7737DD: This cave is pretty small,\nisn’t it?
-0x77389C: Fallshore City
-0x775B90: Grunt: {COLOR}ËYou both are really\nstarting to get on my nerves!\pInkay!\pShow {STR_VAR_1} why you don’t mess\nwith {COLOR}ÁThe Shadows{COLOR}Ë!
-0x775C06: I knew it was a bad idea to lock\nthem up in here…
-0x775C38: That’s what you get for messing\nwith The Shadows!
-0x775C6A: {RIVAL}: {COLOR}ËNot bad, {PLAYER}!\nYou showed him!\pI’ll take it from here.\pUse this Potion on your Pokémon\nto heal it in the meantime.
-0x775CE2: {RIVAL}: {COLOR}ËThat’s a letdown.\pI really thought you’d be able to\nhandle him.\pI guess I’ll deal with him myself.\pUse this Potion on your Pokémon\nto make it feel better.
-0x775D84: {COLOR}ËFine, then.\nI’ll do it myself.
-0x775DA6: Grunt: {COLOR}ËNo!\nMy Inkay!
-0x775DBE: {RIVAL}: {COLOR}Ë{STR_VAR_1}!\nMove in and strike!
-0x775DF7: Grunt: {COLOR}ËAlright, alright, I give up!\nI’ll let you through!\pPlease have mercy on me!\nDon’t hurt me anymore! Please!
-0x775E6C: {COLOR}Ë{STR_VAR_1}! Return!
-0x775E7B: {COLOR}ËI’m getting out of here now,\n{PLAYER}.\pI’m sure you’re capable of taking\ncare of yourself from here on out.\pIf you run into any trouble, just\nuse your Pokémon.
-0x775F18: {COLOR}ËOh, one more thing.\pAs soon as you get home, we’re\ngoing to battle.\pYou impressed me earlier, and I\nwant to see how I’ll fare against\lyou.\pUntil then, don’t tire yourself\nout too much.
-0x776071: Ô ♀タラËÌÁÁI wish we had our own Pokémon.\pI’m always so bored at home.
-0x7760B6: Wahh!\pThat Pokémon hurt me!
+0x773719: Na na na na na na na…\nIl a perdu !
+0x77373A: J'aime faire comme si j'étais fait\npour mieux que rester planté\lici dans cette grotte.
+0x7737C6: Encore un peu plus loin !
+0x7737DD: Cette grotte est plutôt petite,\nn'est-ce pas ?
+0x77389C: Ville de Fallshore
+0x775B90: Sbire : {COLOR}ËVous commencez vraiment\nà me taper sur les nerfs !\pSepiatop !\pMontre à {STR_VAR_1} qu'on ne cherche\npas {COLOR}ÁLes Ombres{COLOR}Ë !
+0x775C06: Je savais que c'était une mauvaise\nidée de les enfermer ici…
+0x775C38: Voilà ce qui arrive quand tu\nembêtes les Ombres !
+0x775C6A: {RIVAL} : {COLOR}ËPas mal, {PLAYER} !\nTu lui as montré !\pJe prends le relais.\pUtilise cette Potion sur tes Pokémon\npour les soigner en attendant.
+0x775CE2: {RIVAL} : {COLOR}ËDécevant.\pJe pensais vraiment que tu pourrais\nle gérer.\pJe vais m'en occuper moi-même.\pUtilise cette Potion sur ton Pokémon\npour qu'il aille mieux.
+0x775D84: {COLOR}ËTrès bien, alors.\nJe vais le faire moi-même.
+0x775DA6: Sbire : {COLOR}ËNon !\nMon Sepiatop !
+0x775DBE: {RIVAL} : {COLOR}Ë{STR_VAR_1} !\nFonce et frappe !
+0x775DF7: Sbire : {COLOR}ËD'accord, d'accord, j'abandonne !\nJe te laisse passer !\pPitié !\nNe me fais plus de mal ! S'il te\nplaît !
+0x775E6C: {COLOR}Ë{STR_VAR_1} ! Reviens !
+0x775E7B: {COLOR}ËJe file d'ici maintenant,\n{PLAYER}.\pJe suis sûr que tu peux te gérer\nseul à partir de maintenant.\pSi tu as des ennuis, utilise tes\nPokémon.
+0x775F18: {COLOR}ËOh, une dernière chose.\pDès que tu rentres, on va se battre.\pTu m'as impressionné tout à l'heure,\net je veux voir comment je m'en\nsors face à toi.\pD'ici là, ne te fatigue\npas trop.
+0x776071: Ô ♀タラËÌÁÁJ'aimerais qu'on ait nos propres\nPokémon.\pJe m'ennuie toujours à la maison.
+0x7760B6: Wahh !\pCe Pokémon m'a fait mal !
 0x7760E3: Sandslash: {COLOR}ÉSlash!
-0x7760F8: The Pokémon appears to be heading\ntowards {COLOR}ÉIcicle Cave.
-0x776144: Ô キチラËÌÁぽÀ ぺà{RIGHT_ARROW}Ë¿  ÁHi {PLAYER}!\pHow are you?\pI was just cooking some food for my\nfamily.
-0x776197: It’s a statue of the Legendary\nIce Pokémon, Articuno.\pIt says here that Articuno was once\nused as a herald to a great\ldarkness, but now it resides near\lFrozen Heights.
-0x77623F: ハÔ ぼツラËÌÂフÁIt’s a statue of the Legendary\nElectric Pokémon, Zapdos.\pIt says here that Zapdos was once\nused as a herald to a great\ldarkness, but now it resides in\lThundercap Mountain.
-0x7763EB: I know, right?\nLife is so stressful sometimes!
-0x776441: Route 13\p{UP_ARROW} Route 4, Cinder Volcano,\nGrim Woods\l{DOWN_ARROW} Route 14\l{RIGHT_ARROW} Dehara City
-0x77650A: u’re a\nPokémon Trainer!
-0x776522: Huh?\nI ran out of Pokémon!
-0x77653D: You’re in for a fun time here.\pThis place is like a maze.
-0x7765A0: Hmm?\nWhat am I doing?
-0x7765B6: Sorry!\nI was possessed!
-0x7765F5: Hey, wait up!\nWhat’s the hurry? Why the rush?
-0x776623: Sometimes, you can find stuff on\nthe ground.\pI’m looking for the stuff I\ndropped. Can you help me?
-0x776686: Whew...\nI made it out of Dark Forest okay.\lI even managed to catch some creepy\lPokémon in there also!
-0x776862: {COLOR}ËSniff…\pI don’t think this is the right way\nhome…
-0x7768A4: “Who builds a city on top of a\nfrozen mountain?”-you may be\lwondering.\pWell, about 20 years ago, a bunch\nof Bird Keepers got together and\ldecided they wanted a nice high\lplace for their Pokémon to train.\pWith the help of this dude named\n{COLOR}ÉAros{COLOR}Ë and his Arceus, they built\lthis city in under a year!\pIt amazes me what great things\npeople and Pokémon can accomplish\lby working together.\pSay…\pYour face reminds me of him a\nlittle…
-0x776AF5: I’ve been expecting you…
-0x776B0E: You don’t?\nWell I do.
-0x7787F5: Excuse me, trainer, would you be\nable to lend me a hand please?\pYou see, my family and I are having\na big feast soon, and we need lots\lof honey for our meal.\pI’ve already collected seven jars,\nbut I need at least three more.\pI heard they could be found on wild\nCombee, but I’m not having much\lluck catching them.\pSo how about it?\pAre you able to catch three Combee\nand give me their honey please?
-0x778982: That’s too bad.\pI’ll have to keep looking myself\nthen.
-0x7789B9: Great!\nThanks for agreeing to help!\pCombee can be found all over Flower\nParadise, however they are more\llikely to appear in the {COLOR}Éblue\lflowers{COLOR}Ç.\pAnd remember, I need at least {COLOR}É3\nHoney{COLOR}Ç jars.
-0x778A80: You got them! Thank you so much!\nLet me take them off your hands.
-0x778AC2: The lady took 3 Honeys.
-0x778ADA: For helping me out, please take\nthis TM as a reward. I insist!
-0x778BAF: Ivory: {COLOR}ÇI’m sorry, but unfortunately\nI won’t be able to do that.\pIt is too vital to our plans.\pAnd besides, I wouldn’t belittle\nmyself to listen to someone of the\llikes of you.
-0x778C62: Jax: {COLOR}ËI’m not letting you leave\nuntil that Pokémon is free.\pPrepare for a battle!
-0x778CB6: Ivory: {COLOR}ÇAll right, then.\pI’ll indulge your little request.\pBut know, when you lose, I’ll have\nmy Pokémon incinerate you!\pGo! Incine...
-0x778D3F: Marlon: {COLOR}ËIvory! Wait!
-0x778D57: Marlon: {COLOR}ËIvory!\pYou don’t have time to fight this\ntrainer right now.\pWe have a tight schedule to keep.\pGet going, I’ll hold him at bay\nwhile you escape.
-0x778DF2: Ivory: {COLOR}ÇLet’s go, Shadow Warriors.
+0x7760F8: Le Pokémon semble se diriger vers la\n{COLOR}ÉGrotte Stalactite.
+0x776144: Ô キチラËÌÁぽÀ ぺà{RIGHT_ARROW}Ë¿  ÁSalut {PLAYER} !\pComment ça va ?\pJe préparais justement de la\nnourriture pour ma famille.
+0x776197: C'est une statue du Pokémon\nLégendaire de Glace, Artikodin.\pIl est écrit qu'Artikodin servait\njadis de héraut d'une grande\lobscurité, mais qu'il vit près des\lHauteurs Gelées.
+0x77623F: ハÔ ぼツラËÌÂフÁC'est une statue du Pokémon\nLégendaire Électrik, Électhor.\pIl est écrit qu'Électhor servait\njadis de héraut d'une grande\lobscurité, mais qu'il vit\nmaintenant au Mont Thundercap.
+0x7763EB: Je sais, hein ?\nLa vie est parfois si stressante !
+0x776441: Route 13\p{UP_ARROW} Route 4, Volcan Cendreux,\nForêt Lugubre\l{DOWN_ARROW} Route 14\l{RIGHT_ARROW} Ville de Dehara
+0x77650A: Tu es un\nDresseur Pokémon !
+0x776522: Hein ?\nJe n'ai plus de Pokémon !
+0x77653D: Tu vas t'amuser ici.\pCet endroit est comme un labyrinthe.
+0x7765A0: Hmm ?\nQu'est-ce que je fais ?
+0x7765B6: Désolé !\nJ'étais possédé !
+0x7765F5: Hé, attends !\nPourquoi te presser ? Pourquoi\ncourir ?
+0x776623: Parfois, tu peux trouver des trucs\nau sol.\pJe cherche ce que j'ai fait tomber.\nTu peux m'aider ?
+0x776686: Ouf...\nJe suis sorti de la Forêt Obscure\nsain et sauf.\lJ'ai même réussi à attraper des\lPokémon flippants là-bas !
+0x776862: {COLOR}ËSnif…\pJe ne crois pas que ce soit le bon\nchemin pour rentrer…
+0x7768A4: "Qui construirait une ville au\nsommet d'une montagne gelée ?", tu te\ldemandes.\pEh bien, il y a environ 20 ans, un\ngroupe de Gardiens d'Oiseaux s'est\lréuni et a décidé qu'il lui fallait\lun endroit en hauteur pour entraîner\nses Pokémon.\pAvec l'aide d'un type nommé\n{COLOR}ÉAros{COLOR}Ë et de son Arceus, ils ont\lbâti cette ville en moins d'un an !\pÇa m'étonne de voir ce que les gens\net les Pokémon peuvent accomplir\len travaillant ensemble.\pDis…\pTon visage me rappelle un peu le\nsien…
+0x776AF5: Je t'attendais…
+0x776B0E: Toi non ?\nMoi si.
+0x7787F5: Pardon, Dresseur, pourrais-tu me\nprêter main-forte, s'il te plaît ?\pMa famille et moi préparons bientôt\nun grand festin, et il nous faut\nbeaucoup de miel pour le repas.\pJ'ai déjà recueilli sept pots,\nmais il m'en faut au moins trois de\nplus.\pOn dit qu'on peut en trouver sur des\nApitrini sauvages, mais j'ai peu de\lchance d'en attraper.\pAlors, qu'en dis-tu ?\pPeux-tu attraper trois Apitrini et\nme donner leur miel, s'il te plaît ?
+0x778982: Dommage.\pJe vais devoir continuer à chercher\nmoi-même alors.
+0x7789B9: Génial !\nMerci d'accepter d'aider !\pOn trouve des Apitrini partout au\nParadis Floral, mais ils apparaissent\lplus souvent dans les {COLOR}Éfleurs\lbleues{COLOR}Ç.\pEt rappelle-toi, il me faut au moins\n{COLOR}É3 pots de Miel{COLOR}Ç.
+0x778A80: Tu les as ! Merci infiniment !\nLaisse-moi te les prendre.
+0x778AC2: La dame a pris 3 pots de Miel.
+0x778ADA: Pour ton aide, prends cette CT en\nrécompense. J'insiste !
+0x778BAF: Ivory : {COLOR}ÇJe suis désolée, mais\nmalheureusement je ne pourrai pas.\pC'est trop vital pour nos plans.\pEt puis, je ne vais pas m'abaisser\nà écouter quelqu'un\lcomme toi.
+0x778C62: Jax : {COLOR}ËJe ne te laisse pas partir\navant que ce Pokémon soit libre.\pPrépare-toi pour un combat !
+0x778CB6: Ivory : {COLOR}ÇTrès bien.\pJe vais exaucer ta petite requête.\pMais sache que quand tu perdras, je\nferai réduire ton corps en cendres\npar mes Pokémon !\pAllez ! Incine...
+0x778D3F: Marlon : {COLOR}ËIvory ! Attends !
+0x778D57: Marlon : {COLOR}ËIvory !\pTu n'as pas le temps d'affronter ce\nDresseur maintenant.\pOn a un planning serré.\pPars, je le retiendrai pendant que tu\nfuis.
+0x778DF2: Ivory : {COLOR}ÇOn y va, Guerriers de l'Ombre.
