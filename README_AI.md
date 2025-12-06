@@ -5,6 +5,8 @@
 - Ne pas supprimer les espaces blancs sauf si la longueur reste identique.
 - Remplacer **move** par **capacité** ; MT = **CT** ; Gym = **Arène** ; Gym Leader = **Champion d’Arène**.
 - Traduire les villes et les noms de Pokémon en français officiel quand ils existent.
+- Traduire les noms d’attaques avec leur appellation officielle des jeux Pokémon (ex: Thunderbolt → Tonnerre).
 - Laisser inchangées les chaînes illisibles/binaire et les lignes déjà en place.
 - Garder `\p` et `\l` aux mêmes emplacements autant que possible.
 - Avant chaque session, consulter/mettre à jour `fr_chunks/doutes.txt` pour les traductions incertaines.
+- Chaque fichier de chunk doit contenir exactement 250 lignes (ni plus ni moins).

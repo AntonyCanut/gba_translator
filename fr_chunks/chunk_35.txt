@@ -1,5 +1,5 @@
-0x961BCC: Fight
-0x961BF1: Fairy
+0x961BCC:  Combat
+0x961BF1:  Fee
 0x96248C: AAA▶AAA▶AAA
 0x9626A3: zwDzDAAAAAAAA                \n▶\nDwzwDAAAAAAAA                ▶AAAzAAAAAAAAAAÎ                w
 0x962702: z▶AzDzAAAA…AAA                \pz
@@ -9,242 +9,242 @@
 0x962F43: \nzzzziiiiiiii                
 0x962F61: ▶iizziiiiiiiiiÒ                iii
 0x962F84: iiiziiiiViii                ▶\nj▶zyjziiiiiiii                ▶{STRING}\njzyzjiiiiiiii                ▶iiiziiiiiiiiiiÒ                ミラララララララ{DYNAMIC}
-0x964160: Own move type: Fairy
-0x964180: Own Pokémon type: Fairy
-0x9641A0: Effect of foe’s move on own Pokémon:\p   {CIRCLE_DOT}: Fighting, Bug, Fairy\p   {TRIANGLE}: Ghost, Dark\p   {BIG_MULT_X}: Psychic
-0x964210: Effect on the opposing Pokémon:\p   {CIRCLE_DOT}: Normal, Rock, Steel, Ice, Dark\p   {TRIANGLE}: Flying, Poison, Bug, Psychic,\l       Fairy\p   {BIG_MULT_X}: Ghost
-0x9642A0: Effect of foe’s move on own Pokémon:\p   {CIRCLE_DOT}: Flying, Psychic, Fairy\p   {TRIANGLE}: Rock, Bug, Dark
-0x964300: Effect on the opposing Pokémon:\p   {CIRCLE_DOT}: Grass, Fairy\p   {TRIANGLE}: Poison, Ground, Rock, Ghost\p   {BIG_MULT_X}: Steel
-0x964370: Effect of foe’s move on own Pokémon:\p   {CIRCLE_DOT}: Ground, Psychic\p   {TRIANGLE}: Fighting, Poison, Bug, Grass,\l       Fairy
-0x9643E0: Effect on the opposing Pokémon:\p   {CIRCLE_DOT}: Grass, Psychic, Dark\p   {TRIANGLE}: Fighting, Flying, Poison, Ghost,\l       Steel, Fire, Fairy
-0x964460: Effect on the opposing Pokémon:\p   {CIRCLE_DOT}: Rock, Ice, Fairy\p   {TRIANGLE}: Steel, Fire, Water, Electric
-0x9644C0: Effect of foe’s move on own Pokémon:\p   {CIRCLE_DOT}: Ground, Rock, Water\p   {TRIANGLE}: Bug, Steel, Fire, Grass,\l       Ice, Fairy
-0x964540: Effect on the opposing Pokémon:\p   {CIRCLE_DOT}: Dragon\p   {TRIANGLE}: Steel\p   {BIG_MULT_X}: Fairy
-0x964590: Effect of foe’s move on own Pokémon:\p   {CIRCLE_DOT}: Ice, Dragon, Fairy\p   {TRIANGLE}: Fire, Water, Grass, Electric
-0x964600: Effect on the opposing Pokémon:\p   {CIRCLE_DOT}: Fighting, Dragon, Dark\p   {TRIANGLE}: Poison, Steel, Fire
-0x964660: Effect of foe’s move on own Pokémon:\p   {CIRCLE_DOT}: Poison, Steel\p   {TRIANGLE}: Fighting, Bug, Dark\p   {BIG_MULT_X}: Dragon
-0x964A7E: Capture for\nmore information!
-0x965B87: {B_DEF_NAME_WITH_PREFIX} was hurt!
-0x965B94: {B_DEF_NAME_WITH_PREFIX} is tormented!
-0x965BA5: {B_SCR_ACTIVE_NAME_WITH_PREFIX} harvested\none {B_LAST_ITEM}!
-0x965BBA: {B_SCR_ACTIVE_NAME_WITH_PREFIX} found one\n{B_LAST_ITEM}!
-0x965BCB: {B_SCR_ACTIVE_NAME_WITH_PREFIX} fell in love\nfrom the {B_LAST_ITEM}!
-0x965BE8: {B_ATK_NAME_WITH_PREFIX}’s ability\nbecame {B_DEF_ABILITY}!
-0x965C16: {B_SCR_ACTIVE_NAME_WITH_PREFIX}’s illusion\nwore off!
-0x965C2E: It had no effect on\n{B_DEF_NAME_WITH_PREFIX}…
-0x965C46: {B_DEF_NAME_WITH_PREFIX}’s disguise\nserved as its decoy!
-0x965C69: {B_DEF_NAME_WITH_PREFIX}’s disguise\nwas busted!
-0x965C9A: {B_SCR_ACTIVE_NAME_WITH_PREFIX}’s {B_SCR_ACTIVE_ABILITY}\nsharply raised its {UNKNOWN_STR}!
-0x966083: {B_ATK_NAME_WITH_PREFIX} can’t use\n{B_CURRENT_MOVE} because of gravity!
-0x9660A7: {B_ATK_NAME_WITH_PREFIX} can’t use\n{B_CURRENT_MOVE} after the Heal Block!
-0x9660CD: {B_ATK_NAME_WITH_PREFIX} can’t use\nsound moves after the Throat Chop!
-0x9660FD: The Water-type attack evaporated\nin the harsh sunlight!
-0x966135: The Fire-type attack fizzled\nout in the heavy rain!
-0x966169: {B_DEF_NAME_WITH_PREFIX} surrounds itself\nwith psychic terrain!
-0x966193: When the flame touched the powder on\n{B_ATK_NAME_WITH_PREFIX}, it exploded!
-0x9661C9: {B_ATK_NAME_WITH_PREFIX} transformed\ninto its blade form!
-0x9661ED: {B_ATK_NAME_WITH_PREFIX} transformed\ninto its shield form!
-0x966212: {B_ATK_NAME_WITH_PREFIX} surrounded\nitself with its Z-Power!
-0x966239: {B_ATK_NAME_WITH_PREFIX} unleashes\nits full-force Z-move!
-0x96625D: {B_SCR_ACTIVE_NAME_WITH_PREFIX}’s illusion\nwore off!
-0x966275: But it won’t work well in\nSky Battles…
-0x9665B0: {B_SCR_ACTIVE_NAME_WITH_PREFIX}’s aura\nflared to life!
-0x9665CA: {B_ATK_NAME_WITH_PREFIX}’s\nPrimal Reversion!\pIt reverted to its primal form!
-0x966601: An electric current runs across\nthe battlefield.
-0x966632: Grass covers the battlefield.
-0x966650: Mist swirls around the battlefield.
-0x966674: The battlefield is weird.
-0x96668E: {B_SCR_ACTIVE_NAME_WITH_PREFIX} started\nheating up its beak!
-0x9666AE: {B_SCR_ACTIVE_NAME_WITH_PREFIX} set a\nShell Trap!
-0x966B45: {B_ATK_NAME_WITH_PREFIX} was hurt by\n{B_DEF_NAME_WITH_PREFIX}’s Spiky Shield!
-0x966B67: {B_EFF_NAME_WITH_PREFIX} was\npoisoned by the Toxic Spikes!
-0x966B8C: {B_EFF_NAME_WITH_PREFIX} is badly\npoisoned by the Toxic Spikes!
-0x966BB6: {B_EFF_NAME_WITH_PREFIX} was badly\npoisoned by the {B_LAST_ITEM}!
-0x966BD7: {B_EFF_NAME_WITH_PREFIX} was\npoisoned by the Baneful Bunker!
-0x966BFE: {B_EFF_NAME_WITH_PREFIX} was burned\nby {B_ATK_NAME_WITH_PREFIX}’s beak!
-0x966C1A: {B_EFF_NAME_WITH_PREFIX} was burned\nby the {B_LAST_ITEM}!
-0x966C33: {B_DEF_NAME_WITH_PREFIX}’s {B_LAST_ITEM}\nwas stolen by {B_ATK_ABILITY}!
-0x966C4D: {B_DEF_NAME_WITH_PREFIX}’s {B_LAST_ITEM}\nwas stolen!
-0x966C61: {B_ATK_NAME_WITH_PREFIX} cut its own\nHP to power up its attack!
-0x966C8B: {B_ATK_NAME_WITH_PREFIX} lost some\nof its HP!
-0x966CA3: {B_ATK_NAME_WITH_PREFIX} stole and ate\nits foe’s {B_LAST_ITEM}!
-0x967539: The fog is deep...
-0x96754C: The grassy terrain restored\n{B_ATK_NAME_WITH_PREFIX}’s health!
-0x967575: The Aqua Ring restored\n{B_ATK_NAME_WITH_PREFIX}’s health!
-0x967599: {B_ATK_NAME_WITH_PREFIX}’s\nelectromagnetism wore off!
-0x9675B9: {B_ATK_NAME_WITH_PREFIX} was freed\nfrom the telekinesis!
-0x9675DC: {B_ATK_NAME_WITH_PREFIX}’s\nHeal Block wore off!
-0x9675F6: {B_ATK_NAME_WITH_PREFIX}’s\nEmbargo ended!
-0x96760A: The twisted dimensions returned\nto normal!
-0x967635: Water Sport’s effects wore off!
-0x967655: Mud Sport’s effects wore off!
-0x967673: Wonder Room wore off, and the Defense\nand Sp. Def. stats returned to normal!
-0x9676C0: Magic Room wore off, and held items’\neffects returned to normal!
-0x967701: Gravity returned to normal!
-0x96771D: The terrain returned to normal!
-0x96773D: {B_SCR_ACTIVE_NAME_WITH_PREFIX}’s {B_SCR_ACTIVE_ABILITY}\nactivated!
-0x967750: You sense the presence of many!
-0x967770: {B_SCR_ACTIVE_NAME_WITH_PREFIX} transformed\ninto its Complete Form!
-0x967797: {B_SCR_ACTIVE_NAME_WITH_PREFIX}’s {B_SCR_ACTIVE_ABILITY}\nactivated!
-0x9677AA: {B_SCR_ACTIVE_NAME_WITH_PREFIX}’s {B_SCR_ACTIVE_ABILITY}\ndeactivated!
-0x9677BF: {B_SCR_ACTIVE_NAME_WITH_PREFIX} transformed!
-0x96BE0C: {B_ATK_NAME_WITH_PREFIX}’s type became\nthe same as {B_DEF_NAME_WITH_PREFIX}’s!
-0x96BE2F: {B_DEF_NAME_WITH_PREFIX} was cured\nof its {UNKNOWN_STR} problem!
-0x96BE4F: {B_ATK_NAME_WITH_PREFIX} became nimble!
-0x96BE61: {B_ATK_NAME_WITH_PREFIX} became\ncloaked in a freezing light!
-0x96BE88: {B_ATK_NAME_WITH_PREFIX} became\ncloaked in freezing air!
-0x96BEAB: {B_ATK_NAME_WITH_PREFIX} vanished\ninstantly!
-0x96BEC2: {B_ATK_NAME_WITH_PREFIX} concentrated\nintensely!
-0x96BEDD: {B_ATK_NAME_WITH_PREFIX} burned\nitself out!
-0x96BEF3: {B_ATK_NAME_WITH_PREFIX} went back\nto {STRING}ぐ!
-0x96BF07: {B_ATK_NAME_WITH_PREFIX} blew away\nthe deep fog with {B_CURRENT_MOVE}!
-0x96BF2A: {B_ATK_NAME_WITH_PREFIX} stole\n{B_DEF_NAME_WITH_PREFIX}’s stat boosts!
-0x96BF45: {B_ATK_NAME_WITH_PREFIX}’s stockpiled\neffect wore off!
-0x96BF66: {B_DEF_NAME_WITH_PREFIX} received the\n{B_LAST_ITEM} from {B_ATK_NAME_WITH_PREFIX}!
-0x96BF82: {B_ATK_NAME_WITH_PREFIX} surrounded\nitself with a veil of water!
-0x96BFAD: But {B_ATK_NAME_WITH_PREFIX} can’t use\nthe move!
-0x96BFC8: But {B_ATK_NAME_WITH_PREFIX} can’t use it the\nway it is now!
-0x96BFEF: {B_ATK_NAME_WITH_PREFIX} shifted\nits status problem onto\l{B_DEF_NAME_WITH_PREFIX}!
-0x96C016: {B_ATK_NAME_WITH_PREFIX} is absorbing\npower!
-0x96C02D: {B_ATK_NAME_WITH_PREFIX} became fully\ncharged due to its Power Herb!
-0x96C05C: {B_ATK_NAME_WITH_PREFIX} switched\nits Attack and Defense!
-0x96C080: {B_ATK_NAME_WITH_PREFIX} switched all\nchanges to its Attack and Sp. Atk\lwith {B_DEF_NAME_WITH_PREFIX}!
-0x96C0BB: {B_ATK_NAME_WITH_PREFIX} switched all\nchanges to its Defense and Sp. Def\lwith {B_DEF_NAME_WITH_PREFIX}!
-0x96C0F7: {B_ATK_NAME_WITH_PREFIX} switched\nspeed with {B_DEF_NAME_WITH_PREFIX}!
-0x96C112: {B_ATK_NAME_WITH_PREFIX} switched\nstat changes with\l{B_DEF_NAME_WITH_PREFIX}!
-0x96C134: {B_ATK_NAME_WITH_PREFIX} shared its\npower with the target!
-0x96C159: {B_ATK_NAME_WITH_PREFIX} shared its\nguard with the target!
-0x96C17E: {B_ATK_NAME_WITH_PREFIX} is waiting\nfor {B_SCR_ACTIVE_NAME_WITH_PREFIX}’s move!
-0x96C19B: {B_ATK_NAME_WITH_PREFIX} used\n{B_CURRENT_MOVE}!\pThe two moves are joined!\nIt’s a combined move!
-0x96C1D7: A swamp enveloped\n{STRING}= team!
-0x96C1F2: A sea of fire enveloped\n{STRING}= team!
-0x96C213: A rainbow appeared in the sky\non {STRING}; team’s side!
-0x96C244: {B_ATK_NAME_WITH_PREFIX} flung\nits {B_LAST_ITEM}!
-0x96C255: The protection effects were lifted\nfrom the target’s side!
-0x96C290: {B_DEF_NAME_WITH_PREFIX} was\nprevented from healing!
-0x96C2AF: {B_DEF_NAME_WITH_PREFIX} can’t use\nitems anymore!
-0x96C2CB: {B_DEF_NAME_WITH_PREFIX} is covered\nin powder!
-0x96C2E4: {B_DEF_NAME_WITH_PREFIX} was hurled\ninto the air!
-0x96C300: {B_DEF_NAME_WITH_PREFIX} was prevented\nfrom healing due to Heal Block!
-0x96C331: {B_DEF_NAME_WITH_PREFIX}’s moves\nhave been electrified!
-0x96C353: {B_DEF_NAME_WITH_PREFIX}’s stats changes\nwere reversed!
-0x96C375: {B_DEF_NAME_WITH_PREFIX}\ntook the kind offer!
-0x96C38D: {B_DEF_NAME_WITH_PREFIX}’s move\nwas postponed!
-0x96C3A6: {B_ATK_NAME_WITH_PREFIX} levitated\nwith electromagnetism!
-0x96C3CA: The bursting flame hit\n{B_SCR_ACTIVE_NAME_WITH_PREFIX}!
-0x96C9B2: {B_DEF_NAME_WITH_PREFIX}’s\n{B_LAST_ITEM} activated!
-0x96C9D6: {B_SCR_ACTIVE_NAME_WITH_PREFIX} was hurt\nby its {B_LAST_ITEM}!
-0x96C9ED: {B_SCR_ACTIVE_NAME_WITH_PREFIX} boosted\nthe accuracy of its next move\lusing its {B_LAST_ITEM}!
-0x96CA24: The {B_LAST_ITEM} attached itself to\n{B_ATK_NAME_WITH_PREFIX}!
-0x96CA42: {B_SCR_ACTIVE_NAME_WITH_PREFIX} is switched\nout with the {B_LAST_ITEM}!
-0x96CA62: {B_SCR_ACTIVE_NAME_WITH_PREFIX} held up its\n{B_LAST_ITEM} against {B_ATK_NAME_WITH_PREFIX}!
-0x96CA80: But {B_ATK_NAME_WITH_PREFIX} anchored\nitself with its roots!
-0x96CAA7: But {B_ATK_NAME_WITH_PREFIX} anchors\nitself with {B_ATK_ABILITY}!
-0x96CAC6: {B_SCR_ACTIVE_NAME_WITH_PREFIX}’s {B_LAST_ITEM}\nreduced {B_CURRENT_MOVE}’s power!
-0x96CAE2: The {B_LAST_ITEM} strengthened\nthe power of {B_CURRENT_MOVE}!
-0x96CB07: {B_SCR_ACTIVE_NAME_WITH_PREFIX}’s {B_LAST_ITEM}\nreduced {B_CURRENT_MOVE}’s power!
-0x96CC3C: {B_SCR_ACTIVE_NAME_WITH_PREFIX} Mega Evolved\ninto Mega {STRING}{LV}!
-0x96CC5A: {STRING}ぐ’s fervent wish\nhas reached {UNKNOWN_STR}!
-0x96CC7C: Bright light is about to burst out of\n{B_SCR_ACTIVE_NAME_WITH_PREFIX}!
-0x96CCA6: {B_SCR_ACTIVE_NAME_WITH_PREFIX} regained its\ntrue power through Ultra Burst!
-0x96CD83: The {B_LAST_ITEM} prevents the\nuse of Status Moves!\p
-0x96CDAD: {B_CURRENT_MOVE} can’t be used\nin a Sky Battle!\p
-0x96CDD0: {B_CURRENT_MOVE} can’t be used\nwhile Gravity is in effect!\p
-0x96CDFE: {B_SCR_ACTIVE_NAME_WITH_PREFIX} can’t use Sound moves\nafter the Throat Chop!\p
-0x96CE2F: {B_SCR_ACTIVE_NAME_WITH_PREFIX} can’t use {B_CURRENT_MOVE}\nafter the Heal Block!\p
-0x96D56E: {B_DEF_NAME_WITH_PREFIX}’s burn\nwas healed!
-0x96D584: {B_DEF_NAME_WITH_PREFIX}’s item\ncan’t be removed!
-0x96DB53: {B_ATK_NAME_WITH_PREFIX} became\ncloaked in mystical moonlight!
-0x96DB7C: The heavy rain has lifted!
-0x96DB97: The extremely harsh sunlight faded!
-0x96DBBB: The mysterious air current has\ndissipated!
-0x96DCFD: {B_SCR_ACTIVE_NAME_WITH_PREFIX} boosted its\n{UNKNOWN_STR} {PLAYER}using its Z-Power!
-0x96DD24: {B_SCR_ACTIVE_NAME_WITH_PREFIX} boosted its\nstats using its Z-Power!
-0x96DD4C: {B_SCR_ACTIVE_NAME_WITH_PREFIX} boosted its\ncritical-hit ratio using its Z-Power!
-0x96DD81: {B_SCR_ACTIVE_NAME_WITH_PREFIX} restored its\nHP using its Z-Power!
-0x96DDA7: {B_SCR_ACTIVE_NAME_WITH_PREFIX} will restore its\nreplacement’s HP using its Z-Power!
-0x96DDDF: {B_SCR_ACTIVE_NAME_WITH_PREFIX}’s HP was\nrestored by the Z-Power!
-0x9A436F: Select a Pokémon.
-0xA34F61: Keeps user and allies awake.
-0xA34F7E: Multi-hit moves hit five times.
-0xA34F9E: Turns electricity into Speed.
-0xA34FBC: Reduces damage at full HP.
-0xA34FD7: Boosts weaker moves.
-0xA34FEC: Moves hit Ghost-type Pokémon.
-0xA3500A: Critical hits land more often.
-0xA35029: Boosts critical hits.
-0xA3503F: Heals upon switching out.
-0xA35059: Status moves hit first.
-0xA35071: Boosts same type attacks.
-0xA3508B: Prevents Defense reduction.
-0xA350A7: Reflects status moves.
-0xA350BE: Boosts moves with recoil.
-0xA350D8: Trades added effects for power.
-0xA350F8: Boosts punching moves.
-0xA3510F: Ups power against same gender.
-0xA3512E: Boosts moves in a sandstorm.
-0xA3514B: Trades HP for power in sunshine.
-0xA3516C: Heat protection.
-0xA3517D: Prefers the rain to heat.
-0xA35197: Boosts “not very effective” moves.
-0xA351BA: Weakens super effective moves.
-0xA351D9: Passes through barriers and Fog.
-0xA351FA: Adjusts power from foe’s stats.
-0xA3521A: Restores HP if poisoned.
-0xA35233: Slight HP recovery in hail.
-0xA3524F: Ups one stat and downs another.
-0xA3526F: Heals status problems in rain.
-0xA3528E: May heal ally’s status problems.
-0xA352AF: Ups evasion in hail.
-0xA352C4: Ups evasion if confused.
-0xA352DD: Summons a hailstorm in battle.
-0xA352FC: Ups Speed if suffering.
-0xA35314: Boosts Attack if hit by Grass.
-0xA35333: Immune to weather and powder.
-0xA35351: Only damaged by attacks.
-0xA3536A: Avoids ball and bomb moves.
-0xA35386: Flying-type moves hit first.
-0xA353A3: Knockouts boost Attack.
-0xA353BB: Fainting damages the foe.
-0xA353D5: May disable a foe’s move.
-0xA353EF: Lowers the foe’s Speed if hit.
-0xA3540E: Spreads with contact.
-0xA35424: Hurts to touch.
-0xA35434: Raises Speed in a sandstorm.
-0xA35451: Moving last boosts power.
-0xA3546B: Ensures that all moves land.
-0xA35488: Boosts aura and pulse moves.
-0xA354A5: Boosts moves that make contact.
-0xA354C5: Boosts biting moves.
-0xA354DA: Raises own and ally’s accuracy.
-0xA354FA: Draws in water to up Sp. Atk.
-0xA35518: Powers up Dark-type moves.
-0xA35533: Powers up Fairy-type moves.
-0xA3554F: Reverses Aura Abilities.
-0xA35568: Normal moves become Ice.
-0xA35581: Normal moves become Fairy.
-0xA3559C: Normal moves become Flying.
-0xA355B8: All moves become Normal-type.
-0xA355D6: Doubles Speed if item is lost.
-0xA355F5: Doubles stat changes.
-0xA3560B: Ignores foe’s stat changes.
-0xA35627: Attack rises when stats fall.
-0xA35645: Sp. Atk rises when stats fall.
-0xA35664: Gives up at half HP.
-0xA35679: Takes a while to get going.
-0xA35695: Attack rises when poisoned.
-0xA356B1: Sp. Atk rises when burned.
-0xA356CC: Halves physical damage.
-0xA356E4: Ups status move evasion.
-0xA356FD: Changes type to match move.
-0xA35719: Moves get a weaker second hit.
-0xA35738: Moves ignore Abilities.
-0xA35750: Transforms below half HP.
-0xA3576A: Transforms after a KO.
-0xA35781: KOing a foe ups highest stat.
-0xA3579F: May poison any type.
-0xA357B4: Takes one hit with no damage.
-0xA357D2: Switches out below half HP.
-0xA357EE: Halves contact hits. Weak to Fire.
-0xA35811: No special Ability.
-0xA35825: Transforms below half HP.
+0x964160:  Type de la capacité : Fee
+0x964180:  Type du Pokemon : Fee
+0x9641A0:  Effet de la capacité adverse sur le Pokemon:\p   {CIRCLE_DOT} : Combat, Insecte, Fee\p   {TRIANGLE} : Spectre, Tenebr\p   {BIG_MULT_X} : Psy
+0x964210:  Effet sur le Pokemon adverse:\p   {CIRCLE_DOT} : Normal, Roche, Acier, Glace, Tenebr\p   {TRIANGLE} : Vol, Poison, Insecte, Psy,\l       Fee\p   {BIG_MULT_X} : Spectre
+0x9642A0:  Effet de la capacité adverse sur le Pokemon:\p   {CIRCLE_DOT} : Vol, Psy, Fee\p   {TRIANGLE} : Roche, Insecte, Tenebr
+0x964300:  Effet sur le Pokemon adverse:\p   {CIRCLE_DOT} : Plante, Fee\p   {TRIANGLE} : Poison, Sol, Roche, Spectre\p   {BIG_MULT_X} : Acier
+0x964370:  Effet de la capacité adverse sur le Pokemon:\p   {CIRCLE_DOT} : Sol, Psy\p   {TRIANGLE} : Combat, Poison, Insecte, Plante,\l       Fee
+0x9643E0:  Effet sur le Pokemon adverse:\p   {CIRCLE_DOT} : Plante, Psy, Tenebr\p   {TRIANGLE} : Combat, Vol, Poison, Spectre,\l       Acier, Feu, Fee
+0x964460:  Effet sur le Pokemon adverse:\p   {CIRCLE_DOT} : Roche, Glace, Fee\p   {TRIANGLE} : Acier, Feu, Eau, Électrik
+0x9644C0:  Effet de la capacité adverse sur le Pokemon:\p   {CIRCLE_DOT} : Sol, Roche, Eau\p   {TRIANGLE} : Insecte, Acier, Feu, Plante,\l       Glace, Fee
+0x964540:  Effet sur le Pokemon adverse:\p   {CIRCLE_DOT} : Dragon\p   {TRIANGLE} : Acier\p   {BIG_MULT_X} : Fee
+0x964590:  Effet de la capacité adverse sur le Pokemon:\p   {CIRCLE_DOT} : Glace, Dragon, Fee\p   {TRIANGLE} : Feu, Eau, Plante, Électrik
+0x964600:  Effet sur le Pokemon adverse:\p   {CIRCLE_DOT} : Combat, Dragon, Tenebr\p   {TRIANGLE} : Poison, Acier, Feu
+0x964660:  Effet de la capacité adverse sur le Pokemon:\p   {CIRCLE_DOT} : Poison, Acier\p   {TRIANGLE} : Combat, Insecte, Tenebr\p   {BIG_MULT_X} : Dragon
+0x964A7E:  Capture pour\nplus d'infos !
+0x965B87:  {B_DEF_NAME_WITH_PREFIX} a subi des dégâts !
+0x965B94:  {B_DEF_NAME_WITH_PREFIX} est tourmenté !
+0x965BA5:  {B_SCR_ACTIVE_NAME_WITH_PREFIX} a récolté\nun {B_LAST_ITEM} !
+0x965BBA:  {B_SCR_ACTIVE_NAME_WITH_PREFIX} a trouvé un\n{B_LAST_ITEM} !
+0x965BCB:  {B_SCR_ACTIVE_NAME_WITH_PREFIX} est tombé amoureux\nà cause du {B_LAST_ITEM} !
+0x965BE8:  Le talent de {B_ATK_NAME_WITH_PREFIX}\ndevient {B_DEF_ABILITY} !
+0x965C16:  L'illusion de {B_SCR_ACTIVE_NAME_WITH_PREFIX}\nse dissipe !
+0x965C2E:  Aucun effet sur\n{B_DEF_NAME_WITH_PREFIX}…
+0x965C46:  Le déguisement de\n{B_DEF_NAME_WITH_PREFIX} a servi d'appât !
+0x965C69:  Le déguisement de\n{B_DEF_NAME_WITH_PREFIX} a été brisé !
+0x965C9A:  {B_SCR_ACTIVE_NAME_WITH_PREFIX} : son talent\n{B_SCR_ACTIVE_ABILITY} monte beaucoup {UNKNOWN_STR} !
+0x966083:  {B_ATK_NAME_WITH_PREFIX} ne peut pas utiliser\n{B_CURRENT_MOVE} à cause de Gravité !
+0x9660A7:  {B_ATK_NAME_WITH_PREFIX} ne peut pas utiliser\n{B_CURRENT_MOVE} après Anti-Soin !
+0x9660CD:  {B_ATK_NAME_WITH_PREFIX} ne peut pas utiliser\nles sons après Coud'Pince !
+0x9660FD:  L'attaque Eau\ns'évapore au soleil !
+0x966135:  L'attaque Feu s'éteint\nsous la pluie torrentielle !
+0x966169:  {B_DEF_NAME_WITH_PREFIX} crée un\nChamp Psychique !
+0x966193:  La flamme sur {B_ATK_NAME_WITH_PREFIX}\nexplose en touchant la poudre !
+0x9661C9:  {B_ATK_NAME_WITH_PREFIX} prend sa\nforme Lame !
+0x9661ED:  {B_ATK_NAME_WITH_PREFIX} prend sa\nforme Bouclier !
+0x966212:  {B_ATK_NAME_WITH_PREFIX} canalise\nsa Force Z !
+0x966239:  {B_ATK_NAME_WITH_PREFIX} libère\nsa Capacité Z ultime !
+0x96625D:  L'illusion de {B_SCR_ACTIVE_NAME_WITH_PREFIX}\nse dissipe !
+0x966275:  Mais ça marche mal\nen Sky Battles…
+0x9665B0:  L'aura de {B_SCR_ACTIVE_NAME_WITH_PREFIX}\ns'enflamme !
+0x9665CA:  Régression Primitive de\n{B_ATK_NAME_WITH_PREFIX} !\pIl revient à sa forme primale !
+0x966601:  Un courant électrique parcourt le\nchamp de bataille.
+0x966632:  L'herbe recouvre le champ.
+0x966650:  La brume tourbillonne sur le champ.
+0x966674:  Le champ devient étrange.
+0x96668E:  {B_SCR_ACTIVE_NAME_WITH_PREFIX} chauffe son bec !
+0x9666AE:  {B_SCR_ACTIVE_NAME_WITH_PREFIX} pose un\nPyro-Tacle !
+0x966B45:  {B_ATK_NAME_WITH_PREFIX} subit des dégâts du\nPico-Défense de {B_DEF_NAME_WITH_PREFIX} !
+0x966B67:  {B_EFF_NAME_WITH_PREFIX} est\nempoisonné par Pics Toxik !
+0x966B8C:  {B_EFF_NAME_WITH_PREFIX} est gravement\nempoisonné par Pics Toxik !
+0x966BB6:  {B_EFF_NAME_WITH_PREFIX} est gravement\nempoisonné par le {B_LAST_ITEM} !
+0x966BD7:  {B_EFF_NAME_WITH_PREFIX} est\nempoisonné par Blockhaus !
+0x966BFE:  {B_EFF_NAME_WITH_PREFIX} est brûlé\npar le bec de {B_ATK_NAME_WITH_PREFIX} !
+0x966C1A:  {B_EFF_NAME_WITH_PREFIX} est brûlé\npar le {B_LAST_ITEM} !
+0x966C33:  Le {B_LAST_ITEM} de {B_DEF_NAME_WITH_PREFIX}\na été volé par {B_ATK_ABILITY} !
+0x966C4D:  Le {B_LAST_ITEM} de {B_DEF_NAME_WITH_PREFIX}\na été volé !
+0x966C61:  {B_ATK_NAME_WITH_PREFIX} sacrifie des PV\npour booster son attaque !
+0x966C8B:  {B_ATK_NAME_WITH_PREFIX} perd quelques PV !
+0x966CA3:  {B_ATK_NAME_WITH_PREFIX} vole et mange\nle {B_LAST_ITEM} adverse !
+0x967539:  Le brouillard est dense...
+0x96754C:  Le Champ Herbu restaure\nla santé de {B_ATK_NAME_WITH_PREFIX} !
+0x967575:  Anneau Hydro restaure\nla santé de {B_ATK_NAME_WITH_PREFIX} !
+0x967599:  L'électromagnétisme de\n{B_ATK_NAME_WITH_PREFIX} se dissipe !
+0x9675B9:  {B_ATK_NAME_WITH_PREFIX} est libéré\nde Télékinésie !
+0x9675DC:  L'Anti-Soin de {B_ATK_NAME_WITH_PREFIX}\nse dissipe !
+0x9675F6:  L'Embargo de {B_ATK_NAME_WITH_PREFIX}\nprend fin !
+0x96760A:  Les dimensions tordues redeviennent\nnormales !
+0x967635:  Effets de Tourniquet\nterminés !
+0x967655:  Effets de Lance-Boue\nterminés !
+0x967673:  Zone Étrange cesse, Déf. et Déf. Spé\nredeviennent normales !
+0x9676C0:  Zone Magique cesse, les objets\nrefonctionnent !
+0x967701:  Gravité redevient normale !
+0x96771D:  Le champ redevient normal !
+0x96773D:  {B_SCR_ACTIVE_NAME_WITH_PREFIX} : son talent\n{B_SCR_ACTIVE_ABILITY} s'active !
+0x967750:  Vous sentez de nombreuses présences !
+0x967770:  {B_SCR_ACTIVE_NAME_WITH_PREFIX} prend sa\nForme Parfaite !
+0x967797:  {B_SCR_ACTIVE_NAME_WITH_PREFIX} : son talent\n{B_SCR_ACTIVE_ABILITY} s'active !
+0x9677AA:  {B_SCR_ACTIVE_NAME_WITH_PREFIX} : son talent\n{B_SCR_ACTIVE_ABILITY} se désactive !
+0x9677BF:  {B_SCR_ACTIVE_NAME_WITH_PREFIX} se transforme !
+0x96BE0C:  Le type de {B_ATK_NAME_WITH_PREFIX}\ndevient celui de {B_DEF_NAME_WITH_PREFIX} !
+0x96BE2F:  {B_DEF_NAME_WITH_PREFIX} guérit\nson souci {UNKNOWN_STR} !
+0x96BE4F:  {B_ATK_NAME_WITH_PREFIX} devient agile !
+0x96BE61:  {B_ATK_NAME_WITH_PREFIX} s'enveloppe\nd'une lumière glaciale !
+0x96BE88:  {B_ATK_NAME_WITH_PREFIX} s'enveloppe\nd'un air glacial !
+0x96BEAB:  {B_ATK_NAME_WITH_PREFIX} disparaît\ninstantanément !
+0x96BEC2:  {B_ATK_NAME_WITH_PREFIX} se concentre\nintensément !
+0x96BEDD:  {B_ATK_NAME_WITH_PREFIX} se consume !
+0x96BEF3:  {B_ATK_NAME_WITH_PREFIX} est retourné\nà {STRING}ぐ !
+0x96BF07:  {B_ATK_NAME_WITH_PREFIX} dissipe le brouillard\népais avec {B_CURRENT_MOVE} !
+0x96BF2A:  {B_ATK_NAME_WITH_PREFIX} vole\nles boosts de {B_DEF_NAME_WITH_PREFIX} !
+0x96BF45:  L'effet de Stockage\nde {B_ATK_NAME_WITH_PREFIX} s'est dissipé !
+0x96BF66:  {B_DEF_NAME_WITH_PREFIX} reçoit le\n{B_LAST_ITEM} de {B_ATK_NAME_WITH_PREFIX} !
+0x96BF82:  {B_ATK_NAME_WITH_PREFIX} s'entoure d'un\nvoile d'eau !
+0x96BFAD:  Mais {B_ATK_NAME_WITH_PREFIX} ne peut pas\nutiliser cette capacité !
+0x96BFC8:  Mais {B_ATK_NAME_WITH_PREFIX} ne peut pas\nl'utiliser dans cet état !
+0x96BFEF:  {B_ATK_NAME_WITH_PREFIX} transfère son\nproblème de statut à\n{B_DEF_NAME_WITH_PREFIX} !
+0x96C016:  {B_ATK_NAME_WITH_PREFIX} absorbe de la\npuissance !
+0x96C02D:  {B_ATK_NAME_WITH_PREFIX} se charge à fond\ngrace à son Herbe Pouvoir !
+0x96C05C:  {B_ATK_NAME_WITH_PREFIX} inverse son\nAttaque et sa Défense !
+0x96C080:  {B_ATK_NAME_WITH_PREFIX} échange tous les\nboosts d'Attaque et Att. Spé\naec {B_DEF_NAME_WITH_PREFIX} !
+0x96C0BB:  {B_ATK_NAME_WITH_PREFIX} échange tous les\nboosts de Défense et Déf. Spé\naec {B_DEF_NAME_WITH_PREFIX} !
+0x96C0F7:  {B_ATK_NAME_WITH_PREFIX} échange sa\nVitesse avec {B_DEF_NAME_WITH_PREFIX} !
+0x96C112:  {B_ATK_NAME_WITH_PREFIX} échange ses\nchangements de stats\navec {B_DEF_NAME_WITH_PREFIX} !
+0x96C134:  {B_ATK_NAME_WITH_PREFIX} partage sa\npuissance avec la cible !
+0x96C159:  {B_ATK_NAME_WITH_PREFIX} partage sa\ngarde avec la cible !
+0x96C17E:  {B_ATK_NAME_WITH_PREFIX} attend la capacité\nde {B_SCR_ACTIVE_NAME_WITH_PREFIX} !
+0x96C19B:  {B_ATK_NAME_WITH_PREFIX} utilise\n{B_CURRENT_MOVE} !\pLes deux capacités se combinent !\nC'est une capacité combinée !
+0x96C1D7:  Un marais engloutit\nl'équipe de {STRING}=
+0x96C1F2:  Une mer de feu engloutit\nl'équipe de {STRING}=
+0x96C213:  Un arc-en-ciel apparaît du côté de\nl'équipe de {STRING}= !
+0x96C244:  {B_ATK_NAME_WITH_PREFIX} a lancé\nson {B_LAST_ITEM} !
+0x96C255:  Les protections ont été levées\ndu côté cible !
+0x96C290:  {B_DEF_NAME_WITH_PREFIX} ne peut plus\nse soigner !
+0x96C2AF:  {B_DEF_NAME_WITH_PREFIX} ne peut plus\nutiliser d'objets !
+0x96C2CB:  {B_DEF_NAME_WITH_PREFIX} est couvert\nde poudre !
+0x96C2E4:  {B_DEF_NAME_WITH_PREFIX} est projeté\ndans les airs !
+0x96C300:  {B_DEF_NAME_WITH_PREFIX} ne peut plus\nse soigner à cause d'Anti-Soin !
+0x96C331:  Les capacités de {B_DEF_NAME_WITH_PREFIX}\nsont électrifiées !
+0x96C353:  Les changements de stats de\n{B_DEF_NAME_WITH_PREFIX} ont été inversés !
+0x96C375:  {B_DEF_NAME_WITH_PREFIX}\na accepté la gentille offre !
+0x96C38D:  La capacité de {B_DEF_NAME_WITH_PREFIX}\na été différée !
+0x96C3A6:  {B_ATK_NAME_WITH_PREFIX} lévite grâce à\nl'électromagnétisme !
+0x96C3CA:  La flamme a frappé\n{B_SCR_ACTIVE_NAME_WITH_PREFIX} !
+0x96C9B2:  Le {B_LAST_ITEM} de {B_DEF_NAME_WITH_PREFIX}\ns'est activé !
+0x96C9D6:  {B_SCR_ACTIVE_NAME_WITH_PREFIX} subit des dégâts\nde son {B_LAST_ITEM} !
+0x96C9ED:  {B_SCR_ACTIVE_NAME_WITH_PREFIX} améliore la précision\nde sa prochaine capacité\navec son {B_LAST_ITEM} !
+0x96CA24:  Le {B_LAST_ITEM} s'est attaché à\n{B_ATK_NAME_WITH_PREFIX} !
+0x96CA42:  {B_SCR_ACTIVE_NAME_WITH_PREFIX} est remplacé\ngrâce au {B_LAST_ITEM} !
+0x96CA62:  {B_SCR_ACTIVE_NAME_WITH_PREFIX} brandit son\n{B_LAST_ITEM} contre {B_ATK_NAME_WITH_PREFIX} !
+0x96CA80:  Mais {B_ATK_NAME_WITH_PREFIX} s'est ancré\navec ses racines !
+0x96CAA7:  Mais {B_ATK_NAME_WITH_PREFIX} s'ancre\navec {B_ATK_ABILITY} !
+0x96CAC6:  Le {B_LAST_ITEM} de {B_SCR_ACTIVE_NAME_WITH_PREFIX}\nréduit la puissance de {B_CURRENT_MOVE} !
+0x96CAE2:  Le {B_LAST_ITEM} renforce\n{B_CURRENT_MOVE} !
+0x96CB07:  Le {B_LAST_ITEM} de {B_SCR_ACTIVE_NAME_WITH_PREFIX}\nréduit la puissance de {B_CURRENT_MOVE} !
+0x96CC3C:  {B_SCR_ACTIVE_NAME_WITH_PREFIX} Mega-Évolue\nen Mega {STRING}{LV} !
+0x96CC5A:  Le vœu de {STRING}ぐ\na atteint {UNKNOWN_STR} !
+0x96CC7C:  Une lumière vive s'apprête à jaillir de\n{B_SCR_ACTIVE_NAME_WITH_PREFIX} !
+0x96CCA6:  {B_SCR_ACTIVE_NAME_WITH_PREFIX} retrouve sa vraie puissance\ngrâce à l'Ultra-Burst !
+0x96CD83:  Le {B_LAST_ITEM} empêche\nd'utiliser les capacités de statut !\p
+0x96CDAD:  {B_CURRENT_MOVE} ne peut pas être utilisé\nen Sky Battle !\p
+0x96CDD0:  {B_CURRENT_MOVE} ne peut pas être utilisé\navec Gravité !\p
+0x96CDFE:  {B_SCR_ACTIVE_NAME_WITH_PREFIX} ne peut pas utiliser les sons\naprès Coud'Pince !\p
+0x96CE2F:  {B_SCR_ACTIVE_NAME_WITH_PREFIX} ne peut plus utiliser {B_CURRENT_MOVE}\naprès Anti-Soin !\p
+0x96D56E:  La brûlure de {B_DEF_NAME_WITH_PREFIX} est\nsoignée !
+0x96D584:  L'objet de {B_DEF_NAME_WITH_PREFIX}\nne peut pas être enlevé !
+0x96DB53:  {B_ATK_NAME_WITH_PREFIX} est enveloppé\nd'une lueur lunaire mystique !
+0x96DB7C:  La pluie battante cesse !
+0x96DB97:  Le soleil de plomb se dissipe !
+0x96DBBB:  Le courant d'air mystérieux\na disparu !
+0x96DCFD:  {B_SCR_ACTIVE_NAME_WITH_PREFIX} booste son\n{UNKNOWN_STR} {PLAYER}avec son Pouvoir Z !
+0x96DD24:  {B_SCR_ACTIVE_NAME_WITH_PREFIX} booste ses\nstats avec son Pouvoir Z !
+0x96DD4C:  {B_SCR_ACTIVE_NAME_WITH_PREFIX} booste son taux de critique\navec son Pouvoir Z !
+0x96DD81:  {B_SCR_ACTIVE_NAME_WITH_PREFIX} restaure ses\nPV avec son Pouvoir Z !
+0x96DDA7:  {B_SCR_ACTIVE_NAME_WITH_PREFIX} restaurera les PV\nde son remplaçant avec son Pouvoir Z !
+0x96DDDF:  Les PV de {B_SCR_ACTIVE_NAME_WITH_PREFIX}\nsont restaurés par le Pouvoir Z !
+0x9A436F:  Choisis un Pokemon.
+0xA34F61:  Garde le lanceur et les alliés éveillés.
+0xA34F7E:  Les attaques multi-coups frappent cinq fois.
+0xA34F9E:  Transforme l'électricité en Vitesse.
+0xA34FBC:  Réduit les dégâts à PV max.
+0xA34FD7:  Renforce les capacités faibles.
+0xA34FEC:  Les capacités touchent les Spectre.
+0xA3500A:  Les coups critiques tombent plus souvent.
+0xA35029:  Booste les coups critiques.
+0xA3503F:  Soigne en changeant de Pokemon.
+0xA35059:  Les capacités de statut passent en premier.
+0xA35071:  Renforce les attaques de même type.
+0xA3508B:  Empêche de baisser la Défense.
+0xA350A7:  Renvoie les capacités de statut.
+0xA350BE:  Renforce les coups à contrecoup.
+0xA350D8:  Échange effets bonus contre puissance.
+0xA350F8:  Renforce les coups de poing.
+0xA3510F:  Puissance accrue contre même sexe.
+0xA3512E:  Renforce sous tempête de sable.
+0xA3514B:  Sacrifie des PV pour plus de puissance au soleil.
+0xA3516C:  Protège de la chaleur.
+0xA3517D:  Préfère la pluie à la chaleur.
+0xA35197:  Renforce les coups pas très efficaces.
+0xA351BA:  Affaiblit les coups super efficaces.
+0xA351D9:  Traverse les barrières et la Brume.
+0xA351FA:  Ajuste la puissance selon les stats ennemies.
+0xA3521A:  Restaure des PV si empoisonné.
+0xA35233:  Récupère un peu de PV sous la grêle.
+0xA3524F:  Monte une stat et en baisse une autre.
+0xA3526F:  Guérit les statuts sous la pluie.
+0xA3528E:  Peut soigner les statuts d'un allié.
+0xA352AF:  Esquive augmentée sous la grêle.
+0xA352C4:  Esquive augmentée si confus.
+0xA352DD:  Invoque la grêle en combat.
+0xA352FC:  Vitesse augmente quand ça fait mal.
+0xA35314:  Attaque monte si touché par Plante.
+0xA35333:  Immunisé météo et poudres.
+0xA35351:  Ne subit que les attaques.
+0xA3536A:  Esquive les attaques balles/bombes.
+0xA35386:  Les attaques Vol passent en premier.
+0xA353A3:  Les K.O. boostent l'Attaque.
+0xA353BB:  Meurt en infligeant des dégâts à l'ennemi.
+0xA353D5:  Peut désactiver une capacité ennemie.
+0xA353EF:  Baisse la Vitesse de l'ennemi s'il touche.
+0xA3540E:  Se propage au contact.
+0xA35424:  Blesse au contact.
+0xA35434:  Vitesse monte sous tempête de sable.
+0xA35451:  Agir en dernier booste la puissance.
+0xA3546B:  Assure que toutes les capacités touchent.
+0xA35488:  Boost les auras et ondes.
+0xA354A5:  Boost les coups à contact.
+0xA354C5:  Boost les morsures.
+0xA354DA:  Monte la Précision du lanceur et des alliés.
+0xA354FA:  Attire l'Eau pour monter l'Att. Spé.
+0xA35518:  Renforce les capacités Ténèbres.
+0xA35533: Renforce les capacités Fée.
+0xA3554F:  Inverse les talents Aura.
+0xA35568:  Les capacités Normal deviennent Glace.
+0xA35581:  Les capacités Normal deviennent Fee.
+0xA3559C:  Les capacités Normal deviennent Vol.
+0xA355B8: Toutes les capacités deviennent Normal.
+0xA355D6:  Double la Vitesse si l'objet est perdu.
+0xA355F5:  Double les changements de stats.
+0xA3560B:  Ignore les changements de stats ennemis.
+0xA35627:  Attaque monte quand les stats baissent.
+0xA35645:  Att. Spé monte quand les stats baissent.
+0xA35664:  Abandonne à mi-PV.
+0xA35679:  Met du temps à se lancer.
+0xA35695:  Attaque monte en cas de poison.
+0xA356B1:  Att. Spé monte en cas de brûlure.
+0xA356CC:  Divise les dégâts physiques.
+0xA356E4:  Esquive accrue face aux capacités statut.
+0xA356FD:  Change de type pour correspondre à la capacité.
+0xA35719:  Les attaques ont un second coup affaibli.
+0xA35738:  Les capacités ignorent les talents.
+0xA35750:  Se transforme sous la moitié des PV.
+0xA3576A:  Se transforme après un K.O.
+0xA35781:  Un K.O. augmente la stat la plus haute.
+0xA3579F:  Peut empoisonner n'importe quel type.
+0xA357B4:  Encaisse un coup sans dégâts.
+0xA357D2:  Change de Pokemon sous la moitié des PV.
+0xA357EE:  Divise les dégâts de contact. Faiblesse Feu.
+0xA35811:  Pas de talent spécial.
+0xA35825:  Se transforme sous la moitié des PV.
