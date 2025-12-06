@@ -1,4 +1,9 @@
-chunk_21 0x71CA60 : Traduit en « Ville de Dresco ». Nom de ville fan-made, incertain sur la forme à conserver.
-chunk_21 0x71CA70 : Traduit en « Ville de Tehl ». Nom de ville fan-made, incertain sur la forme à conserver.
-chunk_21 0x720E74 : Traduit en « Ville de Fallshore ». Nom de ville fan-made, vérification requise.
-chunk_21 0x720E88 : Traduit en « Mont Frost ». Nom de lieu fan-made, vérifier si un autre nom officiel existe.
+chunk_21 0x71CA60 : Traduit en « Ville de Dresco ». Nom de ville fan-made, incertain sur la forme à conserver. OK
+chunk_21 0x71CA70 : Traduit en « Ville de Tehl ». Nom de ville fan-made, incertain sur la forme à conserver. OK
+chunk_21 0x720E74 : Traduit en « Ville de Fallshore ». Nom de ville fan-made, vérification requise. OK
+chunk_21 0x720E88 : Traduit en « Mont Frost ». Nom de lieu fan-made, vérifier si un autre nom officiel existe. Mont Gelé ? (sans les fautes)
+chunk_24 0x78D67B : Nom abrégé « Grott Stal » utilisé faute de place (original « cicle Cave » tronqué). Vérifier le format attendu pour ce libellé. Non mais le nom sans abréviation. Par contre Stal ? Ça veut rien dire non ?
+chunk_24 0x78D6E6 : « Entrée » pour une étiquette isolée (original « entre »). Incertain du contexte exact sur la carte. OK
+chunk_24 0x78D78D : « Centre PKMN » pour « PKMN Centre » tronqué. Confirmer si une autre abréviation est souhaitée. OK
+chunk_24 0x78D7AE : « Ouest : Entrée » pour « est: Entrance » tronqué. Sens de la direction à valider. Si c'est Est, c'est pas Ouest ?
+chunk_24 0x78D7F8 : « Grotte Sud » pour « k Cave South » tronqué. Vérifier si une autre abréviation est préférable. Très bien
