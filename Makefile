@@ -22,7 +22,7 @@ build-fr:
 	@ls $(FR_CHUNK_DIR)/chunk_*.txt >/dev/null
 	@$(PY) scripts/combine_chunks.py --dir $(FR_CHUNK_DIR) --output $(COMBINED_FR)
 	@[ -f $(ROM_USAGE) ] || $(PY) scripts/dump_rom_usage.py --rom $(ROM) --out $(ROM_USAGE)
-	@$(PY) scripts/inject_translations.py --text $(COMBINED_FR) --out $(OUT_FR) --use-holes --free-map $(ROM_USAGE)
+	@$(PY) scripts/inject_translations.py --text $(COMBINED_FR) --out $(OUT_FR) --use-holes --free-map $(ROM_USAGE) --allow-append
 	@echo "ROM générée : $(OUT_FR)"
 
 clean:

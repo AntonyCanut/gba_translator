@@ -32,6 +32,7 @@ DEFAULT_OUT = Path("totranslate_fr.gba")
 SENSITIVE_FILE = Path("sensitive_lines.txt")
 SENSITIVE_OFFSET_MAX = 0x220000  # zones basses à ne pas reloger (écran de nom, scripts précoces, etc.)
 FORCE_SHRINK_OFFSETS = {0x8CEB24, 0x1F0F874}
+SAFE_RELOC_START = SENSITIVE_OFFSET_MAX  # ne pas utiliser les blocs libres avant cette limite
 
 PLACEHOLDER_RE = re.compile(r"\{[^}]+\}")
 POINTER_BASE = 0x08000000
@@ -253,6 +254,12 @@ def main() -> None:
         type=Path,
         help="Fichier rom_usage.txt (issu de dump_rom_usage.py) pour forcer les blocs libres à utiliser.",
     )
+    parser.add_argument(
+        "--errors-out",
+        type=Path,
+        default=Path("injection_errors_full.txt"),
+        help="Fichier dans lequel écrire la liste complète des erreurs (offsets, longueurs, texte).",
+    )
     args = parser.parse_args()
 
     rom_bytes = bytearray(args.rom.read_bytes())
@@ -273,13 +280,23 @@ def main() -> None:
 
     # Construire un index pointeur -> positions (supporte bit Thumb LSB=1)
     pointer_index: Dict[int, List[Tuple[int, int]]] = {off: [] for off in original_lengths.keys()}
+    all_pointer_index: Dict[int, List[Tuple[int, int]]] = {}
     for i in range(len(rom_bytes) - 3):
         val = int.from_bytes(rom_bytes[i : i + 4], "little")
         base = val & ~1  # masque le bit Thumb éventuel
         lsb = val & 1
         off = base - POINTER_BASE  # l'offset pointé (LSB sert juste de flag)
+        if 0 <= off < len(rom_bytes):
+            all_pointer_index.setdefault(off, []).append((i, lsb))
+            if lsb == 1 and off + 1 < len(rom_bytes):
+                all_pointer_index.setdefault(off + 1, []).append((i, lsb))
         if off in pointer_index:
             pointer_index[off].append((i, lsb))
+        # Certains pointeurs texte sont stockés avec le bit Thumb à 1 alors que
+        # le texte commence à l'adresse +1. On associe aussi ces pointeurs à
+        # off+1 pour repérer et reloger ces chaînes.
+        if lsb == 1 and (off + 1) in pointer_index:
+            pointer_index[off + 1].append((i, lsb))
 
     # Prépare les lignes triées par longueur encodée décroissante (priorité aux plus longues)
     sensitive_lines = load_sensitive_lines()
@@ -320,9 +337,47 @@ def main() -> None:
 
     entries.sort(key=lambda e: e["enc_len"], reverse=True)
 
+    entries_by_offset: Dict[int, dict] = {e["offset"]: e for e in entries}
+    ordered_offsets = sorted(entries_by_offset.keys())
+
+    def has_pointer_for(off: int) -> bool:
+        if pointer_index.get(off):
+            return True
+        if all_pointer_index.get(off):
+            return True
+        if all_pointer_index.get(off + 1):
+            return True
+        if all_pointer_index.get(off - 1):
+            return True
+        return False
+
+    anchor_for: Dict[int, int] = {}
+    run_members: Dict[int, List[int]] = {}
+    prev_offset = None
+    current_anchor = None
+    for off in ordered_offsets:
+        if prev_offset is None or off != prev_offset + original_lengths[prev_offset]:
+            current_anchor = None
+        if has_pointer_for(off):
+            current_anchor = off
+        if current_anchor is not None:
+            anchor_for[off] = current_anchor
+            run_members.setdefault(current_anchor, []).append(off)
+        prev_offset = off
+
+    group_runs = {
+        anchor
+        for anchor, run in run_members.items()
+        if any(
+            (entries_by_offset[o]["enc_len"] > entries_by_offset[o]["orig_len"]) and (not has_pointer_for(o))
+            for o in run
+        )
+    }
+
     replaced = 0
     moved = 0
     reuse_from_old = 0
+    processed_offsets: set[int] = set()
 
     # free_blocks: liste de (start, size, source) où source ∈ {"hole", "old"}
     if args.free_map:
@@ -343,10 +398,16 @@ def main() -> None:
             aligned_start = (s + 3) // 4 * 4
             usable = sz - (aligned_start - s)
             if usable >= 4:
+                if not args.ignore_sensitive and aligned_start < SAFE_RELOC_START:
+                    continue
                 free_blocks.append((aligned_start, usable, "hole"))
     else:
         free_blocks = (
-            [(start, size, "hole") for start, size in find_free_blocks(rom_bytes, min_size=16, align=4)]
+            [
+                (start, size, "hole")
+                for start, size in find_free_blocks(rom_bytes, min_size=16, align=4)
+                if (args.ignore_sensitive or start >= SAFE_RELOC_START)
+            ]
             if (not args.no_relocate and args.use_holes)
             else []
         )
@@ -386,12 +447,126 @@ def main() -> None:
                 new_blocks.append((end, b_end - end, src))
         free_blocks[:] = [b for b in new_blocks if b[1] > 0]
 
+    def locate_positions_for(off: int) -> Tuple[int, List[Tuple[int, int]]]:
+        """Retourne (offset_cible, liste_positions) en tolérant un décalage +/-1."""
+        positions = pointer_index.get(off, [])
+        alt_off = off
+        if not positions:
+            for delta in (1, -1):
+                candidate = off + delta
+                alt_positions = all_pointer_index.get(candidate, [])
+                if alt_positions:
+                    alt_off = candidate
+                    positions = alt_positions
+                    break
+        return alt_off, positions
+
+    def collect_contiguous_run(start_off: int) -> List[Tuple[int, int]]:
+        """Retourne les paires (offset, longueur) d'un bloc de chaînes contiguës (séparées par un seul 0xFF)."""
+        run_start = start_off
+        # remonter tant que la chaîne précédente se termine juste avant run_start
+        while True:
+            prev_term = rom_bytes.rfind(b"\xFF", 0, run_start)
+            if prev_term == -1:
+                break
+            prev_prev_term = rom_bytes.rfind(b"\xFF", 0, prev_term)
+            prev_start = (prev_prev_term + 1) if prev_prev_term != -1 else 0
+            prev_end = rom_bytes.find(b"\xFF", prev_start)
+            if prev_end == -1 or prev_end + 1 != run_start:
+                break
+            run_start = prev_start
+
+        run: List[Tuple[int, int]] = []
+        pos = run_start
+        while pos < len(rom_bytes):
+            end = rom_bytes.find(b"\xFF", pos)
+            if end == -1:
+                break
+            run.append((pos, end - pos + 1))
+            next_start = end + 1
+            if next_start >= len(rom_bytes) or rom_bytes[next_start] == 0xFF:
+                break
+            pos = next_start
+        return run
+
+    # Traiter en amont les blocs de chaînes contiguës où des entrées trop longues n'ont pas de pointeur dédié
+    for anchor in group_runs:
+        run = run_members.get(anchor, [])
+        if not run or any(off in processed_offsets for off in run):
+            continue
+
+        parts: List[bytes] = []
+        total_orig_len = 0
+        for off in run:
+            ent = entries_by_offset.get(off)
+            if ent:
+                parts.append(ent["encoded"])
+                total_orig_len += ent["orig_len"]
+            else:
+                ol = original_lengths.get(off)
+                if ol is None:
+                    continue
+                parts.append(bytes(rom_bytes[off : off + ol]))
+                total_orig_len += ol
+
+        if not parts:
+            continue
+
+        needed = sum(len(p) for p in parts)
+        dest_offset, source = take_block(needed)
+
+        if dest_offset is None:
+            if args.allow_append:
+                dest_offset = append_offset
+                append_offset += needed
+                if append_offset > len(rom_bytes):
+                    rom_bytes.extend(b"\xFF" * (append_offset - len(rom_bytes)))
+                    if len(rom_bytes) > max_rom_size:
+                        max_rom_size = len(rom_bytes)
+                source = "append"
+            else:
+                errors.append(
+                    f"Run {hex(anchor)}: pas d'espace libre pour {needed} octets (bloc non relogé)"
+                )
+                continue
+
+        rom_bytes[dest_offset : dest_offset + needed] = b"".join(parts)
+
+        target_off, positions = locate_positions_for(anchor)
+        if not positions:
+            errors.append(f"Run {hex(anchor)}: aucun pointeur pour reloger bloc (taille {needed})")
+            continue
+
+        ptr_delta = target_off - anchor
+        for idx, lsb in positions:
+            new_ptr_val = (POINTER_BASE + dest_offset + ptr_delta) | lsb
+            rom_bytes[idx : idx + 4] = new_ptr_val.to_bytes(4, "little")
+        pointer_index[anchor] = []
+        if target_off in pointer_index:
+            pointer_index[target_off] = []
+
+        run_has_unknown = any(not has_pointer_for(off) for off in run)
+        if args.reuse_old_space and not run_has_unknown and (args.ignore_sensitive or anchor >= SAFE_RELOC_START):
+            rom_bytes[anchor : anchor + total_orig_len] = b"\xFF" * total_orig_len
+            aligned_old = (anchor + 3) // 4 * 4
+            usable = total_orig_len - (aligned_old - anchor)
+            if usable > 0:
+                free_blocks.append((aligned_old, usable, "old"))
+
+        if source == "old":
+            reuse_from_old += 1
+        moved += len(run)
+        replaced += len(run)
+        processed_offsets.update(run)
+
     for entry in entries:
         line_no = entry["line_no"]
         offset = entry["offset"]
         text = entry["text"]
         encoded = entry["encoded"]
         orig_len = entry["orig_len"]
+        if offset in processed_offsets:
+            continue
         # Essai en place
         if len(encoded) <= orig_len:
             rom_bytes[offset : offset + len(encoded)] = encoded
@@ -409,8 +584,7 @@ def main() -> None:
             )
             continue
 
-        old_ptr_val = POINTER_BASE + offset
-        positions = pointer_index.get(offset, [])
+        alt_offset, positions = locate_positions_for(offset)
         if not positions:
             # tenter une extension locale si un run de 0xFF suit la chaîne
             end = rom_bytes.find(b"\xFF", offset)
@@ -426,6 +600,78 @@ def main() -> None:
                 if run >= extra_needed:
                     break
             if run < extra_needed:
+                # Dernière tentative : reloger tout le bloc contigu si un pointeur existe sur une entrée précédente
+                run_segments = collect_contiguous_run(offset)
+                anchor_in_run = None
+                for off_seg, _seg_len in run_segments:
+                    if has_pointer_for(off_seg):
+                        anchor_in_run = off_seg
+                        break
+                if anchor_in_run is not None and anchor_in_run not in processed_offsets:
+                    parts: List[bytes] = []
+                    total_orig_len = 0
+                    run_offsets_in_entries: List[int] = []
+                    for off_seg, seg_len in run_segments:
+                        ent_seg = entries_by_offset.get(off_seg)
+                        if ent_seg:
+                            parts.append(ent_seg["encoded"])
+                            total_orig_len += ent_seg["orig_len"]
+                            run_offsets_in_entries.append(off_seg)
+                        else:
+                            parts.append(bytes(rom_bytes[off_seg : off_seg + seg_len]))
+                            total_orig_len += seg_len
+                    needed_run = sum(len(p) for p in parts)
+                    dest_offset, source = take_block(needed_run)
+                    if dest_offset is None:
+                        if args.allow_append:
+                            dest_offset = append_offset
+                            append_offset += needed_run
+                            if append_offset > len(rom_bytes):
+                                rom_bytes.extend(b"\xFF" * (append_offset - len(rom_bytes)))
+                                if len(rom_bytes) > max_rom_size:
+                                    max_rom_size = len(rom_bytes)
+                            source = "append"
+                        else:
+                            errors.append(
+                                f"Ligne {line_no}: texte trop long ({len(encoded)}>{orig_len}) sans pointeur (bloc {hex(anchor_in_run)}) et pas d'espace libre"
+                            )
+                            continue
+
+                    rom_bytes[dest_offset : dest_offset + needed_run] = b"".join(parts)
+
+                    target_off, anchor_positions = locate_positions_for(anchor_in_run)
+                    if not anchor_positions:
+                        errors.append(
+                            f"Ligne {line_no}: aucun pointeur pour le bloc contigu démarrant à {hex(anchor_in_run)} (taille {needed_run})"
+                        )
+                        continue
+
+                    ptr_delta = target_off - anchor_in_run
+                    for idx, lsb in anchor_positions:
+                        new_ptr_val = (POINTER_BASE + dest_offset + ptr_delta) | lsb
+                        rom_bytes[idx : idx + 4] = new_ptr_val.to_bytes(4, "little")
+                    pointer_index[anchor_in_run] = []
+                    if target_off in pointer_index:
+                        pointer_index[target_off] = []
+
+                    run_has_unknown = any(not has_pointer_for(off_seg) for off_seg, _ in run_segments)
+                    block_start = run_segments[0][0]
+                    if args.reuse_old_space and not run_has_unknown and (
+                        args.ignore_sensitive or block_start >= SAFE_RELOC_START
+                    ):
+                        total_len_block = sum(seg_len for _, seg_len in run_segments)
+                        rom_bytes[block_start : block_start + total_len_block] = b"\xFF" * total_len_block
+                        aligned_old = (block_start + 3) // 4 * 4
+                        usable = total_len_block - (aligned_old - block_start)
+                        if usable > 0:
+                            free_blocks.append((aligned_old, usable, "old"))
+
+                    if source == "old":
+                        reuse_from_old += 1
+                    moved += len(run_offsets_in_entries) if run_offsets_in_entries else len(run_segments)
+                    replaced += len(run_offsets_in_entries) if run_offsets_in_entries else len(run_segments)
+                    processed_offsets.update(run_offsets_in_entries)
+                    continue
                 errors.append(
                     f"Ligne {line_no}: texte trop long ({len(encoded)}>{orig_len}) sans pointeur et pas assez d'espace libre après {hex(offset)}"
                 )
@@ -455,13 +701,17 @@ def main() -> None:
 
         rom_bytes[dest_offset : dest_offset + needed] = encoded
 
+        ptr_delta = alt_offset - offset
         for idx, lsb in positions:
-            new_ptr_val = (POINTER_BASE + dest_offset) | lsb
+            target = dest_offset + ptr_delta
+            new_ptr_val = (POINTER_BASE + target) | lsb
             rom_bytes[idx : idx + 4] = new_ptr_val.to_bytes(4, "little")
         pointer_index[offset] = []
+        if alt_offset in pointer_index:
+            pointer_index[alt_offset] = []
 
         # Libérer l'ancien emplacement pour de futurs relogements
-        if args.reuse_old_space:
+        if args.reuse_old_space and (args.ignore_sensitive or offset >= SAFE_RELOC_START):
             rom_bytes[offset : offset + orig_len] = b"\xFF" * orig_len
             aligned_old = (offset + 3) // 4 * 4
             usable = orig_len - (aligned_old - offset)
@@ -476,6 +726,15 @@ def main() -> None:
     args.out.write_bytes(rom_bytes)
     print(f"Chaînes remplacées: {replaced} (déplacées: {moved}, réutilisation anciens emplacements: {reuse_from_old})")
     if errors:
+        # Dump complet pour analyse
+        try:
+            lines = []
+            for err in errors:
+                # essayer d'extraire offset/longueurs si présent dans le message
+                lines.append(err)
+            args.errors_out.write_text("\n".join(lines), encoding="utf-8")
+        except Exception:
+            pass
         print(f"Erreurs ({len(errors)}):")
         for msg in errors[:20]:
             print(" -", msg)
