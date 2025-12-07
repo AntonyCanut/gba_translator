@@ -132,7 +132,7 @@
 0x18802E: Pourquoi montes-tu un Pokémon ?\nTu ne sais pas nager ?
 0x18805C: Aïe !\nTorpillé !
 0x18806D: Monter un Pokémon a l’air trop fun !
-0x1880F8: Mon copain m’a offert de grosses perles.
+0x1880F8: Mon copain m’a offert de\ngrosses perles.
 0x188119: Oh, non !\nMes perles étaient dedans !
 0x188139: Mes perles grandiront-elles dans\nCrustabri ?
 0x18851F: Je participe à un triathlon.
@@ -141,7 +141,7 @@
 0x188ED9: Je vais t’écraser !
 0x188EFA: Ouah !\nTrop fort !
 0x188F0A: J’ai tout donné. Aucun regret !
-0x188F53: J’ai fait de mon mieux, donc aucun regret !
+0x188F53: J’ai fait de mon mieux,\ndonc aucun regret !
 0x18901B: J’adore l’odeur de la mer !
 0x18908C: Wouh !\nTrop bien !
 0x18909E: Cet air est magnifique !
@@ -278,18 +278,18 @@
 0x196F81: PAUSE DÉJEUNER\nC’est réservé.
 0x196FA0: Des clés oubliées !\nIls vont revenir.
 0x19703E: Une Boîte Jetons est requise…
-0x197057: On échange tes jetons contre des prix.
+0x197057: On échange tes jetons\ncontre des prix.
 0x19707A: Quel prix veux-tu ?
 0x19709D: Alors, tu veux le {STR_VAR_1} ?
 0x1970B2: D’accord, une CT de {STR_VAR_2},\nc’est ça que tu veux ?
 0x1970D5: Désolé, il te faut plus de\njetons que ça.
-0x19745D: Tu devrais faire de la place pour ça.
+0x19745D: Tu devrais faire de la place\npour ça.
 0x197873: 9Arène Pokémon de Dehara\nChampion : Galavan\pDresseurs vainqueurs :\n{RIVAL}
 0x1978AC: Arène Pokémon de Dehara\nChampion : Galavan\pDresseurs vainqueurs :\n{RIVAL}, {PLAYER}
 0x1979C1: Pff…\pJ’ai cramé tout mon argent au\nCasino !\pOn dirait que je n’aurai plus\nbesoin de ça !
 0x197A38: {PLAYER} a reçu une Boîte Jetons\ndu gars.
 0x197A5E: Fais de la place pour ça !
-0x197A72: J’ai toujours cru que je pouvais gagner…
+0x197A72: J’ai toujours cru que je\npouvais gagner…
 0x1980BC: Je suis sûr d’avoir vu le vendeur\npiquer dans la caisse…
 0x198BBA: 9Un jour je serai un ninja !\pMes parents frappent en force,\nmais moi je serai furtif !
 0x198C1F: Huah ! Pousse les rochers avec la\nforce brute !\pPrends ça !
@@ -307,12 +307,12 @@
 0x199485: Hmm ! {STR_VAR_2} de {STR_VAR_1} ?\nJe dois lui faire oublier ça ?
 0x1994B1: Ça a marché à la perfection !\p{STR_VAR_1} a complètement oublié\n{STR_VAR_2}.
 0x1994EA: Reviens s’il y a d’autres\ncapacités à oublier.
-0x19951F: Quoi ? Aucun Œuf ne devrait connaître de\ncapacité.
+0x19951F: Quoi ? Aucun Œuf ne devrait\nconnaître de capacité.
 0x19A4F7: 9Cette ville a des soucis de\ncauchemars depuis toujours.\pSi tu dois choisir un endroit où\nvivre, ce serait sûrement mieux\ld’aller ailleurs.
 0x19A5BD: 9Besoin de redescendre la\nmontagne ?\pMon Abra et moi serons ravis de te\ntransporter en bas.\pQu’en dis-tu ?\nTu veux être téléporté ?
 0x19A650: Attention, il te faudra de la\nforce pour continuer ensuite.
 0x19A79F: 9Ils vendent bien des Attaque + ?\pJ’aime ça, ça hausse l’Attaque en\ncombat.
-0x19A7F1: Avoir des objets en rab ne fait jamais de mal. On ne sait jamais ce qui peut\narriver.
+0x19A7F1: Avoir des objets en rab ne fait\njamais de mal. On ne sait jamais ce\nqui peut arriver.
 0x19B86A: Presque arrivé !
 0x19B8B9: Je ne suis pas trop jeune pour Mel !\nLaisse-moi tranquille !
 0x19BA45: Mauvais chemin !
@@ -324,14 +324,14 @@
 0x19BDFE: Arène Pokémon de Fallshore\nChampion : Mel\pDresseurs vainqueurs :\n{RIVAL}
 0x19BE37: Arène Pokémon de Fallshore\nChampion : Mel\pDresseurs vainqueurs :\n{RIVAL}, {PLAYER}
 0x19BF8F: Max Repousse empêche les Pokémon\nplus faibles d’apparaître.\pIl dure plus longtemps que le\nSuper Repousse.
-0x19BFF1: Avec le {COLOR}ÉBadge Chute{COLOR}Ç, tu peux acheter des\n{COLOR}ÉHyper Balls{COLOR}Ç !\pElles sont bien meilleures pour\ncapturer que des Super Balls.
-0x19C0B4: J’ai entendu dire que des gens faisaient des bêtises sur la\n{COLOR}ÉRoute 9{COLOR}Ë.
+0x19BFF1: Avec le {COLOR}ÉBadge Chute{COLOR}Ç, tu peux\nacheter des {COLOR}ÉHyper Balls{COLOR}Ç !\pElles sont bien meilleures pour\ncapturer que des Super Balls.
+0x19C0B4: J’ai entendu dire que des gens\nfaisaient des bêtises sur la\n{COLOR}ÉRoute 9{COLOR}Ë.
 0x19C0F7: À chaque pas, tes Pokémon\ns’attachent plus à toi.\pSi tu as un Pokémon à la Pension,\nil gagnera aussi en puissance.
 0x19C177: Tu as entendu ?\pQuelqu’un a réglé le souci des\nfauteurs de Route 9 !
-0x19E9E5: Salut ! Je suis un aide du Prof. Log.\nSi ton Pokédex contient\p{COLOR}É{STR_VAR_1}{COLOR}Ç espèces,\nje dois te récompenser.\lAlors, {PLAYER}, dis-moi.\pAs-tu des données sur{COLOR}É\p{STR_VAR_1}{COLOR}Ç espèces de\nPokémon ?
+0x19E9E5: Salut ! Je suis un aide du\nProf. Log.\nSi ton Pokédex contient\p{COLOR}É{STR_VAR_1}{COLOR}Ç espèces,\nje dois te récompenser.\lAlors, {PLAYER}, dis-moi.\pAs-tu des données sur{COLOR}É\p{STR_VAR_1}{COLOR}Ç espèces de\nPokémon ?
 0x19EABE: sur\n{STR_VAR_1} espèces de Pokémon ?
 0x19EAE4: Super ! Tu as attrapé {COLOR}É{STR_VAR_3}{COLOR}Ç\nespèces !\pFélicitations !\nTiens !
-0x19EB59: Il y a des objets au sol qui peuvent être cachés. Utilise le {COLOR}ÉCherche-Objet{COLOR}Ç\npour trouver les objets cachés\pprès de toi.\nLa machine est un peu limitée.\pElle ne peut pas donner la\nposition exacte.\pElle indique juste la direction de\nl’objet.\pSerre-toi-en pour t’orienter, puis\ncherche la zone à la main.
+0x19EB59: Il y a des objets au sol parfois\ncachés. Utilise le {COLOR}ÉCherche-Objet{COLOR}Ç\npour trouver les objets cachés\pprès de toi.\nLa machine est un peu limitée.\pElle ne peut pas donner la\nposition exacte.\pElle indique juste la direction de\nl’objet.\pSerre-toi-en pour t’orienter, puis\ncherche la zone à la main.
 0x19EFE0: Je suis le petit frère du Gourou\nde la Pêche.\pJ’adoooore pêcher !\nJe ne peux pas m’en passer.\pDis-moi, tu aimes pêcher ?
 0x19F05B: Génial ! J’aime ton style.\nJe pense qu’on peut être amis.\pPrends ça et pêche, jeune ami !
 0x19F0B2: {PLAYER} a reçu une Super Canne du\nfrère du Gourou de la Pêche.
@@ -349,14 +349,14 @@
 0x19F50C: C’est une sorte de tableau vierge.\pIl a des cases pour noter des\nrecords.
 0x1A1B8E: Une page bonus obtenue pour la\nCARTE !
 0x1A231B: Obtenu le TRI-PASS !
-0x1A2B88: Je suis le Maître des Capacités. Je connais chaque capacité que les\pPokémon apprennent en grandissant.\nJe suis aussi un fan des Écailles\pCœur.\pApporte-m’en une.\pSi tu fais ça, j’apprendrai une\ncapacité à un Pokémon.
+0x1A2B88: Je suis le Maître des Capacités.\pJe connais toutes les capacités\nqu’ils apprennent en grandissant.\nJe suis aussi un fan des Écailles\pCœur.\pApporte-m’en une.\pSi tu fais ça, j’apprendrai une\ncapacité à un Pokémon.
 0x1A2C63: Oh ! C’est une vraie Écaille Cœur !\nLaisse-moi deviner, tu veux que\pj’enseigne une capacité ?\n
 0x1A2CC3: Quel Pokémon a besoin d’un cours ?
 0x1A2CE1: Quelle capacité dois-je enseigner ?
 0x1A2CFC: Désolé…\pOn dirait que je n’ai aucune\ncapacité à enseigner à ce Pokémon.
 0x1A2D43: Alors, il me faut une Écaille Cœur.\nQue vas-tu me donner ?
 0x1A2D85: {PLAYER} a donné une Écaille Cœur\nen échange.
-0x1A2DE0: Si tes Pokémon doivent apprendre une capacité, il me faut une\nÉcaille Cœur.
+0x1A2DE0: Si tes Pokémon doivent apprendre\nune capacité, il me faut une\nÉcaille Cœur.
 0x1A2E20: Hein ? Je ne peux enseigner aucune\ncapacité à un Œuf.
 0x1A505B: À bientôt !
 0x1A5075: {PLAYER} a allumé le PC.
@@ -382,7 +382,7 @@
 0x1A52F0: Obtenu {STR_VAR_2} !
 0x1A5301: Dommage ! Il n’y a plus de place\npour un autre {STR_VAR_2}…
 0x1A532F: Le {STR_VAR_2} a été transféré\ndans le PC.
-0x1A5375: Un objet du Cube V3 peut être assigné à Select pour un accès\nrapide.
+0x1A5375: Un objet du Cube V3 peut être\nassigné à Select pour un accès\nrapide.
 0x1A5420: {PLAYER} a allumé le PC.
 0x1A5446: Veux-tu donner un surnom au\n{STR_VAR_2} reçu ?
 0x1A5483: Bienvenue au Centre Pokémon !\pVeux-tu que je soigne tes Pokémon\nà fond ?
@@ -397,7 +397,7 @@
 0x1A5690: {PLAYER} a remis le\n{STR_VAR_1}.
 0x1A56A7: Veux-tu donner un surnom à\nce {STR_VAR_1} ?
 0x1A5700: {PLAYER} a déterré un {STR_VAR_2}\nau fond du sol.
-0x1A58A7: Voyons… Oh là ! Tu n’as capturé que {COLOR}É{STR_VAR_3}{COLOR}Ç\nespèces !\lIl t’en faut\p{COLOR}É{STR_VAR_1}{COLOR}Ç.
+0x1A58A7: Voyons… Oh là ! Tu n’as capturé\nque {COLOR}É{STR_VAR_3}{COLOR}Ç\nespèces !\lIl t’en faut\p{COLOR}É{STR_VAR_1}{COLOR}Ç.
 0x1A5909: …Oh. Je vois. Quand tu auras\p{COLOR}É{STR_VAR_1}{COLOR}Ç espèces,\nrevient.
 0x1A594D: Oh ! Je vois que tu n’as pas de\nplace pour le {STR_VAR_2}.
 0x1A597B: Je cherche le Pokémon\n{STR_VAR_1} !\pTu veux en échanger un contre mon\n{STR_VAR_2} ?
@@ -407,10 +407,10 @@
 0x1A59E7: Il est pas super, mon ancien {STR_VAR_2} ?
 0x1A5AD5: 9Salut !\nTu as un {STR_VAR_1} ?\pTu veux l’échanger contre mon\n{STR_VAR_2} ?
 0x1A5B08: Dommage.
-0x1A5B18: …Ce n’est pas un {STR_VAR_1}. Si tu en obtiens un, échange-le\pavec moi.
+0x1A5B18: …Ce n’est pas un {STR_VAR_1}.\nSi tu en obtiens un, échange-le\pavec moi.
 0x1A5B4A: Merci, t’es un pote !
 0x1A5B60: Alors, mon ancien {STR_VAR_2} ?\nMon {STR_VAR_1} se porte super !
-0x1A5B88: Bingo ! La Carte Magnétique a ouvert la\nporte !
+0x1A5B88: Bingo ! La Carte Magnétique a\nouvert la porte !
 0x1A5BC5: 9Connexion au PC du Prof. Log…\pConnexion au Système d’Éval\ndu Pokédex…
 0x1A5C03: Veux-tu que j’évalue ton Pokédex ?\n
 0x1A5C2E: Lien avec le PC du Prof. Log coupé.
@@ -426,7 +426,7 @@
 0x1A5EC0: Tes Pokémon ont retrouvé toute leur\nforme.\pSi l’énergie ou les PV de tes\nPokémon sont bas, viens nous voir.\pSi tu pars loin sur le terrain,\nachète des Potions au Magasin.\lOn compte sur toi !\p
 0x1A5F9B: Tes Pokémon ont retrouvé toute leur\nforme.\pOn compte sur toi !
 0x1A5FDF: {PLAYER} !\nBienvenue à la maison.\pOn dirait que tu as vécu pas mal\nd’aventures.\pTu devrais peut-être te reposer.\n
-0x1A6046: Ah, parfait ! Toi et tes Pokémon avez bien meilleure mine.\pSi les PV de tes Pokémon sont bas,\nsoigne-les dans un\p{COLOR}ÉCentre Pokémon{COLOR}Ç !\nLe plus proche d’ici est à\p{COLOR}ÉBellin Town{COLOR}Ç.\nOu achète des\p{COLOR}ÉPotions{COLOR}Ç au\n{COLOR}ÉPoké Mart{COLOR}Ç !\pC’est toujours bien de se préparer\nau pire.\pRends-moi fier, chéri !\pPrends soin de toi !
+0x1A6046: Ah, parfait ! Toi et tes Pokémon\navez bien meilleure mine.\pSi les PV de tes Pokémon sont bas,\nsoigne-les dans un\p{COLOR}ÉCentre Pokémon{COLOR}Ç !\nLe plus proche d’ici est à\p{COLOR}ÉBellin Town{COLOR}Ç.\nOu achète des\p{COLOR}ÉPotions{COLOR}Ç au\n{COLOR}ÉPoké Mart{COLOR}Ç !\pC’est toujours bien de se préparer\nau pire.\pRends-moi fier, chéri !\pPrends soin de toi !
 0x1A6196: 9{PLAYER} n’a plus de Pokémon utilisables !\n{PLAYER} panique et perd\p¥{STR_VAR_1}…\p… … … …\p{PLAYER} s’évanouit !
 0x1A61E5: {PLAYER} n’a plus de Pokémon\nutilisables !\p{PLAYER} s’évanouit !
 0x1A6211: Salut !\nJe peux t’aider ?
@@ -453,8 +453,8 @@
 0x1A70A5: Tu as même les formes évoluées\ndes Pokémon ! Super !
 0x1A70D8: Excellent ! Échange avec des amis\npour en avoir d’autres !
 0x1A7108: Exceptionnel !\nTu es devenu un vrai pro !
-0x1A7137: Je n’ai plus rien à dire ! Tu es le PROFESSEUR Pokémon\nmaintenant !
-0x1A7175: Ton Pokédex est complètement rempli !\nFélicitations !!
+0x1A7137: Je n’ai plus rien à dire !\nTu es le PROFESSEUR Pokémon\nmaintenant !
+0x1A7175: Ton Pokédex est\ncomplètement rempli !\nFélicitations !!
 0x1A71AA: Et ton Pokédex National est :\p{STR_VAR_1} Pokémon vus et\n{STR_VAR_2} Pokémon possédés.
 0x1A71EE: J’ai hâte de te voir remplir le\nPokédex National !
 0x1A722F: Enfin…\pTu as enfin complété le Pokédex !\nC’est magnifique !\pC’est vraiment un exploit !\n
@@ -469,13 +469,13 @@
 0x1BC3C7: Tu peux combattre un autre Dresseur\nvia un câble Game Link GBA.
 0x1BC409: Pour un Combat Duo, il faut avoir\nau moins deux Pokémon.
 0x1BC442: Pour un échange, tu dois avoir au\nmoins deux Pokémon avec toi.
-0x1BC47C: Un Pokémon tenant la Baie {STR_VAR_1} ne peut pas être\néchangé.
+0x1BC47C: Un Pokémon tenant la Baie\n{STR_VAR_1} ne peut pas être échangé.
 0x1BC4AC: Attends s’il te plaît.\n… … Bouton B : Annuler
 0x1BC4CE: Quand tout le monde est prêt…\nBouton A : Valider\lBouton B : Annuler
 0x1BC50D: Lancer le lien avec {STR_VAR_1} joueurs.\nBouton A : Valider\lBouton B : Annuler
 0x1BC54C: En attente de liaison…\n… … Bouton B : Annuler
 0x1BC590: Entre, s’il te plaît.
-0x1BC59E: Je vais te guider vers ta salle maintenant.
+0x1BC59E: Je vais te guider vers ta salle\nmaintenant.
 0x1BC5C0: Quelqu’un n’est pas prêt à se lier.\pReviens quand tout le monde sera\npréparé.
 0x1BC615: Désolé, erreur de liaison…\nRéinitialise et réessaie.
 0x1BC64E: Il semble que les partenaires aient\nfait des choix différents.
@@ -503,21 +503,21 @@
 0x1BCACB: Tu peux combattre tes amis ici.\n
 0x1BCAF2: De deux à cinq Dresseurs peuvent\nfaire de la POUDRE BAIE ensemble.
 0x1BCB42: Annule l’élément du MENU choisi.
-0x1BCB81: Pour utiliser le service Broyeur Baies, tu dois avoir au moins une\nBaie.
-0x1BCBC3: Pour entrer dans la Salle Union, tu dois avoir au moins deux\nPokémon.
-0x1BCC00: Aucun Pokémon tenant la Baie {STR_VAR_1} ne peut entrer dans la\nSalle Union.
+0x1BCB81: Pour utiliser le service Broyeur\nBaies, tu dois avoir au moins une\nBaie.
+0x1BCBC3: Pour entrer dans la Salle Union,\ntu dois avoir au moins deux\nPokémon.
+0x1BCC00: Aucun Pokémon tenant la Baie\n{STR_VAR_1} ne peut entrer dans la\nSalle Union.
 0x1BCC3A: Voici la Salle Union du Club Sans\nFil Pokémon.\pMalheureusement, ton Adaptateur\nSans Fil n’est pas bien connecté.\pReviens nous voir.
 0x1BCCCA: On dirait que {STR_VAR_1} joue en\nce moment.\lVas-y !
 0x1BD28D: Bienvenue au Coin Direct du Club\nSans Fil Pokémon.\pIci, tu peux interagir directement\navec tes amis.\pDans quelle salle veux-tu entrer ?\n
 0x1BD317: Veux-tu échanger des Pokémon ?
 0x1BD338: Quel Mode de Combat veux-tu\njouer ?
 0x1BD362: Veux-tu utiliser le Système\nBroyeur Baies ?
-0x1BD390: Il y a trois Modes de Combat. Le Combat Solo est pour deux Dresseurs avec au moins un Pokémon chacun.\pChaque Dresseur peut avoir un\nPokémon en combat à la fois.\pLe Combat Duo est pour deux\nDresseurs avec au moins deux\pPokémon chacun.\nChaque Dresseur envoie deux\pPokémon en combat à la fois.\nLe Combat Multi est pour quatre\pDresseurs avec au moins un Pokémon\nchacun.\pChaque Dresseur peut avoir un\nPokémon en combat à la fois.
+0x1BD390: Il y a trois Modes de Combat.\pLe Combat Solo est pour deux\nDresseurs avec au moins un Pokémon\nchacun.\pChaque Dresseur a un Pokémon en\ncombat à la fois.\pLe Combat Duo est pour deux\nDresseurs avec au moins deux\nPokémon chacun.\pChaque Dresseur envoie deux\nPokémon en combat.\pLe Combat Multi est pour quatre\nDresseurs avec au moins un Pokémon\nchacun.\pChaque Dresseur a un Pokémon en\ncombat à la fois.
 0x1BD51B: Décidez lequel de vous deux sera\nChef.\pL’autre doit ensuite choisir\n« Rejoindre Groupe ».
 0x1BD582: Décidez lequel de vous quatre sera\nChef de Groupe.\pLes autres doivent ensuite choisir\n« Rejoindre Groupe ».
 0x1BD5F1: Décidez qui sera Chef de Groupe.\nLes autres doivent ensuite choisir\p« Rejoindre Groupe ».\n
 0x1BD65B: Bienvenue dans la Salle Union du\nClub Sans Fil Pokémon.\pIci, tu peux interagir directement\navec d’autres Dresseurs, parfois\linconnus.\pVeux-tu entrer dans la salle ?
-0x1BD706: Les Dresseurs de la Salle Union sont ceux autour de toi qui y sont\nentrés.\lIci, tu peux faire plein de choses,\pcomme échanger des salutations.\nTu peux inscrire deux Pokémon\pjusqu’au N. 30 pour un combat\nun contre un.\pTu peux participer à un chat à\ndeux à cinq.\pOu inscrire un Pokémon à\nl’échange.\pVeux-tu entrer dans la salle ?
+0x1BD706: Les Dresseurs de la Salle Union\nsont ceux autour de toi déjà\nentrés.\lIci, tu peux faire plein de\nchoses, comme échanger des\nsalutations.\pTu peux inscrire deux Pokémon\njusqu’au N. 30 pour un combat\nun contre un.\pTu peux participer à un chat à\ndeux à cinq.\pOu inscrire un Pokémon à\nl’échange.\pVeux-tu entrer dans la salle ?
 0x1BD86A: Profite bien de la Salle Union.\n
 0x1BD898: Bonjour !\nJe m’appelle Teala.\pC’est ta première fois ici.\nJe vais te montrer comment marche\ple Système de Communication Sans\nFil.\pD’abord, je dois te montrer cet\nétage de notre Centre Pokémon.\pPar ici, s’il te plaît.
 0x1BD966: À l’étage du haut, il y a deux\nsalles.\pD’abord, la salle de gauche.\nC’est la Salle Union.\pTu peux te lier avec des\nDresseurs autour de toi qui sont\ldans la Salle Union.\pAvec eux, tu peux discuter,\ncombattre et échanger.\pEnsuite, la salle de droite est le\nCoin Direct.\pTu peux échanger ou combattre des\nPokémon avec tes amis ici.\pSi l’Adaptateur Sans Fil n’est pas\nconnecté, tu peux toujours te lier\lavec un câble Game Link GBA.\pDans ce cas, tu dois aller au Coin\nDirect.\pProfite bien du Système de\nCommunication Sans Fil.
@@ -534,12 +534,12 @@
 0x1BE378: {STR_VAR_1} utilise Cascade.
 0x1BE469: La mer est profonde ici.\nVeux-tu utiliser Plongée ?
 0x1BE49B: {STR_VAR_1} utilise Plongée.
-0x1BE4A9: Une lumière descend d’en haut. Un Pokémon peut peut-être\nremonter.
+0x1BE4A9: Une lumière descend d’en haut.\nUn Pokémon peut peut-être remonter.
 0x1BE4EF: Une lumière descend d’en haut.\nVeux-tu utiliser Plongée ?
-0x1BE52F: Il y a un obstacle au-dessus. Plongée ne peut pas être utilisée\nici.
+0x1BE52F: Il y a un obstacle au-dessus.\nPlongée ne peut pas être utilisée.
 0x1BE564: Ô ヘqéËÌÂÁLooks like there’s nothing here…
 0x1BF017: Dis-moi quelque chose sur toi.\nQuel est ton profil ?
-0x1BF053: Un profil s’écrit avec quatre mots ou phrases.\nIl y a plein de mots à choisir pour\pfaire ton profil.\nLes mots et phrases sont rangés en\pplusieurs groupes pratiques.\nD’abord, choisis un groupe, puis un\pmot ou une phrase.\n…C’est plus simple que ça en a\pl’air.\nPourquoi ne pas essayer ?
+0x1BF053: Un profil s’écrit avec quatre mots\nou phrases.\nIl y a plein de mots à choisir pour\pfaire ton profil.\nLes mots et phrases sont rangés en\pplusieurs groupes pratiques.\nD’abord, choisis un groupe, puis un\pmot ou une phrase.\n…C’est plus simple que ça en a\pl’air.\nPourquoi ne pas essayer ?
 0x1BF166: Quel est ton profil ?
 0x1BF17B: Oh… Ne fais pas ça.\nTu peux me donner ton profil.
 0x1BF1B2: Oh, tu as changé d’avis ?\nTu es capricieux, hein ?
@@ -554,12 +554,12 @@
 0x1BF5E3: Ah, c’est toi !\pOn élevait tes Pokémon et… quelle\nsurprise !\pTes Pokémon ont eu un Œuf !\pOn ne sait pas comment, mais tes\nPokémon l’ont fait.\pTu le veux, n’est-ce pas ?
 0x1BF69A: Ah, c’est toi ! Ravi de te voir.\nTon {STR_VAR_1} va très bien.
 0x1BF6CF: D’accord, je le garde.\nMerci !
-0x1BF6F0: Tu n’as pas de place… Reviens quand tu auras de la\nplace.
+0x1BF6F0: Tu n’as pas de place… Reviens quand\ntu auras de la place.
 0x1BF72A: {PLAYER} a reçu l’Œuf du Pépé\nPension.
 0x1BF755: Prends-en bien soin.
 0x1BF789: Ah, c’est toi ! Tes {STR_VAR_1} et\n{STR_VAR_2} vont très bien.
 0x1BF7B6: Je vais vraiment le garder.\nTu le veux, non ?
-0x1BF7E4: Je suis la Mémé Pension. On peut élever des Pokémon pour\ptoi.\pVeux-tu qu’on en élève un ?
+0x1BF7E4: Je suis la Mémé Pension. On peut\nélever des Pokémon pour toi.\pVeux-tu qu’on en élève un ?
 0x1BF839: Quel Pokémon doit-on élever pour\ntoi ?
 0x1BF860: D’accord, on va élever ton\n{STR_VAR_1} un moment.\pReviens le récupérer plus tard.
 0x1BF89F: On peut élever deux de tes Pokémon.\pVeux-tu qu’on en élève un autre\npour toi ?
@@ -570,7 +570,7 @@
 0x1BF976: D’accord.\nReviens.
 0x1BF988: Ah, c’est toi !\nContent de te voir.\pTes Pokémon ne peuvent qu’aller\nbien !
 0x1BF9CC: Ton {STR_VAR_1} a gagné {STR_VAR_2}\nniveaux.
-0x1BF9EF: Ton équipe est pleine. Fais de la place puis reviens me\nvoir.
+0x1BF9EF: Ton équipe est pleine. Fais de la\nplace puis reviens me voir.
 0x1BFA3B: Si tu veux récupérer ton {STR_VAR_1},\nça coûtera ¥{STR_VAR_2}.
 0x1BFA67: Parfait !\nVoilà ton Pokémon.
 0x1BFA85: {PLAYER} a repris {STR_VAR_1} à la\nMémé Pension.
@@ -609,14 +609,14 @@
 0x1C12D6: Ici, des signes évidents de vol…\n
 0x1C1300: Il y a un Pokémon à la télé !\nIl a l’air de s’amuser.
 0x1C1367: {DOWN_ARROW}ÛêË¿  ぁœ ûざ œぜÀúÁタ The battery isn’t charged enough.\nNo. of steps required to fully\pcharge the battery:\n{STR_VAR_1}{PAUSE_UNTIL_PRESS}
-0x1C13D6: Aucun Dresseur en portée pour se battre…\nLe Cherche VS a été éteint.\p{PAUSE_UNTIL_PRESS}
-0x1C1429: Les autres Dresseurs ne semblent pas prêts à se battre.\nAttendons plus tard.\p{PAUSE_UNTIL_PRESS}
+0x1C13D6: Aucun Dresseur en portée pour se\nbattre…\nLe Cherche VS a été éteint.\p{PAUSE_UNTIL_PRESS}
+0x1C1429: Les autres Dresseurs ne semblent\npas prêts à se battre.\nAttendons plus tard.\p{PAUSE_UNTIL_PRESS}
 0x1C27E6: 9Le bord de la plage n’est pas si\npeu profond.
 0x1C55C9: Veux-tu sauvegarder la partie ?
 0x1C55EA: Il y a déjà une sauvegarde.\nÉcraser quand même ?
 0x1C5625: SAUVEGARDE…\nNE PAS ÉTEINDRE.
 0x1C5647: {PLAYER} a sauvegardé la partie.
-0x1C566A: AVERTISSEMENT ! Une autre partie est déjà\psauvegardée.\nSi tu sauvegardes maintenant, cette\paventure, ses objets et Pokémon\nseront perdus.\lEs-tu sûr de vouloir sauvegarder\pmaintenant et écraser l’autre\nfichier ?
+0x1C566A: AVERTISSEMENT ! Une autre partie est\nsauvegardée.\nSi tu sauvegardes maintenant, cette\paventure, ses objets et Pokémon\nseront perdus.\lEs-tu sûr de vouloir sauvegarder\pmaintenant et écraser l’autre\nfichier ?
 0x1C574F: Nouveau Nom
 0x1C5758: GREEN
 0x1C5762: FEUILLE
@@ -660,7 +660,7 @@
 0x1C59F7: es-tu une fille ?
 0x1C5A04: Dans le monde où tu vas entrer,\ntu vivras une grande aventure dont\ntu es le héros.
 0x1C5A6B: Parle aux gens et examine tout,\nque ce soit en ville, sur les\nroutes ou dans les grottes.\nCollecte infos et indices partout.
-0x1C5AEB: Pendant ton aventure, tu prendras\nbeaucoup de décisions.\n\n\nSouviens-toi, tes actes peuvent influer et changer le monde\nautour de toi.\n
+0x1C5AEB: Pendant ton aventure, tu prendras\nbeaucoup de décisions.\n\n\nSouviens-toi, tes actes peuvent\ninfluer et changer le monde\nautour de toi.\n
 0x1EAF1A: FgFüF
 0x1EAF3A: FüFgF
 0x1EB09A: FíFgF
@@ -893,14 +893,14 @@
 0x24F20D: DRAGON
 0x24F217: TÉNÈBR
 0x24F3C1: È  Aucune capacité spéciale.
-0x24F3D8: Aide à repousser les Pokémon sauvages.
+0x24F3D8: Aide à repousser les Pokémon\nsauvages.
 0x24F3F2: Fait tomber la pluie en combat.
 0x24F40A: Augmente la Vitesse graduellement.
 0x24F422: Bloque les coups critiques.
 0x24F438: Annule les attaques KO d’un coup.
 0x24F452: Empêche l’auto-destruction.
 0x24F46D: Empêche la paralysie.
-0x24F481: Esquive accrue sous tempête de sable.
+0x24F481: Esquive accrue sous tempête\nde sable.
 0x24F49D: Paralyse au contact.
 0x24F4B3: Transforme l’électricité en PV.
 0x24F4CE: Transforme l’eau en PV.
@@ -908,7 +908,7 @@
 0x24F4FA: Annule les effets météo.
 0x24F513: Augmente la Précision.
 0x24F524: Empêche le sommeil.
-0x24F534: Change de type selon l’attaque adverse.
+0x24F534: Change de type selon l’attaque\ndu rival.
 0x24F550: Empêche l’empoisonnement.
 0x24F564: Boosté si touché par le feu.
 0x24F57E: Annule les effets secondaires.
@@ -1366,7 +1366,7 @@
 0x3D8D37: Sac ramassant la cendre volcanique\nautomatiquement en marchant sur la\ncendre épaisse.
 0x3D8D85: Clé de Nouv. Mauville, bâtie sous\nCÉLADOPOLIS.\n
 0x3D8DCB: Vélo pliant pour figures comme\nsauts et roues arrière.
-0x3D8E10: Étui pour garder des オカキクケ faits au Mixeur à Baies.\nLibère une オカキクケ en le\nsecouant.
+0x3D8E10: Étui pour des オカキクケ faits au\nMixeur à Baies.\nLibère une オカキクケ en le\nsecouant.
 0x3D8E68: Lettre très importante pour Pierre\nvenant du PRÉSIDENT de Devon.\n
 0x3D8EBD: Ticket pour le ferry vers une île du\nsud. Dessiné avec une île.\n
 0x3D8F2A: Orbe rouge qui brille.\nRenfermerait une puissance antique.\n
@@ -2411,7 +2411,7 @@
 0x3FB3D3: {B_DEF_NAME_WITH_PREFIX} a esquivé\nl'attaque !
 0x3FB41A: {B_PLAYER_NAME} gagne ¥{UNKNOWN_STR}\npour sa victoire !\p
 0x3FB433: {B_PLAYER_NAME} n'a plus de\nPokémon utilisable !\p
-0x3FB484: {B_PLAYER_NAME} n'a plus de Pokémon utilisable ! Perdu face à\n{B_TRAINER1_CLASS}\p{B_TRAINER1_NAME}!\n{PAUSE_UNTIL_PRESS}
+0x3FB484: {B_PLAYER_NAME} n'a plus de\nPokémon utilisable ! Perdu face à\n{B_TRAINER1_CLASS}\p{B_TRAINER1_NAME}!\n{PAUSE_UNTIL_PRESS}
 0x3FB4BE: {B_PLAYER_NAME} paye ¥{UNKNOWN_STR} au vainqueur…… … … …\n{B_PLAYER_NAME}\pa été K.O.!\p{PAUSE_UNTIL_PRESS}
 0x3FB4F7: {B_PLAYER_NAME} a été K.O.! {PAUSE_UNTIL_PRESS}
 0x3FB508: {B_SCR_ACTIVE_NAME_WITH_PREFIX} empêche la fuite avec\n{B_SCR_ACTIVE_ABILITY}!\p
@@ -2660,7 +2660,7 @@
 0x3FCFA0: Avale a échoué !\n
 0x3FCFC2: Le vent devient Canicule !\n
 0x3FCFE4: Tous les changements de stats\nsont annulés !
-0x3FD006: Des pièces sont éparpillées partout !
+0x3FD006: Des pièces sont éparpillées\npartout !
 0x3FD022: Trop faible pour faire un clone !\n
 0x3FD048: Les combattants partagent\nleur douleur !
 0x3FD068: Une cloche tinte !
@@ -2765,13 +2765,13 @@
 0x3FDAB1: Tu lances une Ball, hein ?\nJe... je vais faire de mon mieux !
 0x3FDAE2: Journal : Oh, bon sang...\nToujours pressé.\p{B_PLAYER_NAME}.\pTu n'as jamais fait de combat\nPokémon, hein ?\pUn combat oppose les Pokémon\ndes Dresseurs entre eux.\l\p
 0x3FDB92: Le Dresseur qui met K.O. les\nPokémon adverses en baissant\lleurs PV à «0» gagne.\p
-0x3FDBEF: Mais plutôt qu'en parler, tu apprendras mieux par l'expérience.\nEssaye de combattre\ppour voir.\p
+0x3FDBEF: Mais plutôt qu'en parler, tu\napprendras mieux par l'expérience.\nEssaye de combattre\ppour voir.\p
 0x3FDC58: Infliger des dégâts à l'ennemi\nest la clé de tout combat.\p
 0x3FDC95: Baisser les stats de l'ennemi\nt'avantage.\p
 0x3FDCD2: Garde un œil sur les PV\nde ton Pokémon.\pIl tombera K.O. si ses PV\natteignent «0».\p
 0x3FDD23: Non ! Pas de fuite d'un combat\ncontre un Dresseur !\p
 0x3FDD64: Hm ! Excellent !\pSi tu gagnes, tu as de l'argent,\net ton Pokémon grandit !\pAffronte d'autres Dresseurs\npour les rendre forts !\p
-0x3FDDEB: Hm... Quelle déception... Si tu gagnes, tu as de l'argent,\net tes Pokémon grandissent.\pSi tu perds, {B_PLAYER_NAME},\ntu paies.\pJe paie cette fois,\nmais dehors ce sera différent.\pRenforce tes Pokémon en battant\ndes Pokémon sauvages.\p\nmais dehors ce sera différent.\pRenforce tes Pokémon en battant\ndes Pokémon sauvages.\p
+0x3FDDEB: Hm... Quelle déception... Si tu\ngagnes, tu as de l'argent,\net tes Pokémon grandissent.\pSi tu perds, {B_PLAYER_NAME},\ntu paies.\pJe paie cette fois,\nmais dehors ce sera différent.\pRenforce tes Pokémon en battant\ndes Pokémon sauvages.\p\nmais dehors ce sera différent.\pRenforce tes Pokémon en battant\ndes Pokémon sauvages.\p
 0x3FE672: Quoi ?\n{STR_VAR_1} évolue!
 0x3FE688: Félicitations ! Ton {STR_VAR_1}\na évolué en {STR_VAR_2}!\p {WAIT_SE}
 0x3FE6B5: Hein ? {STR_VAR_1}\nn'évolue plus!\p
@@ -2944,9 +2944,9 @@
 0x416631: La Boîte est pleine. {PAUSE_UNTIL_PRESS}
 0x416644: QUANT. POUDRE: {STR_VAR_1} {PAUSE_UNTIL_PRESS}
 0x416655: POUDRE
-0x41665C: Tu joues de la FLÛTE POKé. Quelle mélodie\pentraînante !{PAUSE_UNTIL_PRESS}
+0x41665C: Tu joues de la FLÛTE POKé.\nQuelle mélodie entraînante !{PAUSE_UNTIL_PRESS}
 0x416690: Tu joues de la FLÛTE POKé.
-0x4166A7: La FLÛTE POKé réveille les Pokémon endormis.\n{PAUSE_UNTIL_PRESS}
+0x4166A7: La FLÛTE POKé réveille les Pokémon\nendormis.\n{PAUSE_UNTIL_PRESS}
 0x4166D3: Boîte CT
 0x4166DB: Fermer
 0x4166E1: La Boîte CT sera\nrangée.
@@ -2982,11 +2982,11 @@
 0x416A3A: {STR_VAR_1} est déjà\nau combat !{PAUSE_UNTIL_PRESS}
 0x416A55: {STR_VAR_1} est déjà sélectionné.\n{PAUSE_UNTIL_PRESS}
 0x416A75: {STR_VAR_1} n'a plus assez d'énergie\npour se battre !{PAUSE_UNTIL_PRESS}
-0x416A98: Impossible d'échanger le Pokémon de {STR_VAR_1} avec l'un des tiens !\n{PAUSE_UNTIL_PRESS}
+0x416A98: Impossible d'échanger le Pokémon\nde {STR_VAR_1} avec l'un des tiens !\n{PAUSE_UNTIL_PRESS}
 0x416ACB: Un Œuf ne peut pas se battre ! {PAUSE_UNTIL_PRESS}
-0x416AE2: Inutilisable tant qu'un nouveau Badge n'est pas obtenu.\n{PAUSE_UNTIL_PRESS}
-0x416B16: Pas plus de trois Pokémon ne peuvent entrer.\n{PAUSE_UNTIL_PRESS}
-0x416B3E: Pas plus de deux Pokémon ne peuvent entrer.\n{PAUSE_UNTIL_PRESS}
+0x416AE2: Inutilisable tant qu'un nouveau\nBadge n'est pas obtenu.\n{PAUSE_UNTIL_PRESS}
+0x416B16: Pas plus de trois Pokémon ne\npeuvent entrer.\n{PAUSE_UNTIL_PRESS}
+0x416B3E: Pas plus de deux Pokémon ne\npeuvent entrer.\n{PAUSE_UNTIL_PRESS}
 0x416B64: Envoyer le Courrier retiré\nsur ton PC ?
 0x416B86: Courrier envoyé sur ton PC.{PAUSE_UNTIL_PRESS}
 0x416BA6: La Boîte Mail du PC est pleine.{PAUSE_UNTIL_PRESS}
@@ -5835,9 +5835,9 @@
 0x7891AB: Officier 1 : {COLOR}ËL'étang ? Merci!\nVous avez fait une grande différence\pdans la guerre contre la drogue !\nBon travail !
 0x78920B: Duuuu
 0x78928E: Eh bien, alors, saviez-vous que si vous parlez aux arbitres du gymnase après\nbattre le leader du gymnase, ils\lvous donneront également un cadeau\là ce moment-là ?\pDidja ? Didja ?
-0x789474:   7デリË¿  àŒっÂ フÁNo!\nYou need to recover the package!
+0x789474: 7デリË¿  àŒっÂ フÁNo!\nYou need to recover the package!
 0x78A265: Ë È âÁLa Ligue Pokémon diffuse un\nspécial sur l'histoire de Borrian.\pVoulez-vous le regarder ?
-0x78A60D:   ぞ5リË¿  àŒっÇ フÁNo!\nYou need to return the package!
+0x78A60D: ぞ5リË¿  àŒっÇ フÁNo!\nYou need to return the package!
 0x78A736: La responsable du gymnase, {COLOR}ÉAlice{COLOR}Ç, habite en bas. Elle dirige le gymnase la plupart du\ntemps , donc elle laisse\pgénéralement\nson enfant seul à la maison.\lJe, personnellement, je ne\plaisserais jamais mon fils seul à la\nmaison.\pSon esprit est trop délicat.\pIl ne supporte pas d'être sans sa\nmaman !
 0x78A95E: Ahaha, jeune entraîneur !\pPourriez-vous m'aider avec une autre\ntâche ?
 0x78A9D7: タœ ÊÀñZァËÁM Ô Ë9リËÌÉàŒっÈ フÁオぞÈ àŒっÈ フÁÔ ÀゾラËÌÉフÁÁOh!\nYou found Prof. Log’s package!\pIf it isn’t too much to ask, would\nyou be able to deliver it to him?\pIt’s his order, but he doesn’t want\nto come pick it up.
@@ -6423,7 +6423,7 @@
 0x7C0F3E: Bon travail, {PLAYER}.\pMaintenant, il y a un criminel de\nmoins en en liberté.\pIl ne reste plus que {STR_VAR_1}.\pContinuez à chercher pendant que je\nramène cet homme au poste.
 0x7C0FC1: Bon travail, {PLAYER}. Vous semblez avoir appréhendé tous\pdes crétins.\nSeul leur patron est toujours à\plarge.\nRegroupons-nous sur {COLOR}ÉRoute\p10{COLOR}Ë près des escaliers pour\ndéterminer son emplacement.
 0x7C1157: Aww merde…
-0x7C120F:  8Ú{RIGHT_ARROW}ËÂHeh, on dirait que le petit détective est venu après\nmoi.\pJe vais t'apprendre à ne pas\ntraverser le Terror Granbull !
+0x7C120F: 8Ú{RIGHT_ARROW}ËÂHeh, on dirait que le petit détective est venu après\nmoi.\pJe vais t'apprendre à ne pas\ntraverser le Terror Granbull !
 0x7C127E: Comment un enfant punk comme toi\na-t-il pu me battre ?
 0x7C13AF: 9Mon pouvoir caché me dit que tu\nveux ça !
 0x7C13E2: Dans Borrius, le mouvement Pouvoir caché, a une puissance de base de 70.\nDonc, quel que soit son type, il\pfera toujours la même quantité de\ndégâts !
@@ -6655,7 +6655,7 @@
 0x7C8844: Ivoire : {COLOR}ÇIncinérez-la également, Démolosse.\nNous n'avons plus d'utilité pour\pelle.
 0x7C888A: Mais ensuite la plupart de mes amis\nsont retournés d’où ils venaient…
 0x7C88E4: ïÏっœ ÊÀöギ{RIGHT_ARROW}Ëàぐぞß ÁテÂ È Ê ÂAs-tu déjà pris l'Autoroute SES ?\nC'est une voie souterraine qui fait\ple tour de Borrius.\nUn vrai paradis pour routards !\p
-0x7C8981:  un secret !
+0x7C8981: un secret !
 0x7C898C: J'ai entendu dire qu'il y avait quelqu'un à Tarmiganville qui\nenseigne l'art\lde la Méga-Évolution !
 0x7C89E2: Êtes-vous venu ici pour obtenir le\npouvoir de la {COLOR}ÉMéga-Évolution{COLOR}Ë au\l{COLOR}ÉManoir Tarmigan{COLOR}Ë ?\pLa plupart des gens qui viennent ici\ncherchent ça.\pSinon, cette ville n'offre que des\ncauchemars horribles.
 0x7C8AAE: des cauchemars horribles\lla nuit.
@@ -7407,7 +7407,7 @@
 0x7F5D67: ïÏっざ ÉÀ5)ァËÔ ·)ァËÌÁâûぃ Ô ドセァËÌÁâぽÀ JセァË¿  テÀ É Ó ナÀ こ%À ÇàÏっざ ÁÔ ドセァËÌÁÁThe legend of Giratina has been all\nbut forgetten but to a few…\pThe legend told of a world on the\nother side of ours. This world.\pWhy does this world exist?\nWhy is Giratina here all alone?\pThere’s so much that can’t be\nexplained…
 0x7F5E95: Séparons-nous. Nous devons trouver\nle bon chemin.
 0x7F5FCF: {COLOR}ËÇa y est… Giratina est\ndevant.
-0x7F62E7:   ピ ユË¿  ÂLet’s go meet Giratina.\p…Whoops, let me heal your\nPokémon first.
+0x7F62E7: ピ ユË¿  ÂLet’s go meet Giratina.\p…Whoops, let me heal your\nPokémon first.
 0x7F6331: Jax a complètement guéri le Pokémon\nde {PLAYER}.
 0x7F6350: Maintenant, allons à la rencontre de Giratina !
 0x7F636C: Il n'y a rien à craindre de Giratina. Il est peut-être le dirigeant de ce\nmonde, mais je suis sûr que vous\ppouvez le vaincre et\nmontrer le lien étroit que vous\lpartagez avec\lvotre Pokémon !\pSi vous réussissez, Giratina nous\ncomprendra.\pIl nous montrera la sortie !
@@ -7417,7 +7417,7 @@
 0x7F6960: {COLOR}ËRentrons à la maison.\pLe portail où se trouvait Giratina\ndevrait conduire vers notre monde.\pGiratina a été écrit dans la légende\ncomme étant de l'autre côté de notre\lmonde.\pIl va de soi qu'il a un lien vers\nl'autre côté.
 0x7F6AE0: {COLOR}ËC'est Rift Cave… On dit qu'elle a d'une manière ou\pd'une autre une connexion avec le\ngrand au-delà…\pEt Giratina vivait dans un monde\nopposé au nôtre…
 0x7F6B6D: {COLOR}ËJe suppose que cela doit signifier que nous sommes arrivés dans notre monde. Je ne peux pas vous remercier assez pour m'aider à m'échapper de cet\nendroit.\pMais maintenant nous devons nous\nconcentrer.\pIl est temps de trouver les Ombres\pet mettre fin à leur plan diabolique\n!\p…\pQuoi ? Les Ombres sont déjà\nterminées ?\pMais il y a une nouvelle menace qui\nse cache à Bourg Vivill ?\pIl n'y a pas de temps à perdre alors\n! En route pour Bourg Vivill !
-0x7F6E39:   NミァËぽÑ RミァË¿  {PK}Ñ ÁSomething unseeable is in the way.
+0x7F6E39: NミァËぽÑ RミァË¿  {PK}Ñ ÁSomething unseeable is in the way.
 0x7F6E6F: ??? : {COLOR}Ë Bouge, gamin !\pTu bloques la route !
 0x7F6E9C: {COLOR}ËHuh ?\pIl y a quelque chose qui gêne ?\pIl vaudrait mieux que ce ne soit pas\nce Pokémon encore…
 0x7F6EE7: {COLOR}ËPrenez ceci.\pIl devrait éliminer tout ce qui\nbloque la route.
@@ -7628,16 +7628,16 @@
 0x8280A4: kiiiiRRRR   RRRRiiii
 0x82FFDA: ェËザ ォË    â ォËざ ォË{UNKNOWN_STR} a retrouvé sa\nvraie puissance via l'Ultra-Évolution !
 0x83001C: {UNKNOWN_STR} Mega a évolué en Mega\n{STR_VAR_3} !
-0x83003B:  Une lumière vive est sur le point\nd’éclater de {UNKNOWN_STR} !
-0x830066:  Le fervent souhait de {STR_VAR_1}\natteint {UNKNOWN_STR} !
-0x83008A:  Le {PLAYER} de {UNKNOWN_STR} réagit\nau {STR_VAR_2} de {STR_VAR_1} !
-0x830340:        lz zzÙlzzmlzzÙlzzm zzÙ  lz    zÓ  Ùzz zzzÓmìÙÓzzzÓÙzz zÓ        lz zzÙlzzmlzzÙlzzm zzÙ  lz    zÓ  Ùzz zzzÓmzzÓzzzÓÙzz zÓ        lz zzÙlzzmlzzÙlzzm zzÙ  lz    zÓ  Ùzz zzmÓmìÙÓzzmÓÙzz zÓ        lz zzAlzzwlzzwlzzw zzA  lz    z   wzz DzzÓDDAÓDzzÓwzz z         lz zzAlzzwlzzwlzzw zzA  lz    z   wzz DzzÓDzzÓDzzÓwzz zÓ        lz zzAlzzwlzzwlzzw zzA  lz    z   wzz DzwÓDDAÓDzwÓwzz z          z zzセlzzqlzzqlzzq zzセ   z    z   qzz セzzÓzセオÓセzzÓqzz z          z zzセlzzqlzzqlzzq zzセ   z    z   qzz セzzÓzzzÓセzzÓqzz z          z zzセlzzqlzzqlzzq zzセ   z    z   qzz セzqÓzセオÓセzqÓqzz z         lz zzラlzzslzzラlzzs zzラ  lz    z   szz ンzzÓsンラÓンzzÓszz z         lz zzラlzzslzzラlzzs zzラ  lz    z   szz ンzzÓszzÓンzzÓszz z         lz zzラlzzslzzラlzzs zzラ  lz    z   szz ンzsÓsンラÓンzsÓszz z          z zzホlzzrlzzニlzzr zzr  lz    z   rzz ホzzÓニホニÓホzzÓホzz zÓ         z zzホlzzrlzzニlzzr zzr  lz    z   rzz ホzzÓニzzÓホzzÓホzz zÓ         z zzホlzzrlzzニlzzr zzr  lz    z   rzz ホzrÓニホニÓホzrÓホzz zÓ         z zzずlzzolzzずlzzz zzぉ  lz    zÓ  ぉzz zzzÓozzÓずzzÓozz z                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   
+0x83003B: Une lumière vive est sur le point\nd’éclater de {UNKNOWN_STR} !
+0x830066: Le fervent souhait de {STR_VAR_1}\natteint {UNKNOWN_STR} !
+0x83008A: Le {PLAYER} de {UNKNOWN_STR} réagit\nau {STR_VAR_2} de {STR_VAR_1} !
+0x830340: lz zzÙlzzmlzzÙlzzm zzÙ  lz    zÓ  Ùzz zzzÓmìÙÓzzzÓÙzz zÓ        lz zzÙlzzmlzzÙlzzm zzÙ  lz    zÓ  Ùzz zzzÓmzzÓzzzÓÙzz zÓ        lz zzÙlzzmlzzÙlzzm zzÙ  lz    zÓ  Ùzz zzmÓmìÙÓzzmÓÙzz zÓ        lz zzAlzzwlzzwlzzw zzA  lz    z   wzz DzzÓDDAÓDzzÓwzz z         lz zzAlzzwlzzwlzzw zzA  lz    z   wzz DzzÓDzzÓDzzÓwzz zÓ        lz zzAlzzwlzzwlzzw zzA  lz    z   wzz DzwÓDDAÓDzwÓwzz z          z zzセlzzqlzzqlzzq zzセ   z    z   qzz セzzÓzセオÓセzzÓqzz z          z zzセlzzqlzzqlzzq zzセ   z    z   qzz セzzÓzzzÓセzzÓqzz z          z zzセlzzqlzzqlzzq zzセ   z    z   qzz セzqÓzセオÓセzqÓqzz z         lz zzラlzzslzzラlzzs zzラ  lz    z   szz ンzzÓsンラÓンzzÓszz z         lz zzラlzzslzzラlzzs zzラ  lz    z   szz ンzzÓszzÓンzzÓszz z         lz zzラlzzslzzラlzzs zzラ  lz    z   szz ンzsÓsンラÓンzsÓszz z          z zzホlzzrlzzニlzzr zzr  lz    z   rzz ホzzÓニホニÓホzzÓホzz zÓ         z zzホlzzrlzzニlzzr zzr  lz    z   rzz ホzzÓニzzÓホzzÓホzz zÓ         z zzホlzzrlzzニlzzr zzr  lz    z   rzz ホzrÓニホニÓホzrÓホzz zÓ         z zzずlzzolzzずlzzz zzぉ  lz    zÓ  ぉzz zzzÓozzÓずzzÓozz z                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   
 0x830CD0: Construction de puissance
 0x830CE0: Les {B_ATK_ABILITY} de {B_ATK_NAME_WITH_PREFIX} ont fait\npleuvoir !
 0x830CF6: Les {B_ATK_ABILITY} de {B_ATK_NAME_WITH_PREFIX} ont\nintensifié les rayons du soleil !
 0x830D1A: Les {B_ATK_ABILITY} de {B_ATK_NAME_WITH_PREFIX} ont\nprovoqué une tempête de sable !
 0x834ACC: POKéMON
-0x834AE7:  AFFICHAGE EV-IV
+0x834AE7: AFFICHAGE EV-IV
 0x876B49: CASSÉ)
 0x8770F5: feuille de plat
 0x8775F7: anneau
@@ -7656,23 +7656,23 @@
 0x8854D0: {B_TRAINER1_CLASS} {B_TRAINER1_NAME}\nest sur le point d'envoyer {PLAYER}.\lVoulez-vous changer de Pokémon ?
 0x885510: L'adversaire 
 0x8867A7: F9\p▶ ?/AA?!!! F999F!9! ぢREÔUQQ\p EAA
-0x887280:  VRiVRRRVRhA et
-0x887298:  S\p· S{STRING}9 VOUS iShiRBQRgzzi
+0x887280: VRiVRRRVRhA et
+0x887298: S\p· S{STRING}9 VOUS iShiRBQRgzzi
 0x8872D8: づオモ97{DOWN_ARROW}ギ9 VÒ iShiRBQRizzi
-0x887648:   SRR VRi  i             =エôメ
+0x887648: SRR VRi  i             =エôメ
 0x887668: RRRRiRRi Sh  VÒ         9ラキギ
 0x8876A8: RRRRiRRi Sh  VÒ         9ラキギ
 0x8876C8: RRIROVRILL VÒ =Eh
 0x8876E5: TRÒRRh iRÒ i i VRiVRRRVRhA Sy
-0x887718:   S\pァ S{STRING}; VÒ iShiRBQRgzzi
-0x887AC8:   SRR VRi  i             6{DOWN_ARROW}úベ
+0x887718: S\pァ S{STRING}; VÒ iShiRBQRgzzi
+0x887AC8: SRR VRi  i             6{DOWN_ARROW}úベ
 0x887AE8: RRRRiRRi Sh  VÒ         ;{UP_ARROW}9ヌ
 0x887B08: RRRRiShi VÒ             6{DOWN_ARROW}úベ
 0x887B28: RRRRiRRi Sh  VÒ         ;{UP_ARROW}9ヌ
 0x887B48: €€€RiShi VÒ 6Eh
 0x887B65: TRÒRRh iRÒ i i VRiVRRRVRhA Sy
-0x887B98:   S\pソ S{STRING}び VÒ iShiRBQRgzzi
-0x887F48:   SRR VRi  i             ガ79{DOWN_ARROW}
+0x887B98: S\pソ S{STRING}び VÒ iShiRBQRgzzi
+0x887F48: SRR VRi  i             ガ79{DOWN_ARROW}
 0x887F68: RRRRiRRi Sh  VÒ         {SUPER_E}ギラ<
 0x887F88: RRRRiShi VÒ             ガ79{DOWN_ARROW}
 0x887FA8: RRRRiRRi Sh  VÒ         {SUPER_E}ギラ<
@@ -8177,42 +8177,42 @@
 0x9214D4: Après l'attaque, le\nlanceur échange sa\nplace avec un allié.\n
 0x921515: Flash d'énergie qui\nblesse et baisse la\nPrécision.\n
 0x921556: Percute la cible avec\nson corps dur.\nBlesse un peu le\nlanceur.
-0x9215A0:  La cible reçoit une\nonde de soin qui rend\njusqu'à la moitié de\nses PV.
-0x9215EB:  Une énergie\nlumineuse frappe\nl'ennemi. Peut aussi\nbaisser sa Déf. Spé.
-0x921632:  Augmente les stats\noffensives du lanceur\nmais réduit ses stats\ndéfensives.
-0x92167A:  Le lanceur disperse\nune nuée de poudre,\nforçant les ennemis\nà ne viser que lui.
-0x9216C2:  Le corps est forcé\nde grandir, ce qui\naugmente l'Attaque\net l'Att. Spé.
-0x92170B:  Double dégâts sur\nune cible endormie,\nmais la réveille en\nmême temps.
-0x921755:  L'ennemi est tranché\npar des coquilles.\nPeut aussi baisser sa\nDéfense.
-0x92179B:  Mord l'ennemi et\navale sa Baie si\ncelui-ci en tient\nune.
-0x9217DB:  Pique l'ennemi et\nlui vole sa Baie si\ncelui-ci en tient\nune.
-0x92181D:  Permet au lanceur\nde frapper en premier\nsi l'ennemi prépare\nune attaque.
-0x92186B:  Projette de l'eau\nbouillante sur\nl'ennemi. Peut aussi\nbrûler.
-0x9218A8:  Si les PV adverses\nsont à la moitié ou\nmoins, inflige le\ndouble de dégâts.
-0x9218EA:  Provoque un vent\nféérique et frappe\nl'ennemi avec.\n
-0x921927:  Regard attendrissant\nqui baisse l'Attaque\nadverse. Prioritaire.\n
-0x921970:  L'ennemi est malmené\npar le lanceur.\nPeut baisser\nl'Attaque.
-0x9219B5:  L'ennemi subit la\npuissance lunaire,\npeut baisser son\nAtt. Spé.
-0x921A02:  Baiser charmant qui\nsoigne le lanceur de\nla moitié des dégâts\ninfligés.
-0x921A49:  Blesse les ennemis\navec un flash très\npuissant émis par le\nlanceur.
-0x921A8A:  Lance un cri\ncharmant que\nl'on ne peut\nesquiver.
-0x921AC3:  Des rocs lévitent\nprès de l'équipe\nadverse et blessent\nles entrants.
-0x921B10:  Le lanceur s'évanouit\nmais soigne à 100%\nle Pokemon qui le\nremplace.
-0x921B54:  Soulève un Vent Arrière\nqui augmente la Vitesse\nde l'équipe pendant\nquatre tours.
-0x921BA1:  Émet une onde sonore\nterrible qui frappe\ntout autour.\n
-0x921BE6:  Brûle complètement\nl'ennemi et rend sa\nBaie inutilisable.\n
-0x921C2A:  Plante une graine\nanxiogène qui donne\nInsomnie à l'ennemi.\n
-0x921C6F:  Acide gastrique\nsupprime le talent\nadverse.\n
+0x9215A0: La cible reçoit une\nonde de soin qui rend\njusqu'à la moitié de\nses PV.
+0x9215EB: Une énergie\nlumineuse frappe\nl'ennemi. Peut aussi\nbaisser sa Déf. Spé.
+0x921632: Augmente les stats\noffensives du lanceur\nmais réduit ses stats\ndéfensives.
+0x92167A: Le lanceur disperse\nune nuée de poudre,\nforçant les ennemis\nà ne viser que lui.
+0x9216C2: Le corps est forcé\nde grandir, ce qui\naugmente l'Attaque\net l'Att. Spé.
+0x92170B: Double dégâts sur\nune cible endormie,\nmais la réveille en\nmême temps.
+0x921755: L'ennemi est tranché\npar des coquilles.\nPeut aussi baisser sa\nDéfense.
+0x92179B: Mord l'ennemi et\navale sa Baie si\ncelui-ci en tient\nune.
+0x9217DB: Pique l'ennemi et\nlui vole sa Baie si\ncelui-ci en tient\nune.
+0x92181D: Permet au lanceur\nde frapper en premier\nsi l'ennemi prépare\nune attaque.
+0x92186B: Projette de l'eau\nbouillante sur\nl'ennemi. Peut aussi\nbrûler.
+0x9218A8: Si les PV adverses\nsont à la moitié ou\nmoins, inflige le\ndouble de dégâts.
+0x9218EA: Provoque un vent\nféérique et frappe\nl'ennemi avec.\n
+0x921927: Regard attendrissant\nqui baisse l'Attaque\nadverse. Prioritaire.\n
+0x921970: L'ennemi est malmené\npar le lanceur.\nPeut baisser\nl'Attaque.
+0x9219B5: L'ennemi subit la\npuissance lunaire,\npeut baisser son\nAtt. Spé.
+0x921A02: Baiser charmant qui\nsoigne le lanceur de\nla moitié des dégâts\ninfligés.
+0x921A49: Blesse les ennemis\navec un flash très\npuissant émis par le\nlanceur.
+0x921A8A: Lance un cri\ncharmant que\nl'on ne peut\nesquiver.
+0x921AC3: Des rocs lévitent\nprès de l'équipe\nadverse et blessent\nles entrants.
+0x921B10: Le lanceur s'évanouit\nmais soigne à 100%\nle Pokemon qui le\nremplace.
+0x921B54: Soulève un Vent Arrière\nqui augmente la Vitesse\nde l'équipe pendant\nquatre tours.
+0x921BA1: Émet une onde sonore\nterrible qui frappe\ntout autour.\n
+0x921BE6: Brûle complètement\nl'ennemi et rend sa\nBaie inutilisable.\n
+0x921C2A: Plante une graine\nanxiogène qui donne\nInsomnie à l'ennemi.\n
+0x921C6F: Acide gastrique\nsupprime le talent\nadverse.\n
 0x921CAE: Augmente l'Attaque\net l'Att. Spé de\ntous les Pokemon\nPlante.
 0x921CF1: Augmente la Défense\nde tous les Pokemon\nPlante via une\npuissance étrange.
-0x921D3A:  Les Att. Spé., Déf.\nSpé. et Vitesse du\nlanceur montent au\nsecond tour.
-0x921D7D:  Fait tourner ses\ngrenages pour\naugmenter Attaque\net Att. Spé.
-0x921DBF:  Des Pics Toxik sont\nplacés autour de\nl'équipe adverse et\nblessent les entrants.
-0x921E0B:  Une Toile Gluante\nralentit les\nPokemon entrants\nautour de l'ennemi.
-0x921E54:  Attaque avec une\npuissance stockée\nqui augmente à\nchaque stat montée.
-0x921E9C:  Appuie sur ses\npoints vitaux pour\nbeaucoup augmenter\nune stat aléatoire.
-0x921EE5:  Inflige le double\nde dégâts si l'ennemi\na déjà pris des\ndégâts ce tour.
-0x921F28:  Plus l'ennemi a\nmonté ses stats,\nplus la puissance\naugmente.
+0x921D3A: Les Att. Spé., Déf.\nSpé. et Vitesse du\nlanceur montent au\nsecond tour.
+0x921D7D: Fait tourner ses\ngrenages pour\naugmenter Attaque\net Att. Spé.
+0x921DBF: Des Pics Toxik sont\nplacés autour de\nl'équipe adverse et\nblessent les entrants.
+0x921E0B: Une Toile Gluante\nralentit les\nPokemon entrants\nautour de l'ennemi.
+0x921E54: Attaque avec une\npuissance stockée\nqui augmente à\nchaque stat montée.
+0x921E9C: Appuie sur ses\npoints vitaux pour\nbeaucoup augmenter\nune stat aléatoire.
+0x921EE5: Inflige le double\nde dégâts si l'ennemi\na déjà pris des\ndégâts ce tour.
+0x921F28: Plus l'ennemi a\nmonté ses stats,\nplus la puissance\naugmente.
 0x921F70: Empale la cible\navec une corne.\nCette attaque ne\nmanque jamais.
 0x921FBA: Appelle ses sbires\npour rouer l'ennemi\nde coups.\nTaux de critique\nélevé.
 0x922013: Appelle ses sbires\npour protéger son\ncorps, augmentant\nsa Défense et sa\nDéf. Spé.
@@ -8272,7 +8272,7 @@
 0x922CC3: Détecte les coups super efficaces.
 0x922CE1: Prévient de la capacité la plus forte.
 0x922D04: Révèle l'objet tenu par l'ennemi.
-0x922D21:  Inverse les changements de stats.
+0x922D21: Inverse les changements de stats.
 0x922D3A: Empêche l'ennemi de manger des Baies.
 0x922D5D: Les contacts boostent ses stats.
 0x922D7B: Double le poids.
@@ -8385,7 +8385,7 @@
 0x951140: Se propage au contact.
 0x951160: Objet à tenir. Si touché, le lanceur blesse\nl'attaquant au contact.\n
 0x9511D0: Objet à tenir. Les Pokemon Poison soignent\nmais les autres prennent des dégâts.\n
-0x95122F:  Augmente la Vitesse sous la tempête de sable.
+0x95122F: Augmente la Vitesse sous la tempête de sable.
 0x951250: Agir en dernier booste la puissance.
 0x951270: Assure que toutes les capacités touchent.
 0x951290: Objet à tenir. Ce gilet hausse la Déf. Spé\nmais interdit les capacités de statut.\n
@@ -8396,38 +8396,38 @@
 0x9513B0: Attire les attaques Eau.
 0x9513D0: Renforce les capacités Ténèbres.
 0x95F9F4: iiiii{STRING}
-0x95FA00:         ラララÊiiiヲkiii{STRING}kiii{STRING}kiiikii{STRING}iiiikiii
+0x95FA00: ラララÊiiiヲkiii{STRING}kiii{STRING}kiiikii{STRING}iiiikiii
 0x95FA2B: iiii
 0x95FA30: iiiijiiilzzz    kiii{STRING}ki
 0x95FA4B: iiiii
 0x95FA54: iiiizzzz    ki{STRING}iiikii{STRING}ki{STRING}kiikiiiiiiyzzzÓ            :
 0x95FC34: iiiii{STRING}
-0x95FC40:         ラララÊiiiヲkiii{STRING}kiii{STRING}kiiikii{STRING}iiiikiii
+0x95FC40: ラララÊiiiヲkiii{STRING}kiii{STRING}kiiikii{STRING}iiiikiii
 0x95FC6B: iiii
 0x95FC70: iiiijiiilzzz    kiii{STRING}ki
 0x95FC8B: iiiii
 0x95FC94: iiiizzzz    ki{STRING}iiikii{STRING}ki{STRING}kiikiiiiiiyzzzÓ            :
 0x95FE74: iiiii{STRING}
-0x95FE80:         ラララÊiiiヲkiii{STRING}kiii{STRING}kiiikii{STRING}iiiikiii
+0x95FE80: ラララÊiiiヲkiii{STRING}kiii{STRING}kiiikii{STRING}iiiikiii
 0x95FEAB: iiii
 0x95FEB0: iiiijiiilzzz    kiii{STRING}ki
 0x95FECB: iiiii
 0x961B50: Normal
 0x961B57: Combat
-0x961B5D:  Vol
+0x961B5D: Vol
 0x961B65: Poison
 0x961B6C: Sol
 0x961B73: Roche
-0x961B7E:    Spectre
-0x961B87:  Acier
-0x961B93:    Feu
-0x961B9B:   Eau
-0x961BA3:  Plante
-0x961BAA:  Électr
+0x961B7E: Spectre
+0x961B87: Acier
+0x961B93: Feu
+0x961B9B: Eau
+0x961BA3: Plante
+0x961BAA: Électr
 0x961BB2: Psy
-0x961BBD:    Dragon
+0x961BBD: Dragon
 0x961BC7: Tenebr
-0x961BCC:  Combat
+0x961BCC: Combat
 0x961BF1: Fee
 0x96248C: AAA▶AAA▶AAA
 0x9626A3: zwDzDAAAAAAAA                \n▶\nDwzwDAAAAAAAA                ▶AAAzAAAAAAAAAAÎ                w
@@ -9071,7 +9071,7 @@
 0xA376DA: Tactique Crabe
 0xA376EB: Bouclier Visage
 0xA376FC: Rugissement Royal
-0xA3770D:  FばLes effets du climat\nont disparu.
+0xA3770D: FばLes effets du climat\nont disparu.
 0xA37734: {B_SCR_ACTIVE_NAME_WITH_PREFIX}\nexerce sa pression !
 0xA37751: {B_SCR_ACTIVE_NAME_WITH_PREFIX}\nbrise le moule !
 0xA37765: {B_SCR_ACTIVE_NAME_WITH_PREFIX}\ndégage une aura explosive !
@@ -11591,7 +11591,7 @@
 0xA4CAA9: Noir 
 0xA4CAB0: lieu inconnu
 0xA4CAC1: Ex-Admin Ombre
-0xA4CAD1:  FばINSTANT
+0xA4CAD1: FばINSTANT
 0xA4CADC: RAPIDE
 0xA4CAF9: Puissance : 
 0xA4CB01: K.O. direct
@@ -11606,9 +11606,9 @@
 0xA4CB72: Soigne PV entrant
 0xA4CB86: Protection
 0xA4CB93: + Équipe {UNKNOWN_STR}
-0xA4CB9D:  Adversaires
-0xA4CBA8:  Météo
-0xA4CBB1:  Champ
+0xA4CB9D: Adversaires
+0xA4CBA8: Météo
+0xA4CBB1: Champ
 0xA4CBBA: Soleil
 0xA4CBC0: Pluie
 0xA4CBC6: Tempête sable
@@ -11643,7 +11643,7 @@
 0xA4CD94: -- Vitesse ennemis
 0xA4CDA2: Ignore talent ennemi
 0xA4CDB5: Passe Protection
-0xA4CDC7:  MAUVAIS TYPE DE SAUVEGARDE !\nPassez en Flash 128k.\pSi vous utilisez VBA, passez à\nl'excellent {COLOR}ÉmGBA{COLOR}Á.\pSinon, suivez ces étapes :\n{COLOR}ÇVBA{COLOR}Á : Options > Emulator >\pSave Type > Flash 128K.\pFermez et relancez l'émulateur.\p{COLOR}Ç3DS{COLOR}Á : Dans New Super Ultimate VC\nInjector 3DS, définissez {COLOR}ÉROM Save Type{COLOR}Á\psur {COLOR}ÉFlash 1Mbit (Macronix, ID: 0x09C2)\p+ RTC{COLOR}Á.\nL'option d'injection doit être\p{COLOR}ÉGBA Virtual Console{COLOR}Á.\pSi votre émulateur n'est pas listé,\nchangez d'émulateur.\p\n\p\n\p\n\p\n
+0xA4CDC7: MAUVAIS TYPE DE SAUVEGARDE !\nPassez en Flash 128k.\pSi vous utilisez VBA, passez à\nl'excellent {COLOR}ÉmGBA{COLOR}Á.\pSinon, suivez ces étapes :\n{COLOR}ÇVBA{COLOR}Á : Options > Emulator >\pSave Type > Flash 128K.\pFermez et relancez l'émulateur.\p{COLOR}Ç3DS{COLOR}Á : Dans New Super Ultimate VC\nInjector 3DS, définissez {COLOR}ÉROM Save Type{COLOR}Á\psur {COLOR}ÉFlash 1Mbit (Macronix, ID: 0x09C2)\p+ RTC{COLOR}Á.\nL'option d'injection doit être\p{COLOR}ÉGBA Virtual Console{COLOR}Á.\pSi votre émulateur n'est pas listé,\nchangez d'émulateur.\p\n\p\n\p\n\p\n
 0xA4D0BF: ATTENTION !\pL'heure du système est illisible.\nActivez l'horloge RTC et vérifiez\pl'heure.\n
 0xA4D138: ATTENTION !\pL'heure du système est illisible.\nActivez la RTC et vérifiez l'heure.\pSi vous utilisez VBA, passez à\n{COLOR}ÉmGBA{COLOR}Á.\pSinon, suivez : Options > Emulator >\nReal Time Clock.\pFermez et relancez.\n{COLOR}Ç3DS{COLOR}Á : dans l'injecteur VC 3DS,\pvérifiez {COLOR}ÉROM Save Type{COLOR}Á sur\p{COLOR}ÉFlash 1Mbit (Macronix, ID: 0x09C2)\p+ RTC{COLOR}Á.\n{COLOR}ÇDelta{COLOR}Á : utilisez la version premium\pou passez à {COLOR}ÉGBA4iOS{COLOR}Á.\n\p\p\n\p\n\p\n\p\n\p\p\n
 0xA4D475: ATTENTION !\pTriche RTC détectée dans ta\nsauvegarde !\pDate du jeu : {STR_VAR_1}/{STR_VAR_2}/{STR_VAR_3}.\nLes événements quotidiens (cadeaux,\pRaids) peuvent cesser jusqu'au\nlendemain.\lNe trafique plus la RTC.\p\n
@@ -11755,7 +11755,7 @@
 0xA4E452: {DPAD_UPDOWN}Choisir {SE_SHOP}Valider {START_BUTTON}Aléa {B_BUTTON}Annuler
 0xA4E474: Fin du combat si :\n4 Pokémon K.O.\n10 tours écoulés
 0xA4E4A2: Partenaires disponibles
-0xA4E4B5:  FばDexNav
+0xA4E4B5: FばDexNav
 0xA4E4BF: Journal des missions
 0xA4E4CB: Boîte à costumes
 0xA4E4D7: Liste des Pokémon
@@ -11818,15 +11818,15 @@
 0xA4ED0C: Difficile
 0xA4ED28: Expert
 0xA4ED2F: Fou
-0xA4ED36:  Difficulté
-0xA4ED42:  Aléatoire
-0xA4ED4A:  Scalemons
-0xA4ED55:  Post-game
-0xA4ED69:  +Échanges
+0xA4ED36: Difficulté
+0xA4ED42: Aléatoire
+0xA4ED4A: Scalemons
+0xA4ED55: Post-game
+0xA4ED69: +Échanges
 0xA4ED72: Espèces
 0xA4ED7A: Capacités
 0xA4ED82: Talent
-0xA4ED8A:  Randomizer
+0xA4ED8A: Randomizer
 0xA4ED96: Nouvelle Partie 
 0xA4EDA2: Espèces
 0xA4EDAA: Objets
@@ -11872,7 +11872,7 @@
 0xA4F07F: Fauche-Âme des Sept Étoiles
 0xA95C4D: kÀsiig 
 0xA97306: j{UNKNOWN_STR}{STRING}▶iyzzRh hjh/gii8 OSiBQi\nS hyzSxiyC hjxByzyR i\nzBRy{STRING}B gyykBQBj RQAShRBRîii ÁiR
-0xAA7906:  RYフURテU
+0xAA7906: RYフURテU
 0xABBB25: jiizzizzz\nぁzz▶Kz
 0xABC343: ïjiiiiii\njy\nnz
 0xABCB23: zii{UNKNOWN_STR}ii{UNKNOWN_STR}ii{UNKNOWN_STR}iy
@@ -11887,7 +11887,7 @@
 0xAC9C85: iiiiiiiiiiÒ                {SUPER_RE}9999999999\l999·99\l999\l999\l9999·9999\l
 0xACCB3D: Ô  Ô                                                                                                                                                                                                                                          R  RR                        Ï   RÏ                                                                   FRR SRR:SRR▶SRRkiRRkiSR▶jii
 0xACCCAD: ▶iiRR  RRÒ RR{UNKNOWN_STR}RRyÔRhiÔRiiÔiizÔiy
-0xACCD41:                                                                                                                                                                                                                                          FR FRR                        RÏ  RRÏ                                                                  SRRVRRRVRRRkRRRkSRRkiRR▶iii
+0xACCD41: FR FRR                        RÏ  RRÏ                                                                  SRRVRRRVRRRkRRRkSRRkiRR▶iii
 0xACCEAD: jiiRRh RRhÒRRh{STRING}RRhyRRizRhiziiy
 0xAD22FB: òÖAAぁEAA\p            Ô   Ô   Ô   Ô                                                                         :9  :9  :!   E   E   E   E   E999999999999!999AA99AAAAAAAAAAAA/99999999!999A!9/RBAAA\pBAQA
 0xAD23C0: AQAÔ9/Ô 99/ 999Q999P99/AAAAAAAAA
@@ -11896,28 +11896,28 @@
 0xAD2B37: A  EA :AA :AAòÔ  ぇÔ  U   Q   AÔ  A\p  AAÔ AA\p   :A  :\p  
 0xAD2B6F: \p :B\p :AA EAA:BAAEAAA!999999999999999!999?999?999B!9999BA99BA99AA99BA99BA99PA99PAAAAB9999A99AAAAAAA!9AAAAAAAAAQ
 0xAD2BE0: Q{NAME_END} PRR\pA!9R999A9AAAAAAAAAAA
-0xAD2D69:                              EA  EA  :A  :A  :A  :A  :A  :AAAAQAAAQAAAQAAAAAAAAAAAAAAAAAAAAAAÔ AA
-0xAD3145:    AÔ  A\p  A\p  AAÔ AAÔ AA\p AA\p                                   :
+0xAD2D69: EA  EA  :A  :A  :A  :A  :A  :AAAAQAAAQAAAQAAAAAAAAAAAAAAAAAAAAAAÔ AA
+0xAD3145: AÔ  A\p  A\p  AAÔ AAÔ AA\p AA\p                                   :
 0xAD31E2: Ô ÙïÂ ぇぇ  òÔ  Ö   Ô                                                 :A   E   :   :                AAAÏAAA\pAAAABAAQEAA?:AQA:AQA EQA       :Ô
 0xAD3289: R!9AA!9AA99AA99AQ99AQ99AQ99UB\pE9/A\p9999999999999999999/9999AAÔ 
-0xAD3354:                 AAAAAA
-0xAD336E:   Ô                   AQ99AA99
-0xAD34DB:  QAÔ QR
+0xAD3354: AAAAAA
+0xAD336E: Ô                   AQ99AA99
+0xAD34DB: QAÔ QR
 0xAD3522: Ô                                                                                                  :AA EAA EAA EAA:AAA:AAA://A·9!!\pAQA\pAQAAEBAA\pEAAQ\p
-0xAD39C1:    /AAAAAAAAA\p
-0xAD3A8B:  ナ{FILL_WINDOW} í{FILL_WINDOW} í{NAME_END} \l{NAME_END} \l{NAME_END} \l{NAME_END}                                                                                                                                                :   :   E   E  :A:!99EA!9EAAAAAAAAAAQAAAQAAAEAA\p?999·99\l9?9\l9?99·999·999\l999\l999\l\l{NAME_END} 9
-0xAD3B92:   9Ô  9Ô  /Ô  \l                                                                                                                                     EA  EA :AQ :AA EQR ·?9 ·99 ·99AAE?AAEBB
-0xAD42C3:                                                                                                                         :   E  :E  ?9 :99 E99:A!9EA!9AAA!AAAQAAAB9?9\l9?9\l9999P9999999?9999999?99999ソ··9ソ!\p·ソ!\l\p/·\l9\l\p·9\l\p·9\l··9\l·EBA
+0xAD39C1: /AAAAAAAAA\p
+0xAD3A8B: ナ{FILL_WINDOW} í{FILL_WINDOW} í{NAME_END} \l{NAME_END} \l{NAME_END} \l{NAME_END}                                                                                                                                                :   :   E   E  :A:!99EA!9EAAAAAAAAAAQAAAQAAAEAA\p?999·99\l9?9\l9?99·999·999\l999\l999\l\l{NAME_END} 9
+0xAD3B92: 9Ô  9Ô  /Ô  \l                                                                                                                                     EA  EA :AQ :AA EQR ·?9 ·99 ·99AAE?AAEBB
+0xAD42C3: :   E  :E  ?9 :99 E99:A!9EA!9AAA!AAAQAAAB9?9\l9?9\l9999P9999999?9999999?99999ソ··9ソ!\p·ソ!\l\p/·\l9\l\p·9\l\p·9\l··9\l·EBA
 0xAD44C5: A99 EA9 :AA  EA  :A  :A   E   EPÏ  9PÏ 99PÏA9
-0xAD49D6:   Ô   Ô   Ô   zÓ  Aw                                                                                                                            ニニ  ♀A               ニ  タi ニbCニAAAAgCA biニタiiCbiCACwzDiAgyiiiigiiiAAiiòòツ♀ニニbAAACAAgAgDAAiyzgCiizCiiiAAAÓ AyÂ iìぇ yÙÙÂwÙÙぇwÚÙぅwÚÙïA+ÙÙ                        Â   Â                                                                     タニ               ニ  タA   b   タiiDAニyAAljAAjiiCiiiigiiiAAgiiAiyAAAgAACAAACAAgAAiiAAiyAAyjiAjjiiiCAAAAAgAAgAAAgAAAgAAACAAACAiizgAwÙÙAAzÙDAAzwCAAAziAAgホニgiùÚiiヘòÂ   Â   ぅ   ず   ず   ;   ÙÔ  Ùぜぉ                                                                                                 ニiyj ニji :ii :ii kii kiy:jiy▶iijiyiiiyAAiiDAiijAiiyiiiyyiiijiiiiiyizAjiiwiiiyiiijiiiiiiiiiiiiijiiiiニDAAAyCAAizCgiizニiiiぁiiiぁiiiぁÚまÙÂù{DYNAMIC}ïぅヒÖÚぅùメまぅòò{DYNAMIC}ぅòòÖぅòòメぜòòòÔ                                                                   :   ▶  :z   
+0xAD49D6: Ô   Ô   Ô   zÓ  Aw                                                                                                                            ニニ  ♀A               ニ  タi ニbCニAAAAgCA biニタiiCbiCACwzDiAgyiiiigiiiAAiiòòツ♀ニニbAAACAAgAgDAAiyzgCiizCiiiAAAÓ AyÂ iìぇ yÙÙÂwÙÙぇwÚÙぅwÚÙïA+ÙÙ                        Â   Â                                                                     タニ               ニ  タA   b   タiiDAニyAAljAAjiiCiiiigiiiAAgiiAiyAAAgAACAAACAAgAAiiAAiyAAyjiAjjiiiCAAAAAgAAgAAAgAAAgAAACAAACAiizgAwÙÙAAzÙDAAzwCAAAziAAgホニgiùÚiiヘòÂ   Â   ぅ   ず   ず   ;   ÙÔ  Ùぜぉ                                                                                                 ニiyj ニji :ii :ii kii kiy:jiy▶iijiyiiiyAAiiDAiijAiiyiiiyyiiijiiiiiyizAjiiwiiiyiiijiiiiiiiiiiiiijiiiiニDAAAyCAAizCgiizニiiiぁiiiぁiiiぁÚまÙÂù{DYNAMIC}ïぅヒÖÚぅùメまぅòò{DYNAMIC}ぅòòÖぅòòメぜòòòÔ                                                                   :   ▶  :z   
 0xAD4D7D: ホii ▶ii ▶bi ▶biiiiiiyiiiyiiiyiiiziiiziiyziizzziiijiiijiiyjiiyjiiyziizziizzjizzziii{STRING}iii{STRING}jii{STRING}jii{STRING}zii{STRING}ziiizjiizziiòòòÔぁòòÔö
 0xAD51DD: Â  Ô   zÓ  Aw                                                                                                                        ニニ  ♀A  タニ       タ   ♀  タC ニbiニAAAAgCAiiDAニiiニiiiCiiCAAwzDiAgyiiiigiiiAAiiòòツ♀ニニbAAACAAgAgDAAgyzgCiijCiiiAAAÓ gwÂ iìぇ yÙÙÂ+ÙÙぇ+ÙÙぅ+ÙÙï+ÙÙÙ                        Â   Â                                                                                  ニ  タA   b   タ    ニyAAljAAjiiCiiiCgiiiAAgiiAiiニiyzAAAgAACAAACAAgAAiCAAiDAAyiCAjiiiiCAAAAAAAAAAAAAAAAAgAgAgAgAAiyCAwÙÙÙwÙÙÙAìÙÙA+ÙÙA+ÙÙAwÚÙCyÚÙCi+ÙÂ   Â   ぅ   ぅ   ぅ   ぅ   ÙÔ  Ùぜぉ                                                                                                  ニji :ii :ii :ii kii kiy:jiy▶iijijiiiDAAiyAAiyCgiijyiijjiiyiiiiiijjiwijijiyCjiyCiiiDiiiDiiiyiijyji+ÙjA+ÚwAwÚwCwòwzzòwiiぁwiiぁjiiぁÙまÙÂÙ{DYNAMIC}ïぅïÖÚぅòメまぅòò{DYNAMIC}ぅòòÖぅòòメぜòòòÔ                                                                   :   ▶  :z   
 0xAD557D: ホii ▶ii ▶bi ▶biiiiiiyiiiyiiiyiiiziiiziiyziizzziiijiiijiiyjiiyjiiyziizziizzjizzzjii{STRING}iii{STRING}jii{STRING}jii{STRING}zii{STRING}ziiizjiizziiòòòÔぁòòÔö
 0xAD5D7D: ホii ▶ii ▶bi ▶biiiiiiyiiiyiiiyiiiziiiziiyziizzziiijiiijiiyjiiyjiiyziizziizzjizzzjiiソiiiソjiiソjiiソziiソzii{STRING}zji{STRING}zzi{STRING}オ
-0xAD6331:                                           ニ  タA   b   タ    ニyAAljAAjiiCiiiCgiiiAAgiiAiiニiyzAAAgAACAAACAAgAAiCAAiDAAyiCAjiiiiCAAAAAgAAgAAAgAAAgAAACAAACgiyzzAwòòAAzÖDAAzwCAAAziAAgホニgiùÖiiヘÖÔ       Ó   w   Ó                                                                                                                ニji :ii :ii :ii kii kiy:jiy▶iijijiiiDAAiyAAiyCgiijyiijjiiyiiiiiijiywiiijiiijiiiiiiiiiiiiiiiiijijiiニzDAAizCAiizgiiiニiiiソiiiソiiiソ    É   ヒ   ü   ö   ö   ö   オÔ                                                                     :   ▶  :z   
-0xAD6B31:                              タニ               ニ  タA   b   タiiDAニyAAljAAjiiCiiiigiiiAAgiiAiyAAAgAACAAACAAgAAiiAAiyAAyjiAjjiiiCAAAAAgAAgAAAgAAAgAAACAAACAiizgAwòòAAzÖDAAzwCAAAziAAgホニgiùÖiiヘÖÔ   Ô       w   Ó                                                                                                               ニiyj ニji :ii :ii kii kiy:jiy▶iijiyiiiyAAiiDAiijAiiyiiiyyiiijiiiiiyizAjiiwiiiyiiijiiiiiiiiiiiiijiiiiニDAAAyCAAizCgiizニiiソオiiソオiiソオ    É   ヒ   ü   ö   ö   ö   オÔ                                                                     :   ▶  :z   
-0xAD745B:  jiyÉziiÉziiÉ
-0xAD7C5B:  jiyÉziiÉziiÉ
+0xAD6331: ニ  タA   b   タ    ニyAAljAAjiiCiiiCgiiiAAgiiAiiニiyzAAAgAACAAACAAgAAiCAAiDAAyiCAjiiiiCAAAAAgAAgAAAgAAAgAAACAAACgiyzzAwòòAAzÖDAAzwCAAAziAAgホニgiùÖiiヘÖÔ       Ó   w   Ó                                                                                                                ニji :ii :ii :ii kii kiy:jiy▶iijijiiiDAAiyAAiyCgiijyiijjiiyiiiiiijiywiiijiiijiiiiiiiiiiiiiiiiijijiiニzDAAizCAiizgiiiニiiiソiiiソiiiソ    É   ヒ   ü   ö   ö   ö   オÔ                                                                     :   ▶  :z   
+0xAD6B31: タニ               ニ  タA   b   タiiDAニyAAljAAjiiCiiiigiiiAAgiiAiyAAAgAACAAACAAgAAiiAAiyAAyjiAjjiiiCAAAAAgAAgAAAgAAAgAAACAAACAiizgAwòòAAzÖDAAzwCAAAziAAgホニgiùÖiiヘÖÔ   Ô       w   Ó                                                                                                               ニiyj ニji :ii :ii kii kiy:jiy▶iijiyiiiyAAiiDAiijAiiyiiiyyiiijiiiiiyizAjiiwiiiyiiijiiiiiiiiiiiiijiiiiニDAAAyCAAizCgiizニiiソオiiソオiiソオ    É   ヒ   ü   ö   ö   ö   オÔ                                                                     :   ▶  :z   
+0xAD745B: jiyÉziiÉziiÉ
+0xAD7C5B: jiyÉziiÉziiÉ
 0xADB71A: RR:RRRURRR        ゾベベベORRRRRRRRRRBRRピARRAA        Ì   ピ{SE_SS_ANNE_HORN} RA
 0xADB781: オÔ                                                                                                        :   :   :   ゾ   ポ   U   ポORRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRピAARBAAR×AARAAARAAARAAAピAAAピAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA\pぽ
 0xADB90F: RAAA
@@ -11927,15 +11927,15 @@
 0xADC048: BAAAAAAAAAAAAAAAAAAAAAAAAAAA    Ô:ニニ\pどでä\p
 0xADC227: AAAA
 0xADC3FA: Ô EA\p AA\p    :   :   :   
-0xADC41C:    ▶  :-jiiiiiiijiiyeiyペブベベ
+0xADC41C: ▶  :-jiiiiiiijiiyeiyペブベベ
 0xADC957: AAAA
 0xADCB6C: i-Ô 9vこ ii- iiyこDAwこ
-0xADCF5D:    AÔ:ニ                            ニ                                                                                                     :R  UR  OR :RR :RR :RR ゾRR URRRRRRRRRRRRRピRRRBRRR×RRRARRRARRRAピAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA\pどでA\p
+0xADCF5D: AÔ:ニ                            ニ                                                                                                     :R  UR  OR :RR :RR :RR ゾRR URRRRRRRRRRRRRピRRRBRRR×RRRARRRARRRAピAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA\pどでA\p
 0xADD11A: EAAA\p
 0xADD2ED: .jii.\l ii
 0xADD812: RR:RRRURRRORRRRRRRゾベベベORRRRRRRRRRBRRピARRAARピAARBAAÌ   ピ{SE_SS_ANNE_HORN} RA
-0xADD84F:  AAAÔAAA\pAAA\pAAAAAAAA            :ニニ どでä 
-0xADD87E:   ぽでÉ                                                                                                    :   :   ゾ   U   U   ポ   ポ   ポRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRR×AARAAARAAARAAAピAAAピAAAピAAAピAAAAAAAAAAAAAAAAAAAAAAAAAA\pAAA
+0xADD84F: AAAÔAAA\pAAA\pAAAAAAAA            :ニニ どでä 
+0xADD87E: ぽでÉ                                                                                                    :   :   ゾ   U   U   ポ   ポ   ポRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRR×AARAAARAAARAAAピAAAピAAAピAAAピAAAAAAAAAAAAAAAAAAAAAAAAAA\pAAA
 0xADDA07: RAAA
 0xADDA0C: AAAAAAAA9/AA
 0xADDB1C: iiii
@@ -11948,15 +11948,15 @@
 0xADE870: BAAAAAAAAAAAAAAAAAAAAAAAAAAA    Ô:ニニ\pどでä\p
 0xADEA4F: AAAA
 0xADEC22: Ô EA\p AA\p    :   :   :   
-0xADEC44:    ▶  :-jiiiiiiijiiyeiyペブベベ
+0xADEC44: ▶  :-jiiiiiiijiiyeiyペブベベ
 0xADF17F: AAAA
 0xADF394: i-Ô 9vこ ii- iiyこDAwこ
-0xADF785:    AÔ:ニ                            ニ                                                                                                     :R  UR  OR :RR :RR :RR ゾRR URRRRRRRRRRRRRピRRRBRRR×RRRARRRARRRAピAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA\pどでA\p
+0xADF785: AÔ:ニ                            ニ                                                                                                     :R  UR  OR :RR :RR :RR ゾRR URRRRRRRRRRRRRピRRRBRRR×RRRARRRARRRAピAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA\pどでA\p
 0xADF942: EAAA\p
 0xADFB15: .jii.\l ii
 0xAE003A: RR:RRRURRRORRRRRRRゾベベベORRRRRRRRRRBRRピARRAARピAARBAAÌ   ピ{SE_SS_ANNE_HORN} RA
-0xAE0077:  AAAÔAAA\pAAA\pAAAAAAAA            :ニニ どでä 
-0xAE00A6:   ぽでÉ                                                                                                    :   :   ゾ   U   U   ポ   ポ   ポRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRR×AARAAARAAARAAAピAAAピAAAピAAAピAAAAAAAAAAAAAAAAAAAAAAAAAA\pAAA
+0xAE0077: AAAÔAAA\pAAA\pAAAAAAAA            :ニニ どでä 
+0xAE00A6: ぽでÉ                                                                                                    :   :   ゾ   U   U   ポ   ポ   ポRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRR×AARAAARAAARAAAピAAAピAAAピAAAピAAAAAAAAAAAAAAAAAAAAAAAAAA\pAAA
 0xAE022F: RAAA
 0xAE0234: AAAAAAAA9/AA
 0xAE0344: iiii
@@ -11977,32 +11977,32 @@
 0xAEA938: BAAAAAAAAAAAAAAAAAAAAAAAAAAA    Ô:ニニ\pどでä\p
 0xAEAB17: AAAA
 0xAEACEA: Ô EA\p AA\p    :   :   :   
-0xAEAD0C:    ▶  :-jiiiiiiijiiyeiyペブベベ
+0xAEAD0C: ▶  :-jiiiiiiijiiyeiyペブベベ
 0xAEB247: AAAA
 0xAEB45C: i-Ô 9vこ ii- iiyこDAwこ
-0xAEB84D:    AÔ:ニ                            ニ                                                                                                     :R  UR  OR :RR :RR :RR ゾRR URRRRRRRRRRRRRピRRRBRRR×RRRARRRARRRAピAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA\pどでA\p
+0xAEB84D: AÔ:ニ                            ニ                                                                                                     :R  UR  OR :RR :RR :RR ゾRR URRRRRRRRRRRRRピRRRBRRR×RRRARRRARRRAピAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA\pどでA\p
 0xAEBA0A: EAAA\p
 0xAEBBDD: .jii.\l ii
 0xAEC102: RR:RRRURRRORRRRRRRゾベベベORRRRRRRRRRBRRピARRAARピAARBAAÌ   ピ{SE_SS_ANNE_HORN} RA
-0xAEC13F:  AAAÔAAA\pAAA\pAAAAAAAA            :ニニ どでä 
-0xAEC16E:   ぽでÉ                                                                                                    :   :   ゾ   U   U   ポ   ポ   ポRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRR×AARAAARAAARAAAピAAAピAAAピAAAピAAAAAAAAAAAAAAAAAAAAAAAAAA\pAAA
+0xAEC13F: AAAÔAAA\pAAA\pAAAAAAAA            :ニニ どでä 
+0xAEC16E: ぽでÉ                                                                                                    :   :   ゾ   U   U   ポ   ポ   ポRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRR×AARAAARAAARAAAピAAAピAAAピAAAピAAAAAAAAAAAAAAAAAAAAAAAAAA\pAAA
 0xAEC2F7: RAAA
 0xAEC2FC: AAAAAAAA9/AA
 0xAEC40C: iiii
-0xAECF5F:  EAÔ AAE 
+0xAECF5F: EAÔ AAE 
 0xAED7AA: Ô                                                                                                                                                                    {SUPER_RE}  {SUPER_RE}v  fy {SUPER_RE}ii       {SUPER_RE} lzj{SUPER_RE}viifyiiiyzjijiiziii    999こiiiyiiiiiiiiiiiizjiiiyji        9   z\l  y-Ô yz\l yz\n zz-Ô                                                                                                                       っ  っど  どで fii fij{SUPER_RE}iii{SUPER_RE}iyiÍオyオどでカでででばででニででiiiiiiiiiiiiオaiiでエaiででエiででエiでトカiiiyiiiiziiiyiii-iii-iiy-iiz-iyzvzzzÔzzzÔzzzÔzz-Ôzz\n zz{SE_SS_ANNE_HORN}zベ{SE_SHOP}ペギ{SE_SHOP}                                     
 0xAF2F4B: zzzz\n
 0xAF2FB6: ai▶\nオiR\nオaRxソオRRソオRRソオiiiiiiiiiiiiiiiiiiiiiiiiaiiiオiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiii{UNKNOWN_STR}ii{UNKNOWN_STR}ii
-0xAF36D2:   i{UNKNOWN_STR} iiÔ ki
-0xAF36DF:  ki{UNKNOWN_STR}ii{UNKNOWN_STR}ii{B_ATK_NAME_WITH_PREFIX}                                                                :オ
+0xAF36D2: i{UNKNOWN_STR} iiÔ ki
+0xAF36DF: ki{UNKNOWN_STR}ii{UNKNOWN_STR}ii{B_ATK_NAME_WITH_PREFIX}                                                                :オ
 0xAF374B: zzzz\n
 0xAF37B6: ii▶\niiR\niiRxkiRRkiRRkiiiiÔiii
 0xAF3F4B: zzzz\n
 0xAF3FB6: ai▶\nオiR\nオaRxソオRRソオRRソオiiiiiiiiiiiiiiiiiiiiiiiiaiiiオiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiii{UNKNOWN_STR}ii{UNKNOWN_STR}ii
 0xAF5773: zzzz\n
 0xAF57DE: ai▶\nオiR\nオaRxソオRRソオRRソオiiiiiiiiiiiiiiiiiiiiiiiiaiiiオiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiii{UNKNOWN_STR}ii{UNKNOWN_STR}ii
-0xAF5EFA:   i{UNKNOWN_STR} iiÔ ki
-0xAF5F07:  ki{UNKNOWN_STR}ii{UNKNOWN_STR}ii{B_ATK_NAME_WITH_PREFIX}                                                                :オ
+0xAF5EFA: i{UNKNOWN_STR} iiÔ ki
+0xAF5F07: ki{UNKNOWN_STR}ii{UNKNOWN_STR}ii{B_ATK_NAME_WITH_PREFIX}                                                                :オ
 0xAF5F73: zzzz\n
 0xAF5FDE: ii▶\niiR\niiRxkiRRkiRRkiiiiÔiii
 0xAF6773: zzzz\n
@@ -12015,20 +12015,20 @@
 0xAFCB5E: Ô Ç   Ç   ぇÂ                                                                                                     z   T   :                    zizzRRRRRRRi
 0xAFCBF9: kii :ii kiy :
 0xAFD2F4: i\pjyRRiiRRRyRRRhRRRRSRRiニニニニ
-0xAFD3DC:        :        yzjiRRhiRhiiiiiykiiziiz\n
+0xAFD3DC: :        yzjiRRhiRhiiiiiykiiziiz\n
 0xAFDAF4: i\pjyRRiiRRRyRRRhRRRRSRRiニニニニ
-0xAFDBDC:        :        yzjiRRhiRhiiiiiykiiziiz\n
+0xAFDBDC: :        yzjiRRhiRhiiiiiykiiziiz\n
 0xAFF4A6: iyÜzii
 0xB01CCE: iyÜzii
 0xB051C3: A :AA UAA            
 0xB051DC: AARBAAAQAAAAAAAA            Ô   \p
 0xB052CB: RAAAAAAAAAAAAAAAAAAAABAAARRAARRRRAQA\pAQAgAABgAABgAABぱAABぱAARRRRRR    Ô   Ô   Ô   Ô   ä   ä   ä                                                                                                              :   ポ  :9   
-0xB053A4:         URRR
+0xB053A4: URRR
 0xB057B0: zzzz
 0xB05FDC: zzzz
 0xB06228: AQBQ                            
 0xB067CF: ▶zzzz
-0xB069C4:  :EA:EAA                    
+0xB069C4: :EA:EAA                    
 0xB069E8: AARA                        Ô   {FILL_WINDOW}                                                                                                                                         :   U   U  :R  :R  :R  :REAAABAAABAAARAAARAAARBAARRAA
 0xB06AC9: RRAAAABAAAQAAAAAAAAAAAAAAAAAAAAAAAAA{NAME_END} AQÔ BAÔ BA{UNKNOWN_STR}QA{UNKNOWN_STR}QA{UNKNOWN_STR}QAä QAでÔ                                                                                                                                  :{NAME_END} :{NAME_END} :R  :
 0xB06BB1: URRRRRR
@@ -12060,13 +12060,13 @@
 0xB1607F: k{DYNAMIC}QgiリAhy            :
 0xB16554: Ò kihÒki
 0xB1657A: Ô ii{UNKNOWN_STR}ii{B_ATK_NAME_WITH_PREFIX}zzi\n                                   :   k   k   :                zzzzzzzzzzz\nzz
-0xB16AAA:   k{B_ATK_NAME_WITH_PREFIX} kyÔ ki\n :ii
-0xB16B86:                                   :jiikiiikiiz▶jzz:zz\n ▶\nS :UR :RRiソででzíばで\n:íニ
+0xB16AAA: k{B_ATK_NAME_WITH_PREFIX} kyÔ ki\n :ii
+0xB16B86: :jiikiiikiiz▶jzz:zz\n ▶\nS :UR :RRiソででzíばで\n:íニ
 0xB16FBE: RB  UR  :i   :   U  
-0xB1708F:  :jyÔkii{STRING}iii{STRING}iiz\niyz\nizz
+0xB1708F: :jyÔkii{STRING}iii{STRING}iiz\niyz\nizz
 0xB17392: iÔkiyÔiy
 0xB17510: AASRAQ
-0xB17F5C:             AgÒ AAg AA
+0xB17F5C: AgÒ AAg AA
 0xB17F7D: iji:iz
 0xB17F84: kyzz            Ô   iÔ  i{B_ATK_NAME_WITH_PREFIX} j{STRING}{B_ATK_NAME_WITH_PREFIX}
 0xB185A2: \piyC\pijA▶i\nA▶z            Ô   {UNKNOWN_STR}  y
@@ -12075,7 +12075,7 @@
 0xB1A03F: M   U   :        \pUÔ AUh A
 0xB1A065: Ô i   V     VCÒ Cg iAg AAgÔARRÔQRB\pR
 0xB1A656: jk▶zUAzzERz\nR
-0xB1A789:    {NAME_END}  AhÒ AAh AA
+0xB1A789: {NAME_END}  AhÒ AAh AA
 0xB1A7A5: iji:iz
 0xB1A7AC: kyzz            
 0xB1F6F0: AAA▶AAA▶AAA
@@ -12089,7 +12089,7 @@
 0xB201E8: iiiziiiiiiii                ▶\nj▶zyjziiiiiiii                ▶{STRING}\njzyzjiiiiiiii                ▶iiiziiiiiiiiiii                ララララララララ{DYNAMIC}
 0xB50020: Marais de Cootes
 0xB50094: Sous l'eau
-0xB5009F:  Bourg Gurun
+0xB5009F: Bourg Gurun
 0xB500F0: Ville Portuaire
 0xB50100: Bourg Vivill
 0xB5018C: Base Ombre
@@ -12105,12 +12105,12 @@
 0xB53514: Paradis Floral
 0xB53528: Forêt Séquoia
 0xB535BC: +   À   ’=♂ËÎle Pleine Lune
-0xB535D9:  ÏっÈ ぐ {RIGHT_ARROW}Ë  Frontière de Combat
+0xB535D9: ÏっÈ ぐ {RIGHT_ARROW}Ë  Frontière de Combat
 0xB6FB10: Ruines du Néant
 0xB9BD2D: j9 ベjSh9zhi y
 0xC0B170: i RSzORCzOづhÈQCAzOÂ
 0xC0EBA8: jiy{NAME_END}kiiRky
-0xC132FB:  S\pŒÂ·  S{STRING}9 VÒ i ShiRBQRgÇzzi
+0xC132FB: S\pŒÂ·  S{STRING}9 VÒ i ShiRBQRgÇzzi
 0xC47C2D: ÀozQz
 0xC4956B: URh▶Shyィ 1R
 0xC725E1: À\n\lÖumeZWXbgkpuwywtpligfcbacfimosx:Üö{EMOJI_SHOCKED}
@@ -12122,98 +12122,98 @@
 0xCB096B: üraUZiuü
 0xCC497B: yrlno▶
 0xCD0F2D: ÖsvÊÎ{EMOJI_MINUS}evÀÂÄqoqhZjqmovumnvzoSCWz{EMOJI_LEFT_FIST}qcUWdXOQapvidWMOYUECXrpYSUVQYhZNRfZHPiqeTdfaWitmcgs▶thituegu{PLUS}ÁöäöxÖÂÈ\l:{B_LAST_MOVE}ÚöÄこÒ
-0xCE5B57:  ÁÀ {STRING}{EMOJI_HAPPY}ÖzvrojeYSNKGGHLOSVYcfhknpqrstuvx:ä\l
+0xCE5B57: ÁÀ {STRING}{EMOJI_HAPPY}ÖzvrojeYSNKGGHLOSVYcfhknpqrstuvx:ä\l
 0xCF90C0: \läztojfbXTQOLKJJJKMORVYdinrwÄ{DYNAMIC}{COLOR}Ê    ざ  :äTË
 0xCF9ECB: Ás3 E3 AY ÂカZ EZ EZ EÛ
 0xCFB5D7: jg  A! Â B VRw VSぞhÔM\nhii{STRING}QÔiy
-0xD5D7E4:   \lU   zU  F
+0xD5D7E4: \lU   zU  F
 0xD5D7F6: RRh▶i i
-0xD64273:  UiiRhiiA ぱでÙ
+0xD64273: UiiRhiiA ぱでÙ
 0xD64519: iähRiäi iぷUii
 0xD64548: kiiS
 0xD847A6: kyVi
 0xDA11C7: ▶zz zzzzzzSz zTizzjiz zjyzzjyz zjyzzjyz zzセzzzzy zzzizzzh yzzTSzペz iz+zizñô    Á   Á    Á   Áì   ÜÑöqö{DYNAMIC}üÌ        n À  n   îüª   zzzDzzÁz\nzzz
 0xDA28F1: i {NAME_END}kiF
 0xDA4DB8: ▶zÜ▶ zzozzz99 999999じ9 99z299zず 9げzz2Üzz .ozzjz99 999fi9f{UNKNOWN_STR}
-0xDC3EA8:   Vk   lk     i   
-0xDD085E:  ▶        i òizX
-0xDD0884:     iyz zzziyiiz z▶zzz
-0xDE533F:  ORRRRベRR RRRRRRRR RRRRRRRR RRRRRRRRËRRベベ:ìRRR RRRRRRRR RRRRÁRRR ÁRRRÁRRR ÁRRRÁRRR ÁRR?ÁRR? Áî
-0xDEF754:   ’{UNKNOWN_STR}  トf  ヤ!   ヤ3  ぞ5ii RikRiiRi iSkiSB
-0xDF9484:  AAAAEAAA 
-0xDF955F:  EDAAAmAA Aàmzz
+0xDC3EA8: Vk   lk     i   
+0xDD085E: ▶        i òizX
+0xDD0884: iyz zzziyiiz z▶zzz
+0xDE533F: ORRRRベRR RRRRRRRR RRRRRRRR RRRRRRRRËRRベベ:ìRRR RRRRRRRR RRRRÁRRR ÁRRRÁRRR ÁRRRÁRRR ÁRR?ÁRR? Áî
+0xDEF754: ’{UNKNOWN_STR}  トf  ヤ!   ヤ3  ぞ5ii RikRiiRi iSkiSB
+0xDF9484: AAAAEAAA 
+0xDF955F: EDAAAmAA Aàmzz
 0xDF956F: \p\p AEEEA
 0xE10847: …wRhっ RTR KRR  KAK オ っ     
 0xE15F29: pzzzA9
 0xE195C7: kラ ラ   i Vi zVyz
 0xE29535: iijk
 0xE29739: iijk
-0xE2C4CC:   lR  UR  Ux  :D   E        Ô   \n   \p   \p   \p   Ô                      
+0xE2C4CC: lR  UR  Ux  :D   E        Ô   \n   \p   \p   \p   Ô                      
 0xE2D537: R:wQR ▶RRzA\p AA\p zAÔ ,AÔ ギ{SE_SHOP} グzÔ xA\pÔDéA\n                                                                :wRR:ATR:“wT E“x :GR  
 0xE2D8A6: RB:RRRURRRURBBURぜARざず\pR“A▶    
-0xE2D9B8:         xìÙ“DwDéBwwAADADzAA\nAA\pÔ
-0xE2DBB8:         RìÙ“mwDéBwwAADADzAA\nAA\pÔ
+0xE2D9B8: xìÙ“DwDéBwwAADADzAA\nAA\pÔ
+0xE2DBB8: RìÙ“mwDéBwwAADADzAA\nAA\pÔ
 0xE2F8D8: \p:UR\pUR{NAME_END}                       Ô                          :            EAwx:wU{NAME_END}UUU
 0xE2F95A: A\p\pAA\nÔ                           Ô                                   :RA\p:o\n▶ E\pl 
 0xE2FB23: xEAwx:wU{NAME_END}UUU
 0xE2FB5E: A\nÔ       Ô                   Ô                                   UR·o:RA\p:o\n▶ 
 0xE2FD52: A\pAADDEAADEzww                    Ô   Ô   Ô      U   ▶   :                    RBA
 0xE2FF56: ADAADDEzww                    Ô   Ô   Ô      :   U   ▶   :                RxぜARBA
-0xE300FA:   EAÔ   ▶T  UB 
+0xE300FA: EAÔ   ▶T  UB 
 0xE3010A: Rx:\pRRぜ\pRREAUwEo
-0xE301B0:                 R\pR\pAUR\p
-0xE302FE:     Ew  ▶T  UB :Rx 
-0xE303B0:                 BER\p\pQR\p
+0xE301B0: R\pR\pAUR\p
+0xE302FE: Ew  ▶T  UB :Rx 
+0xE303B0: BER\p\pQR\p
 0xE304DC: A/ヒü                                                                 E\p·:げAA:\pAご·AA\pぜAÙA·“9A:AAA:/A\pAAヒ\nAAwE!AzE!ヒ\n9/A\l0AA9z“A9-‘!9-Ô   \p   Ô   Ô   \l   \n   Ô   Ô                                    ·AAln99:
-0xE306E0:                                                                  E·\p E\p·:げAA:\pAご·AA\pぜAÙA·“AA:AAAA/ヒüAAヒ\nAAwE!AzE!w\n9/A\l0AA9z“A9-    Ô   \p   Ô   Ô   \l   \n   Ô                                   :/A\pln/A:
+0xE306E0: E·\p E\p·:げAA:\pAご·AA\pぜAÙA·“AA:AAAA/ヒüAAヒ\nAAwE!AzE!w\n9/A\l0AA9z“A9-    Ô   \p   Ô   Ô   \l   \n   Ô                                   :/A\pln/A:
 0xE308D8: !/A\lAAAÔ            Ô   Ô                  :   E   ·   :                :ごAA·\lA‘DéAEDAÙ!\p\lEA/AEAAw·AAD:AADAA /!í5/A·ハAA\l5A!\l\lA0\l-ì9v599v5Ô   \l   Ô   \l   Ô   Ô   Ô   Ô                                   :/Av:-99 ▶-9 ぁm0 :
 0xE30ADC: !/A\l                Ô   Ô                  Ô  :\p  :9   ·   :        :/zA:ごAA·\lA‘DéAEDAÙ!\p\lEAAAEAAA·AAwAAAÔAA /!í5/A·ハAA\l5A!\l\lD0\l-w9v5    Ô   \l   Ô   \l   Ô   Ô   Ô                                   :AAw:/A9 ▶-9 ぁm0 :
 0xE310BB: TREポT         :
-0xE312F5:    AÔ  パ{SE_SS_ANNE_HORN}   :A  :R   ポ   E  :A  EA  ▶R  :
+0xE312F5: AÔ  パ{SE_SS_ANNE_HORN}   :A  :R   ポ   E  :A  EA  ▶R  :
 0xE31351: ポuTO\nUxRx
-0xE314B0:  ·DA ▶AA :A! ▶Az            Ô   \l   !
-0xE316B4:  ·DA ▶AA :A!                Ô   \l   !
-0xE338CF:  ずz{NAME_END}oRÔ TBÔ TB{NAME_END}                                                                 koo:.Qo:/RBECQ!E-yfE2v.:\poi:♀
+0xE314B0: ·DA ▶AA :A! ▶Az            Ô   \l   !
+0xE316B4: ·DA ▶AA :A!                Ô   \l   !
+0xE338CF: ずz{NAME_END}oRÔ TBÔ TB{NAME_END}                                                                 koo:.Qo:/RBECQ!E-yfE2v.:\poi:♀
 0xE339B3: E   l        EAA\pDAw\p¥DwÔAD
 0xE33BB3: D   l        {STRING}ABAEAA\pDAw\p¥DwÔw♀
 0xE34CD7: :   :Ô  U        Ô   Ô   \p   \p   \p   {NAME_END}     ▶   :  l\n  T{NAME_END} l\n  TE  :E   :z
-0xE34ED8:    :   :    Ô   \p   {SE_SS_ANNE_HORN}  UÔ  BÔ  AÔ  \p      ▶   ▶   :  l\n  T{NAME_END} l\n  TE  :E\n :zz
+0xE34ED8: :   :    Ô   \p   {SE_SS_ANNE_HORN}  UÔ  BÔ  AÔ  \p      ▶   ▶   :  l\n  T{NAME_END} l\n  TE  :E\n :zz
 0xE34F26: ▶zDAzベYAペuジARuAパzxAjヅAAhIzÔ  U\n 
 0xE351CC: zペ{NAME_END}OOÔ zz          {SE_SS_ANNE_HORN}  Ô                                                                                                                                                                                                      :   :     lz
-0xE3815F:                                                                    UR :jR :ii k{STRING}
+0xE3815F: UR :jR :ii k{STRING}
 0xE383A3: R  ▶R :iR k{STRING}
-0xE38508:   Ex :QQ :BB :Q\p  EA  :·
-0xE38704:   Ex :QQ :BB :Q\p  EA  :·   :AUTR
+0xE38508: Ex :QQ :BB :Q\p  EA  :·
+0xE38704: Ex :QQ :BB :Q\p  EA  :·   :AUTR
 0xE38729: RR·EUDAA\nAAAT
-0xE3890C:  UTT UTT :y{UNKNOWN_STR} 
+0xE3890C: UTT UTT :y{UNKNOWN_STR} 
 0xE3892F: UkRxR{STRING}RxRiUxS
 0xE38953: RRh{STRING}zRjUTz
-0xE38B10:  UTT UTT :y{UNKNOWN_STR} 
+0xE38B10: UTT UTT :y{UNKNOWN_STR} 
 0xE38B37: U{STRING}RxRiUxSëi{STRING}k¿Wi{STRING}どWjiäiyTkikRhi
-0xE3CD40:    z  lz   z            
-0xE42698:  lzz  lz                
-0xE454F4:  lzz  lz                
-0xE4BF1B:  ゲ\lUSAAA
+0xE3CD40: z  lz   z            
+0xE42698: lzz  lz                
+0xE454F4: lzz  lz                
+0xE4BF1B: ゲ\lUSAAA
 0xE4EE55: d{DYNAMIC}..dk 9fdピhi
 0xE52B52: AQABっÂBËBABR ÌRRRÁQz
 0xE5B398: zlDw 
 0xE5CB55: ixzBz ÂîTz ÂjiBxjÈzAyiyÀájŒo
 0xE6CB4B: ABARBRABQRRAQRRBQÜÜ  Â   BÏ  AQ  AAÎ AAQ AQR RA{SE_SS_ANNE_HORN}                                                                                                                                                                 :RR  
 0xE6CE94: NABAギBQA            Ô
-0xE6D2F8:  EAA                :Ô  U{NAME_END} A{NAME_END} AÔ     
+0xE6D2F8: EAA                :Ô  U{NAME_END} A{NAME_END} AÔ     
 0xE6D38E: Ô AA\p AAAÔUAA\p                                                                 EAA:BAA:AAA EAA EAQ :BB  UA  EAQÔ  \p   {NAME_END}  Ô   Ô   Ô   {NAME_END}  \p     
 0xE6D8D4: QAAAAAAA                
 0xE6DE92: RANAQANABA     
-0xE6E18C:  :UA UAA9AAAAAAQ     :Ô
-0xE6E275:        BAARQAQRQABA
+0xE6E18C: :UA UAA9AAAAAAQ     :Ô
+0xE6E275: BAARQAQRQABA
 0xE6E28A: AA :UA  :
-0xE6E294:         R{NAME_END} UÔ  {NAME_END}  QÔ  A\p  U\p  :Ô                                                 \l  :R  UR  UR  U
+0xE6E294: R{NAME_END} UÔ  {NAME_END}  QÔ  A\p  U\p  :Ô                                                 \l  :R  UR  UR  U
 0xE6E310: RRAQ?RBA
 0xE6EC24: RQABRAABRARB
 0xE75D29: {SUPER_E}ii ゼii :ii :ii :iiニニニdニニdSâdiSiiiSiiiSiぷiiiジiii{STRING}iiザ   RË  RË  R{NAME_END} R{NAME_END} R{NAME_END} RÔ  iÔ                                
-0xE7647A:                                                                                              ィ   ね :kヘ Uiジ UhiィRhiィRiiNRi
+0xE7647A: ィ   ね :kヘ Uiジ UhiィRhiィRiiNRi
 0xE84ECE: ii{LV}YRROÄ
-0xE9F7A0:   …g  …A   A                    ベベベベAAAAAAAA                    ×Î  AÎ  A                          T   l                        RRRRzzzz                        x   Ó                                                                                      Ä  :
+0xE9F7A0: …g  …A   A                    ベベベベAAAAAAAA                    ×Î  AÎ  A                          T   l                        RRRRzzzz                        x   Ó                                                                                      Ä  :
 0xE9FC40: zzzziiiizzzziiiizzzziiiizzzziiii                                 :
 0xEB1A94: BÔ ÂßèwËねびFばÉtui pour Jetons du\nCasino. Contient jusqu'à 999 999 999\nJetons.
 0xEB1AF8: Détecte les objets cachés dans la\nzone et clignote ou sonne en les\ntrouvant.
@@ -12603,7 +12603,7 @@
 0xEB92FC: Convertisseur Braille
 0xEB930E: Catalogue des Dresseurs
 0xED9E72: …biix
-0xEE0531:  ▶iAgjgAA iQAAAÙ
+0xEE0531: ▶iAgjgAA iQAAAÙ
 0xEE0A32: zEQyzj\p Ù
 0xEEF9DD: ÁQUER
 0xEF0A0F: QUER
@@ -12612,16 +12612,16 @@
 0xEF7E66: ▶                                                                   Ti  zz  :i  :i  :R  :S   
 0xEF84D1: Ej\pizRD
 0xEF84D9: ByQ EB{NAME_END}:
-0xF0B2BB:              S{NAME_END} フr  rDÔ DA{NAME_END}:S{NAME_END} 
-0xF2BF9D:                                                                                              {SUPER_RE}9 {SUPER_RE}fz ゼy-:jy9                9   j9  zyÔ vi\n                                                    :   :       ぃ:jy-▶ziz▶zzz·zz71z9è19ÙÙぜÚ
+0xF0B2BB: S{NAME_END} フr  rDÔ DA{NAME_END}:S{NAME_END} 
+0xF2BF9D: {SUPER_RE}9 {SUPER_RE}fz ゼy-:jy9                9   j9  zyÔ vi\n                                                    :   :       ぃ:jy-▶ziz▶zzz·zz71z9è19ÙÙぜÚ
 0xF2C191: Ô                                                                                                        {SUPER_RE}9 {SUPER_RE}fz ゼy-:jy9                9   j9  zyÔ vi\n                                                    :   :        :jy-▶ziz▶zzz·zz71z9è19ÙÙぜÚ
-0xF4B668:                 Ô   Ô   Ô                                       UxンzURRR:RRx:RR
-0xF4D2FE:           zwzÔ9zwÔAAAÔ
-0xF4D6A8:                 Ô   Ô   Ô                                       EwDでEAAA:AAw:D\p
+0xF4B668: Ô   Ô   Ô                                       UxンzURRR:RRx:RR
+0xF4D2FE: zwzÔ9zwÔAAAÔ
+0xF4D6A8: Ô   Ô   Ô                                       EwDでEAAA:AAw:D\p
 0xF4D8F3: ▶   :                ’zAÔAAAÔAA\p 
-0xF4DAA8:                 Ô   Ô   Ô                                       Ew-9EAAA:AAw:DA
+0xF4DAA8: Ô   Ô   Ô                                       Ew-9EAAA:AAw:DA
 0xF4DCF3: ▶   :                9zAÔAAAÔAA\p EA\n :z\l :9\n  
-0xF4DEF8:  :Ô             EA\p AA\p AA-ÔAz9Ô
+0xF4DEF8: :Ô             EA\p AA\p AA-ÔAz9Ô
 0xF4E2EF: h C{STRING}R V{STRING}A  :B  :R   
 0xF4E4F3: R  :A  :B  :R   
 0xF4E6F3: iÙ.EEi9
@@ -12629,41 +12629,41 @@
 0xF4F101: Ô :    RRiQR{STRING}
 0xF4F301: Ô      URiSR{STRING}
 0xF4F901: Ô      AAzDw\n
-0xF4FF04:     ガCg iCg \p.\p Ò 
+0xF4FF04: ガCg iCg \p.\p Ò 
 0xF50501: Ô      EAzDA\n
 0xF52B4A: R?でESR E99 
-0xF53507:                                                                   EiR ·89 ポ9/ E\l
+0xF53507: EiR ·89 ポ9/ E\l
 0xF5F24E: RR ゼUR :
 0xF6CAA1: Ô      zUR?z
-0xF6D059:                                                 ゼフ9 :RR  :z  :z  :A  :D   
+0xF6D059: ゼフ9 :RR  :z  :z  :A  :D   
 0xF6D4A1: Ô :    zUR5z\n
-0xF79348:                     ♀A  )オÎ kC                                         V   V   w   w   w   w   Q{STRING}
-0xF7B568:                     i   \ni  ▶kÒ                                                …   \p   \p   \p   …V
+0xF79348: ♀A  )オÎ kC                                         V   V   w   w   w   w   Q{STRING}
+0xF7B568: i   \ni  ▶kÒ                                                …   \p   \p   \p   …V
 0xF7C5EA: \nizzj
 0xF7C7EA: \nizzj
-0xF80A82:   t{SE_SHOP}                                    :   :                        zゼtzi
+0xF80A82: t{SE_SHOP}                                    :   :                        zゼtzi
 0xF818F3: z  :i  :j  :z   
 0xF81AF3: zAT▶kyR
-0xF820F0:   :z  :z  :i  :j   
+0xF820F0: :z  :z  :i  :j   
 0xF82719: QyB UQw :
 0xF874F3: z  :i  :j  :z   
 0xF876F3: zAT▶kyR
-0xF87CF0:   :z  :z  :i  :j   
+0xF87CF0: :z  :z  :i  :j   
 0xF88319: QyB UQw :
-0xF8C4A2:   t{SE_SHOP}                                    :   :                        zゼtzi
-0xF8E69E:   iÓ  R{UNKNOWN_STR}                                                                   ァy  ァ{UNKNOWN_STR} E\p  :z   U   :        R
-0xF8F29A:   SÔ  h{UNKNOWN_STR} ?▶Ô                                                                   ァi  ER  kA lxz :R\n  
+0xF8C4A2: t{SE_SHOP}                                    :   :                        zゼtzi
+0xF8E69E: iÓ  R{UNKNOWN_STR}                                                                   ァy  ァ{UNKNOWN_STR} E\p  :z   U   :        R
+0xF8F29A: SÔ  h{UNKNOWN_STR} ?▶Ô                                                                   ァi  ER  kA lxz :R\n  
 0xF8F50D: CS{RIGHT_ARROW} kA9 kii :R
 0xF8FD13: k   :   :   :        UC\p /QÔ i{NAME_END} i{UNKNOWN_STR} iÔ  RÔ  
 0xF9031B: Ô            \lR\p EAy iyÓ 
-0xFB3851:                                                                                                                                                                                           i  V! V./ CQRiPRAEQBAUQBA:BRRiÒ  9g  ARiÒAB9ÒR?9gQ9/\p?9AÔ9AAÒ                                                   :   í   ヲ  VヨSBR!UTAA:HAA +RAÒ\nず{SUPER_ER}b 
-0xFB3A51:                                                                                                                                                                                           V  iSVigBV9QBC99RE!9/:AA9VBAAi   Ai  AAÒ RRi BQBÒBA?iPQB\pQBA{NAME_END}                           Ò                                   SRBAiRhi ずÛï まだô ぁドげ lポご 
-0xFB3E4D:                                                                                           i                            iÒ                                                                    V! V./ CQRiPRAEQBAUQBA:BRRSBR!9g  ARiÒAB9ÒR?9gQ9/\p?9AÔ9AAÒAAQh                                               :   í   ヲ  Vヨ  :ヌUTAA:HAA +RAÒ\nず{SUPER_ER}b 
-0xFB4885:                                                                     +\nz +ÖR l·O ìz
-0xFB893A:   SÔ  h{UNKNOWN_STR} ?▶Ô                                                                   ゼi  ER  kA lxz :R\n  
+0xFB3851: i  V! V./ CQRiPRAEQBAUQBA:BRRiÒ  9g  ARiÒAB9ÒR?9gQ9/\p?9AÔ9AAÒ                                                   :   í   ヲ  VヨSBR!UTAA:HAA +RAÒ\nず{SUPER_ER}b 
+0xFB3A51: V  iSVigBV9QBC99RE!9/:AA9VBAAi   Ai  AAÒ RRi BQBÒBA?iPQB\pQBA{NAME_END}                           Ò                                   SRBAiRhi ずÛï まだô ぁドげ lポご 
+0xFB3E4D: i                            iÒ                                                                    V! V./ CQRiPRAEQBAUQBA:BRRSBR!9g  ARiÒAB9ÒR?9gQ9/\p?9AÔ9AAÒAAQh                                               :   í   ヲ  Vヨ  :ヌUTAA:HAA +RAÒ\nず{SUPER_ER}b 
+0xFB4885: +\nz +ÖR l·O ìz
+0xFB893A: SÔ  h{UNKNOWN_STR} ?▶Ô                                                                   ゼi  ER  kA lxz :R\n  
 0xFBBF99: Ô  SÔ  h{UNKNOWN_STR} ?▶Ô                                                                   ァi  ER  kA lxz :R\n  
 0xFBD1B9: Ô  SÔ  h{UNKNOWN_STR} ?▶Ô                                                                   ァi  ER  kA lxz :R\n  
-0xFCA106:                                    kOベ k{RIGHT_ARROW}z U{RIGHT_ARROW}s 
+0xFCA106: kOベ k{RIGHT_ARROW}z U{RIGHT_ARROW}s 
 0xFCD773: i  :R  :S  :i   
 0xFCD973: DRDkポyA
 0xFCDF26: ▶                                                                   Ti  zz  :i  :i  :R  :S   
@@ -12671,19 +12671,19 @@
 0xFCE599: ByQ EB{NAME_END}:
 0xFE2375: zT ポuT :
 0xFED066: MまiジË iiÎ iiD xyD MTEA{DYNAMIC}ソ
-0xFED0AC:   :ペ  …A   :   F       F   FTま
-0xFF81E0:  jyiljiÓ  :ぽ   
+0xFED0AC: :ペ  …A   :   F       F   FTま
+0xFF81E0: jyiljiÓ  :ぽ   
 0xFFA2DA: ki  ki  :
 0xFFAFA4: zzai                        
-0xFFB093:  qzÔ zz
+0xFFB093: qzÔ zz
 0xFFB6FA: pzi)zziぷzz
-0xFFCFD8:   ki  :k   :    k)qz:ぽエz ▶zq
+0xFFCFD8: ki  :k   :    k)qz:ぽエz ▶zq
 0xFFD884: pzza
-0xFFEB7F:          \piyykiiz▶iyz▶zzzz\nポ
-0x1018154:   :ニ  ▶b Fヘi hヘjFjjy        Ô   ü   rÔ  ヘS  ホiÏ ijT                                                                                                                                                                ゾ           F   F   x  ベh ベihベjiexzjヘxホiSjàiSiàWxiàGuiホHペiプHペiyxzizzÏiヘzÏiëbThÙbSOÙbyTツjiTヂiizxii                Ï   ピÌ  hプÌ eiペベ                                                                                       ゾ   e  ゾj  ゾu ゾui uiiゾiiieiiyiiyziizziyzziiyuiizペizzペyzzペzzzhzzRezTTjz\nTjiiペziyTuiyxzizxziTziixjiiフニニiSでçペjiyOziプzxiプzxjプyTjiizhiニニhiべJiiuiiyzjiizzjizzzixzzzOxzzTTzzT\nzzベ   yベ  iyÌ iiプ iiiÌziiプzjiizzii                        Ì   ペ     ゾi  ui  ei :ii :iプ :iペ kiノ ki▶izzzyzzzrzzペrzz\nzzrÔzuuÔz▶
-0x1018E10:                         iiiiソYii:
-0x1018E38:                 iiiiiiiiiiii
-0x1018E5C:             i{PK}オオiiiiiiiiiii)
+0xFFEB7F: \piyykiiz▶iyz▶zzzz\nポ
+0x1018154: :ニ  ▶b Fヘi hヘjFjjy        Ô   ü   rÔ  ヘS  ホiÏ ijT                                                                                                                                                                ゾ           F   F   x  ベh ベihベjiexzjヘxホiSjàiSiàWxiàGuiホHペiプHペiyxzizzÏiヘzÏiëbThÙbSOÙbyTツjiTヂiizxii                Ï   ピÌ  hプÌ eiペベ                                                                                       ゾ   e  ゾj  ゾu ゾui uiiゾiiieiiyiiyziizziyzziiyuiizペizzペyzzペzzzhzzRezTTjz\nTjiiペziyTuiyxzizxziTziixjiiフニニiSでçペjiyOziプzxiプzxjプyTjiizhiニニhiべJiiuiiyzjiizzjizzzixzzzOxzzTTzzT\nzzベ   yベ  iyÌ iiプ iiiÌziiプzjiizzii                        Ì   ペ     ゾi  ui  ei :ii :iプ :iペ kiノ ki▶izzzyzzzrzzペrzz\nzzrÔzuuÔz▶
+0x1018E10: iiiiソYii:
+0x1018E38: iiiiiiiiiiii
+0x1018E5C: i{PK}オオiiiiiiiiiii)
 0x101A69C: iiii<
 0x101E003: ァぐヌ                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           AÎ …zD9                         AÎ /zD                                                                                                                                                                                …   げ …!ぉ wずぉ wずI…zBRwzUzwz▶z▶z▶z▶zTz▶zTzxzTzozxzBxD T▶zÎz▶zÎz▶zETzzぜTzzぜTzzざzxずI                こ   2A  ぉzÎ ぉzÎ                                                                                                                                  QRざ {SUPER_RE}ごぉ  …Ü  …ぉ  {SUPER_RE}o   v   v   vぉzxz
 0x101F052: RB AAQ {SUPER_RE}UR9/URP
@@ -12700,11 +12700,11 @@
 0x102398C: iiiiYじiiぉぉYi
 0x102418C: iiiijyiizzji
 0x10241AA: jiyiiiiiyiizzz\n▶z
-0x102434E:   x\n  zÔ  \n   \n   zÏ  zÔ                                  :▶ii ▶ii :ji  ▶\n  :Ô            iiiyijizzzz\n▶z
-0x10245A0:         )オiiiiiiiijyizzz\n▶z
+0x102434E: x\n  zÔ  \n   \n   zÏ  zÔ                                  :▶ii ▶ii :ji  ▶\n  :Ô            iiiyijizzzz\n▶z
+0x10245A0: )オiiiiiiiijyizzz\n▶z
 0x1024790: iiiiijiizzji▶z\nz:
 0x10247AD: ▶iijiiiiijyizzz\n▶z
-0x102495A:   z\n  zÔ  \n                                    ▶i) ▶ii ▶ii :ji  ▶\n  :Ô        オjijiiiyijizzzzz▶z
+0x102495A: z\n  zÔ  \n                                    ▶i) ▶ii ▶ii :ji  ▶\n  :Ô        オjijiiiyijizzzzz▶z
 0x102D087: uTUR
 0x1036838: iiiizzzz        9999AAAARRRR
 0x10368BC: 9999        9999AAAARRRRAAAA
@@ -12715,18 +12715,18 @@
 0x103A8B8: zzEA
 0x103A8BE: EÑABQŒÂB ÊRQ AQRRAARR RBz\n
 0x103C383: zRQRhQ AAAQiAAブ iCBブiACz \n
-0x103C3A2:  E QÔ iRÔ S R\p R
+0x103C3A2: E QÔ iRÔ S R\p R
 0x103C46E: kŒÂ UABAkABQ k
 0x103C47D: ABii
-0x103C585:  BARRARz
-0x1043FA4:  URQUBヒR{DYNAMIC} AU
-0x1045F85:  :USRkii{NAME_END}k
+0x103C585: BARRARz
+0x1043FA4: URQUBヒR{DYNAMIC} AU
+0x1045F85: :USRkii{NAME_END}k
 0x1047444: iiRS
 0x1047A0D: iAiiÁ
 0x1047A14: CAAz ï
 0x1047A26: k iiU\p
 0x1047D0A: kURVöi RV
-0x1048ED1:   iAÔ \p A\p EiÔ X
+0x1048ED1: iAÔ \p A\p EiÔ X
 0x1048F93: Ckik i\p{STRING}i{STRING}kwg kkDAi\pDAÔヲA
 0x104909E: iiyi
 0x105BF39: V“Hhv
@@ -12792,7 +12792,7 @@
 0x123EFE4: pXUdl:
 0x12440C1: vcRbkrÖÉÓ{STRING}ztvdD‘IRTk
 0x1267F34: Â\n:gXZNFNXOIPcaWk{SE_SHOP}
-0x1268287:  {EMOJI_BOLT}mdgmgcoÄ
+0x1268287: {EMOJI_BOLT}mdgmgcoÄ
 0x12689E4: zgOA-54·Kn
 0x1269152: ÜsiaVWeu
 0x1269A5C: övlfcekuö
@@ -12816,7 +12816,7 @@
 0x133968F: ÚhYdA{STRING}b 
 0x1339698: ポ!PZrxU6“8ズポWl{SUPER_RE}FYXJYFSV,He▶MXÓl9MnlwäàaKeÄがjEDj
 0x1344872: È\pÖuw▶lqsjcghTNUTTTPOMKIGECA×,♀♂’””……-“-7--47…87?544110ペ53323!656♂,.\l\nFF/JRYPYchmrvÄ
-0x135307A:  \nxwylqngjabYQYYecSLDDHHIMIJSTVUMLMPQZXWggdiorrwääz:öü\pÁ
+0x135307A: \nxwylqngjabYQYYecSLDDHHIMIJSTVUMLMPQZXWggdiorrwääz:öü\pÁ
 0x135FD8D: ÜpfZcoü 
 0x1361EFC: zSPDブ!bstee▶
 0x136360C: hqqKLal
@@ -12826,7 +12826,7 @@
 0x13880AB: \n{NAME_END} \p▶yÄyÖÄriq▶ÖÖowÄromowtvxz:Öö:ää{SE_SHOP} Ö{EMOJI_SURPRISED}▶:rqlgeZULVKGOIOKHQKOcTMQSVYXNHHECEB…“¥D,ACNGKJ/LRKOMGHIDHJDLPHAF“¥DEA♀‘?♀JIHLDEF//♀/×,A,¥B/CEFFHD’‘×A×CCFKILJJTQNJFLKKJaROTMRZdXWVRSITeUWXYRPbmccoxysinpulnohcekkmsusrstnyuxrnuuyÄüö
 0x138F78E: uzsdtjddÜ:v
 0x1391579: {EMOJI_MISCHIEVOUS}Äzyyz:Öäöü{DYNAMIC}üöÜÖ:yvsnkgebYVSRUYaZWSQPQPNJHGFIOUYYXVTUVUSOJHIKLLMMNPQSUVYaaaaaYUROLJGFCBAAACDEEFFFFECBBABDGJMPRUXZcdfghijkmnopruwzÄä{DYNAMIC}{EMOJI_NEUTRAL}
-0x1399C56:  {STRING}{DYNAMIC}x:kvrrglp▶prÖ\pyjXRXjmjeftonbdkowÖy\läÄkmfhljWRXgy
+0x1399C56: {STRING}{DYNAMIC}x:kvrrglp▶prÖ\pyjXRXjmjeftonbdkowÖy\läÄkmfhljWRXgy
 0x139BC5D: wlcrÜy
 0x139D868: özyÄÖynqunlwÜü\pÜlP×,HaljpÖünUMJJQZqulaQOHDEEJPSPSSVdXE·8”¥”GUXT,8“GLKIE¥5{SUPER_RE}8’♀‘/,¥IH”39”A×¥ObZPJB‘??·…BLIRgUEB·プデ2ANA“MbdYIADLXfcUSLE♀FWXcqyjZffbYUSXi:
 0x13A67C8: uldgisx\p{STRING}
@@ -16098,7 +16098,7 @@
 0x1EEB86C: Ooh aww…\pJe voulais voir un {STR_VAR_1}…
 0x1EEB88B: Ooh aww…\pCe n'est pas un {STR_VAR_1}…
 0x1EEB8A5: Ooh aww…\pC'est un œuf…
-0x1EEB8BD:  FばCave of Being
+0x1EEB8BD: FばCave of Being
 0x1EEB8CE: Une grotte mystérieuse aurait un\nlien avec la région de Sinnoh.\nMalheureusement, elle est restée\nvide pendant des années.
 0x1EEB940: Volcan de cendres
 0x1EEB94F: Un dangereux volcan actif\nsurplombant les routes 4 et 5. Les\nlégendes disent qu'un puissant\nPokémon se perche au sommet.
@@ -16291,7 +16291,7 @@
 0x1EEFD4A: Tu vois ? Bonne affaire, non ?\pOn peut échanger à nouveau demain\nsi tu veux !
 0x1EEFD94: Hein ? Sérieux ? Tu plaisantes. En général, les gens sont ravis de\ntroquer !
 0x1EEFDDB: Hein ? Sérieux ! Tu plaisantes.\nTu n'as pas de {STR_VAR_2} !?
-0x1EEFE15:  FばPokémon Unbound Version
+0x1EEFE15: FばPokémon Unbound Version
 0x1EEFE60: Mise à niveau complète de FireRed\n\n\n\n\n\n
 0x1EEFE8C: Skeli Lich-Lord-F Criminon\n\n\n\n\n\n
 0x1EEFEBF: Skeli Nex U.Flame Dr Fuji Hillsy13\n\n\n\n\n\n
@@ -17433,8 +17433,8 @@
 0x1F0A03C: Si tu veux d'autres Baies,\nreviens me voir demain !
 0x1F0A079: Cherche Miel
 0x1F0A086: Un grand festin approche !\nAffronte des Pokémon au Paradis\nFloral et récupère 3 pots de Miel.
-0x1F0A0E6: Excuse-moi, Dresseur. Pourrais-tume\ndonner un coup de main ?Ma famille\pet moi préparons ungrand festin et\nil nous fautbeaucoup de Miel pour le\lrepas.J'ai déjà récolté sept\ppots,mais il m'en faut au moins\ntrois de plus.On dit que les\pApitrini sauvages enont, mais je\nn'ai pas beaucoup dechance d'en\ltrouver.Alors, qu'en dis-tu ?Peux-tu\ptrouver {COLOR}É3{COLOR}Ç Apitriniet\pme donner leur {COLOR}ÉMiel{COLOR}Ç\n?
-0x1F0A273: Super !Merci d'avoir accepté d'aider\n!Les Apitrini se trouvent partout\pauParadis Floral.Tu auras toutefois\nplus de chancedans les fleurs\p{COLOR}Ëbleues{COLOR}Ç.Tu peux aussi\nessayer d'attraper\pun{COLOR}ÉBombydou{COLOR}Ç avec\n{COLOR}ÉCherche Miel{COLOR}Ç.Il peut\ptrouver du Miel après chaquecombat,\net tu serasaverti si c'est le cas\l!
+0x1F0A0E6: Excuse-moi, Dresseur. Pourrais-tume\ndonner un coup de main ?Ma famille\pet moi préparons ungrand festin et\nil nous fautbeaucoup de Miel pour le\lrepas. J'ai déjà récolté sept\ppots,mais il m'en faut au moins\ntrois de plus. On dit que les\pApitrini sauvages enont, mais je\nn'ai pas beaucoup dechance d'en\ltrouver. Alors, qu'en dis-tu ?Peux-tu\ptrouver {COLOR}É3{COLOR}Ç Apitriniet\pme donner leur {COLOR}ÉMiel{COLOR}Ç\n?
+0x1F0A273: Super !Merci d'avoir accepté d'aider\n!Les Apitrini se trouvent partout\pauParadis Floral. Tu auras toutefois\nplus de chancedans les fleurs\p{COLOR}Ëbleues{COLOR}Ç. Tu peux aussi\nessayer d'attraper\pun{COLOR}ÉBombydou{COLOR}Ç avec\n{COLOR}ÉCherche Miel{COLOR}Ç. Il peut\ptrouver du Miel après chaquecombat,\net tu serasaverti si c'est le cas\l!
 0x1F0A3B5: Tu les as trouvés ! Merci beaucoup\n!Laisse-moi les prendre.
 0x1F0A3F7: Pour m'avoir aidé, prends cette\nCT en récompense. J'insiste !
 0x1F0A436: Les Apitrini sont partout au Paradis\nFloral, mais ils ont plus de chances\ld'apparaître dans les fleurs\l{COLOR}Ëbleues{COLOR}Ç. Attrape un\p{COLOR}ÉBombydou{COLOR}Ç avec\n{COLOR}ÉCherche Miel{COLOR}Ç, ça\ppeut aider aussi. Et souviens-toi,\nil me faut au moins {COLOR}É3 pots de Miel{COLOR}Ç.
@@ -17455,14 +17455,14 @@
 0x1F0A912: On dirait que mon avertissement\nn'était pas nécessaire...
 0x1F0A939: Pour ta magnifique démonstration\nde talent en combat, je te remets\lce Z-Cristal spécial.
 0x1F0A991: Ce Mimikyum Z permet d'activer la\ncapacité Z signature de\l{COLOR}ÉMimiqui{COLOR}Ë en renforçant {COLOR}ÉCâlinerie{COLOR}Ë.
-0x1F0A9FD: Beaucoup nous appellent le « Duo du\pDiable ».On nous a donné ce surnom\naprès avoirbattu tous les\ladversaires que nousavons croisés.De\pce fait, nous n'affrontons que\nlesDresseurs les plus forts.Tu n'y\pes pas encore.
+0x1F0A9FD: Beaucoup nous appellent le « Duo du\pDiable ». On nous a donné ce surnom\naprès avoirbattu tous les\ladversaires que nousavons croisés. De\pce fait, nous n'affrontons que\nlesDresseurs les plus forts. Tu n'y\pes pas encore.
 0x1F0AABD: Beaucoup nous appellent le « Duo du\pDiable ». On nous a donné ce surnom\naprès avoir battu tous les\ladversaires que nous avons croisés.\pPour nous vaincre, il faut pouvoir\ncombattre en {COLOR}É2v2{COLOR}Ë\lavec {COLOR}ÉCombat{COLOR}Ë/{COLOR}ÉDragon{COLOR}Ë uniquement.
-0x1F0ABA6: Fu fu fu...Venir jusqu'ici n'est pas\pune mince affaire.Sache tout de même\pqu'on ne nousappelle pas le « Duo du\nDiable »pour rien !Prépare-toi pour\lun voyage vers les abysses\p!
+0x1F0ABA6: Fu fu fu... Venir jusqu'ici n'est pas\pune mince affaire. Sache tout de même\pqu'on ne nousappelle pas le « Duo du\nDiable »pour rien !Prépare-toi pour\lun voyage vers les abysses\p!
 0x1F0AC39: En effet, tu étais prêt...
 0x1F0AC54: Pour ton excellente prestation\nau combat, je te présente ce\lZ-Cristal spécial.
 0x1F0ACA3: Si tu donnes le {COLOR}ÉMimikyum\nZ{COLOR}Ç à un\l{COLOR}ÉMimiqui{COLOR}Ç, il aura\n{COLOR}ÉCâlinerie{COLOR}Ç en Z-cap.
-0x1F0AD1C: Fu fu fu...Venir jusqu'ici n'est pas\pune mince affaire.Sache tout de même\pqu'on ne nousappelle pas le « Duo du\nDiable »pour rien !Malheureusement,\ltu n'es pas encoreapte à\pnous\naffronter.
-0x1F0ADCC: Fu fu fu...Venir jusqu'ici n'est pas\pune mince affaire.On ne nous appelle\ppas le « Duo du Diable »pour rien\n!Pour nous affronter, tu dois\lêtrecapable de combattre\p{COLOR}Édeux contredeux{COLOR}Ç avec\nseulement des types\l{COLOR}ÉCombat{COLOR}Çet\l{COLOR}ÉDragon{COLOR}Çà tes côtés.
+0x1F0AD1C: Fu fu fu... Venir jusqu'ici n'est pas\pune mince affaire. Sache tout de même\pqu'on ne nousappelle pas le « Duo du\nDiable »pour rien !Malheureusement,\ltu n'es pas encoreapte à\pnous\naffronter.
+0x1F0ADCC: Fu fu fu... Venir jusqu'ici n'est pas\pune mince affaire. On ne nous appelle\ppas le « Duo du Diable »pour rien\n!Pour nous affronter, tu dois\lêtrecapable de combattre\p{COLOR}Édeux contredeux{COLOR}Ç avec\nseulement des types\l{COLOR}ÉCombat{COLOR}Çet\l{COLOR}ÉDragon{COLOR}Çà tes côtés.
 0x1F0AECE: On dit qu'un oiseau bleu rare\nvit au sommet du Mont Givre.
 0x1F0AF03: Ou c'était le cas jusqu'à ce que\ndes voyous le fassent fuir.
 0x1F0AF31: Il y a quelque temps, des voyous\navec une grosse tête de Granbull sur\lle dos ont essayé de capturer\ll'oiseau bleu rare qui vivait au\pMont Givre. Mais il en a glacé une\nbonne partie et s'est envolé\lailleurs. Je me demande s'il\previendra...
@@ -17493,38 +17493,38 @@
 0x1F0B4E9: Au nord d'ici se trouve l'entrée\nd'une autoroute souterraine.\pLe seul problème, c'est qu'elle est\nbloquée par un arbre chétif.\pJ'aimerais tellement savoir comment\nle contourner.
 0x1F0B584: L'arbre chétif qui bloquait\nl'autoroute souterraine a\lmystérieusement disparu...\pReviendra-t-il un jour ?\pC'est la question qui me hantera\npour le reste de\lma vie.
 0x1F0B632: C'est vrai ?Tu quittes la maison,\n{PLAYER} ?Alors n'oublie pas de\précupérerles objets de ton PC avant\nde partir !
-0x1F0B699: Le Prof. Log quitte rarement son\plabo.Quand rentre-t-il chez lui\n?A-t-il seulement une maison ?
+0x1F0B699: Le Prof. Log quitte rarement son\plabo. Quand rentre-t-il chez lui\n?A-t-il seulement une maison ?
 0x1F0B6EA: Félicitations pour ton titre de\nChampion, {PLAYER} !\pJe parie que les objets dans ton PC\nt'ont bien aidé, hein ?
 0x1F0B749: La technologie est incroyable ! Tu\ppeux jouer à des ROM hacks avec une\nhorloge interne sur presque tout !
 0x1F0B7A3: Hm ? Qu'est-ce que c'est ? Tu viens\ndu futur ? ... Tu es fou ? Qu'est-ce\pqui t'a fait croire que tu avais le\pdroit de voyager dans le temps ? ...\pÉcoute, je comprends, tu as fait une\nerreur de débutant. Je peux être\pindulgent cette fois. Juste cette\pfois, si tu ne veux pas attendre\njusqu'au\p{COLOR}É{STR_VAR_1}/{STR_VAR_2}/{STR_VAR_3}{COLOR}Ë\ppour que ton horloge interne se\nrépare seule, je peux la\lréinitialiser à la date\ld'aujourd'hui. Mais juste cette fois\p! Es-tu sûr de vouloir que je\préinitialise ton horloge\n?
 0x1F0B934: OK, abruti, ton horloge a été\nréinitialisée.\pNe t'amuse pas à la dérégler\nencore, car je ne pourrai pas\lt'aider la prochaine fois !
 0x1F0B9B3: La technologie est incroyable, tu\nsais, et si tu attends jusqu'au\l{COLOR}É{STR_VAR_1}/{STR_VAR_2}/{STR_VAR_3}{COLOR}Ë, l'horloge se réparera.
-0x1F0BA23: {PLAYER} !Où étais-tu ?J'étais\nvraiment inquiète pour toi\p!...Waouh...Ça a l'air terrifiant\p!Je suis tellement contente que tu\psois sain et sauf !Avant tout, tu\pdevrais prendre un\nbon\plong\nrepos.
+0x1F0BA23: {PLAYER} !Où étais-tu ?J'étais\nvraiment inquiète pour toi\p!... Waouh... Ça a l'air terrifiant\p!Je suis tellement contente que tu\psois sain et sauf !Avant tout, tu\pdevrais prendre un\nbon\plong\nrepos.
 0x1F0BAE5: Tu ne te sens pas beaucoup mieux\nmaintenant, chéri ?\pTu as l'énergie pour faire la\ncommission du Prof. Log !
-0x1F0BB4B: Snif...J'ai toujours su que\pviendrait le jouroù tu quitterais la\nmaison...C'était dit à la télé.Si\pseulement ton père pouvait te\pvoirmaintenant...{PAUSE}î il serait\nsi fier !Bon, si tu vas rendre\pservice au Prof.Log, tu en auras\nbesoin\l!
+0x1F0BB4B: Snif... J'ai toujours su que\pviendrait le jouroù tu quitterais la\nmaison... C'était dit à la télé. Si\pseulement ton père pouvait te\pvoirmaintenant...{PAUSE}î il serait\nsi fier !Bon, si tu vas rendre\pservice au Prof. Log, tu en auras\nbesoin\l!
 0x1F0BC27: {COLOR}Á{PLAYER} a reçu auprès de sa\nmère le Mission Log du Cube !
-0x1F0BC67: C'est la fonction {COLOR}ÉMission\nLog{COLOR}Ç pourton Super Cube !Elle\pgarde une trace de tout ce qu'ont'a\ndemandé de faire !Pour l'utiliser,\pouvre-le simplementdepuis le\n{COLOR}ÉMenu Démarrer{COLOR}Ç.Et\pmaintenant que tu l'as,\nfaisons-luinoter la demande du Prof.\lLog pourtoi ?
-0x1F0BD67: Oh, avant que j'oublie, tu as\nlaisséun composant clé de ton Super\lCubesur le sol de ta chambre.Je sais\pqu'il n'était pas utile avant,mais\nmaintenant que tu as ton\lproprePokémon, tu en auras besoin si\ltu veuxutiliser ces objets qui\laugmentent lesstats en combat.
+0x1F0BC67: C'est la fonction {COLOR}ÉMission\nLog{COLOR}Ç pourton Super Cube !Elle\pgarde une trace de tout ce qu'ont'a\ndemandé de faire !Pour l'utiliser,\pouvre-le simplementdepuis le\n{COLOR}ÉMenu Démarrer{COLOR}Ç. Et\pmaintenant que tu l'as,\nfaisons-luinoter la demande du Prof.\lLog pourtoi ?
+0x1F0BD67: Oh, avant que j'oublie, tu as\nlaisséun composant clé de ton Super\lCubesur le sol de ta chambre. Je sais\pqu'il n'était pas utile avant,mais\nmaintenant que tu as ton\lproprePokémon, tu en auras besoin si\ltu veuxutiliser ces objets qui\laugmentent lesstats en combat.
 0x1F0BE5E: {COLOR}Á{PLAYER} a reçu auprès de sa\nmère le module Combat du Cube !
-0x1F0BE99: Au cas où tu l'aurais oublié,\nleSuper Cube agit comme un sac.Mais\pcontrairement aux sacs bon marchédu\nPoké Mart qui ne peuvent contenir\lque42 objets, le Super Cube, ou\lpluscommunément appelé\l{COLOR}ÉCube{COLOR}Ç, offre un\pespaceinfini !Il numérise les\ndonnées des objets qu'on yplace,\ldonc en gros, c'est comme si tune\ltransportais riende plus !Et en\pplus, tu peux même trier le\nCubeautomatiquement en appuyant\lsur{START_BUTTON} !Pratique, non ?Et\psi tu trouves encore le Cube un\ppeuencombré après le tri, utilise\nsimplement{L_BUTTON} et {R_BUTTON}\lpour t'y déplacerrapidement.Oh, et\ltu peux même l'utiliser pourranger\pce cadeau d'adieu que j'ai préparé\n!
+0x1F0BE99: Au cas où tu l'aurais oublié,\nleSuper Cube agit comme un sac. Mais\pcontrairement aux sacs bon marchédu\nPoké Mart qui ne peuvent contenir\lque42 objets, le Super Cube, ou\lpluscommunément appelé\l{COLOR}ÉCube{COLOR}Ç, offre un\pespaceinfini !Il numérise les\ndonnées des objets qu'on yplace,\ldonc en gros, c'est comme si tune\ltransportais riende plus !Et en\pplus, tu peux même trier le\nCubeautomatiquement en appuyant\lsur{START_BUTTON} !Pratique, non ?Et\psi tu trouves encore le Cube un\ppeuencombré après le tri, utilise\nsimplement{L_BUTTON} et {R_BUTTON}\lpour t'y déplacerrapidement. Oh, et\ltu peux même l'utiliser pourranger\pce cadeau d'adieu que j'ai préparé\n!
 0x1F0C11C: C'est une {COLOR}ÉCostume\pBox{COLOR}Ç ! Tu peux l'utiliser\npour changer de vêtements à tout\pmoment de ton voyage. Je l'ai\nremplie de différentes couleurs pour\lque tu puisses choisir, mais si tu\ltrouves plus de tenues, assure-toi\pde les ranger là-dedans aussi. Reste\pprudent, chéri ! Apporte le colis.
 0x1F0C237: {PLAYER} !\nTu devrais te reposer un peu.
 0x1F0C259: Joyeux anniversaire, {PLAYER} !\nTu devrais te reposer un peu.
 0x1F0C28B: Oh, parfait ! Toi et ton Pokémon\nêtes en pleine forme.\pFais attention à toi !
-0x1F0C2CC: {PLAYER},J'ai emmené ta mère dans\nles{COLOR}Éprofondeurs{COLOR}Á des\n{COLOR}ÉRuines du\nNéant{COLOR}Á.Viens seul\nsi\ntu\nveux\nla\nrevoir.-A
+0x1F0C2CC: {PLAYER},J'ai emmené ta mère dans\nles{COLOR}Éprofondeurs{COLOR}Á des\n{COLOR}ÉRuines du\nNéant{COLOR}Á. Viens seul\nsi\ntu\nveux\nla\nrevoir.-A
 0x1F0C34F: C'est un trophée prouvant que tu as\nvaincu le Cerveau de la Battle Tower\ldans un Combat Solo standard !
 0x1F0C3AF: C'est un trophée prouvant que tu as\nvaincu le Cerveau de la Battle Tower\ldans un Combat Duo standard !
 0x1F0C40F: C'est un trophée prouvant que tu as\nvaincu le Cerveau de la Battle Tower\ldans un Combat Multi standard !
 0x1F0C46E: {PLAYER} ! Tu passes dire bonjour\p?Tu devrais filer au {COLOR}ÉVillage\nSéquoia{COLOR}Ë !Plus vite tu\pbattras l'Arène là-bas, plustôt tu\npourras défier la Ligue Pokémon\letdevenir le nouveau\lChampion.
 0x1F0C52E: {PLAYER} ! Tu passes dire bonjour ?\pTu devrais filer vers la\n{COLOR}ÉLigue Pokémon{COLOR}Ë ! Plus\pvite tu y seras, plus vite tu\ndeviendras le nouveau Champion !\lPars {COLOR}Éà l'est{COLOR}Ë depuis\p{COLOR}ÉBourg Gurun{COLOR}Ë en\nsuivant la {COLOR}ÉRoute 18{COLOR}Ë pour y arriver.
 0x1F0C615: {COLOR}ÁIl y a un Pokémon sur la\ptable !Mais tu n'as pas de place\npour lui dans ton équipe...
-0x1F0C663: {PLAYER}, ça fait plaisir de te\nrevoir.Je rattrape juste le temps\pperdu.Bonne chance pour la suite\p!
+0x1F0C663: {PLAYER}, ça fait plaisir de te\nrevoir. Je rattrape juste le temps\pperdu. Bonne chance pour la suite\p!
 0x1F0C6C4: Melony
-0x1F0C6CB: Oh...Tu es {PLAYER}, n'est-ce pas\p?J'ai entendu parler de toi grâce\pà{RIVAL}.Il m'a raconté comment tu\nl'avais aidéplus tôt.Il est rare que\pmon frère respectequi que ce soit,\nmais\pil\nsemble\lterespecter.
+0x1F0C6CB: Oh... Tu es {PLAYER}, n'est-ce pas\p?J'ai entendu parler de toi grâce\pà{RIVAL}. Il m'a raconté comment tu\nl'avais aidéplus tôt. Il est rare que\pmon frère respectequi que ce soit,\nmais\pil\nsemble\lterespecter.
 0x1F0C779: Tu cherches {RIVAL} ? Il est parti\pen voyage pour découvrir ce qui est\narrivé à nos parents. Ils nous ont\pabandonnés quand nous étions\nenfants, on ne les a jamais revus.
-0x1F0C816: Ce type étrange de tout à l'heure\nnous asuivis jusque chez nous.Je\pcommence à me demander... Et s'il\nétaitvraiment notre père ?
+0x1F0C816: Ce type étrange de tout à l'heure\nnous asuivis jusque chez nous. Je\pcommence à me demander... Et s'il\nétaitvraiment notre père ?
 0x1F0C886: C'est horrible !Mon père m'a demandé\pde veiller sur le filsde Zeph\npendant que lui et {RIVAL}\lsontabsents, mais cet homme de\lCrystal Peak estvenu et l'a enlevé\lsur-le-champ !Je me sens tellement\pcoupable...
-0x1F0C92A: Cet homme... Zeph a finalement été\nlibéré deprison.Il semble qu'il\pavait assez d'argent pour payersa\ncaution.Bien qu'il n'ait pas purgé\ptoute sa peine,lorsqu'il est venu\nchercher son fils, je pouvaisvoir\lqu'il cherchait à réparer tout ce\lqu'il avaitfait.
+0x1F0C92A: Cet homme... Zeph a finalement été\nlibéré deprison. Il semble qu'il\pavait assez d'argent pour payersa\ncaution. Bien qu'il n'ait pas purgé\ptoute sa peine,lorsqu'il est venu\nchercher son fils, je pouvaisvoir\lqu'il cherchait à réparer tout ce\lqu'il avaitfait.
 0x1F0CA0D: Au fait, {RIVAL} a laissé un cadeau\npour toisur la table.
 0x1F0CA42: Zeph Jr.
 0x1F0CA4B: Quand est-ce que papa rentre à la\nmaison ?Je veux jouer avec papa !
@@ -17532,22 +17532,22 @@
 0x1F0CA95: Ton voisin a besoin d'aide !\nApporte-luiun Antidote du Poké Mart\npour lui rendrela santé.
 0x1F0CAF5: Oh, bonjour, {PLAYER} !Ta mère m'a\pdit que tu quittais enfin la ville\n!C'est une nouvelle très excitante\p!Puis-je te demander un service ?Je\pne me sens pas très bien en ce\pmoment, etj'espérais que tu pourrais\nm'acheter un{COLOR}ÉAntidote{COLOR}Ë\lau Poké\lMart.
 0x1F0CBFF: Oh, bonjour, {PLAYER} !Félicitations\ppour ton titre de Champion !C'est\nune nouvelle très excitante !Puis-je\pte demander un service ?Je ne me\psens pas très bien en ce moment,\petj'espérais que tu pourrais\nm'acheter un{COLOR}ÉAntidote{COLOR}Ë\lau Poké\lMart.
-0x1F0CCF8: Oh, c'est dommage, {PLAYER}.Je vais\pdonc devoir souffrir en silence.
-0x1F0CD3A: Merveilleux, merveilleux.Le Poké\pMart le plus proche est à Bellin\nTown,et ils devraient être bien\lapprovisionnés enAntidotes !
-0x1F0CDAC: Merveilleux, merveilleux.Je suis sûr\pque le Champion sait où trouver\nunsimple Antidote, non ?Dépêche-toi\pde revenir maintenant !
+0x1F0CCF8: Oh, c'est dommage, {PLAYER}. Je vais\pdonc devoir souffrir en silence.
+0x1F0CD3A: Merveilleux, merveilleux. Le Poké\pMart le plus proche est à Bellin\nTown,et ils devraient être bien\lapprovisionnés enAntidotes !
+0x1F0CDAC: Merveilleux, merveilleux. Je suis sûr\pque le Champion sait où trouver\nunsimple Antidote, non ?Dépêche-toi\pde revenir maintenant !
 0x1F0CE14: Le Poké Mart le plus proche se\ntrouve à Bellin Town, et ils\ldevraient avoir plein d'{COLOR}ÉAntidotes{COLOR}Ë !
 0x1F0CE76: Je suis sûr que le Champion sait où\ntrouver un simple\p{COLOR}ÉAntidote{COLOR}Ë, non ? Reviens vite !
-0x1F0CECE: Merveilleux, {PLAYER}.Je vais te\pprendre cet Antidote tout de\nsuite.
-0x1F0CF09: C'est exactement ce dont j'avais\nbesoin,{PLAYER} !Merci, j'apprécie\pvraiment !Tu sais...{PAUSE}ね ton\ppère aurait fait la mêmechose pour\nmoi.Quelle que soit la tâche, il\pétait toujours prêt àrendre\nservice.Je vois que tu marches déjà\pdans ses pas.Et qui sait ?Peut-être\nque tu deviendras un grandDresseur\pde Pokémon comme lui !Le chemin sera\plong et ardu, mais j'ai confianceque\ntu peux y arriver, et que tu y\parriveras !Prends cet objet pour\nt'aider dans ton voyage.C'est une\lpierre précieuse rare qui peut\pboosterune seule\nattaque\pen\ncombat.Utilise-la\pjudicieusement.
-0x1F0D145: C'est exactement ce dont j'avais\nbesoin,{PLAYER} !Merci, j'apprécie\pvraiment !Tu sais...{PAUSE}ね ton\ppère aurait fait la mêmechose pour\nmoi.Quelle que soit la tâche, il\pétait toujours prêt àrendre\nservice.Je vois que tu as bien suivi\pses traces.Et tu es même devenu un\nexcellent Dresseur dePokémon, tout\pcomme lui !Je suis sûr que le chemin\njusqu'ici a été long etardu, mais\pj'ai toujours eu foi en toi,{PLAYER}\n!Maintenant, prends cette pierre\lprécieuse rarepour les ennuis que je\pt'ai\ncausés.
+0x1F0CECE: Merveilleux, {PLAYER}. Je vais te\pprendre cet Antidote tout de\nsuite.
+0x1F0CF09: C'est exactement ce dont j'avais\nbesoin,{PLAYER} !Merci, j'apprécie\pvraiment !Tu sais...{PAUSE}ね ton\ppère aurait fait la mêmechose pour\nmoi. Quelle que soit la tâche, il\pétait toujours prêt àrendre\nservice. Je vois que tu marches déjà\pdans ses pas. Et qui sait ?Peut-être\nque tu deviendras un grandDresseur\pde Pokémon comme lui !Le chemin sera\plong et ardu, mais j'ai confianceque\ntu peux y arriver, et que tu y\parriveras !Prends cet objet pour\nt'aider dans ton voyage. C'est une\lpierre précieuse rare qui peut\pboosterune seule\nattaque\pen\ncombat. Utilise-la\pjudicieusement.
+0x1F0D145: C'est exactement ce dont j'avais\nbesoin,{PLAYER} !Merci, j'apprécie\pvraiment !Tu sais...{PAUSE}ね ton\ppère aurait fait la mêmechose pour\nmoi. Quelle que soit la tâche, il\pétait toujours prêt àrendre\nservice. Je vois que tu as bien suivi\pses traces. Et tu es même devenu un\nexcellent Dresseur dePokémon, tout\pcomme lui !Je suis sûr que le chemin\njusqu'ici a été long etardu, mais\pj'ai toujours eu foi en toi,{PLAYER}\n!Maintenant, prends cette pierre\lprécieuse rarepour les ennuis que je\pt'ai\ncausés.
 0x1F0D316: Oh, bonjour, {PLAYER} !\pComment se passe ton voyage ?
 0x1F0D340: Tiens donc, notre voisin le Champion\n!Comment vas-tu aujourd'hui,\p{PLAYER} ?
 0x1F0D37F: En route pour l'aventure, {PLAYER}\n?Dans ce cas, laisse-moi te donner\pun peu desagesse avant que tu partes\n!
-0x1F0D3E1: Je suis sûr que tu le sais déjà,\nmais grâce au{COLOR}ÉMission\lLog{COLOR}Ç que ta mère t'a donné,\ltu peuxenregistrer diverses demandes\pdes gens.Certains pourraient te\ndemander d'accomplir unetâche un\lcertain nombre de fois.Cela peut\psembler intimidant au début, mais\nilsveulent simplement savoir si tu\las satisfait leurdemande à un moment\lde ton voyage.Alors continue,\lexplore !Tu seras surpris de voir\ptout ce que tu peuxaccomplir en\pvoyageant.Parfois, ils demanderont\nmême des choses que tuas déjà faites\l!Dans ce cas, tu peux demander la\précompensetout de suite.Bonne\nchance\lpour\pton\nvoyage\p!
+0x1F0D3E1: Je suis sûr que tu le sais déjà,\nmais grâce au{COLOR}ÉMission\lLog{COLOR}Ç que ta mère t'a donné,\ltu peuxenregistrer diverses demandes\pdes gens. Certains pourraient te\ndemander d'accomplir unetâche un\lcertain nombre de fois. Cela peut\psembler intimidant au début, mais\nilsveulent simplement savoir si tu\las satisfait leurdemande à un moment\lde ton voyage. Alors continue,\lexplore !Tu seras surpris de voir\ptout ce que tu peuxaccomplir en\pvoyageant. Parfois, ils demanderont\nmême des choses que tuas déjà faites\l!Dans ce cas, tu peux demander la\précompensetout de suite. Bonne\nchance\lpour\pton\nvoyage\p!
 0x1F0D65B: Je suis sûr que tu gères, {PLAYER}.\nBonne chance pour ton voyage\p!
 0x1F0D6A0: Bonne chance pour ton\nvoyage,{PLAYER} !Ton père serait\ptrès fier que tu quittes enfin\nlamaison !
-0x1F0D701: Félicitations pour ton titre de\nChampion,{PLAYER} !Je savais que tu\pdeviendrais le nouveau Gardiende\nBorrius depuis ton départ.Ton père\lserait très fier de ce que tu\pes\ndevenu.
-0x1F0D7C3: {PLAYER} !Ma grand-mère m'a dit que\ptu quittais FrozenHeights !On se\nsentira tellement seuls ici sans\ppersonneavec qui jouer...Tu vas me\nmanquer\p!
+0x1F0D701: Félicitations pour ton titre de\nChampion,{PLAYER} !Je savais que tu\pdeviendrais le nouveau Gardiende\nBorrius depuis ton départ. Ton père\lserait très fier de ce que tu\pes\ndevenu.
+0x1F0D7C3: {PLAYER} !Ma grand-mère m'a dit que\ptu quittais FrozenHeights !On se\nsentira tellement seuls ici sans\ppersonneavec qui jouer... Tu vas me\nmanquer\p!
 0x1F0D840: {PLAYER} !Ma grand-mère m'a dit que\ptu es leDresseur le plus fort de\nBorrius !Ça veut dire que tu rentres\pà la maison pour debon\n?
 0x1F0D8AA: Sankren fimbulvetr !
 0x1F0D8BE: {COLOR}ÉGyaoo!
@@ -17567,7 +17567,7 @@
 0x1F0DB47: {FONT_SMALL} 500 Jetons{CLEAR_TO}ぞ ¥50,000
 0x1F0DB60: {FONT_SMALL}2000 Jetons{CLEAR_TO}ぞ¥200,000
 0x1F0DB79: {FONT_SMALL}5000 Jetons{CLEAR_TO}ぞ¥500,000
-0x1F0DB92: Je peux échanger tes Jetons contre\ndes lots.Quel type de lot veux-tu\p?
+0x1F0DB92: Je peux échanger tes Jetons contre\ndes lots. Quel type de lot veux-tu\p?
 0x1F0DBDC: Quel {STR_VAR_1} veux-tu ?
 0x1F0DBF5: Tu veux le\n{COLOR}É{STR_VAR_1}{COLOR}Ç ? Combien en veux-tu ?
 0x1F0DC92: Tu voudrais une CT de {STR_VAR_1} ?
@@ -17609,13 +17609,13 @@
 0x1F0E12B: Fais éclater un ballon\n{COLOR}Évert{COLOR}Ë dès que tu en\pvois un ! Non seulement ça doublera\ntes Jetons, mais ça te rendra plus\lrapide, et tous les Jetons en boost\nsont doublés !
 0x1F0E1D0: {COLOR}ÁOups !\nPas de Boîte Jetons !
 0x1F0E1F3: {COLOR}ÁTu as trop de Jetons !
-0x1F0E20F: J'ai entendu dire que certaines\nrégions avaientdes jeux comme\pcelui-ci !Mais j'ai aussi entendu\nque là-bas, au lieu d'unobjectif, tu\les juste censé voler sur une\lcartevide.Qui a besoin de ça ? C'est\ptellement ennuyeux !Je préfère\néclater des ballons tous les jours !
-0x1F0E300: Un ami à moi a raflé plein de Jetons\nsur cesvieilles machines à\lsous.Pourquoi changer une formule\pqui marche ?Je vais tenter le même\nspot !
+0x1F0E20F: J'ai entendu dire que certaines\nrégions avaientdes jeux comme\pcelui-ci !Mais j'ai aussi entendu\nque là-bas, au lieu d'unobjectif, tu\les juste censé voler sur une\lcartevide. Qui a besoin de ça ? C'est\ptellement ennuyeux !Je préfère\néclater des ballons tous les jours !
+0x1F0E300: Un ami à moi a raflé plein de Jetons\nsur cesvieilles machines à\lsous. Pourquoi changer une formule\pqui marche ?Je vais tenter le même\nspot !
 0x1F0E38B: Quoi de neuf ?\nTu veux des Jetons ?
 0x1F0E3A7: Mince ! Ces ballons à pois me volent\ntous mesJetons !
 0x1F0E3E1: Hé, quoi ? Tu me déconcentres !Tiens\nquelques Jetons, maintenant file !
-0x1F0E422: L'astuce est de toujours jouer dans\nle mode dejeu le plus difficile.Oui,\ptu auras peut-être moins de temps,\nmais lavitesse compense largement.
-0x1F0E49D: Oh, {PLAYER} !Ça fait une éternité\n!Félicitations pour ton titre de\pChampion !Si tu n'as pas déjà\nessayé, je te recommandeCloud\pBurst.L'Altaria que tu pilotes est\ncalquée sur lemien, tu sais.Joue-y\pet tu verras la ressemblance, je\nte\plejure\n!
+0x1F0E422: L'astuce est de toujours jouer dans\nle mode dejeu le plus difficile. Oui,\ptu auras peut-être moins de temps,\nmais lavitesse compense largement.
+0x1F0E49D: Oh, {PLAYER} !Ça fait une éternité\n!Félicitations pour ton titre de\pChampion !Si tu n'as pas déjà\nessayé, je te recommandeCloud\pBurst. L'Altaria que tu pilotes est\ncalquée sur lemien, tu sais. Joue-y\pet tu verras la ressemblance, je\nte\plejure\n!
 0x1F0E59E: Joue à Cloud Burst et tu verras la\nressemblanceavec mon Altaria !Je\pviens ici tous les jours juste pour\nça, tu sais.
 0x1F0E60D: {COLOR}ÁIl semble complètement\nabsorbé par unjeu de machine à sous.
 0x1F0E642: C'est une vieille machine à sous !\nTu veux jouer ?
@@ -17623,17 +17623,17 @@
 0x1F0E68D: C'est une vieille machine à sous\p!Mais le nombre de Jetons dans ta\nBoîte ladépasse ! Dépense des Jetons\pavant d'essayer\ndejouer.
 0x1F0E712: EN PANNE\nElle est cassée.
 0x1F0E72F: Une vie sans regrets
-0x1F0E744: Éclate tout ! Joue à Cloud Burst et\nramasse3 000 Jetons en une\njournée.Restant : {STR_VAR_1}
-0x1F0E798: Ma mère m'a toujours dit de trouver\nun travailque j'aimerais.Mais le\ptravail demande des efforts, alors\njesuis devenu Joueur.Parfois je\pgagne et je me fais de l'argent\n;d'autres fois, je m'endors avec des\ldettesauprès du Ferrothorn Noir.Je\pveux arrêter, mais je suis le\nmeilleur, et jene peux pas partir\ltant que je suis numéro un.Peux-tu\pme battre aux ballons ?
+0x1F0E744: Éclate tout ! Joue à Cloud Burst et\nramasse3 000 Jetons en une\njournée. Restant : {STR_VAR_1}
+0x1F0E798: Ma mère m'a toujours dit de trouver\nun travailque j'aimerais. Mais le\ptravail demande des efforts, alors\njesuis devenu Joueur. Parfois je\pgagne et je me fais de l'argent\n;d'autres fois, je m'endors avec des\ldettesauprès du Ferrothorn Noir. Je\pveux arrêter, mais je suis le\nmeilleur, et jene peux pas partir\ltant que je suis numéro un. Peux-tu\pme battre aux ballons ?
 0x1F0E8BB: Tu en as dans le ventre. Pour battre\pmon record, tu devras ramasser au\nmoins {COLOR}É{STR_VAR_1}{COLOR}Ë\lJetons en une seule journée en\pjouant à {COLOR}ÉCloud\nBurst{COLOR}Ë. Je te donnerais bien\ldes Jetons, mais je dois au Ferro.
 0x1F0E997: Eh bien, tu es un brave gars, toi, à\nrefuser decéder aux vices du jeu\l?
 0x1F0E9EB: Ce n'est pas le moment d'abandonner.\pTes gains de {STR_VAR_1} aujourd'hui\nne sont pas si loin de {COLOR}É{STR_VAR_2}{COLOR}Ë !
-0x1F0EA44: Tu m'as vraiment battu à mon propre\njeu...Je suppose que je peux\parrêter, maintenant qu'unmôme a\nbattu mon record.Tiens, prends mon\lPokémon.Je pensais qu'il m'aiderait\pà m'envoler vers denouveaux sommets,\pmais il m'a juste enfoncé\nplusprofondément dans la\ldette.
+0x1F0EA44: Tu m'as vraiment battu à mon propre\njeu... Je suppose que je peux\parrêter, maintenant qu'unmôme a\nbattu mon record. Tiens, prends mon\lPokémon. Je pensais qu'il m'aiderait\pà m'envoler vers denouveaux sommets,\pmais il m'a juste enfoncé\nplusprofondément dans la\ldette.
 0x1F0EB2C: Enfin, je te le donnerais, si tu\navais plus deplace dans ton équipe.
-0x1F0EB6D: Tu sais, en client de longue date,\nj'ai un peud'influence ici.Si tu\pveux, je peux lancer\n{COLOR}ÉÉtrennes{COLOR}Ë pour toi.
+0x1F0EB6D: Tu sais, en client de longue date,\nj'ai un peud'influence ici. Si tu\pveux, je peux lancer\n{COLOR}ÉÉtrennes{COLOR}Ë pour toi.
 0x1F0EBE7: Une fois {COLOR}ÉÉtrennes{COLOR}Ë\nlancé, pendant une heure tu recevras\ldeux fois les Jetons de\p{COLOR}ÉCloud Burst{COLOR}Ë. Tu\ngagneras {COLOR}É2 fois plus de Jetons{COLOR}Ë !
-0x1F0EC94: Tu préfères attendre d'avoir une\nheure devant toi,je\lcomprends.Reviens quand tu seras\pprêt à\nlancer{COLOR}ÉÉtrennes{COLOR}Ë.
-0x1F0ED13: Alors je préviens les employés,\nc'est l'heure desÉtrennes !Pendant\pune heure, les gains de Cloud\nBurstseront doublés.Allez, morveux,\pbouge ! Go, go, go\n!
+0x1F0EC94: Tu préfères attendre d'avoir une\nheure devant toi,je\lcomprends. Reviens quand tu seras\pprêt à\nlancer{COLOR}ÉÉtrennes{COLOR}Ë.
+0x1F0ED13: Alors je préviens les employés,\nc'est l'heure desÉtrennes !Pendant\pune heure, les gains de Cloud\nBurstseront doublés. Allez, morveux,\pbouge ! Go, go, go\n!
 0x1F0EDB9: Il ne reste plus que {STR_VAR_1}\nminutes d'Étrennes !Bouge, morveux !\pGo, go, go\n!
 0x1F0EE09: Il reste moins d'une minute\nd'Étrennes !Dépêche-toi, morveux !\pGo, go, go\n!
 0x1F0EE56: On pourra relancer Étrennes demain\n!Reviens me voir et je m'en\poccuperai pour\ntoi.
@@ -17646,7 +17646,7 @@
 0x1F0EF23: {COLOR}ÁPasser ce dialogue ou la scène ?
 0x1F0EF49: Souhaites-tu activer\n{COLOR}ÉNew Game +{COLOR}Á ?
 0x1F0EF76: Le New Game + a été activé. Vérifie\pla Boîte «\n{COLOR}É{STR_VAR_1}{COLOR}Á » pour\ples Pokémon transférés.\n{COLOR}ÊSAUVEGARDE TA PARTIE AVANT !
-0x1F0F004: New Game + est une fonctionnalité\nspéciale quite permet de commencer\lune nouvelle partie avecdes bonus\pspéciaux :1) Une équipe de 6 Pokémon\nmaximum peut êtretransférée dans la\pnouvelle partie.Ces 6 Pokémon sont\nrecréés à partir de l'équipede la\psauvegarde précédente.Les Pokémon\nseront régressés à leur espèce\ldebase et oublieront tous leurs\pmouvements sauf lescapacités\nd'œuf.Les objets tenus seront\pconservés, sauf lesZ-Cristaux.De\nplus, les stats comme les EV et les\pIV serontconservées.2) Si l'un des\nobjets suivants a été obtenu dansla\lsauvegarde précédente, il sera\ltransféré dans lanouvelle partie\p:Scanner de Stats, moto, DexNav,\nCherch'Objet,Baby Monitor, ADM,\lCatalogue de Dresseur,Charme Chroma,\lOvale, Capture, Pierre Magma,Carte\ldu Frontière, Porta-PC, Retireur de\lTemps,toute amélioration d'objet\ldébloquée, et tout BPgagné.3) La\pdifficulté du jeu peut être\naugmentée ouréduite à tout moment\lsans pénalité.4) Certains puzzles du\pscénario principal résolusdans la\nsauvegarde précédente resteront\lrésolusdans la nouvelle partie.5) Si\pla Carte du Frontière est\ntransférée, alorsla Battle Frontier\lsera accessible dès l'arrivée\làSeaport City.6) Des PNJ\psupplémentaires pour modifier IV,\nEVet natures seront disponibles à\lCrater Town jusqu'àla fin du jeu\l(hors mode Sandbox).Note que\lcertains peuvent facturer des PCo\ppourleurs services, donc assure-toi\nd'en gagner assezavant de commencer\lla nouvelle partie.7) Certains\lPokémon légendaires\pprécédemmentréservés à l'après-jeu\nseront désormais disponiblesavant la\lfin du\ljeu.
+0x1F0F004: New Game + est une fonctionnalité\nspéciale quite permet de commencer\lune nouvelle partie avecdes bonus\pspéciaux :1) Une équipe de 6 Pokémon\nmaximum peut êtretransférée dans la\pnouvelle partie. Ces 6 Pokémon sont\nrecréés à partir de l'équipede la\psauvegarde précédente. Les Pokémon\nseront régressés à leur espèce\ldebase et oublieront tous leurs\pmouvements sauf lescapacités\nd'œuf. Les objets tenus seront\pconservés, sauf lesZ-Cristaux. De\nplus, les stats comme les EV et les\pIV serontconservées.2) Si l'un des\nobjets suivants a été obtenu dansla\lsauvegarde précédente, il sera\ltransféré dans lanouvelle partie\p:Scanner de Stats, moto, DexNav,\nCherch'Objet,Baby Monitor, ADM,\lCatalogue de Dresseur,Charme Chroma,\lOvale, Capture, Pierre Magma,Carte\ldu Frontière, Porta-PC, Retireur de\lTemps,toute amélioration d'objet\ldébloquée, et tout BPgagné.3) La\pdifficulté du jeu peut être\naugmentée ouréduite à tout moment\lsans pénalité.4) Certains puzzles du\pscénario principal résolusdans la\nsauvegarde précédente resteront\lrésolusdans la nouvelle partie.5) Si\pla Carte du Frontière est\ntransférée, alorsla Battle Frontier\lsera accessible dès l'arrivée\làSeaport City.6) Des PNJ\psupplémentaires pour modifier IV,\nEVet natures seront disponibles à\lCrater Town jusqu'àla fin du jeu\l(hors mode Sandbox). Note que\lcertains peuvent facturer des PCo\ppourleurs services, donc assure-toi\nd'en gagner assezavant de commencer\lla nouvelle partie.7) Certains\lPokémon légendaires\pprécédemmentréservés à l'après-jeu\nseront désormais disponiblesavant la\lfin du\ljeu.
 0x1F0F5A6: Bienvenue dans Pokémon Unbound !\n\nAvant de jouer, \nsache que c'est un jeu de fans à\nbut non lucratif.\n\nSi tu as payé pour ce jeu, récupère \nton argent immédiatement !
 0x1F0F64D: Dans le monde que tu t'apprêtes à\nrejoindre, tu vas te lancer dans une\ngrande aventure avec toi comme\nhéros. Le monde est vaste. Prends\nton temps pour explorer Rien ne\npresse.
 0x1F0F6FA: Parle aux gens et examine tout où\nque tu ailles, que ce soit dans les\nvilles, sur les routes ou dans les\ngrottes. Le monde et ses habitants\nsont vivants. À mesure que tu\ngrandis, ils grandiront avec\ntoi.
@@ -17659,9 +17659,9 @@
 0x1F0F858: C'est bien avec ce personnage ?
 0x1F0F874: Dernière étape, mais non la\nmoindre,quel est ton nom ?
 0x1F0F89C: Ton nom est {PLAYER} ?
-0x1F0F8AD: Maintenant, déterminons la meilleure\nfaçon pourtoi de jouer.C'est ta\ppremière partie sur Pokémon Unbound\n?
+0x1F0F8AD: Maintenant, déterminons la meilleure\nfaçon pour toi de jouer. C'est ta\ppremière partie sur Pokémon Unbound\n?
 0x1F0F91A: Utilises-tu les émulateurs Eclipse,\nGPemu, JohnGBAou No¥GBA ?
-0x1F0F95A: Tu utilises un émulateur qui fera\nplanter PokémonUnbound.Change\pd'émulateur avant d'essayer de\ncontinuer àjouer.
+0x1F0F95A: Tu utilises un émulateur qui fera\nplanter PokémonUnbound. Change\pd'émulateur avant d'essayer de\ncontinuer àjouer.
 0x1F0F9DD: Oublies-tu souvent de sauvegarder ?
 0x1F0F9FA: Aimes-tu les puzzles difficiles ?\pÇa va de l'infiltration aux blocs.\nAux puzzles de rochers.
 0x1F0FA63: Connais-tu les affinités de type\ncomme le type Fée faible face au\ltype Poison ?
@@ -17671,15 +17671,15 @@
 0x1F0FBC7: Connais-tu les EV et IV, et aimes-tu\nles prendreen compte ?
 0x1F0FC02: Es-tu d'accord pour faire un peu de\nfarm d'EV sila situation l'exige ?
 0x1F0FC3F: {COLOR}É{STR_VAR_1}{COLOR}Á est la\ndifficulté recommandée pour toi.\pMême si tu peux choisir une\ndifficulté supérieure, ça pourrait\lnuire à ton expérience de jeu. Es-tu\pd'accord pour continuer en\ndifficulté {COLOR}É{STR_VAR_1}{COLOR}Á ?
-0x1F0FD05: {COLOR}ÉExpert{COLOR}Á est la\ndifficulté recommandée pour toi.Si\ptu es assez doué, tu n'auras pas\nbesoind'entraîner les EV au\pdébut.Cependant, cela deviendra\nnécessaire plus tarddans ton\laventure, en plus d'un certain\lniveau destratégie pendant les\pcombats.Es-tu d'accord pour\ncontinuer en difficulté Expert ?
+0x1F0FD05: {COLOR}ÉExpert{COLOR}Á est la\ndifficulté recommandée pour toi. Si\ptu es assez doué, tu n'auras pas\nbesoind'entraîner les EV au\pdébut. Cependant, cela deviendra\nnécessaire plus tarddans ton\laventure, en plus d'un certain\lniveau destratégie pendant les\pcombats. Es-tu d'accord pour\ncontinuer en difficulté Expert ?
 0x1F0FE27: Choisis la difficulté de puzzles que\ntu préfères. Une difficulté plus\pélevée signifie des puzzles de\nréflexion ou infiltration plus durs.
-0x1F0FE8E: La difficulté des puzzles du jeu a\nété réglée\psur{COLOR}É{STR_VAR_1}{COLOR}Á.Si tu\nla modifies via le menu Options,\lquitte lazone pour que les\lchangements prennent effet.
+0x1F0FE8E: La difficulté des puzzles du jeu a\nété réglée\psur{COLOR}É{STR_VAR_1}{COLOR}Á. Si tu\nla modifies via le menu Options,\lquitte lazone pour que les\lchangements prennent effet.
 0x1F0FF35: Choisis la difficulté de combat que\ntu préfères. Une difficulté plus\pélevée signifie des Dresseurs plus\nforts et des Pokémon sauvages rusés.
 0x1F0FFA4: Note que ce mode a été conçu pour\nles joueurs ayant un niveau modéré\ld'expérience en combat Pokémon. Tu\pn'auras pas besoin de te soucier des\nEV ou IV pour finir ce mode, mais tu\ldevrais réfléchir à ta stratégie\lavant tes combats. Es-tu d'accord\ppour continuer en difficulté\n{COLOR}ÉDifficile{COLOR}Á ?
 0x1F100B9: Note que ce mode a été conçu pour\nêtre terminé avec une équipe\lentièrement entraînée en EV. Si tu\pas une telle équipe, tu n'auras\nprobablement pas besoin de changer\ld'équipe entre deux combats\pimportants. Es-tu SÛR d'être\nd'accord avec la difficulté {COLOR}ÉExpert{COLOR}Á ?
-0x1F101AC: {COLOR}ÊAVERTISSEMENT !{COLOR}ÁCe\pmode de jeu a été conçu pour êtreune\ntâche presque impossible !À de\pnombreux moments, il sembleraun défi\ninjuste ou fastidieux.C'était voulu\p!Donc, si tu choisis cette\pdifficulté,prépare-toi à perdre de\ntrès nombreuses fois !Et sache que\psi tu choisis de continuer, tu\nn'auras personne àblâmerà part\ltoi-même…Es-tu VRAIMENT sûr de\pvouloir joueren difficulté\n{COLOR}ÉInsane{COLOR}Á ?
+0x1F101AC: {COLOR}ÊAVERTISSEMENT !{COLOR}ÁCe\pmode de jeu a été conçu pour êtreune\ntâche presque impossible !À de\pnombreux moments, il sembleraun défi\ninjuste ou fastidieux. C'était voulu\p!Donc, si tu choisis cette\pdifficulté,prépare-toi à perdre de\ntrès nombreuses fois !Et sache que\psi tu choisis de continuer, tu\nn'auras personne àblâmerà part\ltoi-même…Es-tu VRAIMENT sûr de\pvouloir joueren difficulté\n{COLOR}ÉInsane{COLOR}Á ?
 0x1F10323: La difficulté du jeu a été réglée\nsur {COLOR}É{STR_VAR_1}{COLOR}Á.\pTu peux passer de Vanilla à\nDifficile à tout moment via\lle menu Options.
-0x1F103AA: La difficulté du jeu a été régléesur\n{COLOR}É{STR_VAR_1}{COLOR}Á.Comme\pNew Game + est activé, tu peuxla\nmodifier librement à tout momentdans\lle menu {COLOR}ÉOptions{COLOR}Á.
+0x1F103AA: La difficulté du jeu a été régléesur\n{COLOR}É{STR_VAR_1}{COLOR}Á. Comme\pNew Game + est activé, tu peuxla\nmodifier librement à tout momentdans\lle menu {COLOR}ÉOptions{COLOR}Á.
 0x1F1043F: Note aussi qu'un plafond de niveau\nstrict est activé par défaut, mais\lil peut être désactivé facilement\ldepuis le menu Options à volonté.
 0x1F104C4: Veux-tu activer un plafond de\nniveauoptionnel strict ?Après\pcertains niveaux atteints,ça\nempêchera tes Pokémonde gagner plus\ld'Exp. jusqu'àce que le prochain\lpalier soit atteint.
 0x1F1057C: Un plafond de niveau difficile a été\nactivé. Tu peux le désactiver en\pchangeant l'Option {COLOR}ÉGain\nd'Exp.{COLOR}Á dans le menu Options\ldepuis {COLOR}ÉPartage Limité{COLOR}Á.
@@ -17705,7 +17705,7 @@
 0x1F10885: La variante\n{COLOR}Érééquilibrée{COLOR}Á a été activée.
 0x1F108B4: Dans la variante rééquilibrée, tous\nles Pokémon entièrement évolués,\ly compris les lignées simples,\lauront leurs stats, sauf les PV,\lajustées pour atteindre environ 600\lde base.\pCependant, Munja ne sera pas ajusté\net la capacité Coloforce n'aura\laucun effet sur les espèces\lajustées.
 0x1F109DA: Veux-tu activer\n{COLOR}ÉSandbox Mode{COLOR}Á ?
-0x1F10A07: En mode Sandbox, les\nchangementssuivants s'appliquent :1)\pLe Scanner de stats peut changer\nEV,IV, Natures, Niveaux,\lTalents,genres, capacités et\pévolutions.2) Le DexNav, le\nCherch'Objet,le Scanner de stats, le\lPorta-PC, le Vélo,et le Time Turner\lpeuvent être\putilisésinstantanément.3) L'aperçu\nd'équipe en combatrévèlera toujours\pl'équipe adverse.4) Le Pokédex est\nprérempli,autorisant des scans\lfaciles avec leDexNav.5) Tous les\pPokémon ont un taux decapture de 100\n%.6) Les objets consommables\previennentaprès les combats de\nDresseurs.7) Les CS peuvent toujours\pêtreutilisées tant que la CS est\ndanston Cube.8) La difficulté ne\pPEUT PAS êtreabaissée en dessous\nd'Expert à aucunmoment du jeu.Si tu\les uniquement en New Game +,tu peux\ppasser librement entreExpert\netInsane.9) Le post-game est\lLIMITÉ.Toutes les batailles\pimportantesseront disponibles depuis\pla Battle Frontieraprès être entré\ndans le Hall of Fame.De plus, des\lPokémon entièrementevolués seront\pachetables dans laBattle\nTower.Cependant, il\ln'y\paura\nplusexploration.
+0x1F10A07: En mode Sandbox, les\nchangementssuivants s'appliquent :1)\pLe Scanner de stats peut changer\nEV,IV, Natures, Niveaux,\lTalents,genres, capacités et\pévolutions.2) Le DexNav, le\nCherch'Objet,le Scanner de stats, le\lPorta-PC, le Vélo,et le Time Turner\lpeuvent être\putilisésinstantanément.3) L'aperçu\nd'équipe en combatrévèlera toujours\pl'équipe adverse.4) Le Pokédex est\nprérempli,autorisant des scans\lfaciles avec leDexNav.5) Tous les\pPokémon ont un taux decapture de 100\n%.6) Les objets consommables\previennentaprès les combats de\nDresseurs.7) Les CS peuvent toujours\pêtreutilisées tant que la CS est\ndanston Cube.8) La difficulté ne\pPEUT PAS êtreabaissée en dessous\nd'Expert à aucunmoment du jeu. Si tu\les uniquement en New Game +,tu peux\ppasser librement entreExpert\netInsane.9) Le post-game est\lLIMITÉ. Toutes les batailles\pimportantesseront disponibles depuis\pla Battle Frontieraprès être entré\ndans le Hall of Fame. De plus, des\lPokémon entièrementevolués seront\pachetables dans laBattle\nTower. Cependant, il\ln'y\paura\nplusexploration.
 0x1F10DC2: Le {COLOR}ÉSandbox Mode{COLOR}Á a été activé.
 0x1F10DE7: Veux-tu jouer la version plus\nsombrede l'histoire ?Cette version\pest bien plus âpre quela version\nnormale.
 0x1F10E5B: {COLOR}ÊAVERTISSEMENT !{COLOR}Á Si\ptu ne cherches ni violence ni\nsensationnalisme, il est fortement\lrecommandé de jouer la version plus\lclaire de l'histoire. Es-tu VRAIMENT\psûr de vouloir jouer la version plus\nsombre ?
@@ -17719,10 +17719,10 @@
 0x1F111F0: Avec l'armée étrangère partie, la\nguerre semblait terminée pour\pBorrius. Cependant, leur roi, en\nproie à sa soif de pouvoir, envoya\laussi l'armée borrianne là-dedans.
 0x1F1129A: La guerre continua de faire rage\ndans la terre étrangère pendant\pplusieurs années. Bien d'autres\nhommes et Pokémon furent enrôlés\lpour combattre et mourir au combat.\pUn Pokémon cher au roi ennemi tomba…
 0x1F1137E: Submergé par le chagrin, le roi\nbâtit une machine pour le revoir\net s'offrir l'immortalité.
-0x1F113ED: Mais ce traumatisme le laissa\nmarquéet empli de colère.Incapable\pde pardonner au monde quiavait\nblessé son précieux Pokémon,il\ltransforma sa machine en armegéante,\ll'Arme Ultime.Le roi devint un\pporteur dedestruction qui mit fin à\nla guerre.
-0x1F114EB: La guerre terminée, le peu qui\nrestaitde l'armée borrianne rentra\lchez soi.Le Pokémon du roi le\pquitta, et lechamp de bataille\ndevint silencieux…
+0x1F113ED: Mais ce traumatisme le laissa\nmarquéet empli de colère. Incapable\pde pardonner au monde quiavait\nblessé son précieux Pokémon,il\ltransforma sa machine en armegéante,\ll'Arme Ultime. Le roi devint un\pporteur dedestruction qui mit fin à\nla guerre.
+0x1F114EB: La guerre terminée, le peu qui\nrestaitde l'armée borrianne rentra\lchez soi. Le Pokémon du roi le\pquitta, et lechamp de bataille\ndevint silencieux…
 0x1F11576: La paix ne vint pas.
-0x1F11594: Enragés par cette guerre stérile,\nlessurvivants réclamèrent une\llargecompensation au roi\lborrian.N'ayant rien à offrir,\pilscommencèrent à manipuler la\nforceobscure pour attaquer le\lroyaumeborrian lors d'une tentative\ldecoup d'État.
+0x1F11594: Enragés par cette guerre stérile,\nlessurvivants réclamèrent une\llargecompensation au roi\lborrian. N'ayant rien à offrir,\pilscommencèrent à manipuler la\nforceobscure pour attaquer le\lroyaumeborrian lors d'une tentative\ldecoup d'État.
 0x1F11684: Pour arrêter cette folie, le roi\nborrian rassembla les Pokémon\llégendaires :
 0x1F116D7: Artikodin !
 0x1F116E1: Électhor !
@@ -17735,7 +17735,7 @@
 0x1F11864: 15 ans plus tard
 0x1F11888: Hoopa…Je m'inquiète, vieil ami,\ppourl'avenir — pour, si,\nnon…{PAUSE}ね quandELLE arrivera.
 0x1F118D6: Je ne pourrai pas te protéger si\nelle tente quelque chose.\pNon…{PAUSE}ね elle tentera quelque\pchose. La question est : quoi ?
-0x1F1194E: C'est pourquoi, mon ami, tu doiste\ncacher.Je vais laisser ta Poké Ball\pdériverau gré des vagues…Tu seras\nsûrement plus en sécuritéperdu en\pmer que si tu restais avecmoi.Si je\nme trompe et que rien ne sepasse, je\pte rappellerai.Mais si c'est notre\ndernière foisensemble…Protège mon\p{STR_VAR_3} si {STR_VAR_2} est\njamaisen danger.Et si le mauvais\pessaie de forcerton véritable\npouvoir…Alors fais confiance à\p{STR_VAR_1} pourte protéger.Adieu,\nmon\pbon\pami.
+0x1F1194E: C'est pourquoi, mon ami, tu doiste\ncacher. Je vais laisser ta Poké Ball\pdériverau gré des vagues…Tu seras\nsûrement plus en sécuritéperdu en\pmer que si tu restais avecmoi. Si je\nme trompe et que rien ne sepasse, je\pte rappellerai. Mais si c'est notre\ndernière foisensemble…Protège mon\p{STR_VAR_3} si {STR_VAR_2} est\njamaisen danger. Et si le mauvais\pessaie de forcerton véritable\npouvoir…Alors fais confiance à\p{STR_VAR_1} pourte protéger. Adieu,\nmon\pbon\pami.
 0x1F11B03: Il est parti…
 0x1F11B0E: Alors, tu es venu malgré tout.\pFinissons-en.
 0x1F11B40: ARGH ! Comment accomplir le vœu de\pGrand- père si je n'arrive même pas\nà attraper un seul Pokémon ?
@@ -17743,10 +17743,10 @@
 0x1F11C01: Que dois-je faire… ?
 0x1F11C19: Une Poké Ball ? Ici ? Maintenant ?
 0x1F11C31: Ce Pokémon…{PAUSE}î ça ne peut pas être… !
-0x1F11C5F: Ha ha ha…Il semble, Grand-Père,\pqu'il y aitpeut-être un moyen après\ntout.Il est temps que la\pdestructionengloutisse le pays…Et\nque la Fleur Éternelle\prefleurisseencore une\nfois…
+0x1F11C5F: Ha ha ha…Il semble, Grand-Père,\pqu'il y aitpeut-être un moyen après\ntout. Il est temps que la\pdestructionengloutisse le pays…Et\nque la Fleur Éternelle\prefleurisseencore une\nfois…
 0x1F11CFD: De nos jours
 0x1F11D15: FばPreset
-0x1F11D25: {PLAYER} s'est précipité vers le\nguérisseur,protégeant les Pokémon\népuisés etK.O. d'autres\pblessures…
+0x1F11D25: {PLAYER} s'est précipité vers le\nguérisseur,protégeant les Pokémon\népuisés etK. O. d'autres\pblessures…
 0x1F11D89: Ce n'était qu'un rêve…\p
 0x1F11DA3: Ancienne sauvegarde
 0x1F11DE5: FばGrand Désert
@@ -17759,10 +17759,10 @@
 0x1F12046: Tourbillons, vrilles, sable, chic…
 0x1F12064: Belliciste
 0x1F1206E: Deviens un des Lucario Immortels !\nMène {STR_VAR_1} combats pour être adoubé.
-0x1F120B3: Je suis membre du puissant culte\ndecombattants appelé simplement\llesLucario Immortels.Autrefois, nous\pcombattions non paspour la richesse,\nmais pour lesport.Cependant, la\psociété moderne jugeles duels\nhumains « inhumains »,alors nous\lcombattons maintenant avecnos\pPokémon.Penses-tu avoir ce qu'il\nfaut pourdevenir l'un des nôtres ?
+0x1F120B3: Je suis membre du puissant culte\ndecombattants appelé simplement\llesLucario Immortels. Autrefois, nous\pcombattions non paspour la richesse,\nmais pour lesport. Cependant, la\psociété moderne jugeles duels\nhumains « inhumains »,alors nous\lcombattons maintenant avecnos\pPokémon. Penses-tu avoir ce qu'il\nfaut pourdevenir l'un des nôtres ?
 0x1F121E3: Pour compléter ton initiation, tu\ndois apprécier le frisson du combat\lau moins {COLOR}É{STR_VAR_1}{COLOR}Ë fois.
 0x1F12246: Tout le monde n'a pas le cœur de\ndevenir Lucario Immortel.
-0x1F12282: Tu as mené de nombreux combats.Mais\ppour être un véritable membredes\nLucario Immortels, tu dois enlivrer\lencore {COLOR}É{STR_VAR_3}{COLOR}Ë.
+0x1F12282: Tu as mené de nombreux combats. Mais\ppour être un véritable membredes\nLucario Immortels, tu dois enlivrer\lencore {COLOR}É{STR_VAR_3}{COLOR}Ë.
 0x1F122F6: Tu as montré que tu as le cœur d'un\ncombattant. Je t'intronise\pmaintenant dans le culte des Lucario\nImmortels, où tu recevras aussi\lnotre roche sacrée.
 0x1F12399: Les Lucario Immortels aiment\ntoujours un bon combat pour le fun.
 0x1F123E2: Au-delà de cette porte repose le roi\nBorrius III. C'est le roi qui a\pjadis libéré et lié la force\nobscure. Personne n'a encore\pcartographié la tombe, mais la\nlégende parle d'une immense richesse\lpour qui atteindra la\lchambre\lfunéraire.
@@ -17777,7 +17777,7 @@
 0x1F127DA: Que penses-tu de ces rochers ?
 0x1F127FB: Ils doivent être importants.
 0x1F12816: Je te dis que cette formation\nrocheuse a de l'importance !\pJe le sens !
-0x1F1285C: Hmph.Je me suis retrouvé dans ce\ptrou je nesais comment.
+0x1F1285C: Hmph. Je me suis retrouvé dans ce\ptrou je nesais comment.
 0x1F12882: Hmph.\pTu m'as battu.
 0x1F12895: Hmph.\pJe me suis vraiment creusé un trou,\nhein ?
 0x1F128C6: La vie du désert prospère ici !
@@ -17786,7 +17786,7 @@
 0x1F12961: J'ai entendu dire qu'il y a des\nfossiles à trouver dans le désert.\pOù peuvent-ils être ?
 0x1F129AB: Je suis bredouille…
 0x1F129BC: S'il y a des fossiles cachés dans\nle​​désert, il a dû être sous l'eau\lil ya longtemps.
-0x1F12A15: Porter ces Lunettes Sable me fait\nmesentir comme un super-héros.En ce\pmoment, personne ne peut mebattre !
+0x1F12A15: Porter ces Lunettes Sable me fait\nmesentir comme un super-héros. En ce\pmoment, personne ne peut mebattre !
 0x1F12A6D: La volonté seule ne suffit pas...
 0x1F12A8A: Je serai un vrai héros un jour. Je\nvais travailler plus dur pour\prenforcer mes Pokémon et\nmoi-même.
 0x1F12AEC: Les garçons et moi allons donner un\nconcert bientôt !\pÇa va envoyer du lourd !
@@ -17798,7 +17798,7 @@
 0x1F12C2D: J'ai brisé des rochers avec mes\npoings et j'ai trouvé ces Pokémon !
 0x1F12C64: Je n'ai pas pu te briser.
 0x1F12C7B: Briser des rochers ici peut donner\nde précieuses récompenses !
-0x1F12CAD: J'observe les oiseaux à la\nrecherchede Furaiglon.En as-tu vu\paujourd'hui ?
+0x1F12CAD: J'observe les oiseaux à la\nrecherchede Furaiglon. En as-tu vu\paujourd'hui ?
 0x1F12CEE: Furaiglon bat Vostourno !
 0x1F12D0F: Je pense que\n{COLOR}ÉFuraiglon{COLOR}Ë n'est là que les {COLOR}Élundis{COLOR}Ë.
 0x1F12D4E: Je surveille de près Vostourno. En\nas-tu vu aujourd'hui\p?
@@ -17817,13 +17817,13 @@
 0x1F12FB7: {COLOR}ÉBip bloup!
 0x1F12FC6: {COLOR}ÁLe {STR_VAR_1} a disparu\ndans lessables mouvants.
 0x1F12FF3: Bois Lugubres
-0x1F12FFF: Une forêt lugubre remplie de\nnombreuxPokémon de type Spectre.De\nnombreux enfants ont disparudans ces\nbois.
+0x1F12FFF: Une forêt lugubre remplie de\nnombreuxPokémon de type Spectre. De\nnombreux enfants ont disparudans ces\nbois.
 0x1F13064: Débroussailleur
 0x1F13071: Aide un riche homme d'affaires à\nbâtir sa crêperie de rêve en coupant\ntoute l'herbe des Bois Lugubres.
-0x1F130DC: Bonjour, Dresseur !Tu es exactement\ple type de personneque je cherche.Je\nsuis un homme d'affaires qui\pveutconstruire sa crêperie de rêve\njusteici, dans la forêt.Il n'y a\lqu'un problème.Toute cette herbe\phaute gêne.Es-tu disponible pour\p{COLOR}ÉCouper{COLOR}Ë toutel'herbe\nhaute du\pcoin\n?
+0x1F130DC: Bonjour, Dresseur !Tu es exactement\ple type de personneque je cherche. Je\nsuis un homme d'affaires qui\pveutconstruire sa crêperie de rêve\njusteici, dans la forêt. Il n'y a\lqu'un problème. Toute cette herbe\phaute gêne. Es-tu disponible pour\p{COLOR}ÉCouper{COLOR}Ë toutel'herbe\nhaute du\pcoin\n?
 0x1F13208: Excellent !Allez, utilise\p{COLOR}ÉCoupe{COLOR}Ë pour\néliminertoute l'herbe haute !
 0x1F13254: Ne t'inquiète pas, Dresseur, je\ntrouverai quelqu'un d'autre pour\laménager mon terrain contre un prix.
-0x1F132B8: Il reste de l'herbe haute dans\ncesbois que tu dois\p{COLOR}ÉCouper{COLOR}Ë.Au travail !
+0x1F132B8: Il reste de l'herbe haute dans\ncesbois que tu dois\p{COLOR}ÉCouper{COLOR}Ë. Au travail !
 0x1F1330A: Excellent travail, mais j'ai une\nmauvaise nouvelle. Les Rangers\pPokémon viennent de fermer notre\nopération. Apparemment, l'herbe\phaute d'ici est protégée, même si\nelle repousse sans cesse. Cependant,\lje suis encore tenu\pcontractuellement de te payer pour\nton\lservice.
 0x1F13412: Je ferai tomber les Rangers Pokémon\nd'abord, puis je bâtirai mon empire\lde la crêpe.
 0x1F13463: Heyo !\nBienvenue aux Bois Lugubres !\pFaisons de notre mieux pour y mettre\nde l'ambiance, d'accord ?
@@ -17853,7 +17853,7 @@
 0x1F13B6A: Le désert ne dure pas beaucoup plus\nloin en allant au sud du bourg. Fais\lattention si tu voyages dans cette\pdirection. Tu finiras à Antisis City\nsi tu vas trop loin. Et Dieu sait\pque tu ne veux pas\napprocher\pcet\nendroit…
 0x1F13C67: C'est mon travail d'allumer toutes\nles torches la nuit.\pLe désert peut devenir très froid\nune fois le soleil couché.\pLes torches fournissent alors une\nsource de chaleur fiable.
 0x1F13D07: C'est mon travail de garder les\ntorches allumées la nuit.\pLe désert peut devenir très froid\nmaintenant que le soleil est couché.\pCes torches sont notre seule source\nfiable de chaleur pour l'instant.
-0x1F13DB9: Bonjour, j'ai été placé ici par\nlaSociété Scientifique pour étudier\llesfossiles.Si tu en as trouvé un,\pje peuxessayer de le ranimer pour\ntoi.
+0x1F13DB9: Bonjour, j'ai été placé ici par\nlaSociété Scientifique pour étudier\llesfossiles. Si tu en as trouvé un,\pje peuxessayer de le ranimer pour\ntoi.
 0x1F13E45: On dirait que tu n'as pas trouvé de\nfossile non plus…
 0x1F13E71: Oh !\nC'est merveilleux !\pQuel fossile veux-tu que je ranime\nen Pokémon ?
 0x1F13EC0: …Hein ?\pÇa ne ressemble pas à un fossile,\npour moi…
@@ -17870,14 +17870,13 @@
 0x1F141FF: Si tu changes d'avis, me vendras-tu\nl'objet rare ? Le feras-tu\l?
 0x1F14247: Aussi durs qu'ils viennent
 0x1F1425C: Il n'y a rien de plus dur qu'une\nPierre Dure !\nRassemble-en 20 pour un passionné.
-0x1F142BE: Hé, toi.J'ai une faveur à te\ndemander.Je suis un passionné.Un\pamateur de choses dures, si jepuis\pdire.Mais contrairement à mon ami\nlà-bas,je ne veux rien t'acheter.Je\pveux juste que tu\nrécoltes{COLOR}É{STR_VAR_1} Pierres\lDures{COLOR}Ë pour moi.Tu crois que\ptu\npeux\p?
+0x1F142BE: Hé, toi. J'ai une faveur à te\ndemander. Je suis un passionné. Un\pamateur de choses dures, si jepuis\pdire. Mais contrairement à mon ami\nlà-bas,je ne veux rien t'acheter. Je\pveux juste que tu\nrécoltes{COLOR}É{STR_VAR_1} Pierres\lDures{COLOR}Ë pour moi. Tu crois que\ptu\npeux\p?
 0x1F143CA: Yee haw ! {COLOR}ÉDes Pierres\pDures{COLOR}Ë peuvent apparaître\nquand tu brises des rochers dans le\p{COLOR}ÉGrand Désert{COLOR}Ë. Je\nparie que si tu creusais dans les\lmurs de la {COLOR}ÉKBT{COLOR}Ë, tu en trouverais.
 0x1F1447F: Ces objets durs dans ton Cube sont\nceux que j'ai demandés !\pAllez, laisse-moi te les prendre.
 0x1F144D9: Oh, tu cherches une récompense ou\nquoi ?\pAlors, la voilà.
 0x1F14516: {COLOR}ÉDes Pierres Dures{COLOR}Ë\npeuvent apparaître quand tu brises\pdes rochers dans le {COLOR}ÉGrand\nDésert{COLOR}Ë. Je parie que si tu\lcreusais dans les murs de la\p{COLOR}ÉKBT Expressway{COLOR}Ë, tu\nen trouverais aussi. Ramène-moi {COLOR}É{STR_VAR_1}{COLOR}Ë.
 0x1F145FE: Je vois bien que tu n'es pas un\npassionné.
 0x1F14623: Dis, tu sais quoi ?Apporte-moi\pencore plus de chosesdures !J'ai une\pmontagne de {COLOR}ÉGemmes{COLOR}Ë\nici, etje m'en moque !Je te les\ldonnerai contre encoreplus de\pPierres\nDures.
-0x1F14710: Je ne veux plus simplement des\nPierres Dures ! Je veux {COLOR}É{STR_VAR_1}{COLOR}Ë {COLOR}ÉGems{COLOR}Ë !
 0x1F1472A: Je ne veux plus simplement des\nPierres Dures ! Maintenant, je veux\p{COLOR}É{STR_VAR_1}{COLOR}Ë\n{COLOR}ÉGems{COLOR}Ë ! Tu penses que tu peux ?
 0x1F147A3: Yee haw !\nCes {COLOR}ÉGems{COLOR}Ë sont partout,\nmais surtout dans les mines près\nde KBT Expressway !
 0x1F147BF: Ces {COLOR}ÉGems{COLOR}Ë dans ton\nCube sont celles que je veux !\nLaisse-les-moi.

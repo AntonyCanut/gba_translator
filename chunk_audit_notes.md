@@ -15,11 +15,21 @@
 
 ## Corrections déjà appliquées
 - fr_chunks/chunk_01.txt
-  - 0x1880F8 raccourcie : «Mon copain m’a offert des perles.»
-  - 0x188F53 raccourcie : «J’ai tout donné, aucun regret.»
+  - 0x1880F8 rééquilibrée avec `\\n` : «Mon copain m’a offert de\\ngrosses perles.»
+  - 0x188F53 rééquilibrée avec `\\n` : «J’ai fait de mon mieux,\\ndonc aucun regret !»
+- fr_chunks/chunk_02.txt (toutes les lignes lisibles >36c corrigées)
+  - Ex : 0x19A7F1, 0x19EB59, 0x1A2B88, 0x1A6046, etc. Rebrisés avec `\\n` en conservant les codes.
+- fr_chunks/chunk_03.txt (lignes lisibles >36c corrigées)
+  - Ex : 0x1BCB81, 0x1BD390, 0x1BD706, 0x1BF053, 0x1C566A, 0x1C5AEB, etc.
+  - Restent non traités car illisibles/garbage : 0x1BE564, 0x1C1367, 0x1F47AC, 0x2009AC, 0x209428, 0x210CC4, 0x220FDC.
+- fr_chunks/chunk_04.txt : 0x24F3D8, 0x24F481, 0x24F534 rebrisés (segments ≤36c).
+- fr_chunks/chunk_06.txt : 0x3D8E10 rebrisé ; restent entrées illisibles (0x3E0F9F, 0x3E120B, 0x3E1326, 0x3E1529).
+- fr_chunks/chunk_10.txt : 0x3FB484 rebrisé ; reste garbage 0x3F9050.
+- fr_chunks/chunk_11.txt : 0x3FD006 rebrisé.
+- fr_chunks/chunk_12.txt : lignes lisibles corrigées (0x3FDBEF, 0x3FDDEB, 0x41665C, 0x4166A7, 0x416A98, 0x416AE2, 0x416B16, 0x416B3E). Reste garbage 0x407C3F.
+- fr_chunks/chunk_13.txt : toutes lignes lisibles corrigées (0x416BFB, 0x416D17, 0x416D78, 0x4170DE, 0x417494). Plus de dépassements.
+- fr_chunks/chunk_14.txt : toutes lignes lisibles corrigées (0x418642, 0x418690, 0x4186B0, 0x418937, 0x4189EE, 0x41971A, 0x4199AB, 0x4199F4, 0x419D89). Plus de dépassements.
 
 ## Prochaines priorités proposées
-1) Traiter les lignes lisibles >36 caractères dans `chunk_02` (jetons/prix, messages Cherche-Objet, guides) en respectant les breaks de l’origin.
-2) Traiter `chunk_03` entrées lisibles (modes de combat, obstacles plongée, etc.).
-3) Continuer chunk par chunk en excluant les sections corrompues/garbage pour l’instant.
-
+1) Poursuivre chunk par chunk à partir de `chunk_04` en rebrisant les segments lisibles >36c (en respectant les breaks d’origine).
+2) Laisser de côté pour l’instant les entrées illisibles/garbage listées ci-dessus jusqu’à clarification.

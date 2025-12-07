@@ -1,16 +1,16 @@
 0x416B86: Courrier envoyé sur ton PC.{PAUSE_UNTIL_PRESS}
 0x416BA6: La Boîte Mail du PC est pleine.{PAUSE_UNTIL_PRESS}
 0x416BC3: Retirer le Courrier effacera\nle message. D'accord ?
-0x416BFB: Retire le Courrier avant de faire tenir un objet.\n{PAUSE_UNTIL_PRESS}
+0x416BFB: Retire le Courrier avant de faire\nporter un objet.\n{PAUSE_UNTIL_PRESS}
 0x416C2A: {STR_VAR_1} tient\n{STR_VAR_2}.{PAUSE_UNTIL_PRESS}
 0x416C49: {STR_VAR_1} tient déjà\n{STR_VAR_2}.\pÉchanger les deux\nobjets ?
 0x416C8F: {STR_VAR_1} ne tient rien.\n{PAUSE_UNTIL_PRESS}
 0x416CAC: Reçu {STR_VAR_2}\nde {STR_VAR_1}.{PAUSE_UNTIL_PRESS}
 0x416CC7: Courrier retiré du Pokémon.\n{PAUSE_UNTIL_PRESS}
 0x416CEA: {STR_VAR_2} retiré, remplacé\npar {STR_VAR_1}.{PAUSE_UNTIL_PRESS}
-0x416D17: Ce Pokémon tient un objet. Il ne peut pas porter de Courrier.\n{PAUSE_UNTIL_PRESS}
+0x416D17: Ce Pokémon tient un objet. Il ne\npeut pas porter de Courrier.\n{PAUSE_UNTIL_PRESS}
 0x416D4F: Courrier transféré de la\nBoîte Mail.{PAUSE_UNTIL_PRESS}
-0x416D78: {STR_VAR_1} est plein. Objet du Pokémon non retiré.\n{PAUSE_UNTIL_PRESS}
+0x416D78: {STR_VAR_1} est plein. Objet du\nPokémon non retiré.\n{PAUSE_UNTIL_PRESS}
 0x416DB3: {STR_VAR_1} a appris\n{STR_VAR_2} !
 0x416DC2: {STR_VAR_1} et {STR_VAR_2} ne sont pas compatibles.\n{STR_VAR_2}\pne peut pas être\napprise.{PAUSE_UNTIL_PRESS}
 0x416DF7: {STR_VAR_1} veut apprendre la capacité {STR_VAR_2}.\n{STR_VAR_1} connaît déjà\pquatre capacités.\n\pOublier une capacité pour\napprendre {STR_VAR_2} ?
@@ -33,7 +33,7 @@
 0x417075: {STR_VAR_1} n'est plus amoureux.\n{PAUSE_UNTIL_PRESS}
 0x417094: C'est ton seul Pokémon\npour combattre.
 0x4170B9: Ce Pokémon ne peut pas être\ntroqué maintenant.
-0x4170DE: Un Œuf ne peut pas être troqué maintenant.
+0x4170DE: Un Œuf ne peut pas être troqué\nmaintenant.
 0x4170FC: Le Pokémon de l'autre\nDresseur ne peut pas être troqué.
 0x41712D: L'autre Dresseur ne peut pas\naccepter ce Pokémon.
 0x417161: Tu ne peux pas échanger avec ce\nDresseur maintenant.
@@ -76,7 +76,7 @@
 0x417445: INAPTE !
 0x41744F: APPRISE
 0x417457: CHEN : Il faut bien connaître\nses Pokémon.\p
-0x417494: Liste de tes Pokémon, {PLAYER}. Ouvre-la pour voir les\ncapacités de tes Pokémon.\p\nChoisis un Pokémon ici si tu\pveux utiliser un objet.\n{PAUSE_UNTIL_PRESS}
+0x417494: Liste de tes Pokémon, {PLAYER}.\nOuvre-la pour voir les\ncapacités de tes Pokémon.\p\nChoisis un Pokémon ici si tu\pveux utiliser un objet.\n{PAUSE_UNTIL_PRESS}
 0x417533: Coupe un arbre ou de l'herbe.
 0x417548: Vol vers une ville connue.
 0x41755D: Voyage sur l'eau.

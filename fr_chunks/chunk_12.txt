@@ -25,13 +25,13 @@
 0x3FDAB1: Tu lances une Ball, hein ?\nJe... je vais faire de mon mieux !
 0x3FDAE2: Journal : Oh, bon sang...\nToujours pressé.\p{B_PLAYER_NAME}.\pTu n'as jamais fait de combat\nPokémon, hein ?\pUn combat oppose les Pokémon\ndes Dresseurs entre eux.\l\p
 0x3FDB92: Le Dresseur qui met K.O. les\nPokémon adverses en baissant\lleurs PV à «0» gagne.\p
-0x3FDBEF: Mais plutôt qu'en parler, tu apprendras mieux par l'expérience.\nEssaye de combattre\ppour voir.\p
+0x3FDBEF: Mais plutôt qu'en parler, tu\napprendras mieux par l'expérience.\nEssaye de combattre\ppour voir.\p
 0x3FDC58: Infliger des dégâts à l'ennemi\nest la clé de tout combat.\p
 0x3FDC95: Baisser les stats de l'ennemi\nt'avantage.\p
 0x3FDCD2: Garde un œil sur les PV\nde ton Pokémon.\pIl tombera K.O. si ses PV\natteignent «0».\p
 0x3FDD23: Non ! Pas de fuite d'un combat\ncontre un Dresseur !\p
 0x3FDD64: Hm ! Excellent !\pSi tu gagnes, tu as de l'argent,\net ton Pokémon grandit !\pAffronte d'autres Dresseurs\npour les rendre forts !\p
-0x3FDDEB: Hm... Quelle déception... Si tu gagnes, tu as de l'argent,\net tes Pokémon grandissent.\pSi tu perds, {B_PLAYER_NAME},\ntu paies.\pJe paie cette fois,\nmais dehors ce sera différent.\pRenforce tes Pokémon en battant\ndes Pokémon sauvages.\p\nmais dehors ce sera différent.\pRenforce tes Pokémon en battant\ndes Pokémon sauvages.\p
+0x3FDDEB: Hm... Quelle déception... Si tu\ngagnes, tu as de l'argent,\net tes Pokémon grandissent.\pSi tu perds, {B_PLAYER_NAME},\ntu paies.\pJe paie cette fois,\nmais dehors ce sera différent.\pRenforce tes Pokémon en battant\ndes Pokémon sauvages.\p\nmais dehors ce sera différent.\pRenforce tes Pokémon en battant\ndes Pokémon sauvages.\p
 0x3FE672: Quoi ?\n{STR_VAR_1} évolue!
 0x3FE688: Félicitations ! Ton {STR_VAR_1}\na évolué en {STR_VAR_2}!\p {WAIT_SE}
 0x3FE6B5: Hein ? {STR_VAR_1}\nn'évolue plus!\p
@@ -204,9 +204,9 @@
 0x416631: La Boîte est pleine. {PAUSE_UNTIL_PRESS}
 0x416644: QUANT. POUDRE: {STR_VAR_1} {PAUSE_UNTIL_PRESS}
 0x416655: POUDRE
-0x41665C: Tu joues de la FLÛTE POKé. Quelle mélodie\pentraînante !{PAUSE_UNTIL_PRESS}
+0x41665C: Tu joues de la FLÛTE POKé.\nQuelle mélodie entraînante !{PAUSE_UNTIL_PRESS}
 0x416690: Tu joues de la FLÛTE POKé.
-0x4166A7: La FLÛTE POKé réveille les Pokémon endormis.\n{PAUSE_UNTIL_PRESS}
+0x4166A7: La FLÛTE POKé réveille les Pokémon\nendormis.\n{PAUSE_UNTIL_PRESS}
 0x4166D3: Boîte CT
 0x4166DB: Fermer
 0x4166E1: La Boîte CT sera\nrangée.
@@ -242,9 +242,9 @@
 0x416A3A: {STR_VAR_1} est déjà\nau combat !{PAUSE_UNTIL_PRESS}
 0x416A55: {STR_VAR_1} est déjà sélectionné.\n{PAUSE_UNTIL_PRESS}
 0x416A75: {STR_VAR_1} n'a plus assez d'énergie\npour se battre !{PAUSE_UNTIL_PRESS}
-0x416A98: Impossible d'échanger le Pokémon de {STR_VAR_1} avec l'un des tiens !\n{PAUSE_UNTIL_PRESS}
+0x416A98: Impossible d'échanger le Pokémon\nde {STR_VAR_1} avec l'un des tiens !\n{PAUSE_UNTIL_PRESS}
 0x416ACB: Un Œuf ne peut pas se battre ! {PAUSE_UNTIL_PRESS}
-0x416AE2: Inutilisable tant qu'un nouveau Badge n'est pas obtenu.\n{PAUSE_UNTIL_PRESS}
-0x416B16: Pas plus de trois Pokémon ne peuvent entrer.\n{PAUSE_UNTIL_PRESS}
-0x416B3E: Pas plus de deux Pokémon ne peuvent entrer.\n{PAUSE_UNTIL_PRESS}
+0x416AE2: Inutilisable tant qu'un nouveau\nBadge n'est pas obtenu.\n{PAUSE_UNTIL_PRESS}
+0x416B16: Pas plus de trois Pokémon ne\npeuvent entrer.\n{PAUSE_UNTIL_PRESS}
+0x416B3E: Pas plus de deux Pokémon ne\npeuvent entrer.\n{PAUSE_UNTIL_PRESS}
 0x416B64: Envoyer le Courrier retiré\nsur ton PC ?
