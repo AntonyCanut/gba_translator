@@ -1,15 +1,15 @@
 #!/usr/bin/env python3
 r"""
-Réinjecte les textes traduits dans le ROM GBA.
+Re-inject translated text into the GBA ROM.
 
-Hypothèses :
-- Les textes repérés par offset sont des chaînes terminées par 0xFF (format FireRed).
-- On écrase in-place : la nouvelle chaîne doit tenir dans l'espace d'origine
-  (longueur originale, terminateur compris). Si elle est plus longue, on signale
-  l'erreur et on n'écrit pas.
-- Les codes spéciaux {PLAYER}, \n, \p, \l… doivent correspondre à la charmap utilisée.
+Assumptions:
+- Offsets point to 0xFF-terminated strings (FireRed format).
+- We try in-place first: the new string must fit the original space
+  (original length including terminator). If it is longer, we log an error and
+  skip the write.
+- Special tokens {PLAYER}, \n, \p, \l… must match the charmap in use.
 
-Usage :
+Usage:
     python inject_translations.py \
         --rom totranslate.gba \
         --charmap charmap_firered.txt \
@@ -36,8 +36,8 @@ SAFE_RELOC_START = SENSITIVE_OFFSET_MAX  # free blocks below this are ignored to
 
 PLACEHOLDER_RE = re.compile(r"\{[^}]+\}")
 POINTER_BASE = 0x08000000
-GAP_BYTES = 4  # laisser un petit bloc libre entre deux blocs utilisés
-# Offsets à ne jamais toucher (gibberish/données brutes)
+GAP_BYTES = 4  # leave a short gap between allocated blocks
+# Offsets never to touch (gibberish/raw data)
 IMMUTABLE_OFFSETS = {0x4FDAC2}
 # These offsets are referenced directly in code (start menu/version labels).
 # Never relocate them: write in place only (fail if too long).
@@ -86,10 +86,10 @@ def load_charmap(path: Path) -> Dict[str, Tuple[int, ...]]:
             val = left[1:-1]
         else:
             val = "{" + left + "}"
-        # Conserver la première occurrence si doublons (choix simple)
+        # Keep the first occurrence if duplicates exist (simple choice)
         if val not in mapping:
             mapping[val] = seq
-    # Normaliser l'apostrophe simple sur le même code que '\'' s'il existe
+    # Normalize plain apostrophes to the same code as '\'' if present
     if "\\'" in mapping and "'" not in mapping:
         mapping["'"] = mapping["\\'"]
     if "’" in mapping and "'" not in mapping:
@@ -210,7 +210,7 @@ def encode_text_truncate(
             seq = value_to_seq.get(" ") or value_to_seq.get("?")
         if seq is None:
             continue
-        if len(out) + len(seq) + 1 > max_len:  # +1 pour le 0xFF final
+        if len(out) + len(seq) + 1 > max_len:  # +1 for the final 0xFF
             break
         out.extend(seq)
     if len(out) < max_len:
@@ -289,7 +289,7 @@ def main() -> None:
     rom_bytes = bytearray(args.rom.read_bytes())
     value_to_seq = load_charmap(args.charmap)
 
-    # Construire un index offset -> taille originale (jusqu'au 0xFF inclus)
+    # Build index: offset -> original size (up to and including the 0xFF)
     original_lengths: Dict[int, int] = {}
     for line in args.text.read_text(encoding="utf-8").splitlines():
         if ": " not in line:
@@ -300,29 +300,28 @@ def main() -> None:
         end = rom_bytes.find(b"\xFF", offset)
         if end == -1:
             continue
-        original_lengths[offset] = end - offset + 1  # inclut le 0xFF
+        original_lengths[offset] = end - offset + 1  # includes the 0xFF
 
-    # Construire un index pointeur -> positions (supporte bit Thumb LSB=1)
+    # Build a pointer index -> positions (supports Thumb LSB=1)
     pointer_index: Dict[int, List[Tuple[int, int]]] = {off: [] for off in original_lengths.keys()}
     all_pointer_index: Dict[int, List[Tuple[int, int]]] = {}
     for i in range(len(rom_bytes) - 3):
         val = int.from_bytes(rom_bytes[i : i + 4], "little")
-        base = val & ~1  # masque le bit Thumb éventuel
+        base = val & ~1  # mask the Thumb bit if present
         lsb = val & 1
-        off = base - POINTER_BASE  # l'offset pointé (LSB sert juste de flag)
+        off = base - POINTER_BASE  # pointed offset (LSB acts as a flag)
         if 0 <= off < len(rom_bytes):
             all_pointer_index.setdefault(off, []).append((i, lsb))
             if lsb == 1 and off + 1 < len(rom_bytes):
                 all_pointer_index.setdefault(off + 1, []).append((i, lsb))
         if off in pointer_index:
             pointer_index[off].append((i, lsb))
-        # Certains pointeurs texte sont stockés avec le bit Thumb à 1 alors que
-        # le texte commence à l'adresse +1. On associe aussi ces pointeurs à
-        # off+1 pour repérer et reloger ces chaînes.
+        # Some text pointers are stored with Thumb bit set while the text starts at +1.
+        # Also associate those pointers to off+1 to locate and relocate such strings.
         if lsb == 1 and (off + 1) in pointer_index:
             pointer_index[off + 1].append((i, lsb))
 
-    # Prépare les lignes triées par longueur encodée décroissante (priorité aux plus longues)
+    # Sort entries by encoded length descending (longest first)
     sensitive_lines = load_sensitive_lines()
     entries = []
     line_to_offset: Dict[int, int] = {}
@@ -404,7 +403,7 @@ def main() -> None:
     reuse_from_old = 0
     processed_offsets: set[int] = set()
 
-    # free_blocks: liste de (start, size, source) où source ∈ {"hole", "old"}
+    # free_blocks: list of (start, size, source) where source ∈ {"hole", "old"}
     if args.free_map:
         free_blocks = []
         for raw in args.free_map.read_text(encoding="utf-8").splitlines():
@@ -436,14 +435,14 @@ def main() -> None:
             if (not args.no_relocate and args.use_holes)
             else []
         )
-    append_offset = (len(rom_bytes) + 3) // 4 * 4  # align fin de rom
+    append_offset = (len(rom_bytes) + 3) // 4 * 4  # align end of ROM
     max_rom_size = len(rom_bytes)
 
     def take_block(needed: int):
         """Retourne un bloc en laissant un écart GAP_BYTES après l'écriture."""
         nonlocal free_blocks
         required = needed + GAP_BYTES
-        free_blocks.sort(key=lambda b: (b[2] != "old", b[1]))  # privilégie les blocs libérés, puis best-fit
+        free_blocks.sort(key=lambda b: (b[2] != "old", b[1]))  # prefer freed blocks, then best-fit
         for idx, (start, size, src) in enumerate(free_blocks):
             if size >= required:
                 alloc_start = start
@@ -489,7 +488,7 @@ def main() -> None:
     def collect_contiguous_run(start_off: int) -> List[Tuple[int, int]]:
         """Retourne les paires (offset, longueur) d'un bloc de chaînes contiguës (séparées par un seul 0xFF)."""
         run_start = start_off
-        # remonter tant que la chaîne précédente se termine juste avant run_start
+        # Walk backward as long as the previous string ends exactly at run_start-1
         while True:
             prev_term = rom_bytes.rfind(b"\xFF", 0, run_start)
             if prev_term == -1:
@@ -514,7 +513,7 @@ def main() -> None:
             pos = next_start
         return run
 
-    # Traiter en amont les blocs de chaînes contiguës où des entrées trop longues n'ont pas de pointeur dédié
+    # Early-handle contiguous string blocks where long entries lack a dedicated pointer
     for anchor in group_runs:
         run = run_members.get(anchor, [])
         if not run or any(off in processed_offsets for off in run):
@@ -564,8 +563,8 @@ def main() -> None:
 
         ptr_delta = target_off - anchor
         for idx, lsb in positions:
-            # Conserver l'adresse réelle (parité comprise) sans forcer le bit Thumb,
-            # sinon on décale d'un octet les chaînes relogées.
+            # Keep the real address (parity included) without forcing the Thumb bit,
+            # otherwise relocated strings shift by one byte.
             new_ptr_val = POINTER_BASE + dest_offset + ptr_delta
             rom_bytes[idx : idx + 4] = new_ptr_val.to_bytes(4, "little")
         pointer_index[anchor] = []
@@ -606,7 +605,7 @@ def main() -> None:
                 rom_bytes[offset + len(encoded) : offset + orig_len] = b"\xFF" * (orig_len - len(encoded))
             replaced += 1
             continue
-        # Essai en place
+        # Try in place first
         if len(encoded) <= orig_len:
             rom_bytes[offset : offset + len(encoded)] = encoded
             if len(encoded) < orig_len:
@@ -616,7 +615,7 @@ def main() -> None:
             replaced += 1
             continue
 
-        # Texte trop long : il faut reloger (pas de troncature)
+        # Too long: relocate (no truncation)
         if args.no_relocate:
             errors.append(
                 f"Ligne {line_no}: texte trop long ({len(encoded)}>{orig_len}) et --no-relocate actif (offset {hex(offset)})"
@@ -625,7 +624,7 @@ def main() -> None:
 
         alt_offset, positions = locate_positions_for(offset)
         if not positions:
-            # tenter une extension locale si un run de 0xFF suit la chaîne
+            # Attempt a local extension if a run of 0xFF follows the string
             end = rom_bytes.find(b"\xFF", offset)
             if end == -1:
                 errors.append(
@@ -639,7 +638,7 @@ def main() -> None:
                 if run >= extra_needed:
                     break
             if run < extra_needed:
-                # Dernière tentative : reloger tout le bloc contigu si un pointeur existe sur une entrée précédente
+                # Last attempt: relocate the entire contiguous block if a pointer exists on a previous entry
                 run_segments = collect_contiguous_run(offset)
                 anchor_in_run = None
                 for off_seg, _seg_len in run_segments:
@@ -743,14 +742,14 @@ def main() -> None:
         ptr_delta = alt_offset - offset
         for idx, lsb in positions:
             target = dest_offset + ptr_delta
-            # Ne pas forcer le bit Thumb : on pointe exactement sur le début du texte relogé.
+            # Do not force the Thumb bit: point exactly to the relocated text start.
             new_ptr_val = POINTER_BASE + target
             rom_bytes[idx : idx + 4] = new_ptr_val.to_bytes(4, "little")
         pointer_index[offset] = []
         if alt_offset in pointer_index:
             pointer_index[alt_offset] = []
 
-        # Libérer l'ancien emplacement pour de futurs relogements
+        # Free the old slot for future relocations
         if args.reuse_old_space and (args.ignore_sensitive or offset >= SAFE_RELOC_START):
             rom_bytes[offset : offset + orig_len] = b"\xFF" * orig_len
             aligned_old = (offset + 3) // 4 * 4
@@ -766,11 +765,11 @@ def main() -> None:
     args.out.write_bytes(rom_bytes)
     print(f"Chaînes remplacées: {replaced} (déplacées: {moved}, réutilisation anciens emplacements: {reuse_from_old})")
     if errors:
-        # Dump complet pour analyse
+        # Full dump for analysis
         try:
             lines = []
             for err in errors:
-                # essayer d'extraire offset/longueurs si présent dans le message
+                # Try to keep offset/length info if present
                 lines.append(err)
             args.errors_out.write_text("\n".join(lines), encoding="utf-8")
         except Exception:
