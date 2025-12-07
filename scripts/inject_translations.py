@@ -30,15 +30,33 @@ DEFAULT_CHARMAP = Path("charmap_firered.txt")
 DEFAULT_TEXT = Path("extracted_text_fr.txt")
 DEFAULT_OUT = Path("totranslate_fr.gba")
 SENSITIVE_FILE = Path("sensitive_lines.txt")
-SENSITIVE_OFFSET_MAX = 0x220000  # zones basses à ne pas reloger (écran de nom, scripts précoces, etc.)
+SENSITIVE_OFFSET_MAX = 0x220000  # low offsets hold intro/name screens; avoid relocating them
 FORCE_SHRINK_OFFSETS = {0x8CEB24, 0x1F0F874}
-SAFE_RELOC_START = SENSITIVE_OFFSET_MAX  # ne pas utiliser les blocs libres avant cette limite
+SAFE_RELOC_START = SENSITIVE_OFFSET_MAX  # free blocks below this are ignored to reduce risk
 
 PLACEHOLDER_RE = re.compile(r"\{[^}]+\}")
 POINTER_BASE = 0x08000000
 GAP_BYTES = 4  # laisser un petit bloc libre entre deux blocs utilisés
 # Offsets à ne jamais toucher (gibberish/données brutes)
 IMMUTABLE_OFFSETS = {0x4FDAC2}
+# These offsets are referenced directly in code (start menu/version labels).
+# Never relocate them: write in place only (fail if too long).
+PROTECTED_OFFSETS = {
+    0x415A23,  # version labels / start menu block
+    0x415A2C,
+    0x415A31,
+    0x415A36,
+    0x415A3C,
+    0x415A43,
+    0x415A49,
+    0x415A50,
+    0x415A5C,
+    0x415A66,
+    0x415A6E,
+    0x415A77,
+    0x415A8A,
+    0x415A97,
+}
 
 
 def find_free_blocks(data: bytes, min_size: int, align: int = 4):
@@ -97,8 +115,14 @@ def parse_offset_line(line: str) -> Tuple[int, str]:
 
 
 def encode_text(text: str, value_to_seq: Dict[str, Tuple[int, ...]]) -> bytes:
-    """Encode une chaîne (avec {TOKENS} et \\n \\p \\l) en bytes + 0xFF final."""
-    # Normalisation légère pour éviter les erreurs d'encodage
+    """Encode a string (with {TOKENS} and \\n \\p \\l) to bytes + trailing 0xFF.
+
+    Notes:
+    - We normalize problematic Unicode glyphs to their single-byte counterparts
+      before encoding to avoid silent failures.
+    - Apostrophes are collapsed to the plain `'` codepoint because some fonts/
+      charmaps lack smart quotes.
+    """
     text = (
         text.replace("\xa0", " ")
         .replace("\u200b", "")
@@ -146,7 +170,11 @@ def encode_text(text: str, value_to_seq: Dict[str, Tuple[int, ...]]) -> bytes:
 def encode_text_truncate(
     text: str, max_len: int, value_to_seq: Dict[str, Tuple[int, ...]]
 ) -> bytes:
-    """Encode en respectant la limite max_len (0xFF inclus) en coupant avant dépassement."""
+    """Encode while respecting max_len (including 0xFF), truncating before overflow.
+
+    This is only used on doomed writes (FORCE_SHRINK_OFFSETS) to prevent garbage
+    pointers; normal paths should relocate rather than truncate.
+    """
     text = (
         text.replace("\xa0", " ")
         .replace("\u200b", "")
@@ -332,6 +360,7 @@ def main() -> None:
                 "sensitive": (not args.ignore_sensitive)
                 and ((line_no in sensitive_lines) or (offset < SENSITIVE_OFFSET_MAX)),
                 "force_shrink": (not args.ignore_sensitive) and (offset in FORCE_SHRINK_OFFSETS),
+                "protected": offset in PROTECTED_OFFSETS,
             }
         )
 
@@ -539,7 +568,9 @@ def main() -> None:
 
         ptr_delta = target_off - anchor
         for idx, lsb in positions:
-            new_ptr_val = (POINTER_BASE + dest_offset + ptr_delta) | lsb
+            # Conserver l'adresse réelle (parité comprise) sans forcer le bit Thumb,
+            # sinon on décale d'un octet les chaînes relogées.
+            new_ptr_val = POINTER_BASE + dest_offset + ptr_delta
             rom_bytes[idx : idx + 4] = new_ptr_val.to_bytes(4, "little")
         pointer_index[anchor] = []
         if target_off in pointer_index:
@@ -566,6 +597,18 @@ def main() -> None:
         encoded = entry["encoded"]
         orig_len = entry["orig_len"]
         if offset in processed_offsets:
+            continue
+        # Never relocate these offsets; they are referenced directly in code.
+        if entry.get("protected"):
+            if len(encoded) > orig_len:
+                errors.append(
+                    f"Ligne {line_no}: texte trop long ({len(encoded)}>{orig_len}) sur offset protégé {hex(offset)}"
+                )
+                continue
+            rom_bytes[offset : offset + len(encoded)] = encoded
+            if len(encoded) < orig_len:
+                rom_bytes[offset + len(encoded) : offset + orig_len] = b"\xFF" * (orig_len - len(encoded))
+            replaced += 1
             continue
         # Essai en place
         if len(encoded) <= orig_len:
@@ -648,7 +691,7 @@ def main() -> None:
 
                     ptr_delta = target_off - anchor_in_run
                     for idx, lsb in anchor_positions:
-                        new_ptr_val = (POINTER_BASE + dest_offset + ptr_delta) | lsb
+                        new_ptr_val = POINTER_BASE + dest_offset + ptr_delta
                         rom_bytes[idx : idx + 4] = new_ptr_val.to_bytes(4, "little")
                     pointer_index[anchor_in_run] = []
                     if target_off in pointer_index:
@@ -704,7 +747,8 @@ def main() -> None:
         ptr_delta = alt_offset - offset
         for idx, lsb in positions:
             target = dest_offset + ptr_delta
-            new_ptr_val = (POINTER_BASE + target) | lsb
+            # Ne pas forcer le bit Thumb : on pointe exactement sur le début du texte relogé.
+            new_ptr_val = POINTER_BASE + target
             rom_bytes[idx : idx + 4] = new_ptr_val.to_bytes(4, "little")
         pointer_index[offset] = []
         if alt_offset in pointer_index:

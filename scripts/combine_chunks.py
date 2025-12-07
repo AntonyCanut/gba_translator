@@ -15,6 +15,8 @@ def main():
     if not chunks:
         raise SystemExit(f"Aucun chunk trouvé dans {src_dir}")
 
+    # Each chunk is already line-bounded; we only trim the trailing newline of
+    # each file so the combined output remains strictly one line per entry.
     data = [f.read_text(encoding="utf-8").rstrip("\n") for f in chunks]
     out.write_text("\n".join(data), encoding="utf-8")
 

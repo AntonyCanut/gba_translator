@@ -75,8 +75,8 @@
 0x3FE982: TABLEAU TEMPS
 0x3FE98D: TEMPS FINAL
 0x3FE998: {STR_VAR_1}M {STR_VAR_2}{STR_VAR_3}S
-0x3FE9E4: Joueur a perdu\n{B_TRAINER1_CLASS} {B_TRAINER1_NAME}!
-0x3FE9FF: Match nul\n{B_TRAINER1_CLASS} {B_TRAINER1_NAME}!
+0x3FE9E4: Joueur a perdu\n{B_TRAINER1_CLASS}\n{B_TRAINER1_NAME}!
+0x3FE9FF: Match nul\n{B_TRAINER1_CLASS}\n{B_TRAINER1_NAME}!
 0x407C3F: AA & ÂS BAAiRRAi SRRiyzziîDA ソ:g{B_ATK_NAME_WITH_PREFIX}: gQxEQQhC QQjCQzhiÇizjii ソi{STRING}だ: ぉ
 0x40FCA2: ぉoTRぉ TRiÜRx
 0x4100BA: kj zyizぞzŒÂjj
@@ -198,3 +198,53 @@
 0x41647E: Hein ?\nCherche-Objet réagit !\nObjet enterré !{PAUSE_UNTIL_PRESS}
 0x4164C2: Oh !\nCherche-Objet bouge !\nObjet sous tes pieds !\n… … … … … …{PAUSE_UNTIL_PRESS}
 0x416513: … … … …Rien !\nAucune réaction.{PAUSE_UNTIL_PRESS}
+0x41659E: Mais l'effet d'un Repousse\npersiste.{PAUSE_UNTIL_PRESS}
+0x4165D2: {PLAYER} utilise le\n{STR_VAR_2}.\pLes Pokémon sauvages\nseront attirés.{PAUSE_UNTIL_PRESS}
+0x416600: {PLAYER} utilise le\n{STR_VAR_2}.\pLes Pokémon sauvages\nseront repoussés.{PAUSE_UNTIL_PRESS}
+0x416631: La Boîte est pleine.\n{PAUSE_UNTIL_PRESS}
+0x416644: QUANT. POUDRE: {STR_VAR_1}\n{PAUSE_UNTIL_PRESS}
+0x416655: POUDRE
+0x41665C: Tu joues de la FLÛTE POKé.\p\nQuelle mélodie\nentraînante !{PAUSE_UNTIL_PRESS}
+0x416690: Tu joues de la FLÛTE POKé.
+0x4166A7: La FLÛTE POKé réveille\nles Pokémon endormis.\n{PAUSE_UNTIL_PRESS}
+0x4166D3: Boîte CT
+0x4166DB: Fermer
+0x4166E1: La Boîte CT sera\nrangée.
+0x41670A: Pochette Baies
+0x416716: La Pochette Baies sera\nrangée.
+0x41673C: Vendre
+0x416741: À plus !
+0x416757: Quitter les achats.
+0x416766: {STR_VAR_1}? Bien sûr.\nCombien en veux-tu ?
+0x41678E: {STR_VAR_1}, et tu en veux\n{STR_VAR_2}. Cela fera\n¥{STR_VAR_3}. OK ?
+0x4167E7: Voilà !\nMerci !
+0x416842: Tu n'as pas assez d'argent.\n{PAUSE_UNTIL_PRESS}
+0x416861: Plus de place pour cet\nobjet.{PAUSE_UNTIL_PRESS}
+0x41689E: Puis-je faire autre chose ?
+0x4168F1: {STR_VAR_1}? Oh, non.\nJe ne peux pas\nacheter ça.{PAUSE_UNTIL_PRESS}
+0x416911: {STR_VAR_1}?\nCombien veux-tu vendre ?
+0x416936: Je peux payer ¥{STR_VAR_3}.\nÇa te va ?
+0x416959: Tu as remis {STR_VAR_1}(s)\npour ¥{STR_VAR_3}.
+0x41697E: Changer
+0x416984: Envoyer
+0x41698D: Permuter
+0x416994: Résumé
+0x4169A3: Inscrire
+0x4169A9: Pas d'entrée
+0x4169B2: Prendre
+0x4169B7: Lire
+0x4169BC: Échanger
+0x4169C5: Att. Spé
+0x4169CD: Déf. Spé
+0x4169DC: Cela n'aura aucun effet.\n{PAUSE_UNTIL_PRESS}
+0x4169F8: Inutilisable sur ce Pokémon.\n{PAUSE_UNTIL_PRESS}
+0x416A1E: Impossible de changer\n{STR_VAR_1}!{PAUSE_UNTIL_PRESS}
+0x416A3A: {STR_VAR_1} est déjà\nau combat !{PAUSE_UNTIL_PRESS}
+0x416A55: {STR_VAR_1} est déjà\nsélectionné.\n{PAUSE_UNTIL_PRESS}
+0x416A75: {STR_VAR_1} n'a plus assez d'énergie\npour se battre !{PAUSE_UNTIL_PRESS}
+0x416A98: Impossible d'échanger le Pokémon\nde {STR_VAR_1} avec l'un des tiens !\n{PAUSE_UNTIL_PRESS}
+0x416ACB: Un Œuf ne peut pas se battre !\n{PAUSE_UNTIL_PRESS}
+0x416AE2: Inutilisable tant qu'un nouveau\nBadge n'est pas obtenu.\n{PAUSE_UNTIL_PRESS}
+0x416B16: Pas plus de trois Pokémon\nne peuvent entrer.\n{PAUSE_UNTIL_PRESS}
+0x416B3E: Pas plus de deux Pokémon\nne peuvent entrer.\n{PAUSE_UNTIL_PRESS}
+0x416B64: Envoyer le Courrier retiré\nsur ton PC ?
