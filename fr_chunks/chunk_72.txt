@@ -1,250 +1,253 @@
-0x1F101AC: {COLOR}ÊAVERTISSEMENT !{COLOR}Á Ce mode de jeu a été conçu pour être une tâche presque impossible ! À de nombreux moments, cela ressemblera à un défi injuste ou\pfastidieux.\nC'était l'intention !\pDonc, si vous choisissez cette\ndifficulté, soyez préparé à perdre\pde très nombreuses fois !\pEt sachez que si vous choisissez de\ncontinuer, vous n'avez personne à\pblâmer\nmais vous-même…\lÊtes-vous SÛR de vouloir jouer avec\pla difficulté {COLOR}ÉInsane{COLOR}Á\n?
-0x1F10323: La difficulté du jeu a été réglée à {COLOR}É{STR_VAR_1}{COLOR}Á.\nN'hésitez pas à basculer entre\pVanilla et Difficile à tout moment\nen utilisant\lle ​​menu Options.
-0x1F103AA: La difficulté du jeu a été réglée à {COLOR}É{STR_VAR_1}{COLOR}Á. Depuis que New Game + est activé,\ncette peut être modifiée librement à\ptout moment\nà l'aide du menu\l{COLOR}ÉOptions{COLOR}Á.
-0x1F1043F: De plus, notez qu'il existe un plafond de niveau hard activé par défaut,\nmais il peut facilement être\ldésactivé à partir de\ldu menu Options à tout moment.
-0x1F104C4: Souhaitez-vous activer un plafond de\nniveau difficile facultatif ?\pUne fois certains niveaux atteints,\ncela empêchera votre Pokémon\lde gagner plus d'Exp. jusqu'à ce que\lla prochaine étape soit franchie.
-0x1F1057C: Un plafond de niveau dur en option a été activé. Il peut facilement être désactivé en\nmodifiant le {COLOR}ÉExp. Gagnez\pl'option {COLOR}Á dans\nle ​​menu Options à partir de\l{COLOR}ÉCapped Share{COLOR}Á.
-0x1F10619: Défaut
+0x1F101AC: {COLOR}ÊAVERTISSEMENT !{COLOR}ÁCe\pmode de jeu a été conçu pour êtreune\ntâche presque impossible !À de\pnombreux moments, il sembleraun défi\ninjuste ou fastidieux. C'était voulu\p!Donc, si tu choisis cette\pdifficulté,prépare-toi à perdre de\ntrès nombreuses fois !Et sache que\psi tu choisis de continuer, tu\nn'auras personne àblâmerà part\ltoi-même…Es-tu VRAIMENT sûr de\pvouloir joueren difficulté\n{COLOR}ÉInsane{COLOR}Á ?
+0x1F10323: La difficulté du jeu a été réglée\nsur {COLOR}É{STR_VAR_1}{COLOR}Á.\pTu peux passer de Vanilla à\nDifficile à tout moment via\lle menu Options.
+0x1F103AA: La difficulté du jeu a été régléesur\n{COLOR}É{STR_VAR_1}{COLOR}Á. Comme\pNew Game + est activé, tu peuxla\nmodifier librement à tout momentdans\lle menu {COLOR}ÉOptions{COLOR}Á.
+0x1F1043F: Note aussi qu'un plafond de niveau\nstrict est activé par défaut, mais\lil peut être désactivé facilement\ldepuis le menu Options à volonté.
+0x1F104C4: Veux-tu activer un plafond de\nniveauoptionnel strict ?Après\pcertains niveaux atteints,ça\nempêchera tes Pokémonde gagner plus\ld'Exp. jusqu'àce que le prochain\lpalier soit atteint.
+0x1F1057C: Un plafond de niveau difficile a été\nactivé. Tu peux le désactiver en\pchangeant l'Option {COLOR}ÉGain\nd'Exp.{COLOR}Á dans le menu Options\ldepuis {COLOR}ÉPartage Limité{COLOR}Á.
+0x1F10619: Par défaut
 0x1F10621: Difficile
 0x1F1062B: Facile
-0x1F10630: Vanille
-0x1F10638: Dur
+0x1F10630: Vanilla
+0x1F10638: Hard
 0x1F1063D: Expert
-0x1F10644: Fou
-0x1F1064B: Stimulant
-0x1F10657: Dos
-0x1F1065C: Souhaitez-vous voir les options\nd'amélioration du jeu ?
-0x1F1068D: Souhaitez-vous voir les options\n{COLOR}Érandomizer{COLOR}Á ?
-0x1F106BE: Souhaitez-vous activer le randomiseur {COLOR}Éspecies{COLOR}Á\n?
-0x1F106F5: Le randomiseur {COLOR}Éspecies{COLOR}Á a été\nactivé.
-0x1F10724: Souhaitez-vous activer le randomiseur {COLOR}Élevel-up\nmoveset{COLOR}Á ?
-0x1F10764: Le randomiseur {COLOR}Élevel-up\nmoveset{COLOR}Á a été activé.
-0x1F1079C: Souhaitez-vous activer le randomiseur {COLOR}ÉAbility{COLOR}Á\n?
-0x1F107D3: Le randomiseur {COLOR}ÉAbility{COLOR}Á a été\nactivé.
-0x1F10802: Notez que le randomiseur sera temporairement désactivé pendant les\ncombats de boss\l.
-0x1F1084D: Souhaitez-vous jouer à une variante avec rééquilibrage des statistiques\n?
-0x1F10885: La variante {COLOR}Érééquilibrée{COLOR}Á a été\nactivée.
-0x1F108B4: Dans la variante rééquilibrée, tous les Pokémon entièrement évolués , y compris les lignées d'espèces uniques, auront leurs statistiques, sauf HP, mises à l'échelle à\n, ce qui donnera une statistique de\lbase approximative\ltotal de 600.\lCependant, Munja ne verra pas ses\lstatistiques mises à l'échelle et la\pcapacité Énorme\nPower n'aura aucun effet sur les\lespèces mises à l'échelle\l.
-0x1F109DA: Souhaitez-vous activer\n{COLOR}ÉSandbox Mode{COLOR}Á ?
-0x1F10A07: En mode Sandbox, les changements suivants sont présents : 1) Le scanner de statistiques peut modifier les EV, IV, les natures, les niveaux, les capacités, genres, mouvements et évolutions. 2) Le DexNav, la machine de radiesthésie, le Stat Scanner, le Porta-PC, le vélo, et le Time Turner peuvent être\nutilisés\pinstantanément.\n3) L'aperçu de l'équipe en bataille\lrévèlera toujours l'équipe ennemie.\p4) Le Pokédex est prérempli,\npermettant des scans faciles avec le\lDexNav.\l5) Tous les Pokémon ont un taux de\pcapture de 100% .\n6) Les objets consommables\previennent toujours après les\ncombats de dresseurs.\l7) Les HM peuvent toujours être\putilisés tant que le HM est dans\nvotre Cube. 8) La difficulté NE PEUT\pPAS être réduit au-delà du niveau\nExpert à tout moment du\pjeu.\nSi vous êtes uniquement sur New Game\p+, vous pouvez basculer entre Expert\net\lInsane librement.\p9) Il y a une période LIMITÉ après\nle jeu.\lToutes les batailles importantes\pseront disponibles depuis Battle\pFrontier\naprès être entré dans le Hall of\lFame.\pDe plus, des Pokémon entièrement\névolués seront achetables dans le\lBattle. Tower.\pCependant, il n'y aura plus\nd'exploration .
-0x1F10DC2: {COLOR}ÉSandbox Mode{COLOR}Á a été activé.
-0x1F10DE7: Souhaitez-vous jouer à la version\nplus sombre de l'histoire ?\pCette version est beaucoup plus\nréaliste que que la version normale.
-0x1F10E5B: {COLOR}ÊAVERTISSEMENT !{COLOR}Á Si la violence et l'avantage ne sont pas ce vous recherchez, il est\pfortement\nrecommandé de jouer avec la version\lplus légère de l'histoire.\lÊtes-vous SÛR de vouloir jouer avec\pl'histoire de la version plus sombre\n?
-0x1F10F25: Cette option ne peut pas être\nmodifiée pendant le jeu.
-0x1F10F55: Comme vous l'avez déjà fait, voudriez-vous sauter les\ncinématiques d'ouverture ?
-0x1F10F9C: Les cinématiques d'ouverture seront\nignorées.\pSi vous souhaitez ignorer toutes les\ncinématiques, veuillez activer cette\ldans le menu Options.
+0x1F10644: Insane
+0x1F1064B: Challenging
+0x1F10657: Retour
+0x1F1065C: Veux-tu voir les options\nd'amélioration de jeu ?
+0x1F1068D: Veux-tu voir les options de\n{COLOR}Érandomizer{COLOR}Á ?
+0x1F106BE: Veux-tu activer le randomizer de\n{COLOR}Éspecies{COLOR}Á ?
+0x1F106F5: Le randomizer\n{COLOR}Éspecies{COLOR}Á a étéactivé.
+0x1F10724: Veux-tu activer le randomizer du\n{COLOR}Émoveset de montée de niveau{COLOR}Á ?
+0x1F10764: Le randomizer du {COLOR}Émoveset de\nmontée de niveau{COLOR}Á a été activé.
+0x1F1079C: Veux-tu activer le randomizer\nd'{COLOR}ÉAbility{COLOR}Á ?
+0x1F107D3: Le randomizer\nd'{COLOR}ÉAbility{COLOR}Á a été activé.
+0x1F10802: Note que le randomizer sera\ntemporairement désactivé pendant les\lcombats de boss.
+0x1F1084D: Veux-tu jouer une variante avec\nrééquilibrage des stats ?
+0x1F10885: La variante\n{COLOR}Érééquilibrée{COLOR}Á a été activée.
+0x1F108B4: Dans la variante rééquilibrée, tous\nles Pokémon entièrement évolués,\ly compris les lignées simples,\lauront leurs stats, sauf les PV,\lajustées pour atteindre environ 600\lde base.\pCependant, Munja ne sera pas ajusté\net la capacité Coloforce n'aura\laucun effet sur les espèces\lajustées.
+0x1F109DA: Veux-tu activer\n{COLOR}ÉSandbox Mode{COLOR}Á ?
+0x1F10A07: En mode Sandbox, les\nchangementssuivants s'appliquent :1)\pLe Scanner de stats peut changer\nEV,IV, Natures, Niveaux,\lTalents,genres, capacités et\pévolutions.2) Le DexNav, le\nCherch'Objet,le Scanner de stats, le\lPorta-PC, le Vélo,et le Time Turner\lpeuvent être\putilisésinstantanément.3) L'aperçu\nd'équipe en combatrévèlera toujours\pl'équipe adverse.4) Le Pokédex est\nprérempli,autorisant des scans\lfaciles avec leDexNav.5) Tous les\pPokémon ont un taux decapture de 100\n%.6) Les objets consommables\previennentaprès les combats de\nDresseurs.7) Les CS peuvent toujours\pêtreutilisées tant que la CS est\ndanston Cube.8) La difficulté ne\pPEUT PAS êtreabaissée en dessous\nd'Expert à aucunmoment du jeu. Si tu\les uniquement en New Game +,tu peux\ppasser librement entreExpert\netInsane.9) Le post-game est\lLIMITÉ. Toutes les batailles\pimportantesseront disponibles depuis\pla Battle Frontieraprès être entré\ndans le Hall of Fame. De plus, des\lPokémon entièrementevolués seront\pachetables dans laBattle\nTower. Cependant, il\ln'y\paura\nplusexploration.
+0x1F10DC2: Le {COLOR}ÉSandbox Mode{COLOR}Á a été activé.
+0x1F10DE7: Veux-tu jouer la version plus\nsombrede l'histoire ?Cette version\pest bien plus âpre quela version\nnormale.
+0x1F10E5B: {COLOR}ÊAVERTISSEMENT !{COLOR}Á Si\ptu ne cherches ni violence ni\nsensationnalisme, il est fortement\lrecommandé de jouer la version plus\lclaire de l'histoire. Es-tu VRAIMENT\psûr de vouloir jouer la version plus\nsombre ?
+0x1F10F25: Cette option ne peut pas être\nchangée en cours de partie.
+0x1F10F55: Puisque tu as déjà joué, veux-tu\npasser les cinématiques d'intro ?
+0x1F10F9C: Les cinématiques d'ouverture seront\npassées. Si tu veux passer toutes\ples cinématiques, active-le depuis\nle menu\lOptions.
 0x1F11016: Il y a longtemps…
-0x1F11020: La région de Borrius a été engloutie\npar une grande guerre avec un pays\n\nétranger. Ce fut une guerre brutale, qui a duré de nombreuses années.\nPendant ce temps, l'ennemi a réussi\n\nà prendre le dessus…\n
-0x1F110D5: Au bord de la défaite, le roi Borrian a invoqué une force obscure pour l'aider\nà renverser le cours de la\lbataille...
-0x1F11136: L’avantage de l’armée étrangère a été perdu presque instantanément. Dès son entrée sur le champ de\nbataille, la force obscure a utilisé\pson pouvoir pour\ncréer des portails et transporter\ll’armée d’invasion\lchez elle…
-0x1F111F0: L'armée étrangère étant partie, la guerre semblait terminée pour Borrius.\nCependant, leur roi, vaincu par sa\psoif de pouvoir, envoya également\nl'armée Borrian\là travers les portails…
-0x1F1129A: La guerre a continué à faire rage dans les terres étrangères pendant plusieurs années. De nombreux autres hommes et Pokémon\nont été enrôlés pour combattre et\pinévitablement\nont connu leur fin sur le champ de\lbataille.\pL'un de ces Pokémon avait été un ami\ncher du roi ennemi…
-0x1F1137E: Accablé par le chagrin, le roi a construit un appareil pour lui\nredonner la vie, s'accordant ainsi\ll'immortalité.
-0x1F113ED: Mais cet événement traumatisant l'a laissé marqué et rempli de colère. Incapable de pardonner au monde que avait blessé son précieux Pokémon,\nil\pa transformé sa machine en une arme\ngéante\l, l'arme ultime.\lLe roi est devenu un porteur de\pdestruction qui a mis fin à la\nguerre.
-0x1F114EB: Une fois la guerre terminée, le peu qui restait de l'armée borrienne\nrentre chez lui.\lLe Pokémon du roi l'a quitté, et le\p​​champ de bataille est devenu\nsilencieux…
-0x1F11576: Pourtant, la paix était encore à venir.
-0x1F11594: Enragés par la guerre infructueuse menée, les survivants de la guerre souhaitaient\nune large compensation de la part du\lroi Borrien.\lQuand il n'avait rien à leur offrir,\pils commencèrent à manipuler la\nforce obscure\lpour attaquer le royaume Borrien\ldans une tentative de coup d'État.
-0x1F11684: Dans un effort pour arrêter cette folie, le ​​roi Borrian a rassemblé\nles\lPokémon légendaires :
-0x1F116D7: Artikodin!
-0x1F116E1: Électhor!
+0x1F11020: La région de Borrius fut engloutie\npar une grande guerre avec une terre\nétrangère. Ce fut une guerre\nbrutale, qui dura de longues années.\nPendant ce temps, l'ennemi parvint\nà\nprendre\nl'avantage…
+0x1F110D5: Au bord de la défaite, le roi\nborrian invoqua une force obscure\lpour renverser le cours du combat…
+0x1F11136: L'avantage de l'armée étrangère fut\nperdu presque instantanément. Dès\pqu'elle entra sur le champ de\nbataille, la force obscure utilisa\lson pouvoir pour créer des portails\let renvoyer l'armée ennemie chez eux
+0x1F111F0: Avec l'armée étrangère partie, la\nguerre semblait terminée pour\pBorrius. Cependant, leur roi, en\nproie à sa soif de pouvoir, envoya\laussi l'armée borrianne là-dedans.
+0x1F1129A: La guerre continua de faire rage\ndans la terre étrangère pendant\pplusieurs années. Bien d'autres\nhommes et Pokémon furent enrôlés\lpour combattre et mourir au combat.\pUn Pokémon cher au roi ennemi tomba…
+0x1F1137E: Submergé par le chagrin, le roi\nbâtit une machine pour le revoir\net s'offrir l'immortalité.
+0x1F113ED: Mais ce traumatisme le laissa\nmarquéet empli de colère. Incapable\pde pardonner au monde quiavait\nblessé son précieux Pokémon,il\ltransforma sa machine en armegéante,\ll'Arme Ultime. Le roi devint un\pporteur dedestruction qui mit fin à\nla guerre.
+0x1F114EB: La guerre terminée, le peu qui\nrestaitde l'armée borrianne rentra\lchez soi. Le Pokémon du roi le\pquitta, et lechamp de bataille\ndevint silencieux…
+0x1F11576: La paix ne vint pas.
+0x1F11594: Enragés par cette guerre stérile,\nlessurvivants réclamèrent une\llargecompensation au roi\lborrian. N'ayant rien à offrir,\pilscommencèrent à manipuler la\nforceobscure pour attaquer le\lroyaumeborrian lors d'une tentative\ldecoup d'État.
+0x1F11684: Pour arrêter cette folie, le roi\nborrian rassembla les Pokémon\llégendaires :
+0x1F116D7: Artikodin !
+0x1F116E1: Électhor !
 0x1F116E9: Sulfura !
-0x1F116F2: En utilisant le pouvoir des trois oiseaux, une prison a été créée pour\nla force obscure\l, scellant ainsi son pouvoir.
-0x1F11752: Il est devenu l’ombre de lui-même.\n
-0x1F11779: Dépouillé de son pouvoir, il fut repris par le roi, et supervisé par\nsa progéniture, jusqu'au jour\lfatidique…
-0x1F117E3: Dépouillé de son pouvoir, il fut\nrepris par le roi et surveillé par\lsa progéniture jusqu'à ce jour.
+0x1F116F2: En utilisant le pouvoir des trois\noiseaux, une prison fut créée pour\lla force obscure et scella ce don.
+0x1F11752: Elle devint l'ombre\nd'elle-même.
+0x1F11779: Privée de sa puissance, elle fut\nrecueillie par le roi et surveillée\lpar sa descendance jusqu'au jour J.
+0x1F117E3: Privée de sa puissance, elle fut\nrecueillie par le roi et surveillée\lpar sa descendance jusqu'à ce jour.
 0x1F1184B: Il y a 16 ans
 0x1F11864: 15 ans plus tard
-0x1F11888: Hoopa… Je m'inquiète, vieil ami, pour\pl'avenir - pour si, non…{PAUSE}ね\nquand ELLE arrivera.
-0x1F118D6: Je ne pourrai pas te protéger si elle essaie quelque chose. Non…{PAUSE}ね elle essaiera quelque\nchose.\pC'est une question de ce que ce\psera.
-0x1F1194E: C'est pourquoi, mon ami, tu dois aller te cacher. J'enverrai ta Poké Ball à la dérive,\nau milieu des vagues…\pTu seras sûrement plus en sécurité\nperdu en mer, que si tu restais avec\pmoi.\nSi je me trompe et que rien ne se\ppasse, Je te rappellerai.\nMais si c'est notre dernière fois\pensemble…\nProtégez mon enfant s'il est jamais en danger.\pEt à son tour, si le mauvais type\nessaye de forcer ton véritable\ppouvoir à se libérer…\nAlors fais lui confiance \ppour vous protéger.\pAdieu, mon bon ami.
-0x1F11B03: C'est parti…
-0x1F11B0E: Donc, tu es venu après tout.\pFinissons-en.
-0x1F11B40: ARGH! Comment puis-je réaliser le souhait\pde grand-père si je ne parviens pas\nà attraper un seul Pokémon ?
-0x1F11B8D: Je lui ai promis… {PAUSE}î J'ai promis que je terminerais la guerre,\nmais pour le moment…\pJe ne peux même pas commencer à\ncomprendre la possibilité !
-0x1F11C01: Que dois-je faire…?
-0x1F11C19: Une Poké Ball ? Ici? Maintenant?
-0x1F11C31: Ce Pokémon…{PAUSE}î, ça ne peut pas être… !
-0x1F11C5F: Ha ha ha…\pIl semble, grand-père, qu'il y ait\npeut-être un chemin après tout.\pIl est temps que la destruction\nengloutisse la terre…\pEt que la Fleur éternelle fleurisse\nune fois de plus…
-0x1F11CFD: Aujourd'hui
-0x1F11D15: F Préréglage
-0x1F11D25: {PLAYER} s'est précipité vers le guérisseur le plus proche, protégeant le Pokémon épuisé et\névanoui de tout dommage\nsupplémentaire…\p
+0x1F11888: Hoopa…Je m'inquiète, vieil ami,\ppourl'avenir — pour, si,\nnon…{PAUSE}ね quandELLE arrivera.
+0x1F118D6: Je ne pourrai pas te protéger si\nelle tente quelque chose.\pNon…{PAUSE}ね elle tentera quelque\pchose. La question est : quoi ?
+0x1F1194E: C'est pourquoi, mon ami, tu doiste\ncacher. Je vais laisser ta Poké Ball\pdériverau gré des vagues…Tu seras\nsûrement plus en sécuritéperdu en\pmer que si tu restais avecmoi. Si je\nme trompe et que rien ne sepasse, je\pte rappellerai. Mais si c'est notre\ndernière foisensemble…Protège mon\p{STR_VAR_3} si {STR_VAR_2} est\njamaisen danger. Et si le mauvais\pessaie de forcerton véritable\npouvoir…Alors fais confiance à\p{STR_VAR_1} pourte protéger. Adieu,\nmon\pbon\pami.
+0x1F11B03: Il est parti…
+0x1F11B0E: Alors, tu es venu malgré tout.\pFinissons-en.
+0x1F11B40: ARGH ! Comment accomplir le vœu de\pGrand- père si je n'arrive même pas\nà attraper un seul Pokémon ?
+0x1F11B8D: Je lui ai promis…{PAUSE}î J'ai\npromis queje finirais la guerre,\pmais là…Je ne peux même pas imaginer\nque cesoit possible !
+0x1F11C01: Que dois-je faire… ?
+0x1F11C19: Une Poké Ball ? Ici ? Maintenant ?
+0x1F11C31: Ce Pokémon…{PAUSE}î ça ne peut pas être… !
+0x1F11C5F: Ha ha ha…Il semble, Grand-Père,\pqu'il y aitpeut-être un moyen après\ntout. Il est temps que la\pdestructionengloutisse le pays…Et\nque la Fleur Éternelle\prefleurisseencore une\nfois…
+0x1F11CFD: De nos jours
+0x1F11D15: FばPreset
+0x1F11D25: {PLAYER} s'est précipité vers le\nguérisseur,protégeant les Pokémon\népuisés etK. O. d'autres\pblessures…
 0x1F11D89: Ce n'était qu'un rêve…\p
 0x1F11DA3: Ancienne sauvegarde
-0x1F11DE5: Grand Désert
-0x1F11DF5: Ce désert est certainement dangereux. Si vous pouvez me battre, je vous\paiderai à vous en sortir en vous\nsoignant !
-0x1F11E55: D'accord ! Je vais te soigner\nmaintenant !
-0x1F11E6E: D'accord, on va tout arranger !\nLaissez-moi faire !
-0x1F11EA8: Faites attention aux tempêtes de sable lorsque vous explorez le Grand\nDésert !
-0x1F11EE2: Ooh hoo hoo hoo, tu as trouvé le clown du sable !\nMais les chaînes qui me lient\ppersistent.\nTant qu'il y aura des roches\pcassables à l'ouest de ce canyon\net au nord du sud du\lcanyon, je ne suis pas vraiment\llibre…
-0x1F11FBE: Ooh hoo hoo hoo, tu as trouvé le\nclown du sable !\pEt tu as même brisé toutes mes\nchaînes en cours de route !\pPour cela, tu as ma gratitude.
-0x1F12046: Tourbillonnant, virevoltant, sablonneux, dandy…
+0x1F11DE5: FばGrand Désert
+0x1F11DF5: Ce désert est vraiment dangereux. Si\ptu arrives à me battre, je t'aiderai\nà le traverser en te soignant !
+0x1F11E55: OK !\nJe vais te soigner maintenant !
+0x1F11E6E: D'accord, on va tout arranger !\nLaisse-moi faire !
+0x1F11EA8: Attention aux tempêtes de sable\nquand tu explores le Grand Désert !
+0x1F11EE2: Ooh hoo hoo hoo, tu as trouvé le\nclown du sable ! Mais les chaînes\pqui me lient persistent. Tant qu'il\ny a des rochers fracturables à\pl'ouest de ce canyon et au nord du\ncanyon sud, je ne suis pas\lvraiment\llibre…
+0x1F11FBE: Ooh hoo hoo hoo, tu as trouvé le\nclown du sable !\pEt tu as même brisé toutes mes\nchaînes en chemin !\pPour ça, tu as ma gratitude.
+0x1F12046: Tourbillons, vrilles, sable, chic…
 0x1F12064: Belliciste
-0x1F1206E: Devenez l’un des combats Undying Lucario ! Fight {STR_VAR_1} à\nlancer.
-0x1F120B3: Je suis membre du puissant culte des guerriers connu simplement sous le nom de Lucario éternel. Autrefois, nous nous battions non\npas pour la richesse, mais pour le\lsport.\pCependant, la société moderne a\nconsidéré les combats humains comme\p« inhumains », alors\nnous combattons maintenant avec nos\lPokémon.\pPensez-vous avoir ce qu'il faut pour\ndevenir l'un des nôtres ?
-0x1F121E3: Afin de compléter votre initiation, vous devez profiter du frisson du combat\nau moins {COLOR}É{STR_VAR_1}{COLOR}Ë\lfois.
-0x1F12246: Tous n’ont pas le cœur de devenir\ndes de l’Immortel Lucario.
-0x1F12282: Vous avez mené de nombreuses batailles. Mais pour être un véritable membre de The Undying Lucario, vous devez\pmener\n{COLOR}É{STR_VAR_3}{COLOR}Ë\ldavantage.
-0x1F122F6: Vous avez démontré que vous avez un cœur de guerrier. Je vous intronise maintenant dans le\nculte de l'Immortel Lucario, dans\plequel vous\nrecevrez également notre rocher\lsacré.
-0x1F12399: L'Undying Lucario profite toujours d'une bonne bataille juste pour le\nplaisir.
-0x1F123E2: Par cette porte se trouve le grand roi Borrius III.\nIl est le roi qui a libéré et lié la\pforce obscure dans le passé.\nPersonne n'a encore réussi à\pcartographier la tombe, mais les\nlégendes disent que\lune immense richesse attend\lquiconque est capable d'atteindre la\lchambre funéraire.
-0x1F124FA: La rumeur veut que je suis le entraîneur le plus fort du désert. Il a fallu beaucoup de temps pour gagner le respect des entraîneurs\nautour de\pici, donc si vous voulez mon\nrespect,\lvous gagnerez leur respect en\lpremier.
-0x1F125BB: On dit ici que je suis le entraîneur le plus fort du désert. Il a fallu beaucoup de temps pour gagner le respect des entraîneurs\nautour de\pici, donc si vous voulez mon\nrespect,\lvous devrez vous battre avec moi\lpour l'obtenir !
-0x1F1267B: Terminé ! Vous avez gagné mon\nrespect !
-0x1F1269B: Tout bon dresseur du désert peut\nutiliser un objet comme celui-ci.
-0x1F126CE: Cet objet est une {COLOR}ÉScizorite{COLOR}Ë! Si vous attrapez un Insécateur et que vous le faites évoluer en un\p{COLOR}ÉScizor{COLOR}Ë, laissez-le\ntenir ce\lpour libérer sa fureur métallique !
-0x1F12757: À quel point êtes-vous dur ? Nous\nallons révéler ce secret !
-0x1F12787: Votre secret a été révélé.
-0x1F127A6: Ce désert recèle des mystères dans\nses sables mouvants !
-0x1F127DA: Que pensez-vous de ces rochers ?
+0x1F1206E: Deviens un des Lucario Immortels !\nMène {STR_VAR_1} combats pour être adoubé.
+0x1F120B3: Je suis membre du puissant culte\ndecombattants appelé simplement\llesLucario Immortels. Autrefois, nous\pcombattions non paspour la richesse,\nmais pour lesport. Cependant, la\psociété moderne jugeles duels\nhumains « inhumains »,alors nous\lcombattons maintenant avecnos\pPokémon. Penses-tu avoir ce qu'il\nfaut pourdevenir l'un des nôtres ?
+0x1F121E3: Pour compléter ton initiation, tu\ndois apprécier le frisson du combat\lau moins {COLOR}É{STR_VAR_1}{COLOR}Ë fois.
+0x1F12246: Tout le monde n'a pas le cœur de\ndevenir Lucario Immortel.
+0x1F12282: Tu as mené de nombreux combats. Mais\ppour être un véritable membredes\nLucario Immortels, tu dois enlivrer\lencore {COLOR}É{STR_VAR_3}{COLOR}Ë.
+0x1F122F6: Tu as montré que tu as le cœur d'un\ncombattant. Je t'intronise\pmaintenant dans le culte des Lucario\nImmortels, où tu recevras aussi\lnotre roche sacrée.
+0x1F12399: Les Lucario Immortels aiment\ntoujours un bon combat pour le fun.
+0x1F123E2: Au-delà de cette porte repose le roi\nBorrius III. C'est le roi qui a\pjadis libéré et lié la force\nobscure. Personne n'a encore\pcartographié la tombe, mais la\nlégende parle d'une immense richesse\lpour qui atteindra la\lchambre\lfunéraire.
+0x1F124FA: Par ici, on dit que je suis le\nDresseur le plus fort du désert. Il\pm'a fallu du temps pour gagner le\nrespect des Dresseurs d'ici, alors\lsi tu veux mon respect, gagne\ld'abord le leur.
+0x1F125BB: Par ici, on dit que je suis le\nDresseur le plus fort du désert. Il\pm'a fallu du temps pour gagner le\nrespect des Dresseurs d'ici, alors\lsi tu veux mon respect, il te faudra\lm'affronter !
+0x1F1267B: Terminé ! Tu as gagné mon respect\n!
+0x1F1269B: Tout bon Dresseur du désert peut\nutiliser un objet comme celui-ci.
+0x1F126CE: Cet objet est une\p{COLOR}ÉCizayoxite{COLOR}Ë ! Si tu\nattrapes un Insécateur et le fais\lévoluer en {COLOR}ÉCizayox{COLOR}Ë, garde-la.
+0x1F12757: À quel point es-tu dur ?\nNous allons dévoiler ce secret !
+0x1F12787: Ton secret a été révélé.
+0x1F127A6: Ce désert cache des mystères dans\nsessables mouvants !
+0x1F127DA: Que penses-tu de ces rochers ?
 0x1F127FB: Ils doivent être importants.
-0x1F12816: Je vous le dis, cette formation\nrocheuse a une signification !\pJe peux le sentir !
-0x1F1285C: Hmph. Je me suis retrouvé dans cette fosse\pd'une manière ou d'une autre.
+0x1F12816: Je te dis que cette formation\nrocheuse a de l'importance !\pJe le sens !
+0x1F1285C: Hmph. Je me suis retrouvé dans ce\ptrou je nesais comment.
 0x1F12882: Hmph.\pTu m'as battu.
-0x1F12895: Hmph.\pJe me suis vraiment enfoncé dans un\ntrou, n'est-ce pas ?
-0x1F128C6: La vie dans le désert ici est florissante !
-0x1F128E8: Vous aussi, vous vous épanouissez !
-0x1F12902: Grâce à mes efforts, ce désert est\ncomme un paradis pour Pokémon !\pC'est vraiment un grand désert !
-0x1F12961: J'ai entendu dire qu'il y avait des\nfossiles dans le désert.\pOù pourraient-ils se trouver ?
-0x1F129AB: J'ai échoué…
-0x1F129BC: S'il y a des fossiles cachés dans le\n​​désert, ils doivent avoir été\lsous l'eau il y a longtemps.
-0x1F12A15: En portant ces Go-Goggles, je me sens comme un super-héros.\nÀ l'heure actuelle, personne ne peut\pme battre !
-0x1F12A6D: Je ne peux pas gagner uniquement grâce à l’esprit…
-0x1F12A8A: Je vais être un vrai héros un jour.\nJe vais travailler plus dur pour me\prendre et rendre mes Pokémon plus\nforts.
-0x1F12AEC: Les garçons et moi allons bientôt\navoir un concert !\pÇa va être rock !
-0x1F12B31: Je ne peux pas jouer dans une tempête de sable !
-0x1F12B51: Je suis venu jouer de la musique dans le désert, mais du sable\ns'infiltre dans ma guitare.
-0x1F12B97: J'ai senti votre approche.
-0x1F12BAF: Abandonner…
-0x1F12BB8: Dans votre futur, je sens que vous\nen rencontrerez beaucoup d'autres.\pJe pense que vous serez liés les uns\naux autres par un étrange pouvoir.
+0x1F12895: Hmph.\pJe me suis vraiment creusé un trou,\nhein ?
+0x1F128C6: La vie du désert prospère ici !
+0x1F128E8: Toi aussi, tu prospères !
+0x1F12902: Grâce à mes efforts, ce désert est\ncomme un paradis pour les Pokémon !\pC'est vraiment un grand désert !
+0x1F12961: J'ai entendu dire qu'il y a des\nfossiles à trouver dans le désert.\pOù peuvent-ils être ?
+0x1F129AB: Je suis bredouille…
+0x1F129BC: S'il y a des fossiles cachés dans\nle​​désert, il a dû être sous l'eau\lil ya longtemps.
+0x1F12A15: Porter ces Lunettes Sable me fait\nmesentir comme un super-héros. En ce\pmoment, personne ne peut mebattre !
+0x1F12A6D: La volonté seule ne suffit pas...
+0x1F12A8A: Je serai un vrai héros un jour. Je\nvais travailler plus dur pour\prenforcer mes Pokémon et\nmoi-même.
+0x1F12AEC: Les garçons et moi allons donner un\nconcert bientôt !\pÇa va envoyer du lourd !
+0x1F12B31: Pas de jeu en tempête de sable !
+0x1F12B51: Je suis venu jouer dans le désert,\nmais le sable ruine ma guitare.
+0x1F12B97: J'ai senti ton approche.
+0x1F12BAF: Abandonne…
+0x1F12BB8: Dans ton futur, je sens que tu\nrencontreras beaucoup d'autres\ppersonnes. Je pense que vous serez\nliés par un étrange pouvoir.
 0x1F12C2D: J'ai brisé des rochers avec mes\npoings et j'ai trouvé ces Pokémon !
-0x1F12C64: Je ne pourrais pas t'écraser.
-0x1F12C7B: Briser des roches ici peut rapporter\nde précieuses récompenses !
-0x1F12CAD: Je suis ici pour observer les\noiseaux pour Furaiglon.\pEn avez-vous vu aujourd'hui ?
-0x1F12CEE: Furaiglon est supérieur à Vostourno!
-0x1F12D0F: Je pense que {COLOR}ÉRufflet{COLOR}Ë ne peut être trouvé que ici le\n{COLOR}ÉLundi{COLOR}Ë.
-0x1F12D4E: Je surveille de près Vostourno.\nEn avez-vous vu aujourd'hui ?\p
+0x1F12C64: Je n'ai pas pu te briser.
+0x1F12C7B: Briser des rochers ici peut donner\nde précieuses récompenses !
+0x1F12CAD: J'observe les oiseaux à la\nrecherchede Furaiglon. En as-tu vu\paujourd'hui ?
+0x1F12CEE: Furaiglon bat Vostourno !
+0x1F12D0F: Je pense que\n{COLOR}ÉFuraiglon{COLOR}Ë n'est là que les {COLOR}Élundis{COLOR}Ë.
+0x1F12D4E: Je surveille de près Vostourno. En\nas-tu vu aujourd'hui\p?
 0x1F12D90: Mon ami pense que Furaiglon est\nmeilleur que Vostourno. Il a tort.
-0x1F12DCE: Je n'ai vu {COLOR}ÉVullaby{COLOR}Ë\npar ici le ​​{COLOR}ÉTjeudi{COLOR}Ë.
-0x1F12E0B: Ce désert est beau et chaud !\pÇa m'excite !
-0x1F12E3F: Ce désert me gardera toujours excité\n!
-0x1F12E67: Zzz…\pHuh…?\pQu'est-ce que tu veux ?
-0x1F12E80: J'ai perdu parce que je suis encore\nà moitié endormi.
-0x1F12EA5: Laissez-moi tranquille ! Le sable du\ndésert est si chaud…\pZzz…
-0x1F12ED6: La flore du désert est tellement\nfascinante !
-0x1F12F01: Qui se soucie de gagner quand nous\npouvons jaillir sur ma flore ?
-0x1F12F39: J'ai trouvé mon Pokémon prétendant\nêtre un cactus !\pOu peut-être est-ce simplement parce\nque c'est le ​​Pokémon Cactus ?
-0x1F12F9D: {COLOR}ÉRa ra ra ra !
-0x1F12FAD: {COLOR}ÉAwww!
-0x1F12FB7: {COLOR}ÉBlip bloop !
-0x1F12FC6: {COLOR}ÁLe {STR_VAR_1} a disparu\ndans les sables mouvants .
-0x1F12FF3: Bois sinistres
-0x1F12FFF: Une forêt effrayante remplie de\nnombreux Pokémon de type Fantôme. De\nnombreux enfants ont disparu dans\nces bois.
-0x1F13064: Désherbeur
-0x1F13071: Aidez un riche homme d'affaires à\nconstruire sa crêperie de rêve en\ncoupant toute l'herbe de Grim Woods.
-0x1F130DC: Bonjour, Formateur ! Vous êtes précisément le type de personne que je recherche.\pJe suis un homme d'affaires qui\nessaie de construire la crêperie de\pmes rêves juste\nici dans la forêt.\lIl n'y a qu'un problème.\pIl y a toutes ces herbes hautes\pembêtantes sur le chemin.\nVos services sont-ils disponibles\ppour couper toutes les herbes hautes\nde la région ?
-0x1F13208: Excellent ! Maintenant, lancez-vous et utilisez\p{COLOR}ÉCut{COLOR}Ë pour éliminer\ntoutes les herbes hautes !
-0x1F13254: Ne vous inquiétez pas, formateur, je trouverai quelqu'un d'autre qui\nvoudra développer\lma terre moyennant une belle somme.
-0x1F132B8: Il y a encore des herbes hautes dans ces bois que vous devez\n{COLOR}Écouper{COLOR}Ë.\pFaites du piratage !
-0x1F1330A: Excellent travail, mais je crains que j'ai de mauvaises nouvelles. Les Pokémon Rangers viennent\nde_NL__mettre fin à nos opérations.\pApparemment, les herbes hautes\nautour de ici sont en danger, malgré\pla repousse constante\n.\lCependant, je suis toujours\pcontractuellement obligé de vous\npayer pour votre\lservice.
-0x1F13412: Je vais d’abord éliminer les Pokémon\nRangers, puis je vais\lconstruire mon empire des crêpes.
-0x1F13463: Heyo ! Bienvenue à Grim Woods !\nFaisons de notre mieux pour le\pvivre, ouais ?\n
-0x1F134A9: Ouais ! C'était animé !\n
-0x1F134C0: Avec quelques batailles supplémentaires comme celle que nous\navons eue, cet endroit deviendra\len un rien de temps !
-0x1F13518: Est-ce juste moi, ou est-ce que différents Pokémon de type Bug\napparaissent la nuit ?
-0x1F13559: Ça ne peut pas être juste moi, n'est-ce pas ?
-0x1F13575: Je suis presque sûr que Chenipan\naime fréquenter ces bois pendant la\ljour tandis que Aspicot aime\lles peupler la nuit.
-0x1F135EB: Regardez, regardez ! Je suis allé\nfaire évoluer mon Pokémon !
+0x1F12DCE: Je n'ai vu des\n{COLOR}ÉVostourno{COLOR}Ë ici que les {COLOR}Éjeudis{COLOR}Ë.
+0x1F12E0B: Ce désert est bien chaud !\pÇa me motive !
+0x1F12E3F: Ce désert me gardera toujours motivé\n!
+0x1F12E67: Zzz…\pHein… ?\pQu'est-ce que tu veux ?
+0x1F12E80: J'ai perdu parce que je suis encore\nàmoitié endormi.
+0x1F12EA5: Laisse-moi tranquille ! Le sable du\ndésert est si chaud…\pZzz…
+0x1F12ED6: La flore du désert est fascinante\n!
+0x1F12F01: Qui se soucie de gagner quand on\npeut s'extasier sur ma flore ?
+0x1F12F39: J'ai trouvé mon Pokémon qui faisait\nsemblant d'être un cactus !\pOu peut-être parce que c'est le\nPokémon Cactus ?
+0x1F12F9D: {COLOR}ÉRa ra ra ra!
+0x1F12FAD: {COLOR}ÉAwwwk!
+0x1F12FB7: {COLOR}ÉBip bloup!
+0x1F12FC6: {COLOR}ÁLe {STR_VAR_1} a disparu\ndans lessables mouvants.
+0x1F12FF3: Bois Lugubres
+0x1F12FFF: Une forêt lugubre remplie de\nnombreuxPokémon de type Spectre. De\nnombreux enfants ont disparudans ces\nbois.
+0x1F13064: Débroussailleur
+0x1F13071: Aide un riche homme d'affaires à\nbâtir sa crêperie de rêve en coupant\ntoute l'herbe des Bois Lugubres.
+0x1F130DC: Bonjour, Dresseur !Tu es exactement\ple type de personneque je cherche. Je\nsuis un homme d'affaires qui\pveutconstruire sa crêperie de rêve\njusteici, dans la forêt. Il n'y a\lqu'un problème. Toute cette herbe\phaute gêne. Es-tu disponible pour\p{COLOR}ÉCouper{COLOR}Ë toutel'herbe\nhaute du\pcoin\n?
+0x1F13208: Excellent !Allez, utilise\p{COLOR}ÉCoupe{COLOR}Ë pour\néliminertoute l'herbe haute !
+0x1F13254: Ne t'inquiète pas, Dresseur, je\ntrouverai quelqu'un d'autre pour\laménager mon terrain contre un prix.
+0x1F132B8: Il reste de l'herbe haute dans\ncesbois que tu dois\p{COLOR}ÉCouper{COLOR}Ë. Au travail !
+0x1F1330A: Excellent travail, mais j'ai une\nmauvaise nouvelle. Les Rangers\pPokémon viennent de fermer notre\nopération. Apparemment, l'herbe\phaute d'ici est protégée, même si\nelle repousse sans cesse. Cependant,\lje suis encore tenu\pcontractuellement de te payer pour\nton\lservice.
+0x1F13412: Je ferai tomber les Rangers Pokémon\nd'abord, puis je bâtirai mon empire\lde la crêpe.
+0x1F13463: Heyo !\nBienvenue aux Bois Lugubres !\pFaisons de notre mieux pour y mettre\nde l'ambiance, d'accord ?
+0x1F134A9: Ouais !\nC'était animé !
+0x1F134C0: Avec quelques combats comme celui\nqu'on vient d'avoir, cet endroit va\lvite devenir vivant !
+0x1F13518: Est-ce juste moi, ou les Pokémon\nInsecte sortent la nuit ?
+0x1F13559: Ça ne peut pas être juste moi, si ?
+0x1F13575: Je suis presque sûr que Chenipan\naimefréquenter ces bois le jour,\ltandisqu'Aspicot aime les peupler la\lnuit.
+0x1F135EB: Regarde, regarde !\nJ'ai fait évoluer mon Pokémon !
 0x1F13616: Mon Pokémon évolué !
-0x1F1362A: Les Pokémon deviennent plus forts lorsqu'ils évoluent.\nMais à quel point mon Pokémon est-il\pplus fort que d'autres Pokémon\névolués ?\pJe parie beaucoup !
-0x1F136AD: Les fantômes hantent ces bois.
-0x1F136C7: Les fantômes sont des esprits errants.
-0x1F136E9: En raison de la nature sinistre de ces bois, les Pokémon de type\nFantôme s'y sentent\lchez eux.
-0x1F13736: Écoutez attentivement… Entendez-vous\nles cris de Brocélôme ?
-0x1F13769: Leurs cris sont si étranges… Que\npourraient-ils essayer de dire ?
-0x1F137A5: Selon de vieux contes, les Brocélôme sont des souches d'arbres possédées\npar les\lesprits d'enfants morts alors qu'ils\lperdis dans ces bois.
-0x1F1381F: Les Pitrouille sont disponibles dans\nde nombreuses tailles différentes.
-0x1F13847: Il existe quatre tailles de\nPitrouille au total.
-0x1F13870: Une de mes anciennes collègues de Seaport City mesure et enregistre la\ntaille\lde tous les Pitrouille qu'elle voit.
-0x1F138D3: Ville du désert
-0x1F138DF: Ville du désert D
-0x1F138EC: Ville du Désert N
-0x1F138F9: J'ai consacré ma vie à étudier les secrets du titan légendaire Pokémon !\nRécemment, j'ai découvert que ces\lPokémon doivent vivre dans les\pétranges\nformations rocheuses que l'on peut\ltrouver\lautour de Borrius.\pSi seulement j'avais découvert\ncomment les desceller aussi…
-0x1F139EF: C'est assez étrange qu'il y ait une forêt remplie d'autant de Pokémon de\ntype Bug\laussi proche d'un désert.\pEh bien, c'est Borrius pour vous !
-0x1F13A70: Les maisons ici sont basées sur un modèle trouvé dans la région d'Unys. Elles viennent d'une ville qui\npossède de poteries en argile\pvolcanique.\nEn parlant de ça, il y a un maniaque\pquelque part par ici qui\nachètera une sorte de poterie\lrelique\là un prix élevé.
-0x1F13B6A: Le désert ne dure pas beaucoup plus longtemps une fois que vous vous dirigez vers le sud\nde la ville.\lSoyez prudent si vous décidez de\pvoyager dans cette direction,\ncependant.\pVous vous retrouverez à Antisis City\nsi vous voyagez trop loin.\pEt Dieu sait que vous ne voulez pas\nvous approcher de cet endroit…
-0x1F13C67: C'est mon travail d'allumer toutes\nles torches la nuit.\pLe désert peut devenir assez froid\nune fois le ​​soleil se couche.\pLes torches fournissent alors une\nsource de chaleur fiable.
-0x1F13D07: C'est mon travail de garder les\ntorches ici allumées la nuit.\pLe désert peut devenir assez froid,\nmaintenant que le soleil est couché.\pCes torches sont notre seule source\nfiable de chaleur en ce moment.
-0x1F13DB9: Bonjour, j'ai été posté ici par la Société scientifique pour étudier\nfossiles.\lSi vous en avez trouvé un, je peux\ptenter d'essayer de le faire revivre\npour vous.
-0x1F13E45: Il semblerait que vous n’ayez pas\nnon plus trouvé de fossile …
-0x1F13E71: Oh ! C'est merveilleux !\nQuel fossile voudriez-vous que je\préanime en Pokémon ?\n
-0x1F13EC0: …Hein ?\pÇa ne ressemble pas à un fossile\npour moi…
+0x1F1362A: Les Pokémon deviennent plus forts\nlorsqu'ils évoluent. Mais à quel\ppoint mon Pokémon est-il plus fort\nque les autres Pokémon évolués ? Je\pparie que beaucoup !
+0x1F136AD: Des fantômes hantent ces bois.
+0x1F136C7: Les fantômes sont des esprits.
+0x1F136E9: Vu la nature lugubre de ces bois,\nles Pokémon Spectre s'y sentent chez\leux.
+0x1F13736: Écoute bien…\nEntends-tu les cris de Brocélôme ?
+0x1F13769: Leurs cris sont si étranges…\nQue veulent-ils dire ?
+0x1F137A5: Selon les vieux contes, les\nBrocélôme sont des souches possédées\lpar les esprits d'enfants morts\lperdus dans ces bois.
+0x1F1381F: Les Pitrouille existent en\nplusieurstailles.
+0x1F13847: Il y a quatre tailles de Pitrouille\nau total.
+0x1F13870: Une ancienne collègue à Seaport\nCitymesure et note les tailles de\ltoutesles Pitrouille qu'elle voit.
+0x1F138D3: Bourg Gurun
+0x1F138DF: Bourg Gurun J
+0x1F138EC: Bourg Gurun N
+0x1F138F9: J'ai consacré ma vie à étudier les\nsecrets des Pokémon titans\llégendaires ! Récemment, j'ai\pdécouvert que ces Pokémon doivent\nvivre dans les étranges formations\lrocheuses qu'on trouve autour de\lBorrius. Si seulement j'avais\pdécouvert comment les libérer\naussi…
+0x1F139EF: C'est assez étrange d'avoir une\nforêt remplie de tant de Pokémon\lInsecte si près d'un désert. Eh\pbien, c'est Borrius !
+0x1F13A70: Les maisons ici sont basées sur un\nplan venu d'Unys. Elles viennent\pd'une ville fière de sa poterie en\nargile volcanique. En parlant de ça,\pil y a un maniaque quelque part ici\nqui achètera une sorte de poterie\lrelique à prix\lfort.
+0x1F13B6A: Le désert ne dure pas beaucoup plus\nloin en allant au sud du bourg. Fais\lattention si tu voyages dans cette\pdirection. Tu finiras à Antisis City\nsi tu vas trop loin. Et Dieu sait\pque tu ne veux pas\napprocher\pcet\nendroit…
+0x1F13C67: C'est mon travail d'allumer toutes\nles torches la nuit.\pLe désert peut devenir très froid\nune fois le soleil couché.\pLes torches fournissent alors une\nsource de chaleur fiable.
+0x1F13D07: C'est mon travail de garder les\ntorches allumées la nuit.\pLe désert peut devenir très froid\nmaintenant que le soleil est couché.\pCes torches sont notre seule source\nfiable de chaleur pour l'instant.
+0x1F13DB9: Bonjour, j'ai été placé ici par\nlaSociété Scientifique pour étudier\llesfossiles. Si tu en as trouvé un,\pje peuxessayer de le ranimer pour\ntoi.
+0x1F13E45: On dirait que tu n'as pas trouvé de\nfossile non plus…
+0x1F13E71: Oh !\nC'est merveilleux !\pQuel fossile veux-tu que je ranime\nen Pokémon ?
+0x1F13EC0: …Hein ?\pÇa ne ressemble pas à un fossile,\npour moi…
 0x1F13EED: {COLOR}Á{PLAYER} a remis le\n{STR_VAR_2}.
-0x1F13F07: Il faudra un certain temps pour se\nrelancer. Revenez plus tard.
-0x1F13F3A: Bon retour ! J'ai réussi à faire revivre votre\pfossile en un {STR_VAR_1}!\nsain, mais vous aurez besoin d'un\ppeu d'espace dans votre fête si vous\nvoulez le prendre.
-0x1F13FC2: Bon retour !\pJ'ai réussi à faire revivre votre\nfossile en un {STR_VAR_1} sain !
-0x1F14009: Avez-vous d'autres fossiles que vous souhaiteriez que je fasse revivre en\nPokémon ?
-0x1F1404F: Au moins, j'ai pu étudier un fossile\nplus tôt !\pLa Société scientifique sera ravie\nde mes recherches…
-0x1F140AF: Il y a quelque chose que cet amateur\nveut mettre la main\lsur, même si cela signifie dépenser\lbeaucoup d'argent.\pAvez-vous un objet si rare ?\nL'êtes-vous ?
-0x1F14141: Ce {COLOR}É{STR_VAR_3}{COLOR}Ë ! Voulez-vous me le vendre pour ¥{COLOR}É{STR_VAR_2}{COLOR}Ë ?\nVeux-tu?
-0x1F14180: J’ai reçu un très bon article ! Vous\nne trouvez pas que c’est génial ?\lN’est-ce pas ?
-0x1F141BF: C'est légèrement différent. Vous ne\nle pensez pas aussi ? N'est-ce pas ?
-0x1F141FF: Si jamais vous changez d’avis, est-ce que vous me vendez l’objet\nrare ?\lVoulez-vous ?
-0x1F14247: Aussi dur qu'ils viennent
-0x1F1425C: Il n’y a rien dans ce monde plus dur qu’une pierre dure !\nCollectionnez-en 20 pour un\npassionné.
-0x1F142BE: Hé, toi. J'ai une faveur à te demander.\nJe suis un passionné.\pUn amoureux des choses dures, si je\ple dis moi-même.\nMais contrairement à mon ami là-bas,\pJe ne suis pas intéressé à acheter\nquoi que ce soit de toi.\lJe veux juste que tu collectionnes\p{COLOR}É{STR_VAR_1} Pierres\ndures{COLOR}Ë pour moi.\pTu penses que tu peux le faire ?
-0x1F143CA: Ouais, haw ! {COLOR}ÉDes pierres dures{COLOR}Ë pourraient apparaître lorsque vous écrasez des rochers dans le\p{COLOR}ÉGrand Désert{COLOR}Ë.\nHeck, je parie que si vous creusiez\pdans les murs de l'autoroute\n{COLOR}ÉKBT{COLOR}Ë,\lvous les trouveriez là aussi.
-0x1F1447F: Ces objets durs dans votre Cube sont\nles objets que j'ai demandés !\pIci, laissez-moi vous les prendre.
-0x1F144D9: Oh, tu cherches une récompense ou\nquelque chose ?\pAlors, c'est parti.
-0x1F14516: {COLOR}ÉDes pierres dures{COLOR}Ë pourraient apparaître lorsque vous écrasez des rochers dans le {COLOR}ÉGrand Désert{COLOR}Ë. Heck, je parie que si vous creusiez dans les murs de l'autoroute\n{COLOR}ÉKBT{COLOR}Ë,\pvous les trouveriez là aussi.\nEst-ce que l'un ou l'autre de ces\lminces et apportez-moi\p{COLOR}É{STR_VAR_1}{COLOR}Ë d'entre\neux.
-0x1F145FE: Je peux dire que vous n’êtes pas un\npassionné de .
-0x1F14623: Dis, tu sais quoi ? Apportez-moi encore plus de choses dures !\pJ'ai une montagne de\p{COLOR}ÉGems{COLOR}Ë Je suis assis\nici, et je\lm'en fiche !\pJe vous les donnerai en échange\ncontre d'autres pierres dures.
-0x1F14710: {COLOR}Á{PLAYER} a remis le\n{STR_VAR_1}.
-0x1F1472A: Est-ce que tu m'as apporté d'autres {COLOR}ÉPierres dures{COLOR}Ë? Je te donnerai des\n{COLOR}ÉGems{COLOR}Ë si ça ne te\pdérange pas d'en acheter\n{COLOR}É{STR_VAR_1}{COLOR}Ë.
-0x1F147A3: Pour quelle gemme puis-je vous faire?
-0x1F147BF: Vous allez donc fourcher {COLOR}É{STR_VAR_1} Pierres dures{COLOR}Ë sur pour un\n{COLOR}É{STR_VAR_2}{COLOR}Ë ?
-0x1F147F8: Ouais, haw !\pTu veux échanger contre d'autres\nGemmes ?
-0x1F14825: Si vous obtenez d'autres {COLOR}É{STR_VAR_1} pierres dures{COLOR}Ë, revenez les échanger,\nd'accord ?
-0x1F14870: {COLOR}ÉDes pierres dures{COLOR}Ë pourraient apparaître lorsque vous écrasez des rochers dans le {COLOR}ÉGrand Désert{COLOR}Ë. Heck, je parie que si vous creusiez\ndans les murs de l'autoroute\p{COLOR}ÉKBT{COLOR}Ë,\nvous les trouveriez là aussi.\lEst-ce que l'un ou l'autre de ces\pminces et apportez-moi\n{COLOR}É{STR_VAR_1}{COLOR}Ë of ’em.\pI’ll give ya a Gem of your choosin’\nin exchange.
-0x1F14989: Vous avez moins de {COLOR}É{STR_VAR_1} Pierres dures{COLOR}Ë, pal. {COLOR}ÉDes pierres dures{COLOR}Ë pourraient apparaître lorsque vous\nécrasez des rochers dans le\p{COLOR}ÉGrand Désert{COLOR}Ë.\nHeck, je parie que si vous creusiez\pdans les murs du {COLOR}ÉKBT Sur\nl'autoroute{COLOR}Ë,\l, vous les trouverez là aussi.
-0x1F14A62: Gemme d'insecte
-0x1F14A6A: Gemme sombre
-0x1F14A73: Gemme de dragon
-0x1F14A7E: Gemme électrique
-0x1F14A8B: Gemme fée
-0x1F14A95: Gemme de combat
-0x1F14AA2: Gemme de feu
-0x1F14AAB: Gemme volante
-0x1F14AB6: Gemme fantôme
-0x1F14AC0: Gemme d'herbe
-0x1F14ACA: Gemme moulue
-0x1F14AD5: Gemme de glace
-0x1F14ADD: Gemme normale
-0x1F14AE8: Gemme empoisonnée
-0x1F14AF3: Gemme psychique
-0x1F14AFF: Gemme de roche
-0x1F14B08: Gemme d'acier
-0x1F14B12: Gemme d'eau
-0x1F14B1C: S'il vous plaît…{PAUSE}î Je vous en supplie…\nDites-moi que vous avez pêché des\pPokémon au moins {COLOR}É3{COLOR}Ë\nfois…
-0x1F14B72: Ohhhhhhhh ouaishhhhhhh ! Un dresseur qui s'embête vraiment à\ppocher est arrivé chez moi !\nC'est juste l'inspiration dont j'ai\pbesoin pour prendre un nouveau\ndépart dans ma vie !\pIl est temps d'aller faire la fête à\nEast Borrius, bébé !\pÀ bientôt, Dresseur !
-0x1F14C4E: {COLOR}ÁOn dirait que le pêcheur a\nlaissé quelque chose derrière lui…
-0x1F14C84: Tch…\pLes enfants de nos jours…
-0x1F14C9A: Tch…\pTu es un menteur ! Tu n'as pas pêché\n3 fois ! Je sais!
+0x1F13F07: Il faudra du temps pour le ranimer.\nReviens plus tard.
+0x1F13F3A: Bon retour !\pJ'ai ranime ton fossile en un\n{STR_VAR_1} en pleine santé !\pMais il te faut de la place dans ton\nequipe pour le prendre.
+0x1F13FC2: Bon retour !\pJ'ai ranime ton fossile en un\n{STR_VAR_1} en pleine santé !
+0x1F14009: As-tu d'autres fossiles que tu veux\nque je ranime en Pokémon ?
+0x1F1404F: Au moins, j'ai pu étudier un\nfossileplus tôt !La Société\pScientifique sera ravie demes\nrecherches…
+0x1F140AF: Il y a quelque chose que cet\nenthousiaste veut obtenir, même si\lça coûte beaucoup d'argent. As-tu un\lobjet si rare ?\pL'as-tu\n?
+0x1F14141: Ce {COLOR}É{STR_VAR_3}{COLOR}Ë !\nVeux-tu me le vendre pour ¥{COLOR}É{STR_VAR_2}{COLOR}Ë ?
+0x1F14180: J'ai obtenu un très bon objet ! Tu\nne trouves pas ça génial ? N'est-ce\lpas ?
+0x1F141BF: C'est légèrement différent. Tu ne\ntrouves pas aussi ? N'est-ce pas ?
+0x1F141FF: Si tu changes d'avis, me vendras-tu\nl'objet rare ? Le feras-tu\l?
+0x1F14247: Aussi durs qu'ils viennent
+0x1F1425C: Il n'y a rien de plus dur qu'une\nPierre Dure !\nRassemble-en 20 pour un passionné.
+0x1F142BE: Hé, toi. J'ai une faveur à te\ndemander. Je suis un passionné. Un\pamateur de choses dures, si jepuis\pdire. Mais contrairement à mon ami\nlà-bas,je ne veux rien t'acheter. Je\pveux juste que tu\nrécoltes{COLOR}É{STR_VAR_1} Pierres\lDures{COLOR}Ë pour moi. Tu crois que\ptu\npeux\p?
+0x1F143CA: Yee haw ! {COLOR}ÉDes Pierres\pDures{COLOR}Ë peuvent apparaître\nquand tu brises des rochers dans le\p{COLOR}ÉGrand Désert{COLOR}Ë. Je\nparie que si tu creusais dans les\lmurs de la {COLOR}ÉKBT{COLOR}Ë, tu en trouverais.
+0x1F1447F: Ces objets durs dans ton Cube sont\nceux que j'ai demandés !\pAllez, laisse-moi te les prendre.
+0x1F144D9: Oh, tu cherches une récompense ou\nquoi ?\pAlors, la voilà.
+0x1F14516: {COLOR}ÉDes Pierres Dures{COLOR}Ë\npeuvent apparaître quand tu brises\pdes rochers dans le {COLOR}ÉGrand\nDésert{COLOR}Ë. Je parie que si tu\lcreusais dans les murs de la\p{COLOR}ÉKBT Expressway{COLOR}Ë, tu\nen trouverais aussi. Ramène-moi {COLOR}É{STR_VAR_1}{COLOR}Ë.
+0x1F145FE: Je vois bien que tu n'es pas un\npassionné.
+0x1F14623: Dis, tu sais quoi ?Apporte-moi\pencore plus de chosesdures !J'ai une\pmontagne de {COLOR}ÉGemmes{COLOR}Ë\nici, etje m'en moque !Je te les\ldonnerai contre encoreplus de\pPierres\nDures.
+0x1F14710: Je ne veux plus simplement des\nPierres Dures ! Je veux {COLOR}É{STR_VAR_1}{COLOR}Ë {COLOR}ÉGems{COLOR}Ë !
+0x1F1472A: Je ne veux plus simplement des\nPierres Dures ! Maintenant, je veux\p{COLOR}É{STR_VAR_1}{COLOR}Ë\n{COLOR}ÉGems{COLOR}Ë ! Tu penses que tu peux ?
+0x1F147A3: Yee haw !\nCes {COLOR}ÉGems{COLOR}Ë sont partout,\nmais surtout dans les mines près\nde KBT Expressway !
+0x1F147BF: Ces {COLOR}ÉGems{COLOR}Ë dans ton\nCube sont celles que je veux !\nLaisse-les-moi.
+0x1F14856: Tu veux une récompense, hein ?\pOK, tiens.
+0x1F14825: Tu peux trouver des\n{COLOR}ÉGems{COLOR}Ë partout, mais tu en verras\nplein à KBT Expressway !\nRamène {COLOR}É{STR_VAR_1}{COLOR}Ë de ces {COLOR}ÉGems{COLOR}Ë.
+0x1F1490B: Je peux dire que tu n'es pas un\npassionné.
+0x1F14989: Tu sais quoi ?Apporte-moi encore\nplus de trucsrares !Je veux\p{COLOR}É{STR_VAR_1}{COLOR}Ë\n{COLOR}ÉGems{COLOR}Ë\pen\nmêmetemps\l!
+0x1F14983: Je ne dirais pas non à plus de ces\n{COLOR}ÉGems{COLOR}Ë !\pPlus j'en ai, mieux c'est !\pJ'en ai besoin encore plus que pour\ntoutes ces Pierres Dures que je t'ai\nfait chercher !
+0x1F14A00: Jeu GEMnial
+0x1F14A73: Récupère {COLOR}ÉGems{COLOR}Ë et remporte des prix !
+0x1F14A48: Chercheur de gemmes
+0x1F14A5B: Collector de Gemmes
+0x1F14A73: Gemme Dragon
+0x1F14A7E: Gemme Électrik
+0x1F14A8B: Gemme Fée
+0x1F14A95: Gemme Combat
+0x1F14AA2: Gemme Feu
+0x1F14AAB: Gemme Vol
+0x1F14AB6: Gemme Spectre
+0x1F14AC0: Gemme Plante
+0x1F14ACA: Gemme Sol
+0x1F14AD5: Gemme Glace
+0x1F14ADD: Gemme Normal
+0x1F14AE8: Gemme Poison
+0x1F14AF3: Gemme Psy
+0x1F14AFF: Gemme Roche
+0x1F14B08: Gemme Acier
+0x1F14B12: Gemme Eau
+0x1F14B1C: S'il te plaît…{PAUSE}î\nJe t'en supplie…\pDis-moi que tu as pêché des Pokémon\nau moins {COLOR}É3{COLOR}Ë fois…
+0x1F14B72: Ohhhhhhhh ouaiiiiiiiis !\pUn Dresseur qui prend vraiment la\npeine de pêcher est venu chez moi !\pC'est juste l'inspiration qu'il me\nfallait pour repartir de zéro !\pIl est temps d'aller faire la fête à\nl'est de Borrius, baby !\pÀ plus, Dresseur !
+0x1F14CD2: {COLOR}ÁUn pêcheur a laissé un objet ici…
+0x1F14C84: Tch…\pLes gosses de nos jours…
+0x1F14D23: Tch…Tu es un menteur !Tu n'as pas\npêché 3 fois\l!\lJe\ple\nsais\l!
 0x1F14CD2: Chasseur de trésor
-0x1F14CE2: Retournez au tombeau de Borrius et\ntrouvez tous les objets cachés !
-0x1F14D23: Pendant que vous erriez à travers le\ndésert, vous est-il arrivé\lde tomber par hasard sur l'entrée du\lTombeau de Borrius ?\pPar ici, on sait que les anciens\nhabitants de Borrius ont caché\lbeaucoup de trésors dans le tombeau.
-0x1F14DFC: C'est vous ! Le Dresseur qui a trouvé la chambre\pfunéraire dans le Tombeau de Borrius\n!\pVous faites parler de vous !\pAlors s'il vous plaît, vous devez\naccepter ma demande !
-0x1F14E8B: Vous ne savez même pas ce que c'est et vous avez déjà accepté ? Vous êtes si audacieux ! Pas étonnant que vous ayez réussi à\ntraverser la tombe de Borrius !\pEh bien, voici ma demande.\pJe suis sûr que vous avez remarqué\nqu'il n'y avait pas beaucoup de\ptrésors qui traînaient\pdans la tombe.\nOn sait par ici que les anciens\lhabitants de Borrius utilisaient\pspécial des matériaux pour camoufler\nleur trésor.\lDonc, je veux que vous retourniez au\ltombeau et que vous trouviez tous\ples objets que les\nanciens ont cachés.\lPensez-vous que vous puissiez le\pfaire ?
-0x1F1505C: Tu es tellement cool ! Je ne peux pas sentir combien de\ptrésors est encore caché dans la\ntombe, mais je serai\lpourrai sentir quand tu auras\ltout trouvé.
-0x1F150DD: Je peux le sentir… tu as trouvé tout le ​​trésor caché dans la tombe !\nTu es trop cool !\pPrends cet œuf que j'ai trouvé en\pregardant moi-même autour de la\ntombe.
-0x1F1516B: {COLOR}Á{PLAYER} a reçu un œuf de le\n​​médium !
-0x1F15193: Je ne vous en veux pas. Un formateur important comme vous\pdoit avoir des choses bien plus\nimportantes\là faire.
-0x1F151F0: Je peux sentir qu'il y a encore un trésor caché dans la tombe.\nJe ne sais pas combien il en reste,\pmais vous devriez utiliser une\n{COLOR}ÉDowsing Machine{COLOR}Ë\lpour être sûr de tout trouver.
-0x1F1529A: Je peux le sentir… vous avez trouvé tout le ​​trésor dans la tombe !\nMais avant de pouvoir vous donner\pune récompense, vous devrez faire de\nla place dans votre\lgroupe pour cela.
-0x1F15329: Cet œuf a dû être caché dans la tombe pendant des siècles !\nSi vous n'aviez pas découvert la\pchambre funéraire , elle n'aurait\npeut-être jamais trouvé d'entraîneur\lpour en prendre soin.
+0x1F14CE2: Retourne au Tombeau de Borrius et\ntrouve tous les objets cachés !
+0x1F1505C: Pendant que tu errais dans le\pdésert, es-tu tombé sur l'entrée du\nTombeau de Borrius ? On sait que les\nanciens de Borrius ont caché\nplein de trésors dans la tombe.
+0x1F14DFC: C'est toi ! Le Dresseur qui a trouvé\pla chambre funéraire dans le Tombeau\nde Borrius ! On ne parle que de toi\pen ville ! Alors s'il te plaît,\paccepte ma demande\n!
+0x1F1516B: Tu acceptes sans savoir ?\pLes anciens ont caché des trésors\ndans le Tombeau de Borrius.\pRetourne-y et trouve chaque objet\ncaché. Tu peux ?
+0x1F1505C: Tu es trop classe ! Je ne peux pas\psentir combien de trésors restent\ncachés dans la tombe, mais je\lsentirai quand tu les auras tous\ltrouvés.
+0x1F150DD: Je le sens… tu as trouvé tous les\ntrésors cachés dans la tombe !\pTu es trop classe !\pPrends cet Œuf que j'ai trouvé en\nfouillant la tombe moi-même.
+0x1F1516B: {COLOR}Á{PLAYER} a reçu un Œuf du\nPsy !
+0x1F15193: Je ne t'en veux pas. Un Dresseur\pimportant comme toi doit avoir bien\nplus important à\lfaire.
+0x1F153C2: Je sens qu'il reste des trésors\ncachés dans la tombe.\nJe ne sais pas combien, mais tu\ndevrais utiliser un {COLOR}ÉCherch'Objet{COLOR}Ë.
+0x1F1529A: Je le sens… tu as trouvé tout le\ntrésor de la tombe ! Mais avant de\pte donner une récompense, il te\nfaudra de la place dans ton\léquipe.
+0x1F15329: Cet Œuf devait être caché dans la\ntombe depuis des siècles ! Si tu\pn'avais pas découvert la chambre\nfunéraire, il n'aurait peut-être\njamais trouvé de Dresseur pour\nl'élever.
 0x1F153C2: Cet objet a été trouvé derrière un\npilier au 1F.
-0x1F153ED: Cet objet a été trouvé entre les\ndeux meilleurs Noctunoir sur B4F.
-0x1F15426: Cet objet a été trouvé par l'échelle\ndescendante sur B3F.
-0x1F1545A: Cet objet a été trouvé près de\nl'échelle en haut de B2F.
-0x1F15495: Cet objet a été trouvé à côté du\npilier au bas de B2F.
-0x1F154D2: Cet objet a été trouvé à droite du pilier supérieur le plus à gauche du\nB1F.
-0x1F15516: Cet objet a été trouvé au-dessus du\npilier supérieur gauche sur B1F.
+0x1F15495: Cet objet a été trouvé entre les\ndeuxNoctunoir du haut au B4F.
+0x1F15426: Cet objet a été trouvé près de\nl'échelle descendante au B3F.
+0x1F1545A: Cet objet a été trouvé près de\nl'échelle en haut du B2F.
+0x1F15495: Cet objet a été trouvé à côté du\npilier en bas du B2F.
+0x1F154D2: Cet objet a été trouvé à droite du\npilier gauche en haut du B1F.
+0x1F15516: Cet objet a été trouvé au-dessus du\npilier gauche en haut du B1F.

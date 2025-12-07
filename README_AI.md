@@ -7,9 +7,9 @@
   - Sensitive offsets stay in place (low ROM areas); long strings are relocated to free space starting after `0x220000`.
   - Keep gibberish/binary lines untouched; check `fr_chunks/doutes.txt` before editing.
 
-- Never change offsets or line order in `fr_chunks/*`.
-- Preserve control codes (`\n`, `\p`, `\l`, `{...}`) and wrap at 36 characters max per displayed segment.
-- Match the exact sequence and count of control codes from `origin_chuncks/*` for every line (if the source uses `\l`, keep `\l`, etc.). If the origin line has no `\n/\p/\l`, do NOT introduce any—shorten/rephrase the translation so it fits without adding breaks. Ensure the text between each control code aligns with the same positions as the origin (same break structure).
+- Always compare against the matching file in `origin_chuncks/` (same filename as the chunk you edit).
+- Never change offsets or line order in `fr_chunks/*`; each chunk must have exactly 250 lines (except the final chunk if shorter).
+- Preserve control codes (`\n`, `\p`, `\l`, `{...}`) from the origin. Keep the same order and count whenever possible, and rephrase so the visible text (ignoring `{COLOR}`/placeholders) between two codes stays ≤ 36 characters. If a line in the origin has no break and cannot fit after rephrasing, add the minimum `\n` needed—never stack breaks back to back.
 - Do not trim whitespace unless the resulting length is identical.
 - Terminology: “move” → “capacité”, TM → “CT”, Gym → “Arène”, Gym Leader → “Champion d’Arène”.
 - Translate city and Pokémon names to their official French forms.

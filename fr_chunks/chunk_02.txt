@@ -28,18 +28,18 @@
 0x196F81: PAUSE DÉJEUNER\nC’est réservé.
 0x196FA0: Des clés oubliées !\nIls vont revenir.
 0x19703E: Une Boîte Jetons est requise…
-0x197057: On échange tes jetons contre des prix.
+0x197057: On échange tes jetons\ncontre des prix.
 0x19707A: Quel prix veux-tu ?
 0x19709D: Alors, tu veux le {STR_VAR_1} ?
 0x1970B2: D’accord, une CT de {STR_VAR_2},\nc’est ça que tu veux ?
 0x1970D5: Désolé, il te faut plus de\njetons que ça.
-0x19745D: Tu devrais faire de la place pour ça.
+0x19745D: Tu devrais faire de la place\npour ça.
 0x197873: 9Arène Pokémon de Dehara\nChampion : Galavan\pDresseurs vainqueurs :\n{RIVAL}
 0x1978AC: Arène Pokémon de Dehara\nChampion : Galavan\pDresseurs vainqueurs :\n{RIVAL}, {PLAYER}
 0x1979C1: Pff…\pJ’ai cramé tout mon argent au\nCasino !\pOn dirait que je n’aurai plus\nbesoin de ça !
 0x197A38: {PLAYER} a reçu une Boîte Jetons\ndu gars.
 0x197A5E: Fais de la place pour ça !
-0x197A72: J’ai toujours cru que je pouvais gagner…
+0x197A72: J’ai toujours cru que je\npouvais gagner…
 0x1980BC: Je suis sûr d’avoir vu le vendeur\npiquer dans la caisse…
 0x198BBA: 9Un jour je serai un ninja !\pMes parents frappent en force,\nmais moi je serai furtif !
 0x198C1F: Huah ! Pousse les rochers avec la\nforce brute !\pPrends ça !
@@ -57,12 +57,12 @@
 0x199485: Hmm ! {STR_VAR_2} de {STR_VAR_1} ?\nJe dois lui faire oublier ça ?
 0x1994B1: Ça a marché à la perfection !\p{STR_VAR_1} a complètement oublié\n{STR_VAR_2}.
 0x1994EA: Reviens s’il y a d’autres\ncapacités à oublier.
-0x19951F: Quoi ? Aucun Œuf ne devrait connaître de\ncapacité.
+0x19951F: Quoi ? Aucun Œuf ne devrait\nconnaître de capacité.
 0x19A4F7: 9Cette ville a des soucis de\ncauchemars depuis toujours.\pSi tu dois choisir un endroit où\nvivre, ce serait sûrement mieux\ld’aller ailleurs.
 0x19A5BD: 9Besoin de redescendre la\nmontagne ?\pMon Abra et moi serons ravis de te\ntransporter en bas.\pQu’en dis-tu ?\nTu veux être téléporté ?
 0x19A650: Attention, il te faudra de la\nforce pour continuer ensuite.
 0x19A79F: 9Ils vendent bien des Attaque + ?\pJ’aime ça, ça hausse l’Attaque en\ncombat.
-0x19A7F1: Avoir des objets en rab ne fait jamais de mal. On ne sait jamais ce qui peut\narriver.
+0x19A7F1: Avoir des objets en rab ne fait\njamais de mal. On ne sait jamais ce\nqui peut arriver.
 0x19B86A: Presque arrivé !
 0x19B8B9: Je ne suis pas trop jeune pour Mel !\nLaisse-moi tranquille !
 0x19BA45: Mauvais chemin !
@@ -74,14 +74,14 @@
 0x19BDFE: Arène Pokémon de Fallshore\nChampion : Mel\pDresseurs vainqueurs :\n{RIVAL}
 0x19BE37: Arène Pokémon de Fallshore\nChampion : Mel\pDresseurs vainqueurs :\n{RIVAL}, {PLAYER}
 0x19BF8F: Max Repousse empêche les Pokémon\nplus faibles d’apparaître.\pIl dure plus longtemps que le\nSuper Repousse.
-0x19BFF1: Avec le {COLOR}ÉBadge Chute{COLOR}Ç, tu peux acheter des\n{COLOR}ÉHyper Balls{COLOR}Ç !\pElles sont bien meilleures pour\ncapturer que des Super Balls.
-0x19C0B4: J’ai entendu dire que des gens faisaient des bêtises sur la\n{COLOR}ÉRoute 9{COLOR}Ë.
+0x19BFF1: Avec le {COLOR}ÉBadge Chute{COLOR}Ç, tu peux\nacheter des {COLOR}ÉHyper Balls{COLOR}Ç !\pElles sont bien meilleures pour\ncapturer que des Super Balls.
+0x19C0B4: J’ai entendu dire que des gens\nfaisaient des bêtises sur la\n{COLOR}ÉRoute 9{COLOR}Ë.
 0x19C0F7: À chaque pas, tes Pokémon\ns’attachent plus à toi.\pSi tu as un Pokémon à la Pension,\nil gagnera aussi en puissance.
 0x19C177: Tu as entendu ?\pQuelqu’un a réglé le souci des\nfauteurs de Route 9 !
-0x19E9E5: Salut ! Je suis un aide du Prof. Log.\nSi ton Pokédex contient\p{COLOR}É{STR_VAR_1}{COLOR}Ç espèces,\nje dois te récompenser.\lAlors, {PLAYER}, dis-moi.\pAs-tu des données sur{COLOR}É\p{STR_VAR_1}{COLOR}Ç espèces de\nPokémon ?
+0x19E9E5: Salut ! Je suis un aide du\nProf. Log.\nSi ton Pokédex contient\p{COLOR}É{STR_VAR_1}{COLOR}Ç espèces,\nje dois te récompenser.\lAlors, {PLAYER}, dis-moi.\pAs-tu des données sur{COLOR}É\p{STR_VAR_1}{COLOR}Ç espèces de\nPokémon ?
 0x19EABE: sur\n{STR_VAR_1} espèces de Pokémon ?
 0x19EAE4: Super ! Tu as attrapé {COLOR}É{STR_VAR_3}{COLOR}Ç\nespèces !\pFélicitations !\nTiens !
-0x19EB59: Il y a des objets au sol qui peuvent être cachés. Utilise le {COLOR}ÉCherche-Objet{COLOR}Ç\npour trouver les objets cachés\pprès de toi.\nLa machine est un peu limitée.\pElle ne peut pas donner la\nposition exacte.\pElle indique juste la direction de\nl’objet.\pSerre-toi-en pour t’orienter, puis\ncherche la zone à la main.
+0x19EB59: Il y a des objets au sol parfois\ncachés. Utilise le {COLOR}ÉCherche-Objet{COLOR}Ç\npour trouver les objets cachés\pprès de toi.\nLa machine est un peu limitée.\pElle ne peut pas donner la\nposition exacte.\pElle indique juste la direction de\nl’objet.\pSerre-toi-en pour t’orienter, puis\ncherche la zone à la main.
 0x19EFE0: Je suis le petit frère du Gourou\nde la Pêche.\pJ’adoooore pêcher !\nJe ne peux pas m’en passer.\pDis-moi, tu aimes pêcher ?
 0x19F05B: Génial ! J’aime ton style.\nJe pense qu’on peut être amis.\pPrends ça et pêche, jeune ami !
 0x19F0B2: {PLAYER} a reçu une Super Canne du\nfrère du Gourou de la Pêche.
@@ -99,14 +99,14 @@
 0x19F50C: C’est une sorte de tableau vierge.\pIl a des cases pour noter des\nrecords.
 0x1A1B8E: Une page bonus obtenue pour la\nCARTE !
 0x1A231B: Obtenu le TRI-PASS !
-0x1A2B88: Je suis le Maître des Capacités. Je connais chaque capacité que les\pPokémon apprennent en grandissant.\nJe suis aussi un fan des Écailles\pCœur.\pApporte-m’en une.\pSi tu fais ça, j’apprendrai une\ncapacité à un Pokémon.
+0x1A2B88: Je suis le Maître des Capacités.\pJe connais toutes les capacités\nqu’ils apprennent en grandissant.\nJe suis aussi un fan des Écailles\pCœur.\pApporte-m’en une.\pSi tu fais ça, j’apprendrai une\ncapacité à un Pokémon.
 0x1A2C63: Oh ! C’est une vraie Écaille Cœur !\nLaisse-moi deviner, tu veux que\pj’enseigne une capacité ?\n
 0x1A2CC3: Quel Pokémon a besoin d’un cours ?
 0x1A2CE1: Quelle capacité dois-je enseigner ?
 0x1A2CFC: Désolé…\pOn dirait que je n’ai aucune\ncapacité à enseigner à ce Pokémon.
 0x1A2D43: Alors, il me faut une Écaille Cœur.\nQue vas-tu me donner ?
 0x1A2D85: {PLAYER} a donné une Écaille Cœur\nen échange.
-0x1A2DE0: Si tes Pokémon doivent apprendre une capacité, il me faut une\nÉcaille Cœur.
+0x1A2DE0: Si tes Pokémon doivent apprendre\nune capacité, il me faut une\nÉcaille Cœur.
 0x1A2E20: Hein ? Je ne peux enseigner aucune\ncapacité à un Œuf.
 0x1A505B: À bientôt !
 0x1A5075: {PLAYER} a allumé le PC.
@@ -132,7 +132,7 @@
 0x1A52F0: Obtenu {STR_VAR_2} !
 0x1A5301: Dommage ! Il n’y a plus de place\npour un autre {STR_VAR_2}…
 0x1A532F: Le {STR_VAR_2} a été transféré\ndans le PC.
-0x1A5375: Un objet du Cube V3 peut être assigné à Select pour un accès\nrapide.
+0x1A5375: Un objet du Cube V3 peut être\nassigné à Select pour un accès\nrapide.
 0x1A5420: {PLAYER} a allumé le PC.
 0x1A5446: Veux-tu donner un surnom au\n{STR_VAR_2} reçu ?
 0x1A5483: Bienvenue au Centre Pokémon !\pVeux-tu que je soigne tes Pokémon\nà fond ?
@@ -147,7 +147,7 @@
 0x1A5690: {PLAYER} a remis le\n{STR_VAR_1}.
 0x1A56A7: Veux-tu donner un surnom à\nce {STR_VAR_1} ?
 0x1A5700: {PLAYER} a déterré un {STR_VAR_2}\nau fond du sol.
-0x1A58A7: Voyons… Oh là ! Tu n’as capturé que {COLOR}É{STR_VAR_3}{COLOR}Ç\nespèces !\lIl t’en faut\p{COLOR}É{STR_VAR_1}{COLOR}Ç.
+0x1A58A7: Voyons… Oh là ! Tu n’as capturé\nque {COLOR}É{STR_VAR_3}{COLOR}Ç\nespèces !\lIl t’en faut\p{COLOR}É{STR_VAR_1}{COLOR}Ç.
 0x1A5909: …Oh. Je vois. Quand tu auras\p{COLOR}É{STR_VAR_1}{COLOR}Ç espèces,\nrevient.
 0x1A594D: Oh ! Je vois que tu n’as pas de\nplace pour le {STR_VAR_2}.
 0x1A597B: Je cherche le Pokémon\n{STR_VAR_1} !\pTu veux en échanger un contre mon\n{STR_VAR_2} ?
@@ -157,10 +157,10 @@
 0x1A59E7: Il est pas super, mon ancien {STR_VAR_2} ?
 0x1A5AD5: 9Salut !\nTu as un {STR_VAR_1} ?\pTu veux l’échanger contre mon\n{STR_VAR_2} ?
 0x1A5B08: Dommage.
-0x1A5B18: …Ce n’est pas un {STR_VAR_1}. Si tu en obtiens un, échange-le\pavec moi.
+0x1A5B18: …Ce n’est pas un {STR_VAR_1}.\nSi tu en obtiens un, échange-le\pavec moi.
 0x1A5B4A: Merci, t’es un pote !
 0x1A5B60: Alors, mon ancien {STR_VAR_2} ?\nMon {STR_VAR_1} se porte super !
-0x1A5B88: Bingo ! La Carte Magnétique a ouvert la\nporte !
+0x1A5B88: Bingo ! La Carte Magnétique a\nouvert la porte !
 0x1A5BC5: 9Connexion au PC du Prof. Log…\pConnexion au Système d’Éval\ndu Pokédex…
 0x1A5C03: Veux-tu que j’évalue ton Pokédex ?\n
 0x1A5C2E: Lien avec le PC du Prof. Log coupé.
@@ -176,7 +176,7 @@
 0x1A5EC0: Tes Pokémon ont retrouvé toute leur\nforme.\pSi l’énergie ou les PV de tes\nPokémon sont bas, viens nous voir.\pSi tu pars loin sur le terrain,\nachète des Potions au Magasin.\lOn compte sur toi !\p
 0x1A5F9B: Tes Pokémon ont retrouvé toute leur\nforme.\pOn compte sur toi !
 0x1A5FDF: {PLAYER} !\nBienvenue à la maison.\pOn dirait que tu as vécu pas mal\nd’aventures.\pTu devrais peut-être te reposer.\n
-0x1A6046: Ah, parfait ! Toi et tes Pokémon avez bien meilleure mine.\pSi les PV de tes Pokémon sont bas,\nsoigne-les dans un\p{COLOR}ÉCentre Pokémon{COLOR}Ç !\nLe plus proche d’ici est à\p{COLOR}ÉBellin Town{COLOR}Ç.\nOu achète des\p{COLOR}ÉPotions{COLOR}Ç au\n{COLOR}ÉPoké Mart{COLOR}Ç !\pC’est toujours bien de se préparer\nau pire.\pRends-moi fier, chéri !\pPrends soin de toi !
+0x1A6046: Ah, parfait ! Toi et tes Pokémon\navez bien meilleure mine.\pSi les PV de tes Pokémon sont bas,\nsoigne-les dans un\p{COLOR}ÉCentre Pokémon{COLOR}Ç !\nLe plus proche d’ici est à\p{COLOR}ÉBellin Town{COLOR}Ç.\nOu achète des\p{COLOR}ÉPotions{COLOR}Ç au\n{COLOR}ÉPoké Mart{COLOR}Ç !\pC’est toujours bien de se préparer\nau pire.\pRends-moi fier, chéri !\pPrends soin de toi !
 0x1A6196: 9{PLAYER} n’a plus de Pokémon utilisables !\n{PLAYER} panique et perd\p¥{STR_VAR_1}…\p… … … …\p{PLAYER} s’évanouit !
 0x1A61E5: {PLAYER} n’a plus de Pokémon\nutilisables !\p{PLAYER} s’évanouit !
 0x1A6211: Salut !\nJe peux t’aider ?
@@ -203,8 +203,8 @@
 0x1A70A5: Tu as même les formes évoluées\ndes Pokémon ! Super !
 0x1A70D8: Excellent ! Échange avec des amis\npour en avoir d’autres !
 0x1A7108: Exceptionnel !\nTu es devenu un vrai pro !
-0x1A7137: Je n’ai plus rien à dire ! Tu es le PROFESSEUR Pokémon\nmaintenant !
-0x1A7175: Ton Pokédex est complètement rempli !\nFélicitations !!
+0x1A7137: Je n’ai plus rien à dire !\nTu es le PROFESSEUR Pokémon\nmaintenant !
+0x1A7175: Ton Pokédex est\ncomplètement rempli !\nFélicitations !!
 0x1A71AA: Et ton Pokédex National est :\p{STR_VAR_1} Pokémon vus et\n{STR_VAR_2} Pokémon possédés.
 0x1A71EE: J’ai hâte de te voir remplir le\nPokédex National !
 0x1A722F: Enfin…\pTu as enfin complété le Pokédex !\nC’est magnifique !\pC’est vraiment un exploit !\n
@@ -219,13 +219,13 @@
 0x1BC3C7: Tu peux combattre un autre Dresseur\nvia un câble Game Link GBA.
 0x1BC409: Pour un Combat Duo, il faut avoir\nau moins deux Pokémon.
 0x1BC442: Pour un échange, tu dois avoir au\nmoins deux Pokémon avec toi.
-0x1BC47C: Un Pokémon tenant la Baie {STR_VAR_1} ne peut pas être\néchangé.
+0x1BC47C: Un Pokémon tenant la Baie\n{STR_VAR_1} ne peut pas être échangé.
 0x1BC4AC: Attends s’il te plaît.\n… … Bouton B : Annuler
 0x1BC4CE: Quand tout le monde est prêt…\nBouton A : Valider\lBouton B : Annuler
 0x1BC50D: Lancer le lien avec {STR_VAR_1} joueurs.\nBouton A : Valider\lBouton B : Annuler
 0x1BC54C: En attente de liaison…\n… … Bouton B : Annuler
 0x1BC590: Entre, s’il te plaît.
-0x1BC59E: Je vais te guider vers ta salle maintenant.
+0x1BC59E: Je vais te guider vers ta salle\nmaintenant.
 0x1BC5C0: Quelqu’un n’est pas prêt à se lier.\pReviens quand tout le monde sera\npréparé.
 0x1BC615: Désolé, erreur de liaison…\nRéinitialise et réessaie.
 0x1BC64E: Il semble que les partenaires aient\nfait des choix différents.
