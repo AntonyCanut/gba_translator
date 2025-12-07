@@ -43,7 +43,6 @@ IMMUTABLE_OFFSETS = {0x4FDAC2}
 # Never relocate them: write in place only (fail if too long).
 PROTECTED_OFFSETS = {
     0x415A23,  # version labels / start menu block
-    0x415A2C,
     0x415A31,
     0x415A36,
     0x415A3C,
