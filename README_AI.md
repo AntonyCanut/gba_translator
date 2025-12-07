@@ -16,4 +16,4 @@
 - Laisser inchangées les chaînes illisibles/binaire et les lignes déjà en place.
 - Garder `\p` et `\l` aux mêmes emplacements autant que possible.
 - Avant chaque session, consulter/mettre à jour `fr_chunks/doutes.txt` pour les traductions incertaines.
-- Chaque fichier de chunk doit contenir exactement 250 lignes (ni plus ni moins).
+- Chaque fichier de chunk doit contenir exactement 250 lignes (ni plus ni moins). Sauf s'il s'agit du dernier de la liste.
