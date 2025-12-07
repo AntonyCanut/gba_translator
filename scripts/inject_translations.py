@@ -51,11 +51,7 @@ PROTECTED_OFFSETS = {
     0x415A49,
     0x415A50,
     0x415A5C,
-    0x415A66,
-    0x415A6E,
-    0x415A77,
-    0x415A8A,
-    0x415A97,
+    0x415A66
 }
 
 
