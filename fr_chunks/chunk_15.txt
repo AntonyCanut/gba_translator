@@ -145,8 +145,8 @@
 0x41B535: PARDON
 0x41B541: MERCI
 0x41B54B: À PLUS !
-0x41B554: {PLAYER} s'est précipité au Centre Pokémon en protégeant ses Pokémon\népuisés et K.O.…\n\pp
-0x41B5B6: {PLAYER} est rentré chez lui en protégeant ses Pokémon épuisés et\nK.O.…\n\pp
+0x41B554: {PLAYER} s'est précipité au Centre Pokémon en protégeant ses Pokémon\népuisés et K.O.…\n\p
+0x41B5B6: {PLAYER} est rentré chez lui en protégeant ses Pokémon épuisés et\nK.O.…\n\p
 0x41B60E: Joueur : {DYNAMIC} 
 0x41B619: Ce document atteste ta superbe\nperformance : remplir le Pokédex\n{DYNAMIC}À.\n
 0x41B684: Game Freak
@@ -217,14 +217,14 @@
 0x41CDEB: Quelqu'un a quitté.\nLe lien sera coupé.
 0x41CE1C: points
 0x41CE24: En attente de communication…
-0x41CE3B: Prêt pour le BROYEUR DE BAIES ? Choisis une BAIE.\n\pp
+0x41CE3B: Prêt pour le BROYEUR DE BAIES ? Choisis une BAIE.\n\p
 0x41CE78: Attends que chacun choisisse\nune BAIE.
-0x41CEA7: {PAUSE_MUSIC}{PLAY_BGM}ÀÀ Tu obtiens {STR_VAR_1} unités de POUDRE BAIE soyeuse.{RESUME_MUSIC}\npTa quantité totale de POUDRE BAIE\pest {STR_VAR_2}.\n\pp
+0x41CEA7: {PAUSE_MUSIC}{PLAY_BGM}ÀÀ Tu obtiens {STR_VAR_1} unités de POUDRE BAIE soyeuse.{RESUME_MUSIC}\npTa quantité totale de POUDRE BAIE\pest {STR_VAR_2}.\n\p
 0x41CF13: Enregistrement des résultats\nde jeu dans la sauvegarde.\nPatiente.
 0x41CF4F: Rejouer au BROYEUR DE BAIES ?
 0x41CF70: Tu n'as pas de BAIE.\nPartie annulée.
 0x41CFA0: Un joueur est parti.\nPartie annulée.
-0x41CFD1: Temps écoulé. pImpossible de faire une bonne\pPOUDRE BAIE…\n\pp
+0x41CFD1: Temps écoulé. pImpossible de faire une bonne\pPOUDRE BAIE…\n\p
 0x41D005: En attente de communication…
 0x41D032: fois
 0x41D042: BAIE {STR_VAR_1}

@@ -660,7 +660,7 @@
 0x1C59F7: es-tu une fille ?
 0x1C5A04: Dans le monde où tu vas entrer,\ntu vivras une grande aventure dont\ntu es le héros.
 0x1C5A6B: Parle aux gens et examine tout,\nque ce soit en ville, sur les\nroutes ou dans les grottes.\nCollecte infos et indices partout.
-0x1C5AEB: Pendant ton aventure, tu prendras\nbeaucoup de décisions.\n\nSouviens-toi, tes actes peuvent\ninfluer et changer le monde\nautour de toi.\n
+0x1C5AEB: Pendant ton aventure, tu prendras\nbeaucoup de décisions.\n\n\nSouviens-toi, tes actes peuvent influer et changer le monde\nautour de toi.\n
 0x1EAF1A: FgFüF
 0x1EAF3A: FüFgF
 0x1EB09A: FíFgF
@@ -674,14 +674,14 @@
 0x1EB3C6: FgFüF
 0x1EB3E6: FüFgF
 0x1EB5AC: %a!v%a!v
-0x1F3C88: E{STRING}E{STRING}%a!u                E{STRING}E\n
+0x1F3C88: E{STRING}E{STRING}%a!\n u                E{STRING}E
 0x1F47AC: gカgニヒニíカ·8E{STRING}カü                ニüニgカg9w                          FüFfFgFgFgFgFg                FgFgFgFgFrF\lF
 0x1F6CC7: bEaía%aヒa                ·aEb
-0x1F7208: E{STRING}E{STRING}%a!u                E{STRING}E\n
-0x1FFE88: E{STRING}E{STRING}%a!u                E{STRING}E\n
+0x1F7208: E{STRING}E{STRING}%a!\n u                E{STRING}E
+0x1FFE88: E{STRING}E{STRING}%a!\n u                E{STRING}E
 0x2009AC: gカgニヒニíカ·8E{STRING}カü                ニüニgカg9w                          FüFfFgFgFgFgFg                FgFgFgFgFrF\lF
 0x202EC7: bEaía%aヒa                ·aEb
-0x203408: E{STRING}E{STRING}%a!u                E{STRING}E\n
+0x203408: E{STRING}E{STRING}%a!\n u                E{STRING}E
 0x207D86: ggbgノeDカ
 0x208B85: bEuE\n
 0x209408: … … : :        egbヒf·w
@@ -691,10 +691,10 @@
 0x209DEB: g%a5f                ♀vf
 0x209F82: íöパfggggヒu·{STRING}E{UNKNOWN_STR}F F F F F F F F    
 0x20A062: FüFüF\l                        E\nE{STRING}E{STRING}E\n         F F F F        
-0x2101A0: E{STRING}E{STRING}%a!u                E{STRING}E\n
+0x2101A0: E{STRING}E{STRING}%a!\n u                E{STRING}E
 0x210CC4: gカgニヒニíカ·8E{STRING}カü                ニüニgカg9w                          FüFfFgFgFgFgFg                FgFgFgFgFrF\lF
 0x2131DF: bEaía%aヒa                ·aEb
-0x213720: E{STRING}E{STRING}%a!u                E{STRING}E\n
+0x213720: E{STRING}E{STRING}%a!\n u                E{STRING}E
 0x21809C: ggggオe9カ
 0x218440: %{STRING}!\nカa8v F F F F F F F ィ
 0x219759: gagハa·v         タ {SUPER_RE} … :        
@@ -704,10 +704,10 @@
 0x21A05A: B{STRING}BaBuB{STRING}B{STRING}B{STRING}B{UNKNOWN_STR}               
 0x21A0E1: g%e5büv                
 0x21A101: g%e5büf                {STRING}
-0x2204B8: E{STRING}E{STRING}%a!u                E{STRING}E\n
+0x2204B8: E{STRING}E{STRING}%a!\n u                E{STRING}E
 0x220FDC:                       gカgニヒニíカ·8E{STRING}カü                ニüニgカg9w                          FüFfFgFgFgFgFg                FgFgFgFgFrF\lF
 0x2234F7: bEaía%aヒa                ·aEb
-0x223A38: E{STRING}E{STRING}%a!u                E{STRING}E\n
+0x223A38: E{STRING}E{STRING}%a!\n u                E{STRING}E
 0x229B7A: カa9uE{UNKNOWN_STR}F F F F F F F F
 0x22A694: FbFv                        ·\ní{STRING}í{STRING}·\n         F F F F        ífíg·qE\l         : : : :        
 0x236632: Ces lunettes protègent le\nporteur des dégâts météo\net des poudres.
@@ -2773,7 +2773,7 @@
 0x3FDD64: Hm ! Excellent !\pSi tu gagnes, tu as de l'argent,\net ton Pokémon grandit !\pAffronte d'autres Dresseurs\npour les rendre forts !\p
 0x3FDDEB: Hm... Quelle déception... Si tu gagnes, tu as de l'argent,\net tes Pokémon grandissent.\pSi tu perds, {B_PLAYER_NAME},\ntu paies.\pJe paie cette fois,\nmais dehors ce sera différent.\pRenforce tes Pokémon en battant\ndes Pokémon sauvages.\p\nmais dehors ce sera différent.\pRenforce tes Pokémon en battant\ndes Pokémon sauvages.\p
 0x3FE672: Quoi ?\n{STR_VAR_1} évolue!
-0x3FE688: Félicitations ! Ton {STR_VAR_1}\na évolué en {STR_VAR_2}!{WAIT_SE}\p
+0x3FE688: Félicitations ! Ton {STR_VAR_1}\na évolué en {STR_VAR_2}!\p {WAIT_SE}
 0x3FE6B5: Hein ? {STR_VAR_1}\nn'évolue plus!\p
 0x3FE6D5: Que doit faire\n{B_ACTIVE_NAME_WITH_PREFIX} ?
 0x3FE6E6: Qu'est-ce que {B_PLAYER_NAME}\nva lancer ?
@@ -3624,8 +3624,8 @@
 0x41B535: PARDON
 0x41B541: MERCI
 0x41B54B: À PLUS !
-0x41B554: {PLAYER} s'est précipité au Centre Pokémon en protégeant ses Pokémon\népuisés et K.O.…\n\pp
-0x41B5B6: {PLAYER} est rentré chez lui en protégeant ses Pokémon épuisés et\nK.O.…\n\pp
+0x41B554: {PLAYER} s'est précipité au Centre Pokémon en protégeant ses Pokémon\népuisés et K.O.…\n\p
+0x41B5B6: {PLAYER} est rentré chez lui en protégeant ses Pokémon épuisés et\nK.O.…\n\p
 0x41B60E: Joueur : {DYNAMIC} 
 0x41B619: Ce document atteste ta superbe\nperformance : remplir le Pokédex\n{DYNAMIC}À.\n
 0x41B684: Game Freak
@@ -3696,14 +3696,14 @@
 0x41CDEB: Quelqu'un a quitté.\nLe lien sera coupé.
 0x41CE1C: points
 0x41CE24: En attente de communication…
-0x41CE3B: Prêt pour le BROYEUR DE BAIES ? Choisis une BAIE.\n\pp
+0x41CE3B: Prêt pour le BROYEUR DE BAIES ? Choisis une BAIE.\n\p
 0x41CE78: Attends que chacun choisisse\nune BAIE.
-0x41CEA7: {PAUSE_MUSIC}{PLAY_BGM}ÀÀ Tu obtiens {STR_VAR_1} unités de POUDRE BAIE soyeuse.{RESUME_MUSIC}\npTa quantité totale de POUDRE BAIE\pest {STR_VAR_2}.\n\pp
+0x41CEA7: {PAUSE_MUSIC}{PLAY_BGM}ÀÀ Tu obtiens {STR_VAR_1} unités de POUDRE BAIE soyeuse.{RESUME_MUSIC}\npTa quantité totale de POUDRE BAIE\pest {STR_VAR_2}.\n\p
 0x41CF13: Enregistrement des résultats\nde jeu dans la sauvegarde.\nPatiente.
 0x41CF4F: Rejouer au BROYEUR DE BAIES ?
 0x41CF70: Tu n'as pas de BAIE.\nPartie annulée.
 0x41CFA0: Un joueur est parti.\nPartie annulée.
-0x41CFD1: Temps écoulé. pImpossible de faire une bonne\pPOUDRE BAIE…\n\pp
+0x41CFD1: Temps écoulé. pImpossible de faire une bonne\pPOUDRE BAIE…\n\p
 0x41D005: En attente de communication…
 0x41D032: fois
 0x41D042: BAIE {STR_VAR_1}
@@ -3860,7 +3860,7 @@
 0x41E414: {STR_VAR_1} veut apprendre\n{STR_VAR_2}.\ppMais {STR_VAR_1} ne peut pas\navoir plus de quatre capacités.\ppSupprimer une capacité pour\nfaire place à {STR_VAR_2} ?
 0x41E481: Arrêter d'apprendre {STR_VAR_2} ?
 0x41E4E2: Abandonner l'enseignement d'une\nnouvelle capacité à {STR_VAR_1} ?
-0x41E50C: Oublier quelle capacité ?\pp
+0x41E50C: Oublier quelle capacité ?\p
 0x41E538: En attente…\nL'autre joueur choisit.
 0x41E572: Combat refusé.{PAUSE}ざ
 0x41E58D: Combat refusé.{PAUSE}ざ
@@ -11907,7 +11907,7 @@
 0xAD39C1:    /AAAAAAAAA\p
 0xAD3A8B:  ナ{FILL_WINDOW} í{FILL_WINDOW} í{NAME_END} \l{NAME_END} \l{NAME_END} \l{NAME_END}                                                                                                                                                :   :   E   E  :A:!99EA!9EAAAAAAAAAAQAAAQAAAEAA\p?999·99\l9?9\l9?99·999·999\l999\l999\l\l{NAME_END} 9
 0xAD3B92:   9Ô  9Ô  /Ô  \l                                                                                                                                     EA  EA :AQ :AA EQR ·?9 ·99 ·99AAE?AAEBB
-0xAD42C3:                                                                                                                         :   E  :E  ?9 :99 E99:A!9EA!9AAA!AAAQAAAB9?9\l9?9\l9999P9999999?9999999?99999ソ··9ソ!\p·ソ!/·\l\p\l9\l\p·9\l\p·9\l··9\l·EBA
+0xAD42C3:                                                                                                                         :   E  :E  ?9 :99 E99:A!9EA!9AAA!AAAQAAAB9?9\l9?9\l9999P9999999?9999999?99999ソ··9ソ!\p·ソ!\l\p/·\l9\l\p·9\l\p·9\l··9\l·EBA
 0xAD44C5: A99 EA9 :AA  EA  :A  :A   E   EPÏ  9PÏ 99PÏA9
 0xAD49D6:   Ô   Ô   Ô   zÓ  Aw                                                                                                                            ニニ  ♀A               ニ  タi ニbCニAAAAgCA biニタiiCbiCACwzDiAgyiiiigiiiAAiiòòツ♀ニニbAAACAAgAgDAAiyzgCiizCiiiAAAÓ AyÂ iìぇ yÙÙÂwÙÙぇwÚÙぅwÚÙïA+ÙÙ                        Â   Â                                                                     タニ               ニ  タA   b   タiiDAニyAAljAAjiiCiiiigiiiAAgiiAiyAAAgAACAAACAAgAAiiAAiyAAyjiAjjiiiCAAAAAgAAgAAAgAAAgAAACAAACAiizgAwÙÙAAzÙDAAzwCAAAziAAgホニgiùÚiiヘòÂ   Â   ぅ   ず   ず   ;   ÙÔ  Ùぜぉ                                                                                                 ニiyj ニji :ii :ii kii kiy:jiy▶iijiyiiiyAAiiDAiijAiiyiiiyyiiijiiiiiyizAjiiwiiiyiiijiiiiiiiiiiiiijiiiiニDAAAyCAAizCgiizニiiiぁiiiぁiiiぁÚまÙÂù{DYNAMIC}ïぅヒÖÚぅùメまぅòò{DYNAMIC}ぅòòÖぅòòメぜòòòÔ                                                                   :   ▶  :z   
 0xAD4D7D: ホii ▶ii ▶bi ▶biiiiiiyiiiyiiiyiiiziiiziiyziizzziiijiiijiiyjiiyjiiyziizziizzjizzziii{STRING}iii{STRING}jii{STRING}jii{STRING}zii{STRING}ziiizjiizziiòòòÔぁòòÔö
@@ -11932,7 +11932,7 @@
 0xADCB6C: i-Ô 9vこ ii- iiyこDAwこ
 0xADCF5D:    AÔ:ニ                            ニ                                                                                                     :R  UR  OR :RR :RR :RR ゾRR URRRRRRRRRRRRRピRRRBRRR×RRRARRRARRRAピAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA\pどでA\p
 0xADD11A: EAAA\p
-0xADD2ED: .jii.ii\l
+0xADD2ED: .jii.\l ii
 0xADD812: RR:RRRURRRORRRRRRRゾベベベORRRRRRRRRRBRRピARRAARピAARBAAÌ   ピ{SE_SS_ANNE_HORN} RA
 0xADD84F:  AAAÔAAA\pAAA\pAAAAAAAA            :ニニ どでä 
 0xADD87E:   ぽでÉ                                                                                                    :   :   ゾ   U   U   ポ   ポ   ポRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRR×AARAAARAAARAAAピAAAピAAAピAAAピAAAAAAAAAAAAAAAAAAAAAAAAAA\pAAA
@@ -11953,7 +11953,7 @@
 0xADF394: i-Ô 9vこ ii- iiyこDAwこ
 0xADF785:    AÔ:ニ                            ニ                                                                                                     :R  UR  OR :RR :RR :RR ゾRR URRRRRRRRRRRRRピRRRBRRR×RRRARRRARRRAピAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA\pどでA\p
 0xADF942: EAAA\p
-0xADFB15: .jii.ii\l
+0xADFB15: .jii.\l ii
 0xAE003A: RR:RRRURRRORRRRRRRゾベベベORRRRRRRRRRBRRピARRAARピAARBAAÌ   ピ{SE_SS_ANNE_HORN} RA
 0xAE0077:  AAAÔAAA\pAAA\pAAAAAAAA            :ニニ どでä 
 0xAE00A6:   ぽでÉ                                                                                                    :   :   ゾ   U   U   ポ   ポ   ポRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRR×AARAAARAAARAAAピAAAピAAAピAAAピAAAAAAAAAAAAAAAAAAAAAAAAAA\pAAA
@@ -11982,7 +11982,7 @@
 0xAEB45C: i-Ô 9vこ ii- iiyこDAwこ
 0xAEB84D:    AÔ:ニ                            ニ                                                                                                     :R  UR  OR :RR :RR :RR ゾRR URRRRRRRRRRRRRピRRRBRRR×RRRARRRARRRAピAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA\pどでA\p
 0xAEBA0A: EAAA\p
-0xAEBBDD: .jii.ii\l
+0xAEBBDD: .jii.\l ii
 0xAEC102: RR:RRRURRRORRRRRRRゾベベベORRRRRRRRRRBRRピARRAARピAARBAAÌ   ピ{SE_SS_ANNE_HORN} RA
 0xAEC13F:  AAAÔAAA\pAAA\pAAAAAAAA            :ニニ どでä 
 0xAEC16E:   ぽでÉ                                                                                                    :   :   ゾ   U   U   ポ   ポ   ポRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRR×AARAAARAAARAAAピAAAピAAAピAAAピAAAAAAAAAAAAAAAAAAAAAAAAAA\pAAA
@@ -12166,8 +12166,8 @@
 0xE303B0:                 BER\p\pQR\p
 0xE304DC: A/ヒü                                                                 E\p·:げAA:\pAご·AA\pぜAÙA·“9A:AAA:/A\pAAヒ\nAAwE!AzE!ヒ\n9/A\l0AA9z“A9-‘!9-Ô   \p   Ô   Ô   \l   \n   Ô   Ô                                    ·AAln99:
 0xE306E0:                                                                  E·\p E\p·:げAA:\pAご·AA\pぜAÙA·“AA:AAAA/ヒüAAヒ\nAAwE!AzE!w\n9/A\l0AA9z“A9-    Ô   \p   Ô   Ô   \l   \n   Ô                                   :/A\pln/A:
-0xE308D8: !/A\lAAAÔ            Ô   Ô                  :   E   ·   :                :ごAA·\lA‘DéAEDAÙ!EA/AEAAw·AAD:AADAA\p\l/!í5/A·ハAA\l5A!\l\lA0\l-ì9v599v5Ô   \l   Ô   \l   Ô   Ô   Ô   Ô                                   :/Av:-99 ▶-9 ぁm0 :
-0xE30ADC: !/A\l                Ô   Ô                  Ô  :\p  :9   ·   :        :/zA:ごAA·\lA‘DéAEDAÙ!EAAAEAAA·AAwAAAÔAA\p\l/!í5/A·ハAA\l5A!\l\lD0\l-w9v5    Ô   \l   Ô   \l   Ô   Ô   Ô                                   :AAw:/A9 ▶-9 ぁm0 :
+0xE308D8: !/A\lAAAÔ            Ô   Ô                  :   E   ·   :                :ごAA·\lA‘DéAEDAÙ!\p\lEA/AEAAw·AAD:AADAA /!í5/A·ハAA\l5A!\l\lA0\l-ì9v599v5Ô   \l   Ô   \l   Ô   Ô   Ô   Ô                                   :/Av:-99 ▶-9 ぁm0 :
+0xE30ADC: !/A\l                Ô   Ô                  Ô  :\p  :9   ·   :        :/zA:ごAA·\lA‘DéAEDAÙ!\p\lEAAAEAAA·AAwAAAÔAA /!í5/A·ハAA\l5A!\l\lD0\l-w9v5    Ô   \l   Ô   \l   Ô   Ô   Ô                                   :AAw:/A9 ▶-9 ぁm0 :
 0xE310BB: TREポT         :
 0xE312F5:    AÔ  パ{SE_SS_ANNE_HORN}   :A  :R   ポ   E  :A  EA  ▶R  :
 0xE31351: ポuTO\nUxRx
@@ -12629,7 +12629,7 @@
 0xF4F101: Ô :    RRiQR{STRING}
 0xF4F301: Ô      URiSR{STRING}
 0xF4F901: Ô      AAzDw\n
-0xF4FF04:     ガCg iCg \p.Ò \p
+0xF4FF04:     ガCg iCg \p.\p Ò 
 0xF50501: Ô      EAzDA\n
 0xF52B4A: R?でESR E99 
 0xF53507:                                                                   EiR ·89 ポ9/ E\l
@@ -12802,7 +12802,7 @@
 0x12A1D5F: öÄmbZYchajz
 0x12B3ED3: ÜpfaYababkvö\n
 0x12B4282: {DYNAMIC}vkaTPMNVdp!S!   ぞ ûS {UP_ARROW}È  リß    
-0x12BD77A: ÜbepiuyeQSTPSfcKJNB?’E-2×J¥/I‘7/F·,VJ…/QLBHTUTSSVdgZVeuxursvvxrs{EVIL_LEGENDARY}Â\p\nÁÈ
+0x12BD77A: ÜbepiuyeQSTPSfcKJNB?’E-2×J¥/I‘7/F·,VJ…\p\n/QLBHTUTSSVdgZVeuxursvvxrs{EVIL_LEGENDARY}Â ÁÈ
 0x12BDB8B: ÖrpuvohbWVTPOSQIEJNKFCCCEFFHJHCCHKLLLIILNPWbZWYeklkhiotttxÄ::ö\p À
 0x12CAA13: ÀÇÈÁ\pÜzxy▶Ä:xqljkmmjgdaXYabdddbaYWXbfhhfcbcgjnqnhehov:Äzwx:ö\l
 0x12E0E24: wÄ{DYNAMIC}wrdGRaSUaWiobojeZh▶{PLAYER} 
@@ -12815,7 +12815,7 @@
 0x1335FE4: tguÄ▶VÄzpzko\phtwepe
 0x133968F: ÚhYdA{STRING}b 
 0x1339698: ポ!PZrxU6“8ズポWl{SUPER_RE}FYXJYFSV,He▶MXÓl9MnlwäàaKeÄがjEDj
-0x1344872: È\pÖuw▶lqsjcghTNUTTTPOMKIGECA×,♀♂’””……-“-7--47…87?544110ペ53323!656♂,.FF/JRYPYchmrvÄ\l\n
+0x1344872: È\pÖuw▶lqsjcghTNUTTTPOMKIGECA×,♀♂’””……-“-7--47…87?544110ペ53323!656♂,.\l\nFF/JRYPYchmrvÄ
 0x135307A:  \nxwylqngjabYQYYecSLDDHHIMIJSTVUMLMPQZXWggdiorrwääz:öü\pÁ
 0x135FD8D: ÜpfZcoü 
 0x1361EFC: zSPDブ!bstee▶
@@ -12848,7 +12848,7 @@
 0x1434442: ÁÊÔàèçÑこ ÄobQG/×BGNSWaejrwzwsnjggijkhcXTTUVUSRSVYbcZVPLIGC,’”’×HScmpojdVQNLKJNSYchlosyö
 0x14410E8: {EMOJI_BIGWHEEL}vplhgintÄ
 0x144491E: wocagpx
-0x144CA3F: ydUcozÇねß\phMA,GaiR…47,RehnpkVD¥Hh\p
+0x144CA3F: ydUcozÇねß\phMA,GaiR…\p 47,RehnpkVD¥Hh
 0x1451C4C: :rmeZYZdmz{DYNAMIC}
 0x1460F88: wjcakÖ
 0x146E103: woljhXKFTmä
@@ -14789,8 +14789,8 @@
 0x18A5044: BER\p\pQR\p
 0x18A5190: A/ヒü                                                                 E\p·:げAA:\pAご·AA\pぜAÙA·“9A:AAA:/A\pAAヒ\nAAwE!AzE!ヒ\n9/A\l0AA9z“A9-‘!9-Ô   \p   Ô   Ô   \l   \n   Ô   Ô                                    ·AAln99:
 0x18A5394: E·\p E\p·:げAA:\pAご·AA\pぜAÙA·“AA:AAAA/ヒüAAヒ\nAAwE!AzE!w\n9/A\l0AA9z“A9-    Ô   \p   Ô   Ô   \l   \n   Ô                                   :/A\pln/A:
-0x18A55AC: !/A\lAAAÔ            Ô   Ô                  :   E   ·   :                :ごAA·\lA‘DéAEDAÙ!EA/AEAAw·AAD:AADAA\p\l/!í5/A·ハAA\l5A!\l\lA0\l-ì9v599v5Ô   \l   Ô   \l   Ô   Ô   Ô   Ô                                   :/Av:-99 ▶-9 ぁm0 :
-0x18A57B0: !/A\l                Ô   Ô                  Ô  :\p  :9   ·   :        :/zA:ごAA·\lA‘DéAEDAÙ!EAAAEAAA·AAwAAAÔAA\p\l/!í5/A·ハAA\l5A!\l\lD0\l-w9v5    Ô   \l   Ô   \l   Ô   Ô   Ô                                   :AAw:/A9 ▶-9 ぁm0 :
+0x18A55AC: !/A\lAAAÔ            Ô   Ô                  :   E   ·   :                :ごAA·\lA‘DéAEDAÙ!\p\lEA/AEAAw·AAD:AADAA /!í5/A·ハAA\l5A!\l\lA0\l-ì9v599v5Ô   \l   Ô   \l   Ô   Ô   Ô   Ô                                   :/Av:-99 ▶-9 ぁm0 :
+0x18A57B0: !/A\l                Ô   Ô                  Ô  :\p  :9   ·   :        :/zA:ごAA·\lA‘DéAEDAÙ!\p\lEAAAEAAA·AAwAAAÔAA /!í5/A·ハAA\l5A!\l\lD0\l-w9v5    Ô   \l   Ô   \l   Ô   Ô   Ô                                   :AAw:/A9 ▶-9 ぁm0 :
 0x18A5DCF: TREポT         :
 0x18A6009: AÔ  パ{SE_SS_ANNE_HORN}   :A  :R   ポ   E  :A  EA  ▶R  :
 0x18A6065: ポuTO\nUxRx
@@ -15027,7 +15027,7 @@
 0x1925C91: :E  Ew  EA  :\p  :Ô            /
 0x1925DD2: QQ                    Ô  :{FILL_WINDOW} UR\p:R                    Ô   Ô   Ô                      :  :E  EA  :D UBR:ITR:‘DB:qAず
 0x1925EB8: :E  Ew  E\p  :Ô            \lURB\lBQ\pA
-0x1928509: AA\lAAAAEAAA                    Ô   \l   !Ô                                     ▶   E   E   E   ·   :   :    \p\p/AAEEAAAEAAAzDAAADAAAz9AA9·999AÔ  v\n  ず\n  z\p  Av
+0x1928509: AA\lAAAAEAAA                    Ô   \l   !\p\pÔ                                     ▶   E   E   E   ·   :   :    /AAEEAAAEAAAzDAAADAAAz9AA9·999AÔ  v\n  ず\n  z\p  Av
 0x192870D: AA\lAAAA                        Ô   \l                                      :   ▶   
 0x1928760: E   E   ·   :   :AAAAEAAA
 0x1928787: EAwzDAAAz9AA9!Ô  AÔ  v\n  ず\n  z\p  Av
@@ -17041,7 +17041,7 @@
 0x1F01059: Toi, là !\pDresseur !\pAttends !
 0x1F01074: C'est un Super Cube dans ta poche ?\n…\pOui !\pTu es la personne que je cherchais !\pViens avec moi.\n\p
 0x1F010E6: La Ligue Pokémon diffuse un\nreportage sur l'histoire de Borrius.\pVeux-tu regarder ?\n(Comme la cinématique d'ouverture)
-0x1F0115C: Jax,\n\nJ'ai emmené ton grand-père dans les\n{COLOR}Éprofondeurs{COLOR}Á des {COLOR}ÉRuines du\nNéant{COLOR}Á.\n\nViens seul si tu veux le revoir.\n\n-A
+0x1F0115C: Jax,\n\nJ'ai emmené ton grand-père dans les\n{COLOR}Éprofondeurs{COLOR}Á des {COLOR}ÉRuines du\n\nNéant{COLOR}Á.\nViens seul si tu veux le revoir.\n\n-A
 0x1F011E5: {PLAYER}, quelle splendide tenue tu\nportes !\pElle me rappelle celle que je portais\nquand j'étais Champion !\pAh, les souvenirs…
 0x1F01267: Bonjour, Dresseur.\pAttends…\pSerait-ce…\pTu es le {STR_VAR_2} du légendaire\n{COLOR}ÉAros{COLOR}Ë ?
 0x1F012BD: Tu es son {STR_VAR_2} !\pJe savais que ma vue ne me trompait\npas !\pTon père était incroyable.\nSi tu te présentes comme son\p{STR_VAR_2}, les gens t'apprécieront.\nPeu de gens ignorent ses exploits.\lC'est triste qu'il ait disparu.\lSi quelqu'un savait ce qui lui est\parrivé, je serais en paix.\n\p\p\n\l
@@ -17511,7 +17511,7 @@
 0x1F0C237: {PLAYER}! Vous devriez vous reposer\nrapidement.
 0x1F0C259: Joyeux anniversaire, {PLAYER}! Tu\ndevrais te reposer un peu.
 0x1F0C28B: Ah, bien ! Vous et votre Pokémon\nêtes superbes.\pFaites attention maintenant !
-0x1F0C2CC: {PLAYER},\n\nJ'ai emmené ta mère dans les\n{COLOR}Éprofondeurs{COLOR}Á des {COLOR}ÉRuines du\nNéant{COLOR}Á.\n\nViens seul si tu veux la revoir.\n\n-A
+0x1F0C2CC: {PLAYER},\n\nJ'ai emmené ta mère dans les\n{COLOR}Éprofondeurs{COLOR}Á des {COLOR}ÉRuines du\n\nNéant{COLOR}Á.\nViens seul si tu veux la revoir.\n\n-A
 0x1F0C34F: C'est un trophée prouvant que vous avez vaincu le ​​Battle Tower\nFrontier Brain dans\lune bataille simple standard !
 0x1F0C3AF: C'est un trophée prouvant que vous avez vaincu le ​​cerveau de la\nBattle Tower Frontier dans\lune double bataille standard !
 0x1F0C40F: C'est un trophée prouvant que vous avez vaincu le ​​Battle Tower\nFrontier Brain dans\lune Multi Battle standard !
@@ -17647,9 +17647,9 @@
 0x1F0EF49: Souhaitez-vous activer\n{COLOR}ÉNouveau jeu +{COLOR}Á ?
 0x1F0EF76: Le New Game + a été activé.\pVérifie la Boîte « {COLOR}É{STR_VAR_1}{COLOR}Á » pour\nles Pokémon transférés.\p{COLOR}ÊN'OUBLIE PAS DE SAUVEGARDER TA\nPARTIE AVANT D'ÉCRASER TA SAUVEGARDE !
 0x1F0F004: New Game + est une fonctionnalité spéciale qui vous permet de démarrer une nouvelle partie avec des bonus spéciaux : 1) Une équipe de 6 Pokémon maximum peut être transférée dans le nouveau jeu. Ces 6 Pokémon sont créés à partir de le groupe dans la sauvegarde précédente. Les Pokémon seront dévolus à leurs espèces de base et oublieront tous les mouvements sauf les mouvements d'œufs.\nLes objets détenus seront conservés\là l'exception des Z-Crystals.\pDe plus, les statistiques telles que\nles EV et IV seront conservées.\p2) Si l'un des éléments suivants a\nété obtenu lors de la précédente\psave, ils seront transférés vers\nle nouveau jeu :\lScanner de statistiques, moto,\pDexNav, Dowsing Machine, Baby\nMonitor, ADM,\pTrainer Catalogue, Shiny Charm,\nOval Charm, Catching Charm, Magma\pStone, Frontier Card, Porta-PC,\nTime Turner, tout objet débloqué\lmises à niveau et tout BP gagné.\l3) La difficulté du jeu peut être\paugmentée ou diminuée à tout moment\nsans pénalité.\l4) Certaines énigmes de l'histoire\lprincipale résolues lors de la\lsauvegarde précédente\lresteront résolues dans le nouveau\ljeu.\p5) Si la carte Frontière est\ntransportés , alors la Battle\lFrontier\psera accessible immédiatement après\narrivée à Seaport City.\l6) Des PNJ supplémentaires pour\pmodifier IV, EV et natures seront\ndisponibles à Crater Town jusqu'à ce\lque\lle jeu soit terminé (quand vous ne\pjouez pas en mode Sandbox).\nNotez que certains peuvent facturer\lBP pour leurs services, alors\lassurez-vous de\lgagner suffisamment avant de\pcommencer le\nnouveau jeu.\l7) Certains Pokémon légendaires\lprécédemment verrouillés pour\pl'après-jeu\nseront désormais disponibles avant\lla fin du\ljeu.
-0x1F0F5A6: Bienvenue dans Pokémon Unbound !\nAvant de commencer à jouer, veuillez\nsavoir qu'il s'agit d'un jeu de fans\nà but non lucratif. Si vous avez\npayé pour ce jeu, récupérez votre\nargent immédiatement !\n\n
-0x1F0F64D: Dans le monde dans lequel vous êtes sur le point d'entrer, vous vous\nlancerez dans une grande aventure\navec vous en tant que héros. Le\nmonde est un grand endroit. Prenez\nvotre temps pour explorer. Il n'y a\npas d'urgence.
-0x1F0F6FA: Parlez aux gens et vérifiez partout\noù que vous alliez, que ce soit dans\nles villes, routes ou grottes. Le\nmonde et ses habitants sont vivants.\nÀ mesure que vous grandissez, ils\ngrandiront avec avec vous.\n
+0x1F0F5A6: Bienvenue dans Pokémon Unbound !\n\nAvant de commencer à jouer, veuillez savoir qu'il s'agit d'un jeu de fans\nà but non lucratif. Si vous avez\npayé pour ce jeu, récupérez votre\n\nargent immédiatement !\n
+0x1F0F64D: Dans le monde dans lequel vous êtes sur le point d'entrer, vous vous\nlancerez dans une grande aventure\navec vous en tant que héros.\n\nLe monde est un grand endroit. Prenez votre temps pour explorer. Il n'y a\npas d'urgence.
+0x1F0F6FA: Parlez aux gens et vérifiez partout\noù que vous alliez, que ce soit dans\nles villes, routes ou grottes.\n\nLe monde et ses habitants sont vivants. À mesure que vous grandissez, ils\ngrandiront avec avec vous.\n
 0x1F0F79C: Dans cet esprit, vous êtes presque\nprêt à entrer dans la région de\nBorrius ! Mais d’abord…
 0x1F0F7EC: Choisissez un personnage.
 0x1F0F800: Choisissez un teint.
@@ -17713,7 +17713,7 @@
 0x1F10F55: Comme vous l'avez déjà fait, voudriez-vous sauter les\ncinématiques d'ouverture ?
 0x1F10F9C: Les cinématiques d'ouverture seront\nignorées.\pSi vous souhaitez ignorer toutes les\ncinématiques, veuillez activer cette\ldans le menu Options.
 0x1F11016: Il y a longtemps…
-0x1F11020: La région de Borrius a été engloutie\npar une grande guerre avec un pays\nétranger. Ce fut une guerre brutale,\nqui a duré de nombreuses années.\nPendant ce temps, l'ennemi a réussi\nà prendre le dessus…\n\n
+0x1F11020: La région de Borrius a été engloutie\npar une grande guerre avec un pays\n\nétranger. Ce fut une guerre brutale, qui a duré de nombreuses années.\nPendant ce temps, l'ennemi a réussi\n\nà prendre le dessus…\n
 0x1F110D5: Au bord de la défaite, le roi Borrian a invoqué une force obscure pour l'aider\nà renverser le cours de la\lbataille...
 0x1F11136: L’avantage de l’armée étrangère a été perdu presque instantanément. Dès son entrée sur le champ de\nbataille, la force obscure a utilisé\pson pouvoir pour\ncréer des portails et transporter\ll’armée d’invasion\lchez elle…
 0x1F111F0: L'armée étrangère étant partie, la guerre semblait terminée pour Borrius.\nCependant, leur roi, vaincu par sa\psoif de pouvoir, envoya également\nl'armée Borrian\là travers les portails…

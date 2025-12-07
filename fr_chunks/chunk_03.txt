@@ -160,7 +160,7 @@
 0x1C59F7: es-tu une fille ?
 0x1C5A04: Dans le monde où tu vas entrer,\ntu vivras une grande aventure dont\ntu es le héros.
 0x1C5A6B: Parle aux gens et examine tout,\nque ce soit en ville, sur les\nroutes ou dans les grottes.\nCollecte infos et indices partout.
-0x1C5AEB: Pendant ton aventure, tu prendras\nbeaucoup de décisions.\n\nSouviens-toi, tes actes peuvent\ninfluer et changer le monde\nautour de toi.\n
+0x1C5AEB: Pendant ton aventure, tu prendras\nbeaucoup de décisions.\n\n\nSouviens-toi, tes actes peuvent influer et changer le monde\nautour de toi.\n
 0x1EAF1A: FgFüF
 0x1EAF3A: FüFgF
 0x1EB09A: FíFgF
@@ -174,14 +174,14 @@
 0x1EB3C6: FgFüF
 0x1EB3E6: FüFgF
 0x1EB5AC: %a!v%a!v
-0x1F3C88: E{STRING}E{STRING}%a!u                E{STRING}E\n
+0x1F3C88: E{STRING}E{STRING}%a!\n u                E{STRING}E
 0x1F47AC: gカgニヒニíカ·8E{STRING}カü                ニüニgカg9w                          FüFfFgFgFgFgFg                FgFgFgFgFrF\lF
 0x1F6CC7: bEaía%aヒa                ·aEb
-0x1F7208: E{STRING}E{STRING}%a!u                E{STRING}E\n
-0x1FFE88: E{STRING}E{STRING}%a!u                E{STRING}E\n
+0x1F7208: E{STRING}E{STRING}%a!\n u                E{STRING}E
+0x1FFE88: E{STRING}E{STRING}%a!\n u                E{STRING}E
 0x2009AC: gカgニヒニíカ·8E{STRING}カü                ニüニgカg9w                          FüFfFgFgFgFgFg                FgFgFgFgFrF\lF
 0x202EC7: bEaía%aヒa                ·aEb
-0x203408: E{STRING}E{STRING}%a!u                E{STRING}E\n
+0x203408: E{STRING}E{STRING}%a!\n u                E{STRING}E
 0x207D86: ggbgノeDカ
 0x208B85: bEuE\n
 0x209408: … … : :        egbヒf·w
@@ -191,10 +191,10 @@
 0x209DEB: g%a5f                ♀vf
 0x209F82: íöパfggggヒu·{STRING}E{UNKNOWN_STR}F F F F F F F F    
 0x20A062: FüFüF\l                        E\nE{STRING}E{STRING}E\n         F F F F        
-0x2101A0: E{STRING}E{STRING}%a!u                E{STRING}E\n
+0x2101A0: E{STRING}E{STRING}%a!\n u                E{STRING}E
 0x210CC4: gカgニヒニíカ·8E{STRING}カü                ニüニgカg9w                          FüFfFgFgFgFgFg                FgFgFgFgFrF\lF
 0x2131DF: bEaía%aヒa                ·aEb
-0x213720: E{STRING}E{STRING}%a!u                E{STRING}E\n
+0x213720: E{STRING}E{STRING}%a!\n u                E{STRING}E
 0x21809C: ggggオe9カ
 0x218440: %{STRING}!\nカa8v F F F F F F F ィ
 0x219759: gagハa·v         タ {SUPER_RE} … :        
@@ -204,10 +204,10 @@
 0x21A05A: B{STRING}BaBuB{STRING}B{STRING}B{STRING}B{UNKNOWN_STR}               
 0x21A0E1: g%e5büv                
 0x21A101: g%e5büf                {STRING}
-0x2204B8: E{STRING}E{STRING}%a!u                E{STRING}E\n
+0x2204B8: E{STRING}E{STRING}%a!\n u                E{STRING}E
 0x220FDC:                       gカgニヒニíカ·8E{STRING}カü                ニüニgカg9w                          FüFfFgFgFgFgFg                FgFgFgFgFrF\lF
 0x2234F7: bEaía%aヒa                ·aEb
-0x223A38: E{STRING}E{STRING}%a!u                E{STRING}E\n
+0x223A38: E{STRING}E{STRING}%a!\n u                E{STRING}E
 0x229B7A: カa9uE{UNKNOWN_STR}F F F F F F F F
 0x22A694: FbFv                        ·\ní{STRING}í{STRING}·\n         F F F F        ífíg·qE\l         : : : :        
 0x236632: Ces lunettes protègent le\nporteur des dégâts météo\net des poudres.
