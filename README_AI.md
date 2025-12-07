@@ -1,19 +1,19 @@
-# Guide de traduction assistée
+# Assisted translation guide (for contributors/automation)
 
-- English quickstart
+- Quickstart
   - `make extract` — dump original text, split into 250-line chunks, copy into `fr_chunks/` if empty.
   - `make build-fr` — combine `fr_chunks/*` into `combined_fr.txt` then inject into `totranslate_fr.gba` using free-space relocation (falls back to append).
-  - Use `.venv/bin/python3` if present; otherwise `python3` system is used.
-  - Sensitive offsets are kept in-place (low ROM areas), long strings are relocated to free space starting after `0x220000`.
-  - Keep gibberish and binary lines unchanged; consult `fr_chunks/doutes.txt` before editing.
+  - Use `.venv/bin/python3` if present; otherwise use system `python3`.
+  - Sensitive offsets stay in place (low ROM areas); long strings are relocated to free space starting after `0x220000`.
+  - Keep gibberish/binary lines untouched; check `fr_chunks/doutes.txt` before editing.
 
-- Ne jamais modifier les offsets ni l’ordre des lignes dans `fr_chunks/*`.
-- Conserver les contrôles (`\n`, `\p`, `\l`, `{...}`) et limiter chaque segment affiché à 36 caractères max.
-- Ne pas supprimer les espaces blancs sauf si la longueur reste identique.
-- Remplacer **move** par **capacité** ; MT = **CT** ; Gym = **Arène** ; Gym Leader = **Champion d’Arène**.
-- Traduire les villes et les noms de Pokémon en français officiel quand ils existent.
-- Traduire les noms d’attaques avec leur appellation officielle des jeux Pokémon (ex: Thunderbolt → Tonnerre).
-- Laisser inchangées les chaînes illisibles/binaire et les lignes déjà en place.
-- Garder `\p` et `\l` aux mêmes emplacements autant que possible.
-- Avant chaque session, consulter/mettre à jour `fr_chunks/doutes.txt` pour les traductions incertaines.
-- Chaque fichier de chunk doit contenir exactement 250 lignes (ni plus ni moins). Sauf s'il s'agit du dernier de la liste.
+- Never change offsets or line order in `fr_chunks/*`.
+- Preserve control codes (`\n`, `\p`, `\l`, `{...}`) and wrap at 36 characters max per displayed segment.
+- Do not trim whitespace unless the resulting length is identical.
+- Terminology: “move” → “capacité”, TM → “CT”, Gym → “Arène”, Gym Leader → “Champion d’Arène”.
+- Translate city and Pokémon names to their official French forms.
+- Translate move names to the official French in-game names (e.g., Thunderbolt → Tonnerre).
+- Leave unreadable/binary strings and already-correct lines unchanged.
+- Keep `\p` and `\l` at the same positions when possible.
+- Before working, review/update `fr_chunks/doutes.txt` for any unresolved doubts.
+- Each chunk file must contain exactly 250 lines (except the very last chunk if shorter).

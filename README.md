@@ -1,57 +1,57 @@
-# Unbound – Traduction ROM GBA (guide)
+# Unbound – GBA ROM translation guide
 
-## Prérequis rapides (débutant)
+## Quick prerequisites
 
-- Installer Python 3 et créer un venv (déjà présent ici en `.venv`).
-- Activer le venv si besoin : `source .venv/bin/activate` (macOS/Linux).
-- Avoir le ROM source `totranslate.gba` dans ce dossier.
-- Les tables de caractères sont déjà fournies (`charmap_firered.txt`).
-- Les scripts sont dans `scripts/`.
+- Install Python 3 and create a venv (already provided in `.venv`).
+- Activate the venv if needed: `source .venv/bin/activate` (macOS/Linux).
+- Place the source ROM `totranslate.gba` in this folder.
+- Charmap files are provided (`charmap_firered.txt`).
+- Scripts live in `scripts/`.
 
-## Scripts disponibles (ceux à connaître)
+## Key scripts
 
-- `extract_text.py` : extrait les textes du ROM GBA en utilisant une charmap.  
-  Entrée par défaut : `totranslate.gba`, charmap `charmap_firered.txt`, sortie `extracted_text.txt`.
+- `extract_text.py`: extracts text from the GBA ROM using the charmap.  
+  Defaults: input `totranslate.gba`, charmap `charmap_firered.txt`, output `extracted_text.txt`.
 
-- `inject_translations.py` : réinjecte un fichier de texte (format `offset: texte`) dans le ROM.  
-  Gère le relogement des textes trop longs en zones libres, met à jour les pointeurs. Options :
-  - `--text <fichier>` : fichier de traduction (ex. `extracted_text_fr.txt` ou `partial_translated_fr.txt`).
-  - `--out <rom>` : ROM de sortie (ex. `totranslate_fr.gba`).
-  - `--use-holes` + `--free-map rom_usage.txt` : utilise uniquement les blocs libres (0xFF) listés par `dump_rom_usage.py`.
-  - `--no-reuse-old-space` : ne réutilise pas les anciens emplacements (par défaut, ils sont réutilisés).
+- `inject_translations.py`: reinjects a text file (`offset: text`) into the ROM.  
+  Handles relocation of long strings into free space and updates pointers. Options:
+  - `--text <file>`: translation file (e.g., `extracted_text_fr.txt` or `partial_translated_fr.txt`).
+  - `--out <rom>`: output ROM (e.g., `totranslate_fr.gba`).
+  - `--use-holes` + `--free-map rom_usage.txt`: use only free 0xFF blocks listed by `dump_rom_usage.py`.
+  - `--no-reuse-old-space`: skip reusing freed locations (by default they are reused).
 
-- `dump_rom_usage.py` : cartographie les zones libres/occupées du ROM (runs de 0xFF) et produit `rom_usage.txt`.
+- `dump_rom_usage.py`: maps free/used areas in the ROM (runs of 0xFF) and writes `rom_usage.txt`.
 
-## Dépendances
+## Dependencies
 
-Environnement Python (3.x) avec les libs standard. Les scripts ci-dessus n’ont pas de dépendances externes.
+Python 3.x standard libs are enough for the scripts above.
 
-Pour la traduction automatique (non utilisée dans les étapes ci‑dessus) :  
-`translate_chunks_batch.py` utilise `deep_translator` et `requests` (et télécharge des noms de Pokémon depuis le repo veekun).
+For automated translation (not required in the main flow):  
+`translate_chunks_batch.py` uses `deep_translator` and `requests` (and downloads Pokémon names from the veekun repo).
 
-## Commandes utiles
+## Useful commands
 
-1) Extraction du texte du ROM (pour éditer/traduire) :
+1) Extract ROM text (to edit/translate):
 ```
 .venv/bin/python3 scripts/extract_text.py --rom totranslate.gba --charmap charmap_firered.txt --out extracted_text.txt
 ```
 
-2) Cartographier les zones libres (à faire une fois) :
+2) Map free space (run once):
 ```
 .venv/bin/python3 scripts/dump_rom_usage.py --rom totranslate.gba --out rom_usage.txt
 ```
 
-3) Préparer un fichier de traduction :
-   - Copier `extracted_text.txt` en `extracted_text_fr.txt`.
-   - Traduire la partie droite de chaque ligne (après `: `) en gardant les marqueurs (`\n`, `\p`, `\l`, `{STR_VAR_x}`, `{COLOR}`, etc.).
-   - Si certaines lignes doivent rester en anglais, conserver la ligne originale.
+3) Prepare a translation file:
+   - Copy `extracted_text.txt` to `extracted_text_fr.txt`.
+   - Translate the right side of each line (after `: `) while keeping markers (`\n`, `\p`, `\l`, `{STR_VAR_x}`, `{COLOR}`, etc.).
+   - Keep any lines that must stay in English as-is.
 
-### Variante simple avec `make`
+### Simple `make` flow
 
-- `make extract` : extrait les textes, les découpe en chunks de 250 lignes dans `origin_chuncks/`, copie ces chunks dans `fr_chunks/` si ce dossier est vide, et génère `rom_usage.txt`.
-- `make build-fr` : recolle les chunks de `fr_chunks/` dans `combined_fr.txt` puis injecte le résultat dans `totranslate_fr.gba` en utilisant les zones libres décrites dans `rom_usage.txt`.
+- `make extract`: extract text, split into 250-line chunks under `origin_chuncks/`, copy to `fr_chunks/` if empty, and generate `rom_usage.txt`.
+- `make build-fr`: stitch chunks from `fr_chunks/` into `combined_fr.txt`, then inject into `totranslate_fr.gba` using free space from `rom_usage.txt`.
 
-4) Injection (ex. version partielle stable) :
+4) Injection example (partial/stable):
 ```
 .venv/bin/python3 scripts/inject_translations.py \
   --text partial_translated_fr.txt \
