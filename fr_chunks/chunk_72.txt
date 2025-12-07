@@ -2,7 +2,7 @@
 0x1F10323: La difficulté du jeu a été réglée à\n{COLOR}É{STR_VAR_1}{COLOR}Á.\pN'hésitez pas à basculer entre\nVanilla et Difficile à tout moment\nen utilisant\lle ​​menu Options.
 0x1F103AA: La difficulté du jeu a été réglée à\n{COLOR}É{STR_VAR_1}{COLOR}Á.\pDepuis que New Game + est activé,\ncette peut être modifiée librement à\ntout moment\là l'aide du menu\n{COLOR}ÉOptions{COLOR}Á.
 0x1F1043F: De plus, notez qu'il existe un\nplafond de niveau hard activé par\ndéfaut,\lmais il peut facilement être\ndésactivé à partir de\ldu menu Options à tout moment.
-0x1F104C4: Souhaitez-vous activer un plafond de\nniveau difficile facultatif ?\pUne fois certains niveaux atteints,\ncela empêchera votre Pokémon\lde gagner plus d'Exp. jusqu'à ce que\nla prochaine étape soit franchie.
+0x1F104C4: Souhaitez-vous activer un plafond de\nniveau difficile facultatif ?\pUne fois certains niveaux atteints,\ncela empêchera votre Pokémon\lde gagner plus d'Exp. jusqu'à ce que\lla prochaine étape soit franchie.
 0x1F1057C: Un plafond de niveau dur en option a\nété activé.\pIl peut facilement être désactivé en\nmodifiant le {COLOR}ÉExp. Gagnez\nl'option {COLOR}Á dans\lle ​​menu Options à partir de\n{COLOR}ÉCapped Share{COLOR}Á.
 0x1F10619: Défaut
 0x1F10621: Difficile
@@ -51,12 +51,12 @@
 0x1F116F2: En utilisant le pouvoir des trois\noiseaux, une prison a été créée pour\nla force obscure\l, scellant ainsi son pouvoir.
 0x1F11752: Il est devenu l’ombre de lui-même.
 0x1F11779: Dépouillé de son pouvoir, il fut\nrepris par le roi, et supervisé par\lsa progéniture, jusqu'au jour\nfatidique…
-0x1F117E3: Dépouillé de son pouvoir, il fut\nrepris par le roi et surveillé par\nsa progéniture jusqu'à ce jour.
+0x1F117E3: Dépouillé de son pouvoir, il fut\nrepris par le roi et surveillé par\lsa progéniture jusqu'à ce jour.
 0x1F1184B: Il y a 16 ans
 0x1F11864: 15 ans plus tard
 0x1F11888: Hoopa…\pJe m'inquiète, vieil ami, pour\nl'avenir - pour si, non…{PAUSE}ね\nquand ELLE arrivera.
 0x1F118D6: Je ne pourrai pas te protéger si\nelle essaie quelque chose.\pNon…{PAUSE}ね elle essaiera quelque\nchose.\pC'est une question de ce que ce\nsera.
-0x1F1194E: C'est pourquoi, mon ami, tu dois\naller te cacher.\pJ'enverrai ta Poké Ball à la dérive,\nau milieu des vagues…\pTu seras sûrement plus en sécurité\nperdu en mer, que si tu restais avec\nmoi.\pSi je me trompe et que rien ne se\npasse, Je te rappellerai.\pMais si c'est notre dernière fois\nensemble…\pProtégez mon {STR_VAR_3} si\n{STR_VAR_2} est jamais en danger.\pEt à son tour, si le mauvais type\nessaye de forcer votre véritable\npouvoir à se libérer…\pAlors faites confiance à {STR_VAR_1}\npour vous protéger.\pAdieu, mon bon ami.
+0x1F1194E: C'est pourquoi, mon ami, tu dois\naller te cacher.\pJ'enverrai ta Poké Ball à la dérive,\nau milieu des vagues…\pTu seras sûrement plus en sécurité\nperdu en mer, que si tu restais avec\nmoi.\pSi je me trompe et que rien ne se\npasse, Je te rappellerai.\pMais si c'est notre dernière fois\nensemble…\pProtégez mon enfant s'il est jamais en danger.\pEt à son tour, si le mauvais type\nessaye de forcer ton véritable\npouvoir à se libérer…\pAlors fais lui confiance \npour vous protéger.\pAdieu, mon bon ami.
 0x1F11B03: C'est parti…
 0x1F11B0E: Donc, tu es venu après tout.\pFinissons-en.
 0x1F11B40: ARGH!\pComment puis-je réaliser le souhait\nde grand-père si je ne parviens pas\nà attraper un seul Pokémon ?
@@ -109,7 +109,7 @@
 0x1F129BC: S'il y a des fossiles cachés dans le\n​​désert, ils doivent avoir été\lsous l'eau il y a longtemps.
 0x1F12A15: En portant ces Go-Goggles, je me\nsens comme un super-héros.\pÀ l'heure actuelle, personne ne peut\nme battre !
 0x1F12A6D: Je ne peux pas gagner uniquement\ngrâce à l’esprit…
-0x1F12A8A: Je vais être un vrai héros un jour.\pJe vais travailler plus dur pour me\nrendre et rendre mes Pokémon plus\nforts.
+0x1F12A8A: Je vais être un vrai héros un jour.\nJe vais travailler plus dur pour me\prendre et rendre mes Pokémon plus\nforts.
 0x1F12AEC: Les garçons et moi allons bientôt\navoir un concert !\pÇa va être rock !
 0x1F12B31: Je ne peux pas jouer dans une\ntempête de sable !
 0x1F12B51: Je suis venu jouer de la musique\ndans le désert, mais du sable\ns'infiltre dans ma guitare.
@@ -184,7 +184,7 @@
 0x1F13FC2: Bon retour !\pJ'ai réussi à faire revivre votre\nfossile en un {STR_VAR_1} sain !
 0x1F14009: Avez-vous d'autres fossiles que vous\nsouhaiteriez que je fasse revivre en\nPokémon ?
 0x1F1404F: Au moins, j'ai pu étudier un fossile\nplus tôt !\pLa Société scientifique sera ravie\nde mes recherches…
-0x1F140AF: Il y a quelque chose que cet amateur\nveut mettre la main\lsur, même si cela signifie dépenser\nbeaucoup d'argent.\pAvez-vous un objet si rare ?\nL'êtes-vous ?
+0x1F140AF: Il y a quelque chose que cet amateur\nveut mettre la main\lsur, même si cela signifie dépenser\lbeaucoup d'argent.\pAvez-vous un objet si rare ?\nL'êtes-vous ?
 0x1F14141: Ce {COLOR}É{STR_VAR_3}{COLOR}Ë !\nVoulez-vous me le vendre pour\n¥{COLOR}É{STR_VAR_2}{COLOR}Ë ?\nVeux-tu?
 0x1F14180: J’ai reçu un très bon article ! Vous\nne trouvez pas que c’est génial ?\lN’est-ce pas ?
 0x1F141BF: C'est légèrement différent. Vous ne\nle pensez pas aussi ? N'est-ce pas ?
@@ -231,7 +231,7 @@
 0x1F14C9A: Tch…\pTu es un menteur ! Tu n'as pas pêché\n3 fois ! Je sais!
 0x1F14CD2: Chasseur de trésor
 0x1F14CE2: Retournez au tombeau de Borrius et\ntrouvez tous les objets cachés !
-0x1F14D23: Pendant que vous erriez à travers le\ndésert, vous est-il arrivé\lde tomber par hasard sur l'entrée du\lTombeau de Borrius ?\pPar ici, on sait que les anciens\nhabitants de Borrius ont caché\nbeaucoup de trésors dans le tombeau.
+0x1F14D23: Pendant que vous erriez à travers le\ndésert, vous est-il arrivé\lde tomber par hasard sur l'entrée du\lTombeau de Borrius ?\pPar ici, on sait que les anciens\nhabitants de Borrius ont caché\lbeaucoup de trésors dans le tombeau.
 0x1F14DFC: C'est vous !\pLe Dresseur qui a trouvé la chambre\nfunéraire dans le Tombeau de Borrius\n!\pVous faites parler de vous !\pAlors s'il vous plaît, vous devez\naccepter ma demande !
 0x1F14E8B: Vous ne savez même pas ce que c'est\net vous avez déjà accepté ?\pVous êtes si audacieux !\pPas étonnant que vous ayez réussi à\ntraverser la tombe de Borrius !\pEh bien, voici ma demande.\pJe suis sûr que vous avez remarqué\nqu'il n'y avait pas beaucoup de\ntrésors qui traînaient\ldans la tombe.\pOn sait par ici que les anciens\nhabitants de Borrius utilisaient\lspécial des matériaux pour camoufler\lleur trésor.\pDonc, je veux que vous retourniez au\ntombeau et que vous trouviez tous\nles objets que les\lanciens ont cachés.\pPensez-vous que vous puissiez le\nfaire ?
 0x1F1505C: Tu es tellement cool !\pJe ne peux pas sentir combien de\ntrésors est encore caché dans la\ntombe, mais je serai\lpourrai sentir quand tu auras\ltout trouvé.

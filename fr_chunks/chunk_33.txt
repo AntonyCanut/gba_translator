@@ -1,11 +1,11 @@
 0x8CDD6C: Journal : {COLOR}ËHmm…\pTu as peut-être raison.\pSi {STR_VAR_2} gagne en expérience, je\npourrai envoyer {STR_VAR_1} sur des\ncorvées plus complexes…
 0x8CDDD0: Bon, {PLAYER}, tu devrais suivre\nJax.\pJe dirai à ta mère que tu seras\nparti un moment.\pJe suis sûr qu'elle comprendra.
 0x8CDE49: Rends-toi au {COLOR}ÉVolcan Cendreux{COLOR}Ë et\nregarde Jax sauver {COLOR}ÉSulfura{COLOR}Ë.\pTu pourrais gagner une expérience\nprécieuse comme ça.
-0x8CDEBB: On manque de temps, {PLAYER}.\pTu dois filer au {COLOR}ÉMont\nThundercap{COLOR}Ë pour sauver\n{COLOR}ÉÉlecthor{COLOR}Ë !\pS'il est capturé lui aussi, nous\nsommes fichus…
-0x8CDF4B: Avec les trois Pokémon légendaires\nen main, les Ombres ne sont plus\nqu'à quelques instants de libérer\nla force obscure.\pJax est à la {COLOR}ÉVille de Dehara{COLOR}Ë,\nprêt à t'emmener aux {COLOR}ÉRuins of Void{COLOR}Ë\net à empêcher les Ombres de\nmener leur plan à bien.
+0x8CDEBB: On manque de temps, {PLAYER}.\nTu dois filer au {COLOR}ÉMont\pThundercap{COLOR}Ë pour sauver\n{COLOR}ÉÉlecthor{COLOR}Ë !\pS'il est capturé lui aussi, nous\nsommes fichus…
+0x8CDF4B: Avec les trois Pokémon légendaires\nen main, les Ombres ne sont plus\lqu'à quelques instants de libérer\lla force obscure.\pJax est à la {COLOR}ÉVille de Dehara{COLOR}Ë,\nprêt à t'emmener aux {COLOR}ÉRuins of Void{COLOR}Ë\let à empêcher les Ombres de\lmener leur plan à bien.
 0x8CE03C: Alors, la force obscure a été\nlibérée…\pSi on ne l'arrête pas, elle peut\ndétruire toute la région !\pTu dois retrouver Jax et la sceller\nune fois de plus !
 0x8CE0C8: Tu l'as fait !\pTu as vaincu la Lumière de Ruine et\nnous as sauvés !\pTu es un véritable Gardien de\nBorrius !\pTon père serait fier.
-0x8CE141: Maintenant que tout est paisible\nà nouveau, pourquoi ne pas défier\nla {COLOR}ÉLigue Pokémon{COLOR}Ë ?\pAvec ton niveau, tu pourrais\nfacilement devenir le Maître.
+0x8CE141: Maintenant que tout est paisible\nà nouveau, pourquoi ne pas défier\lla {COLOR}ÉLigue Pokémon{COLOR}Ë ?\pAvec ton niveau, tu pourrais\nfacilement devenir le Maître.
 0x8CE1DF: Comment se passent tes voyages,\n{PLAYER} ?
 0x8CE1FC: dame
 0x8CE9A7: À Ê ûィ ÁàÁィÇ à ィ ÀàÀィ  ÔÀギでゴËÔÁギでゴËÂBienvenue dans Pokémon Unbound!\n\nAvant de commencer, sache que ce\njeu est un fangame à but non\nlucratif.\n\nSi tu as payé ce jeu, récupère ton\nargent immédiatement !
@@ -17,7 +17,7 @@
 0x8CEB24: Et enfin, quel est ton nom ?
 0x8CEB4C: Tu t'appelles {PLAYER} ?
 0x8CEB5D: De nos jours
-0x8CF025: Bien sûr que si !\nQui dirait non ?\pMais…\pAu cas où tu répondrais oui sans y\npenser, laisse-moi te faire une\nexplication officielle.
+0x8CF025: Bien sûr que si !\nQui dirait non ?\pMais…\pAu cas où tu répondrais oui sans y\npenser, laisse-moi te faire une\lexplication officielle.
 0x8CF09D: Je vois…\pDans ce cas, laisse-moi te donner\nune explication en bonne et due\nforme.
 0x8CF0E4: Une Mission est un objectif\nsupplémentaire obtenu en acceptant\nune demande d'aide.\pBeaucoup de gens ne peuvent\nrésoudre leurs problèmes et ont\nbesoin d'aide.\pQuand tu acceptes une Mission, les\ndétails sont enregistrés\nautomatiquement dans le Journal de\nQuête.\pLes Missions offrent souvent de\nbelles récompenses : objets, argent\nou même de nouvelles zones.\pSi quelqu'un te demande une\nMission, accepte aussitôt.\pMême si tu ne comptes pas la finir\nimmédiatement, cela ne coûte rien\nde l'inscrire dans ton Journal.\pCela dit, plusieurs personnes ici\nont besoin d'aide.\pRegarde autour de toi et vois si tu\nveux en aider quelqu'un !\pEt viens me voir quand tu auras\nterminé au moins {COLOR}É5{COLOR}Ë Missions.
 0x8CF3BD: Reviens me voir quand tu auras fini\nau moins {COLOR}É{STR_VAR_1}{COLOR}Ë Missions.
@@ -29,23 +29,23 @@
 0x8CF52B: Un Pokémon rare
 0x8CF53A: Une Latiosite et une Latiasite
 0x8CF554: Le Charme Chroma
-0x8D072F: {RIVAL}: {COLOR}ËMec, tu quittes seulement\nla Ville de Dehara maintenant ?\pT'es vraiment lent !\pPendant que tu traînais, j'ai\ntrouvé comment atteindre les\nRuins of Void.\pMais quand je suis arrivé, il était\ntrop tard pour faire quoi que ce\nsoit.\pQuelle que soit leur combine, les\nOmbres l'avaient déjà faite.\pIl y avait des traces de combat\net un drôle de tas de cendres au\nsol.\pPeut-être pour un rituel ?\p…\p…\pQuoi !?\pC'est dingue !\pTu es mort et revenu à la vie !?
-0x8D0906: {RIVAL}: {COLOR}ËQu'est-ce que…\nT'es censé être qui, toi ?
-0x8D0933: Looker: {COLOR}Ë…\p{PLAYER}, tu te demandes sûrement\npourquoi je ne t'ai pas suivi dans\nle portail avec Jax.\pQuand ce portail est apparu, j'ai\npris peur.\pAlors, contrairement à Jax, j'ai eu\nun réflexe de recul, ce qui m'a\nfait te perdre de vue.\pPour cela, je suis désolé.\pJe pensais que tu avais été envoyé\naux Ruins of Void.\pDu coup, j'ai essayé de m'y rendre\nmoi aussi.\pMais sans Pokémon à moi, je n'ai\npas pu l'atteindre.\pDis-moi, {PLAYER}, que s'est-il passé\npour vous deux de l'autre côté du\nportail ?\p…\p…\pJe vois…\pJe pense donc que le mieux est\nd'aller à {COLOR}ÉBourg Vivill{COLOR}Ë et d'aider les\nOmbres.\pQuand ils affronteront la Lumière\nde Ruine, ce sera l'occasion\nd'intervenir et de tous les\narrêter.\pVa aider les Ombres pour leur\nultime mission.\pUne fois que tu auras gagné, je te\nrejoindrai dehors avec une équipe\nde police pour en finir.
+0x8D072F: {RIVAL}: {COLOR}ËMec, tu quittes seulement\nla Ville de Dehara maintenant ?\pT'es vraiment lent !\pPendant que tu traînais, j'ai\ntrouvé comment atteindre les\lRuins of Void.\pMais quand je suis arrivé, il était\ntrop tard pour faire quoi que ce\psoit.\nQuelle que soit leur combine, les\pOmbres l'avaient déjà faite.\nIl y avait des traces de combat\let un drôle de tas de cendres au\psol.\nPeut-être pour un rituel ?\p…\p…\pQuoi !?\pC'est dingue !\pTu es mort et revenu à la vie !?
+0x8D0906: {RIVAL}: {COLOR}ËQu'est-ce que…\pT'es censé être qui, toi ?
+0x8D0933: Looker: {COLOR}Ë…\p{PLAYER}, tu te demandes sûrement\npourquoi je ne t'ai pas suivi dans\lle portail avec Jax.\pQuand ce portail est apparu, j'ai\npris peur.\pAlors, contrairement à Jax, j'ai eu\nun réflexe de recul, ce qui m'a\lfait te perdre de vue.\pPour cela, je suis désolé.\pJe pensais que tu avais été envoyé\naux Ruins of Void.\pDu coup, j'ai essayé de m'y rendre\nmoi aussi.\pMais sans Pokémon à moi, je n'ai\npas pu l'atteindre.\pDis-moi, {PLAYER}, que s'est-il passé\npour vous deux de l'autre côté du\lportail ?\p…\p…\pJe vois…\pJe pense donc que le mieux est\nd'aller à {COLOR}ÉBourg Vivill{COLOR}Ë et d'aider les\lOmbres.\pQuand ils affronteront la Lumière\nde Ruine, ce sera l'occasion\ld'intervenir et de tous les\larrêter.\pVa aider les Ombres pour leur\nultime mission.\pUne fois que tu auras gagné, je te\nrejoindrai dehors avec une équipe\lde police pour en finir.
 0x8D0CA6: {RIVAL}: {COLOR}ËHé !\nNe m'ignore pas !\pJe ne sais pas qui tu es ni ce qui\nse passe, mais si ça concerne les\nOmbres, je veux en être !
 0x8D0D33: Looker: {COLOR}ËEt qui es-tu,\njeune homme ?
-0x8D0D5F: {RIVAL}: {COLOR}ËJe suis furieux !\pJ'étais à deux doigts de rattraper\nles Ombres et de trouver mes\nparents, et ils m'ont encore filé\nentre les doigts !\pMaintenant j'entends qu'ils vont à\nBourg Vivill ?\pAlors j'y vais aussi ! Pour les\narrêter une bonne fois pour toutes !
+0x8D0D5F: {RIVAL}: {COLOR}ËJe suis furieux !\pJ'étais à deux doigts de rattraper\nles Ombres et de trouver mes\lparents, et ils m'ont encore filé\lentre les doigts !\pMaintenant j'entends qu'ils vont à\nBourg Vivill ?\pAlors j'y vais aussi ! Pour les\narrêter une bonne fois pour toutes !
 0x8D0E55: Looker: {COLOR}ËAttends, attends !\pPour l'instant, les Ombres sont nos\npions pour régler un problème\nencore plus grave !\pPatiente un peu pour ta vengeance\njusqu'à la fin de cette affaire,\nd'accord ?
 0x8D0F02: {RIVAL}: {COLOR}Ë…Très bien.\pMais dès que ce problème sera\nréglé, tu ne pourras pas m'empêcher\nde leur tomber dessus à tous !
-0x8D0F8A: {COLOR}ËComme c'est officiellement ta\n"mission", j'attendrai à\n{COLOR}ÉBourg Vivill{COLOR}Ë.\pEt pour toi, je ferai même semblant\nd'être "sympa" avec les Ombres\njusqu'à ce qu'on ait fini.\pNe sois pas en retard, {PLAYER}.
+0x8D0F8A: {COLOR}ËComme c'est officiellement ta\n"mission", j'attendrai à\l{COLOR}ÉBourg Vivill{COLOR}Ë.\pEt pour toi, je ferai même semblant\nd'être "sympa" avec les Ombres\ljusqu'à ce qu'on ait fini.\pNe sois pas en retard, {PLAYER}.
 0x8D1043: Looker: {COLOR}ËCe garçon… il en a sous la\nlangue…\pJe te souhaite bonne chance pour ta\nmission, {PLAYER}.\pLooker, terminé.
-0x8D160C: デ ユË¿  フÁóÀÑジËÔ ぱねジËÌÉÈ{JPN}ジËáÇィÀ ïÇィこ É LßジËèÀィÑ Ì È{JPN}ジËÔ gáジËÌÉÈ{JPN}ジËJe suis un éleveur d'Oiseaux\nérudit.\pJe ne prends part qu'aux meilleurs\ncombats aériens.\pJe refuse donc les combats où des\nPokémon au sol sont utilisés.\pAvec ça en tête, veux-tu une\n{COLOR}ÉSky Battle{COLOR}Ë ?
+0x8D160C: デ ユË¿  フÁóÀÑジËÔ ぱねジËÌÉÈ{JPN}ジËáÇィÀ ïÇィこ É LßジËèÀィÑ Ì È{JPN}ジËÔ gáジËÌÉÈ{JPN}ジËJe suis un éleveur d'Oiseaux\pérudit.\nJe ne prends part qu'aux meilleurs\pcombats aériens.\nJe refuse donc les combats où des\lPokémon au sol sont utilisés.\pAvec ça en tête, veux-tu une\n{COLOR}ÉSky Battle{COLOR}Ë ?
 0x8D1726: Aujourd'hui semble être mon jour de\nchance.\nCombattons !
 0x8D1757: Tu es vraiment un expert aérien.
 0x8D1777: Notre combat aérien a rempli mon\ncoeur de joie.\pPrends ces Ailes en signe de ma\nreconnaissance !
 0x8D17DB: Notre combat aérien m'a donné tant\nde joie !\pRefaisons ça demain.
 0x8D1826: Dommage.\nC'est bien malheureux.
-0x8D184B: Tu n'as aucun Pokémon que je sois\nprêt à affronter.\pSeuls les Pokémon de type {COLOR}ÉVol{COLOR}Ë ou\nayant le talent {COLOR}ÉLévitation{COLOR}Ë peuvent\nse battre contre les miens.
+0x8D184B: Tu n'as aucun Pokémon que je sois\nprêt à affronter.\pSeuls les Pokémon de type {COLOR}ÉVol{COLOR}Ë ou\nayant le talent {COLOR}ÉLévitation{COLOR}Ë peuvent\lse battre contre les miens.
 0x905690: {B_ATK_NAME_WITH_PREFIX} est revenu vers\n{B_PLAYER_NAME} !
 0x9056B4: La Défense de {B_ATK_NAME_WITH_PREFIX}\naugmente énormément !
 0x905770: {B_ATK_NAME_WITH_PREFIX} est revenu vers\n{B_TRAINER1_NAME} !
@@ -84,7 +84,7 @@
 0x9074D0: L'{B_DEF_ABILITY} de {B_DEF_NAME_WITH_PREFIX}\naugmente sa Vitesse !
 0x9075E0: L'{B_DEF_ABILITY} de {B_DEF_NAME_WITH_PREFIX}\nbaisse sa Défense !
 0x907600: L'{B_DEF_ABILITY} de {B_DEF_NAME_WITH_PREFIX}\naugmente beaucoup sa Vitesse !
-0x907730: Fouille de {B_SCR_ACTIVE_NAME_WITH_PREFIX}\ntrouve le {B_LAST_ITEM} de\n{B_DEF_NAME_WITH_PREFIX} !
+0x907730: Fouille de {B_SCR_ACTIVE_NAME_WITH_PREFIX}\ntrouve le {B_LAST_ITEM} de\l{B_DEF_NAME_WITH_PREFIX} !
 0x907860: Le talent de {B_ATK_NAME_WITH_PREFIX}\ndevient {B_DEF_ABILITY} !
 0x907BF0: Le talent {B_DEF_ABILITY} de\n{B_DEF_NAME_WITH_PREFIX} le fait se\nretirer !
 0x907C40: {B_ATK_NAME_WITH_PREFIX} s'assoupit !
@@ -145,7 +145,7 @@
 0x90E940: {B_ATK_NAME_WITH_PREFIX} s'est consumé lui-\nmême !
 0x90EA30: {B_ATK_NAME_WITH_PREFIX} a volé les boosts\nde stats de {B_DEF_NAME_WITH_PREFIX} !
 0x90EAA0: {B_DEF_NAME_WITH_PREFIX} reçoit le\n{B_LAST_ITEM} de {B_ATK_NAME_WITH_PREFIX} !
-0x90EF70: {B_ATK_NAME_WITH_PREFIX} transfère son\nproblème de statut à\n{B_DEF_NAME_WITH_PREFIX} !
+0x90EF70: {B_ATK_NAME_WITH_PREFIX} transfère son\nproblème de statut à\l{B_DEF_NAME_WITH_PREFIX} !
 0x90F3A0: {B_SCR_ACTIVE_NAME_WITH_PREFIX} est enveloppé\nd'une lueur lunaire mystique !
 0x90F530: {B_ATK_NAME_WITH_PREFIX} ne peut pas\nutiliser {B_CURRENT_MOVE} à cause de\nGravité !
 0x90F560: Gravité s'intensifie !
@@ -155,10 +155,10 @@
 0x90F640: {B_DEF_NAME_WITH_PREFIX} ne peut pas rester\nen l'air à cause de Gravité !
 0x90F670: Un déluge d'ions s'abat sur le\nterrain !
 0x90F8F0: {B_ATK_NAME_WITH_PREFIX} inverse son Attaque\net sa Défense !
-0x90F920: {B_ATK_NAME_WITH_PREFIX} échange tous ses\nboosts d'Attaque et d'Att. Spé.\navec {B_DEF_NAME_WITH_PREFIX} !
-0x90F960: {B_ATK_NAME_WITH_PREFIX} échange tous ses\nboosts de Défense et de Déf. Spé.\navec {B_DEF_NAME_WITH_PREFIX} !
+0x90F920: {B_ATK_NAME_WITH_PREFIX} échange tous ses\nboosts d'Attaque et d'Att. Spé.\lavec {B_DEF_NAME_WITH_PREFIX} !
+0x90F960: {B_ATK_NAME_WITH_PREFIX} échange tous ses\nboosts de Défense et de Déf. Spé.\lavec {B_DEF_NAME_WITH_PREFIX} !
 0x90F9A0: {B_ATK_NAME_WITH_PREFIX} échange sa Vitesse\navec {B_DEF_NAME_WITH_PREFIX} !
-0x90F9C0: {B_ATK_NAME_WITH_PREFIX} échange ses\nchangements de stats avec\n{B_DEF_NAME_WITH_PREFIX} !
+0x90F9C0: {B_ATK_NAME_WITH_PREFIX} échange ses\nchangements de stats avec\l{B_DEF_NAME_WITH_PREFIX} !
 0x90F9F0: {B_ATK_NAME_WITH_PREFIX} partage sa garde\navec la cible !
 0x90FA20: {B_ATK_NAME_WITH_PREFIX} partage sa puissance\navec la cible !
 0x90FC0B: Une mer de feu entoure votre équipe !

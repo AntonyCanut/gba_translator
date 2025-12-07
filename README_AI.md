@@ -9,6 +9,7 @@
 
 - Never change offsets or line order in `fr_chunks/*`.
 - Preserve control codes (`\n`, `\p`, `\l`, `{...}`) and wrap at 36 characters max per displayed segment.
+- Match the exact sequence of control codes from `origin_chuncks/*` for every line (if the source uses `\l`, keep `\l`, etc.).
 - Do not trim whitespace unless the resulting length is identical.
 - Terminology: “move” → “capacité”, TM → “CT”, Gym → “Arène”, Gym Leader → “Champion d’Arène”.
 - Translate city and Pokémon names to their official French forms.

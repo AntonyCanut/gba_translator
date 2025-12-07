@@ -20,7 +20,7 @@
 0x7C9EFB: {COLOR}ÇQuant à toi, {PLAYER}, je ne vais\npas encore te tuer.\pIl faut faire de toi un exemple pour\nceux assez fous pour croire qu'ils\npeuvent s'en prendre à l'Ombre.\pJe vais faire ce que Marlon et Zeph\nont échoué à faire.\pIl est temps de signer ta fin en\ncombat !
 0x7CA003: C'est décevant.
 0x7CA01A: {COLOR}Ç...\pJ'ai peut-être échoué aussi, mais\nce n'est pas fini !\pDémolosse !\pJe veux que les cendres de\n{STR_VAR_1} noircissent le sol !
-0x7CA08C: Ivory : {COLOR}ÇDémolosse !\nFais-le maintenant, avant que\n{STR_VAR_2} ne s'enfuie encore !
+0x7CA08C: Ivory : {COLOR}ÇDémolosse !\pFais-le maintenant, avant que\n{STR_VAR_2} ne s'enfuie encore !
 0x7CA0DB: En fait, ce type là-bas est mon seul\nami désormais...
 0x7CA167: Tu sais ce qui me frustre le plus ?\pLa police ne fera rien, car elle\nrefuse de me croire quand je dis\nqu'une organisation obscure existe !\pIls me traitent toujours comme un\ngosse malgré tout ce que j'ai\naccompli...\pArgh...
 0x7CA25D: Attends...\pJe me souviens maintenant...\pJe peux contacter quelqu'un pour\naider, finalement...
@@ -30,7 +30,7 @@
 0x7CDEC1: On dirait que la rareté ne rime pas\navec force exceptionnelle.
 0x7CDEF9: Mon rêve est de faire équipe un jour\navec un dresseur de type Combat.\pOn s'appellerait...\n« Cerveau & Biceps ».
 0x7CDFED: Encore plus amusant à grimper !
-0x7CE008: Quand je descends les falaises, je\ntrouve des choses très intéressantes\ndans les coquillages sur la plage !
+0x7CE008: Quand je descends les falaises, je\ntrouve des choses très intéressantes\ldans les coquillages sur la plage !
 0x7CE0FC: On doit courir moins et s'entraîner\nplus...
 0x7CE128: Ouf... Pff...\pJogging et combat, ça fatigue !
 0x7CE1D4: Ils se battent comme toi !
@@ -41,8 +41,8 @@
 0x7CE3D9: 9Merci encore pour ton aide\nprécédente !\pMa famille et moi avons eu un festin\nde deux jours grâce à toi.\pIl est temps de préparer le festin\nde l'an prochain !
 0x7CE471: Le Volcan Cendreux est dangereux.\pSans tes Pokémon pour te protéger,\ntu pourrais mourir.
 0x7CE4CC: Laisse tomber...\pTu en as assez.
-0x7CE4E9: Un jour, mes bébés utiliseront un\nRetour puissant et te mettront une\nraclée pour ce que tu leur as fait !
-0x7CE573: 9Eh bien, eh bien...\nTiens, {PLAYER} !\pLe boss m'a dit de ne pas te laisser\nentrer au Mont Thundercap, pour que\ntu ne gênes pas nos plans.\pMême si je te laissais entrer, tu\nserais grillé sans le pouvoir de la\nMéga-Évolution.\pAlors tu vois ?\pTu devrais rester dehors pour ton\nbien.
+0x7CE4E9: Un jour, mes bébés utiliseront un\nRetour puissant et te mettront une\lraclée pour ce que tu leur as fait !
+0x7CE573: 9Eh bien, eh bien...\nTiens, {PLAYER} !\pLe boss m'a dit de ne pas te laisser\nentrer au Mont Thundercap, pour que\ltu ne gênes pas nos plans.\pMême si je te laissais entrer, tu\nserais grillé sans le pouvoir de la\lMéga-Évolution.\pAlors tu vois ?\pTu devrais rester dehors pour ton\nbien.
 0x7CE683: Incroyable !\pTu as réussi à me vaincre sans le\npouvoir de la Méga-Évolution !\pAvec toutes les cartes contre toi,\ntu t'en es quand même sorti !\pFélicitations !
 0x7CE728: Comme convenu, pour m'avoir battue,\nprends ce Méga-Anneau.
 0x7CE767: {PLAYER} a reçu le Méga-Anneau du\nSuccesseur Maxima !
@@ -54,17 +54,17 @@
 0x7CEB3E: Qu'est-ce que tu racontes,\n{PLAYER} ?\pJe vois clairement ce Méga-Anneau à\nton doigt !\pTu ne saurais pas utiliser la Méga-\nÉvolution ?\pEh bien, il faut déjà savoir se\nbattre comme ça !
 0x7CEBF6: Voilà ce que j'attends d'un\nporteur de Méga-Évolution !
 0x7CEC2F: Beau travail, {PLAYER}.\pPour m'avoir battu encore une fois,\nje veux que tu prennes ça.
-0x7CEC72: Ce vieux Log m'a rattrapé il y a un\nmoment.\pIl m'a donné ça, en disant de te le\nremettre la prochaine fois qu'on se\nverrait.\pIl m'en a donné un aussi, mais il\nsait que je l'aurais démoli s'il ne\nl'avait pas fait...
+0x7CEC72: Ce vieux Log m'a rattrapé il y a un\nmoment.\pIl m'a donné ça, en disant de te le\nremettre la prochaine fois qu'on se\lverrait.\pIl m'en a donné un aussi, mais il\nsait que je l'aurais démoli s'il ne\ll'avait pas fait...
 0x7CED48: Alors, où vas-tu ensuite,\n{PLAYER} ?\p…\pLa Ville de Dehara, hein ?\nJ'y vais aussi.\pLog a mentionné un gars là-bas qui\nsait traverser l'eau.\pComme tu le sais, je cherche mes\nparents, et mes recherches disent\nque l'Ombre est impliquée dans leur\ndisparition.\pJ'ai réussi à suivre l'Ombre jusqu'aux\nRuines du Néant, mais je ne peux pas\ny aller à pied ni en volant pour\nl'instant.\pSi tu as besoin de surfer aussi, tu\ndevrais trouver le {COLOR}Égars du surf\nde la Ville de Dehara{COLOR}Ë.\pÀ plus, {PLAYER}.
 0x7CEF27: Fais de la place dans ton Cube pour\ncette Méga-Gemme.
 0x7CEF61: As-tu fait de la place dans ton\nCube pour la Méga-Gemme ?
 0x7CF046: Mes voyages ont-ils été vains ?
-0x7CF05F: Le talent {COLOR}ÉVentouse{COLOR}Ë de mon\nSepiatroce m'aide à ferrer les\nPokémon !\pEnfin, je crois qu'il a Ventouse...
-0x7CF1B6: Désolé, gamin !\pUne bagarre entre des Mangriff et\ndes Séviper a détruit le pont.\pIl faudra du temps avant de le\nréparer.\pParle à notre patron pour trouver un\nchemin alternatif vers la Ville\nPortuaire en attendant.
+0x7CF05F: Le talent {COLOR}ÉVentouse{COLOR}Ë de mon\nSepiatroce m'aide à ferrer les\pPokémon !\nEnfin, je crois qu'il a Ventouse...
+0x7CF1B6: Désolé, gamin !\pUne bagarre entre des Mangriff et\ndes Séviper a détruit le pont.\pIl faudra du temps avant de le\nréparer.\pParle à notre patron pour trouver un\nchemin alternatif vers la Ville\lPortuaire en attendant.
 0x7CF389: {PK}Ô ビ œÑÀ=àÏっÚ ÁMarlon : {COLOR}ËIl est enfin temps pour Zeph de\nterminer ce qu'il a commencé.\pIl possède maintenant les trois\noiseaux légendaires.\pIl ne reste plus qu'à le rejoindre\naux Ruines du Néant.\pAlors pourquoi je ressens tant\nd'effroi ?
 0x7CF46D: {COLOR}ËNon...\pJe ne devrais pas ressentir ça...\pTout ce pour quoi nous avons\ntravaillé va se produire.\pJe pourrai même revoir mon fils...
 0x7CF4F0: ??? : {COLOR}ËDésolé, vieil homme.\pSi tu flanches maintenant, tu\nrisques d'être un gros problème.\pJe ne laisserai rien entraver la\nlibération.\pTon fils restera orphelin pour\ntoujours.
-0x7CF732: ま & È\pü{RIGHT_ARROW}Ë???: {COLOR}ËC'est quoi ça, Hoopa ?\pJe t'ai demandé d'invoquer un\nPokémon puissant capable de nous\nporter aux Ruines du Néant, et tu\nm'apportes ça ?\pPathétique !\pCe Pokémon est juste... tellement...\ntellement nebby !\pUne piètre excuse de Pokémon\nlégendaire.
+0x7CF732: ま & È\pü{RIGHT_ARROW}Ë???: {COLOR}ËC'est quoi ça, Hoopa ?\pJe t'ai demandé d'invoquer un\nPokémon puissant capable de nous\lporter aux Ruines du Néant, et tu\lm'apportes ça ?\pPathétique !\pCe Pokémon est juste... tellement...\ntellement nebby !\pUne piètre excuse de Pokémon\nlégendaire.
 0x7CF825: {COLOR}ËReste dans le sac, Pokémon inutile.
 0x7CF84E: {COLOR}ËOn n'a pas le choix, Hoopa.\pJe n'avais pas envie, mais il faut\nque tu m'envoies par un de tes\nanneaux aux Ruines du Néant.\pJe passe devant, et comme tu ne peux\npas traverser tes propres anneaux\nsans ancrage, accroche-toi au\nsignal de mon Cube quand j'arrive.\pEssaie de rester discret, s'il te\nplaît.\pJe ne veux pas que Zeph découvre notre\nplan.\pNe traîne pas, Hoopa.
 0x7CF8D5: {COLOR}ËNous n'avons plus de temps à\nperdre, Hoopa.\pJe sais que je ne voulais pas suivre\ncette voie, mais j'ai besoin que tu\nm'envoies\là travers l'un de tes anneaux vers\lles Ruines du Vide.\pJe vais y aller, et comme tu ne peux\npas voyager à travers tes propres\nanneaux\lsans attache, accroche-toi au signal\nde mon\lCube une fois que j'arrive là.\pEssayez juste de le rendre discret,\ns'il vous plaît.\pJe ne peux pas laisser Zeph\ncomprendre notre plan.\pNe tardez pas trop, Hoopa.
@@ -74,8 +74,8 @@
 0x7CFAF3: Tu as trouvé un {STR_VAR_1} !
 0x7CFB03: Ce passage de montagne a une\ndisposition unique.\pIl descend lentement, puis plonge\nsoudainement !
 0x7CFB5C: Un homme à capuche rouge a été\npoussé dans l'océan.\pIl n'est toujours pas remonté...
-0x7CFC66: Je jurais que ce Pokémon des\nlégendes est passé par ici à\nl'instant...
-0x7CFCBA: Passer par ce portail peut t'amener\nà la Ville de Dehara ou à la\nRoute 12.
+0x7CFC66: Je jurais que ce Pokémon des\nlégendes est passé par ici à\ll'instant...
+0x7CFCBA: Passer par ce portail peut t'amener\nà la Ville de Dehara ou à la\lRoute 12.
 0x7CFD04: Serais-tu {PLAYER} par hasard ?\p…\pJe m'en doutais.\pJe t'ai reconnu grâce à cette photo\nde toi que j'ai trouvée sur\nl'interweb.\pJe m'appelle Beladonis.\pAgent Beladonis, de la Police\nInternationale.\pJe venais de finir avec la Team\nRocket à Kanto quand on m'a envoyé\ngérer une situation qui couvait dans\nla région de Borrius.\pUn jeune homme, Jax je crois, m'a dit\nque tu as des preuves de crimes\ncommis par une organisation appelée\n« l'Ombre ».\pMerci de me retrouver au {COLOR}ÉCasino de\nDehara {COLOR}Ëpour discuter.\pJax est là aussi.\pBeladonis, terminé.
 0x7CFFE6: {RIGHT_ARROW}ËÌÉÁIl est trop absorbé par son jeu de\nmachines pour t'entendre derrière.\pPeut-être hurler à son oreille ?
 0x7D0046: Il semble complètement absorbé par\nune machine à sous.
@@ -92,12 +92,12 @@
 0x7D2254: Jax : {COLOR}ËÉTOURAPTOR !\pNOOOOON !
 0x7D2270: {COLOR}ËIls ont détruit notre seule voie et\nmon Étouraptor...\pSnif...\pNon.\pJe ne peux pas me concentrer là-\ndessus.\pJe dois rester fort.
 0x7D22F4: {COLOR}ËOn dirait qu'une entrée vers les\nruines a été ouverte par l'explosion.
-0x7D233A: {COLOR}ËTu devrais entrer et chercher un\nautre moyen de monter.\pJe viendrais, mais Étouraptor était\nmon seul Pokémon.\pJe ne ferais que te ralentir si tu\ndevais me protéger des Pokémon\nsauvages.\pJe vais attendre ici et te soigner.
+0x7D233A: {COLOR}ËTu devrais entrer et chercher un\nautre moyen de monter.\pJe viendrais, mais Étouraptor était\nmon seul Pokémon.\pJe ne ferais que te ralentir si tu\ndevais me protéger des Pokémon\psauvages.\nJe vais attendre ici et te soigner.
 0x7D243A: {COLOR}ËOh, et si tu trouves Étouraptor,\ns'il te plaît, ramène-le-moi.
 0x7D2C01: VOUS AVEZ PROUVÉ VOTRE VALEUR.
-0x7D2D84: Sbire 2 : {COLOR}ËMonsieur, {PLAYER} tente de\nmonter ici en passant par les\nruines !
+0x7D2D84: Sbire 2 : {COLOR}ËMonsieur, {PLAYER} tente de\nmonter ici en passant par les\lruines !
 0x7D2DDA: ??? : {COLOR}ËÇa ne change rien.\pQuand {PLAYER} arrivera, Zeph sera\nprêt pour la libération.\pMais retarde {PLAYER} autant que\npossible.
-0x7D2E77: ??? : {COLOR}ËSi je n'avais pas besoin de toi,\nHoopa, je jetterais ta Poké Ball à\nl'océan pour toutes les gênes que tu\nm'as causées !
+0x7D2E77: ??? : {COLOR}ËSi je n'avais pas besoin de toi,\nHoopa, je jetterais ta Poké Ball à\ll'océan pour toutes les gênes que tu\lm'as causées !
 0x7D31CC: Sbire 2 : {COLOR}ËQu'est-ce que... ?
 0x7D31E5: Sbire 1 : {COLOR}ËOn n'a rien à prouver !\pNous sommes l'Ombre !\pÉliminons-le !
 0x7D3234: Sbires : {COLOR}ËGnnn...
@@ -148,7 +148,7 @@
 0x7D4FC9: Zeph : {COLOR}ËDésolé, Ivory.\pJe n'ai pas pu mener la mission.\pMais ce n'est pas fini.\pNous trouverons quand même un moyen\nde les ramener...
 0x7D5055: Aklove : {COLOR}ËEt maintenant, que commence\nl'événement principal.
 0x7D5083: {COLOR}ËHoopa, prépare-toi !\pTon véritable pouvoir va être libéré\nde la Bouteille Prison !\pEt en tant que dresseur, je peux le\nlibérer !
-0x7D512A: Aklove : {COLOR}ËEnfin !\pJ'ai attendu des années pour ce\nmoment !\pHoopa !\pLe sceau de ton pouvoir est brisé !
+0x7D512A: Aklove : {COLOR}ËEnfin !\pJ'ai attendu des années pour ce\pmoment !\pHoopa !\nLe sceau de ton pouvoir est brisé !
 0x7D5198: Hoopa : {COLOR}ÉHoo hoo hoo !
 0x7D51AF: Zeph : {COLOR}ËAklove, dis-moi !\pPourquoi fais-tu tout ça ?\pSi on a un but commun, on peut\naider !
 0x7D522C: Aklove : {COLOR}ËIdiot.\pAucun but commun.\pJe suis descendant du roi de Kalos\ndurant la Grande Guerre.\pMon but est de finir ce qu'il a\ncommencé et détruire cette région.\pAvec ce Hoopa libéré, j'amènerai\nl'Arme Ultime de Kalos ici pour\nfaire de Borrius une région de\nmort et de destruction !\pAlors, sa souffrance prendra fin...\pDis-moi, Zeph. Quels sont tes buts ?
@@ -166,8 +166,8 @@
 0x7D57DF: {COLOR}ËHoopa !\pInvoque une incinération !
 0x7D5801: Aklove : {COLOR}ËAdieu, {PLAYER}.
 0x7D5B95: ;ò{UP_ARROW}ËÂOh, c'est toi.\pOn dirait que ton heure est enfin\nvenue, hein ?\pAlors, comment es-tu parti ?\p…\pIncinération...\pÇa se tient...\pC'est toujours mieux que de se\nnoyer.
-0x7D5C3C: Tu te demandes sûrement où on est,\nn'est-ce pas ?\p…\pJe m'en doutais.\pOn pourrait dire que c'est ce que\nles gens appellent la « Zone de\nJugement ».\pIci, le grand créateur de l'univers,\nArceus lui-même, rend son verdict à\nceux qui ont quitté le monde.
-0x7D5D38: J'ai entendu dire que cet endroit\nreflète ton foyer.\p…\pJe ne sais pas ce que tu vois, mais\nje vois la mer partout.\pMa région...\pComme certains disent, il y avait\n« trop d'eau ».\pJe serais peut-être resté pour\ntoujours si Zeph n'avait pas\nconvaincu Ivory et moi de partir.
+0x7D5C3C: Tu te demandes sûrement où on est,\nn'est-ce pas ?\p…\pJe m'en doutais.\pOn pourrait dire que c'est ce que\nles gens appellent la « Zone de\pJugement ».\nIci, le grand créateur de l'univers,\lArceus lui-même, rend son verdict à\lceux qui ont quitté le monde.
+0x7D5D38: J'ai entendu dire que cet endroit\nreflète ton foyer.\p…\pJe ne sais pas ce que tu vois, mais\nje vois la mer partout.\pMa région...\pComme certains disent, il y avait\n« trop d'eau ».\pJe serais peut-être resté pour\ntoujours si Zeph n'avait pas\lconvaincu Ivory et moi de partir.
 0x7D5E59: Qu'est-ce que tu vois, {PLAYER} ?\p…\pDe la neige, hein ?\pÇa se tient...\pHauteurs Gelées est la maison que\nton père a choisie pour toi.
 0x7D5EC9: Tu sais, {PLAYER}, je connaissais\nbien ton père.\pC'était un homme bien.\pJ'ai même eu le plaisir de travailler\navec lui à un moment...
 0x7D5F3D: Il disait que même les pires hommes\navaient eu de bonnes intentions à\nun moment de leur carrière.\p…\pSes mots résonnaient jusqu'au jour\nde ma mort.
@@ -241,7 +241,7 @@
 0x7D8F73: Vous êtes déjà à cet étage.
 0x7D8FFD: Non !\pJe préfère me noyer plutôt que\nd'être transformé en une de ces…\nchoses !
 0x7D904F: Maintenant, je te dois le double.
-0x7D990E: Zeph : {COLOR}ËMarlon a disparu…\pIvory m'a quitté pour retrouver son\nfils…\pÇa ne sert à rien de continuer plus…
+0x7D990E: Zeph : {COLOR}ËMarlon a disparu…\pIvory m'a quitté pour retrouver son\pfils…\nÇa ne sert à rien de continuer plus…
 0x7D9974: Marlon : {COLOR}ËSortez-en, Zeph !\pReprenez vos esprits !\pC'est moi, Marlon !
 0x7D99C0: Zeph : {COLOR}ËMarlon ?\pEst-ce vraiment toi ?\pTu as l'air différent…\pCette cicatrice sur ton visage a\ndisparu…\pEt où est ton uniforme ?
 0x7D9A33: Marlon : {COLOR}ËOui, c'est moi,\nZeph.\pJ'ai enlevé mon uniforme après que\nje me sois frayé un chemin ici.\pCe n'est pas comme si j'en aurais\nplus besoin …\pD'après ce que j'ai entendu des\ngrunts restants, les Shadows ont\lessentiellement dissous…

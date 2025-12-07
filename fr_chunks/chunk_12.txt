@@ -24,13 +24,13 @@
 0x3FDA8C: Les Pokémon entendant la Flûte\nse réveillent !
 0x3FDAB1: Tu lances une Ball, hein ?\nJe... je vais faire de mon mieux !
 0x3FDAE2: Journal : Oh, bon sang...\nToujours pressé.\n{B_PLAYER_NAME}.\nTu n'as jamais fait de combat\nPokémon, hein ?\nUn combat oppose les Pokémon\ndes Dresseurs entre eux.\p
-0x3FDB92: Le Dresseur qui met K.O. les\nPokémon adverses en baissant\nleurs PV à «0» gagne.\p
+0x3FDB92: Le Dresseur qui met K.O. les\nPokémon adverses en baissant\lleurs PV à «0» gagne.\p
 0x3FDBEF: Mais plutôt qu'en parler,\ntu apprendras mieux\npar l'expérience.\nEssaye de combattre\npour voir.\p
 0x3FDC58: Infliger des dégâts à l'ennemi\nest la clé de tout combat.\p
 0x3FDC95: Baisser les stats de l'ennemi\nt'avantage.\p
-0x3FDCD2: Garde un œil sur les PV\nde ton Pokémon.\nIl tombera K.O. si ses PV\natteignent «0».\p
+0x3FDCD2: Garde un œil sur les PV\nde ton Pokémon.\pIl tombera K.O. si ses PV\natteignent «0».\p
 0x3FDD23: Non ! Pas de fuite d'un combat\ncontre un Dresseur !\p
-0x3FDD64: Hm ! Excellent !\nSi tu gagnes, tu as de l'argent,\net ton Pokémon grandit !\nAffronte d'autres Dresseurs\npour les rendre forts !\p
+0x3FDD64: Hm ! Excellent !\pSi tu gagnes, tu as de l'argent,\net ton Pokémon grandit !\pAffronte d'autres Dresseurs\npour les rendre forts !\p
 0x3FDDEB: Hm...\nQuelle déception...\nSi tu gagnes, tu as de l'argent,\net tes Pokémon grandissent.\nSi tu perds, {B_PLAYER_NAME},\ntu paies.\nJe paie cette fois,\nmais dehors ce sera différent.\nRenforce tes Pokémon en battant\ndes Pokémon sauvages.\p\nmais dehors ce sera différent.\nRenforce tes Pokémon en battant\ndes Pokémon sauvages.\p
 0x3FE672: Quoi ?\n{STR_VAR_1} évolue!
 0x3FE688: Félicitations ! Ton {STR_VAR_1}\na évolué en {STR_VAR_2}!{WAIT_SE}\p
@@ -149,7 +149,7 @@
 0x4160C8: Champion de la Ligue !\nFÉLICITATIONS !
 0x4160F9: Nom
 0x416101: IDNo.
-0x41614B: Erreur de sauvegarde.\nVeuillez remplacer la\nmémoire de secours.
+0x41614B: Erreur de sauvegarde.\pVeuillez remplacer la\nmémoire de secours.
 0x41617A: Joueur
 0x416181: Badges
 0x416188: Pokédex
@@ -195,8 +195,8 @@
 0x416409: Jeter {STR_VAR_2} de\ncet objet ?
 0x416425: Journal : {PLAYER} !\nCe n'est pas le moment\npour ça !{PAUSE_UNTIL_PRESS}
 0x416451: Pas de Vélo ici.{PAUSE_UNTIL_PRESS}
-0x41647E: Hein ?\nCherche-Objet réagit !\nObjet enterré !{PAUSE_UNTIL_PRESS}
-0x4164C2: Oh !\nCherche-Objet bouge !\nObjet sous tes pieds !\n… … … … … …{PAUSE_UNTIL_PRESS}
+0x41647E: Hein ?\nCherche-Objet réagit !\pObjet enterré !{PAUSE_UNTIL_PRESS}
+0x4164C2: Oh !\nCherche-Objet bouge !\pObjet sous tes pieds !\p… … … … … …{PAUSE_UNTIL_PRESS}
 0x416513: … … … …Rien !\nAucune réaction.{PAUSE_UNTIL_PRESS}
 0x41659E: Mais l'effet d'un Repousse\npersiste.{PAUSE_UNTIL_PRESS}
 0x4165D2: {PLAYER} utilise le\n{STR_VAR_2}.\pLes Pokémon sauvages\nseront attirés.{PAUSE_UNTIL_PRESS}

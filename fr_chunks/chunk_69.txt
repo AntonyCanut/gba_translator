@@ -8,18 +8,18 @@
 0x1EFE75A: Euh… nous sommes déjà à cet étage ?
 0x1EFE77C: Nous sommes arrivés à l'étage\n{STR_VAR_1}.
 0x1EFE799: J'ai hâte de vous servir à nouveau.
-0x1EFE7BE: Affronter des Pokémon plus forts\ndonne plus de Points Exp. !\pCombattre avec un Pokémon qui\npourrait évoluer, mais ne l'a pas\nfait, en donne encore plus !
+0x1EFE7BE: Affronter des Pokémon plus forts\ndonne plus de Points Exp. !\pCombattre avec un Pokémon qui\npourrait évoluer, mais ne l'a pas\lfait, en donne encore plus !
 0x1EFE850: As-tu essayé ce type de Poké Ball ?
 0x1EFE877: Mes Pokémon sont très amicaux avec\nmoi, et la raison est…\pTa daa ! Je les ai capturés avec des\n{COLOR}ÉLuxe Balls{COLOR}Ç !
 0x1EFE8F0: Hé…\pTu veux que je mette l'un de tes\nPokémon dans une {COLOR}ÉLuxe Ball{COLOR}Ç ?
 0x1EFE941: Quel Pokémon dois-je mettre dans\nune Luxe Ball ?
-0x1EFE96E: Si tu veux que ton Pokémon soit plus\nvite ami avec toi, apporte-moi une\nLuxe Ball !\pJe remplacerai sa vieille Poké Ball\npar la plus efficace.
-0x1EFEA11: Pas de souci !\pTant que tu as des Luxe Balls dans\nton Cube, je peux remplacer les\nBalls de tes Pokémon quand tu veux !
+0x1EFE96E: Si tu veux que ton Pokémon soit plus\nvite ami avec toi, apporte-moi une\lLuxe Ball !\pJe remplacerai sa vieille Poké Ball\npar la plus efficace.
+0x1EFEA11: Pas de souci !\pTant que tu as des Luxe Balls dans\nton Cube, je peux remplacer les\lBalls de tes Pokémon quand tu veux !
 0x1EFEA80: Hé, chanceux !\p{STR_VAR_1} est déjà dans une\nLuxe Ball !
 0x1EFEAB0: Oh non !\pJe ne peux pas échanger la Poké Ball\nd'un Œuf !
 0x1EFEADD: Ta daa !\p{STR_VAR_1} est maintenant dans une\nLuxe Ball !\pIl deviendra ami avec toi bien plus\nvite maintenant !
 0x1EFEB34: {COLOR}ÁRetourner aux {COLOR}ÉRuines du\nNéant{COLOR}Á ?
-0x1EFEB5A: Le sable de la Ville de Dehara ne\nvient pas du désert.\pMême juste à côté du Grand Désert,\nle sable de Dehara vient de\nl'océan !
+0x1EFEB5A: Le sable de la Ville de Dehara ne\nvient pas du désert.\pMême juste à côté du Grand Désert,\nle sable de Dehara vient de\ll'océan !
 0x1EFEBE2: Je jurerais avoir vu ce Pokémon des\nlégendes passer juste ici…
 0x1EFEC34: Où crois-tu aller ?\pTu ne peux pas explorer le Grand\nDésert habillé comme ça !\pSans les bonnes lunettes, je ne\npourrai pas te laisser passer.
 0x1EFECD7: Reste prudent dans le Grand Désert !
@@ -39,7 +39,7 @@
 0x1EFF26E: Bourg Dresco N
 0x1EFF27C: Maison des Dresseurs
 0x1EFF28A: Désolé, tu ne peux pas entrer pour\nl'instant.\pMon grand-père fait sa sieste\nquotidienne et ne veut pas être\nréveillé.\pEssaie l'Arène de Bourg Dresco en\nattendant.\pIl y a beaucoup de brouillard, donc\nun Pokémon avec une capacité météo\ncomme {COLOR}ÉTempête de Sable{COLOR}Ë ou\n{COLOR}ÉAnti-Brume{COLOR}Ë peut aider.\pD'ailleurs, un ami de mon grand-père\nvoulait échanger un {COLOR}ÉCouaneton{COLOR}Ë\navec Anti-Brume, récemment…
-0x1EFF446: As-tu remarqué tous les adorables\npetits Pokémon sur la\n{COLOR}ÉRoute 2{COLOR}Ç ?\pBeaucoup n'évoluent qu'après\ns'être attachés à toi.\pJe peux en voir un si tu en as un ?
+0x1EFF446: As-tu remarqué tous les adorables\npetits Pokémon sur la\p{COLOR}ÉRoute 2{COLOR}Ç ?\nBeaucoup n'évoluent qu'après\ps'être attachés à toi.\nJe peux en voir un si tu en as un ?
 0x1EFF4F6: Lequel de tes Pokémon évolue quand\nil s'attache à son Dresseur ?
 0x1EFF539: Exact ! Ce Pokémon n'évolue que\nlorsqu'il s'attache à toi !\pL'évolution prend du temps, mais\ns'il tient ceci, il s'attachera plus\nvite !
 0x1EFF5EC: Beaucoup de gens à Borrius sont aussi\nsympathiques que moi.\pParle à tout le monde !
@@ -52,7 +52,7 @@
 0x1EFF87D: Super, tu dois lire tous les\n{COLOR}É{STR_VAR_1}{COLOR}Ë panneaux {COLOR}ÉConseils{COLOR}Ë en entier\npour démontrer ce talent.\pSi tu pars avant d'avoir fini, je ne\ncompterai pas !
 0x1EFF932: Je vois, toi aussi tu es illettré.\pOn peut communiquer en sons 8-bit,\ndonc.
 0x1EFF983: Tu n'as lu que {COLOR}É{STR_VAR_2}{COLOR}Ë panneau{VERSION}\nConseils en entier.\pJe veux encore voir {COLOR}É{STR_VAR_3}{COLOR}Ë\nexemple{EVIL_TEAM} de ce pouvoir.
-0x1EFFA00: Merci d'avoir démontré l'art de\nlire.\pC'est surfait, je vais quitter\nl'école et devenir punk rocker.\pMais avant, prends ce livre.\pLe nom du propriétaire est écrit\ndedans, mais je ne peux toujours pas\nlire…
+0x1EFFA00: Merci d'avoir démontré l'art de\nlire.\pC'est surfait, je vais quitter\nl'école et devenir punk rocker.\lMais avant, prends ce livre.\pLe nom du propriétaire est écrit\pdedans, mais je ne peux toujours pas\nlire…
 0x1EFFB08: Qui a besoin de l'école quand on a\nla musique et la rage ?
 0x1EFFB46: Ce panneau Conseils a été lu près de\nchez toi.
 0x1EFFB79: Ce panneau Conseils a été lu près de\nBourg Bellin sur la route rapide.
@@ -101,7 +101,7 @@
 0x1F00858: Ce panneau Conseils a été lu sur le\ncôté est du bâtiment.
 0x1F0089A: Regarde, regarde !\pJe vois la Ville de Dehara d'ici !\pElle est si proche qu'il n'y a même\npas de route entre nous !
 0x1F0090B: As-tu visité la {COLOR}ÉMaison des\nDresseurs{COLOR}Ë de Bourg Dresco ?\pC'est le bâtiment noir et bleu au\nsud de la ville.\pTu peux y affronter les Dresseurs\nautant que tu veux.\pIls deviennent plus forts comme toi.
-0x1F009EC: Cette statue représente l'oiseau de\nfeu légendaire, Sulfura.\pIl vivrait quelque part au\n{COLOR}ÉVolcan Cendreux{COLOR}Ç, illuminant le ciel\nla nuit.
+0x1F009EC: Cette statue représente l'oiseau de\nfeu légendaire, Sulfura.\pIl vivrait quelque part au\n{COLOR}ÉVolcan Cendreux{COLOR}Ç, illuminant le ciel\lla nuit.
 0x1F00A8E: Tu vois la Poké Ball jaune là-bas ?\pC'est une {COLOR}ÉCT{COLOR}Ç, un type de capacité\nque tu peux enseigner à tes Pokémon\nà volonté !\pSi tu en obtiens une, ouvre l'Étui à\nCT et cherche la capacité à\nenseigner.\pLes Pokémon de ton équipe pouvant\nl'apprendre seront surlignés.\pAinsi tu n'auras pas à vérifier ton\néquipe à chaque fois !
 0x1F00C0A: Si tu obtiens une {COLOR}ÉCT{COLOR}Ç, ouvre l'Étui\nà CT et cherche la capacité à\nenseigner.\pLes Pokémon pouvant l'apprendre\nseront surlignés.\pAinsi tu n'auras pas à vérifier ton\néquipe à chaque fois !
 0x1F00D02: Tu sais ce qu'est une {COLOR}ÉGemme{COLOR}Ë ?
@@ -125,16 +125,16 @@
 0x1F016AD: Bonjour, {STR_VAR_2} d'Aros.\nJ'espère que tes voyages vont bien.
 0x1F016E4: Ne coupe pas l'alimentation
 0x1F016FD: Entraîne-toi à sauver en\nsauvegardant au moins {STR_VAR_1}\nfois.
-0x1F01739: Le saviez-vous ? Si tu éteins sans\nsauvegarder, une bombe détruit notre\nmonde.\pTu ne le vois pas car un univers\nparallèle apparaît quand tu\nrecharges.\pMerci de ne plus détruire notre\nmonde.\p{COLOR}É{STR_VAR_1}{COLOR}Ë sauvegardes montreront ton\nengagement.
+0x1F01739: Le saviez-vous ? Si tu éteins sans\nsauvegarder, une bombe détruit notre\lmonde.\lTu ne le vois pas car un univers\pparallèle apparaît quand tu\nrecharges.\lMerci de ne plus détruire notre\pmonde.\n{COLOR}É{STR_VAR_1}{COLOR}Ë sauvegardes montreront ton\pengagement.
 0x1F01867: Merci d'avoir accepté de ne plus\ncommencer l'armageddon.\pJe te récompenserai quand je verrai\n{COLOR}É{STR_VAR_1}{COLOR}Ë sauvegardes manuelles.
 0x1F018E5: Certains veulent juste voir le monde\nbrûler…
-0x1F01914: Tu as réussi à sauver\n{COLOR}É{STR_VAR_2}{COLOR}Ë monde{VERSION}.\pMais je croirai à ton engagement si tu\nsauvegardes encore {COLOR}É{STR_VAR_3}{COLOR}Ë\nmonde{EVIL_TEAM}.
+0x1F01914: Tu as réussi à sauver\n{COLOR}É{STR_VAR_2}{COLOR}Ë monde{VERSION}.\pMais je croirai à ton engagement si tu\nsauvegardes encore {COLOR}É{STR_VAR_3}{COLOR}Ë\lmonde{EVIL_TEAM}.
 0x1F0199C: Voici ta récompense pour ne pas avoir\ndétruit notre monde.\pC'est une relique d'un monde détruit\npar un enfant égoïste.\pNe nous fais pas revivre ça…
 0x1F01A3A: Sauvegarde avant d'éteindre !\pSinon nous souffrirons tous…
 0x1F01A98: Salut !\pAurais-tu un rare {COLOR}É{STR_VAR_1}{COLOR}Ë de type\n{COLOR}ÉGlace{COLOR}Ë ?\pJ'ai du mal à en trouver.\pSi oui, veux-tu l'échanger contre mon\n{COLOR}É{STR_VAR_2}{COLOR}Ë ?\pIl sera utile dans le brouillard.
 0x1F01B8A: Bon, si tu ne veux pas…
 0x1F01BA6: Hein ?\nCe n'est pas un {COLOR}É{STR_VAR_1}{COLOR}Ë de type\n{COLOR}ÉGlace{COLOR}Ë.\pPense à moi si tu en trouves un.
-0x1F01BEF: Merci beaucoup.\pLe {STR_VAR_2} que je t'ai donné\nconnaît {COLOR}ÉAnti-Brume{COLOR}Ë, tu pourras l'utiliser\npour enlever le brouillard !
+0x1F01BEF: Merci beaucoup.\pLe {STR_VAR_2} que je t'ai donné\nconnaît {COLOR}ÉAnti-Brume{COLOR}Ë, tu pourras l'utiliser\lpour enlever le brouillard !
 0x1F01C56: Merci beaucoup.
 0x1F01C63: Le {STR_VAR_2} que je t'ai donné\nt'a-t-il aidé ?
 0x1F01C94: Dans sa jeunesse, mon mari a voyagé\ndans le monde cherchant des Pokémon\nrares.\pSa quête s'est arrêtée à cause d'une\nmaladie.\pSi tu as le Pokémon qu'il cherche,\naccepterais-tu un échange ?\pLe docteur dit que ça accélérerait sa\nrécupération.
@@ -169,7 +169,7 @@
 0x1F02458: Wow, {STR_VAR_3}…\pBienvenue au Sol.\pInstalle-toi aussi longtemps que tu\nveux, {STR_VAR_3}.\pRespire cet air…
 0x1F024CD: Wow, mec…\nDu calme…\pLe brouillard ne fait de mal qu'aux\nyeux…
 0x1F02510: Wow, mec…\pJe ne peux pas te combattre avec un\nseul Pokémon apte…
-0x1F0255F: Je suis le seul à garder la tête\nfroide ici.\pSi tu m'amènes un {COLOR}ÉMystherbe{COLOR}Ë, je\nrécolterai ses feuilles pour faire\nun brouillard pour tes Pokémon.
+0x1F0255F: Je suis le seul à garder la tête\nfroide ici.\pSi tu m'amènes un {COLOR}ÉMystherbe{COLOR}Ë, je\nrécolterai ses feuilles pour faire\lun brouillard pour tes Pokémon.
 0x1F025EF: Tu as des Mystherbe pour moi ?
 0x1F0260F: Choisir dans l'équipe
 0x1F02621: Toute l'équipe
@@ -180,7 +180,7 @@
 0x1F0269A: Tu veux me donner le Mystherbe\n{COLOR}É{STR_VAR_1}{COLOR}Ë de ton équipe ?
 0x1F026D1: {COLOR}Á{PLAYER} a remis le Mystherbe\n{STR_VAR_1} au Scientifique.
 0x1F026FF: Tu veux me donner le Mystherbe\n{COLOR}É{STR_VAR_2}{COLOR}Ë de la Boîte\n« {COLOR}É{STR_VAR_1}{COLOR}Ë » ?
-0x1F0273A: On dirait que j'ai assez de\nMystherbe pour faire un brouillard\npour tes Pokémon !\pAttends un peu…
+0x1F0273A: On dirait que j'ai assez de\nMystherbe pour faire un brouillard\lpour tes Pokémon !\pAttends un peu…
 0x1F0279B: Mmm…\pÇa sent bon…\p…\pBon… voilà !
 0x1F027CD: C'est du {COLOR}ÉBrouillard des Rêves{COLOR}Ë.\pFais-le inhaler à un Pokémon pour\nlibérer son {COLOR}ÉTalent Caché{COLOR}Ë.\pAssure-toi de ne pas le respirer !
 0x1F02854: Bon retour, {PLAYER} !\pTu m'as donné {COLOR}É{STR_VAR_2} Mystherbe{COLOR}Ë.\nIl m'en faut {COLOR}É{STR_VAR_1}{COLOR}Ë pour faire un\nbrouillard spécial…\pTu veux m'en donner plus ?
@@ -210,10 +210,10 @@
 0x1F02CAD: 1 Champi Balm
 0x1F02CBD: Tous les Champis Balm
 0x1F02CD0: Quand les Pokémon gagnent assez\nd'expérience, ils peuvent évoluer et\nse renforcer.\pCertains apprennent une capacité\njuste après évolution.\pMais tous ne peuvent pas évoluer en\ncombattant.\pCertains demandent des objets comme\ndes {COLOR}ÉPierres Feu{COLOR}Ë ou des\n{COLOR}ÉPierres Lien{COLOR}Ë.
-0x1F02DD8: Le Champion Mirskle aime remplir son\nArène d'un épais brouillard.\pHabituellement, ça rend les attaques\nmoins précises.\pMais si tu amènes un Pokémon avec\nles Talents {COLOR}ÉRegard Vif{COLOR}Ë ou\n{COLOR}ÉInfiltration{COLOR}Ë, ses attaques\npasseront sans problème.\pOn trouve des {COLOR}ÉPicassaut{COLOR}Ë et\n{COLOR}ÉHoothoot{COLOR}Ë sur la\n{COLOR}ÉRoute 2{COLOR}Ë avec Regard Vif, alors\nvas-y en capturer un !
+0x1F02DD8: Le Champion Mirskle aime remplir son\nArène d'un épais brouillard.\pHabituellement, ça rend les attaques\nmoins précises.\pMais si tu amènes un Pokémon avec\nles Talents {COLOR}ÉRegard Vif{COLOR}Ë ou\l{COLOR}ÉInfiltration{COLOR}Ë, ses attaques\lpasseront sans problème.\pOn trouve des {COLOR}ÉPicassaut{COLOR}Ë et\n{COLOR}ÉHoothoot{COLOR}Ë sur la\l{COLOR}ÉRoute 2{COLOR}Ë avec Regard Vif, alors\lvas-y en capturer un !
 0x1F02F4F: Les Pokémon avec les Talents\n{COLOR}ÉRegard Vif{COLOR}Ë et\n{COLOR}ÉInfiltration{COLOR}Ë touchent sans mal\nsous le brouillard.\pÇa n'arrive nulle part ailleurs qu'à\nBorrius !
 0x1F02FFA: Le {COLOR}ÉParadis Floral{COLOR}Ç est superbe !\pPartout, des fleurs de toutes\ncouleurs avec des Pokémon cachés !\pJ'ai attrapé mon {COLOR}ÉBombydou{COLOR}Ç là-bas, et\nj'ai utilisé {COLOR}ÉDoux Parfum{COLOR}Ç pour\nmieux toucher à l'Arène !
-0x1F030EE: Comme les Repousse, certains Talents\ncomme {COLOR}ÉPuanteur{COLOR}Ë peuvent aussi\néloigner les Pokémon sauvages.
+0x1F030EE: Comme les Repousse, certains Talents\ncomme {COLOR}ÉPuanteur{COLOR}Ë peuvent aussi\léloigner les Pokémon sauvages.
 0x1F0314E: Tu devrais battre autant d'Arènes que\npossible.\pLes Boutiques vendront plus d'objets\nselon tes Badges.
 0x1F031C8: Ville d'Epidimy
 0x1F031D5: Ville d'Epidimy J
@@ -230,7 +230,7 @@
 0x1F03706: Hein ? Qu'est-ce que c'est ?\pOn dirait que quelqu'un a laissé\nquelque chose sur le banc !
 0x1F0374B: Le Mont Thundercap a deux entrées :\nune à la Ville d'Epidimy et l'autre\nà la Ville d'Antisis.\pElles mènent au pic où se perche\nÉlecthor.\pJe ne conseille pas celle d'Antisis.\pCet endroit est glauque…
 0x1F0383E: J'ai essayé d'explorer le Mont\nThundercap par l'entrée proche.\pL'ouverture où Électhor se perche\nmonte très haut !\pJ'ai eu le vertige et je suis tombé !\pLe médecin dit que je souffre de\nlégers traumatismes crâniens.\pPrends cet objet, ainsi tu n'auras\npas à t'inquiéter pour ta tête.
-0x1F03972: Si ton Pokémon porte le\n{COLOR}ÉCasque Brut{COLOR}Ç, tout Pokémon qui le\nfrappe aura un mal de crâne !
+0x1F03972: Si ton Pokémon porte le\n{COLOR}ÉCasque Brut{COLOR}Ç, tout Pokémon qui le\lfrappe aura un mal de crâne !
 0x1F039DA: {COLOR}ÁDommage !\pIl n'y a pas de place dans le Cube\npour un {STR_VAR_2} !
 0x1F03A0C: Houah !\nDéplace des rochers à la force pure\n!\pPrends ceci !
 0x1F03A3C: {COLOR}ÉForce{COLOR}Ë permet de déplacer des\nblocs immenses !\pMais seulement si tu as le\n{COLOR}ÉBadge Chute{COLOR}Ë de l'Arène de\nFallshore !\pHouah !
@@ -240,7 +240,7 @@
 0x1F03C13: Dans quel univers est-ce un\n{STR_VAR_1} ?\pSi tu en trouves un, échange-le avec\nmoi.
 0x1F03C59: Merci beaucoup ! Je vais bien\nm'en occuper !
 0x1F03C8F: Mon ancien {STR_VAR_2}, t'a-t-il aidé\nà gagner ?
-0x1F03CBD: Tu vois cet objet sur la table ?\pC'est ma possession la plus\nprécieuse, la {COLOR}ÉMaster Ball{COLOR}Ç.\pElle capture n'importe quel Pokémon\nsans faillir.\pL'homme qui me l'a donnée,\n{COLOR}ÉAros{COLOR}Ç, a dit de la garder comme\nma vie.\pJusqu'à ce que quelqu'un me montre un\npetit Pokémon violet, {COLOR}ÉHoopa{COLOR}Ç.\pAros dit que celui qui contrôle Hoopa\nest le Gardien de Borrius et mérite\ncette Ball.\pEs-tu le Gardien de Borrius ou juste\nun morveux ?
+0x1F03CBD: Tu vois cet objet sur la table ?\pC'est ma possession la plus\nprécieuse, la {COLOR}ÉMaster Ball{COLOR}Ç.\pElle capture n'importe quel Pokémon\nsans faillir.\pL'homme qui me l'a donnée,\n{COLOR}ÉAros{COLOR}Ç, a dit de la garder comme\lma vie.\pJusqu'à ce que quelqu'un me montre un\npetit Pokémon violet, {COLOR}ÉHoopa{COLOR}Ç.\pAros dit que celui qui contrôle Hoopa\nest le Gardien de Borrius et mérite\lcette Ball.\pEs-tu le Gardien de Borrius ou juste\nun morveux ?
 0x1F03E86: Vraiment ?\nProuve-le !\pMontre-moi le Pokémon nommé\n{COLOR}ÉHoopa{COLOR}Ç !
 0x1F03EC8: C'est Hoopa !\nC'est Hoopa !\pTu es le Gardien de Borrius !\nPrends la Master Ball !
 0x1F03F1D: Alors je n'ai pas de temps à te\nconsacrer.\nOuste !

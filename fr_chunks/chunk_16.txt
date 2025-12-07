@@ -128,10 +128,10 @@
 0x41E3E3: Enseigner quelle capacité à\n{STR_VAR_1} ?
 0x41E3FB: Enseigner {STR_VAR_2} ?
 0x41E405: {STR_VAR_1} a appris\n{STR_VAR_2}.
-0x41E414: {STR_VAR_1} veut apprendre\n{STR_VAR_2}.\npMais {STR_VAR_1} ne peut pas\navoir plus de quatre capacités.\npSupprimer une capacité pour\nfaire place à {STR_VAR_2} ?
+0x41E414: {STR_VAR_1} veut apprendre\n{STR_VAR_2}.\ppMais {STR_VAR_1} ne peut pas\navoir plus de quatre capacités.\ppSupprimer une capacité pour\nfaire place à {STR_VAR_2} ?
 0x41E481: Arrêter d'apprendre {STR_VAR_2} ?
 0x41E4E2: Abandonner l'enseignement d'une\nnouvelle capacité à {STR_VAR_1} ?
-0x41E50C: Oublier quelle capacité ?\np
+0x41E50C: Oublier quelle capacité ?\pp
 0x41E538: En attente…\nL'autre joueur choisit.
 0x41E572: Combat refusé.{PAUSE}ざ
 0x41E58D: Combat refusé.{PAUSE}ざ

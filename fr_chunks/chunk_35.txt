@@ -104,14 +104,14 @@
 0x96BF82: {B_ATK_NAME_WITH_PREFIX} s'entoure d'un\nvoile d'eau !
 0x96BFAD: Mais {B_ATK_NAME_WITH_PREFIX} ne peut pas\nutiliser cette capacité !
 0x96BFC8: Mais {B_ATK_NAME_WITH_PREFIX} ne peut pas\nl'utiliser dans cet état !
-0x96BFEF: {B_ATK_NAME_WITH_PREFIX} transfère son\nproblème de statut à\n{B_DEF_NAME_WITH_PREFIX} !
+0x96BFEF: {B_ATK_NAME_WITH_PREFIX} transfère son\nproblème de statut à\l{B_DEF_NAME_WITH_PREFIX} !
 0x96C016: {B_ATK_NAME_WITH_PREFIX} absorbe de la\npuissance !
 0x96C02D: {B_ATK_NAME_WITH_PREFIX} se charge à fond\ngrace à son Herbe Pouvoir !
 0x96C05C: {B_ATK_NAME_WITH_PREFIX} inverse son\nAttaque et sa Défense !
-0x96C080: {B_ATK_NAME_WITH_PREFIX} échange tous les\nboosts d'Attaque et Att. Spé\naec {B_DEF_NAME_WITH_PREFIX} !
-0x96C0BB: {B_ATK_NAME_WITH_PREFIX} échange tous les\nboosts de Défense et Déf. Spé\naec {B_DEF_NAME_WITH_PREFIX} !
+0x96C080: {B_ATK_NAME_WITH_PREFIX} échange tous les\nboosts d'Attaque et Att. Spé\laec {B_DEF_NAME_WITH_PREFIX} !
+0x96C0BB: {B_ATK_NAME_WITH_PREFIX} échange tous les\nboosts de Défense et Déf. Spé\laec {B_DEF_NAME_WITH_PREFIX} !
 0x96C0F7: {B_ATK_NAME_WITH_PREFIX} échange sa\nVitesse avec {B_DEF_NAME_WITH_PREFIX} !
-0x96C112: {B_ATK_NAME_WITH_PREFIX} échange ses\nchangements de stats\navec {B_DEF_NAME_WITH_PREFIX} !
+0x96C112: {B_ATK_NAME_WITH_PREFIX} échange ses\nchangements de stats\lavec {B_DEF_NAME_WITH_PREFIX} !
 0x96C134: {B_ATK_NAME_WITH_PREFIX} partage sa\npuissance avec la cible !
 0x96C159: {B_ATK_NAME_WITH_PREFIX} partage sa\ngarde avec la cible !
 0x96C17E: {B_ATK_NAME_WITH_PREFIX} attend la capacité\nde {B_SCR_ACTIVE_NAME_WITH_PREFIX} !
@@ -134,7 +134,7 @@
 0x96C3CA: La flamme a frappé\n{B_SCR_ACTIVE_NAME_WITH_PREFIX} !
 0x96C9B2: Le {B_LAST_ITEM} de {B_DEF_NAME_WITH_PREFIX}\ns'est activé !
 0x96C9D6: {B_SCR_ACTIVE_NAME_WITH_PREFIX} subit des dégâts\nde son {B_LAST_ITEM} !
-0x96C9ED: {B_SCR_ACTIVE_NAME_WITH_PREFIX} améliore la précision\nde sa prochaine capacité\navec son {B_LAST_ITEM} !
+0x96C9ED: {B_SCR_ACTIVE_NAME_WITH_PREFIX} améliore la précision\nde sa prochaine capacité\lavec son {B_LAST_ITEM} !
 0x96CA24: Le {B_LAST_ITEM} s'est attaché à\n{B_ATK_NAME_WITH_PREFIX} !
 0x96CA42: {B_SCR_ACTIVE_NAME_WITH_PREFIX} est remplacé\ngrâce au {B_LAST_ITEM} !
 0x96CA62: {B_SCR_ACTIVE_NAME_WITH_PREFIX} brandit son\n{B_LAST_ITEM} contre {B_ATK_NAME_WITH_PREFIX} !

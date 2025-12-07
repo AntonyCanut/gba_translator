@@ -52,7 +52,7 @@
 0x1EF97BB: Mec
 0x1EF97C0: Meuf
 0x1EF97C8: Je ne peux tout simplement pas\narrêter de faire du shopping !\pIl y a tellement de variété au\n{COLOR}ÉDehara Department\nStore{COLOR}Ç !
-0x1EF9822: C'est mon travail de m'assurer que\ncette ville reste une belle oasis au\nbord\ldu désert.\pTous ces arbres ne sont pas naturels\ndans cette région.\pJ'en ai planté chacun !
+0x1EF9822: C'est mon travail de m'assurer que\ncette ville reste une belle oasis au\lbord\pdu désert.\nTous ces arbres ne sont pas naturels\pdans cette région.\nJ'en ai planté chacun !
 0x1EF98CA: Les livres d'histoire disent que\nl'ancien roi de Borrius a fait\nconstruire son château\là cet endroit même !\pC'est logique - son tombeau est à\nproximité dans le Grand Désert,\laprès tout.
 0x1EF996A: Mmm…\pUn parc au bord d'une ville\ndésertique est tellement relaxant.\pDehara City est tout simplement un\nmerveilleux oasis paradisiaque !
 0x1EF99D3: Cette maison ici est connue sous le\nnom de la {COLOR}ÉDouble Battle\nHouse{COLOR}Ë.\pComme les autres maisons\nd'entraîneurs, les entraîneurs à\nl'intérieur peuvent être combattus\nautant de fois que vous le\nsouhaitez.\pC'est un endroit idéal pour\nentraîner votre Pokémon si vous\nenvisagez\ld'affronter l'arène.
@@ -101,8 +101,8 @@
 0x1EFAD04: Concombaffe est l'un des Pokémon\nd'Alola les célèbres.\pMais beaucoup de touristes de East\nBorrius ne comprennent pas\lleur attrait.\pC'est vraiment dommage.
 0x1EFADA2: {COLOR}ÁVous avez jeté le\nConcombaffe à la mer…
 0x1EFADD2: {COLOR}ÁIl ne reste plus de\nConcombaffe sur la plage.
-0x1EFAE04: Salut! Je suis une humble servante !\pMon maître a un grand cœur à la\nhauteur son gros ventre. C'est un\ngourmet !\pJe cherche donc des ingrédients qui\nferont bondir son cœur\lde joie !\pSniffer, renifler… Sniff, renifler…\pOh, cet arôme ! Ça sent tellement\ngourmet !\pAvez-vous un merveilleux ingrédient\ndans votre sac ?\pEnvisageriez-vous de me le vendre ?
-0x1EFAF3C: Reniflez, reniflez… Reniflez,\nreniflez…\pOh, cet arôme ! Ça sent tellement\nbon !\pAvez-vous un merveilleux ingrédient\ndans votre sac ?\pEnvisageriez-vous de me le vendre ?
+0x1EFAE04: Salut! Je suis une humble servante !\pMon maître a un grand cœur à la\nhauteur son gros ventre. C'est un\pgourmet !\nJe cherche donc des ingrédients qui\lferont bondir son cœur\pde joie !\pSniffer, renifler… Sniff, renifler…\nOh, cet arôme ! Ça sent tellement\pgourmet !\nAvez-vous un merveilleux ingrédient\pdans votre sac ?\nEnvisageriez-vous de me le vendre ?
+0x1EFAF3C: Reniflez, reniflez… Reniflez,\preniflez…\nOh, cet arôme ! Ça sent tellement\pbon !\nAvez-vous un merveilleux ingrédient\pdans votre sac ?\nEnvisageriez-vous de me le vendre ?
 0x1EFAFD3: Oh, ça sent si bon !\pVotre {COLOR}É{STR_VAR_3}{COLOR}Ç\nest un ingrédient très rare en effet\n!\pPreriez-vous\n¥{COLOR}É{STR_VAR_2}{COLOR}Ç pour\ncela ?
 0x1EFB044: Merci! Merci !\pAvec cela, je peux créer un superbe\nmenu !\pMon maître sera tellement surpris !
 0x1EFB09D: Hmm… Ce n’est pas tout à fait ce que\nje recherche.\pJe ne pense pas que mon maître sera\nsatisfait d’une telle odeur…
@@ -119,7 +119,7 @@
 0x1EFB43E: Quoi de neuf ? Avez-vous trouvé un\n{COLOR}ÉRare Bone{COLOR}Ë pour moi ?\pOn dirait que vous l'avez trouvé.\pSi vous voulez le vendre, je vous\nl'achèterai pour\n¥{COLOR}É10000{COLOR}Ë.
 0x1EFB4C3: Si vous trouvez d'autres os rares\nvenez me voir.\pJe ferai en sorte que cela en vaille\nla peine.
 0x1EFB50F: Hé, viens me voir si tu trouves un\nOs rare, compris ?\pJe ferai en sorte que ça en vaille\nla peine.
-0x1EFB560: Ha hoo ! Vous avez un Pokédex.\pCombien de Pokémon avez-vous trouvé\n?
+0x1EFB560: Ha hoo ! Vous avez un Pokédex.\nCombien de Pokémon avez-vous trouvé\p?
 0x1EFB59D: Hou ha ! Vous avez trouvé\n{STR_VAR_1} ou plus ! Maintenant,\nnous parlons ! Ceci est pour vous!
 0x1EFB5E2: Hoo ha! Vous n'avez trouvé\n{COLOR}É{STR_VAR_2}{COLOR}Ë.\pViens me montrer à nouveau votre\nPokédex quand vous avez trouvé au\nmoins {COLOR}É{STR_VAR_1}{COLOR}Ë.
 0x1EFB64B: Un Pokémon tenant un {COLOR}ÉBinding\nBand{COLOR}Ë peut infliger davantage\nde dégâts continus avec\lses mouvements de piégeage.\pMais ce qui est le plus important,\nc'est ceci.\pAvez-vous montré votre Pokédex à un\nprofesseur ?
@@ -155,7 +155,7 @@
 0x1EFC2F5: Bien sûr, pas de problème.\pSi vous voulez me combattre, je\nserai toujours là.
 0x1EFC330: Oh, vous n'avez pas assez de Pokémon\npour me combattre aujourd'hui.\pÀ des dates paires, j'aime combattre\ndeux sur deux, vous en aurez donc\nbesoin de plus.
 0x1EFC3A6: C'était une bataille amusante ! Vous\nétiez un adversaire coriace !\pRevenez demain pour une autre\nbataille !
-0x1EFC400: Hé, là ! Je m'appelle Golche !\pLes stratégies des Dresseurs que\nvous avez affrontées ?\pJ'ai aidé à les concevoir !\pSi vous parvenez à vaincre la Ligue\nPokémon , je serais même prêt à\lvous montrer mes propres stratégies\n!
+0x1EFC400: Hé, là ! Je m'appelle Golche !\nLes stratégies des Dresseurs que\pvous avez affrontées ?\nJ'ai aidé à les concevoir !\pSi vous parvenez à vaincre la Ligue\pPokémon , je serais même prêt à\nvous montrer mes propres stratégies\l!
 0x1EFC4B1: Hé, là ! Je m'appelle Golche !\pLes stratégies des formateurs que\nvous avez affrontées ?\pJ'ai aidé à les concevoir !\pSi vous le souhaitez, je suis prêt à\nvous montrer ma propre stratégie.
 0x1EFC53F: Il est temps d'affronter la\nstratégie ultime de !
 0x1EFC56F: Pas de pression.\pPrenez votre temps pour trouver un\nmoyen de combattre ma stratégie.
@@ -165,9 +165,9 @@
 0x1EFC81B: Malheureusement, nous ne pouvons pas\nvous affronter à moins que vous\nn'ayez deux Pokémon !
 0x1EFC85B: L'ancien dresseur de Pokémon… est\nprêt à commencer son combat !
 0x1EFC895: Non ? Votre perte.
-0x1EFC8A4: Vous voyez ?\pCette bataille n'a été possible que\nparce que j'ai contribué à ce\nqu'elle\lsoit sans bug !\pFaisons-la à nouveau un autre jour.
-0x1EFC91B: Quoi de neuf ? Je m'appelle Lixdel !\pJ'ai créé une grande partie de ces\nbelles animations d'attaque que vous\navez\lvues.
-0x1EFC983: Quoi de neuf ? Je m'appelle Lixdel !\pJ'ai créé une grande partie de ces\nbelles animations d'attaque que vous\navez\lvues.\pVoulez-vous en faire l'expérience en\nbattant Thanasis et moi ?
+0x1EFC8A4: Vous voyez ?\pCette bataille n'a été possible que\nparce que j'ai contribué à ce\lqu'elle\psoit sans bug !\nFaisons-la à nouveau un autre jour.
+0x1EFC91B: Quoi de neuf ? Je m'appelle Lixdel !\nJ'ai créé une grande partie de ces\pbelles animations d'attaque que vous\navez\lvues.
+0x1EFC983: Quoi de neuf ? Je m'appelle Lixdel !\nJ'ai créé une grande partie de ces\pbelles animations d'attaque que vous\navez\lvues.\pVoulez-vous en faire l'expérience en\nbattant Thanasis et moi ?
 0x1EFCA27: Désolé, vous ne pouvez pas nous\ncombattre sans deux Pokémon !
 0x1EFCA57: Laissez-nous vous montrer de belles\nanimations !
 0x1EFCA82: Pas encore prêt, hein ?

@@ -33,7 +33,7 @@
 0x8A9BB0: Les effets de protection sont levés\ndu côté de la cible !
 0x8A9C40: {B_ATK_NAME_WITH_PREFIX} disparaît\ninstantanément !
 0x8AA332: {STR_VAR_2} réagit à la\nmétéorite...
-0x8AA355: Veux-tu rapprocher le Deoxys de ton\néquipe\nde la météorite ?
+0x8AA355: Veux-tu rapprocher le Deoxys de ton\néquipe\pde la météorite ?
 0x8AA39F: {STR_VAR_2} a changé pour avoir des\nstats meilleures en attaque !
 0x8AA3D4: {STR_VAR_2} a changé pour avoir des\nstats meilleures en défense !
 0x8AA40A: {STR_VAR_2} a changé pour avoir une\nvitesse accrue !
@@ -50,7 +50,7 @@
 0x8AA8A2: {STR_VAR_2} est sorti des moteurs.
 0x8AA8BE: {STR_VAR_2} a oublié {STR_VAR_3} !
 0x8AA8CC: {STR_VAR_2} apprend {STR_VAR_3} !
-0x8AA8DB: {STR_VAR_2} essaie d'apprendre\n{STR_VAR_3}.\nMais il ne peut pas apprendre plus de\nquatre capacités.\nOublier une capacité pour faire de la\nplace à {STR_VAR_3} ?
+0x8AA8DB: {STR_VAR_2} essaie d'apprendre\n{STR_VAR_3}.\pMais il ne peut pas apprendre plus de\nquatre capacités.\pOublier une capacité pour faire de la\nplace à {STR_VAR_3} ?
 0x8AA96D: Ce Motisma est déjà entré dans ce\nmoteur.
 0x8AA9A2: {STR_VAR_2} n'est pas entré dans un\nmoteur.
 0x8AA9BD: Ce n'est pas un Motisma valide.
@@ -85,7 +85,7 @@
 0x8B8030: {B_DEF_NAME_WITH_PREFIX} est tourmenté par\nla {B_ATK_ABILITY} de\n{B_ATK_NAME_WITH_PREFIX} !
 0x8B8180: {B_ATK_NAME_WITH_PREFIX} trouve un\n{B_LAST_ITEM} avec {B_ATK_ABILITY} !
 0x8B8280: {B_ATK_NAME_WITH_PREFIX} récolte un\n{B_LAST_ITEM} grâce à\n{B_ATK_ABILITY} !
-0x8B84A0: La {B_ATK_ABILITY} de\n{B_ATK_NAME_WITH_PREFIX} rend ton équipe trop\nnerveuse pour manger des Baies !
+0x8B84A0: La {B_ATK_ABILITY} de\n{B_ATK_NAME_WITH_PREFIX} rend ton équipe trop\lnerveuse pour manger des Baies !
 0x8B84E0: La {B_ATK_ABILITY} de\n{B_ATK_NAME_WITH_PREFIX} rend l'équipe adverse\nnerveuse : impossible de manger des\nBaies !
 0x8B8630: {B_DEF_NAME_WITH_PREFIX} s'approprie\n{B_DEF_ABILITY} !
 0x8B8790: {B_SCR_ACTIVE_NAME_WITH_PREFIX} utilise le\n{B_LAST_ITEM} pour s'exciter !
@@ -120,14 +120,14 @@
 0x8BA000: La brume tourbillonne sur le terrain !
 0x8BA080: Le terrain devient étrange !
 0x8BA160: Le {B_LAST_ITEM} a renforcé la\npuissance de {PLAYER}
-0x8BA360: {B_ATK_NAME_WITH_PREFIX} partage son\n{B_LAST_ITEM} avec\n{B_DEF_NAME_WITH_PREFIX} grâce à {B_ATK_ABILITY} !
+0x8BA360: {B_ATK_NAME_WITH_PREFIX} partage son\n{B_LAST_ITEM} avec\l{B_DEF_NAME_WITH_PREFIX} grâce à {B_ATK_ABILITY} !
 0x8BA883: La pluie battante cesse !
 0x8BA8B0: Le soleil brûlant s'atténue !
 0x8BA8E0: Le courant d'air mystérieux se\ndissipe !
 0x8BAEE0: Le {B_LAST_ITEM} de\n{B_ATK_NAME_WITH_PREFIX} lui permet d'agir en premier !
 0x8BB1E0: {B_SCR_ACTIVE_NAME_WITH_PREFIX} est blessé\npar les Pics !
 0x8BB200: {B_ATK_NAME_WITH_PREFIX} flotte dans l'air\ngrâce à son Ballon !
-0x8BB430: Réversion Primaire de\n{B_ATK_NAME_WITH_PREFIX} !\nIl reprend sa forme primitive !
+0x8BB430: Réversion Primaire de\n{B_ATK_NAME_WITH_PREFIX} !\pIl reprend sa forme primitive !
 0x8BBB80: {B_ATK_NAME_WITH_PREFIX} se transforme !
 0x8BBE50: L'électromagnétisme de\n{B_ATK_NAME_WITH_PREFIX} s'est dissipé !
 0x8BBE70: {B_ATK_NAME_WITH_PREFIX} est libéré de la\nLévikinésie !
@@ -149,30 +149,30 @@
 0x8BCA60: La flamme touche la poudre sur\n{B_ATK_NAME_WITH_PREFIX}, elle explose !
 0x8BCE60: {B_DEF_NAME_WITH_PREFIX} tombe tout droit !
 0x8BCFD0: {B_ATK_NAME_WITH_PREFIX} pose un\nCarapiège !
-0x8BD140: Un {RIVAL} sauvage apparaît !\n
+0x8BD140: Un {RIVAL} sauvage apparaît !\p
 0x8BD155: Le Pokémon sauvage
 0x8BD3F0: Les changements de stats de\n{B_DEF_NAME_WITH_PREFIX} sont inversés !
 0x8BD420: Les capacités de\n{B_DEF_NAME_WITH_PREFIX} sont électrifiées !
 0x8BEE00: {B_DEF_NAME_WITH_PREFIX} tombe amoureux\nà cause du Nœud Destin !
-0x8BEF20: Toison Éclat empêche\n{B_SCR_ACTIVE_NAME_WITH_PREFIX} : {UNKNOWN_STR} ne\nfonctionne pas !
+0x8BEF20: Toison Éclat empêche\n{B_SCR_ACTIVE_NAME_WITH_PREFIX} : {UNKNOWN_STR} ne\lfonctionne pas !
 0x8BF360: Le {B_LAST_ITEM} de\n{B_DEF_NAME_WITH_PREFIX} le fixe sur sa cible !
 0x8BF460: Le {B_LAST_ITEM} de\n{B_DEF_NAME_WITH_PREFIX} lui a rendu son calme !
 0x8BF9F0: L'illusion de\n{B_DEF_NAME_WITH_PREFIX} se dissipe !
 0x8C0E2D: {B_TRAINER1_NAME} n'a plus de Balls,\nalors…\n{B_TRAINER1_NAME} lance un ROCHER.
 0x8C1430: iiiiShiiShiiiiiihiiiiihiiSQiiiiiiiiiiiiiiRiiiRiiiiiBiiiSiiiiiiSAiiiSiiiiiiiiQiiiiiiiiiiiiiBQiiiiAhiihiiiiiiiSAhBiiiiiiiiiShiiiiiiiiiiiiiiRiiiRiiiiiiQiiihiSiiiBhiiiiiiiiiiiiiShiiShiiiiSiiiiiiiigiiiiiiiiiiiiiiiAhiiiiiiiiiiiiSAiiiBBQiiSiiiiiiiiBQSiiiiiiiihiRiiiiBiiiiiiiiiShiiShiiiiiBhiiSiihQiShiiiiiiiiiiiiiiRiiiRiiiiiiiiiiiSQAiiiiiiiiiiiiiiiBQiiiiiiiiiiiiiiiiiSSAhiihiiiiiiiSAhiiiiiiiiiiiiiiiSiiiiiiiiiiRiiiRiiiiiSQiiiiiiAhiRiiiiiiiiiiiiiiShiiShiiiiihiSiiiBBgiiiiiiiiiiiiiiSAhiiiiiiiiihiiiiiiiiBQiiSiiiiiiiiBQiiiiiiiiiiiihiiiiiiiiiiiiiShiiShiiiiiiiiiiiiBQiSiiiiiiiiiiiiiiiRiiiRiBhiiSiiiiiSSAiiiiiiiiiiiiiihBQiiiiihiiiQiiiiiiiiSAhiihiiiiiiiSAQSAhiiiiiiiiRiiiiiiiiiiiiiiRhiiRiiiBiiiiiiiiSAhiiiiiiiiiiiiiiiiShiiiiSQiiihiiiiiiBgiiiiiiiiiiiiiiiiSiiiiSiiiBhiiiiiiiiBQiiSiiiiiiiiiAhBQiiiiiiiiShiiiiiiiiiiiiiSiiiiiiiSiiiiiiiiiBQiiiiiiiiihiiiRiiSRiiiiiBhiiSiiiiiiSAihiiiiiiihiiiiiiiiiiiihiiSQiiiiiiiiSAiiihiiiiiiiiBQSAiiiiiiiiiRiiiiiiiiiiiiiSiiiihiiiiiiiiiiiiSAhiiiiiiiiiiiiShiiShiiiiSQiiihiiiiiiBgQiiiRiiiRiiiiiiiiiiiiSiiiBhiiiiiiiiBAhiihiiiiiiiSAhBiiiiiiiiiShiiiiiiiiSiiiiiiiiQiiiiiiiiiiiiiBQiiiiiiiiiiiiiRiiiRiiiiiBiiiSiiiiiiSAiiiiShiiShiiiiiihiiiiihiiSQiiiiiiiiBBQiiSiiiiiiiiBQSiiiiiiiihiRigiiiiiiiiiiiiiiiAhiiiiiiiiiiiiSAiiiiiiiiiiiiiShiiShiiiiSiiiiiiiiiiiiiiiiiRiiiRiiiiiiQiiihiSiiiBhiiiiiiiSSAhiihiiiiiiiSAhiiiiiiiiiiSQAiiiiiiiiiiiiiiiBQiiiiiiiiiiQiShiiiiiiiiiiiiiiRiiiRiiiiiiiiiiiiBiiiiiiiiiShiiShiiiiiBhiiSiihiiiihiiiiiiiiBQiiSiiiiiiiiBQiiiiihiSiiiBBgiiiiiiiiiiiiiiSAhiiiiiiiiiAhiRiiiiiiiiiiiiiiShiiShiiiiiiiiiiiSiiiiiiiiiiRiiiRiiiiiSQiiiiiihiiiQiiiiiiiiSAhiihiiiiiiiSAiBhiiSiiiiiSSAiiiiiiiiiiiiiihBQiiiiiiiiiBQiSiiiiiiiiiiiiiiiRiiiRiiiiiiiihiiiiiiiiiiiiiShiiShiiiiiiiSiiiiSiiiBhiiiiiiiiBQiiSiiiiihiiiiSQiiihiiiiiiBgiiiiiiiiiiiiiiiiBiiiiiiiiSAhiiiiiiiiiiiiiiiiSQSAhiiiiiiiiRiiiiiiiiiiiiiiRhiiRhiiiiiiiiiiiihiiSQiiiiiiiiSAiiihRiiSRiiiiiBhiiSiiiiiiSAihiiiiiiiiiiiiiiSiiiiiiiiiBQiiiiiiiiihiiiiiiiAhBQiiiiiiiiShiiiiiiiiiiiiiSRiiiRiiiiiiiiiiiiSiiiBhiiiiiiiiBiiiiShiiShiiiiSQiiihiiiiiiBgQiiiiiiSiiiihiiiiiiiiiiiiSAhiiiiiiiiiiiiiiiiBQSAiiiiiiiiiRiiiiiiiiiiiiiiShiiShiiiiiihiiiiihiiSQiiiiiiiiiiiiiiRiiiRiiiiiBiiiSiiiiiiSAiiiSiiiiiiiiQiiiiiiiiiiiiiBQiiiiAhiihiiiiiiiSAhBiiiiiiiiiShiiiiiiiiiiiiiRiiiRiiiiiiiiiiiiSiiiBhiiiiiiiiiiiiiShiiShiiiiSQiiihiiiiiiiiiiiBiiiSiiiihiiiiiiiiiiiiSAhiiBgQiiiiiiiiiiiBQSAiiiiiiiiiRiiiBQiiiiiiiiihiiihiiiiiiiiiiiihiiShiiiiiiiiiiiiiSRiiSRiiiiiBhiiSiSQiiiiiiiiSAiiihiiiiiiiSiiiiiiiiiiiiiSAihiiiiiiiiiiiAhBQiiiiiiiiiiiiSAhiiiiiiiiiiiiiiiiSiiiSiiiiiiiiRiiiiiiiiiiiiiiRhiiRhiiiiSQiSiiiBhiiiiiiiiBQiiSiiiiiiiiBiiiiiihiiiiiiBgiiiiiiiiiiiiiQSAhiiiiiiiiiiiiBQiSiiiiiiiiiiiiiiiRiiiRiiiiiiiihiiiiiiiiiiiiiShiiShiiiiiiiihiiiQiiiiiiiiSAhiihiiiiiiiSAiBhiiSiiiiiSSAiiiiiiiiiiiiiihBQiiiBQiiiiiiiiAhiRiiiiiiiiiiiiiiShSAhiiiiiiiiiiiiSiiiiiiiiiiRiiiRiiiShiiiiiiiihiiiiiiiiBQiiSiiiiiiiiiiSQiiihiSiiiBBgiiiiiiiiiiiiiiiiiiiSAhiiiiiiiiQiShiiiiiiiiiiiiiiiiBQiiiiiiiiiiiiiBiiiiiiiiiShiiiRiiiRiiiiiiiiiiiiiiiiSSAhiihiiiShiiiiiBhiiSiihiiSQAiiiiiiiiiiiSiiiiiiiiBQSiiiiiiiihiRiiiiiiiiiiiiiiiiiAhiiiiiiiiiiiiSAiiiiiiiiiiiiiShiiShiiiiSiiiiiiiiiiiBBQiiiRiiiRiiiiiiQiiihiSiiiBhgiiiiiiiAhiihiiiiiiiSAhBiiiiiiiiiShiiiiiiiiSiiiiiiiiQiiiiiiiiiiiiiBQiiiiiiiiiiiiiRiiiRiiiiiBiiiSiiiiiiSAiiiiShiiShiiiiiihiiiiihiiSQiiiiiiiBgQiiiiiiiiiiiBQSAiiiiiiiiiRiiiiiiiiiBiiiSiiiihiiiiiiiiiiiiSAhiiiiiiiiiiiiShiiShiiiiSQiiihiiiiiiiiiiiiRiiiRiiiiiiiiiiiiSiiiBhiiiiiiSAihiiiiiiiiiiiAhBQiiiiiiiiSQiiiiiiiiSAiiihiiiiiiiSiiiiiiiiShiiiiiiiiiiiiiSRiiSRiiiiiBhiiSiiBQiiiiiiiiihiiihiiiiiiiiiiiihiiiihiiiiiiBgiiiiiiiiiiiiiQSAhiiiiSiiiBhiiiiiiiiBQiiSiiiiiiiiBiiiiiiiiRiiiiiiiiiiiiiiRhiiRhiiiiSQiiiiiSAhiiiiiiiiiiiiiiiiSiiiSiiiiiBhiiSiiiiiSSAiiiiiiiiiiiiiihBQiiiiihiiiQiiiiiiiiSAhiihiiiiiiiSAiiiiiiiihiiiiiiiiiiiiiShiiShiiiiiiiiiiiiBQiSiiiiiiiiiiiiiiiRiiiRiiiiSQiiihiSiiiBBgiiiiiiiiiiiiiiiiShiiiiiiiihiiiiiiiiBQiiSiiiiiiSAhiiiiiiiiiiiiSiiiiiiiiiiRiiiRiiiBQiiiiiiiiAhiRiiiiiiiiiiiiiiShiShiiiiiBhiiSiihiiSQAiiiiiiiiiiiiiRiiiRiiiiiiiiiiiiiiiiSSAhiihiiiiiiBQiiiiiiiiiiiiiBiiiiiiiiiShiiiiiiSAhiiiiiiiiQiShiiiiiiiiiiiiiRiiiRiiiiiiQiiihiSiiiBhgiiiiiiiiiiiiShiiShiiiiSiiiiiiiiiiiBBQiiiiiiiiiiAhiiiiiiiiiiiiSAiiiiiiiiSiiiiiiiiBQSiiiiiiiihiRiiiiiiiiiiiiiShiiShiiiiiihiiiiihiiSQiiiiiiiiiiiiiiRiiiRiiiiiBiiiSiiiiiiSAiiiSiiiiiiiiQiiiiiiiiiiiiiBQiiiiAhiihiiiiiiiSAhBiiiiiiiiiShiiiiiiiiiiiiiShiiShiiiiiihiiiiihiiSQiiiiiiiiiiiiiiRiiiRiiiiiBiiiSiiiiiiiiiiiSiiiiiiiiQiiiiiiiiiiiiiBQiiSAAhiihiiiiiiiSAhBiiiiiiiiiShiiiBQiiiiiiiiShiiShiiiiiihiiiiihiiShiiiiiiiiiiiiiiRiiiRiiiiiBiiiSiSQiiiiiiiiSiiiiiiiiQiiiiiiiiiiiiiiiiiSAAhiihiiiiiiiSAhBiiiiiiiiiiiiiiBQiiiiiiiiShiiShiiiiiihiiiiiiiiShiiiiiiiiiiiiiiRiiiRiiiiiBiihiiSQiiiiiiiiSiiiiiiiiQiiiiiiiiiiSiiiiiiSAAhiihiiiiiiiSAhBiiiiiiiiiiiiiiBQiiiiiiiiShiiShiiiiiiiiiiiiiiiShiiiiiiiiiiiiiiRiiiRiihiiiiihiiSQiiiiiiiiSiiiiiiiiQiiiiiiBiiiSiiiiiiSAAhiihiiiiiiiSAhBQiiiiiiiiiiiiiBQiiiiiiiiShiiShiiSAhBiiiiiiiiiShiiiiiiiiiiiiiiRiiiiiihiiiiihiiSQiiiiiiiiSiiiiiiiiiRiiiiiBiiiSiiiiiiSAAhiihiiiiiiiiiiiQiiiiiiiiiiiiiBQiiiiiiiiShiiiiiiSAhBiiiiiiiiiShiiiiiiiiiiiiiShiiiiiihiiiiihiiSQiiiiiiiiSiiiiiRiiiRiiiiiBiiiSiiiiiiSAAhiihiiiiiiiiiiiQiiiiiiiiiiiiiBQiiiiiiiihiiiiiiiSAhBiiiiiiiiiShiiiiiiiiiShiiShiiiiiihiiiiihiiSQiiiiiiiiSiiiiiRiiiRiiiiiBiiiSiiiiiiSAAhiiiiiSiiiiiiiiQiiiiiiiiiiiiiBQiiiiAhiihiiiiiiiSAhBiiiiiiiiiShiiiiiiiiiShiiShiiiiiihiiiiihiiSQiiiiiiiiiiiiiiRiiiRiiiiiBiiiSiiiiiiSAiiiiiiiSiiiiiiiiQiiiiiiiiiiiiiBQiiSAAhiihiiiiiiiSAhBiiiiiiiiiShiiiiiiiiiShiiShiiiiiihiiiiihiiSQiiiiiiiiiiiiiiRiiiRiiiiiBiiiSiiiiiSQiiiiiiiiSiiiiiiiiQiiiiiiiiiiiiiiiiiSAAhiihiiiiiiiSAhBiiiiiiiiiiBQiiiiiiiiShiiShiiiiiihiiiiihiiShiiiiiiiiiiiiiiRiiiRiiiiiBiiiSiihiiSQiiiiiiiiSiiiiiiiiQiiiiiiiiiiSiiiiiiSAAhiihiiiiiiiSAhBiiiiiiiiiiBQiiiiiiiiShiiShiiiiiihiiiiiiiiShiiiiiiiiiiiiiiRiiiRiiiiiBhiiiiihiiSQiiiiiiiiSiiiiiiiiQiiiiiiBiiiSiiiiiiSAAhiihiiiiiiiSAhBiiiiiiiiiiBQiiiiiiiiShiiShiiiiiiiiiiiiiiiShiiiiiiiiiiiiiiRiiiRiiiiiihiiiiihiiSQiiiiiiiiSiiiiiiiiiRiiiiiBiiiSiiiiiiSAAhiihiiiiiiiQiiiiiiiiiiiiiBQiiiiiiiiShiiShiiSAhBiiiiiiiiiShiiiiiiiiiiiiiiRiiShiiiiiihiiiiihiiSQiiiiiiiiSiiiiiRiiiRiiiiiBiiiSiiiiiiSAAhiihiiiiiiiQiiiiiiiiiiiiiBQiiiiiiiiShiiiiiiSAhBiiiiiiiiiShiiiiiiiiiiiiiShiiShiiiiiihiiiiihiiSQiiiiiiiiSiiiiiRiiiRiiiiiBiiiSiiiiiiSAAhiiiiiiiiiiQiiiiiiiiiiiiiBQiiiiiiiihiiiiiiiSAhBiiiiiiiiiShiiiiiiiiiぃÑザË…ÑザËぃßザË…ßザËぃàザË…àザËぃáザË…áザËぃねザË…ねザËぃçザË…çザËぃèザË…èザËぃéザË…éザËぃêザË…êザËぃëザË…ëザËぃìザË…ìザËぃまザË…まザËぃîザË…îザËぃïザË…ïザËぃòザË…òザËぃóザË…óザËぃôザË…ôザËぃœザË…œザËぃùザË…ùザËぃúザË…úザËぃûザË…ûザËぃñザË…ñザËぃºザË…ºザËぃªザË…ªザË ヤºËÂ Ê lÀà Œ ÀÈぞÚœËÇ ÔÀVÀÎ Ç ÀÈタヨºËÈ まÁ{COLOR}Â Ç  ÈっêどËÂ ÊÂ?ÀÊ ô  Èぃ{SUPER_ER}ザËÇ ÔÇ, ぃ Ç ÀÈŒîÎ ぃ  :ÀVÀÚïîÙÇÀŒŒ  ŒÂïŒ  ŒÁŒ ï ŒÇ ÙÙîÙŒまÁŒゼ まÙŒ Œó ÂîªŒÂuŒáîま ÂÀっÂŒÙタÎÄŒá:ぜŒヒŒú îÁ ぱzlぜィÂっぜÚŒご ゼ ÂŒまÙïŒŒÉ 3 ポ !っI{SUPER_E}Œぁ ぞÙÇぃùÙÀ¥ŒテŒŒÔŒéÀŒÁ ÂŒÊGFÂダÊÀだぞÙÙぞgDぃÂぞîポっÀŒぴっぃŒÊÇK{SUPER_RE}じィÀòぢ ÀざÁ ÂF:ïタYòÂÚÙÙÂS:çゾÀぞ{LV}:ÛゾヌÚ{SUPER_RE}ポォ…ÀででÙÙÙ:まっës Â:ê{SUPER_RE}{LEFT_ARROW}ôô:ぜィEŒnü:áFナ:k{SUPER_RE}Àô:だっぐò{UP_ARROW}Ç ソぅE:ÀŒペででÀ.R:ぜィÀÙぇ:ÛダRîÀぉ Ñ:ねぃéÑぅ ぜ Âk:Àミ1ぞÀF:àだボÀ\lï\nばÙ どÙÙïŒR:ÂÙフÙÚÂぞÂづぃÓ…À ÑbÁヂタÒだ Âぢ ÂŒºÂク{LV} ÍぞŒÙミÀぢでÚ-ÁヨÑ ラÚぞァ…ぷŒÔぅ\n éミÂŒFっÂÙオmづ{SUPER_RE}ぜïげ îタÂÑëŒÛÂ óÂね ï{LV}ÙぱÛぁŒÙでテÇ LŒ5ïÙÙÙ2ミÀィ RïÑïÙぅÑだ! /ó がÑŒºï à{SUPER_RE}óZîÄタチぅŒべòŒ,ÑÙじÁÂÀÚÙぁŒR ºぅŒ&Eぅ{LV}ò ÊÀ¥ o =ÚざÇHVぃ‘ぅェÀÁヘÁî îÍÂÑ{LV}ÚÁブîKŒ èÚエïŒ4Â &Á ÂÀîËÙÚぅî ヅîÀÑがÙóÚÂîÂï:ÂŒÂŒツkっÂ ゴÁ ピっÂî7ぃ{LEFT_ARROW} ÂぽぢモこぞôぞÛŒぞぞúぞÂソï Âだダ{SUPER_RE}XÔŒÀŒカだœ▶Àà:ÀィÀÁ{LV}>À2Œ·Úズ{UNKNOWN_STR}>ÚbっジヂÎÀぺ Âï{SUPER_RE}Âüだ<ÙïÀi{SUPER_RE}ÂÂŒÂÙoで
 0x8C5720: Supprimer le brouillard.
-0x8C57B4: {STR_VAR_1} utilise {STR_VAR_2} !\nMais il n'y avait pas de brouillard\nà dissiper…
-0x8C8DA0: {B_CURRENT_MOVE} ne peut pas être\nutilisée sous Gravité !\n
-0x8C8DD0: Les capacités sonores sont\ninutilisables après Étranglement !\n
-0x8C8E10: {B_CURRENT_MOVE} ne peut pas être\nutilisée après Anti-Soin !\n
+0x8C57B4: {STR_VAR_1} utilise {STR_VAR_2} !\pMais il n'y avait pas de brouillard\nà dissiper…
+0x8C8DA0: {B_CURRENT_MOVE} ne peut pas être\nutilisée sous Gravité !\p
+0x8C8DD0: Les capacités sonores sont\ninutilisables après Étranglement !\p
+0x8C8E10: {B_CURRENT_MOVE} ne peut pas être\nutilisée après Anti-Soin !\p
 0x8C8FF0: {B_DEF_NAME_WITH_PREFIX} se ressaisit !
 0x8C9050: {B_DEF_NAME_WITH_PREFIX}\na accepté l'offre aimable !
 0x8C9070: La capacité de\n{B_DEF_NAME_WITH_PREFIX} a été reportée !
 0x8C976E: Capturez pour plus d'infos !
 0x8C9A17: {STR_VAR_1} est plus amical.\nSa base {STR_VAR_2} ne peut plus\nbaisser.
-0x8C9A4C: {STR_VAR_1} t'adore !\nSa base {STR_VAR_2} a baissé !
+0x8C9A4C: {STR_VAR_1} t'adore !\pSa base {STR_VAR_2} a baissé !
 0x8CA5E0: Le {B_LAST_ITEM} de\n{B_DEF_NAME_WITH_PREFIX} a restauré sa santé !
-0x8CA792: Tu ne te sens pas mieux\nmaintenant, ma chérie ?\nPrête à faire la course pour le\nProf. Log ?
+0x8CA792: Tu ne te sens pas mieux\nmaintenant, ma chérie ?\pPrête à faire la course pour le\nProf. Log ?
 0x8CA7EF: Snif…\nJe savais que ce jour viendrait où\ntu quitterais la maison…\nLa télé le disait.\nSi seulement ton père pouvait te voir\nmaintenant… il serait si fier !\nEh bien, si tu cours pour le Prof.\nLog, il te faudra ça !
 0x8CA8C3: C'est la fonction {COLOR}ÉJournal de\nQuêtes{COLOR}Ç pour ton Super Cube !\nElle suit tout ce qu'on te demande !\nOh, et avant d'oublier, tu as laissé\nun composant clé de ton Super Cube\nsur le sol de ta chambre.\nÇa ne servait pas avant, mais comme\ntu as maintenant ton propre Pokémon,\ntu en auras besoin pour utiliser des\nobjets en combat.
 0x8CAA11: {COLOR}Á{PLAYER} reçoit le Module Combat du\nSuper Cube de Maman !
@@ -180,71 +180,71 @@
 0x8CAF99: Récupère mon colis au\n{COLOR}ÉMagasin Pokémon de Bellinville{COLOR}Ë,\n{PLAYER}.\nJ'en ai besoin, et toi seul peux\nl'obtenir.
 0x8CAFFD: Oh, {PLAYER} !\nTu as rapporté mon colis !
 0x8CB023: {PLAYER} livre le colis.
-0x8CB03C: Ah !\nUn envoi de mon ami Chen, dans la\nrégion de Kanto !\nVoyons voir…\nPoké Balls, Pokédex… et… hein ?\nOù sont les Master Balls ?\nAs-tu ouvert ce colis et pris\nquelque chose, {PLAYER} ?
-0x8CB0FF: Vraiment ?\nTa mère ne t'a jamais appris à ne pas\nouvrir le courrier des autres ?
-0x8CB14B: Alors où sont mes Master Balls ?\nQuelqu'un a forcément fouillé là\ndedans !
+0x8CB03C: Ah !\pUn envoi de mon ami Chen, dans la\nrégion de Kanto !\pVoyons voir…\pPoké Balls, Pokédex… et… hein ?\nOù sont les Master Balls ?\pAs-tu ouvert ce colis et pris\nquelque chose, {PLAYER} ?
+0x8CB0FF: Vraiment ?\pTa mère ne t'a jamais appris à ne pas\nouvrir le courrier des autres ?
+0x8CB14B: Alors où sont mes Master Balls ?\pQuelqu'un a forcément fouillé là\ndedans !
 0x8CB199: …\nAh…\nJe vois.\nTu as récupéré mon colis sur des\nvoyous…\nIls ont dû prendre les Master Balls…\n…
-0x8CB1FD: Quoi !?\nTu les as vus en utiliser une pour\ncapturer Artikodin ?\nHmm…\nSi j'ai raison, on est peut-être en\ngrand danger…
+0x8CB1FD: Quoi !?\pTu les as vus en utiliser une pour\ncapturer Artikodin ?\pHmm…\pSi j'ai raison, on est peut-être en\ngrand danger…
 0x8CB260: J'ai une autre course pour toi,\n{PLAYER}.\nUn vieil ami à moi vit à\n{COLOR}ÉBourg Dresco{COLOR}Ë.\nIl connaît bien l'histoire de\nBorrius.\nJe veux que tu lui racontes tout ce\nqui s'est passé jusque-là.\nJ'ai une théorie sur ce qui se\ntrame, mais j'ai besoin qu'il la\nconfirme.\nTu as tes propres Pokémon, ça ne\ndevrait pas être trop difficile.\nTu peux atteindre {COLOR}ÉBourg Dresco{COLOR}Ë en\npassant par la {COLOR}ÉGrotte\nStalactite{COLOR}Ë.
 0x8CB3F5: Oh !\nQuel étourdi !\nComment te demander de trouver la\n{COLOR}ÉGrotte Stalactite{COLOR}Ë si tu n'en connais\npas le chemin ?\nCette {COLOR}ÉCarte{COLOR}Ë devrait beaucoup\nt'aider !
-0x8CB47B: Et tu sais quoi ?\nSi tu vas à Bourg Dresco, tu devrais\nm'aider pour une autre tâche !\nMon ami Chen m'a demandé de donner\nson Pokédex à deux Dresseurs.\nC'est une encyclopédie high-tech\npour enregistrer les données de\nPokémon.\nApparemment, Borrius regorge de\nPokémon qu'on ne trouve pas à\nKanto.
+0x8CB47B: Et tu sais quoi ?\pSi tu vas à Bourg Dresco, tu devrais\nm'aider pour une autre tâche !\pMon ami Chen m'a demandé de donner\nson Pokédex à deux Dresseurs.\pC'est une encyclopédie high-tech\npour enregistrer les données de\lPokémon.\pApparemment, Borrius regorge de\nPokémon qu'on ne trouve pas à\lKanto.
 0x8CB5A8: {COLOR}Á{PLAYER} reçoit le Pokédex du\nProf. Log !
-0x8CB5D3: On ne peut pas avoir des données\nprécises en ne voyant qu'un Pokémon.\nIl faut le capturer pour des données\ncomplètes.\nVoici donc quelques outils pour\nattraper des Pokémon sauvages.
+0x8CB5D3: On ne peut pas avoir des données\nprécises en ne voyant qu'un Pokémon.\pIl faut le capturer pour des données\ncomplètes.\pVoici donc quelques outils pour\nattraper des Pokémon sauvages.
 0x8CB66F: {COLOR}Á{PLAYER} reçoit 5 Poké Balls de\nLog !
-0x8CB695: Si tu ne sais pas capturer les\nPokémon sauvages, un de mes amis sur\nla Route 1 peut te montrer.
-0x8CB6F7: Oh !\nMa mémoire flanche… j'ai encore une\nchose à te donner.\nLa prochaine fois que tu verras\n{RIVAL}, donne-lui ce Pokédex.
-0x8CB773: Il est plutôt froid avec moi depuis\nque ses parents me l'ont confié\nenfant, mais il semble bien\ns'entendre avec toi.\nJe suis sûr qu'avec le Pokédex, il\naccepterait d'aider.
-0x8CB82C: S'il te plaît, rends visite à mon ami\nà {COLOR}ÉBourg Dresco{COLOR}Ë, {PLAYER}.\nJe compte sur toi.
+0x8CB695: Si tu ne sais pas capturer les\nPokémon sauvages, un de mes amis sur\lla Route 1 peut te montrer.
+0x8CB6F7: Oh !\pMa mémoire flanche… j'ai encore une\nchose à te donner.\pLa prochaine fois que tu verras\n{RIVAL}, donne-lui ce Pokédex.
+0x8CB773: Il est plutôt froid avec moi depuis\nque ses parents me l'ont confié\lenfant, mais il semble bien\ls'entendre avec toi.\pJe suis sûr qu'avec le Pokédex, il\naccepterait d'aider.
+0x8CB82C: S'il te plaît, rends visite à mon ami\nà {COLOR}ÉBourg Dresco{COLOR}Ë, {PLAYER}.\pJe compte sur toi.
 0x8CB872: {PLAYER}, tu dois vite foncer au\n{COLOR}ÉMont Thundercap{COLOR}Ë !\nSi les Ombres y arrivent avant toi,\nBorrius est foutu !\nPars au nord de la ville et prends\nl'{COLOR}ÉAutoroute SES{COLOR}Ë vers le\n{COLOR}Ésud{COLOR}Ë pour gagner du temps.
-0x8CB932: Avec Électhor en leur possession,\nil ne reste aux Ombres qu'à réunir\nles trois oiseaux aux {COLOR}ÉRuines du\nVide{COLOR}Ë pour libérer la force\nobscure.\nS'ils réussissent et brisent le\nsceau…\nJe n'ose y penser.\nDépêche-toi d'y aller avec Jax pour\nfaire une dernière tentative.\nL'avenir est entre tes mains,\n{PLAYER} !
-0x8CBA7A: Maintenant que la force obscure est\nlibérée, notre fin est proche.\nMais en attendant, tout ce qu'on\npeut faire, c'est vivre normalement.
-0x8CBAEC: {PLAYER} !\nTu as sauvé Borrius !\nTu nous as tous sauvés !\nMerci !\nTon père serait fier de toi,\nGardien de Borrius.
-0x8CBB58: Malheureusement, {PLAYER}, je n'ai\nplus d'autres courses pour toi.\nAs-tu pensé à défier la\n{COLOR}ÉLigue Pokémon{COLOR}Ë ?
+0x8CB932: Avec Électhor en leur possession,\nil ne reste aux Ombres qu'à réunir\lles trois oiseaux aux {COLOR}ÉRuines du\lVide{COLOR}Ë pour libérer la force\pobscure.\nS'ils réussissent et brisent le\psceau…\nJe n'ose y penser.\pDépêche-toi d'y aller avec Jax pour\nfaire une dernière tentative.\pL'avenir est entre tes mains,\n{PLAYER} !
+0x8CBA7A: Maintenant que la force obscure est\nlibérée, notre fin est proche.\pMais en attendant, tout ce qu'on\npeut faire, c'est vivre normalement.
+0x8CBAEC: {PLAYER} !\pTu as sauvé Borrius !\nTu nous as tous sauvés !\pMerci !\pTon père serait fier de toi,\nGardien de Borrius.
+0x8CBB58: Malheureusement, {PLAYER}, je n'ai\nplus d'autres courses pour toi.\pAs-tu pensé à défier la\n{COLOR}ÉLigue Pokémon{COLOR}Ë ?
 0x8CC34C: Ê à ûィ ÁAppuie sur {COLOR}ÉStart{COLOR}Á pour passer\nles cinématiques suivantes.
 0x8CC387: Il y a longtemps…
 0x8CC391: La région de Borrius fut jadis prise\ndans une grande guerre contre la\nrégion de Kalos.\n\nCe fut une guerre brutale, durant de\nnombreuses années.\n\nPendant ce temps, Kalos parvint à\nprendre l'avantage…
-0x8CC43B: Au bord de la défaite, le roi de\nBorrius invoqua une force obscure\npour renverser la situation…
-0x8CC49C: L'avantage de l'armée kalosienne fut\nperdu presque instantanément.\nDès son arrivée sur le champ de\nbataille, la force obscure créa des\nportails et renvoya l'armée\ninvasion en Kalos…
+0x8CC43B: Au bord de la défaite, le roi de\nBorrius invoqua une force obscure\lpour renverser la situation…
+0x8CC49C: L'avantage de l'armée kalosienne fut\nperdu presque instantanément.\pDès son arrivée sur le champ de\nbataille, la force obscure créa des\lportails et renvoya l'armée\linvasion en Kalos…
 0x8CC55B: Avec l'armée étrangère partie, la\nguerre semblait terminée pour\nBorrius.\nCependant, le roi, avide de pouvoir,\nenvoya aussi l'armée borienne à\ntravers les portails…
-0x8CC605: La guerre continua de faire rage à\nKalos pendant plusieurs années.\nBeaucoup d'hommes et de Pokémon\nfurent enrôlés et périrent sur le\nchamp de bataille.\nL'un de ces Pokémon était un ami\ncher du roi de Kalos…
-0x8CC6E1: Submergé de chagrin, le roi bâtit un\ndispositif pour le ramener à la vie,\ns'offrant au passage l'immortalité.
-0x8CC752: Mais cet événement traumatisant le\nmarqua et le remplit de colère.\nIncapable de pardonner au monde qui\navait blessé son précieux Pokémon,\nil transforma sa machine en une arme\ngéante : l'Arme Suprême.\nLe roi devint un vecteur de\ndestruction qui mit fin à la guerre.
+0x8CC605: La guerre continua de faire rage à\nKalos pendant plusieurs années.\pBeaucoup d'hommes et de Pokémon\nfurent enrôlés et périrent sur le\lchamp de bataille.\pL'un de ces Pokémon était un ami\ncher du roi de Kalos…
+0x8CC6E1: Submergé de chagrin, le roi bâtit un\ndispositif pour le ramener à la vie,\ls'offrant au passage l'immortalité.
+0x8CC752: Mais cet événement traumatisant le\nmarqua et le remplit de colère.\pIncapable de pardonner au monde qui\navait blessé son précieux Pokémon,\lil transforma sa machine en une arme\lgéante : l'Arme Suprême.\pLe roi devint un vecteur de\ndestruction qui mit fin à la guerre.
 0x8CC850: La guerre terminée, les quelques\nsoldats borriens restants\nrentrèrent chez eux.\nLe Pokémon du roi le quitta, et le\nchamp de bataille redevint\nsilencieux…
 0x8CC8DB: Pourtant, la paix n'était pas encore\nlà.
-0x8CC8F9: La force obscure de Borrius voulait\nune compensation pour son aide.\nLe roi n'ayant rien à offrir, la\nforce obscure, furieuse, commença à\ndétruire villes et villages pour le\nplaisir.
-0x8CC9B2: Pour tenter de l'arrêter, le roi de\nBorrius rassembla les Pokémon\nlégendaires :
+0x8CC8F9: La force obscure de Borrius voulait\nune compensation pour son aide.\pLe roi n'ayant rien à offrir, la\nforce obscure, furieuse, commença à\pdétruire villes et villages pour le\nplaisir.
+0x8CC9B2: Pour tenter de l'arrêter, le roi de\nBorrius rassembla les Pokémon\llégendaires :
 0x8CCA05: Artikodin !
 0x8CCA10: Électhor !
 0x8CCA18: Sulfura !
 0x8CCA21: Avec la puissance combinée des trois\noiseaux et une bouteille divine\nremise par Arceus, créateur de tous\nles Pokémon, la force obscure fut\nscellée.
 0x8CCAAC: Elle devint l'ombre d'elle-même.
-0x8CCAD3: Privée de sa puissance, elle fut\nconfiée au roi et surveillée par sa\nlignée, jusqu'à un jour fatidique…
-0x8CCB3E: Privée de sa puissance, elle fut\nconfiée au roi et surveillée par sa\nlignée, jusqu'à ce jour.
+0x8CCAD3: Privée de sa puissance, elle fut\nconfiée au roi et surveillée par sa\llignée, jusqu'à un jour fatidique…
+0x8CCB3E: Privée de sa puissance, elle fut\nconfiée au roi et surveillée par sa\llignée, jusqu'à ce jour.
 0x8CCBA6: Il y a 16 ans
 0x8CCBBF: Ailleurs
-0x8CCCD8: ûィ Á???: {COLOR}ËArceus…\nJe ne peux pas continuer ainsi…
-0x8CCD09: Ce Pokémon…\nJe sais que je dois le surveiller,\nmais là où je vais, il ne peut pas\nvenir !
-0x8CCD61: Je sais que je lui ai dit qu'utiliser\nson pouvoir serait une mauvaise idée,\nmais j'ai peur que bientôt il ne\nm'écoute plus…
+0x8CCCD8: ûィ Á???: {COLOR}ËArceus…\pJe ne peux pas continuer ainsi…
+0x8CCD09: Ce Pokémon…\pJe sais que je dois le surveiller,\nmais là où je vais, il ne peut pas\lvenir !
+0x8CCD61: Je sais que je lui ai dit qu'utiliser\nson pouvoir serait une mauvaise idée,\lmais j'ai peur que bientôt il ne\lm'écoute plus…
 0x8CCDD2: C'est pour ça que je dois faire ça !
 0x8CCDF4: Il est parti…
-0x8CCDFF: Il est temps que tu partes aussi,\nArceus…\nJe ne veux pas que tu voies ce qui\nva suivre…\nPromets-moi juste une chose…\nVeille sur mon enfant…
+0x8CCDFF: Il est temps que tu partes aussi,\nArceus…\pJe ne veux pas que tu voies ce qui\nva suivre…\pPromets-moi juste une chose…\pVeille sur mon enfant…
 0x8CD035: Ë È ûィ Á???: {COLOR}ËARGH !\nComment accomplir le vœu de Papy si\nje ne peux même pas capturer un\nseul Pokémon !
-0x8CD093: {COLOR}ËJ'ai promis à Papy d'éradiquer la\nsource de la souffrance, mais à ce\nstade, je ne vois pas comment ce\nserait possible !
-0x8CD10E: {COLOR}ËS'il te plaît, Arceus !\nSi tu existes, donne-moi un signe que\nça va s'arranger !
-0x8CD15F: {COLOR}ËUne Poké Ball ? Ici ? Maintenant ?\nArceus existe donc vraiment…
-0x8CD1B2: {COLOR}ËOn dirait, Papy, qu'il y a peut-être\nun moyen finalement…\nIl est temps que la fleur éternelle\nrefleurisse…
+0x8CD093: {COLOR}ËJ'ai promis à Papy d'éradiquer la\nsource de la souffrance, mais à ce\lstade, je ne vois pas comment ce\lserait possible !
+0x8CD10E: {COLOR}ËS'il te plaît, Arceus !\pSi tu existes, donne-moi un signe que\nça va s'arranger !
+0x8CD15F: {COLOR}ËUne Poké Ball ? Ici ? Maintenant ?\pArceus existe donc vraiment…
+0x8CD1B2: {COLOR}ËOn dirait, Papy, qu'il y a peut-être\nun moyen finalement…\pIl est temps que la fleur éternelle\nrefleurisse…
 0x8CD6A6: Hmm…\nVraiment…\nIl y a un programme spécial à la télé\nqui pourrait raviver ta mémoire.
 0x8CD70A: Excellent.\nComme tu le sais, la force obscure de\nBorrius a été scellée il y a des\nannées.\nMais on dit que si les trois Pokémon\nlégendaires utilisés pour le sceller\nsont réunis aux {COLOR}ÉRuines du Vide{COLOR}Ë, son\npouvoir peut être libéré à nouveau.\nC'est sûrement ce que cherchent les\nvoyous que tu as croisés.\nIls veulent replonger Borrius dans\nles ombres.\nSi j'ai raison, leur prochaine cible\nsera…
 0x8CD8A6: ??? : {COLOR}ËPapy Arthur !
 0x8CD8BE: Arthur : {COLOR}ËQu'y a-t-il, Jax ?
-0x8CD8DC: Jax : {COLOR}ËJe viens de voir ces types en noir\nse diriger vers le {COLOR}ÉVolcan\nCendreux{COLOR}Ë !
+0x8CD8DC: Jax : {COLOR}ËJe viens de voir ces types en noir\nse diriger vers le {COLOR}ÉVolcan\lCendreux{COLOR}Ë !
 0x8CD935: Arthur : {COLOR}ËJ'expliquais justement à\n{PLAYER} ici leur but possible, et\nça confirme mes soupçons.\nIls veulent l'oiseau légendaire\n{COLOR}ÉSulfura{COLOR}Ë.
 0x8CD9D8: Jax : {COLOR}ËJe tente de les arrêter ?
 0x8CD9FC: Arthur : {COLOR}ËPas encore, Jax.\nJe veux d'abord que tu voles aux\n{COLOR}ÉHauteurs Gelées{COLOR}Ë et que tu ramènes le\nProf. Log ici.
 0x8CDA59: Jax : {COLOR}ËTout de suite, Papy !
 0x8CDA75: Log : {COLOR}ËHmm…\nC'est aussi grave que je le craignais…\nQue proposes-tu, Arthur ?
 0x8CDAD4: Arthur : {COLOR}ËJe pense que Jax peut régler le\nproblème.\nIl a déjà fait ses preuves.\nJe comptais l'envoyer affronter ces\n« Ombres » pour les arrêter avant\nqu'ils n'atteignent Sulfura.
-0x8CDB97: Log : {COLOR}ËBien sûr.\nLa police doit déjà être en route,\nmais son aide pourrait leur être\nprécieuse.
+0x8CDB97: Log : {COLOR}ËBien sûr.\pLa police doit déjà être en route,\nmais son aide pourrait leur être\lprécieuse.
 0x8CDC07: Jax : {COLOR}ËCompris, Papy.\nJe pars.\nJe les arrêterai et sauverai\nSulfura !
-0x8CDC55: Log : {COLOR}ËBon, {PLAYER}, je pense\nqu'il est temps que tu rentres.\nTu as terminé ta course, et ta mère\ndoit s'inquiéter.
+0x8CDC55: Log : {COLOR}ËBon, {PLAYER}, je pense\nqu'il est temps que tu rentres.\pTu as terminé ta course, et ta mère\ndoit s'inquiéter.
 0x8CDCD3: Arthur : {COLOR}ËAttends un instant,\nLog.\nJe suis sûr que {PLAYER} pourrait\napprendre beaucoup en voyant Jax\nse mesurer aux Ombres.\nJe pense que tu devrais laisser\n{STR_VAR_1} y aller.

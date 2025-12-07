@@ -2,20 +2,20 @@
 0x7D9D41: Marlon : {COLOR}ËPas encore.\pJe dois d'abord détruire tous les\nGuerriers de l'Ombre que nous avons\ncréés.\pSinon je serai forcé de vivre\npour l'éternité et de regarder mes\nenfants mourir avant moi...
 0x7D9DE8: Zeph : {COLOR}ËQu'est-ce que tu racontes,\nMarlon ?\pCes Guerriers de l'Ombre sont les\nmeilleures armes qu'il reste à\nl'Ombre !\pMais même si je voulais suivre ta\nmission ridicule, je ne pourrais\npas.\pLa Lumière du Néant en a pris la\nplupart.\pLes seuls restants sont encore en\nsynthèse au labo.\pC'est ce qui arrive quand on stocke\ntout au même endroit...
 0x7D9F57: Marlon : {COLOR}ËJe sais.\pJ'étais là avec {PLAYER}.\pOn a affronté Véga et la Lumière du\nNéant ensemble.
-0x7D9FBA: Zeph : {COLOR}Ë{PLAYER} !\p{STR_VAR_3} est mort !\pJe l'ai vu brûler vif !\pTu ne peux pas sérieusement croire\nque tu as fait équipe avec quelqu'un\nde mort !
+0x7D9FBA: Zeph : {COLOR}Ë{PLAYER} !\p{STR_VAR_3} est mort !\pJe l'ai vu brûler vif !\pTu ne peux pas sérieusement croire\nque tu as fait équipe avec quelqu'un\lde mort !
 0x7DA048: Marlon : {COLOR}ËJe peux expliquer, Zeph.\pIl faut juste que tu te calmes\nd'abord.
 0x7DA08D: {COLOR}ËQu'est-ce que...\pAttends...\pC'est toi, {PLAYER} ?\pJe t'avais dit de ne pas venir ici !\pTu viens de faire une énorme erreur...
 0x7DA0FF: Zeph : {COLOR}Ë{PLAYER} !?\pComment es-tu encore en vie ?\pJe t'ai vu brûler !\pJe pensais que Marlon mentait, mais\nje dois le croire en voyant ton\nvisage sous cette capuche !\pTu vas payer pour les dégâts causés !\pTout ce qui est arrivé... c'est à\ncause de toi !
 0x7DA220: Zeph : {COLOR}ËIl est temps que tu brûles encore !
 0x7DA24A: Arrrrgh !
 0x7DA253: Zeph : {COLOR}ËJ'en ai assez de toi !
-0x7DA272: Marlon : {COLOR}ËZeph !\pArrête !\pOn n'a pas le temps de se battre\nmaintenant !\p{PLAYER} n'est pas l'ennemi sur\nlequel tu dois te concentrer !\pC'est la Lumière du Néant !\pAccepte ce fait, ou j'assume le\ncommandement de ce qui reste de\nl'Ombre.
-0x7DA358: Marlon : {COLOR}ËMerci.\pBon...\pJ'ai entendu des rumeurs disant que\ntu préparais une attaque contre la\nbase de la Lumière du Néant.\pTu veux bien me briefer ?
-0x7DA3EF: Zeph : {COLOR}ËTu as bien entendu...\pUne fois que nos scientifiques\nlocaliseront leur base, l'Ombre va\nles prendre par surprise et détruire\nleur base de l'intérieur.\pMais je ne sais pas combien de temps\ncela prendra...
+0x7DA272: Marlon : {COLOR}ËZeph !\pArrête !\pOn n'a pas le temps de se battre\nmaintenant !\p{PLAYER} n'est pas l'ennemi sur\nlequel tu dois te concentrer !\pC'est la Lumière du Néant !\pAccepte ce fait, ou j'assume le\ncommandement de ce qui reste de\ll'Ombre.
+0x7DA358: Marlon : {COLOR}ËMerci.\pBon...\pJ'ai entendu des rumeurs disant que\ntu préparais une attaque contre la\lbase de la Lumière du Néant.\pTu veux bien me briefer ?
+0x7DA3EF: Zeph : {COLOR}ËTu as bien entendu...\pUne fois que nos scientifiques\nlocaliseront leur base, l'Ombre va\lles prendre par surprise et détruire\lleur base de l'intérieur.\pMais je ne sais pas combien de temps\ncela prendra...
 0x7DA4C9: Marlon : {COLOR}ËHeureusement, je sais où est leur\nbase.\pQuand j'étais au Volcan Cendreux\navec {PLAYER}, Véga a ordonné à ses\nsbires de battre en retraite vers\nBourg Vivill.\pC'est sûrement là qu'ils se\ncachent.
 0x7DA57F: Zeph : {COLOR}ËVéga, ce traître...\pJ'aurais dû savoir qu'il nous\ntrahirait...
 0x7DA5BF: {COLOR}ËJe dois confirmer avec les\nscientifiques, mais si tu as raison,\nmaintenant serait le moment parfait\npour frapper.\pAklove a emmené Hoopa à Hoenn pour\ntester sa force avant de la lâcher\nici.\pSi on détruit sa base pendant son\nabsence, il ne lui restera rien...
-0x7DA6D8: Marlon : {COLOR}ËD'accord.\pIl nous faudra toutes les forces\npossibles, alors je propose qu'on\nemmène aussi {PLAYER}.
+0x7DA6D8: Marlon : {COLOR}ËD'accord.\pIl nous faudra toutes les forces\npossibles, alors je propose qu'on\lemmène aussi {PLAYER}.
 0x7DA74A: Zeph : {COLOR}ËQuoi !?\pCe n'était pas assez d'avoir déjà\nlaissé {STR_VAR_1} t'aider avant ?\pPourquoi lui accordes-tu autant\nde confiance ?
 0x7DA7B8: Marlon : {COLOR}ËNous sommes morts tous les deux,\nZeph.\pNous étions ensemble dans l'au-delà.\pQuand Arceus m'a rendu la vie, j'ai\nappris qui était {PLAYER}...
 0x7DA831: Zeph : {COLOR}ËArceus ?\pLe Pokémon qu'Aros a capturé et\nsoumis ?
@@ -33,16 +33,16 @@
 0x7DCF16: Zeph : {COLOR}ËAvez-vous pensé à essayer de le\nramener ?
 0x7DCF55: Marlon : {COLOR}ËOui...\pEn tant que biologistes moléculaires,\non s'est dit que si quelqu'un\ny arrivait, ce serait nous.\pMais seul Arceus a vraiment le\npouvoir de ramener les morts.\pOn a dû avancer.\pPuis il y a un an, Ivory a donné\nnaissance à des jumeaux.\pLe plus beau moment de nos vies...\pDepuis, le vide dans nos cœurs est\npresque comblé...
 0x7DD0C7: Zeph : {COLOR}ËOù sont vos enfants ?
-0x7DD0ED: Ivory : {COLOR}ÇNotre ami Euler Log s'occupe d'eux\naux Hauteurs Gelées pendant notre\nvisite.
+0x7DD0ED: Ivory : {COLOR}ÇNotre ami Euler Log s'occupe d'eux\naux Hauteurs Gelées pendant notre\lvisite.
 0x7DD149: Zeph : {COLOR}ËUn ami à moi, biologiste Pokémon,\nvie aussi aux Hauteurs Gelées.\pOn l'appelle ici le « Gardien de\nBorrius ».\pIl a même capturé Arceus !\pJe crois que sa femme vient d'avoir\nun {STR_VAR_2}.\pJ'ai du mal à me souvenir du nom du\n{STR_VAR_1}...\pAu fait, comment s'appellent vos\nenfants ?
 0x7DD2A4: Ivory : {COLOR}ÇIls s'appellent {RIVAL} et Melony.\pLes plus beaux enfants du monde.
 0x7DD2FF: Zeph : {COLOR}ËEt avec de si beaux noms...
 0x7DD330: {COLOR}ËVoudriez-vous m'aider pour quelque\nchose ?
 0x7DD361: Marlon : {COLOR}ËN'importe quoi, Zeph.\nOn est là pour toi.
 0x7DD390: Zeph : {COLOR}ËJe veux votre aide pour ramener mon\nfils à la vie.
-0x7DD3CB: {COLOR}ËJe sais que c'est possible !\pAvec votre expertise et Arceus\nsous le contrôle d'Aros, peut-être\npouvons-nous le ramener !
+0x7DD3CB: {COLOR}ËJe sais que c'est possible !\pAvec votre expertise et Arceus\nsous le contrôle d'Aros, peut-être\lpouvons-nous le ramener !
 0x7DD441: Marlon : {COLOR}ËC'est impossible, Zeph !\pCrois-nous, on a essayé !
-0x7DD480: Il a fallu beaucoup d'essais, mais\nZeph a fini par nous convaincre de\nvenir aux Hauteurs Gelées et de\nl'aider.\pNous avons rencontré ton père peu\naprès.\pIl était réticent au départ, mais il\ns'est rangé après quelques années.\pÀ ce moment, il avait déjà libéré\nArceus.\pNous avons donc dû trouver une\napproche plus scientifique...
+0x7DD480: Il a fallu beaucoup d'essais, mais\nZeph a fini par nous convaincre de\lvenir aux Hauteurs Gelées et de\pl'aider.\nNous avons rencontré ton père peu\paprès.\nIl était réticent au départ, mais il\ls'est rangé après quelques années.\pÀ ce moment, il avait déjà libéré\nArceus.\pNous avons donc dû trouver une\napproche plus scientifique...
 0x7DD5C2: Zeph : {COLOR}ËOù en est-on ?
 0x7DD5E6: Ivory : {COLOR}ÇPrêts pour le premier essai, Zeph.
 0x7DD61C: Zeph : {COLOR}ËBien.\pTout le monde, à vos postes.
@@ -121,13 +121,13 @@
 0x7E857E: Laisse tomber, on dirait que tu l'as\ndéjà battue.\pBeau boulot !\pPrends ces Lunettes Sable et explore\nle Grand Désert !
 0x7E85FC: 9ま5セ ÂÇÉ ì>ンËま5セ ÂàÉÁì>ンËÔ ú>ンËÌÁÁÔ e>ンËÌÁÁC'est mon travail de garder les\ntorches allumées la nuit ici.\pLe désert peut être froid quand le\nsoleil se couche.\pCes torches sont notre seule source\nfiable de chaleur à ce moment-là.
 0x7E86D9: C'est mon travail de garder les\ntorches allumées la nuit ici.\pLe désert peut être froid maintenant\nque le soleil est couché.\pCes torches sont notre seule source\nfiable de chaleur actuellement.
-0x7E8786: C'est étrange d'avoir une forêt\npleine de rares Insecte si près d'un\ndésert.\pC'est Borrius !
+0x7E8786: C'est étrange d'avoir une forêt\npleine de rares Insecte si près d'un\ldésert.\pC'est Borrius !
 0x7E880A: Bourg Gurun\pUne ville qui a survécu au sable du\ntemps.
 0x7E8841: Tu penses pouvoir entrer ici et\nembêter les Black Emboar ?
 0x7E8885: Tu crois.
 0x7E888D: On est les Black Emboar, morveux !
 0x7E88D7: J'ai passé des années à chercher le\nsecret des Pokémon Regi !\pJ'ai fait des progrès récemment :\nRegirock doit vivre dans cette\nformation rocheuse étrange du Grand\nDésert.\pSi seulement on pouvait le libérer...
-0x7E89C1: C'est une statue du Pokémon Roche\nlégendaire, Regirock.\pIl est écrit qu'autrefois, Regirock\naidait Regigigas à former et\nassembler la région de Borrius.\pIl vit maintenant quelque part dans\nle Grand Désert.
+0x7E89C1: C'est une statue du Pokémon Roche\nlégendaire, Regirock.\pIl est écrit qu'autrefois, Regirock\naidait Regigigas à former et\lassembler la région de Borrius.\pIl vit maintenant quelque part dans\nle Grand Désert.
 0x7E8AA2: Le désert se termine assez vite en\nsortant au sud d'ici.\pCependant, la route vers Antisis et\nla Ville Portuaire n'est pas aussi\nsimple qu'on croit...
 0x7E8B55: Les maisons ici sont basées sur un\nstyle trouvé à Unys.\pElles viennent d'une ville réputée\npour sa poterie en argile\nvolcanique.\pIl y a même un maniaque qui achète\ncertaines poteries antiques très\ncher.
 0x7E8C86: Un entrepôt tout ce qu'il y a de\nplus banal.\pRien à voir ici.
@@ -157,13 +157,13 @@
 0x7E9909: Pas si mal, gamin...\nJe t'aime bien.\pÉcoute ça...\pDésormais, notre équipe s'appellera\nles Black {PLAYER} !\pOuais ! On prend ton nom plein de\ncran !\pUn nom plus sauvage pour une équipe\nplus sauvage !\pLes Black {PLAYER} !\nGwahahaha ! Génial !
 0x7E99FB: Quoi, tu veux autre chose, gamin ?\p…\pMon frère ?\pPfff, ce boulet n'arrête pas.\pIl est temps de régler ça une bonne\nfois...
 0x7E9A7C: avec toi.
-0x7E9BA7: ¿iユË¿  áèっÀ ォÁèっぅtÀMÂÔ びタラËÌÇぇÂLeader : {COLOR}ËJe t'ai dit cent fois, frangin,\narrête de chercher des noises aux\nBlack Emboar !
+0x7E9BA7: ¿iユË¿  áèっÀ ォÁèっぅtÀMÂÔ びタラËÌÇぇÂLeader : {COLOR}ËJe t'ai dit cent fois, frangin,\narrête de chercher des noises aux\lBlack Emboar !
 0x7E9C25: Frère : {COLOR}ËJe ne peux pas, James.\nTu es mon frère.\pTu comptes pour moi.\pJe ne peux pas te laisser continuer\ncomme ça !
-0x7E9CA1: James : {COLOR}ËTu dis tenir à moi, mais tu n'as pas\nde cran, frérot.\pTu envoies des dresseurs me harceler\nparce que tu as trop peur de te\nsalir les mains.
+0x7E9CA1: James : {COLOR}ËTu dis tenir à moi, mais tu n'as pas\nde cran, frérot.\pTu envoies des dresseurs me harceler\nparce que tu as trop peur de te\lsalir les mains.
 0x7E9D4B: {COLOR}ËCe gamin, {PLAYER}, a du cran !
 0x7E9D68: {COLOR}ËLaisse-moi te dire !\pPersonne ne m'a jamais démoli comme\nlui !\pJ'ai même renommé les Black Emboar\nen Black {PLAYER}, en son honneur !\pC'est un nouveau départ.\pLes Black {PLAYER} et moi partons à\nla Ville d'Antisis !\pOn dit que l'ancien gang là-bas a\nété chassé.\pMaintenant la ville est mûre pour\nles Black {PLAYER} !\pGwahahaha !
 0x7E9EC0: Frère : {COLOR}ËMais James, tu ne peux pas me laisser\nseul !
-0x7E9EFA: James : {COLOR}ËJ'ai pensé à t'intégrer, mais je\nne veux pas de quelqu'un d'aussi\nfaible dans mon gang !\pÀ la place, j'ai décidé de laisser\n{PLAYER} rejoindre nos rangs.
+0x7E9EFA: James : {COLOR}ËJ'ai pensé à t'intégrer, mais je\nne veux pas de quelqu'un d'aussi\lfaible dans mon gang !\pÀ la place, j'ai décidé de laisser\n{PLAYER} rejoindre nos rangs.
 0x7E9F91: {COLOR}ËBienvenue chez les Black {PLAYER},\ngamin !\pTous les membres doivent avoir un\nvélo, alors prends ça.
 0x7E9FDE: {COLOR}ËSi tu passes par la Ville d'Antisis,\nvient nous voir.\pOn t'accueillera à bras ouverts.
 0x7EA030: {PLAYER} reçoit une Bicyclette du\nchef des Black {PLAYER} !
@@ -178,7 +178,7 @@
 0x7EA84A: Je sens l'électricité pulser dans\nmes veines !
 0x7EA889: Je ne suis pas paralysé, mais tu\nm'as foudroyé !
 0x7EA8E3: Tu étais proche, pourtant.
-0x7EA8FB: Ce n'est pas parce que tu as allumé\nune ampoule que tu ne devras pas\nl'éteindre plus tard.
+0x7EA8FB: Ce n'est pas parce que tu as allumé\nune ampoule que tu ne devras pas\ll'éteindre plus tard.
 0x7EA953: avant de sortir de cette Arène.
 0x7EA962: ( WÀ  {UP_ARROW}8ンË“8ンËÔ B8ンËÌÉÁTu as du mal avec l'électricité ?
 0x7EA9B1: Apparemment pas !
@@ -193,7 +193,7 @@
 0x7EAB8A: Je peux collectionner des Électrik\net des Acier !\pJe les aime tous les deux !
 0x7EABF0: ( j   Ê?ンË(?ンËÔ ハ?ンËÌÉÁJe suis ton dernier adversaire avant\nGalavan.\pJ'espère que tu as des Anti-Para !
 0x7EAC5C: Tu es prêt.
-0x7EAC6A: Si tu bats le maître ingénieur de\nl'Arène de Dehara, tu es prêt pour\nGalavan.
+0x7EAC6A: Si tu bats le maître ingénieur de\nl'Arène de Dehara, tu es prêt pour\lGalavan.
 0x7EAE2B: C'est une sorte d'ampoule.\pVeux-tu l'éteindre ?
 0x7EB227: ralysé{COLOR}Ë.\pMême les types Vol ou Sol ne sont\npas tranquilles !
 0x7EB25E: sto plénières.

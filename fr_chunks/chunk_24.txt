@@ -7,7 +7,7 @@
 0x77915E: {COLOR}ËOh, autre chose.\pDès que tu rentres, on se bat.\pTu as beaucoup à apprendre en\ncombat, et je veux bien te\nmontrer deux-trois trucs.\pD'ici là, ne te fatigue pas trop.
 0x77922B: {COLOR}ËOh, autre chose.\pDès que tu rentres, on se bat.\pTu t'es dégonflé comme un Poussifeu\navant, mais tu ne te défileras pas\nla prochaine fois !\pD'ici là, ne te fatigue pas trop.
 0x7795B8: {COLOR}ËTu as rencontré le vieux Log ?\pC'est un expert des stats Pokémon\nou un truc du genre...\pJe l'ai mis au courant de ce qui\ns'est passé.
-0x779637: Log : {COLOR}ËJ'étudie tous les aspects des\nstats et taux de capture des\nPokémon.\pEt mon titre est Professeur, pas\nvieux schnock !\pPar Arceus...\pJe te l'ai déjà trop répété...\pBref, vous avez vécu une sacrée\népreuve.\pJe suis soulagé de vous savoir tous\nles deux indemnes.\pVous avez même réussi à obtenir vos\npropres Pokémon !\pJe comptais en donner un à\n{RIVAL} un jour, mais je n'ai plus à\nle faire !\pHo ho ho !
+0x779637: Log : {COLOR}ËJ'étudie tous les aspects des\nstats et taux de capture des\pPokémon.\nEt mon titre est Professeur, pas\pvieux schnock !\pPar Arceus...\nJe te l'ai déjà trop répété...\pBref, vous avez vécu une sacrée\népreuve.\pJe suis soulagé de vous savoir tous\nles deux indemnes.\pVous avez même réussi à obtenir vos\npropres Pokémon !\pJe comptais en donner un à\n{RIVAL} un jour, mais je n'ai plus à\lle faire !\pHo ho ho !
 0x7797CC: Ho ho !
 0x7797D4: {RIVAL} : {COLOR}ËUn jour ?\pÇa fait 13 ans que tu t'occupes de\nmoi, vieux !\pJe te le demande depuis Arceus sait\ncombien de temps !\pFranchement, j'ai arrêté d'y croire\nil y a des années…
 0x77EFB5: ハÍÔ G▶ラËÌÂフÁRoute 7\p{UP_ARROW} Mont Givre, Route 8\n{DOWN_ARROW} Route 9\l{RIGHT_ARROW} Route 6
@@ -19,11 +19,11 @@
 0x77F1E3: Tu es son {STR_VAR_1} !\pJe savais que ma vue ne me\ntrompait pas !\pTon père était, pour faire simple,\nun homme incroyable.\pJe suis sûr que si tu te présentais\ncomme son {STR_VAR_1}, on te\nt'accueillerait aussitôt avec\nbeaucoup d'affection.\pPeu de gens ignorent ses exploits.\pC'est dommage qu'il ait disparu.\pSi quelqu'un savait ce qui lui est\narrivé, je pourrais enfin être en\npaix.
 0x77F375: Oh.\nJe pensais vraiment que tu étais...
 0x77F3BF: Quoi ?\nTu sais ce qui est arrivé à\n{COLOR}ÉAros{COLOR}Ë ?\pS'il te plaît !\nTu dois me le dire !\p…\nIl a été réduit en cendres…\pQuitter ce monde de cette façon est\nbien triste.
-0x77F452: C'est peut-être ironique, mais je\nveux te donner cet objet pour te\nremercier de m'avoir apporté un peu\nde paix.
+0x77F452: C'est peut-être ironique, mais je\nveux te donner cet objet pour te\lremercier de m'avoir apporté un peu\lde paix.
 0x77F4C8: Si seulement quelqu'un pouvait me\ndire ce qui est arrivé à ton père…\pCela m'apporterait tellement de\nsérénité.
 0x77F52F: Bonjour, {STR_VAR_1} du légendaire\nAros.\pJ'espère que tes voyages se passent\nbien.
 0x77F57F: fille
-0x77F662: Tu savais que si tu parles aux\narbitres d'Arène avant de battre le\nChampion, ils te donneront un\ncadeau ?\pAlors ? Tu le savais ?
+0x77F662: Tu savais que si tu parles aux\narbitres d'Arène avant de battre le\lChampion, ils te donneront un\lcadeau ?\pAlors ? Tu le savais ?
 0x77FAD8: Ça m'a bien réchauffé !
 0x77FAF1: Il est toujours important de rester\nau chaud.
 0x77FB6C: J'ai senti ta puissance.
@@ -36,7 +36,7 @@
 0x77FEA2: Je mange plein de carottes pour\naméliorer ma vue.\pC'est peut-être pour ça que ma peau\ndevient orange...
 0x77FF0F: ラËÌÇフÁRoute 9, Ville de Tehl, Ville de\nFallshore, Ville d'Epidimy
 0x77FFE5: Héhé...\pTu deviens de plus en plus\npuissant, {PLAYER}.\pAttends notre prochaine rencontre.\pJe serai assez fort pour te faire\nressentir la défaite !\pMaintenant, excuse-moi, j'ai des\nchoses importantes à faire.
-0x7800BD: Log : {COLOR}ËBien sûr que j'y pensais,\n{RIVAL} !\pIl y a plein de corvées que je suis\ntrop vieux pour faire tout seul !\pC'est juste que... eh bien... quand\ntes parents t'ont laissé avec moi,\nils m'ont demandé de veiller sur toi\njusqu'à tes 18 ans...
+0x7800BD: Log : {COLOR}ËBien sûr que j'y pensais,\n{RIVAL} !\pIl y a plein de corvées que je suis\ntrop vieux pour faire tout seul !\pC'est juste que... eh bien... quand\ntes parents t'ont laissé avec moi,\lils m'ont demandé de veiller sur toi\ljusqu'à tes 18 ans...
 0x7801A4: {RIVAL} : {COLOR}ËPeu importe, Log.\nCrois ce que tu veux.
 0x7801D1: {COLOR}ËAh oui, j'allais oublier.\pMaintenant qu'on est dehors, laisse-\nmoi te montrer comment se bat un\nvrai Dresseur !
 0x780230: {COLOR}ËAh oui, j'allais oublier.\pMaintenant qu'on est dehors, laisse-\nmoi te donner quelques conseils de\ncombat.
@@ -198,15 +198,15 @@
 0x78C6EC: Mon Pokémon : vaincu !
 0x78C72C: Hé, champion en devenir ! Ça fait\nlongtemps !\pPrenez une eau fraîche pour célébrer\nvotre retour.
 0x78C889: Allez.\pN'hésite pas à parler aux\npêcheurs solitaires.\pMais ne viens pas me parler.
-0x78CED7: Parfois, si tu parles aux châteaux\nde sable sur la plage, ils\nt'attaquent !\pC'est vraiment flippant !
+0x78CED7: Parfois, si tu parles aux châteaux\nde sable sur la plage, ils\lt'attaquent !\pC'est vraiment flippant !
 0x78D2BA: {COLOR}ÇVeuillez bien les\nélever !
 0x78D31B: route.
 0x78D322: La maison à ma gauche est connue\nsous le nom de Maison des Doubles\nCombats.\pTu peux combattre les dresseurs\nà l'intérieur autant de fois que tu\nveux.\pC'est parfait pour entraîner tes\nPokémon si tu comptes tenter\nl'Arène.
-0x78D43D: 9Marlon : {COLOR}ËBien, sbires.\pNotre objectif actuel est d'aller au\n{COLOR}ÉVolcan Cendreux {COLOR}Ëet d'aider Ivory à\nobtenir le spécimen TRES.
+0x78D43D: 9Marlon : {COLOR}ËBien, sbires.\pNotre objectif actuel est d'aller au\n{COLOR}ÉVolcan Cendreux {COLOR}Ëet d'aider Ivory à\lobtenir le spécimen TRES.
 0x78D4B8: Sbires : {COLOR}ËOui, chef !
 0x78D4CD: On apprend quelque chose de neuf\nchaque jour !
 0x78D4F0: Oh, regarde-moi ce petit génie.
-0x78D50F: D'après le Badge sur ta Carte de\nDresseur, tu es devenu un dresseur\nplutôt doué.\pTu as largement dépassé le rôle de\n{STR_VAR_1} à tout faire de Log.
+0x78D50F: D'après le Badge sur ta Carte de\nDresseur, tu es devenu un dresseur\lplutôt doué.\pTu as largement dépassé le rôle de\n{STR_VAR_1} à tout faire de Log.
 0x78D67B: Grotte Stalactite
 0x78D6E6: Entrée
 0x78D78D: Centre PKMN
@@ -223,16 +223,16 @@
 0x78DA92: Beaucoup de dresseurs de la Ville\nBlizzard adorent utiliser\ndes Pokémon Vol.\pIls sont fiers de la résistance de\nleurs oiseaux au froid.
 0x78DB0B: Prends cet objet pour te sentir\ncomme eux.
 0x78DB32: Le type Vol est le seul type\nqui n'est pas au sol.\pC'est quoi l'{COLOR}Éancrage{COLOR}Ë ?\pLes Pokémon au sol subissent les\nPics et profitent des effets des\nChamps, entre autres.\pTu en apprendras plus en\ncombattant.
-0x78DC1A: L'Arène de la Ville Blizzard est la\nseule du Borrius Ouest avec une\nfaçade unique.\pL'intérieur de l'Arène ne rentrerait\npas dans une Arène normale.
+0x78DC1A: L'Arène de la Ville Blizzard est la\nseule du Borrius Ouest avec une\lfaçade unique.\pL'intérieur de l'Arène ne rentrerait\npas dans une Arène normale.
 0x78DF49: As-tu déjà entendu parler d'un\nPokémon nommé {COLOR}ÉÉvoli{COLOR}Ç ?\pIl évoluerait si tu touches\nun rocher par ici.\pOn m'a aussi dit qu'il évoluait\nsi tu le touches sur un rocher dans\nla {COLOR}ÉForêt Lugubre{COLOR}Ç.\pJ'adorerais voir un Évoli un\njour...
 0x78E02A: C'est un Évoli !\nC'est un Évoli !\pTu as un Évoli !\pTrop mignon !
 0x78E068: C'est pour m'avoir montré un\nÉvoli !\pÇa ne fait pas évoluer Évoli, mais\nje crois que ça évolue certains\nPokémon.
-0x78E0C6: Tu peux faire évoluer ton Évoli en\ntouchant un rocher ici ou dans la\n{COLOR}ÉForêt Lugubre{COLOR}Ç.
+0x78E0C6: Tu peux faire évoluer ton Évoli en\ntouchant un rocher ici ou dans la\l{COLOR}ÉForêt Lugubre{COLOR}Ç.
 0x78E11A: Ho, ho, ho !\pTa tête est impayable !\pNe t'en fais pas, le {COLOR}ÉMaître\nCoupe{COLOR}Ë m'a dit que tu venais !
 0x78E1C9: Ah, ha, ha !\nAlors j'avais raison !\pJe dis ça à chaque personne qui a\npassé ma porte depuis son appel,\nmais tu es le premier à afficher\nun air soulagé !
-0x78E287: Cette CS contient {COLOR}ÉÉclate-Roc{COLOR}Ë, si\nce n'était pas évident !\pTu peux t'en servir pour briser les\nrochers fissurés sur ta route.\pSouviens-toi, pour utiliser Éclate-\nRoc, il te faut d'abord obtenir le\n{COLOR}ÉBadge de la Ville Blizzard{COLOR}Ë.
-0x78E3D1: Oh, c'est toi !\nChampion en devenir !\pAlors, le climat ici te plaît ?\pBienvenue à l'Arène de la Ville\nBlizzard !\pOn commence avec un peu d'Eau\nFraîche.
-0x78E468: Contrairement à ce qu'on croit,\ncette Arène n'est pas de type Glace.\pC'est une Arène de type {COLOR}ÉVol{COLOR}Ë !\pEt le meilleur moyen de contrer le\nVol est de couper les ailes avec de\nla {COLOR}Églace{COLOR}Ë, des {COLOR}Éroches{COLOR}Ë ou de\nl'{COLOR}Éélectricité{COLOR}Ë !\pBonne chance !
+0x78E287: Cette CS contient {COLOR}ÉÉclate-Roc{COLOR}Ë, si\nce n'était pas évident !\pTu peux t'en servir pour briser les\nrochers fissurés sur ta route.\pSouviens-toi, pour utiliser Éclate-\nRoc, il te faut d'abord obtenir le\l{COLOR}ÉBadge de la Ville Blizzard{COLOR}Ë.
+0x78E3D1: Oh, c'est toi !\nChampion en devenir !\pAlors, le climat ici te plaît ?\nBienvenue à l'Arène de la Ville\pBlizzard !\pOn commence avec un peu d'Eau\nFraîche.
+0x78E468: Contrairement à ce qu'on croit,\ncette Arène n'est pas de type Glace.\pC'est une Arène de type {COLOR}ÉVol{COLOR}Ë !\pEt le meilleur moyen de contrer le\nVol est de couper les ailes avec de\lla {COLOR}Églace{COLOR}Ë, des {COLOR}Éroches{COLOR}Ë ou de\ll'{COLOR}Éélectricité{COLOR}Ë !\pBonne chance !
 0x78E5DD: Bien joué !\pTu as bravé la grêle avec courage et\nremporté la victoire !\pPrends ceci en récompense\nsupplémentaire.
 0x78E656: Cette Gemme peut booster une seule\ncapacité Vol en combat.\pAvec, tu pourras porter un coup\ngracieux et dévastateur !
 0x78E789: Craaah rah rah rah rah !
@@ -241,10 +241,10 @@
 0x78E7D3: Le {STR_VAR_1} s'est enfoui\ndans la neige.
 0x78E96D: ボ ユËぽÔィピ ユËÂÔ awリËÌÁフÁSalut, {STR_VAR_1}.\pTu as déjà été aussi haut\nau-dessus du sol ?\pÀ cette hauteur, les combats sont\nincroyables !\pJe ne veux pas t'ennuyer avec du\nblabla, alors allons-y !
 0x78EA3A: Incroyable !\pMême avec tout mon entraînement\nglacé ici, j'ai quand même perdu !
-0x78EA78: En preuve de ta victoire contre la\nChampionne de la Ville Blizzard,\nprends le {COLOR}ÉBadge Ailes{COLOR}Ç.
+0x78EA78: En preuve de ta victoire contre la\nChampionne de la Ville Blizzard,\lprends le {COLOR}ÉBadge Ailes{COLOR}Ç.
 0x78EAD3: {COLOR}Á{PLAYER} a reçu le Badge Ailes\nd'Alice !
 0x78EAFE: Avec le Badge Ailes, tu peux\nmaintenant briser les rochers fendus\navec grâce !\pEt tout Pokémon jusqu'au Nv. 50\nt'obéira toujours !\pPrends aussi cette CT !
 0x78EB95: La CT40 contient {COLOR}ÉAéropiqué{COLOR}Ç !\nC'est une capacité qui touche\nà coup sûr !
-0x78EBD5: Souviens-toi de ça !\pPeu importe le froid ou les éclairs,\nil y aura toujours des oiseaux très\nhaut dans le ciel !
+0x78EBD5: Souviens-toi de ça !\pPeu importe le froid ou les éclairs,\nil y aura toujours des oiseaux très\lhaut dans le ciel !
 0x78EC48: mignon
 0x78EC4E: chéri

@@ -40,7 +40,7 @@
 0x7B48D5: Gardien de Borrius !\nQuel plaisir d'être en ta présence !
 0x7B4910: Ô êべ{LEFT_ARROW}ËÌÂÁÂフÁArène Pokémon de la Ville Blizzard\nChampionne : Alice\lLa Reine des Glaces et des airs.
 0x7B495F: Ô íべ{LEFT_ARROW}ËÌÂÁÂフÁVille Blizzard\nLa ville glaciale de la montagne.
-0x7B4997: Ce phare était autrefois un symbole\nd'espoir pour les touristes.\pMais depuis que la Ville d'Antisis\nest devenue un quartier plein de\ncrimes, les touristes ne viennent\nplus dans ce port.
+0x7B4997: Ce phare était autrefois un symbole\nd'espoir pour les touristes.\pMais depuis que la Ville d'Antisis\nest devenue un quartier plein de\lcrimes, les touristes ne viennent\lplus dans ce port.
 0x7B4A3B: Le manoir propose plein de moyens de\nse soigner.\pC'est presque redondant...
 0x7B4AAC: Je suis chargé de récupérer les\ningrédients quotidiens.
 0x7B4AE1: La plupart de mes amis sont venus à\nla Ville Portuaire depuis des\nrégions lointaines.
@@ -64,7 +64,7 @@
 0x7B5BD8: Ta puissance dépasse même mon Poing\nMétéore !\pCe combat valait le coup !
 0x7B5C2F: Bon, je suppose que tu mérites de\nprendre le {COLOR}ÉBadge Chute{COLOR}Ë.\pTu l'as bien gagné.
 0x7B5C7C: {COLOR}Á{PLAYER} a reçu le Badge Chute\nde Mel !
-0x7B5CA4: Avec le Badge Chute, tout Pokémon\njusqu'au Nv. 60 t'obéira.\pIl permet aussi à tes Pokémon de\npousser des rochers lourds avec\n{COLOR}ÉForce{COLOR}Ë.\pFranchement, je ne sais pas pourquoi\nles Pokémon costauds ne peuvent pas\ndéjà le faire...\pMais que veux-tu ?\pC'est comme ça que ce monde\nfonctionne.\pBref, prends cette CT avec le badge.
+0x7B5CA4: Avec le Badge Chute, tout Pokémon\njusqu'au Nv. 60 t'obéira.\pIl permet aussi à tes Pokémon de\npousser des rochers lourds avec\p{COLOR}ÉForce{COLOR}Ë.\nFranchement, je ne sais pas pourquoi\lles Pokémon costauds ne peuvent pas\pdéjà le faire...\pMais que veux-tu ?\nC'est comme ça que ce monde\pfonctionne.\nBref, prends cette CT avec le badge.
 0x7B5DDC: La CT42 contient {COLOR}ÉFacade{COLOR}Ë.\pSi ton Pokémon est affecté par un\nstatut, cette capacité devient deux\nfois plus puissante.\pEncore plus fort que Poing\nMétéore !\pUtilise-la et fais regretter aux\nennemis de t'avoir infligé un\nstatut !
 0x7B5EA4: Maintenant que tu m'as battu, voilà\nqu'arrive une autre migraine...
 0x7B5EE6: Champion en devenir !\nComment vont les combats ?\pBienvenue à l'Arène de la Ville de\nFallshore !\pPrends de l'Eau Fraîche, tout droit\ndes bassins de l'Arène.
@@ -86,14 +86,14 @@
 0x7B8652: ÍÔ セ>{LEFT_ARROW}ËÌÉÁフÁMel, le Champion, vient souvent ici\navec certains de ses \"amis\".
 0x7B86AC: ÍÔ ,>{LEFT_ARROW}ËÌÉÁフÁApparemment, Mel a sa propre île\nprivée quelque part au large !
 0x7B870C: Tu prépares un mauvais coup ?\p...\pJe vérifie juste.\pOn ne sait jamais quand un vaurien\nva passer la porte.
-0x7B879F: ハÍÔ !ガ{LEFT_ARROW}ËÌÁフÁCe type aux cheveux rouges est\nsorti de nulle part et a pulvérisé\ntous mes Pokémon avant que je puisse\nréagir !
+0x7B879F: ハÍÔ !ガ{LEFT_ARROW}ËÌÁフÁCe type aux cheveux rouges est\nsorti de nulle part et a pulvérisé\ltous mes Pokémon avant que je puisse\lréagir !
 0x7B8858: ハÍÔ トギ{LEFT_ARROW}ËÌÂフÁRoute 1\p{UP_ARROW} Hauteurs Gelées\n{DOWN_ARROW} Bellinville, Grotte Stalactite
 0x7B8898: ハÍÔ 3ギ{LEFT_ARROW}ËÌÂフÁRoute 1\p{UP_ARROW} Hauteurs Gelées, Grotte Stalactite\n{DOWN_ARROW} Bellinville
 0x7B8908: ad\l{DOWN_ARROW} Route 3
 0x7B8989: L'Au-delà, Base de l'Ombre,\nGrand Désert, Bourg Gurun
 0x7B89FD: Deux ponts...\pSi tu me bats, je te dis lequel mène\nà la prochaine route !
 0x7B8A54: Tarmiganville se trouve sur le\n\"Plateau Thundercap\".\pMais si tu es venu voir les\norages, pas de chance.\pIls sont à l'est, du côté de la\nVille d'Epidimy.
-0x7B8B04: le vrai Mont\nThundercap.
+0x7B8B04: le vrai Mont\lThundercap.
 0x7B8B24: Ma famille possède le Manoir\nTarmigan depuis des générations.\pEn fait, mes ancêtres ont fondé\nTarmiganville !\pDu coup, j'aime bien m'asseoir ici\net regarder la ville de temps en\ntemps.\pNe fais pas comme moi, gamin.\pCarpe diem, enfant !\nCueille le jour !
 0x7B8D25: Yo, salut mon gars !\pÇa roule ?\pJe m'appelle Galavan.\pSi tu ne l'avais pas deviné, je suis\nle Champion ici.\pJe suis sûr que tu as galéré sur le\nsol électrisant, hein ?\pT'inquiète, tu ne combattras plus en\nposition de faiblesse.
 0x7B8E39: 9Depuis l'Antiquité, le mythique\nDarkrai hante cette ville.\pOn dit que chaque nuit, à une\nheure, il vient hanter les rêves\ndes foules.\pPrends garde, enfant !\nNe tombe pas dans le vide noir !
@@ -130,14 +130,14 @@
 0x7BA5F5: Tu es venu jouer, toi aussi ?\nTu veux faire un combat avec moi ?
 0x7BA63D: 9Sbire : {COLOR}ËOui, monsieur !
 0x7BA652: Marlon : {COLOR}ËAutre chose ?
-0x7BA66F: 9???: {COLOR}ËQuand ce sbire aura récupéré le\ncolis, prends-le et utilise-le pour\ncapturer le spécimen UNO.
+0x7BA66F: 9???: {COLOR}ËQuand ce sbire aura récupéré le\ncolis, prends-le et utilise-le pour\lcapturer le spécimen UNO.
 0x7BA6D0: ??? : {COLOR}ËQuant à toi, je vais faire de toi\nun exemple.\pIl est temps de payer pour ta faute.
 0x7BA731: Sbire : {COLOR}ËNon ! Pitié !\nJe suis vraiment désolé !\lJe ferai tout pour réparer ça !
 0x7BA777: ??? : {COLOR}ËDémolosse, incinère cette ordure.
 0x7BA8B4: Mais voyons comment tu t'en sors\ndans une tempête de sable !\pHa ha ha !
 0x7BA8E6: Wow, tu m'as vraiment montré\ncomment combattre en désavantage !
 0x7BA91F: Mince...\pTu m'as vraiment électrisé !\pPrends le {COLOR}ÉBadge Zap{COLOR}Ë !
-0x7BAC0A: Mais j'ai trop peur de rentrer tant\nqu'il reste des dresseurs ici qui\nn'ont pas été battus...
+0x7BAC0A: Mais j'ai trop peur de rentrer tant\nqu'il reste des dresseurs ici qui\ln'ont pas été battus...
 0x7BAC6B: À force d'errer, j'ai eu faim, alors\nj'ai mangé des champignons\nsauvages...\pIls m'ont donné des gaz, et\nmaintenant je n'arrête pas de\nroter ! Blurpf !
 0x7BACE2: Beurk ! Bwaa !\nJe crois... que ça va mieux...
 0x7BAD0B: On dit qu'il existe un Pokémon avec\ndes champignons sur le dos.\pPas par ici, toutefois.\nJe me demande s'ils sont bons ?
@@ -152,7 +152,7 @@
 0x7BAF62: ( ポ   {UP_ARROW}·{LEFT_ARROW}Ë,·{LEFT_ARROW}ËÔ y·{LEFT_ARROW}ËÌÉÁOù suis-je ? Je suis perdu ?\nQui es-tu ?\pTu es un Dresseur ?
 0x7BAFB8: Bon, on est tous les deux\nDresseurs.\nC'est un début, non ?
 0x7BAFED: Je voulais juste pique-niquer au\nMont Thundercap.\pJe ne pensais pas me perdre dans un\nendroit pareil...
-0x7BB054: ( {SUPER_RE}   ヒ…{LEFT_ARROW}Ë,…{LEFT_ARROW}ËÔ Z…{LEFT_ARROW}ËÌÉÁTout bon pique-nique a besoin d'un\njoli décor, de bonne nourriture et\nd'un combat fun !
+0x7BB054: ( {SUPER_RE}   ヒ…{LEFT_ARROW}Ë,…{LEFT_ARROW}ËÔ Z…{LEFT_ARROW}ËÌÉÁTout bon pique-nique a besoin d'un\njoli décor, de bonne nourriture et\ld'un combat fun !
 0x7BB0B8: Ce n'était pas drôle pour moi !
 0x7BB0D4: Pourquoi pique-niquer ici ?\nJe ne sais pas.\pIl n'y a pas de sens profond.
 0x7BB119: ( ザ   ぃ“{LEFT_ARROW}Ëモ“{LEFT_ARROW}ËÔ ”“{LEFT_ARROW}ËÌÉÁHum ! Tu es perdu, non ?\nJe te guiderai si tu me bats.
@@ -164,13 +164,13 @@
 0x7BB35F: Oh...\nJ'ai si peur...
 0x7BB372: J'aime les capacités utiles comme\nRugissement et Mimi-Queue.\pCe sont mes préférées.
 0x7BB3B9: La montagne...\nC'est si facile de s'y perdre.\pTu sais où on est ?
-0x7BB3FF: {PLAYER}, es-tu devenu si fort parce\nque tu es toujours avec tes\nPokémon ?\pOui ! Ça doit être ça !\nMilo va essayer comme toi !
+0x7BB3FF: {PLAYER}, es-tu devenu si fort parce\nque tu es toujours avec tes\lPokémon ?\pOui ! Ça doit être ça !\nMilo va essayer comme toi !
 0x7BB54C: ûÏユË¿  ぽ\l \n♂{LEFT_ARROW}ËÂ{COLOR}ËOh ! Voilà l'échelle !\pJe veux devenir plus fort pour ne\nplus être un trouillard.\p{PLAYER}, au revoir !\nMerci !
 0x7BB5C7: On dirait que Milo a oublié quelque\nchose...
 0x7BB651: Quoi, tu es surpris que je ne\nconstruise pas une machine ?
-0x7BB685: Les gens pensent que parce que je\nsuis un Super Nerd, je dois faire des\ntrucs de nerd.\pJe peux étudier des roches si je\nveux !\pPersonne ne me dit qui je dois être !
+0x7BB685: Les gens pensent que parce que je\nsuis un Super Nerd, je dois faire des\ltrucs de nerd.\pJe peux étudier des roches si je\pveux !\nPersonne ne me dit qui je dois être !
 0x7BB75C: Hmm...\nClairement non...
-0x7BB76E: Je jurais que mes Pokémon Électrik\nagissaient bizarrement avant d'être\nK.O...
+0x7BB76E: Je jurais que mes Pokémon Électrik\nagissaient bizarrement avant d'être\lK.O...
 0x7BB992: Élekable : {COLOR}ÉVire !
 0x7BB9A7: Nerd : {COLOR}ËÉlekable... pourquoi ne pas\nrentrer dans ta Poké Ball ?\pAllez...\nReviens !
 0x7BB9FD: Nerd : {COLOR}ËAllez...\nNe repousse pas ta Ball...
@@ -180,16 +180,16 @@
 0x7BBAC2: Nerd : {COLOR}ËMerci !\nMerci de me protéger !\pMaintenant, combats mon Élekable et\nramène-le à la raison !
 0x7BBB36: Nerd : {COLOR}ËÉlekable !\nReviens !
 0x7BBB56: {COLOR}ËEt il est parti...
-0x7BBB68: {COLOR}ËS'il te plaît... tu as été assez\ngentil pour me protéger... alors\npoursuis mon Élekable !\pC'est mon seul ami...
+0x7BBB68: {COLOR}ËS'il te plaît... tu as été assez\ngentil pour me protéger... alors\lpoursuis mon Élekable !\pC'est mon seul ami...
 0x7BBD82: Élekable : {COLOR}ÉVire !
 0x7BBD97: Nerd : {COLOR}ËÉlekable... s'il te plaît...\nécoute-moi...\pRetourne dans ta Poké Ball !
-0x7BBDDF: {COLOR}ËJe te dois une fière chandelle pour\nmon Élekable.\pJe ne peux rien te donner ici, alors\nretrouve-moi au {COLOR}ÉCentre Pokémon de la\nVille d'Epidimy{COLOR}Ë si tu veux ta\nrécompense.
+0x7BBDDF: {COLOR}ËJe te dois une fière chandelle pour\nmon Élekable.\pJe ne peux rien te donner ici, alors\nretrouve-moi au {COLOR}ÉCentre Pokémon de la\lVille d'Epidimy{COLOR}Ë si tu veux ta\lrécompense.
 0x7BBE83: ??? : {COLOR}ÇLa Ville d'Epidimy, dis-tu...\pAlors je dois y aller... pour la\nscience...
 0x7BC0B1: Quoi ?\nLog t'a donné quelque chose pour moi ?
 0x7BC0DD: {PLAYER} a remis le Pokédex à\n{RIVAL}.
 0x7BC0FF: Oh, génial.\pMaintenant, la voix de Log ne\nquittera plus ma tête.
-0x7BC13C: Bon, si Log te fait remplir ça,\nvoyons si tu es devenu plus fort\ngrâce à ça !
-0x7BC19A: Bon, si Log te fait remplir ça,\nvoyons si tes Pokémon peuvent battre\nles miens cette fois.
+0x7BC13C: Bon, si Log te fait remplir ça,\nvoyons si tu es devenu plus fort\lgrâce à ça !
+0x7BC19A: Bon, si Log te fait remplir ça,\nvoyons si tes Pokémon peuvent battre\lles miens cette fois.
 0x7BC1F4: Hmm...\pOn dirait que compléter un Pokédex\nfait vraiment la différence...
 0x7BC239: Ouais, je peux aider à remplir ce\ntruc.\pSi ça me rend plus fort, je prends.\pQuand je retrouverai mes parents,\nils seront ébahis de mes progrès.\pLa prochaine fois qu'on se croise,\nle résultat ne sera pas le même !\pJe te le promets !
 0x7BC554: Aha !\pJe t'ai coincé !\pAprès ce combat, tu es trop faible\npour fuir !\pMaintenant, rends la nourriture que\ntu as volée !
@@ -211,11 +211,11 @@
 0x7BD7E0: Vous avez envahi notre lieu de\nrencontre sans autorisation !\pJe vais vous battre pour ça !
 0x7BD82A: Tellement impoli !
 0x7BD833: 9Je vais te malmener !
-0x7BFC60: C'est toi ! Ce gamin punk d'avant !\pPas si dur maintenant, hein ?\pSans la police, tu es juste une\nmauviette pathétique !\pEt les mauviettes pathétiques\ndoivent pleurer !
+0x7BFC60: C'est toi ! Ce gamin punk d'avant !\nPas si dur maintenant, hein ?\pSans la police, tu es juste une\pmauviette pathétique !\nEt les mauviettes pathétiques\pdoivent pleurer !
 0x7BFCEE: Pleurnicher…
 0x7BFCF6: {COLOR}ÁFlic : {COLOR}ËVous êtes en\nétat d'arrestation pour plusieurs\ncrimes.\pVous venez avec moi.
 0x7BFDBF: 9Brut.
-0x7BFE09: À Borrius, il est bien connu que les\nvoyous sont principalement\nconfinés à la Ville d'Antisis.\pCependant, l'un des gangs de là-bas,\nles « Granbull Terreur »,\nsemble avoir quitté cette zone.\pNous avons reçu plusieurs rapports\nrécemment sur certains membres qui\nse rassemblent et causent des\nproblèmes sur la {COLOR}ÉRoute 10{COLOR}Ë.\pNos forces de police sont assez\ndispersées en ce moment, et toute\laide pour arrêter ces crétins serait\ntrès appréciée.\pJe vous le demande encore :\nvoudriez-vous donner un coup de main\nà la police locale ?
+0x7BFE09: À Borrius, il est bien connu que les\nvoyous sont principalement\lconfinés à la Ville d'Antisis.\pCependant, l'un des gangs de là-bas,\nles « Granbull Terreur »,\lsemble avoir quitté cette zone.\pNous avons reçu plusieurs rapports\nrécemment sur certains membres qui\lse rassemblent et causent des\lproblèmes sur la {COLOR}ÉRoute 10{COLOR}Ë.\pNos forces de police sont assez\ndispersées en ce moment, et toute\laide pour arrêter ces crétins serait\ltrès appréciée.\pJe vous le demande encore :\pvoudriez-vous donner un coup de main\nà la police locale ?
 0x7C02A9: {COLOR}ÇJe veux que vous regardiez\nce qui va se passer .
 0x7C02D9: {COLOR}ÇMaintenant, Harth, s'il te\nplaît, sois coopératif et remets la\npierre du vide.\pSi tu ne le fais pas, je ne peux pas\ngarantir la sécurité de ta femme…
 0x7C0350: Femme : {COLOR}ÇNe fais pas ça ! Si\nvous le remettez à , nous serons\ntous condamnés !

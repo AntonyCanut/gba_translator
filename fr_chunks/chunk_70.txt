@@ -42,11 +42,11 @@
 0x1F04FD3: Hmm…\pComment obtenir la CT dans cette \nPoké Ball jaune…
 0x1F05010: Waouh !\pJe t'ai vu glisser sur la cascade \ncomme un ange et prendre cette CT !\pBien joué !
 0x1F05061: Mel, le Champion, n'est pas ici.\pIl doit vider sa tête quelque part.
-0x1F050BB: Mel, le Champion, n'est pas ici.\pIl doit s'aérer près de \nl'{COLOR}ÉAutoroute KBT{COLOR}Ç à la \nVille de Tehl.
+0x1F050BB: Mel, le Champion, n'est pas ici.\nIl doit s'aérer près de \pl'{COLOR}ÉAutoroute KBT{COLOR}Ç à la \nVille de Tehl.
 0x1F0513A: Mon pouvoir caché me dit que tu veux \nça !
-0x1F0516C: {COLOR}ÉPuissance Cachée{COLOR}Ë est \nune capacité spéciale dont le type \nchange selon le Pokémon.
+0x1F0516C: {COLOR}ÉPuissance Cachée{COLOR}Ë est \nune capacité spéciale dont le type \lchange selon le Pokémon.
 0x1F051C7: Je peux dire le type de Puissance \nCachée que ton Pokémon apprendra !\pVeux-tu savoir ?
-0x1F0521F: Si {COLOR}É{STR_VAR_1}{COLOR}Ë \napprend Puissance Cachée, le type \nserait {COLOR}É{STR_VAR_2}{COLOR}Ë !
+0x1F0521F: Si {COLOR}É{STR_VAR_1}{COLOR}Ë \napprend Puissance Cachée, le type \lserait {COLOR}É{STR_VAR_2}{COLOR}Ë !
 0x1F0526A: Si tu veux savoir, demande-moi, et \nje ferai jouer mon pouvoir caché !
 0x1F052AA: Un Œuf ne peut pas utiliser \nPuissance Cachée !
 0x1F052DC: Jeune Dresseur.\pJe garde cet Œuf depuis qu'il a été \npondu.\pJe suis prête à le donner à \nquelqu'un de jeune et en forme.\pVeux-tu faire éclore cet \n{COLOR}ÉŒuf{COLOR}Ç ?
@@ -56,7 +56,7 @@
 0x1F05459: Comme tu voudras…\pSi tu changes d'avis, je serai ici.
 0x1F054B3: Oh ? Tu as trop de Pokémon. Pas de \nplace pour cet Œuf…
 0x1F054EE: Un Œuf de Pokémon étrange offert en \ndon.
-0x1F05515: Le Champion Mel vit ici quand il \nn'est pas en service ou en train de \nregarder des arbres colorés.\pJe m'occupe de sa maison quand il \nest parti.
+0x1F05515: Le Champion Mel vit ici quand il \nn'est pas en service ou en train de \lregarder des arbres colorés.\pJe m'occupe de sa maison quand il \nest parti.
 0x1F055AD: Mel sortait avec Tessy, l'ancienne \nChampionne de la Ville de Fallshore.\pIls ont rompu quand elle est partie \nà Bourg Polder, mais elle lui a \nlaissé son Arène en cadeau.\pJe crois que c'est pour ça qu'il ne \nl'a pas refaite.\pC'est ce qu'il lui reste d'elle…
 0x1F056C9: Mel est toujours entouré de plein de \nfemmes.\pIl doit se sentir bien seul…
 0x1F0572F: Il m'a échangé son \n{COLOR}ÉMagmar{COLOR}Ë tenant un \n{COLOR}ÉMagmariseur{COLOR}Ë, et il a \névolué !
@@ -66,7 +66,7 @@
 0x1F0591E: Ici, tout le monde parle « évolution \nci », « évolution ça ».\pJe trouve ça nul !\pMa façon préférée d'empêcher \nl'évolution n'est pas d'appuyer sur \n{B_BUTTON} quand ça commence, mais \nde faire tenir une {COLOR}ÉPierre \nStase{COLOR}Ë.\pAinsi je zappe l'évolution !\pEt tu sais quoi ?\pJe t'en donnerai une si tu me \nmontres un Pokémon qui n'a jamais \névolué et ne peut pas évoluer !\pEn as-tu un dans ton équipe ?
 0x1F05AFD: Quel Pokémon est-ce ?
 0x1F05B12: Oui, ce Pokémon n'a jamais évolué et \nne peut pas évoluer.\pComme promis, prends une \n{COLOR}ÉPierre Stase{COLOR}Ë !
-0x1F05B72: Si un Pokémon tient une \n{COLOR}ÉPierre Stase{COLOR}Ë, il \nn'évoluera pas !\pS'il la tient en reproduisant, il \ntransmet sa nature !\pLes Pierres Stase sont géniales !\pSi tu en veux d'autres, il y en a \nplein coincées dans les \n{COLOR}Émurs{COLOR}Ë de \nl'{COLOR}ÉAutoroute KBT{COLOR}Ë.\pComment les sortir ? Aucune idée…
+0x1F05B72: Si un Pokémon tient une \n{COLOR}ÉPierre Stase{COLOR}Ë, il \pn'évoluera pas !\nS'il la tient en reproduisant, il \ptransmet sa nature !\pLes Pierres Stase sont géniales !\nSi tu en veux d'autres, il y en a \lplein coincées dans les \l{COLOR}Émurs{COLOR}Ë de \pl'{COLOR}ÉAutoroute KBT{COLOR}Ë.\nComment les sortir ? Aucune idée…
 0x1F05CAD: Je resterai dans la Maison Évolution \nau cas où tu en amènerais une.
 0x1F05CF2: Non, je ne cherche pas un Œuf.\pJe veux un Pokémon qui n'a pas \névolué et ne peut pas évoluer.
 0x1F05D58: Non, ce n'est pas un des Pokémon que \nje cherche.\pIl me faut un Pokémon qui n'a pas \névolué et ne peut pas évoluer.
@@ -93,9 +93,9 @@
 0x1F062FA: Il monte au {LV} {STR_VAR_2} la nuit \n!
 0x1F06319: Il monte au {LV} {STR_VAR_2} le jour \n!
 0x1F0633E: Il monte avec une grande amitié !\pTu le sauras prêt quand un \n{COLOR}Écœur{COLOR}Ç sera sur son \nrésumé.
-0x1F063B9: Il monte avec une grande amitié le \njour !\pTu le sauras prêt quand un \n{COLOR}Écœur{COLOR}Ç sera sur son \nrésumé.
-0x1F06443: Il monte avec une grande amitié la \nnuit !\pTu le sauras prêt quand un \n{COLOR}Écœur{COLOR}Ç sera sur son \nrésumé.
-0x1F064C7: Il monte avec une grande amitié et \nconnaît une capacité de type \n{STR_VAR_2} !\pTu le sauras prêt quand un \n{COLOR}Écœur{COLOR}Ç sera sur son \nrésumé.
+0x1F063B9: Il monte avec une grande amitié le \njour !\pTu le sauras prêt quand un \n{COLOR}Écœur{COLOR}Ç sera sur son \lrésumé.
+0x1F06443: Il monte avec une grande amitié la \nnuit !\pTu le sauras prêt quand un \n{COLOR}Écœur{COLOR}Ç sera sur son \lrésumé.
+0x1F064C7: Il monte avec une grande amitié et \nconnaît une capacité de type \l{STR_VAR_2} !\pTu le sauras prêt quand un \n{COLOR}Écœur{COLOR}Ç sera sur son \lrésumé.
 0x1F0655B: Il est échangé !
 0x1F06568: Il est échangé en tenant le \n{STR_VAR_2} !
 0x1F0658A: Le {STR_VAR_2} est utilisé sur lui !
@@ -174,10 +174,10 @@
 0x1F07AE2: Bien, c'est le Papilusion que je \ncherchais.\pMaintenant, \n{COLOR}Êrelâche-le{COLOR}Ë pour \nqu'il trouve l'amour.
 0x1F07B4F: {COLOR}Á{STR_VAR_1} a été relâché. \nAdieu, {STR_VAR_1} !
 0x1F07B70: Snif…\pN'est-ce pas beau ?\pCe Papilusion trouvera l'amour et \nsera heureux pour toujours…
-0x1F07BC4: Pour tes actions héroïques, je veux \nque tu prennes mon Papilusion à la \nplace.
+0x1F07BC4: Pour tes actions héroïques, je veux \nque tu prennes mon Papilusion à la \lplace.
 0x1F07C20: Le Papilusion que je t'ai donné peut \n{COLOR}ÉGigamaxer{COLOR}Ë !\pQuoi ?\pUtilise-le dans un {COLOR}ÉRaid \nAntre Cachette{COLOR}Ë et tu verras \n!
 0x1F07CAD: Je veux voir un \n{COLOR}ÉPapilusion{COLOR}Ë autour du \nNiveau {COLOR}É70{COLOR}Ë.
-0x1F07D00: Ce n'est pas le Pokémon que je veux.\pJe veux voir un \n{COLOR}ÉPapilusion{COLOR}Ë à au \nmoins Niveau {COLOR}É70{COLOR}Ë.
+0x1F07D00: Ce n'est pas le Pokémon que je veux.\nJe veux voir un \p{COLOR}ÉPapilusion{COLOR}Ë à au \nmoins Niveau {COLOR}É70{COLOR}Ë.
 0x1F07D7B: Ce Papilusion est bien Niveau 70 ou \nplus, mais tu ne l'as pas entraîné \ntoi-même !\pJe veux voir un \n{COLOR}ÉPapilusion{COLOR}Ë à au \nmoins Niveau {COLOR}É70{COLOR}Ë.
 0x1F07E1E: Mais…\pSi tu ne le relâches pas, comment \nton Papilusion trouvera-t-il l'amour \n?
 0x1F07E65: La révolution communiste
@@ -185,8 +185,8 @@
 0x1F07EC2: Viens ici, gamin, en silence.\pToute la région est secrètement \ncontrôlée par la bourgeoisie et les \ncapitalistes.\pNous, classe ouvrière, devons nous \nunir et nous lever pour le \ncommunisme !\pLeur faiblesse est la gratuité.\pSi tu te soignes assez de fois, leur \nmachine d'oppression s'effondrera.
 0x1F08005: Travailleurs du monde, unissez-vous \n!\pSoigne-toi \n{COLOR}É{STR_VAR_1}{COLOR}Ç fois \ndans n'importe quel Centre Pokémon.\pSauf celui de la Ville d'Antisis, \nils sont tous pour la révolution.
 0x1F080A8: Encore un prolétaire embrigadé par \nles tyrans capitalistes.
-0x1F080EE: Tu as utilisé notre service gratuit \n{COLOR}É{STR_VAR_2}{COLOR}Ç fois.\pPour renverser les tyrans, il te \nfaut soigner encore \n{COLOR}É{STR_VAR_3}{COLOR}Ç fois.
-0x1F08182: Beau travail !\pMaintenant que les rouages de la \nmachine capitaliste sont brisés, les \ntravailleurs s'uniront contre la \nbourgeoisie !\pVoici un signe de gratitude, camarde \n{PLAYER}.
+0x1F080EE: Tu as utilisé notre service gratuit \n{COLOR}É{STR_VAR_2}{COLOR}Ç fois.\pPour renverser les tyrans, il te \nfaut soigner encore \l{COLOR}É{STR_VAR_3}{COLOR}Ç fois.
+0x1F08182: Beau travail !\pMaintenant que les rouages de la \nmachine capitaliste sont brisés, les \ltravailleurs s'uniront contre la \lbourgeoisie !\pVoici un signe de gratitude, camarde \n{PLAYER}.
 0x1F08242: La révolution sera toujours \nreconnaissante, camarade {PLAYER}.
 0x1F08287: La révolution capitaliste
 0x1F082A1: Lève-toi au nom du capitalisme ! \nFais {STR_VAR_1} achats en boutique.
@@ -195,7 +195,7 @@
 0x1F08489: Tu es juste un autre pion des \ncochons communistes.
 0x1F084BC: Nos registres montrent que tu as \nfait {COLOR}É{STR_VAR_2}{COLOR}Ç \nachat{VERSION}.\pIl en faut \n{COLOR}É{STR_VAR_3}{COLOR}Ç de plus \navant la révolution capitaliste.
 0x1F08541: Nos registres montrent que tu as \nfait assez d'achats.\pNous pouvons lancer la révolution.\pTiens, prends ça.\pTu en auras besoin contre ces \ncommunistes.
-0x1F085F2: La grande guerre entre capitalistes \net communistes peut éclater à tout \nmoment.
+0x1F085F2: La grande guerre entre capitalistes \net communistes peut éclater à tout \lmoment.
 0x1F08646: Contrôle de population
 0x1F08659: Capture {STR_VAR_1} Pokémon en un \njour pour réduire la surpopulation.
 0x1F08691: Les Pokémon sont évolutivement \nsupérieurs aux humains.\pDu coup, ils commencent à \nsurpeupler.\pNous devons réduire leur nombre \navant qu'ils ne se rendent compte \nqu'ils ont l'avantage.\pPeux-tu capturer \n{COLOR}É{STR_VAR_1}{COLOR}Ë Pokémon \nhors de la Zone Safari en un jour \npour freiner leur croissance ?
@@ -207,7 +207,7 @@
 0x1F08A3F: Les Pokémon ne doivent pas dominer \nles humains.
 0x1F08A72: L'Homme-Poubelle
 0x1F08A80: Devient un déchet ! Cherche des \npoubelles lucratives pour \n{STR_VAR_1} objets.
-0x1F08AC4: Je suis l'Homme-Poubelle !\pJe vis dans les ordures ! Je mange \ndes ordures !\pNe demande pas, c'est mon truc.\pJe ne cherche pas des déchets, je \nveux les morceaux les plus classes, \nmais ça demande des efforts.\pJe préfère te payer pour ça.\pChercheras-tu des poubelles pour \ntrouver au moins \n{COLOR}É{STR_VAR_1}{COLOR}Ë objets ?
+0x1F08AC4: Je suis l'Homme-Poubelle !\pJe vis dans les ordures ! Je mange \ndes ordures !\pNe demande pas, c'est mon truc.\pJe ne cherche pas des déchets, je \nveux les morceaux les plus classes, \lmais ça demande des efforts.\pJe préfère te payer pour ça.\nChercheras-tu des poubelles pour \ptrouver au moins \n{COLOR}É{STR_VAR_1}{COLOR}Ë objets ?
 0x1F08BE6: Va me trouver les déchets les plus \ndélectables !
 0x1F08C1E: Pas grave, j'attendrai le prochain \npigeon prêt à être payé.
 0x1F08C72: Mon instinct me dit que tu as trouvé \n{COLOR}É{STR_VAR_2}{COLOR}Ë \nobjet{VERSION} dans les poubelles.\pCherche plus de poubelles juteuses \net trouve encore \n{COLOR}É{STR_VAR_3}{COLOR}Ë \nobjet{EVIL_TEAM} !
@@ -218,11 +218,11 @@
 0x1F08DF7: La théorie de l'évolution est un \nthéorème ! Fais évoluer {STR_VAR_1} \nPokémon au total.
 0x1F08E36: Je crois que Arceus crée tous les \nPokémon, mais je suis aussi une \nfemme de science.\pJ'essaie de savoir si religion ou \nscience a raison.\pJe pense que l'évolution des Pokémon \ncontient la réponse.\pTu aides ? J'ai besoin de \n{COLOR}É{STR_VAR_1}{COLOR}Ç \nobservations.
 0x1F08F28: Excellent, il me faut que tu \nregardes {COLOR}É{STR_VAR_1}{COLOR}Ç \névolutions de Pokémon et que tu \nrapporte ton avis impartial.
-0x1F08F8A: Je suppose que certains resteront \nignorants des secrets \nscience/religion.
+0x1F08F8A: Je suppose que certains resteront \nignorants des secrets \lscience/religion.
 0x1F08FE2: Tes données ne sont pas complètes.\pIl faut faire évoluer encore \n{COLOR}É{STR_VAR_3}{COLOR}Ç Pokémon.
 0x1F09045: Waouh, c'est fini ! Voyons les \ndonnées.\p…\pElles disent que l'évolution a des \nfaces scientifiques et religieuses.\pPeut-être que Arceus est plus \nimpliqué qu'on ne croit…\pIntéressant, prends ce Pokémon en \nremerciement.
 0x1F0912A: Mais fais de la place dans l'équipe \nd'abord !
-0x1F09154: Le Pokémon que je t'ai donné est \nMew.\pOn dit que c'est l'espèce dont tous \nles Pokémon viennent.\pNous l'avons cloné à la Science \nSociety, donc ta version est juste \nune copie.
+0x1F09154: Le Pokémon que je t'ai donné est \nMew.\pOn dit que c'est l'espèce dont tous \nles Pokémon viennent.\pNous l'avons cloné à la Science \nSociety, donc ta version est juste \lune copie.
 0x1F0920D: Millionnaire Exp.
 0x1F0921E: L'Exp. c'est de l'or. Gagne \n{STR_VAR_1} en un jour pour être \nvraiment riche.
 0x1F0925A: Je suis si riche que ma piscine a sa \npropre piscine !\pEt pourtant…{PAUSE}î tout cet argent \nne me rend pas heureux.\pLa vraie richesse est une autre \nmonnaie : les Points Exp. !\pEs-tu prêt à montrer ta soif de \nvraie richesse ?
@@ -238,7 +238,7 @@
 0x1F098B9: Non ? Alors peux-tu me donner \nquelques pièces avant de partir ?
 0x1F098EF: Tu n'as pas assez de \n{COLOR}É{STR_VAR_1}{COLOR}Ç.\pPas assez pour me nourrir cette \nsemaine…
 0x1F0994C: Avec un bonus d'Exp. de \n{COLOR}É{EVIL_LEGENDARY}{COLOR}Ç×, \nje ne peux plus rien faire pour tes \nŒufs Chance.\pComment vais-je me nourrir ?
-0x1F099C2: La {COLOR}ÉMaison des Dresseurs \nInversés{COLOR}Ë est célèbre.\pBeaucoup viennent à la Ville de \nFallshore juste pour des combats aux \nmatch-ups inversés.
+0x1F099C2: La {COLOR}ÉMaison des Dresseurs \nInversés{COLOR}Ë est célèbre.\pBeaucoup viennent à la Ville de \nFallshore juste pour des combats aux \lmatch-ups inversés.
 0x1F09A3C: Chaque pas te rend tes Pokémon plus \nattachés.\pSi tu as un Pokémon à la Garderie, \nil montera aussi de niveau.
 0x1F09ABC: J'ai entendu dire que beaucoup font \nn'importe quoi sur la {COLOR}ÉRoute \n9{COLOR}Ë.
 0x1F09AFF: As-tu entendu ?\pQuelqu'un s'est occupé des fauteurs \nde troubles sur la Route 9 !

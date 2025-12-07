@@ -1,5 +1,5 @@
-0x1EECDB7: La prochaine fois, je me roulerai\ndans la boue du marais pour que\npersonne ne sente que j'arrive.
-0x1EECE02: Ce marais a tant de cachettes,\nqui sait ce qui peut y être\ncaché ?
+0x1EECDB7: La prochaine fois, je me roulerai\ndans la boue du marais pour que\lpersonne ne sente que j'arrive.
+0x1EECE02: Ce marais a tant de cachettes,\nqui sait ce qui peut y être\lcaché ?
 0x1EECE4E: Ce marais est en fait un être\nvivant doté d'un esprit puissant.
 0x1EECE8A: L'esprit du marais est avec toi.
 0x1EECEAF: Nous devons respecter l'esprit du\nmarais, alors ne jette rien.
@@ -11,7 +11,7 @@
 0x1EED011: Les marais : bien pour jouer avec\nles Pokémon, pas pour manger.
 0x1EED046: J'essaie de rendre ce coin crade\njoli avec des fleurs.
 0x1EED07F: Si on jugeait ce combat sur la\nbeauté, j'aurais gagné.
-0x1EED0C2: Plus de jolies fleurs rendent tout\njoli, même un marais crade\ncomme celui-ci.
+0x1EED0C2: Plus de jolies fleurs rendent tout\njoli, même un marais crade\lcomme celui-ci.
 0x1EED116: L'entrée du Pic de Cristal est\njuste là-bas.
 0x1EED148: Waouh !\nMonte direct au Pic de Cristal !
 0x1EED170: Monte juste cette cascade et tu\nseras au pied du Pic de Cristal.
@@ -34,7 +34,7 @@
 0x1EED4EB: Cette grotte mène à la Route 6.\pDe là, c'est tout droit : Route 7,\nMont Givre, puis Route 8 vers la\n{COLOR}ÉVille Blizzard{COLOR}Ë.\pSi tu montes à pied, prends plein de\nPoké Balls pour capturer des\nPokémon.\pLa plupart évitent ce chemin car ils\nn'ont pas le\n{COLOR}ÉBadge Vision{COLOR}Ë.\pSans lui, impossible de couper\nl'{COLOR}ÉArbre Maigre{COLOR}Ë\ndevant l'entrée.
 0x1EED690: Cette grotte là-bas mène à la Route\n6.\pPuis c'est tout droit : Route 7,\nMont Givre et Route 8 vers la\n{COLOR}ÉVille Blizzard{COLOR}Ë.\pSi tu montes à pied, prends plein de\nPoké Balls.\pMaintenant que l'Arbre Maigre a été\ncoupé, elle est bien plus utilisée.
 0x1EED7F3: J'ai entendu qu'à\n{COLOR}ÉTarmiganville{COLOR}Ç,\nquelqu'un enseigne l'art de la\n{COLOR}ÉMéga-Évolution{COLOR}Ç !
-0x1EED84F: J'ai entendu qu'à\n{COLOR}ÉTarmiganville{COLOR}Ç,\nquelqu'un enseigne la {COLOR}ÉMéga-\nÉvolution{COLOR}Ç !\pMais tu le savais déjà, non ?\pLe {STR_VAR_1} que tu portes te\ntrahit.
+0x1EED84F: J'ai entendu qu'à\n{COLOR}ÉTarmiganville{COLOR}Ç,\lquelqu'un enseigne la {COLOR}ÉMéga-\pÉvolution{COLOR}Ç !\nMais tu le savais déjà, non ?\pLe {STR_VAR_1} que tu portes te\ntrahit.
 0x1EED8F7: Tu savais que si tu parles aux\narbitres d'Arène avant le Champion,\nils te donnent un cadeau ?\pTu savais ? Hein ?
 0x1EED972: Et si tu leur parles après avoir\nbattu le Champion, ils donnent\naussi un cadeau !\pTu savais ? Hein ?
 0x1EED9FD: On apprend quelque chose de nouveau\nchaque jour !
@@ -46,9 +46,9 @@
 0x1EEDC0B: Cet ADM que tu as, c'est la machine\nqu'il me faut !\pJe cherche à détruire les portes\neffondrées de l'Autoroute KBT et tu\npeux m'aider !\pS'il te plaît, utilise ton\n{COLOR}ÉADM{COLOR}Ë et aide-moi !
 0x1EEDCFB: Splendide !\pMa tâche : détruire les\n{COLOR}Éportes effondrées{COLOR}Ë de\nl'{COLOR}ÉAutoroute KBT{COLOR}Ë\navec ton {COLOR}ÉADM{COLOR}Ë et\ncapturer {COLOR}É3 Strassie{COLOR}Ë.\pPour briser une porte, charge ton\nADM.\pCharge-le avec {COLOR}É3 Argiles\nLumière{COLOR}Ë pour qu'il soit\nassez puissant.\pOn trouve l'Argile Lumière en\nminant les murs de l'Autoroute KBT.\pQuand c'est fait, reviens me voir\npour une récompense.
 0x1EEDF0B: Pas très splendide.\pTu es le seul Dresseur que je\nconnaisse à avoir acheté un ADM.\pSans toi, je ne sers à rien ici.
-0x1EEDF8D: Détruis les\n{COLOR}Éportes effondrées{COLOR}Ë de\nl'{COLOR}ÉAutoroute KBT{COLOR}Ë\navec ton {COLOR}ÉADM{COLOR}Ë et\ncapture encore\n{COLOR}É{STR_VAR_1}\nStrassie{COLOR}Ë.\pPour briser une porte, charge\nd'abord ton ADM.\pCharge-le avec {COLOR}É3 Argiles\nLumière{COLOR}Ë pour qu'il soit\nassez puissant.\pOn trouve l'Argile Lumière en\nminant les murs de l'Autoroute KBT.\pQuand c'est fait, reviens me voir\npour une récompense.
+0x1EEDF8D: Détruis les\n{COLOR}Éportes effondrées{COLOR}Ë de\ll'{COLOR}ÉAutoroute KBT{COLOR}Ë\lavec ton {COLOR}ÉADM{COLOR}Ë et\pcapture encore\n{COLOR}É{STR_VAR_1}\lStrassie{COLOR}Ë.\pPour briser une porte, charge\nd'abord ton ADM.\lCharge-le avec {COLOR}É3 Argiles\pLumière{COLOR}Ë pour qu'il soit\passez puissant.\nOn trouve l'Argile Lumière en\lminant les murs de l'Autoroute KBT.\pQuand c'est fait, reviens me voir\npour une récompense.
 0x1EEE174: Toi et ton ADM avez fait un travail\nremarquable !\pAccepte cette rare Méga-Gemme !
-0x1EEE1C7: La vraie récompense est encore dans\nl'Autoroute KBT.\pJe ne serais pas surpris qu'un\ncertain Pokémon apparaisse bientôt\ndans l'une de ces grottes…
+0x1EEE1C7: La vraie récompense est encore dans\nl'Autoroute KBT.\pJe ne serais pas surpris qu'un\ncertain Pokémon apparaisse bientôt\ldans l'une de ces grottes…
 0x1EEE292: {COLOR}ÁOh non ! Diancie s'est\nenfuie !
 0x1EEE2AF: Toucher la météorite a équilibré\nles attributs d'un certain Pokémon.
 0x1EEE2F8: Toucher la météorite a augmenté la\npuissance offensive d'un Pokémon.
@@ -104,14 +104,14 @@
 0x1EEFAAB: {COLOR}ÉFriiie!
 0x1EEFAB6: {COLOR}ÁLe {STR_VAR_1} s'est enfui.
 0x1EEFACA: Certains objets ne servent qu'à\nêtre vendus.\pSi tu en trouves un, vends-le tout\nde suite.\pIl paraît que des maniaques les\nrachètent plus cher que les\nPoké Marts.
-0x1EEFBB4: J'ai essayé ce Gym, mais je n'ai\nmême pas atteint le Champion !\pIl faisait si sombre que je ne\nsavais pas où j'allais.\pJe {COLOR}Éne pouvais même pas{COLOR}Ç\nutiliser\n{COLOR}ÉFlash{COLOR}Ç pour y voir mieux !\pJ'espère que cette CT te servira.
+0x1EEFBB4: J'ai essayé ce Gym, mais je n'ai\nmême pas atteint le Champion !\pIl faisait si sombre que je ne\nsavais pas où j'allais.\pJe {COLOR}Éne pouvais même pas{COLOR}Ç\nutiliser\p{COLOR}ÉFlash{COLOR}Ç pour y voir mieux !\nJ'espère que cette CT te servira.
 0x1EEFC99: {COLOR}ÉFlash{COLOR}Ç éclaire les\ngrottes sombres.
 0x1EEFCC9: Yo ! Bonne affaire.\pÉchange ton {COLOR}É{STR_VAR_2}{COLOR}Ë\ncontre mon {COLOR}É{STR_VAR_1}{COLOR}Ë ?
 0x1EEFD15: Hé, merci ! Profite bien de ce\n{STR_VAR_1} !
 0x1EEFD30: {COLOR}Á{PLAYER} a donné le\n{STR_VAR_2}.
 0x1EEFD4A: Tu vois ? Bonne affaire, non ?\pOn peut échanger à nouveau demain\nsi tu veux !
 0x1EEFD94: Hein ? Sérieux ? Tu plaisantes.\pEn général, les gens sont ravis de\ntroquer !
-0x1EEFDDB: Hein ? Sérieux ! Tu plaisantes.\pTu n'as pas de {STR_VAR_2} !?
+0x1EEFDDB: Hein ? Sérieux ! Tu plaisantes.\nTu n'as pas de {STR_VAR_2} !?
 0x1EEFE15:  FばPokémon Unbound Version
 0x1EEFE60: Mise à niveau complète de FireRed
 0x1EEFE8C: Skeli Lich-Lord-F Criminon
