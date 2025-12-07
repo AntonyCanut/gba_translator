@@ -1,17 +1,17 @@
-0x1EE6834: Vous pouvez stocker des Pokémon et\ndes objets dans ce PC dans le coin.\pC'est gratuit pour les dresseurs,\nalors allez-y et utilisez-le.\pCertaines installations utilisent le\nPokémon connu sous le nom de\n{COLOR}ÉPorygon{COLOR}Ë à la place.\pSi vous êtes dans un tel\nétablissement, gardez un œil sur ce\nPokémon :
-0x1EE692E: Les Centres Pokémon soignent vos\nPokémon fatigués et fatigués.\pIls rendent tous les Pokémon\ncomplètement à nouveau en bonne\nsanté.\pLa plupart sont gratuits, alors\nn'hésitez pas à soigner vos Pokémon.\pPour ceux qui ne le sont pas, eh\nbien, il il y a toujours\n{COLOR}ÉChansey{COLOR}Ë qui peuvent\nêtre\ltrouvés sur le terrain.\pIls sont roses et ressemblent à ceci\n:
+0x1EE6834: Vous pouvez stocker des Pokémon et des objets dans ce PC dans le coin. C'est gratuit pour les dresseurs,\nalors allez-y et utilisez-le.\pCertaines installations utilisent le\nPokémon connu sous le nom de\p{COLOR}ÉPorygon{COLOR}Ë à la place.\nSi vous êtes dans un tel\pétablissement, gardez un œil sur ce\nPokémon :
+0x1EE692E: Les Centres Pokémon soignent vos Pokémon fatigués et fatigués. Ils rendent tous les Pokémon complètement à nouveau en bonne santé.\nLa plupart sont gratuits, alors\pn'hésitez pas à soigner vos Pokémon.\nPour ceux qui ne le sont pas, eh\pbien, il il y a toujours\n{COLOR}ÉChansey{COLOR}Ë qui peuvent\pêtre\ntrouvés sur le terrain.\lIls sont roses et ressemblent à ceci\p:
 0x1EE6A49: Salut ! Je fais une enquête sur les\nformateurs.\pJe collectionne autant\nd'anniversaires que possible.\pTu veux participer ?
 0x1EE6AAE: Ouais ! D'accord, alors c'est quand\nton anniversaire ?
 0x1EE6AD5: Aww…\pQuel genre de formateur ne veut pas\npartager son anniversaire ?
-0x1EE6B13: D'accord, donc votre anniversaire\nest le\n{STR_VAR_1}/{STR_VAR_2}/{STR_VAR_3}.\pCela signifie que vous avez\n{VERSION} ans !
-0x1EE6B5A: D'accord, donc votre anniversaire\nest le\n{STR_VAR_1}/{STR_VAR_2}/{STR_VAR_3}.\pCela signifie qu'aujourd'hui vous\navez eu {VERSION} ! Joyeux\nanniversaire !
-0x1EE6BB1: D'accord, donc votre anniversaire\nest le\n{STR_VAR_1}/{STR_VAR_2}/{STR_VAR_3}.
-0x1EE6BD8: {COLOR}ÁEntrez votre date de\nnaissance avec {DPAD_ANY}. Le format\nest AAAA/MM/JJ. {SE_SHOP} pour\nconfirmer.
-0x1EE6C1D: Votre anniversaire est-il le\n{STR_VAR_1}/{STR_VAR_2}/{STR_VAR_3}\n?
+0x1EE6B13: D'accord, donc votre anniversaire est le {STR_VAR_1}/{STR_VAR_2}/{STR_VAR_3}.\nCela signifie que vous avez\p{VERSION} ans !
+0x1EE6B5A: D'accord, donc votre anniversaire est le {STR_VAR_1}/{STR_VAR_2}/{STR_VAR_3}.\nCela signifie qu'aujourd'hui vous\pavez eu {VERSION} ! Joyeux\nanniversaire !
+0x1EE6BB1: D'accord, donc votre anniversaire est le\n{STR_VAR_1}/{STR_VAR_2}/{STR_VAR_3}.
+0x1EE6BD8: {COLOR}ÁEntrez votre date de naissance avec {DPAD_ANY}. Le format est AAAA/MM/JJ. {SE_SHOP} pour\nconfirmer.
+0x1EE6C1D: Votre anniversaire est-il le {STR_VAR_1}/{STR_VAR_2}/{STR_VAR_3}\n?
 0x1EE6C5C: Poké-Mart
 0x1EE6C66: Il est maintenant temps d'y aller !\pSi vous poursuivez cet homme, vous\npourrez peut-être le rattraper !
-0x1EE6CC7: J'aime acheter beaucoup de\n{COLOR}ÉIce Heals{COLOR}Ç!\pMes Pokémon n'ont pas vraiment\nd'engelures souvent, mais ça ne fait\njamais de mal d'avoir\lobjets supplémentaires dans mon Cube\n!
-0x1EE6D4F: Vous devriez faire le plein de\n{COLOR}ÉPotions{COLOR}Ë.\pVous ne savez jamais quand vous\nserez dans une pince et que vous\naurez besoin d’une guérison rapide.
+0x1EE6CC7: J'aime acheter beaucoup de {COLOR}ÉIce Heals{COLOR}Ç! Mes Pokémon n'ont pas vraiment d'engelures souvent, mais ça ne fait\pjamais de mal d'avoir\nobjets supplémentaires dans mon Cube\l!
+0x1EE6D4F: Vous devriez faire le plein de {COLOR}ÉPotions{COLOR}Ë.\nVous ne savez jamais quand vous\pserez dans une pince et que vous\naurez besoin d’une guérison rapide.
 0x1EE6DC4: Ville de Blizzard
 0x1EE6DD2: Blizzard City D
 0x1EE6DE2: Blizzard City N
@@ -21,35 +21,35 @@
 0x1EE6F55: C'était une superbe bataille ! Mon\nPokémon s'est bien amusé !
 0x1EE6F82: Merci de vous battre avec moi !
 0x1EE6F9F: Si vous changez d’avis, je\ntravaillerai toujours ici !
-0x1EE6FD4: De nombreux dresseurs de Blizzard\nCity adorent utiliser des Pokémon de\ntype Vol.\pIls sont fiers de la résistance de\nleurs oiseaux au froid.\pPrenez cet objet pour vous sentir\njuste comme eux.
-0x1EE7074: Le {COLOR}ÉSharp Beak{COLOR}Ë\naugmente la puissance des mouvements\nde type {COLOR}ÉFlying{COLOR}Ë\nlorsqu'il est tenu.
+0x1EE6FD4: De nombreux dresseurs de Blizzard City adorent utiliser des Pokémon de\ntype Vol.\pIls sont fiers de la résistance de\nleurs oiseaux au froid.\pPrenez cet objet pour vous sentir\njuste comme eux.
+0x1EE7074: Le {COLOR}ÉSharp Beak{COLOR}Ë augmente la puissance des mouvements de type {COLOR}ÉFlying{COLOR}Ë\nlorsqu'il est tenu.
 0x1EE70C0: Salut ! Bienvenue à Blizzard City !\nTu as l'air fatigué, tu veux une\pcollation ?
-0x1EE70FC: C'est mon travail d'accueillir les\nvoyageurs fatigués qui font de la\nrandonnée jusqu'à\ljusqu'à Blizzard City.\pPrendre l'autoroute KBT est facile,\nmais faire de la randonnée… c'est\ndifficile.
+0x1EE70FC: C'est mon travail d'accueillir les voyageurs fatigués qui font de la randonnée jusqu'à\njusqu'à Blizzard City.\lPrendre l'autoroute KBT est facile,\pmais faire de la randonnée… c'est\ndifficile.
 0x1EE7188: Si nous étions censés voler
 0x1EE71A0: Les gens sont-ils faits pour voler ?\nVolez 20 jolies ailes à Goélise ou\nBekipan pour le découvrir !
 0x1EE71F5: Ah, {PLAYER}!\pC'est gentil de votre part de\ppasser.\nAvez-vous déjà entendu un dicton que\pma grand-mère aimait ?\n« Si les humains étaient faits pour\lvoler, nous aurions des ailes comme\pun Scorplane\net des plumes comme un Roucoups. la\pseconde.\nDonc, si vous avez du temps\paujourd'hui, seriez-vous prêt à\naider\lune gentille dame ?
-0x1EE7369: Ah, excellent !\pAlors laissez-moi vous expliquer le\nproblème ici.\pJ'ai besoin des plumes nécessaires\npour finir les ailes sur lesquelles\nje\ltravaillé.\pMais pas n'importe quelles plumes\nferont l'affaire - J'ai besoin de\n{COLOR}ÉDe jolies ailes{COLOR}Ç.\p{COLOR}É{STR_VAR_2}{COLOR}Ç, pour\nêtre exact.\pJe veux dire, je pourrais en\nutiliser d'autres. ailes, mais une\nfemme doit avoir de belles\lchoses, n'est-ce pas ?\pDonc, si vous pouviez me chercher\n{COLOR}É{STR_VAR_2}{COLOR}Ç de ces\n{COLOR}ÉPretty Wings{COLOR}Ç et les\napporter\lici, il y aura quelque chose\lde bien dedans pour vous aussi !\pVous pouvez trouver de jolies ailes\nportées par des animaux sauvages.\n{COLOR}ÉWingull{COLOR}Ç\let {COLOR}ÉPelipper{COLOR}Ç.\pSi vous avez un Pokémon avec Voleur,\nCovet ou Sabotage, obtenir ces\lJolies Ailes sera beaucoup plus\nfacile.\pJe recommande {COLOR}ÉKnock\nOff{COLOR}Ç le plus, car cela vous\névite d'avoir à\lprendre l'objet de votre Pokémon.\pDe plus, un Pokémon avec\n{COLOR}ÉYeux composés{COLOR}Ç ou\n{COLOR}ÉSuper Chance{COLOR}Ç devant\lvotre groupe augmente les chances\nque\lPokémon sauvage détienne des objets,\nalors gardez\lcela à l'esprit !
-0x1EE76D5: Maintenant {STR_VAR_1}, je ne pense\npas que cette quantité de Pretty\nWings fera\ldu tout…\pJ'ai besoin de {COLOR}É{STR_VAR_2}\nPretty Wings{COLOR}Ç au total.\pJe veux dire, je pourrais utiliser\nd'autres ailes, mais une femme doit\navoir de belles\lchoses, non ?\pMon conseil ?\pUtilisez le {COLOR}ÉDexNav{COLOR}Ç\npour attraper un\n{COLOR}ÉSkorupi{COLOR}Ç avec sa\n{COLOR}ÉCapacité cachée{COLOR}Ç sur\n{COLOR}Éroute 9{COLOR}Ç.\pIl apprend {COLOR}ÉKnock Off{COLOR}Ç\nnaturellement, et quand il évolue sa\ncapacité cachée\ldevient {COLOR}ÉSuper Luck{COLOR}Ç!\pCela en fait un excellent choix pour\nvoler {COLOR}ÉPretty Wings{COLOR}Ç à\nwild\l{COLOR}ÉWingull{COLOR}Ç et\n{COLOR}ÉPelipper{COLOR}Ç.\pJe compte sur toi, {STR_VAR_1},\nvoyons voyons si nous avons ce qu'il\nfaut !
+0x1EE7369: Ah, excellent ! Alors laissez-moi vous expliquer le problème ici. J'ai besoin des plumes nécessaires pour finir les ailes sur lesquelles je travaillé. Mais pas n'importe quelles plumes feront l'affaire - J'ai besoin de {COLOR}ÉDe jolies ailes{COLOR}Ç. {COLOR}É{STR_VAR_2}{COLOR}Ç, pour être exact. Je veux dire, je pourrais en\putiliser d'autres. ailes, mais une\nfemme doit avoir de belles\pchoses, n'est-ce pas ?\nDonc, si vous pouviez me chercher\l{COLOR}É{STR_VAR_2}{COLOR}Ç de ces\p{COLOR}ÉPretty Wings{COLOR}Ç et les\napporter\pici, il y aura quelque chose\pde bien dedans pour vous aussi !\nVous pouvez trouver de jolies ailes\lportées par des animaux sauvages.\p{COLOR}ÉWingull{COLOR}Ç\net {COLOR}ÉPelipper{COLOR}Ç.\lSi vous avez un Pokémon avec Voleur,\lCovet ou Sabotage, obtenir ces\pJolies Ailes sera beaucoup plus\nfacile.\lJe recommande {COLOR}ÉKnock\pOff{COLOR}Ç le plus, car cela vous\névite d'avoir à\lprendre l'objet de votre Pokémon.\pDe plus, un Pokémon avec\n{COLOR}ÉYeux composés{COLOR}Ç ou\l{COLOR}ÉSuper Chance{COLOR}Ç devant\pvotre groupe augmente les chances\nque\lPokémon sauvage détienne des objets,\lalors gardez\lcela à l'esprit !
+0x1EE76D5: Maintenant {STR_VAR_1}, je ne pense pas que cette quantité de Pretty Wings fera du tout… J'ai besoin de {COLOR}É{STR_VAR_2} Pretty Wings{COLOR}Ç au total. Je veux dire, je pourrais utiliser d'autres ailes, mais une femme doit avoir de belles choses, non ? Mon conseil ?\nUtilisez le {COLOR}ÉDexNav{COLOR}Ç\lpour attraper un\p{COLOR}ÉSkorupi{COLOR}Ç avec sa\p{COLOR}ÉCapacité cachée{COLOR}Ç sur\n{COLOR}Éroute 9{COLOR}Ç.\lIl apprend {COLOR}ÉKnock Off{COLOR}Ç\pnaturellement, et quand il évolue sa\pcapacité cachée\ndevient {COLOR}ÉSuper Luck{COLOR}Ç!\pCela en fait un excellent choix pour\nvoler {COLOR}ÉPretty Wings{COLOR}Ç à\lwild\p{COLOR}ÉWingull{COLOR}Ç et\n{COLOR}ÉPelipper{COLOR}Ç.\lJe compte sur toi, {STR_VAR_1},\pvoyons voyons si nous avons ce qu'il\nfaut !
 0x1EE78FB: Ah ! Ce doivent être les Pretty\nWings que j'ai demandées !
-0x1EE792B: Ensuite, avec les derniers\najustements…
+0x1EE792B: Ensuite, avec les derniers ajustements…
 0x1EE794D: Terminé !\pTrès bien {PLAYER}, libérez un\nespace, et reculez !\pÊtes-vous prêt, {PLAYER}?\pVoici, l'histoire se prépare !
-0x1EE79B9: Ngh!\pAïe…{PAUSE}ね ça aurait pu mieux se\npasser…\pHmm…{PAUSE}ね je me souviens d'un\nlivre disant que les oiseaux ont\nsouvent de grandes poitrines, ce\nqui les aide à voler…\p…{PAUSE}ね B-bref !\pJe ferais mieux de laisser le vol à\nceux qui savent vraiment !\pMerci pour ton aide, {PLAYER} - même\nsi mes rêves de voler sur des ailes\ns'envolent.\pPrends ceci en paiement.
+0x1EE79B9: Ngh! Aïe…{PAUSE}ね ça aurait pu mieux se\ppasser…\nHmm…{PAUSE}ね je me souviens d'un\plivre disant que les oiseaux ont\nsouvent de grandes poitrines, ce\lqui les aide à voler…\p…{PAUSE}ね B-bref !\pJe ferais mieux de laisser le vol à\nceux qui savent vraiment !\pMerci pour ton aide, {PLAYER} - même\nsi mes rêves de voler sur des ailes\ls'envolent.\pPrends ceci en paiement.
 0x1EE7B08: Ce n'est pas grave, {STR_VAR_1}.\pSi vous finissez par changer d'avis,\nJe serai là.
-0x1EE7B47: Je dois retourner au gymnase\nmaintenant, alors fais attention,\n{STR_VAR_1} !
-0x1EE7B7B: Whoa… Vous avez l'air épuisé.\pAvez-vous gravi toute la montagne\ndepuis Crater Town ?\pAlors je suis sûr que notre accueil\nvous a offert un joli cadeau !
-0x1EE7C01: Maintenant que l'entrée de\nl'autoroute KBT est dégagée, les\nvoyageurs peuvent\péconomiser leurs forces en montant\npar là au lieu de monter à pied !
-0x1EE7C8B: Le type Vol est le seul type qui\nn'est pas au sol.\pQu'est-ce que\n{COLOR}Égrounding{COLOR}Ë ?\pLes Pokémon au sol subissent des\ndégâts de Spikes et bénéficient des\leffets des terrains, entre autres\lchoses.\pVous en apprendrez davantage sur eux\nau fur et à mesure que vous\ncombattez.
-0x1EE7D73: Le type Vol est le seul type qui\nn'est pas au sol.\pIls ne bénéficient pas des terrains,\nmais ils ne subissent pas non plus\nde dégâts\ldes pointes.\pMais vous le saviez déjà, n'est-ce\npas vous, Champion ?
-0x1EE7E2A: Le Blizzard City Gym est le seul Gym\nde West Borrius avec un design\nextérieur unique\l.\pL'aménagement intérieur du Gym ne ne\nrentrerait pas dans un gymnase\nnormal.
+0x1EE7B47: Je dois retourner au gymnase maintenant, alors fais attention,\n{STR_VAR_1} !
+0x1EE7B7B: Whoa… Vous avez l'air épuisé.\nAvez-vous gravi toute la montagne\pdepuis Crater Town ?\nAlors je suis sûr que notre accueil\pvous a offert un joli cadeau !\n
+0x1EE7C01: Maintenant que l'entrée de l'autoroute KBT est dégagée, les\nvoyageurs peuvent\péconomiser leurs forces en montant\npar là au lieu de monter à pied !
+0x1EE7C8B: Le type Vol est le seul type qui n'est pas au sol. Qu'est-ce que\n{COLOR}Égrounding{COLOR}Ë ?\pLes Pokémon au sol subissent des\pdégâts de Spikes et bénéficient des\neffets des terrains, entre autres\lchoses.\lVous en apprendrez davantage sur eux\pau fur et à mesure que vous\ncombattez.
+0x1EE7D73: Le type Vol est le seul type qui n'est pas au sol.\nIls ne bénéficient pas des terrains,\pmais ils ne subissent pas non plus\nde dégâts\ldes pointes.\pMais vous le saviez déjà, n'est-ce\npas vous, Champion ?
+0x1EE7E2A: Le Blizzard City Gym est le seul Gym de West Borrius avec un design extérieur unique\n.\lL'aménagement intérieur du Gym ne ne\prentrerait pas dans un gymnase\nnormal.
 0x1EE7EBB: {COLOR}ÁVoler vers Crater Town ?
 0x1EE7ED2: {COLOR}ÁVoler pour Blizzard City ?
 0x1EE7EEB: La poubelle est vide.
 0x1EE7F03: La porte est ouverte.
-0x1EE7F15: Chaque jour, j'essaie de cuisiner de\ndélicieux repas pour ma famille.\pJ'ai besoin d'inspiration,\ncependant.\pPensez-vous que vous pourriez me\nmontrer un Pokémon qui est du type\n{COLOR}É{STR_VAR_1}{COLOR}Ç ?
-0x1EE7FB0: Si vous attrapez un Pokémon de type\n{STR_VAR_1}, montrez-le-moi\l!\pJe vais vous donner un petit quelque\nchose.
-0x1EE8013: S'il vous plaît, montrez-moi un\nPokémon qui est de type\n{COLOR}É{STR_VAR_1}{COLOR}Ç !
+0x1EE7F15: Chaque jour, j'essaie de cuisiner de délicieux repas pour ma famille. J'ai besoin d'inspiration,\ncependant.\pPensez-vous que vous pourriez me\pmontrer un Pokémon qui est du type\n{COLOR}É{STR_VAR_1}{COLOR}Ç ?
+0x1EE7FB0: Si vous attrapez un Pokémon de type {STR_VAR_1}, montrez-le-moi\n!\lJe vais vous donner un petit quelque\pchose.
+0x1EE8013: S'il vous plaît, montrez-moi un Pokémon qui est de type\n{COLOR}É{STR_VAR_1}{COLOR}Ç !
 0x1EE8046: Le Pokémon que vous avez choisi\nn'est pas le que j'ai demandé.\pCe que je veux voir, c'est un\nPokémon c'est le type {STR_VAR_1} !
-0x1EE80AC: Comment puis-je savoir de quel type\nde Pokémon il s'agit s'il est dans\nun œuf ?\pCe que je veux voir, c'est un\nPokémon c'est le type {STR_VAR_1} !
+0x1EE80AC: Comment puis-je savoir de quel type de Pokémon il s'agit s'il est dans\nun œuf ?\pCe que je veux voir, c'est un\nPokémon c'est le type {STR_VAR_1} !
 0x1EE811F: Oh! Vous avez ce type ! Je suis\ninspiré !\pMerci ! En guise de ma gratitude ,\nvoudriez-vous un Berry ?
 0x1EE8184: Un {STR_VAR_1}! Il est à vous\nmaintenant !
 0x1EE81A0: {STR_VAR_2} {STR_VAR_1}! Ils sont\ntous à vous maintenant !
@@ -63,43 +63,43 @@
 0x1EE8297: Baie de Leppa
 0x1EE82A3: Entraîneur !\pS'il vous plaît, aidez ma maman à me\ncuisiner ! J'ai tellement faim !
 0x1EE82E1: Formateur !\pMerci d'avoir aidé ma maman à me\ncuisiner !\pC'était tellement délicieux !
-0x1EE832F: Les gens disent qu'à l'est de la\nville se trouve une forêt cachée\navec un\lPokémon puissant à l'intérieur.\pMais ce n'est probablement qu'une\nrumeur, donc la plupart des gens ont\ntendance à l'ignorer.
-0x1EE83CD: Un puissant Pokémon dort dans la\nforêt à l'est de la ville.\pN'ayez crainte, il ne vous fera\naucun mal .\pCe n'est dangereux que si vous vous\nen approchez un\n{COLOR}ÉTjeudi{COLOR}Ë.
-0x1EE8477: Les gens qui vivent ici ne ne me\nlaissent pas entrer, donc je suis\nobligé\lde m'asseoir ici.\pLes autres peuvent simplement\nappuyer sur {SE_SHOP} à côté de la\nporte et entrer.\pMais pas moi. La vie est nulle.
-0x1EE8520: L'envie de se battre avec quelqu'un\navec qui vous avez déjà côtoyé…\pAvez-vous déjà eu cette envie ? J'en\nsuis sûr.\pJe voulais combattre certaines\npersonnes encore et encore, encore\net encore.\pAlors, je les ai distribuées. S'il\nvous plaît, prenez-en une !
-0x1EE85FB: Utilisez cet appareil et vous\ntrouverez des entraîneurs à la\nrecherche d'une revanche.\pVous devez cependant charger sa\nbatterie pour l'utiliser.
-0x1EE866D: Comment utilisez-vous le {COLOR}ÉVS\nSeeker{COLOR}Ë ? Il n'y a rien à\nfaire.\pUtilisez-le comme un bip-bip-bip, et\nLes entraîneurs autour de vous le\nremarqueront.\pSi un entraîneur souhaite une\nrevanche, il vous le fera savoir\nimmédiatement.\pChargez sa batterie et utilisez-la\npendant que vous êtes sur la route.
-0x1EE8761: Là où le vent est glacial, mes mains\nle sont aussi.\pVoulez-vous que j'apprenne à l'un de\nvotre Pokémon {COLOR}ÉIce\nPunch{COLOR}Ë ?\pJ'ai besoin de {COLOR}É{STR_VAR_2}\n{STR_VAR_1}s{COLOR}Ë pour partager\nmes mains glaciales.
-0x1EE87FF: Quel Pokémon aimerait avoir les\nmains gelées avec {COLOR}ÉIce\nPunch{COLOR}Ë ?
+0x1EE832F: Les gens disent qu'à l'est de la ville se trouve une forêt cachée avec un\nPokémon puissant à l'intérieur.\lMais ce n'est probablement qu'une\prumeur, donc la plupart des gens ont\ntendance à l'ignorer.
+0x1EE83CD: Un puissant Pokémon dort dans la forêt à l'est de la ville.\nN'ayez crainte, il ne vous fera\paucun mal .\nCe n'est dangereux que si vous vous\pen approchez un\n{COLOR}ÉTjeudi{COLOR}Ë.
+0x1EE8477: Les gens qui vivent ici ne ne me laissent pas entrer, donc je suis\nobligé\lde m'asseoir ici.\pLes autres peuvent simplement\nappuyer sur {SE_SHOP} à côté de la\pporte et entrer.\nMais pas moi. La vie est nulle.
+0x1EE8520: L'envie de se battre avec quelqu'un avec qui vous avez déjà côtoyé…\nAvez-vous déjà eu cette envie ? J'en\psuis sûr.\nJe voulais combattre certaines\ppersonnes encore et encore, encore\net encore.\pAlors, je les ai distribuées. S'il\nvous plaît, prenez-en une !
+0x1EE85FB: Utilisez cet appareil et vous trouverez des entraîneurs à la\nrecherche d'une revanche.\pVous devez cependant charger sa\nbatterie pour l'utiliser.
+0x1EE866D: Comment utilisez-vous le {COLOR}ÉVS Seeker{COLOR}Ë ? Il n'y a rien à faire. Utilisez-le comme un bip-bip-bip, et\nLes entraîneurs autour de vous le\premarqueront.\nSi un entraîneur souhaite une\prevanche, il vous le fera savoir\nimmédiatement.\pChargez sa batterie et utilisez-la\npendant que vous êtes sur la route.
+0x1EE8761: Là où le vent est glacial, mes mains le sont aussi. Voulez-vous que j'apprenne à l'un de\nvotre Pokémon {COLOR}ÉIce\pPunch{COLOR}Ë ?\nJ'ai besoin de {COLOR}É{STR_VAR_2}\p{STR_VAR_1}s{COLOR}Ë pour partager\nmes mains glaciales.
+0x1EE87FF: Quel Pokémon aimerait avoir les mains gelées avec {COLOR}ÉIce\nPunch{COLOR}Ë ?
 0x1EE8849: Mes mains resteront froides pendant\ntoute l'éternité.
 0x1EE8876: Vous n’avez pas assez de\n{STR_VAR_1}s.\pJe ne peux pas partager mes mains\nglaciales avec vous pour rien…
 0x1EE88C7: Et si je vous lançais un\n{COLOR}Éfree TM{COLOR}Ë ?
-0x1EE88F4: La CT que je vous ai donnée contient\n{COLOR}ÉAurora Veil{COLOR}Ë.\pIl a un effet similaire à la fois\nReflect et Light Screen combinés.\pLe seul problème est qu'il ne peut\nêtre utilisé que par temps\n{COLOR}ÉHail{COLOR}Ë.
+0x1EE88F4: La CT que je vous ai donnée contient {COLOR}ÉAurora Veil{COLOR}Ë.\nIl a un effet similaire à la fois\pReflect et Light Screen combinés.\nLe seul problème est qu'il ne peut\pêtre utilisé que par temps\n{COLOR}ÉHail{COLOR}Ë.
 0x1EE89A9: Ta perte, mon pote.
-0x1EE89B9: Un gars dans l'une des résidences\npar ici donne\lun objet qui vous permet de\lrebattre les dresseurs.\pÇa ne marche pas vraiment dans les\ngrottes, mais sur les routes, c'est\nsuper utile !
+0x1EE89B9: Un gars dans l'une des résidences par ici donne\nun objet qui vous permet de\lrebattre les dresseurs.\lÇa ne marche pas vraiment dans les\pgrottes, mais sur les routes, c'est\nsuper utile !
 0x1EE8A66: {COLOR}ÇSalut ! As-tu un\n{COLOR}É{STR_VAR_1}{COLOR}Ç?\pTu veux l'échanger contre mon\n{COLOR}É{STR_VAR_2}{COLOR}Ç?\pC'est génial si tu veux combattre ma\nmaman !
 0x1EE8AD5: {COLOR}ÇMa maman va flipper quand\nelle verra mon nouveau Pokémon !
-0x1EE8B0C: {COLOR}ÇComment va mon vieux\n{STR_VAR_2} ?\pMon {STR_VAR_1} se porte à merveille\n!\pIl a presque fait un trou dans le\nplafond quand je l'ai laissé sortir\n!
+0x1EE8B0C: {COLOR}ÇComment va mon vieux {STR_VAR_2} ? Mon {STR_VAR_1} se porte à merveille!\pIl a presque fait un trou dans le\pplafond quand je l'ai laissé sortir\n!
 0x1EE8B71: {COLOR}ÇAww…\pTu ne sais pas qui est ma maman ? Je\nvais te dénoncer !
-0x1EE8BB3: {COLOR}ÇJe suis petit, pas stupide.\nCe n'est pas un\n{COLOR}É{STR_VAR_1}{COLOR}Ç !
-0x1EE8BE6: La responsable du gymnase,\n{COLOR}ÉAlice{COLOR}Ç, habite en\nbas.\pElle dirige le gymnase la plupart du\ntemps , donc elle laisse\ngénéralement\lson enfant seul à la maison.\pJe, personnellement, je ne\nlaisserais jamais mon fils seul à la\nmaison.\pSon esprit est trop délicat.\pIl ne supporte pas d'être sans sa\nmaman !
-0x1EE8CE0: "Qui construit une ville au sommet\nd'une montagne gelée ?" vous vous\ndemandez peut-être.\pEh bien, il y a environ 20 ans, un\ngroupe de gardiens d'oiseaux se sont\nréunis et\lont décidé qu'ils voulaient un bel\nendroit en hauteur\lpour que leurs Pokémon puissent\ns'entraîner.\pAvec l'aide de ce type nommé Aros et\nde son partenaire Pokémon, ils\lont construit cette ville en moins\nd'un an !\pJe suis étonné de voir quelles\ngrandes choses les gens et les\nPokémon peuvent accomplir\len travaillant ensemble.\pDites…\pVotre visage me rappelle son un peu…
+0x1EE8BB3: {COLOR}ÇJe suis petit, pas stupide. Ce n'est pas un\n{COLOR}É{STR_VAR_1}{COLOR}Ç !
+0x1EE8BE6: La responsable du gymnase, {COLOR}ÉAlice{COLOR}Ç, habite en bas. Elle dirige le gymnase la plupart du\ntemps , donc elle laisse\pgénéralement\nson enfant seul à la maison.\lJe, personnellement, je ne\plaisserais jamais mon fils seul à la\nmaison.\pSon esprit est trop délicat.\pIl ne supporte pas d'être sans sa\nmaman !
+0x1EE8CE0: "Qui construit une ville au sommet d'une montagne gelée ?" vous vous demandez peut-être. Eh bien, il y a environ 20 ans, un groupe de gardiens d'oiseaux se sont\nréunis et\lont décidé qu'ils voulaient un bel\pendroit en hauteur\npour que leurs Pokémon puissent\ls'entraîner.\lAvec l'aide de ce type nommé Aros et\pde son partenaire Pokémon, ils\nont construit cette ville en moins\ld'un an !\pJe suis étonné de voir quelles\ngrandes choses les gens et les\lPokémon peuvent accomplir\pen travaillant ensemble.\pDites…\nVotre visage me rappelle son un peu…
 0x1EE8E92: Journal Nat
-0x1EE8E9A: Oh ! Tu es {PLAYER} !\pEuler a dit que tu viendrais.\pOh, qui suis-je ?\pJe n'en ai peut-être pas l'air, mais\nje suis sa sœur ! Natasha Log !\pIl m'a dit de m'attendre à un\nnouveau dresseur avec un Pokédex,\ndonc si vous avez\lattrapé au moins\n{COLOR}É{STR_VAR_1}{COLOR}Ç espèces\nde\lPokémon, j'ai exactement ce que\lpréparé.
+0x1EE8E9A: Oh ! Tu es {PLAYER} ! Euler a dit que tu viendrais. Oh, qui suis-je ?\nJe n'en ai peut-être pas l'air, mais\pje suis sa sœur ! Natasha Log !\pIl m'a dit de m'attendre à un\pnouveau dresseur avec un Pokédex,\ndonc si vous avez\pattrapé au moins\n{COLOR}É{STR_VAR_1}{COLOR}Ç espèces\lde\lPokémon, j'ai exactement ce que\lpréparé.
 0x1EE8F94: Hmm…\pVous n'avez capturé que {STR_VAR_2}\nespèces jusqu'à présent.\pAllez à {COLOR}É{STR_VAR_1}{COLOR}Ç\net j'améliorerai votre Pokédex !
-0x1EE8FEE: Le Pokédex de {COLOR}Á{PLAYER} a été\nmis à niveau avec le\n{COLOR}ÉDexNav{COLOR}Á !
-0x1EE9022: Ce que je vous ai donné était un\n{COLOR}ÉDexNav{COLOR}Ç!\pCela facilitera grandement votre\ntâche de capture Pokémon.\pUne fois que vous avez vu un\nPokémon, recherchez à l'aide du\nDexNav, et\lalors il y a de fortes chances qu'il\lapparaisse autour de vous !\pMon assistant peut fournir d'autres\nexplications.
-0x1EE9125: Je m'appelle Ayla !\pSous la tutelle de Nat, j'ai pu\ntransférer le PC de Bill à\lBorrius et développer ma propre\nversion !\pGrâce à mes améliorations, vous\npouvez maintenant stocker jusqu'à\n{COLOR}É750{COLOR}Ç différents\lPokémon dans mon PC !\pC'est loin des 420 autorisés dans le\nPC de Bill.
+0x1EE8FEE: Le Pokédex de {COLOR}Á{PLAYER} a été mis à niveau avec le\n{COLOR}ÉDexNav{COLOR}Á !
+0x1EE9022: Ce que je vous ai donné était un {COLOR}ÉDexNav{COLOR}Ç! Cela facilitera grandement votre\ptâche de capture Pokémon.\nUne fois que vous avez vu un\pPokémon, recherchez à l'aide du\nDexNav, et\lalors il y a de fortes chances qu'il\lapparaisse autour de vous !\pMon assistant peut fournir d'autres\nexplications.
+0x1EE9125: Je m'appelle Ayla ! Sous la tutelle de Nat, j'ai pu transférer le PC de Bill à\pBorrius et développer ma propre\nversion !\lGrâce à mes améliorations, vous\ppouvez maintenant stocker jusqu'à\n{COLOR}É750{COLOR}Ç différents\lPokémon dans mon PC !\pC'est loin des 420 autorisés dans le\nPC de Bill.
 0x1EE9228: En tant qu'assistant de Nat, je suis\ncapable de vous expliquer le DexNav.
 0x1EE926A: Le DexNav est un appareil compliqué.\nSes explications sont disponibles\pauprès de moi chaque fois que vous\nen avez besoin.
-0x1EE92D1: Le DexNav se compose de deux parties\n: une {COLOR}Éinterface{COLOR}Ë et\nune {COLOR}Ébarre de\nrecherche{COLOR}Ë.\pL'interface est accessible depuis le\n{COLOR}ÉMenu Démarrer{COLOR}Ë et\nvous permet de\lchoisir un Pokémon à rechercher.\pSi un Pokémon peut être trouvé dans\nvotre emplacement actuel et que le\nPokémon\lest enregistré comme au moins\n"{COLOR}Éseen{COLOR}Ë"\ldans votre Pokédex, il\lapparaîtra comme consultable.\pUne fois qu'un Pokémon est choisi\navec {SE_SHOP}, il apparaîtra dans\nla barre de recherche\lpendant que la recherche est active.\pPour trouver le Pokémon que vous\navez choisi de rechercher, gardez un\nœil sur\lphénomène tel que {COLOR}Érustling\nherbe{COLOR}Ë\lou {COLOR}Énuages de\npoussière{COLOR}Ë dans les grottes.\pVous devez vous en approcher\nlentement, sinon le Pokémon fuira.\pNotez que si le Pokémon n'est pas\nenregistré comme «\n{COLOR}Écaught{COLOR}Ë » dans votre\lPokédex, il peut être difficile de\llocaliser avant qu'il ne soit\ncapturé.\pChaque fois que vous rencontrez un\nPokémon avec le DexNav, son\n{COLOR}Éniveau de recherche{COLOR}Ë\laugmente et les recherches futures\npourraient\lproduire de meilleurs Pokémon.
-0x1EE965F: Lorsque vous recherchez des Pokémon,\nvous pouvez choisir de rechercher\nsoit des\lPokémon terrestres, soit des\lPokémon aquatiques.\pLes Pokémon aquatiques incluent les\nPokémon trouvés en surfant et en\lPêche.\pCependant, les Pokémon trouvés en\npêchant n'apparaîtront comme\nconsultables que si\lvous avez obtenu le\lRodeau nécessaire pour les accrocher\nvous-même.\pDe plus, il est important de noter,\npeu importe du Pokémon\lque vous recherchez, il sera\lbeaucoup plus difficile à trouver si\lvous n'avez pas capturé l'espèce\lauparavant.
-0x1EE983C: À mesure que votre niveau de\nrecherche augmente, augmente les\nchances d'obtenir des statistiques\nparfaites.\pLe potentiel d'avoir une stat\nparfaite est indiqué sur la barre de\nrecherche\lavec une étoile d'argent à mesure\nque vous approchez\ldu Pokémon.\pUn Pokémon peut avoir au plus trois\nstatistiques parfaites, chacune\nindiquée par une\létoile d'or.
-0x1EE9946: Certains Pokémon peuvent être\nrencontrés avec des capacités\nspéciales.\pLa chance que cela se produise est\nplus élevée avec un niveau de\nrecherche plus élevé.\pQue le Pokémon ait ou non une\ncapacité spéciale, si\lvotre niveau de recherche est\nsuffisamment élevé,\lle ​​premier mouvement du Pokémon\nsera\lindiqué sur la barre de recherche\nlorsque vous\lvous approcherez du Pokémon.
-0x1EE9A79: Certains Pokémon peuvent être\nrencontrés avec leur capacité\ncachée.\pLa chance que cela se produise est\nplus élevée avec un niveau de\nrecherche plus élevé.\pLa capacité d'un Pokémon, qu'elle\nsoit cachée ou non, est\lindiquée sur la barre de recherche\nlorsque vous\lapprochez du Pokémon, si votre\lniveau de recherche est suffisamment\nélevé.
-0x1EE9B98: Certains Pokémon peuvent être\nrencontrés avec un objet détenu.\pCeci est indiqué sur la barre de\nrecherche si le niveau de recherche\nest suffisamment élevé.
-0x1EE9C12: Les Pokémon peuvent être enregistrés\npour recherche en appuyant sur\n{R_BUTTON} pendant que\ll'interface est ouverte.\pSi un Pokémon est enregistré et le\nmode {COLOR}ÉR-Button{COLOR}Ë est\nréglé sur {COLOR}ÉDexNav\lScan{COLOR}Ë, puis appuyer sur\n{R_BUTTON} en dehors de\lbataille permettra une recherche\nimmédiate\ldu Pokémon, à condition qu'il\lapparaisse dans le zone.
-0x1EE9D32: L'enchaînement se produit lorsque le\nDexNav est utilisé pour rencontrer\ndes Pokémon plusieurs\lfois de suite.\pUne chaîne se construit à chaque\nfois que vous capturez ou battez un\nPokémon\lrencontré avec le DexNav.\pSi vous ne capturez pas ou ne battez\npas le Pokémon, la chaîne se brise.\pUne chaîne se brisera également si,\nen dehors de la bataille, un Pokémon\ns'enfuit\lde vous ou que vous rencontrez a\lPokémon n'utilisant pas le DexNav.\pEnregistrer et redémarrer le jeu\nbrise également la chaîne.\pLa chaîne se réinitialise toutes les\n100 batailles, et plus la chaîne est\nélevée, plus le niveau du Pokémon\lest élevé.\pDe plus, chaque fois que la chaîne\natteint 50 ou 100, les Pokémon ont\lplus de chances d'être trouvés\nbrillants.\pCeci est indiqué par une étoile\ndorée. next à la longueur de la\nchaîne sur le HUD.
+0x1EE92D1: Le DexNav se compose de deux parties: une {COLOR}Éinterface{COLOR}Ë et une {COLOR}Ébarre de recherche{COLOR}Ë. L'interface est accessible depuis le {COLOR}ÉMenu Démarrer{COLOR}Ë et vous permet de choisir un Pokémon à rechercher. Si un Pokémon peut être trouvé dans votre emplacement actuel et que le Pokémon est enregistré comme au moins"{COLOR}Éseen{COLOR}Ë" dans votre Pokédex, il\napparaîtra comme consultable.\pUne fois qu'un Pokémon est choisi\navec {SE_SHOP}, il apparaîtra dans\lla barre de recherche\ppendant que la recherche est active.\nPour trouver le Pokémon que vous\lavez choisi de rechercher, gardez un\lœil sur\lphénomène tel que {COLOR}Érustling\pherbe{COLOR}Ë\nou {COLOR}Énuages de\lpoussière{COLOR}Ë dans les grottes.\pVous devez vous en approcher\nlentement, sinon le Pokémon fuira.\lNotez que si le Pokémon n'est pas\lenregistré comme «\p{COLOR}Écaught{COLOR}Ë » dans votre\nPokédex, il peut être difficile de\plocaliser avant qu'il ne soit\ncapturé.\lChaque fois que vous rencontrez un\lPokémon avec le DexNav, son\p{COLOR}Éniveau de recherche{COLOR}Ë\naugmente et les recherches futures\lpourraient\lproduire de meilleurs Pokémon.
+0x1EE965F: Lorsque vous recherchez des Pokémon, vous pouvez choisir de rechercher soit des Pokémon terrestres, soit des\nPokémon aquatiques.\lLes Pokémon aquatiques incluent les\lPokémon trouvés en surfant et en\pPêche.\nCependant, les Pokémon trouvés en\lpêchant n'apparaîtront comme\pconsultables que si\nvous avez obtenu le\lRodeau nécessaire pour les accrocher\lvous-même.\pDe plus, il est important de noter,\npeu importe du Pokémon\lque vous recherchez, il sera\lbeaucoup plus difficile à trouver si\lvous n'avez pas capturé l'espèce\lauparavant.
+0x1EE983C: À mesure que votre niveau de recherche augmente, augmente les chances d'obtenir des statistiques parfaites. Le potentiel d'avoir une stat parfaite est indiqué sur la barre de\nrecherche\pavec une étoile d'argent à mesure\nque vous approchez\ldu Pokémon.\lUn Pokémon peut avoir au plus trois\pstatistiques parfaites, chacune\nindiquée par une\létoile d'or.
+0x1EE9946: Certains Pokémon peuvent être rencontrés avec des capacités spéciales. La chance que cela se produise est plus élevée avec un niveau de recherche plus élevé.\nQue le Pokémon ait ou non une\pcapacité spéciale, si\nvotre niveau de recherche est\psuffisamment élevé,\nle ​​premier mouvement du Pokémon\lsera\lindiqué sur la barre de recherche\llorsque vous\lvous approcherez du Pokémon.
+0x1EE9A79: Certains Pokémon peuvent être rencontrés avec leur capacité cachée. La chance que cela se produise est plus élevée avec un niveau de\nrecherche plus élevé.\pLa capacité d'un Pokémon, qu'elle\nsoit cachée ou non, est\pindiquée sur la barre de recherche\nlorsque vous\lapprochez du Pokémon, si votre\lniveau de recherche est suffisamment\lélevé.
+0x1EE9B98: Certains Pokémon peuvent être rencontrés avec un objet détenu.\nCeci est indiqué sur la barre de\precherche si le niveau de recherche\nest suffisamment élevé.
+0x1EE9C12: Les Pokémon peuvent être enregistrés pour recherche en appuyant sur {R_BUTTON} pendant que l'interface est ouverte. Si un Pokémon est enregistré et le\nmode {COLOR}ÉR-Button{COLOR}Ë est\lréglé sur {COLOR}ÉDexNav\pScan{COLOR}Ë, puis appuyer sur\n{R_BUTTON} en dehors de\lbataille permettra une recherche\limmédiate\ldu Pokémon, à condition qu'il\lapparaisse dans le zone.
+0x1EE9D32: L'enchaînement se produit lorsque le DexNav est utilisé pour rencontrer des Pokémon plusieurs fois de suite. Une chaîne se construit à chaque fois que vous capturez ou battez un Pokémon\nrencontré avec le DexNav.\lSi vous ne capturez pas ou ne battez\ppas le Pokémon, la chaîne se brise.\nUne chaîne se brisera également si,\len dehors de la bataille, un Pokémon\ps'enfuit\nde vous ou que vous rencontrez a\pPokémon n'utilisant pas le DexNav.\nEnregistrer et redémarrer le jeu\lbrise également la chaîne.\lLa chaîne se réinitialise toutes les\p100 batailles, et plus la chaîne est\nélevée, plus le niveau du Pokémon\pest élevé.\nDe plus, chaque fois que la chaîne\latteint 50 ou 100, les Pokémon ont\pplus de chances d'être trouvés\nbrillants.\lCeci est indiqué par une étoile\pdorée. next à la longueur de la\nchaîne sur le HUD.
 0x1EE9FD2: Le DexNav
 0x1EE9FDD: Recherche
 0x1EE9FE7: Potentiel
@@ -110,22 +110,22 @@
 0x1EEA028: Chaînage
 0x1EEA031: Candice
 0x1EEA039: Chef Sinnoh
-0x1EEA047: Oh, salut !\pJe ne pense pas t'avoir déjà vu dans\nles environs ici !\pEs-tu en vacances, comme Candice ?\pOh ? Ce sont des badges de gym que\nvous avez là, n'est-ce pas…?\pHmm ? Non, je ne suis pas le\nresponsable du gymnase de Blizzard\nCity - je prends juste une\lpause ici.\pMais si vous cherchez une bataille\nde toute façon, je ne dirais\ncertainement pas non à\lune pour le moment !
+0x1EEA047: Oh, salut ! Je ne pense pas t'avoir déjà vu dans les environs ici !\pEs-tu en vacances, comme Candice ?\nOh ? Ce sont des badges de gym que\pvous avez là, n'est-ce pas…?\pHmm ? Non, je ne suis pas le\nresponsable du gymnase de Blizzard\pCity - je prends juste une\npause ici.\lMais si vous cherchez une bataille\pde toute façon, je ne dirais\ncertainement pas non à\lune pour le moment !
 0x1EEA180: Salut ! Quoi de neuf ?\pJe parie que vous ne pouvez pas dire\nà quoi Je pense !\pJe vais donner la réponse. Je veux\nme battre avec vous !
-0x1EEA1EF: Je suis peut-être en vacances, mais\nce n'est pas une excuse pour ne pas\nme concentrer !\pC'est parce que la mode, la romance,\nles batailles… tout est une question\nde concentration !\pLaisse-moi te montrer ce que je veux\ndire ! Préparez-vous, car me voilà !
+0x1EEA1EF: Je suis peut-être en vacances, mais ce n'est pas une excuse pour ne pas me concentrer !\nC'est parce que la mode, la romance,\ples batailles… tout est une question\nde concentration !\pLaisse-moi te montrer ce que je veux\ndire ! Préparez-vous, car me voilà !
 0x1EEA2A7: Écoute, écoute. Tu vas combattre\nCandice, n'est-ce pas ?
 0x1EEA2D9: Oh… Est-ce que ma volonté t'a\nintimidé ?
 0x1EEA2FE: Vous êtes puissant ! Vous méritez\nbeaucoup de respect.
 0x1EEA32F: Écoutez, écoutez.\pVous vous êtes très bien battu,\nalors je veux que vous ayez ça.
-0x1EEA374: Je pensais défier\n{COLOR}ÉAlice{COLOR}Ç, la\nresponsable du gymnase de Blizzard\nCity, avec\lça, mais je pense que c'est mieux\lavec toi.\pSi tu veux refaire ça, alors viens\nme voir demain !\pJe vais me concentrer encore plus\nfort et gagner la prochaine la fois,\nc'est sûr !
-0x1EEA459: Écoute, écoute.\pSi tu veux refaire ça, alors viens\nme voir demain !\pJe vais me concentrer encore plus\nfort et gagner la prochaine la fois,\nc'est sûr !
+0x1EEA374: Je pensais défier {COLOR}ÉAlice{COLOR}Ç, la responsable du gymnase de Blizzard City, avec\nça, mais je pense que c'est mieux\lavec toi.\lSi tu veux refaire ça, alors viens\pme voir demain !\nJe vais me concentrer encore plus\pfort et gagner la prochaine la fois,\nc'est sûr !
+0x1EEA459: Écoute, écoute. Si tu veux refaire ça, alors viens\pme voir demain !\nJe vais me concentrer encore plus\pfort et gagner la prochaine la fois,\nc'est sûr !
 0x1EEA4D4: Je t'attendais…
 0x1EEA4ED: Ho, ho, ho !\pLe regard sur ton visage n'a pas de\nprix !\pNe t'inquiète pas, mon ami, le Cut\nMaster m'a dit que tu venais !
-0x1EEA55D: Ah, ha, ha ! Donc j'avais raison !\pJe dis ça à toutes les personnes qui\nont franchi ma porte\ldepuis que j'ai reçu son appel, mais\lvous êtes la première personne à\navoir\lun air de soulagement sur son visage\n!
-0x1EEA61B: Ce HM contient {COLOR}ÉRock\nSmash{COLOR}Ë, si ce n'était pas\ndéjà évident !\pVous pouvez l'utiliser pour briser\ntous les roches fissurés sur votre\nchemin.\pN'oubliez pas que pour utiliser Rock\nSmash, vous devez d'abord obtenir le\nbadge de gymnase\l{COLOR}ÉBlizzard City{COLOR}Ë.
-0x1EEA6F9: Gahhhhhhhh…\p{COLOR}ÁSon cerveau semble être\ngrillé.
-0x1EEA727: Les aliments frits sont mes préférés\n!\pFrites, bâtonnets de Bargantua… ils\nsont tous excellents !
-0x1EEA777: Hé! Écoutez bien.\pAvez-vous voyagé et avez remarqué\ndes rochers sur votre chemin\lque vous ne pouviez tout simplement\npas bouger ?\pEh bien, il y a un gars dans\n{COLOR}ÉEpidimy Town{COLOR}Ë qui est\nle maître pour enseigner à\lPokémon comment déplacer de gros\nrochers.\pParlez-lui dès que possible si vous\nvoulez déplacer ces satanées choses.
+0x1EEA55D: Ah, ha, ha ! Donc j'avais raison ! Je dis ça à toutes les personnes qui\nont franchi ma porte\pdepuis que j'ai reçu son appel, mais\nvous êtes la première personne à\lavoir\lun air de soulagement sur son visage\l!
+0x1EEA61B: Ce HM contient {COLOR}ÉRock Smash{COLOR}Ë, si ce n'était pas déjà évident ! Vous pouvez l'utiliser pour briser\ntous les roches fissurés sur votre\pchemin.\nN'oubliez pas que pour utiliser Rock\pSmash, vous devez d'abord obtenir le\nbadge de gymnase\l{COLOR}ÉBlizzard City{COLOR}Ë.
+0x1EEA6F9: Gahhhhhhhh… {COLOR}ÁSon cerveau semble être\pgrillé.
+0x1EEA727: Les aliments frits sont mes préférés!\pFrites, bâtonnets de Bargantua… ils\nsont tous excellents !
+0x1EEA777: Hé! Écoutez bien. Avez-vous voyagé et avez remarqué des rochers sur votre chemin que vous ne pouviez tout simplement\ppas bouger ?\nEh bien, il y a un gars dans\l{COLOR}ÉEpidimy Town{COLOR}Ë qui est\ple maître pour enseigner à\nPokémon comment déplacer de gros\lrochers.\pParlez-lui dès que possible si vous\nvoulez déplacer ces satanées choses.
 0x1EEA888: Tarte sucrée
 0x1EEA892: Tarte juteuse
 0x1EEA89C: Tarte ultime
@@ -135,37 +135,37 @@
 0x1EEA9D0: Vous êtes là, jeune formateur !\pVoudriez-vous être un chéri et\nm'aider dans une tâche ?
 0x1EEAA17: Ahaha, jeune entraîneur !\pVoudriez-vous m'aider dans une autre\ntâche ?
 0x1EEAA60: Etes-vous sûr ? Je vous promets que\nla récompense sera bonne.
-0x1EEAA8C: Oh, merci !\pL'anniversaire de mon petit-fils\napproche, et je veux lui faire une\ntarte, mais\lJe n'ai pas tous les ingrédients.\pJ'ai seulement besoin de :\n{COLOR}É{VERSION}{COLOR}Ç\pSi vous pouviez me les apporter le\nplus tôt possible, ce serait\ltrès apprécié.
-0x1EEAB6E: Oh, merci encore !\pL'anniversaire de mon fils approche,\net moi aussi je veux lui préparer\nune tarte.\pCette fois, j'ai besoin de :\n{COLOR}É{VERSION}{COLOR}Ç\pApportez-les-moi en toute hâte,\njeune Entraîneur !
-0x1EEAC10: Oh, merci encore !\pMon ex-mari a trouvé l'amour avec\nune autre femme, et je veux lui\npréparer\lune tarte à lui briser au visage !\pCette fois, j'ai besoin de :\n{COLOR}É{VERSION}
+0x1EEAA8C: Oh, merci ! L'anniversaire de mon petit-fils\papproche, et je veux lui faire une\ntarte, mais\lJe n'ai pas tous les ingrédients.\pJ'ai seulement besoin de :\n{COLOR}É{VERSION}{COLOR}Ç\pSi vous pouviez me les apporter le\nplus tôt possible, ce serait\ltrès apprécié.
+0x1EEAB6E: Oh, merci encore ! L'anniversaire de mon fils approche,\pet moi aussi je veux lui préparer\nune tarte.\pCette fois, j'ai besoin de :\n{COLOR}É{VERSION}{COLOR}Ç\pApportez-les-moi en toute hâte,\njeune Entraîneur !
+0x1EEAC10: Oh, merci encore ! Mon ex-mari a trouvé l'amour avec\pune autre femme, et je veux lui\npréparer\lune tarte à lui briser au visage !\pCette fois, j'ai besoin de :\n{COLOR}É{VERSION}
 0x1EEAC9D: J'ai encore besoin de :\n{COLOR}É{VERSION}{COLOR}Ç\pVeuillez les apporter dès que que\nvous le pouvez.
 0x1EEACDA: Ooh hoo hoo, il semble que vous ayez\napporté mes ingrédients.\pTrès apprécié.
-0x1EEAD3D: Je suis sûr que mon {STR_VAR_2}\nadorera cette tarte.\pS'il vous plaît, prenez-les en\néchange de votre travail acharné,\njeune entraîneur.
-0x1EEADA2: Je suis sûr que j'apprécierai\nd'écraser cette tarte sur le visage\nde mon ex-mari !\pS'il vous plaît, prenez-les en\néchange de votre travail acharné,\njeune entraîneur.
-0x1EEAE25: Revenez dans le futur un jour.\pLes célébrations pour lesquelles\npréparer des tartes ne manquent pas.
-0x1EEAE85: Ma famille a adoré toutes les tartes\n!\pJe n’aurais pas pu préparer une\nnourriture aussi merveilleuse sans\nvotre aide.
+0x1EEAD3D: Je suis sûr que mon {STR_VAR_2} adorera cette tarte.\nS'il vous plaît, prenez-les en\péchange de votre travail acharné,\njeune entraîneur.
+0x1EEADA2: Je suis sûr que j'apprécierai d'écraser cette tarte sur le visage de mon ex-mari !\nS'il vous plaît, prenez-les en\péchange de votre travail acharné,\njeune entraîneur.
+0x1EEAE25: Revenez dans le futur un jour.\nLes célébrations pour lesquelles\ppréparer des tartes ne manquent pas.\n
+0x1EEAE85: Ma famille a adoré toutes les tartes! Je n’aurais pas pu préparer une\pnourriture aussi merveilleuse sans\nvotre aide.
 0x1EEAEE2: 1 baie de Pecha\l1 baie de Qualot\l1 eau fraîche
 0x1EEAF0D: 3 Baies Rawst\l5 Baies Belue\l5 Baies Watmel\l5 Laits Moomoo
 0x1EEAF4D: 10 baies de Sitrus\l10 baies de Lum\l2 baies de Kee\l2 baies de Marang\l5 laits Moomoo
 0x1EEAF9C: petit fils
-0x1EEAFA9: Avez-vous déjà entendu parler de\n{COLOR}ÉAyla{COLOR}Ç?\pC'est elle qui est responsable de\namener le PC de Bill à Borrius !\pGrâce à elle, nous pouvons stocker\nnos Pokémon quelque part !
-0x1EEB03C: Vous connaissez\n{COLOR}ÉAyla{COLOR}Ç, n'est-ce pas,\nChampion ?\pLa personne chargée d'amener le ​​PC\nde Bill à Borrius ?\pLa rumeur dit qu'elle a travaillé\nsur un moyen de stocker des Pokémon\nsur le\lcloud et de les échanger à travers\nle\lglobe…\pMais cela ne peut pas être vrai,\nn'est-ce pas ?\pTout le monde sait que vous avez\nbesoin d'un câble de liaison pour\néchanger !
-0x1EEB152: {COLOR}ÉAlice{COLOR}Ë, la\nresponsable de l'arène, aime\nutiliser des Pokémon de type\n{COLOR}ÉVol{COLOR}Ë.\pJe sais, ce n'est pas ce que l'on\nattend d'une arène d'ici.
-0x1EEB1CE: Lorsque les Pokémon évoluent, ils\ndeviennent plus forts.\pMais il y a un avantage à ne pas\nfaire évoluer votre Pokémon tout de\nsuite.\pLes Pokémon qui peuvent encore\névoluer peuvent utiliser une\n{COLOR}ÉEviolite{COLOR}Ë pour\ndevenir\lplus résistant à battre au combat.\pJ'ai un extra, donc je serais prêt à\nm'en séparer si vous pouvez me\nmontrer\lun Pokémon qui peut encore évoluer.
-0x1EEB2FE: Les Pokémon qui peuvent encore\névoluer sont en abondance dans la\nnature.
+0x1EEAFA9: Avez-vous déjà entendu parler de {COLOR}ÉAyla{COLOR}Ç?\pC'est elle qui est responsable de\namener le PC de Bill à Borrius !\pGrâce à elle, nous pouvons stocker\nnos Pokémon quelque part !
+0x1EEB03C: Vous connaissez {COLOR}ÉAyla{COLOR}Ç, n'est-ce pas, Champion ? La personne chargée d'amener le ​​PC de Bill à Borrius ? La rumeur dit qu'elle a travaillé sur un moyen de stocker des Pokémon\psur le\ncloud et de les échanger à travers\ple\nglobe…\lMais cela ne peut pas être vrai,\ln'est-ce pas ?\pTout le monde sait que vous avez\pbesoin d'un câble de liaison pour\néchanger !
+0x1EEB152: {COLOR}ÉAlice{COLOR}Ë, la responsable de l'arène, aime utiliser des Pokémon de type\n{COLOR}ÉVol{COLOR}Ë.\pJe sais, ce n'est pas ce que l'on\nattend d'une arène d'ici.
+0x1EEB1CE: Lorsque les Pokémon évoluent, ils deviennent plus forts. Mais il y a un avantage à ne pas faire évoluer votre Pokémon tout de suite.\nLes Pokémon qui peuvent encore\pévoluer peuvent utiliser une\n{COLOR}ÉEviolite{COLOR}Ë pour\pdevenir\nplus résistant à battre au combat.\lJ'ai un extra, donc je serais prêt à\pm'en séparer si vous pouvez me\nmontrer\lun Pokémon qui peut encore évoluer.
+0x1EEB2FE: Les Pokémon qui peuvent encore évoluer sont en abondance dans la\nnature.
 0x1EEB33A: Malheureusement, ce Pokémon ne peut\névoluer plus.\pMême si vous lui donniez une\nEviolite, cela n'aurait aucun effet.
-0x1EEB3AE: Il n'y a aucune garantie que tout ce\nque contient dans cet œuf puisse\névoluer.\pSans parler du fait que Eggs ne peut\npas contenir d'objets.
+0x1EEB3AE: Il n'y a aucune garantie que tout ce que contient dans cet œuf puisse\névoluer.\pSans parler du fait que Eggs ne peut\npas contenir d'objets.
 0x1EEB420: Vous avez raison.\pVotre {STR_VAR_1} peut en effet\nencore évoluer.\pDonc, comme promis…
-0x1EEB463: Demandez à un Pokémon qui peut\nencore évoluer de tenir une\n{COLOR}ÉEviolite{COLOR}Ë au combat\lpour augmenter ses défenses.
-0x1EEB4C3: On dit que certaines des personnes\nles plus laides achètent au Poké\nMart.\pJ'ai entendu dire qu'il existe même\nun site Web qui les documente\ntoutes.
+0x1EEB463: Demandez à un Pokémon qui peut encore évoluer de tenir une\n{COLOR}ÉEviolite{COLOR}Ë au combat\lpour augmenter ses défenses.
+0x1EEB4C3: On dit que certaines des personnes les plus laides achètent au Poké Mart.\nJ'ai entendu dire qu'il existe même\pun site Web qui les documente\ntoutes.
 0x1EEB532: L'un des dirigeants du Sinnoh Gym\naime venir ici en vacances.\pElle aime se battre, donc si vous la\ntrouvez , assurez-vous d'être prêt\lpour un combat difficile !
 0x1EEB5C5: Avez-vous déjà entendu parler d'un\nPokémon appelé {COLOR}ÉEevee{COLOR}Ç\p?\pC'est un Pokémon super adorable !\nJ'adorerais voir un Évoli un jour…
-0x1EEB63C: C'est un Évoli ! C'est un Évoli !\pVous avez un Évoli !\pTellement mignon !
-0x1EEB67A: C'est pour m'avoir montré un Évoli !\pCet objet peut évoluer\n{COLOR}ÉEevee{COLOR}Ç en\n{COLOR}ÉGlaceon{COLOR}Ç !
-0x1EEB6CF: Évoli évoluait en\n{COLOR}ÉGlaceon{COLOR}Ç en touchant\nun rocher par ici.\pMais dernièrement, il semble que\ntout ce dont il a besoin est une\n{COLOR}ÉPierre de glace{COLOR}Ç.
-0x1EEB752: Ooh, ooh, Champion ! Pouvez-vous me\nmontrer {COLOR}É{STR_VAR_1}{COLOR}Ç\nmaintenant ?
+0x1EEB63C: C'est un Évoli ! C'est un Évoli !\nVous avez un Évoli !\pTellement mignon !\p
+0x1EEB67A: C'est pour m'avoir montré un Évoli ! Cet objet peut évoluer\p{COLOR}ÉEevee{COLOR}Ç en\n{COLOR}ÉGlaceon{COLOR}Ç !
+0x1EEB6CF: Évoli évoluait en {COLOR}ÉGlaceon{COLOR}Ç en touchant un rocher par ici.\nMais dernièrement, il semble que\ptout ce dont il a besoin est une\n{COLOR}ÉPierre de glace{COLOR}Ç.
+0x1EEB752: Ooh, ooh, Champion ! Pouvez-vous me montrer {COLOR}É{STR_VAR_1}{COLOR}Ç\nmaintenant ?
 0x1EEB784: C'est {STR_VAR_1}! C'est\n{STR_VAR_1}!\pVous avez {STR_VAR_1}!\pTellement mignon !
-0x1EEB7B0: Ce {COLOR}ÉEevium Z{COLOR}Ç est\ndestiné à me montrer toutes les\névolutions d'Évoli !\pVous pouvez transformer le\n{COLOR}ÉEDernier recours{COLOR}Ç de\n{COLOR}ÉEevee{COLOR}Ç en un\n{COLOR}ÉZ-Move{COLOR}Ç qui peut\naméliorer toutes ses statistiques si\nvous laissez Évoli le tenir !
+0x1EEB7B0: Ce {COLOR}ÉEevium Z{COLOR}Ç est destiné à me montrer toutes les évolutions d'Évoli ! Vous pouvez transformer le {COLOR}ÉEDernier recours{COLOR}Ç de\n{COLOR}ÉEevee{COLOR}Ç en un\p{COLOR}ÉZ-Move{COLOR}Ç qui peut\naméliorer toutes ses statistiques si\lvous laissez Évoli le tenir !
 0x1EEB86C: Ooh aww…\pJe voulais voir un {STR_VAR_1}…
 0x1EEB88B: Ooh aww…\pCe n'est pas un {STR_VAR_1}…
 0x1EEB8A5: Ooh aww…\pC'est un œuf…
@@ -176,75 +176,75 @@
 0x1EEB9BB: {COLOR}ÉGyaoo!
 0x1EEB9C5: {COLOR}ÉGogogobogogogobobobo!
 0x1EEB9EC: {COLOR}ÁVolcanion s'est rempli de\nvapeur et a augmenté sa taille !
-0x1EEBA2A: {COLOR}ÁLe {STR_VAR_1} s'est envolé\n!
-0x1EEBA3F: {COLOR}ÁLe {STR_VAR_1} a plongé dans\nle magma.
-0x1EEBA5E: {COLOR}Á{STR_VAR_1} s'est retiré\ndans le magma.
+0x1EEBA2A: {COLOR}ÁLe {STR_VAR_1} s'est envolé!
+0x1EEBA3F: {COLOR}ÁLe {STR_VAR_1} a plongé dans le magma.
+0x1EEBA5E: {COLOR}Á{STR_VAR_1} s'est retiré dans le magma.
 0x1EEBA7C: Appeler {STR_VAR_1} ?
 0x1EEBA8C: Sankren bolganone!
 0x1EEBA9F: L'orbe rouge de {PLAYER} a\nsoudainement commencé à briller !
-0x1EEBADF: LA PRESSION EST LA CLÉ.
+0x1EEBADF: LA PRESSION EST LA CLÉ.\n
 0x1EEBAF4: Cette tablette… Qu'est-ce que cela\npourrait être ?\pJe suis sûr que la réponse se\nrévélera un jour bientôt…
-0x1EEBB48: La tablette !\pJe l'étudiais quand, tout d'un coup,\nelle s'est effondrée sous mes\lyeux !\pQu'est-ce que cela peut signifier ?\nEst-ce un signe ?\pOu, peut-être, était-ce votre faute\n?
-0x1EEBBE5: {COLOR}ÁIl semble que ce soient les\nrestes de ce qui était autrefois un\nguerrier de l'ombre.\pEnlever la cape et la poser pour\nqu'elle se repose ?
+0x1EEBB48: La tablette ! Je l'étudiais quand, tout d'un coup,\pelle s'est effondrée sous mes\nyeux !\lQu'est-ce que cela peut signifier ?\pEst-ce un signe ?\nOu, peut-être, était-ce votre faute\p?
+0x1EEBBE5: {COLOR}ÁIl semble que ce soient les restes de ce qui était autrefois un\nguerrier de l'ombre.\pEnlever la cape et la poser pour\nqu'elle se repose ?
 0x1EEBC4F: {COLOR}ÁLa cape a été retirée du\nShadow Warrior.
-0x1EEBC81: {COLOR}ÁLes restes du Shadow Warrior\nse sont effondrés et son âme a été\ndéposée\lau repos.
+0x1EEBC81: {COLOR}ÁLes restes du Shadow Warrior se sont effondrés et son âme a été\ndéposée\lau repos.
 0x1EEBCD1: Mon école m'a dit que c'était trop\ndangereux de venir ici.
 0x1EEBD06: C'est ce que j'obtiens en n'écoutant\npas .
 0x1EEBD2B: Soyez prudent lorsque vous explorez\nle ​​volcan.\pIl y a beaucoup de magma exposé\npartout.
 0x1EEBD7F: J'ai entendu dire qu'il y avait un\nPokémon rare de type oiseau par ici.
 0x1EEBDB7: On dit que l’oiseau a des ailes de\nfeu !
 0x1EEBDDF: Il n'existe pas de Pokémon de type\noiseau, n'est-ce pas ?\pPas étonnant que je ne trouve pas le\nPokémon rare !
-0x1EEBE40: Quand on est aussi loin dans le\nvolcan , on devrait se demander :\ldois-je continuer ou rentrer chez\nmoi ?
+0x1EEBE40: Quand on est aussi loin dans le volcan , on devrait se demander :\ndois-je continuer ou rentrer chez\lmoi ?
 0x1EEBEA2: On ne décide pas simplement en un\ninstant.
-0x1EEBECC: Quelle direction choisirez-vous\nd’aller ?
+0x1EEBECC: Quelle direction choisirez-vous d’aller ?
 0x1EEBEED: Il est sur le point de s'allumer !
 0x1EEBF12: Cet endroit est tellement chaud.\pC'est trop facile d'allumer un feu !
 0x1EEBF47: Jetez un œil à mon Pokémon résistant\nau feu !
 0x1EEBF71: Ils n’étaient pas aussi résistants\nque je le pensais.
-0x1EEBF99: Je suis venu ici pour entraîner mes\nPokémon qui ont une faiblesse\nnaturelle envers les types\lFeu.
-0x1EEBFE5: Pensez-vous que les ponts sont\nsolides ?\pAvez-vous peur qu'ils puissent\ns'effondrer sous vous à tout moment\n?
+0x1EEBF99: Je suis venu ici pour entraîner mes Pokémon qui ont une faiblesse\nnaturelle envers les types\lFeu.
+0x1EEBFE5: Pensez-vous que les ponts sont solides ?\nAvez-vous peur qu'ils puissent\ps'effondrer sous vous à tout moment\n?
 0x1EEC04A: Ne vous inquiétez pas ! Les ponts ne\ns’effondreront pas.
 0x1EEC073: Tous ces ponts ont été conçus pour\nrésister à l'immense chaleur.\pC'est pourquoi ils sont rouges, par\nopposition au bleu clair normal.
-0x1EEC0EF: Je me suis isolé dans cette grotte\npour entraîner mon esprit et mon\ncorps.\pApportez votre pire !
-0x1EEC140: Je ne dois pas m'être suffisamment\nentraîné.
+0x1EEC0EF: Je me suis isolé dans cette grotte pour entraîner mon esprit et mon\ncorps.\pApportez votre pire !
+0x1EEC140: Je ne dois pas m'être suffisamment entraîné.
 0x1EEC160: Je continuerai à m'entraîner.\pUn jour, je deviendrai le guerrier\nultime.
 0x1EEC1A7: Je suis venu sur ce volcan pour\npeindre une pièce remplie de ma\lpassion brûlante.
-0x1EEC1F4: Vos mouvements coulaient comme de la\nlave.
+0x1EEC1F4: Vos mouvements coulaient comme de la lave.
 0x1EEC211: La lave ici est l'inspiration pour\ntoutes mes plus grandes œuvres.
-0x1EEC24D: Ce volcan recèle de nombreux secrets\n!
+0x1EEC24D: Ce volcan recèle de nombreux secrets!
 0x1EEC26F: Vous êtes un jeune homme mystérieux.
 0x1EEC292: Je vais percer les secrets du volcan\nCinder !
 0x1EEC2C0: Nous allons dans la fosse ardente !
-0x1EEC2DA: Je plaisante, je ne vais nulle part.
+0x1EEC2DA: Je plaisante, je ne vais nulle part.\n
 0x1EEC300: Je vais rester enraciné à cet\nendroit pour toute l'éternité.
 0x1EEC33B: Le saviez-vous ?\pLe Limagma dans ce volcan brûle plus\nchaud que le soleil !
 0x1EEC37E: Ahhh ! Je fond !
-0x1EEC393: Qui, sensé, croirait que Limagma et\nVolcaropod\lbrûlent plus fort que le soleil ?\pNous serions tous rôtis vivants\ns'ils le faisaient !
+0x1EEC393: Qui, sensé, croirait que Limagma et Volcaropod\nbrûlent plus fort que le soleil ?\lNous serions tous rôtis vivants\ps'ils le faisaient !
 0x1EEC40E: Regarder le vaste océan de lava me\nfait fondre le cœur.
 0x1EEC44B: Vous avez fait fondre mon cœur.
-0x1EEC465: Parfois, j'aime regarder les Gems\ncomme celles-ci pour ne faire qu'un\navec le\lmagma.\pVous méritez cette gemme.
-0x1EEC4CF: Le magma est magnifique, n'est-ce\npas ?\pParfois, j'aime laisser mon Pokémon\nde type {COLOR}ÉFeu{COLOR}Ç\nm'emmener faire un\ltour dessus.
+0x1EEC465: Parfois, j'aime regarder les Gems comme celles-ci pour ne faire qu'un\navec le\lmagma.\pVous méritez cette gemme.
+0x1EEC4CF: Le magma est magnifique, n'est-ce pas ? Parfois, j'aime laisser mon Pokémon\pde type {COLOR}ÉFeu{COLOR}Ç\nm'emmener faire un\ltour dessus.
 0x1EEC53E: Le fait que vous soyez ici signifie\nque vous avez acquis au moins quatre\linsignes de gym.\pMais les insignes seuls ne suffisent\npas pour me prouver votre valeur.\pJe vous défierai dans une bataille\nsi, et seulement si vous battez tous\lautres entraîneurs du volcan Cinder.
 0x1EEC628: Le fait que vous soyez ici signifie\nvous avez acquis au moins quatre\lGym Badges.\pMaintenant, montrez-moi la force\nd'un Trainer avec quatre badges !
 0x1EEC6AD: Je n’en attendrais pas moins de\nquelqu’un de votre calibre.
 0x1EEC6E6: Prends ça.
-0x1EEC6F1: C'est un cadeau pour m'avoir vaincu.\pDonnez-le à un\n{COLOR}ÉCamerupt{COLOR}Ë et il\npourra méga-évoluer au combat,\len supposant que vous ayez une clé\nde voûte.
+0x1EEC6F1: C'est un cadeau pour m'avoir vaincu. Donnez-le à un {COLOR}ÉCamerupt{COLOR}Ë et il\ppourra méga-évoluer au combat,\nen supposant que vous ayez une clé\lde voûte.
 0x1EEC77A: FばCootes Bog
 0x1EEC787: Chasseur du marais
-0x1EEC79B: Aidez un scientifique à en apprendre\ndavantage sur les Pokémon vivant\ndans la tourbière de Cootes !\nUtilisez le ​​DexNav pour vous aider\nà tous les attraper.
-0x1EEC801: Salut, formateur.\pOh ! Je vois que vous possédez un\nDexNav. J'ai exactement la tâche\nqu'il vous faut.\pUtiliseriez-vous votre DexNav pour\nvous aider à capturer tous les\lPokémon qui vivent dans cette zone ?\pJe veux tout savoir sur les Pokémon\nqui vivent dans la Tourbière Cootes.
+0x1EEC79B: Aidez un scientifique à en apprendre davantage sur les Pokémon vivant dans la tourbière de Cootes !\nUtilisez le ​​DexNav pour vous aider\nà tous les attraper.
+0x1EEC801: Salut, formateur. Oh ! Je vois que vous possédez un\pDexNav. J'ai exactement la tâche\nqu'il vous faut.\pUtiliseriez-vous votre DexNav pour\nvous aider à capturer tous les\lPokémon qui vivent dans cette zone ?\pJe veux tout savoir sur les Pokémon\nqui vivent dans la Tourbière Cootes.
 0x1EEC8F1: Bonjour, Entraîneur.\pSi vous acquérez un DexNav,\nvoudriez-vous revenir et me parler ?\pJ'ai une tâche qui ne peut être\naccomplie que par un Entraîneur\lpossédant un DexNav.
 0x1EEC98E: Parfait !\pVeuillez me faire un rapport lorsque\nvotre DexNav indique que tous les\lPokémon ici ont été capturés.
-0x1EEC9FA: Il semble que vous n'êtes pas aussi\nintéressé par votre DexNav que moi,\nje suppose.
+0x1EEC9FA: Il semble que vous n'êtes pas aussi intéressé par votre DexNav que moi,\nje suppose.
 0x1EECA40: Votre DexNav montre que vous avez\nattrapé tous les Pokémon qui\lvivent dans le marais !\pParfait ! Ceci sont mes\nremerciements !
-0x1EECAAC: Et laissez-moi aussi modifier votre\nDexNav !
-0x1EECAD0: {COLOR}ÁLe DexNav a été mis à niveau\npour afficher les objets détenus\npossibles !
+0x1EECAAC: Et laissez-moi aussi modifier votre DexNav !
+0x1EECAD0: {COLOR}ÁLe DexNav a été mis à niveau pour afficher les objets détenus\npossibles !
 0x1EECB0D: Votre DexNav indique qu'il y a\nencore des Pokémon ici que vous\ln'avez pas encore attrapés.\pContinuez à chasser !
-0x1EECB70: Trouver tous les Pokémon qui peuvent\nêtre trouvés dans le marais est\nincroyable !
-0x1EECBB6: Il y a deux chemins pour continuer à\ntravers le marais : le chemin de la\ntourbière\let le chemin du pont.
-0x1EECC0A: Le chemin des tourbières est plus\nrapide, mais il a également plus de\nPokémon sauvages.
-0x1EECC46: C'est le chemin qui traverse la\ntourbière.\pVous pouvez l'emprunter pour vous\nrendre à Crystal Peak.\pSi vous souhaitez emprunter le\nchemin du pont , revenez en arrière.
+0x1EECB70: Trouver tous les Pokémon qui peuvent être trouvés dans le marais est\nincroyable !
+0x1EECBB6: Il y a deux chemins pour continuer à travers le marais : le chemin de la\ntourbière\let le chemin du pont.
+0x1EECC0A: Le chemin des tourbières est plus rapide, mais il a également plus de\nPokémon sauvages.
+0x1EECC46: C'est le chemin qui traverse la tourbière.\pVous pouvez l'emprunter pour vous\nrendre à Crystal Peak.\pSi vous souhaitez emprunter le\nchemin du pont , revenez en arrière.
 0x1EECCBE: Ce marais est surveillé par l’un des\nPokémon de Tessy.
 0x1EECCF4: C'est une bonne chose que je ne sois\npas le seul à veiller sur ce marais.
-0x1EECD36: Nous, les Rangers, aidons le\nprotecteur du marais par tous les\nmoyens nécessaires.
-0x1EECD76: Ce marais est l'endroit idéal pour\ntendre une embuscade aux Dresseurs\nsans méfiance.
+0x1EECD36: Nous, les Rangers, aidons le protecteur du marais par tous les\nmoyens nécessaires.
+0x1EECD76: Ce marais est l'endroit idéal pour tendre une embuscade aux Dresseurs\nsans méfiance.

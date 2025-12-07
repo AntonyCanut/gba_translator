@@ -19,7 +19,7 @@
 0x418152: PV PLUS{CLEAR_TO}ナ{FONT_SMALL}1,000
 0x418163: PP PLUS{CLEAR_TO}ナ{FONT_SMALL}3,000
 0x418174: Résultats combat de {PLAYER}
-0x418188: TOTAL V:{STR_VAR_1} D:{STR_VAR_2}\nN:{STR_VAR_3}
+0x418188: TOTAL V:{STR_VAR_1} D:{STR_VAR_2} N:{STR_VAR_3}
 0x4181C3: Fermeture du Mémo Dresseur.
 0x418208: Quitter la Boîte.
 0x41821B: Que veux-tu faire ?
@@ -46,7 +46,7 @@
 0x4183DD: Donner à un Pokémon ?
 0x4183F0: Objet placé dans le Cube V3.
 0x418408: Cube V3 plein.
-0x418419: Mettre cet objet\ndans le Cube V3 ?
+0x418419: Mettre cet objet dans le Cube V3 ?
 0x418433: {DYNAMIC}  est porté.
 0x418443: Passé à {DYNAMIC} .
 0x418452: Courrier non stockable !
@@ -93,14 +93,14 @@
 0x4185AD: Tu peux retirer un Pokémon si tu\nen as dans une Boîte.
 0x4185E2: Dépose ton équipe dans n'importe\nquelle Boîte.
 0x418611: Déplace les Pokémon stockés dans\nn'importe quelle Boîte.
-0x418642: Tu peux déplacer les objets tenus\npar un Pokémon d'une Boîte ou\nde ton équipe.
+0x418642: Tu peux déplacer les objets tenus par un Pokémon d'une Boîte ou\nde ton équipe.
 0x418681: À plus tard !
-0x418690: Impossible de déposer le dernier\nPokémon !
-0x4186B0: Impossible de prendre plus de\nPokémon.
+0x418690: Impossible de déposer le dernier Pokémon !
+0x4186B0: Impossible de prendre plus de Pokémon.
 0x4186D1: Combine quatre mots ou phrases
 0x4186EF: et crée ton profil.
-0x418706: Compose un message de six\nphrases.
-0x418725: 2 phrases de 12 lettres\nmax/ligne.
+0x418706: Compose un message de six phrases.
+0x418725: 2 phrases de 12 lettres max/ligne.
 0x418745: Trouve des mots qui décrivent
 0x418763: tes sentiments du moment.
 0x418780: Combine neuf mots ou phrases
@@ -119,9 +119,9 @@
 0x4188D6: et crée une expression tendance.
 0x4188F0: L'expression tendance
 0x418902: est comme affiché. OK ?
-0x418937: Tout le texte en cours d'édition\nsera effacé. D'accord ?
+0x418937: Tout le texte en cours d'édition sera effacé. D'accord ?
 0x4189E0: Quitter l'édition ?
-0x4189EE: Arrêter de donner du Courrier\nau Pokémon ?
+0x4189EE: Arrêter de donner du Courrier au Pokémon ?
 0x418A2B: PROFIL
 0x418A33: Début du combat :
 0x418A4A: Après une victoire :
@@ -137,7 +137,7 @@
 0x418E52: Nom de la Boîte ?
 0x418E5C: : surnom ?
 0x418E69: Nom du Rival ?
-0x418E77: {DPAD_ANY}Déplacer {SE_SHOP}OK\n{B_BUTTON}Retour
+0x418E77: {DPAD_ANY}Déplacer {SE_SHOP}OK {B_BUTTON}Retour
 0x418E8D: {SE_SHOP}Guide
 0x418E95: {SE_SHOP}Annuler
 0x418E9E: {SE_SHOP}Annuler
@@ -152,30 +152,30 @@
 0x41908E: Un manoir délabré et brûlé sur\nCRAMOIS'ÎLE.\nNommé ainsi car un célèbre\nchercheur Pokémon y vivait.
 0x419103: Un parc d'attractions près de\nPARMANIE où beaucoup de Pokémon\nrares peuvent être observés.\nAttrape-les dans un jeu prisé !
 0x41917D: Un tunnel souterrain naturel.\nNon aménagé, il est noir sombre.\nUne lumière est nécessaire pour\nle traverser.
-0x419201: Une paire d'îles sur la ROUTE 20.\nLes deux îles ont la même forme,\ncomme si elles étaient jumelles.
+0x419201: Une paire d'îles sur la ROUTE 20.\nLes deux îles ont la même forme,\ncomme si elles étaient jumelles.\n
 0x41926D: Une tour qui abrite d'innombrables\ntombes de Pokémon.\nBeaucoup viennent chaque jour\nrendre hommage aux disparus.
 0x4192E2: Une caverne mystérieuse pleine de\nPokémon redoutables.\nTellement dangereuse que la LIGUE\nPOKÉMON la surveille.
 0x41935B: Une Centrale abandonnée depuis des\nannées, mais certaines machines\nfonctionnent encore. Elle est\ninfestée de Pokémon Électrik.
-0x4193D5: Un volcan dit inactif.\nPourtant, on rapporte souvent que\nle sommet s'embrase la nuit.
+0x4193D5: Un volcan dit inactif.\nPourtant, on rapporte souvent que\nle sommet s'embrase la nuit.\n
 0x419444: Une forêt sur un îlot au large de\nl'ÎLE 3. Des BAIES poussent en\nmasse, remplaçant vite celles qui\nchutent.
 0x4194C9: Une grotte couverte d'eau et de\nglace sur l'ÎLE 4.\nIl semble que la fin de la grotte\nsoit reliée à l'océan.
 0x41953F: Une grotte déroutante au large du\nRESORT DÉTENTE.\nCertains curieux en quête de\nsensations n'en sont jamais sortis.
 0x4195AC: Une ruine antique où vivrait un\nPokémon particulier.\nCependant, ce Pokémon reste\nau stade de rumeur.
 0x419629: Cette île porte ce nom depuis\nles temps anciens.\nPersonne ne sait d'où vient\nce nom.
 0x41969D: Un endroit dense en buissons.\nOn y voit des motifs sans herbe.\nCertains pensent qu'un secret y\nest caché.
-0x41971A: Une ruine mystérieuse tout juste\ndécouverte, venue d'un temps\nancien.\nSon nom vient des six points sur\nsa porte.
+0x41971A: Une ruine mystérieuse tout juste découverte, venue d'un temps\nancien.\nSon nom vient des six points sur\nsa porte.
 0x419782: Nature {DYNAMIC}.\nRencontré par échange.
 0x41979D: Nature {DYNAMIC}.\nRencontré par échange.
 0x4197B8: Nature {DYNAMIC}.\nRencontre fatidique au\nN. {LV_2} {DYNAMIC}À.
 0x4197ED: Nature {DYNAMIC}.\nRencontre fatidique au\nN. {LV_2} {DYNAMIC}À.
-0x419822: Nature {DYNAMIC}.\nRencontré à {DYNAMIC}Á au\nN. {LV_2} {DYNAMIC}À.
-0x419841: Nature {DYNAMIC}.\nRencontré à {DYNAMIC}Á au\nN. {LV_2} {DYNAMIC}À.
+0x419822: Nature {DYNAMIC}. Rencontré à {DYNAMIC}Á au\nN. {LV_2} {DYNAMIC}À.
+0x419841: Nature {DYNAMIC}. Rencontré à {DYNAMIC}Á au\nN. {LV_2} {DYNAMIC}À.
 0x419860: Nature {DYNAMIC}.\nApparemment rencontré à\n{DYNAMIC}Á au N. {LV_2} {DYNAMIC}À.
 0x41988A: Nature {DYNAMIC}.\nApparemment rencontré à\n{DYNAMIC}Á au N. {LV_2} {DYNAMIC}À.
 0x41992F: Nature {DYNAMIC}.\nRencontre fatidique (éclos :\n{DYNAMIC}Á au N. {LV_2} {DYNAMIC}À).
 0x41996D: Nature {DYNAMIC}.\nRencontre fatidique (éclos :\n{DYNAMIC}Á au N. {LV_2} {DYNAMIC}À).
-0x4199AB: Nature {DYNAMIC}.\nApparemment rencontre fatidique\n(éclos : {DYNAMIC}Á au\nN. {LV_2} {DYNAMIC}À).
-0x4199F4: Nature {DYNAMIC}.\nApparemment rencontre fatidique\n(éclos : {DYNAMIC}Á au\nN. {LV_2} {DYNAMIC}À).
+0x4199AB: Nature {DYNAMIC}. Apparemment rencontre fatidique\n(éclos : {DYNAMIC}Á au\nN. {LV_2} {DYNAMIC}À).
+0x4199F4: Nature {DYNAMIC}. Apparemment rencontre fatidique\n(éclos : {DYNAMIC}Á au\nN. {LV_2} {DYNAMIC}À).
 0x419A3D: Un Œuf de Pokémon trouvé par le\ncouple de la Pension.
 0x419A6E: Œuf étrange obtenu auprès de\nl'homme itinérant.
 0x419AA2: Œuf de Pokémon vraiment curieux\nobtenu dans un bel endroit.
@@ -212,7 +212,7 @@
 0x419D57: ÉCHANGES POKÉMON
 0x419D66: ÉCHANGES & COMBATS UNION
 0x419D7D: BROYEUR DE BAIES
-0x419D89: En attente que l'autre Dresseur\nfinisse de lire ta Carte\nDresseur.
+0x419D89: En attente que l'autre Dresseur finisse de lire ta Carte\nDresseur.
 0x419DCC: Options
 0x419DD3: Vitesse texte
 0x419DDE: Animations combat
@@ -227,7 +227,7 @@
 0x419E3B: Stéréo
 0x419E46: Aide
 0x419E52: Type
-0x419E57: {DPAD_UPDOWN}Choix\n{DPAD_LEFTRIGHT}Changer\n{SE_SHOP}{B_BUTTON}Annuler
+0x419E57: {DPAD_UPDOWN}Choix {DPAD_LEFTRIGHT}Changer {SE_SHOP}{B_BUTTON}Annuler
 0x419F54: SAUVEGARDE…\nNE PAS ÉTEINDRE.
 0x419F76: Appareil qui enregistre les infos\nPokémon rencontrés ou capturés.
 0x419FBB: Gérer les Pokémon qui voyagent\navec toi dans l'équipe.

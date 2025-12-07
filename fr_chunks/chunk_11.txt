@@ -1,20 +1,20 @@
 0x3FBC4C: {B_ATK_NAME_WITH_PREFIX} est cinglé\npar la grêle !
-0x3FBC74: {B_DEF_NAME_WITH_PREFIX} a été\nensemencé !
+0x3FBC74: {B_DEF_NAME_WITH_PREFIX} a été ensemencé !
 0x3FBC83: {B_DEF_NAME_WITH_PREFIX} a esquivé\nl'attaque !
 0x3FBC99: {B_ATK_NAME_WITH_PREFIX} perd des PV\nà cause de Vampigraine !
 0x3FBCBE: {B_ATK_NAME_WITH_PREFIX} dort\nprofondément.
-0x3FBCD1: {B_ATK_NAME_WITH_PREFIX}\nse réveille !
-0x3FBCDD: Mais le Brouhaha de\n{B_SCR_ACTIVE_NAME_WITH_PREFIX} l'a\ngardé éveillé !
+0x3FBCD1: {B_ATK_NAME_WITH_PREFIX} se réveille !
+0x3FBCDD: Mais le Brouhaha de {B_SCR_ACTIVE_NAME_WITH_PREFIX} l'a\ngardé éveillé !
 0x3FBCFC: {B_ATK_NAME_WITH_PREFIX} se réveille\ndans Brouhaha !
 0x3FBD16: {B_ATK_NAME_WITH_PREFIX} a provoqué\nun Brouhaha !
 0x3FBD2B: {B_ATK_NAME_WITH_PREFIX} fait\nun Brouhaha !
 0x3FBD43: {B_ATK_NAME_WITH_PREFIX} se calme.
-0x3FBD53: Mais {B_DEF_NAME_WITH_PREFIX}\nne peut pas dormir pendant\nun Brouhaha !
+0x3FBD53: Mais {B_DEF_NAME_WITH_PREFIX} ne peut pas dormir pendant\nun Brouhaha !
 0x3FBD74: {B_ATK_NAME_WITH_PREFIX} a accumulé\n{UNKNOWN_STR} !
 0x3FBD86: {B_ATK_NAME_WITH_PREFIX}\nStockage impossible !
-0x3FBDA3: Mais {B_DEF_NAME_WITH_PREFIX}\nne peut pas dormir pendant\nun Brouhaha !
+0x3FBDA3: Mais {B_DEF_NAME_WITH_PREFIX} ne peut pas dormir pendant\nun Brouhaha !
 0x3FBDC4: Mais le Brouhaha empêche\n{B_DEF_NAME_WITH_PREFIX} de dormir !
-0x3FBDE2: {B_DEF_NAME_WITH_PREFIX} reste\néveillé avec\n{B_DEF_ABILITY} !
+0x3FBDE2: {B_DEF_NAME_WITH_PREFIX} reste éveillé avec\n{B_DEF_ABILITY} !
 0x3FBE00: {B_ATK_NAME_WITH_PREFIX}\nemmagasine de l'énergie !
 0x3FBE16: {B_ATK_NAME_WITH_PREFIX}\nlibère son énergie !
 0x3FBE2B: {B_ATK_NAME_WITH_PREFIX} est confus\nà cause de la fatigue !
@@ -26,13 +26,13 @@
 0x3FBEE2: Le clone de {B_DEF_NAME_WITH_PREFIX}\na disparu!\p
 0x3FBEFA: {B_ATK_NAME_WITH_PREFIX}\ndoit recharger !
 0x3FBF0C: La Rage de {B_DEF_NAME_WITH_PREFIX}\naugmente !
-0x3FBF23: {UNKNOWN_STR} de\n{B_DEF_NAME_WITH_PREFIX}\nest bloqué !
+0x3FBF23: {UNKNOWN_STR} de {B_DEF_NAME_WITH_PREFIX}\nest bloqué !
 0x3FBF39: {B_ATK_NAME_WITH_PREFIX} n'est plus\nentravé !
 0x3FBF51: {B_DEF_NAME_WITH_PREFIX} subit\nEncore !
 0x3FBF63: L'Encore de {B_ATK_NAME_WITH_PREFIX}\nest fini !
 0x3FBF76: {B_ATK_NAME_WITH_PREFIX} prend\n{B_DEF_NAME_WITH_PREFIX} en joue !
 0x3FBF89: {B_ATK_NAME_WITH_PREFIX}\ngribouille {UNKNOWN_STR} !
-0x3FBF99: {B_ATK_NAME_WITH_PREFIX}\nveut entraîner l'ennemi\navec lui !
+0x3FBF99: {B_ATK_NAME_WITH_PREFIX} veut entraîner l'ennemi\navec lui !
 0x3FBFBF: {B_DEF_NAME_WITH_PREFIX} a entraîné\n{B_ATK_NAME_WITH_PREFIX} avec lui !
 0x3FC011: {B_DEF_NAME_WITH_PREFIX} est plongé\ndans un Cauchemar !
 0x3FC02B: {B_ATK_NAME_WITH_PREFIX} est pris\ndans un Cauchemar !
@@ -41,12 +41,12 @@
 0x3FC090: Des Picots entourent\nl'équipe adverse !
 0x3FC0DC: {B_ATK_NAME_WITH_PREFIX} identifie\n{B_DEF_NAME_WITH_PREFIX} !
 0x3FC0EE: Compte à rebours tombe à\n{UNKNOWN_STR} !
-0x3FC10C: {B_ATK_NAME_WITH_PREFIX} se prépare.
+0x3FC10C: {B_ATK_NAME_WITH_PREFIX} se prépare.\n
 0x3FC11E: {B_DEF_NAME_WITH_PREFIX} a encaissé\nle coup !
 0x3FC132: Magnitude {UNKNOWN_STR} !
 0x3FC140: {B_ATK_NAME_WITH_PREFIX} sacrifie PV\nAttaque au max !
-0x3FC168: {B_ATK_NAME_WITH_PREFIX}\ncopie boosts\nde {B_DEF_NAME_WITH_PREFIX} !
-0x3FC185: {B_ATK_NAME_WITH_PREFIX}\nse libère de\n{UNKNOWN_STR}\nde {B_DEF_NAME_WITH_PREFIX} !
+0x3FC168: {B_ATK_NAME_WITH_PREFIX} copie boosts\nde {B_DEF_NAME_WITH_PREFIX} !
+0x3FC185: {B_ATK_NAME_WITH_PREFIX} se libère de {UNKNOWN_STR}\nde {B_DEF_NAME_WITH_PREFIX} !
 0x3FC19D: {B_ATK_NAME_WITH_PREFIX}\nse débarrasse de Vampigraine !
 0x3FC1C6: {B_ATK_NAME_WITH_PREFIX} a pris\nla fuite !
 0x3FC1DB: {B_ATK_NAME_WITH_PREFIX} prédit\nune attaque !
@@ -60,77 +60,77 @@
 0x3FC2AA: {B_DEF_NAME_WITH_PREFIX} subit\nTourmente !
 0x3FC2C7: {B_ATK_NAME_WITH_PREFIX}\nse concentre !
 0x3FC2E3: {B_DEF_NAME_WITH_PREFIX} est pris\npar Provoc !
-0x3FC2FA: {B_ATK_NAME_WITH_PREFIX}\nprêt à aider\n{B_DEF_NAME_WITH_PREFIX} !
+0x3FC2FA: {B_ATK_NAME_WITH_PREFIX} prêt à aider\n{B_DEF_NAME_WITH_PREFIX} !
 0x3FC312: {B_ATK_NAME_WITH_PREFIX} a échangé\nses objets avec l'ennemi !
 0x3FC337: {B_ATK_NAME_WITH_PREFIX} a obtenu\n{UNKNOWN_STR}.
 0x3FC347: {B_DEF_NAME_WITH_PREFIX} a obtenu\n{PLAYER}.
-0x3FC38A: {B_ATK_NAME_WITH_PREFIX}\nfait un vœu !
+0x3FC38A: {B_ATK_NAME_WITH_PREFIX} fait un vœu !
 0x3FC39A: Le Vœu de {UNKNOWN_STR}\nse réalise !
 0x3FC3AF: {B_ATK_NAME_WITH_PREFIX} plante\nses racines !
 0x3FC3C5: {B_ATK_NAME_WITH_PREFIX} absorbe des\nnutriments avec ses racines !
 0x3FC3EB: {B_DEF_NAME_WITH_PREFIX} s'ancre\navec ses racines !
 0x3FC40E: {B_ATK_NAME_WITH_PREFIX} rend\n{B_DEF_NAME_WITH_PREFIX} somnolent !
-0x3FC421: {B_ATK_NAME_WITH_PREFIX} fait tomber\n{B_LAST_ITEM} de\n{B_DEF_NAME_WITH_PREFIX} !
-0x3FC439: {B_ATK_NAME_WITH_PREFIX}\néchange talents\navec l'ennemi !
+0x3FC421: {B_ATK_NAME_WITH_PREFIX} fait tomber {B_LAST_ITEM} de\n{B_DEF_NAME_WITH_PREFIX} !
+0x3FC439: {B_ATK_NAME_WITH_PREFIX} échange talents\navec l'ennemi !
 0x3FC461: {B_ATK_NAME_WITH_PREFIX} scelle les\nattaques de l'ennemi !
 0x3FC483: {B_ATK_NAME_WITH_PREFIX} veut que\nl'ennemi subisse Rancune !
 0x3FC4AB: Les PP de {UNKNOWN_STR} sont perdus\nà cause de Rancune !
 0x3FC4D6: {B_ATK_NAME_WITH_PREFIX} s'enveloppe\nde {B_CURRENT_MOVE} !
-0x3FC4F0: Reflet Magik renvoie\n{B_CURRENT_MOVE} de\n{B_ATK_NAME_WITH_PREFIX} !
+0x3FC4F0: Reflet Magik renvoie {B_CURRENT_MOVE} de\n{B_ATK_NAME_WITH_PREFIX} !
 0x3FC518: {B_ATK_NAME_WITH_PREFIX} attend que\nl'ennemi agisse !
-0x3FC53D: {B_DEF_NAME_WITH_PREFIX} vole\nl'attaque de\n{B_SCR_ACTIVE_NAME_WITH_PREFIX} !
-0x3FC554: La puissance Électrik est réduite !
-0x3FC576: La puissance Feu est réduite !
+0x3FC53D: {B_DEF_NAME_WITH_PREFIX} vole l'attaque de\n{B_SCR_ACTIVE_NAME_WITH_PREFIX} !
+0x3FC554: La puissance Électrik est réduite !\n
+0x3FC576: La puissance Feu est réduite !\n
 0x3FC591: {B_ATK_NAME_WITH_PREFIX} trouve\nun {B_LAST_ITEM} !
 0x3FC5A2: Un doux parfum embaume\nla zone !
 0x3FC5CC: Objets inutilisables.{PAUSE}ぞ
-0x3FC60C: {B_ATK_NAME_WITH_PREFIX}\nperd sa visée\nfigé.
+0x3FC60C: {B_ATK_NAME_WITH_PREFIX} perd sa visée\nfigé.
 0x3FC631: {B_DEF_NAME_WITH_PREFIX} a été forcé\nde sortir!\p
 0x3FC646: Le mur s'est brisé !
 0x3FC65A: Mais cela n'a aucun effet !
 0x3FC670: {B_ACTIVE_NAME_WITH_PREFIX}\nplus de coups!\p
-0x3FC69D: {B_ACTIVE_NAME_WITH_PREFIX}\nne peut répéter\nce coup : Tourmente!\p
+0x3FC69D: {B_ACTIVE_NAME_WITH_PREFIX} ne peut répéter\nce coup : Tourmente!\p
 0x3FC6D6: {B_ACTIVE_NAME_WITH_PREFIX} ne peut\n{B_CURRENT_MOVE} après Provoc!\p
 0x3FC6F8: {B_ACTIVE_NAME_WITH_PREFIX} ne peut\n{B_CURRENT_MOVE} scellé!\p
-0x3FC715: {B_SCR_ACTIVE_NAME_WITH_PREFIX} :\n{B_SCR_ACTIVE_ABILITY}\nfait tomber la pluie !
-0x3FC72B: {B_SCR_ACTIVE_NAME_WITH_PREFIX} :\n{B_SCR_ACTIVE_ABILITY}\naugmente sa Vitesse !
+0x3FC715: {B_SCR_ACTIVE_NAME_WITH_PREFIX} : {B_SCR_ACTIVE_ABILITY}\nfait tomber la pluie !
+0x3FC72B: {B_SCR_ACTIVE_NAME_WITH_PREFIX} : {B_SCR_ACTIVE_ABILITY}\naugmente sa Vitesse !
 0x3FC745: {B_DEF_NAME_WITH_PREFIX} est protégé\npar {B_DEF_ABILITY} !
-0x3FC75D: {B_DEF_NAME_WITH_PREFIX} :\n{B_DEF_ABILITY}\nempêche {B_ATK_NAME_WITH_PREFIX}\nd'utiliser {B_CURRENT_MOVE}!
-0x3FC780: {B_DEF_NAME_WITH_PREFIX}\nsoigne ses PV\nvia {B_DEF_ABILITY} !
-0x3FC79D: {B_DEF_ABILITY} de\n{B_DEF_NAME_WITH_PREFIX}\nbloque {B_CURRENT_MOVE} !
-0x3FC7B6: {B_DEF_ABILITY}\nde {B_DEF_NAME_WITH_PREFIX}\nle rend {UNKNOWN_STR} !
-0x3FC7D3: {B_EFF_NAME_WITH_PREFIX} :\n{B_DEF_ABILITY}\nempêche la paralysie !
-0x3FC7EF: {B_DEF_NAME_WITH_PREFIX} :\n{B_DEF_ABILITY}\nempêche l'attirance !
-0x3FC809: {B_EFF_NAME_WITH_PREFIX} :\n{B_DEF_ABILITY}\nempêche l'empoisonnement !
-0x3FC825: {B_DEF_NAME_WITH_PREFIX} :\n{B_DEF_ABILITY}\nempêche la confusion !
-0x3FC841: {B_DEF_NAME_WITH_PREFIX} :\n{B_DEF_ABILITY}\nbooste la puissance Feu !
-0x3FC860: {B_DEF_NAME_WITH_PREFIX} s'ancre !
-0x3FC895: {B_SCR_ACTIVE_NAME_WITH_PREFIX} :\n{B_SCR_ACTIVE_ABILITY}\nempêche la baisse de stats !
-0x3FC8D5: {B_EFF_NAME_WITH_PREFIX} :\n{B_EFF_ABILITY}\nempêche les brûlures !
-0x3FC913: {B_ATK_NAME_WITH_PREFIX} :\n{B_ATK_ABILITY}\nrestaure ses PV !
+0x3FC75D: {B_DEF_NAME_WITH_PREFIX} : {B_DEF_ABILITY}\nempêche {B_ATK_NAME_WITH_PREFIX}\ld'utiliser {B_CURRENT_MOVE}!
+0x3FC780: {B_DEF_NAME_WITH_PREFIX} soigne ses PV\nvia {B_DEF_ABILITY} !
+0x3FC79D: {B_DEF_ABILITY} de {B_DEF_NAME_WITH_PREFIX}\nbloque {B_CURRENT_MOVE} !
+0x3FC7B6: {B_DEF_ABILITY} de {B_DEF_NAME_WITH_PREFIX}\nle rend {UNKNOWN_STR} !
+0x3FC7D3: {B_EFF_NAME_WITH_PREFIX} : {B_DEF_ABILITY}\nempêche la paralysie !
+0x3FC7EF: {B_DEF_NAME_WITH_PREFIX} : {B_DEF_ABILITY}\nempêche l'attirance !
+0x3FC809: {B_EFF_NAME_WITH_PREFIX} : {B_DEF_ABILITY}\nempêche l'empoisonnement !
+0x3FC825: {B_DEF_NAME_WITH_PREFIX} : {B_DEF_ABILITY}\nempêche la confusion !
+0x3FC841: {B_DEF_NAME_WITH_PREFIX} : {B_DEF_ABILITY}\nbooste la puissance Feu !
+0x3FC860: {B_DEF_NAME_WITH_PREFIX} s'ancre !\n
+0x3FC895: {B_SCR_ACTIVE_NAME_WITH_PREFIX} : {B_SCR_ACTIVE_ABILITY}\nempêche la baisse de stats !
+0x3FC8D5: {B_EFF_NAME_WITH_PREFIX} : {B_EFF_ABILITY}\nempêche les brûlures !
+0x3FC913: {B_ATK_NAME_WITH_PREFIX} : {B_ATK_ABILITY}\nrestaure ses PV !
 0x3FC92C: un peu !
-0x3FC935: {B_SCR_ACTIVE_NAME_WITH_PREFIX} :\n{B_SCR_ACTIVE_ABILITY}\nprovoque une tempête de sable !
-0x3FC955: {B_SCR_ACTIVE_NAME_WITH_PREFIX} :\n{B_SCR_ACTIVE_ABILITY}\nrenforce le soleil !
-0x3FC979: {B_SCR_ACTIVE_NAME_WITH_PREFIX} :\n{B_SCR_ACTIVE_ABILITY}\nempêche perte de {UNKNOWN_STR} !
-0x3FC9AA: {B_DEF_NAME_WITH_PREFIX} :\n{B_DEF_ABILITY}\nrend {B_CURRENT_MOVE}\ninefficace !
-0x3FC9C7: {B_SCR_ACTIVE_NAME_WITH_PREFIX} :\n{B_SCR_ACTIVE_ABILITY}\nsoigne souci {UNKNOWN_STR} !
-0x3FC9E5: Il a aspiré le Suintement !
-0x3FCA03: {B_SCR_ACTIVE_NAME_WITH_PREFIX}\ns'est transformé !
+0x3FC935: {B_SCR_ACTIVE_NAME_WITH_PREFIX} : {B_SCR_ACTIVE_ABILITY}\nprovoque une tempête de sable !
+0x3FC955: {B_SCR_ACTIVE_NAME_WITH_PREFIX} : {B_SCR_ACTIVE_ABILITY}\nrenforce le soleil !
+0x3FC979: {B_SCR_ACTIVE_NAME_WITH_PREFIX} : {B_SCR_ACTIVE_ABILITY}\nempêche perte de {UNKNOWN_STR} !
+0x3FC9AA: {B_DEF_NAME_WITH_PREFIX} : {B_DEF_ABILITY} rend {B_CURRENT_MOVE}\ninefficace !
+0x3FC9C7: {B_SCR_ACTIVE_NAME_WITH_PREFIX} : {B_SCR_ACTIVE_ABILITY}\nsoigne souci {UNKNOWN_STR} !
+0x3FC9E5: Il a aspiré le Suintement !\n
+0x3FCA03: {B_SCR_ACTIVE_NAME_WITH_PREFIX} s'est transformé !
 0x3FCA13: {B_DEF_NAME_WITH_PREFIX} a pris\nl'attaque !
 0x3FCA2C: La {B_LAST_ABILITY} de {UNKNOWN_STR}\nempêche le switch!\p
-0x3FCA49: {B_DEF_ABILITY} de\n{B_DEF_NAME_WITH_PREFIX}\nstoppe {UNKNOWN_STR}\nde {B_SCR_ACTIVE_NAME_WITH_PREFIX} !
-0x3FCA71: {B_SCR_ACTIVE_NAME_WITH_PREFIX} :\n{B_SCR_ACTIVE_ABILITY}\na rendu cela inefficace !
-0x3FCA8E: {B_EFF_NAME_WITH_PREFIX} :\n{B_EFF_ABILITY}\nempêche de broncher !
-0x3FCAAA: {B_ATK_NAME_WITH_PREFIX} :\n{B_ATK_ABILITY}\nannule {B_DEF_ABILITY} de\n{B_DEF_NAME_WITH_PREFIX} !
-0x3FCAD1: {B_SCR_ACTIVE_NAME_WITH_PREFIX} :\n{B_SCR_ACTIVE_ABILITY}\na guéri souci {UNKNOWN_STR} !
-0x3FCAEF: {B_SCR_ACTIVE_NAME_WITH_PREFIX} :\n{B_SCR_ACTIVE_ABILITY}\ninefficace\nsur {B_EFF_NAME_WITH_PREFIX} !
-0x3FCB0C: {B_ATK_NAME_WITH_PREFIX}\nest trop effrayé pour bouger !
+0x3FCA49: {B_DEF_ABILITY} de {B_DEF_NAME_WITH_PREFIX}\nstoppe {UNKNOWN_STR}\lde {B_SCR_ACTIVE_NAME_WITH_PREFIX} !
+0x3FCA71: {B_SCR_ACTIVE_NAME_WITH_PREFIX} : {B_SCR_ACTIVE_ABILITY}\na rendu cela inefficace !
+0x3FCA8E: {B_EFF_NAME_WITH_PREFIX} : {B_EFF_ABILITY}\nempêche de broncher !
+0x3FCAAA: {B_ATK_NAME_WITH_PREFIX} : {B_ATK_ABILITY}\nannule {B_DEF_ABILITY} de\l{B_DEF_NAME_WITH_PREFIX} !
+0x3FCAD1: {B_SCR_ACTIVE_NAME_WITH_PREFIX} : {B_SCR_ACTIVE_ABILITY}\na guéri souci {UNKNOWN_STR} !
+0x3FCAEF: {B_SCR_ACTIVE_NAME_WITH_PREFIX} : {B_SCR_ACTIVE_ABILITY} inefficace\nsur {B_EFF_NAME_WITH_PREFIX} !
+0x3FCB0C: {B_ATK_NAME_WITH_PREFIX} est trop effrayé pour bouger !
 0x3FCB26: Fantôme : Dehors…… Dehors……
 0x3FCB41: fortement 
 0x3FCB4A: augmente !
 0x3FCB50: fortement 
 0x3FCB59: chute !
-0x3FCB75: Avec {B_LAST_ITEM}, le {UNKNOWN_STR}\nde {B_SCR_ACTIVE_NAME_WITH_PREFIX}\n{PLAYER}
+0x3FCB75: Avec {B_LAST_ITEM}, le {UNKNOWN_STR} de {B_SCR_ACTIVE_NAME_WITH_PREFIX}\n{PLAYER}
 0x3FCBA5: Stats de {B_ATK_NAME_WITH_PREFIX}\naudessus du max !
 0x3FCBC5: Stats de {B_DEF_NAME_WITH_PREFIX}\naudessous du min !
 0x3FCBE4: Coup critique !
@@ -139,18 +139,18 @@
 0x3FCC5B: Ce n'est pas très efficace…
 0x3FCC74: C'est super efficace !
 0x3FCC8A: {PLAY_SE}Ù Fuite réussie !\p
-0x3FCCD2: {PLAY_SE}Ù Le {UNKNOWN_STR} sauvage\ns'est enfui !
+0x3FCCD2: {PLAY_SE}Ù Le {UNKNOWN_STR} sauvage s'est enfui !
 0x3FCCE4: Joueur a battu\n{B_LINK_OPPONENT1_NAME}!
-0x3FCCF8: Joueur a battu\n{B_LINK_OPPONENT1_NAME} et\n{B_LINK_OPPONENT2_NAME}!
+0x3FCCF8: Joueur a battu {B_LINK_OPPONENT1_NAME} et\n{B_LINK_OPPONENT2_NAME}!
 0x3FCD0F: Joueur a perdu contre\n{B_LINK_OPPONENT1_NAME}!
-0x3FCD27: Joueur a perdu contre\n{B_LINK_OPPONENT1_NAME} et\n{B_LINK_OPPONENT2_NAME}!
+0x3FCD27: Joueur a perdu contre {B_LINK_OPPONENT1_NAME} et\n{B_LINK_OPPONENT2_NAME}!
 0x3FCD41: Match nul contre\n{B_LINK_OPPONENT1_NAME}!
-0x3FCD66: Match nul contre\n{B_LINK_OPPONENT1_NAME} et\n{B_LINK_OPPONENT2_NAME}!
+0x3FCD66: Match nul contre {B_LINK_OPPONENT1_NAME} et\n{B_LINK_OPPONENT2_NAME}!
 0x3FCDB3: Non ! Pas de fuite d'un combat\nde Dresseur !\p
 0x3FCDE2: Impossible de fuir !\p
 0x3FCDF2: Mais rien ne se passe !
 0x3FCE08: Mais c'est raté !
-0x3FCE17: Se blesse dans sa confusion !
+0x3FCE17: Se blesse dans sa confusion !\n
 0x3FCE38: Mimique a échoué !
 0x3FCE50: La pluie commence !
 0x3FCE64: Un déluge débute !
@@ -166,30 +166,30 @@
 0x3FCF40: La grêle commence !
 0x3FCF54: La grêle continue de tomber.
 0x3FCF6C: La grêle s'est arrêtée.
-0x3FCF7E: Relâche a échoué !
-0x3FCFA0: Avale a échoué !
-0x3FCFC2: Le vent devient Canicule !
+0x3FCF7E: Relâche a échoué !\n
+0x3FCFA0: Avale a échoué !\n
+0x3FCFC2: Le vent devient Canicule !\n
 0x3FCFE4: Tous les changements de stats\nsont annulés !
-0x3FD006: Des pièces sont éparpillées\npartout !
-0x3FD022: Trop faible pour faire un clone !
+0x3FD006: Des pièces sont éparpillées partout !
+0x3FD022: Trop faible pour faire un clone !\n
 0x3FD048: Les combattants partagent\nleur douleur !
 0x3FD068: Une cloche tinte !
 0x3FD077: Tous les Pokémon touchés tomberont\nK.O. dans trois tours !
-0x3FD0A7: Plus de PP pour cette attaque !\p
+0x3FD0A7: Plus de PP pour cette attaque !\n\p
 0x3FD0CA: Mais il n'y avait plus de\nPP pour l'attaque !
 0x3FD0F1: {B_ATK_NAME_WITH_PREFIX} n'obéit pas\npendant son sommeil !
 0x3FD111: {B_ATK_NAME_WITH_PREFIX}\nn'obéit pas !
-0x3FD124: {B_ATK_NAME_WITH_PREFIX}\ncommence une sieste !
-0x3FD135: {B_ATK_NAME_WITH_PREFIX} flâne !
+0x3FD124: {B_ATK_NAME_WITH_PREFIX} commence une sieste !
+0x3FD135: {B_ATK_NAME_WITH_PREFIX} flâne !\n
 0x3FD14B: {B_ATK_NAME_WITH_PREFIX}\nrefuse d'obéir !
-0x3FD15A: {B_ATK_NAME_WITH_PREFIX}\nse détourne !
+0x3FD15A: {B_ATK_NAME_WITH_PREFIX} se détourne !
 0x3FD16A: {B_ATK_NAME_WITH_PREFIX}\nfeint l'ignorance !
 0x3FD186: {B_TRAINER1_CLASS} {B_TRAINER1_NAME}\nva utiliser {PLAYER}.\pChanger ?\n{B_PLAYER_NAME} ?
 0x3FD1B8: {B_ATK_NAME_WITH_PREFIX} a appris\n{UNKNOWN_STR} !
-0x3FD1C7: Vaincu\n{B_TRAINER1_CLASS}\n{B_TRAINER1_NAME}!\p
+0x3FD1C7: Vaincu {B_TRAINER1_CLASS}\n{B_TRAINER1_NAME}!\p
 0x3FD1DF: {B_PLAYER_NAME} a lancé un ROCHE\nsur le {RIVAL} !
 0x3FD1FA: {B_PLAYER_NAME} a lancé de l'appât\nau {RIVAL} !
-0x3FD218: {RIVAL} observe attentivement !
+0x3FD218: {RIVAL} observe attentivement !\n
 0x3FD232: {RIVAL} est en colère !
 0x3FD23F: {RIVAL} mange !
 0x3FD24D: {PLAY_SE}ぢ Plus de Safari Balls!\nGame over!\p
@@ -203,17 +203,17 @@
 0x3FD34D: Le Spectre était {RIVAL}!\p\n
 0x3FD366: {B_TRAINER1_CLASS} {B_TRAINER1_NAME}\nveut se battre!\p
 0x3FD383: {B_LINK_OPPONENT1_NAME}\nveut se battre!
-0x3FD397: {B_LINK_OPPONENT1_NAME} et\n{B_LINK_OPPONENT2_NAME}\nveulent se battre!
+0x3FD397: {B_LINK_OPPONENT1_NAME} et {B_LINK_OPPONENT2_NAME}\nveulent se battre!
 0x3FD3F7: {B_LINK_OPPONENT1_NAME} envoie\n{RIVAL}!
 0x3FD407: {B_LINK_OPPONENT1_NAME} envoie\n{RIVAL} et {EVIL_TEAM}!
-0x3FD41E: {B_LINK_OPPONENT1_NAME}\nenvoie {EVIL_LEADER}!\n{B_LINK_OPPONENT2_NAME}\nenvoie {EVIL_LEGENDARY}!
+0x3FD41E: {B_LINK_OPPONENT1_NAME} envoie {EVIL_LEADER}! {B_LINK_OPPONENT2_NAME}\nenvoie {EVIL_LEGENDARY}!
 0x3FD43E: {B_LINK_OPPONENT1_NAME} envoie\n{UNKNOWN_STR}!
 0x3FD44E: {B_LINK_SCR_TRAINER_NAME} envoie\n{UNKNOWN_STR}!
 0x3FD466: Go! {KUN} et\n{VERSION}!
 0x3FD47D: Vas-y ! {UNKNOWN_STR} !
 0x3FD488: Fonce, {UNKNOWN_STR} !
 0x3FD497: L'ennemi est faible !\nVas-y, {UNKNOWN_STR}!
-0x3FD4B5: {B_LINK_PARTNER_NAME}\nenvoie {GOOD_LEADER}!\nGo! {GOOD_TEAM}!
+0x3FD4B5: {B_LINK_PARTNER_NAME} envoie {GOOD_LEADER}!\nGo! {GOOD_TEAM}!
 0x3FD4CD: {UNKNOWN_STR}, ça suffit !\nReviens !
 0x3FD4EB: {UNKNOWN_STR}, reviens !
 0x3FD4FA: {UNKNOWN_STR}, OK !\nReviens !

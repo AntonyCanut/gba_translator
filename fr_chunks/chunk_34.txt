@@ -10,8 +10,8 @@
 0x92181D:  Permet au lanceur\nde frapper en premier\nsi l'ennemi prépare\nune attaque.
 0x92186B:  Projette de l'eau\nbouillante sur\nl'ennemi. Peut aussi\nbrûler.
 0x9218A8:  Si les PV adverses\nsont à la moitié ou\nmoins, inflige le\ndouble de dégâts.
-0x9218EA:  Provoque un vent\nféérique et frappe\nl'ennemi avec.
-0x921927:  Regard attendrissant\nqui baisse l'Attaque\nadverse. Prioritaire.
+0x9218EA:  Provoque un vent\nféérique et frappe\nl'ennemi avec.\n
+0x921927:  Regard attendrissant\nqui baisse l'Attaque\nadverse. Prioritaire.\n
 0x921970:  L'ennemi est malmené\npar le lanceur.\nPeut baisser\nl'Attaque.
 0x9219B5:  L'ennemi subit la\npuissance lunaire,\npeut baisser son\nAtt. Spé.
 0x921A02:  Baiser charmant qui\nsoigne le lanceur de\nla moitié des dégâts\ninfligés.
@@ -20,10 +20,10 @@
 0x921AC3:  Des rocs lévitent\nprès de l'équipe\nadverse et blessent\nles entrants.
 0x921B10:  Le lanceur s'évanouit\nmais soigne à 100%\nle Pokemon qui le\nremplace.
 0x921B54:  Soulève un Vent Arrière\nqui augmente la Vitesse\nde l'équipe pendant\nquatre tours.
-0x921BA1:  Émet une onde sonore\nterrible qui frappe\ntout autour.
-0x921BE6:  Brûle complètement\nl'ennemi et rend sa\nBaie inutilisable.
-0x921C2A:  Plante une graine\nanxiogène qui donne\nInsomnie à l'ennemi.
-0x921C6F:  Acide gastrique\nsupprime le talent\nadverse.
+0x921BA1:  Émet une onde sonore\nterrible qui frappe\ntout autour.\n
+0x921BE6:  Brûle complètement\nl'ennemi et rend sa\nBaie inutilisable.\n
+0x921C2A:  Plante une graine\nanxiogène qui donne\nInsomnie à l'ennemi.\n
+0x921C6F:  Acide gastrique\nsupprime le talent\nadverse.\n
 0x921CAE: Augmente l'Attaque\net l'Att. Spé de\ntous les Pokemon\nPlante.
 0x921CF1: Augmente la Défense\nde tous les Pokemon\nPlante via une\npuissance étrange.
 0x921D3A:  Les Att. Spé., Déf.\nSpé. et Vitesse du\nlanceur montent au\nsecond tour.
@@ -38,17 +38,17 @@
 0x921FBA: Appelle ses sbires\npour rouer l'ennemi\nde coups.\nTaux de critique\nélevé.
 0x922013: Appelle ses sbires\npour protéger son\ncorps, augmentant\nsa Défense et sa\nDéf. Spé.
 0x922074: Appelle ses sbires\npour le soigner.\nRend jusqu'à la\nmoitié des PV\nmax.
-0x9220D1: Si l'ennemi est\nd'un autre sexe,\nson Att. Spé.\nbaisse fortement.
+0x9220D1: Si l'ennemi est\nd'un autre sexe,\nson Att. Spé.\nbaisse fortement.\n
 0x92212D: Fort vent qui\nbalaye les obstacles\net baisse\nl'Esquive de la\ncible.
 0x92218A: Attaque les\nadversaires avec\nd'innombrables\nrayons bleus\nprofonds.
-0x9221E4: Manifeste la force\nde la terre en\nlames de pierre pour\nfrapper les\nadversaires.
+0x9221E4: Manifeste la force de la terre en\nlames de pierre pour\nfrapper les\nadversaires.
 0x922241: Inverse avec\nl'ennemi les boosts\nde Défense et de\nDéf. Spé via ses\npouvoirs psy.
 0x92229C: Immerge la cible\ndans de la vapeur\nsurchauffée.\nPeut aussi la\nbrûler.
 0x9222EE: Riposte bien plus\nfort contre\nl'adversaire qui a\ninfligé les derniers\ndégâts.
 0x92234B: Coupe la priorité\npour voler la\ncapacité visée et\nlancer la même avec\nplus de puissance.
 0x9223AA: Inverse avec\nl'ennemi les boosts\nd'Attaque et d'Att.\nSpé grâce à ses\npouvoirs psy.
-0x922407: Utilise son pouvoir\npsy pour échanger\nson Attaque avec\nsa Défense.
-0x92245B: Par suggestion psy,\ntransfère ses\nproblèmes de\nstatut à la cible.
+0x922407: Utilise son pouvoir\npsy pour échanger\nson Attaque avec\nsa Défense.\n
+0x92245B: Par suggestion psy,\ntransfère ses\nproblèmes de\nstatut à la cible.\n
 0x9224B8: Tord violemment la\ncible. Plus elle a\nde PV, plus la\npuissance est\ngrande.
 0x922512: Protège des dégâts\net baisse\nfortement l'Attaque\nadverse en cas de\ncontact.
 0x922571: Perd une partie de\nson corps pour\ns'alléger et\naugmenter beaucoup\nsa Vitesse.
@@ -56,7 +56,7 @@
 0x92262C: Une énorme vague de\nboue engloutit la\nzone. Peut aussi\nempoisonner les\nvictimes.
 0x922686: Percute la cible.\nPlus l'écart de\npoids est grand,\nplus les dégâts\nmontent.
 0x9226E1: Risque tout : inflige\nun montant égal à\nses PV puis\ns'effondre\nd'épuisement.
-0x922737: Onde étrange qui\nblesse les Pokemon\ndu même type dans\nles environs.
+0x922737: Onde étrange qui\nblesse les Pokemon\ndu même type dans\nles environs.\n
 0x92278C: Projette un orbe\nélectrique. Dégâts\nselon la Vitesse du\nlanceur et de la\ncible.
 0x9227EA: Retourne la force\nde l'ennemi contre\nlui. Puissance\naugmente avec son\nAttaque.
 0x922844: Danse sur un rythme\nétrange et donne à\nla cible le même\ntalent que le\nlanceur.
@@ -195,25 +195,25 @@
 0x950EC0: Esquive les boules et bombes.
 0x950EE0: Les attaques Vol passent en premier.
 0x950F00: Traverse les barrières.
-0x950F20: Objet à tenir. Lunettes qui montent l'Att. Spé\nmais bloquent sur une seule capacité.
-0x950F90: Objet à tenir. Cette écharpe booste la Vitesse\nmais bloque sur une seule capacité.
-0x950FF0: Objet à tenir. Ce bandeau hausse l'Attaque\nmais bloque sur une seule capacité.
-0x951050: Objet à tenir. Renforce la puissance des coups\nmais consomme des PV à chaque usage.
+0x950F20: Objet à tenir. Lunettes qui montent l'Att. Spé\nmais bloquent sur une seule capacité.\n
+0x950F90: Objet à tenir. Cette écharpe booste la Vitesse\nmais bloque sur une seule capacité.\n
+0x950FF0: Objet à tenir. Ce bandeau hausse l'Attaque\nmais bloque sur une seule capacité.\n
+0x951050: Objet à tenir. Renforce la puissance des coups\nmais consomme des PV à chaque usage.\n
 0x9510C0: Les K.O. boostent l'Attaque.
 0x9510E0: Met des dégâts à l'ennemi en mourant.
 0x951100: Peut désactiver une capacité ennemie.
 0x951120: Baisse la Vitesse du foe s'il touche.
 0x951140: Se propage au contact.
-0x951160: Objet à tenir. Si touché, le lanceur blesse\nl'attaquant au contact.
-0x9511D0: Objet à tenir. Les Pokemon Poison soignent\nmais les autres prennent des dégâts.
+0x951160: Objet à tenir. Si touché, le lanceur blesse\nl'attaquant au contact.\n
+0x9511D0: Objet à tenir. Les Pokemon Poison soignent\nmais les autres prennent des dégâts.\n
 0x95122F:  Augmente la Vitesse sous la tempête de sable.
 0x951250: Agir en dernier booste la puissance.
 0x951270: Assure que toutes les capacités touchent.
-0x951290: Objet à tenir. Ce gilet hausse la Déf. Spé\nmais interdit les capacités de statut.
+0x951290: Objet à tenir. Ce gilet hausse la Déf. Spé\nmais interdit les capacités de statut.\n
 0x9512F0: Boost les auras et ondes.
 0x951310: Boost les coups à contact.
 0x951330: Boost les morsures.
-0x951345: Étrange masse évolutive. Monte Défense\net Déf. Spé d'un Pokemon évolutif.
+0x951345: Étrange masse évolutive. Monte Défense\net Déf. Spé d'un Pokemon évolutif.\n
 0x9513B0: Attire les attaques Eau.
 0x9513D0: Renforce les capacités Ténèbres.
 0x95F9F4: iiiii{STRING}

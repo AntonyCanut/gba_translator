@@ -11,27 +11,27 @@
 0x3FD901: {B_SCR_ACTIVE_NAME_WITH_PREFIX}:\n{B_LAST_ITEM} le dégèle !
 0x3FD917: {B_SCR_ACTIVE_NAME_WITH_PREFIX}:\n{B_LAST_ITEM} le réveille !
 0x3FD937: {B_SCR_ACTIVE_NAME_WITH_PREFIX}:\n{B_LAST_ITEM} ôte la confusion !
-0x3FD95C: {B_SCR_ACTIVE_NAME_WITH_PREFIX}:\n{B_LAST_ITEM} soigne\nsouci {UNKNOWN_STR} !
+0x3FD95C: {B_SCR_ACTIVE_NAME_WITH_PREFIX}: {B_LAST_ITEM} soigne\nsouci {UNKNOWN_STR} !
 0x3FD97A: {B_SCR_ACTIVE_NAME_WITH_PREFIX}:\n{B_LAST_ITEM} normalise le statut !
 0x3FD999: {B_SCR_ACTIVE_NAME_WITH_PREFIX}:\n{B_LAST_ITEM} rend des PV !
 0x3FD9CC: {B_SCR_ACTIVE_NAME_WITH_PREFIX}:\n{B_LAST_ITEM} rétablit le statut !
 0x3FD9E9: {B_SCR_ACTIVE_NAME_WITH_PREFIX}:\n{B_LAST_ITEM} rend ses PV !
 0x3FDA02: un peu !
-0x3FDA0B: Effet de {B_LAST_ITEM} :\nseule {B_CURRENT_MOVE} peut\nêtre utilisée !\p
+0x3FDA0B: Effet de {B_LAST_ITEM} : seule {B_CURRENT_MOVE} peut\nêtre utilisée !\p
 0x3FDA33: {B_DEF_NAME_WITH_PREFIX} tient bon\navec {B_LAST_ITEM} !
-0x3FDA4D: {B_PLAYER_NAME} joue {B_LAST_ITEM}.\nAir entraînant !\p
+0x3FDA4D: {B_PLAYER_NAME} joue {B_LAST_ITEM}. Air entraînant !\p
 0x3FDA7A: {B_PLAYER_NAME} joue la\n{B_LAST_ITEM}.
 0x3FDA8C: Les Pokémon entendant la Flûte\nse réveillent !
 0x3FDAB1: Tu lances une Ball, hein ?\nJe... je vais faire de mon mieux !
-0x3FDAE2: Journal : Oh, bon sang...\nToujours pressé.\n{B_PLAYER_NAME}.\nTu n'as jamais fait de combat\nPokémon, hein ?\nUn combat oppose les Pokémon\ndes Dresseurs entre eux.\p
+0x3FDAE2: Journal : Oh, bon sang...\nToujours pressé.\p{B_PLAYER_NAME}.\pTu n'as jamais fait de combat\nPokémon, hein ?\pUn combat oppose les Pokémon\ndes Dresseurs entre eux.\l\p
 0x3FDB92: Le Dresseur qui met K.O. les\nPokémon adverses en baissant\lleurs PV à «0» gagne.\p
-0x3FDBEF: Mais plutôt qu'en parler,\ntu apprendras mieux\npar l'expérience.\nEssaye de combattre\npour voir.\p
+0x3FDBEF: Mais plutôt qu'en parler, tu apprendras mieux par l'expérience.\nEssaye de combattre\ppour voir.\p
 0x3FDC58: Infliger des dégâts à l'ennemi\nest la clé de tout combat.\p
 0x3FDC95: Baisser les stats de l'ennemi\nt'avantage.\p
 0x3FDCD2: Garde un œil sur les PV\nde ton Pokémon.\pIl tombera K.O. si ses PV\natteignent «0».\p
 0x3FDD23: Non ! Pas de fuite d'un combat\ncontre un Dresseur !\p
 0x3FDD64: Hm ! Excellent !\pSi tu gagnes, tu as de l'argent,\net ton Pokémon grandit !\pAffronte d'autres Dresseurs\npour les rendre forts !\p
-0x3FDDEB: Hm...\nQuelle déception...\nSi tu gagnes, tu as de l'argent,\net tes Pokémon grandissent.\nSi tu perds, {B_PLAYER_NAME},\ntu paies.\nJe paie cette fois,\nmais dehors ce sera différent.\nRenforce tes Pokémon en battant\ndes Pokémon sauvages.\p\nmais dehors ce sera différent.\nRenforce tes Pokémon en battant\ndes Pokémon sauvages.\p
+0x3FDDEB: Hm... Quelle déception... Si tu gagnes, tu as de l'argent,\net tes Pokémon grandissent.\pSi tu perds, {B_PLAYER_NAME},\ntu paies.\pJe paie cette fois,\nmais dehors ce sera différent.\pRenforce tes Pokémon en battant\ndes Pokémon sauvages.\p\nmais dehors ce sera différent.\pRenforce tes Pokémon en battant\ndes Pokémon sauvages.\p
 0x3FE672: Quoi ?\n{STR_VAR_1} évolue!
 0x3FE688: Félicitations ! Ton {STR_VAR_1}\na évolué en {STR_VAR_2}!{WAIT_SE}\p
 0x3FE6B5: Hein ? {STR_VAR_1}\nn'évolue plus!\p
@@ -75,8 +75,8 @@
 0x3FE982: TABLEAU TEMPS
 0x3FE98D: TEMPS FINAL
 0x3FE998: {STR_VAR_1}M {STR_VAR_2}{STR_VAR_3}S
-0x3FE9E4: Joueur a perdu\n{B_TRAINER1_CLASS}\n{B_TRAINER1_NAME}!
-0x3FE9FF: Match nul\n{B_TRAINER1_CLASS}\n{B_TRAINER1_NAME}!
+0x3FE9E4: Joueur a perdu {B_TRAINER1_CLASS}\n{B_TRAINER1_NAME}!
+0x3FE9FF: Match nul {B_TRAINER1_CLASS}\n{B_TRAINER1_NAME}!
 0x407C3F: AA & ÂS BAAiRRAi SRRiyzziîDA ソ:g{B_ATK_NAME_WITH_PREFIX}: gQxEQQhC QQjCQzhiÇizjii ソi{STRING}だ: ぉ
 0x40FCA2: ぉoTRぉ TRiÜRx
 0x4100BA: kj zyizぞzŒÂjj
@@ -96,7 +96,7 @@
 0x415A97: CADEAU MYSTÈRE
 0x415AA4: Adapt. Sans Fil\nn'est pas connecté.
 0x415ACB: CADEAU MYSTÈRE inutilisable\navec l'Adapt. Sans Fil.
-0x415BFF: Fichier de sauvegarde corrompu.\nChargement de l'ancienne sauvegarde.
+0x415BFF: Fichier de sauvegarde corrompu.\pChargement de l'ancienne sauvegarde.\n
 0x415C42: Le fichier de sauvegarde\na été supprimé...
 0x415C64: Le sous-circuit 1M\nn'est pas installé.
 0x415CE8: TEMPS
@@ -186,27 +186,27 @@
 0x4162FF: {STR_VAR_1} est\nsélectionné.
 0x41630F: On ne peut pas écrire\ndu courrier ici.
 0x41632A: Il n'y a pas de\nPokémon.
-0x41633F: Où placer le {STR_VAR_1} ?
+0x41633F: Où placer le {STR_VAR_1} ?\n
 0x41635E: {STR_VAR_1} ne peut pas être tenu.
 0x416374: Le {STR_VAR_1} ne peut pas être tenu\nici.
 0x41638F: Combien de {STR_VAR_1}(s)\ndéposer ?
 0x4163BB: Plus de place pour\nstocker des objets.
 0x4163DB: Combien de {STR_VAR_1}(s)\njeter ?
 0x416409: Jeter {STR_VAR_2} de\ncet objet ?
-0x416425: Journal : {PLAYER} !\nCe n'est pas le moment\npour ça !{PAUSE_UNTIL_PRESS}
+0x416425: Journal : {PLAYER} ! Ce n'est pas le moment\npour ça !{PAUSE_UNTIL_PRESS}
 0x416451: Pas de Vélo ici.{PAUSE_UNTIL_PRESS}
 0x41647E: Hein ?\nCherche-Objet réagit !\pObjet enterré !{PAUSE_UNTIL_PRESS}
 0x4164C2: Oh !\nCherche-Objet bouge !\pObjet sous tes pieds !\p… … … … … …{PAUSE_UNTIL_PRESS}
 0x416513: … … … …Rien !\nAucune réaction.{PAUSE_UNTIL_PRESS}
 0x41659E: Mais l'effet d'un Repousse\npersiste.{PAUSE_UNTIL_PRESS}
-0x4165D2: {PLAYER} utilise le\n{STR_VAR_2}.\pLes Pokémon sauvages\nseront attirés.{PAUSE_UNTIL_PRESS}
-0x416600: {PLAYER} utilise le\n{STR_VAR_2}.\pLes Pokémon sauvages\nseront repoussés.{PAUSE_UNTIL_PRESS}
-0x416631: La Boîte est pleine.\n{PAUSE_UNTIL_PRESS}
-0x416644: QUANT. POUDRE: {STR_VAR_1}\n{PAUSE_UNTIL_PRESS}
+0x4165D2: {PLAYER} utilise le {STR_VAR_2}.\nLes Pokémon sauvages\pseront attirés.{PAUSE_UNTIL_PRESS}
+0x416600: {PLAYER} utilise le {STR_VAR_2}.\nLes Pokémon sauvages\pseront repoussés.{PAUSE_UNTIL_PRESS}
+0x416631: La Boîte est pleine. {PAUSE_UNTIL_PRESS}
+0x416644: QUANT. POUDRE: {STR_VAR_1} {PAUSE_UNTIL_PRESS}
 0x416655: POUDRE
-0x41665C: Tu joues de la FLÛTE POKé.\p\nQuelle mélodie\nentraînante !{PAUSE_UNTIL_PRESS}
+0x41665C: Tu joues de la FLÛTE POKé. Quelle mélodie\pentraînante !{PAUSE_UNTIL_PRESS}
 0x416690: Tu joues de la FLÛTE POKé.
-0x4166A7: La FLÛTE POKé réveille\nles Pokémon endormis.\n{PAUSE_UNTIL_PRESS}
+0x4166A7: La FLÛTE POKé réveille les Pokémon endormis.\n{PAUSE_UNTIL_PRESS}
 0x4166D3: Boîte CT
 0x4166DB: Fermer
 0x4166E1: La Boîte CT sera\nrangée.
@@ -216,12 +216,12 @@
 0x416741: À plus !
 0x416757: Quitter les achats.
 0x416766: {STR_VAR_1}? Bien sûr.\nCombien en veux-tu ?
-0x41678E: {STR_VAR_1}, et tu en veux\n{STR_VAR_2}. Cela fera\n¥{STR_VAR_3}. OK ?
+0x41678E: {STR_VAR_1}, et tu en veux {STR_VAR_2}. Cela fera\n¥{STR_VAR_3}. OK ?
 0x4167E7: Voilà !\nMerci !
-0x416842: Tu n'as pas assez d'argent.\n{PAUSE_UNTIL_PRESS}
+0x416842: Tu n'as pas assez d'argent. {PAUSE_UNTIL_PRESS}
 0x416861: Plus de place pour cet\nobjet.{PAUSE_UNTIL_PRESS}
 0x41689E: Puis-je faire autre chose ?
-0x4168F1: {STR_VAR_1}? Oh, non.\nJe ne peux pas\nacheter ça.{PAUSE_UNTIL_PRESS}
+0x4168F1: {STR_VAR_1}? Oh, non. Je ne peux pas\nacheter ça.{PAUSE_UNTIL_PRESS}
 0x416911: {STR_VAR_1}?\nCombien veux-tu vendre ?
 0x416936: Je peux payer ¥{STR_VAR_3}.\nÇa te va ?
 0x416959: Tu as remis {STR_VAR_1}(s)\npour ¥{STR_VAR_3}.
@@ -236,15 +236,15 @@
 0x4169BC: Échanger
 0x4169C5: Att. Spé
 0x4169CD: Déf. Spé
-0x4169DC: Cela n'aura aucun effet.\n{PAUSE_UNTIL_PRESS}
+0x4169DC: Cela n'aura aucun effet. {PAUSE_UNTIL_PRESS}
 0x4169F8: Inutilisable sur ce Pokémon.\n{PAUSE_UNTIL_PRESS}
 0x416A1E: Impossible de changer\n{STR_VAR_1}!{PAUSE_UNTIL_PRESS}
 0x416A3A: {STR_VAR_1} est déjà\nau combat !{PAUSE_UNTIL_PRESS}
-0x416A55: {STR_VAR_1} est déjà\nsélectionné.\n{PAUSE_UNTIL_PRESS}
+0x416A55: {STR_VAR_1} est déjà sélectionné.\n{PAUSE_UNTIL_PRESS}
 0x416A75: {STR_VAR_1} n'a plus assez d'énergie\npour se battre !{PAUSE_UNTIL_PRESS}
-0x416A98: Impossible d'échanger le Pokémon\nde {STR_VAR_1} avec l'un des tiens !\n{PAUSE_UNTIL_PRESS}
-0x416ACB: Un Œuf ne peut pas se battre !\n{PAUSE_UNTIL_PRESS}
-0x416AE2: Inutilisable tant qu'un nouveau\nBadge n'est pas obtenu.\n{PAUSE_UNTIL_PRESS}
-0x416B16: Pas plus de trois Pokémon\nne peuvent entrer.\n{PAUSE_UNTIL_PRESS}
-0x416B3E: Pas plus de deux Pokémon\nne peuvent entrer.\n{PAUSE_UNTIL_PRESS}
+0x416A98: Impossible d'échanger le Pokémon de {STR_VAR_1} avec l'un des tiens !\n{PAUSE_UNTIL_PRESS}
+0x416ACB: Un Œuf ne peut pas se battre ! {PAUSE_UNTIL_PRESS}
+0x416AE2: Inutilisable tant qu'un nouveau Badge n'est pas obtenu.\n{PAUSE_UNTIL_PRESS}
+0x416B16: Pas plus de trois Pokémon ne peuvent entrer.\n{PAUSE_UNTIL_PRESS}
+0x416B3E: Pas plus de deux Pokémon ne peuvent entrer.\n{PAUSE_UNTIL_PRESS}
 0x416B64: Envoyer le Courrier retiré\nsur ton PC ?

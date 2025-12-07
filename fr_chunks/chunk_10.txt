@@ -171,12 +171,12 @@
 0x3FB3D3: {B_DEF_NAME_WITH_PREFIX} a esquivé\nl'attaque !
 0x3FB41A: {B_PLAYER_NAME} gagne ¥{UNKNOWN_STR}\npour sa victoire !\p
 0x3FB433: {B_PLAYER_NAME} n'a plus de\nPokémon utilisable !\p
-0x3FB484: {B_PLAYER_NAME} n'a plus de\nPokémon utilisable !\pPerdu face à\n{B_TRAINER1_CLASS}\n{B_TRAINER1_NAME}!\n{PAUSE_UNTIL_PRESS}
-0x3FB4BE: {B_PLAYER_NAME}\npaye ¥{UNKNOWN_STR}\nau vainqueur…\p… … … …\p\n{B_PLAYER_NAME}\na été K.O.!\n{PAUSE_UNTIL_PRESS}
-0x3FB4F7: {B_PLAYER_NAME} a été K.O.!\n{PAUSE_UNTIL_PRESS}
-0x3FB508: {B_SCR_ACTIVE_NAME_WITH_PREFIX}\nempêche la fuite avec\n{B_SCR_ACTIVE_ABILITY}!\p
+0x3FB484: {B_PLAYER_NAME} n'a plus de Pokémon utilisable ! Perdu face à\n{B_TRAINER1_CLASS}\p{B_TRAINER1_NAME}!\n{PAUSE_UNTIL_PRESS}
+0x3FB4BE: {B_PLAYER_NAME} paye ¥{UNKNOWN_STR} au vainqueur…… … … …\n{B_PLAYER_NAME}\pa été K.O.!\p{PAUSE_UNTIL_PRESS}
+0x3FB4F7: {B_PLAYER_NAME} a été K.O.! {PAUSE_UNTIL_PRESS}
+0x3FB508: {B_SCR_ACTIVE_NAME_WITH_PREFIX} empêche la fuite avec\n{B_SCR_ACTIVE_ABILITY}!\p
 0x3FB525: Impossible de fuir !\p
-0x3FB534: {B_ATK_NAME_WITH_PREFIX}\nne peut pas fuir !
+0x3FB534: {B_ATK_NAME_WITH_PREFIX} ne peut pas fuir !
 0x3FB545: Touché {UNKNOWN_STR} fois !
 0x3FB555: {B_EFF_NAME_WITH_PREFIX}\ns'est endormi !
 0x3FB57C: {B_DEF_NAME_WITH_PREFIX} dort\ndéjà !
@@ -187,18 +187,18 @@
 0x3FB5F8: {B_DEF_NAME_WITH_PREFIX} est déjà\nempoisonné.
 0x3FB610: {B_EFF_NAME_WITH_PREFIX}\nest gravement empoisonné !
 0x3FB626: {B_DEF_NAME_WITH_PREFIX}\na son énergie absorbée !
-0x3FB641: {B_EFF_NAME_WITH_PREFIX}\na été brûlé !
+0x3FB641: {B_EFF_NAME_WITH_PREFIX} a été brûlé !
 0x3FB663: {B_ATK_NAME_WITH_PREFIX} souffre\nde sa brûlure !
 0x3FB67B: {B_DEF_NAME_WITH_PREFIX} a déjà\nune brûlure.
 0x3FB692: {B_EFF_NAME_WITH_PREFIX} a été\ncongelé !
-0x3FB6A7: {B_SCR_ACTIVE_NAME_WITH_PREFIX}\navec {B_SCR_ACTIVE_ABILITY} a gelé\n{B_EFF_NAME_WITH_PREFIX} !
+0x3FB6A7: {B_SCR_ACTIVE_NAME_WITH_PREFIX} avec {B_SCR_ACTIVE_ABILITY} a gelé\n{B_EFF_NAME_WITH_PREFIX} !
 0x3FB6BF: {B_ATK_NAME_WITH_PREFIX} est\ncongelé !
 0x3FB6D3: {B_DEF_NAME_WITH_PREFIX} a dégelé !
 0x3FB6E5: {B_ATK_NAME_WITH_PREFIX} a dégelé !
 0x3FB6F7: {B_ATK_NAME_WITH_PREFIX} a été\ndécongelé par {B_CURRENT_MOVE} !
-0x3FB70F: {B_EFF_NAME_WITH_PREFIX}\nest paralysé !\nIl pourrait ne pas bouger !
-0x3FB73A: {B_SCR_ACTIVE_NAME_WITH_PREFIX}\n{B_SCR_ACTIVE_ABILITY} a paralysé\n{B_EFF_NAME_WITH_PREFIX}!\n\lPeut-être immobile !
-0x3FB76A: {B_ATK_NAME_WITH_PREFIX}\nest paralysé !\nIl ne peut plus bouger !
+0x3FB70F: {B_EFF_NAME_WITH_PREFIX} est paralysé !\nIl pourrait ne pas bouger !
+0x3FB73A: {B_SCR_ACTIVE_NAME_WITH_PREFIX} {B_SCR_ACTIVE_ABILITY} a paralysé {B_EFF_NAME_WITH_PREFIX}!\n\lPeut-être immobile !
+0x3FB76A: {B_ATK_NAME_WITH_PREFIX} est paralysé !\nIl ne peut plus bouger !
 0x3FB78A: {B_DEF_NAME_WITH_PREFIX} est déjà\nparalysé !
 0x3FB7A3: {B_DEF_NAME_WITH_PREFIX} n'est plus\nparalysé !
 0x3FB7BF: Le rêve de {B_DEF_NAME_WITH_PREFIX}\na été dévoré !
@@ -211,7 +211,7 @@
 0x3FB871: {B_EFF_NAME_WITH_PREFIX} est devenu\nconfus !
 0x3FB885: {B_DEF_NAME_WITH_PREFIX} est déjà\nconfus !
 0x3FB89D: {B_DEF_NAME_WITH_PREFIX} est tombé\namoureux !
-0x3FB8AE: {B_ATK_NAME_WITH_PREFIX}\nest amoureux de\n{B_SCR_ACTIVE_NAME_WITH_PREFIX} !
+0x3FB8AE: {B_ATK_NAME_WITH_PREFIX} est amoureux de\n{B_SCR_ACTIVE_NAME_WITH_PREFIX} !
 0x3FB8C5: {B_ATK_NAME_WITH_PREFIX} est\nimmobilisé par l'amour !
 0x3FB8E0: {B_DEF_NAME_WITH_PREFIX} a été\nsoufflé !
 0x3FB8F3: {B_ATK_NAME_WITH_PREFIX}\nest devenu type {UNKNOWN_STR} !
@@ -231,16 +231,16 @@
 0x3FBA79: {B_ATK_NAME_WITH_PREFIX} a absorbé\nla lumière solaire !
 0x3FBA8E: {B_ATK_NAME_WITH_PREFIX} a baissé\nla tête !
 0x3FBAB2: {B_ATK_NAME_WITH_PREFIX} a pris\nson envol !
-0x3FBAC3: {B_ATK_NAME_WITH_PREFIX} a creusé\nun trou !
+0x3FBAC3: {B_ATK_NAME_WITH_PREFIX} a creusé un trou !
 0x3FBAD2: {B_ATK_NAME_WITH_PREFIX} s'est caché\nsous l'eau !
 0x3FBAE5: {B_ATK_NAME_WITH_PREFIX} a bondi !
-0x3FBAF3: {B_DEF_NAME_WITH_PREFIX} a été serré\npar le Ligotage de\n{B_ATK_NAME_WITH_PREFIX} !
+0x3FBAF3: {B_DEF_NAME_WITH_PREFIX} a été serré par le Ligotage de\n{B_ATK_NAME_WITH_PREFIX} !
 0x3FBB11: {B_DEF_NAME_WITH_PREFIX} a été piégé\ndans le tourbillon !
 0x3FBB2F: {B_DEF_NAME_WITH_PREFIX} a été piégé\npar {B_CURRENT_MOVE} !
-0x3FBB4C: {B_DEF_NAME_WITH_PREFIX}\na été ligoté par\n{B_ATK_NAME_WITH_PREFIX} !
+0x3FBB4C: {B_DEF_NAME_WITH_PREFIX} a été ligoté par\n{B_ATK_NAME_WITH_PREFIX} !
 0x3FBB62: {B_ATK_NAME_WITH_PREFIX} a serré\n{B_DEF_NAME_WITH_PREFIX} !
 0x3FBB71: {B_ATK_NAME_WITH_PREFIX} souffre\na cause de {UNKNOWN_STR} !
-0x3FBB83: {B_ATK_NAME_WITH_PREFIX}\na été libéré de\n{UNKNOWN_STR} !
+0x3FBB83: {B_ATK_NAME_WITH_PREFIX} a été libéré de\n{UNKNOWN_STR} !
 0x3FBB99: {B_ATK_NAME_WITH_PREFIX} a foncé\net s'est écrasé !
 0x3FBBB4: {B_ATK_PREFIX2} s'est entouré\nde Brume !
 0x3FBBD0: {B_SCR_ACTIVE_NAME_WITH_PREFIX}\nest protégé par Brume !

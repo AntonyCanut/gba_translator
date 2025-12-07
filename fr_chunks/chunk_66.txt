@@ -1,13 +1,13 @@
 0x1EECDB7: La prochaine fois, je me roulerai\ndans la boue du marais pour que\lpersonne ne sente que j'arrive.
 0x1EECE02: Ce marais a tant de cachettes,\nqui sait ce qui peut y être\lcaché ?
 0x1EECE4E: Ce marais est en fait un être\nvivant doté d'un esprit puissant.
-0x1EECE8A: L'esprit du marais est avec toi.
+0x1EECE8A: L'esprit du marais est avec toi.\n
 0x1EECEAF: Nous devons respecter l'esprit du\nmarais, alors ne jette rien.
-0x1EECEE9: Je teste une nouvelle méthode de\npêche.\pBats-moi et je te montrerai ma\ntechnique.
-0x1EECF35: Je pêche avec un tazer à\ninsectes.\nLes Pokémon jaillissent tout de\nsuite !
-0x1EECF69: J'espère que ma méthode sera\napprouvée par le PETP : People\nfor the Ethical Treatment of\nPokémon.
+0x1EECEE9: Je teste une nouvelle méthode de pêche.\pBats-moi et je te montrerai ma\ntechnique.
+0x1EECF35: Je pêche avec un tazer à insectes. Les Pokémon jaillissent tout de\nsuite !
+0x1EECF69: J'espère que ma méthode sera approuvée par le PETP : People\nfor the Ethical Treatment of\lPokémon.
 0x1EECFBC: Un pique-nique dans un marais ?\pBeurk !\nQui voudrait faire ça ?
-0x1EECFEE: Je suis ici juste pour entraîner\nmes Pokémon !
+0x1EECFEE: Je suis ici juste pour entraîner mes Pokémon !
 0x1EED011: Les marais : bien pour jouer avec\nles Pokémon, pas pour manger.
 0x1EED046: J'essaie de rendre ce coin crade\njoli avec des fleurs.
 0x1EED07F: Si on jugeait ce combat sur la\nbeauté, j'aurais gagné.
@@ -16,12 +16,12 @@
 0x1EED148: Waouh !\nMonte direct au Pic de Cristal !
 0x1EED170: Monte juste cette cascade et tu\nseras au pied du Pic de Cristal.
 0x1EED1B3: Boîte à costumes
-0x1EED1C0: {DPAD_LEFTRIGHT}Choisir\n{SE_SHOP}Choisir {B_BUTTON}Fermer
-0x1EED1D8: Cette tenue n'a pas été\ndébloquée.{PAUSE_UNTIL_PRESS}
-0x1EED1FD: Il faut gagner {STR_VAR_2}\nCombats Duo avec {STR_VAR_1} pour\ndébloquer cette\ntenue.{PAUSE_UNTIL_PRESS}
-0x1EED247: {STR_VAR_1} doit être battu\n{STR_VAR_2} fois pour débloquer\ncette tenue.{PAUSE_UNTIL_PRESS}
-0x1EED28A: Utilise {DPAD_LEFTRIGHT} pour\nchoisir une couleur de tenue.\nValide avec {SE_SHOP}. Annule avec\n{B_BUTTON}.
-0x1EED2CE: Utilise {DPAD_LEFTRIGHT} pour\nchoisir une couleur de liseré.\nValide avec {SE_SHOP}. Annule avec\n{B_BUTTON}.
+0x1EED1C0: {DPAD_LEFTRIGHT}Choisir {SE_SHOP}Choisir {B_BUTTON}Fermer
+0x1EED1D8: Cette tenue n'a pas été débloquée.{PAUSE_UNTIL_PRESS}
+0x1EED1FD: Il faut gagner {STR_VAR_2} Combats Duo avec {STR_VAR_1} pour débloquer cette\ntenue.{PAUSE_UNTIL_PRESS}
+0x1EED247: {STR_VAR_1} doit être battu {STR_VAR_2} fois pour débloquer\ncette tenue.{PAUSE_UNTIL_PRESS}
+0x1EED28A: Utilise {DPAD_LEFTRIGHT} pour choisir une couleur de tenue. Valide avec {SE_SHOP}. Annule avec\n{B_BUTTON}.
+0x1EED2CE: Utilise {DPAD_LEFTRIGHT} pour choisir une couleur de liseré. Valide avec {SE_SHOP}. Annule avec\n{B_BUTTON}.
 0x1EED30F: Verrouillé
 0x1EED316: Version suivante
 0x1EED323: Éthan
@@ -29,45 +29,45 @@
 0x1EED32E: FばBourg Cratère
 0x1EED33C: Bourg Cratère J
 0x1EED34A: Bourg Cratère N
-0x1EED358: As-tu déjà pris l'Autoroute KBT ?\pElle est souterraine et contourne la\nmajorité de West Borrius !\p« KBT » veut dire King Borrius the\nThird.\pC'est le roi qui a imaginé une\nautoroute à l'échelle de la région.
-0x1EED448: Les météorites de Bourg Cratère ont\nun pouvoir cosmique.\pOn dit que si un certain Pokémon en\ncontacte une, des choses étranges\nse produisent.
-0x1EED4EB: Cette grotte mène à la Route 6.\pDe là, c'est tout droit : Route 7,\nMont Givre, puis Route 8 vers la\n{COLOR}ÉVille Blizzard{COLOR}Ë.\pSi tu montes à pied, prends plein de\nPoké Balls pour capturer des\nPokémon.\pLa plupart évitent ce chemin car ils\nn'ont pas le\n{COLOR}ÉBadge Vision{COLOR}Ë.\pSans lui, impossible de couper\nl'{COLOR}ÉArbre Maigre{COLOR}Ë\ndevant l'entrée.
-0x1EED690: Cette grotte là-bas mène à la Route\n6.\pPuis c'est tout droit : Route 7,\nMont Givre et Route 8 vers la\n{COLOR}ÉVille Blizzard{COLOR}Ë.\pSi tu montes à pied, prends plein de\nPoké Balls.\pMaintenant que l'Arbre Maigre a été\ncoupé, elle est bien plus utilisée.
-0x1EED7F3: J'ai entendu qu'à\n{COLOR}ÉTarmiganville{COLOR}Ç,\nquelqu'un enseigne l'art de la\n{COLOR}ÉMéga-Évolution{COLOR}Ç !
+0x1EED358: As-tu déjà pris l'Autoroute KBT ?\nElle est souterraine et contourne la\pmajorité de West Borrius !\n« KBT » veut dire King Borrius the\pThird.\nC'est le roi qui a imaginé une\pautoroute à l'échelle de la région.\n\l
+0x1EED448: Les météorites de Bourg Cratère ont\nun pouvoir cosmique.\lOn dit que si un certain Pokémon en\pcontacte une, des choses étranges\nse produisent.\l
+0x1EED4EB: Cette grotte mène à la Route 6.\nDe là, c'est tout droit : Route 7,\pMont Givre, puis Route 8 vers la\n{COLOR}ÉVille Blizzard{COLOR}Ë.\lSi tu montes à pied, prends plein de\pPoké Balls pour capturer des\nPokémon.\lLa plupart évitent ce chemin car ils\pn'ont pas le\n{COLOR}ÉBadge Vision{COLOR}Ë.\lSans lui, impossible de couper\pl'{COLOR}ÉArbre Maigre{COLOR}Ë\ndevant l'entrée.\l
+0x1EED690: Cette grotte là-bas mène à la Route\n6.\pPuis c'est tout droit : Route 7,\nMont Givre et Route 8 vers la\l{COLOR}ÉVille Blizzard{COLOR}Ë.\pSi tu montes à pied, prends plein de\nPoké Balls.\lMaintenant que l'Arbre Maigre a été\pcoupé, elle est bien plus utilisée.\n\l
+0x1EED7F3: J'ai entendu qu'à {COLOR}ÉTarmiganville{COLOR}Ç,\nquelqu'un enseigne l'art de la\l{COLOR}ÉMéga-Évolution{COLOR}Ç !
 0x1EED84F: J'ai entendu qu'à\n{COLOR}ÉTarmiganville{COLOR}Ç,\lquelqu'un enseigne la {COLOR}ÉMéga-\pÉvolution{COLOR}Ç !\nMais tu le savais déjà, non ?\pLe {STR_VAR_1} que tu portes te\ntrahit.
-0x1EED8F7: Tu savais que si tu parles aux\narbitres d'Arène avant le Champion,\nils te donnent un cadeau ?\pTu savais ? Hein ?
-0x1EED972: Et si tu leur parles après avoir\nbattu le Champion, ils donnent\naussi un cadeau !\pTu savais ? Hein ?
-0x1EED9FD: On apprend quelque chose de nouveau\nchaque jour !
+0x1EED8F7: Tu savais que si tu parles aux\narbitres d'Arène avant le Champion,\lils te donnent un cadeau ?\lTu savais ? Hein ?\p
+0x1EED972: Et si tu leur parles après avoir\nbattu le Champion, ils donnent\laussi un cadeau !\lTu savais ? Hein ?\p
+0x1EED9FD: On apprend quelque chose de nouveau chaque jour !
 0x1EEDA20: Oh, regarde-moi ce petit malin.
 0x1EEDA3F: Marmonner… marmonner…\p…attendre le signal…\pChuchoter… chuchoter…\p…vigie en place…\pMarmonner… marmonner…
 0x1EEDA96: Mineur Major
 0x1EEDAA2: Utilise l'ADM pour percer les\nportes effondrées de l'Autoroute KBT\net capture {STR_VAR_1} Strassie.
-0x1EEDB03: Des rumeurs parlent de rares Pokémon\nnommés {COLOR}ÉStrassie{COLOR}Ë dans\nl'Autoroute KBT.\pIls seraient derrière les portes\neffondrées qui jonchent le tunnel.\pSi seulement on pouvait\n{COLOR}Éminer{COLOR}Ë ces gravats…
-0x1EEDC0B: Cet ADM que tu as, c'est la machine\nqu'il me faut !\pJe cherche à détruire les portes\neffondrées de l'Autoroute KBT et tu\npeux m'aider !\pS'il te plaît, utilise ton\n{COLOR}ÉADM{COLOR}Ë et aide-moi !
-0x1EEDCFB: Splendide !\pMa tâche : détruire les\n{COLOR}Éportes effondrées{COLOR}Ë de\nl'{COLOR}ÉAutoroute KBT{COLOR}Ë\navec ton {COLOR}ÉADM{COLOR}Ë et\ncapturer {COLOR}É3 Strassie{COLOR}Ë.\pPour briser une porte, charge ton\nADM.\pCharge-le avec {COLOR}É3 Argiles\nLumière{COLOR}Ë pour qu'il soit\nassez puissant.\pOn trouve l'Argile Lumière en\nminant les murs de l'Autoroute KBT.\pQuand c'est fait, reviens me voir\npour une récompense.
-0x1EEDF0B: Pas très splendide.\pTu es le seul Dresseur que je\nconnaisse à avoir acheté un ADM.\pSans toi, je ne sers à rien ici.
+0x1EEDB03: Des rumeurs parlent de rares Pokémon\nnommés {COLOR}ÉStrassie{COLOR}Ë dans\ll'Autoroute KBT.\pIls seraient derrière les portes\neffondrées qui jonchent le tunnel.\lSi seulement on pouvait\l{COLOR}Éminer{COLOR}Ë ces gravats…\p\n
+0x1EEDC0B: Cet ADM que tu as, c'est la machine\nqu'il me faut !\pJe cherche à détruire les portes\neffondrées de l'Autoroute KBT et tu\lpeux m'aider !\lS'il te plaît, utilise ton\p{COLOR}ÉADM{COLOR}Ë et aide-moi !\n
+0x1EEDCFB: Splendide !\pMa tâche : détruire les\n{COLOR}Éportes effondrées{COLOR}Ë de\ll'{COLOR}ÉAutoroute KBT{COLOR}Ë\lavec ton {COLOR}ÉADM{COLOR}Ë et\lcapturer {COLOR}É3 Strassie{COLOR}Ë.\pPour briser une porte, charge ton\nADM.\lCharge-le avec {COLOR}É3 Argiles\pLumière{COLOR}Ë pour qu'il soit\nassez puissant.\lOn trouve l'Argile Lumière en\pminant les murs de l'Autoroute KBT.\pQuand c'est fait, reviens me voir\npour une récompense.\l\p\n
+0x1EEDF0B: Pas très splendide.\pTu es le seul Dresseur que je\nconnaisse à avoir acheté un ADM.\pSans toi, je ne sers à rien ici.\n
 0x1EEDF8D: Détruis les\n{COLOR}Éportes effondrées{COLOR}Ë de\ll'{COLOR}ÉAutoroute KBT{COLOR}Ë\lavec ton {COLOR}ÉADM{COLOR}Ë et\pcapture encore\n{COLOR}É{STR_VAR_1}\lStrassie{COLOR}Ë.\pPour briser une porte, charge\nd'abord ton ADM.\lCharge-le avec {COLOR}É3 Argiles\pLumière{COLOR}Ë pour qu'il soit\passez puissant.\nOn trouve l'Argile Lumière en\lminant les murs de l'Autoroute KBT.\pQuand c'est fait, reviens me voir\npour une récompense.
-0x1EEE174: Toi et ton ADM avez fait un travail\nremarquable !\pAccepte cette rare Méga-Gemme !
+0x1EEE174: Toi et ton ADM avez fait un travail\nremarquable !\pAccepte cette rare Méga-Gemme !\n
 0x1EEE1C7: La vraie récompense est encore dans\nl'Autoroute KBT.\pJe ne serais pas surpris qu'un\ncertain Pokémon apparaisse bientôt\ldans l'une de ces grottes…
 0x1EEE292: {COLOR}ÁOh non ! Diancie s'est\nenfuie !
-0x1EEE2AF: Toucher la météorite a équilibré\nles attributs d'un certain Pokémon.
-0x1EEE2F8: Toucher la météorite a augmenté la\npuissance offensive d'un Pokémon.
-0x1EEE34B: Toucher la météorite a augmenté la\npuissance défensive d'un Pokémon.
+0x1EEE2AF: Toucher la météorite a équilibré\nles attributs d'un certain Pokémon.\l
+0x1EEE2F8: Toucher la météorite a augmenté la\npuissance offensive d'un Pokémon.\l
+0x1EEE34B: Toucher la météorite a augmenté la\npuissance défensive d'un Pokémon.\l
 0x1EEE39E: Toucher la météorite a boosté la\nVitesse d'un certain Pokémon.
 0x1EEE3DD: Une mystérieuse météorite tombée\ndes étoiles.
 0x1EEE417: Fille
-0x1EEE420: Tu sais ce que j'ai vu à la télé ?\p{COLOR}É{STR_VAR_1}{COLOR}Ç !\n+Ils ont dit qu'il\ny avait plein de\n{COLOR}É{STR_VAR_2}{COLOR}Ç là-bas !
-0x1EEE478: Tu sais ce qu'ils disaient à la\n+radio ?\p{COLOR}É{STR_VAR_1}{COLOR}Ç !\n+Ils ont dit qu'il\ny avait plein de\n{COLOR}É{STR_VAR_2}{COLOR}Ç là-bas !
+0x1EEE420: Tu sais ce que j'ai vu à la télé ? {COLOR}É{STR_VAR_1}{COLOR}Ç ! +Ils ont dit qu'il\py avait plein de\n{COLOR}É{STR_VAR_2}{COLOR}Ç là-bas !
+0x1EEE478: Tu sais ce qu'ils disaient à la +radio ? {COLOR}É{STR_VAR_1}{COLOR}Ç !\n+Ils ont dit qu'il\py avait plein de\n{COLOR}É{STR_VAR_2}{COLOR}Ç là-bas !
 0x1EEE4D9: {COLOR}ÁC'est une vieille radio.\pElle diffuse quelque chose sur des\nEssaims de Pokémon.
-0x1EEE521: Ma fille adore {STR_VAR_1}.\pJe pourrais fixer une limite, mais\nsinon mon fils ne saurait jamais\nquand les Pokémon {COLOR}Éen\nessaims{COLOR}Ç arrivent !\pEt ces Pokémon sont durs à trouver\nsinon…
+0x1EEE521: Ma fille adore {STR_VAR_1}. Je pourrais fixer une limite, mais\psinon mon fils ne saurait jamais\nquand les Pokémon {COLOR}Éen\lessaims{COLOR}Ç arrivent !\pEt ces Pokémon sont durs à trouver\nsinon…
 0x1EEE5E3: regarde la télé
-0x1EEE5EF: écoute la radio
-0x1EEE606: Chaque heure, des groupes de\nPokémon rôdent dans Borrius.\pMa fille adore en entendre parler\nsur {STR_VAR_2} et voudrait tant en\nrencontrer un.\pTu n'aurais pas un\n{COLOR}É{STR_VAR_1}{COLOR}Ë par hasard ?\p×Frisk× ×Frisk×
+0x1EEE5EF: écoute la radio\n
+0x1EEE606: Chaque heure, des groupes de\nPokémon rôdent dans Borrius.\pMa fille adore en entendre parler\nsur {STR_VAR_2} et voudrait tant en\lrencontrer un.\lTu n'aurais pas un\p{COLOR}É{STR_VAR_1}{COLOR}Ë par hasard ?\n×Frisk× ×Frisk×\p
 0x1EEE6ED: Chérie !\pRegarde ce que ce gentil Dresseur\nt'a apporté.
-0x1EEE728: {COLOR}ÇWaouh ! C'est un\n{STR_VAR_1} !\pIl est si {STR_VAR_2} !\pMerci beaucoup, Dresseur ! Tu es le\nmeilleur !
+0x1EEE728: {COLOR}ÇWaouh ! C'est un {STR_VAR_1} !\pIl est si {STR_VAR_2} !\pMerci beaucoup, Dresseur ! Tu es le\nmeilleur !
 0x1EEE778: Tu as fait la joie de ma fille, je\ndois te remercier.\pPrends ceci en signe de gratitude.
 0x1EEE7CE: Reviens demain montrer un autre\nPokémon à ma fille.
-0x1EEE807: Oh, on dirait que non. Dommage.\pMa fille aurait adoré en voir un…
+0x1EEE807: Oh, on dirait que non. Dommage.\nMa fille aurait adoré en voir un…\p\n
 0x1EEE85D: Oh, tu n'as plus de place pour des\nBaies résistantes au type.
 0x1EEE896: la radio
 0x1EEE8A0: génial
@@ -75,167 +75,167 @@
 0x1EEE8AA: chic
 0x1EEE8B0: ondulé
 0x1EEE8B7: joli
-0x1EEE8BE: Il y a vingt ans, une grosse\nmétéorite fonçait vers Borrius.\pLes astronomes de Cube Corp. ont\nprédit qu'elle tomberait sur\nValley City, ici, et détruirait la\nvie.\pNous avons évacué la ville en\nurgence.\pEn fuyant par l'Autoroute KBT, une\nnouvelle est tombée : la météorite\nallait écraser la moitié de la\nrégion !\pFuir sous terre risquait de nous\nenterrer vivants.\pLe chaos a régné… jusqu'à ce\nqu'IL arrive.\p{COLOR}ÉAros{COLOR}Ë, la légende.\pAvec un petit Pokémon, il a\ntéléporté tout le monde vers East\nBorrius, en sécurité.\pIl comptait attaquer la météorite de\nface et la briser.\pAprès avoir mis tout le monde à\nl'abri, il aurait chevauché un\nRayquaza et percuté la météorite !\pElle a éclaté, et la plupart des\nfragments sont tombés sur Valley\nCity.\pLa ville fut détruite, mais Aros a\nsauvé la région.\pJe n'oublierai jamais son acte\nhéroïque.
-0x1EEECCC: Après l'impact, deux Pokémon ont été\ntrouvés sur Terre.\pL'un était très puissant et pouvait\nexaucer tout vœu.\pAu début, on s'est dit que c'était\ngénial pour rebâtir la ville !\pMais on a vite compris que chaque\nsouhait avait un prix.\pPar crainte, nous avons enfermé ce\nPokémon.\pMaintenant que le {STR_VAR_2} d'Aros\nest Champion, il est juste de te le\nconfier.\pVoudrais-tu lui offrir un foyer ?
+0x1EEE8BE: Il y a vingt ans, une grosse\nmétéorite fonçait vers Borrius.\pLes astronomes de Cube Corp. ont\nprédit qu'elle tomberait sur\lValley City, ici, et détruirait la\lvie.\lNous avons évacué la ville en\purgence.\nEn fuyant par l'Autoroute KBT, une\pnouvelle est tombée : la météorite\nallait écraser la moitié de la\lrégion !\pFuir sous terre risquait de nous\nenterrer vivants.\pLe chaos a régné… jusqu'à ce\nqu'IL arrive.\l{COLOR}ÉAros{COLOR}Ë, la légende.\pAvec un petit Pokémon, il a\ptéléporté tout le monde vers East\nBorrius, en sécurité.\pIl comptait attaquer la météorite de\pface et la briser.\nAprès avoir mis tout le monde à\ll'abri, il aurait chevauché un\pRayquaza et percuté la météorite !\nElle a éclaté, et la plupart des\pfragments sont tombés sur Valley\nCity.\lLa ville fut détruite, mais Aros a\lsauvé la région.\pJe n'oublierai jamais son acte\nhéroïque.\l\p\n\p\n
+0x1EEECCC: Après l'impact, deux Pokémon ont été\ntrouvés sur Terre.\lL'un était très puissant et pouvait\pexaucer tout vœu.\nAu début, on s'est dit que c'était\lgénial pour rebâtir la ville !\pMais on a vite compris que chaque\nsouhait avait un prix.\pPar crainte, nous avons enfermé ce\nPokémon.\pMaintenant que le {STR_VAR_2} d'Aros\nest Champion, il est juste de te le\pconfier.\nVoudrais-tu lui offrir un foyer ?\p\n\l\l\p\n
 0x1EEEF16: Je vois…\pUn autre Dresseur viendra peut-être\nplus tard.\pBonne journée.
 0x1EEEF5B: Patiente ici, s'il te plaît.
-0x1EEEF6D: J'ai déverrouillé la maison au sud\nde la ville.\pLe Pokémon enfermé est là-bas.\pQuand tu le réveilleras, il te\ndéfiera pour le droit de le\ncapturer.
+0x1EEEF6D: J'ai déverrouillé la maison au sud\nde la ville.\pLe Pokémon enfermé est là-bas.\nQuand tu le réveilleras, il te\pdéfiera pour le droit de le\ncapturer.\l
 0x1EEF037: Je vois que tu as capturé le\nPokémon enfermé.\pQuand il s'est écrasé, un ami à lui\nest aussi tombé.\pPeut-être se cache-t-il encore dans\nle coin ?\pIl répondra sûrement si tu amènes\nJirachi.
-0x1EEF11E: Je vois que tu as capturé l'ami de\nJirachi.\pAprès l'impact, ce Pokémon a réagi\nétrangement aux météorites du\ncentre-ville.\pAmène-le là-bas pour voir.
-0x1EEF1FF: Mon grand-père a survécu à la\nmétéorite !\pIl s'est même lié d'amitié avec un\nPokémon tombé des étoiles !
-0x1EEF27E: {COLOR}ÁRéveiller le\nPokémon endormi ?
-0x1EEF29D: {COLOR}ÁLe Pokémon s'est réveillé et\ns'est souhaité une taille et une\npuissance immenses !
-0x1EEF2DE: Je suis le Pique-Capacités.\pJe connais tous les moves qu'un\nPokémon apprend en grandissant.\pJe suis aussi fan des Écailles\nCœur.\pApporte-moi une\n{COLOR}ÉÉcaille Cœur{COLOR}Ë.\pEn échange, j'apprendrai une\ncapacité à un Pokémon.
-0x1EEF3A9: Oh ! Une vraie Écaille Cœur !\pJe parie que tu veux que j'enseigne\nun move ?
-0x1EEF402: J'enseigne un move de montée de\nniveau ?
+0x1EEF11E: Je vois que tu as capturé l'ami de\nJirachi.\pAprès l'impact, ce Pokémon a réagi\nétrangement aux météorites du\lcentre-ville.\lAmène-le là-bas pour voir.\p\n
+0x1EEF1FF: Mon grand-père a survécu à la\nmétéorite !\lIl s'est même lié d'amitié avec un\pPokémon tombé des étoiles !\n
+0x1EEF27E: {COLOR}ÁRéveiller le Pokémon endormi ?
+0x1EEF29D: {COLOR}ÁLe Pokémon s'est réveillé et s'est souhaité une taille et une\npuissance immenses !
+0x1EEF2DE: Je suis le Pique-Capacités. Je connais tous les moves qu'un Pokémon apprend en grandissant.\pJe suis aussi fan des Écailles\nCœur.\pApporte-moi une\p{COLOR}ÉÉcaille Cœur{COLOR}Ë.\pEn échange, j'apprendrai une\ncapacité à un Pokémon.
+0x1EEF3A9: Oh ! Une vraie Écaille Cœur !\nJe parie que tu veux que j'enseigne\pun move ?\n
+0x1EEF402: J'enseigne un move de montée de niveau ?
 0x1EEF422: Quel Pokémon doit être tutoré ?
 0x1EEF440: Quel move dois-je enseigner ?
 0x1EEF45B: {COLOR}Á{PLAYER} a donné une\nÉcaille Cœur.
-0x1EEF488: Si tes Pokémon doivent apprendre un\nmove, il me faut une {COLOR}ÉÉcaille\nCœur{COLOR}Ë.
+0x1EEF488: Si tes Pokémon doivent apprendre un move, il me faut une {COLOR}ÉÉcaille\nCœur{COLOR}Ë.
 0x1EEF4CA: Pour un move de montée de niveau,\nje suis ton gars.
 0x1EEF507: Hein ? Je ne peux rien enseigner à\nun Œuf.
 0x1EEF540: Désolé…\pIl semble que je n'ai aucun move à\napprendre à ce Pokémon.
 0x1EEF587: Il y avait une Mélodelfe près de\nla bibliothèque autrefois.\pOù est-elle passée ?
-0x1EEF5DD: Certains Champions que tu verras\nplus tard comptent sur la\n{COLOR}ÉMéga-Évolution{COLOR}Ç.\pPrépare-toi si tu veux les battre.\pSi tu ne sais pas ce que c'est, vois\nça comme un méga power-up.
-0x1EEF6D0: On dit que les Champions de East\nBorrius utilisent la {COLOR}ÉMéga-\nÉvolution{COLOR}Ç et des conditions\nde combat étranges.\pPrépare-toi si tu veux les battre.\pCes conditions demandent de bien\nréfléchir avant le combat.
-0x1EEF808: On dit que des Pokémon\n{COLOR}Ésuper-géants{COLOR}Ç\nont été vus\ndernièrement.\pAvant, on pensait les trouver\nuniquement dans les {COLOR}ÉAntres\nCachette{COLOR}Ç.\pMais certains Dresseurs savent\nmaintenant utiliser ce pouvoir en\ncombat classique.
-0x1EEF903: Tous les Pokémon ont des\n{COLOR}ÉTalents{COLOR}Ë utilisables en\ncombat.\pUn Talent peut aider ou gêner selon\nle cas.\pCertains servent même hors combat.\pPar exemple, si un Pokémon avec\n{COLOR}ÉTorche{COLOR}Ë est en\n{COLOR}Épremière place{COLOR}Ë,\ntu as\nplus de chances de croiser des\nPokémon {COLOR}ÉFeu{COLOR}Ë.
+0x1EEF5DD: Certains Champions que tu verras\nplus tard comptent sur la\l{COLOR}ÉMéga-Évolution{COLOR}Ç.\pPrépare-toi si tu veux les battre.\nSi tu ne sais pas ce que c'est, vois\pça comme un méga power-up.\n\l
+0x1EEF6D0: On dit que les Champions de East\nBorrius utilisent la {COLOR}ÉMéga-\lÉvolution{COLOR}Ç et des conditions\lde combat étranges.\pPrépare-toi si tu veux les battre.\nCes conditions demandent de bien\préfléchir avant le combat.\n\l\l
+0x1EEF808: On dit que des Pokémon {COLOR}Ésuper-géants{COLOR}Ç ont été vus\ndernièrement.\pAvant, on pensait les trouver\nuniquement dans les {COLOR}ÉAntres\lCachette{COLOR}Ç.\pMais certains Dresseurs savent\nmaintenant utiliser ce pouvoir en\lcombat classique.
+0x1EEF903: Tous les Pokémon ont des {COLOR}ÉTalents{COLOR}Ë utilisables en\ncombat.\pUn Talent peut aider ou gêner selon\nle cas.\pCertains servent même hors combat.\nPar exemple, si un Pokémon avec\p{COLOR}ÉTorche{COLOR}Ë est en\n{COLOR}Épremière place{COLOR}Ë,\ltu as\lplus de chances de croiser des\lPokémon {COLOR}ÉFeu{COLOR}Ë.
 0x1EEFA68: Il y a un passage caché derrière\nla bibliothèque.\pLe suivre ?
 0x1EEFAAB: {COLOR}ÉFriiie!
 0x1EEFAB6: {COLOR}ÁLe {STR_VAR_1} s'est enfui.
-0x1EEFACA: Certains objets ne servent qu'à\nêtre vendus.\pSi tu en trouves un, vends-le tout\nde suite.\pIl paraît que des maniaques les\nrachètent plus cher que les\nPoké Marts.
+0x1EEFACA: Certains objets ne servent qu'à\nêtre vendus.\pSi tu en trouves un, vends-le tout\nde suite.\pIl paraît que des maniaques les\nrachètent plus cher que les\lPoké Marts.\l
 0x1EEFBB4: J'ai essayé ce Gym, mais je n'ai\nmême pas atteint le Champion !\pIl faisait si sombre que je ne\nsavais pas où j'allais.\pJe {COLOR}Éne pouvais même pas{COLOR}Ç\nutiliser\p{COLOR}ÉFlash{COLOR}Ç pour y voir mieux !\nJ'espère que cette CT te servira.
 0x1EEFC99: {COLOR}ÉFlash{COLOR}Ç éclaire les\ngrottes sombres.
 0x1EEFCC9: Yo ! Bonne affaire.\pÉchange ton {COLOR}É{STR_VAR_2}{COLOR}Ë\ncontre mon {COLOR}É{STR_VAR_1}{COLOR}Ë ?
 0x1EEFD15: Hé, merci ! Profite bien de ce\n{STR_VAR_1} !
-0x1EEFD30: {COLOR}Á{PLAYER} a donné le\n{STR_VAR_2}.
+0x1EEFD30: {COLOR}Á{PLAYER} a donné le {STR_VAR_2}.
 0x1EEFD4A: Tu vois ? Bonne affaire, non ?\pOn peut échanger à nouveau demain\nsi tu veux !
-0x1EEFD94: Hein ? Sérieux ? Tu plaisantes.\pEn général, les gens sont ravis de\ntroquer !
+0x1EEFD94: Hein ? Sérieux ? Tu plaisantes. En général, les gens sont ravis de\ntroquer !
 0x1EEFDDB: Hein ? Sérieux ! Tu plaisantes.\nTu n'as pas de {STR_VAR_2} !?
 0x1EEFE15:  FばPokémon Unbound Version
-0x1EEFE60: Mise à niveau complète de FireRed
-0x1EEFE8C: Skeli Lich-Lord-F Criminon
-0x1EEFEBF: Skeli Nex U.Flame Dr Fuji Hillsy13
-0x1EEFF0B: Conception de scripts et de puzzles
-0x1EEFF2A: Skeli Criminon Struedelmuffin
-0x1EEFF67: Skeli Deneb Elgathar
-0x1EEFF9B: Skeli Lixdel Ghoulslash Squeetz
-0x1EEFFC2: Conception du sprite du formateur
-0x1EEFFDE: __NL_
-0x1EF0021: Pascal van den Bos Rowyn Berlan\nHumainement Blanders Jose Villanueva
-0x1EF0081: CyanSMP64 Levc KiddleScribbles\nNewoRGBY Caelan Kier
-0x1EF00D4: Braiden Brian DrakeSycamore Rainy\nAdAstra Zame
-0x1EF0122: salex-r3kt Edward Esser
-0x1EF0156: HnzMtthw Maria Panaiotti Rowdy HD
-0x1EF0194: __NL_NL_NL_NL_NL_NL_NL_NL_NL_
-0x1EF01D4: NL_NL_NL_NL_NL_
-0x1EF0237: Humainement CyanSMP64 Blanders\nU.Flame SevenK
-0x1EF027D: Deneb Elgathar Gail GR Doctordoak\nHnzMtthw
-0x1EF02C4: Dr Fuji Patrickz PRET
-0x1EF02E2: Mise à niveau complète de FireRed
-0x1EF0301: Skeli Ghoulslash Azurile13 Criminon\nDizzyEgg
-0x1EF0335: Mise à niveau complète de FireRed
-0x1EF0354: __nl__ ne sait pasoptoplay__nl_ fbi\n(original dexnav)__nl__ gris m__nl__\njepan__nl__ jiangwenwengwenjz_nl_
-0x1EF03A1: Mise à niveau complète de FireRed
-0x1EF03C0: Leon Dias Lixdel Navenatox Sagiri\nSierraffinity
-0x1EF03F7: Mise à niveau complète de FireRed
-0x1EF042D: La frontière de bataille s'étend
-0x1EF044B: __NL_ Skeli_NL_
-0x1EF0482: La frontière de bataille s'étend
-0x1EF04A0: Gail GR Isacc Lixdel Mystic Kaito\nPatrickz
-0x1EF04D2: La frontière de bataille s'étend
-0x1EF04F0: Petuuuhhh SevenK\nShinysamuraisamurott Snoopy Ted\nStrange
-0x1EF0546: Ressource de Sprite de style DS\nRessource de Sprite Sugimori\nRessource de Sprite Gen 6 Ressource\nde Sprite Gen 7+ Projet de Sprite\nSmogon XY
-0x1EF05DB: AimayBee Alex- Criminon Deneb\nDominekkas
-0x1EF0621: Lennybitao Kamina KingOfThe-X-Roads\nSevenK Spectre
-0x1EF0673: AimayBee Brawlzilla Chasemortier\nTasse à café Criminon
-0x1EF06C7: Golche Jhony-Rex Kamina Kyle-Dove\nKwenio
-0x1EF070F: Nex Piphybuilder88 Princesse-Phoenix\nPurpleZaffre Rayquaza Dot
-0x1EF0754: Autres Sprites d'Entraîneur
-0x1EF0770: Ressource Sprite de style DS Aerun\nTasse à café Golche Super Soursky
-0x1EF07B6: Autres Sprites d'Entraîneur
-0x1EF07F5: AZNEYZ__NL CHIKNLUVR DARKEON75__L__\nGOGOJTECH GOLCHE
-0x1EF083B: Ipatix Jonas Evant Justin Ang\nLukeeGD Shinkonet
-0x1EF0884: TurquoiseStar17 ZenithAegis
-0x1EF08E2: Ressource de Spriter Forêt Noire\nCriminon Delta231 Golche
-0x1EF0937: Jaizu Kamina VentZX mercredi
-0x1EF096A: __nl_ Akizakura16__nl__\ncriminon__nl_ Dionyen__nl_\nDonlalalawride__nl_ hek el\ngrande__nl__
-0x1EF09B5: Jaizu Kyle-Dove Laidjon Manuxd789\nNeffertity
-0x1EF09F7: Nex Peekychew PhénixofLight92\nPhyromatique PokémonTilesetStudio
-0x1EF0A4D: Rayquaza Dot Red Ex SailorVicious\nScarex Spaceemotion
-0x1EF0A98: Spinda94 Voyageur ultime\nUltimospriter U.Flame WesleyFG
-0x1EF0AE7: Williamgj WilsonScarloxy
-0x1EF0B15: Criminon Deneb Dionen Doctordoak\nElgathar
-0x1EF0B54: Gail Gr__nl__ Golche__nl__\nHillsy13__nl__ HNZMTTHW JONTHE123
-0x1EF0B94: Lich-Lord-F Lixdel Nex Patrickz\nRecko Juice
-0x1EF0BD5: Rigerhit047 Rowdy HD SevenK Shushui\nSpectre
-0x1EF0C2E: Pokémon FireRed Version
-0x1EF0C4C: Game Freak Nintendo
+0x1EEFE60: Mise à niveau complète de FireRed\n\n\n\n\n\n
+0x1EEFE8C: Skeli Lich-Lord-F Criminon\n\n\n\n\n\n
+0x1EEFEBF: Skeli Nex U.Flame Dr Fuji Hillsy13\n\n\n\n\n\n
+0x1EEFF0B: Conception de scripts et de puzzles\n\n\n\n\n\n
+0x1EEFF2A: Skeli Criminon Struedelmuffin\n\n\n\n\n\n
+0x1EEFF67: Skeli Deneb Elgathar\n\n\n\n\n\n
+0x1EEFF9B: Skeli Lixdel Ghoulslash Squeetz\n\n\n\n\n\n
+0x1EEFFC2: Conception du sprite du formateur\n\n\n\n\n\n
+0x1EEFFDE: __NL_\n\n\n\n\n\n
+0x1EF0021: Pascal van den Bos Rowyn Berlan\nHumainement Blanders Jose Villanueva\n\n\n\n\n
+0x1EF0081: CyanSMP64 Levc KiddleScribbles\nNewoRGBY Caelan Kier\n\n\n\n\n
+0x1EF00D4: Braiden Brian DrakeSycamore Rainy\nAdAstra Zame\n\n\n\n\n
+0x1EF0122: salex-r3kt Edward Esser\n\n\n\n\n\n
+0x1EF0156: HnzMtthw Maria Panaiotti Rowdy HD\n\n\n\n\n\n
+0x1EF0194: __NL_NL_NL_NL_NL_NL_NL_NL_NL_\n\n\n\n\n\n
+0x1EF01D4: NL_NL_NL_NL_NL_\n\n\n\n\n\n
+0x1EF0237: Humainement CyanSMP64 Blanders\nU.Flame SevenK\n\n\n\n\n
+0x1EF027D: Deneb Elgathar Gail GR Doctordoak\nHnzMtthw\n\n\n\n\n
+0x1EF02C4: Dr Fuji Patrickz PRET\n\n\n\n\n\n
+0x1EF02E2: Mise à niveau complète de FireRed\n\n\n\n\n\n
+0x1EF0301: Skeli Ghoulslash Azurile13 Criminon\nDizzyEgg\n\n\n\n\n
+0x1EF0335: Mise à niveau complète de FireRed\n\n\n\n\n\n
+0x1EF0354: __nl__ ne sait pasoptoplay__nl_ fbi\n(original dexnav)__nl__ gris m__nl__\njepan__nl__ jiangwenwengwenjz_nl_\n\n\n\n
+0x1EF03A1: Mise à niveau complète de FireRed\n\n\n\n\n\n
+0x1EF03C0: Leon Dias Lixdel Navenatox Sagiri\nSierraffinity\n\n\n\n\n
+0x1EF03F7: Mise à niveau complète de FireRed\n\n\n\n\n\n
+0x1EF042D: La frontière de bataille s'étend\n\n\n\n\n\n
+0x1EF044B: __NL_ Skeli_NL_\n\n\n\n\n\n
+0x1EF0482: La frontière de bataille s'étend\n\n\n\n\n\n
+0x1EF04A0: Gail GR Isacc Lixdel Mystic Kaito\nPatrickz\n\n\n\n\n
+0x1EF04D2: La frontière de bataille s'étend\n\n\n\n\n\n
+0x1EF04F0: Petuuuhhh SevenK\nShinysamuraisamurott Snoopy Ted\nStrange\n\n\n\n
+0x1EF0546: Ressource de Sprite de style DS\nRessource de Sprite Sugimori\nRessource de Sprite Gen 6 Ressource\nde Sprite Gen 7+ Projet de Sprite\nSmogon XY\n\n
+0x1EF05DB: AimayBee Alex- Criminon Deneb\nDominekkas\n\n\n\n\n
+0x1EF0621: Lennybitao Kamina KingOfThe-X-Roads\nSevenK Spectre\n\n\n\n\n
+0x1EF0673: AimayBee Brawlzilla Chasemortier\nTasse à café Criminon\n\n\n\n\n
+0x1EF06C7: Golche Jhony-Rex Kamina Kyle-Dove\nKwenio\n\n\n\n\n
+0x1EF070F: Nex Piphybuilder88 Princesse-Phoenix\nPurpleZaffre Rayquaza Dot\n\n\n\n\n
+0x1EF0754: Autres Sprites d'Entraîneur\n\n\n\n\n\n
+0x1EF0770: Ressource Sprite de style DS Aerun\nTasse à café Golche Super Soursky\n\n\n\n\n
+0x1EF07B6: Autres Sprites d'Entraîneur\n\n\n\n\n\n
+0x1EF07F5: AZNEYZ__NL CHIKNLUVR DARKEON75__L__\nGOGOJTECH GOLCHE\n\n\n\n\n
+0x1EF083B: Ipatix Jonas Evant Justin Ang\nLukeeGD Shinkonet\n\n\n\n\n
+0x1EF0884: TurquoiseStar17 ZenithAegis\n\n\n\n\n\n
+0x1EF08E2: Ressource de Spriter Forêt Noire\nCriminon Delta231 Golche\n\n\n\n\n
+0x1EF0937: Jaizu Kamina VentZX mercredi\n\n\n\n\n\n
+0x1EF096A: __nl_ Akizakura16__nl__\ncriminon__nl_ Dionyen__nl_\nDonlalalawride__nl_ hek el\ngrande__nl__\n\n\n
+0x1EF09B5: Jaizu Kyle-Dove Laidjon Manuxd789\nNeffertity\n\n\n\n\n
+0x1EF09F7: Nex Peekychew PhénixofLight92\nPhyromatique PokémonTilesetStudio\n\n\n\n\n
+0x1EF0A4D: Rayquaza Dot Red Ex SailorVicious\nScarex Spaceemotion\n\n\n\n\n
+0x1EF0A98: Spinda94 Voyageur ultime\nUltimospriter U.Flame WesleyFG\n\n\n\n\n
+0x1EF0AE7: Williamgj WilsonScarloxy\n\n\n\n\n\n
+0x1EF0B15: Criminon Deneb Dionen Doctordoak\nElgathar\n\n\n\n\n
+0x1EF0B54: Gail Gr__nl__ Golche__nl__\nHillsy13__nl__ HNZMTTHW JONTHE123\n\n\n\n\n
+0x1EF0B94: Lich-Lord-F Lixdel Nex Patrickz\nRecko Juice\n\n\n\n\n
+0x1EF0BD5: Rigerhit047 Rowdy HD SevenK Shushui\nSpectre\n\n\n\n\n
+0x1EF0C2E: Pokémon FireRed Version\n\n\n\n\n\n
+0x1EF0C4C: Game Freak Nintendo\n\n\n\n\n\n
 0x1EF0C67: Pic de cristal
 0x1EF0C75: Pic de cristal A
 0x1EF0C84: Pic de Cristal B
-0x1EF0C93: La plus haute montagne de Borrius.\nElle tire son nom du grand cristal\nque l'on trouve à son sommet. On dit\nque les cristaux trouvés ici\ndégagent d'immenses quantités\nd'énergie.
-0x1EF0D6C: QUATRE TROUS. PATIENCE DANS LE\nCENTRE EST LA CLÉ.
-0x1EF0D9B: Hrm…\pCe doohickey… comment puis-je\nl'utiliser… ?
-0x1EF0DBF: Ooh, bonjour ici…\pJe viens d'apprendre à utiliser ces\ndoohickeys totems que j'ai fait,\noui, oui.\pApprendre, tu veux aussi ?
-0x1EF0E29: Par ici, vous regardez maintenant,\noui, oui.
-0x1EF0E4B: Maintenant, le cristal monte, oui,\noui.\pEt le kablam !
+0x1EF0C93: La plus haute montagne de Borrius. Elle tire son nom du grand cristal\nque l'on trouve à son sommet. On dit\nque les cristaux trouvés ici\ndégagent d'immenses quantités\nd'énergie.
+0x1EF0D6C: QUATRE TROUS. PATIENCE DANS LE\nCENTRE EST LA CLÉ.\n\n
+0x1EF0D9B: Hrm… Ce doohickey… comment puis-je\pl'utiliser… ?
+0x1EF0DBF: Ooh, bonjour ici… Je viens d'apprendre à utiliser ces\pdoohickeys totems que j'ai fait,\noui, oui.\pApprendre, tu veux aussi ?
+0x1EF0E29: Par ici, vous regardez maintenant, oui, oui.
+0x1EF0E4B: Maintenant, le cristal monte, oui, oui.\pEt le kablam !
 0x1EF0E7A: Tous les cristaux bleus ont disparu\nmaintenant, oui, oui.\pD'autres totems font des choses\nsimilaires, je crois, oui, oui.
-0x1EF0EE4: Si les cristaux des totems montent,\ndisparaissent les autres cristaux\lfaites, oui, oui !\pSi les cristaux descendent, revenez\nles autres cristaux, faites, oui,\noui.
-0x1EF0F75: Apprenez, vous ne le ferez pas, non,\nnon.
+0x1EF0EE4: Si les cristaux des totems montent, disparaissent les autres cristaux\nfaites, oui, oui !\lSi les cristaux descendent, revenez\ples autres cristaux, faites, oui,\noui.
+0x1EF0F75: Apprenez, vous ne le ferez pas, non, non.
 0x1EF0F91: C'est un étrange totem avec un trou\nau centre.\pÀ quoi cela pourrait-il servir ?
-0x1EF0FD7: Faire glisser le cristal vers le\nhaut ?
-0x1EF0FF2: Faire glisser le cristal vers le bas\n?
-0x1EF100F: Ces cristaux regorgent de\nmerveilles.\pCreusez un peu et vous trouverez des\ntas de gemmes !\pEt si j'en partageais une avec vous\n?
+0x1EF0FD7: Faire glisser le cristal vers le haut ?
+0x1EF0FF2: Faire glisser le cristal vers le bas?
+0x1EF100F: Ces cristaux regorgent de merveilles.\nCreusez un peu et vous trouverez des\ptas de gemmes !\nEt si j'en partageais une avec vous\p?
 0x1EF1088: Je cherche des gemmes dans cette\npièce avec mon ADM tous les jours.\pSi vous avez un ADM, vous devriez\ncreuser ici aussi !\pC'est le seul endroit à Crystal Peak\noù vous pouvez !
 0x1EF1124: Un ballon violet
-0x1EF1137: Une petite fille a été enlevée par\nun Baudrive ! Trouvez-la et\nramenez-la en toute sécurité à sa\nmère inquiète.
-0x1EF11A0: {COLOR}ÇOh mon Dieu…\pMa fille, je ne la trouve pas !\pNous étions en vacances dans cet\nendroit quand tout d'un coup, un\nméchant\lPokémon l'a emportée !\pJe l'ai suivi jusqu'ici, mais je\nl'ai perdu de vue…\pS'il te plaît, {STR_VAR_1},\ncherche-la !
-0x1EF1276: {COLOR}ÇMerci, {STR_VAR_1}!\pElle a été emmenée par un de ces\nméchants Pokémon…\n{COLOR}ÉDrifloon{COLOR}Ç!\pSi vous trouvez le Baudrive, vous\ntrouverez ma fille !
+0x1EF1137: Une petite fille a été enlevée par un Baudrive ! Trouvez-la et\nramenez-la en toute sécurité à sa\nmère inquiète.
+0x1EF11A0: {COLOR}ÇOh mon Dieu… Ma fille, je ne la trouve pas ! Nous étions en vacances dans cet\pendroit quand tout d'un coup, un\pméchant\nPokémon l'a emportée !\lJe l'ai suivi jusqu'ici, mais je\pl'ai perdu de vue…\nS'il te plaît, {STR_VAR_1},\pcherche-la !
+0x1EF1276: {COLOR}ÇMerci, {STR_VAR_1}! Elle a été emmenée par un de ces\pméchants Pokémon…\n{COLOR}ÉDrifloon{COLOR}Ç!\pSi vous trouvez le Baudrive, vous\ntrouverez ma fille !
 0x1EF12F9: {COLOR}ÇOh, chérie…\pQue vais-je faire maintenant… ?
-0x1EF131B: {COLOR}ÇSniff…\pCe ballon effrayant m'a transporté\nici !\pJe veux rentrer chez moi, mais j'ai\ntrop peur pour partir pendant qu'il\nm'observe…
-0x1EF1392: {COLOR}ÇLe ballon effrayant m'a\nramené à ma maman !\pMais je sais que lorsque nous nous\nretournerons, il m'attrapera à\nnouveau !
+0x1EF131B: {COLOR}ÇSniff… Ce ballon effrayant m'a transporté\pici !\nJe veux rentrer chez moi, mais j'ai\ptrop peur pour partir pendant qu'il\nm'observe…
+0x1EF1392: {COLOR}ÇLe ballon effrayant m'a ramené à ma maman !\nMais je sais que lorsque nous nous\pretournerons, il m'attrapera à\nnouveau !
 0x1EF13FA: {COLOR}ÉFlooooon!
 0x1EF1408: {COLOR}ÁLa petite fille a été\nemportée par le Baudrive.
-0x1EF143C: {COLOR}ÇOh, Dieu merci, tu es de\nretour !\pCe… ce… Pokémon maléfique ne\nlaissera pas ma fille tranquille !\pPeu importe ce que je fais, c'est\njuste que ne…{PAUSE}î s'en\nira…{PAUSE}î s'en va…{PAUSE}î urk…
-0x1EF14D7: {COLOR}ÁLe Idem a été emporté par le\nBaudrive.\pOh ?\pOn dirait que le Idem a laissé\ntomber quelque chose avant de\ndisparaître.
+0x1EF143C: {COLOR}ÇOh, Dieu merci, tu es de retour ! Ce… ce… Pokémon maléfique ne\plaissera pas ma fille tranquille !\nPeu importe ce que je fais, c'est\pjuste que ne…{PAUSE}î s'en\nira…{PAUSE}î s'en va…{PAUSE}î urk…
+0x1EF14D7: {COLOR}ÁLe Idem a été emporté par le Baudrive.\nOh ?\pOn dirait que le Idem a laissé\ptomber quelque chose avant de\ndisparaître.
 0x1EF154A: Émeraudes flamboyantes
 0x1EF155B: Recherchez partout des émeraudes\nchaudes cachées sous les cristaux.
-0x1EF1599: Heeyo !\pJ'ai deez émeraudes sur fiya !\pDeya si chaud que j'ai dû les\nenterrer dans le ​​sol !\pMais là, oh, non !\pLes cristaux les couvraient !\pAhhhhhhhhhhhhhhhhhhh !\pTrouve mes émeraudes chaudes,\nchaudes pour moi, à peu près s'il te\nplaît ?
-0x1EF165A: Heeyo !\pMes émeraudes étaient toutes sur\nfiya !\pMaintenant, elles ne sont plus sur\nfiya, mais des cristaux partout !\pCachez les cristaux et trouvez-les\n{COLOR}É{STR_VAR_1}\némeraudes{COLOR}Ë, jolie s'il vous\nplaît !
+0x1EF1599: Heeyo ! J'ai deez émeraudes sur fiya !\pDeya si chaud que j'ai dû les\penterrer dans le ​​sol !\nMais là, oh, non !\pLes cristaux les couvraient !\pAhhhhhhhhhhhhhhhhhhh !\pTrouve mes émeraudes chaudes,\pchaudes pour moi, à peu près s'il te\nplaît ?
+0x1EF165A: Heeyo ! Mes émeraudes étaient toutes sur fiya ! Maintenant, elles ne sont plus sur\pfiya, mais des cristaux partout !\pCachez les cristaux et trouvez-les\n{COLOR}É{STR_VAR_1}\pémeraudes{COLOR}Ë, jolie s'il vous\nplaît !
 0x1EF16F4: Heeyo !\pC'est l'homme aux muffins !\pDonne-moi mes émeraudes !\pAhhhhhhhhhhhhhhhhhh !
 0x1EF1738: {COLOR}Á{PLAYER} a remis {STR_VAR_1}\némeraudes à l'étrange type.
-0x1EF176A: Hé ouais____S_S!_C!_C!_Proup ! Ceux!\nUN ______ .
-0x1EF17BF: Heeyo!\pDem émeraudes, tu n'as pas toutes!\pTu n'as que\n{COLOR}É{STR_VAR_2}{COLOR}Ë\némeraude{VERSION}!\pLes autres sont toujours sur fiya!\pAhhhhhhhhhhhhhhhhhh!\pApportez-moi toutes les\n{COLOR}É{STR_VAR_1}{COLOR}Ë de ces\némeraudes!
+0x1EF176A: Hé ouais____S_S!_C!_C!_Proup ! Ceux!\pUN ______ .\p\p\p
+0x1EF17BF: Heeyo! Dem émeraudes, tu n'as pas toutes! Tu n'as que {COLOR}É{STR_VAR_2}{COLOR}Ë émeraude{VERSION}!\pLes autres sont toujours sur fiya!\pAhhhhhhhhhhhhhhhhhh!\pApportez-moi toutes les\p{COLOR}É{STR_VAR_1}{COLOR}Ë de ces\pémeraudes!
 0x1EF1878: Regardez-moi ! Regardez-moi !\pMes émeraudes sont sur fiya !\pAhhhhhhhhhhhhhhhhhh !\pTellement chaud !
 0x1EF18C3: L'émeraude a été absorbée par le\n​​Cube !
-0x1EF18E9: Émeraudes restantes :\n{COLOR}É{STR_VAR_1}{COLOR}Á
+0x1EF18E9: Émeraudes restantes : {COLOR}É{STR_VAR_1}{COLOR}Á
 0x1EF1910: Cette émeraude a été trouvée sur B1F\nsous un cristal bleu.
 0x1EF1946: Cette émeraude a été trouvée dans la\ngrande pièce au 1er étage sous un\ncristal rouge .
 0x1EF198C: Cette émeraude a été trouvée dans la\ngrande pièce au 1F sous un cristal\njaune .
 0x1EF19D5: Cette émeraude a été trouvée dans la\ngrande pièce au 1F sous un cristal\nbleu .
-0x1EF1A1C: Cette émeraude a été trouvée dans la\npièce gauche au 1F sous un cristal\nbleu.
+0x1EF1A1C: Cette émeraude a été trouvée dans la pièce gauche au 1F sous un cristal\nbleu.
 0x1EF1A62: Cette émeraude a été trouvée dans la\npetite pièce sur B1F sous un cristal\njaune .
-0x1EF1AAC: Cette émeraude a été trouvée dans la\npièce droite au 1F sous un cristal\nbleu.
-0x1EF1AF3: Cette émeraude a été trouvée dans la\npièce droite au 1F sous un cristal\nrouge.
+0x1EF1AAC: Cette émeraude a été trouvée dans la pièce droite au 1F sous un cristal\nbleu.
+0x1EF1AF3: Cette émeraude a été trouvée dans la pièce droite au 1F sous un cristal\nrouge.
 0x1EF1B39: Cette émeraude a été trouvée dans la\npièce au sommet de la falaise, sous\nun cristal rouge.
 0x1EF1B8F: L'Orbe de Jade de {PLAYER} a\nsoudainement commencé à briller !
 0x1EF1BC8: {COLOR}{STR_VAR_1}_ s'est envolé !
-0x1EF1BD9: Où pensez-vous que vous allez ?\pVers l'arme ultime ?\pC'est euh... dans l'autre sens !
-0x1EF1C2E: Vous m'avez battu, alors revenez\ndans l'autre sens comme de bons\npetits dresseurs.
+0x1EF1BD9: Où pensez-vous que vous allez ?\nVers l'arme ultime ?\pC'est euh... dans l'autre sens !\p
+0x1EF1C2E: Vous m'avez battu, alors revenez dans l'autre sens comme de bons\npetits dresseurs.
 0x1EF1C6F: Ce cristal géant au sommet n'est\ncertainement pas l'arme ultime\ldéguisée.\pNon, monsieur !
 0x1EF1CCD: {COLOR}ÇL'arme ultime ?\pJe n'en ai jamais entendu parler !\pNous sommes juste là pour nous lier\nd'amitié avec les Pokémon sauvages !
 0x1EF1D2F: Seras-tu notre ami aussi ?
-0x1EF1D4C: {COLOR}ÇD'accord, très bien, je\ndonne.\pNous ne nous soucions pas des\nPokémon vivant ici.\pCe n'est pas comme s'ils allaient\nrester beaucoup plus longtemps de\ntoute façon.
+0x1EF1D4C: {COLOR}ÇD'accord, très bien, je donne. Nous ne nous soucions pas des\pPokémon vivant ici.\nCe n'est pas comme s'ils allaient\prester beaucoup plus longtemps de\ntoute façon.
 0x1EF1DD5: Le grand plan d'Aklove !\p…Qu'est-ce que c'était déjà ?
 0x1EF1DFE: Je viens de m'inscrire, donc je ne\nsais rien !
-0x1EF1E27: Aklove m'a embauché lui-même.\pIl m'a promis des richesses\nincalculables si je l'aidais, mais\nje n'ai jamais réussi à m'accroupir\n!
-0x1EF1E85: {COLOR}ÇAttendez !\pNous avons reçu l’ordre de vous\nretarder aussi longtemps que\npossible.
+0x1EF1E27: Aklove m'a embauché lui-même. Il m'a promis des richesses incalculables si je l'aidais, mais\pje n'ai jamais réussi à m'accroupir\n!
+0x1EF1E85: {COLOR}ÇAttendez ! Nous avons reçu l’ordre de vous\pretarder aussi longtemps que\npossible.
 0x1EF1EC6: Ce travail est un fiasco.
-0x1EF1ED9: {COLOR}ÇMaintenant que j'ai échoué\ndans mon seul travail, il ne me\nreste plus rien à faire.\pJe devrais simplement rejoindre un\nautre groupe …
-0x1EF1F45: Je parie que vous ne vous souvenez\npas de moi, hein ?\pVous avez sauvé ma peau d'un Shadow\nWarrior à notre base !\pPermettez-moi de ne pas vous rendre\ncette faveur !
+0x1EF1ED9: {COLOR}ÇMaintenant que j'ai échoué dans mon seul travail, il ne me\nreste plus rien à faire.\pJe devrais simplement rejoindre un\nautre groupe …
+0x1EF1F45: Je parie que vous ne vous souvenez pas de moi, hein ? Vous avez sauvé ma peau d'un Shadow\pWarrior à notre base !\nPermettez-moi de ne pas vous rendre\pcette faveur !
 0x1EF1FC5: Je ne te dois rien.
-0x1EF1FDF: Vous pensez que je serais\nreconnaissant pour votre aide,\nn'est-ce pas ?\pFeh…
+0x1EF1FDF: Vous pensez que je serais reconnaissant pour votre aide,\nn'est-ce pas ?\pFeh…
 0x1EF2014: Oh, super, une autre paire de\nDresseurs essayent de gravir\lla montagne.\pEspérons que vous n'êtes pas aussi\nfort que ce type au chapeau vert.
 0x1EF20A6: Je l'ai confirmé. Tu es aussi fort\nque ce type.
 0x1EF20D8: Pourquoi vous, les formateurs,\nn'êtes-vous pas venus ensemble ?\pCela nous éviterait bien des ennuis\nd'avoir à traiter avec vous\lFormateurs plusieurs fois.
@@ -244,7 +244,7 @@
 0x1EF21D0: Vous savez que Pokémon Aklove se\npromène avec ?\pÇa me fait des cauchemars…
 0x1EF2218: La destruction de Borrius ? Ça ne\nm'importe pas !
 0x1EF224A: Ma défaite ? Cela compte vraiment\npour moi !
-0x1EF226F: Je viens de Hoenn.\pDonc, je suis tout à fait favorable\nà la diminution de la masse\ncontinentale par ici.\pIl n'y a tout simplement pas assez\nd'eau, vous savez ?
+0x1EF226F: Je viens de Hoenn. Donc, je suis tout à fait favorable\pà la diminution de la masse\ncontinentale par ici.\pIl n'y a tout simplement pas assez\nd'eau, vous savez ?
 0x1EF22DA: Aha !\pPensez-vous qu'Aklove m'a laissé\nrien à utiliser contre vous ?\pSurprise !
-0x1EF2326: {COLOR}ËMaintenant, restez dans\nnotre prison pour votre propre garde\n.\pQuand l'arme explosera, cette\nmontagne sera le seul\lendroit sûr où être à Borrius !
+0x1EF2326: {COLOR}ËMaintenant, restez dans notre prison pour votre propre garde\n.\pQuand l'arme explosera, cette\nmontagne sera le seul\lendroit sûr où être à Borrius !
 0x1EF23B0: Attention…\pAttention aux ballons fantômes !

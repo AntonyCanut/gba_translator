@@ -71,13 +71,13 @@
 0x26D5BF: Merci d’avoir combattu avec moi !
 0x26D5DC: Tu veux passer par la Route\nDéfi ?\pAlors il faudra passer par moi\nd’abord !
 0x26D733: Oh, d’accord. Si tu changes d’avis,\ntu es le bienvenu quand tu veux !
-0x270FA1: J’ai essayé de traverser le Grand\nDésert à l’est de la ville, mais la\ntempête de sable était trop\nforte.\pLe sable me fouettait le visage et\nje ne voyais rien.\pSans protection, impossible d’aller\nquelque part.\pSi seulement je pouvais trouver\nquelque chose…
+0x270FA1: J’ai essayé de traverser le Grand Désert à l’est de la ville, mais la tempête de sable était trop\nforte.\lLe sable me fouettait le visage et\pje ne voyais rien.\nSans protection, impossible d’aller\pquelque part.\nSi seulement je pouvais trouver\pquelque chose…
 0x271C3E: Des pics toxik entourent toute ton\néquipe !
 0x27795D: Des rocs pointus flottent autour de\nl’équipe adverse !
 0x277999: Une toile gluante a été posée\nautour de l’équipe adverse !
 0x2779D4: Les rocs pointus transpercent\n{UNKNOWN_STR} !
 0x2779F1: \n{UNKNOWN_STR} est pris dans une\ntoile gluante !
-0x277A11: Les pics autour de\n{B_ATK_NAME_WITH_PREFIX} ont\ndisparu !
+0x277A11: Les pics autour de {B_ATK_NAME_WITH_PREFIX} ont\ndisparu !
 0x2810CD: PGB/RGAA QGBARGRQゾ ÂRR{PK}
 0x28B966: CQhAhBx AhAyRQSzòRRÀoRi\n ぜ\nィ ぜTiihCiSîi! Ê!jSCAだzÇÂ▶jBQ
 0x28BA06: ‘ぜベ9fでBぃÂgRグÈ.グ9 SR8/Sh8fこRQ8fÇJgÀsQィ ÂAhiRRQy hRRxhiSxKÉwÉªRyグ Eブ Eオe Et Eu Eu Eエu Eu ElÂぎli ?9iC!/TA /QDAARDQ RhTBgSTA
@@ -176,35 +176,35 @@
 0x3D50CC: Une Ball un peu spéciale qui\nmarche mieux sur les Pokémon des\nfonds marins.
 0x3D511D: Une Ball un peu spéciale qui\nmarche mieux sur les Pokémon\nfaibles.
 0x3D5165: Une Ball un peu spéciale qui\nmarche mieux sur un Pokémon déjà\ncapturé.
-0x3D51B4: Une Ball un peu spéciale qui devient\nmeilleure plus le combat dure.
-0x3D5216: Une Ball confortable qui rend vite\nun Pokémon sauvage amical.
-0x3D5263: Une Ball rare faite pour\ncommémorer un événement.
-0x3D52B2: Médicament en spray.\nRend 20 PV à un Pokémon.
-0x3D52FF: Médicament en spray.\nSoigne un Pokémon d’un poison.
+0x3D51B4: Une Ball un peu spéciale qui devient\nmeilleure plus le combat dure.\n
+0x3D5216: Une Ball confortable qui rend vite\nun Pokémon sauvage amical.\n
+0x3D5263: Une Ball rare faite pour\ncommémorer un événement.\n
+0x3D52B2: Médicament en spray.\nRend 20 PV à un Pokémon.\n
+0x3D52FF: Médicament en spray.\nSoigne un Pokémon d’un poison.\n
 0x3D533D: Médicament en spray.\nSoigne un Pokémon d’une brûlure.
 0x3D5374: Médicament en spray.\nDécongèle un Pokémon gelé.
 0x3D53A9: Médicament en spray.\nRéveille un Pokémon endormi.
-0x3D53DF: Médicament en spray.\nSoigne un Pokémon d’une paralysie.
+0x3D53DF: Médicament en spray.\nSoigne un Pokémon d’une paralysie.\n
 0x3D541B: Médicament qui restaure tous les\nPV et soigne tout statut d’un\nPokémon.
-0x3D546F: Médicament en spray.\nRestaure tous les PV d’un Pokémon.
-0x3D54B5: Médicament en spray.\nRend 200 PV à un Pokémon.
-0x3D5503: Médicament en spray.\nRend 50 PV à un Pokémon.
-0x3D5550: Médicament en spray.\nSoigne tout statut d’un Pokémon.
+0x3D546F: Médicament en spray.\nRestaure tous les PV d’un Pokémon.\n
+0x3D54B5: Médicament en spray.\nRend 200 PV à un Pokémon.\n
+0x3D5503: Médicament en spray.\nRend 50 PV à un Pokémon.\n
+0x3D5550: Médicament en spray.\nSoigne tout statut d’un Pokémon.\n
 0x3D5598: Médicament qui ranime un Pokémon\nK.O. en lui rendant la moitié de\nses PV max.
 0x3D55EC: Médicament qui ranime un Pokémon\nK.O. en lui rendant tous ses PV.
-0x3D562B: Eau riche en minéraux.\nRend 50 PV à un Pokémon.
-0x3D567E: Boisson gazeuse.\nRend 60 PV à un Pokémon.
-0x3D56C2: Boisson très sucrée.\nRend 80 PV à un Pokémon.
-0x3D5706: Lait très nutritif.\nRend 100 PV à un Pokémon.
-0x3D574F: Poudre médicinale très amère.\nRend 50 PV à un Pokémon.
-0x3D579E: Racine très amère.\nRend 200 PV à un Pokémon.
-0x3D57E3: Poudre médicinale très amère.\nSoigne tout statut d’un Pokémon.
+0x3D562B: Eau riche en minéraux.\nRend 50 PV à un Pokémon.\n
+0x3D567E: Boisson gazeuse.\nRend 60 PV à un Pokémon.\n
+0x3D56C2: Boisson très sucrée.\nRend 80 PV à un Pokémon.\n
+0x3D5706: Lait très nutritif.\nRend 100 PV à un Pokémon.\n
+0x3D574F: Poudre médicinale très amère.\nRend 50 PV à un Pokémon.\n
+0x3D579E: Racine très amère.\nRend 200 PV à un Pokémon.\n
+0x3D57E3: Poudre médicinale très amère.\nSoigne tout statut d’un Pokémon.\n
 0x3D5833: Herbe médicinale très amère.\nRanime un Pokémon K.O. et rend\nses PV au max.
 0x3D5883: Rend 10 PP à une capacité choisie\npour un Pokémon.
 0x3D58BF: Restaure tous les PP d’une capacité\npour un Pokémon.
 0x3D58F4: Restaure 10 PP à toutes les\ncapacités d’un Pokémon.
 0x3D5934: Restaure tous les PP de toutes les\ncapacités d’un Pokémon.
-0x3D5968: Spécialité locale de Lavandia.\nSoigne tout statut d’un Pokémon.
+0x3D5968: Spécialité locale de Lavandia.\nSoigne tout statut d’un Pokémon.\n
 0x3D59BB: Flûte bleue en verre.\nRéveille un Pokémon endormi.
 0x3D59EF: Flûte jaune en verre.\nSoigne un Pokémon confus.
 0x3D5A2D: Flûte rouge en verre.\nSoigne un Pokémon amoureux.
@@ -212,14 +212,14 @@
 0x3D5AB0: apparaissent.
 0x3D5AB8: Flûte blanche en verre.\nRend les Pokémon sauvages de plus\nbas niveau.
 0x3D5AFD: apparaissent.
-0x3D5B06: Jus 100 % pur.\nRend 20 PV à un Pokémon.
+0x3D5B06: Jus 100 % pur.\nRend 20 PV à un Pokémon.\n
 0x3D5B49: Ranime tous les Pokémon K.O. en\nrendant tous leurs PV.
 0x3D5B7A: Sel pur obtenu sous l’eau.\nExtrêmement salé.
-0x3D5BC5: Un joli coquillage trouvé sous\nl’eau.\nBlanc et bleu.
-0x3D5C1A: Petit éclat rouge.\nViendrait d’un outil ancien.
-0x3D5C66: Petit éclat bleu.\nViendrait d’un outil ancien.
-0x3D5CB3: Petit éclat jaune.\nViendrait d’un outil ancien.
-0x3D5D02: Petit éclat vert.\nViendrait d’un outil ancien.
+0x3D5BC5: Un joli coquillage trouvé sous l’eau.\nBlanc et bleu.
+0x3D5C1A: Petit éclat rouge.\nViendrait d’un outil ancien.\n
+0x3D5C66: Petit éclat bleu.\nViendrait d’un outil ancien.\n
+0x3D5CB3: Petit éclat jaune.\nViendrait d’un outil ancien.\n
+0x3D5D02: Petit éclat vert.\nViendrait d’un outil ancien.\n
 0x3D5D50: Boisson nutritive pour Pokémon.\nAugmente les PV de base d’un\nPokémon.
 0x3D5D96: Boisson nutritive pour Pokémon.\nAugmente l’Attaque de base d’un\nPokémon.
 0x3D5DE5: Boisson nutritive pour Pokémon.\nAugmente la Défense de base d’un\nPokémon.
@@ -228,13 +228,13 @@
 0x3D5ED3: Bonbon plein d’énergie.\nMonte le niveau d’un Pokémon d’un\ncran.
 0x3D5F20: Monte un peu les PP max d’une\ncapacité choisie pour un Pokémon.
 0x3D5F63: Boisson nutritive pour Pokémon.\nAugmente la Déf. Spé. de base d’un\nPokémon.
-0x3D5FB3: Monte les PP d’une capacité choisie\nau niveau max pour un Pokémon.
+0x3D5FB3: Monte les PP d’une capacité choisie\nau niveau max pour un Pokémon.\n
 0x3D5FFA: Objet qui empêche la baisse de\nstatuts dans l’équipe pendant cinq\ntours.
 0x3D604D: Monte le taux de critique en\ncombat. S’annule si le Pokémon est\nretiré.
-0x3D60A8: Monte l’Attaque en combat.\nS’annule si le Pokémon est retiré.
-0x3D60FC: Monte la Défense en combat.\nS’annule si le Pokémon est retiré.
-0x3D6151: Monte la Vitesse en combat.\nS’annule si le Pokémon est retiré.
-0x3D61A4: Monte la Précision en combat.\nS’annule si le Pokémon est retiré.
-0x3D61FA: Monte l’Att. Spé. en combat.\nS’annule si le Pokémon est retiré.
+0x3D60A8: Monte l’Attaque en combat.\nS’annule si le Pokémon est retiré.\n
+0x3D60FC: Monte la Défense en combat.\nS’annule si le Pokémon est retiré.\n
+0x3D6151: Monte la Vitesse en combat.\nS’annule si le Pokémon est retiré.\n
+0x3D61A4: Monte la Précision en combat.\nS’annule si le Pokémon est retiré.\n
+0x3D61FA: Monte l’Att. Spé. en combat.\nS’annule si le Pokémon est retiré.\n
 0x3D624F: Une jolie poupée.\nPermet de fuir n’importe quel\ncombat contre un Pokémon sauvage.
 0x3D6297: Un objet séduisant.\nPermet de fuir n’importe quel\ncombat contre un Pokémon sauvage.

@@ -1,4 +1,4 @@
-0x41A2E1: {DYNAMIC} a livré un combat\nfantastique contre le Champion\n{DYNAMIC}À.
+0x41A2E1: {DYNAMIC} a livré un combat fantastique contre le Champion\n{DYNAMIC}À.
 0x41A312: Au final, {DYNAMIC} a envoyé\n{DYNAMIC}À et {DYNAMIC}Á a riposté\navec {DYNAMIC}Â.
 0x41A349: En se battant de toutes ses\nforces, {DYNAMIC} a gagné\nle match.
 0x41A391: Objet {STR_VAR_1} retiré du Rayon\nObjets du SAC et stocké\nsur le PC.
@@ -21,12 +21,12 @@
 0x41A694: un autre endroit
 0x41A6A5: Retiré l'objet {STR_VAR_1} du PC de\n{PLAYER} et donné à {STR_VAR_2}\nà tenir.
 0x41A6E1: Retiré {STR_VAR_1} d'un PC, donné à\n{STR_VAR_2}, et mis {STR_VAR_3}\ndans le SAC.
-0x41A732: Beaucoup discuté avec des\nDresseurs.
+0x41A732: Beaucoup discuté avec des Dresseurs.
 0x41A74E: facilement
 0x41A756: avec ténacité
 0x41A762: tant bien que mal
-0x41A76A: Rencontré et échangé avec\n{STR_VAR_1}.\nReçu {STR_VAR_2} du Dresseur\ncontre {STR_VAR_3}.
-0x41A7B0: Rencontré et combattu\n{STR_VAR_1}. Le match s'est\nfini sur un {STR_VAR_2}.
+0x41A76A: Rencontré et échangé avec {STR_VAR_1}.\nReçu {STR_VAR_2} du Dresseur\ncontre {STR_VAR_3}.
+0x41A7B0: Rencontré et combattu {STR_VAR_1}. Le match s'est\nfini sur un {STR_VAR_2}.
 0x41A7DD: Allé à la Boutique Pokémon de\n{DYNAMIC} et acheté un\n{DYNAMIC}À.
 0x41A810: Allé à la Boutique Pokémon de\n{DYNAMIC} et dépensé ¥{DYNAMIC}Á pour\ndes objets dont {DYNAMIC}À.
 0x41A858: {DYNAMIC} est allé à la Boutique\nPokémon de {DYNAMIC}À et a vendu\n{DYNAMIC}Â {DYNAMIC}Á.
@@ -40,9 +40,9 @@
 0x41A9D4: Vaincu {DYNAMIC}Á Pokémon sauvages\ndont {DYNAMIC}À à {DYNAMIC} .
 0x41AA01: {DYNAMIC}È a attrapé le Pokémon\n{DYNAMIC}Â à {DYNAMIC} .
 0x41AA2B: Lancé des Poké Balls à la chaîne,\nattrapant {DYNAMIC}Ç Pokémon dont\n{DYNAMIC}Â ici à {DYNAMIC} .
-0x41AA76: {DYNAMIC}È a vaincu {DYNAMIC}À et\nattrapé un {DYNAMIC}Â à {DYNAMIC} .
+0x41AA76: {DYNAMIC}È a vaincu {DYNAMIC}À et\nattrapé un {DYNAMIC}Â à {DYNAMIC} .\n
 0x41AAAA: Vaincu {DYNAMIC}À et attrapé\n{DYNAMIC}Ç Pokémon dont {DYNAMIC}Â\nà {DYNAMIC} .
-0x41AAEC: {DYNAMIC}È a battu\n{DYNAMIC}Á Pokémon dont\n{DYNAMIC}À et attrapé un\n{DYNAMIC}Â à {DYNAMIC} .
+0x41AAEC: {DYNAMIC}È a battu {DYNAMIC}Á Pokémon dont\n{DYNAMIC}À et attrapé un\n{DYNAMIC}Â à {DYNAMIC} .
 0x41AB29: Vaincu {DYNAMIC}Á Pokémon dont\n{DYNAMIC}À et attrapé {DYNAMIC}Ç Pokémon\ndont {DYNAMIC}Â à {DYNAMIC} .
 0x41AB74: Fait tenir l'objet {STR_VAR_2}\nà {STR_VAR_1}.
 0x41AB8E: {PLAYER} a fait tenir {STR_VAR_2}\nà {STR_VAR_1}.
@@ -50,7 +50,7 @@
 0x41ABCD: {STR_VAR_1} a utilisé la CS Vol et\na volé vers {STR_VAR_2}.
 0x41ABF9: {STR_VAR_1} a utilisé la CS Surf et\na pris les vagues.
 0x41AC2A: {STR_VAR_1} a utilisé la CS Force\nici.
-0x41AC51: {STR_VAR_1} a utilisé la CS Flash\net a éclairé une grotte noire.
+0x41AC51: {STR_VAR_1} a utilisé la CS Flash\net a éclairé une grotte noire.\n
 0x41AC93: {STR_VAR_1} a utilisé la CS\nÉclate-Roc ici.
 0x41ACBC: {STR_VAR_1} a utilisé la CS Cascade\npour remonter le torrent.
 0x41AD1D: {STR_VAR_1} a utilisé Tunnel pour\nfuir {STR_VAR_2}.
@@ -71,7 +71,7 @@
 0x41AFA6: {PLAYER} a utilisé une Corde Fuite\npour sortir de {STR_VAR_2}.
 0x41AFD1: égalité
 0x41AFD6: Parti de {STR_VAR_2} vers la\nprochaine destination.
-0x41B005: {PLAYER} est parti de {STR_VAR_2}\npour la prochaine étape.
+0x41B005: {PLAYER} est parti de {STR_VAR_2}\npour la prochaine étape.\n
 0x41B03F: À {STR_VAR_1},ぃ{PLAYER} a obtenu\nl'objet {STR_VAR_2}.
 0x41B064: Arrivé à {STR_VAR_1}.
 0x41B073: {PLAYER} a sauvegardé ici :\n{STR_VAR_1}.
@@ -108,8 +108,8 @@
 0x41B25B: ROUTE VICTOIRE
 0x41B268: LIGUE POKÉMON
 0x41B277: GROTTE AZUR
-0x41B285: a été utilisé sur
-0x41B295: a gagné un niveau
+0x41B285: a été utilisé sur\n
+0x41B295: a gagné un niveau\n
 0x41B2A9: {FONT_SMALL}MAX.{FONT_NORMAL} PV
 0x41B2B7: Attaque
 0x41B2BE: Défense
@@ -145,14 +145,14 @@
 0x41B535: PARDON
 0x41B541: MERCI
 0x41B54B: À PLUS !
-0x41B554: {PLAYER} s'est précipité au Centre\nPokémon en protégeant ses Pokémon\népuisés et K.O.…\n\pp
-0x41B5B6: {PLAYER} est rentré chez lui en\nprotégeant ses Pokémon épuisés et\nK.O.…\n\pp
+0x41B554: {PLAYER} s'est précipité au Centre Pokémon en protégeant ses Pokémon\népuisés et K.O.…\n\pp
+0x41B5B6: {PLAYER} est rentré chez lui en protégeant ses Pokémon épuisés et\nK.O.…\n\pp
 0x41B60E: Joueur : {DYNAMIC} 
-0x41B619: Ce document atteste ta superbe\nperformance : remplir le Pokédex\n{DYNAMIC}À.
+0x41B619: Ce document atteste ta superbe\nperformance : remplir le Pokédex\n{DYNAMIC}À.\n
 0x41B684: Game Freak
 0x41B68F: National
 0x41B698: Kanto
-0x41B69E: Effacer toutes les données de\nsauvegarde ?
+0x41B69E: Effacer toutes les données de sauvegarde ?
 0x41B6B9: Effacement des données…\nPatiente.
 0x41B6D5: Joueur
 0x41B6DC: Temps
@@ -163,7 +163,7 @@
 0x41B716: Voulez-vous donner un surnom à\n{STR_VAR_1} tout juste éclos ?
 0x41B747: Plus de Jetons.\nPartie perdue !
 0x41B76B: Quitter le jeu ?
-0x41B779: {DPAD_LEFTRIGHT}COMBOS\n{DPAD_DOWN}MISE {SE_SHOP}STOP\n{B_BUTTON}Quitter
+0x41B779: {DPAD_LEFTRIGHT}COMBOS {DPAD_DOWN}MISE {SE_SHOP}STOP {B_BUTTON}Quitter
 0x41B7A4: Apprends-moi à combattre.
 0x41B7BC: C'est quoi les altérations ?
 0x41B7D6: C'est quoi les types ?
@@ -171,21 +171,21 @@
 0x41B807: Parle-moi des CT.
 0x41B81B: Comment enregistrer un objet ?
 0x41B836: Annuler
-0x41B83D: Salut les Dresseurs !\nSALUT, Dresseurs !\n\p……… ……… ………\n\pAllez, faites du bruit !\nSALUT, Dresseurs !\n\lC'est moi, le MEC POKé !\n\p
-0x41B8BF: Aujourd'hui, le MEC POKé explique\ncomment combattre des Pokémon !\n\pImagine : tu te balades et soudain\nun Pokémon sauvage apparaît !\n\pÀ toi d'utiliser tes Pokémon\net leurs capacités pour réduire\nles PV adverses à zéro\net gagner !\n\pJe vais te le montrer en vrai !\n\pC'est parti !\n\pGarde les yeux sur le super\nSHOW DU MEC POKé !
-0x41BA41: Alors, tu as suivi ?\n\pMême si les PV de ton Pokémon\ntombent à zéro et qu'il ne peut\nplus se battre, pas de panique !\n\pAmène-le dans un Centre Pokémon\net soigne-le !\n\pAllez, à bientôt !\n\pSouviens-toi : une bonne action\npar jour rend heureux toujours !
-0x41BB40: Aujourd'hui, le MEC POKé parle\ndes altérations d'état !\n\pParmi elles : poison, paralysie,\nsommeil, brûlure…\n\pIl y en a d'autres, et c'est un\nvrai souci.\n\pAvec ça, ton Pokémon peut devenir\ninutile en combat.\n\pÇa fait mal au MEC POKé de voir un\nPokémon souffrir…\n\pAlors que faire ?\n\pJe vais te montrer !\n\pC'est parti !\n\pGarde les yeux sur le super\nSHOW DU MEC POKé !
-0x41BD10: Poison et paralysie ne partent\npas après le combat.\n\pUn Pokémon empoisonné perd des PV\nmême en marchant.\n\pSoigne vite ce genre de souci.\n\pUtilise un objet ou file au Centre\nPokémon pour soigner.\n\pPas si dur, hein ?\n\pAllez, à bientôt !\n\pSouviens-toi : une bonne action\npar jour rend heureux toujours !
-0x41BE76: Tout le monde connaît les effets\nde type ?\n\pLes Pokémon et leurs capacités\nont tous des types.\n\pPar exemple : PLANTE ou EAU.\n\pIl faut penser au type de la\ncapacité qui attaque…\n\pEt au type du Pokémon qui reçoit\nl'attaque.\n\pSelon l'affinité, les dégâts\nchangent.\n\pÇa dépend si le duo de types est\nbon ou mauvais.\n\pSans ça, les combats seront rudes.\n\pJe vais te montrer ce que je veux\ndire.\n\pC'est parti !\n\pGarde les yeux sur le super\nSHOW DU MEC POKé !
-0x41C0AF: Peut-on lancer une attaque qui fait\ntrès mal ?\n\pLe Pokémon adverse est-il\ndangereux pour ton Pokémon ?\n\pPeut-il avoir des capacités\nterribles ?\n\pRegarde les affinités pour prendre\nl'avantage !\n\pAllez, à bientôt !\n\pEt pour le MEC POKé COOL, des\nkids GÉNIAUX comme toi, ça colle !\n\pSouviens-toi : une bonne action\npar jour rend heureux toujours !
-0x41C23B: Aujourd'hui, le MEC POKé montre\ncomment attraper des Pokémon !\n\pImagine… Un Pokémon stylé apparaît\nd'un coup dans la nature !\n\pOh, tu le veux !\nImpossible de résister !\n\pTu dois l'attraper !\nIl te le faut !\n\pJe vais te montrer comment faire !\n\pC'est parti !\n\pGarde les yeux sur le super\nSHOW DU MEC POKé !
-0x41C384: Si ta première Poké Ball échoue,\nne lâche rien !\n\pLance encore des Poké Balls…\nÇa finira par marcher !\n\pAllez, à bientôt !\n\pSouviens-toi : une bonne action\npar jour rend heureux toujours !
-0x41C459: Salut tout le monde !\nVous avez des CT ?\n\pUne CT, Capsule Technique, c'est\nsuper !\n\pElle apprend à un Pokémon une\ncapacité qu'il n'aurait pas\nen montant de niveau !\n\pGénial, non ? Quel monde pratique !\n\pOuvre le Boîtier CT et regarde\nles CT que tu as.\n\pTu peux aussi les examiner\nen détail.
-0x41C587: MEC POKé : NORMAL, EAU, PLANTE…\nLes CT ont aussi un type.\n\pVérifie le type et enseigne-le à\nun Pokémon qui matche bien.\n\pExemple : Vibraqua va bien aux\nPokémon de type EAU.\n\pBALLE GRAINE est une capacité que\nbeaucoup de Pokémon PLANTE\npeuvent apprendre.\n\pEncore autre chose !
-0x41C693: Ne regarde pas que le type, lis\nla description aussi.\n\pElle donne des indices sur quel\nPokémon peut apprendre la capacité.\n\pPar exemple, prends Poing de Feu.\n\pOn n'imagine pas un oiseau ou un\npoisson l'apprendre.\n\pEssaie-le sur des Pokémon avec\ndes bras pour frapper !
-0x41C7B4: Wow, j'ai beaucoup parlé !\nAllez, à bientôt !\n\pSouviens-toi : une bonne action\npar jour rend heureux toujours !
-0x41C82A: Le SAC d'un Dresseur a plein\nde fonctions pratiques !\n\pPrenons la POCHE Objets clés.\n\pTu peux utiliser un objet clé sans\nouvrir le SAC à chaque fois.\n\pPar exemple, disons que j'ai une\nTELE C.S. dans mon SAC.\n\pJe peux l'enregistrer pour l'utiliser\ntout de suite, je te montre !\n\pC'est parti !\n\pGarde les yeux sur le quasi super\nSHOW DU MEC POKé !
-0x41C994: Et voilà, ta TELE C.S. est\nenregistrée.\n\pComment l'utiliser ?\nVoici.\n\pUne fois un objet clé enregistré\ndans la POCHE Objets clés, tu peux\nl'utiliser avec Select.\n\pTu as donc un accès direct à la\nTELE C.S.\n\pIl suffit d'appuyer et tu me vois !\n\pTant d'attention, c'est un peu\ngênant !\n\pAllez, à bientôt !\n\pSouviens-toi : une bonne action\npar jour rend heureux toujours !
+0x41B83D: Salut les Dresseurs ! SALUT, Dresseurs !……… ……… ………\nAllez, faites du bruit !\pSALUT, Dresseurs !\p\nC'est moi, le MEC POKé !\l\p
+0x41B8BF: Aujourd'hui, le MEC POKé explique comment combattre des Pokémon ! Imagine : tu te balades et soudain\nun Pokémon sauvage apparaît !\l\pÀ toi d'utiliser tes Pokémon\net leurs capacités pour réduire\ples PV adverses à zéro\net gagner !\l\lJe vais te le montrer en vrai !\p\nC'est parti !\p\pGarde les yeux sur le super\nSHOW DU MEC POKé !
+0x41BA41: Alors, tu as suivi ? Même si les PV de ton Pokémon tombent à zéro et qu'il ne peut plus se battre, pas de panique !\p\nAmène-le dans un Centre Pokémon\let soigne-le !\p\nAllez, à bientôt !\p\pSouviens-toi : une bonne action\npar jour rend heureux toujours !
+0x41BB40: Aujourd'hui, le MEC POKé parle des altérations d'état ! Parmi elles : poison, paralysie, sommeil, brûlure… Il y en a d'autres, et c'est un vrai souci.\n\pAvec ça, ton Pokémon peut devenir\ninutile en combat.\p\nÇa fait mal au MEC POKé de voir un\pPokémon souffrir…\n\pAlors que faire ?\n\pJe vais te montrer !\n\pC'est parti !\p\pGarde les yeux sur le super\nSHOW DU MEC POKé !
+0x41BD10: Poison et paralysie ne partent pas après le combat. Un Pokémon empoisonné perd des PV même en marchant.\nSoigne vite ce genre de souci.\p\nUtilise un objet ou file au Centre\pPokémon pour soigner.\n\pPas si dur, hein ?\n\pAllez, à bientôt !\n\pSouviens-toi : une bonne action\npar jour rend heureux toujours !
+0x41BE76: Tout le monde connaît les effets de type ? Les Pokémon et leurs capacités ont tous des types. Par exemple : PLANTE ou EAU. Il faut penser au type de la\ncapacité qui attaque…\p\nEt au type du Pokémon qui reçoit\pl'attaque.\n\pSelon l'affinité, les dégâts\nchangent.\p\nÇa dépend si le duo de types est\pbon ou mauvais.\n\pSans ça, les combats seront rudes.\n\pJe vais te montrer ce que je veux\ndire.\p\nC'est parti !\p\pGarde les yeux sur le super\nSHOW DU MEC POKé !
+0x41C0AF: Peut-on lancer une attaque qui fait très mal ? Le Pokémon adverse est-il dangereux pour ton Pokémon ?\nPeut-il avoir des capacités\pterribles ?\n\pRegarde les affinités pour prendre\nl'avantage !\p\nAllez, à bientôt !\p\pEt pour le MEC POKé COOL, des\nkids GÉNIAUX comme toi, ça colle !\l\pSouviens-toi : une bonne action\npar jour rend heureux toujours !
+0x41C23B: Aujourd'hui, le MEC POKé montre comment attraper des Pokémon ! Imagine… Un Pokémon stylé apparaît d'un coup dans la nature !\nOh, tu le veux !\pImpossible de résister !\n\pTu dois l'attraper !\nIl te le faut !\p\nJe vais te montrer comment faire !\p\nC'est parti !\p\pGarde les yeux sur le super\nSHOW DU MEC POKé !
+0x41C384: Si ta première Poké Ball échoue, ne lâche rien ! Lance encore des Poké Balls…\nÇa finira par marcher !\p\nAllez, à bientôt !\p\pSouviens-toi : une bonne action\npar jour rend heureux toujours !
+0x41C459: Salut tout le monde ! Vous avez des CT ? Une CT, Capsule Technique, c'est super !\nElle apprend à un Pokémon une\pcapacité qu'il n'aurait pas\nen montant de niveau !\p\nGénial, non ? Quel monde pratique !\p\nOuvre le Boîtier CT et regarde\ples CT que tu as.\n\pTu peux aussi les examiner\nen détail.
+0x41C587: MEC POKé : NORMAL, EAU, PLANTE… Les CT ont aussi un type. Vérifie le type et enseigne-le à un Pokémon qui matche bien.\nExemple : Vibraqua va bien aux\pPokémon de type EAU.\n\pBALLE GRAINE est une capacité que\nbeaucoup de Pokémon PLANTE\ppeuvent apprendre.\n\pEncore autre chose !
+0x41C693: Ne regarde pas que le type, lis la description aussi. Elle donne des indices sur quel\nPokémon peut apprendre la capacité.\p\nPar exemple, prends Poing de Feu.\p\nOn n'imagine pas un oiseau ou un\ppoisson l'apprendre.\n\pEssaie-le sur des Pokémon avec\ndes bras pour frapper !
+0x41C7B4: Wow, j'ai beaucoup parlé ! Allez, à bientôt !\n\pSouviens-toi : une bonne action\npar jour rend heureux toujours !
+0x41C82A: Le SAC d'un Dresseur a plein de fonctions pratiques ! Prenons la POCHE Objets clés. Tu peux utiliser un objet clé sans\nouvrir le SAC à chaque fois.\p\nPar exemple, disons que j'ai une\pTELE C.S. dans mon SAC.\n\pJe peux l'enregistrer pour l'utiliser\ntout de suite, je te montre !\p\nC'est parti !\p\pGarde les yeux sur le quasi super\nSHOW DU MEC POKé !
+0x41C994: Et voilà, ta TELE C.S. est enregistrée. Comment l'utiliser ? Voici. Une fois un objet clé enregistré\ndans la POCHE Objets clés, tu peux\pl'utiliser avec Select.\n\pTu as donc un accès direct à la\nTELE C.S.\l\pIl suffit d'appuyer et tu me vois !\n\pTant d'attention, c'est un peu\ngênant !\p\nAllez, à bientôt !\p\pSouviens-toi : une bonne action\npar jour rend heureux toujours !
 0x41CB3C: LEO
 0x41CB41: QUELQU'UN
 0x41CB49: Aide
@@ -206,7 +206,7 @@
 0x41CC9F: RECORDS RÉCOLTE DODRIO
 0x41CCBC: BAIES récoltées :
 0x41CCCC: Meilleur score :
-0x41CCD8: BAIES d'affilée à cinq joueurs :
+0x41CCD8: BAIES d'affilée à cinq joueurs :\n
 0x41CD03: Annonce des résultats !
 0x41CD43: Annonce des classements !
 0x41CD58: Annonce des récompenses !
@@ -217,14 +217,14 @@
 0x41CDEB: Quelqu'un a quitté.\nLe lien sera coupé.
 0x41CE1C: points
 0x41CE24: En attente de communication…
-0x41CE3B: Prêt pour le BROYEUR DE BAIES ?\nChoisis une BAIE.\n\pp
+0x41CE3B: Prêt pour le BROYEUR DE BAIES ? Choisis une BAIE.\n\pp
 0x41CE78: Attends que chacun choisisse\nune BAIE.
-0x41CEA7: {PAUSE_MUSIC}{PLAY_BGM}ÀÀ\nTu obtiens {STR_VAR_1} unités de\nPOUDRE BAIE soyeuse.{RESUME_MUSIC}\n\ppTa quantité totale de POUDRE BAIE\nest {STR_VAR_2}.\n\pp
-0x41CF13: Enregistrement des résultats\n\nde jeu dans la sauvegarde.\nPatiente.
+0x41CEA7: {PAUSE_MUSIC}{PLAY_BGM}ÀÀ Tu obtiens {STR_VAR_1} unités de POUDRE BAIE soyeuse.{RESUME_MUSIC}\npTa quantité totale de POUDRE BAIE\pest {STR_VAR_2}.\n\pp
+0x41CF13: Enregistrement des résultats\nde jeu dans la sauvegarde.\nPatiente.
 0x41CF4F: Rejouer au BROYEUR DE BAIES ?
 0x41CF70: Tu n'as pas de BAIE.\nPartie annulée.
 0x41CFA0: Un joueur est parti.\nPartie annulée.
-0x41CFD1: Temps écoulé.\n\ppImpossible de faire une bonne\nPOUDRE BAIE…\n\pp
+0x41CFD1: Temps écoulé. pImpossible de faire une bonne\pPOUDRE BAIE…\n\pp
 0x41D005: En attente de communication…
 0x41D032: fois
 0x41D042: BAIE {STR_VAR_1}
@@ -241,10 +241,10 @@
 0x41D124: Classement vitesse
 0x41D13C: {STR_VAR_1} JOUEURS
 0x41D147: SPECTRE
-0x41D14E: Un Pokémon mord à l'hameçon !\n{PAUSE_UNTIL_PRESS}
+0x41D14E: Un Pokémon mord à l'hameçon ! {PAUSE_UNTIL_PRESS}
 0x41D169: Rien ne mord…{PAUSE_UNTIL_PRESS}
 0x41D17E: Il s'est libéré…{PAUSE_UNTIL_PRESS}
 0x41D18D: TOIT
 0x41D195: Pokémon Unbound\nEn mémoire de Deborah
 0x41D1FD: \nDirecteur artistique\n\nDirecteur combat\n\n\n
-0x41D222: \n\nKen Sugimori\n\nShigeki Morimoto
+0x41D222: \n\nKen Sugimori\n\nShigeki Morimoto\n\n

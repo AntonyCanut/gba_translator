@@ -122,10 +122,10 @@
 0xA43ACD: Annuler
 0xA43AD4: {STR_VAR_1} est sélectionné.
 0xA43AE4: Il faut obtenir {STR_VAR_2}\navant de chercher {STR_VAR_1}.{PAUSE_UNTIL_PRESS}
-0xA43B17: Ce Pokémon n'est pas encore\nrecherchable !{PAUSE_UNTIL_PRESS}
+0xA43B17: Ce Pokémon n'est pas encore recherchable !{PAUSE_UNTIL_PRESS}
 0xA43B3D: Aucune donnée pour ce Pokémon…{PAUSE_UNTIL_PRESS}
 0xA43B61: {STR_VAR_1} est trouvable via {R_BUTTON}!{PAUSE_UNTIL_PRESS}
-0xA43B7C: Trop sombre pour chercher un\nPokémon !{PAUSE_UNTIL_PRESS}
+0xA43B7C: Trop sombre pour chercher un Pokémon !{PAUSE_UNTIL_PRESS}
 0xA43BA5: Aucun Pokémon trouvé ici.{PAUSE_UNTIL_PRESS}
 0xA43BC5: Cherche des Pokémon sauvages\navec des qualités spéciales !
 0xA43C0B: {STR_VAR_1} s'est enfui !
@@ -135,7 +135,7 @@
 0xA43C81: Aucune réaction.\nSignal perdu !
 0xA43CAC: {STR_VAR_1} est introuvable ici.
 0xA43CC5: Cette forme de {STR_VAR_1} est\nintrouvable ici.
-0xA43CEB: {STR_VAR_1} est introuvable à\nproximité.\nCherche ailleurs !
+0xA43CEB: {STR_VAR_1} est introuvable à proximité.\nCherche ailleurs !
 0xA43D29: Trop sombre pour chercher\nun Pokémon !
 0xA43D50: Hein ? Le Navi-Dex détecte\nun Pokémon inhabituel !
 0xA43D8E: Cube
@@ -143,15 +143,15 @@
 0xA43DBE: Des Pointes Toxik sont dispersées\nautour de l’équipe {STRING}= !
 0xA43DEF: Des pierres pointues lévitent\nautour de l’équipe {STRING}= !
 0xA43E1F: Une Toile Gluante a été posée\nautour de l’équipe {STRING}= !
-0xA43E4E: Des morceaux d’acier tranchant\nflottent autour de l’équipe\n{STRING}= !
+0xA43E4E: Des morceaux d’acier tranchant flottent autour de l’équipe\n{STRING}= !
 0xA43E85: Les pièges d'entrée autour du\ncôté {STRING} ont été dissipés !
 0xA43EB7: Les pièges d'entrée autour du\ncôté {STRING}= ont été dissipés !
 0xA43EE9: {B_DEF_NAME_WITH_PREFIX} subit des\ndégâts causés par les Picots !
 0xA43F03: Les pierres pointues transpercent\n{B_DEF_NAME_WITH_PREFIX} !
 0xA43F1F: L'acier tranchant blesse\n{B_DEF_NAME_WITH_PREFIX} !
-0xA43F3C: Les Pics Toxik autour des pieds\nde {B_DEF_NAME_WITH_PREFIX} ont\ndisparu !
+0xA43F3C: Les Pics Toxik autour des pieds de {B_DEF_NAME_WITH_PREFIX} ont\ndisparu !
 0xA43F70: {B_DEF_NAME_WITH_PREFIX} est pris\ndans une Toile Gluante !
-0xA43F8F: Les pièges d'entrée ont été\nbalayés autour de\n{B_ATK_NAME_WITH_PREFIX} !
+0xA43F8F: Les pièges d'entrée ont été balayés autour de\n{B_ATK_NAME_WITH_PREFIX} !
 0xA43FBB: Record Combat Solo
 0xA43FD1: Record Combat Duo
 0xA43FE6: Record Combat Multi
@@ -205,24 +205,24 @@
 0xA44310: Précédent
 0xA44319: Actuel
 0xA44325: Aucun
-0xA4432A: avec le terrain électrifié !\pLes Pokémon au sol ne peuvent pas\ns'endormir et les capacités Électrik\nsont plus fortes !
-0xA44391: avec le terrain herbu !\pLes Pokémon au sol ont des\ncapacités Plante plus puissantes et\nse soignent chaque tour !
+0xA4432A: avec le terrain électrifié ! Les Pokémon au sol ne peuvent pas\ps'endormir et les capacités Électrik\nsont plus fortes !
+0xA44391: avec le terrain herbu ! Les Pokémon au sol ont des\pcapacités Plante plus puissantes et\nse soignent chaque tour !
 0xA443EE: avec le terrain brumeux !\pLes Pokémon au sol ont des\ncapacités Fée plus fortes et ne\lpeuvent pas subir de statut !
-0xA44464: avec un terrain étrange !\pLes Pokémon au sol ont des\ncapacités Psy plus fortes et ne\npeuvent pas subir d’attaques\nprioritaires !
+0xA44464: avec un terrain étrange ! Les Pokémon au sol ont des\pcapacités Psy plus fortes et ne\npeuvent pas subir d’attaques\lprioritaires !
 0xA444D1: sous la pluie !
 0xA444DE: sous le soleil !
 0xA444EA: dans une tempête de sable !
 0xA444FA: sous une grêle !
 0xA4450A: avec des vents violents !\pLes Pokémon Vol subissent moins de\ndégâts super efficaces !
-0xA44566: dans une Distorsion !\pLes Pokémon les plus lents agissent\nen premier !
-0xA44599: dans une Zone Magique !\pLa plupart des objets tenus sont\nsans effet !
+0xA44566: dans une Distorsion ! Les Pokémon les plus lents agissent\pen premier !
+0xA44599: dans une Zone Magique ! La plupart des objets tenus sont\psans effet !
 0xA445CA: dans une Zone Étrange !\pLa Défense et la Déf. Spé sont\ninversées !
 0xA44603: avec une gravité intense !\pAucun Pokémon ne reste en l’air !
-0xA4463A: avec un champ électromagnétique !\pLes Pokémon Électrik et Acier ne\npeuvent pas être touchés par les\ncapacités Sol !
+0xA4463A: avec un champ électromagnétique ! Les Pokémon Électrik et Acier ne\ppeuvent pas être touchés par les\ncapacités Sol !
 0xA446A2: avec le terrain verrouillé !\pAucun Pokémon ne pourra être\néchangé !
 0xA446EB: avec des farfadets dans l'air !\pLes Pokémon Fée voient leur plus\nfaible défense augmentée !
-0xA44745: avec des émotions négatives !\pLes Pokémon qui ne sont pas Ténèbres,\nSpectre ou Psy, ou sans talents\nIgnorant, Benêt ou Garde Magik,\nseront blessés chaque tour !
-0xA447FF: en Combat Inversé !\pTous les rapports de types sont\ninversés !
+0xA44745: avec des émotions négatives !\pLes Pokémon qui ne sont pas Ténèbres,\nSpectre ou Psy, ou sans talents\lIgnorant, Benêt ou Garde Magik,\lseront blessés chaque tour !\l
+0xA447FF: en Combat Inversé ! Tous les rapports de types sont\pinversés !
 0xA44835: avec une Zone Énergétique active !\pTous les Pokémon peuvent\nDynamaxer !\pMais aucun ne peut Méga-Évoluer,\nRégression Primal, Ultra-Éclat ou\lutiliser de Capacité Z !
 0xA448D0: avec échange de Pokémon !\pChaque camp utilisera au hasard un\nPokémon adverse !
 0xA44927: avec un voile protégeant les deux\lcôtés du terrain !\pAucun Pokémon ne peut infliger\nde statut à un autre !
@@ -230,13 +230,13 @@
 0xA449FB: avec une Mer de Feu englobant les\ldeux côtés du terrain !\pLes Pokémon non Feu sont blessés\nchaque tour !
 0xA44A6C: avec un arc-en-ciel sur les deux\lcôtés du terrain !\pLes chances d'effets secondaires\nsont doublées !
 0xA44ADB: avec tous les Pokémon confus !
-0xA44AF6: avec tous les Pokémon provoqués !\pAucune capacité de statut ne peut\nêtre utilisée !
-0xA44B2D: avec tous les Pokémon tourmentés !\pImpossible d'utiliser deux fois la\nmême capacité.
+0xA44AF6: avec tous les Pokémon provoqués ! Aucune capacité de statut ne peut\pêtre utilisée !
+0xA44B2D: avec tous les Pokémon tourmentés ! Impossible d'utiliser deux fois la\pmême capacité.
 0xA44B6D: avec tous les Pokémon sous Anti-Soin !\pAucun Pokémon ne pourra se soigner !
-0xA44BAD: avec tous les Pokémon sous\nCoup d'Boule !\pAucune capacité sonore utilisable !
+0xA44BAD: avec tous les Pokémon sous Coup d'Boule !\pAucune capacité sonore utilisable !
 0xA44BF0: avec tous les Pokémon en\pAffilage !\nLes coups seront toujours critiques !
 0xA44C37: avec aucun Pokémon capable de\lfaire un coup critique !
-0xA44C6B: avec tous les talents neutralisés !
+0xA44C6B: avec tous les talents neutralisés !\l
 0xA44C9F: Liam
 0xA44CA5: Noah
 0xA44CAA: William

@@ -151,14 +151,14 @@
 0xA377BD: {STRING}が équipe est trop\nnerveuse pour manger des Baies !
 0xA377E4: {B_SCR_ACTIVE_NAME_WITH_PREFIX}\ndégage une aura sombre !
 0xA37801: {B_SCR_ACTIVE_NAME_WITH_PREFIX}\ndégage une aura féerique !
-0xA3781F: {B_SCR_ACTIVE_NAME_WITH_PREFIX}\ninverse toutes les autres\nauras Pokémon !
-0xA37846: {B_SCR_ACTIVE_NAME_WITH_PREFIX}\nsomnole !
-0xA37856: {B_SCR_ACTIVE_NAME_WITH_PREFIX}\nfrissonne !
-0xA37864: Il a pressenti\n{UNKNOWN_STR}\nde\l{B_EFF_NAME_WITH_PREFIX} !
-0xA3787F: {B_SCR_ACTIVE_NAME_WITH_PREFIX}\na fouillé {B_EFF_NAME_WITH_PREFIX}\net a trouvé son\n{B_LAST_ITEM} !
+0xA3781F: {B_SCR_ACTIVE_NAME_WITH_PREFIX} inverse toutes les autres\nauras Pokémon !
+0xA37846: {B_SCR_ACTIVE_NAME_WITH_PREFIX} somnole !
+0xA37856: {B_SCR_ACTIVE_NAME_WITH_PREFIX} frissonne !
+0xA37864: Il a pressenti {UNKNOWN_STR}\nde\l{B_EFF_NAME_WITH_PREFIX} !
+0xA3787F: {B_SCR_ACTIVE_NAME_WITH_PREFIX} a fouillé {B_EFF_NAME_WITH_PREFIX}\net a trouvé son\l{B_LAST_ITEM} !
 0xA3789F: Il grêle.
 0xA378AE: Le brouillard est épais…
-0xA378BF: Une pluie battante\nse met à tomber !
+0xA378BF: Une pluie battante se met à tomber !
 0xA378DB: Le soleil devient brûlant !
 0xA37900: De puissants vents mystérieux\nprotègent les Pokémon Vol !
 0xA3793C: Les vents mystérieux\nont affaibli l'attaque !
@@ -167,9 +167,9 @@
 0xA379D3: Mais les vents mystérieux\ncontinuent de souffler !
 0xA37A07: Mais la violente tempête\nde sable continue !
 0xA37A34: {B_SCR_ACTIVE_NAME_WITH_PREFIX}\nse ressaisit !
-0xA37A4D: Les capacités Feu de\n{B_SCR_ACTIVE_NAME_WITH_PREFIX}\ngagnent en puissance !
-0xA37A75: {B_SCR_ACTIVE_NAME_WITH_PREFIX}\nest guéri de son problème\n{UNKNOWN_STR} !
-0xA37A95: {B_EFF_NAME_WITH_PREFIX}\nest guéri de son problème\n{UNKNOWN_STR} !
+0xA37A4D: Les capacités Feu de {B_SCR_ACTIVE_NAME_WITH_PREFIX}\ngagnent en puissance !
+0xA37A75: {B_SCR_ACTIVE_NAME_WITH_PREFIX} est guéri de son problème\n{UNKNOWN_STR} !
+0xA37A95: {B_EFF_NAME_WITH_PREFIX} est guéri de son problème\n{UNKNOWN_STR} !
 0xA37AB5: {B_SCR_ACTIVE_NAME_WITH_PREFIX}\nrenvoie le {B_CURRENT_MOVE} !
 0xA37ACD: {B_SCR_ACTIVE_NAME_WITH_PREFIX}\nforme un banc !
 0xA37AE1: {B_SCR_ACTIVE_NAME_WITH_PREFIX}\nquitte la formation de banc !
@@ -179,9 +179,9 @@
 0xA37B50: Tous les murs sur le\nterrain sont dissipés !
 0xA37B78: Gaz Neutralisant emplit la zone !
 0xA37B99: Les effets du Gaz Neutralisant\ns'estompent !
-0xA37BC3: Les changements de stats de\n{B_DEF_NAME_WITH_PREFIX}\nsont annulés !
-0xA37BE3: {B_ATK_NAME_WITH_PREFIX}\nest blessé !
-0xA37BF0: {B_SCR_ACTIVE_NAME_WITH_PREFIX}\npartage son {B_LAST_ITEM}\navec {B_EFF_NAME_WITH_PREFIX} !
+0xA37BC3: Les changements de stats de {B_DEF_NAME_WITH_PREFIX}\nsont annulés !
+0xA37BE3: {B_ATK_NAME_WITH_PREFIX} est blessé !
+0xA37BF0: {B_SCR_ACTIVE_NAME_WITH_PREFIX} partage son {B_LAST_ITEM}\navec {B_EFF_NAME_WITH_PREFIX} !
 0xA37C0A: Mais {B_DEF_NAME_WITH_PREFIX}\na vaporisé l'attaque !
 0xA37C28: {B_SCR_ACTIVE_NAME_WITH_PREFIX}\névapore la pluie !
 0xA37C40: Mais {B_SCR_ACTIVE_NAME_WITH_PREFIX}\névapore la pluie !
@@ -194,28 +194,28 @@
 0xA37DE4: Neige poudreuse touche\nl'équipe adverse.\nPeut leur infliger\nune gelure.
 0xA37E33: Libère le lanceur\ndes pièges et\ndangers. Augmente\nsa Vitesse.
 0xA37E7C: Le lanceur hurle\npour motiver l'équipe\net booster leur\nAttaque.
-0xA37EC4: Absorbe la moitié\ndes dégâts pour\nrestaurer des PV.
-0xA37F07: Une lame d'air\ntranche l'ennemi.\nPeut aussi l'apeurer.
-0xA37F4D: Un bond fulgurant\nqui touche toujours\nen priorité.
+0xA37EC4: Absorbe la moitié\ndes dégâts pour\nrestaurer des PV.\n
+0xA37F07: Une lame d'air\ntranche l'ennemi.\nPeut aussi l'apeurer.\n
+0xA37F4D: Un bond fulgurant\nqui touche toujours\nen priorité.\n
 0xA37F8D: Queue fouettante\ndéchaînée comme\nune vague en furie\ns'abat sur l'ennemi.
 0xA37FD7: Une aura puissante\nfrappe l'ennemi.\nNe rate jamais sa\ncible.
-0xA38019: Plus puissant si la\ncible a déjà blessé\nle lanceur.
+0xA38019: Plus puissant si la\ncible a déjà blessé\nle lanceur.\n
 0xA38061: Le lanceur replie\nses ailes et\ncharge. Cela le\nblesse aussi.         
 0xA380AB: Crée une onde sonore\npouvant baisser la\nDéf. Spé de\nl'ennemi.
-0xA380F4: Assène un poing\nsolide qui frappe\ntoujours en premier.
+0xA380F4: Assène un poing\nsolide qui frappe\ntoujours en premier.\n
 0xA38139: Envoie une salve\nd'électricité qui peut\nbooster l'Att. Spé\ndu lanceur.  
 0xA38183: Corps à corps brutal.\nBaisse Défense et\nDéf. Spé du\nlanceur.
-0xA381CF: Taux de critique élevé.\nPeut aussi\nempoisonner l'ennemi.
+0xA381CF: Taux de critique élevé.\nPeut aussi\nempoisonner l'ennemi.\n
 0xA38215: Libère une aura\nhorrible pouvant\naussi apeurer\nl'ennemi.
 0xA3825A: Lance une gerbe\nélectrique qui touche\ntous les Pokémon\net peut paralyser.         
 0xA382AD: Attaque intense qui\nfait chuter fortement\nl'Att. Spé du\nlanceur.
 0xA382F2: Une onde de choc\nvient de la large\nbouche du lanceur\net frappe l'ennemi.
 0xA3833E: Un coup violent qui\nvole la moitié des\ndégâts pour rendre\ndes PV.
-0xA38385: Le sol explose sous\nl'ennemi. Peut aussi\nbaisser sa Déf. Spé.          
+0xA38385: Le sol explose sous\nl'ennemi. Peut aussi\nbaisser sa Déf. Spé.          \n
 0xA383D5: Énergie naturelle\nfrappe l'ennemi.\nPeut aussi baisser\nsa Déf. Spé.
 0xA38422: Déchaîne sa puissance.\nPeut aussi baisser\nla Déf. Spé\nde l'ennemi.
 0xA38465: Une onde de choc\nfrappe l'ennemi.\nPeut aussi le\nparalyser.
-0xA384AD: Attaque très puissante\nqui force le repos\nau tour suivant.
+0xA384AD: Attaque très puissante\nqui force le repos\nau tour suivant.\n
 0xA384F3: Herbes lient et\nfont trébucher\nl'ennemi. Plus il\npèse, plus ça fait mal.
 0xA38538: Un tas d'ordures\nest lancé. Peut aussi\nempoisonner\nl'adversaire.
 0xA3857A: Balance un poing\nlourd. Baisse aussi\nla Vitesse du\nlanceur.
@@ -223,7 +223,7 @@
 0xA385FF: Lance des blocs\nde glace. Frappe\ntoujours en\npremier.
 0xA3863E: Percute avec\nune tête dure.\nPeut aussi\napeurer.
 0xA38686: Des flammes écarlates\nbalayent le combat.\nPeut aussi\nbrûler.
-0xA386D1: Une bombe d'acier\ncolle à l'ennemi.\nNe rate jamais sa\ncible.
+0xA386D1: Une bombe d'acier colle à l'ennemi.\nNe rate jamais sa\ncible.
 0xA38706: Une boule de boue\nfrappe et peut\naussi baisser la\nPrécision.
 0xA3874A: De mauvaises\npensées montent.\nAugmente beaucoup\nl'Att. Spé.
 0xA3878C: Tranche au bon\nmoment avec un\ntaux de critique\nimportant.
@@ -232,14 +232,14 @@
 0xA38864: Fouette violemment\nl'ennemi avec\nlianes ou\ntentacules.
 0xA388A6: Lacère l'ennemi\navec des lames psy.\nTaux de critique\nimportant.        
 0xA388F4: Charge pouvant rendre\nl'ennemi confus.\nPermet aussi\nd'escalader.
-0xA38941: Poli son corps\npour fortement\nbooster sa\nVitesse.
+0xA38941: Poli son corps pour fortement\nbooster sa\nVitesse.
 0xA38978: Lance un énorme\nrocher. Le lanceur\nne bouge pas\nau tour suivant.
-0xA389C2: Soin qui rend jusqu'à\nla moitié des PV\nmax du lanceur.
+0xA389C2: Soin qui rend jusqu'à\nla moitié des PV\nmax du lanceur.\n
 0xA38A0F: Mitraille l'ennemi\navec des graines\ndures en rafale.
 0xA38A43: Griffes d'ombre\nlabourent l'ennemi.\nHaut taux de\ncritique.
-0xA38A89: Allonge son ombre\npour attaquer.\nAgit en premier.         
-0xA38ACF: Envoie une vague\nde vide sur l'ennemi.\nAgit en premier.         
-0xA38B1A: Taillade avec des\ngriffes croisées\ncomme des ciseaux.
+0xA38A89: Allonge son ombre\npour attaquer.\nAgit en premier.         \n
+0xA38ACF: Envoie une vague\nde vide sur l'ennemi.\nAgit en premier.         \n
+0xA38B1A: Taillade avec des\ngriffes croisées\ncomme des ciseaux.\n
 0xA38B60: Se concentre puis\npercute l'ennemi.\nPeut aussi\napeurer.
 0xA38BA4: Échange les objets\ntenus à une vitesse\nimpossible à\nsuivre du regard.
 0xA38BEC: Tourne son corps\ncomme une vrille.\nHaut taux de\ncritique.

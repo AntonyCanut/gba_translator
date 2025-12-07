@@ -1,8 +1,8 @@
 0x7F715D: Un dresseur fort a été attiré par\ncette zone aride !
 0x7F7198: Je suis venu ici dans l'espoir de\nredonner vie à cet endroit.
-0x7F7231: Je vais te donner un coup de bec\npour ça !
+0x7F7231: Je vais te donner un coup de bec pour ça !
 0x7F7251: Savais-tu qu'il existe un Pokémon\noiseau qui peut imiter la parole ?
-0x7F7309: Te battre ne sera pas chose facile.
+0x7F7309: Te battre ne sera pas chose facile.\n
 0x7F732F: Peut-on devenir plus fort en\ncomprenant les Pokémon ?
 0x7F73E1: Wow... vraiment ?
 0x7F73F4: Je n'arrive pas à choisir quel\nPokémon dorloter.
@@ -13,8 +13,8 @@
 0x7F7666: Kaploosh !
 0x7F7670: Si tu ne sais pas nager, je veux\nbien t'apprendre.
 0x7F772A: La marée descend...
-0x7F7741: Ne te méprends pas, ce n'est pas\nque je n'aime pas les hommes de\nmontagne.\pMais tu sais, mon type préféré va\nbien avec les Pokémon !
-0x7F7862: Je ne sais pas comment, mais j'ai\nperdu !
+0x7F7741: Ne te méprends pas, ce n'est pas que je n'aime pas les hommes de\nmontagne.\pMais tu sais, mon type préféré va\nbien avec les Pokémon !
+0x7F7862: Je ne sais pas comment, mais j'ai perdu !
 0x7F7880: Ah oui...\nJe pêchais, hein ?
 0x7F790B: Ne me mets pas en colère !
 0x7F791E: Je m'amuse à harceler les gens avec\nmes Pokémon qui puent.\pIls sont parfaits pour surprendre.\nEt ils mordent aussi.
@@ -22,24 +22,24 @@
 0x7F79C2: Tu as pris mon argent !
 0x7F79D5: Laisse tomber !\nJe n'ai pas besoin de ton fric !
 0x7F79F9: Route 16\p{UP_ARROW} Bourg Gurun\n{DOWN_ARROW} Ville d'Antisis
-0x7F7C2D: {COLOR}Ë{PLAYER} !\pContent que tu nous rejoignes.\nOn doit parler de beaucoup de\nchoses.
-0x7F7C71: {COLOR}ËJe mettais Jax au courant de tout ce\nqui s'est passé depuis ta\n« disparition » de la Ville de\nDehara.
-0x7F7CD9: Jax : {COLOR}ËBeladonis m'a tout raconté.\pIl s'en est passé depuis que j'ai\nété envoyé dans le Monde\nDistorsion...\pJ'y étais quelques heures quand tu\nes arrivé, mais bien plus de temps\ns'était écoulé dans le vrai monde.
-0x7F7DCC: Beladonis : {COLOR}ËTu as raté pas mal de choses aussi,\n{PLAYER}.\pComme prévu, j'attendais dehors\nl'entrepôt pour toi et {RIVAL},\nquand des silhouettes encapées sont\nsorties avec un grand Pokémon\nviolet.\pJ'étais prêt à les arrêter, quand\nle chef a crié quelque chose au\nPokémon.\pEnsuite, ils ont disparu sans\nlaisser de trace.\pJ'ai fouillé l'entrepôt pour des\ntraînards, mais je n'ai trouvé qu'un\nsbire resté.\pIl m'a dit seulement que la Lumière\ndu Néant se dirige vers\n{COLOR}ÉBorrius Est{COLOR}Ë.
+0x7F7C2D: {COLOR}Ë{PLAYER} ! Content que tu nous rejoignes.\pOn doit parler de beaucoup de\nchoses.
+0x7F7C71: {COLOR}ËJe mettais Jax au courant de tout ce qui s'est passé depuis ta\n« disparition » de la Ville de\lDehara.
+0x7F7CD9: Jax : {COLOR}ËBeladonis m'a tout raconté.\nIl s'en est passé depuis que j'ai\pété envoyé dans le Monde\nDistorsion...\pJ'y étais quelques heures quand tu\nes arrivé, mais bien plus de temps\ls'était écoulé dans le vrai monde.\l
+0x7F7DCC: Beladonis : {COLOR}ËTu as raté pas mal de choses aussi,\n{PLAYER}.\pComme prévu, j'attendais dehors\nl'entrepôt pour toi et {RIVAL},\lquand des silhouettes encapées sont\lsorties avec un grand Pokémon\lviolet.\pJ'étais prêt à les arrêter, quand\nle chef a crié quelque chose au\lPokémon.\lEnsuite, ils ont disparu sans\plaisser de trace.\nJ'ai fouillé l'entrepôt pour des\ptraînards, mais je n'ai trouvé qu'un\nsbire resté.\lIl m'a dit seulement que la Lumière\ldu Néant se dirige vers\p{COLOR}ÉBorrius Est{COLOR}Ë.\n\l
 0x7F8011: Jax : {COLOR}Ë{COLOR}ÉBorrius Est{COLOR}Ë ?\pQue ferait la Lumière du Néant là-\nbas ?
 0x7F805A: Beladonis : {COLOR}ËJe ne sais pas, Jax.\pC'est tout ce que le sbire savait,\net toutes les données ont été\lpurgées.
-0x7F80CB: Jax : {COLOR}ËOn ne trouvera rien en restant là.\pIl faut prendre un bateau pour\n{COLOR}ÉBorrius Est {COLOR}Ëdepuis la {COLOR}ÉVille Portuaire{COLOR}Ë !
+0x7F80CB: Jax : {COLOR}ËOn ne trouvera rien en restant là.\nIl faut prendre un bateau pour\p{COLOR}ÉBorrius Est {COLOR}Ëdepuis la {COLOR}ÉVille Portuaire{COLOR}Ë !\n
 0x7F8154: Beladonis : {COLOR}ËD'accord.\nJe m'occupe des billets.\pRetrouvez-moi là-bas.
 0x7F819F: Jax : {COLOR}ËTu as compris, {PLAYER} ?\pOn va à la {COLOR}ÉVille Portuaire{COLOR}Ë !
 0x7F81D9: Beladonis : {COLOR}ËExcusez-moi.\nJe dois y aller aussi.
 0x7F820C: {RIVAL} : {COLOR}ËJe vais le finir !
 0x7F8229: {RIVAL} : {COLOR}ËIls sont partis...\nTous partis !
-0x7F8248: {COLOR}Ë{PLAYER} !\pOù est la Lumière du Néant ?\p…\p{COLOR}ÉBorrius Est{COLOR}Ë ?\pAlors je dois filer à la {COLOR}ÉVille\nPortuaire {COLOR}Ëavant le prochain\nbateau !
-0x7F885A: C'est un reportage :\pLe Granbull Terreur, le gang qui\nterrorisait les citoyens de la Ville\nd'Antisis, a disparu !\pCela va-t-il inaugurer une ère de\npaix et de prospérité maintenant que\ntoute la criminalité a été effacée ?\pLes citoyens sont encouragés à\nsortir et restaurer la Ville\nd'Antisis à son ancienne gloire.\pRendons Antisis grande à nouveau !
+0x7F8248: {COLOR}Ë{PLAYER} ! Où est la Lumière du Néant ?\p…\p{COLOR}ÉBorrius Est{COLOR}Ë ?\pAlors je dois filer à la {COLOR}ÉVille\pPortuaire {COLOR}Ëavant le prochain\nbateau !
+0x7F885A: C'est un reportage :\pLe Granbull Terreur, le gang qui\nterrorisait les citoyens de la Ville\ld'Antisis, a disparu !\lCela va-t-il inaugurer une ère de\ppaix et de prospérité maintenant que\ntoute la criminalité a été effacée ?\lLes citoyens sont encouragés à\lsortir et restaurer la Ville\pd'Antisis à son ancienne gloire.\nRendons Antisis grande à nouveau !\l\p
 0x7F89B6: Ces nazes pensent que la Ville\nd'Antisis est sûre maintenant que\lles Granbull Terreur sont partis !\pHaw haw !\pIls se trompent complètement !
-0x7F8A31: Ô でゲァËÌÁぽÈ ぺà{RIGHT_ARROW}Ë¿  ÁMon copain est tellement fort et dur !\pIl n'y a personne comme lui ici en\nville !\pSauf Big Mo, bien sûr.
+0x7F8A31: Ô でゲァËÌÁぽÈ ぺà{RIGHT_ARROW}Ë¿  ÁMon copain est tellement fort et dur !\nIl n'y a personne comme lui ici en\pville !\nSauf Big Mo, bien sûr.\p
 0x7F8BA7: Tu veux prouver que tu es costaud ?\nHein, fillette ?\pIl faut affronter Big Mo.\pC'est le plus grand, le plus dur de\nla Ville d'Antisis.
-0x7F8C2B: Hmm...\pTu dois être plutôt solide si tu as\nbattu Big Mo.\pCe n'est pas facile.\pTiens, prends ça en félicitations.
+0x7F8C2B: Hmm...\pTu dois être plutôt solide si tu as\nbattu Big Mo.\pCe n'est pas facile.\pTiens, prends ça en félicitations.\n
 0x7F8CA4: Utilise ces Balls pour attraper\nencore plus de Pokémon costauds.
 0x7F8CD6: Tu n'en as pas besoin.
 0x7F8DFA: Alors donne-moi tes Pokémon.
@@ -49,19 +49,19 @@
 0x7F8F39: C'est bien que quelqu'un de ton âge\npoursuive la carrière saine de\lDresseur.\pC'est bien mieux que d'être dans un\ngang.\pCrois-moi, je sais.\nJe vois ce qui se passe.
 0x7F8FEA: ïÇっÇ ÉÀËゾァËÔ ぐゼァËÌÁぽÁ ぺà{RIGHT_ARROW}Ë¿  ÁÔ ßゾァËÌÁÈ{STRING}ゼァËC'est triste que quelqu'un de ton\nâge soit dans un gang.\pDommage.\pTu aurais pu avoir tant de potentiel,\nmais là, aucun.
 0x7F90A7: Ô /ゾァËÌÁぽÀ ぺà{RIGHT_ARROW}Ë¿  ÁC'est bien que dans une ville comme\ncelle-ci, un paria comme moi puisse\ps'intégrer.\nPlus personne ne me juge.
-0x7F912C: J'étais dans les Granbull Terreur,\nle gang qui dirigeait cette ville.\pMais les Black Ferrothorn nous ont\npris par surprise et ont attaqué via\nles égouts.\pMaintenant je suis redevenu un\npersonne, vivant chez ma mère.\pNe laisse jamais ça t'arriver !\pReste à l'école !
+0x7F912C: J'étais dans les Granbull Terreur,\nle gang qui dirigeait cette ville.\lMais les Black Ferrothorn nous ont\ppris par surprise et ont attaqué via\nles égouts.\lMaintenant je suis redevenu un\ppersonne, vivant chez ma mère.\nNe laisse jamais ça t'arriver !\pReste à l'école !\n\p
 0x7F9239: Ô ぴヂァËÌÁぽÁ ぺà{RIGHT_ARROW}Ë¿  ÁMon fils est un bon à rien.\pQuand aura-t-il un vrai boulot et\nquittera la maison ?
 0x7F929C: Ô ·ヂァËÌÁぽÀ ぺà{RIGHT_ARROW}Ë¿  ÁLa Ville d'Antisis est la plus\ncriminelle de Borrius.\pMais à cause de son existence, les\nvoyous de la région viennent ici,\lce qui fait baisser la criminalité\lailleurs.
 0x7F9425: Ne reviens pas.
 0x7F9624: Hé, {PLAYER}, mon pote, ça roule ?\nÉcoute, fille, l'autre jour j'ai\paccidentellement fait tomber ma\npaire de chaussettes préférée dans\lles toilettes.
-0x7F96A5: Je suis descendu aux égouts pour les\nchercher, mais impossible de les\ntrouver.\pTu dois te demander pourquoi mes\nchaussettes étaient dans les\ntoilettes.\pMais ça, c'est une autre histoire.\pJe me disais que tu pourrais aller\nchercher pour moi ?
+0x7F96A5: Je suis descendu aux égouts pour les\nchercher, mais impossible de les\ltrouver.\pTu dois te demander pourquoi mes\nchaussettes étaient dans les\ltoilettes.\pMais ça, c'est une autre histoire.\nJe me disais que tu pourrais aller\pchercher pour moi ?\n
 0x7F97CA: Merci, mec. Je savais que je pouvais\ncompter sur toi.
 0x7F97F4: Merci, fille. Je savais que je pouvais\ncompter sur toi.
 0x7F981F: Descends aux égouts chercher mes\nchaussettes.\pL'entrée principale est près de\nl'Autoroute SES.
-0x7F987D: Je ne t'en veux pas, {PLAYER}.\nPas de rancune.\pJe devrai vivre sans mes chaussettes\npréférées désormais. Snif.
-0x7F98F6: Tu les as trouvées !\pMais waouh, qu'est-ce qu'elles\npuent !
-0x7F991F: {COLOR}Á{PLAYER} a remis les chaussettes\ncrasseuses au sbire Black\n{PLAYER}.
-0x7F9957: Euh... ah oui, je devrais te donner\nquelque chose pour ça.
+0x7F987D: Je ne t'en veux pas, {PLAYER}.\nPas de rancune.\pJe devrai vivre sans mes chaussettes\npréférées désormais. Snif.\l
+0x7F98F6: Tu les as trouvées ! Mais waouh, qu'est-ce qu'elles\ppuent !
+0x7F991F: {COLOR}Á{PLAYER} a remis les chaussettes crasseuses au sbire Black\n{PLAYER}.
+0x7F9957: Euh... ah oui, je devrais te donner\nquelque chose pour ça.\l
 0x7F999A: J'ai essuyé la crasse de mes\nchaussettes, mais je ne sais pas à\pquoi ça sert.\nTu en feras sûrement meilleur usage.
 0x7F9A0D: J'ai remis mes chaussettes sans les\nlaver !\pC'est dire comme je suis content de\nles récupérer.
 0x7F9A69: Si tu le veux, il te faut plus de\nplace dans ton sac.
@@ -72,10 +72,10 @@
 0x7F9ECE: {COLOR}ËSbires ! Enfourchez vos vélos !\nOn va aux égouts !
 0x7F9F05: James : {COLOR}ËAide tes camarades Black {PLAYER}\npour l'instant pendant qu'on planifie.
 0x7F9F48: Un jour je serai riche et j'achèterai\nun vrai canapé.
-0x7FA1F7: Toi... sale démon !\pJ'espère que tu croupiras pour tes\ncrimes !\nJe te déteste !\pHors de ma maison !
+0x7FA1F7: Toi... sale démon ! J'espère que tu croupiras pour tes\pcrimes !\nJe te déteste !\pHors de ma maison !
 0x7FA546: D'accord !\pAvant de partir, tu devrais mettre\nun masque ou autre pour qu'on ne\lte reconnaisse pas.\pJe ne veux pas que tu finisses comme\nmoi parce que quelqu'un t'a vu faire\lun délit jeune.
 0x7FA608: {COLOR}ÁMettre l'uniforme de Marlon ?
-0x7FA624: Allons voler un Pokémon !
+0x7FA624: Allons voler un Pokémon !\n
 0x7FA63F: Très bien ! Je le ferai moi-même !
 0x7FA65E: Alors, il te plaît ce joli nouveau\nPokémon, {PLAYER} ?
 0x7FA68E: Yo, {PLAYER}.\pJ'ai essayé d'envoyer le Pokémon pour\nvoir ce que c'était, mais il a refusé\ld'obéir.\pJe pense que c'est parce qu'on l'a\nvolé.\pDonc voilà le plan.\pJe libère le Pokémon de sa Ball, tu\nle combats et tu le captures toi-\lmême.\pPrêt ?
@@ -86,38 +86,38 @@
 0x7FA877: Parfait !\nTu l'as capturé !\pÇa apprendra à cette dame !\pSon Pokémon est maintenant aux mains\nd'un dresseur de premier ordre !
 0x7FA8DD: Pourquoi l'avoir mis K.O. ?\pMaintenant il faut le soigner et tu\ndois le rebattre !
 0x7FA940: Tadmorv est soigné.\nPrêt à le combattre encore ?
-0x7FB156: Voilà la situation.\pJ'ai affronté ces goons Black\nFerrothorn il y a quelque temps,\nils m'ont pulvérisé.\pL'un d'eux a aussi utilisé le\nPokémon de son partenaire contre\nmoi, je n'avais aucune chance.\pJe veux les remettre à leur place,\nmais je ne suis pas assez fort.\pTu crois pouvoir les battre tous\nles deux pour moi ?
+0x7FB156: Voilà la situation.\pJ'ai affronté ces goons Black\nFerrothorn il y a quelque temps,\lils m'ont pulvérisé.\pL'un d'eux a aussi utilisé le\nPokémon de son partenaire contre\lmoi, je n'avais aucune chance.\pJe veux les remettre à leur place,\nmais je ne suis pas assez fort.\lTu crois pouvoir les battre tous\ples deux pour moi ?\n
 0x7FB28A: Tu as du cran, {PLAYER}.\pJe t'y emmène.
 0x7FB2B6: Hmph.\nJe croyais que tu avais du cran,
 0x7FB2D9: Il te faut au moins deux Pokémon\ns'ils t'attaquent à deux.
-0x7FB318: Prêt à retenter, {PLAYER} ?\pCes goons doivent être remis à leur\nplace.
+0x7FB318: Prêt à retenter, {PLAYER} ?\nCes goons doivent être remis à leur\pplace.\n
 0x7FB369: Tu leur as montré, à ces Black\nFerrothorn, {PLAYER}.\pTu es vraiment le dresseur le plus\ncourageux que je connaisse.
-0x7FB3C9: L'objet que je t'ai donné est\nindispensable pour un dresseur plein\nde cran.\pDès que l'ennemi touche ton Pokémon,\nil se blesse aussi.
+0x7FB3C9: L'objet que je t'ai donné est indispensable pour un dresseur plein\nde cran.\pDès que l'ennemi touche ton Pokémon,\nil se blesse aussi.
 0x7FB449: Ces goons ne me dérangeront plus.\nMerci {PLAYER}.
 0x7FB47F: Je voulais te donner un objet, mais\ntu n'as pas de place.
-0x7FB735: Rory : {COLOR}ËTu entends ça, Chad ?\pCe faible croit pouvoir nous battre !
-0x7FB779: Goon : {COLOR}ËOh, je ne vais pas me battre.\pMon pote {PLAYER} va vous détruire\npour moi !
-0x7FB7E0: Rory : {COLOR}ËAh oui ?\pAlors on va le réduire en bouillie !
-0x7FB835: Rory : {COLOR}ËAh oui ?\pAlors on va la réduire en bouillie !
+0x7FB735: Rory : {COLOR}ËTu entends ça, Chad ?\pCe faible croit pouvoir nous battre !\n
+0x7FB779: Goon : {COLOR}ËOh, je ne vais pas me battre.\nMon pote {PLAYER} va vous détruire\ppour moi !\n
+0x7FB7E0: Rory : {COLOR}ËAh oui ?\pAlors on va le réduire en bouillie !\n
+0x7FB835: Rory : {COLOR}ËAh oui ?\pAlors on va la réduire en bouillie !\n
 0x7FB88A: {COLOR}ËChad ! Donne-moi ton Pokémon !\pJe vais les descendre avec notre\nforce combinée !
-0x7FB8DB: Chad : {COLOR}ËVas-y mec !\pFais-leur bouffer leurs chaussettes\net jette-les dans les égouts comme\nl'autre gars !
+0x7FB8DB: Chad : {COLOR}ËVas-y mec ! Fais-leur bouffer leurs chaussettes\pet jette-les dans les égouts comme\nl'autre gars !
 0x7FB93C: Rory : {COLOR}ËTu ferais bien d'être prêt pour ma\ndouble rage !
 0x7FB97B: Hein... impossible...\nTu m'as fait perdre mes chaussettes !
-0x7FB9A1: Gwahahaha ! Ça t'apprendra, morveux !
-0x7FB9D2: Rory : {COLOR}ËQuoi... tu ne devrais pas pouvoir\nbattre les Black Ferrothorn !\pNos peaux sont épaisses comme le\nfer !\nComment est-ce possible !
+0x7FB9A1: Gwahahaha ! Ça t'apprendra, morveux !\n
+0x7FB9D2: Rory : {COLOR}ËQuoi... tu ne devrais pas pouvoir battre les Black Ferrothorn !\nNos peaux sont épaisses comme le\pfer !\nComment est-ce possible !
 0x7FBA42: Goon : {COLOR}ËVoilà la vraie dureté des Black\n{PLAYER} !\pVos peaux ne sont pas épaisses,\nelles sont molles comme un Lippouti !\pHahaha !
 0x7FBABB: {COLOR}ËTu es un dresseur audacieux,\n{PLAYER} !\pJe ne connais personne d'autre assez\ncourageux pour affronter deux\lPokémon à la fois !\pTu sais quoi... reviens à la base et\nje te donnerai un petit quelque\lchose pour ton aide.
 0x7FBB84: Rory : {COLOR}ËQuoi... tu pensais vraiment nous\nbattre ?\pLes Black Ferrothorn ?
 0x7FBBD2: Goon : {COLOR}ËJe pensais que tu pourrais les battre\n{PLAYER}...\pMaintenant tu as humilié les Black\n{PLAYER}...\pDeviens plus fort pour les abattre\nla prochaine fois.
 0x7FBC63: Rory : {COLOR}ËAh oui ?\pAlors il est temps de te faire\nréduire en bouillie encore !
-0x7FBDC6: ( c   iCァËどDァËÔ ェDァËÌÉÁLes humains ont besoin d'égouts,\nmais les Pokémon ?\pPrends cette question, et ce défi !
+0x7FBDC6: ( c   iCァËどDァËÔ ェDァËÌÉÁLes humains ont besoin d'égouts,\nmais les Pokémon ?\pPrends cette question, et ce défi !\n
 0x7FBE45: Il n'y a pas de barrière entre toi\net tes Pokémon !
 0x7FBE82: Depuis qu'on a construit ces égouts,\ntoutes sortes de Pokémon sont venus.
 0x7FBEE1: J'ai perduu !
 0x7FBEEB: C'est pas marrant comment crier dans\nun égout fait écho ?
 0x7FBF27: ( XÀ  ずEァËホEァËÔ GEァËÌÉÁJe suis chercheur, j'étudie l'odeur\nici !
 0x7FBF6E: Si je devais exprimer ma déception\npar une odeur, je la mettrais au\lniveau d'Ortide.
-0x7FBFC1: Même des odeurs horribles pour nous\npeuvent être du parfum pour des\nPokémon.
+0x7FBFC1: Même des odeurs horribles pour nous peuvent être du parfum pour des\nPokémon.
 0x7FC046: Quel théorème catastrophique !
 0x7FC063: ( “   {DOWN_ARROW}FァË1FァËÔ FFァËÌÉÁBig Mo m'a engagé pour nettoyer les\négouts.
 0x7FC0A2: J'aime bien, en fait.
@@ -127,20 +127,20 @@
 0x7FC163: Tu peux ramper dans un tuyau pour\naller sous la moitié sud de la Ville\ld'Antisis.
 0x7FC4CD: Wow ! L'expérience d'aujourd'hui a\nsuper bien marché !\pTiens ! Accepte le {STR_VAR_1} que\nj'ai fabriqué !
 0x7FC51E: Il n'y a pas de place dans le sac\npour un {STR_VAR_1} !
-0x7FC549: Je continuerai d'expérimenter\nchaque jour !\nIl faut persévérer.\pReviens voir où j'en suis !
+0x7FC549: Je continuerai d'expérimenter chaque jour !\nIl faut persévérer.\pReviens voir où j'en suis !
 0x7FC845: James : {COLOR}ËLa bombe est prête à exploser !\pBouchez vos fichues oreilles si vous\nne voulez pas les perdre !
 0x7FC89B: James : {COLOR}ËAllons-y !\nSaute par le trou !
 0x7FCA79: Ó {SUPER_ER} ûぃ Áぉ…À ÂŒŒÛÛÀ\n??? : {COLOR}ËQui vous croyez être, bande de\nbouffons, à entrer chez moi et attaquer\lmes sbires ?\pOn est les Black Ferrothorn !\nEt moi, c'est Barbs, le chef !\pVous voulez vraiment continuer à\nnous chercher ?\pOn vous détruit en un instant !
-0x7FCB63: James : {COLOR}ËOn est les Black {PLAYER} !\pOn va vous éjecter pour diriger cette\nville à votre place !\pGwa ha ha ha ha !
+0x7FCB63: James : {COLOR}ËOn est les Black {PLAYER} !\pOn va vous éjecter pour diriger cette\nville à votre place !\lGwa ha ha ha ha !\p
 0x7FCBE9: Barbs : {COLOR}ËLes Black {PLAYER} ?\pVous devez être le gang bas de gamme\ndont j'entends parler...\pQuelqu'un devrait vous remettre à\nvotre place !\pEt ce quelqu'un, c'est moi !\pC'est qui ce {PLAYER} dont vous parlez\ntout le temps ?\pJe vais le dégommer et vous donner\nune leçon !
 0x7FCCF4: James : {COLOR}ËCe gars, juste là !
 0x7FCD16: {COLOR}ËMais tu es loin d'être assez fort\npour battre {PLAYER} !\pTu seras écrasé !
 0x7FCD63: Barbs : {COLOR}ËChaw ha ha ha !\pTu penses qu'un gamin peut me battre\nmoi, Barbs ?\pJe dirige les Black Ferrothorn !\pJe suis les Black Ferrothorn !
 0x7FCDE1: Barbs : {COLOR}ËVoyons qui est le vrai plus dur de la\nVille d'Antisis !
 0x7FCE25: Chaw ha ha ha !\nTu ne déçois pas, {PLAYER} !
-0x7FCE4D: Barbs : {COLOR}ËTu t'es bien battu, {PLAYER}.\pJe serais fier si tu étais des\nnôtres, les Black Ferrothorn.\pDommage que tu sois fidèle à ces\nclowns.\pEn parlant de clowns, on dirait que\nmes gars les ont démolis !
+0x7FCE4D: Barbs : {COLOR}ËTu t'es bien battu, {PLAYER}.\nJe serais fier si tu étais des\pnôtres, les Black Ferrothorn.\nDommage que tu sois fidèle à ces\pclowns.\nEn parlant de clowns, on dirait que\pmes gars les ont démolis !\n
 0x7FCF19: James : {COLOR}ËNon, ma bande, mon œuvre de vie !
-0x7FCF40: {COLOR}ËEh bien, {PLAYER}, on dirait que c'est\nla fin.\pTu t'es bien battu, gamin.\nTu nous as rendus fiers jusqu'au\nbout.\pMais il est temps pour les Black\n{PLAYER} de partir.\pOn a été chassés, on n'a plus de\nfoyer.\pOn vit en cavale jusqu'à trouver un\nnouvel endroit.
+0x7FCF40: {COLOR}ËEh bien, {PLAYER}, on dirait que c'est la fin.\nTu t'es bien battu, gamin.\pTu nous as rendus fiers jusqu'au\nbout.\pMais il est temps pour les Black\n{PLAYER} de partir.\pOn a été chassés, on n'a plus de\nfoyer.\pOn vit en cavale jusqu'à trouver un\nnouvel endroit.
 0x7FD049: {COLOR}ËPeut-être qu'on se recroisera un\njour, gamin.\pJ'ai hâte.
 0x7FD0A5: Barbs : {COLOR}ËÉcoute gamin, je te respecte\nmaintenant, vraiment.\pMais il est temps de sortir de chez\nnous et de ne jamais revenir.\p...\pJe suis sérieux.\pDEHORS !
 0x7FD149: ªœËÉÀ%WァËÔ トWァËÌÁÁÔ ‘WァËÌÁÁC'est l'Arène d'Antisis !\pTu penses pouvoir survivre dans le\nring ?
@@ -155,7 +155,7 @@
 0x7FD59C: Oh non !
 0x7FD5A4: Ta force est admirable.
 0x7FD5C0: Hein ?\pComment un gosse comme toi survit au\nring ?
-0x7FD5EE: Tu as survécu au ring.\nBien joué.\pPasse cette porte pour voir Big Mo.
+0x7FD5EE: Tu as survécu au ring.\nBien joué.\pPasse cette porte pour voir Big Mo.\n
 0x7FD645: Les règles sont simples.\pTu choisis un Pokémon pour battre\ntrois dresseurs à la suite.\pChaque dresseur n'a aussi qu'un\nPokémon.\pMais pas de types {COLOR}ÉVol{COLOR}Ë, {COLOR}ÉPsy{COLOR}Ë ou\n{COLOR}ÉFée{COLOR}Ë !\pTu peux utiliser ces types contre Big\nMo, mais on ne les aime pas ici,\ldans le ring.
 0x7FD75B: Tu as trop de Pokémon !\nTu ne peux en utiliser qu'un !\pVa te débarrasser de quelques-\nuns si tu veux tenter le défi !
 0x7FD7CA: Pas de Pokémon de type {COLOR}É{STR_VAR_1}{COLOR}Ë dans le\nring !\pChange ton Pokémon si tu veux te\nbattre !
@@ -165,28 +165,28 @@
 0x7FD8B4: Fée
 0x7FDB0D: Les Black Ferrothorn, les Black\n{PLAYER}, ils sont tous sous moi !\pVoyons ce que tu peux faire contre le\nparrain d'Antisis !
 0x7FDB88: Les Granbull Terreur, les Black\nFerrothorn, ils sont tous sous moi !\pVoyons ce que tu peux faire contre le\nparrain d'Antisis !
-0x7FDC0A: Ha ha ha ha !\pIls devraient t'appeler Big {PLAYER} !
+0x7FDC0A: Ha ha ha ha !\pIls devraient t'appeler Big {PLAYER} !\n
 0x7FDC3D: Oh, mec, gamin...\nQuel combat...\pPrends le Badge Combat en preuve de\nta victoire à l'Arène d'Antisis !
 0x7FDC9B: {PLAYER} a reçu le Badge Combat de\nBig Mo !
 0x7FDCC4: Avec le Badge Combat, tous les\nPokémon jusqu'au Nv. 70 reconnaîtront\lta force et t'obéiront !\pTu peux aussi escalader les falaises\nrocailleuses avec {COLOR}ÉEscalade{COLOR}Ë !\pDis que ce n'est pas utile !\pPrends aussi cette CT !
-0x7FDD8C: {PLAYER} a reçu la CT60 de Big Mo !
+0x7FDD8C: {PLAYER} a reçu la CT60 de Big Mo !\n
 0x7FDDAA: La CT60 contient Vampipoing !\pElle inflige des dégâts et draine la\nvie de l'ennemi en même temps !
 0x7FDE03: Si tu veux ma CT, libère de la place\ndans ton sac !
-0x7FDE41: Si tu reviens à Antisis, {PLAYER},\nsache que j'ai un œil sur toi !\pHa ha ha ha !\pJ'ai un œil sur tout le monde ici !\nC'est mon job !
+0x7FDE41: Si tu reviens à Antisis, {PLAYER},\nsache que j'ai un œil sur toi !\lHa ha ha ha !\pJ'ai un œil sur tout le monde ici !\pC'est mon job !\n
 0x7FDF17: Tu es le nouveau plus dur de la\nVille d'Antisis !
 0x7FDF99: Arène Pokémon d'Antisis\nChampion : Big Mo\pDresseurs vainqueurs :\n{RIVAL}, {PLAYER}
 0x800FD0: Mode Numérique : Borrius
-0x80DC10: {B_ATK_NAME_WITH_PREFIX} perd des PV !
+0x80DC10: {B_ATK_NAME_WITH_PREFIX} perd des PV !\n
 0x81E670: :iAAVAAA
 0x81F370: zzzz
 0x81F3F0: zzzz
 0x820DA0: Escalade des parois rocheuses.
-0x8210BF: Impossible d'amener le soleil à\nl'intérieur...
+0x8210BF: Impossible d'amener le soleil à l'intérieur...
 0x8210E0: Le mur est très rocheux.
 0x8217FD: zRS9ÊiRS!SÎ
 0x8254F1: {STR_VAR_1} utilise {STR_VAR_2} !
 0x8254FD: Le mur est très rocheux...\nUne capacité peut-elle l'escalader ?
-0x825535: Escalade ne peut pas être utilisée\nici !
+0x825535: Escalade ne peut pas être utilisée ici !
 0x825660: Le brouillard a disparu.
 0x825680: Le brouillard est dense...
 0x82595C: En tant que marchand itinérant, je\ncherche toujours de bons deals avec\lces gars !
@@ -204,9 +204,9 @@
 0x83008A:  Le {PLAYER} de {UNKNOWN_STR} réagit\nau {STR_VAR_2} de {STR_VAR_1} !
 0x830340:        lz zzÙlzzmlzzÙlzzm zzÙ  lz    zÓ  Ùzz zzzÓmìÙÓzzzÓÙzz zÓ        lz zzÙlzzmlzzÙlzzm zzÙ  lz    zÓ  Ùzz zzzÓmzzÓzzzÓÙzz zÓ        lz zzÙlzzmlzzÙlzzm zzÙ  lz    zÓ  Ùzz zzmÓmìÙÓzzmÓÙzz zÓ        lz zzAlzzwlzzwlzzw zzA  lz    z   wzz DzzÓDDAÓDzzÓwzz z         lz zzAlzzwlzzwlzzw zzA  lz    z   wzz DzzÓDzzÓDzzÓwzz zÓ        lz zzAlzzwlzzwlzzw zzA  lz    z   wzz DzwÓDDAÓDzwÓwzz z          z zzセlzzqlzzqlzzq zzセ   z    z   qzz セzzÓzセオÓセzzÓqzz z          z zzセlzzqlzzqlzzq zzセ   z    z   qzz セzzÓzzzÓセzzÓqzz z          z zzセlzzqlzzqlzzq zzセ   z    z   qzz セzqÓzセオÓセzqÓqzz z         lz zzラlzzslzzラlzzs zzラ  lz    z   szz ンzzÓsンラÓンzzÓszz z         lz zzラlzzslzzラlzzs zzラ  lz    z   szz ンzzÓszzÓンzzÓszz z         lz zzラlzzslzzラlzzs zzラ  lz    z   szz ンzsÓsンラÓンzsÓszz z          z zzホlzzrlzzニlzzr zzr  lz    z   rzz ホzzÓニホニÓホzzÓホzz zÓ         z zzホlzzrlzzニlzzr zzr  lz    z   rzz ホzzÓニzzÓホzzÓホzz zÓ         z zzホlzzrlzzニlzzr zzr  lz    z   rzz ホzrÓニホニÓホzrÓホzz zÓ         z zzずlzzolzzずlzzz zzぉ  lz    zÓ  ぉzz zzzÓozzÓずzzÓozz z                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   
 0x830CD0: Construction de puissance
-0x830CE0: Les {B_ATK_ABILITY} de\n{B_ATK_NAME_WITH_PREFIX} ont fait\npleuvoir !
-0x830CF6: Les {B_ATK_ABILITY} de\n{B_ATK_NAME_WITH_PREFIX} ont\nintensifié les rayons du soleil !
-0x830D1A: Les {B_ATK_ABILITY} de\n{B_ATK_NAME_WITH_PREFIX} ont\nprovoqué une tempête de sable !
+0x830CE0: Les {B_ATK_ABILITY} de {B_ATK_NAME_WITH_PREFIX} ont fait\npleuvoir !
+0x830CF6: Les {B_ATK_ABILITY} de {B_ATK_NAME_WITH_PREFIX} ont\nintensifié les rayons du soleil !
+0x830D1A: Les {B_ATK_ABILITY} de {B_ATK_NAME_WITH_PREFIX} ont\nprovoqué une tempête de sable !
 0x834ACC: POKéMON
 0x834AE7:  AFFICHAGE EV-IV
 0x876B49: CASSÉ)
@@ -218,12 +218,12 @@
 0x87A0EC: hy télé
 0x883590: radicalement
 0x8835A0: gravement
-0x8835B0: {STR_VAR_1} a survécu à\nl'empoisonnement. Le poison a\ndisparu !\p
+0x8835B0: {STR_VAR_1} a survécu à l'empoisonnement. Le poison a\ndisparu !\p
 0x883A3A: kR:RRR
 0x883C3A: kR:RRR
 0x883E3A: SR :RRR
 0x88403A: SR :RRR
-0x8854B0: Vous êtes mis au défi par\n{B_TRAINER1_CLASS}\n{B_TRAINER1_NAME}!\p
+0x8854B0: Vous êtes mis au défi par {B_TRAINER1_CLASS}\n{B_TRAINER1_NAME}!\p
 0x8854D0: {B_TRAINER1_CLASS} {B_TRAINER1_NAME}\nest sur le point d'envoyer {PLAYER}.\lVoulez-vous changer de Pokémon ?
 0x885510: L'adversaire 
 0x8867A7: F9\p▶ ?/AA?!!! F999F!9! ぢREÔUQQ\p EAA

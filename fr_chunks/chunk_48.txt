@@ -13,12 +13,12 @@
 0xA4DD24: L'ADM te permet de remonter !
 0xA4DD46: La mer est profonde ici. Un\nPokémon peut peut-être plonger.
 0xA4DD84: La lumière filtre d'en haut.\nUn Pokémon pourrait remonter.
-0xA4DDCA: Appel à tous les Dresseurs !\pUn essaim de {COLOR}É{STR_VAR_2}{COLOR}Á\nest apparu autour de {COLOR}É{STR_VAR_1}{COLOR}Á !\pOccasion rare de mettre la main\nsur un {STR_VAR_2}, ne la rate pas !\p…\pMessage sponsorisé par Cube Corp.
+0xA4DDCA: Appel à tous les Dresseurs !\pUn essaim de {COLOR}É{STR_VAR_2}{COLOR}Á\nest apparu autour de {COLOR}É{STR_VAR_1}{COLOR}Á !\pOccasion rare de mettre la main\nsur un {STR_VAR_2}, ne la rate pas !\l…\pMessage sponsorisé par Cube Corp.\p\n
 0xA4DE91: La porte est verrouillée.
 0xA4DEA5: Une sorte de barrière psy\nbloque le passage.
 0xA4DEE2: Tu ne peux pas atteindre\nl'échelle d'ici !
 0xA4DF08: Regarde !\nTu as trouvé un passage étroit.\pVeux-tu le suivre ?
-0xA4DF3E: Le chemin étroit ne menait\nnulle part.
+0xA4DF3E: Le chemin étroit ne menait nulle part.
 0xA4DF5C: C'est un arbre de belle taille.\nVeux-tu utiliser Coud'Boule ?
 0xA4DF9A: Un arbre imposant semble\nparfait pour un Coud'Boule !
 0xA4DFDA: Le mur est légèrement bombé.\nCreuser dedans ?
@@ -60,7 +60,7 @@
 0xA4E22F: Plonger sous l'eau.
 0xA4E240: {STR_VAR_1} devient plus amical.\nMais sa {STR_VAR_2} de base baisse !{PAUSE_UNTIL_PRESS}
 0xA4E276: {STR_VAR_1} t'adore !\nSa {STR_VAR_2} de base baisse !{PAUSE_UNTIL_PRESS}
-0xA4E299: {STR_VAR_1} devient plus amical.\nSa {STR_VAR_2} de base ne peut\nplus baisser.{PAUSE_UNTIL_PRESS}
+0xA4E299: {STR_VAR_1} devient plus amical. Sa {STR_VAR_2} de base ne peut\nplus baisser.{PAUSE_UNTIL_PRESS}
 0xA4E2D0: {STR_VAR_1} change de Forme !{PAUSE_UNTIL_PRESS}
 0xA4E2E4: Fusionner avec quel Pokémon ?{PAUSE_UNTIL_PRESS}
 0xA4E2FF: Tu as déjà un {STR_VAR_1}\nfusionné avec un {STR_VAR_2}.{PAUSE_UNTIL_PRESS}
@@ -70,8 +70,8 @@
 0xA4E397: Le talent de {STR_VAR_1}\na été changé pour {STR_VAR_2}.{PAUSE_UNTIL_PRESS}
 0xA4E3BE: Donner le facteur Gigamax\nà {STR_VAR_1} ?
 0xA4E3E0: Retirer le facteur Gigamax\nà {STR_VAR_1} ?
-0xA4E406: {STR_VAR_1} peut Gigamaxer\nmaintenant !{PAUSE_UNTIL_PRESS}
-0xA4E41F: {STR_VAR_1} ne peut plus\nGigamaxer.{PAUSE_UNTIL_PRESS}
+0xA4E406: {STR_VAR_1} peut Gigamaxer maintenant !{PAUSE_UNTIL_PRESS}
+0xA4E41F: {STR_VAR_1} ne peut plus Gigamaxer.{PAUSE_UNTIL_PRESS}
 0xA4E43E: FばNiveau conseillé : 
 0xA4E452: {DPAD_UPDOWN}Choisir {SE_SHOP}Valider {START_BUTTON}Aléa {B_BUTTON}Annuler
 0xA4E474: Fin du combat si :\n4 Pokémon K.O.\n10 tours écoulés
@@ -130,7 +130,7 @@
 0xA4EB44: Dragon
 0xA4EB4B: Ténèb
 0xA4EB75: Fée
-0xA4EB7C: Ta sauvegarde est incompatible\navec cette version d'Unbound.\pIl faut entrer au Panthéon sur une\nversion antérieure à 2.0 avant de\ncontinuer.\pSi tu veux tout de même continuer…\n…ta sauvegarde actuelle sera\nsupprimée.
+0xA4EB7C: Ta sauvegarde est incompatible avec cette version d'Unbound.\nIl faut entrer au Panthéon sur une\pversion antérieure à 2.0 avant de\ncontinuer.\pSi tu veux tout de même continuer…\p…ta sauvegarde actuelle sera\nsupprimée.
 0xA4EC59: Ta sauvegarde est incompatible\navec la démo du Battle Frontier\pd'Unbound.\nSi tu veux malgré tout continuer…\p…ta sauvegarde actuelle sera\nsupprimée.
 0xA4ECED: Limité 
 0xA4ECF5: Bac à sable 

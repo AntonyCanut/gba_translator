@@ -14,7 +14,7 @@
 0x4577B9: Le lien WIRELESS COMMUNICATION\nSYSTEM a été supprimé…
 0x4577F5: Le lien avec votre ami a été\nsupprimé…
 0x457824: {STR_VAR_1} a répondu : « Non… »
-0x457879: Voulez-vous le {STR_VAR_2} MODE ?
+0x457879: Voulez-vous le {STR_VAR_2} MODE ?\n
 0x4578BA: En attente de la réponse de\n{STR_VAR_1} concernant l'échange…
 0x457A31: Y a-t-il quelque chose que vous\nvouliez faire ?
 0x457A70: Bonjour ! Voulez-vous faire quelque\nchose ?
@@ -28,41 +28,41 @@
 0x457C47: L'autre dresseur vous a montré sa\ncarte de dresseur.\pVoulez-vous\nmontrer votre carte de dresseur ?
 0x457CA3: L'autre dresseur vous défie à\ncombattre.\pAccepterez-vous le défi\nde bataille ?
 0x457CF6: L'autre dresseur vous invite à\ndiscuter.\pAccepterez-vous\nl'invitation à discuter ?
-0x457D44: Offre : échanger ton {DYNAMIC}À\nN. {DYNAMIC} enregistré contre un\n{DYNAMIC}Â N. {DYNAMIC}Á.\p\nAccepter cette offre ?
+0x457D44: Offre : échanger ton {DYNAMIC}À\nN. {DYNAMIC} enregistré contre un\p{DYNAMIC}Â N. {DYNAMIC}Á.\n\pAccepter cette offre ?\n
 0x457DB8: Offre d'échange pour ton œuf\nenregistré.\lAccepter cette offre ?
 0x457E0A: Le chat a été abandonné.\p
 0x457E28: Vous avez décliné l'offre.\p
 0x457E41: Vous avez décliné l'offre.\p
 0x457E5D: Le chat est terminé.\p
-0x457EBD: {STR_VAR_1} : Hé, {PLAYER} ! Nous\ndiscutons en ce moment.\lVous voulez\nnous rejoindre ?
-0x457EFD: Ah, salut ! Nous discutons\nactuellement. Voulez-vous nous\nrejoindre ?
-0x457F3C: {STR_VAR_1} : Oh, salut, {PLAYER} !\nNous discutons\nmaintenant.\lVoulez-vous nous\nrejoindre ?
+0x457EBD: {STR_VAR_1} : Hé, {PLAYER} ! Nous discutons en ce moment.\nVous voulez\lnous rejoindre ?
+0x457EFD: Ah, salut ! Nous discutons actuellement. Voulez-vous nous\nrejoindre ?
+0x457F3C: {STR_VAR_1} : Oh, salut, {PLAYER} ! Nous discutons maintenant.\nVoulez-vous nous\lrejoindre ?
 0x457FB4: Une bataille, hein ? Très bien,\ndonnez-moi juste un peu de temps.
 0x457FE6: Vous voulez discuter, hein ? Bien\nsûr, attendez un peu.
-0x458019: Bien sûr ! En guise de\n«Salutations», voici ma carte de\ndresseur.
+0x458019: Bien sûr ! En guise de «Salutations», voici ma carte de\ndresseur.
 0x458053: Une bataille ? Bien sûr, mais j'ai\nbesoin de temps pour me préparer.
 0x458087: Vouliez-vous discuter ? D'accord,\nmais veuillez patienter un instant.
 0x4580BE: En guise d'introduction, je vais\nvous montrer ma carte de dresseur.
 0x45812C: Merci d'avoir attendu ! Commençons\nnotre bataille !{PAUSE}ざ
-0x458161: Très bien ! Discutons !{PAUSE}ざ
+0x458161: Très bien ! Discutons !{PAUSE}ざ\n
 0x45817E: Désolé de vous avoir fait attendre !\nCommençons !{PAUSE}ざ
 0x4581AD: Désolé de vous avoir fait attendre !\nDiscutons.{PAUSE}ざ
 0x4581D6: L'échange va démarrer.{PAUSE}ざ
 0x4581F6: La bataille va commencer.{PAUSE}ざ
 0x458217: Entrer dans le chat…{PAUSE}ざ
-0x4582C0: Je suis vraiment désolé, mais mes\nPokémon ne se sentent pas\nbien…\pCombattons une autre fois.\p
-0x458314: Hein ? Ma carte de dresseur… Où\nest-elle passée ?\lDésolé ! Je te la\nmontrerai une autre fois !\p
-0x458369: Oh ? Où ai-je mis ma Carte\nDresseur ?…\lDésolé !\nJe te la montrerai plus tard !\p
+0x4582C0: Je suis vraiment désolé, mais mes Pokémon ne se sentent pas\nbien…\pCombattons une autre fois.\p
+0x458314: Hein ? Ma carte de dresseur… Où est-elle passée ?\nDésolé ! Je te la\lmontrerai une autre fois !\p
+0x458369: Oh ? Où ai-je mis ma Carte Dresseur ?…\nDésolé !\lJe te la montrerai plus tard !\p
 0x4583B3: Si vous voulez faire quelque chose\navec moi, faites-moi signe !\p
 0x4583F8: Si vous voulez faire quelque chose\navec moi, ne soyez pas timide.\p
-0x458479: Si vous voulez vous battre, vous\navez besoin de deux Pokémon\ninférieurs à\lLv. 30.\p
-0x4584C0: Pour une bataille, vous avez besoin\nde deux Pokémon inférieurs au Niv.\n30.\p
+0x458479: Si vous voulez vous battre, vous avez besoin de deux Pokémon\ninférieurs à\lLv. 30.\p
+0x4584C0: Pour une bataille, vous avez besoin de deux Pokémon inférieurs au Niv.\n30.\p
 0x4584FB: Oh, d'accord. Viens me voir quand tu\nveux, d'accord ?\p
-0x458527: Oh… Veuillez venir à tout moment.\p
-0x458596: Oh, je suis désolé. J'ai trop de\nchoses à faire en ce\nmoment.\lParlons-en une autre\nfois.\p
+0x458527: Oh… Veuillez venir à tout moment.\n\p
+0x458596: Oh, je suis désolé. J'ai trop de choses à faire en ce moment.\nParlons-en une autre\lfois.\p
 0x4585E5: Whoa ! Je peux dire que tu es plutôt\ndur !\p
 0x458617: Vous avez utilisé ce mouvement ?\nC'est une bonne stratégie !\p
-0x458643: Bravo ! C'était une révélation !\p
+0x458643: Bravo ! C'était une révélation !\n\p
 0x458668: Oh! Comment pourriez-vous utiliser\nce Pokémon dans cette situation ?\p
 0x45869F: Ce Pokémon… Il a été très bien élevé\n!\p
 0x4586CD: C'est tout ! C'est la bonne décision\nmaintenant !\p
@@ -71,19 +71,19 @@
 0x458799: Ne dis plus rien de drôle ! J'ai mal\nà force de rire !\p
 0x4587D7: Oh ? Quelque chose comme ça s'est\nproduit.\p
 0x4587FB: Hmhm… Quoi ? Alors c'est ce que tu\ndis ?\p
-0x458828: Est-ce vrai ? Je ne le savais pas.\p
-0x45884C: Ahaha ! De quoi s'agit-il ?\p
+0x458828: Est-ce vrai ? Je ne le savais pas.\n\p
+0x45884C: Ahaha ! De quoi s'agit-il ?\n\p
 0x458868: Oui, c'est exactement ça ! C'est ce\nque je voulais dire.\p
 0x458896: En d’autres termes… Oui ! C'est vrai\n!\p
-0x458915: J'espère que je vais mieux vous\nconnaître !\p
+0x458915: J'espère que je vais mieux vous connaître !\p
 0x45893A: Nous montrons nos Cartes Dresseur\npour faire connaissance.\p
-0x45897B: Heureux de vous rencontrer. S'il\nvous plaît, ne soyez pas un étranger\n!\p
-0x4589E3: Finalement, un échange m'a permis\nd'obtenir ce Pokémon que je voulais\ndepuis longtemps.\p
-0x458A22: J'échange des Pokémon en ce\nmoment.\p
+0x45897B: Heureux de vous rencontrer. S'il vous plaît, ne soyez pas un étranger\n!\p
+0x4589E3: Finalement, un échange m'a permis d'obtenir ce Pokémon que je voulais\ndepuis longtemps.\p
+0x458A22: J'échange des Pokémon en ce moment.\p
 0x458A44: J'ai enfin obtenu ce Pokémon que je\nrecherchais dans un échange !\p
-0x458AB7: Bienvenue sur le TABLEAU\nD'ÉCHANGE.\pVous pouvez enregistrer\nvotre Pokémon et le proposer\npour un échange.\pVoulez-vous\nenregistrer l'un de vos Pokémon ?
+0x458AB7: Bienvenue sur le TABLEAU D'ÉCHANGE. Vous pouvez enregistrer\pvotre Pokémon et le proposer\npour un échange.\pVoulez-vous\nenregistrer l'un de vos Pokémon ?
 0x458B41: Ce TABLEAU D'ÉCHANGE sert à\nproposer un Pokémon.\pEnregistre un Pokémon pour un\néchange.\pUn autre dresseur peut\noffrir un Pokémon en retour.\p\nNous espérons que tu échangeras\lavec de nombreux dresseurs.\p\nEnregistrer un de tes Pokémon ?
-0x458CD3: Veuillez choisir le type de Pokémon\nque vous souhaitez échanger.
+0x458CD3: Veuillez choisir le type de Pokémon\nque vous souhaitez échanger.\n
 0x458D19: Lequel de vos Pokémon de groupe vous\nproposerez-vous en échange ?\p
 0x458D52: L'inscription a été annulée.\p
 0x458D75: L'inscription est terminée.\p
@@ -91,14 +91,14 @@
 0x458DBA: Annulez l'enregistrement de votre\nLv. {STR_VAR_2} {STR_VAR_1} ?
 0x458DE7: Annuler l'enregistrement de votre\nEgg ?
 0x458E0D: L'inscription a été annulée.\p
-0x458E6E: Souhaitez-vous demander à\n{STR_VAR_1} de effectuer une\ntransaction ?
+0x458E6E: Souhaitez-vous demander à {STR_VAR_1} de effectuer une\ntransaction ?
 0x458ED0: Vous n'avez pas de Pokémon de type\n{STR_VAR_2} que {STR_VAR_1} veut.\p
 0x458F01: Vous n'avez pas d'œuf que\n{STR_VAR_1} veut.\p
-0x458F2A: {STR_VAR_1} ne peut pas effectuer\nd'échange contre votre Pokémon pour\nle moment.\p
-0x458F5F: Vous ne pouvez pas effectuer\nd’échange contre le Pokémon de\n{STR_VAR_1} pour le moment.\p
-0x458F94: {SUPER_ER}Votre offre commerciale a\nété rejetée.\p
+0x458F2A: {STR_VAR_1} ne peut pas effectuer d'échange contre votre Pokémon pour\nle moment.\p
+0x458F5F: Vous ne pouvez pas effectuer d’échange contre le Pokémon de\n{STR_VAR_1} pour le moment.\p
+0x458F94: {SUPER_ER}Votre offre commerciale a été rejetée.\p
 0x458FBC: Commerce des œufs
-0x458FC6: {DPAD_UPDOWN}Choisir\n{SE_SHOP}Rejoindre {B_BUTTON}Annuler
+0x458FC6: {DPAD_UPDOWN}Choisir {SE_SHOP}Rejoindre {B_BUTTON}Annuler
 0x458FE3: Veuillez choisir un dresseur.
 0x458FFD: Veuillez choisir un entraîneur pour\nune bataille unique.
 0x45902D: Veuillez choisir un entraîneur pour\nune double bataille.
@@ -109,8 +109,8 @@
 0x45912A: Sautez avec des mini Pokémon !\nVeuillez choisir le chef.
 0x45915E: Berry Crush ! Veuillez choisir le\nleader.
 0x459187: Dodrio Berry-Picking ! Veuillez\nchoisir le chef.
-0x459235: En attente de la réponse de\n{STR_VAR_1}…
-0x459250: {STR_VAR_1} a été invité à vous\ninscrire en tant que membre. S'il\nvous plaît, attendez.
+0x459235: En attente de la réponse de {STR_VAR_1}…
+0x459250: {STR_VAR_1} a été invité à vous inscrire en tant que membre. S'il\nvous plaît, attendez.
 0x45928C: En attente d'une réponse du système\nde communication sans fil.
 0x4592E8: Aucune carte ne semble être partagée\npour le moment.
 0x459311: Aucune nouvelle ne semble être\npartagée pour le moment.
@@ -119,7 +119,7 @@
 0x45935E: Sortie
 0x459365: Sortie
 0x45936D: Informations
-0x459375: Nom{CLEAR_TO}Z Recherché{CLEAR_TO}Ho\nOffre{CLEAR_TO}LLv.
+0x459375: Nom{CLEAR_TO}Z Recherché{CLEAR_TO}Ho Offre{CLEAR_TO}LLv.
 0x459394: Bataille unique
 0x4593A2: Double bataille
 0x4593B2: Multi-bataille
@@ -136,10 +136,10 @@
 0x459474: C'est une carte de cuivre !
 0x459488: C'est une Carte Argent !
 0x45949C: C'est une Gold Card !
-0x459541: {DYNAMIC}À : Heureux de vous avoir\nrencontré !{PAUSE}ざ
-0x459561: {DYNAMIC}À: Glad to meet\nyou!{PAUSE}ざ
+0x459541: {DYNAMIC}À : Heureux de vous avoir rencontré !{PAUSE}ざ
+0x459561: {DYNAMIC}À: Glad to meet you!{PAUSE}ざ
 0x4595B0: Lecture de la carte annulée.
-0x45CEFA: Ô La Miiiimiiiiiciii La iiÊ iiiÊiiiヲ\nMi c i Mii Vi Vi ci\nciiiiiiiiiiiiiiiiiiiiiiii×iipuviiCziiiiiiiiiiiiiiiiiiiipaiii-eiizgiiÊ\nwo i iÊ iÒ iÒ iwo iヲ Mz Mz Fz Vz x y\nF\nzjCzzpepvz-d×zzgeizz-guzzzzzzzzxzzzzgyz-euz\npajivzi7zzbuvzzzzzzzzzzzzzTz{RIGHT_ARROW}\nz{RIGHT_ARROW} zÏ zÒ T j Ï Fzzz Szz\nS9 i zzzÏzzh 9h i .=\nuba{DYNAMIC}Segnu C\nRapimo{LEFT_ARROW}íbÍ
+0x45CEFA: Ô La Miiiimiiiiiciii La iiÊ iiiÊiiiヲ Mi c i Mii Vi Vi ci ciiiiiiiiiiiiiiiiiiiiiiii×iipuviiCziiiiiiiiiiiiiiiiiiiipaiii-eiizgiiÊ wo i iÊ iÒ iÒ iwo iヲ Mz Mz Fz Vz x y F zjCzzpepvz-d×zzgeizz-guzzzzzzzzxzzzzgyz-euz pajivzi7zzbuvzzzzzzzzzzzzzTz{RIGHT_ARROW} z{RIGHT_ARROW} zÏ zÒ T j Ï Fzzz Szz S9 i zzzÏzzh 9h i .= uba{DYNAMIC}Segnu C Rapimo{LEFT_ARROW}íbÍ
 0x463DC2: Solitaire
 0x463DC9: Courageux
 0x463DCF: Catégorique
@@ -163,10 +163,10 @@
 0x463E49: Insolent
 0x463E4F: Prudent
 0x463E57: Excentrique
-0x46A6F5: ァ8ど V W Œi Wi ŒWj mziŒzjじじ Ò Ò ÙÂ ëず\nVzz yzjlzzizjiÒ W ÙÒ Û À À V VÒじ Â i\nÒ\nmziozjじzzjzzzzzjzzzìzzzmzzzzzzziziiVjiiiiyzzizzjzzzizzizjizyzziVii\nzjÒ ziÒ ii iii i liiiÓiyz Ó\nzziyzjizzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzziyzzzzzzzizziiziiizzjizzzjyzÒ\nzj iëmWiziizz iiiiiiiiiiii i i ii\njizzziiziiiiiiÀVÀViÒ i ziizzj izzÒ\niyj iiÒ ii V zzÒ iyì ViiÒ Vi Ò Ò À Œ\nŒz ŒÙìŒozjぅzjyzzzzzzzzÙ À ŒÀ Ùz\nizìizzÙzzìÙzzìzzzÙW ÙÀ ÙÀ ÀÀ Ù\nzÙÙÙiziii iiÒ Œ j\nzzzzzzzzzzzzzzzzzzzzzzzzzziiiiiyzzziizzzzzzzzzzzzzzzìÙÙzÙmzzzzzzずぉiii\nzzzzzziÙjÒ zzzÓzzzzzzji iyzÓ ÙÙ z\niiii Vii iiぅぉiiii ii ぉYiz iÒ z Ó z\nlÓl zzzzzji z z z z iizzVëÙW À ÙÙ Œz\nÀ\nzzzmzzzzzzzzzzzzzzzÙÙÙÙÀiiziÒVizziiziizzzzzzzzzzìÙzzzzzzjÒViii\nëÙ zÙÙÀìÀ zmz Óìzzz ië iÒ À VÒ V ŒÀi\nÀ i ŒmÙmÙzzzzziyjiÒÛÙ ぃii Ù À\nÀmìŒmzìziÙmziiiiぉÂ Ù ÙÀ ŒÙÙ zzÀ\niiizìÙ À Ù ▶ぅ ÂエÒぞÀ ÎßïÇËÈù\nËÈóÈËÈôÁËÈœÁËÈまÉËÈÂËßÊÁごËÈÁげËÈ\nÉ{FONT}{DPAD_UP}:ÉlÉFÇ ÇぞÇ
-0x4716B4: hii{STRING}xzz xzz xzz
+0x46A6F5: ァ8ど V W Œi Wi ŒWj mziŒzjじじ Ò Ò ÙÂ ëず Vzz yzjlzzizjiÒ W ÙÒ Û À À V VÒじ Â i Ò mziozjじzzjzzzzzjzzzìzzzmzzzzzzziziiVjiiiiyzzizzjzzzizzizjizyzziVii zjÒ ziÒ ii iii i liiiÓiyz Ó zziyzjizzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzziyzzzzzzzizziiziiizzjizzzjyzÒ zj iëmWiziizz iiiiiiiiiiii i i ii jizzziiziiiiiiÀVÀViÒ i ziizzj izzÒ iyj iiÒ ii V zzÒ iyì ViiÒ Vi Ò Ò À Œ Œz ŒÙìŒozjぅzjyzzzzzzzzÙ À ŒÀ Ùz izìizzÙzzìÙzzìzzzÙW ÙÀ ÙÀ ÀÀ Ù zÙÙÙiziii iiÒ Œ j zzzzzzzzzzzzzzzzzzzzzzzzzziiiiiyzzziizzzzzzzzzzzzzzzìÙÙzÙmzzzzzzずぉiii zzzzzziÙjÒ zzzÓzzzzzzji iyzÓ ÙÙ z iiii Vii iiぅぉiiii ii ぉYiz iÒ z Ó z lÓl zzzzzji z z z z iizzVëÙW À ÙÙ Œz À zzzmzzzzzzzzzzzzzzzÙÙÙÙÀiiziÒVizziiziizzzzzzzzzzìÙzzzzzzjÒViii ëÙ zÙÙÀìÀ zmz Óìzzz ië iÒ À VÒ V ŒÀi À i ŒmÙmÙzzzzziyjiÒÛÙ ぃii Ù À ÀmìŒmzìziÙmziiiiぉÂ Ù ÙÀ ŒÙÙ zzÀ iiizìÙ À Ù ▶ぅ ÂエÒぞÀ ÎßïÇËÈù ËÈóÈËÈôÁËÈœÁËÈまÉËÈÂËßÊÁごËÈÁげËÈ\nÉ{FONT}{DPAD_UP}:ÉlÉFÇ ÇぞÇ
+0x4716B4: hii{STRING}xzz xzz xzz\n\n
 0x471788: RRRR999999999999AAAAAAAARRRRRRRR\lzzT\lzzTkiiS▶zyT▶zyT▶zyT
-0x4717C7: URRRR zzzzzTxzzTxzThSxThSxjShyjShy\nzzzzzzzzzzzÙÙÙÙÙÙÙÙÙÙÙÙÙÙÙ\nzzzzzjyzzjyzjShyjShyThSxThSxThSxThSxjShyjShyThSxThSxjShyjShyjShyThSxThSxThSxjShyjShyjShyThSxThSxThSxjShyjShyjShyThSxThSxThSxjShyjShyjSyzzjyzzzz\nÙÙÙÙÙÙÙÙÙÙÙÙÙÙÙÙzzzzzzzzzzzz\njShyjShyThSxThSxzTxzzTxzzzzzz +{PK}
+0x4717C7: URRRR zzzzzTxzzTxzThSxThSxjShyjShy zzzzzzzzzzzÙÙÙÙÙÙÙÙÙÙÙÙÙÙÙ zzzzzjyzzjyzjShyjShyThSxThSxThSxThSxjShyjShyThSxThSxjShyjShyjShyThSxThSxThSxjShyjShyjShyThSxThSxThSxjShyjShyjShyThSxThSxThSxjShyjShyjSyzzjyzzzz ÙÙÙÙÙÙÙÙÙÙÙÙÙÙÙÙzzzzzzzzzzzz jShyjShyThSxThSxzTxzzTxzzzzzz +{PK}
 0x475638: ABCDEFG
 0x47AAC1: ABCDE
 0x47AAC7: FGHIJ
@@ -193,7 +193,7 @@
 0x47B9CF: ぜガ ECTOPLASMA
 0x47BC78: EMY & ALEK
 0x47C058: JO & HALEY
-0x47C388: - je ah y Râ X &X & Œboñ4ÑX\nTOUDOUDOU
+0x47C388: - je ah y Râ X &X & Œboñ4ÑX TOUDOUDOU
 0x47C432: ERNEST
 0x47C57A: GABRIEL
 0x47C63F: - ‘ a 3 あ I X X Í Œboñ4ÑU TOUDOUDOU

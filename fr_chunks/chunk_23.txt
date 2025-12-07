@@ -1,7 +1,7 @@
-0x75CA45: {COLOR}ËOn dirait que ces Pokémon sont\nreconnaissants et veulent nous\nrejoindre !\pSi on en prend un chacun, on pourra\nattaquer le garde et s'évader !\pTiens, prends cette Poké Ball que\nj'ai ramassée.
+0x75CA45: {COLOR}ËOn dirait que ces Pokémon sont reconnaissants et veulent nous\nrejoindre !\pSi on en prend un chacun, on pourra\nattaquer le garde et s'évader !\pTiens, prends cette Poké Ball que\nj'ai ramassée.
 0x75CAF2: {PLAYER} reçoit une Poké Ball de\n{RIVAL} !
 0x75CB13: {COLOR}ËVas-y, choisis un Pokémon.
-0x75CDE5: Le {STR_VAR_1} a rejoint l'équipe de\n{PLAYER} !
+0x75CDE5: Le {STR_VAR_1} a rejoint l'équipe de {PLAYER} !
 0x75CDFF: {COLOR}ËJe prends celui-là, alors.
 0x75CE1C: {COLOR}ÁDéçu, le {STR_VAR_1} est parti.
 0x75CE3A: Maintenant qu'on a nos Pokémon,\nretournons à la sortie.\pOn va se frayer un chemin dehors !
@@ -20,47 +20,47 @@
 0x75DA84: {COLOR}ÁFille : {COLOR}ÇWaaaah !\pPapa ! Il m'a fait mal !
 0x75DAAF: {COLOR}ÁHomme : {COLOR}ËÇa va ma chérie...\pPapa ne laissera plus ce Pokémon te\nfaire du mal.
 0x75DB0A: Si tu peux m'aider à récupérer ma\nnourriture, je te serai\lextrêmement reconnaissant !\pIl y aura peut-être une petite\nrécompense...
-0x75DB9E: Je te suis extrêmement reconnaissant\npour ton aide !\pJe vais entraîner mon nouveau\nPokémon et, si tu as de la chance,\ntu pourras peut-être m'affronter un\njour.
+0x75DB9E: Je te suis extrêmement reconnaissant pour ton aide !\nJe vais entraîner mon nouveau\pPokémon et, si tu as de la chance,\ntu pourras peut-être m'affronter un\ljour.
 0x75DC27: Hé ! C'est encore toi ! Merci\nencore de ton aide !\pÇa te dirait un combat contre mes\nPokémon ?
 0x75DC8D: D'accord !\pTu vas voir comme mon Sablaireau est\nfort !
 0x75DCCC: Même mes Pokémon rares n'ont pas\nfait le poids !
 0x75DD03: Merci pour le combat !\pReviens quand tu veux pour\nrecombattre.
 0x7629F6: Oh, merci !\pMerci, merci !
-0x762A86: Je sais que mon bébé a été enlevé\npar un homme en gris.\pC'est tout ce que je sais…\nSi seulement je savais où il est\nallé…
+0x762A86: Je sais que mon bébé a été enlevé par un homme en gris.\nC'est tout ce que je sais…\pSi seulement je savais où il est\nallé…
 0x762B0F: Ivory : {COLOR}ÇSilence !\pSi tu crois qu'une attaque surprise\nme fera retirer la barrière, tu te\ltrompes lourdement !
 0x762B80: {COLOR}ÇAlakazam !\nDébarrasse-toi de lui !
-0x762CD5: Oh non, non, non…\pJ'espère trouver quelqu'un pour\nm'aider avant qu'il ne soit trop\ntard…
+0x762CD5: Oh non, non, non… J'espère trouver quelqu'un pour\pm'aider avant qu'il ne soit trop\ntard…
 0x762D1F: C'est encore toi !\pLe voleur qui a volé mon bébé est\nrevenu et me l'a rendue !\pJe peux rejouer !\nMerci, merci, merci !\pPrends cet {COLOR}ÉŒuf{COLOR}Ç qu'elle a pondu !\nC'est le minimum.
 0x762E5A: プ+ヨË¿  ÂVeux-tu monter sur Lokhlass ?
 0x762F65: ( é   {RIGHT_ARROW}ぁヨË“ぁヨËÔ bぁヨËÌÉÁMon école m'a dit que c'était trop\ndangereux de venir ici.
 0x762FB1: Voilà ce qui arrive quand on\nn'écoute pas.
-0x762FD6: Fais attention ici.\pIl y a de la lave à nu partout.
-0x763050: Cet endroit est tellement chaud\nqu'il est facile d'y allumer des\nfeux.
-0x7630C8: J'ai conçu tous les ponts moi-même.
+0x762FD6: Fais attention ici.\pIl y a de la lave à nu partout.\n
+0x763050: Cet endroit est tellement chaud qu'il est facile d'y allumer des\nfeux.
+0x7630C8: J'ai conçu tous les ponts moi-même.\n
 0x7630F0: À moi de construire des ponts qui\nrésistent à la chaleur.
 0x763130: ( üÀ  びぅヨËデぅヨËÔ SぅヨËÌÉÁLe fait que tu sois ici signifie que\ntu as obtenu au moins quatre Badges\ld'Arène.
 0x763194: Je n'en attendais pas moins d'un\nDresseur de ton calibre.
 0x7631CD: Un dresseur talentueux comme toi\nest à sa place dans ce volcan.
-0x763209: ( ÉÁ  îぇヨËニぇヨËÔ ゲぇヨËÌÉÁJe me suis isolé dans cette grotte\npour entraîner mon esprit et mon\ncorps.\pHiyah !
-0x763266: Je n'ai pas assez entraîné,\non dirait.
+0x763209: ( ÉÁ  îぇヨËニぇヨËÔ ゲぇヨËÌÉÁJe me suis isolé dans cette grotte pour entraîner mon esprit et mon\ncorps.\pHiyah !
+0x763266: Je n'ai pas assez entraîné, on dirait.
 0x76328A: Je continuerai à m'entraîner.\pPour toujours...
-0x7632FE: Tes mouvements coulaient comme la\nlave.
+0x7632FE: Tes mouvements coulaient comme la lave.
 0x76331B: La lave ici est mon inspiration.
 0x763409: Ils n'étaient pas aussi résistants\nque je le pensais.
 0x763431: Je suis venu ici entraîner mes\nPokémon car ils sont naturellement\lfaibles face au feu.
 0x7634D6: Tu as aussi fait fondre mon cœur.
-0x7634F8: La lave est belle, tu ne trouves\npas ?
+0x7634F8: La lave est belle, tu ne trouves pas ?
 0x763577: {COLOR}ÇMission accomplie.\pOn se replie.
-0x7637DB: {PK}À {PK}Á =ビ œÑÀàÇっÁ フÁJax : {COLOR}ËPas si vite, Ombre !\pRelâche le Sulfura que tu as\ncapturé !
+0x7637DB: {PK}À {PK}Á =ビ œÑÀàÇっÁ フÁJax : {COLOR}ËPas si vite, Ombre ! Relâche le Sulfura que tu as\pcapturé !
 0x7638E1: Étouraptor !
 0x7638F9: Oh…\pTu n'as pas de place dans ton\nequipe pour l'Œuf…
 0x76392F: Raptor !
 0x76445C: Veux-tu que je garde aussi tes\nautres Œufs ?\pJ'en ai {COLOR}É{STR_VAR_1}{COLOR}Ë au total.
 0x7644B7: Très bien, je les garde tous.\nMerci !
-0x7644DE: Je garderai donc tes Œufs pour toi.
+0x7644DE: Je garderai donc tes Œufs pour toi.\n
 0x76450E: Veux-tu un autre Œuf ?\pJ'en ai {COLOR}É{STR_VAR_1}{COLOR}Ë au total.
 0x76454F: En voyageant, tes Pokémon grandissent\navec toi…\pReste toujours lié par l'amitié.\n-Pension Pokémon
-0x7645AD: Parfois, quand un Pokémon mâle et\nfemelle s'aiment beaucoup, ils\npondent un Œuf !\pEt le couple de la Pension est assez\nsympa pour en garder {COLOR}É100{COLOR}Ë pour toi !\pJ'aimerais élever des Pokémon aussi\nbien qu'eux.
+0x7645AD: Parfois, quand un Pokémon mâle et\nfemelle s'aiment beaucoup, ils\lpondent un Œuf !\pEt le couple de la Pension est assez\nsympa pour en garder {COLOR}É100{COLOR}Ë pour toi !\lJ'aimerais élever des Pokémon aussi\pbien qu'eux.\n
 0x7647E0: Je serai là si tu veux m'aider plus\ntard !
 0x76481B: C'est parti !
 0x76482E: Je sens déjà mes petits devenir\nplus forts !
@@ -82,7 +82,7 @@
 0x76501D: ( Ú   {LV}っヨËメっヨËÔ ピっヨËÌÉÁD'après mes calculs, la victoire\nest assurée à 100 % !
 0x765072: Il semble que mes calculs étaient\nfaux.
 0x76509C: Je ferai mieux de les affiner pour\nnotre prochain combat.
-0x765196: De tous mes combats, un ressort au-\ndessus des autres.\pIl faisait une chaleur étouffante et\nmon adversaire venait d'envoyer son\nMotisma-Vent avec un Ballon.\pJusque-là je tenais à peine, mais\nà la vue de ce machin redondant, je\nn'ai pas tenu.\pJe suis tombé dans les pommes et j'ai\nperdu.\pNe sous-estime jamais un {COLOR}ÉMotisma-Vent{COLOR}Ç\navec un {COLOR}ÉBallon{COLOR}Ç !
+0x765196: De tous mes combats, un ressort au-\ndessus des autres.\pIl faisait une chaleur étouffante et\nmon adversaire venait d'envoyer son\lMotisma-Vent avec un Ballon.\pJusque-là je tenais à peine, mais\nà la vue de ce machin redondant, je\ln'ai pas tenu.\lJe suis tombé dans les pommes et j'ai\pperdu.\nNe sous-estime jamais un {COLOR}ÉMotisma-Vent{COLOR}Ç\pavec un {COLOR}ÉBallon{COLOR}Ç !\n
 0x7653BF: Le {STR_VAR_1} s'est enfui.
 0x7655A1: Jax : {COLOR}ËJe ne contrôle plus mon corps !
 0x7655C2: {COLOR}ÇReviens à moi.
@@ -101,9 +101,9 @@
 0x765B7E: Route 17\p{LEFT_ARROW} Route 16\n{RIGHT_ARROW} Ville Portuaire
 0x765BFF: Allez !
 0x76CE9D: Prépare-toi à être secoué, gamin.\pJe viens de rappeler tous les sbires\nau barrage, on contrôle toute cette\lroute maintenant !
-0x76CF22: Wow, mec…\pJe suis peut-être haut dans le ciel,\nmais tu es sur un tout autre plan !
-0x76CFB7: ( k   TUヨËŒVヨËÔ がVヨËÌÉÁJe suis ici depuis des jours et je\nn'arrive pas à attraper quelque\nchose de bien.
-0x76D010: Bon, retour à la pêche alors.
+0x76CF22: Wow, mec…\pJe suis peut-être haut dans le ciel,\nmais tu es sur un tout autre plan !\l
+0x76CFB7: ( k   TUヨËŒVヨËÔ がVヨËÌÉÁJe suis ici depuis des jours et je n'arrive pas à attraper quelque\nchose de bien.
+0x76D010: Bon, retour à la pêche alors.\n
 0x76D037: J'attraperai quelque chose de bien\nun jour. Amuse-toi.
 0x76D073: ( l   ゲVヨËMVヨËÔ  WヨËÌÉÁTu vois ce gars là-haut ? Il pêche\nlà depuis des jours.
 0x76D0C7: On dirait que j'ai perdu. Je devrais\nmieux pêcher.
@@ -116,9 +116,9 @@
 0x76D3AC: L'air est beau, tu ne trouves pas ?
 0x76D3CC: ( じÀ  oYヨËçZヨËÔ びZヨËÌÉÁHyah ! La légende de mon\ninvincibilité commence avec toi !
 0x76D419: La légende de mon invincibilité se\ntermine avec toi !
-0x76D447: Un jour, je serai vraiment\ninvincible !
-0x76D46A: ( バ   ゥZヨËÉaヨËÔ ôaヨËÌÉÁJe ne suis pas très doué en combats\nPokémon…\pQuand je pense à mon futur, je n'ai\npas d'autre choix que me battre !
-0x76D506: Tu vois…\nJe savais que je ne pouvais pas\ngagner.
+0x76D447: Un jour, je serai vraiment invincible !
+0x76D46A: ( バ   ゥZヨËÉaヨËÔ ôaヨËÌÉÁJe ne suis pas très doué en combats\nPokémon…\pQuand je pense à mon futur, je n'ai\npas d'autre choix que me battre !\l
+0x76D506: Tu vois… Je savais que je ne pouvais pas\ngagner.
 0x76D524: Les combats, ce n'est pas pour moi.
 0x76F285: {COLOR}ËVite !\pAttrape-le maintenant !
 0x770AF0: Minus.
@@ -133,16 +133,16 @@
 0x771077: La technologie est incroyable !\pTu peux jouer aux ROM GBA sur ton\nportable et ton ordinateur !
 0x7710C7: Tu n'as pas assez de place dans\nton équipe.
 0x7710F1: Tu as obtenu un {STR_VAR_1} !
-0x77111B: ハÍÔ úÙラËÌÇフÁAs-tu vu les services locaux ?\pLe Centre Pokémon soigne tes\nPokémon gratuitement.\pLa Boutique fournit des objets\nutiles aux dresseurs.
+0x77111B: ハÍÔ úÙラËÌÇフÁAs-tu vu les services locaux ?\nLe Centre Pokémon soigne tes\pPokémon gratuitement.\nLa Boutique fournit des objets\putiles aux dresseurs.\n
 0x7711D6: ハÍÔ nÙラËÌÇフÁCoincée dans les montagnes, notre\nville est assez tranquille.\pPourtant, notre officier de police\nprend son job très au sérieux.
-0x77125E: Voleur : {COLOR}ËCe monstre était terrifiant !\pOn a dû le réveiller pendant notre\ncombat.\p…\pBon… je crois que j'ai fini\nd'entraîner ce Feunard…\pIl est temps de le rendre à son\npropriétaire.
+0x77125E: Voleur : {COLOR}ËCe monstre était terrifiant !\nOn a dû le réveiller pendant notre\pcombat.\n…\pBon… je crois que j'ai fini\pd'entraîner ce Feunard…\nIl est temps de le rendre à son\ppropriétaire.\n
 0x77133A: {COLOR}ÉAlice{COLOR}Ë, la Championne, aime utiliser des\nPokémon de type {COLOR}ÉVol{COLOR}Ë.\pPas ce à quoi on s'attend pour une\nArène ici.
-0x77143D: Bonjour.\pVoudrais-tu un Riolu par hasard ?\pJe l'ai fait éclore d'un œuf et je\nne sais pas quoi en faire.
+0x77143D: Bonjour.\pVoudrais-tu un Riolu par hasard ?\nJe l'ai fait éclore d'un œuf et je\pne sais pas quoi en faire.\n
 0x7714B3: Tu as reçu un Riolu du Vieil\nHomme !
 0x7714DC: S'il te plaît, prends soin de mon\ncher Riolu.
 0x771501: Tu n'es pas obligé de le prendre...
 0x77151E: Comment ça va là-bas ?\pJe dis là-bas, parce que je suis\nlà-haut dans les nuages !
-0x7715A3: Oh, salut, {PLAYER} !\pTa mère m'a dit que tu quittais\nenfin la ville !\pC'est une excellente nouvelle !\pTu peux enfin suivre les traces de\nton père et devenir un grand\nDresseur Pokémon !\pQui sait ? Peut-être que tu\nmaîtriseras Arceus, comme lui…\pLe chemin sera long et ardu, mais je\ncrois que tu y arriveras !\pPrends cet objet pour t'aider.\pC'est une gemme rare qui peut\nbooster une attaque en combat.\pUtilise-la à bon escient.
+0x7715A3: Oh, salut, {PLAYER} !\pTa mère m'a dit que tu quittais\nenfin la ville !\pC'est une excellente nouvelle !\pTu peux enfin suivre les traces de\nton père et devenir un grand\lDresseur Pokémon !\pQui sait ? Peut-être que tu\nmaîtriseras Arceus, comme lui…\lLe chemin sera long et ardu, mais je\pcrois que tu y arriveras !\nPrends cet objet pour t'aider.\lC'est une gemme rare qui peut\pbooster une attaque en combat.\nUtilise-la à bon escient.\p\n\p
 0x771797: Oh, salut, {PLAYER} !\pComment se passe ton voyage ?
 0x7717C1: Hmm…\pOn dirait que tu n'as pas de place\npour mon cadeau.
 0x771A25: Stop !\pOù crois-tu aller ?\pSi tu es prêt pour la Grotte\nStalactite, prouve-le en livrant le\l{COLOR}Écolis de Log{COLOR}Ë.
@@ -151,8 +151,8 @@
 0x771DE5: Ô ‘♀ンËÌÁÈNëラËハÍÔ \nëラËÌÉフÁSalut, étranger !\pAttention en traversant la Grotte\nStalactite.\pElle n'a pas l'air grande, mais elle\nest plus vaste qu'on ne le croit !
 0x771EC8: Mon Rattata est toujours le meilleur.
 0x771EE7: Je vais rendre mon Rattata encore\nplus fort !
-0x771F43: Mes Pokémon resteront toujours\nmignons !
-0x772093: 9Quand les Pokémon évoluent, ils\ndeviennent plus forts.\pMais il y a un avantage à ne pas\nfaire évoluer tout de suite.\pUn Pokémon qui peut encore évoluer\npeut utiliser un {COLOR}ÉÉvoluroc{COLOR}Ë pour\nêtre plus dur à battre.\pJ'en ai un en plus, prends-le.
+0x771F43: Mes Pokémon resteront toujours mignons !
+0x772093: 9Quand les Pokémon évoluent, ils\ndeviennent plus forts.\pMais il y a un avantage à ne pas\nfaire évoluer tout de suite.\pUn Pokémon qui peut encore évoluer\npeut utiliser un {COLOR}ÉÉvoluroc{COLOR}Ë pour\lêtre plus dur à battre.\pJ'en ai un en plus, prends-le.\n
 0x77218A: Fais tenir un {COLOR}ÉÉvoluroc{COLOR}Ë à un Pokémon\nqui peut encore évoluer pour doubler\lses défenses.
 0x7721E8: Là où le vent est glacé, mes mains\nle sont aussi.\pVeux-tu que j'apprenne {COLOR}ÉPoing\nGlace{COLOR}Ë à un de tes Pokémon ?\pJe demande {COLOR}É2 {STR_VAR_1}{COLOR}Ë pour partager\nmes mains gelées.
 0x7722F2: Sbire : {COLOR}ËTu as mal entendu, peut-être.
@@ -166,7 +166,7 @@
 0x772485: Tu n'as pas assez de\n{COLOR}É{STR_VAR_1}{COLOR}Ë.\pJe ne peux pas partager mes mains\ngelées gratuitement…
 0x7724DC: La CT que je t'ai donnée contient\n{COLOR}ÉVoile Aurore{COLOR}Ë.\pSon effet ressemble à Mur Lumière et\nProtection combinés.\pLe seul hic : utilisable seulement\nsous la Grêle.
 0x77258B: Tant pis pour toi.
-0x77262A: ¿iユË¿  áèっÀ ォÁèっぅÏÀヌびタラËニぇâÂÂÔ L{SUPER_ER}ラËÌÉÁMon frère !\pAide-moi s'il te plaît !\pJe le gardais quand il a dévalé la\nmontagne !\pS'il te plaît, aide-moi à le\nretrouver !
+0x77262A: ¿iユË¿  áèっÀ ォÁèっぅÏÀヌびタラËニぇâÂÂÔ L{SUPER_ER}ラËÌÉÁMon frère ! Aide-moi s'il te plaît !\pJe le gardais quand il a dévalé la\pmontagne !\nS'il te plaît, aide-moi à le\pretrouver !
 0x7726C1: Jax : {COLOR}Ë{PLAYER} !\pJ'ai volé ici dès que la barrière est\ntombée.\pQue s'est-il passé ?\p…\pLes Ombres se sont encore échappées…
 0x772790: Salle de pause
 0x7727B8: 9ÍÔ KúラËÌÉÁフÁVille de Fallshore abrite l'{COLOR}ÉInverse\nBattle House{COLOR}Ë et le {COLOR}ÉQG des\lMissions{COLOR}Ë.\pSympa, non ?\nC'est trop cool de vivre ici !
@@ -184,7 +184,7 @@
 0x772C13: Cette CT est mon remerciement !\nElle contient {COLOR}ÉRetour{COLOR}Ç !\pUne attaque qui devient plus forte\nplus ton Pokémon t'aime.\pParfaite pour quelqu'un d'aussi\nsympa que toi !
 0x772CC6: Voici la personne incroyable qui a\nsauvé mon frère !\pMerci encore !
 0x772E62: Snif…\pTu n'es pas un Pokémon.\pJe pensais qu'un Pokémon allait me\nmanger.
-0x7730B3: ( ぞÀ  PぃラËÒぅラËÔ ぢぅラËÌÉÁCourir pieds nus dans une grotte\nfroide, c'est parfait pour rester\nalerte.
+0x7730B3: ( ぞÀ  PぃラËÒぅラËÔ ぢぅラËÌÉÁCourir pieds nus dans une grotte froide, c'est parfait pour rester\nalerte.
 0x77310D: Aucune course n'aurait pu me\npréparer à toi !
 0x773142: Je continuerai à courir et à\nsupporter la douleur.
 0x77317A: Un épisode assourdissant d'Unys\nMusical Pokémon passe.\pRegarde trop longtemps et ton\ncerveau grille.
@@ -196,7 +196,7 @@
 0x77355B: Tu ne pensais pas passer aussi\nfacilement, si ?
 0x773596: Bon, je ne te barrerai plus le\npassage.
 0x7735C5: Je veux rentrer chez moi.\pJ'ai fui ma méchante sœur, mais elle\nme manque maintenant…
-0x773613: Ramène-moi à {COLOR}ÉVille Blizzard{COLOR}Ë.\pJe te suivrai là-bas.
+0x773613: Ramène-moi à {COLOR}ÉVille Blizzard{COLOR}Ë.\nJe te suivrai là-bas.\p
 0x77365A: Tu vois ces rochers au mur ?\pAvec un Pokémon connaissant\n{COLOR}ÉEscalade{COLOR}Ë, tu peux les gravir !
 0x773719: Na na na na na na na…\nIl a perdu !
 0x77373A: J'aime faire comme si j'étais fait\npour mieux que rester planté\lici dans cette grotte.
@@ -211,11 +211,11 @@
 0x775D84: {COLOR}ËTrès bien, alors.\nJe vais le faire moi-même.
 0x775DA6: Sbire : {COLOR}ËNon !\nMon Sepiatop !
 0x775DBE: {RIVAL} : {COLOR}Ë{STR_VAR_1} !\nFonce et frappe !
-0x775DF7: Sbire : {COLOR}ËD'accord, d'accord, j'abandonne !\nJe te laisse passer !\pPitié !\nNe me fais plus de mal ! S'il te\nplaît !
+0x775DF7: Sbire : {COLOR}ËD'accord, d'accord, j'abandonne ! Je te laisse passer !\nPitié !\pNe me fais plus de mal ! S'il te\nplaît !
 0x775E6C: {COLOR}Ë{STR_VAR_1} ! Reviens !
 0x775E7B: {COLOR}ËJe file d'ici maintenant,\n{PLAYER}.\pJe suis sûr que tu peux te gérer\nseul à partir de maintenant.\pSi tu as des ennuis, utilise tes\nPokémon.
-0x775F18: {COLOR}ËOh, une dernière chose.\pDès que tu rentres, on va se battre.\pTu m'as impressionné tout à l'heure,\net je veux voir comment je m'en\nsors face à toi.\pD'ici là, ne te fatigue\npas trop.
-0x776071: Ô ♀タラËÌÁÁJ'aimerais qu'on ait nos propres\nPokémon.\pJe m'ennuie toujours à la maison.
+0x775F18: {COLOR}ËOh, une dernière chose.\pDès que tu rentres, on va se battre.\nTu m'as impressionné tout à l'heure,\pet je veux voir comment je m'en\nsors face à toi.\lD'ici là, ne te fatigue\ppas trop.\n
+0x776071: Ô ♀タラËÌÁÁJ'aimerais qu'on ait nos propres Pokémon.\pJe m'ennuie toujours à la maison.
 0x7760B6: Wahh !\pCe Pokémon m'a fait mal !
 0x7760E3: Sandslash: {COLOR}ÉSlash!
 0x7760F8: Le Pokémon semble se diriger vers la\n{COLOR}ÉGrotte Stalactite.
@@ -229,14 +229,14 @@
 0x77653D: Tu vas t'amuser ici.\pCet endroit est comme un labyrinthe.
 0x7765A0: Hmm ?\nQu'est-ce que je fais ?
 0x7765B6: Désolé !\nJ'étais possédé !
-0x7765F5: Hé, attends !\nPourquoi te presser ? Pourquoi\ncourir ?
+0x7765F5: Hé, attends ! Pourquoi te presser ? Pourquoi\ncourir ?
 0x776623: Parfois, tu peux trouver des trucs\nau sol.\pJe cherche ce que j'ai fait tomber.\nTu peux m'aider ?
-0x776686: Ouf...\nJe suis sorti de la Forêt Obscure\nsain et sauf.\lJ'ai même réussi à attraper des\lPokémon flippants là-bas !
+0x776686: Ouf... Je suis sorti de la Forêt Obscure\nsain et sauf.\lJ'ai même réussi à attraper des\lPokémon flippants là-bas !
 0x776862: {COLOR}ËSnif…\pJe ne crois pas que ce soit le bon\nchemin pour rentrer…
-0x7768A4: "Qui construirait une ville au\nsommet d'une montagne gelée ?", tu te\ldemandes.\pEh bien, il y a environ 20 ans, un\ngroupe de Gardiens d'Oiseaux s'est\lréuni et a décidé qu'il lui fallait\lun endroit en hauteur pour entraîner\nses Pokémon.\pAvec l'aide d'un type nommé\n{COLOR}ÉAros{COLOR}Ë et de son Arceus, ils ont\lbâti cette ville en moins d'un an !\pÇa m'étonne de voir ce que les gens\net les Pokémon peuvent accomplir\len travaillant ensemble.\pDis…\pTon visage me rappelle un peu le\nsien…
+0x7768A4: "Qui construirait une ville au sommet d'une montagne gelée ?", tu te\ndemandes.\lEh bien, il y a environ 20 ans, un\pgroupe de Gardiens d'Oiseaux s'est\nréuni et a décidé qu'il lui fallait\lun endroit en hauteur pour entraîner\lses Pokémon.\pAvec l'aide d'un type nommé\n{COLOR}ÉAros{COLOR}Ë et de son Arceus, ils ont\lbâti cette ville en moins d'un an !\pÇa m'étonne de voir ce que les gens\net les Pokémon peuvent accomplir\len travaillant ensemble.\pDis…\pTon visage me rappelle un peu le\nsien…
 0x776AF5: Je t'attendais…
 0x776B0E: Toi non ?\nMoi si.
-0x7787F5: Pardon, Dresseur, pourrais-tu me\nprêter main-forte, s'il te plaît ?\pMa famille et moi préparons bientôt\nun grand festin, et il nous faut\nbeaucoup de miel pour le repas.\pJ'ai déjà recueilli sept pots,\nmais il m'en faut au moins trois de\nplus.\pOn dit qu'on peut en trouver sur des\nApitrini sauvages, mais j'ai peu de\lchance d'en attraper.\pAlors, qu'en dis-tu ?\pPeux-tu attraper trois Apitrini et\nme donner leur miel, s'il te plaît ?
+0x7787F5: Pardon, Dresseur, pourrais-tu me prêter main-forte, s'il te plaît ?\nMa famille et moi préparons bientôt\pun grand festin, et il nous faut\nbeaucoup de miel pour le repas.\lJ'ai déjà recueilli sept pots,\pmais il m'en faut au moins trois de\nplus.\pOn dit qu'on peut en trouver sur des\nApitrini sauvages, mais j'ai peu de\lchance d'en attraper.\pAlors, qu'en dis-tu ?\pPeux-tu attraper trois Apitrini et\nme donner leur miel, s'il te plaît ?
 0x778982: Dommage.\pJe vais devoir continuer à chercher\nmoi-même alors.
 0x7789B9: Génial !\nMerci d'accepter d'aider !\pOn trouve des Apitrini partout au\nParadis Floral, mais ils apparaissent\lplus souvent dans les {COLOR}Éfleurs\lbleues{COLOR}Ç.\pEt rappelle-toi, il me faut au moins\n{COLOR}É3 pots de Miel{COLOR}Ç.
 0x778A80: Tu les as ! Merci infiniment !\nLaisse-moi te les prendre.
@@ -244,7 +244,7 @@
 0x778ADA: Pour ton aide, prends cette CT en\nrécompense. J'insiste !
 0x778BAF: Ivory : {COLOR}ÇJe suis désolée, mais\nmalheureusement je ne pourrai pas.\pC'est trop vital pour nos plans.\pEt puis, je ne vais pas m'abaisser\nà écouter quelqu'un\lcomme toi.
 0x778C62: Jax : {COLOR}ËJe ne te laisse pas partir\navant que ce Pokémon soit libre.\pPrépare-toi pour un combat !
-0x778CB6: Ivory : {COLOR}ÇTrès bien.\pJe vais exaucer ta petite requête.\pMais sache que quand tu perdras, je\nferai réduire ton corps en cendres\npar mes Pokémon !\pAllez ! Incine...
+0x778CB6: Ivory : {COLOR}ÇTrès bien. Je vais exaucer ta petite requête.\pMais sache que quand tu perdras, je\pferai réduire ton corps en cendres\npar mes Pokémon !\pAllez ! Incine...
 0x778D3F: Marlon : {COLOR}ËIvory ! Attends !
 0x778D57: Marlon : {COLOR}ËIvory !\pTu n'as pas le temps d'affronter ce\nDresseur maintenant.\pOn a un planning serré.\pPars, je le retiendrai pendant que tu\nfuis.
 0x778DF2: Ivory : {COLOR}ÇOn y va, Guerriers de l'Ombre.

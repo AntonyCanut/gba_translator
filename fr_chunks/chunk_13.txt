@@ -1,39 +1,39 @@
-0x416B86: Courrier envoyé sur ton\nPC.{PAUSE_UNTIL_PRESS}
-0x416BA6: La Boîte Mail du PC est\npleine.{PAUSE_UNTIL_PRESS}
+0x416B86: Courrier envoyé sur ton PC.{PAUSE_UNTIL_PRESS}
+0x416BA6: La Boîte Mail du PC est pleine.{PAUSE_UNTIL_PRESS}
 0x416BC3: Retirer le Courrier effacera\nle message. D'accord ?
-0x416BFB: Retire le Courrier avant de\nfaire tenir un objet.\n{PAUSE_UNTIL_PRESS}
+0x416BFB: Retire le Courrier avant de faire tenir un objet.\n{PAUSE_UNTIL_PRESS}
 0x416C2A: {STR_VAR_1} tient\n{STR_VAR_2}.{PAUSE_UNTIL_PRESS}
 0x416C49: {STR_VAR_1} tient déjà\n{STR_VAR_2}.\pÉchanger les deux\nobjets ?
 0x416C8F: {STR_VAR_1} ne tient rien.\n{PAUSE_UNTIL_PRESS}
 0x416CAC: Reçu {STR_VAR_2}\nde {STR_VAR_1}.{PAUSE_UNTIL_PRESS}
 0x416CC7: Courrier retiré du Pokémon.\n{PAUSE_UNTIL_PRESS}
 0x416CEA: {STR_VAR_2} retiré, remplacé\npar {STR_VAR_1}.{PAUSE_UNTIL_PRESS}
-0x416D17: Ce Pokémon tient un objet.\nIl ne peut pas porter de\nCourrier.\n{PAUSE_UNTIL_PRESS}
+0x416D17: Ce Pokémon tient un objet. Il ne peut pas porter de Courrier.\n{PAUSE_UNTIL_PRESS}
 0x416D4F: Courrier transféré de la\nBoîte Mail.{PAUSE_UNTIL_PRESS}
-0x416D78: {STR_VAR_1} est plein.\nObjet du Pokémon non\nretiré.\n{PAUSE_UNTIL_PRESS}
+0x416D78: {STR_VAR_1} est plein. Objet du Pokémon non retiré.\n{PAUSE_UNTIL_PRESS}
 0x416DB3: {STR_VAR_1} a appris\n{STR_VAR_2} !
-0x416DC2: {STR_VAR_1} et {STR_VAR_2}\nne sont pas compatibles.\p{STR_VAR_2}\nne peut pas être\napprise.{PAUSE_UNTIL_PRESS}
-0x416DF7: {STR_VAR_1} veut apprendre la\ncapacité {STR_VAR_2}.\p\n{STR_VAR_1} connaît déjà\nquatre capacités.\p\nOublier une capacité pour\napprendre {STR_VAR_2} ?
+0x416DC2: {STR_VAR_1} et {STR_VAR_2} ne sont pas compatibles.\n{STR_VAR_2}\pne peut pas être\napprise.{PAUSE_UNTIL_PRESS}
+0x416DF7: {STR_VAR_1} veut apprendre la capacité {STR_VAR_2}.\n{STR_VAR_1} connaît déjà\pquatre capacités.\n\pOublier une capacité pour\napprendre {STR_VAR_2} ?
 0x416E6B: Arrêter d'enseigner\n{STR_VAR_2} ?
 0x416E84: {STR_VAR_1} n'a pas appris\n{STR_VAR_2}.{PAUSE_UNTIL_PRESS}
-0x416EA4: Quelle capacité oublier ?\n{PAUSE_UNTIL_PRESS}
+0x416EA4: Quelle capacité oublier ? {PAUSE_UNTIL_PRESS}
 0x416F10: {STR_VAR_1} connaît déjà\n{STR_VAR_2}.{PAUSE_UNTIL_PRESS}
-0x416F27: PV de {STR_VAR_1} restaurés de\n{STR_VAR_2} point(s).\n{PAUSE_UNTIL_PRESS}
+0x416F27: PV de {STR_VAR_1} restaurés de {STR_VAR_2} point(s).\n{PAUSE_UNTIL_PRESS}
 0x416F4E: {STR_VAR_1} guéri du poison.\n{PAUSE_UNTIL_PRESS}
 0x416F6F: {STR_VAR_1} guéri de la paralysie.\n{PAUSE_UNTIL_PRESS}
-0x416F8C: {STR_VAR_1} s'est réveillé.\n{PAUSE_UNTIL_PRESS}
-0x416F9A: Brûlure de {STR_VAR_1} guérie.\n{PAUSE_UNTIL_PRESS}
-0x416FB2: {STR_VAR_1} a dégelé.\n{PAUSE_UNTIL_PRESS}
+0x416F8C: {STR_VAR_1} s'est réveillé. {PAUSE_UNTIL_PRESS}
+0x416F9A: Brûlure de {STR_VAR_1} guérie. {PAUSE_UNTIL_PRESS}
+0x416FB2: {STR_VAR_1} a dégelé. {PAUSE_UNTIL_PRESS}
 0x416FC7: PP restaurés.{PAUSE_UNTIL_PRESS}
-0x416FED: {STR_VAR_1} est en pleine forme.\n{PAUSE_UNTIL_PRESS}
-0x417002: PP de {STR_VAR_1} augmentés.\n{PAUSE_UNTIL_PRESS}
+0x416FED: {STR_VAR_1} est en pleine forme. {PAUSE_UNTIL_PRESS}
+0x417002: PP de {STR_VAR_1} augmentés. {PAUSE_UNTIL_PRESS}
 0x417017: {STR_VAR_1} monte au\nN. {STR_VAR_2}.
-0x417032: Stat de base {STR_VAR_2} de\n{STR_VAR_1} augmentée.\n{PAUSE_UNTIL_PRESS}
+0x417032: Stat de base {STR_VAR_2} de {STR_VAR_1} augmentée.\n{PAUSE_UNTIL_PRESS}
 0x417052: {STR_VAR_1} n'est plus confus.\n{PAUSE_UNTIL_PRESS}
 0x417075: {STR_VAR_1} n'est plus amoureux.\n{PAUSE_UNTIL_PRESS}
 0x417094: C'est ton seul Pokémon\npour combattre.
 0x4170B9: Ce Pokémon ne peut pas être\ntroqué maintenant.
-0x4170DE: Un Œuf ne peut pas être troqué\nmaintenant.
+0x4170DE: Un Œuf ne peut pas être troqué maintenant.
 0x4170FC: Le Pokémon de l'autre\nDresseur ne peut pas être troqué.
 0x41712D: L'autre Dresseur ne peut pas\naccepter ce Pokémon.
 0x417161: Tu ne peux pas échanger avec ce\nDresseur maintenant.
@@ -76,7 +76,7 @@
 0x417445: INAPTE !
 0x41744F: APPRISE
 0x417457: CHEN : Il faut bien connaître\nses Pokémon.\p
-0x417494: Liste de tes Pokémon,\n{PLAYER}.\pOuvre-la pour voir les\ncapacités de tes Pokémon.\p\nChoisis un Pokémon ici si tu\nveux utiliser un objet.\n{PAUSE_UNTIL_PRESS}
+0x417494: Liste de tes Pokémon, {PLAYER}. Ouvre-la pour voir les\ncapacités de tes Pokémon.\p\nChoisis un Pokémon ici si tu\pveux utiliser un objet.\n{PAUSE_UNTIL_PRESS}
 0x417533: Coupe un arbre ou de l'herbe.
 0x417548: Vol vers une ville connue.
 0x41755D: Voyage sur l'eau.
@@ -93,7 +93,7 @@
 0x417674: Attaque
 0x41767B: Défense
 0x41768D: Vitesse
-0x417696: Ce Pokémon ne peut participer.\n{PAUSE_UNTIL_PRESS}
+0x417696: Ce Pokémon ne peut participer. {PAUSE_UNTIL_PRESS}
 0x4176B8: Annuler la participation ?
 0x4176CF: Annuler le combat ?
 0x4176E2: Éteindre
@@ -104,15 +104,15 @@
 0x41772A: Ranger des objets dans le PC.
 0x417741: Sortir des objets du PC.
 0x417774: Aucun objet.{PAUSE_UNTIL_PRESS}
-0x41778A: Plus de place dans le SAC.
+0x41778A: Plus de place dans le SAC.\n
 0x4177AC: Retirer combien de\n{STR_VAR_1} ?
 0x4177D8: Lire
 0x4177DD: Mettre au Sac
 0x4177E9: Donner
-0x4177EE: Aucun Courrier ici.\n{PAUSE_UNTIL_PRESS}
+0x4177EE: Aucun Courrier ici. {PAUSE_UNTIL_PRESS}
 0x417806: Que faire du Courrier de\n{STR_VAR_1} ?
 0x417830: Le message sera perdu.\nEst-ce OK ?
-0x417858: Le SAC est plein.\n{PAUSE_UNTIL_PRESS}
+0x417858: Le SAC est plein. {PAUSE_UNTIL_PRESS}
 0x41786B: Courrier rendu au SAC,\nmessage effacé.{PAUSE_UNTIL_PRESS}
 0x4178A7: Retirer\nObjet
 0x4178B5: Retirer

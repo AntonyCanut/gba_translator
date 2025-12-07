@@ -54,7 +54,7 @@
 0x966632: L'herbe recouvre le champ.
 0x966650: La brume tourbillonne sur le champ.
 0x966674: Le champ devient étrange.
-0x96668E: {B_SCR_ACTIVE_NAME_WITH_PREFIX} chauffe son bec !
+0x96668E: {B_SCR_ACTIVE_NAME_WITH_PREFIX} chauffe son bec !\n
 0x9666AE: {B_SCR_ACTIVE_NAME_WITH_PREFIX} pose un\nPyro-Tacle !
 0x966B45: {B_ATK_NAME_WITH_PREFIX} subit des dégâts du\nPico-Défense de {B_DEF_NAME_WITH_PREFIX} !
 0x966B67: {B_EFF_NAME_WITH_PREFIX} est\nempoisonné par Pics Toxik !
@@ -66,7 +66,7 @@
 0x966C33: Le {B_LAST_ITEM} de {B_DEF_NAME_WITH_PREFIX}\na été volé par {B_ATK_ABILITY} !
 0x966C4D: Le {B_LAST_ITEM} de {B_DEF_NAME_WITH_PREFIX}\na été volé !
 0x966C61: {B_ATK_NAME_WITH_PREFIX} sacrifie des PV\npour booster son attaque !
-0x966C8B: {B_ATK_NAME_WITH_PREFIX} perd quelques PV !
+0x966C8B: {B_ATK_NAME_WITH_PREFIX} perd quelques PV !\n
 0x966CA3: {B_ATK_NAME_WITH_PREFIX} vole et mange\nle {B_LAST_ITEM} adverse !
 0x967539: Le brouillard est dense...
 0x96754C: Le Champ Herbu restaure\nla santé de {B_ATK_NAME_WITH_PREFIX} !
@@ -76,8 +76,8 @@
 0x9675DC: L'Anti-Soin de {B_ATK_NAME_WITH_PREFIX}\nse dissipe !
 0x9675F6: L'Embargo de {B_ATK_NAME_WITH_PREFIX}\nprend fin !
 0x96760A: Les dimensions tordues redeviennent\nnormales !
-0x967635: Effets de Tourniquet\nterminés !
-0x967655: Effets de Lance-Boue\nterminés !
+0x967635: Effets de Tourniquet terminés !
+0x967655: Effets de Lance-Boue terminés !
 0x967673: Zone Étrange cesse, Déf. et Déf. Spé\nredeviennent normales !
 0x9676C0: Zone Magique cesse, les objets\nrefonctionnent !
 0x967701: Gravité redevient normale !
@@ -95,7 +95,7 @@
 0x96BE88: {B_ATK_NAME_WITH_PREFIX} s'enveloppe\nd'un air glacial !
 0x96BEAB: {B_ATK_NAME_WITH_PREFIX} disparaît\ninstantanément !
 0x96BEC2: {B_ATK_NAME_WITH_PREFIX} se concentre\nintensément !
-0x96BEDD: {B_ATK_NAME_WITH_PREFIX} se consume !
+0x96BEDD: {B_ATK_NAME_WITH_PREFIX} se consume !\n
 0x96BEF3: {B_ATK_NAME_WITH_PREFIX} est retourné\nà {STRING}ぐ !
 0x96BF07: {B_ATK_NAME_WITH_PREFIX} dissipe le brouillard\népais avec {B_CURRENT_MOVE} !
 0x96BF2A: {B_ATK_NAME_WITH_PREFIX} vole\nles boosts de {B_DEF_NAME_WITH_PREFIX} !

@@ -61,30 +61,30 @@
 0xA4B95A: {UNKNOWN_STR} a trouvé et rangé\nun {B_LAST_ITEM} dans le Sac !
 0xA4B981: {UNKNOWN_STR} a trouvé et rangé\nun {B_LAST_ITEM} dans le Cube !
 0xA4B9A9: {B_PLAYER_NAME} ramasse\nun {B_LAST_ITEM} !
-0xA4B9BE: {UNKNOWN_STR} semble tenir le\n{B_LAST_ITEM}.\pPrendre le {B_LAST_ITEM} ?
+0xA4B9BE: {UNKNOWN_STR} semble tenir le\n{B_LAST_ITEM}.\pPrendre le {B_LAST_ITEM} ?\n
 0xA4BA06: Un {B_LAST_ITEM} retiré à\n{UNKNOWN_STR} et rangé dans le Sac.
 0xA4BA36: Un {B_LAST_ITEM} retiré à\n{UNKNOWN_STR} et rangé dans le Cube.
 0xA4BA67: {B_DEF_NAME_WITH_PREFIX} invoque\nun autre {UNKNOWN_STR} !
-0xA4BA7F: Les stats de {B_ATK_NAME_WITH_PREFIX}\naugmentent !
+0xA4BA7F: Les stats de {B_ATK_NAME_WITH_PREFIX} augmentent !
 0xA4BA90: {B_TRAINER1_CLASS} {B_TRAINER1_NAME} va\nenvoyer un nouveau Pokémon.\p{B_PLAYER_NAME} change-t-il\nde Pokémon ?
 0xA4BAD2: {B_EFF_NAME_WITH_PREFIX} régresse en\n{UNKNOWN_STR} !
 0xA4BAEB: {B_ATK_NAME_WITH_PREFIX} régresse et\noublie son attaque !
 0xA4BB20: Stats et statut principal de\n{B_EFF_NAME_WITH_PREFIX} réinitialisés !
 0xA4BB4A: {B_SCR_ACTIVE_NAME_WITH_PREFIX} apparaît en\ntype {UNKNOWN_STR} !
 0xA4BB65: {B_SCR_ACTIVE_NAME_WITH_PREFIX} apparaît en\ntype {UNKNOWN_STR} et {PLAYER} !
-0xA4BB88: Des émotions négatives emplissent\nl'air !
+0xA4BB88: Des émotions négatives emplissent l'air !
 0xA4BBA8: {B_ATK_NAME_WITH_PREFIX} est\ntourmenté par les émotions !
 0xA4BBD2: Vent Arrière a soufflé derrière\nles Pokémon Vol !
 0xA4BC03: {B_SCR_ACTIVE_NAME_WITH_PREFIX} lévite grâce à\nl'électromagnétisme !
 0xA4BC2B: Les dimensions sont tordues\nà jamais !\pLes plus lents agiront toujours\navant !
-0xA4BC7A: Les Pokémon lourds sont avantagés !\pPlus ils sont lourds, plus ils\niront vite !
-0xA4BCD0: Une violente tempête de sable\nsoulève !
-0xA4BCEC: Une violente tempête de sable\nfait rage.
+0xA4BC7A: Les Pokémon lourds sont avantagés !\nPlus ils sont lourds, plus ils\piront vite !\n
+0xA4BCD0: Une violente tempête de sable soulève !
+0xA4BCEC: Une violente tempête de sable fait rage.
 0xA4BD0B: {B_ATK_NAME_WITH_PREFIX} est fouetté par\nla tempête de sable !
 0xA4BD34: Un voile spectral recouvre le\nterrain !\pLes Spectre prennent demi-dégâts\nà pleine vie !
 0xA4BD98: Seuls les Spectre peuvent poser\nRune Protect sous le voile !
 0xA4BDDC: Seuls les Spectre peuvent créer\nClonage sous le voile !
-0xA4BE21: Des farfadets virevoltent sur\nle terrain !
+0xA4BE21: Des farfadets virevoltent sur le terrain !
 0xA4BE45: Les farfadets ont augmenté la\n{UNKNOWN_STR} de {B_SCR_ACTIVE_NAME_WITH_PREFIX} !
 0xA4BE6E: Un arc-en-ciel couvre tout le\nterrain !\pLes effets secondaires des attaques\nDragon sont doublés !
 0xA4BEF1: Mais ce type d'attaque est interdit\ndans ce combat !
@@ -93,20 +93,20 @@
 0xA4BF8F: Énergie Dynamax accumulée\nautour de toi !
 0xA4BFB3: {B_SCR_ACTIVE_NAME_WITH_PREFIX} crée un clone\nDynamax !
 0xA4BFE3: {B_SCR_ACTIVE_NAME_WITH_PREFIX} n'est plus\nen Dynamax !
-0xA4BFFE: {B_ATK_NAME_WITH_PREFIX} secoue la tête.\pImpossible d'utiliser\ncette capacité…
+0xA4BFFE: {B_ATK_NAME_WITH_PREFIX} secoue la tête.\nImpossible d'utiliser\pcette capacité…\n
 0xA4C037: L'attaque est bloquée par le\npouvoir Dynamax !
 0xA4C069: L'objet est bloqué par le\npouvoir Dynamax !
 0xA4C097: {B_SCR_ACTIVE_NAME_WITH_PREFIX} semble\ngéant !
 0xA4C0B1: Une tempête se prépare au-dessus.
-0xA4C0D4: {B_SCR_ACTIVE_NAME_WITH_PREFIX} désespère !
-0xA4C0ED: {B_SCR_ACTIVE_NAME_WITH_PREFIX} désespère !\pSes attaques deviennent plus\nagressives !
+0xA4C0D4: {B_SCR_ACTIVE_NAME_WITH_PREFIX} désespère !\n
+0xA4C0ED: {B_SCR_ACTIVE_NAME_WITH_PREFIX} désespère !\nSes attaques deviennent plus\pagressives !\n
 0xA4C12F: Une barrière mystérieuse apparaît\ndevant {B_SCR_ACTIVE_NAME_WITH_PREFIX}\let le protège !
 0xA4C17F: Mais la barrière mystérieuse a\nprotégé {B_DEF_NAME_WITH_PREFIX}\ldes impacts !
 0xA4C1C5: La barrière mystérieuse qui\nprotégeait {B_SCR_ACTIVE_NAME_WITH_PREFIX}\la disparu !
 0xA4C20B: {B_SCR_ACTIVE_NAME_WITH_PREFIX} annule les\nchangements de stats et talents\ldes autres Pokémon !
 0xA4C249: La tempête au-dessus de toi\nrenforce !
 0xA4C279: La tempête devient encore\nplus forte !
-0xA4C29D: La tempête devient intenable !
+0xA4C29D: La tempête devient intenable !\n
 0xA4C2CB: {B_PLAYER_NAME} est expulsé du\ncombat !
 0xA4C2EB: {PLAY_SE}Ù {RIVAL} a disparu\nquelque part…\p
 0xA4C30A: FばTu es défié par\n{B_TRAINER1_CLASS} {B_TRAINER1_NAME} et\l{B_TRAINER2_LOSE_TEXT} {B_TRAINER2_WIN_TEXT} !\p
@@ -141,12 +141,12 @@
 0xA4C659: adverse
 0xA4C666: ton
 0xA4C66B: Ton
-0xA4C670: Tu gagnes ¥{UNKNOWN_STR} !
+0xA4C670: Tu gagnes ¥{UNKNOWN_STR} !\n
 0xA4C689: Tu n'as plus de Pokémon\nen état de se battre !\p
-0xA4C6B3: Panique ! Tu perds ¥{UNKNOWN_STR}…\p… … … …\pTu es submergé par la défaite !{PAUSE_UNTIL_PRESS}
+0xA4C6B3: Panique ! Tu perds ¥{UNKNOWN_STR}…\p… … … …\pTu es submergé par la défaite !{PAUSE_UNTIL_PRESS}\n
 0xA4C6FD: Tu n'as plus de Pokémon\nen état de se battre !\pTu perds contre\n{B_TRAINER1_CLASS} {B_TRAINER1_NAME} !{PAUSE_UNTIL_PRESS}
-0xA4C740: Tu paies ¥{UNKNOWN_STR} en récompense…\p… … … …\pTu es submergé par la défaite !{PAUSE_UNTIL_PRESS}
-0xA4C790: Tu es submergé par la défaite !{PAUSE_UNTIL_PRESS}
+0xA4C740: Tu paies ¥{UNKNOWN_STR} en récompense…\n… … … …\pTu es submergé par la défaite !{PAUSE_UNTIL_PRESS}\p\n
+0xA4C790: Tu es submergé par la défaite !{PAUSE_UNTIL_PRESS}\n
 0xA4C86D: {RIVAL} est faible !\nLance une Ball maintenant !
 0xA4C898: Équipe de {B_LINK_OPPONENT1_NAME} 
 0xA4C8D2: Le reste de ton équipe gagne de\nl'EXP grâce au Multi Exp !
@@ -154,7 +154,7 @@
 0xA4C91F: Pas possible ! Viser est impossible\navec deux Pokémon !{PAUSE_UNTIL_PRESS}
 0xA4C962: Pas possible ! Impossible de viser\nun Pokémon hors de vue !{PAUSE_UNTIL_PRESS}
 0xA4C9AB: Pas possible ! La Ball doit être\nlancée par ton premier Pokémon !{PAUSE_UNTIL_PRESS}
-0xA4C9EC: Tu ne peux pas encore lancer de\nPoké Ball !{PAUSE_UNTIL_PRESS}
+0xA4C9EC: Tu ne peux pas encore lancer de Poké Ball !{PAUSE_UNTIL_PRESS}
 0xA4CA0F: Pas possible !\nLe Pokémon ne peut pas être capturé !{PAUSE_UNTIL_PRESS}
 0xA4CA3C: Abandonner le match et quitter\nmaintenant ?
 0xA4CA6E: Es-tu sûr de vouloir fuir ?
@@ -214,10 +214,10 @@
 0xA4CD94: -- Vitesse ennemis
 0xA4CDA2: Ignore talent ennemi
 0xA4CDB5: Passe Protection
-0xA4CDC7:  MAUVAIS TYPE DE SAUVEGARDE !\nPassez en Flash 128k.\pSi vous utilisez VBA, passez à\nl'excellent {COLOR}ÉmGBA{COLOR}Á.\pSinon, suivez ces étapes :\p{COLOR}ÇVBA{COLOR}Á : Options > Emulator >\nSave Type > Flash 128K.\pFermez et relancez l'émulateur.\p{COLOR}Ç3DS{COLOR}Á : Dans New Super Ultimate VC\nInjector 3DS, définissez {COLOR}ÉROM Save Type{COLOR}Á\nsur {COLOR}ÉFlash 1Mbit (Macronix, ID: 0x09C2)\n+ RTC{COLOR}Á.\pL'option d'injection doit être\n{COLOR}ÉGBA Virtual Console{COLOR}Á.\pSi votre émulateur n'est pas listé,\nchangez d'émulateur.
-0xA4D0BF: ATTENTION !\pL'heure du système est illisible.\pActivez l'horloge RTC et vérifiez\nl'heure.
-0xA4D138: ATTENTION !\pL'heure du système est illisible.\pActivez la RTC et vérifiez l'heure.\pSi vous utilisez VBA, passez à\n{COLOR}ÉmGBA{COLOR}Á.\pSinon, suivez : Options > Emulator >\nReal Time Clock.\pFermez et relancez.\p{COLOR}Ç3DS{COLOR}Á : dans l'injecteur VC 3DS,\nvérifiez {COLOR}ÉROM Save Type{COLOR}Á sur\n{COLOR}ÉFlash 1Mbit (Macronix, ID: 0x09C2)\n+ RTC{COLOR}Á.\p{COLOR}ÇDelta{COLOR}Á : utilisez la version premium\nou passez à {COLOR}ÉGBA4iOS{COLOR}Á.
-0xA4D475: ATTENTION !\pTriche RTC détectée dans ta\nsauvegarde !\pDate du jeu : {STR_VAR_1}/{STR_VAR_2}/{STR_VAR_3}.\pLes événements quotidiens (cadeaux,\nRaids) peuvent cesser jusqu'au\nlendemain.\pNe trafique plus la RTC.
+0xA4CDC7:  MAUVAIS TYPE DE SAUVEGARDE !\nPassez en Flash 128k.\pSi vous utilisez VBA, passez à\nl'excellent {COLOR}ÉmGBA{COLOR}Á.\pSinon, suivez ces étapes :\n{COLOR}ÇVBA{COLOR}Á : Options > Emulator >\pSave Type > Flash 128K.\pFermez et relancez l'émulateur.\p{COLOR}Ç3DS{COLOR}Á : Dans New Super Ultimate VC\nInjector 3DS, définissez {COLOR}ÉROM Save Type{COLOR}Á\psur {COLOR}ÉFlash 1Mbit (Macronix, ID: 0x09C2)\p+ RTC{COLOR}Á.\nL'option d'injection doit être\p{COLOR}ÉGBA Virtual Console{COLOR}Á.\pSi votre émulateur n'est pas listé,\nchangez d'émulateur.\p\n\p\n\p\n\p\n
+0xA4D0BF: ATTENTION !\pL'heure du système est illisible.\nActivez l'horloge RTC et vérifiez\pl'heure.\n
+0xA4D138: ATTENTION !\pL'heure du système est illisible.\nActivez la RTC et vérifiez l'heure.\pSi vous utilisez VBA, passez à\n{COLOR}ÉmGBA{COLOR}Á.\pSinon, suivez : Options > Emulator >\nReal Time Clock.\pFermez et relancez.\n{COLOR}Ç3DS{COLOR}Á : dans l'injecteur VC 3DS,\pvérifiez {COLOR}ÉROM Save Type{COLOR}Á sur\p{COLOR}ÉFlash 1Mbit (Macronix, ID: 0x09C2)\p+ RTC{COLOR}Á.\n{COLOR}ÇDelta{COLOR}Á : utilisez la version premium\pou passez à {COLOR}ÉGBA4iOS{COLOR}Á.\n\p\p\n\p\n\p\n\p\n\p\p\n
+0xA4D475: ATTENTION !\pTriche RTC détectée dans ta\nsauvegarde !\pDate du jeu : {STR_VAR_1}/{STR_VAR_2}/{STR_VAR_3}.\nLes événements quotidiens (cadeaux,\pRaids) peuvent cesser jusqu'au\nlendemain.\lNe trafique plus la RTC.\p\n
 0xA4D56C: {PLAYER} utilise le\n{STR_VAR_2}.\pPlus de Pokémon sauvages forts\npeuvent apparaître.{PAUSE_UNTIL_PRESS}
 0xA4D5C5: {PLAYER} utilise le\n{STR_VAR_2}.\pPlus de Pokémon sauvages faibles\npeuvent apparaître.{PAUSE_UNTIL_PRESS}
 0xA4D61C: Un second objet du Cube peut être\nattribué à {L_BUTTON}.
