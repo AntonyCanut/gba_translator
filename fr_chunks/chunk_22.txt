@@ -2,7 +2,7 @@
 0x720F6D: Vieille carte
 0x720F88: CHEMIN BRASIER
 0x721340: Âび  Á   {SUPER_ER}ÛメËParent et enfant attaquent ensemble.
-0x7213FC: Les talents n'affectent pas les capacités.
+0x7213FC: Les talents n'affectent pas\nles capacités.
 0x72141A: des talents.
 0x721427: îCHAMBRE MONEA
 0x721437: Autoroute KBT
@@ -11,7 +11,7 @@
 0x7216AC: Casino
 0x7218F0: Grand Désert
 0x721F0F: ( バ   qZùËハîィËÔ ギîィËÌÇâÁフÁJe ne suis pas très douée en\ncombats Pokémon...\pQuand je pense à mon futur,\lje n'ai pas d'autre choix que\lde me battre !
-0x721FAE: Tu vois… Je savais que je ne pouvais pas gagner.
+0x721FAE: Je savais que je ne pouvais\npas gagner.
 0x721FCC: Les combats, ce n'est pas pour moi.
 0x721FEA: ( タ   FîィËßïィËÔ クïィËÌÇâÁフÁJe suis douée en stratégie et en\ntactique, mais je lance mal les\lPoké Balls !
 0x722059: Si seulement une machine pouvait\nlancer les Poké Balls pour moi...
@@ -19,7 +19,7 @@
 0x722125: Ouf, super ! Toi et tes Pokémon\nêtes splendides !
 0x722155: Ho ho... il fait lourd...\nComme dans un sauna...
 0x7248C3: ( バ   qZùËハîィËÔ ギîィËÌÇâÁフÁJe ne suis pas très douée en\ncombats Pokémon...\pQuand je pense à mon futur,\lje n'ai pas d'autre choix que\lde me battre !
-0x724962: Tu vois… Je savais que je ne pouvais pas gagner.
+0x724962: Je savais que je ne pouvais\npas gagner.
 0x724980: Les combats, ce n'est pas pour moi.
 0x72499E: ( タ   FîィËßïィËÔ クïィËÌÇâÁフÁJe suis douée en stratégie et en\ntactique, mais je lance mal les\lPoké Balls !
 0x724A0D: Si seulement une machine pouvait\nlancer les Poké Balls pour moi...
@@ -30,12 +30,12 @@
 0x740001: Forêt Obscure, Volcan Cendreux,\nCrater Town et Route 6
 0x740037: Bellin Town, Grotte Stalactite,\nRoute 2 et Dresco Town
 0x74007E: 9Ô ギ ヤËÌÁÁHé, toi !\pMa mamie fait de très bons plats\nle soir !\pTu devrais rester goûter un jour !\n
-0x740195: ÍÔ じDヤËÌÉぽÔィぺà{RIGHT_ARROW}Ë¿  ÁMon papa a beaucoup entraîné nos Pokémon !\nIls sont super forts maintenant !
+0x740195: ÍÔ じDヤËÌÉぽÔィぺà{RIGHT_ARROW}Ë¿  ÁMon papa a beaucoup entraîné nos\nPokémon !\nIls sont super forts maintenant !
 0x74037D: Ù\nMarlon : {COLOR}ËCacnea, Coupe !
 0x740753: Tu es ma maman ?
 0x74145B: Héhooo…\pTu viens défier l'Arène ?
 0x74159F: Oh, c'est toi ! Champion en herbe !\nJe ne t'avais pas vu !\pBienvenue à l'Arène de Crater\pTown !\pCommence par un peu d'Eau\nFraîche.
-0x741625: Comme tu peux le voir (ou pas), cette Arène est centrée sur le\ntype Ténèbres.\pSi tu veux gagner ici, il te faut\ndu solide {COLOR}ÉCombat{COLOR}Ë, {COLOR}ÉInsecte{COLOR}Ë ou\l{COLOR}ÉFée{COLOR}Ë.\pBonne chance !
+0x741625: Comme tu peux le voir (ou pas),\ncette Arène est centrée sur le\ntype Ténèbres.\pPour gagner ici, il te faut du\nsolide {COLOR}ÉCombat{COLOR}Ë, {COLOR}ÉInsecte{COLOR}Ë ou\l{COLOR}ÉFée{COLOR}Ë.\pBonne chance !
 0x7416E8: Bien joué !\pTu as trouvé ton chemin dans\nl'obscurité et vaincu Véga !\lPrends ça en récompense\psupplémentaire.\n
 0x741765: Ce Joyau peut booster une capacité\nTénèbres en combat.\pAvec lui, libère ta fureur sombre !\nMwahahahaha !\p
 0x74190A: Je suis Véga, le Champion de\nl'Arène de Crater Town.\pL'atmosphère sombre de cette ville\nm'a permis de canaliser toute mon\lénergie obscure en un lieu.\pEs-tu prêt à l'affronter ?
@@ -89,7 +89,7 @@
 0x74B1E7: Je campe ici pour effrayer quiconque\npasse.
 0x74B293: ÍÔ ペ”ヤËÌÂフÁEpidimy Town\pUne petite ville entourée de\nmontagnes.
 0x74B2D3: ハÍÔ k”ヤËÌÂフÁFallshore City\pLa capitale des cascades de Borrius.
-0x74B310: ハÍÔ ê‘ヤËÌÂフÁTehl Town\pUne ville où c'est toujours l'automne.
+0x74B310: ハÍÔ ê‘ヤËÌÂフÁTehl Town\pUne ville où il fait toujours\nautomne.
 0x74B381: Courir sur un pont sous la pluie…\nC'est grisant !\p
 0x74B3BC: Là, je me sens moins grisant.
 0x74B3D9: Pourvu que je ne glisse pas de ce\npont.
@@ -104,18 +104,18 @@
 0x74B8DA: Mon travail est important.
 0x74B907: ÚŒ\nom : Wow {PLAYER}, sacré combat !\nTu es prête à explorer le monde !\pPrends soin de toi, chérie !\n\p
 0x74BB52: Tu es incroyable.
-0x74BB69: Je ne suis que le premier de beaucoup de dresseurs sur cette\nroute.
-0x74BB9B: Je viens juste de sortir de la Grotte Stalactite, mais j'ai encore\ndu jus !
-0x74BBE2: Zut ! Un Nosferapti m'a mordu dans la\ngrotte.
+0x74BB69: Je ne suis que le premier de\nbeaucoup de dresseurs sur cette\nroute.
+0x74BB9B: Je viens juste de sortir de la\nGrotte Stalactite, mais j'ai encore\ndu jus !
+0x74BBE2: Zut ! Un Nosferapti m'a mordu dans\nla grotte.
 0x74BC0A: Mon ami a plein de Pokémon mignons.\nJe suis trop jaloux !
 0x74BC3B: Tu viens de la Grotte Stalactite ?\nJe peux avoir un Marcacrin ?
 0x74BCAD: On les regarde poser des pièges\nquand tu es là, Kapoera !\pOn va dominer le {COLOR}ÉOU Doubles{COLOR}Ë !\pTous tomberont sous ton pic !\n
 0x74BD59: Pension Pokémon
 0x74BE3C: 9Quand les Pokémon gagnent assez\nd'expérience, ils peuvent évoluer\let devenir plus forts.\pCertains apprennent même des\ncapacités après évolution.\pMais tous ne peuvent pas évoluer\nsimplement en combattant.\pCertains exigent des objets comme\nles {COLOR}ÉPierres Feu{COLOR}Ë ou {COLOR}ÉPierres Eau{COLOR}Ë.
-0x74BF85: 9Ivory : {COLOR}ÇVoilà ce qui t'attend si tu\ndévoiles quoi que ce soit !
+0x74BF85: 9Ivory : {COLOR}ÇVoilà ce qui t'attend si tu\nrévèles quoi que ce soit !
 0x74BFC6: Si j'avais eu toute mon équipe,\ntu aurais perdu !
 0x74BFF6: Zeph : {COLOR}ËOh, Ivory…\pComment vous et Marlon avez pu me\ntrahir ?\pJe vous croyais plus forts que ça…\n
-0x74C058: Ivory : {COLOR}ÇZeph, nous sommes des scientifiques.\pOn n'est pas censés faire ce genre\nde choses…
+0x74C058: Ivory : {COLOR}ÇZeph, nous sommes des\nscientifiques.\pOn n'est pas censés faire ce genre\nde choses…
 0x74C275: La bibliothèque a de super livres\nsur les techniques de combat\lavancées.\pJ'étudie actuellement les\n{COLOR}ÉTerrains{COLOR}Ë et leurs effets en\lcombat.\pVa voir si tu vises le sommet.\n
 0x74C358: Haha !\pCes {COLOR}ÉPare-Vestes{COLOR}Ë te vont super bien,\nCrocro !\pLa prochaine fois qu'on affrontera\nun {COLOR}ÉNoacier{COLOR}Ë avec un {COLOR}ÉCasque Brut{COLOR}Ë,\lil aura une sacrée surprise !
 0x74C405: Comme tu peux le voir, la Tour de\nCombat est un super lieu.\pApparemment, il y a des lieux\nsimilaires partout à Borrius.

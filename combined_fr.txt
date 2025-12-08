@@ -2991,16 +2991,16 @@
 0x416B86: Courrier envoyé sur ton PC.{PAUSE_UNTIL_PRESS}
 0x416BA6: La Boîte Mail du PC est pleine.{PAUSE_UNTIL_PRESS}
 0x416BC3: Retirer le Courrier effacera\nle message. D'accord ?
-0x416BFB: Retire le Courrier avant de faire tenir un objet.\n{PAUSE_UNTIL_PRESS}
+0x416BFB: Retire le Courrier avant de faire\nporter un objet.\n{PAUSE_UNTIL_PRESS}
 0x416C2A: {STR_VAR_1} tient\n{STR_VAR_2}.{PAUSE_UNTIL_PRESS}
 0x416C49: {STR_VAR_1} tient déjà\n{STR_VAR_2}.\pÉchanger les deux\nobjets ?
 0x416C8F: {STR_VAR_1} ne tient rien.\n{PAUSE_UNTIL_PRESS}
 0x416CAC: Reçu {STR_VAR_2}\nde {STR_VAR_1}.{PAUSE_UNTIL_PRESS}
 0x416CC7: Courrier retiré du Pokémon.\n{PAUSE_UNTIL_PRESS}
 0x416CEA: {STR_VAR_2} retiré, remplacé\npar {STR_VAR_1}.{PAUSE_UNTIL_PRESS}
-0x416D17: Ce Pokémon tient un objet. Il ne peut pas porter de Courrier.\n{PAUSE_UNTIL_PRESS}
+0x416D17: Ce Pokémon tient un objet. Il ne\npeut pas porter de Courrier.\n{PAUSE_UNTIL_PRESS}
 0x416D4F: Courrier transféré de la\nBoîte Mail.{PAUSE_UNTIL_PRESS}
-0x416D78: {STR_VAR_1} est plein. Objet du Pokémon non retiré.\n{PAUSE_UNTIL_PRESS}
+0x416D78: {STR_VAR_1} est plein. Objet du\nPokémon non retiré.\n{PAUSE_UNTIL_PRESS}
 0x416DB3: {STR_VAR_1} a appris\n{STR_VAR_2} !
 0x416DC2: {STR_VAR_1} et {STR_VAR_2} ne sont pas compatibles.\n{STR_VAR_2}\pne peut pas être\napprise.{PAUSE_UNTIL_PRESS}
 0x416DF7: {STR_VAR_1} veut apprendre la capacité {STR_VAR_2}.\n{STR_VAR_1} connaît déjà\pquatre capacités.\n\pOublier une capacité pour\napprendre {STR_VAR_2} ?
@@ -3023,7 +3023,7 @@
 0x417075: {STR_VAR_1} n'est plus amoureux.\n{PAUSE_UNTIL_PRESS}
 0x417094: C'est ton seul Pokémon\npour combattre.
 0x4170B9: Ce Pokémon ne peut pas être\ntroqué maintenant.
-0x4170DE: Un Œuf ne peut pas être troqué maintenant.
+0x4170DE: Un Œuf ne peut pas être troqué\nmaintenant.
 0x4170FC: Le Pokémon de l'autre\nDresseur ne peut pas être troqué.
 0x41712D: L'autre Dresseur ne peut pas\naccepter ce Pokémon.
 0x417161: Tu ne peux pas échanger avec ce\nDresseur maintenant.
@@ -3066,7 +3066,7 @@
 0x417445: INAPTE !
 0x41744F: APPRISE
 0x417457: CHEN : Il faut bien connaître\nses Pokémon.\p
-0x417494: Liste de tes Pokémon, {PLAYER}. Ouvre-la pour voir les\ncapacités de tes Pokémon.\p\nChoisis un Pokémon ici si tu\pveux utiliser un objet.\n{PAUSE_UNTIL_PRESS}
+0x417494: Liste de tes Pokémon, {PLAYER}.\nOuvre-la pour voir les\ncapacités de tes Pokémon.\p\nChoisis un Pokémon ici si tu\pveux utiliser un objet.\n{PAUSE_UNTIL_PRESS}
 0x417533: Coupe un arbre ou de l'herbe.
 0x417548: Vol vers une ville connue.
 0x41755D: Voyage sur l'eau.
@@ -3333,10 +3333,10 @@
 0x4185AD: Tu peux retirer un Pokémon si tu\nen as dans une Boîte.
 0x4185E2: Dépose ton équipe dans n'importe\nquelle Boîte.
 0x418611: Déplace les Pokémon stockés dans\nn'importe quelle Boîte.
-0x418642: Tu peux déplacer les objets tenus par un Pokémon d'une Boîte ou\nde ton équipe.
+0x418642: Tu peux déplacer les objets tenus\npar un Pokémon d'une Boîte ou\nde ton équipe.
 0x418681: À plus tard !
-0x418690: Impossible de déposer le dernier Pokémon !
-0x4186B0: Impossible de prendre plus de Pokémon.
+0x418690: Impossible de déposer le dernier\nPokémon !
+0x4186B0: Impossible de prendre plus de\nPokémon.
 0x4186D1: Combine quatre mots ou phrases
 0x4186EF: et crée ton profil.
 0x418706: Compose un message de six phrases.
@@ -3359,9 +3359,9 @@
 0x4188D6: et crée une expression tendance.
 0x4188F0: L'expression tendance
 0x418902: est comme affiché. OK ?
-0x418937: Tout le texte en cours d'édition sera effacé. D'accord ?
+0x418937: Tout le texte en cours d'édition\nsera effacé. D'accord ?
 0x4189E0: Quitter l'édition ?
-0x4189EE: Arrêter de donner du Courrier au Pokémon ?
+0x4189EE: Arrêter de donner du Courrier au\nPokémon ?
 0x418A2B: PROFIL
 0x418A33: Début du combat :
 0x418A4A: Après une victoire :
@@ -3403,7 +3403,7 @@
 0x4195AC: Une ruine antique où vivrait un\nPokémon particulier.\nCependant, ce Pokémon reste\nau stade de rumeur.
 0x419629: Cette île porte ce nom depuis\nles temps anciens.\nPersonne ne sait d'où vient\nce nom.
 0x41969D: Un endroit dense en buissons.\nOn y voit des motifs sans herbe.\nCertains pensent qu'un secret y\nest caché.
-0x41971A: Une ruine mystérieuse tout juste découverte, venue d'un temps\nancien.\nSon nom vient des six points sur\nsa porte.
+0x41971A: Une ruine mystérieuse tout juste\ndécouverte, venue d'un temps\nancien.\nSon nom vient des six points sur\nsa porte.
 0x419782: Nature {DYNAMIC}.\nRencontré par échange.
 0x41979D: Nature {DYNAMIC}.\nRencontré par échange.
 0x4197B8: Nature {DYNAMIC}.\nRencontre fatidique au\nN. {LV_2} {DYNAMIC}À.
@@ -3414,8 +3414,8 @@
 0x41988A: Nature {DYNAMIC}.\nApparemment rencontré à\n{DYNAMIC}Á au N. {LV_2} {DYNAMIC}À.
 0x41992F: Nature {DYNAMIC}.\nRencontre fatidique (éclos :\n{DYNAMIC}Á au N. {LV_2} {DYNAMIC}À).
 0x41996D: Nature {DYNAMIC}.\nRencontre fatidique (éclos :\n{DYNAMIC}Á au N. {LV_2} {DYNAMIC}À).
-0x4199AB: Nature {DYNAMIC}. Apparemment rencontre fatidique\n(éclos : {DYNAMIC}Á au\nN. {LV_2} {DYNAMIC}À).
-0x4199F4: Nature {DYNAMIC}. Apparemment rencontre fatidique\n(éclos : {DYNAMIC}Á au\nN. {LV_2} {DYNAMIC}À).
+0x4199AB: Nature {DYNAMIC}. Apparemment\nrencontre fatidique\n(éclos : {DYNAMIC}Á au\nN. {LV_2} {DYNAMIC}À).
+0x4199F4: Nature {DYNAMIC}. Apparemment\nrencontre fatidique\n(éclos : {DYNAMIC}Á au\nN. {LV_2} {DYNAMIC}À).
 0x419A3D: Un Œuf de Pokémon trouvé par le\ncouple de la Pension.
 0x419A6E: Œuf étrange obtenu auprès de\nl'homme itinérant.
 0x419AA2: Œuf de Pokémon vraiment curieux\nobtenu dans un bel endroit.
@@ -3452,7 +3452,7 @@
 0x419D57: ÉCHANGES POKÉMON
 0x419D66: ÉCHANGES & COMBATS UNION
 0x419D7D: BROYEUR DE BAIES
-0x419D89: En attente que l'autre Dresseur finisse de lire ta Carte\nDresseur.
+0x419D89: En attente que l'autre Dresseur\nfinisse de lire ta Carte Dresseur.
 0x419DCC: Options
 0x419DD3: Vitesse texte
 0x419DDE: Animations combat
@@ -3477,7 +3477,7 @@
 0x41A0B7: Régle divers paramètres comme la\nvitesse du texte, les règles, etc.
 0x41A0F9: Ferme cette fenêtre de Menu.
 0x41A111: Quitte le JEU SAFARI et retourne\nau comptoir d'inscription.
-0x41A2E1: {DYNAMIC} a livré un combat fantastique contre le Champion\n{DYNAMIC}À.
+0x41A2E1: {DYNAMIC} a livré un combat\nfantastique contre le Champion\n{DYNAMIC}À.
 0x41A312: Au final, {DYNAMIC} a envoyé\n{DYNAMIC}À et {DYNAMIC}Á a riposté\navec {DYNAMIC}Â.
 0x41A349: En se battant de toutes ses\nforces, {DYNAMIC} a gagné\nle match.
 0x41A391: Objet {STR_VAR_1} retiré du Rayon\nObjets du SAC et stocké\nsur le PC.
@@ -3505,7 +3505,7 @@
 0x41A756: avec ténacité
 0x41A762: tant bien que mal
 0x41A76A: Rencontré et échangé avec {STR_VAR_1}.\nReçu {STR_VAR_2} du Dresseur\ncontre {STR_VAR_3}.
-0x41A7B0: Rencontré et combattu {STR_VAR_1}. Le match s'est\nfini sur un {STR_VAR_2}.
+0x41A7B0: Rencontré et combattu {STR_VAR_1}.\nLe match s'est fini sur un\n{STR_VAR_2}.
 0x41A7DD: Allé à la Boutique Pokémon de\n{DYNAMIC} et acheté un\n{DYNAMIC}À.
 0x41A810: Allé à la Boutique Pokémon de\n{DYNAMIC} et dépensé ¥{DYNAMIC}Á pour\ndes objets dont {DYNAMIC}À.
 0x41A858: {DYNAMIC} est allé à la Boutique\nPokémon de {DYNAMIC}À et a vendu\n{DYNAMIC}Â {DYNAMIC}Á.
@@ -3624,14 +3624,14 @@
 0x41B535: PARDON
 0x41B541: MERCI
 0x41B54B: À PLUS !
-0x41B554: {PLAYER} s'est précipité au Centre Pokémon en protégeant ses Pokémon\népuisés et K.O.…\n\p
-0x41B5B6: {PLAYER} est rentré chez lui en protégeant ses Pokémon épuisés et\nK.O.…\n\p
+0x41B554: {PLAYER} s'est précipité au Centre\nPokémon en protégeant ses Pokémon\népuisés et K.O.…\n\p
+0x41B5B6: {PLAYER} est rentré chez lui en\nprotégeant ses Pokémon épuisés et\nK.O.…\n\p
 0x41B60E: Joueur : {DYNAMIC} 
 0x41B619: Ce document atteste ta superbe\nperformance : remplir le Pokédex\n{DYNAMIC}À.\n
 0x41B684: Game Freak
 0x41B68F: National
 0x41B698: Kanto
-0x41B69E: Effacer toutes les données de sauvegarde ?
+0x41B69E: Effacer toutes les données de\nsauvegarde ?
 0x41B6B9: Effacement des données…\nPatiente.
 0x41B6D5: Joueur
 0x41B6DC: Temps
@@ -3650,21 +3650,21 @@
 0x41B807: Parle-moi des CT.
 0x41B81B: Comment enregistrer un objet ?
 0x41B836: Annuler
-0x41B83D: Salut les Dresseurs ! SALUT, Dresseurs !……… ……… ………\nAllez, faites du bruit !\pSALUT, Dresseurs !\p\nC'est moi, le MEC POKé !\l\p
-0x41B8BF: Aujourd'hui, le MEC POKé explique comment combattre des Pokémon ! Imagine : tu te balades et soudain\nun Pokémon sauvage apparaît !\l\pÀ toi d'utiliser tes Pokémon\net leurs capacités pour réduire\ples PV adverses à zéro\net gagner !\l\lJe vais te le montrer en vrai !\p\nC'est parti !\p\pGarde les yeux sur le super\nSHOW DU MEC POKé !
-0x41BA41: Alors, tu as suivi ? Même si les PV de ton Pokémon tombent à zéro et qu'il ne peut plus se battre, pas de panique !\p\nAmène-le dans un Centre Pokémon\let soigne-le !\p\nAllez, à bientôt !\p\pSouviens-toi : une bonne action\npar jour rend heureux toujours !
-0x41BB40: Aujourd'hui, le MEC POKé parle des altérations d'état ! Parmi elles : poison, paralysie, sommeil, brûlure… Il y en a d'autres, et c'est un vrai souci.\n\pAvec ça, ton Pokémon peut devenir\ninutile en combat.\p\nÇa fait mal au MEC POKé de voir un\pPokémon souffrir…\n\pAlors que faire ?\n\pJe vais te montrer !\n\pC'est parti !\p\pGarde les yeux sur le super\nSHOW DU MEC POKé !
-0x41BD10: Poison et paralysie ne partent pas après le combat. Un Pokémon empoisonné perd des PV même en marchant.\nSoigne vite ce genre de souci.\p\nUtilise un objet ou file au Centre\pPokémon pour soigner.\n\pPas si dur, hein ?\n\pAllez, à bientôt !\n\pSouviens-toi : une bonne action\npar jour rend heureux toujours !
-0x41BE76: Tout le monde connaît les effets de type ? Les Pokémon et leurs capacités ont tous des types. Par exemple : PLANTE ou EAU. Il faut penser au type de la\ncapacité qui attaque…\p\nEt au type du Pokémon qui reçoit\pl'attaque.\n\pSelon l'affinité, les dégâts\nchangent.\p\nÇa dépend si le duo de types est\pbon ou mauvais.\n\pSans ça, les combats seront rudes.\n\pJe vais te montrer ce que je veux\ndire.\p\nC'est parti !\p\pGarde les yeux sur le super\nSHOW DU MEC POKé !
-0x41C0AF: Peut-on lancer une attaque qui fait très mal ? Le Pokémon adverse est-il dangereux pour ton Pokémon ?\nPeut-il avoir des capacités\pterribles ?\n\pRegarde les affinités pour prendre\nl'avantage !\p\nAllez, à bientôt !\p\pEt pour le MEC POKé COOL, des\nkids GÉNIAUX comme toi, ça colle !\l\pSouviens-toi : une bonne action\npar jour rend heureux toujours !
-0x41C23B: Aujourd'hui, le MEC POKé montre comment attraper des Pokémon ! Imagine… Un Pokémon stylé apparaît d'un coup dans la nature !\nOh, tu le veux !\pImpossible de résister !\n\pTu dois l'attraper !\nIl te le faut !\p\nJe vais te montrer comment faire !\p\nC'est parti !\p\pGarde les yeux sur le super\nSHOW DU MEC POKé !
-0x41C384: Si ta première Poké Ball échoue, ne lâche rien ! Lance encore des Poké Balls…\nÇa finira par marcher !\p\nAllez, à bientôt !\p\pSouviens-toi : une bonne action\npar jour rend heureux toujours !
-0x41C459: Salut tout le monde ! Vous avez des CT ? Une CT, Capsule Technique, c'est super !\nElle apprend à un Pokémon une\pcapacité qu'il n'aurait pas\nen montant de niveau !\p\nGénial, non ? Quel monde pratique !\p\nOuvre le Boîtier CT et regarde\ples CT que tu as.\n\pTu peux aussi les examiner\nen détail.
-0x41C587: MEC POKé : NORMAL, EAU, PLANTE… Les CT ont aussi un type. Vérifie le type et enseigne-le à un Pokémon qui matche bien.\nExemple : Vibraqua va bien aux\pPokémon de type EAU.\n\pBALLE GRAINE est une capacité que\nbeaucoup de Pokémon PLANTE\ppeuvent apprendre.\n\pEncore autre chose !
-0x41C693: Ne regarde pas que le type, lis la description aussi. Elle donne des indices sur quel\nPokémon peut apprendre la capacité.\p\nPar exemple, prends Poing de Feu.\p\nOn n'imagine pas un oiseau ou un\ppoisson l'apprendre.\n\pEssaie-le sur des Pokémon avec\ndes bras pour frapper !
-0x41C7B4: Wow, j'ai beaucoup parlé ! Allez, à bientôt !\n\pSouviens-toi : une bonne action\npar jour rend heureux toujours !
-0x41C82A: Le SAC d'un Dresseur a plein de fonctions pratiques ! Prenons la POCHE Objets clés. Tu peux utiliser un objet clé sans\nouvrir le SAC à chaque fois.\p\nPar exemple, disons que j'ai une\pTELE C.S. dans mon SAC.\n\pJe peux l'enregistrer pour l'utiliser\ntout de suite, je te montre !\p\nC'est parti !\p\pGarde les yeux sur le quasi super\nSHOW DU MEC POKé !
-0x41C994: Et voilà, ta TELE C.S. est enregistrée. Comment l'utiliser ? Voici. Une fois un objet clé enregistré\ndans la POCHE Objets clés, tu peux\pl'utiliser avec Select.\n\pTu as donc un accès direct à la\nTELE C.S.\l\pIl suffit d'appuyer et tu me vois !\n\pTant d'attention, c'est un peu\ngênant !\p\nAllez, à bientôt !\p\pSouviens-toi : une bonne action\npar jour rend heureux toujours !
+0x41B83D: Salut les Dresseurs ! SALUT,\nDresseurs ! … … …\nAllez, faites du bruit !\pSALUT, Dresseurs !\p\nC'est moi, le MEC POKé !\l\p
+0x41B8BF: Aujourd'hui, le MEC POKé explique\ncomment combattre des Pokémon !\nImagine : tu te balades et soudain\nun Pokémon sauvage apparaît !\l\pÀ toi d'utiliser tes Pokémon et\nleurs capacités pour réduire les PV\nadverses à zéro et gagner !\l\lJe vais te le montrer en vrai !\p\nC'est parti !\p\pGarde les yeux sur le super\nSHOW DU MEC POKé !
+0x41BA41: Alors, tu as suivi ? Même si les PV\nde ton Pokémon tombent à zéro et\nqu'il ne peut plus se battre, pas de\npanique !\p\nAmène-le dans un Centre Pokémon\let soigne-le !\p\nAllez, à bientôt !\p\pSouviens-toi : une bonne action\npar jour rend heureux toujours !
+0x41BB40: Aujourd'hui, le MEC POKé parle des\naltérations d'état ! Poison,\nparalysie, sommeil, brûlure…\nIl y en a d'autres, et c'est un\nvrai souci.\n\pAvec ça, ton Pokémon peut devenir\ninutile en combat.\p\nÇa fait mal au MEC POKé de voir un\nPokémon souffrir…\n\pAlors que faire ?\n\pJe vais te montrer !\n\pC'est parti !\p\pGarde les yeux sur le super\nSHOW DU MEC POKé !
+0x41BD10: Poison et paralysie ne partent pas\naprès le combat. Un Pokémon\nempoisonné perd des PV même en\nmarchant.\nSoigne vite ce genre de souci.\p\nUtilise un objet ou file au Centre\nPokémon pour soigner.\n\pPas si dur, hein ?\n\pAllez, à bientôt !\n\pSouviens-toi : une bonne action\npar jour rend heureux toujours !
+0x41BE76: Tout le monde connaît les effets de\ntype ? Les Pokémon et leurs\ncapacités ont tous des types.\nPar exemple : PLANTE ou EAU.\nPense au type de la capacité qui\nattaque…\p\nEt au type du Pokémon qui reçoit\nl'attaque.\n\pSelon l'affinité, les dégâts\nchangent.\p\nÇa dépend si le duo de types est\nbon ou mauvais.\n\pSans ça, les combats seront rudes.\n\pJe vais te montrer ce que je veux\ndire.\p\nC'est parti !\p\pGarde les yeux sur le super\nSHOW DU MEC POKé !
+0x41C0AF: Peut-on lancer une attaque qui fait\ntrès mal ? Le Pokémon adverse\nest-il dangereux pour ton Pokémon ?\nPeut-il avoir des capacités\nterribles ?\n\pRegarde les affinités pour prendre\nl'avantage !\p\nAllez, à bientôt !\p\pEt pour le MEC POKé COOL, des\nkids GÉNIAUX comme toi, ça colle !\l\pSouviens-toi : une bonne action\npar jour rend heureux toujours !
+0x41C23B: Aujourd'hui, le MEC POKé montre\ncomment attraper des Pokémon !\nImagine… Un Pokémon stylé apparaît\nd'un coup dans la nature !\nOh, tu le veux !\pImpossible de résister !\n\pTu dois l'attraper !\nIl te le faut !\p\nJe vais te montrer comment faire !\p\nC'est parti !\p\pGarde les yeux sur le super\nSHOW DU MEC POKé !
+0x41C384: Si ta première Poké Ball échoue,\nne lâche rien ! Lance encore des\nPoké Balls…\nÇa finira par marcher !\p\nAllez, à bientôt !\p\pSouviens-toi : une bonne action\npar jour rend heureux toujours !
+0x41C459: Salut tout le monde ! Vous avez des\nCT ? Une CT, Capsule Technique,\nc'est super !\nElle apprend à un Pokémon une\ncapacité qu'il n'aurait pas en\nmontant de niveau !\p\nGénial, non ? Quel monde pratique !\p\nOuvre le Boîtier CT et regarde\nles CT que tu as.\n\pTu peux aussi les examiner\nen détail.
+0x41C587: MEC POKé : NORMAL, EAU, PLANTE…\nLes CT ont aussi un type.\nVérifie-le et enseigne-le à un\nPokémon qui matche bien.\nExemple : Vibraqua va bien aux\nPokémon de type EAU.\n\pBALLE GRAINE est une capacité que\nbeaucoup de Pokémon PLANTE peuvent\napprendre.\n\pEncore autre chose !
+0x41C693: Ne regarde pas que le type, lis la\ndescription aussi. Elle donne des\nindices sur quel Pokémon peut\napprendre la capacité.\p\nPar exemple, prends Poing de Feu.\p\nOn n'imagine pas un oiseau ou un\npoisson l'apprendre.\n\pEssaie-le sur des Pokémon avec\ndes bras pour frapper !
+0x41C7B4: Wow, j'ai beaucoup parlé ! Allez,\nà bientôt !\n\pSouviens-toi : une bonne action\npar jour rend heureux toujours !
+0x41C82A: Le SAC d'un Dresseur a plein de\nfonctions pratiques ! Prenons la\nPOCHE Objets clés. Tu peux utiliser\nun objet clé sans ouvrir le SAC à\nchaque fois.\p\nPar exemple, disons que j'ai une\nTELE C.S. dans mon SAC.\n\pJe peux l'enregistrer pour\nl'utiliser tout de suite, je te\nmontre !\p\nC'est parti !\p\pGarde les yeux sur le quasi super\nSHOW DU MEC POKé !
+0x41C994: Et voilà, ta TELE C.S. est\nenregistrée. Comment l'utiliser ?\nVoici. Une fois un objet clé\nenregistré dans la POCHE Objets\nclés, tu peux l'utiliser avec\nSelect.\n\pTu as donc un accès direct à la\nTELE C.S.\l\pIl suffit d'appuyer et tu me vois !\n\pTant d'attention, c'est un peu\ngênant !\p\nAllez, à bientôt !\p\pSouviens-toi : une bonne action\npar jour rend heureux toujours !
 0x41CB3C: LEO
 0x41CB41: QUELQU'UN
 0x41CB49: Aide
@@ -3696,14 +3696,14 @@
 0x41CDEB: Quelqu'un a quitté.\nLe lien sera coupé.
 0x41CE1C: points
 0x41CE24: En attente de communication…
-0x41CE3B: Prêt pour le BROYEUR DE BAIES ? Choisis une BAIE.\n\p
+0x41CE3B: Prêt pour le BROYEUR DE BAIES ?\nChoisis une BAIE.\n\p
 0x41CE78: Attends que chacun choisisse\nune BAIE.
-0x41CEA7: {PAUSE_MUSIC}{PLAY_BGM}ÀÀ Tu obtiens {STR_VAR_1} unités de POUDRE BAIE soyeuse.{RESUME_MUSIC}\npTa quantité totale de POUDRE BAIE\pest {STR_VAR_2}.\n\p
+0x41CEA7: {PAUSE_MUSIC}{PLAY_BGM}ÀÀ Tu obtiens\n{STR_VAR_1} unités de POUDRE BAIE\nsoyeuse.{RESUME_MUSIC}\npTa quantité totale de POUDRE BAIE\pest {STR_VAR_2}.\n\p
 0x41CF13: Enregistrement des résultats\nde jeu dans la sauvegarde.\nPatiente.
 0x41CF4F: Rejouer au BROYEUR DE BAIES ?
 0x41CF70: Tu n'as pas de BAIE.\nPartie annulée.
 0x41CFA0: Un joueur est parti.\nPartie annulée.
-0x41CFD1: Temps écoulé. pImpossible de faire une bonne\pPOUDRE BAIE…\n\p
+0x41CFD1: Temps écoulé. pImpossible de faire\nune bonne\pPOUDRE BAIE…\n\p
 0x41D005: En attente de communication…
 0x41D032: fois
 0x41D042: BAIE {STR_VAR_1}
@@ -4463,12 +4463,12 @@
 0x457E28: Vous avez décliné l'offre.\p
 0x457E41: Vous avez décliné l'offre.\p
 0x457E5D: Le chat est terminé.\p
-0x457EBD: {STR_VAR_1} : Hé, {PLAYER} ! Nous discutons en ce moment.\nVous voulez\lnous rejoindre ?
-0x457EFD: Ah, salut ! Nous discutons actuellement. Voulez-vous nous\nrejoindre ?
-0x457F3C: {STR_VAR_1} : Oh, salut, {PLAYER} ! Nous discutons maintenant.\nVoulez-vous nous\lrejoindre ?
+0x457EBD: {STR_VAR_1} : Hé, {PLAYER} ! Nous\ndiscutons en ce moment.\nVous voulez\lnous rejoindre ?
+0x457EFD: Ah, salut ! Nous discutons\nactuellement. Voulez-vous nous\nrejoindre ?
+0x457F3C: {STR_VAR_1} : Oh, salut, {PLAYER} !\nNous discutons maintenant.\nVoulez-vous nous\lrejoindre ?
 0x457FB4: Une bataille, hein ? Très bien,\ndonnez-moi juste un peu de temps.
 0x457FE6: Vous voulez discuter, hein ? Bien\nsûr, attendez un peu.
-0x458019: Bien sûr ! En guise de «Salutations», voici ma carte de\ndresseur.
+0x458019: Bien sûr ! En guise de salutations,\nvoici ma carte de dresseur.
 0x458053: Une bataille ? Bien sûr, mais j'ai\nbesoin de temps pour me préparer.
 0x458087: Vouliez-vous discuter ? D'accord,\nmais veuillez patienter un instant.
 0x4580BE: En guise d'introduction, je vais\nvous montrer ma carte de dresseur.
@@ -4479,16 +4479,16 @@
 0x4581D6: L'échange va démarrer.{PAUSE}ざ
 0x4581F6: La bataille va commencer.{PAUSE}ざ
 0x458217: Entrer dans le chat…{PAUSE}ざ
-0x4582C0: Je suis vraiment désolé, mais mes Pokémon ne se sentent pas\nbien…\pCombattons une autre fois.\p
-0x458314: Hein ? Ma carte de dresseur… Où est-elle passée ?\nDésolé ! Je te la\lmontrerai une autre fois !\p
-0x458369: Oh ? Où ai-je mis ma Carte Dresseur ?…\nDésolé !\lJe te la montrerai plus tard !\p
+0x4582C0: Désolé, mes Pokémon ne se sentent\npas bien…\pCombattons une autre fois.\p
+0x458314: Hein ? Où est ma carte Dresseur ?\nDésolé ! Je te la\lmontrerai une autre fois !\p
+0x458369: Oh ? Où est ma carte Dresseur ?\nDésolé !\lJe te la montrerai plus tard !\p
 0x4583B3: Si vous voulez faire quelque chose\navec moi, faites-moi signe !\p
 0x4583F8: Si vous voulez faire quelque chose\navec moi, ne soyez pas timide.\p
-0x458479: Si vous voulez vous battre, vous avez besoin de deux Pokémon\ninférieurs à\lLv. 30.\p
-0x4584C0: Pour une bataille, vous avez besoin de deux Pokémon inférieurs au Niv.\n30.\p
+0x458479: Pour te battre, il te faut deux\nPokémon sous le\lN. 30.\p
+0x4584C0: Pour un combat, il faut deux\nPokémon sous le N. 30.\p
 0x4584FB: Oh, d'accord. Viens me voir quand tu\nveux, d'accord ?\p
 0x458527: Oh… Veuillez venir à tout moment.\n\p
-0x458596: Oh, je suis désolé. J'ai trop de choses à faire en ce moment.\nParlons-en une autre\lfois.\p
+0x458596: Oh, désolé. J'ai trop à faire\nmaintenant.\lParlons-en une autre fois.\p
 0x4585E5: Whoa ! Je peux dire que tu es plutôt\ndur !\p
 0x458617: Vous avez utilisé ce mouvement ?\nC'est une bonne stratégie !\p
 0x458643: Bravo ! C'était une révélation !\n\p
@@ -4504,13 +4504,13 @@
 0x45884C: Ahaha ! De quoi s'agit-il ?\n\p
 0x458868: Oui, c'est exactement ça ! C'est ce\nque je voulais dire.\p
 0x458896: En d’autres termes… Oui ! C'est vrai\n!\p
-0x458915: J'espère que je vais mieux vous connaître !\p
+0x458915: J'espère mieux vous connaître !\p
 0x45893A: Nous montrons nos Cartes Dresseur\npour faire connaissance.\p
-0x45897B: Heureux de vous rencontrer. S'il vous plaît, ne soyez pas un étranger\n!\p
-0x4589E3: Finalement, un échange m'a permis d'obtenir ce Pokémon que je voulais\ndepuis longtemps.\p
+0x45897B: Heureux de vous rencontrer.\nNe soyez pas un étranger !\p
+0x4589E3: Grâce à un échange, j'ai ce Pokémon\nque je voulais depuis longtemps.\p
 0x458A22: J'échange des Pokémon en ce moment.\p
 0x458A44: J'ai enfin obtenu ce Pokémon que je\nrecherchais dans un échange !\p
-0x458AB7: Bienvenue sur le TABLEAU D'ÉCHANGE. Vous pouvez enregistrer\pvotre Pokémon et le proposer\npour un échange.\pVoulez-vous\nenregistrer l'un de vos Pokémon ?
+0x458AB7: Bienvenue sur le TABLEAU D'ÉCHANGE.\pInscris ton Pokémon et propose-le\npour un échange.\pVoulez-vous enregistrer l'un de vos\nPokémon ?
 0x458B41: Ce TABLEAU D'ÉCHANGE sert à\nproposer un Pokémon.\pEnregistre un Pokémon pour un\néchange.\pUn autre dresseur peut\noffrir un Pokémon en retour.\p\nNous espérons que tu échangeras\lavec de nombreux dresseurs.\p\nEnregistrer un de tes Pokémon ?
 0x458CD3: Veuillez choisir le type de Pokémon\nque vous souhaitez échanger.\n
 0x458D19: Lequel de vos Pokémon de groupe vous\nproposerez-vous en échange ?\p
@@ -4520,12 +4520,12 @@
 0x458DBA: Annulez l'enregistrement de votre\nLv. {STR_VAR_2} {STR_VAR_1} ?
 0x458DE7: Annuler l'enregistrement de votre\nEgg ?
 0x458E0D: L'inscription a été annulée.\p
-0x458E6E: Souhaitez-vous demander à {STR_VAR_1} de effectuer une\ntransaction ?
+0x458E6E: Voulez-vous demander à {STR_VAR_1}\nd'effectuer un échange ?
 0x458ED0: Vous n'avez pas de Pokémon de type\n{STR_VAR_2} que {STR_VAR_1} veut.\p
 0x458F01: Vous n'avez pas d'œuf que\n{STR_VAR_1} veut.\p
-0x458F2A: {STR_VAR_1} ne peut pas effectuer d'échange contre votre Pokémon pour\nle moment.\p
-0x458F5F: Vous ne pouvez pas effectuer d’échange contre le Pokémon de\n{STR_VAR_1} pour le moment.\p
-0x458F94: {SUPER_ER}Votre offre commerciale a été rejetée.\p
+0x458F2A: {STR_VAR_1} ne peut pas échanger\nvotre Pokémon pour le moment.\p
+0x458F5F: Impossible d'échanger le Pokémon de\n{STR_VAR_1} pour le moment.\p
+0x458F94: {SUPER_ER}Ton offre d'échange a été\nrejetée.\p
 0x458FBC: Commerce des œufs
 0x458FC6: {DPAD_UPDOWN}Choisir {SE_SHOP}Rejoindre {B_BUTTON}Annuler
 0x458FE3: Veuillez choisir un dresseur.
@@ -4539,7 +4539,7 @@
 0x45915E: Berry Crush ! Veuillez choisir le\nleader.
 0x459187: Dodrio Berry-Picking ! Veuillez\nchoisir le chef.
 0x459235: En attente de la réponse de {STR_VAR_1}…
-0x459250: {STR_VAR_1} a été invité à vous inscrire en tant que membre. S'il\nvous plaît, attendez.
+0x459250: {STR_VAR_1} a été invité à vous inscrire\ncomme membre. Merci de patienter.
 0x45928C: En attente d'une réponse du système\nde communication sans fil.
 0x4592E8: Aucune carte ne semble être partagée\npour le moment.
 0x459311: Aucune nouvelle ne semble être\npartagée pour le moment.
@@ -4565,7 +4565,7 @@
 0x459474: C'est une carte de cuivre !
 0x459488: C'est une Carte Argent !
 0x45949C: C'est une Gold Card !
-0x459541: {DYNAMIC}À : Heureux de vous avoir rencontré !{PAUSE}ざ
+0x459541: {DYNAMIC}À : Ravi de vous rencontrer !{PAUSE}ざ
 0x459561: {DYNAMIC}À: Glad to meet you!{PAUSE}ざ
 0x4595B0: Lecture de la carte annulée.
 0x45CEFA: Ô La Miiiimiiiiiciii La iiÊ iiiÊiiiヲ Mi c i Mii Vi Vi ci ciiiiiiiiiiiiiiiiiiiiiiii×iipuviiCziiiiiiiiiiiiiiiiiiiipaiii-eiizgiiÊ wo i iÊ iÒ iÒ iwo iヲ Mz Mz Fz Vz x y F zjCzzpepvz-d×zzgeizz-guzzzzzzzzxzzzzgyz-euz pajivzi7zzbuvzzzzzzzzzzzzzTz{RIGHT_ARROW} z{RIGHT_ARROW} zÏ zÒ T j Ï Fzzz Szz S9 i zzzÏzzh 9h i .= uba{DYNAMIC}Segnu C Rapimo{LEFT_ARROW}íbÍ
@@ -4717,14 +4717,14 @@
 0x482B94: Une danse frénétique de combats.\nCela augmente brusquement\nla\nstatistique Attack .
 0x482BD5: Une attaque de base. Elle peut être\nutilisée pour abattre des\narbres\nminces et de l'herbe.
 0x482C16: Frappe l'ennemi avec une rafale\nde\nvent fouettée par ailes.\n
-0x482C4F: L'ennemi est frappé avec de grandes et imposantes ailes\nlargement\ndéployées.
+0x482C4F: L'ennemi est frappé par de larges\nailes imposantes déployées.
 0x482C89: L'ennemi est obligé de changer avec\nun ally. Dans la nature, la\nbataille\nse termine.
-0x482CD3: Une capacité de 2 tours qui frappe au 2ème tour. Utilisez-le\npour voler\nvers n'importe quelle\nville connue.
+0x482CD3: Capacité en 2 tours qui frappe\nau 2e tour.\nUtilise-la pour voler vers\nn'importe quelle ville.
 0x482D1D: Un long corps ou des tentacules sont\nutilisés pour lier l'ennemi\npendant\ndeux à cinq tours.
 0x482D66: L'ennemi est frappé avec une\nlongue\nqueue, vignes, etc.
 0x482D96: L'ennemi est frappé avec des vignes\nminces ressemblant à des\nfouets. .
 0x482DC8: L'ennemi est piétiné avec un gros\npied. Cela peut faire\ntressaillir\nl'ennemi .
-0x482E08: Deux jambes sont utilisées pour donner rapidement un coup de\npied à\nl'ennemi deux fois en un\ntour.
+0x482E08: Deux jambes sont utilisées pour\ndonner deux coups de pied\nrapidement dans le\nmême tour.
 0x482E45: L'ennemi est attaqué par un coup de\npied tiré avec une\npuissance\nmusclée.
 0x482E83: L'utilisateur saute haut, puis donne\nun coup de pied. S'il\nrate,\nl'utilisateur se blesse.
 0x482ECC: Un coup de pied rapide lors d'une\nroulade. Cela peut faire\ntressaillir\nl'ennemi .
@@ -4739,18 +4739,18 @@
 0x483130: Une attaque imprudente et à pleine\ncharge du corps qui blesse\négalement\nun peu l'utilisateur .
 0x483178: L'utilisateur se déchaîne sur\npendant deux à trois tours,\npuis\ndevient confus.
 0x4831BF: Un tacle imprudent, risquant la vie,\nqui fait également un peu mal\nà\nl'utilisateur .
-0x483203: L'utilisateur remue gentiment sa queue , ce qui fait que\nl'ennemi\ndiminue sa statistique de\ndéfense .
+0x483203: L'utilisateur remue gentiment sa\nqueue, faisant baisser la Défense\nde l'ennemi.
 0x483249: L'ennemi est poignardé avec une\nbarbe toxique, etc. Cela\npeut\nempoisonner l'ennemi.
 0x48328B: L'ennemi est poignardé deux fois\navec des dards de pattes avant\n.\nCela peut empoisonner l'ennemi.
 0x4832D2: Des épingles pointues sont tirées\nsur l'ennemi et frappent\ndeux à cinq\nfois à la fois.
 0x483314: L'ennemi reçoit un regard\nintimidant\nqui réduit sa stat de\ndéfense.
 0x483358: L'utilisateur mord avec crocs\nvicieux. Cela peut faire\ntressaillir\nl'ennemi .
-0x483397: L'utilisateur grogne de manière mignonne, ce qui fait que\nl'ennemi\ndiminue sa statistique\nd'attaque .
+0x483397: Il grogne d'un air mignon pour\nfaire baisser l'Attaque de\nl'ennemi.
 0x4833DC: L'ennemi est obligé de changer avec\nun ally. Dans la nature, la\nbataille\nse termine.
 0x483426: Une chanson apaisante d'une voix\napaisante endort l'ennemi dans\nun\nprofond sommeil.
 0x48346C: L'utilisateur génère ondes sonores\nétranges. Cela peut\ndérouter\nl'ennemi .
 0x4834A8: L'ennemi est frappé par une onde de\nchoc qui inflige toujours 20- HP\nde\ndégâts.
-0x4834ED: Pendant quelques tours, il empêche l'ennemi d'utiliser le\nmouvement il\na été utilisé en\ndernier lieu.
+0x4834ED: Pendant quelques tours, il empêche\nl'ennemi d'utiliser sa dernière\ncapacité.
 0x483534: L'ennemi est aspergé d'un acide\npuissant qui fond la peau et\nqui\npeut réduire sa défense.
 0x483580: L'ennemi est attaqué avec de petites\nflammes. L'ennemi peut\nsubir une\nbrûlure.
 0x4835C2: L'ennemi est brûlé avec des flammes\nintenses. L'ennemi peut\nsubir une\nbrûlure.
@@ -4762,15 +4762,15 @@
 0x483760: L'ennemi est détruit avec une\ntempête de neige. Il peut\ngeler\nl'ennemi solidement.
 0x4837A1: Un rayon particulier est tiré sur\nl'ennemi. Il peut laisser\nl'ennemi\nconfus.
 0x4837E3: Un jet de bulles frappe l'ennemi.\nCela peut réduire la\nstatistique de\nvitesse de l'ennemi.
-0x48382A: Un faisceau d'attaque de couleur arc-en-ciel. Il peut\nréduire la\nstatistique d'attaque de\nl'ennemi .
-0x48386D: Une attaque gravement dommageable qui oblige\nl'utilisateur à se\nreposer sur au\ntour suivant.
+0x48382A: Un faisceau arc-en-ciel.\nPeut baisser l'Attaque de\nl'ennemi.
+0x48386D: Attaque très puissante qui force\nl'utilisateur à se reposer au tour\nsuivant.
 0x4838B3: L'ennemi est frappé avec un\nbec\npointu ou corne.\n
 0x4838EA: Une attaque en tire-bouchon avec le\nbec pointu agissant comme\nune\nperceuse.
-0x483927: Une attaque imprudente de projection du corps entier qui\nblesse également\nun peu\nl'utilisateur .
+0x483927: Projection téméraire du corps\nentier qui blesse un peu\nl'utilisateur.
 0x48396E: Un coup de pied bas et trébuchant\nqui inflige plus de\ndégâts aux\nennemis plus lourds .
 0x4839AE: Une capacité de représailles qui\ncontrecarre tout coup physique\navec\ndouble les dégâts.
-0x4839F8: Un lancer alimenté par gravité qui provoque des dégâts\ncorrespondant au\nniveau de\nl'utilisateur.
-0x483A3A: L'ennemi est frappé à la puissance maximale. Peut également\nêtre\nutilisé pour déplacer des\nrochers.
+0x4839F8: Lancer alimenté par gravité qui\ninflige des dégâts égaux au niveau\nde l'utilisateur.
+0x483A3A: Frappe l'ennemi avec puissance\nmaximale. Peut aussi déplacer des\nrochers.
 0x483A82: Une attaque qui absorbe la moitié\ndes dégâts qu'elle a\ninfligés pour\nrestaurer les PV.
 0x483AC5: Une attaque puissante qui draine la\nmoitié des dégâts qu'elle a\ninfligés\npour restaurer les PV.
 0x483B0C: Une graine est plantée sur l'ennemi\npour voler des PV à\nl'utilisateur à\nchaque tour.
@@ -4792,7 +4792,7 @@
 0x483F44: Un tremblement de terre qui frappe\ntous les Pokémon au combat,\nà\nl'exception de l'utilisateur.
 0x483F89: L'ennemi tombe dans une\nfissure.\nL'ennemi s'évanouit s'il\ntouche.
 0x483FC7: Une attaque qui frappe au 2ème tour.\nPeut également être utilisé\npour\nsortir des donjons.
-0x48400F: Une capacité qui empoisonne gravement l'ennemi. Ses\ndégâts de\npoison s'aggravent à\nchaque tour.
+0x48400F: Empoisonne gravement l'ennemi.\nLes dégâts augmentent à\nchaque tour.
 0x484058: Une faible attaque télékinésique qui\npeut également laisser\nl'ennemi\nconfus.
 0x484098: Une forte attaque télékinésique.\nCela peut également réduire la Sp\nde\nl’ennemi. Statistique déf.
 0x4840DF: La suggestion hypnotique est\nutilisée pour faire tomber\nl'ennemi\ndans un sommeil profond .
@@ -4800,26 +4800,26 @@
 0x484165: L'utilisateur détend et allège son\ncorps pour fortement augmenter\nsa\nvitesse.
 0x4841A8: Une attaque rapide presque\ninvisible\nqui est sûre de frapper\nen premier.
 0x4841E9: Une attaque qui devient plus forte à\nchaque fois que l'utilisateur\nest\ntouché au combat.
-0x48422E: Utilisez-le pour fuir n'importe quel Pokémon sauvage. Se téléporte\négalement vers le dernier\nPoké\nCenter.
+0x48422E: Permet de fuir tout Pokémon\nsauvage. Se téléporte au\ndernier Centre Pokémon visité.
 0x484278: Une attaque avec un mirage qui\ninflige dégâts correspondant\nau\nniveau de l'utilisateur.
 0x4842C0: L'utilisateur copie le dernier coup\nutilisé par l'ennemi pour le\nreste\nde la bataille.
 0x48430A: Un cri perçant est émis pour réduire\nconsidérablement la défense\nde\nl'ennemi.
-0x484353: L'utilisateur crée des copies illusoires de lui-même\npour\naccroître son caractère évasif\n.
-0x484398: Une capacité d'auto-guérison qui restaure les PV de jusqu'à la\nmoitié\ndes PV maximum de\nl'utilisateur .
-0x4843E5: L'utilisateur raidit tous les muscles de son corps pour\naugmenter\nsa statistique de\ndéfense.
+0x484353: Crée des clones illusoires pour\naugmenter l'Esquive\nde l'utilisateur.
+0x484398: Auto-soin qui restaure jusqu'à la\nmoitié des PV max\nde l'utilisateur.
+0x4843E5: Raidit tous les\nmuscles du corps\npour augmenter sa\nstat de Défense.
 0x48442E: L'utilisateur compresse toutes les\ncellules de son corps pour\naugmenter\nson caractère évasif.
 0x484476: Un nuage obscurcissant de fumée ou\nd'encre réduit la précision\nde\nl'ennemi.
 0x4844B5: L'ennemi est exposé à un\nrayon\nsinistre qui déclenche la\nconfusion.
 0x4844F3: L'utilisateur retire son corps dans\nsa coquille dure , augmentant\nainsi\nsa statistique de défense .
-0x48453C: L'utilisateur se recroqueville pour dissimuler les points faibles et\naugmenter sa statistique de\ndéfense\n.
+0x48453C: Se recroqueville pour\ncacher ses points faibles\net augmente sa\nDéfense.
 0x484580: L'utilisateur crée un mur solide qui\naugmente fortement sa\nstatistique de\ndéfense .
 0x4845C5: Un mur de lumière coupe les dégâts\nde Sp. Atk attaque pendant\ncinq\ntours.
 0x484606: Élimine tous les changements de\nstatistiques parmi tous les\nPokémon\nengagés dans la bataille .
 0x484647: Un mur de lumière réduit les dégâts\ndes attaques physiques\npendant cinq\ntours.
-0x484689: L'utilisateur prend une respiration profonde et se concentre pour\naugmenter son taux\nde coups\ncritiques .
+0x484689: Inspire profondément et se\nconcentre pour augmenter\nson taux de critiques.
 0x4846D3: L'utilisateur endure attaques\npendant deux tours, puis\nriposte\ndoublement.
 0x484715: Remue un doigt et stimule le cerveau\nà utiliser n'importe quel\nmouvement\nau hasard.
-0x48475E: L'utilisateur contrecarre le ​​dernier mouvement utilisé\npar\nl'ennemi avec le même\nmouvement.
+0x48475E: Contre le dernier mouvement\nutilisé par l'ennemi\navec le même.
 0x4847A2: L'utilisateur fait exploser pour\ninfliger de graves dégâts,\nallant\nmême jusqu'à s'évanouir.
 0x4847E8: Un gros œuf est lancé avec une\ngrande force sur l'ennemi\npour\ninfliger des dégâts.
 0x48482D: L'ennemi est léché et frappé avec\nune longue langue . Cela\npeut\négalement paralyser.
@@ -4829,13 +4829,13 @@
 0x48493B: L'ennemi est frappé par une flamme\nintense. Il peut laisser la\ncible\nbrûlée.
 0x484986: Une puissante attaque de charge . Il\npeut également être utilisé\npour\nescalader une cascade.
 0x4849CA: L’ennemi est coincé et pressé par la\ncoque de l’utilisateur pendant\ndeux\nà cinq tours.
-0x484A15: Des rayons en forme d'étoile qui ne manquent jamais sont tirés sur\ntous\nles ennemis lors de la\nbataille .
+0x484A15: Des rayons en forme d'étoile\natteignent tous les ennemis\nsans jamais rater.
 0x484A57: L'utilisateur augmente sa Défense\nau\n1er tour, puis attaque au 2ème\ntour.
 0x484AA2: Des pointes acérées sont tirées sur\nl'ennemi pour frapper deux à\ncinq\nfois.
 0x484AE1: L'ennemi est attaqué avec de longs\ntentacules ou des vignes.\nCela peut\nréduire la vitesse.
 0x484B27: Oublie quelque chose et\naugmente\nfortement Sp. Déf.\n
 0x484B5B: L'utilisateur distrait l'ennemi en\npliant une cuillère. Cela\npeut\nréduire la précision.
-0x484BA1: Soigne l'utilisateur de jusqu'à la moitié de ses HP complets. Il\npeut\nêtre utilisé pour soigner un\nallié.
+0x484BA1: Soigne l'utilisateur jusqu'à la\nmoitié de ses PV max.\nPeut aussi soigner un allié.
 0x484BEB: Un fort coup de genou sautant .\nS'il\nmanque, l'utilisateur est\nblessé.
 0x484C27: L'utilisateur intimide l'ennemi avec\nle dessin sur son ventre\npour\nprovoquer la paralysie.
 0x484C75: Absorbe la moitié des dégâts qu'il a\ninfligés à un ennemi endormi\npour\nrestaurer ses PV.
@@ -4843,7 +4843,7 @@
 0x484D01: Les objets ronds sont lancés sur\nl'ennemi pour frapper deux à\ncinq\nfois.
 0x484D42: Une attaque qui absorbe la moitié\ndes dégâts qu'elle a\ninfligés pour\nrestaurer les PV.
 0x484D85: L'utilisateur force un baiser\nl'ennemi avec un visage\neffrayant\nqui induit le sommeil.
-0x484DCD: Une attaque au 2e tour mouvement avec un taux de coups\ncritiques\nélevé . L'ennemi peut\ntressaillir.
+0x484DCD: Attaque au 2e tour avec fort\ntaux de critiques.\nPeut faire chanceler.
 0x484E18: L'utilisateur transforme en une\ncopie du ennemi avec même le\nmême\nensemble de mouvements.
 0x484E60: Un jet de bulles frappe l'ennemi.\nCela peut réduire la\nstatistique de\nvitesse de l'ennemi.
 0x484EA4: L'ennemi est frappé avec un coup de\npoing rythmique qui peut le\nlaisser\nconfus.
@@ -4856,7 +4856,7 @@
 0x48508B: L'utilisateur explose pour infliger\nde terribles dégâts même\npendant que\ns'évanouit.
 0x4850D4: L'ennemi est ratissé avec des\ngriffes acérées ou avec des\nfaux\ndeux à cinq fois.
 0x485114: L'utilisateur lance un os qui frappe\nl'ennemi une fois, puis une\nfois au\nretour.
-0x48515E: L'utilisateur dort pendant deux tours pour restaurer\ncomplètement HP\net guérir tout\nproblème d'état.
+0x48515E: L'utilisateur dort deux tours pour\nrestaurer tous ses PV et guérir\nses altérations.
 0x4851AD: De gros rochers sont lancés sur\nl'ennemi. Cela peut\nfaire\ntressaillir l'ennemi .
 0x4851EF: L'ennemi est attaqué avec des crocs\nacérés. Cela peut faire\ntressaillir\nl'ennemi .
 0x485231: L'utilisateur réduit son nombre de\npolygones pour affiner les bords\net\naugmenter l'attaque.
@@ -4873,45 +4873,45 @@
 0x48551D: L'utilisateur prédit l'action de\nl'ennemi pour assurer que\nsa\nprochaine attaque réussisse.
 0x485560: Un ennemi endormi subit un cauchemar\nqui lui inflige des\ndégâts à chaque\ntour.
 0x4855AA: L'utilisateur effectue une charge\nenflammée sur l'ennemi .\nCela\npourrait causer une brûlure.
-0x4855E9: Une attaque qui ne peut être utilisée que lorsque est\nendormi.\nCela peut provoquer des\nsursauts.
-0x48562F: Une capacité qui fonctionne différemment pour le\ntype Ghost et\npour tous les autres\ntypes.
-0x485679: Une attaque désespérée qui devient d'autant plus puissante\nque\nl'utilisateur possède moins de\nHP.
+0x4855E9: Attaque utilisable uniquement\nquand l'utilisateur dort.\nPeut faire chanceler.
+0x48562F: Agit différemment\nsur les Spectres et\nsur tous les autres\ntypes.
+0x485679: Attaque désespérée\nplus puissante quand\nil reste peu de PV\nà l'utilisateur.
 0x4856C1: L'utilisateur change de type pour se\nrendre résistant à la\ndernière\nattaque qu'il a subie.
 0x48570C: Un vortex d'air est tiré sur\nl'ennemi. Il a un taux de\ncoups\ncritiques élevé.
-0x485752: Des spores ressemblant à du coton s'accrochent à l'ennemi,\nréduisant\nconsidérablement sa\nvitesse.
-0x485798: Une attaque totale qui devient d'autant plus puissante\nque\nl'utilisateur possède moins de\nHP.
+0x485752: Des spores cotonneuses\ns'accrochent à l'ennemi,\nréduisant fortement\nsa Vitesse.
+0x485798: Attaque totale\nplus puissante quand\nil reste peu de PV\nà l'utilisateur.
 0x4857DF: Un coup qui réduit 2 à 5 PP\ndu\ndernier coup utilisé par\nl'ennemi.
 0x48581E: Frappe l'ennemi avec une rafale\nde\nneige. Cela peut provoquer gel.\n
-0x485857: Permet à l'utilisateur de échapper à toutes les attaques. Il peut\néchouer\ns'il est utilisé à la\nsuite.
+0x485857: Permet d'esquiver toutes les\nattaques.\nPeut échouer si utilisé\nà la suite.
 0x4858A1: Un coup de poing lancé à vitesse\naveuglante. Il est certain\nde\nfrapper en premier.
-0x4858E2: Effraie l'ennemi avec un visage effrayant pour\nréduire\nconsidérablement sa\nvitesse.
+0x4858E2: Effraie l'ennemi avec\nune grimace terrible\nqui baisse fortement\nsa Vitesse.
 0x485923: L'utilisateur se rapproche de\nl'ennemi de manière désarmante,\npuis\nfrappe sans faute.
 0x48596B: L'utilisateur embrasse l'ennemi avec\nune douce mignardise qui sème\nla\nconfusion.
-0x4859AE: L'utilisateur maximise ses statistiques d'attaque à le\n​​coût\nde la moitié de ses PV\ncomplets.
+0x4859AE: Maximise l'Attaque\nau prix de la moitié\ndes PV max de\nl'utilisateur.
 0x4859F2: De la boue sale est jetée sur\nl'ennemi. Elle peut empoisonner\nla\ncible.
-0x485A30: De la boue est projetée sur le ​​visage de l'ennemi pour\ninfliger\ndes dégâts et réduire sa\nprécision.
-0x485A7A: L'encre est projetée dans le ​​visage de l'ennemi ou les yeux\npour l'endommager et\nprécision\ninférieure.
+0x485A30: Projette de la boue\nau visage de l'ennemi.\nInflige des dégâts et\nbaisse la Précision.
+0x485A7A: Projette de l'encre\ndans le visage ou les yeux\nde l'ennemi pour\nbaisser la Précision.
 0x485AC1: Un piège à pointes est posé autour\ndu groupe de ennemis pour\nblesser\nennemis qui arrivent.
 0x485B0C: Une explosion électrique est tirée\ncomme un canon pour infliger\ndes\ndégâts et paralyser.
 0x485B55: Annule complètement les efforts de\nl'ennemi pour augmenter sa\ncapacité\nà esquiver.
 0x485B9C: Si l'utilisateur s'évanouit,\nl'ennemi délivrant le\n​​coup final\ns'évanouit également.
 0x485BDE: Tout combattant qui entend cela\ns'évanouit en trois tours à\nmoins\nqu'il ne change.
 0x485C24: Un vent glacial est utilisé pour\nattaquer. Il réduit également\nla\nstatistique de vitesse .
-0x485C66: Permet à l'utilisateur de échapper à toutes les attaques. Il peut\néchouer\ns'il est utilisé à la\nsuite.
+0x485C66: Permet d'esquiver toutes les\nattaques.\nPeut échouer si utilisé\nà la suite.
 0x485CB0: L'utilisateur frappe l'ennemi\navec\nun os dans la main deux à cinq\nfois.
-0x485CF0: L'utilisateur verrouille sur l'ennemi, faisant de le\nprochain\nmouvement sûr que\nfrappera.
+0x485CF0: Verrouille l'ennemi\npour que la prochaine\nattaque ne manque\npas.
 0x485D30: L'utilisateur se débat sur pendant\ndeux à trois tours, puis\ndevient\nconfus.
 0x485D77: Une tempête de sable de 5 tours qui\nendommage tous les types sauf\nRoche,\nSol et Acier.
 0x485DC1: Une attaque brutale qui absorbe la\nmoitié des dégâts qu'elle a\ninfligés\npour restaurer les PV.
 0x485E09: L'utilisateur endure tout coup avec\n1 HP restant. Il peut échouer\nsi est\nutilisé successivement.
-0x485E55: L'ennemi est charmé par les adorables appels de\nl'utilisateur,\ncoupant brusquement\nson attaque.
+0x485E55: Charme l'ennemi par\nune adorable pose,\nréduisant fortement\nson Attaque.
 0x485EA0: Une attaque roulante de 5 tours qui\ndevient plus forte à chaque\nfois que\nelle frappe.
 0x485EE1: Une attaque retenue qui laisse\ntoujours à l'ennemi avec au\nmoins 1\nHP.
 0x485F24: Une capacité qui rend l'ennemi\nconfus, mais qui augmente\négalement\nbrusquement son Attaque.
-0x485F6C: Soigne l'utilisateur de jusqu'à la moitié de ses HP complets. Il\npeut\nêtre utilisé pour soigner un\nallié.
+0x485F6C: Soigne l'utilisateur jusqu'à la\nmoitié de ses PV max.\nPeut aussi soigner un allié.
 0x485FB6: Un tacle chargé électriquement\nqui\npeut également paralyser\nl'ennemi.
 0x485FF5: Une attaque qui devient plus forte\nà\nchaque coup successif.\n
-0x48602B: L'ennemi est frappé avec ailes d'acier. Cela peut également\naugmenter la Défense\nde\nl'utilisateur.
+0x48602B: Frappe avec des ailes d'acier.\nPeut aussi augmenter\nla Défense de l'utilisateur.
 0x486075: L'ennemi est fixé avec un\nregard\nméchant qui l'empêche de\ns'échapper.
 0x4860B7: S'il s'agit de l'autre sexe,\nl'ennemi est entiché et peu\nprobable\nqu'il attaque.
 0x486105: Pendant son sommeil, l'utilisateur\nutilise au hasard un\ndes mouvements\nqu'il connaît.
@@ -4919,7 +4919,7 @@
 0x486187: Ce mouvement d'attaque devient plus\npuissant plus l'utilisateur\naime son\nentraîneur.
 0x4861D1: L'ennemi reçoit un cadeau piégé .\nIl\nrestaure HP parfois, cependant.\n
 0x48621B: Ce mouvement d'attaque devient plus\npuissant moins l'utilisateur\naime\nson entraîneur.
-0x486265: Il protège le groupe de l'utilisateur de tous les\nproblèmes\nde statut pendant cinq\ntours.
+0x486265: Protège l'équipe\ncontre tout problème\nde statut pendant\ncinq tours.
 0x4862AB: L'utilisateur ajoute ses HP aux HP\nde l'ennemi, puis partage\négalement\nles HP totaux.
 0x4862F3: Une attaque de feu mystique et\npuissante qui peut infliger\nune\nbrûlure.
 0x486330: Une attaque qui fait trembler le sol\ncontre tous les Pokémon debout\n. Sa\npuissance varie.
@@ -5155,15 +5155,15 @@
 0x71A8D7: Cette région…
 0x71A8E5: …est habitée par de nombreux\nPokémon venus du monde entier.\p
 0x71A92B: Les gens d'ici utilisent les Pokémon\npour beaucoup de choses.\pMoi…\pJ'étudie tous les aspects des stats\net des taux de capture des Pokémon.\p
-0x71C950: Double la Vitesse si l'objet est consommé.
+0x71C950: Double la Vitesse si l'objet est\nconsommé.
 0x71C973: îDouble les changements de stats.
-0x71C98C: Ignore les changements de stats de l'ennemi.
-0x71C9AC: Attaque monte quand les stats baissent.
+0x71C98C: Ignore les changements de stats de\nl'ennemi.
+0x71C9AC: Attaque monte quand les stats\nbaissent.
 0x71C9CA: baissée.
-0x71C9D4: Att. Spé monte quand les stats baissent.
+0x71C9D4: Att. Spé monte quand les stats\nbaissent.
 0x71C9F3: sont réduites.
 0x71CA04: S'affaiblit à mi-PV ou moins.
-0x71CA30: Divise temporairement Att. et Vit. par deux.\n
+0x71CA30: Divise temporairement Att. et Vit.\npar deux.\n
 0x71CA56: combat.
 0x71CA60: Ville de Dresco
 0x71CA70: Ville de Tehl
@@ -5174,8 +5174,8 @@
 0x720ED4: ou moins.
 0x720EDB: îAtt. Spé monte quand brûlé.
 0x720EF7: une brûlure.
-0x720F03: îRéduit de moitié les dégâts physiques.
-0x720F27: îAugmente l'esquive des cap. de statut.
+0x720F03: îRéduit de moitié les dégâts\nphysiques.
+0x720F27: îAugmente l'esquive des cap. de\nstatut.
 0x720F41: plus de risques d'échouer.
 0x720F5C: Hauteurs Gelées
 0x720F6D: Vieille carte
@@ -17648,16 +17648,16 @@
 0x1F0EF76: Le New Game + a été activé. Vérifie\pla Boîte «\n{COLOR}É{STR_VAR_1}{COLOR}Á » pour\ples Pokémon transférés.\n{COLOR}ÊSAUVEGARDE TA PARTIE AVANT !
 0x1F0F004: New Game + est une fonctionnalité\nspéciale quite permet de commencer\lune nouvelle partie avecdes bonus\pspéciaux :1) Une équipe de 6 Pokémon\nmaximum peut êtretransférée dans la\pnouvelle partie. Ces 6 Pokémon sont\nrecréés à partir de l'équipede la\psauvegarde précédente. Les Pokémon\nseront régressés à leur espèce\ldebase et oublieront tous leurs\pmouvements sauf lescapacités\nd'œuf. Les objets tenus seront\pconservés, sauf lesZ-Cristaux. De\nplus, les stats comme les EV et les\pIV serontconservées.2) Si l'un des\nobjets suivants a été obtenu dansla\lsauvegarde précédente, il sera\ltransféré dans lanouvelle partie\p:Scanner de Stats, moto, DexNav,\nCherch'Objet,Baby Monitor, ADM,\lCatalogue de Dresseur,Charme Chroma,\lOvale, Capture, Pierre Magma,Carte\ldu Frontière, Porta-PC, Retireur de\lTemps,toute amélioration d'objet\ldébloquée, et tout BPgagné.3) La\pdifficulté du jeu peut être\naugmentée ouréduite à tout moment\lsans pénalité.4) Certains puzzles du\pscénario principal résolusdans la\nsauvegarde précédente resteront\lrésolusdans la nouvelle partie.5) Si\pla Carte du Frontière est\ntransférée, alorsla Battle Frontier\lsera accessible dès l'arrivée\làSeaport City.6) Des PNJ\psupplémentaires pour modifier IV,\nEVet natures seront disponibles à\lCrater Town jusqu'àla fin du jeu\l(hors mode Sandbox). Note que\lcertains peuvent facturer des PCo\ppourleurs services, donc assure-toi\nd'en gagner assezavant de commencer\lla nouvelle partie.7) Certains\lPokémon légendaires\pprécédemmentréservés à l'après-jeu\nseront désormais disponiblesavant la\lfin du\ljeu.
 0x1F0F5A6: Bienvenue dans Pokémon Unbound !\n\nAvant de jouer, \nsache que c'est un jeu de fans à\nbut non lucratif.\n\nSi tu as payé pour ce jeu, récupère \nton argent immédiatement !
-0x1F0F64D: Dans le monde que tu t'apprêtes à\nrejoindre, tu vas te lancer dans une\ngrande aventure avec toi comme\nhéros. Le monde est vaste. Prends\nton temps pour explorer Rien ne\npresse.
-0x1F0F6FA: Parle aux gens et examine tout où\nque tu ailles, que ce soit dans les\nvilles, sur les routes ou dans les\ngrottes. Le monde et ses habitants\nsont vivants. À mesure que tu\ngrandis, ils grandiront avec\ntoi.
-0x1F0F79C: Sur ce, tu es presque prêt à entrer\ndans la région de Borrius ! \nMais d'abord...
+0x1F0F64D: Dans le monde que tu t'apprêtes à\nrejoindre, tu vas te lancer dans une\ngrande aventure avec toi comme\nhéros. \n\nLe monde est vaste. Prends\nton temps pour explorer Rien ne\npresse.
+0x1F0F6FA: Parle aux gens et examine tout où\nque tu ailles, que ce soit dans les\nvilles, sur les routes ou dans les\ngrottes. \n\nLe monde et ses habitants\nsont vivants. À mesure que tu\ngrandis, ils grandiront avec\ntoi.
+0x1F0F79C: Sur ce, tu es presque prêt à entrer\ndans la région de Borrius ! \n\nMais d'abord...
 0x1F0F7EC: Choisis un personnage.
-0x1F0F800: Choisis un teint.
+0x1F0F800: Choisis une teinte de peau.
 0x1F0F814: Choisis une couleur de cheveux.
 0x1F0F82A: Choisis une couleur de veste.
 0x1F0F842: Choisis une couleur de liseré.
 0x1F0F858: C'est bien avec ce personnage ?
-0x1F0F874: Dernière étape, mais non la\nmoindre,quel est ton nom ?
+0x1F0F874: Dernière étape, mais non la\nmoindre, quel est ton nom ?
 0x1F0F89C: Ton nom est {PLAYER} ?
 0x1F0F8AD: Maintenant, déterminons la meilleure\nfaçon pour toi de jouer. C'est ta\ppremière partie sur Pokémon Unbound\n?
 0x1F0F91A: Utilises-tu les émulateurs Eclipse,\nGPemu, JohnGBAou No¥GBA ?
@@ -17673,7 +17673,7 @@
 0x1F0FC3F: {COLOR}É{STR_VAR_1}{COLOR}Á est la\ndifficulté recommandée pour toi.\pMême si tu peux choisir une\ndifficulté supérieure, ça pourrait\lnuire à ton expérience de jeu. Es-tu\pd'accord pour continuer en\ndifficulté {COLOR}É{STR_VAR_1}{COLOR}Á ?
 0x1F0FD05: {COLOR}ÉExpert{COLOR}Á est la\ndifficulté recommandée pour toi. Si\ptu es assez doué, tu n'auras pas\nbesoind'entraîner les EV au\pdébut. Cependant, cela deviendra\nnécessaire plus tarddans ton\laventure, en plus d'un certain\lniveau destratégie pendant les\pcombats. Es-tu d'accord pour\ncontinuer en difficulté Expert ?
 0x1F0FE27: Choisis la difficulté de puzzles que\ntu préfères. Une difficulté plus\pélevée signifie des puzzles de\nréflexion ou infiltration plus durs.
-0x1F0FE8E: La difficulté des puzzles du jeu a\nété réglée\psur{COLOR}É{STR_VAR_1}{COLOR}Á. Si tu\nla modifies via le menu Options,\lquitte lazone pour que les\lchangements prennent effet.
+0x1F0FE8E: La difficulté des puzzles du jeu a\nété réglée\psur {COLOR}É{STR_VAR_1}{COLOR}Á. Si tu\nla modifies via le menu Options,\lquitte la zone pour que les\lchangements prennent effet.
 0x1F0FF35: Choisis la difficulté de combat que\ntu préfères. Une difficulté plus\pélevée signifie des Dresseurs plus\nforts et des Pokémon sauvages rusés.
 0x1F0FFA4: Note que ce mode a été conçu pour\nles joueurs ayant un niveau modéré\ld'expérience en combat Pokémon. Tu\pn'auras pas besoin de te soucier des\nEV ou IV pour finir ce mode, mais tu\ldevrais réfléchir à ta stratégie\lavant tes combats. Es-tu d'accord\ppour continuer en difficulté\n{COLOR}ÉDifficile{COLOR}Á ?
 0x1F100B9: Note que ce mode a été conçu pour\nêtre terminé avec une équipe\lentièrement entraînée en EV. Si tu\pas une telle équipe, tu n'auras\nprobablement pas besoin de changer\ld'équipe entre deux combats\pimportants. Es-tu SÛR d'être\nd'accord avec la difficulté {COLOR}ÉExpert{COLOR}Á ?
@@ -17713,16 +17713,16 @@
 0x1F10F55: Puisque tu as déjà joué, veux-tu\npasser les cinématiques d'intro ?
 0x1F10F9C: Les cinématiques d'ouverture seront\npassées. Si tu veux passer toutes\ples cinématiques, active-le depuis\nle menu\lOptions.
 0x1F11016: Il y a longtemps…
-0x1F11020: La région de Borrius fut engloutie\npar une grande guerre avec une terre\nétrangère. Ce fut une guerre\nbrutale, qui dura de longues années.\nPendant ce temps, l'ennemi parvint\nà\nprendre\nl'avantage…
+0x1F11020: La région de Borrius fut engloutie\npar une grande guerre avec une terre\nétrangère. \nCe fut une guerre\nbrutale, qui dura de longues années.\nPendant ce temps, l'ennemi parvint\nà prendre l'avantage…
 0x1F110D5: Au bord de la défaite, le roi\nborrian invoqua une force obscure\lpour renverser le cours du combat…
 0x1F11136: L'avantage de l'armée étrangère fut\nperdu presque instantanément. Dès\pqu'elle entra sur le champ de\nbataille, la force obscure utilisa\lson pouvoir pour créer des portails\let renvoyer l'armée ennemie chez eux
 0x1F111F0: Avec l'armée étrangère partie, la\nguerre semblait terminée pour\pBorrius. Cependant, leur roi, en\nproie à sa soif de pouvoir, envoya\laussi l'armée borrianne là-dedans.
 0x1F1129A: La guerre continua de faire rage\ndans la terre étrangère pendant\pplusieurs années. Bien d'autres\nhommes et Pokémon furent enrôlés\lpour combattre et mourir au combat.\pUn Pokémon cher au roi ennemi tomba…
-0x1F1137E: Submergé par le chagrin, le roi\nbâtit une machine pour le revoir\net s'offrir l'immortalité.
-0x1F113ED: Mais ce traumatisme le laissa\nmarquéet empli de colère. Incapable\pde pardonner au monde quiavait\nblessé son précieux Pokémon,il\ltransforma sa machine en armegéante,\ll'Arme Ultime. Le roi devint un\pporteur dedestruction qui mit fin à\nla guerre.
-0x1F114EB: La guerre terminée, le peu qui\nrestaitde l'armée borrianne rentra\lchez soi. Le Pokémon du roi le\pquitta, et lechamp de bataille\ndevint silencieux…
+0x1F1137E: Submergé par le chagrin, le roi\nbâtit une machine pour le revoir\pet s'offrir l'immortalité.
+0x1F113ED: Mais ce traumatisme le laissa\nmarqué et empli de colère. Incapable\pde pardonner au monde qui avait\nblessé son précieux Pokémon,il\ltransforma sa machine en arme géante,\ll'Arme Ultime. Le roi devint un\pporteur de destruction qui mit fin à\nla guerre.
+0x1F114EB: La guerre terminée, le peu qui\nrestaitde l'armée borrianne rentra\lchez soi. Le Pokémon du roi le\pquitta, et le champ de bataille\ndevint silencieux…
 0x1F11576: La paix ne vint pas.
-0x1F11594: Enragés par cette guerre stérile,\nlessurvivants réclamèrent une\llargecompensation au roi\lborrian. N'ayant rien à offrir,\pilscommencèrent à manipuler la\nforceobscure pour attaquer le\lroyaumeborrian lors d'une tentative\ldecoup d'État.
+0x1F11594: Enragés par cette guerre stérile,\nlessurvivants réclamèrent une\llarge compensation au roi\lborrian. N'ayant rien à offrir,\pilscommencèrent à manipuler la\nforce obscure pour attaquer le\lroyaume borrian lors d'une tentative\lde coup d'État.
 0x1F11684: Pour arrêter cette folie, le roi\nborrian rassembla les Pokémon\llégendaires :
 0x1F116D7: Artikodin !
 0x1F116E1: Électhor !
@@ -17735,7 +17735,7 @@
 0x1F11864: 15 ans plus tard
 0x1F11888: Hoopa…Je m'inquiète, vieil ami,\ppourl'avenir — pour, si,\nnon…{PAUSE}ね quandELLE arrivera.
 0x1F118D6: Je ne pourrai pas te protéger si\nelle tente quelque chose.\pNon…{PAUSE}ね elle tentera quelque\pchose. La question est : quoi ?
-0x1F1194E: C'est pourquoi, mon ami, tu doiste\ncacher. Je vais laisser ta Poké Ball\pdériverau gré des vagues…Tu seras\nsûrement plus en sécuritéperdu en\pmer que si tu restais avecmoi. Si je\nme trompe et que rien ne sepasse, je\pte rappellerai. Mais si c'est notre\ndernière foisensemble…Protège mon\p{STR_VAR_3} si {STR_VAR_2} est\njamaisen danger. Et si le mauvais\pessaie de forcerton véritable\npouvoir…Alors fais confiance à\p{STR_VAR_1} pourte protéger. Adieu,\nmon\pbon\pami.
+0x1F1194E: C'est pourquoi, mon ami, tu doiste\ncacher. Je vais laisser ta Poké Ball\pdériverau gré des vagues…Tu seras\nsûrement plus en sécuritéperdu en\pmer que si tu restais avecmoi. Si je\nme trompe et que rien ne sepasse, je\pte rappellerai. Mais si c'est notre\ndernière foisensemble…Protège mon\penfant s'il est en danger. \nEt si le mauvais\pessaie de forcer ton véritable\npouvoir… Alors fais confiance à\plui pour te protéger. Adieu,\nmon\pbon\pami.
 0x1F11B03: Il est parti…
 0x1F11B0E: Alors, tu es venu malgré tout.\pFinissons-en.
 0x1F11B40: ARGH ! Comment accomplir le vœu de\pGrand- père si je n'arrive même pas\nà attraper un seul Pokémon ?
