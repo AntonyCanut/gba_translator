@@ -436,6 +436,7 @@ def main() -> None:
         )
     append_offset = (len(rom_bytes) + 3) // 4 * 4  # align end of ROM
     max_rom_size = len(rom_bytes)
+    relocated_for_retry: List[Dict[str, object]] = []
 
     def take_block(needed: int):
         """Retourne un bloc en laissant un écart GAP_BYTES après l'écriture."""
@@ -452,6 +453,24 @@ def main() -> None:
                     free_blocks.pop(idx)
                 return alloc_start, src
         return None, None
+
+    def take_old_block(needed: int):
+        """Réserve un bloc issu d'un ancien emplacement relâché (source == 'old')."""
+        nonlocal free_blocks
+        required = needed + GAP_BYTES
+        free_blocks.sort(key=lambda b: b[1])
+        for idx, (start, size, src) in enumerate(free_blocks):
+            if src != "old":
+                continue
+            if size >= required:
+                alloc_start = start
+                remaining_start = start + required
+                remaining_size = size - required
+                free_blocks[idx] = (remaining_start, remaining_size, src)
+                if free_blocks[idx][1] <= 0:
+                    free_blocks.pop(idx)
+                return alloc_start
+        return None
 
     def consume_free(start: int, length: int) -> None:
         """Retire une plage [start, start+length) des blocs libres pour éviter les collisions."""
@@ -760,6 +779,48 @@ def main() -> None:
             reuse_from_old += 1
         moved += 1
         replaced += 1
+        # Enregistrer pour une éventuelle seconde passe si nous n'avons pas utilisé un ancien bloc
+        if source != "old":
+            relocated_for_retry.append(
+                {
+                    "offset": offset,
+                    "alt_offset": alt_offset,
+                    "positions": positions,
+                    "ptr_delta": alt_offset - offset,
+                    "encoded": encoded,
+                    "needed": needed,
+                    "dest_offset": dest_offset,
+                }
+            )
+
+    # Tentatives supplémentaires: réutiliser un ancien emplacement libéré si possible
+    for _ in range(5):
+        moved_this_round = False
+        still_pending: List[Dict[str, object]] = []
+        for item in relocated_for_retry:
+            needed = int(item["needed"])
+            candidate = take_old_block(needed)
+            if candidate is None:
+                still_pending.append(item)
+                continue
+            dest_offset = candidate
+            encoded: bytes = item["encoded"]  # type: ignore
+            rom_bytes[dest_offset : dest_offset + needed] = encoded
+
+            ptr_delta = int(item["ptr_delta"])
+            positions = item["positions"]  # type: ignore
+            for idx, lsb in positions:
+                target = dest_offset + ptr_delta
+                new_ptr_val = POINTER_BASE + target
+                rom_bytes[idx : idx + 4] = new_ptr_val.to_bytes(4, "little")
+
+            prev_start = int(item["dest_offset"])
+            free_blocks.append((prev_start, needed + GAP_BYTES, "old"))
+            reuse_from_old += 1
+            moved_this_round = True
+        relocated_for_retry = still_pending
+        if not moved_this_round:
+            break
 
     args.out.write_bytes(rom_bytes)
     print(f"Chaînes remplacées: {replaced} (déplacées: {moved}, réutilisation anciens emplacements: {reuse_from_old})")
