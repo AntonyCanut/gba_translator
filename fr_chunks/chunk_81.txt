@@ -156,7 +156,7 @@
 0x1F52A71: FばPolder Town
 0x1F52A80: Polder Town D
 0x1F52A8E: Polder Town N
-0x1F52A9C: Welcome to East Borrius!\pPolder Town is a far cry from\nany place in West Borrius, don’t\lyou think?\pLike, I doubt West Borrians would\nwillingly live in a swamp.
+0x1F52A9C: Welcome to Borrius Est!\pPolder Town is a far cry from\nany place in Borrius Ouest, don’t\lyou think?\pLike, I doubt West Borrians would\nwillingly live in a swamp.
 0x1F52B3C: You might think the muddy ground\nmakes it hard to live here, but\lguess again!\pThe mud is actually very good for\nthe skin.
 0x1F52BB6: Tessy’s Pokémon may not all look\nlike {COLOR}ÉWater{COLOR}Ç-type Pokémon, but I\lguarantee you, most will be when\lyou fight them!
 0x1F52C2D: Tessy’s so smart!\pShe figured out a way to make her\nPokémon the same type as their\lmoves!\pI bet she learned how at the\n{COLOR}ÉBattle Circus{COLOR}Ç.
@@ -187,8 +187,8 @@
 0x1F5321B: {COLOR}ÇThat marks the grand finale of our\nCroagunk show!\pThank you, one and all!
 0x1F53268: That’s too bad…\nI guarantee it’s great, though.
 0x1F53298: You want to see the Croagunk\nagain?\pThere are a lot of preparations\nand such to make, so come back\ltomorrow!
-0x1F5330F: Operating a ship every day can wear\nyou out! It’s not running today.\pIt leaves for Seaport City on\n{COLOR}ÉSundays{COLOR}Ë and {COLOR}ÉWednesdays{COLOR}Ë!
-0x1F53396: When it’s working, the S.S. Marine\nsets sail to West Borrius on\lSundays and Wednesdays.
+0x1F5330F: Operating a ship every day can wear\nyou out! It’s not running today.\pIt leaves for Ville Portuaire on\n{COLOR}ÉSundays{COLOR}Ë and {COLOR}ÉWednesdays{COLOR}Ë!
+0x1F53396: When it’s working, the S.S. Marine\nsets sail to Borrius Ouest on\lSundays and Wednesdays.
 0x1F533EE: The S.S. Marine sets sail to West\nBorrius every {COLOR}ÉSunday{COLOR}Ë and {COLOR}ÉWednesday{COLOR}Ë.
 0x1F53440: Average Angler
 0x1F5344F: Great Piscator
@@ -196,7 +196,7 @@
 0x1F5346C: It’s time to whip out your Rod and\nget fishing! Hook {STR_VAR_1} Pokémon.
 0x1F534AD: It’s time to whip out the bait and\nlure in some fish! Hook {STR_VAR_1} Pokémon.
 0x1F534F4: It’s time to plant yourself firm\nand look onward. Hook {STR_VAR_1} Pokémon.
-0x1F53537: Hey, Trainer!\pRemember me?\nI certainly remember you.\pI’m the guy you met in Gurun Town!\pMy hope was to strike it big here\nin East Borrius, but the only gig\lI could find involves fishing…\pAnyway, I was hired as a sporting\ngoods promoter by Cube Corp.\pThey wanted me to encourage\nTrainers to fish more, and\lthereby promote their signature\lfishing rod band.\pSo, here’s my encouragement\nto you!\pIf you fish for at least {COLOR}É{STR_VAR_1}{COLOR}Ë\nPokémon using fishing rods you\lobtain yourself, you’ll be eligible\lfor a reward!\pHow does that sound?\nGreat, right?\pCome back to me if you’ve fished at\nleast {COLOR}É{STR_VAR_1}{COLOR}Ë times!
+0x1F53537: Hey, Trainer!\pRemember me?\nI certainly remember you.\pI’m the guy you met in Gurun Town!\pMy hope was to strike it big here\nin Borrius Est, but the only gig\lI could find involves fishing…\pAnyway, I was hired as a sporting\ngoods promoter by Cube Corp.\pThey wanted me to encourage\nTrainers to fish more, and\lthereby promote their signature\lfishing rod band.\pSo, here’s my encouragement\nto you!\pIf you fish for at least {COLOR}É{STR_VAR_1}{COLOR}Ë\nPokémon using fishing rods you\lobtain yourself, you’ll be eligible\lfor a reward!\pHow does that sound?\nGreat, right?\pCome back to me if you’ve fished at\nleast {COLOR}É{STR_VAR_1}{COLOR}Ë times!
 0x1F5378E: After your great showing, I now\nhave another task for you.\pPromote Cube Corp.’s rods even\nfurther by fishing for Pokémon\lat least {COLOR}É{STR_VAR_1}{COLOR}Ë times.
 0x1F53820: After your great showing, I now\nhave one last task for you.\pPromote Cube Corp.’s rods even\nfurther by fishing for Pokémon\lat least 50 more times, for a\lgrand total of {COLOR}É{STR_VAR_1}{COLOR}Ë times!\pThis should be easy for a great\npiscator such as yourself.
 0x1F53912: Great job, Trainer!\pI’ve received word from Cube Corp.\nthat you’ve promoted their brand\la total of {COLOR}É{STR_VAR_2}{COLOR}Ë times!\pHere’s your reward!

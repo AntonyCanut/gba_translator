@@ -37,29 +37,29 @@
 0x1F71E18: {COLOR}ÁIt’s a news report:\pThe Terror Granbull, the notorious\ngang known for helping establish\lAntisis City as a hotbed of crime,\lhas disappeared!\pWill this usher in a new age of\npeace and prosperity for the city?\pCitizens are encouraged to leave\ntheir homes and restore Antisis\lCity to its former glory.
 0x1F71F45: Antisis City Port\p{LEFT_ARROW} Antisis City
 0x1F71F66: Thundercap Mt.\nEast Entrance\p{RIGHT_ARROW} Antisis City
-0x1F71F92: Route 17\n“Eastern Bluffs”\p{LEFT_ARROW} Route 16\n{RIGHT_ARROW} Seaport City
+0x1F71F92: Route 17\n“Eastern Bluffs”\p{LEFT_ARROW} Route 16\n{RIGHT_ARROW} Ville Portuaire
 0x1F71FC6: Battle Frontier\p{UP_ARROW} Battle Tower, Battle Sands\n{LEFT_ARROW} Battle Mine\l{RIGHT_ARROW} Battle Circus
 0x1F72011: Battle Tower\pNever Lose! Keep Winning!
 0x1F72038: Battle Mine\pReach new depths!
 0x1F72056: Battle Circus\pFun for all ages!
 0x1F72076: Battle Sands\pLet others use your Pokémon!
-0x1F720A0: Seaport City\pThe port hub of Borrius.
+0x1F720A0: Ville Portuaire\pThe port hub of Borrius.
 0x1F720C6: {UP_ARROW} Battle Frontier
 0x1F720D8: Camomons Battle House\pEnjoy battling with Pokémon of\nnew type combinations!
 0x1F72124: Pokémon Breeder’s School\pLearn to become a breeding expert!
 0x1F72160: Battleground\pBattle with the best in Borrius!
 0x1F7218E: Captain Davy’s Shipyard\pWe build big boats!
-0x1F721BA: Seaport City Port\pNow departing for East Borrius!
+0x1F721BA: Ville Portuaire Port\pNow departing for Borrius Est!
 0x1F721EC: Some words are scrawled onto the\nsteel beams. They say:\p{UP_ARROW} KBT Expressway
 0x1F72235: Captain’s Quarters
 0x1F72248: Polder Town\pThe town situated in\na quagmire.
-0x1F72275: Polder Town Port\pNow departing for West Borrius!
+0x1F72275: Polder Town Port\pNow departing for Borrius Ouest!
 0x1F722A6: Polder Town Pokémon Gym\nLeader: Tessy\lThe Gal Gettin’ Down and Dirty!
 0x1F722EC: {RIGHT_ARROW} Safari Zone\pCatch ’em if you can!
-0x1F72310: Cootes Bog\p{UP_ARROW}Magnolia Town\n{DOWN_ARROW}Polder Town\l{LEFT_ARROW}Crystal Peak
-0x1F72345: {RIGHT_ARROW}Crystal Peak
-0x1F72353: {UP_ARROW}Magnolia Town\n{RIGHT_ARROW}Crystal Peak
-0x1F72370: Cootes Bog\p{UP_ARROW}Magnolia Town\n{DOWN_ARROW}Polder Town\l{RIGHT_ARROW}Crystal Peak
+0x1F72310: Cootes Bog\p{UP_ARROW}Magnolia Town\n{DOWN_ARROW}Polder Town\l{LEFT_ARROW}Pic Cristal
+0x1F72345: {RIGHT_ARROW}Pic Cristal
+0x1F72353: {UP_ARROW}Magnolia Town\n{RIGHT_ARROW}Pic Cristal
+0x1F72370: Cootes Bog\p{UP_ARROW}Magnolia Town\n{DOWN_ARROW}Polder Town\l{RIGHT_ARROW}Pic Cristal
 0x1F723A5: Magnolia Town\pThe ranch town with the lovely\nsea breeze.
 0x1F723DE: Magnolia Cafe
 0x1F723EC: Moomoo Farm
@@ -82,8 +82,8 @@
 0x1F72735: {UP_ARROW} Crater Town, Tehl Town\n{DOWN_ARROW} Fallshore City\l{RIGHT_ARROW} Epidimy Town
 0x1F7276E: {UP_ARROW} Dresco Town\n{DOWN_ARROW} Dehara City\l{LEFT_ARROW} Crater Town, Blizzard City
 0x1F727A7: {UP_ARROW} Dresco Town\n{DOWN_ARROW} Dehara City\l{RIGHT_ARROW} Gurun Town
-0x1F727D0: {DOWN_ARROW} Antisis City, Seaport City\n{LEFT_ARROW} Dehara City\l{RIGHT_ARROW} Gurun Town
-0x1F72808: {UP_ARROW} Gurun Town\n{DOWN_ARROW} Antisis City\l{RIGHT_ARROW} Seaport City
+0x1F727D0: {DOWN_ARROW} Antisis City, Ville Portuaire\n{LEFT_ARROW} Dehara City\l{RIGHT_ARROW} Gurun Town
+0x1F72808: {UP_ARROW} Gurun Town\n{DOWN_ARROW} Antisis City\l{RIGHT_ARROW} Ville Portuaire
 0x1F72833: Exit A: Frozen Heights
 0x1F7284A: Exit B: Dresco Town
 0x1F7285E: Exit C: Crater Town
@@ -95,7 +95,7 @@
 0x1F728DA: Exit I: Gurun Town
 0x1F728ED: Exit J: Vivill Town
 0x1F72901: Exit K: Antisis City
-0x1F72916: Exit L: Seaport City
+0x1F72916: Exit L: Ville Portuaire
 0x1F7292B: {COLOR}ÁTrainer Tips!\pDon’t walk away from these signs\nuntil you’ve read them completely!\pEvery single one contains important\ninformation that will help you out\lduring your adventure.\pSkipping text on these signs will\nlikely cost you!
 0x1F72A11: {COLOR}ÁTrainer Tips!\pHold {B_BUTTON} to change the default\nmovement speed!\pPress {L_BUTTON} to toggle auto-run!
 0x1F72A6D: {COLOR}ÁTrainer Tips!\pOpen the {COLOR}ÉOptions{COLOR}Á Menu to enable\nSave Prompts and Quick HMs!\pIf {COLOR}ÉSave Prompts{COLOR}Á are turned on, you\nwill be asked if you’d like to save\lbefore or after important events!\pIf {COLOR}ÉQuick HMs{COLOR}Á are turned on, Field\nMoves can be used without needing\lconfirmation each use!\pAdditionally, {L_BUTTON} and {R_BUTTON} can be used\nto scroll between pages of options!
@@ -149,7 +149,7 @@
 0x1F7519C: Got it, we’ll hold onto your Cube\nthen while you’re aboard.
 0x1F751D8: Please enjoy yourself.
 0x1F751EF: {COLOR}ËThanks for sailing with us.\pThe ship’s about to arrive in\nPolder Town.
-0x1F75239: {COLOR}ËThanks for sailing with us.\pThe ship’s about to arrive in\nSeaport City.
+0x1F75239: {COLOR}ËThanks for sailing with us.\pThe ship’s about to arrive in\nVille Portuaire.
 0x1F75284: The number of Trainers on the\nS.S. Marine today is {COLOR}É{STR_VAR_1}{COLOR}Ë.\pThe ship is nearing the port.\nDo you want to get off the ship?
 0x1F75300: The number of Trainers on the\nS.S. Marine today is {COLOR}É{STR_VAR_1}{COLOR}Ë.\lAnd you’ve won against {COLOR}É{STR_VAR_2}{COLOR}Ë.\pThe ship is nearing the port.\nDo you want to get off the ship?
 0x1F7539D: The number of Trainers on the\nS.S. Marine today is {COLOR}É{STR_VAR_1}{COLOR}Ë.\lYou… Congratulations!\pYou’ve won against every Trainer\non the ship!\pThe ship is nearing the port.\nDo you want to get off the ship?
@@ -209,7 +209,7 @@
 0x1F77464: Ditto!\pOops… I mean: Goodness me!\nWere you looking for a battle?\pIn that case, I certainly won’t hold\nback, Ditto!
 0x1F774D7: Noooo… I lost, Ditto…
 0x1F774ED: No, I… I can assure you, I’m very\nmuch a real person!\pI’m certainly not on the run from the\nScience Society at all, Ditto!
-0x1F77568: I don’t like East Borrius all that\nmuch - it’s too humid and damp.\pBut, they do have the most amazing\ncafé in Magnolia Town, which is\lworth the trip every time.
+0x1F77568: I don’t like Borrius Est all that\nmuch - it’s too humid and damp.\pBut, they do have the most amazing\ncafé in Magnolia Town, which is\lworth the trip every time.
 0x1F77609: So, you’ve come to challenge me\ntoo, have you?\pI give you due warning - I’m still\nactive at my age, because I’ve got\la solid strength to prop me up!
 0x1F7769E: So, I lost in a clash of solid\nstrength…
 0x1F776C7: That was quite enlightening…\pI do wonder just how active you’ll\nremain when you reach my age…\pWhy, not even Arthur, the previous\nChampion, was quite so full of vim\land vigor!
