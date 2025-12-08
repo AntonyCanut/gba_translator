@@ -7,7 +7,7 @@
 0x78F7F2: Il y a des cascades super\nbruyantes dans mon Arène, et ce\nvacarme me fracasse la tête.\pÇa me donne presque envie de coller\nun Poing Météore à quelque chose !
 0x78F87D: Ah, désolé !\nJ'ai oublié de me présenter !\pJe suis Mel, le Champion de\nFallshore.\pTu es challenger ?\nAlors retrouve-moi à l'Arène.\pJe n'ai pas envie d'y retourner\nalors si tu ne te bats pas bien,\lje lâcherai mon Poing Météore\nsur toi !
 0x78FA39: Tu m'as libéré !
-0x78FA4A: 9Une Gemme est un objet tenu spécial\nqui booste une attaque, puis\ndisparaît.\lChaque Gemme est liée à un type et\nne booste que ce type.\lChaque Champion de Borrius en fait\ntenir une à un de ses Pokémon,\nméfie-toi.\pSi ça t'inquiète, utilise\n{COLOR}ÉCalcination{COLOR}Ë pour faire fondre leur\nGemme avant usage.
+0x78FA4A: 9Une Gemme est un objet à tenir\nqui booste une attaque, puis\ndisparaît.\lChaque Gemme est liée à un type et\nne booste que ce type.\lChaque Champion de Borrius en fait\ntenir une à un de ses Pokémon,\nméfie-toi.\pSi ça t'inquiète, utilise\n{COLOR}ÉCalcination{COLOR}Ë pour faire fondre leur\nGemme avant usage.
 0x78FBE3: Tu dois être un dresseur aguerri.
 0x78FC07: Marlon : {COLOR}ËAucun raté !\nLa dernière fois, un gamin nous a\nvus et a voulu s'en mêler.\nJe ne veux pas que ça se reproduise.\pPas le luxe de gérer {STR_VAR_1}.\pRestez discrets et ne vous faites\npas repérer !\pCompris ?
 0x78FD1D: Marlon : {COLOR}ËEn route.
@@ -21,7 +21,7 @@
 0x791BBA: Tu as collecté {COLOR}É{STR_VAR_3} pour cent{COLOR}Á\nde cellules.
 0x791C58: C'est un Super Cube dans ta\npoche ?\p…\pOui !\pTu es exactement la personne que\nje cherchais !\pVeuillez me suivre.
 0x791E5D: {COLOR}ÇDernièrement, des morceaux d'un\nPokémon nommé Zygarde apparaissent\npartout à Borrius.\pOn ne les voit qu'avec un Super Cube\npourvu d'une fonction spéciale.
-0x791F17: {COLOR}ËZygarde est un Pokémon de Kalos qui\napparaît quand l'écosystème est\nmenacé.\pPourquoi il vient ici reste un\nmystère.\pOn tente de comprendre, mais il nous\nfaut quelqu'un pour collecter toutes\nles « cellules » et « cœurs » de\nZygarde.
+0x791F17: {COLOR}ËZygarde, un Pokémon de Kalos,\napparaît quand l'écosystème est\nmenacé.\pPourquoi il vient ici reste un\nmystère.\pOn tente de comprendre, mais il nous\nfaut quelqu'un pour collecter toutes\nles « cellules » et « cœurs » de\nZygarde.
 0x792026: {COLOR}ÇPenses-tu pouvoir nous aider ?\nIl nous faut un dresseur aguerri qui\nvoyagera dans Borrius.
 0x7920A9: {COLOR}ÇTu en es sûr ?\pTon aide nous serait\ninestimable.
 0x7920EA: {COLOR}ËGénial !\pMerci d'accepter de nous aider !\pSi tu peux me donner ton Cube une\nseconde...\p…\pVoilà !\pTon Cube a été mis à jour pour te\npermettre de voir et collecter les\lCellules de Zygarde.\pOn peut les trouver dispersées dans\ntout Borrius Ouest et Est.\pQuand tu en auras collecté au moins\n10 pour cent, viens me voir.\pPour l'instant, bonne chance !
@@ -31,7 +31,7 @@
 0x792504: Quand tu auras collecté au moins\n10 pour cent des cellules, reviens\lvoir mon mari.
 0x79255C: On dirait que tu as récupéré au\nmoins 10 pour cent des cellules.\pBeau travail !\pSi ce n'est pas déjà fait, parle à\nmon mari.
 0x7925DB: On dirait que tu as récupéré au\nmoins 50 pour cent des cellules.\pTu es à mi-chemin !\pSi ce n'est pas déjà fait, parle à\nmon mari.
-0x792666: Tu as récupéré toutes les cellules !\pC'est une aide immense pour nos\nrecherches !\pMerci beaucoup !
+0x792666: Tu as toutes les cellules !\pC'est une aide immense pour nos\nrecherches !\pMerci beaucoup !
 0x7927B3: Éぁ{UP_ARROW}Ë¿  àÇっこ ÁUn Dresseur !\pMerci beaucoup d'être venu chez\nmoi !\pMa femme et moi avons quelque\nchose de très important à régler.\l
 0x79283D: Quand tu auras collecté au moins\n10 pour cent des cellules, viens\lme voir.
 0x79288D: On dirait que tu as récupéré au\nmoins 10 pour cent des cellules.\pJe ne peux pas faire grand-chose\npour toi, mais je peux assembler\nces cellules en un Pokémon\n\ntemporaire.
@@ -39,7 +39,7 @@
 0x7929A3: {PLAYER} a reçu un Zygarde du\nscientifique !
 0x7929CD: Quand tu auras collecté au moins\n50 pour cent des cellules, reviens\lme voir.
 0x792A1D: Sache que ce Zygarde n'est qu'un\nassemblage temporaire, et que tout\lchangement de stats sera perdu\lquand il sera désassemblé.
-0x792C41: Il m'a échangé son {COLOR}ÉMagmar{COLOR}Ë tenant un\n{COLOR}ÉMagmariseur{COLOR}Ë, et il a évolué !
+0x792C41: Il m'a donné son {COLOR}ÉMagmar{COLOR}Ë tenant un\n{COLOR}ÉMagmariseur{COLOR}Ë, et il a évolué !
 0x792C8B: L'eau de ce lac...\pElle est si claire !
 0x792D31: 9Aussi limpide que ta victoire…
 0x792E51: J'ai ce Œuf Pokémon depuis un\nmoment, mais je pense qu'il est\lsur le point d'éclore.\pQuel Pokémon cela peut-il être ?
@@ -72,64 +72,64 @@
 0x793F7C: 9Ce n'est pas bon.
 0x793F8E: Si tu veux me voir en action, passe\nme voir.
 0x793FCF: fille
-0x794333: {PK}Î {PK}Ï {PK}Ò {PK}Ó ビ ÁIvory : {COLOR}ÇJe viens de recevoir de\nnouveaux ordres de Zeph.\pOn doit renforcer la sécurité sur la\nRoute 9.\p{PLAYER} lui a échappé via un\nportail au Volcan Cendreux.\pZeph craint que ça se reproduise et\nperturbe la mission.\lJe vais chercher un bon endroit\ppour ériger une barrière psychique\nsur la route, mais j'ai besoin que\lvous trois gardiez la porte.\l
+0x794333: {PK}Î {PK}Ï {PK}Ò {PK}Ó ビ ÁIvory : {COLOR}ÇOrdres de Zeph.\nOn doit renforcer la sécurité sur la\nRoute 9.\p{PLAYER} lui a échappé via un\nportail au Volcan Cendreux.\pZeph craint que ça se reproduise et\nperturbe la mission.\lJe vais chercher un bon endroit\ppour ériger une barrière psychique\nsur la route, mais j'ai besoin que\lvous trois gardiez la porte.\l
 0x7944A4: Gardez la porte.
 0x7944BD: Sbires : {COLOR}ËOui, madame !
 0x7944D4: Ivory : {COLOR}ÇHmm...\pPour mettre en place une barrière\nsolide, je devrais monter jusqu'au\lsommet du Mont Givre…
 0x7946D0: Ville d'Antisis
 0x7963E9: Le Black Emboar ne tombera pas si\nfacilement !
-0x796410: Le Black Emboar ! Ne s'arrête jamais, et ne regarde\njamais en arrière !
+0x796410: Le Black Emboar ! Il ne s'arrête\njamais ni ne regarde en arrière !
 0x796C75: Mel, le Champion d'Arène, n'est pas\nlà pour l'instant.\pIl est sûrement parti s'aérer\nquelque part.
 0x796CCF: Désolé.\pIl est dehors à faire je ne sais\nquoi, donc reviens plus tard.
 0x7A2565: Tarmiganville
 0x7A2573: Ô ァœ{DOWN_ARROW}ËÌÂフÁフÁTarmiganville\pLa ville située sur le Plateau\nThundercap.
-0x7A25BA: Ô Tœ{DOWN_ARROW}ËÌÁぽÀ ぺà{RIGHT_ARROW}Ë¿  フÁIci, au Laboratoire des Rêves,\nnous étudions les rêves des Pokémon.
-0x7A260E: Ô òù{DOWN_ARROW}ËÌÁぽÊ ぺà{RIGHT_ARROW}Ë¿  フÁDans la région d'Unys, une\nscientifique nommée Lina a créé un\ldispositif permettant de voir les\lrêves des Pokémon.\pIl permettait d'aller dans le\n\"Monde des Rêves\" du Pokémon et\ld'interagir avec lui.\pOn essaie de créer un appareil\nsimilaire et de le faire passer\lpour notre invention, alors ne le\ldis à personne.
-0x7A2752: Ô ニú{DOWN_ARROW}ËÌÁフÁ ぺà{RIGHT_ARROW}Ë¿  フÁLe Pokémon Darkrai a la capacité unique de blesser des Pokémon\npendant leur sommeil.\lMon but est de comprendre pourquoi\pil peut entrer dans le rêve d'un\nPokémon sans utiliser une\lcapacité.
+0x7A25BA: Ô Tœ{DOWN_ARROW}ËÌÁぽÀ ぺà{RIGHT_ARROW}Ë¿  フÁLabo des Rêves,\non étudie les rêves.
+0x7A260E: Ô òù{DOWN_ARROW}ËÌÁぽÊ ぺà{RIGHT_ARROW}Ë¿  フÁUnys : outil de Lina\npour voir les rêves des Pokémon.\pIl servait à aller dans le\n\"Monde des Rêves\" du Pokémon et\ld'interagir avec lui.\pOn crée un appareil similaire et on\nle fait passer pour le nôtre, alors\nne le dis à personne.
+0x7A2752: Ô ニú{DOWN_ARROW}ËÌÁフÁ ぺà{RIGHT_ARROW}Ë¿  フÁDarkrai blesse des Pokémon\nendormis.\lJe veux savoir pourquoi il entre\ndans un rêve sans utiliser\nune capacité.
 0x7A281F: Les Pokémon qui se baladent dans ce\nlabo aident tous à la recherche.\pCe sont tous des Pokémon connus\npour manger les rêves.
 0x7A2894: manger.
 0x7A289C: Sont vraiment pratiques.\l
-0x7A2910: ÍÔ ùñ{DOWN_ARROW}ËÌÁぽÁ ぺà{RIGHT_ARROW}Ë¿  フÁÁJe travaille ici, au Laboratoire des\nRêves.\pOn fait exactement ce que ça dit,\non étudie les rêves.\pMais mon travail n'avance pas, alors\nje fais une pause.
-0x7A29E8: ÍÔ äñ{DOWN_ARROW}ËÌÉフÁÁTarmiganville est tellement isolée dans les montagnes qu'elle n'a pas\nsa propre entrée vers\ll'{COLOR}ÉAutoroute SES{COLOR}Ç !\pSi tu veux descendre la montagne,\nil faudra marcher.
+0x7A2910: ÍÔ ùñ{DOWN_ARROW}ËÌÁぽÁ ぺà{RIGHT_ARROW}Ë¿  フÁÁJe bosse au Labo des Rêves.\pOn étudie les rêves.\pMon travail n'avance pas,\nalors je fais une pause.
+0x7A29E8: ÍÔ äñ{DOWN_ARROW}ËÌÉフÁÁTarmiganville est isolée.\nPas d'accès à l'{COLOR}ÉAutoroute SES{COLOR}Ç !\pPour descendre la montagne,\nil faudra marcher.
 0x7A2AA7: Je préfère nager dans un lac calme\nplutôt que dans la mer.
-0x7A3294: Mes shorts vont te mettre au tapis !
+0x7A3294: Mes shorts vont te mettre K.O. !
 0x7A32B3: Mes shorts m'ont lâché.
-0x7A32C8: Je devrais peut-être passer aux pantalons.
+0x7A32C8: Je devrais mettre un jean.
 0x7A3316: Tu m'as écrasé.
 0x7A3326: La prochaine fois je t'écraserai !
-0x7A3344: J'ai entendu d'un ami que sous la {COLOR}ÉVille de Tehl{COLOR}Ç, cette petite ville à\nl'ouest d'ici, il y a un passage\lsouterrain secret vers la\l{COLOR}ÉRoute 9{COLOR}Ç.\pMais ça ne peut pas être vrai...\nAllons ! Qui croirait ça ?
+0x7A3344: Un ami m'a dit que sous Tehl,\nun passage mène à la {COLOR}ÉRoute 9{COLOR}Ç.\pMais ça ne peut pas être vrai...\nAllez ! Qui croirait ça ?
 0x7A3406: Je porte cet Œuf depuis sa ponte.\pMais je suis prêt à le donner à une\npersonne jeune et en forme.\pVoudrais-tu élever cet {COLOR}ÉŒuf{COLOR}Ç\npour moi ?\p\n
 0x7A34C5: Tiens.\nPrends-en bien soin.\pC'est un Œuf très spécial.
-0x7A352B: La {COLOR}ÉMaison des Combats Inversés{COLOR}Ë est célèbre.\nBeaucoup viennent à la Ville de\pFallshore juste pour se battre\nici.
+0x7A352B: La {COLOR}ÉMaison des Combats Inversés{COLOR}Ë\nest célèbre.\pBeaucoup viennent à Fallshore pour\nse battre ici.
 0x7A358F: ici.
 0x7A35FC: Salut ! Bienvenue à la Maison des\nCombats Inversés !\pTu peux combattre tous les dresseurs\nici autant de fois que tu veux.\lSi tu as besoin d'explications sur\ples Combats Inversés, viens me\nparler.\lBon combat !\p
 0x7A36CA: Un combat inverse fonctionne comme\nun combat normal.\pLa seule différence concerne les\nfaiblesses et résistances.\pDans un combat inverse, elles sont\ninversées.\pAinsi, un type Eau devient faible\nau Feu, mais résiste à la Plante.
-0x7A3BDD: L'Arène de Mel est un labyrinthe complexe de bassins, nénuphars et cascades.\nCe serait sûrement facile à\ptraverser si tu avais un Pokémon\nqui connaît Surf et Cascade.\lMais je suis presque sûr que tu ne\ppeux pas surfer tant que tu n'as\npas le {COLOR}ÉBadge Zap{COLOR}Ë.\pEt ce badge vient après le Badge\nChute...
+0x7A3BDD: L'Arène de Mel est un labyrinthe de\nbassins, nénuphars et cascades.\nCe serait facile à traverser si tu\navais un Pokémon qui connaît Surf et\nCascade.\lMais je suis presque sûr que tu ne\ppeux pas surfer tant que tu n'as\npas le {COLOR}ÉBadge Zap{COLOR}Ë.\pEt ce badge vient après le Badge\nChute...
 0x7A3CF0: {PLAYER} a reçu un Œuf !
 0x7A3D04: Il semble que tu n'aies plus de\nplace dans ton équipe.\pJe te conseille de déposer un\nPokémon au PC.
 0x7A3D66: Oh, d'accord, je comprends.
-0x7A3D7E: L'Œuf appartient à un Pokémon spécial.\nBeaucoup de gens le considèrent\pcomme de type Fée.
+0x7A3D7E: L'Œuf appartient à un Pokémon\nspécial.\pBeaucoup de gens le voient comme un\nFée.
 0x7A3DC5: Ce n'est pas mes affaires, mais Mel\nvient de rompre avec la Championne\lde la Ville Blizzard.\pJ'espère qu'il va bien...\pJe crois qu'ils s'aimaient\nvraiment.\pPour de vrai !\nPas juste un faux amour...
 0x7A3F71: Quelque chose de grotesque est en\nsynthèse dans ce tube.
 0x7A3FA7: Le tube est vide.
-0x7A3FD3: 9Personne de la Ville de Tehl n'a le droit de sortir par ici, pour\nl'instant.\pDégage, gamin !
+0x7A3FD3: 9Personne de la Ville de Tehl ne\npasse ici pour l'instant.\pDégage, gamin !
 0x7A401F: Brr... Je commence à avoir froid.\nUne victoire me réchaufferait.
 0x7A4072: 9Ma mère a une terrible angoisse de\nséparation.\pÀ tel point que quand j'ai déménagé,\nelle m'a forcé à installer un\lpassage entre nos maisons.
 0x7A40F8: La mère de ma femme est cinglée !\pNe lui dis pas que je l'ai dit.
 0x7A4133: J'aime beaucoup ma fille et je ne\nsupporte pas de ne pas la voir ne\lserait-ce qu'un jour.
-0x7A4188: On pourrait croire qu'ils t'auraient\nlaissé un panneau ou un truc...
+0x7A4188: On dirait qu'ils auraient pu te\nlaisser un panneau ou un truc...
 0x7A41CF: Cafétéria
 0x7A41DE: Maintenant que ces Ombres sont\nparties, on peut enfin camper ici à\lnouveau !
 0x7A4229: Je suis tellement heureux que je me\nficherais même de perdre !
-0x7A4254: Ahh... Camper dans les feuilles, c'est le\npied !
+0x7A4254: Ahh... Camper dans les feuilles,\nc'est le pied !
 0x7A42AE: Je trouve ça charmant !
 0x7A42C2: Toute cette zone a une belle\nambiance automnale.
-0x7A42EA: ( ツ   Àづ{DOWN_ARROW}Ëづづ{DOWN_ARROW}ËÔ ナづ{DOWN_ARROW}ËÌÉÁQuand ces gens bizarres sont\narrivés, je ne pouvais plus courir.
-0x7A4343: On dirait que je n'ai pas pu te semer !
+0x7A42EA: ( ツ   Àづ{DOWN_ARROW}Ëづづ{DOWN_ARROW}ËÔ ナづ{DOWN_ARROW}ËÌÉÁQuand ces gens sont venus,\nplus moyen de courir.
+0x7A4343: On dirait que je n'ai pas pu te\nsemer !
 0x7A4365: C'est si libérateur de pouvoir\ncourir à nouveau !  
-0x7A4390: J'ai entendu dire qu'il y a plein d'objets cachés dans le\n{COLOR}ÉPassage Souterrain{COLOR}Ë !
+0x7A4390: J'ai entendu dire qu'il y a plein\nd'objets cachés dans le\n{COLOR}ÉPassage Souterrain{COLOR}Ë !
 0x7A5A7D: {COLOR}ËLa vraie question est...\pCombien de temps s'est écoulé\ndepuis qu'on m'a envoyé ici ?\pJ'ai l'impression d'être arrivé il\ny a seulement quelques heures...
-0x7A6A12: 9Certains Pokémon ne peuvent évoluer\nque lors d'un échange.\pMais qui échange encore, hein ?\nCette mode est passée depuis des\pannées.\pMaintenant tu peux faire évoluer ces\nPokémon avec une {COLOR}ÉPierre Lien{COLOR}Ë !\pRegarde !
+0x7A6A12: 9Certains Pokémon n'évoluent\nque via un échange.\pMais qui échange encore, hein ?\nCette mode est passée depuis des\pannées.\pMaintenant tu peux faire évoluer ces\nPokémon avec une {COLOR}ÉPierre Lien{COLOR}Ë !\pRegarde !
 0x7A6BB4: Stop !\pIdentifie-toi !
 0x7A6C49: Pourquoi on court après Électhor ?\p...\pAucune idée.
 0x7A6D09: Arène Pokémon de la Ville Blizzard\nChampionne : Alice\pDresseurs vainqueurs :\n{RIVAL}
@@ -143,26 +143,26 @@
 0x7A7336: Tu sais à quelle hauteur on est ?!
 0x7A7357: On est vraiment très haut !
 0x7A736D: Les Dresseurs comme nous n'ont pas\npeur de ces hauteurs !
-0x7A74D9: ( +À  :ヤ{DOWN_ARROW}Ëごユ{DOWN_ARROW}ËÔ ぷユ{DOWN_ARROW}ËÌÉÁOn dirait que tu fonces droit sur\nAlice !\pTu devras d'abord m'affronter !
+0x7A74D9: ( +À  :ヤ{DOWN_ARROW}Ëごユ{DOWN_ARROW}ËÔ ぷユ{DOWN_ARROW}ËÌÉÁTu fonces sur Alice !\pTu devras d'abord m'affronter !
 0x7A753B: Ouf...\nBien joué !
 0x7A754D: Où que tu ailles, n'aie jamais peur\nde foncer à fond !
 0x7A7702: Ce froid marin, et le froid de la\ndéfaite...
 0x7A78E5: Je me suis entraîné avec Alice à\nl'Arène de la Ville Blizzard.\pL'emplacement de son Arène m'a\ndonné envie de devenir Skieuse.
 0x7A7D0E: ビ ºまÌオÓ Á{RIVAL} : {COLOR}ËSTOP !\pTu es un de ces sbires de l'Ombre,\npas vrai ?\pJe reconnais le symbole sur ta\npoitrine.\pTu vas me dire ce que je veux\nsavoir, ou je te ferai ce que j'ai\lfait à ces sbires idiots dans ta\lplanque.
 0x7A7DF3: Ivory : {COLOR}ÇS'il te plaît, écarte-toi,\n{RIVAL}.\pJe n'ai pas le temps de m'occuper\nde toi maintenant.
-0x7A7E6A: 9Le symbole sur nos poitrines représente l'anneau unique pour les\nrégner tous.
+0x7A7E6A: 9Le symbole sur nos torses est\nl'anneau unique pour les régner\ntous.
 0x7A7ED5: {RIVAL} : {COLOR}ËQuoi...\pTu ne peux pas faire comme si tu me\nconnaissais et ignorer tout le\lreste !\pMes Pokémon vont te réduire en\ncharpie !
 0x7A805E: Jax : {COLOR}ËJe jure que dès que cette\nbarrière sera levée, je viens pour\lvous, sbires.
 0x7A80B1: Sbire : {COLOR}ËBonne chance.\pCette barrière ne disparaîtra pas\navant qu'on ait fini la mission.\pImpossible que tu passes.
-0x7A8133: Jax : {COLOR}ËARGH ! Allez Étouraptor. Il doit bien y\pavoir un autre moyen d'aller sur la\nroute.\pIl y a peut-être un passage\nsouterrain caché quelque part...\pAllons chercher.
-0x7A81DA: La {COLOR}ÉPierre Lien{COLOR}Ë peut servir à faire autrement évoluer certains Pokémon\nqui évoluent normalement par\léchange.
-0x7A823B: Il m'a échangé son {COLOR}ÉÉlektek{COLOR}Ë, alors j'ai utilisé un {COLOR}ÉÉlectriseur{COLOR}Ë dessus comme\nune {COLOR}ÉPierre d'Évolution{COLOR}Ë, et il a\lévolué !
+0x7A8133: Jax : {COLOR}ËARGH ! Allez Étouraptor.\nIl doit y avoir un autre moyen\npour aller sur la route.\pIl y a peut-être un passage\nsouterrain caché quelque part...\pAllons chercher.
+0x7A81DA: La {COLOR}ÉPierre Lien{COLOR}Ë fait évoluer\ncertains Pokémon qui évoluent\nnormalement par échange.
+0x7A823B: Il m'a échangé son {COLOR}ÉÉlektek{COLOR}Ë.\nJ'ai utilisé un {COLOR}ÉÉlectriseur{COLOR}Ë dessus\ncomme une {COLOR}ÉPierre d'Évolution{COLOR}Ë, et\nil a évolué !
 0x7A8491: Ivory : {COLOR}ÇJe suis désolée,\n{RIVAL}...
 0x7A84B5: Ivory : {COLOR}ÇAlakazam !\pUtilise Psyko !
 0x7A84E6: {COLOR}ÇÇa suffit, Alakazam.\pReviens.
-0x7A8589: {PLAYER} ! J'espère que tu n'as pas vu ça tout\pà l'heure...\n...\pBon... euh... J'ai juste été pris\pau dépourvu...\nOuais...\pBref, j'ai une faveur à te\pdemander.\nJe sais que mon grand-père t'a\pdemandé d'aller au {COLOR}ÉMont\nThundercap{COLOR}Ë, mais est-ce que tu\lpourrais me donner un coup de main\lsur la {COLOR}ÉRoute 9{COLOR}Ë ?\pLes Ombres ont dressé une sorte de\nbarrière psychique autour de la\lroute qui m'empêche d'y voler.
+0x7A8589: {PLAYER} ! J'espère que tu n'as pas\nvu ça...\n...\pBon... euh... J'ai juste été pris\naudépourvu...\nOuais...\pBref, j'ai une faveur à te demander.\nJe sais que mon grand-père t'a\pdemandé d'aller au {COLOR}ÉMont\nThundercap{COLOR}Ë, mais est-ce que tu\lpourrais m'aider sur la\n{COLOR}ÉRoute 9{COLOR}Ë ?\pLes Ombres ont dressé une barrière\npsychique autour de la route qui\nm'empêche d'y voler.
 0x7A86EE: Tiens, savoure cet ingrédient frais\ncueilli dans le jardin.
-0x7A8951: Cette grotte renferme beaucoup de mystères !
+0x7A8951: Cette grotte cache beaucoup de\nmystères !
 0x7A8971: Tu es un jeune homme mystérieux.
 0x7A89DE: dame
 0x7A89E3: monsieur
@@ -171,28 +171,28 @@
 0x7A8D51: Dans le gouffre ardent, allons-y !
 0x7A95B9: 9Ñ\nTu sais ce que j'adore dans cette\nTour de Combat ?\pIl y a plein d'options à\npersonnaliser !\pTu peux changer ta musique de\ncombat, ton niveau, et même choisir\ldes restrictions !\pEncore mieux, la Tour enregistre\nchacune de tes séries de victoires\lséparément, pour voir facilement\lquel format te réussit le mieux !
 0x7A96E6: Tous les Pokémon ont des {COLOR}Étalents {COLOR}Ë\nutilisables en combat.\pLes talents peuvent aider ou gêner\nle lanceur, selon le talent.\pCertains talents ont même un effet\nen dehors des combats.\pMaîtrise les talents si tu veux\ndevenir un grand Dresseur.
-0x7A97DE: La plupart des Champions comptent sur la puissance de la\n{COLOR}ÉMéga-Évolution {COLOR}Çpour gagner.\pTu dois t'en méfier et te préparer\nsi tu veux les battre.\pSi tu ne sais pas ce qu'est la\nMéga-Évolution, pense-y comme à un\lsuper boost.
-0x7A99C5: Merci, {PLAYER}. Je t'en suis vraiment reconnaissant.\nJe vais essayer de trouver un\ppassage vers la {COLOR}ÉRoute 9{COLOR}Ë depuis la\n{COLOR}ÉVille de Tehl{COLOR}Ë.\pTu devrais probablement tenter la\nmême chose.
+0x7A97DE: La plupart des Champions comptent\nsur la puissance de la\n{COLOR}ÉMéga-Évolution {COLOR}Çpour gagner.\pMéfie-t'en et prépare-toi si tu veux\nles battre.\pSi tu ne sais pas ce qu'est la\nMéga-Évolution, pense-y comme à un\nsuper boost.
+0x7A99C5: Merci, {PLAYER}. Je t'en suis\nvraiment reconnaissant.\nJe vais essayer de trouver un\npassage vers la {COLOR}ÉRoute 9{COLOR}Ë depuis la\n{COLOR}ÉVille de Tehl{COLOR}Ë.\pTu devrais peut-être tenter la même\nchose.
 0x7A9A75: Il y a trente ans, une grosse météorite fonçait vers Borrius. Les astronomes de la Ville\nPortuaire ont prédit que si elle\pn'était pas arrêtée, elle tomberait\ndirectement sur la Ville Vallée,\lnotre ville, et anéantirait toute\lvie ici.\lNous avons évacué la ville en\purgence.\nAu moment de nous échapper par\pl'Autoroute SES, la nouvelle est\ntombée.\lLa météorite devait désormais\pécraser la moitié de la région !\nSi nous tentions de fuir sous\pterre, nous risquions d'être\nensevelis.\lCe fut le chaos.\pTout semblait perdu... jusqu'à ce\pqu'IL arrive.\n{COLOR}ÉAros{COLOR}Ë, la légende.\pIl est arrivé avec Arceus et a\putilisé un petit Pokémon pour\ntransporter tout le monde à l'Est\lde Borrius, à l'abri.\lIl prévoyait d'attaquer la\pmétéorite de face et de la réduire\nen morceaux.\pAprès avoir mis tout le monde en\nsécurité, on dit qu'il a enfourché\lun Rayquaza et a percuté la\lmétéorite !\pElle s'est brisée, et la plupart\ndes fragments sont tombés sur la\lVille Vallée.\pLa ville a été détruite, mais Aros\navait sauvé une région.\pJe n'oublierai jamais l'acte\nhéroïque qu'a accompli cet homme.
-0x7A9E8F: {COLOR}ÇPour une raison quelconque, l'entrée de l'Autoroute SES est gelée.\nEn tant que Champion de cette\pville, c'est mon travail de gérer\nça.\pRegarde comme j'utilise\nÉclate-Roc pour briser la glace !
-0x7A9F78: 9{COLOR}ÇApproche d'un rocher fissuré et choisis le Pokémon avec lequel tu\nveux le briser.\pJ'espère que tu as compris les bases\npour utiliser Éclate-Roc !\pJe dois retourner à l'Arène, alors à\nune prochaine !
+0x7A9E8F: {COLOR}ÇL'entrée de l'Autoroute SES est\ngelée.\nEn tant que Champion de cette ville,\nc'est mon travail de gérer ça.\pRegarde comme j'utilise\nÉclate-Roc pour briser la glace !
+0x7A9F78: 9{COLOR}ÇApproche d'un rocher fissuré et\nchoisis le Pokémon pour le briser.\pJ'espère que tu as compris les bases\npour utiliser Éclate-Roc !\pJe dois retourner à l'Arène, alors à\nune prochaine !
 0x7AA251: Je plaisante, je ne vais nulle\npart.
 0x7AA277: Je vais rester planté là pour\nl'éternité.
 0x7AA2FA: Ville !
-0x7AA4DE: 9Tu vois l'objet sur la table ? C'est mon trésor, la {COLOR}ÉMaster Ball{COLOR}Ç.\pC'est une Poké Ball rare qui peut\ncapturer n'importe quel Pokémon\psans faillir.\nL'homme qui me l'a donnée,\p{COLOR}ÉAros{COLOR}Ç, m'a dit de la garder comme ma\nvie en dépendait.\lJusqu'à ce que quelqu'un me montre\pun petit Pokémon violet,\n{COLOR}ÉHoopa{COLOR}Ç.\pAros a dit que celui qui contrôle\nHoopa est le Gardien de Borrius et\lmérite cette Ball.\pEs-tu le Gardien de Borrius, ou\njuste un autre morveux ?
+0x7AA4DE: 9Tu vois l'objet sur la table ?\nC'est mon trésor : la\n{COLOR}ÉMaster Ball{COLOR}Ç.\pPoké Ball rare qui capture tout\nPokémon sans faillir.\nL'homme qui me l'a donnée,\p{COLOR}ÉAros{COLOR}Ç, m'a dit de la garder comme ma\nvie en dépendait.\lJusqu'à ce qu'on me montre un petit\nPokémon violet, {COLOR}ÉHoopa{COLOR}Ç.\pAros a dit que celui qui contrôle\nHoopa est le Gardien de Borrius et\lmérite cette Ball.\pEs-tu ce Gardien, ou juste un autre\nmorveux ?
 0x7AA6A7: Vraiment ?\nProuve-le-moi !\pMontre-moi le Pokémon appelé\n{COLOR}ÉHoopa{COLOR}Ç !
 0x7AA6E9: Regarde mes lèvres...\nElles sont couleur prune !
 0x7AA7DC: {STR_VAR_1} !\nIl est si câlin et rose !\pTu devrais utiliser la {COLOR}ÉPierre\nOvale{COLOR}Ç pour le faire évoluer !
 0x7AA853: L'énergie électrique dans l'air...\nC'est si mystérieux !
 0x7AA94D: Zut !
-0x7AA9BD: Tout le monde ici parle d'\n\"évolution ci\" et \"évolution ça\".\lMais je trouve l'évolution\pstupide !\pMa façon préférée d'empêcher une\névolution n'est pas d'appuyer sur le\l{COLOR}Ébouton B{COLOR}Ë quand mon Pokémon évolue,\lmais de lui faire tenir une\l{COLOR}ÉPierre Stase{COLOR}Ë.\pAinsi je zappe toute l'évolution !\n
+0x7AA9BD: Tout le monde ici parle d'\n\"évolution ci\" et \"évolution ça\".\lMais je trouve l'évolution\pstupide !\pJe préfère bloquer l'évolution\nnon pas en appuyant sur le\n{COLOR}Ébouton B{COLOR}Ë, mais en donnant une\n{COLOR}ÉPierre Stase{COLOR}Ë.\pAinsi je zappe toute l'évolution !\n
 0x7AAB04: Ton {COLOR}É{STR_VAR_1}{COLOR}Ç devrait tenir la {COLOR}ÉPierre\nOvale{COLOR}Ç pendant la {COLOR}Éjournée{COLOR}Ç !
 0x7AAB4D: Fascinant !
 0x7AAB5E: 9J'entraînais mon {COLOR}ÉTarinor{COLOR}Ë au\n{COLOR}ÉMont Thundercap{COLOR}Ë l'autre jour,\lquand soudain il a commencé à\lbriller !\pEnsuite, il a évolué en Tarinorme !\nCette montagne doit avoir des\ppropriétés bizarres.\n
-0x7AAC3A: Tu ne me verras jamais dehors sous la pluie !\n...\pEn fait, la plupart des gens ici\prentreraient sans doute à\nl'intérieur.
+0x7AAC3A: Tu ne me verras jamais dehors sous\nla pluie !\n...\pEn fait, la plupart des gens ici\nrentreraient sans doute à\nl'intérieur.
 0x7AACA4: Où crois-tu aller, gamin ?\nLe boss m'a ordonné de te garder\psous clé.\n
 0x7AAD90: デ ユË¿  ぽÇ ぺà{RIGHT_ARROW}ËぽÈ ぺà{RIGHT_ARROW}Ë¿  テÇ Ç È テÈ ね È àォっ  フÁËËËŒ Je gagne plein d'argent en vendant les objets que je trouve sur les\nPokémon sauvages.\nLes {COLOR}ÉŒil Composé{COLOR}Ë de mon Mimitoss\pm'aident à attirer ceux qui ont des\nobjets, puis j'utilise {COLOR}ÉLarcin{COLOR}Ë pour les\lpiquer !
-0x7AAE6A: Je déteste quand il pleut. Je n'habite pas ici, donc je ne\ppeux pas rentrer comme tout le\nmonde...
+0x7AAE6A: Je déteste la pluie. Je n'habite pas\nici, donc je ne peux pas rentrer\ncomme les autres...
 0x7AAECA: {COLOR}ËSplendide ! Au {COLOR}ÉMagasin Pokémon de\pBellinville{COLOR}Ë, un colis m'attend.\nJ'ai besoin que tu le récupères.\pJe le ferais moi-même mais, comme\pje l'ai dit, je suis trop vieux pour\nvoyager.\lJ'ai déjà informé le vendeur que je\pne viendrais pas, mais il insiste :\nil doit être retiré à\l{COLOR}ÉBellinville{COLOR}Ë.\lÇa ne devrait pas être difficile\ppour toi puisque tu as tes propres\nPokémon.\pHo ho ho !\pSi tu as besoin de moi, je serai\ndans mon labo.\pCe n'est pas loin, juste au bout de\nla route.\pMais avant d'aller n'importe où, va\nvoir ta mère.\pElle doit être très inquiète pour\ntoi.\pBonne chance, {PLAYER}.\nMes recherches dépendent de toi.
 0x7AB17D: {COLOR}ËCes derniers temps, les habitants de\nla Ville d'Epidimy se plaignent de\lne pas pouvoir visiter le {COLOR}ÉMont\lThundercap{COLOR}Ë.\pApparemment un type bizarre bloque\nl'entrée et dit qu'il est là pour\lt'empêcher d'entrer.\lJe ne sais pas ce qui se passe, mais\pma tête ne supporte plus ces\nplaintes.\lComme c'est sûrement à cause de toi,\pretrouve-moi à la {COLOR}ÉVille\nd'Epidimy{COLOR}Ë pour régler ça.\lJe n'ai pas toute la journée, alors\pprends ça pour y aller plus vite.\n
 0x7AB33C: {COLOR}ËNe me fais pas trop attendre,\n{PLAYER}.\pJe préfère régler ce problème\nrapidement.
