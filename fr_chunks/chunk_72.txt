@@ -7,11 +7,11 @@
 0x1F10619: Par défaut
 0x1F10621: Difficile
 0x1F1062B: Facile
-0x1F10630: Vanilla
-0x1F10638: Hard
+0x1F10630: Vanille
+0x1F10638: Difficile
 0x1F1063D: Expert
-0x1F10644: Insane
-0x1F1064B: Challenging
+0x1F10644: Dément
+0x1F1064B: Corsé
 0x1F10657: Retour
 0x1F1065C: Veux-tu voir les options\nd'amélioration de jeu ?
 0x1F1068D: Veux-tu voir les options de\n{COLOR}Érandomizer{COLOR}Á ?
@@ -198,18 +198,16 @@
 0x1F14516: {COLOR}ÉDes Pierres Dures{COLOR}Ë\npeuvent apparaître quand tu brises\pdes rochers dans le {COLOR}ÉGrand\nDésert{COLOR}Ë. Je parie que si tu\lcreusais dans les murs de la\p{COLOR}ÉKBT Expressway{COLOR}Ë, tu\nen trouverais aussi. Ramène-moi {COLOR}É{STR_VAR_1}{COLOR}Ë.
 0x1F145FE: Je vois bien que tu n'es pas un\npassionné.
 0x1F14623: Dis, tu sais quoi ?Apporte-moi\pencore plus de chosesdures !J'ai une\pmontagne de {COLOR}ÉGemmes{COLOR}Ë\nici, etje m'en moque !Je te les\ldonnerai contre encoreplus de\pPierres\nDures.
+0x1F14710: {COLOR}Á{PLAYER} a remis le\n{STR_VAR_1}.
 0x1F1472A: Je ne veux plus simplement des\nPierres Dures ! Maintenant, je veux\p{COLOR}É{STR_VAR_1}{COLOR}Ë\n{COLOR}ÉGems{COLOR}Ë ! Tu penses que tu peux ?
 0x1F147A3: Yee haw !\nCes {COLOR}ÉGems{COLOR}Ë sont partout,\nmais surtout dans les mines près\nde KBT Expressway !
 0x1F147BF: Ces {COLOR}ÉGems{COLOR}Ë dans ton\nCube sont celles que je veux !\nLaisse-les-moi.
-0x1F14856: Tu veux une récompense, hein ?\pOK, tiens.
+0x1F147F8: Yee haw !\pTu veux échanger contre plus de\nGemmes ?
 0x1F14825: Tu peux trouver des\n{COLOR}ÉGems{COLOR}Ë partout, mais tu en verras\nplein à KBT Expressway !\nRamène {COLOR}É{STR_VAR_1}{COLOR}Ë de ces {COLOR}ÉGems{COLOR}Ë.
-0x1F1490B: Je peux dire que tu n'es pas un\npassionné.
+0x1F14870: {COLOR}ÉDes Pierres Dures{COLOR}Ë peuvent\napparaître en brisant des rochers\ndans le {COLOR}ÉGrand Désert{COLOR}Ë.\pJe parie que si tu creusais dans les\nmurs de la {COLOR}ÉKBT Expressway{COLOR}Ë,\ntu en trouverais aussi.\pFais l'un ou l'autre et ramène-moi\n{COLOR}É{STR_VAR_1}{COLOR}Ë d'entre elles.\pJe te donnerai la Gemme de ton\nchoix en échange.
 0x1F14989: Tu sais quoi ?Apporte-moi encore\nplus de trucsrares !Je veux\p{COLOR}É{STR_VAR_1}{COLOR}Ë\n{COLOR}ÉGems{COLOR}Ë\pen\nmêmetemps\l!
-0x1F14983: Je ne dirais pas non à plus de ces\n{COLOR}ÉGems{COLOR}Ë !\pPlus j'en ai, mieux c'est !\pJ'en ai besoin encore plus que pour\ntoutes ces Pierres Dures que je t'ai\nfait chercher !
-0x1F14A00: Jeu GEMnial
-0x1F14A73: Récupère {COLOR}ÉGems{COLOR}Ë et remporte des prix !
-0x1F14A48: Chercheur de gemmes
-0x1F14A5B: Collector de Gemmes
+0x1F14A62: Joyau Insecte
+0x1F14A6A: Joyau Ténèbres
 0x1F14A73: Gemme Dragon
 0x1F14A7E: Gemme Électrik
 0x1F14A8B: Gemme Fée
@@ -228,21 +226,23 @@
 0x1F14B12: Gemme Eau
 0x1F14B1C: S'il te plaît…{PAUSE}î\nJe t'en supplie…\pDis-moi que tu as pêché des Pokémon\nau moins {COLOR}É3{COLOR}Ë fois…
 0x1F14B72: Ohhhhhhhh ouaiiiiiiiis !\pUn Dresseur qui prend vraiment la\npeine de pêcher est venu chez moi !\pC'est juste l'inspiration qu'il me\nfallait pour repartir de zéro !\pIl est temps d'aller faire la fête à\nl'est de Borrius, baby !\pÀ plus, Dresseur !
-0x1F14CD2: {COLOR}ÁUn pêcheur a laissé un objet ici…
+0x1F14C4E: {COLOR}ÁOn dirait que le Pêcheur a laissé\nquelque chose…
 0x1F14C84: Tch…\pLes gosses de nos jours…
-0x1F14D23: Tch…Tu es un menteur !Tu n'as pas\npêché 3 fois\l!\lJe\ple\nsais\l!
+0x1F14C9A: Tch…\pTu mens !\nTu n'as pas pêché 3 fois, je sais !
 0x1F14CD2: Chasseur de trésor
 0x1F14CE2: Retourne au Tombeau de Borrius et\ntrouve tous les objets cachés !
-0x1F1505C: Pendant que tu errais dans le\pdésert, es-tu tombé sur l'entrée du\nTombeau de Borrius ? On sait que les\nanciens de Borrius ont caché\nplein de trésors dans la tombe.
+0x1F14D23: Tch…Tu es un menteur !Tu n'as pas\npêché 3 fois\l!\lJe\ple\nsais\l!
 0x1F14DFC: C'est toi ! Le Dresseur qui a trouvé\pla chambre funéraire dans le Tombeau\nde Borrius ! On ne parle que de toi\pen ville ! Alors s'il te plaît,\paccepte ma demande\n!
-0x1F1516B: Tu acceptes sans savoir ?\pLes anciens ont caché des trésors\ndans le Tombeau de Borrius.\pRetourne-y et trouve chaque objet\ncaché. Tu peux ?
+0x1F14E8B: Tu ne sais même pas ce que c'est et\ntu as déjà accepté ?\pQuel cran !\pPas étonnant que tu aies pu\ntraverser la Tombe de Borrius !\pVoici ma demande.\pJe suis sûr que tu as vu qu'il y\navait pas tant de trésors dans la\ntombe.\pOn sait ici que les anciens de\nBorrius utilisaient des matériaux\lspéciaux pour camoufler leurs\ltrésors.\pDonc, je veux que tu retournes à\nla tombe et que tu trouves chaque\nobjet caché par les anciens.\pPenses-tu en être capable ?
 0x1F1505C: Tu es trop classe ! Je ne peux pas\psentir combien de trésors restent\ncachés dans la tombe, mais je\lsentirai quand tu les auras tous\ltrouvés.
 0x1F150DD: Je le sens… tu as trouvé tous les\ntrésors cachés dans la tombe !\pTu es trop classe !\pPrends cet Œuf que j'ai trouvé en\nfouillant la tombe moi-même.
 0x1F1516B: {COLOR}Á{PLAYER} a reçu un Œuf du\nPsy !
 0x1F15193: Je ne t'en veux pas. Un Dresseur\pimportant comme toi doit avoir bien\nplus important à\lfaire.
+0x1F151F0: Je sens qu'il reste encore\ndes trésors cachés dans la tombe.\pJe ne sais pas combien il en reste,\nmais tu devrais utiliser un\n{COLOR}ÉCherch'Objet{COLOR}Ë\lpour être sûr de tout trouver.
 0x1F1529A: Je le sens… tu as trouvé tout le\ntrésor de la tombe ! Mais avant de\pte donner une récompense, il te\nfaudra de la place dans ton\léquipe.
 0x1F15329: Cet Œuf devait être caché dans la\ntombe depuis des siècles ! Si tu\pn'avais pas découvert la chambre\nfunéraire, il n'aurait peut-être\njamais trouvé de Dresseur pour\nl'élever.
 0x1F153C2: Cet objet a été trouvé derrière un\npilier au 1F.
+0x1F153ED: Cet objet a été trouvé entre les\ndeux Dusknoir du haut au B4F.
 0x1F15426: Cet objet a été trouvé près de\nl'échelle descendante au B3F.
 0x1F1545A: Cet objet a été trouvé près de\nl'échelle en haut du B2F.
 0x1F15495: Cet objet a été trouvé à côté du\npilier en bas du B2F.

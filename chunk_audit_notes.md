@@ -39,6 +39,8 @@
 - fr_chunks/chunk_23.txt : premiers ajustements (0x75CA45, 0x762A86, 0x762CD5, 0x763050, 0x763130, 0x763209, 0x763266, 0x7632FE, 0x7634F8, 0x76454F, 0x7645AD, 0x75DB9E, 0x765196). Restent nombreuses lignes longues ou corrompues (ex. 0x75D8D2, 0x762E5A, 0x7637DB, 0x764E54, 0x76501D, 0x7655A1, 0x7657D1…).
 - fr_chunks/chunk_24.txt : plusieurs dialogues rebrisés (0x778E1D, 0x77FB88, 0x77FC7B, 0x77FD9C, 0x77FF0F, 0x7801D1, 0x780230, 0x781278, 0x7812CF, 0x78133B, 0x781506, 0x7816A1, 0x787C66, 0x787CBB, 0x787D6C, 0x787D9E, 0x787F3F, 0x788050, 0x7880AC, 0x7880E5, 0x788429, 0x788595, 0x788674, 0x788A14, 0x788A96, 0x788B02, 0x788CAB). Restent ~24 segments >36c, dont certains avec préfixes corrompus (ex. 0x78069E, 0x78A9D7) à traiter si possible.
 - fr_chunks/chunk_26.txt : tous les segments lisibles remis ≤36c en respectant les \\n/\\p/\\l de l'origine. Entrées corrompues conservées telles quelles.
+- fr_chunks/chunk_79.txt : toponymes remis en cohérence (Hauteurs Gelées, Bourg Vivill, Ruines du Néant, Borrius Est, Ville Portuaire, Pic Cristal) en conservant les codes et longueurs ≤36c.
+- Passes globales sur les fr_chunks : renommage des toponymes restés en anglais (Crystal Peak -> Pic Cristal ; East/West Borrius -> Borrius Est/Ouest ; Seaport City -> Ville Portuaire) pour alignement avec place_names_map. Segments non rééquilibrés (dépassements préexistants inchangés).
 
 ## Prochaines priorités proposées
 1) Poursuivre chunk par chunk à partir de `chunk_17` (nombreuses entrées Pokédex) puis `chunk_18`, en rebrisant les segments lisibles >36c (en respectant les breaks d’origine).
