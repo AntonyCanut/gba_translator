@@ -1,93 +1,159 @@
-0x1F569C7: Battez Hoopa pour vous frayer un\nchemin vers l'arme ultime !
-0x1F569FB: Éteignez l'arme ultime !
-0x1F56A19: Faites équipe avec {RIVAL} une\ndernière fois pour vaincre Marlon !
-0x1F56A49: Défiez le Arène de Séquoia !
-0x1F56A64: Dirigez-vous vers l'est depuis la\nville de Gurun et défiez la Ligue\nPokémon !
-0x1F56AA0: Prends des nouvelles auprès de ta\nmère !
-0x1F56AB8: Achète un ADM à Ville Portuaire\npour plonger sous l'eau !
-0x1F56AF0: Plongez sous l'eau dans les Ruines\ndu Vide et sauvez votre mère\nd'Aklove !
-0x1F56B36: L'histoire principale est terminée.\nAmusez-vous simplement à explorer\nBorrius !
-0x1F56B77: Il y a un Pokémon dans la\ntanière !
-0x1F56BA2: La tanière est vide.
-0x1F56BB4: Choisissez jusqu'à 3 Pokémon à\nutiliser dans le ​​combat contre\n{STR_VAR_2}.
-0x1F56BEB: {VERSION} vous a rejoint pour sur\n{EVIL_TEAM} !
-0x1F56C08: Veux-tu jeter une Pierre Voeu ?
-0x1F56C34: Vous avez ajouté un morceau de\nsouhait.
-0x1F56C52: Ooh !\pUn autre formateur a découvert une\nde ces zones cachées !\pJe m'appelle Ginger, au fait. Je\nsuis un formateur, comme vous !\pEst-ce votre première fois ici ?\pJe peux vous expliquer ces zones si\nc'est le cas !
-0x1F56D0A: Que dois-je expliquer ?
-0x1F56D21: Comme tu as trouvé ce repaire,\nje te laisse cette zone.\pBonne chance pour le combat !\pJ'espère faire équipe avec toi un\njour !
-0x1F56DAB: Ce trou que vous voyez ici est ce\nque appelle un repaire de Raid.\pDe puissants Pokémon habitent ces\ndens, et une fois par jour, vous\npouvez combattre\lpour avoir une chance d'en capturer\nun dans\lchaque repaire trouvé autour de\nBorrius !\pCes Pokémon sont effrayants, donc\nc'est une bonne idée de choisir le\nbon\lpartenaire pour combattre à vos\ncôtés.\pLorsque vous commencerez la\nbataille, vous remarquerez que le Le\nPokémon que vous _LL__ combattez a\nl'air très gros.\pC'est à cause du phénomène connu\nsous le nom de\n{COLOR}ÉDynamax{COLOR}Ç.\pIl restera ainsi tout au long de la\nbataille et ne pourra être attrapé\lqu'une fois vaincu et ramené à\ltaille normale.
-0x1F56FD0: Dynamax est un phénomène unique qui\nne peut être utilisé que dans des\lzones spéciales, comme celle-ci.\pSi vous maîtrisez le pouvoir de Méga\nEvolution, vous pourrez également\lDynamaxer votre Pokémon.\pPresque tous les Pokémon peuvent\nDynamaxer, mais si un Pokémon\ndétient une Méga\lPierre ou un Cristal Z, il ne pourra\npas\lle faire.\pPour Dynamaxer un Pokémon, appuyez\nsur {START_BUTTON} quand vous voyez\nle symbole Dynamax\lrouge apparaître.\pSi vous choisissez de Dynamaxer\nvotre Pokémon, l'effet durera\lpendant trois tours.\pPendant cette période, chacun des\nles mouvements de votre Pokémon\nseront\lalimentés en variantes spéciales\lconnues sous le nom de {COLOR}ÉMax\nMoves{COLOR}Ç.\pCes Max Moves sont beaucoup plus\npuissants que attaques régulières,\lalors assurez-vous de les utiliser\npleinement\leffet pendant que vous êtes Dynamaxé\n!
-0x1F57277: Parfois, quand le Pokémon est\naux abois, il dresse des boucliers.\pCes boucliers réduisent beaucoup les\ndégâts jusqu'à destruction.\pToute attaque casse au moins un\nbouclier, mais une capacité comme\n{COLOR}ÉCasse-Brique{COLOR}Ç en\nbrise deux !
-0x1F573B2: Si vous avez des Pokémon stockés\ndans la boîte «{STR_VAR_1}», ils\npeuvent être utilisés\là la place des Pokémon de votre\ngroupe.\pChaque ligne de la boîte est traitée\ncomme sa propre équipe, cela vous\npermettra donc\lde sauvegarder jusqu'à 5 équipes\nprédéfinies différentes\l.
+0x1F55FDA: This TM was found after using\nWaterfall.
+0x1F56003: This TM was awarded for completing\n“Protector of the Swamp”.
+0x1F56040:  Missions
+0x1F56055: {R_BUTTON}Type
+0x1F5605C: Active
+0x1F56063: Inactive
+0x1F5606C: Reward Available
+0x1F5607D: Done
+0x1F56082: Caught
+0x1F56089: Found
+0x1F5608F: Read
+0x1F56094: Close
+0x1F5609A: Back
+0x1F560A3: Completed
+0x1F560B1: Location: {STR_VAR_1}
+0x1F560BE: \nRemaining: 
+0x1F560DA: Return to {STR_VAR_1} to\nreceive your reward!
+0x1F560FF: Start for more details.
+0x1F56117: Get Prof. Log’s package from the\nBellin Town Mart!
+0x1F5614A: Follow the man who stole\nProf. Log’s package!
+0x1F56178: Search for Marlon and recover\nProf. Log’s package!
+0x1F561AB: Return Prof. Log’s package to him!
+0x1F561CE: Go to Icicle Cave and deliver\n{RIVAL}’s Pokédex to him!
+0x1F56201: Challenge the Dresco Town Gym!
+0x1F56220: Talk to Prof. Log’s friend in\nDresco Town!
+0x1F5624B: Make a beeline for Cinder Volcano\nand save Moltres!
+0x1F5627F: Challenge the Crater Town Gym!
+0x1F5629E: Use the KBT Expressway to go south\nof Crater Town.
+0x1F562D1: Head through Valley Cave and make\nyour way towards Blizzard City!
+0x1F56313: Head up Frost Mountain and make\nyour way towards Blizzard City!
+0x1F56353: Challenge the Blizzard City Gym!
+0x1F56374: Get Rock Smash from the Cut Master’s\nfriend in Blizzard City!
+0x1F563B2: Travel south through the KBT\nExpressway to Fallshore City!
+0x1F563ED: Make your way down Route 10 to\nTehl Town!
+0x1F56417: Look around Tehl Town and find a\nway onto Route 9!
+0x1F5644A: Beat the Shadows to Arthur’s\nfriend’s house on Route 9!
+0x1F56482: Talk to the Fallshore City Gym\nLeader in Tehl Town!
+0x1F564B6: Challenge the Fallshore City Gym!
+0x1F564D8: Obtain the power of Mega Evolution\nfrom the Tarmigan Mansion!
+0x1F56516: Follow Mel to Epidimy Town!
+0x1F56532: Get Strength from a man in\nEpidimy Town!
+0x1F5655B: Make a beeline for Thundercap Mt.\nand save Zapdos!
+0x1F5658E: Meet up with Jax in Epidimy Town\nto discuss your next move!
+0x1F565CA: Head up Route 12 to Dehara City!
+0x1F565EB: Talk to Jax at the Dehara\nGame Corner!
+0x1F56612: Explore the Ruins of Void and make\nyour way to the top!
+0x1F5664A: The Mission Log is not connected.
+0x1F5666C: Help Marlon destroy the Shadow\nWarriors in Cinder Volcano!
+0x1F566A7: Follow Marlon and Véga deeper into\nCinder Volcano!
+0x1F566DA: Return to the Shadows’ base in\nFrozen Heights and find Zeph!
+0x1F56717: Challenge the Dehara City Gym!
+0x1F56736: Get the Go-Goggles from a Hiker\nin Dehara City!
+0x1F56766: Make your way through the Great\nDesert to Vivill Town!
+0x1F5679D: Meet {RIVAL} in front of the\nwarehouse in Vivill Town!
+0x1F567CF: Head inside the Vivill Town\nwarehouse!
+0x1F567F6: Look around Vivill Warehouse and\nfind a way into the Command Centre!
+0x1F5683B: Challenge Aklove!
+0x1F5684D: Escape the Distortion World!
+0x1F5686A: Leap through the portal!
+0x1F56883: Meet Jax in Vivill Town!
+0x1F5689C: Challenge the Antisis Gym!
+0x1F568B7: Make your way to Seaport City and\nboard a boat to East Borrius!
+0x1F568F7: Ask a Sailor in Seaport City to\ntake you to Polder Town!
+0x1F56930: Challenge the Polder Gym!
+0x1F5694A: Make a beeline to the top of\nCrystal Peak and save Borrius!
+0x1F56986: Defeat Ivory and continue your\nclimb to the top of Crystal Peak!
+0x1F569C7: Defeat Hoopa to make a path to\nthe Ultimate Weapon!
+0x1F569FB: Turn off the Ultimate Weapon!
+0x1F56A19: Team up with {RIVAL} one last\ntime to defeat Marlon!
+0x1F56A49: Challenge the Redwood Gym!
+0x1F56A64: Head east from Gurun Town and\nchallenge the Pokémon League!
+0x1F56AA0: Check in with your mom!
+0x1F56AB8: Buy an ADM in Seaport City in order\nto Dive underwater!
+0x1F56AF0: Dive underwater at the Ruins of Void\nand rescue your mom from Aklove!
+0x1F56B36: The main story has been completed.\nJust enjoy exploring Borrius!
+0x1F56B77:  There appears to be a Pokémon\nin the den!
+0x1F56BA2: The den is empty.
+0x1F56BB4: Choose up to 3 Pokémon to use in\nthe fight against {STR_VAR_2}.
+0x1F56BEB: {VERSION} joined you to take\non {EVIL_TEAM}!
+0x1F56C08: Would you like to throw in a\nWishing Piece?
+0x1F56C34: You threw in a Wishing Piece.
+0x1F56C52: Ooh!\pAnother Trainer has discovered\none of these hidden areas!\pI’m Ginger, by the way.\nI’m a Trainer, like you!\pIs this your first time here?\pI can explain about these areas\nif it is!
+0x1F56D0A: What should I explain?
+0x1F56D21: Since you discovered this den, I’ll\nleave this area to you.\pGood luck in your fight!\pI’m looking forward to teaming up\nwith you sometime!
+0x1F56DAB: This hole you see here is what’s\nknown as a Raid Den.\pPowerful Pokémon inhabit these\ndens, and once a day, you can fight\lfor a chance to capture one in\leach den found around Borrius!\pThese Pokémon are scary strong, so\nit’s a good idea to pick the right\lpartner to fight alongside you.\pWhen you start the battle, you’ll\nnotice that the Pokémon you’re\lfighting looks very big.\pThis is because of the phenomenon\nknown as {COLOR}ÉDynamax{COLOR}Ç.\pIt will stay this way throughout\nthe battle and can only be caught\lonce it is defeated and returned to\lnormal size.
+0x1F56FD0: Dynamax is a unique phenomenon\nthat can only be used in special\lareas, like this one.\pIf you have mastered the power of\nMega Evolution, you’ll be able to\lDynamax your Pokémon as well.\pAlmost any Pokémon can Dynamax,\nbut if a Pokémon holds a Mega\lStone or Z-Crystal, it won’t be\lable to.\pTo Dynamax a Pokémon, press {START_BUTTON}\nwhen you see the red Dynamax\lsymbol appear.\pIf you choose to Dynamax your\nPokémon, the effect will last\lfor three turns.\pDuring this time period, each of\nyour Pokémon’s moves will be\lpowered up into special variants\lknown as {COLOR}ÉMax Moves{COLOR}Ç.\pThese Max Moves are much more\npowerful than regular attacks,\lso make sure you use them to full\leffect while Dynamaxed!
+0x1F57277: Sometimes when the Pokémon you’re\nfighting is desperate, it’ll throw\lup shields to defend itself.\pThese shields will severely reduce\nthe damage you can inflict until\lthey’re destroyed.\pAny attack will destroy at least\none shield, but if you use a move\llike {COLOR}ÉBrick Break{COLOR}Ç, you can destroy\ltwo shields at a time!
+0x1F573B2: If you have Pokémon stored in box\n“{STR_VAR_1}”, they may be used\lin place of your party Pokémon.\pEach row in the box is treated as\nits own team, so this will allow\lyou to save up to 5 different\lpreset teams.
 0x1F5747A: Dynamax
-0x1F57482: Boucliers
-0x1F5748A: Équipes prédéfinies
-0x1F57497: Ce Raid Den a été trouvé dans une\ngrotte cachée après avoir utilisé\nRock Climb by l'entrée de Flower\nParadise.
-0x1F574FD: Ce Raid Den a été trouvé dans une\ngrotte cachée après avoir utilisé\nCut à l'extérieur de la sortie ouest\nde Forêt Lugubre.
-0x1F5755D: Ce Raid Den a été trouvé dans une\ngrotte cachée après avoir utilisé\nCut du côté sud de la route.
-0x1F575B8: Ce Raid Den a été trouvé dans une\ngrotte cachée après avoir traversé\nle pont du côté est de la route.
-0x1F5761C: Ce Raid Den a été trouvé dans une\ngrotte cachée sur la route qui relie\nRoute 7 à la Route 6.
-0x1F57675: Ce Raid Den a été trouvé dans une\ngrotte cachée après avoir utilisé\nRock Smash au au milieu de la route.
-0x1F576D3: Ce Raid Den a été trouvé dans une\ngrotte cachée sur le côté ouest du\nlac .
-0x1F5771F: Ce Raid Den a été trouvé dans une\ngrotte cachée après s'être dirigé\ndirectement vers le nord depuis la\nville de Tehl.
-0x1F57777: Ce Raid Den a été trouvé dans une\ngrotte cachée après avoir utilisé\nSurf près de l'entrée de Cliff Cave.
-0x1F577D2: Ce Raid Den a été trouvé dans une\ngrotte cachée à l'extérieur de la\nsortie secrète du manoir au 1F.
-0x1F57826: Ce Raid Den a été trouvé dans une\ngrotte cachée du côté ouest de la\nroute près du randonneur.
-0x1F5787F: Ce Raid Den a été trouvé dans une\ngrotte cachée après avoir utilisé\nRock Climb au-dessus de l'autoroute\nKBT.
-0x1F578DB: Ce Raid Den a été trouvé au-dessus\nde la Tombe de Borrius après avoir\nutilisé Rock Climb.
-0x1F57925: Ce Raid Den a été trouvé dans une\ngrotte cachée après avoir utilisé\nRock Climb by l'entrée de Vivill\nWoods.
-0x1F57988: Ce Raid Den a été trouvé dans une\ngrotte cachée après avoir utilisé\nSurf au nord de la sortie d'Antisis\nCity.
-0x1F579E4: Ce Raid Den a été trouvé dans une\ngrotte cachée après avoir traversé\nle pont et utilisé Cut.
-0x1F57A38: Ce Raid Den a été trouvé dans une\ngrotte cachée près de l'entrée de\nPic Cristal après avoir utilisé\nSurf.
-0x1F57A95: Repaire trouvé dans une grotte\ncachée, moitié sud du côté est de la\nroute.
-0x1F57AF4: Ce Raid Den a été trouvé dans une\ngrotte cachée à côté du panneau au\nnord du Centre Pokémon.
-0x1F57B53: Ce Raid Den a été trouvé dans une\ngrotte cachée après avoir utilisé\nSurf pour aller vers l'est depuis\nles quais.
-0x1F57BAA: Ce Raid Den a été trouvé sur B1F.
-0x1F57BCA: Ce Raid Den a été trouvé dans la\nsection cachée de Icicle Cave\nderrière la tablette braille.
-0x1F57C22: Ce Raid Den a été trouvé près de la\nsortie ouest après avoir placé le\nrocher sur une plaque de pression.
-0x1F57C7F: Ce Raid Den a été trouvé sur 2F\nderrière la tablette braille.
-0x1F57CB8: Ce Raid Den a été trouvé dans une\npetite pièce après avoir franchi une\nporte effondrée .
-0x1F57D0C: Ce Raid Den a été trouvé sur 1F\nderrière la tablette braille.
-0x1F57D45: Ce Raid Den a été trouvé sur 1F\nderrière la tablette braille.
-0x1F57D7E: Ce Raid Den a été trouvé sur 3F\nderrière la tablette braille.
-0x1F57DB7: Ce Raid Den a été trouvé sur B3F\nderrière la tablette braille.
-0x1F57DF1: Ce Raid Den a été trouvé dans la\ngrande pièce au 1er étage derrière\nla tablette Braille.
-0x1F57E3C: Ce Raid Den a été trouvé dans la\nsalle de lave sur B1F derrière la\ntablette Braille.
-0x1F57E87: Forêt Séquoia
-0x1F57E97: Bon sang !\pIl ne bougera pas !\pCe Pokémon n'a pas bougé depuis\nsemaines…\pTu m'entends Ronflex ? J'ai besoin\nde voir mon petit ami !\pTu ne peux pas arrêter le véritable\namour !
-0x1F57F22: Simiabraz ! Réveillez-vous avec un\nFire Punch !
-0x1F57F4B: {COLOR}ÉOoh ooh ahh !
-0x1F57F5B: Je suis épuisé…\pJ'ai essayé tout ce que je pouvais\npenser pour déplacer ce Ronflex,\nmais il\lne bougera pas d'un muscle.\pJe voulais voir mon petit ami, mais\nil a rompu avec moi, donc je ne\lsais pas pourquoi j'essaie encore…
-0x1F58024: {COLOR}ÉSnorrrr!\p{COLOR}ÁSnorlax mange le sommeil !\nC'est votre chance !
-0x1F5805F: {COLOR}ÁSnorlax refuse obstinément\nde partir.\pOn dirait que vous devrez le\ncapturer si vous voulez vous en\ndébarrasser.
-0x1F580CA: Hé !\pAs-tu vu une jolie fille avec une\nSimiabraz ?\p…\pElle est allée vers Village Séquoia\n?\pJ'arrive ma fille !\pTiens, c'est pour ton problème. Je\nt'apprécie, Champ !
+0x1F57482: Shields
+0x1F5748A: Preset Teams
+0x1F57497: This Raid Den was found in a Hidden\nGrotto after using Rock Climb by\nthe entrance to Flower Paradise.
+0x1F574FD: This Raid Den was found in a Hidden\nGrotto after using Cut outside the\nwestern Grim Woods exit.
+0x1F5755D: This Raid Den was found in a Hidden\nGrotto after using Cut on the\nsouth side of the route.
+0x1F575B8: This Raid Den was found in a Hidden\nGrotto after crossing the bridge\non the east side of the route.
+0x1F5761C: This Raid Den was found in a Hidden\nGrotto on the road that connects\nRoute 7 to Route 6.
+0x1F57675: This Raid Den was found in a Hidden\nGrotto after using Rock Smash in\nthe middle of the route.
+0x1F576D3: This Raid Den was found in a Hidden\nGrotto on the western side of the\nlake.
+0x1F5771F: This Raid Den was found in a Hidden\nGrotto after heading directly north\nfrom Tehl Town.
+0x1F57777: This Raid Den was found in a Hidden\nGrotto after using Surf by the\nentrance to Cliff Cave.
+0x1F577D2: This Raid Den was found in a Hidden\nGrotto outside the Mansion’s secret\nexit on 1F.
+0x1F57826: This Raid Den was found in a Hidden\nGrotto on the west side of the\nroute near the Hiker.
+0x1F5787F: This Raid Den was found in a Hidden\nGrotto after using Rock Climb above\nthe KBT Expressway.
+0x1F578DB: This Raid Den was found above\nthe Tomb of Borrius after using\nRock Climb.
+0x1F57925: This Raid Den was found in a Hidden\nGrotto after using Rock Climb by\nthe entrance to Vivill Woods.
+0x1F57988: This Raid Den was found in a Hidden\nGrotto after using Surf north of\nthe Antisis City exit.
+0x1F579E4: This Raid Den was found in a Hidden\nGrotto after crossing the bridge\nand using Cut.
+0x1F57A38: This Raid Den was found in a Hidden\nGrotto by the entrance to Crystal\nPeak after using Surf.
+0x1F57A95: This Raid Den was found in a Hidden\nGrotto on the southern half of\nthe east side of the route.
+0x1F57AF4: This Raid Den was found in a Hidden\nGrotto next to the sign board north\nof the Pokémon Center.
+0x1F57B53: This Raid Den was found in a Hidden\nGrotto after using Surf to go east\nfrom the docks.
+0x1F57BAA: This Raid Den was found on B1F.
+0x1F57BCA: This Raid Den was found in the\nhidden section of Icicle Cave\nbehind the Braille tablet.
+0x1F57C22: This Raid Den was found near the\nwestern exit after placing the\nboulder on a pressure plate.
+0x1F57C7F: This Raid Den was found on 2F\nbehind the Braille tablet.
+0x1F57CB8: This Raid Den was found in a small\nroom after breaking through a\ncollapsed doorway.
+0x1F57D0C: This Raid Den was found on 1F\nbehind the Braille tablet.
+0x1F57D45: This Raid Den was found on 1F\nbehind the Braille tablet.
+0x1F57D7E: This Raid Den was found on 3F\nbehind the Braille tablet.
+0x1F57DB7: This Raid Den was found on B3F\nbehind the Braille tablet.
+0x1F57DF1: This Raid Den was found in the\nlarge room on 1F behind the\nBraille tablet.
+0x1F57E3C: This Raid Den was found in the\nlava room on B1F behind the\nBraille tablet.
+0x1F57E87:  Redwood Forest
+0x1F57E97: Dang it!\pIt won’t budge!\pThis Pokémon hasn’t moved in\nweeks…\pDo you hear me Snorlax?\nI need to see my boyfriend!\pYou can’t stop true love!
+0x1F57F22: Infernape!\nWake it up with a Fire Punch!
+0x1F57F4B: {COLOR}ÉOoh ooh ahh!
+0x1F57F5B: I’m exhausted…\pI’ve tried everything I can think\nof to move this Snorlax, but it\lwon’t budge a muscle.\pI wanted to see my boyfriend, but\nhe broke up with me, so I don’t\lknow why I’m even still trying…
+0x1F58024: {COLOR}ÉSnorrrr!\p{COLOR}ÁSnorlax is sleep eating!\nNow’s your chance!
+0x1F5805F: {COLOR}ÁSnorlax stubbornly refuses to\nleave.\pLooks like you’ll have to capture\nit if you want to get rid of it.
+0x1F580CA: Hey!\pHave you seen a cute girl with\nan Infernape?\p…\pShe went towards Redwood Village?\pI’m coming girl!\pHere, this is for your trouble.\nI appreciate ya, Champ!
 0x1F58169: {COLOR}ÉGrowwwwf!
-0x1F58176: {COLOR}ÁLa personne suspecte s'est\nenfuie !
-0x1F58198: {COLOR}ÁLa cellule suspecte s'est\nenfuie !
-0x1F581B8: {COLOR}ÁL'arbre suspect s'est enfui\n!
-0x1F581D8: Crâne engourdi
-0x1F581E2: Êtes-vous dense? Écrasez les têtes\nde Pokémon contre les arbres\n{STR_VAR_1} fois !
-0x1F5821D: Je me suis cogné la tête contre ces\narbres aussi plusieurs fois…\pMaintenant, je dis du mal.\pJe déteste les arbres maintenant qui\nm'ont rendu idiot.\pJe suis fou !\pJe veux me venger !\pTu le fais pour moi ?\pUtilise {COLOR}ÉHeadbutt{COLOR}Ë\npour apprendre aux arbres à être\nbons {COLOR}É{STR_VAR_1}{COLOR}Ë\nfois !
-0x1F582EC: Bien, attaquez les arbres avec\nHeadbutt, et ceux qui défendent les\narbres.
-0x1F58328: Ok, je vais moi-même blesser les\narbres !
-0x1F58349: Plus de coups de tête !\n{COLOR}É{STR_VAR_3}{COLOR}Ë plus de\ntemps{EVIL_TEAM} !
-0x1F58372: Bien, maintenant je peux redevenir\nle ​​meilleur neurochirurgien\nPokémon\lau monde.\pPrenez-le pour vous aider pour vous\naidez-moi.
-0x1F583E2: Je serai bientôt mieux. Mon cerveau\nn'est pas très cassé.
-0x1F5840E: Oh, timing parfait, Entraîneur !\pJe viens de tourner mon dernier film\ndans cette forêt.\pLe titre du film est : « Kangourex\ncontre Kangourex :\lL'aube du Kangourex »\pMalheureusement, l'acteur qui\nincarne l'antagoniste principal est\ntombé malade.\pSeriez-vous prêt à prendre sa place\n?
-0x1F58521: Dommage… Vraiment, dommage…
-0x1F5853A: Merveilleux !\pUne fois que vous avez vaincu tous\nles entraîneurs de cette forêt, s'il\nvous plaît\lapportez {COLOR}É4{COLOR}Ç fort\n{COLOR}ÉKangaskhan{COLOR}Ç pour une\lscène de combat importante dans le\nfilm.\pElle sera filmée à l'image d'une\n{COLOR}ÉDouble bataille{COLOR}Ç.\pIls devraient idéalement être\nlevelled {COLOR}É{LV} 70{COLOR}Ç ou\nplus.
-0x1F5864A: Merveilleux !\pVeuillez vous assurer que votre\ngroupe se compose uniquement de\n{COLOR}É4 Kangourex{COLOR}Ç\lavant que nous puissions commencer\nle tournage de la\l{COLOR}ÉDouble Battle{COLOR}Ç.\pIls devraient idéalement être de\nniveau {COLOR}É{LV} 70{COLOR}Ç ou\nplus.
-0x1F58700: Merveilleux !\pLumières, caméra, action !
-0x1F58723: Merveilleux, merveilleux, fini !
-0x1F58748: Merveilleux travail réalisé\naujourd'hui.\pPour votre performance, vous en avez\nmérité un.
-0x1F5879C: Adieu, formateur !\pJ'ai hâte de vous voir à la première\nsur le tapis rouge de !
-0x1F587E8: {COLOR}ÁHuh ?\pLe Cube a reçu une notification !\pIl dit que le film a reçu un score\ncritique de moins de 30 % sur\lBaies de Tamato pourries…\pOh, eh bien, ça ne faisait pas de\nmal d'aider !
+0x1F58176: {COLOR}ÁThe suspicious person ran off!
+0x1F58198: {COLOR}ÁThe suspicious cell ran off!
+0x1F581B8: {COLOR}ÁThe suspicious tree ran off!
+0x1F581D8: Numbskull
+0x1F581E2: Are you dense? Smash Pokémon heads\nagainst trees {STR_VAR_1} times!
+0x1F5821D: I hit me head on dem trees too\nmany times…\pNow, I speak ungood.\pI hate da trees now that made me\ndumb.\pMe mad!\pMe want revenge!\pYou do it for me?\pUse {COLOR}ÉHeadbutt{COLOR}Ë to teach trees to be\ngood {COLOR}É{STR_VAR_1}{COLOR}Ë times!
+0x1F582EC: Good, attack trees with Headbutt,\nand dem who defend trees.
+0x1F58328: Okee, me will hurt trees meself!
+0x1F58349: More head bangin’!\n{COLOR}É{STR_VAR_3}{COLOR}Ë more time{EVIL_TEAM}!
+0x1F58372: Good, now me can go back to bein’\nthe best Pokémon Neurosurgeon\lin world.\pTake dis to help you for you\nhelp me.
+0x1F583E2: Me be better soon.\nMe brain not very broke.
+0x1F5840E: Oh, perfect timing, Trainer!\pI have just been filming my\nlatest movie in this forest.\pThe title of the movie is:\n“Kangaskhan v Kangaskhan:\lDawn of the Kangaskhan”\pUnfortunately, the actor portraying\nthe main antagonist has fallen ill.\pWould you be willing to take\nhis place?
+0x1F58521: A shame…\nTruly, a shame…
+0x1F5853A: Wonderful!\pOnce you have defeated all of the\nTrainers in this forest, please\lbring {COLOR}É4{COLOR}Ç strong {COLOR}ÉKangaskhan{COLOR}Ç for an\limportant fight scene in the movie.\pIt will be filmed in the likeness\nof a {COLOR}ÉDouble Battle{COLOR}Ç.\pThey should ideally be levelled\n{COLOR}É{LV} 70{COLOR}Ç or higher.
+0x1F5864A: Wonderful!\pPlease make sure your party\nconsists of only {COLOR}É4 Kangaskhan{COLOR}Ç\lbefore we can begin filming the\l{COLOR}ÉDouble Battle{COLOR}Ç.\pThey should ideally be levelled\n{COLOR}É{LV} 70{COLOR}Ç or higher.
+0x1F58700: Wonderful!\pLights, camera, action!
+0x1F58723: Wonderful, wonderful, that’s a wrap!
+0x1F58748: Wonderful work out there today.\pFor your performance, you have\nearned one of these.
+0x1F5879C: Farewell, Trainer!\pI look forward to seeing you at the\nred carpet premiere!
+0x1F587E8: {COLOR}ÁHuh?\pThe Cube received a notification!\pIt says that the movie received a\ncritic score of less than 30% on\lRotten Tamato Berries…\pOh, well, didn’t hurt to help!
 0x1F5888B: {COLOR}ÉKrawwr!
-0x1F58957: Hé, Entraîneur !\pTu as l'air presque aussi fort que\ntoi tu es perdu !\pBattez-moi et je vous dirai un\nsecret !
-0x1F589B4: Ouah! D'accord! D'accord!
-0x1F589C5: Alors j'ai entendu la femme là-bas\nparler…\pParfois, si tu recules, tu avances !
-0x1F58A1E: Avez-vous remarqué un Pokémon\nparticulier en parcourant\lces bois ?
+0x1F58957: Hey, Trainer!\pYou look almost as strong as you\nare lost!\pBeat me and I’ll tell you a secret!
+0x1F589B4: Wow! Okay! Okay!
+0x1F589C5: So I heard the woman over there\ntalking…\pSometimes if you go backwards,\nyou go forwards!
+0x1F58A1E: Did you notice a peculiar Pokémon\nwhile making your way through\lthese woods?
 0x1F58A6B: The Pokémon was very strange…\nLet me tell you about it!
 0x1F58AA3: I noticed a peculiar Pokémon\nearlier.\pWhen I approached it, it changed its\nappearance to match mine!\pNo…{PAUSE}ね it wasn’t a Ditto.\pI could tell that much at least.
 0x1F58B43: WHERE…\pARE…\pTHE…\pGHOSTS!?
@@ -99,7 +165,7 @@
 0x1F58D72: {COLOR}ÇMy ESP tells me that you’re close to\nfinding what you seek…\pBut first, let’s battle!
 0x1F58DCA: Nothing could have prepared me\nfor that.
 0x1F58DF3: {COLOR}ÇI can sense you’re looking for the\nexit.\pIt’s just up ahead.
-0x1F58E33: Redwood Village
+0x1F58E33:  Redwood Village
 0x1F58E44: Redwood Village D
 0x1F58E56: Redwood Village N
 0x1F58E68: Be gone, wandering spirits!
@@ -116,7 +182,7 @@
 0x1F5949B: They’re the most useless Pokémon!\nMagikarp! Can you place 30 of them\nin your current Box?
 0x1F594F5: Hey there, Pokémon Trainer.\pI’m a member of the Hip Waders,\njust like you!\pAnd boy, do I have an assignment\nfor you.\pYou know the Pokémon {COLOR}ÉMagikarp{COLOR}Ë?\p…\pWhat am I even asking you, of\ncourse you do!\pWho doesn’t know of the famed\nPokémon?\pI want you to place {COLOR}É{STR_VAR_1}{COLOR}Ë of ’em in\na {COLOR}Ésingle Box{COLOR}Ë.\pWhen you’ve done that, I’ll take\n’em off your hands for you, and\lgive you something even better in\lexchange.\pAs an esteemed member of the Hip\nWaders, this should be a piece of\lcake for you!
 0x1F596DE: Boy oh boy, Pokémon Trainer!\pI can’t believe you actually\ndid it!\pYou actually got {STR_VAR_1} Magikarp in\none Box!\pI mean, a task like that takes\nserious dedication.\pBut after all, you are a member of\nthe Hip Waders.\pSo let me take them off your hands\nfor you.\pAnd for an esteemed member such as\nyourself, I want you to have this.
-0x1F59821: Hey there, Pokémon Trainer.\pI’m a member of the Hip Waders!\pIf you want to join our club, talk\nto the club’s president back in\lVille Portuaire.\pYou know, that port city in\nBorrius Ouest?
+0x1F59821: Hey there, Pokémon Trainer.\pI’m a member of the Hip Waders!\pIf you want to join our club, talk\nto the club’s president back in\lSeaport City.\pYou know, that port city in\nWest Borrius?
 0x1F598D8: Hey there, Pokémon Trainer.\pAs of this moment, your current\nBox, “{COLOR}É{STR_VAR_1}{COLOR}Ë” has {COLOR}É{STR_VAR_3}{COLOR}Ë Magikarp\lin it.\pYour goal is to get {COLOR}É{STR_VAR_2}{COLOR}Ë of those\nsuckers in there.\pCome back when you’ve done that.
 0x1F5999A: Actually, make space in your party\nfirst for it, Pokémon Trainer.
 0x1F599DC: Did you know?\pMagikarp aren’t really the weakest\nof Pokémon!\pThat esteemed title goes to\nWishiwashi’s solo form!\pA fish that’s also useless until\nit gets bigger!
@@ -180,71 +246,5 @@
 0x1F5AD1E: {COLOR}ÁThe Pokémon statue that exudes the\npower of steel started moving!
 0x1F5AD77: {COLOR}Á{STR_VAR_1} disappeared.
 0x1F5AD96: A mysterious cave said to have a\nconnection to the great beyond.\nThose who wander about inside may\nnever find their way out.
-0x1F5AE13: Route 1
+0x1F5AE13:  Route 1
 0x1F5AE1C: {COLOR}ÁA large pile of snow is blocking\nthe road.\pBetter go another way for now.
-0x1F5AE69: Sorry, fella.\pAn avalanche caused some snow piles\nto gather up on the road.\pIf you wanna go to Bellin, you’ll\nhave to take the ol’ mountain road\lfor now.\pHere, come with me and I’ll show you\nthe way.
-0x1F5AF31: Some scary lookin’ fella came along\nand melted the snow piles blockin’\lthe road.\pI sure was happy and all, but\nsomethin’ seemed up with him.\pIf you care, I watched him head\n{COLOR}Énorth of Frozen Heights{COLOR}Ë.\pWonder what he’s doin’ up there?
-0x1F5B01E: Ah, you must be {PLAYER}.\pProf. Log phoned ahead and told me\nto guide you if you got lost.\pBellin Town is just over that way.
-0x1F5B096: If you’d like me to show you how to\ncapture a Pokémon, prove you’re\lcapable by delivering {COLOR}ÉProf. Log’s\lpackage{COLOR}Ë to him.
-0x1F5B112: Ah, from the Badge on your Trainer\nCard, I see that you’ve become a\lrather skilled Trainer.\pYou’ve far surpassed the role of\nProf. Log’s errand {STR_VAR_1}.\pHowever, in my book, you’re never\ntoo experienced to watch an expert\lcatch Pokémon!\pSo, what do you say?\pI could show you a thing or two\nabout capturing Pokémon.
-0x1F5B248: I heard from Prof. Log that you did\nwell delivering his package to him.\pAnd I even heard from him that he’s\nsending you on more errands as a\lfully fledged Pokémon Trainer!\pYou know, I used to be something of\na Trainer myself, back in my day.\pI could show you a thing or two\nabout capturing Pokémon.
-0x1F5B373: Alrighty!\nHere we go!
-0x1F5B389: Phew…\pThat one was too close for\ncomfort…
-0x1F5B3B3: As you witnessed, I successfully\ncaptured that Pokémon by throwing\la {COLOR}ÉPoké Ball{COLOR}Ë.\pHowever, this won’t always work.\pMany times, Pokémon must be\nweakened before you’ll be able\lto capture them.
-0x1F5B476: And as my thanks for allowing me to\nstretch my legs today, please take\lthis Poké Ball I acquired back in\lmy younger days.
-0x1F5B4F0: If you would ever like to see my\nskills again, please, stop by.
-0x1F5B530: If you ever would like to see me in\naction, please, stop by.
-0x1F5B571: girl
-0x1F5B581: Huah, fellow Trainer!\pI am training my body and soul by\nstaring at this tree intently!\pTake this so you can train too!
-0x1F5B5F8: Huah, fellow Trainer!\pI can {COLOR}Éupgrade{COLOR}Ë the {COLOR}ÉMacho Brace{COLOR}Ë to\nmake training more efficient!\pRight now it is only a measly {LV} {STR_VAR_3},\nbut I can upgrade it to {COLOR}É{LV} {STR_VAR_2}{COLOR}Ë in\lexchange for {COLOR}É{STR_VAR_2} {STR_VAR_1}s{COLOR}Ë!
-0x1F5B6BE: Fine, settle for an inferior\nproduct!
-0x1F5B6E4: You do not have enough {STR_VAR_1}s\nfor me to upgrade your Macho Brace!
-0x1F5B723: {COLOR}ÁThe Macho Brace level has been\nincreased to {LV} {STR_VAR_2}!\pPokémon will now gain {COLOR}É{STR_VAR_2}×{COLOR}Á the\namount of Effort Values when held.
-0x1F5B79F: Your Macho Brace is as powerful\nas it can get!\pIn its current state, you will\nreceive {COLOR}É{STR_VAR_1}×{COLOR}Ë the amount of effort\lvalues when training with it!
-0x1F5B832: The sea…\pFull of fury one moment, calm as a\nPokémon’s nature the next…
-0x1F5B879: Battle me.\pShow me you too, can be as furious\nas the sea.
-0x1F5B8B3: Your Pokémon battled just as\nfuriously as the sea.
-0x1F5B8E6: You have done well.\nTake this item.
-0x1F5B90A: That {COLOR}ÉMedichamite{COLOR}Ë is for Mega\nEvolving the Pokémon, {COLOR}ÉMedicham{COLOR}Ë.\pWith the right Trainer, it too can\nbattle as furiously as the sea.
-0x1F5B996: If you can defeat all the Trainers\nhere and on the Auburn Waterway,\lI’d like to see your fury, too.
-0x1F5B9FA: Stop right there!\pI want to paint this\nperfect moment.
-0x1F5BA31: A young kid, dashing through\nthe rain…
-0x1F5BA58: I don’t think it’s such a good\nidea to paint in the rain.\pEverything I paint gets\nwashed away…
-0x1F5BAB7: I came out here to learn about the\nPokémon in the area.
-0x1F5BAEF: What?\nI’m not skipping school…
-0x1F5BB0E: Only the uncool kids actually go\nto school…
-0x1F5BB3A: That cave over there, what do you\nsuppose is in it?
-0x1F5BB6E: I bet scary strong Pokémon live\nthere!
-0x1F5BB95: Word around these parts is that the\ncave is called the {COLOR}ÉCave of Being{COLOR}Ë.\pPeople say it bears a resemblance\nto the lake caves of Sinnoh.
-0x1F5BC20: It’s always raining here!\nWhy is it always raining here?
-0x1F5BC59: But… but… the rain was supposed\nto put me at an advantage!
-0x1F5BC94: In other places like Fallshore\nCity, it only rains sometimes.\pSo why is it always raining on\nRoute 10?
-0x1F5BCFB: Route 11
-0x1F5BD05: Cliff Cave
-0x1F5BD10: Beyond the boundary of rocks lies\na vast ocean.\pIt’s somewhere in this ocean\nwherein lies the peaceful\lAlola region.\pThe people there have a tradition\nthat each of their islands is\lprotected by a guardian deity.\pDo you ever wonder what it would\nbe like if each of the islands that\lmake up Borrius had, too?\pThat thought may not cross your\nmind, but it certainly does mine.
-0x1F5BE85: That Pokémon in your party…\pIt certainly bears resemblance to\nthe guardian deities of Alola…
-0x1F5BEE2: Reports from the Alola region\nindicate their guardian deities\lare still present, which must mean\lyours is not of this world.\pRegardless, this item rightfully\nbelongs with it, not with me.
-0x1F5BF9E: The {COLOR}ÉTapunium Z{COLOR}Ç can power up any\nof the Alolan guardian deities\l{COLOR}ÉNature’s Madness{COLOR}Ç, into a more\lpowerful, one-time use Z-Move.
-0x1F5C026: Upon this rocky face I see, yet\nanother Trainer, yearning to be.\pThe very best, I say, the very\nbest.\pThen, I shall put this Trainer to\nthe test!
-0x1F5C0B8: A glorious defeat for me, a\nglorious defeat you see.
-0x1F5C0ED: And as this Trainer did pass the\ntest, I said to them, they are\lthe very best.
-0x1F5C13C: An {COLOR}ÉAlakazite{COLOR}Ë is full of might.\pFor {COLOR}ÉAlakazam{COLOR}Ë, it will shine\nbright.
-0x1F5C18B: Upon this rocky face I see, yet\nanother Trainer, yearning to be.\pThe very best, I say, the very\nbest.\pBut only one who has defeated all\nof the Trainers on Route 11, can\lbe put to the test.
-0x1F5C248: We battle as one!\nUs and nature!
-0x1F5C269: Mother nature, where have we\ngone wrong?
-0x1F5C292: I work to protect the environment.\nIn turn, nature protects me!
-0x1F5C2D2: We battle as one!\nUs and nature!\pBut only against Trainers that can\ntake us both at once!
-0x1F5C32C: Together we’re strong!\nTogether with nature!
-0x1F5C359: But together… we’re strong…?
-0x1F5C376: The mountain here has a whole\nnetwork of caves running\lthrough it.\pTogether, we protect the Pokémon\nof the cliff’s caves.
-0x1F5C3F0: Together we’re strong!\nTogether with nature!\pBut only against Trainers that can\ntake us both at once!
-0x1F5C456: Pokémon from the sea have infested\nthis body of water!
-0x1F5C48D: How did they get up here?
-0x1F5C4A7: Tentacool don’t belong in ponds,\nthey belong in the sea!
-0x1F5C4E0: Be patient.\nFishing is a waiting game.
-0x1F5C507: That one got away!
-0x1F5C51A: With a better rod, I could catch\nbetter Pokémon…
-0x1F5C54B: I love fishing, don’t get me wrong.\pBut it’d be best if I also had more\nwork.
-0x1F5C599: It’s not easy…
-0x1F5C5A8: It’s all right.\nLosing doesn’t bug me anymore.
-0x1F5C5D7: Let’s see who’s the better Trainer.\pThe man who spends all day every\nday fishing, or this random person\lthat just passed by.
