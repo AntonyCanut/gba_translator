@@ -1,250 +1,250 @@
-0x3FD824: Bill
-0x3FD82B: Données de {STRING}げ\najoutées au Pokédex.\p
-0x3FD850: Il pleut.
-0x3FD85F: Une tempête de sable fait rage.
-0x3FD876: La Boîte est pleine!\nTu ne peux plus rien capturer!\p
-0x3FD8A2: Baie Enigma
-0x3FD8AF:  Baie
-0x3FD8B9: {B_SCR_ACTIVE_NAME_WITH_PREFIX}:\n{B_LAST_ITEM} guérit la paralysie !
-0x3FD8D2: {B_SCR_ACTIVE_NAME_WITH_PREFIX}:\n{B_LAST_ITEM} soigne le poison !
-0x3FD8E8: {B_SCR_ACTIVE_NAME_WITH_PREFIX}:\n{B_LAST_ITEM} soigne la brûlure !
-0x3FD901: {B_SCR_ACTIVE_NAME_WITH_PREFIX}:\n{B_LAST_ITEM} le dégèle !
-0x3FD917: {B_SCR_ACTIVE_NAME_WITH_PREFIX}:\n{B_LAST_ITEM} le réveille !
-0x3FD937: {B_SCR_ACTIVE_NAME_WITH_PREFIX}:\n{B_LAST_ITEM} ôte la confusion !
-0x3FD95C: {B_SCR_ACTIVE_NAME_WITH_PREFIX}: {B_LAST_ITEM} soigne\nsouci {UNKNOWN_STR} !
-0x3FD97A: {B_SCR_ACTIVE_NAME_WITH_PREFIX}:\n{B_LAST_ITEM} normalise le statut !
-0x3FD999: {B_SCR_ACTIVE_NAME_WITH_PREFIX}:\n{B_LAST_ITEM} rend des PV !
-0x3FD9CC: {B_SCR_ACTIVE_NAME_WITH_PREFIX}:\n{B_LAST_ITEM} rétablit le statut !
-0x3FD9E9: {B_SCR_ACTIVE_NAME_WITH_PREFIX}:\n{B_LAST_ITEM} rend ses PV !
-0x3FDA02:  un peu !
-0x3FDA0B: Effet de {B_LAST_ITEM} : seule {B_CURRENT_MOVE} peut\nêtre utilisée !\p
-0x3FDA33: {B_DEF_NAME_WITH_PREFIX} tient bon\navec {B_LAST_ITEM} !
-0x3FDA4D: {B_PLAYER_NAME} joue {B_LAST_ITEM}. Air entraînant !\p
-0x3FDA7A: {B_PLAYER_NAME} joue la\n{B_LAST_ITEM}.
-0x3FDA8C: Les Pokémon entendant la Flûte\nse réveillent !
-0x3FDAB1: Tu lances une Ball, hein ?\nJe... je vais faire de mon mieux !
-0x3FDAE2: Journal : Oh, bon sang...\nToujours pressé.\p{B_PLAYER_NAME}.\pTu n'as jamais fait de combat\nPokémon, hein ?\pUn combat oppose les Pokémon\ndes Dresseurs entre eux.\l\p
-0x3FDB92: Le Dresseur qui met K.O. les\nPokémon adverses en baissant\lleurs PV à «0» gagne.\p
-0x3FDBEF: Mais plutôt qu'en parler, tu\napprendras mieux par l'expérience.\nEssaye de combattre\ppour voir.\p
-0x3FDC58: Infliger des dégâts à l'ennemi\nest la clé de tout combat.\p
-0x3FDC95: Baisser les stats de l'ennemi\nt'avantage.\p
-0x3FDCD2: Garde un œil sur les PV\nde ton Pokémon.\pIl tombera K.O. si ses PV\natteignent «0».\p
-0x3FDD23: Non ! Pas de fuite d'un combat\ncontre un Dresseur !\p
-0x3FDD64: Hm ! Excellent !\pSi tu gagnes, tu as de l'argent,\net ton Pokémon grandit !\pAffronte d'autres Dresseurs\npour les rendre forts !\p
-0x3FDDEB: Hm... Quelle déception... Si tu\ngagnes, tu as de l'argent,\net tes Pokémon grandissent.\pSi tu perds, {B_PLAYER_NAME},\ntu paies.\pJe paie cette fois,\nmais dehors ce sera différent.\pRenforce tes Pokémon en battant\ndes Pokémon sauvages.\p\nmais dehors ce sera différent.\pRenforce tes Pokémon en battant\ndes Pokémon sauvages.\p
-0x3FE672: Quoi ?\n{STR_VAR_1} évolue!
-0x3FE688: Félicitations ! Ton {STR_VAR_1}\na évolué en {STR_VAR_2}!\p {WAIT_SE}
-0x3FE6B5: Hein ? {STR_VAR_1}\nn'évolue plus!\p
-0x3FE6D5: Que doit faire\n{B_ACTIVE_NAME_WITH_PREFIX} ?
-0x3FE6E6: Qu'est-ce que {B_PLAYER_NAME}\nva lancer ?
-0x3FE6FA: Que va faire\nle vieil homme ?
-0x3FE714: {PAUSE}ŒAttente de liaison...
-0x3FE76A: Type/
-0x3FE7C7: {FONT_SMALL}Max{FONT_NORMAL} PV
-0x3FE7D4: Attaque
-0x3FE7DC: Défense
-0x3FE7E4: Att. Spé
-0x3FE7EC: Déf. Spé
-0x3FE82A: sommeil
-0x3FE830: poison
-0x3FE837: brûlure
-0x3FE83C: paralysie
-0x3FE84A: confusion
-0x3FE854: amour
-0x3FE868: Mauvais Œuf
-0x3FE87B: {HIGHLIGHT} Défaite
-0x3FE883: {HIGHLIGHT} Nul
-0x3FE892: une capacité NORMAL
-0x3FE8A0: une capacité COMBAT
-0x3FE8B0: une capacité VOL
-0x3FE8BE: une capacité POISON
-0x3FE8CC: une capacité SOL
-0x3FE8DA: une capacité ROCHE
-0x3FE8E6: une capacité INSECTE
-0x3FE8F1: une capacité SPECTRE
-0x3FE8FE: une capacité ACIER
-0x3FE90B: une capacité ???
-0x3FE916: une capacité FEU
-0x3FE922: une capacité EAU
-0x3FE92F: une capacité PLANTE
-0x3FE93C: une capacité ÉLECTRIK
-0x3FE94D: une capacité PSY
-0x3FE95C: une capacité GLACE
-0x3FE968: une capacité DRAGON
-0x3FE976: une capacité TÉNÈBRES
-0x3FE982: TABLEAU TEMPS
-0x3FE98D: TEMPS FINAL
-0x3FE998: {STR_VAR_1}M {STR_VAR_2}{STR_VAR_3}S
-0x3FE9E4: Joueur a perdu {B_TRAINER1_CLASS}\n{B_TRAINER1_NAME}!
-0x3FE9FF: Match nul {B_TRAINER1_CLASS}\n{B_TRAINER1_NAME}!
-0x407C3F: AA & ÂS BAAiRRAi SRRiyzziîDA ソ:g{B_ATK_NAME_WITH_PREFIX}: gQxEQQhC QQjCQzhiÇizjii ソi{STRING}だ: ぉ
-0x40FCA2: ぉoTRぉ TRiÜRx
-0x4100BA: kj zyizぞzŒÂjj
-0x415A23: SAPHIR
-0x415A2C: RUBIS
-0x415A31: AQUA
-0x415A36: MAGMA
-0x415A3C: ARCHIE
-0x415A43: MAX
-0x415A49: KYOGRE
-0x415A50: GROUDON
-0x415A5C: VERT
-0x415A66: Pokémon
-0x415A6E: Nouvelle Partie
-0x415A77: Continuer
-0x415A8A: CADEAU MYSTÈRE
-0x415A97: CADEAU MYSTÈRE
-0x415AA4: Adapt. Sans Fil\nn'est pas connecté.
-0x415ACB: CADEAU MYSTÈRE inutilisable\navec l'Adapt. Sans Fil.
-0x415BFF: Fichier de sauvegarde corrompu.\pChargement de l'ancienne sauvegarde.\n
-0x415C42: Le fichier de sauvegarde\na été supprimé...
-0x415C64: Le sous-circuit 1M\nn'est pas installé.
-0x415CE8: TEMPS
-0x415D2C: Commandes
-0x415D45: {SE_SHOP}Suivant
-0x415D4F: {SE_SHOP}Suivant {B_BUTTON}Retour
-0x415D5E: {DPAD_UPDOWN}Choix OK {B_BUTTON}
-0x415D77: {DPAD_UPDOWN}Choix {B_BUTTON}Quit
-0x415D8A: {SE_SHOP}Quitter
-0x415D97: Fille
-0x415D9C: Pokédex   Sommaire
-0x415DB8: {DPAD_UPDOWN}Choix {SE_SHOP}OK
-0x415DC4: Vu :
-0x415DCA: Pris :
-0x415DD1: Kanto
-0x415DD7: National
-0x415DE0: {COLOR}Ô{SHADOW}ÓHabitats Pokémon
-0x415DF7: Pokémon de plaine
-0x415E09: Pokémon de forêt
-0x415E18: Pokémon de rivage
-0x415E2D: Pokémon de mer
-0x415E39: Pokémon de grotte
-0x415E46: Pokémon de montagne
-0x415E57: Pokémon terrain rugueux
-0x415E6D: Pokémon urbain
-0x415E7B: Pokémon rares
-0x415E95: Mode Numérique
-0x415EA4: Mode A à Z
-0x415EC7: Fermer le Pokédex
-0x415ED5: Mode Type
-0x415EDF: Mode plus léger
-0x415EED: Mode plus petit
-0x415F0E: Mode Numérique : Kanto
-0x415F24: Mode Numérique : National
-0x415F3D: Liste Pokémon
-0x415F4A: Rechercher
-0x415F51: {DPAD_UPDOWN}Choix OK {B_BUTTON}Quit
-0x415F6C: {DPAD_LEFTRIGHT}Page {PLUS}
-0x415F8F: Pokémon
-0x415FB3: {SE_SHOP}Données suiv.
-0x415FC8: {SE_SHOP}Suivant
-0x415FCF: {SE_SHOP}Annul {B_BUTTON}Préc
-0x415FE8: Zone
-0x415FED: Taille
-0x415FF2: Zone inconnue
-0x416002: Page
-0x416007:  Bienvenue au Panthéon !
-0x41608F:  Données du Panthéon\ncorrompues.
-0x4160B4: Panthéon No. {STR_VAR_1}
-0x4160C8: Champion de la Ligue !\nFÉLICITATIONS !
-0x4160F9:    Nom
-0x416101:    IDNo.
-0x41614B: Erreur de sauvegarde.\pVeuillez remplacer la\nmémoire de secours.
-0x41617A: Joueur
-0x416181: Badges
-0x416188: Pokédex
-0x416190: Temps
-0x4161A4: Jeter
-0x4161A9: Enregistrer
-0x4161B2: Donner
-0x4161BC: Marcher
-0x4161C1: Annuler
-0x4161C8: Quitter
-0x4161D4: Objet
-0x4161D9: Courrier
-0x4161DE: Prendre
-0x4161E3: Ranger
-0x4161E9: Vérifier
-0x4161EF: Aucun
-0x4161F4: Ouvrir
-0x4161F9: Désélectionner
-0x41623D: Oui\nNon
-0x416244: Revenir au\nmenu précédent.
-0x416262: Que veux-tu faire ?
-0x41627D: Pokédex
-0x416291: Sauvegarde
-0x416296: Option
-0x41629D: Quitter
-0x4162A2: Retraite
-0x4162BD:  Baie
-0x4162C7: Pièces
-0x4162CD: Objets
-0x4162D3: Poké Balls
-0x4162DE: Objets rares
-0x4162E8: Déposer objet
-0x4162F5: Fermer Cube
-0x4162FF: {STR_VAR_1} est\nsélectionné.
-0x41630F: On ne peut pas écrire\ndu courrier ici.
-0x41632A: Il n'y a pas de\nPokémon.
-0x41633F: Où placer le {STR_VAR_1} ?\n
-0x41635E: {STR_VAR_1} ne peut pas être tenu.
-0x416374: Le {STR_VAR_1} ne peut pas être tenu\nici.
-0x41638F: Combien de {STR_VAR_1}(s)\ndéposer ?
-0x4163BB: Plus de place pour\nstocker des objets.
-0x4163DB: Combien de {STR_VAR_1}(s)\njeter ?
-0x416409: Jeter {STR_VAR_2} de\ncet objet ?
-0x416425: Journal : {PLAYER} ! Ce n'est pas le moment\npour ça !{PAUSE_UNTIL_PRESS}
-0x416451: Pas de Vélo ici.{PAUSE_UNTIL_PRESS}
-0x41647E: Hein ?\nCherche-Objet réagit !\pObjet enterré !{PAUSE_UNTIL_PRESS}
-0x4164C2: Oh !\nCherche-Objet bouge !\pObjet sous tes pieds !\p… … … … … …{PAUSE_UNTIL_PRESS}
-0x416513: … … … …Rien !\nAucune réaction.{PAUSE_UNTIL_PRESS}
-0x41659E: Mais l'effet d'un Repousse\npersiste.{PAUSE_UNTIL_PRESS}
-0x4165D2: {PLAYER} utilise le {STR_VAR_2}.\nLes Pokémon sauvages\pseront attirés.{PAUSE_UNTIL_PRESS}
-0x416600: {PLAYER} utilise le {STR_VAR_2}.\nLes Pokémon sauvages\pseront repoussés.{PAUSE_UNTIL_PRESS}
-0x416631: La Boîte est pleine. {PAUSE_UNTIL_PRESS}
-0x416644: QUANT. POUDRE: {STR_VAR_1} {PAUSE_UNTIL_PRESS}
-0x416655: POUDRE
-0x41665C: Tu joues de la FLÛTE POKé.\nQuelle mélodie entraînante !{PAUSE_UNTIL_PRESS}
-0x416690: Tu joues de la FLÛTE POKé.
-0x4166A7: La FLÛTE POKé réveille les Pokémon\nendormis.\n{PAUSE_UNTIL_PRESS}
-0x4166D3: Boîte CT
-0x4166DB: Fermer
-0x4166E1: La Boîte CT sera\nrangée.
-0x41670A: Pochette Baies
-0x416716: La Pochette Baies sera\nrangée.
-0x41673C: Vendre
-0x416741: À plus !
-0x416757: Quitter les achats.
-0x416766: {STR_VAR_1}? Bien sûr.\nCombien en veux-tu ?
-0x41678E: {STR_VAR_1}, et tu en veux {STR_VAR_2}. Cela fera\n¥{STR_VAR_3}. OK ?
-0x4167E7: Voilà !\nMerci !
-0x416842: Tu n'as pas assez d'argent. {PAUSE_UNTIL_PRESS}
-0x416861: Plus de place pour cet\nobjet.{PAUSE_UNTIL_PRESS}
-0x41689E: Puis-je faire autre chose ?
-0x4168F1: {STR_VAR_1}? Oh, non. Je ne peux pas\nacheter ça.{PAUSE_UNTIL_PRESS}
-0x416911: {STR_VAR_1}?\nCombien veux-tu vendre ?
-0x416936: Je peux payer ¥{STR_VAR_3}.\nÇa te va ?
-0x416959: Tu as remis {STR_VAR_1}(s)\npour ¥{STR_VAR_3}.
-0x41697E: Changer
-0x416984: Envoyer
-0x41698D: Permuter
-0x416994: Résumé
-0x4169A3: Inscrire
-0x4169A9: Pas d'entrée
-0x4169B2: Prendre
-0x4169B7: Lire
-0x4169BC: Échanger
-0x4169C5: Att. Spé
-0x4169CD: Déf. Spé
-0x4169DC: Cela n'aura aucun effet. {PAUSE_UNTIL_PRESS}
-0x4169F8: Inutilisable sur ce Pokémon.\n{PAUSE_UNTIL_PRESS}
-0x416A1E: Impossible de changer\n{STR_VAR_1}!{PAUSE_UNTIL_PRESS}
-0x416A3A: {STR_VAR_1} est déjà\nau combat !{PAUSE_UNTIL_PRESS}
-0x416A55: {STR_VAR_1} est déjà sélectionné.\n{PAUSE_UNTIL_PRESS}
-0x416A75: {STR_VAR_1} n'a plus assez d'énergie\npour se battre !{PAUSE_UNTIL_PRESS}
-0x416A98: Impossible d'échanger le Pokémon\nde {STR_VAR_1} avec l'un des tiens !\n{PAUSE_UNTIL_PRESS}
-0x416ACB: Un Œuf ne peut pas se battre ! {PAUSE_UNTIL_PRESS}
-0x416AE2: Inutilisable tant qu'un nouveau\nBadge n'est pas obtenu.\n{PAUSE_UNTIL_PRESS}
-0x416B16: Pas plus de trois Pokémon ne\npeuvent entrer.\n{PAUSE_UNTIL_PRESS}
-0x416B3E: Pas plus de deux Pokémon ne\npeuvent entrer.\n{PAUSE_UNTIL_PRESS}
-0x416B64: Envoyer le Courrier retiré\nsur ton PC ?
+0x41808E: COIN DIRECT
+0x41809C: SALON UNION
+0x4180A7: PDR ENERG{CLEAR_TO}ヤ{FONT_SMALL}50
+0x4180BC: RAC ENERG{CLEAR_TO}ヤ{FONT_SMALL}80
+0x4180D0: PDR SOIN{CLEAR_TO}ヤ{FONT_SMALL}50
+0x4180E4: HERB RAPP{CLEAR_TO}í{FONT_SMALL}300
+0x4180FA: PROTÉINE{CLEAR_TO}ナ{FONT_SMALL}1000
+0x41810D: FER{CLEAR_TO}ナ{FONT_SMALL}1,000
+0x41811D: CARBONE{CLEAR_TO}ナ{FONT_SMALL}1,000
+0x41812F: CALCIUM{CLEAR_TO}ナ{FONT_SMALL}1,000
+0x418142: ZINC{CLEAR_TO}ナ{FONT_SMALL}1,000
+0x418152: PV PLUS{CLEAR_TO}ナ{FONT_SMALL}1,000
+0x418163: PP PLUS{CLEAR_TO}ナ{FONT_SMALL}3,000
+0x418174: Résultats combat de {PLAYER}
+0x418188: TOTAL V:{STR_VAR_1} D:{STR_VAR_2} N:{STR_VAR_3}
+0x4181C3: Fermeture du Mémo Dresseur.
+0x418208: Quitter la Boîte.
+0x41821B: Que veux-tu faire ?
+0x418233: Choisis un thème.
+0x418248: Choisis le décor.
+0x41825C: {DYNAMIC}  est choisi.
+0x41826C: Aller à quelle Boîte ?
+0x41827F: Déposer dans quelle Boîte ?
+0x418295: {DYNAMIC}  a été déposé.
+0x4182A7: La Boîte est pleine.
+0x4182B8: Relâcher ce Pokémon ?
+0x4182CE: {DYNAMIC}  relâché.
+0x4182DF: Adieu, {DYNAMIC} !
+0x4182EC: Marque ton Pokémon.
+0x4182FF: C'est ton dernier Pokémon !
+0x418319: Ton équipe est pleine !
+0x41832C: Tu tiens un Pokémon !
+0x418346: Lequel prends-tu ?
+0x41835F: Tu ne peux pas relâcher un Œuf.
+0x418379: Continuer dans les Boîtes ?
+0x418392: {DYNAMIC}  est revenu !
+0x4183A0: Il s'inquiétait pour toi ?
+0x4183C5: Retire le Courrier.
+0x4183DD: Donner à un Pokémon ?
+0x4183F0: Objet placé dans le Cube V3.
+0x418408: Cube V3 plein.
+0x418419: Mettre cet objet dans le Cube V3 ?
+0x418433: {DYNAMIC}  est porté.
+0x418443: Passé à {DYNAMIC} .
+0x418452: Courrier non stockable !
+0x418468: Annuler
+0x41846F: Stocker
+0x418475: Retirer
+0x41847E: Échanger
+0x418484: Déplacer
+0x418489: Placer
+0x41848F: Résumé
+0x418497: Relâcher
+0x41849F: Marquer
+0x4184A4: Nommer
+0x4184A9: Aller
+0x4184AE: Fond
+0x4184B8: Prendre
+0x4184BD: Donner
+0x4184C2: Permuter
+0x4184CD: Infos
+0x4184D2: Décor 1
+0x4184DC: Décor 2
+0x4184E6: Décor 3
+0x4184F0: Divers
+0x4184F9: Forêt
+0x418500: Ville
+0x418505: Désert
+0x41850C: Savane
+0x418514: Ravin
+0x418519: Volcan
+0x418521: Neige
+0x418526: Grotte
+0x41852B: Plage
+0x418531: Fond marin
+0x41853A: Rivière
+0x418544: Étoiles
+0x41854A: Centre Pokémon
+0x418555: Dalles
+0x41855B: Simple
+0x41856C: Retirer Pokémon
+0x41857D: Déposer Pokémon
+0x41858D: Déplacer Pokémon
+0x41859A: Déplacer objets
+0x4185A5: À plus !
+0x4185AD: Tu peux retirer un Pokémon si tu\nen as dans une Boîte.
+0x4185E2: Dépose ton équipe dans n'importe\nquelle Boîte.
+0x418611: Déplace les Pokémon stockés dans\nn'importe quelle Boîte.
+0x418642: Tu peux déplacer les objets tenus\npar un Pokémon d'une Boîte ou\nde ton équipe.
+0x418681: À plus tard !
+0x418690: Impossible de déposer le dernier\nPokémon !
+0x4186B0: Impossible de prendre plus de\nPokémon.
+0x4186D1: Combine quatre mots ou phrases
+0x4186EF: et crée ton profil.
+0x418706: Compose un message de six phrases.
+0x418725: 2 phrases de 12 lettres max/ligne.
+0x418745: Trouve des mots qui décrivent
+0x418763: tes sentiments du moment.
+0x418780: Combine neuf mots ou phrases
+0x41879E: et fais un message.
+0x4187B2: Change un seul mot ou une phrase
+0x4187D1: et améliore la chanson du BARDE.
+0x4187EE: et remplis le questionnaire.
+0x41880E: Ton profil
+0x41881B: Ton ressenti au début du combat
+0x41883E: Ce que tu dis en cas de victoire
+0x41885F: Ce que tu dis en cas de défaite
+0x418881: La réponse
+0x41888C: Le message du Courrier
+0x4188AC: La nouvelle chanson
+0x4188B9: Combine deux mots ou phrases
+0x4188D6: et crée une expression tendance.
+0x4188F0: L'expression tendance
+0x418902: est comme affiché. OK ?
+0x418937: Tout le texte en cours d'édition\nsera effacé. D'accord ?
+0x4189E0: Quitter l'édition ?
+0x4189EE: Arrêter de donner du Courrier au\nPokémon ?
+0x418A2B: PROFIL
+0x418A33: Début du combat :
+0x418A4A: Après une victoire :
+0x418A61: Après une défaite :
+0x418A77: Chanson du BARDE
+0x418A87: Quoi de branché ?
+0x418AA1: Interview
+0x418C1B: CENTRE POKÉMON
+0x418C83: Échec de la sauvegarde.\nVérification de la sauvegarde…\nPatiente.\n"Temps estimé :\nenviron 1 minute"
+0x418CD9: La mémoire de sauvegarde est\nendommagée ou la pile est vide.\nLe jeu peut continuer mais on ne\npeut pas sauvegarder.\n"Appuie sur le bouton A."
+0x418E09: Sauvegarde terminée.\n"Appuie sur le bouton A."
+0x418E47: Ton nom ?
+0x418E52: Nom de la Boîte ?
+0x418E5C: : surnom ?
+0x418E69: Nom du Rival ?
+0x418E77: {DPAD_ANY}Déplacer {SE_SHOP}OK {B_BUTTON}Retour
+0x418E8D: {SE_SHOP}Guide
+0x418E95: {SE_SHOP}Annuler
+0x418E9E: {SE_SHOP}Annuler
+0x418EA7: {SE_SHOP}Changer
+0x418EB5: {DPAD_ANY}Déplacer
+0x418EBC: {DPAD_UPDOWN}Choisir
+0x418EC3: Aucune donnée
+0x418ECB: Une vaste forêt dense autour de\nJADIELLE.\nUn labyrinthe naturel où beaucoup\nse perdent.
+0x418F3A: Une montagne mystique célèbre\npour ses chutes de météores.\nLes éclats d'étoiles qui tombent\nici sont des PIERRES LUNE.
+0x418FB8: Un tunnel apparemment banal creusé\npar des TAUPIQUEUR.\nCélèbre car il relie les ROUTES 2\net 11.
+0x41901C: Un tunnel sur la ROUTE 23.\nIl doit son nom à tous les\nDresseurs qui le traversent pour\nviser le sommet.
+0x41908E: Un manoir délabré et brûlé sur\nCRAMOIS'ÎLE.\nNommé ainsi car un célèbre\nchercheur Pokémon y vivait.
+0x419103: Un parc d'attractions près de\nPARMANIE où beaucoup de Pokémon\nrares peuvent être observés.\nAttrape-les dans un jeu prisé !
+0x41917D: Un tunnel souterrain naturel.\nNon aménagé, il est noir sombre.\nUne lumière est nécessaire pour\nle traverser.
+0x419201: Une paire d'îles sur la ROUTE 20.\nLes deux îles ont la même forme,\ncomme si elles étaient jumelles.\n
+0x41926D: Une tour qui abrite d'innombrables\ntombes de Pokémon.\nBeaucoup viennent chaque jour\nrendre hommage aux disparus.
+0x4192E2: Une caverne mystérieuse pleine de\nPokémon redoutables.\nTellement dangereuse que la LIGUE\nPOKÉMON la surveille.
+0x41935B: Une Centrale abandonnée depuis des\nannées, mais certaines machines\nfonctionnent encore. Elle est\ninfestée de Pokémon Électrik.
+0x4193D5: Un volcan dit inactif.\nPourtant, on rapporte souvent que\nle sommet s'embrase la nuit.\n
+0x419444: Une forêt sur un îlot au large de\nl'ÎLE 3. Des BAIES poussent en\nmasse, remplaçant vite celles qui\nchutent.
+0x4194C9: Une grotte couverte d'eau et de\nglace sur l'ÎLE 4.\nIl semble que la fin de la grotte\nsoit reliée à l'océan.
+0x41953F: Une grotte déroutante au large du\nRESORT DÉTENTE.\nCertains curieux en quête de\nsensations n'en sont jamais sortis.
+0x4195AC: Une ruine antique où vivrait un\nPokémon particulier.\nCependant, ce Pokémon reste\nau stade de rumeur.
+0x419629: Cette île porte ce nom depuis\nles temps anciens.\nPersonne ne sait d'où vient\nce nom.
+0x41969D: Un endroit dense en buissons.\nOn y voit des motifs sans herbe.\nCertains pensent qu'un secret y\nest caché.
+0x41971A: Une ruine mystérieuse tout juste\ndécouverte, venue d'un temps\nancien.\nSon nom vient des six points sur\nsa porte.
+0x419782: Nature {DYNAMIC}.\nRencontré par échange.
+0x41979D: Nature {DYNAMIC}.\nRencontré par échange.
+0x4197B8: Nature {DYNAMIC}.\nRencontre fatidique au\nN. {LV_2} {DYNAMIC}À.
+0x4197ED: Nature {DYNAMIC}.\nRencontre fatidique au\nN. {LV_2} {DYNAMIC}À.
+0x419822: Nature {DYNAMIC}. Rencontré à {DYNAMIC}Á au\nN. {LV_2} {DYNAMIC}À.
+0x419841: Nature {DYNAMIC}. Rencontré à {DYNAMIC}Á au\nN. {LV_2} {DYNAMIC}À.
+0x419860: Nature {DYNAMIC}.\nApparemment rencontré à\n{DYNAMIC}Á au N. {LV_2} {DYNAMIC}À.
+0x41988A: Nature {DYNAMIC}.\nApparemment rencontré à\n{DYNAMIC}Á au N. {LV_2} {DYNAMIC}À.
+0x41992F: Nature {DYNAMIC}.\nRencontre fatidique (éclos :\n{DYNAMIC}Á au N. {LV_2} {DYNAMIC}À).
+0x41996D: Nature {DYNAMIC}.\nRencontre fatidique (éclos :\n{DYNAMIC}Á au N. {LV_2} {DYNAMIC}À).
+0x4199AB: Nature {DYNAMIC}. Apparemment\nrencontre fatidique\n(éclos : {DYNAMIC}Á au\nN. {LV_2} {DYNAMIC}À).
+0x4199F4: Nature {DYNAMIC}. Apparemment\nrencontre fatidique\n(éclos : {DYNAMIC}Á au\nN. {LV_2} {DYNAMIC}À).
+0x419A3D: Un Œuf de Pokémon trouvé par le\ncouple de la Pension.
+0x419AA2: Œuf de Pokémon vraiment curieux\nobtenu dans un bel endroit.
+0x419ADE: Œuf étrange obtenu d'une vieille\nfemme aux thermes.
+0x419B18: Œuf de Pokémon particulier obtenu\npar échange.
+0x419B44: On dirait que cet\nŒuf mettra longtemps\nà éclore.
+0x419B7B: Que sortira-t-il\nde cet Œuf ? Ça\nprendra du temps.
+0x419BAE: Il bouge parfois.\nIl devrait éclore\nbientôt.
+0x419BDB: Il fait du bruit.\nIl est presque prêt\nà éclore !
+0x419C0B: un échange
+0x419C1D: Infos Pokémon
+0x419C2A: Capacités Pokémon
+0x419C39: Capacités connues
+0x419C45: Aucune donnée
+0x419C62: {DPAD_RIGHT}Page {SE_SHOP}Annuler
+0x419C72: {SE_SHOP}Annuler
+0x419C7B: {DPAD_LEFTRIGHT}Page
+0x419C82: {DPAD_LEFT}Page {SE_SHOP}Détails
+0x419C92: {DPAD_UPDOWN}Choix {SE_SHOP}Changer
+0x419CA2: {DPAD_UPDOWN}Choix
+0x419CA9: {DPAD_UPDOWN}Choix {SE_SHOP}EFFACER
+0x419CB9: Les CS ne peuvent pas être\noubliées maintenant.
+0x419CDA: Nom : 
+0x419CE1: N° ID
+0x419CEF: Pokédex
+0x419CFD: TEMPS
+0x419D0A: : Carte Dresseur
+0x419D1A: PREMIÈRE ENTRÉE PANTHÉON  
+0x419D2F: COMBATS LINK
+0x419D3C: COMBATS CÂBLE LINK
+0x419D57: ÉCHANGES POKÉMON
+0x419D66: ÉCHANGES & COMBATS UNION
+0x419D7D: BROYEUR DE BAIES
+0x419D89: En attente que l'autre Dresseur\nfinisse de lire ta Carte Dresseur.
+0x419DCC: Options
+0x419DD3: Vitesse texte
+0x419DDE: Animations combat
+0x419DEB: Mode de combat
+0x419DF8: Son
+0x419DFE: Mode des boutons
+0x419E0A: Cadre
+0x419E17: Lent
+0x419E20: Rapide
+0x419E2C: Changer
+0x419E36: Mono
+0x419E3B: Stéréo
+0x419E46: Aide
+0x419E52: Type
+0x419E57: {DPAD_UPDOWN}Choix {DPAD_LEFTRIGHT}Changer {SE_SHOP}{B_BUTTON}Annuler
+0x419F54: SAUVEGARDE…\nNE PAS ÉTEINDRE.
+0x419F76: Appareil qui enregistre les infos\nPokémon rencontrés ou capturés.
+0x419FBB: Gérer les Pokémon qui voyagent\navec toi dans l'équipe.
+0x41A001: Compartiments pour stocker les\nobjets achetés, reçus ou trouvés.
+0x41A049: Voir ton argent et autres données.
+0x41A06F: Sauvegarde ta progression pour\nfaire une pause.
+0x41A0B7: Régle divers paramètres comme la\nvitesse du texte, les règles, etc.
+0x41A0F9: Ferme cette fenêtre de Menu.
+0x41A111: Quitte le JEU SAFARI et retourne\nau comptoir d'inscription.
+0x41A2E1: {DYNAMIC} a livré un combat\nfantastique contre le Champion\n{DYNAMIC}À.
+0x41A312: Au final, {DYNAMIC} a envoyé\n{DYNAMIC}À et {DYNAMIC}Á a riposté\navec {DYNAMIC}Â.
+0x41A349: En se battant de toutes ses\nforces, {DYNAMIC} a gagné\nle match.
+0x41A391: Objet {STR_VAR_1} retiré du Rayon\nObjets du SAC et stocké\nsur le PC.
+0x41A3DA: {PLAYER} a retiré l'objet\n{STR_VAR_1} du PC.
+0x41A3FF: Échange de {STR_VAR_3} contre\n{STR_VAR_2} de {STR_VAR_1}.
+0x41A422: Affronté {DYNAMIC} en COMBAT SOLO.\nMatch serré conclu par un\n{DYNAMIC}À.
+0x41A477: Affronté {DYNAMIC} en COMBAT DUO.\nLong match conclu par un\n{DYNAMIC}À.
+0x41A4C6: {DYNAMIC} et {DYNAMIC}À ont défié\n{DYNAMIC}Á et {DYNAMIC}Â en\nCOMBAT MULTI et obtenu {DYNAMIC}Ç.
+0x41A506: défaite
+0x41A50B: Rencontré d'autres Dresseurs\nau SALON UNION.
+0x41A53A: Parti de {STR_VAR_2}\nà {STR_VAR_1} vers la\nprochaine destination.
+0x41A566: Après réflexion, remplacé\n{DYNAMIC}À dans {DYNAMIC} par\n{DYNAMIC}Â dans {DYNAMIC}Á.
+0x41A59C: Après réflexion, transféré\n{DYNAMIC}À de la Boîte "{DYNAMIC} "\nvers "{DYNAMIC}Á".
+0x41A5D9: Échangé {DYNAMIC}À et {DYNAMIC}Á\ndans {DYNAMIC} .
+0x41A5FA: Déplacé {DYNAMIC}À dans {DYNAMIC} .
+0x41A60A: Échangé {DYNAMIC}À de {DYNAMIC} \navec {DYNAMIC}Á de l'équipe.
+0x41A632: Ajouté {DYNAMIC}À de {DYNAMIC} \ndans l'équipe.
+0x41A64F: Déplacé {DYNAMIC} de l'équipe\nvers {DYNAMIC}À.
+0x41A66E: Déplacé un groupe de Pokémon de\n{DYNAMIC} vers {DYNAMIC}À.
+0x41A694: un autre endroit
+0x41A6A5: Retiré l'objet {STR_VAR_1} du PC de\n{PLAYER} et donné à {STR_VAR_2}\nà tenir.

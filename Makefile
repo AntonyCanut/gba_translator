@@ -16,11 +16,25 @@ venv:
 
 extract:
 	@mkdir -p $(CHUNK_DIR) $(FR_CHUNK_DIR)
-	@$(PY) scripts/extract_text.py --rom $(ROM) --charmap $(CHARMAP) --output $(EXTRACTED)
+	@$(PY) scripts/extract_text.py --rom $(ROM) --charmap $(CHARMAP) --output extracted_full.txt
+	@$(PY) scripts/filter_by_pointers.py --input extracted_full.txt --rom $(ROM) --output $(EXTRACTED)
+	@rm extracted_full.txt
 	@$(PY) scripts/split_into_chunks.py --input $(EXTRACTED) --out-dir $(CHUNK_DIR) --size 250
 	@if [ -z "$$(ls -A $(FR_CHUNK_DIR))" ]; then cp $(CHUNK_DIR)/chunk_*.txt $(FR_CHUNK_DIR)/; fi
 	@$(PY) scripts/dump_rom_usage.py --rom $(ROM) --out $(ROM_USAGE)
 	@echo "Extraction terminée : chunks créés dans $(CHUNK_DIR) et copiés dans $(FR_CHUNK_DIR) si vide."
+
+chunk-clean:
+	@echo "Combinaison des chunks FR existants..."
+	@$(PY) scripts/combine_chunks.py --dir $(FR_CHUNK_DIR) --output combined_fr_temp.txt
+	@echo "Filtrage des textes sans pointeurs..."
+	@$(PY) scripts/filter_by_pointers.py --input combined_fr_temp.txt --rom $(ROM) --output combined_fr_clean.txt
+	@rm combined_fr_temp.txt
+	@echo "Redécoupage en chunks..."
+	@rm -rf $(FR_CHUNK_DIR)/*
+	@$(PY) scripts/split_into_chunks.py --input combined_fr_clean.txt --out-dir $(FR_CHUNK_DIR) --size 250
+	@rm combined_fr_clean.txt
+	@echo "Nettoyage terminé : chunks FR régénérés dans $(FR_CHUNK_DIR)."
 
 build-fr:
 	@ls $(FR_CHUNK_DIR)/chunk_*.txt >/dev/null
@@ -30,6 +44,6 @@ build-fr:
 	@echo "ROM générée : $(OUT_FR)"
 
 clean:
-	@rm -f $(EXTRACTED) $(COMBINED_FR) $(OUT_FR) $(ROM_USAGE)
+	@rm -f $(EXTRACTED) $(COMBINED_FR) $(OUT_FR) $(ROM_USAGE) extracted_full.txt combined_fr_clean.txt
 	@rm -rf $(CHUNK_DIR)
 	@echo "Nettoyage terminé."

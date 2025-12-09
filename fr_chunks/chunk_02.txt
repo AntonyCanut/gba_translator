@@ -1,12 +1,3 @@
-0x196591: {PLAYER} a obtenu un ÉVOLI !
-0x196984: Bienvenue au Casino de Dehara !\pAs-tu besoin de jetons de jeu ?\nTu veux en acheter ?
-0x1969DC: Non ?\nViens jouer une autre fois !
-0x1969FB: Oh, désolé.\nTu n’as pas de Boîte Jetons.
-0x196A26: Oups !\nTa Boîte Jetons est pleine.
-0x196A46: Tu ne peux pas payer ces jetons.
-0x196A62: Merci.\nVoici tes jetons !
-0x196A82: Garde ça pour toi.\pOn dit que ces machines sont\ntruquées.
-0x196AC7: Je crois que ces machines ont\ndifférentes chances.
 0x196AF3: Petit, tu veux jouer ?
 0x196B0D: {PLAYER} a reçu 10 Jetons\nde l’homme.
 0x196B30: Tu n’as pas besoin de mes jetons !
@@ -60,7 +51,6 @@
 0x19951F: Quoi ? Aucun Œuf ne devrait\nconnaître de capacité.
 0x19A4F7: 9Cette ville a des soucis de\ncauchemars depuis toujours.\pSi tu dois choisir un endroit où\nvivre, ce serait sûrement mieux\ld’aller ailleurs.
 0x19A5BD: 9Besoin de redescendre la\nmontagne ?\pMon Abra et moi serons ravis de te\ntransporter en bas.\pQu’en dis-tu ?\nTu veux être téléporté ?
-0x19A650: Attention, il te faudra de la\nforce pour continuer ensuite.
 0x19A79F: 9Ils vendent bien des Attaque + ?\pJ’aime ça, ça hausse l’Attaque en\ncombat.
 0x19A7F1: Avoir des objets en rab ne fait\njamais de mal. On ne sait jamais ce\nqui peut arriver.
 0x19B86A: Presque arrivé !
@@ -68,18 +58,15 @@
 0x19BA45: Mauvais chemin !
 0x19BAB4: Mel a besoin qu’on peigne sa\nbeauté !
 0x19BB49: Impasse !
-0x19BB53: cette campeuse a menti,\nc’est pas le bon chemin !
 0x19BBB3: Tu adores ce design d’Arène, hein ?\pIl est si bon qu’un génie a dû\nl’inventer !
 0x19BC57: Tu es presque arrivé à Mel !\nEncore un peu !
 0x19BDFE: Arène Pokémon de Fallshore\nChampion : Mel\pDresseurs vainqueurs :\n{RIVAL}
 0x19BE37: Arène Pokémon de Fallshore\nChampion : Mel\pDresseurs vainqueurs :\n{RIVAL}, {PLAYER}
-0x19BF8F: Max Repousse empêche les Pokémon\nplus faibles d’apparaître.\pIl dure plus longtemps que le\nSuper Repousse.
 0x19BFF1: Avec le {COLOR}ÉBadge Chute{COLOR}Ç, tu peux\nacheter des {COLOR}ÉHyper Balls{COLOR}Ç !\pElles sont bien meilleures pour\ncapturer que des Super Balls.
 0x19C0B4: J’ai entendu dire que des gens\nfaisaient des bêtises sur la\n{COLOR}ÉRoute 9{COLOR}Ë.
 0x19C0F7: À chaque pas, tes Pokémon\ns’attachent plus à toi.\pSi tu as un Pokémon à la Pension,\nil gagnera aussi en puissance.
 0x19C177: Tu as entendu ?\pQuelqu’un a réglé le souci des\nfauteurs de Route 9 !
 0x19E9E5: Salut ! Je suis un aide du\nProf. Log.\nSi ton Pokédex contient\p{COLOR}É{STR_VAR_1}{COLOR}Ç espèces,\nje dois te récompenser.\lAlors, {PLAYER}, dis-moi.\pAs-tu des données sur{COLOR}É\p{STR_VAR_1}{COLOR}Ç espèces de\nPokémon ?
-0x19EABE: sur\n{STR_VAR_1} espèces de Pokémon ?
 0x19EAE4: Super ! Tu as attrapé {COLOR}É{STR_VAR_3}{COLOR}Ç\nespèces !\pFélicitations !\nTiens !
 0x19EB59: Il y a des objets au sol parfois\ncachés. Utilise le {COLOR}ÉCherche-Objet{COLOR}Ç\npour trouver les objets cachés\pprès de toi.\nLa machine est un peu limitée.\pElle ne peut pas donner la\nposition exacte.\pElle indique juste la direction de\nl’objet.\pSerre-toi-en pour t’orienter, puis\ncherche la zone à la main.
 0x19EFE0: Je suis le petit frère du Gourou\nde la Pêche.\pJ’adoooore pêcher !\nJe ne peux pas m’en passer.\pDis-moi, tu aimes pêcher ?
@@ -97,7 +84,6 @@
 0x19F494: Oh, non !\pJ’avais un cadeau pour toi, mais tu\nn’as pas de place.
 0x19F4CF: Le Magicarpe le plus gigantesque\nque j’aie jamais vu…\p{STR_VAR_3} pouces !
 0x19F50C: C’est une sorte de tableau vierge.\pIl a des cases pour noter des\nrecords.
-0x1A1B8E: Une page bonus obtenue pour la\nCARTE !
 0x1A231B: Obtenu le TRI-PASS !
 0x1A2B88: Je suis le Maître des Capacités.\pJe connais toutes les capacités\nqu’ils apprennent en grandissant.\nJe suis aussi un fan des Écailles\pCœur.\pApporte-m’en une.\pSi tu fais ça, j’apprendrai une\ncapacité à un Pokémon.
 0x1A2C63: Oh ! C’est une vraie Écaille Cœur !\nLaisse-moi deviner, tu veux que\pj’enseigne une capacité ?\n
@@ -108,21 +94,14 @@
 0x1A2D85: {PLAYER} a donné une Écaille Cœur\nen échange.
 0x1A2DE0: Si tes Pokémon doivent apprendre\nune capacité, il me faut une\nÉcaille Cœur.
 0x1A2E20: Hein ? Je ne peux enseigner aucune\ncapacité à un Œuf.
-0x1A505B: À bientôt !
 0x1A5075: {PLAYER} a allumé le PC.
 0x1A508A: Quel PC doit être utilisé ?
 0x1A50A7: PC de Quelqu’un utilisé.
 0x1A50BE: Système de Stockage ouvert.
 0x1A50DD: PC de {PLAYER} utilisé.
 0x1A50EF: PC d’Ayla utilisé.
-0x1A5103: Bienvenue au Club Link Pokémon\nSalle d’Échange.
-0x1A5133: Bienvenue au Club Link Pokémon\nColisée.
-0x1A5160: Bienvenue au Club Link Pokémon\nCapsule Temporelle.
 0x1A5190: Revenez nous voir !
-0x1A51A3: Bienvenue !\pPromo spéciale aujourd’hui !
-0x1A51D0: {PLAYER}{KUN}, bienvenue !\pQue puis-je faire pour toi ?
 0x1A51F6: Obtenu {STR_VAR_2} !
-0x1A5207: Le Sac est plein…
 0x1A5218: {PLAYER} a rangé {STR_VAR_2}\ndans la {STR_VAR_3}.
 0x1A5231: {PLAYER} a trouvé {STR_VAR_2} !
 0x1A5242: Dommage !\nLe Sac est plein…
@@ -132,9 +111,7 @@
 0x1A52F0: Obtenu {STR_VAR_2} !
 0x1A5301: Dommage ! Il n’y a plus de place\npour un autre {STR_VAR_2}…
 0x1A532F: Le {STR_VAR_2} a été transféré\ndans le PC.
-0x1A5375: Un objet du Cube V3 peut être\nassigné à Select pour un accès\nrapide.
 0x1A5420: {PLAYER} a allumé le PC.
-0x1A5446: Veux-tu donner un surnom au\n{STR_VAR_2} reçu ?
 0x1A5483: Bienvenue au Centre Pokémon !\pVeux-tu que je soigne tes Pokémon\nà fond ?
 0x1A54E1: D’accord, je prends tes Pokémon\nquelques secondes.
 0x1A5511: Reste prudent dehors !
@@ -248,3 +225,26 @@
 0x1BC9C0: L’autre Dresseur n’est pas prêt.
 0x1BC9E0: Tu as au moins un Pokémon qui ne\npeut pas être emmené.
 0x1BCA13: L’Adaptateur Sans Fil n’est pas\ncorrectement connecté.
+0x1BCA43: Les participants sont priés de se\nprésenter au comptoir.
+0x1BCA95: Tu peux échanger tes Pokémon ici\navec un autre Dresseur.
+0x1BCACB: Tu peux combattre tes amis ici.\n
+0x1BCAF2: De deux à cinq Dresseurs peuvent\nfaire de la POUDRE BAIE ensemble.
+0x1BCB42: Annule l’élément du MENU choisi.
+0x1BCB81: Pour utiliser le service Broyeur\nBaies, tu dois avoir au moins une\nBaie.
+0x1BCBC3: Pour entrer dans la Salle Union,\ntu dois avoir au moins deux\nPokémon.
+0x1BCC00: Aucun Pokémon tenant la Baie\n{STR_VAR_1} ne peut entrer dans la\nSalle Union.
+0x1BCC3A: Voici la Salle Union du Club Sans\nFil Pokémon.\pMalheureusement, ton Adaptateur\nSans Fil n’est pas bien connecté.\pReviens nous voir.
+0x1BCCCA: On dirait que {STR_VAR_1} joue en\nce moment.\lVas-y !
+0x1BD28D: Bienvenue au Coin Direct du Club\nSans Fil Pokémon.\pIci, tu peux interagir directement\navec tes amis.\pDans quelle salle veux-tu entrer ?\n
+0x1BD317: Veux-tu échanger des Pokémon ?
+0x1BD338: Quel Mode de Combat veux-tu\njouer ?
+0x1BD362: Veux-tu utiliser le Système\nBroyeur Baies ?
+0x1BD390: Il y a trois Modes de Combat.\pLe Combat Solo est pour deux\nDresseurs avec au moins un Pokémon\nchacun.\pChaque Dresseur a un Pokémon en\ncombat à la fois.\pLe Combat Duo est pour deux\nDresseurs avec au moins deux\nPokémon chacun.\pChaque Dresseur envoie deux\nPokémon en combat.\pLe Combat Multi est pour quatre\nDresseurs avec au moins un Pokémon\nchacun.\pChaque Dresseur a un Pokémon en\ncombat à la fois.
+0x1BD51B: Décidez lequel de vous deux sera\nChef.\pL’autre doit ensuite choisir\n« Rejoindre Groupe ».
+0x1BD582: Décidez lequel de vous quatre sera\nChef de Groupe.\pLes autres doivent ensuite choisir\n« Rejoindre Groupe ».
+0x1BD5F1: Décidez qui sera Chef de Groupe.\nLes autres doivent ensuite choisir\p« Rejoindre Groupe ».\n
+0x1BD65B: Bienvenue dans la Salle Union du\nClub Sans Fil Pokémon.\pIci, tu peux interagir directement\navec d’autres Dresseurs, parfois\linconnus.\pVeux-tu entrer dans la salle ?
+0x1BD706: Les Dresseurs de la Salle Union\nsont ceux autour de toi déjà\nentrés.\lIci, tu peux faire plein de\nchoses, comme échanger des\nsalutations.\pTu peux inscrire deux Pokémon\njusqu’au N. 30 pour un combat\nun contre un.\pTu peux participer à un chat à\ndeux à cinq.\pOu inscrire un Pokémon à\nl’échange.\pVeux-tu entrer dans la salle ?
+0x1BD86A: Profite bien de la Salle Union.\n
+0x1BD898: Bonjour !\nJe m’appelle Teala.\pC’est ta première fois ici.\nJe vais te montrer comment marche\ple Système de Communication Sans\nFil.\pD’abord, je dois te montrer cet\nétage de notre Centre Pokémon.\pPar ici, s’il te plaît.
+0x1BD966: À l’étage du haut, il y a deux\nsalles.\pD’abord, la salle de gauche.\nC’est la Salle Union.\pTu peux te lier avec des\nDresseurs autour de toi qui sont\ldans la Salle Union.\pAvec eux, tu peux discuter,\ncombattre et échanger.\pEnsuite, la salle de droite est le\nCoin Direct.\pTu peux échanger ou combattre des\nPokémon avec tes amis ici.\pSi l’Adaptateur Sans Fil n’est pas\nconnecté, tu peux toujours te lier\lavec un câble Game Link GBA.\pDans ce cas, tu dois aller au Coin\nDirect.\pProfite bien du Système de\nCommunication Sans Fil.
