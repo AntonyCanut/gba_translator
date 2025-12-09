@@ -37,7 +37,7 @@
 0x1BE4A9: Une lumière descend d’en haut.\nUn Pokémon peut peut-être remonter.
 0x1BE4EF: Une lumière descend d’en haut.\nVeux-tu utiliser Plongée ?
 0x1BE52F: Il y a un obstacle au-dessus.\nPlongée ne peut pas être utilisée.
-0x1BE564: Ô ヘqéËÌÂÁLooks like there’s nothing here…
+0x1BE564: Ô ヘqéËÌÂÁOn dirait qu'il n'y a rien ici…
 0x1BF017: Dis-moi quelque chose sur toi.\nQuel est ton profil ?
 0x1BF053: Un profil s’écrit avec quatre mots\nou phrases.\nIl y a plein de mots à choisir pour\pfaire ton profil.\nLes mots et phrases sont rangés en\pplusieurs groupes pratiques.\nD’abord, choisis un groupe, puis un\pmot ou une phrase.\n…C’est plus simple que ça en a\pl’air.\nPourquoi ne pas essayer ?
 0x1BF166: Quel est ton profil ?
@@ -118,7 +118,7 @@
 0x1C5647: {PLAYER} a sauvegardé la partie.
 0x1C566A: AVERTISSEMENT ! Une autre partie est\nsauvegardée.\nSi tu sauvegardes maintenant, cette\paventure, ses objets et Pokémon\nseront perdus.\lEs-tu sûr de vouloir sauvegarder\pmaintenant et écraser l’autre\nfichier ?
 0x1C574F: Nouveau Nom
-0x1C5758: GREEN
+0x1C5758: VERT
 0x1C5762: FEUILLE
 0x1C5767: Hoop
 0x1C576C: GARY
@@ -161,10 +161,10 @@
 0x1C5A04: Dans le monde où tu vas entrer,\ntu vivras une grande aventure dont\ntu es le héros.
 0x1C5A6B: Parle aux gens et examine tout,\nque ce soit en ville, sur les\nroutes ou dans les grottes.\nCollecte infos et indices partout.
 0x1C5AEB: Pendant ton aventure, tu prendras\nbeaucoup de décisions.\n\n\nSouviens-toi, tes actes peuvent\ninfluer et changer le monde\nautour de toi.\n
-0x1EAF1A: FgFüF
-0x1EAF3A: FüFgF
-0x1EB09A: FíFgF
-0x1EB11A: FíFgF
+0x1EAF1A:         FgFüF
+0x1EAF3A:         FüFgF
+0x1EB09A:         FíFgF
+0x1EB11A:         FíFgF
 0x1EB1C6: FgFüF
 0x1EB1E6: FüFgF
 0x1EB246: FgFüF
@@ -174,27 +174,27 @@
 0x1EB3C6: FgFüF
 0x1EB3E6: FüFgF
 0x1EB5AC: %a!v%a!v
-0x1F3C88: E{STRING}E{STRING}%a!\n u                E{STRING}E
-0x1F47AC: gカgニヒニíカ·8E{STRING}カü                ニüニgカg9w                          FüFfFgFgFgFgFg                FgFgFgFgFrF\lF
+0x1F3C88: E{STRING}E{STRING}%a!u                E{STRING}E\n
+0x1F47AC:                       gカgニヒニíカ·8E{STRING}カü                ニüニgカg9w                          FüFfFgFgFgFgFg                FgFgFgFgFrF\lF
 0x1F6CC7: bEaía%aヒa                ·aEb
-0x1F7208: E{STRING}E{STRING}%a!\n u                E{STRING}E
-0x1FFE88: E{STRING}E{STRING}%a!\n u                E{STRING}E
-0x2009AC: gカgニヒニíカ·8E{STRING}カü                ニüニgカg9w                          FüFfFgFgFgFgFg                FgFgFgFgFrF\lF
+0x1F7208: E{STRING}E{STRING}%a!u                E{STRING}E\n
+0x1FFE88: E{STRING}E{STRING}%a!u                E{STRING}E\n
+0x2009AC:                       gカgニヒニíカ·8E{STRING}カü                ニüニgカg9w                          FüFfFgFgFgFgFg                FgFgFgFgFrF\lF
 0x202EC7: bEaía%aヒa                ·aEb
-0x203408: E{STRING}E{STRING}%a!\n u                E{STRING}E
+0x203408: E{STRING}E{STRING}%a!u                E{STRING}E\n
 0x207D86: ggbgノeDカ
 0x208B85: bEuE\n
-0x209408: … … : :        egbヒf·w
-0x209428: {SUPER_RE} … : :        ügÍg!aEv         … : : :        
+0x209408:          … … : :        egbヒf·w
+0x209428:          {SUPER_RE} … : :        ügÍg!aEv         … : : :         
 0x2094E4: ·{STRING}E\n         F F F F        
 0x209D0A: ♀e♀e♀e F F F F F F F F
 0x209DEB: g%a5f                ♀vf
 0x209F82: íöパfggggヒu·{STRING}E{UNKNOWN_STR}F F F F F F F F    
 0x20A062: FüFüF\l                        E\nE{STRING}E{STRING}E\n         F F F F        
-0x2101A0: E{STRING}E{STRING}%a!\n u                E{STRING}E
-0x210CC4: gカgニヒニíカ·8E{STRING}カü                ニüニgカg9w                          FüFfFgFgFgFgFg                FgFgFgFgFrF\lF
+0x2101A0: E{STRING}E{STRING}%a!u                E{STRING}E\n
+0x210CC4:                       gカgニヒニíカ·8E{STRING}カü                ニüニgカg9w                          FüFfFgFgFgFgFg                FgFgFgFgFrF\lF
 0x2131DF: bEaía%aヒa                ·aEb
-0x213720: E{STRING}E{STRING}%a!\n u                E{STRING}E
+0x213720: E{STRING}E{STRING}%a!u                E{STRING}E\n
 0x21809C: ggggオe9カ
 0x218440: %{STRING}!\nカa8v F F F F F F F ィ
 0x219759: gagハa·v         タ {SUPER_RE} … :        
@@ -204,10 +204,10 @@
 0x21A05A: B{STRING}BaBuB{STRING}B{STRING}B{STRING}B{UNKNOWN_STR}               
 0x21A0E1: g%e5büv                
 0x21A101: g%e5büf                {STRING}
-0x2204B8: E{STRING}E{STRING}%a!\n u                E{STRING}E
+0x2204B8: E{STRING}E{STRING}%a!u                E{STRING}E\n
 0x220FDC:                       gカgニヒニíカ·8E{STRING}カü                ニüニgカg9w                          FüFfFgFgFgFgFg                FgFgFgFgFrF\lF
 0x2234F7: bEaía%aヒa                ·aEb
-0x223A38: E{STRING}E{STRING}%a!\n u                E{STRING}E
+0x223A38: E{STRING}E{STRING}%a!u                E{STRING}E\n
 0x229B7A: カa9uE{UNKNOWN_STR}F F F F F F F F
 0x22A694: FbFv                        ·\ní{STRING}í{STRING}·\n         F F F F        ífíg·qE\l         : : : :        
 0x236632: Ces lunettes protègent le\nporteur des dégâts météo\net des poudres.
