@@ -28,3 +28,4 @@ Some text lines in the ROM do not have explicit pointers and are part of contigu
 3.  **Verification**: Always run `scripts/check_overflows_specific.py` after translating to identify any dangerous overflows. If found, shorten the translation to fit the original 
 length.
 4.  **Preserve control codes** (`\n`, `\p`, `\l`, `{...}`) from the origin. Keep the same order and count whenever possible, and rephrase so the visible text (ignoring `{COLOR}`/placeholders) between two codes stays ≤ 36 characters. If a line in the origin has no break and cannot fit after rephrasing, add the minimum `\n` needed—never stack breaks back to back.
+5. Read again if your work is ok
