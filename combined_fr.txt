@@ -9429,12 +9429,12 @@
 0xA3DC2B: L'ennemi est emmené à la porte. Cela\najoute le type Ghost au type de la\ncible.\n
 0xA3DC7C: Pulvérise un liquide toxique qui\nbaisse Attaque, Att. Spé et\nVitesse des cibles empoisonnées.\n\n
 0xA3DCD8: L'utilisateur lance une malédiction\nforestière sur la cible. La cible\nest désormais également de type\nHerbe.\n
-0xA3DD2A: L'utilisateur attaque tout autour de\nlui en faisant exploser sa tête.\nCela nuit également à l'utilisateur.\n\n
-0xA3DD88: Un pilier de lumière qui inflige des\ndégâts physiques ou spéciaux en\nfonction de la meilleure statistique\nde l’utilisateur.\n
+0xA3DD2A: Attaque autour avec sa tête qui\nexplose. Cela blesse aussi le\nlanceur.\n\n
+0xA3DD88: Pilier lumineux inflige dégâts\nphysiques ou spéciaux selon la\nmeilleure stat du lanceur.\n
 0xA3DDE1: L'utilisateur attaque avec des\npoings chargés électriquement. Cela\nrend les mouvements de type normal\nde type électrique.\n
 0xA3DE3F: Si la cible est électrifiée avant\nson mouvement dans le tour, le\nmouvement de la cible devient\nélectrique.\n
-0xA3DE9D: Cela empêche la cible d'utiliser des\nobjets. Son entraîneur ne peut pas\nnon plus utiliser d’objets dessus.\n\n
-0xA3DEEE: En verrouillant le champ de\nbataille, l'utilisateur empêche tous\nles Pokémon de fuir au tour suivant.\n\n
+0xA3DE9D: Empêche la cible d'utiliser des\nobjets. Son dresseur ne peut pas\nnon plus en utiliser.\n\n
+0xA3DEEE: Verrouille le champ de bataille et\nempêche tous les Pokémon de fuir au\nprochain tour.\n\n
 0xA3DF4D: L'utilisateur tire un puissant\nfaisceau de lumière depuis la Fleur\néternelle. Cela nuit à\nl'utilisateur.\n
 0xA3DFA5: Moins ce mouvement a de PP, plus sa\npuissance est grande.\n
 0xA3DFD8: L'utilisateur aide la cible et lui\nfait utiliser son mouvement juste\naprès l'utilisateur.\n
@@ -9451,30 +9451,30 @@
 0xA3E2EE: L'utilisateur mord, s'empêchant\nainsi que la cible de se\ndéconnecter.\n
 0xA3E338: L'utilisateur consomme sa Baie\ndétenue, puis augmente fortement sa\nDéfense.\n
 0xA3E37B: Toutes les statistiques de\nl’utilisateur sont augmentées, mais\nil ne peut plus se déconnecter ou\nfuir.
-0xA3E3C8: Le goudron collant réduit la vitesse\nde la cible et la rend plus faible\nface aux mouvements de type Feu.\n
+0xA3E3C8: Goudron collant baisse la Vit. et\nrend plus faible face aux attaques\nFeu.\n
 0xA3E416: L'utilisateur disperse de la poudre\nmagique qui transforme la cible en\ntype Psychique.\n
 0xA3E462: L'utilisateur attaque deux fois.\nS'il y a deux cibles, chacune est\ntouchée une fois.\n
 0xA3E4A6: Tous les Pokémon sur le terrain ont\nl'heure du thé. Chaque Pokémon mange\nla Baie qu'il détient.\n
 0xA3E4EF: Piège l'ennemi et fait baisser\nDéf. et Déf. Spé à chaque tour.\n\n
-0xA3E538: Si l'utilisateur se déplace avant la\ncible, la puissance de ce mouvement\nest doublée.\n
-0xA3E580: Si l'utilisateur se déplace avant la\ncible, la puissance de ce mouvement\nest doublée.\n
+0xA3E538: Si l'utilisateur agit avant la\ncible, la puissance est doublée.\n
+0xA3E580: Si l'utilisateur agit avant la\ncible, la puissance est doublée.\n
 0xA3E5C8: L'utilisateur échange les effets de\nchaque côté du champ.\n\n
 0xA3E600: L'utilisateur augmente toutes ses\nstatistiques en utilisant une partie\nde ses HP.\n
-0xA3E63A: Plus la Défense de l’utilisateur est\nélevée, plus il infligera de dégâts.\n\n
+0xA3E63A: Plus la Défense est haute, plus les\ndégâts infligés augmentent.\n\n
 0xA3E67A: Augmente fortement Attaque et\nAtt. Spé de la cible en la\ndécorant.\n
 0xA3E6C4: L'utilisateur joue de son tambour\npour attaquer. La statistique de\nvitesse de la cible est réduite.\n
-0xA3E70B: L'utilisateur piège la cible dans un\npiège instantané pendant quatre à\ncinq tours.\n
+0xA3E70B: Piège la cible dans un piège en\nun instant pour quatre à cinq tours.\n
 0xA3E74D: L'utilisateur lance une boule\nenflammée sur la cible. Cela peut\négalement provoquer une brûlure.\n
 0xA3E795: L'utilisateur devient une épée et\nfrappe. Doublez les dégâts sur les\ncibles Dynamaxées.\n
-0xA3E7DF: L'utilisateur devient un bouclier et\nfrappe. Doublez les dégâts sur les\ncibles Dynamaxées.\n
+0xA3E7DF: Devient un bouclier et frappe.\nDouble dégâts sur cibles\nDynamaxées.\n
 0xA3E82A: Morpeko augmente sa vitesse et\nattaque. Le type du mouvement est\nbasé sur sa forme.\n
-0xA3E876: L'utilisateur attaque les ennemis en\nbalançant sauvagement sa queue,\nréduisant ainsi son attaque.\n
-0xA3E8C4: L'utilisateur attaque la cible en la\npoussant avec une branche pointue.\n\n
+0xA3E876: Frappe les ennemis en balançant sa\nqueue et baisse leur Attaque.\n
+0xA3E8C4: Pique la cible avec une branche\npointue.\n\n
 0xA3E904: L'utilisateur fait vibrer sa\nguitare, ce qui provoque un écho et\nde fortes vibrations.\n
 0xA3E94C: Acide de pommes acides qui\nbaisse la Déf. Spé ennemie.\n\n
 0xA3E998: L'utilisateur attaque en laissant\ntomber une pomme d'en haut. Réduit\nla défense de l'ennemi.\n
 0xA3E9E4: Force brise-esprit qui réduit\nl'Att. Spé de la cible.\n\n
-0xA3EA30: L'utilisateur attaque en émettant de\nla vapeur. La vapeur peut également\nconfondre la cible.\n
+0xA3EA30: Attaque en émettant de la vapeur.\nCela peut aussi confondre la cible.\n
 0xA3EA7B: L'utilisateur disperse de l'eau qui\nrestaure ses PV et ceux de ses\nalliés.\n
 0xA3EAC2: L’utilisateur se protège et réduit\nconsidérablement la défense de\nl’ennemi au contact.\n
 0xA3EB0D: L'utilisateur s'incline, puis\nutilise ses cheveux pour poignarder\nl'ennemi. Cela ne manque jamais.\n
@@ -9483,23 +9483,23 @@
 0xA3EBE3: Il tire une poutre d'acier depuis\nson corps, ce qui blesse également\nl'utilisateur.\n
 0xA3EC26: La puissance du mouvement augmente\net endommage toutes les cibles\nadverses en terrain psychique.\n
 0xA3EC76: L'utilisateur attaque et détruit le\nterrain. Le mouvement échoue s'il\nn'y a pas de terrain.\n
-0xA3ECC8: Il frappe deux à cinq fois de suite.\nAugmente la vitesse, mais diminue la\ndéfense.\n
+0xA3ECC8: Frappe deux à cinq fois.\nMonte la Vitesse mais baisse la\nDéfense.\n
 0xA3ED0E: Mouvement en deux tours : charge\nune puissance spatiale et monte\nl'Att. Spé.\n
 0xA3ED59: Inflige les dégâts physiques ou\nspéciaux les plus efficaces. Peut\nempoisonner l'ennemi.\n
-0xA3EDA8: L'utilisateur explose et s'évanouit.\nSa puissance augmente sur Misty\nTerrain.\n
-0xA3EDF3: L'utilisateur glisse sur le sol pour\nattaquer. Frappe en premier sur\nGrassy Terrain.\n
+0xA3EDA8: Explose puis s'évanouit. Puissance\naccrue sur Champ Brumeux.\n
+0xA3EDF3: Glisse sur le sol pour attaquer.\nFrappe en premier sur Grassy\nTerrain.\n
 0xA3EE3A: L'utilisateur attaque avec une\ntension terrestre. Il double sa\npuissance sur Electric Terrain.\n
-0xA3EE8A: Le type et la puissance du mouvement\ndépendent du terrain actuellement\nutilisé au combat.\n
+0xA3EE8A: Type et puissance dépendent du\nterrain utilisé au combat.\n
 0xA3EED5: Se faufile derrière pour attaquer.\nBaisse l'Att. Spé de l'ennemi.\n\n
 0xA3EF25: Inflige une brûlure aux cibles dont\nles statistiques ont été boostées\npendant le tour utilisé.\n
 0xA3EF73: La puissance du mouvement double si\nles statistiques de l’utilisateur\nont chuté pendant le tour.\n
-0xA3EFBD: L’utilisateur contrôle l’objet de la\ncible à attaquer. Échoue si la cible\nn’a aucun objet.\n
+0xA3EFBD: Contrôle l'objet de la cible pour\nattaquer. Échoue si la cible n'a pas\nd'objet.\n
 0xA3F00D: L'utilisateur s'enveloppe de gaz\nacide. Il fait fondre l’objet détenu\npar la cible.\n
 0xA3F059: L’utilisateur entraîne son allié,\naugmentant ainsi ses statistiques\nd’attaque et de défense.\n
 0xA3F0A1: Après avoir attaqué, l'utilisateur\nchange de place avec un Pokémon du\ngroupe.\n
 0xA3F0E1: Une attaque à 3 coups de pied qui\ndevient plus puissante à chaque coup\nsuccessif.\n
 0xA3F126: L'utilisateur claque la cible avec\nses ailes. La cible est touchée deux\nfois de suite.\n
-0xA3F172: L'utilisateur jette du sable brûlant\nsur la cible. Cela peut également\nprovoquer une brûlure.\n
+0xA3F172: Lance du sable brûlant sur cible.\nCela peut aussi provoquer une\nbrûlure.\n
 0xA3F1BC: L'utilisateur restaure ses HP ainsi\nque son statut et celui de son allié\nau combat.\n
 0xA3F202: L'utilisateur frappe violemment\nl'ennemi. Cela aboutit toujours à un\ncoup critique.\n
 0xA3F24A: L'utilisateur frappe trois fois de\nsuite. Cela aboutit toujours à un\ncoup critique.\n
@@ -9510,7 +9510,7 @@
 0xA3F3C7: Une cage faite d'électricité qui\nemprisonne la cible pendant quatre à\ncinq tours.\n
 0xA3F410: Plus les HP de l’utilisateur sont\nélevés, plus cette attaque devient\npuissante.\n
 0xA3F451: Une quantité effrayante de petits\nfantômes sont envoyés pour attaquer\nles Pokémon adverses.\n
-0xA3F499: L'utilisateur attaque en lançant une\nlance de glaçon recouverte d'un\nblizzard sur le Pokémon adverse.\n
+0xA3F499: Lance une lance de glace masquée\ndans un blizzard sur l'ennemi.\n
 0xA3F4EB: Une attaque qui peut empoisonner,\nparalyser ou endormir l'ennemi. Il a\nun taux de critique élevé.\n
 0xA3F53A: L'utilisateur frappe l'ennemi avec\nune énergie psychique. Cela augmente\négalement la défense de\nl’utilisateur.
 0xA3F58D: L'utilisateur échange ses\nstatistiques offensives et\ndéfensives.
@@ -9523,15 +9523,15 @@
 0xA3F796: L'utilisateur danse pour inaugurer\nla victoire. Cela augmente\nl'attaque, la défense et la vitesse.\n
 0xA3F7E3: Écrase l'ennemi. Baisse la Défense\net la Déf. Spé du lanceur.\n\n
 0xA3F832: Des barbes susceptibles d'être\nempoisonnées sont lancées sur\nl'ennemi. Sa puissance double si\nl'ennemi est empoisonné.
-0xA3F887: L'ennemi est lacéré par des ailes de\nlumière. Cela commence en premier et\na un taux de critique élevé.\n
+0xA3F887: Lacère l'ennemi avec des ailes de\nlumière. Priorité, taux critique\nélevé.\n
 0xA3F8DA: L'utilisateur attaque et peut\ninfliger des engelures à l'ennemi.\nSa puissance double si l'ennemi\nsouffre d'engelures.\n
 0xA3F93F: L'utilisateur rend sa peau dure\ncomme de l'acier pour augmenter sa\nDéfense et sa Vitesse.\n
 0xA3F985: L’ennemi est touché par des flèches\nqui augmentent le taux de critique\net diminuent la défense de l’ennemi.\n
 0xA3F9D8: Une myriade de boules de feu\nsusceptibles de brûler frappent\nl'ennemi. Sa puissance double si\nl'ennemi est brûlé.
 0xA3FA2C: L'ennemi est tailladé. Cela laisse\ndes éclats. Il a un taux de critique\nélevé.\n
-0xA3FA78: L'utilisateur attaque avec des vents\nextrêmement froids. Cela pourrait\nprovoquer des engelures.\n
+0xA3FA78: Attaque avec des vents glacials.\nCela pourrait provoquer des\nengelures.\n
 0xA3FABF: L'utilisateur attaque sauvagement\navec le vent et la foudre. Cela peut\nprovoquer une paralysie.\n
-0xA3FB0C: L'utilisateur attaque avec des vents\nviolents et du sable chaud. Cela\npourrait provoquer une brûlure.\n
+0xA3FB0C: Attaque avec vents violents et\nsable chaud. Cela pourrait\nprovoquer une brûlure.\n
 0xA3FB54: L'utilisateur attaque avec amour et\nhaine. Les effets dépendent de la\nforme de l’utilisateur.\n
 0xA3FBA0: L'utilisateur guérit ses propres\nstatuts et restaure HP. Cela soulève\négalement l’évasion.\n
 0xA3FBED: Soigne ses statuts et augmente\nson Att. Spé et sa Déf. Spé.\n\n
@@ -9540,7 +9540,7 @@
 0xA3FCC2: Capacité Dynamax Insecte. Baisse\nl'Att. Spé de la cible.\n\n
 0xA3FCFE: Mouvement Dynamax électrique. Il\nactive le terrain électrique pendant\ncinq tours.\n
 0xA3FD43: Mouvement Dynamax de type normal.\nCela réduit la statistique de\nvitesse de la cible.\n
-0xA3FD80: Combattre le mouvement Dynamax. Cela\naugmente les statistiques d’attaque\ndes Pokémon alliés.\n
+0xA3FD80: Capacité Dynamax Combat. Cela monte\nl'Attaque des Pokémon alliés.\n
 0xA3FDBE: Mouvement Dynamax de type fantôme.\nCela réduit la statistique de\ndéfense de la cible.\n
 0xA3FDFC: Mouvement Dynamax de type glace. Il\ninvoque une tempête de grêle pendant\ncinq tours.\n
 0xA3FE3A: Capacité Dynamax Poison. Monte\nl'Att. Spé des alliés.\n\n
@@ -9600,44 +9600,44 @@
 0xA40A9F: Force Poigne
 0xA40AAC: Guillotine
 0xA40AB9: Coupe-Vent
-0xA40AC6: Danse-Lames
-0xA40AE0: Coupe
-0xA40AED: Tornade
-0xA40AFA: Cru-Aile
-0xA40B14: Cyclone
-0xA40B21: Ligotage
-0xA40B2E: Souplesse
-0xA40B3B: Fouet Lianes
-0xA40B48: Écrasement
-0xA40B55: Double Pied
-0xA40B62: Ultimawashi
-0xA40B6F: Pied Sauté
-0xA40B7C: Mawashi Geri
-0xA40B89: Jet de Sable
-0xA40B96: Coup d'Boule
-0xA40BA3: Koud'Korne
-0xA40BB0: Furie
-0xA40BBD: Empal'Korne
-0xA40BCA: Charge
-0xA40BD7: Plaquage
-0xA40BE4: Étreinte
-0xA40BF1: Bélier
-0xA40BFE: Mania
-0xA40C0B: Damoclès
-0xA40C18: Mimi-Queue
-0xA40C25: Dard-Venin
-0xA40C32: Double-Dard
-0xA40C3F: Dard-Nuée
-0xA40C4C: Groz'Yeux
-0xA40C59: Morsure
-0xA40C66: Rugissement
-0xA40C73: Hurlement
-0xA40C80: Berceuse
-0xA40C8D: Ultrason
-0xA40C9A: Sonic Boom
-0xA40CA7: Entrave
-0xA40CB4: Acide
-0xA40CC1: Flammèche
+0xA40AC6: Danse Lames
+0xA40AE0: Tornade
+0xA40AED: Cru-Aile
+0xA40AFA: Siphon
+0xA40B14: Ligotage
+0xA40B21: Souplesse
+0xA40B2E: Fouet Lianes
+0xA40B3B: Écrasement
+0xA40B48: Double Pied
+0xA40B55: Méga-Pied
+0xA40B62: Pied Sauté
+0xA40B6F: Pied Voltige
+0xA40B7C: Jet de Sable
+0xA40B89: Coup d'Boule
+0xA40B96: Empal'Korne
+0xA40BA3: Furie
+0xA40BB0: Empal'Corne
+0xA40BBD: Charge
+0xA40BCA: Plaquage
+0xA40BD7: Enroulement
+0xA40BE4: Bélier
+0xA40BF1: Damoclès
+0xA40BFE: Frustration
+0xA40C0B: Mimi-Queue
+0xA40C18: Dard-Venin
+0xA40C25: Double-Dard
+0xA40C32: Dard-Nuée
+0xA40C3F: Groz'Yeux
+0xA40C4C: Morsure
+0xA40C59: Rugissement
+0xA40C66: Hurlement
+0xA40C73: Berceuse
+0xA40C80: Ultrason
+0xA40C8D: Sonicboom
+0xA40C9A: Entrave
+0xA40CA7: Acide
+0xA40CB4: Flammèche
+0xA40CC1: Lance-Flammes
 0xA40CCE: Brume
 0xA40CDB: Pistolet à O
 0xA40CE8: Hydrocanon
@@ -9672,7 +9672,7 @@
 0xA40E61: Tonnerre
 0xA40E6E: Cage-Éclair
 0xA40E7B: Fatal-Foudre
-0xA40E88: Jet-Pierres
+0xA40E88: Jet de Pierres
 0xA40E95: Séisme
 0xA40EA2: Abîme
 0xA40EBC: Toxik
@@ -11756,9 +11756,9 @@
 0xA4E474: Fin du combat si :\n4 Pokémon K.O.\n10 tours écoulés
 0xA4E4A2: Partenaires disponibles
 0xA4E4B5: FばDexNav
-0xA4E4BF: Journal des missions
-0xA4E4CB: Boîte à costumes
-0xA4E4D7: Liste des Pokémon
+0xA4E4BF: Missions
+0xA4E4CB: Costumes
+0xA4E4D7: Pokémons
 0xA4E4E4: Cube V3
 0xA4E4EC: Sauvegarder
 0xA4E4F6: Paramètres
@@ -17748,7 +17748,7 @@
 0x1F11D15: FばPreset
 0x1F11D25: {PLAYER} s'est précipité vers le\nguérisseur,protégeant les Pokémon\népuisés etK. O. d'autres\pblessures…
 0x1F11D89: Ce n'était qu'un rêve…\p
-0x1F11DA3: Ancienne sauvegarde
+0x1F11DA3: Préc. Sauv.
 0x1F11DE5: FばGrand Désert
 0x1F11DF5: Ce désert est vraiment dangereux. Si\ptu arrives à me battre, je t'aiderai\nà le traverser en te soignant !
 0x1F11E55: OK !\nJe vais te soigner maintenant !
