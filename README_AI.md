@@ -19,3 +19,4 @@
 - Keep `\p` and `\l` at the same positions when possible.
 - Before working, review/update `fr_chunks/doutes.txt` for any unresolved doubts.
 - Each chunk file must contain exactly 250 lines (except the very last chunk if shorter).
+- Le nom des lieux est référencé dans le document `place_names_map.txt` sur lequel il faut se référer pour la traduction.

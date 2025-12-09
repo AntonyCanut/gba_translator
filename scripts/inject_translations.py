@@ -36,7 +36,7 @@ SAFE_RELOC_START = SENSITIVE_OFFSET_MAX  # free blocks below this are ignored to
 
 PLACEHOLDER_RE = re.compile(r"\{[^}]+\}")
 POINTER_BASE = 0x08000000
-GAP_BYTES = 4  # leave a short gap between allocated blocks
+GAP_BYTES = 1  # leave a short gap between allocated blocks
 # Offsets never to touch (gibberish/raw data)
 IMMUTABLE_OFFSETS = {0x4FDAC2}
 # These offsets are referenced directly in code (start menu/version labels).
@@ -326,6 +326,14 @@ def main() -> None:
     line_to_offset: Dict[int, int] = {}
     errors: List[str] = []
     warnings: List[str] = []
+
+    def set_pointer(ptr_pos: int, ptr_val: int, context: str) -> None:
+        """Écrit un pointeur et signale s'il sort des plages ROM valides."""
+        if not (POINTER_BASE <= ptr_val < POINTER_BASE + len(rom_bytes)):
+            errors.append(
+                f"Pointeur hors plage {hex(ptr_val)} ({context}, écrit à {hex(ptr_pos)})"
+            )
+        rom_bytes[ptr_pos : ptr_pos + 4] = ptr_val.to_bytes(4, "little")
     for line_no, line in enumerate(args.text.read_text(encoding="utf-8").splitlines(), 1):
         if ": " not in line:
             continue
@@ -492,6 +500,10 @@ def main() -> None:
     def locate_positions_for(off: int) -> Tuple[int, List[Tuple[int, int]]]:
         """Retourne (offset_cible, liste_positions) en tolérant un décalage +/-1."""
         positions = pointer_index.get(off, [])
+        if not positions:
+             # Fallback: check all_pointer_index directly for 'off' if pointer_index missed it
+             positions = all_pointer_index.get(off, [])
+
         alt_off = off
         if not positions:
             for delta in (1, -1):
@@ -584,7 +596,7 @@ def main() -> None:
             # Keep the real address (parity included) without forcing the Thumb bit,
             # otherwise relocated strings shift by one byte.
             new_ptr_val = POINTER_BASE + dest_offset + ptr_delta
-            rom_bytes[idx : idx + 4] = new_ptr_val.to_bytes(4, "little")
+            set_pointer(idx, new_ptr_val, f"run {hex(anchor)}")
         pointer_index[anchor] = []
         if target_off in pointer_index:
             pointer_index[target_off] = []
@@ -705,7 +717,7 @@ def main() -> None:
                     ptr_delta = target_off - anchor_in_run
                     for idx, lsb in anchor_positions:
                         new_ptr_val = POINTER_BASE + dest_offset + ptr_delta
-                        rom_bytes[idx : idx + 4] = new_ptr_val.to_bytes(4, "little")
+                        set_pointer(idx, new_ptr_val, f"bloc {hex(anchor_in_run)}")
                     pointer_index[anchor_in_run] = []
                     if target_off in pointer_index:
                         pointer_index[target_off] = []
@@ -762,7 +774,7 @@ def main() -> None:
             target = dest_offset + ptr_delta
             # Do not force the Thumb bit: point exactly to the relocated text start.
             new_ptr_val = POINTER_BASE + target
-            rom_bytes[idx : idx + 4] = new_ptr_val.to_bytes(4, "little")
+            set_pointer(idx, new_ptr_val, f"offset {hex(offset)}")
         pointer_index[offset] = []
         if alt_offset in pointer_index:
             pointer_index[alt_offset] = []
@@ -812,7 +824,7 @@ def main() -> None:
             for idx, lsb in positions:
                 target = dest_offset + ptr_delta
                 new_ptr_val = POINTER_BASE + target
-                rom_bytes[idx : idx + 4] = new_ptr_val.to_bytes(4, "little")
+                set_pointer(idx, new_ptr_val, "réutilisation bloc old")
 
             prev_start = int(item["dest_offset"])
             free_blocks.append((prev_start, needed + GAP_BYTES, "old"))
