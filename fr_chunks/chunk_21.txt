@@ -33,7 +33,7 @@
 0x486D64: Met l'ennemi en rage, l'empêchant\nd'utiliser deux\nfois la même\ncapacité.
 0x486DB1: Flatterie qui\nrend confus mais\nmonte l'Att.\nSpé. ennemie.
 0x486DF2: Flamme pâle et\nsinistre qui brûle\nl'ennemi.\n
-0x486E37: L'utilisateur tombe K.O. mais baisse\nfortement l'Attaque\net l'Att. Spé\nennemies.
+0x486E37: L'utilisateur tombe K.O. mais\nbaisse\nfortement l'Attaque\net l'Att. Spé\nennemies.
 0x486E79: Attaque renforcée si l'utilisateur\nest brûlé,\nempoisonné ou\nparalysé.
 0x486EBE: Attaque lancée\nen dernier.\nÉchoue si touché\navant.
 0x486F04: Double effet sur\nun ennemi paralysé\nmais le guérit\nensuite.
@@ -96,7 +96,7 @@
 0x487E30: Absorbe un pouvoir\nmystique pour\nmonter Défense\net Déf. Spé.
 0x487E72: Plus les PV sont\nhauts, plus\nl'attaque est\npuissante.
 0x487EB3: Rayon lumineux\nqui peut aussi\nrendre confus.\n
-0x487EF6: Coup d'ombre\nimparable.\n\n
+0x487EF6: Coup d'ombre\nimparable.\n
 0x487F35: Pouvoir étrange qui\npeut faire\ntressaillir l'ennemi.\n
 0x487F76: Uppercut projeté\nvers le ciel\navec force.\n
 0x487FB4: Piège l'ennemi dans\nune tempête de\nsable douloureuse\n2 à 5 tours.
@@ -136,9 +136,9 @@
 0x488DBD: Un nouveau Dresseur est arrivé\nen HOENN.
 0x488DFD: Ces données ne peuvent pas être\nutilisées dans cette version.
 0x488FE3: Oh, ton équipe semble pleine.\pReviens me voir après avoir\nrangé un Pokémon sur un PC.
-0x48903A: ,げゾぶËœü ïÒィ  AÀクゾぶËハÍCテゾぶËニヘフÁハÍC…ダぶËニヘフÁMerci d'utiliser le Système\nCADEAU MYSTÈRE.\pAvec cette CARTE MIRACLE, tu\npeux participer à un sondage au\lMagasin Pokémon.\pUtilise ces sondages pour inviter\ndes Dresseurs aux Îles SEVII.\p…Voici un mot de passe secret\npour un sondage :\p“GIVE ME\nAWESOME Trainer”\pÉcris-le dans un sondage et envoie-\nle au SYSTÈME DE COMMUNICATION\lSANS FIL.
+0x48903A: ,げゾぶËœü ïÒィ  AÀクゾぶËハÍCテゾぶËニヘフÁハÍC…ダぶËニヘフÁThank you for using the MYSTERY\nGIFT System.\pBy holding this WONDER CARD, you\nmay take part in a survey at a\lPokémon MART.\pUse these surveys to invite\nTrainers to the SEVII ISLANDS.\p…Let me give you a secret\npassword for a survey:\p“GIVE ME\nAWESOME Trainer”\pWrite that in on a survey and send\nit to the WIRELESS\lCOMMUNICATION SYSTEM.
 0x4891B0: Merci d'utiliser le Système\nCADEAU MYSTÈRE.\pUn Dresseur est arrivé aux Îles\nSEVII pour toi.\pAmuse-toi bien à combattre\nce visiteur.\pTu peux inviter d'autres Dresseurs\navec d'autres mots de passe.\pEssaie d'en trouver d'autres\nqui fonctionnent.
-0x4892B9: ,×ヂぶËªdÂAÀüヂぶËèÒィÁ ùËィ>ÀïËィÂ A üヂぶËハÍCçデぶËニヘè ィÒ èÀィÀ Ì フñdÂÁハÍCÀヅぶËニヘフÁMerci d'utiliser le Système\nCADEAU MYSTÈRE.\pTa CARTE DE COMBAT enregistre\ntes duels contre les Dresseurs\layant la même CARTE.\pCherche et affronte des\nDresseurs qui ont la même CARTE.\pTu peux consulter le classement\nglobal en lisant les NOUVELLES.\pEssaie donc !
+0x4892B9: ,×ヂぶËªdÂAÀüヂぶËèÒィÁ ùËィ>ÀïËィÂ A üヂぶËハÍCçデぶËニヘè ィÒ èÀィÀ Ì フñdÂÁハÍCÀヅぶËニヘフÁThank you for using the MYSTERY\nGIFT System.\pYour BATTLE COUNT CARD keeps\ntrack of your battle record against\lTrainers with the same CARD.\pLook for and battle Trainers who\nhave the same CARD as you.\pYou may check the overall rankings\nby reading the NEWS.\pPlease do give it a try!
 0x489419: Merci d'utiliser le Système\nCADEAU MYSTÈRE.\pFélicitations !\pTu as gagné un prix après trois\nvictoires !\pNous espérons que cela te donnera\nenvie de continuer à te battre.
 0x489583: Cela semble être à utiliser au\nport de CARMIN SUR MER.\pPourquoi ne pas essayer pour voir\nde quoi il s'agit ?
 0x4895E8: Merci d'utiliser le Système\nCADEAU MYSTÈRE.
@@ -146,7 +146,7 @@
 0x48975C: Cela semble être à utiliser au\nport de CARMIN SUR MER.\pPourquoi ne pas essayer pour voir\nde quoi il s'agit ?
 0x4897C1: Merci d'utiliser le Système\nCADEAU MYSTÈRE.
 0x4897EE: Oh, désolé, {PLAYER}. La section\nObjets Rares du SAC est pleine.\pRange quelque chose sur ton PC,\npuis reviens pour ceci.
-0x489862: ,ツブぶËáôぞÀ ïôぞこ A {RIGHT_ARROW}ブぶËàôぞ  ハÍCガブぶËニヘフÁMerci d'utiliser le Système\nCADEAU MYSTÈRE.\pDes rumeurs parlent de Pokémon\nrares récemment.\pCes rumeurs concernent la GROTTE\nMETAMORPH sur l'ÎLE OUTCAST.\pPourquoi ne pas aller voir si elles\nsont vraies ?
+0x489862: ,ツブぶËáôぞÀ ïôぞこ A {RIGHT_ARROW}ブぶËàôぞ  ハÍCガブぶËニヘフÁThank you for using the MYSTERY\nGIFT System.\pRecently, there have been rumors\nof rare Pokémon appearances.\pThe rumors are about ALTERING\nCAVE on OUTCAST ISLAND.\pWhy not visit there and check if\nthe rumors are indeed true?
 0x4A8727: Ösnkiijov▶zshVJDBEIMRVWTOKJKJHILORSUajv{DYNAMIC}ÀÂ
 0x4ABE2F: Ärjfs
 0x4EDC07: öyvsrrsv:ÜÜyqhYTSVXaehigcZYZYXXZcefgls▶{SE_SS_ANNE_HORN}Á
@@ -154,7 +154,7 @@
 0x4FDAC2: \nÈÀ\psQENgbE,.BDガデM‘0×♂0.J“{SUPER_RE}♀,…·?×A.’G♀¥LHDPVRXWYZSbZIJINHIibINcXFMGCN,CXJObPjqcxöä
 0x507C5B: À{STRING}äxposvsokjkkihfeaWH·5”IPQPIA/BFHIIFDBABDEGJKJMbxüxgYUSYjqspnnnosxzxusrssuvxzzy▶:Ä▶xxÜ{PLAYER}{STRING}{DYNAMIC}ÄÄü\l\nÁÀ
 0x5081E8: ävquz:ÖäÖvokklnpplhggfdbbZWUQNORQONNMJHJMMOSSF?09/IMLJGEFHLNLIGJau▶qgaXYflnmkkklligjoqonnorqruxyyy▶zyzÄü{HIGHLIGHT}ÀÀ
-0x5082B3: À{STRING}äwrtx:ÖÖ:vlgfipttngdbbbbZYXVRMKLOPRRMECIPQQQROD.3.BKNOMHGHJKKLNYs▶reZZbhnonmmkknpqmkmppqpprtuuwyxwvwy:ü{PLAYER}Á
+0x5082B3: À{STRING}äwrtx:ÖÖ:vlgfipttngdbbbbZYXVRMKLOPRRMECIPQQQROD.3.BKNOMHGHJKKLNYs▶reZZbhnonmmkknpqmkmppqpprtuuwyxwvwy:ü{PLAYER}Á 
 0x513324: mpホjO
 0x5252EF: Äpヲyizzz
 0x525397: mcぷiyzz\n
@@ -174,9 +174,9 @@
 0x6ACA48: JブAäÌdnoj: q3,RBs
 0x6AEACB: tPUUqxrZTicUV Ñyw
 0x6B47F1: TAIm
-0x6C09CF: Ô                                                                                                                                                                         URR URR
-0x6C0A84: RR{NAME_END}RR{NAME_END}
-0x6C0B90: URR URR
+0x6C09CF: Ô                                                                                                                                                                         URR URR 
+0x6C0A84:                     RR{NAME_END}RR{NAME_END}
+0x6C0B90:  URR URR                    
 0x719A0B: Plçeas = でctÔY  Pokémon{SUPER_RE}VçaミねDo wh at with  {STR_VAR_3}?
 0x719A3B: SWIT CH
 0x719A43: SEND  OUT
@@ -184,7 +184,7 @@
 0x719A56: CANCîEL áLECT
 0x719A74: BATT LE MOVES
 0x719A83: Type
-0x719A8C: ÛACK ぉFE NSE
+0x719A8C:  ÛACK ぉFE NSE
 0x719AAD: NONE
 0x719B3B: RO eBUGÇ
 0x719B57: ŒWAT ’GRASîS
@@ -196,25 +196,25 @@
 0x71A25E: …est habitée par de nombreux\nPokémon venus du monde entier.\p
 0x71A2A4: Cette région…
 0x71A2B2: …est habitée par de nombreux\nPokémon venus du monde entier.\p
-0x71A2F8: Les gens d'ici utilisent les Pokémon\npour beaucoup de choses.\pMoi…\pJ'étudie tous les aspects des stats\net des taux de capture des Pokémon.\p
+0x71A2F8: Les gens d'ici utilisent les\nPokémon\npour beaucoup de choses.\pMoi…\pJ'étudie tous les aspects des stats\net des taux de capture des Pokémon.\p
 0x71A37E: Cette région…
 0x71A38C: …est habitée par de nombreux\nPokémon venus du monde entier.\p
-0x71A3D2: Les gens d'ici utilisent les Pokémon\npour beaucoup de choses.\pMoi…\pJ'étudie tous les aspects des stats\net des taux de capture des Pokémon.\p
+0x71A3D2: Les gens d'ici utilisent les\nPokémon\npour beaucoup de choses.\pMoi…\pJ'étudie tous les aspects des stats\net des taux de capture des Pokémon.\p
 0x71A458: Cette région…
 0x71A466: …est habitée par de nombreux\nPokémon venus du monde entier.\p
-0x71A4AC: Les gens d'ici utilisent les Pokémon\npour beaucoup de choses.\pMoi…\pJ'étudie tous les aspects des stats\net des taux de capture des Pokémon.\p
+0x71A4AC: Les gens d'ici utilisent les\nPokémon\npour beaucoup de choses.\pMoi…\pJ'étudie tous les aspects des stats\net des taux de capture des Pokémon.\p
 0x71A532: Cette région…
 0x71A540: …est habitée par de nombreux\nPokémon venus du monde entier.\p
-0x71A586: Les gens d'ici utilisent les Pokémon\npour beaucoup de choses.\pMoi…\pJ'étudie tous les aspects des stats\net des taux de capture des Pokémon.\p
+0x71A586: Les gens d'ici utilisent les\nPokémon\npour beaucoup de choses.\pMoi…\pJ'étudie tous les aspects des stats\net des taux de capture des Pokémon.\p
 0x71A60C: Cette région…
 0x71A61A: …est habitée par de nombreux\nPokémon venus du monde entier.\p
-0x71A660: Les gens d'ici utilisent les Pokémon\npour beaucoup de choses.\pMoi…\pJ'étudie tous les aspects des stats\net des taux de capture des Pokémon.\p
+0x71A660: Les gens d'ici utilisent les\nPokémon\npour beaucoup de choses.\pMoi…\pJ'étudie tous les aspects des stats\net des taux de capture des Pokémon.\p
 0x71A6E6: Cette région…
 0x71A6F4: …est habitée par de nombreux\nPokémon venus du monde entier.\p
-0x71A73A: Les gens d'ici utilisent les Pokémon\npour beaucoup de choses.\pMoi…\pJ'étudie tous les aspects des stats\net des taux de capture des Pokémon.\p
+0x71A73A: Les gens d'ici utilisent les\nPokémon\npour beaucoup de choses.\pMoi…\pJ'étudie tous les aspects des stats\net des taux de capture des Pokémon.\p
 0x71A7C0: Cette région…
 0x71A7CE: …est habitée par de nombreux\nPokémon venus du monde entier.\p
-0x71A814: Les gens d'ici utilisent les Pokémon\npour beaucoup de choses.\pMoi…\pJ'étudie tous les aspects des stats\net des taux de capture des Pokémon.\p
+0x71A814: Les gens d'ici utilisent les\nPokémon\npour beaucoup de choses.\pMoi…\pJ'étudie tous les aspects des stats\net des taux de capture des Pokémon.\p
 0x71A89A: Keith
 0x71A8A1: Jack
 0x71A8A7: Michael
@@ -225,7 +225,7 @@
 0x71A8CF: Ripper
 0x71A8D7: Cette région…
 0x71A8E5: …est habitée par de nombreux\nPokémon venus du monde entier.\p
-0x71A92B: Les gens d'ici utilisent les Pokémon\npour beaucoup de choses.\pMoi…\pJ'étudie tous les aspects des stats\net des taux de capture des Pokémon.\p
+0x71A92B: Les gens d'ici utilisent les\nPokémon\npour beaucoup de choses.\pMoi…\pJ'étudie tous les aspects des stats\net des taux de capture des Pokémon.\p
 0x71C950: Double la vitesse si l'objet est\nconsommé.
 0x71C973: îDouble les changements de\nstatistiques.
 0x71C98C: Ignore les changements de\nstatistiques de l'ennemi.
@@ -245,6 +245,6 @@
 0x720ED4: moins.
 0x720EDB: îSp. L'Atk augmente lorsqu'il est\nbrûlé.
 0x720EF7: une brûlure.
-0x720F03: î Réduit de moitié les dégâts causés\npar les mouvements physiques.
+0x720F03: î Réduit de moitié les dégâts\ncausés\npar les mouvements physiques.
 0x720F27: îUps statut d'évasion de mouvement.
 0x720F41: je risque de rater.
