@@ -14,7 +14,7 @@
 0x1BE4A9: Une lumière descend d’en haut.\nUn Pokémon peut peut-être remonter.
 0x1BE4EF: Une lumière descend d’en haut.\nVeux-tu utiliser Plongée ?
 0x1BE52F: Il y a un obstacle au-dessus.\nPlongée ne peut pas être utilisée.
-0x1BE564: Ô ヘqéËÌÂÁOn dirait qu'il n'y a rien ici…
+0x1BE564: Ô ヘqéËÌÂÁ\nOn dirait qu'il n'y a rien ici…
 0x1BF017: Dis-moi quelque chose sur toi.\nQuel est ton profil ?
 0x1BF053: Un profil s’écrit avec quatre mots\nou phrases.\nIl y a plein de mots à choisir pour\pfaire ton profil.\nLes mots et phrases sont rangés en\pplusieurs groupes pratiques.\nD’abord, choisis un groupe, puis un\pmot ou une phrase.\n…C’est plus simple que ça en a\pl’air.\nPourquoi ne pas essayer ?
 0x1BF166: Quel est ton profil ?
@@ -36,7 +36,7 @@
 0x1BF755: Prends-en bien soin.
 0x1BF789: Ah, c’est toi ! Tes {STR_VAR_1} et\n{STR_VAR_2} vont très bien.
 0x1BF7B6: Je vais vraiment le garder.\nTu le veux, non ?
-0x1BF7E4: Je suis la Mémé Pension. On peut\nélever des Pokémon pour toi.\pVeux-tu qu’on en élève un ?
+0x1BF7E4: Je suis la Mémé Pension.\pOn peut élever des Pokémon pour toi.\pVeux-tu qu’on en élève un ?
 0x1BF839: Quel Pokémon doit-on élever pour\ntoi ?
 0x1BF860: D’accord, on va élever ton\n{STR_VAR_1} un moment.\pReviens le récupérer plus tard.
 0x1BF89F: On peut élever deux de tes Pokémon.\pVeux-tu qu’on en élève un autre\npour toi ?
@@ -92,7 +92,7 @@
 0x1C55EA: Il y a déjà une sauvegarde.\nÉcraser quand même ?
 0x1C5625: SAUVEGARDE…\nNE PAS ÉTEINDRE.
 0x1C5647: {PLAYER} a sauvegardé la partie.
-0x1C566A: AVERTISSEMENT ! Une autre partie est\nsauvegardée.\nSi tu sauvegardes maintenant, cette\paventure, ses objets et Pokémon\nseront perdus.\lEs-tu sûr de vouloir sauvegarder\pmaintenant et écraser l’autre\nfichier ?
+0x1C566A: AVERTISSEMENT !\pUne autre partie est sauvegardée.\pSi tu sauvegardes maintenant,\ncette aventure, ses objets et\lPokémon seront perdus.\pEs-tu sûr de vouloir sauvegarder\nmaintenant et écraser l’autre\nfichier ?
 0x1C574F: Nouveau Nom
 0x1C5758: VERT
 0x1C5767: Hoop

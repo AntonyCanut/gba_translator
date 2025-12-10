@@ -41,7 +41,7 @@
 0x199337: Oh…\nTellement décevant…
 0x199354: Salut, {PLAYER} !\pÇa mord bien ?
 0x19937E: Oh, non !\pJ’avais un cadeau pour toi, mais tu\nn’as pas de place !
-0x1993B9: Euh… Euh, oui, je suis l’Effaceur de\nCapacités.\pJe peux faire oublier des\ncapacités à des Pokémon.\pVeux-tu que je fasse ça ?
+0x1993B9: Euh, oui, je suis l’Effaceur de\nCapacités.\pJe peux faire oublier des\ncapacités à des Pokémon.\pVeux-tu que je fasse ça ?
 0x199421: Quel Pokémon doit oublier une\ncapacité ?
 0x199445: Quelle capacité doit être oubliée ?
 0x199465: {STR_VAR_1} ne connaît qu’une seule\ncapacité…
@@ -54,7 +54,7 @@
 0x19A79F: 9Ils vendent bien des Attaque + ?\pJ’aime ça, ça hausse l’Attaque en\ncombat.
 0x19A7F1: Avoir des objets en rab ne fait\njamais de mal. On ne sait jamais ce\nqui peut arriver.
 0x19B86A: Presque arrivé !
-0x19B8B9: Je ne suis pas trop jeune pour Mel !\nLaisse-moi tranquille !
+0x19B8B9: Je suis pas trop jeune pour Mel !\nLaisse-moi tranquille !
 0x19BA45: Mauvais chemin !
 0x19BAB4: Mel a besoin qu’on peigne sa\nbeauté !
 0x19BB49: Impasse !
@@ -154,7 +154,7 @@
 0x1A5F9B: Tes Pokémon ont retrouvé toute leur\nforme.\pOn compte sur toi !
 0x1A5FDF: {PLAYER} !\nBienvenue à la maison.\pOn dirait que tu as vécu pas mal\nd’aventures.\pTu devrais peut-être te reposer.\n
 0x1A6046: Ah, parfait ! Toi et tes Pokémon\navez bien meilleure mine.\pSi les PV de tes Pokémon sont bas,\nsoigne-les dans un\p{COLOR}ÉCentre Pokémon{COLOR}Ç !\nLe plus proche d’ici est à\p{COLOR}ÉBellin Town{COLOR}Ç.\nOu achète des\p{COLOR}ÉPotions{COLOR}Ç au\n{COLOR}ÉPoké Mart{COLOR}Ç !\pC’est toujours bien de se préparer\nau pire.\pRends-moi fier, chéri !\pPrends soin de toi !
-0x1A6196: 9{PLAYER} n’a plus de Pokémon utilisables !\n{PLAYER} panique et perd\p¥{STR_VAR_1}…\p… … … …\p{PLAYER} s’évanouit !
+0x1A6196: 9{PLAYER} n’a plus de Pokémon\nutilisables !\n{PLAYER} panique et perd\p¥{STR_VAR_1}…\p… … … …\p{PLAYER} s’évanouit !
 0x1A61E5: {PLAYER} n’a plus de Pokémon\nutilisables !\p{PLAYER} s’évanouit !
 0x1A6211: Salut !\nJe peux t’aider ?
 0x1A622C: Il y a un questionnaire.\nVeux-tu le remplir ?
@@ -190,8 +190,8 @@
 0x1B1E24: Choisis le type d’impression.
 0x1B1E42: Un grand sourire pour la photo !\nTrois… Deux… Un…\pFlash !
 0x1B1E7D: Ton impression Pokémon est prête !\nVérifie ta Carte de Dresseur.
-0x1BC310: 9Bienvenue au Club Link Pokémon.\nQuel service souhaites-tu utiliser ?\p\n
-0x1BC35E: Quel service souhaites-tu utiliser ?\n
+0x1BC310: 9Bienvenue au Club Link Pokémon.\nQuel service veux-tu utiliser ?\p\n
+0x1BC35E: Quel service veux-tu utiliser ?\n
 0x1BC388: Échange des Pokémon avec un autre\njoueur via un câble Game Link GBA.
 0x1BC3C7: Tu peux combattre un autre Dresseur\nvia un câble Game Link GBA.
 0x1BC409: Pour un Combat Duo, il faut avoir\nau moins deux Pokémon.
@@ -244,7 +244,7 @@
 0x1BD582: Décidez lequel de vous quatre sera\nChef de Groupe.\pLes autres doivent ensuite choisir\n« Rejoindre Groupe ».
 0x1BD5F1: Décidez qui sera Chef de Groupe.\nLes autres doivent ensuite choisir\p« Rejoindre Groupe ».\n
 0x1BD65B: Bienvenue dans la Salle Union du\nClub Sans Fil Pokémon.\pIci, tu peux interagir directement\navec d’autres Dresseurs, parfois\linconnus.\pVeux-tu entrer dans la salle ?
-0x1BD706: Les Dresseurs de la Salle Union\nsont ceux autour de toi déjà\nentrés.\lIci, tu peux faire plein de\nchoses, comme échanger des\nsalutations.\pTu peux inscrire deux Pokémon\njusqu’au N. 30 pour un combat\nun contre un.\pTu peux participer à un chat à\ndeux à cinq.\pOu inscrire un Pokémon à\nl’échange.\pVeux-tu entrer dans la salle ?
+0x1BD706: Les Dresseurs de la Salle Union\nsont ceux autour de toi déjà\nentrés.\l\pTu peux y faire plein de\nchoses, comme échanger des\nsalutations.\pTu peux inscrire deux Pokémon\njusqu’au N. 30 pour un combat\nun contre un.\pTu peux participer à un chat à\ndeux à cinq.\pOu inscrire un Pokémon à\nl’échange.\pVeux-tu entrer dans la salle ?
 0x1BD86A: Profite bien de la Salle Union.\n
 0x1BD898: Bonjour !\nJe m’appelle Teala.\pC’est ta première fois ici.\nJe vais te montrer comment marche\ple Système de Communication Sans\nFil.\pD’abord, je dois te montrer cet\nétage de notre Centre Pokémon.\pPar ici, s’il te plaît.
 0x1BD966: À l’étage du haut, il y a deux\nsalles.\pD’abord, la salle de gauche.\nC’est la Salle Union.\pTu peux te lier avec des\nDresseurs autour de toi qui sont\ldans la Salle Union.\pAvec eux, tu peux discuter,\ncombattre et échanger.\pEnsuite, la salle de droite est le\nCoin Direct.\pTu peux échanger ou combattre des\nPokémon avec tes amis ici.\pSi l’Adaptateur Sans Fil n’est pas\nconnecté, tu peux toujours te lier\lavec un câble Game Link GBA.\pDans ce cas, tu dois aller au Coin\nDirect.\pProfite bien du Système de\nCommunication Sans Fil.

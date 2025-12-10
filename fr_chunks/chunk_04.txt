@@ -38,7 +38,7 @@
 0x26D5BF: Merci d’avoir combattu avec moi !
 0x26D5DC: Tu veux passer par la Route\nDéfi ?\pAlors il faudra passer par moi\nd’abord !
 0x26D733: Oh, d’accord. Si tu changes d’avis,\ntu es le bienvenu quand tu veux !
-0x270FA1: J’ai essayé de traverser le Grand Désert à l’est de la ville, mais la tempête de sable était trop\nforte.\lLe sable me fouettait le visage et\pje ne voyais rien.\nSans protection, impossible d’aller\pquelque part.\nSi seulement je pouvais trouver\pquelque chose…
+0x270FA1: J’ai essayé de traverser le\nGrand Désert à l’est de la ville,\lmais la tempête de sable était\ntrop forte.\pLe sable me fouettait le visage\net je ne voyais rien.\pSans protection, impossible d’aller\nquelque part.\pSi seulement je pouvais trouver\nquelque chose…
 0x271C3E: Des pics toxik entourent toute ton\néquipe !
 0x27795D: Des rocs pointus flottent autour de\nl’équipe adverse !
 0x277999: Une toile gluante a été posée\nautour de l’équipe adverse !
@@ -53,7 +53,7 @@
 0x3D50CC: Une Ball un peu spéciale qui\nmarche mieux sur les Pokémon des\nfonds marins.
 0x3D511D: Une Ball un peu spéciale qui\nmarche mieux sur les Pokémon\nfaibles.
 0x3D5165: Une Ball un peu spéciale qui\nmarche mieux sur un Pokémon déjà\ncapturé.
-0x3D51B4: Une Ball un peu spéciale qui devient\nmeilleure plus le combat dure.\n
+0x3D51B4: Une Ball un peu spéciale qui\ndevient meilleure plus le combat\nse prolonge.\n
 0x3D5216: Une Ball confortable qui rend vite\nun Pokémon sauvage amical.\n
 0x3D5263: Une Ball rare faite pour\ncommémorer un événement.\n
 0x3D52B2: Médicament en spray.\nRend 20 PV à un Pokémon.\n
@@ -90,7 +90,7 @@
 0x3D5B06: Jus 100 % pur.\nRend 20 PV à un Pokémon.\n
 0x3D5B49: Ranime tous les Pokémon K.O. en\nrendant tous leurs PV.
 0x3D5B7A: Sel pur obtenu sous l’eau.\nExtrêmement salé.
-0x3D5BC5: Un joli coquillage trouvé sous l’eau.\nBlanc et bleu.
+0x3D5BC5: Un joli coquillage\ntrouvé sous l’eau.\nBlanc et bleu.
 0x3D5C1A: Petit éclat rouge.\nViendrait d’un outil ancien.\n
 0x3D5C66: Petit éclat bleu.\nViendrait d’un outil ancien.\n
 0x3D5CB3: Petit éclat jaune.\nViendrait d’un outil ancien.\n
@@ -195,7 +195,7 @@
 0x3D7D02: Tenue, empêche le Pokémon\nd’évoluer.\n
 0x3D7D53: Tenue, peut encaisser en laissant\n1 PV.\n
 0x3D7DB1: Tenue, Œuf rempli de joie qui donne\nplus d’Exp. en combat.\n
-0x3D7E17: Tenue, lentille qui monte le taux de\ncritique du porteur.\n
+0x3D7E17: Tenue, lentille qui monte le taux\nde critique du porteur.\n
 0x3D7E7A: Tenue, film métallique qui booste\nles attaques Acier.\n
 0x3D7EDE: Tenue, le porteur regagne des PV\npeu à peu en combat.\n
 0x3D7F37: Grosse écaille solide.\nTenu par un Dragon.\n
@@ -203,7 +203,7 @@
 0x3D7FD5: Tenue, sable soyeux qui booste les\nattaques Sol.\n
 0x3D8036: Tenue, pierre incassable qui booste\nles attaques Roche.\n
 0x3D8096: Tenue, graine de vie qui booste les\nattaques Plante.\n
-0x3D80FA: Tenue, lunettes louches qui boostent\nles attaques Ténèbres.\n
+0x3D80FA: Tenue, lunettes louches qui\nboostent les attaques Ténèbres.\n
 0x3D8158: Tenue, ceinture qui booste la\nDétermination et les attaques\nCombat.
 0x3D81B3: Tenue, aimant puissant qui booste\nles attaques Électrik.\n
 0x3D8214: Tenue, gemme en goutte d’eau qui\nbooste les attaques Eau.\n
@@ -211,7 +211,7 @@
 0x3D82D6: Tenue, dard empoisonné qui booste\nles attaques Poison.\n
 0x3D833B: Tenue, morceau de glace qui bloque\nla chaleur et booste les attaques\nGlace.
 0x3D8397: Tenue, talisman lugubre qui booste\nles attaques Spectre.\n
-0x3D83EC: Tenue, cuillère psychique qui booste\nles attaques Psy.\n
+0x3D83EC: Tenue, cuillère psychique qui\nbooste les attaques Psy.\n
 0x3D844E: Tenue, carburant qui booste les\nattaques Feu.\n
 0x3D84AC: Tenue, croc aiguisé qui booste les\nattaques Dragon.\n
 0x3D850F: Tenue, foulard luxueux qui booste\nles attaques Normal.\n
@@ -237,13 +237,13 @@
 0x3D8BD4: Billet pour voyager entre Borrius\nOuest et Est.\nDessiné avec un bateau.
 0x3D8C2E: Pass pour entrer aux Concours.\nDessiné avec un ruban.\n
 0x3D8C8A: Arrosoir pratique.\nFait pousser les Baies dans la\nterre meuble.
-0x3D8CE2: Paquet de pièces mécaniques fait par\nla DEVON CORPORATION.\n
+0x3D8CE2: Paquet de pièces mécaniques\nfait par la DEVON CORPORATION.\n
 0x3D8D37: Sac ramassant la cendre volcanique\nautomatiquement en marchant sur la\ncendre épaisse.
 0x3D8D85: Clé de Nouv. Mauville, bâtie sous\nCÉLADOPOLIS.\n
 0x3D8DCB: Vélo pliant pour figures comme\nsauts et roues arrière.
 0x3D8E10: Étui pour des オカキクケ faits au\nMixeur à Baies.\nLibère une オカキクケ en le\nsecouant.
 0x3D8E68: Lettre très importante pour Pierre\nvenant du PRÉSIDENT de Devon.\n
-0x3D8EBD: Ticket pour le ferry vers une île du\nsud. Dessiné avec une île.\n
+0x3D8EBD: Ticket pour le ferry vers une\nîle du sud. Dessiné avec une île.\n
 0x3D8F2A: Orbe rouge qui brille.\nRenfermerait une puissance antique.\n
 0x3D8F7F: Orbe bleue qui brille.\nRenfermerait une puissance antique.\n
 0x3D8FD5: Appareil pour chercher de la vie\nsous l’eau.\nSemble trop complexe à utiliser.
