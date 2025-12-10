@@ -1,5 +1,8 @@
 # Unbound – GBA ROM translation guide
 
+## Todo :
+- Trad 25
+
 ## Quick prerequisites
 
 - Install Python 3 and create a venv (already provided in `.venv`).
