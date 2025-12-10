@@ -82,26 +82,27 @@ def main():
         if has_double_n(f_text) and not has_double_n(o_text):
             anomalies.append(f"Line {idx}: consecutive \\n found in fr, not in origin")
 
-        # Check visible length between control codes
-        parts = re.split(r"(\\[pnl])", f_text)
-        seg = ""
-        for part in parts:
-            if part in ("\\p", "\\n", "\\l"):
-                if seg:
-                    seg_len = visible_length(seg)
-                    if seg_len > 36:
-                        anomalies.append(
-                            f"Line {idx}: segment too long ({seg_len}>36) -> {seg}"
-                        )
-                    seg = ""
-            else:
-                seg += part
-        if seg:
-            seg_len = visible_length(seg)
-            if seg_len > 36:
-                anomalies.append(
-                    f"Line {idx}: segment too long ({seg_len}>36) -> {seg}"
-                )
+        # Check visible length between control codes (skip gibberish/unknown strings)
+        if "{UNKNOWN_STR}" not in f_text:
+            parts = re.split(r"(\\[pnl])", f_text)
+            seg = ""
+            for part in parts:
+                if part in ("\\p", "\\n", "\\l"):
+                    if seg:
+                        seg_len = visible_length(seg)
+                        if seg_len > 36:
+                            anomalies.append(
+                                f"Line {idx}: segment too long ({seg_len}>36) -> {seg}"
+                            )
+                        seg = ""
+                else:
+                    seg += part
+            if seg:
+                seg_len = visible_length(seg)
+                if seg_len > 36:
+                    anomalies.append(
+                        f"Line {idx}: segment too long ({seg_len}>36) -> {seg}"
+                    )
 
     with open(report_path, "w", encoding="utf-8") as out:
         if anomalies:

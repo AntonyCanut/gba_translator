@@ -2,7 +2,7 @@
 0x172482: Je suis peut-être petit, mais je\nne veux pas que tu me ménages !
 0x1724BF: Oh, mince.\nRien n’a marché.
 0x1724DC: J’ai perdu de mon argent de poche…
-0x1724F9: Savais-tu que les Pokémon évoluent ?
+0x1724F9: Savais-tu que les Pokémon\névoluent ?
 0x17251B: Oh !\nJ’ai perdu !
 0x172FC3: Seuls les dresseurs qui ont\nprouvé leur valeur en combat peuvent\lpasser ici.\p...\pTu n’es pas digne.
 0x177364: Qui es-tu ?\nQue fais-tu ici ?
@@ -13,7 +13,7 @@
 0x177460: Un interrupteur secret !\pL’actionner ?
 0x17747B: Qui dirait non ?
 0x177489: Pas tout de suite !
-0x177498: Je ne trouve pas Successeur Maxima !
+0x177498: Je ne trouve pas\nSuccesseur Maxima !
 0x1774CB: Oh, non ! J’ai perdu !
 0x1774E3: Il y a un interrupteur quelque part\nqui ouvre un passage vers Maxima.
 0x1776D7: Ahou !
@@ -81,7 +81,7 @@
 0x1867DA: Plus il fait chaud, plus je deviens\nfort !
 0x18680C: Mes pouvoirs psy prédisent ma\nvictoire !
 0x186841: Je… je me suis trompé ?
-0x18686F: Je dois affiner encore mes sens psy.\nLa prochaine fois, je ne me\ptromperai pas.
+0x18686F: Je dois affiner mes sens psy\nencore.\pLa prochaine fois, je ne me\ntromperai pas.
 0x1868B6: Je ne voudrais pas tomber dans\nl’océan, ici.
 0x186936: L’océan au large est vraiment\nprofond !
 0x186968: Je vais continuer à pêcher.
@@ -124,7 +124,7 @@
 0x187FFE: J’aurais dû muscler mes Pokémon,\npas moi !
 0x18802E: Pourquoi montes-tu un Pokémon ?\nTu ne sais pas nager ?
 0x18805C: Aïe !\nTorpillé !
-0x18806D: Monter un Pokémon a l’air trop fun !
+0x18806D: Monter un Pokémon a l’air\ntrop fun !
 0x1880F8: Mon copain m’a offert de\ngrosses perles.
 0x188119: Oh, non !\nMes perles étaient dedans !
 0x188139: Mes perles grandiront-elles dans\nCrustabri ?
@@ -140,12 +140,12 @@
 0x18909E: Cet air est magnifique !
 0x1890C0: Les Dresseurs du coin viennent ici\ns’entraîner.
 0x1890E6: Tu es correct.
-0x1890F5: Tous les Pokémon ont des faiblesses.\nMême les plus forts.\pC’est pour ça qu’il vaut mieux\nélever des Pokémon de types variés.
+0x1890F5: Tous les Pokémon ont des\nfaiblesses.\nMême les plus forts.\pC’est pour ça qu’il vaut mieux\nélever des Pokémon de types variés.
 0x189165: J’adore rester ici à regarder\nl’océan.
 0x1891A6: Je ne suis pas fâchée !
 0x1891B3: C’est beau, hein ?
 0x189247: Salut !\nTu vas perdre !
-0x189261: Ma condition n’est pas la meilleure…
+0x189261: Ma condition n’est pas la\nmeilleure…
 0x189281: J’aimerais être aussi bon\nque toi.
 0x1892A9: Je le sentais…\nJe devais te combattre !
 0x1892D9: Je savais que je perdrais aussi !
@@ -222,7 +222,7 @@
 0x194045: Salut, {PLAYER} !\pÇa mord bien ?
 0x19406F: Oh, non !\pJ’avais un beau cadeau pour toi,\nmais tu n’as pas de place !
 0x194234: L’envie de combattre quelqu’un\nque tu as déjà affronté…\pTu as déjà ressenti ça ?\nJe suis sûr que oui.\pJe voulais aussi me battre encore\net encore contre certains.\pAlors j’offre ces trucs.\nTiens, prends-en un !
-0x19430F: Utilise cet appareil et tu trouveras\ndes Dresseurs voulant une revanche.\pIl faut recharger sa batterie pour\nl’utiliser, par contre.
+0x19430F: Utilise cet appareil et tu\ntrouveras des Dresseurs voulant une\nrevanche.\pIl faut recharger sa batterie pour\nl’utiliser, par contre.
 0x194381: Comment utiliser le Cherche VS ?\nRien de plus simple.\pFais bip-bip-bip et les Dresseurs\nautour de toi le verront.\pSi un Dresseur veut une revanche,\nil te le dira aussitôt.\pRecharge sa batterie et utilise-le\nquand tu es sur une route.
 0x1949CB: Salut !\nTu as un {STR_VAR_1} ?\pTu veux l’échanger contre mon\n{STR_VAR_2} ?
 0x1949FD: Dommage.
@@ -291,7 +291,7 @@
 0x199337: Oh…\nTellement décevant…
 0x199354: Salut, {PLAYER} !\pÇa mord bien ?
 0x19937E: Oh, non !\pJ’avais un cadeau pour toi, mais tu\nn’as pas de place !
-0x1993B9: Euh… Euh, oui, je suis l’Effaceur de\nCapacités.\pJe peux faire oublier des\ncapacités à des Pokémon.\pVeux-tu que je fasse ça ?
+0x1993B9: Euh, oui, je suis l’Effaceur de\nCapacités.\pJe peux faire oublier des\ncapacités à des Pokémon.\pVeux-tu que je fasse ça ?
 0x199421: Quel Pokémon doit oublier une\ncapacité ?
 0x199445: Quelle capacité doit être oubliée ?
 0x199465: {STR_VAR_1} ne connaît qu’une seule\ncapacité…
@@ -304,7 +304,7 @@
 0x19A79F: 9Ils vendent bien des Attaque + ?\pJ’aime ça, ça hausse l’Attaque en\ncombat.
 0x19A7F1: Avoir des objets en rab ne fait\njamais de mal. On ne sait jamais ce\nqui peut arriver.
 0x19B86A: Presque arrivé !
-0x19B8B9: Je ne suis pas trop jeune pour Mel !\nLaisse-moi tranquille !
+0x19B8B9: Je suis pas trop jeune pour Mel !\nLaisse-moi tranquille !
 0x19BA45: Mauvais chemin !
 0x19BAB4: Mel a besoin qu’on peigne sa\nbeauté !
 0x19BB49: Impasse !
@@ -404,7 +404,7 @@
 0x1A5F9B: Tes Pokémon ont retrouvé toute leur\nforme.\pOn compte sur toi !
 0x1A5FDF: {PLAYER} !\nBienvenue à la maison.\pOn dirait que tu as vécu pas mal\nd’aventures.\pTu devrais peut-être te reposer.\n
 0x1A6046: Ah, parfait ! Toi et tes Pokémon\navez bien meilleure mine.\pSi les PV de tes Pokémon sont bas,\nsoigne-les dans un\p{COLOR}ÉCentre Pokémon{COLOR}Ç !\nLe plus proche d’ici est à\p{COLOR}ÉBellin Town{COLOR}Ç.\nOu achète des\p{COLOR}ÉPotions{COLOR}Ç au\n{COLOR}ÉPoké Mart{COLOR}Ç !\pC’est toujours bien de se préparer\nau pire.\pRends-moi fier, chéri !\pPrends soin de toi !
-0x1A6196: 9{PLAYER} n’a plus de Pokémon utilisables !\n{PLAYER} panique et perd\p¥{STR_VAR_1}…\p… … … …\p{PLAYER} s’évanouit !
+0x1A6196: 9{PLAYER} n’a plus de Pokémon\nutilisables !\n{PLAYER} panique et perd\p¥{STR_VAR_1}…\p… … … …\p{PLAYER} s’évanouit !
 0x1A61E5: {PLAYER} n’a plus de Pokémon\nutilisables !\p{PLAYER} s’évanouit !
 0x1A6211: Salut !\nJe peux t’aider ?
 0x1A622C: Il y a un questionnaire.\nVeux-tu le remplir ?
@@ -440,8 +440,8 @@
 0x1B1E24: Choisis le type d’impression.
 0x1B1E42: Un grand sourire pour la photo !\nTrois… Deux… Un…\pFlash !
 0x1B1E7D: Ton impression Pokémon est prête !\nVérifie ta Carte de Dresseur.
-0x1BC310: 9Bienvenue au Club Link Pokémon.\nQuel service souhaites-tu utiliser ?\p\n
-0x1BC35E: Quel service souhaites-tu utiliser ?\n
+0x1BC310: 9Bienvenue au Club Link Pokémon.\nQuel service veux-tu utiliser ?\p\n
+0x1BC35E: Quel service veux-tu utiliser ?\n
 0x1BC388: Échange des Pokémon avec un autre\njoueur via un câble Game Link GBA.
 0x1BC3C7: Tu peux combattre un autre Dresseur\nvia un câble Game Link GBA.
 0x1BC409: Pour un Combat Duo, il faut avoir\nau moins deux Pokémon.
@@ -494,7 +494,7 @@
 0x1BD582: Décidez lequel de vous quatre sera\nChef de Groupe.\pLes autres doivent ensuite choisir\n« Rejoindre Groupe ».
 0x1BD5F1: Décidez qui sera Chef de Groupe.\nLes autres doivent ensuite choisir\p« Rejoindre Groupe ».\n
 0x1BD65B: Bienvenue dans la Salle Union du\nClub Sans Fil Pokémon.\pIci, tu peux interagir directement\navec d’autres Dresseurs, parfois\linconnus.\pVeux-tu entrer dans la salle ?
-0x1BD706: Les Dresseurs de la Salle Union\nsont ceux autour de toi déjà\nentrés.\lIci, tu peux faire plein de\nchoses, comme échanger des\nsalutations.\pTu peux inscrire deux Pokémon\njusqu’au N. 30 pour un combat\nun contre un.\pTu peux participer à un chat à\ndeux à cinq.\pOu inscrire un Pokémon à\nl’échange.\pVeux-tu entrer dans la salle ?
+0x1BD706: Les Dresseurs de la Salle Union\nsont ceux autour de toi déjà\nentrés.\l\pTu peux y faire plein de\nchoses, comme échanger des\nsalutations.\pTu peux inscrire deux Pokémon\njusqu’au N. 30 pour un combat\nun contre un.\pTu peux participer à un chat à\ndeux à cinq.\pOu inscrire un Pokémon à\nl’échange.\pVeux-tu entrer dans la salle ?
 0x1BD86A: Profite bien de la Salle Union.\n
 0x1BD898: Bonjour !\nJe m’appelle Teala.\pC’est ta première fois ici.\nJe vais te montrer comment marche\ple Système de Communication Sans\nFil.\pD’abord, je dois te montrer cet\nétage de notre Centre Pokémon.\pPar ici, s’il te plaît.
 0x1BD966: À l’étage du haut, il y a deux\nsalles.\pD’abord, la salle de gauche.\nC’est la Salle Union.\pTu peux te lier avec des\nDresseurs autour de toi qui sont\ldans la Salle Union.\pAvec eux, tu peux discuter,\ncombattre et échanger.\pEnsuite, la salle de droite est le\nCoin Direct.\pTu peux échanger ou combattre des\nPokémon avec tes amis ici.\pSi l’Adaptateur Sans Fil n’est pas\nconnecté, tu peux toujours te lier\lavec un câble Game Link GBA.\pDans ce cas, tu dois aller au Coin\nDirect.\pProfite bien du Système de\nCommunication Sans Fil.
@@ -514,7 +514,7 @@
 0x1BE4A9: Une lumière descend d’en haut.\nUn Pokémon peut peut-être remonter.
 0x1BE4EF: Une lumière descend d’en haut.\nVeux-tu utiliser Plongée ?
 0x1BE52F: Il y a un obstacle au-dessus.\nPlongée ne peut pas être utilisée.
-0x1BE564: Ô ヘqéËÌÂÁOn dirait qu'il n'y a rien ici…
+0x1BE564: Ô ヘqéËÌÂÁ\nOn dirait qu'il n'y a rien ici…
 0x1BF017: Dis-moi quelque chose sur toi.\nQuel est ton profil ?
 0x1BF053: Un profil s’écrit avec quatre mots\nou phrases.\nIl y a plein de mots à choisir pour\pfaire ton profil.\nLes mots et phrases sont rangés en\pplusieurs groupes pratiques.\nD’abord, choisis un groupe, puis un\pmot ou une phrase.\n…C’est plus simple que ça en a\pl’air.\nPourquoi ne pas essayer ?
 0x1BF166: Quel est ton profil ?
@@ -536,7 +536,7 @@
 0x1BF755: Prends-en bien soin.
 0x1BF789: Ah, c’est toi ! Tes {STR_VAR_1} et\n{STR_VAR_2} vont très bien.
 0x1BF7B6: Je vais vraiment le garder.\nTu le veux, non ?
-0x1BF7E4: Je suis la Mémé Pension. On peut\nélever des Pokémon pour toi.\pVeux-tu qu’on en élève un ?
+0x1BF7E4: Je suis la Mémé Pension.\pOn peut élever des Pokémon pour toi.\pVeux-tu qu’on en élève un ?
 0x1BF839: Quel Pokémon doit-on élever pour\ntoi ?
 0x1BF860: D’accord, on va élever ton\n{STR_VAR_1} un moment.\pReviens le récupérer plus tard.
 0x1BF89F: On peut élever deux de tes Pokémon.\pVeux-tu qu’on en élève un autre\npour toi ?
@@ -592,7 +592,7 @@
 0x1C55EA: Il y a déjà une sauvegarde.\nÉcraser quand même ?
 0x1C5625: SAUVEGARDE…\nNE PAS ÉTEINDRE.
 0x1C5647: {PLAYER} a sauvegardé la partie.
-0x1C566A: AVERTISSEMENT ! Une autre partie est\nsauvegardée.\nSi tu sauvegardes maintenant, cette\paventure, ses objets et Pokémon\nseront perdus.\lEs-tu sûr de vouloir sauvegarder\pmaintenant et écraser l’autre\nfichier ?
+0x1C566A: AVERTISSEMENT !\pUne autre partie est sauvegardée.\pSi tu sauvegardes maintenant,\ncette aventure, ses objets et\lPokémon seront perdus.\pEs-tu sûr de vouloir sauvegarder\nmaintenant et écraser l’autre\nfichier ?
 0x1C574F: Nouveau Nom
 0x1C5758: VERT
 0x1C5767: Hoop
@@ -788,7 +788,7 @@
 0x26D5BF: Merci d’avoir combattu avec moi !
 0x26D5DC: Tu veux passer par la Route\nDéfi ?\pAlors il faudra passer par moi\nd’abord !
 0x26D733: Oh, d’accord. Si tu changes d’avis,\ntu es le bienvenu quand tu veux !
-0x270FA1: J’ai essayé de traverser le Grand Désert à l’est de la ville, mais la tempête de sable était trop\nforte.\lLe sable me fouettait le visage et\pje ne voyais rien.\nSans protection, impossible d’aller\pquelque part.\nSi seulement je pouvais trouver\pquelque chose…
+0x270FA1: J’ai essayé de traverser le\nGrand Désert à l’est de la ville,\lmais la tempête de sable était\ntrop forte.\pLe sable me fouettait le visage\net je ne voyais rien.\pSans protection, impossible d’aller\nquelque part.\pSi seulement je pouvais trouver\nquelque chose…
 0x271C3E: Des pics toxik entourent toute ton\néquipe !
 0x27795D: Des rocs pointus flottent autour de\nl’équipe adverse !
 0x277999: Une toile gluante a été posée\nautour de l’équipe adverse !
@@ -803,7 +803,7 @@
 0x3D50CC: Une Ball un peu spéciale qui\nmarche mieux sur les Pokémon des\nfonds marins.
 0x3D511D: Une Ball un peu spéciale qui\nmarche mieux sur les Pokémon\nfaibles.
 0x3D5165: Une Ball un peu spéciale qui\nmarche mieux sur un Pokémon déjà\ncapturé.
-0x3D51B4: Une Ball un peu spéciale qui devient\nmeilleure plus le combat dure.\n
+0x3D51B4: Une Ball un peu spéciale qui\ndevient meilleure plus le combat\nse prolonge.\n
 0x3D5216: Une Ball confortable qui rend vite\nun Pokémon sauvage amical.\n
 0x3D5263: Une Ball rare faite pour\ncommémorer un événement.\n
 0x3D52B2: Médicament en spray.\nRend 20 PV à un Pokémon.\n
@@ -840,7 +840,7 @@
 0x3D5B06: Jus 100 % pur.\nRend 20 PV à un Pokémon.\n
 0x3D5B49: Ranime tous les Pokémon K.O. en\nrendant tous leurs PV.
 0x3D5B7A: Sel pur obtenu sous l’eau.\nExtrêmement salé.
-0x3D5BC5: Un joli coquillage trouvé sous l’eau.\nBlanc et bleu.
+0x3D5BC5: Un joli coquillage\ntrouvé sous l’eau.\nBlanc et bleu.
 0x3D5C1A: Petit éclat rouge.\nViendrait d’un outil ancien.\n
 0x3D5C66: Petit éclat bleu.\nViendrait d’un outil ancien.\n
 0x3D5CB3: Petit éclat jaune.\nViendrait d’un outil ancien.\n
@@ -945,7 +945,7 @@
 0x3D7D02: Tenue, empêche le Pokémon\nd’évoluer.\n
 0x3D7D53: Tenue, peut encaisser en laissant\n1 PV.\n
 0x3D7DB1: Tenue, Œuf rempli de joie qui donne\nplus d’Exp. en combat.\n
-0x3D7E17: Tenue, lentille qui monte le taux de\ncritique du porteur.\n
+0x3D7E17: Tenue, lentille qui monte le taux\nde critique du porteur.\n
 0x3D7E7A: Tenue, film métallique qui booste\nles attaques Acier.\n
 0x3D7EDE: Tenue, le porteur regagne des PV\npeu à peu en combat.\n
 0x3D7F37: Grosse écaille solide.\nTenu par un Dragon.\n
@@ -953,7 +953,7 @@
 0x3D7FD5: Tenue, sable soyeux qui booste les\nattaques Sol.\n
 0x3D8036: Tenue, pierre incassable qui booste\nles attaques Roche.\n
 0x3D8096: Tenue, graine de vie qui booste les\nattaques Plante.\n
-0x3D80FA: Tenue, lunettes louches qui boostent\nles attaques Ténèbres.\n
+0x3D80FA: Tenue, lunettes louches qui\nboostent les attaques Ténèbres.\n
 0x3D8158: Tenue, ceinture qui booste la\nDétermination et les attaques\nCombat.
 0x3D81B3: Tenue, aimant puissant qui booste\nles attaques Électrik.\n
 0x3D8214: Tenue, gemme en goutte d’eau qui\nbooste les attaques Eau.\n
@@ -961,7 +961,7 @@
 0x3D82D6: Tenue, dard empoisonné qui booste\nles attaques Poison.\n
 0x3D833B: Tenue, morceau de glace qui bloque\nla chaleur et booste les attaques\nGlace.
 0x3D8397: Tenue, talisman lugubre qui booste\nles attaques Spectre.\n
-0x3D83EC: Tenue, cuillère psychique qui booste\nles attaques Psy.\n
+0x3D83EC: Tenue, cuillère psychique qui\nbooste les attaques Psy.\n
 0x3D844E: Tenue, carburant qui booste les\nattaques Feu.\n
 0x3D84AC: Tenue, croc aiguisé qui booste les\nattaques Dragon.\n
 0x3D850F: Tenue, foulard luxueux qui booste\nles attaques Normal.\n
@@ -987,13 +987,13 @@
 0x3D8BD4: Billet pour voyager entre Borrius\nOuest et Est.\nDessiné avec un bateau.
 0x3D8C2E: Pass pour entrer aux Concours.\nDessiné avec un ruban.\n
 0x3D8C8A: Arrosoir pratique.\nFait pousser les Baies dans la\nterre meuble.
-0x3D8CE2: Paquet de pièces mécaniques fait par\nla DEVON CORPORATION.\n
+0x3D8CE2: Paquet de pièces mécaniques\nfait par la DEVON CORPORATION.\n
 0x3D8D37: Sac ramassant la cendre volcanique\nautomatiquement en marchant sur la\ncendre épaisse.
 0x3D8D85: Clé de Nouv. Mauville, bâtie sous\nCÉLADOPOLIS.\n
 0x3D8DCB: Vélo pliant pour figures comme\nsauts et roues arrière.
 0x3D8E10: Étui pour des オカキクケ faits au\nMixeur à Baies.\nLibère une オカキクケ en le\nsecouant.
 0x3D8E68: Lettre très importante pour Pierre\nvenant du PRÉSIDENT de Devon.\n
-0x3D8EBD: Ticket pour le ferry vers une île du\nsud. Dessiné avec une île.\n
+0x3D8EBD: Ticket pour le ferry vers une\nîle du sud. Dessiné avec une île.\n
 0x3D8F2A: Orbe rouge qui brille.\nRenfermerait une puissance antique.\n
 0x3D8F7F: Orbe bleue qui brille.\nRenfermerait une puissance antique.\n
 0x3D8FD5: Appareil pour chercher de la vie\nsous l’eau.\nSemble trop complexe à utiliser.
@@ -15251,30 +15251,30 @@
 0x1F5AE13: Route 1
 0x1F5AE1C: {COLOR}ÁUn gros tas de neige bloque\nla route.\pMieux vaut passer ailleurs pour\nl'instant.
 0x1F5AE69: Navré, l'ami.\pUne avalanche a fait des amas de\nneige sur la route.\pSi tu veux aller à Bellinville,\nil faudra prendre l'ancienne route\ldu col pour l'instant.\pViens, je vais te montrer\nle chemin.
-0x1F5AF31: Un gars louche est passé\net a fondu les tas de neige qui\nbloquaient la route.\pJ'étais content et tout, mais\nil avait l'air suspect.\pSi ça t'intéresse, je l'ai vu filer\n{COLOR}Éau nord des Hauteurs Gelées{COLOR}Ë.\pJe me demande ce qu'il fait là-haut?
+0x1F5AF31: Un gars louche est passé\net a fondu les tas de neige\lqui bloquaient la route.\pJ'étais content et tout, mais\nil avait l'air suspect.\pSi ça t'intéresse, je l'ai vu filer\n{COLOR}Éau nord des Hauteurs Gelées{COLOR}Ë.\pJe me demande ce qu'il fait là-haut?
 0x1F5B01E: Ah, tu dois être {PLAYER}.\pLe Prof. Log m'a appelé pour me\ndire de te guider si tu te perds.\pBellinville est juste par là-bas.
-0x1F5B096: Si tu veux que je te montre comment\ncapturer un Pokémon, prouve que tu\len es capable en livrant le\n{COLOR}Écolis du Prof. Log{COLOR}Ë.
-0x1F5B112: Ah, ton Badge sur ta Carte Dresseur\nmontre que tu es devenu un Dresseur\nplutôt doué.\pTu as largement dépassé le rôle de\n{STR_VAR_1} à la solde du Prof. Log.\pMais pour moi, on n'est jamais trop\naguerri pour regarder un expert\ncapturer un Pokémon !\pAlors, qu'en dis-tu ?\pJe peux te montrer deux ou trois\nchoses sur la capture de Pokémon.
-0x1F5B248: J'ai entendu dire par le Prof. Log\nque tu as bien livré son colis.\pEt j'ai entendu qu'il t'envoie faire\nd'autres courses comme un Dresseur\nà part entière !\pTu sais, j'étais Dresseur moi aussi\nquand j'étais jeune.\pJe peux te montrer deux ou trois\nchoses sur la capture de Pokémon.
+0x1F5B096: Si tu veux que je te montre comment\ncapturer un Pokémon, prouve que tu\les capable en livrant le\l{COLOR}Écolis du Prof. Log{COLOR}Ë.
+0x1F5B112: Ah, ton Badge sur ta Carte Dresseur\nmontre que tu es devenu un Dresseur\lplutôt doué.\pTu as largement dépassé le rôle de\n{STR_VAR_1} à la solde du Prof. Log.\pMais pour moi, on n'est jamais trop\naguerri pour regarder un expert\lcapturer un Pokémon !\pAlors, qu'en dis-tu ?\pJe peux te montrer deux ou trois\nchoses sur la capture de Pokémon.
+0x1F5B248: J'ai entendu dire par le Prof. Log\nque tu as bien livré son colis.\pEt j'ai entendu qu'il t'envoie faire\nd'autres courses comme un Dresseur\là part entière !\pTu sais, j'étais Dresseur moi aussi\nquand j'étais jeune.\pJe peux te montrer deux ou trois\nchoses sur la capture de Pokémon.
 0x1F5B373: Très bien !\nC'est parti !
 0x1F5B389: Ouf…\pCelle-là était vraiment\nlimite…
-0x1F5B3B3: Comme tu l'as vu, j'ai capturé ce\nPokémon en lançant une {COLOR}ÉPoké Ball{COLOR}Ë.\pMais ça ne marche pas toujours.\pSouvent, il faut affaiblir un\nPokémon avant de pouvoir\nle capturer.
-0x1F5B476: Pour me remercier de m'avoir fait\ndégourdir aujourd'hui, prends cette\nPoké Ball que j'ai eue dans\nma jeunesse.
+0x1F5B3B3: Comme tu l'as vu, j'ai capturé ce\nPokémon en lançant\lune {COLOR}ÉPoké Ball{COLOR}Ë.\pMais ça ne marche pas toujours.\pSouvent, il faut affaiblir un\nPokémon avant de pouvoir\lle capturer.
+0x1F5B476: Pour me remercier de m'avoir fait\ndégourdir aujourd'hui, prends cette\lPoké Ball que j'ai eue dans\lma jeunesse.
 0x1F5B4F0: Si tu veux revoir mes talents,\npasse me voir.
 0x1F5B530: Si tu veux me voir à l'œuvre,\npasse me voir.
 0x1F5B571: fille
 0x1F5B581: Houah, Dresseur !\pJ'entraîne corps et âme en fixant\ncet arbre avec intensité !\pPrends ça pour t'entraîner aussi !
-0x1F5B5F8: Houah, Dresseur !\pJe peux {COLOR}Éaméliorer{COLOR}Ë le {COLOR}ÉBrac. Macho{COLOR}Ë\npour rendre l'entraînement plus\nefficace !\pPour l'instant, il n'est qu'un\nhumble {LV} {STR_VAR_3}, mais je peux le\npasser {COLOR}É{LV} {STR_VAR_2}{COLOR}Ë contre\n{COLOR}É{STR_VAR_2} {STR_VAR_1}s{COLOR}Ë !
+0x1F5B5F8: Houah, Dresseur !\pJe peux {COLOR}Éaméliorer{COLOR}Ë le {COLOR}ÉBrac. Macho{COLOR}Ë\npour rendre l'entraînement plus\nefficace !\pPour l'instant, il n'est qu'un\nhumble {LV} {STR_VAR_3}, mais je peux le\npasser {COLOR}É{LV} {STR_VAR_2}{COLOR}Ë contre\l{COLOR}É{STR_VAR_2} {STR_VAR_1}s{COLOR}Ë !
 0x1F5B6BE: Tant pis, contente-toi d'un produit\ninférieur !
 0x1F5B6E4: Tu n'as pas assez de {STR_VAR_1}s pour\nque j'améliore ton Brac. Macho !
 0x1F5B723: {COLOR}ÁLe niveau du Brac. Macho est passé\nà {LV} {STR_VAR_2} !\pLes Pokémon gagneront désormais\n{COLOR}É{STR_VAR_2}×{COLOR}Á le montant de Points d'Effort\nen le portant.
-0x1F5B79F: Ton Brac. Macho est au maximum !\pDans cet état, tu recevras\n{COLOR}É{STR_VAR_1}×{COLOR}Ë de Points d'Effort en\nt'entraînant avec !
+0x1F5B79F: Ton Brac. Macho est au maximum !\pDans cet état, tu recevras\n{COLOR}É{STR_VAR_1}×{COLOR}Ë de Points d'Effort en\lt'entraînant avec !
 0x1F5B832: La mer…\pFurieuse un instant, calme comme\nla nature d'un Pokémon l'instant\nd'après…
 0x1F5B879: Combattons.\pMontre-moi que tu peux être aussi\nfurieux que la mer.
 0x1F5B8B3: Tes Pokémon se sont battus aussi\nfurieusement que la mer.
 0x1F5B8E6: Tu as bien fait.\nPrends cet objet.
 0x1F5B90A: Cette {COLOR}ÉCharminite{COLOR}Ë sert à faire Méga-\nÉvoluer le Pokémon {COLOR}ÉCharmina{COLOR}Ë.\pAvec le bon Dresseur, lui aussi\npeut se battre aussi furieusement\nque la mer.
-0x1F5B996: Si tu bats tous les Dresseurs ici\net sur la Voie d'Eau Auburn, je veux\nvoir ta fureur, moi aussi.
+0x1F5B996: Si tu bats tous les Dresseurs ici\net sur la Voie d'Eau Auburn,\lje veux voir ta fureur, moi aussi.
 0x1F5B9FA: Halte-là !\pJe veux peindre cet instant\nparfait.
 0x1F5BA31: Un gamin qui file sous\nla pluie…
 0x1F5BA58: Ce n'est pas une bonne idée de\npeindre sous la pluie.\pTout ce que je peins est\nlavé…
@@ -15283,28 +15283,28 @@
 0x1F5BB0E: Seuls les ringards vont vraiment\nen cours…
 0x1F5BB3A: Cette grotte, là-bas, tu imagines\nce qu'il y a dedans ?
 0x1F5BB6E: Je parie que de sacrés Pokémon\ny vivent !
-0x1F5BB95: On dit que cette grotte s'appelle\nla {COLOR}ÉGrotte Cyclopéenne{COLOR}Ë.\pOn dit qu'elle rappelle les grottes\ndes lacs de Sinnoh.
+0x1F5BB95: On dit que cette grotte s'appelle\nla {COLOR}ÉGrotte de l'Être{COLOR}Ë.\pOn dit qu'elle rappelle les grottes\ndes lacs de Sinnoh.
 0x1F5BC20: Il pleut tout le temps ici !\nPourquoi il pleut tout le temps ?
 0x1F5BC59: Mais… mais… la pluie était censée\nme donner l'avantage !
 0x1F5BC94: Ailleurs, à la Ville de Fallshore,\nil ne pleut que par moments.\pAlors pourquoi il pleut tout le\ntemps sur la Route 10 ?
 0x1F5BCFB:  Route 11
 0x1F5BD05: Grotte Falaise
-0x1F5BD10: Au-delà des rochers, un océan.\pQuelque part dans cet océan\nse trouve la paisible région\nd'Alola.\pLà-bas, ils ont pour tradition que\nchacune de leurs îles soit\nprotégée par une divinité\ngardienne.\pTu t'es déjà demandé ce que ce\nserait si chacune des îles de\nBorrius en avait aussi une ?\pPeut-être pas, mais moi, oui.
-0x1F5BE85: Ce Pokémon dans ton équipe…\nIl ressemble aux divinités\ngardiennes d'Alola…
-0x1F5BEE2: D'Alola, on dit que leurs divinités\ngardiennes sont toujours là-bas,\ndonc le tien ne vient pas de ce\nmonde.\pQuoi qu'il en soit, cet objet lui\nrevient, pas à moi.
-0x1F5BF9E: Le {COLOR}ÉTapunium Z{COLOR}Ç peut renforcer\n{COLOR}ÉCourroux Naturel{COLOR}Ç de toutes les\ndivinités gardiennes d'Alola en\nune Capacité Z unique et plus\npuissante.
+0x1F5BD10: Au-delà des rochers, un océan.\pQuelque part dans cet océan\nse trouve la paisible région\ld'Alola.\pLà-bas, ils ont pour tradition que\nchacune de leurs îles soit\nprotégée par une divinité\lgardienne.\pTu t'es déjà demandé ce que ce\nserait si chacune des îles de\lBorrius en avait aussi une ?\pPeut-être pas, mais moi, oui.
+0x1F5BE85: Ce Pokémon dans ton équipe…\pIl ressemble aux divinités\ngardiennes d'Alola…
+0x1F5BEE2: D'Alola, on dit que leurs divinités\lgardiennes sont toujours là-bas,\ldonc le tien ne vient pas de ce\nmonde.\pQuoi qu'il en soit, cet objet lui\nrevient, pas à moi.
+0x1F5BF9E: Le {COLOR}ÉTapunium Z{COLOR}Ç peut renforcer\n{COLOR}ÉCourroux Naturel{COLOR}Ç de toutes les\ldivinités gardiennes d'Alola en\nune Capacité Z unique et plus\lpuissante.
 0x1F5C026: Sur cette paroi, je vois un autre\nDresseur, avide de réussir.\pLe meilleur, je dis, le meilleur\nde tous.\pAlors je vais soumettre ce Dresseur\nà l'épreuve !
 0x1F5C0B8: Une glorieuse défaite pour moi,\nune glorieuse défaite, tu vois.
-0x1F5C0ED: Quand ce Dresseur passa l'épreuve,\nje lui dis qu'il était vraiment\nle meilleur.
+0x1F5C0ED: Quand ce Dresseur passa l'épreuve,\nje lui dis qu'il était vraiment\lle meilleur.
 0x1F5C13C: Une {COLOR}ÉAlakazamite{COLOR}Ë, pleine de pouvoir.\pPour {COLOR}ÉAlakazam{COLOR}Ë, elle brillera\nde mille feux.
-0x1F5C18B: Sur cette paroi, je vois un autre\nDresseur, avide de réussir.\pLe meilleur, je dis, le meilleur\nde tous.\pMais seuls ceux qui ont battu tous\nles Dresseurs de la Route 11\npeuvent passer l'épreuve.
+0x1F5C18B: Sur cette paroi, je vois un autre\nDresseur, avide de réussir.\pLe meilleur, je dis, le meilleur\lde tous.\pMais seuls ceux qui ont battu tous\nles Dresseurs de la Route 11\npeuvent passer l'épreuve.
 0x1F5C248: Nous combattons comme un seul !\nNous et la nature !
 0x1F5C269: Mère Nature, où avons-nous\ndérapé ?
 0x1F5C292: Je travaille à protéger\nl'environnement.\nEn retour, la nature me protège !
 0x1F5C2D2: Nous combattons comme un seul !\nNous et la nature !\pMais seulement contre les Dresseurs\ncapables de nous affronter tous\nles deux à la fois !
 0x1F5C32C: Ensemble, nous sommes forts !\nEnsemble avec la nature !
 0x1F5C359: Mais ensemble… on est forts… ?
-0x1F5C376: Ici, la montagne cache un réseau\nde grottes.\pEnsemble, nous protégeons les\nPokémon des grottes de la falaise.
+0x1F5C376: Ici, la montagne cache un réseau\lde grottes.\pEnsemble, nous protégeons les\nPokémon des grottes de la falaise.
 0x1F5C3F0: Ensemble, nous sommes forts !\nEnsemble avec la nature !\pMais seulement contre les Dresseurs\ncapables de nous affronter tous\nles deux à la fois !
 0x1F5C456: Des Pokémon de mer ont envahi cette\nétendue d'eau !
 0x1F5C48D: Comment ils sont arrivés ici ?
@@ -15315,7 +15315,7 @@
 0x1F5C54B: J'adore pêcher, ne te méprends pas.\pMais ce serait mieux si j'avais\naussi plus de travail.
 0x1F5C599: Ce n'est pas facile…
 0x1F5C5A8: Ça va.\nPerdre ne me dérange plus.
-0x1F5C5D7: Voyons qui est le meilleur.\nL'homme qui pêche tous les jours,\nou cette personne de passage.
+0x1F5C5D7: Voyons qui est le meilleur.\pL'homme qui pêche tous les jours,\lou cette personne de passage.
 0x1F5C654: Ça devrait être clair pour toi\nqui est le meilleur Dresseur.
 0x1F5C68C: J'imagine qu'on devient bon à ce\nqu'on aime.\pTu m'as battu aux Pokémon, mais\nen pêche, tu ne me surpasses pas.
 0x1F5C6F8: Il fait un peu frisquet ici.
@@ -15330,7 +15330,7 @@
 0x1F5C8C9: Je t'ai vu venir à un kilomètre !\nMes yeux sont comme ceux d'un\nFlambusard !
 0x1F5C90D: Peu importe la distance, j'ai quand\nmême perdu !
 0x1F5C933: Flambusard a un Talent caché appelé\n{COLOR}ÉAiles Bourrasque{COLOR}Ë.\pIl peut lancer ses capacités\nde type Vol plus vite !
-0x1F5C9A1: Savais-tu que ton {STR_VAR_1} peut\nbooster ses capacités en\n{COLOR}ÉCapacités Z{COLOR}Ë ?\pCe sont des capacités super\npuissantes utilisables une seule\nfois par combat !\pÉquipe ton Pokémon d'un\n{COLOR}ÉCristal Z{COLOR}Ë correspondant à l'un de\nses types de capacités, puis\nappuie sur {START_BUTTON} en sélectionnant\nla capacité pour déclencher une\nattaque dévastatrice !
+0x1F5C9A1: Savais-tu que ton {STR_VAR_1} peut\nbooster ses capacités en\l{COLOR}ÉCapacités Z{COLOR}Ë ?\pCe sont des capacités super\npuissantes utilisables une seule\nfois par combat !\pÉquipe ton Pokémon d'un\n{COLOR}ÉCristal Z{COLOR}Ë correspondant à l'un de\lses types de capacités, puis\lappuie sur {START_BUTTON} en sélectionnant\lla capacité pour déclencher une\nattaque dévastatrice !
 0x1F5CAC4: Il y a un Pokémon dans le sac !\nLe prendre ?
 0x1F5CAEB: {PLAYER} a trouvé un {STR_VAR_1} !\nIl a une nature {COLOR}É{STR_VAR_2}{COLOR}Á.
 0x1F5CB14: Tu n'as pas assez de place pour ce\nPokémon.
@@ -15340,10 +15340,10 @@
 0x1F5CBCB: J'adore exhiber mes Pokémon !
 0x1F5CBEA: Quand je siffle, j'entends un écho.
 0x1F5CC0E: Aïe !\nC'est tragique !
-0x1F5CC21: Ce col de montagne a une structure\nvraiment unique.\pTu ne verras aucune autre route à\nBorrius avec des escaliers creusés\ndans le flanc d'une montagne comme\ncelle-ci !
+0x1F5CC21: Ce col de montagne a une structure\nvraiment unique.\pTu ne verras aucune autre route à\nBorrius avec des escaliers creusés\ldans le flanc d'une montagne comme\lcelle-ci !
 0x1F5CCBF: Tu sais où tu vas ?
 0x1F5CCDF: Tu dois le savoir.
-0x1F5CCEE: Pour aller de Tarmiganville à la\nVille de Dehara, tu dois d'abord\ndescendre la montagne.
+0x1F5CCEE: Pour aller de Tarmiganville à la\nVille de Dehara, tu dois d'abord\ldescendre la montagne.
 0x1F5CD40: Hmm…\pÇa doit être le chemin pour la Ville\nde Dehara !\pJ'en suis sûr !
 0x1F5CD7A: Je ne peux pas être perdue…
 0x1F5CD8B: Une belle Dresseuse ne peut pas se\nperdre !\pC'est impossible !
@@ -15360,13 +15360,13 @@
 0x1F5CF54: Le bord de la plage n'est pas si\npeu profond.
 0x1F5CF7C: De la terre, tu ne vois pas, mais\nl'eau ici est très profonde !
 0x1F5CFE4: {STR_VAR_1} a pris de la hauteur et\ndisparu de vue.
-0x1F5D004: J'essaie de briser ce rocher qui\nréapparaît sans cesse sous mon\nparapluie.\pAïe !\pMais ça ne marche pas…
+0x1F5D004: J'essaie de briser ce rocher qui\lréapparaît sans cesse sous mon\nparapluie.\pAïe !\pMais ça ne marche pas…
 0x1F5D07F: Aïe !\nTu l'as cassé !
 0x1F5D097: On m'appelle le Maître de l'Océan.\pPourquoi ?\pParce que je suis le maître de\nl'océan.\pJe commande les Pokémon de la mer,\net nul ne peut me vaincre.\pLaisse-moi te montrer.
 0x1F5D131: Tu es maintenant le Maître de\nl'Océan.\nFélicitations.
 0x1F5D160: En vérité, on m'appelait Maître de\nl'Océan à cause de mon nom.\pC'était une mauvaise blague de mes\ncamarades.\pJ'ai juré de me venger, alors je\nsuis devenu un As.\pTout ça est du passé, alors prends\nça.
 0x1F5D238: Seul le Maître de l'Océan dompte\nun Méga-Léviator.\pComme tu en es un, laisse ton\n{COLOR}ÉLéviator{COLOR}Ë tenir la {COLOR}ÉLéviatorite{COLOR}Ë.\pÇa promet un combat explosif.
-0x1F5D2D7: On m'appelle le Maître de l'Océan.\pPourquoi ?\pParce que je suis le maître de\nl'océan.\pJe commande les Pokémon de la mer,\net nul ne peut me vaincre.\pSurtout pas quelqu'un qui n'a même\npas battu tous les Dresseurs des\nRoutes 13 et 14.
+0x1F5D2D7: On m'appelle le Maître de l'Océan.\pPourquoi ?\pParce que je suis le maître de\nl'océan.\pJe commande les Pokémon de la mer,\net nul ne peut me vaincre.\pSurtout pas quelqu'un qui n'a même\lpas battu tous les Dresseurs des\nRoutes 13 et 14.
 0x1F5D3BA: Wahahah ! Ce type va ferrer un\ngros poisson !
 0x1F5D3F1: Ce type vient d'en perdre un…
 0x1F5D40A: Ce type te prend pour un gros\npoisson.\nNon, un futur gros poisson !
@@ -15405,7 +15405,7 @@
 0x1F5D983: Il faut du soleil pour bronzer !\pJe ne pourrais vraiment pas le faire\nsur la Route 10 !
 0x1F5D9C5: Je jaillis du sable ! Hiya !\nJe te défie !
 0x1F5D9FB: Avec honneur, j'admets ma défaite !
-0x1F5DA17: Je dois peaufiner l'art du\ncamouflage.\pJe te dis adieu.
+0x1F5DA17: Je dois peaufiner l'art du\ncamouflage.\nJe te dis adieu.
 0x1F5DA52: Maman a dit que je ne peux pas\nnager sans ma bouée.
 0x1F5DA89: Ouin !\nOuin !
 0x1F5DA97: Cette année, je vais enfin savoir\nnager !
@@ -15432,7 +15432,7 @@
 0x1F5DD5B: Mes perles vont-elles grossir dans\nun Crustabri ?
 0x1F5DD87: Mon copain est toujours occupé, je\nviens nager seule.
 0x1F5DDC1: Aaaah, je le savais !
-0x1F5DDE1: Quand je ne peux pas être avec mon\ncopain, je passe du temps avec les\nPokémon qu'il m'a donnés.
+0x1F5DDE1: Quand je ne peux pas être avec mon\ncopain, je passe du temps avec les\lPokémon qu'il m'a donnés.
 0x1F5DE2E: J'adore pique-niquer sur la plage !
 0x1F5DE52: Tu as gâché mon pique-nique !
 0x1F5DE68: Si seulement j'avais quelqu'un avec\nqui pique-niquer…
@@ -15456,7 +15456,7 @@
 0x1F5E166: Cette partie de l'Autoroute KBT va\ndu Bourg Cratère à la Ville de Tehl.
 0x1F5E1AD: Je me demande combien de poids\nle sol peut supporter ?
 0x1F5E1DE: Assez pour un bon combat !
-0x1F5E1F8: Si 100 personnes aussi grandes que\nmoi se tenaient ici, tu crois que\nle sol tiendrait ?
+0x1F5E1F8: Si 100 personnes aussi grandes que\nmoi se tenaient ici, tu crois que\lle sol tiendrait ?
 0x1F5E25D: Ça va pas !?\pTu sais qu'il est dangereux de\nnager sous un orage ?\p…{PAUSE}îNous ?\pOn est en partie de type Sol !\nOn ne peut pas être électrocutés !
 0x1F5E2DB: Oh, mon dieu…\pTu ferais mieux d'éviter de nager\npar ce temps !\pCe n'est pas un orage naturel, tu\nvois.\pQuelque chose d'inquiétant provoque\nce déluge.
 0x1F5E36A: L'étrange orage d'avant est fini !\pPourquoi s'est-il arrêté\nbrusquement ?
@@ -15470,7 +15470,7 @@
 0x1F5E571: Bouge, gamin !\pTu bloques la route !
 0x1F5E596: Hein ?\pIl y a quelque chose qui bloque ?\pFaut pas que ce soit ce fichu\nPokémon, encore…
 0x1F5E5E5: Tiens.\pSi j'ai raison, ça dégagera ce qui\nbloque la route.
-0x1F5E635: Si j'ai raison, cet objet devrait\nmontrer ce qui bloque la route.
+0x1F5E635: Si j'ai raison, cet objet devrait\lmontrer ce qui bloque la route.
 0x1F5E687: {COLOR}ÁQuelque chose d'invisible bloque\nla route.\pUtiliser le Scope Devon ?
 0x1F5E6C2: {COLOR}Á{PLAYER} utilise le Scope Devon.
 0x1F5E6DE: {COLOR}ÁUn Pokémon invisible est devenu\ntotalement visible !
@@ -15493,13 +15493,13 @@
 0x1F5EA7D: Mon type préféré, c'est quelqu'un\nqui a de l'allure en mer !
 0x1F5EAC1: La marée descend…
 0x1F5EAD8: Ne te méprends pas, ce n'est pas\nque je n'aime pas les montagnards.\pMais, tu sais, mon type préféré\nest quelqu'un qui se marie bien\navec les Pokémon !
-0x1F5EB58: Ma famille m'a averti que c'était\ntrop dangereux de pique-niquer si\nprès de la Ville d'Antisis.\pPerso, je passe un super moment !
+0x1F5EB58: Ma famille m'a averti que c'était\ntrop dangereux de pique-niquer si\lprès de la Ville d'Antisis.\pPerso, je passe un super moment !
 0x1F5EBD4: Tu as gâché mon bon moment !
-0x1F5EBEE: Les méchants de la Ville d'Antisis\naiment harceler les gens qui\ns'approchent trop de la ville.
+0x1F5EBEE: Les méchants de la Ville d'Antisis\naiment harceler les gens qui\ls'approchent trop de la ville.
 0x1F5EC3C: Mon rêve est immense !\pJe veux affronter chaque Pokémon du\nmonde !
 0x1F5EC90: J'ai perdu, mais je me rapproche\nde mon rêve !
 0x1F5ECC8: Quoi qu'il arrive, ne perds jamais\nde vue ton rêve !
-0x1F5ED07: Si je fixe l'eau trop longtemps,\nje finis par oublier ce\nque je faisais.
+0x1F5ED07: Si je fixe l'eau trop longtemps,\nje finis par oublier ce que je\lfaisais au départ, tout\lsimplement.
 0x1F5ED6E: I don’t know how, but I lost!
 0x1F5ED8C: Oh right…\nI was fishing, wasn’t I?
 0x1F5EDAF: I’d sensed the presence of a\nTrainer for a while.\pIt was you!
