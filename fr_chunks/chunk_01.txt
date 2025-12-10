@@ -5,6 +5,9 @@
 0x1724F9: Savais-tu que les Pokémon\névoluent ?
 0x17251B: Oh !\nJ’ai perdu !
 0x172FC3: Seuls les dresseurs qui ont\nprouvé leur valeur en combat peuvent\lpasser ici.\p...\pTu n’es pas digne.
+0x1737AF: {PLAYER} a reçu la CS01 du CAPITAINE\n!
+0x1762D7: {PLAYER} a reçu un LOKHLASS de\nl'employé de SYLPHE SARL !
+0x176FBD: {PLAYER} a reçu une MASTER BALL du\nPRÉSIDENT !
 0x177364: Qui es-tu ?\nQue fais-tu ici ?
 0x177391: Ouah !
 0x177397: Une statue avec un interrupteur ?\nJamais entendu parler.
@@ -18,6 +21,7 @@
 0x1774E3: Il y a un interrupteur quelque part\nqui ouvre un passage vers Maxima.
 0x1776D7: Ahou !
 0x1776DE: Je n’irai sûrement nulle part si je\nreste planté ici.
+0x179396: Attention aux ONIX. Ils\nn'apparaissent que rarement.\pLes ONIX de haut niveau peuvent\nt'écraser !
 0x179FA0: Disparais !\nEsprit malveillant !
 0x179FBC: Ouf !\nL’esprit est parti !
 0x179FD3: Les autres…\nIls ont dû être possédés.
@@ -32,6 +36,9 @@
 0x17FF1C: Tu ne cuis pas dans ces\nvêtements ?
 0x17FF49: 9Je ne peux pas arrêter d’acheter !\pIl y a tellement de choix au\n{COLOR}ÉGrand Magasin de Dehara{COLOR}Ç !
 0x180300: Mmm…\pUn parc en plein milieu d’une ville\ndu désert, c’est si reposant.\pDehara est vraiment un merveilleux\nparadis oasien !
+0x180AF3: jiy:kii Œky
+0x182E42: j iyökiiオkざy
+0x183387: {PLAYER} a rangé la POTION dans\nla section Objet du SAC.
 0x183482: Grotte Vallée
 0x183509: Tu m’as battu.
 0x18351C: Je suis fière de mes grandes\nconnaissances en insectes.
@@ -197,6 +204,7 @@
 0x19032C: Ce type tout en noir de tout à\nl’heure faisait peur.\pQui était-ce ?
 0x190365: Tu devrais faire le plein de\n{COLOR}ÉPotions{COLOR}Ë.\pOn ne sait jamais quand tu seras en\npanne et auras besoin de soins vite.
 0x190450: Les Centres Pokémon soignent tes\nPokémon fatigués et exténués.\pIls remettent tous les Pokémon en\nparfaite santé.\pLa plupart sont gratuits, alors\nn’hésite pas à soigner tes Pokémon.
+0x1904EE: Les capacités gagnent en puissance\nsi elles correspondent au type du\ncoup.\pOn appelle ça le Bonus d'Attaque de\nMême Type, ou {COLOR}ÉSTAB{COLOR}Ë.
 0x19056C: Tous les Pokémon ont des {COLOR}ÉTypes{COLOR}Ë,\ncomme Feu ou Eau.\pIls déterminent à quel point ils se\nplacent face aux autres Pokémon.\pLes Types donnent aussi aux attaques\nun bonus de puissance si elles\lont le même Type que l’attaque.\pOn appelle ça le Bonus Attaque de\nMême Type, ou {COLOR}ÉSTAB{COLOR}Ë en bref.
 0x190687: Je ne sais vraiment pas quoi faire.\pTous les quelques jours, ce\nPokémon horrible entre dans ma\lmaison et vole ma nourriture.\pAvec un Pokédex, je saurais ce que\nc’est et comment l’arrêter…
 0x19073F: Certains objets existent seulement\npour être vendus.\pSi tu obtiens l’un de ces objets,\ntu devrais le vendre aussitôt.\pJ’ai même entendu dire que des\nmaniaques voudraient acheter ces\lobjets encore plus cher que dans\lles Boutiques Pokémon.
@@ -240,11 +248,3 @@
 0x196356: Je suis le créateur du jeu !\pRemplir ton Pokédex est difficile,\nmais abandonne pas !\pQuand tu auras fini, viens me voir !
 0x1963CD: Waouh ! Excellent !\nTu as complété ton Pokédex !\lFélicitations !\l…
 0x1964A8: Salle de Développement Unbound
-0x196984: Bienvenue au Casino de Dehara !\pAs-tu besoin de jetons de jeu ?\nTu veux en acheter ?
-0x1969DC: Non ?\nViens jouer une autre fois !
-0x1969FB: Oh, désolé.\nTu n’as pas de Boîte Jetons.
-0x196A26: Oups !\nTa Boîte Jetons est pleine.
-0x196A46: Tu ne peux pas payer ces jetons.
-0x196A62: Merci.\nVoici tes jetons !
-0x196A82: Garde ça pour toi.\pOn dit que ces machines sont\ntruquées.
-0x196AC7: Je crois que ces machines ont\ndifférentes chances.

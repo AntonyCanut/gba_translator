@@ -1,40 +1,50 @@
-Line 113: \p count mismatch (origin=0, fr=1)
-Line 115: segment too long (37>36) ->  Tu te bats moins bien que ma mamie !
-Line 139: \p count mismatch (origin=0, fr=1)
-Line 141: \p count mismatch (origin=0, fr=1)
-Line 144: segment too long (37>36) ->  Bien joué ! Tu as géré mon gabarit !
-Line 146: segment too long (47>36) ->  Mes Pokémon se sont entraînés dans les forêts.
-Line 151: segment too long (37>36) ->  Tu peux devenir disciple si tu veux.
-Line 163: segment too long (42>36) ->  Te battre contre moi était amusant, non ?
-Line 165: \p count mismatch (origin=0, fr=1)
-Line 169: \p count mismatch (origin=0, fr=1)
-Line 173: \p count mismatch (origin=0, fr=1)
-Line 174: segment too long (38>36) ->  Quoi ? Tu as défié les statistiques !
-Line 176: \p count mismatch (origin=0, fr=1)
-Line 179: \p count mismatch (origin=1, fr=0)
-Line 179: segment too long (44>36) ->  Ton intellect ne rivalise pas avec le mien.
-Line 182: segment too long (38>36) ->  Tu devrais viser la vie d'Alpiniste !
-Line 183: \l count mismatch (origin=0, fr=1)
-Line 186: \p count mismatch (origin=0, fr=1)
-Line 188: \p count mismatch (origin=0, fr=1)
-Line 191: \p count mismatch (origin=0, fr=1)
-Line 192: segment too long (39>36) ->  Quoi ?! Plus d'essence dans mon vélo !
-Line 194: segment too long (38>36) ->  Après le combat, on fait une course !
-Line 196: \l count mismatch (origin=0, fr=1)
-Line 198: \p count mismatch (origin=0, fr=1)
-Line 199: \l count mismatch (origin=0, fr=1)
-Line 203: \p count mismatch (origin=0, fr=2)
-Line 205: \p count mismatch (origin=1, fr=0)
-Line 207: \p count mismatch (origin=1, fr=0)
-Line 211: \l count mismatch (origin=0, fr=1)
-Line 214: \l count mismatch (origin=0, fr=2)
-Line 224: \p count mismatch (origin=0, fr=1)
-Line 231: \p count mismatch (origin=1, fr=0)
-Line 231: segment too long (37>36) ->  Encore une belle prise aujourd'hui !
-Line 232: \p count mismatch (origin=0, fr=1)
-Line 235: \p count mismatch (origin=1, fr=0)
-Line 238: \p count mismatch (origin=0, fr=1)
-Line 238: segment too long (41>36) ->  Grr… Tellement en colère que je pourrais
-Line 239: \p count mismatch (origin=1, fr=0)
-Line 242: \p count mismatch (origin=1, fr=0)
-Line 249: \l count mismatch (origin=1, fr=0)
+Line 67: segment too long (40>36) ->  Met K.O. un ennemi pour se transformer.
+Line 68: segment too long (45>36) ->  Met K.O. pour booster la stat la plus haute.
+Line 75: segment too long (38>36) ->  Prend forme banc avec beaucoup de PV.
+Line 76: segment too long (44>36) ->  Baisse les boucliers sous la moitié des PV.
+Line 94: segment too long (39>36) ->  Prévient de la capacité la plus forte.
+Line 97: segment too long (38>36) ->  Empêche l'ennemi de manger des Baies.
+Line 103: segment too long (38>36) ->  Les coups Ténèbres montent l'Attaque.
+Line 104: segment too long (40>36) ->  Spectre, Insecte, Ténèbres montent Vit.
+Line 105: segment too long (43>36) ->  Critiques assurés sur cibles empoisonnées.
+Line 106: segment too long (39>36) ->  Garde le lanceur et l'équipe éveillés.
+Line 109: segment too long (37>36) ->  Protège des statuts en plein soleil.
+Line 111: segment too long (37>36) ->  Boost l'équipe quand il fait soleil.
+Line 113: segment too long (37>36) ->  Vole l'objet du foe en étant touché.
+Line 128: segment too long (37>36) ->  Peut récupérer les Baies consommées.
+Line 132: segment too long (38>36) ->  Donne l'objet à un allié après usage.
+Line 139: segment too long (41>36) ->  Les attaques Normal deviennent Électrik.
+Line 155: segment too long (39>36) ->  Les capacités Normal deviennent Glace.
+Line 156: segment too long (37>36) ->  Les capacités Normal deviennent Fée.
+Line 157: segment too long (37>36) ->  Les capacités Normal deviennent Vol.
+Line 158: segment too long (40>36) ->  Toutes les capacités deviennent Normal.
+Line 160: segment too long (37>36) ->  Transforme l'électricité en Vitesse.
+Line 164: segment too long (42>36) ->  Les coups critiques tombent plus souvent.
+Line 166: segment too long (44>36) ->  Les capacités de statut passent en premier.
+Line 171: segment too long (39>36) ->  Échange effets bonus contre puissance.
+Line 175: segment too long (50>36) ->  Sacrifie des PV pour plus de puissance au soleil.
+Line 178: segment too long (43>36) ->  Renforce les coups « pas très efficaces ».
+Line 179: segment too long (37>36) ->  Affaiblit les coups super efficaces.
+Line 182: segment too long (41>36) ->  Ajuste la puissance selon les stats foe.
+Line 184: segment too long (37>36) ->  Récupère un peu de PV sous la grêle.
+Line 185: segment too long (39>36) ->  Monte une stat et en baisse une autre.
+Line 187: segment too long (37>36) ->  Peut soigner les statuts d'un allié.
+Line 196: segment too long (37>36) ->  Les attaques Vol passent en premier.
+Line 198: segment too long (47>36) ->  Objet à tenir. Lunettes qui montent l'Att. Spé
+Line 198: segment too long (37>36) -> mais bloquent sur une seule capacité.
+Line 199: segment too long (47>36) ->  Objet à tenir. Cette écharpe booste la Vitesse
+Line 200: segment too long (43>36) ->  Objet à tenir. Ce bandeau hausse l'Attaque
+Line 201: segment too long (47>36) ->  Objet à tenir. Renforce la puissance des coups
+Line 203: segment too long (38>36) ->  Met des dégâts à l'ennemi en mourant.
+Line 204: segment too long (38>36) ->  Peut désactiver une capacité ennemie.
+Line 205: segment too long (38>36) ->  Baisse la Vitesse du foe s'il touche.
+Line 207: segment too long (44>36) ->  Objet à tenir. Si touché, le lanceur blesse
+Line 208: segment too long (43>36) ->  Objet à tenir. Les Pokemon Poison soignent
+Line 209: segment too long (46>36) ->  Augmente la Vitesse sous la tempête de sable.
+Line 210: segment too long (37>36) ->  Agir en dernier booste la puissance.
+Line 211: segment too long (42>36) ->  Assure que toutes les capacités touchent.
+Line 212: segment too long (43>36) ->  Objet à tenir. Ce gilet hausse la Déf. Spé
+Line 212: segment too long (38>36) -> mais interdit les capacités de statut.
+Line 216: segment too long (39>36) ->  Étrange masse évolutive. Monte Défense
+Line 224: segment too long (51>36) ->  iiiizzzz    ki{STRING}iiikii{STRING}ki{STRING}kiikiiiiiiyzzzÓ            :
+Line 230: segment too long (51>36) ->  iiiizzzz    ki{STRING}iiikii{STRING}ki{STRING}kiikiiiiiiyzzzÓ            :

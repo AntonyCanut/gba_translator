@@ -1,3 +1,26 @@
+0x1BCA43: Participants are asked to step up\nto the reception counter.
+0x1BCA95: You may trade your Pokémon here\nwith another Trainer.
+0x1BCACB: You may battle with your friends\nhere.
+0x1BCAF2: Two to five Trainers can make\nBERRY POWDER together.
+0x1BCB42: Cancels the selected MENU item.
+0x1BCB81: To use the Berry Crush service,\nyou must have at least one Berry.
+0x1BCBC3: To enter the Union Room, you must\nhave at least two Pokémon.
+0x1BCC00: No Pokémon holding the {STR_VAR_1}\nBerry may enter the Union Room.
+0x1BCC3A: This is the Pokémon Wireless Club\nUnion Room.\pUnfortunately, your Wireless\nAdapter is not connected properly.\pPlease do come again.
+0x1BCCCA: It appears as if {STR_VAR_1} is playing\nright now.\lGo for it!
+0x1BD28D: Welcome to the Pokémon Wireless\nClub Direct Corner.\pYou may interact directly with\nyour friends here.\pWhich room would you like to\nenter?
+0x1BD317: Would you like to trade Pokémon?
+0x1BD338: Which Battle Mode would you like\nto play?
+0x1BD362: Would you like to use the\nBerry Crush System?
+0x1BD390: There are three Battle Modes.\pSingle Battle is for two Trainers\nwith one or more Pokémon each.\pEach Trainer can have one Pokémon\nin battle at a time.\pDouble Battle is for two Trainers\nwith two or more Pokémon each.\pEach Trainer will send out two\nPokémon in battle at a time.\pMulti Battle is for four Trainers\nwith one or more Pokémon each.\pEach Trainer can have one Pokémon\nin battle at a time.
+0x1BD51B: Please decide which of you two\nwill become the Leader.\pThe other player must then choose\n“Join Group.”
+0x1BD582: Please decide which of you four\nwill become the Group Leader.\pThe other players must then choose\n“Join Group.”
+0x1BD5F1: Please decide which of you will\nbecome the Group Leader.\pThe other players must then choose\n“Join Group.”
+0x1BD65B: Welcome to the Pokémon Wireless\nClub Union Room.\pYou may interact directly with\nother Trainers here, some of\lwhom you may not even know.\pWould you like to enter the room?
+0x1BD706: The Trainers in the Union Room\nwill be those players around you\lwho have also entered the room.\pYou may do all sorts of things\nhere, such as exchanging greetings.\pYou may enter two Pokémon up to\nLv. 30 for a one-on-one battle.\pYou may take part in a chat with\ntwo to five people.\pOr, you may register a Pokémon for\ntrade.\pWould you like to enter the room?
+0x1BD86A: I hope you enjoy your time in\nthe Union Room.
+0x1BD898: Hello!\nMy name is Teala.\pThis must be your first time\nup here.\pI’ll show you how the Wireless\nCommunication System works.\pFirst, I need to show you this\nfloor of our Pokémon Centre.\pRight this way, please.
+0x1BD966: On the top floor, there are two\nrooms.\pFirst, the room on the left.\nIt’s the Union Room.\pYou may link up with Trainers\naround you who have also entered\lthe Union Room.\pWith them, you may do things like\nchat, battle, and trade.\pSecond, the room on the right is\nthe DIRECT CORNER.\pYou may trade or battle Pokémon\nwith your friends in this room.\pIf the Wireless Adapter isn’t\nconnected, you may still link up\lusing a GBA Game Link cable.\pIf that is the case, you must go\nto the Direct Corner.\pI hope you enjoy the Wireless \nCommunication System.
 0x1BDB85: Hello, {PLAYER}!\pIt’s me, Teala, the Pokémon\nCentre 2F attendant.\pIs there something you needed to\nask me about linking?
 0x1BDBF8: Let me explain how the Pokémon\nWireless Club works.\pOn this, the top floor, there are\ntwo rooms.\pFirst, the room on the left.\nIt’s the Union Room.\pYou may link up with Trainers\naround you who have also entered\lthe Union Room.\pWith them, you may do things like\nchat, battle, and trade.\pSecond, the room on the right is\nthe Direct Corner.\pYou may trade or battle Pokémon\nwith your friends in this room.\pSometimes, you may not be able to\nfind your friends in the Union Room\lor the Direct Corner.\pIn that case, please move closer\nto your friends.\pIf the Wireless Adapter isn’t\nconnected, you may still link up\lusing a GBA Game Link cable.\pIf that is the case, you must go\nto the Direct Corner.\pI hope you enjoy the Wireless \nCommunication System.
 0x1BDEDF: I hope you enjoy the Wireless\nCommunication System.
@@ -85,6 +108,7 @@
 0x1C12A7: It’s the latest video game!\nIt sure looks fun!
 0x1C12D6: There are obvious signs of burglary\nhere…
 0x1C1300: There’s a Pokémon on TV!\nIt looks like it’s having fun.
+0x1C1367:  {DOWN_ARROW}ÛêË¿  ぁœ ûざ œぜÀúÁタ\nThe battery isn’t charged enough.\pNo. of steps required to fully\ncharge the battery: {STR_VAR_1}{PAUSE_UNTIL_PRESS}
 0x1C13D6: There are no Trainers within range\nwho can battle…\pThe VS Seeker was turned off.{PAUSE_UNTIL_PRESS}
 0x1C1429: The other Trainers don’t appear\nto be ready for battle.\pLet’s wait till later.{PAUSE_UNTIL_PRESS}
 0x1C27E6: 9The edge of the beach isn’t so\nshallow.
@@ -95,17 +119,22 @@
 0x1C566A: WARNING!\pThere is a different game file that\nis already saved.\pIf you save now, the other file’s\nadventure, including items and\lPokémon, will be entirely lost.\pAre you sure you want to save now\nand overwrite the other save file?
 0x1C574F: NEW Name
 0x1C5758: GREEN
+0x1C5762: LEAF
 0x1C5767: Hoop
 0x1C576C: GARY
 0x1C5775: TORU
 0x1C577E: Brad
 0x1C5783: John
 0x1C578C: James
+0x1C5792: JONN
 0x1C5797: Carl
+0x1C579D: KARL
 0x1C57A2: Taylor
 0x1C57A9: Raplh
 0x1C57AF: Zeke
 0x1C57BC: Jonah
+0x1C57C6: TOSH
+0x1C57CB: ROAK
 0x1C57D4: JODI
 0x1C57D9: AMANDA
 0x1C57E0: HILLARY
@@ -128,9 +157,59 @@
 0x1C594F: Used to shift items and to use\na registered item.
 0x1C5981: If you need help playing the\ngame, or on how to do things,\npress the L or R Button.
 0x1C59D5: Are you a boy?\nOr are you a girl?
+0x1C59F7:  you a girl?
 0x1C5A04: In the world which you are about to\nenter, you will embark on a grand\nadventure with you as the hero.
 0x1C5A6B: Speak to people and check things\nwherever you go, be it towns, roads,\nor caves. Gather information and\nhints from every source.
 0x1C5AEB: During your adventure, you will\nhave the opportunity to make many\ndecisions.\n\nAlways remember, your actions can\naffect and change the world around\nyou.
+0x1EAF1A:         FgFüF
+0x1EAF3A:         FüFgF
+0x1EB09A:         FíFgF
+0x1EB11A:         FíFgF
+0x1EB1C6: FgFüF
+0x1EB1E6: FüFgF
+0x1EB246: FgFüF
+0x1EB266: FüFgF
+0x1EB346: FgFüF
+0x1EB366: FüFgF
+0x1EB3C6: FgFüF
+0x1EB3E6: FüFgF
+0x1EB5AC: %a!v%a!v
+0x1F3C88: E{STRING}E{STRING}%a!u                E{STRING}E\n
+0x1F47AC:                       gカgニヒニíカ·8E{STRING}カü                ニüニgカg9w                          FüFfFgFgFgFgFg                FgFgFgFgFrF\lF
+0x1F6CC7: bEaía%aヒa                ·aEb
+0x1F7208: E{STRING}E{STRING}%a!u                E{STRING}E\n
+0x1FFE88: E{STRING}E{STRING}%a!u                E{STRING}E\n
+0x2009AC:                       gカgニヒニíカ·8E{STRING}カü                ニüニgカg9w                          FüFfFgFgFgFgFg                FgFgFgFgFrF\lF
+0x202EC7: bEaía%aヒa                ·aEb
+0x203408: E{STRING}E{STRING}%a!u                E{STRING}E\n
+0x207D86: ggbgノeDカ
+0x208B85: bEuE\n
+0x209408:          … … : :        egbヒf·w
+0x209428:          {SUPER_RE} … : :        ügÍg!aEv         … : : :        
+0x2094E4: ·{STRING}E\n         F F F F        
+0x209D0A: ♀e♀e♀e F F F F F F F F
+0x209DEB: g%a5f                ♀vf
+0x209F82: íöパfggggヒu·{STRING}E{UNKNOWN_STR}F F F F F F F F    
+0x20A062: FüFüF\l                        E\nE{STRING}E{STRING}E\n         F F F F        
+0x2101A0: E{STRING}E{STRING}%a!u                E{STRING}E\n
+0x210CC4:                       gカgニヒニíカ·8E{STRING}カü                ニüニgカg9w                          FüFfFgFgFgFgFg                FgFgFgFgFrF\lF
+0x2131DF: bEaía%aヒa                ·aEb
+0x213720: E{STRING}E{STRING}%a!u                E{STRING}E\n
+0x21809C: ggggオe9カ
+0x218440: %{STRING}!\nカa8v F F F F F F F ィ
+0x219759: gagハa·v         タ {SUPER_RE} … :        
+0x2197FC: ·{STRING}E\l         F F F F        
+0x2198E6: カa F F F F F F F F
+0x2199DC: カa9v         F F F F        
+0x21A05A: B{STRING}BaBuB{STRING}B{STRING}B{STRING}B{UNKNOWN_STR}               
+0x21A0E1: g%e5büv                
+0x21A101: g%e5büf                {STRING}
+0x2204B8: E{STRING}E{STRING}%a!u                E{STRING}E\n
+0x220FDC:                       gカgニヒニíカ·8E{STRING}カü                ニüニgカg9w                          FüFfFgFgFgFgFg                FgFgFgFgFrF\lF
+0x2234F7: bEaía%aヒa                ·aEb
+0x223A38: E{STRING}E{STRING}%a!u                E{STRING}E\n
+0x229B7A: カa9uE{UNKNOWN_STR}F F F F F F F F
+0x22A694: FbFv                        ·\ní{STRING}í{STRING}·\n         F F F F        ífíg·qE\l         : : : :        
 0x236632: These goggles protect the holder \nfrom both weather-related damage\nand powder.
 0x236C40: An item to be held by a Pokémon. It\nis a stone tablet that boosts the\npower of Fighting-type moves.
 0x236CA4: An item to be held by a Pokémon. It\nis a stone tablet that boosts the\npower of Flying-type moves.
@@ -142,6 +221,7 @@
 0x236EEA: An item to be held by a Pokémon. It\nis a stone tablet that boosts the\npower of Steel-type moves.
 0x236F4B: An item to be held by a Pokémon. It\nis a stone tablet that boosts the\npower of Fire-type moves.
 0x236FAB: An item to be held by a Pokémon. It\nis a stone tablet that boosts the\npower of Water-type moves.
+0x23700C: An item to be held by a Pokémon. It\nis a stone tablet that boosts the\npower of Bug-type moves.
 0x23706B: An item to be held by a Pokémon. It\nis a stone tablet that boosts the\npower of Electric-type moves.
 0x2370CF: An item to be held by a Pokémon. It\nis a stone tablet that boosts the\npower of Psychic-type moves.
 0x237132: An item to be held by a Pokémon. It\nis a stone tablet that boosts the\npower of Ice-type moves.
@@ -168,83 +248,3 @@
 0x2374B9: Old Gateau
 0x2374C4: Rage Candy Bar
 0x2374D3: Rare Candy
-0x2374DE: Shalour Sable
-0x2374EC: Shoal Salt
-0x2374F7: Berry Juice
-0x23751C: Eevee{CLEAR_TO}ぱ{FONT_SMALL} 1 500 Coins
-0x237534: Dratini{CLEAR_TO}ぱ{FONT_SMALL} 2 800 Coins
-0x23754E: Klefki{CLEAR_TO}ぱ{FONT_SMALL} 5 000 Coins
-0x237567: Porygon{CLEAR_TO}ぱ{FONT_SMALL} 9 999 Coins
-0x2375BD: Dome Fossil
-0x2375C9: Old Amber
-0x2375D3: Root Fossil
-0x2375DF: Claw Fossil
-0x2375EB: Skull Fossil
-0x2375F8: Armor Fossil
-0x237605: Cover Fossil
-0x237612: Plume Fossil
-0x23761F: Jaw Fossil
-0x23762A: Sail Fossil 
-0x238D20: Microwave Oven
-0x238D2F: Washing Machine
-0x238D3F: Refrigerator
-0x238D4C: Electric Fan
-0x238D59: Lawnmower
-0x238D63: Recall
-0x238D6A: Cancel
-0x23EAD8:                          ぐ ¡Joey
-0x24F1A7: FIGHT
-0x24F1AD:  FLYING
-0x24F1B5: POISON
-0x24F1BC: GROUND
-0x24F1C3: ROCK
-0x24F1D7:  STEEL
-0x24F1EB:   WATER
-0x24F1F3:  GRASS
-0x24F1FA:  ELECTR
-0x24F202: PSYCHC
-0x24F217: DARK
-0x24F3D8: Helps repel wild Pokémon.
-0x24F3F2: Summons rain in battle.
-0x24F40A: Gradually boosts Speed.
-0x24F422: Blocks critical hits.
-0x24F438: Negates 1-hit KO attacks.
-0x24F452: Prevents self-destruction.
-0x24F46D: Prevents paralysis.
-0x24F481: Ups evasion in a sandstorm.
-0x24F49D: Paralyzes on contact.
-0x24F4B3: Turns electricity into HP.
-0x24F4CE: Changes water into HP.
-0x24F4E5: Prevents attraction.
-0x24F4FA: Negates weather effects.
-0x24F513: Raises accuracy.
-0x24F524: Prevents sleep.
-0x24F534: Changes type to foe’s move.
-0x24F550: Prevents poisoning.
-0x24F564: Powers up if hit by fire.
-0x24F57E: Prevents added effects.
-0x24F596: Prevents confusion.
-0x24F5AA: Firmly anchors the body.
-0x24F5C3: Lowers the foe’s Attack.
-0x24F5DC: Prevents the foe’s escape.
-0x24F5F7: Hurts to touch.
-0x24F607: “Super effective” hits.
-0x24F61F: Not hit by Ground attacks.
-0x24F63A: Leaves spores on contact.
-0x24F654: Passes on status problems.
-0x24F66F: Prevents stat reduction.
-0x24F68B: Heals upon switching out.
-0x24F6A5: Draws electrical moves.
-0x24F6BD: Promotes added effects.
-0x24F6D5: Raises Speed in rain.
-0x24F6EB: Raises Speed in sunshine.
-0x24F705: Encounter rate increases.
-0x24F71F: Copies special ability.
-0x24F737: Raises Attack.
-0x24F746: Poisons foe on contact.
-0x24F75E: Prevents flinching.
-0x24F772: Prevents freezing.
-0x24F785: Prevents burns.
-0x24F795: Traps Steel-type Pokémon.
-0x24F7AF: Avoids sound-based moves.
-0x24F7C9: Slight HP recovery in rain.

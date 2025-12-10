@@ -1,50 +1,110 @@
-Line 6: \p count mismatch (origin=0, fr=3)
-Line 6: segment too long (61>36) ->  Ta sauvegarde est incompatible avec cette version d'Unbound.
-Line 43: \p count mismatch (origin=1, fr=0)
-Line 44: \p count mismatch (origin=1, fr=0)
-Line 45: \p count mismatch (origin=1, fr=0)
-Line 46: \p count mismatch (origin=1, fr=0)
-Line 47: \p count mismatch (origin=1, fr=0)
-Line 48: \p count mismatch (origin=1, fr=0)
-Line 49: \p count mismatch (origin=1, fr=0)
-Line 50: \p count mismatch (origin=1, fr=0)
-Line 51: \p count mismatch (origin=1, fr=0)
-Line 52: \p count mismatch (origin=1, fr=0)
-Line 53: \p count mismatch (origin=1, fr=0)
-Line 54: \p count mismatch (origin=1, fr=0)
-Line 55: \p count mismatch (origin=1, fr=0)
-Line 56: \p count mismatch (origin=1, fr=0)
-Line 57: \p count mismatch (origin=1, fr=0)
-Line 58: \p count mismatch (origin=1, fr=0)
-Line 59: \p count mismatch (origin=1, fr=0)
-Line 60: \p count mismatch (origin=2, fr=0)
-Line 61: \p count mismatch (origin=1, fr=0)
-Line 62: \p count mismatch (origin=2, fr=0)
-Line 63: \p count mismatch (origin=1, fr=0)
-Line 64: \p count mismatch (origin=1, fr=0)
-Line 65: \p count mismatch (origin=1, fr=0)
-Line 72: \p count mismatch (origin=3, fr=0)
-Line 78: segment too long (38>36) ->  Â       Àî  À   Jぅ♂ËÎle Nouvelle Lune
-Line 88: segment too long (37>36) ->  Machine remplaçant les CS. Mine sous
-Line 109: segment too long (37>36) ->  Monte beaucoup la Défense en combat.
-Line 110: segment too long (37>36) ->  Monte beaucoup la Vitesse en combat.
-Line 126: segment too long (37>36) ->  Poké Ball efficace pour capturer les
-Line 129: segment too long (37>36) ->  Poké Ball étrange rendant le Pokémon
-Line 142: segment too long (37>36) ->  Rend un Pokémon un peu plus facile à
-Line 143: segment too long (37>36) ->  Deux de ces objets font bouger moins
-Line 167: segment too long (67>36) ->  Tenue par un Pokémon, permet de frapper en premier une fois en cas
-Line 171: segment too long (37>36) ->  Touché physiquement, le porteur voit
-Line 173: segment too long (37>36) ->  Charme ovale augmentant la chance de
-Line 188: segment too long (37>36) ->  Objet à tenir. Prolonge Zénith lancé
-Line 189: segment too long (37>36) ->  Objet à tenir. Prolonge Grêle lancée
-Line 194: segment too long (37>36) ->  Objet à tenir. Augmente l'Attaque si
-Line 198: segment too long (37>36) ->  Objet à tenir. Prolonge les attaques
-Line 207: segment too long (37>36) ->  Carapace permettant au porteur de se
-Line 208: segment too long (37>36) ->  Objet à tenir. Augmente l'Attaque si
-Line 214: segment too long (37>36) ->  Objet à tenir. Boost la Déf. Spé sur
-Line 215: segment too long (37>36) ->  Objet à tenir. Boost la Déf. Spé sur
-Line 219: segment too long (37>36) ->  Orbe pour Latios ou Latias. Augmente
-Line 220: segment too long (37>36) ->  Gemme d'essence neutre. Renforce une
-Line 221: segment too long (37>36) ->  Gemme d'essence combat. Renforce une
-Line 229: segment too long (37>36) ->  Gemme d'essence feu. Tenue, renforce
-Line 230: segment too long (37>36) ->  Gemme d'essence eau. Tenue, renforce
+Line 6: consecutive \n found in fr, not in origin
+Line 7: consecutive \n found in fr, not in origin
+Line 10: consecutive \n found in fr, not in origin
+Line 11: consecutive \n found in fr, not in origin
+Line 17: consecutive \n found in fr, not in origin
+Line 18: consecutive \n found in fr, not in origin
+Line 20: consecutive \n found in fr, not in origin
+Line 22: segment too long (37>36) ->  Si l’utilisateur se déplace après la
+Line 29: consecutive \n found in fr, not in origin
+Line 41: consecutive \n found in fr, not in origin
+Line 41: segment too long (37>36) ->  Énergie lumineuse pouvant baisser la
+Line 42: consecutive \n found in fr, not in origin
+Line 42: segment too long (37>36) ->  L'utilisateur mord l'ennemi et mange
+Line 43: consecutive \n found in fr, not in origin
+Line 47: segment too long (37>36) ->  L'ennemi est transpercé par des obus
+Line 51: segment too long (37>36) ->  De l'eau bouillante est projetée sur
+Line 53: consecutive \n found in fr, not in origin
+Line 56: consecutive \n found in fr, not in origin
+Line 56: segment too long (37>36) ->  Attaque lunaire. Peut réduire l'Att.
+Line 59: consecutive \n found in fr, not in origin
+Line 59: segment too long (37>36) ->  L’utilisateur pousse un cri charmant
+Line 61: segment too long (37>36) ->  Des pointes empoisonnées sont posées
+Line 65: segment too long (37>36) ->  L'utilisateur émet une terrible onde
+Line 68: consecutive \n found in fr, not in origin
+Line 68: segment too long (37>36) ->  De l'acide gastrique est projeté sur
+Line 69: consecutive \n found in fr, not in origin
+Line 71: consecutive \n found in fr, not in origin
+Line 73: segment too long (37>36) ->  Un filet collant est tissé autour du
+Line 81: segment too long (37>36) ->  L'utilisateur disparaît, puis frappe
+Line 83: consecutive \n found in fr, not in origin
+Line 85: consecutive \n found in fr, not in origin
+Line 85: segment too long (37>36) ->  Une attaque qui déchire l'espace qui
+Line 88: segment too long (37>36) ->  L'utilisateur disparaît, puis frappe
+Line 89: consecutive \n found in fr, not in origin
+Line 89: segment too long (37>36) ->  La cible est attaquée avec des joues
+Line 92: consecutive \n found in fr, not in origin
+Line 96: consecutive \n found in fr, not in origin
+Line 96: segment too long (37>36) ->  L'utilisateur attaque en frappant la
+Line 100: consecutive \n found in fr, not in origin
+Line 101: segment too long (37>36) ->  L'utilisateur attaque depuis un trou
+Line 108: consecutive \n found in fr, not in origin
+Line 112: consecutive \n found in fr, not in origin
+Line 115: consecutive \n found in fr, not in origin
+Line 117: consecutive \n found in fr, not in origin
+Line 118: consecutive \n found in fr, not in origin
+Line 119: consecutive \n found in fr, not in origin
+Line 121: segment too long (37>36) ->  L'utilisateur perd une partie de son
+Line 124: consecutive \n found in fr, not in origin
+Line 127: segment too long (37>36) ->  L’utilisateur retourne le pouvoir de
+Line 130: consecutive \n found in fr, not in origin
+Line 131: consecutive \n found in fr, not in origin
+Line 134: consecutive \n found in fr, not in origin
+Line 137: segment too long (37>36) ->  L'utilisateur charge sa tête sur son
+Line 138: consecutive \n found in fr, not in origin
+Line 141: consecutive \n found in fr, not in origin
+Line 142: consecutive \n found in fr, not in origin
+Line 144: segment too long (37>36) ->  Une attaque en deux tours qui frappe
+Line 146: consecutive \n found in fr, not in origin
+Line 148: consecutive \n found in fr, not in origin
+Line 148: segment too long (37>36) ->  L'utilisateur jette un boulon géant.
+Line 150: consecutive \n found in fr, not in origin
+Line 151: consecutive \n found in fr, not in origin
+Line 152: consecutive \n found in fr, not in origin
+Line 152: segment too long (37>36) ->  Menace en partant : baisse l'Attaque
+Line 153: segment too long (37>36) ->  Tous les changements de statistiques
+Line 154: consecutive \n found in fr, not in origin
+Line 156: consecutive \n found in fr, not in origin
+Line 158: consecutive \n found in fr, not in origin
+Line 158: segment too long (37>36) ->  Souffle un feu spécial. Baisse aussi
+Line 160: consecutive \n found in fr, not in origin
+Line 163: consecutive \n found in fr, not in origin
+Line 164: consecutive \n found in fr, not in origin
+Line 165: segment too long (37>36) ->  L'utilisateur attaque avec une vague
+Line 168: consecutive \n found in fr, not in origin
+Line 174: consecutive \n found in fr, not in origin
+Line 174: segment too long (37>36) ->  L'utilisateur balance violemment son
+Line 175: consecutive \n found in fr, not in origin
+Line 176: segment too long (37>36) ->  L'utilisateur frotte ses écailles et
+Line 180: segment too long (37>36) ->  Bien que ce mouvement ait une grande
+Line 181: consecutive \n found in fr, not in origin
+Line 184: consecutive \n found in fr, not in origin
+Line 189: consecutive \n found in fr, not in origin
+Line 191: consecutive \n found in fr, not in origin
+Line 192: consecutive \n found in fr, not in origin
+Line 196: consecutive \n found in fr, not in origin
+Line 196: segment too long (37>36) ->  L'utilisateur mord la cible avec des
+Line 197: segment too long (37>36) ->  L’utilisateur soigne la condition de
+Line 204: consecutive \n found in fr, not in origin
+Line 207: consecutive \n found in fr, not in origin
+Line 208: consecutive \n found in fr, not in origin
+Line 208: segment too long (37>36) ->  L'utilisateur braque les projecteurs
+Line 212: consecutive \n found in fr, not in origin
+Line 216: consecutive \n found in fr, not in origin
+Line 219: segment too long (37>36) ->  L'utilisateur couvre le sol de brume
+Line 226: consecutive \n found in fr, not in origin
+Line 227: consecutive \n found in fr, not in origin
+Line 231: consecutive \n found in fr, not in origin
+Line 232: consecutive \n found in fr, not in origin
+Line 233: segment too long (37>36) ->  L'utilisateur laisse échapper un rot
+Line 234: consecutive \n found in fr, not in origin
+Line 236: consecutive \n found in fr, not in origin
+Line 237: segment too long (37>36) ->  La gravité s'intensifie pendant cinq
+Line 241: segment too long (37>36) ->  L'utilisateur chante une incantation
+Line 242: segment too long (37>36) ->  L'utilisateur lévite en utilisant le
+Line 244: consecutive \n found in fr, not in origin
+Line 245: consecutive \n found in fr, not in origin
+Line 245: segment too long (37>36) ->  Moyenne l'Attaque et l'Att. Spé avec
+Line 247: consecutive \n found in fr, not in origin
+Line 248: consecutive \n found in fr, not in origin
+Line 250: segment too long (37>36) ->  L'ennemi est emmené à la porte. Cela

@@ -1,3 +1,12 @@
+0x196591: {PLAYER} obtained an EEVEE!
+0x196984: Welcome to Dehara Game Corner!\pDo you need some game coins?\nWould you like to buy some?
+0x1969DC: No?\nPlease come play sometime!
+0x1969FB: Oh, I’m sorry.\nYou don’t have a Coin Case.
+0x196A26: Whoops!\nYour Coin Case is full.
+0x196A46: You can’t afford the coins.
+0x196A62: Thank you.\nHere are your coins!
+0x196A82: Keep this quiet.\pIt’s rumoured these machines are\nrigged.
+0x196AC7: I think these machines have\ndifferent odds.
 0x196AF3: Kid, do you want to play?
 0x196B0D: {PLAYER} received 10 Coins\nfrom the man.
 0x196B30: You don’t need my Coins!
@@ -51,6 +60,7 @@
 0x19951F: What?\nNo Egg should know any moves.
 0x19A4F7: 9This town has had a problem with\nnightmares for the longest time.\pIf you’re going to choose a place\nto live, it would probably be\lbetter to live somewhere else.
 0x19A5BD: 9Do you need a way back down the\nmountain?\pMy Abra and I will be more than\nhappy to teleport you down.\pWhat do you say?\nDo you want to teleported?
+0x19A650: Be wary, you’ll need strength to\ncontinue on afterwards.
 0x19A79F: 9Don’t they have X Attack?\pI like it because it raises the\nAttack stat in battle.
 0x19A7F1: It never hurts to have extra items.\nYou never know what might happen.
 0x19B86A: Almost there!
@@ -58,15 +68,18 @@
 0x19BA45: Wrong way!
 0x19BAB4: Mel needs someone to paint his\ngood looks!
 0x19BB49: Dead end!
+0x19BB53:  that picknicker lied,\nthis is the wrong way!
 0x19BBB3: Don’t you love this gym’s design?\pIt’s so good, a genius must have\ncome up with it!
 0x19BC57: You’ve almost reached Mel!\nJust a little farther!
 0x19BDFE: Fallshore Pokémon Gym\nLeader: Mel\pWinning Trainers:\n{RIVAL}
 0x19BE37: Fallshore Pokémon Gym\nLeader: Mel\pWinning Trainers:\n{RIVAL}, {PLAYER}
+0x19BF8F: Max Repel keeps weaker Pokémon\nfrom appearing.\pMax Repel stays effective longer\nthan Super Repel.
 0x19BFF1: If you have the {COLOR}ÉFall Badge{COLOR}Ç, you can\nbuy {COLOR}ÉUltra Balls{COLOR}Ç!\pThey’re way better at catching\nPokémon than Great Balls.
 0x19C0B4: I heard that a bunch of people are\nup to no good on {COLOR}ÉRoute 9{COLOR}Ë.
 0x19C0F7: Every step you take, your Pokémon\nbecome more attached to you.\pIf you have a Pokémon in the\nDay-Care, it will get stronger too.
 0x19C177: Did you hear?\pSomeone took care of the\ntroublemakers on Route 9!
 0x19E9E5: Hi! \nI’m one of {COLOR}ÉProf. Log’s Aides{COLOR}Ç.\pIf your Pokédex has complete data\non {COLOR}É{STR_VAR_1}{COLOR}Ç species, I’m supposed to\lgive you a reward.\pSo, {PLAYER}, let me ask you.\pHave you gathered data on at least{COLOR}É\n{STR_VAR_1}{COLOR}Ç kinds of Pokémon?
+0x19EABE:  on at least\n{STR_VAR_1} kinds of Pokémon?
 0x19EAE4: Great! You have caught {COLOR}É{STR_VAR_3}{COLOR}Ç\nkinds of Pokémon!\pCongratulations!\nHere you go!
 0x19EB59: There are items on the ground that\nmay be hidden from view.\pUse the {COLOR}ÉDowser{COLOR}Ç to detect any\nhidden items close to you.\pThe machine is a bit limited.\nIt can’t pinpoint item locations.\pWhat it does is show the direction\nwhere the item is.\pUse it to get your bearings, then\nsearch the area by hand.
 0x19EFE0: I’m the Fishing Guru’s younger\nbrother.\pI simply looove fishing!\nI can’t bear to go without.\pTell me, do you like to fish?
@@ -84,6 +97,7 @@
 0x19F494: Oh, no!\pI had a gift for you, but you have\nno room for it.
 0x19F4CF: The most gigantic Magikarp\nI have ever witnessed…\p{STR_VAR_3} inches!
 0x19F50C: It’s a blank chart of some sort.\pIt has spaces for writing in\nrecords of some kind.
+0x1A1B8E: Obtained an extra page for the\nTOWN MAP!
 0x1A231B: Obtained the TRI-PASS!
 0x1A2B88: I’m the Pokémon Move Maniac.\pI know every single move that\nPokémon learn growing up.\pI’m also a Heart Scale maniac.\pBring me a Heart Scale.\pIf you do that for me, I’ll teach\na move to one Pokémon.
 0x1A2C63: Oh! That’s an honest to\ngoodness Heart Scale!\pLet me guess, you want me to teach\na move?
@@ -94,14 +108,21 @@
 0x1A2D85: {PLAYER} handed over a\nHeart Scale in exchange.
 0x1A2DE0: If your Pokémon need to learn a\nmove, I need a Heart Scale.
 0x1A2E20: Hunh? There isn’t a single move\nthat I can teach an Egg.
+0x1A505B: We hope to see you again!
 0x1A5075: {PLAYER} booted up the PC.
 0x1A508A: Which PC should be accessed?
 0x1A50A7: Accessed Someone’s PC.
 0x1A50BE: Pokémon Storage System opened.
 0x1A50DD: Accessed {PLAYER}’s PC.
 0x1A50EF: Accessed Ayla’s PC.
+0x1A5103: Welcome to the Pokémon Cable Club\nTrade Center.
+0x1A5133: Welcome to the Pokémon Cable Club\nColosseum.
+0x1A5160: Welcome to the Pokémon Cable Club\nTime Capsule.
 0x1A5190: Please come again!
+0x1A51A3: Welcome!\pWe’re having a discount sale today!
+0x1A51D0: {PLAYER}{KUN}, welcome!\pWhat can I do for you?
 0x1A51F6: Obtained the {STR_VAR_2}!
+0x1A5207: The Bag is full…
 0x1A5218: {PLAYER} put the {STR_VAR_2}\nin the {STR_VAR_3}.
 0x1A5231: {PLAYER} found one {STR_VAR_2}!
 0x1A5242: Too bad!\nThe Bag is full…
@@ -111,7 +132,9 @@
 0x1A52F0: Obtained the {STR_VAR_2}!
 0x1A5301: Too bad! There’s no room left for\nanother {STR_VAR_2}…
 0x1A532F: The {STR_VAR_2} was transferred\nto the PC.
+0x1A5375: An item in Cube V3 can be\nregistered to Select for easy use.
 0x1A5420: {PLAYER} booted up the PC.
+0x1A5446: Want to give a nickname to the\n{STR_VAR_2} you received?
 0x1A5483: Welcome to our Pokémon Centre!\pWould you like me to heal your\nPokémon back to perfect health?
 0x1A54E1: Okay, I’ll take your Pokémon for a\nfew seconds.
 0x1A5511: Stay safe out there!
@@ -225,26 +248,3 @@
 0x1BC9C0: The other Trainer is not ready.
 0x1BC9E0: You have at least one Pokémon\nthat can’t be taken.
 0x1BCA13: The Wireless Adapter is not\nconnected properly.
-0x1BCA43: Participants are asked to step up\nto the reception counter.
-0x1BCA95: You may trade your Pokémon here\nwith another Trainer.
-0x1BCACB: You may battle with your friends\nhere.
-0x1BCAF2: Two to five Trainers can make\nBERRY POWDER together.
-0x1BCB42: Cancels the selected MENU item.
-0x1BCB81: To use the Berry Crush service,\nyou must have at least one Berry.
-0x1BCBC3: To enter the Union Room, you must\nhave at least two Pokémon.
-0x1BCC00: No Pokémon holding the {STR_VAR_1}\nBerry may enter the Union Room.
-0x1BCC3A: This is the Pokémon Wireless Club\nUnion Room.\pUnfortunately, your Wireless\nAdapter is not connected properly.\pPlease do come again.
-0x1BCCCA: It appears as if {STR_VAR_1} is playing\nright now.\lGo for it!
-0x1BD28D: Welcome to the Pokémon Wireless\nClub Direct Corner.\pYou may interact directly with\nyour friends here.\pWhich room would you like to\nenter?
-0x1BD317: Would you like to trade Pokémon?
-0x1BD338: Which Battle Mode would you like\nto play?
-0x1BD362: Would you like to use the\nBerry Crush System?
-0x1BD390: There are three Battle Modes.\pSingle Battle is for two Trainers\nwith one or more Pokémon each.\pEach Trainer can have one Pokémon\nin battle at a time.\pDouble Battle is for two Trainers\nwith two or more Pokémon each.\pEach Trainer will send out two\nPokémon in battle at a time.\pMulti Battle is for four Trainers\nwith one or more Pokémon each.\pEach Trainer can have one Pokémon\nin battle at a time.
-0x1BD51B: Please decide which of you two\nwill become the Leader.\pThe other player must then choose\n“Join Group.”
-0x1BD582: Please decide which of you four\nwill become the Group Leader.\pThe other players must then choose\n“Join Group.”
-0x1BD5F1: Please decide which of you will\nbecome the Group Leader.\pThe other players must then choose\n“Join Group.”
-0x1BD65B: Welcome to the Pokémon Wireless\nClub Union Room.\pYou may interact directly with\nother Trainers here, some of\lwhom you may not even know.\pWould you like to enter the room?
-0x1BD706: The Trainers in the Union Room\nwill be those players around you\lwho have also entered the room.\pYou may do all sorts of things\nhere, such as exchanging greetings.\pYou may enter two Pokémon up to\nLv. 30 for a one-on-one battle.\pYou may take part in a chat with\ntwo to five people.\pOr, you may register a Pokémon for\ntrade.\pWould you like to enter the room?
-0x1BD86A: I hope you enjoy your time in\nthe Union Room.
-0x1BD898: Hello!\nMy name is Teala.\pThis must be your first time\nup here.\pI’ll show you how the Wireless\nCommunication System works.\pFirst, I need to show you this\nfloor of our Pokémon Centre.\pRight this way, please.
-0x1BD966: On the top floor, there are two\nrooms.\pFirst, the room on the left.\nIt’s the Union Room.\pYou may link up with Trainers\naround you who have also entered\lthe Union Room.\pWith them, you may do things like\nchat, battle, and trade.\pSecond, the room on the right is\nthe DIRECT CORNER.\pYou may trade or battle Pokémon\nwith your friends in this room.\pIf the Wireless Adapter isn’t\nconnected, you may still link up\lusing a GBA Game Link cable.\pIf that is the case, you must go\nto the Direct Corner.\pI hope you enjoy the Wireless \nCommunication System.
