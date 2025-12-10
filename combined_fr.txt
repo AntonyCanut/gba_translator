@@ -204,7 +204,7 @@
 0x19032C: Ce type tout en noir de tout à\nl’heure faisait peur.\pQui était-ce ?
 0x190365: Tu devrais faire le plein de\n{COLOR}ÉPotions{COLOR}Ë.\pOn ne sait jamais quand tu seras en\npanne et auras besoin de soins vite.
 0x190450: Les Centres Pokémon soignent tes\nPokémon fatigués et exténués.\pIls remettent tous les Pokémon en\nparfaite santé.\pLa plupart sont gratuits, alors\nn’hésite pas à soigner tes Pokémon.
-0x1904EE: Les capacités gagnent en puissance\nsi elles correspondent au type du\ncoup.\pOn appelle ça le Bonus d'Attaque de\nMême Type, ou {COLOR}ÉSTAB{COLOR}Ë.
+0x1904EE: Les capacités gagnent en puissance\nsi elles correspondent au Type de\ll’attaque.\pOn appelle ça le Bonus d'Attaque de\nMême Type, ou {COLOR}ÉSTAB{COLOR}Ë.
 0x19056C: Tous les Pokémon ont des {COLOR}ÉTypes{COLOR}Ë,\ncomme Feu ou Eau.\pIls déterminent à quel point ils se\nplacent face aux autres Pokémon.\pLes Types donnent aussi aux attaques\nun bonus de puissance si elles\lont le même Type que l’attaque.\pOn appelle ça le Bonus Attaque de\nMême Type, ou {COLOR}ÉSTAB{COLOR}Ë en bref.
 0x190687: Je ne sais vraiment pas quoi faire.\pTous les quelques jours, ce\nPokémon horrible entre dans ma\lmaison et vole ma nourriture.\pAvec un Pokédex, je saurais ce que\nc’est et comment l’arrêter…
 0x19073F: Certains objets existent seulement\npour être vendus.\pSi tu obtiens l’un de ces objets,\ntu devrais le vendre aussitôt.\pJ’ai même entendu dire que des\nmaniaques voudraient acheter ces\lobjets encore plus cher que dans\lles Boutiques Pokémon.
@@ -318,7 +318,7 @@
 0x19BA45: Mauvais chemin !
 0x19BAB4: Mel a besoin qu’on peigne sa\nbeauté !
 0x19BB49: Impasse !
-0x19BB53: Cette campeuse a menti, ce n'est pas\nle bon chemin !
+0x19BB53: Cette campeuse a menti, ce n’est\npas le bon chemin !
 0x19BBB3: Tu adores ce design d’Arène, hein ?\pIl est si bon qu’un génie a dû\nl’inventer !
 0x19BC57: Tu es presque arrivé à Mel !\nEncore un peu !
 0x19BDFE: Arène Pokémon de Fallshore\nChampion : Mel\pDresseurs vainqueurs :\n{RIVAL}
@@ -367,7 +367,7 @@
 0x1A50EF: PC d’Ayla utilisé.
 0x1A5103: Bienvenue au Pokémon Cable Club\nTrade Center.
 0x1A5133: Bienvenue au Pokémon Cable Club\nColosseum.
-0x1A5160: Bienvenue au Pokémon Cable Club Time\nCapsule.
+0x1A5160: Bienvenue au Cable Club Time\nCapsule.
 0x1A5190: Revenez nous voir !
 0x1A51A3: Bienvenue !\pNous faisons une promotion\naujourd'hui !
 0x1A51D0: {PLAYER}{KUN}, bienvenue !\pQue puis-je faire pour toi ?
@@ -1047,10 +1047,10 @@
 0x25000D: COQUE ARMUR
 0x25001B: CACOPHONIE
 0x250026: AIR LOCK
-0x255689: RR zRR                                    R   F   F                    xzzzxzzzRzzzRzzzRRzz Rzz Rzz RzzzRR z   z   zÂ  zÂ  zÂ  zÂ  zÂ                                                                   Rzz FRR  RR  RR  FR   R        zÂ  RÂ  RÂ  RÂ  RÏ  RÏ                 :   Z  äi
-0x255A8D: RR                                   FR   R   F   F                xzzzxzzzxzzzRzzzRzzzRRzz Rzz RzzzRR zRR z   z   zÂ  zÂ  zÂ  zÂ                                                                   Rzz Rzz FRR  RR  RR  FR   R    zÂ  zÂ  RÂ  RÂ  RÂ  RÏ  RÏ                 :   Z  äi
-0x255EF1: RR zRR zRR z   z   zÂ  zÂ  zÂ                                                                   Rzz Rzz Rzz FRR  RR  RR  FR   RzÂ  zÂ  zÂ  RÂ  RÂ  RÂ  RÏ  RÏ             :   Z  äi
-0x2562F1: RR zRR zRR z   z   zÂ  zÂ  zÂ                                                                   Rzz Rzz Rzz FRR  RR  RR  FR   RzÂ  zÂ  zÂ  RÂ  RÂ  RÂ  RÏ  RÏ         :   Z  äi
+0x255689: {UNKNOWN_STR}
+0x255A8D: {UNKNOWN_STR}
+0x255EF1: {UNKNOWN_STR}
+0x2562F1: {UNKNOWN_STR}
 0x26CFBB: ¡À  Quacker
 0x26CFF3: Edmund
 0x26D001: Â  The Top
@@ -1080,15 +1080,15 @@
 0x277A11: Les pics autour de {B_ATK_NAME_WITH_PREFIX} ont\ndisparu !
 0x2810CD: PGB/RGAA QGBARGRQゾ ÂRR{PK}
 0x28B966: CQhAhBx AhAyRQSzòRRÀoRi\n ぜ\nィ ぜTiihCiSîi! Ê!jSCAだzÇÂ▶jBQ
-0x28BA06: ‘ぜベ9fでBぃÂgRグÈ.グ9 SR8/Sh8fこRQ8fÇJgÀsQィ ÂAhiRRQy hRRxhiSxKÉwÉªRyグ Eブ Eオe Et Eu Eu Eエu Eu ElÂぎli ?9iC!/TA /QDAARDQ RhTBgSTA
-0x28BCC5: ÈÂ ÂどxÇnhTu Et Eオu Et Eu Eu EチO E éSTRjぃÀ izRzizzl yzjlz▶i À
+0x28BA06: {UNKNOWN_STR}
+0x28BCC5: {UNKNOWN_STR}
 0x2A49C5: kiiii
 0x2B6E56: A g SBQVBAÁ{STRING}SAAQQ ÂAÚBAxŒÂQhŒÂB xR
 0x2B6F47: ィ oR URR:B RRVQQRk♂ AR
 0x2C486A: RRBöRBQ RRAAÜ
-0x2C87B0: :wo :wzÔEAパ\pA▶Dw\pzzA\pzz×\pzzAAパzペパ\p oAAÔzAAÔAA×ÔA×A\p×AwzDAペパ×ADA                    Ô   \n   DÔ                                  EAAAポAAA:
+0x2C87B0: {UNKNOWN_STR}\p{UNKNOWN_STR}\p{UNKNOWN_STR}\p{UNKNOWN_STR}\p{UNKNOWN_STR}\p{UNKNOWN_STR}\p\n{UNKNOWN_STR}
 0x2C89B0: Ez :wo :wz
-0x2C89BD: EAパwA▶DA\pzz×\pzzAAパz×パ\p ペAAÔoAAÔzA×ÔA×A\p×AAzDAw××ADA                    Ô   {SE_SS_ANNE_HORN}  wÔ     :                            AAAAポAAA:
+0x2C89BD: {UNKNOWN_STR}\p{UNKNOWN_STR}\p{UNKNOWN_STR}\p{UNKNOWN_STR}\p
 0x2F9A95: {UNKNOWN_STR}  Ô     :S  :R  UR :RR :Rh  ぜぉ  lz  ぁïピORzRRyth
 0x2F9AF8: RyjjSxij    Ô   Ô
 0x2F9B58: Xjyiぇjy
@@ -1096,8 +1096,8 @@
 0x353F9E: z\nAAR
 0x354081: RAAUAAA
 0x3616F4: ZyUízz
-0x3652FE: \pÔ  +                                                                    röz rrK タU( 5K
-0x369D6A: É   É   É   É   É   É   É                                                    iii:QQA:hiS:ACA                ii  ABÔ hSÔ AAÔ :×CA:ACA:8CA:9CA:ACA:RSR
+0x3652FE: {UNKNOWN_STR}\p
+0x369D6A: {UNKNOWN_STR}
 0x369E04: AAÔ AA\l AA7ÔAA7ÔAAPÔRRhÔ
 0x36AA7C: ki :hi ミSh
 0x36AEF6: B?  .A  U\l  :Ô    でCÒ QCa 8iqÒPQ
@@ -1107,9 +1107,9 @@
 0x373048: RQh QRh RRじÒRhじÇiiぷ iiÔ i
 0x373148: RQh QRh RRじÒRhじÇiiぷ iiÔ i
 0x37DBBC: iyi Vyi  iiRi{UNKNOWN_STR}ii{UNKNOWN_STR}ii{UNKNOWN_STR}iiァ
-0x3834B7: R iii ぞÜぉ Bぺò FwごzzT zzzÒAzzÒAAg RRÒ YYÒ ‘YÒ Aで    xz  i
-0x3845CD: iii▶jii▶jii▶jii▶zji▶zzz▶zzziベ{SE_SS_ANNE_HORN}iベ{SE_SS_ANNE_HORN}iプzÔiizÔiizÔizzÔzzzÔzzzÔ                                                                ▶zzz:zzz ízz …♀z wDニ…i▶z…gkibC▶izzzÔzz\n zホÔ D♀T ♀TzÉzCDホiiwホijíÉ                                                                r\nヘiタüヘi :Uニ  :
-0x3848F6: ö Ôソö  :Ô                                                                                                                        i  iR VRR iRR SRR            i   Ri  RRÒ RRi RBh  SQRぞSBAぞiRB iiR kii äkiぞぇ\l
+0x3834B7: {UNKNOWN_STR}
+0x3845CD: {UNKNOWN_STR}
+0x3848F6: {UNKNOWN_STR}\l{UNKNOWN_STR}
 0x3849C4: {SUPER_RE}ぐボでRAh AAhÒAAQÒRhiiiiiiii
 0x384DC8: RBh RAQÒAAAhBARiRhiÒii{UNKNOWN_STR}i{STRING}ぽ
 0x384EC8: RBh RAQÒAAAhBARiRhiÒii{UNKNOWN_STR}i{STRING}ぽ
@@ -1120,13 +1120,13 @@
 0x38FBDF: zAABzEAgAzh▶zz\p▶zz
 0x38FBF6: VA\n\nCA\nEAADBAAgAA
 0x38FDDF: zzABzAAgAzÏÔ z\pÔ z
-0x38FDF6: \n\nÒ \nEgiDBwTgAAw                        Ò   i     Vz  :z  :D   y   E   :        zRAizzピAzzペベDzペベwDj{STRING}ywCÔ:
+0x38FDF6: {UNKNOWN_STR}
 0x38FE63: CQxzパxzzベzzDベzDziDzAEyw{STRING}:
-0x390D02: U\p {SUPER_RE}e{NAME_END}{SUPER_RE}7Ô  9                                                                                                                                                                        :   :           V  VC iCAiQAAAQAゴ×Qザギ
-0x391017: DラÔ ラ{DYNAMIC}  :Ô                                                                                         R  iA VAQ VRA                R   Bi  AAÒ BRÒ  SAA CAAVRAAVRRAVRRR SRRVRSR ikRAAh AAg AARÒARRÒRRRÒRRh RhRÒR{STRING}i  :ヨァ ァばニぞモEヌ
+0x390D02: {UNKNOWN_STR}\p
+0x391017: {UNKNOWN_STR}
 0x392687: ARÒ Rh  ARÒ AQÒ ARg RBg hSh
-0x3926A6: Ô        V   C  VQ  VQFiSgFARC BBC    iÒ  AÒ  hiÒ CAÒ Qh  RhVÒRkCÒ SABVAAgSABAC\pDQFAgB iTB  iD
-0x39270D: ARÏBAAÒBAQÒQQBÒQRAghiygÔ :Ô          Êラ
+0x3926A6: {UNKNOWN_STR}\p
+0x39270D: {UNKNOWN_STR}
 0x39526D: dji dci ゼtz ソö
 0x399871: ifAE·9w
 0x399A71: ifAE·9w
@@ -1156,7 +1156,7 @@
 0x3AC05C: iCE\piCAAi{STRING}AE\pAk.
 0x3AC07A: giE\pgiAAgi\pAkii{STRING}
 0x3AC094: iiA\piiCAiiiiiiiiiiii
-0x3AC0B2: giEAiiAgiiiiiiiiiiiiiizzzzzzzzzzzA{STRING}iAEi9
+0x3AC0B2: {UNKNOWN_STR}
 0x3AC0E6: \pUzzzzzzzzAzzz\pAikA
 0x3AC154: iCE\piCAAi{STRING}AEi{STRING}
 0x3AC172: giE\pg.AAgi\pAki
@@ -1165,7 +1165,7 @@
 0x3AC19C: iiiiiiiiiiii
 0x3AC1AA: giE\pgiAAgi\pAii
 0x3C38C5: ▶z\nzzzzzzyijyijiiiicラciラcii
-0x3CAE18: hiiÔRhiÔhiiÔRiiÔihi{STRING}iii{B_ATK_NAME_WITH_PREFIX}   Ô                                                                                                                                                            :ii ·9f ki.ぞ
+0x3CAE18: {UNKNOWN_STR}
 0x3CAF09: iii{STRING}i999.ii.i.9f
 0x3CEEC8: zÒ9 zjÀi z
 0x3D4F26: Une Mémoire Ball très haut de\ngamme avec un meilleur taux de\ncapture qu’une Super Ball.
@@ -1238,10 +1238,10 @@
 0x3D61FA: Monte l’Att. Spé. en combat.\nS’annule si le Pokémon est retiré.\n
 0x3D624F: Une jolie poupée.\nPermet de fuir n’importe quel\ncombat contre un Pokémon sauvage.
 0x3D6297: Un objet séduisant.\nPermet de fuir n’importe quel\ncombat contre un Pokémon sauvage.
-0x3D62DF: Empêche les Pokémon sauvages faibles\nd'apparaître pendant 200 étapes.
-0x3D6318: Empêche les Pokémon sauvages faibles\nd'apparaître pendant 250 étapes.
+0x3D62DF: Empêche les Pokémon faibles\nd'apparaître pendant 200 étapes.
+0x3D6318: Empêche les Pokémon faibles\nd'apparaître pendant 250 étapes.
 0x3D6351: Une corde longue et durable.\nUtilisez-la pour vous échapper\ninstantanément d'une grotte ou d'un\ndonjon.
-0x3D639C: Empêche les Pokémon sauvages faibles\nd'apparaître pendant 100 étapes.
+0x3D639C: Empêche les Pokémon faibles\nd'apparaître pendant 100 étapes.
 0x3D63D5: Une pierre particulière qui fait\névoluer certaines espèces de\nPokémon. Elle est aussi rouge que le\nsoleil.
 0x3D642D: Une pierre particulière qui fait\névoluer certaines espèces de\nPokémon. Elle est aussi noire que le\nciel nocturne.
 0x3D648D: Une pierre particulière qui fait\névoluer certaines espèces de\nPokémon. Elle est de couleur orange.
@@ -1394,7 +1394,7 @@
 0x3D936F: Visière qui révèle les Pokémon\ninvisibles. Fabriquée par SILPH S.A.\n
 0x3D93C9: Une attaque extrêmement puissante.\nCependant, si l'utilisateur est\ntouché avant d'utiliser le\nmouvement, il tressaillira.
 0x3D942C: D'énormes griffes acérées\ns'accrochent et frappent l'ennemi\nrapidement et avec une grande\npuissance.
-0x3D9473: L'ennemi est frappé par un jet d'eau\npulsé . Cela peut également\nconfondre la cible .
+0x3D9473: L'ennemi reçoit un jet d'eau pulsé.\nCela peut aussi\nconfondre la cible.
 0x3D94C1: L'utilisateur calme son esprit et\nconcentre son esprit pour élever son\nSp. Atk et Sp. Statistiques\ndéfensives.
 0x3D9518: Un rugissement sauvage qui fait\nsortir l'ennemi du combat. Dans le\nwild, ROAR met fin à la bataille.
 0x3D9576: Une capacité qui laisse l'ennemi\ngravement empoisonné. Ses dégâts de\npoison s'aggravent à chaque tour.
@@ -1409,7 +1409,7 @@
 0x3D987A: Une attaque brutale qui inflige de\ngraves dégâts à l'ennemi. Cependant,\nl'utilisateur doit se reposer au\ntour suivant.
 0x3D98DC: Un mur de lumière est créé en cinq\ntours. Il réduit les dégâts de Sp.\nAttaque d'attaque.
 0x3D9930: L'utilisateur est complètement\nprotégé contre les attaques pendant\nle tour où il est utilisé. Il peut\néchouer s'il est utilisé\nsuccessivement.
-0x3D9998: Une forte pluie est invoquée pendant\ncinq tours. Pendant ce temps, les\nmouvements WATER-type sont mis sous\ntension.
+0x3D9998: Une forte pluie est invoquée pour\ncinq tours.\nLes attaques Eau sont renforcées\npendant cette durée.
 0x3D99F2: L'utilisateur frappe l'ennemi avec\ndes tentacules ou des racines ,\nvolant les PV de la cible et se\nsoignant lui-même.
 0x3D9A51: Protège le groupe avec un bouclier\ncontre tous les problèmes de statut\nsur cinq tours.
 0x3D9A9F: Cette attaque devient de plus en\nplus puissante à mesure que le\nPokémon n'aime pas son dresseur.
@@ -1417,13 +1417,13 @@
 0x3D9B58: L'ennemi est frappé avec une solide\nqueue d'acier . Cela peut réduire la\nstatistique de défense de la cible .
 0x3D9BB0: Une énorme décharge électrique est\nlancée sur l'ennemi. Cela peut\nprovoquer une paralysie.
 0x3D9BFE: Frappe l'ennemi avec un énorme coup\nde foudre . Cela peut provoquer une\nparalysie.
-0x3D9C3F: Provoque un tremblement de terre qui\nfrappe tous les Pokémon au combat, à\nl'exclusion de l'utilisateur.
+0x3D9C3F: Provoque un séisme qui frappe\ntous les Pokémon au combat,\nhors l'utilisateur.
 0x3D9C8C: Cette attaque devient de plus en\nplus puissante à mesure que le\nPokémon aime son dresseur.
 0x3D9CD9: Une attaque en 2 tours au cours de\nlaquelle l'utilisateur creuse sous\nterre, puis frappe. Il peut être\nutilisé pour sortir des donjons.
 0x3D9D3C: Une puissante explosion d'énergie\ntélékinétique frappe l'ennemi. Cela\npeut réduire la Sp de la cible.\nStatistique déf.
 0x3D9D9C: L'ennemi est attaqué avec une masse\nsombre . Cela peut réduire le Sp de\nla cible. Statistique déf.
 0x3D9DED: Frappe l'ennemi avec un poing dur\ncomme la pierre, etc. Il brise les\nbarrières telles que REFLECT et\nLIGHT SCREEN.
-0x3D9E50: L'utilisateur commence à se déplacer\nsi rapidement qu'il crée des copies\nillusoires pour augmenter son\ncaractère évasif.
+0x3D9E50: L'utilisateur se met à bouger si\nvite qu'il crée des copies\nillusoires pour augmenter son\nesquive.
 0x3D9EAC: Une barrière solide est érigée en\ncinq tours. Cela réduit les dégâts\ncausés par les attaques physiques\npendant cette période.
 0x3D9F0F: Une rapide décharge électrique\nfrappe l'ennemi. Cette attaque est\nimpossible à esquiver.
 0x3D9F60: L'ennemi est rôti par une puissante\nexplosion de feu. Cela peut laisser\nla cible avec une brûlure.
@@ -1436,7 +1436,7 @@
 0x3DA1B6: Une capacité d'attaque qui devient\ntrès puissant si l'utilisateur est\nempoisonné, brûlé ou paralysé.
 0x3DA20F: Une capacité d'attaque qui peut\navoir un effet supplémentaire en\nfonction du terrain de bataille .
 0x3DA262: Une capacité qui endort\nl'utilisateur pendant deux tours\npour restaurer HP et résoudre tout\nproblème de statut.
-0x3DA2C4: L'ennemi, s'il est du genre opposé à\ncelui de l'utilisateur, devient\nentiché et ne peut pas attaquer.
+0x3DA2C4: L'ennemi du genre opposé à\nl'utilisateur devient épris et ne\npeut plus attaquer.
 0x3DA31E: Une attaque qui donne à\nl’utilisateur une opportunité de\nvoler l’objet de l’ennemi.
 0x3DA369: L'ennemi est frappé avec des ailes\ndures comme l'acier. Cela peut\négalement augmenter la statistique\nDefense de l’utilisateur.
 0x3DA3BD: Un pouvoir spécial est transmis à\nl'ennemi, l'amenant à échanger\ncapacités avec l'utilisateur.
@@ -1444,7 +1444,7 @@
 0x3DA477: Attaque maximale et féroce, mais\nbaisse fortement l’Att. Spé. du\nlanceur.
 0x3DA4DC: Attaque l'ennemi avec des lames\ntranchantes ou des griffes. Il peut\négalement abattre des arbres et de\nl'herbe minces en dehors des\ncombats.
 0x3DA545: L'utilisateur s'envole au premier\ntour, puis attaque au tour suivant.\nIl peut être utilisé pour voler vers\nn'importe quelle ville connue.
-0x3DA5AB: Crée une énorme vague, puis s'écrase\nsur l'ennemi. Il peut être utilisé\npour voyager sur l'eau.
+0x3DA5AB: Crée une vague énorme qui\ns'écrase sur l'ennemi.\nPeut aussi servir à voyager sur\nl'eau.
 0x3DA608: L'utilisateur développe une\npuissance énorme, puis frappe\nl'ennemi. Il peut être utilisé pour\ndéplacer de gros rochers ronds.
 0x3DA66D: Lâche une puissante explosion de\nlumière qui réduit la précision de\nl'ennemi. Il éclaire également les\ngrottes sombres.
 0x3DA6CD: Frappe l'ennemi avec une attaque\ndure et écrasante. Il peut briser\ndes rochers fissurés.
@@ -1481,7 +1481,7 @@
 0x3E120B: wi▶zD{STRING}zzD▶zzDzzzQzTAhzQRizQhizQi{STRING}jhiÔRi{UNKNOWN_STR}hiÔ i{UNKNOWN_STR} ik\n {UNKNOWN_STR}  Ô                                                                                                  V   …   C  VQ  CR  Ch VQi   lÒ  lg   QÓ  Rx  SSÓ SjhÓR
 0x3E12F3: l   T  lhÓ TiSAhiiii\nii\n
 0x3E1326: j{STRING}jTyiyRijzRhzRTh{STRING}z\nR{STRING}R{STRING}R{UNKNOWN_STR}       Ô   Ô   ▶zÓ jRxzjiSR▶iii                        zÓ  RxÓ                                  lQi lQi lQi lQi lQS  CS  CS  DSRÓkSRÓ:jRx :Rx  RÓ  RÔ  RÔ  RÔ  hzzySR{STRING}{STRING}▶i\nÔ
-0x3E13EE: V   l lyS  z▶VÒ TVw lDAzjDSBQAiiyASx\nyzkiThkSyzzSzzRjAQikyz
+0x3E13EE: {UNKNOWN_STR}
 0x3E1448: hkiii
 0x3E144E: ki\ni{STRING}iyiy
 0x3E1458: ySx▶yThziiy
@@ -2943,7 +2943,7 @@
 0x4163BB: Plus de place pour\nstocker des objets.
 0x4163DB: Combien de {STR_VAR_1}(s)\njeter ?
 0x416409: Jeter {STR_VAR_2} de\ncet objet ?
-0x416425: Journal : {PLAYER} ! Ce n'est pas le moment\npour ça !{PAUSE_UNTIL_PRESS}
+0x416425: Journal : {PLAYER} !\nCe n'est pas le moment\npour ça !{PAUSE_UNTIL_PRESS}
 0x416451: Pas de Vélo ici.{PAUSE_UNTIL_PRESS}
 0x41647E: Hein ?\nCherche-Objet réagit !\pObjet enterré !{PAUSE_UNTIL_PRESS}
 0x4164C2: Oh !\nCherche-Objet bouge !\pObjet sous tes pieds !\p… … … … … …{PAUSE_UNTIL_PRESS}
@@ -2954,7 +2954,7 @@
 0x416631: La Boîte est pleine. {PAUSE_UNTIL_PRESS}
 0x416644: QUANT. POUDRE: {STR_VAR_1} {PAUSE_UNTIL_PRESS}
 0x416655: POUDRE
-0x41665C: Tu joues de la FLÛTE POKé.\nQuelle mélodie entraînante !{PAUSE_UNTIL_PRESS}
+0x41665C: Tu joues de la FLÛTE POKé.\pQuelle mélodie entraînante !{PAUSE_UNTIL_PRESS}
 0x416690: Tu joues de la FLÛTE POKé.
 0x4166A7: La FLÛTE POKé réveille les Pokémon\nendormis.\n{PAUSE_UNTIL_PRESS}
 0x4166D3: Boîte CT
@@ -3521,7 +3521,7 @@
 0x41A694: un autre endroit
 0x41A6A5: Retiré l'objet {STR_VAR_1} du PC de\n{PLAYER} et donné à {STR_VAR_2}\nà tenir.
 0x41A6E1: Retiré {STR_VAR_1} d'un PC, donné à\n{STR_VAR_2}, et mis {STR_VAR_3}\ndans le SAC.
-0x41A732: Beaucoup discuté avec des Dresseurs.
+0x41A732: Beaucoup parlé avec des Dresseurs.
 0x41A74E: facilement
 0x41A756: avec ténacité
 0x41A762: tant bien que mal
@@ -3672,20 +3672,20 @@
 0x41B81B: Comment enregistrer un objet ?
 0x41B836: Annuler
 0x41B83D: Salut les Dresseurs ! SALUT,\nDresseurs ! … … …\nAllez, faites du bruit !\pSALUT, Dresseurs !\p\nC'est moi, le MEC POKé !\l\p
-0x41B8BF: Aujourd'hui, le MEC POKé explique\ncomment combattre des Pokémon !\nImagine : tu te balades et soudain\nun Pokémon sauvage apparaît !\l\pÀ toi d'utiliser tes Pokémon et\nleurs capacités pour réduire les PV\nadverses à zéro et gagner !\l\lJe vais te le montrer en vrai !\p\nC'est parti !\p\pGarde les yeux sur le super\nSHOW DU MEC POKé !
+0x41B8BF: Aujourd'hui, le MEC POKé explique\ncomment combattre des Pokémon !\nImagine : tu te balades et soudain\nun Pokémon sauvage apparaît !\l\pÀ toi d'utiliser tes Pokémon et\lleurs capacités pour réduire les PV\nadverses à zéro et gagner !\l\pJe vais te le montrer en vrai !\p\nC'est parti !\p\pGarde les yeux sur le super\nSHOW DU MEC POKé !
 0x41BA41: Alors, tu as suivi ? Même si les PV\nde ton Pokémon tombent à zéro et\nqu'il ne peut plus se battre, pas de\npanique !\p\nAmène-le dans un Centre Pokémon\let soigne-le !\p\nAllez, à bientôt !\p\pSouviens-toi : une bonne action\npar jour rend heureux toujours !
-0x41BB40: Aujourd'hui, le MEC POKé parle des\naltérations d'état ! Poison,\nparalysie, sommeil, brûlure…\nIl y en a d'autres, et c'est un\nvrai souci.\n\pAvec ça, ton Pokémon peut devenir\ninutile en combat.\p\nÇa fait mal au MEC POKé de voir un\nPokémon souffrir…\n\pAlors que faire ?\n\pJe vais te montrer !\n\pC'est parti !\p\pGarde les yeux sur le super\nSHOW DU MEC POKé !
-0x41BD10: Poison et paralysie ne partent pas\naprès le combat. Un Pokémon\nempoisonné perd des PV même en\nmarchant.\nSoigne vite ce genre de souci.\p\nUtilise un objet ou file au Centre\nPokémon pour soigner.\n\pPas si dur, hein ?\n\pAllez, à bientôt !\n\pSouviens-toi : une bonne action\npar jour rend heureux toujours !
-0x41BE76: Tout le monde connaît les effets de\ntype ? Les Pokémon et leurs\ncapacités ont tous des types.\nPar exemple : PLANTE ou EAU.\nPense au type de la capacité qui\nattaque…\p\nEt au type du Pokémon qui reçoit\nl'attaque.\n\pSelon l'affinité, les dégâts\nchangent.\p\nÇa dépend si le duo de types est\nbon ou mauvais.\n\pSans ça, les combats seront rudes.\n\pJe vais te montrer ce que je veux\ndire.\p\nC'est parti !\p\pGarde les yeux sur le super\nSHOW DU MEC POKé !
-0x41C0AF: Peut-on lancer une attaque qui fait\ntrès mal ? Le Pokémon adverse\nest-il dangereux pour ton Pokémon ?\nPeut-il avoir des capacités\nterribles ?\n\pRegarde les affinités pour prendre\nl'avantage !\p\nAllez, à bientôt !\p\pEt pour le MEC POKé COOL, des\nkids GÉNIAUX comme toi, ça colle !\l\pSouviens-toi : une bonne action\npar jour rend heureux toujours !
+0x41BB40: Aujourd'hui, le MEC POKé parle des\naltérations d'état ! Poison,\nparalysie, sommeil, brûlure…\pIl y en a d'autres, et c'est un\nvrai souci.\n\pAvec ça, ton Pokémon peut devenir\ninutile en combat.\p\nÇa fait mal au MEC POKé de voir un\nPokémon souffrir…\n\pAlors que faire ?\n\pJe vais te montrer !\n\pC'est parti !\p\pGarde les yeux sur le super\nSHOW DU MEC POKé !
+0x41BD10: Poison et paralysie ne partent pas\naprès le combat.\pUn Pokémon empoisonné perd des PV\nmême en marchant.\nSoigne vite ce genre de souci.\p\nUtilise un objet ou file au Centre\nPokémon pour soigner.\n\pPas si dur, hein ?\n\pAllez, à bientôt !\n\pSouviens-toi : une bonne action\npar jour rend heureux toujours !
+0x41BE76: Tout le monde connaît les effets de\ntype ?\pLes Pokémon et leurs capacités ont\ntous des types.\pPar exemple : PLANTE ou EAU.\nPense au type de la capacité qui\nattaque…\p\nEt au type du Pokémon qui reçoit\nl'attaque.\n\pSelon l'affinité, les dégâts\nchangent.\p\nÇa dépend si le duo de types est\nbon ou mauvais.\n\pSans ça, les combats seront rudes.\n\pJe vais te montrer ce que je veux\ndire.\p\nC'est parti !\p\pGarde les yeux sur le super\nSHOW DU MEC POKé !
+0x41C0AF: Peut-on lancer une attaque qui fait\ntrès mal ?\pLe Pokémon adverse est-il dangereux\npour ton Pokémon ?\nPeut-il avoir des capacités\nterribles ?\n\pRegarde les affinités pour prendre\nl'avantage !\p\nAllez, à bientôt !\p\pEt pour le MEC POKé COOL, des\nkids GÉNIAUX comme toi, ça colle !\l\pSouviens-toi : une bonne action\npar jour rend heureux toujours !
 0x41C23B: Aujourd'hui, le MEC POKé montre\ncomment attraper des Pokémon !\nImagine… Un Pokémon stylé apparaît\nd'un coup dans la nature !\nOh, tu le veux !\pImpossible de résister !\n\pTu dois l'attraper !\nIl te le faut !\p\nJe vais te montrer comment faire !\p\nC'est parti !\p\pGarde les yeux sur le super\nSHOW DU MEC POKé !
 0x41C384: Si ta première Poké Ball échoue,\nne lâche rien ! Lance encore des\nPoké Balls…\nÇa finira par marcher !\p\nAllez, à bientôt !\p\pSouviens-toi : une bonne action\npar jour rend heureux toujours !
-0x41C459: Salut tout le monde ! Vous avez des\nCT ? Une CT, Capsule Technique,\nc'est super !\nElle apprend à un Pokémon une\ncapacité qu'il n'aurait pas en\nmontant de niveau !\p\nGénial, non ? Quel monde pratique !\p\nOuvre le Boîtier CT et regarde\nles CT que tu as.\n\pTu peux aussi les examiner\nen détail.
-0x41C587: MEC POKé : NORMAL, EAU, PLANTE…\nLes CT ont aussi un type.\nVérifie-le et enseigne-le à un\nPokémon qui matche bien.\nExemple : Vibraqua va bien aux\nPokémon de type EAU.\n\pBALLE GRAINE est une capacité que\nbeaucoup de Pokémon PLANTE peuvent\napprendre.\n\pEncore autre chose !
-0x41C693: Ne regarde pas que le type, lis la\ndescription aussi. Elle donne des\nindices sur quel Pokémon peut\napprendre la capacité.\p\nPar exemple, prends Poing de Feu.\p\nOn n'imagine pas un oiseau ou un\npoisson l'apprendre.\n\pEssaie-le sur des Pokémon avec\ndes bras pour frapper !
+0x41C459: Salut tout le monde ! Vous avez des\nCT ?\pUne CT, Capsule Technique,\nc'est super !\pElle apprend à un Pokémon une\ncapacité qu'il n'aurait pas en\nmontant de niveau !\p\nGénial, non ? Quel monde pratique !\p\nOuvre le Boîtier CT et regarde\nles CT que tu as.\n\pTu peux aussi les examiner\nen détail.
+0x41C587: MEC POKé : NORMAL, EAU, PLANTE…\nLes CT ont aussi un type.\pVérifie-le et enseigne-le à un\nPokémon qui matche bien.\pExemple : Vibraqua va bien aux\nPokémon de type EAU.\n\pBALLE GRAINE est une capacité que\nbeaucoup de Pokémon PLANTE peuvent\napprendre.\n\pEncore autre chose !
+0x41C693: Ne regarde pas que le type, lis la\ndescription aussi.\pElle donne des indices sur quel\nPokémon peut apprendre la\ncapacité.\p\nPar exemple, prends Poing de Feu.\p\nOn n'imagine pas un oiseau ou un\npoisson l'apprendre.\n\pEssaie-le sur des Pokémon avec\ndes bras pour frapper !
 0x41C7B4: Wow, j'ai beaucoup parlé ! Allez,\nà bientôt !\n\pSouviens-toi : une bonne action\npar jour rend heureux toujours !
-0x41C82A: Le SAC d'un Dresseur a plein de\nfonctions pratiques ! Prenons la\nPOCHE Objets clés. Tu peux utiliser\nun objet clé sans ouvrir le SAC à\nchaque fois.\p\nPar exemple, disons que j'ai une\nTELE C.S. dans mon SAC.\n\pJe peux l'enregistrer pour\nl'utiliser tout de suite, je te\nmontre !\p\nC'est parti !\p\pGarde les yeux sur le quasi super\nSHOW DU MEC POKé !
-0x41C994: Et voilà, ta TELE C.S. est\nenregistrée. Comment l'utiliser ?\nVoici. Une fois un objet clé\nenregistré dans la POCHE Objets\nclés, tu peux l'utiliser avec\nSelect.\n\pTu as donc un accès direct à la\nTELE C.S.\l\pIl suffit d'appuyer et tu me vois !\n\pTant d'attention, c'est un peu\ngênant !\p\nAllez, à bientôt !\p\pSouviens-toi : une bonne action\npar jour rend heureux toujours !
+0x41C82A: Le SAC d'un Dresseur a plein de\nfonctions pratiques !\pPrenons la POCHE Objets clés.\nTu peux utiliser un objet clé sans\nouvrir le SAC à chaque fois.\p\nPar exemple, disons que j'ai une\nTELE C.S. dans mon SAC.\n\pJe peux l'enregistrer pour\nl'utiliser tout de suite, je te\nmontre !\p\nC'est parti !\p\pGarde les yeux sur le quasi super\nSHOW DU MEC POKé !
+0x41C994: Et voilà, ta TELE C.S. est\nenregistrée. Comment l'utiliser ?\pVoici. Une fois un objet clé\nenregistré dans la POCHE Objets\nclés, tu peux l'utiliser avec\nSelect.\n\pTu as donc un accès direct à la\nTELE C.S.\l\pIl suffit d'appuyer et tu me vois !\n\pTant d'attention, c'est un peu\ngênant !\p\nAllez, à bientôt !\p\pSouviens-toi : une bonne action\npar jour rend heureux toujours !
 0x41CB3C: LEO
 0x41CB41: QUELQU'UN
 0x41CB49: Aide
@@ -3750,7 +3750,7 @@
 0x41D222: \n\nKen Sugimori\n\nShigeki Morimoto\n\n
 0x41D247: Chef de programme\n\nChef de planification\n\nChef du design graphique\n\n
 0x41D281: Tetsuya Watanabe Koji Nishino Takao\nUnno
-0x41D2C5: Hiroyuki Nakamura Masao Taya Satoshi\nNohara Miyuki Iwasawa Daisuke Goto
+0x41D2C5: Hiroyuki Nakamura Masao Taya\nSatoshi Nohara Miyuki Iwasawa\nDaisuke Goto
 0x41D312: Programmeurs système
 0x41D32D: Tetsuya Watanabe Akito Mori Hisashi\nSogabe Sousuke Tamada
 0x41D36D: Graphistes
@@ -3773,7 +3773,7 @@
 0x41D707: \nTeruyuki Yoshioka\nTakao Nakano\n\nSatoshi Mitsuhara\nDaisuke Hoshino\n
 0x41D74C: \n\nTests produits NCL\n\n\n\n
 0x41D766: NCL Super Mario Club
-0x41D799: Hiro Nakamura Hiroyuki Uesugi Teruki\nMurakawa Kazuya Suyama
+0x41D799: Hiro Nakamura Hiroyuki Uesugi\nTeruki Murakawa Kazuya Suyama
 0x41D7F1: Kenji Tominaga Kenjiro Ito Tomotaka\nKomura Michiko Takizawa
 0x41D849: Makiko Takada Mikiko Ohashi Shusaku\nEgami Takanao Kondo Rui Kawaguchi
 0x41D894: \n\nVérification code braille\n\n\n\n
@@ -3799,7 +3799,7 @@
 0x41DC29: Vérification du code braille
 0x41DC45: Fédération nationale {CLEAR_TO}Ûdes\naveugles Patricia A. Maurer\nBibliothèque braille japonaise Union\neuropéenne des aveugles
 0x41DCAC: \nVérification code braille\n\n\n\n\n
-0x41DCC5: Bibliothèque nationale d'information\n{CLEAR_TO}&Service Margaret Campion
+0x41DCC5: Bibliothèque nationale d'info\n{CLEAR_TO}&Service Margaret Campion
 0x41DD1D: Takehiro Izushi Motoyasu Tojima\nHitoshi Yamagami Hiroyuki Uesugi
 0x41DD79: Nicola Pratt-Barlow Shellie Dow\nAnthony Howitt Naoko Saeki Kyoko\nOnishi
 0x41DDC6: Vérification du code braille
@@ -3899,7 +3899,7 @@
 0x41E6DC: Pas d'INFOS MYSTÈRE, des nouvelles\nseront importées.
 0x41E717: Où accéder à la CARTE MYSTÈRE ?\n
 0x41E741: Où accéder aux INFOS MYSTÈRE ?\n
-0x41E76B: Lien en veille... ... ... Bouton B :\nAnnuler
+0x41E76B: Lien en veille... Bouton B :\nAnnuler
 0x41E7A3: Communication terminée.
 0x41E7BC: Erreur de communication.
 0x41E7D1: Communication annulée.
@@ -3951,7 +3951,7 @@
 0x41EE26: Jeter
 0x41EE2B: DE LA.\nTOUT{CLEAR_TO}キANNULER{CLEAR_TO}3OK
 0x41EFB8: iii{STRING}iiiijiziwizi
-0x41F007: kjiy!kiy!\n▶zz!kiy!iiy!iiy!iiy!iiy!9999999999999999999999999999999999/jiy/ji{STRING}/zz\n/ji{STRING}/jii/jii/jii/jii
+0x41F007: {UNKNOWN_STR}\n{UNKNOWN_STR}
 0x41F0A8: iiy!iiy!kiy!
 0x41F0BD: iy!kiy!kiy!/jii/jii/ji{STRING}/z
 0x41F160: wizijiziiiiii{STRING}zz
@@ -3962,20 +3962,20 @@
 0x444DDF: La flamme sur sa queue montre la\nforce de sa force vitale. Si elle\nest faible, la flamme brûle\négalement faiblement.
 0x444E48: Il est de nature très impétueux,\nc'est pourquoi il cherche\nconstamment des adversaires. Il ne\nse calme que lorsqu'il gagne.
 0x444EAD: Respirant des flammes intenses et\nchaudes, il peut faire fondre\npresque tout. Son souffle inflige\nterribles douleurs aux ennemis.
-0x444F18: La coquille, qui durcit peu après la\nnaissance, est résiliente. Si vous\nle poussez, il rebondira.
+0x444F18: La coquille durcit peu après la\nnaissance et reste résiliente.\nSi vous le poussez, il rebondira.
 0x444F80: Ce Pokémon est très populaire parmi\nles personnes âgées car sa queue\nrecouverte de fourrure est un\nsymbole de sa longévité.
 0x444FE7: Les canons-fusées sur sa coque\ntirent des jets d'eau capables de\npercer des trous à travers de\nl'acier épais.
 0x44504A: Ses pieds sont dotés de ventouses\nconçues pour adhérer à n'importe\nquelle surface. Il grimpe avec\nténacité aux arbres pour se nourrir.
 0x4450AF: Il se prépare à l'évolution en\ndurcissant sa coquille autant que\npossible pour protéger son corps\nmou.
 0x44510F: La poudre hydrofuge sur ses ailes\nlui permet de récolter le miel, même\nsous les pluies les plus fortes.
-0x445170: Son dard venimeux est très puissant.\nSon corps aux couleurs vives est\ndestiné à avertir ses ennemis.
+0x445170: Son dard venimeux est puissant.\nSon corps aux couleurs vives est\ndestiné à avertir ses ennemis.
 0x4451D3: Bien qu'il s'agisse d'un cocon, il\npeut bouger un peu. Il peut étendre\nsa barbe empoisonnée s'il est\nattaqué.
 0x445234: Il peut vaincre n'importe quel\nadversaire avec ses puissants dards\nempoisonnés. Il attaque parfois en\nessaims.
 0x445296: Commun dans les zones herbeuses et\nles forêts, il est très docile et\nchassera ennemis en battant du\nsable.
-0x4452FD: Il survole son vaste territoire à la\nrecherche de proies et les abat avec\nses griffes très développées.
+0x4452FD: Il survole son vaste territoire et\ntraque ses proies avant de les\nabattre avec ses griffes acérées.
 0x44535E: En battant des ailes de toutes ses\nforces, Roucarnage peut produire une\nrafale de vent capable de plier les\ngrands arbres.
 0x4453C8: Vivant partout où il y a de la\nnourriture disponible, il récupère\nsans cesse des produits comestibles\ntoute la journée.
-0x445427: Ses pattes arrière ont chacune trois\norteils. Ils sont palmés, ce qui lui\npermet de nager à travers les\nrivières.
+0x445427: Ses pattes arrière ont 3 doigts.\nIls sont palmés, ce qui lui permet\nde nager à travers les rivières.
 0x445480: Il bat ses ailes courtes pour\nchasser les insectes des herbes\nhautes. Il les cueille ensuite avec\nson bec court.
 0x4454EA: Il se projette soudainement haut\ndans le ciel , puis s'effondre d'un\nseul coup pour frapper sa proie.
 0x445551: Il peut librement détacher sa\nmâchoire pour avaler des grosses\nproies entières. Cependant, il peut\ndevenir trop lourd à déplacer.
@@ -3984,13 +3984,13 @@
 0x445686: Lorsque son électricité augmente,\nses muscles sont stimulés et il\ndevient plus agressif que\nd'habitude.
 0x4456EB: Il creuse et vit sous terre. S'il\nest menacé, il se recroqueville en\nboule pour se protéger.
 0x44574C: Il est habile à attaquer avec les\népines sur son dos et ses griffes\nacérées tout en se précipitant\nrapidement.
-0x4457B5: Le poison caché dans sa petite corne\nest extrêmement puissant. Même une\npetite égratignure peut avoir des\nconséquences fatales.
+0x4457B5: Le poison caché dans sa corne est\nextrêmement puissant. Même une\npetite égratignure peut avoir des\nconséquences fatales.
 0x44581B: Il est de nature calme et\nattentionnée. Parce que sa corne\npousse lentement, il préfère ne pas\nse battre.
 0x445875: Il utilise son corps écailleux et\nrobuste pour sceller l'entrée de son\nnid et protéger ses petits des\nprédateurs.
 0x4458DB: Il scrute son environnement en\nlevant ses oreilles hors de l'herbe.\nIl frappera en premier s'il détecte\nun danger.
 0x44594A: Rapide à se mettre en colère, il\npoignarde les ennemis avec sa corne\npour injecter un puissant poison\nquand il devient agité.
 0x4459B0: Il balance sa grosse queue pendant\nla bataille . Si son ennemi\nsursaute, il chargera avec son corps\nrobuste.
-0x445A18: Son comportement adorable et son cri\nle rendent très populaire.\nCependant, ce mignon Pokémon est\nrarement trouvé.
+0x445A18: Son comportement mignon et son cri\nle rendent très populaire.\nCependant, ce mignon Pokémon est\nrarement trouvé.
 0x445A7B: Grâce à son ouïe fine, il peut\ncapter les sons de loin. Il se cache\ngénéralement dans des endroits\ncalmes.
 0x445ADB: Lorsqu'il est jeune, il a six\nmagnifiques queues. Quand il\ngrandit, plusieurs nouvelles queues\npoussent.
 0x445B33: Certaines légendes prétendent que\nchacune de ses neuf queues possède\nson propre type unique de pouvoir\nmystique spécial .

@@ -67,6 +67,10 @@ def main():
         _, f_text = f_line.split(":", 1)
         _, o_text = o_line.split(":", 1)
 
+        # If the translated line is identical to the origin, skip checks
+        if f_text == o_text:
+            continue
+
         o_p, o_l = count_breaks(o_line)
         f_p, f_l = count_breaks(f_line)
 
