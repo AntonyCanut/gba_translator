@@ -1,6 +1,6 @@
 0x41D247: Chef de programme\n\nChef de planification\n\nChef du design graphique\n\n
 0x41D281: Tetsuya Watanabe Koji Nishino Takao\nUnno
-0x41D2C5: Hiroyuki Nakamura Masao Taya Satoshi\nNohara Miyuki Iwasawa Daisuke Goto
+0x41D2C5: Hiroyuki Nakamura Masao Taya\nSatoshi Nohara Miyuki Iwasawa\nDaisuke Goto
 0x41D312: Programmeurs système
 0x41D32D: Tetsuya Watanabe Akito Mori Hisashi\nSogabe Sousuke Tamada
 0x41D36D: Graphistes
@@ -23,7 +23,7 @@
 0x41D707: \nTeruyuki Yoshioka\nTakao Nakano\n\nSatoshi Mitsuhara\nDaisuke Hoshino\n
 0x41D74C: \n\nTests produits NCL\n\n\n\n
 0x41D766: NCL Super Mario Club
-0x41D799: Hiro Nakamura Hiroyuki Uesugi Teruki\nMurakawa Kazuya Suyama
+0x41D799: Hiro Nakamura Hiroyuki Uesugi\nTeruki Murakawa Kazuya Suyama
 0x41D7F1: Kenji Tominaga Kenjiro Ito Tomotaka\nKomura Michiko Takizawa
 0x41D849: Makiko Takada Mikiko Ohashi Shusaku\nEgami Takanao Kondo Rui Kawaguchi
 0x41D894: \n\nVérification code braille\n\n\n\n
@@ -49,7 +49,7 @@
 0x41DC29: Vérification du code braille
 0x41DC45: Fédération nationale {CLEAR_TO}Ûdes\naveugles Patricia A. Maurer\nBibliothèque braille japonaise Union\neuropéenne des aveugles
 0x41DCAC: \nVérification code braille\n\n\n\n\n
-0x41DCC5: Bibliothèque nationale d'information\n{CLEAR_TO}&Service Margaret Campion
+0x41DCC5: Bibliothèque nationale d'info\n{CLEAR_TO}&Service Margaret Campion
 0x41DD1D: Takehiro Izushi Motoyasu Tojima\nHitoshi Yamagami Hiroyuki Uesugi
 0x41DD79: Nicola Pratt-Barlow Shellie Dow\nAnthony Howitt Naoko Saeki Kyoko\nOnishi
 0x41DDC6: Vérification du code braille
@@ -149,7 +149,7 @@
 0x41E6DC: Pas d'INFOS MYSTÈRE, des nouvelles\nseront importées.
 0x41E717: Où accéder à la CARTE MYSTÈRE ?\n
 0x41E741: Où accéder aux INFOS MYSTÈRE ?\n
-0x41E76B: Lien en veille... ... ... Bouton B :\nAnnuler
+0x41E76B: Lien en veille... Bouton B :\nAnnuler
 0x41E7A3: Communication terminée.
 0x41E7BC: Erreur de communication.
 0x41E7D1: Communication annulée.
@@ -201,7 +201,7 @@
 0x41EE26: Jeter
 0x41EE2B: DE LA.\nTOUT{CLEAR_TO}キANNULER{CLEAR_TO}3OK
 0x41EFB8: iii{STRING}iiiijiziwizi
-0x41F007: kjiy!kiy!\n▶zz!kiy!iiy!iiy!iiy!iiy!9999999999999999999999999999999999/jiy/ji{STRING}/zz\n/ji{STRING}/jii/jii/jii/jii
+0x41F007: {UNKNOWN_STR}\n{UNKNOWN_STR}
 0x41F0A8: iiy!iiy!kiy!
 0x41F0BD: iy!kiy!kiy!/jii/jii/ji{STRING}/z
 0x41F160: wizijiziiiiii{STRING}zz
@@ -212,20 +212,20 @@
 0x444DDF: La flamme sur sa queue montre la\nforce de sa force vitale. Si elle\nest faible, la flamme brûle\négalement faiblement.
 0x444E48: Il est de nature très impétueux,\nc'est pourquoi il cherche\nconstamment des adversaires. Il ne\nse calme que lorsqu'il gagne.
 0x444EAD: Respirant des flammes intenses et\nchaudes, il peut faire fondre\npresque tout. Son souffle inflige\nterribles douleurs aux ennemis.
-0x444F18: La coquille, qui durcit peu après la\nnaissance, est résiliente. Si vous\nle poussez, il rebondira.
+0x444F18: La coquille durcit peu après la\nnaissance et reste résiliente.\nSi vous le poussez, il rebondira.
 0x444F80: Ce Pokémon est très populaire parmi\nles personnes âgées car sa queue\nrecouverte de fourrure est un\nsymbole de sa longévité.
 0x444FE7: Les canons-fusées sur sa coque\ntirent des jets d'eau capables de\npercer des trous à travers de\nl'acier épais.
 0x44504A: Ses pieds sont dotés de ventouses\nconçues pour adhérer à n'importe\nquelle surface. Il grimpe avec\nténacité aux arbres pour se nourrir.
 0x4450AF: Il se prépare à l'évolution en\ndurcissant sa coquille autant que\npossible pour protéger son corps\nmou.
 0x44510F: La poudre hydrofuge sur ses ailes\nlui permet de récolter le miel, même\nsous les pluies les plus fortes.
-0x445170: Son dard venimeux est très puissant.\nSon corps aux couleurs vives est\ndestiné à avertir ses ennemis.
+0x445170: Son dard venimeux est puissant.\nSon corps aux couleurs vives est\ndestiné à avertir ses ennemis.
 0x4451D3: Bien qu'il s'agisse d'un cocon, il\npeut bouger un peu. Il peut étendre\nsa barbe empoisonnée s'il est\nattaqué.
 0x445234: Il peut vaincre n'importe quel\nadversaire avec ses puissants dards\nempoisonnés. Il attaque parfois en\nessaims.
 0x445296: Commun dans les zones herbeuses et\nles forêts, il est très docile et\nchassera ennemis en battant du\nsable.
-0x4452FD: Il survole son vaste territoire à la\nrecherche de proies et les abat avec\nses griffes très développées.
+0x4452FD: Il survole son vaste territoire et\ntraque ses proies avant de les\nabattre avec ses griffes acérées.
 0x44535E: En battant des ailes de toutes ses\nforces, Roucarnage peut produire une\nrafale de vent capable de plier les\ngrands arbres.
 0x4453C8: Vivant partout où il y a de la\nnourriture disponible, il récupère\nsans cesse des produits comestibles\ntoute la journée.
-0x445427: Ses pattes arrière ont chacune trois\norteils. Ils sont palmés, ce qui lui\npermet de nager à travers les\nrivières.
+0x445427: Ses pattes arrière ont 3 doigts.\nIls sont palmés, ce qui lui permet\nde nager à travers les rivières.
 0x445480: Il bat ses ailes courtes pour\nchasser les insectes des herbes\nhautes. Il les cueille ensuite avec\nson bec court.
 0x4454EA: Il se projette soudainement haut\ndans le ciel , puis s'effondre d'un\nseul coup pour frapper sa proie.
 0x445551: Il peut librement détacher sa\nmâchoire pour avaler des grosses\nproies entières. Cependant, il peut\ndevenir trop lourd à déplacer.
@@ -234,13 +234,13 @@
 0x445686: Lorsque son électricité augmente,\nses muscles sont stimulés et il\ndevient plus agressif que\nd'habitude.
 0x4456EB: Il creuse et vit sous terre. S'il\nest menacé, il se recroqueville en\nboule pour se protéger.
 0x44574C: Il est habile à attaquer avec les\népines sur son dos et ses griffes\nacérées tout en se précipitant\nrapidement.
-0x4457B5: Le poison caché dans sa petite corne\nest extrêmement puissant. Même une\npetite égratignure peut avoir des\nconséquences fatales.
+0x4457B5: Le poison caché dans sa corne est\nextrêmement puissant. Même une\npetite égratignure peut avoir des\nconséquences fatales.
 0x44581B: Il est de nature calme et\nattentionnée. Parce que sa corne\npousse lentement, il préfère ne pas\nse battre.
 0x445875: Il utilise son corps écailleux et\nrobuste pour sceller l'entrée de son\nnid et protéger ses petits des\nprédateurs.
 0x4458DB: Il scrute son environnement en\nlevant ses oreilles hors de l'herbe.\nIl frappera en premier s'il détecte\nun danger.
 0x44594A: Rapide à se mettre en colère, il\npoignarde les ennemis avec sa corne\npour injecter un puissant poison\nquand il devient agité.
 0x4459B0: Il balance sa grosse queue pendant\nla bataille . Si son ennemi\nsursaute, il chargera avec son corps\nrobuste.
-0x445A18: Son comportement adorable et son cri\nle rendent très populaire.\nCependant, ce mignon Pokémon est\nrarement trouvé.
+0x445A18: Son comportement mignon et son cri\nle rendent très populaire.\nCependant, ce mignon Pokémon est\nrarement trouvé.
 0x445A7B: Grâce à son ouïe fine, il peut\ncapter les sons de loin. Il se cache\ngénéralement dans des endroits\ncalmes.
 0x445ADB: Lorsqu'il est jeune, il a six\nmagnifiques queues. Quand il\ngrandit, plusieurs nouvelles queues\npoussent.
 0x445B33: Certaines légendes prétendent que\nchacune de ses neuf queues possède\nson propre type unique de pouvoir\nmystique spécial .
