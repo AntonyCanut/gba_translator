@@ -13613,15 +13613,15 @@
 0x1F2D942: Vous commencez vraiment à me\ntaper sur les nerfs !\pSepiatop ! Rapion !\pMontrez-leur pourquoi on ne se\nfrotte pas à la {COLOR}ÁTeam Ombres{COLOR}Ë !
 0x1F2D9B9: Je savais que c'était une mauvaise\nidée de les enfermer ici...
 0x1F2D9EB: Voilà ce qui arrive quand on s'en\nprend à la Team Ombres !
-0x1F2DA1D: Pas mal, {PLAYER} !\nToi et moi, on fait une sacrée équipe !\pMais je vais m'en charger.\pLaisse-moi utiliser ces objets sur\nton Pokémon pour le soigner du\ncombat.
+0x1F2DA1D: Pas mal, {PLAYER} !\nToi et moi, on fait une sacrée équipe !\pMais je vais m'en charger.\pLaisse-moi soigner ton Pokémon.
 0x1F2DAAB: C'est décevant.\pJe pensais vraiment qu'on pourrait\nle gérer ensemble.\pJe suppose que je vais m'en occuper\nmoi-même.\pUtilise cette Potion sur ton Pokémon\npour qu'il se sente mieux.
 0x1F2DB6D: Non !\nMon Pokémon !
 0x1F2DB7D: Non !\nMon Sepiatop !
 0x1F2DB8B: {STR_VAR_1} !\nPasse à l'attaque !
-0x1F2DBB6: D'accord, d'accord, je me rends !\nJe vous laisse passer !\pPitié, ayez de la compassion !\nNe me faites plus de mal ! Je vous en\nprie !
+0x1F2DBB6: D'accord, d'accord, je me rends !\nJe vous laisse passer !\pPitié, ayez de la compassion !\nNe me faites plus de mal !
 0x1F2DC22: {STR_VAR_1} ! Reviens !
 0x1F2DC2E: Je m'en vais maintenant,\n{PLAYER}.\pJe suis sûr que tu peux t'occuper de\ntoi-même à partir d'ici.\pSi tu as des ennuis, utilise ton\nPokémon.
-0x1F2DCC8: Oh, encore une chose.\pDès que tu rentres chez toi, on va\nse battre.\pTu m'as impressionné quand on s'est\nbattus ensemble, alors je veux voir\ncomment je m'en sors face à toi.\pD'ici là, ne te fatigue pas trop.
+0x1F2DCC8: Oh, encore une chose.\pDès que tu rentres chez toi, on va\nse battre.\pTu m'as impressionné quand on s'est\nbattus ensemble.\pAlors je veux voir comment je\nm'en sors face à toi.
 0x1F2DD91: Oh, encore une chose.\pDès que tu rentres chez toi, on va\nse battre.\pTu as beaucoup à apprendre en\ncombat, et ça ne me dérange pas de\nt'enseigner deux ou trois trucs.\pD'ici là, ne te fatigue pas trop.
 0x1F2DE5B: Oh, encore une chose.\pDès que tu rentres chez toi, on va\nse battre.\pTu t'es dégonflé tout à l'heure, mais\nje ne te laisserai pas esquiver la\nprochaine fois !\pD'ici là, ne te fatigue pas trop.
 0x1F2DF13: Maintenant brûle-le.
@@ -13633,7 +13633,7 @@
 0x1F2E150: Compris.\pIl y a juste un dernier point à\naborder avant que je parte.\pLes intrus qu'on avait enfermés dans\nl'entrepôt se sont échappés.
 0x1F2E1D2: Ce sbire-là les a laissés\ns'échapper.
 0x1F2E1FA: C'est grave ?\nQu'est-ce que ces deux-là ont vu ?
-0x1F2E221: Le premier, le garçon aux cheveux\nrouges, n'a rien vu d'important.\pLe second, en revanche...\pSi Fey apprend que {STR_VAR_2} était dans\nle labo, elle insistera pour\nrelocaliser en plein milieu de notre\nopération.\pTu sais bien que c'est du temps et des\nressources que nous ne pouvons pas\nnous permettre...
+0x1F2E221: Le premier, le garçon aux cheveux\nrouges, n'a rien vu d'important.\pLe second, en revanche...\pSi Fey apprend qu'il était dans\nle labo, elle insistera pour\nrelocaliser en plein milieu de notre\nopération.\pTu sais bien que c'est du temps et des\nressources que nous ne pouvons pas\nnous permettre...
 0x1F2E311: Alors assure-toi que Fey ne soit pas\nau courant de ce qui s'est passé.\pNotre priorité pour l'instant est\nd'obtenir le colis nécessaire à la\nmission.\pOn s'occupera plus tard du second\nqui s'est échappé.
 0x1F2E3CF: Compris.\pJ'ai un plan pour récupérer ce colis,\net ça permettra même à ce sbire\nraté ici présent de se rattraper.\pUne fois que je l'aurai, j'irai\ndirectement vers la cible.
 0x1F2E479: Alors bonne chance, Marlon.
@@ -15000,506 +15000,506 @@
 0x1F55F3B: Cette CT a été achetée pour 48 PB à\nla boutique.
 0x1F55F6A: Cette CT a été trouvée après être\nremonté avec l'AMD.
 0x1F55F9C: Cette CT a été reçue en cadeau dans\nl'une des maisons du sud.
-0x1F55FDA: This TM was found after using\nWaterfall.
-0x1F56003: This TM was awarded for completing\n“Protector of the Swamp”.
-0x1F56040:  Missions
-0x1F56055: {R_BUTTON}Type
-0x1F5605C: Active
-0x1F56063: Inactive
-0x1F5606C: Reward Available
-0x1F5607D: Done
-0x1F56082: Caught
-0x1F56089: Found
-0x1F5608F: Read
-0x1F56094: Close
-0x1F5609A: Back
-0x1F560A3: Completed
-0x1F560B1: Location: {STR_VAR_1}
-0x1F560BE: \nRemaining: 
-0x1F560DA: Return to {STR_VAR_1} to\nreceive your reward!
-0x1F560FF: Start for more details.
-0x1F56117: Get Prof. Log’s package from the\nBellin Town Mart!
-0x1F5614A: Follow the man who stole\nProf. Log’s package!
-0x1F56178: Search for Marlon and recover\nProf. Log’s package!
-0x1F561AB: Return Prof. Log’s package to him!
-0x1F561CE: Go to Icicle Cave and deliver\n{RIVAL}’s Pokédex to him!
-0x1F56201: Challenge the Dresco Town Gym!
-0x1F56220: Talk to Prof. Log’s friend in\nDresco Town!
-0x1F5624B: Make a beeline for Cinder Volcano\nand save Moltres!
-0x1F5627F: Challenge the Crater Town Gym!
-0x1F5629E: Use the KBT Expressway to go south\nof Crater Town.
-0x1F562D1: Head through Valley Cave and make\nyour way towards Blizzard City!
-0x1F56313: Head up Frost Mountain and make\nyour way towards Blizzard City!
-0x1F56353: Challenge the Blizzard City Gym!
-0x1F56374: Get Rock Smash from the Cut Master’s\nfriend in Blizzard City!
-0x1F563B2: Travel south through the KBT\nExpressway to Fallshore City!
-0x1F563ED: Make your way down Route 10 to\nTehl Town!
-0x1F56417: Look around Tehl Town and find a\nway onto Route 9!
-0x1F5644A: Beat the Shadows to Arthur’s\nfriend’s house on Route 9!
-0x1F56482: Talk to the Fallshore City Gym\nLeader in Tehl Town!
-0x1F564B6: Challenge the Fallshore City Gym!
-0x1F564D8: Obtain the power of Mega Evolution\nfrom the Tarmigan Mansion!
-0x1F56516: Follow Mel to Epidimy Town!
-0x1F56532: Get Strength from a man in\nEpidimy Town!
-0x1F5655B: Make a beeline for Thundercap Mt.\nand save Zapdos!
-0x1F5658E: Meet up with Jax in Epidimy Town\nto discuss your next move!
-0x1F565CA: Head up Route 12 to Dehara City!
-0x1F565EB: Talk to Jax at the Dehara\nGame Corner!
-0x1F56612: Explore the Ruins of Void and make\nyour way to the top!
-0x1F5664A: The Mission Log is not connected.
-0x1F5666C: Help Marlon destroy the Shadow\nWarriors in Cinder Volcano!
-0x1F566A7: Follow Marlon and Véga deeper into\nCinder Volcano!
-0x1F566DA: Return to the Shadows’ base in\nFrozen Heights and find Zeph!
-0x1F56717: Challenge the Dehara City Gym!
-0x1F56736: Get the Go-Goggles from a Hiker\nin Dehara City!
-0x1F56766: Make your way through the Great\nDesert to Vivill Town!
-0x1F5679D: Meet {RIVAL} in front of the\nwarehouse in Vivill Town!
-0x1F567CF: Head inside the Vivill Town\nwarehouse!
-0x1F567F6: Look around Vivill Warehouse and\nfind a way into the Command Centre!
-0x1F5683B: Challenge Aklove!
-0x1F5684D: Escape the Distortion World!
-0x1F5686A: Leap through the portal!
-0x1F56883: Meet Jax in Vivill Town!
-0x1F5689C: Challenge the Antisis Gym!
-0x1F568B7: Make your way to Seaport City and\nboard a boat to East Borrius!
-0x1F568F7: Ask a Sailor in Seaport City to\ntake you to Polder Town!
-0x1F56930: Challenge the Polder Gym!
-0x1F5694A: Make a beeline to the top of\nCrystal Peak and save Borrius!
-0x1F56986: Defeat Ivory and continue your\nclimb to the top of Crystal Peak!
-0x1F569C7: Defeat Hoopa to make a path to\nthe Ultimate Weapon!
-0x1F569FB: Turn off the Ultimate Weapon!
-0x1F56A19: Team up with {RIVAL} one last\ntime to defeat Marlon!
-0x1F56A49: Challenge the Redwood Gym!
-0x1F56A64: Head east from Gurun Town and\nchallenge the Pokémon League!
-0x1F56AA0: Check in with your mom!
-0x1F56AB8: Buy an ADM in Seaport City in order\nto Dive underwater!
-0x1F56AF0: Dive underwater at the Ruins of Void\nand rescue your mom from Aklove!
-0x1F56B36: The main story has been completed.\nJust enjoy exploring Borrius!
-0x1F56B77:  There appears to be a Pokémon\nin the den!
-0x1F56BA2: The den is empty.
-0x1F56BB4: Choose up to 3 Pokémon to use in\nthe fight against {STR_VAR_2}.
-0x1F56BEB: {VERSION} joined you to take\non {EVIL_TEAM}!
-0x1F56C08: Would you like to throw in a\nWishing Piece?
-0x1F56C34: You threw in a Wishing Piece.
-0x1F56C52: Ooh!\pAnother Trainer has discovered\none of these hidden areas!\pI’m Ginger, by the way.\nI’m a Trainer, like you!\pIs this your first time here?\pI can explain about these areas\nif it is!
-0x1F56D0A: What should I explain?
-0x1F56D21: Since you discovered this den, I’ll\nleave this area to you.\pGood luck in your fight!\pI’m looking forward to teaming up\nwith you sometime!
-0x1F56DAB: This hole you see here is what’s\nknown as a Raid Den.\pPowerful Pokémon inhabit these\ndens, and once a day, you can fight\lfor a chance to capture one in\leach den found around Borrius!\pThese Pokémon are scary strong, so\nit’s a good idea to pick the right\lpartner to fight alongside you.\pWhen you start the battle, you’ll\nnotice that the Pokémon you’re\lfighting looks very big.\pThis is because of the phenomenon\nknown as {COLOR}ÉDynamax{COLOR}Ç.\pIt will stay this way throughout\nthe battle and can only be caught\lonce it is defeated and returned to\lnormal size.
-0x1F56FD0: Dynamax is a unique phenomenon\nthat can only be used in special\lareas, like this one.\pIf you have mastered the power of\nMega Evolution, you’ll be able to\lDynamax your Pokémon as well.\pAlmost any Pokémon can Dynamax,\nbut if a Pokémon holds a Mega\lStone or Z-Crystal, it won’t be\lable to.\pTo Dynamax a Pokémon, press {START_BUTTON}\nwhen you see the red Dynamax\lsymbol appear.\pIf you choose to Dynamax your\nPokémon, the effect will last\lfor three turns.\pDuring this time period, each of\nyour Pokémon’s moves will be\lpowered up into special variants\lknown as {COLOR}ÉMax Moves{COLOR}Ç.\pThese Max Moves are much more\npowerful than regular attacks,\lso make sure you use them to full\leffect while Dynamaxed!
-0x1F57277: Sometimes when the Pokémon you’re\nfighting is desperate, it’ll throw\lup shields to defend itself.\pThese shields will severely reduce\nthe damage you can inflict until\lthey’re destroyed.\pAny attack will destroy at least\none shield, but if you use a move\llike {COLOR}ÉBrick Break{COLOR}Ç, you can destroy\ltwo shields at a time!
-0x1F573B2: If you have Pokémon stored in box\n“{STR_VAR_1}”, they may be used\lin place of your party Pokémon.\pEach row in the box is treated as\nits own team, so this will allow\lyou to save up to 5 different\lpreset teams.
+0x1F55FDA: Cette CT a été trouvée après avoir\nutilisé Cascade.
+0x1F56003: Cette CT a été récompensée pour\navoir terminé « Protecteur du Marais\n».
+0x1F56040: Missions
+0x1F56055: Type {R_BUTTON}
+0x1F5605C: Actives
+0x1F56063: Inactives
+0x1F5606C: Récompense dispo
+0x1F5607D: Fait
+0x1F56082: Capturé
+0x1F56089: Trouvé
+0x1F5608F: Lu
+0x1F56094: Fermer
+0x1F5609A: Retour
+0x1F560A3: Terminé
+0x1F560B1: Lieu : {STR_VAR_1}
+0x1F560BE: Restant :
+0x1F560DA: Retourne à {STR_VAR_1} pour recevoir\nta récompense !
+0x1F560FF: Start pour plus de détails.
+0x1F56117: Prends le colis du Prof. Log à la\nBoutique de Bellinville !
+0x1F5614A: Suis l'homme qui a volé le colis du\nProf. Log !
+0x1F56178: Cherche Marlon et récupère le colis\ndu Prof. Log !
+0x1F561AB: Rends son colis au Prof. Log !
+0x1F561CE: Va à la Grotte Icicle et apporte son\nPokédex à {RIVAL} !
+0x1F56201: Défie l'Arène de Bourg Dresco !
+0x1F56220: Parle à l'ami du Prof. Log à Bourg\nDresco !
+0x1F5624B: File au Volcan Cendreux et sauve\nSulfura !
+0x1F5627F: Défie l'Arène de Bourg Cratère !
+0x1F5629E: Utilise l'Autoroute KBT pour aller\nau sud de Bourg Cratère.
+0x1F562D1: Traverse la Grotte Vallée et\ndirige-toi vers la Ville Blizzard !
+0x1F56313: Monte le Mont Givre et dirige-toi\nvers la Ville Blizzard !
+0x1F56353: Défie l'Arène de la Ville Blizzard !
+0x1F56374: Obtiens Éclate-Roc auprès de l'ami\ndu Maître Coupe à la Ville Blizzard\n!
+0x1F563B2: Voyage vers le sud via l'Autoroute\nKBT jusqu'à la Ville de Fallshore !
+0x1F563ED: Descends la Route 10 jusqu'à la\nVille de Tehl !
+0x1F56417: Explore la Ville de Tehl et trouve\nun chemin vers la Route 9 !
+0x1F5644A: Devance les Ombres jusqu'à la maison\nde l'ami d'Arthur sur la Route 9 !
+0x1F56482: Parle au Champion d'Arène de la\nVille de Fallshore à la Ville de\nTehl !
+0x1F564B6: Défie l'Arène de la Ville de\nFallshore !
+0x1F564D8: Obtiens le pouvoir de la\nMéga-Évolution au Manoir Tarmigan !
+0x1F56516: Suis Mel à la Ville d'Epidimy !
+0x1F56532: Obtiens Force auprès d'un homme à la\nVille d'Epidimy !
+0x1F5655B: File au Mont Thundercap et sauve\nÉlecthor !
+0x1F5658E: Retrouve Jax à la Ville d'Epidimy\npour discuter de la suite !
+0x1F565CA: Monte la Route 12 jusqu'à la Ville\nde Dehara !
+0x1F565EB: Parle à Jax au Casino de Dehara !
+0x1F56612: Explore les Ruines du Néant et\ngrimpe jusqu'en haut !
+0x1F5664A: Le Journal de Missions n'est pas\nconnecté.
+0x1F5666C: Aide Marlon à détruire les Guerriers\ndes Ombres au Volcan Cendreux !
+0x1F566A7: Suis Marlon et Véga plus\nprofondément dans le Volcan Cendreux\n!
+0x1F566DA: Retourne à la base des Ombres aux\nHauteurs Gelées et trouve Zeph !
+0x1F56717: Défie l'Arène de la Ville de Dehara\n!
+0x1F56736: Obtiens les Lunettes Sable auprès\nd'un Montagnard à la Ville de Dehara\n!
+0x1F56766: Traverse le Grand Désert jusqu'au\nBourg Vivill !
+0x1F5679D: Retrouve {RIVAL} devant l'entrepôt\nde Bourg Vivill !
+0x1F567CF: Entre dans l'entrepôt de Bourg\nVivill !
+0x1F567F6: Explore l'entrepôt de Vivill et\ntrouve un moyen d'entrer dans le\nCentre de Commandement !
+0x1F5683B: Défie Aklove !
+0x1F5684D: Échappe-toi du Monde Distorsion !
+0x1F5686A: Saute dans le portail !
+0x1F56883: Retrouve Jax à Bourg Vivill !
+0x1F5689C: Défie l'Arène d'Antisis !
+0x1F568B7: Dirige-toi vers la Ville Portuaire\net monte à bord d'un bateau pour\nBorrius Est !
+0x1F568F7: Demande à un Marin de la Ville\nPortuaire de t'emmener à Bourg\nPolder !
+0x1F56930: Défie l'Arène de Polder !
+0x1F5694A: File au sommet de Crystal Peak et\nsauve Borrius !
+0x1F56986: Bats Ivory et continue de grimper\njusqu'au sommet de Crystal Peak !
+0x1F569C7: Bats Hoopa pour ouvrir un passage\nvers l'Arme Ultime !
+0x1F569FB: Éteins l'Arme Ultime !
+0x1F56A19: Fais équipe avec {RIVAL} une\ndernière fois pour vaincre Marlon !
+0x1F56A49: Défie l'Arène de Séquoia !
+0x1F56A64: Pars vers l'est depuis Bourg Gurun\net défie la Ligue Pokémon !
+0x1F56AA0: Passe voir ta maman !
+0x1F56AB8: Achète un AMD à la Ville Portuaire\npour plonger sous l'eau !
+0x1F56AF0: Plonge aux Ruines du Néant et sauve\nta mère des griffes d'Aklove !
+0x1F56B36: L'histoire principale est terminée.\nProfite d'explorer Borrius !
+0x1F56B77: Il semble y avoir un Pokémon dans le\nrepaire !
+0x1F56BA2: Le repaire est vide.
+0x1F56BB4: Choisis jusqu'à 3 Pokémon pour le\ncombat contre {STR_VAR_2}.
+0x1F56BEB: {VERSION} t'accompagne pour\naffronter {EVIL_TEAM} !
+0x1F56C08: Veux-tu lancer un Morceau Vœu ?
+0x1F56C34: Tu as lancé un Morceau Vœu.
+0x1F56C52: Oh !\pUn autre Dresseur a découvert une de\nces zones cachées !\pJe suis Ginger, au fait. Je suis une\nDresseuse, comme toi !\pC'est ta première fois ici ?\pJe peux t'expliquer ces zones si\nbesoin !
+0x1F56D0A: Que dois-je expliquer ?
+0x1F56D21: Puisque tu as découvert ce repaire,\nje te laisse cette zone.\pBonne chance pour le combat !\pJ'ai hâte de faire équipe avec toi\nun de ces jours !
+0x1F56DAB: Ce trou que tu vois ici est ce qu'on\nappelle une Antre de Raid.\pDes Pokémon puissants habitent ces\nrepaire, et une fois par jour, tu\npeux te battre pour avoir une chance\nde capturer l'un d'eux dans chaque\nrepaire de Borrius !\pCes Pokémon sont très forts, alors\nil vaut mieux choisir le bon\npartenaire pour te battre à tes\ncôtés.\pQuand tu commences le combat, tu\nremarqueras que le Pokémon que tu\ncombats semble très grand.\pC'est à cause du phénomène appelé\n{COLOR}ÉDynamax{COLOR}Ç.\pIl restera ainsi pendant tout le\ncombat et ne pourra être capturé\nqu'une fois vaincu et revenu à sa\ntaille normale.
+0x1F56FD0: Le Dynamax est un phénomène unique\nqui ne peut être utilisé que dans\ndes zones spéciales comme celle-ci.\pSi tu as maîtrisé le pouvoir de la\nMéga-Évolution, tu pourras Dynamaxer\nton Pokémon aussi.\pPresque tous les Pokémon peuvent\nDynamaxer, mais si un Pokémon tient\nune Méga-Gemme ou un Cristal Z, il\nne le pourra pas.\pPour Dynamaxer un Pokémon, appuie\nsur {START_BUTTON} quand le symbole\nrouge Dynamax apparaît.\pSi tu choisis de Dynamaxer ton\nPokémon, l'effet durera trois tours.\pPendant ce temps, chacune des\ncapacités de ton Pokémon sera\nrenforcée en variantes spéciales\nappelées\n{COLOR}ÉMaxi-attaques{COLOR}Ç.\pCes Maxi-attaques sont bien plus\npuissantes que les attaques\nnormales, alors profite-en au\nmaximum pendant le Dynamax !
+0x1F57277: Parfois, quand le Pokémon que tu\ncombats est désespéré, il lèvera des\nboucliers pour se défendre.\pCes boucliers réduisent fortement\nles dégâts que tu peux infliger\njusqu'à leur destruction.\pToute attaque détruit au moins un\nbouclier, mais si tu utilises une\ncapacité comme\n{COLOR}ÉCasse-Brique{COLOR}Ç, tu\npeux en casser deux d'un coup !
+0x1F573B2: Si tu as des Pokémon dans la boîte «\n{STR_VAR_1} », ils peuvent être\nutilisés à la place de ceux de ton\néquipe.\pChaque rangée de la boîte est\nconsidérée comme sa propre équipe,\nce qui te permet de sauvegarder\njusqu'à 5 équipes préconfigurées.
 0x1F5747A: Dynamax
-0x1F57482: Shields
-0x1F5748A: Preset Teams
-0x1F57497: This Raid Den was found in a Hidden\nGrotto after using Rock Climb by\nthe entrance to Flower Paradise.
-0x1F574FD: This Raid Den was found in a Hidden\nGrotto after using Cut outside the\nwestern Grim Woods exit.
-0x1F5755D: This Raid Den was found in a Hidden\nGrotto after using Cut on the\nsouth side of the route.
-0x1F575B8: This Raid Den was found in a Hidden\nGrotto after crossing the bridge\non the east side of the route.
-0x1F5761C: This Raid Den was found in a Hidden\nGrotto on the road that connects\nRoute 7 to Route 6.
-0x1F57675: This Raid Den was found in a Hidden\nGrotto after using Rock Smash in\nthe middle of the route.
-0x1F576D3: This Raid Den was found in a Hidden\nGrotto on the western side of the\nlake.
-0x1F5771F: This Raid Den was found in a Hidden\nGrotto after heading directly north\nfrom Tehl Town.
-0x1F57777: This Raid Den was found in a Hidden\nGrotto after using Surf by the\nentrance to Cliff Cave.
-0x1F577D2: This Raid Den was found in a Hidden\nGrotto outside the Mansion’s secret\nexit on 1F.
-0x1F57826: This Raid Den was found in a Hidden\nGrotto on the west side of the\nroute near the Hiker.
-0x1F5787F: This Raid Den was found in a Hidden\nGrotto after using Rock Climb above\nthe KBT Expressway.
-0x1F578DB: This Raid Den was found above\nthe Tomb of Borrius after using\nRock Climb.
-0x1F57925: This Raid Den was found in a Hidden\nGrotto after using Rock Climb by\nthe entrance to Vivill Woods.
-0x1F57988: This Raid Den was found in a Hidden\nGrotto after using Surf north of\nthe Antisis City exit.
-0x1F579E4: This Raid Den was found in a Hidden\nGrotto after crossing the bridge\nand using Cut.
-0x1F57A38: This Raid Den was found in a Hidden\nGrotto by the entrance to Crystal\nPeak after using Surf.
-0x1F57A95: This Raid Den was found in a Hidden\nGrotto on the southern half of\nthe east side of the route.
-0x1F57AF4: This Raid Den was found in a Hidden\nGrotto next to the sign board north\nof the Pokémon Center.
-0x1F57B53: This Raid Den was found in a Hidden\nGrotto after using Surf to go east\nfrom the docks.
-0x1F57BAA: This Raid Den was found on B1F.
-0x1F57BCA: This Raid Den was found in the\nhidden section of Icicle Cave\nbehind the Braille tablet.
-0x1F57C22: This Raid Den was found near the\nwestern exit after placing the\nboulder on a pressure plate.
-0x1F57C7F: This Raid Den was found on 2F\nbehind the Braille tablet.
-0x1F57CB8: This Raid Den was found in a small\nroom after breaking through a\ncollapsed doorway.
-0x1F57D0C: This Raid Den was found on 1F\nbehind the Braille tablet.
-0x1F57D45: This Raid Den was found on 1F\nbehind the Braille tablet.
-0x1F57D7E: This Raid Den was found on 3F\nbehind the Braille tablet.
-0x1F57DB7: This Raid Den was found on B3F\nbehind the Braille tablet.
-0x1F57DF1: This Raid Den was found in the\nlarge room on 1F behind the\nBraille tablet.
-0x1F57E3C: This Raid Den was found in the\nlava room on B1F behind the\nBraille tablet.
-0x1F57E87:  Redwood Forest
-0x1F57E97: Dang it!\pIt won’t budge!\pThis Pokémon hasn’t moved in\nweeks…\pDo you hear me Snorlax?\nI need to see my boyfriend!\pYou can’t stop true love!
-0x1F57F22: Infernape!\nWake it up with a Fire Punch!
+0x1F57482: Boucliers
+0x1F5748A: Équipes préconfig.
+0x1F57497: Cette Antre de Raid a été trouvée\ndans un Arbre Creux après avoir\nutilisé Escalade près de l'entrée du\nParadis Fleuri.
+0x1F574FD: Cette Antre de Raid a été trouvée\ndans un Arbre Creux après avoir\nutilisé Coupe à l'extérieur de la\nsortie ouest du Bois Lugubre.
+0x1F5755D: Cette Antre de Raid a été trouvée\ndans un Arbre Creux après avoir\nutilisé Coupe au sud de la route.
+0x1F575B8: Cette Antre de Raid a été trouvée\ndans un Arbre Creux après avoir\ntraversé le pont à l'est de la\nroute.
+0x1F5761C: Cette Antre de Raid a été trouvée\ndans un Arbre Creux sur la route\nreliant la Route 7 à la Route 6.
+0x1F57675: Cette Antre de Raid a été trouvée\ndans un Arbre Creux après avoir\nutilisé Éclate-Roc au milieu de la\nroute.
+0x1F576D3: Cette Antre de Raid a été trouvée\ndans un Arbre Creux sur le côté\nouest du lac.
+0x1F5771F: Cette Antre de Raid a été trouvée\ndans un Arbre Creux après être allé\nplein nord depuis la Ville de Tehl.
+0x1F57777: Cette Antre de Raid a été trouvée\ndans un Arbre Creux après avoir\nutilisé Surf près de l'entrée de la\nGrotte Falaise.
+0x1F577D2: Cette Antre de Raid a été trouvée\ndans un Arbre Creux à l'extérieur de\nla sortie secrète du Manoir au RDC.
+0x1F57826: Cette Antre de Raid a été trouvée\ndans un Arbre Creux sur le côté\nouest de la route près du\nMontagnard.
+0x1F5787F: Cette Antre de Raid a été trouvée\ndans un Arbre Creux après avoir\nutilisé Escalade au-dessus de\nl'Autoroute KBT.
+0x1F578DB: Cette Antre de Raid a été trouvée\nau- dessus du Tombeau de Borrius\naprès avoir utilisé Escalade.
+0x1F57925: Cette Antre de Raid a été trouvée\ndans un Arbre Creux après avoir\nutilisé Escalade près de l'entrée du\nBois Vivill.
+0x1F57988: Cette Antre de Raid a été trouvée\ndans un Arbre Creux après avoir\nutilisé Surf au nord de la sortie de\nla Ville d'Antisis.
+0x1F579E4: Cette Antre de Raid a été trouvée\ndans un Arbre Creux après avoir\ntraversé le pont et utilisé Coupe.
+0x1F57A38: Cette Antre de Raid a été trouvée\ndans un Arbre Creux près de l'entrée\nde Crystal Peak après avoir utilisé\nSurf.
+0x1F57A95: Cette Antre de Raid a été trouvée\ndans un Arbre Creux sur la moitié\nsud du côté est de la route.
+0x1F57AF4: Cette Antre de Raid a été trouvée\ndans un Arbre Creux à côté du\npanneau au nord du Centre Pokémon.
+0x1F57B53: Cette Antre de Raid a été trouvée\ndans un Arbre Creux après avoir\nutilisé Surf vers l'est depuis les\nquais.
+0x1F57BAA: Cette Antre de Raid a été trouvée au\n-1.
+0x1F57BCA: Cette Antre de Raid a été trouvée\ndans la section cachée de la Grotte\nIcicle derrière la tablette Braille.
+0x1F57C22: Cette Antre de Raid a été trouvée\nprès de la sortie ouest après avoir\nplacé le rocher sur une plaque de\npression.
+0x1F57C7F: Cette Antre de Raid a été trouvée au\n2e étage derrière la tablette\nBraille.
+0x1F57CB8: Cette Antre de Raid a été trouvée\ndans une petite salle après avoir\nbrisé une entrée effondrée.
+0x1F57D0C: Cette Antre de Raid a été trouvée au\nRDC derrière la tablette Braille.
+0x1F57D45: Cette Antre de Raid a été trouvée au\nRDC derrière la tablette Braille.
+0x1F57D7E: Cette Antre de Raid a été trouvée au\n3e étage derrière la tablette\nBraille.
+0x1F57DB7: Cette Antre de Raid a été trouvée au\n-3 derrière la tablette Braille.
+0x1F57DF1: Cette Antre de Raid a été trouvée\ndans la grande salle du RDC derrière\nla tablette Braille.
+0x1F57E3C: Cette Antre de Raid a été trouvée\ndans la salle de lave au -1 derrière\nla tablette Braille.
+0x1F57E87: Forêt Séquoia
+0x1F57E97: Zut ! Il ne bouge pas !\pCe Pokémon n'a pas bougé depuis des\nsemaines...\pTu m'entends Ronflex ? J'ai besoin\nde voir mon copain !\pTu ne peux pas arrêter le vrai amour\n!
+0x1F57F22: Simiabraz ! Réveille-le avec un\nPoing Feu !
 0x1F57F4B: {COLOR}ÉOoh ooh ahh!
-0x1F57F5B: I’m exhausted…\pI’ve tried everything I can think\nof to move this Snorlax, but it\lwon’t budge a muscle.\pI wanted to see my boyfriend, but\nhe broke up with me, so I don’t\lknow why I’m even still trying…
-0x1F58024: {COLOR}ÉSnorrrr!\p{COLOR}ÁSnorlax is sleep eating!\nNow’s your chance!
-0x1F5805F: {COLOR}ÁSnorlax stubbornly refuses to\nleave.\pLooks like you’ll have to capture\nit if you want to get rid of it.
-0x1F580CA: Hey!\pHave you seen a cute girl with\nan Infernape?\p…\pShe went towards Redwood Village?\pI’m coming girl!\pHere, this is for your trouble.\nI appreciate ya, Champ!
-0x1F58169: {COLOR}ÉGrowwwwf!
-0x1F58176: {COLOR}ÁThe suspicious person ran off!
-0x1F58198: {COLOR}ÁThe suspicious cell ran off!
-0x1F581B8: {COLOR}ÁThe suspicious tree ran off!
-0x1F581D8: Numbskull
-0x1F581E2: Are you dense? Smash Pokémon heads\nagainst trees {STR_VAR_1} times!
-0x1F5821D: I hit me head on dem trees too\nmany times…\pNow, I speak ungood.\pI hate da trees now that made me\ndumb.\pMe mad!\pMe want revenge!\pYou do it for me?\pUse {COLOR}ÉHeadbutt{COLOR}Ë to teach trees to be\ngood {COLOR}É{STR_VAR_1}{COLOR}Ë times!
-0x1F582EC: Good, attack trees with Headbutt,\nand dem who defend trees.
-0x1F58328: Okee, me will hurt trees meself!
-0x1F58349: More head bangin’!\n{COLOR}É{STR_VAR_3}{COLOR}Ë more time{EVIL_TEAM}!
-0x1F58372: Good, now me can go back to bein’\nthe best Pokémon Neurosurgeon\lin world.\pTake dis to help you for you\nhelp me.
-0x1F583E2: Me be better soon.\nMe brain not very broke.
-0x1F5840E: Oh, perfect timing, Trainer!\pI have just been filming my\nlatest movie in this forest.\pThe title of the movie is:\n“Kangaskhan v Kangaskhan:\lDawn of the Kangaskhan”\pUnfortunately, the actor portraying\nthe main antagonist has fallen ill.\pWould you be willing to take\nhis place?
-0x1F58521: A shame…\nTruly, a shame…
-0x1F5853A: Wonderful!\pOnce you have defeated all of the\nTrainers in this forest, please\lbring {COLOR}É4{COLOR}Ç strong {COLOR}ÉKangaskhan{COLOR}Ç for an\limportant fight scene in the movie.\pIt will be filmed in the likeness\nof a {COLOR}ÉDouble Battle{COLOR}Ç.\pThey should ideally be levelled\n{COLOR}É{LV} 70{COLOR}Ç or higher.
-0x1F5864A: Wonderful!\pPlease make sure your party\nconsists of only {COLOR}É4 Kangaskhan{COLOR}Ç\lbefore we can begin filming the\l{COLOR}ÉDouble Battle{COLOR}Ç.\pThey should ideally be levelled\n{COLOR}É{LV} 70{COLOR}Ç or higher.
-0x1F58700: Wonderful!\pLights, camera, action!
-0x1F58723: Wonderful, wonderful, that’s a wrap!
-0x1F58748: Wonderful work out there today.\pFor your performance, you have\nearned one of these.
-0x1F5879C: Farewell, Trainer!\pI look forward to seeing you at the\nred carpet premiere!
-0x1F587E8: {COLOR}ÁHuh?\pThe Cube received a notification!\pIt says that the movie received a\ncritic score of less than 30% on\lRotten Tamato Berries…\pOh, well, didn’t hurt to help!
+0x1F57F5B: Je suis épuisée...\pJ'ai tout essayé pour déplacer ce\nRonflex, mais il ne bouge pas d'un\nmuscle.\pJe voulais voir mon copain, mais il\na rompu avec moi, alors je ne sais\nmême plus pourquoi j'essaie...
+0x1F58024: {COLOR}ÉRonfff !\p{COLOR}ÁRonflex mange en dormant !\nC'est ta chance !
+0x1F5805F: {COLOR}ÁRonflex refuse obstinément\nde partir.\pOn dirait que tu devras le capturer\nsi tu veux t'en débarrasser.
+0x1F580CA: Hé !\pTu as vu une jolie fille avec un\nSimiabraz ?\p...\pElle est partie vers le Village\nSéquoia ?\pJ'arrive ma belle !\pTiens, c'est pour le dérangement.\nMerci, Champ !
+0x1F58169: {COLOR}ÉGrrrrwaf !
+0x1F58176: {COLOR}ÁLa personne suspecte s'est\nenfuie !
+0x1F58198: {COLOR}ÁLa cellule suspecte s'est\nenfuie !
+0x1F581B8: {COLOR}ÁL'arbre suspect s'est enfui\n!
+0x1F581D8: Nigaud
+0x1F581E2: Tu es bouché ? Fonce des têtes de\nPokémon dans des arbres {STR_VAR_1}\nfois !
+0x1F5821D: J'me suis trop cogné la tête à ces\narbres...\pMaintenant, je parle n'importe\ncomment.\pJ'déteste ces arbres qui m'ont rendu\nbête.\pMoi fâché !\pMoi vouloir vengeance !\pTu le fais pour moi ?\pUtilise {COLOR}ÉCoup d'Boule{COLOR}Ë\npour apprendre aux arbres à bien se\ntenir {COLOR}É{STR_VAR_1}{COLOR}Ë\nfois !
+0x1F582EC: Bien, attaque les arbres avec Coup\nd'Boule, et ceux qui défendent les\narbres.
+0x1F58328: Oké, moi vais faire mal aux arbres\nmoi-même !
+0x1F58349: Encore des coups de boule !\n{COLOR}É{STR_VAR_3}{COLOR}Ë fois de\nplus {EVIL_TEAM} !
+0x1F58372: Bien, maintenant moi peux redevenir\nle meilleur neurochirurgien Pokémon\ndu monde.\pPrends ça pour t'aider après ton\naide.
+0x1F583E2: Moi aller mieux bientôt. Moi cerveau\npas trop cassé.
+0x1F5840E: Oh, timing parfait, Dresseur !\pJe viens de filmer mon dernier film\ndans cette forêt.\pLe titre est : « Kangourex v\nKangourex : L'Aube du Kangourex »\pMalheureusement, l'acteur jouant le\nméchant principal est tombé malade.\pSerais-tu d'accord pour prendre sa\nplace ?
+0x1F58521: Dommage... Vraiment, dommage...
+0x1F5853A: Merveilleux !\pUne fois que tu auras battu tous les\nDresseurs de cette forêt, apporte\n{COLOR}É4{COLOR}Ç puissants\n{COLOR}ÉKangourex{COLOR}Ç pour une\nscène de combat importante du film.\pElle sera filmée comme un\n{COLOR}ÉCombat Duo{COLOR}Ç.\pIls devraient idéalement être au\nniveau {COLOR}É{LV} 70{COLOR}Ç ou\nplus.
+0x1F5864A: Merveilleux !\pAssure-toi que ton équipe ne\ncontient que {COLOR}É4\nKangourex{COLOR}Ç avant qu'on ne\npuisse commencer le tournage du\n{COLOR}ÉCombat Duo{COLOR}Ç.\pIls devraient idéalement être au\nniveau {COLOR}É{LV} 70{COLOR}Ç ou\nplus.
+0x1F58700: Merveilleux !\pMoteur... action !
+0x1F58723: Merveilleux, merveilleux, coupez !
+0x1F58748: Magnifique travail aujourd'hui.\pPour ta performance, tu as gagné\nl'un de ceux-ci.
+0x1F5879C: Adieu, Dresseur !\pJ'ai hâte de te voir à la première\nsur le tapis rouge !
+0x1F587E8: {COLOR}ÁHein ?\pLe Cube a reçu une notification !\pIl est écrit que le film a reçu une\nnote critique de moins de 30 % sur\nRotten Tamato Berries...\pOh, tant pis, ça ne coûtait rien\nd'aider !
 0x1F5888B: {COLOR}ÉKrawwr!
-0x1F58957: Hey, Trainer!\pYou look almost as strong as you\nare lost!\pBeat me and I’ll tell you a secret!
-0x1F589B4: Wow! Okay! Okay!
-0x1F589C5: So I heard the woman over there\ntalking…\pSometimes if you go backwards,\nyou go forwards!
-0x1F58A1E: Did you notice a peculiar Pokémon\nwhile making your way through\lthese woods?
-0x1F58A6B: The Pokémon was very strange…\nLet me tell you about it!
-0x1F58AA3: I noticed a peculiar Pokémon\nearlier.\pWhen I approached it, it changed its\nappearance to match mine!\pNo…{PAUSE}ね it wasn’t a Ditto.\pI could tell that much at least.
-0x1F58B43: WHERE…\pARE…\pTHE…\pGHOSTS!?
-0x1F58B5D: NO… GHOSTS!?
-0x1F58B6A: This is Redwood Forest?\pIt’s so spooky in here, I figured\nit must be Grim Woods!
-0x1F58BBB: I’m completely lost, but I don’t\nmind!\pThe deeper I go, the more bugs\nI find!
-0x1F58C09: Agh, maybe you should get lost!
-0x1F58C29: If you have an {COLOR}Éopen space in your\nparty{COLOR}Ë in addition to a spare {COLOR}ÉPoké\lBall{COLOR}Ë when you evolve one of the\lNincada that swarm here, you’ll\lfind a new Pokémon on your team\lafter the evolution!\pBut the process requires a spare\n{COLOR}ÉPoké Ball{COLOR}Ë in your Cube, got that?\pNOT a Great Ball or an Ultra Ball,\njust a {COLOR}ÉPoké Ball{COLOR}Ë.
-0x1F58D72: {COLOR}ÇMy ESP tells me that you’re close to\nfinding what you seek…\pBut first, let’s battle!
-0x1F58DCA: Nothing could have prepared me\nfor that.
-0x1F58DF3: {COLOR}ÇI can sense you’re looking for the\nexit.\pIt’s just up ahead.
-0x1F58E33:  Redwood Village
-0x1F58E44: Redwood Village D
-0x1F58E56: Redwood Village N
-0x1F58E68: Be gone, wandering spirits!
-0x1F58E84: The wandering spirits have been\ncleansed from my soul…
-0x1F58EBB: Did you know that the trees in this\nvillage actually produce red wood?\pBet you didn’t!\pYou must’ve thought that these\ntrees look like every other plain\lold forest tree.\pWell, I’ll have you know that\nalthough they may look like\lordinary forest trees, they’re\lactually very special!\pTheir red wood attracts many\ndifferent species of Pokémon.\pDon’t believe me?\pHave a Pokémon use the move\n{COLOR}ÉHeadbutt{COLOR}Ç on one, and see for\lyourself!
-0x1F5906A: Out of all the Borrius Gyms,\nBenjamin’s is always meant to be\lchallenged last.\pWhy?\pWell, if you hadn’t explored the\nrest of Borrius first, you wouldn’t\lbe able to solve his puzzle…
-0x1F59120: Now do you see?\pBenjamin’s puzzle is based on the\ncaves you should have travelled\lthrough last!
-0x1F59180: Benjamin is our Gym Leader!\pI want to be just like Benjamin\nwhen I grow up!\pAnd again when I grow down,\njust like he does!
-0x1F591FB: Our little town is protected by the\nForest Guardian.\pHowever, the Forest Guardian has\nnot been seen in many years.\pIt is said that if you bring an old\nfriend of the Forest Guardian, it\lwill reveal itself once more.
-0x1F592D2: Astounding…\pThe Forest Guardian has revealed\nitself unto you.\pIt must have sensed an old friend\namong the members of your party.\pAnd not only that, it appears to\nbe challenging you to a battle.\pYou have my blessing to battle it\nand capture it, if you so please.
-0x1F593D8: Congratulations on your capture of\nthe Forest Guardian.\pPlease watch over it and protect\nit, as it protected and watched\lover us.
-0x1F5946C: {COLOR}Á{STR_VAR_1} wants to fight you again!
-0x1F5948C: Splishy Splash
-0x1F5949B: They’re the most useless Pokémon!\nMagikarp! Can you place 30 of them\nin your current Box?
-0x1F594F5: Hey there, Pokémon Trainer.\pI’m a member of the Hip Waders,\njust like you!\pAnd boy, do I have an assignment\nfor you.\pYou know the Pokémon {COLOR}ÉMagikarp{COLOR}Ë?\p…\pWhat am I even asking you, of\ncourse you do!\pWho doesn’t know of the famed\nPokémon?\pI want you to place {COLOR}É{STR_VAR_1}{COLOR}Ë of ’em in\na {COLOR}Ésingle Box{COLOR}Ë.\pWhen you’ve done that, I’ll take\n’em off your hands for you, and\lgive you something even better in\lexchange.\pAs an esteemed member of the Hip\nWaders, this should be a piece of\lcake for you!
-0x1F596DE: Boy oh boy, Pokémon Trainer!\pI can’t believe you actually\ndid it!\pYou actually got {STR_VAR_1} Magikarp in\none Box!\pI mean, a task like that takes\nserious dedication.\pBut after all, you are a member of\nthe Hip Waders.\pSo let me take them off your hands\nfor you.\pAnd for an esteemed member such as\nyourself, I want you to have this.
-0x1F59821: Hey there, Pokémon Trainer.\pI’m a member of the Hip Waders!\pIf you want to join our club, talk\nto the club’s president back in\lSeaport City.\pYou know, that port city in\nWest Borrius?
-0x1F598D8: Hey there, Pokémon Trainer.\pAs of this moment, your current\nBox, “{COLOR}É{STR_VAR_1}{COLOR}Ë” has {COLOR}É{STR_VAR_3}{COLOR}Ë Magikarp\lin it.\pYour goal is to get {COLOR}É{STR_VAR_2}{COLOR}Ë of those\nsuckers in there.\pCome back when you’ve done that.
-0x1F5999A: Actually, make space in your party\nfirst for it, Pokémon Trainer.
-0x1F599DC: Did you know?\pMagikarp aren’t really the weakest\nof Pokémon!\pThat esteemed title goes to\nWishiwashi’s solo form!\pA fish that’s also useless until\nit gets bigger!
-0x1F59A7E: Oh, dear me.\pMy daughter left me with her infant\nson, but I am much too busy today\lto look after him properly.\pWould you care to tend to him\nwhile I complete my work?
-0x1F59B25: Splendid.\pPlease walk around with him until I\nfinish my work today.
-0x1F59B69: Ah, so you’ve returned with my\ngrandson.\pI have finished my work for today,\nso I am able to take care of him\lfor the remainder of the day.\pHere is the payment for your\nservices.
-0x1F59C1B: {COLOR}Á{PLAYER} received ¥{STR_VAR_1} from\nthe woman!
-0x1F59C3E: Oh, dear me.\pI have no choice but to continue to\nneglect him today.
-0x1F59C82: Please walk around with my grandson\nuntil I finish my work today.
-0x1F59CC4: My daughter leaves her son with me\nevery day, so your services will be\lrequired again, tomorrow.
-0x1F59D25: My daughter leaves her son with me\nevery day while she goes to work.\pI’m unable to give him my full\nattention, so each day I try to\lhire a part-time babysitter.\pCome back between {COLOR}É7 AM{COLOR}Ç and {COLOR}É7 PM{COLOR}Ç,\nand I will pay you to babysit.
-0x1F59E12: {COLOR}ÁThe baby is sleeping peacefully.
-0x1F59E36: {COLOR}ÁThe baby started following behind\nyou!
-0x1F59E60: {COLOR}ÁTake the baby for a walk around\ntown until his grandmother has\lfinished her work.
-0x1F59EB5: {COLOR}ÁThe baby is bouncing around happily\nin his stroller.
-0x1F59EED: {COLOR}ÁOh? There’s something in the\nbaby’s mouth.\pOh, no!\nIt’s a choking hazard!\pQuick, get it out!
-0x1F59F4D: {COLOR}ÁThe baby is looking at you\ndisapprovingly.\pIt doesn’t seem to want to go\nthis way.
-0x1F59FA3: Hi, Trainer!\pI’m training to open up my very\nown Pokémon nursery.\pI still have a ways to go, but I\ncan still offer you something good!\pIf you pay me ¥{COLOR}É{STR_VAR_1}{COLOR}Ç, I can\nsignificantly speed up the hatching\ltime of all the Eggs in your party!\pWhat do you say?\pSounds like a pretty good deal,\nam I right?
-0x1F5A0CE: Sweet!\pPlease pass me all the Eggs in\nyour party.
-0x1F5A100: {COLOR}Á{PLAYER} handed over all Eggs\non hand.
-0x1F5A124: All done!\nHere are your Eggs.\pI hope to see you again tomorrow!
-0x1F5A164: It’s okay!\pYou’d prefer to wait until you have\nmore Eggs, am I right?
-0x1F5A1AA: Hmm…\pYou didn’t realize how much this\ncost before you spoke to me, am\lI right?
-0x1F5A1F9: Hmm…\pWhy would you want to spend money\nwhen you have no Eggs?
-0x1F5A237: You’re going to be here again\ntomorrow, am I right?\pI’m looking forward to working with\nyour Eggs again!
-0x1F5A2A0: Ever come across an Egg you just\ndidn’t want?\pThen have no fear!\pI buy Eggs like those at ¥{COLOR}É{STR_VAR_1}{COLOR}Ë\na pop.\pDo you have any Eggs you want to\nsell to me?
-0x1F5A338: Do you have any Eggs you want to\nsell to me?
-0x1F5A365: Which Egg do you want to sell\nto me?
-0x1F5A38A: Are you sure you want to sell me\nthis Egg?
-0x1F5A3B5: Are you sure you want to sell me\nall of the Eggs in your party?
-0x1F5A3F5: Are you sure you want to sell me\nall of the Eggs in Box “{COLOR}É{STR_VAR_1}{COLOR}Ë”?
-0x1F5A439: {COLOR}Á{PLAYER} sold the Egg for ¥{STR_VAR_1}!
-0x1F5A455: {COLOR}Á{PLAYER} sold {STR_VAR_1} Egg{STR_VAR_3} in the party\nfor ¥{STR_VAR_2}!
-0x1F5A47F: {COLOR}Á{PLAYER} sold {STR_VAR_1} Egg{STR_VAR_3} in the Box\nfor ¥{STR_VAR_2}!
-0x1F5A4A7: Pleasure doing business with you!\pCome see me again if you have more\nEggs to sell.
-0x1F5A4FA: Keep me in mind if you ever come\nacross an Egg you don’t want.
-0x1F5A539: You don’t have any Eggs in\nyour party…
-0x1F5A58B: I can’t buy that Pokémon from you.\nIt’s not in an Egg!
-0x1F5A5C2: Despite our town being known for\nits export of Charcoal, I have yet\lto actually see a Pokémon hold\lthe item.\pCan you help me by showing me a\nPokémon {COLOR}Éholding{COLOR}Ç a {COLOR}ÉCharcoal{COLOR}Ç?
-0x1F5A677: Huh, so that’s why I haven’t seen\nit around here.\pCharcoal is made out of black wood,\nnot red wood!\pOkay, thank you!\nYou’ve made my day!\pNow, let me show you something!
-0x1F5A720: Huh?\pThat’s an Egg.
-0x1F5A734: Huh?\pThat Pokémon’s not holding\na Charcoal.
-0x1F5A760: Have a Pokémon hold the {COLOR}ÉLuck\nIncense{COLOR}Ç like Charcoal, and it’ll\l{COLOR}Édouble{COLOR}Ç the amount of {COLOR}Éprize money{COLOR}Ç\lreceived from battles!
-0x1F5A7E8: So you don’t know either…
-0x1F5A802: Benjamin is a master of {COLOR}ÉBug{COLOR}Ë-type\nPokémon!\pAnd he’s a huge fan of battling\nbackwards, too!\pEven his Gym puzzle is inspired by\nhis {COLOR}Ébackwards{COLOR}Ë way of thinking.\pWhat does this all mean?\nYou’ll see in due time…
-0x1F5A8DB: Benjamin’s backwards way of\nthinking has nothing on your way,\lit seems!
-0x1F5A923: I’ll trade you my super special\n{COLOR}É{STR_VAR_2}{COLOR}Ë if you can catch me a\l{COLOR}É{STR_VAR_1}{COLOR}Ë!\pI’ve been trying really hard to\nfind one, but it’s so difficult!\pDo you have one to trade me?
-0x1F5A9CA: But it’s been so hard for me to\nfind one…
-0x1F5A9F4: Does that look a {STR_VAR_1} to you?\nI asked for a {STR_VAR_1}, not that.
-0x1F5AA2C: Alright!\nI scored myself a great Pokémon!
-0x1F5AA56: Have you been playing with my old\n{STR_VAR_2}?\pI’ve been playing with the\n{STR_VAR_1} you gave me.\pI even evolved it!
-0x1F5AABA: Use {COLOR}ÉSoak{COLOR}Ë on a Pokémon you’re\nfighting!\pThen, throw a {COLOR}ÉNet Ball{COLOR}Ë at it for\nsuper easy catch!
-0x1F5AB53: BEGIN FROM\nTHE CENTRE.\nCREATE WHAT\nYOU SEEK.
-0x1F5AB80: There is a big hole in the wall.
-0x1F5ABA1: {COLOR}ÁThe Pokémon statue that exudes the\npower of rock started moving!
-0x1F5ABE5: {COLOR}ÉZaza zari za…
-0x1F5AC25: CRACK THE\nICE. LEAVE\nPURE WHAT\nYOU SEEK.
-0x1F5AC4E: {COLOR}ÁThe Pokémon statue that exudes the\npower of ice started moving!
+0x1F58957: Hé, Dresseur !\pTu as l'air presque aussi fort que\ntu es perdu !\pBats-moi et je te dirai un secret !
+0x1F589B4: Wow ! Oké ! Oké !
+0x1F589C5: J'ai entendu cette femme parler\nlà-bas ...\pParfois, si tu recules, tu avances !
+0x1F58A1E: As-tu remarqué un Pokémon étrange en\ntraversant ces bois ?
+0x1F58A6B: Le Pokémon était très étrange...\nLaisse-moi t'en parler !
+0x1F58AA3: J'ai remarqué un Pokémon curieux\nplus tôt.\pQuand je l'ai approché, il a changé\nd'apparence pour copier la mienne !\pNon...{PAUSE}ね ce n'était pas un\nMétamorph.\pJe pouvais au moins en être sûr.
+0x1F58B43: OÙ... SONT... LES... FANTÔMES !?
+0x1F58B5D: PAS... DE FANTÔMES !?
+0x1F58B6A: C'est la Forêt Séquoia ?\pC'est si lugubre ici, je pensais que\nce devait être le Bois Lugubre !
+0x1F58BBB: Je suis complètement perdu, mais ça\nne me gêne pas !\pPlus j'avance, plus je trouve\nd'insectes !
+0x1F58C09: Argh, tu ferais mieux de te perdre !
+0x1F58C29: Si tu as un {COLOR}Éemplacement\nlibre dans ton équipe{COLOR}Ë et une\n{COLOR}ÉPoké Ball{COLOR}Ë de\nrechange quand tu fais évoluer l'un\ndes Ningale qui pullulent ici, tu\ntrouveras un nouveau Pokémon dans\nton équipe après l'évolution !\pMais le processus nécessite une\n{COLOR}ÉPoké Ball{COLOR}Ë de\nrechange dans ton Cube, d'accord ?\pPAS une Super Ball ou une Hyper\nBall, juste une {COLOR}ÉPoké\nBall{COLOR}Ë.
+0x1F58D72: {COLOR}ÇMon don d'ESP me dit que tu\nes proche de ce que tu cherches...\pMais d'abord, combattons !
+0x1F58DCA: Rien ne pouvait me préparer à ça.
+0x1F58DF3: {COLOR}ÇJe sens que tu cherches la\nsortie.\pElle est juste devant.
+0x1F58E33: Village Séquoia
+0x1F58E44: Village Séquoia J
+0x1F58E56: Village Séquoia N
+0x1F58E68: Arrière, esprits errants !
+0x1F58E84: Les esprits errants ont été purifiés\nde mon âme...
+0x1F58EBB: Savais-tu que les arbres de ce\nvillage produisent vraiment du bois\nrouge ?\pPari que non !\pTu devais penser que ces arbres\nressemblent à n'importe quel arbre\nordinaire.\pEh bien, sache que même s'ils\nressemblent à des arbres ordinaires,\nils sont en fait très spéciaux !\pLeur bois rouge attire beaucoup de\nPokémon différents.\pTu ne me crois pas ?\pFais utiliser {COLOR}ÉCoup\nd'Boule{COLOR}Ç à un Pokémon sur\nl'un d'eux, et vois par toi-même !
+0x1F5906A: De toutes les Arènes de Borrius,\ncelle de Benjamin est toujours\ncensée être faite en dernier.\pPourquoi ?\pEh bien, si tu n'avais pas exploré\nle reste de Borrius avant, tu ne\npourrais pas résoudre son puzzle...
+0x1F59120: Tu vois maintenant ?\pLe puzzle de Benjamin est basé sur\nles grottes que tu devais parcourir\nen dernier !
+0x1F59180: Benjamin est notre Champion d'Arène\n!\pJe veux être comme Benjamin quand je\nserai grand !\pEt encore quand je serai petit,\ncomme lui !
+0x1F591FB: Notre petit village est protégé par\nle Gardien de la Forêt.\pCependant, cela fait des années\nqu'on ne l'a pas vu.\pOn dit que si tu apportes un vieil\nami du Gardien de la Forêt, il se\nrévélera à nouveau.
+0x1F592D2: Stupéfiant...\pLe Gardien de la Forêt s'est révélé\nà toi.\pIl a dû sentir un vieil ami parmi\nles membres de ton équipe.\pEt en plus, il semble te défier en\ncombat.\pTu as ma bénédiction pour\nl'affronter et le capturer, si tu le\nsouhaites.
+0x1F593D8: Félicitations pour ta capture du\nGardien de la Forêt.\pVeille sur lui et protège-le, comme\nil nous a protégés et surveillés.
+0x1F5946C: {COLOR}Á{STR_VAR_1} veut te\ncombattre à nouveau !
+0x1F5948C: Ruée vers l'Écume
+0x1F5949B: Ce sont les Pokémon les plus\ninutiles ! Magicarpe ! Peux-tu en\nplacer 30 dans ta Boîte actuelle ?
+0x1F594F5: Salut, Dresseur de Pokémon.\pJe suis membre des Cuissardes, tout\ncomme toi !\pEt j'ai un travail pour toi.\pTu connais le Pokémon\n{COLOR}ÉMagicarpe{COLOR}Ë ?\p...\pPourquoi je demande, bien sûr que tu\nsais !\pQui ne connaît pas ce Pokémon\ncélèbre ?\pJe veux que tu en places\n{COLOR}É{STR_VAR_1}{COLOR}Ë dans une\n{COLOR}Éseule Boîte{COLOR}Ë.\pQuand tu auras fait ça, je les\nrécupérerai pour toi, et je te\ndonnerai quelque chose de mieux en\néchange.\pEn tant que membre estimé des\nCuissardes, ce devrait être facile\npour toi !
+0x1F596DE: Oh là là, Dresseur de Pokémon !\pJe n'arrive pas à croire que tu l'as\nfait !\pTu as vraiment mis {STR_VAR_1}\nMagicarpe dans une Boîte !\pJe veux dire, une tâche comme ça\ndemande une sacrée dévotion.\pMais après tout, tu es membre des\nCuissardes.\pAlors laisse-moi les prendre pour\ntoi.\pEt pour un membre aussi distingué,\nje veux que tu prennes ceci.
+0x1F59821: Salut, Dresseur de Pokémon.\pJe suis membre des Cuissardes !\pSi tu veux rejoindre notre club,\nparle au président du club à la\nVille Portuaire.\pTu sais, cette ville portuaire de\nBorrius Ouest ?
+0x1F598D8: Salut, Dresseur de Pokémon.\pEn ce moment, ta Boîte «\n{COLOR}É{STR_VAR_1}{COLOR}Ë »\ncontient {COLOR}É{STR_VAR_3}{COLOR}Ë\nMagicarpe.\pTon objectif est d'en mettre\n{COLOR}É{STR_VAR_2}{COLOR}Ë\nlà-dedans.\pReviens quand ce sera fait.
+0x1F5999A: En fait, fais d'abord de la place\ndans ton équipe pour lui, Dresseur.
+0x1F599DC: Le savais-tu ?\pLes Magicarpe ne sont pas vraiment\nles plus faibles des Pokémon !\pCe titre revient à la forme solo de\nFroussardine !\pUn poisson inutile lui aussi jusqu'à\nce qu'il grandisse !
+0x1F59A7E: Oh, mon dieu.\pMa fille m'a laissé son jeune fils,\nmais je suis bien trop occupée\naujourd'hui pour m'en occuper\ncorrectement.\pAccepterais-tu de t'en occuper\npendant que je termine mon travail ?
+0x1F59B25: Splendide.\pPromène-le jusqu'à ce que je termine\nmon travail aujourd'hui.
+0x1F59B69: Ah, tu es revenu avec mon\npetit-fils.\pJ'ai fini mon travail pour\naujourd'hui, je peux donc m'en\noccuper pour le reste de la journée.\pVoici le paiement pour tes services.
+0x1F59C1B: {COLOR}Á{PLAYER} a reçu ¥{STR_VAR_1}\nde la femme !
+0x1F59C3E: Oh, mon dieu.\pJe n'ai pas d'autre choix que de\ncontinuer à le négliger aujourd'hui.
+0x1F59C82: S'il te plaît, promène mon\npetit-fils jusqu'à ce que je termine\nmon travail aujourd'hui.
+0x1F59CC4: Ma fille me laisse son fils chaque\njour, donc tes services seront\nencore nécessaires demain.
+0x1F59D25: Ma fille me laisse son fils chaque\njour pendant qu'elle travaille.\pJe ne peux pas lui consacrer toute\nmon attention, donc chaque jour\nj'essaie d'engager une baby-sitter à\ntemps partiel.\pReviens entre {COLOR}É7 h{COLOR}Ç et\n{COLOR}É19 h{COLOR}Ç, et je te\npaierai pour le garder.
+0x1F59E12: {COLOR}ÁLe bébé dort paisiblement.
+0x1F59E36: {COLOR}ÁLe bébé commence à te suivre\n!
+0x1F59E60: {COLOR}ÁPromène le bébé en ville\njusqu'à ce que sa grand-mère ait\nfini son travail.
+0x1F59EB5: {COLOR}ÁLe bébé sautille joyeusement\ndans sa poussette.
+0x1F59EED: {COLOR}ÁOh ? Il y a quelque chose\ndans la bouche du bébé.\pOh non ! C'est un danger\nd'étouffement !\pVite, enlève-le !
+0x1F59F4D: {COLOR}ÁLe bébé te regarde avec\ndésapprobation.\pIl ne semble pas vouloir aller par\nlà.
+0x1F59FA3: Salut, Dresseur !\pJe m'entraîne pour ouvrir ma propre\npension Pokémon.\pJ'ai encore du chemin, mais je peux\ndéjà t'offrir un bon service !\pSi tu me paies\n¥{COLOR}É{STR_VAR_1}{COLOR}Ç, je\npeux accélérer considérablement\nl'éclosion de tous les Œufs de ton\néquipe !\pQu'en dis-tu ?\pÇa a l'air d'un bon deal, non ?
+0x1F5A0CE: Super !\pDonne-moi tous les Œufs de ton\néquipe.
+0x1F5A100: {COLOR}Á{PLAYER} a remis tous ses\nŒufs.
+0x1F5A124: Et voilà ! Voici tes Œufs.\pJ'espère te revoir demain !
+0x1F5A164: Pas de souci !\pTu préfères attendre d'avoir plus\nd'Œufs, hein ?
+0x1F5A1AA: Hmm...\pTu n'avais pas réalisé combien ça\ncoûtait avant de me parler, hein ?
+0x1F5A1F9: Hmm...\pPourquoi dépenser de l'argent si tu\nn'as aucun Œuf ?
+0x1F5A237: Tu reviendras demain, hein ?\pJ'ai hâte de retravailler sur tes\nŒufs !
+0x1F5A2A0: Tu es déjà tombé sur un Œuf dont tu\nne voulais pas ?\pAlors pas de panique !\pJ'achète ce genre d'Œufs pour\n¥{COLOR}É{STR_VAR_1}{COLOR}Ë pièce.\pAs-tu des Œufs à me vendre ?
+0x1F5A338: As-tu des Œufs à me vendre ?
+0x1F5A365: Quel Œuf veux-tu me vendre ?
+0x1F5A38A: Es-tu sûr de vouloir me vendre cet\nŒuf ?
+0x1F5A3B5: Es-tu sûr de vouloir me vendre tous\nles Œufs de ton équipe ?
+0x1F5A3F5: Es-tu sûr de vouloir me vendre tous\nles Œufs de la Boîte «\n{COLOR}É{STR_VAR_1}{COLOR}Ë » ?
+0x1F5A439: {COLOR}Á{PLAYER} a vendu l'Œuf pour\n¥{STR_VAR_1} !
+0x1F5A455: {COLOR}Á{PLAYER} a vendu {STR_VAR_1}\nŒuf{STR_VAR_3} de l'équipe pour\n¥{STR_VAR_2} !
+0x1F5A47F: {COLOR}Á{PLAYER} a vendu {STR_VAR_1}\nŒuf{STR_VAR_3} de la Boîte pour\n¥{STR_VAR_2} !
+0x1F5A4A7: Ravi de faire affaire avec toi !\pReviens me voir si tu as d'autres\nŒufs à vendre.
+0x1F5A4FA: Pense à moi si tu trouves un Œuf\ndont tu ne veux pas.
+0x1F5A539: Tu n'as aucun Œuf dans ton équipe...
+0x1F5A58B: Je ne peux pas t'acheter ce Pokémon.\nIl n'est pas dans un Œuf !
+0x1F5A5C2: Bien que notre ville soit connue\npour son charbon, je n'ai encore\njamais vu un Pokémon porter cet\nobjet.\pPeux-tu m'aider en me montrant un\nPokémon {COLOR}Étenant{COLOR}Ç un\n{COLOR}ÉCharbon{COLOR}Ç ?
+0x1F5A677: Hein, voilà pourquoi je ne l'ai\njamais vu ici.\pLe Charbon est fait de bois noir,\npas de bois rouge !\pD'accord, merci ! Tu as illuminé ma\njournée !\pMaintenant, laisse-moi te montrer\nquelque chose !
+0x1F5A720: Hein ?\pC'est un Œuf.
+0x1F5A734: Hein ?\pCe Pokémon ne tient pas de Charbon.
+0x1F5A760: Fais tenir l'{COLOR}ÉEncens\nVeine{COLOR}Ç comme un Charbon, et\nil {COLOR}Édoublera{COLOR}Ç l'argent\ngagné en combat !
+0x1F5A7E8: Donc tu ne sais pas non plus...
+0x1F5A802: Benjamin est un maître des Pokémon\nde {COLOR}Étype Insecte{COLOR}Ë !\pEt il est aussi un grand fan de\ncombat en marche arrière !\pMême le puzzle de son Arène est\ninspiré de sa façon {COLOR}Éà\nl'envers{COLOR}Ë de penser.\pQu'est-ce que ça veut dire ? Tu\nverras bien assez tôt...
+0x1F5A8DB: La façon de penser à l'envers de\nBenjamin ne fait pas le poids face à\nla tienne, on dirait !
+0x1F5A923: J'échangerai mon\n{COLOR}É{STR_VAR_2}{COLOR}Ë super\nspécial si tu peux m'attraper un\n{COLOR}É{STR_VAR_1}{COLOR}Ë !\pJ'ai vraiment essayé d'en trouver\nun, mais c'est si difficile !\pEn as-tu un à m'échanger ?
+0x1F5A9CA: Mais c'est si dur pour moi d'en\ntrouver un...
+0x1F5A9F4: Ça ressemble à un {STR_VAR_1}, ça ?\nJe t'ai demandé un {STR_VAR_1}, pas\nça.
+0x1F5AA2C: D'accord ! Je me suis dégoté un\nsuper Pokémon !
+0x1F5AA56: Tu as joué avec mon ancien\n{STR_VAR_2} ?\pJ'ai joué avec le {STR_VAR_1} que tu\nm'as donné.\pJe l'ai même fait évoluer !
+0x1F5AABA: Utilise {COLOR}ÉDétrempage{COLOR}Ë\nsur un Pokémon que tu combats !\pEnsuite, lance-lui une {COLOR}ÉFilet\nBall{COLOR}Ë pour une capture super\nfacile !
+0x1F5AB53: COMMENCE AU CENTRE. CRÉE CE QUE TU\nCHERCHES.
+0x1F5AB80: Il y a un grand trou dans le mur.
+0x1F5ABA1: {COLOR}ÁLa statue de Pokémon qui\nexsude la puissance du roc a\ncommencé à bouger !
+0x1F5ABE5: {COLOR}ÉZaza zari za...
+0x1F5AC25: FRACTURE LA GLACE. LAISSE PUR CE QUE\nTU CHERCHES.
+0x1F5AC4E: {COLOR}ÁLa statue de Pokémon qui\nexsude la puissance de la glace a\ncommencé à bouger !
 0x1F5AC91: {COLOR}ÉJakiih!
-0x1F5ACE0: NATURE MOLDS\nTO OUR WILL.\nTURN THE\nCRYSTALS TO\nWHAT YOU SEEK.
-0x1F5AD1E: {COLOR}ÁThe Pokémon statue that exudes the\npower of steel started moving!
-0x1F5AD77: {COLOR}Á{STR_VAR_1} disappeared.
-0x1F5AD96: A mysterious cave said to have a\nconnection to the great beyond.\nThose who wander about inside may\nnever find their way out.
-0x1F5AE13:  Route 1
-0x1F5AE1C: {COLOR}ÁA large pile of snow is blocking\nthe road.\pBetter go another way for now.
-0x1F5AE69: Sorry, fella.\pAn avalanche caused some snow piles\nto gather up on the road.\pIf you wanna go to Bellin, you’ll\nhave to take the ol’ mountain road\lfor now.\pHere, come with me and I’ll show you\nthe way.
-0x1F5AF31: Some scary lookin’ fella came along\nand melted the snow piles blockin’\lthe road.\pI sure was happy and all, but\nsomethin’ seemed up with him.\pIf you care, I watched him head\n{COLOR}Énorth of Frozen Heights{COLOR}Ë.\pWonder what he’s doin’ up there?
-0x1F5B01E: Ah, you must be {PLAYER}.\pProf. Log phoned ahead and told me\nto guide you if you got lost.\pBellin Town is just over that way.
-0x1F5B096: If you’d like me to show you how to\ncapture a Pokémon, prove you’re\lcapable by delivering {COLOR}ÉProf. Log’s\lpackage{COLOR}Ë to him.
-0x1F5B112: Ah, from the Badge on your Trainer\nCard, I see that you’ve become a\lrather skilled Trainer.\pYou’ve far surpassed the role of\nProf. Log’s errand {STR_VAR_1}.\pHowever, in my book, you’re never\ntoo experienced to watch an expert\lcatch Pokémon!\pSo, what do you say?\pI could show you a thing or two\nabout capturing Pokémon.
-0x1F5B248: I heard from Prof. Log that you did\nwell delivering his package to him.\pAnd I even heard from him that he’s\nsending you on more errands as a\lfully fledged Pokémon Trainer!\pYou know, I used to be something of\na Trainer myself, back in my day.\pI could show you a thing or two\nabout capturing Pokémon.
-0x1F5B373: Alrighty!\nHere we go!
-0x1F5B389: Phew…\pThat one was too close for\ncomfort…
-0x1F5B3B3: As you witnessed, I successfully\ncaptured that Pokémon by throwing\la {COLOR}ÉPoké Ball{COLOR}Ë.\pHowever, this won’t always work.\pMany times, Pokémon must be\nweakened before you’ll be able\lto capture them.
-0x1F5B476: And as my thanks for allowing me to\nstretch my legs today, please take\lthis Poké Ball I acquired back in\lmy younger days.
-0x1F5B4F0: If you would ever like to see my\nskills again, please, stop by.
-0x1F5B530: If you ever would like to see me in\naction, please, stop by.
-0x1F5B571: girl
-0x1F5B581: Huah, fellow Trainer!\pI am training my body and soul by\nstaring at this tree intently!\pTake this so you can train too!
-0x1F5B5F8: Huah, fellow Trainer!\pI can {COLOR}Éupgrade{COLOR}Ë the {COLOR}ÉMacho Brace{COLOR}Ë to\nmake training more efficient!\pRight now it is only a measly {LV} {STR_VAR_3},\nbut I can upgrade it to {COLOR}É{LV} {STR_VAR_2}{COLOR}Ë in\lexchange for {COLOR}É{STR_VAR_2} {STR_VAR_1}s{COLOR}Ë!
-0x1F5B6BE: Fine, settle for an inferior\nproduct!
-0x1F5B6E4: You do not have enough {STR_VAR_1}s\nfor me to upgrade your Macho Brace!
-0x1F5B723: {COLOR}ÁThe Macho Brace level has been\nincreased to {LV} {STR_VAR_2}!\pPokémon will now gain {COLOR}É{STR_VAR_2}×{COLOR}Á the\namount of Effort Values when held.
-0x1F5B79F: Your Macho Brace is as powerful\nas it can get!\pIn its current state, you will\nreceive {COLOR}É{STR_VAR_1}×{COLOR}Ë the amount of effort\lvalues when training with it!
-0x1F5B832: The sea…\pFull of fury one moment, calm as a\nPokémon’s nature the next…
-0x1F5B879: Battle me.\pShow me you too, can be as furious\nas the sea.
-0x1F5B8B3: Your Pokémon battled just as\nfuriously as the sea.
-0x1F5B8E6: You have done well.\nTake this item.
-0x1F5B90A: That {COLOR}ÉMedichamite{COLOR}Ë is for Mega\nEvolving the Pokémon, {COLOR}ÉMedicham{COLOR}Ë.\pWith the right Trainer, it too can\nbattle as furiously as the sea.
-0x1F5B996: If you can defeat all the Trainers\nhere and on the Auburn Waterway,\lI’d like to see your fury, too.
-0x1F5B9FA: Stop right there!\pI want to paint this\nperfect moment.
-0x1F5BA31: A young kid, dashing through\nthe rain…
-0x1F5BA58: I don’t think it’s such a good\nidea to paint in the rain.\pEverything I paint gets\nwashed away…
-0x1F5BAB7: I came out here to learn about the\nPokémon in the area.
-0x1F5BAEF: What?\nI’m not skipping school…
-0x1F5BB0E: Only the uncool kids actually go\nto school…
-0x1F5BB3A: That cave over there, what do you\nsuppose is in it?
-0x1F5BB6E: I bet scary strong Pokémon live\nthere!
-0x1F5BB95: Word around these parts is that the\ncave is called the {COLOR}ÉCave of Being{COLOR}Ë.\pPeople say it bears a resemblance\nto the lake caves of Sinnoh.
-0x1F5BC20: It’s always raining here!\nWhy is it always raining here?
-0x1F5BC59: But… but… the rain was supposed\nto put me at an advantage!
-0x1F5BC94: In other places like Fallshore\nCity, it only rains sometimes.\pSo why is it always raining on\nRoute 10?
+0x1F5ACE0: LA NATURE SE PLIE À NOTRE VOLONTÉ.\nTOURNE LES CRISTAUX VERS CE QUE TU\nCHERCHES.
+0x1F5AD1E: {COLOR}ÁLa statue de Pokémon qui\nexsude la puissance de l'acier a\ncommencé à bouger !
+0x1F5AD77: {COLOR}Á{STR_VAR_1} a disparu.
+0x1F5AD96: Une grotte mystérieuse qui aurait un\nlien avec l'au-delà. Ceux qui errent\ndedans peuvent ne jamais trouver la\nsortie.
+0x1F5AE13: Route 1
+0x1F5AE1C: {COLOR}ÁUn gros tas de neige bloque\nla route.\pMieux vaut passer ailleurs pour\nl'instant.
+0x1F5AE69: Navré, l'ami.\pUne avalanche a fait des amas de\nneige sur la route.\pSi tu veux aller à Bellinville,\nil faudra prendre l'ancienne route\ldu col pour l'instant.\pViens, je vais te montrer\nle chemin.
+0x1F5AF31: Un gars louche est passé\net a fondu les tas de neige qui\nbloquaient la route.\pJ'étais content et tout, mais\nil avait l'air suspect.\pSi ça t'intéresse, je l'ai vu filer\n{COLOR}Éau nord des Hauteurs Gelées{COLOR}Ë.\pJe me demande ce qu'il fait là-haut?
+0x1F5B01E: Ah, tu dois être {PLAYER}.\pLe Prof. Log m'a appelé pour me\ndire de te guider si tu te perds.\pBellinville est juste par là-bas.
+0x1F5B096: Si tu veux que je te montre comment\ncapturer un Pokémon, prouve que tu\len es capable en livrant le\n{COLOR}Écolis du Prof. Log{COLOR}Ë.
+0x1F5B112: Ah, ton Badge sur ta Carte Dresseur\nmontre que tu es devenu un Dresseur\nplutôt doué.\pTu as largement dépassé le rôle de\n{STR_VAR_1} à la solde du Prof. Log.\pMais pour moi, on n'est jamais trop\naguerri pour regarder un expert\ncapturer un Pokémon !\pAlors, qu'en dis-tu ?\pJe peux te montrer deux ou trois\nchoses sur la capture de Pokémon.
+0x1F5B248: J'ai entendu dire par le Prof. Log\nque tu as bien livré son colis.\pEt j'ai entendu qu'il t'envoie faire\nd'autres courses comme un Dresseur\nà part entière !\pTu sais, j'étais Dresseur moi aussi\nquand j'étais jeune.\pJe peux te montrer deux ou trois\nchoses sur la capture de Pokémon.
+0x1F5B373: Très bien !\nC'est parti !
+0x1F5B389: Ouf…\pCelle-là était vraiment\nlimite…
+0x1F5B3B3: Comme tu l'as vu, j'ai capturé ce\nPokémon en lançant une {COLOR}ÉPoké Ball{COLOR}Ë.\pMais ça ne marche pas toujours.\pSouvent, il faut affaiblir un\nPokémon avant de pouvoir\nle capturer.
+0x1F5B476: Pour me remercier de m'avoir fait\ndégourdir aujourd'hui, prends cette\nPoké Ball que j'ai eue dans\nma jeunesse.
+0x1F5B4F0: Si tu veux revoir mes talents,\npasse me voir.
+0x1F5B530: Si tu veux me voir à l'œuvre,\npasse me voir.
+0x1F5B571: fille
+0x1F5B581: Houah, Dresseur !\pJ'entraîne corps et âme en fixant\ncet arbre avec intensité !\pPrends ça pour t'entraîner aussi !
+0x1F5B5F8: Houah, Dresseur !\pJe peux {COLOR}Éaméliorer{COLOR}Ë le {COLOR}ÉBrac. Macho{COLOR}Ë\npour rendre l'entraînement plus\nefficace !\pPour l'instant, il n'est qu'un\nhumble {LV} {STR_VAR_3}, mais je peux le\npasser {COLOR}É{LV} {STR_VAR_2}{COLOR}Ë contre\n{COLOR}É{STR_VAR_2} {STR_VAR_1}s{COLOR}Ë !
+0x1F5B6BE: Tant pis, contente-toi d'un produit\ninférieur !
+0x1F5B6E4: Tu n'as pas assez de {STR_VAR_1}s pour\nque j'améliore ton Brac. Macho !
+0x1F5B723: {COLOR}ÁLe niveau du Brac. Macho est passé\nà {LV} {STR_VAR_2} !\pLes Pokémon gagneront désormais\n{COLOR}É{STR_VAR_2}×{COLOR}Á le montant de Points d'Effort\nen le portant.
+0x1F5B79F: Ton Brac. Macho est au maximum !\pDans cet état, tu recevras\n{COLOR}É{STR_VAR_1}×{COLOR}Ë de Points d'Effort en\nt'entraînant avec !
+0x1F5B832: La mer…\pFurieuse un instant, calme comme\nla nature d'un Pokémon l'instant\nd'après…
+0x1F5B879: Combattons.\pMontre-moi que tu peux être aussi\nfurieux que la mer.
+0x1F5B8B3: Tes Pokémon se sont battus aussi\nfurieusement que la mer.
+0x1F5B8E6: Tu as bien fait.\nPrends cet objet.
+0x1F5B90A: Cette {COLOR}ÉCharminite{COLOR}Ë sert à faire Méga-\nÉvoluer le Pokémon {COLOR}ÉCharmina{COLOR}Ë.\pAvec le bon Dresseur, lui aussi\npeut se battre aussi furieusement\nque la mer.
+0x1F5B996: Si tu bats tous les Dresseurs ici\net sur la Voie d'Eau Auburn, je veux\nvoir ta fureur, moi aussi.
+0x1F5B9FA: Halte-là !\pJe veux peindre cet instant\nparfait.
+0x1F5BA31: Un gamin qui file sous\nla pluie…
+0x1F5BA58: Ce n'est pas une bonne idée de\npeindre sous la pluie.\pTout ce que je peins est\nlavé…
+0x1F5BAB7: Je suis venu étudier les Pokémon\ndu coin.
+0x1F5BAEF: Quoi ?\nJe ne sèche pas les cours…
+0x1F5BB0E: Seuls les ringards vont vraiment\nen cours…
+0x1F5BB3A: Cette grotte, là-bas, tu imagines\nce qu'il y a dedans ?
+0x1F5BB6E: Je parie que de sacrés Pokémon\ny vivent !
+0x1F5BB95: On dit que cette grotte s'appelle\nla {COLOR}ÉGrotte Cyclopéenne{COLOR}Ë.\pOn dit qu'elle rappelle les grottes\ndes lacs de Sinnoh.
+0x1F5BC20: Il pleut tout le temps ici !\nPourquoi il pleut tout le temps ?
+0x1F5BC59: Mais… mais… la pluie était censée\nme donner l'avantage !
+0x1F5BC94: Ailleurs, à la Ville de Fallshore,\nil ne pleut que par moments.\pAlors pourquoi il pleut tout le\ntemps sur la Route 10 ?
 0x1F5BCFB:  Route 11
-0x1F5BD05: Cliff Cave
-0x1F5BD10: Beyond the boundary of rocks lies\na vast ocean.\pIt’s somewhere in this ocean\nwherein lies the peaceful\lAlola region.\pThe people there have a tradition\nthat each of their islands is\lprotected by a guardian deity.\pDo you ever wonder what it would\nbe like if each of the islands that\lmake up Borrius had, too?\pThat thought may not cross your\nmind, but it certainly does mine.
-0x1F5BE85: That Pokémon in your party…\pIt certainly bears resemblance to\nthe guardian deities of Alola…
-0x1F5BEE2: Reports from the Alola region\nindicate their guardian deities\lare still present, which must mean\lyours is not of this world.\pRegardless, this item rightfully\nbelongs with it, not with me.
-0x1F5BF9E: The {COLOR}ÉTapunium Z{COLOR}Ç can power up any\nof the Alolan guardian deities\l{COLOR}ÉNature’s Madness{COLOR}Ç, into a more\lpowerful, one-time use Z-Move.
-0x1F5C026: Upon this rocky face I see, yet\nanother Trainer, yearning to be.\pThe very best, I say, the very\nbest.\pThen, I shall put this Trainer to\nthe test!
-0x1F5C0B8: A glorious defeat for me, a\nglorious defeat you see.
-0x1F5C0ED: And as this Trainer did pass the\ntest, I said to them, they are\lthe very best.
-0x1F5C13C: An {COLOR}ÉAlakazite{COLOR}Ë is full of might.\pFor {COLOR}ÉAlakazam{COLOR}Ë, it will shine\nbright.
-0x1F5C18B: Upon this rocky face I see, yet\nanother Trainer, yearning to be.\pThe very best, I say, the very\nbest.\pBut only one who has defeated all\nof the Trainers on Route 11, can\lbe put to the test.
-0x1F5C248: We battle as one!\nUs and nature!
-0x1F5C269: Mother nature, where have we\ngone wrong?
-0x1F5C292: I work to protect the environment.\nIn turn, nature protects me!
-0x1F5C2D2: We battle as one!\nUs and nature!\pBut only against Trainers that can\ntake us both at once!
-0x1F5C32C: Together we’re strong!\nTogether with nature!
-0x1F5C359: But together… we’re strong…?
-0x1F5C376: The mountain here has a whole\nnetwork of caves running\lthrough it.\pTogether, we protect the Pokémon\nof the cliff’s caves.
-0x1F5C3F0: Together we’re strong!\nTogether with nature!\pBut only against Trainers that can\ntake us both at once!
-0x1F5C456: Pokémon from the sea have infested\nthis body of water!
-0x1F5C48D: How did they get up here?
-0x1F5C4A7: Tentacool don’t belong in ponds,\nthey belong in the sea!
-0x1F5C4E0: Be patient.\nFishing is a waiting game.
-0x1F5C507: That one got away!
-0x1F5C51A: With a better rod, I could catch\nbetter Pokémon…
-0x1F5C54B: I love fishing, don’t get me wrong.\pBut it’d be best if I also had more\nwork.
-0x1F5C599: It’s not easy…
-0x1F5C5A8: It’s all right.\nLosing doesn’t bug me anymore.
-0x1F5C5D7: Let’s see who’s the better Trainer.\pThe man who spends all day every\nday fishing, or this random person\lthat just passed by.
-0x1F5C654: It should be clear to you now\nwho’s the better Trainer.
-0x1F5C68C: I guess you get to be good at\nwhat you like.\pWell, you beat me at Pokémon,\nbut you can’t top me at fishing.
-0x1F5C6F8: It’s kind of chilly out here.
-0x1F5C716: That warmed me right up!
-0x1F5C72F: It’s always important to stay warm.
-0x1F5C753: Do you know how the Cliff Caves got\ntheir name?
-0x1F5C783: I’m the one who came up with it!
-0x1F5C7A4: This place reminds me of the Cliff\nCaves from the Johto region.\pHuh? I could’ve thought of something\ndifferent?\pLike what? Cliff Caves Remastered?\nOriginal Recipe Cliff Caves?
-0x1F5C854: I believe I can fly!
-0x1F5C869: I believe I can touch the sky!
-0x1F5C888: I like to pretend I can fly like\nmy birds.\pBeing grounded sucks.
-0x1F5C8C9: I saw you coming from a mile away!\nMy eyes are like a Talonflame’s!
-0x1F5C90D: No matter the distance, I still\nlost!
-0x1F5C933: Talonflame has a Hidden Ability\ncalled {COLOR}ÉGale Wings{COLOR}Ë.\pIt can use its Flying-type moves\nfaster!
-0x1F5C9A1: Did you know that your {STR_VAR_1}\nis able to power moves up\linto {COLOR}ÉZ-Moves{COLOR}Ë?\pThose are super powerful moves that\ncan only be used once per battle!\pJust equip your Pokémon with a\n{COLOR}ÉZ-Crystal{COLOR}Ë matching one of its\lmove Types, and press {START_BUTTON} when\lselecting the move to unleash a\ldevastating attack!
-0x1F5CAC4: There’s a Pokémon in the bag!\nTake it?
-0x1F5CAEB: {PLAYER} found a {STR_VAR_1}!\nIt has a {COLOR}É{STR_VAR_2}{COLOR}Á nature.
-0x1F5CB14: You don’t have enough space for\nthis Pokémon.
-0x1F5CB42: There’s a Pokémon in the bag!\pBut it doesn’t seem like it wants\nto come out right now…
-0x1F5CB99: Check ’em!
-0x1F5CBA4: Did you enjoy checking out my\nPokémon?
-0x1F5CBCB: I love showing off my Pokémon!
-0x1F5CBEA: When I whistle, I can hear an echo.
-0x1F5CC0E: Ow!\nThat’s tragic!
-0x1F5CC21: This mountain pass has a very\nunique layout.\pYou’re not going to find any other\nroute in Borrius with stairs built\linto the side of a mountain like\lthis one!
-0x1F5CCBF: Do you know where you’re going?
-0x1F5CCDF: You must know.
-0x1F5CCEE: To go between Tarmigan Town and\nDehara City, you must first go\ldown the mountain.
-0x1F5CD40: Hmm…\pThis must be the way to Dehara\nCity!\pI just know it!
-0x1F5CD7A: I can’t be lost…
-0x1F5CD8B: A beautiful Trainer can’t lose\nher way!\pIt’s simply not possible!
-0x1F5CDCD: My psychic powers foretell my\nvictory!
-0x1F5CDF4: I… I was wrong?
-0x1F5CE04: I must hone my psychic senses\nfurther.\pNext time, I will not be wrong.
-0x1F5CE4B: It’s getting hotter out here…
-0x1F5CE69: No heat, no help.
-0x1F5CE7B: The warmer the weather, the\nstronger I get!
-0x1F5CEA7: The ocean off the coast is really\ndeep!
-0x1F5CECF: I’ll keep fishing.
-0x1F5CEE2: I think some Pokémon can take\nyou underwater.
-0x1F5CF10: Careful!\pGet too close to the shore and\nyou’ll fall into the ocean!
-0x1F5CF54: The edge of the beach isn’t\nso shallow.
-0x1F5CF7C: You can’t see from on land, but\nthe water here is very deep!
-0x1F5CFE4: {STR_VAR_1} soared upwards out\nof sight.
-0x1F5D004: With my fists, I am trying to\nsmash this rock that continuously\lreappears under my umbrella.\pAiyah!\pBut it is not working…
-0x1F5D07F: Aiyah! \nYou smashed it!
-0x1F5D097: They call me the Ocean Master.\pWhy?\pBecause I am the master of the\nocean.\pI command the Pokémon of the sea,\nand none can defeat me.\pAllow me to show you.
-0x1F5D131: You are now the Ocean Master.\nCongratulations.
-0x1F5D160: In truth, I was called the Ocean\nMaster because of my name.\pIt was a cruel joke my classmates\nplayed on me.\pI vowed revenge, so I became an\nAce Trainer.\pThat is all in the past now, so I\nwould like you to have this.
-0x1F5D238: Only the Ocean Master can tame a\nMega Gyarados.\pAs you are one, allow your {COLOR}ÉGyarados{COLOR}Ë\nto hold the {COLOR}ÉGyaradosite{COLOR}Ë.\pIt will make for an explosive\nbattle.
-0x1F5D2D7: They call me the Ocean Master.\pWhy?\pBecause I am the master of the\nocean.\pI command the Pokémon of the sea,\nand none can defeat me.\pEspecially not someone who has not\neven defeated all of the Trainers\lon Route 13 and Route 14.
-0x1F5D3BA: Wahahah! This dude’s going to catch\nhimself a big one!
-0x1F5D3F1: This dude just lost one…
-0x1F5D40A: This dude thinks you’re a big one.\nNo, you’re a big-one-to-be!
-0x1F5D449: What do people do if they need to go\nto a washroom?\pWhat if my rod hooks a big one while\nI’m in the washroom?\pI just can’t go…
-0x1F5D4C8: I lost because I’m trying to not go\nto the washroom…
-0x1F5D4FD: Oh, no! I’ve got this feeling I’ll\nhook a big one!
-0x1F5D530: I look at the sea to forget all\nthe bad things that happened.
-0x1F5D56E: Ooh!\nTraumatic!
-0x1F5D57E: I’m looking at the sea to forget\nthe bad thing that happened!
-0x1F5D5BC: I tried diving for Pokémon, and it\nworked!
-0x1F5D5E7: Help!
-0x1F5D5ED: You can only Dive where the sea\nis dark.
-0x1F5D616: What’s beyond the horizon?
-0x1F5D631: Glub!
-0x1F5D637: I see the Ruins of Void over\nyonder!
-0x1F5D65C: I love swimming!\nWhat about you?
-0x1F5D67D: Belly flop!
-0x1F5D689: I can beat even marine Pokémon\nat swimming.
-0x1F5D6B5: Swimming’s great!\nSunburns aren’t!
-0x1F5D6D8: Shocker!
-0x1F5D6E1: My friend wanted to swim to\nthe Ruins of Void.
-0x1F5D710: I swam here with my friends…\nI’m tired…
-0x1F5D738: I’m exhausted…
-0x1F5D747: If I were to ride a Pokémon on\nthe sea, I’d like a Lapras.\pLapras is so big, I bet it\nwould keep me dry on water.
-0x1F5D7B9: Oh, I just love your ride!\nCan I have it if I win?
-0x1F5D7EC: Oh! I lost!
-0x1F5D7F8: It’s still a long way to\nthe Ruins of Void.\pI want to go back to Dresco Town.
-0x1F5D846: The weather’s gorgeous!\nPerfect for a battle!
-0x1F5D874: Aiyeeeeh!
-0x1F5D87E: Please don’t splash my face!\nYou’ll ruin the makeup.
-0x1F5D8B3: Kurukkoo!\nHow do you like my birdcall?
-0x1F5D8DA: I had to bug you!
-0x1F5D8EC: I collect sea Pokémon on weekends\nbecause the sea is so close.
-0x1F5D92B: What is a Beauty like me doing all\nalone out on the beach?
-0x1F5D966: I’m sunbathing, that’s what!
-0x1F5D983: You need sun to sunbathe!\pI very well couldn’t do it on\nRoute 10!
-0x1F5D9C5: From out of the sand I leap! Hiyah!\nI challenge thee!
-0x1F5D9FB: With honour I admit defeat!
-0x1F5DA17: I must refine the art of concealment.\nI bid thee farewell.
-0x1F5DA52: My mommy said that I can’t swim\nwithout my float ring.
-0x1F5DA89: Waaah!\nWaaah!
-0x1F5DA97: This year, I’m going to finally\nlearn how to swim!
-0x1F5DACA: Yay, yay!\nPokémon!
-0x1F5DADD: What happens now?
-0x1F5DAEF: Did I just win?\nOr did I lose?
-0x1F5DB19: Ahoy, there!\nThese waters are treacherous!
-0x1F5DB44: Ooh!\nDangerous!
-0x1F5DB54: M-my legs! They cramped up!\nGlub, glub…
-0x1F5DB7C: The water is deep here.\nThere are many people swimming.
-0x1F5DBB4: Splash!
-0x1F5DBBC: I wish I could ride my Pokémon.\nI bet you’re not tired.
-0x1F5DBF4: Why are you riding a Pokémon?\nCan’t you swim?
-0x1F5DC22: Ouch!\nTorpedoed!
-0x1F5DC33: Riding a Pokémon sure looks fun!
-0x1F5DC54: Check out my buff physique!
-0x1F5DC70: Wimpy!
-0x1F5DC77: I should’ve been buffing up my\nPokémon, not me!
-0x1F5DCA7: Right now, I’m in a triathlon meet.
-0x1F5DCCB: Pant…\nPant… Pant…
-0x1F5DCDD: I’m beat! But, I still have the\nbike race and marathon left!
-0x1F5DD1A: My boyfriend gave me big pearls.
-0x1F5DD3B: Oh, no!\nMy pearls were in them!
-0x1F5DD5B: Will my pearls grow bigger inside\nCloyster?
-0x1F5DD87: My boyfriend’s always busy, so I\ncome swimming by myself.
-0x1F5DDC1: Awww, I knew this would happen!
-0x1F5DDE1: When I can’t be with my boyfriend,\nI spend time with the Pokémon he\lgave me.
-0x1F5DE2E: I love having picnics on the beach!
-0x1F5DE52: You ruined my picnic!
-0x1F5DE68: If only there was someone to have a\npicnic with…
-0x1F5DE99: Wow!\nYour Badges are too cool!
-0x1F5DEB8: Not enough!
-0x1F5DEC4: You got those Badges from Gym\nLeaders. I know!
-0x1F5DEF3: What are you looking at?
-0x1F5DF0C: I’m just relaxing here.
-0x1F5DF24: Even rough housers need a break.
-0x1F5DF45: I’ve been in the hot sand and\nrefreshed my tired bones.\pRight now I’m feeling strong!
-0x1F5DF9B: Oh, my goodness.\nNow, aren’t you something!
-0x1F5DFC7: Well, well, I’ve lost. I can’t call\nmyself an Expert now, can I?
-0x1F5E008: Whoops! Don’t tell me I snagged\na Surfing Pokémon?
-0x1F5E03B: I can’t keep up!
-0x1F5E04C: It’d be a handful if I hooked\nyour tough Pokémon!
-0x1F5E07E: The salty tang of the sea…\nIt tickles my heart.
-0x1F5E0AE: …Sniff, sniff…\nSomething smells unpleasant…
-0x1F5E0DA: Perhaps that reek is your sweaty\nPokémon’s body odor…
-0x1F5E110: We’re standing on top of the\nKBT Expressway!
-0x1F5E13D: Can you feel the people moving\nbelow us?
-0x1F5E166: This section of the KBT Expressway\nruns from Crater Town to Tehl Town.
-0x1F5E1AD: I wonder how much weight the ground\ncan hold up?
-0x1F5E1DE: Enough for a good battle!
-0x1F5E1F8: If 100 people as big as me stood\nhere, do you think the ground\lcould support the weight?
-0x1F5E25D: Are you crazy!?\pDon’t you know it’s dangerous to\nswim in a thunderstorm?\p…{PAUSE}îUs?\pWe’re part Ground-type!\nWe can’t be shocked!
-0x1F5E2DB: Oh, dear…\pYou’d best be careful swimming in\nthis weather!\pThis is no natural thunderstorm,\nyou see.\pSomething ominous is causing\nthe downpour.
-0x1F5E36A: The strange thunderstorm from\nbefore is over now!\pWhy did it suddenly end?
-0x1F5E3B5: It ended as suddenly as our battle!
-0x1F5E3D9: What could have caused a\nthunderstorm that powerful?\pI know of the Ability {COLOR}ÉDrizzle{COLOR}Ç, but\nthat was something else.\pThe rain was almost…{PAUSE}î primordial…
-0x1F5E474: Thunderstorms affect fishing!
-0x1F5E492: Or was that just my imagination?
-0x1F5E4B3: Thunderstorms don’t actually have\nan effect on fishing.\pBut {COLOR}ÉSweet Scent{COLOR}Ë…\pThat can’t be used if the weather\nisn’t clear.
+0x1F5BD05: Grotte Falaise
+0x1F5BD10: Au-delà des rochers, un océan.\pQuelque part dans cet océan\nse trouve la paisible région\nd'Alola.\pLà-bas, ils ont pour tradition que\nchacune de leurs îles soit\nprotégée par une divinité\ngardienne.\pTu t'es déjà demandé ce que ce\nserait si chacune des îles de\nBorrius en avait aussi une ?\pPeut-être pas, mais moi, oui.
+0x1F5BE85: Ce Pokémon dans ton équipe…\nIl ressemble aux divinités\ngardiennes d'Alola…
+0x1F5BEE2: D'Alola, on dit que leurs divinités\ngardiennes sont toujours là-bas,\ndonc le tien ne vient pas de ce\nmonde.\pQuoi qu'il en soit, cet objet lui\nrevient, pas à moi.
+0x1F5BF9E: Le {COLOR}ÉTapunium Z{COLOR}Ç peut renforcer\n{COLOR}ÉCourroux Naturel{COLOR}Ç de toutes les\ndivinités gardiennes d'Alola en\nune Capacité Z unique et plus\npuissante.
+0x1F5C026: Sur cette paroi, je vois un autre\nDresseur, avide de réussir.\pLe meilleur, je dis, le meilleur\nde tous.\pAlors je vais soumettre ce Dresseur\nà l'épreuve !
+0x1F5C0B8: Une glorieuse défaite pour moi,\nune glorieuse défaite, tu vois.
+0x1F5C0ED: Quand ce Dresseur passa l'épreuve,\nje lui dis qu'il était vraiment\nle meilleur.
+0x1F5C13C: Une {COLOR}ÉAlakazamite{COLOR}Ë, pleine de pouvoir.\pPour {COLOR}ÉAlakazam{COLOR}Ë, elle brillera\nde mille feux.
+0x1F5C18B: Sur cette paroi, je vois un autre\nDresseur, avide de réussir.\pLe meilleur, je dis, le meilleur\nde tous.\pMais seuls ceux qui ont battu tous\nles Dresseurs de la Route 11\npeuvent passer l'épreuve.
+0x1F5C248: Nous combattons comme un seul !\nNous et la nature !
+0x1F5C269: Mère Nature, où avons-nous\ndérapé ?
+0x1F5C292: Je travaille à protéger\nl'environnement.\nEn retour, la nature me protège !
+0x1F5C2D2: Nous combattons comme un seul !\nNous et la nature !\pMais seulement contre les Dresseurs\ncapables de nous affronter tous\nles deux à la fois !
+0x1F5C32C: Ensemble, nous sommes forts !\nEnsemble avec la nature !
+0x1F5C359: Mais ensemble… on est forts… ?
+0x1F5C376: Ici, la montagne cache un réseau\nde grottes.\pEnsemble, nous protégeons les\nPokémon des grottes de la falaise.
+0x1F5C3F0: Ensemble, nous sommes forts !\nEnsemble avec la nature !\pMais seulement contre les Dresseurs\ncapables de nous affronter tous\nles deux à la fois !
+0x1F5C456: Des Pokémon de mer ont envahi cette\nétendue d'eau !
+0x1F5C48D: Comment ils sont arrivés ici ?
+0x1F5C4A7: Les Tentacool n'ont rien à faire\ndans les étangs, ils vivent en\nmer !
+0x1F5C4E0: Patience.\nLa pêche demande d'attendre.
+0x1F5C507: Celui-là s'est échappé !
+0x1F5C51A: Avec une meilleure canne je pourrai\nattraper de meilleurs Pokémon…
+0x1F5C54B: J'adore pêcher, ne te méprends pas.\pMais ce serait mieux si j'avais\naussi plus de travail.
+0x1F5C599: Ce n'est pas facile…
+0x1F5C5A8: Ça va.\nPerdre ne me dérange plus.
+0x1F5C5D7: Voyons qui est le meilleur.\nL'homme qui pêche tous les jours,\nou cette personne de passage.
+0x1F5C654: Ça devrait être clair pour toi\nqui est le meilleur Dresseur.
+0x1F5C68C: J'imagine qu'on devient bon à ce\nqu'on aime.\pTu m'as battu aux Pokémon, mais\nen pêche, tu ne me surpasses pas.
+0x1F5C6F8: Il fait un peu frisquet ici.
+0x1F5C716: Ça m'a bien réchauffé !
+0x1F5C72F: C'est toujours important de\nrester au chaud.
+0x1F5C753: Tu sais d'où viennent les Grottes\nFalaises ?
+0x1F5C783: C'est moi qui ai trouvé le nom !
+0x1F5C7A4: Cet endroit me rappelle les Grottes\nFalaises de Johto.\pHein ? J'aurais pu trouver autre\nchose ?\pComme quoi ? Grottes Falaises\nRemasterisées ? Grottes Falaises\nRecette Originale ?
+0x1F5C854: Je crois pouvoir voler !
+0x1F5C869: Je crois pouvoir toucher le ciel !
+0x1F5C888: Je fais semblant de voler comme\nmes oiseaux.\pRester cloué au sol, c'est nul.
+0x1F5C8C9: Je t'ai vu venir à un kilomètre !\nMes yeux sont comme ceux d'un\nFlambusard !
+0x1F5C90D: Peu importe la distance, j'ai quand\nmême perdu !
+0x1F5C933: Flambusard a un Talent caché appelé\n{COLOR}ÉAiles Bourrasque{COLOR}Ë.\pIl peut lancer ses capacités\nde type Vol plus vite !
+0x1F5C9A1: Savais-tu que ton {STR_VAR_1} peut\nbooster ses capacités en\n{COLOR}ÉCapacités Z{COLOR}Ë ?\pCe sont des capacités super\npuissantes utilisables une seule\nfois par combat !\pÉquipe ton Pokémon d'un\n{COLOR}ÉCristal Z{COLOR}Ë correspondant à l'un de\nses types de capacités, puis\nappuie sur {START_BUTTON} en sélectionnant\nla capacité pour déclencher une\nattaque dévastatrice !
+0x1F5CAC4: Il y a un Pokémon dans le sac !\nLe prendre ?
+0x1F5CAEB: {PLAYER} a trouvé un {STR_VAR_1} !\nIl a une nature {COLOR}É{STR_VAR_2}{COLOR}Á.
+0x1F5CB14: Tu n'as pas assez de place pour ce\nPokémon.
+0x1F5CB42: Il y a un Pokémon dans le sac !\pMais il n'a pas l'air de vouloir\nsortir maintenant…
+0x1F5CB99: Vérifie-les !
+0x1F5CBA4: Tu as aimé regarder mes Pokémon ?
+0x1F5CBCB: J'adore exhiber mes Pokémon !
+0x1F5CBEA: Quand je siffle, j'entends un écho.
+0x1F5CC0E: Aïe !\nC'est tragique !
+0x1F5CC21: Ce col de montagne a une structure\nvraiment unique.\pTu ne verras aucune autre route à\nBorrius avec des escaliers creusés\ndans le flanc d'une montagne comme\ncelle-ci !
+0x1F5CCBF: Tu sais où tu vas ?
+0x1F5CCDF: Tu dois le savoir.
+0x1F5CCEE: Pour aller de Tarmiganville à la\nVille de Dehara, tu dois d'abord\ndescendre la montagne.
+0x1F5CD40: Hmm…\pÇa doit être le chemin pour la Ville\nde Dehara !\pJ'en suis sûr !
+0x1F5CD7A: Je ne peux pas être perdue…
+0x1F5CD8B: Une belle Dresseuse ne peut pas se\nperdre !\pC'est impossible !
+0x1F5CDCD: Mes pouvoirs psy prédisent ma\nvictoire !
+0x1F5CDF4: J… J'avais tort ?
+0x1F5CE04: Je dois affiner mes pouvoirs psy.\pLa prochaine fois, je ne me trompe\npas.
+0x1F5CE4B: Il fait de plus en plus chaud…
+0x1F5CE69: Pas de chaleur, pas d'aide.
+0x1F5CE7B: Plus il fait chaud, plus je deviens\nfort !
+0x1F5CEA7: L'océan au large est vraiment\nprofond !
+0x1F5CECF: Je vais continuer à pêcher.
+0x1F5CEE2: Je pense que certains Pokémon\npeuvent t'emmener sous l'eau.
+0x1F5CF10: Attention !\pTrop près du rivage et tu tombes\ndans l'océan !
+0x1F5CF54: Le bord de la plage n'est pas si\npeu profond.
+0x1F5CF7C: De la terre, tu ne vois pas, mais\nl'eau ici est très profonde !
+0x1F5CFE4: {STR_VAR_1} a pris de la hauteur et\ndisparu de vue.
+0x1F5D004: J'essaie de briser ce rocher qui\nréapparaît sans cesse sous mon\nparapluie.\pAïe !\pMais ça ne marche pas…
+0x1F5D07F: Aïe !\nTu l'as cassé !
+0x1F5D097: On m'appelle le Maître de l'Océan.\pPourquoi ?\pParce que je suis le maître de\nl'océan.\pJe commande les Pokémon de la mer,\net nul ne peut me vaincre.\pLaisse-moi te montrer.
+0x1F5D131: Tu es maintenant le Maître de\nl'Océan.\nFélicitations.
+0x1F5D160: En vérité, on m'appelait Maître de\nl'Océan à cause de mon nom.\pC'était une mauvaise blague de mes\ncamarades.\pJ'ai juré de me venger, alors je\nsuis devenu un As.\pTout ça est du passé, alors prends\nça.
+0x1F5D238: Seul le Maître de l'Océan dompte\nun Méga-Léviator.\pComme tu en es un, laisse ton\n{COLOR}ÉLéviator{COLOR}Ë tenir la {COLOR}ÉLéviatorite{COLOR}Ë.\pÇa promet un combat explosif.
+0x1F5D2D7: On m'appelle le Maître de l'Océan.\pPourquoi ?\pParce que je suis le maître de\nl'océan.\pJe commande les Pokémon de la mer,\net nul ne peut me vaincre.\pSurtout pas quelqu'un qui n'a même\npas battu tous les Dresseurs des\nRoutes 13 et 14.
+0x1F5D3BA: Wahahah ! Ce type va ferrer un\ngros poisson !
+0x1F5D3F1: Ce type vient d'en perdre un…
+0x1F5D40A: Ce type te prend pour un gros\npoisson.\nNon, un futur gros poisson !
+0x1F5D449: Que font les gens quand ils doivent\naller aux toilettes ?\pEt si je ferre un gros poisson alors\nque je suis aux toilettes ?\pJe ne peux tout simplement pas y\naller…
+0x1F5D4C8: J'ai perdu parce que j'essaie de ne\npas aller aux toilettes…
+0x1F5D4FD: Oh non ! Je sens que je vais\nferrer un gros poisson !
+0x1F5D530: Je regarde la mer pour oublier tout\nle mal qui est arrivé.
+0x1F5D56E: Ouh !\nTraumatisant !
+0x1F5D57E: Je regarde la mer pour oublier\nle mauvais souvenir !
+0x1F5D5BC: J'ai essayé de plonger pour des\nPokémon, et ça a marché !
+0x1F5D5E7: À l'aide !
+0x1F5D5ED: On ne peut Plonger que là où la mer\nest sombre.
+0x1F5D616: Qu'y a-t-il au-delà de l'horizon ?
+0x1F5D631: Gloub !
+0x1F5D637: Je vois les Ruines du Néant\nlà-bas !
+0x1F5D65C: J'adore nager !\nEt toi ?
+0x1F5D67D: Plouf ventral !
+0x1F5D689: Je peux battre même les Pokémon\nmarins à la nage.
+0x1F5D6B5: Nager, c'est super !\nLes coups de soleil, non !
+0x1F5D6D8: Choc !
+0x1F5D6E1: Mon ami voulait nager jusqu'aux\nRuines du Néant.
+0x1F5D710: J'ai nagé ici avec mes amis…\nJe suis fatigué…
+0x1F5D738: Je suis épuisé…
+0x1F5D747: Si je devais chevaucher un Pokémon\nsur la mer, je voudrais un Lokhlass.\pLokhlass est si grand, je parie\nqu'il me garderait au sec.
+0x1F5D7B9: Oh, j'adore ta monture !\nJe peux l'avoir si je gagne ?
+0x1F5D7EC: Oh ! J'ai perdu !
+0x1F5D7F8: Il reste encore un long chemin\njusqu'aux Ruines du Néant.\pJe veux rentrer à Bourg Dresco.
+0x1F5D846: Le temps est magnifique !\nParfait pour un combat !
+0x1F5D874: Aïïïe !
+0x1F5D87E: Ne m'éclabousse pas le visage !\nTu vas ruiner le maquillage.
+0x1F5D8B3: Kurukkoo !\nQue penses-tu de mon cri d'oiseau ?
+0x1F5D8DA: Je devais te déranger !
+0x1F5D8EC: Je collecte des Pokémon marins le\nweek-end parce que la mer est si\nproche.
+0x1F5D92B: Qu'est-ce qu'une Topdresseuse comme\nmoi fait seule sur la plage ?
+0x1F5D966: Je bronze, voilà ce que je fais !
+0x1F5D983: Il faut du soleil pour bronzer !\pJe ne pourrais vraiment pas le faire\nsur la Route 10 !
+0x1F5D9C5: Je jaillis du sable ! Hiya !\nJe te défie !
+0x1F5D9FB: Avec honneur, j'admets ma défaite !
+0x1F5DA17: Je dois peaufiner l'art du\ncamouflage.\pJe te dis adieu.
+0x1F5DA52: Maman a dit que je ne peux pas\nnager sans ma bouée.
+0x1F5DA89: Ouin !\nOuin !
+0x1F5DA97: Cette année, je vais enfin savoir\nnager !
+0x1F5DACA: Youpi, youpi !\nPokémon !
+0x1F5DADD: Que se passe-t-il maintenant ?
+0x1F5DAEF: Je viens de gagner ?\nOu de perdre ?
+0x1F5DB19: Ohé, là !\nCes eaux sont traîtresses !
+0x1F5DB44: Ouh !\nDangereux !
+0x1F5DB54: M… mes jambes ! Elles se sont\ncrispées !\nGlou, glou…
+0x1F5DB7C: L'eau est profonde ici.\nIl y a beaucoup de nageurs.
+0x1F5DBB4: Splash !
+0x1F5DBBC: J'aimerais monter sur mon Pokémon.\nJe parie que tu n'es pas fatigué.
+0x1F5DBF4: Pourquoi tu montes un Pokémon ?\nTu ne peux pas nager ?
+0x1F5DC22: Aïe !\nTorpillé !
+0x1F5DC33: Monter un Pokémon a l'air\nbien amusant !
+0x1F5DC54: Admire ma carrure musclée !
+0x1F5DC70: Maigrichon !
+0x1F5DC77: J'aurais dû muscler mes Pokémon,\npas moi !
+0x1F5DCA7: Je suis en plein triathlon.
+0x1F5DCCB: Haa…\nHaa… Haa…
+0x1F5DCDD: Je suis crevé ! Mais il me reste\nla course à vélo et le marathon !
+0x1F5DD1A: Mon copain m'a offert de grosses\nperles.
+0x1F5DD3B: Oh non !\nMes perles étaient dedans !
+0x1F5DD5B: Mes perles vont-elles grossir dans\nun Crustabri ?
+0x1F5DD87: Mon copain est toujours occupé, je\nviens nager seule.
+0x1F5DDC1: Aaaah, je le savais !
+0x1F5DDE1: Quand je ne peux pas être avec mon\ncopain, je passe du temps avec les\nPokémon qu'il m'a donnés.
+0x1F5DE2E: J'adore pique-niquer sur la plage !
+0x1F5DE52: Tu as gâché mon pique-nique !
+0x1F5DE68: Si seulement j'avais quelqu'un avec\nqui pique-niquer…
+0x1F5DE99: Ouah !\nTes Badges sont trop cool !
+0x1F5DEB8: Pas assez !
+0x1F5DEC4: Tu as obtenu ces Badges auprès des\nChampions d'Arène. Je le sais !
+0x1F5DEF3: Tu regardes quoi ?
+0x1F5DF0C: Je me détends ici.
+0x1F5DF24: Même les durs ont besoin d'une\npause.
+0x1F5DF45: J'ai été dans le sable brûlant et\nmes os fatigués sont revigorés.\pJe me sens super fort !
+0x1F5DF9B: Oh, mon dieu.\nEh bien, tu en imposes !
+0x1F5DFC7: Eh bien, j'ai perdu. Je ne peux\nplus me dire Expert, hein ?
+0x1F5E008: Oups ! Ne me dis pas que j'ai ferré\nun Pokémon de Surf ?
+0x1F5E03B: Je n'arrive pas à suivre !
+0x1F5E04C: Ce serait compliqué si je ferre ton\nPokémon costaud !
+0x1F5E07E: L'odeur salée de la mer…\nÇa chatouille mon cœur.
+0x1F5E0AE: …Snif, snif…\nQuelque chose sent mauvais…
+0x1F5E0DA: Peut-être est-ce l'odeur de tes\nPokémon en sueur…
+0x1F5E110: Nous sommes au-dessus de\nl'Autoroute KBT !
+0x1F5E13D: Tu sens les gens bouger dessous ?
+0x1F5E166: Cette partie de l'Autoroute KBT va\ndu Bourg Cratère à la Ville de Tehl.
+0x1F5E1AD: Je me demande combien de poids\nle sol peut supporter ?
+0x1F5E1DE: Assez pour un bon combat !
+0x1F5E1F8: Si 100 personnes aussi grandes que\nmoi se tenaient ici, tu crois que\nle sol tiendrait ?
+0x1F5E25D: Ça va pas !?\pTu sais qu'il est dangereux de\nnager sous un orage ?\p…{PAUSE}îNous ?\pOn est en partie de type Sol !\nOn ne peut pas être électrocutés !
+0x1F5E2DB: Oh, mon dieu…\pTu ferais mieux d'éviter de nager\npar ce temps !\pCe n'est pas un orage naturel, tu\nvois.\pQuelque chose d'inquiétant provoque\nce déluge.
+0x1F5E36A: L'étrange orage d'avant est fini !\pPourquoi s'est-il arrêté\nbrusquement ?
+0x1F5E3B5: Il s'est terminé aussi soudainement\nque notre combat !
+0x1F5E3D9: Qu'est-ce qui a pu provoquer un\norage aussi puissant ?\pJe connais le Talent {COLOR}ÉCrachin{COLOR}Ç, mais\nc'était autre chose.\pLa pluie était presque…{PAUSE}î\nprimordiale…
+0x1F5E474: Les orages jouent sur la pêche !
+0x1F5E492: Ou bien c'était juste mon\nimagination ?
+0x1F5E4B3: Les orages n'ont aucun effet sur la\npêche.\pMais {COLOR}ÉDoux Parfum{COLOR}Ë…\pOn ne peut pas l'utiliser si le\ntemps n'est pas clair.
 0x1F5E53D: Route 16 - 17
-0x1F5E54B: {COLOR}ÁSomething unseeable is in the way.
-0x1F5E571: Move, kid!\pYou’re blockin’ the road!
-0x1F5E596: Huh?\pThere’s somethin’ in the way?\pIt better not be that pesky\nPokémon, again…
-0x1F5E5E5: Take this.\pIf my hunch is right, it’ll get rid\nof whatever’s blockin’ the road.
-0x1F5E635: If my hunch is right, that item\nshould show you exactly what’s\lblockin’ the road.
-0x1F5E687: {COLOR}ÁSomething unseeable is in the way.\pUse the Devon Scope?
-0x1F5E6C2: {COLOR}Á{PLAYER} used the Devon Scope.
-0x1F5E6DE: {COLOR}ÁAn invisible Pokémon became\ncompletely visible!
-0x1F5E711: {COLOR}ÁThe startled Pokémon took off!
-0x1F5E733: Hmph.\pSeems like you’re a more\nintimidatin’ Trainer than you let on…\pSay… you should take on the Antisis\nGym with your Pokémon.\pI hear the Gym Leader there has\nbeen pretty bored lately.
-0x1F5E7ED: {COLOR}ÁThe startled Pokémon attacked!
-0x1F5E80F: {COLOR}Á{STR_VAR_1} took off!
-0x1F5E81F: Oh Mr. Sun, Sun, Mr. Golden Sun,\nplease shine down on me…
-0x1F5E859: Oh Mr. Sun, Sun, Mr. Golden Sun,\nhas shone down on me…
-0x1F5E890: Oh Mr. Sun, Sun, Mr. Golden Sun,\nit’s now time to leave…
-0x1F5E8C9: Hey, there!\nLet’s have ourselves a good time!
-0x1F5E8F7: Don’t make me mad!
-0x1F5E90A: I get my kicks by harassing people\nwith my stinking Pokémon.\pThey’re great for startling people.\nAnd, they bite, too.
-0x1F5E980: Leaving so soon?\pThere’s an exit toll to pay!
-0x1F5E9AE: You took my money!
-0x1F5E9C1: Forget it!\nI don’t need your money!
-0x1F5E9E5: Yes, I know I can Surf, but I’d\nrather swim instead.\pIt does seem weird, I agree.
-0x1F5EA37: Kaploosh!
-0x1F5EA41: If you don’t know how, I’m willing\nto show you how to swim.
-0x1F5EA7D: My favourite kind of guy is someone\nthat looks good out in the sea!
-0x1F5EAC1: The tide is going out…
-0x1F5EAD8: Don’t get me wrong, it’s not as if\nI don’t like mountain men.\pBut, you know, my favourite kind of\nguy looks great with Pokémon!
-0x1F5EB58: My family warned me it was too\ndangerous to go on a picnic this\lclose to Antisis City.\pPersonally, I’m having a great\ntime!
-0x1F5EBD4: You spoiled my good time!
-0x1F5EBEE: The bad men in Antisis City like to\nharass people who get too close\lthe city.
-0x1F5EC3C: My dream’s a big one!\pI want to battle every kind of\nPokémon from around the world!
-0x1F5EC90: I lost, but I am one step closer to\nrealizing my dream!
-0x1F5ECC8: Listen, you! Whatever happens,\nnever lose sight of your dream!
-0x1F5ED07: If I stare at the water’s surface\nfor too long, I begin to forget\lwhat I was doing in the first\lplace.
+0x1F5E54B: {COLOR}ÁQuelque chose d'invisible bloque\nla route.
+0x1F5E571: Bouge, gamin !\pTu bloques la route !
+0x1F5E596: Hein ?\pIl y a quelque chose qui bloque ?\pFaut pas que ce soit ce fichu\nPokémon, encore…
+0x1F5E5E5: Tiens.\pSi j'ai raison, ça dégagera ce qui\nbloque la route.
+0x1F5E635: Si j'ai raison, cet objet devrait\nmontrer ce qui bloque la route.
+0x1F5E687: {COLOR}ÁQuelque chose d'invisible bloque\nla route.\pUtiliser le Scope Devon ?
+0x1F5E6C2: {COLOR}Á{PLAYER} utilise le Scope Devon.
+0x1F5E6DE: {COLOR}ÁUn Pokémon invisible est devenu\ntotalement visible !
+0x1F5E711: {COLOR}ÁLe Pokémon effrayé s'est enfui !
+0x1F5E733: Hmpf.\pOn dirait que tu es un Dresseur plus\nimpressionnant que tu n'en as l'air…\pDis donc… tu devrais affronter\nl'Arène d'Antisis avec tes\nPokémon.\pJ'entends dire que le Champion\nlà-bas s'ennuie pas mal.
+0x1F5E7ED: {COLOR}ÁLe Pokémon effrayé attaque !
+0x1F5E80F: {COLOR}Á{STR_VAR_1} s'est enfui !
+0x1F5E81F: Oh, M. Soleil, Soleil, Soleil d'Or,\nbrille sur moi…
+0x1F5E859: Oh, M. Soleil, Soleil, Soleil d'Or,\na brillé sur moi…
+0x1F5E890: Oh, M. Soleil, Soleil, Soleil d'Or,\nil est temps de partir…
+0x1F5E8C9: Salut, toi !\nAmusons-nous bien !
+0x1F5E8F7: Ne me mets pas en colère !
+0x1F5E90A: Je m'amuse à harceler les gens avec\nmes Pokémon puants.\pParfaits pour faire sursauter\nles gens.\nEt ils mordent, aussi.
+0x1F5E980: Déjà sur le départ ?\pIl y a un péage de sortie !
+0x1F5E9AE: Tu as pris mon argent !
+0x1F5E9C1: Laisse tomber !\nJe n'ai pas besoin de ton argent !
+0x1F5E9E5: Je sais que je peux surfer, mais je\npréfère nager.\pÇa paraît bizarre, je sais.
+0x1F5EA37: Kaploosh !
+0x1F5EA41: Si tu veux, je peux t'apprendre\nà nager.
+0x1F5EA7D: Mon type préféré, c'est quelqu'un\nqui a de l'allure en mer !
+0x1F5EAC1: La marée descend…
+0x1F5EAD8: Ne te méprends pas, ce n'est pas\nque je n'aime pas les montagnards.\pMais, tu sais, mon type préféré\nest quelqu'un qui se marie bien\navec les Pokémon !
+0x1F5EB58: Ma famille m'a averti que c'était\ntrop dangereux de pique-niquer si\nprès de la Ville d'Antisis.\pPerso, je passe un super moment !
+0x1F5EBD4: Tu as gâché mon bon moment !
+0x1F5EBEE: Les méchants de la Ville d'Antisis\naiment harceler les gens qui\ns'approchent trop de la ville.
+0x1F5EC3C: Mon rêve est immense !\pJe veux affronter chaque Pokémon du\nmonde !
+0x1F5EC90: J'ai perdu, mais je me rapproche\nde mon rêve !
+0x1F5ECC8: Quoi qu'il arrive, ne perds jamais\nde vue ton rêve !
+0x1F5ED07: Si je fixe l'eau trop longtemps,\nje finis par oublier ce\nque je faisais.
 0x1F5ED6E: I don’t know how, but I lost!
 0x1F5ED8C: Oh right…\nI was fishing, wasn’t I?
 0x1F5EDAF: I’d sensed the presence of a\nTrainer for a while.\pIt was you!

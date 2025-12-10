@@ -43,6 +43,13 @@ build-fr:
 	@$(PY) scripts/inject_translations.py --text $(COMBINED_FR) --out $(OUT_FR) --use-holes --free-map $(ROM_USAGE) --allow-append
 	@echo "ROM générée : $(OUT_FR)"
 
+.PHONY: quality
+quality:
+	@test -n "$(chunkfr)" || (echo "chunkfr manquant (ex: chunkfr=fr_chunks/chunk_62.txt)" && exit 1)
+	@test -n "$(chunkorigin)" || (echo "chunkorigin manquant (ex: chunkorigin=origin_chuncks/chunk_62.txt)" && exit 1)
+	@$(PY) scripts/check_breaks.py --fr "$(chunkfr)" --origin "$(chunkorigin)"
+	@echo "Rapport généré dans quality_reports."
+
 clean:
 	@rm -f $(EXTRACTED) $(COMBINED_FR) $(OUT_FR) $(ROM_USAGE) extracted_full.txt combined_fr_clean.txt
 	@rm -rf $(CHUNK_DIR)
