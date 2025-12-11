@@ -1,8 +1,15 @@
 Line 16: segment too long (37>36) ->  Si tu veux que ton Pokémon soit plus
 Line 19: segment too long (46>36) ->  Oh non ! Je ne peux pas échanger la Poké Ball
+Line 23: trailing control code at end of fr line
+Line 24: trailing control code at end of fr line
 Line 25: segment too long (37>36) ->  Reste prudent dans le Grand Désert !
+Line 31: trailing control code at end of fr line
 Line 31: segment too long (37>36) -> Tu dois être très fort pour venir ici
+Line 34: trailing control code at end of fr line
+Line 35: trailing control code at end of fr line
 Line 36: segment too long (65>36) ->  Je comprends… ce monde n'est pas fait pour les autres… seulement
+Line 41: trailing control code at end of fr line
+Line 44: trailing control code at end of fr line
 Line 45: segment too long (38>36) ->  Beaucoup de gens à Borrius sont aussi
 Line 46: segment too long (63>36) ->  Il y a plein de Pokémon sur la {COLOR}ÉRoute 2{COLOR}Ç qui n'évoluent qu'après
 Line 51: segment too long (37>36) -> Peux-tu me montrer la puissance de la
@@ -21,9 +28,16 @@ Line 93: segment too long (37>36) ->  Ce panneau Conseils a été lu près de
 Line 95: segment too long (71>36) ->  Ce panneau Conseils a été lu dans la grande salle du 1er étage près du
 Line 97: segment too long (37>36) ->  Ce panneau Conseils a été lu près de
 Line 98: segment too long (37>36) ->  Ce panneau Conseils a été lu près du
+Line 105: trailing control code at end of fr line
+Line 106: trailing control code at end of fr line
+Line 108: trailing control code at end of fr line
 Line 108: segment too long (37>36) -> ont un Pokémon tenant une Gemme, donc
 Line 109: segment too long (38>36) ->  Tu dois être un Dresseur expérimenté.
+Line 113: trailing control code at end of fr line
 Line 116: segment too long (37>36) -> Elle me rappelle celle que je portais
+Line 118: trailing control code at end of fr line
+Line 122: trailing control code at end of fr line
+Line 123: trailing control code at end of fr line
 Line 123: segment too long (37>36) ->  S'il te plaît, je veux te donner cet
 Line 127: segment too long (48>36) ->  Entraîne-toi à sauver en sauvegardant au moins {STR_VAR_1}
 Line 130: segment too long (37>36) ->  Certains veulent juste voir le monde
@@ -32,15 +46,22 @@ Line 132: segment too long (38>36) ->  Voici ta récompense pour ne pas avoir
 Line 134: segment too long (37>36) -> Si oui, veux-tu l'échanger contre mon
 Line 137: segment too long (41>36) -> connaît {COLOR}ÉAnti-Brume{COLOR}Ë, tu pourras l'utiliser
 Line 140: segment too long (37>36) -> Le docteur dit que ça accélérerait sa
+Line 144: trailing control code at end of fr line
 Line 144: segment too long (37>36) ->  Affronte nos Dresseurs autant que tu
 Line 144: segment too long (37>36) -> Si tu veux refaire un combat, sors et
 Line 146: segment too long (37>36) ->  Dois-je me mettre près de la porte ?
 Line 151: segment too long (45>36) ->  Gloup, gloup… Les Pokémon {COLOR}ÉNormal{COLOR}Ë font un bon
 Line 157: segment too long (38>36) ->  Goûte à ma fureur {COLOR}ÉTénèbres{COLOR}Ë physique !
 Line 160: segment too long (37>36) ->  Ma défense mentale a volé en éclats.
+Line 163: segment 1 \n mismatch (origin=1, fr=0)
+Line 164: segment 1 \n mismatch (origin=1, fr=0)
 Line 165: segment too long (37>36) ->  Maintenant, je suppose que vous êtes
+Line 167: segment 3 \n mismatch (origin=1, fr=2)
+Line 170: segment 1 \n mismatch (origin=1, fr=0)
+Line 171: segment 2 \n mismatch (origin=1, fr=2)
 Line 182: segment too long (44>36) ->  Tu veux me donner le Mystherbe {COLOR}É{STR_VAR_2}{COLOR}Ë de la Boîte
 Line 186: segment too long (48>36) ->  Bon retour, {PLAYER} ! Tu m'as donné {COLOR}É{STR_VAR_2} Mystherbe{COLOR}Ë.
+Line 189: trailing control code at end of fr line
 Line 189: segment too long (37>36) ->  Je ne peux pas prendre ces Mystherbe
 Line 191: segment too long (37>36) ->  Je ne peux pas récolter des feuilles
 Line 192: segment too long (37>36) ->  Je ne peux pas récolter des feuilles
@@ -49,13 +70,18 @@ Line 195: segment too long (59>36) ->  Apporte-moi encore {COLOR}É{STR_VAR_1}{C
 Line 212: segment too long (69>36) ->  Quand les Pokémon gagnent assez d'expérience, ils peuvent évoluer et
 Line 213: segment too long (37>36) ->  Le Champion Mirskle aime remplir son
 Line 214: segment too long (43>36) ->  Les Pokémon avec les Talents {COLOR}ÉRegard Vif{COLOR}Ë et
+Line 215: trailing control code at end of fr line
 Line 216: segment too long (37>36) ->  Comme les Repousse, certains Talents
 Line 217: segment too long (38>36) ->  Tu devrais battre autant d'Arènes que
+Line 223: trailing control code at end of fr line
 Line 225: segment too long (74>36) ->  J'aimerais qu'il soit plus facile de faire un bon jeu de mots avec le nom
+Line 226: trailing control code at end of fr line
 Line 226: segment too long (38>36) ->  Je veux explorer le Mont Thundercap !
+Line 227: trailing control code at end of fr line
 Line 227: segment too long (38>36) -> C'est dangereux, alors prends plein de
 Line 228: segment too long (37>36) -> entrer au Mont Thundercap pour ne pas
 Line 229: segment too long (37>36) ->  Tu t'es assis fermement sur le banc.
+Line 231: trailing control code at end of fr line
 Line 232: segment too long (37>36) -> J'ai eu le vertige et je suis tombé !
 Line 235: segment too long (44>36) ->  Houah ! Déplace des rochers à la force pure
 Line 236: segment too long (46>36) ->  {COLOR}ÉForce{COLOR}Ë permet de déplacer des blocs immenses !

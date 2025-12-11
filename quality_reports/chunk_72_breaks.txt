@@ -1,17 +1,29 @@
 Line 3: segment too long (37>36) ->  La difficulté du jeu a été régléesur
 Line 6: segment too long (37>36) ->  Un plafond de niveau difficile a été
+Line 32: segment 2 \n mismatch (origin=1, fr=2)
+Line 32: segment 5 \n mismatch (origin=1, fr=2)
+Line 41: segment 4 \n mismatch (origin=1, fr=0)
 Line 42: \p count mismatch (origin=0, fr=1)
 Line 42: \l count mismatch (origin=1, fr=0)
 Line 43: segment too long (37>36) -> transforma sa machine en arme géante,
 Line 59: segment too long (37>36) -> mer que si tu restais avec moi. Si je
 Line 63: segment too long (37>36) -> mais là… Je ne peux même pas imaginer
+Line 67: segment 4 \n mismatch (origin=1, fr=0)
+Line 74: segment 2 \n mismatch (origin=1, fr=2)
 Line 83: segment too long (38>36) -> les Lucario Immortels. Autrefois, nous
 Line 83: segment too long (37>36) -> combattions non pas pour la richesse,
 Line 86: segment too long (37>36) ->  Tu as mené de nombreux combats. Mais
 Line 89: segment too long (37>36) ->  Au-delà de cette porte repose le roi
 Line 129: segment too long (37>36) ->  Ce désert me gardera toujours motivé
 Line 144: segment too long (37>36) -> le type de personneque je cherche. Je
+Line 203: segment 1 has extra \n (origin=0, fr=3)
+Line 204: segment 1 \n mismatch (origin=1, fr=2)
+Line 206: segment 1 \n mismatch (origin=1, fr=3)
 Line 207: \l count mismatch (origin=1, fr=0)
+Line 207: \n segment counts mismatch (origin=[1, 1, 0, 1, 1], fr=[2, 2, 1, 1])
 Line 235: segment too long (37>36) ->  C'est toi ! Le Dresseur qui a trouvé
 Line 236: \l count mismatch (origin=4, fr=2)
+Line 236: \n segment counts mismatch (origin=[1, 0, 1, 0, 1, 0, 1, 0, 0, 1, 0, 0], fr=[1, 0, 1, 0, 2, 1, 0, 0, 2, 0])
+Line 241: segment 2 \n mismatch (origin=1, fr=2)
 Line 243: \l count mismatch (origin=1, fr=0)
+Line 243: \n segment counts mismatch (origin=[1, 1, 0], fr=[1, 3])

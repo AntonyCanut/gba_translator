@@ -11,6 +11,7 @@ Line 22: segment too long (62>36) ->  Il semble que les années d’expérience 
 Line 23: segment too long (37>36) ->  Je suis un fier membre de Cube Corp.
 Line 24: segment too long (57>36) ->  Je m'appelle Krystal. Oui… mes parents aimaient beaucoup
 Line 25: segment too long (57>36) ->  Je m'appelle Krystal. Oui… mes parents aimaient beaucoup
+Line 27: trailing control code at end of fr line
 Line 28: segment too long (38>36) ->  Si {COLOR}ÉAbsol{COLOR}Ç détient le {COLOR}ÉAbsolite{COLOR}Ç, il peut
 Line 35: segment too long (52>36) ->  {COLOR}Á{STR_VAR_1} a joyeusement rejoint votre camp ! Il a une nature
 Line 36: segment too long (37>36) ->  Oh, {RIVAL}… Pourquoi ne peux-tu pas
@@ -62,11 +63,12 @@ Line 112: segment too long (67>36) ->  Si vous possédez l'une des {COLOR}ÉPlat
 Line 113: segment too long (37>36) ->  Quelles assiettes me donnerez-vous ?
 Line 114: segment too long (55>36) ->  Si j'importe {COLOR}É{STR_VAR_2} {STR_VAR_1}s{COLOR}Ç dans le ​​disque mémoire, je peux vous
 Line 117: segment too long (86>36) ->  Si vous avez d'autres plaques {COLOR}ÉPlates{COLOR}Ç d'Arceus, je peux également les importer sur des
+Line 118: segment 2 \n mismatch (origin=1, fr=2)
 Line 119: segment too long (65>36) ->  Si vous avez l'intention d'utiliser le Pokémon comme is, cela me
 Line 121: segment too long (56>36) ->  Malheureusement, vous avez besoin d'au moins 3 {STR_VAR_1} si vous
 Line 122: segment too long (157>36) ->  C'est mah Mega Stone Maker - mah fierté et joie, juste ici ! Euh…{PAUSE}ね certes, il ne peut fabriquer que trois types de Mega Stones, mais ne vous inquiétez pas !
-Line 123: segment too long (110>36) ->  Si vous le souhaitez, je peux en fabriquer un autre pour vous aussi ! Voyons voir... que diriez-vous de {COLOR}É{STR_VAR_1} Fire
-Line 124: segment too long (112>36) ->  Si vous le souhaitez, je peux en fabriquer un autre pour vous aussi ! Voyons voir... que diriez-vous de {COLOR}É{STR_VAR_1} Gemmes
+Line 123: segment too long (108>36) ->  Si vous le souhaitez, je peux en fabriquer un autre pour vous aussi ! Voyons voir… que diriez-vous de {COLOR}É{STR_VAR_1} Fire
+Line 124: segment too long (110>36) ->  Si vous le souhaitez, je peux en fabriquer un autre pour vous aussi ! Voyons voir… que diriez-vous de {COLOR}É{STR_VAR_1} Gemmes
 Line 128: segment too long (38>36) ->  Oh…{PAUSE}ne mah fierté et joie…{PAUSE}ne endommagé
 Line 129: segment too long (88>36) ->  Sniff…{PAUSE}ね le travail de ma vie…{PAUSE}ね disparu…{PAUSE}ね perdu dans un accident tragique et artificiel…
 Line 131: segment too long (56>36) ->  Tu n'as pas assez de {STR_VAR_1} pour que les HSH fassent ce truc,
@@ -105,6 +107,7 @@ Line 208: segment too long (37>36) ->  Très bien alors, je vais continuer à
 Line 209: segment too long (73>36) ->  Vous n'avez pas de place pour cela… Puis-je l'envoyer au PC à la place ?
 Line 210: segment too long (111>36) ->  Vous n'avez pas de place pour cela… Puis-je envoyer les œufs que je détiens à le ​​PJ à la place ? Je conserve
 Line 211: segment too long (43>36) ->  Cela pourrait me prendre un certain temps.
+Line 213: trailing control code at end of fr line
 Line 215: segment too long (43>36) ->  Revenez quand vous aurez fait de la place.
 Line 216: segment too long (65>36) ->  Le PC est plein, j'en ai peur. Reviens quand tu auras fait de la
 Line 219: segment too long (80>36) ->  Je suis la gardienne de la garderie. Nous pouvons élever des Pokémon pour vous.

@@ -1,5 +1,6 @@
 Line 125: segment too long (43>36) ->  Ce Pokémon n'est pas encore recherchable !{PAUSE_UNTIL_PRESS}
 Line 128: segment too long (39>36) ->  Trop sombre pour chercher un Pokémon !{PAUSE_UNTIL_PRESS}
+Line 130: segment 1 \n mismatch (origin=1, fr=2)
 Line 130: segment too long (37>36) ->  Recherchez des Pokémon sauvages dans
 Line 146: segment too long (59>36) ->  Des morceaux d’acier tranchant flottent autour de l’équipe
 Line 152: segment too long (40>36) ->  Les Pics Toxik autour des pieds de {B_DEF_NAME_WITH_PREFIX} ont
@@ -10,6 +11,7 @@ Line 211: segment too long (53>36) ->  avec un terrain étrange ! Les Pokémon a
 Line 217: segment too long (58>36) ->  dans une Distorsion ! Les Pokémon les plus lents agissent
 Line 218: segment too long (57>36) ->  dans une Zone Magique ! La plupart des objets tenus sont
 Line 221: segment too long (67>36) ->  avec un champ électromagnétique ! Les Pokémon Électrik et Acier ne
+Line 224: trailing control code at end of fr line
 Line 224: segment too long (37>36) -> Les Pokémon qui ne sont pas Ténèbres,
 Line 225: segment too long (52>36) ->  en Combat Inversé ! Tous les rapports de types sont
 Line 233: segment too long (68>36) ->  avec tous les Pokémon provoqués ! Aucune capacité de statut ne peut
@@ -17,3 +19,4 @@ Line 234: segment too long (70>36) ->  avec tous les Pokémon tourmentés ! Impo
 Line 235: segment too long (39>36) ->  avec tous les Pokémon sous Anti-Soin !
 Line 236: segment too long (42>36) ->  avec tous les Pokémon sous Coup d'Boule !
 Line 237: segment too long (37>36) -> Les coups seront toujours critiques !
+Line 239: trailing control code at end of fr line

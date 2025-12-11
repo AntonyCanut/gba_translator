@@ -3,32 +3,49 @@ Line 5: segment too long (65>36) ->  Grâce à mes efforts, ce désert est un pa
 Line 13: segment too long (63>36) ->  Je ne peux pas faire de la musique dans une tempête de sable !
 Line 16: segment too long (37>36) ->  Je veux ajouter des fossiles rares à
 Line 19: segment too long (37>36) ->  D'accord ! Je te soigne maintenant !
+Line 31: segment 1 \n mismatch (origin=1, fr=2)
+Line 32: segment 1 \n mismatch (origin=1, fr=3)
+Line 32: segment 3 \n mismatch (origin=1, fr=2)
 Line 35: segment too long (37>36) -> de ce poids mort, c'est enfin l'heure
 Line 37: \p count mismatch (origin=6, fr=0)
 Line 37: \l count mismatch (origin=2, fr=0)
+Line 37: \n segment counts mismatch (origin=[0, 0, 0, 1, 1, 0, 0, 1, 0], fr=[8])
 Line 39: segment too long (38>36) -> Les {COLOR}ÉPierres Dures {COLOR}Ëapparaissent parfois
 Line 42: segment too long (37>36) ->  Oh, tu veux sûrement une récompense,
+Line 51: segment 1 \n mismatch (origin=1, fr=2)
 Line 54: segment too long (42>36) ->  Heureusement que je peux bientôt soigner.
+Line 57: trailing control code at end of fr line
 Line 58: segment too long (37>36) ->  Depuis que le gang masqué est parti,
+Line 59: trailing control code at end of fr line
 Line 69: \p count mismatch (origin=2, fr=0)
 Line 69: \l count mismatch (origin=1, fr=0)
+Line 69: \n segment counts mismatch (origin=[1, 0, 0, 0], fr=[2])
+Line 78: trailing control code at end of fr line
 Line 80: segment too long (39>36) -> comme « fèces » et « bouse de Tauros ».
+Line 82: trailing control code at end of fr line
 Line 82: segment too long (38>36) ->  Pendant que tu traînais, j'ai cherché
+Line 83: trailing control code at end of fr line
 Line 83: segment too long (72>36) ->  9MÂÔ çôァËÌÉぽÌ ZぎヤË0こÂ  ヌぐôァËニ¿  KâÁEt il n'y a personne à qui demander.
+Line 90: trailing control code at end of fr line
 Line 90: segment too long (41>36) ->  {RIVAL} : {COLOR}ËSi tu crois que c'est toute la
 Line 91: segment too long (44>36) ->  Sbire : {COLOR}ËMerci de confirmer nos soupçons sur
 Line 92: segment too long (49>36) ->  {RIVAL} : {COLOR}ËAlors je les détruirai tous moi-même !
+Line 93: trailing control code at end of fr line
 Line 105: segment too long (44>36) ->  Sbire 4 : {COLOR}ËAttendez ! Non, s'il vous plaît !
 Line 109: segment too long (37>36) ->  {COLOR}ËMaintenant que le chemin est dégagé,
 Line 114: segment too long (37>36) ->  {COLOR}ËIl n'avait aucune chance contre moi.
-Line 118: segment too long (39>36) ->  Sbire 1 : {COLOR}ËLes secousses sont finies...
+Line 118: segment too long (37>36) ->  Sbire 1 : {COLOR}ËLes secousses sont finies…
 Line 118: segment too long (39>36) -> {COLOR}ÁSbire 3 : {COLOR}ËPréparez-vous, ils descendent
 Line 119: segment too long (43>36) ->  Sbire : {COLOR}ÇIls montent les escaliers, pas ils
+Line 128: trailing control code at end of fr line
+Line 133: trailing control code at end of fr line
 Line 134: segment too long (37>36) ->  {COLOR}ËEt si tu es avec l'Ombre, je dois te
+Line 136: trailing control code at end of fr line
+Line 137: segment 1 \n mismatch (origin=1, fr=2)
+Line 137: segment 2 \n mismatch (origin=1, fr=0)
 Line 140: segment too long (37>36) ->  {COLOR}ËJe ne te laisserai pas la détruire !
 Line 141: segment too long (43>36) ->  S'il te plaît, ne détruis pas cette base !
-Line 143: segment too long (46>36) ->  Attends... tu n'es pas un sbire de l'Ombre...
-Line 145: segment too long (38>36) ->  Tu n'es pas un Guerrier de l'Ombre...
+Line 143: segment too long (42>36) ->  Attends… tu n'es pas un sbire de l'Ombre…
 Line 147: segment too long (56>36) ->  Si tu cherches Véga, il est dans le {COLOR}ÉCentre de Commande{COLOR}Ë.
 Line 153: segment too long (39>36) ->  Bien sûr, je peux soigner tes Pokémon.
 Line 156: segment too long (38>36) -> Électrique, Salle de Pause, Cafétéria,
@@ -41,16 +58,19 @@ Line 166: segment too long (38>36) ->  Tu ne connais pas les autres lettres…
 Line 171: segment too long (37>36) ->  Scientifique : {COLOR}ËLa porte est ouverte,
 Line 175: segment too long (39>36) ->  Marlon : {COLOR}ËEt il a aussi amené le mot de
 Line 176: segment too long (41>36) ->  Marlon : {COLOR}ËEt elle a aussi amené le mot de
+Line 177: trailing control code at end of fr line
 Line 178: segment too long (42>36) ->  Marlon : {COLOR}ËCe n'est pas le moment de rester
+Line 179: trailing control code at end of fr line
 Line 179: segment too long (48>36) ->  {RIVAL} : {COLOR}ËDe quel droit tu me parles comme ça ?
 Line 179: segment too long (37>36) -> Arrête de me traiter comme un gosse !
 Line 185: segment too long (37>36) -> Tu vas m'incinérer comme les sbires ?
+Line 186: trailing control code at end of fr line
 Line 190: segment too long (37>36) -> Maintenant tu interromps ma recherche
-Line 190: segment too long (38>36) -> Ça a intérêt à valoir le coup, Véga...
 Line 193: segment too long (42>36) ->  Véga : {COLOR}ËJ'ai fait une sauvegarde partielle
 Line 194: segment too long (44>36) ->  Aklove : {COLOR}ËJ'espère qu'il en reste assez pour
+Line 195: trailing control code at end of fr line
 Line 195: segment too long (38>36) ->  Aklove : {COLOR}ËTu t'accroches, hein, Zeph ?
-Line 196: segment too long (48>36) ->  Zeph : {COLOR}ËNon... Juste une tentative d'arrêter tes
+Line 196: segment too long (46>36) ->  Zeph : {COLOR}ËNon… Juste une tentative d'arrêter tes
 Line 202: segment too long (61>36) ->  Aklove : {COLOR}ËC'est toi, Marlon ? Je ne t'ai pas reconnu sans ton
 Line 204: segment too long (87>36) ->  Aklove : {COLOR}ËOh, je viens de l'envoyer sur une île isolée au milieu de océan quelque part.
 Line 205: segment too long (102>36) ->  {COLOR}ËJe ne sais pas qui tu es, gamin rouge, mais je vais te donner une chance de t'éloigner tout de suite.
@@ -66,6 +86,7 @@ Line 223: segment too long (42>36) ->  {COLOR}ËHoopa! Envoyez {PLAYER} pour rej
 Line 225: segment too long (46>36) ->  {COLOR}ËCet endroit… Pouvez-vous le sentir ? Il n'y a
 Line 226: segment too long (50>36) ->  {COLOR}ËTrouvons Giratina. Peut-être que cela pourra nous
 Line 228: \p count mismatch (origin=3, fr=2)
+Line 228: \n segment counts mismatch (origin=[1, 1, 1, 1], fr=[0, 2, 1])
 Line 233: segment too long (48>36) ->  Maintenant, allons à la rencontre de Giratina !
 Line 234: segment too long (74>36) ->  Il n'y a rien à craindre de Giratina. Il est peut-être le dirigeant de ce
 Line 239: segment too long (51>36) ->  {COLOR}ËC'est Rift Cave… On dit qu'elle a d'une manière ou

@@ -11,7 +11,21 @@ def load_lines(path: str):
 
 
 def count_breaks(text: str):
-    return text.count("\\p"), text.count("\\l")
+    return text.count("\\p"), text.count("\\l"), text.count("\\n")
+
+
+def n_segments(text: str):
+    """Count \\n per segment between start/\\p/\\l and next \\p/\\l/end."""
+    segments = []
+    current = ""
+    for part in re.split(r"(\\p|\\l)", text):
+        if part in ("\\p", "\\l"):
+            segments.append(current.count("\\n"))
+            current = ""
+        else:
+            current += part
+    segments.append(current.count("\\n"))
+    return segments
 
 
 def has_double_n(text: str):
@@ -71,8 +85,8 @@ def main():
         if f_text == o_text:
             continue
 
-        o_p, o_l = count_breaks(o_line)
-        f_p, f_l = count_breaks(f_line)
+        o_p, o_l, o_n = count_breaks(o_line)
+        f_p, f_l, f_n = count_breaks(f_line)
 
         if o_p != f_p:
             anomalies.append(
@@ -82,6 +96,30 @@ def main():
             anomalies.append(
                 f"Line {idx}: \\l count mismatch (origin={o_l}, fr={f_l})"
             )
+        # Compare \\n per segment between control codes with tolerance:
+        # if origin has 0 \\n, allow up to 1 \\n in the same segment
+        o_seg = n_segments(o_text)
+        f_seg = n_segments(f_text)
+        if len(o_seg) != len(f_seg):
+            anomalies.append(
+                f"Line {idx}: \\n segment counts mismatch (origin={o_seg}, fr={f_seg})"
+            )
+        else:
+            for s_idx, (o_cnt, f_cnt) in enumerate(zip(o_seg, f_seg), start=1):
+                if o_cnt == 0:
+                    if f_cnt > 1:
+                        anomalies.append(
+                            f"Line {idx}: segment {s_idx} has extra \\n (origin=0, fr={f_cnt})"
+                        )
+                else:
+                    if o_cnt != f_cnt:
+                        anomalies.append(
+                            f"Line {idx}: segment {s_idx} \\n mismatch (origin={o_cnt}, fr={f_cnt})"
+                        )
+
+        # Extra trailing control code at end of line (only \p or \l matter for empty screens)
+        if f_text.endswith(("\\p", "\\l")) and not o_text.endswith(("\\p", "\\l")):
+            anomalies.append(f"Line {idx}: trailing control code at end of fr line")
 
         if has_double_n(f_text) and not has_double_n(o_text):
             anomalies.append(f"Line {idx}: consecutive \\n found in fr, not in origin")

@@ -22,8 +22,8 @@
 0x3FDA4D: {B_PLAYER_NAME} joue {B_LAST_ITEM}. Air entraînant !\p
 0x3FDA7A: {B_PLAYER_NAME} joue la\n{B_LAST_ITEM}.
 0x3FDA8C: Les Pokémon entendant la Flûte\nse réveillent !
-0x3FDAB1: Tu lances une Ball, hein ?\nJe... je vais faire de mon mieux !
-0x3FDAE2: Journal : Oh, bon sang...\nToujours pressé.\p{B_PLAYER_NAME}.\pTu n'as jamais fait de combat\nPokémon, hein ?\pUn combat oppose les Pokémon\ndes Dresseurs entre eux.\l\p
+0x3FDAB1: Tu lances une Ball, hein ?\nJe… je vais faire de mon mieux !
+0x3FDAE2: Journal : Oh, bon sang…\nToujours pressé.\p{B_PLAYER_NAME}.\pTu n'as jamais fait de combat\nPokémon, hein ?\pUn combat oppose les Pokémon\ndes Dresseurs entre eux.\l\p
 0x3FDB92: Le Dresseur qui met K.O. les\nPokémon adverses en baissant\lleurs PV à «0» gagne.\p
 0x3FDBEF: Mais plutôt qu'en parler, tu\napprendras mieux par l'expérience.\nEssaye de combattre\ppour voir.\p
 0x3FDC58: Infliger des dégâts à l'ennemi\nest la clé de tout combat.\p
@@ -31,14 +31,14 @@
 0x3FDCD2: Garde un œil sur les PV\nde ton Pokémon.\pIl tombera K.O. si ses PV\natteignent «0».\p
 0x3FDD23: Non ! Pas de fuite d'un combat\ncontre un Dresseur !\p
 0x3FDD64: Hm ! Excellent !\pSi tu gagnes, tu as de l'argent,\net ton Pokémon grandit !\pAffronte d'autres Dresseurs\npour les rendre forts !\p
-0x3FDDEB: Hm... Quelle déception... Si tu\ngagnes, tu as de l'argent,\net tes Pokémon grandissent.\pSi tu perds, {B_PLAYER_NAME},\ntu paies.\pJe paie cette fois,\nmais dehors ce sera différent.\pRenforce tes Pokémon en battant\ndes Pokémon sauvages.\p\nmais dehors ce sera différent.\pRenforce tes Pokémon en battant\ndes Pokémon sauvages.\p
+0x3FDDEB: Hm… Quelle déception… Si tu\ngagnes, tu as de l'argent,\net tes Pokémon grandissent.\pSi tu perds, {B_PLAYER_NAME},\ntu paies.\pJe paie cette fois,\nmais dehors ce sera différent.\pRenforce tes Pokémon en battant\ndes Pokémon sauvages.\p\nmais dehors ce sera différent.\pRenforce tes Pokémon en battant\ndes Pokémon sauvages.\p
 0x3FE672: Quoi ?\n{STR_VAR_1} évolue!
 0x3FE688: Félicitations ! Ton {STR_VAR_1}\na évolué en {STR_VAR_2}!\p {WAIT_SE}
 0x3FE6B5: Hein ? {STR_VAR_1}\nn'évolue plus!\p
 0x3FE6D5: Que doit faire\n{B_ACTIVE_NAME_WITH_PREFIX} ?
 0x3FE6E6: Qu'est-ce que {B_PLAYER_NAME}\nva lancer ?
 0x3FE6FA: Que va faire\nle vieil homme ?
-0x3FE714: {PAUSE}ŒAttente de liaison...
+0x3FE714: {PAUSE}ŒAttente de liaison…
 0x3FE76A: Type/
 0x3FE7C7: {FONT_SMALL}Max{FONT_NORMAL} PV
 0x3FE7D4: Attaque
@@ -97,7 +97,7 @@
 0x415AA4: Adapt. Sans Fil\nn'est pas connecté.
 0x415ACB: CADEAU MYSTÈRE inutilisable\navec l'Adapt. Sans Fil.
 0x415BFF: Fichier de sauvegarde corrompu.\pChargement de l'ancienne sauvegarde.\n
-0x415C42: Le fichier de sauvegarde\na été supprimé...
+0x415C42: Le fichier de sauvegarde\na été supprimé…
 0x415C64: Le sous-circuit 1M\nn'est pas installé.
 0x415CE8: TEMPS
 0x415D2C: Commandes

@@ -1,13 +1,16 @@
 Line 1: segment too long (43>36) -> Tu les as vus en utiliser une pour capturer
 Line 1: segment too long (38>36) -> Si j'ai raison, nous pourrions être en
 Line 2: \l count mismatch (origin=0, fr=1)
+Line 2: \n segment counts mismatch (origin=[1, 1, 1, 1, 1, 1, 1], fr=[1, 1, 1, 1, 1, 1, 0, 1])
 Line 2: segment too long (37>36) -> J'ai une théorie sur ce qui se passe,
 Line 2: segment too long (37>36) -> Tu as tes propres Pokémon maintenant,
 Line 3: \l count mismatch (origin=0, fr=1)
+Line 3: \n segment counts mismatch (origin=[1, 1, 1], fr=[1, 1, 0, 1])
 Line 3: segment too long (37>36) -> tu trouves la {COLOR}ÉGrotte Stalactite{COLOR}Ë si tu
 Line 5: segment too long (40>36) -> Ce marqueur se déplacera automatiquement
 Line 5: segment too long (40>36) -> quand tu auras une nouvelle destination.
 Line 6: \l count mismatch (origin=1, fr=2)
+Line 6: \n segment counts mismatch (origin=[1, 1, 0, 1, 0, 1, 1, 1], fr=[1, 1, 0, 1, 0, 1, 1, 1, 0])
 Line 6: segment too long (40>36) -> Ce marqueur se déplacera automatiquement
 Line 6: segment too long (40>36) -> quand tu auras une nouvelle destination.
 Line 6: segment too long (39>36) -> Maintenant que tu as ton propre Journal
@@ -16,11 +19,12 @@ Line 6: segment too long (37>36) -> D'abord, tu devrais viser à voir tous
 Line 6: segment too long (40>36) -> Ou, comme on l'appelle plus communément,
 Line 8: segment too long (37>36) -> Si jamais tu la rencontres, elle peut
 Line 8: segment too long (37>36) -> améliorer ton Pokédex et te faciliter
-Line 9: segment too long (41>36) -> Ma mémoire semble me faire défaut... J'ai
+Line 9: segment too long (39>36) -> Ma mémoire semble me faire défaut… J'ai
 Line 9: segment too long (39>36) -> S'il te plaît, la prochaine fois que tu
 Line 10: segment too long (38>36) ->  Il a été plutôt froid avec moi depuis
 Line 11: segment too long (38>36) ->  S'il te plaît, rends visite à mon ami
 Line 12: \l count mismatch (origin=0, fr=1)
+Line 12: \n segment counts mismatch (origin=[1, 1, 1], fr=[1, 1, 1, 0])
 Line 12: segment too long (37>36) ->  {PLAYER}, tu dois te dépêcher d'aller
 Line 12: segment too long (40>36) -> Dirige-toi au nord de la ville et prends
 Line 13: segment too long (42>36) -> J'ai entendu les merveilleuses nouvelles !
@@ -29,19 +33,26 @@ Line 13: segment too long (37>36) -> nous pouvons tous dormir tranquilles.
 Line 13: segment too long (38>36) -> Mais ne t'inquiète pas, tes courses ne
 Line 13: segment too long (38>36) -> Tu dois maintenant récupérer Artikodin
 Line 14: \p count mismatch (origin=2, fr=1)
+Line 14: \n segment counts mismatch (origin=[1, 0, 0, 1], fr=[2, 1, 0])
 Line 14: segment too long (38>36) ->  Maintenant que la force obscure a été
 Line 14: segment too long (38>36) -> sceller le pouvoir une nouvelle fois !
 Line 17: segment too long (38>36) -> Mais si tu veux la récompense pour ton
 Line 17: segment too long (37>36) -> excellent travail, tu devras faire de
 Line 18: \l count mismatch (origin=2, fr=1)
+Line 18: \n segment counts mismatch (origin=[0, 1, 0, 1, 1, 0], fr=[0, 1, 0, 1, 1])
 Line 20: \l count mismatch (origin=0, fr=2)
+Line 20: \n segment counts mismatch (origin=[0, 1, 1, 0, 1, 1], fr=[0, 1, 1, 0, 1, 0, 1, 0])
 Line 23: segment too long (38>36) ->  Les Pokémon ont un potentiel de stats
 Line 24: \l count mismatch (origin=2, fr=3)
+Line 24: \n segment counts mismatch (origin=[1, 0, 1, 0, 1], fr=[1, 0, 1, 0, 0, 1])
 Line 24: segment too long (38>36) ->  Les Pokémon ont un potentiel de stats
 Line 26: \l count mismatch (origin=2, fr=3)
+Line 26: \n segment counts mismatch (origin=[0, 1, 0, 1, 0, 1], fr=[0, 1, 0, 0, 1, 0, 1])
 Line 27: segment too long (38>36) ->  Les Pokémon ont un potentiel de stats
 Line 27: segment too long (38>36) -> jusqu'à ce que tu deviennes Champion ?
 Line 32: segment too long (37>36) ->  Je te ferais savoir que le Prof. Log
+Line 33: segment 1 \n mismatch (origin=1, fr=2)
+Line 33: segment 4 \n mismatch (origin=1, fr=0)
 Line 33: segment too long (37>36) -> voir les stats cachées de tes Pokémon
 Line 33: segment too long (37>36) -> Tu peux même voir les capacités qu'il
 Line 33: segment too long (37>36) -> peut apprendre en appuyant sur {L_BUTTON} ou {R_BUTTON} !
@@ -53,25 +64,31 @@ Line 35: segment too long (37>36) -> dans le livre, mais j'ai dû l'égarer.
 Line 38: segment too long (40>36) ->  Ok ! Les améliorations sont terminées !
 Line 39: segment too long (40>36) ->  {COLOR}Á{PLAYER} a récupéré le Scanner de Stats.
 Line 40: \l count mismatch (origin=7, fr=9)
+Line 40: \n segment counts mismatch (origin=[1, 0, 0, 0, 0, 0, 1, 0, 1, 0], fr=[1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 1, 0])
 Line 40: segment too long (38>36) -> nécessiteraient normalement de visiter
 Line 41: segment too long (41>36) ->  {PLAYER}, j'ai de merveilleuses nouvelles
 Line 41: segment too long (37>36) -> organisation, j'ai percé le code pour
 Line 43: \l count mismatch (origin=5, fr=8)
+Line 43: \n segment counts mismatch (origin=[1, 0, 1, 0, 0, 0, 1, 0], fr=[1, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0])
 Line 43: segment too long (37>36) -> pratiquement n'importe quel aspect de
 Line 43: segment too long (37>36) -> Appuie simplement sur {SE_SHOP} sur le Pokémon
 Line 43: segment too long (37>36) -> apprendre de nouvelles attaques à tes
 Line 46: \l count mismatch (origin=6, fr=7)
+Line 46: \n segment counts mismatch (origin=[0, 1, 0, 1, 0, 0, 1, 1, 0, 0, 0, 1], fr=[0, 1, 0, 1, 0, 0, 1, 0, 1, 0, 0, 0, 1])
 Line 46: segment too long (38>36) -> Savais-tu que les stats de tes Pokémon
 Line 46: segment too long (39>36) -> peuvent augmenter d'autres manières que
 Line 46: segment too long (39>36) -> Ces stats peuvent aussi être augmentées
 Line 46: segment too long (37>36) -> développé un appareil capable de voir
 Line 46: segment too long (40>36) -> Alors va simplement profiter et utiliser
 Line 47: \l count mismatch (origin=1, fr=2)
+Line 47: \n segment counts mismatch (origin=[1, 1, 0], fr=[1, 0, 1, 0])
 Line 49: \l count mismatch (origin=0, fr=1)
+Line 49: \n segment counts mismatch (origin=[1, 1], fr=[1, 0, 1])
 Line 49: segment too long (37>36) -> Je suis sûr que tu en trouveras plus.
 Line 52: segment too long (37>36) -> tu n'aies vu tous les Pokémon d'Ouest
 Line 57: segment too long (38>36) ->  Un tunnel sombre et sinueux récemment
 Line 58: \l count mismatch (origin=1, fr=3)
+Line 58: \n segment counts mismatch (origin=[1, 1, 1, 0, 1, 1], fr=[1, 1, 0, 1, 0, 0, 1, 1])
 Line 58: segment too long (37>36) -> hommes-taupes et moi avons été forcés
 Line 58: segment too long (37>36) -> Et pourtant, tu es venu ici pour nous
 Line 59: segment too long (37>36) ->  Nous minons chaque jour, et pourtant
@@ -79,47 +96,103 @@ Line 59: segment too long (40>36) -> Hmph ! Et donc, je n'ai aucune intention
 Line 59: segment too long (37>36) -> d'offrir plus de trésor aujourd'hui !
 Line 59: segment too long (40>36) -> habitant de la surface, reviens demain !
 Line 61: \l count mismatch (origin=1, fr=2)
+Line 61: \n segment counts mismatch (origin=[1, 0, 1], fr=[1, 0, 1, 0])
+Line 62: segment 1 \n mismatch (origin=1, fr=0)
 Line 65: \l count mismatch (origin=0, fr=1)
+Line 65: \n segment counts mismatch (origin=[0, 1], fr=[0, 1, 0])
 Line 65: segment too long (38>36) -> S'il te plaît, bénis cette terre, afin
 Line 66: segment too long (38>36) -> Si seulement il bénissait notre terre,
 Line 68: segment too long (37>36) ->  {COLOR}ÁBoréas et Fulguris se sont envolés !
-Line 69: segment too long (38>36) -> Pourraient-ils peut-être... avoir peur
 Line 71: segment too long (39>36) -> Il est revenu pour bénir nos récoltes !
 Line 73: segment too long (37>36) -> C'est le remerciement que tu mérites.
 Line 74: segment too long (38>36) ->  Le {COLOR}ÉMiroir Révélateur{COLOR}Ç peut révéler les
 Line 74: segment too long (39>36) -> formes véritables des Pokémon que tu as
 Line 78: \l count mismatch (origin=1, fr=0)
+Line 78: \n segment counts mismatch (origin=[0, 0, 0, 1, 0, 0, 0], fr=[0, 0, 0, 1, 0, 0])
 Line 82: \l count mismatch (origin=3, fr=0)
+Line 82: \n segment counts mismatch (origin=[1, 0, 1, 0, 1, 0, 0], fr=[2, 1, 0, 2])
 Line 83: \l count mismatch (origin=1, fr=0)
+Line 83: \n segment counts mismatch (origin=[1, 0], fr=[3])
 Line 83: segment too long (37>36) ->  Bonne chance, et souviens-toi que tu
+Line 87: segment 1 \n mismatch (origin=1, fr=0)
 Line 88: \l count mismatch (origin=1, fr=0)
+Line 88: \n segment counts mismatch (origin=[1, 0], fr=[1])
+Line 89: segment 2 \n mismatch (origin=1, fr=0)
 Line 91: \l count mismatch (origin=1, fr=2)
+Line 91: \n segment counts mismatch (origin=[1, 0, 0, 0, 1], fr=[1, 0, 0, 0, 0, 0])
 Line 94: \l count mismatch (origin=2, fr=1)
+Line 94: \n segment counts mismatch (origin=[1, 1, 0, 0], fr=[1, 1, 1])
 Line 101: \p count mismatch (origin=1, fr=0)
+Line 101: \n segment counts mismatch (origin=[0, 1], fr=[2])
 Line 102: \l count mismatch (origin=0, fr=1)
+Line 102: \n segment counts mismatch (origin=[1], fr=[1, 0])
+Line 105: segment 1 \n mismatch (origin=1, fr=2)
 Line 112: \l count mismatch (origin=1, fr=0)
+Line 112: \n segment counts mismatch (origin=[0, 1, 0, 1], fr=[0, 1, 1])
 Line 113: \l count mismatch (origin=6, fr=4)
+Line 113: \n segment counts mismatch (origin=[0, 1, 0, 1, 1, 0, 0, 0, 0, 1, 1, 1, 1, 0], fr=[0, 1, 1, 1, 0, 0, 0, 0, 1, 1, 1, 1])
 Line 116: \l count mismatch (origin=5, fr=4)
+Line 116: \n segment counts mismatch (origin=[1, 0, 1, 1, 1, 0, 0, 0, 0], fr=[1, 1, 1, 1, 0, 0, 0, 0])
+Line 119: segment 1 \n mismatch (origin=1, fr=0)
 Line 129: segment too long (37>36) ->  Ce Prismillon a été trouvé entre des
 Line 133: segment too long (37>36) ->  Ce Prismillon a été trouvé à côté de
 Line 154: segment too long (37>36) ->  Ce Prismillon a été trouvé au sommet
+Line 156: segment 1 \n mismatch (origin=2, fr=3)
 Line 158: segment too long (37>36) ->  Ce Prismillon a été trouvé à côté de
+Line 162: segment 1 \n mismatch (origin=1, fr=0)
+Line 164: segment 1 \n mismatch (origin=1, fr=0)
 Line 179: \l count mismatch (origin=1, fr=0)
+Line 179: \n segment counts mismatch (origin=[1, 0, 1], fr=[2, 1])
+Line 183: segment 2 \n mismatch (origin=1, fr=2)
+Line 187: segment 1 \n mismatch (origin=1, fr=2)
+Line 187: segment 3 \n mismatch (origin=1, fr=2)
+Line 192: segment 1 \n mismatch (origin=1, fr=0)
+Line 194: segment 2 \n mismatch (origin=1, fr=0)
+Line 198: segment 1 \n mismatch (origin=1, fr=0)
+Line 198: segment 2 \n mismatch (origin=1, fr=0)
+Line 198: segment 3 \n mismatch (origin=1, fr=0)
 Line 202: \l count mismatch (origin=1, fr=0)
+Line 202: \n segment counts mismatch (origin=[1, 0], fr=[1])
+Line 205: segment 1 \n mismatch (origin=1, fr=0)
+Line 209: segment 1 \n mismatch (origin=1, fr=0)
+Line 209: segment 2 \n mismatch (origin=1, fr=0)
+Line 209: segment 3 \n mismatch (origin=1, fr=0)
+Line 210: segment 1 \n mismatch (origin=1, fr=0)
+Line 210: segment 2 \n mismatch (origin=1, fr=0)
 Line 211: \l count mismatch (origin=4, fr=1)
+Line 211: \n segment counts mismatch (origin=[0, 1, 1, 1, 1, 0, 0, 1, 0, 1, 0], fr=[0, 0, 1, 0, 1, 1, 1, 1])
 Line 212: \l count mismatch (origin=2, fr=0)
+Line 212: \n segment counts mismatch (origin=[1, 0, 0, 0, 1], fr=[2, 0, 1])
 Line 213: \l count mismatch (origin=1, fr=0)
+Line 213: \n segment counts mismatch (origin=[1, 1, 1, 1, 0], fr=[0, 0, 1, 0])
 Line 214: \l count mismatch (origin=2, fr=0)
+Line 214: \n segment counts mismatch (origin=[1, 1, 0, 1, 0, 0], fr=[0, 1, 1, 0])
 Line 215: segment too long (37>36) ->  Alors, tu as choisi de parler à moi,
 Line 216: \l count mismatch (origin=1, fr=0)
+Line 216: \n segment counts mismatch (origin=[0, 1, 1, 0], fr=[1, 1, 2])
 Line 217: \l count mismatch (origin=3, fr=0)
+Line 217: \n segment counts mismatch (origin=[1, 1, 0, 1, 0, 1, 0], fr=[0, 1, 2, 1])
 Line 218: \l count mismatch (origin=2, fr=0)
+Line 218: \n segment counts mismatch (origin=[1, 0, 0], fr=[2])
+Line 219: segment 5 \n mismatch (origin=1, fr=2)
+Line 219: segment 6 \n mismatch (origin=1, fr=2)
+Line 220: segment 2 \n mismatch (origin=1, fr=0)
+Line 221: segment 3 \n mismatch (origin=1, fr=0)
 Line 223: \l count mismatch (origin=1, fr=0)
-Line 223: segment too long (37>36) -> rien ne vaut un bon thé aux herbes...
-Line 226: segment too long (37>36) ->  Désolé... si c'est une blague, je ne
+Line 223: \n segment counts mismatch (origin=[1, 0, 1, 0], fr=[1, 0, 1])
+Line 230: segment 1 \n mismatch (origin=1, fr=0)
+Line 231: segment 2 \n mismatch (origin=1, fr=0)
 Line 234: \l count mismatch (origin=1, fr=0)
+Line 234: \n segment counts mismatch (origin=[0, 1, 0, 1, 1, 1], fr=[0, 1, 0, 0, 1])
+Line 238: segment 1 \n mismatch (origin=1, fr=0)
+Line 238: segment 2 \n mismatch (origin=1, fr=0)
 Line 239: \p count mismatch (origin=4, fr=3)
+Line 239: \n segment counts mismatch (origin=[0, 1, 1, 1, 1], fr=[0, 1, 3, 2])
 Line 244: \l count mismatch (origin=2, fr=1)
+Line 244: \n segment counts mismatch (origin=[0, 1, 0, 1, 1, 1, 0], fr=[1, 2, 1, 2, 1, 0])
 Line 248: \l count mismatch (origin=2, fr=0)
+Line 248: \n segment counts mismatch (origin=[1, 1, 0, 1, 0], fr=[1, 2, 2])
 Line 249: \l count mismatch (origin=2, fr=0)
+Line 249: \n segment counts mismatch (origin=[0, 1, 0, 1, 0, 1, 1], fr=[0, 1, 1, 0, 1])
 Line 250: \l count mismatch (origin=1, fr=0)
+Line 250: \n segment counts mismatch (origin=[1, 0], fr=[2])

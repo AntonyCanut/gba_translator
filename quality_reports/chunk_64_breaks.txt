@@ -57,19 +57,21 @@ Line 107: segment too long (67>36) ->  Vous voulez vous arrêter ici ? Vous n'ob
 Line 108: segment too long (96>36) ->  Très bien, Champ, je comprends. Chaque fois que vous vous sentez suffisamment en confiance pour
 Line 109: segment too long (82>36) ->  FÉLICITATIONS ! Après plusieurs batailles acharnées, vous avez terminé le Classic
 Line 110: segment too long (55>36) ->  La difficulté {COLOR}ÉInsane{COLOR}Á du Classic Leaders Gauntlet a été
-Line 116: segment too long (146>36) ->  Argh ! Les flics sont là ! Attends...{PAUSE}ね tu n'es pas... Ah oui, tu es ce Dresseur... Je suis sorti prendre l'air... {PAUSE}ね et je me suis retrouvé ici...
+Line 116: segment too long (136>36) ->  Argh ! Les flics sont là ! Attends…{PAUSE}ね tu n'es pas… Ah oui, tu es ce Dresseur… Je suis sorti prendre l'air… {PAUSE}ね et je me suis retrouvé ici…
 Line 117: segment too long (55>36) ->  Vous me dérangez, {STR_VAR_3}. Je dois trouver un moyen de partir
 Line 119: segment too long (53>36) ->  {COLOR}ËJ'apporte tout le pouvoir des fleurs ! Soyons funky,
-Line 121: segment too long (60>36) ->  {COLOR}ËCes vibes...{PAUSE}ね {STR_VAR_3}...{PAUSE}ね elles sont juste...{PAUSE}ね ailleurs, tu vois ?
+Line 121: segment too long (54>36) ->  {COLOR}ËCes vibes…{PAUSE}ね {STR_VAR_3}…{PAUSE}ね elles sont juste…{PAUSE}ね ailleurs, tu vois ?
 Line 122: segment too long (65>36) ->  {COLOR}Ë{COLOR}ÉGrassium Z{COLOR}Ë… Cette chose suralimente toute attaque de type {COLOR}ÉGrass{COLOR}Ë…
 Line 123: segment too long (40>36) ->  Oh, hé, {STR_VAR_3}… Même ces feuilles étranges ne
-Line 124: segment too long (48>36) ->  {COLOR}ËC'est...{PAUSE}ね Vraiment nul, {STR_VAR_3}. D'accord, tu m'as eu.
+Line 124: segment too long (46>36) ->  {COLOR}ËC'est…{PAUSE}ね Vraiment nul, {STR_VAR_3}. D'accord, tu m'as eu.
 Line 130: segment too long (59>36) ->  {COLOR}ËTout comme les ténèbres suivent la lumière, ta défaite est
 Line 132: segment too long (63>36) ->  {COLOR}ËHeh… Je vois que vous n'envisagez pas de devenir Champion à la
 Line 133: segment too long (166>36) ->  {COLOR}ËUn Pokémon tenant ce {COLOR}ÉDarkinium Z{COLOR}Ë renforcera ses attaques de type {COLOR}ÉDark{COLOR}Ë, soit pour augmenter sa force, soit pour un coup puissant. Cependant, il peut épuiser l'énergie
 Line 134: segment too long (89>36) ->  {PLAYER}… c'est un plaisir de vous revoir à nouveau. J'ai déversé toutes les informations
 Line 135: segment too long (79>36) ->  {COLOR}ËTch… Je vois. Il y avait quelque chose de différent, par rapport à la dernière
 Line 136: segment too long (37>36) ->  Je me souviens avoir dit un jour que
+Line 137: segment 1 \n mismatch (origin=1, fr=2)
+Line 137: segment 2 \n mismatch (origin=1, fr=2)
 Line 138: segment too long (110>36) ->  {PLAYER} ! C'est vraiment une chance de nous rencontrer nous sommes ici ! Regardez-vous ! Vous êtes le nouveau
 Line 139: segment too long (37>36) ->  Oh, je vois… eh bien, je ne pars pas
 Line 141: segment too long (59>36) ->  {COLOR}ÇMême si les ailes de mon Pokémon battent encore fort, nous
@@ -81,8 +83,9 @@ Line 147: segment too long (84>36) ->  Honnêtement ? Je n'ai pas de patience po
 Line 148: segment too long (131>36) ->  Eh bien, regarde ici… Si ce n'est pas {PLAYER}. Je suppose que tout ce chahut après Le Mont Thundercap a fonctionné, n'est-ce pas ?
 Line 150: segment too long (69>36) ->  C'est l'esprit. Je vais juste me promener jusqu'à la zone de combat,
 Line 151: segment too long (63>36) ->  {COLOR}ËPréparez-vous, partenaire ! Vous obtenez l'expérience complète
-Line 153: segment too long (48>36) ->  {COLOR}ËAlors...{PAUSE}ね c'est le nouveau Champion de Borrius,
+Line 153: segment too long (46>36) ->  {COLOR}ËAlors…{PAUSE}ね c'est le nouveau Champion de Borrius,
 Line 154: segment too long (182>36) ->  {COLOR}ÉNormalium Z{COLOR}Ë… c'est basique, mais les attaques de type {COLOR}ÉNormal{COLOR}Ë- se transforment en {COLOR}ÉZ-Moves{COLOR}Ë lorsqu'elles sont activées. Seulement bonnes une fois par bataille, cependant - plus et vous
+Line 155: trailing control code at end of fr line
 Line 156: segment too long (58>36) ->  {COLOR}ËPas mal, partenaire. Parfois, tu as attrapé ce Tauros par
 Line 157: segment too long (162>36) ->  Récemment, je me suis mis à penser à ce que je ferais si je raccrochais mah chapeau et quittais tout le gymnase Leader schding. Pas comme si je gardais ces beaux
 Line 158: segment too long (140>36) ->  Yo, wazzap, mon gars ? Ça va ? Ha ha ha ha ! Je suis de retour, bébé ! Galavan est dans la maison, plus bruyant et plus brillant que jamais
@@ -115,7 +118,7 @@ Line 192: segment too long (61>36) ->  Ooh hoo hoo hoo… tu ne manques jamais d
 Line 193: segment too long (97>36) ->  {COLOR}ËBon Dieu… Je pense que je suis un peu à nouveau trop excité. Mais je ne peux pas m'en empêcher !
 Line 194: segment too long (114>36) ->  {COLOR}ËLe {COLOR}ÉBuginium Z{COLOR}Ë renforce les attaques {COLOR}ÉBug{COLOR}Ë de type , comme vous l'avez probablement deviné. Il déclenche un puissant
 Line 195: segment too long (90>36) ->  Ah, {PLAYER}… ton arrivée arrive un peu à point nommé. Je n'ai pas pu m'empêcher de penser
-Line 196: segment too long (65>36) ->  {COLOR}ËAh... le simple fait de voir à quel point la nouvelle génération
+Line 196: segment too long (63>36) ->  {COLOR}ËAh… le simple fait de voir à quel point la nouvelle génération
 Line 197: segment too long (49>36) ->  Mon état étrange… c'est plutôt taxant mon corps.
 Line 199: segment too long (62>36) ->  Dans la bataille contre le Gym Leader, Mirskle, la salle sera
 Line 200: segment too long (53>36) ->  Dans la bataille contre le Gym Leader, Véga, {COLOR}Émotions

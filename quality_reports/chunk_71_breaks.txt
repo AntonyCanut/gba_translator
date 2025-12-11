@@ -2,11 +2,8 @@ Line 7: segment too long (37>36) -> trouver. Alors, qu'en dis-tu ?Peux-tu
 Line 8: segment too long (37>36) ->  Super !Merci d'avoir accepté d'aider
 Line 11: segment too long (37>36) ->  Les Apitrini sont partout au Paradis
 Line 29: segment too long (37>36) -> adversaires que nousavons croisés. De
-Line 31: segment too long (38>36) ->  Fu fu fu... Venir jusqu'ici n'est pas
 Line 31: segment too long (37>36) -> une mince affaire. Sache tout de même
-Line 35: segment too long (38>36) ->  Fu fu fu... Venir jusqu'ici n'est pas
 Line 35: segment too long (37>36) -> une mince affaire. Sache tout de même
-Line 36: segment too long (38>36) ->  Fu fu fu... Venir jusqu'ici n'est pas
 Line 36: segment too long (37>36) -> une mince affaire. On ne nous appelle
 Line 47: segment too long (37>36) ->  Mes sources me disent qu'il reste au
 Line 78: segment too long (37>36) -> Cubesur le sol de ta chambre. Je sais
@@ -15,13 +12,17 @@ Line 97: segment too long (37>36) ->  C'est horrible !Mon père m'a demandé
 Line 108: segment too long (38>36) ->  Merveilleux, merveilleux. Je suis sûr
 Line 113: segment too long (37>36) -> service. Je vois que tu as bien suivi
 Line 115: segment too long (37>36) ->  Tiens donc, notre voisin le Champion
+Line 128: segment 2 \n mismatch (origin=1, fr=0)
+Line 129: segment 1 \n mismatch (origin=1, fr=0)
 Line 131: segment too long (37>36) ->  Bienvenue au Casino de Dehara !Tu as
 Line 180: \l count mismatch (origin=2, fr=1)
+Line 180: \n segment counts mismatch (origin=[1, 1, 0, 0], fr=[1, 1, 1])
 Line 183: segment too long (37>36) -> cartevide. Qui a besoin de ça ? C'est
 Line 184: segment too long (37>36) ->  Un ami à moi a raflé plein de Jetons
 Line 186: segment too long (37>36) ->  Mince ! Ces ballons à pois me volent
 Line 187: segment too long (37>36) ->  Hé, quoi ? Tu me déconcentres !Tiens
 Line 188: segment too long (37>36) -> le mode dejeu le plus difficile. Oui,
+Line 191: segment 1 \n mismatch (origin=1, fr=2)
 Line 199: segment too long (37>36) ->  Tu en as dans le ventre. Pour battre
 Line 200: segment too long (37>36) ->  Eh bien, tu es un brave gars, toi, à
 Line 201: segment too long (37>36) ->  Ce n'est pas le moment d'abandonner.
@@ -32,6 +33,7 @@ Line 220: segment too long (37>36) -> seront désormais disponibles avant la
 Line 234: segment too long (43>36) ->  Utilises-tu les émulateurs Eclipse, GPemu,
 Line 237: segment too long (39>36) -> l'infiltration ou des énigmes de blocs.
 Line 239: \l count mismatch (origin=2, fr=1)
+Line 239: \n segment counts mismatch (origin=[1, 0, 0], fr=[1, 0])
 Line 242: segment too long (37>36) ->  Connais-tu les EV et IV, et aimes-tu
 Line 245: segment too long (39>36) -> niveau de stratégie pendant lescombats.
 Line 246: segment too long (37>36) ->  Choisis la difficulté de puzzles que

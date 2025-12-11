@@ -2,9 +2,11 @@ Line 8: segment too long (38>36) ->  ヨギギË¿  ÂVeux-tu grimper à l'éche
 Line 26: segment too long (50>36) ->  {B_ATK_NAME_WITH_PREFIX} s'apprête à retourner un tatami pour bloquer les
 Line 32: segment too long (37>36) ->  {B_ATK_NAME_WITH_PREFIX} est blessé par le Bouclier Épine de
 Line 44: segment too long (40>36) ->  Impossible de faire plusieurs fusions !
+Line 46: trailing control code at end of fr line
 Line 53: segment too long (37>36) -> Mais il ne peut pas apprendre plus de
 Line 53: segment too long (37>36) -> Oublier une capacité pour faire de la
 Line 89: segment too long (66>36) ->  La {B_ATK_ABILITY} de {B_ATK_NAME_WITH_PREFIX} rend l'équipe adverse nerveuse : impossible de manger des
+Line 91: segment 1 \n mismatch (origin=1, fr=2)
 Line 92: segment too long (40>36) ->  Vent Arrière de ton équipe se dissipe !
 Line 94: segment too long (39>36) ->  Rune Protect de ton équipe disparaît !
 Line 99: segment too long (37>36) ->  La mer de flammes autour de l'équipe
@@ -13,6 +15,8 @@ Line 104: segment too long (39>36) ->  Les effets de Boue Sport s'estompent !
 Line 105: segment too long (39>36) ->  Distorsion finit : Défense et Déf. Spé
 Line 106: segment too long (40>36) ->  Zone Magique prend fin : les effets des
 Line 106: segment too long (38>36) -> objets tenus reviennent à la normale !
+Line 117: segment 1 \n mismatch (origin=1, fr=2)
+Line 118: segment 1 \n mismatch (origin=1, fr=2)
 Line 119: segment too long (43>36) ->  De l'herbe pousse et recouvre le terrain !
 Line 120: segment too long (39>36) ->  La brume tourbillonne sur le terrain !
 Line 135: segment too long (40>36) ->  Voile Aurore de ton équipe se dissipe !
@@ -20,15 +24,20 @@ Line 137: segment too long (43>36) ->  Un courant électrique traverse le terrai
 Line 139: segment too long (38>36) ->  La brume tourbillonne sur le terrain.
 Line 148: segment too long (50>36) ->  {B_ATK_NAME_WITH_PREFIX} ne peut plus utiliser de capacités sonores après
 Line 172: segment too long (40>36) ->  {STR_VAR_1} est plus amical. Sa base {STR_VAR_2} ne peut plus
+Line 176: trailing control code at end of fr line
 Line 176: segment too long (37>36) -> Si seulement ton père pouvait te voir
+Line 177: trailing control code at end of fr line
+Line 179: trailing control code at end of fr line
 Line 179: segment too long (37>36) ->  Au cas où tu aurais oublié, le Super
 Line 179: segment too long (37>36) -> Il numérise les objets qu'on y place,
 Line 179: segment too long (37>36) -> comme si tu ne portais rien de plus !
 Line 180: segment too long (63>36) ->  Récupère mon colis au {COLOR}ÉMagasin Pokémon de Bellinville{COLOR}Ë, {PLAYER}.
 Line 184: segment too long (37>36) -> Ta mère ne t'a jamais appris à ne pas
+Line 186: trailing control code at end of fr line
 Line 188: segment too long (66>36) ->  J'ai une autre course pour toi, {PLAYER}. Un vieil ami à moi vit à
 Line 197: segment too long (38>36) ->  S'il te plaît, rends visite à mon ami
 Line 198: segment too long (50>36) ->  {PLAYER}, tu dois vite foncer au {COLOR}ÉMont Thundercap{COLOR}Ë !
+Line 203: segment 1 \n mismatch (origin=1, fr=2)
 Line 205: segment too long (70>36) ->  La région de Borrius fut jadis prise dans une grande guerre contre la
 Line 207: segment too long (37>36) ->  L'avantage de l'armée kalosienne fut
 Line 208: segment too long (64>36) ->  Avec l'armée étrangère partie, la guerre semblait terminée pour
@@ -40,11 +49,14 @@ Line 227: segment too long (38>36) ->  Je sais que je lui ai dit qu'utiliser
 Line 227: segment too long (37>36) -> son pouvoir serait une mauvaise idée,
 Line 228: segment too long (37>36) ->  C'est pour ça que je dois faire ça !
 Line 231: \p count mismatch (origin=1, fr=0)
+Line 231: \n segment counts mismatch (origin=[0, 1], fr=[0])
 Line 233: segment too long (37>36) -> Si tu existes, donne-moi un signe que
 Line 235: segment too long (37>36) ->  {COLOR}ËOn dirait, Papy, qu'il y a peut-être
+Line 236: trailing control code at end of fr line
 Line 236: segment too long (37>36) -> Il y a un programme spécial à la télé
 Line 237: segment too long (37>36) -> Comme tu le sais, la force obscure de
 Line 240: segment too long (41>36) ->  Jax : {COLOR}ËJe viens de voir ces types en noir
 Line 243: segment too long (59>36) ->  Arthur : {COLOR}ËPas encore, Jax. Je veux d'abord que tu voles aux
 Line 245: segment too long (38>36) -> C'est aussi grave que je le craignais…
+Line 246: trailing control code at end of fr line
 Line 246: segment too long (41>36) ->  Arthur : {COLOR}ËJe pense que Jax peut régler le

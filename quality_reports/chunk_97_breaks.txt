@@ -1,4 +1,6 @@
 Line 122: segment too long (37>36) ->  Tu te souviens de ce que tu m'as dit
+Line 123: segment 3 \n mismatch (origin=1, fr=2)
+Line 150: segment 1 \n mismatch (origin=1, fr=0)
 Line 150: segment too long (38>36) -> C'est un vrai homme parmi les hommes !
 Line 152: segment too long (38>36) ->  Je n'aurais jamais cru que notre fils
 Line 152: segment too long (37>36) -> tomberait dans ce cauchemar sans fin…
@@ -6,6 +8,7 @@ Line 152: segment too long (37>36) -> jamais réveillés de leurs cauchemars…
 Line 155: segment too long (39>36) -> Vous les scientifiques, vous n'avez pas
 Line 156: segment too long (38>36) -> C'est là que vous trouverez un Pokémon
 Line 161: \p count mismatch (origin=4, fr=3)
+Line 161: \n segment counts mismatch (origin=[0, 0, 1, 0, 1], fr=[1, 1, 0, 1])
 Line 162: segment too long (42>36) -> Bienvenue dans ta nouvelle maison, chéri !
 Line 169: segment too long (37>36) -> Tous les quelques jours, cet horrible
 Line 169: segment too long (41>36) -> savoir ce que c'est et comment l'arrêter…
@@ -33,6 +36,7 @@ Line 200: segment too long (38>36) -> 3 Pokémon restants qui se sont envolés
 Line 201: segment too long (38>36) -> 2 Pokémon restants qui se sont envolés
 Line 203: segment too long (37>36) ->  Retournez à la Grotte de l'Être avec
 Line 205: \l count mismatch (origin=1, fr=0)
+Line 205: \n segment counts mismatch (origin=[1, 1, 1, 1, 0], fr=[1, 1, 1, 1])
 Line 205: segment too long (37>36) -> Je cherche un assistant de recherche,
 Line 205: segment too long (43>36) -> mais quelqu'un d'un peu plus fort que vous.
 Line 207: segment too long (44>36) ->  Où est cette curiosité de Dresseur que vous
@@ -51,6 +55,7 @@ Line 214: segment too long (40>36) -> Quel endroit pourrait représenter cela ?
 Line 215: segment too long (40>36) ->  J'ai le sentiment que vous avez attrapé
 Line 215: segment too long (38>36) -> les trois Pokémon qui se sont envolés.
 Line 217: \l count mismatch (origin=6, fr=5)
+Line 217: \n segment counts mismatch (origin=[1, 1, 0, 0, 1, 0, 1, 1, 0, 1, 0, 1, 0], fr=[1, 1, 0, 0, 1, 0, 1, 1, 0, 1, 0, 2])
 Line 217: segment too long (37>36) -> Il semble que vos trois Pokémon aient
 Line 217: segment too long (38>36) -> Pokémon partagent un lien unique, mais
 Line 217: segment too long (44>36) -> je ne m'attendais pas à ce que cela arrive !
@@ -60,7 +65,9 @@ Line 219: segment too long (40>36) ->  Une présence mystérieuse se fait sentir
 Line 226: segment too long (38>36) ->  Sauvez les Écrémeuh kidnappés par les
 Line 226: segment too long (43>36) -> Terreur Granbull dans les Champs Magnolia !
 Line 230: segment too long (40>36) ->  Cet Écrémeuh a été trouvé dans les bois
+Line 231: segment 1 \n mismatch (origin=2, fr=1)
 Line 231: segment too long (42>36) ->  Cet Écrémeuh a été trouvé près de l'océan
+Line 232: segment 1 \n mismatch (origin=2, fr=1)
 Line 232: segment too long (42>36) ->  Cet Écrémeuh a été trouvé près des Arbres
 Line 233: segment too long (47>36) ->  Nos Écrémeuh sont notre fierté et notre joie !
 Line 233: segment too long (38>36) -> Ce serait une terrible honte s'il leur
@@ -69,6 +76,7 @@ Line 234: segment too long (41>36) -> Les Écrémeuh, notre fierté et notre joi
 Line 234: segment too long (47>36) -> comme ça sont venus et ont piqué nos Écrémeuh !
 Line 234: segment too long (39>36) -> Vous êtes le nouveau Maître de Borrius,
 Line 234: segment too long (43>36) -> Ne voudriez-vous pas nous aider à récupérer
+Line 235: segment 1 \n mismatch (origin=1, fr=0)
 Line 235: segment too long (37>36) ->  Merci, chéri, tu nous sauves la vie.
 Line 235: segment too long (40>36) -> Ces voyous n'ont pas pu aller bien loin.
 Line 236: segment too long (41>36) ->  Nos Écrémeuh ne sont pas les plus malins
@@ -83,13 +91,16 @@ Line 239: segment too long (40>36) -> Je ne peux pas assez vous remercier pour
 Line 239: segment too long (44>36) -> Vous devez prendre la réserve de Lait Meumeu
 Line 239: segment too long (40>36) -> de cette année en guise de remerciement.
 Line 240: segment too long (40>36) ->  Grâce à vous, nous avons retrouvé notre
+Line 242: segment 5 \n mismatch (origin=1, fr=0)
 Line 242: segment too long (37>36) -> Marais de Cootes, mais là c'est notre
 Line 242: segment too long (38>36) -> Ces Écrémeuh vont nous rendre riches !
 Line 243: \p count mismatch (origin=1, fr=0)
+Line 243: \n segment counts mismatch (origin=[0, 0], fr=[1])
 Line 244: segment too long (49>36) ->  Je sais que vous, les vaches stupides, produisez
 Line 244: segment too long (44>36) -> plus de vingt litres de lait par jour, alors
 Line 245: segment too long (38>36) ->  Ça ne marche pas comme je l'espérais,
 Line 247: \p count mismatch (origin=2, fr=1)
+Line 247: \n segment counts mismatch (origin=[0, 0, 0], fr=[1, 1])
 Line 248: segment too long (39>36) -> Attends, je te connais…{PAUSE}î tu es ce petit
 Line 248: segment too long (37>36) -> Et d'après ce que j'ai entendu, tu es
 Line 248: segment too long (38>36) -> Sérieusement, c'est quoi ton problème,

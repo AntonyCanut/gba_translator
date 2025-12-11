@@ -3,21 +3,35 @@ Line 16: segment too long (65>36) ->  Ne te méprends pas, ce n'est pas que je n
 Line 17: segment too long (42>36) ->  Je ne sais pas comment, mais j'ai perdu !
 Line 25: segment too long (41>36) ->  {COLOR}Ë{PLAYER} ! Content que tu nous rejoignes.
 Line 26: segment too long (63>36) ->  {COLOR}ËJe mettais Jax au courant de tout ce qui s'est passé depuis ta
+Line 27: trailing control code at end of fr line
+Line 28: trailing control code at end of fr line
 Line 28: segment too long (48>36) ->  Beladonis : {COLOR}ËTu as raté pas mal de choses aussi,
 Line 31: segment too long (41>36) ->  Jax : {COLOR}ËOn ne trouvera rien en restant là.
 Line 31: segment too long (39>36) -> {COLOR}ÉBorrius Est {COLOR}Ëdepuis la {COLOR}ÉVille Portuaire{COLOR}Ë !
 Line 37: segment too long (39>36) ->  {COLOR}Ë{PLAYER} ! Où est la Lumière du Néant ?
+Line 38: trailing control code at end of fr line
 Line 46: segment too long (37>36) -> infirmières donc je ne sais pas trop.
+Line 50: segment 1 \n mismatch (origin=1, fr=2)
+Line 50: segment 3 \n mismatch (origin=1, fr=2)
+Line 51: segment 1 \n mismatch (origin=1, fr=3)
+Line 52: trailing control code at end of fr line
 Line 54: \l count mismatch (origin=2, fr=1)
+Line 54: \n segment counts mismatch (origin=[1, 1, 0, 0], fr=[3, 2, 2])
 Line 57: segment too long (37>36) ->  Je suis descendu aux égouts pour les
 Line 58: segment too long (37>36) ->  Merci, mec. Je savais que je pouvais
 Line 59: segment too long (39>36) ->  Merci, fille. Je savais que je pouvais
+Line 61: trailing control code at end of fr line
 Line 62: segment too long (52>36) ->  Tu les as trouvées ! Mais waouh, qu'est-ce qu'elles
 Line 63: segment too long (58>36) ->  {COLOR}Á{PLAYER} a remis les chaussettes crasseuses au sbire Black
+Line 64: trailing control code at end of fr line
+Line 69: segment 1 \n mismatch (origin=1, fr=2)
 Line 70: segment too long (39>36) -> camarades Black {PLAYER} ont besoin d'un
+Line 71: segment 1 \n mismatch (origin=1, fr=2)
+Line 71: segment 2 \n mismatch (origin=1, fr=2)
 Line 73: segment too long (41>36) ->  James : {COLOR}ËAide tes camarades Black {PLAYER}
 Line 73: segment too long (38>36) -> pour l'instant pendant qu'on planifie.
 Line 74: segment too long (38>36) ->  Un jour je serai riche et j'achèterai
+Line 78: segment 1 \n mismatch (origin=1, fr=0)
 Line 81: segment too long (37>36) -> J'ai essayé d'envoyer le Pokémon pour
 Line 81: segment too long (37>36) -> voir ce que c'était, mais il a refusé
 Line 95: segment too long (67>36) ->  L'objet que je t'ai donné est indispensable pour un dresseur plein
@@ -27,16 +41,19 @@ Line 103: segment too long (55>36) ->  Chad : {COLOR}ËVas-y mec ! Fais-leur bou
 Line 104: segment too long (42>36) ->  Rory : {COLOR}ËTu ferais bien d'être prêt pour ma
 Line 105: segment too long (37>36) -> Tu m'as fait perdre mes chaussettes !
 Line 106: segment too long (38>36) ->  Gwahahaha ! Ça t'apprendra, morveux !
-Line 107: segment too long (71>36) ->  Rory : {COLOR}ËQuoi... tu ne devrais pas pouvoir battre les Black Ferrothorn !
+Line 107: segment too long (69>36) ->  Rory : {COLOR}ËQuoi… tu ne devrais pas pouvoir battre les Black Ferrothorn !
 Line 108: segment too long (39>36) ->  Goon : {COLOR}ËVoilà la vraie dureté des Black
 Line 108: segment too long (37>36) -> elles sont molles comme un Lippouti !
-Line 110: segment too long (40>36) ->  Rory : {COLOR}ËQuoi... tu pensais vraiment nous
+Line 110: segment too long (38>36) ->  Rory : {COLOR}ËQuoi… tu pensais vraiment nous
 Line 111: segment too long (45>36) ->  Goon : {COLOR}ËJe pensais que tu pourrais les battre
+Line 113: segment 1 \n mismatch (origin=1, fr=2)
 Line 115: segment too long (37>36) ->  Depuis qu'on a construit ces égouts,
 Line 117: segment too long (37>36) ->  C'est pas marrant comment crier dans
 Line 120: segment too long (68>36) ->  Même des odeurs horribles pour nous peuvent être du parfum pour des
 Line 130: segment too long (44>36) ->  Je continuerai d'expérimenter chaque jour !
 Line 131: segment too long (40>36) ->  James : {COLOR}ËLa bombe est prête à exploser !
+Line 133: segment 1 \n mismatch (origin=2, fr=3)
+Line 134: trailing control code at end of fr line
 Line 134: segment too long (37>36) -> On va vous éjecter pour diriger cette
 Line 135: segment too long (37>36) -> C'est qui ce {PLAYER} dont vous parlez
 Line 139: segment too long (46>36) ->  Barbs : {COLOR}ËVoyons qui est le vrai plus dur de la
@@ -54,9 +71,10 @@ Line 167: segment too long (37>36) -> Voyons ce que tu peux faire contre le
 Line 168: segment too long (37>36) -> Ils devraient t'appeler Big {PLAYER} !
 Line 171: segment too long (37>36) -> Pokémon jusqu'au Nv. 70 reconnaîtront
 Line 174: segment too long (37>36) ->  Si tu veux ma CT, libère de la place
-Line 184: segment too long (47>36) ->  Impossible d'amener le soleil à l'intérieur...
+Line 184: segment too long (45>36) ->  Impossible d'amener le soleil à l'intérieur…
 Line 189: segment too long (41>36) ->  Escalade ne peut pas être utilisée ici !
 Line 192: \l count mismatch (origin=1, fr=0)
+Line 192: \n segment counts mismatch (origin=[1, 0], fr=[2])
 Line 194: segment too long (80>36) ->  Ï  FS                                                                 Fhi hik h{STRING}
 Line 205: segment too long (1016>36) ->  lz zzÙlzzmlzzÙlzzm zzÙ  lz    zÓ  Ùzz zzzÓmìÙÓzzzÓÙzz zÓ        lz zzÙlzzmlzzÙlzzm zzÙ  lz    zÓ  Ùzz zzzÓmzzÓzzzÓÙzz zÓ        lz zzÙlzzmlzzÙlzzm zzÙ  lz    zÓ  Ùzz zzmÓmìÙÓzzmÓÙzz zÓ        lz zzAlzzwlzzwlzzw zzA  lz    z   wzz DzzÓDDAÓDzzÓwzz z         lz zzAlzzwlzzwlzzw zzA  lz    z   wzz DzzÓDzzÓDzzÓwzz zÓ        lz zzAlzzwlzzwlzzw zzA  lz    z   wzz DzwÓDDAÓDzwÓwzz z          z zzセlzzqlzzqlzzq zzセ   z    z   qzz セzzÓzセオÓセzzÓqzz z          z zzセlzzqlzzqlzzq zzセ   z    z   qzz セzzÓzzzÓセzzÓqzz z          z zzセlzzqlzzqlzzq zzセ   z    z   qzz セzqÓzセオÓセzqÓqzz z         lz zzラlzzslzzラlzzs zzラ  lz    z   szz ンzzÓsンラÓンzzÓszz z         lz zzラlzzslzzラlzzs zzラ  lz    z   szz ンzzÓszzÓンzzÓszz z         lz zzラlzzslzzラlzzs zzラ  lz    z   szz ンzsÓsンラÓンzsÓszz z          z zzホlzzrlzzニlzzr zzr  lz    z   rzz ホzzÓニホニÓホzzÓホzz zÓ         z zzホlzzrlzzニlzzr zzr  lz    z   rzz ホzzÓニzzÓホzzÓホzz zÓ         z zzホlzzrlzzニlzzr zzr  lz    z   rzz ホzrÓニホニÓホzrÓホzz zÓ         z zzずlzzolzzずlzzz zzぉ  lz    zÓ  ぉzz zzzÓozzÓずzzÓozz z
 Line 221: segment too long (43>36) ->  {STR_VAR_1} a survécu à l'empoisonnement. Le poison a

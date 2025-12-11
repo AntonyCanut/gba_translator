@@ -1,10 +1,13 @@
 Line 1: segment too long (46>36) -> parce que je suis allée dans la Grotte Faille.
 Line 2: \l count mismatch (origin=1, fr=0)
+Line 2: \n segment counts mismatch (origin=[1, 1, 0], fr=[1, 1])
 Line 2: segment too long (41>36) ->  Il y a des histoires de gens qui ne sont
 Line 2: segment too long (41>36) -> On dit que des groupes entiers qui y sont
 Line 3: \l count mismatch (origin=1, fr=0)
+Line 3: \n segment counts mismatch (origin=[0, 1, 0], fr=[0, 2])
 Line 3: segment too long (39>36) -> ajoutée à la liste des gens qui ne sont
 Line 4: \l count mismatch (origin=1, fr=0)
+Line 4: \n segment counts mismatch (origin=[1, 1, 0, 1, 1], fr=[1, 1, 1, 1])
 Line 4: segment too long (41>36) ->  Il y a des histoires de gens qui ne sont
 Line 4: segment too long (41>36) -> On dit que des groupes entiers qui y sont
 Line 4: segment too long (47>36) -> C'est une bonne chose que vous ayez sauvé notre
@@ -21,12 +24,15 @@ Line 25: segment too long (46>36) -> me protéger… alors s'il vous plaît, pou
 Line 27: segment too long (38>36) -> Je ne peux rien vous donner ici, alors
 Line 29: segment too long (42>36) -> Cette scientifique est passée et a demandé
 Line 30: \l count mismatch (origin=1, fr=0)
+Line 30: \n segment counts mismatch (origin=[1, 0, 1, 1], fr=[2, 1, 1])
 Line 30: segment too long (43>36) ->  Je sais que j'ai promis de vous donner une
 Line 30: segment too long (54>36) -> récompense quand vous arriveriez ici, mais pouvez-vous
 Line 31: segment too long (47>36) -> Pendant un moment, j'ai cru que je ne reverrais
+Line 32: segment 1 \n mismatch (origin=1, fr=0)
 Line 32: segment too long (42>36) ->  Maintenant je ne reverrai jamais mon ami…
 Line 33: segment too long (38>36) -> quelque chose à propos d'aller à {COLOR}ÉVille
 Line 33: segment too long (37>36) -> Portuaire{COLOR}Ë pour mener des expériences…
+Line 34: segment 2 \n mismatch (origin=1, fr=0)
 Line 34: segment too long (44>36) ->  Vous dites que vous avez sauvé mon Élekable
 Line 34: segment too long (47>36) -> Eh bien, alors s'il vous plaît ramenez-le moi !
 Line 36: segment too long (38>36) ->  Ça a l'air d'être un bon endroit pour
@@ -37,9 +43,11 @@ Line 42: segment too long (40>36) -> J'ai même fait savoir au Dresseur de cet
 Line 42: segment too long (53>36) -> Car voyez-vous, maintenant je peux vous utiliser pour
 Line 42: segment too long (41>36) -> combattre mes expériences et m'aider dans
 Line 45: \p count mismatch (origin=4, fr=3)
+Line 45: \n segment counts mismatch (origin=[1, 0, 1, 0, 0], fr=[1, 0, 1, 1])
 Line 45: segment too long (38>36) -> Utilise-la pour attaquer ce Dresseur !
 Line 46: segment too long (42>36) ->  {COLOR}ÁAvez-vous besoin d'une explication sur le
 Line 47: \l count mismatch (origin=8, fr=7)
+Line 47: \n segment counts mismatch (origin=[1, 0, 0, 1, 0, 0, 1, 0, 1, 0, 1, 0, 0, 1], fr=[1, 0, 0, 2, 0, 1, 0, 1, 0, 1, 0, 0, 1])
 Line 47: segment too long (39>36) ->  {COLOR}ÁLe Dynamax est un phénomène unique que
 Line 47: segment too long (38>36) -> des zones spéciales, comme les Trouées
 Line 47: segment too long (43>36) -> Presque tous les Pokémon peuvent Dynamaxer,
@@ -93,6 +101,7 @@ Line 79: segment too long (43>36) -> chaos sur la Route 10 ! Aidez les autorité
 Line 84: segment too long (38>36) -> sur la Route 10 pour discuter du plan.
 Line 93: segment too long (40>36) ->  Ah… ces Badges signifient que vous êtes
 Line 94: \l count mismatch (origin=9, fr=5)
+Line 94: \n segment counts mismatch (origin=[0, 1, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1, 0, 0], fr=[0, 1, 0, 0, 1, 1, 2, 0, 2, 0])
 Line 94: segment too long (54>36) -> Alors, comme vous le savez, le problème de criminalité
 Line 94: segment too long (38>36) -> de Borrius concerne principalement les
 Line 94: segment too long (39>36) -> dominait le plus de territoires là-bas,
@@ -110,6 +119,7 @@ Line 102: segment too long (52>36) -> Vous êtes plus nombreux que ces clowns, f
 Line 102: segment too long (39>36) -> Gah… attendez un peu - vous regretterez
 Line 102: segment too long (45>36) -> de vous être mis en travers de notre chemin !
 Line 103: \l count mismatch (origin=1, fr=0)
+Line 103: \n segment counts mismatch (origin=[0, 1, 0, 1], fr=[0, 2, 1])
 Line 103: segment too long (40>36) -> Pourtant, toute cette eau signifie qu'il
 Line 104: segment too long (40>36) ->  Et c'est fini pour vous, j'en ai peur !
 Line 104: segment too long (37>36) -> Maintenant ne causez pas d'ennuis, et
@@ -132,6 +142,7 @@ Line 113: segment too long (38>36) -> Bien ! Goûte à la terrible terreur des
 Line 114: segment too long (41>36) ->  Le combat avait l'air bien mieux dans ma
 Line 115: segment too long (41>36) -> Je dois vous féliciter pour vos vaillants
 Line 116: \l count mismatch (origin=2, fr=1)
+Line 116: \n segment counts mismatch (origin=[0, 1, 0, 0], fr=[0, 1, 0])
 Line 116: segment too long (48>36) -> Terreur Granbull, ne laisse pas juste passer une
 Line 117: segment too long (38>36) ->  Arrêtez-vous là, raclure criminelle !
 Line 118: segment too long (40>36) ->  Hah ! J'aimerais bien te voir essayer !
@@ -180,10 +191,12 @@ Line 141: segment too long (41>36) -> Le scientifique que vous avez envoyé a pu
 Line 141: segment too long (39>36) -> Ma gratitude ne connaît pas de limites.
 Line 142: segment too long (43>36) ->  Mais d'abord vous devrez faire de la place
 Line 143: \l count mismatch (origin=2, fr=1)
+Line 143: \n segment counts mismatch (origin=[1, 0, 0, 0], fr=[2, 0, 0])
 Line 143: segment too long (41>36) -> fille est revenue à la normale, mais elle
 Line 145: segment too long (51>36) -> J'ai entendu dire que j'étais malade, mais mon Papa
 Line 146: segment too long (42>36) ->  Ici au Laboratoire de Recherche Onirique,
 Line 147: \l count mismatch (origin=8, fr=6)
+Line 147: \n segment counts mismatch (origin=[0, 1, 0, 1, 1, 0, 0, 1, 0, 0, 0, 1, 1, 1, 0, 0, 1, 1, 0], fr=[0, 1, 0, 1, 2, 0, 2, 0, 0, 1, 1, 1, 0, 0, 1, 1, 0])
 Line 147: segment too long (37>36) -> dans le coma à cause de trop regarder
 Line 147: segment too long (37>36) -> Alors ça doit être pire que ce que je
 Line 147: segment too long (38>36) -> incapables de détourner leur attention
@@ -203,4 +216,5 @@ Line 150: segment too long (43>36) -> Je crois que ces enfants pourront désorma
 Line 151: segment too long (41>36) -> Vous devriez retourner à Polder Town pour
 Line 152: segment too long (38>36) ->  {COLOR}ÁL'enfant a été scanné en utilisant le
 Line 152: segment too long (47>36) -> Les données ont été envoyées au scientifique du
+Line 156: segment 1 has extra \n (origin=0, fr=4)
 Line 156: segment too long (55>36) -> croissance_______________________________________iiiini
