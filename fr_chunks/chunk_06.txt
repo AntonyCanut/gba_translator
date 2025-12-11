@@ -126,7 +126,7 @@
 0x3D8D37: Sac ramassant la cendre volcanique\nautomatiquement en marchant sur la\ncendre épaisse.
 0x3D8D85: Clé de Nouv. Mauville, bâtie sous\nCÉLADOPOLIS.\n
 0x3D8DCB: Vélo pliant pour figures comme\nsauts et roues arrière.
-0x3D8E10: Étui pour des オカキクケ faits au\nMixeur à Baies.\nLibère une オカキクケ en le\nsecouant.
+0x3D8E10: Étui pour オカキクケ faits au Mixeur\nà Baies. Libère une オカキクケ\nen le secouant.
 0x3D8E68: Lettre très importante pour Pierre\nvenant du PRÉSIDENT de Devon.\n
 0x3D8EBD: Ticket pour le ferry vers une\nîle du sud. Dessiné avec une île.\n
 0x3D8F2A: Orbe rouge qui brille.\nRenfermerait une puissance antique.\n
@@ -134,7 +134,7 @@
 0x3D8FD5: Appareil pour chercher de la vie\nsous l’eau.\nSemble trop complexe à utiliser.
 0x3D9025: Lunettes de protection.\nPermettent de traverser les\ntempêtes de sable.
 0x3D9083: Fragment du météorite tombé sur\nCrater Town il y a longtemps.\n          \n
-0x3D90D7: Clé qui coupe la barrière\nélectrique des Ombres au Mt.\nFulguroc.\n
+0x3D90D7: Clé qui coupe la barrière\nélectrique des Ombres au\nMt. Fulguroc.
 0x3D9139: Carte-clef ouvrant les portes de\nniveau 2 dans la base des Ombres.\n
 0x3D919B: Carte-clef ouvrant les portes de\nniveau 3 dans la base des Ombres.\n
 0x3D91FD: Carte-clef ouvrant les portes de\nniveau 1 dans la base des Ombres.\n
@@ -142,64 +142,64 @@
 0x3D92BF: Fossile d’un ancien Pokémon marin.\nSemble être une racine.\n
 0x3D931A: Fossile d’un ancien Pokémon marin.\nSemble être une griffe.\n
 0x3D936F: Visière qui révèle les Pokémon\ninvisibles. Fabriquée par SILPH S.A.\n
-0x3D93C9: Une attaque extrêmement puissante.\nCependant, si l'utilisateur est\ntouché avant d'utiliser le\nmouvement, il tressaillira.
-0x3D942C: D'énormes griffes acérées\ns'accrochent et frappent l'ennemi\nrapidement et avec une grande\npuissance.
+0x3D93C9: Attaque extrêmement puissante.\nSi l'utilisateur est touché avant\nd'agir, il tressaillira.
+0x3D942C: De grandes griffes acérées\ns'agrippent et frappent l'ennemi\navec une grande puissance.
 0x3D9473: L'ennemi reçoit un jet d'eau pulsé.\nCela peut aussi\nconfondre la cible.
-0x3D94C1: L'utilisateur calme son esprit et\nconcentre son esprit pour élever son\nSp. Atk et Sp. Statistiques\ndéfensives.
+0x3D94C1: L'utilisateur calme et concentre\nson esprit pour augmenter son Att.\nSpé. et sa Déf. Spé.
 0x3D9518: Un rugissement sauvage qui fait\nsortir l'ennemi du combat. Dans le\nwild, ROAR met fin à la bataille.
 0x3D9576: Une capacité qui laisse l'ennemi\ngravement empoisonné. Ses dégâts de\npoison s'aggravent à chaque tour.
-0x3D95C7: Invoque une tempête de grêle qui\ndure cinq tours. La tempête de grêle\nendommage tous les types sauf le\ntype ICE.
-0x3D962B: L'utilisateur resserre tous ses\nmuscles et prend du volume,\naugmentant à la fois ses\nstatistiques d'attaque et de défense\n.
-0x3D9687: L'utilisateur tire des graines sur\nl'ennemi en succession rapide. Deux\nà cinq graines sont tirées à la\nfois.
+0x3D95C7: Invoque une tempête de grêle\npendant cinq tours, qui blesse tous\nles types sauf la Glace.
+0x3D962B: L'utilisateur contracte ses muscles\net prend du volume, augmentant\nAttaque et Défense.
+0x3D9687: L'utilisateur tire des graines sur\nl'ennemi en rafale. Deux à cinq\nsont tirées à la fois.
 0x3D96E1: Une capacité variable qui change de\ntype et de puissance en fonction du\nPokémon l'utilisant.
-0x3D9730: Le temps est devenu ensoleillé\npendant cinq tours. Pendant ce\ntemps, les mouvements de type FIRE-\nsont activés.
+0x3D9730: Le temps devient ensoleillé pour\ncinq tours, renforçant les attaques\nde type Feu.
 0x3D978D: Un ennemi provoqué peut devenir\nenragé. Il ne pourra alors utiliser\nque des mouvements d'attaque .
 0x3D97DE: Un rayon glacial est tiré sur\nl'ennemi . Cela peut laisser la\ncible gelée.
 0x3D9823: Une vicieuse attaque de neige et de\nvent qui frappe tous les ennemis au\ncombat. Cela peut provoquer le gel.
-0x3D987A: Une attaque brutale qui inflige de\ngraves dégâts à l'ennemi. Cependant,\nl'utilisateur doit se reposer au\ntour suivant.
+0x3D987A: Attaque brutale qui inflige de\ngraves dégâts à l'ennemi, mais\nl'utilisateur doit se reposer après.
 0x3D98DC: Un mur de lumière est créé en cinq\ntours. Il réduit les dégâts de Sp.\nAttaque d'attaque.
-0x3D9930: L'utilisateur est complètement\nprotégé contre les attaques pendant\nle tour où il est utilisé. Il peut\néchouer s'il est utilisé\nsuccessivement.
-0x3D9998: Une forte pluie est invoquée pour\ncinq tours.\nLes attaques Eau sont renforcées\npendant cette durée.
-0x3D99F2: L'utilisateur frappe l'ennemi avec\ndes tentacules ou des racines ,\nvolant les PV de la cible et se\nsoignant lui-même.
+0x3D9930: L'utilisateur est complètement\nprotégé ce tour-ci. Il peut échouer\ns'il est utilisé successivement.
+0x3D9998: Une forte pluie est invoquée pour\ncinq tours, renforçant les attaques\nEau pendant cette durée.
+0x3D99F2: Frappe avec tentacules ou racines,\nvole les PV de la cible\net se soigne.
 0x3D9A51: Protège le groupe avec un bouclier\ncontre tous les problèmes de statut\nsur cinq tours.
 0x3D9A9F: Cette attaque devient de plus en\nplus puissante à mesure que le\nPokémon n'aime pas son dresseur.
-0x3D9AEF: Une attaque de 2 tours qui utilise\nle premier tour pour absorber la\nlumière du soleil, puis pour faire\nexploser l'ennemi au tour suivant.
+0x3D9AEF: Attaque en deux tours : d'abord\nabsorber la lumière, puis frapper\nl'ennemi au tour suivant.
 0x3D9B58: L'ennemi est frappé avec une solide\nqueue d'acier . Cela peut réduire la\nstatistique de défense de la cible .
 0x3D9BB0: Une énorme décharge électrique est\nlancée sur l'ennemi. Cela peut\nprovoquer une paralysie.
 0x3D9BFE: Frappe l'ennemi avec un énorme coup\nde foudre . Cela peut provoquer une\nparalysie.
 0x3D9C3F: Provoque un séisme qui frappe\ntous les Pokémon au combat,\nhors l'utilisateur.
 0x3D9C8C: Cette attaque devient de plus en\nplus puissante à mesure que le\nPokémon aime son dresseur.
-0x3D9CD9: Une attaque en 2 tours au cours de\nlaquelle l'utilisateur creuse sous\nterre, puis frappe. Il peut être\nutilisé pour sortir des donjons.
-0x3D9D3C: Une puissante explosion d'énergie\ntélékinétique frappe l'ennemi. Cela\npeut réduire la Sp de la cible.\nStatistique déf.
-0x3D9D9C: L'ennemi est attaqué avec une masse\nsombre . Cela peut réduire le Sp de\nla cible. Statistique déf.
-0x3D9DED: Frappe l'ennemi avec un poing dur\ncomme la pierre, etc. Il brise les\nbarrières telles que REFLECT et\nLIGHT SCREEN.
-0x3D9E50: L'utilisateur se met à bouger si\nvite qu'il crée des copies\nillusoires pour augmenter son\nesquive.
-0x3D9EAC: Une barrière solide est érigée en\ncinq tours. Cela réduit les dégâts\ncausés par les attaques physiques\npendant cette période.
-0x3D9F0F: Une rapide décharge électrique\nfrappe l'ennemi. Cette attaque est\nimpossible à esquiver.
+0x3D9CD9: Attaque en deux tours : le lanceur\ncreuse sous terre, puis frappe.\nPeut servir à sortir des donjons.
+0x3D9D3C: Puissante explosion d'énergie\npsychique qui frappe l'ennemi.\nPeut réduire sa Déf. Spé.
+0x3D9D9C: L'ennemi est attaqué par une masse\nsombre.\nPeut réduire sa Déf. Spé.
+0x3D9DED: Frappe l'ennemi avec un poing dur\ncomme la pierre. Brise REFLECT et\nLIGHT SCREEN.
+0x3D9E50: L'utilisateur bouge si vite qu'il\ncrée des copies illusoires pour\naugmenter son esquive.
+0x3D9EAC: Une barrière solide est érigée pour\ncinq tours. Elle réduit les dégâts\ndes attaques physiques.
+0x3D9F0F: Une décharge électrique rapide\nfrappe l'ennemi. Cette attaque est\nimpossible à esquiver.
 0x3D9F60: L'ennemi est rôti par une puissante\nexplosion de feu. Cela peut laisser\nla cible avec une brûlure.
 0x3D9FB4: Des boues toxiques sont lancées sur\nl'ennemi avec une grande force. Cela\npeut également empoisonner la cible.
-0x3DA007: Invoque une tempête de sable qui\ndure cinq tours. Il endommage tous\nles types sauf la ROCHE, le SOL et\nl'ACIER.
+0x3DA007: Invoque une tempête de sable de\ncinq tours. Elle blesse tous les\ntypes sauf Roche, Sol et Acier.
 0x3DA06B: L'ennemi est incinéré avec une\nflamme intense. Cela peut laisser la\ncible avec une brûlure.
-0x3DA0BE: Des rochers sont lancés sur\nl'ennemi. Cela réduit également la\nvitesse stat de la cible si elle\ntouche.
+0x3DA0BE: Des rochers sont lancés sur\nl'ennemi. Peut aussi réduire sa\nvitesse si ça touche.
 0x3DA111: Une attaque extrêmement rapide\ncontre une cible. Il est impossible\nde échapper.
-0x3DA159: Si elle est enragée par ce\nmouvement, la cible devient\nincapable d'utiliser le même\nmouvement deux fois de suite.
+0x3DA159: Enragée par ce mouvement, la cible\nne peut plus utiliser le même coup\ndeux tours d'affilée.
 0x3DA1B6: Une capacité d'attaque qui devient\ntrès puissant si l'utilisateur est\nempoisonné, brûlé ou paralysé.
-0x3DA20F: Une capacité d'attaque qui peut\navoir un effet supplémentaire en\nfonction du terrain de bataille .
-0x3DA262: Une capacité qui endort\nl'utilisateur pendant deux tours\npour restaurer HP et résoudre tout\nproblème de statut.
+0x3DA20F: Capacité qui peut avoir un effet\nsupplémentaire selon le terrain\nde bataille.
+0x3DA262: Capacité qui endort l'utilisateur\npendant deux tours pour restaurer\nses PV et soigner tout statut.
 0x3DA2C4: L'ennemi du genre opposé à\nl'utilisateur devient épris et ne\npeut plus attaquer.
 0x3DA31E: Une attaque qui donne à\nl’utilisateur une opportunité de\nvoler l’objet de l’ennemi.
-0x3DA369: L'ennemi est frappé avec des ailes\ndures comme l'acier. Cela peut\négalement augmenter la statistique\nDefense de l’utilisateur.
+0x3DA369: L'ennemi est frappé avec des ailes\ndures comme l'acier. Peut aussi\naugmenter la Défense du lanceur.
 0x3DA3BD: Un pouvoir spécial est transmis à\nl'ennemi, l'amenant à échanger\ncapacités avec l'utilisateur.
-0x3DA416: Une capacité qui vole les effets de\ntout mouvement de changement de\nstatut ou de guérison que l'ennemi\ntente d'utiliser.
+0x3DA416: Capacité qui vole les effets de\nmouvements de statut ou de soin\nutilisés par l'ennemi.
 0x3DA477: Attaque maximale et féroce, mais\nbaisse fortement l’Att. Spé. du\nlanceur.
-0x3DA4DC: Attaque l'ennemi avec des lames\ntranchantes ou des griffes. Il peut\négalement abattre des arbres et de\nl'herbe minces en dehors des\ncombats.
-0x3DA545: L'utilisateur s'envole au premier\ntour, puis attaque au tour suivant.\nIl peut être utilisé pour voler vers\nn'importe quelle ville connue.
-0x3DA5AB: Crée une vague énorme qui\ns'écrase sur l'ennemi.\nPeut aussi servir à voyager sur\nl'eau.
-0x3DA608: L'utilisateur développe une\npuissance énorme, puis frappe\nl'ennemi. Il peut être utilisé pour\ndéplacer de gros rochers ronds.
-0x3DA66D: Lâche une puissante explosion de\nlumière qui réduit la précision de\nl'ennemi. Il éclaire également les\ngrottes sombres.
+0x3DA4DC: Attaque l'ennemi avec lames ou\ngriffes. Peut aussi couper des\narbres ou de l'herbe hors combat.
+0x3DA545: L'utilisateur s'envole au premier\ntour, puis attaque au suivant. Peut\nservir à voler vers une ville.
+0x3DA5AB: Crée une vague énorme qui s'écrase\nsur l'ennemi et permet aussi de\nvoyager sur l'eau.
+0x3DA608: L'utilisateur développe une grande\npuissance, puis frappe l'ennemi.\nPermet de déplacer de gros rochers.
+0x3DA66D: Déclenche une explosion de lumière\nqui réduit la précision de\nl'ennemi. Éclaire aussi les grottes.
 0x3DA6CD: Frappe l'ennemi avec une attaque\ndure et écrasante. Il peut briser\ndes rochers fissurés.
 0x3DA71E: Une puissante attaque de charge. Il\npeut être utilisé pour escalader une\ncascade torrentielle .
-0x3DA76C: Une attaque de 2 tours au cours de\nlaquelle l'utilisateur plonge sous\nl'eau au premier tour, puis frappe\nau tour suivant.
+0x3DA76C: Attaque en deux tours : le lanceur\nplonge au premier, puis frappe au\nsecond.
 0x3DA7D1: Colis pour le Prof. Log depuis le\nMagasin Pokémon de Bourg Bellin.  \n
 0x3DA81A: Flûte qui réveillerait\ninstantanément n’importe quel\nPokémon. Son joli.
 0x3DA866: Paire de chaussettes crasseuses\ntrouvées dans les Égouts d’Antisis.

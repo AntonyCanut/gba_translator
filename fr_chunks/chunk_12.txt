@@ -8,7 +8,7 @@
 0x3FD8B9: {B_SCR_ACTIVE_NAME_WITH_PREFIX}:\n{B_LAST_ITEM} guérit la paralysie !
 0x3FD8D2: {B_SCR_ACTIVE_NAME_WITH_PREFIX}:\n{B_LAST_ITEM} soigne le poison !
 0x3FD8E8: {B_SCR_ACTIVE_NAME_WITH_PREFIX}:\n{B_LAST_ITEM} soigne la brûlure !
-0x3FD901: Les {B_LAST_ITEM} de\n{B_SCR_ACTIVE_NAME_WITH_PREFIX}\nl'ont dégivré !
+0x3FD901: Les {B_LAST_ITEM} de {B_SCR_ACTIVE_NAME_WITH_PREFIX}\nl'ont dégivré !
 0x3FD917: {B_SCR_ACTIVE_NAME_WITH_PREFIX}:\n{B_LAST_ITEM} le réveille !
 0x3FD937: {B_SCR_ACTIVE_NAME_WITH_PREFIX}:\n{B_LAST_ITEM} ôte la confusion !
 0x3FD95C: {B_SCR_ACTIVE_NAME_WITH_PREFIX}: {B_LAST_ITEM} soigne\nsouci {UNKNOWN_STR} !
@@ -19,19 +19,19 @@
 0x3FDA02: un peu !
 0x3FDA0B: Effet de {B_LAST_ITEM} : seule {B_CURRENT_MOVE} peut\nêtre utilisée !\p
 0x3FDA33: {B_DEF_NAME_WITH_PREFIX} tient bon\navec {B_LAST_ITEM} !
-0x3FDA4D: {B_PLAYER_NAME} joue {B_LAST_ITEM}. Air entraînant !\p
+0x3FDA4D: {B_PLAYER_NAME} joue {B_LAST_ITEM}.\pVoilà un air entraînant !
 0x3FDA7A: {B_PLAYER_NAME} joue la\n{B_LAST_ITEM}.
 0x3FDA8C: Les Pokémon entendant la Flûte\nse réveillent !
 0x3FDAB1: Tu lances une Ball, hein ?\nJe… je vais faire de mon mieux !
 0x3FDAE2: Journal : Oh, bon sang…\nToujours pressé.\p{B_PLAYER_NAME}.\pTu n'as jamais fait de combat\nPokémon, hein ?\pUn combat oppose les Pokémon\ndes Dresseurs entre eux.\l\p
 0x3FDB92: Le Dresseur qui met K.O. les\nPokémon adverses en baissant\lleurs PV à «0» gagne.\p
-0x3FDBEF: Mais plutôt qu'en parler, tu\napprendras mieux par l'expérience.\nEssaye de combattre\ppour voir.\p
+0x3FDBEF: Mais plutôt qu'en parler, tu\napprendras mieux par l'expérience.\pEssaye de combattre pour voir.\p
 0x3FDC58: Infliger des dégâts à l'ennemi\nest la clé de tout combat.\p
 0x3FDC95: Baisser les stats de l'ennemi\nt'avantage.\p
 0x3FDCD2: Garde un œil sur les PV\nde ton Pokémon.\pIl tombera K.O. si ses PV\natteignent «0».\p
 0x3FDD23: Non ! Pas de fuite d'un combat\ncontre un Dresseur !\p
 0x3FDD64: Hm ! Excellent !\pSi tu gagnes, tu as de l'argent,\net ton Pokémon grandit !\pAffronte d'autres Dresseurs\npour les rendre forts !\p
-0x3FDDEB: Hm… Quelle déception… Si tu\ngagnes, tu as de l'argent,\net tes Pokémon grandissent.\pSi tu perds, {B_PLAYER_NAME},\ntu paies.\pJe paie cette fois,\nmais dehors ce sera différent.\pRenforce tes Pokémon en battant\ndes Pokémon sauvages.\p\nmais dehors ce sera différent.\pRenforce tes Pokémon en battant\ndes Pokémon sauvages.\p
+0x3FDDEB: Hm…\nQuelle déception…\pSi tu gagnes, tu as de l'argent,\net tes Pokémon grandissent.\pSi tu perds, {B_PLAYER_NAME},\ntu paies.\pComme tu n'étais pas prévenu,\nje paie cette fois.\pMais dehors,\nce sera différent.\pRenforce tes Pokémon en battant\ndes Pokémon sauvages.\p
 0x3FE672: Quoi ?\n{STR_VAR_1} évolue!
 0x3FE688: Félicitations ! Ton {STR_VAR_1}\na évolué en {STR_VAR_2}!\p {WAIT_SE}
 0x3FE6B5: Hein ? {STR_VAR_1}\nn'évolue plus!\p
@@ -77,9 +77,9 @@
 0x3FE998: {STR_VAR_1}M {STR_VAR_2}{STR_VAR_3}S
 0x3FE9E4: Joueur a perdu {B_TRAINER1_CLASS}\n{B_TRAINER1_NAME}!
 0x3FE9FF: Match nul {B_TRAINER1_CLASS}\n{B_TRAINER1_NAME}!
-0x407C3F: AA & ÂS BAAiRRAi SRRiyzziîDA\nSo:g{B_ATK_NAME_WITH_PREFIX} :\ngQxEQQhC QQjCQzhiÇizjii\nSoi{STRING}da : ぉ
-0x40FCA2: oTR ou TRiÜRx
-0x4100BA: kj zyizzozŒÂjj
+0x407C3F: AA & ÂS BAAiRRAi SRRiyzziîDA ソ:g{B_ATK_NAME_WITH_PREFIX}: gQxEQQhC QQjCQzhiÇizjii ソi{STRING}だ: ぉ
+0x40FCA2: ぉoTRぉ TRiÜRx
+0x4100BA: kj zyizぞzŒÂjj
 0x415A23: SAPHIR
 0x415A2C: RUBIS
 0x415A31: AQUA
@@ -193,20 +193,20 @@
 0x4163BB: Plus de place pour\nstocker des objets.
 0x4163DB: Combien de {STR_VAR_1}(s)\njeter ?
 0x416409: Jeter {STR_VAR_2} de\ncet objet ?
-0x416425: Journal : {PLAYER} !\nCe n'est pas le moment\npour ça !{PAUSE_UNTIL_PRESS}
+0x416425: Journal : {PLAYER} !\nCe n'est pas le moment pour ça !{PAUSE_UNTIL_PRESS}
 0x416451: Pas de Vélo ici.{PAUSE_UNTIL_PRESS}
 0x41647E: Hein ?\nCherche-Objet réagit !\pObjet enterré !{PAUSE_UNTIL_PRESS}
 0x4164C2: Oh !\nCherche-Objet bouge !\pObjet sous tes pieds !\p… … … … … …{PAUSE_UNTIL_PRESS}
 0x416513: … … … …Rien !\nAucune réaction.{PAUSE_UNTIL_PRESS}
 0x41659E: Mais l'effet d'un Repousse\npersiste.{PAUSE_UNTIL_PRESS}
-0x4165D2: {PLAYER} a utilisé le {STR_VAR_2}.\pLes Pokémon sauvages seront\nattirés.{PAUSE_UNTIL_PRESS}
-0x416600: {PLAYER} a utilisé le {STR_VAR_2}.\pLes Pokémon sauvages seront\nrepoussés.{PAUSE_UNTIL_PRESS}
+0x4165D2: {PLAYER} a utilisé le\n{STR_VAR_2}.\pLes Pokémon sauvages seront\nattirés.{PAUSE_UNTIL_PRESS}
+0x416600: {PLAYER} a utilisé le\n{STR_VAR_2}.\pLes Pokémon sauvages seront\nrepoussés.{PAUSE_UNTIL_PRESS}
 0x416631: La Boîte est pleine. {PAUSE_UNTIL_PRESS}
 0x416644: QUANT. POUDRE: {STR_VAR_1} {PAUSE_UNTIL_PRESS}
 0x416655: POUDRE
 0x41665C: Tu joues de la FLÛTE POKé.\pQuelle mélodie entraînante !{PAUSE_UNTIL_PRESS}
 0x416690: Tu joues de la FLÛTE POKé.
-0x4166A7: La FLÛTE POKé réveille les Pokémon\nendormis.\n{PAUSE_UNTIL_PRESS}
+0x4166A7: La FLÛTE POKé réveille les Pokémon\nendormis.{PAUSE_UNTIL_PRESS}
 0x4166D3: Boîte CT
 0x4166DB: Fermer
 0x4166E1: La Boîte CT sera\nrangée.
@@ -242,9 +242,9 @@
 0x416A3A: {STR_VAR_1} est déjà\nau combat !{PAUSE_UNTIL_PRESS}
 0x416A55: {STR_VAR_1} est déjà sélectionné.\n{PAUSE_UNTIL_PRESS}
 0x416A75: {STR_VAR_1} n'a plus assez d'énergie\npour se battre !{PAUSE_UNTIL_PRESS}
-0x416A98: Impossible d'échanger le Pokémon\nde {STR_VAR_1} avec l'un des tiens !\n{PAUSE_UNTIL_PRESS}
+0x416A98: Impossible d'échanger le Pokémon\nde {STR_VAR_1} avec l'un des tiens !{PAUSE_UNTIL_PRESS}
 0x416ACB: Un Œuf ne peut pas se battre ! {PAUSE_UNTIL_PRESS}
-0x416AE2: Inutilisable tant qu'un nouveau\nBadge n'est pas obtenu.\n{PAUSE_UNTIL_PRESS}
-0x416B16: Pas plus de trois Pokémon ne\npeuvent entrer.\n{PAUSE_UNTIL_PRESS}
-0x416B3E: Pas plus de deux Pokémon ne\npeuvent entrer.\n{PAUSE_UNTIL_PRESS}
+0x416AE2: Inutilisable tant qu'un nouveau\nBadge n'est pas obtenu.{PAUSE_UNTIL_PRESS}
+0x416B16: Pas plus de trois Pokémon ne\npeuvent entrer.{PAUSE_UNTIL_PRESS}
+0x416B3E: Pas plus de deux Pokémon ne\npeuvent entrer.{PAUSE_UNTIL_PRESS}
 0x416B64: Envoyer le Courrier retiré\nsur ton PC ?

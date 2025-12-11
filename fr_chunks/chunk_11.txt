@@ -102,16 +102,16 @@
 0x3FC7D3: {B_EFF_NAME_WITH_PREFIX} : {B_DEF_ABILITY}\nempêche la paralysie !
 0x3FC7EF: {B_DEF_NAME_WITH_PREFIX} : {B_DEF_ABILITY}\nempêche l'attirance !
 0x3FC809: {B_EFF_NAME_WITH_PREFIX} : {B_DEF_ABILITY}\nempêche l'empoisonnement !
-0x3FC825: Le {B_DEF_ABILITY} de\n{B_DEF_NAME_WITH_PREFIX} évite toute\nconfusion !
-0x3FC841: Le {B_DEF_ABILITY} de\n{B_DEF_NAME_WITH_PREFIX} a augmenté\nsa puissance de feu !
+0x3FC825: Le {B_DEF_ABILITY} de {B_DEF_NAME_WITH_PREFIX}\névite toute confusion !
+0x3FC841: Le {B_DEF_ABILITY} de {B_DEF_NAME_WITH_PREFIX}\na augmenté sa puissance de feu !
 0x3FC860: {B_DEF_NAME_WITH_PREFIX} s'ancre !\n
-0x3FC895: Le {B_SCR_ACTIVE_ABILITY} de\n{B_SCR_ACTIVE_NAME_WITH_PREFIX}\névite la perte de statistiques !
+0x3FC895: Le {B_SCR_ACTIVE_ABILITY} de {B_SCR_ACTIVE_NAME_WITH_PREFIX}\névite la perte de statistiques !
 0x3FC8D5: {B_EFF_NAME_WITH_PREFIX} : {B_EFF_ABILITY}\nempêche les brûlures !
 0x3FC913: {B_ATK_NAME_WITH_PREFIX} : {B_ATK_ABILITY}\nrestaure ses PV !
 0x3FC92C: petit!
 0x3FC935: {B_SCR_ACTIVE_NAME_WITH_PREFIX} : {B_SCR_ACTIVE_ABILITY}\nprovoque une tempête de sable !
 0x3FC955: {B_SCR_ACTIVE_NAME_WITH_PREFIX} : {B_SCR_ACTIVE_ABILITY}\nrenforce le soleil !
-0x3FC979: Le {B_SCR_ACTIVE_ABILITY} de\n{B_SCR_ACTIVE_NAME_WITH_PREFIX}\névite la perte de {UNKNOWN_STR} !
+0x3FC979: Le {B_SCR_ACTIVE_ABILITY} de {B_SCR_ACTIVE_NAME_WITH_PREFIX}\névite la perte de {UNKNOWN_STR} !
 0x3FC9AA: {B_DEF_NAME_WITH_PREFIX} : {B_DEF_ABILITY} rend {B_CURRENT_MOVE}\ninefficace !
 0x3FC9C7: {B_SCR_ACTIVE_NAME_WITH_PREFIX} : {B_SCR_ACTIVE_ABILITY}\nsoigne souci {UNKNOWN_STR} !
 0x3FC9E5: Il a aspiré le Suintement !\n
@@ -122,7 +122,7 @@
 0x3FCA71: {B_SCR_ACTIVE_NAME_WITH_PREFIX} : {B_SCR_ACTIVE_ABILITY}\na rendu cela inefficace !
 0x3FCA8E: {B_EFF_NAME_WITH_PREFIX} : {B_EFF_ABILITY}\nempêche de broncher !
 0x3FCAAA: {B_ATK_NAME_WITH_PREFIX} : {B_ATK_ABILITY}\nannule {B_DEF_ABILITY} de\l{B_DEF_NAME_WITH_PREFIX} !
-0x3FCAD1: Le {B_SCR_ACTIVE_ABILITY} de\n{B_SCR_ACTIVE_NAME_WITH_PREFIX} a\nrésolu son problème {UNKNOWN_STR} !
+0x3FCAD1: Le {B_SCR_ACTIVE_ABILITY} de {B_SCR_ACTIVE_NAME_WITH_PREFIX}\na résolu son problème {UNKNOWN_STR} !
 0x3FCAEF: {B_SCR_ACTIVE_NAME_WITH_PREFIX} : {B_SCR_ACTIVE_ABILITY} inefficace\nsur {B_EFF_NAME_WITH_PREFIX} !
 0x3FCB0C: {B_ATK_NAME_WITH_PREFIX} est trop effrayé pour bouger !
 0x3FCB26: Fantôme : Dehors…… Dehors……

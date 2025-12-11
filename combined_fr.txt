@@ -147,7 +147,7 @@
 0x18909E: Cet air est magnifique !
 0x1890C0: Les Dresseurs du coin viennent ici\ns’entraîner.
 0x1890E6: Tu es correct.
-0x1890F5: Tous les Pokémon ont des\nfaiblesses.\nMême les plus forts.\pC’est pour ça qu’il vaut mieux\nélever des Pokémon de types variés.
+0x1890F5: Tous les Pokémon ont une faille.\nMême les plus forts.\pC’est pour ça qu’il vaut mieux\nélever des Pokémon de types variés.
 0x189165: J’adore rester ici à regarder\nl’océan.
 0x1891A6: Je ne suis pas fâchée !
 0x1891B3: C’est beau, hein ?
@@ -230,7 +230,7 @@
 0x194045: Salut, {PLAYER} !\pÇa mord bien ?
 0x19406F: Oh, non !\pJ’avais un beau cadeau pour toi,\nmais tu n’as pas de place !
 0x194234: L’envie de combattre quelqu’un\nque tu as déjà affronté…\pTu as déjà ressenti ça ?\nJe suis sûr que oui.\pJe voulais aussi me battre encore\net encore contre certains.\pAlors j’offre ces trucs.\nTiens, prends-en un !
-0x19430F: Utilise cet appareil et tu\ntrouveras des Dresseurs voulant une\nrevanche.\pIl faut recharger sa batterie pour\nl’utiliser, par contre.
+0x19430F: Avec cet appareil, tu trouveras\ndes Dresseurs voulant une revanche.\pIl faut recharger sa batterie pour\nl’utiliser, par contre.
 0x194381: Comment utiliser le Cherche VS ?\nRien de plus simple.\pFais bip-bip-bip et les Dresseurs\nautour de toi le verront.\pSi un Dresseur veut une revanche,\nil te le dira aussitôt.\pRecharge sa batterie et utilise-le\nquand tu es sur une route.
 0x1949CB: Salut !\nTu as un {STR_VAR_1} ?\pTu veux l’échanger contre mon\n{STR_VAR_2} ?
 0x1949FD: Dommage.
@@ -312,7 +312,7 @@
 0x19A5BD: 9Besoin de redescendre la\nmontagne ?\pMon Abra et moi serons ravis de te\ntransporter en bas.\pQu’en dis-tu ?\nTu veux être téléporté ?
 0x19A650: Attention, tu auras besoin de force\npour continuer ensuite.
 0x19A79F: 9Ils vendent bien des Attaque + ?\pJ’aime ça, ça hausse l’Attaque en\ncombat.
-0x19A7F1: Avoir des objets en rab ne fait\njamais de mal. On ne sait jamais ce\nqui peut arriver.
+0x19A7F1: Avoir des objets en rab ne fait\njamais de mal. On ne sait jamais.
 0x19B86A: Presque arrivé !
 0x19B8B9: Je suis pas trop jeune pour Mel !\nLaisse-moi tranquille !
 0x19BA45: Mauvais chemin !
@@ -325,13 +325,13 @@
 0x19BE37: Arène Pokémon de Fallshore\nChampion : Mel\pDresseurs vainqueurs :\n{RIVAL}, {PLAYER}
 0x19BF8F: Le Repousse Max empêche les Pokémon\nfaibles d'apparaître.\pIl dure plus longtemps que le Super\nRepousse.
 0x19BFF1: Avec le {COLOR}ÉBadge Chute{COLOR}Ç, tu peux\nacheter des {COLOR}ÉHyper Balls{COLOR}Ç !\pElles sont bien meilleures pour\ncapturer que des Super Balls.
-0x19C0B4: J’ai entendu dire que des gens\nfaisaient des bêtises sur la\n{COLOR}ÉRoute 9{COLOR}Ë.
+0x19C0B4: J’ai entendu que des gens font des\nbêtises sur la {COLOR}ÉRoute 9{COLOR}Ë.
 0x19C0F7: À chaque pas, tes Pokémon\ns’attachent plus à toi.\pSi tu as un Pokémon à la Pension,\nil gagnera aussi en puissance.
 0x19C177: Tu as entendu ?\pQuelqu’un a réglé le souci des\nfauteurs de Route 9 !
-0x19E9E5: Salut ! Je suis un aide du\nProf. Log.\nSi ton Pokédex contient\p{COLOR}É{STR_VAR_1}{COLOR}Ç espèces,\nje dois te récompenser.\lAlors, {PLAYER}, dis-moi.\pAs-tu des données sur{COLOR}É\p{STR_VAR_1}{COLOR}Ç espèces de\nPokémon ?
+0x19E9E5: Salut !\nJe suis un aide du Prof. Log.\pSi ton Pokédex contient {COLOR}É{STR_VAR_1}{COLOR}Ç\nespèces, je dois te récompenser.\lJe te remettrai une récompense.\pAlors, {PLAYER}, dis-moi.\pAs-tu des données sur\n{COLOR}É{STR_VAR_1}{COLOR}Ç espèces de Pokémon ?
 0x19EABE: …sur au moins {STR_VAR_1} types de\nPokémon ?
 0x19EAE4: Super ! Tu as attrapé {COLOR}É{STR_VAR_3}{COLOR}Ç\nespèces !\pFélicitations !\nTiens !
-0x19EB59: Il y a des objets au sol parfois\ncachés. Utilise le {COLOR}ÉCherche-Objet{COLOR}Ç\npour trouver les objets cachés\pprès de toi.\nLa machine est un peu limitée.\pElle ne peut pas donner la\nposition exacte.\pElle indique juste la direction de\nl’objet.\pSerre-toi-en pour t’orienter, puis\ncherche la zone à la main.
+0x19EB59: Des objets au sol sont cachés.\nUse le {COLOR}ÉCherche-Objet{COLOR}Ç pour les voir.\pprès de toi.\nLa machine est un peu limitée.\pElle ne peut pas donner la\nposition exacte.\pElle indique juste la direction de\nl’objet.\pSerre-toi-en pour t’orienter, puis\ncherche la zone à la main.
 0x19EFE0: Je suis le petit frère du Gourou\nde la Pêche.\pJ’adoooore pêcher !\nJe ne peux pas m’en passer.\pDis-moi, tu aimes pêcher ?
 0x19F05B: Génial ! J’aime ton style.\nJe pense qu’on peut être amis.\pPrends ça et pêche, jeune ami !
 0x19F0B2: {PLAYER} a reçu une Super Canne du\nfrère du Gourou de la Pêche.
@@ -349,14 +349,14 @@
 0x19F50C: C’est une sorte de tableau vierge.\pIl a des cases pour noter des\nrecords.
 0x1A1B8E: Obtenu une page supplémentaire pour\nla CARTE !
 0x1A231B: Obtenu le TRI-PASS !
-0x1A2B88: Je suis le Maître des Capacités.\pJe connais toutes les capacités\nqu’ils apprennent en grandissant.\nJe suis aussi un fan des Écailles\pCœur.\pApporte-m’en une.\pSi tu fais ça, j’apprendrai une\ncapacité à un Pokémon.
+0x1A2B88: Je suis le Maître des Capacités.\pJe connais toutes les capacités\nqu’ils apprennent en grandissant.\pJe suis aussi fan des Écailles Cœur.\pApporte-m’en une.\pSi tu fais ça, j’apprendrai une\ncapacité à un Pokémon.
 0x1A2C63: Oh ! C’est une vraie Écaille Cœur !\nLaisse-moi deviner, tu veux que\pj’enseigne une capacité ?\n
 0x1A2CC3: Quel Pokémon a besoin d’un cours ?
 0x1A2CE1: Quelle capacité dois-je enseigner ?
 0x1A2CFC: Désolé…\pOn dirait que je n’ai aucune\ncapacité à enseigner à ce Pokémon.
 0x1A2D43: Alors, il me faut une Écaille Cœur.\nQue vas-tu me donner ?
 0x1A2D85: {PLAYER} a donné une Écaille Cœur\nen échange.
-0x1A2DE0: Si tes Pokémon doivent apprendre\nune capacité, il me faut une\nÉcaille Cœur.
+0x1A2DE0: Si tes Pokémon doivent apprendre,\nj’ai besoin d’une Écaille Cœur.
 0x1A2E20: Hein ? Je ne peux enseigner aucune\ncapacité à un Œuf.
 0x1A505B: Nous espérons vous revoir!
 0x1A5075: {PLAYER} a allumé le PC.
@@ -382,7 +382,7 @@
 0x1A52F0: Obtenu {STR_VAR_2} !
 0x1A5301: Dommage ! Il n’y a plus de place\npour un autre {STR_VAR_2}…
 0x1A532F: Le {STR_VAR_2} a été transféré\ndans le PC.
-0x1A5375: Un objet du Cube V3 peut être\nenregistré sur Select pour un accès\nrapide.
+0x1A5375: Un objet du Cube V3 peut être\nassigné à Select pour accès rapide.
 0x1A5420: {PLAYER} a allumé le PC.
 0x1A5446: Donner un surnom au {STR_VAR_2} que\ntu as reçu ?
 0x1A5483: Bienvenue au Centre Pokémon !\pVeux-tu que je soigne tes Pokémon\nà fond ?
@@ -397,7 +397,7 @@
 0x1A5690: {PLAYER} a remis le\n{STR_VAR_1}.
 0x1A56A7: Veux-tu donner un surnom à\nce {STR_VAR_1} ?
 0x1A5700: {PLAYER} a déterré un {STR_VAR_2}\nau fond du sol.
-0x1A58A7: Voyons… Oh là ! Tu n’as capturé\nque {COLOR}É{STR_VAR_3}{COLOR}Ç\nespèces !\lIl t’en faut\p{COLOR}É{STR_VAR_1}{COLOR}Ç.
+0x1A58A7: Voyons… Oh là ! Tu n’as capturé que\n{COLOR}É{STR_VAR_3}{COLOR}Ç espèces !\lIl t’en faut\p{COLOR}É{STR_VAR_1}{COLOR}Ç.
 0x1A5909: …Oh. Je vois. Quand tu auras\p{COLOR}É{STR_VAR_1}{COLOR}Ç espèces,\nrevient.
 0x1A594D: Oh ! Je vois que tu n’as pas de\nplace pour le {STR_VAR_2}.
 0x1A597B: Je cherche le Pokémon\n{STR_VAR_1} !\pTu veux en échanger un contre mon\n{STR_VAR_2} ?
@@ -423,11 +423,11 @@
 0x1A5DF1: {PLAYER} a obtenu\nle {STR_VAR_1} !
 0x1A5E31: Plus de place pour les Pokémon !\pLes Boîtes Pokémon sont pleines et\nne peuvent plus rien accepter !
 0x1A5E89: D’abord, soigne tes Pokémon à\nfond.
-0x1A5EC0: Tes Pokémon ont retrouvé toute leur\nforme.\pSi l’énergie ou les PV de tes\nPokémon sont bas, viens nous voir.\pSi tu pars loin sur le terrain,\nachète des Potions au Magasin.\lOn compte sur toi !\p
+0x1A5EC0: Tes Pokémon ont retrouvé toute leur\nforme.\pSi l’énergie ou les PV de tes\nPokémon sont bas, viens nous voir.\pSi tu pars loin sur le terrain,\nachète des Potions\lau Magasin.\pOn compte sur toi !
 0x1A5F9B: Tes Pokémon ont retrouvé toute leur\nforme.\pOn compte sur toi !
 0x1A5FDF: {PLAYER} !\nBienvenue à la maison.\pOn dirait que tu as vécu pas mal\nd’aventures.\pTu devrais peut-être te reposer.\n
 0x1A6046: Ah, parfait ! Toi et tes Pokémon\navez bien meilleure mine.\pSi les PV de tes Pokémon sont bas,\nsoigne-les dans un\p{COLOR}ÉCentre Pokémon{COLOR}Ç !\nLe plus proche d’ici est à\p{COLOR}ÉBellin Town{COLOR}Ç.\nOu achète des\p{COLOR}ÉPotions{COLOR}Ç au\n{COLOR}ÉPoké Mart{COLOR}Ç !\pC’est toujours bien de se préparer\nau pire.\pRends-moi fier, chéri !\pPrends soin de toi !
-0x1A6196: 9{PLAYER} n’a plus de Pokémon\nutilisables !\n{PLAYER} panique et perd\p¥{STR_VAR_1}…\p… … … …\p{PLAYER} s’évanouit !
+0x1A6196: 9{PLAYER} n’a plus de Pokémon\nutilisables !\p{PLAYER} panique et perd ¥{STR_VAR_1}…\p… … … …\p{PLAYER} s’évanouit !
 0x1A61E5: {PLAYER} n’a plus de Pokémon\nutilisables !\p{PLAYER} s’évanouit !
 0x1A6211: Salut !\nJe peux t’aider ?
 0x1A622C: Il y a un questionnaire.\nVeux-tu le remplir ?
@@ -438,7 +438,7 @@
 0x1A63C4: Le {STR_VAR_1} s’est envolé !
 0x1A63E8: {PLAYER} a trouvé un {STR_VAR_2} !\nIl contient {STR_VAR_1}.
 0x1A6447: 9Gyaoo !
-0x1A6CA2: 9Ton avancement Pokédex est de :\n{STR_VAR_1} Pokémon vus et\p{STR_VAR_2} Pokémon possédés.\n{FONT_NORMAL}Avis du Prof. Log :\p
+0x1A6CA2: 9Ton avancement Pokédex est de :\n{STR_VAR_1} Pokémon vus et\p{STR_VAR_2} Pokémon\npossédés.\p{FONT_NORMAL}Avis du Prof. Log :
 0x1A6D17: Tu as encore beaucoup à faire.\pExplore chaque brin d’herbe pour\nchercher des Pokémon !
 0x1A6D6D: On dirait que tu es sur la bonne\nvoie !\pJ’ai donné une CS FLASH à l’un de\nmes AIDES. Va la chercher !
 0x1A6DDF: Ton Pokédex manque encore un peu\nde volume !\pEssaie de capturer d’autres\nespèces de Pokémon !
@@ -453,8 +453,8 @@
 0x1A70A5: Tu as même les formes évoluées\ndes Pokémon ! Super !
 0x1A70D8: Excellent ! Échange avec des amis\npour en avoir d’autres !
 0x1A7108: Exceptionnel !\nTu es devenu un vrai pro !
-0x1A7137: Je n’ai plus rien à dire !\nTu es le PROFESSEUR Pokémon\nmaintenant !
-0x1A7175: Ton Pokédex est\ncomplètement rempli !\nFélicitations !!
+0x1A7137: Je n’ai plus rien à dire !\nTu es le PROF. Pokémon à présent !
+0x1A7175: Ton Pokédex est complet !\nFélicitations !!
 0x1A71AA: Et ton Pokédex National est :\p{STR_VAR_1} Pokémon vus et\n{STR_VAR_2} Pokémon possédés.
 0x1A71EE: J’ai hâte de te voir remplir le\nPokédex National !
 0x1A722F: Enfin…\pTu as enfin complété le Pokédex !\nC’est magnifique !\pC’est vraiment un exploit !\n
@@ -503,21 +503,21 @@
 0x1BCACB: Tu peux combattre tes amis ici.\n
 0x1BCAF2: De deux à cinq Dresseurs peuvent\nfaire de la POUDRE BAIE ensemble.
 0x1BCB42: Annule l’élément du MENU choisi.
-0x1BCB81: Pour utiliser le service Broyeur\nBaies, tu dois avoir au moins une\nBaie.
-0x1BCBC3: Pour entrer dans la Salle Union,\ntu dois avoir au moins deux\nPokémon.
-0x1BCC00: Aucun Pokémon tenant la Baie\n{STR_VAR_1} ne peut entrer dans la\nSalle Union.
+0x1BCB81: Pour le Broyeur Baies, il faut\nau moins une Baie.
+0x1BCBC3: Pour entrer dans la Salle Union, tu\ndois avoir au moins deux Pokémon.
+0x1BCC00: Aucun Pokémon tenant la Baie {STR_VAR_1}\nne peut entrer dans la Salle Union.
 0x1BCC3A: Voici la Salle Union du Club Sans\nFil Pokémon.\pMalheureusement, ton Adaptateur\nSans Fil n’est pas bien connecté.\pReviens nous voir.
 0x1BCCCA: On dirait que {STR_VAR_1} joue en\nce moment.\lVas-y !
 0x1BD28D: Bienvenue au Coin Direct du Club\nSans Fil Pokémon.\pIci, tu peux interagir directement\navec tes amis.\pDans quelle salle veux-tu entrer ?\n
 0x1BD317: Veux-tu échanger des Pokémon ?
 0x1BD338: Quel Mode de Combat veux-tu\njouer ?
 0x1BD362: Veux-tu utiliser le Système\nBroyeur Baies ?
-0x1BD390: Il y a trois Modes de Combat.\pLe Combat Solo est pour deux\nDresseurs avec au moins un Pokémon\nchacun.\pChaque Dresseur a un Pokémon en\ncombat à la fois.\pLe Combat Duo est pour deux\nDresseurs avec au moins deux\nPokémon chacun.\pChaque Dresseur envoie deux\nPokémon en combat.\pLe Combat Multi est pour quatre\nDresseurs avec au moins un Pokémon\nchacun.\pChaque Dresseur a un Pokémon en\ncombat à la fois.
+0x1BD390: Il y a trois Modes de Combat.\pLe Combat Solo est pour deux\nDresseurs avec au moins un Pokémon.\pChaque Dresseur a un Pokémon en\ncombat à la fois.\pLe Combat Duo est pour deux\nDresseurs avec minimum deux Pokémon.\pChaque Dresseur envoie deux\nPokémon en combat.\pLe Combat Multi est pour quatre\nDresseurs avec au moins un Pokémon.\pChaque Dresseur a un Pokémon en\ncombat à la fois.
 0x1BD51B: Décidez lequel de vous deux sera\nChef.\pL’autre doit ensuite choisir\n« Rejoindre Groupe ».
 0x1BD582: Décidez lequel de vous quatre sera\nChef de Groupe.\pLes autres doivent ensuite choisir\n« Rejoindre Groupe ».
 0x1BD5F1: Décidez qui sera Chef de Groupe.\nLes autres doivent ensuite choisir\p« Rejoindre Groupe ».\n
 0x1BD65B: Bienvenue dans la Salle Union du\nClub Sans Fil Pokémon.\pIci, tu peux interagir directement\navec d’autres Dresseurs, parfois\linconnus.\pVeux-tu entrer dans la salle ?
-0x1BD706: Les Dresseurs de la Salle Union\nsont ceux autour de toi déjà\nentrés.\l\pTu peux y faire plein de\nchoses, comme échanger des\nsalutations.\pTu peux inscrire deux Pokémon\njusqu’au N. 30 pour un combat\nun contre un.\pTu peux participer à un chat à\ndeux à cinq.\pOu inscrire un Pokémon à\nl’échange.\pVeux-tu entrer dans la salle ?
+0x1BD706: Les Dresseurs de la Salle Union\nsont ceux autour de toi déjà entrés.\l\pTu peux y faire plein de choses,\ncomme échanger des salutations.\pTu peux inscrire deux Pokémon au\nN. 30 pour un combat un contre un.\pTu peux participer à un chat à\ndeux à cinq.\pOu inscrire un Pokémon à\nl’échange.\pVeux-tu entrer dans la salle ?
 0x1BD86A: Profite bien de la Salle Union.\n
 0x1BD898: Bonjour !\nJe m’appelle Teala.\pC’est ta première fois ici.\nJe vais te montrer comment marche\ple Système de Communication Sans\nFil.\pD’abord, je dois te montrer cet\nétage de notre Centre Pokémon.\pPar ici, s’il te plaît.
 0x1BD966: À l’étage du haut, il y a deux\nsalles.\pD’abord, la salle de gauche.\nC’est la Salle Union.\pTu peux te lier avec des\nDresseurs autour de toi qui sont\ldans la Salle Union.\pAvec eux, tu peux discuter,\ncombattre et échanger.\pEnsuite, la salle de droite est le\nCoin Direct.\pTu peux échanger ou combattre des\nPokémon avec tes amis ici.\pSi l’Adaptateur Sans Fil n’est pas\nconnecté, tu peux toujours te lier\lavec un câble Game Link GBA.\pDans ce cas, tu dois aller au Coin\nDirect.\pProfite bien du Système de\nCommunication Sans Fil.
@@ -539,7 +539,7 @@
 0x1BE52F: Il y a un obstacle au-dessus.\nPlongée ne peut pas être utilisée.
 0x1BE564: Ô ヘqéËÌÂÁ\nOn dirait qu'il n'y a rien ici…
 0x1BF017: Dis-moi quelque chose sur toi.\nQuel est ton profil ?
-0x1BF053: Un profil s’écrit avec quatre mots\nou phrases.\nIl y a plein de mots à choisir pour\pfaire ton profil.\nLes mots et phrases sont rangés en\pplusieurs groupes pratiques.\nD’abord, choisis un groupe, puis un\pmot ou une phrase.\n…C’est plus simple que ça en a\pl’air.\nPourquoi ne pas essayer ?
+0x1BF053: Un profil s’écrit avec quatre mots\nou phrases.\pIl y a plein de mots pour faire\nton profil.\pLes mots et phrases sont rangés en\nplusieurs groupes pratiques.\pD’abord, choisis un groupe, puis un\nmot ou une phrase.\p…C’est plus simple qu’il n’y paraît.\nPourquoi ne pas essayer ?
 0x1BF166: Quel est ton profil ?
 0x1BF17B: Oh… Ne fais pas ça.\nTu peux me donner ton profil.
 0x1BF1B2: Oh, tu as changé d’avis ?\nTu es capricieux, hein ?
@@ -608,15 +608,15 @@
 0x1C12A7: Le dernier jeu vidéo !\nÇa a l’air amusant !
 0x1C12D6: Ici, des signes évidents de vol…\n
 0x1C1300: Il y a un Pokémon à la télé !\nIl a l’air de s’amuser.
-0x1C1367: {DOWN_ARROW}ÛêË¿ La batterie n’est\npas suffisamment chargée.\pNon. nombre d'étapes nécessaires\npour charger complètement la\nbatterie :\n{STR_VAR_1}{PAUSE_UNTIL_PRESS}
-0x1C13D6: Aucun Dresseur en portée pour se\nbattre…\nLe Cherche VS a été éteint.\p{PAUSE_UNTIL_PRESS}
-0x1C1429: Les autres Dresseurs ne semblent\npas prêts à se battre.\nAttendons plus tard.\p{PAUSE_UNTIL_PRESS}
+0x1C1367: {DOWN_ARROW}ÛêË¿ La batterie n’est\npas suffisamment chargée.\pNombre d’étapes pour charger la\nbatterie : {STR_VAR_1}{PAUSE_UNTIL_PRESS}
+0x1C13D6: Aucun Dresseur en portée pour se\nbattre… Le Cherche VS a été éteint.\p{PAUSE_UNTIL_PRESS}
+0x1C1429: Pas de Dresseurs prêts à se battre.\nAttendons plus tard.\p{PAUSE_UNTIL_PRESS}
 0x1C27E6: 9Le bord de la plage n’est pas si\npeu profond.
 0x1C55C9: Veux-tu sauvegarder la partie ?
 0x1C55EA: Il y a déjà une sauvegarde.\nÉcraser quand même ?
 0x1C5625: SAUVEGARDE…\nNE PAS ÉTEINDRE.
 0x1C5647: {PLAYER} a sauvegardé la partie.
-0x1C566A: AVERTISSEMENT !\pUne autre partie est sauvegardée.\pSi tu sauvegardes maintenant,\ncette aventure, ses objets et\lPokémon seront perdus.\pEs-tu sûr de vouloir sauvegarder\nmaintenant et écraser l’autre\nfichier ?
+0x1C566A: AVERTISSEMENT !\pUne autre partie est\nsauvegardée.\pSi tu sauvegardes maintenant,\ncette aventure, ses objets et\lPokémon seront perdus.\pEs-tu sûr de vouloir sauvegarder\net écraser l’autre fichier ?
 0x1C574F: Nouveau Nom
 0x1C5758: VERT
 0x1C5762: FEUILLE
@@ -660,7 +660,7 @@
 0x1C59F7: tu es une fille ?
 0x1C5A04: Dans le monde où tu vas entrer,\ntu vivras une grande aventure dont\ntu es le héros.
 0x1C5A6B: Parle aux gens et examine tout,\nque ce soit en ville, sur les\nroutes ou dans les grottes.\nCollecte infos et indices partout.
-0x1C5AEB: Pendant ton aventure, tu prendras\nbeaucoup de décisions.\n\n\nSouviens-toi, tes actes peuvent\ninfluer et changer le monde\nautour de toi.\n
+0x1C5AEB: Pendant ton aventure, tu prendras\nbeaucoup de décisions.\n\nSouviens-toi, tes actes peuvent\ninfluer et changer le monde autour\nde toi.\n
 0x1EAF1A: FgFüF
 0x1EAF3A: FüFgF
 0x1EB09A: FíFgF
@@ -721,7 +721,7 @@
 0x236EEA: Objet à tenir par un Pokémon.\nTablette de pierre qui augmente\nla puissance des capacités Acier.
 0x236F4B: Objet à tenir par un Pokémon.\nTablette de pierre qui augmente\nla puissance des capacités Feu.
 0x236FAB: Objet à tenir par un Pokémon.\nTablette de pierre qui augmente\nla puissance des capacités Eau.
-0x23700C: Un objet destiné à être détenu par\nun Pokémon. Il est une tablette de\npierre qui augmente la puissance des\nmouvements de type Bug.
+0x23700C: Objet à tenir par un Pokémon.\nTablette de pierre qui augmente\nla puissance des capacités Insecte.
 0x23706B: Objet à tenir par un Pokémon.\nTablette de pierre qui augmente\nla puissance des capacités Électrik.
 0x2370CF: Objet à tenir par un Pokémon.\nTablette de pierre qui augmente\nla puissance des capacités Psy.
 0x237132: Objet à tenir par un Pokémon.\nTablette de pierre qui augmente\nla puissance des capacités Glace.
@@ -1120,12 +1120,12 @@
 0x38FBDF: zAABzEAgAzh▶zz\p▶zz
 0x38FBF6: VA\n\nCA\nEAADBAAgAA
 0x38FDDF: zzABzAAgAzÏÔ z\pÔ z
-0x38FDF6: {UNKNOWN_STR}
+0x38FDF6: {UNKNOWN_STR}\n\n{UNKNOWN_STR}\n{UNKNOWN_STR}
 0x38FE63: CQxzパxzzベzzDベzDziDzAEyw{STRING}:
-0x390D02: {UNKNOWN_STR}\p
+0x390D02: {UNKNOWN_STR}\p{UNKNOWN_STR}
 0x391017: {UNKNOWN_STR}
 0x392687: ARÒ Rh  ARÒ AQÒ ARg RBg hSh
-0x3926A6: {UNKNOWN_STR}\p
+0x3926A6: {UNKNOWN_STR}\p{UNKNOWN_STR}
 0x39270D: {UNKNOWN_STR}
 0x39526D: dji dci ゼtz ソö
 0x399871: ifAE·9w
@@ -1176,7 +1176,7 @@
 0x3D50CC: Une Ball un peu spéciale qui\nmarche mieux sur les Pokémon des\nfonds marins.
 0x3D511D: Une Ball un peu spéciale qui\nmarche mieux sur les Pokémon\nfaibles.
 0x3D5165: Une Ball un peu spéciale qui\nmarche mieux sur un Pokémon déjà\ncapturé.
-0x3D51B4: Une Ball un peu spéciale qui\ndevient meilleure plus le combat\nse prolonge.\n
+0x3D51B4: Une Ball un peu spéciale qui\ndevient meilleure plus le combat\nse prolonge.
 0x3D5216: Une Ball confortable qui rend vite\nun Pokémon sauvage amical.\n
 0x3D5263: Une Ball rare faite pour\ncommémorer un événement.\n
 0x3D52B2: Médicament en spray.\nRend 20 PV à un Pokémon.\n
@@ -1215,7 +1215,7 @@
 0x3D5B06: Jus 100 % pur.\nRend 20 PV à un Pokémon.\n
 0x3D5B49: Ranime tous les Pokémon K.O. en\nrendant tous leurs PV.
 0x3D5B7A: Sel pur obtenu sous l’eau.\nExtrêmement salé.
-0x3D5BC5: Un joli coquillage\ntrouvé sous l’eau.\nBlanc et bleu.
+0x3D5BC5: Joli coquillage trouvé sous l’eau.\nStrié de bleu et de blanc.
 0x3D5C1A: Petit éclat rouge.\nViendrait d’un outil ancien.\n
 0x3D5C66: Petit éclat bleu.\nViendrait d’un outil ancien.\n
 0x3D5CB3: Petit éclat jaune.\nViendrait d’un outil ancien.\n
@@ -1240,14 +1240,14 @@
 0x3D6297: Un objet séduisant.\nPermet de fuir n’importe quel\ncombat contre un Pokémon sauvage.
 0x3D62DF: Empêche les Pokémon faibles\nd'apparaître pendant 200 étapes.
 0x3D6318: Empêche les Pokémon faibles\nd'apparaître pendant 250 étapes.
-0x3D6351: Une corde longue et durable.\nUtilisez-la pour vous échapper\ninstantanément d'une grotte ou d'un\ndonjon.
+0x3D6351: Une corde longue et durable.\nUtilise-la pour fuir instantanément\nune grotte ou un donjon.
 0x3D639C: Empêche les Pokémon faibles\nd'apparaître pendant 100 étapes.
-0x3D63D5: Une pierre particulière qui fait\névoluer certaines espèces de\nPokémon. Elle est aussi rouge que le\nsoleil.
-0x3D642D: Une pierre particulière qui fait\névoluer certaines espèces de\nPokémon. Elle est aussi noire que le\nciel nocturne.
-0x3D648D: Une pierre particulière qui fait\névoluer certaines espèces de\nPokémon. Elle est de couleur orange.
-0x3D64E2: Une pierre particulière qui fait\névoluer certaines espèces de\nPokémon. Elle a un motif en forme\nd'éclair.
-0x3D653F: Une pierre particulière qui fait\névoluer certaines espèces de\nPokémon. C'est un bleu clair clair.
-0x3D6598: Une pierre particulière qui fait\névoluer certaines espèces de\nPokémon. Elle a un motif de feuille.
+0x3D63D5: Une pierre particulière qui fait\névoluer certaines espèces.\nElle est aussi rouge que le soleil.
+0x3D642D: Une pierre particulière qui fait\névoluer certaines espèces.\nElle est noire comme la nuit.
+0x3D648D: Une pierre particulière qui fait\névoluer certaines espèces.\nElle est de couleur orange.
+0x3D64E2: Une pierre particulière qui fait\névoluer certaines espèces.\nElle a un motif en forme d'éclair.
+0x3D653F: Une pierre particulière qui fait\névoluer certaines espèces.\nElle est d'un bleu très clair.
+0x3D6598: Une pierre particulière qui fait\névoluer certaines espèces.\nElle a un motif de feuille.
 0x3D65EE: Un petit champignon rare.\nTrès prisé par certains.\n
 0x3D6633: Un gros champignon rare.\nTrès recherché par certains.\n
 0x3D6677: Petite perle argentée.\nSe vend pour peu.\n
@@ -1376,7 +1376,7 @@
 0x3D8D37: Sac ramassant la cendre volcanique\nautomatiquement en marchant sur la\ncendre épaisse.
 0x3D8D85: Clé de Nouv. Mauville, bâtie sous\nCÉLADOPOLIS.\n
 0x3D8DCB: Vélo pliant pour figures comme\nsauts et roues arrière.
-0x3D8E10: Étui pour des オカキクケ faits au\nMixeur à Baies.\nLibère une オカキクケ en le\nsecouant.
+0x3D8E10: Étui pour オカキクケ faits au Mixeur\nà Baies. Libère une オカキクケ\nen le secouant.
 0x3D8E68: Lettre très importante pour Pierre\nvenant du PRÉSIDENT de Devon.\n
 0x3D8EBD: Ticket pour le ferry vers une\nîle du sud. Dessiné avec une île.\n
 0x3D8F2A: Orbe rouge qui brille.\nRenfermerait une puissance antique.\n
@@ -1384,7 +1384,7 @@
 0x3D8FD5: Appareil pour chercher de la vie\nsous l’eau.\nSemble trop complexe à utiliser.
 0x3D9025: Lunettes de protection.\nPermettent de traverser les\ntempêtes de sable.
 0x3D9083: Fragment du météorite tombé sur\nCrater Town il y a longtemps.\n          \n
-0x3D90D7: Clé qui coupe la barrière\nélectrique des Ombres au Mt.\nFulguroc.\n
+0x3D90D7: Clé qui coupe la barrière\nélectrique des Ombres au\nMt. Fulguroc.
 0x3D9139: Carte-clef ouvrant les portes de\nniveau 2 dans la base des Ombres.\n
 0x3D919B: Carte-clef ouvrant les portes de\nniveau 3 dans la base des Ombres.\n
 0x3D91FD: Carte-clef ouvrant les portes de\nniveau 1 dans la base des Ombres.\n
@@ -1392,64 +1392,64 @@
 0x3D92BF: Fossile d’un ancien Pokémon marin.\nSemble être une racine.\n
 0x3D931A: Fossile d’un ancien Pokémon marin.\nSemble être une griffe.\n
 0x3D936F: Visière qui révèle les Pokémon\ninvisibles. Fabriquée par SILPH S.A.\n
-0x3D93C9: Une attaque extrêmement puissante.\nCependant, si l'utilisateur est\ntouché avant d'utiliser le\nmouvement, il tressaillira.
-0x3D942C: D'énormes griffes acérées\ns'accrochent et frappent l'ennemi\nrapidement et avec une grande\npuissance.
+0x3D93C9: Attaque extrêmement puissante.\nSi l'utilisateur est touché avant\nd'agir, il tressaillira.
+0x3D942C: De grandes griffes acérées\ns'agrippent et frappent l'ennemi\navec une grande puissance.
 0x3D9473: L'ennemi reçoit un jet d'eau pulsé.\nCela peut aussi\nconfondre la cible.
-0x3D94C1: L'utilisateur calme son esprit et\nconcentre son esprit pour élever son\nSp. Atk et Sp. Statistiques\ndéfensives.
+0x3D94C1: L'utilisateur calme et concentre\nson esprit pour augmenter son Att.\nSpé. et sa Déf. Spé.
 0x3D9518: Un rugissement sauvage qui fait\nsortir l'ennemi du combat. Dans le\nwild, ROAR met fin à la bataille.
 0x3D9576: Une capacité qui laisse l'ennemi\ngravement empoisonné. Ses dégâts de\npoison s'aggravent à chaque tour.
-0x3D95C7: Invoque une tempête de grêle qui\ndure cinq tours. La tempête de grêle\nendommage tous les types sauf le\ntype ICE.
-0x3D962B: L'utilisateur resserre tous ses\nmuscles et prend du volume,\naugmentant à la fois ses\nstatistiques d'attaque et de défense\n.
-0x3D9687: L'utilisateur tire des graines sur\nl'ennemi en succession rapide. Deux\nà cinq graines sont tirées à la\nfois.
+0x3D95C7: Invoque une tempête de grêle\npendant cinq tours, qui blesse tous\nles types sauf la Glace.
+0x3D962B: L'utilisateur contracte ses muscles\net prend du volume, augmentant\nAttaque et Défense.
+0x3D9687: L'utilisateur tire des graines sur\nl'ennemi en rafale. Deux à cinq\nsont tirées à la fois.
 0x3D96E1: Une capacité variable qui change de\ntype et de puissance en fonction du\nPokémon l'utilisant.
-0x3D9730: Le temps est devenu ensoleillé\npendant cinq tours. Pendant ce\ntemps, les mouvements de type FIRE-\nsont activés.
+0x3D9730: Le temps devient ensoleillé pour\ncinq tours, renforçant les attaques\nde type Feu.
 0x3D978D: Un ennemi provoqué peut devenir\nenragé. Il ne pourra alors utiliser\nque des mouvements d'attaque .
 0x3D97DE: Un rayon glacial est tiré sur\nl'ennemi . Cela peut laisser la\ncible gelée.
 0x3D9823: Une vicieuse attaque de neige et de\nvent qui frappe tous les ennemis au\ncombat. Cela peut provoquer le gel.
-0x3D987A: Une attaque brutale qui inflige de\ngraves dégâts à l'ennemi. Cependant,\nl'utilisateur doit se reposer au\ntour suivant.
+0x3D987A: Attaque brutale qui inflige de\ngraves dégâts à l'ennemi, mais\nl'utilisateur doit se reposer après.
 0x3D98DC: Un mur de lumière est créé en cinq\ntours. Il réduit les dégâts de Sp.\nAttaque d'attaque.
-0x3D9930: L'utilisateur est complètement\nprotégé contre les attaques pendant\nle tour où il est utilisé. Il peut\néchouer s'il est utilisé\nsuccessivement.
-0x3D9998: Une forte pluie est invoquée pour\ncinq tours.\nLes attaques Eau sont renforcées\npendant cette durée.
-0x3D99F2: L'utilisateur frappe l'ennemi avec\ndes tentacules ou des racines ,\nvolant les PV de la cible et se\nsoignant lui-même.
+0x3D9930: L'utilisateur est complètement\nprotégé ce tour-ci. Il peut échouer\ns'il est utilisé successivement.
+0x3D9998: Une forte pluie est invoquée pour\ncinq tours, renforçant les attaques\nEau pendant cette durée.
+0x3D99F2: Frappe avec tentacules ou racines,\nvole les PV de la cible\net se soigne.
 0x3D9A51: Protège le groupe avec un bouclier\ncontre tous les problèmes de statut\nsur cinq tours.
 0x3D9A9F: Cette attaque devient de plus en\nplus puissante à mesure que le\nPokémon n'aime pas son dresseur.
-0x3D9AEF: Une attaque de 2 tours qui utilise\nle premier tour pour absorber la\nlumière du soleil, puis pour faire\nexploser l'ennemi au tour suivant.
+0x3D9AEF: Attaque en deux tours : d'abord\nabsorber la lumière, puis frapper\nl'ennemi au tour suivant.
 0x3D9B58: L'ennemi est frappé avec une solide\nqueue d'acier . Cela peut réduire la\nstatistique de défense de la cible .
 0x3D9BB0: Une énorme décharge électrique est\nlancée sur l'ennemi. Cela peut\nprovoquer une paralysie.
 0x3D9BFE: Frappe l'ennemi avec un énorme coup\nde foudre . Cela peut provoquer une\nparalysie.
 0x3D9C3F: Provoque un séisme qui frappe\ntous les Pokémon au combat,\nhors l'utilisateur.
 0x3D9C8C: Cette attaque devient de plus en\nplus puissante à mesure que le\nPokémon aime son dresseur.
-0x3D9CD9: Une attaque en 2 tours au cours de\nlaquelle l'utilisateur creuse sous\nterre, puis frappe. Il peut être\nutilisé pour sortir des donjons.
-0x3D9D3C: Une puissante explosion d'énergie\ntélékinétique frappe l'ennemi. Cela\npeut réduire la Sp de la cible.\nStatistique déf.
-0x3D9D9C: L'ennemi est attaqué avec une masse\nsombre . Cela peut réduire le Sp de\nla cible. Statistique déf.
-0x3D9DED: Frappe l'ennemi avec un poing dur\ncomme la pierre, etc. Il brise les\nbarrières telles que REFLECT et\nLIGHT SCREEN.
-0x3D9E50: L'utilisateur se met à bouger si\nvite qu'il crée des copies\nillusoires pour augmenter son\nesquive.
-0x3D9EAC: Une barrière solide est érigée en\ncinq tours. Cela réduit les dégâts\ncausés par les attaques physiques\npendant cette période.
-0x3D9F0F: Une rapide décharge électrique\nfrappe l'ennemi. Cette attaque est\nimpossible à esquiver.
+0x3D9CD9: Attaque en deux tours : le lanceur\ncreuse sous terre, puis frappe.\nPeut servir à sortir des donjons.
+0x3D9D3C: Puissante explosion d'énergie\npsychique qui frappe l'ennemi.\nPeut réduire sa Déf. Spé.
+0x3D9D9C: L'ennemi est attaqué par une masse\nsombre.\nPeut réduire sa Déf. Spé.
+0x3D9DED: Frappe l'ennemi avec un poing dur\ncomme la pierre. Brise REFLECT et\nLIGHT SCREEN.
+0x3D9E50: L'utilisateur bouge si vite qu'il\ncrée des copies illusoires pour\naugmenter son esquive.
+0x3D9EAC: Une barrière solide est érigée pour\ncinq tours. Elle réduit les dégâts\ndes attaques physiques.
+0x3D9F0F: Une décharge électrique rapide\nfrappe l'ennemi. Cette attaque est\nimpossible à esquiver.
 0x3D9F60: L'ennemi est rôti par une puissante\nexplosion de feu. Cela peut laisser\nla cible avec une brûlure.
 0x3D9FB4: Des boues toxiques sont lancées sur\nl'ennemi avec une grande force. Cela\npeut également empoisonner la cible.
-0x3DA007: Invoque une tempête de sable qui\ndure cinq tours. Il endommage tous\nles types sauf la ROCHE, le SOL et\nl'ACIER.
+0x3DA007: Invoque une tempête de sable de\ncinq tours. Elle blesse tous les\ntypes sauf Roche, Sol et Acier.
 0x3DA06B: L'ennemi est incinéré avec une\nflamme intense. Cela peut laisser la\ncible avec une brûlure.
-0x3DA0BE: Des rochers sont lancés sur\nl'ennemi. Cela réduit également la\nvitesse stat de la cible si elle\ntouche.
+0x3DA0BE: Des rochers sont lancés sur\nl'ennemi. Peut aussi réduire sa\nvitesse si ça touche.
 0x3DA111: Une attaque extrêmement rapide\ncontre une cible. Il est impossible\nde échapper.
-0x3DA159: Si elle est enragée par ce\nmouvement, la cible devient\nincapable d'utiliser le même\nmouvement deux fois de suite.
+0x3DA159: Enragée par ce mouvement, la cible\nne peut plus utiliser le même coup\ndeux tours d'affilée.
 0x3DA1B6: Une capacité d'attaque qui devient\ntrès puissant si l'utilisateur est\nempoisonné, brûlé ou paralysé.
-0x3DA20F: Une capacité d'attaque qui peut\navoir un effet supplémentaire en\nfonction du terrain de bataille .
-0x3DA262: Une capacité qui endort\nl'utilisateur pendant deux tours\npour restaurer HP et résoudre tout\nproblème de statut.
+0x3DA20F: Capacité qui peut avoir un effet\nsupplémentaire selon le terrain\nde bataille.
+0x3DA262: Capacité qui endort l'utilisateur\npendant deux tours pour restaurer\nses PV et soigner tout statut.
 0x3DA2C4: L'ennemi du genre opposé à\nl'utilisateur devient épris et ne\npeut plus attaquer.
 0x3DA31E: Une attaque qui donne à\nl’utilisateur une opportunité de\nvoler l’objet de l’ennemi.
-0x3DA369: L'ennemi est frappé avec des ailes\ndures comme l'acier. Cela peut\négalement augmenter la statistique\nDefense de l’utilisateur.
+0x3DA369: L'ennemi est frappé avec des ailes\ndures comme l'acier. Peut aussi\naugmenter la Défense du lanceur.
 0x3DA3BD: Un pouvoir spécial est transmis à\nl'ennemi, l'amenant à échanger\ncapacités avec l'utilisateur.
-0x3DA416: Une capacité qui vole les effets de\ntout mouvement de changement de\nstatut ou de guérison que l'ennemi\ntente d'utiliser.
+0x3DA416: Capacité qui vole les effets de\nmouvements de statut ou de soin\nutilisés par l'ennemi.
 0x3DA477: Attaque maximale et féroce, mais\nbaisse fortement l’Att. Spé. du\nlanceur.
-0x3DA4DC: Attaque l'ennemi avec des lames\ntranchantes ou des griffes. Il peut\négalement abattre des arbres et de\nl'herbe minces en dehors des\ncombats.
-0x3DA545: L'utilisateur s'envole au premier\ntour, puis attaque au tour suivant.\nIl peut être utilisé pour voler vers\nn'importe quelle ville connue.
-0x3DA5AB: Crée une vague énorme qui\ns'écrase sur l'ennemi.\nPeut aussi servir à voyager sur\nl'eau.
-0x3DA608: L'utilisateur développe une\npuissance énorme, puis frappe\nl'ennemi. Il peut être utilisé pour\ndéplacer de gros rochers ronds.
-0x3DA66D: Lâche une puissante explosion de\nlumière qui réduit la précision de\nl'ennemi. Il éclaire également les\ngrottes sombres.
+0x3DA4DC: Attaque l'ennemi avec lames ou\ngriffes. Peut aussi couper des\narbres ou de l'herbe hors combat.
+0x3DA545: L'utilisateur s'envole au premier\ntour, puis attaque au suivant. Peut\nservir à voler vers une ville.
+0x3DA5AB: Crée une vague énorme qui s'écrase\nsur l'ennemi et permet aussi de\nvoyager sur l'eau.
+0x3DA608: L'utilisateur développe une grande\npuissance, puis frappe l'ennemi.\nPermet de déplacer de gros rochers.
+0x3DA66D: Déclenche une explosion de lumière\nqui réduit la précision de\nl'ennemi. Éclaire aussi les grottes.
 0x3DA6CD: Frappe l'ennemi avec une attaque\ndure et écrasante. Il peut briser\ndes rochers fissurés.
 0x3DA71E: Une puissante attaque de charge. Il\npeut être utilisé pour escalader une\ncascade torrentielle .
-0x3DA76C: Une attaque de 2 tours au cours de\nlaquelle l'utilisateur plonge sous\nl'eau au premier tour, puis frappe\nau tour suivant.
+0x3DA76C: Attaque en deux tours : le lanceur\nplonge au premier, puis frappe au\nsecond.
 0x3DA7D1: Colis pour le Prof. Log depuis le\nMagasin Pokémon de Bourg Bellin.  \n
 0x3DA81A: Flûte qui réveillerait\ninstantanément n’importe quel\nPokémon. Son joli.
 0x3DA866: Paire de chaussettes crasseuses\ntrouvées dans les Égouts d’Antisis.
@@ -2421,7 +2421,7 @@
 0x3FB3D3: {B_DEF_NAME_WITH_PREFIX} a esquivé\nl'attaque !
 0x3FB41A: {B_PLAYER_NAME} a obtenu\n¥{UNKNOWN_STR} pour avoir gagné !\p
 0x3FB433: {B_PLAYER_NAME} n'a plus de Pokémon\nutilisable !\p
-0x3FB484: {B_PLAYER_NAME} n'a plus de Pokémon\nutilisable !\pJoueur perdu contre\n{B_TRAINER1_CLASS}\n{B_TRAINER1_NAME}!{PAUSE_UNTIL_PRESS}
+0x3FB484: {B_PLAYER_NAME} n'a plus de Pokémon\nutilisable !\pJoueur perdu contre\n{B_TRAINER1_CLASS} {B_TRAINER1_NAME}!{PAUSE_UNTIL_PRESS}
 0x3FB4BE: {B_PLAYER_NAME} a payé\n¥{UNKNOWN_STR} comme prix argent…\p… … … …\p{B_PLAYER_NAME} blanchi\n!{PAUSE_UNTIL_PRESS}
 0x3FB4F7: {B_PLAYER_NAME} blanchi\n!{PAUSE_UNTIL_PRESS}
 0x3FB508: {B_SCR_ACTIVE_NAME_WITH_PREFIX} empêche la fuite avec\n{B_SCR_ACTIVE_ABILITY}!\p
@@ -2602,16 +2602,16 @@
 0x3FC7D3: {B_EFF_NAME_WITH_PREFIX} : {B_DEF_ABILITY}\nempêche la paralysie !
 0x3FC7EF: {B_DEF_NAME_WITH_PREFIX} : {B_DEF_ABILITY}\nempêche l'attirance !
 0x3FC809: {B_EFF_NAME_WITH_PREFIX} : {B_DEF_ABILITY}\nempêche l'empoisonnement !
-0x3FC825: Le {B_DEF_ABILITY} de\n{B_DEF_NAME_WITH_PREFIX} évite toute\nconfusion !
-0x3FC841: Le {B_DEF_ABILITY} de\n{B_DEF_NAME_WITH_PREFIX} a augmenté\nsa puissance de feu !
+0x3FC825: Le {B_DEF_ABILITY} de {B_DEF_NAME_WITH_PREFIX}\névite toute confusion !
+0x3FC841: Le {B_DEF_ABILITY} de {B_DEF_NAME_WITH_PREFIX}\na augmenté sa puissance de feu !
 0x3FC860: {B_DEF_NAME_WITH_PREFIX} s'ancre !\n
-0x3FC895: Le {B_SCR_ACTIVE_ABILITY} de\n{B_SCR_ACTIVE_NAME_WITH_PREFIX}\névite la perte de statistiques !
+0x3FC895: Le {B_SCR_ACTIVE_ABILITY} de {B_SCR_ACTIVE_NAME_WITH_PREFIX}\névite la perte de statistiques !
 0x3FC8D5: {B_EFF_NAME_WITH_PREFIX} : {B_EFF_ABILITY}\nempêche les brûlures !
 0x3FC913: {B_ATK_NAME_WITH_PREFIX} : {B_ATK_ABILITY}\nrestaure ses PV !
 0x3FC92C: petit!
 0x3FC935: {B_SCR_ACTIVE_NAME_WITH_PREFIX} : {B_SCR_ACTIVE_ABILITY}\nprovoque une tempête de sable !
 0x3FC955: {B_SCR_ACTIVE_NAME_WITH_PREFIX} : {B_SCR_ACTIVE_ABILITY}\nrenforce le soleil !
-0x3FC979: Le {B_SCR_ACTIVE_ABILITY} de\n{B_SCR_ACTIVE_NAME_WITH_PREFIX}\névite la perte de {UNKNOWN_STR} !
+0x3FC979: Le {B_SCR_ACTIVE_ABILITY} de {B_SCR_ACTIVE_NAME_WITH_PREFIX}\névite la perte de {UNKNOWN_STR} !
 0x3FC9AA: {B_DEF_NAME_WITH_PREFIX} : {B_DEF_ABILITY} rend {B_CURRENT_MOVE}\ninefficace !
 0x3FC9C7: {B_SCR_ACTIVE_NAME_WITH_PREFIX} : {B_SCR_ACTIVE_ABILITY}\nsoigne souci {UNKNOWN_STR} !
 0x3FC9E5: Il a aspiré le Suintement !\n
@@ -2622,7 +2622,7 @@
 0x3FCA71: {B_SCR_ACTIVE_NAME_WITH_PREFIX} : {B_SCR_ACTIVE_ABILITY}\na rendu cela inefficace !
 0x3FCA8E: {B_EFF_NAME_WITH_PREFIX} : {B_EFF_ABILITY}\nempêche de broncher !
 0x3FCAAA: {B_ATK_NAME_WITH_PREFIX} : {B_ATK_ABILITY}\nannule {B_DEF_ABILITY} de\l{B_DEF_NAME_WITH_PREFIX} !
-0x3FCAD1: Le {B_SCR_ACTIVE_ABILITY} de\n{B_SCR_ACTIVE_NAME_WITH_PREFIX} a\nrésolu son problème {UNKNOWN_STR} !
+0x3FCAD1: Le {B_SCR_ACTIVE_ABILITY} de {B_SCR_ACTIVE_NAME_WITH_PREFIX}\na résolu son problème {UNKNOWN_STR} !
 0x3FCAEF: {B_SCR_ACTIVE_NAME_WITH_PREFIX} : {B_SCR_ACTIVE_ABILITY} inefficace\nsur {B_EFF_NAME_WITH_PREFIX} !
 0x3FCB0C: {B_ATK_NAME_WITH_PREFIX} est trop effrayé pour bouger !
 0x3FCB26: Fantôme : Dehors…… Dehors……
@@ -2758,7 +2758,7 @@
 0x3FD8B9: {B_SCR_ACTIVE_NAME_WITH_PREFIX}:\n{B_LAST_ITEM} guérit la paralysie !
 0x3FD8D2: {B_SCR_ACTIVE_NAME_WITH_PREFIX}:\n{B_LAST_ITEM} soigne le poison !
 0x3FD8E8: {B_SCR_ACTIVE_NAME_WITH_PREFIX}:\n{B_LAST_ITEM} soigne la brûlure !
-0x3FD901: Les {B_LAST_ITEM} de\n{B_SCR_ACTIVE_NAME_WITH_PREFIX}\nl'ont dégivré !
+0x3FD901: Les {B_LAST_ITEM} de {B_SCR_ACTIVE_NAME_WITH_PREFIX}\nl'ont dégivré !
 0x3FD917: {B_SCR_ACTIVE_NAME_WITH_PREFIX}:\n{B_LAST_ITEM} le réveille !
 0x3FD937: {B_SCR_ACTIVE_NAME_WITH_PREFIX}:\n{B_LAST_ITEM} ôte la confusion !
 0x3FD95C: {B_SCR_ACTIVE_NAME_WITH_PREFIX}: {B_LAST_ITEM} soigne\nsouci {UNKNOWN_STR} !
@@ -2769,19 +2769,19 @@
 0x3FDA02: un peu !
 0x3FDA0B: Effet de {B_LAST_ITEM} : seule {B_CURRENT_MOVE} peut\nêtre utilisée !\p
 0x3FDA33: {B_DEF_NAME_WITH_PREFIX} tient bon\navec {B_LAST_ITEM} !
-0x3FDA4D: {B_PLAYER_NAME} joue {B_LAST_ITEM}. Air entraînant !\p
+0x3FDA4D: {B_PLAYER_NAME} joue {B_LAST_ITEM}.\pVoilà un air entraînant !
 0x3FDA7A: {B_PLAYER_NAME} joue la\n{B_LAST_ITEM}.
 0x3FDA8C: Les Pokémon entendant la Flûte\nse réveillent !
 0x3FDAB1: Tu lances une Ball, hein ?\nJe… je vais faire de mon mieux !
 0x3FDAE2: Journal : Oh, bon sang…\nToujours pressé.\p{B_PLAYER_NAME}.\pTu n'as jamais fait de combat\nPokémon, hein ?\pUn combat oppose les Pokémon\ndes Dresseurs entre eux.\l\p
 0x3FDB92: Le Dresseur qui met K.O. les\nPokémon adverses en baissant\lleurs PV à «0» gagne.\p
-0x3FDBEF: Mais plutôt qu'en parler, tu\napprendras mieux par l'expérience.\nEssaye de combattre\ppour voir.\p
+0x3FDBEF: Mais plutôt qu'en parler, tu\napprendras mieux par l'expérience.\pEssaye de combattre pour voir.\p
 0x3FDC58: Infliger des dégâts à l'ennemi\nest la clé de tout combat.\p
 0x3FDC95: Baisser les stats de l'ennemi\nt'avantage.\p
 0x3FDCD2: Garde un œil sur les PV\nde ton Pokémon.\pIl tombera K.O. si ses PV\natteignent «0».\p
 0x3FDD23: Non ! Pas de fuite d'un combat\ncontre un Dresseur !\p
 0x3FDD64: Hm ! Excellent !\pSi tu gagnes, tu as de l'argent,\net ton Pokémon grandit !\pAffronte d'autres Dresseurs\npour les rendre forts !\p
-0x3FDDEB: Hm… Quelle déception… Si tu\ngagnes, tu as de l'argent,\net tes Pokémon grandissent.\pSi tu perds, {B_PLAYER_NAME},\ntu paies.\pJe paie cette fois,\nmais dehors ce sera différent.\pRenforce tes Pokémon en battant\ndes Pokémon sauvages.\p\nmais dehors ce sera différent.\pRenforce tes Pokémon en battant\ndes Pokémon sauvages.\p
+0x3FDDEB: Hm…\nQuelle déception…\pSi tu gagnes, tu as de l'argent,\net tes Pokémon grandissent.\pSi tu perds, {B_PLAYER_NAME},\ntu paies.\pComme tu n'étais pas prévenu,\nje paie cette fois.\pMais dehors,\nce sera différent.\pRenforce tes Pokémon en battant\ndes Pokémon sauvages.\p
 0x3FE672: Quoi ?\n{STR_VAR_1} évolue!
 0x3FE688: Félicitations ! Ton {STR_VAR_1}\na évolué en {STR_VAR_2}!\p {WAIT_SE}
 0x3FE6B5: Hein ? {STR_VAR_1}\nn'évolue plus!\p
@@ -2827,9 +2827,9 @@
 0x3FE998: {STR_VAR_1}M {STR_VAR_2}{STR_VAR_3}S
 0x3FE9E4: Joueur a perdu {B_TRAINER1_CLASS}\n{B_TRAINER1_NAME}!
 0x3FE9FF: Match nul {B_TRAINER1_CLASS}\n{B_TRAINER1_NAME}!
-0x407C3F: AA & ÂS BAAiRRAi SRRiyzziîDA\nSo:g{B_ATK_NAME_WITH_PREFIX} :\ngQxEQQhC QQjCQzhiÇizjii\nSoi{STRING}da : ぉ
-0x40FCA2: oTR ou TRiÜRx
-0x4100BA: kj zyizzozŒÂjj
+0x407C3F: AA & ÂS BAAiRRAi SRRiyzziîDA ソ:g{B_ATK_NAME_WITH_PREFIX}: gQxEQQhC QQjCQzhiÇizjii ソi{STRING}だ: ぉ
+0x40FCA2: ぉoTRぉ TRiÜRx
+0x4100BA: kj zyizぞzŒÂjj
 0x415A23: SAPHIR
 0x415A2C: RUBIS
 0x415A31: AQUA
@@ -2943,20 +2943,20 @@
 0x4163BB: Plus de place pour\nstocker des objets.
 0x4163DB: Combien de {STR_VAR_1}(s)\njeter ?
 0x416409: Jeter {STR_VAR_2} de\ncet objet ?
-0x416425: Journal : {PLAYER} !\nCe n'est pas le moment\npour ça !{PAUSE_UNTIL_PRESS}
+0x416425: Journal : {PLAYER} !\nCe n'est pas le moment pour ça !{PAUSE_UNTIL_PRESS}
 0x416451: Pas de Vélo ici.{PAUSE_UNTIL_PRESS}
 0x41647E: Hein ?\nCherche-Objet réagit !\pObjet enterré !{PAUSE_UNTIL_PRESS}
 0x4164C2: Oh !\nCherche-Objet bouge !\pObjet sous tes pieds !\p… … … … … …{PAUSE_UNTIL_PRESS}
 0x416513: … … … …Rien !\nAucune réaction.{PAUSE_UNTIL_PRESS}
 0x41659E: Mais l'effet d'un Repousse\npersiste.{PAUSE_UNTIL_PRESS}
-0x4165D2: {PLAYER} a utilisé le {STR_VAR_2}.\pLes Pokémon sauvages seront\nattirés.{PAUSE_UNTIL_PRESS}
-0x416600: {PLAYER} a utilisé le {STR_VAR_2}.\pLes Pokémon sauvages seront\nrepoussés.{PAUSE_UNTIL_PRESS}
+0x4165D2: {PLAYER} a utilisé le\n{STR_VAR_2}.\pLes Pokémon sauvages seront\nattirés.{PAUSE_UNTIL_PRESS}
+0x416600: {PLAYER} a utilisé le\n{STR_VAR_2}.\pLes Pokémon sauvages seront\nrepoussés.{PAUSE_UNTIL_PRESS}
 0x416631: La Boîte est pleine. {PAUSE_UNTIL_PRESS}
 0x416644: QUANT. POUDRE: {STR_VAR_1} {PAUSE_UNTIL_PRESS}
 0x416655: POUDRE
 0x41665C: Tu joues de la FLÛTE POKé.\pQuelle mélodie entraînante !{PAUSE_UNTIL_PRESS}
 0x416690: Tu joues de la FLÛTE POKé.
-0x4166A7: La FLÛTE POKé réveille les Pokémon\nendormis.\n{PAUSE_UNTIL_PRESS}
+0x4166A7: La FLÛTE POKé réveille les Pokémon\nendormis.{PAUSE_UNTIL_PRESS}
 0x4166D3: Boîte CT
 0x4166DB: Fermer
 0x4166E1: La Boîte CT sera\nrangée.
@@ -2992,25 +2992,25 @@
 0x416A3A: {STR_VAR_1} est déjà\nau combat !{PAUSE_UNTIL_PRESS}
 0x416A55: {STR_VAR_1} est déjà sélectionné.\n{PAUSE_UNTIL_PRESS}
 0x416A75: {STR_VAR_1} n'a plus assez d'énergie\npour se battre !{PAUSE_UNTIL_PRESS}
-0x416A98: Impossible d'échanger le Pokémon\nde {STR_VAR_1} avec l'un des tiens !\n{PAUSE_UNTIL_PRESS}
+0x416A98: Impossible d'échanger le Pokémon\nde {STR_VAR_1} avec l'un des tiens !{PAUSE_UNTIL_PRESS}
 0x416ACB: Un Œuf ne peut pas se battre ! {PAUSE_UNTIL_PRESS}
-0x416AE2: Inutilisable tant qu'un nouveau\nBadge n'est pas obtenu.\n{PAUSE_UNTIL_PRESS}
-0x416B16: Pas plus de trois Pokémon ne\npeuvent entrer.\n{PAUSE_UNTIL_PRESS}
-0x416B3E: Pas plus de deux Pokémon ne\npeuvent entrer.\n{PAUSE_UNTIL_PRESS}
+0x416AE2: Inutilisable tant qu'un nouveau\nBadge n'est pas obtenu.{PAUSE_UNTIL_PRESS}
+0x416B16: Pas plus de trois Pokémon ne\npeuvent entrer.{PAUSE_UNTIL_PRESS}
+0x416B3E: Pas plus de deux Pokémon ne\npeuvent entrer.{PAUSE_UNTIL_PRESS}
 0x416B64: Envoyer le Courrier retiré\nsur ton PC ?
 0x416B86: Courrier envoyé sur ton PC.{PAUSE_UNTIL_PRESS}
 0x416BA6: La Boîte Mail du PC est pleine.{PAUSE_UNTIL_PRESS}
 0x416BC3: Retirer le Courrier effacera\nle message. D'accord ?
-0x416BFB: Retire le Courrier avant de faire\nporter un objet.\n{PAUSE_UNTIL_PRESS}
+0x416BFB: Retire le Courrier avant de faire\nporter un objet.{PAUSE_UNTIL_PRESS}
 0x416C2A: {STR_VAR_1} tient\n{STR_VAR_2}.{PAUSE_UNTIL_PRESS}
 0x416C49: {STR_VAR_1} tient déjà\n{STR_VAR_2}.\pÉchanger les deux\nobjets ?
 0x416C8F: {STR_VAR_1} ne tient rien.\n{PAUSE_UNTIL_PRESS}
 0x416CAC: Reçu {STR_VAR_2}\nde {STR_VAR_1}.{PAUSE_UNTIL_PRESS}
 0x416CC7: Courrier retiré du Pokémon.\n{PAUSE_UNTIL_PRESS}
 0x416CEA: {STR_VAR_2} retiré, remplacé\npar {STR_VAR_1}.{PAUSE_UNTIL_PRESS}
-0x416D17: Ce Pokémon tient un objet. Il ne\npeut pas porter de Courrier.\n{PAUSE_UNTIL_PRESS}
+0x416D17: Ce Pokémon tient un objet.\nIl ne peut pas porter de Courrier.{PAUSE_UNTIL_PRESS}
 0x416D4F: Courrier transféré de la\nBoîte Mail.{PAUSE_UNTIL_PRESS}
-0x416D78: {STR_VAR_1} est plein. Objet du\nPokémon non retiré.\n{PAUSE_UNTIL_PRESS}
+0x416D78: {STR_VAR_1} est plein. Objet du\nPokémon non retiré.{PAUSE_UNTIL_PRESS}
 0x416DB3: {STR_VAR_1} a appris\n{STR_VAR_2} !
 0x416DC2: {STR_VAR_1} et {STR_VAR_2} ne sont pas compatibles.\n{STR_VAR_2}\pne peut pas être\napprise.{PAUSE_UNTIL_PRESS}
 0x416DF7: {STR_VAR_1} veut apprendre la capacité {STR_VAR_2}.\n{STR_VAR_1} connaît déjà\pquatre capacités.\n\pOublier une capacité pour\napprendre {STR_VAR_2} ?
@@ -3076,7 +3076,7 @@
 0x417445: INAPTE !
 0x41744F: APPRISE
 0x417457: CHEN : Il faut bien connaître\nses Pokémon.\p
-0x417494: Liste de tes Pokémon, {PLAYER}.\nOuvre-la pour voir les\ncapacités de tes Pokémon.\p\nChoisis un Pokémon ici si tu\pveux utiliser un objet.\n{PAUSE_UNTIL_PRESS}
+0x417494: Liste de tes Pokémon,\n{PLAYER}.\pOuvre-la pour voir les capacités et\nles attaques de tes Pokémon.\pChoisis un Pokémon ici si tu veux\nutiliser un objet.{PAUSE_UNTIL_PRESS}
 0x417533: Coupe un arbre ou de l'herbe.
 0x417548: Vol vers une ville connue.
 0x41755D: Voyage sur l'eau.
@@ -3113,7 +3113,7 @@
 0x417806: Que faire du Courrier de\n{STR_VAR_1} ?
 0x417830: Le message sera perdu.\nEst-ce OK ?
 0x417858: Le SAC est plein.{PAUSE_UNTIL_PRESS}
-0x41786B: Le courrier a été renvoyé au BAG\navec son message\neffacé.{PAUSE_UNTIL_PRESS}
+0x41786B: Le courrier a été renvoyé au BAG\navec son message effacé.{PAUSE_UNTIL_PRESS}
 0x4178A7: Retirer\nObjet
 0x4178B5: Retirer
 0x4178BE: Retour au PC.
@@ -7683,26 +7683,26 @@
 0x820DA0: Escalade des parois rocheuses.
 0x8210BF: Impossible d'amener le soleil à l'intérieur…
 0x8210E0: Le mur est très rocheux.
-0x8217FD: zRS9ÊiRS!SÍ
+0x8217FD: zRS9ÊiRS!SÎ
 0x8254F1: {STR_VAR_1} utilise {STR_VAR_2} !
 0x8254FD: Le mur est très rocheux…\nUne capacité peut-elle l'escalader ?
 0x825535: Escalade ne peut pas être utilisée ici !
 0x825660: Le brouillard a disparu.
 0x825680: Le brouillard est dense…
 0x82595C: En tant que marchand ambulant, je\ncherche toujours à conclure une\nbonne affaire avec ces gars !
-0x82662E: Re __ PH0 __ D ze __ PH0 __ D
-0x827F30: Ï  FS                                                                 Fhi hik h{STRING}
-0x827FA4: hik Fhi  FSR   iRRRiiii
+0x82662E: リ¥でゼ{RIGHT_ARROW}Dでゼ{RIGHT_ARROW}DでUラ¥でUラsAÙÙAAAAAAAAAAAAAAAAAAéÙAAA“AAAAAAéAAAAAAAÙÙAAAAAAAAAAAÙéAAÙAAAAAAÙÙAAAAAAAAAAAAAAAAAAéÙAAA“AAAAAAéAAAAAAAÙÙAAAAAAAAAAAÙéAAÙAAAAAラM
+0x827F30:                            Ï  FS                                                                 Fhi hik h{STRING}
+0x827FA4:  hik Fhi  FSR   iRRRiiii
 0x827FC0: iiiiiRRRR           RRRRiiii
 0x827FE0: iiiiRRRR           Ï                                                   Ï  FS Fhi                            R                                    hikFi
-0x828088: hik FhiiRRRkiii
+0x828088:  hik FhiiRRRkiii
 0x8280A4: kiiiiRRRR   RRRRiiii
 0x82FFDA: ェËザ ォË    â ォËざ ォË{UNKNOWN_STR} a retrouvé sa\nvraie puissance via l'Ultra-Évolution !
 0x83001C: {UNKNOWN_STR} Mega a évolué en Mega\n{STR_VAR_3} !
 0x83003B: Une lumière vive est sur le point\nd’éclater de {UNKNOWN_STR} !
 0x830066: Le fervent souhait de {STR_VAR_1}\natteint {UNKNOWN_STR} !
 0x83008A: Le {PLAYER} de {UNKNOWN_STR} réagit\nau {STR_VAR_2} de {STR_VAR_1} !
-0x830340: lz zzÙlzzmlzzÙlzzm zzÙ  lz    zÓ  Ùzz zzzÓmìÙÓzzzÓÙzz zÓ        lz zzÙlzzmlzzÙlzzm zzÙ  lz    zÓ  Ùzz zzzÓmzzÓzzzÓÙzz zÓ        lz zzÙlzzmlzzÙlzzm zzÙ  lz    zÓ  Ùzz zzmÓmìÙÓzzmÓÙzz zÓ        lz zzAlzzwlzzwlzzw zzA  lz    z   wzz DzzÓDDAÓDzzÓwzz z         lz zzAlzzwlzzwlzzw zzA  lz    z   wzz DzzÓDzzÓDzzÓwzz zÓ        lz zzAlzzwlzzwlzzw zzA  lz    z   wzz DzwÓDDAÓDzwÓwzz z          z zzセlzzqlzzqlzzq zzセ   z    z   qzz セzzÓzセオÓセzzÓqzz z          z zzセlzzqlzzqlzzq zzセ   z    z   qzz セzzÓzzzÓセzzÓqzz z          z zzセlzzqlzzqlzzq zzセ   z    z   qzz セzqÓzセオÓセzqÓqzz z         lz zzラlzzslzzラlzzs zzラ  lz    z   szz ンzzÓsンラÓンzzÓszz z         lz zzラlzzslzzラlzzs zzラ  lz    z   szz ンzzÓszzÓンzzÓszz z         lz zzラlzzslzzラlzzs zzラ  lz    z   szz ンzsÓsンラÓンzsÓszz z          z zzホlzzrlzzニlzzr zzr  lz    z   rzz ホzzÓニホニÓホzzÓホzz zÓ         z zzホlzzrlzzニlzzr zzr  lz    z   rzz ホzzÓニzzÓホzzÓホzz zÓ         z zzホlzzrlzzニlzzr zzr  lz    z   rzz ホzrÓニホニÓホzrÓホzz zÓ         z zzずlzzolzzずlzzz zzぉ  lz    zÓ  ぉzz zzzÓozzÓずzzÓozz z
+0x830340:       lz zzÙlzzmlzzÙlzzm zzÙ  lz    zÓ  Ùzz zzzÓmìÙÓzzzÓÙzz zÓ        lz zzÙlzzmlzzÙlzzm zzÙ  lz    zÓ  Ùzz zzzÓmzzÓzzzÓÙzz zÓ        lz zzÙlzzmlzzÙlzzm zzÙ  lz    zÓ  Ùzz zzmÓmìÙÓzzmÓÙzz zÓ        lz zzAlzzwlzzwlzzw zzA  lz    z   wzz DzzÓDDAÓDzzÓwzz z         lz zzAlzzwlzzwlzzw zzA  lz    z   wzz DzzÓDzzÓDzzÓwzz zÓ        lz zzAlzzwlzzwlzzw zzA  lz    z   wzz DzwÓDDAÓDzwÓwzz z          z zzセlzzqlzzqlzzq zzセ   z    z   qzz セzzÓzセオÓセzzÓqzz z          z zzセlzzqlzzqlzzq zzセ   z    z   qzz セzzÓzzzÓセzzÓqzz z          z zzセlzzqlzzqlzzq zzセ   z    z   qzz セzqÓzセオÓセzqÓqzz z         lz zzラlzzslzzラlzzs zzラ  lz    z   szz ンzzÓsンラÓンzzÓszz z         lz zzラlzzslzzラlzzs zzラ  lz    z   szz ンzzÓszzÓンzzÓszz z         lz zzラlzzslzzラlzzs zzラ  lz    z   szz ンzsÓsンラÓンzsÓszz z          z zzホlzzrlzzニlzzr zzr  lz    z   rzz ホzzÓニホニÓホzzÓホzz zÓ         z zzホlzzrlzzニlzzr zzr  lz    z   rzz ホzzÓニzzÓホzzÓホzz zÓ         z zzホlzzrlzzニlzzr zzr  lz    z   rzz ホzrÓニホニÓホzrÓホzz zÓ         z zzずlzzolzzずlzzz zzぉ  lz    zÓ  ぉzz zzzÓozzÓずzzÓozz z                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   
 0x830CD0: Construction de puissance
 0x830CE0: Les {B_ATK_ABILITY} de {B_ATK_NAME_WITH_PREFIX} ont fait\npleuvoir !
 0x830CF6: Les {B_ATK_ABILITY} de {B_ATK_NAME_WITH_PREFIX} ont\nintensifié les rayons du soleil !
@@ -7727,39 +7727,39 @@
 0x8854D0: {B_TRAINER1_CLASS} {B_TRAINER1_NAME}\nest sur le point d'envoyer {PLAYER}.\lVoulez-vous changer de Pokémon ?
 0x885510: L'adversaire
 0x8867A7: F9\p▶ ?/AA?!!! F999F!9! ぢREÔUQQ\p EAA
-0x887280: i  VRiVRRRVRhA Sy
-0x887298: S\p· S{STRING}9 VÒ iShiRBQRgzzi
+0x887280:   i  VRiVRRRVRhA Sy
+0x887298:  S\p· S{STRING}9 VÒ iShiRBQRgzzi
 0x8872D8: づオモ97{DOWN_ARROW}ギ9 VÒ iShiRBQRizzi
-0x887648: SRR VRi  i             =エôメ
+0x887648:  SRR VRi  i             =エôメ
 0x887668: RRRRiRRi Sh  VÒ         9ラキギ
 0x8876A8: RRRRiRRi Sh  VÒ         9ラキギ
-0x8876C8: RRRRiShi VÒ             =Eh
+0x8876C8: RRRRiShi VÒ             =Eh 
 0x8876E5: TRÒRRh iRÒ  i                i  VRiVRRRVRhA Sy
-0x887718: S\pァ S{STRING}; VÒ iShiRBQRgzzi
-0x887AC8: SRR VRi  i             6{DOWN_ARROW}úベ
+0x887718:  S\pァ S{STRING}; VÒ iShiRBQRgzzi
+0x887AC8:  SRR VRi  i             6{DOWN_ARROW}úベ
 0x887AE8: RRRRiRRi Sh  VÒ         ;{UP_ARROW}9ヌ
 0x887B08: RRRRiShi VÒ             6{DOWN_ARROW}úベ
 0x887B28: RRRRiRRi Sh  VÒ         ;{UP_ARROW}9ヌ
-0x887B48: RRRRiShi VÒ             6Eh
+0x887B48: RRRRiShi VÒ             6Eh 
 0x887B65: TRÒRRh iRÒ  i                i  VRiVRRRVRhA Sy
-0x887B98: S\pソ S{STRING}び VÒ iShiRBQRgzzi
-0x887F48: SRR VRi  i             ガ79{DOWN_ARROW}
+0x887B98:  S\pソ S{STRING}び VÒ iShiRBQRgzzi
+0x887F48:  SRR VRi  i             ガ79{DOWN_ARROW}
 0x887F68: RRRRiRRi Sh  VÒ         {SUPER_E}ギラ<
 0x887F88: RRRRiShi VÒ             ガ79{DOWN_ARROW}
 0x887FA8: RRRRiRRi Sh  VÒ         {SUPER_E}ギラ<
-0x887FC8: RRRRiShi VÒ             ガEh
+0x887FC8: RRRRiShi VÒ             ガEh 
 0x887FE5: TRÒRRh iRÒ  i                i  VRiVRRRVRhA Sy
-0x888018: S\pァ S{STRING}ラ VÒ iShiRBQRgzzi
-0x8883C8: SRR VRi  i             {LV}ヅビメ
+0x888018:  S\pァ S{STRING}ラ VÒ iShiRBQRgzzi
+0x8883C8:  SRR VRi  i             {LV}ヅビメ
 0x8883E8: RRRRiRRi Sh  VÒ         9ベベベ
 0x888408: RRRRiShi VÒ             {UP_ARROW}{UP_ARROW}ビメ
 0x888428: RRRRiRRi Sh  VÒ         {DOWN_ARROW}がベベ
 0x888448: RRRRiShi VÒ             {LV}Eh
 0x888821: ヨギギË¿  ÂVeux-tu grimper à l'échelle ?\n
 0x88884E: Tu ne peux pas atteindre l'échelle \nd'ici.
-0x88B8BC: LRx R
+0x88B8BC:     LRx R
 0x893A1F: {STR_VAR_1},\nCela fera ¥{STR_VAR_2}. D'accord ?
-0x897B6A: ü                                                                                                  ニ  タz タbi ▶ii:iii            É   ホ   iニ  iuÔ iプ{UNKNOWN_STR}                                                                :iii:iii▶jii▶jii▶jii▶zji▶zzz▶zzziベ{SE_SS_ANNE_HORN}iベ{SE_SS_ANNE_HORN}iプzÔiizÔiizÔizzÔzzzÔzzzÔ                                                       タ   タ    ▶zzz:zzz ízzFD♀zrTDニDDyzzgiiニkjizzzÔzz\n zホÔ D♀  ♀zÎ zkC ikA yEiÉ                                                                 kbi Uhi ポOフ kベ{UNKNOWN_STR}:SÔ :オÔ
+0x897B6A:   ü                                                                                                  ニ  タz タbi ▶ii:iii            É   ホ   iニ  iuÔ iプ{UNKNOWN_STR}                                                                :iii:iii▶jii▶jii▶jii▶zji▶zzz▶zzziベ{SE_SS_ANNE_HORN}iベ{SE_SS_ANNE_HORN}iプzÔiizÔiizÔizzÔzzzÔzzzÔ                                                       タ   タ    ▶zzz:zzz ízzFD♀zrTDニDDyzzgiiニkjizzzÔzz\n zホÔ D♀  ♀zÎ zkC ikA yEiÉ                                                                 kbi Uhi ポOフ kベ{UNKNOWN_STR}:SÔ :オÔ  
 0x8A0B40: L'attaque de type Feu s'est\néteinte sous la forte pluie !
 0x8A0C4C: {B_ATK_NAME_WITH_PREFIX} est blessé\npar {B_LAST_ITEM} !
 0x8A0D00: {B_ATK_NAME_WITH_PREFIX} restaure quelques PV grâce à son\n{B_LAST_ITEM} !
@@ -8039,7 +8039,7 @@
 0x8D0F02: {RIVAL}: {COLOR}Ë…Très bien.\pMais dès que ce problème sera\nréglé, tu ne pourras pas m'empêcher\lde leur tomber dessus à tous !\l
 0x8D0F8A: {COLOR}ËComme c'est officiellement ta\n"mission", j'attendrai à\l{COLOR}ÉBourg Vivill{COLOR}Ë.\pEt pour toi, je ferai même semblant\nd'être "sympa" avec les Ombres\ljusqu'à ce qu'on ait fini.\pNe sois pas en retard, {PLAYER}.
 0x8D1043: Looker: {COLOR}ËCe garçon… il en a sous la\nlangue…\pJe te souhaite bonne chance pour ta\nmission, {PLAYER}.\pLooker, terminé.
-0x8D160C: De YuË¿ Je suis un gardien d'oiseaux\néloquent.\pJe ne participe qu'aux plus belles\ndes batailles aériennes.\pEn tant que tel, je refuse de\nparticiper aux batailles où des\nPokémon au sol\lsont utilisés.\pEn entendant cela, voudriez-vous une\n{COLOR}ÉSBataille aérienne{COLOR}Ë ?
+0x8D160C:  デ ユË¿  フÁóÀÑジËÔ ぱねジËÌÉÈ{JPN}ジËáÇィÀ ïÇィこ É LßジËèÀィÑ Ì È{JPN}ジËÔ gáジËÌÉÈ{JPN}ジËJe suis un gardien d'oiseaux\néloquent.\pJe ne participe qu'aux plus belles\ndes batailles aériennes.\pEn tant que tel, je refuse de\nparticiper aux batailles où des\nPokémon au sol\lsont utilisés.\pEn entendant cela, voudriez-vous une\n{COLOR}ÉSBataille aérienne{COLOR}Ë ?
 0x8D1726: Aujourd'hui semble être mon jour de chance.\nCombattons !
 0x8D1757: Tu es vraiment un expert aérien.
 0x8D1777: Notre combat aérien a rempli mon\ncoeur de joie.\pPrends ces Ailes en signe de ma\nreconnaissance !
@@ -8467,48 +8467,48 @@
 0x9513B0: Attire les attaques Eau.
 0x9513D0: Renforce les capacités Ténèbres.
 0x95F9F4: iiiii{STRING}
-0x95FA00: ラララÊiiiヲkiii{STRING}kiii{STRING}kiiikii{STRING}iiiikiii
+0x95FA00:         ラララÊiiiヲkiii{STRING}kiii{STRING}kiiikii{STRING}iiiikiii
 0x95FA2B: iiii
 0x95FA30: iiiijiiilzzz    kiii{STRING}ki
 0x95FA4B: iiiii
 0x95FA54: iiiizzzz    ki{STRING}iiikii{STRING}ki{STRING}kiikiiiiiiyzzzÓ            :
 0x95FC34: iiiii{STRING}
-0x95FC40: ラララÊiiiヲkiii{STRING}kiii{STRING}kiiikii{STRING}iiiikiii
+0x95FC40:         ラララÊiiiヲkiii{STRING}kiii{STRING}kiiikii{STRING}iiiikiii
 0x95FC6B: iiii
 0x95FC70: iiiijiiilzzz    kiii{STRING}ki
 0x95FC8B: iiiii
 0x95FC94: iiiizzzz    ki{STRING}iiikii{STRING}ki{STRING}kiikiiiiiiyzzzÓ            :
 0x95FE74: iiiii{STRING}
-0x95FE80: ラララÊiiiヲkiii{STRING}kiii{STRING}kiiikii{STRING}iiiikiii
+0x95FE80:         ラララÊiiiヲkiii{STRING}kiii{STRING}kiiikii{STRING}iiiikiii
 0x95FEAB: iiii
 0x95FEB0: iiiijiiilzzz    kiii{STRING}ki
 0x95FECB: iiiii
 0x961B50: Normal
-0x961B57: Lutte
+0x961B57: Combat
 0x961B5D: Vol
 0x961B65: Poison
 0x961B6C: Sol
 0x961B73: Roche
-0x961B7E: Fantôme
+0x961B7E: Spectre
 0x961B87: Acier
 0x961B93: Feu
 0x961B9B: Eau
 0x961BA3: Herbe
-0x961BAA: Electrique
-0x961BB2: Psychc
+0x961BAA: Electrik
+0x961BB2: Psy
 0x961BBD: Dragon
 0x961BC7: Sombre
-0x961BCC: Lutte
+0x961BCC: Combat
 0x961BF1: Fée
 0x96248C: AAA▶AAA▶AAA
-0x9626A3: zwDzDAAAAAAAA ▶ DwzwDAAAAAAAA\n▶AAAzAAAAAAAAAAÎ w
-0x962702: z▶AzDzAAAA…AAA\pz
-0x962723: zwDzDAAAAAAA ▶ DwzwDAAAAAAAA ▶
-0x962D56: ▶\lj▶z{STRING}i▶i{STRING}9999999-999-999-999-999jiiijiiiViiiiiiiii
-0x962F24: Iziamiiii
-0x962F43: zzzziiiiiiiii
-0x962F61: ▶iizziiiiiiiiiÒ iii
-0x962F84: iiziiiiViii ▶ j▶zyjziiiiiii\n▶{STRING} jzyzjiiiiiiii\n▶iiiziiiiiiiiiiÒ Mirala la la la la\nla {DYNAMIC}
+0x9626A3: zwDzDAAAAAAAA                \n▶\nDwzwDAAAAAAAA                ▶AAAzAAAAAAAAAAÎ                w
+0x962702: z▶AzDzAAAA…AAA                \pz
+0x962723: zwDzDAAAAAAAA                \n▶\nDwzwDAAAAAAAA                ▶
+0x962D56: ▶\lj▶z{STRING}i▶i{STRING}999こ9999-999-999-999-999jiiijiiiViiiiiiiiii
+0x962F24: izyziiiiiiii                ▶
+0x962F43: \nzzzziiiiiiii                
+0x962F61: ▶iizziiiiiiiiiÒ                iii
+0x962F84: iiiziiiiViii                ▶\nj▶zyjziiiiiiii                ▶{STRING}\njzyzjiiiiiiii                ▶iiiziiiiiiiiiiÒ                ミラララララララ{DYNAMIC}
 0x964160: Type de la capacité : Fee
 0x964180: Type du Pokemon : Fee
 0x9641A0: Effet de la capacité adverse sur le Pokemon:\p   {CIRCLE_DOT} : Combat, Insecte, Fee\p   {TRIANGLE} : Spectre, Tenebr\p   {BIG_MULT_X} : Psy
@@ -11943,7 +11943,7 @@
 0xA4F07F: Fauche-Âme des Sept Étoiles
 0xA95C4D: kÀsiig
 0xA97306: j{UNKNOWN_STR}{STRING}▶iyzzRh hjh/gii8 OSiBQi\nS hyzSxiyC hjxByzyR i\nzBRy{STRING}B gyykBQBj RQAShRBRîii ÁiR
-0xAA7906: RYフURテU
+0xAA7906:  RYフURテU
 0xABBB25: jiizzizzz\nぁzz▶Kz
 0xABC343: ïjiiiiii\njy\nnz
 0xABCB23: zii{UNKNOWN_STR}ii{UNKNOWN_STR}ii{UNKNOWN_STR}iy
@@ -11958,7 +11958,7 @@
 0xAC9C85: iiiiiiiiiiÒ                {SUPER_RE}9999999999\l999·99\l999\l999\l9999·9999\l
 0xACCB3D: Ô  Ô                                                                                                                                                                                                                                          R  RR                        Ï   RÏ                                                                   FRR SRR:SRR▶SRRkiRRkiSR▶jii
 0xACCCAD: ▶iiRR  RRÒ RR{UNKNOWN_STR}RRyÔRhiÔRiiÔiizÔiy
-0xACCD41: FR FRR                        RÏ  RRÏ                                                                  SRRVRRRVRRRkRRRkSRRkiRR▶iii
+0xACCD41:                                                                                                                                                                                                                                          FR FRR                        RÏ  RRÏ                                                                  SRRVRRRVRRRkRRRkSRRkiRR▶iii
 0xACCEAD: jiiRRh RRhÒRRh{STRING}RRhyRRizRhiziiy
 0xAD22FB: òÖAAぁEAA\p            Ô   Ô   Ô   Ô                                                                         :9  :9  :!   E   E   E   E   E999999999999!999AA99AAAAAAAAAAAA/99999999!999A!9/RBAAA\pBAQA
 0xAD23C0: AQAÔ9/Ô 99/ 999Q999P99/AAAAAAAAA
@@ -11967,28 +11967,28 @@
 0xAD2B37: A  EA :AA :AAòÔ  ぇÔ  U   Q   AÔ  A\p  AAÔ AA\p   :A  :\p
 0xAD2B6F: \p :B\p :AA EAA:BAAEAAA!999999999999999!999?999?999B!9999BA99BA99AA99BA99BA99PA99PAAAAB9999A99AAAAAAA!9AAAAAAAAAQ
 0xAD2BE0: Q{NAME_END} PRR\pA!9R999A9AAAAAAAAAAA
-0xAD2D69: EA  EA  :A  :A  :A  :A  :A  :AAAAQAAAQAAAQAAAAAAAAAAAAAAAAAAAAAAÔ AA
-0xAD3145: AÔ  A\p  A\p  AAÔ AAÔ AA\p AA\p                                   :
+0xAD2D69:                              EA  EA  :A  :A  :A  :A  :A  :AAAAQAAAQAAAQAAAAAAAAAAAAAAAAAAAAAAÔ AA
+0xAD3145:    AÔ  A\p  A\p  AAÔ AAÔ AA\p AA\p                                   :
 0xAD31E2: Ô ÙïÂ ぇぇ  òÔ  Ö   Ô                                                 :A   E   :   :                AAAÏAAA\pAAAABAAQEAA?:AQA:AQA EQA       :Ô
-0xAD3289: R!9AA!9AA99AA99AQ99AQ99AQ99UB\pE9/A\p9999999999999999999/9999AAÔ
-0xAD3354: AAAAAA
-0xAD336E: Ô                   AQ99AA99
-0xAD34DB: QAÔ QR
+0xAD3289: R!9AA!9AA99AA99AQ99AQ99AQ99UB\pE9/A\p9999999999999999999/9999AAÔ 
+0xAD3354:                 AAAAAA
+0xAD336E:   Ô                   AQ99AA99
+0xAD34DB:  QAÔ QR
 0xAD3522: Ô                                                                                                  :AA EAA EAA EAA:AAA:AAA://A·9!!\pAQA\pAQAAEBAA\pEAAQ\p
-0xAD39C1: /AAAAAAAAA\p
-0xAD3A8B: ナ{FILL_WINDOW} í{FILL_WINDOW} í{NAME_END} \l{NAME_END} \l{NAME_END} \l{NAME_END}                                                                                                                                                :   :   E   E  :A:!99EA!9EAAAAAAAAAAQAAAQAAAEAA\p?999·99\l9?9\l9?99·999·999\l999\l999\l\l{NAME_END} 9
-0xAD3B92: 9Ô  9Ô  /Ô  \l                                                                                                                                     EA  EA :AQ :AA EQR ·?9 ·99 ·99AAE?AAEBB
-0xAD42C3: :   E  :E  ?9 :99 E99:A!9EA!9AAA!AAAQAAAB9?9\l9?9\l9999P9999999?9999999?99999ソ··9ソ!\p·ソ!/·\l\p\l9\l\p·9\l\p·9\l··9\l·EBA
+0xAD39C1:    /AAAAAAAAA\p
+0xAD3A8B:  ナ{FILL_WINDOW} í{FILL_WINDOW} í{NAME_END} \l{NAME_END} \l{NAME_END} \l{NAME_END}                                                                                                                                                :   :   E   E  :A:!99EA!9EAAAAAAAAAAQAAAQAAAEAA\p?999·99\l9?9\l9?99·999·999\l999\l999\l\l{NAME_END} 9
+0xAD3B92:   9Ô  9Ô  /Ô  \l                                                                                                                                     EA  EA :AQ :AA EQR ·?9 ·99 ·99AAE?AAEBB
+0xAD42C3:                                                                                                                         :   E  :E  ?9 :99 E99:A!9EA!9AAA!AAAQAAAB9?9\l9?9\l9999P9999999?9999999?99999ソ··9ソ!\p·ソ!/·\l\p\l9\l\p·9\l\p·9\l··9\l·EBA
 0xAD44C5: A99 EA9 :AA  EA  :A  :A   E   EPÏ  9PÏ 99PÏA9
-0xAD49D6: Ô   Ô   Ô   zÓ  Aw                                                                                                                            ニニ  ♀A               ニ  タi ニbCニAAAAgCA biニタiiCbiCACwzDiAgyiiiigiiiAAiiòòツ♀ニニbAAACAAgAgDAAiyzgCiizCiiiAAAÓ AyÂ iìぇ yÙÙÂwÙÙぇwÚÙぅwÚÙïA+ÙÙ                        Â   Â                                                                     タニ               ニ  タA   b   タiiDAニyAAljAAjiiCiiiigiiiAAgiiAiyAAAgAACAAACAAgAAiiAAiyAAyjiAjjiiiCAAAAAgAAgAAAgAAAgAAACAAACAiizgAwÙÙAAzÙDAAzwCAAAziAAgホニgiùÚiiヘòÂ   Â   ぅ   ず   ず   ;   ÙÔ  Ùぜぉ                                                                                                 ニiyj ニji :ii :ii kii kiy:jiy▶iijiyiiiyAAiiDAiijAiiyiiiyyiiijiiiiiyizAjiiwiiiyiiijiiiiiiiiiiiiijiiiiニDAAAyCAAizCgiizニiiiぁiiiぁiiiぁÚまÙÂù{DYNAMIC}ïぅヒÖÚぅùメまぅòò{DYNAMIC}ぅòòÖぅòòメぜòòòÔ                                                                   :   ▶  :z
+0xAD49D6:   Ô   Ô   Ô   zÓ  Aw                                                                                                                            ニニ  ♀A               ニ  タi ニbCニAAAAgCA biニタiiCbiCACwzDiAgyiiiigiiiAAiiòòツ♀ニニbAAACAAgAgDAAiyzgCiizCiiiAAAÓ AyÂ iìぇ yÙÙÂwÙÙぇwÚÙぅwÚÙïA+ÙÙ                        Â   Â                                                                     タニ               ニ  タA   b   タiiDAニyAAljAAjiiCiiiigiiiAAgiiAiyAAAgAACAAACAAgAAiiAAiyAAyjiAjjiiiCAAAAAgAAgAAAgAAAgAAACAAACAiizgAwÙÙAAzÙDAAzwCAAAziAAgホニgiùÚiiヘòÂ   Â   ぅ   ず   ず   ;   ÙÔ  Ùぜぉ                                                                                                 ニiyj ニji :ii :ii kii kiy:jiy▶iijiyiiiyAAiiDAiijAiiyiiiyyiiijiiiiiyizAjiiwiiiyiiijiiiiiiiiiiiiijiiiiニDAAAyCAAizCgiizニiiiぁiiiぁiiiぁÚまÙÂù{DYNAMIC}ïぅヒÖÚぅùメまぅòò{DYNAMIC}ぅòòÖぅòòメぜòòòÔ                                                                   :   ▶  :z   
 0xAD4D7D: ホii ▶ii ▶bi ▶biiiiiiyiiiyiiiyiiiziiiziiyziizzziiijiiijiiyjiiyjiiyziizziizzjizzziii{STRING}iii{STRING}jii{STRING}jii{STRING}zii{STRING}ziiizjiizziiòòòÔぁòòÔö
-0xAD51DD: Â  Ô   zÓ  Aw                                                                                                                        ニニ  ♀A  タニ       タ   ♀  タC ニbiニAAAAgCAiiDAニiiニiiiCiiCAAwzDiAgyiiiigiiiAAiiòòツ♀ニニbAAACAAgAgDAAgyzgCiijCiiiAAAÓ gwÂ iìぇ yÙÙÂ+ÙÙぇ+ÙÙぅ+ÙÙï+ÙÙÙ                        Â   Â                                                                                  ニ  タA   b   タ    ニyAAljAAjiiCiiiCgiiiAAgiiAiiニiyzAAAgAACAAACAAgAAiCAAiDAAyiCAjiiiiCAAAAAAAAAAAAAAAAAgAgAgAgAAiyCAwÙÙÙwÙÙÙAìÙÙA+ÙÙA+ÙÙAwÚÙCyÚÙCi+ÙÂ   Â   ぅ   ぅ   ぅ   ぅ   ÙÔ  Ùぜぉ                                                                                                  ニji :ii :ii :ii kii kiy:jiy▶iijijiiiDAAiyAAiyCgiijyiijjiiyiiiiiijjiwijijiyCjiyCiiiDiiiDiiiyiijyji+ÙjA+ÚwAwÚwCwòwzzòwiiぁwiiぁjiiぁÙまÙÂÙ{DYNAMIC}ïぅïÖÚぅòメまぅòò{DYNAMIC}ぅòòÖぅòòメぜòòòÔ                                                                   :   ▶  :z
+0xAD51DD: Â  Ô   zÓ  Aw                                                                                                                        ニニ  ♀A  タニ       タ   ♀  タC ニbiニAAAAgCAiiDAニiiニiiiCiiCAAwzDiAgyiiiigiiiAAiiòòツ♀ニニbAAACAAgAgDAAgyzgCiijCiiiAAAÓ gwÂ iìぇ yÙÙÂ+ÙÙぇ+ÙÙぅ+ÙÙï+ÙÙÙ                        Â   Â                                                                                  ニ  タA   b   タ    ニyAAljAAjiiCiiiCgiiiAAgiiAiiニiyzAAAgAACAAACAAgAAiCAAiDAAyiCAjiiiiCAAAAAAAAAAAAAAAAAgAgAgAgAAiyCAwÙÙÙwÙÙÙAìÙÙA+ÙÙA+ÙÙAwÚÙCyÚÙCi+ÙÂ   Â   ぅ   ぅ   ぅ   ぅ   ÙÔ  Ùぜぉ                                                                                                  ニji :ii :ii :ii kii kiy:jiy▶iijijiiiDAAiyAAiyCgiijyiijjiiyiiiiiijjiwijijiyCjiyCiiiDiiiDiiiyiijyji+ÙjA+ÚwAwÚwCwòwzzòwiiぁwiiぁjiiぁÙまÙÂÙ{DYNAMIC}ïぅïÖÚぅòメまぅòò{DYNAMIC}ぅòòÖぅòòメぜòòòÔ                                                                   :   ▶  :z   
 0xAD557D: ホii ▶ii ▶bi ▶biiiiiiyiiiyiiiyiiiziiiziiyziizzziiijiiijiiyjiiyjiiyziizziizzjizzzjii{STRING}iii{STRING}jii{STRING}jii{STRING}zii{STRING}ziiizjiizziiòòòÔぁòòÔö
 0xAD5D7D: ホii ▶ii ▶bi ▶biiiiiiyiiiyiiiyiiiziiiziiyziizzziiijiiijiiyjiiyjiiyziizziizzjizzzjiiソiiiソjiiソjiiソziiソzii{STRING}zji{STRING}zzi{STRING}オ
-0xAD6331: ニ  タA   b   タ    ニyAAljAAjiiCiiiCgiiiAAgiiAiiニiyzAAAgAACAAACAAgAAiCAAiDAAyiCAjiiiiCAAAAAgAAgAAAgAAAgAAACAAACgiyzzAwòòAAzÖDAAzwCAAAziAAgホニgiùÖiiヘÖÔ       Ó   w   Ó                                                                                                                ニji :ii :ii :ii kii kiy:jiy▶iijijiiiDAAiyAAiyCgiijyiijjiiyiiiiiijiywiiijiiijiiiiiiiiiiiiiiiiijijiiニzDAAizCAiizgiiiニiiiソiiiソiiiソ    É   ヒ   ü   ö   ö   ö   オÔ                                                                     :   ▶  :z
-0xAD6B31: タニ               ニ  タA   b   タiiDAニyAAljAAjiiCiiiigiiiAAgiiAiyAAAgAACAAACAAgAAiiAAiyAAyjiAjjiiiCAAAAAgAAgAAAgAAAgAAACAAACAiizgAwòòAAzÖDAAzwCAAAziAAgホニgiùÖiiヘÖÔ   Ô       w   Ó                                                                                                               ニiyj ニji :ii :ii kii kiy:jiy▶iijiyiiiyAAiiDAiijAiiyiiiyyiiijiiiiiyizAjiiwiiiyiiijiiiiiiiiiiiiijiiiiニDAAAyCAAizCgiizニiiソオiiソオiiソオ    É   ヒ   ü   ö   ö   ö   オÔ                                                                     :   ▶  :z
-0xAD745B: jiyÉziiÉziiÉ
-0xAD7C5B: jiyÉziiÉziiÉ
+0xAD6331:                                           ニ  タA   b   タ    ニyAAljAAjiiCiiiCgiiiAAgiiAiiニiyzAAAgAACAAACAAgAAiCAAiDAAyiCAjiiiiCAAAAAgAAgAAAgAAAgAAACAAACgiyzzAwòòAAzÖDAAzwCAAAziAAgホニgiùÖiiヘÖÔ       Ó   w   Ó                                                                                                                ニji :ii :ii :ii kii kiy:jiy▶iijijiiiDAAiyAAiyCgiijyiijjiiyiiiiiijiywiiijiiijiiiiiiiiiiiiiiiiijijiiニzDAAizCAiizgiiiニiiiソiiiソiiiソ    É   ヒ   ü   ö   ö   ö   オÔ                                                                     :   ▶  :z   
+0xAD6B31:                              タニ               ニ  タA   b   タiiDAニyAAljAAjiiCiiiigiiiAAgiiAiyAAAgAACAAACAAgAAiiAAiyAAyjiAjjiiiCAAAAAgAAgAAAgAAAgAAACAAACAiizgAwòòAAzÖDAAzwCAAAziAAgホニgiùÖiiヘÖÔ   Ô       w   Ó                                                                                                               ニiyj ニji :ii :ii kii kiy:jiy▶iijiyiiiyAAiiDAiijAiiyiiiyyiiijiiiiiyizAjiiwiiiyiiijiiiiiiiiiiiiijiiiiニDAAAyCAAizCgiizニiiソオiiソオiiソオ    É   ヒ   ü   ö   ö   ö   オÔ                                                                     :   ▶  :z   
+0xAD745B:  jiyÉziiÉziiÉ
+0xAD7C5B:  jiyÉziiÉziiÉ
 0xADB71A: RR:RRRURRR        ゾベベベORRRRRRRRRRBRRピARRAA        Ì   ピ{SE_SS_ANNE_HORN} RA
 0xADB781: オÔ                                                                                                        :   :   :   ゾ   ポ   U   ポORRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRピAARBAAR×AARAAARAAARAAAピAAAピAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA\pぽ
 0xADB90F: RAAA
@@ -11998,15 +11998,15 @@
 0xADC048: BAAAAAAAAAAAAAAAAAAAAAAAAAAA    Ô:ニニ\pどでä\p
 0xADC227: AAAA
 0xADC3FA: Ô EA\p AA\p    :   :   :
-0xADC41C: ▶  :-jiiiiiiijiiyeiyペブベベ
+0xADC41C:    ▶  :-jiiiiiiijiiyeiyペブベベ
 0xADC957: AAAA
 0xADCB6C: i-Ô 9vこ ii- iiyこDAwこ
-0xADCF5D: AÔ:ニ                            ニ                                                                                                     :R  UR  OR :RR :RR :RR ゾRR URRRRRRRRRRRRRピRRRBRRR×RRRARRRARRRAピAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA\pどでA\p
+0xADCF5D:    AÔ:ニ                            ニ                                                                                                     :R  UR  OR :RR :RR :RR ゾRR URRRRRRRRRRRRRピRRRBRRR×RRRARRRARRRAピAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA\pどでA\p
 0xADD11A: EAAA\p
 0xADD2ED: .jii.ii\l
 0xADD812: RR:RRRURRRORRRRRRRゾベベベORRRRRRRRRRBRRピARRAARピAARBAAÌ   ピ{SE_SS_ANNE_HORN} RA
-0xADD84F: AAAÔAAA\pAAA\pAAAAAAAA            :ニニ どでä
-0xADD87E: ぽでÉ                                                                                                    :   :   ゾ   U   U   ポ   ポ   ポRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRR×AARAAARAAARAAAピAAAピAAAピAAAピAAAAAAAAAAAAAAAAAAAAAAAAAA\pAAA
+0xADD84F:  AAAÔAAA\pAAA\pAAAAAAAA            :ニニ どでä 
+0xADD87E:   ぽでÉ                                                                                                    :   :   ゾ   U   U   ポ   ポ   ポRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRR×AARAAARAAARAAAピAAAピAAAピAAAピAAAAAAAAAAAAAAAAAAAAAAAAAA\pAAA
 0xADDA07: RAAA
 0xADDA0C: AAAAAAAA9/AA
 0xADDB1C: iiii
@@ -12018,16 +12018,16 @@
 0xADE833: R :RR URR ORR:RRR:RRR:RRRRRRRRRRRRRRピRRRARRピARRBARR×ARRAARRA
 0xADE870: BAAAAAAAAAAAAAAAAAAAAAAAAAAA    Ô:ニニ\pどでä\p
 0xADEA4F: AAAA
-0xADEC22: Ô EA\p AA\p    :   :   :
-0xADEC44: ▶  :-jiiiiiiijiiyeiyペブベベ
+0xADEC22: Ô EA\p AA\p    :   :   :   
+0xADEC44:    ▶  :-jiiiiiiijiiyeiyペブベベ
 0xADF17F: AAAA
 0xADF394: i-Ô 9vこ ii- iiyこDAwこ
-0xADF785: AÔ:ニ                            ニ                                                                                                     :R  UR  OR :RR :RR :RR ゾRR URRRRRRRRRRRRRピRRRBRRR×RRRARRRARRRAピAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA\pどでA\p
+0xADF785:    AÔ:ニ                            ニ                                                                                                     :R  UR  OR :RR :RR :RR ゾRR URRRRRRRRRRRRRピRRRBRRR×RRRARRRARRRAピAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA\pどでA\p
 0xADF942: EAAA\p
 0xADFB15: .jii.ii\l
 0xAE003A: RR:RRRURRRORRRRRRRゾベベベORRRRRRRRRRBRRピARRAARピAARBAAÌ   ピ{SE_SS_ANNE_HORN} RA
-0xAE0077: AAAÔAAA\pAAA\pAAAAAAAA            :ニニ どでä
-0xAE00A6: ぽでÉ                                                                                                    :   :   ゾ   U   U   ポ   ポ   ポRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRR×AARAAARAAARAAAピAAAピAAAピAAAピAAAAAAAAAAAAAAAAAAAAAAAAAA\pAAA
+0xAE0077:  AAAÔAAA\pAAA\pAAAAAAAA            :ニニ どでä 
+0xAE00A6:   ぽでÉ                                                                                                    :   :   ゾ   U   U   ポ   ポ   ポRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRR×AARAAARAAARAAAピAAAピAAAピAAAピAAAAAAAAAAAAAAAAAAAAAAAAAA\pAAA
 0xAE022F: RAAA
 0xAE0234: AAAAAAAA9/AA
 0xAE0344: iiii
@@ -12048,32 +12048,32 @@
 0xAEA938: BAAAAAAAAAAAAAAAAAAAAAAAAAAA    Ô:ニニ\pどでä\p
 0xAEAB17: AAAA
 0xAEACEA: Ô EA\p AA\p    :   :   :
-0xAEAD0C: ▶  :-jiiiiiiijiiyeiyペブベベ
+0xAEAD0C:    ▶  :-jiiiiiiijiiyeiyペブベベ
 0xAEB247: AAAA
 0xAEB45C: i-Ô 9vこ ii- iiyこDAwこ
-0xAEB84D: AÔ:ニ                            ニ                                                                                                     :R  UR  OR :RR :RR :RR ゾRR URRRRRRRRRRRRRピRRRBRRR×RRRARRRARRRAピAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA\pどでA\p
+0xAEB84D:    AÔ:ニ                            ニ                                                                                                     :R  UR  OR :RR :RR :RR ゾRR URRRRRRRRRRRRRピRRRBRRR×RRRARRRARRRAピAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA\pどでA\p
 0xAEBA0A: EAAA\p
 0xAEBBDD: .jii.ii\l
 0xAEC102: RR:RRRURRRORRRRRRRゾベベベORRRRRRRRRRBRRピARRAARピAARBAAÌ   ピ{SE_SS_ANNE_HORN} RA
-0xAEC13F: AAAÔAAA\pAAA\pAAAAAAAA            :ニニ どでä
-0xAEC16E: ぽでÉ                                                                                                    :   :   ゾ   U   U   ポ   ポ   ポRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRR×AARAAARAAARAAAピAAAピAAAピAAAピAAAAAAAAAAAAAAAAAAAAAAAAAA\pAAA
+0xAEC13F:  AAAÔAAA\pAAA\pAAAAAAAA            :ニニ どでä 
+0xAEC16E:   ぽでÉ                                                                                                    :   :   ゾ   U   U   ポ   ポ   ポRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRR×AARAAARAAARAAAピAAAピAAAピAAAピAAAAAAAAAAAAAAAAAAAAAAAAAA\pAAA
 0xAEC2F7: RAAA
 0xAEC2FC: AAAAAAAA9/AA
 0xAEC40C: iiii
-0xAECF5F: EAÔ AAE
-0xAED7AA: Ô                                                                                                                                                                    {SUPER_RE}  {SUPER_RE}v  fy {SUPER_RE}ii       {SUPER_RE} lzj{SUPER_RE}viifyiiiyzjijiiziii    999こiiiyiiiiiiiiiiiizjiiiyji        9   z\l  y-Ô yz\l yz\n zz-Ô                                                                                                                       っ  っど  どで fii fij{SUPER_RE}iii{SUPER_RE}iyiÍオyオどでカでででばででニででiiiiiiiiiiiiオaiiでエaiででエiででエiでトカiiiyiiiiziiiyiii-iii-iiy-iiz-iyzvzzzÔzzzÔzzzÔzz-Ôzz\n zz{SE_SS_ANNE_HORN}zベ{SE_SHOP}ペギ{SE_SHOP}
+0xAECF5F:  EAÔ AAE 
+0xAED7AA: Ô                                                                                                                                                                    {SUPER_RE}  {SUPER_RE}v  fy {SUPER_RE}ii       {SUPER_RE} lzj{SUPER_RE}viifyiiiyzjijiiziii    999こiiiyiiiiiiiiiiiizjiiiyji        9   z\l  y-Ô yz\l yz\n zz-Ô                                                                                                                       っ  っど  どで fii fij{SUPER_RE}iii{SUPER_RE}iyiÍオyオどでカでででばででニででiiiiiiiiiiiiオaiiでエaiででエiででエiでトカiiiyiiiiziiiyiii-iii-iiy-iiz-iyzvzzzÔzzzÔzzzÔzz-Ôzz\n zz{SE_SS_ANNE_HORN}zベ{SE_SHOP}ペギ{SE_SHOP}                                     
 0xAF2F4B: zzzz\n
 0xAF2FB6: ai▶\nオiR\nオaRxソオRRソオRRソオiiiiiiiiiiiiiiiiiiiiiiiiaiiiオiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiii{UNKNOWN_STR}ii{UNKNOWN_STR}ii
-0xAF36D2: i{UNKNOWN_STR} iiÔ ki
-0xAF36DF: ki{UNKNOWN_STR}ii{UNKNOWN_STR}ii{B_ATK_NAME_WITH_PREFIX}                                                                :オ
+0xAF36D2:   i{UNKNOWN_STR} iiÔ ki
+0xAF36DF:  ki{UNKNOWN_STR}ii{UNKNOWN_STR}ii{B_ATK_NAME_WITH_PREFIX}                                                                :オ
 0xAF374B: zzzz\n
 0xAF37B6: ii▶\niiR\niiRxkiRRkiRRkiiiiÔiii
 0xAF3F4B: zzzz\n
 0xAF3FB6: ai▶\nオiR\nオaRxソオRRソオRRソオiiiiiiiiiiiiiiiiiiiiiiiiaiiiオiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiii{UNKNOWN_STR}ii{UNKNOWN_STR}ii
 0xAF5773: zzzz\n
 0xAF57DE: ai▶\nオiR\nオaRxソオRRソオRRソオiiiiiiiiiiiiiiiiiiiiiiiiaiiiオiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiii{UNKNOWN_STR}ii{UNKNOWN_STR}ii
-0xAF5EFA: i{UNKNOWN_STR} iiÔ ki
-0xAF5F07: ki{UNKNOWN_STR}ii{UNKNOWN_STR}ii{B_ATK_NAME_WITH_PREFIX}                                                                :オ
+0xAF5EFA:   i{UNKNOWN_STR} iiÔ ki
+0xAF5F07:  ki{UNKNOWN_STR}ii{UNKNOWN_STR}ii{B_ATK_NAME_WITH_PREFIX}                                                                :オ
 0xAF5F73: zzzz\n
 0xAF5FDE: ii▶\niiR\niiRxkiRRkiRRkiiiiÔiii
 0xAF6773: zzzz\n
@@ -12086,20 +12086,20 @@
 0xAFCB5E: Ô Ç   Ç   ぇÂ                                                                                                     z   T   :                    zizzRRRRRRRi
 0xAFCBF9: kii :ii kiy :
 0xAFD2F4: i\pjyRRiiRRRyRRRhRRRRSRRiニニニニ
-0xAFD3DC: :        yzjiRRhiRhiiiiiykiiziiz\n
+0xAFD3DC:        :        yzjiRRhiRhiiiiiykiiziiz\n
 0xAFDAF4: i\pjyRRiiRRRyRRRhRRRRSRRiニニニニ
-0xAFDBDC: :        yzjiRRhiRhiiiiiykiiziiz\n
+0xAFDBDC:        :        yzjiRRhiRhiiiiiykiiziiz\n
 0xAFF4A6: iyÜzii
 0xB01CCE: iyÜzii
-0xB051C3: A :AA UAA
+0xB051C3: A :AA UAA            
 0xB051DC: AARBAAAQAAAAAAAA            Ô   \p
-0xB052CB: RAAAAAAAAAAAAAAAAAAAABAAARRAARRRRAQA\pAQAgAABgAABgAABぱAABぱAARRRRRR    Ô   Ô   Ô   Ô   ä   ä   ä                                                                                                              :   ポ  :9
-0xB053A4: URRR
+0xB052CB: RAAAAAAAAAAAAAAAAAAAABAAARRAARRRRAQA\pAQAgAABgAABgAABぱAABぱAARRRRRR    Ô   Ô   Ô   Ô   ä   ä   ä                                                                                                              :   ポ  :9   
+0xB053A4:         URRR
 0xB057B0: zzzz
 0xB05FDC: zzzz
-0xB06228: AQBQ
+0xB06228: AQBQ                            
 0xB067CF: ▶zzzz
-0xB069C4: :EA:EAA
+0xB069C4:  :EA:EAA                    
 0xB069E8: AARA                        Ô   {FILL_WINDOW}                                                                                                                                         :   U   U  :R  :R  :R  :REAAABAAABAAARAAARAAARBAARRAA
 0xB06AC9: RRAAAABAAAQAAAAAAAAAAAAAAAAAAAAAAAAA{NAME_END} AQÔ BAÔ BA{UNKNOWN_STR}QA{UNKNOWN_STR}QA{UNKNOWN_STR}QAä QAでÔ                                                                                                                                  :{NAME_END} :{NAME_END} :R  :
 0xB06BB1: URRRRRR
@@ -12131,22 +12131,22 @@
 0xB1607F: k{DYNAMIC}QgiリAhy            :
 0xB16554: Ò kihÒki
 0xB1657A: Ô ii{UNKNOWN_STR}ii{B_ATK_NAME_WITH_PREFIX}zzi\n                                   :   k   k   :                zzzzzzzzzzz\nzz
-0xB16AAA: k{B_ATK_NAME_WITH_PREFIX} kyÔ ki\n :ii
-0xB16B86: :jiikiiikiiz▶jzz:zz\n ▶\nS :UR :RRiソででzíばで\n:íニ
-0xB16FBE: RB  UR  :i   :   U
-0xB1708F: :jyÔkii{STRING}iii{STRING}iiz\niyz\nizz
+0xB16AAA:   k{B_ATK_NAME_WITH_PREFIX} kyÔ ki\n :ii
+0xB16B86:                                   :jiikiiikiiz▶jzz:zz\n ▶\nS :UR :RRiソででzíばで\n:íニ
+0xB16FBE: RB  UR  :i   :   U  
+0xB1708F:  :jyÔkii{STRING}iii{STRING}iiz\niyz\nizz
 0xB17392: iÔkiyÔiy
 0xB17510: AASRAQ
-0xB17F5C: AgÒ AAg AA
+0xB17F5C:             AgÒ AAg AA
 0xB17F7D: iji:iz
 0xB17F84: kyzz            Ô   iÔ  i{B_ATK_NAME_WITH_PREFIX} j{STRING}{B_ATK_NAME_WITH_PREFIX}
 0xB185A2: \piyC\pijA▶i\nA▶z            Ô   {UNKNOWN_STR}  y
 0xB18D0C: :ziz  :R  iU :BA  EQ:Ô:ik{STRING}:Ai{STRING}EAjÔUQAAQRRAAAAAAAAAAARAAQAQABAhQRhSRQBABARAAgAAAAAAAAAAAAAABAAQRQRRRR&ÚÁ òぇ  じÔ  g{STRING}
-0xB197E6: RB  UR  :i   :   U
+0xB197E6: RB  UR  :i   :   U  
 0xB1A03F: M   U   :        \pUÔ AUh A
 0xB1A065: Ô i   V     VCÒ Cg iAg AAgÔARRÔQRB\pR
 0xB1A656: jk▶zUAzzERz\nR
-0xB1A789: {NAME_END}  AhÒ AAh AA
+0xB1A789:    {NAME_END}  AhÒ AAh AA
 0xB1A7A5: iji:iz
 0xB1A7AC: kyzz
 0xB1F6F0: AAA▶AAA▶AAA
@@ -12193,98 +12193,98 @@
 0xCB096B: üraUZiuü
 0xCC497B: yrlno▶
 0xCD0F2D: ÖsvÊÎ{EMOJI_MINUS}evÀÂÄqoqhZjqmovumnvzoSCWz{EMOJI_LEFT_FIST}qcUWdXOQapvidWMOYUECXrpYSUVQYhZNRfZHPiqeTdfaWitmcgs▶thituegu{PLUS}ÁöäöxÖÂÈ\l:{B_LAST_MOVE}ÚöÄこÒ
-0xCE5B57: ÁÀ {STRING}{EMOJI_HAPPY}ÖzvrojeYSNKGGHLOSVYcfhknpqrstuvx:ä\l
+0xCE5B57:  ÁÀ {STRING}{EMOJI_HAPPY}ÖzvrojeYSNKGGHLOSVYcfhknpqrstuvx:ä\l
 0xCF90C0: \läztojfbXTQOLKJJJKMORVYdinrwÄ{DYNAMIC}{COLOR}Ê    ざ  :äTË
 0xCF9ECB: Ás3 E3 AY ÂカZ EZ EZ EÛ
 0xCFB5D7: jg  A! Â B VRw VSぞhÔM\nhii{STRING}QÔiy
-0xD5D7E4: \lU   zU  F
+0xD5D7E4:   \lU   zU  F
 0xD5D7F6: RRh▶i i
-0xD64273: UiiRhiiA ぱでÙ
+0xD64273:  UiiRhiiA ぱでÙ
 0xD64519: iähRiäi iぷUii
 0xD64548: kiiS
 0xD847A6: kyVi
 0xDA11C7: ▶zz zzzzzzSz zTizzjiz zjyzzjyz zjyzzjyz zzセzzzzy zzzizzzh yzzTSzペz iz+zizñô    Á   Á    Á   Áì   ÜÑöqö{DYNAMIC}üÌ        n À  n   îüª   zzzDzzÁz\nzzz
 0xDA28F1: i {NAME_END}kiF
 0xDA4DB8: ▶zÜ▶ zzozzz99 999999じ9 99z299zず 9げzz2Üzz .ozzjz99 999fi9f{UNKNOWN_STR}
-0xDC3EA8: Vk   lk     i
-0xDD085E: ▶        i òizX
-0xDD0884: iyz zzziyiiz z▶zzz
-0xDE533F: ORRRRベRR RRRRRRRR RRRRRRRR RRRRRRRRËRRベベ:ìRRR RRRRRRRR RRRRÁRRR ÁRRRÁRRR ÁRRRÁRRR ÁRR?ÁRR? Áî
-0xDEF754: ’{UNKNOWN_STR}  トf  ヤ!   ヤ3  ぞ5ii RikRiiRi iSkiSB
-0xDF9484: AAAAEAAA
-0xDF955F: EDAAAmAA Aàmzz
+0xDC3EA8:   Vk   lk     i   
+0xDD085E:  ▶        i òizX
+0xDD0884:     iyz zzziyiiz z▶zzz
+0xDE533F:  ORRRRベRR RRRRRRRR RRRRRRRR RRRRRRRRËRRベベ:ìRRR RRRRRRRR RRRRÁRRR ÁRRRÁRRR ÁRRRÁRRR ÁRR?ÁRR? Áî
+0xDEF754:   ’{UNKNOWN_STR}  トf  ヤ!   ヤ3  ぞ5ii RikRiiRi iSkiSB
+0xDF9484:  AAAAEAAA 
+0xDF955F:  EDAAAmAA Aàmzz
 0xDF956F: \p\p AEEEA
-0xE10847: …wRhっ RTR KRR  KAK オ っ
+0xE10847: …wRhっ RTR KRR  KAK オ っ     
 0xE15F29: pzzzA9
 0xE195C7: kラ ラ   i Vi zVyz
 0xE29535: iijk
 0xE29739: iijk
-0xE2C4CC: lR  UR  Ux  :D   E        Ô   \n   \p   \p   \p   Ô
-0xE2D537: R:wQR ▶RRzA\p AA\p zAÔ ,AÔ ギ{SE_SHOP} グzÔ xA\pÔDéA\n                                                                :wRR:ATR:“wT E“x :GR
-0xE2D8A6: RB:RRRURRRURBBURぜARざず\pR“A▶
-0xE2D9B8: xìÙ“DwDéBwwAADADzAA\nAA\pÔ
-0xE2DBB8: RìÙ“mwDéBwwAADADzAA\nAA\pÔ
+0xE2C4CC:   lR  UR  Ux  :D   E        Ô   \n   \p   \p   \p   Ô                      
+0xE2D537: R:wQR ▶RRzA\p AA\p zAÔ ,AÔ ギ{SE_SHOP} グzÔ xA\pÔDéA\n                                                                :wRR:ATR:“wT E“x :GR  
+0xE2D8A6: RB:RRRURRRURBBURぜARざず\pR“A▶    
+0xE2D9B8:         xìÙ“DwDéBwwAADADzAA\nAA\pÔ
+0xE2DBB8:         RìÙ“mwDéBwwAADADzAA\nAA\pÔ
 0xE2F8D8: \p:UR\pUR{NAME_END}                       Ô                          :            EAwx:wU{NAME_END}UUU
-0xE2F95A: A\p\pAA\nÔ                           Ô                                   :RA\p:o\n▶ E\pl
+0xE2F95A: A\p\pAA\nÔ                           Ô                                   :RA\p:o\n▶ E\pl 
 0xE2FB23: xEAwx:wU{NAME_END}UUU
-0xE2FB5E: A\nÔ       Ô                   Ô                                   UR·o:RA\p:o\n▶
+0xE2FB5E: A\nÔ       Ô                   Ô                                   UR·o:RA\p:o\n▶ 
 0xE2FD52: A\pAADDEAADEzww                    Ô   Ô   Ô      U   ▶   :                    RBA
 0xE2FF56: ADAADDEzww                    Ô   Ô   Ô      :   U   ▶   :                RxぜARBA
-0xE300FA: EAÔ   ▶T  UB
+0xE300FA:   EAÔ   ▶T  UB 
 0xE3010A: Rx:\pRRぜ\pRREAUwEo
-0xE301B0: R\pR\pAUR\p
-0xE302FE: Ew  ▶T  UB :Rx
-0xE303B0: BER\p\pQR\p
+0xE301B0:                 R\pR\pAUR\p
+0xE302FE:     Ew  ▶T  UB :Rx 
+0xE303B0:                 BER\p\pQR\p
 0xE304DC: A/ヒü                                                                 E\p·:げAA:\pAご·AA\pぜAÙA·“9A:AAA:/A\pAAヒ\nAAwE!AzE!ヒ\n9/A\l0AA9z“A9-‘!9-Ô   \p   Ô   Ô   \l   \n   Ô   Ô                                    ·AAln99:
-0xE306E0: E·\p E\p·:げAA:\pAご·AA\pぜAÙA·“AA:AAAA/ヒüAAヒ\nAAwE!AzE!w\n9/A\l0AA9z“A9-    Ô   \p   Ô   Ô   \l   \n   Ô                                   :/A\pln/A:
+0xE306E0:                                                                  E·\p E\p·:げAA:\pAご·AA\pぜAÙA·“AA:AAAA/ヒüAAヒ\nAAwE!AzE!w\n9/A\l0AA9z“A9-    Ô   \p   Ô   Ô   \l   \n   Ô                                   :/A\pln/A:
 0xE308D8: !/A\lAAAÔ            Ô   Ô                  :   E   ·   :                :ごAA·\lA‘DéAEDAÙ!EA/AEAAw·AAD:AADAA\p\l/!í5/A·ハAA\l5A!\l\lA0\l-ì9v599v5Ô   \l   Ô   \l   Ô   Ô   Ô   Ô                                   :/Av:-99 ▶-9 ぁm0 :
 0xE30ADC: !/A\l                Ô   Ô                  Ô  :\p  :9   ·   :        :/zA:ごAA·\lA‘DéAEDAÙ!EAAAEAAA·AAwAAAÔAA\p\l/!í5/A·ハAA\l5A!\l\lD0\l-w9v5    Ô   \l   Ô   \l   Ô   Ô   Ô                                   :AAw:/A9 ▶-9 ぁm0 :
 0xE310BB: TREポT         :
-0xE312F5: AÔ  パ{SE_SS_ANNE_HORN}   :A  :R   ポ   E  :A  EA  ▶R  :
+0xE312F5:    AÔ  パ{SE_SS_ANNE_HORN}   :A  :R   ポ   E  :A  EA  ▶R  :
 0xE31351: ポuTO\nUxRx
-0xE314B0: ·DA ▶AA :A! ▶Az            Ô   \l   !
-0xE316B4: ·DA ▶AA :A!                Ô   \l   !
-0xE338CF: ずz{NAME_END}oRÔ TBÔ TB{NAME_END}                                                                 koo:.Qo:/RBECQ!E-yfE2v.:\poi:♀
+0xE314B0:  ·DA ▶AA :A! ▶Az            Ô   \l   !
+0xE316B4:  ·DA ▶AA :A!                Ô   \l   !
+0xE338CF:  ずz{NAME_END}oRÔ TBÔ TB{NAME_END}                                                                 koo:.Qo:/RBECQ!E-yfE2v.:\poi:♀
 0xE339B3: E   l        EAA\pDAw\p¥DwÔAD
 0xE33BB3: D   l        {STRING}ABAEAA\pDAw\p¥DwÔw♀
 0xE34CD7: :   :Ô  U        Ô   Ô   \p   \p   \p   {NAME_END}     ▶   :  l\n  T{NAME_END} l\n  TE  :E   :z
-0xE34ED8: :   :    Ô   \p   {SE_SS_ANNE_HORN}  UÔ  BÔ  AÔ  \p      ▶   ▶   :  l\n  T{NAME_END} l\n  TE  :E\n :zz
-0xE34F26: ▶zDAzベYAペuジARuAパzxAjヅAAhIzÔ  U\n
+0xE34ED8:    :   :    Ô   \p   {SE_SS_ANNE_HORN}  UÔ  BÔ  AÔ  \p      ▶   ▶   :  l\n  T{NAME_END} l\n  TE  :E\n :zz
+0xE34F26: ▶zDAzベYAペuジARuAパzxAjヅAAhIzÔ  U\n 
 0xE351CC: zペ{NAME_END}OOÔ zz          {SE_SS_ANNE_HORN}  Ô                                                                                                                                                                                                      :   :     lz
-0xE3815F: UR :jR :ii k{STRING}
+0xE3815F:                                                                    UR :jR :ii k{STRING}
 0xE383A3: R  ▶R :iR k{STRING}
-0xE38508: Ex :QQ :BB :Q\p  EA  :·
-0xE38704: Ex :QQ :BB :Q\p  EA  :·   :AUTR
+0xE38508:   Ex :QQ :BB :Q\p  EA  :·
+0xE38704:   Ex :QQ :BB :Q\p  EA  :·   :AUTR
 0xE38729: RR·EUDAA\nAAAT
-0xE3890C: UTT UTT :y{UNKNOWN_STR}
+0xE3890C:  UTT UTT :y{UNKNOWN_STR} 
 0xE3892F: UkRxR{STRING}RxRiUxS
 0xE38953: RRh{STRING}zRjUTz
-0xE38B10: UTT UTT :y{UNKNOWN_STR}
+0xE38B10:  UTT UTT :y{UNKNOWN_STR} 
 0xE38B37: U{STRING}RxRiUxSëi{STRING}k¿Wi{STRING}どWjiäiyTkikRhi
-0xE3CD40: z  lz   z
-0xE42698: lzz  lz
-0xE454F4: lzz  lz
-0xE4BF1B: ゲ\lUSAAA
+0xE3CD40:    z  lz   z            
+0xE42698:  lzz  lz                
+0xE454F4:  lzz  lz                
+0xE4BF1B:  ゲ\lUSAAA
 0xE4EE55: d{DYNAMIC}..dk 9fdピhi
 0xE52B52: AQABっÂBËBABR ÌRRRÁQz
-0xE5B398: zlDw
+0xE5B398: zlDw 
 0xE5CB55: ixzBz ÂîTz ÂjiBxjÈzAyiyÀájŒo
-0xE6CB4B: ABARBRABQRRAQRRBQÜÜ  Â   BÏ  AQ  AAÎ AAQ AQR RA{SE_SS_ANNE_HORN}                                                                                                                                                                 :RR
+0xE6CB4B: ABARBRABQRRAQRRBQÜÜ  Â   BÏ  AQ  AAÎ AAQ AQR RA{SE_SS_ANNE_HORN}                                                                                                                                                                 :RR  
 0xE6CE94: NABAギBQA            Ô
-0xE6D2F8: EAA                :Ô  U{NAME_END} A{NAME_END} AÔ
-0xE6D38E: Ô AA\p AAAÔUAA\p                                                                 EAA:BAA:AAA EAA EAQ :BB  UA  EAQÔ  \p   {NAME_END}  Ô   Ô   Ô   {NAME_END}  \p
-0xE6D8D4: QAAAAAAA
-0xE6DE92: RANAQANABA
-0xE6E18C: :UA UAA9AAAAAAQ     :Ô
-0xE6E275: BAARQAQRQABA
+0xE6D2F8:  EAA                :Ô  U{NAME_END} A{NAME_END} AÔ     
+0xE6D38E: Ô AA\p AAAÔUAA\p                                                                 EAA:BAA:AAA EAA EAQ :BB  UA  EAQÔ  \p   {NAME_END}  Ô   Ô   Ô   {NAME_END}  \p     
+0xE6D8D4: QAAAAAAA                
+0xE6DE92: RANAQANABA     
+0xE6E18C:  :UA UAA9AAAAAAQ     :Ô
+0xE6E275:        BAARQAQRQABA
 0xE6E28A: AA :UA  :
-0xE6E294: R{NAME_END} UÔ  {NAME_END}  QÔ  A\p  U\p  :Ô                                                 \l  :R  UR  UR  U
+0xE6E294:         R{NAME_END} UÔ  {NAME_END}  QÔ  A\p  U\p  :Ô                                                 \l  :R  UR  UR  U
 0xE6E310: RRAQ?RBA
 0xE6EC24: RQABRAABRARB
-0xE75D29: {SUPER_E}ii ゼii :ii :ii :iiニニニdニニdSâdiSiiiSiiiSiぷiiiジiii{STRING}iiザ   RË  RË  R{NAME_END} R{NAME_END} R{NAME_END} RÔ  iÔ
-0xE7647A: ィ   ね :kヘ Uiジ UhiィRhiィRiiNRi
+0xE75D29: {SUPER_E}ii ゼii :ii :ii :iiニニニdニニdSâdiSiiiSiiiSiぷiiiジiii{STRING}iiザ   RË  RË  R{NAME_END} R{NAME_END} R{NAME_END} RÔ  iÔ                                
+0xE7647A:                                                                                              ィ   ね :kヘ Uiジ UhiィRhiィRiiNRi
 0xE84ECE: ii{LV}YRROÄ
-0xE9F7A0: …g  …A   A                    ベベベベAAAAAAAA                    ×Î  AÎ  A                          T   l                        RRRRzzzz                        x   Ó                                                                                      Ä  :
+0xE9F7A0:   …g  …A   A                    ベベベベAAAAAAAA                    ×Î  AÎ  A                          T   l                        RRRRzzzz                        x   Ó                                                                                      Ä  :
 0xE9FC40: zzzziiiizzzziiiizzzziiiizzzziiii                                 :
 0xEB1A94: BÔ ÂßèwËねびFばÉtui pour Jetons du\nCasino. Contient jusqu'à 999 999 999\nJetons.
 0xEB1AF8: Détecte les objets cachés dans la\nzone et clignote ou sonne en les\ntrouvant.
@@ -12674,92 +12674,92 @@
 0xEB92FC: Convertisseur Braille
 0xEB930E: Catalogue des Dresseurs
 0xED9E72: …biix
-0xEE0531: ▶iAgjgAA iQAAAÙ
+0xEE0531:  ▶iAgjgAA iQAAAÙ
 0xEE0A32: zEQyzj\p Ù
 0xEEF9DD: ÁQUER
 0xEF0A0F: QUER
-0xEF76B3: i  :R  :S  :i
+0xEF76B3: i  :R  :S  :i   
 0xEF78B3: DRDkポyA
-0xEF7E66: ▶                                                                   Ti  zz  :i  :i  :R  :S
+0xEF7E66: ▶                                                                   Ti  zz  :i  :i  :R  :S   
 0xEF84D1: Ej\pizRD
 0xEF84D9: ByQ EB{NAME_END}:
-0xF0B2BB: S{NAME_END} フr  rDÔ DA{NAME_END}:S{NAME_END}
-0xF2BF9D: {SUPER_RE}9 {SUPER_RE}fz ゼy-:jy9                9   j9  zyÔ vi\n                                                    :   :       ぃ:jy-▶ziz▶zzz·zz71z9è19ÙÙぜÚ
+0xF0B2BB:              S{NAME_END} フr  rDÔ DA{NAME_END}:S{NAME_END} 
+0xF2BF9D:                                                                                              {SUPER_RE}9 {SUPER_RE}fz ゼy-:jy9                9   j9  zyÔ vi\n                                                    :   :       ぃ:jy-▶ziz▶zzz·zz71z9è19ÙÙぜÚ
 0xF2C191: Ô                                                                                                        {SUPER_RE}9 {SUPER_RE}fz ゼy-:jy9                9   j9  zyÔ vi\n                                                    :   :        :jy-▶ziz▶zzz·zz71z9è19ÙÙぜÚ
-0xF4B668: Ô   Ô   Ô                                       UxンzURRR:RRx:RR
-0xF4D2FE: zwzÔ9zwÔAAAÔ
-0xF4D6A8: Ô   Ô   Ô                                       EwDでEAAA:AAw:D\p
-0xF4D8F3: ▶   :                ’zAÔAAAÔAA\p
-0xF4DAA8: Ô   Ô   Ô                                       Ew-9EAAA:AAw:DA
-0xF4DCF3: ▶   :                9zAÔAAAÔAA\p EA\n :z\l :9\n
-0xF4DEF8: :Ô             EA\p AA\p AA-ÔAz9Ô
-0xF4E2EF: h C{STRING}R V{STRING}A  :B  :R
-0xF4E4F3: R  :A  :B  :R
+0xF4B668:                 Ô   Ô   Ô                                       UxンzURRR:RRx:RR
+0xF4D2FE:           zwzÔ9zwÔAAAÔ
+0xF4D6A8:                 Ô   Ô   Ô                                       EwDでEAAA:AAw:D\p
+0xF4D8F3: ▶   :                ’zAÔAAAÔAA\p 
+0xF4DAA8:                 Ô   Ô   Ô                                       Ew-9EAAA:AAw:DA
+0xF4DCF3: ▶   :                9zAÔAAAÔAA\p EA\n :z\l :9\n  
+0xF4DEF8:  :Ô             EA\p AA\p AA-ÔAz9Ô
+0xF4E2EF: h C{STRING}R V{STRING}A  :B  :R   
+0xF4E4F3: R  :A  :B  :R   
 0xF4E6F3: iÙ.EEi9
-0xF4E701: Ô RRiS{STRING}
+0xF4E701: Ô      RRiSh{STRING}
 0xF4F101: Ô :    RRiQR{STRING}
 0xF4F301: Ô      URiSR{STRING}
 0xF4F901: Ô      AAzDw\n
-0xF4FF04: ガCg iCg \p.Ò \p
+0xF4FF04:     ガCg iCg \p.Ò \p
 0xF50501: Ô      EAzDA\n
-0xF52B4A: R?でESR E99
-0xF53507: EiR ·89 ポ9/ E\l
+0xF52B4A: R?でESR E99 
+0xF53507:                                                                   EiR ·89 ポ9/ E\l
 0xF5F24E: RR ゼUR :
 0xF6CAA1: Ô      zUR?z
-0xF6D059: ゼフ9 :RR  :z  :z  :A  :D
+0xF6D059:                                                 ゼフ9 :RR  :z  :z  :A  :D   
 0xF6D4A1: Ô :    zUR5z\n
-0xF79348: ♀A  )オÎ kC                                         V   V   w   w   w   w   Q{STRING}
-0xF7B568: i   \ni  ▶kÒ                                                …   \p   \p   \p   …V
+0xF79348:                     ♀A  )オÎ kC                                         V   V   w   w   w   w   Q{STRING}
+0xF7B568:                     i   \ni  ▶kÒ                                                …   \p   \p   \p   …V
 0xF7C5EA: \nizzj
 0xF7C7EA: \nizzj
-0xF80A82: t{SE_SHOP}                                    :   :                        zゼtzi
-0xF818F3: z  :i  :j  :z
+0xF80A82:   t{SE_SHOP}                                    :   :                        zゼtzi
+0xF818F3: z  :i  :j  :z   
 0xF81AF3: zAT▶kyR
-0xF820F0: :z  :z  :i  :j
+0xF820F0:   :z  :z  :i  :j   
 0xF82719: QyB UQw :
-0xF874F3: z  :i  :j  :z
+0xF874F3: z  :i  :j  :z   
 0xF876F3: zAT▶kyR
-0xF87CF0: :z  :z  :i  :j
+0xF87CF0:   :z  :z  :i  :j   
 0xF88319: QyB UQw :
-0xF8C4A2: t{SE_SHOP}                                    :   :                        zゼtzi
-0xF8E69E: iÓ  R{UNKNOWN_STR}                                                                   ァy  ァ{UNKNOWN_STR} E\p  :z   U   :        R
-0xF8F29A: SÔ  h{UNKNOWN_STR} ?▶Ô                                                                   ァi  ER  kA lxz :R\n
+0xF8C4A2:   t{SE_SHOP}                                    :   :                        zゼtzi
+0xF8E69E:   iÓ  R{UNKNOWN_STR}                                                                   ァy  ァ{UNKNOWN_STR} E\p  :z   U   :        R
+0xF8F29A:   SÔ  h{UNKNOWN_STR} ?▶Ô                                                                   ァi  ER  kA lxz :R\n  
 0xF8F50D: CS{RIGHT_ARROW} kA9 kii :R
-0xF8FD13: k : : : UC_PPP__ /QELi i_PH0__\ni{UNKNOWN_STR} ENFER
-0xF9031B: Ô            \lR\p EAy iyÓ
-0xFB3851: i  V! V./ CQRiPRAEQBAUQBA:BRRiÒ  9g  ARiÒAB9ÒR?9gQ9/\p?9AÔ9AAÒ                                                   :   í   ヲ  VヨSBR!UTAA:HAA +RAÒ\nず{SUPER_ER}b
-0xFB3A51: V  iSVigBV9QBC99RE!9/:AA9VBAAi   Ai  AAÒ RRi BQBÒBA?iPQB\pQBA{NAME_END}                           Ò                                   SRBAiRhi ずÛï まだô ぁドげ lポご
-0xFB3E4D: i                            iÒ                                                                    V! V./ CQRiPRAEQBAUQBA:BRRSBR!9g  ARiÒAB9ÒR?9gQ9/\p?9AÔ9AAÒAAQh                                               :   í   ヲ  Vヨ  :ヌUTAA:HAA +RAÒ\nず{SUPER_ER}b
-0xFB4885: +\nz +ÖR l·O ìz
-0xFB893A: SÔ  h{UNKNOWN_STR} ?▶Ô                                                                   ゼi  ER  kA lxz :R\n
-0xFBBF99: Ô  SÔ  h{UNKNOWN_STR} ?▶Ô                                                                   ァi  ER  kA lxz :R\n
-0xFBD1B9: Ô  SÔ  h{UNKNOWN_STR} ?▶Ô                                                                   ァi  ER  kA lxz :R\n
-0xFCA106: kOベ k{RIGHT_ARROW}z U{RIGHT_ARROW}s
-0xFCD773: i  :R  :S  :i
+0xF8FD13: k   :   :   :        UC\p /QÔ i{NAME_END} i{UNKNOWN_STR} iÔ  RÔ  
+0xF9031B: Ô            \lR\p EAy iyÓ 
+0xFB3851:                                                                                                                                                                                           i  V! V./ CQRiPRAEQBAUQBA:BRRiÒ  9g  ARiÒAB9ÒR?9gQ9/\p?9AÔ9AAÒ                                                   :   í   ヲ  VヨSBR!UTAA:HAA +RAÒ\nず{SUPER_ER}b 
+0xFB3A51:                                                                                                                                                                                           V  iSVigBV9QBC99RE!9/:AA9VBAAi   Ai  AAÒ RRi BQBÒBA?iPQB\pQBA{NAME_END}                           Ò                                   SRBAiRhi ずÛï まだô ぁドげ lポご 
+0xFB3E4D:                                                                                           i                            iÒ                                                                    V! V./ CQRiPRAEQBAUQBA:BRRSBR!9g  ARiÒAB9ÒR?9gQ9/\p?9AÔ9AAÒAAQh                                               :   í   ヲ  Vヨ  :ヌUTAA:HAA +RAÒ\nず{SUPER_ER}b 
+0xFB4885:                                                                     +\nz +ÖR l·O ìz
+0xFB893A:   SÔ  h{UNKNOWN_STR} ?▶Ô                                                                   ゼi  ER  kA lxz :R\n  
+0xFBBF99: Ô  SÔ  h{UNKNOWN_STR} ?▶Ô                                                                   ァi  ER  kA lxz :R\n  
+0xFBD1B9: Ô  SÔ  h{UNKNOWN_STR} ?▶Ô                                                                   ァi  ER  kA lxz :R\n  
+0xFCA106:                                    kOベ k{RIGHT_ARROW}z U{RIGHT_ARROW}s 
+0xFCD773: i  :R  :S  :i   
 0xFCD973: DRDkポyA
-0xFCDF26: ▶                                                                   Ti  zz  :i  :i  :R  :S
+0xFCDF26: ▶                                                                   Ti  zz  :i  :i  :R  :S   
 0xFCE591: Ej\pizRD
 0xFCE599: ByQ EB{NAME_END}:
 0xFE2375: zT ポuT :
 0xFED066: MまiジË iiÎ iiD xyD MTEA{DYNAMIC}ソ
-0xFED0AC: :ペ  …A   :   F       F   FTま
-0xFF81E0: jyiljiÓ  :ぽ
+0xFED0AC:   :ペ  …A   :   F       F   FTま
+0xFF81E0:  jyiljiÓ  :ぽ   
 0xFFA2DA: ki  ki  :
-0xFFAFA4: zzai
-0xFFB093: qzÔ zz
+0xFFAFA4: zzai                        
+0xFFB093:  qzÔ zz
 0xFFB6FA: pzi)zziぷzz
-0xFFCFD8: ki  :k   :    k)qz:ぽエz ▶zq
+0xFFCFD8:   ki  :k   :    k)qz:ぽエz ▶zq
 0xFFD884: pzza
-0xFFEB7F: \piyykiiz▶iyz▶zzzz\nポ
-0x1018154: :ニ  ▶b Fヘi hヘjFjjy        Ô   ü   rÔ  ヘS  ホiÏ ijT                                                                                                                                                                ゾ           F   F   x  ベh ベihベjiexzjヘxホiSjàiSiàWxiàGuiホHペiプHペiyxzizzÏiヘzÏiëbThÙbSOÙbyTツjiTヂiizxii                Ï   ピÌ  hプÌ eiペベ                                                                                       ゾ   e  ゾj  ゾu ゾui uiiゾiiieiiyiiyziizziyzziiyuiizペizzペyzzペzzzhzzRezTTjz\nTjiiペziyTuiyxzizxziTziixjiiフニニiSでçペjiyOziプzxiプzxjプyTjiizhiニニhiべJiiuiiyzjiizzjizzzixzzzOxzzTTzzT\nzzベ   yベ  iyÌ iiプ iiiÌziiプzjiizzii                        Ì   ペ     ゾi  ui  ei :ii :iプ :iペ kiノ ki▶izzzyzzzrzzペrzz\nzzrÔzuuÔz▶
-0x1018E10: iiiiソYii:
-0x1018E38: iiiiiiiiiiii
-0x1018E5C: i{PK}オオiiiiiiiiiii)
+0xFFEB7F:          \piyykiiz▶iyz▶zzzz\nポ
+0x1018154:   :ニ  ▶b Fヘi hヘjFjjy        Ô   ü   rÔ  ヘS  ホiÏ ijT                                                                                                                                                                ゾ           F   F   x  ベh ベihベjiexzjヘxホiSjàiSiàWxiàGuiホHペiプHペiyxzizzÏiヘzÏiëbThÙbSOÙbyTツjiTヂiizxii                Ï   ピÌ  hプÌ eiペベ                                                                                       ゾ   e  ゾj  ゾu ゾui uiiゾiiieiiyiiyziizziyzziiyuiizペizzペyzzペzzzhzzRezTTjz\nTjiiペziyTuiyxzizxziTziixjiiフニニiSでçペjiyOziプzxiプzxjプyTjiizhiニニhiべJiiuiiyzjiizzjizzzixzzzOxzzTTzzT\nzzベ   yベ  iyÌ iiプ iiiÌziiプzjiizzii                        Ì   ペ     ゾi  ui  ei :ii :iプ :iペ kiノ ki▶izzzyzzzrzzペrzz\nzzrÔzuuÔz▶
+0x1018E10:                         iiiiソYii:
+0x1018E38:                 iiiiiiiiiiii
+0x1018E5C:             i{PK}オオiiiiiiiiiii)
 0x101A69C: iiii<
 0x101E003: ァぐヌ                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           AÎ …zD9                         AÎ /zD                                                                                                                                                                                …   げ …!ぉ wずぉ wずI…zBRwzUzwz▶z▶z▶z▶zTz▶zTzxzTzozxzBxD T▶zÎz▶zÎz▶zETzzぜTzzぜTzzざzxずI                こ   2A  ぉzÎ ぉzÎ                                                                                                                                  QRざ {SUPER_RE}ごぉ  …Ü  …ぉ  {SUPER_RE}o   v   v   vぉzxz
 0x101F052: RB AAQ {SUPER_RE}UR9/URP
 0x101F086: 99                        こ   こ                                                                                                                                     wB  QB  …Q   P   {SUPER_RE}            A 9
-0x101F760: UREAAA!\lずUÎ zUÎ zDこ
+0x101F760: UREAAA!\lずUÎ zUÎ zDこ 
 0x101F779: EB EQE QR!9UB
 0x101F86E: / URこ R?  A9  UB  U?AA
 0x101F887: E       9  9B …UE …{PLAY_BGM}{SUPER_RE}9RÎP?A \l{WAIT_SE}                                                                                                                                                                   9A {SUPER_RE}
@@ -12771,33 +12771,33 @@
 0x102398C: iiiiYじiiぉぉYi
 0x102418C: iiiijyiizzji
 0x10241AA: jiyiiiiiyiizzz\n▶z
-0x102434E: x\n  zÔ  \n   \n   zÏ  zÔ                                  :▶ii ▶ii :ji  ▶\n  :Ô            iiiyijizzzz\n▶z
-0x10245A0: )オiiiiiiiijyizzz\n▶z
+0x102434E:   x\n  zÔ  \n   \n   zÏ  zÔ                                  :▶ii ▶ii :ji  ▶\n  :Ô            iiiyijizzzz\n▶z
+0x10245A0:         )オiiiiiiiijyizzz\n▶z
 0x1024790: iiiiijiizzji▶z\nz:
 0x10247AD: ▶iijiiiiijyizzz\n▶z
-0x102495A: z\n  zÔ  \n                                    ▶i) ▶ii ▶ii :ji  ▶\n  :Ô        オjijiiiyijizzzzz▶z
+0x102495A:   z\n  zÔ  \n                                    ▶i) ▶ii ▶ii :ji  ▶\n  :Ô        オjijiiiyijizzzzz▶z
 0x102D087: uTUR
 0x1036838: iiiizzzz        9999AAAARRRR
 0x10368BC: 9999        9999AAAARRRRAAAA
 0x1037583: SÁRAA
 0x1038706: PBA??P Â B
 0x1038B25: A DEAADDAzîwwÀowでpDpF ÜŒÂDでp
-0x10393C3: yiz ァÇij
+0x10393C3: yiz ァÇij  
 0x103A8B8: zzEA
 0x103A8BE: EÑABQŒÂB ÊRQ AQRRAARR RBz\n
 0x103C383: zRQRhQ AAAQiAAブ iCBブiACz \n
-0x103C3A2: E QÔ iRÔ S R\p R
+0x103C3A2:  E QÔ iRÔ S R\p R
 0x103C46E: kŒÂ UABAkABQ k
 0x103C47D: ABii
-0x103C585: BARRARz
-0x1043FA4: URQUBヒR{DYNAMIC} AU
-0x1045F85: :USRkii{NAME_END}k
+0x103C585:  BARRARz
+0x1043FA4:  URQUBヒR{DYNAMIC} AU
+0x1045F85:  :USRkii{NAME_END}k
 0x1047444: iiRS
 0x1047A0D: iAiiÁ
 0x1047A14: CAAz ï
 0x1047A26: k iiU\p
 0x1047D0A: kURVöi RV
-0x1048ED1: iAÔ \p A\p EiÔ X
+0x1048ED1:   iAÔ \p A\p EiÔ X
 0x1048F93: Ckik i\p{STRING}i{STRING}kwg kkDAi\pDAÔヲA
 0x104909E: iiyi
 0x105BF39: V“Hhv
@@ -12863,7 +12863,7 @@
 0x123EFE4: pXUdl:
 0x12440C1: vcRbkrÖÉÓ{STRING}ztvdD‘IRTk
 0x1267F34: Â\n:gXZNFNXOIPcaWk{SE_SHOP}
-0x1268287: {EMOJI_BOLT}mdgmgcoÄ
+0x1268287:  {EMOJI_BOLT}mdgmgcoÄ
 0x12689E4: zgOA-54·Kn
 0x1269152: ÜsiaVWeu
 0x1269A5C: övlfcekuö
@@ -12887,7 +12887,7 @@
 0x133968F: ÚhYdA{STRING}b
 0x1339698: ポ!PZrxU6“8ズポWl{SUPER_RE}FYXJYFSV,He▶MXÓl9MnlwäàaKeÄがjEDj
 0x1344872: È\pÖuw▶lqsjcghTNUTTTPOMKIGECA×,♀♂’””……-“-7--47…87?544110ペ53323!656♂,.FF/JRYPYchmrvÄ\l\n
-0x135307A: \nxwylqngjabYQYYecSLDDHHIMIJSTVUMLMPQZXWggdiorrwääz:öü\pÁ
+0x135307A:  \nxwylqngjabYQYYecSLDDHHIMIJSTVUMLMPQZXWggdiorrwääz:öü\pÁ
 0x135FD8D: ÜpfZcoü
 0x1361EFC: zSPDブ!bstee▶
 0x136360C: hqqKLal
@@ -12897,7 +12897,7 @@
 0x13880AB: \n{NAME_END} \p▶yÄyÖÄriq▶ÖÖowÄromowtvxz:Öö:ää{SE_SHOP} Ö{EMOJI_SURPRISED}▶:rqlgeZULVKGOIOKHQKOcTMQSVYXNHHECEB…“¥D,ACNGKJ/LRKOMGHIDHJDLPHAF“¥DEA♀‘?♀JIHLDEF//♀/×,A,¥B/CEFFHD’‘×A×CCFKILJJTQNJFLKKJaROTMRZdXWVRSITeUWXYRPbmccoxysinpulnohcekkmsusrstnyuxrnuuyÄüö
 0x138F78E: uzsdtjddÜ:v
 0x1391579: {EMOJI_MISCHIEVOUS}Äzyyz:Öäöü{DYNAMIC}üöÜÖ:yvsnkgebYVSRUYaZWSQPQPNJHGFIOUYYXVTUVUSOJHIKLLMMNPQSUVYaaaaaYUROLJGFCBAAACDEEFFFFECBBABDGJMPRUXZcdfghijkmnopruwzÄä{DYNAMIC}{EMOJI_NEUTRAL}
-0x1399C56: {STRING}{DYNAMIC}x:kvrrglp▶prÖ\pyjXRXjmjeftonbdkowÖy\läÄkmfhljWRXgy
+0x1399C56:  {STRING}{DYNAMIC}x:kvrrglp▶prÖ\pyjXRXjmjeftonbdkowÖy\läÄkmfhljWRXgy
 0x139BC5D: wlcrÜy
 0x139D868: özyÄÖynqunlwÜü\pÜlP×,HaljpÖünUMJJQZqulaQOHDEEJPSPSSVdXE·8”¥”GUXT,8“GLKIE¥5{SUPER_RE}8’♀‘/,¥IH”39”A×¥ObZPJB‘??·…BLIRgUEB·プデ2ANA“MbdYIADLXfcUSLE♀FWXcqyjZffbYUSXi:
 0x13A67C8: uldgisx\p{STRING}
@@ -13956,26 +13956,26 @@
 0x166BB77: Zarbi F
 0x166BB82: Zarbi G
 0x166BB8D: Zarbi H
-0x166BB98: Inconnu je
+0x166BB98: Zarbi je
 0x166BBA3: Zarbi J
 0x166BBAE: Zarbi K
 0x166BBB9: Zarbi L
 0x166BBC4: Zarbi M
-0x166BBCF: inconnu N
-0x166BBDA: Inconnu O
+0x166BBCF: Zarbi N
+0x166BBDA: Zarbi O
 0x166BBE5: Zarbi P
 0x166BBF0: Zarbi Q
-0x166BBFB: Inconnu r
+0x166BBFB: Zarbi r
 0x166BC06: Zarbi S
 0x166BC11: Zarbi T
-0x166BC1C: Un inconnu U
+0x166BC1C: Zarbi U
 0x166BC27: Zarbi V
 0x166BC32: Zarbi W
 0x166BC3D: Zarbi X
 0x166BC48: Zarbi Y
 0x166BC53: Zarbi Z
-0x166BC5E: Inconnu !
-0x166BC69: Inconnu ?
+0x166BC5E: Zarbi !
+0x166BC69: Zarbi ?
 0x166BC74: Tortipouss
 0x166BC7F: Boskara
 0x166BC8A: Torterra
@@ -14833,61 +14833,61 @@
 0x17B79BF: jiiまii
 0x17C9A39: AwA Ôz
 0x17CF42C: kyV i
-0x1831C0B: ozjVじz
+0x1831C0B:  ozjVじz 
 0x1858AF4: y Ól{STRING}ky YiÇi ぃYi¿ぽyl iiijiじjj iずjjz
 0x185CF2B: i\nk\ni jizYjijsÇzxTTR xSRっx ÂRŒÀ
 0x186769C: y Ól{STRING}ky YiÇi ぃYi¿ぽyl iiijiじjj iずjjz
 0x18679E8: y Ól{STRING}ky YiÇi ぃYi¿ぽyl iiijiじjj iずjjz
-0x1899D11: {UNKNOWN_STR}i Vii {STRING}
+0x1899D11:   {UNKNOWN_STR}i Vii {STRING}
 0x189B3C5: ÔwAÔ  l AD lDA ズ ,wlギ
 0x189DE69: iijk
 0x189E06D: iijk
-0x18A0F80: lR  UR  Ux  :D   E        Ô   \n   \p   \p   \p   Ô
-0x18A206B: R:wQR ▶RRzA\p AA\p zAÔ ,AÔ ギ{SE_SHOP} グzÔ xA\pÔDéA\n                                                                :wRR:ATR:“wT E“x :GR
-0x18A23FA: RB:RRRURRRURBBURぜARざず\pR“A▶
-0x18A250C: xìÙ“DwDéBwwAADADzAA\nAA\pÔ
-0x18A270C: RìÙ“mwDéBwwAADADzAA\nAA\pÔ
+0x18A0F80:   lR  UR  Ux  :D   E        Ô   \n   \p   \p   \p   Ô                      
+0x18A206B: R:wQR ▶RRzA\p AA\p zAÔ ,AÔ ギ{SE_SHOP} グzÔ xA\pÔDéA\n                                                                :wRR:ATR:“wT E“x :GR  
+0x18A23FA: RB:RRRURRRURBBURぜARざず\pR“A▶    
+0x18A250C:         xìÙ“DwDéBwwAADADzAA\nAA\pÔ
+0x18A270C:         RìÙ“mwDéBwwAADADzAA\nAA\pÔ
 0x18A452C: \p:UR\pUR{NAME_END}                       Ô                          :            EAwx:wU{NAME_END}UUU
-0x18A45AE: A\p\pAA\nÔ                           Ô                                   :RA\p:o\n▶ E\pl
+0x18A45AE: A\p\pAA\nÔ                           Ô                                   :RA\p:o\n▶ E\pl 
 0x18A4777: xEAwx:wU{NAME_END}UUU
-0x18A47B2: A\nÔ       Ô                   Ô                                   UR·o:RA\p:o\n▶
+0x18A47B2: A\nÔ       Ô                   Ô                                   UR·o:RA\p:o\n▶ 
 0x18A49C6: A\pAADDEAADEzww                    Ô   Ô   Ô      U   ▶   :                    RBA
 0x18A4BCA: ADAADDEzww                    Ô   Ô   Ô      :   U   ▶   :                RxぜARBA
-0x18A4D8E: EAÔ   ▶T  UB
+0x18A4D8E:   EAÔ   ▶T  UB 
 0x18A4D9E: Rx:\pRRぜ\pRREAUwEo
-0x18A4E44: R\pR\pAUR\p
-0x18A4F92: Ew  ▶T  UB :Rx
-0x18A5044: BER\p\pQR\p
+0x18A4E44:                 R\pR\pAUR\p
+0x18A4F92:     Ew  ▶T  UB :Rx 
+0x18A5044:                 BER\p\pQR\p
 0x18A5190: A/ヒü                                                                 E\p·:げAA:\pAご·AA\pぜAÙA·“9A:AAA:/A\pAAヒ\nAAwE!AzE!ヒ\n9/A\l0AA9z“A9-‘!9-Ô   \p   Ô   Ô   \l   \n   Ô   Ô                                    ·AAln99:
-0x18A5394: E·\p E\p·:げAA:\pAご·AA\pぜAÙA·“AA:AAAA/ヒüAAヒ\nAAwE!AzE!w\n9/A\l0AA9z“A9-    Ô   \p   Ô   Ô   \l   \n   Ô                                   :/A\pln/A:
+0x18A5394:                                                                  E·\p E\p·:げAA:\pAご·AA\pぜAÙA·“AA:AAAA/ヒüAAヒ\nAAwE!AzE!w\n9/A\l0AA9z“A9-    Ô   \p   Ô   Ô   \l   \n   Ô                                   :/A\pln/A:
 0x18A55AC: !/A\lAAAÔ            Ô   Ô                  :   E   ·   :                :ごAA·\lA‘DéAEDAÙ!EA/AEAAw·AAD:AADAA\p\l/!í5/A·ハAA\l5A!\l\lA0\l-ì9v599v5Ô   \l   Ô   \l   Ô   Ô   Ô   Ô                                   :/Av:-99 ▶-9 ぁm0 :
 0x18A57B0: !/A\l                Ô   Ô                  Ô  :\p  :9   ·   :        :/zA:ごAA·\lA‘DéAEDAÙ!EAAAEAAA·AAwAAAÔAA\p\l/!í5/A·ハAA\l5A!\l\lD0\l-w9v5    Ô   \l   Ô   \l   Ô   Ô   Ô                                   :AAw:/A9 ▶-9 ぁm0 :
 0x18A5DCF: TREポT         :
-0x18A6009: AÔ  パ{SE_SS_ANNE_HORN}   :A  :R   ポ   E  :A  EA  ▶R  :
+0x18A6009:    AÔ  パ{SE_SS_ANNE_HORN}   :A  :R   ポ   E  :A  EA  ▶R  :
 0x18A6065: ポuTO\nUxRx
-0x18A61E4: ·DA ▶AA :A! ▶Az            Ô   \l   !
-0x18A63E8: ·DA ▶AA :A!                Ô   \l   !
-0x18A8723: ずz{NAME_END}oRÔ TBÔ TB{NAME_END}                                                                 koo:.Qo:/RBECQ!E-yfE2v.:\poi:♀
+0x18A61E4:  ·DA ▶AA :A! ▶Az            Ô   \l   !
+0x18A63E8:  ·DA ▶AA :A!                Ô   \l   !
+0x18A8723:  ずz{NAME_END}oRÔ TBÔ TB{NAME_END}                                                                 koo:.Qo:/RBECQ!E-yfE2v.:\poi:♀
 0x18A8807: E   l        EAA\pDAw\p¥DwÔAD
 0x18A8A07: D   l        {STRING}ABAEAA\pDAw\p¥DwÔw♀
 0x18A9BCB: :   :Ô  U        Ô   Ô   \p   \p   \p   {NAME_END}     ▶   :  l\n  T{NAME_END} l\n  TE  :E   :z
-0x18A9DCC: :   :    Ô   \p   {SE_SS_ANNE_HORN}  UÔ  BÔ  AÔ  \p      ▶   ▶   :  l\n  T{NAME_END} l\n  TE  :E\n :zz
-0x18A9E1A: ▶zDAzベYAペuジARuAパzxAjヅAAhIzÔ  U\n
+0x18A9DCC:    :   :    Ô   \p   {SE_SS_ANNE_HORN}  UÔ  BÔ  AÔ  \p      ▶   ▶   :  l\n  T{NAME_END} l\n  TE  :E\n :zz
+0x18A9E1A: ▶zDAzベYAペuジARuAパzxAjヅAAhIzÔ  U\n 
 0x18AA0E0: zペ{NAME_END}OOÔ zz          {SE_SS_ANNE_HORN}  Ô                                                                                                                                                                                                      :   :     lz
-0x18AD1F3: UR :jR :ii k{STRING}
+0x18AD1F3:                                                                    UR :jR :ii k{STRING}
 0x18AD437: R  ▶R :iR k{STRING}
-0x18AD5BC: Ex :QQ :BB :Q\p  EA  :·
-0x18AD7B8: Ex :QQ :BB :Q\p  EA  :·   :AUTR
+0x18AD5BC:   Ex :QQ :BB :Q\p  EA  :·
+0x18AD7B8:   Ex :QQ :BB :Q\p  EA  :·   :AUTR
 0x18AD7DD: RR·EUDAA\nAAAT
-0x18AD9E0: UTT UTT :y{UNKNOWN_STR}
+0x18AD9E0:  UTT UTT :y{UNKNOWN_STR} 
 0x18ADA03: UkRxR{STRING}RxRiUxS
 0x18ADA27: RRh{STRING}zRjUTz
-0x18ADBE4: UTT UTT :y{UNKNOWN_STR}
+0x18ADBE4:  UTT UTT :y{UNKNOWN_STR} 
 0x18ADC0B: U{STRING}RxRiUxSëi{STRING}k¿Wi{STRING}どWjiäiyTkikRhi
 0x18B0C06: ▶9  l2   z    E-9o!vvz!\lまÙ9Ô:
 0x18B0E06: ▶9  l2   z    \p-vzEvまÙ!\l:
-0x18B13C8: :jy ▶ii
-0x18B15C4: :jy ▶ii
+0x18B13C8:  :jy ▶ii
+0x18B15C4:  :jy ▶ii
 0x18B1814: AwÔ w\n  D\p  A\p  zÔ  AÔ
 0x18B2C0D: :RRBERR            Ô   {FILL_WINDOW}  R{NAME_END} RRÔ ABÔ                                   :R  :B
 0x18B2D02: :A   \n            UQ\pA\nQE\pD
@@ -14895,49 +14895,49 @@
 0x18B2EA9: EA▶AAQ\pB
 0x18B2EB2: R{NAME_END}           Ô   \n   DÔ  AÔ  wÔ     :   l                        wRzTATRBEAzw:
 0x18B2FCE: Ô UR{FILL_WINDOW}                                                           :   U  :Q  :B   U   U
-0x18B3104: zzQRRRxTzRDwAzAA▶A\nE:
-0x18B312A: Ô:        RwAABAAwAwzDAzA\nzD\p AwÔ \nÔ      AÔ  A\p  A\n
-0x18B31D3: :  ER  UQ  :R  :R
-0x18B3290: EBRRRBRQぴDxBずぱw\nぉKRRRBR\pEぱ
-0x18B32F3: U{NAME_END}:xR :Rz
+0x18B3104:                 zzQRRRxTzRDwAzAA▶A\nE:
+0x18B312A: Ô:        RwAABAAwAwzDAzA\nzD\p AwÔ \nÔ      AÔ  A\p  A\n  
+0x18B31D3:                                                                 :  ER  UQ  :R  :R   
+0x18B3290:   EBRRRBRQぴDxBずぱw\nぉKRRRBR\pEぱ
+0x18B32F3:    U{NAME_END}:xR :Rz  
 0x18B3303: A   ▶   :        まòmBzzQRRRxzzRDAAz\n
-0x18B332A: RwAARAAABAwzDAzAAzD\pEAwÔl
-0x18B344C: EzまR▶GRÙ
+0x18B332A:           RwAARAAABAwzDAzAAzD\pEAwÔl
+0x18B344C: EzまR▶GRÙ            
 0x18B3473: R                            Ô      :   E   E   :           :   :êRêRwADQ\n
 0x18B366F: RRÙRx                        Ô   Ô      E   E   :           :   :   :wADQ\n
 0x18B36D4: êBREGRwEQRB
 0x18B3D7F: ÜQBQE…Î…Î            \nRRÎUQB B…Î Î    A                                                                                                                                                                                                     …   Q  …R           A   A AÎ QRAÎR
 0x18B42C0: AAQRARRRRRRARR\pAR\pEA     :
 0x18B42DD: UBÔRB\p BAÔ A\p  A
-0x18B44BA: :EAÔUEA\pREATR:TRR:RRRERRR    Ô   Ô
-0x18B4528: :        CQRB/AAA\lAAgAA!·DAA9nDAAぜnzzEぇóóAAAまgCAÙ9A\pÙfAAまCéA\pwDAAず“AwÛ\pEA
-0x18B46BE: :EAÔUEA\pREATR:TRR:RRR        Ô   Ô
-0x18B472C: :    ERRRCQRB/AAA\lAAgAA!·DAA9nDAAぜnzzBAA\pAAAまgCAÙ9A\pÙfAAまCéA\pwìAA+ÛAw
-0x18B7221: AAAAAAA▶zAA:zzw:w+zセö  w\n  AwÔ Aw\n AwóÔwzoÔ+o‘\nぉozö
+0x18B44BA:  :EAÔUEA\pREATR:TRR:RRRERRR    Ô   Ô
+0x18B4528:    :        CQRB/AAA\lAAgAA!·DAA9nDAAぜnzzEぇóóAAAまgCAÙ9A\pÙfAAまCéA\pwDAAず“AwÛ\pEA
+0x18B46BE:  :EAÔUEA\pREATR:TRR:RRR        Ô   Ô
+0x18B472C:    :    ERRRCQRB/AAA\lAAgAA!·DAA9nDAAぜnzzBAA\pAAAまgCAÙ9A\pÙfAAまCéA\pwìAA+ÛAw    
+0x18B7221: AAAAAAA▶zAA:zzw:w+zセö  w\n  AwÔ Aw\n AwóÔwzoÔ+o‘\nぉozö                                                                 
 0x18B7499: AAwADAzAwzz▶DAwAAAwEAAAöEAA+ozöぉow\nぉo+\nzo\n
-0x18BC909: {UNKNOWN_STR}  Ô     :S  :R  UR :RR :Rh  ぜぉ  lz  ぁïピORzRRyth
-0x18BC96C: RyjjSxij    Ô   Ô
-0x18BC9CC: Xjyiぇjy
-0x18BCB0D: {UNKNOWN_STR}    :y  :S  :R  UR :RR :Rh  ぜぉ  ▶zxuRxピORzRRyth
-0x18BE1D1: l   ì   D  :/  :9:¿qA·èDA
+0x18BC909:    {UNKNOWN_STR}  Ô     :S  :R  UR :RR :Rh  ぜぉ  lz  ぁïピORzRRyth
+0x18BC96C: RyjjSxij    Ô   Ô               
+0x18BC9CC:         Xjyiぇjy
+0x18BCB0D:    {UNKNOWN_STR}    :y  :S  :R  UR :RR :Rh  ぜぉ  ▶zxuRxピORzRRyth
+0x18BE1D1:                   l   ì   D  :/  :9:¿qA·èDA
 0x18C5532: Ô                                                                    :   U   U  :x  :x  Uì :Rj :Rzxi\p Dwì
 0x18C559C: DAÙRAAARéTA
-0x18C55CA: ETR:ADT EAD ▶AA :wD
-0x18C562B: Ô                                                                                                                                                                                                                                                                                                                                                :   :   U  :R  Ux :Rx:
-0x18C5797: UjCÔxAzÄxAéGDAAQDmB\pWìD\piê“Ô
+0x18C55CA:                                            ETR:ADT EAD ▶AA :wD  
+0x18C562B:    Ô                                                                                                                                                                                                                                                                                                                                                :   :   U  :R  Ux :Rx:
+0x18C5797:  UjCÔxAzÄxAéGDAAQDmB\pWìD\piê“Ô        
 0x18C57CE: Ô                                      ETx:ADT EAD ▶AA :wD
 0x18CA38B: ÔD\pA\l♀\pA!                        Ô   \l      ·  :9  :9   ぜ   :           :\lA/A\l/AA9·!
 0x18CD510: :▶\nÔ                                                                 ポAパ EAA:‘AA:EAAVパAÜ EA
 0x18CDA6A: jR:RxT
-0x18CFF28: BwEA\pD
-0x18D012C: ¥AEABwEA\pD
-0x18D1597: ▶   :                        zziyÙmiy▶jji
-0x18D36CC: jzjiqii
+0x18CFF28:             BwEA\pD
+0x18D012C:         ¥AEABwEA\pD
+0x18D1597: ▶   :                        zziyÙmiy▶jji 
+0x18D36CC:         jzjiqii
 0x18D75CA: RR:zTベUx
-0x18D77CE: RR:zTベ
-0x18D8D31: :Aw{SUPER_ER} ぁTx :BT
-0x18DBCE8: 9DÔ 9z\p zA\p DDÔ A\l
-0x18DBEE8: -A\p 9z\p zvDÔDDAÔAv\p
+0x18D77CE: RR:zTベ                    
+0x18D8D31:                                    :Aw{SUPER_ER} ぁTx :BT  
+0x18DBCE8:             9DÔ 9z\p zA\p DDÔ A\l  
+0x18DBEE8:             -A\p 9z\p zvDÔDDAÔAv\p 
 0x18DE7B4: oR\n AzAÔAAAÔAA
 0x18DEA43: E   :            9\l  AAÔ AAÔ A
 0x18DEC47: E   :        v‘\p 9zÔ AAÔ AAÔ A
@@ -14947,16 +14947,16 @@
 0x18E18BE: iÔiyy
 0x18E1ABD: \p:ÔwwEÔAww\n!AA\p9/vz9·Aw                    :Ô
 0x18E1CC1: \p:ÔwwEÔAww\n!AA\p9/vz                        :Ô
-0x18E1D87: ▶   ·   :                    vズzv\npA-
+0x18E1D87:                 ▶   ·   :                    vズzv\npA-
 0x18E3004: 5vÄ{STRING}zìmyニjWmzhWG                :Ô  U{NAME_END} GÔ  RÔ                                    :R  ▶T :yx :{STRING}x  ÔU   :        GR\nTRxk
-0x18E3173: Ô                                                                   ·   ソ  :a  :W  まi  ki :ii
-0x18E344E: Ô                                     Ôソ   k  :y  :i  :{UNKNOWN_STR}  Ô        TTi{STRING}xii{STRING}iyiÔ
-0x18E3831: :íカqÄソ4rmmqìmjqvmiq-jjizyizyyyëij    Ô   Ô   {UNKNOWN_STR}  iÔ  jÔ  {UNKNOWN_STR}  {UNKNOWN_STR}   :ëi :iW  kë  :k   :            i
-0x18E3C24: :N  :x   U   :UxRR:xRuUR
-0x18E3DF4: :  :U  ゼR  Uz  :RポRズRUxRR:xRuUR
-0x18E6F49: iiyoiiyòìiy
-0x18E6FEF: yyiÔ                                                                 :zn ぜ
-0x18E7044: :            zずj{STRING}on\n
+0x18E3173: Ô                                                                   ·   ソ  :a  :W  まi  ki :ii  
+0x18E344E:   Ô                                     Ôソ   k  :y  :i  :{UNKNOWN_STR}  Ô        TTi{STRING}xii{STRING}iyiÔ
+0x18E3831:   :íカqÄソ4rmmqìmjqvmiq-jjizyizyyyëij    Ô   Ô   {UNKNOWN_STR}  iÔ  jÔ  {UNKNOWN_STR}  {UNKNOWN_STR}   :ëi :iW  kë  :k   :            i
+0x18E3C24:   :N  :x   U   :UxRR:xRuUR
+0x18E3DF4:                                                :  :U  ゼR  Uz  :RポRズRUxRR:xRuUR
+0x18E6F49: iiyoiiyòìiy    
+0x18E6FEF:  yyiÔ                                                                 :zn ぜ
+0x18E7044:    :            zずj{STRING}on\n
 0x18E7EC3: E   :            9\l  AAÔ AAÔ A
 0x18E80C7: E   :        v‘\p 9zÔ AAÔ AAÔ A
 0x18E82E3: E   :            9\l  AAÔ AAÔ A
@@ -14970,215 +14970,215 @@
 0x18E9783: E   :            9\l  AAÔ AAÔ A
 0x18E9987: E   :        v‘\p 9zÔ AAÔ AAÔ A
 0x18EB0C8: ▶zzzzz
-0x18ED318: :                        ’+ずAでwn‘ぽwn‘:DwQ ET{NAME_END}:E\p  :Ô    ARé
+0x18ED318:    :                        ’+ずAでwn‘ぽwn‘:DwQ ET{NAME_END}:E\p  :Ô    ARé
 0x18ED906: AwAAAwAA!wÙÙ-w\l   \l   w
-0x18EED73: :   :   U   U   E  :A  Ew
+0x18EED73:             :   :   U   U   E  :A  Ew
 0x18EEDC4: UR\nzRQDwBQzDoR\p
-0x18EEF2C: U%  EwB\p  w\n  T\p  BÓ  w\n
+0x18EEF2C:   U%  EwB\p  w\n  T\p  BÓ  w\n  
 0x18EEFC0: UR\nzRQzAAQDzずTw
-0x18F2F2E: ピR URO
-0x18F3024: ci{UNKNOWN_STR}ci
-0x18F3126: ピR URO:ORピ:ペRR
-0x18F381D: :   U   :                    ラ×AAURAQ
-0x18F3980: ▶z  ▶R  Uu
-0x18F3A13: Ô                                  U   :                        URAQ
-0x18F6BEC: ベUごo0EB-0Tw\l9v-Ô9\l
-0x18F7230: nnnòn
+0x18F2F2E: ピR URO                
+0x18F3024:                 ci{UNKNOWN_STR}ci
+0x18F3126: ピR URO:ORピ:ペRR        
+0x18F381D:                           :   U   :                    ラ×AAURAQ
+0x18F3980:   ▶z  ▶R  Uu
+0x18F3A13:  Ô                                  U   :                        URAQ
+0x18F6BEC:         ベUごo0EB-0Tw\l9v-Ô9\l
+0x18F7230:     nnnòn
 0x18F8A7C: mzARzzQ
 0x18F8C80: mzARzzQ
-0x18FC9CA: A\p:/AAEAAニ
+0x18FC9CA: A\p:/AAEAAニ                       
 0x18FE28F: A zAA  ま
-0x1900A45: EAA :Aw
+0x1900A45: EAA :Aw 
 0x1900AC7: U   ぜ   :    AAQRAAGRARxRQ\n
 0x1900CC7: U   ぜ   :    zBQRAAGRARxRQ\n
-0x1901223: Ô:{STRING}:{STRING}k{STRING}kijiii.ii
-0x1901241: {UNKNOWN_STR}  {UNKNOWN_STR}  Ô   Ô          :   :   ま   ま   ま   :    まmAêÙDAQÙD\pTÙAEQ“AAピ\p▶ベRÔUDパ :ED-..y-9fiW99iz.fymz9iRmj\nTx
+0x1901223:  Ô:{STRING}:{STRING}k{STRING}kijiii.ii            
+0x1901241:    {UNKNOWN_STR}  {UNKNOWN_STR}  Ô   Ô          :   :   ま   ま   ま   :    まmAêÙDAQÙD\pTÙAEQ“AAピ\p▶ベRÔUDパ :ED-..y-9fiW99iz.fymz9iRmj\nTx
 0x1901433: {UNKNOWN_STR}                                          :   :   ま   ま   ま   :まÙzmまmAêÙDAQÙD\pTÙAEQ“AAピ\p▶ベRÔUDパiii{STRING}jfij-fffW99yz.f\nmz9iRm▶
-0x190162E: {UNKNOWN_STR}ik\l       Ô  :{UNKNOWN_STR}::{STRING}:kkykkjiik..yk9ff
-0x190167C: :{UNKNOWN_STR} :i   k   k   ▶   まii\l ..\l
+0x190162E: {UNKNOWN_STR}ik\l       Ô  :{UNKNOWN_STR}::{STRING}:kkykkjiik..yk9ff        
+0x190167C:   :{UNKNOWN_STR} :i   k   k   ▶   まii\l ..\l
 0x1901722: :Q   z            AQ
-0x1901843: :{UNKNOWN_STR}Ôk{STRING}:{STRING}iykyi{STRING}y                    Ô   Ô   \n
-0x1901926: z            zAR×AQ
-0x1901B43: ABAwRBAQRRAR
-0x1901B61: URピ :Uu  :A
-0x1901C5A: iÔv·iÔf.y\nffzi999f99f{STRING}0fiz
+0x1901843:   :{UNKNOWN_STR}Ôk{STRING}:{STRING}iykyi{STRING}y                    Ô   Ô   \n
+0x1901926:  z            zAR×AQ
+0x1901B43:                  ABAwRBAQRRAR
+0x1901B61: URピ :Uu  :A   
+0x1901C5A: iÔv·iÔf.y\nffzi999f99f{STRING}0fiz            
 0x1901CDC: ijzÔgww\nAAA\nABA\pA\pAAAA
-0x1901D11: :QA :RB :ポR :
-0x1901E64: U{STRING}h kTじ UR;
+0x1901D11:                                     :QA :RB :ポR :
+0x1901E64:  U{STRING}h kTじ UR;
 0x1901EE1: -AP EごR UR
-0x1901F60: RhjÔSR
-0x1902068: U{STRING}h kTじ UR;                Ô   \n   x
+0x1901F60:                     RhjÔSR
+0x1902068:  U{STRING}h kTじ UR;                Ô   \n   x
 0x1902512: ぷiUhÔ TR
 0x19026D3: Ô                                  :Y  :ざ :kT:kiTぁjiy:ni
 0x19027A6: :             höUU)qRRオjTRpyyz
-0x1902968: xzj{STRING}kii{STRING}kiiÔ                                :iTR kjR:XyJ:+ぁぺ
-0x19029A8: h▶oÜhöUU)jTRオzyzp{STRING}TR
-0x1904B98: :R  UA :wA UDA :EA  :A   ERAÔ A\p  AÔ  \p   \p   Ô:Ô ÔUÔ \pRÔ:
-0x1904E6D: URぴA\nRR
+0x1902968: xzj{STRING}kii{STRING}kiiÔ                                :iTR kjR:XyJ:+ぁぺ 
+0x19029A8:             h▶oÜhöUU)jTRオzyzp{STRING}TR
+0x1904B98:   :R  UA :wA UDA :EA  :A   ERAÔ A\p  AÔ  \p   \p   Ô:Ô ÔUÔ \pRÔ:                           
+0x1904E6D: URぴA\nRR                    
 0x1904ED5: AUR:\nBR E
-0x190584F: :▶\n                                                                  ポAパ EAA:‘AA:EAAVパAÜ EA
-0x1907A24: AA\lvAA\lv♀!·
-0x190A244: :R  :R  EB  ED
-0x190A440: :R  :R  EB  ED  ET
+0x190584F:  :▶\n                                                                  ポAパ EAA:‘AA:EAAVパAÜ EA
+0x1907A24:                 AA\lvAA\lv♀!·
+0x190A244:   :R  :R  EB  ED             
+0x190A440:   :R  :R  EB  ED  ET         
 0x190ACAD: ××Q8▶AA        Ô   {SE_SS_ANNE_HORN}  v
-0x190B2EE: SR!TぉR
+0x190B2EE: SR!TぉR                    
 0x190B380: ピ.AEey9Aプ
 0x190B584: ピ.AEey9Aプ
-0x190B7A8: {STRING}プ{CIRCLE_8}xiçkki\ni
-0x190B7C5: kÔ  iÔ  iÓ                                  ▶kyRk{STRING}y
-0x190B804: :            kijiiij\niz
+0x190B7A8: {STRING}プ{CIRCLE_8}xiçkki\ni                
+0x190B7C5:    kÔ  iÔ  iÓ                                  ▶kyRk{STRING}y
+0x190B804:    :            kijiiij\niz
 0x190B991: iyiRÔ  R{SE_SS_ANNE_HORN} h{SE_SS_ANNE_HORN}
 0x190B9F5: iyRkki
 0x190B9FE: ii  ki  :
-0x190BA08: kijiiij{STRING}iykÔyj
-0x190C888: 9\l·9Dw99AA·\lAA
+0x190BA08:             kijiiij{STRING}iykÔyj
+0x190C888:             9\l·9Dw99AA·\lAA
 0x190DC2E: SUURk{UNKNOWN_STR}       Ô   {NAME_END}  {NAME_END}  h
 0x190F561: QRRR
 0x190F56F: z:TzwTUDxTUw
 0x190F594: \n                           Ô                                   :QRA:TRRUwRB:
-0x190F5E8: TzDDwTB\pURB\pURAÔ▶AwÔ:B{NAME_END}
-0x190F60E: Ô     Ô                                                                                                                                                                      :   U   U  :R  :R   U   :
+0x190F5E8:             TzDDwTB\pURB\pURAÔ▶AwÔ:B{NAME_END} 
+0x190F60E: Ô     Ô                                                                                                                                                                      :   U   U  :R  :R   U   :    
 0x190F773: ▶xRRxTUDxTUw
 0x190F794: zÔ  \n                       Ô                                   ERzDlRRRUTRB:
-0x190F7E8: TRDDwxD\pUzA\pURAÔ▶AwÔ:B{NAME_END}
+0x190F7E8:             TRDDwxD\pUzA\pURAÔ▶AwÔ:B{NAME_END} 
 0x190FB0E: iijjii          :
-0x19101CC: kCA:xii
-0x19101DD: Ô  h{B_ATK_NAME_WITH_PREFIX} UC\n gC\p iigÔCgy\p
-0x1910224: ▶xgivxiD
+0x19101CC:  kCA:xii        
+0x19101DD: Ô  h{B_ATK_NAME_WITH_PREFIX} UC\n gC\p iigÔCgy\p                            
+0x1910224:                 ▶xgivxiD
 0x1910243: ペ  :▶   :        iiDペwiT
-0x19103CC: kCA:xiiÔ
-0x19103DD: Ô  h{B_ATK_NAME_WITH_PREFIX} UC\n gC\p iigÔCgy\p
-0x1910424: ▶xgivxiD
+0x19103CC:  kCA:xiiÔ       
+0x19103DD: Ô  h{B_ATK_NAME_WITH_PREFIX} UC\n gC\p iigÔCgy\p                            
+0x1910424:                 ▶xgivxiD
 0x1910443: ペ  :▶   :        iiDペwiT
-0x1910988: kRh UKR:(Ki
-0x1910B8C: kRh UKR
-0x1912708: ADA-ADAvAA!\l            Ô   \l   AÔ  ·Ô  :      ·   :                        DニE/·ヒAD:/wA:ê▶w
-0x19128E1: -AAぉvAAE!/v:9AAぜAAA  :
-0x191290C: ADA-ADAv                Ô   \l   AÔ  ·Ô     :   ·   :                    \nA‘ADニE/·ヒAD:/wA
-0x1912AA6: :{NAME_END} UÜ  UÖ                                                                 :   :  :U  UR::▶RUURTUSRRkRIRRざぅRぁÔ  yÔ  h{UNKNOWN_STR} iRÔ RiÔ hS
-0x1912CF8: :R  UR  UR::▶RUURTUSRRkRIRyÔ  h{UNKNOWN_STR} iRÔ RiÔ hS
-0x19130C6: AヒÔ AA\p ニA\p                                        :   :       :   E  :!  :♂E!D♀\pAvニ\lAw;·Aハ\n:
-0x1914BAE: RhÔ                                                :   ぜ   k   :     UぉR:SRRァcRRヲラRIhヌRURRRTR
-0x1914C49: {UNKNOWN_STR}  Ô                                    :ii :ni
+0x1910988:  kRh UKR:(Ki          
+0x1910B8C:  kRh UKR              
+0x1912708: ADA-ADAvAA!\l            Ô   \l   AÔ  ·Ô  :      ·   :                        DニE/·ヒAD:/wA:ê▶w 
+0x19128E1: -AAぉvAAE!/v:9AAぜAAA  : 
+0x191290C: ADA-ADAv                Ô   \l   AÔ  ·Ô     :   ·   :                    \nA‘ADニE/·ヒAD:/wA 
+0x1912AA6:   :{NAME_END} UÜ  UÖ                                                                 :   :  :U  UR::▶RUURTUSRRkRIRRざぅRぁÔ  yÔ  h{UNKNOWN_STR} iRÔ RiÔ hS
+0x1912CF8:   :R  UR  UR::▶RUURTUSRRkRIRyÔ  h{UNKNOWN_STR} iRÔ RiÔ hS
+0x19130C6:   AヒÔ AA\p ニA\p                                        :   :       :   E  :!  :♂E!D♀\pAvニ\lAw;·Aハ\n:
+0x1914BAE:   RhÔ                                                :   ぜ   k   :     UぉR:SRRァcRRヲラRIhヌRURRRTR
+0x1914C49:    {UNKNOWN_STR}  Ô                                    :ii :ni  
 0x1914C97: iiiiii
-0x1914D88: :UR UぉR:ざIR                Ô   {FILL_WINDOW}  R{UNKNOWN_STR} RhÔ                                        :  :k  ぜR  kR  :S
+0x1914D88:  :UR UぉR:ざIR                Ô   {FILL_WINDOW}  R{UNKNOWN_STR} RhÔ                                        :  :k  ぜR  kR  :S   
 0x1914E0D: yji kiiRxÔ UR{UNKNOWN_STR}UR{NAME_END}RRRÔ{RIGHT_ARROW}RM
 0x1914E32: k{UNKNOWN_STR}               Ô   Ô                                            :ii :ni
 0x1914E7F: j   ぁ   :            iiiiiiiii
 0x1915C0B: A :DA :AA         Ô
 0x1916023: R :DA UwA UBQ ▶RR
-0x1916041: DÔ  AÔ  R\p  R{NAME_END}                                                                 :QTR:nRD:Üxぎ URぜ ERA :ホ♀  ▶z
+0x1916041:    DÔ  AÔ  R\p  R{NAME_END}                                                                 :QTR:nRD:Üxぎ URぜ ERA :ホ♀  ▶z 
 0x19160B2: DTRw  BTÔ wBÔ wAÔ A
-0x1916227: R :DA UwA UBQ
-0x1916245: DÔ  AÔ  R\p                                                                   ▶RR:QTR:nRD:Üxぎ URぜ ERA:
+0x1916227: R :DA UwA UBQ                
+0x1916245:    DÔ  AÔ  R\p                                                                   ▶RR:QTR:nRD:Üxぎ URぜ ERA:
 0x1918757: hEQDSkCgBEgCAAAAigCgQCg{STRING}EAAソäCÔ  h\p  AC
 0x191C007: :            yRyìiTRìTyzmSyÙ
-0x191C208: ihまÔyRyÔiTRÔTyz i▶Ô
-0x191E453: U   :   :   :   :   U   U   E
+0x191C208:             ihまÔyRyÔiTRÔTyz i▶Ô 
+0x191E453:                                     U   :   :   :   :   U   U   E
 0x191E495: まRGêêRRGéRRRQRRBRRRBRRÙQRB/GRご/BAéÔRBB\pQRQêBRêBRGADR“ADTwA\nDwA\n        Ô   Ô   Ô   Ô              ▶  :\p  :
-0x191E500: “R-/DAwz
+0x191E500:                     “R-/DAwz
 0x191E51D: AAA ▶D
-0x191E524: :\p  :Ô         DwwAAD
-0x191E64F: BAéÔ                                   U   :   :   :   U   U   E   ▶êêRRGéRRRQRRBRRRBRRÙQRB/GRご/“R-/RBB\pQRQêBRêBRGADR“ADTwA\nDwA\nDwwA    Ô   Ô   Ô   Ô           Ô
-0x191E6F8: :\p  :Ô                    DAwz
+0x191E524:  :\p  :Ô         DwwAAD
+0x191E64F:  BAéÔ                                   U   :   :   :   U   U   E   ▶êêRRGéRRRQRRBRRRBRRÙQRB/GRご/“R-/RBB\pQRQêBRêBRGADR“ADTwA\nDwA\nDwwA    Ô   Ô   Ô   Ô           Ô      
+0x191E6F8:   :\p  :Ô                    DAwz
 0x191E719: AAA ▶D
-0x192222D: パs{STRING}wAGÔ                                                                 ァ¥A:s¥A:sAé:DA“:ピD“ URx:yラM:izRAé{NAME_END}{RIGHT_ARROW}sÔ zラ{NAME_END}ラj{NAME_END}ンj{NAME_END}GT{SE_SS_ANNE_HORN}xピÔ R\n                                                                   kDR :AA :zA :Rヲ
-0x19224B3: kyQ :DA :xA  Uヲ  :
-0x19240E7: :w\p EAÔ EAÔ
-0x19242F0: :        :   UÔ  RÔ  A\p  AR
+0x192222D: パs{STRING}wAGÔ                                                                 ァ¥A:s¥A:sAé:DA“:ピD“ URx:yラM:izRAé{NAME_END}{RIGHT_ARROW}sÔ zラ{NAME_END}ラj{NAME_END}ンj{NAME_END}GT{SE_SS_ANNE_HORN}xピÔ R\n                                                                   kDR :AA :zA :Rヲ  
+0x19224B3:                                                                   kyQ :DA :xA  Uヲ  :
+0x19240E7:  :w\p EAÔ EAÔ                           
+0x19242F0:    :        :   UÔ  RÔ  A\p  AR
 0x1924310: DRRR              Ô
 0x192450C: QRRBDRBA         ::Ô UUÔ
 0x1924525: Q{NAME_END}ABAÔAA
-0x192452F: A▶Ô                                        :   ァ   :           :   UEAAAüAA
+0x192452F:  A▶Ô                                        :   ァ   :           :   UEAAAüAA
 0x192458F: EDw{DYNAMIC}A
 0x19247A2: AJUR
-0x1925388: :R  UR :RR
+0x1925388:   :R  UR :RR                
 0x1925BCE: QQ UBR                Ô  :{FILL_WINDOW} UR\p:RRBE{NAME_END}               Ô   Ô   Ô                  :  :E  EA  :D
-0x1925C30: :ITR:‘DB
-0x1925C91: :E  Ew  EA  :\p  :Ô            /
+0x1925C30:     :ITR:‘DB
+0x1925C91:                                      :E  Ew  EA  :\p  :Ô            /
 0x1925DD2: QQ                    Ô  :{FILL_WINDOW} UR\p:R                    Ô   Ô   Ô                      :  :E  EA  :D UBR:ITR:‘DB:qAず
-0x1925EB8: :E  Ew  E\p  :Ô            \lURB\lBQ\pA
+0x1925EB8:   :E  Ew  E\p  :Ô            \lURB\lBQ\pA
 0x1928509: AA\lAAAAEAAA                    Ô   \l   !Ô                                     ▶   E   E   E   ·   :   :    \p\p/AAEEAAAEAAAzDAAADAAAz9AA9·999AÔ  v\n  ず\n  z\p  Av
-0x192870D: AA\lAAAA                        Ô   \l                                      :   ▶
-0x1928760: E   E   ·   :   :AAAAEAAA
+0x192870D: AA\lAAAA                        Ô   \l                                      :   ▶   
+0x1928760:    E   E   ·   :   :AAAAEAAA
 0x1928787: EAwzDAAAz9AA9!Ô  AÔ  v\n  ず\n  z\p  Av
-0x19287AB: -vwÔ9DA
-0x192D782: :zÔ  ▶\nÔ ▶Q\p UTx                    :
-0x192D7E4: :z  ▶z  Ew  :
-0x192D97E: :zÔ  ▶\nÔ ▶Q\p UTx:RRR                :
-0x192D9E0: :z  ▶z  Ew  :
-0x192F877: Ô :R{UNKNOWN_STR}URh kRi :ii
-0x192F8DF: U URR :RR
-0x19305D6: )a :)i  ソi  ki  :y
-0x1930714: Ô              :   ·   E  :ハ  :9   · :iW:まëhEUGê!URêA\pRRAzRxニzUR9>\nギiyWiiii{B_TRAINER1_NAME}yiÔGÙ\n RêÔ
-0x19307D6: ぷz :)i  ソi  ki  :y
-0x1931987: R :RR URR URR
-0x1931A79: wzA EDA :E\p  :Ô            \pzAwwzAAADE\pE\p:Ô:Ô              \p   \p   Ô                                                                                                                                                                                      :
+0x19287AB:  -vwÔ9DA
+0x192D782:   :zÔ  ▶\nÔ ▶Q\p UTx                    :
+0x192D7E4:   :z  ▶z  Ew  :
+0x192D97E:   :zÔ  ▶\nÔ ▶Q\p UTx:RRR                :
+0x192D9E0:   :z  ▶z  Ew  :
+0x192F877: Ô :R{UNKNOWN_STR}URh kRi :ii  
+0x192F8DF: U URR :RR  
+0x19305D6: )a :)i  ソi  ki  :y   
+0x1930714:                             Ô              :   ·   E  :ハ  :9   · :iW:まëhEUGê!URêA\pRRAzRxニzUR9>\nギiyWiiii{B_TRAINER1_NAME}yiÔGÙ\n RêÔ
+0x19307D6: ぷz :)i  ソi  ki  :y   
+0x1931987: R :RR URR URR            
+0x1931A79: wzA EDA :E\p  :Ô            \pzAwwzAAADE\pE\p:Ô:Ô              \p   \p   Ô                                                                                                                                                                                      :          
 0x1931EA7: :            qxセqTRxTORR
-0x1936EF8: Ew  :R  UQ
-0x193DC5C: z  lz   z
-0x19409BC: lzz  lz
-0x194227C: lzz  lz
-0x19490E4: ▶A  Ew :オx :オq
+0x1936EF8:   Ew  :R  UQ  
+0x193DC5C:    z  lz   z            
+0x19409BC:  lzz  lz                
+0x194227C:  lzz  lz                
+0x19490E4:   ▶A  Ew :オx :オq                
 0x194DB2E: AAwAAA
 0x194DC3B: EEAA\pw
 0x194DDB2: DDADA
-0x1950262: zoÔ ijÔ c{UNKNOWN_STR}
-0x1950324: 99999v99ペ\luuuzzペ
+0x1950262:   zoÔ ijÔ c{UNKNOWN_STR}
+0x1950324:                 99999v99ペ\luuuzzペ
 0x195088E: AA:AAz   :
 0x195091F: ァ{DYNAMIC}EAAEAAAAAAAAAAA
-0x19509C1: :  :E  EA  :z  ▶A
-0x1950AA3: :AAA▶DAAwéAAAAAAA    Ô   \p   \p:  AEÔ ADÔ ADÔ AAÔ                    :  :ぜ
-0x1952583: RRRÔJw
-0x195262D: ぽべBE:ぽAA :zA EAA :
-0x1952689: Ô                                                                                                                                                                                                 Ô  :{NAME_END} :B      :Ô  U{NAME_END}:RR URで:RRデURRでRRQR
-0x195277F: RRRÔJw
-0x195298E: ki:mii
-0x19529A2: i{UNKNOWN_STR} i{UNKNOWN_STR} iÔ  i
+0x19509C1:                                                                                                                                                                                               :  :E  EA  :z  ▶A 
+0x1950AA3: :AAA▶DAAwéAAAAAAA    Ô   \p   \p:  AEÔ ADÔ ADÔ AAÔ                    :  :ぜ 
+0x1952583:  RRRÔJw
+0x195262D:                                        ぽべBE:ぽAA :zA EAA :
+0x1952689: Ô                                                                                                                                                                                                 Ô  :{NAME_END} :B      :Ô  U{NAME_END}:RR URで:RRデURRでRRQR     
+0x195277F:  RRRÔJw
+0x195298E: ki:mii            
+0x19529A2:   i{UNKNOWN_STR} i{UNKNOWN_STR} iÔ  i
 0x1952A25: k{UNKNOWN_STR}ii{UNKNOWN_STR}iiS
-0x1952A87: iiiまikj
-0x1952BA6: i{UNKNOWN_STR} i{UNKNOWN_STR} iÔ                                                             :   ま:miiまjiiまji{STRING}:ii{STRING}:ii
-0x1952C88: ziSまiij
-0x19536E4: ii\n ii{UNKNOWN_STR}iiÔ y{B_ATK_NAME_WITH_PREFIX}
-0x1954966: ぜ   :        URRペ▶Rz
-0x1954FE1: ぉÔ  ぜÔ  :                                                                                                                                                    ::  Uk :Uh kC{NAME_END}:i\p UhE
-0x195514F: CERhUE\p
-0x1956864: Rxiベxj{STRING}
-0x1956A55: -ニh U9R :RR
-0x1956A68: kRRピRxi{EMOJI_LEAF}j{B_ATK_NAME_WITH_PREFIX}i{B_ATK_NAME_WITH_PREFIX}
+0x1952A87:              iiiまikj
+0x1952BA6:   i{UNKNOWN_STR} i{UNKNOWN_STR} iÔ                                                             :   ま:miiまjiiまji{STRING}:ii{STRING}:ii
+0x1952C88:             ziSまiij
+0x19536E4:                 ii\n ii{UNKNOWN_STR}iiÔ y{B_ATK_NAME_WITH_PREFIX} 
+0x1954966:  ぜ   :        URRペ▶Rz
+0x1954FE1: ぉÔ  ぜÔ  :                                                                                                                                                    ::  Uk :Uh kC{NAME_END}:i\p UhE           
+0x195514F: CERhUE\p  
+0x1956864:                 Rxiベxj{STRING}
+0x1956A55: -ニh U9R :RR  
+0x1956A68:             kRRピRxi{EMOJI_LEAF}j{B_ATK_NAME_WITH_PREFIX}i{B_ATK_NAME_WITH_PREFIX} 
 0x1957AF5: RRRR{STRING}ki
-0x19597A4: ikyぽZ
+0x19597A4:                 ikyぽZ
 0x195CAE5: zN\n URN
 0x195CCE9: zN\n URN
-0x195E340: :EA EAA
+0x195E340:  :EA EAA
 0x195E542: AA:AAAE!9/!
-0x195E604: \l·zA-zqA
+0x195E604:                 \l·zA-zqA
 0x195F81F: ▶   :               :Xqoペ\nソnn
 0x1960719: ·vq :vT  Uベ
 0x196108F: zzÖsz
-0x1965ACC: :EA EAA
-0x1965CC8: :EA EAA:ご‘A
-0x19680E4: zzzポzz
-0x1968B24: Rペ\pvzu\l·▶
+0x1965ACC:  :EA EAA                    
+0x1965CC8:  :EA EAA:ご‘A                
+0x19680E4:                 zzzポzz
+0x1968B24:                 Rペ\pvzu\l·▶
 0x19694F9: QAぱ EOA
-0x19698AA: AAAAAAAAAA
-0x1969AAE: AAAAAA
+0x19698AA: AAAAAAAAAA                    
+0x1969AAE: AAAAAA                        
 0x1969CC0: iヲララiiiラzjiixwzixBAz        Ô   {DYNAMIC}
-0x1969F11: :   ァ   U   U   :   :   :    xxziRDAzxBAAxピA×RTiピラjcじラsiTァガzベiiララjiiヲwziiベAzjぜAwwぉADARzAゴuズAギラ
-0x196D883: : EQE:ペABぜ‘BAAペAA
-0x196E98F: zRRRT
-0x197101C: :L  :z  UL  :z  :フ
+0x1969F11:       :   ァ   U   U   :   :   :    xxziRDAzxBAAxピA×RTiピラjcじラsiTァガzベiiララjiiヲwziiベAzjぜAwwぉADARzAゴuズAギラ
+0x196D883: : EQE:ペABぜ‘BAAペAA                
+0x196E98F: zRRRT  
+0x197101C:   :L  :z  UL  :z  :フ   
 0x1973A28: 59zT·9vUí9
-0x1979A67: D :w! lA9 E9v
-0x197C7C8: kR :Rê URê
-0x197D010: :Q                    Ô   \p   \p                                                                     EB  UI
-0x1980258: cTAx▶kAパ:ラ
-0x198045D: Ô  R\p  {FILL_WINDOW}  Ô             :B  UQ :xQ
-0x1980665: Ô  R\p  {FILL_WINDOW}  Ô     :ぉ  UB  UQ :xQ
+0x1979A67: D :w! lA9 E9v    
+0x197C7C8:   kR :Rê URê                    
+0x197D010:   :Q                    Ô   \p   \p                                                                     EB  UI 
+0x1980258:                             cTAx▶kAパ:ラ
+0x198045D: Ô  R\p  {FILL_WINDOW}  Ô             :B  UQ :xQ  
+0x1980665: Ô  R\p  {FILL_WINDOW}  Ô     :ぉ  UB  UQ :xQ  
 0x19843AD: mz\nzz
 0x1987BC5: :まB  :z :ED EAEwÔ  T
-0x1987C5E: xÔ  E\p  E\p :QB
-0x1987DAF: zTRCRRY/ó2.zzzzRÄEGGÔ:まB :
+0x1987C5E: xÔ  E\p  E\p :QB  
+0x1987DAF:      zTRCRRY/ó2.zzzzRÄEGGÔ:まB :
 0x1987DCF: z EADwÔ  \n   R
 0x1987E5E: xÔ  E\p  E\p :QB
 0x19894B1: wA\l                                                                 ▶/A:+EA:Ö-A:
@@ -15205,41 +15205,41 @@
 0x19903BF: ▶   :               :Xqoペ\nソnn
 0x1993565: :まB  :z :ED EAEwÔ  T
 0x19935FE: xÔ  E\p  E\p :QB
-0x199374F: zTRCRRY/ó2.zzzzRÄEGGÔ:まB :
+0x199374F:      zTRCRRY/ó2.zzzzRÄEGGÔ:まB :
 0x199376F: z EADwÔ  \n   R
-0x19937FE: xÔ  E\p  E\p :QB
+0x19937FE: xÔ  E\p  E\p :QB  
 0x1993985: :まB  :z :ED EAEwÔ  T
-0x1993A1E: xÔ  E\p  E\p :QB
-0x1993B6F: zTRCRRY/ó2.zzzzRÄEGGÔ:まB :
+0x1993A1E: xÔ  E\p  E\p :QB  
+0x1993B6F:      zTRCRRY/ó2.zzzzRÄEGGÔ:まB :
 0x1993B8F: z EADwÔ  \n   R
-0x1993C1E: xÔ  E\p  E\p :QB
+0x1993C1E: xÔ  E\p  E\p :QB  
 0x1993DA5: :まB  :z :ED EAEwÔ  T
-0x1993E3E: xÔ  E\p  E\p :QB
-0x1993F8F: zTRCRRY/ó2.zzzzRÄEGGÔ:まB :
+0x1993E3E: xÔ  E\p  E\p :QB  
+0x1993F8F:      zTRCRRY/ó2.zzzzRÄEGGÔ:まB :
 0x1993FAF: z EADwÔ  \n   R
-0x199403E: xÔ  E\p  E\p :QB
+0x199403E: xÔ  E\p  E\p :QB  
 0x19941C5: :まB  :z :ED EAEwÔ  T
-0x199425E: xÔ  E\p  E\p :QB
-0x19943AF: zTRCRRY/ó2.zzzzRÄEGGÔ:まB :
+0x199425E: xÔ  E\p  E\p :QB  
+0x19943AF:      zTRCRRY/ó2.zzzzRÄEGGÔ:まB :
 0x19943CF: z EADwÔ  \n   R
-0x199445E: xÔ  E\p  E\p :QB
-0x19947B1: :j{STRING}ラ:{DYNAMIC}▶ラ ▶wz ゼAA kAA:UAゴァ{DYNAMIC}ig:{DYNAMIC}iRt
-0x19960CD: URぉぉTUN
-0x19962F4: :uAw ▶AA:ヂDパ
-0x1996A12: :   :   : UÔ  U{NAME_END} UR
-0x1996A89: DヌzQンrBBヌDA
-0x1997AFF: kaÔ ソK{UNKNOWN_STR}ソUy:セUyUS<t            :
-0x1997FCB: zxRÔyxRÔoÔ
-0x199B6BF: k :jy kiプ ▶iペ :zi ▶ziv\lÔ zz\l ee{CIRCLE_6}ボボj{STRING}99ii9ボziyji\niji{UNKNOWN_STR}               Ô   Ô                      :   ぜ
+0x199445E: xÔ  E\p  E\p :QB  
+0x19947B1:                                    :j{STRING}ラ:{DYNAMIC}▶ラ ▶wz ゼAA kAA:UAゴァ{DYNAMIC}ig:{DYNAMIC}iRt
+0x19960CD: URぉぉTUN     
+0x19962F4:                                                                 :uAw ▶AA:ヂDパ 
+0x1996A12:                                                                                          :   :   : UÔ  U{NAME_END} UR
+0x1996A89: DヌzQンrBBヌDA        
+0x1997AFF:   kaÔ ソK{UNKNOWN_STR}ソUy:セUyUS<t            :
+0x1997FCB:  zxRÔyxRÔoÔ  
+0x199B6BF: k :jy kiプ ▶iペ :zi ▶ziv\lÔ zz\l ee{CIRCLE_6}ボボj{STRING}99ii9ボziyji\niji{UNKNOWN_STR}               Ô   Ô                      :   ぜ   
 0x199B9A1: {UNKNOWN_STR} yÔ  jÔ  {UNKNOWN_STR}  Ô                                   :k{STRING}y :{STRING}▶  kk :{STRING}k :Ôk   :        iii
-0x199BB8D: ·kzkE▶i
-0x199C544: :× :E× まBB:“×A
-0x199C565: ×Ô  AÔ  A\pÔ                                                :                :EAA:AAA
+0x199BB8D: ·kzkE▶i  
+0x199C544:   :× :E× まBB:“×A                
+0x199C565:    ×Ô  AÔ  A\pÔ                                                :                :EAA:AAA
 0x199C7B9: AAAEAAAまAAxDA\no▶D\po:RRz
-0x199CC8F: zzzÔzz\n
+0x199CC8F:      zzzÔzz\n 
 0x199E11B: Ô   :   U   :            UR{NAME_END}UR{NAME_END}hh{NAME_END}TTÔ UTÔ :
-0x199EB6B: DA!\p!AA
-0x199ED6C: qAA\lDA!\p!AA
+0x199EB6B:          DA!\p!AA
+0x199ED6C:         qAA\lDA!\p!AA
 0x19A28C7: U   U  :R  ゼR{FILL_WINDOW}  {NAME_END}  {NAME_END}  {NAME_END}  x
 0x19A481E: QG UÙR :ER  :
 0x19A4F8B: ▶ぉznz&ozo
@@ -15248,27 +15248,27 @@
 0x19A6C71: AAÔ                                           :   E  :A  :\p  E\p  íA ERA EBAÔ:
 0x19A6CC1: URUERRBBBQRBAピREQポxQR\p xQ\p wBÔ RAÔ A
 0x19A6E91: m\n                                  E\p\n E\pz E▶\n E▶\n
-0x19A6F0F: E▶zzE
-0x19A6F64: \pz\nA\pz\nA▶
+0x19A6F0F: E▶zzE      
+0x19A6F64:                 \pz\nA\pz\nA▶
 0x19A70E8: 9äuzzzz
-0x19A7168: zz\nA▶zEA▶zEA\n
+0x19A7168:             zz\nA▶zEA▶zEA\n
 0x19A8391: TRhw-
-0x19A8504: :A  EA  ·A :zz            Ô   \pÔ
-0x19A8604: zp\nUÍp?Tど
+0x19A8504:   :A  EA  ·A :zz            Ô   \pÔ
+0x19A8604:                 zp\nUÍp?Tど
 0x19A9C1F: ▶   :               :Xqoペ\nソnn
 0x19ADA61: {UNKNOWN_STR} yÔ  jÔ  {UNKNOWN_STR}  Ô                                   :k{STRING}y :{STRING}▶  kk :{STRING}k :Ôk   :        iii
-0x19ADC4D: ゼkzkU▶i
+0x19ADC4D: ゼkzkU▶i  
 0x19ADE81: {UNKNOWN_STR} yÔ  jÔ  {UNKNOWN_STR}  Ô                                   :k{STRING}y :{STRING}▶  kk :{STRING}k :Ôk   :        iii
-0x19AE16C: A\pURTTRP
+0x19AE16C: A\pURTTRP                     
 0x19AE25A: UPRRRR+
 0x19AE372: R{NAME_END}                       :Ô  E\pÔ                                  :Aw :!T Ezx ▶0x :Rセ :xセ ▶+o ▶ぉzxR?Rセ·?vq
 0x19AE6C1: {UNKNOWN_STR} yÔ  jÔ  {UNKNOWN_STR}  Ô                                   :k{STRING}y :{STRING}▶  kk :{STRING}k :Ôk   :        iii
-0x19B17BD: SÔ  R{NAME_END} R{NAME_END} R{UNKNOWN_STR} hÔ     ▶  :u
+0x19B17BD:    SÔ  R{NAME_END} R{NAME_END} R{UNKNOWN_STR} hÔ     ▶  :u   
 0x19B6045: mzAまmAAìz
-0x19B6224: ÄREx\piTjÔkTj:\pBhUkSずEkyI:Äyざ E
-0x19B9363: ETxÔ▶RR
+0x19B6224:                 ÄREx\piTjÔkTj:\pBhUkSずEkyI:Äyざ E
+0x19B9363:  ETxÔ▶RR
 0x19B93CC: げ9\lRP99▶gfAw.9CA.9C
-0x19B9567: ETxÔ▶RR
+0x19B9567:  ETxÔ▶RR
 0x19B9570: ARRE
 0x19B9638: ii\lEi.
 0x19BB4CE: zzzz
@@ -15277,39 +15277,39 @@
 0x19BFE80: n{SUPER_ER}-fTxi?Uy.v\nyPyzぜj?
 0x19C0084: n{SUPER_ER}-fTxi?Uy.v\nyPy
 0x19C1BF2: zmÔkiz:izikziizSyzzzjhhiSizjiyjyz\nzÔ  y\n  y\n  z\n  zÔ  zÔ
-0x19C4EEC: :EA ぜAA
-0x19C6626: hz:RRR
-0x19C682A: hz:RRR
-0x19C6F92: :                                    UR  UR
-0x19CB4E0: qpずzöpBQÔURR ▶BR :
-0x19CB606: Eポ Uxブ ▶Rズ:RBB
-0x19CB6E0: qTRxöpずzÔURR ▶BR :
+0x19C4EEC:  :EA ぜAA                    
+0x19C6626: hz:RRR 
+0x19C682A: hz:RRR 
+0x19C6F92:                                :                                    UR  UR 
+0x19CB4E0:                     qpずzöpBQÔURR ▶BR :
+0x19CB606: Eポ Uxブ ▶Rズ:RBB            
+0x19CB6E0:                     qTRxöpずzÔURR ▶BR :
 0x19CB899: ペペベyピペuUx¿▶Sy/▶RÙ-!hÙm9hÙÙz-9\l -9òÔR1h{STRING}RhTjSSxxThThTRyRvhRT            Ô   Ô   \n
-0x19CBB0C: hRxSRRThRRxS\pURBÔE\pE:AÔE:
-0x19CD6F8: :A  EA  EA:
+0x19CBB0C:         hRxSRRThRRxS\pURBÔE\pE:AÔE:
+0x19CD6F8:   :A  EA  EA:
 0x19CD916: R{LEFT_ARROW}:RRBURラRQ{RIGHT_ARROW}MRQRRRRRRRBRRRごQRR¥R
 0x19CDB1A: R{LEFT_ARROW}:RRBURラRQ{RIGHT_ARROW}MRQRRRRRRRBRRRQ
-0x19D0736: E\p  \pÔ  Ô   Ä   Ô              E   :                        DAwzEEAA::
-0x19D0960: AwAzAAzD\pAA\pÔ
-0x19D0F34: :wo :wzÔEAパ\pA▶Dw\pzzA\pzz×\pzzAAパzペパ\p oAAÔzAAÔAA×ÔA×A\p×AwzDAペパ×ADA                    Ô   \n   DÔ                                  EAAAポAAA:
-0x19D1134: Ez :wo :wz
+0x19D0736:   E\p  \pÔ  Ô   Ä   Ô              E   :                        DAwzEEAA::
+0x19D0960:                     AwAzAAzD\pAA\pÔ
+0x19D0F34:  :wo :wzÔEAパ\pA▶Dw\pzzA\pzz×\pzzAAパzペパ\p oAAÔzAAÔAA×ÔA×A\p×AwzDAペパ×ADA                    Ô   \n   DÔ                                  EAAAポAAA:
+0x19D1134:   Ez :wo :wz
 0x19D1141: EAパwA▶DA\pzz×\pzzAAパz×パ\p ペAAÔoAAÔzA×ÔA×A\p×AAzDAw××ADA                    Ô   {SE_SS_ANNE_HORN}  wÔ     :                            AAAAポAAA:
 0x19D3413: Ô                                                                 :ÙA EìA kDQ kAw :Aé :zA  Ez :RA\p
-0x19D3499: Ô   Ô                                            ETR:ADT EAD ▶AA :wD
-0x19D3694: Ô   Ô   Ä   {SE_SS_ANNE_HORN}  Ô                                        ETR:ADT EAD ▶AA :wD
-0x19D3CEA: \n   {UNKNOWN_STR}   kjy :iT :TN
+0x19D3499:            Ô   Ô                                            ETR:ADT EAD ▶AA :wD  
+0x19D3694:         Ô   Ô   Ä   {SE_SS_ANNE_HORN}  Ô                                        ETR:ADT EAD ▶AA :wD  
+0x19D3CEA:   \n   {UNKNOWN_STR}   kjy :iT :TN  
 0x19D4C47: U ▶RN URh
-0x19D5268: ki :hぉ kSぉ
-0x19D806B: iiiÔyz\n
-0x19D832F: -i9zi9zざ9\lki9Ô:
-0x19D8345: ioyでざjyZii
-0x19D8A0E: RRNピNR
+0x19D5268:   ki :hぉ kSぉ            
+0x19D806B:  iiiÔyz\n  
+0x19D832F:      -i9zi9zざ9\lki9Ô:
+0x19D8345:                ioyでざjyZii
+0x19D8A0E: RRNピNR     
 0x19DA327: A :QA :D
 0x19DA346: zRARRz
 0x19DA54A: zRARxz
-0x19DA574: Ô                 :Ô                             :BB  ED  ▶z  :A  :A   E   E  :DRTÔ z{NAME_END} RÔ
+0x19DA574:                 Ô                 :Ô                             :BB  ED  ▶z  :A  :A   E   E  :DRTÔ z{NAME_END} RÔ 
 0x19DB21A: zO\pRDz
-0x19DBBA8: AAAAz-wD▶5!z
+0x19DBBA8: AAAAz-wD▶5!z              
 0x1A35812: Pokémon Graine
 0x1A35836: Pokémon Graine
 0x1A3587E: Pokémon Flamme
@@ -15635,7 +15635,7 @@
 0x1BA73A1: ziRSTÀzzlî
 0x1BC2A01: zyyz
 0x1BC2A63: zjjk
-0x1BDBA7F: lllÄ l
+0x1BDBA7F:  lllÄ l
 0x1BEC147: zjyyyz
 0x1BEC54A: ihRhiiz
 0x1BEC927: zyyjzz
@@ -15650,7 +15650,7 @@
 0x1C0EC57: :zyiSSRSTj
 0x1C0ED5E: \nÓzyihiSSiiz▶
 0x1C0F160: zyiiShiTiy
-0x1C0F79A: zjzzz
+0x1C0F79A:  zjzzz
 0x1C0F8BA: zzzyj▶
 0x1C0F9F3: À タÔ▶yyhhihiSiij
 0x1C0FA0E: zzjz
@@ -15670,7 +15670,7 @@
 0x1D32108: ÄぁygAARi
 0x1D32C71: yhRj
 0x1D3362C: zjyiiy▶
-0x1D3381A: llll
+0x1D3381A:  llll
 0x1D3924B: zjyyi\nzzmï
 0x1D39876: ÄhhhziRk
 0x1D39E90: yyzyy
