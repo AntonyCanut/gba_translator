@@ -59,7 +59,7 @@ clean:
 	@echo "Nettoyage terminé."
 
 .PHONY: tests
-TEST_CHUNK := fr_chunks/chunk_02.txt
+TEST_CHUNK := fr_chunks/chunk_76.txt
 TEST_OUT := totranslate_test.gba
 
 tests:

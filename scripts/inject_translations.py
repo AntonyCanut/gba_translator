@@ -1023,7 +1023,9 @@ def main() -> None:
                         reuse_from_old += 1
                     moved += len(run_offsets_in_entries) if run_offsets_in_entries else len(run_segments)
                     replaced += len(run_offsets_in_entries) if run_offsets_in_entries else len(run_segments)
-                    processed_offsets.update(run_offsets_in_entries)
+                    # IMPORTANT: Add ALL offsets from run_segments to processed_offsets
+                    # This prevents later processing from rewriting texts whose pointers were already updated
+                    processed_offsets.update(off_seg for off_seg, _ in run_segments)
                     continue
                 errors.append(
                     f"Ligne {line_no}: texte trop long ({len(encoded)}>{orig_len}) sans pointeur et pas assez d'espace libre après {hex(offset)}"
@@ -1064,8 +1066,23 @@ def main() -> None:
         inner_ptrs_to_update = []
         
         # Check for inner pointers in the original range
+        # Note: orig_len includes the 0xFF terminator, so range is [offset+1, offset+orig_len-1]
+        # But Thumb pointers (LSB=1) are indexed at target-1 as well, so a pointer to
+        # offset+orig_len gets indexed at offset+orig_len-1 (the 0xFF position).
+        # We must skip such pointers as they point to the NEXT text, not inside this one.
         for ptr_target in range(offset + 1, offset + orig_len):
              if ptr_target in all_pointer_index:
+                # Skip if any pointer indexed here actually points to the next text entry
+                # (i.e., has Thumb bit set and points to offset + orig_len)
+                skip_this = False
+                for ptr_loc, lsb in all_pointer_index[ptr_target]:
+                    if lsb == 1 and ptr_target == offset + orig_len - 1:
+                        # This pointer has Thumb bit and is at the 0xFF position
+                        # It actually points to the next text, not inside this one
+                        skip_this = True
+                        break
+                if skip_this:
+                    continue
                 rel_pos = ptr_target - offset
                 # Get original data for this entry
                 # We can use rom_bytes[offset : offset + orig_len]
