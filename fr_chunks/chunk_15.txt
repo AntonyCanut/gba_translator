@@ -1,4 +1,4 @@
-0x41A2E1: {DYNAMIC} a livré un combat\nfantastique contre le Champion\n{DYNAMIC}À.
+0x41A2E1: {DYNAMIC} a livré un combat fantastique\ncontre le Champion {DYNAMIC}À.
 0x41A312: Au final, {DYNAMIC} a envoyé\n{DYNAMIC}À et {DYNAMIC}Á a riposté\navec {DYNAMIC}Â.
 0x41A349: En se battant de toutes ses\nforces, {DYNAMIC} a gagné\nle match.
 0x41A391: Objet {STR_VAR_1} retiré du Rayon\nObjets du SAC et stocké\nsur le PC.
@@ -26,7 +26,7 @@
 0x41A756: avec ténacité
 0x41A762: tant bien que mal
 0x41A76A: Rencontré et échangé avec {STR_VAR_1}.\nReçu {STR_VAR_2} du Dresseur\ncontre {STR_VAR_3}.
-0x41A7B0: Rencontré et combattu {STR_VAR_1}.\nLe match s'est fini sur un\n{STR_VAR_2}.
+0x41A7B0: Rencontré et combattu {STR_VAR_1}.\nMatch terminé sur un {STR_VAR_2}.
 0x41A7DD: Allé à la Boutique Pokémon de\n{DYNAMIC} et acheté un\n{DYNAMIC}À.
 0x41A810: Allé à la Boutique Pokémon de\n{DYNAMIC} et dépensé ¥{DYNAMIC}Á pour\ndes objets dont {DYNAMIC}À.
 0x41A858: {DYNAMIC} est allé à la Boutique\nPokémon de {DYNAMIC}À et a vendu\n{DYNAMIC}Â {DYNAMIC}Á.
@@ -145,10 +145,10 @@
 0x41B535: PARDON
 0x41B541: MERCI
 0x41B54B: À PLUS !
-0x41B554: {PLAYER} s'est précipité au Centre\nPokémon en protégeant ses Pokémon\népuisés et K.O.…\n\p
-0x41B5B6: {PLAYER} est rentré chez lui en\nprotégeant ses Pokémon épuisés et\nK.O.…\n\p
+0x41B554: {PLAYER} s'est précipité au Centre\nPokémon en protégeant ses Pokémon\népuisés et K.O.…\p
+0x41B5B6: {PLAYER} est rentré chez lui en\nprotégeant ses Pokémon épuisés et\nK.O.…\p
 0x41B60E: Joueur : {DYNAMIC}
-0x41B619: Ce document atteste ta superbe\nperformance : remplir le Pokédex\n{DYNAMIC}À.\n
+0x41B619: Ce document atteste ta\nsuperbe performance :\nremplir le\nPokédex {DYNAMIC}À.
 0x41B684: Game Freak
 0x41B68F: National
 0x41B698: Kanto
@@ -171,21 +171,21 @@
 0x41B807: Parle-moi des CT.
 0x41B81B: Comment enregistrer un objet ?
 0x41B836: Annuler
-0x41B83D: Salut les Dresseurs ! SALUT,\nDresseurs ! … … …\nAllez, faites du bruit !\pSALUT, Dresseurs !\p\nC'est moi, le MEC POKé !\l\p
-0x41B8BF: Aujourd'hui, le MEC POKé explique\ncomment combattre des Pokémon !\nImagine : tu te balades et soudain\nun Pokémon sauvage apparaît !\l\pÀ toi d'utiliser tes Pokémon et\lleurs capacités pour réduire les PV\nadverses à zéro et gagner !\l\pJe vais te le montrer en vrai !\p\nC'est parti !\p\pGarde les yeux sur le super\nSHOW DU MEC POKé !
-0x41BA41: Alors, tu as suivi ? Même si les PV\nde ton Pokémon tombent à zéro et\nqu'il ne peut plus se battre, pas de\npanique !\p\nAmène-le dans un Centre Pokémon\let soigne-le !\p\nAllez, à bientôt !\p\pSouviens-toi : une bonne action\npar jour rend heureux toujours !
-0x41BB40: Aujourd'hui, le MEC POKé parle des\naltérations d'état ! Poison,\nparalysie, sommeil, brûlure…\pIl y en a d'autres, et c'est un\nvrai souci.\n\pAvec ça, ton Pokémon peut devenir\ninutile en combat.\p\nÇa fait mal au MEC POKé de voir un\nPokémon souffrir…\n\pAlors que faire ?\n\pJe vais te montrer !\n\pC'est parti !\p\pGarde les yeux sur le super\nSHOW DU MEC POKé !
-0x41BD10: Poison et paralysie ne partent pas\naprès le combat.\pUn Pokémon empoisonné perd des PV\nmême en marchant.\nSoigne vite ce genre de souci.\p\nUtilise un objet ou file au Centre\nPokémon pour soigner.\n\pPas si dur, hein ?\n\pAllez, à bientôt !\n\pSouviens-toi : une bonne action\npar jour rend heureux toujours !
-0x41BE76: Tout le monde connaît les effets de\ntype ?\pLes Pokémon et leurs capacités ont\ntous des types.\pPar exemple : PLANTE ou EAU.\nPense au type de la capacité qui\nattaque…\p\nEt au type du Pokémon qui reçoit\nl'attaque.\n\pSelon l'affinité, les dégâts\nchangent.\p\nÇa dépend si le duo de types est\nbon ou mauvais.\n\pSans ça, les combats seront rudes.\n\pJe vais te montrer ce que je veux\ndire.\p\nC'est parti !\p\pGarde les yeux sur le super\nSHOW DU MEC POKé !
-0x41C0AF: Peut-on lancer une attaque qui fait\ntrès mal ?\pLe Pokémon adverse est-il dangereux\npour ton Pokémon ?\nPeut-il avoir des capacités\nterribles ?\n\pRegarde les affinités pour prendre\nl'avantage !\p\nAllez, à bientôt !\p\pEt pour le MEC POKé COOL, des\nkids GÉNIAUX comme toi, ça colle !\l\pSouviens-toi : une bonne action\npar jour rend heureux toujours !
-0x41C23B: Aujourd'hui, le MEC POKé montre\ncomment attraper des Pokémon !\nImagine… Un Pokémon stylé apparaît\nd'un coup dans la nature !\nOh, tu le veux !\pImpossible de résister !\n\pTu dois l'attraper !\nIl te le faut !\p\nJe vais te montrer comment faire !\p\nC'est parti !\p\pGarde les yeux sur le super\nSHOW DU MEC POKé !
-0x41C384: Si ta première Poké Ball échoue,\nne lâche rien ! Lance encore des\nPoké Balls…\nÇa finira par marcher !\p\nAllez, à bientôt !\p\pSouviens-toi : une bonne action\npar jour rend heureux toujours !
-0x41C459: Salut tout le monde ! Vous avez des\nCT ?\pUne CT, Capsule Technique,\nc'est super !\pElle apprend à un Pokémon une\ncapacité qu'il n'aurait pas en\nmontant de niveau !\p\nGénial, non ? Quel monde pratique !\p\nOuvre le Boîtier CT et regarde\nles CT que tu as.\n\pTu peux aussi les examiner\nen détail.
-0x41C587: MEC POKé : NORMAL, EAU, PLANTE…\nLes CT ont aussi un type.\pVérifie-le et enseigne-le à un\nPokémon qui matche bien.\pExemple : Vibraqua va bien aux\nPokémon de type EAU.\n\pBALLE GRAINE est une capacité que\nbeaucoup de Pokémon PLANTE peuvent\napprendre.\n\pEncore autre chose !
-0x41C693: Ne regarde pas que le type, lis la\ndescription aussi.\pElle donne des indices sur quel\nPokémon peut apprendre la\ncapacité.\p\nPar exemple, prends Poing de Feu.\p\nOn n'imagine pas un oiseau ou un\npoisson l'apprendre.\n\pEssaie-le sur des Pokémon avec\ndes bras pour frapper !
-0x41C7B4: Wow, j'ai beaucoup parlé ! Allez,\nà bientôt !\n\pSouviens-toi : une bonne action\npar jour rend heureux toujours !
-0x41C82A: Le SAC d'un Dresseur a plein de\nfonctions pratiques !\pPrenons la POCHE Objets clés.\nTu peux utiliser un objet clé sans\nouvrir le SAC à chaque fois.\p\nPar exemple, disons que j'ai une\nTELE C.S. dans mon SAC.\n\pJe peux l'enregistrer pour\nl'utiliser tout de suite, je te\nmontre !\p\nC'est parti !\p\pGarde les yeux sur le quasi super\nSHOW DU MEC POKé !
-0x41C994: Et voilà, ta TELE C.S. est\nenregistrée. Comment l'utiliser ?\pVoici. Une fois un objet clé\nenregistré dans la POCHE Objets\nclés, tu peux l'utiliser avec\nSelect.\n\pTu as donc un accès direct à la\nTELE C.S.\l\pIl suffit d'appuyer et tu me vois !\n\pTant d'attention, c'est un peu\ngênant !\p\nAllez, à bientôt !\p\pSouviens-toi : une bonne action\npar jour rend heureux toujours !
+0x41B83D: Salut les Dresseurs !\nSALUT, Dresseurs !\p……… ……… ………\pAllez, faites du bruit !\nSALUT, Dresseurs !\lC'est moi, le MEC POKé !\p
+0x41B8BF: Le MEC POKé t'explique comment\nte battre contre des Pokémon !\l\pImagine : tu te balades et soudain\nun Pokémon sauvage apparaît !\pÀ toi d'utiliser tes Pokémon et\nleurs capacités pour réduire les PV\ladverses à zéro et gagner !\l\pJe vais te le montrer\nen vrai !\pC'est parti !\nAllons-y !\pGarde les yeux sur le super\nSHOW DU MEC POKé !
+0x41BA41: Alors, tu as suivi ?\pMême si les PV de ton Pokémon\ntombent à zéro et qu'il ne peut\lplus se battre, pas de panique !\pAmène-le dans un Centre Pokémon\net soigne-le !\pAllez, à bientôt !\pSouviens-toi : une bonne action\npar jour rend heureux toujours !
+0x41BB40: Aujourd'hui, le MEC POKé parle des\naltérations d'état !\pPoison, paralysie, sommeil,\nbrûlure…\pIl y en a d'autres, et c'est un\nvrai souci.\pAvec ça, ton Pokémon peut devenir\ninutile en combat.\pÇa fait mal au MEC POKé de voir un\nPokémon souffrir…\pAlors que faire si ton Pokémon a\nun problème d'état ?\pJe vais te le montrer !\pC'est parti !\pGarde les yeux sur le super\nSHOW DU MEC POKé !
+0x41BD10: Poison et paralysie ne partent pas\naprès le combat.\pUn Pokémon empoisonné perd des PV\nmême en marchant.\pSoigne vite ce genre de\nsouci.\pUtilise un objet ou file au Centre\nPokémon pour soigner.\pPas si dur, hein ?\nAllez, à bientôt !\pSouviens-toi : une bonne action\npar jour rend heureux toujours !
+0x41BE76: Tout le monde connaît les effets de\ntype ?\pLes Pokémon et leurs capacités ont\nchacun un type.\pPar exemple : PLANTE\nou EAU.\pPense au type de la capacité qui\nattaque…\pEt au type du Pokémon qui reçoit\nl'attaque.\pSelon l'affinité, les dégâts\nchangent.\pÇa dépend si le duo de types est\nbon ou mauvais.\pSans ça, les combats\nseront rudes.\pJe vais te montrer ce que je veux\ndire.\pC'est parti !\pGarde les yeux sur le super\nSHOW DU MEC POKé !
+0x41C0AF: Peut-on lancer une attaque qui fait\ntrès mal ?\pLe Pokémon adverse est-il dangereux\npour ton Pokémon ?\pPeut-il avoir des capacités\nterribles ?\pRegarde les affinités pour prendre\nl'avantage !\pAllez, à bientôt !\pEt pour le MEC POKé COOL, des\nkids GÉNIAUX comme toi, ça colle !\l\pSouviens-toi : une bonne action\npar jour rend heureux toujours !
+0x41C23B: Aujourd'hui, le MEC POKé montre\ncomment attraper des Pokémon !\pImagine… Un Pokémon stylé\napparaît d'un coup dans la nature !\pOh, tu le veux !\nTu n'y peux rien !\pOh, tu dois l'attraper !\nIl te le faut !\pJe vais te montrer comment\nfaire !\pC'est parti !\nOn y va !\pGarde les yeux sur le super\nSHOW DU MEC POKé !
+0x41C384: Si ta première Poké Ball échoue,\nne lâche rien !\pLance encore des Poké Balls…\nÇa finira par marcher !\pAllez, à bientôt !\pSouviens-toi : une bonne action\npar jour rend heureux toujours !
+0x41C459: Salut tout le monde ! Vous avez des\nCT ?\pUne CT, Capsule Technique,\nc'est super !\pElle apprend à un Pokémon\nune capacité qu'il n'aurait pas.\pGénial, non ? Quel monde\npratique !\pOuvre le Boîtier CT et regarde\nles CT que tu as.\pTu peux aussi les examiner en\ndétail.
+0x41C587: MEC POKé : NORMAL, EAU, PLANTE…\nLes CT ont aussi un type.\pVérifie-le et enseigne-le à un\nPokémon qui matche bien.\pExemple : Vibraqua va bien aux\nPokémon de type EAU.\pBALLE GRAINE est une capacité pour\nbeaucoup de Pokémon PLANTE.\pEncore autre chose !
+0x41C693: Ne regarde pas que le type, lis la\ndescription aussi.\pElle donne des indices sur quel\nPokémon peut apprendre la capacité.\pPar exemple, prends Poing de\nFeu.\pPas pour un oiseau\nou un poisson.\pEssaie-le sur des Pokémon avec\ndes bras pour frapper !
+0x41C7B4: Wow, j'ai beaucoup parlé !\nAllez, à bientôt !\pSouviens-toi : une bonne action\npar jour rend heureux toujours !
+0x41C82A: Le SAC d'un Dresseur a plein de\nfonctions pratiques !\pPrenons la POCHE\nObjets clés.\pTu peux utiliser un objet clé sans\nouvrir le SAC à chaque fois.\pPar exemple, disons que j'ai une\nTELE C.S. dans mon SAC.\pJe peux l'enregistrer pour\nl'utiliser de suite, je te montre !\pC'est parti !\pGarde les yeux sur le quasi super\nSHOW DU MEC POKé !
+0x41C994: Et voilà, ta TELE C.S. est\nenregistrée.\pComment l'utiliser ?\nVoici comment ça marche.\pObjet clé enregistré dans la POCHE\nObjets clés : tu peux\ll'utiliser avec Select.\pTu as donc un accès direct à la\nTELE C.S.\pIl suffit d'appuyer sur un bouton\npour me voir !\pTant d'attention, c'est un peu\ngênant !\pAllez,\nà bientôt !\pSouviens-toi : une bonne action\npar jour rend heureux toujours !
 0x41CB3C: LEO
 0x41CB41: QUELQU'UN
 0x41CB49: Aide
@@ -217,9 +217,9 @@
 0x41CDEB: Quelqu'un a quitté.\nLe lien sera coupé.
 0x41CE1C: points
 0x41CE24: En attente de communication…
-0x41CE3B: Prêt pour le BROYEUR DE BAIES ?\nChoisis une BAIE.\n\p
+0x41CE3B: Prêt pour le BROYEUR DE BAIES ?\nChoisis une BAIE.\p
 0x41CE78: Attends que chacun choisisse\nune BAIE.
-0x41CEA7: {PAUSE_MUSIC}{PLAY_BGM}ÀÀ Tu obtiens\n{STR_VAR_1} unités de POUDRE BAIE\nsoyeuse.{RESUME_MUSIC}\npTa quantité totale de POUDRE BAIE\pest {STR_VAR_2}.\n\p
+0x41CEA7: {PAUSE_MUSIC}{PLAY_BGM}ÀÀTu obtiens {STR_VAR_1}\nunités de POUDRE BAIE soyeuse.{RESUME_MUSIC}\pTa quantité totale de POUDRE BAIE\nest {STR_VAR_2}.\p
 0x41CF13: Enregistrement des résultats\nde jeu dans la sauvegarde.\nPatiente.
 0x41CF4F: Rejouer au BROYEUR DE BAIES ?
 0x41CF70: Tu n'as pas de BAIE.\nPartie annulée.

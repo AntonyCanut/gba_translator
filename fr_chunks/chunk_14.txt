@@ -93,7 +93,7 @@
 0x4185AD: Tu peux retirer un Pokémon si tu\nen as dans une Boîte.
 0x4185E2: Dépose ton équipe dans n'importe\nquelle Boîte.
 0x418611: Déplace les Pokémon stockés dans\nn'importe quelle Boîte.
-0x418642: Tu peux déplacer les objets tenus\npar un Pokémon d'une Boîte ou\nde ton équipe.
+0x418642: Déplace les objets tenus par un\nPokémon d'une Boîte ou de l'équipe.
 0x418681: À plus tard !
 0x418690: Impossible de déposer le dernier\nPokémon !
 0x4186B0: Impossible de prendre plus de\nPokémon.
@@ -164,7 +164,7 @@
 0x4195AC: Une ruine antique où vivrait un\nPokémon particulier.\nCependant, ce Pokémon reste\nau stade de rumeur.
 0x419629: Cette île porte ce nom depuis\nles temps anciens.\nPersonne ne sait d'où vient\nce nom.
 0x41969D: Un endroit dense en buissons.\nOn y voit des motifs sans herbe.\nCertains pensent qu'un secret y\nest caché.
-0x41971A: Une ruine mystérieuse tout juste\ndécouverte, venue d'un temps\nancien.\nSon nom vient des six points sur\nsa porte.
+0x41971A: Une ruine mystérieuse tout juste\ndécouverte, venue d'un temps\nancien. Son nom vient des six\npoints sur sa porte.
 0x419782: Nature {DYNAMIC}.\nRencontré par échange.
 0x41979D: Nature {DYNAMIC}.\nRencontré par échange.
 0x4197B8: Nature {DYNAMIC}.\nRencontre fatidique au\nN. {LV_2} {DYNAMIC}À.
@@ -175,8 +175,8 @@
 0x41988A: Nature {DYNAMIC}.\nApparemment rencontré à\n{DYNAMIC}Á au N. {LV_2} {DYNAMIC}À.
 0x41992F: Nature {DYNAMIC}.\nRencontre fatidique (éclos :\n{DYNAMIC}Á au N. {LV_2} {DYNAMIC}À).
 0x41996D: Nature {DYNAMIC}.\nRencontre fatidique (éclos :\n{DYNAMIC}Á au N. {LV_2} {DYNAMIC}À).
-0x4199AB: Nature {DYNAMIC}. Apparemment\nrencontre fatidique\n(éclos : {DYNAMIC}Á au\nN. {LV_2} {DYNAMIC}À).
-0x4199F4: Nature {DYNAMIC}. Apparemment\nrencontre fatidique\n(éclos : {DYNAMIC}Á au\nN. {LV_2} {DYNAMIC}À).
+0x4199AB: Nature {DYNAMIC}. Apparemment\nrencontre fatidique (éclos :\n{DYNAMIC}Á au N. {LV_2} {DYNAMIC}À).
+0x4199F4: Nature {DYNAMIC}. Apparemment\nrencontre fatidique (éclos :\n{DYNAMIC}Á au N. {LV_2} {DYNAMIC}À).
 0x419A3D: Un Œuf de Pokémon trouvé par le\ncouple de la Pension.
 0x419A6E: Un étrange œuf de Pokémon obtenu\nauprès de le ​​voyageur.
 0x419AA2: Œuf de Pokémon vraiment curieux\nobtenu dans un bel endroit.
@@ -242,9 +242,9 @@
 0x41A16F: {PLAYER} a remplacé le Pokémon\n{STR_VAR_1} par {STR_VAR_2}.
 0x41A193: A pris l'objet {STR_VAR_2} de\n{STR_VAR_1} et lui a donné l'objet\n{STR_VAR_3} à conserver.
 0x41A1CD: J'ai pris l'objet {STR_VAR_2} à\n{STR_VAR_1}.
-0x41A1E7: Vous avez utilisé l'article\n{STR_VAR_1} le {STR_VAR_2} à cet\nendroit.
-0x41A210: {PLAYER} a utilisé le {STR_VAR_1}.
-0x41A220: Vous avez utilisé l'objet\n{STR_VAR_1}, qui était dans le\nsecteur des articles clés.
+0x41A1E7: Objet {STR_VAR_1} utilisé sur\n{STR_VAR_2} ici.
+0x41A210: {PLAYER} a utilisé\nle {STR_VAR_1}.
+0x41A220: Objet {STR_VAR_1} utilisé,\nprovenant des Objets clés.
 0x41A255: {STR_VAR_1} a appris le mouvement\n{STR_VAR_2} grâce à une CT.
 0x41A277: {STR_VAR_1} a appris le mouvement\n{STR_VAR_2} grâce à une CT et a\noublié le ​​mouvement {STR_VAR_3}.
 0x41A2B0: Les Pokémon ont été entièrement\nrestaurés dans un Pokémon CENTER.

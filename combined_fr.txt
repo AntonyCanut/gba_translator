@@ -3343,7 +3343,7 @@
 0x4185AD: Tu peux retirer un Pokémon si tu\nen as dans une Boîte.
 0x4185E2: Dépose ton équipe dans n'importe\nquelle Boîte.
 0x418611: Déplace les Pokémon stockés dans\nn'importe quelle Boîte.
-0x418642: Tu peux déplacer les objets tenus\npar un Pokémon d'une Boîte ou\nde ton équipe.
+0x418642: Déplace les objets tenus par un\nPokémon d'une Boîte ou de l'équipe.
 0x418681: À plus tard !
 0x418690: Impossible de déposer le dernier\nPokémon !
 0x4186B0: Impossible de prendre plus de\nPokémon.
@@ -3414,7 +3414,7 @@
 0x4195AC: Une ruine antique où vivrait un\nPokémon particulier.\nCependant, ce Pokémon reste\nau stade de rumeur.
 0x419629: Cette île porte ce nom depuis\nles temps anciens.\nPersonne ne sait d'où vient\nce nom.
 0x41969D: Un endroit dense en buissons.\nOn y voit des motifs sans herbe.\nCertains pensent qu'un secret y\nest caché.
-0x41971A: Une ruine mystérieuse tout juste\ndécouverte, venue d'un temps\nancien.\nSon nom vient des six points sur\nsa porte.
+0x41971A: Une ruine mystérieuse tout juste\ndécouverte, venue d'un temps\nancien. Son nom vient des six\npoints sur sa porte.
 0x419782: Nature {DYNAMIC}.\nRencontré par échange.
 0x41979D: Nature {DYNAMIC}.\nRencontré par échange.
 0x4197B8: Nature {DYNAMIC}.\nRencontre fatidique au\nN. {LV_2} {DYNAMIC}À.
@@ -3425,8 +3425,8 @@
 0x41988A: Nature {DYNAMIC}.\nApparemment rencontré à\n{DYNAMIC}Á au N. {LV_2} {DYNAMIC}À.
 0x41992F: Nature {DYNAMIC}.\nRencontre fatidique (éclos :\n{DYNAMIC}Á au N. {LV_2} {DYNAMIC}À).
 0x41996D: Nature {DYNAMIC}.\nRencontre fatidique (éclos :\n{DYNAMIC}Á au N. {LV_2} {DYNAMIC}À).
-0x4199AB: Nature {DYNAMIC}. Apparemment\nrencontre fatidique\n(éclos : {DYNAMIC}Á au\nN. {LV_2} {DYNAMIC}À).
-0x4199F4: Nature {DYNAMIC}. Apparemment\nrencontre fatidique\n(éclos : {DYNAMIC}Á au\nN. {LV_2} {DYNAMIC}À).
+0x4199AB: Nature {DYNAMIC}. Apparemment\nrencontre fatidique (éclos :\n{DYNAMIC}Á au N. {LV_2} {DYNAMIC}À).
+0x4199F4: Nature {DYNAMIC}. Apparemment\nrencontre fatidique (éclos :\n{DYNAMIC}Á au N. {LV_2} {DYNAMIC}À).
 0x419A3D: Un Œuf de Pokémon trouvé par le\ncouple de la Pension.
 0x419A6E: Un étrange œuf de Pokémon obtenu\nauprès de le ​​voyageur.
 0x419AA2: Œuf de Pokémon vraiment curieux\nobtenu dans un bel endroit.
@@ -3492,13 +3492,13 @@
 0x41A16F: {PLAYER} a remplacé le Pokémon\n{STR_VAR_1} par {STR_VAR_2}.
 0x41A193: A pris l'objet {STR_VAR_2} de\n{STR_VAR_1} et lui a donné l'objet\n{STR_VAR_3} à conserver.
 0x41A1CD: J'ai pris l'objet {STR_VAR_2} à\n{STR_VAR_1}.
-0x41A1E7: Vous avez utilisé l'article\n{STR_VAR_1} le {STR_VAR_2} à cet\nendroit.
-0x41A210: {PLAYER} a utilisé le {STR_VAR_1}.
-0x41A220: Vous avez utilisé l'objet\n{STR_VAR_1}, qui était dans le\nsecteur des articles clés.
+0x41A1E7: Objet {STR_VAR_1} utilisé sur\n{STR_VAR_2} ici.
+0x41A210: {PLAYER} a utilisé\nle {STR_VAR_1}.
+0x41A220: Objet {STR_VAR_1} utilisé,\nprovenant des Objets clés.
 0x41A255: {STR_VAR_1} a appris le mouvement\n{STR_VAR_2} grâce à une CT.
 0x41A277: {STR_VAR_1} a appris le mouvement\n{STR_VAR_2} grâce à une CT et a\noublié le ​​mouvement {STR_VAR_3}.
 0x41A2B0: Les Pokémon ont été entièrement\nrestaurés dans un Pokémon CENTER.
-0x41A2E1: {DYNAMIC} a livré un combat\nfantastique contre le Champion\n{DYNAMIC}À.
+0x41A2E1: {DYNAMIC} a livré un combat fantastique\ncontre le Champion {DYNAMIC}À.
 0x41A312: Au final, {DYNAMIC} a envoyé\n{DYNAMIC}À et {DYNAMIC}Á a riposté\navec {DYNAMIC}Â.
 0x41A349: En se battant de toutes ses\nforces, {DYNAMIC} a gagné\nle match.
 0x41A391: Objet {STR_VAR_1} retiré du Rayon\nObjets du SAC et stocké\nsur le PC.
@@ -3526,7 +3526,7 @@
 0x41A756: avec ténacité
 0x41A762: tant bien que mal
 0x41A76A: Rencontré et échangé avec {STR_VAR_1}.\nReçu {STR_VAR_2} du Dresseur\ncontre {STR_VAR_3}.
-0x41A7B0: Rencontré et combattu {STR_VAR_1}.\nLe match s'est fini sur un\n{STR_VAR_2}.
+0x41A7B0: Rencontré et combattu {STR_VAR_1}.\nMatch terminé sur un {STR_VAR_2}.
 0x41A7DD: Allé à la Boutique Pokémon de\n{DYNAMIC} et acheté un\n{DYNAMIC}À.
 0x41A810: Allé à la Boutique Pokémon de\n{DYNAMIC} et dépensé ¥{DYNAMIC}Á pour\ndes objets dont {DYNAMIC}À.
 0x41A858: {DYNAMIC} est allé à la Boutique\nPokémon de {DYNAMIC}À et a vendu\n{DYNAMIC}Â {DYNAMIC}Á.
@@ -3645,10 +3645,10 @@
 0x41B535: PARDON
 0x41B541: MERCI
 0x41B54B: À PLUS !
-0x41B554: {PLAYER} s'est précipité au Centre\nPokémon en protégeant ses Pokémon\népuisés et K.O.…\n\p
-0x41B5B6: {PLAYER} est rentré chez lui en\nprotégeant ses Pokémon épuisés et\nK.O.…\n\p
+0x41B554: {PLAYER} s'est précipité au Centre\nPokémon en protégeant ses Pokémon\népuisés et K.O.…\p
+0x41B5B6: {PLAYER} est rentré chez lui en\nprotégeant ses Pokémon épuisés et\nK.O.…\p
 0x41B60E: Joueur : {DYNAMIC}
-0x41B619: Ce document atteste ta superbe\nperformance : remplir le Pokédex\n{DYNAMIC}À.\n
+0x41B619: Ce document atteste ta\nsuperbe performance :\nremplir le\nPokédex {DYNAMIC}À.
 0x41B684: Game Freak
 0x41B68F: National
 0x41B698: Kanto
@@ -3671,21 +3671,21 @@
 0x41B807: Parle-moi des CT.
 0x41B81B: Comment enregistrer un objet ?
 0x41B836: Annuler
-0x41B83D: Salut les Dresseurs ! SALUT,\nDresseurs ! … … …\nAllez, faites du bruit !\pSALUT, Dresseurs !\p\nC'est moi, le MEC POKé !\l\p
-0x41B8BF: Aujourd'hui, le MEC POKé explique\ncomment combattre des Pokémon !\nImagine : tu te balades et soudain\nun Pokémon sauvage apparaît !\l\pÀ toi d'utiliser tes Pokémon et\lleurs capacités pour réduire les PV\nadverses à zéro et gagner !\l\pJe vais te le montrer en vrai !\p\nC'est parti !\p\pGarde les yeux sur le super\nSHOW DU MEC POKé !
-0x41BA41: Alors, tu as suivi ? Même si les PV\nde ton Pokémon tombent à zéro et\nqu'il ne peut plus se battre, pas de\npanique !\p\nAmène-le dans un Centre Pokémon\let soigne-le !\p\nAllez, à bientôt !\p\pSouviens-toi : une bonne action\npar jour rend heureux toujours !
-0x41BB40: Aujourd'hui, le MEC POKé parle des\naltérations d'état ! Poison,\nparalysie, sommeil, brûlure…\pIl y en a d'autres, et c'est un\nvrai souci.\n\pAvec ça, ton Pokémon peut devenir\ninutile en combat.\p\nÇa fait mal au MEC POKé de voir un\nPokémon souffrir…\n\pAlors que faire ?\n\pJe vais te montrer !\n\pC'est parti !\p\pGarde les yeux sur le super\nSHOW DU MEC POKé !
-0x41BD10: Poison et paralysie ne partent pas\naprès le combat.\pUn Pokémon empoisonné perd des PV\nmême en marchant.\nSoigne vite ce genre de souci.\p\nUtilise un objet ou file au Centre\nPokémon pour soigner.\n\pPas si dur, hein ?\n\pAllez, à bientôt !\n\pSouviens-toi : une bonne action\npar jour rend heureux toujours !
-0x41BE76: Tout le monde connaît les effets de\ntype ?\pLes Pokémon et leurs capacités ont\ntous des types.\pPar exemple : PLANTE ou EAU.\nPense au type de la capacité qui\nattaque…\p\nEt au type du Pokémon qui reçoit\nl'attaque.\n\pSelon l'affinité, les dégâts\nchangent.\p\nÇa dépend si le duo de types est\nbon ou mauvais.\n\pSans ça, les combats seront rudes.\n\pJe vais te montrer ce que je veux\ndire.\p\nC'est parti !\p\pGarde les yeux sur le super\nSHOW DU MEC POKé !
-0x41C0AF: Peut-on lancer une attaque qui fait\ntrès mal ?\pLe Pokémon adverse est-il dangereux\npour ton Pokémon ?\nPeut-il avoir des capacités\nterribles ?\n\pRegarde les affinités pour prendre\nl'avantage !\p\nAllez, à bientôt !\p\pEt pour le MEC POKé COOL, des\nkids GÉNIAUX comme toi, ça colle !\l\pSouviens-toi : une bonne action\npar jour rend heureux toujours !
-0x41C23B: Aujourd'hui, le MEC POKé montre\ncomment attraper des Pokémon !\nImagine… Un Pokémon stylé apparaît\nd'un coup dans la nature !\nOh, tu le veux !\pImpossible de résister !\n\pTu dois l'attraper !\nIl te le faut !\p\nJe vais te montrer comment faire !\p\nC'est parti !\p\pGarde les yeux sur le super\nSHOW DU MEC POKé !
-0x41C384: Si ta première Poké Ball échoue,\nne lâche rien ! Lance encore des\nPoké Balls…\nÇa finira par marcher !\p\nAllez, à bientôt !\p\pSouviens-toi : une bonne action\npar jour rend heureux toujours !
-0x41C459: Salut tout le monde ! Vous avez des\nCT ?\pUne CT, Capsule Technique,\nc'est super !\pElle apprend à un Pokémon une\ncapacité qu'il n'aurait pas en\nmontant de niveau !\p\nGénial, non ? Quel monde pratique !\p\nOuvre le Boîtier CT et regarde\nles CT que tu as.\n\pTu peux aussi les examiner\nen détail.
-0x41C587: MEC POKé : NORMAL, EAU, PLANTE…\nLes CT ont aussi un type.\pVérifie-le et enseigne-le à un\nPokémon qui matche bien.\pExemple : Vibraqua va bien aux\nPokémon de type EAU.\n\pBALLE GRAINE est une capacité que\nbeaucoup de Pokémon PLANTE peuvent\napprendre.\n\pEncore autre chose !
-0x41C693: Ne regarde pas que le type, lis la\ndescription aussi.\pElle donne des indices sur quel\nPokémon peut apprendre la\ncapacité.\p\nPar exemple, prends Poing de Feu.\p\nOn n'imagine pas un oiseau ou un\npoisson l'apprendre.\n\pEssaie-le sur des Pokémon avec\ndes bras pour frapper !
-0x41C7B4: Wow, j'ai beaucoup parlé ! Allez,\nà bientôt !\n\pSouviens-toi : une bonne action\npar jour rend heureux toujours !
-0x41C82A: Le SAC d'un Dresseur a plein de\nfonctions pratiques !\pPrenons la POCHE Objets clés.\nTu peux utiliser un objet clé sans\nouvrir le SAC à chaque fois.\p\nPar exemple, disons que j'ai une\nTELE C.S. dans mon SAC.\n\pJe peux l'enregistrer pour\nl'utiliser tout de suite, je te\nmontre !\p\nC'est parti !\p\pGarde les yeux sur le quasi super\nSHOW DU MEC POKé !
-0x41C994: Et voilà, ta TELE C.S. est\nenregistrée. Comment l'utiliser ?\pVoici. Une fois un objet clé\nenregistré dans la POCHE Objets\nclés, tu peux l'utiliser avec\nSelect.\n\pTu as donc un accès direct à la\nTELE C.S.\l\pIl suffit d'appuyer et tu me vois !\n\pTant d'attention, c'est un peu\ngênant !\p\nAllez, à bientôt !\p\pSouviens-toi : une bonne action\npar jour rend heureux toujours !
+0x41B83D: Salut les Dresseurs !\nSALUT, Dresseurs !\p……… ……… ………\pAllez, faites du bruit !\nSALUT, Dresseurs !\lC'est moi, le MEC POKé !\p
+0x41B8BF: Le MEC POKé t'explique comment\nte battre contre des Pokémon !\l\pImagine : tu te balades et soudain\nun Pokémon sauvage apparaît !\pÀ toi d'utiliser tes Pokémon et\nleurs capacités pour réduire les PV\ladverses à zéro et gagner !\l\pJe vais te le montrer\nen vrai !\pC'est parti !\nAllons-y !\pGarde les yeux sur le super\nSHOW DU MEC POKé !
+0x41BA41: Alors, tu as suivi ?\pMême si les PV de ton Pokémon\ntombent à zéro et qu'il ne peut\lplus se battre, pas de panique !\pAmène-le dans un Centre Pokémon\net soigne-le !\pAllez, à bientôt !\pSouviens-toi : une bonne action\npar jour rend heureux toujours !
+0x41BB40: Aujourd'hui, le MEC POKé parle des\naltérations d'état !\pPoison, paralysie, sommeil,\nbrûlure…\pIl y en a d'autres, et c'est un\nvrai souci.\pAvec ça, ton Pokémon peut devenir\ninutile en combat.\pÇa fait mal au MEC POKé de voir un\nPokémon souffrir…\pAlors que faire si ton Pokémon a\nun problème d'état ?\pJe vais te le montrer !\pC'est parti !\pGarde les yeux sur le super\nSHOW DU MEC POKé !
+0x41BD10: Poison et paralysie ne partent pas\naprès le combat.\pUn Pokémon empoisonné perd des PV\nmême en marchant.\pSoigne vite ce genre de\nsouci.\pUtilise un objet ou file au Centre\nPokémon pour soigner.\pPas si dur, hein ?\nAllez, à bientôt !\pSouviens-toi : une bonne action\npar jour rend heureux toujours !
+0x41BE76: Tout le monde connaît les effets de\ntype ?\pLes Pokémon et leurs capacités ont\nchacun un type.\pPar exemple : PLANTE\nou EAU.\pPense au type de la capacité qui\nattaque…\pEt au type du Pokémon qui reçoit\nl'attaque.\pSelon l'affinité, les dégâts\nchangent.\pÇa dépend si le duo de types est\nbon ou mauvais.\pSans ça, les combats\nseront rudes.\pJe vais te montrer ce que je veux\ndire.\pC'est parti !\pGarde les yeux sur le super\nSHOW DU MEC POKé !
+0x41C0AF: Peut-on lancer une attaque qui fait\ntrès mal ?\pLe Pokémon adverse est-il dangereux\npour ton Pokémon ?\pPeut-il avoir des capacités\nterribles ?\pRegarde les affinités pour prendre\nl'avantage !\pAllez, à bientôt !\pEt pour le MEC POKé COOL, des\nkids GÉNIAUX comme toi, ça colle !\l\pSouviens-toi : une bonne action\npar jour rend heureux toujours !
+0x41C23B: Aujourd'hui, le MEC POKé montre\ncomment attraper des Pokémon !\pImagine… Un Pokémon stylé\napparaît d'un coup dans la nature !\pOh, tu le veux !\nTu n'y peux rien !\pOh, tu dois l'attraper !\nIl te le faut !\pJe vais te montrer comment\nfaire !\pC'est parti !\nOn y va !\pGarde les yeux sur le super\nSHOW DU MEC POKé !
+0x41C384: Si ta première Poké Ball échoue,\nne lâche rien !\pLance encore des Poké Balls…\nÇa finira par marcher !\pAllez, à bientôt !\pSouviens-toi : une bonne action\npar jour rend heureux toujours !
+0x41C459: Salut tout le monde ! Vous avez des\nCT ?\pUne CT, Capsule Technique,\nc'est super !\pElle apprend à un Pokémon\nune capacité qu'il n'aurait pas.\pGénial, non ? Quel monde\npratique !\pOuvre le Boîtier CT et regarde\nles CT que tu as.\pTu peux aussi les examiner en\ndétail.
+0x41C587: MEC POKé : NORMAL, EAU, PLANTE…\nLes CT ont aussi un type.\pVérifie-le et enseigne-le à un\nPokémon qui matche bien.\pExemple : Vibraqua va bien aux\nPokémon de type EAU.\pBALLE GRAINE est une capacité pour\nbeaucoup de Pokémon PLANTE.\pEncore autre chose !
+0x41C693: Ne regarde pas que le type, lis la\ndescription aussi.\pElle donne des indices sur quel\nPokémon peut apprendre la capacité.\pPar exemple, prends Poing de\nFeu.\pPas pour un oiseau\nou un poisson.\pEssaie-le sur des Pokémon avec\ndes bras pour frapper !
+0x41C7B4: Wow, j'ai beaucoup parlé !\nAllez, à bientôt !\pSouviens-toi : une bonne action\npar jour rend heureux toujours !
+0x41C82A: Le SAC d'un Dresseur a plein de\nfonctions pratiques !\pPrenons la POCHE\nObjets clés.\pTu peux utiliser un objet clé sans\nouvrir le SAC à chaque fois.\pPar exemple, disons que j'ai une\nTELE C.S. dans mon SAC.\pJe peux l'enregistrer pour\nl'utiliser de suite, je te montre !\pC'est parti !\pGarde les yeux sur le quasi super\nSHOW DU MEC POKé !
+0x41C994: Et voilà, ta TELE C.S. est\nenregistrée.\pComment l'utiliser ?\nVoici comment ça marche.\pObjet clé enregistré dans la POCHE\nObjets clés : tu peux\ll'utiliser avec Select.\pTu as donc un accès direct à la\nTELE C.S.\pIl suffit d'appuyer sur un bouton\npour me voir !\pTant d'attention, c'est un peu\ngênant !\pAllez,\nà bientôt !\pSouviens-toi : une bonne action\npar jour rend heureux toujours !
 0x41CB3C: LEO
 0x41CB41: QUELQU'UN
 0x41CB49: Aide
@@ -3717,9 +3717,9 @@
 0x41CDEB: Quelqu'un a quitté.\nLe lien sera coupé.
 0x41CE1C: points
 0x41CE24: En attente de communication…
-0x41CE3B: Prêt pour le BROYEUR DE BAIES ?\nChoisis une BAIE.\n\p
+0x41CE3B: Prêt pour le BROYEUR DE BAIES ?\nChoisis une BAIE.\p
 0x41CE78: Attends que chacun choisisse\nune BAIE.
-0x41CEA7: {PAUSE_MUSIC}{PLAY_BGM}ÀÀ Tu obtiens\n{STR_VAR_1} unités de POUDRE BAIE\nsoyeuse.{RESUME_MUSIC}\npTa quantité totale de POUDRE BAIE\pest {STR_VAR_2}.\n\p
+0x41CEA7: {PAUSE_MUSIC}{PLAY_BGM}ÀÀTu obtiens {STR_VAR_1}\nunités de POUDRE BAIE soyeuse.{RESUME_MUSIC}\pTa quantité totale de POUDRE BAIE\nest {STR_VAR_2}.\p
 0x41CF13: Enregistrement des résultats\nde jeu dans la sauvegarde.\nPatiente.
 0x41CF4F: Rejouer au BROYEUR DE BAIES ?
 0x41CF70: Tu n'as pas de BAIE.\nPartie annulée.
@@ -3749,62 +3749,62 @@
 0x41D1FD: \nDirecteur artistique\n\nDirecteur combat\n\n\n
 0x41D222: \n\nKen Sugimori\n\nShigeki Morimoto\n\n
 0x41D247: Chef de programme\n\nChef de planification\n\nChef du design graphique\n\n
-0x41D281: Tetsuya Watanabe Koji Nishino Takao\nUnno
-0x41D2C5: Hiroyuki Nakamura Masao Taya\nSatoshi Nohara Miyuki Iwasawa\nDaisuke Goto
-0x41D312: Programmeurs système
-0x41D32D: Tetsuya Watanabe Akito Mori Hisashi\nSogabe Sousuke Tamada
-0x41D36D: Graphistes
+0x41D281: \nTetsuya Watanabe\n\nKoji Nishino\n\nTakao Unno\n
+0x41D2C5: \nHiroyuki Nakamura\nMasao Taya\nSatoshi Nohara\nMiyuki Iwasawa\nDaisuke Goto\n
+0x41D312: Programmeurs système\n\n\n\n\n\n
+0x41D32D: \nTetsuya Watanabe\nAkito Mori\nHisashi Sogabe\nSousuke Tamada\n\n
+0x41D36D: Graphistes\n\n\n\n\n\n
 0x41D388: \nTakao Unno\nAsuka Iwashita\nKanako Eo\nHiroki Fuchino\n\n
-0x41D3BE: Graphistes
+0x41D3BE: \nGraphistes\n\n\n\n\n
 0x41D3D8: \n\nKen Sugimori\nHironobu Yoshida\n\n\n
 0x41D3FB: \nComposition musicale\n\n\n\n\n
 0x41D414: \n\nGo Ichinose\nJunichi Masuda\n\n\n
-0x41D471: Junichi Masuda Koji Nishino Tetsuji\nOhta
-0x41D4B9: Hitomi Sato Shigeru Ohmori Tadashi\nTakahashi
+0x41D471: \n\nJunichi Masuda\nKoji Nishino\nTetsuji Ohta\n\n
+0x41D4B9: \n\nHitomi Sato\nShigeru Ohmori\nTadashi Takahashi\n\n
 0x41D504: \n\nHitomi Sato\nSatoshi Tajiri\n\n\n
 0x41D524: \nConcepteur de script\n\nConcepteur de carte\n\n\n
-0x41D546: Satoshi Nohara Shigeru Ohmori
+0x41D546: \n\nSatoshi Nohara\n\nShigeru Ohmori\n\n
 0x41D56B: \nConcepteurs paramétriques\n\n\n\n\n
 0x41D587: \n\nKoji Nishino\nTetsuji Ohta\nShigeki Morimoto\n\n
 0x41D5FC: \nKen Sugimori\nMotofumi Fujiwara\nShigeki Morimoto\nHironobu Yoshida\n\n
 0x41D658: \nSatoshi Ohta\nAsuka Iwashita\nTakao Unno\nKanako Eo\nAimi Tomita\n
 0x41D6B0: \nAtsuko Nishida\nMuneo Saito\nRena Yoshikawa\nJun Okutani\n\n
-0x41D6E9: Programmeurs de support
+0x41D6E9: Programmeurs de support\n\n\n\n
 0x41D707: \nTeruyuki Yoshioka\nTakao Nakano\n\nSatoshi Mitsuhara\nDaisuke Hoshino\n
 0x41D74C: \n\nTests produits NCL\n\n\n\n
-0x41D766: NCL Super Mario Club
-0x41D799: Hiro Nakamura Hiroyuki Uesugi\nTeruki Murakawa Kazuya Suyama
-0x41D7F1: Kenji Tominaga Kenjiro Ito Tomotaka\nKomura Michiko Takizawa
-0x41D849: Makiko Takada Mikiko Ohashi Shusaku\nEgami Takanao Kondo Rui Kawaguchi
+0x41D766: \n\n\nNCL Super Mario Club\n\n\n
+0x41D799: \nHiro Nakamura\nHiroyuki Uesugi\nTeruki Murakawa\n\nKazuya Suyama\n
+0x41D7F1: \nKenji Tominaga\n\nKenjiro Ito\nTomotaka Komura\nMichiko Takizawa\n
+0x41D849: \nMakiko Takada\nMikiko Ohashi\nShusaku Egami\nTakanao Kondo\nRui Kawaguchi\n
 0x41D894: \n\nVérification code braille\n\n\n\n
-0x41D8AD: Bibliothèque braille japonaise
+0x41D8AD: \n\n\nBibliothèque braille japonaise\n\n\n
 0x41D8CC: Superviseurs information\n\n\n\n\n\n
-0x41D8EA: Hiroki Enomoto Kazuyuki Terada Yuri\nSakurai Yumi Funasaka Naoko Yanase
+0x41D8EA: \nHiroki Enomoto\nKazuyuki Terada\nYuri Sakurai\nYumi Funasaka\nNaoko Yanase\n
 0x41D94B: \nAzusa Tajima\nAkira Kinashi\nKazuki Yoshihara\n\nRetsuji Nomoto\n
 0x41D9A0: \n\nHitoshi Yamagami\nGakuji Nomoto\n\n\n
 0x41D9D4: \n\nHiroyuki Jinnai\nTakehiro Izushi\nHiroaki Tsuru\n\n
-0x41DA06: Directeur exécutif
-0x41DA39: Producteur exécutif
+0x41DA06: \n\nDirecteur exécutif\n\n\n\n
+0x41DA39: \n\nProducteur exécutif\n\n\n\n
 0x41DA6B: \n\nProducteur exécutif\n\n\n\n
-0x41DA85: Tsunekaz Ishihara
+0x41DA85: \n\n\nTsunekaz Ishihara\n\n\n
 0x41DAA0: \nCoordinateurs version anglaise\n\n\n\n\n
 0x41DAC3: \n\nHiro Nakamura\nSeth McMahill\n\n\n
-0x41DAE5: Traducteur Éditeur de texte
+0x41DAE5: \nTraducteur\n\nÉditeur de texte\n\n\n
 0x41DB04: \n\nNob Ogasawara\n\nTeresa Lillygren\n\n
-0x41DB3A: Teruki Murakawa Souichi Yamamoto\nYuichiro Ito Akira Kinashi
+0x41DB3A: \nTeruki Murakawa\nSouichi Yamamoto\nYuichiro Ito\nAkira Kinashi\n\n
 0x41DB7B: \nProgrammeurs environnement & outils\n\n\n\n\n
-0x41DBA1: Teruki Murakawa Souichi Yamamoto\nKimiko Nakamichi
-0x41DBDA: Tests de produits NOA
-0x41DBF6: Thomas Hertzog Kathy Huguenard Mika\nKurosawa
-0x41DC29: Vérification du code braille
-0x41DC45: Fédération nationale {CLEAR_TO}Ûdes\naveugles Patricia A. Maurer\nBibliothèque braille japonaise Union\neuropéenne des aveugles
-0x41DCAC: \nVérification code braille\n\n\n\n\n
-0x41DCC5: Bibliothèque nationale d'info\n{CLEAR_TO}&Service Margaret Campion
-0x41DD1D: Takehiro Izushi Motoyasu Tojima\nHitoshi Yamagami Hiroyuki Uesugi
-0x41DD79: Nicola Pratt-Barlow Shellie Dow\nAnthony Howitt Naoko Saeki Kyoko\nOnishi
-0x41DDC6: Vérification du code braille
-0x41DDE1: The Royal New Zealand Foundation of\nthe Blind Greg Moran
-0x41DE21: Graphiste
+0x41DBA1: \n\nTeruki Murakawa\nSouichi Yamamoto\nKimiko Nakamichi\n\n
+0x41DBDA: Tests de produits NOA\n\n\n\n\n\n
+0x41DBF6: \nThomas Hertzog\nKathy Huguenard\nMika Kurosawa\n\n\n
+0x41DC29: Vérification du code braille\n\n\n\n\n\n
+0x41DC45: \nFédération nationale\n{CLEAR_TO}Ûdes aveugles\nPatricia A. Maurer\nBibliothèque braille japonaise\nUnion européenne des aveugles\n
+0x41DCAC: \nVérification du code braille\n\n\n\n\n
+0x41DCC5: \n\nBibliothèque nationale d'info\n{CLEAR_TO}&Service\nMargaret Campion\n\n
+0x41DD1D: \nTakehiro Izushi\nMotoyasu Tojima\nHitoshi Yamagami\nHiroyuki Uesugi\n\n
+0x41DD79: \nNicola Pratt-Barlow\nShellie Dow\nAnthony Howitt\nNaoko Saeki\nKyoko Onishi\n
+0x41DDC6: \nVérification du code braille\n\n\n\n\n
+0x41DDE1: \n\nThe Royal New Zealand\nFoundation of the Blind\nGreg Moran\n\n
+0x41DE21: \n\nGraphiste\n\n\n\n
 0x41DE9D: Erreur de communication…\nVérifie toutes les connexions,\npuis éteins et rallume.
 0x41DEF0: Erreur de communication…
 0x41DF05: Rapproche-toi de tes partenaires.\nÉvite les obstacles entre vous.
@@ -3949,55 +3949,55 @@
 0x41EE19: RECEVOIR
 0x41EE21: ENVOYER
 0x41EE26: Jeter
-0x41EE2B: DE LA.\nTOUT{CLEAR_TO}キANNULER{CLEAR_TO}3OK
-0x41EFB8: iii{STRING}iiiijiziwizi
-0x41F007: {UNKNOWN_STR}\n{UNKNOWN_STR}
+0x41EE2B: DE LA.TOUT{CLEAR_TO}キANNULER{CLEAR_TO}3OK
+0x41EFB8: iii{STRING}iiiijiziwizi            
+0x41F007: kjiy!kiy!▶zz!kiy!iiy!iiy!iiy!iiy!99999999999999999999999999999999/jiy/ji{STRING}/zz\n/ji{STRING}/jii/jii/jii/jii
 0x41F0A8: iiy!iiy!kiy!
-0x41F0BD: iy!kiy!kiy!/jii/jii/ji{STRING}/z
-0x41F160: wizijiziiiiii{STRING}zz
-0x444C35: Il s'agit d'un Pokémon récemment\ndécouvert. C'est actuellement sous\nenquête. Aucune information\ndétaillée n’est disponible pour le\nmoment.
-0x444CB2: Il porte une graine sur son dos dès\nla naissance. En vieillissant, la\ngraine grossit également.
-0x444D12: Si le bourgeon sur son dos commence\nà sentir doux, c'est la preuve que\nla grande fleur va bientôt fleurir.
-0x444D77: En étalant les larges pétales de sa\nfleur et en captant les rayons du\nsoleil, elle remplit son corps de\npuissance.
-0x444DDF: La flamme sur sa queue montre la\nforce de sa force vitale. Si elle\nest faible, la flamme brûle\négalement faiblement.
-0x444E48: Il est de nature très impétueux,\nc'est pourquoi il cherche\nconstamment des adversaires. Il ne\nse calme que lorsqu'il gagne.
-0x444EAD: Respirant des flammes intenses et\nchaudes, il peut faire fondre\npresque tout. Son souffle inflige\nterribles douleurs aux ennemis.
-0x444F18: La coquille durcit peu après la\nnaissance et reste résiliente.\nSi vous le poussez, il rebondira.
-0x444F80: Ce Pokémon est très populaire parmi\nles personnes âgées car sa queue\nrecouverte de fourrure est un\nsymbole de sa longévité.
-0x444FE7: Les canons-fusées sur sa coque\ntirent des jets d'eau capables de\npercer des trous à travers de\nl'acier épais.
-0x44504A: Ses pieds sont dotés de ventouses\nconçues pour adhérer à n'importe\nquelle surface. Il grimpe avec\nténacité aux arbres pour se nourrir.
-0x4450AF: Il se prépare à l'évolution en\ndurcissant sa coquille autant que\npossible pour protéger son corps\nmou.
-0x44510F: La poudre hydrofuge sur ses ailes\nlui permet de récolter le miel, même\nsous les pluies les plus fortes.
-0x445170: Son dard venimeux est puissant.\nSon corps aux couleurs vives est\ndestiné à avertir ses ennemis.
-0x4451D3: Bien qu'il s'agisse d'un cocon, il\npeut bouger un peu. Il peut étendre\nsa barbe empoisonnée s'il est\nattaqué.
-0x445234: Il peut vaincre n'importe quel\nadversaire avec ses puissants dards\nempoisonnés. Il attaque parfois en\nessaims.
-0x445296: Commun dans les zones herbeuses et\nles forêts, il est très docile et\nchassera ennemis en battant du\nsable.
-0x4452FD: Il survole son vaste territoire et\ntraque ses proies avant de les\nabattre avec ses griffes acérées.
-0x44535E: En battant des ailes de toutes ses\nforces, Roucarnage peut produire une\nrafale de vent capable de plier les\ngrands arbres.
-0x4453C8: Vivant partout où il y a de la\nnourriture disponible, il récupère\nsans cesse des produits comestibles\ntoute la journée.
-0x445427: Ses pattes arrière ont 3 doigts.\nIls sont palmés, ce qui lui permet\nde nager à travers les rivières.
-0x445480: Il bat ses ailes courtes pour\nchasser les insectes des herbes\nhautes. Il les cueille ensuite avec\nson bec court.
-0x4454EA: Il se projette soudainement haut\ndans le ciel , puis s'effondre d'un\nseul coup pour frapper sa proie.
-0x445551: Il peut librement détacher sa\nmâchoire pour avaler des grosses\nproies entières. Cependant, il peut\ndevenir trop lourd à déplacer.
-0x4455B6: Pour intimider ses ennemis, il\nécarte largement sa poitrine et émet\ndes sons étranges en expulsant air\nde sa bouche.
-0x44561D: Il a de petits sacs électriques sur\nses deux joues . S'il est menacé, il\nperd des charges électriques des\nsacs.
-0x445686: Lorsque son électricité augmente,\nses muscles sont stimulés et il\ndevient plus agressif que\nd'habitude.
-0x4456EB: Il creuse et vit sous terre. S'il\nest menacé, il se recroqueville en\nboule pour se protéger.
-0x44574C: Il est habile à attaquer avec les\népines sur son dos et ses griffes\nacérées tout en se précipitant\nrapidement.
-0x4457B5: Le poison caché dans sa corne est\nextrêmement puissant. Même une\npetite égratignure peut avoir des\nconséquences fatales.
-0x44581B: Il est de nature calme et\nattentionnée. Parce que sa corne\npousse lentement, il préfère ne pas\nse battre.
-0x445875: Il utilise son corps écailleux et\nrobuste pour sceller l'entrée de son\nnid et protéger ses petits des\nprédateurs.
-0x4458DB: Il scrute son environnement en\nlevant ses oreilles hors de l'herbe.\nIl frappera en premier s'il détecte\nun danger.
-0x44594A: Rapide à se mettre en colère, il\npoignarde les ennemis avec sa corne\npour injecter un puissant poison\nquand il devient agité.
-0x4459B0: Il balance sa grosse queue pendant\nla bataille . Si son ennemi\nsursaute, il chargera avec son corps\nrobuste.
-0x445A18: Son comportement mignon et son cri\nle rendent très populaire.\nCependant, ce mignon Pokémon est\nrarement trouvé.
-0x445A7B: Grâce à son ouïe fine, il peut\ncapter les sons de loin. Il se cache\ngénéralement dans des endroits\ncalmes.
-0x445ADB: Lorsqu'il est jeune, il a six\nmagnifiques queues. Quand il\ngrandit, plusieurs nouvelles queues\npoussent.
-0x445B33: Certaines légendes prétendent que\nchacune de ses neuf queues possède\nson propre type unique de pouvoir\nmystique spécial .
-0x445B94: Il captive ses ennemis avec ses\nénormes yeux ronds , puis les endort\nen chantant une mélodie apaisante.
-0x445BFA: Sa fourrure est extrêmement fine,\ndense et souple. La fourrure\ndélicieusement agréable véhicule une\nimage de luxe.
-0x445C62: Il n'a pas d'yeux. Au lieu de cela,\nil s'appuie sur ses cris\nultrasoniques pour localiser l'écho\net voler dans l'obscurité.
-0x445CCB: Il peut boire plus de 10 onces de\nsang à la fois. S'il en contient\ntrop, il devient lourd et vole\nmaladroitement.
+0x41F0BD: iy!kiy!kiy!/jii/jii/ji{STRING}/z\n
+0x41F160:         wizijiziiiiiiii{STRING}zz\n
+0x444C35: Pokémon récemment découvert.\nActuellement étudié.\nPas d'info détaillée.
+0x444CB2: Il porte une graine sur son dos dès\nla naissance.\nLa graine grossit en vieillissant.
+0x444D12: Si le bourgeon sur son dos commence\nà sentir bon, c'est la preuve que la\ngrande fleur va bientôt éclore.
+0x444D77: En déployant ses pétales et en\ncaptant le soleil,\nson corps se remplit de puissance.
+0x444DDF: La flamme de sa queue dit sa vie.\nSi elle faiblit,\nla flamme aussi.
+0x444E48: De nature impétueuse, il cherche\nsans cesse des adversaires.\nIl ne se calme que lorsqu'il gagne.
+0x444EAD: En crachant des flammes, il peut\nfaire fondre presque tout.\nSon souffle fait très mal.
+0x444F18: La coquille durcit peu après la\nnaissance et reste résistante.\nSi on la pousse, elle rebondit.
+0x444F80: Apprécié des anciens, il arbore\nune queue de fourrure, symbole\nde longévité.
+0x444FE7: Les canons-fusées sur sa carapace\ntirent des jets capables de percer\nl'acier épais.
+0x44504A: Ses pieds à ventouses adhèrent à\nn'importe quelle surface.\nIl grimpe avec ténacité pour manger.
+0x4450AF: Il prépare son évolution en\ndurcissant sa coquille pour protéger\nson corps mou.
+0x44510F: Une poudre sur ses ailes lui permet\nde récolter le miel, même sous les\npluies les plus fortes.
+0x445170: Son dard venimeux est puissant.\nSon corps aux couleurs vives avertit\nses ennemis.
+0x4451D3: Même en cocon, il bouge un peu.\nIl étend son aiguillon si on\nl'attaque.
+0x445234: Il terrasse ses adversaires avec\nses dards empoisonnés.\nIl attaque parfois en essaims.
+0x445296: Commun dans herbes et forêts,\nil est docile et chasse en soulevant\ndu sable.
+0x4452FD: Il survole son vaste territoire.\nTraque ses proies avant de les\nabattre avec ses griffes acérées.
+0x44535E: En battant des ailes de toutes ses\nforces, Roucarnage peut produire un\nvent qui plie les grands arbres.
+0x4453C8: Là où il trouve à manger, il\nrécupère sans cesse de quoi\nmanger.
+0x445427: Ses pattes arrière ont trois doigts\npalmés qui lui permettent de nager\nà travers les rivières.
+0x445480: Il bat ses ailes courtes pour\nchasser les insectes des hautes\nherbes. Il les cueille avec son bec.
+0x4454EA: Il se projette dans le ciel, puis\nplonge en piqué pour frapper\nsa proie.
+0x445551: Il détache sa mâchoire pour avaler\nde grosses proies entières.\nIl peut alors devenir très lourd.
+0x4455B6: Il écarte la poitrine pour effrayer\net émet des sons étranges en\nexpulsant l'air.
+0x44561D: Il a de petits sacs électriques sur\nses deux joues. S'il est menacé, il\nlâche des charges électriques.
+0x445686: Quand son électricité augmente, ses\nmuscles sont stimulés et il devient\nplus agressif.
+0x4456EB: Il creuse et vit sous terre.\nS'il est menacé, il se roule en\nboule pour se protéger.
+0x44574C: Il attaque avec ses épines dorsales\net ses griffes acérées tout en se\nprécipitant.
+0x4457B5: Le poison de sa corne est très\npuissant. Même une petite\négratignure peut être fatale.
+0x44581B: De nature calme et attentionnée, sa\ncorne pousse lentement.\nIl préfère ne pas se battre.
+0x445875: Il scelle l'entrée du nid avec son\ncorps écailleux pour protéger ses\npetits.
+0x4458DB: Il scrute autour en dressant ses\noreilles hors de l'herbe.\nIl frappe au moindre danger.
+0x44594A: Vite en colère, il poignarde avec\nsa corne pour injecter un poison\npuissant.
+0x4459B0: Il balance sa queue en combat.\nSi l'ennemi sursaute, il charge avec\nson corps robuste.
+0x445A18: Son comportement et son cri\nle rendent populaire.\nMais ce Pokémon reste rare.
+0x445A7B: Grâce à son ouïe fine, il capte les\nsons de loin et se cache dans des\nendroits calmes.
+0x445ADB: Jeune, il a six queues.\nEn grandissant,\nde nouvelles poussent.
+0x445B33: Chaque queue aurait, selon les\nlégendes,\nun pouvoir mystique unique.
+0x445B94: Il captive avec ses grands yeux,\npuis endort en chantant une\nmélodie apaisante.
+0x445BFA: Sa fourrure très fine et souple\nlui donne une image de luxe.\n
+0x445C62: Il n'a pas d'yeux. Il se guide avec\nses cris ultrasoniques pour voler\ndans l'obscurité.
+0x445CCB: Il peut boire plus de 10 onces de\nsang. S'il en boit trop, il devient\nlourd et vole maladroitement.
 0x445D35: Son nom scientifique est « Oddium\nWanderus ». La nuit, on dit qu'il\nmarche près de 1 000 pieds sur ses\ndeux racines.
 0x445DA1: Ce qui semble être de la bave est\nen\nfait du miel sucré . Il est très\ncollant et adhère obstinément au\ntoucher.
 0x445E08: Il possède les plus grands pétales\ndu monde. À chaque pas, les pétales\nlibèrent d’épais nuages ​​de pollen\ntoxique.
@@ -16588,7 +16588,7 @@
 0x1EF4B19: Alors, vous accumuleriez vos\nEverstones, comme un imbécile ?\pÀ quoi cela servirait-il un jour à\nquelqu'un ?
 0x1EF4B76: Waouh ! Il vous manque les Everstones pour ma grande\ndémonstration !
 0x1EF4BAF: Pierre Aube
-0x1EF4BBA: Pierre crépuscule
+0x1EF4BBA: Pierre Nuit
 0x1EF4BC5: Pierre glace
 0x1EF4BCF: Pierre Lune
 0x1EF4BDA: Pierre brillante
@@ -16666,7 +16666,7 @@
 0x1EF6D9B: Petit Pokémon
 0x1EF6DA8: Grand Pokémon
 0x1EF6DB5: Loterie BP
-0x1EF6DC0: TM pour échelle cardiaque
+0x1EF6DC0: CT pour échelle cardiaque
 0x1EF6DD3: Spectacle Cradopaud
 0x1EF6DE1: Pierres précieuses
 0x1EF6DE6: Quiz d'encouragement
@@ -17956,8 +17956,8 @@
 0x1F14825: Tu peux trouver des\n{COLOR}ÉGems{COLOR}Ë partout, mais tu en verras\nplein à KBT Expressway !\nRamène {COLOR}É{STR_VAR_1}{COLOR}Ë de ces {COLOR}ÉGems{COLOR}Ë.
 0x1F14870: {COLOR}ÉDes Pierres Dures{COLOR}Ë peuvent\napparaître en brisant des rochers\ndans le {COLOR}ÉGrand Désert{COLOR}Ë.\pJe parie que si tu creusais dans les\nmurs de la {COLOR}ÉKBT Expressway{COLOR}Ë,\ntu en trouverais aussi.\pFais l'un ou l'autre et ramène-moi\n{COLOR}É{STR_VAR_1}{COLOR}Ë d'entre elles.\pJe te donnerai la Gemme de ton\nchoix en échange.
 0x1F14989: Tu sais quoi ?Apporte-moi encore\nplus de trucsrares !Je veux\p{COLOR}É{STR_VAR_1}{COLOR}Ë\n{COLOR}ÉGems{COLOR}Ë\pen\nmêmetemps\l!
-0x1F14A62: Joyau Insecte
-0x1F14A6A: Joyau Ténèbres
+0x1F14A62: Gemme Insecte
+0x1F14A6A: Gemme Ténèbres
 0x1F14A73: Gemme Dragon
 0x1F14A7E: Gemme Électrik
 0x1F14A8B: Gemme Fée
@@ -22009,7 +22009,7 @@
 0x1F78290: Their Natures with {L_BUTTON} and {R_BUTTON}…\p
 0x1F782AF: Evolve them with {START_BUTTON}…\pAnd even…\p
 0x1F782CF: …teach them new moves!\pJust press {SE_SHOP} to start editing, {B_BUTTON} to\nsave your changes, and {L_BUTTON} and {R_BUTTON}\lto easily move between pages!\pFor further instructions, please pay\nattention to the bottom of the\linterface as you alter your Pokémon.{PAUSE_UNTIL_PRESS}
-0x1F783B6: .
+0x1F783B6: FばTarmigan Town
 0x1F783C6: Tarmigan Town D
 0x1F783D6: Tarmigan Town N
 0x1F783E6: Tarmigan Town is located on the\n“Thundercap Highland”.\pBut if you came to see the\nlightning storms, you’re out\lof luck.\pThose only happen to the east of\nhere, by Epidimy Town.
@@ -22509,7 +22509,7 @@
 0x1F82FCA: I know everything there is to know\nabout this cave.
 0x1F82FFE: Long ago, there was a readable\ninscription on the tablet below.\pHowever, it appears it has long\nsince eroded away.\pFrom what I remember, I believe it\nsaid something along the lines of:\pPRESSING THE SWITCH WITH INSECT\nIS THE KEY.\pWhat ever could that mean?
 0x1F830FE: It seems that the long-standing\ntablet has finally been destroyed.\pWere you responsible for removing\nthat piece of history?
-0x1F8317A: Route de la Victoire
+0x1F8317A: Route Victoire
 0x1F83189: The last and toughest of trials\nleading up to the Pokémon League.\nTrainers seeking to become the best\narrive here after enduring a long\nand grueling journey.
 0x1F83227: Heh, heh, heh…\pWelcome, Trainer.\pThis final area of Victory Road is\nknown as the “torture chamber”.\pAll that remains between here and\nthe Pokémon League is this one\licy area.\pBut hey, I get it.\pNot everyone wants to spend their\ntime sliding around looking for\lthe exit.\pSo, let’s cut a deal.\pIf you pay me ¥{COLOR}É200000{COLOR}Ë, I’ll send\nyou to the other side.\pYou won’t even have to get your\nfeet wet.\pWhat do you say?\nIt’s only a measly ¥{COLOR}É200000{COLOR}Ë…
 0x1F833E6: Heh, heh, heh…\pWelcome, Trainer.\pThis final area of Victory Road is\nknown as the “torture chamber”.\pAll that remains between here and\nthe Pokémon League is this one\licy area.\pBut hey, I get it.\pNot everyone wants to spend their\ntime sliding around looking for\lthe exit.\pSo, let’s cut a deal.\pIf you pay me ¥{COLOR}É45000{COLOR}Ë, I’ll send\nyou to the other side.\pYou won’t even have to get your\nfeet wet.\pWhat do you say?\nIt’s only a measly ¥{COLOR}É45000{COLOR}Ë…
@@ -24651,10 +24651,10 @@
 0x1FB0AC4: Tous les enfants ont été guéris\nde la “frénésie de télévision”.\pVous devriez retourner à Polder Town pour\nréclamer votre récompense.
 0x1FB0B3B: {COLOR}ÁL'enfant a été scanné en utilisant le\nCube.\pLes données ont été envoyées au scientifique du\nLaboratoire de Recherche Onirique.\pEnfants restants : {COLOR}É{STR_VAR_1}{COLOR}Á.
 0x1FB3869: Équipe
-0x1FB6333: Cg Tsu Aos × Wc¡ ms
-0x1FBE010: kRA▶zSB
-0x1FD233C: i___PHPH0___\ncroissance_______________________________________iiiini\nrii yiii iii iii iyi ii iyib yi yi\nyi yi yi yi yi yi yi yi yi yii ii\niyi ii yi yi yiii iiii iyiiiiin
+0x1FB6333: CgツAos×Wc¡ms
+0x1FBE010: kRA▶zSB 
+0x1FD233C: i{STRING}kiiki{STRING}{STRING}i{STRING}k{STRING}iki        iiii
 0x1FD235A: kiii{STRING}k
-0x1FD2369: i{STRING}i i i i i k k\n{STRING}iki{STRING}i{STRING}kiki{STRING}i{STRING}kiii{STRING}
-0x1FD23A0: iii
-0x1FD23BE: kiiii k k je je je je 9999999
+0x1FD2369: i{STRING}i        i   i   i   i   k   k   {STRING}iki{STRING}i{STRING}kiki{STRING}i{STRING}kiii{STRING}
+0x1FD23A0: iiii        
+0x1FD23BE: kiiiii        k   k   i   i   i   i                   9999999

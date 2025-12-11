@@ -1,7 +1,7 @@
 # Unbound – GBA ROM translation guide
 
 ## Todo :
-- Trad 25
+- Trad 74 est en partie manquante
 
 ## Quick prerequisites
 
