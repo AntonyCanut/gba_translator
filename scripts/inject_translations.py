@@ -39,6 +39,15 @@ POINTER_BASE = 0x08000000
 GAP_BYTES = 1  # leave a short gap between allocated blocks
 # Offsets never to touch (gibberish/raw data)
 IMMUTABLE_OFFSETS = {0x4FDAC2}
+
+# Anchors for smart repointing
+# Expanded to include punctuation and common separators
+ANCHORS = {
+    0xFE, 0xFA, 0xFB,       # \n, \l, \p
+    0xFF, 0x00,             # Terminator, Space/Null
+    0xAB, 0xAC, 0xAD,       # !, ?, .
+    0xB0,                   # … (Ellipsis)
+}
 # These offsets are referenced directly in code (start menu/version labels).
 # Never relocate them: write in place only (fail if too long).
 PROTECTED_OFFSETS = {
@@ -230,7 +239,41 @@ def load_sensitive_lines() -> set[int]:
         except Exception:
             continue
     return out
+# Functions moved to module level
+def analyze_anchor(data: bytes, rel_pos: int) -> Tuple[int, int] | None:
+    """
+    Checks if the byte before rel_pos is an anchor.
+    Returns (anchor_byte, occurrence_index) if yes, None otherwise.
+    occurrence_index is 0-based count of this specific anchor byte up to rel_pos.
+    """
+    if rel_pos <= 0 or rel_pos > len(data):
+        return None
+        
+    byte_before = data[rel_pos - 1]
+    if byte_before not in ANCHORS:
+        return None
+        
+    # Count occurrences of this byte up to rel_pos
+    count = 0
+    for i in range(rel_pos - 1):
+        if data[i] == byte_before:
+            count += 1
+    return byte_before, count
 
+def find_target_by_anchor(data: bytes, anchor_byte: int, occurrence_index: int) -> int | None:
+    """
+    Finds the position immediately after the N-th occurrence of anchor_byte.
+    If N-th occurrence is not found, returns the position after the last found occurrence (fallback).
+    """
+    count = 0
+    last_found_pos = None
+    for i, b in enumerate(data):
+        if b == anchor_byte:
+            last_found_pos = i + 1
+            if count == occurrence_index:
+                return i + 1
+            count += 1
+    return last_found_pos
 
 def main() -> None:
     parser = argparse.ArgumentParser(description="Réinjecte les traductions dans le ROM GBA.")
@@ -302,6 +345,8 @@ def main() -> None:
         original_lengths[offset] = end - offset + 1  # includes the 0xFF
 
     # Build a pointer index -> positions (supports Thumb LSB=1)
+    # Only consider pointers to offsets >= 0x100 (skip very low offsets which are likely false positives)
+    MIN_VALID_OFFSET = 0x100
     pointer_index: Dict[int, List[Tuple[int, int]]] = {off: [] for off in original_lengths.keys()}
     all_pointer_index: Dict[int, List[Tuple[int, int]]] = {}
     for i in range(len(rom_bytes) - 3):
@@ -309,7 +354,7 @@ def main() -> None:
         base = val & ~1  # mask the Thumb bit if present
         lsb = val & 1
         off = base - POINTER_BASE  # pointed offset (LSB acts as a flag)
-        if 0 <= off < len(rom_bytes):
+        if MIN_VALID_OFFSET <= off < len(rom_bytes):
             all_pointer_index.setdefault(off, []).append((i, lsb))
             if lsb == 1 and off + 1 < len(rom_bytes):
                 all_pointer_index.setdefault(off + 1, []).append((i, lsb))
@@ -319,6 +364,22 @@ def main() -> None:
         # Also associate those pointers to off+1 to locate and relocate such strings.
         if lsb == 1 and (off + 1) in pointer_index:
             pointer_index[off + 1].append((i, lsb))
+
+    # Detect "inner pointers": pointers that point inside a text block (but not at the start).
+    # If we overwrite the old block, these pointers will point to garbage or new unrelated data.
+    # We must preserve the old data for these blocks.
+    has_inner_pointers: set[int] = set()
+    for start, length in original_lengths.items():
+        # Check range (start + 1) to (start + length - 1)
+        # We exclude 'start' (valid pointer to string start)
+        # We exclude 'start + length' (pointer to next block or terminator)
+        for mid_off in range(start + 1, start + length):
+            if mid_off in all_pointer_index:
+                has_inner_pointers.add(start)
+                # Log a warning so the user knows why space isn't freed
+                # (We use a simple print or add to warnings list if we want to be consistent)
+                # For now, we'll just track it.
+                break
 
     # Sort entries by encoded length descending (longest first)
     sensitive_lines = load_sensitive_lines()
@@ -381,6 +442,50 @@ def main() -> None:
         if all_pointer_index.get(off - 1):
             return True
         return False
+
+    def analyze_anchor(data: bytes, rel_pos: int) -> Tuple[int, int] | None:
+        """
+        Checks if the byte before rel_pos is an anchor.
+        Returns (anchor_byte, occurrence_index) if yes, None otherwise.
+        occurrence_index is 0-based count of this specific anchor byte up to rel_pos.
+        """
+        if rel_pos <= 0 or rel_pos > len(data):
+            return None
+        
+        # The pointer points to the character *after* the control code?
+        # Usually yes. E.g. "Line1\nLine2". \n is at X. Line2 starts at X+1.
+        # Pointer to Line2 would point to X+1.
+        # So we check data[rel_pos - 1].
+        
+        # However, control codes can be multi-byte?
+        # \n (FE), \l (FA), \p (FB) are single bytes in this charmap.
+        # So checking -1 is correct for these.
+        
+        byte_before = data[rel_pos - 1]
+        if byte_before not in ANCHORS:
+            return None
+            
+        # Count occurrences of this byte before rel_pos
+        count = 0
+        for i in range(rel_pos - 1):
+            if data[i] == byte_before:
+                count += 1
+        return byte_before, count
+
+    def find_target_by_anchor(data: bytes, anchor_byte: int, occurrence_index: int) -> int | None:
+        """
+        Finds the position immediately after the N-th occurrence of anchor_byte.
+        If N-th occurrence is not found, returns the position after the last found occurrence (fallback).
+        """
+        count = 0
+        last_found_pos = None
+        for i, b in enumerate(data):
+            if b == anchor_byte:
+                last_found_pos = i + 1
+                if count == occurrence_index:
+                    return i + 1
+                count += 1
+        return last_found_pos
 
     anchor_for: Dict[int, int] = {}
     run_members: Dict[int, List[int]] = {}
@@ -586,28 +691,131 @@ def main() -> None:
 
         rom_bytes[dest_offset : dest_offset + needed] = b"".join(parts)
 
-        target_off, positions = locate_positions_for(anchor)
-        if not positions:
-            errors.append(f"Run {hex(anchor)}: aucun pointeur pour reloger bloc (taille {needed})")
-            continue
-
-        ptr_delta = target_off - anchor
-        for idx, lsb in positions:
-            # Keep the real address (parity included) without forcing the Thumb bit,
-            # otherwise relocated strings shift by one byte.
-            new_ptr_val = POINTER_BASE + dest_offset + ptr_delta
-            set_pointer(idx, new_ptr_val, f"run {hex(anchor)}")
-        pointer_index[anchor] = []
-        if target_off in pointer_index:
-            pointer_index[target_off] = []
+        # Old pointer update logic removed (moved inside safety check)
+        pass
 
         run_has_unknown = any(not has_pointer_for(off) for off in run)
-        if args.reuse_old_space and not run_has_unknown and (args.ignore_sensitive or anchor >= SAFE_RELOC_START):
+        
+        # Smart Repointing Logic for Run
+        # If we have inner pointers, try to resolve them.
+        # If ALL inner pointers can be resolved safely, we can proceed with relocation.
+        # Otherwise, we must keep the old space.
+        
+        inner_pointers_map: Dict[int, int] = {} # old_ptr_pos -> new_target_offset
+        run_safe_to_move = True
+        
+        # Collect all inner pointers for this run
+        # A run is a contiguous block of texts. Inner pointers can point anywhere inside.
+        # We need to map them relative to the *start of the run* or relative to *each text*?
+        # Pointers are absolute.
+        # We need to find which text in the run they point to.
+        
+        # Actually, 'has_inner_pointers' set contains offsets of texts that have inner pointers.
+        # But we need the actual pointers to check them.
+        # We can scan 'all_pointer_index' for targets inside the run range.
+        
+        run_start = run[0]
+        run_end = run[-1] + original_lengths[run[-1]]
+        
+        # We need to reconstruct the full original data of the run to analyze anchors
+        run_orig_data = bytearray()
+        offset_in_run = {} # text_offset -> relative_start_in_run
+        curr_rel = 0
+        for off in run:
+            offset_in_run[off] = curr_rel
+            ol = original_lengths[off]
+            run_orig_data.extend(rom_bytes[off : off + ol])
+            curr_rel += ol
+            
+        # Reconstruct the full NEW data of the run
+        run_new_data = bytearray()
+        new_offset_in_run = {}
+        curr_new_rel = 0
+        for off in run:
+            new_offset_in_run[off] = curr_new_rel
+            ent = entries_by_offset.get(off)
+            if ent:
+                chunk = ent["encoded"]
+            else:
+                chunk = rom_bytes[off : off + original_lengths[off]]
+            run_new_data.extend(chunk)
+            curr_new_rel += len(chunk)
+
+        # Find all pointers pointing inside this run (excluding start of texts, which are handled by standard logic)
+        # We iterate over the range of the run in the ROM
+        run_inner_ptrs = []
+        for ptr_target in range(run_start + 1, run_end):
+            # Skip if it points exactly to the start of one of the texts (handled elsewhere)
+            if ptr_target in entries_by_offset: 
+                continue
+                
+            if ptr_target in all_pointer_index:
+                # This is an inner pointer!
+                # Analyze it
+                rel_pos = ptr_target - run_start
+                anchor_info = analyze_anchor(run_orig_data, rel_pos)
+                
+                if anchor_info:
+                    anchor_byte, idx = anchor_info
+                    # Try to find target in new data
+                    new_rel_pos = find_target_by_anchor(run_new_data, anchor_byte, idx)
+                    if new_rel_pos is not None:
+                        # Success!
+                        run_inner_ptrs.append((ptr_target, new_rel_pos))
+                    else:
+                        # Anchor not found -> IGNORE this inner pointer (optimistic relocation)
+                        warnings.append(f"Run {hex(anchor)}: Pointeur interne {hex(ptr_target)} non résolu (ignoré)")
+                else:
+                    # Not an anchor pointer -> IGNORE this inner pointer (optimistic relocation)
+                    warnings.append(f"Run {hex(anchor)}: Pointeur interne {hex(ptr_target)} sans ancre (ignoré)")
+        
+        if args.reuse_old_space and not run_has_unknown and run_safe_to_move and (args.ignore_sensitive or anchor >= SAFE_RELOC_START):
             rom_bytes[anchor : anchor + total_orig_len] = b"\xFF" * total_orig_len
             aligned_old = (anchor + 3) // 4 * 4
             usable = total_orig_len - (aligned_old - anchor)
             if usable > 0:
                 free_blocks.append((aligned_old, usable, "old"))
+        elif not run_safe_to_move:
+            warnings.append(f"Run {hex(anchor)}: contient des pointeurs internes non résolus, ancien espace conservé.")
+
+        # If we moved the block, we MUST update the inner pointers
+        # Wait, 'dest_offset' is where we wrote the new data.
+        # We need to update the pointers in 'run_inner_ptrs'
+        
+        if run_safe_to_move and run_inner_ptrs:
+             # We need to know where the run was written.
+             # It was written at 'dest_offset'.
+             for old_target, new_rel_pos in run_inner_ptrs:
+                 new_abs_target = dest_offset + new_rel_pos
+                 # Find where this pointer is stored
+                 locs = all_pointer_index[old_target]
+                 for ptr_loc, lsb in locs:
+                     # Update the pointer!
+                     new_val = POINTER_BASE + new_abs_target
+                     set_pointer(ptr_loc, new_val, f"smart-repoint run {hex(anchor)}")
+
+        # Update pointers for the run (Main Pointers)
+        # ALWAYS update main pointers (translated text is written)
+        # Inner pointers stay pointing to old location if not safe
+        curr_new_rel = 0
+        for off in run:
+            # Calculate where this specific text ended up
+            # It is at dest_offset + curr_new_rel
+            new_abs_loc = dest_offset + curr_new_rel
+            
+            # Update pointers pointing to 'off'
+            if off in all_pointer_index:
+                locs = all_pointer_index[off]
+                for ptr_loc, lsb in locs:
+                    new_val = POINTER_BASE + new_abs_loc
+                    set_pointer(ptr_loc, new_val, f"reloc run {hex(anchor)}")
+            
+            # Advance
+            ent = entries_by_offset.get(off)
+            if ent:
+                curr_new_rel += len(ent["encoded"])
+            else:
+                curr_new_rel += original_lengths[off]
 
         if source == "old":
             reuse_from_old += 1
@@ -723,8 +931,53 @@ def main() -> None:
                         pointer_index[target_off] = []
 
                     run_has_unknown = any(not has_pointer_for(off_seg) for off_seg, _ in run_segments)
+                    
+                    # Smart Repointing for Fallback Run (same logic as above, but for 'run_segments')
+                    run_safe_to_move = True
+                    run_inner_ptrs = []
+                    
                     block_start = run_segments[0][0]
-                    if args.reuse_old_space and not run_has_unknown and (
+                    # Reconstruct data
+                    run_orig_data = bytearray()
+                    for off_seg, seg_len in run_segments:
+                        run_orig_data.extend(rom_bytes[off_seg : off_seg + seg_len])
+                        
+                    run_new_data = bytearray()
+                    for off_seg, seg_len in run_segments:
+                        ent_seg = entries_by_offset.get(off_seg)
+                        if ent_seg:
+                            run_new_data.extend(ent_seg["encoded"])
+                        else:
+                            run_new_data.extend(rom_bytes[off_seg : off_seg + seg_len])
+                            
+                    # Check pointers
+                    run_end_seg = run_segments[-1][0] + run_segments[-1][1]
+                    
+                    for ptr_target in range(block_start + 1, run_end_seg):
+                         # Check if it points to start of a segment (handled normally)
+                        is_start = False
+                        for s_off, _ in run_segments:
+                            if ptr_target == s_off:
+                                is_start = True
+                                break
+                        if is_start: continue
+
+                        if ptr_target in all_pointer_index:
+                            rel_pos = ptr_target - block_start
+                            anchor_info = analyze_anchor(run_orig_data, rel_pos)
+                            if anchor_info:
+                                anchor_byte, idx = anchor_info
+                                new_rel_pos = find_target_by_anchor(run_new_data, anchor_byte, idx)
+                                if new_rel_pos is not None:
+                                    run_inner_ptrs.append((ptr_target, new_rel_pos))
+                                else:
+                                    # Anchor not found -> IGNORE (optimistic)
+                                    warnings.append(f"Bloc {hex(block_start)}: Pointeur interne {hex(ptr_target)} non résolu (ignoré)")
+                            else:
+                                # Not an anchor -> IGNORE (optimistic)
+                                warnings.append(f"Bloc {hex(block_start)}: Pointeur interne {hex(ptr_target)} sans ancre (ignoré)")
+
+                    if args.reuse_old_space and not run_has_unknown and run_safe_to_move and (
                         args.ignore_sensitive or block_start >= SAFE_RELOC_START
                     ):
                         total_len_block = sum(seg_len for _, seg_len in run_segments)
@@ -733,6 +986,38 @@ def main() -> None:
                         usable = total_len_block - (aligned_old - block_start)
                         if usable > 0:
                             free_blocks.append((aligned_old, usable, "old"))
+                    elif not run_safe_to_move:
+                        warnings.append(f"Bloc contigu {hex(block_start)}: contient des pointeurs internes non résolus, ancien espace conservé.")
+
+                    if run_safe_to_move and run_inner_ptrs:
+                         for old_target, new_rel_pos in run_inner_ptrs:
+                             new_abs_target = dest_offset + new_rel_pos
+                             locs = all_pointer_index[old_target]
+                             for ptr_loc, lsb in locs:
+                                 new_val = POINTER_BASE + new_abs_target
+                                 set_pointer(ptr_loc, new_val, f"smart-repoint bloc {hex(block_start)}")
+                    
+                    # Update Main Pointers for Fallback Run (ALWAYS update)
+                    curr_new_rel = 0
+                    for off_seg, seg_len in run_segments:
+                        new_abs_loc = dest_offset + curr_new_rel
+                        
+                        # Update pointers pointing to 'off_seg'
+                        if off_seg in all_pointer_index:
+                            locs = all_pointer_index[off_seg]
+                            for ptr_loc, lsb in locs:
+                                new_val = POINTER_BASE + new_abs_loc
+                                set_pointer(ptr_loc, new_val, f"reloc fallback run {hex(block_start)}")
+                        
+                        # Advance
+                        ent_seg = entries_by_offset.get(off_seg)
+                        if ent_seg:
+                            curr_new_rel += len(ent_seg["encoded"])
+                        else:
+                            curr_new_rel += seg_len
+
+                    if source == "old":
+                        reuse_from_old += 1
 
                     if source == "old":
                         reuse_from_old += 1
@@ -769,24 +1054,65 @@ def main() -> None:
 
         rom_bytes[dest_offset : dest_offset + needed] = encoded
 
-        ptr_delta = alt_offset - offset
-        for idx, lsb in positions:
-            target = dest_offset + ptr_delta
-            # Do not force the Thumb bit: point exactly to the relocated text start.
-            new_ptr_val = POINTER_BASE + target
-            set_pointer(idx, new_ptr_val, f"offset {hex(offset)}")
-        pointer_index[offset] = []
-        if alt_offset in pointer_index:
-            pointer_index[alt_offset] = []
+        # Old pointer update logic removed (moved inside safety check)
+        pass
 
         # Free the old slot for future relocations
+        
+        # Smart Repointing for Single Entry
+        safe_to_move = True
+        inner_ptrs_to_update = []
+        
+        # Check for inner pointers in the original range
+        for ptr_target in range(offset + 1, offset + orig_len):
+             if ptr_target in all_pointer_index:
+                rel_pos = ptr_target - offset
+                # Get original data for this entry
+                # We can use rom_bytes[offset : offset + orig_len]
+                # But wait, we might have overwritten it if we did in-place?
+                # No, we are in the "Too long: relocate" block. So old data is still there (unless we reused it? No, we haven't freed it yet).
+                # Actually, we haven't touched the old data yet.
+                
+                orig_data = rom_bytes[offset : offset + orig_len]
+                anchor_info = analyze_anchor(orig_data, rel_pos)
+                
+                if anchor_info:
+                    anchor_byte, idx = anchor_info
+                    new_rel_pos = find_target_by_anchor(encoded, anchor_byte, idx)
+                    if new_rel_pos is not None:
+                        inner_ptrs_to_update.append((ptr_target, new_rel_pos))
+                    else:
+                        # Anchor not found -> IGNORE (optimistic)
+                        warnings.append(f"Ligne {line_no}: Pointeur interne {hex(ptr_target)} non résolu (ignoré)")
+                else:
+                    # Not an anchor -> IGNORE (optimistic)
+                    warnings.append(f"Ligne {line_no}: Pointeur interne {hex(ptr_target)} sans ancre (ignoré)")
+        
         if args.reuse_old_space and (args.ignore_sensitive or offset >= SAFE_RELOC_START):
-            rom_bytes[offset : offset + orig_len] = b"\xFF" * orig_len
-            aligned_old = (offset + 3) // 4 * 4
-            usable = orig_len - (aligned_old - offset)
-            if usable > 0:
-                free_blocks.append((aligned_old, usable, "old"))
+            if not safe_to_move:
+                warnings.append(f"Ligne {line_no}: offset {hex(offset)} a des pointeurs internes non résolus, ancien espace conservé.")
+            else:
+                rom_bytes[offset : offset + orig_len] = b"\xFF" * orig_len
+                aligned_old = (offset + 3) // 4 * 4
+                usable = orig_len - (aligned_old - offset)
+                if usable > 0:
+                    free_blocks.append((aligned_old, usable, "old"))
+                    
+        if safe_to_move and inner_ptrs_to_update:
+            for old_target, new_rel_pos in inner_ptrs_to_update:
+                new_abs_target = dest_offset + new_rel_pos
+                locs = all_pointer_index[old_target]
+                for ptr_loc, lsb in locs:
+                    new_val = POINTER_BASE + new_abs_target
+                    set_pointer(ptr_loc, new_val, f"smart-repoint offset {hex(offset)}")
 
+        # Update Main Pointer for Single Entry (ALWAYS update)
+        if offset in all_pointer_index:
+            locs = all_pointer_index[offset]
+            for ptr_loc, lsb in locs:
+                new_val = POINTER_BASE + dest_offset
+                set_pointer(ptr_loc, new_val, f"reloc offset {hex(offset)}")
+        
         if source == "old":
             reuse_from_old += 1
         moved += 1

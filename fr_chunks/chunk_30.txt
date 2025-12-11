@@ -10,7 +10,7 @@
 0x7ED3D4: Hmpf.\pJe me suis vraiment creusé un trou,\nn'est-ce pas ?
 0x7ED437: J'ai perdu parce que je dors encore\nà moitié.
 0x7ED4CF: Ce désert me maintiendra toujours\nchaud bouillant !
-0x7ED540: Je ne peux pas jouer dans le sable !
+0x7ED540: Pas de musique en plein sable !
 0x7ED560: Je suis venu jouer ici, mais le\nsable entre dans ma guitare.
 0x7ED614: On dit qu'on peut aussi en trouver\nen brisant des rochers.
 0x7ED645: Je veux ajouter des fossiles rares\nà ma collection.
@@ -28,15 +28,15 @@
 0x7EE08E: Je vois…\pJe serai là si tu veux le ranimer.\n
 0x7EE0C1: Bon retour !\pJ'ai ranimé ton fossile en un\n{STR_VAR_1} en pleine forme !
 0x7EE108: {PLAYER} a reçu {STR_VAR_1} du\nscientifique !
-0x7EE520: 9Ô {LV}qンËÌÁぽÔィぺà{RIGHT_ARROW}Ë¿ ÁIls disent qu'il y a longtemps,\nRegirock a aidé à construire\lcette ville.\pMais une fois la ville construite,\nelle a disparu dans le désert,\lpour ne plus jamais être revue.
-0x7EE5D9: Ô xqンËÌÁぽÔィぺà{RIGHT_ARROW}Ë¿ ÁOn tenait chaque année un\nfestival pour fêter quand Regirock a\lterminé cette ville.\pMais l'intérêt s'est éteint ces\ndernières années.\pPlus personne ne vient, alors on a\narrêté.
+0x7EE520: 9Ô {LV}qンËÌÁぽÔィぺà{RIGHT_ARROW}Ë¿ ÁOn dit que jadis,\nRegirock a bâti\lcette ville.\pUne fois la ville finie,\nelle a disparu dans le désert,\lpour ne plus jamais être revue.
+0x7EE5D9: Ô xqンËÌÁぽÔィぺà{RIGHT_ARROW}Ë¿ ÁFête annuelle pour\nla fin des travaux de\lRegirock.\pMais l'intérêt a fondu ces\ndernières années.\pPlus personne ne vient, alors on a\narrêté.
 0x7EE8D0: Mais mon pauvre Lokhlass…\nComment va-t-il nager ?
 0x7EE8F6: Tu as reçu un Lokhlass du pêcheur !\n
 0x7EE920: Ohhhhhhhhhhhh ouaishhhhhhhh !\pMaintenant que j'ai largué ce poids\nmort, je peux enfin faire la fête à\lBorrius Est !\pÀ plus, gamin !
 0x7EE9AA: Oh non.\pTu n'as pas de place pour mon\nLokhlass.\pFais vite de la place pour que je te\nle donne.
-0x7EEADF: ¿iユë¿ àîっâ Áèっà\nォéèっàぴôôôぴいcl.ィóóëëàぽà ぺà{RIGHT_ARROW}Ë¿\nフÁÔ -yンËÌÁÁÔ ィyンËÌÁぽÀ ぺà{RIGHT_ARROW}Ë¿ フÁSalut toi.\pJ'ai une faveur à te demander.\pJe suis un passionné.\pUn amateur de choses dures,\nsi je puis dire.\pUn autre passionné vit à Dehara\nCity, mais contrairement à lui, je\lne veux rien t'acheter.\lJe veux juste que tu me rapportes\n{COLOR}É5 Pierres Dures {COLOR}Ë.\pÇa te dit ?
+0x7EEADF: Salut.\pJ'ai une faveur à te demander.\pJe suis un passionné.\pUn fan de choses dures, si je puis\nme décrire.\pUn autre passionné vit à Dehara\nCity, mais contrairement à lui, je\lne veux rien t'acheter\lchez toi.\pJe veux juste que tu me rapportes\n{COLOR}É5 Pierres Dures {COLOR}Ë.\pÇa te dit ?
 0x7EEC44: Je devrai envoyer quelqu'un d'autre\ndonc.
-0x7EEC7A: Super.\lLes {COLOR}ÉPierres Dures{COLOR}Ë apparaissent\nparfois en brisant des rochers dans le {COLOR}ÉGrand Désert{COLOR}Ë.\pTrouve-en 5 et ramène-les-moi.\pS'il te plaît,\nmerci !
+0x7EEC7A: Super.\pLes {COLOR}ÉPierres Dures{COLOR}Ë tombent\nquand tu casses des rochers.\lDans le {COLOR}ÉGrand Désert{COLOR}Ë.\pTrouve-en 5 et ramène-les-moi,\ns'il te plaît.
 0x7EECFB: Bien, tu les as.\pLaisse-moi te les prendre.
 0x7EED2A: Le gars a pris {COLOR}É5 Pierres Dures{COLOR}Ë.
 0x7EED4C: Oh, tu veux sûrement quelque\nchose en récompense ?
@@ -51,12 +51,12 @@
 0x7EEF38: On dit que des objets rares se\ntrouvent dans ces champignons.
 0x7EEF8A: Si seulement j'avais des champis…
 0x7EEFA6: Tu devrais fouiller les champignons\nau sol.
-0x7EF049: Je peux bientôt soigner, tant mieux.
+0x7EF049: Je pourrai bientôt soigner, super.
 0x7EF06C: Je viens de Bourg Vivill.\pPour une raison, il pleut beaucoup\nlà-bas en ce moment.
 0x7EF227: Bois de Vivill\p{UP_ARROW} Bourg Vivill\n{DOWN_ARROW} Bourg Gurun
-0x7EF24F: Les gens avaient peur de sortir à\ncause de ce gang masqué.\l
-0x7EF29B: Depuis que le gang masqué est parti,\nle soleil brille et les fleurs\ls'épanouissent !
-0x7EF42C: Je savais que tu serais d'accord !\pSi tu me bats au bord de la mer, je\pte donnerai un de mes Pokémon de\nvaleur !\l
+0x7EF24F: Les gens avaient peur de sortir à\ncause de ce gang masqué.\lTerrifiant.
+0x7EF29B: Depuis le départ du gang masqué,\nle soleil brille et les fleurs\ls'épanouissent !
+0x7EF42C: Je savais que tu serais d'accord !\pÉcoute.\pSi tu me bats au bord de mer, je te\ndonnerai un de mes Pokémon de\lvaleur !
 0x7EF4B0: Parfait !
 0x7EF4BA: Tu as égayé ma journée !\pPrends mon Pokémon préféré !
 0x7EF4EE: Tu as reçu un Métamorph de\nl'As !
@@ -66,7 +66,7 @@
 0x7EF596: Si tu veux mon Pokémon, il faut\nfaire de la place dans ton équipe\lavant.
 0x7EF5EA: Route 14\p{UP_ARROW} Route 13\l{LEFT_ARROW} Route 6, Ruines du Néant\l{RIGHT_ARROW} Route 12
 0x7EF622: Route 14\ph7B Route 6\l{RIGHT_ARROW} Ruines du Néant, Route 12
-0x7EF651: °Cy °Cy Sous mon\nparapluie.__pp__aiyah!_pp__mais ça\nne marche pas.
+0x7EF651: Sous mon parapluie, je frappe ce\nrocher qui revient sans cesse.\lArgh.\pAiyah !\pMais ça ne marche pas…
 0x7EF6F1: Aïyah ! Tu l'as cassé !
 0x7EF77B: Je bronze, voilà !
 0x7EF798: Je bronze ici tous les jours pour\nattirer les hommes au hasard, pour\lme sentir bien.
@@ -75,22 +75,22 @@
 0x7EF966: Assomme-le et enferme-le dans\nl'entrepôt !\pLe boss va péter un câble en\napprenant ça…
 0x7EF9CF: Assomme-la et enferme-la dans\nl'entrepôt !\pLe boss va péter un câble en\napprenant ça…
 0x7EFA47: Route 4\p{LEFT_ARROW} Forêt Lugubre, Volcan Cendreux\nRoute 5\l{RIGHT_ARROW} Ville de Dresco\l{DOWN_ARROW} Route 13
-0x7EFA8D: Qu'est-ce que tu fais ?\pTu ne peux pas explorer le Grand\nDésert habillé comme ça !\pSans lunettes adéquates, je ne te\nlaisserai pas passer.\l
+0x7EFA8D: Qu'est-ce que tu fais ?\pTu ne peux pas explorer le Grand\nDésert habillé comme ça !\pSans lunettes adéquates, je ne te\nlaisserai pas passer.\lPas question.
 0x7F04CF: 9Quand je me tiens ici, je vois des\ntrucs trop cool !\pOn dirait que l'eau va dans les\narbres !
-0x7F052E: Ma grande sœur évite de dire des\ngros mots.\pMais à la place elle dit des trucs\ncomme « fèces » et « bouse de Tauros ».\pJe ne sais pas si c'est mieux que\nles vrais…\pQuand je serai grande, je dirai ces\ntrucs débiles aussi !
+0x7F052E: Ma grande sœur évite de dire des\ngros mots.\pMais à la place elle dit des trucs\ncomme « fèces » ou « bouse Tauros ».\pJe ne sais pas si c'est mieux que\nles vrais…\pQuand je serai grande, je dirai ces\ntrucs débiles aussi !
 0x7F06D4: un zOWLE.
-0x7F06FD: Pendant que tu traînais, j'ai cherché\nl'Ombre dans le coin, sans succès.\l\l
-0x7F0787: 9MÂÔ çôァËÌÉぽÌ ZぎヤË0こÂ  ヌぐôァËニ¿  KâÁEt il n'y a personne à qui demander.\nCette ville est quasi déserte…\pJ'ai juste vu un type en cape près\pd'un entrepôt au nord, c'est tout.\n\l
+0x7F06FD: Tu traînais, j'ai cherché\nl'Ombre sans succès.\lPas de chance.\lRien trouvé.
+0x7F0787: Et il n'y a même personne\nà qui demander.\pCette ville est quasi déserte…\pJ'ai vu un type en cape près d'un\nentrepôt\lau nord, c'est tout.
 0x7F085E: Je monte là-haut.\pQui que ce soit, il nous donnera des\nréponses.\pRejoins-moi. Mais cette fois,\nne traîne pas.
 0x7F09F2: {COLOR}ËQuoi ?\pIl l'avait cherché.
 0x7F0A14: {COLOR}ËVite, entrons tant qu'il est\ntoujours inconscient.
 0x7F0A4D: {COLOR}ËMec…\pQuelle entrée…
 0x7F0B2C: jeu Â{RIVAL} : {COLOR}ËToi, voyou !\pQu'est-ce que tu fais ici ?
 0x7F0B60: Sbire : {COLOR}ËJe monte la garde contre\nles types comme vous.\pVéga m'a dit de m'assurer que\npersonne, surtout {PLAYER}, n'entre.\pIl y a une attaque imminente, donc\nil fallait s'attendre à ce que\lquelqu'un tente de passer.\pMais je dois dire, je m'attendais à\nplus de force.
-0x7F0C6C: {RIVAL} : {COLOR}ËSi tu crois que c'est toute la\nforce, tu te trompes.\pAttends, d'une minute à l'autre,\nl'Ombre débarque et te dégage !\l
-0x7F0D01: Sbire : {COLOR}ËMerci de confirmer nos soupçons sur\nl'Ombre.\pMais ça ne change rien.\nMême si quelqu'un passait, nos\pmesures sont impénétrables.\nAprès cette entrée, des rangées de\lsbires prêts à tuer quiconque tente\pd'entrer !\nRéfléchis à ça, petit arrogant.\l\p\n
-0x7F0E50: {RIVAL} : {COLOR}ËAlors je les détruirai tous moi-même !\n
-0x7F13C4: {COLOR}ËCette porte de sécurité gêne…\nSans parler des sbires de l'autre\pcôté, pas chauds à nous laisser\npasser sans combat.\l
+0x7F0C6C: {RIVAL} : {COLOR}ËTu crois que c'est tout,\ntu te trompes.\pAttends, d'une minute à l'autre,\nl'Ombre débarque et te dégage !\lPrépare-toi.
+0x7F0D01: Sbire : {COLOR}ËMerci d'avoir confirmé nos\nsoupçons sur l'Ombre.\pMais ça ne change rien\nde toute façon.\pMême si quelqu'un passait,\nnos mesures sont\limpénétrables.\pDerrière cette entrée, des rangées\net des rangées de sbires prêts à\ltuer quiconque essaie d'entrer !\pMédite là-dessus,\np'tit arrogant.
+0x7F0E50: {RIVAL} : {COLOR}ËAlors je les détruirai\nmoi-même !
+0x7F13C4: {COLOR}ËCette porte de sécurité gêne…\nSans parler des sbires de l'autre\pcôté, pas chauds à nous laisser\npasser sans combat.\lPas simple.
 0x7F1456: {COLOR}ËOn fait quoi, {PLAYER} ?\nOn défonce la porte avec nos\pPokémon et on les écrase ?\nOu on escalade la falaise et on\lpasse par l'entrée de l'Ombre ?\p\n
 0x7F151B: Que veux-tu faire ?
 0x7F1533: On les défonce !
@@ -102,21 +102,21 @@
 0x7F1699: Sbire 3 : {COLOR}ËAllez… ouvrez…
 0x7F16B6: Sbire 3 : {COLOR}ËÇa y est ! On va vivre !
 0x7F16DC: Sbire 4 : {COLOR}ËNon, non, non !\nJe ne veux pas finir comme ça !
-0x7F170C: Sbire 4 : {COLOR}ËAttendez ! Non, s'il vous plaît !\pJ'ai une famille, une femme, une\nfille…\pJe dois vivre pour elles !
+0x7F170C: Sbire 4 : {COLOR}ËAttendez !\nNon, s'il vous plaît !\pJ'ai une famille, une femme, une\nfille…\pJe dois vivre pour elles !
 0x7F1769: {RIVAL} : {COLOR}ËC'est quoi ces trucs ?
 0x7F1787: {COLOR}ËFais quelque chose, {PLAYER} !\pTu ne peux pas lui parler ou autre ?
 0x7F17BF: {COLOR}ËOn l'a échappé belle, {PLAYER}.\pQuelques secondes de plus et on\nétait carbonisés !
-0x7F181D: {COLOR}ËMaintenant que le chemin est dégagé,\ndescendons.\pEspérons éviter d'autres…\nchoses…
+0x7F181D: {COLOR}ËChemin dégagé,\ndescendons.\pEspérons éviter d'autres…\nchoses…
 0x7F1949: {COLOR}ËJe ne sais pas comment tu as passé\ntous les gardes, mais je ne te\llaisserai pas descendre !
 0x7F19B1: Oh allez !
 0x7F19BD: {COLOR}ËJe m'en fiche de te stopper.\nC'est ton ami qui doit payer pour\pce qu'il m'a fait !\n
 0x7F1F4F: Sbire : {COLOR}ËToi…\pJe reviendrai !\pTu as eu de la chance cette fois,\nmais quand j'aurai des renforts,\ltu seras grillé !
-0x7F1FC3: {COLOR}ËIl n'avait aucune chance contre moi.\nPeut-être avec des « rangées et\prangées » de sbires.\nMais seul ? Non !\pAu fait, que crois-tu arrivé à ces\psbires ?\n
+0x7F1FC3: {COLOR}ËIl n'avait aucune chance.\nPeut-être avec des « rangées et\prangées » de sbires.\nMais seul ? Non !\pAu fait, que crois-tu arrivé à ces\psbires ?\n
 0x7F208D: Plus tôt
 0x7F20A4: Véga : {COLOR}ËIci l'Admin Véga.\nJe surveille depuis la salle de\pcommande.\nTous les sbires, tenez bon !\pQuand l'Ombre enfoncera la porte,\panéantissez-les !\nIls sont peu nombreux, nous les\psurpassons largement.\nIls n'ont aucune chance !\pEnveloppez-les dans la Lumière du\pNéant !
 0x7F21D7: Sbire : {COLOR}ËTenez bon tout le monde !\pIls arrivent !
-0x7F2207: Sbire 1 : {COLOR}ËLes secousses sont finies…\p{COLOR}ÁSbire 2 : {COLOR}ÇÇa veut dire qu'ils\nsont là ?\p{COLOR}ÁSbire 3 : {COLOR}ËPréparez-vous, ils descendent\nles escaliers !
-0x7F2295: Sbire : {COLOR}ÇIls montent les escaliers, pas ils\nles descendent !
+0x7F2207: Sbire 1 : {COLOR}ËLes secousses\nsont finies.\p{COLOR}ÁSbire 2 : {COLOR}ÇÇa veut dire qu'ils\nsont là ?\p{COLOR}ÁSbire 3 : {COLOR}ËIls descendent\nles escaliers !
+0x7F2295: Sbire : {COLOR}ÇIls montent les escaliers,\npas ils les descendent !
 0x7F22C7: Sbire : {COLOR}ËCourez ! Maintenant !
 0x7F22E5: Maintenant
 0x7F22FC: {COLOR}ËQuoi qu'il leur soit arrivé, tant\nmieux pour nous.
@@ -125,16 +125,16 @@
 0x7F2439: Floette : {COLOR}ÈFlo !
 0x7F248C: Floette : {COLOR}ËFlo !
 0x7F24DF: Floette : {COLOR}ÇFlo !
-0x7F24F3: On maintient le réseau électrique.\nS'il s'arrête, tous les téléporteurs\pcessent et tout le monde est coincé.\n\l
+0x7F24F3: On maintient le réseau électrique.\nS'il s'arrête, tous les téléporteurs\pcessent et tout le monde\nest coincé.\lPersonne ne bouge.
 0x7F2588: Si une de ces créatures détruit le\nréseau, on est fichus !\pAucune sortie pour nous !
 0x7F26F3: Non !\pJe suis trop jeune pour perdre !
 0x7F270E: Si je ne peux pas te battre, je ne\npourrai pas battre un Guerrier de\pl'Ombre.\pMais peut-être que Véga peut…\nJ'irais le chercher à la salle de\lcommande, mais je ne connais que la\lpremière lettre du mot de passe.\pIl me faut plus que {COLOR}ÉA{COLOR}Ë pour ouvrir.\n
 0x7F2939: Tu retires la cape du Guerrier de\nl'Ombre.
-0x7F2968: {COLOR}ËTu as détruit le Guerrier de\nl'Ombre en retirant sa cape !\pLe seul moyen de savoir ça, c'est de\nfaire partie de l'Ombre !\l
-0x7F2A0F: {COLOR}ËEt si tu es avec l'Ombre, je dois te\nbattre !
+0x7F2968: {COLOR}ËTu as détruit le Guerrier de\nl'Ombre en retirant sa cape !\pLe seul moyen de savoir ça,\nc'est de\lfaire partie de l'Ombre !
+0x7F2A0F: {COLOR}ËSi tu es avec l'Ombre,\nje dois te battre !
 0x7F2A54: Sale Ombre…
-0x7F2A66: {COLOR}ËFais donc ce que tu es venu faire !\nVa affronter Véga, mais laisse-nous\ptranquilles !\nLa deuxième lettre du mot de passe\pde la salle de commande est {COLOR}ÉK{COLOR}Ë !\nIl est là-bas, alors vas-y !\p
-0x7F2C0A: ;ò{UP_ARROW}Ë¿ ÂLe Shadow Warrior\nest actuellement en bataille avec\nune Floette.\pVoulez-vous retirer sa cape ?
+0x7F2A66: {COLOR}ËFais donc ce que tu es venu faire !\nVa affronter Véga, mais laisse-nous\ptranquilles !\nLa deuxième lettre\ndu mot de passe\pde la salle de commande est {COLOR}ÉK{COLOR}Ë !\pIl est là-bas, alors vas-y !
+0x7F2C0A: ;ò{UP_ARROW}Ë¿ ÂLe Shadow Warrior est en bataille\navec une Floette.\pVoulez-vous retirer sa cape ?
 0x7F2C71: Vous avez retiré la cape du Shadow\nWarrior.
 0x7F2CA0: {COLOR}ËToi…\pTu es des leurs, hein !\pTu es venu attaquer notre base !
 0x7F2CE5: {COLOR}ËJe ne te laisserai pas la détruire !

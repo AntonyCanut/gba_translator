@@ -57,3 +57,19 @@ clean:
 	@rm -f $(EXTRACTED) $(COMBINED_FR) $(OUT_FR) $(ROM_USAGE) extracted_full.txt combined_fr_clean.txt
 	@rm -rf $(CHUNK_DIR)
 	@echo "Nettoyage terminé."
+
+.PHONY: tests
+TEST_CHUNK := fr_chunks/chunk_02.txt
+TEST_OUT := totranslate_test.gba
+
+tests:
+	@echo "[tests] Running text injection tests with $(TEST_CHUNK)..."
+	@$(PY) scripts/inject_translations.py \
+		--text $(TEST_CHUNK) \
+		--out $(TEST_OUT) \
+		--use-holes \
+		--free-map $(ROM_USAGE) \
+		--allow-append \
+		2>&1 | tee test_output.log
+	@echo "[tests] ROM test générée : $(TEST_OUT)"
+	@echo "[tests] Log: test_output.log"
