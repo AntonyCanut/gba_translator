@@ -1177,6 +1177,12 @@ def main() -> None:
         if not moved_this_round:
             break
 
+    # Fix ROM header checksum before writing
+    checksum = 0
+    for i in range(0xA0, 0xBD):
+        checksum = (checksum - rom_bytes[i]) & 0xFF
+    rom_bytes[0xBD] = checksum
+
     args.out.write_bytes(rom_bytes)
     print(f"Chaînes remplacées: {replaced} (déplacées: {moved}, réutilisation anciens emplacements: {reuse_from_old})")
     if errors:
