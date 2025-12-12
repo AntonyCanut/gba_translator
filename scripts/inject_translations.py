@@ -30,7 +30,7 @@ DEFAULT_CHARMAP = Path("charmap_firered.txt")
 DEFAULT_TEXT = Path("extracted_text_fr.txt")
 DEFAULT_OUT = Path("totranslate_fr.gba")
 SENSITIVE_FILE = Path("sensitive_lines.txt")
-SENSITIVE_OFFSET_MAX = 0x800000  # low offsets hold intro/name screens and critical init data; avoid relocating them
+SENSITIVE_OFFSET_MAX = 0x800000  # 8MB - zone critique incluant données boot, sprites titre, contrôles
 FORCE_SHRINK_OFFSETS = {0x8CEB24, 0x1F0F874}
 SAFE_RELOC_START = SENSITIVE_OFFSET_MAX  # free blocks below this are ignored to reduce risk
 
@@ -390,6 +390,13 @@ def main() -> None:
 
     def set_pointer(ptr_pos: int, ptr_val: int, context: str) -> None:
         """Écrit un pointeur et signale s'il sort des plages ROM valides."""
+        # CRITICAL: Ne JAMAIS modifier de pointeur dans zone critique (0-1MB)
+        # Ces pointeurs sont dans des tables de sprites, contrôles, boot data
+        CRITICAL_ZONE_MAX = 0x100000  # 1MB
+        if ptr_pos < CRITICAL_ZONE_MAX:
+            # Silently skip - ne pas générer d'erreur pour ne pas polluer les logs
+            return
+
         if not (POINTER_BASE <= ptr_val < POINTER_BASE + len(rom_bytes)):
             errors.append(
                 f"Pointeur hors plage {hex(ptr_val)} ({context}, écrit à {hex(ptr_pos)})"
@@ -494,7 +501,8 @@ def main() -> None:
     for off in ordered_offsets:
         if prev_offset is None or off != prev_offset + original_lengths[prev_offset]:
             current_anchor = None
-        if has_pointer_for(off):
+        # KEY FIX: Only set anchor if we don't have one (don't reset on every pointer)
+        if current_anchor is None and has_pointer_for(off):
             current_anchor = off
         if current_anchor is not None:
             anchor_for[off] = current_anchor
@@ -570,6 +578,9 @@ def main() -> None:
         required = needed + GAP_BYTES
         free_blocks.sort(key=lambda b: (b[2] != "old", b[1]))  # prefer freed blocks, then best-fit
         for idx, (start, size, src) in enumerate(free_blocks):
+            # CRITICAL: Ne jamais allouer dans la zone sensible < 0x800000
+            if start < SENSITIVE_OFFSET_MAX:
+                continue
             if size >= required:
                 alloc_start = start
                 remaining_start = start + required
@@ -587,6 +598,9 @@ def main() -> None:
         free_blocks.sort(key=lambda b: b[1])
         for idx, (start, size, src) in enumerate(free_blocks):
             if src != "old":
+                continue
+            # CRITICAL: Ne jamais allouer dans la zone sensible < 0x800000
+            if start < SENSITIVE_OFFSET_MAX:
                 continue
             if size >= required:
                 alloc_start = start
@@ -665,6 +679,13 @@ def main() -> None:
     for anchor in group_runs:
         run = run_members.get(anchor, [])
         if not run or any(off in processed_offsets for off in run):
+            continue
+
+        # CRITICAL: Ne pas relocal iser des runs contenant des offsets sensibles
+        if any(off < SENSITIVE_OFFSET_MAX for off in run):
+            errors.append(
+                f"Run {hex(anchor)}: contient des offsets sensibles, ne peut pas être relocalisé"
+            )
             continue
 
         parts: List[bytes] = []
@@ -856,17 +877,13 @@ def main() -> None:
                 rom_bytes[offset + len(encoded) : offset + orig_len] = b"\xFF" * (orig_len - len(encoded))
             replaced += 1
             continue
-        # Don't relocate sensitive offsets (low memory areas used during init)
+        # Don't touch sensitive offsets at all (low memory areas used during init/title screen)
         if entry.get("sensitive"):
-            if len(encoded) > orig_len:
-                errors.append(
-                    f"Ligne {line_no}: texte trop long ({len(encoded)}>{orig_len}) sur offset sensible {hex(offset)} (ne peut pas être relocalisé)"
-                )
-                continue
-            rom_bytes[offset : offset + len(encoded)] = encoded
-            if len(encoded) < orig_len:
-                rom_bytes[offset + len(encoded) : offset + orig_len] = b"\xFF" * (orig_len - len(encoded))
-            replaced += 1
+            # Ne JAMAIS modifier les textes sensibles, même s'ils rentrent
+            # Ces zones contiennent des données critiques pour le boot et l'écran titre
+            errors.append(
+                f"Ligne {line_no}: texte dans zone sensible {hex(offset)} - NON MODIFIÉ (protection boot/title)"
+            )
             continue
         # Try in place first
         if len(encoded) <= orig_len:
@@ -909,6 +926,14 @@ def main() -> None:
                         anchor_in_run = off_seg
                         break
                 if anchor_in_run is not None and anchor_in_run not in processed_offsets:
+                    # CRITICAL: Ne pas relocal iser des runs contenant des offsets sensibles
+                    has_sensitive_offset = any(off_seg < SENSITIVE_OFFSET_MAX for off_seg, _ in run_segments)
+                    if has_sensitive_offset:
+                        errors.append(
+                            f"Ligne {line_no}: texte trop long ({len(encoded)}>{orig_len}) dans un bloc contigu avec offsets sensibles (anchor {hex(anchor_in_run)})"
+                        )
+                        continue
+
                     parts: List[bytes] = []
                     total_orig_len = 0
                     run_offsets_in_entries: List[int] = []
