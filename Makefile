@@ -43,7 +43,7 @@ build-fr:
 	@echo "[build-fr] Dump rom usage si absent..."
 	@[ -f $(ROM_USAGE) ] || $(PY) scripts/dump_rom_usage.py --rom $(ROM) --out $(ROM_USAGE)
 	@echo "[build-fr] Injection des traductions (mesure durée)..."
-	@time $(PY) scripts/inject_translations.py --text $(COMBINED_FR) --out $(OUT_FR) --use-holes --free-map $(ROM_USAGE) --allow-append
+	@time $(PY) scripts/inject_translations.py --text $(COMBINED_FR) --out $(OUT_FR) --use-holes --free-map $(ROM_USAGE) --no-reuse-old-space --allow-append
 	@echo "ROM générée : $(OUT_FR)"
 
 .PHONY: quality

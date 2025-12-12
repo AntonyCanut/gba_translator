@@ -30,7 +30,7 @@ DEFAULT_CHARMAP = Path("charmap_firered.txt")
 DEFAULT_TEXT = Path("extracted_text_fr.txt")
 DEFAULT_OUT = Path("totranslate_fr.gba")
 SENSITIVE_FILE = Path("sensitive_lines.txt")
-SENSITIVE_OFFSET_MAX = 0x220000  # low offsets hold intro/name screens; avoid relocating them
+SENSITIVE_OFFSET_MAX = 0x800000  # low offsets hold intro/name screens and critical init data; avoid relocating them
 FORCE_SHRINK_OFFSETS = {0x8CEB24, 0x1F0F874}
 SAFE_RELOC_START = SENSITIVE_OFFSET_MAX  # free blocks below this are ignored to reduce risk
 
@@ -501,14 +501,27 @@ def main() -> None:
             run_members.setdefault(current_anchor, []).append(off)
         prev_offset = off
 
-    group_runs = {
-        anchor
-        for anchor, run in run_members.items()
-        if any(
+    # Select runs to relocate together
+    group_runs = set()
+    for anchor, run in run_members.items():
+        # Skip single-entry runs (handled individually)
+        if len(run) <= 1:
+            continue
+
+        # Calculate total sizes
+        total_orig = sum(entries_by_offset.get(o, {}).get("orig_len", 0) for o in run)
+        total_new = sum(entries_by_offset.get(o, {}).get("enc_len", 0) for o in run)
+
+        # Relocate if:
+        # 1. Has text without pointer that's too long (original logic)
+        # 2. OR total size exceeds (contiguous block overflow)
+        has_long_without_ptr = any(
             (entries_by_offset[o]["enc_len"] > entries_by_offset[o]["orig_len"]) and (not has_pointer_for(o))
             for o in run
         )
-    }
+
+        if has_long_without_ptr or total_new > total_orig:
+            group_runs.add(anchor)
 
     replaced = 0
     moved = 0
@@ -836,6 +849,18 @@ def main() -> None:
             if len(encoded) > orig_len:
                 errors.append(
                     f"Ligne {line_no}: texte trop long ({len(encoded)}>{orig_len}) sur offset protégé {hex(offset)}"
+                )
+                continue
+            rom_bytes[offset : offset + len(encoded)] = encoded
+            if len(encoded) < orig_len:
+                rom_bytes[offset + len(encoded) : offset + orig_len] = b"\xFF" * (orig_len - len(encoded))
+            replaced += 1
+            continue
+        # Don't relocate sensitive offsets (low memory areas used during init)
+        if entry.get("sensitive"):
+            if len(encoded) > orig_len:
+                errors.append(
+                    f"Ligne {line_no}: texte trop long ({len(encoded)}>{orig_len}) sur offset sensible {hex(offset)} (ne peut pas être relocalisé)"
                 )
                 continue
             rom_bytes[offset : offset + len(encoded)] = encoded
@@ -1177,11 +1202,13 @@ def main() -> None:
         if not moved_this_round:
             break
 
-    # Fix ROM header checksum before writing
-    checksum = 0
-    for i in range(0xA0, 0xBD):
-        checksum = (checksum - rom_bytes[i]) & 0xFF
-    rom_bytes[0xBD] = checksum
+    # Keep original ROM checksum (don't fix it)
+    # Some emulators expect the specific checksum of the base ROM
+    # Fixing it can cause issues with ROM hack detection
+    # checksum = 0
+    # for i in range(0xA0, 0xBD):
+    #     checksum = (checksum - rom_bytes[i]) & 0xFF
+    # rom_bytes[0xBD] = checksum
 
     args.out.write_bytes(rom_bytes)
     print(f"Chaînes remplacées: {replaced} (déplacées: {moved}, réutilisation anciens emplacements: {reuse_from_old})")
