@@ -1,0 +1,39 @@
+{
+  "statistics": {
+    "total_analyzed": 14436,
+    "with_padding": "14380 (99.6%)",
+    "without_padding": "56 (0.4%)",
+    "average_padding": "18.5 bytes",
+    "max_padding": "23254 bytes",
+    "min_padding": "0 bytes"
+  },
+  "distribution_by_range": {
+    "No padding": {
+      "count": 56,
+      "percentage": "0.4%"
+    },
+    "1-3 bytes": {
+      "count": 10237,
+      "percentage": "70.9%"
+    },
+    "4-6 bytes": {
+      "count": 1839,
+      "percentage": "12.7%"
+    },
+    "7-10 bytes": {
+      "count": 713,
+      "percentage": "4.9%"
+    },
+    "11-20 bytes": {
+      "count": 262,
+      "percentage": "1.8%"
+    },
+    "21+ bytes": {
+      "count": 1302,
+      "percentage": "9.0%"
+    }
+  },
+  "recommendations": [
+    "✅ Padding moyen élevé (18.5 bytes). La majorité des débordements de 1-3 bytes seront gérés automatiquement."
+  ]
+}

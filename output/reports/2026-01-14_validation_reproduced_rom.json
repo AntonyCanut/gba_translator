@@ -1,0 +1,26 @@
+{
+  "timestamp": "2026-01-14T00:53:13.297165",
+  "reproduced_rom": "output/roms/2026-01-14_spanishrom_reproduction.gba",
+  "reference_rom": "input/roms/spanishrom.gba",
+  "source_texts": "output/extracted/extracted_texts/spanishrom_texts.json",
+  "objective": "Validate reproduced ROM integrity",
+  "results": {
+    "rom_exists": true,
+    "rom_size_valid": true,
+    "texts_extracted": true,
+    "text_comparison": {
+      "total": 339716,
+      "identical": 0,
+      "different": 0,
+      "corrupted_reproduced": 0,
+      "corrupted_reference": 339716,
+      "mismatch_rate": 0.0
+    },
+    "integrity_checks": {
+      "header_valid": true,
+      "size_matches_reference": true,
+      "all_texts_readable": true
+    },
+    "errors": []
+  }
+}

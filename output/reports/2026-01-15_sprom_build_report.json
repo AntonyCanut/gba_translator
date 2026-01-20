@@ -1,0 +1,65 @@
+{
+  "timestamp": "2026-01-15T21:47:31.221702",
+  "language": "spanish",
+  "source_rom": "input/roms/englishrom.gba",
+  "reference_rom": "input/roms/spanishrom.gba",
+  "translations_json": null,
+  "offset_map": "output/differences/pointer_offset_map.json",
+  "allow_truncate": false,
+  "allow_relocate": false,
+  "copy_reference_texts": true,
+  "copy_pointer_tables": true,
+  "copy_text_pointers": true,
+  "copy_inline_texts": true,
+  "output_rom": "output/roms/GenedRom-es.gba",
+  "strategy": "copy",
+  "statistics": {
+    "total_texts": 176076,
+    "successfully_copied": 176076,
+    "successfully_replaced": 0,
+    "failed": 0,
+    "unchanged": 0,
+    "corrupted": 0,
+    "used_padding": 0,
+    "relocated": 0,
+    "relocation_failed": 0,
+    "relocated_bytes": 0,
+    "truncated": 0,
+    "skipped_too_long": 0,
+    "skipped_only_in_spanish": 2396,
+    "skipped_only_in_english": 2365,
+    "skipped_missing_reference": 0,
+    "pointer_tables_copied": 1561,
+    "pointer_table_bytes_copied": 144356,
+    "text_pointers_copied": 2148,
+    "text_pointer_bytes_copied": 8592,
+    "text_pointer_matches": 381868,
+    "inline_texts_matched": 695941,
+    "inline_texts_copied": 85383,
+    "errors": []
+  },
+  "translation_kind": null,
+  "offset_map_stats": {
+    "matched": 173680,
+    "only_in_english": 2365,
+    "only_in_spanish": 2396
+  },
+  "reinserter_reports": {
+    "copy": {
+      "statistics": {
+        "total_texts": 176076,
+        "successful": 176076,
+        "failed": 0,
+        "used_padding": 0,
+        "relocated": 0,
+        "relocation_failed": 0,
+        "relocated_bytes": 0,
+        "truncated": 0,
+        "skipped_too_long": 0,
+        "success_rate": "100.0%"
+      },
+      "warnings": []
+    }
+  },
+  "notes": "Generic ROM builder for spanish translation"
+}

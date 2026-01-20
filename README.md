@@ -1,204 +1,81 @@
-# Pokemon FireRed - Projet de Traduction Française
+# Pokemon FireRed - Spanish ROM Reproduction
 
-**Version** : 2.0 (Architecture OOP)
-**Statut** : ✅ Prêt pour traduction
-**Date** : 2026-01-13
+Goal: reverse engineer two GBA ROMs (original English and translated Spanish) and reproduce the Spanish ROM logically and deterministically.
 
----
+## Quick start
 
-## 🚀 Démarrage Rapide
-
-### Pour Traducteurs
-
-1. **Lire la documentation**
-   - [Guide des Traducteurs](docs/11_GUIDE_TRADUCTEURS.md) - Guide complet
-   - [Résumé Exécutif](docs/recaps/RESUME_EXECUTIF.md) - Vue d'ensemble
-
-2. **Ouvrir le fichier à traduire**
+1. Drop ROMs here:
+   - `input/roms/englishrom.gba`
+   - `input/roms/spanishrom.gba`
+2. Run the pipeline:
+   ```bash
+   make pipeline
    ```
-   output/translation/2026-01-13_translation_template.csv
-   ```
+3. Check outputs:
+   - `output/roms/spanishrom_copy_build.gba`
+   - `output/reports/*_text_range_validation.json`
 
-3. **Commencer à traduire !**
+## Pipeline overview
 
-### Pour Développeurs
+The canonical workflow uses pointer-based extraction and an offset map:
 
-1. **Comprendre l'architecture**
-   - [Architecture OOP](docs/08_ARCHITECTURE_OOP.md) - Documentation technique
-   - [Index Complet](docs/recaps/INDEX.md) - Navigation complète
+1. Verify ROMs against baseline metadata.
+2. Extract pointer-based texts from both ROMs.
+3. Diff texts and build an offset map.
+4. Build the Spanish ROM (copy raw bytes from reference).
+5. Validate text ranges byte-for-byte.
 
-2. **Utiliser les classes**
-   ```python
-   from src.core.text_converter import JSONToCSVConverter
-   from src.core.text_reinserter import ROMTranslationManager
-   ```
-
----
-
-## 📁 Structure du Projet
-
-```
-Unbound Begin/
-├── README.md                          # Ce fichier
-├── Makefile                           # Commandes make
-│
-├── src/                               # Code source
-│   ├── core/                          # Modules réutilisables (OOP)
-│   │   ├── rom_reader.py
-│   │   ├── padding_detector.py
-│   │   ├── text_converter.py         # Classes conversion
-│   │   └── text_reinserter.py        # Classes réinsertion
-│   │
-│   └── translators/                   # Scripts d'exécution
-│       ├── 06_detect_padding.py
-│       ├── 08_json_to_csv_v2.py      # Version OOP
-│       ├── 09_csv_to_json_v2.py      # Version OOP
-│       └── 10_reinsert_smart_v2.py   # Version OOP
-│
-├── docs/                              # Documentation (numérotée)
-│   ├── 00_README.md                   # Introduction détaillée
-│   ├── 01_SOLUTION.md                 # Stratégie padding-aware
-│   ├── 08_ARCHITECTURE_OOP.md         # Architecture technique
-│   ├── 11_GUIDE_TRADUCTEURS.md        # Guide traducteurs
-│   └── recaps/                        # Récapitulatifs de sessions
-│       ├── INDEX.md                   # Index navigation
-│       ├── RESUME_EXECUTIF.md         # Résumé exécutif
-│       └── RECAP_SESSION_OOP.md       # Récap refactorisation
-│
-├── scripts/                           # Scripts anciens
-│   └── legacy/                        # Scripts v1 (archivés)
-│
-├── input/
-│   └── roms/                          # ROMs sources
-│       └── englishrom.gba
-│
-└── output/                            # Fichiers générés
-    ├── translation/
-    │   └── 2026-01-13_translation_template.csv  # À TRADUIRE
-    ├── roms/
-    ├── reports/
-    └── analysis/
-```
-
----
-
-## 📊 Statistiques Clés
-
-- **14,436 textes** à traduire (95.8% de réduction vs ROM complète)
-- **99.2%** des textes ont du padding disponible
-- **73.5%** peuvent déborder de 1-3 caractères
-- **17.7 bytes** de padding en moyenne
-
----
-
-## 🔧 Workflow de Traduction
-
-### Commandes (Version 2 - OOP)
+## Manual commands (no Makefile)
 
 ```bash
-# 1. Analyser le padding (déjà fait)
-python3 src/translators/06_detect_padding.py
+python3 scripts/verify_roms.py --baseline docs/roms_baseline.json
 
-# 2. Générer le CSV (déjà fait)
-python3 src/translators/08_json_to_csv_v2.py
+python3 src/extractors/pointer_text_extractor.py \
+  input/roms/englishrom.gba \
+  --output output/extracted/extracted_texts/englishrom_texts.json
 
-# 3. Traduire dans le CSV
-# (Ouvrir avec Excel/Google Sheets)
+python3 src/extractors/pointer_text_extractor.py \
+  input/roms/spanishrom.gba \
+  --output output/extracted/extracted_texts/spanishrom_texts.json
 
-# 4. Valider les traductions
-python3 src/translators/09_csv_to_json_v2.py
+python3 src/analyzers/11_pointer_text_diff.py \
+  --english output/extracted/extracted_texts/englishrom_texts.json \
+  --spanish output/extracted/extracted_texts/spanishrom_texts.json \
+  --diff-out output/differences/pointer_text_differences.json \
+  --pairs-out output/differences/pointer_translation_pairs.json \
+  --map-out output/differences/pointer_offset_map.json
 
-# 5. Générer la ROM française
-python3 src/translators/10_reinsert_smart_v2.py
+python3 src/translators/19_build_translated_rom_generic.py \
+  --source input/roms/englishrom.gba \
+  --reference input/roms/spanishrom.gba \
+  --offset-map output/differences/pointer_offset_map.json \
+  --copy-reference-texts \
+  --copy-pointer-tables \
+  --copy-text-pointers \
+  --copy-inline-texts \
+  --language spanish \
+  --output output/roms/spanishrom_copy_build.gba
+
+python3 src/validators/text_range_validator.py \
+  --output-rom output/roms/spanishrom_copy_build.gba \
+  --reference-rom input/roms/spanishrom.gba \
+  --offset-map output/differences/pointer_offset_map.json \
+  --reference-texts output/extracted/extracted_texts/spanishrom_texts.json
 ```
 
----
+## Outputs
 
-## 📚 Documentation Principale
+- Pointer extraction: `output/extracted/extracted_texts/*_texts.json`
+- Diff + mapping: `output/differences/pointer_text_differences.json`, `output/differences/pointer_translation_pairs.json`, `output/differences/pointer_offset_map.json`
+- Built ROM: `output/roms/spanishrom_copy_build.gba`
+- Validation report: `output/reports/*_text_range_validation.json`
 
-| Document | Description | Public |
-|----------|-------------|--------|
-| **[00_README](docs/00_README.md)** | Introduction détaillée | Tous |
-| **[01_SOLUTION](docs/01_SOLUTION.md)** | Stratégie technique | Technique |
-| **[08_ARCHITECTURE_OOP](docs/08_ARCHITECTURE_OOP.md)** | Architecture OOP | Développeurs |
-| **[10_PROJECT_STATUS](docs/10_PROJECT_STATUS.md)** | État du projet | Tous |
-| **[11_GUIDE_TRADUCTEURS](docs/11_GUIDE_TRADUCTEURS.md)** | Guide traducteurs | Traducteurs |
-| **[INDEX](docs/recaps/INDEX.md)** | Navigation complète | Tous |
+## Documentation
 
----
+- Pipeline details: `docs/00_README.md`
+- ROM sources and baseline: `docs/ROM_SOURCES.md`, `docs/roms_baseline.json`
+- Generic builder notes: `docs/ROM_BUILDING.md`
 
-## 🎯 État Actuel
+## Legacy
 
-### ✅ Terminé
-
-- [x] Analyse padding (99.2% avec padding disponible)
-- [x] Scripts v1 (procéduraux) créés et testés
-- [x] Scripts v2 (OOP) créés et testés
-- [x] Classes core réutilisables
-- [x] Documentation complète
-- [x] CSV template généré (14,436 textes)
-
-### 🔄 En Cours
-
-- [ ] Traduction des 14,436 textes
-- [ ] Tests sur émulateur
-- [ ] Validation continue
-
-### 📅 À Venir
-
-- [ ] Tests béta
-- [ ] Corrections finales
-- [ ] Release Pokemon FireRed FR
-
----
-
-## 🌟 Nouveautés Version 2.0
-
-### Architecture Orientée Objet
-
-Le code a été refactorisé avec :
-- ✅ Classes réutilisables (`src/core/`)
-- ✅ Documentation complète (docstrings + type hints)
-- ✅ Code testable et maintenable
-- ✅ Organisation claire
-
-### Scripts v2
-
-Trois scripts OOP créés :
-- `08_json_to_csv_v2.py` - Classe `TranslationCSVGenerator`
-- `09_csv_to_json_v2.py` - Classe `TranslationValidator`
-- `10_reinsert_smart_v2.py` - Classe `TranslationApplicator`
-
----
-
-## 💡 Démarrage en 3 Minutes
-
-### Traducteur
-
-1. Ouvrir `output/translation/2026-01-13_translation_template.csv`
-2. Remplir la colonne `translation`
-3. Exécuter `python3 src/translators/09_csv_to_json_v2.py`
-
-### Développeur
-
-1. Lire [docs/08_ARCHITECTURE_OOP.md](docs/08_ARCHITECTURE_OOP.md)
-2. Importer les classes de `src/core/`
-3. Créer votre script
-
----
-
-## 📞 Support
-
-- **Documentation** : Voir [docs/recaps/INDEX.md](docs/recaps/INDEX.md)
-- **Guide traducteurs** : Voir [docs/11_GUIDE_TRADUCTEURS.md](docs/11_GUIDE_TRADUCTEURS.md)
-- **Architecture** : Voir [docs/08_ARCHITECTURE_OOP.md](docs/08_ARCHITECTURE_OOP.md)
-
----
-
-## 🎮 Fichier Principal
-
-**À traduire :** `output/translation/2026-01-13_translation_template.csv`
-
-**14,436 textes** avec padding disponible pour traductions naturelles !
-
-**Bonne traduction ! 🇫🇷🎮**
+Older translation pipeline scripts are kept for reference only under `scripts/legacy/` and the numbered docs. The Makefile and pipeline above are the supported entry points.

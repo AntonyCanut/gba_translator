@@ -1,0 +1,19 @@
+{
+  "timestamp": "2026-01-14T00:53:05.558783",
+  "source_rom": "input/roms/englishrom.gba",
+  "source_texts": "output/extracted/extracted_texts/spanishrom_texts.json",
+  "output_rom": "output/roms/2026-01-14_spanishrom_reproduction.gba",
+  "objective": "Reproduce Spanish ROM from English ROM + Spanish texts",
+  "method": "Real text replacement directly in ROM bytearray",
+  "status": "Spanish texts actually inserted into ROM",
+  "statistics": {
+    "total_texts_to_replace": 339716,
+    "successfully_replaced": 14331,
+    "failed_replacements": 0,
+    "unchanged_texts": 325385,
+    "corrupted_spanish_texts": 0,
+    "success_rate": "4.2%"
+  },
+  "notes": "Spanish texts have been actually replaced in the ROM bytearray.",
+  "errors": []
+}

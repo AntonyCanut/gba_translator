@@ -1,0 +1,593 @@
+{
+  "timestamp": "2026-01-15T23:58:18.419704",
+  "language": "french",
+  "source_rom": "input/roms/englishrom.gba",
+  "reference_rom": null,
+  "translations_json": "output/translation/2026-01-15_translation_ready.json",
+  "offset_map": null,
+  "allow_truncate": false,
+  "allow_relocate": true,
+  "copy_reference_texts": false,
+  "copy_pointer_tables": false,
+  "copy_text_pointers": false,
+  "copy_inline_texts": false,
+  "output_rom": "output/roms/GenedRom-fr.gba",
+  "strategy": "translate",
+  "statistics": {
+    "total_texts": 19075,
+    "successfully_copied": 0,
+    "successfully_replaced": 17483,
+    "failed": 0,
+    "unchanged": 1539,
+    "corrupted": 0,
+    "used_padding": 195,
+    "relocated": 3673,
+    "relocation_failed": 0,
+    "relocated_bytes": 145126,
+    "truncated": 0,
+    "skipped_too_long": 53,
+    "skipped_only_in_spanish": 0,
+    "skipped_only_in_english": 0,
+    "skipped_missing_reference": 0,
+    "pointer_tables_copied": 0,
+    "pointer_table_bytes_copied": 0,
+    "text_pointers_copied": 0,
+    "text_pointer_bytes_copied": 0,
+    "text_pointer_matches": 0,
+    "inline_texts_matched": 0,
+    "inline_texts_copied": 0,
+    "errors": [
+      {
+        "offset": "0x0018D42A",
+        "text": "Prends soin de toi!",
+        "error": "text_too_long (20 > 19)"
+      },
+      {
+        "offset": "0x001A505B",
+        "text": "Nous espérons vous revoir!",
+        "error": "text_too_long (27 > 26)"
+      },
+      {
+        "offset": "0x003D5AFE",
+        "text": "apparait.",
+        "error": "text_too_long (10 > 8)"
+      },
+      {
+        "offset": "0x003FCBE4",
+        "text": "Un coup critique !",
+        "error": "text_too_long (19 > 16)"
+      },
+      {
+        "offset": "0x004162C7",
+        "text": "Pièces",
+        "error": "text_too_long (7 > 6)"
+      },
+      {
+        "offset": "0x00744D32",
+        "text": "Ville de Fallshore",
+        "error": "text_too_long (19 > 15)"
+      },
+      {
+        "offset": "0x00922D8B",
+        "text": "Divise le poids.",
+        "error": "text_too_long (17 > 15)"
+      },
+      {
+        "offset": "0x00A35424",
+        "text": "Ça fait mal au toucher.",
+        "error": "text_too_long (24 > 16)"
+      },
+      {
+        "offset": "0x01A35812",
+        "text": "Pokémon Graine",
+        "error": "text_too_long (15 > 14)"
+      },
+      {
+        "offset": "0x01A35836",
+        "text": "Pokémon Graine",
+        "error": "text_too_long (15 > 14)"
+      },
+      {
+        "offset": "0x01A3587E",
+        "text": "Pokémon Flamme",
+        "error": "text_too_long (15 > 14)"
+      },
+      {
+        "offset": "0x01A358A2",
+        "text": "Pokémon Flamme",
+        "error": "text_too_long (15 > 14)"
+      },
+      {
+        "offset": "0x01A35D46",
+        "text": "Pokémon Ballon",
+        "error": "text_too_long (15 > 14)"
+      },
+      {
+        "offset": "0x01A3605E",
+        "text": "Pokémon Tetard",
+        "error": "text_too_long (15 > 14)"
+      },
+      {
+        "offset": "0x01A36082",
+        "text": "Pokémon Tetard",
+        "error": "text_too_long (15 > 14)"
+      },
+      {
+        "offset": "0x01A36112",
+        "text": "Pokémon Surpuissance",
+        "error": "text_too_long (21 > 14)"
+      },
+      {
+        "offset": "0x01A36136",
+        "text": "Pokémon Surpuissance",
+        "error": "text_too_long (21 > 14)"
+      },
+      {
+        "offset": "0x01A3615A",
+        "text": "Pokémon Surpuissance",
+        "error": "text_too_long (21 > 14)"
+      },
+      {
+        "offset": "0x01A361A2",
+        "text": "Pokémon Plante Carnivore",
+        "error": "text_too_long (25 > 14)"
+      },
+      {
+        "offset": "0x01A361C6",
+        "text": "Pokémon Plante Carnivore",
+        "error": "text_too_long (25 > 14)"
+      },
+      {
+        "offset": "0x01A3620E",
+        "text": "Pokémon Méduse",
+        "error": "text_too_long (15 > 14)"
+      },
+      {
+        "offset": "0x01A362C2",
+        "text": "Pokémon Cheval Feu",
+        "error": "text_too_long (19 > 14)"
+      },
+      {
+        "offset": "0x01A3630A",
+        "text": "Pokémon Bernard-l'ermite",
+        "error": "text_too_long (25 > 14)"
+      },
+      {
+        "offset": "0x01A36352",
+        "text": "Pokémon Aimant",
+        "error": "text_too_long (15 > 14)"
+      },
+      {
+        "offset": "0x01A36376",
+        "text": "Pokémon Canard Fou",
+        "error": "text_too_long (19 > 14)"
+      },
+      {
+        "offset": "0x01A3639A",
+        "text": "Pokémon Oiseau Jumeau",
+        "error": "text_too_long (22 > 14)"
+      },
+      {
+        "offset": "0x01A369CA",
+        "text": "Pokémon Taureau Sauvage",
+        "error": "text_too_long (24 > 14)"
+      },
+      {
+        "offset": "0x01A36E26",
+        "text": "Pokémon Grande Machoire",
+        "error": "text_too_long (24 > 14)"
+      },
+      {
+        "offset": "0x01A36E4A",
+        "text": "Pokémon Grande Machoire",
+        "error": "text_too_long (24 > 14)"
+      },
+      {
+        "offset": "0x01A36E92",
+        "text": "Pokémon Long Corps",
+        "error": "text_too_long (19 > 14)"
+      },
+      {
+        "offset": "0x01A36EFE",
+        "text": "Pokémon Cinq Étoiles",
+        "error": "text_too_long (21 > 14)"
+      },
+      {
+        "offset": "0x01A36F22",
+        "text": "Pokémon Cinq Étoiles",
+        "error": "text_too_long (21 > 14)"
+      },
+      {
+        "offset": "0x01A3737E",
+        "text": "Pokémon Clair de Lune",
+        "error": "text_too_long (22 > 14)"
+      },
+      {
+        "offset": "0x01A373A2",
+        "text": "Pokémon Ténèbres",
+        "error": "text_too_long (17 > 14)"
+      },
+      {
+        "offset": "0x01A375E2",
+        "text": "Pokémon Corne Simple",
+        "error": "text_too_long (21 > 14)"
+      },
+      {
+        "offset": "0x01A37606",
+        "text": "Pokémon Griffe",
+        "error": "text_too_long (15 > 14)"
+      },
+      {
+        "offset": "0x01A3762A",
+        "text": "Pokémon Ourson",
+        "error": "text_too_long (15 > 14)"
+      },
+      {
+        "offset": "0x01A3764E",
+        "text": "Pokémon Hibernant",
+        "error": "text_too_long (18 > 14)"
+      },
+      {
+        "offset": "0x01A3776E",
+        "text": "Pokémon Facteur",
+        "error": "text_too_long (16 > 14)"
+      },
+      {
+        "offset": "0x01A37792",
+        "text": "Pokémon Cervolant",
+        "error": "text_too_long (18 > 14)"
+      },
+      {
+        "offset": "0x01A377FE",
+        "text": "Pokémon Sombre",
+        "error": "text_too_long (15 > 14)"
+      },
+      {
+        "offset": "0x01A37822",
+        "text": "Pokémon Dragon",
+        "error": "text_too_long (15 > 14)"
+      },
+      {
+        "offset": "0x01A3786A",
+        "text": "Pokémon Armure",
+        "error": "text_too_long (15 > 14)"
+      },
+      {
+        "offset": "0x01A378B2",
+        "text": "Pokémon Grande Corne",
+        "error": "text_too_long (21 > 14)"
+      },
+      {
+        "offset": "0x01A37AAA",
+        "text": "Pokémon Armure",
+        "error": "text_too_long (15 > 14)"
+      },
+      {
+        "offset": "0x01A37B3A",
+        "text": "Pokémon Gecko Bois",
+        "error": "text_too_long (19 > 14)"
+      },
+      {
+        "offset": "0x01A37B5E",
+        "text": "Pokémon Gecko Bois",
+        "error": "text_too_long (19 > 14)"
+      },
+      {
+        "offset": "0x01A37BCA",
+        "text": "Pokémon Jeune Volaille",
+        "error": "text_too_long (23 > 14)"
+      },
+      {
+        "offset": "0x01A37BEE",
+        "text": "Pokémon Flamme",
+        "error": "text_too_long (15 > 14)"
+      },
+      {
+        "offset": "0x01A3AB9A",
+        "text": "Pokémon Araignée Électrique",
+        "error": "text_too_long (28 > 14)"
+      },
+      {
+        "offset": "0x01EED1B3",
+        "text": "Boite à costumes",
+        "error": "text_too_long (17 > 13)"
+      },
+      {
+        "offset": "0x01EF0C67",
+        "text": "Pic de cristal",
+        "error": "text_too_long (15 > 14)"
+      },
+      {
+        "offset": "0x01F12FF3",
+        "text": "Foret Lugubre",
+        "error": "text_too_long (14 > 12)"
+      }
+    ]
+  },
+  "translation_kind": "plain",
+  "offset_map_stats": {},
+  "reinserter_reports": {
+    "translate": {
+      "statistics": {
+        "total_texts": 17536,
+        "successful": 17483,
+        "failed": 0,
+        "used_padding": 195,
+        "relocated": 3673,
+        "relocation_failed": 0,
+        "relocated_bytes": 145126,
+        "truncated": 0,
+        "skipped_too_long": 53,
+        "success_rate": "99.7%"
+      },
+      "warnings": [
+        {
+          "offset": "0x0018D42A",
+          "text": "Prends soin de toi!",
+          "error": "text_too_long (20 > 19)"
+        },
+        {
+          "offset": "0x001A505B",
+          "text": "Nous espérons vous revoir!",
+          "error": "text_too_long (27 > 26)"
+        },
+        {
+          "offset": "0x003D5AFE",
+          "text": "apparait.",
+          "error": "text_too_long (10 > 8)"
+        },
+        {
+          "offset": "0x003FCBE4",
+          "text": "Un coup critique !",
+          "error": "text_too_long (19 > 16)"
+        },
+        {
+          "offset": "0x004162C7",
+          "text": "Pièces",
+          "error": "text_too_long (7 > 6)"
+        },
+        {
+          "offset": "0x00744D32",
+          "text": "Ville de Fallshore",
+          "error": "text_too_long (19 > 15)"
+        },
+        {
+          "offset": "0x00922D8B",
+          "text": "Divise le poids.",
+          "error": "text_too_long (17 > 15)"
+        },
+        {
+          "offset": "0x00A35424",
+          "text": "Ça fait mal au toucher.",
+          "error": "text_too_long (24 > 16)"
+        },
+        {
+          "offset": "0x01A35812",
+          "text": "Pokémon Graine",
+          "error": "text_too_long (15 > 14)"
+        },
+        {
+          "offset": "0x01A35836",
+          "text": "Pokémon Graine",
+          "error": "text_too_long (15 > 14)"
+        },
+        {
+          "offset": "0x01A3587E",
+          "text": "Pokémon Flamme",
+          "error": "text_too_long (15 > 14)"
+        },
+        {
+          "offset": "0x01A358A2",
+          "text": "Pokémon Flamme",
+          "error": "text_too_long (15 > 14)"
+        },
+        {
+          "offset": "0x01A35D46",
+          "text": "Pokémon Ballon",
+          "error": "text_too_long (15 > 14)"
+        },
+        {
+          "offset": "0x01A3605E",
+          "text": "Pokémon Tetard",
+          "error": "text_too_long (15 > 14)"
+        },
+        {
+          "offset": "0x01A36082",
+          "text": "Pokémon Tetard",
+          "error": "text_too_long (15 > 14)"
+        },
+        {
+          "offset": "0x01A36112",
+          "text": "Pokémon Surpuissance",
+          "error": "text_too_long (21 > 14)"
+        },
+        {
+          "offset": "0x01A36136",
+          "text": "Pokémon Surpuissance",
+          "error": "text_too_long (21 > 14)"
+        },
+        {
+          "offset": "0x01A3615A",
+          "text": "Pokémon Surpuissance",
+          "error": "text_too_long (21 > 14)"
+        },
+        {
+          "offset": "0x01A361A2",
+          "text": "Pokémon Plante Carnivore",
+          "error": "text_too_long (25 > 14)"
+        },
+        {
+          "offset": "0x01A361C6",
+          "text": "Pokémon Plante Carnivore",
+          "error": "text_too_long (25 > 14)"
+        },
+        {
+          "offset": "0x01A3620E",
+          "text": "Pokémon Méduse",
+          "error": "text_too_long (15 > 14)"
+        },
+        {
+          "offset": "0x01A362C2",
+          "text": "Pokémon Cheval Feu",
+          "error": "text_too_long (19 > 14)"
+        },
+        {
+          "offset": "0x01A3630A",
+          "text": "Pokémon Bernard-l'ermite",
+          "error": "text_too_long (25 > 14)"
+        },
+        {
+          "offset": "0x01A36352",
+          "text": "Pokémon Aimant",
+          "error": "text_too_long (15 > 14)"
+        },
+        {
+          "offset": "0x01A36376",
+          "text": "Pokémon Canard Fou",
+          "error": "text_too_long (19 > 14)"
+        },
+        {
+          "offset": "0x01A3639A",
+          "text": "Pokémon Oiseau Jumeau",
+          "error": "text_too_long (22 > 14)"
+        },
+        {
+          "offset": "0x01A369CA",
+          "text": "Pokémon Taureau Sauvage",
+          "error": "text_too_long (24 > 14)"
+        },
+        {
+          "offset": "0x01A36E26",
+          "text": "Pokémon Grande Machoire",
+          "error": "text_too_long (24 > 14)"
+        },
+        {
+          "offset": "0x01A36E4A",
+          "text": "Pokémon Grande Machoire",
+          "error": "text_too_long (24 > 14)"
+        },
+        {
+          "offset": "0x01A36E92",
+          "text": "Pokémon Long Corps",
+          "error": "text_too_long (19 > 14)"
+        },
+        {
+          "offset": "0x01A36EFE",
+          "text": "Pokémon Cinq Étoiles",
+          "error": "text_too_long (21 > 14)"
+        },
+        {
+          "offset": "0x01A36F22",
+          "text": "Pokémon Cinq Étoiles",
+          "error": "text_too_long (21 > 14)"
+        },
+        {
+          "offset": "0x01A3737E",
+          "text": "Pokémon Clair de Lune",
+          "error": "text_too_long (22 > 14)"
+        },
+        {
+          "offset": "0x01A373A2",
+          "text": "Pokémon Ténèbres",
+          "error": "text_too_long (17 > 14)"
+        },
+        {
+          "offset": "0x01A375E2",
+          "text": "Pokémon Corne Simple",
+          "error": "text_too_long (21 > 14)"
+        },
+        {
+          "offset": "0x01A37606",
+          "text": "Pokémon Griffe",
+          "error": "text_too_long (15 > 14)"
+        },
+        {
+          "offset": "0x01A3762A",
+          "text": "Pokémon Ourson",
+          "error": "text_too_long (15 > 14)"
+        },
+        {
+          "offset": "0x01A3764E",
+          "text": "Pokémon Hibernant",
+          "error": "text_too_long (18 > 14)"
+        },
+        {
+          "offset": "0x01A3776E",
+          "text": "Pokémon Facteur",
+          "error": "text_too_long (16 > 14)"
+        },
+        {
+          "offset": "0x01A37792",
+          "text": "Pokémon Cervolant",
+          "error": "text_too_long (18 > 14)"
+        },
+        {
+          "offset": "0x01A377FE",
+          "text": "Pokémon Sombre",
+          "error": "text_too_long (15 > 14)"
+        },
+        {
+          "offset": "0x01A37822",
+          "text": "Pokémon Dragon",
+          "error": "text_too_long (15 > 14)"
+        },
+        {
+          "offset": "0x01A3786A",
+          "text": "Pokémon Armure",
+          "error": "text_too_long (15 > 14)"
+        },
+        {
+          "offset": "0x01A378B2",
+          "text": "Pokémon Grande Corne",
+          "error": "text_too_long (21 > 14)"
+        },
+        {
+          "offset": "0x01A37AAA",
+          "text": "Pokémon Armure",
+          "error": "text_too_long (15 > 14)"
+        },
+        {
+          "offset": "0x01A37B3A",
+          "text": "Pokémon Gecko Bois",
+          "error": "text_too_long (19 > 14)"
+        },
+        {
+          "offset": "0x01A37B5E",
+          "text": "Pokémon Gecko Bois",
+          "error": "text_too_long (19 > 14)"
+        },
+        {
+          "offset": "0x01A37BCA",
+          "text": "Pokémon Jeune Volaille",
+          "error": "text_too_long (23 > 14)"
+        },
+        {
+          "offset": "0x01A37BEE",
+          "text": "Pokémon Flamme",
+          "error": "text_too_long (15 > 14)"
+        },
+        {
+          "offset": "0x01A3AB9A",
+          "text": "Pokémon Araignée Électrique",
+          "error": "text_too_long (28 > 14)"
+        },
+        {
+          "offset": "0x01EED1B3",
+          "text": "Boite à costumes",
+          "error": "text_too_long (17 > 13)"
+        },
+        {
+          "offset": "0x01EF0C67",
+          "text": "Pic de cristal",
+          "error": "text_too_long (15 > 14)"
+        },
+        {
+          "offset": "0x01F12FF3",
+          "text": "Foret Lugubre",
+          "error": "text_too_long (14 > 12)"
+        }
+      ]
+    }
+  },
+  "notes": "Generic ROM builder for french translation"
+}

@@ -1,0 +1,332 @@
+{
+  "comparison_date": "2026-01-13",
+  "rom_info": {
+    "title": "POKEMON FIRE",
+    "game_code": "BPRE",
+    "maker_code": "01",
+    "size": 33554432,
+    "size_mb": 32
+  },
+  "standard_report": {
+    "statistics": {
+      "total_analyzed": 14436,
+      "with_padding": "14323 (99.2%)",
+      "without_padding": "113 (0.8%)",
+      "average_padding": "17.7 bytes",
+      "max_padding": "23254 bytes",
+      "min_padding": "0 bytes"
+    },
+    "distribution_by_range": {
+      "No padding": {
+        "count": 113,
+        "percentage": "0.8%"
+      },
+      "1-3 bytes": {
+        "count": 10616,
+        "percentage": "73.5%"
+      },
+      "4-6 bytes": {
+        "count": 1412,
+        "percentage": "9.8%"
+      },
+      "7-10 bytes": {
+        "count": 704,
+        "percentage": "4.9%"
+      },
+      "11-20 bytes": {
+        "count": 262,
+        "percentage": "1.8%"
+      },
+      "21+ bytes": {
+        "count": 1302,
+        "percentage": "9.0%"
+      }
+    },
+    "recommendations": [
+      "✅ Padding moyen élevé (17.7 bytes). La majorité des débordements de 1-3 bytes seront gérés automatiquement."
+    ]
+  },
+  "enhanced_report": {
+    "statistics": {
+      "total_analyzed": 14436,
+      "with_padding": "14323 (99.2%)",
+      "without_padding": "113 (0.8%)",
+      "average_padding": "17.7 bytes",
+      "max_padding": "23254 bytes",
+      "min_padding": "0 bytes"
+    },
+    "distribution_by_range": {
+      "No padding": {
+        "count": 113,
+        "percentage": "0.8%"
+      },
+      "1-3 bytes": {
+        "count": 10616,
+        "percentage": "73.5%"
+      },
+      "4-6 bytes": {
+        "count": 1412,
+        "percentage": "9.8%"
+      },
+      "7-10 bytes": {
+        "count": 704,
+        "percentage": "4.9%"
+      },
+      "11-20 bytes": {
+        "count": 262,
+        "percentage": "1.8%"
+      },
+      "21+ bytes": {
+        "count": 1302,
+        "percentage": "9.0%"
+      }
+    },
+    "recommendations": [
+      "✅ Padding moyen élevé (17.7 bytes). La majorité des débordements de 1-3 bytes seront gérés automatiquement.",
+      "⚠️ Mode agressif activé: 8504 textes utilisent padding étendu (58.9%). Vérifier attentivement ces cas."
+    ],
+    "extended_statistics": {
+      "aggressive_mode": true,
+      "extended_padding_used": 8504,
+      "extended_padding_percentage": "58.9%",
+      "gaps_tolerated": 114316,
+      "avg_gaps_per_text": 13.442615239887113
+    }
+  },
+  "comparison": {
+    "total_texts": 14436,
+    "improvements_found": 8504,
+    "total_padding_gain": 32471,
+    "average_gain": 3.8183207902163687,
+    "high_confidence_gains": 0,
+    "high_confidence_percentage": 0.0,
+    "top_20_improvements": [
+      {
+        "offset": "0x0166B465",
+        "text": "      MISSINGNO.",
+        "standard_padding": 1,
+        "extended_padding": 45,
+        "gain": 44,
+        "confidence": "low",
+        "original_length": 16,
+        "standard_max": 17,
+        "extended_max": 61
+      },
+      {
+        "offset": "0x003EEE2B",
+        "text": "Route 17",
+        "standard_padding": 1,
+        "extended_padding": 43,
+        "gain": 42,
+        "confidence": "low",
+        "original_length": 8,
+        "standard_max": 9,
+        "extended_max": 51
+      },
+      {
+        "offset": "0x0074BD5D",
+        "text": "mon Day Care",
+        "standard_padding": 4,
+        "extended_padding": 46,
+        "gain": 42,
+        "confidence": "low",
+        "original_length": 12,
+        "standard_max": 16,
+        "extended_max": 58
+      },
+      {
+        "offset": "0x00B205AB",
+        "text": " zlz                     \nzzz\n",
+        "standard_padding": 1,
+        "extended_padding": 43,
+        "gain": 42,
+        "confidence": "low",
+        "original_length": 30,
+        "standard_max": 31,
+        "extended_max": 73
+      },
+      {
+        "offset": "0x0023EABA",
+        "text": "Painter",
+        "standard_padding": 7,
+        "extended_padding": 48,
+        "gain": 41,
+        "confidence": "medium",
+        "original_length": 7,
+        "standard_max": 14,
+        "extended_max": 55
+      },
+      {
+        "offset": "0x0166B478",
+        "text": "         ?",
+        "standard_padding": 10,
+        "extended_padding": 46,
+        "gain": 36,
+        "confidence": "low",
+        "original_length": 10,
+        "standard_max": 20,
+        "extended_max": 56
+      },
+      {
+        "offset": "0x0166B483",
+        "text": "         ?",
+        "standard_padding": 10,
+        "extended_padding": 46,
+        "gain": 36,
+        "confidence": "low",
+        "original_length": 10,
+        "standard_max": 20,
+        "extended_max": 56
+      },
+      {
+        "offset": "0x0166B48E",
+        "text": "         ?",
+        "standard_padding": 10,
+        "extended_padding": 46,
+        "gain": 36,
+        "confidence": "low",
+        "original_length": 10,
+        "standard_max": 20,
+        "extended_max": 56
+      },
+      {
+        "offset": "0x0166B499",
+        "text": "         ?",
+        "standard_padding": 10,
+        "extended_padding": 46,
+        "gain": 36,
+        "confidence": "low",
+        "original_length": 10,
+        "standard_max": 20,
+        "extended_max": 56
+      },
+      {
+        "offset": "0x0166B4A4",
+        "text": "         ?",
+        "standard_padding": 10,
+        "extended_padding": 46,
+        "gain": 36,
+        "confidence": "low",
+        "original_length": 10,
+        "standard_max": 20,
+        "extended_max": 56
+      },
+      {
+        "offset": "0x0166B4AF",
+        "text": "         ?",
+        "standard_padding": 10,
+        "extended_padding": 46,
+        "gain": 36,
+        "confidence": "low",
+        "original_length": 10,
+        "standard_max": 20,
+        "extended_max": 56
+      },
+      {
+        "offset": "0x0166B4BA",
+        "text": "         ?",
+        "standard_padding": 10,
+        "extended_padding": 46,
+        "gain": 36,
+        "confidence": "low",
+        "original_length": 10,
+        "standard_max": 20,
+        "extended_max": 56
+      },
+      {
+        "offset": "0x0166B4C5",
+        "text": "         ?",
+        "standard_padding": 10,
+        "extended_padding": 46,
+        "gain": 36,
+        "confidence": "low",
+        "original_length": 10,
+        "standard_max": 20,
+        "extended_max": 56
+      },
+      {
+        "offset": "0x0166B4D0",
+        "text": "         ?",
+        "standard_padding": 10,
+        "extended_padding": 46,
+        "gain": 36,
+        "confidence": "low",
+        "original_length": 10,
+        "standard_max": 20,
+        "extended_max": 56
+      },
+      {
+        "offset": "0x0166B4DB",
+        "text": "         ?",
+        "standard_padding": 10,
+        "extended_padding": 46,
+        "gain": 36,
+        "confidence": "low",
+        "original_length": 10,
+        "standard_max": 20,
+        "extended_max": 56
+      },
+      {
+        "offset": "0x0166B4E6",
+        "text": "         ?",
+        "standard_padding": 10,
+        "extended_padding": 46,
+        "gain": 36,
+        "confidence": "low",
+        "original_length": 10,
+        "standard_max": 20,
+        "extended_max": 56
+      },
+      {
+        "offset": "0x0166B4F1",
+        "text": "         ?",
+        "standard_padding": 10,
+        "extended_padding": 46,
+        "gain": 36,
+        "confidence": "low",
+        "original_length": 10,
+        "standard_max": 20,
+        "extended_max": 56
+      },
+      {
+        "offset": "0x0166B4FC",
+        "text": "         ?",
+        "standard_padding": 10,
+        "extended_padding": 46,
+        "gain": 36,
+        "confidence": "low",
+        "original_length": 10,
+        "standard_max": 20,
+        "extended_max": 56
+      },
+      {
+        "offset": "0x0166B507",
+        "text": "         ?",
+        "standard_padding": 10,
+        "extended_padding": 46,
+        "gain": 36,
+        "confidence": "low",
+        "original_length": 10,
+        "standard_max": 20,
+        "extended_max": 56
+      },
+      {
+        "offset": "0x0166B512",
+        "text": "         ?",
+        "standard_padding": 10,
+        "extended_padding": 46,
+        "gain": 36,
+        "confidence": "low",
+        "original_length": 10,
+        "standard_max": 20,
+        "extended_max": 56
+      }
+    ],
+    "by_gain_range": {
+      "1-3 bytes": 5462,
+      "4-6 bytes": 1926,
+      "7-10 bytes": 686,
+      "11+ bytes": 430
+    }
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "timestamp": "2026-01-14T17:06:45.855159",
+  "output_rom": "output/roms/GenedRom-es.gba",
+  "reference_rom": "input/roms/spanishrom.gba",
+  "offset_map": "output/differences/pointer_offset_map.json",
+  "reference_texts": "output/extracted/extracted_texts/spanishrom_texts.json",
+  "results": {
+    "statistics": {
+      "total_map_entries": 178441,
+      "total_candidates": 176076,
+      "total_compared": 176076,
+      "total_matched": 176076,
+      "total_mismatched": 0,
+      "total_spanish_only_compared": 2396,
+      "skipped_only_in_spanish": 0,
+      "skipped_only_in_english": 2365,
+      "missing_reference_text": 0,
+      "invalid_length": 0,
+      "out_of_bounds": 0,
+      "bytes_compared": 7983165,
+      "match_rate": 100.0
+    },
+    "mismatches": [],
+    "errors": [],
+    "max_mismatches": 200,
+    "sample_rate": 1.0
+  }
+}

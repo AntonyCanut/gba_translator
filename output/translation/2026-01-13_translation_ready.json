@@ -1,0 +1,64 @@
+{
+  "conversion_date": "2026-01-13T22:55:40.687816",
+  "source_csv": "2026-01-13_test_sample.csv",
+  "total_translations": 5,
+  "total_errors": 0,
+  "total_warnings": 0,
+  "translations": [
+    {
+      "offset": 1627178,
+      "original_text": "Take care now!",
+      "translation": "Prends soin de toi!",
+      "length": 19,
+      "original_length": 14,
+      "padding_used": 5,
+      "encoding": "pokemon",
+      "category": "dialogue",
+      "notes": "Perfect fit"
+    },
+    {
+      "offset": 1627264,
+      "original_text": "I better go, too.",
+      "translation": "Je dois y aller.",
+      "length": 16,
+      "original_length": 17,
+      "padding_used": -1,
+      "encoding": "pokemon",
+      "category": "dialogue",
+      "notes": "Test avec padding"
+    },
+    {
+      "offset": 1586306,
+      "original_text": "Valley Cave",
+      "translation": "Grotte Vallee",
+      "length": 13,
+      "original_length": 11,
+      "padding_used": 2,
+      "encoding": "pokemon",
+      "category": "location",
+      "notes": "Test location"
+    },
+    {
+      "offset": 1666352,
+      "original_text": "s up?\nWant some Coins?",
+      "translation": "Veux des jetons?",
+      "length": 16,
+      "original_length": 22,
+      "padding_used": -6,
+      "encoding": "pokemon",
+      "category": "dialogue",
+      "notes": "Test dialogue court"
+    },
+    {
+      "offset": 1676357,
+      "original_text": "Which move should be forgotten?",
+      "translation": "Quel talent oublier?",
+      "length": 20,
+      "original_length": 31,
+      "padding_used": -11,
+      "encoding": "pokemon",
+      "category": "dialogue",
+      "notes": "Test question"
+    }
+  ]
+}

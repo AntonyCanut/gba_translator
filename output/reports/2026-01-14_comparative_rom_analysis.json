@@ -1,0 +1,50 @@
+{
+  "rom_info": {
+    "english": {
+      "size": 33554432,
+      "texts": 339821
+    },
+    "spanish": {
+      "size": 33554432,
+      "texts": 0
+    },
+    "output": {
+      "size": 33554432,
+      "matches_spanish": true
+    }
+  },
+  "offset_comparison": {
+    "english_total": 339821,
+    "spanish_total": 0,
+    "only_english": 339821,
+    "both_roms": 0,
+    "only_spanish": 0,
+    "both_roms_pct": 0.0
+  },
+  "content_analysis": {
+    "valid_english_texts": 339815,
+    "english_bytes": 2881235,
+    "spanish_bytes": 0,
+    "matched_to_output": 0,
+    "match_rate": 0.0
+  },
+  "verification": {
+    "file_size_correct": true,
+    "matches_spanish_size": true,
+    "header_check": false,
+    "binary_samples": [
+      {
+        "offset": "0x00100000",
+        "match": true
+      },
+      {
+        "offset": "0x01000000",
+        "match": true
+      },
+      {
+        "offset": "0x01586306",
+        "match": true
+      }
+    ]
+  }
+}

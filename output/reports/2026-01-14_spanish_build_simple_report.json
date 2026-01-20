@@ -1,0 +1,17 @@
+{
+  "timestamp": "2026-01-14T01:07:08.741341",
+  "source_rom_en": "input/roms/englishrom.gba",
+  "source_rom_es": "input/roms/spanishrom.gba",
+  "output_rom": "output/roms/2026-01-14_spanishrom_simple.gba",
+  "objective": "Build Spanish ROM by copying bytes from Spanish ROM to English ROM",
+  "method": "Direct bytearray copy at same offsets",
+  "statistics": {
+    "total_texts": 339821,
+    "successfully_copied": 339815,
+    "failed": 6,
+    "unchanged": 0,
+    "corrupted": 0
+  },
+  "notes": "Copies bytes directly from Spanish ROM at the same offsets.",
+  "errors": []
+}

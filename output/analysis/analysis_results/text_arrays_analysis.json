@@ -1,0 +1,1521 @@
+{
+  "rom_name": "englishrom.gba",
+  "rom_size": 33554432,
+  "text_arrays": [
+    {
+      "start_offset": "0x001969DC",
+      "end_offset": "0x00196ABB",
+      "num_texts": 4,
+      "size": 223,
+      "first_text": "No?\nPlease come play sometime!",
+      "last_text": "s rumoured these machines are\nrigged.",
+      "has_pointer_table": false
+    },
+    {
+      "start_offset": "0x00199445",
+      "end_offset": "0x00199542",
+      "num_texts": 5,
+      "size": 253,
+      "first_text": "Which move should be forgotten?",
+      "last_text": "What?\nNo Egg should know any moves.",
+      "has_pointer_table": false
+    },
+    {
+      "start_offset": "0x001A505B",
+      "end_offset": "0x001A5102",
+      "num_texts": 7,
+      "size": 167,
+      "first_text": "We hope to see you again!",
+      "last_text": "s PC.",
+      "has_pointer_table": false
+    },
+    {
+      "start_offset": "0x001A54C5",
+      "end_offset": "0x001A55A4",
+      "num_texts": 5,
+      "size": 223,
+      "first_text": "mon back to perfect health?",
+      "last_text": "\nWould you like to Surf?",
+      "has_pointer_table": false
+    },
+    {
+      "start_offset": "0x001A6E65",
+      "end_offset": "0x001A722E",
+      "num_texts": 15,
+      "size": 969,
+      "first_text": "ve given one of my AIDES an\nITEMFINDER. Be sure to",
+      "last_text": "dex!",
+      "has_pointer_table": false
+    },
+    {
+      "start_offset": "0x001B2993",
+      "end_offset": "0x001B56DE",
+      "num_texts": 803,
+      "size": 11595,
+      "first_text": "Face",
+      "last_text": "  Ondes",
+      "has_pointer_table": true,
+      "pointer_tables": [
+        {
+          "offset": "0x0045B078",
+          "entries": 14,
+          "has_pointers_to_it": false
+        },
+        {
+          "offset": "0x0045B0B4",
+          "entries": 44,
+          "has_pointers_to_it": false
+        }
+      ]
+    },
+    {
+      "start_offset": "0x001BC334",
+      "end_offset": "0x001BC402",
+      "num_texts": 3,
+      "size": 206,
+      "first_text": "Which of our services do you wish\nto use?",
+      "last_text": "You may battle another Trainer\nusing a GBA Game Li",
+      "has_pointer_table": false
+    },
+    {
+      "start_offset": "0x001BE20F",
+      "end_offset": "0x001BE33E",
+      "num_texts": 4,
+      "size": 303,
+      "first_text": "s Strength made it\npossible to move boulders aroun",
+      "last_text": "A wall of water is crashing down\nwith a mighty roa",
+      "has_pointer_table": false
+    },
+    {
+      "start_offset": "0x001C0DC9",
+      "end_offset": "0x001C0F18",
+      "num_texts": 8,
+      "size": 335,
+      "first_text": "mon\nbooks.",
+      "last_text": "mon Center",
+      "has_pointer_table": false
+    },
+    {
+      "start_offset": "0x001C55C9",
+      "end_offset": "0x001C5659",
+      "num_texts": 4,
+      "size": 144,
+      "first_text": "Would you like to save the game?",
+      "last_text": " saved the game.",
+      "has_pointer_table": true,
+      "pointer_tables": [
+        {
+          "offset": "0x00A0C320",
+          "entries": 5,
+          "has_pointers_to_it": false
+        }
+      ]
+    },
+    {
+      "start_offset": "0x00236C5C",
+      "end_offset": "0x00237332",
+      "num_texts": 20,
+      "size": 1750,
+      "first_text": "mon. It\nis a stone tablet that boosts the\npower of",
+      "last_text": "Big Nugget",
+      "has_pointer_table": true,
+      "pointer_tables": [
+        {
+          "offset": "0x002372C0",
+          "entries": 8,
+          "has_pointers_to_it": true
+        }
+      ]
+    },
+    {
+      "start_offset": "0x0023745B",
+      "end_offset": "0x002374EB",
+      "num_texts": 4,
+      "size": 144,
+      "first_text": "Balm Mushroom",
+      "last_text": "Shalour Sable",
+      "has_pointer_table": true,
+      "pointer_tables": [
+        {
+          "offset": "0x00237400",
+          "entries": 16,
+          "has_pointers_to_it": true
+        }
+      ]
+    },
+    {
+      "start_offset": "0x002375B0",
+      "end_offset": "0x00237604",
+      "num_texts": 7,
+      "size": 84,
+      "first_text": "Helix Fossil",
+      "last_text": "Armor Fossil",
+      "has_pointer_table": true,
+      "pointer_tables": [
+        {
+          "offset": "0x00237584",
+          "entries": 11,
+          "has_pointers_to_it": true
+        }
+      ]
+    },
+    {
+      "start_offset": "0x0023E567",
+      "end_offset": "0x0023EAC1",
+      "num_texts": 67,
+      "size": 1370,
+      "first_text": " Trainer",
+      "last_text": "Painter",
+      "has_pointer_table": false
+    },
+    {
+      "start_offset": "0x0023F79C",
+      "end_offset": "0x0023F7F2",
+      "num_texts": 3,
+      "size": 86,
+      "first_text": "Big Mo",
+      "last_text": "Big Mo",
+      "has_pointer_table": false
+    },
+    {
+      "start_offset": "0x00240944",
+      "end_offset": "0x00240A38",
+      "num_texts": 6,
+      "size": 244,
+      "first_text": "Goon",
+      "last_text": "Goon",
+      "has_pointer_table": false
+    },
+    {
+      "start_offset": "0x0024221C",
+      "end_offset": "0x002427E9",
+      "num_texts": 36,
+      "size": 1485,
+      "first_text": "Grunt",
+      "last_text": "Grunt",
+      "has_pointer_table": false
+    },
+    {
+      "start_offset": "0x00243D24",
+      "end_offset": "0x00243DA0",
+      "num_texts": 4,
+      "size": 124,
+      "first_text": "Goon",
+      "last_text": "Goon",
+      "has_pointer_table": false
+    },
+    {
+      "start_offset": "0x00244364",
+      "end_offset": "0x00244408",
+      "num_texts": 3,
+      "size": 164,
+      "first_text": "Goon",
+      "last_text": "Goon",
+      "has_pointer_table": false
+    },
+    {
+      "start_offset": "0x0024483C",
+      "end_offset": "0x002449F8",
+      "num_texts": 12,
+      "size": 444,
+      "first_text": "Goon",
+      "last_text": "Goon",
+      "has_pointer_table": false
+    },
+    {
+      "start_offset": "0x00244AE4",
+      "end_offset": "0x00244D18",
+      "num_texts": 15,
+      "size": 564,
+      "first_text": "Goon",
+      "last_text": "Goon",
+      "has_pointer_table": false
+    },
+    {
+      "start_offset": "0x0024528C",
+      "end_offset": "0x0024530F",
+      "num_texts": 4,
+      "size": 131,
+      "first_text": "Grunt",
+      "last_text": "Grunt Elite",
+      "has_pointer_table": false
+    },
+    {
+      "start_offset": "0x00245584",
+      "end_offset": "0x002455DA",
+      "num_texts": 3,
+      "size": 86,
+      "first_text": "Maxima",
+      "last_text": "Maxima",
+      "has_pointer_table": false
+    },
+    {
+      "start_offset": "0x00245944",
+      "end_offset": "0x00245999",
+      "num_texts": 3,
+      "size": 85,
+      "first_text": "Elias",
+      "last_text": "Elias",
+      "has_pointer_table": false
+    },
+    {
+      "start_offset": "0x00245DF4",
+      "end_offset": "0x00245EC4",
+      "num_texts": 6,
+      "size": 208,
+      "first_text": "Big Mo",
+      "last_text": "Benjamin",
+      "has_pointer_table": false
+    },
+    {
+      "start_offset": "0x0024F3C2",
+      "end_offset": "0x0024FB06",
+      "num_texts": 78,
+      "size": 1860,
+      "first_text": "  No special ability.",
+      "last_text": "Negates weather effects.",
+      "has_pointer_table": true,
+      "pointer_tables": [
+        {
+          "offset": "0x0024FB08",
+          "entries": 78,
+          "has_pointers_to_it": false
+        },
+        {
+          "offset": "0x0096DE04",
+          "entries": 487,
+          "has_pointers_to_it": true
+        }
+      ]
+    },
+    {
+      "start_offset": "0x003D54B0",
+      "end_offset": "0x003D5542",
+      "num_texts": 3,
+      "size": 146,
+      "first_text": "mon.",
+      "last_text": "mon.",
+      "has_pointer_table": false
+    },
+    {
+      "start_offset": "0x003D565E",
+      "end_offset": "0x003D57D2",
+      "num_texts": 6,
+      "size": 372,
+      "first_text": "mon.",
+      "last_text": "mon.",
+      "has_pointer_table": false
+    },
+    {
+      "start_offset": "0x003D5AB0",
+      "end_offset": "0x003D5B45",
+      "num_texts": 3,
+      "size": 149,
+      "first_text": "appear.",
+      "last_text": "mon.",
+      "has_pointer_table": false
+    },
+    {
+      "start_offset": "0x003D5C4F",
+      "end_offset": "0x003D5ED0",
+      "num_texts": 9,
+      "size": 641,
+      "first_text": "s ancien.",
+      "last_text": "mon.",
+      "has_pointer_table": false
+    },
+    {
+      "start_offset": "0x003D60EA",
+      "end_offset": "0x003D624E",
+      "num_texts": 5,
+      "size": 356,
+      "first_text": "mon\nis withdrawn.",
+      "last_text": "mon is withdrawn.",
+      "has_pointer_table": false
+    },
+    {
+      "start_offset": "0x003D62F0",
+      "end_offset": "0x003D71BF",
+      "num_texts": 50,
+      "size": 3791,
+      "first_text": "mon sauvages\nfaibles pendant 200 pas.",
+      "last_text": "Can be ground up into a powder as\nan ingredient fo",
+      "has_pointer_table": false
+    },
+    {
+      "start_offset": "0x003D7537",
+      "end_offset": "0x003D76DF",
+      "num_texts": 7,
+      "size": 424,
+      "first_text": "mon, it raises\nthe Attack stat in a pinch.",
+      "last_text": "mon, it sharply\nraises one stat in a pinch.",
+      "has_pointer_table": false
+    },
+    {
+      "start_offset": "0x003D7770",
+      "end_offset": "0x003D79C6",
+      "num_texts": 7,
+      "size": 598,
+      "first_text": "s accuracy.",
+      "last_text": "mon.\nIt snaps the holder out of\ninfatuation. It ca",
+      "has_pointer_table": false
+    },
+    {
+      "start_offset": "0x003D7B6A",
+      "end_offset": "0x003D88BD",
+      "num_texts": 37,
+      "size": 3411,
+      "first_text": "mon if the\nholder is first in the party.",
+      "last_text": "s\nBEAUTY condition in CONTESTS.",
+      "has_pointer_table": false
+    },
+    {
+      "start_offset": "0x003D8A66",
+      "end_offset": "0x003D8C2D",
+      "num_texts": 5,
+      "size": 455,
+      "first_text": "A device used for finding items.\nIf there is a hid",
+      "last_text": "A ticket required for sailing\nbetween West and Eas",
+      "has_pointer_table": false
+    },
+    {
+      "start_offset": "0x003D8F2A",
+      "end_offset": "0x003D9082",
+      "num_texts": 3,
+      "size": 344,
+      "first_text": "An orb that glows red.\nIt is said to contain an in",
+      "last_text": "A pair of protective goggles.\nThey enable a Traine",
+      "has_pointer_table": false
+    },
+    {
+      "start_offset": "0x003D9187",
+      "end_offset": "0x003D9251",
+      "num_texts": 3,
+      "size": 202,
+      "first_text": " base.",
+      "last_text": " base.",
+      "has_pointer_table": false
+    },
+    {
+      "start_offset": "0x003D92EE",
+      "end_offset": "0x003D93C8",
+      "num_texts": 3,
+      "size": 218,
+      "first_text": "mon. It appears to be\npart of a plant root.",
+      "last_text": "mon.\nIt is made by the Devon Corp.",
+      "has_pointer_table": false
+    },
+    {
+      "start_offset": "0x003DA80E",
+      "end_offset": "0x003DA8E2",
+      "num_texts": 3,
+      "size": 212,
+      "first_text": "mon\nMart.  ",
+      "last_text": "dex\nfor your rival.",
+      "has_pointer_table": false
+    },
+    {
+      "start_offset": "0x003DAB9F",
+      "end_offset": "0x003DAD55",
+      "num_texts": 5,
+      "size": 438,
+      "first_text": "A very convenient map that can be\nviewed anytime. ",
+      "last_text": "s\nsector for important items.",
+      "has_pointer_table": false
+    },
+    {
+      "start_offset": "0x003DB49C",
+      "end_offset": "0x003DB500",
+      "num_texts": 3,
+      "size": 100,
+      "first_text": "    Fresh Water",
+      "last_text": "    Lemonade",
+      "has_pointer_table": false
+    },
+    {
+      "start_offset": "0x003DB90C",
+      "end_offset": "0x003DBA2C",
+      "num_texts": 7,
+      "size": 288,
+      "first_text": "            Heal Ball",
+      "last_text": "            Black Sludge",
+      "has_pointer_table": false
+    },
+    {
+      "start_offset": "0x003DBAF0",
+      "end_offset": "0x003DBBE2",
+      "num_texts": 6,
+      "size": 242,
+      "first_text": "            HP UP",
+      "last_text": "            Rare Candy",
+      "has_pointer_table": false
+    },
+    {
+      "start_offset": "0x003DBF10",
+      "end_offset": "0x003DBF80",
+      "num_texts": 3,
+      "size": 112,
+      "first_text": "            Adamant Orb",
+      "last_text": "            Griseous Orb",
+      "has_pointer_table": false
+    },
+    {
+      "start_offset": "0x003DC0F4",
+      "end_offset": "0x003DC240",
+      "num_texts": 7,
+      "size": 332,
+      "first_text": "            Leaf Stone",
+      "last_text": "            Odd Keystone",
+      "has_pointer_table": false
+    },
+    {
+      "start_offset": "0x003DC35C",
+      "end_offset": "0x003DC3F9",
+      "num_texts": 3,
+      "size": 157,
+      "first_text": "            Big Nugget",
+      "last_text": "            Balm Mushroom",
+      "has_pointer_table": false
+    },
+    {
+      "start_offset": "0x003DC701",
+      "end_offset": "0x003DC89C",
+      "num_texts": 10,
+      "size": 411,
+      "first_text": "   Cheri Berry",
+      "last_text": "    Sitrus Berry",
+      "has_pointer_table": false
+    },
+    {
+      "start_offset": "0x003DC934",
+      "end_offset": "0x003DD104",
+      "num_texts": 42,
+      "size": 2000,
+      "first_text": "            Aguav Berry",
+      "last_text": "            Soul Dew",
+      "has_pointer_table": false
+    },
+    {
+      "start_offset": "0x003DD174",
+      "end_offset": "0x003DD3EE",
+      "num_texts": 12,
+      "size": 634,
+      "first_text": "            Smoke Ball",
+      "last_text": "            Magnet",
+      "has_pointer_table": false
+    },
+    {
+      "start_offset": "0x003DD644",
+      "end_offset": "0x003DD6B2",
+      "num_texts": 3,
+      "size": 110,
+      "first_text": "            Lucky Punch",
+      "last_text": "            Thick Club",
+      "has_pointer_table": false
+    },
+    {
+      "start_offset": "0x003DD74C",
+      "end_offset": "0x003DD7E6",
+      "num_texts": 3,
+      "size": 154,
+      "first_text": "            Magmarizer",
+      "last_text": "            Razor Fang",
+      "has_pointer_table": false
+    },
+    {
+      "start_offset": "0x003DD880",
+      "end_offset": "0x003DD948",
+      "num_texts": 5,
+      "size": 200,
+      "first_text": "            Expert Belt",
+      "last_text": "            Destiny Knot",
+      "has_pointer_table": false
+    },
+    {
+      "start_offset": "0x003DDA0C",
+      "end_offset": "0x003DDB00",
+      "num_texts": 5,
+      "size": 244,
+      "first_text": "            Power Bracer",
+      "last_text": "            Power Weight",
+      "has_pointer_table": false
+    },
+    {
+      "start_offset": "0x003DDD24",
+      "end_offset": "0x003DDDBE",
+      "num_texts": 4,
+      "size": 154,
+      "first_text": "            Old Rod",
+      "last_text": "   SS. Ticket",
+      "has_pointer_table": false
+    },
+    {
+      "start_offset": "0x003EED08",
+      "end_offset": "0x003EEFF7",
+      "num_texts": 33,
+      "size": 751,
+      "first_text": "Bellin Town",
+      "last_text": "Cave of Being",
+      "has_pointer_table": true,
+      "pointer_tables": [
+        {
+          "offset": "0x003F1CAC",
+          "entries": 109,
+          "has_pointers_to_it": true
+        }
+      ]
+    },
+    {
+      "start_offset": "0x003EF133",
+      "end_offset": "0x003EF1F7",
+      "num_texts": 6,
+      "size": 196,
+      "first_text": "Battle Mine",
+      "last_text": "Ferrothorn Turf",
+      "has_pointer_table": false
+    },
+    {
+      "start_offset": "0x003FB225",
+      "end_offset": "0x003FB28D",
+      "num_texts": 4,
+      "size": 104,
+      "first_text": ", come back!",
+      "last_text": " a boosted",
+      "has_pointer_table": false
+    },
+    {
+      "start_offset": "0x003FB366",
+      "end_offset": "0x003FB3E9",
+      "num_texts": 3,
+      "size": 131,
+      "first_text": "mon?",
+      "last_text": " avoided\nthe attack!",
+      "has_pointer_table": false
+    },
+    {
+      "start_offset": "0x003FB557",
+      "end_offset": "0x003FB67A",
+      "num_texts": 10,
+      "size": 291,
+      "first_text": "\nfell asleep!",
+      "last_text": " is hurt\nby its burn!",
+      "has_pointer_table": false
+    },
+    {
+      "start_offset": "0x003FB711",
+      "end_offset": "0x003FB934",
+      "num_texts": 13,
+      "size": 547,
+      "first_text": " is paralyzed!\nIt may be unable to move!",
+      "last_text": " regained\nhealth!",
+      "has_pointer_table": false
+    },
+    {
+      "start_offset": "0x003FB9BA",
+      "end_offset": "0x003FBB2E",
+      "num_texts": 10,
+      "size": 372,
+      "first_text": " team is covered\nby a veil!",
+      "last_text": " was trapped\nin the vortex!",
+      "has_pointer_table": false
+    },
+    {
+      "start_offset": "0x003FBB9B",
+      "end_offset": "0x003FBCDC",
+      "num_texts": 11,
+      "size": 321,
+      "first_text": " kept going\nand crashed!",
+      "last_text": " woke up!",
+      "has_pointer_table": false
+    },
+    {
+      "start_offset": "0x003FBE02",
+      "end_offset": "0x003FBFBE",
+      "num_texts": 9,
+      "size": 444,
+      "first_text": " is storing\nenergy!",
+      "last_text": " is trying\nto take its foe with it!",
+      "has_pointer_table": false
+    },
+    {
+      "start_offset": "0x003FC10E",
+      "end_offset": "0x003FC1F0",
+      "num_texts": 4,
+      "size": 226,
+      "first_text": " braced\nitself!",
+      "last_text": " foresaw\nan attack!",
+      "has_pointer_table": false
+    },
+    {
+      "start_offset": "0x003FC2AC",
+      "end_offset": "0x003FC336",
+      "num_texts": 4,
+      "size": 138,
+      "first_text": " was subjected\nto Torment!",
+      "last_text": " switched\nitems with its opponent!",
+      "has_pointer_table": false
+    },
+    {
+      "start_offset": "0x003FC39D",
+      "end_offset": "0x003FC4D5",
+      "num_texts": 7,
+      "size": 312,
+      "first_text": "s Wish\ncame true!",
+      "last_text": " \nlost all its PP due to the Grudge!",
+      "has_pointer_table": false
+    },
+    {
+      "start_offset": "0x003FCB41",
+      "end_offset": "0x003FCC06",
+      "num_texts": 7,
+      "size": 197,
+      "first_text": "sharply ",
+      "last_text": "s a one-hit KO!",
+      "has_pointer_table": false
+    },
+    {
+      "start_offset": "0x003FCDF2",
+      "end_offset": "0x003FD24C",
+      "num_texts": 39,
+      "size": 1114,
+      "first_text": "But nothing happened!",
+      "last_text": " is eating!",
+      "has_pointer_table": false
+    },
+    {
+      "start_offset": "0x003FD4D6",
+      "end_offset": "0x003FD521",
+      "num_texts": 4,
+      "size": 75,
+      "first_text": "s enough!\nCome back!",
+      "last_text": " , good!\nCome back!",
+      "has_pointer_table": false
+    },
+    {
+      "start_offset": "0x003FD593",
+      "end_offset": "0x003FD5CC",
+      "num_texts": 7,
+      "size": 57,
+      "first_text": "Attack",
+      "last_text": "evasiveness",
+      "has_pointer_table": true,
+      "pointer_tables": [
+        {
+          "offset": "0x003FD5D0",
+          "entries": 8,
+          "has_pointers_to_it": true
+        },
+        {
+          "offset": "0x003FE7F4",
+          "entries": 6,
+          "has_pointers_to_it": false
+        },
+        {
+          "offset": "0x01FB233C",
+          "entries": 7,
+          "has_pointers_to_it": true
+        }
+      ]
+    },
+    {
+      "start_offset": "0x003FD697",
+      "end_offset": "0x003FD789",
+      "num_texts": 8,
+      "size": 242,
+      "first_text": "The Trainer blocked the Ball!",
+      "last_text": "Shoot!\nIt was so close, too!",
+      "has_pointer_table": false
+    },
+    {
+      "start_offset": "0x003FD96F",
+      "end_offset": "0x003FDA01",
+      "num_texts": 3,
+      "size": 146,
+      "first_text": "  problem!",
+      "last_text": "\nrestored its HP!",
+      "has_pointer_table": false
+    },
+    {
+      "start_offset": "0x003FE6E1",
+      "end_offset": "0x003FE713",
+      "num_texts": 3,
+      "size": 50,
+      "first_text": " do?",
+      "last_text": "What will the\nold man do?",
+      "has_pointer_table": false
+    },
+    {
+      "start_offset": "0x003FE799",
+      "end_offset": "0x003FE7F3",
+      "num_texts": 6,
+      "size": 90,
+      "first_text": "Yes\nNo",
+      "last_text": "Sp. Def",
+      "has_pointer_table": true,
+      "pointer_tables": [
+        {
+          "offset": "0x003FE7F4",
+          "entries": 6,
+          "has_pointers_to_it": false
+        }
+      ]
+    },
+    {
+      "start_offset": "0x00415C1B",
+      "end_offset": "0x00415CEC",
+      "num_texts": 4,
+      "size": 209,
+      "first_text": "The previous save file will be\nloaded.",
+      "last_text": "TIME",
+      "has_pointer_table": false
+    },
+    {
+      "start_offset": "0x00415D70",
+      "end_offset": "0x00415DF6",
+      "num_texts": 5,
+      "size": 134,
+      "first_text": "Cancel",
+      "last_text": "mon Habitats",
+      "has_pointer_table": false
+    },
+    {
+      "start_offset": "0x00415E8E",
+      "end_offset": "0x00416024",
+      "num_texts": 22,
+      "size": 406,
+      "first_text": "Search",
+      "last_text": " Welcome to the Hall of Fame!",
+      "has_pointer_table": true,
+      "pointer_tables": [
+        {
+          "offset": "0x0010350C",
+          "entries": 3,
+          "has_pointers_to_it": false
+        },
+        {
+          "offset": "0x00106450",
+          "entries": 10,
+          "has_pointers_to_it": false
+        },
+        {
+          "offset": "0x001067B0",
+          "entries": 4,
+          "has_pointers_to_it": false
+        }
+      ]
+    },
+    {
+      "start_offset": "0x0041608F",
+      "end_offset": "0x00416109",
+      "num_texts": 5,
+      "size": 122,
+      "first_text": " The Hall of Fame data is\ncorrupted.",
+      "last_text": "   IDNo.",
+      "has_pointer_table": false
+    },
+    {
+      "start_offset": "0x0041617A",
+      "end_offset": "0x0041635D",
+      "num_texts": 20,
+      "size": 483,
+      "first_text": "Player",
+      "last_text": "\nbe placed?",
+      "has_pointer_table": true,
+      "pointer_tables": [
+        {
+          "offset": "0x0006FE64",
+          "entries": 5,
+          "has_pointers_to_it": false
+        },
+        {
+          "offset": "0x000EB6F0",
+          "entries": 3,
+          "has_pointers_to_it": false
+        },
+        {
+          "offset": "0x000EB740",
+          "entries": 3,
+          "has_pointers_to_it": false
+        },
+        {
+          "offset": "0x003A7344",
+          "entries": 18,
+          "has_pointers_to_it": true
+        },
+        {
+          "offset": "0x003F5BCC",
+          "entries": 9,
+          "has_pointers_to_it": true
+        },
+        {
+          "offset": "0x003F5BFC",
+          "entries": 16,
+          "has_pointers_to_it": false
+        },
+        {
+          "offset": "0x003F5C5C",
+          "entries": 6,
+          "has_pointers_to_it": false
+        },
+        {
+          "offset": "0x003F5CBC",
+          "entries": 15,
+          "has_pointers_to_it": false
+        },
+        {
+          "offset": "0x00402208",
+          "entries": 6,
+          "has_pointers_to_it": true
+        },
+        {
+          "offset": "0x00402234",
+          "entries": 5,
+          "has_pointers_to_it": false
+        },
+        {
+          "offset": "0x00452CFC",
+          "entries": 3,
+          "has_pointers_to_it": true
+        },
+        {
+          "offset": "0x00452EB8",
+          "entries": 23,
+          "has_pointers_to_it": false
+        },
+        {
+          "offset": "0x00453F74",
+          "entries": 6,
+          "has_pointers_to_it": true
+        },
+        {
+          "offset": "0x0045A618",
+          "entries": 60,
+          "has_pointers_to_it": false
+        },
+        {
+          "offset": "0x00463140",
+          "entries": 10,
+          "has_pointers_to_it": true
+        },
+        {
+          "offset": "0x00464358",
+          "entries": 18,
+          "has_pointers_to_it": true
+        },
+        {
+          "offset": "0x008206F0",
+          "entries": 64,
+          "has_pointers_to_it": false
+        },
+        {
+          "offset": "0x009F4B80",
+          "entries": 4,
+          "has_pointers_to_it": false
+        },
+        {
+          "offset": "0x00A6BA50",
+          "entries": 28,
+          "has_pointers_to_it": false
+        },
+        {
+          "offset": "0x00A6CA1C",
+          "entries": 68,
+          "has_pointers_to_it": true
+        },
+        {
+          "offset": "0x01EB61F4",
+          "entries": 8,
+          "has_pointers_to_it": false
+        },
+        {
+          "offset": "0x01FB233C",
+          "entries": 7,
+          "has_pointers_to_it": true
+        },
+        {
+          "offset": "0x01FE65F0",
+          "entries": 28,
+          "has_pointers_to_it": false
+        }
+      ]
+    },
+    {
+      "start_offset": "0x004166D3",
+      "end_offset": "0x004167FF",
+      "num_texts": 9,
+      "size": 300,
+      "first_text": "TM Case",
+      "last_text": "Here you are!\nThank you!",
+      "has_pointer_table": true,
+      "pointer_tables": [
+        {
+          "offset": "0x009F4000",
+          "entries": 5,
+          "has_pointers_to_it": false
+        }
+      ]
+    },
+    {
+      "start_offset": "0x0041689E",
+      "end_offset": "0x004169D4",
+      "num_texts": 10,
+      "size": 310,
+      "first_text": "Is there anything else I can do?",
+      "last_text": "Sp. Def",
+      "has_pointer_table": true,
+      "pointer_tables": [
+        {
+          "offset": "0x0045A618",
+          "entries": 60,
+          "has_pointers_to_it": false
+        },
+        {
+          "offset": "0x008206F0",
+          "entries": 64,
+          "has_pointers_to_it": false
+        },
+        {
+          "offset": "0x00A6CA1C",
+          "entries": 68,
+          "has_pointers_to_it": true
+        }
+      ]
+    },
+    {
+      "start_offset": "0x004171F1",
+      "end_offset": "0x00417456",
+      "num_texts": 21,
+      "size": 613,
+      "first_text": "Move to where?",
+      "last_text": "LEARNED",
+      "has_pointer_table": true,
+      "pointer_tables": [
+        {
+          "offset": "0x0045A2E8",
+          "entries": 49,
+          "has_pointers_to_it": true
+        }
+      ]
+    },
+    {
+      "start_offset": "0x00417533",
+      "end_offset": "0x004177AB",
+      "num_texts": 22,
+      "size": 632,
+      "first_text": "Cut a tree or grass.",
+      "last_text": "There is no more\nroom in the BAG.",
+      "has_pointer_table": true,
+      "pointer_tables": [
+        {
+          "offset": "0x00402208",
+          "entries": 6,
+          "has_pointers_to_it": true
+        },
+        {
+          "offset": "0x008209E0",
+          "entries": 14,
+          "has_pointers_to_it": false
+        },
+        {
+          "offset": "0x00A6C968",
+          "entries": 16,
+          "has_pointers_to_it": true
+        },
+        {
+          "offset": "0x01EBA790",
+          "entries": 4,
+          "has_pointers_to_it": false
+        }
+      ]
+    },
+    {
+      "start_offset": "0x00417828",
+      "end_offset": "0x0041795F",
+      "num_texts": 8,
+      "size": 311,
+      "first_text": "s Mail?",
+      "last_text": "DOUBLE BATTLE",
+      "has_pointer_table": true,
+      "pointer_tables": [
+        {
+          "offset": "0x00453F74",
+          "entries": 6,
+          "has_pointers_to_it": true
+        }
+      ]
+    },
+    {
+      "start_offset": "0x00417BA7",
+      "end_offset": "0x00417C32",
+      "num_texts": 10,
+      "size": 139,
+      "first_text": "s PC",
+      "last_text": "Coins",
+      "has_pointer_table": true,
+      "pointer_tables": [
+        {
+          "offset": "0x0009D128",
+          "entries": 3,
+          "has_pointers_to_it": false
+        }
+      ]
+    },
+    {
+      "start_offset": "0x00417D56",
+      "end_offset": "0x00417DEC",
+      "num_texts": 10,
+      "size": 150,
+      "first_text": "HELIX FOSSIL",
+      "last_text": "Berry Pouch",
+      "has_pointer_table": false
+    },
+    {
+      "start_offset": "0x00418208",
+      "end_offset": "0x004186CC",
+      "num_texts": 62,
+      "size": 1220,
+      "first_text": "Exit from the Box.",
+      "last_text": "mon.",
+      "has_pointer_table": true,
+      "pointer_tables": [
+        {
+          "offset": "0x003CDA20",
+          "entries": 10,
+          "has_pointers_to_it": true
+        },
+        {
+          "offset": "0x003CEA80",
+          "entries": 3,
+          "has_pointers_to_it": false
+        },
+        {
+          "offset": "0x003D3534",
+          "entries": 18,
+          "has_pointers_to_it": false
+        },
+        {
+          "offset": "0x003D3580",
+          "entries": 17,
+          "has_pointers_to_it": false
+        },
+        {
+          "offset": "0x009A41B4",
+          "entries": 40,
+          "has_pointers_to_it": false
+        }
+      ]
+    },
+    {
+      "start_offset": "0x00418E52",
+      "end_offset": "0x00418EBB",
+      "num_texts": 7,
+      "size": 105,
+      "first_text": "Box Name?",
+      "last_text": "Move",
+      "has_pointer_table": false
+    },
+    {
+      "start_offset": "0x00419A48",
+      "end_offset": "0x00419D01",
+      "num_texts": 20,
+      "size": 697,
+      "first_text": "mon Egg found by the\nDay-Care couple.",
+      "last_text": "TIME",
+      "has_pointer_table": true,
+      "pointer_tables": [
+        {
+          "offset": "0x0008A2C8",
+          "entries": 4,
+          "has_pointers_to_it": false
+        },
+        {
+          "offset": "0x0008A3A4",
+          "entries": 4,
+          "has_pointers_to_it": false
+        },
+        {
+          "offset": "0x00137E1C",
+          "entries": 3,
+          "has_pointers_to_it": false
+        },
+        {
+          "offset": "0x01ED8E7C",
+          "entries": 3,
+          "has_pointers_to_it": false
+        }
+      ]
+    },
+    {
+      "start_offset": "0x00419DEB",
+      "end_offset": "0x00419E71",
+      "num_texts": 4,
+      "size": 134,
+      "first_text": "Battle Style",
+      "last_text": "Cancel",
+      "has_pointer_table": true,
+      "pointer_tables": [
+        {
+          "offset": "0x003CC314",
+          "entries": 19,
+          "has_pointers_to_it": true
+        }
+      ]
+    },
+    {
+      "start_offset": "0x0041B2B7",
+      "end_offset": "0x0041B32D",
+      "num_texts": 6,
+      "size": 118,
+      "first_text": "Attack",
+      "last_text": "Huh?",
+      "has_pointer_table": true,
+      "pointer_tables": [
+        {
+          "offset": "0x00459B40",
+          "entries": 8,
+          "has_pointers_to_it": false
+        }
+      ]
+    },
+    {
+      "start_offset": "0x0044522A",
+      "end_offset": "0x004452F9",
+      "num_texts": 3,
+      "size": 207,
+      "first_text": "voluer.",
+      "last_text": "agresse.",
+      "has_pointer_table": false
+    },
+    {
+      "start_offset": "0x00445925",
+      "end_offset": "0x00445A05",
+      "num_texts": 3,
+      "size": 224,
+      "first_text": "fend avec sa corne toxique.",
+      "last_text": "phonique comme une\nallumette.",
+      "has_pointer_table": false
+    },
+    {
+      "start_offset": "0x00445B00",
+      "end_offset": "0x00445BEC",
+      "num_texts": 3,
+      "size": 236,
+      "first_text": "ge,\nses six queues en forment de nouvelles.",
+      "last_text": "il roule ses grands yeux ronds,\nil entonne une ber",
+      "has_pointer_table": false
+    },
+    {
+      "start_offset": "0x00445C52",
+      "end_offset": "0x00445D97",
+      "num_texts": 4,
+      "size": 325,
+      "first_text": "air.",
+      "last_text": "ne en\nsemant des graines.",
+      "has_pointer_table": false
+    },
+    {
+      "start_offset": "0x004461CA",
+      "end_offset": "0x00446475",
+      "num_texts": 7,
+      "size": 683,
+      "first_text": "rieux\nlui font subir de constantes migraines.",
+      "last_text": " peine sur\nses nouveaux pieds.",
+      "has_pointer_table": false
+    },
+    {
+      "start_offset": "0x004468B0",
+      "end_offset": "0x00446999",
+      "num_texts": 3,
+      "size": 233,
+      "first_text": "mement corrosif.",
+      "last_text": "emprisonner ses adversaires dans un\nredoutable fil",
+      "has_pointer_table": false
+    },
+    {
+      "start_offset": "0x00446B29",
+      "end_offset": "0x00446C60",
+      "num_texts": 4,
+      "size": 311,
+      "first_text": "\nforce de galoper.",
+      "last_text": " mordre.",
+      "has_pointer_table": false
+    },
+    {
+      "start_offset": "0x00446D24",
+      "end_offset": "0x00446DEA",
+      "num_texts": 3,
+      "size": 198,
+      "first_text": "visions.",
+      "last_text": "pathique.",
+      "has_pointer_table": false
+    }
+  ],
+  "relocation_chains": [
+    {
+      "array_offset": "0x00236C5C",
+      "array_size": 20,
+      "table_offset": "0x002372C0",
+      "table_entries": 8,
+      "pointer_locations": [
+        "0x008A3F50"
+      ]
+    },
+    {
+      "array_offset": "0x0023745B",
+      "array_size": 4,
+      "table_offset": "0x00237400",
+      "table_entries": 16,
+      "pointer_locations": [
+        "0x008A3F54"
+      ]
+    },
+    {
+      "array_offset": "0x002375B0",
+      "array_size": 7,
+      "table_offset": "0x00237584",
+      "table_entries": 11,
+      "pointer_locations": [
+        "0x008A3F58"
+      ]
+    },
+    {
+      "array_offset": "0x0024F3C2",
+      "array_size": 78,
+      "table_offset": "0x0096DE04",
+      "table_entries": 487,
+      "pointer_locations": [
+        "0x000001C4",
+        "0x001367A8",
+        "0x009A945C"
+      ]
+    },
+    {
+      "array_offset": "0x003EED08",
+      "array_size": 33,
+      "table_offset": "0x003F1CAC",
+      "table_entries": 109,
+      "pointer_locations": [
+        "0x000C0C94",
+        "0x000C4DB8"
+      ]
+    },
+    {
+      "array_offset": "0x003FD593",
+      "array_size": 7,
+      "table_offset": "0x003FD5D0",
+      "table_entries": 8,
+      "pointer_locations": [
+        "0x00042D90",
+        "0x000D859C",
+        "0x00A01FB0",
+        "0x00A0CE3C",
+        "0x01EB896C",
+        "0x01EB8A3C",
+        "0x01EB8B54",
+        "0x01EBB510",
+        "0x01EC640C"
+      ]
+    },
+    {
+      "array_offset": "0x003FD593",
+      "array_size": 7,
+      "table_offset": "0x01FB233C",
+      "table_entries": 7,
+      "pointer_locations": [
+        "0x01FB1A04"
+      ]
+    },
+    {
+      "array_offset": "0x0041617A",
+      "array_size": 20,
+      "table_offset": "0x003A7344",
+      "table_entries": 18,
+      "pointer_locations": [
+        "0x0006EF9C",
+        "0x0006F374",
+        "0x0006F3F8"
+      ]
+    },
+    {
+      "array_offset": "0x0041617A",
+      "array_size": 20,
+      "table_offset": "0x003F5BCC",
+      "table_entries": 9,
+      "pointer_locations": [
+        "0x000CBA68"
+      ]
+    },
+    {
+      "array_offset": "0x0041617A",
+      "array_size": 20,
+      "table_offset": "0x00402208",
+      "table_entries": 6,
+      "pointer_locations": [
+        "0x000EBA84",
+        "0x000EBB48",
+        "0x000EBB6C"
+      ]
+    },
+    {
+      "array_offset": "0x0041617A",
+      "array_size": 20,
+      "table_offset": "0x00452CFC",
+      "table_entries": 3,
+      "pointer_locations": [
+        "0x00108810"
+      ]
+    },
+    {
+      "array_offset": "0x0041617A",
+      "array_size": 20,
+      "table_offset": "0x00453F74",
+      "table_entries": 6,
+      "pointer_locations": [
+        "0x0010E344",
+        "0x0010E3A0"
+      ]
+    },
+    {
+      "array_offset": "0x0041617A",
+      "array_size": 20,
+      "table_offset": "0x00463140",
+      "table_entries": 10,
+      "pointer_locations": [
+        "0x001323DC"
+      ]
+    },
+    {
+      "array_offset": "0x0041617A",
+      "array_size": 20,
+      "table_offset": "0x00464358",
+      "table_entries": 18,
+      "pointer_locations": [
+        "0x0013DBB0"
+      ]
+    },
+    {
+      "array_offset": "0x0041617A",
+      "array_size": 20,
+      "table_offset": "0x00A6CA1C",
+      "table_entries": 68,
+      "pointer_locations": [
+        "0x00120F74",
+        "0x00121FB8",
+        "0x00122D18",
+        "0x00122D48"
+      ]
+    },
+    {
+      "array_offset": "0x0041617A",
+      "array_size": 20,
+      "table_offset": "0x01FB233C",
+      "table_entries": 7,
+      "pointer_locations": [
+        "0x01FB1A04"
+      ]
+    },
+    {
+      "array_offset": "0x0041689E",
+      "array_size": 10,
+      "table_offset": "0x00A6CA1C",
+      "table_entries": 68,
+      "pointer_locations": [
+        "0x00120F74",
+        "0x00121FB8",
+        "0x00122D18",
+        "0x00122D48"
+      ]
+    },
+    {
+      "array_offset": "0x004171F1",
+      "array_size": 21,
+      "table_offset": "0x0045A2E8",
+      "table_entries": 49,
+      "pointer_locations": [
+        "0x00121DF4"
+      ]
+    },
+    {
+      "array_offset": "0x00417533",
+      "array_size": 22,
+      "table_offset": "0x00402208",
+      "table_entries": 6,
+      "pointer_locations": [
+        "0x000EBA84",
+        "0x000EBB48",
+        "0x000EBB6C"
+      ]
+    },
+    {
+      "array_offset": "0x00417533",
+      "array_size": 22,
+      "table_offset": "0x00A6C968",
+      "table_entries": 16,
+      "pointer_locations": [
+        "0x001221D0"
+      ]
+    },
+    {
+      "array_offset": "0x00417828",
+      "array_size": 8,
+      "table_offset": "0x00453F74",
+      "table_entries": 6,
+      "pointer_locations": [
+        "0x0010E344",
+        "0x0010E3A0"
+      ]
+    },
+    {
+      "array_offset": "0x00418208",
+      "array_size": 62,
+      "table_offset": "0x003CDA20",
+      "table_entries": 10,
+      "pointer_locations": [
+        "0x0008C444",
+        "0x0008C508",
+        "0x0008C5D4",
+        "0x0008C620",
+        "0x0008C67C",
+        "0x0008C7B0"
+      ]
+    },
+    {
+      "array_offset": "0x00419DEB",
+      "array_size": 4,
+      "table_offset": "0x003CC314",
+      "table_entries": 19,
+      "pointer_locations": [
+        "0x00088DDC"
+      ]
+    },
+    {
+      "array_offset": "0x00463D60",
+      "array_size": 24,
+      "table_offset": "0x00463E60",
+      "table_entries": 31,
+      "pointer_locations": [
+        "0x000488B8",
+        "0x001375F0",
+        "0x001377A8"
+      ]
+    },
+    {
+      "array_offset": "0x00A4E137",
+      "array_size": 11,
+      "table_offset": "0x00A6C968",
+      "table_entries": 16,
+      "pointer_locations": [
+        "0x001221D0"
+      ]
+    },
+    {
+      "array_offset": "0x00A4ED04",
+      "array_size": 40,
+      "table_offset": "0x009A230C",
+      "table_entries": 53,
+      "pointer_locations": [
+        "0x00A0AF44"
+      ]
+    }
+  ]
+}

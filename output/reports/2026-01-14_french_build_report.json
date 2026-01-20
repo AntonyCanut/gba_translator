@@ -1,0 +1,19 @@
+{
+  "timestamp": "2026-01-14T01:02:57.269481",
+  "source_rom_en": "input/roms/englishrom.gba",
+  "source_translations": "output/translation/demo_french_texts.json",
+  "output_rom": "output/roms/2026-01-14_frenchrom_built.gba",
+  "objective": "Build French ROM from English ROM + French translations",
+  "method": "Load French translations, insert into English ROM",
+  "statistics": {
+    "total_texts_processed": 14436,
+    "successfully_replaced": 14436,
+    "failed_replacements": 0,
+    "unchanged_texts": 0,
+    "texts_too_long": 14436,
+    "corrupted_french_texts": 0,
+    "success_rate": "100.0%"
+  },
+  "notes": "French texts inserted into English ROM. Prepare translation JSON for actual French translations.",
+  "errors": []
+}
