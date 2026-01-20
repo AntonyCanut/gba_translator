@@ -1,0 +1,38 @@
+{
+  "length_distribution": {
+    "total": 339815,
+    "min": 4,
+    "max": 960,
+    "avg": 8.47883407148007,
+    "median": 5,
+    "total_bytes": 2881235,
+    "by_range": {
+      "1-10": 288090,
+      "11-50": 47032,
+      "51-100": 4139,
+      "101-200": 502,
+      "201-500": 45,
+      "501-1000": 7
+    }
+  },
+  "consecutive_texts": {
+    "count": 438,
+    "groups": 438,
+    "largest_group": 1
+  },
+  "gap_analysis": {
+    "total_gaps": 339376,
+    "avg_gap": 90.00305855452359,
+    "max_gap": 345355,
+    "zero_gap": 0,
+    "distribution": {
+      "<100": 282679,
+      "100-1000": 53939,
+      "1K-10K": 2631,
+      ">10K": 127
+    }
+  },
+  "boundary_integrity": true,
+  "error_patterns": [],
+  "boundary_errors": 0
+}

@@ -1,0 +1,362 @@
+#!/usr/bin/env python3
+"""Patch FR font glyphs for French accents in a GBA ROM."""
+
+from __future__ import annotations
+
+import argparse
+from collections import Counter
+from pathlib import Path
+from typing import Iterable, List, Optional, Tuple
+
+LZ77_MAGIC = 0x10
+FONT_SIZE = 0x2000
+GLYPH_SIZE = 32
+MIN_GLYPH_DENSITY = 5
+
+CP_A = 0xD5
+CP_ACUTE_A = 0x17
+CP_GRAVE_A = 0x16
+CP_C = 0xD7
+CP_C_CEDILLA = 0x19
+
+WIDTH_TABLE_OFFSETS = [
+    0x1FB100,
+    0x207300,
+    0x217618,
+    0x227930,
+]
+
+
+class Lz77Block:
+    def __init__(self, offset: int, compressed_len: int, decompressed: bytes) -> None:
+        self.offset = offset
+        self.compressed_len = compressed_len
+        self.decompressed = decompressed
+
+
+class FreeSpaceAllocator:
+    def __init__(self, rom: bytearray) -> None:
+        self.rom = rom
+        self.start, self.end = self._find_trailing_ff()
+        self.cursor = (self.start + 3) & ~3
+
+    def _find_trailing_ff(self) -> Tuple[int, int]:
+        idx = len(self.rom)
+        while idx > 0 and self.rom[idx - 1] == 0xFF:
+            idx -= 1
+        return idx, len(self.rom)
+
+    def allocate(self, size: int) -> int:
+        aligned = (size + 3) & ~3
+        if self.cursor + aligned > self.end:
+            raise RuntimeError("Not enough free space to relocate font data.")
+        offset = self.cursor
+        self.cursor += aligned
+        return offset
+
+
+def lz77_decompress(data: bytes, offset: int) -> Optional[Tuple[bytes, int]]:
+    if offset + 4 > len(data) or data[offset] != LZ77_MAGIC:
+        return None
+    size = data[offset + 1] | (data[offset + 2] << 8) | (data[offset + 3] << 16)
+    if size <= 0:
+        return None
+    out = bytearray()
+    src = offset + 4
+    while len(out) < size:
+        if src >= len(data):
+            return None
+        flags = data[src]
+        src += 1
+        for bit in range(8):
+            if len(out) >= size:
+                break
+            if flags & (0x80 >> bit):
+                if src + 1 >= len(data):
+                    return None
+                b1 = data[src]
+                b2 = data[src + 1]
+                src += 2
+                disp = ((b1 & 0x0F) << 8) | b2
+                length = (b1 >> 4) + 3
+                disp += 1
+                if disp > len(out):
+                    return None
+                for _ in range(length):
+                    out.append(out[-disp])
+                    if len(out) >= size:
+                        break
+            else:
+                if src >= len(data):
+                    return None
+                out.append(data[src])
+                src += 1
+    return bytes(out), src - offset
+
+
+def lz77_compress(data: bytes) -> bytes:
+    size = len(data)
+    out = bytearray()
+    out.append(LZ77_MAGIC)
+    out.extend((size & 0xFF, (size >> 8) & 0xFF, (size >> 16) & 0xFF))
+    pos = 0
+    while pos < size:
+        flags_pos = len(out)
+        out.append(0)
+        flags = 0
+        for i in range(8):
+            if pos >= size:
+                break
+            max_len = min(18, size - pos)
+            window_start = max(0, pos - 0x1000)
+            window = data[window_start:pos]
+            best_len = 0
+            best_disp = 0
+            if window:
+                for length in range(max_len, 2, -1):
+                    idx = window.rfind(data[pos:pos + length])
+                    if idx != -1:
+                        best_len = length
+                        best_disp = pos - (window_start + idx)
+                        break
+            if best_len >= 3:
+                flags |= 1 << (7 - i)
+                disp = best_disp - 1
+                out.append(((best_len - 3) << 4) | ((disp >> 8) & 0x0F))
+                out.append(disp & 0xFF)
+                pos += best_len
+            else:
+                out.append(data[pos])
+                pos += 1
+        out[flags_pos] = flags
+    return bytes(out)
+
+
+def tile_to_pixels(tile: bytes) -> List[int]:
+    pixels: List[int] = []
+    for b in tile:
+        pixels.append(b & 0x0F)
+        pixels.append((b >> 4) & 0x0F)
+    return pixels
+
+
+def pixels_to_tile(pixels: Iterable[int]) -> bytes:
+    pix_list = list(pixels)
+    out = bytearray()
+    for i in range(0, 64, 2):
+        out.append((pix_list[i] & 0x0F) | ((pix_list[i + 1] & 0x0F) << 4))
+    return bytes(out)
+
+
+def glyph_pixels(font: bytes, codepoint: int) -> List[int]:
+    start = codepoint * GLYPH_SIZE
+    return tile_to_pixels(font[start:start + GLYPH_SIZE])
+
+
+def glyph_density(font: bytes, codepoint: int) -> int:
+    pixels = glyph_pixels(font, codepoint)
+    return sum(1 for p in pixels if p)
+
+
+
+
+def is_font_block(font: bytes) -> bool:
+    sample = [0xA1, 0xA2, 0xA3, 0xBB, 0xBC, 0xD5, 0xD7]
+    score = 0
+    for cp in sample:
+        density = glyph_density(font, cp)
+        if 5 < density < 60:
+            score += 1
+    return score >= 4
+
+
+def find_font_blocks(rom: bytes) -> List[Lz77Block]:
+    blocks: List[Lz77Block] = []
+    header = bytes((LZ77_MAGIC, 0x00, 0x20, 0x00))
+    start = 0
+    while True:
+        offset = rom.find(header, start)
+        if offset == -1:
+            break
+        start = offset + 1
+        ptr = (0x08000000 + offset).to_bytes(4, "little")
+        if rom.find(ptr) == -1:
+            continue
+        result = lz77_decompress(rom, offset)
+        if result is None:
+            continue
+        decompressed, compressed_len = result
+        if len(decompressed) != FONT_SIZE:
+            continue
+        if is_font_block(decompressed):
+            blocks.append(Lz77Block(offset, compressed_len, decompressed))
+    return blocks
+
+
+def extract_cedilla_mask(font: bytes) -> List[Tuple[int, int]]:
+    base = glyph_pixels(font, CP_C)
+    cedilla = glyph_pixels(font, CP_C_CEDILLA)
+    mask: List[Tuple[int, int]] = []
+    for y in range(6, 8):
+        for x in range(8):
+            idx = y * 8 + x
+            if base[idx] == 0 and cedilla[idx] != 0:
+                mask.append((x, y))
+    return mask
+
+
+def dominant_color(pixels: Iterable[int]) -> int:
+    counts = Counter([p for p in pixels if p])
+    if not counts:
+        return 1
+    return counts.most_common(1)[0][0]
+
+
+def build_grave_a(font: bytes) -> bytes:
+    base = glyph_pixels(font, CP_A)
+    acute = glyph_pixels(font, CP_ACUTE_A)
+
+    positions = [
+        (x, y, acute[y * 8 + x])
+        for y in range(2)
+        for x in range(8)
+        if acute[y * 8 + x] != 0 and acute[y * 8 + x] != base[y * 8 + x]
+    ]
+    if not positions:
+        return pixels_to_tile(base)
+
+    avg_x = sum(x for x, _, _ in positions) / len(positions)
+    shift = int(round(avg_x - 1.0))
+    shift = max(1, min(6, shift))
+
+    out = base[:]
+    for x, y, val in positions:
+        nx = x - shift
+        if 0 <= nx < 8:
+            idx = y * 8 + nx
+            if val > out[idx]:
+                out[idx] = val
+
+    return pixels_to_tile(out)
+
+
+def build_cedilla(font: bytes, fallback_mask: List[Tuple[int, int]]) -> bytes:
+    base = glyph_pixels(font, CP_C)
+    cedilla = glyph_pixels(font, CP_C_CEDILLA)
+
+    local_mask = extract_cedilla_mask(font)
+    use_mask = local_mask if len(local_mask) >= max(2, len(fallback_mask) // 2) else fallback_mask
+    color = dominant_color(base)
+
+    out = base[:]
+    for x, y in use_mask:
+        idx = y * 8 + x
+        if out[idx] == 0:
+            out[idx] = color
+
+    return pixels_to_tile(out)
+
+
+def patch_width_tables(rom: bytearray) -> int:
+    patched = 0
+    for offset in WIDTH_TABLE_OFFSETS:
+        if offset + 0x100 > len(rom):
+            continue
+        a_width = rom[offset + CP_A]
+        if a_width == 0:
+            continue
+        if rom[offset + CP_GRAVE_A] != a_width:
+            rom[offset + CP_GRAVE_A] = a_width
+            patched += 1
+    return patched
+
+
+def repoint_pointers(rom: bytearray, old_offset: int, new_offset: int) -> int:
+    old_ptr = (0x08000000 + old_offset).to_bytes(4, "little")
+    new_ptr = (0x08000000 + new_offset).to_bytes(4, "little")
+    count = 0
+    start = 0
+    while True:
+        idx = rom.find(old_ptr, start)
+        if idx == -1:
+            break
+        rom[idx:idx + 4] = new_ptr
+        count += 1
+        start = idx + 4
+    return count
+
+
+def apply_patches(rom: bytearray) -> Tuple[int, int, int]:
+    blocks = find_font_blocks(rom)
+    if not blocks:
+        raise RuntimeError("No font blocks found to patch.")
+
+    fallback_mask: List[Tuple[int, int]] = []
+    for block in blocks:
+        mask = extract_cedilla_mask(block.decompressed)
+        if len(mask) > len(fallback_mask):
+            fallback_mask = mask
+    if not fallback_mask:
+        fallback_mask = [(1, 7), (2, 7), (5, 7), (6, 7), (7, 7)]
+
+    patched_fonts = 0
+    relocated_fonts = 0
+    allocator = FreeSpaceAllocator(rom)
+    for block in blocks:
+        font = bytearray(block.decompressed)
+        original = bytes(font)
+        grave_tile = build_grave_a(original)
+        if font[CP_GRAVE_A * GLYPH_SIZE: (CP_GRAVE_A + 1) * GLYPH_SIZE] != grave_tile:
+            font[CP_GRAVE_A * GLYPH_SIZE: (CP_GRAVE_A + 1) * GLYPH_SIZE] = grave_tile
+        cedilla_tile = build_cedilla(original, fallback_mask)
+        if font[CP_C_CEDILLA * GLYPH_SIZE: (CP_C_CEDILLA + 1) * GLYPH_SIZE] != cedilla_tile:
+            font[CP_C_CEDILLA * GLYPH_SIZE: (CP_C_CEDILLA + 1) * GLYPH_SIZE] = cedilla_tile
+        if bytes(font) == original:
+            continue
+
+        compressed = lz77_compress(bytes(font))
+        if len(compressed) <= block.compressed_len:
+            rom[block.offset:block.offset + len(compressed)] = compressed
+            if len(compressed) < block.compressed_len:
+                pad_start = block.offset + len(compressed)
+                pad_len = block.compressed_len - len(compressed)
+                rom[pad_start:pad_start + pad_len] = b"\x00" * pad_len
+            patched_fonts += 1
+            continue
+
+        new_offset = allocator.allocate(len(compressed))
+        rom[new_offset:new_offset + len(compressed)] = compressed
+        repointed = repoint_pointers(rom, block.offset, new_offset)
+        if repointed == 0:
+            raise RuntimeError(
+                f"No pointers found for relocated font at 0x{block.offset:06X}."
+            )
+        relocated_fonts += 1
+        patched_fonts += 1
+
+    patched_tables = patch_width_tables(rom)
+    return patched_fonts, patched_tables, relocated_fonts
+
+
+def main() -> int:
+    parser = argparse.ArgumentParser(description="Patch French glyphs (à, ç) in a GBA ROM font.")
+    parser.add_argument("--rom", required=True, help="Path to the ROM to patch")
+    args = parser.parse_args()
+
+    rom_path = Path(args.rom)
+    if not rom_path.exists():
+        raise SystemExit(f"ROM not found: {rom_path}")
+
+    rom = bytearray(rom_path.read_bytes())
+    patched_fonts, patched_tables, relocated_fonts = apply_patches(rom)
+    rom_path.write_bytes(rom)
+
+    print(
+        f"Patched {patched_fonts} font block(s), relocated {relocated_fonts} block(s), "
+        f"and updated {patched_tables} width table(s)."
+    )
+    return 0
+
+
+if __name__ == "__main__":
+    raise SystemExit(main())

@@ -1,0 +1,19 @@
+{
+  "timestamp": "2026-01-14T01:14:36.038074",
+  "language": "french",
+  "source_rom": "input/roms/englishrom.gba",
+  "reference_rom": null,
+  "translations_json": "output/translation/french_texts.json",
+  "output_rom": "output/roms/2026-01-14_frrom_final.gba",
+  "strategy": "translate",
+  "statistics": {
+    "total_texts": 25183,
+    "successfully_copied": 0,
+    "successfully_replaced": 14331,
+    "failed": 0,
+    "unchanged": 0,
+    "corrupted": 10852,
+    "errors": []
+  },
+  "notes": "Generic ROM builder for french translation"
+}

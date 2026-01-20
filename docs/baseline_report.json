@@ -1,0 +1,23 @@
+{
+  "generated_at": "2026-01-14T09:31:58Z",
+  "sources": {
+    "english_texts": "output/extracted/extracted_texts/englishrom_texts.json",
+    "spanish_texts": "output/extracted/extracted_texts/spanishrom_texts.json",
+    "diffs": "output/differences/differences.json",
+    "reproduction_report": "output/reports/2026-01-14_spanish_reproduction_report.json"
+  },
+  "counts": {
+    "english_texts": 339821,
+    "spanish_texts": 339716,
+    "diff_total": 25183,
+    "diff_modified": 3584,
+    "diff_only_in_english": 10852,
+    "diff_only_in_spanish": 10747,
+    "reproduction_total": 339716,
+    "reproduction_replaced": 14331,
+    "reproduction_unchanged": 325385,
+    "reproduction_failed": 0,
+    "reproduction_corrupted": 0,
+    "reproduction_success_rate": "4.2%"
+  }
+}

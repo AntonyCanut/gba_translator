@@ -1,0 +1,3164 @@
+{
+  "rom_name": "spanishrom.gba",
+  "rom_size": 33554432,
+  "total_pointer_tables": 2242,
+  "total_text_tables": 2186,
+  "text_tables": [
+    {
+      "table_offset": "0x000001C0",
+      "num_entries": 6,
+      "text_offsets": [
+        "0x00A36398",
+        "0x0096DE04",
+        "0x00876200",
+        "0x00A769AF",
+        "0x00A6EEE0",
+        "0x00A6EE00"
+      ],
+      "texts": [
+        {
+          "index": 0,
+          "offset": "0x00A36398",
+          "text": "-------"
+        },
+        {
+          "index": 1,
+          "offset": "0x0096DE04",
+          "text": "J.$.d.$...$...$.\".$.8.$.R.$.m.$...$...$...$.T.$.q...."
+        },
+        {
+          "index": 2,
+          "offset": "0x00876200",
+          "text": "????????"
+        },
+        {
+          "index": 3,
+          "offset": "0x00A769AF",
+          "text": " (.d#   .d   ( d#   .d  +2.d.   .d  .. U.   .d  ....."
+        },
+        {
+          "index": 4,
+          "offset": "0x00A6EEE0",
+          "text": "Pm?...hbRz?...gb e?...eb.r?...dbhw?...fbBp?...ib.X..."
+        },
+        {
+          "index": 5,
+          "offset": "0x00A6EE00",
+          "text": "Ln?.hb  B.?.gb  .f?.eb  ps?.db  dx?.fb  Jq?.ib  .Y..."
+        }
+      ]
+    },
+    {
+      "table_offset": "0x00001220",
+      "num_entries": 9,
+      "text_offsets": [
+        "0x00001224",
+        "0x00001244",
+        "0x0000124E",
+        "0x00001258",
+        "0x00001262",
+        "0x0000126C",
+        "0x00001274",
+        "0x0000127E",
+        "0x00001288"
+      ],
+      "texts": [
+        {
+          "index": 0,
+          "offset": "0x00001224",
+          "text": "D. .N. .X. .b. .l. .t. .~. ... .V. xF.F.!lV.@x......."
+        },
+        {
+          "index": 1,
+          "offset": "0x00001244",
+          "text": "V. xF.F.!lV.@x.....lV.@x@.F..lV. x ....lV.@xF..lV...."
+        },
+        {
+          "index": 2,
+          "offset": "0x0000124E",
+          "text": "V.@x.....lV.@x@.F..lV. x ....lV.@xF..lV. x.....lV...."
+        },
+        {
+          "index": 3,
+          "offset": "0x00001258",
+          "text": "V.@x@.F..lV. x ....lV.@xF..lV. x.....lV. x@.F..lV...."
+        },
+        {
+          "index": 4,
+          "offset": "0x00001262",
+          "text": "V. x ....lV.@xF..lV. x.....lV. x@.F..lV. xF. l"
+        },
+        {
+          "index": 5,
+          "offset": "0x0000126C",
+          "text": "V.@xF..lV. x.....lV. x@.F..lV. xF. l"
+        },
+        {
+          "index": 6,
+          "offset": "0x00001274",
+          "text": "V. x.....lV. x@.F..lV. xF. l"
+        },
+        {
+          "index": 7,
+          "offset": "0x0000127E",
+          "text": "V. x@.F..lV. xF. l"
+        },
+        {
+          "index": 8,
+          "offset": "0x00001288",
+          "text": "V. xF. l"
+        }
+      ]
+    },
+    {
+      "table_offset": "0x00001A04",
+      "num_entries": 8,
+      "text_offsets": [
+        "0x00001A08",
+        "0x00001A24",
+        "0x00001A34",
+        "0x00001A46",
+        "0x00001A5C",
+        "0x00001A70",
+        "0x00001A88",
+        "0x00001A66"
+      ],
+      "texts": [
+        {
+          "index": 0,
+          "offset": "0x00001A08",
+          "text": "$. .4. .F. .\\. .p. ... .f. ."
+        },
+        {
+          "index": 4,
+          "offset": "0x00001A5C",
+          "text": " ."
+        }
+      ]
+    },
+    {
+      "table_offset": "0x00001AC4",
+      "num_entries": 11,
+      "text_offsets": [
+        "0x00001AC8",
+        "0x00001AF0",
+        "0x00001AFA",
+        "0x00001B04",
+        "0x00001B0E",
+        "0x00001B22",
+        "0x00001B2C",
+        "0x00001B18",
+        "0x00001B36",
+        "0x00001B64",
+        "0x00001B70"
+      ],
+      "texts": [
+        {
+          "index": 0,
+          "offset": "0x00001AC8",
+          "text": ".. ... ... ... .\". .,. ... .6. .d. .p. . ..!"
+        },
+        {
+          "index": 1,
+          "offset": "0x00001AF0",
+          "text": " ..!"
+        },
+        {
+          "index": 2,
+          "offset": "0x00001AFA",
+          "text": " ..!"
+        },
+        {
+          "index": 3,
+          "offset": "0x00001B04",
+          "text": " ..!"
+        },
+        {
+          "index": 4,
+          "offset": "0x00001B0E",
+          "text": " ..!"
+        },
+        {
+          "index": 5,
+          "offset": "0x00001B22",
+          "text": " ..!"
+        },
+        {
+          "index": 6,
+          "offset": "0x00001B2C",
+          "text": " ..!"
+        },
+        {
+          "index": 7,
+          "offset": "0x00001B18",
+          "text": " ..!"
+        },
+        {
+          "index": 8,
+          "offset": "0x00001B36",
+          "text": " . .-\n (.V.(.V  .l . ! ...F. ..l . ! .'\n . ..l . ...."
+        },
+        {
+          "index": 9,
+          "offset": "0x00001B64",
+          "text": " . ..\n . ..l.H!..........l  t. ..H.B.B.G"
+        }
+      ]
+    },
+    {
+      "table_offset": "0x00001EF4",
+      "num_entries": 8,
+      "text_offsets": [
+        "0x00001EF8",
+        "0x00001F14",
+        "0x00001F1C",
+        "0x00001F22",
+        "0x00001F34",
+        "0x00001F4A",
+        "0x00001F50",
+        "0x00001F62"
+      ],
+      "texts": [
+        {
+          "index": 0,
+          "offset": "0x00001EF8",
+          "text": ".. ... .\". .4. .J. .P. .b. ..##@\".,l.##@)l.. . ..(..."
+        },
+        {
+          "index": 1,
+          "offset": "0x00001F14",
+          "text": ".##@\".,l.##@)l.. . ..(.i.#\"l...l.. . . (.f #.l.. ...."
+        },
+        {
+          "index": 2,
+          "offset": "0x00001F1C",
+          "text": ".##@)l.. . ..(.i.#\"l...l.. . . (.f #.l.. ....l.\"\"@..."
+        },
+        {
+          "index": 3,
+          "offset": "0x00001F22",
+          "text": ".. . ..(.i.#\"l...l.. . . (.f #.l.. ....l.\"\"@.l.. ...."
+        },
+        {
+          "index": 4,
+          "offset": "0x00001F34",
+          "text": ".. . . (.f #.l.. ....l.\"\"@.l.. . ..(.i.\".l...l.. ...."
+        },
+        {
+          "index": 5,
+          "offset": "0x00001F4A",
+          "text": ".\"\"@.l.. . ..(.i.\".l...l.. . . (.f \".l.. ..... ..!..."
+        },
+        {
+          "index": 6,
+          "offset": "0x00001F50",
+          "text": ".. . ..(.i.\".l...l.. . . (.f \".l.. ..... ..!.@.C....."
+        },
+        {
+          "index": 7,
+          "offset": "0x00001F62",
+          "text": ".. . . (.f \".l.. ..... ..!.@.C.. ..!.@.C(...L ).\n...."
+        }
+      ]
+    },
+    {
+      "table_offset": "0x00002AD4",
+      "num_entries": 5,
+      "text_offsets": [
+        "0x001E9F68",
+        "0x001E9FB0",
+        "0x001E9FD8",
+        "0x001E9FEC",
+        "0x001EA018"
+      ],
+      "texts": [
+        {
+          "index": 0,
+          "offset": "0x001E9F68",
+          "text": "C:/WORK/POKeFRLG/src/pm_lgfr_ose/source/gflib/mall..."
+        },
+        {
+          "index": 1,
+          "offset": "0x001E9FB0",
+          "text": "pos->magic_number == MALLOC_SYSTEM_ID   pos->flag ..."
+        },
+        {
+          "index": 2,
+          "offset": "0x001E9FD8",
+          "text": "pos->flag == TRUE   pos->next->magic_number == MAL..."
+        },
+        {
+          "index": 3,
+          "offset": "0x001E9FEC",
+          "text": "pos->next->magic_number == MALLOC_SYSTEM_ID pos->p..."
+        },
+        {
+          "index": 4,
+          "offset": "0x001EA018",
+          "text": "pos->prev->magic_number == MALLOC_SYSTEM_ID  .. ....."
+        }
+      ]
+    },
+    {
+      "table_offset": "0x000048D4",
+      "num_entries": 9,
+      "text_offsets": [
+        "0x000048D8",
+        "0x00004948",
+        "0x000048F8",
+        "0x0000490C",
+        "0x00004948",
+        "0x00004948",
+        "0x00004920",
+        "0x00004934",
+        "0x00004948"
+      ],
+      "texts": [
+        {
+          "index": 0,
+          "offset": "0x000048D8",
+          "text": "HI ..H ..I .HI .HI . I .4I .HI ..IX F.. @.Bp   l....."
+        },
+        {
+          "index": 1,
+          "offset": "0x00004948",
+          "text": ". .B.G   . ........(fd. .I@. h.FlI ..I ..I ..I .NI..."
+        },
+        {
+          "index": 2,
+          "offset": "0x000048F8",
+          "text": ".IX F.. @.Bp   l.....IX F.. @..p  .l.....IX F.. @...."
+        },
+        {
+          "index": 3,
+          "offset": "0x0000490C",
+          "text": ".IX F.. @..p  .l.....IX F.. @.Bq  .l.....IX F.. @...."
+        },
+        {
+          "index": 4,
+          "offset": "0x00004948",
+          "text": ". .B.G   . ........(fd. .I@. h.FlI ..I ..I ..I .NI..."
+        },
+        {
+          "index": 5,
+          "offset": "0x00004948",
+          "text": ". .B.G   . ........(fd. .I@. h.FlI ..I ..I ..I .NI..."
+        },
+        {
+          "index": 6,
+          "offset": "0x00004920",
+          "text": ".IX F.. @.Bq  .l.....IX F.. @.H.  .l..... .B.G   ...."
+        },
+        {
+          "index": 7,
+          "offset": "0x00004934",
+          "text": ".IX F.. @.H.  .l..... .B.G   . ........(fd. .I@. h..."
+        },
+        {
+          "index": 8,
+          "offset": "0x00004948",
+          "text": ". .B.G   . ........(fd. .I@. h.FlI ..I ..I ..I .NI..."
+        }
+      ]
+    },
+    {
+      "table_offset": "0x00004968",
+      "num_entries": 9,
+      "text_offsets": [
+        "0x0000496C",
+        "0x0000498C",
+        "0x000049A0",
+        "0x000049B4",
+        "0x000049C8",
+        "0x000049DC",
+        "0x000049F0",
+        "0x00004A04",
+        "0x00004A18"
+      ],
+      "texts": [
+        {
+          "index": 0,
+          "offset": "0x0000496C",
+          "text": ".I ..I ..I .NI .hI ..I ..J ..J ..HQ ... ...xIl  ....."
+        },
+        {
+          "index": 1,
+          "offset": "0x0000498C",
+          "text": ".HQ ... ...xIl  .....HQ ... ..Hx?l  .....HQ ... ....."
+        },
+        {
+          "index": 2,
+          "offset": "0x000049A0",
+          "text": ".HQ ... ..Hx?l  .....HQ ... ...x5l  .....HQ ... ....."
+        },
+        {
+          "index": 3,
+          "offset": "0x000049B4",
+          "text": ".HQ ... ...x5l  .....HQ ... ..Nx+l  .....HQ ... ....."
+        },
+        {
+          "index": 4,
+          "offset": "0x000049C8",
+          "text": ".HQ ... ..Nx+l  .....HQ ... ...y!l  .....HQ ... ....."
+        },
+        {
+          "index": 5,
+          "offset": "0x000049DC",
+          "text": ".HQ ... ...y!l  .....HQ ... ..Hy.l  .....HQ ... ....."
+        },
+        {
+          "index": 6,
+          "offset": "0x000049F0",
+          "text": ".HQ ... ..Hy.l  .....HQ ... ..N..l  .....HQ ... .0..."
+        },
+        {
+          "index": 7,
+          "offset": "0x00004A04",
+          "text": ".HQ ... ..N..l  .....HQ ... .0...h.l....  .B.G  ....."
+        },
+        {
+          "index": 8,
+          "offset": "0x00004A18",
+          "text": ".HQ ... .0...h.l....  .B.G  .. ... #.J.!.x.B.WX. ...."
+        }
+      ]
+    },
+    {
+      "table_offset": "0x000057AC",
+      "num_entries": 8,
+      "text_offsets": [
+        "0x000057B0",
+        "0x000057CC",
+        "0x00005C58",
+        "0x00005C6C",
+        "0x00005C98",
+        "0x00005CD0",
+        "0x00005D44",
+        "0x00005D56"
+      ],
+      "texts": [
+        {
+          "index": 0,
+          "offset": "0x000057B0",
+          "text": "RW .X\\ .l\\ ..\\ .V\\ .D] .V] ..J... .@ (.V!x. .@ (.V..."
+        },
+        {
+          "index": 1,
+          "offset": "0x000057CC",
+          "text": ".J... .@ (.V!x. .@ (.V  .w.. ).Vp. (.VH..w.H.x. .@..."
+        },
+        {
+          "index": 2,
+          "offset": "0x00005C58",
+          "text": "0."
+        },
+        {
+          "index": 3,
+          "offset": "0x00005C6C",
+          "text": "0."
+        },
+        {
+          "index": 4,
+          "offset": "0x00005C98",
+          "text": "0."
+        },
+        {
+          "index": 5,
+          "offset": "0x00005CD0",
+          "text": ".. *4V.L.M(h }A.H. . x.B.X0yq{.....C.. !\n.b.  .w.l..."
+        },
+        {
+          "index": 6,
+          "offset": "0x00005D44",
+          "text": "l.L. . . ( Vzr0wxr.... ).V.8.wqr1wor. pB.B.G..GF....."
+        },
+        {
+          "index": 7,
+          "offset": "0x00005D56",
+          "text": ".... ).V.8.wqr1wor. pB.B.G..GF.............F \"iF.1..."
+        }
+      ]
+    },
+    {
+      "table_offset": "0x0000585C",
+      "num_entries": 9,
+      "text_offsets": [
+        "0x00005860",
+        "0x00005B46",
+        "0x00005B34",
+        "0x00005B26",
+        "0x00005B22",
+        "0x000058AC",
+        "0x000058A8",
+        "0x00005880",
+        "0x00005D68"
+      ],
+      "texts": [
+        {
+          "index": 0,
+          "offset": "0x00005860",
+          "text": "F[ .4[ .&[ .\"[ .?X .7X ..X .h] ..y0rqy.H.hH @.. ....."
+        },
+        {
+          "index": 1,
+          "offset": "0x00005B46",
+          "text": "0h.x.00`0y..2zsz .7..I.1.p.zF.ql  .= . h . ..(;d. ..."
+        },
+        {
+          "index": 2,
+          "offset": "0x00005B34",
+          "text": "0h.x.\"R ...C.00`.l0h.x.00`0y..2zsz .7..I.1.p.zF.ql..."
+        },
+        {
+          "index": 3,
+          "offset": "0x00005B26",
+          "text": ". 0w0."
+        },
+        {
+          "index": 4,
+          "offset": "0x00005B22",
+          "text": ".  l. 0w0."
+        },
+        {
+          "index": 5,
+          "offset": "0x000058AC",
+          "text": "0h.x.00`X..( eWm. .I@. h.F  RX .,Y .NY .rY ..Y .dY..."
+        },
+        {
+          "index": 6,
+          "offset": "0x000058A8",
+          "text": "0h.m0h.x.00`X..( eWm. .I@. h.F  RX .,Y .NY .rY ..Y..."
+        },
+        {
+          "index": 7,
+          "offset": "0x00005880",
+          "text": ".y0rqy.H.hH @.. ...z@y..pz@.pr. cn  .= .0h.m0h.x.0..."
+        },
+        {
+          "index": 8,
+          "offset": "0x00005D68",
+          "text": ". pB.B.G..GF.............F \"iF.1.p.9iE.f % &.. \"....."
+        }
+      ]
+    },
+    {
+      "table_offset": "0x000058C8",
+      "num_entries": 25,
+      "text_offsets": [
+        "0x000058CC",
+        "0x0000592C",
+        "0x0000594E",
+        "0x00005972",
+        "0x0000598C",
+        "0x000059D8",
+        "0x000059DC",
+        "0x0000589E",
+        "0x000059F4",
+        "0x00005A04",
+        "0x00005A1A",
+        "0x00005A1E",
+        "0x00005A66",
+        "0x00005A70",
+        "0x00005A78",
+        "0x00005A84",
+        "0x00005A4C",
+        "0x00005AB0",
+        "0x00005ACC",
+        "0x00005ADC",
+        "0x00005B00",
+        "0x00005B10",
+        "0x00005B18",
+        "0x00005A96",
+        "0x00005AA4"
+      ],
+      "texts": [
+        {
+          "index": 0,
+          "offset": "0x000058CC",
+          "text": ",Y .NY .rY ..Y .dY .hY ..X ..Y ..Z ..Z ..Z .fZ .pZ..."
+        },
+        {
+          "index": 1,
+          "offset": "0x0000592C",
+          "text": "2h.x..3{. .@.C0s.22` . .r{......Al1h.x. .@s{.\"RB.@..."
+        },
+        {
+          "index": 2,
+          "offset": "0x0000594E",
+          "text": "1h.x. .@s{.\"RB.@.Crs.11`0{ ......./l1h.x .s{.\".@.C..."
+        },
+        {
+          "index": 3,
+          "offset": "0x00005972",
+          "text": "1h.x .s{.\".@.Crs.11`0{ ..l3h.x..4{.\".. @.C0s].5`[x..."
+        },
+        {
+          "index": 4,
+          "offset": "0x0000598C",
+          "text": "3h.x..4{.\".. @.C0s].5`[x...@t{.#[B#@.Cssl.4`ix...@..."
+        },
+        {
+          "index": 5,
+          "offset": "0x000059D8",
+          "text": "0h.l0h x.!.@\"x. @B.@.C p0h.l0h.x.w.00`. 0wLs. 0w.x..."
+        },
+        {
+          "index": 6,
+          "offset": "0x000059DC",
+          "text": "0h x.!.@\"x. @B.@.C p0h.l0h.x.w.00`. 0wLs. 0w.x. .@..."
+        },
+        {
+          "index": 7,
+          "offset": "0x0000589E",
+          "text": ". cn  .= .0h.m0h.x.00`X..( eWm. .I@. h.F  RX .,Y ...."
+        },
+        {
+          "index": 8,
+          "offset": "0x000059F4",
+          "text": "0h.x.w.00`. 0wLs. 0w.x. .@ ( W.l  .p.l. .m0h.xA.1`..."
+        },
+        {
+          "index": 9,
+          "offset": "0x00005A04",
+          "text": ". 0w.x. .@ ( W.l  .p.l. .m0h.xA.1`@x ..C.11`.H x.8..."
+        }
+      ]
+    },
+    {
+      "table_offset": "0x00005B80",
+      "num_entries": 7,
+      "text_offsets": [
+        "0x00005B84",
+        "0x00005B9C",
+        "0x00005BAA",
+        "0x00005BB8",
+        "0x00005BC6",
+        "0x00005BD4",
+        "0x00005BE2"
+      ],
+      "texts": [
+        {
+          "index": 0,
+          "offset": "0x00005B84",
+          "text": ".[ .9[ .,[ .L[ .Z[ .n[ .0.!0.x.. .P.!l0.!0.x.. ......"
+        },
+        {
+          "index": 1,
+          "offset": "0x00005B9C",
+          "text": "0.!0.x.. .P.!l0.!0.x.. ....l0.!0.x.. ....l0.!0.x....."
+        },
+        {
+          "index": 2,
+          "offset": "0x00005BAA",
+          "text": "0.!0.x.. ....l0.!0.x.. ....l0.!0.x.. .8..l0.!0.x....."
+        },
+        {
+          "index": 3,
+          "offset": "0x00005BB8",
+          "text": "0.!0.x.. ....l0.!0.x.. .8..l0.!0.x.. ..\n.l0.!0.x....."
+        },
+        {
+          "index": 4,
+          "offset": "0x00005BC6",
+          "text": "0.!0.x.. .8..l0.!0.x.. ..\n.l0.!0.x.. ..\n0.....2. 2..."
+        },
+        {
+          "index": 5,
+          "offset": "0x00005BD4",
+          "text": "0.!0.x.. ..\n.l0.!0.x.. ..\n0.....2. 2.x (.V.I.1.x3z..."
+        },
+        {
+          "index": 6,
+          "offset": "0x00005BE2",
+          "text": "0.!0.x.. ..\n0.....2. 2.x (.V.I.1.x3zF.0r.x.x.. ,.i..."
+        }
+      ]
+    },
+    {
+      "table_offset": "0x00005DB0",
+      "num_entries": 10,
+      "text_offsets": [
+        "0x00005DB4",
+        "0x00005E60",
+        "0x00005E64",
+        "0x00005E64",
+        "0x00005E6C",
+        "0x00005E6C",
+        "0x00005DE8",
+        "0x00005E60",
+        "0x00005DD8",
+        "0x00005DD8"
+      ],
+      "texts": [
+        {
+          "index": 0,
+          "offset": "0x00005DB4",
+          "text": "`^ .d^ .d^ .l^ .l^ .t] .`^ .d] .d] .iF...p %p. ......"
+        },
+        {
+          "index": 1,
+          "offset": "0x00005E60",
+          "text": ".2.l.2h. ..."
+        },
+        {
+          "index": 2,
+          "offset": "0x00005E64",
+          "text": ".2h. ..."
+        },
+        {
+          "index": 3,
+          "offset": "0x00005E64",
+          "text": ".2h. ..."
+        },
+        {
+          "index": 6,
+          "offset": "0x00005DE8",
+          "text": ".. x.2.8.(;d. .I@. h.F  .^ .`^ .`^ .`^ .\\^ .`^ .`^..."
+        },
+        {
+          "index": 7,
+          "offset": "0x00005E60",
+          "text": ".2.l.2h. ..."
+        },
+        {
+          "index": 8,
+          "offset": "0x00005DD8",
+          "text": "iF...p %p. ...Al.. x.2.8.(;d. .I@. h.F  .^ .`^ .`^..."
+        },
+        {
+          "index": 9,
+          "offset": "0x00005DD8",
+          "text": "iF...p %p. ...Al.. x.2.8.(;d. .I@. h.F  .^ .`^ .`^..."
+        }
+      ]
+    },
+    {
+      "table_offset": "0x00005E00",
+      "num_entries": 23,
+      "text_offsets": [
+        "0x00005E04",
+        "0x00005E60",
+        "0x00005E60",
+        "0x00005E60",
+        "0x00005E5C",
+        "0x00005E60",
+        "0x00005E60",
+        "0x00005E6C",
+        "0x00005E60",
+        "0x00005E6C",
+        "0x00005E6C",
+        "0x00005E5E",
+        "0x00005E60",
+        "0x00005E60",
+        "0x00005E60",
+        "0x00005E6C",
+        "0x00005E5E",
+        "0x00005E60",
+        "0x00005E60",
+        "0x00005E60",
+        "0x00005E60",
+        "0x00005E6C",
+        "0x00005E6C"
+      ],
+      "texts": [
+        {
+          "index": 0,
+          "offset": "0x00005E04",
+          "text": "`^ .`^ .`^ .\\^ .`^ .`^ .l^ .`^ .l^ .l^ .^^ .`^ .`^..."
+        },
+        {
+          "index": 1,
+          "offset": "0x00005E60",
+          "text": ".2.l.2h. ..."
+        },
+        {
+          "index": 2,
+          "offset": "0x00005E60",
+          "text": ".2.l.2h. ..."
+        },
+        {
+          "index": 3,
+          "offset": "0x00005E60",
+          "text": ".2.l.2h. ..."
+        },
+        {
+          "index": 4,
+          "offset": "0x00005E5C",
+          "text": ".2.2.2.l.2h. ..."
+        },
+        {
+          "index": 5,
+          "offset": "0x00005E60",
+          "text": ".2.l.2h. ..."
+        },
+        {
+          "index": 6,
+          "offset": "0x00005E60",
+          "text": ".2.l.2h. ..."
+        },
+        {
+          "index": 8,
+          "offset": "0x00005E60",
+          "text": ".2.l.2h. ..."
+        }
+      ]
+    },
+    {
+      "table_offset": "0x00005F44",
+      "num_entries": 9,
+      "text_offsets": [
+        "0x00005F48",
+        "0x00005F9E",
+        "0x000060AE",
+        "0x000060AE",
+        "0x000060FC",
+        "0x000060FC",
+        "0x00005FDE",
+        "0x00005F74",
+        "0x00005F68"
+      ],
+      "texts": [
+        {
+          "index": 0,
+          "offset": "0x00005F48",
+          "text": "._ .-` .-` ..` ..` .j_ .t_ .h_ ....B e.. %Il.4 x.(..."
+        },
+        {
+          "index": 1,
+          "offset": "0x00005F9E",
+          "text": " ..W.4 x6..\n...l  ....0x.6IFi..\n /.i,B.f8..lIF ) V..."
+        },
+        {
+          "index": 2,
+          "offset": "0x000060AE",
+          "text": " x.(.W.4 x.\"R ...CIFi....l.4 x .?. . . /.i,B.f8..l..."
+        },
+        {
+          "index": 3,
+          "offset": "0x000060AE",
+          "text": " x.(.W.4 x.\"R ...CIFi....l.4 x .?. . . /.i,B.f8..l..."
+        },
+        {
+          "index": 4,
+          "offset": "0x000060FC",
+          "text": ".4 x"
+        },
+        {
+          "index": 5,
+          "offset": "0x000060FC",
+          "text": ".4 x"
+        },
+        {
+          "index": 6,
+          "offset": "0x00005FDE",
+          "text": ".4 x.8.( e.l. .I@. h.F._ .T` .T` .T` .P` .T` .X` ...."
+        },
+        {
+          "index": 7,
+          "offset": "0x00005F74",
+          "text": ".4 x.(.V.(.h.(.VAs.(.V,s N.lV... N.l.....N ..W.4 x..."
+        },
+        {
+          "index": 8,
+          "offset": "0x00005F68",
+          "text": "...B e.. %Il.4 x.(.V.(.h.(.VAs.(.V,s N.lV... N.l....."
+        }
+      ]
+    },
+    {
+      "table_offset": "0x00005FF4",
+      "num_entries": 23,
+      "text_offsets": [
+        "0x00005FF8",
+        "0x00006054",
+        "0x00006054",
+        "0x00006054",
+        "0x00006050",
+        "0x00006054",
+        "0x00006058",
+        "0x000060FC",
+        "0x00006054",
+        "0x000060FC",
+        "0x000060FC",
+        "0x00006052",
+        "0x00006054",
+        "0x00006054",
+        "0x00006054",
+        "0x000060FC",
+        "0x00006052",
+        "0x00006084",
+        "0x0000608A",
+        "0x00006090",
+        "0x0000609C",
+        "0x000060A2",
+        "0x000060A8"
+      ],
+      "texts": [
+        {
+          "index": 0,
+          "offset": "0x00005FF8",
+          "text": "T` .T` .T` .P` .T` .X` ..` .T` ..` ..` .R` .T` .T`..."
+        },
+        {
+          "index": 1,
+          "offset": "0x00006054",
+          "text": ".4Ql.4 x"
+        },
+        {
+          "index": 2,
+          "offset": "0x00006054",
+          "text": ".4Ql.4 x"
+        },
+        {
+          "index": 3,
+          "offset": "0x00006054",
+          "text": ".4Ql.4 x"
+        },
+        {
+          "index": 4,
+          "offset": "0x00006050",
+          "text": ".4.4.4Ql.4 x"
+        },
+        {
+          "index": 5,
+          "offset": "0x00006054",
+          "text": ".4Ql.4 x"
+        },
+        {
+          "index": 6,
+          "offset": "0x00006058",
+          "text": ".4 x"
+        },
+        {
+          "index": 7,
+          "offset": "0x000060FC",
+          "text": ".4 x"
+        },
+        {
+          "index": 8,
+          "offset": "0x00006054",
+          "text": ".4Ql.4 x"
+        },
+        {
+          "index": 9,
+          "offset": "0x000060FC",
+          "text": ".4 x"
+        }
+      ]
+    },
+    {
+      "table_offset": "0x00006178",
+      "num_entries": 10,
+      "text_offsets": [
+        "0x0000617C",
+        "0x00006256",
+        "0x00006256",
+        "0x00006256",
+        "0x00006280",
+        "0x00006280",
+        "0x000061A0",
+        "0x00006256",
+        "0x00006280",
+        "0x00006280"
+      ],
+      "texts": [
+        {
+          "index": 0,
+          "offset": "0x0000617C",
+          "text": "Vb .Vb .Vb ..b ..b ..a .Vb ..b ..b .AFN. x.7.8.(hd..."
+        },
+        {
+          "index": 1,
+          "offset": "0x00006256",
+          "text": ".7.l0. .2..L.M .IF*.i.{.@4IF 1 .*.i.t.@ .D"
+        },
+        {
+          "index": 2,
+          "offset": "0x00006256",
+          "text": ".7.l0. .2..L.M .IF*.i.{.@4IF 1 .*.i.t.@ .D"
+        },
+        {
+          "index": 3,
+          "offset": "0x00006256",
+          "text": ".7.l0. .2..L.M .IF*.i.{.@4IF 1 .*.i.t.@ .D"
+        },
+        {
+          "index": 6,
+          "offset": "0x000061A0",
+          "text": "AFN. x.7.8.(hd. .I@. h.FBa .(b .4b .>b ..b .Vb .Vb..."
+        },
+        {
+          "index": 7,
+          "offset": "0x00006256",
+          "text": ".7.l0. .2..L.M .IF*.i.{.@4IF 1 .*.i.t.@ .D"
+        }
+      ]
+    },
+    {
+      "table_offset": "0x000061B8",
+      "num_entries": 23,
+      "text_offsets": [
+        "0x000061BC",
+        "0x00006228",
+        "0x00006234",
+        "0x0000623E",
+        "0x00006214",
+        "0x00006256",
+        "0x00006256",
+        "0x00006280",
+        "0x00006256",
+        "0x00006280",
+        "0x00006280",
+        "0x00006254",
+        "0x00006256",
+        "0x00006256",
+        "0x00006256",
+        "0x00006280",
+        "0x00006254",
+        "0x00006256",
+        "0x00006256",
+        "0x00006256",
+        "0x00006256",
+        "0x00006280",
+        "0x00006280"
+      ],
+      "texts": [
+        {
+          "index": 0,
+          "offset": "0x000061BC",
+          "text": "(b .4b .>b ..b .Vb .Vb ..b .Vb ..b ..b .Tb .Vb .Vb..."
+        },
+        {
+          "index": 1,
+          "offset": "0x00006228",
+          "text": "AFN. x...7.lAFN. x...lAFN. x.F.7....RF..+\n.l.7.7.l..."
+        },
+        {
+          "index": 2,
+          "offset": "0x00006234",
+          "text": "AFN. x...lAFN. x.F.7....RF..+\n.l.7.7.l0. .2..L.M ...."
+        },
+        {
+          "index": 3,
+          "offset": "0x0000623E",
+          "text": "AFN. x.F.7....RF..+\n.l.7.7.l0. .2..L.M .IF*.i.{.@4..."
+        },
+        {
+          "index": 4,
+          "offset": "0x00006214",
+          "text": "AFN. x...7N. x...7.lAFN. x...7.lAFN. x...lAFN. x.F..."
+        },
+        {
+          "index": 5,
+          "offset": "0x00006256",
+          "text": ".7.l0. .2..L.M .IF*.i.{.@4IF 1 .*.i.t.@ .D"
+        },
+        {
+          "index": 6,
+          "offset": "0x00006256",
+          "text": ".7.l0. .2..L.M .IF*.i.{.@4IF 1 .*.i.t.@ .D"
+        },
+        {
+          "index": 8,
+          "offset": "0x00006256",
+          "text": ".7.l0. .2..L.M .IF*.i.{.@4IF 1 .*.i.t.@ .D"
+        }
+      ]
+    },
+    {
+      "table_offset": "0x00008FE8",
+      "num_entries": 7,
+      "text_offsets": [
+        "0x00008FEC",
+        "0x000090A6",
+        "0x000090A6",
+        "0x00009018",
+        "0x00009004",
+        "0x000090A6",
+        "0x000090AC"
+      ],
+      "texts": [
+        {
+          "index": 0,
+          "offset": "0x00008FEC",
+          "text": "5. .5. ... ... .5. .?. .(x.5 .v... ."
+        },
+        {
+          "index": 1,
+          "offset": "0x000090A6",
+          "text": "\"p.4.s"
+        },
+        {
+          "index": 2,
+          "offset": "0x000090A6",
+          "text": "\"p.4.s"
+        },
+        {
+          "index": 3,
+          "offset": "0x00009018",
+          "text": "\"p.4*x.5\"p.4...(8d. .I@. h.F8. ... ... ... .X. ......"
+        },
+        {
+          "index": 4,
+          "offset": "0x00009004",
+          "text": "(x.5 .v... ."
+        },
+        {
+          "index": 5,
+          "offset": "0x000090A6",
+          "text": "\"p.4.s"
+        }
+      ]
+    },
+    {
+      "table_offset": "0x00009034",
+      "num_entries": 22,
+      "text_offsets": [
+        "0x00009038",
+        "0x0000908C",
+        "0x0000909C",
+        "0x0000909C",
+        "0x00008FD2",
+        "0x0000909C",
+        "0x00008FD2",
+        "0x0000909C",
+        "0x00009094",
+        "0x0000909C",
+        "0x0000909C",
+        "0x0000909C",
+        "0x00008FD2",
+        "0x0000909C",
+        "0x0000909C",
+        "0x0000909C",
+        "0x0000909C",
+        "0x0000909C",
+        "0x00008FD2",
+        "0x00008FD2",
+        "0x00008FD2",
+        "0x00008FD2"
+      ],
+      "texts": [
+        {
+          "index": 0,
+          "offset": "0x00009038",
+          "text": ".. ... ... .X. ... .X. ... ... ... ... ... .X. ......"
+        },
+        {
+          "index": 1,
+          "offset": "0x0000908C",
+          "text": "(x p.5.4(x p.5.4(x p.5.4.s\"p.4.s"
+        },
+        {
+          "index": 2,
+          "offset": "0x0000909C",
+          "text": "(x p.5.4.s\"p.4.s"
+        },
+        {
+          "index": 3,
+          "offset": "0x0000909C",
+          "text": "(x p.5.4.s\"p.4.s"
+        },
+        {
+          "index": 4,
+          "offset": "0x00008FD2",
+          "text": "*x.5...8.(cd. .I@. h.Fx. .5. .5. ... ... .5. .?. ...."
+        },
+        {
+          "index": 5,
+          "offset": "0x0000909C",
+          "text": "(x p.5.4.s\"p.4.s"
+        },
+        {
+          "index": 6,
+          "offset": "0x00008FD2",
+          "text": "*x.5...8.(cd. .I@. h.Fx. .5. .5. ... ... .5. .?. ...."
+        },
+        {
+          "index": 7,
+          "offset": "0x0000909C",
+          "text": "(x p.5.4.s\"p.4.s"
+        },
+        {
+          "index": 8,
+          "offset": "0x00009094",
+          "text": "(x p.5.4(x p.5.4.s\"p.4.s"
+        },
+        {
+          "index": 9,
+          "offset": "0x0000909C",
+          "text": "(x p.5.4.s\"p.4.s"
+        }
+      ]
+    },
+    {
+      "table_offset": "0x0000AEB8",
+      "num_entries": 6,
+      "text_offsets": [
+        "0x00835800",
+        "0x0023238C",
+        "0x00231EC4",
+        "0x00234610",
+        "0x0041DEF0",
+        "0x0041DF05"
+      ],
+      "texts": [
+        {
+          "index": 0,
+          "offset": "0x00835800",
+          "text": ". . .z.. ...0.z@......@...p...m.......... ..[>O..[..."
+        },
+        {
+          "index": 1,
+          "offset": "0x0023238C",
+          "text": ". . ?  ............"
+        },
+        {
+          "index": 2,
+          "offset": "0x00231EC4",
+          "text": "  "
+        },
+        {
+          "index": 3,
+          "offset": "0x00234610",
+          "text": " .. "
+        },
+        {
+          "index": 4,
+          "offset": "0x0041DEF0",
+          "text": "Communication error."
+        },
+        {
+          "index": 5,
+          "offset": "0x0041DF05",
+          "text": "Move closer to your link partner\\s].\nAvoid obstacl..."
+        }
+      ]
+    },
+    {
+      "table_offset": "0x0000B3B8",
+      "num_entries": 6,
+      "text_offsets": [
+        "0x0000B3BC",
+        "0x0000B3D0",
+        "0x0000B3E0",
+        "0x0000B3F8",
+        "0x0000B434",
+        "0x0000B43E"
+      ],
+      "texts": [
+        {
+          "index": 0,
+          "offset": "0x0000B3BC",
+          "text": "V. .l. ... .4. .>. ."
+        },
+        {
+          "index": 2,
+          "offset": "0x0000B3E0",
+          "text": " x.(1W"
+        },
+        {
+          "index": 3,
+          "offset": "0x0000B3F8",
+          "text": "!x.).V.).V ._. l.J.x.(.WVx.(.e.s.l  .? ..H !Ap.H....."
+        },
+        {
+          "index": 4,
+          "offset": "0x0000B434",
+          "text": " .\\..I. Hp(. .n.0. .k.   p.I.xNx. .C.x.(.W  .C.{....."
+        },
+        {
+          "index": 5,
+          "offset": "0x0000B43E",
+          "text": "(. .n.0. .k.   p.I.xNx. .C.x.(.W  .C.{..N{D..|..H|..."
+        }
+      ]
+    },
+    {
+      "table_offset": "0x0000C124",
+      "num_entries": 10,
+      "text_offsets": [
+        "0x0000C128",
+        "0x0000C14C",
+        "0x0000C14C",
+        "0x0000C14C",
+        "0x0000C14C",
+        "0x0000C156",
+        "0x0000C15C",
+        "0x0000C15C",
+        "0x0000C15C",
+        "0x0000C15C"
+      ],
+      "texts": [
+        {
+          "index": 0,
+          "offset": "0x0000C128",
+          "text": "LG .LG .LG .LG .VG .\\G .\\G .\\G .\\G .w ... @..l8 +...."
+        },
+        {
+          "index": 1,
+          "offset": "0x0000C14C",
+          "text": "w ... @..l8 +..lw ...8.C? .@X .\"RB...C wV  v.B.B G..."
+        },
+        {
+          "index": 2,
+          "offset": "0x0000C14C",
+          "text": "w ... @..l8 +..lw ...8.C? .@X .\"RB...C wV  v.B.B G..."
+        },
+        {
+          "index": 3,
+          "offset": "0x0000C14C",
+          "text": "w ... @..l8 +..lw ...8.C? .@X .\"RB...C wV  v.B.B G..."
+        },
+        {
+          "index": 4,
+          "offset": "0x0000C14C",
+          "text": "w ... @..l8 +..lw ...8.C? .@X .\"RB...C wV  v.B.B G..."
+        },
+        {
+          "index": 5,
+          "offset": "0x0000C156",
+          "text": "8 +..lw ...8.C? .@X .\"RB...C wV  v.B.B G   . ~u(.V..."
+        },
+        {
+          "index": 6,
+          "offset": "0x0000C15C",
+          "text": "w ...8.C? .@X .\"RB...C wV  v.B.B G   . ~u(.V   l. ..."
+        },
+        {
+          "index": 7,
+          "offset": "0x0000C15C",
+          "text": "w ...8.C? .@X .\"RB...C wV  v.B.B G   . ~u(.V   l. ..."
+        },
+        {
+          "index": 8,
+          "offset": "0x0000C15C",
+          "text": "w ...8.C? .@X .\"RB...C wV  v.B.B G   . ~u(.V   l. ..."
+        },
+        {
+          "index": 9,
+          "offset": "0x0000C15C",
+          "text": "w ...8.C? .@X .\"RB...C wV  v.B.B G   . ~u(.V   l. ..."
+        }
+      ]
+    },
+    {
+      "table_offset": "0x0000C4B4",
+      "num_entries": 6,
+      "text_offsets": [
+        "0x00234690",
+        "0x00234618",
+        "0x00234648",
+        "0x00234668",
+        "0x0000C2D5",
+        "0x0000C4D1"
+      ],
+      "texts": [
+        {
+          "index": 0,
+          "offset": "0x00234690",
+          "text": "l.   ..  . . .   . . .   . . .   . . .   . . .   7..."
+        },
+        {
+          "index": 1,
+          "offset": "0x00234618",
+          "text": " ......  ......  ......  .....!. ...... "
+        },
+        {
+          "index": 2,
+          "offset": "0x00234648",
+          "text": "W}"
+        },
+        {
+          "index": 4,
+          "offset": "0x0000C2D5",
+          "text": ".k.O...?...c.d....B G   .........d.C..B G   ..  ....."
+        },
+        {
+          "index": 5,
+          "offset": "0x0000C4D1",
+          "text": ". ....HGy. .@ ... . V.l@  !..3.D  !....H .!....J ...."
+        }
+      ]
+    },
+    {
+      "table_offset": "0x0000C9B0",
+      "num_entries": 5,
+      "text_offsets": [
+        "0x00234688",
+        "0x00415A77",
+        "0x00284DE9",
+        "0x00415A97",
+        "0x00234620"
+      ],
+      "texts": [
+        {
+          "index": 0,
+          "offset": "0x00234688",
+          "text": "......  l.   ..  . . .   . . .   . . .   . . .   ...."
+        },
+        {
+          "index": 1,
+          "offset": "0x00415A77",
+          "text": "Partida"
+        },
+        {
+          "index": 2,
+          "offset": "0x00284DE9",
+          "text": "Nueva Partida"
+        },
+        {
+          "index": 3,
+          "offset": "0x00415A97",
+          "text": "MYSTERY GIFT"
+        },
+        {
+          "index": 4,
+          "offset": "0x00234620",
+          "text": " ......  ......  .....!. ...... "
+        }
+      ]
+    },
+    {
+      "table_offset": "0x0000DB98",
+      "num_entries": 7,
+      "text_offsets": [
+        "0x0000DB9C",
+        "0x0000DBB4",
+        "0x0000DBC8",
+        "0x0000DBF4",
+        "0x0000DC50",
+        "0x0000DCC6",
+        "0x0000DD04"
+      ],
+      "texts": [
+        {
+          "index": 0,
+          "offset": "0x0000DB9C",
+          "text": ".g .Ng ..g .Ph .Lh ..i ..  .F F.d!..G..1G.!l.  .F ..."
+        },
+        {
+          "index": 1,
+          "offset": "0x0000DBB4",
+          "text": ".  .F F.d!..G..1G.!l.  .F G....8.. . ( V.lN..0N..H..."
+        },
+        {
+          "index": 2,
+          "offset": "0x0000DBC8",
+          "text": ".  .F G....8.. . ( V.lN..0N..H x ( W.l.ld? ... "
+        },
+        {
+          "index": 3,
+          "offset": "0x0000DBF4",
+          "text": ".. "
+        },
+        {
+          "index": 4,
+          "offset": "0x0000DC50",
+          "text": "0 ..F H.&#a^$ .^.FeE\\VP.\"&._ +'WeE.i &._.B.W..Y......"
+        },
+        {
+          "index": 5,
+          "offset": "0x0000DCC6",
+          "text": ".... . ('V.H0 ..O ..&#P^.H h...yRy...#K..CT....0N...."
+        },
+        {
+          "index": 6,
+          "offset": "0x0000DD04",
+          "text": ".  .F G.H..8H. . (.W. H.. N..B.B G  ..WFNFEFl..H x..."
+        }
+      ]
+    },
+    {
+      "table_offset": "0x0000FCCC",
+      "num_entries": 8,
+      "text_offsets": [
+        "0x0000FCD0",
+        "0x0000FCEC",
+        "0x0000FCFC",
+        "0x0000FD14",
+        "0x0000FD24",
+        "0x0000FD3E",
+        "0x0000FD68",
+        "0x0000FD8C"
+      ],
+      "texts": [
+        {
+          "index": 0,
+          "offset": "0x0000FCD0",
+          "text": "x. ... ... .$. .>. .h. ... ..HF!O.\n.e"
+        },
+        {
+          "index": 1,
+          "offset": "0x0000FCEC",
+          "text": ".HF!O.\n.e"
+        },
+        {
+          "index": 2,
+          "offset": "0x0000FCFC",
+          "text": ".I   \" #....  ..c.Al..V..H !@\"`.E.9ld.V."
+        },
+        {
+          "index": 3,
+          "offset": "0x0000FD14",
+          "text": ".H !@\"`.E.9ld.V."
+        }
+      ]
+    },
+    {
+      "table_offset": "0x00010548",
+      "num_entries": 18,
+      "text_offsets": [
+        "0x0001054C",
+        "0x00010590",
+        "0x000105D4",
+        "0x00010670",
+        "0x000106F4",
+        "0x0001071C",
+        "0x00010898",
+        "0x000108A4",
+        "0x0001074C",
+        "0x00010774",
+        "0x00010898",
+        "0x000108A4",
+        "0x000107A4",
+        "0x000107CC",
+        "0x00010898",
+        "0x000108A4",
+        "0x00010834",
+        "0x0001084C"
+      ],
+      "texts": [
+        {
+          "index": 0,
+          "offset": "0x0001054C",
+          "text": "....Z...p...............3...L...t.......3...3...R...."
+        },
+        {
+          "index": 1,
+          "offset": "0x00010590",
+          "text": "..r. . (.W  ..... ..... ..... ....%....I. .p.H x (..."
+        },
+        {
+          "index": 2,
+          "offset": "0x000105D4",
+          "text": ".J.h.&..0@ (:V.H x ( Wem..f"
+        },
+        {
+          "index": 3,
+          "offset": "0x00010670",
+          "text": "..<"
+        },
+        {
+          "index": 4,
+          "offset": "0x000106F4",
+          "text": "..n\n . ( Wgl...\n . ..IN\"...\n.ITl.B...>....r\n.!.@.)..."
+        },
+        {
+          "index": 5,
+          "offset": "0x0001071C",
+          "text": "..r\n.!.@.) VLl..."
+        },
+        {
+          "index": 6,
+          "offset": "0x00010898",
+          "text": ".H.x.1.p.!Ap.IHx.8Hp . (.W.x.0.ppB.B G  .>....WFNF..."
+        },
+        {
+          "index": 7,
+          "offset": "0x000108A4",
+          "text": ".IHx.8Hp . (.W.x.0.ppB.B G  .>....WFNFEFl.  .F:I.F..."
+        },
+        {
+          "index": 8,
+          "offset": "0x0001074C",
+          "text": "...\n . ( W.l..h\n . ..IN\"..p\n.I1lLC...>.....\n.!.@.)..."
+        },
+        {
+          "index": 9,
+          "offset": "0x00010774",
+          "text": "...\n.!.@.) V.l..q\n.H)..J..N\"a.r..I.l.@...!...>......."
+        }
+      ]
+    },
+    {
+      "table_offset": "0x00010BE0",
+      "num_entries": 14,
+      "text_offsets": [
+        "0x00010BE4",
+        "0x00010C18",
+        "0x00010C5C",
+        "0x00010CD4",
+        "0x00010DB6",
+        "0x00010DE0",
+        "0x000110D0",
+        "0x000110DC",
+        "0x00010ED8",
+        "0x00010F00",
+        "0x000110D0",
+        "0x000110DC",
+        "0x0001106C",
+        "0x00011084"
+      ],
+      "texts": [
+        {
+          "index": 0,
+          "offset": "0x00010BE4",
+          "text": "....\\...Z.......l...V...h...d... ...V...h...l........"
+        },
+        {
+          "index": 1,
+          "offset": "0x00010C18",
+          "text": "..1\n . (.W  ..P\n. ..M\n. ..J\n. ..G\n$.K..I. .p.H x (..."
+        },
+        {
+          "index": 2,
+          "offset": "0x00010C5C",
+          "text": ".H x ( WDn..). . (.V.L hH%m @..!.p h.J... .p"
+        },
+        {
+          "index": 3,
+          "offset": "0x00010CD4",
+          "text": ".....!.@.) V.n..5.. 9."
+        },
+        {
+          "index": 4,
+          "offset": "0x00010DB6",
+          "text": ".... . ( W.m..3. . ..IN\"..;..I.m  .>.. F.......!.@..."
+        },
+        {
+          "index": 5,
+          "offset": "0x00010DE0",
+          "text": ".....!.@.) V.m.... &. F.. .F.L %DB.W.H(. ..(.h.(.f..."
+        },
+        {
+          "index": 6,
+          "offset": "0x000110D0",
+          "text": ".H.x.1.p.!Ap.IHx.8Hp . (.W.x.0.p.B.F.B.B G  .>.. ...."
+        },
+        {
+          "index": 7,
+          "offset": "0x000110DC",
+          "text": ".IHx.8Hp . (.W.x.0.p.B.F.B.B G  .>.. .....*...N......"
+        },
+        {
+          "index": 8,
+          "offset": "0x00010ED8",
+          "text": ".... . ( W.m..1. . ..Id\"..9..I.lNF...>.......!.@.)..."
+        },
+        {
+          "index": 9,
+          "offset": "0x00010F00",
+          "text": ".....!.@.) V.l.... &. F.. .F.L %DB.W.H(. ..(.h.(.f..."
+        }
+      ]
+    },
+    {
+      "table_offset": "0x00011C60",
+      "num_entries": 8,
+      "text_offsets": [
+        "0x00011C64",
+        "0x00011C80",
+        "0x00011C94",
+        "0x00011CA8",
+        "0x00011CBC",
+        "0x00011CD0",
+        "0x00011CE4",
+        "0x00011CF8"
+      ],
+      "texts": [
+        {
+          "index": 0,
+          "offset": "0x00011C64",
+          "text": "........7...B...V...p........H. ...x....:l   .$..H..."
+        },
+        {
+          "index": 1,
+          "offset": "0x00011C80",
+          "text": ".H. ...x....:l   .$..H. ...x ...0l   .$..H. ....F...."
+        },
+        {
+          "index": 2,
+          "offset": "0x00011C94",
+          "text": ".H. ...x ...0l   .$..H. ....F.F.&l   .$..H. ..Hx@...."
+        },
+        {
+          "index": 3,
+          "offset": "0x00011CA8",
+          "text": ".H. ....F.F.&l   .$..H. ..Hx@....l   .$..H. ..Hx ...."
+        },
+        {
+          "index": 4,
+          "offset": "0x00011CBC",
+          "text": ".H. ..Hx@....l   .$..H. ..Hx .F..l   .$..H. ..Hx....."
+        },
+        {
+          "index": 5,
+          "offset": "0x00011CD0",
+          "text": ".H. ..Hx .F..l   .$..H. ..Hx.....l   .$..H. ...h ...."
+        },
+        {
+          "index": 6,
+          "offset": "0x00011CE4",
+          "text": ".H. ..Hx.....l   .$..H. ...h ....B.G .$.0........ ..."
+        },
+        {
+          "index": 7,
+          "offset": "0x00011CF8",
+          "text": ".H. ...h ....B.G .$.0........ (p ..!-.d"
+        }
+      ]
+    },
+    {
+      "table_offset": "0x00014098",
+      "num_entries": 8,
+      "text_offsets": [
+        "0x0001409C",
+        "0x000140B8",
+        "0x000141DC",
+        "0x00014764",
+        "0x00014AA0",
+        "0x00014B44",
+        "0x00014B88",
+        "0x00014C20"
+      ],
+      "texts": [
+        {
+          "index": 0,
+          "offset": "0x0001409C",
+          "text": ",@..hA..dG...J..DK...K.. L..%H.x%L h..\\1. .p H G]-..."
+        },
+        {
+          "index": 1,
+          "offset": "0x000140B8",
+          "text": "%H.x%L h..\\1. .p H G]-.. (.W.!. (@ (.VM@(.a...!h.1..."
+        },
+        {
+          "index": 2,
+          "offset": "0x000141DC",
+          "text": ".L.I.K.x7 @..h...!...C.C...C...C!h.@.F ).V .\"..J9...."
+        },
+        {
+          "index": 3,
+          "offset": "0x00014764",
+          "text": ".L.I.K.x7 @..h...!...C.C...C...C!h.@.F ) V^n.Ih. x..."
+        },
+        {
+          "index": 4,
+          "offset": "0x00014AA0",
+          "text": ".K.L.H x.  ..h...  ..C.C...C...C.h.@ ( VGl.H hA!.@..."
+        },
+        {
+          "index": 5,
+          "offset": "0x00014B44",
+          "text": ".K.I.H x. @..h...  ..C.C...C...C.h.@ (pW.I.y.0.qkl..."
+        },
+        {
+          "index": 6,
+          "offset": "0x00014B88",
+          "text": ".M*x.H h....T0 x (.V.H...1.x.pRlJ;..t?...>...H.p.O..."
+        },
+        {
+          "index": 7,
+          "offset": "0x00014C20",
+          "text": ".K.I.H.x. @..h...!...C.C...C...C.h.@ +.W.H ..p.H.x..."
+        }
+      ]
+    },
+    {
+      "table_offset": "0x00014248",
+      "num_entries": 14,
+      "text_offsets": [
+        "0x0001424C",
+        "0x00014280",
+        "0x000143D4",
+        "0x00014450",
+        "0x000146AC",
+        "0x000146AC",
+        "0x00014620",
+        "0x000146AC",
+        "0x000146AC",
+        "0x000146AC",
+        "0x000146AC",
+        "0x000146AC",
+        "0x000146AC",
+        "0x00014670"
+      ],
+      "texts": [
+        {
+          "index": 0,
+          "offset": "0x0001424C",
+          "text": ".B..ZC..PD..?F..?F.. F..?F..?F..?F..?F..?F..?F..pF..."
+        },
+        {
+          "index": 1,
+          "offset": "0x00014280",
+          "text": ".... . (&V.H.K.x.. $. .p.x.J.h..T1.p.x.h...1. .p.x..."
+        },
+        {
+          "index": 2,
+          "offset": "0x000143D4",
+          "text": " H Gm$..FFFF.ICF.x. @..I.`.H.x.. #. .p@F.x.J.h..T1..."
+        },
+        {
+          "index": 3,
+          "offset": "0x00014450",
+          "text": " H G.-..A.X1.J@ .. ..p.O*xX& H GAe..@. h.I.@ (.W.H..."
+        },
+        {
+          "index": 4,
+          "offset": "0x000146AC",
+          "text": " H G.0...(.W.H.L!xI..0...x.(.W.H.....I x@.&mL+..J3..."
+        },
+        {
+          "index": 5,
+          "offset": "0x000146AC",
+          "text": " H G.0...(.W.H.L!xI..0...x.(.W.H.....I x@.&mL+..J3..."
+        },
+        {
+          "index": 6,
+          "offset": "0x00014620",
+          "text": ",.3. . (@V.I.K.x. @..I.`.H.x.. $. .p.x.J.h..T1.p.x..."
+        },
+        {
+          "index": 7,
+          "offset": "0x000146AC",
+          "text": " H G.0...(.W.H.L!xI..0...x.(.W.H.....I x@.&mL+..J3..."
+        },
+        {
+          "index": 8,
+          "offset": "0x000146AC",
+          "text": " H G.0...(.W.H.L!xI..0...x.(.W.H.....I x@.&mL+..J3..."
+        },
+        {
+          "index": 9,
+          "offset": "0x000146AC",
+          "text": " H G.0...(.W.H.L!xI..0...x.(.W.H.....I x@.&mL+..J3..."
+        }
+      ]
+    },
+    {
+      "table_offset": "0x000147B8",
+      "num_entries": 11,
+      "text_offsets": [
+        "0x000147BC",
+        "0x000147E4",
+        "0x000148D8",
+        "0x00014910",
+        "0x00014A08",
+        "0x00014A2C",
+        "0x00014A40",
+        "0x00014A54",
+        "0x00014A54",
+        "0x00014A68",
+        "0x00014A8C"
+      ],
+      "texts": [
+        {
+          "index": 0,
+          "offset": "0x000147BC",
+          "text": "pG..dH...I...J..,J..@J..TJ..TJ..hJ...J...HAF.xa.B...."
+        },
+        {
+          "index": 1,
+          "offset": "0x000147E4",
+          "text": ".HAF.xa.B....x...).h.).gl..p:n  J3..;.EF,xa......x..."
+        },
+        {
+          "index": 2,
+          "offset": "0x000148D8",
+          "text": ".J.M,xa.P....x.2...x ..C + W7m.H...H)x.mJ3..J;..h=..."
+        },
+        {
+          "index": 3,
+          "offset": "0x00014910",
+          "text": ".N.O:xP.q.@..x.).W.H.. !.p.mJ3..J;...>..0H.F h..\\0..."
+        },
+        {
+          "index": 4,
+          "offset": "0x00014A08",
+          "text": ".J.h.!...C.`.J.H.x...l  V=...>..J;...J.H.x..}l  .>..."
+        },
+        {
+          "index": 5,
+          "offset": "0x00014A2C",
+          "text": ".J.H.x..}l  .>..J;...J.H.x..sl  .>..J;...J.H.x..il..."
+        },
+        {
+          "index": 6,
+          "offset": "0x00014A40",
+          "text": ".J.H.x..sl  .>..J;...J.H.x..il  .>..J;...J.h.!...C..."
+        },
+        {
+          "index": 7,
+          "offset": "0x00014A54",
+          "text": ".J.H.x..il  .>..J;...J.h.!...C.`.J.H.x..Yl  V=...>..."
+        },
+        {
+          "index": 8,
+          "offset": "0x00014A54",
+          "text": ".J.H.x..il  .>..J;...J.h.!...C.`.J.H.x..Yl  V=...>..."
+        },
+        {
+          "index": 9,
+          "offset": "0x00014A68",
+          "text": ".J.h.!...C.`.J.H.x..Yl  V=...>..J;...J.H.x..Ml  .>..."
+        }
+      ]
+    },
+    {
+      "table_offset": "0x0001655C",
+      "num_entries": 6,
+      "text_offsets": [
+        "0x00016560",
+        "0x00016706",
+        "0x00016706",
+        "0x00016574",
+        "0x00016608",
+        "0x000166D8"
+      ],
+      "texts": [
+        {
+          "index": 0,
+          "offset": "0x00016560",
+          "text": ".g...g..te...f..df...M  hq.J.x@.9h@.L0.x. .@.F (.V..."
+        },
+        {
+          "index": 1,
+          "offset": "0x00016706",
+          "text": "AF.x@.9h@.J0 x. .. hJF.`. QF.p8B.F0F9F.B.B G  .>....."
+        },
+        {
+          "index": 2,
+          "offset": "0x00016706",
+          "text": "AF.x@.9h@.J0 x. .. hJF.`. QF.p8B.F0F9F.B.B G  .>....."
+        },
+        {
+          "index": 3,
+          "offset": "0x00016574",
+          "text": ".M  hq.J.x@.9h@.L0.x. .@.F (.V> .@.I.F.N.J.F ( W.l..."
+        },
+        {
+          "index": 4,
+          "offset": "0x00016608",
+          "text": ".K. Xq.J.x@.9h@...L61x. .@ ....F -.V. Xq.J.F.N.H.F..."
+        },
+        {
+          "index": 5,
+          "offset": "0x000166D8",
+          "text": ".H.h. .@ ).V.I. Hq.lL+...>...HAq.H.F.I.F.N.J.FAF.x..."
+        }
+      ]
+    },
+    {
+      "table_offset": "0x00016E3C",
+      "num_entries": 14,
+      "text_offsets": [
+        "0x00016E40",
+        "0x00016E74",
+        "0x00016E80",
+        "0x00016E8C",
+        "0x00016EA8",
+        "0x00016EC2",
+        "0x00016EA8",
+        "0x00016EC2",
+        "0x00016E98",
+        "0x00016EC2",
+        "0x00016EC2",
+        "0x00016E9C",
+        "0x00016EB4",
+        "0x00016EB8"
+      ],
+      "texts": [
+        {
+          "index": 0,
+          "offset": "0x00016E40",
+          "text": "tn...n...n..7n..Hn..7n..Hn...n..Hn..Hn...n...n..,n..."
+        },
+        {
+          "index": 1,
+          "offset": "0x00016E74",
+          "text": ".H.x#l  l=...H.x.l  k=...H.x.l  n=.. \".l.HH}.l  J?..."
+        },
+        {
+          "index": 2,
+          "offset": "0x00016E80",
+          "text": ".H.x.l  k=...H.x.l  n=.. \".l.HH}.l  J?...H.x.l  m=..."
+        },
+        {
+          "index": 3,
+          "offset": "0x00016E8C",
+          "text": ".H.x.l  n=.. \".l.HH}.l  J?...H.x.l  m=..   l. ^......"
+        },
+        {
+          "index": 4,
+          "offset": "0x00016EA8",
+          "text": ".H.x.l  m=..   l. ^... ......B.G.... . ..........I..."
+        },
+        {
+          "index": 5,
+          "offset": "0x00016EC2",
+          "text": "...B.G.... . ..........IX$`C@. 0 x.F.(GW #(.`C.1A...."
+        },
+        {
+          "index": 6,
+          "offset": "0x00016EA8",
+          "text": ".H.x.l  m=..   l. ^... ......B.G.... . ..........I..."
+        },
+        {
+          "index": 7,
+          "offset": "0x00016EC2",
+          "text": "...B.G.... . ..........IX$`C@. 0 x.F.(GW #(.`C.1A...."
+        },
+        {
+          "index": 8,
+          "offset": "0x00016E98",
+          "text": " \".l.HH}.l  J?...H.x.l  m=..   l. ^... ......B.G....."
+        },
+        {
+          "index": 9,
+          "offset": "0x00016EC2",
+          "text": "...B.G.... . ..........IX$`C@. 0 x.F.(GW #(.`C.1A...."
+        }
+      ]
+    },
+    {
+      "table_offset": "0x00018FF8",
+      "num_entries": 9,
+      "text_offsets": [
+        "0x00018FFC",
+        "0x0001901C",
+        "0x0001906E",
+        "0x00019108",
+        "0x0001914A",
+        "0x0001915E",
+        "0x000191C8",
+        "0x0091171A",
+        "0x00019264"
+      ],
+      "texts": [
+        {
+          "index": 0,
+          "offset": "0x00018FFC",
+          "text": "....n.......J...^...N.......d...DF hN0 !.p!hM1.x.0..."
+        },
+        {
+          "index": 1,
+          "offset": "0x0001901C",
+          "text": "DF hN0 !.p!hM1.x.0.p %-H x.B.f,N0x,J8 ...h @ (.V(...."
+        },
+        {
+          "index": 2,
+          "offset": "0x0001906E",
+          "text": "!H.F!I.F!JEF!O!N+h..N1.x.pdF p.xX `CF. . (.W..k0.x..."
+        },
+        {
+          "index": 3,
+          "offset": "0x00019108",
+          "text": ".H x\n....J.hN1.x.0.p.I . ..x.B.W.hM0.!.p.l  m=..t?..."
+        },
+        {
+          "index": 4,
+          "offset": "0x0001914A",
+          "text": "DF hN0 !.p!hM1.x.0.p.H.F.O.M.J.N(h..N4 x8paF.p#xX ..."
+        },
+        {
+          "index": 5,
+          "offset": "0x0001915E",
+          "text": ".H.F.O.M.J.N(h..N4 x8paF.p#xX XC.. . (.W.H.x. .. h..."
+        },
+        {
+          "index": 6,
+          "offset": "0x000191C8",
+          "text": "AF.hN0.x.1.p.H.... x.B.WDF hM0.!.p;lR;..AF.hM0.!.p..."
+        },
+        {
+          "index": 7,
+          "offset": "0x0091171A",
+          "text": ".I  .p%H G.L x.I.h.1.\\.B.V &......Q. (.W.H x.6.B.V..."
+        },
+        {
+          "index": 8,
+          "offset": "0x00019264",
+          "text": "DF hM0 x.( V.r  ...B.F.B.B.Gt?..p. #.H..(x.B.f.L.&..."
+        }
+      ]
+    },
+    {
+      "table_offset": "0x0001931C",
+      "num_entries": 17,
+      "text_offsets": [
+        "0x00019320",
+        "0x00019360",
+        "0x000193A4",
+        "0x000194E0",
+        "0x00019598",
+        "0x0001960C",
+        "0x00019678",
+        "0x000196E0",
+        "0x00019754",
+        "0x000197B8",
+        "0x00019814",
+        "0x000198F8",
+        "0x00019974",
+        "0x000199C8",
+        "0x00019A60",
+        "0x00019B40",
+        "0x00019B98"
+      ],
+      "texts": [
+        {
+          "index": 0,
+          "offset": "0x00019320",
+          "text": "`...3...l...........x...l...T...,...........t...N...."
+        },
+        {
+          "index": 1,
+          "offset": "0x00019360",
+          "text": ".I.K.xX BCP1R..h.I.@.`.H.x. ...h.I.@.`@F.h ...  p;..."
+        },
+        {
+          "index": 2,
+          "offset": "0x000193A4",
+          "text": ".O.L!xX%..hC>.L6.. h.\".F.@ ( WFn....3. . ()V x..jC..."
+        },
+        {
+          "index": 3,
+          "offset": "0x000194E0",
+          "text": ".I.O8xX&pC..L5@. h !.@ (BV+.q. . ..!Q.D. ... ,#V.J..."
+        },
+        {
+          "index": 4,
+          "offset": "0x00019598",
+          "text": ".I.H.xX PC@. 0 x6( VQm.HW ... ...~F. ( WGm.....\n.J..."
+        },
+        {
+          "index": 5,
+          "offset": "0x0001960C",
+          "text": ".I.K.xX PCP1B..h. F..@ ( W.m.H.@.`.J.xN @.. .. !Av..."
+        },
+        {
+          "index": 6,
+          "offset": "0x00019678",
+          "text": ".I.K.xX PCP1B..h. .@ ( WYm. @B.@.`.H.x.....x.!.C.p..."
+        },
+        {
+          "index": 7,
+          "offset": "0x000196E0",
+          "text": ".H.K.xW ... ...H.. ..B V%m ) W\"m.H....Px.!.CPp.I.x..."
+        },
+        {
+          "index": 8,
+          "offset": "0x00019754",
+          "text": ".H.L#xe O.. ..N| . ( Wxl.J.H..H @.. ..@x ( Vml.H....."
+        },
+        {
+          "index": 9,
+          "offset": "0x000197B8",
+          "text": ".L x.I..\n.P. . ( WBl.H\"x....Px !.CPp x.....I.H.`.J..."
+        }
+      ]
+    },
+    {
+      "table_offset": "0x0001A0D8",
+      "num_entries": 21,
+      "text_offsets": [
+        "0x0001A0DC",
+        "0x0001A12C",
+        "0x0001A3E0",
+        "0x0001A600",
+        "0x0001A698",
+        "0x0001A8B8",
+        "0x0001B010",
+        "0x0001B374",
+        "0x0001B3C8",
+        "0x0001B450",
+        "0x0001B4D4",
+        "0x0001B6FC",
+        "0x0001B518",
+        "0x0001B740",
+        "0x0001B79C",
+        "0x0001B7F8",
+        "0x0001B90C",
+        "0x0001B9A8",
+        "0x0001BA04",
+        "0x0001BB78",
+        "0x0001B8B4"
+      ],
+      "texts": [
+        {
+          "index": 0,
+          "offset": "0x0001A0DC",
+          "text": ",0..l2.. 5...5..,7......t...N...P...Z...........@...."
+        },
+        {
+          "index": 1,
+          "offset": "0x0001A12C",
+          "text": ".J.H.x...x0B.YPF.p.H G  Qj..-(.h.( W*m.(.h.( W.l....."
+        },
+        {
+          "index": 2,
+          "offset": "0x0001A3E0",
+          "text": ".OX VFFC.. . (.W..g..HQF.pBF M(Ga....h.- WEl..S.p;..."
+        },
+        {
+          "index": 3,
+          "offset": "0x0001A600",
+          "text": " H Gav....U. %.H...K...B.W..L.1B.V...2.5...B.W..B...."
+        },
+        {
+          "index": 4,
+          "offset": "0x0001A698",
+          "text": " ,.W....CF.H GFF.G...(.VEl.(XVBl.- V.l.Ha ... ..Hx..."
+        },
+        {
+          "index": 5,
+          "offset": "0x0001A8B8",
+          "text": " I.GQM...e..r..  I.G!...Z7...?..9A..9A..9A..9A..9A..."
+        },
+        {
+          "index": 6,
+          "offset": "0x0001B010",
+          "text": " $1F.H x.E.Y .K..IX RFBC..@. 0 x.8..A( e1m. .I@. h..."
+        },
+        {
+          "index": 7,
+          "offset": "0x0001B374",
+          "text": " \".F.H x.E.Y ....LX SFCC.. . 0 x;(.WPF\n... . ..F (..."
+        },
+        {
+          "index": 8,
+          "offset": "0x0001B3C8",
+          "text": "DF x.(.V .w..L!h. F..@ (.W .n..H.@!`1h.1.x? .@.p0h..."
+        },
+        {
+          "index": 9,
+          "offset": "0x0001B450",
+          "text": "AF.x.( V6o.L!h. F..@ ( W.o.H.@!`3..h.1.x? .@.p.h....."
+        }
+      ]
+    },
+    {
+      "table_offset": "0x0001A568",
+      "num_entries": 5,
+      "text_offsets": [
+        "0x00250094",
+        "0x0025009C",
+        "0x002500A4",
+        "0x002500AC",
+        "0x002500B4"
+      ],
+      "texts": [
+        {
+          "index": 0,
+          "offset": "0x00250094",
+          "text": "E."
+        },
+        {
+          "index": 1,
+          "offset": "0x0025009C",
+          "text": ".!("
+        },
+        {
+          "index": 2,
+          "offset": "0x002500A4",
+          "text": ".."
+        },
+        {
+          "index": 3,
+          "offset": "0x002500AC",
+          "text": "$.E"
+        },
+        {
+          "index": 4,
+          "offset": "0x002500B4",
+          "text": "..("
+        }
+      ]
+    },
+    {
+      "table_offset": "0x0001A8CC",
+      "num_entries": 50,
+      "text_offsets": [
+        "0x0090B421",
+        "0x0001A8D4",
+        "0x0001ACF0",
+        "0x0001BBAA",
+        "0x0001BBAA",
+        "0x0001BBAA",
+        "0x0001BBAA",
+        "0x0001BBAA",
+        "0x0001BBAA",
+        "0x0001A994",
+        "0x0001BBAA",
+        "0x0001BBAA",
+        "0x0001BBAA",
+        "0x0001BBAA",
+        "0x0001BBAA",
+        "0x0001BBAA",
+        "0x0001BBAA",
+        "0x0001AA5C",
+        "0x0001BBAA",
+        "0x0001BBAA",
+        "0x0001AB1C",
+        "0x0001BBAA",
+        "0x0001BBAA",
+        "0x0001BBAA",
+        "0x0001BBAA",
+        "0x0001BBAA",
+        "0x0001BBAA",
+        "0x0001BBAA",
+        "0x0001BBAA",
+        "0x0001BBAA",
+        "0x0001BBAA",
+        "0x0001AC14",
+        "0x0001BBAA",
+        "0x0001BBAA",
+        "0x0001BBAA",
+        "0x0001BBAA",
+        "0x0001BBAA",
+        "0x0001BBAA",
+        "0x0001BBAA",
+        "0x0001BBAA",
+        "0x0001BBAA",
+        "0x0001BBAA",
+        "0x0001ADCC",
+        "0x0001BBAA",
+        "0x0001BBAA",
+        "0x0001BBAA",
+        "0x0001BBAA",
+        "0x0001BBAA",
+        "0x0001BBAA",
+        "0x0001AEA8"
+      ],
+      "texts": [
+        {
+          "index": 0,
+          "offset": "0x0090B421",
+          "text": "I.(...V.H x!.T.e(.VR(.V.H ...e(.W.B.H.FC.n..(.V.B@..."
+        },
+        {
+          "index": 1,
+          "offset": "0x0001A8D4",
+          "text": ".?..9A..9A..9A..9A..9A..9A...8..9A..9A..9A..9A..9A..."
+        },
+        {
+          "index": 2,
+          "offset": "0x0001ACF0",
+          "text": "+H.x) .@ (.V .U"
+        },
+        {
+          "index": 3,
+          "offset": "0x0001BBAA",
+          "text": "LF ,.V...(.d.I.x"
+        },
+        {
+          "index": 4,
+          "offset": "0x0001BBAA",
+          "text": "LF ,.V...(.d.I.x"
+        },
+        {
+          "index": 5,
+          "offset": "0x0001BBAA",
+          "text": "LF ,.V...(.d.I.x"
+        },
+        {
+          "index": 6,
+          "offset": "0x0001BBAA",
+          "text": "LF ,.V...(.d.I.x"
+        },
+        {
+          "index": 7,
+          "offset": "0x0001BBAA",
+          "text": "LF ,.V...(.d.I.x"
+        },
+        {
+          "index": 8,
+          "offset": "0x0001BBAA",
+          "text": "LF ,.V...(.d.I.x"
+        },
+        {
+          "index": 9,
+          "offset": "0x0001A994",
+          "text": ")H.x) .@ (.V....4,.W.."
+        }
+      ]
+    },
+    {
+      "table_offset": "0x0001B04C",
+      "num_entries": 67,
+      "text_offsets": [
+        "0x0001B050",
+        "0x0001B1B4",
+        "0x0001B29E",
+        "0x0001B29E",
+        "0x0001B29E",
+        "0x0001B29E",
+        "0x0001B278",
+        "0x0001B29E",
+        "0x0001B29E",
+        "0x0001B1DC",
+        "0x0001B29E",
+        "0x0001B158",
+        "0x0001B29E",
+        "0x0001B29E",
+        "0x0001B184",
+        "0x0001B29E",
+        "0x0001B29E",
+        "0x0001B29E",
+        "0x0001B29E",
+        "0x0001B29E",
+        "0x0001B29E",
+        "0x0001B29E",
+        "0x0001B29E",
+        "0x0001B29E",
+        "0x0001B29E",
+        "0x0001B29E",
+        "0x0001B29E",
+        "0x0001B29E",
+        "0x0001B29E",
+        "0x0001B29E",
+        "0x0001B29E",
+        "0x0001B29E",
+        "0x0001B29E",
+        "0x0001B29E",
+        "0x0001B248",
+        "0x0001B218",
+        "0x0001B29E",
+        "0x0001B29E",
+        "0x0001B29E",
+        "0x0001B29E",
+        "0x0001B29E",
+        "0x0001B29E",
+        "0x0001B29E",
+        "0x0001B29E",
+        "0x0001B29E",
+        "0x0001B29E",
+        "0x0001B29E",
+        "0x0001B29E",
+        "0x0001B29E",
+        "0x0001B29E",
+        "0x0001B29E",
+        "0x0001B29E",
+        "0x0001B29E",
+        "0x0001B29E",
+        "0x0001B29E",
+        "0x0001B29E",
+        "0x0001B29E",
+        "0x0001B29E",
+        "0x0001B29E",
+        "0x0001B29E",
+        "0x0001B29E",
+        "0x0001B29E",
+        "0x0001B29E",
+        "0x0001B29E",
+        "0x0001B29E",
+        "0x0001B29E",
+        "0x0001B1DC"
+      ],
+      "texts": [
+        {
+          "index": 0,
+          "offset": "0x0001B050",
+          "text": "....................x...........h.......X............"
+        },
+        {
+          "index": 1,
+          "offset": "0x0001B1B4",
+          "text": "X SFCC....L1@. h@!.@ (hV.H.IHl  ,*..3 %.X SFCC..L0..."
+        },
+        {
+          "index": 2,
+          "offset": "0x0001B29E",
+          "text": "KF +YVLF.,.V.,.h.,.V'l,*..J %.HF.(.V.l.IX RFBCL1R...."
+        },
+        {
+          "index": 3,
+          "offset": "0x0001B29E",
+          "text": "KF +YVLF.,.V.,.h.,.V'l,*..J %.HF.(.V.l.IX RFBCL1R...."
+        },
+        {
+          "index": 4,
+          "offset": "0x0001B29E",
+          "text": "KF +YVLF.,.V.,.h.,.V'l,*..J %.HF.(.V.l.IX RFBCL1R...."
+        },
+        {
+          "index": 5,
+          "offset": "0x0001B29E",
+          "text": "KF +YVLF.,.V.,.h.,.V'l,*..J %.HF.(.V.l.IX RFBCL1R...."
+        },
+        {
+          "index": 6,
+          "offset": "0x0001B278",
+          "text": "X QFAC....P1@. h.!...@ (.V.H.Iy.u..\".FKF +YVLF.,.V..."
+        },
+        {
+          "index": 7,
+          "offset": "0x0001B29E",
+          "text": "KF +YVLF.,.V.,.h.,.V'l,*..J %.HF.(.V.l.IX RFBCL1R...."
+        },
+        {
+          "index": 8,
+          "offset": "0x0001B29E",
+          "text": "KF +YVLF.,.V.,.h.,.V'l,*..J %.HF.(.V.l.IX RFBCL1R...."
+        },
+        {
+          "index": 9,
+          "offset": "0x0001B1DC",
+          "text": "X SFCC..L0.. h.!.@ (UVP2...h.I.@.`.H.Iy.E.. .FKl"
+        }
+      ]
+    },
+    {
+      "table_offset": "0x0001BD5C",
+      "num_entries": 6,
+      "text_offsets": [
+        "0x0001BD60",
+        "0x0001BD74",
+        "0x0001BE04",
+        "0x0001CFA6",
+        "0x0001C9FC",
+        "0x0001CE4C"
+      ],
+      "texts": [
+        {
+          "index": 0,
+          "offset": "0x0001BD60",
+          "text": "tC...D..5U...O..LT...-.V -.V.....HJ0.xI .p....FF. ..."
+        },
+        {
+          "index": 1,
+          "offset": "0x0001BD74",
+          "text": ".-.V -.V.....HJ0.xI .p....FF.  ..I.FX 9.AC@F.0...\"..."
+        },
+        {
+          "index": 2,
+          "offset": "0x0001BE04",
+          "text": ".IX xC@. ..F (.W..M. I.G...."
+        },
+        {
+          "index": 3,
+          "offset": "0x0001CFA6",
+          "text": "....8B.F0F9F.B.B.GR=..R>..l=.."
+        },
+        {
+          "index": 4,
+          "offset": "0x0001C9FC",
+          "text": " '.H x.B YTn.L.IX xC@.F. . . ..(.W.I. F.. @.Ky.lR;..."
+        },
+        {
+          "index": 5,
+          "offset": "0x0001CE4C",
+          "text": ".O8h ( W6lAF H G....0l  P=..\"H.x) .@ ( V.l J L!x. ..."
+        }
+      ]
+    },
+    {
+      "table_offset": "0x0001BE30",
+      "num_entries": 44,
+      "text_offsets": [
+        "0x0001BE34",
+        "0x0001BEE0",
+        "0x0001C6C0",
+        "0x0001C784",
+        "0x0001C6F0",
+        "0x0001C724",
+        "0x0001C754",
+        "0x0001BF2C",
+        "0x0001C7C0",
+        "0x0001C7F0",
+        "0x0001C0F8",
+        "0x0001C178",
+        "0x0001C1F4",
+        "0x0001C288",
+        "0x0001C31C",
+        "0x0001C3B0",
+        "0x0001C418",
+        "0x0001C46C",
+        "0x0001C4C0",
+        "0x0001C528",
+        "0x0001C58C",
+        "0x0001C5D8",
+        "0x0001C952",
+        "0x0001C02C",
+        "0x0001C952",
+        "0x0001C952",
+        "0x0001C952",
+        "0x0001C952",
+        "0x008B9900",
+        "0x0001C952",
+        "0x0001C952",
+        "0x0001C952",
+        "0x0001C952",
+        "0x0001C952",
+        "0x0001C952",
+        "0x0001C952",
+        "0x0001C952",
+        "0x0001C952",
+        "0x0001C952",
+        "0x0001C952",
+        "0x0001C952",
+        "0x0001C952",
+        "0x0001C952",
+        "0x0001C098"
+      ],
+      "texts": [
+        {
+          "index": 0,
+          "offset": "0x0001BE34",
+          "text": "lD..FL...M...L..$M..TM..,E..FM...M...F..xG...G...H..."
+        },
+        {
+          "index": 1,
+          "offset": "0x0001BEE0",
+          "text": "X xCAFB.....@..B.e ... ..V .*..L I.G0...X....B.iN...."
+        },
+        {
+          "index": 2,
+          "offset": "0x0001C6C0",
+          "text": "X 9.AC@FL0...h@ .@ ( W<mA @B.@.`.H"
+        },
+        {
+          "index": 3,
+          "offset": "0x0001C784",
+          "text": "X ;.CC@FL0...h. .@ ( Wfl. @B.@.`AFP1Y..h.J.@.`.H6l..."
+        },
+        {
+          "index": 4,
+          "offset": "0x0001C6F0",
+          "text": "X 9.AC@FL0...h. .@ ( W$m.H.@.`.H"
+        },
+        {
+          "index": 5,
+          "offset": "0x0001C724",
+          "text": "X 9.AC@FL0...h. .@ ( W.m. @B.@.`.H"
+        },
+        {
+          "index": 6,
+          "offset": "0x0001C754",
+          "text": "X 9.AC@FL0...h  .@ ( W.l! @B.@.`.H"
+        },
+        {
+          "index": 7,
+          "offset": "0x0001BF2C",
+          "text": " ..V ...8.Y.E. . (.W.Ix @...d AC.H.lT;...B...Ix @...."
+        },
+        {
+          "index": 8,
+          "offset": "0x0001C7C0",
+          "text": "X 9.AC@FP0...h. .@ ( WBl. @B.@.`.H"
+        },
+        {
+          "index": 9,
+          "offset": "0x0001C7F0",
+          "text": "X =.EC@FL0,.\"h x (.W@FP0(. h.!.@ ( W.l #.F. .@ *.V..."
+        }
+      ]
+    },
+    {
+      "table_offset": "0x0001C8C8",
+      "num_entries": 5,
+      "text_offsets": [
+        "0x0025009C",
+        "0x002500A4",
+        "0x002500AC",
+        "0x002500B4",
+        "0x002500BC"
+      ],
+      "texts": [
+        {
+          "index": 0,
+          "offset": "0x0025009C",
+          "text": ".!("
+        },
+        {
+          "index": 1,
+          "offset": "0x002500A4",
+          "text": ".."
+        },
+        {
+          "index": 2,
+          "offset": "0x002500AC",
+          "text": "$.E"
+        },
+        {
+          "index": 3,
+          "offset": "0x002500B4",
+          "text": "..("
+        },
+        {
+          "index": 4,
+          "offset": "0x002500BC",
+          "text": "..'."
+        }
+      ]
+    },
+    {
+      "table_offset": "0x0001CA60",
+      "num_entries": 28,
+      "text_offsets": [
+        "0x0001CA64",
+        "0x0001CAD0",
+        "0x0001CBC0",
+        "0x0001CB0C",
+        "0x0001CB48",
+        "0x0001CB84",
+        "0x0001CDF0",
+        "0x0001CC08",
+        "0x0001CC9C",
+        "0x0001CDF0",
+        "0x0001CDF0",
+        "0x0001CDF0",
+        "0x0001CDF0",
+        "0x0001CDF0",
+        "0x0001CDF0",
+        "0x0001CDF0",
+        "0x0001CDF0",
+        "0x0001CDF0",
+        "0x0001CDF0",
+        "0x0001CDF0",
+        "0x0001CDF0",
+        "0x0001CDF0",
+        "0x0001CD90",
+        "0x0001CDF0",
+        "0x0001CDF0",
+        "0x0001CDF0",
+        "0x0001CDF0",
+        "0x0001CC44"
+      ],
+      "texts": [
+        {
+          "index": 0,
+          "offset": "0x0001CA64",
+          "text": "VP..FQ...Q..HQ...Q...S...R...R...S...S...S...S...S..."
+        },
+        {
+          "index": 1,
+          "offset": "0x0001CAD0",
+          "text": ".IX xCL1B..h@ .@ ( W.mA @B.@.`..)..I.H.`. ..{m  p;..."
+        },
+        {
+          "index": 2,
+          "offset": "0x0001CBC0",
+          "text": ".JX <.DC..L0#..h. .@ ( W.m. @B.@.`P21..h.I.@.`..8...."
+        },
+        {
+          "index": 3,
+          "offset": "0x0001CB0C",
+          "text": ".IX xCL1B..h. .@ ( Wfm.H.@.`.....I.H.`.!..^mp;..w."
+        },
+        {
+          "index": 4,
+          "offset": "0x0001CB48",
+          "text": ".IX xCL1B..h. .@ ( WHm. @B.@.`..y..I.H.`.\"..?m  p;..."
+        },
+        {
+          "index": 5,
+          "offset": "0x0001CB84",
+          "text": ".IX xCL1B..h  .@ ( W*m! @B.@.`..U..I.H.`.#..!m  p;..."
+        },
+        {
+          "index": 6,
+          "offset": "0x0001CDF0",
+          "text": ".. (.V.HMu.H.p.L'p!xX HC.I@. .  (! \".#..w. x....Gl..."
+        },
+        {
+          "index": 7,
+          "offset": "0x0001CC08",
+          "text": ".IX xCP1B..h. .@ ( Wtl. @B.@.`.....I.H.`. ..kl  p;..."
+        },
+        {
+          "index": 8,
+          "offset": "0x0001CC9C",
+          "text": "0LX =.EC .L0..2h0x (.W .P0(. h.!.@ ( W.l. .@ *.V%H..."
+        },
+        {
+          "index": 9,
+          "offset": "0x0001CDF0",
+          "text": ".. (.V.HMu.H.p.L'p!xX HC.I@. .  (! \".#..w. x....Gl..."
+        }
+      ]
+    },
+    {
+      "table_offset": "0x0001CD70",
+      "num_entries": 5,
+      "text_offsets": [
+        "0x0025009C",
+        "0x002500A4",
+        "0x002500AC",
+        "0x002500B4",
+        "0x002500BC"
+      ],
+      "texts": [
+        {
+          "index": 0,
+          "offset": "0x0025009C",
+          "text": ".!("
+        },
+        {
+          "index": 1,
+          "offset": "0x002500A4",
+          "text": ".."
+        },
+        {
+          "index": 2,
+          "offset": "0x002500AC",
+          "text": "$.E"
+        },
+        {
+          "index": 3,
+          "offset": "0x002500B4",
+          "text": "..("
+        },
+        {
+          "index": 4,
+          "offset": "0x002500BC",
+          "text": "..'."
+        }
+      ]
+    },
+    {
+      "table_offset": "0x0001D098",
+      "num_entries": 67,
+      "text_offsets": [
+        "0x00A769AF",
+        "0x0001D0A0",
+        "0x0001D1A4",
+        "0x0001D2A4",
+        "0x0001D398",
+        "0x0001D39C",
+        "0x0001D2BC",
+        "0x0001D39C",
+        "0x0001D39C",
+        "0x0001D39C",
+        "0x0001D2A4",
+        "0x0001D39C",
+        "0x0001D39C",
+        "0x0001D39C",
+        "0x0001D39C",
+        "0x0001D39C",
+        "0x0001D39C",
+        "0x0001D39C",
+        "0x0001D398",
+        "0x0001D39C",
+        "0x0001D39C",
+        "0x0001D39C",
+        "0x0001D39C",
+        "0x0001D39C",
+        "0x0001D39C",
+        "0x0001D39C",
+        "0x0001D39C",
+        "0x0001D39C",
+        "0x0001D39C",
+        "0x0001D39C",
+        "0x0001D39C",
+        "0x0001D39C",
+        "0x0001D39C",
+        "0x0001D39C",
+        "0x0001D2A4",
+        "0x0001D39C",
+        "0x0001D39C",
+        "0x0001D39C",
+        "0x0001D39C",
+        "0x0001D39C",
+        "0x0001D39C",
+        "0x0001D39C",
+        "0x0001D39C",
+        "0x0001D39C",
+        "0x0001D39C",
+        "0x0001D39C",
+        "0x0001D39C",
+        "0x0001D39C",
+        "0x0001D39C",
+        "0x0001D39C",
+        "0x0001D39C",
+        "0x0001D39C",
+        "0x0001D39C",
+        "0x0001D39C",
+        "0x0001D39C",
+        "0x0001D39C",
+        "0x0001D39C",
+        "0x0001D39C",
+        "0x0001D39C",
+        "0x0001D39C",
+        "0x0001D39C",
+        "0x0001D39C",
+        "0x0001D39C",
+        "0x0001D39C",
+        "0x0001D39C",
+        "0x0001D39C",
+        "0x0001D2A4"
+      ],
+      "texts": [
+        {
+          "index": 0,
+          "offset": "0x00A769AF",
+          "text": " (.d#   .d   ( d#   .d  +2.d.   .d  .. U.   .d  ....."
+        },
+        {
+          "index": 1,
+          "offset": "0x0001D0A0",
+          "text": "3W..3X...Y...Y..BX...Y...Y...Y..3X...Y...Y...Y...Y..."
+        },
+        {
+          "index": 2,
+          "offset": "0x0001D1A4",
+          "text": "7H xX....!H@ ...4I`  .. B..z (.V1ITzX `C@. . ( V.l..."
+        },
+        {
+          "index": 3,
+          "offset": "0x0001D2A4",
+          "text": ".H xW.."
+        },
+        {
+          "index": 4,
+          "offset": "0x0001D398",
+          "text": ".H.x.H x.I.h@..s(....B.F.B.B.G  k=..t?.... ... .W...."
+        },
+        {
+          "index": 5,
+          "offset": "0x0001D39C",
+          "text": ".H x.I.h@..s(....B.F.B.B.G  k=..t?.... ... .W..\n ...."
+        },
+        {
+          "index": 6,
+          "offset": "0x0001D2BC",
+          "text": ".H xW.."
+        },
+        {
+          "index": 7,
+          "offset": "0x0001D39C",
+          "text": ".H x.I.h@..s(....B.F.B.B.G  k=..t?.... ... .W..\n ...."
+        },
+        {
+          "index": 8,
+          "offset": "0x0001D39C",
+          "text": ".H x.I.h@..s(....B.F.B.B.G  k=..t?.... ... .W..\n ...."
+        },
+        {
+          "index": 9,
+          "offset": "0x0001D39C",
+          "text": ".H x.I.h@..s(....B.F.B.B.G  k=..t?.... ... .W..\n ...."
+        }
+      ]
+    },
+    {
+      "table_offset": "0x000206DC",
+      "num_entries": 55,
+      "text_offsets": [
+        "0x0025053C",
+        "0x000206E4",
+        "0x000207B8",
+        "0x0002082C",
+        "0x000209A0",
+        "0x000208B8",
+        "0x00020934",
+        "0x000209D8",
+        "0x00020A20",
+        "0x00020AEC",
+        "0x00020B30",
+        "0x00020B30",
+        "0x00020B30",
+        "0x00020B30",
+        "0x00020B30",
+        "0x00020B30",
+        "0x00020B30",
+        "0x00020B74",
+        "0x00020B74",
+        "0x00020B74",
+        "0x00020B74",
+        "0x00020B74",
+        "0x00020B74",
+        "0x00020B74",
+        "0x00020C40",
+        "0x00020C88",
+        "0x00020CA8",
+        "0x00020E78",
+        "0x00020EB4",
+        "0x00020ED0",
+        "0x00020EE8",
+        "0x00020F00",
+        "0x00020F60",
+        "0x00020F78",
+        "0x00020BB8",
+        "0x00020BB8",
+        "0x00020BB8",
+        "0x00020BB8",
+        "0x00020BB8",
+        "0x00020BB8",
+        "0x00020BB8",
+        "0x00020BFC",
+        "0x00020BFC",
+        "0x00020BFC",
+        "0x00020BFC",
+        "0x00020BFC",
+        "0x00020BFC",
+        "0x00020BFC",
+        "0x00020FBC",
+        "0x00021018",
+        "0x0002110A",
+        "0x0002110A",
+        "0x0002110A",
+        "0x0002110A",
+        "0x000210FC"
+      ],
+      "texts": [
+        {
+          "index": 0,
+          "offset": "0x0025053C",
+          "text": "    .   .   .       @   .   .   .       p        ...."
+        },
+        {
+          "index": 1,
+          "offset": "0x000206E4",
+          "text": ",...,.......,...4...d... ...x...0...0...0...0...0...."
+        },
+        {
+          "index": 2,
+          "offset": "0x000207B8",
+          "text": "LF xX%.. H GK... x.(.W ...DFP4.. h.!.@ (.V ...$.o...."
+        },
+        {
+          "index": 3,
+          "offset": "0x0002082C",
+          "text": "HF.xX&..pC@D 0.x').W.,.V.-.V .P..H.pIF.x'!5.A..I.H..."
+        },
+        {
+          "index": 4,
+          "offset": "0x000209A0",
+          "text": "LF!xX HCAFL1@. h ( V.o$....L . ..!I._\n.0lp   !"
+        },
+        {
+          "index": 5,
+          "offset": "0x000208B8",
+          "text": "KF.xX%hCDFP4...hp .@ (.V .... @..C.`.I.x@ @..I......."
+        },
+        {
+          "index": 6,
+          "offset": "0x00020934",
+          "text": ".M(xT.N..!.@ ).W.L#..J)xX HC..*0.x. @... . . ..B.e..."
+        },
+        {
+          "index": 7,
+          "offset": "0x000209D8",
+          "text": "HF.xX ..BC@FP0...h.!I..C.`.IJF.x@ @..I.....H.x......."
+        },
+        {
+          "index": 8,
+          "offset": "0x00020A20",
+          "text": "KF.xX&pCDF.M(G  ...."
+        },
+        {
+          "index": 9,
+          "offset": "0x00020AEC",
+          "text": ".I.H h ( f.0...` (.W. .`.L h.0.....I.HFx. @. h.nP=..."
+        }
+      ]
+    },
+    {
+      "table_offset": "0x000218CC",
+      "num_entries": 7,
+      "text_offsets": [
+        "0x000218D0",
+        "0x000218E8",
+        "0x000218F8",
+        "0x00021908",
+        "0x00021918",
+        "0x00021928",
+        "0x0002193C"
+      ],
+      "texts": [
+        {
+          "index": 0,
+          "offset": "0x000218D0",
+          "text": "t...............(...<....H h0..B-W)lt=...H h0..B%V..."
+        },
+        {
+          "index": 1,
+          "offset": "0x000218E8",
+          "text": ".H h0..B-W)lt=...H h0..B%V!lt=...H h0..B.e.lt=...H..."
+        },
+        {
+          "index": 2,
+          "offset": "0x000218F8",
+          "text": ".H h0..B%V!lt=...H h0..B.e.lt=...H h0..B.X.lt=...H..."
+        },
+        {
+          "index": 3,
+          "offset": "0x00021908",
+          "text": ".H h0..B.e.lt=...H h0..B.X.lt=...H h0..@ *.V.l  t=..."
+        },
+        {
+          "index": 4,
+          "offset": "0x00021918",
+          "text": ".H h0..B.X.lt=...H h0..@ *.V.l  t=...H h0..@ *.Wh...."
+        },
+        {
+          "index": 5,
+          "offset": "0x00021928",
+          "text": ".H h0..@ *.V.l  t=...H h0..@ *.Wh. ... -.V.K.hQy.y..."
+        },
+        {
+          "index": 6,
+          "offset": "0x0002193C",
+          "text": ".H h0..@ *.Wh. ... -.V.K.hQy.y ...Vy ....z ....`.l..."
+        }
+      ]
+    },
+    {
+      "table_offset": "0x00021AC4",
+      "num_entries": 8,
+      "text_offsets": [
+        "0x00021AC8",
+        "0x00021AE4",
+        "0x00021B50",
+        "0x00021C6A",
+        "0x00021F78",
+        "0x0002207C",
+        "0x00022368",
+        "0x000223B0"
+      ],
+      "texts": [
+        {
+          "index": 0,
+          "offset": "0x00021AC8",
+          "text": "p...P...j...x...| ..h#...#...L xS.l. . ..(.V .V..H..."
+        },
+        {
+          "index": 1,
+          "offset": "0x00021AE4",
+          "text": ".L xS.l. . ..(.V .V..H h.I.@ (.V .N..I...0.w.H.hk2..."
+        },
+        {
+          "index": 2,
+          "offset": "0x00021B50",
+          "text": " % 'd 9.AC.H.. ..!..A. (+V .9!..;. (%V.H. ...hAF.@..."
+        },
+        {
+          "index": 3,
+          "offset": "0x00021C6A",
+          "text": ".H h ( V.o.H h.|d HC.I@..!..."
+        },
+        {
+          "index": 4,
+          "offset": "0x00021F78",
+          "text": "8H.h * V+n7I7O8h.0 x@.@..p8h |d&pC3M@.9!..\"\n (TV8h..."
+        },
+        {
+          "index": 5,
+          "offset": "0x0002207C",
+          "text": "4H h ( V8m3I3H.h ..0 x.p1K.xQ.N. x!( VUmX... x.( V..."
+        },
+        {
+          "index": 6,
+          "offset": "0x00022368",
+          "text": ".H h (.V.I. .w0lP=..J?...J.h.|.0.t.h |.(.d.I. .w.l..."
+        },
+        {
+          "index": 7,
+          "offset": "0x000223B0",
+          "text": ".H.h -.W.L.J.xX!HC . #K..xHC . 0.p.I.h.0.`.B.F0F.B..."
+        }
+      ]
+    }
+  ]
+}

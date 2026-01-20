@@ -1,0 +1,34 @@
+{
+  "rom_name": "englishrom.gba",
+  "language": "french",
+  "text_count": 0,
+  "encoding": "pokemon",
+  "notes": "French translation template - Copy from spanish_template to start with Spanish texts, then translate to French",
+  "example_translations": [
+    {
+      "offset": 1586306,
+      "english": "Valley Cave",
+      "french": "Grotte de la Vallée",
+      "length": 100,
+      "encoding": "pokemon",
+      "category": "location",
+      "status": "needs_translation"
+    },
+    {
+      "offset": 1234567,
+      "english": "A wild Pokémon appeared!",
+      "french": "Un Pokémon sauvage apparait !",
+      "length": 200,
+      "encoding": "pokemon",
+      "category": "battle",
+      "status": "translated"
+    }
+  ],
+  "instructions": {
+    "1_start": "Convert this to template format by extracting from differences.json",
+    "2_prepare": "Use: python3 src/translators/20_prepare_translation_template.py",
+    "3_translate": "Edit the 'text' field for each entry with French translation",
+    "4_build": "Build ROM with: python3 src/translators/19_build_translated_rom_generic.py --source input/roms/englishrom.gba --translations output/translation/french_texts.json --language french",
+    "5_notes": "Only translate entries where 'status' is 'needs_translation' or 'in_progress'"
+  }
+}
