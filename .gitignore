@@ -8,3 +8,10 @@ output/.DS_Store
 
 output/differences/*
 output/extracted/extracted_texts/
+
+# Playwright
+test-results/
+node_modules/
+dist-playwright/
+/playwright-report/
+/blob-report/
