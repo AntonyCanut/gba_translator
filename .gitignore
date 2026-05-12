@@ -15,3 +15,7 @@ node_modules/
 dist-playwright/
 /playwright-report/
 /blob-report/
+package-lock.json
+
+# Auto-generated tickets (keep .gitkeep)
+tickets/auto-*.yaml

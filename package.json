@@ -10,8 +10,11 @@
     "test:e2e:gameplay": "playwright test --project=gameplay",
     "test:e2e:translation": "playwright test --project=translation",
     "test:e2e:visual": "playwright test --project=visual-regression",
-    "test:e2e:report": "playwright show-report test-results/reports",
-    "test:e2e:update-snapshots": "playwright test --project=visual-regression --update-snapshots"
+    "test:e2e:ui": "playwright test --ui",
+    "test:e2e:report": "python3 scripts/run_playwright_tests.py",
+    "test:e2e:update-snapshots": "playwright test --project=visual-regression --update-snapshots",
+    "tickets:list": "python3 scripts/list_tickets.py",
+    "tickets:resolve": "python3 scripts/resolve_ticket.py"
   },
   "devDependencies": {
     "@playwright/test": "^1.49.0",
