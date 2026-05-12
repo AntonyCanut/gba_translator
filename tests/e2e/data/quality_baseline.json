@@ -1,0 +1,8 @@
+{
+  "description": "Quality baseline for non-regression tests. Updated when quality improves.",
+  "min_good_acceptable_pct": 60.0,
+  "max_bad_pct": 5.0,
+  "min_fd_preservation_pct": 100.0,
+  "min_translated_pct": 80.0,
+  "min_french_markers_pct": 10.0
+}
