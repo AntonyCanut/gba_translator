@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GBA Emulator - Test Runner</title>
+  <style>
+    body { margin: 0; background: #111; color: #eee; font-family: monospace; display: flex; flex-direction: column; align-items: center; padding: 20px; }
+    #screen { border: 2px solid #444; image-rendering: pixelated; background: #000; }
+    #status { margin-top: 10px; font-size: 14px; }
+    #log { margin-top: 10px; max-height: 200px; overflow-y: auto; font-size: 12px; white-space: pre-wrap; width: 480px; background: #222; padding: 8px; border-radius: 4px; }
+  </style>
+</head>
+<body>
+  <canvas id="screen" width="240" height="160"></canvas>
+  <div id="status">Initializing...</div>
+  <div id="log"></div>
+
+  <script>
+    // GBA Emulator Web Controller
+    // This page hosts the GBA emulator and accepts commands via WebSocket
+
+    const GBA_WIDTH = 240;
+    const GBA_HEIGHT = 160;
+    const FPS = 59.73;
+    const FRAME_MS = 1000 / FPS;
+
+    const canvas = document.getElementById('screen');
+    const ctx = canvas.getContext('2d');
+    const statusEl = document.getElementById('status');
+    const logEl = document.getElementById('log');
+
+    function log(msg) {
+      const line = `[${new Date().toISOString().slice(11,23)}] ${msg}`;
+      logEl.textContent += line + '\n';
+      logEl.scrollTop = logEl.scrollHeight;
+      console.log(line);
+    }
+
+    // ---- Emulator Core ----
+    // Minimal GBA emulator state for testing. In production, this would use
+    // IodineGBA or mgba-wasm. For now, we provide a programmatic memory space
+    // and frame-stepping API that tests can drive.
+
+    class GBAEmulator {
+      constructor(canvas) {
+        this.canvas = canvas;
+        this.ctx = canvas.getContext('2d');
+        this.memory = new Uint8Array(0x10000000); // 256MB address space (sparse usage)
+        this.frameCount = 0;
+        this.paused = false;
+        this.fastForward = false;
+        this.romLoaded = false;
+        this.romData = null;
+        this.savedState = null;
+        this.keysDown = new Set();
+        this.running = false;
+        this.imageData = this.ctx.createImageData(GBA_WIDTH, GBA_HEIGHT);
+
+        // Key mapping (GBA button -> bit position)
+        this.keyBits = {
+          A: 0, B: 1, SELECT: 2, START: 3,
+          RIGHT: 4, LEFT: 5, UP: 6, DOWN: 7,
+          R: 8, L: 9
+        };
+
+        // Fill screen with a pattern to indicate emulator is ready
+        this._drawReadyScreen();
+      }
+
+      _drawReadyScreen() {
+        const data = this.imageData.data;
+        for (let y = 0; y < GBA_HEIGHT; y++) {
+          for (let x = 0; x < GBA_WIDTH; x++) {
+            const i = (y * GBA_WIDTH + x) * 4;
+            data[i] = 20;     // R
+            data[i + 1] = 20; // G
+            data[i + 2] = 40; // B
+            data[i + 3] = 255;
+          }
+        }
+        this.ctx.putImageData(this.imageData, 0, 0);
+      }
+
+      async loadRom(url) {
+        try {
+          log(`Loading ROM from: ${url}`);
+          const resp = await fetch(url);
+          if (!resp.ok) throw new Error(`HTTP ${resp.status}`);
+          this.romData = new Uint8Array(await resp.arrayBuffer());
+
+          // Copy ROM data into memory at 0x08000000 (GBA ROM base)
+          const ROM_BASE = 0x08000000;
+          for (let i = 0; i < this.romData.length && (ROM_BASE + i) < this.memory.length; i++) {
+            this.memory[ROM_BASE + i] = this.romData[i];
+          }
+
+          this.romLoaded = true;
+          this.frameCount = 0;
+          log(`ROM loaded: ${this.romData.length} bytes`);
+          this._drawRomLoadedScreen();
+          return true;
+        } catch (err) {
+          log(`ROM load failed: ${err.message}`);
+          throw err;
+        }
+      }
+
+      _drawRomLoadedScreen() {
+        const data = this.imageData.data;
+        for (let y = 0; y < GBA_HEIGHT; y++) {
+          for (let x = 0; x < GBA_WIDTH; x++) {
+            const i = (y * GBA_WIDTH + x) * 4;
+            data[i] = 10;
+            data[i + 1] = 40;
+            data[i + 2] = 10;
+            data[i + 3] = 255;
+          }
+        }
+        this.ctx.putImageData(this.imageData, 0, 0);
+      }
+
+      readMemory(address, length) {
+        const result = new Uint8Array(length);
+        for (let i = 0; i < length; i++) {
+          const addr = (address + i) >>> 0;
+          if (addr < this.memory.length) {
+            result[i] = this.memory[addr];
+          }
+        }
+        return result;
+      }
+
+      writeMemory(address, data) {
+        for (let i = 0; i < data.length; i++) {
+          const addr = (address + i) >>> 0;
+          if (addr < this.memory.length) {
+            this.memory[addr] = data[i];
+          }
+        }
+      }
+
+      readU8(address) {
+        return this.memory[(address) >>> 0] || 0;
+      }
+
+      readU16(address) {
+        const a = (address) >>> 0;
+        return (this.memory[a] | (this.memory[a + 1] << 8)) >>> 0;
+      }
+
+      readU32(address) {
+        const a = (address) >>> 0;
+        return (this.memory[a] | (this.memory[a + 1] << 8) |
+                (this.memory[a + 2] << 16) | (this.memory[a + 3] << 24)) >>> 0;
+      }
+
+      keyDown(key) {
+        this.keysDown.add(key);
+      }
+
+      keyUp(key) {
+        this.keysDown.delete(key);
+      }
+
+      advanceFrames(count) {
+        for (let i = 0; i < count; i++) {
+          this.frameCount++;
+        }
+      }
+
+      screenshot() {
+        return this.canvas.toDataURL('image/png');
+      }
+
+      saveState() {
+        this.savedState = {
+          memory: this.memory.slice(),
+          frameCount: this.frameCount,
+          keysDown: new Set(this.keysDown),
+        };
+        log('State saved');
+      }
+
+      loadSavedState() {
+        if (!this.savedState) {
+          log('No saved state');
+          return false;
+        }
+        this.memory.set(this.savedState.memory);
+        this.frameCount = this.savedState.frameCount;
+        this.keysDown = new Set(this.savedState.keysDown);
+        log('State loaded');
+        return true;
+      }
+
+      getState() {
+        return {
+          frameCount: this.frameCount,
+          romLoaded: this.romLoaded,
+          paused: this.paused,
+          fastForward: this.fastForward,
+          keysDown: [...this.keysDown],
+          hasSavedState: !!this.savedState,
+        };
+      }
+
+      pause() { this.paused = true; }
+      resume() { this.paused = false; }
+      setFastForward(enabled) { this.fastForward = enabled; }
+    }
+
+    // ---- WebSocket Controller ----
+
+    const emu = new GBAEmulator(canvas);
+    window.emu = emu; // Expose for Playwright access
+
+    function connectWebSocket() {
+      const protocol = location.protocol === 'https:' ? 'wss:' : 'ws:';
+      const wsUrl = `${protocol}//${location.host}/ws?role=browser`;
+      log(`Connecting to ${wsUrl}`);
+
+      const ws = new WebSocket(wsUrl);
+
+      ws.onopen = () => {
+        log('WebSocket connected');
+        statusEl.textContent = 'Connected - Waiting for commands';
+      };
+
+      ws.onmessage = (event) => {
+        try {
+          const msg = JSON.parse(event.data);
+          if (msg.source === 'server' && msg.command) {
+            handleCommand(msg.id, msg.command, ws);
+          }
+        } catch (err) {
+          log(`WS message error: ${err.message}`);
+        }
+      };
+
+      ws.onclose = () => {
+        log('WebSocket disconnected, reconnecting in 1s...');
+        statusEl.textContent = 'Disconnected - Reconnecting...';
+        setTimeout(connectWebSocket, 1000);
+      };
+
+      ws.onerror = (err) => {
+        log(`WebSocket error: ${err.type}`);
+      };
+    }
+
+    function respond(ws, id, ok, data, error) {
+      const msg = { id, ok };
+      if (data !== undefined) msg.data = data;
+      if (error) msg.error = error;
+      ws.send(JSON.stringify(msg));
+    }
+
+    async function handleCommand(id, raw, ws) {
+      const parts = raw.trim().split(/\s+/);
+      const cmd = parts[0].toUpperCase();
+      const args = parts.slice(1);
+
+      try {
+        switch (cmd) {
+          case 'LOAD_ROM': {
+            const romUrl = args.join(' ');
+            await emu.loadRom(romUrl);
+            respond(ws, id, true);
+            statusEl.textContent = `ROM loaded - Frame ${emu.frameCount}`;
+            break;
+          }
+          case 'READ_MEMORY': {
+            const addr = parseInt(args[0], args[0].startsWith('0x') ? 16 : 10);
+            const len = parseInt(args[1], 10);
+            const bytes = emu.readMemory(addr, len);
+            const hex = Array.from(bytes).map(b => b.toString(16).padStart(2, '0')).join('');
+            respond(ws, id, true, hex);
+            break;
+          }
+          case 'WRITE_MEMORY': {
+            const addr = parseInt(args[0], args[0].startsWith('0x') ? 16 : 10);
+            const hexStr = args[1];
+            const bytes = new Uint8Array(hexStr.length / 2);
+            for (let i = 0; i < hexStr.length; i += 2) {
+              bytes[i / 2] = parseInt(hexStr.substring(i, i + 2), 16);
+            }
+            emu.writeMemory(addr, bytes);
+            respond(ws, id, true);
+            break;
+          }
+          case 'KEY_DOWN':
+            emu.keyDown(args[0].toUpperCase());
+            respond(ws, id, true);
+            break;
+          case 'KEY_UP':
+            emu.keyUp(args[0].toUpperCase());
+            respond(ws, id, true);
+            break;
+          case 'ADVANCE_FRAMES': {
+            const count = parseInt(args[0], 10);
+            emu.advanceFrames(count);
+            respond(ws, id, true);
+            statusEl.textContent = `Running - Frame ${emu.frameCount}`;
+            break;
+          }
+          case 'GET_STATE':
+            respond(ws, id, true, emu.getState());
+            break;
+          case 'SCREENSHOT': {
+            const png = emu.screenshot();
+            respond(ws, id, true, png);
+            break;
+          }
+          case 'SAVE_STATE':
+            emu.saveState();
+            respond(ws, id, true);
+            break;
+          case 'LOAD_STATE':
+            emu.loadSavedState();
+            respond(ws, id, true);
+            break;
+          case 'FAST_FORWARD': {
+            const enabled = args[0] === 'true' || args[0] === '1';
+            emu.setFastForward(enabled);
+            respond(ws, id, true);
+            break;
+          }
+          case 'PAUSE':
+            emu.pause();
+            respond(ws, id, true);
+            statusEl.textContent = 'Paused';
+            break;
+          case 'RESUME':
+            emu.resume();
+            respond(ws, id, true);
+            statusEl.textContent = `Running - Frame ${emu.frameCount}`;
+            break;
+          default:
+            respond(ws, id, false, undefined, `Unknown command: ${cmd}`);
+        }
+      } catch (err) {
+        respond(ws, id, false, undefined, err.message);
+      }
+    }
+
+    // Auto-connect on load
+    connectWebSocket();
+
+    // Load ROM automatically if configured
+    fetch('/api/config')
+      .then(r => r.json())
+      .then(config => {
+        if (config.romPath) {
+          const romFilename = config.romPath.split('/').pop();
+          log(`Auto-loading ROM: ${romFilename}`);
+          emu.loadRom(`/rom/${romFilename}`).catch(err => {
+            log(`Auto-load failed: ${err.message}`);
+          });
+        }
+      })
+      .catch(() => {});
+
+    // Keep emulator running even when page loses focus
+    // (Important for headless Playwright tests)
+    document.addEventListener('visibilitychange', () => {
+      if (document.hidden) {
+        log('Page hidden - emulator continues running');
+      }
+    });
+
+    log('GBA Emulator Web initialized');
+  </script>
+</body>
+</html>
