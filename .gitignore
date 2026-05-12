@@ -1,8 +1,10 @@
+__pycache__/
+*.pyc
+.pytest_cache/
+.singularity-session.lock
 
 output/.DS_Store
-
 .DS_Store
-
 
 output/differences/*
 output/extracted/extracted_texts/
