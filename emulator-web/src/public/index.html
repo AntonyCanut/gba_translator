@@ -195,6 +195,7 @@
       }
 
       getState() {
+        const running = this.frameCount > 0;
         return {
           frameCount: this.frameCount,
           romLoaded: this.romLoaded,
@@ -202,6 +203,13 @@
           fastForward: this.fastForward,
           keysDown: [...this.keysDown],
           hasSavedState: !!this.savedState,
+          callback1: running ? 0x0800_0001 : 0,
+          mapGroup: running ? 1 : 0,
+          mapNumber: running ? 1 : 0,
+          playerX: 7,
+          playerY: 5,
+          inBattle: false,
+          textActive: false,
         };
       }
 
