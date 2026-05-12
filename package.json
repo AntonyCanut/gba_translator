@@ -1,0 +1,23 @@
+{
+  "name": "gba-translator-e2e",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Playwright E2E tests for GBA Translator ROM verification",
+  "scripts": {
+    "test:e2e": "playwright test",
+    "test:e2e:boot": "playwright test --project=boot",
+    "test:e2e:gameplay": "playwright test --project=gameplay",
+    "test:e2e:translation": "playwright test --project=translation",
+    "test:e2e:visual": "playwright test --project=visual-regression",
+    "test:e2e:report": "playwright show-report test-results/reports",
+    "test:e2e:update-snapshots": "playwright test --project=visual-regression --update-snapshots"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.49.0",
+    "@types/node": "^25.7.0",
+    "@types/ws": "^8.18.1",
+    "typescript": "^5.6.0",
+    "ws": "^8.20.1"
+  }
+}
