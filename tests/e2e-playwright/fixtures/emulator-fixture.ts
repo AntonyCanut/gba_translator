@@ -46,7 +46,7 @@ async function startServer(port: number): Promise<ServerHandle> {
     NODE_ENV: 'test',
   };
 
-  const serverProcess = spawn('node', ['dist/server.js'], {
+  const serverProcess = spawn('npx', ['tsx', 'src/server.ts'], {
     cwd: emulatorDir,
     env,
     stdio: 'pipe',
@@ -78,8 +78,8 @@ function stopServer(handle: ServerHandle): void {
 
 export const test = base.extend<EmulatorFixture>({
   serverUrl: [async ({}, use, testInfo) => {
-    const basePort = 3100 + (testInfo.parallelIndex * 10);
-    const port = basePort + (testInfo.testId.charCodeAt(0) % 10);
+    const hash = [...testInfo.testId].reduce((acc, c) => acc + c.charCodeAt(0), 0);
+    const port = 3100 + (testInfo.parallelIndex * 100) + (hash % 100);
     const server = await startServer(port);
 
     await use(server.url);
@@ -110,7 +110,8 @@ export const test = base.extend<EmulatorFixture>({
     await context.close();
   }, { scope: 'test' }],
 
-  client: [async ({ serverUrl }, use) => {
+  client: [async ({ serverUrl, page }, use) => {
+    void page;
     const wsUrl = serverUrl.replace('http:', 'ws:') + '/ws';
     const client = new EmulatorClient(wsUrl);
     await client.connect();
