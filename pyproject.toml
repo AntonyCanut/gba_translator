@@ -1,0 +1,16 @@
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+markers = [
+    "benchmark: benchmarks de performance",
+    "stress: tests de stress (long, >30min)",
+    "slow: tests lents (>30s)",
+    "emulator: necessite mGBA",
+    "rom: necessite une ROM GBA",
+]
+# Profils d'execution :
+# Rapide (unit)                : python3 -m pytest tests/ -x --ignore=tests/benchmarks --ignore=tests/e2e -m "not slow and not stress and not emulator"
+# Standard (unit+integration)  : python3 -m pytest tests/ --ignore=tests/benchmarks -m "not slow and not stress and not emulator"
+# Complet                      : python3 -m pytest tests/ -v
+# CI (sans emulateur)          : python3 -m pytest tests/ -m "not emulator and not stress and not benchmark" -v
+# Benchmarks                   : python3 -m pytest tests/benchmarks/ -v -s
+# Stress                       : python3 -m pytest tests/ -m "stress" -v
