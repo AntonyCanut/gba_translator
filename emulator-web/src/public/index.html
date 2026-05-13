@@ -42,6 +42,17 @@
     // IodineGBA or mgba-wasm. For now, we provide a programmatic memory space
     // and frame-stepping API that tests can drive.
 
+    // Memory addresses for game state (must match constants.ts)
+    const ADDR = {
+      callback1:  0x030030f0,
+      mapGroup:   0x02036dfc,
+      mapNumber:  0x02036dfe,
+      playerX:    0x02037078,
+      playerY:    0x0203707a,
+      battleFlag: 0x02023e8a,
+      textFlag:   0x020375c0,
+    };
+
     class GBAEmulator {
       constructor(canvas) {
         this.canvas = canvas;
@@ -63,6 +74,9 @@
           RIGHT: 4, LEFT: 5, UP: 6, DOWN: 7,
           R: 8, L: 9
         };
+
+        // Initialize callback1 to a non-zero value (simulates running main loop)
+        this._writeU32(ADDR.callback1, 0x08001234);
 
         // Fill screen with a pattern to indicate emulator is ready
         this._drawReadyScreen();
@@ -155,6 +169,14 @@
                 (this.memory[a + 2] << 16) | (this.memory[a + 3] << 24)) >>> 0;
       }
 
+      _writeU32(address, value) {
+        const a = (address) >>> 0;
+        this.memory[a] = value & 0xFF;
+        this.memory[a + 1] = (value >> 8) & 0xFF;
+        this.memory[a + 2] = (value >> 16) & 0xFF;
+        this.memory[a + 3] = (value >> 24) & 0xFF;
+      }
+
       keyDown(key) {
         this.keysDown.add(key);
       }
@@ -202,6 +224,13 @@
           fastForward: this.fastForward,
           keysDown: [...this.keysDown],
           hasSavedState: !!this.savedState,
+          callback1: this.readU32(ADDR.callback1),
+          mapGroup: this.readU16(ADDR.mapGroup),
+          mapNumber: this.readU16(ADDR.mapNumber),
+          playerX: this.readU16(ADDR.playerX),
+          playerY: this.readU16(ADDR.playerY),
+          inBattle: this.readU8(ADDR.battleFlag) !== 0,
+          textActive: this.readU8(ADDR.textFlag) !== 0,
         };
       }
 
