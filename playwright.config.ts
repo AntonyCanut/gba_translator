@@ -81,6 +81,11 @@ export default defineConfig({
       testMatch: 'specs/exploration.spec.ts',
       use: { browserName: 'chromium' },
     },
+    {
+      name: 'reporter-smoke',
+      testMatch: 'specs/reporter-smoke.spec.ts',
+      use: { browserName: 'chromium' },
+    },
   ],
   webServer: {
     command: 'npx tsx src/server.ts',
