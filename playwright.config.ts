@@ -88,7 +88,7 @@ export default defineConfig({
     },
   ],
   webServer: {
-    command: 'npx tsx src/server.ts',
+    command: 'node build-browser.mjs && npx tsx src/server.ts',
     cwd: './emulator-web',
     port: parseInt(process.env.EMULATOR_PORT ?? '3000', 10),
     reuseExistingServer: !process.env.CI,
