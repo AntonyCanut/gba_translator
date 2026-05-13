@@ -42,7 +42,10 @@ SPANISH_BUILD := $(ROM_OUT_DIR)/GenedRom-es.gba
 
 .DEFAULT_GOAL := pipeline
 
-.PHONY: pipeline verify-roms extract extract-en extract-es diff build-es build-fr validate-es trilingual-csv test clean help
+.PHONY: pipeline verify-roms extract extract-en extract-es diff build-es build-fr validate-es trilingual-csv \
+	test test-python-fast test-python test-vitest test-playwright test-all \
+	sync-charmap sync-charmap-check install install-playwright lint tickets report \
+	clean help
 
 pipeline: verify-roms extract diff build-es validate-es
 	@echo "✓ Pipeline complete."
@@ -134,8 +137,47 @@ validate-es: $(SPANISH_BUILD) $(VALIDATE_SCRIPT)
 trilingual-csv:
 	@$(PYTHON) $(TRILINGUAL_SCRIPT)
 
-test:
-	@$(PYTHON) -m unittest
+## --------------- Test targets ---------------
+
+test: test-python-fast
+
+test-python-fast:
+	@$(PYTHON) -m pytest tests/ -x --ignore=tests/benchmarks --ignore=tests/e2e \
+		-m "not slow and not stress and not emulator"
+
+test-python:
+	@$(PYTHON) -m pytest tests/ -m "not emulator and not stress and not benchmark" -v
+
+test-vitest:
+	@cd emulator-web && npx vitest run
+
+test-playwright:
+	@npx playwright test
+
+test-all: test-python-fast test-vitest test-playwright
+
+## --------------- Tooling targets ---------------
+
+sync-charmap:
+	@$(PYTHON) scripts/sync_charmap.py
+
+sync-charmap-check:
+	@$(PYTHON) scripts/sync_charmap.py --check
+
+install:
+	@pip install -e ".[dev]" && npm install && cd emulator-web && npm install
+
+install-playwright:
+	@npx playwright install chromium
+
+lint:
+	@$(PYTHON) -m pytest tests/ --collect-only -q
+
+tickets:
+	@$(PYTHON) scripts/list_tickets.py
+
+report:
+	@$(PYTHON) scripts/run_playwright_tests.py
 
 clean:
 	@rm -f $(ENGLISH_EXTRACT) $(SPANISH_EXTRACT) $(DIFF_REPORT) $(PAIRS_REPORT) $(OFFSET_MAP)
@@ -145,12 +187,32 @@ clean:
 
 help:
 	@echo "Make targets:"
-	@echo "  make pipeline    - Verify, extract, diff, build, validate"
-	@echo "  make extract     - Pointer-based extraction EN+ES"
-	@echo "  make diff        - Diff + offset map"
-	@echo "  make build-es    - Build Spanish ROM"
-	@echo "  make build-fr    - Build French ROM (latest translation_ready.json)"
-	@echo "  make validate-es - Byte-level validation"
-	@echo "  make trilingual-csv - Export EN/ES/FR translation CSV"
-	@echo "  make test        - Run unit tests"
-	@echo "  make clean       - Clean pipeline outputs"
+	@echo ""
+	@echo "  Pipeline:"
+	@echo "    make pipeline        - Verify, extract, diff, build, validate"
+	@echo "    make extract         - Pointer-based extraction EN+ES"
+	@echo "    make diff            - Diff + offset map"
+	@echo "    make build-es        - Build Spanish ROM"
+	@echo "    make build-fr        - Build French ROM (latest translation_ready.json)"
+	@echo "    make validate-es     - Byte-level validation"
+	@echo "    make trilingual-csv  - Export EN/ES/FR translation CSV"
+	@echo ""
+	@echo "  Tests:"
+	@echo "    make test            - Alias for test-python-fast"
+	@echo "    make test-python-fast - pytest rapide (unit, sans benchmarks/stress/e2e/emulator)"
+	@echo "    make test-python     - pytest standard (sans emulator/stress/benchmark)"
+	@echo "    make test-vitest     - Vitest (emulator-web)"
+	@echo "    make test-playwright - Playwright E2E"
+	@echo "    make test-all        - test-python-fast + test-vitest + test-playwright"
+	@echo ""
+	@echo "  Outillage:"
+	@echo "    make sync-charmap       - Sync charmap Python -> TypeScript"
+	@echo "    make sync-charmap-check - Verify charmap sync (dry-run)"
+	@echo "    make install            - Install Python + Node dependencies"
+	@echo "    make install-playwright - Install Playwright browsers"
+	@echo "    make lint               - Verify pytest collection"
+	@echo "    make tickets            - List open tickets"
+	@echo "    make report             - Generate Playwright test report"
+	@echo ""
+	@echo "  Misc:"
+	@echo "    make clean           - Clean pipeline outputs"
