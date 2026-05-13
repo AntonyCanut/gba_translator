@@ -3,6 +3,8 @@ import struct
 import unittest
 from pathlib import Path
 
+import pytest
+
 from src.core.text_codec import TextEncoder, TextDecoder
 
 EN_EXTRACT = Path('output/extracted/extracted_texts/englishrom_texts.json')
@@ -32,6 +34,7 @@ def _read_pointer_text(rom_data: bytes, pointer_offset: int, limit: int = 400) -
     return TextDecoder.decode_pokemon(raw, preserve_unknown=True)
 
 
+@pytest.mark.rom
 class RegressionTextTests(unittest.TestCase):
     @unittest.skipUnless(EN_EXTRACT.exists() and ES_EXTRACT.exists(), 'Extraction JSON missing')
     def test_jacket_and_character_texts_present(self):
