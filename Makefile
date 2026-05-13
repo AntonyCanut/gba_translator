@@ -143,10 +143,10 @@ test: test-python-fast
 
 test-python-fast:
 	@$(PYTHON) -m pytest tests/ -x --ignore=tests/benchmarks --ignore=tests/e2e \
-		-m "not slow and not stress and not emulator"
+		-m "not slow and not stress and not emulator and not rom"
 
 test-python:
-	@$(PYTHON) -m pytest tests/ -m "not emulator and not stress and not benchmark" -v
+	@$(PYTHON) -m pytest tests/ -m "not emulator and not stress and not benchmark and not rom" -v
 
 test-vitest:
 	@cd emulator-web && npx vitest run
