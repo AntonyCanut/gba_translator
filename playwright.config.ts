@@ -61,6 +61,26 @@ export default defineConfig({
       testMatch: 'visual-regression.spec.ts',
       use: { browserName: 'chromium' },
     },
+    {
+      name: 'menu-navigation',
+      testMatch: 'specs/menu-navigation.spec.ts',
+      use: { browserName: 'chromium' },
+    },
+    {
+      name: 'dialogue-npc',
+      testMatch: 'specs/dialogue-npc.spec.ts',
+      use: { browserName: 'chromium' },
+    },
+    {
+      name: 'battle-flow',
+      testMatch: 'specs/battle-flow.spec.ts',
+      use: { browserName: 'chromium' },
+    },
+    {
+      name: 'exploration',
+      testMatch: 'specs/exploration.spec.ts',
+      use: { browserName: 'chromium' },
+    },
   ],
   webServer: {
     command: 'npx tsx src/server.ts',
