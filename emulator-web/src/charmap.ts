@@ -24,23 +24,22 @@ const BYTE_TO_CHAR: Map<number, string> = new Map([
   [0xe9, 'u'], [0xea, 'v'], [0xeb, 'w'], [0xec, 'x'], [0xed, 'y'],
   [0xee, 'z'],
   // Accented (CFRU/Unbound extended)
-  [0x82, 'À'], [0x83, 'È'], [0x84, 'É'],
   [0x16, 'à'], [0x17, 'á'], [0x19, 'ç'], [0x1a, 'è'], [0x1b, 'é'],
-  [0x20, 'î'], [0x23, 'ó'], [0x27, 'ú'], [0x29, 'ñ'],
-  [0x68, 'â'], [0x7f, 'ù'],
+  [0x20, 'î'], [0x23, 'ó'], [0x27, 'ú'], [0x29, 'ñ'], [0x68, 'â'],
+  [0x6f, 'í'], [0x7f, 'ù'], [0x82, 'À'], [0x83, 'È'], [0x84, 'É'],
   // Newline
   [0xfe, '\n'],
 ]);
 
-const MULTI_BYTE_LEADERS = new Set([0xfc, 0xfd, 0xf8, 0xf9, 0xf7]);
+const MULTI_BYTE_LEADERS = new Set([0xf7, 0xf8, 0xf9, 0xfc, 0xfd]);
 
 function controlCodeLength(leader: number): number {
   switch (leader) {
-    case 0xfc: return 2;
-    case 0xfd: return 2;
+    case 0xf7: return 3;
     case 0xf8: return 2;
     case 0xf9: return 2;
-    case 0xf7: return 3;
+    case 0xfc: return 2;
+    case 0xfd: return 2;
     default: return 1;
   }
 }
