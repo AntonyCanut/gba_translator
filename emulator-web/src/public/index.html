@@ -16,17 +16,12 @@
   <div id="status">Initializing...</div>
   <div id="log"></div>
 
+  <script src="/gba-bundle.js"></script>
   <script>
     // GBA Emulator Web Controller
-    // This page hosts the GBA emulator and accepts commands via WebSocket
-
-    const GBA_WIDTH = 240;
-    const GBA_HEIGHT = 160;
-    const FPS = 59.73;
-    const FRAME_MS = 1000 / FPS;
+    // Uses real gbajs emulator bundled in gba-bundle.js
 
     const canvas = document.getElementById('screen');
-    const ctx = canvas.getContext('2d');
     const statusEl = document.getElementById('status');
     const logEl = document.getElementById('log');
 
@@ -37,212 +32,63 @@
       console.log(line);
     }
 
-    // ---- Emulator Core ----
-    // Minimal GBA emulator state for testing. In production, this would use
-    // IodineGBA or mgba-wasm. For now, we provide a programmatic memory space
-    // and frame-stepping API that tests can drive.
-
-    // Memory addresses for game state (must match constants.ts)
-    const ADDR = {
-      callback1:  0x030030f0,
-      mapGroup:   0x02036dfc,
-      mapNumber:  0x02036dfe,
-      playerX:    0x02037078,
-      playerY:    0x0203707a,
-      battleFlag: 0x02023e8a,
-      textFlag:   0x020375c0,
-    };
+    // ---- Real GBA Emulator Wrapper ----
+    // Wraps GBAEmulatorReal (from gba-bundle.js) with the interface
+    // expected by the WebSocket controller
 
     class GBAEmulator {
       constructor(canvas) {
+        this.real = new GBAEmulatorReal(canvas);
         this.canvas = canvas;
-        this.ctx = canvas.getContext('2d');
-        this.memory = new Uint8Array(0x10000000); // 256MB address space (sparse usage)
-        this.frameCount = 0;
-        this.paused = false;
-        this.fastForward = false;
-        this.romLoaded = false;
-        this.romData = null;
-        this.savedState = null;
-        this.keysDown = new Set();
-        this.running = false;
-        this.imageData = this.ctx.createImageData(GBA_WIDTH, GBA_HEIGHT);
-
-        // Key mapping (GBA button -> bit position)
-        this.keyBits = {
-          A: 0, B: 1, SELECT: 2, START: 3,
-          RIGHT: 4, LEFT: 5, UP: 6, DOWN: 7,
-          R: 8, L: 9
-        };
-
-        // Initialize callback1 to a non-zero value (simulates running main loop)
-        this._writeU32(ADDR.callback1, 0x08001234);
-
-        // Fill screen with a pattern to indicate emulator is ready
-        this._drawReadyScreen();
       }
 
-      _drawReadyScreen() {
-        const data = this.imageData.data;
-        for (let y = 0; y < GBA_HEIGHT; y++) {
-          for (let x = 0; x < GBA_WIDTH; x++) {
-            const i = (y * GBA_WIDTH + x) * 4;
-            data[i] = 20;     // R
-            data[i + 1] = 20; // G
-            data[i + 2] = 40; // B
-            data[i + 3] = 255;
-          }
-        }
-        this.ctx.putImageData(this.imageData, 0, 0);
-      }
+      get frameCount() { return this.real.frameCount; }
+      get romLoaded() { return this.real.romLoaded; }
+      get paused() { return this.real.paused; }
+      get fastForward() { return this.real.fastForwardEnabled; }
 
       async loadRom(url) {
-        try {
-          log(`Loading ROM from: ${url}`);
-          const resp = await fetch(url);
-          if (!resp.ok) throw new Error(`HTTP ${resp.status}`);
-          this.romData = new Uint8Array(await resp.arrayBuffer());
-
-          // Copy ROM data into memory at 0x08000000 (GBA ROM base)
-          const ROM_BASE = 0x08000000;
-          for (let i = 0; i < this.romData.length && (ROM_BASE + i) < this.memory.length; i++) {
-            this.memory[ROM_BASE + i] = this.romData[i];
-          }
-
-          this.romLoaded = true;
-          this.frameCount = 0;
-          log(`ROM loaded: ${this.romData.length} bytes`);
-          this._drawRomLoadedScreen();
-          return true;
-        } catch (err) {
-          log(`ROM load failed: ${err.message}`);
-          throw err;
-        }
+        log(`Loading ROM from: ${url}`);
+        await this.real.loadRom(url);
+        log(`ROM loaded successfully`);
+        return true;
       }
 
-      _drawRomLoadedScreen() {
-        const data = this.imageData.data;
-        for (let y = 0; y < GBA_HEIGHT; y++) {
-          for (let x = 0; x < GBA_WIDTH; x++) {
-            const i = (y * GBA_WIDTH + x) * 4;
-            data[i] = 10;
-            data[i + 1] = 40;
-            data[i + 2] = 10;
-            data[i + 3] = 255;
-          }
-        }
-        this.ctx.putImageData(this.imageData, 0, 0);
-      }
+      readMemory(address, length) { return this.real.readMemory(address, length); }
+      writeMemory(address, data) { this.real.writeMemory(address, data); }
+      readU8(address) { return this.real.readU8(address); }
+      readU16(address) { return this.real.readU16(address); }
+      readU32(address) { return this.real.readU32(address); }
 
-      readMemory(address, length) {
-        const result = new Uint8Array(length);
-        for (let i = 0; i < length; i++) {
-          const addr = (address + i) >>> 0;
-          if (addr < this.memory.length) {
-            result[i] = this.memory[addr];
-          }
-        }
-        return result;
-      }
+      keyDown(key) { this.real.keyDown(key); }
+      keyUp(key) { this.real.keyUp(key); }
 
-      writeMemory(address, data) {
-        for (let i = 0; i < data.length; i++) {
-          const addr = (address + i) >>> 0;
-          if (addr < this.memory.length) {
-            this.memory[addr] = data[i];
-          }
-        }
-      }
+      advanceFrames(count) { this.real.advanceFrames(count); }
 
-      readU8(address) {
-        return this.memory[(address) >>> 0] || 0;
-      }
-
-      readU16(address) {
-        const a = (address) >>> 0;
-        return (this.memory[a] | (this.memory[a + 1] << 8)) >>> 0;
-      }
-
-      readU32(address) {
-        const a = (address) >>> 0;
-        return (this.memory[a] | (this.memory[a + 1] << 8) |
-                (this.memory[a + 2] << 16) | (this.memory[a + 3] << 24)) >>> 0;
-      }
-
-      _writeU32(address, value) {
-        const a = (address) >>> 0;
-        this.memory[a] = value & 0xFF;
-        this.memory[a + 1] = (value >> 8) & 0xFF;
-        this.memory[a + 2] = (value >> 16) & 0xFF;
-        this.memory[a + 3] = (value >> 24) & 0xFF;
-      }
-
-      keyDown(key) {
-        this.keysDown.add(key);
-      }
-
-      keyUp(key) {
-        this.keysDown.delete(key);
-      }
-
-      advanceFrames(count) {
-        for (let i = 0; i < count; i++) {
-          this.frameCount++;
-        }
-      }
-
-      screenshot() {
-        return this.canvas.toDataURL('image/png');
-      }
+      screenshot() { return this.canvas.toDataURL('image/png'); }
 
       saveState() {
-        this.savedState = {
-          memory: this.memory.slice(),
-          frameCount: this.frameCount,
-          keysDown: new Set(this.keysDown),
-        };
+        this.real.saveState();
         log('State saved');
       }
 
       loadSavedState() {
-        if (!this.savedState) {
-          log('No saved state');
-          return false;
-        }
-        this.memory.set(this.savedState.memory);
-        this.frameCount = this.savedState.frameCount;
-        this.keysDown = new Set(this.savedState.keysDown);
-        log('State loaded');
-        return true;
+        const ok = this.real.loadSavedState();
+        log(ok ? 'State loaded' : 'No saved state');
+        return ok;
       }
 
-      getState() {
-        return {
-          frameCount: this.frameCount,
-          romLoaded: this.romLoaded,
-          paused: this.paused,
-          fastForward: this.fastForward,
-          keysDown: [...this.keysDown],
-          hasSavedState: !!this.savedState,
-          callback1: this.readU32(ADDR.callback1),
-          mapGroup: this.readU16(ADDR.mapGroup),
-          mapNumber: this.readU16(ADDR.mapNumber),
-          playerX: this.readU16(ADDR.playerX),
-          playerY: this.readU16(ADDR.playerY),
-          inBattle: this.readU8(ADDR.battleFlag) !== 0,
-          textActive: this.readU8(ADDR.textFlag) !== 0,
-        };
-      }
+      getState() { return this.real.getState(); }
 
-      pause() { this.paused = true; }
-      resume() { this.paused = false; }
-      setFastForward(enabled) { this.fastForward = enabled; }
+      pause() { this.real.pause(); }
+      resume() { this.real.resume(); }
+      setFastForward(enabled) { this.real.setFastForward(enabled); }
     }
 
     // ---- WebSocket Controller ----
 
     const emu = new GBAEmulator(canvas);
-    window.emu = emu; // Expose for Playwright access
+    window.emu = emu;
 
     function connectWebSocket() {
       const protocol = location.protocol === 'https:' ? 'wss:' : 'ws:';
@@ -390,15 +236,13 @@
       })
       .catch(() => {});
 
-    // Keep emulator running even when page loses focus
-    // (Important for headless Playwright tests)
     document.addEventListener('visibilitychange', () => {
       if (document.hidden) {
         log('Page hidden - emulator continues running');
       }
     });
 
-    log('GBA Emulator Web initialized');
+    log('GBA Emulator Web initialized (real gbajs engine)');
   </script>
 </body>
 </html>

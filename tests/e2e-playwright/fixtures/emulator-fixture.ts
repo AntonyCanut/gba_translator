@@ -46,6 +46,19 @@ async function startServer(port: number): Promise<ServerHandle> {
     NODE_ENV: 'test',
   };
 
+  // Build the browser bundle before starting the server
+  const buildProcess = spawn('node', ['build-browser.mjs'], {
+    cwd: emulatorDir,
+    env,
+    stdio: 'pipe',
+  });
+  await new Promise<void>((resolve, reject) => {
+    buildProcess.on('close', (code) => {
+      if (code === 0) resolve();
+      else reject(new Error(`Browser bundle build failed with code ${code}`));
+    });
+  });
+
   const serverProcess = spawn('npx', ['tsx', 'src/server.ts'], {
     cwd: emulatorDir,
     env,
