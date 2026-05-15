@@ -86,6 +86,12 @@ export default defineConfig({
       testMatch: 'specs/reporter-smoke.spec.ts',
       use: { browserName: 'chromium' },
     },
+    {
+      name: 'real-gameplay',
+      testMatch: 'specs/real-gameplay.spec.ts',
+      timeout: 300_000,
+      use: { browserName: 'chromium' },
+    },
   ],
   webServer: {
     command: 'node build-browser.mjs && npx tsx src/server.ts',

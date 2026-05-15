@@ -1,9 +1,61 @@
-import type { EmulatorClient } from '../fixtures/emulator-client.js';
+import type { EmulatorClient, GameState } from '../fixtures/emulator-client.js';
 import { FRAME_COUNTS, KEYS } from './constants.js';
+
+export interface WaitForGameStateOptions {
+  maxFrames?: number;
+  stepFrames?: number;
+  label?: string;
+}
+
+export async function waitForGameState(
+  client: EmulatorClient,
+  predicate: (state: GameState) => boolean,
+  options: WaitForGameStateOptions = {},
+): Promise<GameState> {
+  const { maxFrames = 3600, stepFrames = 60, label = 'game state' } = options;
+  let elapsed = 0;
+
+  while (elapsed < maxFrames) {
+    await client.advanceFrames(stepFrames);
+    elapsed += stepFrames;
+    const state = await client.getState();
+    if (predicate(state)) return state;
+  }
+
+  throw new Error(
+    `Timeout waiting for ${label} after ${elapsed} frames (${(elapsed / 60).toFixed(1)}s)`,
+  );
+}
+
+export async function waitForStableCallback(
+  client: EmulatorClient,
+  maxFrames = 1200,
+): Promise<GameState> {
+  let lastCallback = 0;
+  let stableCount = 0;
+  const step = 30;
+  let elapsed = 0;
+
+  while (elapsed < maxFrames) {
+    await client.advanceFrames(step);
+    elapsed += step;
+    const state = await client.getState();
+    if (state.callback1 !== 0 && state.callback1 === lastCallback) {
+      stableCount++;
+      if (stableCount >= 3) return state;
+    } else {
+      stableCount = 0;
+    }
+    lastCallback = state.callback1;
+  }
+
+  return client.getState();
+}
 
 export async function bootToTitle(client: EmulatorClient): Promise<void> {
   await client.fastForward(true);
   await client.advanceFrames(FRAME_COUNTS.TITLE_WAIT);
+  await waitForStableCallback(client);
   await client.fastForward(false);
 }
 
