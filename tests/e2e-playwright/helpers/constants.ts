@@ -46,6 +46,9 @@ export const TIMEOUTS = {
   DIALOGUE: 20_000,
   MENU: 15_000,
   DEFAULT: 30_000,
+  REAL_GAMEPLAY: 300_000,
+  REAL_BOOT: 60_000,
+  REAL_NEW_GAME: 120_000,
 } as const;
 
 export const FRAME_COUNTS = {
