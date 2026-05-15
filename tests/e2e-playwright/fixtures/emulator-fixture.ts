@@ -83,9 +83,15 @@ async function startServer(port: number): Promise<ServerHandle> {
   return { process: serverProcess, url, port };
 }
 
-function stopServer(handle: ServerHandle): void {
+async function stopServer(handle: ServerHandle): Promise<void> {
   if (handle.process && !handle.process.killed) {
+    const exited = new Promise<void>((resolve) => {
+      handle.process.on('exit', () => resolve());
+      handle.process.on('error', () => resolve());
+    });
     handle.process.kill('SIGTERM');
+    const timeout = new Promise<void>((resolve) => setTimeout(resolve, 3000));
+    await Promise.race([exited, timeout]);
   }
 }
 
@@ -97,7 +103,7 @@ export const test = base.extend<EmulatorFixture>({
 
     await use(server.url);
 
-    stopServer(server);
+    await stopServer(server);
   }, { scope: 'test' }],
 
   page: [async ({ browser, serverUrl }, use) => {
@@ -109,13 +115,14 @@ export const test = base.extend<EmulatorFixture>({
     await page.goto(serverUrl, { waitUntil: 'networkidle' });
     await page.waitForSelector('#screen', { state: 'visible', timeout: 10_000 });
 
-    // Wait for WebSocket connection
+    // Wait for WebSocket connection and ROM load
     await page.waitForFunction(
       () => {
         const logEl = document.getElementById('log');
-        return logEl?.textContent?.includes('WebSocket connected');
+        const text = logEl?.textContent ?? '';
+        return text.includes('WebSocket connected') && text.includes('ROM loaded successfully');
       },
-      { timeout: 10_000 },
+      { timeout: 15_000 },
     );
 
     await use(page);
