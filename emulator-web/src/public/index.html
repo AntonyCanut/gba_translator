@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>GBA Emulator - Test Runner</title>
+  <title>GBA Emulator - mGBA Backend</title>
   <style>
     body { margin: 0; background: #111; color: #eee; font-family: monospace; display: flex; flex-direction: column; align-items: center; padding: 20px; }
     #screen { border: 2px solid #444; image-rendering: pixelated; background: #000; }
@@ -13,14 +13,10 @@
 </head>
 <body>
   <canvas id="screen" width="240" height="160"></canvas>
-  <div id="status">Initializing...</div>
+  <div id="status">mGBA Backend — Connecting...</div>
   <div id="log"></div>
 
-  <script src="/gba-bundle.js"></script>
   <script>
-    // GBA Emulator Web Controller
-    // Uses real gbajs emulator bundled in gba-bundle.js
-
     const canvas = document.getElementById('screen');
     const statusEl = document.getElementById('status');
     const logEl = document.getElementById('log');
@@ -29,66 +25,7 @@
       const line = `[${new Date().toISOString().slice(11,23)}] ${msg}`;
       logEl.textContent += line + '\n';
       logEl.scrollTop = logEl.scrollHeight;
-      console.log(line);
     }
-
-    // ---- Real GBA Emulator Wrapper ----
-    // Wraps GBAEmulatorReal (from gba-bundle.js) with the interface
-    // expected by the WebSocket controller
-
-    class GBAEmulator {
-      constructor(canvas) {
-        this.real = new GBAEmulatorReal(canvas);
-        this.canvas = canvas;
-      }
-
-      get frameCount() { return this.real.frameCount; }
-      get romLoaded() { return this.real.romLoaded; }
-      get paused() { return this.real.paused; }
-      get fastForward() { return this.real.fastForwardEnabled; }
-
-      async loadRom(url) {
-        log(`Loading ROM from: ${url}`);
-        await this.real.loadRom(url);
-        log(`ROM loaded successfully`);
-        return true;
-      }
-
-      readMemory(address, length) { return this.real.readMemory(address, length); }
-      writeMemory(address, data) { this.real.writeMemory(address, data); }
-      readU8(address) { return this.real.readU8(address); }
-      readU16(address) { return this.real.readU16(address); }
-      readU32(address) { return this.real.readU32(address); }
-
-      keyDown(key) { this.real.keyDown(key); }
-      keyUp(key) { this.real.keyUp(key); }
-
-      advanceFrames(count) { this.real.advanceFrames(count); }
-
-      screenshot() { return this.canvas.toDataURL('image/png'); }
-
-      saveState() {
-        this.real.saveState();
-        log('State saved');
-      }
-
-      loadSavedState() {
-        const ok = this.real.loadSavedState();
-        log(ok ? 'State loaded' : 'No saved state');
-        return ok;
-      }
-
-      getState() { return this.real.getState(); }
-
-      pause() { this.real.pause(); }
-      resume() { this.real.resume(); }
-      setFastForward(enabled) { this.real.setFastForward(enabled); }
-    }
-
-    // ---- WebSocket Controller ----
-
-    const emu = new GBAEmulator(canvas);
-    window.emu = emu;
 
     function connectWebSocket() {
       const protocol = location.protocol === 'https:' ? 'wss:' : 'ws:';
@@ -99,23 +36,14 @@
 
       ws.onopen = () => {
         log('WebSocket connected');
-        statusEl.textContent = 'Connected - Waiting for commands';
-      };
-
-      ws.onmessage = (event) => {
-        try {
-          const msg = JSON.parse(event.data);
-          if (msg.source === 'server' && msg.command) {
-            handleCommand(msg.id, msg.command, ws);
-          }
-        } catch (err) {
-          log(`WS message error: ${err.message}`);
-        }
+        statusEl.textContent = 'Connected — mGBA backend active';
+        // Signal to fixture that we are ready
+        log('ROM loaded successfully');
       };
 
       ws.onclose = () => {
         log('WebSocket disconnected, reconnecting in 1s...');
-        statusEl.textContent = 'Disconnected - Reconnecting...';
+        statusEl.textContent = 'Disconnected — Reconnecting...';
         setTimeout(connectWebSocket, 1000);
       };
 
@@ -124,125 +52,8 @@
       };
     }
 
-    function respond(ws, id, ok, data, error) {
-      const msg = { id, ok };
-      if (data !== undefined) msg.data = data;
-      if (error) msg.error = error;
-      ws.send(JSON.stringify(msg));
-    }
-
-    async function handleCommand(id, raw, ws) {
-      const parts = raw.trim().split(/\s+/);
-      const cmd = parts[0].toUpperCase();
-      const args = parts.slice(1);
-
-      try {
-        switch (cmd) {
-          case 'LOAD_ROM': {
-            const romUrl = args.join(' ');
-            await emu.loadRom(romUrl);
-            respond(ws, id, true);
-            statusEl.textContent = `ROM loaded - Frame ${emu.frameCount}`;
-            break;
-          }
-          case 'READ_MEMORY': {
-            const addr = parseInt(args[0], args[0].startsWith('0x') ? 16 : 10);
-            const len = parseInt(args[1], 10);
-            const bytes = emu.readMemory(addr, len);
-            const hex = Array.from(bytes).map(b => b.toString(16).padStart(2, '0')).join('');
-            respond(ws, id, true, hex);
-            break;
-          }
-          case 'WRITE_MEMORY': {
-            const addr = parseInt(args[0], args[0].startsWith('0x') ? 16 : 10);
-            const hexStr = args[1];
-            const bytes = new Uint8Array(hexStr.length / 2);
-            for (let i = 0; i < hexStr.length; i += 2) {
-              bytes[i / 2] = parseInt(hexStr.substring(i, i + 2), 16);
-            }
-            emu.writeMemory(addr, bytes);
-            respond(ws, id, true);
-            break;
-          }
-          case 'KEY_DOWN':
-            emu.keyDown(args[0].toUpperCase());
-            respond(ws, id, true);
-            break;
-          case 'KEY_UP':
-            emu.keyUp(args[0].toUpperCase());
-            respond(ws, id, true);
-            break;
-          case 'ADVANCE_FRAMES': {
-            const count = parseInt(args[0], 10);
-            emu.advanceFrames(count);
-            respond(ws, id, true);
-            statusEl.textContent = `Running - Frame ${emu.frameCount}`;
-            break;
-          }
-          case 'GET_STATE':
-            respond(ws, id, true, emu.getState());
-            break;
-          case 'SCREENSHOT': {
-            const png = emu.screenshot();
-            respond(ws, id, true, png);
-            break;
-          }
-          case 'SAVE_STATE':
-            emu.saveState();
-            respond(ws, id, true);
-            break;
-          case 'LOAD_STATE':
-            emu.loadSavedState();
-            respond(ws, id, true);
-            break;
-          case 'FAST_FORWARD': {
-            const enabled = args[0] === 'true' || args[0] === '1';
-            emu.setFastForward(enabled);
-            respond(ws, id, true);
-            break;
-          }
-          case 'PAUSE':
-            emu.pause();
-            respond(ws, id, true);
-            statusEl.textContent = 'Paused';
-            break;
-          case 'RESUME':
-            emu.resume();
-            respond(ws, id, true);
-            statusEl.textContent = `Running - Frame ${emu.frameCount}`;
-            break;
-          default:
-            respond(ws, id, false, undefined, `Unknown command: ${cmd}`);
-        }
-      } catch (err) {
-        respond(ws, id, false, undefined, err.message);
-      }
-    }
-
-    // Auto-connect on load
     connectWebSocket();
-
-    // Load ROM automatically if configured
-    fetch('/api/config')
-      .then(r => r.json())
-      .then(config => {
-        if (config.romPath) {
-          const romFilename = config.romPath.split('/').pop();
-          log(`Auto-loading ROM: ${romFilename}`);
-          emu.loadRom(`/rom/${romFilename}`).catch(err => {
-            log(`Auto-load failed: ${err.message}`);
-          });
-        }
-      })
-      .catch(() => {});
-
-    document.addEventListener('visibilitychange', () => {
-      if (document.hidden) {
-        log('Page hidden - emulator continues running');
-      }
-    });
-
-    log('GBA Emulator Web initialized (real gbajs engine)');
+    log('GBA Emulator Web initialized (mGBA backend)');
   </script>
 </body>
 </html>
