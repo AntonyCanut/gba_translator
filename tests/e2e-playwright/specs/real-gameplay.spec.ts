@@ -126,6 +126,29 @@ test.describe('Real Gameplay Tests', () => {
     await startNewGame(client);
     await client.fastForward(true);
 
+    // Pokemon Unbound has a very long intro. Press A aggressively to skip through.
+    for (let batch = 0; batch < 10; batch++) {
+      for (let i = 0; i < 20; i++) {
+        await client.pressKey(KEYS.A);
+        await client.advanceFrames(60);
+      }
+      // Try walking to check if we have overworld control
+      await walk(client, 'DOWN', 3);
+      await client.advanceFrames(30);
+
+      const state = await client.getState();
+      const prevState = await client.getState();
+
+      await walk(client, 'RIGHT', 3);
+      await client.advanceFrames(30);
+
+      const afterWalk = await client.getState();
+      if (afterWalk.playerX !== prevState.playerX || afterWalk.playerY !== prevState.playerY) {
+        // Player moved! We have overworld control.
+        break;
+      }
+    }
+
     const initialState = await client.getState();
     const initialPos = { x: initialState.playerX, y: initialState.playerY };
 
@@ -141,6 +164,12 @@ test.describe('Real Gameplay Tests', () => {
       movedState.playerX !== initialPos.x || movedState.playerY !== initialPos.y;
 
     if (!posChanged) {
+      // One more batch of A-presses in case we're still in dialogue
+      for (let i = 0; i < 30; i++) {
+        await client.pressKey(KEYS.A);
+        await client.advanceFrames(60);
+      }
+
       await walk(client, 'LEFT', 8);
       await client.advanceFrames(FRAME_COUNTS.ONE_SECOND);
       await walk(client, 'UP', 8);

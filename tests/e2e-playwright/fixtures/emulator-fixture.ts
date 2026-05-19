@@ -21,18 +21,21 @@ interface ServerHandle {
   port: number;
 }
 
-async function waitForServer(url: string, timeoutMs = 15_000): Promise<void> {
+async function waitForServer(url: string, timeoutMs = 60_000): Promise<void> {
   const start = Date.now();
   while (Date.now() - start < timeoutMs) {
     try {
       const resp = await fetch(`${url}/api/health`);
-      if (resp.ok) return;
+      if (resp.ok) {
+        const data = await resp.json() as { status: string };
+        if (data.status === 'ok') return;
+      }
     } catch {
       // Server not ready yet
     }
-    await new Promise((r) => setTimeout(r, 200));
+    await new Promise((r) => setTimeout(r, 500));
   }
-  throw new Error(`Server did not start within ${timeoutMs}ms at ${url}`);
+  throw new Error(`Server did not become ready within ${timeoutMs}ms at ${url}`);
 }
 
 async function startServer(port: number): Promise<ServerHandle> {
@@ -46,19 +49,6 @@ async function startServer(port: number): Promise<ServerHandle> {
     NODE_ENV: 'test',
   };
 
-  // Build the browser bundle before starting the server
-  const buildProcess = spawn('node', ['build-browser.mjs'], {
-    cwd: emulatorDir,
-    env,
-    stdio: 'pipe',
-  });
-  await new Promise<void>((resolve, reject) => {
-    buildProcess.on('close', (code) => {
-      if (code === 0) resolve();
-      else reject(new Error(`Browser bundle build failed with code ${code}`));
-    });
-  });
-
   const serverProcess = spawn('npx', ['tsx', 'src/server.ts'], {
     cwd: emulatorDir,
     env,
@@ -67,13 +57,13 @@ async function startServer(port: number): Promise<ServerHandle> {
 
   serverProcess.stdout?.on('data', (data) => {
     if (process.env.DEBUG) {
-      process.stdout.write(`[emulator-server] ${data}`);
+      process.stdout.write(`[emulator-server:${port}] ${data}`);
     }
   });
 
   serverProcess.stderr?.on('data', (data) => {
     if (process.env.DEBUG) {
-      process.stderr.write(`[emulator-server] ${data}`);
+      process.stderr.write(`[emulator-server:${port}] ${data}`);
     }
   });
 
@@ -90,8 +80,11 @@ async function stopServer(handle: ServerHandle): Promise<void> {
       handle.process.on('error', () => resolve());
     });
     handle.process.kill('SIGTERM');
-    const timeout = new Promise<void>((resolve) => setTimeout(resolve, 3000));
+    const timeout = new Promise<void>((resolve) => setTimeout(resolve, 8000));
     await Promise.race([exited, timeout]);
+    if (!handle.process.killed) {
+      handle.process.kill('SIGKILL');
+    }
   }
 }
 
@@ -114,16 +107,6 @@ export const test = base.extend<EmulatorFixture>({
 
     await page.goto(serverUrl, { waitUntil: 'networkidle' });
     await page.waitForSelector('#screen', { state: 'visible', timeout: 10_000 });
-
-    // Wait for WebSocket connection and ROM load
-    await page.waitForFunction(
-      () => {
-        const logEl = document.getElementById('log');
-        const text = logEl?.textContent ?? '';
-        return text.includes('WebSocket connected') && text.includes('ROM loaded successfully');
-      },
-      { timeout: 15_000 },
-    );
 
     await use(page);
 

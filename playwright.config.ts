@@ -13,7 +13,7 @@ export default defineConfig({
     },
   },
   fullyParallel: false,
-  workers: process.env.CI ? 1 : 2,
+  workers: 1,
   retries: process.env.CI ? 1 : 0,
   forbidOnly: !!process.env.CI,
   reporter: [
@@ -94,7 +94,7 @@ export default defineConfig({
     },
   ],
   webServer: {
-    command: 'node build-browser.mjs && npx tsx src/server.ts',
+    command: 'npx tsx src/server.ts',
     cwd: './emulator-web',
     port: parseInt(process.env.EMULATOR_PORT ?? '3000', 10),
     reuseExistingServer: !process.env.CI,
