@@ -90,8 +90,11 @@ export class MgbaBridgeClient {
     if (useScriptFlag) {
       cmd.push('--script', luaPath);
     }
+    // NOTE: do NOT pass `-C fpsTarget=0`. On mGBA-qt 0.11 macOS it freezes the
+    // emulator after frame 1 (no further frame callbacks fire), so the bridge
+    // never advances. Native 60 fps is fine — `FRAMES|N` already runs frames
+    // synchronously via the Lua callback.
     cmd.push(
-      '-C', 'fpsTarget=0',
       '-C', 'audioSync=0',
       '-C', 'videoSync=0',
       rom,
@@ -495,12 +498,12 @@ export class MgbaBridgeClient {
     if (this.process) {
       const proc = this.process;
       this.process = null;
-      proc.kill('SIGTERM');
+      try { proc.kill('SIGTERM'); } catch { /* already exited */ }
       await new Promise<void>((resolve) => {
         const timer = setTimeout(() => {
           try { proc.kill('SIGKILL'); } catch { /* ignore */ }
           resolve();
-        }, 5000);
+        }, 2000);
 
         proc.on('exit', () => {
           clearTimeout(timer);
@@ -508,6 +511,11 @@ export class MgbaBridgeClient {
         });
       });
     }
+
+    // On macOS, `mgba` shells out to `open -na mGBA.app --args ...` which
+    // detaches the GUI process. Kill anything still bound to our TCP port so
+    // the next test can start a fresh emulator cleanly.
+    await this.killStaleBridge();
 
     this.romLoaded = false;
     this.frameCount = 0;

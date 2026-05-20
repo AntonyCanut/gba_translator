@@ -98,6 +98,9 @@ export default defineConfig({
     cwd: './emulator-web',
     port: parseInt(process.env.EMULATOR_PORT ?? '3000', 10),
     reuseExistingServer: !process.env.CI,
-    timeout: 30_000,
+    timeout: 60_000,
+    env: {
+      ROM_PATH: process.env.ROM_PATH ?? `${process.cwd()}/output/roms/GenedRom-fr.gba`,
+    },
   },
 });

@@ -38,8 +38,15 @@ async function waitForServer(url: string, timeoutMs = 60_000): Promise<void> {
   throw new Error(`Server did not become ready within ${timeoutMs}ms at ${url}`);
 }
 
+function resolveRomPath(): string {
+  const fromEnv = process.env.ROM_PATH ?? process.env.TEST_ROM_PATH ?? '';
+  if (fromEnv) return path.isAbsolute(fromEnv) ? fromEnv : path.resolve(PROJECT_ROOT, fromEnv);
+  // Default to the FR ROM produced by the cooker pipeline.
+  return path.join(PROJECT_ROOT, 'output', 'roms', 'GenedRom-fr.gba');
+}
+
 async function startServer(port: number): Promise<ServerHandle> {
-  const romPath = process.env.ROM_PATH ?? process.env.TEST_ROM_PATH ?? '';
+  const romPath = resolveRomPath();
   const emulatorDir = path.join(PROJECT_ROOT, 'emulator-web');
 
   const env = {
