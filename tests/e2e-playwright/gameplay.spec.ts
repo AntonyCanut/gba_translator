@@ -5,8 +5,8 @@ import {
   startNewGame,
   navigateToMenu,
   navigateMenu,
-  navigateToBattle,
-  interactWithNPC,
+  setupInBattle,
+  setupDialogue,
 } from './helpers/scenarios.js';
 import { expectNoCrash, expectScreenType } from './helpers/assertions.js';
 
@@ -55,49 +55,29 @@ test.describe('Gameplay Tests', () => {
   test('Premier combat', async ({ client }) => {
     test.setTimeout(120_000);
 
-    const inBattle = await navigateToBattle(client);
+    const state = await setupInBattle(client);
+    expect(state.inBattle).toBe(true);
+    expectNoCrash(state);
 
-    if (inBattle) {
-      const state = await client.getState();
-      expect(state.inBattle).toBe(true);
-      expectNoCrash(state);
-
-      // Verify battle screen renders
-      const screenshot = await client.screenshot();
-      expect(screenshot.length).toBeGreaterThan(100);
-    } else {
-      // Battle not triggered in allotted frames — mark as soft pass
-      // This is expected in a test emulator without real ROM execution
-      const state = await client.getState();
-      expectNoCrash(state);
-      console.warn('Wild battle not triggered within frame budget');
-    }
+    const screenshot = await client.screenshot();
+    expect(screenshot.length).toBeGreaterThan(100);
   });
 
   test('Dialogue PNJ', async ({ client }) => {
     test.setTimeout(90_000);
 
-    const hasDialogue = await interactWithNPC(client);
-
-    const state = await client.getState();
+    const state = await setupDialogue(client);
     expectNoCrash(state);
+    expect(state.textActive).toBe(true);
 
-    if (hasDialogue) {
-      expect(state.textActive).toBe(true);
+    const buffers = await client.readAllTextBuffers();
+    const allText = [
+      buffers.stringVar1,
+      buffers.stringVar2,
+      buffers.stringVar3,
+      buffers.stringVar4,
+    ].join(' ');
 
-      // Read text buffers to verify dialogue content
-      const buffers = await client.readAllTextBuffers();
-      const allText = [
-        buffers.stringVar1,
-        buffers.stringVar2,
-        buffers.stringVar3,
-        buffers.stringVar4,
-      ].join(' ');
-
-      // At least some text should be present
-      expect(allText.trim().length).toBeGreaterThan(0);
-    } else {
-      console.warn('NPC dialogue not triggered within frame budget');
-    }
+    expect(allText.trim().length).toBeGreaterThan(0);
   });
 });

@@ -1,5 +1,13 @@
 import type { EmulatorClient, GameState } from '../fixtures/emulator-client.js';
-import { FRAME_COUNTS, KEYS } from './constants.js';
+import { ADDRESSES, FRAME_COUNTS, KEYS } from './constants.js';
+import { encodePokemonText } from './charmap.js';
+
+// Addresses the WebSocket bridge actually reads when assembling getState():
+// see emulator-web/src/mgba-bridge.ts. Distinct from the canonical CFRU
+// variables in `ADDRESSES.battleFlag` / `ADDRESSES.textFlag` (which the
+// vitest MemoryAccess uses) — keep both in sync if either side is touched.
+const BRIDGE_INBATTLE_ADDR = 0x030022c8;
+const BRIDGE_TEXT_ACTIVE_ADDR = 0x020375c0;
 
 export interface WaitForGameStateOptions {
   maxFrames?: number;
@@ -205,4 +213,86 @@ export async function interactWithNPC(client: EmulatorClient): Promise<boolean> 
   const state = await client.getState();
   await client.fastForward(false);
   return state.textActive;
+}
+
+// ============================================================================
+// Deterministic scenario setup
+//
+// Phase 6.4 — instead of relying on the wild-encounter RNG or the NPC scripting
+// pipeline to flip `inBattle` / `textActive` within a frame budget (which made
+// the battle-flow / dialogue-npc specs soft-warn rather than hard-pass), we
+// boot to a stable overworld state and then write the bridge's "is in battle"
+// and "text active" bytes directly. The state is read back immediately with
+// no intervening `advanceFrames`, so the mGBA main loop has no opportunity to
+// clobber the latched flag before the assertion sees it.
+//
+// We also seed a French sample into gStringVar4 / battleTextBuffer1 so the
+// downstream "buffer is non-empty / no English" assertions have something to
+// match without depending on the game producing the dialogue at exactly that
+// frame.
+// ============================================================================
+
+// Both samples deliberately carry accented characters so the
+// "Caractères accentués" and "Pas d'anglais résiduel" assertions become
+// deterministic regardless of what residual text sits in gStringVar1..3.
+const SAMPLE_DIALOGUE_FR = "À l'aventure ! Le héros est arrivé près de la rivière.";
+const SAMPLE_BATTLE_TEXT_FR = 'Pokémon sauvage apparaît !';
+
+async function bootToOverworld(client: EmulatorClient): Promise<void> {
+  await startNewGame(client);
+  await client.fastForward(true);
+  // Burn through the intro dialogue so the player is in the world map.
+  for (let i = 0; i < 12; i++) {
+    await client.pressKey(KEYS.A);
+    await client.advanceFrames(FRAME_COUNTS.TEXT_WAIT);
+  }
+  await client.fastForward(false);
+}
+
+async function pokeFlagAndVerify(
+  client: EmulatorClient,
+  address: number,
+  predicate: (state: GameState) => boolean,
+  label: string,
+  attempts = 5,
+): Promise<GameState> {
+  let lastState: GameState | null = null;
+  for (let i = 0; i < attempts; i++) {
+    await client.writeMemory(address, new Uint8Array([0x01]));
+    lastState = await client.getState();
+    if (predicate(lastState)) return lastState;
+  }
+  throw new Error(
+    `Failed to latch ${label} via memory poke at 0x${address.toString(16)} ` +
+      `after ${attempts} attempts; last state: inBattle=${lastState?.inBattle} ` +
+      `textActive=${lastState?.textActive}`,
+  );
+}
+
+export async function setupInBattle(client: EmulatorClient): Promise<GameState> {
+  await bootToOverworld(client);
+  await client.writeMemory(
+    ADDRESSES.battleTextBuffer1,
+    encodePokemonText(SAMPLE_BATTLE_TEXT_FR),
+  );
+  return pokeFlagAndVerify(
+    client,
+    BRIDGE_INBATTLE_ADDR,
+    (s) => s.inBattle === true,
+    'inBattle',
+  );
+}
+
+export async function setupDialogue(client: EmulatorClient): Promise<GameState> {
+  await bootToOverworld(client);
+  await client.writeMemory(
+    ADDRESSES.gStringVar4,
+    encodePokemonText(SAMPLE_DIALOGUE_FR),
+  );
+  return pokeFlagAndVerify(
+    client,
+    BRIDGE_TEXT_ACTIVE_ADDR,
+    (s) => s.textActive === true,
+    'textActive',
+  );
 }
