@@ -80,6 +80,8 @@ SPACE_WIDTH = GLYPH_WIDTHS[0x00]
 _TOKEN_RE = re.compile(r'<0x([0-9A-Fa-f]{2})>')
 _BREAK_RE = re.compile(r'<0xF[ABab]>|\n')
 _SEGMENT_SPLIT = re.compile(r'(<0xF[ABab]>)')
+_STRUCT_RE = re.compile(r'<0xF[ABab]>')
+_BLANK_RUN_SPLIT = re.compile(r'(\n{2,})')
 _SCROLL = '<0xFA>'
 _PAGE = '<0xFB>'
 
@@ -303,6 +305,61 @@ def normalize_breaks(text: str) -> str:
             out.append('\n')
         pos = match.end()
     out.append(text[pos:])
+    return ''.join(out)
+
+
+def is_multiline_layout(text: str) -> bool:
+    """True when ``text`` lays out a multi-line window, not a dialogue box.
+
+    Intro screens, cinematics, credits, letters and other fullscreen
+    texts render every line at once: their English source uses two or
+    more ``\n`` breaks and never a scroll (``<0xFA>``) or page
+    (``<0xFB>``) code. The Gen III two-line dialogue rule must NOT be
+    applied to them — turning their breaks into scrolls truncates the
+    display to two lines and pauses mid-sentence.
+    """
+    return not _STRUCT_RE.search(text) and text.count('\n') >= 2
+
+
+def rewrap_multiline(text: str, reference: str) -> str:
+    """Re-fit a translation into the multi-line window of its source.
+
+    ``reference`` is the English layout: its widest line is taken as the
+    usable window width. Blank-line runs are structural (vertical
+    centring in the credits, paragraph gaps in the intro) and are kept
+    verbatim, as are all ``\n`` breaks — no scroll/page codes are ever
+    introduced. A paragraph is re-balanced only when one of its lines
+    overflows the window, gaining extra lines if the words need them.
+    """
+    ref_width = max((line_width(line) for line in reference.split('\n')), default=0)
+    cap = ref_width if ref_width > 0 else DEFAULT_MAX_LINE_WIDTH
+
+    parts = _BLANK_RUN_SPLIT.split(text)
+    out: List[str] = []
+    for part in parts:
+        if not part or _BLANK_RUN_SPLIT.fullmatch(part):
+            out.append(part)
+            continue
+        lines = part.split('\n')
+        if all(line_width(line) <= cap for line in lines):
+            out.append(part)
+            continue
+        words = _split_words(part)
+        widths = [word_width(w) for w in words]
+        cuts = None
+        max_k = min(len(words), len(lines) + _MAX_EXTRA_LINES)
+        for k in range(len(lines), max_k + 1):
+            cuts = _feasible_partition(widths, k, cap)
+            if cuts is not None:
+                break
+        if cuts is None:
+            cuts = _minimax_partition(widths, max(1, len(lines)))
+        rebuilt: List[str] = []
+        start = 0
+        for cut in [*cuts, len(words)]:
+            rebuilt.append(' '.join(words[start:cut]))
+            start = cut
+        out.append('\n'.join(rebuilt))
     return ''.join(out)
 
 

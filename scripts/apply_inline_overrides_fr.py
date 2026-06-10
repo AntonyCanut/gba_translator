@@ -23,7 +23,9 @@ sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 from src.core.dialogue_linewrap import (
     collapse_empty_breaks,
     has_empty_break_run,
+    is_multiline_layout,
     rewrap as rewrap_dialogue,
+    rewrap_multiline,
 )
 from src.core.fixed_tables import in_fixed_table
 from src.core.padding_detector import PaddingDetector
@@ -532,7 +534,12 @@ def main() -> int:
                 if not has_empty_break_run(reference_text or ''):
                     translation = collapse_empty_breaks(translation)
                 if categorizer.categorize_text(reference_text or '', offset) == 'dialogue':
-                    translation = rewrap_dialogue(translation)
+                    if is_multiline_layout(reference_text or ''):
+                        # Fullscreen layout (intro, cinematics, letters):
+                        # keep pure \n breaks, never scroll codes.
+                        translation = rewrap_multiline(translation, reference_text)
+                    else:
+                        translation = rewrap_dialogue(translation)
             except Exception:
                 pass
 
