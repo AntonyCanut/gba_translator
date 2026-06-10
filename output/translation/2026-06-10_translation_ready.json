@@ -1,7 +1,7 @@
 {
-  "conversion_date": "2026-06-10T21:29:18.220995",
+  "conversion_date": "2026-06-10T21:34:52.917906",
   "source_csv": "2026-01-15_trilingual_translation.csv",
-  "total_translations": 18852,
+  "total_translations": 18854,
   "total_errors": 0,
   "total_warnings": 15709,
   "translations": [
@@ -61635,6 +61635,18 @@
       "encoding": "pokemon",
       "category": "other",
       "notes": "",
+      "too_long": false
+    },
+    {
+      "offset": 7901732,
+      "original_text": "him",
+      "translation": "le",
+      "length": 2,
+      "original_length": 3,
+      "padding_used": -1,
+      "encoding": "pokemon",
+      "category": "other",
+      "notes": "buffer word: object pronoun",
       "too_long": false
     },
     {
@@ -222196,6 +222208,18 @@
       "category": "dialogue",
       "notes": "",
       "too_long": true
+    },
+    {
+      "offset": 33191502,
+      "original_text": "him",
+      "translation": "le",
+      "length": 2,
+      "original_length": 3,
+      "padding_used": -1,
+      "encoding": "pokemon",
+      "category": "other",
+      "notes": "buffer word: object pronoun",
+      "too_long": false
     },
     {
       "offset": 33191514,
