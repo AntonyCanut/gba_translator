@@ -138,7 +138,9 @@ class TestFreeSpaceAllocator:
 
         offset = alloc.allocate(50)
         assert offset is not None
-        assert offset == 100
+        # The first padding byte of a run is reserved (it may be the
+        # terminator of the preceding string), so allocation starts at 101.
+        assert offset == 101
 
     def test_multiple_allocations(self):
         rom = bytearray(b"\x00" * 50 + b"\xFF" * 500 + b"\x00" * 50)

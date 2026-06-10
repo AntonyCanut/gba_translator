@@ -26,6 +26,7 @@ class ReinserterRelocationTests(unittest.TestCase):
         reinserter = SmartReinserter(rom, allow_relocate=True)
         success = reinserter.reinsert_text(translation)
         self.assertTrue(success)
+        reinserter.flush_relocations()
 
         new_pointer = struct.unpack('<I', rom[0:4])[0] - 0x08000000
         self.assertNotEqual(new_pointer, original_offset)

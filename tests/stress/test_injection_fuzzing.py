@@ -108,6 +108,7 @@ class TestForcedRelocationAll:
         for entry in entries:
             text = "W" * (entry["original_length"] + 20)
             reinserter.reinsert_text({**entry, "translation": text})
+        reinserter.flush_relocations()
 
         for entry in entries:
             for ptr_off in entry["pointer_offsets"]:
@@ -127,6 +128,7 @@ class TestForcedRelocationAll:
         for entry in entries:
             text = "Q" * (entry["original_length"] + 15)
             reinserter.reinsert_text({**entry, "translation": text})
+        reinserter.flush_relocations()
 
         for entry in entries:
             ptr_off = entry["pointer_offsets"][0]
@@ -223,6 +225,7 @@ class TestFDCodePreservation:
         entry = entries[20]
         success = reinserter.reinsert_text({**entry, "translation": text})
         assert success
+        reinserter.flush_relocations()
 
         ptr_off = entry["pointer_offsets"][0]
         target = read_pointer(rom, ptr_off)
