@@ -35,6 +35,14 @@ POKEMON_TABLE: Dict[str, int] = {
     '!': 0xAB, '?': 0xAC, '.': 0xAD, '-': 0xAE, ',': 0xB8,
     '\'': 0xB4, '"': 0xB0, '/': 0xBA, ':': 0xF0,
     'À': 0x82, 'È': 0x83, 'É': 0x84,
+    # Verified against EN ROM prose ("It costs only <0xB7>50.",
+    # "Hit <0xFD> time<0x5C>s<0x5D>!", "Brains <0x2D> Brawn"): Pokédollar,
+    # parentheses, ampersand. Remaining entries follow the standard Gen III
+    # international charmap, which every byte verified so far has matched.
+    '¥': 0xB7, '(': 0x5C, ')': 0x5D, '&': 0x2D,
+    '%': 0x5B, '+': 0x2E, '=': 0x35, ';': 0x36,
+    '<': 0x85, '>': 0x86, '♂': 0xB5, '♀': 0xB6,
+    '×': 0xB9, 'º': 0x2A, 'ª': 0x2B,
 }
 
 # Spanish extended characters (reverse-engineered from ROM bytes)
@@ -92,9 +100,38 @@ ENCODE_ALIASES = {
     'Ü': 'U',
     'Ÿ': 'Y',
     'Ç': 'ç',
+    'Ù': 'U',
+    'Ú': 'U',
+    'Ì': 'I',
+    'Í': 'I',
+    'Ò': 'O',
+    'Ó': 'O',
+    'Ñ': 'N',
+    'Á': 'A',
+    'ì': 'i',
+    'ò': 'o',
+    '°': 'º',
     'ß': 's',
     '！': '!',
     '？': '?',
+    # Typographic characters normalized to encodable equivalents.
+    '‘': "'",   # ‘
+    '’': "'",   # ’
+    '“': '"',   # “
+    '”': '"',   # ”
+    '«': '"',   # «
+    '»': '"',   # »
+    '…': '...', # …
+    '—': '-',   # —
+    '–': '-',   # –
+    'ー': '-',   # ー (chōonpu, JP-leftover strings)
+    ' ': ' ',   # non-breaking space
+    '　': ' ',   # 　 ideographic space (JP-leftover strings)
+    '​': '',    # zero-width space
+    '。': '.',   # 。
+    '・': '.',   # ・
+    '·': '.',   # ·
+    '‥': '..',  # ‥
 }
 
 CONTROL_CODE_ENCODE = {
