@@ -81,3 +81,31 @@ class RewrapTests(unittest.TestCase):
 
 if __name__ == '__main__':
     unittest.main()
+
+
+class CollapseEmptyBreaksTests(unittest.TestCase):
+    def test_double_scroll_collapses_to_strongest(self):
+        from src.core.dialogue_linewrap import rewrap
+        text = (
+            "Un roux a surgi et a mis K.O. mes\n"
+            "Pokémon avant que je réagisse !<0xFA><0xFA><0xFB>"
+            "Je ne peux meme plus\nt'empecher de t'échapper..."
+        )
+        result = rewrap(text)
+        self.assertNotIn('<0xFA><0xFA>', result)
+        self.assertIn('réagisse !<0xFB>', result)
+
+    def test_newline_scroll_run_keeps_scroll(self):
+        from src.core.dialogue_linewrap import collapse_empty_breaks
+        self.assertEqual(collapse_empty_breaks('x\n<0xFA>y'), 'x<0xFA>y')
+
+    def test_trailing_run_collapses_to_one(self):
+        from src.core.dialogue_linewrap import collapse_empty_breaks
+        self.assertEqual(
+            collapse_empty_breaks('fin<0xFA><0xFA>'), 'fin<0xFA>'
+        )
+
+    def test_single_breaks_untouched(self):
+        from src.core.dialogue_linewrap import collapse_empty_breaks
+        text = 'a\nb<0xFA>c<0xFB>d'
+        self.assertEqual(collapse_empty_breaks(text), text)
