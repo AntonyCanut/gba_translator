@@ -249,6 +249,35 @@ def rewrap_segment(segment: str, max_width: int = DEFAULT_MAX_LINE_WIDTH) -> str
     return '\n'.join(lines)
 
 
+_BREAK_RUN_RE = re.compile(r'(?:(?:<0xF[ABab]>|\n)[ \t]*){2,}')
+
+
+def has_empty_break_run(text: str) -> bool:
+    """True when ``text`` contains consecutive breaks with no text between."""
+    return bool(_BREAK_RUN_RE.search(text))
+
+
+def collapse_empty_breaks(text: str) -> str:
+    """Merge runs of consecutive breaks that enclose no text.
+
+    A translation shorter than its English source can inherit more breaks
+    than it has lines (``réagisse !<0xFA><0xFA><0xFB>``), which renders as
+    blank lines in the message box. Each run keeps its strongest token —
+    ``<0xFB>`` (wait + clear) over ``<0xFA>`` (wait + scroll) over ``\n``
+    — so the pacing of the dialogue is preserved without the blanks.
+    """
+
+    def strongest(match: re.Match) -> str:
+        run = match.group(0).upper()
+        if '<0XFB>' in run:
+            return _PAGE
+        if '<0XFA>' in run:
+            return _SCROLL
+        return '\n'
+
+    return _BREAK_RUN_RE.sub(strongest, text)
+
+
 def normalize_breaks(text: str) -> str:
     """Enforce the Gen III dialogue break rule on ``text``.
 
@@ -287,6 +316,7 @@ def rewrap(text: str, max_width: int = DEFAULT_MAX_LINE_WIDTH) -> str:
     """
     if not _BREAK_RE.search(text):
         return text
+    text = collapse_empty_breaks(text)
     parts = _SEGMENT_SPLIT.split(text)
     rewrapped = ''.join(
         part if _SEGMENT_SPLIT.fullmatch(part) else rewrap_segment(part, max_width)

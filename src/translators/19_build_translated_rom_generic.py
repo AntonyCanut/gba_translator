@@ -52,7 +52,11 @@ from dataclasses import dataclass, asdict
 
 sys.path.insert(0, str(Path(__file__).parent.parent.parent))
 
-from src.core.dialogue_linewrap import rewrap as rewrap_dialogue
+from src.core.dialogue_linewrap import (
+    collapse_empty_breaks,
+    has_empty_break_run,
+    rewrap as rewrap_dialogue,
+)
 from src.core.fixed_tables import in_fixed_table
 from src.core.text_codec import TextDecoder
 from src.core.text_reinserter import SmartReinserter
@@ -542,9 +546,14 @@ class TranslatedROMBuilder:
         # Dialogue inherits its break positions from the English source;
         # French lines are longer, so re-balance them against the real
         # FRLG font metrics (and enforce the \n / scroll rule).
-        if translation_text and encoding == 'pokemon' and item.get('category') == 'dialogue':
+        if translation_text and encoding == 'pokemon':
             try:
-                translation_text = rewrap_dialogue(translation_text)
+                # Consecutive breaks render as blank lines; collapse them
+                # unless the English source has them too (credits layout).
+                if not has_empty_break_run(english_text or ''):
+                    translation_text = collapse_empty_breaks(translation_text)
+                if item.get('category') == 'dialogue':
+                    translation_text = rewrap_dialogue(translation_text)
             except Exception:
                 pass  # never let display polish break the build
 

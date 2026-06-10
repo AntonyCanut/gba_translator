@@ -20,7 +20,11 @@ from typing import Dict, List, Optional, Tuple
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 
-from src.core.dialogue_linewrap import rewrap as rewrap_dialogue
+from src.core.dialogue_linewrap import (
+    collapse_empty_breaks,
+    has_empty_break_run,
+    rewrap as rewrap_dialogue,
+)
 from src.core.fixed_tables import in_fixed_table
 from src.core.padding_detector import PaddingDetector
 from src.core.rom_reader import ROMReader
@@ -521,12 +525,14 @@ def main() -> int:
 
         # Re-balance dialogue line breaks against the FRLG font metrics
         # (and enforce the Gen III \n / scroll rule).
-        if (
-            reference_entry.get('encoding', 'pokemon') == 'pokemon'
-            and categorizer.categorize_text(reference_text or '', offset) == 'dialogue'
-        ):
+        if reference_entry.get('encoding', 'pokemon') == 'pokemon':
             try:
-                translation = rewrap_dialogue(translation)
+                # Consecutive breaks render as blank lines; collapse them
+                # unless the English source has them too (credits layout).
+                if not has_empty_break_run(reference_text or ''):
+                    translation = collapse_empty_breaks(translation)
+                if categorizer.categorize_text(reference_text or '', offset) == 'dialogue':
+                    translation = rewrap_dialogue(translation)
             except Exception:
                 pass
 
