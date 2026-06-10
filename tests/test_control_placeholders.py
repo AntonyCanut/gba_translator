@@ -38,9 +38,45 @@ class ControlPlaceholderTests(unittest.TestCase):
         )
 
     def test_placeholder_payload_trim(self):
+        # 0x20 decodes to 'î': the duplicated argument glyph after the
+        # placeholder is consumed, nothing else.
         english = 'Hello<0xFC><0x08><0x20>World'
-        translation = 'Hello{PAUSE}OEWorld'
+        translation = 'Hello{PAUSE}îWorld'
         expected = 'Hello<0xFC><0x08><0x20>World'
+        self.assertEqual(
+            TranslatedROMBuilder._apply_control_placeholders(translation, english),
+            expected,
+        )
+
+    def test_placeholder_payload_trim_accent_folded(self):
+        # Translators sometimes fold the accent of the duplicated glyph.
+        english = 'Hello<0xFC><0x08><0x20>World'
+        translation = 'Hello{PAUSE}iWorld'
+        expected = 'Hello<0xFC><0x08><0x20>World'
+        self.assertEqual(
+            TranslatedROMBuilder._apply_control_placeholders(translation, english),
+            expected,
+        )
+
+    def test_placeholder_keeps_first_letter_of_next_word(self):
+        # Regression: the in-game string "…{PAUSE}îsentir ma propre
+        # colère." lost its 's' because the old code skipped a fixed
+        # len(seq)-1 characters — but the FC command byte (0x08) never
+        # appears as a glyph, so only the 'î' duplicate must go.
+        english = 'unless you want\nto<0xFC><0x08><0x20> feel my wrath.'
+        translation = 'sauf si tu veux...\n{PAUSE}îsentir ma propre colère.'
+        expected = 'sauf si tu veux...\n<0xFC><0x08><0x20>sentir ma propre colère.'
+        self.assertEqual(
+            TranslatedROMBuilder._apply_control_placeholders(translation, english),
+            expected,
+        )
+
+    def test_placeholder_without_duplicated_glyph(self):
+        # When the translation never duplicated the argument glyph, no
+        # character may be consumed.
+        english = 'Hello<0xFC><0x08><0x20>World'
+        translation = 'Hello{PAUSE}Bonjour'
+        expected = 'Hello<0xFC><0x08><0x20>Bonjour'
         self.assertEqual(
             TranslatedROMBuilder._apply_control_placeholders(translation, english),
             expected,

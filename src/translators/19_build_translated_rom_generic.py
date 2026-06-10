@@ -44,6 +44,7 @@ import sys
 import json
 import argparse
 import re
+import unicodedata
 from pathlib import Path
 from datetime import datetime
 from typing import Any, Dict, List, Optional, Tuple
@@ -51,8 +52,15 @@ from dataclasses import dataclass, asdict
 
 sys.path.insert(0, str(Path(__file__).parent.parent.parent))
 
+from src.core.dialogue_linewrap import rewrap as rewrap_dialogue
+from src.core.fixed_tables import in_fixed_table
+from src.core.text_codec import TextDecoder
 from src.core.text_reinserter import SmartReinserter
 from src.extractors.pointer_text_extractor import PointerTextExtractor
+
+
+def _strip_accents(ch: str) -> str:
+    return unicodedata.normalize('NFD', ch)[:1]
 
 
 @dataclass
@@ -109,6 +117,7 @@ class BuildStats:
     truncated: int = 0
     fallback_used: int = 0
     skipped_too_long: int = 0
+    skipped_fixed_table: int = 0
     skipped_only_in_spanish: int = 0
     skipped_only_in_english: int = 0
     skipped_missing_reference: int = 0
@@ -262,16 +271,39 @@ class TranslatedROMBuilder:
         return color_sequences, other_sequences
 
     @staticmethod
-    def _skip_argument_glyphs(text: str, index: int, max_skip: int) -> int:
-        skipped = 0
-        while skipped < max_skip and index < len(text):
-            ch = text[index]
-            if ch.isspace() or ch in '{<':
+    def _argument_glyphs(seq: List[int]) -> List[str]:
+        """Printable glyphs the decoder emitted for a sequence's arguments.
+
+        For an FC control the command byte (``seq[1]``) never appears in
+        the decoded text (it has no charmap glyph); only argument bytes
+        that decode to a printable character were rendered after the
+        placeholder, and only those duplicates must be consumed.
+        """
+        args = seq[2:] if seq[0] == 0xFC else seq[1:]
+        glyphs: List[str] = []
+        for byte in args:
+            ch = TextDecoder.POKEMON_DECODE.get(byte)
+            if not ch or len(ch) != 1 or ch.isspace():
                 break
-            if not ch.isalnum():
+            glyphs.append(ch)
+        return glyphs
+
+    @staticmethod
+    def _skip_argument_glyphs(text: str, index: int, expected: List[str]) -> int:
+        """Consume the decoded argument glyphs duplicated after a placeholder.
+
+        Skips a character only when it matches the glyph the argument
+        byte decodes to (accent-insensitively, as translators sometimes
+        fold the accent). A blind fixed-count skip ate the first letter
+        of the following word ("sentir" became "entir").
+        """
+        for glyph in expected:
+            if index >= len(text):
+                break
+            ch = text[index]
+            if ch != glyph and _strip_accents(ch) != _strip_accents(glyph):
                 break
             index += 1
-            skipped += 1
         return index
 
     @classmethod
@@ -294,7 +326,9 @@ class TranslatedROMBuilder:
                         result.append(cls._format_sequence(seq))
                         i = end + 1
                         if seq[0] in cls.ARG_CONSUME_PREFIXES and len(seq) > 1:
-                            i = cls._skip_argument_glyphs(text, i, len(seq) - 1)
+                            i = cls._skip_argument_glyphs(
+                                text, i, cls._argument_glyphs(seq)
+                            )
                         continue
             result.append(text[i])
             i += 1
@@ -498,6 +532,15 @@ class TranslatedROMBuilder:
             english_text,
             english_raw_bytes,
         )
+
+        # Dialogue inherits its break positions from the English source;
+        # French lines are longer, so re-balance them against the real
+        # FRLG font metrics (and enforce the \n / scroll rule).
+        if translation_text and encoding == 'pokemon' and item.get('category') == 'dialogue':
+            try:
+                translation_text = rewrap_dialogue(translation_text)
+            except Exception:
+                pass  # never let display polish break the build
 
         pointer_offsets = item.get('pointer_offsets')
         if pointer_offsets is None and self.english_texts:
@@ -1010,9 +1053,17 @@ class TranslatedROMBuilder:
         stats = {
             'unchanged': 0,
             'missing_text': 0,
+            'fixed_table': 0,
         }
 
         for offset, item in self.translations.items():
+            if in_fixed_table(offset):
+                # Fixed-stride name tables (moves, species…) are already
+                # French in the source ROM; rewriting them at extracted
+                # offsets breaks cell alignment and terminators.
+                stats['fixed_table'] += 1
+                continue
+
             if item.get('modified') is False:
                 stats['unchanged'] += 1
                 continue
@@ -1142,6 +1193,7 @@ class TranslatedROMBuilder:
         translations, prep_stats = self._prepare_translations()
         self.stats.unchanged += prep_stats['unchanged']
         self.stats.failed += prep_stats['missing_text']
+        self.stats.skipped_fixed_table += prep_stats['fixed_table']
 
         if not translations:
             print("⚠️  Aucun texte à réinsérer.")
@@ -1199,6 +1251,7 @@ class TranslatedROMBuilder:
         translations, prep_stats = self._prepare_translations()
         self.stats.unchanged += prep_stats['unchanged']
         self.stats.failed += prep_stats['missing_text']
+        self.stats.skipped_fixed_table += prep_stats['fixed_table']
 
         if not translations:
             print("   Aucun texte à réinsérer.")

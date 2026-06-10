@@ -14,14 +14,18 @@ import argparse
 import json
 import re
 import sys
+import unicodedata
 from pathlib import Path
 from typing import Dict, List, Optional, Tuple
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 
+from src.core.dialogue_linewrap import rewrap as rewrap_dialogue
+from src.core.fixed_tables import in_fixed_table
 from src.core.padding_detector import PaddingDetector
 from src.core.rom_reader import ROMReader
 from src.core.text_codec import TextDecoder, TextEncoder
+from src.core.text_converter import JSONToCSVConverter
 
 
 LINE_RE = re.compile(r'^\s*0x([0-9A-Fa-f]+)\s*:\s*(.*)$')
@@ -251,16 +255,42 @@ def _extract_control_sequences(
     return color_sequences, other_sequences
 
 
-def _skip_argument_glyphs(text: str, index: int, max_skip: int) -> int:
-    skipped = 0
-    while skipped < max_skip and index < len(text):
-        ch = text[index]
-        if ch.isspace() or ch in '{<':
+def _strip_accents(ch: str) -> str:
+    return unicodedata.normalize('NFD', ch)[:1]
+
+
+def _argument_glyphs(seq: List[int]) -> List[str]:
+    """Printable glyphs the decoder emitted for a sequence's arguments.
+
+    For an FC control the command byte (``seq[1]``) never appears in the
+    decoded text (it has no charmap glyph); only argument bytes that
+    decode to a printable character were rendered after the placeholder,
+    and only those duplicates must be consumed.
+    """
+    args = seq[2:] if seq[0] == 0xFC else seq[1:]
+    glyphs: List[str] = []
+    for byte in args:
+        ch = TextDecoder.POKEMON_DECODE.get(byte)
+        if not ch or len(ch) != 1 or ch.isspace():
             break
-        if not ch.isalnum():
+        glyphs.append(ch)
+    return glyphs
+
+
+def _skip_argument_glyphs(text: str, index: int, expected: List[str]) -> int:
+    """Consume the decoded argument glyphs duplicated after a placeholder.
+
+    Skips a character only when it matches the glyph the argument byte
+    decodes to (accent-insensitively). A blind fixed-count skip ate the
+    first letter of the following word ("sentir" became "entir").
+    """
+    for glyph in expected:
+        if index >= len(text):
+            break
+        ch = text[index]
+        if ch != glyph and _strip_accents(ch) != _strip_accents(glyph):
             break
         index += 1
-        skipped += 1
     return index
 
 
@@ -283,7 +313,7 @@ def _replace_placeholders(text: str, sequences: List[List[int]]) -> str:
                     result.append(_format_sequence(seq))
                     i = end + 1
                     if seq[0] in ARG_CONSUME_PREFIXES and len(seq) > 1:
-                        i = _skip_argument_glyphs(text, i, len(seq) - 1)
+                        i = _skip_argument_glyphs(text, i, _argument_glyphs(seq))
                     continue
         result.append(text[i])
         i += 1
@@ -426,6 +456,7 @@ def main() -> int:
     detector = PaddingDetector(source_reader)
 
     rom_data = bytearray(args.rom.read_bytes())
+    categorizer = JSONToCSVConverter()
     applied_combined = 0
     applied_templates = 0
     skipped_not_inline = 0
@@ -433,8 +464,14 @@ def main() -> int:
     skipped_too_long = 0
     skipped_empty = 0
     skipped_template_no_match = 0
+    skipped_fixed_table = 0
 
     for offset, translation in combined_map.items():
+        if in_fixed_table(offset):
+            # Fixed-stride name tables are already French in the source
+            # ROM; rewriting them breaks cell alignment and terminators.
+            skipped_fixed_table += 1
+            continue
         if translated_offsets and offset in translated_offsets:
             continue
         ref_entry = spanish_map.get(offset)
@@ -476,6 +513,17 @@ def main() -> int:
             reference_raw,
         )
 
+        # Re-balance dialogue line breaks against the FRLG font metrics
+        # (and enforce the Gen III \n / scroll rule).
+        if (
+            reference_entry.get('encoding', 'pokemon') == 'pokemon'
+            and categorizer.categorize_text(reference_text or '', offset) == 'dialogue'
+        ):
+            try:
+                translation = rewrap_dialogue(translation)
+            except Exception:
+                pass
+
         applied, reason = _apply_translation_at_offset(
             rom_data,
             offset,
@@ -499,6 +547,9 @@ def main() -> int:
     ]
 
     for offset in fallback_offsets:
+        if in_fixed_table(offset):
+            skipped_fixed_table += 1
+            continue
         english_entry = english_map.get(offset)
         if not english_entry:
             continue
@@ -554,6 +605,7 @@ def main() -> int:
     print(f'Skipped (too long): {skipped_too_long}')
     print(f'Skipped (empty): {skipped_empty}')
     print(f'Skipped (template miss): {skipped_template_no_match}')
+    print(f'Skipped (fixed table): {skipped_fixed_table}')
     return 0
 
 
