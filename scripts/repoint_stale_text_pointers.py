@@ -17,6 +17,7 @@ pointers to the relocated copy.
 from __future__ import annotations
 
 import argparse
+import bisect
 import json
 import struct
 import sys
@@ -41,15 +42,61 @@ def _parse_pointer_locations(entry: dict) -> list[int]:
     return locations
 
 
-def repoint(rom: bytearray, texts: list[dict]) -> int:
+def _entry_byte_length(entry: dict) -> int:
+    length = entry.get('byte_length')
+    if isinstance(length, int) and length > 0:
+        return length
+    raw_hex = entry.get('raw_bytes') or ''
+    return max(len(raw_hex) // 2, 1)
+
+
+def _translated_spans(
+    texts: list[dict],
+    translated_offsets: set[int],
+) -> tuple[list[tuple[int, int]], list[int]]:
+    spans = []
+    for entry in texts:
+        offset = entry.get('offset')
+        if isinstance(offset, int) and offset in translated_offsets:
+            spans.append((offset, offset + _entry_byte_length(entry)))
+    spans.sort()
+    return spans, [start for start, _ in spans]
+
+
+def repoint(
+    rom: bytearray,
+    texts: list[dict],
+    translated_offsets: set[int],
+) -> int:
     fixed = 0
     rom_size = len(rom)
+
+    # The pointer scan records every 4-byte window that decodes to a ROM
+    # address — including plain text (the '<terminator><FC><01><08>' run
+    # at a string boundary reads as a pointer to 0x1FCFF). Writing such a
+    # location corrupts the translation, so any window overlapping a
+    # translated string's bytes is vetoed.
+    spans, span_starts = _translated_spans(texts, translated_offsets)
+
+    def in_translated_text(loc: int) -> bool:
+        i = bisect.bisect_right(span_starts, loc + 3) - 1
+        for j in range(max(0, i - 1), min(len(spans), i + 2)):
+            start, end = spans[j]
+            if loc < end and loc + 4 > start:
+                return True
+        return False
+
     for entry in texts:
         locations = _parse_pointer_locations(entry)
         if len(locations) < 2:
             continue
         offset = entry.get('offset')
         if not isinstance(offset, int):
+            continue
+        # Only the builder relocates strings, and it only relocates
+        # translated ones. Any other extraction entry whose "pointers"
+        # diverge is a junk pattern match, not a relocated string.
+        if offset not in translated_offsets:
             continue
         original_value = GBA_BASE + offset
         values = []
@@ -89,6 +136,8 @@ def repoint(rom: bytearray, texts: list[dict]) -> int:
             continue
 
         for loc in stale:
+            if in_translated_text(loc):
+                continue
             struct.pack_into('<I', rom, loc, target)
             fixed += 1
     return fixed
@@ -105,15 +154,27 @@ def main() -> int:
         default=Path('output/extracted/extracted_texts/englishrom_texts.json'),
         help='English extraction JSON (pointer locations)',
     )
+    parser.add_argument(
+        '--translations',
+        type=Path,
+        required=True,
+        help='Translation JSON (only these strings can have been relocated)',
+    )
     args = parser.parse_args()
 
-    for path in (args.target, args.english_texts):
+    for path in (args.target, args.english_texts, args.translations):
         if not path.exists():
             raise SystemExit(f'Missing file: {path}')
 
     data = json.loads(args.english_texts.read_text(encoding='utf-8'))
+    translations = json.loads(args.translations.read_text(encoding='utf-8'))
+    translated_offsets = {
+        item['offset']
+        for item in translations.get('translations', [])
+        if isinstance(item.get('offset'), int)
+    }
     rom = bytearray(args.target.read_bytes())
-    fixed = repoint(rom, data.get('texts', []))
+    fixed = repoint(rom, data.get('texts', []), translated_offsets)
     args.target.write_bytes(rom)
     print(f'Stale pointers re-targeted: {fixed}')
     return 0

@@ -13,6 +13,7 @@ class RepointStalePointersTests(unittest.TestCase):
         return {
             'offset': offset,
             'raw_bytes': raw.hex(),
+            'byte_length': len(raw),
             'pointer_offsets': [f'0x{loc:08X}' for loc in locations],
         }
 
@@ -27,7 +28,11 @@ class RepointStalePointersTests(unittest.TestCase):
         struct.pack_into('<I', rom, 0x10, GBA_BASE + relocated)
         struct.pack_into('<I', rom, 0x20, GBA_BASE + original)
 
-        fixed = repoint(rom, [self._entry(original, english, [0x10, 0x20])])
+        fixed = repoint(
+            rom,
+            [self._entry(original, english, [0x10, 0x20])],
+            {original},
+        )
 
         self.assertEqual(fixed, 1)
         self.assertEqual(
@@ -42,7 +47,11 @@ class RepointStalePointersTests(unittest.TestCase):
         struct.pack_into('<I', rom, 0x10, GBA_BASE + 0x100)
         struct.pack_into('<I', rom, 0x20, GBA_BASE + original)
 
-        fixed = repoint(rom, [self._entry(original, english, [0x10, 0x20])])
+        fixed = repoint(
+            rom,
+            [self._entry(original, english, [0x10, 0x20])],
+            {original},
+        )
 
         self.assertEqual(fixed, 0)
         self.assertEqual(
@@ -59,7 +68,9 @@ class RepointStalePointersTests(unittest.TestCase):
         struct.pack_into('<I', rom, 0x20, GBA_BASE + original)
 
         fixed = repoint(
-            rom, [self._entry(original, english, [0x10, 0x18, 0x20])]
+            rom,
+            [self._entry(original, english, [0x10, 0x18, 0x20])],
+            {original},
         )
 
         self.assertEqual(fixed, 0)
@@ -71,9 +82,62 @@ class RepointStalePointersTests(unittest.TestCase):
         rom[original:original + 3] = english
         struct.pack_into('<I', rom, 0x20, GBA_BASE + original)
 
-        fixed = repoint(rom, [self._entry(original, english, [0x20])])
+        fixed = repoint(
+            rom,
+            [self._entry(original, english, [0x20])],
+            {original},
+        )
 
         self.assertEqual(fixed, 0)
+
+    def test_untranslated_entry_is_skipped(self):
+        # A junk extraction entry (text bytes that scan like pointers)
+        # must never be "repointed": the builder only relocates strings
+        # that have a translation.
+        rom = _rom()
+        original = 0x40
+        english = b'\xbb\xbc\xff'
+        rom[original:original + 3] = english
+        struct.pack_into('<I', rom, 0x10, GBA_BASE + 0x100)
+        struct.pack_into('<I', rom, 0x20, GBA_BASE + original)
+
+        fixed = repoint(
+            rom,
+            [self._entry(original, english, [0x10, 0x20])],
+            set(),
+        )
+
+        self.assertEqual(fixed, 0)
+        self.assertEqual(
+            struct.unpack_from('<I', rom, 0x20)[0], GBA_BASE + original
+        )
+
+    def test_location_inside_translated_text_is_vetoed(self):
+        # A "pointer" window overlapping a translated string's bytes is
+        # really text that coincidentally decodes to the address — writing
+        # it would corrupt the translation (the 0x75CB12 regression).
+        rom = _rom()
+        original = 0x40
+        relocated = 0x100
+        english = b'\xbb\xbc\xff'
+        rom[original:original + 3] = english
+        rom[relocated:relocated + 3] = b'\xbd\xbe\xff'
+        # other translated string occupying 0x80..0x8A; the stale
+        # location 0x88 falls inside its bytes.
+        other = self._entry(0x80, b'\xd5' * 10 + b'\xff', [])
+        struct.pack_into('<I', rom, 0x10, GBA_BASE + relocated)
+        struct.pack_into('<I', rom, 0x88, GBA_BASE + original)
+
+        fixed = repoint(
+            rom,
+            [self._entry(original, english, [0x10, 0x88]), other],
+            {original, 0x80},
+        )
+
+        self.assertEqual(fixed, 0)
+        self.assertEqual(
+            struct.unpack_from('<I', rom, 0x88)[0], GBA_BASE + original
+        )
 
 
 if __name__ == '__main__':
