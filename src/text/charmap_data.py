@@ -56,6 +56,18 @@ for _char, _byte in CHAR_TO_BYTE.items():
 
 BYTE_TO_CHAR[POKEMON_NEWLINE] = '\n'
 
+# Single-byte prompt control codes (CFRU/pokeemerald):
+#   0xFA = prompt + scroll up   ("\l")
+#   0xFB = prompt + clear window ("\p")
+# These mark a paragraph break: the game waits for A, then continues on a fresh
+# line/window. Decoders that ignore them render a spurious '?' in the middle of
+# a sentence (e.g. "obscure?pour"), which made the gameplay text assertions
+# report false "encoding degradation". Treat them as a newline so harvested
+# dialogue keeps its word boundaries. They are decode-only: '\n' already reverse
+# maps to 0xFE (inserted first above), so encoding is unaffected.
+BYTE_TO_CHAR[0xFA] = '\n'
+BYTE_TO_CHAR[0xFB] = '\n'
+
 # Multi-byte control code leaders and their total lengths (leader + args)
 CONTROL_CODES: Dict[int, int] = {
     0xFC: 2,

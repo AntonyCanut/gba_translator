@@ -32,7 +32,7 @@ const BYTE_TO_CHAR: Map<number, string> = new Map([
   [0x2b, 'ª'], [0x68, 'â'], [0x6f, 'í'], [0x7f, 'ù'], [0x82, 'À'],
   [0x83, 'È'], [0x84, 'É'],
   // Newline
-  [0xfe, '\n'],
+  [0xfa, '\n'], [0xfb, '\n'], [0xfe, '\n'],
 ]);
 
 const CHAR_TO_BYTE: Map<string, number> = new Map();
