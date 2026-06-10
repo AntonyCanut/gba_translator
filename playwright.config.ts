@@ -92,6 +92,11 @@ export default defineConfig({
       timeout: 300_000,
       use: { browserName: 'chromium' },
     },
+    {
+      name: 'deps-upgrade',
+      testMatch: 'specs/deps-upgrade.spec.ts',
+      use: { browserName: 'chromium' },
+    },
   ],
   webServer: {
     command: 'npx tsx src/server.ts',
