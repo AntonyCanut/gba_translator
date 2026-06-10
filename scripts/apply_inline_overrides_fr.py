@@ -441,9 +441,6 @@ def main() -> int:
         if not ref_entry:
             skipped_missing += 1
             continue
-        if ref_entry.get('byte_length', 0) < args.min_length:
-            skipped_not_inline += 1
-            continue
 
         if not translation:
             skipped_empty += 1
@@ -460,6 +457,14 @@ def main() -> int:
                 english_entry = _read_raw_entry(source_data, offset, enc)
                 if english_entry:
                     break
+
+        # The Spanish extraction can be misaligned at an offset (junk short
+        # entry) while the English ROM holds a real string there: accept the
+        # candidate when either side reaches the minimum inline length.
+        english_length = (english_entry or {}).get('byte_length', 0)
+        if max(ref_entry.get('byte_length', 0), english_length) < args.min_length:
+            skipped_not_inline += 1
+            continue
 
         reference_entry = english_entry or ref_entry
         reference_text = reference_entry.get('decoded_text') or reference_entry.get('text')
