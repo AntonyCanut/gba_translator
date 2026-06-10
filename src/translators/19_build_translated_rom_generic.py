@@ -64,6 +64,7 @@ class BuildConfig:
     offset_map: Optional[Path] = None
     allow_truncate: bool = False
     allow_relocate: bool = False
+    allow_fallback: bool = False
     copy_reference_texts: bool = False
     copy_pointer_tables: bool = False
     copy_text_pointers: bool = False
@@ -106,6 +107,7 @@ class BuildStats:
     relocation_failed: int = 0
     relocated_bytes: int = 0
     truncated: int = 0
+    fallback_used: int = 0
     skipped_too_long: int = 0
     skipped_only_in_spanish: int = 0
     skipped_only_in_english: int = 0
@@ -1094,6 +1096,7 @@ class TranslatedROMBuilder:
             self.output_rom_data,
             allow_truncate=self.config.allow_truncate,
             allow_relocate=self.config.allow_relocate,
+            allow_fallback=self.config.allow_fallback,
         )
 
         for i, translation in enumerate(translations, start=1):
@@ -1112,6 +1115,7 @@ class TranslatedROMBuilder:
         self.stats.relocation_failed += stats.get('relocation_failed', 0)
         self.stats.relocated_bytes += stats.get('relocated_bytes', 0)
         self.stats.truncated += stats['truncated']
+        self.stats.fallback_used += stats.get('fallback_used', 0)
         self.stats.skipped_too_long += stats['skipped_too_long']
         self.stats.errors.extend(report.get('warnings', []))
 
@@ -1147,6 +1151,7 @@ class TranslatedROMBuilder:
             self.output_rom_data,
             allow_truncate=self.config.allow_truncate,
             allow_relocate=self.config.allow_relocate,
+            allow_fallback=self.config.allow_fallback,
         )
 
         for i, translation in enumerate(translations, start=1):
@@ -1165,6 +1170,7 @@ class TranslatedROMBuilder:
         self.stats.relocation_failed += stats.get('relocation_failed', 0)
         self.stats.relocated_bytes += stats.get('relocated_bytes', 0)
         self.stats.truncated += stats['truncated']
+        self.stats.fallback_used += stats.get('fallback_used', 0)
         self.stats.skipped_too_long += stats['skipped_too_long']
         self.stats.errors.extend(report.get('warnings', []))
 
@@ -1202,6 +1208,7 @@ class TranslatedROMBuilder:
             self.output_rom_data,
             allow_truncate=self.config.allow_truncate,
             allow_relocate=self.config.allow_relocate,
+            allow_fallback=self.config.allow_fallback,
         )
 
         for i, translation in enumerate(translations, start=1):
@@ -1220,6 +1227,7 @@ class TranslatedROMBuilder:
         self.stats.relocation_failed += stats.get('relocation_failed', 0)
         self.stats.relocated_bytes += stats.get('relocated_bytes', 0)
         self.stats.truncated += stats['truncated']
+        self.stats.fallback_used += stats.get('fallback_used', 0)
         self.stats.skipped_too_long += stats['skipped_too_long']
         self.stats.errors.extend(report.get('warnings', []))
 
@@ -1256,6 +1264,7 @@ class TranslatedROMBuilder:
             'offset_map': str(self.config.offset_map) if self.config.offset_map else None,
             'allow_truncate': self.config.allow_truncate,
             'allow_relocate': self.config.allow_relocate,
+            'allow_fallback': self.config.allow_fallback,
             'copy_reference_texts': self.config.copy_reference_texts,
             'copy_pointer_tables': self.config.copy_pointer_tables,
             'copy_text_pointers': self.config.copy_text_pointers,
@@ -1299,6 +1308,8 @@ class TranslatedROMBuilder:
             print(f"   - Padding utilisé: {self.stats.used_padding}")
         if self.stats.truncated:
             print(f"   - Tronqués: {self.stats.truncated}")
+        if self.stats.fallback_used:
+            print(f"   - Repli FR synthétisé: {self.stats.fallback_used}")
         if self.stats.skipped_too_long:
             print(f"   - Trop longs ignorés: {self.stats.skipped_too_long}")
         if self.stats.skipped_only_in_spanish:
@@ -1359,6 +1370,9 @@ Examples:
                        help='Allow truncation when text exceeds max length')
     parser.add_argument('--allow-relocate', action='store_true',
                        help='Relocate too-long texts when pointer offsets are known')
+    parser.add_argument('--allow-fallback', action='store_true',
+                       help='Synthesize a shorter in-place French variant for '
+                            'too-long texts instead of leaving English behind')
     parser.add_argument('--copy-reference-texts', action='store_true',
                        help='Copy all reference text bytes at their offsets')
     parser.add_argument('--copy-pointer-tables', action='store_true',
@@ -1377,6 +1391,7 @@ Examples:
         offset_map=args.offset_map,
         allow_truncate=args.allow_truncate,
         allow_relocate=args.allow_relocate,
+        allow_fallback=args.allow_fallback,
         copy_reference_texts=args.copy_reference_texts,
         copy_pointer_tables=args.copy_pointer_tables,
         copy_text_pointers=args.copy_text_pointers,
