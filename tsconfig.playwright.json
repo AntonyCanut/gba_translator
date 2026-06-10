@@ -9,12 +9,7 @@
     "forceConsistentCasingInFileNames": true,
     "resolveJsonModule": true,
     "sourceMap": true,
-    "outDir": "dist-playwright",
-    "baseUrl": ".",
-    "paths": {
-      "@helpers/*": ["tests/e2e-playwright/helpers/*"],
-      "@fixtures/*": ["tests/e2e-playwright/fixtures/*"]
-    }
+    "outDir": "dist-playwright"
   },
   "include": [
     "tests/e2e-playwright/**/*.ts",
