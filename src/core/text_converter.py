@@ -304,7 +304,15 @@ class CSVToJSONConverter:
             reader = csv.DictReader(f)
 
             for row_num, row in enumerate(reader, start=2):  # Start at 2 (header = 1)
-                translation = row.get('translation', '').strip()
+                raw_translation = row.get('translation', '')
+                translation = raw_translation.strip()
+
+                # Les espaces de bord sont significatifs quand le texte source
+                # en a (ex. préfixe de combat "The opposing " -> "L'adversaire ") :
+                # ne nettoyer que les fins de ligne parasites dans ce cas.
+                original_text = row.get('original_text', '')
+                if translation and original_text != original_text.strip(' '):
+                    translation = raw_translation.strip('\r\n')
 
                 # Ignorer lignes sans traduction
                 if not translation:

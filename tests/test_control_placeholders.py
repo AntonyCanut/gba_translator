@@ -82,6 +82,27 @@ class ControlPlaceholderTests(unittest.TestCase):
             expected,
         )
 
+    def test_fc_argument_counts_from_raw(self):
+        # Battle menu header: FC 05 (palette, 1 arg) and FC 04 (colour/
+        # highlight/shadow, 3 args) must keep their argument bytes. The
+        # old 1-arg-only table truncated them, corrupting the menu.
+        english = (
+            '<0xFC><0x05><0x05><0xFC><0x04><0x0D><0x0E><0x0F>Fight'
+            '<0xFC><0x13><0x38>Run'
+        )
+        english_raw = TextEncoder.encode_pokemon(english).hex()
+        translation = '{FC05}{FC04}Combat{FC13}Fuite'
+        expected = (
+            '<0xFC><0x05><0x05><0xFC><0x04><0x0D><0x0E><0x0F>Combat'
+            '<0xFC><0x13><0x38>Fuite'
+        )
+        self.assertEqual(
+            TranslatedROMBuilder._apply_control_placeholders(
+                translation, english, english_raw
+            ),
+            expected,
+        )
+
     def test_var_placeholder_keeps_following_text(self):
         english = '<0xFD><0x00> gained!'
         translation = '{B_ATK_NAME_WITH_PREFIX}a gained!'

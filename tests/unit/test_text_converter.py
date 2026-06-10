@@ -173,6 +173,52 @@ class TestCSVToJSONConverter(unittest.TestCase):
         self.assertEqual(len(conv.warnings), 1)
         csv_path.unlink(missing_ok=True)
 
+    def test_edge_space_preserved_when_source_has_one(self):
+        # "The opposing " is concatenated with the Pokémon name by the
+        # battle engine: stripping the trailing space of the translation
+        # produced "L'adversaireRapion" in game.
+        rows = [
+            {
+                "offset": "0x00A4C61A",
+                "original_text": "The opposing ",
+                "original_length": "13",
+                "padding_available": "2",
+                "real_max_length": "15",
+                "encoding": "pokemon",
+                "category": "location",
+                "translation": "L'adversaire ",
+                "notes": "",
+            },
+        ]
+        csv_path = self._make_csv(rows)
+        conv = CSVToJSONConverter()
+        conv.load_from_csv(csv_path)
+        self.assertEqual(len(conv.entries), 1)
+        self.assertEqual(conv.entries[0].translation, "L'adversaire ")
+        csv_path.unlink(missing_ok=True)
+
+    def test_edge_space_stripped_when_source_has_none(self):
+        # Stray translator whitespace must still be cleaned up.
+        rows = [
+            {
+                "offset": "0x00000100",
+                "original_text": "Hello",
+                "original_length": "5",
+                "padding_available": "5",
+                "real_max_length": "10",
+                "encoding": "ascii",
+                "category": "dialogue",
+                "translation": "Bonjour \n",
+                "notes": "",
+            },
+        ]
+        csv_path = self._make_csv(rows)
+        conv = CSVToJSONConverter()
+        conv.load_from_csv(csv_path)
+        self.assertEqual(len(conv.entries), 1)
+        self.assertEqual(conv.entries[0].translation, "Bonjour")
+        csv_path.unlink(missing_ok=True)
+
     def test_save_to_json(self):
         conv = CSVToJSONConverter()
         conv.entries = [
