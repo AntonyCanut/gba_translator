@@ -28,7 +28,8 @@ export function createEmulatorServer(options?: {
   port?: number;
   romPath?: string;
 }): Promise<ServerInstance> {
-  const port = options?.port ?? PORT;
+  const requestedPort = options?.port ?? PORT;
+  let port = requestedPort;
   const romPath = options?.romPath ?? ROM_PATH;
 
   const app = express();
@@ -235,7 +236,9 @@ export function createEmulatorServer(options?: {
   });
 
   return new Promise((resolve) => {
-    server.listen(port, () => {
+    server.listen(requestedPort, () => {
+      const addr = server.address();
+      port = typeof addr === 'object' && addr !== null ? addr.port : requestedPort;
       console.log(`[server] GBA Emulator Web (mGBA backend) on http://localhost:${port}`);
       console.log(`[server] ROM path: ${romPath || '(none configured)'}`);
 
