@@ -128,7 +128,8 @@ build-fr: $(ENGLISH_EXTRACT) $(SPANISH_EXTRACT) $(BUILD_SCRIPT)
 		--spanish $(SPANISH_ROM) \
 		--require-pointer
 	@$(PYTHON) $(REPOINT_STALE_SCRIPT) \
-		--target $(FR_BUILD)
+		--target $(FR_BUILD) \
+		--translations $(FR_TRANSLATION)
 
 validate-es: $(SPANISH_BUILD) $(VALIDATE_SCRIPT)
 	@$(PYTHON) $(VALIDATE_SCRIPT) \
