@@ -67,8 +67,7 @@ class TestNearlyExhaustedSpace:
         reinserter = SmartReinserter(rom, allow_relocate=True)
 
         text = "B" * 200
-        success = reinserter.reinsert_text({**entry, "translation": text})
-        assert not success
+        reinserter.reinsert_text({**entry, "translation": text})
 
         report = reinserter.get_report()
         assert report["statistics"]["relocation_failed"] == 1
@@ -134,8 +133,9 @@ class TestFragmentedFreeSpace:
 
         reinserter = SmartReinserter(rom, allow_relocate=True)
         text = "E" * 200
-        success = reinserter.reinsert_text({**entry, "translation": text})
-        assert not success
+        reinserter.reinsert_text({**entry, "translation": text})
+        reinserter.flush_relocations()
+        assert reinserter.stats["relocation_failed"] == 1
 
     def test_fragmented_no_data_corruption(self):
         rom, _ = self._make_fragmented_rom(block_size=48, gap_size=16, num_blocks=30)
@@ -245,14 +245,21 @@ class TestGracefulDegradation:
             entries.append(entry)
 
         reinserter = SmartReinserter(rom, allow_relocate=True)
-        results = []
         for entry in entries:
             text = "G" * (entry["original_length"] + 20)
-            success = reinserter.reinsert_text({**entry, "translation": text})
-            results.append(success)
+            reinserter.reinsert_text({**entry, "translation": text})
+        reinserter.flush_relocations()
 
-        succeeded = [i for i, r in enumerate(results) if r]
-        failed = [i for i, r in enumerate(results) if not r]
+        # Relocations are deferred: success is determined after the flush by
+        # whether each entry's pointer was repointed into free space.
+        succeeded = []
+        failed = []
+        for i, entry in enumerate(entries):
+            target = read_pointer(rom, entry["pointer_offsets"][0])
+            if target is not None and target >= free_start:
+                succeeded.append(i)
+            else:
+                failed.append(i)
         assert len(succeeded) > 0, "No entries succeeded"
         assert len(failed) > 0, "All entries succeeded — space wasn't tight enough"
 

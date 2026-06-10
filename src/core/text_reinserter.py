@@ -40,9 +40,11 @@ class FreeSpaceAllocator:
                 i += 1
                 while i < n and data[i] in self.padding_bytes:
                     i += 1
-                length = i - start
+                # The first padding byte of a run is usually the terminator
+                # of the preceding string: never allocate over it.
+                length = i - start - 1
                 if length >= self.min_block:
-                    blocks.append([start, length])
+                    blocks.append([start + 1, length])
             else:
                 i += 1
         return blocks
@@ -91,11 +93,13 @@ class SmartReinserter:
         self.rom_data = rom_data
         self.allow_truncate = allow_truncate
         self.allow_relocate = allow_relocate
-        self.free_space_allocator = (
-            FreeSpaceAllocator(self.rom_data, min_block=free_space_min)
-            if allow_relocate
-            else None
-        )
+        self.free_space_min = free_space_min
+        # Relocations are deferred until all in-place writes are done:
+        # the free-space scan must see the final state of the inter-string
+        # padding, otherwise a relocated string can land in padding that an
+        # in-place write later expands into (and vice versa), corrupting both.
+        self._pending_relocations: List[tuple] = []
+        self.free_space_allocator: Optional[FreeSpaceAllocator] = None
         self.stats = {
             'total': 0,
             'success': 0,
@@ -177,6 +181,22 @@ class SmartReinserter:
         pointer_value = 0x08000000 + target_offset
         self.rom_data[pointer_offset:pointer_offset + 4] = struct.pack('<I', pointer_value)
         return True
+
+    def _queue_relocation(self, encoded: bytes, pointer_offsets: List[int], offset: int) -> bool:
+        self._pending_relocations.append((encoded, pointer_offsets, offset))
+        return True
+
+    def flush_relocations(self) -> None:
+        """Apply deferred relocations after every in-place write is done."""
+        if not self._pending_relocations:
+            return
+        if self.free_space_allocator is None:
+            self.free_space_allocator = FreeSpaceAllocator(
+                self.rom_data, min_block=self.free_space_min
+            )
+        pending, self._pending_relocations = self._pending_relocations, []
+        for encoded, pointer_offsets, offset in pending:
+            self._relocate_text(encoded, pointer_offsets, offset)
 
     def _relocate_text(self, encoded: bytes, pointer_offsets: List[int], offset: int) -> bool:
         if not self.free_space_allocator:
@@ -281,7 +301,7 @@ class SmartReinserter:
 
             if max_length is not None and encoded_len > max_length:
                 if self.allow_relocate and pointer_offsets:
-                    return self._relocate_text(encoded, pointer_offsets, offset)
+                    return self._queue_relocation(encoded, pointer_offsets, offset)
                 if allow_truncate and max_length > 0:
                     terminator = 0x00 if encoding == 'ascii' else 0xFF
                     encoded = encoded[:max_length]
@@ -328,6 +348,7 @@ class SmartReinserter:
         """
         for translation in translations:
             self.reinsert_text(translation)
+        self.flush_relocations()
 
     def get_report(self) -> dict:
         """
@@ -341,6 +362,7 @@ class SmartReinserter:
             >>> print(report['statistics']['successful'])
             100
         """
+        self.flush_relocations()
         return {
             'statistics': {
                 'total_texts': self.stats['total'],
