@@ -1,9 +1,9 @@
 {
-  "conversion_date": "2026-06-10T17:03:40.229996",
+  "conversion_date": "2026-06-10T21:29:18.220995",
   "source_csv": "2026-01-15_trilingual_translation.csv",
-  "total_translations": 18832,
+  "total_translations": 18852,
   "total_errors": 0,
-  "total_warnings": 15683,
+  "total_warnings": 15709,
   "translations": [
     {
       "offset": 165760,
@@ -51080,10 +51080,10 @@
     {
       "offset": 4507558,
       "original_text": "Il lib<0x1A>re l'électricité par sa crini<0x1A>re.\nIl crée un nuage d'orage pour appeler la\nfoudre.",
-      "translation": "Il décharge l'électricité par sa\ncrinière. Il crée un nuage d'orage\nau-dessus de lui pour lâcher des",
-      "length": 100,
+      "translation": "Il libère l'électricité par sa crinière.\nIl crée un nuage d'orage pour appeler la\nfoudre.",
+      "length": 89,
       "original_length": 89,
-      "padding_used": 11,
+      "padding_used": 0,
       "encoding": "pokemon",
       "category": "description",
       "notes": "",
@@ -51092,10 +51092,10 @@
     {
       "offset": 4507660,
       "original_text": "Il absorbe l'énergie des poteaux\nélectriques et encourage ses amis avec\ndes pompons d'étincelles.",
-      "translation": "Il encourage ses amis avec des\npompons d'étincelles. Il se\ncourt-circuite pour créer des",
-      "length": 88,
+      "translation": "Il absorbe l'énergie des poteaux\nélectriques et encourage ses amis avec\ndes pompons d'étincelles.",
+      "length": 97,
       "original_length": 97,
-      "padding_used": -9,
+      "padding_used": 0,
       "encoding": "pokemon",
       "category": "description",
       "notes": "",
@@ -51272,10 +51272,10 @@
     {
       "offset": 4510043,
       "original_text": "C'est le rival de Séviper depuis des\ngénérations. Ses griffes aiguisées sont\nson meilleur atout.",
-      "translation": "Face à un Séviper, sa fourrure se\nhérisse et il prend sa pose de\ncombat. Ses griffes sont sa",
-      "length": 92,
+      "translation": "C'est le rival de Séviper depuis des\ngénérations. Ses griffes aiguisées sont\nson meilleur atout.",
+      "length": 96,
       "original_length": 96,
-      "padding_used": -4,
+      "padding_used": 0,
       "encoding": "pokemon",
       "category": "description",
       "notes": "",
@@ -51644,10 +51644,10 @@
     {
       "offset": 4514289,
       "original_text": "Il est né de la fusion de plusieurs\nMétang. Ses quatre cerveaux en font\nl'égal d'un superordinateur.",
-      "translation": "Avec quatre cerveaux reliés, il est\nplus intelligent qu'un\nsuperordinateur. Il calcule pour",
-      "length": 91,
+      "translation": "Il est né de la fusion de plusieurs\nMétang. Ses quatre cerveaux en font\nl'égal d'un superordinateur.",
+      "length": 100,
       "original_length": 100,
-      "padding_used": -9,
+      "padding_used": 0,
       "encoding": "pokemon",
       "category": "description",
       "notes": "",
@@ -51723,6 +51723,18 @@
       "encoding": "pokemon",
       "category": "description",
       "notes": "",
+      "too_long": false
+    },
+    {
+      "offset": 4515612,
+      "original_text": "It has lived for hundreds of millions of\nyears in the ozone layer. Its flying form\nlooks like a meteor.",
+      "translation": "Il a vécu des millions d'années dans\nla couche d'ozone. Sa forme volante\névoque un météore.",
+      "length": 91,
+      "original_length": 103,
+      "padding_used": -12,
+      "encoding": "pokemon",
+      "category": "description",
+      "notes": "no-pointer: in-place only",
       "too_long": false
     },
     {
@@ -53156,10 +53168,10 @@
     {
       "offset": 4551268,
       "original_text": "<0xFD><0x02>! Awaiting link!\nPress START when everyone's ready.",
-      "translation": "<0xFD><0x02> ! En attente du lien !\nAppuyez sur START quand tout le",
-      "length": 57,
+      "translation": "<0xFD><0x02> ! En attente du lien !\nAppuyez sur START quand tout le monde est prêt.",
+      "length": 73,
       "original_length": 53,
-      "padding_used": 4,
+      "padding_used": 20,
       "encoding": "pokemon",
       "category": "dialogue",
       "notes": "",
@@ -55374,6 +55386,66 @@
       "too_long": false
     },
     {
+      "offset": 7457104,
+      "original_text": "Doubles speed if item is consumed.",
+      "translation": "Double la Vitesse si objet épuisé.",
+      "length": 34,
+      "original_length": 34,
+      "padding_used": 0,
+      "encoding": "pokemon",
+      "category": "description",
+      "notes": "no-pointer: in-place only",
+      "too_long": false
+    },
+    {
+      "offset": 7457139,
+      "original_text": "îDoubles stat changes.",
+      "translation": "îStats: effets doublés",
+      "length": 22,
+      "original_length": 22,
+      "padding_used": 0,
+      "encoding": "pokemon",
+      "category": "other",
+      "notes": "no-pointer: in-place only",
+      "too_long": false
+    },
+    {
+      "offset": 7457164,
+      "original_text": "Ignores foe's stat changes.",
+      "translation": "Ignore les stats modifiées.",
+      "length": 27,
+      "original_length": 27,
+      "padding_used": 0,
+      "encoding": "pokemon",
+      "category": "other",
+      "notes": "no-pointer: in-place only",
+      "too_long": false
+    },
+    {
+      "offset": 7457196,
+      "original_text": "Attack rises when stats fall.",
+      "translation": "Attaque + si une stat baisse.",
+      "length": 29,
+      "original_length": 29,
+      "padding_used": 0,
+      "encoding": "pokemon",
+      "category": "other",
+      "notes": "no-pointer: in-place only",
+      "too_long": false
+    },
+    {
+      "offset": 7457236,
+      "original_text": "Sp. Atk rises when stats fall.",
+      "translation": "Atq.Spé. + si une stat baisse.",
+      "length": 30,
+      "original_length": 30,
+      "padding_used": 0,
+      "encoding": "pokemon",
+      "category": "other",
+      "notes": "no-pointer: in-place only",
+      "too_long": false
+    },
+    {
       "offset": 7457376,
       "original_text": "Dresco Town",
       "translation": "Ville de Dresco",
@@ -55422,6 +55494,18 @@
       "too_long": false
     },
     {
+      "offset": 7474907,
+      "original_text": "îSp. Atk rises when burned.",
+      "translation": "îAtq.Spé. + si brûlé.",
+      "length": 21,
+      "original_length": 27,
+      "padding_used": -6,
+      "encoding": "pokemon",
+      "category": "other",
+      "notes": "no-pointer: in-place only",
+      "too_long": false
+    },
+    {
       "offset": 7475036,
       "original_text": "Frozen Heights",
       "translation": "Hauteurs Gelées",
@@ -55443,6 +55527,18 @@
       "encoding": "pokemon",
       "category": "location",
       "notes": "",
+      "too_long": false
+    },
+    {
+      "offset": 7476220,
+      "original_text": "Abilities don't affect moves.",
+      "translation": "Ignore les talents.",
+      "length": 19,
+      "original_length": 29,
+      "padding_used": -10,
+      "encoding": "pokemon",
+      "category": "other",
+      "notes": "no-pointer: in-place only",
       "too_long": false
     },
     {
@@ -55503,6 +55599,18 @@
       "encoding": "pokemon",
       "category": "location",
       "notes": "",
+      "too_long": false
+    },
+    {
+      "offset": 7490061,
+      "original_text": "If only there were a machine that\nwould throw Poké Balls for me...",
+      "translation": "Si seulement une machine pouvait\nlancer des Poké Balls pour moi...",
+      "length": 66,
+      "original_length": 66,
+      "padding_used": 0,
+      "encoding": "pokemon",
+      "category": "dialogue",
+      "notes": "no-pointer: in-place only",
       "too_long": false
     },
     {
@@ -55988,14 +56096,14 @@
     {
       "offset": 7627976,
       "original_text": "Do you know what a <0xFC><0x01><0x06>Gem <0xFC><0x01><0x08>is?",
-      "translation": "Tu sais ce qu'est un",
-      "length": 20,
+      "translation": "Tu sais ce qu'est une {COLOR}ÉGemme {COLOR}Ë?",
+      "length": 45,
       "original_length": 32,
-      "padding_used": -12,
+      "padding_used": 13,
       "encoding": "pokemon",
       "category": "dialogue",
       "notes": "",
-      "too_long": false
+      "too_long": true
     },
     {
       "offset": 7628302,
@@ -56444,10 +56552,10 @@
     {
       "offset": 7666016,
       "original_text": "Trainer Tips!<0xFB>Hold the <0xFC><0x01><0x06>B-button<0xFC><0x01><0x02> to run!<0xFB>Press the <0xFC><0x01><0x06>L-button<0xFC><0x01><0x02> to toggle\nauto-run!",
-      "translation": "ASTUCES DRESSEUR !<0xFB>Maintiens {COLOR}ÉB{COLOR}Á pour<0xFB>Appuie sur {COLOR}ÉL{COLOR}Á pour\nactiver la course auto !",
-      "length": 110,
+      "translation": "ASTUCES DRESSEUR !<0xFB>Maintiens {COLOR}ÉB{COLOR}Á pour\ncourir !<0xFB>Appuie sur {COLOR}ÉL{COLOR}Á pour\nactiver la course auto !",
+      "length": 119,
       "original_length": 90,
-      "padding_used": 20,
+      "padding_used": 29,
       "encoding": "pokemon",
       "category": "dialogue",
       "notes": "",
@@ -56816,13 +56924,25 @@
     {
       "offset": 7680621,
       "original_text": "My bugs will beat you next time!",
-      "translation": "Mes insectes te battront la",
-      "length": 27,
+      "translation": "Mes insectes te battront la\nprochaine fois !",
+      "length": 44,
       "original_length": 32,
-      "padding_used": -5,
+      "padding_used": 12,
       "encoding": "pokemon",
       "category": "dialogue",
       "notes": "",
+      "too_long": true
+    },
+    {
+      "offset": 7681295,
+      "original_text": "9My brother caught his Pokémon\nby talking a Poké Ball in<0xFA>Vivill Woods.<0xFB>But I heard different Pokémon\nappear for different trainers.",
+      "translation": "9Mon frère a eu son Pokémon en\nparlant à une Poké Ball au<0xFA>Bois de Vivill.<0xFB>Chaque Dresseur y verrait des\nPokémon différents.",
+      "length": 123,
+      "original_length": 131,
+      "padding_used": -8,
+      "encoding": "pokemon",
+      "category": "dialogue",
+      "notes": "no-pointer: in-place only",
       "too_long": false
     },
     {
@@ -57284,10 +57404,10 @@
     {
       "offset": 7716752,
       "original_text": "I swear\"<0xFB>Those weird guys have been blocking\noff <0xFC><0x01><0x06>Route 9<0xFC><0x01><0x08> for days\"<0xFB>I wonder what they're up to?",
-      "translation": "Je te jure...<0xFB>Ces types bizarres bloquent la\n{COLOR}ÉRoute 9{COLOR}Ë depuis des<0xFB>Que mijotent-ils ?",
-      "length": 98,
+      "translation": "Je te jure...<0xFB>Ces types bizarres bloquent la\n{COLOR}ÉRoute 9{COLOR}Ë depuis des<0xFA>jours...<0xFB>Que mijotent-ils ?",
+      "length": 107,
       "original_length": 101,
-      "padding_used": -3,
+      "padding_used": 6,
       "encoding": "pokemon",
       "category": "dialogue",
       "notes": "",
@@ -57500,10 +57620,10 @@
     {
       "offset": 7719493,
       "original_text": "<0xFC><0x01><0x08>It looks like these Pokémon are\ngrateful and want to join us!<0xFB>If we each take one, we can use them\nto attack the guard and escape!<0xFB>Here, take this Poké Ball I\npicked up.",
-      "translation": "{COLOR}ËCes Pokémon semblent\nreconnaissants et veulent nous<0xFB>Si on en prend un chacun, on pourra\nattaquer le garde et s'évader !<0xFB>Tiens, prends cette Poké Ball que\nj'ai ramassée.",
-      "length": 176,
+      "translation": "{COLOR}ËCes Pokémon semblent\nreconnaissants et veulent nous rejoindre !<0xFB>Si on en prend un chacun, on pourra\nattaquer le garde et s'évader !<0xFB>Tiens, prends cette Poké Ball\nque j'ai ramassée.",
+      "length": 188,
       "original_length": 172,
-      "padding_used": 4,
+      "padding_used": 16,
       "encoding": "pokemon",
       "category": "dialogue",
       "notes": "",
@@ -57536,10 +57656,10 @@
     {
       "offset": 7720421,
       "original_text": "The <0xFD><0x02> joined <0xFD><0x01>'s party!",
-      "translation": "Le {STR_VAR_1} a rejoint l'équipe de",
-      "length": 36,
+      "translation": "Le <0xFD><0x02> a rejoint\nl'équipe de <0xFD><0x01> !",
+      "length": 32,
       "original_length": 25,
-      "padding_used": 11,
+      "padding_used": 7,
       "encoding": "pokemon",
       "category": "dialogue",
       "notes": "",
@@ -57560,14 +57680,14 @@
     {
       "offset": 7720476,
       "original_text": "<0xFC><0x01><0x02>Disheartened, the <0xFD><0x02> left.",
-      "translation": "{COLOR}ÁDéçu, le {STR_VAR_1} est",
-      "length": 32,
+      "translation": "{COLOR}ÁDéçu, le {STR_VAR_1} est parti.",
+      "length": 39,
       "original_length": 29,
-      "padding_used": 3,
+      "padding_used": 10,
       "encoding": "pokemon",
       "category": "description",
       "notes": "",
-      "too_long": false
+      "too_long": true
     },
     {
       "offset": 7720506,
@@ -57920,10 +58040,10 @@
     {
       "offset": 7746302,
       "original_text": "Your moves flowed like lava.",
-      "translation": "Tes mouvements coulaient comme la",
-      "length": 33,
+      "translation": "Tes mouvements coulaient comme la\nlave.",
+      "length": 39,
       "original_length": 28,
-      "padding_used": 5,
+      "padding_used": 11,
       "encoding": "pokemon",
       "category": "dialogue",
       "notes": "",
@@ -58820,10 +58940,10 @@
     {
       "offset": 7803706,
       "original_text": "<0xFC><0x01><0x06>Alice<0xFC><0x01><0x08>, the Gym Leader, likes to use\n<0xFC><0x01><0x06>Flying<0xFC><0x01><0x08>-type Pokémon.<0xFB>I know, it's not what you'd expect\nfrom a Gym up here.",
-      "translation": "{COLOR}ÉAlice{COLOR}Ë, la\nChampionne, aime utiliser des<0xFB>Pas ce à quoi on s'attend pour une\nArène ici.",
-      "length": 101,
+      "translation": "{COLOR}ÉAlice{COLOR}Ë, la\nChampionne, aime utiliser des<0xFA>Pokémon de type Vol.<0xFB>Pas ce à quoi on s'attend pour une\nArène ici.",
+      "length": 122,
       "original_length": 123,
-      "padding_used": -22,
+      "padding_used": -1,
       "encoding": "pokemon",
       "category": "dialogue",
       "notes": "",
@@ -58952,14 +59072,14 @@
     {
       "offset": 7806664,
       "original_text": "My Rattata is still the best.",
-      "translation": "Mon Rattata est toujours le",
-      "length": 27,
+      "translation": "Mon Rattata est toujours le\nmeilleur.",
+      "length": 37,
       "original_length": 29,
-      "padding_used": -2,
+      "padding_used": 8,
       "encoding": "pokemon",
       "category": "dialogue",
       "notes": "",
-      "too_long": false
+      "too_long": true
     },
     {
       "offset": 7806695,
@@ -59012,14 +59132,14 @@
     {
       "offset": 7807730,
       "original_text": "Grunt: <0xFC><0x01><0x08>Maybe you misheard me.",
-      "translation": "Sbire : {COLOR}ËTu as mal entendu,",
-      "length": 34,
+      "translation": "Sbire : {COLOR}ËTu as dû mal entendre.",
+      "length": 38,
       "original_length": 32,
-      "padding_used": 2,
+      "padding_used": 6,
       "encoding": "pokemon",
       "category": "dialogue",
       "notes": "",
-      "too_long": false
+      "too_long": true
     },
     {
       "offset": 7807763,
@@ -59072,14 +59192,14 @@
     {
       "offset": 7807989,
       "original_text": "Grunt: <0xFC><0x01><0x08>Good work, <0xFD><0x02>.",
-      "translation": "Sbire : <0xFD><0x02>ËBon boulot,",
-      "length": 22,
+      "translation": "Sbire : {COLOR}ËBon boulot, {STR_VAR_1}.",
+      "length": 40,
       "original_length": 24,
-      "padding_used": -2,
+      "padding_used": 16,
       "encoding": "pokemon",
       "category": "description",
       "notes": "",
-      "too_long": false
+      "too_long": true
     },
     {
       "offset": 7808014,
@@ -64904,14 +65024,14 @@
     {
       "offset": 8080097,
       "original_text": "Most of my friends came to Seaport\nCity from far away regions.",
-      "translation": "La plupart de mes amis sont venus à\nla Ville Portuaire depuis des",
-      "length": 65,
+      "translation": "La plupart de mes amis sont venus à\nla Ville Portuaire depuis des<0xFA>régions lointaines.",
+      "length": 85,
       "original_length": 62,
-      "padding_used": 3,
+      "padding_used": 23,
       "encoding": "pokemon",
       "category": "dialogue",
       "notes": "",
-      "too_long": false
+      "too_long": true
     },
     {
       "offset": 8080761,
@@ -65142,6 +65262,18 @@
       "too_long": true
     },
     {
+      "offset": 8084644,
+      "original_text": "With the Fall Badge, any Pokémon\nup to Lv. 60 will obey you.<0xFB>It also allows your Pokémon to\nmove heavy boulders with <0xFC><0x01><0x06>Strength<0xFC><0x01><0x08>.<0xFB>Honestly, I don't know why any\nstrong Pokémon can't already do<0xFA>this\"<0xFB>But what can you do?<0xFB>That's just the way the world\nworks.<0xFB>Anyways, take this TM to go along\nwith that badge. ",
+      "translation": "Avec le Badge Chute, tout Pokémon\n<0xFB>jusqu'au Nv. 60 t'obéira. Il permet\n<0xFB>aussi à tes Pokémon de pousser des\n<0xFA>rochers lourds avec\n<0xFB>{COLOR}ÉForce{COLOR}Ë. Franchement,\n<0xFB>je ne sais pas pourquoi les Pokémon\n<0xFB>costauds ne peuvent pas déjà le\nfaire... Mais que veux-tu ? C'est<0xFA>comme ça que va le monde.<0xFB>Bref, prends cette CT, elle va\nbien avec ce badge.",
+      "length": 345,
+      "original_length": 311,
+      "padding_used": 34,
+      "encoding": "pokemon",
+      "category": "dialogue",
+      "notes": "",
+      "too_long": true
+    },
+    {
       "offset": 8084956,
       "original_text": "TM42 contains <0xFC><0x01><0x06>Facade<0xFC><0x01><0x08>.<0xFB>If your Pokémon has a status\ncondition, this move'll get twice<0xFA>as powerful.<0xFB>Even stronger than Mega Punch!<0xFB>Use it, and make your enemies\nregret inflicting you with status!",
       "translation": "La CT42 contient\n<0xFB>{COLOR}ÉFacade{COLOR}Ë. Si ton\n<0xFA>Pokémon a un statut, la puissance\n<0xFB>double. Encore plus fort que Poing\n<0xFB>Météore ! Utilise-la et fais\nregretter aux ennemis de t'avoir",
@@ -65204,14 +65336,14 @@
     {
       "offset": 8085951,
       "original_text": "You should stock up on <0xFC><0x01><0x06>revives<0xFC><0x01><0x04>!<0xFB>They heal a fainted Pokémon back\nto half health!",
-      "translation": "Fais le plein de\n<0xFB>{COLOR}ÉRappels{COLOR}Ç ! Ils\nsoignent un Pokémon K.O. à moitié de",
-      "length": 84,
+      "translation": "Fais le plein de\n<0xFB>{COLOR}ÉRappels{COLOR}Ç ! Ils\nsoignent un Pokémon K.O. à moitié de<0xFA>ses PV !",
+      "length": 93,
       "original_length": 86,
-      "padding_used": -2,
+      "padding_used": 7,
       "encoding": "pokemon",
       "category": "dialogue",
       "notes": "",
-      "too_long": false
+      "too_long": true
     },
     {
       "offset": 8086038,
@@ -65792,10 +65924,10 @@
     {
       "offset": 8105067,
       "original_text": "Wandering around, I got hungry, so\nI ate some wild mushrooms\"<0xFB>They gave me gas, and now I can't\nstop burping! Bluurrf!",
-      "translation": "À force d'errer, j'ai mangé des\n<0xFB>champignons sauvages... Ils m'ont\ndonné des gaz, je n'arrête pas de",
-      "length": 100,
+      "translation": "À force d'errer, j'ai mangé des\n<0xFB>champignons sauvages... Ils m'ont\ndonné des gaz, je n'arrête pas de<0xFA>roter ! Bluurrf !",
+      "length": 118,
       "original_length": 118,
-      "padding_used": -18,
+      "padding_used": 0,
       "encoding": "pokemon",
       "category": "dialogue",
       "notes": "",
@@ -66404,14 +66536,14 @@
     {
       "offset": 8112262,
       "original_text": "That TM contains <0xFC><0x01><0x06>Hone Claws<0xFC><0x01><0x08>.<0xFB>If you plan on challenging the\n<0xFC><0x01><0x06>Dresco Gym<0xFC><0x01><0x08>, it'll help you a lot.<0xFB>It's very foggy and hard to see in\nthere\"",
-      "translation": "Cette CT contient {COLOR}ÉHone\n<0xFB>Claws{COLOR}Ë. Si tu prévois\n<0xFB>d'affronter le {COLOR}ÉDresco\nGym{COLOR}Ë, ça t'aidera beaucoup. C'est",
-      "length": 132,
+      "translation": "Cette CT contient {COLOR}ÉHone\n<0xFB>Claws{COLOR}Ë. Si tu prévois\n<0xFB>d'affronter le {COLOR}ÉDresco\nGym{COLOR}Ë, ça t'aidera beaucoup. C'est<0xFA>plein de brouillard là-bas, on y<0xFA>voit très mal...",
+      "length": 182,
       "original_length": 147,
-      "padding_used": -15,
+      "padding_used": 35,
       "encoding": "pokemon",
       "category": "dialogue",
       "notes": "",
-      "too_long": false
+      "too_long": true
     },
     {
       "offset": 8112735,
@@ -66452,14 +66584,14 @@
     {
       "offset": 8113147,
       "original_text": "Don't you know its rude to barge in\non someone else's meeting?",
-      "translation": "Ne sais-tu pas qu'il est impoli de\ncouper la réunion de quelqu'un",
-      "length": 65,
+      "translation": "Ne sais-tu pas qu'il est impoli de\ncouper la réunion de quelqu'un<0xFA>d'autre ?",
+      "length": 75,
       "original_length": 62,
-      "padding_used": 3,
+      "padding_used": 13,
       "encoding": "pokemon",
       "category": "dialogue",
       "notes": "",
-      "too_long": false
+      "too_long": true
     },
     {
       "offset": 8115829,
@@ -66632,14 +66764,14 @@
     {
       "offset": 8127456,
       "original_text": "Harth: <0xFC><0x01><0x08>I'm sorry dear, but I can't\nlet them harm you.<0xFB>If the world ends because of my\nactions, then so be it.",
-      "translation": "Harth : {COLOR}ËDésolé, chérie, je\n<0xFB>ne peux te laisser souffrir. Si le\nmonde finit à cause de mes actions,",
-      "length": 106,
+      "translation": "Harth : {COLOR}ËDésolé, chérie, je\n<0xFB>ne peux te laisser souffrir. Si le\nmonde finit à cause de mes actions,<0xFA>qu'il en soit ainsi.",
+      "length": 127,
       "original_length": 112,
-      "padding_used": -6,
+      "padding_used": 15,
       "encoding": "pokemon",
       "category": "dialogue",
       "notes": "",
-      "too_long": false
+      "too_long": true
     },
     {
       "offset": 8127569,
@@ -66836,10 +66968,10 @@
     {
       "offset": 8130366,
       "original_text": "Good work, <0xFD><0x01>.<0xFB>Now there's one less criminal on\nthe loose.<0xFB>Only <0xFD><0x02> left.<0xFB>Keep searching while I take this\nman back to the station.",
-      "translation": "Bon travail, <0xFD><0x01>. Maintenant,\n<0xFB>il y a un criminel de moins en en\n<0xFB>liberté. Il ne reste plus que\n<0xFB><0xFD><0x02>. Continuez à chercher\npendant que je ramène cet homme au",
-      "length": 155,
+      "translation": "Bon travail, <0xFD><0x01>. Maintenant,\n<0xFB>il y a un criminel de moins en\n<0xFB>liberté. Il ne reste plus que\n<0xFB><0xFD><0x02>. Continuez à chercher\npendant que je ramène cet homme au<0xFA>poste.",
+      "length": 159,
       "original_length": 130,
-      "padding_used": 25,
+      "padding_used": 29,
       "encoding": "pokemon",
       "category": "dialogue",
       "notes": "",
@@ -66848,10 +66980,10 @@
     {
       "offset": 8130497,
       "original_text": "Good work, <0xFD><0x01>.<0xFB>You appear to have apprehended all\nof the goons.<0xFB>Only their boss is still is at\nlarge.<0xFB>Let's regroup on <0xFC><0x01><0x06>Route 10<0xFC><0x01><0x08> by the\nstairs to determine his location.",
-      "translation": "Bon travail, {PLAYER}. Tu sembles\n<0xFB>avoir arrêté tous ces crétins. Seul\n<0xFB>leur chef est encore en liberté.\n<0xFB>Retrouvons-nous sur {COLOR}ÉRoute\n10{COLOR}Ë près des escaliers pour le",
-      "length": 177,
+      "translation": "Bon travail, {PLAYER}. Tu sembles\n<0xFB>avoir arrêté tous ces crétins. Seul\n<0xFB>leur chef est encore en liberté.\n<0xFB>Retrouvons-nous sur {COLOR}ÉRoute\n10{COLOR}Ë près des escaliers pour le<0xFA>localiser.",
+      "length": 188,
       "original_length": 174,
-      "padding_used": 3,
+      "padding_used": 14,
       "encoding": "pokemon",
       "category": "dialogue",
       "notes": "",
@@ -69416,10 +69548,10 @@
     {
       "offset": 8164962,
       "original_text": "I've blown up the stairs so nothing\ncan interrupt the procedure.",
-      "translation": "J'ai fait sauter les escaliers pour\nque rien ne puisse interrompre la",
-      "length": 69,
+      "translation": "J'ai fait sauter les escaliers pour\nque rien ne puisse interrompre la<0xFA>procédure.",
+      "length": 80,
       "original_length": 64,
-      "padding_used": 5,
+      "padding_used": 16,
       "encoding": "pokemon",
       "category": "description",
       "notes": "",
@@ -69812,10 +69944,10 @@
     {
       "offset": 8186430,
       "original_text": "I'm glad I caught up to you.<0xFB>I just destroyed Successor Maxima.<0xFB>Let me guess, you've also claimed\nthe power of Mega Evolution?",
-      "translation": "Je suis content de vous avoir\nrattrapé.<0xFB>Je viens de détruire le successeur\nMaxima.<0xFB>Laissez-moi deviner, vous avez\négalement revendiqué le pouvoir de",
-      "length": 148,
+      "translation": "Je suis content de vous avoir\nrattrapé.<0xFB>Je viens de détruire le successeur\nMaxima.<0xFB>Laissez-moi deviner, vous avez\négalement revendiqué le pouvoir de<0xFA>la Méga-Évolution ?",
+      "length": 168,
       "original_length": 126,
-      "padding_used": 22,
+      "padding_used": 42,
       "encoding": "pokemon",
       "category": "dialogue",
       "notes": "",
@@ -69908,10 +70040,10 @@
     {
       "offset": 8187999,
       "original_text": "My Malamar's <0xFC><0x01><0x06>Suction Cups<0xFC><0x01><0x08> ability\nhelps me reel in Pokémon!<0xFB>At least, I think it has Suction\nCups\"",
-      "translation": "Les {COLOR}ÉSuction Cups{COLOR}Ë capacités de mon\nSepiatroce m'aident à ramener des<0xFB>Au moins, je pense qu'il a des\nVentouses Cups...",
-      "length": 132,
+      "translation": "Le talent {COLOR}ÉVentouse{COLOR}Ë de mon\nSepiatroce m'aide à ramener des<0xFA>Pokémon !<0xFB>Enfin, je crois qu'il a bien\nVentouse...",
+      "length": 124,
       "original_length": 104,
-      "padding_used": 28,
+      "padding_used": 20,
       "encoding": "pokemon",
       "category": "dialogue",
       "notes": "",
@@ -69920,10 +70052,22 @@
     {
       "offset": 8189037,
       "original_text": "<0xFC><0x01><0x08>No\"<0xFB>I shouldn't be feeling this way\"<0xFB>Everything we've worked for is \nabout to transpire.<0xFB>I'll even be able to see my son\nagain\"",
-      "translation": "{COLOR}ËNon...<0xFB>Je ne devrais pas ressentir cela...<0xFB>Tout ce pour quoi nous avons\ntravaillé est sur le point de se<0xFB>Je pourrai même\nrevoir mon fils ...",
-      "length": 148,
+      "translation": "{COLOR}ËNon...<0xFB>Je ne devrais pas ressentir cela...<0xFB>Tout ce pour quoi nous avons\ntravaillé est sur le point de se<0xFA>réaliser.<0xFB>Je pourrai même\nrevoir mon fils ...",
+      "length": 158,
       "original_length": 130,
-      "padding_used": 18,
+      "padding_used": 28,
+      "encoding": "pokemon",
+      "category": "dialogue",
+      "notes": "",
+      "too_long": true
+    },
+    {
+      "offset": 8189168,
+      "original_text": "???: <0xFC><0x01><0x08>Sorry, old man.<0xFB>If you're getting cold feet now,\nyou could be a big problem down<0xFA>the road.<0xFB>I can't have anything standing in\nthe way of the unbinding.<0xFB>Your son will just have to be\nfatherless forever.",
+      "translation": "???: {COLOR}ËDésolé, vieil homme.<0xFB>Si tu as froid aux yeux maintenant,\ntu pourrais être un gros problème<0xFA>sur la route.<0xFB>Je ne peux pas avoir quoi que ce\nsoit qui s'oppose sur le chemin de<0xFA>la Libération.<0xFB>Votre fils devra simplement être\nsans père pour toujours.",
+      "length": 258,
+      "original_length": 208,
+      "padding_used": 50,
       "encoding": "pokemon",
       "category": "dialogue",
       "notes": "",
@@ -70032,6 +70176,18 @@
       "length": 76,
       "original_length": 72,
       "padding_used": 4,
+      "encoding": "pokemon",
+      "category": "dialogue",
+      "notes": "",
+      "too_long": true
+    },
+    {
+      "offset": 8191236,
+      "original_text": "Would you happen to be <0xFD><0x01> by\nany chance?<0xFB>\"<0xFB>I thought so.<0xFB>I recognized you from this picture\nI found of you, on the interwebs.<0xFB>My name is Looker.<0xFB>Agent Looker, of the International\nPolice.<0xFB>I had just finished dealing with\nTeam Rocket in the Kanto Region,<0xFA>when I was deployed to deal with a<0xFA>situation that was brewing in the<0xFA>Borrius Region.<0xFB>A young man, Jax, I believe, has\ninformed me that you have some<0xFA>evidence for crimes committed by an<0xFA>organization calling themselves<0xFA><0xB1>The Shadows<0xB2>.<0xFB>Please meet me in the <0xFC><0x01><0x06>Dehara Game\nCorner <0xFC><0x01><0x08>so we can discuss further.<0xFB>Jax is there, as well.<0xFB>Looker, out.",
+      "translation": "Seriez-vous {PLAYER}\npar hasard ?<0xFB>...<0xFB>Je le pensais.<0xFB>Je vous ai reconnu sur cette photo\nJ'ai trouvé de vous sur les<0xFA>internets.<0xFB>Je m'appelle Looker.<0xFB>Agent Looker, de la Police\nInternationale.<0xFB>Je venais juste de finir de\nm'occuper de Team Rocket dans la<0xFA>région de Kanto, quand j'ai été<0xFA>déployé pour faire face à une<0xFA>situation qui se préparait dans la<0xFA>région de Borrius.<0xFB>Un jeune homme, Jax, je crois, m'a\ninformé que vous aviez des<0xFA>preuves de crimes commis par une<0xFA>organisation se faisant appeler<0xFA>\" Les Ombres \".<0xFB>Veuillez me rencontrer dans le\n{COLOR}ÉDehara Game Corner {COLOR}Ëafin que nous<0xFA>puissions discuter de tout cela.<0xFB>Jax est là aussi.<0xFB>Looker, dehors.",
+      "length": 657,
+      "original_length": 595,
+      "padding_used": 62,
       "encoding": "pokemon",
       "category": "dialogue",
       "notes": "",
@@ -70180,6 +70336,18 @@
       "category": "description",
       "notes": "",
       "too_long": false
+    },
+    {
+      "offset": 8201018,
+      "original_text": "<0xFC><0x01><0x08>You should go in and try to find\nanother way up to the top.<0xFB>I would come along, but Staraptor\nwas the only Pokémon I had on me.<0xFB>I'd just wear you down if you had\nto protect me from wild Pokémon.<0xFB>Instead, I'll wait here and take\ncare of healing for you.",
+      "translation": "{COLOR}ËTu devrais entrer et essayer de\ntrouver un autre chemin pour<0xFA>monter au sommet.<0xFB>Je viendrais, mais Étouraptor était\nle seul Pokémon que j'avais sur moi.<0xFB>Je t'épuiserais simplement si tu\navais à me protéger des Pokémon<0xFA>sauvages.<0xFB>Au lieu de cela, j'attendrai ici et\nje prendrai soin de ta guérison.",
+      "length": 303,
+      "original_length": 255,
+      "padding_used": 48,
+      "encoding": "pokemon",
+      "category": "dialogue",
+      "notes": "",
+      "too_long": true
     },
     {
       "offset": 8201274,
@@ -70496,10 +70664,10 @@
     {
       "offset": 8209897,
       "original_text": "<0xFC><0x01><0x08>Either way, with or without him, I\nam now ready to begin.",
-      "translation": "{COLOR}ËQuoi qu'il en soit, avec ou sans\nlui, je suis maintenant prêt à",
-      "length": 71,
+      "translation": "{COLOR}ËQuoi qu'il en soit, avec ou sans\nlui, je suis maintenant prêt à<0xFA>commencer.",
+      "length": 82,
       "original_length": 60,
-      "padding_used": 11,
+      "padding_used": 22,
       "encoding": "pokemon",
       "category": "description",
       "notes": "",
@@ -70580,10 +70748,10 @@
     {
       "offset": 8210541,
       "original_text": "<0xFC><0x01><0x08>The bottle is now free.<0xFB>Once I open it, the dark force will\nbe mine to command.",
-      "translation": "{COLOR}ËLa bouteille est maintenant\ngratuite.<0xFB>Une fois que je l'aurai ouverte, la\nforce obscure sera mienne aux",
-      "length": 111,
+      "translation": "{COLOR}ËLa bouteille est enfin\nlibérée.<0xFB>Une fois que je l'aurai ouverte, la\nforce obscure sera mienne et<0xFA>m'obéira.",
+      "length": 114,
       "original_length": 82,
-      "padding_used": 29,
+      "padding_used": 32,
       "encoding": "pokemon",
       "category": "dialogue",
       "notes": "",
@@ -70772,10 +70940,10 @@
     {
       "offset": 8212611,
       "original_text": "<0xFC><0x01><0x08>Hoopa, prepare yourself!<0xFB>Your true power is about to be\nreleased from the Prison Bottle!<0xFB>And as your trainer, I am fully\ncapable of releasing it!",
-      "translation": "{COLOR}ËHoopa, prépare-toi !<0xFB>Votre véritable pouvoir est sur le\npoint d'être libéré de la bouteille<0xFB>Et en tant que votre entraîneur, je\nsuis pleinement capable de le",
-      "length": 165,
+      "translation": "{COLOR}ËHoopa, prépare-toi !<0xFB>Votre véritable pouvoir est sur le\npoint d'être libéré de la bouteille<0xFA>de Prison !<0xFB>Et en tant que votre entraîneur, je\nsuis pleinement capable de le<0xFA>libérer !",
+      "length": 187,
       "original_length": 148,
-      "padding_used": 17,
+      "padding_used": 39,
       "encoding": "pokemon",
       "category": "dialogue",
       "notes": "",
@@ -70818,6 +70986,18 @@
       "too_long": true
     },
     {
+      "offset": 8213036,
+      "original_text": "Aklove: <0xFC><0x01><0x08>Fool.<0xFB>We have no common goal.<0xFB>I am a descendant of the king of\nKalos during the Great War.<0xFB>My goal is simply to finish what he\nstarted and destroy this region.<0xFB>With this unbound Hoopa, I will\nbring the Ultimate Weapon of Kalos<0xFA>here and use it to turn Borrius<0xFA>into a region of death and<0xFA>destruction!<0xFB>Then, finally, his suffering will\nbe at its end\"<0xFB>Now tell me, Zeph. What are your\ngoals?",
+      "translation": "Aklove : {COLOR}ËInsensé.<0xFB>Nous n'avons pas d'objectif commun.<0xFB>Je suis un descendant du roi de\nKalos pendant la Grande Guerre.<0xFB>Mon objectif est simplement de\nterminer ce qu'il a commencé et de<0xFA>détruire cette région.<0xFB>Avec ce Hoopa non lié, je vais\napporter l'arme ultime de Kalos<0xFA>ici et l'utiliser pour transformer\nBorrius<0xFA>dans une région de mort et<0xFA>destruction !<0xFB>Alors, enfin, ses souffrances seront\nà leur fin...<0xFB>Maintenant, dis-moi, Zeph. Quels\nsont vos objectifs ?",
+      "length": 466,
+      "original_length": 398,
+      "padding_used": 68,
+      "encoding": "pokemon",
+      "category": "dialogue",
+      "notes": "",
+      "too_long": true
+    },
+    {
       "offset": 8213435,
       "original_text": "Zeph: <0xFC><0x01><0x08>My goals?<0xFB>I have but one goal.<0xFB>To see those I cared about once\nmore.",
       "translation": "Zeph : {COLOR}ËMes objectifs ?<0xFB>Je n'ai qu'un seul objectif.<0xFB>Voir ceux qui me tiennent à coeur une\nfois plus.",
@@ -70844,10 +71024,10 @@
     {
       "offset": 8213671,
       "original_text": "Aklove: <0xFC><0x01><0x08>Enough!<0xFB>Remove yourself from my presence.<0xFB>The Shadows are finshed.<0xFB>It's time for Borrius to be\nenveloped in The Light of Ruin.<0xFB>But first\"<0xFB>Grunts!<0xFB>Bring <0xFD><0x01> to me!",
-      "translation": "Aklove : {COLOR}ËAssez !<0xFB>Retirez-vous de ma présence.<0xFB>Les Ombres sont finies.<0xFB>Il est temps pour Borrius d'être\nenveloppé dans la Lumière de la<0xFB>Mais d'abord...<0xFB>Grunts !<0xFB>Apportez-moi {PLAYER} !",
-      "length": 191,
+      "translation": "Aklove : {COLOR}ËAssez !<0xFB>Retirez-vous de ma présence.<0xFB>Les Ombres sont finies.<0xFB>Il est temps pour Borrius d'être\nenveloppé dans la Lumière de la<0xFA>Ruine.<0xFB>Mais d'abord...<0xFB>Grunts !<0xFB>Apportez-moi {PLAYER} !",
+      "length": 198,
       "original_length": 172,
-      "padding_used": 19,
+      "padding_used": 26,
       "encoding": "pokemon",
       "category": "dialogue",
       "notes": "",
@@ -71012,10 +71192,10 @@
     {
       "offset": 8216748,
       "original_text": "We started out with good intent.<0xFB>It was only some time later on when\nthings began to get out of hand.<0xFB>When did it go all wrong\"",
-      "translation": "Nous avons commencé avec de bonnes\nintentions.<0xFB>Ce n'est que quelque temps plus tard\nque les choses ont commencé à<0xFB>Quand est-ce que tout a mal tourné...",
-      "length": 151,
+      "translation": "Nous avons commencé avec de bonnes\nintentions.<0xFB>Ce n'est que quelque temps plus tard\nque les choses ont commencé à<0xFA>nous échapper.<0xFB>Quand est-ce que tout a mal tourné...",
+      "length": 166,
       "original_length": 127,
-      "padding_used": 24,
+      "padding_used": 39,
       "encoding": "pokemon",
       "category": "description",
       "notes": "",
@@ -71204,10 +71384,10 @@
     {
       "offset": 8219738,
       "original_text": "Véga: <0xFC><0x01><0x08>All grunts, retreat back to\nthe base in <0xFC><0x01><0x06>Vivill Town<0xFC><0x01><0x08>!<0xFB>We're not equipped to deal with\nthese\"zombies right now!",
-      "translation": "Véga : {COLOR}ËTous les grognements,\nretournez à la base de {COLOR}ÉVivill Town{COLOR}Ë!<0xFB>Nous ne sommes pas équipés pour\naffronter ces... zombies pour le",
-      "length": 153,
+      "translation": "Véga : {COLOR}ËTous les grognements,\nretournez à la base de {COLOR}ÉVivill Town{COLOR}Ë!<0xFB>Nous ne sommes pas équipés pour\naffronter ces... zombies pour le<0xFA>moment !",
+      "length": 162,
       "original_length": 124,
-      "padding_used": 29,
+      "padding_used": 38,
       "encoding": "pokemon",
       "category": "dialogue",
       "notes": "",
@@ -71420,10 +71600,10 @@
     {
       "offset": 8223398,
       "original_text": "You put on the clothes and placed\nMarlon's uniform in the Cube.",
-      "translation": "Vous avez enfilé les vêtements et\nplacé l'uniforme de Marlon dans le",
-      "length": 68,
+      "translation": "Vous avez enfilé les vêtements et\nplacé l'uniforme de Marlon dans le<0xFA>Cube.",
+      "length": 74,
       "original_length": 63,
-      "padding_used": 5,
+      "padding_used": 11,
       "encoding": "pokemon",
       "category": "dialogue",
       "notes": "",
@@ -71444,14 +71624,14 @@
     {
       "offset": 8225307,
       "original_text": "Of course, sir.<0xFB>I wouldn't expect you to waste your\ntime on a grunt, such as myself.",
-      "translation": "Bien sûr, monsieur.<0xFB>Je ne m'attendrais pas à ce que vous\nperdiez votre temps avec un",
-      "length": 84,
+      "translation": "Bien sûr, monsieur.<0xFB>Je ne m'attendrais pas à ce que vous\nperdiez votre temps avec un<0xFA>sbire tel que moi.",
+      "length": 103,
       "original_length": 84,
-      "padding_used": 0,
+      "padding_used": 19,
       "encoding": "pokemon",
       "category": "dialogue",
       "notes": "",
-      "too_long": false
+      "too_long": true
     },
     {
       "offset": 8225392,
@@ -71468,10 +71648,10 @@
     {
       "offset": 8226489,
       "original_text": "The door requires a Key Card with\nClearance Level: <0xFC><0x01><0x06><0xFD><0x02><0xFC><0x01><0x02>, to be opened.",
-      "translation": "La porte nécessite une carte-clé\navec niveau d'autorisation : {COLOR}É{STR_VAR_1}{COLOR}Á pour",
-      "length": 94,
+      "translation": "La porte nécessite une carte-clé\navec niveau d'autorisation : {COLOR}É{STR_VAR_1}{COLOR}Á pour<0xFA>être ouverte.",
+      "length": 108,
       "original_length": 74,
-      "padding_used": 20,
+      "padding_used": 34,
       "encoding": "pokemon",
       "category": "description",
       "notes": "",
@@ -71480,10 +71660,10 @@
     {
       "offset": 8226564,
       "original_text": "The door requires a Key Card with\nClearance Level: <0xFC><0x01><0x06><0xFD><0x02><0xFC><0x01><0x02>, to be opened.<0xFB>Would you like to open the door?",
-      "translation": "La porte nécessite une carte-clé\navec Niveau d'autorisation : {COLOR}É{STR_VAR_1}{COLOR}Á, pour<0xFB>Voulez-vous ouvrir la porte ?",
-      "length": 125,
+      "translation": "La porte nécessite une carte-clé\navec Niveau d'autorisation : {COLOR}É{STR_VAR_1}{COLOR}Á, pour<0xFA>être ouverte.<0xFB>Voulez-vous ouvrir la porte ?",
+      "length": 139,
       "original_length": 107,
-      "padding_used": 18,
+      "padding_used": 32,
       "encoding": "pokemon",
       "category": "dialogue",
       "notes": "",
@@ -71516,10 +71696,10 @@
     {
       "offset": 8227100,
       "original_text": "Of course, sir.<0xFB>I'm sure you have much more,\nimportant, business to attend to.",
-      "translation": "Bien sûr, monsieur.<0xFB>Je suis sûr que vous avez bien\nd'autres affaires, importantes, à",
-      "length": 84,
+      "translation": "Bien sûr, monsieur.<0xFB>Je suis sûr que vous avez bien\nd'autres affaires, importantes, à<0xFA>régler.",
+      "length": 92,
       "original_length": 78,
-      "padding_used": 6,
+      "padding_used": 14,
       "encoding": "pokemon",
       "category": "dialogue",
       "notes": "",
@@ -71570,6 +71750,18 @@
       "padding_used": 14,
       "encoding": "pokemon",
       "category": "description",
+      "notes": "",
+      "too_long": true
+    },
+    {
+      "offset": 8227818,
+      "original_text": "I've been instructed by my\nsuperiors to hand out that HM to<0xFA>any trainers coming this way.<0xFB>Until the bridge is fixed, you'll\nneed to use that HM for <0xFC><0x01><0x06>Rock Climb<0xFC><0x01><0x08><0xFA>if you want to go to <0xFC><0x01><0x06>Seaport City<0xFC><0x01><0x08>.<0xFB>Just face that rock wall over\nthere to use it.",
+      "translation": "Mes supérieurs m'ont demandé de\nremettre ce HM à<0xFA>tous les entraîneurs venant par ici.<0xFB>Jusqu'à ce que le pont soit réparé,\nvous devrez utiliser ce HM pour<0xFA>Escalade si vous voulez vous rendre<0xFA>à {COLOR}ÉSeaport City{COLOR}Ë.<0xFB>Il suffit d'affronter cette paroi\nrocheuse au-dessus là pour<0xFA>l'utiliser.",
+      "length": 294,
+      "original_length": 252,
+      "padding_used": 42,
+      "encoding": "pokemon",
+      "category": "dialogue",
       "notes": "",
       "too_long": true
     },
@@ -77432,10 +77624,10 @@
     {
       "offset": 8368822,
       "original_text": "Hmph.\nI thought you had guts, kid.",
-      "translation": "Hmph.\nJe croyais que tu avais du cran,",
-      "length": 38,
+      "translation": "Hmph.\nJe croyais que tu avais du cran, gamin.",
+      "length": 45,
       "original_length": 34,
-      "padding_used": 4,
+      "padding_used": 11,
       "encoding": "pokemon",
       "category": "dialogue",
       "notes": "",
@@ -83763,6 +83955,18 @@
       "encoding": "pokemon",
       "category": "location",
       "notes": "",
+      "too_long": false
+    },
+    {
+      "offset": 9768316,
+      "original_text": "Raises one stat and lowers another.",
+      "translation": "Monte une stat, baisse une autre.",
+      "length": 33,
+      "original_length": 35,
+      "padding_used": -2,
+      "encoding": "pokemon",
+      "category": "description",
+      "notes": "no-pointer: in-place only",
       "too_long": false
     },
     {
@@ -166830,6 +167034,18 @@
       "too_long": false
     },
     {
+      "offset": 32691218,
+      "original_text": "And, well\"<0xFC><0x08><0x18> you can see they hate\nit when people go snooping.<0xFB>Anyway, we'd better start looking\nfor another exit, so let's move.",
+      "translation": "Bref\"<0xFC><0x08><0x18> tu vois, ils détestent\nquand les gens fouinent.<0xFB>On ferait mieux de chercher\nune autre sortie, allons-y.",
+      "length": 112,
+      "original_length": 130,
+      "padding_used": -18,
+      "encoding": "pokemon",
+      "category": "dialogue",
+      "notes": "inline-text (no pointer)",
+      "too_long": false
+    },
+    {
       "offset": 32691440,
       "original_text": "Did you hear that, <0xFD><0x01>?<0xFB>It sounded like some Pokémon are\ntrapped in that cage over there!<0xFB>Let's go check it out.",
       "translation": "Tu as entendu, <0xFD><0x01> ?<0xFB>On dirait que des Pokémon sont\npiégés dans cette cage là-bas !<0xFB>Allons voir ça de plus près.",
@@ -171042,6 +171258,18 @@
       "too_long": true
     },
     {
+      "offset": 32745208,
+      "original_text": "Actually, that was Hoopa acting of\nits own accord.<0xFB>It knew we were about to begin\nthe process of releasing its power,<0xFA>so in a futile act of desperation,<0xFA>it summoned <0xFD><0x01> to rescue it<0xFA>from me.<0xFB>For you see\"<0xFC><0x08><0x18> for reasons I cannot\nfathom, it is <0xFD><0x01>, not I, that<0xFA>Hoopa prefers as its Trainer.<0xFB>And so, naturally, I want to see\n<0xFD><0x01> eliminated.<0xFB>Once <0xFD><0x03> is gone, Hoopa will have\nto accept ME as its true Trainer\"<0xFB>Only then will I finally be able to\nuse its true power, capable of<0xFA>moving entire landmasses\"",
+      "translation": "En réalité, Hoopa agissait de son\npropre chef. Il savait que nous<0xFB>allions commencer à libérer sa\npuissance, alors, dans un geste<0xFA>désespéré, il a invoqué {PLAYER}<0xFA>pour qu'il le sauve de moi. Car<0xFA>vois-tu...{PAUSE} pour des raisons qui<0xFA>m'échappent, c'est<0xFB>{PLAYER}, pas moi, que Hoopa préfère\ncomme Dresseur. Donc, naturellement,<0xFA>je veux voir {PLAYER} éliminé.<0xFB>Une fois {STR_VAR_2} parti, Hoopa\ndevra m'accepter, MOI, comme<0xFB>son vrai Dresseur... Alors seulement\nje pourrai enfin utiliser<0xFB>son véritable pouvoir, capable\nde déplacer des masses<0xFA>de terre entières...",
+      "length": 557,
+      "original_length": 494,
+      "padding_used": 63,
+      "encoding": "pokemon",
+      "category": "dialogue",
+      "notes": "",
+      "too_long": true
+    },
+    {
       "offset": 32745703,
       "original_text": "I\"<0xFC><0x08><0x20> concede\"<0xFB>I cannot hope to fight a Pokémon\nlike that\"",
       "translation": "Je...{PAUSE}î j'abandonne... Je ne peux<0xFB>pas espérer affronter\nun Pokémon pareil...",
@@ -171132,6 +171360,18 @@
       "length": 130,
       "original_length": 123,
       "padding_used": 7,
+      "encoding": "pokemon",
+      "category": "dialogue",
+      "notes": "",
+      "too_long": true
+    },
+    {
+      "offset": 32746377,
+      "original_text": "Fool\"<0xFC><0x08><0x18> our goals are inevitably at\nodds.<0xFB>I am a descendant of the so-called\n<0xB1>foreign king<0xB2> from the great war.<0xFB>My goal is simply to finish what he\nstarted - and win the war.<0xFB>With Hoopa's power now unbound, I\nwill bring the weapon he created,<0xFA>and use it to rain fire and<0xFA>destruction across Borrius!<0xFB>Then, finally, his suffering can\nbe at its end\"<0xFB>Now, tell me, Zeph.\nWhat were your goals?",
+      "translation": "Insensé...{PAUSE} nos buts sont\nopposés. Je suis un descendant du<0xFB>\" roi étranger \" de la guerre.\nMon but est simplement de finir<0xFB>ce qu'il a commencé - et gagner\nla guerre. Avec le pouvoir de<0xFB>Hoopa enfin libre, je vais amener\nl'arme qu'il a créée, et l'utiliser<0xFA>pour faire pleuvoir le feu<0xFA>et la destruction sur Borrius<0xFB>! Alors, enfin, sa souffrance\nprendra fin... Maintenant,<0xFB>dis-moi, Zeph. Quels étaient\ntes objectifs ?",
+      "length": 419,
+      "original_length": 389,
+      "padding_used": 30,
       "encoding": "pokemon",
       "category": "dialogue",
       "notes": "",
@@ -194946,6 +195186,18 @@
       "too_long": true
     },
     {
+      "offset": 32964468,
+      "original_text": "They wanted us to go back to HQ\nand stop making Shadow Warriors.<0xFB>STOP MAKING SHADOW WARRIORS!?<0xFB>ARE YOU KIDDING ME!?<0xFB>Creating Shadow Warriors is all I\nlive for!<0xFB>I'm fortunate that Zeph still had a\nuse for more and allowed me to<0xFA>continue synthesizing them.",
+      "translation": "Ils voulaient qu'on retourne au QG\net qu'on arrête de faire des<0xFB>Guerriers Ombres. ARRÊTER DE FAIRE<0xFB>DES GUERRIERS OMBRES !?\nTU PLAISANTES !?<0xFB>Créer des Guerriers Ombres, c'est\nma raison<0xFB>de vivre ! Heureusement, Zeph avait\nencore besoin d'autres exemplaires<0xFA>et j'ai pu continuer la synthèse.",
+      "length": 288,
+      "original_length": 254,
+      "padding_used": 34,
+      "encoding": "pokemon",
+      "category": "dialogue",
+      "notes": "",
+      "too_long": true
+    },
+    {
       "offset": 32964723,
       "original_text": "Something grotesque is being\nsynthesized in the tube.",
       "translation": "Quelque chose de grotesque est en\nse synthétise dans la cuve.",
@@ -217748,10 +218000,10 @@
     {
       "offset": 33143783,
       "original_text": "<0xFC><0x01><0x06><0xFD><0x07><0xFC><0x01><0x08>- and <0xFC><0x01><0x06><0xFD><0x08><0xFC><0x01><0x08>-type moves\nmay not be used.<0xFB>Please choose the Pokémon to\nbattle with.",
-      "translation": "Les capacités de type\n{COLOR}É{VERSION}{COLOR}Ë et<0xFB>{COLOR}É{EVIL_TEAM}{COLOR}Ë ne\npeuvent pas être utilisées. Merci de",
-      "length": 118,
+      "translation": "Les capacités de type\n{COLOR}É{VERSION}{COLOR}Ë et<0xFB>{COLOR}É{EVIL_TEAM}{COLOR}Ë ne\npeuvent pas être utilisées. Merci de<0xFA>choisir le Pokémon qui va<0xFA>combattre.",
+      "length": 155,
       "original_length": 92,
-      "padding_used": 26,
+      "padding_used": 63,
       "encoding": "pokemon",
       "category": "description",
       "notes": "",
@@ -217772,10 +218024,10 @@
     {
       "offset": 33143982,
       "original_text": "<0xFC><0x01><0x06><0xFD><0x07><0xFC><0x01><0x08>- and <0xFC><0x01><0x06><0xFD><0x08><0xFC><0x01><0x08>-type moves\nmay not be used.<0xFB>Please choose the Pokémon to\nbattle with.",
-      "translation": "Les capacités de type\n{COLOR}É{VERSION}{COLOR}Ë et<0xFB>{COLOR}É{EVIL_TEAM}{COLOR}Ë ne\npeuvent pas être utilisées. Merci de",
-      "length": 118,
+      "translation": "Les capacités de type\n{COLOR}É{VERSION}{COLOR}Ë et<0xFB>{COLOR}É{EVIL_TEAM}{COLOR}Ë ne\npeuvent pas être utilisées. Merci de<0xFA>choisir le Pokémon qui va<0xFA>combattre.",
+      "length": 155,
       "original_length": 92,
-      "padding_used": 26,
+      "padding_used": 63,
       "encoding": "pokemon",
       "category": "description",
       "notes": "",
@@ -217868,10 +218120,10 @@
     {
       "offset": 33147063,
       "original_text": "Oh heavens\"<0xFB>My daughter, I can't find her!<0xFB>We were on holiday at the <0xFC><0x01><0x06>beach<0xFC><0x01><0x04>\nwhen all of a sudden, she vanished!<0xFB>Please, <0xFD><0x02>, search for her!",
-      "translation": "Oh mon dieu... Ma fille, je ne la<0xFB>trouve nulle part ! Nous étions en<0xFB>vacances à la {COLOR}Éplage{COLOR}Ç\nquand tout à coup, elle a disparu !<0xFB>S'il te plaît, {STR_VAR_1},",
-      "length": 168,
+      "translation": "Oh mon dieu... Ma fille, je ne la<0xFB>trouve nulle part ! Nous étions en<0xFB>vacances à la {COLOR}Éplage{COLOR}Ç\nquand tout à coup, elle a disparu !<0xFB>S'il te plaît, {STR_VAR_1},\nretrouve-la !",
+      "length": 182,
       "original_length": 144,
-      "padding_used": 24,
+      "padding_used": 38,
       "encoding": "pokemon",
       "category": "dialogue",
       "notes": "",
@@ -218084,14 +218336,14 @@
     {
       "offset": 33148419,
       "original_text": "A young boy in a Pikachu costume\nhas run away from home to Route 8!\nFind him, and bring him home safely.",
-      "translation": "Un jeune garçon en costume de\nPikachu s'est enfui de chez lui vers\nla Route 8 ! Trouve-le et ramène-le",
-      "length": 102,
+      "translation": "Un jeune garçon en costume de\nPikachu s'est enfui de chez lui vers\nla Route 8 ! Trouve-le et ramène-le\nchez lui sain et sauf.",
+      "length": 125,
       "original_length": 104,
-      "padding_used": -2,
+      "padding_used": 21,
       "encoding": "pokemon",
       "category": "dialogue",
       "notes": "",
-      "too_long": false
+      "too_long": true
     },
     {
       "offset": 33148524,
@@ -218216,14 +218468,14 @@
     {
       "offset": 33149482,
       "original_text": "<0xFC><0x01><0x02>While teamed up with Willy, the\n<0xFC><0x01><0x06>first 3<0xFC><0x01><0x02> viable Pokémon in your<0xFA>party will be selected for battle.",
-      "translation": "{COLOR}ÁQuand tu es en équipe avec\nWilly, les {COLOR}É3<0xFA>premiers{COLOR}Á Pokémon valides de",
-      "length": 91,
+      "translation": "{COLOR}ÁQuand tu es en équipe avec\nWilly, les {COLOR}É3<0xFA>premiers{COLOR}Á Pokémon valides de<0xFA>ton équipe seront choisis pour<0xFA>le combat.",
+      "length": 133,
       "original_length": 106,
-      "padding_used": -15,
+      "padding_used": 27,
       "encoding": "pokemon",
       "category": "dialogue",
       "notes": "",
-      "too_long": false
+      "too_long": true
     },
     {
       "offset": 33149589,
@@ -218648,14 +218900,14 @@
     {
       "offset": 33154261,
       "original_text": "We're the Black Emboar, you litch!",
-      "translation": "On est le Black Emboar, espèce de",
-      "length": 33,
+      "translation": "On est le Black Emboar, espèce de\nminable !",
+      "length": 43,
       "original_length": 34,
-      "padding_used": -1,
+      "padding_used": 9,
       "encoding": "pokemon",
       "category": "dialogue",
       "notes": "",
-      "too_long": false
+      "too_long": true
     },
     {
       "offset": 33154296,
@@ -218708,10 +218960,10 @@
     {
       "offset": 33154422,
       "original_text": "The Black Emboar!\nNever stop, and never look back!",
-      "translation": "Le Black Emboar ! On ne s'arrête\njamais, et on ne regarde jamais en",
-      "length": 67,
+      "translation": "Le Black Emboar ! On ne s'arrête\njamais, et on ne regarde jamais en arrière !",
+      "length": 77,
       "original_length": 50,
-      "padding_used": 17,
+      "padding_used": 27,
       "encoding": "pokemon",
       "category": "dialogue",
       "notes": "",
@@ -218804,14 +219056,14 @@
     {
       "offset": 33155825,
       "original_text": "Someone's havin' toilet troubles!\nHelp your fellow Black <0xFD><0x01> by\nretrievin' his socks from the sewer.",
-      "translation": "Quelqu'un a des soucis de toilettes\n! Aide ton camarade du Black\n<0xFD><0x01> en récupérant ses",
-      "length": 85,
+      "translation": "Quelqu'un a des soucis de toilettes\n! Aide ton camarade du Black\n<0xFD><0x01> en récupérant ses\nchaussettes dans les égouts.",
+      "length": 114,
       "original_length": 99,
-      "padding_used": -14,
+      "padding_used": 15,
       "encoding": "pokemon",
       "category": "dialogue",
       "notes": "",
-      "too_long": false
+      "too_long": true
     },
     {
       "offset": 33156367,
@@ -219116,10 +219368,10 @@
     {
       "offset": 33159280,
       "original_text": "Wha\"<0xFC><0x08><0x20> you shouldn't be able\nto beat the Black Ferrothorn!<0xFB>Our hides are iron thick!",
-      "translation": "Quoi...{PAUSE}î tu devrais pas\npouvoir battre le Black Ferrothorn !<0xFB>Nos peaux sont aussi dures que du",
-      "length": 101,
+      "translation": "Quoi...{PAUSE}î tu devrais pas\npouvoir battre le Black Ferrothorn !<0xFB>Nos peaux sont aussi dures que du<0xFA>fer !",
+      "length": 107,
       "original_length": 85,
-      "padding_used": 16,
+      "padding_used": 22,
       "encoding": "pokemon",
       "category": "dialogue",
       "notes": "",
@@ -219296,14 +219548,14 @@
     {
       "offset": 33161811,
       "original_text": "My guy up in <0xFC><0x01><0x06>Dresco Town<0xFC><0x01><0x08> can turn\nOddish Leaves into more of that<0xFA><0xFC><0x01><0x06>Dream Mist<0xFC><0x01><0x08>.<0xFB>Bring him some <0xFC><0x01><0x06>Oddish<0xFC><0x01><0x08>, and he'll\nhappily do it for ya.",
-      "translation": "Mon gars à {COLOR}ÉVille\nDresco{COLOR}Ë peut changer les<0xFA>Feuilles de Mystherbe en encore plus<0xFB>de {COLOR}ÉBrume de Rêve{COLOR}Ë.\nApporte-lui des",
-      "length": 143,
+      "translation": "Mon gars à {COLOR}ÉVille\nDresco{COLOR}Ë peut changer les<0xFA>Feuilles de Mystherbe en encore plus<0xFB>de {COLOR}ÉBrume de Rêve{COLOR}Ë.\nApporte-lui des<0xFA>Mystherbe, il le fera avec plaisir.",
+      "length": 179,
       "original_length": 150,
-      "padding_used": -7,
+      "padding_used": 29,
       "encoding": "pokemon",
       "category": "dialogue",
       "notes": "",
-      "too_long": false
+      "too_long": true
     },
     {
       "offset": 33161969,
@@ -225976,18 +226228,6 @@
       "category": "description",
       "notes": "",
       "too_long": true
-    },
-    {
-      "offset": 32691218,
-      "original_text": "And, well\"<0xFC><0x08><0x18> you can see they hate\nit when people go snooping.<0xFB>Anyway, we'd better start looking\nfor another exit, so let's move.",
-      "translation": "Bref\"<0xFC><0x08><0x18> tu vois, ils détestent\nquand les gens fouinent.<0xFB>On ferait mieux de chercher\nune autre sortie, allons-y.",
-      "length": 112,
-      "original_length": 130,
-      "padding_used": -18,
-      "encoding": "pokemon",
-      "category": "dialogue",
-      "notes": "inline-text (no pointer)",
-      "too_long": false
     }
   ]
 }

@@ -11982,18 +11982,18 @@ sa fourrure.",,18,12,30,pokemon,other,,
 0x0044C7A6,"Il lib<0x1A>re l'électricité par sa crini<0x1A>re.
 Il crée un nuage d'orage pour appeler la
 foudre.","Descarga electricidad de su melena
-y la usa para lanzar relámpagos.",89,13,102,pokemon,description,"Il décharge l'électricité par sa
-crinière. Il crée un nuage d'orage
-au-dessus de lui pour lâcher des",
+y la usa para lanzar relámpagos.",89,13,102,pokemon,description,"Il libère l'électricité par sa crinière.
+Il crée un nuage d'orage pour appeler la
+foudre.",
 0x0044C7E2,"orage pour appeler la
 foudre.",,29,13,42,pokemon,other,,
 0x0044C80C,"Il absorbe l'énergie des poteaux
 électriques et encourage ses amis avec
 des pompons d'étincelles.","Anima a sus compañeros con pompones
 de chispas. Roba energía de los
-postes telefónicos.",97,6,103,pokemon,description,"Il encourage ses amis avec des
-pompons d'étincelles. Il se
-court-circuite pour créer des",
+postes telefónicos.",97,6,103,pokemon,description,"Il absorbe l'énergie des poteaux
+électriques et encourage ses amis avec
+des pompons d'étincelles.",
 0x0044C863,tincelles.,,10,6,16,pokemon,other,,
 0x0044C873,"Il encourage ses amis. Son corps produit
 plus d'étincelles quand il est en
@@ -12108,9 +12108,9 @@ l'impression de rêver.",
 générations. Ses griffes aiguisées sont
 son meilleur atout.","Hace muchos años que se enfrenta a
 Seviper. Su arma más eficaz son sus
-zarpas afiladas.",96,21,117,pokemon,description,"Face à un Séviper, sa fourrure se
-hérisse et il prend sa pose de
-combat. Ses griffes sont sa",
+zarpas afiladas.",96,21,117,pokemon,description,"C'est le rival de Séviper depuis des
+générations. Ses griffes aiguisées sont
+son meilleur atout.",
 0x0044D1A0,"es sont
 son meilleur atout.",,27,21,48,pokemon,other,,
 0x0044D1D0,"Le rival historique de Mangriff. Il
@@ -12362,9 +12362,9 @@ rend lent.",
 0x0044E1F1,"Il est né de la fusion de plusieurs
 Métang. Ses quatre cerveaux en font
 l'égal d'un superordinateur.","Se dice que sus cuatro cerebros son
-superiores a una supercomputadora.",100,8,108,pokemon,description,"Avec quatre cerveaux reliés, il est
-plus intelligent qu'un
-superordinateur. Il calcule pour",
+superiores a una supercomputadora.",100,8,108,pokemon,description,"Il est né de la fusion de plusieurs
+Métang. Ses quatre cerveaux en font
+l'égal d'un superordinateur.",
 0x0044E242,un superordinateur.,,19,8,27,pokemon,other,,
 0x0044E25D,"Tout son corps est fait de roche. S'il
 s'ébr<0x1A>che au combat, il utilise des
@@ -12415,6 +12415,11 @@ l'avait vu.",
 0x0044E54D,"ozone, au dessus
 des nuages. Il est invisible depuis le
 sol.",,60,108,168,pokemon,description,,
+0x0044E71C,"It has lived for hundreds of millions of
+years in the ozone layer. Its flying form
+looks like a meteor.",,103,0,103,pokemon,description,"Il a vécu des millions d'années dans
+la couche d'ozone. Sa forme volante
+évoque un météore.",no-pointer: in-place only
 0x00454254,"A small desk built in
 the shape of a POKé
 Ball.","A small desk built in
@@ -13176,7 +13181,7 @@ bureau.",
 0x00457264,"<0xFD><0x02>! Awaiting link!
 Press START when everyone's ready.","<0xFD><0x02>! Awaiting link!
 Press START when everyone's ready.",53,3,56,pokemon,dialogue,"<0xFD><0x02> ! En attente du lien !
-Appuyez sur START quand tout le",
+Appuyez sur START quand tout le monde est prêt.",
 0x004573C5,"2 players
 needed.","2 players
 needed.",17,2,19,pokemon,other,"2 joueurs
@@ -14297,15 +14302,22 @@ for many different things.<0xFB>As for myself""<0xFB>I study all aspects of Pok�
 stats and capture rates.<0xFB>",132,8097,8229,pokemon,dialogue,"Ici, on utilise les Pokémon
 pour beaucoup de choses.<0xFB>Moi...<0xFB>J'étudie tous les aspects des stats
 et des taux de capture des Pokémon.<0xFB>",
+0x0071C950,Doubles speed if item is consumed.,,34,0,34,pokemon,description,Double la Vitesse si objet épuisé.,no-pointer: in-place only
+0x0071C973,îDoubles stat changes.,,22,0,22,pokemon,other,îStats: effets doublés,no-pointer: in-place only
+0x0071C98C,Ignores foe's stat changes.,,27,0,27,pokemon,other,Ignore les stats modifiées.,no-pointer: in-place only
+0x0071C9AC,Attack rises when stats fall.,,29,0,29,pokemon,other,Attaque + si une stat baisse.,no-pointer: in-place only
+0x0071C9D4,Sp. Atk rises when stats fall.,,30,0,30,pokemon,other,Atq.Spé. + si une stat baisse.,no-pointer: in-place only
 0x0071CA60,Dresco Town,Pueblo Dresco,11,5,16,pokemon,location,Ville de Dresco,
 0x0071CA70,Tehl Town,Pueblo Tela,9,7,16,pokemon,location,Ville de Tehl,
 0x0071FC80,Blizzard City,Ciudad Ventisca,13,2075,2088,pokemon,location,,
 0x00720E74,Fallshore City,Ciudad Costera,14,6,20,pokemon,location,Ville de Fallshore,
 0x00720E88,Frost Mountain,Montaña Helada,14,2,16,pokemon,location,Mont Frost,
+0x00720EDB,îSp. Atk rises when burned.,,27,0,27,pokemon,other,îAtq.Spé. + si brûlé.,no-pointer: in-place only
 0x00720F5C,Frozen Heights,Pueblo Frío,14,3,17,pokemon,location,Hauteurs Gelées,
 0x00720F88,KINDLE ROAD,KINDLE ROAD,11,5,16,pokemon,location,CHEMIN BRASIER,
 0x00721134,Lost Tunnel,Túnel Roca,11,13,24,pokemon,location,,
 0x007212A4,                                                                                                Icy Hole,,104,32,136,pokemon,description,,
+0x007213FC,Abilities don't affect moves.,,29,0,29,pokemon,other,Ignore les talents.,no-pointer: in-place only
 0x00721437, KBT Expressway,,15,6,21,pokemon,other,Autoroute KBT,
 0x00721464,Crystal Peak,Pico Cristal,12,12,24,pokemon,location,,
 0x007214E8,Glimmer Isle,Isla Tenue,12,5,17,pokemon,location,,
@@ -14314,6 +14326,9 @@ et des taux de capture des Pokémon.<0xFB>",
 0x007216AC,Game Corner,,11,5,16,pokemon,location,Casino,
 0x007218F0,Great Desert,Gran Desierto,12,76,88,pokemon,location,Grand Désert,
 0x00721968,Epidimy Town,Ciudad Epidimia,12,28,40,pokemon,dialogue,,
+0x00724A0D,"If only there were a machine that
+would throw Poké Balls for me...",,66,0,66,pokemon,dialogue,"Si seulement une machine pouvait
+lancer des Poké Balls pour moi...",no-pointer: in-place only
 0x00728430,"A peculiar stone that makes certain
 species of Pokémon evolve.
 It shines with a dazzling light.","Curiosa piedra que hace evolucionar
@@ -14494,7 +14509,7 @@ fraîchement entraînés ?",
 me and I see things that aren't<0xFA>really there.","Sometimes the <0xFC><0x01><0x06>Oddish Leaves <0xFC><0x01><0x08>get to
 me and I see things that aren't<0xFA>really there.",86,3,89,pokemon,dialogue,"Parfois les {COLOR}ÉFeuilles de
 Mystherbe{COLOR}Ë me montent à la<0xFA>choses qui n'existent pas.",
-0x007464C8,Do you know what a <0xFC><0x01><0x06>Gem <0xFC><0x01><0x08>is?,<0x51>Sabes qué es una <0xFC><0x01><0x06>Gema <0xFC><0x01><0x08>?,32,1,33,pokemon,dialogue,Tu sais ce qu'est un,
+0x007464C8,Do you know what a <0xFC><0x01><0x06>Gem <0xFC><0x01><0x08>is?,<0x51>Sabes qué es una <0xFC><0x01><0x06>Gema <0xFC><0x01><0x08>?,32,1,33,pokemon,dialogue,Tu sais ce qu'est une {COLOR}ÉGemme {COLOR}Ë?,
 0x007464F6,Dile!,,5,3,8,pokemon,dialogue,,
 0x0074660E,Skull!,Skull!,6,2,8,pokemon,dialogue,Crâne !,
 0x0074AB00,"TM46 teaches <0xFC><0x01><0x06>Thief<0xFC><0x01><0x08>.<0xFB>It's the perfect TM for sneaky
@@ -14657,7 +14672,8 @@ to match my new look""",56,4,60,pokemon,dialogue,"Je devrais attraper plus de Po
 Glace pour aller avec mon nouveau",
 0x0074F960,"Trainer Tips!<0xFB>Hold the <0xFC><0x01><0x06>B-button<0xFC><0x01><0x02> to run!<0xFB>Press the <0xFC><0x01><0x06>L-button<0xFC><0x01><0x02> to toggle
 auto-run!","Trainer Tips!<0xFB>Hold the <0xFC><0x01><0x06>B-button<0xFC><0x01><0x02> to run!<0xFB>Press the <0xFC><0x01><0x06>L-button<0xFC><0x01><0x02> to toggle
-auto-run!",90,4,94,pokemon,dialogue,"ASTUCES DRESSEUR !<0xFB>Maintiens {COLOR}ÉB{COLOR}Á pour<0xFB>Appuie sur {COLOR}ÉL{COLOR}Á pour
+auto-run!",90,4,94,pokemon,dialogue,"ASTUCES DRESSEUR !<0xFB>Maintiens {COLOR}ÉB{COLOR}Á pour
+courir !<0xFB>Appuie sur {COLOR}ÉL{COLOR}Á pour
 activer la course auto !",
 0x0074FB43,"Stop!<0xFB>What did I tell you about
 travelling through my Cube Space?<0xFB>Just because you can't travel
@@ -14795,7 +14811,13 @@ battle?<0xFB>I'm in the perfect mood to indulge
 you""",80,2,82,pokemon,dialogue,"J'imagine que tu viens pour un
 combat ?<0xFB>Je suis parfaitement d'humeur à te
 satisfaire...",
-0x0075326D,My bugs will beat you next time!,My bugs will beat you next time!,32,4,36,pokemon,dialogue,Mes insectes te battront la,
+0x0075326D,My bugs will beat you next time!,My bugs will beat you next time!,32,4,36,pokemon,dialogue,"Mes insectes te battront la
+prochaine fois !",
+0x0075350F,"9My brother caught his Pokémon
+by talking a Poké Ball in<0xFA>Vivill Woods.<0xFB>But I heard different Pokémon
+appear for different trainers.",,131,0,131,pokemon,dialogue,"9Mon frère a eu son Pokémon en
+parlant à une Poké Ball au<0xFA>Bois de Vivill.<0xFB>Chaque Dresseur y verrait des
+Pokémon différents.",no-pointer: in-place only
 0x00753675,"You came down from the mountain?<0xFB>It must feel pretty warm to you
 here.","You came down from the mountain?<0xFB>It must feel pretty warm to you
 here.",70,2,72,pokemon,dialogue,"Tu descends de la montagne ?<0xFB>Tu dois trouver qu'il fait chaud
@@ -14906,7 +14928,7 @@ vraiment déroutante.",
 0x0075BF90,"I swear""<0xFB>Those weird guys have been blocking
 off <0xFC><0x01><0x06>Route 9<0xFC><0x01><0x08> for days""<0xFB>I wonder what they're up to?","I swear""<0xFB>Those weird guys have been blocking
 off <0xFC><0x01><0x06>Route 9<0xFC><0x01><0x08> for days""<0xFB>I wonder what they're up to?",101,25,126,pokemon,dialogue,"Je te jure...<0xFB>Ces types bizarres bloquent la
-{COLOR}ÉRoute 9{COLOR}Ë depuis des<0xFB>Que mijotent-ils ?",
+{COLOR}ÉRoute 9{COLOR}Ë depuis des<0xFA>jours...<0xFB>Que mijotent-ils ?",
 0x0075C112,"<0xFC><0x01><0x04>Gliscor!
 Use Rock Smash!","<0xFC><0x01><0x04>Gliscor!
 Use Rock Smash!",27,1,28,pokemon,dialogue,"{COLOR}ÇScorvol ! Éclate-Roc
@@ -15006,17 +15028,18 @@ picked up.","<0xFC><0x01><0x08>It looks like these Pokémon are
 grateful and want to join us!<0xFB>If we each take one, we can use them
 to attack the guard and escape!<0xFB>Here, take this Poké Ball I
 picked up.",172,2,174,pokemon,dialogue,"{COLOR}ËCes Pokémon semblent
-reconnaissants et veulent nous<0xFB>Si on en prend un chacun, on pourra
-attaquer le garde et s'évader !<0xFB>Tiens, prends cette Poké Ball que
-j'ai ramassée.",
+reconnaissants et veulent nous rejoindre !<0xFB>Si on en prend un chacun, on pourra
+attaquer le garde et s'évader !<0xFB>Tiens, prends cette Poké Ball
+que j'ai ramassée.",
 0x0075CAF2,"<0xFD><0x01> received a Poké Ball from
 <0xFD><0x06>!","<0xFD><0x01> received a Poké Ball from
 <0xFD><0x06>!",32,2,34,pokemon,dialogue,"<0xFD><0x01> reçoit une Poké Ball de
 <0xFD><0x06> !",
 0x0075CB13,"<0xFC><0x01><0x08>Go ahead, choose a Pokémon.","<0xFC><0x01><0x08>Go ahead, choose a Pokémon.",30,1,31,pokemon,description,"{COLOR}ËVas-y, choisis un Pokémon.",
-0x0075CDE5,The <0xFD><0x02> joined <0xFD><0x01>'s party!,The <0xFD><0x02> joined <0xFD><0x01>'s party!,25,2,27,pokemon,dialogue,Le {STR_VAR_1} a rejoint l'équipe de,
+0x0075CDE5,The <0xFD><0x02> joined <0xFD><0x01>'s party!,The <0xFD><0x02> joined <0xFD><0x01>'s party!,25,2,27,pokemon,dialogue,"Le <0xFD><0x02> a rejoint
+l'équipe de <0xFD><0x01> !",
 0x0075CDFF,"<0xFC><0x01><0x08>I'll take this one, then.","<0xFC><0x01><0x08>I'll take this one, then.",28,1,29,pokemon,description,"{COLOR}ËJe prends celui-là, alors.",
-0x0075CE1C,"<0xFC><0x01><0x02>Disheartened, the <0xFD><0x02> left.","<0xFC><0x01><0x02>Disheartened, the <0xFD><0x02> left.",29,3,32,pokemon,description,"{COLOR}ÁDéçu, le {STR_VAR_1} est",
+0x0075CE1C,"<0xFC><0x01><0x02>Disheartened, the <0xFD><0x02> left.","<0xFC><0x01><0x02>Disheartened, the <0xFD><0x02> left.",29,3,32,pokemon,description,"{COLOR}ÁDéçu, le {STR_VAR_1} est parti.",
 0x0075CE3A,"Now that we have our own Pokémon,
 let's head back to the exit.<0xFB>We'll force our way out of here!","Now that we have our own Pokémon,
 let's head back to the exit.<0xFB>We'll force our way out of here!",95,2,97,pokemon,dialogue,"Maintenant qu'on a nos Pokémon,
@@ -15129,7 +15152,8 @@ right in, in this volcano.",59,4,63,pokemon,dialogue,"Un dresseur talentueux com
 sa place dans ce volcan.",
 0x00763266,I must have not trained enough yet.,I must have not trained enough yet.,35,3,38,pokemon,dialogue,"Je n'ai pas assez entraîné, on",
 0x0076328A,I will continue to train.<0xFB>Forever and ever...,I will continue to train.<0xFB>Forever and ever...,45,4,49,pokemon,dialogue,Je continuerai à m'entraîner.<0xFB>Pour toujours...,
-0x007632FE,Your moves flowed like lava.,Your moves flowed like lava.,28,3,31,pokemon,dialogue,Tes mouvements coulaient comme la,
+0x007632FE,Your moves flowed like lava.,Your moves flowed like lava.,28,3,31,pokemon,dialogue,"Tes mouvements coulaient comme la
+lave.",
 0x0076331B,The lava here is my inspiration.,The lava here is my inspiration.,32,3,35,pokemon,dialogue,La lave ici est mon inspiration.,
 0x00763409,"They weren't as resistant as I
 thought.","They weren't as resistant as I
@@ -15360,7 +15384,7 @@ de le rendre à son<0xFB>propri
 from a Gym up here.","<0xFC><0x01><0x06>Alice<0xFC><0x01><0x08>, the Gym Leader, likes to use
 <0xFC><0x01><0x06>Flying<0xFC><0x01><0x08>-type Pokémon.<0xFB>I know, it's not what you'd expect
 from a Gym up here.",123,8,131,pokemon,dialogue,"{COLOR}ÉAlice{COLOR}Ë, la
-Championne, aime utiliser des<0xFB>Pas ce à quoi on s'attend pour une
+Championne, aime utiliser des<0xFA>Pokémon de type Vol.<0xFB>Pas ce à quoi on s'attend pour une
 Arène ici.",
 0x0077143D,"Hello there.<0xFB>By any chance would you like to
 have a Riolu?<0xFB>I hatched it from an egg and have
@@ -15406,7 +15430,8 @@ bigger than you would think!","<0x0F> <0xB3><0xB6><0x7E><0x08><0x09><0x02><0x05>
 <0x1D><0x77><0x08><0x09><0x06><0x6C><0x02>Hello there stranger!<0xFB>Be careful when travelling through
 Icicle Cave.<0xFB>It may not seem that big, but it is
 bigger than you would think!",159,6,165,pokemon,dialogue,,
-0x00771EC8,My Rattata is still the best.,My Rattata is still the best.,29,3,32,pokemon,dialogue,Mon Rattata est toujours le,
+0x00771EC8,My Rattata is still the best.,My Rattata is still the best.,29,3,32,pokemon,dialogue,"Mon Rattata est toujours le
+meilleur.",
 0x00771EE7,"I'm going to make my Rattata even
 stronger!","I'm going to make my Rattata even
 stronger!",43,5,48,pokemon,dialogue,"Je vais rendre mon Rattata encore
@@ -15426,7 +15451,7 @@ my frosty hands.",156,1,157,pokemon,dialogue,"Là où le vent est glacé, mes ma
 le sont aussi.<0xFB>Veux-tu que j'apprenne {COLOR}ÉPoing
 Glace{COLOR}Ë à un de tes Pokémon ?<0xFB>Je demande {COLOR}É2
 {STR_VAR_1}{COLOR}Ë pour partager",
-0x007722F2,Grunt: <0xFC><0x01><0x08>Maybe you misheard me.,Grunt: <0xFC><0x01><0x08>Maybe you misheard me.,32,2,34,pokemon,dialogue,"Sbire : {COLOR}ËTu as mal entendu,",
+0x007722F2,Grunt: <0xFC><0x01><0x08>Maybe you misheard me.,Grunt: <0xFC><0x01><0x08>Maybe you misheard me.,32,2,34,pokemon,dialogue,Sbire : {COLOR}ËTu as dû mal entendre.,
 0x00772313,<0xFC><0x01><0x08>Give me that package!<0xFB>I won't ask again.,<0xFC><0x01><0x08>Give me that package!<0xFB>I won't ask again.,43,2,45,pokemon,dialogue,{COLOR}ËDonne-moi ce colis !<0xFB>Je ne demanderai pas deux fois.,
 0x0077233F,"Clerk: <0xFC><0x01><0x08>I really can't, sir!<0xFB>As a faithful employee of Poké
 Mart, it goes against what I stand<0xFA>for to give you that package!","Clerk: <0xFC><0x01><0x08>I really can't, sir!<0xFB>As a faithful employee of Poké
@@ -15434,7 +15459,7 @@ Mart, it goes against what I stand<0xFA>for to give you that package!",126,2,128
 c'est contre mes principes de vous<0xFA>le donner !",
 0x007723BE,"Grunt: <0xFC><0x01><0x08>I see.<0xFB>Well, then""","Grunt: <0xFC><0x01><0x08>I see.<0xFB>Well, then""",28,1,29,pokemon,dialogue,Sbire : {COLOR}ËJe vois.<0xFB>Bon alors...,
 0x007723DB,<0xFC><0x01><0x08><0xFD><0x02>!<0xFB>Grab that package!,<0xFC><0x01><0x08><0xFD><0x02>!<0xFB>Grab that package!,25,2,27,pokemon,dialogue,{COLOR}Ë{STR_VAR_1} !<0xFB>Prends ce colis !,
-0x007723F5,"Grunt: <0xFC><0x01><0x08>Good work, <0xFD><0x02>.","Grunt: <0xFC><0x01><0x08>Good work, <0xFD><0x02>.",24,2,26,pokemon,description,"Sbire : <0xFD><0x02>ËBon boulot,",
+0x007723F5,"Grunt: <0xFC><0x01><0x08>Good work, <0xFD><0x02>.","Grunt: <0xFC><0x01><0x08>Good work, <0xFD><0x02>.",24,2,26,pokemon,description,"Sbire : {COLOR}ËBon boulot, {STR_VAR_1}.",
 0x0077240E,"Which Pokémon would like to have
 their hands frozen with <0xFC><0x01><0x06>Ice Punch<0xFC><0x01><0x08>?","Which Pokémon would like to have
 their hands frozen with <0xFC><0x01><0x06>Ice Punch<0xFC><0x01><0x08>?",73,3,76,pokemon,dialogue,"Quel Pokémon veut se geler les
@@ -17703,7 +17728,7 @@ ingrédients quotidiens.",
 0x007B4AE1,"Most of my friends came to Seaport
 City from far away regions.","Most of my friends came to Seaport
 City from far away regions.",62,3,65,pokemon,dialogue,"La plupart de mes amis sont venus à
-la Ville Portuaire depuis des",
+la Ville Portuaire depuis des<0xFA>régions lointaines.",
 0x007B4D79,Which way will you choose to go?,Which way will you choose to go?,32,6,38,pokemon,dialogue,"Quelle route choisis-tu ?
 ",
 0x007B51DE,"Hahhh!<0xFB>I'll smash you like I smash these
@@ -17796,6 +17821,25 @@ Chute{COLOR}Ë. Tu l'as bien gagné.",
 0x007B5C7C,"<0xFC><0x01><0x02><0xFD><0x01> received the Fall Badge
 from Mel!","<0xFC><0x01><0x02><0xFD><0x01> received the Fall Badge
 from Mel!",39,3,42,pokemon,dialogue,,
+0x007B5CA4,"With the Fall Badge, any Pokémon
+up to Lv. 60 will obey you.<0xFB>It also allows your Pokémon to
+move heavy boulders with <0xFC><0x01><0x06>Strength<0xFC><0x01><0x08>.<0xFB>Honestly, I don't know why any
+strong Pokémon can't already do<0xFA>this""<0xFB>But what can you do?<0xFB>That's just the way the world
+works.<0xFB>Anyways, take this TM to go along
+with that badge. ","With the Fall Badge, any Pokémon
+up to Lv. 60 will obey you.<0xFB>It also allows your Pokémon to
+move heavy boulders with <0xFC><0x01><0x06>Strength<0xFC><0x01><0x08>.<0xFB>Honestly, I don't know why any
+strong Pokémon can't already do<0xFA>this""<0xFB>But what can you do?<0xFB>That's just the way the world
+works.<0xFB>Anyways, take this TM to go along
+with that badge. ",311,2,313,pokemon,dialogue,"Avec le Badge Chute, tout Pokémon
+<0xFB>jusqu'au Nv. 60 t'obéira. Il permet
+<0xFB>aussi à tes Pokémon de pousser des
+<0xFA>rochers lourds avec
+<0xFB>{COLOR}ÉForce{COLOR}Ë. Franchement,
+<0xFB>je ne sais pas pourquoi les Pokémon
+<0xFB>costauds ne peuvent pas déjà le
+faire... Mais que veux-tu ? C'est<0xFA>comme ça que va le monde.<0xFB>Bref, prends cette CT, elle va
+bien avec ce badge.",
 0x007B5DDC,"TM42 contains <0xFC><0x01><0x06>Facade<0xFC><0x01><0x08>.<0xFB>If your Pokémon has a status
 condition, this move'll get twice<0xFA>as powerful.<0xFB>Even stronger than Mega Punch!<0xFB>Use it, and make your enemies
 regret inflicting you with status!","TM42 contains <0xFC><0x01><0x06>Facade<0xFC><0x01><0x08>.<0xFB>If your Pokémon has a status
@@ -17839,7 +17883,7 @@ on dirait que si !",
 to half health!","You should stock up on <0xFC><0x01><0x06>revives<0xFC><0x01><0x04>!<0xFB>They heal a fainted Pokémon back
 to half health!",86,3,89,pokemon,dialogue,"Fais le plein de
 <0xFB>{COLOR}ÉRappels{COLOR}Ç ! Ils
-soignent un Pokémon K.O. à moitié de",
+soignent un Pokémon K.O. à moitié de<0xFA>ses PV !",
 0x007B6216,"I must study this mountain
 some more.<0xFB>My knowledge is insufficient.","I must study this mountain
 some more.<0xFB>My knowledge is insufficient.",67,3,70,pokemon,dialogue,"Je dois encore étudier cette
@@ -18053,7 +18097,7 @@ stop burping! Bluurrf!","Wandering around, I got hungry, so
 I ate some wild mushrooms""<0xFB>They gave me gas, and now I can't
 stop burping! Bluurrf!",118,2,120,pokemon,dialogue,"À force d'errer, j'ai mangé des
 <0xFB>champignons sauvages... Ils m'ont
-donné des gaz, je n'arrête pas de",
+donné des gaz, je n'arrête pas de<0xFA>roter ! Bluurrf !",
 0x007BACE2,"Bleff! Hurk!
 I think""I'm getting better""","Bleff! Hurk!
 I think""I'm getting better""",40,3,43,pokemon,dialogue,"Beurk ! Bwaa ! Je crois... que ça va
@@ -18292,7 +18336,7 @@ there""","That TM contains <0xFC><0x01><0x06>Hone Claws<0xFC><0x01><0x08>.<0xFB>
 there""",147,1,148,pokemon,dialogue,"Cette CT contient {COLOR}ÉHone
 <0xFB>Claws{COLOR}Ë. Si tu prévois
 <0xFB>d'affronter le {COLOR}ÉDresco
-Gym{COLOR}Ë, ça t'aidera beaucoup. C'est",
+Gym{COLOR}Ë, ça t'aidera beaucoup. C'est<0xFA>plein de brouillard là-bas, on y<0xFA>voit très mal...",
 0x007BCA5F,"Oh, I remember you!<0xFB>You're that <0xFD><0x02> who assisted us in
 the Dresco Town Gym!<0xFB>For that, you can have these
 five Revives.","Oh, I remember you!<0xFB>You're that <0xFD><0x02> who assisted us in
@@ -18311,7 +18355,7 @@ main à la police locale ?",
 0x007BCBFB,"Don't you know its rude to barge in
 on someone else's meeting?","Don't you know its rude to barge in
 on someone else's meeting?",62,10,72,pokemon,dialogue,"Ne sais-tu pas qu'il est impoli de
-couper la réunion de quelqu'un",
+couper la réunion de quelqu'un<0xFA>d'autre ?",
 0x007BD675,"Goon 2: <0xFC><0x01><0x08>Yeah, we'll make <0xFD><0x03> cry
 for <0xFD><0x02> mommy!","Goon 2: <0xFC><0x01><0x08>Yeah, we'll make <0xFD><0x03> cry
 for <0xFD><0x02> mommy!",48,3,51,pokemon,dialogue,"Goon 2 : {COLOR}ËOn fera pleurer
@@ -18385,7 +18429,7 @@ actions, then so be it.","Harth: <0xFC><0x01><0x08>I'm sorry dear, but I can't
 let them harm you.<0xFB>If the world ends because of my
 actions, then so be it.",112,2,114,pokemon,dialogue,"Harth : {COLOR}ËDésolé, chérie, je
 <0xFB>ne peux te laisser souffrir. Si le
-monde finit à cause de mes actions,",
+monde finit à cause de mes actions,<0xFA>qu'il en soit ainsi.",
 0x007C0451,"<0xFC><0x01><0x08>Here, take it.","<0xFC><0x01><0x08>Here, take it.",17,2,19,pokemon,description,"{COLOR}ËTiens, prends-le.
 ",
 0x007C0463,"Ivory: <0xFC><0x01><0x04>Thanks, Harth.<0xFB>You've just helped us pave the way
@@ -18465,10 +18509,10 @@ the loose.<0xFB>Only <0xFD><0x02> left.<0xFB>Keep searching while I take this
 man back to the station.","Good work, <0xFD><0x01>.<0xFB>Now there's one less criminal on
 the loose.<0xFB>Only <0xFD><0x02> left.<0xFB>Keep searching while I take this
 man back to the station.",130,2,132,pokemon,dialogue,"Bon travail, <0xFD><0x01>. Maintenant,
-<0xFB>il y a un criminel de moins en en
+<0xFB>il y a un criminel de moins en
 <0xFB>liberté. Il ne reste plus que
 <0xFB><0xFD><0x02>. Continuez à chercher
-pendant que je ramène cet homme au",
+pendant que je ramène cet homme au<0xFA>poste.",
 0x007C0FC1,"Good work, <0xFD><0x01>.<0xFB>You appear to have apprehended all
 of the goons.<0xFB>Only their boss is still is at
 large.<0xFB>Let's regroup on <0xFC><0x01><0x06>Route 10<0xFC><0x01><0x08> by the
@@ -18479,7 +18523,7 @@ stairs to determine his location.",174,1,175,pokemon,dialogue,"Bon travail, {PLA
 <0xFB>avoir arrêté tous ces crétins. Seul
 <0xFB>leur chef est encore en liberté.
 <0xFB>Retrouvons-nous sur {COLOR}ÉRoute
-10{COLOR}Ë près des escaliers pour le",
+10{COLOR}Ë près des escaliers pour le<0xFA>localiser.",
 0x007C1157,"Aww shucks""","Aww shucks""",11,1,12,pokemon,location,"Aww merde...
 ",
 0x007C127E,"How could a punk kid like you beat
@@ -19377,7 +19421,7 @@ le Pokémon.<0xFB>Mais je ne vous dis pas qui l'a.",
 0x007C9662,"I've blown up the stairs so nothing
 can interrupt the procedure.","I've blown up the stairs so nothing
 can interrupt the procedure.",64,2,66,pokemon,description,"J'ai fait sauter les escaliers pour
-que rien ne puisse interrompre la",
+que rien ne puisse interrompre la<0xFA>procédure.",
 0x007C9719,"Here, just take it!","Here, just take it!",19,2,21,pokemon,dialogue,"Tiens, prends-le !",
 0x007C972D,"The other grunts are gonna kill
 me""","The other grunts are gonna kill
@@ -19507,7 +19551,7 @@ the power of Mega Evolution?","I'm glad I caught up to you.<0xFB>I just destroye
 the power of Mega Evolution?",126,2,128,pokemon,dialogue,"Je suis content de vous avoir
 rattrapé.<0xFB>Je viens de détruire le successeur
 Maxima.<0xFB>Laissez-moi deviner, vous avez
-également revendiqué le pouvoir de",
+également revendiqué le pouvoir de<0xFA>la Méga-Évolution ?",
 0x007CEABD,"Of course you did, <0xFD><0x01>.<0xFB>I'd expect nothing less from the
 <0xFD><0x02> who beat me all those times.<0xFB>Now, let's see if you can still
 beat me!","Of course you did, <0xFD><0x01>.<0xFB>I'd expect nothing less from the
@@ -19547,9 +19591,9 @@ votre Cube pour la Méga Pierre ?",
 helps me reel in Pokémon!<0xFB>At least, I think it has Suction
 Cups""","My Malamar's <0xFC><0x01><0x06>Suction Cups<0xFC><0x01><0x08> ability
 helps me reel in Pokémon!<0xFB>At least, I think it has Suction
-Cups""",104,3,107,pokemon,dialogue,"Les {COLOR}ÉSuction Cups{COLOR}Ë capacités de mon
-Sepiatroce m'aident à ramener des<0xFB>Au moins, je pense qu'il a des
-Ventouses Cups...",
+Cups""",104,3,107,pokemon,dialogue,"Le talent {COLOR}ÉVentouse{COLOR}Ë de mon
+Sepiatroce m'aide à ramener des<0xFA>Pokémon !<0xFB>Enfin, je crois qu'il a bien
+Ventouse...",
 0x007CF105,s a seashell.,,13,1,14,pokemon,other,,
 0x007CF26E,Seaport City in the meantime.,,29,2,31,pokemon,other,,
 0x007CF46D,"<0xFC><0x01><0x08>No""<0xFB>I shouldn't be feeling this way""<0xFB>Everything we've worked for is 
@@ -19557,8 +19601,18 @@ about to transpire.<0xFB>I'll even be able to see my son
 again""","<0xFC><0x01><0x08>No""<0xFB>I shouldn't be feeling this way""<0xFB>Everything we've worked for is 
 about to transpire.<0xFB>I'll even be able to see my son
 again""",130,2,132,pokemon,dialogue,"{COLOR}ËNon...<0xFB>Je ne devrais pas ressentir cela...<0xFB>Tout ce pour quoi nous avons
-travaillé est sur le point de se<0xFB>Je pourrai même
+travaillé est sur le point de se<0xFA>réaliser.<0xFB>Je pourrai même
 revoir mon fils ...",
+0x007CF4F0,"???: <0xFC><0x01><0x08>Sorry, old man.<0xFB>If you're getting cold feet now,
+you could be a big problem down<0xFA>the road.<0xFB>I can't have anything standing in
+the way of the unbinding.<0xFB>Your son will just have to be
+fatherless forever.","???: <0xFC><0x01><0x08>Sorry, old man.<0xFB>If you're getting cold feet now,
+you could be a big problem down<0xFA>the road.<0xFB>I can't have anything standing in
+the way of the unbinding.<0xFB>Your son will just have to be
+fatherless forever.",208,1,209,pokemon,dialogue,"???: {COLOR}ËDésolé, vieil homme.<0xFB>Si tu as froid aux yeux maintenant,
+tu pourrais être un gros problème<0xFA>sur la route.<0xFB>Je ne peux pas avoir quoi que ce
+soit qui s'oppose sur le chemin de<0xFA>la Libération.<0xFB>Votre fils devra simplement être
+sans père pour toujours.",
 0x007CF825,"<0xFC><0x01><0x08>Stay in the bag, you useless
 Pokémon.","<0xFC><0x01><0x08>Stay in the bag, you useless
 Pokémon.",40,2,42,pokemon,dialogue,"{COLOR}ËReste dans le
@@ -19599,6 +19653,25 @@ légendes flottait<0xFA>par ici à l'instant...",
 either get you to Dehara City or<0xFA>Route 12.","Passing through this gate can
 either get you to Dehara City or<0xFA>Route 12.",72,3,75,pokemon,dialogue,"Passer par cette porte peut soit
 vous amener à la ville de Dehara,<0xFA>Route 12.",
+0x007CFD04,"Would you happen to be <0xFD><0x01> by
+any chance?<0xFB>""<0xFB>I thought so.<0xFB>I recognized you from this picture
+I found of you, on the interwebs.<0xFB>My name is Looker.<0xFB>Agent Looker, of the International
+Police.<0xFB>I had just finished dealing with
+Team Rocket in the Kanto Region,<0xFA>when I was deployed to deal with a<0xFA>situation that was brewing in the<0xFA>Borrius Region.<0xFB>A young man, Jax, I believe, has
+informed me that you have some<0xFA>evidence for crimes committed by an<0xFA>organization calling themselves<0xFA><0xB1>The Shadows<0xB2>.<0xFB>Please meet me in the <0xFC><0x01><0x06>Dehara Game
+Corner <0xFC><0x01><0x08>so we can discuss further.<0xFB>Jax is there, as well.<0xFB>Looker, out.","Would you happen to be <0xFD><0x01> by
+any chance?<0xFB>""<0xFB>I thought so.<0xFB>I recognized you from this picture
+I found of you, on the interwebs.<0xFB>My name is Looker.<0xFB>Agent Looker, of the International
+Police.<0xFB>I had just finished dealing with
+Team Rocket in the Kanto Region,<0xFA>when I was deployed to deal with a<0xFA>situation that was brewing in the<0xFA>Borrius Region.<0xFB>A young man, Jax, I believe, has
+informed me that you have some<0xFA>evidence for crimes committed by an<0xFA>organization calling themselves<0xFA><0xB1>The Shadows<0xB2>.<0xFB>Please meet me in the <0xFC><0x01><0x06>Dehara Game
+Corner <0xFC><0x01><0x08>so we can discuss further.<0xFB>Jax is there, as well.<0xFB>Looker, out.",595,2,597,pokemon,dialogue,"Seriez-vous {PLAYER}
+par hasard ?<0xFB>...<0xFB>Je le pensais.<0xFB>Je vous ai reconnu sur cette photo
+J'ai trouvé de vous sur les<0xFA>internets.<0xFB>Je m'appelle Looker.<0xFB>Agent Looker, de la Police
+Internationale.<0xFB>Je venais juste de finir de
+m'occuper de Team Rocket dans la<0xFA>région de Kanto, quand j'ai été<0xFA>déployé pour faire face à une<0xFA>situation qui se préparait dans la<0xFA>région de Borrius.<0xFB>Un jeune homme, Jax, je crois, m'a
+informé que vous aviez des<0xFA>preuves de crimes commis par une<0xFA>organisation se faisant appeler<0xFA>"" Les Ombres "".<0xFB>Veuillez me rencontrer dans le
+{COLOR}ÉDehara Game Corner {COLOR}Ëafin que nous<0xFA>puissions discuter de tout cela.<0xFB>Jax est là aussi.<0xFB>Looker, dehors.",
 0x007D0046,"He appears to be deeply engrossed
 in a slot game.","He appears to be deeply engrossed
 in a slot game.",49,2,51,pokemon,description,"Il semble être profondément absorbé
@@ -19645,6 +19718,19 @@ là-dessus pour le moment.<0xFB>Je dois rester fort.",
 ruins was uncovered by the blast.","<0xFC><0x01><0x08>It looks like an entrance to the
 ruins was uncovered by the blast.",69,2,71,pokemon,description,"{COLOR}ËOn dirait qu'une entrée a été
 ouverte par l'explosion.",
+0x007D233A,"<0xFC><0x01><0x08>You should go in and try to find
+another way up to the top.<0xFB>I would come along, but Staraptor
+was the only Pokémon I had on me.<0xFB>I'd just wear you down if you had
+to protect me from wild Pokémon.<0xFB>Instead, I'll wait here and take
+care of healing for you.","<0xFC><0x01><0x08>You should go in and try to find
+another way up to the top.<0xFB>I would come along, but Staraptor
+was the only Pokémon I had on me.<0xFB>I'd just wear you down if you had
+to protect me from wild Pokémon.<0xFB>Instead, I'll wait here and take
+care of healing for you.",255,2,257,pokemon,dialogue,"{COLOR}ËTu devrais entrer et essayer de
+trouver un autre chemin pour<0xFA>monter au sommet.<0xFB>Je viendrais, mais Étouraptor était
+le seul Pokémon que j'avais sur moi.<0xFB>Je t'épuiserais simplement si tu
+avais à me protéger des Pokémon<0xFA>sauvages.<0xFB>Au lieu de cela, j'attendrai ici et
+je prendrai soin de ta guérison.",
 0x007D243A,"<0xFC><0x01><0x08>Oh, and if you find Staraptor,
 please, bring him back to me.","<0xFC><0x01><0x08>Oh, and if you find Staraptor,
 please, bring him back to me.",63,1,64,pokemon,dialogue,"{COLOR}ËOh, et si vous trouvez Étouraptor,
@@ -19748,7 +19834,7 @@ quoi nous avons travaillé si dur.",
 0x007D45E9,"<0xFC><0x01><0x08>Either way, with or without him, I
 am now ready to begin.","<0xFC><0x01><0x08>Either way, with or without him, I
 am now ready to begin.",60,2,62,pokemon,description,"{COLOR}ËQuoi qu'il en soit, avec ou sans
-lui, je suis maintenant prêt à",
+lui, je suis maintenant prêt à<0xFA>commencer.",
 0x007D46F4,<0xFC><0x01><0x08>Zapdos!<0xFB>Come forth!,<0xFC><0x01><0x08>Zapdos!<0xFB>Come forth!,22,1,23,pokemon,dialogue,{COLOR}ËZapdos!<0xFB>Sortez!,
 0x007D470B,<0xFC><0x01><0x08>Moltres!<0xFB>Come forth!,<0xFC><0x01><0x08>Moltres!<0xFB>Come forth!,23,1,24,pokemon,dialogue,{COLOR}ËMoltres !<0xFB>Sortez !,
 0x007D4723,<0xFC><0x01><0x08>Articuno!<0xFB>Come forth!,<0xFC><0x01><0x08>Articuno!<0xFB>Come forth!,24,2,26,pokemon,dialogue,{COLOR}ËArticuno!<0xFB>Sortez!,
@@ -19767,9 +19853,9 @@ It's actually working!",39,2,41,pokemon,dialogue,"{COLOR}ËÇa marche !
 Ça marche vraiment !",
 0x007D486D,"<0xFC><0x01><0x08>The bottle is now free.<0xFB>Once I open it, the dark force will
 be mine to command.","<0xFC><0x01><0x08>The bottle is now free.<0xFB>Once I open it, the dark force will
-be mine to command.",82,1,83,pokemon,dialogue,"{COLOR}ËLa bouteille est maintenant
-gratuite.<0xFB>Une fois que je l'aurai ouverte, la
-force obscure sera mienne aux",
+be mine to command.",82,1,83,pokemon,dialogue,"{COLOR}ËLa bouteille est enfin
+libérée.<0xFB>Une fois que je l'aurai ouverte, la
+force obscure sera mienne et<0xFA>m'obéira.",
 0x007D48C0,"<0xFC><0x01><0x08>Huh?
 Why is nothing happening?<0xFB>The bottle is open""","<0xFC><0x01><0x08>Huh?
 Why is nothing happening?<0xFB>The bottle is open""",53,2,55,pokemon,dialogue,"{COLOR}ËHuh ? Pourquoi rien
@@ -19829,8 +19915,8 @@ released from the Prison Bottle!<0xFB>And as your trainer, I am fully
 capable of releasing it!","<0xFC><0x01><0x08>Hoopa, prepare yourself!<0xFB>Your true power is about to be
 released from the Prison Bottle!<0xFB>And as your trainer, I am fully
 capable of releasing it!",148,2,150,pokemon,dialogue,"{COLOR}ËHoopa, prépare-toi !<0xFB>Votre véritable pouvoir est sur le
-point d'être libéré de la bouteille<0xFB>Et en tant que votre entraîneur, je
-suis pleinement capable de le",
+point d'être libéré de la bouteille<0xFA>de Prison !<0xFB>Et en tant que votre entraîneur, je
+suis pleinement capable de le<0xFA>libérer !",
 0x007D512A,"Aklove: <0xFC><0x01><0x08>At last!<0xFB>I've waited years for this moment!<0xFB>Hoopa!<0xFB>The seal on your power has finally
 been broken!","Aklove: <0xFC><0x01><0x08>At last!<0xFB>I've waited years for this moment!<0xFB>Hoopa!<0xFB>The seal on your power has finally
 been broken!",109,2,111,pokemon,dialogue,"Aklove : {COLOR}ËEnfin !<0xFB>J'ai attendu ce moment pendant des
@@ -19844,6 +19930,23 @@ of this?<0xFB>Perhaps if we have a common goal,
 we can work together!",124,2,126,pokemon,dialogue,"Zeph : {COLOR}ËAklove, dis-moi !<0xFB>Pourquoi fais-tu tout
 tout cela ?<0xFB>Peut-être que si nous avons un
 objectif commun, nous pourrons",
+0x007D522C,"Aklove: <0xFC><0x01><0x08>Fool.<0xFB>We have no common goal.<0xFB>I am a descendant of the king of
+Kalos during the Great War.<0xFB>My goal is simply to finish what he
+started and destroy this region.<0xFB>With this unbound Hoopa, I will
+bring the Ultimate Weapon of Kalos<0xFA>here and use it to turn Borrius<0xFA>into a region of death and<0xFA>destruction!<0xFB>Then, finally, his suffering will
+be at its end""<0xFB>Now tell me, Zeph. What are your
+goals?","Aklove: <0xFC><0x01><0x08>Fool.<0xFB>We have no common goal.<0xFB>I am a descendant of the king of
+Kalos during the Great War.<0xFB>My goal is simply to finish what he
+started and destroy this region.<0xFB>With this unbound Hoopa, I will
+bring the Ultimate Weapon of Kalos<0xFA>here and use it to turn Borrius<0xFA>into a region of death and<0xFA>destruction!<0xFB>Then, finally, his suffering will
+be at its end""<0xFB>Now tell me, Zeph. What are your
+goals?",398,2,400,pokemon,dialogue,"Aklove : {COLOR}ËInsensé.<0xFB>Nous n'avons pas d'objectif commun.<0xFB>Je suis un descendant du roi de
+Kalos pendant la Grande Guerre.<0xFB>Mon objectif est simplement de
+terminer ce qu'il a commencé et de<0xFA>détruire cette région.<0xFB>Avec ce Hoopa non lié, je vais
+apporter l'arme ultime de Kalos<0xFA>ici et l'utiliser pour transformer
+Borrius<0xFA>dans une région de mort et<0xFA>destruction !<0xFB>Alors, enfin, ses souffrances seront
+à leur fin...<0xFB>Maintenant, dis-moi, Zeph. Quels
+sont vos objectifs ?",
 0x007D53BB,"Zeph: <0xFC><0x01><0x08>My goals?<0xFB>I have but one goal.<0xFB>To see those I cared about once
 more.","Zeph: <0xFC><0x01><0x08>My goals?<0xFB>I have but one goal.<0xFB>To see those I cared about once
 more.",77,2,79,pokemon,dialogue,"Zeph : {COLOR}ËMes objectifs ?<0xFB>Je n'ai qu'un seul objectif.<0xFB>Voir ceux qui me tiennent à coeur une
@@ -19858,7 +19961,7 @@ quelqu'un essaierait ça !<0xFB>Tu es vraiment étrange, Zeph.",
 0x007D54A7,"Aklove: <0xFC><0x01><0x08>Enough!<0xFB>Remove yourself from my presence.<0xFB>The Shadows are finshed.<0xFB>It's time for Borrius to be
 enveloped in The Light of Ruin.<0xFB>But first""<0xFB>Grunts!<0xFB>Bring <0xFD><0x01> to me!","Aklove: <0xFC><0x01><0x08>Enough!<0xFB>Remove yourself from my presence.<0xFB>The Shadows are finshed.<0xFB>It's time for Borrius to be
 enveloped in The Light of Ruin.<0xFB>But first""<0xFB>Grunts!<0xFB>Bring <0xFD><0x01> to me!",172,2,174,pokemon,dialogue,"Aklove : {COLOR}ËAssez !<0xFB>Retirez-vous de ma présence.<0xFB>Les Ombres sont finies.<0xFB>Il est temps pour Borrius d'être
-enveloppé dans la Lumière de la<0xFB>Mais d'abord...<0xFB>Grunts !<0xFB>Apportez-moi {PLAYER} !",
+enveloppé dans la Lumière de la<0xFA>Ruine.<0xFB>Mais d'abord...<0xFB>Grunts !<0xFB>Apportez-moi {PLAYER} !",
 0x007D5554,"Zeph: <0xFC><0x01><0x08>My grunts""","Zeph: <0xFC><0x01><0x08>My grunts""",19,2,21,pokemon,dialogue,Zeph : {COLOR}ËMes grognements...,
 0x007D5568,"Aklove: <0xFC><0x01><0x08>Are you really surprised
 your grunts would join me?<0xFB>You burn them alive if they disobey
@@ -19923,7 +20026,7 @@ mort.<0xFA><0xFB><0xFB>
 things began to get out of hand.<0xFB>When did it go all wrong""","We started out with good intent.<0xFB>It was only some time later on when
 things began to get out of hand.<0xFB>When did it go all wrong""",127,2,129,pokemon,description,"Nous avons commencé avec de bonnes
 intentions.<0xFB>Ce n'est que quelque temps plus tard
-que les choses ont commencé à<0xFB>Quand est-ce que tout a mal tourné...",
+que les choses ont commencé à<0xFA>nous échapper.<0xFB>Quand est-ce que tout a mal tourné...",
 0x007D612C,"It's time, <0xFD><0x01>.","It's time, <0xFD><0x01>.",14,2,16,pokemon,location,"Il est temps, <0xFD><0x01>.",
 0x007D613B,MARLON. <0xFD><0x01>.,MARLON. <0xFD><0x01>.,11,1,12,pokemon,location,MARLON. <0xFD><0x01>.,
 0x007D6147,"<0xFC><0x01><0x02>Marlon: <0xFC><0x01><0x08>Arceus""<0xFB>The creator of the universe""","<0xFC><0x01><0x02>Marlon: <0xFC><0x01><0x08>Arceus""<0xFB>The creator of the universe""",50,1,51,pokemon,description,,
@@ -19980,7 +20083,7 @@ these""zombies right now!","Véga: <0xFC><0x01><0x08>All grunts, retreat back to
 the base in <0xFC><0x01><0x06>Vivill Town<0xFC><0x01><0x08>!<0xFB>We're not equipped to deal with
 these""zombies right now!",124,2,126,pokemon,dialogue,"Véga : {COLOR}ËTous les grognements,
 retournez à la base de {COLOR}ÉVivill Town{COLOR}Ë!<0xFB>Nous ne sommes pas équipés pour
-affronter ces... zombies pour le",
+affronter ces... zombies pour le<0xFA>moment !",
 0x007D6CD7,Marlon: <0xFC><0x01><0x08>Oh no you don't!<0xFB>You're not getting away yet!,Marlon: <0xFC><0x01><0x08>Oh no you don't!<0xFB>You're not getting away yet!,56,2,58,pokemon,dialogue,"Marlon : {COLOR}ËOh non, tu ne t'échapperas
 pas ainsi !<0xFB>Tu ne t'en sortiras pas !",
 0x007D6D10,Véga: <0xFC><0x01><0x08>You can't restrain me!,Véga: <0xFC><0x01><0x08>You can't restrain me!,31,1,32,pokemon,dialogue,Véga : {COLOR}ËTu ne peux pas me retenir !,
@@ -20038,7 +20141,7 @@ Voulez-vous les enfiler ?",
 0x007D7AA6,"You put on the clothes and placed
 Marlon's uniform in the Cube.","You put on the clothes and placed
 Marlon's uniform in the Cube.",63,1,64,pokemon,dialogue,"Vous avez enfilé les vêtements et
-placé l'uniforme de Marlon dans le",
+placé l'uniforme de Marlon dans le<0xFA>Cube.",
 0x007D819F,"Thank you for battling with me,
 sir.<0xFB>Now we are both more prepared for
 the inevitable confrontation with<0xFA>the Light of Ruin.","Thank you for battling with me,
@@ -20049,7 +20152,7 @@ deux mieux préparés pour<0xFA>la Lumière de la Ruine.",
 0x007D821B,"Of course, sir.<0xFB>I wouldn't expect you to waste your
 time on a grunt, such as myself.","Of course, sir.<0xFB>I wouldn't expect you to waste your
 time on a grunt, such as myself.",84,2,86,pokemon,dialogue,"Bien sûr, monsieur.<0xFB>Je ne m'attendrais pas à ce que vous
-perdiez votre temps avec un",
+perdiez votre temps avec un<0xFA>sbire tel que moi.",
 0x007D8270,"I expected nothing less from you,
 sir.","I expected nothing less from you,
 sir.",38,3,41,pokemon,dialogue,"Je n'en attendais pas moins,
@@ -20057,11 +20160,11 @@ monsieur.",
 0x007D86B9,"The door requires a Key Card with
 Clearance Level: <0xFC><0x01><0x06><0xFD><0x02><0xFC><0x01><0x02>, to be opened.","The door requires a Key Card with
 Clearance Level: <0xFC><0x01><0x06><0xFD><0x02><0xFC><0x01><0x02>, to be opened.",74,3,77,pokemon,description,"La porte nécessite une carte-clé
-avec niveau d'autorisation : {COLOR}É{STR_VAR_1}{COLOR}Á pour",
+avec niveau d'autorisation : {COLOR}É{STR_VAR_1}{COLOR}Á pour<0xFA>être ouverte.",
 0x007D8704,"The door requires a Key Card with
 Clearance Level: <0xFC><0x01><0x06><0xFD><0x02><0xFC><0x01><0x02>, to be opened.<0xFB>Would you like to open the door?","The door requires a Key Card with
 Clearance Level: <0xFC><0x01><0x06><0xFD><0x02><0xFC><0x01><0x02>, to be opened.<0xFB>Would you like to open the door?",107,8,115,pokemon,dialogue,"La porte nécessite une carte-clé
-avec Niveau d'autorisation : {COLOR}É{STR_VAR_1}{COLOR}Á, pour<0xFB>Voulez-vous ouvrir la porte ?",
+avec Niveau d'autorisation : {COLOR}É{STR_VAR_1}{COLOR}Á, pour<0xFA>être ouverte.<0xFB>Voulez-vous ouvrir la porte ?",
 0x007D88A8,"Are you impressed, sir?","Are you impressed, sir?",23,2,25,pokemon,dialogue,"Êtes-vous impressionné, monsieur?",
 0x007D88C0,"For spending your valuable time
 battling me, I'd like to thank you<0xFA>by healing your Pokémon.","For spending your valuable time
@@ -20070,7 +20173,7 @@ précieux à me combattre, j'aimerais<0xFA>en soignant votre Pokémon.",
 0x007D891C,"Of course, sir.<0xFB>I'm sure you have much more,
 important, business to attend to.","Of course, sir.<0xFB>I'm sure you have much more,
 important, business to attend to.",78,2,80,pokemon,dialogue,"Bien sûr, monsieur.<0xFB>Je suis sûr que vous avez bien
-d'autres affaires, importantes, à",
+d'autres affaires, importantes, à<0xFA>régler.",
 0x007D896B,"The final batch of Shadow Warriors
 that Zeph requested, are almost<0xFA>fully synthesized.<0xFB>Once the process is complete, it
 should give us enough fighting<0xFA>power to take down the Light of<0xFA>Ruin.","The final batch of Shadow Warriors
@@ -20087,6 +20190,16 @@ It's dangerous!",30,4,34,pokemon,dialogue,"Hé, hé, gamin
 sir.","Please feel free to enter the lab,
 sir.",39,2,41,pokemon,description,"N'hésitez pas à entrer dans le
 laboratoire, monsieur.",
+0x007D8BEA,"I've been instructed by my
+superiors to hand out that HM to<0xFA>any trainers coming this way.<0xFB>Until the bridge is fixed, you'll
+need to use that HM for <0xFC><0x01><0x06>Rock Climb<0xFC><0x01><0x08><0xFA>if you want to go to <0xFC><0x01><0x06>Seaport City<0xFC><0x01><0x08>.<0xFB>Just face that rock wall over
+there to use it.","I've been instructed by my
+superiors to hand out that HM to<0xFA>any trainers coming this way.<0xFB>Until the bridge is fixed, you'll
+need to use that HM for <0xFC><0x01><0x06>Rock Climb<0xFC><0x01><0x08><0xFA>if you want to go to <0xFC><0x01><0x06>Seaport City<0xFC><0x01><0x08>.<0xFB>Just face that rock wall over
+there to use it.",252,4,256,pokemon,dialogue,"Mes supérieurs m'ont demandé de
+remettre ce HM à<0xFA>tous les entraîneurs venant par ici.<0xFB>Jusqu'à ce que le pont soit réparé,
+vous devrez utiliser ce HM pour<0xFA>Escalade si vous voulez vous rendre<0xFA>à {COLOR}ÉSeaport City{COLOR}Ë.<0xFB>Il suffit d'affronter cette paroi
+rocheuse au-dessus là pour<0xFA>l'utiliser.",
 0x007D8F5A,Which floor do you want?,Which floor do you want?,24,2,26,pokemon,dialogue,Quel étage souhaitez-vous ?,
 0x007D8F73,You're already on this floor.,You're already on this floor.,29,3,32,pokemon,dialogue,Vous êtes déjà à cet étage.,
 0x007D8FFD,"No!<0xFB>I'd rather drown than be turned
@@ -21928,7 +22041,7 @@ Prêt à le combattre encore ?",
 0x007FB2B6,"Hmph.
 I thought you had guts, kid.","Hmph.
 I thought you had guts, kid.",34,2,36,pokemon,dialogue,"Hmph.
-Je croyais que tu avais du cran,",
+Je croyais que tu avais du cran, gamin.",
 0x007FB2D9,"You're gonna need at least two
 Pokemon if they team up on you.","You're gonna need at least two
 Pokemon if they team up on you.",62,2,64,pokemon,dialogue,"Il te faut au moins deux Pokémon
@@ -24861,6 +24974,7 @@ celle-ci.",
 0x00923197,s ability.,,10,2,12,pokemon,other,,
 0x0092FB9F,Desolate Land,,13,1,14,pokemon,location,Terre Finale,
 0x0092FBCA,Electric Surge,,14,2,16,pokemon,location,Champ Électrique,
+0x00950D7C,Raises one stat and lowers another.,,35,0,35,pokemon,description,"Monte une stat, baisse une autre.",no-pointer: in-place only
 0x0095117C,"mon.
 If the holder is hit, the attacker
 will also be damaged upon contact.",,74,10,84,pokemon,description,,
@@ -61764,6 +61878,11 @@ presentarme.<0xFB>Mi nombre es""",184,2,186,pokemon,dialogue,"Dis...{PAUSE} si o
 chercher une sortie ensemble ?<0xFB>La porte là-bas est fichue avec ce
 guardien dans le coin.<0xFB>Oh oui, je devrais me présenter,
 partenaire.<0xFB>Mon nom est...",
+0x01F2D412,"And, well""<0xFC><0x08><0x18> you can see they hate
+it when people go snooping.<0xFB>Anyway, we'd better start looking
+for another exit, so let's move.",,130,0,130,pokemon,dialogue,"Bref""<0xFC><0x08><0x18> tu vois, ils détestent
+quand les gens fouinent.<0xFB>On ferait mieux de chercher
+une autre sortie, allons-y.",inline-text (no pointer)
 0x01F2D48D,s move.,,7,2,9,pokemon,other,,
 0x01F2D4C5,"d better look for another way
 out of here.",,42,3,45,pokemon,description,,
@@ -63743,6 +63862,24 @@ brought <0xFD><0x01> into our base!","<0x51>Qué""<0xFC><0x08><0x20>? Houndoom f
 trajo a <0xFD><0x01> a nuestra base!",88,1,89,pokemon,dialogue,"Impossible...{PAUSE}î Démolosse... portail...{PAUSE}<0xFB>c'était donc toi qui as amené
 {PLAYER} dans notre base !",
 0x01F3A6E8, into our base!,,15,1,16,pokemon,dialogue,,
+0x01F3A6F8,"Actually, that was Hoopa acting of
+its own accord.<0xFB>It knew we were about to begin
+the process of releasing its power,<0xFA>so in a futile act of desperation,<0xFA>it summoned <0xFD><0x01> to rescue it<0xFA>from me.<0xFB>For you see""<0xFC><0x08><0x18> for reasons I cannot
+fathom, it is <0xFD><0x01>, not I, that<0xFA>Hoopa prefers as its Trainer.<0xFB>And so, naturally, I want to see
+<0xFD><0x01> eliminated.<0xFB>Once <0xFD><0x03> is gone, Hoopa will have
+to accept ME as its true Trainer""<0xFB>Only then will I finally be able to
+use its true power, capable of<0xFA>moving entire landmasses""","De hecho, Hoopa actúo por su propia
+cuenta.<0xFB>Sabía que estabas a punto de
+comenzar el proceso de liberar su<0xFA>poder, así que en un inútil acto<0xFA>de desesperación, trajo a<0xFA><0xFD><0x01> hasta aquí.<0xFB>Porque verás""<0xFC><0x08><0x18> por razones que no
+puedo comprender, es a <0xFD><0x01>,<0xFA>a quien prefiere como su Guardián.<0xFB>Y por eso, quiero que se elimine a
+<0xFD><0x01>.<0xFB>Una vez que <0xFD><0x01> se haya ido,
+Hoopa tendrá que aceptarme como su<0xFA>verdadero Guardián de una vez por<0xFA>todas, quiera o no.",494,2,496,pokemon,dialogue,"En réalité, Hoopa agissait de son
+propre chef. Il savait que nous<0xFB>allions commencer à libérer sa
+puissance, alors, dans un geste<0xFA>désespéré, il a invoqué {PLAYER}<0xFA>pour qu'il le sauve de moi. Car<0xFA>vois-tu...{PAUSE} pour des raisons qui<0xFA>m'échappent, c'est<0xFB>{PLAYER}, pas moi, que Hoopa préfère
+comme Dresseur. Donc, naturellement,<0xFA>je veux voir {PLAYER} éliminé.<0xFB>Une fois {STR_VAR_2} parti, Hoopa
+devra m'accepter, MOI, comme<0xFB>son vrai Dresseur... Alors seulement
+je pourrai enfin utiliser<0xFB>son véritable pouvoir, capable
+de déplacer des masses<0xFA>de terre entières...",
 0x01F3A8E7,"I""<0xFC><0x08><0x20> concede""<0xFB>I cannot hope to fight a Pokémon
 like that""","Yo""<0xFC><0x08><0x20> no puedo luchar contra un
 Pokémon tan fuerte""",58,3,61,pokemon,dialogue,"Je...{PAUSE}î j'abandonne... Je ne peux<0xFB>pas espérer affronter
@@ -63784,6 +63921,23 @@ algo de esto?<0xFB>Si tenemos casi el mismo objetivo,
 peut-être coopérer !",
 0x01F3AB50,"If we share a common goal, perhaps
 we can work together!",,56,2,58,pokemon,dialogue,,
+0x01F3AB89,"Fool""<0xFC><0x08><0x18> our goals are inevitably at
+odds.<0xFB>I am a descendant of the so-called
+<0xB1>foreign king<0xB2> from the great war.<0xFB>My goal is simply to finish what he
+started - and win the war.<0xFB>With Hoopa's power now unbound, I
+will bring the weapon he created,<0xFA>and use it to rain fire and<0xFA>destruction across Borrius!<0xFB>Then, finally, his suffering can
+be at its end""<0xFB>Now, tell me, Zeph.
+What were your goals?","Tonto""<0xFC><0x08><0x18> nuestros objetivos no son
+iguales.<0xFB>Soy descendiente del llamado <0xB1>Rey
+Extranjero<0xB2> de la gran guerra.<0xFB>Mi objetivo es simplemente terminar
+lo que él empezó y ganar la<0xFA>guerra.<0xFB><0x52>Con el poder de Hoopa liberado,
+traeré el arma que él creó y la<0xFA>usaré para hacer llover fuego y<0xFA>destrucción sobre Borrius!<0xFB>Ahora dime, Zeph.<0xFB><0x51>Cuáles eran tus metas?",389,2,391,pokemon,dialogue,"Insensé...{PAUSE} nos buts sont
+opposés. Je suis un descendant du<0xFB>"" roi étranger "" de la guerre.
+Mon but est simplement de finir<0xFB>ce qu'il a commencé - et gagner
+la guerre. Avec le pouvoir de<0xFB>Hoopa enfin libre, je vais amener
+l'arme qu'il a créée, et l'utiliser<0xFA>pour faire pleuvoir le feu<0xFA>et la destruction sur Borrius<0xFB>! Alors, enfin, sa souffrance
+prendra fin... Maintenant,<0xFB>dis-moi, Zeph. Quels étaient
+tes objectifs ?",
 0x01F3ACE5,"Now, tell me, Zeph.
 What were your goals?",,41,2,43,pokemon,dialogue,,
 0x01F3AD0F,"My goals?<0xFB>There was only one""<0xFC><0x08><0x20> one I always
@@ -73033,6 +73187,18 @@ bien plus importantes à faire.",
 important business to attend to.",,58,2,60,pokemon,dialogue,,
 0x01F6FF3B,"And the Light of Ruin will stand no
 chance against them!",,56,2,58,pokemon,dialogue,,
+0x01F6FF74,"They wanted us to go back to HQ
+and stop making Shadow Warriors.<0xFB>STOP MAKING SHADOW WARRIORS!?<0xFB>ARE YOU KIDDING ME!?<0xFB>Creating Shadow Warriors is all I
+live for!<0xFB>I'm fortunate that Zeph still had a
+use for more and allowed me to<0xFA>continue synthesizing them.","Querían que volviéramos al cuartel
+general y dejáramos de ser<0xFA>Soldados Sombras.<0xFB><0x52><0x51>DEJAR DE SER SOLDADOS
+SOMBRAS?!<0xFB><0x52>Las Sombras es para la único que
+vivo!<0xFB>Tengo suerte de que Zeph todavía
+tuviera investigaciones y me deje<0xFA>trabajar en ellas.",254,1,255,pokemon,dialogue,"Ils voulaient qu'on retourne au QG
+et qu'on arrête de faire des<0xFB>Guerriers Ombres. ARRÊTER DE FAIRE<0xFB>DES GUERRIERS OMBRES !?
+TU PLAISANTES !?<0xFB>Créer des Guerriers Ombres, c'est
+ma raison<0xFB>de vivre ! Heureusement, Zeph avait
+encore besoin d'autres exemplaires<0xFA>et j'ai pu continuer la synthèse.",
 0x01F70057,continue synthesizing them.,,27,1,28,pokemon,other,,
 0x01F70073,"Something grotesque is being
 synthesized in the tube.","Something grotesque is being
@@ -80257,7 +80423,7 @@ may not be used.<0xFB>Please choose the Pokémon to
 battle with.","El tipo <0xFC><0x01><0x06><0xFD><0x07><0xFC><0x01><0x08> y <0xFC><0x01><0x06><0xFD><0x08><0xFC><0x01><0x08> no se
 pueden usar.<0xFB>Elige el Pokémon con el que luchar.",92,1,93,pokemon,description,"Les capacités de type
 {COLOR}É{VERSION}{COLOR}Ë et<0xFB>{COLOR}É{EVIL_TEAM}{COLOR}Ë ne
-peuvent pas être utilisées. Merci de",
+peuvent pas être utilisées. Merci de<0xFA>choisir le Pokémon qui va<0xFA>combattre.",
 0x01F9BC30,"mon to
 battle with.",,19,1,20,pokemon,other,,
 0x01F9BC44,"<0xFC><0x01><0x06><0xFD><0x07><0xFC><0x01><0x08>-, <0xFC><0x01><0x06><0xFD><0x08><0xFC><0x01><0x08>-, and <0xFC><0x01><0x06><0xFD><0x09><0xFC><0x01><0x08>-
@@ -80273,7 +80439,7 @@ may not be used.<0xFB>Please choose the Pokémon to
 battle with.","El tipo <0xFC><0x01><0x06><0xFD><0x07><0xFC><0x01><0x08> y <0xFC><0x01><0x06><0xFD><0x08><0xFC><0x01><0x08> no
 se pueden usar.<0xFB>Elige el Pokémon con el que luchar.",92,1,93,pokemon,description,"Les capacités de type
 {COLOR}É{VERSION}{COLOR}Ë et<0xFB>{COLOR}É{EVIL_TEAM}{COLOR}Ë ne
-peuvent pas être utilisées. Merci de",
+peuvent pas être utilisées. Merci de<0xFA>choisir le Pokémon qui va<0xFA>combattre.",
 0x01F9BCF7,"mon to
 battle with.",,19,1,20,pokemon,other,,
 0x01F9BD0B,"<0xFC><0x01><0x06><0xFD><0x07><0xFC><0x01><0x08>-, <0xFC><0x01><0x06><0xFD><0x08><0xFC><0x01><0x08>-, and <0xFC><0x01><0x06><0xFD><0x09><0xFC><0x01><0x08>-
@@ -80326,7 +80492,8 @@ et sauve à sa mère inquiète.",
 when all of a sudden, she vanished!<0xFB>Please, <0xFD><0x02>, search for her!","Oh, cielos""
 Mi hija, no la encuentro""<0xFB>Estábamos de vacaciones en la <0xFC><0x01><0x06>playa<0xFC><0x01><0x04>,
 cuando de repente, <0x52>desapareció!<0xFB><0x52>Por favor, encuéntrala!",144,2,146,pokemon,dialogue,"Oh mon dieu... Ma fille, je ne la<0xFB>trouve nulle part ! Nous étions en<0xFB>vacances à la {COLOR}Éplage{COLOR}Ç
-quand tout à coup, elle a disparu !<0xFB>S'il te plaît, {STR_VAR_1},",
+quand tout à coup, elle a disparu !<0xFB>S'il te plaît, {STR_VAR_1},
+retrouve-la !",
 0x01F9C936,", search for her!",,17,2,19,pokemon,dialogue,,
 0x01F9C948,"Thank you, <0xFD><0x02>!<0xFB>As appearances go, she resembles
 any ordinary <0xFC><0x01><0x06>female Tuber<0xFC><0x01><0x04>.","<0x52>Muchas gracias!<0xFB>Según las apariencias, se parece
@@ -80405,7 +80572,8 @@ Find him, and bring him home safely.","<0x52>Un niño disfrazado de Pikachu ha
 escapado hacia Ruta 8! Encuéntralo
 y tráelo a casa sano y salvo.",104,2,106,pokemon,dialogue,"Un jeune garçon en costume de
 Pikachu s'est enfui de chez lui vers
-la Route 8 ! Trouve-le et ramène-le",
+la Route 8 ! Trouve-le et ramène-le
+chez lui sain et sauf.",
 0x01F9CE6C,"My brother!<0xFB>Please, help me!<0xFB>I was babysitting him when he ran
 away down the mountain!<0xFB>Please, help me find him!","<0x52>Mi hermano!
 <0x52>Ayúdame!<0xFB><0x52>Estaba cuidándolo cuando se escapó
@@ -80459,7 +80627,7 @@ elle me manque vraiment",
 0x01F9D22A,"<0xFC><0x01><0x02>While teamed up with Willy, the
 <0xFC><0x01><0x06>first 3<0xFC><0x01><0x02> viable Pokémon in your<0xFA>party will be selected for battle.","<0xFC><0x01><0x02>Mientres estés con Willy, los
 <0xFC><0x01><0x06>primeros 3<0xFC><0x01><0x02> Pokémon serán<0xFA>seleccionados para la batalla.",106,1,107,pokemon,dialogue,"{COLOR}ÁQuand tu es en équipe avec
-Willy, les {COLOR}É3<0xFA>premiers{COLOR}Á Pokémon valides de",
+Willy, les {COLOR}É3<0xFA>premiers{COLOR}Á Pokémon valides de<0xFA>ton équipe seront choisis pour<0xFA>le combat.",
 0x01F9D272,party will be selected for battle.,,34,1,35,pokemon,system,,
 0x01F9D295,"<0xFC><0x01><0x08>Sniff""<0xFB>I don't think this is the right way
 home""","<0xFC><0x01><0x08>Sniff""<0xFB>Este no es el camino correcto a
@@ -80645,7 +80813,8 @@ and mess with the Black Emboar?","<0x51>Crees que puedes meterte con los
 Emboar Negros?",67,3,70,pokemon,dialogue,"Tu crois pouvoir débarquer ici et
 importuner le Black Emboar ?",
 0x01F9E4CD,You do.,"Mierda""",7,2,9,pokemon,dialogue,Tu crois.,
-0x01F9E4D5,"We're the Black Emboar, you litch!",<0x52>Somos los mejores!,34,3,37,pokemon,dialogue,"On est le Black Emboar, espèce de",
+0x01F9E4D5,"We're the Black Emboar, you litch!",<0x52>Somos los mejores!,34,3,37,pokemon,dialogue,"On est le Black Emboar, espèce de
+minable !",
 0x01F9E4D8,"re the Black Emboar, you litch!",,31,3,34,pokemon,dialogue,,
 0x01F9E4F8,Do you know who we are?<0xFB>We're the Black Emboar!,"<0x51>Sabes quiénes somos?
 <0x52>Los Emboar Negros!",47,2,49,pokemon,dialogue,Tu sais qui on est ? On<0xFB>est le Black Emboar !,
@@ -80662,7 +80831,7 @@ dangereux !",
 0x01F9E569,s dangerous!,,12,2,14,pokemon,dialogue,,
 0x01F9E576,"The Black Emboar!
 Never stop, and never look back!",<0x52>Debes irte en este instante!,50,2,52,pokemon,dialogue,"Le Black Emboar ! On ne s'arrête
-jamais, et on ne regarde jamais en",
+jamais, et on ne regarde jamais en arrière !",
 0x01F9E5A9,Whad'ya want kid?<0xFB>We're busy!,<0x52>No sabes en que te metes!,29,2,31,pokemon,dialogue,"Qu'est-ce que tu veux,<0xFB>gamin ? On est occupés !",
 0x01F9E5BE,re busy!,,8,2,10,pokemon,dialogue,,
 0x01F9E5C7,"<0xFD><0x01>!<0xFB>You made it!
@@ -80707,7 +80876,8 @@ retrievin' his socks from the sewer.","<0x52>Problemas en el baño! Ayuda a tu
 colega a recuperar sus calcetines
 favoritos de la alcantarilla.",99,3,102,pokemon,dialogue,"Quelqu'un a des soucis de toilettes
 ! Aide ton camarade du Black
-<0xFD><0x01> en récupérant ses",
+<0xFD><0x01> en récupérant ses
+chaussettes dans les égouts.",
 0x01F9EB3A, his socks from the sewer.,,26,3,29,pokemon,other,,
 0x01F9ED06, for me?,,8,2,10,pokemon,dialogue,,
 0x01F9ED0F,"Thanks, <0xFD><0x01>.
@@ -80855,7 +81025,7 @@ a pu arriver ?",
 0x01F9F870,"Wha""<0xFC><0x08><0x20> you shouldn't be able
 to beat the Black Ferrothorn!<0xFB>Our hides are iron thick!","<0x52>Qué""<0xFC><0x08><0x18> no deberías poder vencer
 al Ferrothorn Negro!<0xFB><0x52>No entiendo qué pasó!",85,2,87,pokemon,dialogue,"Quoi...{PAUSE}î tu devrais pas
-pouvoir battre le Black Ferrothorn !<0xFB>Nos peaux sont aussi dures que du",
+pouvoir battre le Black Ferrothorn !<0xFB>Nos peaux sont aussi dures que du<0xFA>fer !",
 0x01F9F8AC,Our hides are iron thick!,,25,2,27,pokemon,dialogue,,
 0x01F9F8C6,"Chad! Take your dumb Pokémon
 back!<0xFB>We're gonna use those enhancers we
@@ -80955,7 +81125,7 @@ happily do it for ya.","Mi chico en <0xFC><0x01><0x06>Ciudad Dresco<0xFC><0x01><
 convertir muchas Hojas Oddish en<0xFA><0xFC><0x01><0x06>Humo Onírico<0xFC><0x01><0x08>.<0xFB><0x52>Llévale un poco de <0xFC><0x01><0x06>Hojas Oddish<0xFC><0x01><0x08>
 y hará lo que dije!",150,2,152,pokemon,dialogue,"Mon gars à {COLOR}ÉVille
 Dresco{COLOR}Ë peut changer les<0xFA>Feuilles de Mystherbe en encore plus<0xFB>de {COLOR}ÉBrume de Rêve{COLOR}Ë.
-Apporte-lui des",
+Apporte-lui des<0xFA>Mystherbe, il le fera avec plaisir.",
 0x01FA02D1,"ll
 happily do it for ya.",,24,2,26,pokemon,other,,
 0x01FA02F1,Goon C,,6,3,9,pokemon,location,Sbire C,
@@ -84066,8 +84236,3 @@ V3.<0xFB>Los datos fueron enviados al
 laboratorio de investigación.<0xFB>Niños restantes: <0xFC><0x01><0x06><0xFD><0x02><0xFC><0x01><0x02>.",128,5,133,pokemon,description,"{COLOR}ÁL'enfant a été scanné en utilisant le
 Cube.<0xFB>Les données ont été envoyées au scientifique du
 Laboratoire de Recherche Onirique.<0xFB>Enfants restants : {COLOR}É{STR_VAR_1}{COLOR}Á.",
-0x01F2D412,"And, well""<0xFC><0x08><0x18> you can see they hate
-it when people go snooping.<0xFB>Anyway, we'd better start looking
-for another exit, so let's move.",,130,0,130,pokemon,dialogue,"Bref""<0xFC><0x08><0x18> tu vois, ils détestent
-quand les gens fouinent.<0xFB>On ferait mieux de chercher
-une autre sortie, allons-y.",inline-text (no pointer)
