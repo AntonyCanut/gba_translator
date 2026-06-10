@@ -13,6 +13,8 @@ output/reports/
 # Playwright
 test-results/
 node_modules/
+# node_modules symlinked from the main checkout (worktree setups)
+node_modules
 dist-playwright/
 /playwright-report/
 /blob-report/
