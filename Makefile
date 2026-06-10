@@ -97,7 +97,7 @@ build-es: $(OFFSET_MAP) $(BUILD_SCRIPT)
 		--language spanish \
 		--output $(SPANISH_BUILD)
 
-build-fr: $(BUILD_SCRIPT)
+build-fr: $(ENGLISH_EXTRACT) $(SPANISH_EXTRACT) $(BUILD_SCRIPT)
 	@if [ -z "$(FR_TRANSLATION)" ]; then \
 		echo "No translation_ready.json found in output/translation/"; \
 		exit 1; \
