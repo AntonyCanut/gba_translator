@@ -1,0 +1,608 @@
+[
+ {
+  "line": 428,
+  "offset": "0x1A6046",
+  "english": "Oh, good!<0xFB>You and your Pokémon are looking\nmuch better.<0xFB>If your Pokémon's HP is low, try\nhealing up at a <0xFC><0x01><0x06>Pokémon Center<0xFC><0x01><0x04>!<0xFB>I think the closest one to here is\nin <0xFC><0x01><0x06>Bellin Town<0xFC><0x01><0x04>.<0xFB>Or maybe, buy some <0xFC><0x01><0x06>Potions<0xFC><0x01><0x04> from the\n<0xFC><0x01><0x06>Poké Mart<0xFC><0x01><0x04>!<0xFB>It's never a bad idea to be\nprepared for the worst.<0xFB>Make me proud, honey!<0xFB>Take care!",
+  "french": "Ah, parfait ! Toi et tes Pokémon\\navez bien meilleure mine.\\pSi les PV de tes Pokémon sont bas,\\nsoigne-les dans un\\p{COLOR}ÉCentre Pokémon{COLOR}Ç !\\nLe plus proche d’ici est à\\p{COLOR}ÉBellin Town{COLOR}Ç.\\nOu achète des\\p{COLOR}ÉPotions{COLOR}Ç au\\n{COLOR}ÉPoké Mart{COLOR}Ç !\\pC’est toujours bien de se préparer\\nau pire.\\pRends-moi fier, chéri !\\pPrends soin de toi !"
+ },
+ {
+  "line": 440,
+  "offset": "0x1A6CA2",
+  "english": "9The amount of progress you've made\non your Pokédex is:<0xFB><0xFD><0x02> Pokémon seen and\n<0xFD><0x03> Pokémon owned.<0xFB><0xFC><0x06><0x02>Prof. Log's rating:",
+  "french": "9Ton avancement Pokédex est de :\\n{STR_VAR_1} Pokémon vus et\\p{STR_VAR_2} Pokémon\\npossédés.\\p{FONT_NORMAL}Avis du Prof. Log :"
+ },
+ {
+  "line": 524,
+  "offset": "0x1BDBF8",
+  "english": "Let me explain how the Pokémon\nWireless Club works.<0xFB>On this, the top floor, there are\ntwo rooms.<0xFB>First, the room on the left.\nIt's the Union Room.<0xFB>You may link up with Trainers\naround you who have also entered<0xFA>the Union Room.<0xFB>With them, you may do things like\nchat, battle, and trade.<0xFB>Second, the room on the right is\nthe Direct Corner.<0xFB>You may trade or battle Pokémon\nwith your friends in this room.<0xFB>Sometimes, you may not be able to\nfind your friends in the Union Room<0xFA>or the Direct Corner.<0xFB>In that case, please move closer\nto your friends.<0xFB>If the Wireless Adapter isn't\nconnected, you may still link up<0xFA>using a GBA Game Link cable.<0xFB>If that is the case, you must go\nto the Direct Corner.<0xFB>I hope you enjoy the Wireless \nCommunication System.",
+  "french": "Je vais expliquer comment marche le\\nClub Sans Fil Pokémon.\\pIci, à l’étage du haut, il y a deux\\nsalles.\\pD’abord, la salle de gauche.\\nC’est la Salle Union.\\pTu peux te lier avec des\\nDresseurs autour de toi qui sont\\ldans la Salle Union.\\pAvec eux, tu peux discuter,\\ncombattre et échanger.\\pEnsuite, la salle de droite est le\\nCoin Direct.\\pTu peux échanger ou combattre des\\nPokémon avec tes amis ici.\\pParfois, tu ne trouves pas tes amis\\ndans la Salle Union ou le Coin\\lDirect.\\pDans ce cas, rapproche-toi d’eux.\\nSi l’Adaptateur Sans Fil n’est pas\\pconnecté, tu peux te lier avec un\\ncâble Game Link GBA.\\lDans ce cas, tu dois aller au Coin\\pDirect.\\nProfite bien du Système de\\pCommunication Sans Fil.\\n"
+ },
+ {
+  "line": 2988,
+  "offset": "0xA4D138",
+  "english": "WARNING!<0xFB>The correct system time could\nnot be read.<0xFB>Enable the Real Time Clock (RTC),\nand make sure the time is correct.<0xFB>If you are using VBA, consider\nswitching to the superior <0xFC><0x01><0x06>mGBA<0xFC><0x01><0x02>.<0xFB>If you do not wish to, then follow\nthese instructions to enable the RTC.<0xFB><0xFC><0x01><0x04>VBA Instructions<0xFC><0x01><0x02>:<0xFB>First, click <0xFC><0x01><0x06>Options<0xFC><0x01><0x02> on the top bar.<0xFB>Next, under <0xFC><0x01><0x06>Emulator<0xFC><0x01><0x02>, select the\n<0xFC><0x01><0x06>Real Time Clock<0xFC><0x01><0x02> option.<0xFB>Finally, completely close and restart\nthe emulator.<0xFB><0xFC><0x01><0x04>3DS Instructions<0xFC><0x01><0x02>:<0xFB>Use the <0xFC><0x01><0x06>New Super Ultimate VC Injector\nfor 3DS<0xFC><0x01><0x02> to create the CIA file.<0xFB>Once open, confirm the <0xFC><0x01><0x06>ROM Save Type<0xFC><0x01><0x02>\nis set to the following:<0xFB><0xFC><0x01><0x06>Flash 1Mbit (Macronix, ID: 0x09C2)\n+ RTC<0xFC><0x01><0x02>.<0xFB>The <0xFC><0x01><0x06>injection method<0xFC><0x01><0x02> must also be\nset to <0xFC><0x01><0x06>GBA Virtual Console<0xFC><0x01><0x02>.<0xFB><0xFC><0x01><0x04>Delta Instructions<0xFC><0x01><0x02>:<0xFB>Use the premium version of Delta\nor switch to <0xFC><0x01><0x06>GBA4iOS<0xFC><0x01><0x02>.",
+  "french": "ATTENTION !\\pL'heure du système est illisible.\\nActivez la RTC et vérifiez l'heure.\\pSi vous utilisez VBA, passez à\\n{COLOR}ÉmGBA{COLOR}Á.\\pSinon, suivez : Options > Emulator >\\nReal Time Clock.\\pFermez et relancez.\\n{COLOR}Ç3DS{COLOR}Á : dans l'injecteur VC 3DS,\\pvérifiez {COLOR}ÉROM Save Type{COLOR}Á sur\\p{COLOR}ÉFlash 1Mbit (Macronix, ID: 0x09C2)\\p+ RTC{COLOR}Á.\\n{COLOR}ÇDelta{COLOR}Á : utilisez la version premium\\pou passez à {COLOR}ÉGBA4iOS{COLOR}Á.\\n\\p\\p\\n\\p\\n\\p\\n\\p\\n\\p\\p\\n"
+ },
+ {
+  "line": 3373,
+  "offset": "0x417B9F",
+  "english": "Someone's PC",
+  "french": "PC de quelqu'un"
+ },
+ {
+  "line": 5441,
+  "offset": "0x74C4B9",
+  "english": "Do you see that <0xFC><0x01><0x06>Porygon<0xFC><0x01><0x04>?<0xFB>If you talk to it, you can directly\ninterface with the Pokémon Storage<0xFA>System!<0xFB>Why use a PC when a Pokémon can do\nit for you?",
+  "french": "Tu vois ce {COLOR}ÉPorygon{COLOR}Ç ?\\pEn lui parlant, tu accèdes\\ndirectement au Stockage Pokémon !\\lPourquoi utiliser un PC quand un\\pPokémon peut le faire pour toi\\n?"
+ },
+ {
+  "line": 5449,
+  "offset": "0x74F960",
+  "english": "Trainer Tips!<0xFB>Hold the <0xFC><0x01><0x06>B-button<0xFC><0x01><0x02> to run!<0xFB>Press the <0xFC><0x01><0x06>L-button<0xFC><0x01><0x02> to toggle\nauto-run!",
+  "french": "ASTUCES DRESSEUR !\\pMaintiens {COLOR}ÉB{COLOR}Á pour\\pAppuie sur {COLOR}ÉL{COLOR}Á pour\\nactiver la course auto !"
+ },
+ {
+  "line": 5488,
+  "offset": "0x75350F",
+  "english": "9My brother caught his Pokémon\nby talking a Poké Ball in<0xFA>Vivill Woods.<0xFB>But I heard different Pokémon\nappear for different trainers.",
+  "french": "9Mon frère a attrapé son Pokémon en\\nlançant une Poké Ball dans la Forêt\\lMais j'ai entendu dire que des\\pPokémon différents apparaissent\\nselon le dresseur."
+ },
+ {
+  "line": 5533,
+  "offset": "0x75BF90",
+  "english": "I swear\"<0xFB>Those weird guys have been blocking\noff <0xFC><0x01><0x06>Route 9<0xFC><0x01><0x08> for days\"<0xFB>I wonder what they're up to?",
+  "french": "Je te jure…\\pCes types bizarres bloquent la\\n{COLOR}ÉRoute 9{COLOR}Ë depuis des\\pQue mijotent-ils ?"
+ },
+ {
+  "line": 5676,
+  "offset": "0x77133A",
+  "english": "<0xFC><0x01><0x06>Alice<0xFC><0x01><0x08>, the Gym Leader, likes to use\n<0xFC><0x01><0x06>Flying<0xFC><0x01><0x08>-type Pokémon.<0xFB>I know, it's not what you'd expect\nfrom a Gym up here.",
+  "french": "{COLOR}ÉAlice{COLOR}Ë, la\\nChampionne, aime utiliser des\\pPas ce à quoi on s'attend pour une\\nArène ici."
+ },
+ {
+  "line": 6296,
+  "offset": "0x7B4AE1",
+  "english": "Most of my friends came to Seaport\nCity from far away regions.",
+  "french": "La plupart de mes amis sont venus à\\nla Ville Portuaire depuis des"
+ },
+ {
+  "line": 6316,
+  "offset": "0x7B5CA4",
+  "english": "With the Fall Badge, any Pokémon\nup to Lv. 60 will obey you.<0xFB>It also allows your Pokémon to\nmove heavy boulders with <0xFC><0x01><0x06>Strength<0xFC><0x01><0x08>.<0xFB>Honestly, I don't know why any\nstrong Pokémon can't already do<0xFA>this\"<0xFB>But what can you do?<0xFB>That's just the way the world\nworks.<0xFB>Anyways, take this TM to go along\nwith that badge. ",
+  "french": "Avec le Badge Chute, tout Pokémon\\n\\pjusqu'au Nv. 60 t'obéira. Il permet\\n\\paussi à tes Pokémon de pousser des\\n\\lrochers lourds avec\\n\\p{COLOR}ÉForce{COLOR}Ë. Franchement,\\n\\pje ne sais pas pourquoi les Pokémon\\n\\pcostauds ne peuvent pas déjà le\\nfaire… Mais que veux-tu ? C'est"
+ },
+ {
+  "line": 6323,
+  "offset": "0x7B61BF",
+  "english": "You should stock up on <0xFC><0x01><0x06>revives<0xFC><0x01><0x04>!<0xFB>They heal a fainted Pokémon back\nto half health!",
+  "french": "Fais le plein de\\n\\p{COLOR}ÉRappels{COLOR}Ç ! Ils\\nsoignent un Pokémon K.O. à moitié de"
+ },
+ {
+  "line": 6382,
+  "offset": "0x7BAC6B",
+  "english": "Wandering around, I got hungry, so\nI ate some wild mushrooms\"<0xFB>They gave me gas, and now I can't\nstop burping! Bluurrf!",
+  "french": "À force d'errer, j'ai mangé des\\n\\pchampignons sauvages… Ils m'ont\\ndonné des gaz, je n'arrête pas de"
+ },
+ {
+  "line": 6436,
+  "offset": "0x7BC886",
+  "english": "That TM contains <0xFC><0x01><0x06>Hone Claws<0xFC><0x01><0x08>.<0xFB>If you plan on challenging the\n<0xFC><0x01><0x06>Dresco Gym<0xFC><0x01><0x08>, it'll help you a lot.<0xFB>It's very foggy and hard to see in\nthere\"",
+  "french": "Cette CT contient {COLOR}ÉHone\\n\\pClaws{COLOR}Ë. Si tu prévois\\n\\pd'affronter le {COLOR}ÉDresco\\nGym{COLOR}Ë, ça t'aidera beaucoup. C'est"
+ },
+ {
+  "line": 6440,
+  "offset": "0x7BCBFB",
+  "english": "Don't you know its rude to barge in\non someone else's meeting?",
+  "french": "Ne sais-tu pas qu'il est impoli de\\ncouper la réunion de quelqu'un"
+ },
+ {
+  "line": 6458,
+  "offset": "0x7C03E0",
+  "english": "Harth: <0xFC><0x01><0x08>I'm sorry dear, but I can't\nlet them harm you.<0xFB>If the world ends because of my\nactions, then so be it.",
+  "french": "Harth : {COLOR}ËDésolé, chérie, je\\n\\pne peux te laisser souffrir. Si le\\nmonde finit à cause de mes actions,"
+ },
+ {
+  "line": 6476,
+  "offset": "0x7C0F3E",
+  "english": "Good work, <0xFD><0x01>.<0xFB>Now there's one less criminal on\nthe loose.<0xFB>Only <0xFD><0x02> left.<0xFB>Keep searching while I take this\nman back to the station.",
+  "french": "Bon travail, {PLAYER}. Maintenant,\\n\\pil y a un criminel de moins en en\\n\\pliberté. Il ne reste plus que\\n\\p{STR_VAR_1}. Continuez à chercher\\npendant que je ramène cet homme au"
+ },
+ {
+  "line": 6477,
+  "offset": "0x7C0FC1",
+  "english": "Good work, <0xFD><0x01>.<0xFB>You appear to have apprehended all\nof the goons.<0xFB>Only their boss is still is at\nlarge.<0xFB>Let's regroup on <0xFC><0x01><0x06>Route 10<0xFC><0x01><0x08> by the\nstairs to determine his location.",
+  "french": "Bon travail, {PLAYER}. Tu sembles\\n\\pavoir arrêté tous ces crétins. Seul\\n\\pleur chef est encore en liberté.\\n\\pRetrouvons-nous sur {COLOR}ÉRoute\\n10{COLOR}Ë près des escaliers pour le"
+ },
+ {
+  "line": 6720,
+  "offset": "0x7C9662",
+  "english": "I've blown up the stairs so nothing\ncan interrupt the procedure.",
+  "french": "J'ai fait sauter les escaliers pour\\nque rien ne puisse interrompre la"
+ },
+ {
+  "line": 6760,
+  "offset": "0x7CEA3E",
+  "english": "I'm glad I caught up to you.<0xFB>I just destroyed Successor Maxima.<0xFB>Let me guess, you've also claimed\nthe power of Mega Evolution?",
+  "french": "Je suis content de vous avoir\\nrattrapé.\\pJe viens de détruire le successeur\\nMaxima.\\pLaissez-moi deviner, vous avez\\négalement revendiqué le pouvoir de"
+ },
+ {
+  "line": 6770,
+  "offset": "0x7CF05F",
+  "english": "My Malamar's <0xFC><0x01><0x06>Suction Cups<0xFC><0x01><0x08> ability\nhelps me reel in Pokémon!<0xFB>At least, I think it has Suction\nCups\"",
+  "french": "Les {COLOR}ÉSuction Cups{COLOR}Ë capacités de mon\\nSepiatroce m'aident à ramener des\\pAu moins, je pense qu'il a des\\nVentouses Cups…"
+ },
+ {
+  "line": 6772,
+  "offset": "0x7CF46D",
+  "english": "<0xFC><0x01><0x08>No\"<0xFB>I shouldn't be feeling this way\"<0xFB>Everything we've worked for is \nabout to transpire.<0xFB>I'll even be able to see my son\nagain\"",
+  "french": "{COLOR}ËNon…\\pJe ne devrais pas ressentir cela…\\pTout ce pour quoi nous avons\\ntravaillé est sur le point de se\\pJe pourrai même\\nrevoir mon fils …"
+ },
+ {
+  "line": 6773,
+  "offset": "0x7CF4F0",
+  "english": "???: <0xFC><0x01><0x08>Sorry, old man.<0xFB>If you're getting cold feet now,\nyou could be a big problem down<0xFA>the road.<0xFB>I can't have anything standing in\nthe way of the unbinding.<0xFB>Your son will just have to be\nfatherless forever.",
+  "french": "???: {COLOR}ËDésolé, vieil homme.\\pSi tu as froid aux yeux maintenant,\\ntu pourrais être un gros problème\\lsur la route.\\pJe ne peux pas avoir quoi que ce\\nsoit qui s'oppose sur le chemin de\\pVotre fils devra simplement être\\nsans père pour toujours."
+ },
+ {
+  "line": 6785,
+  "offset": "0x7CFD04",
+  "english": "Would you happen to be <0xFD><0x01> by\nany chance?<0xFB>\"<0xFB>I thought so.<0xFB>I recognized you from this picture\nI found of you, on the interwebs.<0xFB>My name is Looker.<0xFB>Agent Looker, of the International\nPolice.<0xFB>I had just finished dealing with\nTeam Rocket in the Kanto Region,<0xFA>when I was deployed to deal with a<0xFA>situation that was brewing in the<0xFA>Borrius Region.<0xFB>A young man, Jax, I believe, has\ninformed me that you have some<0xFA>evidence for crimes committed by an<0xFA>organization calling themselves<0xFA><0xB1>The Shadows<0xB2>.<0xFB>Please meet me in the <0xFC><0x01><0x06>Dehara Game\nCorner <0xFC><0x01><0x08>so we can discuss further.<0xFB>Jax is there, as well.<0xFB>Looker, out.",
+  "french": "Seriez-vous {PLAYER} par\\npar hasard ?\\p…\\pJe le pensais.\\pJe vous ai reconnu sur cette photo\\nJ'ai trouvé de vous sur les\\pJe m'appelle Looker.\\pAgent Looker, de la Police\\nInternationale.\\pJe venais juste de finir de\\nm'occuper de Team Rocket dans la\\lquand j'ai été déployé pour faire\\nface à une\\lsituation qui était se préparent\\ndans la\\lrégion de Borrius.\\pUn jeune homme, Jax, je crois, m'a\\ninformé que vous aviez des\\lpreuves de crimes commis par une\\lorganisation se faisant appeler\\l« Les Ombres ».\\pVeuillez me rencontrer dans le\\n{COLOR}ÉDehara Game Corner {COLOR}Ëafin que nous\\pJax est là aussi.\\pLooker, dehors."
+ },
+ {
+  "line": 6799,
+  "offset": "0x7D233A",
+  "english": "<0xFC><0x01><0x08>You should go in and try to find\nanother way up to the top.<0xFB>I would come along, but Staraptor\nwas the only Pokémon I had on me.<0xFB>I'd just wear you down if you had\nto protect me from wild Pokémon.<0xFB>Instead, I'll wait here and take\ncare of healing for you.",
+  "french": "{COLOR}ËTu devrais entrer et essayer de\\ntrouver un autre chemin pour\\pJe viendrais, mais Étouraptor était\\nle seul Pokémon que j'avais sur moi.\\pJe t'épuiserais simplement si tu\\navais pour me protéger des Pokémon\\pAu lieu de cela, j'attendrai ici et\\nje prendrai soin de ta guérison."
+ },
+ {
+  "line": 6828,
+  "offset": "0x7D45E9",
+  "english": "<0xFC><0x01><0x08>Either way, with or without him, I\nam now ready to begin.",
+  "french": "{COLOR}ËQuoi qu'il en soit, avec ou sans\\nlui, je suis maintenant prêt à"
+ },
+ {
+  "line": 6836,
+  "offset": "0x7D486D",
+  "english": "<0xFC><0x01><0x08>The bottle is now free.<0xFB>Once I open it, the dark force will\nbe mine to command.",
+  "french": "{COLOR}ËLa bouteille est maintenant\\ngratuite.\\pUne fois que je l'aurai ouverte, la\\nforce obscure sera mienne aux"
+ },
+ {
+  "line": 6854,
+  "offset": "0x7D5083",
+  "english": "<0xFC><0x01><0x08>Hoopa, prepare yourself!<0xFB>Your true power is about to be\nreleased from the Prison Bottle!<0xFB>And as your trainer, I am fully\ncapable of releasing it!",
+  "french": "{COLOR}ËHoopa, prépare-toi !\\pVotre véritable pouvoir est sur le\\npoint d'être libéré de la bouteille\\pEt en tant que votre entraîneur, je\\nsuis pleinement capable de le"
+ },
+ {
+  "line": 6858,
+  "offset": "0x7D522C",
+  "english": "Aklove: <0xFC><0x01><0x08>Fool.<0xFB>We have no common goal.<0xFB>I am a descendant of the king of\nKalos during the Great War.<0xFB>My goal is simply to finish what he\nstarted and destroy this region.<0xFB>With this unbound Hoopa, I will\nbring the Ultimate Weapon of Kalos<0xFA>here and use it to turn Borrius<0xFA>into a region of death and<0xFA>destruction!<0xFB>Then, finally, his suffering will\nbe at its end\"<0xFB>Now tell me, Zeph. What are your\ngoals?",
+  "french": "Aklove : {COLOR}ËFool.\\pNous n'avons pas d'objectif commun.\\pJe suis un descendant du roi de\\nKalos pendant la Grande Guerre.\\pMon objectif est simplement de\\nterminer ce qu'il a commencé et de\\pAvec ce Hoopa non lié, je vais\\napporter l'arme ultime de Kalos\\lici et l'utiliser pour transformer\\nBorrius\\ldans une région de mort et\\ldestruction !\\pAlors, enfin, ses souffrances seront\\nà leur fin…\\pMaintenant, dis-moi, Zeph. Quels\\nsont vos objectifs ?"
+ },
+ {
+  "line": 6861,
+  "offset": "0x7D54A7",
+  "english": "Aklove: <0xFC><0x01><0x08>Enough!<0xFB>Remove yourself from my presence.<0xFB>The Shadows are finshed.<0xFB>It's time for Borrius to be\nenveloped in The Light of Ruin.<0xFB>But first\"<0xFB>Grunts!<0xFB>Bring <0xFD><0x01> to me!",
+  "french": "Aklove : {COLOR}ËAssez !\\pRetirez-vous de ma présence.\\pLes Ombres sont finies.\\pIl est temps pour Borrius d'être\\nenveloppé dans la Lumière de la\\pMais d'abord…\\pGrunts !\\pApportez-moi {PLAYER} !"
+ },
+ {
+  "line": 6878,
+  "offset": "0x7D60AC",
+  "english": "We started out with good intent.<0xFB>It was only some time later on when\nthings began to get out of hand.<0xFB>When did it go all wrong\"",
+  "french": "Nous avons commencé avec de bonnes\\nintentions.\\pCe n'est que quelque temps plus tard\\nque les choses ont commencé à\\pQuand est-ce que tout a mal tourné…"
+ },
+ {
+  "line": 6897,
+  "offset": "0x7D6C5A",
+  "english": "Véga: <0xFC><0x01><0x08>All grunts, retreat back to\nthe base in <0xFC><0x01><0x06>Vivill Town<0xFC><0x01><0x08>!<0xFB>We're not equipped to deal with\nthese\"zombies right now!",
+  "french": "Véga : {COLOR}ËTous les grognements,\\nretournez à la base de {COLOR}ÉVivill Town{COLOR}Ë!\\pNous ne sommes pas équipés pour\\naffronter ces… zombies pour le"
+ },
+ {
+  "line": 6918,
+  "offset": "0x7D7AA6",
+  "english": "You put on the clothes and placed\nMarlon's uniform in the Cube.",
+  "french": "Vous avez enfilé les vêtements et\\nplacé l’uniforme de Marlon dans le"
+ },
+ {
+  "line": 6919,
+  "offset": "0x7D808F",
+  "english": "<0x6A><0x5A><0x0F> d<0x80><0x7D><0x08><0x09><0x05><0x21><0x0D><0x80>  <0x06><0x01>I<0x80><0x7D><0x08>(<0x03><0x78><0x01>  <0x70>À<0x7D><0x08><0x0F> <0x9F><0x81><0x7D><0x08><0x09><0x04>â<0x4F><0x0A> <0x4E>à<0x7C><0x08><0x51>  <0x6C><0x02><0x0F> éÀ<0x7D><0x08><0x09><0x04>â<0x4F><0x0A> <0x4E>à<0x7C><0x08><0x51>  <0x6C><0x02>With most of the other grunts gone,\nour manpower has become very<0xFA>limited.<0xFB>So it is essential that each of us\nbecome as strong as possible.<0xFB>Would you allow me the privilege of\nbattling with you, sir?",
+  "french": "La plupart des autres grognements\\nétant partis, nos effectifs sont\\llimités.\\pIl est donc essentiel que chacun de\\nnous devienne aussi fort que\\pVoudriez-vous m'accorder le\\nprivilège de battre avec vous,"
+ },
+ {
+  "line": 6921,
+  "offset": "0x7D821B",
+  "english": "Of course, sir.<0xFB>I wouldn't expect you to waste your\ntime on a grunt, such as myself.",
+  "french": "Bien sûr, monsieur.\\pJe ne m'attendrais pas à ce que vous\\nperdiez votre temps avec un"
+ },
+ {
+  "line": 6924,
+  "offset": "0x7D86B9",
+  "english": "The door requires a Key Card with\nClearance Level: <0xFC><0x01><0x06><0xFD><0x02><0xFC><0x01><0x02>, to be opened.",
+  "french": "La porte nécessite une carte-clé\\navec niveau d'autorisation : {COLOR}É{STR_VAR_1}{COLOR}Á pour"
+ },
+ {
+  "line": 6925,
+  "offset": "0x7D8704",
+  "english": "The door requires a Key Card with\nClearance Level: <0xFC><0x01><0x06><0xFD><0x02><0xFC><0x01><0x02>, to be opened.<0xFB>Would you like to open the door?",
+  "french": "La porte nécessite une carte-clé\\navec Niveau d'autorisation : {COLOR}É{STR_VAR_1}{COLOR}Á, pour\\pVoulez-vous ouvrir la porte ?"
+ },
+ {
+  "line": 6928,
+  "offset": "0x7D891C",
+  "english": "Of course, sir.<0xFB>I'm sure you have much more,\nimportant, business to attend to.",
+  "french": "Bien sûr, monsieur.\\pJe suis sûr que vous avez bien\\nd’autres affaires, importantes, à"
+ },
+ {
+  "line": 6933,
+  "offset": "0x7D8BEA",
+  "english": "I've been instructed by my\nsuperiors to hand out that HM to<0xFA>any trainers coming this way.<0xFB>Until the bridge is fixed, you'll\nneed to use that HM for <0xFC><0x01><0x06>Rock Climb<0xFC><0x01><0x08><0xFA>if you want to go to <0xFC><0x01><0x06>Seaport City<0xFC><0x01><0x08>.<0xFB>Just face that rock wall over\nthere to use it.",
+  "french": "Mes supérieurs m'ont demandé de\\nremettre ce HM à\\ltous les entraîneurs venant par ici.\\pJusqu'à ce que le pont soit réparé,\\nvous devrez utiliser ce HM pour\\lsi vous voulez vous rendre à {COLOR}ÉSeaport\\nCity{COLOR}Ë.\\pIl suffit d'affronter cette paroi\\nrocheuse au-dessus là pour"
+ },
+ {
+  "line": 6946,
+  "offset": "0x7D9D41",
+  "english": "Marlon: <0xFC><0x01><0x08>I can't yet.<0xFB>I first must destroy all of the\nShadow Warriors we created.<0xFB>Otherwise I'll be forced to live\nfor eternity and watch my children<0xFA>die before me\"",
+  "french": "Marlon : {COLOR}ËPas encore.\\nJe dois d'abord détruire tous les\\pGuerriers de l'Ombre que nous avons\\ncréés.\\pSinon je serai forcé de vivre pour\\nl'éternité et de regarder mes\\lenfants mourir avant moi…"
+ },
+ {
+  "line": 7015,
+  "offset": "0x7DE155",
+  "english": "<0xFC><0x01><0x08>Get to <0xFC><0x01><0x06>Vivill Town <0xFC><0x01><0x08>as soon as\npossible.<0xFB>We don't have long.<0xFB>Head <0xFC><0x01><0x06>northeast<0xFC><0x01><0x08> from <0xFC><0x01><0x06>Dehara City\n<0xFC><0x01><0x08>to get there the quickest.",
+  "french": "{COLOR}ËRends-toi à {COLOR}ÉBourg Vivill {COLOR}Ëau plus\\nvite. On n'a pas beaucoup de temps.\\pVa au {COLOR}Énord-est{COLOR}Ë depuis la {COLOR}ÉVille de\\pDehara{COLOR}Ë pour\\ny arriver vite."
+ },
+ {
+  "line": 7291,
+  "offset": "0x7F20A4",
+  "english": "Véga: <0xFC><0x01><0x08>This is your Admin, Véga,\nspeaking.<0xFB>I'll be monitoring the situation\nfrom the command room.<0xFB>All grunts, stand firm!<0xFB>Once The Shadows break through the\ndoor, annihilate them!<0xFB>Their manpower is severely limited,\nand we heavily outnumber them.<0xFB>They stand no chance!<0xFB>Envelop them in the Light of Ruin!",
+  "french": "Véga : {COLOR}ËIci l'Admin Véga.\\nJe surveille depuis la salle de\\pcommande.\\nTous les sbires, tenez bon !\\pQuand l'Ombre enfoncera la porte,\\panéantissez-les !\\nIls sont peu nombreux, nous les\\psurpassons largement.\\nIls n'ont aucune chance !\\pEnveloppez-les dans la Lumière du\\pNéant !"
+ },
+ {
+  "line": 7452,
+  "offset": "0x7F80CB",
+  "english": "Jax: <0xFC><0x01><0x08>Well we won't figure anything\nout by just standing here.<0xFB>We need to hop on a boat to <0xFC><0x01><0x06>East\nBorrius <0xFC><0x01><0x08>from <0xFC><0x01><0x06>Seaport City<0xFC><0x01><0x08>!",
+  "french": "Jax : {COLOR}ËOn ne trouvera rien ici.\\nIl faut prendre un bateau pour\\p{COLOR}ÉBorrius Est{COLOR}Ë\\ndepuis {COLOR}ÉVille Portuaire{COLOR}Ë !"
+ },
+ {
+  "line": 7810,
+  "offset": "0x8CB3F5",
+  "english": "Oh!\nSilly me!<0xFB>How can I expect you to find <0xFC><0x01><0x06>Icicle\nCave<0xFC><0x01><0x08> if you don't know the way?<0xFB>This <0xFC><0x01><0x06>Town Map<0xFC><0x01><0x08> should aid you\nimmensely!",
+  "french": "Oh ! Quel étourdi !\\nComment te demander de trouver la\\p{COLOR}ÉGrotte Stalactite{COLOR}Ë si tu n'en connais\\npas le chemin ?\\pCette {COLOR}ÉCarte{COLOR}Ë devrait beaucoup\\nt'aider !"
+ },
+ {
+  "line": 7874,
+  "offset": "0x8CE0C8",
+  "english": "You did it!<0xFB>You defeated the Light of Ruin and\nsaved us!<0xFB>You are a true Guardian of Borrius!<0xFB>Your father would be proud.",
+  "french": "Bravo ! Lumière vaincue !\\pTu nous as sauvés !\\nTu es un vrai Gardien de\\pBorrius !\\pTon père serait fier."
+ },
+ {
+  "line": 7888,
+  "offset": "0x8CF0E4",
+  "english": "A Mission is an extra objective you\nreceive by accepting a request for<0xFA>help.<0xFB>Many people out there are unable to\nsolve their own problems and<0xFA>require assistance from others.<0xFB>Once you accept the Mission, the\ndetails are automatically recorded<0xFA>in the Quest Log.<0xFB>Missions can often yield great\nrewards, be it items, money, or<0xFA>even new areas to explore.<0xFB>If someone requests a Mission from\nyou, accept it immediately.<0xFB>Even if you have no intention of\ncompleting it right away, there's<0xFA>no harm in having it registered in<0xFA>your Quest Log.<0xFB>With that being said, there are\nseveral people here in need of<0xFA>assistance.<0xFB>Look around and see if there's\nanyone you'd like to help!<0xFB>And come see me when you've\ncompleted at least <0xFC><0x01><0x06>5<0xFC><0x01><0x08> Missions.",
+  "french": "Une Mission est un objectif\\nsupplémentaire obtenu en acceptant\\lune demande d'aide.\\pBeaucoup de gens ne peuvent\\nrésoudre leurs problèmes et ont\\lbesoin d'aide.\\pQuand tu acceptes une Mission, les\\ndétails sont enregistrés\\lautomatiquement dans le Journal de\\pQuête.\\nLes Missions offrent souvent de\\lbelles récompenses : objets, argent\\pou même de nouvelles zones.\\nSi quelqu'un te demande une\\pMission, accepte aussitôt.\\nMême si tu ne comptes pas la finir\\limmédiatement, cela ne coûte rien\\lde l'inscrire dans ton Journal.\\pCela dit, plusieurs personnes ici\\nont besoin d'aide.\\lRegarde autour de toi et vois si tu\\pveux en aider quelqu'un !\\nEt viens me voir quand tu auras\\pterminé au moins {COLOR}É5{COLOR}Ë Missions.\\n"
+ },
+ {
+  "line": 7898,
+  "offset": "0x8D072F",
+  "english": "<0xFD><0x06>: <0xFC><0x01><0x08>Man, you're only leaving\nDehara City now?<0xFB>You sure are slow!<0xFB>Well, while you were loitering\naround, I figured out how to get<0xFA>to the Ruins of Void.<0xFB>But by the time I got over there,\nit was too late to do anything.<0xFB>Whatever The Shadows were planning,\nthey'd already done.<0xFB>There were some signs of a battle\nin the main room and a strange pile<0xFA>of ashes on the floor.<0xFB>Maybe it was used in some sort of\nritual?<0xFB>\"<0xFB>\"<0xFB>What!?<0xFB>That's insane!<0xFB>You died and came back to life!?",
+  "french": "{RIVAL}: {COLOR}ËMec, tu quittes seulement\\nla Ville de Dehara maintenant ?\\pT'es vraiment lent !\\pPendant que tu traînais, j'ai\\ntrouvé comment atteindre les\\lRuins of Void.\\pMais quand je suis arrivé, il était\\ntrop tard pour faire quoi que ce\\psoit.\\nQuelle que soit leur combine, les\\pOmbres l'avaient déjà faite.\\nIl y avait des traces de combat\\let un drôle de tas de cendres au\\psol.\\nPeut-être pour un rituel ?\\p…\\p…\\pQuoi !?\\pC'est dingue !\\pTu es mort et revenu à la vie !?"
+ },
+ {
+  "line": 14758,
+  "offset": "0x1A38BD2",
+  "english": "  Rendezvous",
+  "french": "Pokémon Rendez-vous"
+ },
+ {
+  "line": 15444,
+  "offset": "0x1EEE8BE",
+  "english": "Twenty years ago, a large meteorite\nwas hurtling towards Borrius.<0xFB>The astronomers at Cube Corp.\npredicted that if it wasn't<0xFA>stopped, it would fall directly on<0xFA>Valley City, this city, and end all<0xFA>life living here.<0xFB>With great haste, we began our\nevacuation of the city.<0xFB>As we were about to make our escape\nthrough the KBT Expressway, we<0xFA>heard the news.<0xFB>The meteorite was now predicted to\ncrush half of the region!<0xFB>If we attempted to flee\nunderground, there would be a<0xFA>large chance we'd be buried alive.<0xFB>Chaos ensued.<0xFB>All was thought hopeless\" until\nHE arrived.<0xFB><0xFC><0x01><0x06>Aros<0xFC><0x01><0x08>, the legend.<0xFB>He arrived alongside a small Pokémon\nhe used to teleport everyone to<0xFA>East Borrius, safe from harm.<0xFB>He planned to attack the meteorite\nhead on and smash it to bits.<0xFB>Once he had transported everyone to\nsafety, it is said that he rode on<0xFA>a Rayquaza and smashed into<0xFA>the meteorite!<0xFB>It shattered, and most of the\nsmaller fragments fell on<0xFA>Valley City.<0xFB>The city was destroyed, but Aros\nhad saved a region.<0xFB>I will never forget the heroic act\nthat man performed.",
+  "french": "Il y a vingt ans, une grosse\\nmétéorite fonçait vers Borrius.\\pLes astronomes de Cube Corp. ont\\nprédit qu'elle tomberait sur\\lValley City, ici, et détruirait la\\lvie.\\lNous avons évacué la ville en\\purgence.\\nEn fuyant par l'Autoroute KBT, une\\pnouvelle est tombée : la météorite\\nallait écraser la moitié de la\\lrégion !\\pFuir sous terre risquait de nous\\nenterrer vivants.\\pLe chaos a régné… jusqu'à ce\\nqu'IL arrive.\\l{COLOR}ÉAros{COLOR}Ë, la légende.\\pAvec un petit Pokémon, il a\\ptéléporté tout le monde vers East\\nBorrius, en sécurité.\\pIl comptait attaquer la météorite de\\pface et la briser.\\nAprès avoir mis tout le monde à\\ll'abri, il aurait chevauché un\\pRayquaza et percuté la météorite !\\nElle a éclaté, et la plupart des\\pfragments sont tombés sur Valley\\nCity.\\lLa ville fut détruite, mais Aros a\\lsauvé la région.\\pJe n'oublierai jamais son acte\\nhéroïque.\\l\\p\\n\\p\\n"
+ },
+ {
+  "line": 15451,
+  "offset": "0x1EEF1FF",
+  "english": "My grandfather survived the\nmeteorite strike lots of years<0xFA>ago!<0xFB>He even made a friend with a\nPokémon that fell from the stars!",
+  "french": "Mon grand-père a survécu à la\\nmétéorite !\\lIl s'est même lié d'amitié avec un\\pPokémon tombé des étoiles !\\n"
+ },
+ {
+  "line": 17900,
+  "offset": "0x1F2C709",
+  "english": "went up by ",
+  "french": "a augmenté de"
+ },
+ {
+  "line": 17901,
+  "offset": "0x1F2C715",
+  "english": "went down by ",
+  "french": "a baissé de"
+ },
+ {
+  "line": 18297,
+  "offset": "0x1F37B33",
+  "english": "<0xFD><0x01>, Arthur has filled me in on\nyour recent escapades.<0xFB>First, let me congratulate you on\nrescuing Zapdos.<0xFB>But of course, I never doubted you\nfor a moment, <0xFD><0x01>!<0xFB>Ho ho ho!<0xFB>\"<0xFB>Anyway, if you're looking to head\nin the same direction as the<0xFA>Shadows\"<0xFB>There's an old colleague of mine\nliving in Dehara City, who is a<0xFA>fastidious researcher of the<0xFA>Ruins of Void.<0xFB>I've been told that Jax went on\nahead to look for him.<0xFB>If needed, he can provide you with\nthe Surfing directions.",
+  "french": "{PLAYER}, Arthur m'a mis au\\ncourant de tes récentes escapades.\\pD'abord, félicitations pour\\navoir sauvé Électhor. Mais\\pévidemment, je n'ai jamais\\ndouté de toi un instant,\\p{PLAYER} ! Ho ho ho ! …\\pBref, si tu veux aller\\pdans la même direction\\nque les Ombres… Un vieux\\lcollègue à moi vit à la\\pVille de Dehara, c'est\\nun chercheur pointilleux\\ldes Ruines du Néant.\\lOn m'a dit que Jax est\\pparti le chercher. Si\\nbesoin, il pourra te\\pdonner les indications\\nde Surf."
+ },
+ {
+  "line": 18377,
+  "offset": "0x1F3A6F8",
+  "english": "Actually, that was Hoopa acting of\nits own accord.<0xFB>It knew we were about to begin\nthe process of releasing its power,<0xFA>so in a futile act of desperation,<0xFA>it summoned <0xFD><0x01> to rescue it<0xFA>from me.<0xFB>For you see\"<0xFC><0x08><0x18> for reasons I cannot\nfathom, it is <0xFD><0x01>, not I, that<0xFA>Hoopa prefers as its Trainer.<0xFB>And so, naturally, I want to see\n<0xFD><0x01> eliminated.<0xFB>Once <0xFD><0x03> is gone, Hoopa will have\nto accept ME as its true Trainer\"<0xFB>Only then will I finally be able to\nuse its true power, capable of<0xFA>moving entire landmasses\"",
+  "french": "En réalité, Hoopa agissait de son\\npropre chef. Il savait que nous\\pcommencer à libérer sa puissance,\\nalors, dans un geste désespéré,\\lil a invoqué {PLAYER} pour qu'il\\lle sauve de moi. Car vois-tu…{PAUSE} pour\\ldes raisons qui m'échappent, c'est\\p{PLAYER}, pas moi, que Hoopa préfère\\ncomme Dresseur. Donc, naturellement,\\lje veux voir {PLAYER} éliminé.\\pUne fois {STR_VAR_2} parti, Hoopa\\ndevra m'accepter, MOI, comme\\pson vrai Dresseur… Alors seulement\\nje pourrai enfin utiliser\\pson véritable pouvoir, capable\\nde déplacer des masses\\lde terre entières…"
+ },
+ {
+  "line": 18386,
+  "offset": "0x1F3AB89",
+  "english": "Fool\"<0xFC><0x08><0x18> our goals are inevitably at\nodds.<0xFB>I am a descendant of the so-called\n<0xB1>foreign king<0xB2> from the great war.<0xFB>My goal is simply to finish what he\nstarted - and win the war.<0xFB>With Hoopa's power now unbound, I\nwill bring the weapon he created,<0xFA>and use it to rain fire and<0xFA>destruction across Borrius!<0xFB>Then, finally, his suffering can\nbe at its end\"<0xFB>Now, tell me, Zeph.\nWhat were your goals?",
+  "french": "Insensé…{PAUSE} nos buts sont opposés\\nopposés. Je suis un descendant du\\p« roi étranger » de la guerre.\\nMon but est simplement de finir\\pce qu'il a commencé - et gagner\\nla guerre. Avec le pouvoir de\\pHoopa enfin libre, je vais amener\\nl'arme qu'il a créée, et l'utiliser\\lpour faire pleuvoir le feu\\let la destruction sur Borrius\\p! Alors, enfin, sa souffrance\\nprendra fin… Maintenant,\\pdis-moi, Zeph. Quels étaient\\ntes objectifs ?"
+ },
+ {
+  "line": 18433,
+  "offset": "0x1F3C66D",
+  "english": "It can't be\"\nIs that\"<0xFC><0x08><0x18> a Cube V3?<0xFB>\"<0xFB>It is!",
+  "french": "Ce n'est pas possible…\\nEst-ce que…{PAUSE} un\\pCube V3 ? … C'en\\pest un !"
+ },
+ {
+  "line": 18446,
+  "offset": "0x1F3CD22",
+  "english": "I'll keep this brief - help Marlon\nend the Shadow Warrior Project.<0xFB>From what I remember, they're highly\nsensitive to light, so exposing them<0xFA>should lay their souls to rest.<0xFB>And above all else, save Hoopa.<0xFB>The longer its power remains unbound,\nthe more it loses its sense of self.<0xFB>Confine its power, and you can return\nit to how it used to be.",
+  "french": "Je vais faire court - aide Marlon à\\nmettre fin au projet Guerrier des\\pOmbres. D'après mes souvenirs, ils\\nsont très sensibles à la lumière,\\lles exposer devrait apaiser leurs\\pâmes. Et par-dessus tout, sauve\\pHoopa. Plus son pouvoir reste libre,\\nplus il perd son identité. Confine\\pson pouvoir, et tu pourras\\nle ramener comme avant."
+ },
+ {
+  "line": 18462,
+  "offset": "0x1F3D2FD",
+  "english": "Please. Do you really believe you\ncan still order me about?<0xFB>I am Agent Véga of the\nScience Society.<0xFB>My loyalties are with Fey\"<0xFC><0x08><0x18>\nand you lost your authority over<0xFA>me when you broke your contract<0xFA>with her.<0xFB>Openly bringing Shadow Warriors out\ninto the public?<0xFB>Trying to release a dark force known\nfor its destructive nature, without<0xFA>first trying to understand it?<0xFB>The Rangers are already determined\nto find something to catch us on,<0xFA>so we should consider ourselves<0xFA>fortunate that no one else<0xFA>discovered that we were creating<0xFA>living weapons.<0xFB>You must have had some idea of the\npotential consequences, were Fey<0xFA>to ever find out, yes?<0xFB>Especially now, when she is close to\nachieving perfection\"",
+  "french": "Pitié. Tu crois vraiment pouvoir\\nencore me donner des ordres ? Je\\psuis l'Agent Véga de la Société\\nScientifique. Ma loyauté va à\\pFey…{PAUSE} et tu as perdu ton autorité\\nsur moi quand tu as rompu ton\\lcontrat avec elle. Sortir les\\lGuerriers des Ombres au grand\\pjour ? Essayer de libérer une\\nforce obscure connue pour sa\\pnature destructrice, sans chercher\\nà la comprendre d'abord ? Les\\lRangers sont déjà déterminés\\pà nous coincer sur quelque chose,\\nnous devrions nous estimer chanceux\\lque personne d'autre n'ait\\ldécouvert que nous créions\\ldes armes vivantes. Tu devais\\lbien avoir une idée des conséquences\\ppotentielles si Fey venait\\nà l'apprendre, non ?\\lSurtout maintenant qu'elle\\ptouche presque à\\nla perfection…"
+ },
+ {
+  "line": 18523,
+  "offset": "0x1F3EE0A",
+  "english": "Zeph!\nEnough!<0xFB>We don't have time for infighting\nright now!<0xFB><0xFD><0x01> isn't the enemy - the\nLight of Ruin is!<0xFB>And you can either accept that fact,\nor else I'll be assuming command<0xFA>of what remains of the Shadows.",
+  "french": "Zeph ! Assez ! Nous n'avons\\npas le temps de nous battre\\pentre nous ! {PLAYER} n'est\\npas l'ennemi - c'est la\\pLumière de la Ruine ! Et\\ntu peux accepter ce fait,\\pou je prendrai le commandement\\nde ce qu'il reste\\ldes Ombres."
+ },
+ {
+  "line": 18558,
+  "offset": "0x1F4075D",
+  "english": "Phoo\"<0xFB>I shouldn't dwell on that now.<0xFB>Anyway\"<0xFC><0x08>î Fey was the one who gave\nus the template for the project,<0xFA>as you have likely guessed.",
+  "french": "Pfff… Je ne devrais pas ressasser\\pça maintenant. Enfin bref…{PAUSE}î c'est\\pFey qui nous a donné le modèle du\\nprojet, comme tu l'as probablement\\ldeviné."
+ },
+ {
+  "line": 18578,
+  "offset": "0x1F41136",
+  "english": "Eventually, we concluded we would\nnot be able to bring back our<0xFA>children using the Shadow Warriors.<0xFB>Despite coming close with our last\ntrial, the cost to our children<0xFA>would have been too great had<0xFA>we continued in that same direction.<0xFB>And so, we were forced to try a\nnew approach.<0xFB>One that was extreme, yet plausible,\nif recent events are anything to<0xFA>go by\"",
+  "french": "Finalement, nous avons conclu que\\nnous ne pourrions pas ramener nos\\lenfants avec les Guerriers des\\pOmbres. Malgré notre dernier essai\\npresque réussi, le prix pour nos\\lenfants aurait été trop élevé si\\lnous avions continué dans cette\\pvoie. Nous avons donc été forcés\\nd'essayer une nouvelle approche.\\pExtrême, mais plausible, si l'on\\nse fie aux événements\\lrécents…"
+ },
+ {
+  "line": 18588,
+  "offset": "0x1F419E6",
+  "english": "Have you the means to cross water -\nthe HM for Surf?<0xFB>If you cannot use it, then you\nshould first obtain <0xFC><0x01><0x06>Dehara City<0xFC><0x01><0x08>'s<0xFA>Gym Badge, before you regroup<0xFA>with us.<0xFB>We must reach <0xFC><0x01><0x06>Vivill Town<0xFC><0x01><0x08> as soon\nas possible, so please hurry.<0xFB>It's <0xFC><0x01><0x06>northeast<0xFC><0x01><0x08> of <0xFC><0x01><0x06>Dehara City<0xFC><0x01><0x08>,\nwhen you are ready.",
+  "french": "As-tu de quoi traverser l'eau - la\\nCS Surf ? Si tu ne peux pas\\pl'utiliser, tu devrais d'abord\\nobtenir le Badge d'Arène de la {COLOR}ÉVille\\lde Dehara{COLOR}Ë avant de nous rejoindre.\\lNous devons atteindre {COLOR}ÉBourg Vivill{COLOR}Ë\\pdès que possible, alors dépêche-toi.\\nC'est {COLOR}Éau nord-est{COLOR}Ë de la {COLOR}ÉVille de\\pDehara{COLOR}Ë, quand tu es\\nprêt."
+ },
+ {
+  "line": 18595,
+  "offset": "0x1F41D4C",
+  "english": "<0xFD><0x01>, you were the last one to\nsee him!<0xFB>What happened in there?<0xFB>\"<0xFB>Aklove?\nI've never heard of him before\"<0xFB>And it's just as I feared - the dark\nforce has been released at last\"<0xFB>\"<0xFB>What!? Aros has been trapped\ninside a Cube, you say?<0xFB>Utter madness!<0xFB>\"<0xFB>Oh no\"<0xFB>If I know Zeph, there's only one\nthing he could have possibly done<0xFA>with Jax\"<0xFB>\"<0xFB>Oh?\nYou say Jax wasn't with Zeph?<0xFB>That gives me hope\"<0xFC><0x08><0x18> he must still\nbe out there\"<0xFB>I'm surprised Zeph agreed to work\nwith you, but you know the saying\"<0xFB><0xB1>The enemy of my enemy is my\nfriend.<0xB2>",
+  "french": "{PLAYER}, tu es le dernier à l'avoir\\nvu ! Que s'est-il passé là-dedans\\p? … Aklove ? Jamais entendu parler…\\pEt comme je le craignais, la force\\pobscure a finalement été libérée…\\n… Quoi !? Aros a été piégé dans un\\pCube, tu dis ? Pure folie ! … Oh\\nnon… Si je connais Zeph, il n'y a\\pqu'une chose qu'il aurait pu faire\\pavec Jax… … Oh ? Tu dis que Jax\\nn'était pas avec Zeph ? Ça me donne\\pde l'espoir…{PAUSE} il doit encore être\\pdehors… Je suis surpris que Zeph\\pait accepté de travailler avec toi,\\pmais tu connais l'adage… « L'ennemi\\nde mon ennemi est mon ami.\\l»\\p\\p\\n\\p\\n\\p\\n\\p\\n"
+ },
+ {
+  "line": 20110,
+  "offset": "0x1F6EE15",
+  "english": "Forget Timer Balls, the <0xFC><0x01><0x06>Heavy Ball<0xFC><0x01><0x08>\nis the ideal Ball for capturing<0xFA>legendary Pokémon!<0xFB>Many of them are super heavy, and\nthe Heavy Ball winds up having a<0xFA>better chance to capture any of<0xFA>them than a maxed Timer Ball.<0xFB>Don't believe me?<0xFB>Just set your <0xFC><0x01><0x06>Last Used Ball<0xFC><0x01><0x08> to\n<0xFC><0x01><0x06>Always Best Ball<0xFC><0x01><0x08> in the <0xFC><0x01><0x06>Options<0xFA>Menu<0xFC><0x01><0x08> and see for yourself!<0xFB>You can buy Heavy Balls out in the\n<0xFC><0x01><0x06>marketplace<0xFC><0x01><0x08>.",
+  "french": "Oublie les Chrono Balls, la\\n{COLOR}ÉMasse Ball{COLOR}Ë est la\\lBall top pour les légendaires !\\pElles sont lourdes, et la Masse\\nBall finit par mieux les\\lcapturer qu’une Chrono max.\\lTu doutes ?\\pRégle Dernière Ball en\\pToujours opt. dans le menu\\net teste par toi-même.\\lTu peux acheter des Masse Balls\\pau {COLOR}Émarché{COLOR}Ë.\\n"
+ },
+ {
+  "line": 20141,
+  "offset": "0x1F6F7AC",
+  "english": "Marlon, sir!<0xFB>I heard rumours that you joined\nthe Light of Ruin, too.<0xFB>I'm glad you're still here.<0xFB>Maybe now that you're back, someone\nwill finally be able to keep Zeph<0xFA>from doing anything too rash\"",
+  "french": "Marlon, monsieur !\\pJ’ai entendu des rumeurs comme quoi\\ntu avais toi aussi rejoint la\\pLumière de la Ruin. Je suis\\pcontent que tu sois encore là.\\nPeut-être qu’avec ton retour,\\lquelqu’un stoppera Zeph."
+ },
+ {
+  "line": 20142,
+  "offset": "0x1F6F871",
+  "english": "The base has been so quiet ever\nsince most of the grunts were<0xFA>ordered to join the Light of Ruin.<0xFB>To be honest, sir, I was ordered to\ngo, too, but I refused.<0xFB>I didn't join this organization\nbecause I wanted money.<0xFB>I joined because I believed in what\nZeph was trying to achieve\"",
+  "french": "La base est si calme depuis que la\\nplupart des sbires ont été envoyés à\\lla Lumière de la\\pRuin. Pour être honnête, monsieur,\\non m’a ordonné d’y aller aussi, mais\\pj’ai refusé. Je n’ai pas rejoint\\ncette organisation pour l’argent. Je\\pl’ai rejointe parce que je croyais à\\nce que Zeph voulait accomplir…"
+ },
+ {
+  "line": 20156,
+  "offset": "0x1F6FF74",
+  "english": "They wanted us to go back to HQ\nand stop making Shadow Warriors.<0xFB>STOP MAKING SHADOW WARRIORS!?<0xFB>ARE YOU KIDDING ME!?<0xFB>Creating Shadow Warriors is all I\nlive for!<0xFB>I'm fortunate that Zeph still had a\nuse for more and allowed me to<0xFA>continue synthesizing them.",
+  "french": "Ils voulaient qu’on retourne au QG\\net qu’on arrête de faire des\\pGuerriers Ombres. ARRÊTER\\pOMBRES !? TU PLAISANTES\\p!? Créer des Guerriers Ombres, c’est\\nma raison\\pde vivre ! Heureusement, Zeph avait\\nencore besoin d’autres exemplaires\\let j’ai pu continuer la synthèse."
+ },
+ {
+  "line": 20184,
+  "offset": "0x1F70B84",
+  "english": "Trainer House<0xFB>Battle to your heart's content!",
+  "french": "Maison des\\pDresseurs Combattez à volonté !"
+ },
+ {
+  "line": 20212,
+  "offset": "0x1F711CF",
+  "english": "Tehl Town<0xFB>A town where it's perpetually\nAutumn.",
+  "french": "Ville de\\pTehl Une ville où c’est\\nperpétuellement l’automne."
+ },
+ {
+  "line": 20234,
+  "offset": "0x1F716CF",
+  "english": "Dehara City<0xFB>An oasis at the edge of the desert.",
+  "french": "Ville de\\pDehara Une oasis au bord du désert."
+ },
+ {
+  "line": 20343,
+  "offset": "0x1F7336F",
+  "english": "Trainer Tips!<0xFB>In a battle, you can check your\nPokémon's moves for details like<0xFA>power and accuracy ratings.<0xFB>Just press <0xF8><0x02> before selecting\na move!",
+  "french": "Astuces du Dresseur !\\pEn combat, tu peux consulter\\nles attaques pour puissance et\\lprécision. Appuie sur\\p{L_BUTTON} avant de choisir une\\nattaque !"
+ },
+ {
+  "line": 20369,
+  "offset": "0x1F7471C",
+  "english": "<0xFC><0x01><0x02>Trainer Tips!<0xFB>Even on the <0xFC><0x01><0x06>Vanilla<0xFC><0x01><0x02> difficulty, the\nElite Four get stronger as you do!<0xFB>Don't be caught off guard and be\nprepared for intense fights!",
+  "french": "{COLOR}ÁAstuces du Dresseur !\\pMême en difficulté\\n{COLOR}ÉVanilla{COLOR}Á, le\\pConseil 4 se renforce comme toi\\n! Prépare-toi à des combats corsés !"
+ },
+ {
+  "line": 20373,
+  "offset": "0x1F7488B",
+  "english": "Trainer Tips!<0xFB>Traveling together makes your\nPokémon grow friendlier!<0xFB>Pokémon may even evolve when they\ngrow friendly enough!<0xFB>And if you've entered into the\n<0xFC><0x01><0x06>Hall of Fame<0xFC><0x01><0x02>, these Pokémon may<0xFA>gain <0xFC><0x01><0x06>extra Exp.<0xFC><0x01><0x02> as well!",
+  "french": "Astuces du Dresseur !\\pVoyager ensemble rend tes\\nPokémon plus amicaux !\\pIls peuvent même évoluer ainsi !\\nEt si tu es entré au\\p{COLOR}ÉPanthéon{COLOR}Á, ces\\nPokémon gagnent aussi des {COLOR}ÉExp.\\lbonus{COLOR}Á !"
+ },
+ {
+  "line": 20421,
+  "offset": "0x1F76793",
+  "english": "Ah! Hold up!\nI think I know who you are!<0xFB>Huh? You don't know who I am?\nWell, that's no surprise!<0xFB>I'm an ex-member of the Shadows,\nso you probably never saw my face.<0xFB>How are those guys doing, anyway?<0xFB>Did Zeph get any close to building\nthe perfect living weapon?<0xFB>Huh? He wasn't trying to do that -\nhe was trying to revive his dead<0xFA>son all along?<0xFB>Well, that's a load of crock!<0xFB>What's the point in building an\ninvincible monster if you won't use<0xFA>it to crush your enemies?<0xFB>That stupid thought was exactly what\nled me to quit, you know!<0xFB>Oh well\" I wonder if the Science\nSociety is still hiring\"<0xFB>\"<0xFB>Ah, but I'm rambling!\nDon't worry, I'll finish what Zeph<0xFA>started someday!",
+  "french": "Ah ! Attends ! Je\\ncrois savoir qui tu es !\\pHein ? Tu ne sais pas qui je\\nsuis ? Pas surprenant !\\pJe suis un ex-membre des Ombres,\\ntu n’as sûrement jamais vu mon\\pvisage. Comment vont-ils ? Zeph\\pa-t-il réussi à créer l’arme\\nvivante parfaite ? Hein ?\\pIl voulait juste ressusciter son\\nfils ? Quelle blague ! À quoi\\lbon un monstre\\pinvincible si ce n’est pas\\ppour écraser ses ennemis ?\\nC’est ce raisonnement stupide qui\\lm’a fait partir ! Bah… la\\pSociété Scientifique recrute encore\\n? … Je radote ! Ne\\pt’inquiète pas, je finirai ce\\nque Zeph a\\pcommencé\\pun\\njour\\l!"
+ },
+ {
+  "line": 22285,
+  "offset": "0x1F9BBE7",
+  "english": "<0xFC><0x01><0x06><0xFD><0x07><0xFC><0x01><0x08>- and <0xFC><0x01><0x06><0xFD><0x08><0xFC><0x01><0x08>-type moves\nmay not be used.<0xFB>Please choose the Pokémon to\nbattle with.",
+  "french": "Les capacités de type\\n{COLOR}É{VERSION}{COLOR}Ë et\\p{COLOR}É{EVIL_TEAM}{COLOR}Ë ne\\npeuvent pas être utilisées. Merci de"
+ },
+ {
+  "line": 22287,
+  "offset": "0x1F9BCAE",
+  "english": "<0xFC><0x01><0x06><0xFD><0x07><0xFC><0x01><0x08>- and <0xFC><0x01><0x06><0xFD><0x08><0xFC><0x01><0x08>-type moves\nmay not be used.<0xFB>Please choose the Pokémon to\nbattle with.",
+  "french": "Les capacités de type\\n{COLOR}É{VERSION}{COLOR}Ë et\\p{COLOR}É{EVIL_TEAM}{COLOR}Ë ne\\npeuvent pas être utilisées. Merci de"
+ },
+ {
+  "line": 22301,
+  "offset": "0x1F9C8B7",
+  "english": "Oh heavens\"<0xFB>My daughter, I can't find her!<0xFB>We were on holiday at the <0xFC><0x01><0x06>beach<0xFC><0x01><0x04>\nwhen all of a sudden, she vanished!<0xFB>Please, <0xFD><0x02>, search for her!",
+  "french": "Oh mon dieu... Ma fille, je ne la\\ptrouve nulle part ! Nous étions en\\pvacances à la {COLOR}Éplage{COLOR}Ç\\nquand tout à coup, elle a disparu !\\pS'il te plaît, {STR_VAR_1},"
+ },
+ {
+  "line": 22318,
+  "offset": "0x1F9CE03",
+  "english": "A young boy in a Pikachu costume\nhas run away from home to Route 8!\nFind him, and bring him home safely.",
+  "french": "Un jeune garçon en costume de\\nPikachu s'est enfui de chez lui vers\\nla Route 8 ! Trouve-le et ramène-le"
+ },
+ {
+  "line": 22327,
+  "offset": "0x1F9D12F",
+  "english": "Sniff\"<0xFB>You're not a Pokémon.<0xFB>I thought a Pokémon was going\nto eat me.",
+  "french": "Snif... Tu n'es pas un\\pPokémon. Je croyais\\pqu'un Pokémon allait me\\nmanger."
+ },
+ {
+  "line": 22330,
+  "offset": "0x1F9D22A",
+  "english": "<0xFC><0x01><0x02>While teamed up with Willy, the\n<0xFC><0x01><0x06>first 3<0xFC><0x01><0x02> viable Pokémon in your<0xFA>party will be selected for battle.",
+  "french": "{COLOR}ÁQuand tu es en équipe avec\\nWilly, les {COLOR}É3\\lpremiers{COLOR}Á Pokémon valides de"
+ },
+ {
+  "line": 22353,
+  "offset": "0x1F9DBD7",
+  "english": "Let me tell ya!<0xFB>No one has ever wrecked me as good\nas <0xFD><0x03> did!<0xFB>I've even renamed the Black Emboar\nto the Black <0xFD><0x01>, after <0xFD><0x02>!<0xFB>So it's time for a fresh start.<0xFB>The Black <0xFD><0x01> and I are movin'\nto Antisis City!<0xFB>I hear the old gang that used to\nrun that joint got ran outta town.<0xFB>Terror Granbull, somethin'\nor other\"<0xFB>Now that city is ripe for the\npickin' by the Black <0xFD><0x01>!<0xFB>Gwa ha ha ha!",
+  "french": "Laisse-moi te dire ! Personne ne\\pm'a jamais mis une telle raclée\\nque {STR_VAR_2} ! J'ai même\\prenommé le Black Emboar en Black\\n{PLAYER}, d'après {STR_VAR_1} !\\pC'est l'heure d'un nouveau\\pdépart. Le Black {PLAYER} et\\nmoi, on s'installe à Antisis\\pCity ! J'ai entendu dire que\\nl'ancien gang qui dirigeait\\pl'endroit s'est fait chasser. Un\\ntruc avec un Granbull Terrible,\\pje sais plus... Cette ville est\\nmûre pour être cueillie par le\\pBlack {PLAYER} ! Gwa ha ha ha !"
+ },
+ {
+  "line": 22363,
+  "offset": "0x1F9E2A9",
+  "english": "What didja say, ya little creep?<0xFB>I'll teach ya to take the Black\nEmboar seriously!<0xFB>I'll pummel your pretty Pokémon\nright down to the ground!<0xFB>With relish!",
+  "french": "Qu'est-ce que t'as dit,\\psale mocheté ? Je vais\\nt'apprendre à prendre le\\pBlack Emboar au sérieux !\\nJe vais écraser tes jolis\\pPokémon dans le sol ! Avec plaisir !"
+ },
+ {
+  "line": 22388,
+  "offset": "0x1F9EAF1",
+  "english": "Someone's havin' toilet troubles!\nHelp your fellow Black <0xFD><0x01> by\nretrievin' his socks from the sewer.",
+  "french": "Quelqu'un a des soucis de toilettes\\n! Aide ton camarade du Black\\n{PLAYER} en récupérant ses"
+ },
+ {
+  "line": 22419,
+  "offset": "0x1F9F870",
+  "english": "Wha\"<0xFC><0x08>î you shouldn't be able\nto beat the Black Ferrothorn!<0xFB>Our hides are iron thick!",
+  "french": "Quoi...{PAUSE}î tu devrais pas\\npouvoir battre le Black Ferrothorn !\\pNos peaux sont aussi dures que du"
+ },
+ {
+  "line": 22438,
+  "offset": "0x1FA0253",
+  "english": "My guy up in <0xFC><0x01><0x06>Dresco Town<0xFC><0x01><0x08> can turn\nOddish Leaves into more of that<0xFA><0xFC><0x01><0x06>Dream Mist<0xFC><0x01><0x08>.<0xFB>Bring him some <0xFC><0x01><0x06>Oddish<0xFC><0x01><0x08>, and he'll\nhappily do it for ya.",
+  "french": "Mon gars à {COLOR}ÉVille\\nDresco{COLOR}Ë peut changer les\\lFeuilles de Mystherbe en encore plus\\pde {COLOR}ÉBrume de Rêve{COLOR}Ë.\\nApporte-lui des"
+ },
+ {
+  "line": 22461,
+  "offset": "0x1FA093B",
+  "english": "Where are they?<0xFB>I dunno, I stashed 'em in between\nsome crates on the <0xFC><0x01><0x06>west<0xFC><0x01><0x08> side of<0xFA>the port.<0xFB>Use one of them fancy <0xFC><0x01><0x06>Dowsing\nMachines<0xFC><0x01><0x08> or somethin' to find 'em.<0xFB>Meet me back at the <0xFC><0x01><0x06>base<0xFC><0x01><0x08> when\nyou've found 'em.",
+  "french": "Où elles sont ? Je sais pas, je les\\pai planquées entre des caisses à\\nl'{COLOR}Éouest{COLOR}Ë du port.\\lUtilise une de ces {COLOR}ÉMachines\\pCherche Objet{COLOR}Ë ou un truc\\npour les trouver. Rejoins-moi à la\\p{COLOR}Ébase{COLOR}Ë quand tu les\\nauras."
+ },
+ {
+  "line": 22463,
+  "offset": "0x1FA0A96",
+  "english": "Halt!<0xFB>Are you carrying any illegal\nmerchandise?<0xFB>Any Slowpoke Tails or Oddish\nLeaves?<0xFB>\"<0xFB>Nope, you appear to be clean.\nProceed.",
+  "french": "Halte ! Vous\\ptransportez de la\\nmarchandise\\pillégale ? Des Queues de\\nRamoloss ou des Feuilles de\\pMystherbe ? ...\\pNon, vous avez l'air\\nclean. Circulez."
+ },
+ {
+  "line": 22467,
+  "offset": "0x1FA0C16",
+  "english": "Halt!<0xFB>Are you carrying any illegal\nmerchandise?<0xFB>Any Slowpoke Tails or Oddish\nLeaves?<0xFB>\"<0xFB>Hmm\"<0xFB>You reek of Oddish Leaves\"",
+  "french": "Halte ! Vous\\ptransportez de la\\nmarchandise\\pillégale ? Des Queues de\\nRamoloss ou des Feuilles de\\pMystherbe ? ...\\pHmm... Vous empestez\\ples Feuilles de Mystherbe..."
+ },
+ {
+  "line": 22474,
+  "offset": "0x1FA115F",
+  "english": "'ey! My <0xFD><0x02>!<0xFB>Thanks to your 'elp, we've now\ngot a great way to pump up our<0xFA>Pokémon before we fight them<0xFA>Black Ferrothorns!<0xFB>That Pokémon I nabbed from that\nscientist was what she was usin'<0xFA>to create the serum that them<0xFA>Black Ferrothorns 'ave been usin',<0xFA>ya 'ear?<0xFB>No idea 'ow she was doin' it,\nthough.<0xFB>It must've been some weird power\nof alchemy.<0xFB>That don't really matter, though,\nsince James knows 'ow to do it for<0xFA>us, too, ya 'ear?<0xFB>Oh, yeah, I almost forgot, my <0xFD><0x02>.\nJames wanted you to 'ave this.",
+  "french": "Hey ! Mon\\p{STR_VAR_1} ! Grâce à ton\\naide, on a un\\lsuper moyen de booster\\lnos Pokémon avant d'affronter les\\pBlack Ferrothorns\\n! Le Pokémon que\\lj'ai piqué à cette scientifique\\lservait à\\lfabriquer le sérum qu'ils\\putilisaient, tu\\nvois ? Aucune idée\\pcomment elle\\nfaisait. Ça doit être\\pun truc d'alchimie chelou. On s'en\\nfiche, James sait le faire aussi\\lpour nous, tu vois ? Ah oui, j'ai\\ppresque oublié, mon {STR_VAR_1}.\\nJames voulait que tu aies ça."
+ },
+ {
+  "line": 22558,
+  "offset": "0x1FA39D5",
+  "english": "<0xFC><0x01><0x02>There's a note attached!<0xFB><0xFC><0x01><0x08><0xB1><0xFD><0x01>, you did good, kid.<0xFB>You fought hard, but looks like the\nrest of us weren't tough enough to<0xFA>take down those bozos.<0xFB>You're now all that's left of the\nBlack <0xFD><0x01>.<0xFB>Be strong, and keep your fightin'\nspirit alive!<0xFB>-James<0xB2>",
+  "french": "{COLOR}ÁIl y a une note !\\p{COLOR}Ë“{PLAYER}, tu as été bon,\\pgamin. Tu t'es battu dur, mais on\\ndirait que le reste d'entre nous\\ln'était pas assez fort pour\\pdescendre ces clowns. Tu es\\ndésormais tout ce qui reste des\\pBlack {PLAYER}.\\nSois fort et garde\\pton esprit combatif ! -James”"
+ },
+ {
+  "line": 22606,
+  "offset": "0x1FA4E7A",
+  "english": "I just don't know what to do.<0xFB>Every few days, this horrible\nPokémon has been coming into my<0xFA>house and stealing my food.<0xFB>If I had a <0xFC><0x01><0x06>Pokédex<0xFC><0x01><0x08>, I could know\nwhat it was and how to stop it\"<0xFB>If you get a <0xFC><0x01><0x06>Pokédex<0xFC><0x01><0x08>, would you\ncome back and help me?",
+  "french": "Je ne sais plus\\pquoi faire. Souvent,\\nce Pokémon vient chez moi voler ma\\lnourriture. Si j'avais un\\p{COLOR}ÉPokédex{COLOR}Ë, je saurais\\nce que c'est et comment l'arrêter...\\pSi tu en obtiens un, tu pourrais\\nrevenir m'aider ?"
+ },
+ {
+  "line": 22633,
+  "offset": "0x1FA583C",
+  "english": "That TM contains <0xFC><0x01><0x06>Hone Claws<0xFC><0x01><0x08>.<0xFB>If you plan on challenging the\n<0xFC><0x01><0x06>Dresco Gym<0xFC><0x01><0x08>, it'll help you a lot.<0xFB>It's very foggy and hard to see in\nthere\"",
+  "french": "Cette CT contient\\p{COLOR}ÉAiguisage{COLOR}Ë. Si vous\\nvoulez défier l'{COLOR}ÉArène de\\pDresco{COLOR}Ë, ça vous aidera.\\nLà-bas, c'est plein de brouillard."
+ },
+ {
+  "line": 22651,
+  "offset": "0x1FA5F55",
+  "english": "I wonder where those three\nPokémon flew off to?<0xFB>Uxie is a Pokémon that symbolizes\nknowledge\"<0xFB>If you mention a place in Borrius\nwhere knowledge is gathered, the<0xFA>first thing that comes to mind is<0xFA>the <0xFC><0x01><0x06>Dream Research Lab<0xFC><0x01><0x04>\"<0xFB>Mesprit is a Pokémon that presides\nover emotion, right?<0xFB>Maybe someplace where you <0xFC><0x01><0x06>heard<0xFC><0x01><0x04>\nsomething that stirred your<0xFA>emotions?<0xFB>And Azelf is willpower\"<0xFB>The desire to <0xFC><0x01><0x06>see something\nthrough<0xFC><0x01><0x04>\"<0xFB>What place could represent that?",
+  "french": "Je me demande où ces trois Pokémon\\nse sont envolés ? Créhelf est un\\pPokémon qui symbolise la\\nconnaissance… Si vous mentionnez un\\pendroit à Borrius où la connaissance\\nest rassemblée, la première chose\\lqui vient à l'esprit est le\\l{COLOR}ÉLabo de Recherche sur les\\pRêves{COLOR}Ç… Créfollet est un\\nPokémon qui préside aux émotions,\\pn'est-ce pas ? Peut-être un endroit\\noù vous avez {COLOR}Éentendu{COLOR}Ç\\lquelque chose qui a remué vos\\pémotions ? Et Créfadet est la\\pvolonté… Le désir de {COLOR}Émener\\nquelque chose à terme{COLOR}Ç… Quel\\pendroit pourrait représenter cela ?"
+ },
+ {
+  "line": 22672,
+  "offset": "0x1FA67CC",
+  "english": "Thanks, hon, you're a real\nlife saver.<0xFB>Those thugs can't have gotten far.<0xFB>I'd wager they're in the <0xFC><0x01><0x06>Magnolia\nFields<0xFC><0x01><0x04> as we speak.",
+  "french": "Merci, chéri, tu nous sauves ! Ces\\nvoyous n'ont pas pu aller loin. Je\\pparie qu'ils sont dans les\\p{COLOR}ÉChamps Magnolia{COLOR}Ç en\\nce moment."
+ },
+ {
+  "line": 22673,
+  "offset": "0x1FA6852",
+  "english": "Our Miltank ain't the brightest\nof cattle.<0xFB>If you approach any in the <0xFC><0x01><0x06>Magnolia\nFields<0xFC><0x01><0x04>, they'll prolly run away<0xFA>from you until they hit a wall.<0xFB>If you can get 'em to run back to\ntown, then we'll take it from there.",
+  "french": "Nos Écrémeuh ne sont pas futés. Si\\ntu t'approches d'eux dans les\\p{COLOR}ÉChamps\\nMagnolia{COLOR}Ç, ils\\lfuiront jusqu'à heurter un mur.\\pRamène-les vers la ville et on\\nprendra le relais."
+ },
+ {
+  "line": 22698,
+  "offset": "0x1FA74CF",
+  "english": "It's been a minute, <0xFD><0x01>.<0xFB>How've ya been without the Black\n<0xFD><0x01> keepin' ya on the<0xFA>straight and narrow?<0xFB>\"<0xFB>So you became Champion, huh?<0xFB>I always knew I had the eye for\ngreat talent!<0xFB>You sure got your share of guts,\nkid.<0xFB>It's a shame the Boss doesn't want\nyou joinin' the Black Horizon.<0xFB>Something about having <0xB1>special\nplans<0xB2> for you.<0xFB>Anyway, <0xFD><0x01>, keep on bein'\nthe gutsiest Trainer I know!",
+  "french": "Ça fait un bail, {PLAYER}. Comment\\pça va sans les {PLAYER} Noirs pour\\nte garder dans le droit chemin ? …\\lAlors tu es devenu\\pMaître, hein ? Je\\psavais que j'avais l'œil pour le\\ptalent ! Tu as vraiment du cran,\\ngamin. C'est\\pdommage que la Patronne\\nne veuille pas que tu rejoignes\\pl'Horizon Noir. Quelque chose à\\npropos de “plans\\pspéciaux” pour toi.\\nBref, {PLAYER}, continue d'être le\\pDresseur le plus courageux que je\\nconnaisse !"
+ },
+ {
+  "line": 22750,
+  "offset": "0x1FA8A19",
+  "english": "You think this is a joke, kid?<0xFB>I said only bring <0xFC><0x01><0x06>Ice<0xFC><0x01><0x08>- and <0xFC><0x01><0x06>Fairy<0xFC><0x01><0x08>-\ntypes!<0xFB>If you wanna rescue the fat man,\nyou'll need to do as I say.",
+  "french": "Tu crois que c'est une blague, gamin\\p? J'ai dit d'amener seulement des\\ntypes {COLOR}ÉGlace{COLOR}Ë et\\p{COLOR}ÉFée{COLOR}Ë ! Si tu veux\\nsauver le gros lard, tu devras faire ce que je dis."
+ },
+ {
+  "line": 22776,
+  "offset": "0x1FA9155",
+  "english": "These burglars used to run things\naround here.<0xFB>So we, the Black Ferrothorn,\nstepped in to help 'em out!",
+  "french": "Ces cambrioleurs dirigeaient les\\nchoses ici avant. Alors nous, les\\pNoacier Noirs, sommes intervenus\\npour les aider !"
+ },
+ {
+  "line": 22905,
+  "offset": "0x1FABE95",
+  "english": "I miss Antisis City.<0xFB>We Terror Granbull used to live\nlike kings!",
+  "french": "Antisis City me manque. Nous, les\\pTerreur Granbull, vivions comme des\\nrois !"
+ },
+ {
+  "line": 22918,
+  "offset": "0x1FAC36B",
+  "english": "Oh, heavens\"<0xFB>If the Champion is too afraid to do\nit, who would?",
+  "french": "Oh, ciel… Si le\\pMaître a trop peur\\nde le faire, qui le ferait ?"
+ }
+]
