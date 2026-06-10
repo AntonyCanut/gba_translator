@@ -1,9 +1,9 @@
 {
-  "conversion_date": "2026-06-10T23:23:28.256661",
+  "conversion_date": "2026-06-10T23:44:23.132052",
   "source_csv": "2026-01-15_trilingual_translation.csv",
-  "total_translations": 19642,
+  "total_translations": 19718,
   "total_errors": 0,
-  "total_warnings": 16009,
+  "total_warnings": 15983,
   "translations": [
     {
       "offset": 165760,
@@ -17646,6 +17646,18 @@
       "too_long": false
     },
     {
+      "offset": 2544869,
+      "original_text": "get started then!",
+      "translation": "commençons !",
+      "length": 12,
+      "original_length": 17,
+      "padding_used": -5,
+      "encoding": "pokemon",
+      "category": "dialogue",
+      "notes": "",
+      "too_long": false
+    },
+    {
       "offset": 2544887,
       "original_text": "That was a great battle! My\nPokémon had fun!",
       "translation": "C'était un super combat ! Mes\nPokémon se sont amusés !",
@@ -17736,6 +17748,18 @@
       "length": 58,
       "original_length": 56,
       "padding_used": 2,
+      "encoding": "pokemon",
+      "category": "dialogue",
+      "notes": "",
+      "too_long": false
+    },
+    {
+      "offset": 2587154,
+      "original_text": "The spikes disappeared from around\n<0xFD><0x0F>'s feet!",
+      "translation": "Les picots autour de <0xFD><0x0F>\nont disparu !",
+      "length": 37,
+      "original_length": 45,
+      "padding_used": -8,
       "encoding": "pokemon",
       "category": "dialogue",
       "notes": "",
@@ -34050,6 +34074,18 @@
       "too_long": false
     },
     {
+      "offset": 4180999,
+      "original_text": "<0xFC><0x08>î1, <0xFC><0x08><0x0F>2, and<0xFC><0x08><0x0F>\" <0xFC><0x08><0x0F>\" <0xFC><0x08><0x0F>\" <0xFC><0x08><0x0F><0xFC><0x10><0x31> Poof!<0xFB>",
+      "translation": "<0xFC><0x08><0x20>1, <0xFC><0x08><0x0F>2, et<0xFC><0x08><0x0F>\" <0xFC><0x08><0x0F>\" <0xFC><0x08><0x0F>\" <0xFC><0x08><0x0F><0xFC><0x10><0x31><0x00>Pouf !<0xFB>",
+      "length": 43,
+      "original_length": 43,
+      "padding_used": 0,
+      "encoding": "pokemon",
+      "category": "dialogue",
+      "notes": "",
+      "too_long": false
+    },
+    {
       "offset": 4181049,
       "original_text": "HM moves can't be\nforgotten now.<0xFB>",
       "translation": "Les CS ne peuvent pas être\noubliées maintenant.<0xFB>",
@@ -34950,12 +34986,36 @@
       "too_long": true
     },
     {
+      "offset": 4183134,
+      "original_text": "Go! <0xFD><0x05>!",
+      "translation": "<0xFD><0x05>, go !",
+      "length": 8,
+      "original_length": 7,
+      "padding_used": 1,
+      "encoding": "pokemon",
+      "category": "dialogue",
+      "notes": "",
+      "too_long": false
+    },
+    {
       "offset": 4183142,
       "original_text": "Go! <0xFD><0x05> and\n<0xFD><0x07>!",
       "translation": "Go! <0xFD><0x05> et\n<0xFD><0x07>!",
       "length": 13,
       "original_length": 14,
       "padding_used": -1,
+      "encoding": "pokemon",
+      "category": "dialogue",
+      "notes": "",
+      "too_long": false
+    },
+    {
+      "offset": 4183157,
+      "original_text": "Go! <0xFD> !",
+      "translation": "<0xFD><0x00>, go !",
+      "length": 8,
+      "original_length": 7,
+      "padding_used": 1,
       "encoding": "pokemon",
       "category": "dialogue",
       "notes": "",
@@ -37674,6 +37734,18 @@
       "too_long": true
     },
     {
+      "offset": 4285751,
+      "original_text": "Your Coins:\n<0xFD><0x02><0xFC><0x09>",
+      "translation": "Jetons :\n<0xFD><0x02><0xFC><0x09>",
+      "length": 13,
+      "original_length": 16,
+      "padding_used": -3,
+      "encoding": "pokemon",
+      "category": "dialogue",
+      "notes": "",
+      "too_long": false
+    },
+    {
       "offset": 4285836,
       "original_text": "<0xFD><0x01> used the\n<0xFD><0x03>.<0xFC><0x09>",
       "translation": "<0xFD><0x01> utilise le\n<0xFD><0x03>.<0xFC><0x09>",
@@ -38750,6 +38822,18 @@
       "padding_used": -2,
       "encoding": "pokemon",
       "category": "description",
+      "notes": "",
+      "too_long": false
+    },
+    {
+      "offset": 4288972,
+      "original_text": "That isn't an Egg.",
+      "translation": "Pas un OEuf.",
+      "length": 12,
+      "original_length": 18,
+      "padding_used": -6,
+      "encoding": "pokemon",
+      "category": "other",
       "notes": "",
       "too_long": false
     },
@@ -45510,6 +45594,18 @@
       "too_long": false
     },
     {
+      "offset": 4305649,
+      "original_text": "2, and \" \" \" ",
+      "translation": "2, et \" \" \" ",
+      "length": 12,
+      "original_length": 13,
+      "padding_used": -1,
+      "encoding": "pokemon",
+      "category": "other",
+      "notes": "",
+      "too_long": false
+    },
+    {
       "offset": 4305663,
       "original_text": "Poof!<0xFB>",
       "translation": "Pouf !<0xFB>",
@@ -46602,6 +46698,18 @@
       "too_long": false
     },
     {
+      "offset": 4312912,
+      "original_text": "Want to play BERRY CRUSH again?",
+      "translation": "Tu veux rejouer à BERRY CRUSH ?",
+      "length": 31,
+      "original_length": 31,
+      "padding_used": 0,
+      "encoding": "pokemon",
+      "category": "dialogue",
+      "notes": "",
+      "too_long": false
+    },
+    {
       "offset": 4312944,
       "original_text": "You have no BERRIES.\nThe game will be canceled.",
       "translation": "Tu n'as pas de BAIE.\nPartie annulée.",
@@ -47502,6 +47610,18 @@
       "too_long": true
     },
     {
+      "offset": 4317464,
+      "original_text": "<0xFC><0x01><0x02><0xFC><0x02><0x01><0xFC><0x03><0x03>Communication standby\"\nPlease wait.",
+      "translation": "<0xFC><0x01><0x02><0xFC><0x02><0x01><0xFC><0x03><0x03>Attente communication\"\nPatiente.",
+      "length": 41,
+      "original_length": 44,
+      "padding_used": -3,
+      "encoding": "pokemon",
+      "category": "description",
+      "notes": "",
+      "too_long": false
+    },
+    {
       "offset": 4317509,
       "original_text": "<0xFC><0x01><0x02><0xFC><0x02><0x01><0xFC><0x03><0x03>The trade has been canceled.",
       "translation": "<0xFC><0x01><0x02><0xFC><0x02><0x01><0xFC><0x03><0x03>L'échange a été annulé.",
@@ -47512,6 +47632,18 @@
       "category": "system",
       "notes": "",
       "too_long": false
+    },
+    {
+      "offset": 4317547,
+      "original_text": "<0xFC><0x01><0x02><0xFC><0x02><0x01><0xFC><0x03><0x03>That's your only Pokémon\nfor battle.",
+      "translation": "<0xFC><0x01><0x02><0xFC><0x02><0x01><0xFC><0x03><0x03>C'est ton seul Pokémon\npour le combat.",
+      "length": 47,
+      "original_length": 45,
+      "padding_used": 2,
+      "encoding": "pokemon",
+      "category": "dialogue",
+      "notes": "",
+      "too_long": true
     },
     {
       "offset": 4317593,
@@ -47824,6 +47956,18 @@
       "category": "dialogue",
       "notes": "",
       "too_long": true
+    },
+    {
+      "offset": 4318355,
+      "original_text": "<0xFC><0x08>î1, <0xFC><0x08><0x0F>2, and <0xFC><0x08><0x0F>\" <0xFC><0x08><0x0F>\" <0xFC><0x08><0x0F>\" <0xFC><0x08><0x0F><0xFC><0x10><0x31> Poof!<0xFB>",
+      "translation": "<0xFC><0x08><0x20>1, <0xFC><0x08><0x0F>2, et <0xFC><0x08><0x0F>\" <0xFC><0x08><0x0F>\" <0xFC><0x08><0x0F>\" <0xFC><0x08><0x0F><0xFC><0x10><0x31><0x00>Pouf !<0xFB>",
+      "length": 44,
+      "original_length": 44,
+      "padding_used": 0,
+      "encoding": "pokemon",
+      "category": "dialogue",
+      "notes": "",
+      "too_long": false
     },
     {
       "offset": 4318400,
@@ -53622,6 +53766,18 @@
       "too_long": true
     },
     {
+      "offset": 4551096,
+      "original_text": "Please start over from the beginning.",
+      "translation": "Recommence depuis le début.",
+      "length": 27,
+      "original_length": 37,
+      "padding_used": -10,
+      "encoding": "pokemon",
+      "category": "description",
+      "notes": "",
+      "too_long": false
+    },
+    {
       "offset": 4551136,
       "original_text": "The WIRELESS COMMUNICATION\nSYSTEM search has been canceled.",
       "translation": "La recherche par COMMUNICATION\nSANS FIL a été annulée.",
@@ -53718,6 +53874,18 @@
       "too_long": false
     },
     {
+      "offset": 4551840,
+      "original_text": "<0xFD><0x03> contacted you for\n<0xFD><0x02>. Accept?",
+      "translation": "<0xFD><0x03> te contacte pour\n<0xFD><0x02>. Accepter ?",
+      "length": 34,
+      "original_length": 32,
+      "padding_used": 2,
+      "encoding": "pokemon",
+      "category": "dialogue",
+      "notes": "",
+      "too_long": false
+    },
+    {
       "offset": 4551876,
       "original_text": "<0xFD><0x03> contacted you.\nWill you share <0xFD><0x02>?",
       "translation": "<0xFD><0x03> t'a contacté.\nVeux-tu partager <0xFD><0x02> ?",
@@ -53735,6 +53903,30 @@
       "translation": "<0xFD><0x03> t'a contacté.\nL'ajouter aux membres ?",
       "length": 40,
       "original_length": 37,
+      "padding_used": 3,
+      "encoding": "pokemon",
+      "category": "dialogue",
+      "notes": "",
+      "too_long": false
+    },
+    {
+      "offset": 4551956,
+      "original_text": "<0xFD><0x02>!\nAre these members OK?",
+      "translation": "<0xFD><0x02> !\nOK pour ces membres ?",
+      "length": 26,
+      "original_length": 25,
+      "padding_used": 1,
+      "encoding": "pokemon",
+      "category": "dialogue",
+      "notes": "",
+      "too_long": false
+    },
+    {
+      "offset": 4551984,
+      "original_text": "Cancel <0xFD><0x02> MODE\nwith these members?",
+      "translation": "Annuler le MODE <0xFD><0x02>\navec ces membres ?",
+      "length": 37,
+      "original_length": 34,
       "padding_used": 3,
       "encoding": "pokemon",
       "category": "dialogue",
@@ -53894,6 +54086,42 @@
       "padding_used": -4,
       "encoding": "pokemon",
       "category": "dialogue",
+      "notes": "",
+      "too_long": false
+    },
+    {
+      "offset": 4552892,
+      "original_text": "Awaiting <0xFD><0x02>'s response about\nthe trade\"",
+      "translation": "Attente de la réponse de <0xFD><0x02>\nsur l'échange\"",
+      "length": 42,
+      "original_length": 39,
+      "padding_used": 3,
+      "encoding": "pokemon",
+      "category": "description",
+      "notes": "",
+      "too_long": true
+    },
+    {
+      "offset": 4553040,
+      "original_text": "Communicating with <0xFD><0x02><0xFC><0x08><0x0F>.<0xFC><0x08><0x0F>.<0xFC><0x08><0x0F>.\n<0xFC><0x08><0x0F>.<0xFC><0x08><0x0F>.<0xFC><0x08><0x0F>.<0xFC><0x08><0x0F>.<0xFC><0x08><0x0F>.<0xFC><0x08><0x0F>.<0xFC><0x08><0x0F>.<0xFC><0x08><0x0F>.<0xFC><0x08><0x0F>.<0xFC><0x08><0x0F>.<0xFC><0x08><0x0F>.<0xFC><0x08><0x0F>.<0xFC><0x08><0x0F>.<0xFC><0x08><0x0F>.<0xFC><0x08><0x0F>.<0xFC><0x08><0x0F>.<0xFC><0x08><0x0F>.<0xFC><0x08><0x0F>.",
+      "translation": "Communication avec <0xFD><0x02><0xFC><0x08><0x0F>.<0xFC><0x08><0x0F>.<0xFC><0x08><0x0F>.\n<0xFC><0x08><0x0F>.<0xFC><0x08><0x0F>.<0xFC><0x08><0x0F>.<0xFC><0x08><0x0F>.<0xFC><0x08><0x0F>.<0xFC><0x08><0x0F>.<0xFC><0x08><0x0F>.<0xFC><0x08><0x0F>.<0xFC><0x08><0x0F>.<0xFC><0x08><0x0F>.<0xFC><0x08><0x0F>.<0xFC><0x08><0x0F>.<0xFC><0x08><0x0F>.<0xFC><0x08><0x0F>.<0xFC><0x08><0x0F>.<0xFC><0x08><0x0F>.<0xFC><0x08><0x0F>.<0xFC><0x08><0x0F>.",
+      "length": 106,
+      "original_length": 106,
+      "padding_used": 0,
+      "encoding": "pokemon",
+      "category": "description",
+      "notes": "",
+      "too_long": false
+    },
+    {
+      "offset": 4553148,
+      "original_text": "Please wait a while<0xFC><0x08><0x0F>.<0xFC><0x08><0x0F>.<0xFC><0x08><0x0F>.<0xFC><0x08><0x0F>.<0xFC><0x08><0x0F>.<0xFC><0x08><0x0F>.\n<0xFC><0x08><0x0F>.<0xFC><0x08><0x0F>.<0xFC><0x08><0x0F>.<0xFC><0x08><0x0F>.<0xFC><0x08><0x0F>.<0xFC><0x08><0x0F>.<0xFC><0x08><0x0F>.<0xFC><0x08><0x0F>.<0xFC><0x08><0x0F>.<0xFC><0x08><0x0F>.<0xFC><0x08><0x0F>.<0xFC><0x08><0x0F>.<0xFC><0x08><0x0F>.<0xFC><0x08><0x0F>.<0xFC><0x08><0x0F>.<0xFC><0x08><0x0F>.<0xFC><0x08><0x0F>.<0xFC><0x08><0x0F>.",
+      "translation": "Patiente un instant<0xFC><0x08><0x0F>.<0xFC><0x08><0x0F>.<0xFC><0x08><0x0F>.<0xFC><0x08><0x0F>.<0xFC><0x08><0x0F>.<0xFC><0x08><0x0F>.\n<0xFC><0x08><0x0F>.<0xFC><0x08><0x0F>.<0xFC><0x08><0x0F>.<0xFC><0x08><0x0F>.<0xFC><0x08><0x0F>.<0xFC><0x08><0x0F>.<0xFC><0x08><0x0F>.<0xFC><0x08><0x0F>.<0xFC><0x08><0x0F>.<0xFC><0x08><0x0F>.<0xFC><0x08><0x0F>.<0xFC><0x08><0x0F>.<0xFC><0x08><0x0F>.<0xFC><0x08><0x0F>.<0xFC><0x08><0x0F>.<0xFC><0x08><0x0F>.<0xFC><0x08><0x0F>.<0xFC><0x08><0x0F>.",
+      "length": 116,
+      "original_length": 116,
+      "padding_used": 0,
+      "encoding": "pokemon",
+      "category": "description",
       "notes": "",
       "too_long": false
     },
@@ -54174,11 +54402,35 @@
       "too_long": false
     },
     {
+      "offset": 4554944,
+      "original_text": "As my introduction, I'll show you\nmy Trainer Card.",
+      "translation": "Pour me présenter, je vais te\nmontrer ma Carte Dresseur.",
+      "length": 56,
+      "original_length": 50,
+      "padding_used": 6,
+      "encoding": "pokemon",
+      "category": "dialogue",
+      "notes": "",
+      "too_long": true
+    },
+    {
       "offset": 4555052,
       "original_text": "Thanks for waiting!\nLet's get our battle started!<0xFC><0x08><0x3C>",
       "translation": "Merci d'avoir attendu !\nCommençons le combat !{PAUSE}",
       "length": 53,
       "original_length": 52,
+      "padding_used": 1,
+      "encoding": "pokemon",
+      "category": "dialogue",
+      "notes": "",
+      "too_long": false
+    },
+    {
+      "offset": 4555108,
+      "original_text": "All right!\nLet's chat!<0xFC><0x08><0x3C>",
+      "translation": "Très bien !\nDiscutons !<0xFC><0x08><0x3C>",
+      "length": 26,
+      "original_length": 25,
       "padding_used": 1,
       "encoding": "pokemon",
       "category": "dialogue",
@@ -54192,6 +54444,18 @@
       "length": 43,
       "original_length": 46,
       "padding_used": -3,
+      "encoding": "pokemon",
+      "category": "dialogue",
+      "notes": "",
+      "too_long": false
+    },
+    {
+      "offset": 4555184,
+      "original_text": "Sorry I made you wait!\nLet's chat.<0xFC><0x08><0x3C>",
+      "translation": "Désolé de l'attente !\nDiscutons.<0xFC><0x08><0x3C>",
+      "length": 35,
+      "original_length": 37,
+      "padding_used": -2,
       "encoding": "pokemon",
       "category": "dialogue",
       "notes": "",
@@ -54222,6 +54486,18 @@
       "too_long": false
     },
     {
+      "offset": 4555288,
+      "original_text": "Entering the chat\"<0xFC><0x08><0x3C>",
+      "translation": "Accès au chat\"<0xFC><0x08><0x3C>",
+      "length": 17,
+      "original_length": 21,
+      "padding_used": -4,
+      "encoding": "pokemon",
+      "category": "location",
+      "notes": "",
+      "too_long": false
+    },
+    {
       "offset": 4555456,
       "original_text": "I'm terribly sorry, but my Pokémon\naren't feeling well\"<0xFB>Let's battle another time.<0xFB>",
       "translation": "Je suis vraiment désolé, mais mes\nPokémon ne se sentent pas bien...<0xFB>Combattre une autre fois.<0xFB>",
@@ -54244,6 +54520,18 @@
       "category": "dialogue",
       "notes": "",
       "too_long": true
+    },
+    {
+      "offset": 4555628,
+      "original_text": "Oh? Now where did I put my\nTrainer Card?\"<0xFA>Sorry! I'll show you later!<0xFB>",
+      "translation": "Oh ? Où ai-je mis ma Carte\nDresseur ?\"<0xFA>Désolé ! Une autre fois !<0xFB>",
+      "length": 65,
+      "original_length": 70,
+      "padding_used": -5,
+      "encoding": "pokemon",
+      "category": "dialogue",
+      "notes": "",
+      "too_long": false
     },
     {
       "offset": 4555768,
@@ -54278,6 +54566,30 @@
       "padding_used": 2,
       "encoding": "pokemon",
       "category": "dialogue",
+      "notes": "",
+      "too_long": false
+    },
+    {
+      "offset": 4556028,
+      "original_text": "Oh, all right.\nCome see me anytime, okay?<0xFB>",
+      "translation": "Oh, d'accord.\nReviens quand tu veux !<0xFB>",
+      "length": 38,
+      "original_length": 42,
+      "padding_used": -4,
+      "encoding": "pokemon",
+      "category": "dialogue",
+      "notes": "",
+      "too_long": false
+    },
+    {
+      "offset": 4556072,
+      "original_text": "Oh\"\nPlease come by anytime.<0xFB>",
+      "translation": "Oh\"\nPasse quand tu veux.<0xFB>",
+      "length": 25,
+      "original_length": 28,
+      "padding_used": -3,
+      "encoding": "pokemon",
+      "category": "description",
       "notes": "",
       "too_long": false
     },
@@ -54450,6 +54762,18 @@
       "too_long": false
     },
     {
+      "offset": 4556952,
+      "original_text": "In other words\"\nYes! That's right!<0xFB>",
+      "translation": "Autrement dit\"\nOui ! C'est ça !<0xFB>",
+      "length": 32,
+      "original_length": 35,
+      "padding_used": -3,
+      "encoding": "pokemon",
+      "category": "dialogue",
+      "notes": "",
+      "too_long": false
+    },
+    {
       "offset": 4557080,
       "original_text": "I hope I get to know you better!<0xFB>",
       "translation": "J'espère mieux te connaître !<0xFB>",
@@ -54458,6 +54782,18 @@
       "padding_used": -3,
       "encoding": "pokemon",
       "category": "dialogue",
+      "notes": "",
+      "too_long": false
+    },
+    {
+      "offset": 4557116,
+      "original_text": "We're showing each other our\nTrainer CardS to get acquainted.<0xFB>",
+      "translation": "On se montre nos Cartes Dresseur\npour faire connaissance.<0xFB>",
+      "length": 58,
+      "original_length": 62,
+      "padding_used": -4,
+      "encoding": "pokemon",
+      "category": "description",
       "notes": "",
       "too_long": false
     },
@@ -54486,6 +54822,18 @@
       "too_long": false
     },
     {
+      "offset": 4557348,
+      "original_text": "I'm trading Pokémon right now.<0xFB>",
+      "translation": "Je fais un échange de Pokémon.<0xFB>",
+      "length": 31,
+      "original_length": 31,
+      "padding_used": 0,
+      "encoding": "pokemon",
+      "category": "description",
+      "notes": "",
+      "too_long": false
+    },
+    {
       "offset": 4557380,
       "original_text": "I finally got that Pokémon I\nwanted in a trade!<0xFB>",
       "translation": "J'ai enfin obtenu ce Pokémon que je\nvoulais dans un échange !<0xFB>",
@@ -54496,6 +54844,18 @@
       "category": "dialogue",
       "notes": "",
       "too_long": true
+    },
+    {
+      "offset": 4557464,
+      "original_text": "<0xFD><0x02> checked the\nTRADING BOARD.<0xFB>",
+      "translation": "<0xFD><0x02> consulte le\nTABLEAU ÉCHANGE.<0xFB>",
+      "length": 32,
+      "original_length": 30,
+      "padding_used": 2,
+      "encoding": "pokemon",
+      "category": "description",
+      "notes": "",
+      "too_long": false
     },
     {
       "offset": 4557496,
@@ -54542,6 +54902,30 @@
       "padding_used": -7,
       "encoding": "pokemon",
       "category": "dialogue",
+      "notes": "",
+      "too_long": false
+    },
+    {
+      "offset": 4558164,
+      "original_text": "Registration has been canceled.<0xFB>",
+      "translation": "Inscription annulée.<0xFB>",
+      "length": 21,
+      "original_length": 32,
+      "padding_used": -11,
+      "encoding": "pokemon",
+      "category": "system",
+      "notes": "",
+      "too_long": false
+    },
+    {
+      "offset": 4558200,
+      "original_text": "Registration has been completed.<0xFB>",
+      "translation": "Inscription terminée.<0xFB>",
+      "length": 22,
+      "original_length": 33,
+      "padding_used": -11,
+      "encoding": "pokemon",
+      "category": "description",
       "notes": "",
       "too_long": false
     },
@@ -54666,6 +55050,42 @@
       "too_long": true
     },
     {
+      "offset": 4558820,
+      "original_text": "Please choose a Trainer.",
+      "translation": "Choisis un Dresseur.",
+      "length": 20,
+      "original_length": 24,
+      "padding_used": -4,
+      "encoding": "pokemon",
+      "category": "other",
+      "notes": "",
+      "too_long": false
+    },
+    {
+      "offset": 4558848,
+      "original_text": "Please choose a Trainer for\na Single Battle.",
+      "translation": "Choisis un Dresseur pour\nun Combat Solo.",
+      "length": 40,
+      "original_length": 44,
+      "padding_used": -4,
+      "encoding": "pokemon",
+      "category": "description",
+      "notes": "",
+      "too_long": false
+    },
+    {
+      "offset": 4558896,
+      "original_text": "Please choose a Trainer for\na Double Battle.",
+      "translation": "Choisis un Dresseur pour\nun Combat Duo.",
+      "length": 39,
+      "original_length": 44,
+      "padding_used": -5,
+      "encoding": "pokemon",
+      "category": "description",
+      "notes": "",
+      "too_long": false
+    },
+    {
       "offset": 4558944,
       "original_text": "Please choose the Leader\nfor a Multi Battle.",
       "translation": "Choisis le Meneur pour\nun Combat Multi.",
@@ -54726,6 +55146,30 @@
       "too_long": false
     },
     {
+      "offset": 4559200,
+      "original_text": "Berry Crush!\nPlease choose the Leader.",
+      "translation": "Berry Crush !\nChoisis le Meneur.",
+      "length": 32,
+      "original_length": 38,
+      "padding_used": -6,
+      "encoding": "pokemon",
+      "category": "dialogue",
+      "notes": "",
+      "too_long": false
+    },
+    {
+      "offset": 4559240,
+      "original_text": "Dodrio Berry-Picking!\nPlease choose the Leader.",
+      "translation": "Cueillette Baies Dodrio !\nChoisis le Meneur.",
+      "length": 44,
+      "original_length": 47,
+      "padding_used": -3,
+      "encoding": "pokemon",
+      "category": "dialogue",
+      "notes": "",
+      "too_long": false
+    },
+    {
       "offset": 4559440,
       "original_text": "<0xFD><0x02> has been asked to register\nyou as a member. Please wait.",
       "translation": "<0xFD><0x02> a été invité à t'inscrire\ncomme membre. Merci d'attendre.",
@@ -54760,6 +55204,18 @@
       "category": "description",
       "notes": "",
       "too_long": true
+    },
+    {
+      "offset": 4559636,
+      "original_text": "No News appears to be shared\nright now.",
+      "translation": "Aucune News partagée\npour le moment.",
+      "length": 36,
+      "original_length": 39,
+      "padding_used": -3,
+      "encoding": "pokemon",
+      "category": "description",
+      "notes": "",
+      "too_long": false
     },
     {
       "offset": 4559764,
@@ -62828,10 +63284,10 @@
     {
       "offset": 7901384,
       "original_text": "Officer 1: <0xFC><0x01><0x08>Looks like <0xFD><0x03>\ndoesn't know, Frank\"<0xFB>Should we let <0xFD><0x02> off?",
-      "translation": "Officer 1: {COLOR}ËLooks like {STR_VAR_2}\ndoesn't know, Frank...<0xFB>Should we let {STR_VAR_1} off?",
-      "length": 95,
+      "translation": "Agent 1 : <0xFC><0x01><0x08>On dirait que <0xFD><0x03>\nn'est pas au courant, Frank\"<0xFB>On laisse <0xFD><0x02> partir ?",
+      "length": 80,
       "original_length": 70,
-      "padding_used": 25,
+      "padding_used": 10,
       "encoding": "pokemon",
       "category": "dialogue",
       "notes": "",
@@ -62840,10 +63296,10 @@
     {
       "offset": 7901455,
       "original_text": "Officer 2: <0xFC><0x01><0x08>Let's let <0xFD><0x02> off.<0xFB><0xFD><0x04> probably just fell victim to\nMirskle's lies.<0xFB>Poor kid\"",
-      "translation": "Officer 2: {COLOR}ËLet's let {STR_VAR_1} off.<0xFB>{STR_VAR_3} probably just fell victim to\nMirskle's lies.<0xFB>Poor kid...",
-      "length": 114,
+      "translation": "Agent 2 : <0xFC><0x01><0x08>Laissons <0xFD><0x02> partir.<0xFB><0xFD><0x04> est sans doute une victime\ndes mensonges de Mirskle.<0xFB>Pauvre gamin\"",
+      "length": 102,
       "original_length": 89,
-      "padding_used": 25,
+      "padding_used": 13,
       "encoding": "pokemon",
       "category": "description",
       "notes": "",
@@ -76962,6 +77418,18 @@
       "too_long": true
     },
     {
+      "offset": 8328798,
+      "original_text": "Grunt 1: <0xFC><0x01><0x08>Uh\"go\"Floe\"",
+      "translation": "Sbire 1 : <0xFC><0x01><0x08>Euh\"go\"Floe\"",
+      "length": 25,
+      "original_length": 23,
+      "padding_used": 2,
+      "encoding": "pokemon",
+      "category": "location",
+      "notes": "",
+      "too_long": false
+    },
+    {
       "offset": 8328822,
       "original_text": "Grunt 2: <0xFC><0x01><0x04>Let's get out of here!",
       "translation": "Sbire 2 : {COLOR}ÇDégageons d'ici !",
@@ -80500,6 +80968,18 @@
       "category": "dialogue",
       "notes": "",
       "too_long": false
+    },
+    {
+      "offset": 8585320,
+      "original_text": "<0xFD><0x02>'s fervent wish\nhas reached <0xFD> !",
+      "translation": "Le voeu ardent de <0xFD><0x02>\nest parvenu à <0xFD><0x00> !",
+      "length": 39,
+      "original_length": 33,
+      "padding_used": 6,
+      "encoding": "pokemon",
+      "category": "dialogue",
+      "notes": "",
+      "too_long": true
     },
     {
       "offset": 8585356,
@@ -85524,6 +86004,18 @@
       "length": 56,
       "original_length": 71,
       "padding_used": -15,
+      "encoding": "pokemon",
+      "category": "description",
+      "notes": "",
+      "too_long": false
+    },
+    {
+      "offset": 9569847,
+      "original_text": "Scarlet flames wash\nover all Pokémon in\nbattle. It may also\ninflict burns.",
+      "translation": "Flammes écarlates\nsur tous les Pokémon\nau combat. Peut\naussi brûler.",
+      "length": 68,
+      "original_length": 74,
+      "padding_used": -6,
       "encoding": "pokemon",
       "category": "description",
       "notes": "",
@@ -99200,10 +99692,10 @@
     {
       "offset": 10762648,
       "original_text": "TMs and HMs",
-      "translation": "TMs and HMs",
-      "length": 11,
+      "translation": "CT et CS",
+      "length": 8,
       "original_length": 11,
-      "padding_used": 0,
+      "padding_used": -3,
       "encoding": "pokemon",
       "category": "location",
       "notes": "",
@@ -99548,7 +100040,7 @@
     {
       "offset": 10762964,
       "original_text": "<0xFD><0x02> is selected.",
-      "translation": "<0xFD><0x02> is selected.",
+      "translation": "<0xFD><0x02> sélectionné.",
       "length": 15,
       "original_length": 15,
       "padding_used": 0,
@@ -99596,14 +100088,14 @@
     {
       "offset": 10763105,
       "original_text": "<0xFD><0x02> is searchable via <0xF8><0x03>!<0xFC><0x09>",
-      "translation": "{STR_VAR_1} is searchable via {R_BUTTON}!{PAUSE_UNTIL_PRESS}",
-      "length": 60,
+      "translation": "<0xFD><0x02> détectable via <0xF8><0x03> !<0xFC><0x09>",
+      "length": 24,
       "original_length": 26,
-      "padding_used": 34,
+      "padding_used": -2,
       "encoding": "pokemon",
       "category": "dialogue",
       "notes": "",
-      "too_long": true
+      "too_long": false
     },
     {
       "offset": 10763132,
@@ -100604,10 +101096,10 @@
     {
       "offset": 10765521,
       "original_text": "in the rain!",
-      "translation": "in the rain!",
-      "length": 12,
+      "translation": "sous la pluie !",
+      "length": 15,
       "original_length": 12,
-      "padding_used": 0,
+      "padding_used": 3,
       "encoding": "pokemon",
       "category": "dialogue",
       "notes": "",
@@ -100616,7 +101108,7 @@
     {
       "offset": 10765534,
       "original_text": "in the sun!",
-      "translation": "in the sun!",
+      "translation": "au soleil !",
       "length": 11,
       "original_length": 11,
       "padding_used": 0,
@@ -100664,14 +101156,14 @@
     {
       "offset": 10765670,
       "original_text": "in a Trick Room!<0xFB>Slower Pokémon get to move first!",
-      "translation": "in a Trick Room!<0xFB>Slower Pokémon get to move first!",
-      "length": 50,
+      "translation": "dans une Distorsion !<0xFB>Les plus lents agissent d'abord !",
+      "length": 55,
       "original_length": 50,
-      "padding_used": 0,
+      "padding_used": 5,
       "encoding": "pokemon",
       "category": "dialogue",
       "notes": "",
-      "too_long": false
+      "too_long": true
     },
     {
       "offset": 10765721,
@@ -100844,10 +101336,10 @@
     {
       "offset": 10767067,
       "original_text": "with all Pokémon confused!",
-      "translation": "with all Pokémon confused!",
-      "length": 26,
+      "translation": "avec les Pokémon confus !",
+      "length": 25,
       "original_length": 26,
-      "padding_used": 0,
+      "padding_used": -1,
       "encoding": "pokemon",
       "category": "dialogue",
       "notes": "",
@@ -100928,10 +101420,10 @@
     {
       "offset": 10767467,
       "original_text": "with all Pokémon having their<0xFA>abilities suppressed!",
-      "translation": "with all Pokémon having their<0xFA>abilities suppressed!",
-      "length": 51,
+      "translation": "avec tous les talents des<0xFA>Pokémon neutralisés !",
+      "length": 47,
       "original_length": 51,
-      "padding_used": 0,
+      "padding_used": -4,
       "encoding": "pokemon",
       "category": "dialogue",
       "notes": "",
@@ -112656,6 +113148,66 @@
       "length": 56,
       "original_length": 63,
       "padding_used": -7,
+      "encoding": "pokemon",
+      "category": "description",
+      "notes": "",
+      "too_long": false
+    },
+    {
+      "offset": 10802780,
+      "original_text": "Auto-run has been <0xFC><0x01><0x06>enabled<0xFC><0x01><0x02>.",
+      "translation": "Course auto <0xFC><0x01><0x06>activée<0xFC><0x01><0x02>.",
+      "length": 26,
+      "original_length": 32,
+      "padding_used": -6,
+      "encoding": "pokemon",
+      "category": "description",
+      "notes": "",
+      "too_long": false
+    },
+    {
+      "offset": 10802813,
+      "original_text": "Auto-run has been <0xFC><0x01><0x06>disabled<0xFC><0x01><0x02>.",
+      "translation": "Course auto <0xFC><0x01><0x06>désactivée<0xFC><0x01><0x02>.",
+      "length": 29,
+      "original_length": 33,
+      "padding_used": -4,
+      "encoding": "pokemon",
+      "category": "description",
+      "notes": "",
+      "too_long": false
+    },
+    {
+      "offset": 10802847,
+      "original_text": "Turbo boost has been <0xFC><0x01><0x06>activated<0xFC><0x01><0x02>.",
+      "translation": "Le boost turbo a été <0xFC><0x01><0x06>activé<0xFC><0x01><0x02>.",
+      "length": 34,
+      "original_length": 37,
+      "padding_used": -3,
+      "encoding": "pokemon",
+      "category": "description",
+      "notes": "",
+      "too_long": false
+    },
+    {
+      "offset": 10802885,
+      "original_text": "Turbo boost has been <0xFC><0x01><0x06>deactivated<0xFC><0x01><0x02>.",
+      "translation": "Le boost turbo a été <0xFC><0x01><0x06>désactivé<0xFC><0x01><0x02>.",
+      "length": 37,
+      "original_length": 39,
+      "padding_used": -2,
+      "encoding": "pokemon",
+      "category": "description",
+      "notes": "",
+      "too_long": false
+    },
+    {
+      "offset": 10802925,
+      "original_text": "Turbo Surf has been <0xFC><0x01><0x06>activated<0xFC><0x01><0x02>.",
+      "translation": "Le Surf turbo a été <0xFC><0x01><0x06>activé<0xFC><0x01><0x02>.",
+      "length": 33,
+      "original_length": 36,
+      "padding_used": -3,
       "encoding": "pokemon",
       "category": "description",
       "notes": "",
@@ -144402,6 +144954,18 @@
       "too_long": false
     },
     {
+      "offset": 32436862,
+      "original_text": "<0xFC><0x01><0x02>Rouse the sleeping Pokémon?",
+      "translation": "<0xFC><0x01><0x02>Réveiller le Pokémon ?",
+      "length": 25,
+      "original_length": 30,
+      "padding_used": -5,
+      "encoding": "pokemon",
+      "category": "dialogue",
+      "notes": "",
+      "too_long": false
+    },
+    {
       "offset": 32436893,
       "original_text": "<0xFC><0x01><0x02>The Pokémon woke up and wished\nitself immense size and power!",
       "translation": "{COLOR}ÁLe Pokémon s'est réveillé et a pris\nune taille et une force immense !",
@@ -144556,6 +145120,18 @@
       "category": "dialogue",
       "notes": "",
       "too_long": true
+    },
+    {
+      "offset": 32438966,
+      "original_text": "<0xFC><0x01><0x02>The <0xFD><0x02> ran away.",
+      "translation": "<0xFC><0x01><0x02>Le <0xFD><0x02> a fui.",
+      "length": 15,
+      "original_length": 19,
+      "padding_used": -4,
+      "encoding": "pokemon",
+      "category": "description",
+      "notes": "",
+      "too_long": false
     },
     {
       "offset": 32439449,
@@ -151938,6 +152514,30 @@
       "too_long": false
     },
     {
+      "offset": 32501001,
+      "original_text": "<0xFC><0x01><0x02>The Pokémon is quietly eyeing\n<0xFD><0x01>\"",
+      "translation": "<0xFC><0x01><0x02>Le Pokémon observe calmement\n<0xFD><0x01>\"",
+      "length": 35,
+      "original_length": 36,
+      "padding_used": -1,
+      "encoding": "pokemon",
+      "category": "description",
+      "notes": "",
+      "too_long": false
+    },
+    {
+      "offset": 32501038,
+      "original_text": "<0xFC><0x01><0x02>Giratina is quietly eyeing\n<0xFD><0x01>\"",
+      "translation": "<0xFC><0x01><0x02>Giratina observe calmement\n<0xFD><0x01>\"",
+      "length": 33,
+      "original_length": 33,
+      "padding_used": 0,
+      "encoding": "pokemon",
+      "category": "description",
+      "notes": "",
+      "too_long": false
+    },
+    {
       "offset": 32501092,
       "original_text": "<0xFC><0x01><0x02><0xFD><0x02> flew off into the\nDistortion World.",
       "translation": "{COLOR}Á{STR_VAR_1} s'est envolé vers le\nMonde Distorsion.",
@@ -156234,6 +156834,18 @@
       "too_long": true
     },
     {
+      "offset": 32537423,
+      "original_text": "<0xFC><0x01><0x02><0xFD><0x02> was released.\nBye-bye, <0xFD><0x02>!",
+      "translation": "<0xFC><0x01><0x02><0xFD><0x02> a été relâché.\nAu revoir, <0xFD><0x02> !",
+      "length": 36,
+      "original_length": 32,
+      "padding_used": 4,
+      "encoding": "pokemon",
+      "category": "dialogue",
+      "notes": "",
+      "too_long": true
+    },
+    {
       "offset": 32537456,
       "original_text": "Sniff\"<0xFB>Isn't it beautiful?<0xFB>That Butterfree will now find love\nand be happy forever\"",
       "translation": "Snif...<0xFB>N'est-ce pas magnifique ?<0xFB>Ce Papilusion va trouver l'amour\net être heureux pour toujours...",
@@ -159342,6 +159954,18 @@
       "too_long": false
     },
     {
+      "offset": 32567075,
+      "original_text": "<0xFC><0x01><0x02>Skip the following dialogue/scene?",
+      "translation": "<0xFC><0x01><0x02>Passer le dialogue/la scène ?",
+      "length": 32,
+      "original_length": 37,
+      "padding_used": -5,
+      "encoding": "pokemon",
+      "category": "dialogue",
+      "notes": "",
+      "too_long": false
+    },
+    {
       "offset": 32567113,
       "original_text": "Would you like to activate\n<0xFC><0x01><0x06>New Game <0x2E><0xFC><0x01><0x02>?",
       "translation": "Veux-tu activer le\n<0xFC><0x01><0x06>New Game +<0xFC><0x01><0x02> ?",
@@ -160012,6 +160636,18 @@
       "category": "dialogue",
       "notes": "",
       "too_long": true
+    },
+    {
+      "offset": 32574914,
+      "original_text": "<0xFC><0x01><0x06>Sandbox Mode<0xFC><0x01><0x02> has been enabled.",
+      "translation": "Le <0xFC><0x01><0x06>Mode Sandbox<0xFC><0x01><0x02> a été activé.",
+      "length": 35,
+      "original_length": 36,
+      "padding_used": -1,
+      "encoding": "pokemon",
+      "category": "description",
+      "notes": "",
+      "too_long": false
     },
     {
       "offset": 32575269,
@@ -168222,6 +168858,18 @@
       "too_long": true
     },
     {
+      "offset": 32660448,
+      "original_text": "<0xFC><0x01><0x02>Tornadus and Thundurus flew off!",
+      "translation": "<0xFC><0x01><0x02>Tornadus et Thundurus se sont envolés !",
+      "length": 42,
+      "original_length": 35,
+      "padding_used": 7,
+      "encoding": "pokemon",
+      "category": "dialogue",
+      "notes": "",
+      "too_long": true
+    },
+    {
       "offset": 32660484,
       "original_text": "What is this?<0xFB>Those Pokémon seem to have fled\nat the sight of you.<0xFB>Could they perhaps\" be afraid\nof your presence?",
       "translation": "Qu'est-ce que c'est ?<0xFB>Ces Pokémon semblent avoir fui\nà ta vue.<0xFB>Pourraient-ils peut-être... avoir peur\nde ta présence ?",
@@ -175530,6 +176178,30 @@
       "too_long": true
     },
     {
+      "offset": 32729012,
+      "original_text": "<0xFC><0x01><0x02><0xFD><0x01> disengaged the barrier!",
+      "translation": "<0xFC><0x01><0x02><0xFD><0x01> a levé la barrière !",
+      "length": 26,
+      "original_length": 29,
+      "padding_used": -3,
+      "encoding": "pokemon",
+      "category": "dialogue",
+      "notes": "",
+      "too_long": false
+    },
+    {
+      "offset": 32729042,
+      "original_text": "<0xFC><0x01><0x02>The freed Pokémon appear to be\nheaded up the mountain.",
+      "translation": "<0xFC><0x01><0x02>Les Pokémon libérés semblent\ngravir la montagne.",
+      "length": 51,
+      "original_length": 57,
+      "padding_used": -6,
+      "encoding": "pokemon",
+      "category": "description",
+      "notes": "",
+      "too_long": false
+    },
+    {
       "offset": 32729100,
       "original_text": "The Pokémon you freed are\nrepairing the stairs!",
       "translation": "Les Pokémon que tu as libérés\nréparent les escaliers !",
@@ -179526,6 +180198,18 @@
       "too_long": false
     },
     {
+      "offset": 32780463,
+      "original_text": "Come on\"<0xFC><0x08><0x10> open up\"<0xFC><0x08><0x30>",
+      "translation": "Allez\"<0xFC><0x08><0x10> ouvre-toi\"<0xFC><0x08><0x30>",
+      "length": 23,
+      "original_length": 23,
+      "padding_used": 0,
+      "encoding": "pokemon",
+      "category": "description",
+      "notes": "",
+      "too_long": false
+    },
+    {
       "offset": 32780487,
       "original_text": "Got it! We're safe now!<0xFC><0x08><0x30>",
       "translation": "C'est bon ! On est en sécurité !{PAUSE}",
@@ -181266,6 +181950,18 @@
       "too_long": false
     },
     {
+      "offset": 32797521,
+      "original_text": "We've made it\"<0xFC><0x08><0x18> it's East Borrius!",
+      "translation": "On y est\"<0xFC><0x08><0x18> c'est Borrius Est !",
+      "length": 32,
+      "original_length": 36,
+      "padding_used": -4,
+      "encoding": "pokemon",
+      "category": "dialogue",
+      "notes": "",
+      "too_long": false
+    },
+    {
       "offset": 32797597,
       "original_text": "Grampa Arthur, we need to head for\nCrystal Peak.<0xFB>That's no ordinary storm brewing\nabove the mountain.<0xFB>They must be getting the Ultimate\nWeapon ready to destroy Borrius!",
       "translation": "Papy Arthur, il faut\naller à Crystal Peak.<0xFB>Ce n'est pas une tempête\nbanale au-dessus de la montagne.<0xFB>Ils doivent préparer\nl'Arme Ultime pour Borrius !",
@@ -182316,6 +183012,18 @@
       "length": 31,
       "original_length": 29,
       "padding_used": 2,
+      "encoding": "pokemon",
+      "category": "dialogue",
+      "notes": "",
+      "too_long": false
+    },
+    {
+      "offset": 32807587,
+      "original_text": "No\"<0xFC><0x08><0x18> No\"<0xFC><0x08><0x18> No!<0xFB>This cannot be happening!<0xFB>THIS CANNOT BE HAPPENING!",
+      "translation": "Non\"<0xFC><0x08><0x18> Non\"<0xFC><0x08><0x18> Non !<0xFB>C'est impossible !<0xFB>C'EST IMPOSSIBLE !",
+      "length": 59,
+      "original_length": 69,
+      "padding_used": -10,
       "encoding": "pokemon",
       "category": "dialogue",
       "notes": "",
@@ -190446,6 +191154,42 @@
       "too_long": true
     },
     {
+      "offset": 32875577,
+      "original_text": "<0xFC><0x01><0x02><0xFD><0x01> sold the Egg for <0xB7><0xFD><0x02>!",
+      "translation": "<0xFC><0x01><0x02><0xFD><0x01> a vendu l'OEuf : <0xFD><0x02>¥ !",
+      "length": 28,
+      "original_length": 27,
+      "padding_used": 1,
+      "encoding": "pokemon",
+      "category": "dialogue",
+      "notes": "",
+      "too_long": false
+    },
+    {
+      "offset": 32875605,
+      "original_text": "<0xFC><0x01><0x02><0xFD><0x01> sold <0xFD><0x02> Egg<0xFD><0x04> in the party\nfor <0xB7><0xFD><0x03>!",
+      "translation": "<0xFC><0x01><0x02><0xFD><0x01> a vendu <0xFD><0x02> OEuf<0xFD><0x04> de\nl'équipe pour <0xFD><0x03>¥ !",
+      "length": 46,
+      "original_length": 41,
+      "padding_used": 5,
+      "encoding": "pokemon",
+      "category": "dialogue",
+      "notes": "",
+      "too_long": true
+    },
+    {
+      "offset": 32875647,
+      "original_text": "<0xFC><0x01><0x02><0xFD><0x01> sold <0xFD><0x02> Egg<0xFD><0x04> in the Box\nfor <0xB7><0xFD><0x03>!",
+      "translation": "<0xFC><0x01><0x02><0xFD><0x01> a vendu <0xFD><0x02> OEuf<0xFD><0x04> de\nla Boîte pour <0xFD><0x03>¥ !",
+      "length": 46,
+      "original_length": 39,
+      "padding_used": 7,
+      "encoding": "pokemon",
+      "category": "dialogue",
+      "notes": "",
+      "too_long": true
+    },
+    {
       "offset": 32875687,
       "original_text": "Pleasure doing business with you!<0xFB>Come see me again if you have more\nEggs to sell.",
       "translation": "Ravi de faire affaire avec toi !<0xFB>Reviens me voir si tu as d'autres\nOEufs à vendre.",
@@ -198330,6 +199074,18 @@
       "too_long": true
     },
     {
+      "offset": 32926358,
+      "original_text": "<0xFC><0x01><0x02><0xFD><0x01> handed over 1 Blue Shard\nand 1 Red Shard.",
+      "translation": "<0xFC><0x01><0x02><0xFD><0x01> a remis 1 Tesson Bleu\net 1 Tesson Rouge.",
+      "length": 46,
+      "original_length": 47,
+      "padding_used": -1,
+      "encoding": "pokemon",
+      "category": "description",
+      "notes": "",
+      "too_long": false
+    },
+    {
       "offset": 32926411,
       "original_text": "Huhu\" Graa\"\nNot enough <0xFD><0x02>s\"",
       "translation": "Huhu... Graa...\nPas assez de <0xFD><0x02>s...",
@@ -199168,6 +199924,18 @@
       "category": "dialogue",
       "notes": "",
       "too_long": true
+    },
+    {
+      "offset": 32932184,
+      "original_text": "<0xFC><0x01><0x02><0xFD><0x02> came through the portal!",
+      "translation": "<0xFC><0x01><0x02><0xFD><0x02> a traversé le portail !",
+      "length": 29,
+      "original_length": 30,
+      "padding_used": -1,
+      "encoding": "pokemon",
+      "category": "dialogue",
+      "notes": "",
+      "too_long": false
     },
     {
       "offset": 32932230,
@@ -201578,6 +202346,18 @@
       "padding_used": -18,
       "encoding": "pokemon",
       "category": "dialogue",
+      "notes": "",
+      "too_long": false
+    },
+    {
+      "offset": 32954995,
+      "original_text": "<0xFC><0x01><0x02><0xFD><0x01> handed over\n4 <0xFD><0x02>s and 4 <0xFD><0x03>s.",
+      "translation": "<0xFC><0x01><0x02><0xFD><0x01> a remis\n4 <0xFD><0x02>s et 4 <0xFD><0x03>s.",
+      "length": 29,
+      "original_length": 34,
+      "padding_used": -5,
+      "encoding": "pokemon",
+      "category": "description",
       "notes": "",
       "too_long": false
     },
@@ -205230,6 +206010,18 @@
       "too_long": false
     },
     {
+      "offset": 32987041,
+      "original_text": "<0xFC><0x01><0x02>All Trainers on board have been\ndefeated!",
+      "translation": "<0xFC><0x01><0x02>Tous les Dresseurs à bord ont\nété battus !",
+      "length": 45,
+      "original_length": 44,
+      "padding_used": 1,
+      "encoding": "pokemon",
+      "category": "dialogue",
+      "notes": "",
+      "too_long": false
+    },
+    {
       "offset": 32987380,
       "original_text": "I have to tell ye, the S.S. Marine's\na lot smoother than the one I<0xFA>sailed with in Alola!<0xFB>And I know that's not just because\nof the calmer water, either!",
       "translation": "Le S.S. Marine est bien plus\nconfortable que celui que je<0xFA>pilotais à Alola ! Et<0xFB>ce n'est pas juste à cause de la\nmer plus calme !",
@@ -208074,6 +208866,18 @@
       "too_long": true
     },
     {
+      "offset": 33020138,
+      "original_text": "Should I give <0xFC><0x01><0x06><0xFD><0x02><0xFC><0x01><0x08>\nthe <0xFC><0x01><0x06><0xFD><0x03><0xFC><0x01><0x08> Nature?",
+      "translation": "La Nature <0xFC><0x01><0x06><0xFD><0x03><0xFC><0x01><0x08>\npour <0xFC><0x01><0x06><0xFD><0x02><0xFC><0x01><0x08> ?",
+      "length": 34,
+      "original_length": 43,
+      "padding_used": -9,
+      "encoding": "pokemon",
+      "category": "dialogue",
+      "notes": "",
+      "too_long": false
+    },
+    {
       "offset": 33020182,
       "original_text": "Then, hold still, <0xFD><0x02>\"<0xFB>It's just a simple procedure\"\nYou won't remember a thing\"",
       "translation": "Alors, reste tranquille, <0xFD><0x02>...<0xFB>Ce n'est qu'une simple procédure...\nTu ne te souviendras de rien...",
@@ -208132,6 +208936,18 @@
       "category": "dialogue",
       "notes": "",
       "too_long": true
+    },
+    {
+      "offset": 33020869,
+      "original_text": "For ¥<0xFC><0x01><0x06>50000<0xFC><0x01><0x08>, should I give\n<0xFC><0x01><0x06><0xFD><0x02><0xFC><0x01><0x08> the <0xFC><0x01><0x06><0xFD><0x03><0xFC><0x01><0x08> Nature?",
+      "translation": "Pour <0xFC><0x01><0x06>50000<0xFC><0x01><0x08>¥, donner la Nature\n<0xFC><0x01><0x06><0xFD><0x03><0xFC><0x01><0x08> à <0xFC><0x01><0x06><0xFD><0x02><0xFC><0x01><0x08> ?",
+      "length": 57,
+      "original_length": 61,
+      "padding_used": -4,
+      "encoding": "pokemon",
+      "category": "dialogue",
+      "notes": "",
+      "too_long": false
     },
     {
       "offset": 33020931,
@@ -211338,6 +212154,18 @@
       "too_long": false
     },
     {
+      "offset": 33041412,
+      "original_text": "<0xFC><0x01><0x02>Toxapex receded into the sand.",
+      "translation": "<0xFC><0x01><0x02>Toxapex a fui sous le sable.",
+      "length": 31,
+      "original_length": 33,
+      "padding_used": -2,
+      "encoding": "pokemon",
+      "category": "description",
+      "notes": "",
+      "too_long": false
+    },
+    {
       "offset": 33041486,
       "original_text": "DEFEATING\nTHE TOXAPEX\nIS THE KEY.",
       "translation": "VAINCRE\nPRÉDASTÉRIE\nEST LA CLÉ.",
@@ -212776,6 +213604,18 @@
       "category": "dialogue",
       "notes": "",
       "too_long": true
+    },
+    {
+      "offset": 33051114,
+      "original_text": "<0xFC><0x01><0x02><0xFD><0x02> swam deeper into the ocean.",
+      "translation": "<0xFC><0x01><0x02><0xFD><0x02> s'enfonce dans l'océan.",
+      "length": 29,
+      "original_length": 33,
+      "padding_used": -4,
+      "encoding": "pokemon",
+      "category": "description",
+      "notes": "",
+      "too_long": false
     },
     {
       "offset": 33051372,
@@ -217638,6 +218478,18 @@
       "too_long": true
     },
     {
+      "offset": 33103957,
+      "original_text": "<0xFC><0x01><0x02>View the availability list?",
+      "translation": "<0xFC><0x01><0x02>Voir les disponibilités ?",
+      "length": 28,
+      "original_length": 30,
+      "padding_used": -2,
+      "encoding": "pokemon",
+      "category": "dialogue",
+      "notes": "",
+      "too_long": false
+    },
+    {
       "offset": 33103988,
       "original_text": "Which settings would you like to\nchange?",
       "translation": "Quels réglages veux-tu\nchanger ?",
@@ -220948,6 +221800,18 @@
       "category": "dialogue",
       "notes": "",
       "too_long": true
+    },
+    {
+      "offset": 33123163,
+      "original_text": "<0xFC><0x01><0x02><0xFD><0x02> shuddered as the\nprocedure began!",
+      "translation": "<0xFC><0x01><0x02><0xFD><0x02> frémit au début\nde l'opération !",
+      "length": 38,
+      "original_length": 39,
+      "padding_used": -1,
+      "encoding": "pokemon",
+      "category": "dialogue",
+      "notes": "",
+      "too_long": false
     },
     {
       "offset": 33123203,
@@ -228990,6 +229854,18 @@
       "too_long": true
     },
     {
+      "offset": 33168788,
+      "original_text": "<0xFC><0x01><0x02><0xFD><0x01> handed over the stat\nenhancers.",
+      "translation": "<0xFC><0x01><0x02><0xFD><0x01> a remis les objets\nde stats.",
+      "length": 34,
+      "original_length": 37,
+      "padding_used": -3,
+      "encoding": "pokemon",
+      "category": "description",
+      "notes": "",
+      "too_long": false
+    },
+    {
       "offset": 33168826,
       "original_text": "And since that scientist lady is\nout, let me just grab 'er Pokémon,<0xFA>too, ya 'ear?",
       "translation": "Comme la scientifique est K.O., je\nvais prendre son Pokémon aussi, tu<0xFA>vois ?",
@@ -233934,6 +234810,18 @@
       "too_long": true
     },
     {
+      "offset": 33211986,
+      "original_text": "<0xFC><0x01><0x02>The little girl disappeared.",
+      "translation": "<0xFC><0x01><0x02>La petite fille a disparu.",
+      "length": 29,
+      "original_length": 31,
+      "padding_used": -2,
+      "encoding": "pokemon",
+      "category": "description",
+      "notes": "",
+      "too_long": false
+    },
+    {
       "offset": 33212018,
       "original_text": "Ohhh\"<0xFB>That scary Pokémon dragged me\ndown here\"<0xFB>I'm so scared\"<0xFB>Wahhh!\nI wanna go home!",
       "translation": "Ohhh... Ce<0xFB>Pokémon effrayant m'a\ntraînée ici-bas...<0xFB>J'ai si peur... Wahhh<0xFB>! Je veux\nrentrer à la maison !",
@@ -234256,6 +235144,18 @@
       "category": "dialogue",
       "notes": "",
       "too_long": true
+    },
+    {
+      "offset": 33214058,
+      "original_text": "<0xFC><0x01><0x02>Protect the nerd?",
+      "translation": "<0xFC><0x01><0x02>Aider l'intello ?",
+      "length": 20,
+      "original_length": 20,
+      "padding_used": 0,
+      "encoding": "pokemon",
+      "category": "dialogue",
+      "notes": "",
+      "too_long": false
     },
     {
       "offset": 33214079,
@@ -234844,6 +235744,18 @@
       "category": "dialogue",
       "notes": "",
       "too_long": true
+    },
+    {
+      "offset": 33219957,
+      "original_text": "<0xFC><0x01><0x02>Your Pokémon are shaking in their\nPoké Balls!",
+      "translation": "<0xFC><0x01><0x02>Tes Pokémon tremblent dans leurs\nPoké Balls !",
+      "length": 48,
+      "original_length": 48,
+      "padding_used": 0,
+      "encoding": "pokemon",
+      "category": "dialogue",
+      "notes": "",
+      "too_long": false
     },
     {
       "offset": 33220006,

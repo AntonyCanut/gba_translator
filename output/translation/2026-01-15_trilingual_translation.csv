@@ -3547,6 +3547,7 @@ du rival.",
 0x0024FAD4,Avoids sound-based moves.,Niega ataques de sonido.,25,2,27,pokemon,location,Évite les attaques sonores.,
 0x0024FAEE,Negates weather effects.,Niega efectos del clima.,24,2,26,pokemon,location,Annule les effets météo.,
 0x0026D002,  The Top,,9,5,14,pokemon,other,,
+0x0026D4E5,get started then!,get started then!,17,3,20,pokemon,dialogue,commençons !,
 0x0026D4F7,"That was a great battle! My
 Pokémon had fun!","That was a great battle! My
 Pokémon had fun!",44,3,47,pokemon,dialogue,"C'était un super combat ! Mes
@@ -3583,6 +3584,10 @@ l'équipe adverse !",
 around the opposing team!","A sticky web has been laid out
 around the opposing team!",56,4,60,pokemon,dialogue,"Une toile gluante a été posée
 autour de l'équipe adverse !",
+0x00277A12,"The spikes disappeared from around
+<0xFD><0x0F>'s feet!","The spikes disappeared from around
+<0xFD><0x0F>'s feet!",45,29,74,pokemon,dialogue,"Les picots autour de <0xFD><0x0F>
+ont disparu !",
 0x003D51B4,"Une Poké Ball un peu spéciale qui
 fonctionne de mieux en mieux <0x16>
 mesure que le combat s'éternise.","Poké Ball distinta que va mejorando
@@ -7061,6 +7066,7 @@ audessous du min !",
 0x003FCBE4,A critical hit!,,15,3,18,pokemon,dialogue,Un coup critique !,
 0x003FCBF4,It's a one-hit KO!,,18,2,20,pokemon,dialogue,K.O. en un coup !,
 0x003FCBF7,s a one-hit KO!,,15,2,17,pokemon,dialogue,,
+0x003FCC07,"<0xFC><0x08>î1, <0xFC><0x08><0x0F>2, and<0xFC><0x08><0x0F>"" <0xFC><0x08><0x0F>"" <0xFC><0x08><0x0F>"" <0xFC><0x08><0x0F><0xFC><0x10><0x31> Poof!<0xFB>","<0xFC><0x08>î1, <0xFC><0x08><0x0F>2, y"" <0xFC><0x08><0x0F><0xFC><0x10><0x31> <0x52>puf!<0xFB>",43,3,46,pokemon,dialogue,"<0xFC><0x08><0x20>1, <0xFC><0x08><0x0F>2, et<0xFC><0x08><0x0F>"" <0xFC><0x08><0x0F>"" <0xFC><0x08><0x0F>"" <0xFC><0x08><0x0F><0xFC><0x10><0x31><0x00>Pouf !<0xFB>",
 0x003FCC39,"HM moves can't be
 forgotten now.<0xFB>","HM moves can't be
 forgotten now.<0xFB>",33,3,36,pokemon,description,"Les CS ne peuvent pas être
@@ -7275,10 +7281,12 @@ envoie <0xFD><0x0C>!",
 <0xFD> !","<0xFD><0x22> dent out
 <0xFD> !",15,3,18,pokemon,dialogue,"{B_LINK_SCR_TRAINER_NAME} envoie
 {UNKNOWN_STR}!",
+0x003FD45E,Go! <0xFD><0x05>!,,7,3,10,pokemon,dialogue,"<0xFD><0x05>, go !",
 0x003FD466,"Go! <0xFD><0x05> and
 <0xFD><0x07>!","<0x52>Ve, <0xFD><0x05> y
 <0xFD><0x07>!",14,4,18,pokemon,dialogue,"Go! <0xFD><0x05> et
 <0xFD><0x07>!",
+0x003FD475,Go! <0xFD> !,,7,4,11,pokemon,dialogue,"<0xFD><0x00>, go !",
 0x003FD47D,Do it! <0xFD> !,"<0x52>Ve, <0xFD> !",10,3,13,pokemon,dialogue,Vas-y ! {UNKNOWN_STR} !,
 0x003FD488,"Go for it, <0xFD> !","<0x52>Adelante, <0xFD> !",14,2,16,pokemon,dialogue,"Fonce, {UNKNOWN_STR} !",
 0x003FD497,"Your foe's weak!
@@ -7770,6 +7778,9 @@ Cherche-Objet bouge !<0xFB>Objet sous tes pieds !<0xFB>... ... ... ... ... ...{P
 There's no response.<0xFC><0x09>",""" "" "" ""Nope!
 There's no response.<0xFC><0x09>",35,2,37,pokemon,dialogue,"... ... ... ...Rien !
 Aucune réaction.{PAUSE_UNTIL_PRESS}",
+0x00416537,"Your Coins:
+<0xFD><0x02><0xFC><0x09>",Tus Fichas: <0xFD><0x02><0xFC><0x09>,16,2,18,pokemon,dialogue,"Jetons :
+<0xFD><0x02><0xFC><0x09>",
 0x0041658C,"<0xFD><0x01> used the
 <0xFD><0x03>.<0xFC><0x09>",<0x52>Has usado <0xFD><0x03>!<0xFC><0x09>,17,3,20,pokemon,description,"<0xFD><0x01> utilise le
 <0xFD><0x03>.<0xFC><0x09>",
@@ -8025,6 +8036,7 @@ ce Dresseur maintenant.",
 that the other Trainer wants.","That isn't the type of Pokémon
 that the other Trainer wants.",60,4,64,pokemon,description,"Ce n'est pas le type de Pokémon
 que veut l'autre Dresseur.",
+0x004171CC,That isn't an Egg.,That isn't an Egg.,18,3,21,pokemon,other,Pas un OEuf.,
 0x004171DF,Choose a Pokémon.,Elige un Pokémon.,17,3,20,pokemon,location,Choisis un Pokémon.,
 0x004171F1,Move to where?,<0x51>A dónde?,14,2,16,pokemon,dialogue,Déplacer où ?,
 0x00417200,Teach which Pokémon?,<0x51>Enseñar a cuál <0x53><0x54>?,20,3,23,pokemon,dialogue,Enseigner à quel Pokémon ?,
@@ -9346,6 +9358,7 @@ location: <0xFD><0x02>.",43,3,46,pokemon,system,"<0xFD><0x01> a sauvegardé ici 
 0x0041B2C6,Speed,Veloc,5,3,8,pokemon,other,Vitesse,
 0x0041B2CC,Sp. Atk,At Esp,7,3,10,pokemon,location,Atq. Spé,
 0x0041B2D4,Sp. Def,Def Esp,7,3,10,pokemon,location,Déf. Spé,
+0x0041B2F1,"2, and "" "" "" ","y"" <0xFC><0x08><0x0F><0xFC><0x10><0x31> <0x52>puf!<0xFB>",13,3,16,pokemon,other,"2, et "" "" "" ",
 0x0041B2FF,Poof!<0xFB>,!<0xFB>,6,3,9,pokemon,dialogue,Pouf !<0xFB>,
 0x0041B306,"<0xF7>  forgot
 <0xF7><0x01>.<0xFB>","<0xF7>  forgot
@@ -9541,6 +9554,7 @@ save file.
 Please wait.",58,4,62,pokemon,dialogue,"Sauvegarde des résultats
 dans le fichier.
 Patiente un instant.",
+0x0041CF50,Want to play BERRY CRUSH again?,Want to play BERRY CRUSH again?,31,3,34,pokemon,dialogue,Tu veux rejouer à BERRY CRUSH ?,
 0x0041CF70,"You have no BERRIES.
 The game will be canceled.","You have no BERRIES.
 The game will be canceled.",47,3,50,pokemon,dialogue,"Tu n'as pas de BAIE.
@@ -9959,11 +9973,13 @@ Avoid obstacles between partners.",70,2,72,pokemon,dialogue,"Rapproche-toi de te
 0x0041E112,Trade,Trade,5,1,6,pokemon,other,Échange,
 0x0041E118,"<0xFC><0x01><0x02><0xFC><0x02><0x01><0xFC><0x03><0x03>Communication standby""
 Please wait.","<0xFC><0x01><0x02><0xFC><0x02><0x01><0xFC><0x03><0x03>Communication standby""
-Please wait.",44,1,45,pokemon,description,,
+Please wait.",44,1,45,pokemon,description,"<0xFC><0x01><0x02><0xFC><0x02><0x01><0xFC><0x03><0x03>Attente communication""
+Patiente.",
 0x0041E145,<0xFC><0x01><0x02><0xFC><0x02><0x01><0xFC><0x03><0x03>The trade has been canceled.,<0xFC><0x01><0x02><0xFC><0x02><0x01><0xFC><0x03><0x03>The trade has been canceled.,37,1,38,pokemon,system,<0xFC><0x01><0x02><0xFC><0x02><0x01><0xFC><0x03><0x03>L'échange a été annulé.,
 0x0041E16B,"<0xFC><0x01><0x02><0xFC><0x02><0x01><0xFC><0x03><0x03>That's your only Pokémon
 for battle.","<0xFC><0x01><0x02><0xFC><0x02><0x01><0xFC><0x03><0x03>That's your only Pokémon
-for battle.",45,1,46,pokemon,dialogue,,
+for battle.",45,1,46,pokemon,dialogue,"<0xFC><0x01><0x02><0xFC><0x02><0x01><0xFC><0x03><0x03>C'est ton seul Pokémon
+pour le combat.",
 0x0041E199,"<0xFC><0x01><0x02><0xFC><0x02><0x01><0xFC><0x03><0x03>Waiting for your friend
 to finish""","<0xFC><0x01><0x02><0xFC><0x02><0x01><0xFC><0x03><0x03>Waiting for your friend
 to finish""",43,2,45,pokemon,dialogue,"<0xFC><0x01><0x02><0xFC><0x02><0x01><0xFC><0x03><0x03>En attente que ton ami
@@ -10022,6 +10038,7 @@ por <0xFD><0x03>?",108,2,110,pokemon,dialogue,"<0xFD><0x02> veut apprendre
 avoir plus de quatre capacités.<0xFB>Supprimer une capacité pour
 faire place à <0xFD><0x03> ?",
 0x0041E481,Stop learning <0xFD><0x03>?,,17,2,19,pokemon,dialogue,Arrêter d'apprendre <0xFD><0x03> ?,
+0x0041E493,"<0xFC><0x08>î1, <0xFC><0x08><0x0F>2, and <0xFC><0x08><0x0F>"" <0xFC><0x08><0x0F>"" <0xFC><0x08><0x0F>"" <0xFC><0x08><0x0F><0xFC><0x10><0x31> Poof!<0xFB>","<0xFC><0x08>î1, <0xFC><0x08><0x0F>2, y"" <0xFC><0x08><0x0F><0xFC><0x10><0x31> <0x52>puf!<0xFB>",44,2,46,pokemon,dialogue,"<0xFC><0x08><0x20>1, <0xFC><0x08><0x0F>2, et <0xFC><0x08><0x0F>"" <0xFC><0x08><0x0F>"" <0xFC><0x08><0x0F>"" <0xFC><0x08><0x0F><0xFC><0x10><0x31><0x00>Pouf !<0xFB>",
 0x0041E4C0,"<0xFD><0x02> forgot <0xFD><0x04>.<0xFB>And""<0xFB><0xFD><0x02>
 learned <0xFD><0x03>.",,33,3,36,pokemon,description,"<0xFD><0x02> oublie <0xFD><0x04>.<0xFB>Et""<0xFB><0xFD><0x02>
 apprend <0xFD><0x03>.",
@@ -13374,6 +13391,7 @@ Place it on a mat
 or a desk.",42,4,46,pokemon,description,"Une grande poupée. Placez-la
 sur un tapis ou sur un
 bureau.",
+0x004571B8,Please start over from the beginning.,Please start over from the beginning.,37,3,40,pokemon,description,Recommence depuis le début.,
 0x004571E0,"The WIRELESS COMMUNICATION
 SYSTEM search has been canceled.","The WIRELESS COMMUNICATION
 SYSTEM search has been canceled.",59,2,61,pokemon,system,"La recherche par COMMUNICATION
@@ -13407,6 +13425,10 @@ MODE","5-PLAYER
 MODE",13,2,15,pokemon,other,"MODE 5
 JOUEURS",
 0x0045747E,Cancel,,6,4,10,pokemon,system,,
+0x004574A0,"<0xFD><0x03> contacted you for
+<0xFD><0x02>. Accept?","<0xFD><0x03> contacted you for
+<0xFD><0x02>. Accept?",32,4,36,pokemon,dialogue,"<0xFD><0x03> te contacte pour
+<0xFD><0x02>. Accepter ?",
 0x004574C4,"<0xFD><0x03> contacted you.
 Will you share <0xFD><0x02>?","<0xFD><0x03> contacted you.
 Will you share <0xFD><0x02>?",36,4,40,pokemon,dialogue,"<0xFD><0x03> t'a contacté.
@@ -13415,6 +13437,14 @@ Veux-tu partager <0xFD><0x02> ?",
 Add to the members?","<0xFD><0x03> contacted you.
 Add to the members?",37,3,40,pokemon,dialogue,"<0xFD><0x03> t'a contacté.
 L'ajouter aux membres ?",
+0x00457514,"<0xFD><0x02>!
+Are these members OK?","<0xFD><0x02>!
+Are these members OK?",25,3,28,pokemon,dialogue,"<0xFD><0x02> !
+OK pour ces membres ?",
+0x00457530,"Cancel <0xFD><0x02> MODE
+with these members?","Cancel <0xFD><0x02> MODE
+with these members?",34,4,38,pokemon,dialogue,"Annuler le MODE <0xFD><0x02>
+avec ces membres ?",
 0x0045756C,"The other Trainer doesn't appear
 to be available now""<0xFB>","The other Trainer doesn't appear
 to be available now""<0xFB>",54,3,57,pokemon,description,"L'autre dresseur ne semble pas être
@@ -13458,6 +13488,18 @@ MODE?",24,4,28,pokemon,dialogue,"Veux-tu le MODE
 MODE?","Do you want the <0xFD><0x03>
 MODE?",24,4,28,pokemon,dialogue,"Veux-tu le MODE
 <0xFD><0x03> ?",
+0x004578BC,"Awaiting <0xFD><0x02>'s response about
+the trade""","Awaiting <0xFD><0x02>'s response about
+the trade""",39,1,40,pokemon,description,"Attente de la réponse de <0xFD><0x02>
+sur l'échange""",
+0x00457950,"Communicating with <0xFD><0x02><0xFC><0x08><0x0F>.<0xFC><0x08><0x0F>.<0xFC><0x08><0x0F>.
+<0xFC><0x08><0x0F>.<0xFC><0x08><0x0F>.<0xFC><0x08><0x0F>.<0xFC><0x08><0x0F>.<0xFC><0x08><0x0F>.<0xFC><0x08><0x0F>.<0xFC><0x08><0x0F>.<0xFC><0x08><0x0F>.<0xFC><0x08><0x0F>.<0xFC><0x08><0x0F>.<0xFC><0x08><0x0F>.<0xFC><0x08><0x0F>.<0xFC><0x08><0x0F>.<0xFC><0x08><0x0F>.<0xFC><0x08><0x0F>.<0xFC><0x08><0x0F>.<0xFC><0x08><0x0F>.<0xFC><0x08><0x0F>.","Communicating with <0xFD><0x02><0xFC><0x08><0x0F>.<0xFC><0x08><0x0F>.<0xFC><0x08><0x0F>.
+<0xFC><0x08><0x0F>.<0xFC><0x08><0x0F>.<0xFC><0x08><0x0F>.<0xFC><0x08><0x0F>.<0xFC><0x08><0x0F>.<0xFC><0x08><0x0F>.<0xFC><0x08><0x0F>.<0xFC><0x08><0x0F>.<0xFC><0x08><0x0F>.<0xFC><0x08><0x0F>.<0xFC><0x08><0x0F>.<0xFC><0x08><0x0F>.<0xFC><0x08><0x0F>.<0xFC><0x08><0x0F>.<0xFC><0x08><0x0F>.<0xFC><0x08><0x0F>.<0xFC><0x08><0x0F>.<0xFC><0x08><0x0F>.",106,3,109,pokemon,description,"Communication avec <0xFD><0x02><0xFC><0x08><0x0F>.<0xFC><0x08><0x0F>.<0xFC><0x08><0x0F>.
+<0xFC><0x08><0x0F>.<0xFC><0x08><0x0F>.<0xFC><0x08><0x0F>.<0xFC><0x08><0x0F>.<0xFC><0x08><0x0F>.<0xFC><0x08><0x0F>.<0xFC><0x08><0x0F>.<0xFC><0x08><0x0F>.<0xFC><0x08><0x0F>.<0xFC><0x08><0x0F>.<0xFC><0x08><0x0F>.<0xFC><0x08><0x0F>.<0xFC><0x08><0x0F>.<0xFC><0x08><0x0F>.<0xFC><0x08><0x0F>.<0xFC><0x08><0x0F>.<0xFC><0x08><0x0F>.<0xFC><0x08><0x0F>.",
+0x004579BC,"Please wait a while<0xFC><0x08><0x0F>.<0xFC><0x08><0x0F>.<0xFC><0x08><0x0F>.<0xFC><0x08><0x0F>.<0xFC><0x08><0x0F>.<0xFC><0x08><0x0F>.
+<0xFC><0x08><0x0F>.<0xFC><0x08><0x0F>.<0xFC><0x08><0x0F>.<0xFC><0x08><0x0F>.<0xFC><0x08><0x0F>.<0xFC><0x08><0x0F>.<0xFC><0x08><0x0F>.<0xFC><0x08><0x0F>.<0xFC><0x08><0x0F>.<0xFC><0x08><0x0F>.<0xFC><0x08><0x0F>.<0xFC><0x08><0x0F>.<0xFC><0x08><0x0F>.<0xFC><0x08><0x0F>.<0xFC><0x08><0x0F>.<0xFC><0x08><0x0F>.<0xFC><0x08><0x0F>.<0xFC><0x08><0x0F>.","Please wait a while<0xFC><0x08><0x0F>.<0xFC><0x08><0x0F>.<0xFC><0x08><0x0F>.<0xFC><0x08><0x0F>.<0xFC><0x08><0x0F>.<0xFC><0x08><0x0F>.
+<0xFC><0x08><0x0F>.<0xFC><0x08><0x0F>.<0xFC><0x08><0x0F>.<0xFC><0x08><0x0F>.<0xFC><0x08><0x0F>.<0xFC><0x08><0x0F>.<0xFC><0x08><0x0F>.<0xFC><0x08><0x0F>.<0xFC><0x08><0x0F>.<0xFC><0x08><0x0F>.<0xFC><0x08><0x0F>.<0xFC><0x08><0x0F>.<0xFC><0x08><0x0F>.<0xFC><0x08><0x0F>.<0xFC><0x08><0x0F>.<0xFC><0x08><0x0F>.<0xFC><0x08><0x0F>.<0xFC><0x08><0x0F>.",116,4,120,pokemon,description,"Patiente un instant<0xFC><0x08><0x0F>.<0xFC><0x08><0x0F>.<0xFC><0x08><0x0F>.<0xFC><0x08><0x0F>.<0xFC><0x08><0x0F>.<0xFC><0x08><0x0F>.
+<0xFC><0x08><0x0F>.<0xFC><0x08><0x0F>.<0xFC><0x08><0x0F>.<0xFC><0x08><0x0F>.<0xFC><0x08><0x0F>.<0xFC><0x08><0x0F>.<0xFC><0x08><0x0F>.<0xFC><0x08><0x0F>.<0xFC><0x08><0x0F>.<0xFC><0x08><0x0F>.<0xFC><0x08><0x0F>.<0xFC><0x08><0x0F>.<0xFC><0x08><0x0F>.<0xFC><0x08><0x0F>.<0xFC><0x08><0x0F>.<0xFC><0x08><0x0F>.<0xFC><0x08><0x0F>.<0xFC><0x08><0x0F>.",
 0x00457A70,"Hello!
 Would you like to do something?","Hello!
 Would you like to do something?",38,3,41,pokemon,dialogue,"Bonjour ! Voulez-vous faire quelque
@@ -13547,16 +13589,29 @@ faut du temps pour me préparer.",
 Okay, but please wait a moment.","Did you want to chat?
 Okay, but please wait a moment.",53,3,56,pokemon,dialogue,"Tu voulais discuter ?
 D'accord, mais patiente un peu.",
+0x004580C0,"As my introduction, I'll show you
+my Trainer Card.","As my introduction, I'll show you
+my Trainer Card.",50,2,52,pokemon,dialogue,"Pour me présenter, je vais te
+montrer ma Carte Dresseur.",
 0x0045812C,"Thanks for waiting!
 Let's get our battle started!<0xFC><0x08><0x3C>","Thanks for waiting!
 Let's get our battle started!<0xFC><0x08><0x3C>",52,4,56,pokemon,dialogue,"Merci d'avoir attendu !
 Commençons le combat !{PAUSE}",
+0x00458164,"All right!
+Let's chat!<0xFC><0x08><0x3C>","All right!
+Let's chat!<0xFC><0x08><0x3C>",25,3,28,pokemon,dialogue,"Très bien !
+Discutons !<0xFC><0x08><0x3C>",
 0x0045817E,"  Sorry I made you wait!
 Let's get started!<0xFC><0x08><0x3C>","  Sorry I made you wait!
 Let's get started!<0xFC><0x08><0x3C>",46,4,50,pokemon,dialogue,"Désolé pour l'attente !
 Commençons !{PAUSE}",
+0x004581B0,"Sorry I made you wait!
+Let's chat.<0xFC><0x08><0x3C>","Sorry I made you wait!
+Let's chat.<0xFC><0x08><0x3C>",37,3,40,pokemon,dialogue,"Désolé de l'attente !
+Discutons.<0xFC><0x08><0x3C>",
 0x004581D8,The trade will be started.<0xFC><0x08><0x3C>,The trade will be started.<0xFC><0x08><0x3C>,29,3,32,pokemon,description,L'échange va commencer.<0xFC><0x08><0x3C>,
 0x004581F8,The battle will be started.<0xFC><0x08><0x3C>,The battle will be started.<0xFC><0x08><0x3C>,30,2,32,pokemon,description,Le combat va commencer.<0xFC><0x08><0x3C>,
+0x00458218,"Entering the chat""<0xFC><0x08><0x3C>","Entering the chat""<0xFC><0x08><0x3C>",21,3,24,pokemon,location,"Accès au chat""<0xFC><0x08><0x3C>",
 0x004582C0,"I'm terribly sorry, but my Pokémon
 aren't feeling well""<0xFB>Let's battle another time.<0xFB>","I'm terribly sorry, but my Pokémon
 aren't feeling well""<0xFB>Let's battle another time.<0xFB>",83,1,84,pokemon,dialogue,"Je suis vraiment désolé, mais mes
@@ -13565,6 +13620,10 @@ Pokémon ne se sentent pas bien...<0xFB>Combattre une autre fois.<0xFB>",
 Where'd it go now?<0xFA>Sorry! I'll show you another time!<0xFB>","<0x60>À<0x45><0x08>FÀ<0x45><0x08>Huh? My Trainer Card""
 Where'd it go now?<0xFA>Sorry! I'll show you another time!<0xFB>",84,4,88,pokemon,dialogue,"<0x60>À<0x45><0x08>FÀ<0x45><0x08>Hein ? Ma Carte Dresseur...
 Où est-elle passée ?<0xFA>Désolé ! Je te la montre plus tard.<0xFB>",
+0x0045836C,"Oh? Now where did I put my
+Trainer Card?""<0xFA>Sorry! I'll show you later!<0xFB>","Oh? Now where did I put my
+Trainer Card?""<0xFA>Sorry! I'll show you later!<0xFB>",70,2,72,pokemon,dialogue,"Oh ? Où ai-je mis ma Carte
+Dresseur ?""<0xFA>Désolé ! Une autre fois !<0xFB>",
 0x004583F8,"If you want to do something with
 me, don't be shy.<0xFB>","If you want to do something with
 me, don't be shy.<0xFB>",51,1,52,pokemon,dialogue,"Si tu veux faire quelque chose
@@ -13577,6 +13636,14 @@ deux Pokémon en dessous du<0xFA>N. 30.<0xFB>",
 Pokémon that are below Lv. 30.<0xFB>","For a battle, you need two
 Pokémon that are below Lv. 30.<0xFB>",58,4,62,pokemon,dialogue,"Pour un combat, il faut deux
 Pokémon en dessous du Niv. 30.<0xFB>",
+0x004584FC,"Oh, all right.
+Come see me anytime, okay?<0xFB>","Oh, all right.
+Come see me anytime, okay?<0xFB>",42,2,44,pokemon,dialogue,"Oh, d'accord.
+Reviens quand tu veux !<0xFB>",
+0x00458528,"Oh""
+Please come by anytime.<0xFB>","Oh""
+Please come by anytime.<0xFB>",28,4,32,pokemon,description,"Oh""
+Passe quand tu veux.<0xFB>",
 0x00458598,"Oh, I'm sorry.
 I have too much to do right now.<0xFA>Let's chat some other time.<0xFB>","Oh, I'm sorry.
 I have too much to do right now.<0xFA>Let's chat some other time.<0xFB>",76,4,80,pokemon,dialogue,"Oh, désolé.
@@ -13633,7 +13700,15 @@ De quoi tu parles ?<0xFB>",
 That's what I meant.<0xFB>","Yes, that's exactly it!
 That's what I meant.<0xFB>",45,3,48,pokemon,dialogue,"Oui, exactement ! C'est ce que je
 voulais dire.<0xFB>",
+0x00458898,"In other words""
+Yes! That's right!<0xFB>","In other words""
+Yes! That's right!<0xFB>",35,1,36,pokemon,dialogue,"Autrement dit""
+Oui ! C'est ça !<0xFB>",
 0x00458918,I hope I get to know you better!<0xFB>,I hope I get to know you better!<0xFB>,33,3,36,pokemon,dialogue,J'espère mieux te connaître !<0xFB>,
+0x0045893C,"We're showing each other our
+Trainer CardS to get acquainted.<0xFB>","We're showing each other our
+Trainer CardS to get acquainted.<0xFB>",62,4,66,pokemon,description,"On se montre nos Cartes Dresseur
+pour faire connaissance.<0xFB>",
 0x0045897C,"Glad to meet you.
 Please don't be a stranger!<0xFB>","Glad to meet you.
 Please don't be a stranger!<0xFB>",46,2,48,pokemon,dialogue,"Ravi de te connaître.
@@ -13642,10 +13717,15 @@ Reviens quand tu veux !<0xFB>",
 Pokémon I'd wanted a long time.<0xFB>","Finally, a trade got me that
 Pokémon I'd wanted a long time.<0xFB>",61,3,64,pokemon,description,"Grâce à un échange, j'ai enfin
 ce Pokémon tant désiré.<0xFB>",
+0x00458A24,I'm trading Pokémon right now.<0xFB>,I'm trading Pokémon right now.<0xFB>,31,2,33,pokemon,description,Je fais un échange de Pokémon.<0xFB>,
 0x00458A44,"I finally got that Pokémon I
 wanted in a trade!<0xFB>","I finally got that Pokémon I
 wanted in a trade!<0xFB>",48,4,52,pokemon,dialogue,"J'ai enfin obtenu ce Pokémon que je
 voulais dans un échange !<0xFB>",
+0x00458A98,"<0xFD><0x02> checked the
+TRADING BOARD.<0xFB>","<0xFD><0x02> checked the
+TRADING BOARD.<0xFB>",30,3,33,pokemon,description,"<0xFD><0x02> consulte le
+TABLEAU ÉCHANGE.<0xFB>",
 0x00458AB8,"Welcome to the TRADING BOARD.<0xFB>You may register your Pokémon
 and offer it up for a trade.<0xFB>Would you like to register one of
 your Pokémon?","Welcome to the TRADING BOARD.<0xFB>You may register your Pokémon
@@ -13680,6 +13760,8 @@ tu souhaites recevoir en échange.
 you offer in trade?<0xFB>","Which of your party Pokémon will
 you offer in trade?<0xFB>",53,3,56,pokemon,dialogue,"Quel Pokémon de ton équipe
 veux-tu proposer ?<0xFB>",
+0x00458D54,Registration has been canceled.<0xFB>,Registration has been canceled.<0xFB>,32,4,36,pokemon,system,Inscription annulée.<0xFB>,
+0x00458D78,Registration has been completed.<0xFB>,Registration has been completed.<0xFB>,33,3,36,pokemon,description,Inscription terminée.<0xFB>,
 0x00458D9C,The trade has been canceled.<0xFB>,The trade has been canceled.<0xFB>,29,3,32,pokemon,system,L'échange a été annulé.<0xFB>,
 0x00458DBC,"Cancel the registration of your
 Lv. <0xFD><0x03> <0xFD><0x02>?","Cancel the registration of your
@@ -13712,6 +13794,15 @@ ton Pokémon pour l'instant.<0xFB>",
 Pokémon de <0xFD><0x02> à présent.<0xFB>",
 0x00458FBC,Egg Trade,Egg Trade,9,3,12,pokemon,location,Commerce des oeufs,
 0x00458FDC,Cancel,,6,3,9,pokemon,system,,
+0x00458FE4,Please choose a Trainer.,Please choose a Trainer.,24,4,28,pokemon,other,Choisis un Dresseur.,
+0x00459000,"Please choose a Trainer for
+a Single Battle.","Please choose a Trainer for
+a Single Battle.",44,4,48,pokemon,description,"Choisis un Dresseur pour
+un Combat Solo.",
+0x00459030,"Please choose a Trainer for
+a Double Battle.","Please choose a Trainer for
+a Double Battle.",44,4,48,pokemon,description,"Choisis un Dresseur pour
+un Combat Duo.",
 0x00459060,"Please choose the Leader
 for a Multi Battle.","Please choose the Leader
 for a Multi Battle.",44,4,48,pokemon,dialogue,"Choisis le Meneur pour
@@ -13732,6 +13823,14 @@ des Infos Mystère.",
 Please choose the Leader.","Jump with mini Pokémon!
 Please choose the Leader.",49,3,52,pokemon,dialogue,"Saute, mini Pokémon !
 Choisis le Meneur.",
+0x00459160,"Berry Crush!
+Please choose the Leader.","Berry Crush!
+Please choose the Leader.",38,3,41,pokemon,dialogue,"Berry Crush !
+Choisis le Meneur.",
+0x00459188,"Dodrio Berry-Picking!
+Please choose the Leader.","Dodrio Berry-Picking!
+Please choose the Leader.",47,2,49,pokemon,dialogue,"Cueillette Baies Dodrio !
+Choisis le Meneur.",
 0x00459250,"<0xFD><0x02> has been asked to register
 you as a member. Please wait.","<0xFD><0x02> has been asked to register
 you as a member. Please wait.",59,2,61,pokemon,dialogue,"<0xFD><0x02> a été invité à t'inscrire
@@ -13743,6 +13842,10 @@ de communication sans fil.",
 0x004592E8,"No Cards appear to be shared 
 right now.","No Cards appear to be shared 
 right now.",40,4,44,pokemon,description,"Aucune carte ne semble partagée
+pour le moment.",
+0x00459314,"No News appears to be shared
+right now.","No News appears to be shared
+right now.",39,1,40,pokemon,description,"Aucune News partagée
 pour le moment.",
 0x0045938F,LLv.,,4,2,6,pokemon,other,,
 0x00459394,Single Battle,Single Battle,13,3,16,pokemon,location,Bataille unique,
@@ -16893,12 +16996,12 @@ Feuilles étranges !",
 0x007890AB,Would you like to tell them?,Would you like to tell them?,28,2,30,pokemon,dialogue,Voudriez-vous leur dire ?,
 0x007890C8,"Officer 1: <0xFC><0x01><0x08>Looks like <0xFD><0x03>
 doesn't know, Frank""<0xFB>Should we let <0xFD><0x02> off?","Officer 1: <0xFC><0x01><0x08>Looks like <0xFD><0x03>
-doesn't know, Frank""<0xFB>Should we let <0xFD><0x02> off?",70,2,72,pokemon,dialogue,"Officer 1: {COLOR}ËLooks like {STR_VAR_2}
-doesn't know, Frank...<0xFB>Should we let {STR_VAR_1} off?",
+doesn't know, Frank""<0xFB>Should we let <0xFD><0x02> off?",70,2,72,pokemon,dialogue,"Agent 1 : <0xFC><0x01><0x08>On dirait que <0xFD><0x03>
+n'est pas au courant, Frank""<0xFB>On laisse <0xFD><0x02> partir ?",
 0x0078910F,"Officer 2: <0xFC><0x01><0x08>Let's let <0xFD><0x02> off.<0xFB><0xFD><0x04> probably just fell victim to
 Mirskle's lies.<0xFB>Poor kid""","Officer 2: <0xFC><0x01><0x08>Let's let <0xFD><0x02> off.<0xFB><0xFD><0x04> probably just fell victim to
-Mirskle's lies.<0xFB>Poor kid""",89,2,91,pokemon,description,"Officer 2: {COLOR}ËLet's let {STR_VAR_1} off.<0xFB>{STR_VAR_3} probably just fell victim to
-Mirskle's lies.<0xFB>Poor kid...",
+Mirskle's lies.<0xFB>Poor kid""",89,2,91,pokemon,description,"Agent 2 : <0xFC><0x01><0x08>Laissons <0xFD><0x02> partir.<0xFB><0xFD><0x04> est sans doute une victime
+des mensonges de Mirskle.<0xFB>Pauvre gamin""",
 0x00789169,"Officer 1: <0xFC><0x01><0x08>Uh, yeah""<0xFB>Your story checks out.
 You're free to go.","Officer 1: <0xFC><0x01><0x08>Uh, yeah""<0xFB>Your story checks out.
 You're free to go.",65,2,67,pokemon,dialogue,"Officier 1 : {COLOR}ËEuh, ouais...<0xFB>Votre histoire est vérifiée. Vous
@@ -22153,6 +22256,7 @@ action if we do that!",158,3,161,pokemon,dialogue,"{COLOR}ËJe n'aime pas trop c
 Et on manquerait toute l'action !<0xFB>
 ",
 0x007F162D,"Grunt 1: <0xFC><0x01><0x08>What the""<0xFB>Is that a Shadow Warrior!?","Grunt 1: <0xFC><0x01><0x08>What the""<0xFB>Is that a Shadow Warrior!?",48,3,51,pokemon,dialogue,Sbire 1 : {COLOR}ËQu'est-ce que... ?<0xFB>C'est un Guerrier de l'Ombre !?,
+0x007F165E,"Grunt 1: <0xFC><0x01><0x08>Uh""go""Floe""","Grunt 1: <0xFC><0x01><0x08>Uh""go""Floe""",23,3,26,pokemon,location,"Sbire 1 : <0xFC><0x01><0x08>Euh""go""Floe""",
 0x007F1676,Grunt 2: <0xFC><0x01><0x04>Let's get out of here!,Grunt 2: <0xFC><0x01><0x04>Let's get out of here!,34,3,37,pokemon,dialogue,Sbire 2 : {COLOR}ÇDégageons d'ici !,
 0x007F1699,"Grunt 3: <0xFC><0x01><0x08>Come on""open up""","Grunt 3: <0xFC><0x01><0x08>Come on""open up""",28,3,31,pokemon,description,Sbire 3 : {COLOR}ËAllez... ouvrez...,
 0x007F16B6,Grunt 3: <0xFC><0x01><0x08>Got it! We're gonna live!,Grunt 3: <0xFC><0x01><0x08>Got it! We're gonna live!,37,3,40,pokemon,dialogue,Sbire 3 : {COLOR}ËÇa y est ! On va vivre !,
@@ -23336,6 +23440,10 @@ Mega <0xFD><0x04>!",30,3,33,pokemon,dialogue,"{UNKNOWN_STR} Mega a évolué en M
 <0xFD> !","<0x52>Una luz brillante pronto saldrá de
 <0xFD> !",41,3,44,pokemon,dialogue,"Une vive lumière s'apprête à jaillir
 de <0xFD><0x00> !",
+0x00830068,"<0xFD><0x02>'s fervent wish
+has reached <0xFD> !","<0xFD><0x02>'s fervent wish
+has reached <0xFD> !",33,3,36,pokemon,dialogue,"Le voeu ardent de <0xFD><0x02>
+est parvenu à <0xFD><0x00> !",
 0x0083008C,"<0xFD> 's <0xFD><0x01> is reacting
 to <0xFD><0x02>'s <0xFD><0x03>!","<0xFD> 's <0xFD><0x01> is ssacting
 to <0xFD><0x02>'s <0xFD><0x03>!",31,1,32,pokemon,dialogue,"Le <0xFD><0x01> de <0xFD><0x00> réagit
@@ -25746,6 +25854,16 @@ the foe flinch.",71,3,74,pokemon,description,"Frappe l'ennemi
 avec sa tête dure.
 Peut aussi
 l'apeurer.",
+0x00920637,"Scarlet flames wash
+over all Pokémon in
+battle. It may also
+inflict burns.","Scarlet flames wash
+over all Pokémon in
+battle. It may also
+inflict burns.",74,4,78,pokemon,description,"Flammes écarlates
+sur tous les Pokémon
+au combat. Peut
+aussi brûler.",
 0x00920683,"A steel bomb is
 stuck to the foe.
 It is sure to hit.","A steel bomb is
@@ -30809,7 +30927,7 @@ constituer son butin.",,67,89,156,pokemon,description,Pestilence,
 0x00A43970,General Useful Items,General Useful Items,20,2,22,pokemon,location,General Useful Items,
 0x00A43985,Poké Balls,Poké Balls,10,2,12,pokemon,location,Poké Balls,
 0x00A43990,Berries,Berries,7,3,10,pokemon,other,Berries,
-0x00A43998,TMs and HMs,TMs and HMs,11,2,13,pokemon,location,TMs and HMs,
+0x00A43998,TMs and HMs,TMs and HMs,11,2,13,pokemon,location,CT et CS,
 0x00A439A4,All Items,All Items,9,2,11,pokemon,location,All Items,
 0x00A439B0,Water,Agua,5,2,7,pokemon,other,,
 0x00A439B6,Land,,4,2,6,pokemon,other,Land,
@@ -30840,7 +30958,7 @@ constituer son butin.",,67,89,156,pokemon,description,Pestilence,
 0x00A43ABF,Register,,8,2,10,pokemon,other,Register,
 0x00A43AC8,Scan,,4,2,6,pokemon,other,Scan,
 0x00A43ACD,Cancel,Salir,6,3,9,pokemon,system,Cancel,
-0x00A43AD4,<0xFD><0x02> is selected.,,15,3,18,pokemon,system,<0xFD><0x02> is selected.,
+0x00A43AD4,<0xFD><0x02> is selected.,,15,3,18,pokemon,system,<0xFD><0x02> sélectionné.,
 0x00A43AE4,"The <0xFD><0x03> must be acquired
 before searching for <0xFD><0x02>.<0xFC><0x09>","The <0xFD><0x03> must be acquired
 before searching for <0xFD><0x02>.<0xFC><0x09>",50,2,52,pokemon,description,"Il faut obtenir le {STR_VAR_2}
@@ -30848,7 +30966,7 @@ avant de chercher {STR_VAR_1}.{PAUSE_UNTIL_PRESS}",
 0x00A43B17,That Pokémon can't be searched yet!<0xFC><0x09>,,37,2,39,pokemon,dialogue,"On ne peut pas encore chercher
 ce Pokémon !{PAUSE_UNTIL_PRESS}",
 0x00A43B3D,"There's no data for that Pokémon""<0xFC><0x09>","There's no data for that Pokémon""<0xFC><0x09>",35,3,38,pokemon,description,Aucune donnée pour ce Pokémon...{PAUSE_UNTIL_PRESS},
-0x00A43B61,<0xFD><0x02> is searchable via <0xF8><0x03>!<0xFC><0x09>,,26,3,29,pokemon,dialogue,{STR_VAR_1} is searchable via {R_BUTTON}!{PAUSE_UNTIL_PRESS},
+0x00A43B61,<0xFD><0x02> is searchable via <0xF8><0x03>!<0xFC><0x09>,,26,3,29,pokemon,dialogue,<0xFD><0x02> détectable via <0xF8><0x03> !<0xFC><0x09>,
 0x00A43B7C,It's too dark to search for a Pokémon!<0xFC><0x09>,,40,2,42,pokemon,dialogue,"Il fait trop sombre pour chercher
 un Pokémon !{PAUSE_UNTIL_PRESS}",
 0x00A43BA5,No Pokémon can be found here.<0xFC><0x09>,,31,2,33,pokemon,description,Aucun Pokémon trouvable ici.{PAUSE_UNTIL_PRESS},
@@ -31021,8 +31139,8 @@ Fée renforcées et ne peuvent subir<0xFA>aucune altération de statut !",
 Psychic-moves and can't be hit<0xFA>by priority moves!",Los Pokémon en tierra tendrán<0xFA>ataques Psíquicos fuertes y no<0xFA>serán golpeados por ataques<0xFA>prioritarios.,108,3,111,pokemon,dialogue,"avec le terrain étrange !<0xFB>Les Pokémon au sol ont des attaques
 Psy renforcées et sont immunisés<0xFA>aux attaques prioritaires !",
 0x00A444BE,by priority moves!,,18,3,21,pokemon,dialogue,,
-0x00A444D1,in the rain!,En lluvia.,12,3,15,pokemon,dialogue,in the rain!,
-0x00A444DE,in the sun!,En sol.,11,3,14,pokemon,dialogue,in the sun!,
+0x00A444D1,in the rain!,En lluvia.,12,3,15,pokemon,dialogue,sous la pluie !,
+0x00A444DE,in the sun!,En sol.,11,3,14,pokemon,dialogue,au soleil !,
 0x00A444EA,in a sandstorm!,En tormenta.,15,3,18,pokemon,dialogue,in a sandstorm!,
 0x00A444FA,in a hailstorm!,En granizo.,15,2,17,pokemon,dialogue,in a hailstorm!,
 0x00A4450A,"with strong winds blowing!<0xFB>Flying-type Pokémon take less
@@ -31030,7 +31148,7 @@ damage from super effective moves!",Los Pokémon de tipo Volador reciben<0xFA>me
 damage from super effective moves!",
 0x00A44535,"mon take less
 damage from super effective moves!",,48,3,51,pokemon,dialogue,,
-0x00A44566,in a Trick Room!<0xFB>Slower Pokémon get to move first!,Los Pokémon más lentos se mueven<0xFA>primero.,50,3,53,pokemon,dialogue,in a Trick Room!<0xFB>Slower Pokémon get to move first!,
+0x00A44566,in a Trick Room!<0xFB>Slower Pokémon get to move first!,Los Pokémon más lentos se mueven<0xFA>primero.,50,3,53,pokemon,dialogue,dans une Distorsion !<0xFB>Les plus lents agissent d'abord !,
 0x00A44582,mon get to move first!,,22,3,25,pokemon,dialogue,,
 0x00A44599,in a Magic Room!<0xFB>Most held items have no effect!,Los objetos retenidos no tienen<0xFA>ningún efecto.,48,3,51,pokemon,dialogue,"dans une Zone Magique !<0xFB>La plupart des objets tenus n'ont
 plus aucun effet !",
@@ -31095,7 +31213,7 @@ effect chance doubled!",Todos los movimientos<0xFA>tienen duplicada su probabili
 des attaques sont doublées !",
 0x00A44AA5,"All moves have their secondary
 effect chance doubled!",,53,3,56,pokemon,dialogue,,
-0x00A44ADB,with all Pokémon confused!,Pokémon confundidos.,26,3,29,pokemon,dialogue,with all Pokémon confused!,
+0x00A44ADB,with all Pokémon confused!,Pokémon confundidos.,26,3,29,pokemon,dialogue,avec les Pokémon confus !,
 0x00A44AE8,mon confused!,,13,3,16,pokemon,dialogue,,
 0x00A44AF6,with all Pokémon taunted!<0xFB>No status moves can be used!,No se pueden usar movimientos de<0xFA>estado.,54,3,57,pokemon,dialogue,"avec tous les Pokémon provoqués !<0xFB>Aucune attaque de statut ne peut
 être utilisée !",
@@ -31120,7 +31238,7 @@ hits!",,38,3,41,pokemon,dialogue,,
 0x00A44C37,with no Pokémon being able to<0xFA>score a critical hit!,"Que ningún Pokémon pueda asestar
 un golpe crítico.",51,3,54,pokemon,dialogue,sans qu'aucun Pokémon ne puisse<0xFA>infliger de coup critique !,
 0x00A44C55,score a critical hit!,,21,3,24,pokemon,dialogue,,
-0x00A44C6B,with all Pokémon having their<0xFA>abilities suppressed!,Todos los Pokémon tendrán<0xFA>habilidades suprimidas.,51,3,54,pokemon,dialogue,with all Pokémon having their<0xFA>abilities suppressed!,
+0x00A44C6B,with all Pokémon having their<0xFA>abilities suppressed!,Todos los Pokémon tendrán<0xFA>habilidades suprimidas.,51,3,54,pokemon,dialogue,avec tous les talents des<0xFA>Pokémon neutralisés !,
 0x00A44C89,abilities suppressed!,,21,3,24,pokemon,dialogue,,
 0x00A44CA5,Noah,Noah,4,2,6,pokemon,other,Noah,
 0x00A44CAA,William,William,7,2,9,pokemon,other,William,
@@ -33949,11 +34067,11 @@ registered to <0xF8><0x02> for easy use.","Se puede registrar un segundo
 elemento en el Cubo con <0xF8><0x02>.",63,2,65,pokemon,description,"Un second objet du Cube peut être
 attribué à {L_BUTTON}.",
 0x00A4D64D, for easy use.,,14,2,16,pokemon,other,,
-0x00A4D65C,Auto-run has been <0xFC><0x01><0x06>enabled<0xFC><0x01><0x02>.,Ejecución <0xFC><0x01><0x06>habilitada<0xFC><0x01><0x02>.,32,2,34,pokemon,description,,
-0x00A4D67D,Auto-run has been <0xFC><0x01><0x06>disabled<0xFC><0x01><0x02>.,Ejecución <0xFC><0x01><0x06>inhabilitada<0xFC><0x01><0x02>.,33,2,35,pokemon,description,,
-0x00A4D69F,Turbo boost has been <0xFC><0x01><0x06>activated<0xFC><0x01><0x02>.,Turbo Moto ha sido <0xFC><0x01><0x06>activado<0xFC><0x01><0x02>.,37,2,39,pokemon,description,,
-0x00A4D6C5,Turbo boost has been <0xFC><0x01><0x06>deactivated<0xFC><0x01><0x02>.,Turbo Moto ha sido <0xFC><0x01><0x06>desactivado<0xFC><0x01><0x02>.,39,2,41,pokemon,description,,
-0x00A4D6ED,Turbo Surf has been <0xFC><0x01><0x06>activated<0xFC><0x01><0x02>.,Turbo Surf ha sido <0xFC><0x01><0x06>activado<0xFC><0x01><0x02>.,36,2,38,pokemon,description,,
+0x00A4D65C,Auto-run has been <0xFC><0x01><0x06>enabled<0xFC><0x01><0x02>.,Ejecución <0xFC><0x01><0x06>habilitada<0xFC><0x01><0x02>.,32,2,34,pokemon,description,Course auto <0xFC><0x01><0x06>activée<0xFC><0x01><0x02>.,
+0x00A4D67D,Auto-run has been <0xFC><0x01><0x06>disabled<0xFC><0x01><0x02>.,Ejecución <0xFC><0x01><0x06>inhabilitada<0xFC><0x01><0x02>.,33,2,35,pokemon,description,Course auto <0xFC><0x01><0x06>désactivée<0xFC><0x01><0x02>.,
+0x00A4D69F,Turbo boost has been <0xFC><0x01><0x06>activated<0xFC><0x01><0x02>.,Turbo Moto ha sido <0xFC><0x01><0x06>activado<0xFC><0x01><0x02>.,37,2,39,pokemon,description,Le boost turbo a été <0xFC><0x01><0x06>activé<0xFC><0x01><0x02>.,
+0x00A4D6C5,Turbo boost has been <0xFC><0x01><0x06>deactivated<0xFC><0x01><0x02>.,Turbo Moto ha sido <0xFC><0x01><0x06>desactivado<0xFC><0x01><0x02>.,39,2,41,pokemon,description,Le boost turbo a été <0xFC><0x01><0x06>désactivé<0xFC><0x01><0x02>.,
+0x00A4D6ED,Turbo Surf has been <0xFC><0x01><0x06>activated<0xFC><0x01><0x02>.,Turbo Surf ha sido <0xFC><0x01><0x06>activado<0xFC><0x01><0x02>.,36,2,38,pokemon,description,Le Surf turbo a été <0xFC><0x01><0x06>activé<0xFC><0x01><0x02>.,
 0x00A4D712,Turbo Surf has been <0xFC><0x01><0x06>deactivated<0xFC><0x01><0x02>.,Turbo Surf ha sido <0xFC><0x01><0x06>desactivado<0xFC><0x01><0x02>.,38,2,40,pokemon,description,,
 0x00A4D739,"<0xFD><0x02> survived the Poison.
 The Poison faded away!","<0xFD><0x02> sobrevivió al veneno.
@@ -52187,7 +52305,7 @@ que cayó hace años.",126,2,128,pokemon,dialogue,"Mon grand-père a survécu à
 météorite !<0xFA>Il s'est même lié d'amitié avec un<0xFB>Pokémon tombé des étoiles !
 ",
 0x01EEF260,mon that fell from the stars!,,29,2,31,pokemon,dialogue,,
-0x01EEF27E,<0xFC><0x01><0x02>Rouse the sleeping Pokémon?,,30,2,32,pokemon,dialogue,,
+0x01EEF27E,<0xFC><0x01><0x02>Rouse the sleeping Pokémon?,,30,2,32,pokemon,dialogue,<0xFC><0x01><0x02>Réveiller le Pokémon ?,
 0x01EEF29D,"<0xFC><0x01><0x02>The Pokémon woke up and wished
 itself immense size and power!","<0xFC><0x01><0x02><0x52>El Pokémon se despertó y deseó un
 tamaño y poder inmensos!",64,3,67,pokemon,dialogue,"{COLOR}ÁLe Pokémon s'est réveillé et a pris
@@ -52250,7 +52368,7 @@ behind the bookshelf.<0xFB>Follow it?","There appears to be a hidden path
 behind the bookshelf.<0xFB>Follow it?",66,1,67,pokemon,dialogue,"Il y a un passage caché derrière
 la bibliothèque.<0xFB>Le suivre ?",
 0x01EEFAAB,<0xFC><0x01><0x06>Friiie!,<0xFC><0x01><0x06>Friiie!,10,2,12,pokemon,dialogue,{COLOR}ÉFriiie!,
-0x01EEFAB6,<0xFC><0x01><0x02>The <0xFD><0x02> ran away.,<0xFC><0x01><0x02>The <0xFD><0x02> ran away.,19,2,21,pokemon,description,,
+0x01EEFAB6,<0xFC><0x01><0x02>The <0xFD><0x02> ran away.,<0xFC><0x01><0x02>The <0xFD><0x02> ran away.,19,2,21,pokemon,description,<0xFC><0x01><0x02>Le <0xFD><0x02> a fui.,
 0x01EEFBAC, Marts.,,7,3,10,pokemon,other,,
 0x01EEFC70,"ll have more use
 for this TM than I did.",,40,1,41,pokemon,dialogue,,
@@ -56553,10 +56671,12 @@ audéquates, je ne pourrai pas<0xFA>te laisser passer.",
 0x01EFECF6,F<0x46>Distortion World,F<0x46>Mundo Distorsión,18,2,20,pokemon,location,F<0x46>Monde Distorsion,
 0x01EFECF8,Distortion World,Mundo Distorsión,16,2,18,pokemon,location,,
 0x01EFED09,"<0xFC><0x01><0x02>The Pokémon is quietly eyeing
-<0xFD><0x01>""","<0xFC><0x01><0x02>El Pokémon te está observando""<0xFC><0x09>",36,1,37,pokemon,description,,
+<0xFD><0x01>""","<0xFC><0x01><0x02>El Pokémon te está observando""<0xFC><0x09>",36,1,37,pokemon,description,"<0xFC><0x01><0x02>Le Pokémon observe calmement
+<0xFD><0x01>""",
 0x01EFED2E,"<0xFC><0x01><0x02>Giratina is quietly eyeing
 <0xFD><0x01>""","<0xFC><0x01><0x02>Giratina is quietly eyeing
-<0xFD><0x01>""",33,1,34,pokemon,description,,
+<0xFD><0x01>""",33,1,34,pokemon,description,"<0xFC><0x01><0x02>Giratina observe calmement
+<0xFD><0x01>""",
 0x01EFED53,Giygogagohgwooh!,,16,2,18,pokemon,dialogue,,
 0x01EFED64,"<0xFC><0x01><0x02><0xFD><0x02> flew off into the
 Distortion World.","<0xFC><0x01><0x02><0xFD><0x02> voló hacia el Mundo
@@ -58355,7 +58475,8 @@ pour qu'il trouve l'amour.",
 it can find love.",,38,2,40,pokemon,description,,
 0x01F07B4F,"<0xFC><0x01><0x02><0xFD><0x02> was released.
 Bye-bye, <0xFD><0x02>!","<0xFC><0x01><0x02><0xFD><0x02> es liberado.
-<0x52>Adiós, <0xFD><0x02>!",32,1,33,pokemon,dialogue,,
+<0x52>Adiós, <0xFD><0x02>!",32,1,33,pokemon,dialogue,"<0xFC><0x01><0x02><0xFD><0x02> a été relâché.
+Au revoir, <0xFD><0x02> !",
 0x01F07B70,"Sniff""<0xFB>Isn't it beautiful?<0xFB>That Butterfree will now find love
 and be happy forever""","Sniff""<0xFB><0x51>No es hermoso?<0xFB>Que Butterfree encontrará el amor
 y será feliz para siempre""",83,3,86,pokemon,dialogue,"Snif...<0xFB>N'est-ce pas magnifique ?<0xFB>Ce Papilusion va trouver l'amour
@@ -59700,7 +59821,7 @@ me voir et je le relancerai.",
 0x01F0EEE8,"And because it's happy hour""","And because it's happy hour""",28,2,30,pokemon,other,Et comme c'est Happy Hour...,
 0x01F0EF10,Francis,Francis,7,2,9,pokemon,other,Francis,
 0x01F0EF18,Fresia,Fresia,6,2,8,pokemon,other,Fresia,
-0x01F0EF23,<0xFC><0x01><0x02>Skip the following dialogue/scene?,<0xFC><0x01><0x02>Skip the following dialogue/scene?,37,2,39,pokemon,dialogue,,
+0x01F0EF23,<0xFC><0x01><0x02>Skip the following dialogue/scene?,<0xFC><0x01><0x02>Skip the following dialogue/scene?,37,2,39,pokemon,dialogue,<0xFC><0x01><0x02>Passer le dialogue/la scène ?,
 0x01F0EF49,"Would you like to activate
 <0xFC><0x01><0x06>New Game <0x2E><0xFC><0x01><0x02>?",<0x51>Quieres activar el <0xFC><0x01><0x06>Nuevo Juego<0x2E><0xFC><0x01><0x02>?,44,3,47,pokemon,dialogue,"Veux-tu activer le
 <0xFC><0x01><0x06>New Game +<0xFC><0x01><0x02> ?",
@@ -60039,7 +60160,7 @@ seront achetables à la<0xFA>Tour de Combat.<0xFB>Mais il n'y aura plus
 d'exploration.",
 0x01F10D96,"However, there will be no more
 exploration.",,43,1,44,pokemon,description,,
-0x01F10DC2,<0xFC><0x01><0x06>Sandbox Mode<0xFC><0x01><0x02> has been enabled.,<0xFC><0x01><0x06>Modo Caja Arena<0xFC><0x01><0x02> activada.,36,2,38,pokemon,description,,
+0x01F10DC2,<0xFC><0x01><0x06>Sandbox Mode<0xFC><0x01><0x02> has been enabled.,<0xFC><0x01><0x06>Modo Caja Arena<0xFC><0x01><0x02> activada.,36,2,38,pokemon,description,Le <0xFC><0x01><0x06>Mode Sandbox<0xFC><0x01><0x02> a été activé.,
 0x01F10DD4, has been enabled.,,18,2,20,pokemon,other,,
 0x01F10E1F,"This version is much grittier than
 than the normal version.",,59,1,60,pokemon,description,,
@@ -63606,7 +63727,7 @@ destruyeron las cosechas!",66,1,67,pokemon,dialogue,"Ils sont revenus !<0xFB>Ces
 détruit nos récoltes !",
 0x01F25BC2,"mon that
 destroyed our crops!",,29,1,30,pokemon,dialogue,,
-0x01F25BE0,<0xFC><0x01><0x02>Tornadus and Thundurus flew off!,<0xFC><0x01><0x02><0x52>Tornadus y Thundurus se fueron!,35,3,38,pokemon,dialogue,,
+0x01F25BE0,<0xFC><0x01><0x02>Tornadus and Thundurus flew off!,<0xFC><0x01><0x02><0x52>Tornadus y Thundurus se fueron!,35,3,38,pokemon,dialogue,<0xFC><0x01><0x02>Tornadus et Thundurus se sont envolés !,
 0x01F25BE3,Tornadus and Thundurus flew off!,,32,3,35,pokemon,dialogue,,
 0x01F25C04,"What is this?<0xFB>Those Pokémon seem to have fled
 at the sight of you.<0xFB>Could they perhaps"" be afraid
@@ -66955,10 +67076,11 @@ sealed behind an electric barrier.<0xFB>Disengage the barrier to free them?","<0
 detrás de esta barrera eléctrica.<0xFB><0x51>Quieres desactivar la barrera?",105,2,107,pokemon,dialogue,"{COLOR}ÁOn dirait que des Pokémon sont pris
 dans une barrière électrique.<0xFB>Lever la barrière et les libérer ?",
 0x01F36790,Disengage the barrier to free them?,,35,2,37,pokemon,dialogue,,
-0x01F367B4,<0xFC><0x01><0x02><0xFD><0x01> disengaged the barrier!,Has desactivado la barrera.,29,2,31,pokemon,dialogue,,
+0x01F367B4,<0xFC><0x01><0x02><0xFD><0x01> disengaged the barrier!,Has desactivado la barrera.,29,2,31,pokemon,dialogue,<0xFC><0x01><0x02><0xFD><0x01> a levé la barrière !,
 0x01F367B9, disengaged the barrier!,,24,2,26,pokemon,dialogue,,
 0x01F367D2,"<0xFC><0x01><0x02>The freed Pokémon appear to be
-headed up the mountain.",<0xFC><0x01><0x02>Los Pokémon huyen tras ser liberados.,57,2,59,pokemon,description,,
+headed up the mountain.",<0xFC><0x01><0x02>Los Pokémon huyen tras ser liberados.,57,2,59,pokemon,description,"<0xFC><0x01><0x02>Les Pokémon libérés semblent
+gravir la montagne.",
 0x01F367E3,"mon appear to be
 headed up the mountain.",,40,2,42,pokemon,description,,
 0x01F3680C,"The Pokémon you freed are
@@ -69280,6 +69402,7 @@ these anymore!<0xFB>Let's get out of here!","<0x52>No estamos preparados para es
 <0x52>Vamos a salir de aquí!",69,2,71,pokemon,dialogue,"On n'est plus équipés pour gérer
 ça ! Partons<0xFB>!",
 0x01F4309C,s get out of here!,,18,2,20,pokemon,dialogue,,
+0x01F430AF,"Come on""<0xFC><0x08><0x10> open up""<0xFC><0x08><0x30>","Vamos""<0xFC><0x08><0x10> abre""<0xFC><0x09>",23,3,26,pokemon,description,"Allez""<0xFC><0x08><0x10> ouvre-toi""<0xFC><0x08><0x30>",
 0x01F430C7,Got it! We're safe now!<0xFC><0x08><0x30>,<0x52>Uf! <0x52>Estamos a salvo!<0xFC><0x09>,26,2,28,pokemon,dialogue,C'est bon ! On est en sécurité !{PAUSE},
 0x01F430E2,"What the""<0xFC><0x08><0x20> who's this guy, anyway?",<0x51>Qué?<0xFC><0x08><0x18> <0x51>Quién diablos eres tú?,36,2,38,pokemon,dialogue,Qu'est-ce que...{PAUSE}î c'est qui ce gars ?,
 0x01F430F3,"s this guy, anyway?",,19,2,21,pokemon,dialogue,,
@@ -70106,7 +70229,7 @@ pour éviter les retards.<0xFB>Oh, tiens - prends ce
 ticket pour monter aussi.",
 0x01F47313,"Oh, right - take this ticket so you
 can get on the boat, too.",,61,2,63,pokemon,dialogue,,
-0x01F47351,"We've made it""<0xFC><0x08><0x18> it's East Borrius!","Bien"" <0x52>Estamos en Borrius Oriental!",36,3,39,pokemon,dialogue,,
+0x01F47351,"We've made it""<0xFC><0x08><0x18> it's East Borrius!","Bien"" <0x52>Estamos en Borrius Oriental!",36,3,39,pokemon,dialogue,"On y est""<0xFC><0x08><0x18> c'est Borrius Est !",
 0x01F47366,s East Borrius!,,15,3,18,pokemon,dialogue,,
 0x01F47376,"Huh? Up there""<0xFC><0x08><0x18> above Crystal Peak""!","<0x51>Eh? <0x52>Allá arriba"" sobre Pico
 Cristal!",38,2,40,pokemon,dialogue,,
@@ -70716,7 +70839,7 @@ alors battons-le ensemble !",
 0x01F49A6B,s take him down together!,,25,3,28,pokemon,dialogue,,
 0x01F49A85,"No"" I refuse to admit defeat!","No"" <0x52>Me niego a perder""!",29,2,31,pokemon,dialogue,Non... Je n'accepte pas défaite,
 0x01F49A88, I refuse to admit defeat!,,26,2,28,pokemon,dialogue,,
-0x01F49AA3,"No""<0xFC><0x08><0x18> No""<0xFC><0x08><0x18> No!<0xFB>This cannot be happening!<0xFB>THIS CANNOT BE HAPPENING!","No"" No"" No""<0xFB><0x52>Esto no puede estar pasando!<0xFB><0x52>ESTO NO PUEDE PASAR!",69,2,71,pokemon,dialogue,,
+0x01F49AA3,"No""<0xFC><0x08><0x18> No""<0xFC><0x08><0x18> No!<0xFB>This cannot be happening!<0xFB>THIS CANNOT BE HAPPENING!","No"" No"" No""<0xFB><0x52>Esto no puede estar pasando!<0xFB><0x52>ESTO NO PUEDE PASAR!",69,2,71,pokemon,dialogue,"Non""<0xFC><0x08><0x18> Non""<0xFC><0x08><0x18> Non !<0xFB>C'est impossible !<0xFB>C'EST IMPOSSIBLE !",
 0x01F49ACF,THIS CANNOT BE HAPPENING!,,25,2,27,pokemon,dialogue,,
 0x01F49AE9,"It's over, Aklove.
 Time to turn yourself in.","Se terminó, Aklove.
@@ -74351,13 +74474,15 @@ les OEufs de ton équipe ?",
 all of the Eggs in Box <0xB1><0xFC><0x01><0x06><0xFD><0x02><0xFC><0x01><0x08><0xB2>?","<0x51>Quieres venderme todos los Huevos
 de la caja <0xB1><0xFC><0x01><0x06><0xFD><0x02><0xFC><0x01><0x08><0xB2>?",67,2,69,pokemon,dialogue,"Es-tu sûr de vouloir me vendre tous
 les OEufs de la Boîte "" {COLOR}É{STR_VAR_1}{COLOR}Ë "" ?",
-0x01F5A439,<0xFC><0x01><0x02><0xFD><0x01> sold the Egg for <0xB7><0xFD><0x02>!,,27,2,29,pokemon,dialogue,,
+0x01F5A439,<0xFC><0x01><0x02><0xFD><0x01> sold the Egg for <0xB7><0xFD><0x02>!,,27,2,29,pokemon,dialogue,<0xFC><0x01><0x02><0xFD><0x01> a vendu l'OEuf : <0xFD><0x02>¥ !,
 0x01F5A455,"<0xFC><0x01><0x02><0xFD><0x01> sold <0xFD><0x02> Egg<0xFD><0x04> in the party
 for <0xB7><0xFD><0x03>!","<0xFC><0x01><0x02>Has vendido todos los Huevos por
-<0xB7><0xFD><0x03>.",41,2,43,pokemon,dialogue,,
+<0xB7><0xFD><0x03>.",41,2,43,pokemon,dialogue,"<0xFC><0x01><0x02><0xFD><0x01> a vendu <0xFD><0x02> OEuf<0xFD><0x04> de
+l'équipe pour <0xFD><0x03>¥ !",
 0x01F5A47F,"<0xFC><0x01><0x02><0xFD><0x01> sold <0xFD><0x02> Egg<0xFD><0x04> in the Box
 for <0xB7><0xFD><0x03>!","<0xFC><0x01><0x02>Has vendido Huevos del PC por
-<0xB7><0xFD><0x03>.",39,2,41,pokemon,dialogue,,
+<0xB7><0xFD><0x03>.",39,2,41,pokemon,dialogue,"<0xFC><0x01><0x02><0xFD><0x01> a vendu <0xFD><0x02> OEuf<0xFD><0x04> de
+la Boîte pour <0xFD><0x03>¥ !",
 0x01F5A4A7,"Pleasure doing business with you!<0xFB>Come see me again if you have more
 Eggs to sell.","<0x52>Un placer hacer negocios contigo!<0xFB>Ven cuando tengas más Huevos
 para venderme.",82,3,85,pokemon,dialogue,"Ravi de faire affaire avec toi !<0xFB>Reviens me voir si tu as d'autres
@@ -77311,7 +77436,8 @@ Roja<0xFC><0x01><0x04>.",112,2,114,pokemon,dialogue,"Chants mystiques, kwaah!<0x
 0x01F66A8B,mon it be?,,10,2,12,pokemon,dialogue,,
 0x01F66A96,"<0xFC><0x01><0x02><0xFD><0x01> handed over 1 Blue Shard
 and 1 Red Shard.","<0xFC><0x01><0x02>Has entregado 1 Parte Azul y
-1 Parte Roja.",47,2,49,pokemon,description,,
+1 Parte Roja.",47,2,49,pokemon,description,"<0xFC><0x01><0x02><0xFD><0x01> a remis 1 Tesson Bleu
+et 1 Tesson Rouge.",
 0x01F66A9B," handed over 1 Blue Shard
 and 1 Red Shard.",,42,2,44,pokemon,description,,
 0x01F66AC6,Hwa!,"Hwa""",4,2,6,pokemon,dialogue,,
@@ -77624,7 +77750,7 @@ EST LA CLÉ.",
 0x01F68127,You have already solved the puzzle.,Has resuelto el rompecabezas.,35,1,36,pokemon,dialogue,Tu as déjà résolu le puzzle.,
 0x01F6814B,<0xFC><0x01><0x06>Dollllll!,"<0xFC><0x01><0x06>Dolll""",12,2,14,pokemon,dialogue,{COLOR}ÉDollllll!,
 0x01F6814E,Dollllll!,,9,2,11,pokemon,dialogue,,
-0x01F68158,<0xFC><0x01><0x02><0xFD><0x02> came through the portal!,<0xFC><0x01><0x02><0x52><0xFD><0x02> atravesó el portal!,30,2,32,pokemon,dialogue,,
+0x01F68158,<0xFC><0x01><0x02><0xFD><0x02> came through the portal!,<0xFC><0x01><0x02><0x52><0xFD><0x02> atravesó el portal!,30,2,32,pokemon,dialogue,<0xFC><0x01><0x02><0xFD><0x02> a traversé le portail !,
 0x01F6815D, came through the portal!,,25,2,27,pokemon,dialogue,,
 0x01F68186,<0xFC><0x01><0x06>Susuiiiii!,<0xFC><0x01><0x06>Susuiiiii!,13,2,15,pokemon,dialogue,{COLOR}ÉSusuiiiii!,
 0x01F68194,Safari Zone,Zona Safari,11,2,13,pokemon,dialogue,Zone Safari,
@@ -78645,7 +78771,8 @@ sur le fond<0xFA><0xFB>L'océan ! Laisse-moi les
 transformer en objet rare pour toi.",
 0x01F6DA73,"<0xFC><0x01><0x02><0xFD><0x01> handed over
 4 <0xFD><0x02>s and 4 <0xFD><0x03>s.","<0xFC><0x01><0x02><0xFD><0x01> handed over
-4 <0xFD><0x02>s and 4 <0xFD><0x03>s.",34,2,36,pokemon,description,,
+4 <0xFD><0x02>s and 4 <0xFD><0x03>s.",34,2,36,pokemon,description,"<0xFC><0x01><0x02><0xFD><0x01> a remis
+4 <0xFD><0x02>s et 4 <0xFD><0x03>s.",
 0x01F6DA96,"Each day, rare shells and salts
 appear on the ocean floor.<0xFB>If you can bring me <0xFC><0x01><0x06>4<0xFC><0x01><0x08> of these <0xFC><0x01><0x06>Sea
 Shells<0xFC><0x01><0x08> and <0xFC><0x01><0x06>4<0xFC><0x01><0x08> of these <0xFC><0x01><0x06>Sea Salts<0xFC><0x01><0x08>,<0xFA>I can convert them into a rare item<0xFA>for you.","Cada día, aparecen conchas y sales
@@ -80041,7 +80168,8 @@ dans les cabines avec {COLOR}É{STR_VAR_2}{COLOR}Ë<0xFA>portes aujourd'hui est 
 0x01F7579C,blue,,4,2,6,pokemon,other,bleu,
 0x01F757A1,"<0xFC><0x01><0x02>All Trainers on board have been
 defeated!","<0xFC><0x01><0x02>All Trainers on board have been
-defeated!",44,3,47,pokemon,dialogue,,
+defeated!",44,3,47,pokemon,dialogue,"<0xFC><0x01><0x02>Tous les Dresseurs à bord ont
+été battus !",
 0x01F758BD,"re nothing I can use, so you
 can have one, if ye want.",,54,3,57,pokemon,dialogue,,
 0x01F758F4,"I have to tell ye, the S.S. Marine's
@@ -81268,6 +81396,9 @@ I change?",,25,2,27,pokemon,dialogue,,
 0x01F7D8CB,"Which Nature should I give
 <0xFD><0x02>?",,30,3,33,pokemon,dialogue,"Quelle Nature dois-je donner
 à <0xFD><0x02> ?",
+0x01F7D8EA,"Should I give <0xFC><0x01><0x06><0xFD><0x02><0xFC><0x01><0x08>
+the <0xFC><0x01><0x06><0xFD><0x03><0xFC><0x01><0x08> Nature?",,43,2,45,pokemon,dialogue,"La Nature <0xFC><0x01><0x06><0xFD><0x03><0xFC><0x01><0x08>
+pour <0xFC><0x01><0x06><0xFD><0x02><0xFC><0x01><0x08> ?",
 0x01F7D916,"Then, hold still, <0xFD><0x02>""<0xFB>It's just a simple procedure""
 You won't remember a thing""","Quédate quieto, <0xFD><0x02>""<0xFB>Es sólo un procedimiento simple""
 No recordarás nada""",79,2,81,pokemon,dialogue,"Alors, reste tranquille, <0xFD><0x02>...<0xFB>Ce n'est qu'une simple procédure...
@@ -81291,6 +81422,9 @@ de <0xB7><0xFC><0x01><0x06>50000<0xFC><0x01><0x08>, puedo hacer otra.",112,2,114
 Nature ?<0xFB>Eh bien... tant que tu peux payer
 ¥{COLOR}É50000{COLOR}Ë, je peux en faire un autre.",
 0x01F7DBB1,", I can do another.",,19,2,21,pokemon,dialogue,,
+0x01F7DBC5,"For ¥<0xFC><0x01><0x06>50000<0xFC><0x01><0x08>, should I give
+<0xFC><0x01><0x06><0xFD><0x02><0xFC><0x01><0x08> the <0xFC><0x01><0x06><0xFD><0x03><0xFC><0x01><0x08> Nature?",,61,2,63,pokemon,dialogue,"Pour <0xFC><0x01><0x06>50000<0xFC><0x01><0x08>¥, donner la Nature
+<0xFC><0x01><0x06><0xFD><0x03><0xFC><0x01><0x08> à <0xFC><0x01><0x06><0xFD><0x02><0xFC><0x01><0x08> ?",
 0x01F7DBFA, Nature?,,8,2,10,pokemon,dialogue,,
 0x01F7DC03,"Ah, we've finished.<0xFB>I've restructured your <0xFD><0x02>'s
 heart to the more optimal Nature.<0xFB>And fortunately, it seems to
@@ -82414,7 +82548,7 @@ poisonous fluids to increase<0xFA>its size!","<0xFC><0x01><0x02><0x52>Toxapex se
 venenosos para aumentar su<0xFA>tamaño!",71,1,72,pokemon,dialogue,"<0xFC><0x01><0x02>Toxapex s'est gorgé de poison
 pour augmenter<0xFA>sa taille !",
 0x01F82BFA,its size!,,9,1,10,pokemon,dialogue,,
-0x01F82C04,<0xFC><0x01><0x02>Toxapex receded into the sand.,<0xFC><0x01><0x02>Toxapex ha desaparecido.,33,7,40,pokemon,description,,
+0x01F82C04,<0xFC><0x01><0x02>Toxapex receded into the sand.,<0xFC><0x01><0x02>Toxapex ha desaparecido.,33,7,40,pokemon,description,<0xFC><0x01><0x02>Toxapex a fui sous le sable.,
 0x01F82C07,Toxapex receded into the sand.,,30,7,37,pokemon,other,,
 0x01F82C4E,"DEFEATING
 THE TOXAPEX
@@ -82964,7 +83098,7 @@ to act like that?",,53,2,55,pokemon,dialogue,,
 began glowing!","<0xFD><0x01>'s Blue Orb suddenly
 began glowing!",37,1,38,pokemon,dialogue,"L'Orbe Bleu de <0xFD><0x01>
 se met soudain à briller !",
-0x01F851EA,<0xFC><0x01><0x02><0xFD><0x02> swam deeper into the ocean.,<0xFC><0x01><0x02><0xFD><0x02> swam deeper into the ocean.,33,2,35,pokemon,description,,
+0x01F851EA,<0xFC><0x01><0x02><0xFD><0x02> swam deeper into the ocean.,<0xFC><0x01><0x02><0xFD><0x02> swam deeper into the ocean.,33,2,35,pokemon,description,<0xFC><0x01><0x02><0xFD><0x02> s'enfonce dans l'océan.,
 0x01F852EC,"Which Pokémon wants to learn how
 to shoot explosive seeds from their<0xFA>mouth with <0xFC><0x01><0x06>Seed Bomb<0xFC><0x01><0x08>?","<0x51>Qué Pokémon debería aprender a
 disparar semillas desde su boca<0xFA>con <0xFC><0x01><0x06>Bomba Germen<0xFC><0x01><0x08>?",96,2,98,pokemon,dialogue,"Quel Pokémon veut apprendre à
@@ -85121,7 +85255,7 @@ l'OU de Smogon.<0xFB>Elle suit la plupart des règles de
 Smogon OU, à l'exception d'avoir<0xFA>ses propres listes de bans.<0xFB>De plus, les Pokémon peuvent Dynamax
 dans ce niveau.<0xFB>Pour plus d'informations, vois :
 {COLOR}Ésmogon.com/dex/ss/formats/<0xFA>national-dex/",
-0x01F92055,<0xFC><0x01><0x02>View the availability list?,,30,2,32,pokemon,dialogue,,
+0x01F92055,<0xFC><0x01><0x02>View the availability list?,,30,2,32,pokemon,dialogue,<0xFC><0x01><0x02>Voir les disponibilités ?,
 0x01F92074,"Which settings would you like to
 change?",<0x51>Qué opción te gustaría cambiar?,40,2,42,pokemon,dialogue,"Quels réglages veux-tu
 changer ?",
@@ -85905,7 +86039,8 @@ mean, train your Pokémon's body!",123,2,125,pokemon,dialogue,"Ah, que l'expéri
 l'entraînement commence ! Allons-y !<0xFB>Laisse-moi réparer son ADN... euh,
 former le corps de ton Pokémon !",
 0x01F96B5B,"<0xFC><0x01><0x02><0xFD><0x02> shuddered as the
-procedure began!",,39,2,41,pokemon,dialogue,,
+procedure began!",,39,2,41,pokemon,dialogue,"<0xFC><0x01><0x02><0xFD><0x02> frémit au début
+de l'opération !",
 0x01F96B83,"Ah, marvelleiuse! It was most
 successful.<0xFB><0xFD><0x02>'s <0xFD><0x03> stat 'as
 been trained!","Ah, marvelleiuse! It was most
@@ -88219,7 +88354,8 @@ ramène vite fait à James.",
 0x01FA1D7B,"em
 back to James pronto.",,24,2,26,pokemon,other,,
 0x01FA1D94,"<0xFC><0x01><0x02><0xFD><0x01> handed over the stat
-enhancers.",<0xFC><0x01><0x02>Has entregado los potenciadores.,37,2,39,pokemon,description,,
+enhancers.",<0xFC><0x01><0x02>Has entregado los potenciadores.,37,2,39,pokemon,description,"<0xFC><0x01><0x02><0xFD><0x01> a remis les objets
+de stats.",
 0x01FA1D99," handed over the stat
 enhancers.",,32,2,34,pokemon,description,,
 0x01FA1DBA,"And since that scientist lady is
@@ -90686,7 +90822,7 @@ Pokémon est effrayant !<0xFB>Dresseur !
 Protégez-moi !",
 0x01FAC63D,"Trainer!
 Protect me!",,20,2,22,pokemon,dialogue,,
-0x01FAC652,<0xFC><0x01><0x02>The little girl disappeared.,<0xFC><0x01><0x02>La niña desapareció.,31,1,32,pokemon,description,,
+0x01FAC652,<0xFC><0x01><0x02>The little girl disappeared.,<0xFC><0x01><0x02>La niña desapareció.,31,1,32,pokemon,description,<0xFC><0x01><0x02>La petite fille a disparu.,
 0x01FAC655,The little girl disappeared.,,28,1,29,pokemon,other,,
 0x01FAC672,"Ohhh""<0xFB>That scary Pokémon dragged me
 down here""<0xFB>I'm so scared""<0xFB>Wahhh!
@@ -90849,7 +90985,7 @@ seriously injured me!",,24,1,25,pokemon,dialogue,,
 0x01FACE36,Help!<0xFB>Somebody help me!<0xFB>My Electivire's gone rogue!,"<0x52>Alguien ayúdeme!
 <0x52>Mi Electrivire está loco!",51,1,52,pokemon,dialogue,À l'aide !<0xFB>Que quelqu'un m'aide !<0xFB>Mon Élekable est devenu rebelle !,
 0x01FACE5C,s gone rogue!,,13,1,14,pokemon,dialogue,,
-0x01FACE6A,<0xFC><0x01><0x02>Protect the nerd?,,20,2,22,pokemon,dialogue,,
+0x01FACE6A,<0xFC><0x01><0x02>Protect the nerd?,,20,2,22,pokemon,dialogue,<0xFC><0x01><0x02>Aider l'intello ?,
 0x01FACE6D,Protect the nerd?,,17,2,19,pokemon,dialogue,,
 0x01FACE7F,"Thank you!
 Thank you for protecting me!<0xFB>Now, please, battle my Electivire
@@ -91164,7 +91300,8 @@ est liée d'une manière ou d'une autre aux Lames de la<0xFA>Justice.<0xFB>Veuil
 Poké Balls, pour que nous puissions voir si elles<0xFA>réagissent au mur.",
 0x01FAE575,"<0xFC><0x01><0x02>Your Pokémon are shaking in their
 Poké Balls!","<0xFC><0x01><0x02>Your Pokémon are shaking in their
-Poké Balls!",48,1,49,pokemon,dialogue,,
+Poké Balls!",48,1,49,pokemon,dialogue,"<0xFC><0x01><0x02>Tes Pokémon tremblent dans leurs
+Poké Balls !",
 0x01FAE5A6,"Ahaha!
 My suspicions were confirmed!<0xFB>Despite the Swords of Justice not
 originating in Borrius, they still<0xFA>bear a strong connection with<0xFA>whatever is hiding behind this<0xFA>rock face.<0xFB>If I am correct, you'll need these
