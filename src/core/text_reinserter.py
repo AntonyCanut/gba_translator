@@ -9,6 +9,7 @@ import struct
 from typing import List, Dict, Optional
 from .rom_reader import ROMReader
 from .text_codec import TextEncoder
+from .fallback_translator import FallbackSynthesizer
 
 
 class FreeSpaceAllocator:
@@ -81,6 +82,7 @@ class SmartReinserter:
         rom_data: bytearray,
         allow_truncate: bool = False,
         allow_relocate: bool = False,
+        allow_fallback: bool = False,
         free_space_min: int = 16,
     ):
         """
@@ -88,11 +90,17 @@ class SmartReinserter:
 
         Args:
             rom_data: Données de la ROM (modifiables)
-            allow_truncate: Autoriser la troncature si trop long
+            allow_truncate: Autoriser la troncature brute si trop long
+            allow_relocate: Déplacer les textes trop longs (pointeurs connus)
+            allow_fallback: Synthétiser une traduction française plus courte
+                qui tient en place plutôt que de laisser l'anglais en place
+                (voir :class:`FallbackSynthesizer`).
         """
         self.rom_data = rom_data
         self.allow_truncate = allow_truncate
         self.allow_relocate = allow_relocate
+        self.allow_fallback = allow_fallback
+        self.fallback = FallbackSynthesizer() if allow_fallback else None
         self.free_space_min = free_space_min
         # Relocations are deferred until all in-place writes are done:
         # the free-space scan must see the final state of the inter-string
@@ -108,6 +116,7 @@ class SmartReinserter:
             'relocation_failed': 0,
             'relocated_bytes': 0,
             'truncated': 0,
+            'fallback_used': 0,
             'skipped_too_long': 0,
             'failures': 0,
             'warnings': []
@@ -268,6 +277,7 @@ class SmartReinserter:
         padding_available = translation.get('padding_available')
         max_length = translation.get('max_length')
         allow_truncate = translation.get('allow_truncate', self.allow_truncate)
+        allow_fallback = translation.get('allow_fallback', self.allow_fallback)
         raw_bytes = self._load_raw_bytes(translation.get('raw_bytes'))
         pointer_offsets = self._parse_pointer_offsets(translation.get('pointer_offsets'))
 
@@ -300,22 +310,45 @@ class SmartReinserter:
                     max_length = original_length + 1
 
             if max_length is not None and encoded_len > max_length:
+                # Lossless first: relocate the overflowing text elsewhere and
+                # repoint to it (only possible when the pointers are known).
                 if self.allow_relocate and pointer_offsets:
                     return self._queue_relocation(encoded, pointer_offsets, offset)
-                if allow_truncate and max_length > 0:
-                    terminator = 0x00 if encoding == 'ascii' else 0xFF
-                    encoded = encoded[:max_length]
-                    encoded = encoded[:-1] + bytes([terminator])
-                    encoded_len = len(encoded)
-                    self.stats['truncated'] += 1
-                else:
-                    self.stats['skipped_too_long'] += 1
-                    self.stats['warnings'].append({
-                        'offset': f"0x{offset:08X}",
-                        'text': text,
-                        'error': f"text_too_long ({encoded_len} > {max_length})"
-                    })
-                    return False
+
+                # Synthesize a shorter French variant that fits in place rather
+                # than leaving the English string behind. Operates on `text`,
+                # so it also rescues entries whose `raw_bytes` came pre-encoded.
+                if allow_fallback and self.fallback is not None and text and max_length > 0:
+                    result = self.fallback.shrink_to_fit(text, encoding, max_length)
+                    if result.fits:
+                        encoded = TextEncoder.encode(result.text, encoding)
+                        encoded_len = len(encoded)
+                        self.stats['fallback_used'] += 1
+                        self.stats['warnings'].append({
+                            'offset': f"0x{offset:08X}",
+                            'text': text,
+                            'fallback_text': result.text,
+                            'info': (
+                                f"fallback_{result.strategy} "
+                                f"({result.original_bytes} -> {result.final_bytes} bytes)"
+                            ),
+                        })
+
+                if encoded_len > max_length:
+                    if allow_truncate and max_length > 0:
+                        terminator = 0x00 if encoding == 'ascii' else 0xFF
+                        encoded = encoded[:max_length]
+                        encoded = encoded[:-1] + bytes([terminator])
+                        encoded_len = len(encoded)
+                        self.stats['truncated'] += 1
+                    else:
+                        self.stats['skipped_too_long'] += 1
+                        self.stats['warnings'].append({
+                            'offset': f"0x{offset:08X}",
+                            'text': text,
+                            'error': f"text_too_long ({encoded_len} > {max_length})"
+                        })
+                        return False
 
             # Vérifier si on utilise le padding
             if original_length is not None and encoded_len > original_length + 1:  # +1 pour terminateur
@@ -373,6 +406,7 @@ class SmartReinserter:
                 'relocation_failed': self.stats['relocation_failed'],
                 'relocated_bytes': self.stats['relocated_bytes'],
                 'truncated': self.stats['truncated'],
+                'fallback_used': self.stats['fallback_used'],
                 'skipped_too_long': self.stats['skipped_too_long'],
                 'success_rate': f"{100 * self.stats['success'] / max(1, self.stats['total']):.1f}%"
             },
@@ -389,6 +423,7 @@ class SmartReinserter:
             'relocation_failed': 0,
             'relocated_bytes': 0,
             'truncated': 0,
+            'fallback_used': 0,
             'skipped_too_long': 0,
             'failures': 0,
             'warnings': []
