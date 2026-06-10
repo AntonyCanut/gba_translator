@@ -2,9 +2,12 @@ import unittest
 
 from src.core.dialogue_linewrap import (
     DEFAULT_MAX_LINE_WIDTH,
+    is_multiline_layout,
+    line_width,
     line_widths,
     normalize_breaks,
     rewrap,
+    rewrap_multiline,
 )
 
 
@@ -77,6 +80,72 @@ class RewrapTests(unittest.TestCase):
         text = "Et\nenfin, comment t'appelles-tu ?"
         once = rewrap(text)
         self.assertEqual(rewrap(once), once)
+
+
+INTRO_EN = (
+    'Welcome to Pokémon Unbound!\n\n'
+    'Before you begin playing, please\n'
+    'be aware that this is a non-profit\n'
+    'fan game.\n\n'
+    'If you paid for this game, reclaim\n'
+    'your money immediately!'
+)
+
+CREDITS_EN = '\n\n Skeli\n Lich-Lord-F\n Criminon\n\n'
+
+
+class MultilineLayoutTests(unittest.TestCase):
+    def test_intro_is_multiline(self):
+        self.assertTrue(is_multiline_layout(INTRO_EN))
+
+    def test_credits_are_multiline(self):
+        self.assertTrue(is_multiline_layout(CREDITS_EN))
+
+    def test_two_line_dialogue_is_not(self):
+        self.assertFalse(is_multiline_layout('Hello!\nHow are you?'))
+
+    def test_scroll_code_means_dialogue(self):
+        self.assertFalse(
+            is_multiline_layout('a\nb<0xFA>c\nd<0xFB>e\nf')
+        )
+
+
+class RewrapMultilineTests(unittest.TestCase):
+    def test_never_introduces_scroll_codes(self):
+        fr = (
+            "Bienvenue\ndans\nPokémon\nUnbound\n! Avant de jouer,\n"
+            "sache que c'est un jeu de fans sans\nbut lucratif."
+        )
+        result = rewrap_multiline(fr, INTRO_EN)
+        self.assertNotIn('<0xFA>', result)
+        self.assertNotIn('<0xFB>', result)
+
+    def test_preserves_blank_line_runs(self):
+        fr = 'Bienvenue dans Pokémon Unbound !\n\nUn jeu de fans.\n\nMerci !'
+        self.assertEqual(rewrap_multiline(fr, INTRO_EN), fr)
+
+    def test_credits_layout_untouched(self):
+        # Names and their centring blanks/indent must stay verbatim.
+        self.assertEqual(rewrap_multiline(CREDITS_EN, CREDITS_EN), CREDITS_EN)
+
+    def test_overflowing_line_is_rebalanced_within_reference_width(self):
+        en = 'Speak to people, and check things\nwherever you go, be it towns,\nroads, or caves.'
+        cap = max(line_width(line) for line in en.split('\n'))
+        fr = 'Parle aux gens et examine absolument tout ce qui se trouve sur ton chemin,\nvilles, routes\nou grottes.'
+        result = rewrap_multiline(fr, en)
+        self.assertNotIn('<0xFA>', result)
+        for line in result.split('\n'):
+            self.assertLessEqual(line_width(line), cap)
+        # Wording is preserved.
+        self.assertEqual(
+            result.replace('\n', ' ').split(),
+            fr.replace('\n', ' ').split(),
+        )
+
+    def test_idempotent(self):
+        fr = 'Un texte avec une ligne vraiment beaucoup trop longue pour la fenêtre,\npuis la suite.'
+        once = rewrap_multiline(fr, INTRO_EN)
+        self.assertEqual(rewrap_multiline(once, INTRO_EN), once)
 
 
 if __name__ == '__main__':

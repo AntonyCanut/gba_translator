@@ -55,7 +55,9 @@ sys.path.insert(0, str(Path(__file__).parent.parent.parent))
 from src.core.dialogue_linewrap import (
     collapse_empty_breaks,
     has_empty_break_run,
+    is_multiline_layout,
     rewrap as rewrap_dialogue,
+    rewrap_multiline,
 )
 from src.core.fixed_tables import in_fixed_table
 from src.core.text_codec import TextDecoder
@@ -553,7 +555,14 @@ class TranslatedROMBuilder:
                 if not has_empty_break_run(english_text or ''):
                     translation_text = collapse_empty_breaks(translation_text)
                 if item.get('category') == 'dialogue':
-                    translation_text = rewrap_dialogue(translation_text)
+                    if is_multiline_layout(english_text or ''):
+                        # Fullscreen layout (intro, cinematics, letters):
+                        # keep pure \n breaks, never scroll codes.
+                        translation_text = rewrap_multiline(
+                            translation_text, english_text
+                        )
+                    else:
+                        translation_text = rewrap_dialogue(translation_text)
             except Exception:
                 pass  # never let display polish break the build
 

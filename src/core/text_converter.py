@@ -307,11 +307,14 @@ class CSVToJSONConverter:
                 raw_translation = row.get('translation', '')
                 translation = raw_translation.strip()
 
-                # Les espaces de bord sont significatifs quand le texte source
-                # en a (ex. préfixe de combat "The opposing " -> "L'adversaire ") :
-                # ne nettoyer que les fins de ligne parasites dans ce cas.
+                # Les bords sont significatifs quand le texte source en a :
+                # sauts de ligne de centrage (générique/crédits) ou espaces
+                # de préfixe (ex. "The opposing " -> "L'adversaire ").
                 original_text = row.get('original_text', '')
-                if translation and original_text != original_text.strip(' '):
+                if translation and original_text != original_text.strip('\r\n'):
+                    # Lignes vides structurelles : tout garder sauf les \r.
+                    translation = raw_translation.strip('\r')
+                elif translation and original_text != original_text.strip(' '):
                     translation = raw_translation.strip('\r\n')
 
                 # Ignorer lignes sans traduction
