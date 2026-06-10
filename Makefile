@@ -24,6 +24,7 @@ PATCH_FONT_FR_SCRIPT := scripts/patch_font_fr.py
 INLINE_FR_SCRIPT := scripts/apply_inline_overrides_fr.py
 REPAIR_LZ77_SCRIPT := scripts/repair_stable_lz77_blocks.py
 REPAIR_LOCALIZED_LZ77_SCRIPT := scripts/repair_localized_lz77_blocks.py
+REPOINT_STALE_SCRIPT := scripts/repoint_stale_text_pointers.py
 
 OUTPUT_DIR := output
 EXTRACT_DIR := $(OUTPUT_DIR)/extracted/extracted_texts
@@ -126,6 +127,8 @@ build-fr: $(ENGLISH_EXTRACT) $(SPANISH_EXTRACT) $(BUILD_SCRIPT)
 		--english $(ENGLISH_ROM) \
 		--spanish $(SPANISH_ROM) \
 		--require-pointer
+	@$(PYTHON) $(REPOINT_STALE_SCRIPT) \
+		--target $(FR_BUILD)
 
 validate-es: $(SPANISH_BUILD) $(VALIDATE_SCRIPT)
 	@$(PYTHON) $(VALIDATE_SCRIPT) \

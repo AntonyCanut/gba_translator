@@ -169,7 +169,15 @@ class TranslatedROMBuilder:
     CONTROL_PREFIXES = {0xF7, 0xF8, 0xF9, 0xFA, 0xFB, 0xFC, 0xFD}
     ARG_CONSUME_PREFIXES = {0xF7, 0xFC}
     RAW_ARG_PREFIXES = {0xF7: 1, 0xF8: 1, 0xF9: 1, 0xFD: 1}
-    FC_TWO_ARG_PREFIXES = {0x01, 0x06, 0x08, 0x10, 0x13, 0x19}
+    # Argument bytes per FC extended control command (Gen III ExtCtrlCode):
+    # COLOR_HIGHLIGHT_SHADOW (0x04) takes 3, PLAY_BGM/PLAY_SE take a 16-bit
+    # id, the other display commands take one byte or none. Truncating these
+    # (the old 1-arg-only table) corrupted strings like the battle menu.
+    FC_ARG_COUNTS = {
+        0x01: 1, 0x02: 1, 0x03: 1, 0x04: 3, 0x05: 1, 0x06: 1,
+        0x08: 1, 0x0B: 2, 0x0C: 1, 0x0D: 1, 0x0E: 1, 0x10: 2,
+        0x11: 1, 0x12: 1, 0x13: 1, 0x14: 1, 0x19: 1,
+    }
 
     @classmethod
     def _scan_control_tokens(cls, text: str) -> List[Tuple[int, int, int]]:
@@ -189,12 +197,10 @@ class TranslatedROMBuilder:
             if value == 0xFC:
                 if i + 1 < len(raw_bytes):
                     cmd = raw_bytes[i + 1]
-                    if cmd in cls.FC_TWO_ARG_PREFIXES and i + 2 < len(raw_bytes):
-                        sequences.append([value, cmd, raw_bytes[i + 2]])
-                        i += 3
-                    else:
-                        sequences.append([value, cmd])
-                        i += 2
+                    arg_count = cls.FC_ARG_COUNTS.get(cmd, 0)
+                    args = list(raw_bytes[i + 2:i + 2 + arg_count])
+                    sequences.append([value, cmd] + args)
+                    i += 2 + len(args)
                 else:
                     sequences.append([value])
                     i += 1
