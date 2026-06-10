@@ -603,6 +603,13 @@ class TranslatedROMBuilder:
             f"source ({self.config.source_rom.stem})",
         )
 
+        # Sans l'extraction source, la réinsertion ne connaît pas la longueur
+        # d'origine des textes et en ignore des milliers ("trop longs").
+        if self.config.translations_json and not self.english_texts:
+            print("❌ Textes source requis pour réinsérer des traductions.")
+            print(f"   Lancez d'abord: make extract (génère {source_texts_path})")
+            return False
+
         if self.config.reference_rom:
             reference_texts_path = self._default_texts_path(self.config.reference_rom)
             self.reference_texts = self._load_extracted_texts(
