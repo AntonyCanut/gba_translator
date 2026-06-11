@@ -1,9 +1,9 @@
 {
-  "conversion_date": "2026-06-11T14:01:16.258557",
+  "conversion_date": "2026-06-11T14:24:56.820758",
   "source_csv": "2026-01-15_trilingual_translation.csv",
-  "total_translations": 20711,
+  "total_translations": 20731,
   "total_errors": 0,
-  "total_warnings": 16816,
+  "total_warnings": 16814,
   "translations": [
     {
       "offset": 165760,
@@ -32456,14 +32456,14 @@
     {
       "offset": 4176148,
       "original_text": "<0xFD><0x0F> flinched!",
-      "translation": "<0xFD><0x0F> flinched!",
-      "length": 12,
+      "translation": "<0xFD><0x0F> est apeuré !",
+      "length": 15,
       "original_length": 12,
-      "padding_used": 0,
+      "padding_used": 3,
       "encoding": "pokemon",
       "category": "dialogue",
       "notes": "",
-      "too_long": false
+      "too_long": true
     },
     {
       "offset": 4176161,
@@ -32648,14 +32648,14 @@
     {
       "offset": 4176579,
       "original_text": "<0xFD><0x0F> dug a hole!",
-      "translation": "<0xFD><0x0F> dug a hole!",
-      "length": 14,
+      "translation": "<0xFD><0x0F> creuse le sol !",
+      "length": 18,
       "original_length": 14,
-      "padding_used": 0,
+      "padding_used": 4,
       "encoding": "pokemon",
       "category": "dialogue",
       "notes": "",
-      "too_long": false
+      "too_long": true
     },
     {
       "offset": 4176594,
@@ -32672,10 +32672,10 @@
     {
       "offset": 4176613,
       "original_text": "<0xFD><0x0F> sprang up!",
-      "translation": "<0xFD><0x0F> sprang up!",
-      "length": 13,
+      "translation": "<0xFD><0x0F> bondit !",
+      "length": 11,
       "original_length": 13,
-      "padding_used": 0,
+      "padding_used": -2,
       "encoding": "pokemon",
       "category": "dialogue",
       "notes": "",
@@ -32732,14 +32732,14 @@
     {
       "offset": 4176738,
       "original_text": "<0xFD><0x0F> Clamped\n<0xFD><0x10>!",
-      "translation": "<0xFD><0x0F> Clamped\n<0xFD><0x10>!",
-      "length": 14,
+      "translation": "<0xFD><0x0F> referme son étau\nsur <0xFD><0x10> !",
+      "length": 28,
       "original_length": 14,
-      "padding_used": 0,
+      "padding_used": 14,
       "encoding": "pokemon",
       "category": "dialogue",
       "notes": "",
-      "too_long": false
+      "too_long": true
     },
     {
       "offset": 4176753,
@@ -33956,10 +33956,10 @@
     {
       "offset": 4179432,
       "original_text": "For <0xFD><0x13>,\n<0xFD>à <0xFD> ",
-      "translation": "For {FD13},\n{FD16} {FD00}",
-      "length": 25,
+      "translation": "Pour <0xFD><0x13>,\n<0xFD>à <0xFD> ",
+      "length": 14,
       "original_length": 13,
-      "padding_used": 12,
+      "padding_used": 1,
       "encoding": "pokemon",
       "category": "description",
       "notes": "",
@@ -35720,14 +35720,14 @@
     {
       "offset": 4183330,
       "original_text": "<0xFD><0x1C> <0xFD><0x1D>\nwithdrew <0xFD> !",
-      "translation": "{FD1C} {FD1D}\nwithdrew {FD00}!",
-      "length": 30,
+      "translation": "<0xFD><0x1C> <0xFD><0x1D>\nretire <0xFD>  !",
+      "length": 17,
       "original_length": 18,
-      "padding_used": 12,
+      "padding_used": -1,
       "encoding": "pokemon",
       "category": "dialogue",
       "notes": "",
-      "too_long": true
+      "too_long": false
     },
     {
       "offset": 4183349,
@@ -35752,6 +35752,18 @@
       "category": "dialogue",
       "notes": "",
       "too_long": true
+    },
+    {
+      "offset": 4183392,
+      "original_text": "Foe",
+      "translation": "Ennemi",
+      "length": 6,
+      "original_length": 3,
+      "padding_used": 3,
+      "encoding": "pokemon",
+      "category": "other",
+      "notes": "",
+      "too_long": false
     },
     {
       "offset": 4183396,
@@ -35984,34 +35996,34 @@
     {
       "offset": 4183551,
       "original_text": "was too dry!",
-      "translation": "était trop sec !",
-      "length": 16,
+      "translation": "trop sèche !",
+      "length": 12,
       "original_length": 12,
-      "padding_used": 4,
+      "padding_used": 0,
       "encoding": "pokemon",
       "category": "dialogue",
       "notes": "",
-      "too_long": true
+      "too_long": false
     },
     {
       "offset": 4183564,
       "original_text": "was too sweet!",
-      "translation": "était trop sucré !",
-      "length": 18,
+      "translation": "trop sucrée !",
+      "length": 13,
       "original_length": 14,
-      "padding_used": 4,
+      "padding_used": -1,
       "encoding": "pokemon",
       "category": "dialogue",
       "notes": "",
-      "too_long": true
+      "too_long": false
     },
     {
       "offset": 4183579,
       "original_text": "was too bitter!",
-      "translation": "était trop amer !",
-      "length": 17,
+      "translation": "trop amère !",
+      "length": 12,
       "original_length": 15,
-      "padding_used": 2,
+      "padding_used": -3,
       "encoding": "pokemon",
       "category": "dialogue",
       "notes": "",
@@ -36020,14 +36032,14 @@
     {
       "offset": 4183595,
       "original_text": "was too sour!",
-      "translation": "était trop acide !",
-      "length": 18,
+      "translation": "trop acide !",
+      "length": 12,
       "original_length": 13,
-      "padding_used": 5,
+      "padding_used": -1,
       "encoding": "pokemon",
       "category": "dialogue",
       "notes": "",
-      "too_long": true
+      "too_long": false
     },
     {
       "offset": 4183644,
@@ -36788,14 +36800,14 @@
     {
       "offset": 4188064,
       "original_text": "<0xFC><0x05><0x05><0xFC><0x04><0x0D><0x0E><0x0F>Switch\nwhich?",
-      "translation": "{FC05}{FC04}Switch\nwhich?",
-      "length": 25,
+      "translation": "<0xFC><0x05><0x05><0xFC><0x04><0x0D><0x0E><0x0F>Envoyer\nqui ?",
+      "length": 21,
       "original_length": 21,
-      "padding_used": 4,
+      "padding_used": 0,
       "encoding": "pokemon",
       "category": "dialogue",
       "notes": "",
-      "too_long": true
+      "too_long": false
     },
     {
       "offset": 4188103,
@@ -37698,6 +37710,18 @@
       "too_long": false
     },
     {
+      "offset": 4284040,
+      "original_text": "<0xFC><0x01><0x0F><0xFC><0x03><0x0E>Search",
+      "translation": "<0xFC><0x01><0x0F><0xFC><0x03><0x0E>Cherche",
+      "length": 13,
+      "original_length": 12,
+      "padding_used": 1,
+      "encoding": "pokemon",
+      "category": "description",
+      "notes": "",
+      "too_long": false
+    },
+    {
       "offset": 4284053,
       "original_text": "Numerical Mode",
       "translation": "Mode Numérique",
@@ -37718,6 +37742,18 @@
       "padding_used": -1,
       "encoding": "pokemon",
       "category": "other",
+      "notes": "",
+      "too_long": false
+    },
+    {
+      "offset": 4284080,
+      "original_text": "<0xFC><0x01><0x0F><0xFC><0x03><0x0E>Other",
+      "translation": "<0xFC><0x01><0x0F><0xFC><0x03><0x0E>Autre",
+      "length": 11,
+      "original_length": 11,
+      "padding_used": 0,
+      "encoding": "pokemon",
+      "category": "description",
       "notes": "",
       "too_long": false
     },
@@ -37768,6 +37804,18 @@
       "category": "location",
       "notes": "",
       "too_long": true
+    },
+    {
+      "offset": 4284155,
+      "original_text": "<0xFC><0x01><0x0F><0xFC><0x03><0x0E>Pokémon List",
+      "translation": "<0xFC><0x01><0x0F><0xFC><0x03><0x0E>Liste Pokémon",
+      "length": 19,
+      "original_length": 18,
+      "padding_used": 1,
+      "encoding": "pokemon",
+      "category": "description",
+      "notes": "",
+      "too_long": false
     },
     {
       "offset": 4284196,
@@ -38488,6 +38536,18 @@
       "category": "dialogue",
       "notes": "",
       "too_long": true
+    },
+    {
+      "offset": 4285351,
+      "original_text": "Deposited <0xFD><0x03>\n<0xFD><0x02>(s).",
+      "translation": "Dépôt de <0xFD><0x03>\n×<0xFD><0x02>.",
+      "length": 16,
+      "original_length": 19,
+      "padding_used": -3,
+      "encoding": "pokemon",
+      "category": "location",
+      "notes": "",
+      "too_long": false
     },
     {
       "offset": 4285371,
@@ -40466,6 +40526,18 @@
       "padding_used": -1,
       "encoding": "pokemon",
       "category": "dialogue",
+      "notes": "",
+      "too_long": false
+    },
+    {
+      "offset": 4290501,
+      "original_text": "Withdrew <0xFD><0x03>\n<0xFD><0x02>(s).",
+      "translation": "Retrait de <0xFD><0x03>\n×<0xFD><0x02>.",
+      "length": 18,
+      "original_length": 18,
+      "padding_used": 0,
+      "encoding": "pokemon",
+      "category": "location",
       "notes": "",
       "too_long": false
     },
@@ -65140,6 +65212,18 @@
       "category": "dialogue",
       "notes": "",
       "too_long": true
+    },
+    {
+      "offset": 7911464,
+      "original_text": "I still need:\n<0xFC><0x01><0x06><0xFD><0x02>",
+      "translation": "Il me faut :\n<0xFC><0x01><0x06><0xFD><0x02>",
+      "length": 18,
+      "original_length": 19,
+      "padding_used": -1,
+      "encoding": "pokemon",
+      "category": "dialogue",
+      "notes": "",
+      "too_long": false
     },
     {
       "offset": 7911484,
@@ -103556,14 +103640,14 @@
     {
       "offset": 10762812,
       "original_text": "Capture first!",
-      "translation": "Capture first!",
-      "length": 14,
+      "translation": "Capture d'abord !",
+      "length": 17,
       "original_length": 14,
-      "padding_used": 0,
+      "padding_used": 3,
       "encoding": "pokemon",
       "category": "dialogue",
       "notes": "",
-      "too_long": false
+      "too_long": true
     },
     {
       "offset": 10762827,
@@ -104792,10 +104876,10 @@
     {
       "offset": 10765521,
       "original_text": "in the rain!",
-      "translation": "sous la pluie !",
-      "length": 15,
+      "translation": "s'il pleut !",
+      "length": 12,
       "original_length": 12,
-      "padding_used": 3,
+      "padding_used": 0,
       "encoding": "pokemon",
       "category": "dialogue",
       "notes": "",
@@ -104816,19 +104900,19 @@
     {
       "offset": 10765546,
       "original_text": "in a sandstorm!",
-      "translation": "in a sandstorm!",
-      "length": 15,
+      "translation": "dans une tempête de sable !",
+      "length": 27,
       "original_length": 15,
-      "padding_used": 0,
+      "padding_used": 12,
       "encoding": "pokemon",
       "category": "dialogue",
       "notes": "",
-      "too_long": false
+      "too_long": true
     },
     {
       "offset": 10765562,
       "original_text": "in a hailstorm!",
-      "translation": "in a hailstorm!",
+      "translation": "sous la grêle !",
       "length": 15,
       "original_length": 15,
       "padding_used": 0,
@@ -147450,6 +147534,18 @@
       "too_long": true
     },
     {
+      "offset": 32417529,
+      "original_text": "Gahhhhhhhh\"<0xFB><0xFC><0x01><0x02>His brain appears to be fried.",
+      "translation": "Gahhhhhhhh\"<0xFB><0xFC><0x01><0x02>Son cerveau a l'air grillé.",
+      "length": 42,
+      "original_length": 45,
+      "padding_used": -3,
+      "encoding": "pokemon",
+      "category": "description",
+      "notes": "",
+      "too_long": false
+    },
+    {
       "offset": 32417575,
       "original_text": "Fried foods are my favourite!<0xFB>French fries, Basculin sticks\"\nthey're all great!",
       "translation": "J'adore les fritures !<0xFB>Frites, bâtonnets de Bargantua...\ntout est bon !",
@@ -149980,6 +150076,18 @@
       "category": "dialogue",
       "notes": "",
       "too_long": true
+    },
+    {
+      "offset": 32437339,
+      "original_text": "<0xFC><0x01><0x02><0xFD><0x01> handed over a\nHeart Scale in exchange.",
+      "translation": "<0xFC><0x01><0x02><0xFD><0x01> remet une Ecaille Coeur\nen échange.",
+      "length": 41,
+      "original_length": 44,
+      "padding_used": -3,
+      "encoding": "pokemon",
+      "category": "description",
+      "notes": "",
+      "too_long": false
     },
     {
       "offset": 32437384,
@@ -160050,6 +160158,18 @@
       "too_long": false
     },
     {
+      "offset": 32517075,
+      "original_text": "<0xFC><0x01><0x02><0xFD><0x01> handed over <0xFD><0x03>\n<0xFD><0x02>.",
+      "translation": "<0xFC><0x01><0x02><0xFD><0x01> remet <0xFD><0x03>\n×<0xFD><0x02>.",
+      "length": 19,
+      "original_length": 24,
+      "padding_used": -5,
+      "encoding": "pokemon",
+      "category": "description",
+      "notes": "",
+      "too_long": false
+    },
+    {
       "offset": 32517100,
       "original_text": "<0xFC><0x01><0x02><0xFD><0x01> handed over a total of\n<0xFD><0x03> <0xFD><0x02>.",
       "translation": "<0xFC><0x01><0x02><0xFD><0x01> a remis un total de\n<0xFD><0x03> <0xFD><0x02>.",
@@ -161508,6 +161628,18 @@
       "length": 241,
       "original_length": 190,
       "padding_used": 51,
+      "encoding": "pokemon",
+      "category": "dialogue",
+      "notes": "",
+      "too_long": true
+    },
+    {
+      "offset": 32530064,
+      "original_text": "<0xFC><0x01><0x06><0xFD><0x02><0xFC><0x01><0x04>!<0xFC><0x01><0x04><0xFB>I wanna see a <0xFC><0x01><0x06><0xFD><0x02><0xFC><0x01><0x04>!",
+      "translation": "<0xFC><0x01><0x06><0xFD><0x02><0xFC><0x01><0x04>!<0xFC><0x01><0x04><0xFB>Je veux voir un <0xFC><0x01><0x06><0xFD><0x02><0xFC><0x01><0x04> !",
+      "length": 39,
+      "original_length": 36,
+      "padding_used": 3,
       "encoding": "pokemon",
       "category": "dialogue",
       "notes": "",
@@ -163900,6 +164032,18 @@
       "category": "dialogue",
       "notes": "",
       "too_long": true
+    },
+    {
+      "offset": 32548974,
+      "original_text": "<0xFC><0x01><0x02>Aggron mysteriously disappeared.",
+      "translation": "<0xFC><0x01><0x02>Galeking a mystérieusement\ndisparu.",
+      "length": 38,
+      "original_length": 35,
+      "padding_used": 3,
+      "encoding": "pokemon",
+      "category": "dialogue",
+      "notes": "",
+      "too_long": false
     },
     {
       "offset": 32549010,
@@ -168926,6 +169070,18 @@
       "padding_used": -22,
       "encoding": "pokemon",
       "category": "dialogue",
+      "notes": "",
+      "too_long": false
+    },
+    {
+      "offset": 32589558,
+      "original_text": "<0xFC><0x01><0x02><0xFD><0x01> handed over\n<0xFD><0x03> <0xFD><0x02>s.",
+      "translation": "<0xFC><0x01><0x02><0xFD><0x01> remet\n<0xFD><0x03> ×<0xFD><0x02>.",
+      "length": 19,
+      "original_length": 25,
+      "padding_used": -6,
+      "encoding": "pokemon",
+      "category": "description",
       "notes": "",
       "too_long": false
     },
@@ -178734,6 +178890,18 @@
       "too_long": false
     },
     {
+      "offset": 32681685,
+      "original_text": "<0xFC><0x01><0x02>Huh?<0xFB>Pikachu seems to be holding\nsome clothes.",
+      "translation": "<0xFC><0x01><0x02>Hein ?<0xFB>Pikachu semble tenir\ndes vêtements.",
+      "length": 45,
+      "original_length": 49,
+      "padding_used": -4,
+      "encoding": "pokemon",
+      "category": "dialogue",
+      "notes": "",
+      "too_long": false
+    },
+    {
       "offset": 32681735,
       "original_text": "<0xFC><0x01><0x02><0xFD><0x02>'s outfit is now available\nin the Costume Box!",
       "translation": "{COLOR}ÁLa tenue de {STR_VAR_1} est\ndisponible dans la Boîte Costumes!",
@@ -186666,6 +186834,18 @@
       "too_long": true
     },
     {
+      "offset": 32757166,
+      "original_text": "<0xFC><0x01><0x04>Sir\"<0xFC><0x08><0x18> um\"<0xFC><0x08><0x18> excuse me, sir\"?",
+      "translation": "<0xFC><0x01><0x04>Monsieur\"<0xFC><0x08><0x18> euh\"<0xFC><0x08><0x18> excusez-moi\" ?",
+      "length": 38,
+      "original_length": 34,
+      "padding_used": 4,
+      "encoding": "pokemon",
+      "category": "dialogue",
+      "notes": "",
+      "too_long": true
+    },
+    {
       "offset": 32757201,
       "original_text": "We knew\"<0xFC><0x08><0x18> we knew she would\nnever approve.<0xFB>But even then, we still had to try.<0xFB>All we had to show was failure\nafter failure\"<0xFB>Tell me, what would you have done,\nVéga?",
       "translation": "Nous savions...{PAUSE} nous savions\nqu'elle n'approuverait jamais.<0xFB>Mais malgré ça, nous devions<0xFB>essayer. Nous n'avions\nque des échecs à montrer...<0xFB>Dis-moi, qu'aurais-tu\nfait, Véga ?",
@@ -190554,6 +190734,18 @@
       "too_long": false
     },
     {
+      "offset": 32797558,
+      "original_text": "Huh? Up there\"<0xFC><0x08><0x18> above Crystal Peak\"!",
+      "translation": "Hein ? Là-haut\"<0xFC><0x08><0x18> au-dessus du Pic Cristal\" !",
+      "length": 46,
+      "original_length": 38,
+      "padding_used": 8,
+      "encoding": "pokemon",
+      "category": "dialogue",
+      "notes": "",
+      "too_long": true
+    },
+    {
       "offset": 32797597,
       "original_text": "Grampa Arthur, we need to head for\nCrystal Peak.<0xFB>That's no ordinary storm brewing\nabove the mountain.<0xFB>They must be getting the Ultimate\nWeapon ready to destroy Borrius!",
       "translation": "Papy Arthur, il faut\naller à Crystal Peak.<0xFB>Ce n'est pas une tempête\nbanale au-dessus de la montagne.<0xFB>Ils doivent préparer\nl'Arme Ultime pour Borrius !",
@@ -192662,6 +192854,18 @@
       "padding_used": 1,
       "encoding": "pokemon",
       "category": "other",
+      "notes": "",
+      "too_long": false
+    },
+    {
+      "offset": 32822760,
+      "original_text": "I miss him.<0xFC><0x08><0x50>\nI really do\"",
+      "translation": "Il me manque.<0xFC><0x08><0x50>\nVraiment\"",
+      "length": 26,
+      "original_length": 27,
+      "padding_used": -1,
+      "encoding": "pokemon",
+      "category": "dialogue",
       "notes": "",
       "too_long": false
     },
@@ -199852,6 +200056,18 @@
       "category": "dialogue",
       "notes": "",
       "too_long": false
+    },
+    {
+      "offset": 32874752,
+      "original_text": "<0xFC><0x01><0x02><0xFD><0x01> handed over all Eggs\non hand.",
+      "translation": "<0xFC><0x01><0x02><0xFD><0x01> remet tous les Oeufs\nde l'équipe.",
+      "length": 39,
+      "original_length": 35,
+      "padding_used": 4,
+      "encoding": "pokemon",
+      "category": "description",
+      "notes": "",
+      "too_long": true
     },
     {
       "offset": 32874788,
@@ -217362,6 +217578,18 @@
       "too_long": true
     },
     {
+      "offset": 33002108,
+      "original_text": "<0xFC><0x01><0x02><0xFD><0x01> handed over\n<0xFD><0x03> <0xFD><0x02><0xFD><0x04>.",
+      "translation": "<0xFC><0x01><0x02><0xFD><0x01> remet\n<0xFD><0x03> <0xFD><0x02><0xFD><0x04>.",
+      "length": 20,
+      "original_length": 26,
+      "padding_used": -6,
+      "encoding": "pokemon",
+      "category": "description",
+      "notes": "",
+      "too_long": false
+    },
+    {
       "offset": 33002135,
       "original_text": "<0xFC><0x01><0x08>\"Welcome\"<0xFB>\"\n\"Kekeke\"<0xFB>We've had a reservation for you.\nWe've held it for a long time\"",
       "translation": "{COLOR}Ë...Bienvenue...<0xFB>...\n...Kekeke...<0xFB>Nous avons une réservation pour toi.\nNous l'avons gardée longtemps...",
@@ -234168,6 +234396,18 @@
       "length": 59,
       "original_length": 42,
       "padding_used": 17,
+      "encoding": "pokemon",
+      "category": "dialogue",
+      "notes": "",
+      "too_long": true
+    },
+    {
+      "offset": 33128972,
+      "original_text": "Am I putting <0xFC><0x01><0x06><0xFD><0x02><0xFC><0x01><0x08> in a\n<0xFC><0x01><0x06><0xFD><0x03><0xFC><0x01><0x08>!?",
+      "translation": "Je mets <0xFC><0x01><0x06><0xFD><0x02><0xFC><0x01><0x08> dans\n<0xFC><0x01><0x06><0xFD><0x03><0xFC><0x01><0x08>, vraiment !?",
+      "length": 43,
+      "original_length": 37,
+      "padding_used": 6,
       "encoding": "pokemon",
       "category": "dialogue",
       "notes": "",
