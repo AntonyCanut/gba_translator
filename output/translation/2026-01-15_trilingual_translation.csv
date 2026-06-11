@@ -6774,7 +6774,7 @@ immobilized by love!",,24,2,26,pokemon,dialogue,,
 blown away!","<0xFD><0x10> was
 blown away!",18,2,20,pokemon,dialogue,"<0xFD><0x10> est
 emporté !",
-0x003FB914,<0xFD><0x0F> flinched!,,12,2,14,pokemon,dialogue,<0xFD><0x0F> flinched!,
+0x003FB914,<0xFD><0x0F> flinched!,,12,2,14,pokemon,dialogue,<0xFD><0x0F> est apeuré !,
 0x003FB921,"<0xFD><0x10> regained
 health!",,19,2,21,pokemon,dialogue,"<0xFD><0x10> regagne
 de la santé !",
@@ -6845,12 +6845,12 @@ up high!",,16,4,20,pokemon,dialogue,"<0xFD><0x0F> a pris
 son envol !",
 0x003FBAB4," flew
 up high!",,14,4,18,pokemon,dialogue,,
-0x003FBAC3,<0xFD><0x0F> dug a hole!,,14,2,16,pokemon,dialogue,<0xFD><0x0F> dug a hole!,
+0x003FBAC3,<0xFD><0x0F> dug a hole!,,14,2,16,pokemon,dialogue,<0xFD><0x0F> creuse le sol !,
 0x003FBAD2,"<0xFD><0x0F> hid
 underwater!","<0xFD><0x0F> hid
 underwater!",18,2,20,pokemon,dialogue,"<0xFD><0x0F> se cache
 sous l'eau !",
-0x003FBAE5,<0xFD><0x0F> sprang up!,,13,3,16,pokemon,dialogue,<0xFD><0x0F> sprang up!,
+0x003FBAE5,<0xFD><0x0F> sprang up!,,13,3,16,pokemon,dialogue,<0xFD><0x0F> bondit !,
 0x003FBAE7, sprang up!,,11,3,14,pokemon,dialogue,,
 0x003FBAF3,"<0xFD><0x10> was squeezed
 by <0xFD><0x0F>'s Bind!","<0x52><0xFD><0x10> es exprimido
@@ -6872,8 +6872,8 @@ par <0xFD><0x14> !",
 <0xFD><0x0F> !",
 0x003FBB62,"<0xFD><0x0F> Clamped
 <0xFD><0x10>!","<0xFD><0x0F> Clamped
-<0xFD><0x10>!",14,3,17,pokemon,dialogue,"<0xFD><0x0F> Clamped
-<0xFD><0x10>!",
+<0xFD><0x10>!",14,3,17,pokemon,dialogue,"<0xFD><0x0F> referme son étau
+sur <0xFD><0x10> !",
 0x003FBB71,"<0xFD><0x0F> is hurt
 by <0xFD> !",,17,3,20,pokemon,dialogue,"<0xFD><0x0F> souffre
 de <0xFD><0x00> !",
@@ -7298,8 +7298,8 @@ la zone !",
 0x003FC5CC,Items can't be used now.<0xFC><0x08><0x40>,,27,2,29,pokemon,description,Objets inutilisables.{PAUSE},
 0x003FC5E8,"For <0xFD><0x13>,
 <0xFD>à <0xFD> ","For <0xFD><0x13>,
-<0xFD>à <0xFD> ",13,23,36,pokemon,description,"For {FD13},
-{FD16} {FD00}",
+<0xFD>à <0xFD> ",13,23,36,pokemon,description,"Pour <0xFD><0x13>,
+<0xFD>à <0xFD> ",
 0x003FC60C,"<0xFD><0x0F> lost its
 focus and couldn't move!","<0xFD><0x0F> lost its
 focus and couldn't move!",36,2,38,pokemon,dialogue,"<0xFD><0x0F> perd sa visée
@@ -7750,8 +7750,8 @@ Reviens !",
 0x003FD50E," , good!
 Come back!",,19,2,21,pokemon,dialogue,,
 0x003FD522,"<0xFD><0x1C> <0xFD><0x1D>
-withdrew <0xFD> !",,18,2,20,pokemon,dialogue,"{FD1C} {FD1D}
-withdrew {FD00}!",
+withdrew <0xFD> !",,18,2,20,pokemon,dialogue,"<0xFD><0x1C> <0xFD><0x1D>
+retire <0xFD>  !",
 0x003FD535,"<0xFD><0x20> withdrew
 <0xFD> !","<0xFD><0x20> withdrew
 <0xFD> !",15,2,17,pokemon,dialogue,"{B_LINK_OPPONENT1_NAME} retire
@@ -7760,6 +7760,7 @@ withdrew {FD00}!",
 <0xFD> !","<0xFD><0x22> withdrew
 <0xFD> !",15,3,18,pokemon,dialogue,"{B_LINK_SCR_TRAINER_NAME} retire
 {UNKNOWN_STR}!",
+0x003FD560,Foe,Foe,3,3,6,pokemon,other,Ennemi,
 0x003FD564,Ally,Ally,4,3,7,pokemon,other,Allié,
 0x003FD569,Foe,Foe,3,3,6,pokemon,other,Ennemi,
 0x003FD56D,Ally,Ally,4,3,7,pokemon,other,Allié,
@@ -7781,10 +7782,10 @@ withdrew {FD00}!",
 0x003FD5B0,Sp. Def,Def Esp,7,2,9,pokemon,location,Déf. Spé,
 0x003FD5B8,accuracy,,8,1,9,pokemon,other,précision,
 0x003FD5C1,evasiveness,Evasión,11,4,15,pokemon,other,esquive,
-0x003FD5FF,was too dry!,was too dry!,12,3,15,pokemon,dialogue,était trop sec !,
-0x003FD60C,was too sweet!,was too sweet!,14,3,17,pokemon,dialogue,était trop sucré !,
-0x003FD61B,was too bitter!,was too bitter!,15,3,18,pokemon,dialogue,était trop amer !,
-0x003FD62B,was too sour!,was too sour!,13,4,17,pokemon,dialogue,était trop acide !,
+0x003FD5FF,was too dry!,was too dry!,12,3,15,pokemon,dialogue,trop sèche !,
+0x003FD60C,was too sweet!,was too sweet!,14,3,17,pokemon,dialogue,trop sucrée !,
+0x003FD61B,was too bitter!,was too bitter!,15,3,18,pokemon,dialogue,trop amère !,
+0x003FD62B,was too sour!,was too sour!,13,4,17,pokemon,dialogue,trop acide !,
 0x003FD65C,"The old man used
 <0xFD><0x16>!",<0x52>Ha usado <0xFD><0x16>!,20,3,23,pokemon,dialogue,"Le vieux a utilisé
 <0xFD><0x16> !",
@@ -8019,8 +8020,8 @@ No",
 No",,6,1,7,pokemon,other,,
 0x003FE7A0,"<0xFC><0x05><0x05><0xFC><0x04><0x0D><0x0E><0x0F>Switch
 which?","<0xFC><0x05><0x05><0xFC><0x04><0x0D><0x0E><0x0F><0x51>A
-dónde?",21,2,23,pokemon,dialogue,"{FC05}{FC04}Switch
-which?",
+dónde?",21,2,23,pokemon,dialogue,"<0xFC><0x05><0x05><0xFC><0x04><0x0D><0x0E><0x0F>Envoyer
+qui ?",
 0x003FE7A8,"Switch
 which?",,13,2,15,pokemon,dialogue,,
 0x003FE7C7,<0xFC><0x06> Max<0xFC><0x06><0x02> HP,<0xFC><0x06> Max<0xFC><0x06><0x02> PS,12,3,15,pokemon,description,{FONT_SMALL}Max{FONT_NORMAL} PV,
@@ -8123,14 +8124,17 @@ n'est pas installé.",
 0x00415E57,Rough-terrain Pokémon,Campo,21,2,23,pokemon,location,Pokémon terrain rugueux,
 0x00415E6D,Urban Pokémon,Ciudad,13,2,15,pokemon,location,Pokémon urbain,
 0x00415E7B,Rare Pokémon,Raros,12,1,13,pokemon,location,Pokémon rares,
+0x00415E88,<0xFC><0x01><0x0F><0xFC><0x03><0x0E>Search,<0xFC><0x01><0x0F><0xFC><0x03><0x0E>Buscar,12,1,13,pokemon,description,<0xFC><0x01><0x0F><0xFC><0x03><0x0E>Cherche,
 0x00415E8E,Search,,6,1,7,pokemon,other,,
 0x00415E95,Numerical Mode,NUMERICAL MODE,14,4,18,pokemon,location,Mode Numérique,
 0x00415EA4,A To Z Mode,Alfabético,11,1,12,pokemon,other,Mode A à Z,
+0x00415EB0,<0xFC><0x01><0x0F><0xFC><0x03><0x0E>Other,<0xFC><0x01><0x0F><0xFC><0x03><0x0E>Salir,11,2,13,pokemon,description,<0xFC><0x01><0x0F><0xFC><0x03><0x0E>Autre,
 0x00415EB6,Other,,5,2,7,pokemon,other,,
 0x00415EC7,Close Pokédex,Cerrar,13,2,15,pokemon,location,Fermer le Pokédex,
 0x00415ED5,Type Mode,Por Tipos,9,2,11,pokemon,location,Mode Type,
 0x00415EDF,Lightest Mode,El más Pesado,13,2,15,pokemon,location,Mode plus léger,
 0x00415EED,Smallest Mode,El más Grande,13,1,14,pokemon,location,Mode plus petit,
+0x00415EFB,<0xFC><0x01><0x0F><0xFC><0x03><0x0E>Pokémon List,<0xFC><0x01><0x0F><0xFC><0x03><0x0E>Pokédex:,18,1,19,pokemon,description,<0xFC><0x01><0x0F><0xFC><0x03><0x0E>Liste Pokémon,
 0x00415F05,mon List,,8,1,9,pokemon,other,,
 0x00415F1D, Kanto,,6,1,7,pokemon,other,,
 0x00415F24,Numerical Mode: National,Nacional,24,2,26,pokemon,location,Mode Numérique : National,
@@ -8234,6 +8238,9 @@ ici.",
 <0xFD><0x02><0x5C>s<0x5D>?","<0x51>Cuántos <0xFD><0x02>
 dejas?",23,1,24,pokemon,dialogue,"Combien de <0xFD><0x02>(s)
 déposer ?",
+0x004163A7,"Deposited <0xFD><0x03>
+<0xFD><0x02>(s).",Dejaste <0xFD><0x03> <0xFD><0x02>.,19,2,21,pokemon,location,"Dépôt de <0xFD><0x03>
+×<0xFD><0x02>.",
 0x004163BB,"There's no room to
 store items.",<0x52>No tienes espacio en tu PC!,31,3,34,pokemon,description,"Plus de place pour
 stocker des objets.",
@@ -8622,6 +8629,9 @@ room in the BAG.",No hay más espacio en el Cubo.,33,2,35,pokemon,description,"P
 <0xFD><0x02><0x5C>s<0x5D>?","<0x51>Cuántos <0xFD><0x02>
 sacas?",24,2,26,pokemon,dialogue,"Retirer combien de
 <0xFD><0x02> ?",
+0x004177C5,"Withdrew <0xFD><0x03>
+<0xFD><0x02>(s).",Sacaste <0xFD><0x03> <0xFD><0x02>.,18,2,20,pokemon,location,"Retrait de <0xFD><0x03>
+×<0xFD><0x02>.",
 0x004177D8,Read,Read,4,3,7,pokemon,other,Lire,
 0x004177E9,Give,Give,4,2,6,pokemon,other,Donner,
 0x004177EE,There's no Mail here.<0xFC><0x09>,No hay ninguna carta.<0xFC><0x09>,23,2,25,pokemon,description,Aucun Courrier ici. {PAUSE_UNTIL_PRESS},
@@ -19576,6 +19586,9 @@ can.",Aún necesito: <0xFC><0x01><0x06><0xFD><0x07><0xFC><0x01><0x04>.<0xFB><0x5
 s'il te plaît.",
 0x0078B802,"Please bring them as soon as you
 can.",,37,3,40,pokemon,dialogue,,
+0x0078B828,"I still need:
+<0xFC><0x01><0x06><0xFD><0x02>",Aún necesito: <0xFC><0x01><0x06><0xFD><0x02>,19,4,23,pokemon,dialogue,"Il me faut :
+<0xFC><0x01><0x06><0xFD><0x02>",
 0x0078B83C,"If I had a bike, it would be much
 easier to climb.<0xFB>But where can you even get a bike
 around here?","If I had a bike, it would be much
@@ -35326,7 +35339,7 @@ constituer son butin.",,67,89,156,pokemon,description,Pestilence,
 0x00A43A23,Reeds,Reeds,5,2,7,pokemon,other,Reeds,
 0x00A43A29,Deep Water,Deep Water,10,3,13,pokemon,location,Deep Water,
 0x00A43A34,Chain: ,Caden: ,7,2,9,pokemon,location,Chain:,
-0x00A43A3C,Capture first!,Sin datos,14,2,16,pokemon,dialogue,Capture first!,
+0x00A43A3C,Capture first!,Sin datos,14,2,16,pokemon,dialogue,Capture d'abord !,
 0x00A43A4B,Walk,,4,2,6,pokemon,other,Walk,
 0x00A43A50,Surf,,4,2,6,pokemon,other,Surf,
 0x00A43A55,Lava Surf,Lava Surf,9,3,12,pokemon,location,Lava Surf,
@@ -35523,10 +35536,10 @@ Fée renforcées et ne peuvent subir<0xFA>aucune altération de statut !",
 Psychic-moves and can't be hit<0xFA>by priority moves!",Los Pokémon en tierra tendrán<0xFA>ataques Psíquicos fuertes y no<0xFA>serán golpeados por ataques<0xFA>prioritarios.,108,3,111,pokemon,dialogue,"avec le terrain étrange !<0xFB>Les Pokémon au sol ont des attaques
 Psy renforcées et sont immunisés<0xFA>aux attaques prioritaires !",
 0x00A444BE,by priority moves!,,18,3,21,pokemon,dialogue,,
-0x00A444D1,in the rain!,En lluvia.,12,3,15,pokemon,dialogue,sous la pluie !,
+0x00A444D1,in the rain!,En lluvia.,12,3,15,pokemon,dialogue,s'il pleut !,
 0x00A444DE,in the sun!,En sol.,11,3,14,pokemon,dialogue,au soleil !,
-0x00A444EA,in a sandstorm!,En tormenta.,15,3,18,pokemon,dialogue,in a sandstorm!,
-0x00A444FA,in a hailstorm!,En granizo.,15,2,17,pokemon,dialogue,in a hailstorm!,
+0x00A444EA,in a sandstorm!,En tormenta.,15,3,18,pokemon,dialogue,dans une tempête de sable !,
+0x00A444FA,in a hailstorm!,En granizo.,15,2,17,pokemon,dialogue,sous la grêle !,
 0x00A4450A,"with strong winds blowing!<0xFB>Flying-type Pokémon take less
 damage from super effective moves!",Los Pokémon de tipo Volador reciben<0xFA>menos daño con movimientos súper<0xFA>efectivos.,91,3,94,pokemon,dialogue,"with strong winds blowing!<0xFB>Flying-type Pokémon take less
 damage from super effective moves!",
@@ -56881,7 +56894,7 @@ si ce n'était pas évident !<0xFB>Tu peux l'utiliser pour briser les
 rochers fissurés sur ton chemin.<0xFB>Souviens-toi : pour utiliser
 Éclate-Roc, il te faut d'abord le<0xFA>Badge de l'Arène de {COLOR}ÉVille Blizzard{COLOR}Ë.",
 0x01EEA6ED, Gym Badge.,,11,1,12,pokemon,other,,
-0x01EEA6F9,"Gahhhhhhhh""<0xFB><0xFC><0x01><0x02>His brain appears to be fried.",<0x5C>Parece estar bien concentrado<0x5D>,45,2,47,pokemon,description,,
+0x01EEA6F9,"Gahhhhhhhh""<0xFB><0xFC><0x01><0x02>His brain appears to be fried.",<0x5C>Parece estar bien concentrado<0x5D>,45,2,47,pokemon,description,"Gahhhhhhhh""<0xFB><0xFC><0x01><0x02>Son cerveau a l'air grillé.",
 0x01EEA708,His brain appears to be fried.,,30,2,32,pokemon,other,,
 0x01EEA727,"Fried foods are my favourite!<0xFB>French fries, Basculin sticks""
 they're all great!","<0x52>Los alimentos fritos son mis
@@ -57980,7 +57993,8 @@ a move?",,42,3,45,pokemon,dialogue,,
 0x01EEF42C,mon needs tutoring?,,19,2,21,pokemon,dialogue,,
 0x01EEF440,Which move should I teach?,,26,2,28,pokemon,dialogue,Quel move dois-je enseigner ?,
 0x01EEF45B,"<0xFC><0x01><0x02><0xFD><0x01> handed over a
-Heart Scale in exchange.",<0xFC><0x01><0x02>Has entregado Escama Corazón.,44,3,47,pokemon,description,,
+Heart Scale in exchange.",<0xFC><0x01><0x02>Has entregado Escama Corazón.,44,3,47,pokemon,description,"<0xFC><0x01><0x02><0xFD><0x01> remet une Ecaille Coeur
+en échange.",
 0x01EEF460," handed over a
 Heart Scale in exchange.",,39,3,42,pokemon,description,,
 0x01EEF488,"If your Pokémon need to learn a
@@ -63839,6 +63853,10 @@ gimmeeee""?","How many mushrooooms are you gonna
 gimmeeee""?",45,1,46,pokemon,dialogue,"Combien de champiiis tu vas
 me donnernnn... ?",
 0x01F02BC0,"Mmmm""<0xFB>Mushrooooms""","Mmmm""<0xFB>Mushrooooms""",18,2,20,pokemon,other,Mmmm...<0xFB>Champiiis...,
+0x01F02BD3,"<0xFC><0x01><0x02><0xFD><0x01> handed over <0xFD><0x03>
+<0xFD><0x02>.","<0xFC><0x01><0x02><0xFD><0x01> hsnded over <0xFD><0x03>
+<0xFD><0x02>.",24,2,26,pokemon,description,"<0xFC><0x01><0x02><0xFD><0x01> remet <0xFD><0x03>
+×<0xFD><0x02>.",
 0x01F02BEC,"<0xFC><0x01><0x02><0xFD><0x01> handed over a total of
 <0xFD><0x03> <0xFD><0x02>.","<0xFC><0x01><0x02><0xFD><0x01> handed over a total of
 <0xFD><0x03> <0xFD><0x02>.",35,2,37,pokemon,description,"<0xFC><0x01><0x02><0xFD><0x01> a remis un total de
@@ -64587,6 +64605,7 @@ que je cherche.<0xFB>Je cherche un Pokémon qui n'a pas
 <0xFC><0x01><0x06>Pikachu<0xFC><0x01><0x08> mientras estaba parado en<0xFA>la orilla del mar!",190,1,191,pokemon,dialogue,"J'ai utilisé {COLOR}ÉPierre Foudre{COLOR}Ë sur mon
 {COLOR}ÉPikachu{COLOR}Ë en étant {COLOR}Édebout{COLOR}Ë sur le<0xFA>{COLOR}Érivage{COLOR}Ë et avec {COLOR}Él'eau qui<0xFA>éclaboussait les pieds{COLOR}Ë, maintenant<0xFA>il a l'air de surfer sur sa queue !",
 0x01F05E69,it looks like its surfing on its tail!,,38,1,39,pokemon,dialogue,,
+0x01F05E90,<0xFC><0x01><0x06><0xFD><0x02><0xFC><0x01><0x04>!<0xFC><0x01><0x04><0xFB>I wanna see a <0xFC><0x01><0x06><0xFD><0x02><0xFC><0x01><0x04>!,"<0xFC><0x01><0x06><0xFD><0x02><0xFC><0x01><0x04>""<0xFC><0x01><0x04><0xFB><0x52>Quiero ver a <0xFC><0x01><0x06><0xFD><0x02><0xFC><0x01><0x04>!",36,2,38,pokemon,dialogue,<0xFC><0x01><0x06><0xFD><0x02><0xFC><0x01><0x04>!<0xFC><0x01><0x04><0xFB>Je veux voir un <0xFC><0x01><0x06><0xFD><0x02><0xFC><0x01><0x04> !,
 0x01F05EB5,"<0xFD><0x02>!
 It's so cuddly and pink!<0xFB>You should use the <0xFC><0x01><0x06>Oval Stone<0xFC><0x01><0x04> to
 evolve it!","<0xFD><0x02>!
@@ -65714,7 +65733,8 @@ Rugido!",47,1,48,pokemon,dialogue,"<0xFC><0x01><0x02>Galeking te repousse avec s
 puissant Hurlement !",
 0x01F0A841,"Aggron blew you away with its
 powerful Roar!",,44,1,45,pokemon,dialogue,,
-0x01F0A86E,<0xFC><0x01><0x02>Aggron mysteriously disappeared.,,35,3,38,pokemon,dialogue,,
+0x01F0A86E,<0xFC><0x01><0x02>Aggron mysteriously disappeared.,,35,3,38,pokemon,dialogue,"<0xFC><0x01><0x02>Galeking a mystérieusement
+disparu.",
 0x01F0A871,Aggron mysteriously disappeared.,,32,3,35,pokemon,dialogue,,
 0x01F0A892,"I am warning you now, we are not
 called the <0xB1>Devil Duo<0xB2> for nothing.<0xFB>This battle will not go as you
@@ -67950,6 +67970,9 @@ sur les bras, et je<0xFA>m'en fiche !<0xFB>Je te les donnerai en échange
 de plus de Pierres Dures.",
 0x01F146C5,"em to you in exchange
 for some more Hard Stones.",,48,2,50,pokemon,dialogue,,
+0x01F146F6,"<0xFC><0x01><0x02><0xFD><0x01> handed over
+<0xFD><0x03> <0xFD><0x02>s.",<0xFC><0x01><0x02>Has entregado <0xFD><0x03> <0xFD><0x02>.,25,2,27,pokemon,description,"<0xFC><0x01><0x02><0xFD><0x01> remet
+<0xFD><0x03> ×<0xFD><0x02>.",
 0x01F14710,"<0xFC><0x01><0x02><0xFD><0x01> handed over the
 <0xFD><0x02>.",<0xFC><0x01><0x02>Has entregado <0xFD><0x02>.,25,2,27,pokemon,description,"<0xFC><0x01><0x02><0xFD><0x01> remet
 l'objet <0xFD><0x02>.",
@@ -73111,7 +73134,8 @@ Quiere un <0xFC><0x01><0x06><0xFD><0x02><0xFC><0x01><0x02>.",64,1,65,pokemon,des
 Pokémon.<0xFB>Il veut un <0xFC><0x01><0x06><0xFD><0x02><0xFC><0x01><0x02>.",
 0x01F2AED5,"<0xFC><0x01><0x02>Huh?<0xFB>Pikachu seems to be holding
 some clothes.","<0xFC><0x01><0x02><0x51>Eh?<0xFB>Pikachu parece tener ropa en la
-mano.",49,2,51,pokemon,dialogue,,
+mano.",49,2,51,pokemon,dialogue,"<0xFC><0x01><0x02>Hein ?<0xFB>Pikachu semble tenir
+des vêtements.",
 0x01F2AEDD,"Pikachu seems to be holding
 some clothes.",,41,2,43,pokemon,description,,
 0x01F2AF07,"<0xFC><0x01><0x02><0xFD><0x02>'s outfit is now available
@@ -77412,6 +77436,7 @@ force obscure connue pour sa<0xFB>nature destructrice, sans chercher
 nous devrions nous estimer chanceux<0xFA>que personne d'autre n'ait<0xFA>découvert que nous créions<0xFA>des armes vivantes. Tu devais<0xFA>bien avoir une idée des conséquences<0xFB>potentielles si Fey venait
 à l'apprendre, non ?<0xFA>Surtout maintenant qu'elle<0xFB>touche presque à
 la perfection...",
+0x01F3D5AE,"<0xFC><0x01><0x04>Sir""<0xFC><0x08><0x18> um""<0xFC><0x08><0x18> excuse me, sir""?","<0xFC><0x01><0x04>Señor""<0xFC><0x08><0x18> um"" <0x51>disculpe, señor?",34,2,36,pokemon,dialogue,"<0xFC><0x01><0x04>Monsieur""<0xFC><0x08><0x18> euh""<0xFC><0x08><0x18> excusez-moi"" ?",
 0x01F3D5D1,"We knew""<0xFC><0x08><0x18> we knew she would
 never approve.<0xFB>But even then, we still had to try.<0xFB>All we had to show was failure
 after failure""<0xFB>Tell me, what would you have done,
@@ -79639,7 +79664,7 @@ can get on the boat, too.",,61,2,63,pokemon,dialogue,,
 0x01F47351,"We've made it""<0xFC><0x08><0x18> it's East Borrius!","Bien"" <0x52>Estamos en Borrius Oriental!",36,3,39,pokemon,dialogue,"On y est""<0xFC><0x08><0x18> c'est Borrius Est !",
 0x01F47366,s East Borrius!,,15,3,18,pokemon,dialogue,,
 0x01F47376,"Huh? Up there""<0xFC><0x08><0x18> above Crystal Peak""!","<0x51>Eh? <0x52>Allá arriba"" sobre Pico
-Cristal!",38,2,40,pokemon,dialogue,,
+Cristal!",38,2,40,pokemon,dialogue,"Hein ? Là-haut""<0xFC><0x08><0x18> au-dessus du Pic Cristal"" !",
 0x01F4739D,"Grampa Arthur, we need to head for
 Crystal Peak.<0xFB>That's no ordinary storm brewing
 above the mountain.<0xFB>They must be getting the Ultimate
@@ -80990,7 +81015,8 @@ ti""",58,3,61,pokemon,dialogue,"Ton père serait
 si fier de la personne que tu es...",
 0x01F4D5E1,"Sniff""","Sniff""",6,3,9,pokemon,other,Snif...,
 0x01F4D5E8,"I miss him.<0xFC><0x08><0x50>
-I really do""","Lo extraño"" lo extraño""",27,2,29,pokemon,dialogue,,
+I really do""","Lo extraño"" lo extraño""",27,2,29,pokemon,dialogue,"Il me manque.<0xFC><0x08><0x50>
+Vraiment""",
 0x01F4D604,"But after all you've accomplished,
 I'm happy.","Pero a pesar de todo, estoy muy
 feliz.",45,2,47,pokemon,dialogue,"Mais après tout ce que tu as
@@ -84033,7 +84059,8 @@ de tu equipo!",49,2,51,pokemon,dialogue,"Super !<0xFB>Donne-moi tous les OEufs d
 0x01F5A0D5,"Please pass me all the Eggs in
 your party.",,42,2,44,pokemon,dialogue,,
 0x01F5A100,"<0xFC><0x01><0x02><0xFD><0x01> handed over all Eggs
-on hand.",<0xFC><0x01><0x02>Has entregado todos los Huevos.,35,2,37,pokemon,description,,
+on hand.",<0xFC><0x01><0x02>Has entregado todos los Huevos.,35,2,37,pokemon,description,"<0xFC><0x01><0x02><0xFD><0x01> remet tous les Oeufs
+de l'équipe.",
 0x01F5A105," handed over all Eggs
 on hand.",,30,2,32,pokemon,other,,
 0x01F5A124,"All done!
@@ -91532,6 +91559,9 @@ You don't have enough <0xFC><0x01><0x06><0xFD><0x02>s<0xFC><0x01><0x08>.<0xFB>I 
 for nothing""",81,2,83,pokemon,dialogue,"Pschitt...
 Tu n'as pas assez de {COLOR}É{STR_VAR_1}s{COLOR}Ë.<0xFB>Je ne peux pas enflammer ces mains
 pour rien...",
+0x01F7927C,"<0xFC><0x01><0x02><0xFD><0x01> handed over
+<0xFD><0x03> <0xFD><0x02><0xFD><0x04>.",Has entregado <0xFD><0x03> <0xFD><0x02><0xFD><0x04>.,26,1,27,pokemon,description,"<0xFC><0x01><0x02><0xFD><0x01> remet
+<0xFD><0x03> <0xFD><0x02><0xFD><0x04>.",
 0x01F79297,"<0xFC><0x01><0x08>""Welcome""<0xFB>""
 ""Kekeke""<0xFB>We've had a reservation for you.
 We've held it for a long time""","<0xFC><0x01><0x08>""Welcome""<0xFB>""
@@ -98495,6 +98525,10 @@ Choisis un Pokémon !",
 <0xFC><0x01><0x06><0xFD><0x02><0xFC><0x01><0x08> in!?",<0x51>Qué Ball debo poner en <0xFC><0x01><0x06><0xFD><0x02><0xFC><0x01><0x08>?,42,3,45,pokemon,dialogue,"Dans quelle Poké Ball mettre
 {COLOR}É{STR_VAR_1}{COLOR}Ë !?",
 0x01F98206, in!?,,5,3,8,pokemon,dialogue,,
+0x01F9820C,"Am I putting <0xFC><0x01><0x06><0xFD><0x02><0xFC><0x01><0x08> in a
+<0xFC><0x01><0x06><0xFD><0x03><0xFC><0x01><0x08>!?","<0x51>Coloco a <0xFC><0x01><0x06><0xFD><0x02><0xFC><0x01><0x08> en una
+<0xFC><0x01><0x06><0xFD><0x03><0xFC><0x01><0x08>?",37,2,39,pokemon,dialogue,"Je mets <0xFC><0x01><0x06><0xFD><0x02><0xFC><0x01><0x08> dans
+<0xFC><0x01><0x06><0xFD><0x03><0xFC><0x01><0x08>, vraiment !?",
 0x01F98232,"Fwip fwoop!
 Your <0xFC><0x01><0x06><0xFD><0x02><0xFC><0x01><0x08>'s the scoop!<0xFB>It's got a fancier Ball now!","<0x52>Listo! <0x52><0xFC><0x01><0x06><0xFD><0x02><0xFC><0x01><0x08> ha sido
 colocado
