@@ -1,9 +1,9 @@
 {
-  "conversion_date": "2026-06-11T01:37:04.374135",
+  "conversion_date": "2026-06-11T02:44:49.501008",
   "source_csv": "2026-01-15_trilingual_translation.csv",
-  "total_translations": 20675,
+  "total_translations": 20681,
   "total_errors": 0,
-  "total_warnings": 16871,
+  "total_warnings": 16875,
   "translations": [
     {
       "offset": 165760,
@@ -42006,6 +42006,18 @@
       "too_long": true
     },
     {
+      "offset": 4292556,
+      "original_text": "son",
+      "translation": "fils",
+      "length": 4,
+      "original_length": 3,
+      "padding_used": 1,
+      "encoding": "pokemon",
+      "category": "other",
+      "notes": "",
+      "too_long": false
+    },
+    {
       "offset": 4292560,
       "original_text": "daughter",
       "translation": "fille",
@@ -63380,10 +63392,10 @@
     {
       "offset": 7860707,
       "original_text": "You are his <0xFD><0x02>!<0xFB>I knew my eyesight was not\ndeceiving me!<0xFB>Your father was, to put it simply,\nan amazing man.<0xFB>I'm sure if you introduced yourself\nto people as his <0xFD><0x02>, you<0xFA>would instantly be regarded with<0xFA>much affection.<0xFB>There aren't many people out there\nwho have not heard of his exploits.<0xFB>It's a shame he disappeared.<0xFB>If only someone knew what happened\nto him, I could finally have a<0xFA>sense of closure.",
-      "translation": "Tu es son <0xFD><0x02> !<0xFB>Je savais bien que mes yeux ne me\ntrompaient pas !<0xFB>Ton père était, pour faire simple,\nun homme extraordinaire.<0xFB>Je suis sûr que si tu te présentais\ncomme son <0xFD><0x02>, les gens te<0xFA>témoigneraient aussitôt beaucoup<0xFA>d'affection.<0xFB>Rares sont ceux qui n'ont jamais\nentendu parler de ses exploits.<0xFB>Quel dommage qu'il ait disparu.<0xFB>Si seulement quelqu'un savait ce\nqu'il est advenu de lui, je<0xFA>pourrais enfin tourner la page.",
-      "length": 423,
+      "translation": "Tu es son enfant !<0xFB>Je savais bien que mes yeux ne me\ntrompaient pas !<0xFB>Ton père était, pour faire simple,\nun homme extraordinaire.<0xFB>Je suis sûr que si tu te présentais\ncomme son enfant, les gens te<0xFA>témoigneraient aussitôt beaucoup<0xFA>d'affection.<0xFB>Rares sont ceux qui n'ont jamais\nentendu parler de ses exploits.<0xFB>Quel dommage qu'il ait disparu.<0xFB>Si seulement quelqu'un savait ce\nqu'il est advenu de lui, je<0xFA>pourrais enfin tourner la page.",
+      "length": 431,
       "original_length": 401,
-      "padding_used": 22,
+      "padding_used": 30,
       "encoding": "pokemon",
       "category": "dialogue",
       "notes": "",
@@ -63446,6 +63458,18 @@
       "padding_used": -11,
       "encoding": "pokemon",
       "category": "dialogue",
+      "notes": "",
+      "too_long": false
+    },
+    {
+      "offset": 7861627,
+      "original_text": "son",
+      "translation": "fils",
+      "length": 4,
+      "original_length": 3,
+      "padding_used": 1,
+      "encoding": "pokemon",
+      "category": "other",
       "notes": "",
       "too_long": false
     },
@@ -65228,10 +65252,10 @@
     {
       "offset": 7912602,
       "original_text": "I'm sure my <0xFD><0x03> will love\nthis pie.<0xFB>Please, take these in exchange for\nyour hard work, young trainer.",
-      "translation": "Nul doute que <0xFD><0x03> va adorer\ncette tarte.<0xFB>Tiens, prends ceci en échange de\nton dur labeur, jeune Dresseur.",
-      "length": 104,
+      "translation": "Nul doute que mon <0xFD><0x03> va\nadorer cette tarte.<0xFB>Tiens, prends ceci en échange de\nton dur labeur, jeune Dresseur.",
+      "length": 108,
       "original_length": 100,
-      "padding_used": 4,
+      "padding_used": 8,
       "encoding": "pokemon",
       "category": "dialogue",
       "notes": "",
@@ -65640,6 +65664,18 @@
       "length": 10,
       "original_length": 8,
       "padding_used": 2,
+      "encoding": "pokemon",
+      "category": "other",
+      "notes": "",
+      "too_long": false
+    },
+    {
+      "offset": 7920270,
+      "original_text": "son",
+      "translation": "fils",
+      "length": 4,
+      "original_length": 3,
+      "padding_used": 1,
       "encoding": "pokemon",
       "category": "other",
       "notes": "",
@@ -77156,10 +77192,10 @@
     {
       "offset": 8245577,
       "original_text": "Zeph: <0xFC><0x01><0x08>A friend of mine, a Pokémon\nBiologist, lives in Frozen Heights<0xFA>as well.<0xFB>He's known around here as the\n<0xB1>Guardian of Borrius<0xB2>.<0xFB>He's even managed to capture\nArceus!<0xFB>I think his wife just gave birth to\na <0xFD><0x03>, actually.<0xFB>However, I'm having difficultly\nremembering the <0xFD><0x02>'s name\"<0xFB>Oh, I forgot to ask earlier, but\nwhat are your children's names?",
-      "translation": "Zeph : {COLOR}ËUn ami à moi, biologiste\nPokémon, vit aux Hauteurs<0xFA>Gelées aussi.<0xFB>Ici on l'appelle le \" Gardien de\nBorrius \".<0xFB>Il a même réussi à capturer\nArceus !<0xFB>Je crois que sa femme vient d'avoir\nun {STR_VAR_2}.<0xFB>J'ai du mal à me souvenir du nom du\n{STR_VAR_1}...<0xFB>Au fait, comment s'appellent vos\nenfants ?",
-      "length": 306,
+      "translation": "Zeph : <0xFC><0x01><0x08>Un ami à moi, biologiste\nPokémon, vit aux Hauteurs<0xFA>Gelées aussi.<0xFB>Ici on l'appelle le \" Gardien de\nBorrius \".<0xFB>Il a même réussi à capturer\nArceus !<0xFB>Je crois que sa femme vient tout\njuste d'avoir un bébé.<0xFB>J'ai du mal à me souvenir de son\nprénom...<0xFB>Au fait, comment s'appellent vos\nenfants ?",
+      "length": 297,
       "original_length": 346,
-      "padding_used": -40,
+      "padding_used": -49,
       "encoding": "pokemon",
       "category": "dialogue",
       "notes": "",
@@ -77516,10 +77552,10 @@
     {
       "offset": 8249232,
       "original_text": "Zeph: <0xFC><0x01><0x08>You're Aros' <0xFD><0x03>\"<0xFB>If I had known, I never would have\ntried to have you killed!<0xFB>I'm sorry, <0xFD><0x01>.<0xFB>I truly am.",
-      "translation": "Zeph : {COLOR}ËTu es le {STR_VAR_2} d'Aros...<0xFB>Si je l'avais su, je n'aurais jamais\nessayé de te tuer !<0xFB>Je suis désolé, {PLAYER}.<0xFB>Vraiment.",
-      "length": 138,
+      "translation": "Zeph : <0xFC><0x01><0x08>Alors c'est toi,\n<0xFD><0x03> d'Aros...<0xFB>Si je l'avais su, je n'aurais jamais\nessayé de te tuer !<0xFB>Je suis désolé, <0xFD><0x01>.<0xFB>Vraiment.",
+      "length": 126,
       "original_length": 113,
-      "padding_used": 25,
+      "padding_used": 13,
       "encoding": "pokemon",
       "category": "dialogue",
       "notes": "",
@@ -77572,6 +77608,18 @@
       "category": "description",
       "notes": "",
       "too_long": true
+    },
+    {
+      "offset": 8249825,
+      "original_text": "son",
+      "translation": "fils",
+      "length": 4,
+      "original_length": 3,
+      "padding_used": 1,
+      "encoding": "pokemon",
+      "category": "other",
+      "notes": "",
+      "too_long": false
     },
     {
       "offset": 8249829,
@@ -147606,6 +147654,18 @@
       "too_long": false
     },
     {
+      "offset": 32419749,
+      "original_text": "son",
+      "translation": "fils",
+      "length": 4,
+      "original_length": 3,
+      "padding_used": 1,
+      "encoding": "pokemon",
+      "category": "other",
+      "notes": "",
+      "too_long": false
+    },
+    {
       "offset": 32419753,
       "original_text": "Have you ever heard of <0xFC><0x01><0x06>Ayla<0xFC><0x01><0x04>?<0xFB>She's the one responsible for\nbringing Bill's PC to Borrius!<0xFB>Thanks to her, we can store our\nPokémon somewhere!",
       "translation": "As-tu déjà entendu parler de {COLOR}ÉAyla{COLOR}Ç ?<0xFB>C'est elle qui a apporté\nle PC de Bill à Borrius !<0xFB>Grâce à elle, on peut stocker nos\nPokémon quelque part !",
@@ -167084,10 +167144,10 @@
     {
       "offset": 32577870,
       "original_text": "That's why, my friend, you must\ngo into hiding.<0xFB>I'll send your Poké Ball adrift,\namidst the waves\"<0xFB>You'll surely be safer lost at sea,\nthan if you were to remain with me.<0xFB>If I'm wrong, and nothing happens,\nI'll call you back.<0xFB>But if this is to be our final time\ntogether\"<0xFB>Protect my <0xFD><0x04> if <0xFD><0x03> is\never in danger.<0xFB>And in turn, should the wrong sort\ntry to force your true power free\"<0xFB>Then trust <0xFD><0x02> to protect you.<0xFB>Farewell, my good friend.",
-      "translation": "C'est pourquoi, mon ami, tu dois\nte cacher.<0xFB>J'enverrai ta Poké Ball à la dérive,\nau milieu des vagues...<0xFB>Tu seras plus en sécurité en mer,\nque si tu restais avec moi.<0xFB>Si j'ai tort et que rien n'arrive,\nje te rappellerai.<0xFB>Mais si c'est notre dernière fois\nensemble...<0xFB>Protège mon <0xFD><0x04> si <0xFD><0x03> est\njamais en danger.<0xFB>Et si le mauvais genre tente\nde libérer ton vrai pouvoir...<0xFB>Alors fais confiance à <0xFD><0x02>.<0xFB>Adieu, mon vieil ami.",
-      "length": 418,
+      "translation": "C'est pourquoi, mon ami, tu dois\nte cacher.<0xFB>J'enverrai ta Poké Ball à la dérive,\nau milieu des vagues...<0xFB>Tu seras plus en sécurité en mer,\nque si tu restais avec moi.<0xFB>Si j'ai tort et que rien n'arrive,\nje te rappellerai.<0xFB>Mais si c'est notre dernière fois\nensemble...<0xFB>Protège mon enfant si un jour\n<0xFD><0x03> est en danger.<0xFB>Et si le mauvais genre tente\nde libérer ton vrai pouvoir...<0xFB>Alors fais confiance à <0xFD><0x02>.<0xFB>Adieu, mon vieil ami.",
+      "length": 423,
       "original_length": 436,
-      "padding_used": -18,
+      "padding_used": -13,
       "encoding": "pokemon",
       "category": "dialogue",
       "notes": "",
@@ -185696,14 +185756,14 @@
     {
       "offset": 32749146,
       "original_text": "If that truly is the case, whether\n<0xFD><0x03> goes now or when the weapon is<0xFA>fired, makes no difference to me.",
-      "translation": "Si c'est vraiment le cas, que <0xFD><0x03>\nparte ou quand l'arme sera tirée<0xFA>utilisée ne change rien pour moi.",
-      "length": 99,
+      "translation": "Si c'est vraiment le cas, que ce\nsoit maintenant ou quand l'arme<0xFA>sera utilisée, ça ne change rien<0xFA>pour moi.",
+      "length": 107,
       "original_length": 102,
-      "padding_used": -3,
+      "padding_used": 5,
       "encoding": "pokemon",
       "category": "description",
       "notes": "",
-      "too_long": false
+      "too_long": true
     },
     {
       "offset": 32749249,
@@ -185768,10 +185828,10 @@
     {
       "offset": 32749679,
       "original_text": "I can't believe my eyes\"<0xFB>You\"<0xFC><0x08><0x18> you're\"<0xFC><0x08><0x18> you're my <0xFD><0x04>\"<0xFB><0xFD><0x01>\"<0xFB>No matter how old you get, I'll\nalways recognize you!",
-      "translation": "Je n'en crois pas mes yeux...<0xFB>Tu...{PAUSE} tu es...{PAUSE} tu es mon {STR_VAR_3}...<0xFB>{PLAYER}... Peu importe<0xFB>ton âge, je te reconnaîtrai\ntoujours !",
-      "length": 146,
+      "translation": "Je n'en crois pas mes yeux...<0xFB>Tu...<0xFC><0x08><0x18> tu es...<0xFC><0x08><0x18> tu es mon enfant...<0xFB><0xFD><0x01>...<0xFB>Peu importe ton âge, je te\nreconnaîtrai toujours !",
+      "length": 127,
       "original_length": 115,
-      "padding_used": 31,
+      "padding_used": 12,
       "encoding": "pokemon",
       "category": "dialogue",
       "notes": "",
@@ -185792,10 +185852,10 @@
     {
       "offset": 32749825,
       "original_text": "Marlon, how do you know my\n<0xFD><0x04>?",
-      "translation": "Marlon, comment connais-tu\nmon <0xFD><0x04> ?",
-      "length": 35,
+      "translation": "Marlon, comment connais-tu\nmon enfant ?",
+      "length": 39,
       "original_length": 30,
-      "padding_used": 5,
+      "padding_used": 9,
       "encoding": "pokemon",
       "category": "dialogue",
       "notes": "",
@@ -185804,10 +185864,10 @@
     {
       "offset": 32749856,
       "original_text": "We've run into each other a few\ntimes now.<0xFB>Your <0xFD><0x04> seems to have the\nsame sense of justice as you\"<0xFB>Always running in blindly when\n<0xFD><0x03>'s not wanted\"",
-      "translation": "On s'est croisés plusieurs fois\ndéjà. Ton <0xFD><0x04> semble avoir<0xFB>le même sens de la justice\nque toi... Toujours à foncer<0xFB>tête baissée quand <0xFD><0x03>\nn'est pas voulu...",
-      "length": 154,
+      "translation": "On s'est croisés plusieurs fois\ndéjà.<0xFB>Ton enfant semble avoir le même\nsens de la justice que toi...<0xFB>Toujours à foncer tête baissée\nlà où <0xFD><0x03> n'a rien à faire...",
+      "length": 159,
       "original_length": 146,
-      "padding_used": 8,
+      "padding_used": 13,
       "encoding": "pokemon",
       "category": "dialogue",
       "notes": "",
@@ -187924,6 +187984,18 @@
       "category": "dialogue",
       "notes": "",
       "too_long": true
+    },
+    {
+      "offset": 32774926,
+      "original_text": "son",
+      "translation": "fils",
+      "length": 4,
+      "original_length": 3,
+      "padding_used": 1,
+      "encoding": "pokemon",
+      "category": "other",
+      "notes": "",
+      "too_long": false
     },
     {
       "offset": 32774930,
@@ -192308,14 +192380,14 @@
     {
       "offset": 32822657,
       "original_text": "I knew you'd come and rescue me,\n<0xFD><0x01>!",
-      "translation": "Je savais que tu\nviendrais me sauv<0xFD><0x01>",
-      "length": 36,
+      "translation": "Je savais que tu viendrais\nme sauver, <0xFD><0x01> !",
+      "length": 42,
       "original_length": 36,
-      "padding_used": 0,
+      "padding_used": 6,
       "encoding": "pokemon",
       "category": "dialogue",
       "notes": "",
-      "too_long": false
+      "too_long": true
     },
     {
       "offset": 32822694,
@@ -192344,26 +192416,26 @@
     {
       "offset": 32822788,
       "original_text": "But after all you've accomplished,\nI'm happy.",
-      "translation": "Mais après tout ce que\ntu as accompli, je sui",
-      "length": 45,
+      "translation": "Mais après tout ce que tu as\naccompli, je suis heureuse.",
+      "length": 56,
       "original_length": 45,
-      "padding_used": 0,
+      "padding_used": 11,
       "encoding": "pokemon",
       "category": "dialogue",
       "notes": "",
-      "too_long": false
+      "too_long": true
     },
     {
       "offset": 32822834,
       "original_text": "Happy knowing that my <0xFD><0x03> has\nexceeded all my expectations.",
-      "translation": "Heureuse de savoir que\nmon<0xFD><0x03>a dépassé toutes mes attentes.",
-      "length": 58,
+      "translation": "Heureuse de savoir que mon enfant\na dépassé toutes mes attentes.",
+      "length": 64,
       "original_length": 58,
-      "padding_used": 0,
+      "padding_used": 6,
       "encoding": "pokemon",
       "category": "dialogue",
       "notes": "",
-      "too_long": false
+      "too_long": true
     },
     {
       "offset": 32822893,
