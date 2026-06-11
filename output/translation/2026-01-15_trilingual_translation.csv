@@ -554,7 +554,7 @@ Tu devrais te reposer un peu.",
 Pokémon are looking great.<0xFB>Take care now!","<0x52>Tú y tus Pokémon lucen geniales!
 <0x52>Cuídate mucho!",64,5,69,pokemon,dialogue,"Ah, parfait ! Toi et tes
 Pokémon êtes en pleine forme.<0xFB>Prends soin de toi maintenant !",
-0x0018D42A,Take care now!,,14,5,19,pokemon,dialogue,Prends soin de toi!,
+0x0018D42A,Take care now!,,14,5,19,pokemon,dialogue,Porte-toi bien !,
 0x0018D43E,"There's a movie on TV.
 Four boys are walking on railroad<0xFA>tracks.<0xFB>""I better go, too.","<0x52>YOSOYKIKE está traduciendo el
 Pokémon Unbound en vivo!",83,2,85,pokemon,dialogue,"Il y a un film à la télé.
@@ -1294,7 +1294,7 @@ that I can teach an Egg.","Hunh? There isn't a single move
 that I can teach an Egg.",56,1978,2034,pokemon,dialogue,"Hein ? Je ne peux enseigner aucune
 capacité à un OEuf.",
 0x001A2E4E,ch an Egg.,ch an Egg.,10,1978,1988,pokemon,other,ch an Egg.,
-0x001A505B,We hope to see you again!,,25,2,27,pokemon,dialogue,Nous espérons vous revoir!,
+0x001A505B,We hope to see you again!,,25,2,27,pokemon,dialogue,Revenez nous voir vite !,
 0x001A5075,<0xFD><0x01> booted up the PC.,Has accedido al PC.,20,3,23,pokemon,other,<0xFD><0x01> a allumé le PC.,
 0x001A5077, booted up the PC.,,18,3,21,pokemon,other,,
 0x001A508A,Which PC should be accessed?,<0x51>A cuál PC quieres acceder?,28,2,30,pokemon,dialogue,Quel PC doit être utilisé ?,
@@ -2541,8 +2541,8 @@ Bouton A : Valider<0xFA>Bouton B : Annuler",
 "" "" B Button: Cancel",37,3,40,pokemon,system,"En attente de liaison...
 ... ... Bouton B : Annuler",
 0x001BC590,Please enter.,Please enter.,13,2,15,pokemon,location,"Entre, s'il te plaît.",
-0x001BC59E,I'll direct you to your room now.,I'll direct you to your room now.,33,2,35,pokemon,dialogue,"Je vais te guider vers ta salle
-maintenant.",
+0x001BC59E,I'll direct you to your room now.,I'll direct you to your room now.,33,2,35,pokemon,dialogue,"Je te conduis à ta
+salle.",
 0x001BC5C0,"Someone is not ready to link.<0xFB>Please come back after everyone
 has made preparations.","Someone is not ready to link.<0xFB>Please come back after everyone
 has made preparations.",84,2,86,pokemon,description,"Quelqu'un n'est pas prêt à se lier.<0xFB>Reviens quand tout le monde sera
@@ -3537,7 +3537,7 @@ power of Fairy-type moves.",,68,13,81,pokemon,description,,
 0x0023E635,Guitarist,,9,4,13,pokemon,other,Guitariste,
 0x0023E642,Kindler,,7,6,13,pokemon,other,Pyromane,
 0x0023E64F,Shocker,,7,6,13,pokemon,other,Shocker,
-0x0023E65C,Bug Maniac,,10,3,13,pokemon,location,Fou d'Insectes,
+0x0023E65C,Bug Maniac,,10,3,13,pokemon,location,Entomologue,
 0x0023E669,Officer,,7,6,13,pokemon,other,Officier,
 0x0023E683,Rich Girl,,9,4,13,pokemon,location,Fille Riche,
 0x0023E690,Successor,,9,4,13,pokemon,other,Successeur,
@@ -3545,21 +3545,21 @@ power of Fairy-type moves.",,68,13,81,pokemon,description,,
 0x0023E6C4,Expert,,6,7,13,pokemon,other,Expert,
 0x0023E6D1,Rancher,,7,6,13,pokemon,other,Éleveur,
 0x0023E6F8,Jogger,,6,7,13,pokemon,other,Jogger,
-0x0023E705,Dragon Tamer,,12,2,14,pokemon,location,Dresseur Dragon,
+0x0023E705,Dragon Tamer,,12,2,14,pokemon,location,Dracologue,
 0x0023E71F,Ninja Boy,,9,4,13,pokemon,location,Ninja Garçon,
-0x0023E72C,Mega Trainer,,12,2,14,pokemon,location,Méga Dresseur,
+0x0023E72C,Mega Trainer,,12,2,14,pokemon,location,Méga Expert,
 0x0023E739,Parasol Lady,,12,2,14,pokemon,location,Dame Parasol,
 0x0023E76D,Developer,,9,4,13,pokemon,other,Développeur,
-0x0023E787,Collector,,9,4,13,pokemon,other,Collectionneur,
-0x0023E7A1,Black Emboar,,12,1,13,pokemon,location,Roitiflam Noir,
+0x0023E787,Collector,,9,4,13,pokemon,other,Collecteur,
+0x0023E7A1,Black Emboar,,12,1,13,pokemon,location,Black Emboar,
 0x0023E7C8,Shadow Admin,,12,2,14,pokemon,location,Admin Ombre,
-0x0023E7E2,Bug Catcher,,11,5,16,pokemon,location,Chasseur d'Insectes,
+0x0023E7E2,Bug Catcher,,11,5,16,pokemon,location,Scout,
 0x0023E83D,Youngster,,9,4,13,pokemon,dialogue,Gamin,
-0x0023E84A,Bug Catcher,,11,6,17,pokemon,location,Chasseur d'Insectes,
+0x0023E84A,Bug Catcher,,11,6,17,pokemon,location,Scout,
 0x0023E857,Lass,,4,9,13,pokemon,other,Fillette,
 0x0023E864,Sailor,,6,7,13,pokemon,other,Marin,
 0x0023E871,Camper,,6,7,13,pokemon,other,Campeur,
-0x0023E87E,Picnicker,,9,4,13,pokemon,other,Pique-niqueuse,
+0x0023E87E,Picnicker,,9,4,13,pokemon,other,Pique-Nique,
 0x0023E88F, Maniac,,7,3,10,pokemon,other,,
 0x0023E898,Super Nerd,,10,3,13,pokemon,location,Super Nerd,
 0x0023E8A5,Hiker,,5,8,13,pokemon,other,Montagnard,
@@ -3574,7 +3574,7 @@ power of Fairy-type moves.",,68,13,81,pokemon,description,,
 0x0023E941,Juggler,,7,6,13,pokemon,other,Jongleur,
 0x0023E94E,Tamer,,5,8,13,pokemon,other,Dompteur,
 0x0023E95B,Bird Keeper,,11,3,14,pokemon,location,Ornithologue,
-0x0023E968,Black Belt,,10,3,13,pokemon,location,Ceinture Noire,
+0x0023E968,Black Belt,,10,3,13,pokemon,location,Karatéka,
 0x0023E982,Scientist,,9,4,13,pokemon,other,Scientifique,
 0x0023E98F,Boss,,4,9,13,pokemon,other,Boss,
 0x0023E99C,Leader,,6,7,13,pokemon,other,Champion,
@@ -3590,7 +3590,7 @@ power of Fairy-type moves.",,68,13,81,pokemon,description,,
 0x0023EA7B, Breeder,,8,3,11,pokemon,other,,
 0x0023EA88, Ranger,,7,4,11,pokemon,other,,
 0x0023EA93,Aroma Lady,,10,3,13,pokemon,location,Dame Parfum,
-0x0023EAA0,Ruin Maniac,,11,6,17,pokemon,location,Fan de Ruines,
+0x0023EAA0,Ruin Maniac,,11,6,17,pokemon,location,Archéologue,
 0x0023EABA,Painter,,7,7,14,pokemon,other,Peintre,
 0x0023EAD8,                         <0x39> <0x52>Joey,                         <0x39> <0x52>Joey,32,4,36,pokemon,description,,
 0x0023ECFC,Grunt,,5,19,24,pokemon,other,,
@@ -4032,7 +4032,7 @@ a los Pokémon salvajes.            ",0,70,70,pokemon,other,"Flûte noire en ver
 Rend les Pokémon sauvages de plus
 haut niveau.",
 0x003D5AB0,appear.,,7,71,78,pokemon,other,appear.,
-0x003D5AFE,appear.,,7,2,9,pokemon,other,apparait.,
+0x003D5AFE,appear.,,7,2,9,pokemon,other,appear.,
 0x003D5B06,"Une boisson 100<0x5B> pur jus de Baies.
 Restaure 20 PV <0x16> un Pokémon.","Zumo 100<0x5B> natural que restaura
 20 PS de un Pokémon.               ",63,213,276,pokemon,description,"Jus 100 % pur.
@@ -7479,7 +7479,7 @@ go any higher!",,16,2,18,pokemon,dialogue,,
 go any lower!","<0xFD><0x10>'s stats won't
 go any lower!",30,2,32,pokemon,dialogue,"Stats de <0xFD><0x10>
 audessous du min !",
-0x003FCBE4,A critical hit!,,15,3,18,pokemon,dialogue,Un coup critique !,
+0x003FCBE4,A critical hit!,,15,3,18,pokemon,dialogue,Coup critique !,
 0x003FCBF4,It's a one-hit KO!,,18,2,20,pokemon,dialogue,K.O. en un coup !,
 0x003FCBF7,s a one-hit KO!,,15,2,17,pokemon,dialogue,,
 0x003FCC07,"<0xFC><0x08>î1, <0xFC><0x08><0x0F>2, and<0xFC><0x08><0x0F>"" <0xFC><0x08><0x0F>"" <0xFC><0x08><0x0F>"" <0xFC><0x08><0x0F><0xFC><0x10><0x31> Poof!<0xFB>","<0xFC><0x08>î1, <0xFC><0x08><0x0F>2, y"" <0xFC><0x08><0x0F><0xFC><0x10><0x31> <0x52>puf!<0xFB>",43,3,46,pokemon,dialogue,"<0xFC><0x08><0x20>1, <0xFC><0x08><0x0F>2, et<0xFC><0x08><0x0F>"" <0xFC><0x08><0x0F>"" <0xFC><0x08><0x0F>"" <0xFC><0x08><0x0F><0xFC><0x10><0x31><0x00>Pouf !<0xFB>",
@@ -8200,7 +8200,7 @@ menu précédent.",
 0x0041629D,Exit,Exit,4,2,6,pokemon,other,Quitter,
 0x004162A2,Retire,Retiro,6,1,7,pokemon,other,Retraite,
 0x004162BD, Berry, Berry,6,3,9,pokemon,other,Baie,
-0x004162C7,Coins,,5,2,7,pokemon,other,Pièces,
+0x004162C7,Coins,,5,2,7,pokemon,other,Jeton,
 0x004162CD,Items,,5,2,7,pokemon,other,Objets,
 0x004162D3,Poké Balls,Poké Balls,10,2,12,pokemon,location,Poké Balls,
 0x004162DE,Key Items,,9,2,11,pokemon,location,Objets rares,
@@ -16844,8 +16844,8 @@ GIFT System.<0xFB>Congratulations!<0xFB>You have won a prize for winning
 three battles!<0xFB>We hope you will be inspired to
 battle some more.",159,1,160,pokemon,dialogue,"Merci d'utiliser le Système CADEAU
 MYSTÈRE.<0xFB>Félicitations !<0xFB>Tu as gagné un prix après trois
-victoires !<0xFB>Nous espérons que cela te donnera
-envie de continuer à te battre.",
+victoires !<0xFB>Que cela te donne envie de
+continuer à te battre !",
 0x00489583,"It appears to be for use at the
 VERMILION CITY port.<0xFB>Why not give it a try and see what
 it is about?","It appears to be for use at the
@@ -16868,9 +16868,9 @@ reviens pour ceci.",
 VERMILION CITY port.<0xFB>Why not give it a try and see what
 it is about?","It appears to be for use at the
 VERMILION CITY port.<0xFB>Why not give it a try and see what
-it is about?",100,2,102,pokemon,dialogue,"Cela semble être à utiliser au port
-de CARMIN SUR MER.<0xFB>Pourquoi ne pas essayer pour voir de
-quoi il s'agit ?",
+it is about?",100,2,102,pokemon,dialogue,"On dirait que ça s'utilise au port
+de CARMIN SUR MER.<0xFB>Essaie pour voir de quoi
+il s'agit !",
 0x004897C1,"Thank you for using the MYSTERY
 GIFT System.","Thank you for using the MYSTERY
 GIFT System.",44,3,47,pokemon,dialogue,"Merci d'utiliser le Système CADEAU
@@ -16958,8 +16958,7 @@ ces jours !",
 0x0074037D,"<0x11>
 Marlon: <0xFC><0x01><0x08>Cacnea, use Cut!","<0x11>
 Marlon: <0xFC><0x01><0x08>Cacnea, use Cut!",29,3,32,pokemon,dialogue,"<0x11>
-Marlon : {COLOR}ËCacnea, utilise
-Coupe !",
+Marlon : <0xFC><0x01><0x08>Cacnea, Coupe !",
 0x007403BD,Taaaaales!,"Taaaaales""",10,3,13,pokemon,dialogue,,
 0x00740753,Are you my mommy?,Are you my mommy?,17,1,18,pokemon,dialogue,Tu es ma maman ?,
 0x0074145B,"Heeeeey""<0xFB>You come to challenge the gym?","Heeeeey""<0xFB>You come to challenge the gym?",39,3,42,pokemon,dialogue,Héhooo...<0xFB>Tu viens défier l'Arène ?,
@@ -17028,7 +17027,7 @@ cadeau.<0xFB>-TOUX- -SIFFLEMENT-",
 shaped leaves.","It's some sort of plant with oddly
 shaped leaves.",49,4,53,pokemon,description,"Une sorte de plante aux feuilles
 étranges.",
-0x00744D32,Fallshore City,,14,2,16,pokemon,location,Ville de Fallshore,
+0x00744D32,Fallshore City,,14,2,16,pokemon,location,Fallshore,
 0x00744E2C,"To the east of here, beyond the
 watery Route 15, lies Vivill Town.<0xFB>But it seems like you'll need more
 than the HM Surf to get there.<0xFB>It looks like people are blocking
@@ -17069,7 +17068,7 @@ Volcano, illuminant le ciel de ses<0xFA>flammes pendant la nuit.",
 0x00745132,"<0x0F> P<0x56>à<0x08><0x09><0x06><0x02>We just undertook a major drug
 bust, but our targets got away,<0xFA>again""<0xFB>Now we're sulking.","<0x0F> P<0x56>à<0x08><0x09><0x06><0x02>We just undertook a major drug
 bust, but our targets got away,<0xFA>again""<0xFB>Now we're sulking.",97,2,99,pokemon,description,"<0x0F> P<0x56><0x7C><0x08><0x09><0x06><0x02>On vient de
-faire un gros coup de filet, mais<0xFA>nos cibles se sont encore<0xFA>échappées...<0xFB>Du coup on boude.",
+rater un gros coup de filet,<0xFA>nos cibles ont encore filé...<0xFB>Du coup on boude.",
 0x007451D0,"I'm sorry, but you can't go in here
 right now.<0xFB>My grandfather is taking his daily
 nap and doesn't want anyone to<0xFA>disturb him.<0xFB>Come back later when he's awake if
@@ -17588,8 +17587,8 @@ to a washroom?<0xFB>What if my rod hooks a big one while
 I'm in the washroom? I just can't go""","<0x5C><0x05>t   <0x5A><0x56><0x75><0x08>e<0x56><0x75><0x08><0x05>ó<0x55><0x75><0x08>What do people do if they need to go
 to a washroom?<0xFB>What if my rod hooks a big one while
 I'm in the washroom? I just can't go""",145,3,148,pokemon,dialogue,"<0x5C><0x05>t   <0x5A><0x56><0x75><0x08>e<0x56><0x75><0x08><0x05>ó<0x55><0x75><0x08>Que font les gens quand ils
-doivent aller aux toilettes ?<0xFB>Et si un gros poisson mord pendant
-que j'y suis ? Je ne peux pas<0xFA>y aller...",
+doivent aller aux toilettes ?<0xFB>Et si ça mord pendant que j'y
+suis ? Je ne peux pas y aller...",
 0x007556D9,"I lost because I'm trying to not go
 to the washroom""","I lost because I'm trying to not go
 to the washroom""",52,3,55,pokemon,dialogue,"J'ai perdu parce que j'essaie de ne
@@ -18896,8 +18895,8 @@ important things to do.","erful, <0xFD><0x01>.<0xFB>Just wait until the next tim
 meet.<0xFB>By then, I'll be tough enough to
 make you feel defeat at my hands!<0xFB>Now, if you'll excuse me, I have
 important things to do.",173,2,175,pokemon,dialogue,"redoutable, <0xFD><0x01>.<0xFB>Attends un peu notre prochaine
-rencontre.<0xFB>D'ici là, je serai assez fort pour
-te faire goûter à la défaite !<0xFB>Maintenant, excuse-moi, j'ai des
+rencontre.<0xFB>D'ici là, je serai assez fort
+pour te vaincre !<0xFB>Sur ce, excuse-moi, j'ai des
 choses importantes à faire.",
 0x007800BD,"Log: <0xFC><0x01><0x08>Well of course I was planning
 on it, <0xFD><0x06>!<0xFB>There are plenty of errands I'm too
@@ -18912,8 +18911,8 @@ parents t'ont laissé avec moi,<0xFA>ils m'ont demandé de
 veiller sur toi<0xFA>jusqu'à tes 18 ans...",
 0x00780119,"run myself!<0xFB>It's just that""well""when your
 parents left you with me, they<0xFA>asked that I watch over you until<0xFA>you were at least 18 years old""","run myself!<0xFB>It's just that""well""when your
-parents left you with me, they<0xFA>asked that I watch over you until<0xFA>you were at least 18 years old""",138,2,140,pokemon,dialogue,"faire moi-même !<0xFB>C'est juste que... eh bien... quand
-tes parents m'ont confié ta garde,<0xFA>ils m'ont demandé de veiller sur<0xFA>toi jusqu'à tes 18 ans au moins...",
+parents left you with me, they<0xFA>asked that I watch over you until<0xFA>you were at least 18 years old""",138,2,140,pokemon,dialogue,"faire moi-même !<0xFB>C'est que... eh bien... quand tes
+parents t'ont confié à moi,<0xFA>j'ai promis de veiller sur toi<0xFA>jusqu'à tes 18 ans...",
 0x007801A4,"<0xFD><0x06>: <0xFC><0x01><0x08>Whatever, Log.
 Believe what you want.","<0xFD><0x06>: <0xFC><0x01><0x08>Whatever, Log.
 Believe what you want.",44,2,46,pokemon,dialogue,"{RIVAL} : {COLOR}ËPeu importe, Log.
@@ -19473,9 +19472,9 @@ lourd, sinon ça aurait fait mal.",
 anymore.<0xFB>You're gonna need more than one
 Pokémon if you wanna to take me<0xFA>on""","Oh, wait.<0xFB>Looks like I won't be battlin' you,
 anymore.<0xFB>You're gonna need more than one
-Pokémon if you wanna to take me<0xFA>on""",122,2,124,pokemon,dialogue,"Oh, attends.<0xFB>On dirait que je ne vais plus me
-battre contre toi, .<0xFB>Tu vas avoir besoin de plus d'un
-Pokémon si tu veux m'emmener<0xFA>sur...",
+Pokémon if you wanna to take me<0xFA>on""",122,2,124,pokemon,dialogue,"Oh, attends.<0xFB>On dirait que je ne me battrai
+plus contre toi.<0xFB>Il te faudra plus d'un Pokémon
+si tu veux m'affronter...",
 0x0078900B,Everyone hide!<0xFB>The popo's here to get us again!,Everyone hide!<0xFB>The popo's here to get us again!,47,2,49,pokemon,dialogue,Tout le monde se planque !<0xFB>Les flics reviennent nous choper !,
 0x0078903B,"Officer 1: <0xFC><0x01><0x08>Hey, kid!<0xFB>Did you see which way the Gym
 Leader ran?<0xFB>He's wanted for trafficking in
@@ -31266,16 +31265,16 @@ adverses avec
 celle-ci.",
 0x00922A21,Takes one hit with no damage.,,29,2,31,pokemon,other,Encaisse un coup sans dégâts.,
 0x00922A91,Changes type to match Memory.,,29,2,31,pokemon,other,Change de type selon la ROM.,
-0x00922AEA,Boosts speed in Hail.,,21,1,22,pokemon,other,Booste la Vitesse sous la Grêle.,
-0x00922B00,Knockouts boost Sp. Atk.,,24,3,27,pokemon,other,Les K.O. boostent l'Att. Spé.,
-0x00922B19,Taking a hit raises Defense.,,28,2,30,pokemon,other,Prendre un coup hausse la Défense.,
-0x00922B36,Powers up Steel-type moves.,,27,2,29,pokemon,other,Renforce les capacités Acier.,
+0x00922AEA,Boosts speed in Hail.,,21,1,22,pokemon,other,Vitesse + sous grêle.,
+0x00922B00,Knockouts boost Sp. Atk.,,24,3,27,pokemon,other,Atq. Spé. + par K.O.,
+0x00922B19,Taking a hit raises Defense.,,28,2,30,pokemon,other,Subir un coup monte la Déf.,
+0x00922B36,Powers up Steel-type moves.,,27,2,29,pokemon,other,Booste les attaques Acier.,
 0x00922B52,Gives priority to healing moves.,,32,2,34,pokemon,description,Donne la priorité aux soins.,
 0x00922B73,Ups water attacks. Prevents burn.,,33,1,34,pokemon,description,Booste l'Eau. Empêche de brûler.,
 0x00922BD1,Changes type to match held plate.,,33,2,35,pokemon,description,Change de type selon la Plaque.,
-0x00922D21, Reverses stats changes.,,24,2,26,pokemon,other,Inverse les changements de stats.,
-0x00922D8B,Halves weight.,,14,1,15,pokemon,location,Divise le poids.,
-0x00922D9A,Flinching raises Speed.,,23,1,24,pokemon,location,Les flinchs augmentent la Vitesse.,
+0x00922D21, Reverses stats changes.,,24,2,26,pokemon,other, Inverse les modifs.,
+0x00922D8B,Halves weight.,,14,1,15,pokemon,location,Poids: moitié.,
+0x00922D9A,Flinching raises Speed.,,23,1,24,pokemon,location,Peur subie: Vitesse +,
 0x00922E50,Protects against mental problems.,,33,2,35,pokemon,description,Protège des soucis mentaux.,
 0x00922EB9,t use items.,,12,2,14,pokemon,other,,
 0x00922FA4,Summons extremely harsh sunlight.,,33,2,35,pokemon,description,Invoque un soleil de plomb.,
@@ -31283,7 +31282,7 @@ celle-ci.",
 0x00923147,Acts as if asleep.,,18,2,20,pokemon,other,Agit endormi.,
 0x00923197,s ability.,,10,2,12,pokemon,other,,
 0x0092FB9F,Desolate Land,,13,1,14,pokemon,location,Terre Finale,
-0x0092FBCA,Electric Surge,,14,2,16,pokemon,location,Champ Électrique,
+0x0092FBCA,Electric Surge,,14,2,16,pokemon,location,Créa-Élec,
 0x00950D7C,Raises one stat and lowers another.,,35,0,35,pokemon,description,"Monte une stat, baisse une autre.",no-pointer: in-place only
 0x0095117C,"mon.
 If the holder is hit, the attacker
@@ -32435,7 +32434,7 @@ sont restaurés par le Pouvoir Z !",
 0x00A353EF,Lowers the foe's Speed if hit.,Baja Velocidad tras golpe.,30,2,32,pokemon,other,Baisse Vit. du Pokemon touché.,
 0x00A353FE,s Speed if hit.,,15,2,17,pokemon,other,,
 0x00A3540E,Spreads with contact.,Propaga al contacto.,21,3,24,pokemon,location,Se propage au contact.,
-0x00A35424,Hurts to touch.,,15,2,17,pokemon,location,Ça fait mal au toucher.,
+0x00A35424,Hurts to touch.,,15,2,17,pokemon,location,Mal au contact.,
 0x00A35434,Raises Speed in a sandstorm.,Sube Vel en Tormenta Arena.,28,2,30,pokemon,other,Vit. + en tempête sable.,
 0x00A35451,Moving last boosts power.,Moverse sube potencia.,25,2,27,pokemon,other,Agir en dernier booste.,
 0x00A3546B,Ensures that all moves land.,Los movimientos aterrizan.,28,2,30,pokemon,other,Toutes cap. touchent.,
@@ -32531,7 +32530,7 @@ sur Champ Herbu.",
 0x00A35D80,Ups Sp. Atk below half HP.,Sube At Esp a bajos PS.,26,2,28,pokemon,other,Booste l'Att. Spé. sous 50% PV.,
 0x00A35D9B,Never makes contact.,Never makes contact.,20,2,22,pokemon,location,Ne fait jamais contact.,
 0x00A35DB0,Sound moves become Water-type.,Ataques de sonido son Agua.,30,2,32,pokemon,other,Capacités sonores deviennent Eau.,
-0x00A35DCF,Blocks priority moves.,,22,2,24,pokemon,location,Bloque les attaques prioritaires.,
+0x00A35DCF,Blocks priority moves.,,22,2,24,pokemon,location,Bloque la priorité.,
 0x00A35DE6,Fainting damages the foe.,Desmayo daña al rival.,25,2,27,pokemon,other,Le K.O. blesse l'ennemi.,
 0x00A35E00,Blocks priority moves.,Bloquea mov. clave.,22,2,24,pokemon,location,Bloque les attaques prioritaires.,
 0x00A35E17,Eats Berries early.,Come muchas bayas.,19,3,22,pokemon,location,Mange les Baies plus tôt.,
@@ -32798,7 +32797,7 @@ font des critiques.",
 0x00A37135,Flower Gift,,11,6,17,pokemon,location,Don Floral,
 0x00A37146,Bad Dreams,,10,7,17,pokemon,location,Mauvais Rêve,
 0x00A37157,Pickpocket,,10,7,17,pokemon,other,Pickpocket,
-0x00A37168,Portal Power,,12,5,17,pokemon,location,Puissance du Portail,
+0x00A37168,Portal Power,,12,5,17,pokemon,location,Pouvoir Portail,
 0x00A37179,Poison Touch,,12,5,17,pokemon,location,Toxitouche,
 0x00A3718A,Magician,,8,9,17,pokemon,other,Magicien,
 0x00A3719B,Stance Change,,13,4,17,pokemon,location,Déclic Tactique,
@@ -38953,12 +38952,12 @@ montre de quoi on est faits !",
 0x00A4EAE9,Poison,,6,2,8,pokemon,other,Poison,
 0x00A4EAF0,Ground,,6,4,10,pokemon,other,Sol,
 0x00A4EAF7,Rock,,4,3,7,pokemon,other,Rocher,
-0x00A4EB05,Ghost,,5,4,9,pokemon,other,Fantôme,
+0x00A4EB05,Ghost,,5,4,9,pokemon,other,Spectr,
 0x00A4EB0C,Steel,,5,6,11,pokemon,other,Acier,
 0x00A4EB1A,Fire,,4,3,7,pokemon,other,Feu,
 0x00A4EB21,Water,,5,4,9,pokemon,other,Eau,
 0x00A4EB28,Grass,,5,3,8,pokemon,other,Herbe,
-0x00A4EB2F,Electr,,6,2,8,pokemon,other,Electrique,
+0x00A4EB2F,Electr,,6,2,8,pokemon,other,Électr,
 0x00A4EB36,Psychc,,6,5,11,pokemon,other,Psychc,
 0x00A4EB44,Dragon,,6,5,11,pokemon,other,Dragon,
 0x00A4EB4B,Dark,,4,3,7,pokemon,other,Sombre,
@@ -57572,7 +57571,7 @@ you're at the base of Crystal Peak.","Debes subir esa cascada y estarás
 en la base de Pico Cristal.",66,3,69,pokemon,dialogue,"Monte juste cette cascade et tu
 seras au pied du Pic de Cristal.",
 0x01EED193,re at the base of Crystal Peak.,,31,3,34,pokemon,description,,
-0x01EED1B3, Costume Box,,12,3,15,pokemon,other,Boîte à costumes,
+0x01EED1B3, Costume Box,,12,3,15,pokemon,other, Garde-robe,
 0x01EED1C0,<0xF8><0x0B>Pick <0xF8> Choose <0xF8><0x01>Close,<0xF8><0x0B>Mov. <0xF8> Elegir <0xF8> Salir,23,2,25,pokemon,description,{DPAD_LEFTRIGHT}Choisir {SE_SHOP}Choisir {B_BUTTON}Fermer,
 0x01EED1D2,Close,,5,2,7,pokemon,other,,
 0x01EED1D8,This outfit has not been unlocked.<0xFC><0x09>,Este atuendo está bloqueado.<0xFC><0x09>,36,3,39,pokemon,description,Cette tenue n'a pas été débloquée.{PAUSE_UNTIL_PRESS},
@@ -59586,7 +59585,7 @@ Pokémon FireRed Version
 
 
 ",
-0x01EF0C67, Crystal Peak,,13,2,15,pokemon,other,Pic de cristal,
+0x01EF0C67, Crystal Peak,,13,2,15,pokemon,other, Pic Cristal,
 0x01EF0C75,Crystal Peak A,Crystal Peak A,14,2,16,pokemon,location,Pic de cristal A,
 0x01EF0C84,Crystal Peak B,Crystal Peak B,14,2,16,pokemon,location,Pic de Cristal B,
 0x01EF0C93,"The tallest mountain in Borrius.
@@ -67590,7 +67589,7 @@ le Pokémon Cactus ?",
 shifting sands.","<0xFC><0x01><0x02>The <0xFD><0x02> disappeared in the
 shifting sands.",44,3,47,pokemon,description,"{COLOR}ÁLe {STR_VAR_1} a disparu dans les
 sables mouvants.",
-0x01F12FF3, Grim Woods,,11,3,14,pokemon,other,Forêt Lugubre,
+0x01F12FF3, Grim Woods,,11,3,14,pokemon,other, Bois Noir,
 0x01F12FFF,"A spooky forest filled with many
 Ghost-type Pokémon.
 Many children have gone missing
@@ -73608,9 +73607,9 @@ stand guard in this gate.",,58,3,61,pokemon,description,,
 0x01F2CB3C,Grunt B,,7,3,10,pokemon,location,Sbire B,
 0x01F2CB44,Grunt C,,7,3,10,pokemon,location,Sbire C,
 0x01F2CB54,Hoopa,Hoopa,5,3,8,pokemon,other,Hoopa,
-0x01F2CB5A,Light of Ruin,Luz Maligna,13,3,16,pokemon,location,Lumière de la Ruine,
-0x01F2CB68,Light of Ruin Admin,Admin. Luz Maligna,19,3,22,pokemon,other,Admin de la Lumière de la Ruine,
-0x01F2CB7C,Light of Ruin Leader,Líder Luz Maligna,20,3,23,pokemon,other,Chef de la Lumière de la Ruine,
+0x01F2CB5A,Light of Ruin,Luz Maligna,13,3,16,pokemon,location,Lumière Ruine,
+0x01F2CB68,Light of Ruin Admin,Admin. Luz Maligna,19,3,22,pokemon,other,Admin Lumière Ruine,
+0x01F2CB7C,Light of Ruin Leader,Líder Luz Maligna,20,3,23,pokemon,other,Chef Lumière Ruine,
 0x01F2CB91,A Hero's Journey,,16,2,18,pokemon,location,Le Voyage d'un Héros,
 0x01F2CB98,s Journey,,9,2,11,pokemon,other,,
 0x01F2CBA2,A Heroine's Journey,,19,2,21,pokemon,location,Le Voyage d'une Héroïne,
@@ -74856,9 +74855,9 @@ pour combattre.",
 0x01F31CA6,"mon to
 battle with.",,19,2,21,pokemon,other,,
 0x01F31CBA,"Tch"" maybe I'm more out of
-practice than I realized""",<0x52>NO PUEDO CREERLO!,52,2,54,pokemon,dialogue,"Tch... je suis peut-être plus rouillé
+practice than I realized""",<0x52>NO PUEDO CREERLO!,52,2,54,pokemon,dialogue,"Tch... je suis plus rouillé
 que je ne le pensais...",
-0x01F31CEF,"I'm sorry, Marlon, sir!","<0x52>Perdón, señor Marlon!",23,3,26,pokemon,dialogue,"Désolé, Marlon, monsieur !",
+0x01F31CEF,"I'm sorry, Marlon, sir!","<0x52>Perdón, señor Marlon!",23,3,26,pokemon,dialogue,"Désolé, M. Marlon !",
 0x01F31CF1,"m sorry, Marlon, sir!",,21,3,24,pokemon,dialogue,,
 0x01F31D07,"Well, I suppose that's fine.
 Our operation was a success.<0xFB>Ivory is long gone by now.","Bueno, supongo que está bien.
@@ -75615,11 +75614,11 @@ mais je vais devoir vous escorter<0xFA>tous les deux dehors...{PAUSE} à la dure
 0x01F352E1, the hard way.,,14,1,15,pokemon,other,,
 0x01F352F0,"Curses""<0xFB>Scientists, activate
 the backup plan, now!","Mierda""<0xFB>Científicos, activen el plan que les
-dije""",50,2,52,pokemon,dialogue,"Maudits...<0xFB>Scientifiques, activez le plan de
-secours, maintenant !",
+dije""",50,2,52,pokemon,dialogue,"Maudits...<0xFB>Scientifiques, vite,
+le plan B !",
 0x01F352F8,"Scientists, activate
 the backup plan, now!",,42,2,44,pokemon,dialogue,,
-0x01F35323,"I'm sorry I failed you, ma'am!","Lamento fallarle, señora""",30,2,32,pokemon,dialogue,"Désolé de vous décevoir, madame !",
+0x01F35323,"I'm sorry I failed you, ma'am!","Lamento fallarle, señora""",30,2,32,pokemon,dialogue,"Navré de vous décevoir, madame",
 0x01F35342,"<0xFC><0x01><0x08>How's that!<0xFB>As long as I've got my Pokémon,
 I'm unstoppable!<0xFB>No""<0xFC><0x08><0x18> we're unstoppable!<0xFB>Now, hand over the Prison Stone!","<0xFC><0x01><0x08><0x52>Ya vieron!<0xFB><0x52>Mientras tenga a mis Pokémon, soy
 invencíble!<0xFB>No""<0xFC><0x08><0x18> <0x52>somos invencíbles!<0xFB><0x52>Entrega la Piedra Prisión!",122,1,123,pokemon,dialogue,"{COLOR}ËAlors ?<0xFB>Tant que j'ai mes Pokémon,
@@ -77521,8 +77520,8 @@ better even with a useless grunt""","Me has decepcionado Soldado""",67,2,69,poke
 même avec un sbire inutile...",
 0x01F3DE39,"No""
 Not again""","No""
-Otra vez""",14,2,16,pokemon,location,"Non... Encore
-une fois...",
+Otra vez""",14,2,16,pokemon,location,"Non,
+pas ça...",
 0x01F3DE48,"All Grunts, retreat back to your
 new base!<0xFB>We've mostly finished what we
 came for - there is no need to<0xFA>remain here!","<0x52>Todos los Soldados retírense!<0xFB>Casi hemos terminado lo que vinimos
@@ -77574,8 +77573,8 @@ moyen de le réveiller et de le<0xFA>contrôler...",
 overwhelmed by sheer numbers.<0xFB>But supposing one had the means to
 reawaken and control it""","antidad de personas con<0xFA>las que luchó.<0xFB>Pero si hubieran medios para
 despertarlo y controlarlo""",99,2,101,pokemon,description,"submergé par le nombre, il fut
-vaincu.<0xFB>Mais imagine que quelqu'un ait les
-moyens de le réveiller et de le<0xFA>contrôler...",
+vaincu.<0xFB>Mais si quelqu'un pouvait le
+réveiller et le contrôler...",
 0x01F3E14E,"No""<0xFC><0x08><0x20> surely you're not planning""!?","No""<0xFC><0x08><0x20> <0x52>NO TE ATREVAS!",36,3,39,pokemon,dialogue,Non...{PAUSE}î tu ne comptes pas... !?,
 0x01F3E173,"Oh yes, Marlon.<0xFB>Fey had Aklove pass me a certain
 artifact, capable of controlling<0xFA>the monster that slumbers beneath<0xFA>the magma.<0xFB>And now""","Oh, sí, Marlon.<0xFB>Fey hizo que Aklove me diera cierto
@@ -77652,9 +77651,9 @@ Pokémon sont trop mal en point<0xFA>pour affronter cette chose... !",
 Groudon used that attack""<0xFB>What now""<0xFC><0x08><0x18> my own Pokémon are too
 badly hurt to take that thing on""!"," <0xFD><0x01>?<0xFB>Se le debieron caer cuando Groudon
 usó ese ataque""<0xFB><0x51>Y ahora""?<0xFC><0x08><0x18> Mis Pokémon están muy
-heridos para enfrentarme a esa cosa""",132,2,134,pokemon,dialogue,"...?<0xFB>Ils ont dû tomber quand Groudon a
-lancé cette attaque...<0xFB>Et maintenant...<0xFC><0x08><0x18> mes propres Pokémon
-sont trop blessés pour affronter<0xFA>cette chose... !",
+heridos para enfrentarme a esa cosa""",132,2,134,pokemon,dialogue,"...?<0xFB>Ils ont dû tomber quand Groudon
+a lancé son attaque...<0xFB>Et là...<0xFC><0x08><0x18> mes Pokémon sont trop
+blessés pour affronter ça... !",
 0x01F3E675,"Wait""<0xFC><0x08><0x18> <0xFD><0x01>!<0xFB>Let me use your Poké Balls!
 I'll command your Pokémon!<0xFB>Just direct me on whether you want
 to fight or switch!","Espera"" <0x52><0xFD><0x01>!<0xFB><0x52>Déjame usar tus Pokémon!
@@ -85464,8 +85463,8 @@ to my heart.<0xFB>Please, take these Wings as a show
 of my gratitude!","a aérea me ha traído
 mucha alegría.<0xFB>Por favor, acepta estas Alas por
 tu victoria.",85,2,87,pokemon,dialogue,"...combat m'a apporté tant
-de joie.<0xFB>Je t'en prie, accepte ces Ailes en
-gage de ma gratitude !",
+de joie.<0xFB>Accepte ces Ailes en gage
+de ma gratitude !",
 0x01F5F735,"Please, take these Wings as a show
 of my gratitude!",,51,2,53,pokemon,dialogue,,
 0x01F5F769,"A shame.
@@ -97740,7 +97739,7 @@ shampoings parfumés Baie Sitrus<0xFA>sont à peu près pareils.<0xFB>La différ
 0x01F949C6,Champion,Campeón,8,1,9,pokemon,other,Champion,
 0x01F949CF,Nightmare,Pesadilla,9,2,11,pokemon,other,Cauchemar,
 0x01F949D9,Frontier Card,T. Frontera,13,3,16,pokemon,location,Carte Frontière,
-0x01F949EC,Frontier Brain,El Jefe Torre,14,3,17,pokemon,location,Cerveau de Frontière,
+0x01F949EC,Frontier Brain,El Jefe Torre,14,3,17,pokemon,location,Meneur de Zone,
 0x01F949FB," Which topic would you like to
 learn about?",,43,2,45,pokemon,dialogue,"Quel sujet veux-tu
 approfondir ?",
@@ -99647,8 +99646,7 @@ favourite <0xFC><0x01><0x06>Pikachu costume<0xFC><0x01><0x04>.","no es pequeño,
 hay manera de que pudiera haber<0xFA>llegado muy lejos.<0xFB>Quizás esté por <0xFC><0x01><0x06>Ruta 8<0xFC><0x01><0x04> ahora mismo.<0xFB>La última vez que lo vi tenía su
 disfraz favorito de <0xFC><0x01><0x06>Pikachu<0xFC><0x01><0x04>.",188,2,190,pokemon,dialogue,"Mon petit frère est tout petit, il
 n'a pas pu aller bien loin.<0xFB>Je parie qu'il est quelque part sur
-la <0xFC><0x01><0x06>Route 8<0xFC><0x01><0x04> en ce moment.<0xFB>Et la dernière fois que je l'ai vu,
-il portait son costume<0xFA><0xFC><0x01><0x06>Pikachu<0xFC><0x01><0x04> préféré.",
+la <0xFC><0x01><0x06>Route 8<0xFC><0x01><0x04> en ce moment.<0xFB>Il portait son costume<0xFA><0xFC><0x01><0x06>Pikachu<0xFC><0x01><0x04> préféré.",
 0x01F9CFB4,My parents are going to kill me!,<0x52>Mis padres me van a matar!,32,2,34,pokemon,dialogue,Mes parents vont me tuer !,
 0x01F9CFD5,"My brother told me all about his
 journey back up here!<0xFB>You're amazing!","<0x52>Mi hermano me contó que le ayudaste
@@ -99691,7 +99689,7 @@ elle me manque vraiment",
 <0xFC><0x01><0x06>Ciudad Ventisca<0xFC><0x01><0x08>.<0xFB><0x52>Te seguiré!",70,2,72,pokemon,dialogue,"S'il te plaît, ramène-moi à la
 {COLOR}ÉBlizzard City{COLOR}Ë. Je te<0xFB>suivrai là-bas.",
 0x01F9D1F5,ll follow you there.,,20,2,22,pokemon,dialogue,,
-0x01F9D1F7, follow you there.,,18,0,18,pokemon,dialogue, Je te suivrai là-bas.,suffix string composed in scripts; leading space significant
+0x01F9D1F7, follow you there.,,18,0,18,pokemon,dialogue, Je t'y suivrai.,suffix string composed in scripts; leading space significant
 0x01F9D20A,<0xFC><0x01><0x02><0xFD><0x01> decided to go with Willy!,<0xFC><0x01><0x02>Has decidido ir con Willy.,31,2,33,pokemon,dialogue,<0xFC><0x01><0x02><0xFD><0x01> décide de suivre Willy !,
 0x01F9D20F, decided to go with Willy!,,26,2,28,pokemon,dialogue,,
 0x01F9D22A,"<0xFC><0x01><0x02>While teamed up with Willy, the
@@ -100820,7 +100818,7 @@ boosters, et on peut utiliser ce<0xFA>Pokémon pour en fabriquer d'autres<0xFB>p
 voit à la base une fois que j'aurai<0xFA>réglé ça avec James, d'accord ?",
 0x01FA1EDF,ear?,,4,2,6,pokemon,dialogue,,
 0x01FA1EE4,Black Ferrothorn,Ferrothorn Negro,16,2,18,pokemon,location,Black Ferrothorn,
-0x01FA1EF5,Black Ferrothorn Boss,Jefe Ferrothorn Negro,21,1,22,pokemon,location,Chef du Black Ferrothorn,
+0x01FA1EF5,Black Ferrothorn Boss,Jefe Ferrothorn Negro,21,1,22,pokemon,location,Chef Black Ferrothorn,
 0x01FA1F0B,Ferrothorn Turf,Base Ferrothorn,15,2,17,pokemon,location,Territoire Ferrothorn,
 0x01FA1F1B,Barbs,Barbs,5,2,7,pokemon,other,Barbs,
 0x01FA1F21,The Battle of Antisis,La Batalla de Antisis,21,2,23,pokemon,other,La bataille d'Antisis,
@@ -102066,7 +102064,7 @@ Moomoo Farm.",<0xFC><0x01><0x02>El Miltank ha regresado a la granja.,44,3,47,pok
 Ferme Meumeu.",
 0x01FA765D,"The Miltank returned home to
 Moomoo Farm.",,41,3,44,pokemon,description,,
-0x01FA7687, Home for a Hobo, Un Nuevo Hogar,16,3,19,pokemon,other,Un toit pour un sans-abri,
+0x01FA7687, Home for a Hobo, Un Nuevo Hogar,16,3,19,pokemon,other, Un toit à soi,
 0x01FA7698,Rich Man,Rich Man,8,2,10,pokemon,location,Homme Riche,
 0x01FA76A1,Biker,,5,2,7,pokemon,other,Motard,
 0x01FA76A7,Swizer,Swizer,6,3,9,pokemon,other,Swizer,
@@ -102492,8 +102490,8 @@ Cambrioleurs de Ville Portuaire sera connue de tous !",
 with honour!<0xFB>We won't challenge you if you don't
 have enough Pokémon.","The Seaport Burglar Society fights
 with honour!<0xFB>We won't challenge you if you don't
-have enough Pokémon.",104,2,106,pokemon,dialogue,"La Société des Cambrioleurs de Ville
-Portuaire se bat avec honneur ! Nous<0xFB>ne vous défierons pas si vous n'avez
+have enough Pokémon.",104,2,106,pokemon,dialogue,"Les Cambrioleurs du Port se
+battent avec honneur !<0xFB>Pas de défi si vous n'avez
 pas assez de Pokémon.",
 0x01FA8F9C,Our leader is El-Scamo!<0xFB>He likes to scam people!,<0x52>Nuestro Líder es Escamo!,48,2,50,pokemon,dialogue,Notre chef est El-Scamo ! Il aime<0xFB>arnaquer les gens !,
 0x01FA8FB4,He likes to scam people!,,24,2,26,pokemon,dialogue,,
@@ -102535,7 +102533,7 @@ región!",103,3,106,pokemon,dialogue,"Ces cambrioleurs dirigeaient les
 choses ici avant. Alors nous, les<0xFB>Noacier Noirs, sommes intervenus
 pour les aider !",
 0x01FA91B5,em out!,,7,3,10,pokemon,dialogue,,
-0x01FA91BD,"Not much help""",<0x52>Te odio!,14,2,16,pokemon,location,Pas d'une grande aide...,
+0x01FA91BD,"Not much help""",<0x52>Te odio!,14,2,16,pokemon,location,Peu utile...,
 0x01FA91CC,"We control crime here, now!
 Us, the Black Ferrothorn!",<0x52>Más te vale que te vayas de aquí!,53,2,55,pokemon,dialogue,"Nous contrôlons le crime ici,
 maintenant ! Nous, les Noacier Noirs !",
@@ -102543,9 +102541,9 @@ maintenant ! Nous, les Noacier Noirs !",
 around here.<0xFB>But they don't need help against
 someone with as few Pokémon as<0xFA>you!","<0x52>Ayudamos a estos ladrones de
 aquí!<0xFB><0x52>Pero no necesitan ayuda contra
-alguien tan débil como tú!",117,2,119,pokemon,dialogue,"Nous sommes venus aider ces
-cambrioleurs du<0xFB>coin. Mais ils n'ont
-pas besoin d'aide contre quelqu'un<0xFA>avec aussi peu de Pokémon que toi !",
+alguien tan débil como tú!",117,2,119,pokemon,dialogue,"On est venus aider les
+cambrioleurs du coin.<0xFB>Mais pas besoin d'aide contre
+quelqu'un avec si peu de Pokémon !",
 0x01FA9273,you!,,4,2,6,pokemon,dialogue,,
 0x01FA9278,"Our leader is the iron-willed
 Barbs!",<0x52>Somos los gobernantes!,36,3,39,pokemon,dialogue,"Notre chef est Barbs à la volonté de
@@ -103573,7 +103571,7 @@ de lui pour augmenter sa taille !",
 disappear""","<0xFC><0x01><0x02><0xFD><0x02> warped space to
 disappear""",32,3,35,pokemon,description,,
 0x01FACB77, The Rogue Electivire,,21,2,23,pokemon,other,L'Élekable Rebelle,
-0x01FACB8D,Science Society,La Sociedad,15,3,18,pokemon,location,Société Scientifique,
+0x01FACB8D,Science Society,La Sociedad,15,3,18,pokemon,location,Cercle Science,
 0x01FACB9D,Nerd,Nerd,4,3,7,pokemon,other,Intello,
 0x01FACBA2,"A nerd's Electivire has gone rogue!
 Track it down and return it to

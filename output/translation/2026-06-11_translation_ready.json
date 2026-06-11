@@ -2204,8 +2204,8 @@
     {
       "offset": 1627178,
       "original_text": "Take care now!",
-      "translation": "Prends soin de toi!",
-      "length": 19,
+      "translation": "Porte-toi bien !",
+      "length": 16,
       "original_length": 14,
       "padding_used": 5,
       "encoding": "pokemon",
@@ -4112,8 +4112,8 @@
     {
       "offset": 1724507,
       "original_text": "We hope to see you again!",
-      "translation": "Nous espérons vous revoir!",
-      "length": 26,
+      "translation": "Revenez nous voir vite !",
+      "length": 24,
       "original_length": 25,
       "padding_used": 1,
       "encoding": "pokemon",
@@ -13328,14 +13328,14 @@
     {
       "offset": 1820062,
       "original_text": "I'll direct you to your room now.",
-      "translation": "Je vais te guider vers ta salle\nmaintenant.",
-      "length": 43,
+      "translation": "Je te conduis à ta\nsalle.",
+      "length": 25,
       "original_length": 33,
       "padding_used": 10,
       "encoding": "pokemon",
       "category": "dialogue",
       "notes": "",
-      "too_long": true
+      "too_long": false
     },
     {
       "offset": 1820096,
@@ -16388,14 +16388,14 @@
     {
       "offset": 2352732,
       "original_text": "Bug Maniac",
-      "translation": "Fou d'Insectes",
-      "length": 14,
+      "translation": "Entomologue",
+      "length": 11,
       "original_length": 10,
       "padding_used": 4,
       "encoding": "pokemon",
       "category": "location",
       "notes": "",
-      "too_long": true
+      "too_long": false
     },
     {
       "offset": 2352745,
@@ -16484,14 +16484,14 @@
     {
       "offset": 2352901,
       "original_text": "Dragon Tamer",
-      "translation": "Dresseur Dragon",
-      "length": 15,
+      "translation": "Dracologue",
+      "length": 10,
       "original_length": 12,
       "padding_used": 3,
       "encoding": "pokemon",
       "category": "location",
       "notes": "",
-      "too_long": true
+      "too_long": false
     },
     {
       "offset": 2352927,
@@ -16508,8 +16508,8 @@
     {
       "offset": 2352940,
       "original_text": "Mega Trainer",
-      "translation": "Méga Dresseur",
-      "length": 13,
+      "translation": "Méga Expert",
+      "length": 11,
       "original_length": 12,
       "padding_used": 1,
       "encoding": "pokemon",
@@ -16544,26 +16544,26 @@
     {
       "offset": 2353031,
       "original_text": "Collector",
-      "translation": "Collectionneur",
-      "length": 14,
+      "translation": "Collecteur",
+      "length": 10,
       "original_length": 9,
       "padding_used": 5,
       "encoding": "pokemon",
       "category": "other",
       "notes": "",
-      "too_long": true
+      "too_long": false
     },
     {
       "offset": 2353057,
       "original_text": "Black Emboar",
-      "translation": "Roitiflam Noir",
-      "length": 14,
+      "translation": "Black Emboar",
+      "length": 12,
       "original_length": 12,
       "padding_used": 2,
       "encoding": "pokemon",
       "category": "location",
       "notes": "",
-      "too_long": true
+      "too_long": false
     },
     {
       "offset": 2353096,
@@ -16580,14 +16580,14 @@
     {
       "offset": 2353122,
       "original_text": "Bug Catcher",
-      "translation": "Chasseur d'Insectes",
-      "length": 19,
+      "translation": "Scout",
+      "length": 5,
       "original_length": 11,
       "padding_used": 8,
       "encoding": "pokemon",
       "category": "location",
       "notes": "",
-      "too_long": true
+      "too_long": false
     },
     {
       "offset": 2353213,
@@ -16604,14 +16604,14 @@
     {
       "offset": 2353226,
       "original_text": "Bug Catcher",
-      "translation": "Chasseur d'Insectes",
-      "length": 19,
+      "translation": "Scout",
+      "length": 5,
       "original_length": 11,
       "padding_used": 8,
       "encoding": "pokemon",
       "category": "location",
       "notes": "",
-      "too_long": true
+      "too_long": false
     },
     {
       "offset": 2353239,
@@ -16652,14 +16652,14 @@
     {
       "offset": 2353278,
       "original_text": "Picnicker",
-      "translation": "Pique-niqueuse",
-      "length": 14,
+      "translation": "Pique-Nique",
+      "length": 11,
       "original_length": 9,
       "padding_used": 5,
       "encoding": "pokemon",
       "category": "other",
       "notes": "",
-      "too_long": true
+      "too_long": false
     },
     {
       "offset": 2353304,
@@ -16820,14 +16820,14 @@
     {
       "offset": 2353512,
       "original_text": "Black Belt",
-      "translation": "Ceinture Noire",
-      "length": 14,
+      "translation": "Karatéka",
+      "length": 8,
       "original_length": 10,
       "padding_used": 4,
       "encoding": "pokemon",
       "category": "location",
       "notes": "",
-      "too_long": true
+      "too_long": false
     },
     {
       "offset": 2353538,
@@ -16976,8 +16976,8 @@
     {
       "offset": 2353824,
       "original_text": "Ruin Maniac",
-      "translation": "Fan de Ruines",
-      "length": 13,
+      "translation": "Archéologue",
+      "length": 11,
       "original_length": 11,
       "padding_used": 2,
       "encoding": "pokemon",
@@ -18344,8 +18344,8 @@
     {
       "offset": 4020990,
       "original_text": "appear.",
-      "translation": "apparait.",
-      "length": 9,
+      "translation": "appear.",
+      "length": 7,
       "original_length": 7,
       "padding_used": 2,
       "encoding": "pokemon",
@@ -34592,8 +34592,8 @@
     {
       "offset": 4180964,
       "original_text": "A critical hit!",
-      "translation": "Un coup critique !",
-      "length": 18,
+      "translation": "Coup critique !",
+      "length": 15,
       "original_length": 15,
       "padding_used": 3,
       "encoding": "pokemon",
@@ -38336,8 +38336,8 @@
     {
       "offset": 4285127,
       "original_text": "Coins",
-      "translation": "Pièces",
-      "length": 6,
+      "translation": "Jeton",
+      "length": 5,
       "original_length": 5,
       "padding_used": 1,
       "encoding": "pokemon",
@@ -57824,14 +57824,14 @@
     {
       "offset": 4756505,
       "original_text": "Thank you for using the MYSTERY\nGIFT System.<0xFB>Congratulations!<0xFB>You have won a prize for winning\nthree battles!<0xFB>We hope you will be inspired to\nbattle some more.",
-      "translation": "Merci d'utiliser le Système CADEAU\nMYSTÈRE.<0xFB>Félicitations !<0xFB>Tu as gagné un prix après trois\nvictoires !<0xFB>Nous espérons que cela te donnera\nenvie de continuer à te battre.",
-      "length": 169,
+      "translation": "Merci d'utiliser le Système CADEAU\nMYSTÈRE.<0xFB>Félicitations !<0xFB>Tu as gagné un prix après trois\nvictoires !<0xFB>Que cela te donne envie de\ncontinuer à te battre !",
+      "length": 154,
       "original_length": 159,
       "padding_used": 10,
       "encoding": "pokemon",
       "category": "dialogue",
       "notes": "",
-      "too_long": true
+      "too_long": false
     },
     {
       "offset": 4756867,
@@ -57872,14 +57872,14 @@
     {
       "offset": 4757340,
       "original_text": "It appears to be for use at the\nVERMILION CITY port.<0xFB>Why not give it a try and see what\nit is about?",
-      "translation": "Cela semble être à utiliser au port\nde CARMIN SUR MER.<0xFB>Pourquoi ne pas essayer pour voir de\nquoi il s'agit ?",
-      "length": 108,
+      "translation": "On dirait que ça s'utilise au port\nde CARMIN SUR MER.<0xFB>Essaie pour voir de quoi\nil s'agit !",
+      "length": 90,
       "original_length": 100,
       "padding_used": 8,
       "encoding": "pokemon",
       "category": "dialogue",
       "notes": "",
-      "too_long": true
+      "too_long": false
     },
     {
       "offset": 4757441,
@@ -58328,14 +58328,14 @@
     {
       "offset": 7603069,
       "original_text": "<0x11>\nMarlon: <0xFC><0x01><0x08>Cacnea, use Cut!",
-      "translation": "<0x11>\nMarlon : {COLOR}ËCacnea, utilise\nCoupe !",
-      "length": 42,
+      "translation": "<0x11>\nMarlon : <0xFC><0x01><0x08>Cacnea, Coupe !",
+      "length": 29,
       "original_length": 29,
       "padding_used": 13,
       "encoding": "pokemon",
       "category": "dialogue",
       "notes": "",
-      "too_long": true
+      "too_long": false
     },
     {
       "offset": 7604051,
@@ -58496,14 +58496,14 @@
     {
       "offset": 7621938,
       "original_text": "Fallshore City",
-      "translation": "Ville de Fallshore",
-      "length": 18,
+      "translation": "Fallshore",
+      "length": 9,
       "original_length": 14,
       "padding_used": 4,
       "encoding": "pokemon",
       "category": "location",
       "notes": "",
-      "too_long": true
+      "too_long": false
     },
     {
       "offset": 7622188,
@@ -58592,14 +58592,14 @@
     {
       "offset": 7622962,
       "original_text": "<0x0F> P<0x56>à<0x08><0x09><0x06><0x02>We just undertook a major drug\nbust, but our targets got away,<0xFA>again\"<0xFB>Now we're sulking.",
-      "translation": "<0x0F> P<0x56><0x7C><0x08><0x09><0x06><0x02>On vient de\nfaire un gros coup de filet, mais<0xFA>nos cibles se sont encore<0xFA>échappées...<0xFB>Du coup on boude.",
-      "length": 111,
+      "translation": "<0x0F> P<0x56><0x7C><0x08><0x09><0x06><0x02>On vient de\nrater un gros coup de filet,<0xFA>nos cibles ont encore filé...<0xFB>Du coup on boude.",
+      "length": 97,
       "original_length": 97,
       "padding_used": 14,
       "encoding": "pokemon",
       "category": "description",
       "notes": "",
-      "too_long": true
+      "too_long": false
     },
     {
       "offset": 7623120,
@@ -60008,14 +60008,14 @@
     {
       "offset": 7689799,
       "original_text": "<0x5C><0x05>t   <0x5A><0x56><0x75><0x08>e<0x56><0x75><0x08><0x05>ó<0x55><0x75><0x08>What do people do if they need to go\nto a washroom?<0xFB>What if my rod hooks a big one while\nI'm in the washroom? I just can't go\"",
-      "translation": "<0x5C><0x05>t   <0x5A><0x56><0x75><0x08>e<0x56><0x75><0x08><0x05>ó<0x55><0x75><0x08>Que font les gens quand ils\ndoivent aller aux toilettes ?<0xFB>Et si un gros poisson mord pendant\nque j'y suis ? Je ne peux pas<0xFA>y aller...",
-      "length": 152,
+      "translation": "<0x5C><0x05>t   <0x5A><0x56><0x75><0x08>e<0x56><0x75><0x08><0x05>ó<0x55><0x75><0x08>Que font les gens quand ils\ndoivent aller aux toilettes ?<0xFB>Et si ça mord pendant que j'y\nsuis ? Je ne peux pas y aller...",
+      "length": 139,
       "original_length": 145,
       "padding_used": 7,
       "encoding": "pokemon",
       "category": "dialogue",
       "notes": "",
-      "too_long": true
+      "too_long": false
     },
     {
       "offset": 7689945,
@@ -63632,14 +63632,14 @@
     {
       "offset": 7864335,
       "original_text": "erful, <0xFD><0x01>.<0xFB>Just wait until the next time we\nmeet.<0xFB>By then, I'll be tough enough to\nmake you feel defeat at my hands!<0xFB>Now, if you'll excuse me, I have\nimportant things to do.",
-      "translation": "redoutable, <0xFD><0x01>.<0xFB>Attends un peu notre prochaine\nrencontre.<0xFB>D'ici là, je serai assez fort pour\nte faire goûter à la défaite !<0xFB>Maintenant, excuse-moi, j'ai des\nchoses importantes à faire.",
-      "length": 184,
+      "translation": "redoutable, <0xFD><0x01>.<0xFB>Attends un peu notre prochaine\nrencontre.<0xFB>D'ici là, je serai assez fort\npour te vaincre !<0xFB>Sur ce, excuse-moi, j'ai des\nchoses importantes à faire.",
+      "length": 162,
       "original_length": 173,
       "padding_used": 11,
       "encoding": "pokemon",
       "category": "dialogue",
       "notes": "",
-      "too_long": true
+      "too_long": false
     },
     {
       "offset": 7864509,
@@ -63656,14 +63656,14 @@
     {
       "offset": 7864601,
       "original_text": "run myself!<0xFB>It's just that\"well\"when your\nparents left you with me, they<0xFA>asked that I watch over you until<0xFA>you were at least 18 years old\"",
-      "translation": "faire moi-même !<0xFB>C'est juste que... eh bien... quand\ntes parents m'ont confié ta garde,<0xFA>ils m'ont demandé de veiller sur<0xFA>toi jusqu'à tes 18 ans au moins...",
-      "length": 155,
+      "translation": "faire moi-même !<0xFB>C'est que... eh bien... quand tes\nparents t'ont confié à moi,<0xFA>j'ai promis de veiller sur toi<0xFA>jusqu'à tes 18 ans...",
+      "length": 131,
       "original_length": 138,
       "padding_used": 17,
       "encoding": "pokemon",
       "category": "dialogue",
       "notes": "",
-      "too_long": true
+      "too_long": false
     },
     {
       "offset": 7864740,
@@ -64844,14 +64844,14 @@
     {
       "offset": 7901072,
       "original_text": "Oh, wait.<0xFB>Looks like I won't be battlin' you,\nanymore.<0xFB>You're gonna need more than one\nPokémon if you wanna to take me<0xFA>on\"",
-      "translation": "Oh, attends.<0xFB>On dirait que je ne vais plus me\nbattre contre toi, .<0xFB>Tu vas avoir besoin de plus d'un\nPokémon si tu veux m'emmener<0xFA>sur...",
-      "length": 135,
+      "translation": "Oh, attends.<0xFB>On dirait que je ne me battrai\nplus contre toi.<0xFB>Il te faudra plus d'un Pokémon\nsi tu veux m'affronter...",
+      "length": 117,
       "original_length": 122,
       "padding_used": 13,
       "encoding": "pokemon",
       "category": "dialogue",
       "notes": "",
-      "too_long": true
+      "too_long": false
     },
     {
       "offset": 7901195,
@@ -91124,44 +91124,44 @@
     {
       "offset": 9579242,
       "original_text": "Boosts speed in Hail.",
-      "translation": "Booste la Vitesse sous la Grêle.",
-      "length": 32,
+      "translation": "Vitesse + sous grêle.",
+      "length": 21,
       "original_length": 21,
       "padding_used": 11,
       "encoding": "pokemon",
       "category": "other",
       "notes": "",
-      "too_long": true
+      "too_long": false
     },
     {
       "offset": 9579264,
       "original_text": "Knockouts boost Sp. Atk.",
-      "translation": "Les K.O. boostent l'Att. Spé.",
-      "length": 29,
+      "translation": "Atq. Spé. + par K.O.",
+      "length": 20,
       "original_length": 24,
       "padding_used": 5,
       "encoding": "pokemon",
       "category": "other",
       "notes": "",
-      "too_long": true
+      "too_long": false
     },
     {
       "offset": 9579289,
       "original_text": "Taking a hit raises Defense.",
-      "translation": "Prendre un coup hausse la Défense.",
-      "length": 34,
+      "translation": "Subir un coup monte la Déf.",
+      "length": 27,
       "original_length": 28,
       "padding_used": 6,
       "encoding": "pokemon",
       "category": "other",
       "notes": "",
-      "too_long": true
+      "too_long": false
     },
     {
       "offset": 9579318,
       "original_text": "Powers up Steel-type moves.",
-      "translation": "Renforce les capacités Acier.",
-      "length": 29,
+      "translation": "Booste les attaques Acier.",
+      "length": 26,
       "original_length": 27,
       "padding_used": 2,
       "encoding": "pokemon",
@@ -91208,38 +91208,38 @@
     {
       "offset": 9579809,
       "original_text": " Reverses stats changes.",
-      "translation": "Inverse les changements de stats.",
-      "length": 33,
+      "translation": " Inverse les modifs.",
+      "length": 20,
       "original_length": 24,
       "padding_used": 9,
       "encoding": "pokemon",
       "category": "other",
       "notes": "",
-      "too_long": true
+      "too_long": false
     },
     {
       "offset": 9579915,
       "original_text": "Halves weight.",
-      "translation": "Divise le poids.",
-      "length": 16,
+      "translation": "Poids: moitié.",
+      "length": 14,
       "original_length": 14,
       "padding_used": 2,
       "encoding": "pokemon",
       "category": "location",
       "notes": "",
-      "too_long": true
+      "too_long": false
     },
     {
       "offset": 9579930,
       "original_text": "Flinching raises Speed.",
-      "translation": "Les flinchs augmentent la Vitesse.",
-      "length": 34,
+      "translation": "Peur subie: Vitesse +",
+      "length": 21,
       "original_length": 23,
       "padding_used": 11,
       "encoding": "pokemon",
       "category": "location",
       "notes": "",
-      "too_long": true
+      "too_long": false
     },
     {
       "offset": 9580112,
@@ -91304,8 +91304,8 @@
     {
       "offset": 9632714,
       "original_text": "Electric Surge",
-      "translation": "Champ Électrique",
-      "length": 16,
+      "translation": "Créa-Élec",
+      "length": 9,
       "original_length": 14,
       "padding_used": 2,
       "encoding": "pokemon",
@@ -94688,14 +94688,14 @@
     {
       "offset": 10703908,
       "original_text": "Hurts to touch.",
-      "translation": "Ça fait mal au toucher.",
-      "length": 23,
+      "translation": "Mal au contact.",
+      "length": 15,
       "original_length": 15,
       "padding_used": 8,
       "encoding": "pokemon",
       "category": "location",
       "notes": "",
-      "too_long": true
+      "too_long": false
     },
     {
       "offset": 10703924,
@@ -95744,14 +95744,14 @@
     {
       "offset": 10706383,
       "original_text": "Blocks priority moves.",
-      "translation": "Bloque les attaques prioritaires.",
-      "length": 33,
+      "translation": "Bloque la priorité.",
+      "length": 19,
       "original_length": 22,
       "padding_used": 11,
       "encoding": "pokemon",
       "category": "location",
       "notes": "",
-      "too_long": true
+      "too_long": false
     },
     {
       "offset": 10706406,
@@ -98804,14 +98804,14 @@
     {
       "offset": 10711400,
       "original_text": "Portal Power",
-      "translation": "Puissance du Portail",
-      "length": 20,
+      "translation": "Pouvoir Portail",
+      "length": 15,
       "original_length": 12,
       "padding_used": 8,
       "encoding": "pokemon",
       "category": "location",
       "notes": "",
-      "too_long": true
+      "too_long": false
     },
     {
       "offset": 10711417,
@@ -118688,8 +118688,8 @@
     {
       "offset": 10808069,
       "original_text": "Ghost",
-      "translation": "Fantôme",
-      "length": 7,
+      "translation": "Spectr",
+      "length": 6,
       "original_length": 5,
       "padding_used": 2,
       "encoding": "pokemon",
@@ -118748,14 +118748,14 @@
     {
       "offset": 10808111,
       "original_text": "Electr",
-      "translation": "Electrique",
-      "length": 10,
+      "translation": "Électr",
+      "length": 6,
       "original_length": 6,
       "padding_used": 4,
       "encoding": "pokemon",
       "category": "other",
       "notes": "",
-      "too_long": true
+      "too_long": false
     },
     {
       "offset": 10808118,
@@ -149048,14 +149048,14 @@
     {
       "offset": 32428467,
       "original_text": " Costume Box",
-      "translation": "Boîte à costumes",
-      "length": 16,
+      "translation": " Garde-robe",
+      "length": 11,
       "original_length": 12,
       "padding_used": 4,
       "encoding": "pokemon",
       "category": "other",
       "notes": "",
-      "too_long": true
+      "too_long": false
     },
     {
       "offset": 32428480,
@@ -150824,8 +150824,8 @@
     {
       "offset": 32443495,
       "original_text": " Crystal Peak",
-      "translation": "Pic de cristal",
-      "length": 14,
+      "translation": " Pic Cristal",
+      "length": 12,
       "original_length": 13,
       "padding_used": 1,
       "encoding": "pokemon",
@@ -168080,8 +168080,8 @@
     {
       "offset": 32583667,
       "original_text": " Grim Woods",
-      "translation": "Forêt Lugubre",
-      "length": 13,
+      "translation": " Bois Noir",
+      "length": 10,
       "original_length": 11,
       "padding_used": 2,
       "encoding": "pokemon",
@@ -179924,38 +179924,38 @@
     {
       "offset": 32688986,
       "original_text": "Light of Ruin",
-      "translation": "Lumière de la Ruine",
-      "length": 19,
+      "translation": "Lumière Ruine",
+      "length": 13,
       "original_length": 13,
       "padding_used": 6,
       "encoding": "pokemon",
       "category": "location",
       "notes": "",
-      "too_long": true
+      "too_long": false
     },
     {
       "offset": 32689000,
       "original_text": "Light of Ruin Admin",
-      "translation": "Admin de la Lumière de la Ruine",
-      "length": 31,
+      "translation": "Admin Lumière Ruine",
+      "length": 19,
       "original_length": 19,
       "padding_used": 12,
       "encoding": "pokemon",
       "category": "other",
       "notes": "",
-      "too_long": true
+      "too_long": false
     },
     {
       "offset": 32689020,
       "original_text": "Light of Ruin Leader",
-      "translation": "Chef de la Lumière de la Ruine",
-      "length": 30,
+      "translation": "Chef Lumière Ruine",
+      "length": 18,
       "original_length": 20,
       "padding_used": 10,
       "encoding": "pokemon",
       "category": "other",
       "notes": "",
-      "too_long": true
+      "too_long": false
     },
     {
       "offset": 32689041,
@@ -182228,20 +182228,20 @@
     {
       "offset": 32709818,
       "original_text": "Tch\" maybe I'm more out of\npractice than I realized\"",
-      "translation": "Tch... je suis peut-être plus rouillé\nque je ne le pensais...",
-      "length": 61,
+      "translation": "Tch... je suis plus rouillé\nque je ne le pensais...",
+      "length": 51,
       "original_length": 52,
       "padding_used": 9,
       "encoding": "pokemon",
       "category": "dialogue",
       "notes": "",
-      "too_long": true
+      "too_long": false
     },
     {
       "offset": 32709871,
       "original_text": "I'm sorry, Marlon, sir!",
-      "translation": "Désolé, Marlon, monsieur !",
-      "length": 26,
+      "translation": "Désolé, M. Marlon !",
+      "length": 19,
       "original_length": 23,
       "padding_used": 3,
       "encoding": "pokemon",
@@ -183500,26 +183500,26 @@
     {
       "offset": 32723696,
       "original_text": "Curses\"<0xFB>Scientists, activate\nthe backup plan, now!",
-      "translation": "Maudits...<0xFB>Scientifiques, activez le plan de\nsecours, maintenant !",
-      "length": 66,
+      "translation": "Maudits...<0xFB>Scientifiques, vite,\nle plan B !",
+      "length": 43,
       "original_length": 50,
       "padding_used": 16,
       "encoding": "pokemon",
       "category": "dialogue",
       "notes": "",
-      "too_long": true
+      "too_long": false
     },
     {
       "offset": 32723747,
       "original_text": "I'm sorry I failed you, ma'am!",
-      "translation": "Désolé de vous décevoir, madame !",
-      "length": 33,
+      "translation": "Navré de vous décevoir, madame",
+      "length": 30,
       "original_length": 30,
       "padding_used": 3,
       "encoding": "pokemon",
       "category": "dialogue",
       "notes": "",
-      "too_long": true
+      "too_long": false
     },
     {
       "offset": 32723778,
@@ -186692,14 +186692,14 @@
     {
       "offset": 32759353,
       "original_text": "No\"\nNot again\"",
-      "translation": "Non... Encore\nune fois...",
-      "length": 25,
+      "translation": "Non,\npas ça...",
+      "length": 14,
       "original_length": 14,
       "padding_used": 11,
       "encoding": "pokemon",
       "category": "location",
       "notes": "",
-      "too_long": true
+      "too_long": false
     },
     {
       "offset": 32759368,
@@ -186812,14 +186812,14 @@
     {
       "offset": 32760042,
       "original_text": "ving been\noverwhelmed by sheer numbers.<0xFB>But supposing one had the means to\nreawaken and control it\"",
-      "translation": "submergé par le nombre, il fut\nvaincu.<0xFB>Mais imagine que quelqu'un ait les\nmoyens de le réveiller et de le<0xFA>contrôler...",
-      "length": 118,
+      "translation": "submergé par le nombre, il fut\nvaincu.<0xFB>Mais si quelqu'un pouvait le\nréveiller et le contrôler...",
+      "length": 96,
       "original_length": 99,
       "padding_used": 19,
       "encoding": "pokemon",
       "category": "description",
       "notes": "",
-      "too_long": true
+      "too_long": false
     },
     {
       "offset": 32760142,
@@ -186968,14 +186968,14 @@
     {
       "offset": 32761328,
       "original_text": "n?<0xFB>They must have been dropped when\nGroudon used that attack\"<0xFB>What now\"<0xFC><0x08><0x18> my own Pokémon are too\nbadly hurt to take that thing on\"!",
-      "translation": "...?<0xFB>Ils ont dû tomber quand Groudon a\nlancé cette attaque...<0xFB>Et maintenant...<0xFC><0x08><0x18> mes propres Pokémon\nsont trop blessés pour affronter<0xFA>cette chose... !",
-      "length": 151,
+      "translation": "...?<0xFB>Ils ont dû tomber quand Groudon\na lancé son attaque...<0xFB>Et là...<0xFC><0x08><0x18> mes Pokémon sont trop\nblessés pour affronter ça... !",
+      "length": 124,
       "original_length": 132,
       "padding_used": 19,
       "encoding": "pokemon",
       "category": "dialogue",
       "notes": "",
-      "too_long": true
+      "too_long": false
     },
     {
       "offset": 32761461,
@@ -203480,14 +203480,14 @@
     {
       "offset": 32896787,
       "original_text": "tle brought such joy\nto my heart.<0xFB>Please, take these Wings as a show\nof my gratitude!",
-      "translation": "...combat m'a apporté tant\nde joie.<0xFB>Je t'en prie, accepte ces Ailes en\ngage de ma gratitude !",
-      "length": 93,
+      "translation": "...combat m'a apporté tant\nde joie.<0xFB>Accepte ces Ailes en gage\nde ma gratitude !",
+      "length": 79,
       "original_length": 85,
       "padding_used": 8,
       "encoding": "pokemon",
       "category": "dialogue",
       "notes": "",
-      "too_long": true
+      "too_long": false
     },
     {
       "offset": 32896873,
@@ -232100,14 +232100,14 @@
     {
       "offset": 33114604,
       "original_text": "Frontier Brain",
-      "translation": "Cerveau de Frontière",
-      "length": 20,
+      "translation": "Meneur de Zone",
+      "length": 14,
       "original_length": 14,
       "padding_used": 6,
       "encoding": "pokemon",
       "category": "location",
       "notes": "",
-      "too_long": true
+      "too_long": false
     },
     {
       "offset": 33114619,
@@ -238964,14 +238964,14 @@
     {
       "offset": 33148663,
       "original_text": "My brother's small, so there's no\nway he could have gone far.<0xFB>My bet is he's somewhere on\n<0xFC><0x01><0x06>Route 8<0xFC><0x01><0x04> right about now.<0xFB>And last I saw, he was wearing his\nfavourite <0xFC><0x01><0x06>Pikachu costume<0xFC><0x01><0x04>.",
-      "translation": "Mon petit frère est tout petit, il\nn'a pas pu aller bien loin.<0xFB>Je parie qu'il est quelque part sur\nla <0xFC><0x01><0x06>Route 8<0xFC><0x01><0x04> en ce moment.<0xFB>Et la dernière fois que je l'ai vu,\nil portait son costume<0xFA><0xFC><0x01><0x06>Pikachu<0xFC><0x01><0x04> préféré.",
-      "length": 211,
+      "translation": "Mon petit frère est tout petit, il\nn'a pas pu aller bien loin.<0xFB>Je parie qu'il est quelque part sur\nla <0xFC><0x01><0x06>Route 8<0xFC><0x01><0x04> en ce moment.<0xFB>Il portait son costume<0xFA><0xFC><0x01><0x06>Pikachu<0xFC><0x01><0x04> préféré.",
+      "length": 175,
       "original_length": 188,
       "padding_used": 23,
       "encoding": "pokemon",
       "category": "dialogue",
       "notes": "",
-      "too_long": true
+      "too_long": false
     },
     {
       "offset": 33148852,
@@ -239084,14 +239084,14 @@
     {
       "offset": 33149431,
       "original_text": " follow you there.",
-      "translation": " Je te suivrai là-bas.",
-      "length": 22,
+      "translation": " Je t'y suivrai.",
+      "length": 16,
       "original_length": 18,
       "padding_used": 4,
       "encoding": "pokemon",
       "category": "dialogue",
       "notes": "suffix string composed in scripts; leading space significant",
-      "too_long": true
+      "too_long": false
     },
     {
       "offset": 33149450,
@@ -241232,14 +241232,14 @@
     {
       "offset": 33169141,
       "original_text": "Black Ferrothorn Boss",
-      "translation": "Chef du Black Ferrothorn",
-      "length": 24,
+      "translation": "Chef Black Ferrothorn",
+      "length": 21,
       "original_length": 21,
       "padding_used": 3,
       "encoding": "pokemon",
       "category": "location",
       "notes": "",
-      "too_long": true
+      "too_long": false
     },
     {
       "offset": 33169163,
@@ -243632,14 +243632,14 @@
     {
       "offset": 33191559,
       "original_text": " Home for a Hobo",
-      "translation": "Un toit pour un sans-abri",
-      "length": 25,
+      "translation": " Un toit à soi",
+      "length": 14,
       "original_length": 16,
       "padding_used": 9,
       "encoding": "pokemon",
       "category": "other",
       "notes": "",
-      "too_long": true
+      "too_long": false
     },
     {
       "offset": 33191576,
@@ -244412,14 +244412,14 @@
     {
       "offset": 33197875,
       "original_text": "The Seaport Burglar Society fights\nwith honour!<0xFB>We won't challenge you if you don't\nhave enough Pokémon.",
-      "translation": "La Société des Cambrioleurs de Ville\nPortuaire se bat avec honneur ! Nous<0xFB>ne vous défierons pas si vous n'avez\npas assez de Pokémon.",
-      "length": 132,
+      "translation": "Les Cambrioleurs du Port se\nbattent avec honneur !<0xFB>Pas de défi si vous n'avez\npas assez de Pokémon.",
+      "length": 99,
       "original_length": 104,
       "padding_used": 28,
       "encoding": "pokemon",
       "category": "dialogue",
       "notes": "",
-      "too_long": true
+      "too_long": false
     },
     {
       "offset": 33197980,
@@ -244544,14 +244544,14 @@
     {
       "offset": 33198525,
       "original_text": "Not much help\"",
-      "translation": "Pas d'une grande aide...",
-      "length": 24,
+      "translation": "Peu utile...",
+      "length": 12,
       "original_length": 14,
       "padding_used": 10,
       "encoding": "pokemon",
       "category": "location",
       "notes": "",
-      "too_long": true
+      "too_long": false
     },
     {
       "offset": 33198540,
@@ -244568,14 +244568,14 @@
     {
       "offset": 33198594,
       "original_text": "We showed up to help these burglars\naround here.<0xFB>But they don't need help against\nsomeone with as few Pokémon as<0xFA>you!",
-      "translation": "Nous sommes venus aider ces\ncambrioleurs du<0xFB>coin. Mais ils n'ont\npas besoin d'aide contre quelqu'un<0xFA>avec aussi peu de Pokémon que toi !",
-      "length": 135,
+      "translation": "On est venus aider les\ncambrioleurs du coin.<0xFB>Mais pas besoin d'aide contre\nquelqu'un avec si peu de Pokémon !",
+      "length": 109,
       "original_length": 117,
       "padding_used": 18,
       "encoding": "pokemon",
       "category": "dialogue",
       "notes": "",
-      "too_long": true
+      "too_long": false
     },
     {
       "offset": 33198712,
@@ -246536,14 +246536,14 @@
     {
       "offset": 33213325,
       "original_text": "Science Society",
-      "translation": "Société Scientifique",
-      "length": 20,
+      "translation": "Cercle Science",
+      "length": 14,
       "original_length": 15,
       "padding_used": 5,
       "encoding": "pokemon",
       "category": "location",
       "notes": "",
-      "too_long": true
+      "too_long": false
     },
     {
       "offset": 33213341,
