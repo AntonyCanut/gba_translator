@@ -84,6 +84,8 @@ SPACE_WIDTH = GLYPH_WIDTHS[0x00]
 _TOKEN_RE = re.compile(r'<0x([0-9A-Fa-f]{2})>')
 _BREAK_RE = re.compile(r'<0xF[ABab]>|\n')
 _SEGMENT_SPLIT = re.compile(r'(<0xF[ABab]>)')
+_PAGE_SPLIT = re.compile(r'(<0xF[Bb]>)')
+_SCROLL_RE = re.compile(r'<0xF[Aa]>')
 _STRUCT_RE = re.compile(r'<0xF[ABab]>')
 _BLANK_RUN_SPLIT = re.compile(r'(\n{2,})')
 _SCROLL = '<0xFA>'
@@ -418,20 +420,34 @@ def rewrap_multiline(text: str, reference: str) -> str:
 def rewrap(text: str, max_width: int = DEFAULT_MAX_LINE_WIDTH) -> str:
     """Re-balance line breaks across every display segment of ``text``.
 
-    Structural codes (``<0xFA>``/``<0xFB>``) delimit segments and are
-    kept in place. Word order and wording are preserved; only the break
-    positions (and, when unavoidable, the break count) change. Texts
-    without any break are returned untouched.
+    Only ``<0xFB>`` (page: wait + clear the window) is a hard boundary —
+    it paces the dialogue and is kept in place. ``<0xFA>`` scrolls are
+    mechanical: the box shows two lines, so their positions follow from
+    the wrapping. Inside a page they are dissolved into ordinary breaks
+    and the words re-flowed greedily across them, otherwise a 3+ line
+    message keeps short lines on both sides of every inherited scroll.
+    ``normalize_breaks`` then re-emits the canonical ``\n``/scroll
+    structure. Pages holding a ``<0xFD>`` runtime buffer keep their
+    scroll positions: the buffer can render wider than its estimate, so
+    words must not be pulled across its boundary. Word order and wording
+    are preserved; texts without any break are returned untouched.
     """
     if not _BREAK_RE.search(text):
         return text
     text = collapse_empty_breaks(text)
-    parts = _SEGMENT_SPLIT.split(text)
-    rewrapped = ''.join(
-        part if _SEGMENT_SPLIT.fullmatch(part) else rewrap_segment(part, max_width)
-        for part in parts
-    )
-    return normalize_breaks(rewrapped)
+    out: List[str] = []
+    for page in _PAGE_SPLIT.split(text):
+        if _PAGE_SPLIT.fullmatch(page):
+            out.append(page)
+        elif '<0xFD>' not in page:
+            out.append(rewrap_segment(_SCROLL_RE.sub('\n', page), max_width))
+        else:
+            out.append(''.join(
+                part if _SEGMENT_SPLIT.fullmatch(part)
+                else rewrap_segment(part, max_width)
+                for part in _SEGMENT_SPLIT.split(page)
+            ))
+    return normalize_breaks(''.join(out))
 
 
 def line_widths(text: str) -> List[int]:

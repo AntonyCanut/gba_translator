@@ -73,6 +73,44 @@ class RewrapTests(unittest.TestCase):
                 f'line {current!r} broke early: {first_next!r} still fits',
             )
 
+    def test_fills_across_inherited_scroll(self):
+        # In-game: "comme le type Fée" / "faible au Poison ?" both sat at
+        # half the box width because the inherited <0xFA> was treated as
+        # a hard boundary. Scroll positions are mechanical (the box shows
+        # two lines); words must flow across them so every line fills to
+        # the edge, like in a plain two-line dialogue.
+        from src.core.dialogue_linewrap import SPACE_WIDTH, word_width
+        text = (
+            'Connais-tu les\nfaiblesses types, comme le type Fée'
+            '<0xFA>faible au Poison ?'
+        )
+        result = rewrap(text)
+        lines = result.replace('<0xFA>', '\n').split('\n')
+        for current, following in zip(lines, lines[1:]):
+            first_next = following.split(' ')[0]
+            self.assertGreater(
+                line_width(current) + SPACE_WIDTH + word_width(first_next),
+                DEFAULT_MAX_LINE_WIDTH,
+                f'line {current!r} broke early: {first_next!r} still fits',
+            )
+
+    def test_page_break_is_a_hard_boundary(self):
+        # <0xFB> pauses and clears the window: words must never flow
+        # across it, even when the page before it is nearly empty.
+        result = rewrap('Oui.\nBon.<0xFB>On y va dès maintenant ?')
+        self.assertIn('Bon.<0xFB>On', result)
+
+    def test_buffer_page_keeps_scroll_boundaries(self):
+        # A page with a runtime buffer keeps its conservative per-scroll
+        # layout: the buffer may render wider than estimated, so words
+        # must not be pulled across its scroll boundary.
+        text = (
+            'Le <0xFD><0x01> attaque\nsans attendre !'
+            '<0xFA>Que faire ?'
+        )
+        result = rewrap(text)
+        self.assertIn('!<0xFA>Que faire ?', result)
+
     def test_reduces_three_lines_to_fewest(self):
         # Three inherited breaks, content fits two lines: the extra
         # scroll disappears with the merge.
