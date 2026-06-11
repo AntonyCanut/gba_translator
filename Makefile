@@ -110,6 +110,7 @@ build-fr: $(ENGLISH_EXTRACT) $(SPANISH_EXTRACT) $(BUILD_SCRIPT)
 		--language french \
 		--allow-relocate \
 		--allow-fallback \
+		--pointer-proof-rom $(SPANISH_ROM) \
 		--output $(FR_BUILD)
 	@$(PYTHON) $(PATCH_FONT_FR_SCRIPT) --rom $(FR_BUILD)
 	@$(PYTHON) $(INLINE_FR_SCRIPT) \

@@ -79,6 +79,7 @@ class BuildConfig:
     allow_truncate: bool = False
     allow_relocate: bool = False
     allow_fallback: bool = False
+    pointer_proof_rom: Optional[Path] = None
     copy_reference_texts: bool = False
     copy_pointer_tables: bool = False
     copy_text_pointers: bool = False
@@ -100,6 +101,9 @@ class BuildConfig:
 
         if self.offset_map and not self.offset_map.exists():
             return False, f"Offset map not found: {self.offset_map}"
+
+        if self.pointer_proof_rom and not self.pointer_proof_rom.exists():
+            return False, f"Pointer-proof ROM not found: {self.pointer_proof_rom}"
         
         if not self.reference_rom and not self.translations_json:
             return False, "Must provide either reference ROM or translations JSON"
@@ -169,6 +173,14 @@ class TranslatedROMBuilder:
         self.offset_map = []
         self.offset_map_stats = {}
         self.reinserter_reports = {}
+        self._pointer_proof_data = None
+
+    def _pointer_proof_bytes(self):
+        if self.config.pointer_proof_rom is None:
+            return None
+        if self._pointer_proof_data is None:
+            self._pointer_proof_data = self.config.pointer_proof_rom.read_bytes()
+        return self._pointer_proof_data
 
     CONTROL_TOKEN_RE = re.compile(r'<0x([0-9A-Fa-f]{2})>')
     COLOR_MARKER_RE = re.compile(r'\{COLOR\}([A-Za-zÀ-ÿ])')
@@ -1172,6 +1184,7 @@ class TranslatedROMBuilder:
             allow_truncate=self.config.allow_truncate,
             allow_relocate=self.config.allow_relocate,
             allow_fallback=self.config.allow_fallback,
+            pointer_proof_rom=self._pointer_proof_bytes(),
         )
 
         for i, translation in enumerate(translations, start=1):
@@ -1228,6 +1241,7 @@ class TranslatedROMBuilder:
             allow_truncate=self.config.allow_truncate,
             allow_relocate=self.config.allow_relocate,
             allow_fallback=self.config.allow_fallback,
+            pointer_proof_rom=self._pointer_proof_bytes(),
         )
 
         for i, translation in enumerate(translations, start=1):
@@ -1286,6 +1300,7 @@ class TranslatedROMBuilder:
             allow_truncate=self.config.allow_truncate,
             allow_relocate=self.config.allow_relocate,
             allow_fallback=self.config.allow_fallback,
+            pointer_proof_rom=self._pointer_proof_bytes(),
         )
 
         for i, translation in enumerate(translations, start=1):
@@ -1342,6 +1357,7 @@ class TranslatedROMBuilder:
             'allow_truncate': self.config.allow_truncate,
             'allow_relocate': self.config.allow_relocate,
             'allow_fallback': self.config.allow_fallback,
+            'pointer_proof_rom': str(self.config.pointer_proof_rom) if self.config.pointer_proof_rom else None,
             'copy_reference_texts': self.config.copy_reference_texts,
             'copy_pointer_tables': self.config.copy_pointer_tables,
             'copy_text_pointers': self.config.copy_text_pointers,
@@ -1450,6 +1466,10 @@ Examples:
     parser.add_argument('--allow-fallback', action='store_true',
                        help='Synthesize a shorter in-place French variant for '
                             'too-long texts instead of leaving English behind')
+    parser.add_argument('--pointer-proof-rom', type=Path,
+                       help='Translated ROM of the same base (e.g. the Spanish '
+                            'hack): pointer sites it rewrote are proven real '
+                            'and accepted for relocation')
     parser.add_argument('--copy-reference-texts', action='store_true',
                        help='Copy all reference text bytes at their offsets')
     parser.add_argument('--copy-pointer-tables', action='store_true',
@@ -1469,6 +1489,7 @@ Examples:
         allow_truncate=args.allow_truncate,
         allow_relocate=args.allow_relocate,
         allow_fallback=args.allow_fallback,
+        pointer_proof_rom=args.pointer_proof_rom,
         copy_reference_texts=args.copy_reference_texts,
         copy_pointer_tables=args.copy_pointer_tables,
         copy_text_pointers=args.copy_text_pointers,

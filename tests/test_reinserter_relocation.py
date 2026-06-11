@@ -65,5 +65,75 @@ class ReinserterRelocationTests(unittest.TestCase):
         self.assertEqual(alloc, 0x1000 + FreeSpaceAllocator.RUN_MARGIN)
 
 
+class PlausiblePointerSiteTests(unittest.TestCase):
+    """The site filter must accept every real script shape seen in Unbound
+    and keep rejecting Thumb-code false positives (writing those crashed
+    the battle engine)."""
+
+    STRING_OFFSET = 0x200
+
+    def _rom_with_site(self, before: bytes, site_align: int = 1) -> tuple:
+        rom = bytearray([0xAB] * 0x400)
+        site = 0x100 + site_align
+        site -= (site - len(before)) % 4 == 0 and 0  # keep explicit
+        rom[site - len(before):site] = before
+        rom[site:site + 4] = struct.pack('<I', 0x08000000 + self.STRING_OFFSET)
+        return rom, site
+
+    def _kept(self, rom, site, **kwargs):
+        reinserter = SmartReinserter(rom, allow_relocate=True, **kwargs)
+        return reinserter._plausible_pointer_sites(self.STRING_OFFSET, [site])
+
+    def test_aligned_site_accepted(self):
+        rom, _ = self._rom_with_site(b'')
+        site = 0x104  # aligned
+        rom[site:site + 4] = struct.pack('<I', 0x08000000 + self.STRING_OFFSET)
+        self.assertEqual(self._kept(rom, site), [site])
+
+    def test_preparemsg_pointer_follows_opcode_immediately(self):
+        # Script shape is `67 <ptr>` — NOT `67 00 <ptr>`. The old filter
+        # required the latter and rejected every preparemsg dialogue,
+        # which then got truncated in place ("Choisis une couleur de").
+        rom, site = self._rom_with_site(b'\x67')
+        self.assertEqual(self._kept(rom, site), [site])
+
+    def test_loadpointer_and_bufferstring_accepted(self):
+        rom, site = self._rom_with_site(b'\x0F\x00')
+        self.assertEqual(self._kept(rom, site), [site])
+        rom, site = self._rom_with_site(b'\x85\x01')
+        self.assertEqual(self._kept(rom, site), [site])
+
+    def test_battle_script_setword_to_ewram_accepted(self):
+        # CFRU battle strings: setword gBattleStringLoader(0x0203C020), <text>
+        rom, site = self._rom_with_site(struct.pack('<I', 0x0203C020))
+        self.assertEqual(self._kept(rom, site), [site])
+
+    def test_random_ewram_looking_word_outside_range_rejected(self):
+        rom, site = self._rom_with_site(struct.pack('<I', 0x02080000))
+        self.assertEqual(self._kept(rom, site), [])
+
+    def test_thumb_code_false_positive_rejected(self):
+        # `20 78 40 <ptr-looking bytes>` was a real false positive: code
+        # whose bytes happened to equal the string address.
+        rom, site = self._rom_with_site(b'\x20\x78\x40')
+        self.assertEqual(self._kept(rom, site), [])
+
+    def test_proof_rom_repointed_site_accepted(self):
+        rom, site = self._rom_with_site(b'\xAA\xBB')
+        self.assertEqual(self._kept(rom, site), [])  # no proof: rejected
+        proof = bytes(rom[:site]) + struct.pack('<I', 0x08000300) + bytes(rom[site + 4:])
+        self.assertEqual(self._kept(rom, site, pointer_proof_rom=proof), [site])
+
+    def test_proof_rom_identical_value_is_not_proof(self):
+        rom, site = self._rom_with_site(b'\xAA\xBB')
+        self.assertEqual(self._kept(rom, site, pointer_proof_rom=bytes(rom)), [])
+
+    def test_proof_rom_non_pointer_value_is_not_proof(self):
+        rom, site = self._rom_with_site(b'\xAA\xBB')
+        proof = bytearray(rom)
+        proof[site:site + 4] = struct.pack('<I', 0x12345678)
+        self.assertEqual(self._kept(rom, site, pointer_proof_rom=bytes(proof)), [])
+
+
 if __name__ == '__main__':
     unittest.main()
