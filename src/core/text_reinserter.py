@@ -13,17 +13,45 @@ from .fallback_translator import FallbackSynthesizer
 
 
 class FreeSpaceAllocator:
-    """Allocate free space from padding bytes inside the ROM."""
+    """Allocate free space from padding bytes inside the ROM.
+
+    Only large runs of 0xFF qualify as free space. Short 0xFF/0x00 runs are
+    routinely *live data* — 0xFF sentinel arrays in code literal pools,
+    zero-valued struct fields in sprite/animation tables, alignment gaps —
+    and allocating from them corrupted the battle engine (strings written
+    over battle-transition data caused a hard reset at battle start).
+    """
+
+    # Runs shorter than this are considered data, never free space. The
+    # live 0xFF-sentinel arrays / zero-filled struct fields observed in the
+    # Unbound ROM (whose corruption crashed the battle engine) all sit in
+    # runs under ~256 bytes; genuine free space comes in 1KB+ runs
+    # (~880KB below 0x1000000, for ~710KB of relocated text).
+    MIN_FREE_RUN = 1024
+    # Ranges never allocated even when they look free.
+    # - 0x230000-0x500000: battle animations / sprite graphics. 0xFF runs up
+    #   to several KB there are padded graphic blocks; overwriting them made
+    #   the battle transition crash to a hard reset (prologue guard fight).
+    # - 0x1000000-0x1FE0000: CFRU/Unbound reserves upper-ROM 0xFF gaps for
+    #   its own dynamically inserted data; writing strings there blanked the
+    #   post-prologue tutorial scene.
+    EXCLUDE_RANGES = [(0x230000, 0x500000), (0x1000000, 0x1FE0000)]
+    # Bytes kept untouched at both ends of a run: the leading 0xFF often
+    # terminates the preceding structure and trailing 0xFF can be the
+    # sentinel of the following one.
+    RUN_MARGIN = 8
+    # A block remainder smaller than this is dropped instead of reused.
+    MIN_REMAINDER = 16
 
     def __init__(
         self,
         rom_data: bytearray,
-        min_block: int = 16,
+        min_block: int = MIN_FREE_RUN,
         padding_bytes: Optional[List[int]] = None,
         start_offset: int = 0x100,
     ):
         self.rom_data = rom_data
-        self.min_block = max(1, min_block)
+        self.min_block = max(self.MIN_FREE_RUN, min_block)
         self.padding_bytes = set(padding_bytes or [0xFF])
         self.start_offset = max(0, start_offset)
         self.blocks = self._scan_blocks()
@@ -41,11 +69,22 @@ class FreeSpaceAllocator:
                 i += 1
                 while i < n and data[i] in self.padding_bytes:
                     i += 1
-                # The first padding byte of a run is usually the terminator
-                # of the preceding string: never allocate over it.
-                length = i - start - 1
-                if length >= self.min_block:
-                    blocks.append([start + 1, length])
+                # Carve the excluded ranges out of the run, then keep the
+                # remaining segments that are still large enough.
+                segments = [(start, i)]
+                for lo, hi in self.EXCLUDE_RANGES:
+                    carved = []
+                    for s, e in segments:
+                        if s < lo:
+                            carved.append((s, min(e, lo)))
+                        if e > hi:
+                            carved.append((max(s, hi), e))
+                    segments = carved
+                for s, e in segments:
+                    seg = e - s
+                    length = seg - 2 * self.RUN_MARGIN
+                    if seg >= self.min_block and length > 0:
+                        blocks.append([s + self.RUN_MARGIN, length])
             else:
                 i += 1
         return blocks
@@ -59,7 +98,7 @@ class FreeSpaceAllocator:
                 alloc = start
                 new_start = start + size
                 new_length = length - size
-                if new_length >= self.min_block:
+                if new_length >= self.MIN_REMAINDER:
                     self.blocks[idx] = [new_start, new_length]
                     self.index = idx
                 else:
@@ -118,6 +157,7 @@ class SmartReinserter:
             'truncated': 0,
             'fallback_used': 0,
             'skipped_too_long': 0,
+            'pointer_sites_rejected': 0,
             'failures': 0,
             'warnings': []
         }
@@ -190,6 +230,40 @@ class SmartReinserter:
         pointer_value = 0x08000000 + target_offset
         self.rom_data[pointer_offset:pointer_offset + 4] = struct.pack('<I', pointer_value)
         return True
+
+    def _plausible_pointer_sites(self, offset: int, sites: List[int]) -> List[int]:
+        """Keep only pointer sites that can really reference this string.
+
+        The extraction's ``pointer_offsets`` are raw 4-byte scans and contain
+        massive false positives: common Thumb instruction sequences happen to
+        equal ``0x08xxxxxx`` (one string had ~200 "pointers" all inside code).
+        Writing relocated addresses over those sites corrupts code — battles
+        crashed to a hard reset. A real text reference is either 4-byte
+        aligned (literal pools, data tables) or sits right after a script
+        opcode that takes a text pointer. Skipping a genuine reference is
+        safe by comparison: the site keeps pointing at the original string.
+        """
+        rom = self.rom_data
+        expected = struct.pack('<I', 0x08000000 + offset)
+        kept = []
+        for site in sites:
+            if site < 0 or site + 4 > len(rom):
+                continue
+            if bytes(rom[site:site + 4]) != expected:
+                continue
+            plausible = (
+                site % 4 == 0
+                or (site >= 2 and rom[site - 2] == 0x0F and rom[site - 1] == 0x00)
+                or (site >= 2 and rom[site - 2] == 0x85 and rom[site - 1] <= 0x0F)
+                or (site >= 2 and rom[site - 2] == 0x67 and rom[site - 1] == 0x00)
+                or (site >= 6 and rom[site - 6] == 0x5C)
+                or (site >= 10 and rom[site - 10] == 0x5C)
+            )
+            if plausible:
+                kept.append(site)
+            else:
+                self.stats['pointer_sites_rejected'] += 1
+        return kept
 
     def _queue_relocation(self, encoded: bytes, pointer_offsets: List[int], offset: int) -> bool:
         self._pending_relocations.append((encoded, pointer_offsets, offset))
@@ -313,7 +387,9 @@ class SmartReinserter:
                 # Lossless first: relocate the overflowing text elsewhere and
                 # repoint to it (only possible when the pointers are known).
                 if self.allow_relocate and pointer_offsets:
-                    return self._queue_relocation(encoded, pointer_offsets, offset)
+                    safe_sites = self._plausible_pointer_sites(offset, pointer_offsets)
+                    if safe_sites:
+                        return self._queue_relocation(encoded, safe_sites, offset)
 
                 # Synthesize a shorter French variant that fits in place rather
                 # than leaving the English string behind. Operates on `text`,
