@@ -267,3 +267,45 @@ class CollapseEmptyBreaksTests(unittest.TestCase):
         from src.core.dialogue_linewrap import collapse_empty_breaks
         text = 'a\nb<0xFA>c<0xFB>d'
         self.assertEqual(collapse_empty_breaks(text), text)
+
+
+class ElidedPronounBufferTests(unittest.TestCase):
+    """qu'<0xFD><0xNN> holds "il"/"elle": narrow width, greedy-eligible."""
+
+    def test_elided_buffer_uses_pronoun_width(self):
+        from src.core.dialogue_linewrap import (
+            PRONOUN_WIDTH, VARIABLE_WIDTH, word_width,
+        )
+        self.assertEqual(
+            word_width("qu'<0xFD><0x03>"),
+            word_width("qu'") + PRONOUN_WIDTH,
+        )
+        self.assertEqual(
+            word_width('<0xFD><0x03>'),
+            VARIABLE_WIDTH,
+        )
+
+    def test_unelided_buffer_page_keeps_scroll_positions(self):
+        text = (
+            'Le <0xFD><0x02> a fait savoir que\n'
+            '<0xFD><0x03> est impressionné par toi.'
+        )
+        result = rewrap(text)
+        # Wide name buffers present: the page must not collapse onto a
+        # single packed line (54px estimates keep it conservative).
+        self.assertGreaterEqual(
+            result.count('\n') + result.count('<0xFA>'), 1
+        )
+
+    def test_elided_pronoun_page_flows_greedily(self):
+        # Only elided pronoun buffers: the page re-flows greedily across
+        # the inherited break instead of keeping short half-lines.
+        text = "On sait\nqu'<0xFD><0x03> arrive."
+        result = rewrap(text)
+        self.assertEqual(result, "On sait qu'<0xFD><0x03> arrive.")
+
+    def test_mixed_buffers_stay_conservative(self):
+        text = "<0xFD><0x02> sait\nqu'<0xFD><0x03> arrive bientôt ici."
+        result = rewrap(text)
+        # A wide buffer shares the page: source line count is kept.
+        self.assertEqual(result.count('\n'), 1)
