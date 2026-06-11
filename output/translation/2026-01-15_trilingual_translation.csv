@@ -6698,7 +6698,7 @@ It may be unable to move!",,40,2,42,pokemon,dialogue,,
 0x003FB73A,"<0xFD><0x13>'s <0xFD><0x1A>
 paralyzed <0xFD><0x11>!<0xFA>It may be unable to move!","<0x52><0xFD><0x13> <0xFD><0x1A>
 paralizado <0xFD><0x11>!<0xFA><0x52>No se puede mover!",47,3,50,pokemon,dialogue,"<0xFD><0x13> <0xFD><0x1A>
-a paralysé <0xFD><0x11> !<0xFB>Il risque de ne plus bouger !",
+a paralysé <0xFD><0x11> !<0xFA>Il risque de ne plus bouger !",
 0x003FB750,It may be unable to move!,,25,3,28,pokemon,dialogue,,
 0x003FB76A,"<0xFD><0x0F> is paralyzed!
 It can't move!",,31,2,33,pokemon,dialogue,"<0xFD><0x0F> est paralysé !
@@ -19487,12 +19487,12 @@ Feuilles étranges !",
 0x007890AB,Would you like to tell them?,Would you like to tell them?,28,2,30,pokemon,dialogue,Voudriez-vous leur dire ?,
 0x007890C8,"Officer 1: <0xFC><0x01><0x08>Looks like <0xFD><0x03>
 doesn't know, Frank""<0xFB>Should we let <0xFD><0x02> off?","Officer 1: <0xFC><0x01><0x08>Looks like <0xFD><0x03>
-doesn't know, Frank""<0xFB>Should we let <0xFD><0x02> off?",70,2,72,pokemon,dialogue,"Agent 1 : <0xFC><0x01><0x08>On dirait que <0xFD><0x03>
-n'est pas au courant, Frank""<0xFB>On laisse <0xFD><0x02> partir ?",
+doesn't know, Frank""<0xFB>Should we let <0xFD><0x02> off?",70,2,72,pokemon,dialogue,"Agent 1 : <0xFC><0x01><0x08>Visiblement, <0xFD><0x03> n'est
+pas au courant, Frank...<0xFB>On laisse filer ?",
 0x0078910F,"Officer 2: <0xFC><0x01><0x08>Let's let <0xFD><0x02> off.<0xFB><0xFD><0x04> probably just fell victim to
 Mirskle's lies.<0xFB>Poor kid""","Officer 2: <0xFC><0x01><0x08>Let's let <0xFD><0x02> off.<0xFB><0xFD><0x04> probably just fell victim to
-Mirskle's lies.<0xFB>Poor kid""",89,2,91,pokemon,description,"Agent 2 : <0xFC><0x01><0x08>Laissons <0xFD><0x02> partir.<0xFB><0xFD><0x04> est sans doute une victime
-des mensonges de Mirskle.<0xFB>Pauvre gamin""",
+Mirskle's lies.<0xFB>Poor kid""",89,2,91,pokemon,description,"Agent 2 : <0xFC><0x01><0x08>Laissons filer.<0xFB><0xFD><0x04> est sans doute une victime
+des mensonges de Mirskle.<0xFB>Pauvre gamin...",
 0x00789169,"Officer 1: <0xFC><0x01><0x08>Uh, yeah""<0xFB>Your story checks out.
 You're free to go.","Officer 1: <0xFC><0x01><0x08>Uh, yeah""<0xFB>Your story checks out.
 You're free to go.",65,2,67,pokemon,dialogue,"Officier 1 : {COLOR}ËEuh, ouais...<0xFB>Votre histoire est vérifiée. Vous
@@ -21947,10 +21947,17 @@ main à la police locale ?",
 on someone else's meeting?","Don't you know its rude to barge in
 on someone else's meeting?",62,10,72,pokemon,dialogue,"Ne sais-tu pas qu'il est impoli de
 couper la réunion de quelqu'un<0xFA>d'autre ?",
+0x007BD1BB,"Goon 1: <0xFC><0x01><0x08>Huh?
+It's some punk kid!<0xFB>Let's rough <0xFD><0x03> up and steal <0xFD><0x02>
+cash!","Goon 1: <0xFC><0x01><0x08>Huh?
+It's some punk kid!<0xFB>Let's rough <0xFD><0x03> up and steal <0xFD><0x02>
+cash!",72,4,76,pokemon,dialogue,"Goon 1 : <0xFC><0x01><0x08>Hein ?
+C'est quoi ce môme ?<0xFB>On va l'amocher et lui piquer
+son fric !",
 0x007BD675,"Goon 2: <0xFC><0x01><0x08>Yeah, we'll make <0xFD><0x03> cry
 for <0xFD><0x02> mommy!","Goon 2: <0xFC><0x01><0x08>Yeah, we'll make <0xFD><0x03> cry
-for <0xFD><0x02> mommy!",48,3,51,pokemon,dialogue,"Goon 2 : {COLOR}ËOn fera pleurer
-{STR_VAR_2} pour {STR_VAR_1} !",
+for <0xFD><0x02> mommy!",48,3,51,pokemon,dialogue,"Goon 2 : <0xFC><0x01><0x08>Ouais, on va faire chialer
+ce môme après sa maman !",
 0x007BD6A6,"Goon 1: <0xFC><0x01><0x08>I wanna hear you snivel,
 kid!<0xFB>We're gonna beat you so hard
 you're never gonna forget us!<0xFB>The Terror Granbull!","Goon 1: <0xFC><0x01><0x08>I wanna hear you snivel,
@@ -38189,7 +38196,7 @@ quelque part...<0xFB>",
 0x00A4C352,The Shadow Warriors attacked!<0xFB>,<0x52>Los Soldados Sombras atacan!<0xFB>,30,3,33,pokemon,dialogue,Les Guerriers d'Ombre attaquent !<0xFB>,
 0x00A4C371,"<0xFD><0x32> <0xFD><0x33> sent
 out <0xFD><0x07>!<0xFA>Go, <0xFD><0x05>!",R<0xFD>2,26,3,29,pokemon,dialogue,"<0xFD><0x32> <0xFD><0x33> envoie
-<0xFD><0x07>!<0xFB>Allez, <0xFD><0x05>!",
+<0xFD><0x07> !<0xFA>Allez, <0xFD><0x05> !",
 0x00A4C38C,"<0xFD><0x1C> <0xFD><0x1D> sent
 out <0xFD><0x06>!<0xFB><0xFD>+ <0xFD><0x2F> sent
 out <0xFD><0x08>!","<0x52><0xFD><0x1C> <0xFD><0x1D> saca
@@ -67277,7 +67284,8 @@ que si tu restais avec moi.<0xFB>Si j'ai tort et que rien n'arrive,
 je te rappellerai.<0xFB>Mais si c'est notre dernière fois
 ensemble...<0xFB>Protège mon enfant si un jour
 <0xFD><0x03> est en danger.<0xFB>Et si le mauvais genre tente
-de libérer ton vrai pouvoir...<0xFB>Alors fais confiance à <0xFD><0x02>.<0xFB>Adieu, mon vieil ami.",
+de libérer ton vrai pouvoir...<0xFB>Alors fais-lui confiance pour
+te protéger.<0xFB>Adieu, mon vieil ami.",
 0x01F11AE9,"Farewell, my good friend.",,25,2,27,pokemon,dialogue,,
 0x01F11B03,"It's gone""","Se ha ido""",10,3,13,pokemon,location,Il est parti...,
 0x01F11B0E,"So, you came after all.<0xFB>Let's get this over with.","<0x52>Entonces, has venido!

@@ -1,9 +1,9 @@
 {
-  "conversion_date": "2026-06-11T02:44:49.501008",
+  "conversion_date": "2026-06-11T03:53:44.663710",
   "source_csv": "2026-01-15_trilingual_translation.csv",
-  "total_translations": 20681,
+  "total_translations": 20682,
   "total_errors": 0,
-  "total_warnings": 16875,
+  "total_warnings": 16877,
   "translations": [
     {
       "offset": 165760,
@@ -32252,7 +32252,7 @@
     {
       "offset": 4175674,
       "original_text": "<0xFD><0x13>'s <0xFD><0x1A>\nparalyzed <0xFD><0x11>!<0xFA>It may be unable to move!",
-      "translation": "<0xFD><0x13> <0xFD><0x1A>\na paralysé <0xFD><0x11> !<0xFB>Il risque de ne plus bouger !",
+      "translation": "<0xFD><0x13> <0xFD><0x1A>\na paralysé <0xFD><0x11> !<0xFA>Il risque de ne plus bouger !",
       "length": 51,
       "original_length": 47,
       "padding_used": 4,
@@ -64892,10 +64892,10 @@
     {
       "offset": 7901384,
       "original_text": "Officer 1: <0xFC><0x01><0x08>Looks like <0xFD><0x03>\ndoesn't know, Frank\"<0xFB>Should we let <0xFD><0x02> off?",
-      "translation": "Agent 1 : <0xFC><0x01><0x08>On dirait que <0xFD><0x03>\nn'est pas au courant, Frank\"<0xFB>On laisse <0xFD><0x02> partir ?",
-      "length": 80,
+      "translation": "Agent 1 : <0xFC><0x01><0x08>Visiblement, <0xFD><0x03> n'est\npas au courant, Frank...<0xFB>On laisse filer ?",
+      "length": 77,
       "original_length": 70,
-      "padding_used": 10,
+      "padding_used": 7,
       "encoding": "pokemon",
       "category": "dialogue",
       "notes": "",
@@ -64904,10 +64904,10 @@
     {
       "offset": 7901455,
       "original_text": "Officer 2: <0xFC><0x01><0x08>Let's let <0xFD><0x02> off.<0xFB><0xFD><0x04> probably just fell victim to\nMirskle's lies.<0xFB>Poor kid\"",
-      "translation": "Agent 2 : <0xFC><0x01><0x08>Laissons <0xFD><0x02> partir.<0xFB><0xFD><0x04> est sans doute une victime\ndes mensonges de Mirskle.<0xFB>Pauvre gamin\"",
-      "length": 102,
+      "translation": "Agent 2 : <0xFC><0x01><0x08>Laissons filer.<0xFB><0xFD><0x04> est sans doute une victime\ndes mensonges de Mirskle.<0xFB>Pauvre gamin...",
+      "length": 100,
       "original_length": 89,
-      "padding_used": 13,
+      "padding_used": 11,
       "encoding": "pokemon",
       "category": "description",
       "notes": "",
@@ -70710,9 +70710,21 @@
       "too_long": true
     },
     {
+      "offset": 8114619,
+      "original_text": "Goon 1: <0xFC><0x01><0x08>Huh?\nIt's some punk kid!<0xFB>Let's rough <0xFD><0x03> up and steal <0xFD><0x02>\ncash!",
+      "translation": "Goon 1 : <0xFC><0x01><0x08>Hein ?\nC'est quoi ce môme ?<0xFB>On va l'amocher et lui piquer\nson fric !",
+      "length": 80,
+      "original_length": 72,
+      "padding_used": 8,
+      "encoding": "pokemon",
+      "category": "dialogue",
+      "notes": "",
+      "too_long": true
+    },
+    {
       "offset": 8115829,
       "original_text": "Goon 2: <0xFC><0x01><0x08>Yeah, we'll make <0xFD><0x03> cry\nfor <0xFD><0x02> mommy!",
-      "translation": "Goon 2 : {COLOR}ËOn fera pleurer\n{STR_VAR_2} pour {STR_VAR_1} !",
+      "translation": "Goon 2 : <0xFC><0x01><0x08>Ouais, on va faire chialer\nce môme après sa maman !",
       "length": 63,
       "original_length": 48,
       "padding_used": 15,
@@ -115496,10 +115508,10 @@
     {
       "offset": 10797937,
       "original_text": "<0xFD><0x32> <0xFD><0x33> sent\nout <0xFD><0x07>!<0xFA>Go, <0xFD><0x05>!",
-      "translation": "<0xFD><0x32> <0xFD><0x33> envoie\n<0xFD><0x07>!<0xFB>Allez, <0xFD><0x05>!",
-      "length": 27,
+      "translation": "<0xFD><0x32> <0xFD><0x33> envoie\n<0xFD><0x07> !<0xFA>Allez, <0xFD><0x05> !",
+      "length": 29,
       "original_length": 26,
-      "padding_used": 1,
+      "padding_used": 3,
       "encoding": "pokemon",
       "category": "dialogue",
       "notes": "",
@@ -167144,14 +167156,14 @@
     {
       "offset": 32577870,
       "original_text": "That's why, my friend, you must\ngo into hiding.<0xFB>I'll send your Poké Ball adrift,\namidst the waves\"<0xFB>You'll surely be safer lost at sea,\nthan if you were to remain with me.<0xFB>If I'm wrong, and nothing happens,\nI'll call you back.<0xFB>But if this is to be our final time\ntogether\"<0xFB>Protect my <0xFD><0x04> if <0xFD><0x03> is\never in danger.<0xFB>And in turn, should the wrong sort\ntry to force your true power free\"<0xFB>Then trust <0xFD><0x02> to protect you.<0xFB>Farewell, my good friend.",
-      "translation": "C'est pourquoi, mon ami, tu dois\nte cacher.<0xFB>J'enverrai ta Poké Ball à la dérive,\nau milieu des vagues...<0xFB>Tu seras plus en sécurité en mer,\nque si tu restais avec moi.<0xFB>Si j'ai tort et que rien n'arrive,\nje te rappellerai.<0xFB>Mais si c'est notre dernière fois\nensemble...<0xFB>Protège mon enfant si un jour\n<0xFD><0x03> est en danger.<0xFB>Et si le mauvais genre tente\nde libérer ton vrai pouvoir...<0xFB>Alors fais confiance à <0xFD><0x02>.<0xFB>Adieu, mon vieil ami.",
-      "length": 423,
+      "translation": "C'est pourquoi, mon ami, tu dois\nte cacher.<0xFB>J'enverrai ta Poké Ball à la dérive,\nau milieu des vagues...<0xFB>Tu seras plus en sécurité en mer,\nque si tu restais avec moi.<0xFB>Si j'ai tort et que rien n'arrive,\nje te rappellerai.<0xFB>Mais si c'est notre dernière fois\nensemble...<0xFB>Protège mon enfant si un jour\n<0xFD><0x03> est en danger.<0xFB>Et si le mauvais genre tente\nde libérer ton vrai pouvoir...<0xFB>Alors fais-lui confiance pour\nte protéger.<0xFB>Adieu, mon vieil ami.",
+      "length": 439,
       "original_length": 436,
-      "padding_used": -13,
+      "padding_used": 3,
       "encoding": "pokemon",
       "category": "dialogue",
       "notes": "",
-      "too_long": false
+      "too_long": true
     },
     {
       "offset": 32578307,

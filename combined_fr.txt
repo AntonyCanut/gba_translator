@@ -2350,7 +2350,7 @@
 0x3FB6E5: {FD0F} dégèle !
 0x3FB6F7: {FD0F} a été\ndégelé par {FD14} !
 0x3FB70F: {FD11} est paralysé !\nIl risque de ne plus bouger !
-0x3FB73A: {FD13} {FD1A}\na paralysé {FD11} !\pIl risque de ne plus bouger !
+0x3FB73A: {FD13} {FD1A}\na paralysé {FD11} !\lIl risque de ne plus bouger !
 0x3FB76A: {FD0F} est paralysé !\nIl ne peut plus bouger !
 0x3FB78A: {FD10} est déjà\nparalysé !
 0x3FB7A3: {FD10} n'est\nplus paralysé !
@@ -2865,7 +2865,7 @@
 0xA4C2EB: {PLAY_SE} {RIVAL} a disparu\nquelque part…\p
 0xA4C334: Le Guerrier d'Ombre attaque !\p
 0xA4C352: Les Guerriers d'Ombre attaquent !\p
-0xA4C371: {FD32} {FD33} envoie\n{FD07}!\pAllez, {FD05}!
+0xA4C371: {FD32} {FD33} envoie\n{FD07} !\lAllez, {FD05} !
 0xA4C3B2: {FD2E} {FD2F}\nrappelle {FD00} !
 0xA4C3C5: {FD2E} {FD2F} envoie\n{FD00} !
 0xA4C3D8: {FD32} {FD33} envoient\n{FD05} et {FD07}!
@@ -5925,8 +5925,8 @@
 0x78900B: Tout le monde se planque !\pLes flics reviennent nous choper !
 0x78903B: Officier 1 : {COLOR}ËHé, gamin !\pAvez-vous vu dans quelle direction\nle Gym Leader courait ?\pIl est recherché pour trafic de\nFeuilles étranges !
 0x7890AB: Voudriez-vous leur dire ?
-0x7890C8: Agent 1 : <0xFC><0x01><0x08>On dirait que <0xFD><0x03>\nn'est pas au courant, Frank"\pOn laisse <0xFD><0x02> partir ?
-0x78910F: Agent 2 : <0xFC><0x01><0x08>Laissons <0xFD><0x02> partir.\p<0xFD><0x04> est sans doute une victime\ndes mensonges de Mirskle.\pPauvre gamin"
+0x7890C8: Agent 1 : <0xFC><0x01><0x08>Visiblement, <0xFD><0x03> n'est\npas au courant, Frank…\pOn laisse filer ?
+0x78910F: Agent 2 : <0xFC><0x01><0x08>Laissons filer.\p<0xFD><0x04> est sans doute une victime\ndes mensonges de Mirskle.\pPauvre gamin…
 0x789169: Officier 1 : {COLOR}ËEuh, ouais…\pVotre histoire est vérifiée. Vous\nêtes libre de partir.
 0x7891AB: Officier 1 : {COLOR}ËL'étang ? Merci !\nVous avez vraiment aidé\pdans la guerre contre la drogue !\nBon travail !
 0x78920B: Meeeeeec
@@ -6440,7 +6440,7 @@
 0x7BCAD5: Dites, voudriez-vous nous aider en\nassistant à nouveau la police ?
 0x7BCB14: Souhaitez-vous donner un coup de\nmain à la police locale ?
 0x7BCBFB: Ne sais-tu pas qu'il est impoli de\ncouper la réunion de quelqu'un\ld'autre ?
-0x7BD675: Goon 2 : {COLOR}ËOn fera pleurer\n{STR_VAR_2} pour {STR_VAR_1} !
+0x7BD675: Goon 2 : <0xFC><0x01><0x08>Ouais, on va faire chialer\nce môme après sa maman !
 0x7BD6A6: Goon 1 : {COLOR}ËJe veux t'entendre\n\ppleurnicher, gamin ! Nous allons te\n\pbattre si fort tu ne nous oublieras\njamais ! Le Terror Granbull !
 0x7BD71F: Flic : {COLOR}ËVous êtes arrêtés !\n
 0x7BD740: Goon 2 : {COLOR}ËOh mec, c'est le\n\ppopo ! Scatter, les garçons !\n
@@ -16871,7 +16871,7 @@
 0x1F11864: 15 ans plus tard
 0x1F11888: Hoopa…\pJe crains l'avenir, vieil ami\n- car si, non…{PAUSE} quand ELLE arrivera.
 0x1F118D6: Je ne pourrai pas te protéger\nsi elle tente quelque chose.\pNon…{PAUSE} elle tentera quelque chose.\pReste à savoir quoi.
-0x1F1194E: C'est pourquoi, mon ami, tu dois\nte cacher.\pJ'enverrai ta Poké Ball à la dérive,\nau milieu des vagues…\pTu seras plus en sécurité en mer,\nque si tu restais avec moi.\pSi j'ai tort et que rien n'arrive,\nje te rappellerai.\pMais si c'est notre dernière fois\nensemble…\pProtège mon enfant si un jour\n<0xFD><0x03> est en danger.\pEt si le mauvais genre tente\nde libérer ton vrai pouvoir…\pAlors fais confiance à <0xFD><0x02>.\pAdieu, mon vieil ami.
+0x1F1194E: C'est pourquoi, mon ami, tu dois\nte cacher.\pJ'enverrai ta Poké Ball à la dérive,\nau milieu des vagues…\pTu seras plus en sécurité en mer,\nque si tu restais avec moi.\pSi j'ai tort et que rien n'arrive,\nje te rappellerai.\pMais si c'est notre dernière fois\nensemble…\pProtège mon enfant si un jour\n<0xFD><0x03> est en danger.\pEt si le mauvais genre tente\nde libérer ton vrai pouvoir…\pAlors fais-lui confiance pour\nte protéger.\pAdieu, mon vieil ami.
 0x1F11B03: Il est parti…
 0x1F11B0E: Alors, tu es venu.\pFinissons-en.
 0x1F11B40: ARGH !\pComment exaucer le vœu de Papy\nsi je n'attrape aucun Pokémon ?
@@ -24680,3 +24680,4 @@
 0x1F4D581: Je savais que tu viendrais\nme sauver, <0xFD><0x01> !
 0x1F4D604: Mais après tout ce que tu as\naccompli, je suis heureuse.
 0x1F4D632: Heureuse de savoir que mon enfant\na dépassé toutes mes attentes.
+0x7BD1BB: Goon 1 : <0xFC><0x01><0x08>Hein ?\nC'est quoi ce môme ?\pOn va l'amocher et lui piquer\nson fric !
