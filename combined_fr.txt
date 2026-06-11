@@ -357,7 +357,7 @@
 0x1A2D85: {PLAYER} a donné une Écaille Cœur\nen échange.
 0x1A2DE0: Si tes Pokémon doivent apprendre,\nj’ai besoin d’une Écaille Cœur.
 0x1A2E20: Hein ? Je ne peux enseigner aucune\ncapacité à un Œuf.
-0x1A505B: Nous espérons vous revoir!
+0x1A505B: Revenez nous voir vite !
 0x1A5075: {PLAYER} a allumé le PC.
 0x1A508A: Quel PC doit être utilisé ?
 0x1A50A7: PC de Quelqu’un utilisé.
@@ -474,7 +474,7 @@
 0x1BC50D: Lancer le lien avec {STR_VAR_1} joueurs.\nBouton A : Valider\lBouton B : Annuler
 0x1BC54C: En attente de liaison…\n… … Bouton B : Annuler
 0x1BC590: Entre, s’il te plaît.
-0x1BC59E: Je vais te guider vers ta salle\nmaintenant.
+0x1BC59E: Je te conduis à ta\nsalle.
 0x1BC5C0: Quelqu’un n’est pas prêt à se lier.\pReviens quand tout le monde sera\npréparé.
 0x1BC615: Désolé, erreur de liaison…\nRéinitialise et réessaie.
 0x1BC64E: Il semble que les partenaires aient\nfait des choix différents.
@@ -760,7 +760,7 @@
 0x23E635: Guitariste
 0x23E642: Pyromane
 0x23E64F: Shocker
-0x23E65C: Fou d’Insectes
+0x23E65C: Entomologue
 0x23E669: Officier
 0x23E683: Fille Riche
 0x23E690: Successeur
@@ -769,21 +769,21 @@
 0x23E6C4: Expert
 0x23E6D1: Éleveur
 0x23E6F8: Jogger
-0x23E705: Dresseur Dragon
+0x23E705: Dracologue
 0x23E712: ORNITHO
 0x23E71F: Ninja Garçon
-0x23E72C: Méga Dresseur
+0x23E72C: Méga Expert
 0x23E739: Dame Parasol
 0x23E746: Black Horizo
 0x23E753: PIQUE-NIQUEUSE
 0x23E76D: Développeur
 0x23E77A: Snowboardeur
-0x23E787: Collectionneur
+0x23E787: Collecteur
 0x23E794: Dresseur <0x53><0x54>
-0x23E7A1: Roitiflam Noir
+0x23E7A1: Black Emboar
 0x23E7C8: Admin Ombre
 0x23E7D5: Ex Admin Ombre
-0x23E7E2: Chasseur d’Insectes
+0x23E7E2: Scout
 0x23E7EF: MONTAGNARD
 0x23E7FC: Jeune Couple
 0x23E809: Duo Expert
@@ -791,11 +791,11 @@
 0x23E823: ADMIN AQUA
 0x23E830: ADMIN MAGMA
 0x23E83D: Gamin
-0x23E84A: Chasseur d’Insectes
+0x23E84A: Scout
 0x23E857: Fillette
 0x23E864: Marin
 0x23E871: Campeur
-0x23E87E: Pique-niqueuse
+0x23E87E: Pique-Nique
 0x23E88B: Pokémaniac
 0x23E898: Super Nerd
 0x23E8A5: Montagnard
@@ -813,7 +813,7 @@
 0x23E941: Jongleur
 0x23E94E: Dompteur
 0x23E95B: Ornithologue
-0x23E968: Ceinture Noire
+0x23E968: Karatéka
 0x23E975: Rival
 0x23E982: Scientifique
 0x23E98F: Boss
@@ -837,7 +837,7 @@
 0x23EA79: Éleveur <0x53><0x54>
 0x23EA86: Ranger <0x53><0x54>
 0x23EA93: Dame Parfum
-0x23EAA0: Fan de Ruines
+0x23EAA0: Archéologue
 0x23EAAD: Dame
 0x23EABA: Peintre
 0x23EAF9: fghijk
@@ -2597,7 +2597,7 @@
 0x3FCB9A: {FD00} de {FD10}\n{FD01}
 0x3FCBA5: Stats de {B_ATK_NAME_WITH_PREFIX}\naudessus du max !
 0x3FCBC5: Stats de {B_DEF_NAME_WITH_PREFIX}\naudessous du min !
-0x3FCBE4: Un coup critique !
+0x3FCBE4: Coup critique !
 0x3FCBF4: K.O. en un coup !
 0x3FCC07: <0xFC><0x08><0x20>1, <0xFC><0x08><0x0F>2, et<0xFC><0x08><0x0F>" <0xFC><0x08><0x0F>" <0xFC><0x08><0x0F>" <0xFC><0x08><0x0F><0xFC><0x10><0x31><0x00>Pouf !\p
 0x3FCC33: And..\l
@@ -3126,7 +3126,7 @@
 0x41629D: Quitter
 0x4162A2: Retraite
 0x4162BD: Baie
-0x4162C7: Pièces
+0x4162C7: Jeton
 0x4162CD: Objets
 0x4162D3: Poké Balls
 0x4162DE: Objets rares
@@ -5254,11 +5254,11 @@
 0x488DFD: Ces données ne peuvent pas être\nutilisées dans cette version.
 0x488FE3: Oh, ton équipe semble pleine.\pReviens me voir après avoir rangé un\nPokémon sur un PC.
 0x4891B0: Merci d'utiliser le Système CADEAU\nMYSTÈRE.\pUn Dresseur est arrivé aux Îles\nSEVII pour toi.\pAmuse-toi bien à combattre ce\nvisiteur.\pTu peux inviter d'autres Dresseurs\navec d'autres mots de passe.\pEssaie d'en trouver d'autres qui\nfonctionnent.
-0x489419: Merci d'utiliser le Système CADEAU\nMYSTÈRE.\pFélicitations !\pTu as gagné un prix après trois\nvictoires !\pNous espérons que cela te donnera\nenvie de continuer à te battre.
+0x489419: Merci d'utiliser le Système CADEAU\nMYSTÈRE.\pFélicitations !\pTu as gagné un prix après trois\nvictoires !\pQue cela te donne envie de\ncontinuer à te battre !
 0x489583: Cela semble être à utiliser au port\nde CARMIN SUR MER.\pPourquoi ne pas essayer pour voir de\nquoi il s'agit ?
 0x4895E8: Merci d'utiliser le Système CADEAU\nMYSTÈRE.
 0x489615: Oh, désolé, {PLAYER}. La section\nObjets Rares du SAC est pleine.\pRange quelque chose sur ton PC, puis\nreviens pour ceci.
-0x48975C: Cela semble être à utiliser au port\nde CARMIN SUR MER.\pPourquoi ne pas essayer pour voir de\nquoi il s'agit ?
+0x48975C: On dirait que ça s'utilise au port\nde CARMIN SUR MER.\pEssaie pour voir de quoi\nil s'agit !
 0x4897C1: Merci d'utiliser le Système CADEAU\nMYSTÈRE.
 0x4897EE: Oh, désolé, {PLAYER}. La section\nObjets Rares du SAC est pleine.\pRange quelque chose sur ton PC, puis\nreviens pour ceci.
 0x4ABE2F: Ärjfs
@@ -5363,7 +5363,7 @@
 0x728430: Pierre étrange qui fait évoluer\ncertaines espèces de Pokémon. Elle\nbrille d'une lumière éclatante.
 0x740001: Forêt Obscure, Volcan Cendreux,\nCrater Town et Route 6
 0x740037: Bellin Town, Grotte Stalactite,\nRoute 2 et Dresco Town
-0x74037D: <0x11>\nMarlon : {COLOR}ËCacnea, utilise\nCoupe !
+0x74037D: <0x11>\nMarlon : <0xFC><0x01><0x08>Cacnea, Coupe !
 0x740753: Tu es ma maman ?
 0x74145B: Héhooo…\pTu viens défier l'Arène ?
 0x74159F: Oh, c'est toi ! Champion en herbe !\nJe ne t'avais pas vu !\pBienvenue à l'Arène de Crater\pTown !\pCommence par un peu d'Eau\nFraîche.
@@ -5375,7 +5375,7 @@
 0x741AF1: Route 15\p<0x7B> Route 2, Grotte\nStalactite <0x7C> Vivill Town
 0x744BBF: Salut, gamin !\p-KOF- -TOUX-\pBienvenue à ton premier Défi Arène\n!\pCommence avec un petit\ncadeau.\p-TOUX- -SIFFLEMENT-
 0x744C3D: Une sorte de plante aux feuilles\nétranges.
-0x744D32: Ville de Fallshore
+0x744D32: Fallshore
 0x744E2C: À l'est d'ici, au-delà de la Route\n15 aquatique, se trouve Vivill Town.\pIl te faudra plus que la CS Surf\npour y arriver.\pOn dirait que des gens bloquent la\nroute…
 0x744EF5: Salut, dresseur itinérant.\pSi tu comptes défier Mirskle, ça\npourrait t'aider.
 0x744F54: J'aime rendre service aux\nvoyageurs.\pC'est mon hobby.
@@ -5383,7 +5383,7 @@
 0x74503F: Cette statue représente le Pokémon\nlégendaire de feu, Sulfura.\pIl vivrait quelque part dans le\nVolcan Cendreux, illuminant le ciel\lde ses flammes la nuit.
 0x7450DB: Regarde, regarde !\pJe vois Dehara City d'ici !
 0x745108: Grim Woods\p<0x7B> Volcan Cendreux\n<0x7C> Dresco Town
-0x745132: <0x0F> P<0x56><0x7C><0x08><0x09><0x06><0x02>On vient de\nfaire un gros coup de filet, mais\lnos cibles se sont encore\léchappées…\pDu coup on boude.
+0x745132: <0x0F> P<0x56><0x7C><0x08><0x09><0x06><0x02>On vient de\nrater un gros coup de filet,\lnos cibles ont encore filé...\pDu coup on boude.
 0x74528C: As-tu visité la Maison des\nDresseurs à Dresco Town ?\pC'est le bâtiment noir et bleu au\nsud de la ville.
 0x745382: Il y a un endroit magnifique au\nnord d'ici, le\lParadis Floral !\pIl y a des fleurs partout !
 0x7453EE: C'est une statue du Pokémon\nLégendaire de Feu, Sulfura.\pOn dit que Sulfura servait de héraut\nà une grande obscurité, mais\lqu'il réside désormais dans le\lVolcan Cendreux.
@@ -5509,7 +5509,7 @@
 0x75548F: Ce type vient d'en perdre un…
 0x755532: 9Quand ces étranges voyous sont\narrivés, on a vite verrouillé nos\lportes.\pSinon ils seraient sûrement entrés\ncomme toi\l et auraient pris nos\ltrésors pour leurs plans.
 0x755608: Ce type croit que tu es un gros\npoisson. Non, tu es un gros poisson
-0x755647: <0x5C><0x05>t   <0x5A><0x56><0x75><0x08>e<0x56><0x75><0x08><0x05>ó<0x55><0x75><0x08>Que font les gens quand ils\ndoivent aller aux toilettes ?\pEt si un gros poisson mord pendant\nque j'y suis ? Je ne peux pas\ly aller…
+0x755647: <0x5C><0x05>t   <0x5A><0x56><0x75><0x08>e<0x56><0x75><0x08><0x05>ó<0x55><0x75><0x08>Que font les gens quand ils\ndoivent aller aux toilettes ?\pEt si ça mord pendant que j'y\nsuis ? Je ne peux pas y aller...
 0x7556D9: J'ai perdu parce que j'essaie de ne\npas aller aux toilettes…
 0x75570E: Oh non ! J'ai le sentiment que je\nvais ferrer un gros !
 0x7557B1: Avec honneur, j'admets ma défaite !
@@ -5921,7 +5921,7 @@
 0x788DF4: Take this cool, grassy TM toooo…
 0x788E54: Au cas où tu te poserais la\nquestion, cette CT contient\l{COLOR}ÉNœud Herbe{COLOR}Ë.\pJ'ai connu un type, une fois.\pIl arrêtait pas de tomber. Il\ndisait que c'était génétique.\pMais en vérité…\pC'est juste que je lui lançais\nNœud Herbe sans arrêt !\pHeureusement qu'il était pas trop\nlourd, sinon ça aurait fait mal.
 0x788F69: Oh, non…\pTu as déjà Nœud Herbe…
-0x788F90: Oh, attends.\pOn dirait que je ne vais plus me\nbattre contre toi, .\pTu vas avoir besoin de plus d'un\nPokémon si tu veux m'emmener\lsur…
+0x788F90: Oh, attends.\pOn dirait que je ne me battrai\nplus contre toi.\pIl te faudra plus d'un Pokémon\nsi tu veux m'affronter...
 0x78900B: Tout le monde se planque !\pLes flics reviennent nous choper !
 0x78903B: Officier 1 : {COLOR}ËHé, gamin !\pAvez-vous vu dans quelle direction\nle Gym Leader courait ?\pIl est recherché pour trafic de\nFeuilles étranges !
 0x7890AB: Voudriez-vous leur dire ?
@@ -8191,10 +8191,10 @@
 0x922A91: Change de type selon la ROM.
 0x922AAF: Forme banc, gros PV.
 0x922AC8: Boucliers bas sous 1/2 PV.
-0x922AEA: Booste la Vitesse sous la Grêle.
-0x922B00: Les K.O. boostent l'Att. Spé.
-0x922B19: Prendre un coup hausse la Défense.
-0x922B36: Renforce les capacités Acier.
+0x922AEA: Vitesse + sous grêle.
+0x922B00: Atq. Spé. + par K.O.
+0x922B19: Subir un coup monte la Déf.
+0x922B36: Booste les attaques Acier.
 0x922B52: Donne la priorité aux soins.
 0x922B73: Booste l'Eau. Empêche de brûler.
 0x922B95: Coups Eau augmentent la Défense.
@@ -8210,12 +8210,12 @@
 0x922CC3: Détecte les coups super efficaces.
 0x922CE1: Annonce l'attaque forte.
 0x922D04: Révèle l'objet tenu par l'ennemi.
-0x922D21: Inverse les changements de stats.
+0x922D21:  Inverse les modifs.
 0x922D3A: Bloque les Baies.
 0x922D5D: Les contacts boostent ses stats.
 0x922D7B: Double le poids.
-0x922D8B: Divise le poids.
-0x922D9A: Les flinchs augmentent la Vitesse.
+0x922D8B: Poids: moitié.
+0x922D9A: Peur subie: Vitesse +
 0x922DB2: Se transforme en entrant au combat.
 0x922DD3: Coups Ténèbres : +Attaque.
 0x922DF0: Spectre/Bug/Ténèbres +Vit.
@@ -8260,7 +8260,7 @@
 0x92FB9F: Terre Finale
 0x92FBAD: Mer Primaire
 0x92FBBC: Champ Psychique
-0x92FBCA: Champ Électrique
+0x92FBCA: Créa-Élec
 0x92FBD9: Sable Humide
 0x92FBEA: Mèche Rebelle
 0x92FBF8: Spectro-Bouclier
@@ -8563,7 +8563,7 @@
 0xA353D5: Désactive une capacité.
 0xA353EF: Baisse Vit. du Pokemon touché.
 0xA3540E: Se propage au contact.
-0xA35424: Ça fait mal au toucher.
+0xA35424: Mal au contact.
 0xA35434: Vit. + en tempête sable.
 0xA35451: Agir en dernier booste.
 0xA3546B: Toutes cap. touchent.
@@ -8652,7 +8652,7 @@
 0xA35D80: Booste l'Att. Spé. sous 50% PV.
 0xA35D9B: Ne fait jamais contact.
 0xA35DB0: Capacités sonores deviennent Eau.
-0xA35DCF: Bloque les attaques prioritaires.
+0xA35DCF: Bloque la priorité.
 0xA35DE6: Le K.O. blesse l'ennemi.
 0xA35E00: Bloque les attaques prioritaires.
 0xA35E17: Mange les Baies plus tôt.
@@ -8912,7 +8912,7 @@
 0xA37135: Don Floral
 0xA37146: Mauvais Rêve
 0xA37157: Pickpocket
-0xA37168: Puissance du Portail
+0xA37168: Pouvoir Portail
 0xA37179: Toxitouche
 0xA3718A: Magicien
 0xA3719B: Déclic Tactique
@@ -11587,12 +11587,12 @@
 0xA4EAE9: Poison
 0xA4EAF0: Sol
 0xA4EAF7: Rocher
-0xA4EB05: Fantôme
+0xA4EB05: Spectr
 0xA4EB0C: Acier
 0xA4EB1A: Feu
 0xA4EB21: Eau
 0xA4EB28: Herbe
-0xA4EB2F: Electrique
+0xA4EB2F: Électr
 0xA4EB36: Psychc
 0xA4EB44: Dragon
 0xA4EB4B: Sombre
@@ -15384,7 +15384,7 @@
 0x1EED116: L'entrée du Pic de Cristal est\njuste là-bas.
 0x1EED148: Waouh !\nMonte direct au Pic de Cristal !
 0x1EED170: Monte juste cette cascade et tu\nseras au pied du Pic de Cristal.
-0x1EED1B3: Boîte à costumes
+0x1EED1B3:  Garde-robe
 0x1EED1C0: {DPAD_LEFTRIGHT}Choisir {SE_SHOP}Choisir {B_BUTTON}Fermer
 0x1EED1D8: Cette tenue n'a pas été débloquée.{PAUSE_UNTIL_PRESS}
 0x1EED1FD: {STR_VAR_2} Gagne des combats multiples\navec {STR_VAR_1} pour débloquer cette tenue.{PAUSE_UNTIL_PRESS}
@@ -15534,7 +15534,7 @@
 0x1EF0BD5: \n Rigerhit047\n Rowdy HD\n SevenK\n Shushui\n Spectre\n
 0x1EF0C2E: \nPokémon FireRed Version\n\n\n\n\n
 0x1EF0C4C: \n\n Game Freak\n Nintendo\n\n\n
-0x1EF0C67: Pic de cristal
+0x1EF0C67:  Pic Cristal
 0x1EF0C75: Pic de cristal A
 0x1EF0C84: Pic de Cristal B
 0x1EF0C93: La plus haute\nmontagne de Borrius. Elle tire son\nnom du grand cristal qui se trouve à\nson sommet. On dit que les cristaux\nd'ici libèrent une immense énergie.
@@ -16950,7 +16950,7 @@
 0x1F12FAD: {COLOR}ÉAwwwk!
 0x1F12FB7: {COLOR}ÉBlip bloop!
 0x1F12FC6: {COLOR}ÁLe {STR_VAR_1} a disparu dans les\nsables mouvants.
-0x1F12FF3: Forêt Lugubre
+0x1F12FF3:  Bois Noir
 0x1F12FFF: Une forêt inquiétante remplie de\nPokémon Spectre.\nBeaucoup d'enfants ont disparu\ndans ces bois.
 0x1F13064: Coupe-Herbe
 0x1F13071: Aide un riche homme d'affaires à\nouvrir sa crêperie de rêve en\ncoupant l'herbe de la Forêt Lugubre.
@@ -17921,9 +17921,9 @@
 0x1F2CB44: Sbire C
 0x1F2CB4C: Sbire D
 0x1F2CB54: Hoopa
-0x1F2CB5A: Lumière de la Ruine
-0x1F2CB68: Admin de la Lumière de la Ruine
-0x1F2CB7C: Chef de la Lumière de la Ruine
+0x1F2CB5A: Lumière Ruine
+0x1F2CB68: Admin Lumière Ruine
+0x1F2CB7C: Chef Lumière Ruine
 0x1F2CB91: Le Voyage d'un Héros
 0x1F2CBA2: Le Voyage d'une Héroïne
 0x1F2CBB6: Qu'est-ce que… ?\pComment es-tu entré ici ?
@@ -18111,8 +18111,8 @@
 0x1F31B80: Alors, on se revoit, {PLAYER}.\pJ'en conclus que tu as décidé de te\nmêler de nos affaires ?\pC'est regrettable.\pMais que vous soyez deux à tenter de\npasser ne change rien pour moi.
 0x1F31C2F: Un des sbires,\nviens m'aider ici !
 0x1F31C5C: {COLOR}ÇJe vais vous aider pour ce combat,\nMarlon, monsieur !
-0x1F31CBA: Tch… je suis peut-être plus rouillé\nque je ne le pensais…
-0x1F31CEF: Désolé, Marlon, monsieur !
+0x1F31CBA: Tch... je suis plus rouillé\nque je ne le pensais...
+0x1F31CEF: Désolé, M. Marlon !
 0x1F31D07: Bon, je suppose que ça ira. Notre\nopération est un succès.\pIvory est déjà loin à présent.
 0x1F31D5C: Tu peux me suivre si tu veux, mais\nça ne t'avancera à rien.\pTu sais déjà que je ne te mènerai\njamais à Sulfura…\pAlors je vous conseille à tous les\ndeux d'être sages et nous laisser.
 0x1F31E0D: On y va.
@@ -18217,8 +18217,8 @@
 0x1F35222: Scientifiques, préparez le plan de\nsecours au cas où nous perdions.
 0x1F3525E: Tout de suite.\pNous allons activer les pods de\ncréation mobiles.
 0x1F35293: Ne le prends pas personnellement,\nmais je vais devoir vous escorter\ltous les deux dehors…{PAUSE} à la dure.
-0x1F352F0: Maudits…\pScientifiques, activez le plan de\nsecours, maintenant !
-0x1F35323: Désolé de vous décevoir, madame !
+0x1F352F0: Maudits...\pScientifiques, vite,\nle plan B !
+0x1F35323: Navré de vous décevoir, madame
 0x1F35342: {COLOR}ËAlors ?\pTant que j'ai mes Pokémon,\nrien ne peut m'arrêter !\pNon…{PAUSE} rien ne peut NOUS arrêter !\pMaintenant, rends la Pierre Prison !
 0x1F353BD: Hmph…\pDrôle de chose à dire, vu que ton\nami a fait le plus gros du travail…
 0x1F35405: {COLOR}ËQ… qu'est-ce que tu as dit !?
@@ -18481,7 +18481,7 @@
 0x1F3DD42: {PLAYER}…{PAUSE} c'est vraiment dommage\nque tu l'apprennes ainsi. Mais\pje n'hésiterai pas. Tu n'es\pplus un simple adversaire…{PAUSE}\ntu es un ennemi !
 0x1F3DDD5: Ce sbire inutile m'a laissé tomber…
 0x1F3DDF5: Je doute que ça aurait mieux fini\nmême avec un sbire inutile…
-0x1F3DE39: Non… Encore\nune fois…
+0x1F3DE39: Non,\npas ça...
 0x1F3DE48: Tous les sbires, retraite vers\nvotre nouvelle base ! Nous\pavons presque fini ce pour\nquoi nous sommes venus -\linutile de rester ici !
 0x1F3DEBD: Oh que non ! Tu ne t'en tireras\ppas si facilement !
 0x1F3DEF0: Tu ne peux pas me retenir !
@@ -21762,7 +21762,7 @@
 0x1F949C6: Champion
 0x1F949CF: Cauchemar
 0x1F949D9: Carte Frontière
-0x1F949EC: Cerveau de Frontière
+0x1F949EC: Meneur de Zone
 0x1F949FB: Quel sujet veux-tu\napprofondir ?
 0x1F94A27: {COLOR}ÉMéga-Évolution{COLOR}Á est une évolution\ntemporaire déclenchable en\lcombat si un Pokémon tient une\l{COLOR}ÉMéga-Gemme{COLOR}Á de son espèce.\pPour activer la Méga-Évolution,\nappuie sur {START_BUTTON} en choisissant\lune capacité.\pUn seul Pokémon par équipe peut\nMéga-Évoluer, et après le combat,\lles Pokémon Méga reviennent à leur\lforme d'origine.
 0x1F94B70: Une {COLOR}ÉCapacité Z{COLOR}Á est un type spécial\nd'attaque où le souhait du Dresseur\let du Pokémon se combinent pour\llibérer une attaque très puissante\lune fois par combat.\pSi l'une de ces attaques est\ndisponible, elle s'active en\lappuyant sur {START_BUTTON} puis {SE_SHOP} lors de\lla sélection d'une capacité.\pPour qu'un Pokémon utilise une\nCapacité Z, il doit tenir un type\ld'objet spécial appelé {COLOR}ÉCristal Z{COLOR}Á.\pLa plupart des Cristaux Z\ncorrespondent à un type de capacité,\lmais certains sont liés à l'espèce.
@@ -22498,7 +22498,7 @@
 0x1FA1DBA: Comme la scientifique est K.O., je\nvais prendre son Pokémon aussi, tu\lvois ?
 0x1FA1E0C: Tu vois, mon\p{STR_VAR_1} ? On a ces\nboosters, et on peut utiliser ce\lPokémon pour en fabriquer d'autres\ppour nous !\pGagnant-gagnant ! On se\nvoit à la base une fois que j'aurai\lréglé ça avec James, d'accord ?
 0x1FA1EE4: Black Ferrothorn
-0x1FA1EF5: Chef du Black Ferrothorn
+0x1FA1EF5: Chef Black Ferrothorn
 0x1FA1F0B: Territoire Ferrothorn
 0x1FA1F1B: Barbs
 0x1FA1F21: La bataille d'Antisis
@@ -22699,7 +22699,7 @@
 0x1FA7439: Allez, les gars ! On va à l'Horizon\nNoir ! Ces Noacier Noirs vont\pressentir une terreur que même les\nTerreur Granbull seuls ne pourraient\lpas provoquer !
 0x1FA74CF: Ça fait un bail, {PLAYER}. Comment\pça va sans les {PLAYER} Noirs pour\nte garder dans le droit chemin ? …\lAlors tu es devenu\pMaître, hein ? Je\psavais que j'avais l'œil pour le\ptalent ! Tu as vraiment du cran,\ngamin. C'est\pdommage que la Patronne\nne veuille pas que tu rejoignes\pl'Horizon Noir. Quelque chose à\npropos de “plans\pspéciaux” pour toi.\nBref, {PLAYER}, continue d'être le\pDresseur le plus courageux que je\nconnaisse !
 0x1FA765A: {COLOR}ÁL'Écrémeuh est rentré à la\nFerme Meumeu.
-0x1FA7687: Un toit pour un sans-abri
+0x1FA7687:  Un toit à soi
 0x1FA7698: Homme Riche
 0x1FA76A1: Motard
 0x1FA76A7: Swizer
@@ -22765,7 +22765,7 @@
 0x1FA8E84: Nous avons appelé les Noacier Noirs\npour nous aider à étendre notre empire.
 0x1FA8EC4: Un gamin ne va pas arrêter\nl'expansion.
 0x1FA8EEF: Un de ces jours, la Société des\nCambrioleurs de Ville Portuaire sera connue de tous !
-0x1FA8F33: La Société des Cambrioleurs de Ville\nPortuaire se bat avec honneur ! Nous\pne vous défierons pas si vous n'avez\npas assez de Pokémon.
+0x1FA8F33: Les Cambrioleurs du Port se\nbattent avec honneur !\pPas de défi si vous n'avez\npas assez de Pokémon.
 0x1FA8F9C: Notre chef est El-Scamo ! Il aime\parnaquer les gens !
 0x1FA8FCD: El-Scamo va être contrarié !
 0x1FA8FE9: El-Scamo est un maître voleur.\pPersonne ne sait à quoi il ressemble\nvraiment !
@@ -22776,9 +22776,9 @@
 0x1FA90E6: Tant que tu es là, ce but est\nlointain.
 0x1FA9116: Nous sommes les Noacier Noirs ! Nous\nrègnerons sur la pègre de Ville Portuaire !
 0x1FA9155: Ces cambrioleurs dirigeaient les\nchoses ici avant. Alors nous, les\pNoacier Noirs, sommes intervenus\npour les aider !
-0x1FA91BD: Pas d'une grande aide…
+0x1FA91BD: Peu utile...
 0x1FA91CC: Nous contrôlons le crime ici,\nmaintenant ! Nous, les Noacier Noirs !
-0x1FA9202: Nous sommes venus aider ces\ncambrioleurs du\pcoin. Mais ils n'ont\npas besoin d'aide contre quelqu'un\lavec aussi peu de Pokémon que toi !
+0x1FA9202: On est venus aider les\ncambrioleurs du coin.\pMais pas besoin d'aide contre\nquelqu'un avec si peu de Pokémon !
 0x1FA9278: Notre chef est Barbs à la volonté de\nfer !
 0x1FA929D: Barbs va être furieux !
 0x1FA92B4: Barbs dirige les Noacier Noirs d'une\nmain de fer !
@@ -22937,7 +22937,7 @@
 0x1FACA10: Il y a des histoires de gens qui ne sont\njamais revenus de la Grotte Faille.\pOn dit que des groupes entiers qui y sont\ndescendus n'ont jamais été revus.\pC'est une bonne chose que vous ayez sauvé notre\nfille, Maître.\pJe frissonne à l'idée de ce qui aurait pu\nlui arriver.
 0x1FACB04: {COLOR}ÉGagyagyaah !
 0x1FACB77: L'Élekable Rebelle
-0x1FACB8D: Société Scientifique
+0x1FACB8D: Cercle Science
 0x1FACB9D: Intello
 0x1FACBA2: L'Élekable d'un intello est devenu rebelle !\nTraquez-le et ramenez-le à\nl'intello.
 0x1FACBEF: L'Élekable d'un intello est devenu rebelle !\nTrouvez-le au Mont Thundercap 4E et\nramenez-le à l'intello.
@@ -24384,7 +24384,7 @@
 0x77f1e3: Tu es son enfant !\pJe savais bien que mes yeux ne me\ntrompaient pas !\pTon père était, pour faire simple,\nun homme extraordinaire.\pJe suis sûr que si tu te présentais\ncomme son enfant, les gens te\ltémoigneraient aussitôt beaucoup\ld'affection.\pRares sont ceux qui n'ont jamais\nentendu parler de ses exploits.\pQuel dommage qu'il ait disparu.\pSi seulement quelqu'un savait ce\nqu'il est advenu de lui, je\lpourrais enfin tourner la page.
 0x77f375: Oh.\nJ'aurais juré que tu étais...\pMes yeux doivent baisser avec\nl'âge.
 0x77f452: Cela peut sembler un peu ironique,\nmais je tiens à t'offrir cet objet\len remerciement de m'avoir permis\lde tourner la page.
-0x780119: faire moi-même !\pC'est juste que... eh bien... quand\ntes parents m'ont confié ta garde,\lils m'ont demandé de veiller sur\ltoi jusqu'à tes 18 ans au moins...
+0x780119: faire moi-même !\pC'est que... eh bien... quand tes\nparents t'ont confié à moi,\lj'ai promis de veiller sur toi\ljusqu'à tes 18 ans...
 0x781506: <0xFD><0x06> : <0xFC><0x01><0x08>Tout le monde se fiche de\nce que ça t'a fait, Log.\pCe qui compte, c'est que nos\nPokémon aient l'air forts.
 0x788d2d: C'est une gemme rare qui peut\nrenforcer une capacité de type\lPlante en combat !\pJe suis sûr qu'elle te sera utile,\nchampion en herbe.
 0x788dc8: <0xFC><0x01><0x02><0xFD><0x01> obtient le Badge Feuille\nde Mirskle !
@@ -24588,9 +24588,9 @@
 0x1be30a: Un mur d'eau s'abat dans un\npuissant rugissement.
 0x1bfbe9: Voulez-vous quitter le PARC SAFARI\nmaintenant ?
 0x1f2fd07: Ce que tu décris est en effet\ninquiétant.\pEh bien, je crois pouvoir t'éclairer\nsur ce que ces canailles cherchent\là accomplir.\pAu fait, connais-tu bien l'histoire\nde Borrius ?
-0x1f3e5f0: ...?\pIls ont dû tomber quand Groudon a\nlancé cette attaque...\pEt maintenant...<0xFC><0x08><0x18> mes propres Pokémon\nsont trop blessés pour affronter\lcette chose... !
+0x1f3e5f0: ...?\pIls ont dû tomber quand Groudon\na lancé son attaque...\pEt là...<0xFC><0x08><0x18> mes Pokémon sont trop\nblessés pour affronter ça... !
 0x1f5f3f1: ...Ornithologue.\pJe ne participe qu'aux plus beaux\ncombats aériens.\pAinsi, je refuse les combats où des\nPokémon terrestres sont utilisés.\pCela dit, que dirais-tu d'un\n<0xFC><0x01><0x06>Combat Aérien<0xFC><0x01><0x08> ?
-0x1f5f713: ...combat m'a apporté tant\nde joie.\pJe t'en prie, accepte ces Ailes en\ngage de ma gratitude !
+0x1f5f713: ...combat m'a apporté tant\nde joie.\pAccepte ces Ailes en gage\nde ma gratitude !
 0x1f8dd3c: <0xFC><0x01><0x04>Veuillez choisir un partenaire parmi\nles Dresseurs réunis ici.
 0x740088: Hé, toi !\pMa Mamie prépare de très bons petits\nplats pour le dîner !\pTu devrais rester goûter ça un de\nces jours !
 0x741a37: <0xFC><0x01><0x02><0xFD><0x01> reçoit le Badge Ténèbres\nde Véga !
@@ -24610,7 +24610,7 @@
 0x772a91: Hmm...\nComment récupérer cet objet ?
 0x776157: Salut <0xFD><0x01> !\pComment vas-tu ?\pJe préparais justement à manger\npour ma famille.
 0x778eb1: Oh...\pTu es <0xFD><0x01>, c'est ça ?\p<0xFD><0x06> m'a parlé de toi.\pN'y vois rien de personnel, mais\névite de te mettre en travers de\lson chemin.\pIl n'a pas de temps à te consacrer.
-0x78000f: redoutable, <0xFD><0x01>.\pAttends un peu notre prochaine\nrencontre.\pD'ici là, je serai assez fort pour\nte faire goûter à la défaite !\pMaintenant, excuse-moi, j'ai des\nchoses importantes à faire.
+0x78000f: redoutable, <0xFD><0x01>.\pAttends un peu notre prochaine\nrencontre.\pD'ici là, je serai assez fort\npour te vaincre !\pSur ce, excuse-moi, j'ai des\nchoses importantes à faire.
 0x7818b1: Tu aimes mon château de sable ?\pJ'ai travaillé très dur pour le\nfaire !
 0x788538: <0xFC><0x01><0x08>Je suis désolé pour tout ça.\pTiens, prends ceci pour la peine.
 0x788865: Marlon : <0xFC><0x01><0x08>As-tu bien reçu le\ncolis de la Boutique ?
@@ -24669,8 +24669,8 @@
 0x792af0: <0xFD><0x01> reçoit un Zygarde\ndu scientifique !
 0x7c6881: Ouaip, je fais les livraisons depuis\nle port d'Antisis la journée.\pSans moi, pas de Marché de\nFallshore !
 0x7c96da: J'ai la clé pour libérer les\nPokémon !\pMais tu ne l'auras pas !
-0x1f3e0ea: submergé par le nombre, il fut\nvaincu.\pMais imagine que quelqu'un ait les\nmoyens de le réveiller et de le\lcontrôler...
-0x1f9cef7: Mon petit frère est tout petit, il\nn'a pas pu aller bien loin.\pJe parie qu'il est quelque part sur\nla <0xFC><0x01><0x06>Route 8<0xFC><0x01><0x04> en ce moment.\pEt la dernière fois que je l'ai vu,\nil portait son costume\l<0xFC><0x01><0x06>Pikachu<0xFC><0x01><0x04> préféré.
+0x1f3e0ea: submergé par le nombre, il fut\nvaincu.\pMais si quelqu'un pouvait le\nréveiller et le contrôler...
+0x1f9cef7: Mon petit frère est tout petit, il\nn'a pas pu aller bien loin.\pJe parie qu'il est quelque part sur\nla <0xFC><0x01><0x06>Route 8<0xFC><0x01><0x04> en ce moment.\pIl portait son costume\l<0xFC><0x01><0x06>Pikachu<0xFC><0x01><0x04> préféré.
 0x417FCC: fils
 0x77F57B: fils
 0x78DA8E: fils
