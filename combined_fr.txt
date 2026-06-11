@@ -5744,7 +5744,7 @@
 0x775C6A: {RIVAL} : {COLOR}ËPas mal, {PLAYER}\n! Tu lui as montré !\pJe prends le relais.\pUtilise cette Potion sur tes Pokémon\npour les soigner en attendant.
 0x775CE2: {RIVAL} : {COLOR}ËDécevant.\pJe pensais vraiment que tu pourrais\nle gérer.\pJe vais m'en occuper moi-même.\pUtilise cette Potion sur ton Pokémon\npour qu'il aille mieux.
 0x775D84: {COLOR}ËTrès bien, alors. Je vais le\nfaire moi-même.
-0x775DA6: Sbire : {COLOR}ËNon ! Mon Sepiatop\n!
+0x775DA6: Sbire : {COLOR}ËNon ! Mon Sepiatop !
 0x775DBE: {RIVAL} : {COLOR}Ë{STR_VAR_1} !\nFonce et frappe !
 0x775DF7: Sbire : {COLOR}ËD'accord, d'accord,\nj'abandonne ! Je te laisse passer !\pNe me fais plus de mal ! S'il te\nplaît !
 0x775E6C: {COLOR}Ë{STR_VAR_1} ! Reviens !
@@ -6910,7 +6910,6 @@
 0x7D742F: {COLOR}ËGroudon !\pRépondez à l'Orbe rouge !\pÉveillez-vous et revenez à votre\nétat primordial !
 0x7D7480: Véga : {COLOR}ËQue vas-tu faire, Marlon ?\pSi tu continues à me retenir ici, je\nvais mourir et ta seule source\lsur l'endroit où se trouvent les\nShadow\lWarriors disparaîtra dans une\nbouffée de\lfumée.
 0x7D752F: Marlon : {COLOR}ËMême si tu meurs, Véga, Je\nconnaîtrai toujours l'emplacement de\lta base.\pTu as ordonné à tes grognements de\nse retirer à {COLOR}ÉVivill Town{COLOR}Ë, n'est-ce\pAprès avoir récupéré Zeph de {COLOR}ÉFrozen\nHeights{COLOR}Ë, j'irai là-bas pour chercher\ll'Ombre. Guerriers.
-0x7D761F: Véga: {COLOR}ËGroudon!\pShake the earth!
 0x7D7642: Véga : {COLOR}ËTu n'arrives pas à tenir,\nMarlon ?\pDans ce cas, jusqu'à ce qu'on se\nretrouve.
 0x7D768F: {COLOR}Ë{PLAYER}, empêche Groudon de\nravager la grotte.\pSinon, elle va s'effondrer et nous\nserons\lcoincés ici !
 0x7D770E: Le {STR_VAR_1} s'enfonça dans la lave et\nretomba dans un profond sommeil.
@@ -24681,3 +24680,33 @@
 0x1F4D604: Mais après tout ce que tu as\naccompli, je suis heureuse.
 0x1F4D632: Heureuse de savoir que mon enfant\na dépassé toutes mes attentes.
 0x7BD1BB: Goon 1 : <0xFC><0x01><0x08>Hein ?\nC'est quoi ce môme ?\pOn va l'amocher et lui piquer\nson fric !
+0x41B03F: Ici, à <0xFD><0x02>,<0x30><0xFD><0x01>\na obtenu l'objet <0xFD><0x03>.
+0x7D761F: Véga : <0xFC><0x01><0x08>Groudon !\pFais trembler la terre !
+0x7F3707: Guerrier Ombre : <0xFC><0x01><0x08>Toi""""\pMeurs"""
+0x8CD194: <0xFC><0x01><0x08>Ce Pokémon"
+0xA4A98C: <0xFC><0x01><0x02><0xFC><0x03><0x09>Coup critique !
+0xA4A9A2: <0xFC><0x01><0x02><0xFC><0x03><0x09>Coup critique<0xFC><0x01><0x01><0xFC><0x03><0x06> sur\n<0xFD><0x10>!
+0xA4D712: Le Turbo Surf a été <0xFC><0x01><0x06>désactivé<0xFC><0x01><0x02>.
+0x1EEBA2A: <0xFC><0x01><0x02>Le <0xFD><0x02> s'est envolé !
+0x1EEFD30: <0xFC><0x01><0x02><0xFD><0x01> remet l'objet <0xFD><0x03>.
+0x1F08A06: <0xFC><0x01><0x02>Les taux de capture des Poké Balls\nsont augmentés de <0xFD><0x02> % !
+0x1F13EED: <0xFC><0x01><0x02><0xFD><0x01> remet\nl'objet <0xFD><0x03>.
+0x1F14710: <0xFC><0x01><0x02><0xFD><0x01> remet\nl'objet <0xFD><0x02>.
+0x1F1A9DA: <0xFC><0x01><0x02>Le <0xFD><0x02> roule au loin.
+0x1F20799: <0xFC><0x01><0x02><0xFD><0x01> remet le Pokédex\nà <0xFD><0x06>.
+0x1F23344: <0xFC><0x01><0x02><0xFD><0x01> livre le colis.
+0x1F24D0C: <0xFC><0x01><0x02><0xFD><0x01> remet le Carnet.
+0x1F24FE7: <0xFC><0x01><0x02><0xFD><0x01> remet le\nScanner de Stats.
+0x1F4AFA2: <0xFD><0x01> !\pArthur vient de m'annoncer la\nbonne nouvelle !\pDieu merci, tu nous reviens en un\nseul morceau !\pEt bien sûr, merci à toi !\pToi, Jax, <0xFD><0x06>"<0xFC><0x08><0x18> vous avez tout\ndonné pour sauver Borrius.\pBien sûr, on m'a dit que tout n'est\npas encore réglé avec ce\l<0xB1>Aklove<0xB2>, mais tu pourras t'en\lsoucier plus tard, je suppose.\pPour l'instant, pense plutôt à ce\nsiège vide, celui du Champion !\pAlors tiens, voilà qui devrait\nt'être utile.
+0x1F4C7AF: Aklove !\pJe suis là, sans escorte, comme\nconvenu"<0xFC><0x08><0x18> maintenant rends-nous\lPapi Arthur !
+0x1F4CC4B: Très bien"<0xFC><0x08><0x20> je vais te le dire"\pMon ancêtre, celui que les légendes\nnomment <0xB1>le roi étranger<0xB2>\lde la Grande Guerre"\pAujourd'hui encore, 3000 ans plus\ntard, il parcourt toujours ce monde.\pUne fois achevé ce qu'il avait\ncommencé"<0xFC><0x08><0x18> une fois cette guerre\lmenée à son vrai terme"\pAlors il pourrait reposer en paix.\pLa soumission de Borrius"<0xFC><0x08><0x18> aurait\nenfin exaucé sa dernière volonté.\pMais maintenant"<0xFC><0x08><0x18> ce n'est plus\npossible"
+0x1F50BD0: Quand tu en auras fini avec le reste\ndu Conseil 4, tu viendras encore à\lun de mes goûters ?\pOn va tellement s'amuser !\pSinon" dis-moi : tu sais ce que\nveut dire <0xB1>bon à rien<0xB2> ?\pC'est comme ça qu'on appelle Papa\nmaintenant.
+0x1F58176: <0xFC><0x01><0x02>La personne suspecte s'enfuit !
+0x1F58198: <0xFC><0x01><0x02>La Cellule suspecte s'enfuit !
+0x1F581B8: <0xFC><0x01><0x02>L'arbre suspect s'enfuit !
+0x1F5E7ED: <0xFC><0x01><0x02>Le Pokémon surpris attaque !
+0x1F6214B: <0xFC><0x01><0x02>L'anneau mystérieux disparaît.
+0x1F86276: <0xFC><0x01><0x02>Ouille !\nC'est brûlant !
+0x1F8848D: Changer le talent de <0xFC><0x01><0x06><0xFD><0x02><0xFC><0x01><0x08>\npour <0xFC><0x01><0x06><0xFD><0x03><0xFC><0x01><0x08> ?
+0x1F8EB12: <0xFC><0x01><0x08>Toi !
+0x8AA942: <0xFC><0x08><0x20>1, <0xFC><0x08><0x0F>2, et<0xFC><0x08><0x0F>" <0xFC><0x08><0x0F>" <0xFC><0x08><0x0F>" <0xFC><0x08><0x0F><0xFC><0x10><0x31> Pouf !
