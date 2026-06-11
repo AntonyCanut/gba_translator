@@ -79,9 +79,17 @@ DEFAULT_MAX_LINE_WIDTH = 192
 # Pokémon name). Unbound player names run up to 9 characters (~6px each).
 VARIABLE_WIDTH = 54
 
+# A buffer directly preceded by an apostrophe elision (qu'<0xFD><0xNN>,
+# d'<0xFD><0xNN>…) holds a vowel-initial pronoun by construction — Unbound
+# only buffers "il"/"elle" there (player/character gender). Its rendered
+# width is therefore bounded by "elle", far below the 54px name estimate,
+# so elided buffers are measured tightly and never block greedy filling.
+PRONOUN_WIDTH = 22  # word_width('elle') with the FRLG normal font
+
 SPACE_WIDTH = GLYPH_WIDTHS[0x00]
 
 _TOKEN_RE = re.compile(r'<0x([0-9A-Fa-f]{2})>')
+_ELISION_CHARS = "'’"
 _BREAK_RE = re.compile(r'<0xF[ABab]>|\n')
 _SEGMENT_SPLIT = re.compile(r'(<0xF[ABab]>)')
 _PAGE_SPLIT = re.compile(r'(<0xF[Bb]>)')
@@ -112,12 +120,29 @@ def word_width(word: str) -> int:
         match = _TOKEN_RE.match(word, i)
         if match:
             if match.group(1).upper() == 'FD':
-                width += VARIABLE_WIDTH
+                elided = i > 0 and word[i - 1] in _ELISION_CHARS
+                width += PRONOUN_WIDTH if elided else VARIABLE_WIDTH
             i = match.end()
             continue
         width += _char_width(word[i])
         i += 1
     return width
+
+
+def _has_wide_buffer(text: str) -> bool:
+    """True when ``text`` holds a buffer that may render wide (a name).
+
+    Apostrophe-elided buffers (qu'<0xFD>…) are narrow pronouns and do not
+    count: their lines can be packed greedily without clipping risk.
+    """
+    start = 0
+    while True:
+        i = text.find('<0xFD>', start)
+        if i == -1:
+            return False
+        if i == 0 or text[i - 1] not in _ELISION_CHARS:
+            return True
+        start = i + 1
 
 
 def line_width(line: str) -> int:
@@ -284,8 +309,9 @@ def rewrap_segment(segment: str, max_width: int = DEFAULT_MAX_LINE_WIDTH) -> str
     # Runtime buffers (<0xFD><0xNN>) can render wider than their 54px
     # estimate (battle prefixes, 10-char nicknames): packing their line
     # full risks clipping at the box edge, so buffer-bearing segments
-    # keep their source line count, balanced.
-    if '<0xFD>' not in segment:
+    # keep their source line count, balanced. Elided pronoun buffers
+    # (qu'<0xFD>…) are bounded by "elle" and stay greedy-eligible.
+    if not _has_wide_buffer(segment):
         cuts = _greedy_partition(widths, max_width)
     else:
         cuts = None
@@ -429,8 +455,10 @@ def rewrap(text: str, max_width: int = DEFAULT_MAX_LINE_WIDTH) -> str:
     ``normalize_breaks`` then re-emits the canonical ``\n``/scroll
     structure. Pages holding a ``<0xFD>`` runtime buffer keep their
     scroll positions: the buffer can render wider than its estimate, so
-    words must not be pulled across its boundary. Word order and wording
-    are preserved; texts without any break are returned untouched.
+    words must not be pulled across its boundary — except apostrophe-
+    elided pronoun buffers (qu'<0xFD>…), whose width is bounded and which
+    therefore flow greedily like plain words. Word order and wording are
+    preserved; texts without any break are returned untouched.
     """
     if not _BREAK_RE.search(text):
         return text
@@ -439,7 +467,7 @@ def rewrap(text: str, max_width: int = DEFAULT_MAX_LINE_WIDTH) -> str:
     for page in _PAGE_SPLIT.split(text):
         if _PAGE_SPLIT.fullmatch(page):
             out.append(page)
-        elif '<0xFD>' not in page:
+        elif not _has_wide_buffer(page):
             out.append(rewrap_segment(_SCROLL_RE.sub('\n', page), max_width))
         else:
             out.append(''.join(

@@ -115,3 +115,51 @@ class ControlPlaceholderTests(unittest.TestCase):
 
 if __name__ == '__main__':
     unittest.main()
+
+
+class BreakCodesNotQueuedTests(unittest.TestCase):
+    """FA/FB breaks are literal in translations, never {token} targets.
+
+    Regression: queuing them shifted every later replacement one slot
+    left — "Prendre le <0xFD><0x16> ?" became "Prendre le <0xFB> ?" and
+    the type-matchup screens lost their trailing <0xF9> icons.
+    """
+
+    def test_page_break_does_not_consume_a_token(self):
+        english = (
+            '<0xFD>  appears to be holding\nthe <0xFD><0x16>.<0xFB>'
+            'Would you like to take the\n<0xFD><0x16> from it?'
+        )
+        english_raw = TextEncoder.encode_pokemon(english).hex()
+        translation = (
+            '{UNKNOWN_STR} semble tenir le\n{B_LAST_ITEM}.<0xFB>'
+            'Prendre le {B_LAST_ITEM} ?'
+        )
+        expected = (
+            '<0xFD><0x00> semble tenir le\n<0xFD><0x16>.<0xFB>'
+            'Prendre le <0xFD><0x16> ?'
+        )
+        self.assertEqual(
+            TranslatedROMBuilder._apply_control_placeholders(
+                translation, english, english_raw
+            ),
+            expected,
+        )
+
+    def test_leading_breaks_keep_icon_tokens_aligned(self):
+        english = (
+            'Effect:<0xFB>   <0xF9><0x15>: Bug<0xFB>   <0xF9><0x16>: Dark'
+        )
+        english_raw = TextEncoder.encode_pokemon(english).hex()
+        translation = (
+            'Effet :<0xFB>   {CIRCLE_DOT}: Ins<0xFB>   {TRIANGLE}: Ten'
+        )
+        expected = (
+            'Effet :<0xFB>   <0xF9><0x15>: Ins<0xFB>   <0xF9><0x16>: Ten'
+        )
+        self.assertEqual(
+            TranslatedROMBuilder._apply_control_placeholders(
+                translation, english, english_raw
+            ),
+            expected,
+        )

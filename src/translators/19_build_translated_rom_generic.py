@@ -288,6 +288,13 @@ class TranslatedROMBuilder:
         color_sequences: List[List[int]] = []
         other_sequences: List[List[int]] = []
         for seq in sequences:
+            if seq[0] in (0xFA, 0xFB):
+                # Scroll/page breaks are written literally in translations
+                # (\l, \p, <0xFA>, <0xFB>), never as {tokens}. Queuing them
+                # shifted every later replacement one slot left: a buffer
+                # became a page break (trade offer, held-item prompt) and
+                # trailing icons were dropped (type-matchup screens).
+                continue
             if seq[0] == 0xFC and len(seq) == 3 and seq[1] == 0x01:
                 color_sequences.append(seq)
             else:
