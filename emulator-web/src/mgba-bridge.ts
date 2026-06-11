@@ -97,13 +97,15 @@ export class MgbaBridgeClient {
     cmd.push(
       '-C', 'audioSync=0',
       '-C', 'videoSync=0',
+      '-C', 'mute=1',
       rom,
     );
 
     console.log(`[mgba] Launching: ${cmd.join(' ')}`);
+    // detached:false (default) so the child is in the parent's process group and
+    // dies when the server is killed, instead of staying open as an orphan.
     this.process = spawn(cmd[0], cmd.slice(1), {
       stdio: ['pipe', 'pipe', 'pipe'],
-      detached: true,
     });
 
     this.process.stderr?.on('data', (data: Buffer) => {
@@ -132,6 +134,26 @@ export class MgbaBridgeClient {
     this.romLoaded = true;
     this.frameCount = 0;
     console.log('[mgba] Bridge connected and ready');
+
+    this.sendToBackground();
+  }
+
+  private sendToBackground(): void {
+    // Minimize the mGBA window on macOS so it does not block the screen during tests.
+    // Audio is already muted via -C mute=1; this is just the visual part.
+    if (process.platform !== 'darwin') return;
+    const script = `
+      tell application "mGBA"
+        try
+          set miniaturized of window 1 to true
+        end try
+      end tell
+    `;
+    try {
+      execSync(`osascript -e '${script.replace(/'/g, "'\\''")}'`, { timeout: 3000 });
+    } catch {
+      // Best-effort — if it fails (e.g. accessibility not granted) we just continue.
+    }
   }
 
   private async loadScriptViaAppleScript(scriptPath: string): Promise<void> {

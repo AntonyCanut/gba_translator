@@ -263,5 +263,16 @@ const isMainModule = process.argv[1] &&
 if (isMainModule) {
   createEmulatorServer().then((srv) => {
     console.log(`[server] Listening on ${srv.url}`);
+
+    // Ensure mGBA is killed before the process exits (e.g. when Playwright sends
+    // SIGTERM at the end of a test run). Without this the emulator window stays
+    // open because the child can outlive the server process.
+    const shutdown = (signal: string) => {
+      console.log(`[server] Received ${signal}, shutting down…`);
+      srv.close().finally(() => process.exit(0));
+    };
+
+    process.on('SIGTERM', () => shutdown('SIGTERM'));
+    process.on('SIGINT',  () => shutdown('SIGINT'));
   });
 }
