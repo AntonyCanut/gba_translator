@@ -13,11 +13,12 @@ naturally, without changing the wording or any control code:
   ``<0xFB>`` (paragraph: clears the window) and ``<0xFA>`` (scroll one
   line). Those codes are preserved verbatim and in place.
 * Within a segment the existing ``\n`` breaks are removed and the words
-  re-distributed over the same number of lines, choosing the cut points
-  that minimise raggedness while keeping every line inside the box. If
-  the words genuinely cannot fit on the original line count (long buffer
-  placeholders such as the player name), extra lines are added; the
-  Gen III break rule below turns them into scrolls.
+  re-distributed over the FEWEST lines that fit the box, choosing the
+  cut points that minimise raggedness. Short dialogues inherit breaks
+  from longer English lines (``Non ! Mon\nSepiatop !``) and read better
+  on a single line when they fit. If the words genuinely cannot fit
+  (long buffer placeholders such as the player name), extra lines are
+  added; the Gen III break rule below turns them into scrolls.
 * Breaks are then normalised to the Gen III dialogue rule: the message
   box shows two lines, so the first break after the start of text or a
   ``<0xFB>`` is ``\n`` (0xFE) and every later break must scroll
@@ -220,9 +221,12 @@ _MAX_EXTRA_LINES = 4
 def rewrap_segment(segment: str, max_width: int = DEFAULT_MAX_LINE_WIDTH) -> str:
     """Re-balance the ``\n`` breaks inside one display segment.
 
-    Keeps the original line count when the words fit; adds lines (later
-    normalised to scrolls) only when they cannot. Single-line segments
-    are returned unchanged.
+    Uses the FEWEST lines that keep every line inside the box: a short
+    dialogue whose words fit on a single line is merged onto one line
+    (breaks inherited from a longer English source read as incoherent
+    mid-sentence cuts). Lines are added (later normalised to scrolls)
+    only when the words cannot fit. Single-line segments are returned
+    unchanged.
     """
     line_count = segment.count('\n') + 1
     if line_count < 2:
@@ -230,12 +234,17 @@ def rewrap_segment(segment: str, max_width: int = DEFAULT_MAX_LINE_WIDTH) -> str
 
     words = _split_words(segment)
     if len(words) <= line_count:
-        # Not enough words to fill the lines meaningfully — leave as is.
+        # One word per line is a deliberate list-like layout — leave it.
         return segment
 
     widths = [word_width(w) for w in words]
+    # Runtime buffers (<0xFD><0xNN>) can render wider than their 54px
+    # estimate (battle prefixes, 10-char nicknames): merging their line
+    # into a fuller one risks clipping at the box edge, so only plain
+    # segments may use fewer lines than the source.
+    min_lines = 1 if '<0xFD>' not in segment else line_count
     cuts = None
-    for k in range(line_count, min(len(words), line_count + _MAX_EXTRA_LINES) + 1):
+    for k in range(min_lines, min(len(words), line_count + _MAX_EXTRA_LINES) + 1):
         cuts = _feasible_partition(widths, k, max_width)
         if cuts is not None:
             break

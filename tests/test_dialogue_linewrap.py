@@ -37,10 +37,35 @@ class NormalizeBreaksTests(unittest.TestCase):
 
 
 class RewrapTests(unittest.TestCase):
-    def test_rebalances_inherited_break(self):
-        # The in-game string showed "Et" alone on the first line.
+    def test_merges_short_dialogue_onto_one_line(self):
+        # The in-game string showed "Et" alone on the first line; the
+        # whole sentence fits the box, so it now reads on a single line.
         result = rewrap("Et\nenfin, comment t'appelles-tu ?")
-        self.assertEqual(result, "Et enfin, comment\nt'appelles-tu ?")
+        self.assertEqual(result, "Et enfin, comment t'appelles-tu ?")
+
+    def test_merges_inherited_break_with_codes(self):
+        # "Non ! Mon\nSepiatop !" inherited the English break and read
+        # as an incoherent mid-sentence cut.
+        result = rewrap('Sbire : <0xFC><0x01><0x08>Non ! Mon Sepiatop\n!')
+        self.assertEqual(
+            result, 'Sbire : <0xFC><0x01><0x08>Non ! Mon Sepiatop !'
+        )
+
+    def test_keeps_two_lines_when_one_does_not_fit(self):
+        text = "Maintenant,\nvoyons la meilleure façon de jouer."
+        result = rewrap(text)
+        self.assertEqual(result.count('\n'), 1)
+        for width in line_widths(result):
+            self.assertLessEqual(width, DEFAULT_MAX_LINE_WIDTH)
+
+    def test_reduces_three_lines_to_fewest(self):
+        # Three inherited breaks, content fits two lines: the extra
+        # scroll disappears with the merge.
+        text = "C'est\nta première partie sur\nPokémon Unbound ?"
+        result = rewrap(text)
+        self.assertEqual(result.count('\n') + result.count('<0xFA>'), 1)
+        for width in line_widths(result):
+            self.assertLessEqual(width, DEFAULT_MAX_LINE_WIDTH)
 
     def test_preserves_words_and_codes(self):
         text = "Maintenant,\nvoyons la meilleure façon de jouer.<0xFB>C'est ta première\npartie sur Pokémon Unbound ?"
