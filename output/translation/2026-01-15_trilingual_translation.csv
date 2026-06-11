@@ -8764,6 +8764,7 @@ Objet",
 0x00417F99,MIXED,MIXED,5,2,7,pokemon,other,MIXTE,
 0x00417FBB,Big guy,Big guy,7,3,10,pokemon,location,Grand gars,
 0x00417FC3,Big girl,Big girl,8,2,10,pokemon,location,Grande fille,
+0x00417FCC,son,son,3,2,5,pokemon,other,fils,
 0x00417FD0,daughter,daughter,8,1,9,pokemon,other,fille,
 0x00417FD9,BOULDERBADGE,BOULDERBADGE,12,1,13,pokemon,other,BADGE ROCHE,
 0x00417FE6,CASCADEBADGE,CASCADEBADGE,12,1,13,pokemon,other,BADGE CASCADE,
@@ -18794,10 +18795,10 @@ deceiving me!<0xFB>Your father was, to put it simply,
 an amazing man.<0xFB>I'm sure if you introduced yourself
 to people as his <0xFD><0x02>, you<0xFA>would instantly be regarded with<0xFA>much affection.<0xFB>There aren't many people out there
 who have not heard of his exploits.<0xFB>It's a shame he disappeared.<0xFB>If only someone knew what happened
-to him, I could finally have a<0xFA>sense of closure.",401,2,403,pokemon,dialogue,"Tu es son <0xFD><0x02> !<0xFB>Je savais bien que mes yeux ne me
+to him, I could finally have a<0xFA>sense of closure.",401,2,403,pokemon,dialogue,"Tu es son enfant !<0xFB>Je savais bien que mes yeux ne me
 trompaient pas !<0xFB>Ton père était, pour faire simple,
 un homme extraordinaire.<0xFB>Je suis sûr que si tu te présentais
-comme son <0xFD><0x02>, les gens te<0xFA>témoigneraient aussitôt beaucoup<0xFA>d'affection.<0xFB>Rares sont ceux qui n'ont jamais
+comme son enfant, les gens te<0xFA>témoigneraient aussitôt beaucoup<0xFA>d'affection.<0xFB>Rares sont ceux qui n'ont jamais
 entendu parler de ses exploits.<0xFB>Quel dommage qu'il ait disparu.<0xFB>Si seulement quelqu'un savait ce
 qu'il est advenu de lui, je<0xFA>pourrais enfin tourner la page.",
 0x0077F375,"Oh.
@@ -18832,6 +18833,7 @@ sérénité.",
 legendary Aros.<0xFB>I hope your travels are going well.","Hello, there, <0xFD><0x02> of the
 legendary Aros.<0xFB>I hope your travels are going well.",75,2,77,pokemon,dialogue,"Bonjour, <0xFD><0x02> du légendaire
 Aros.<0xFB>J'espère que ton voyage va bien.",
+0x0077F57B,son,son,3,2,5,pokemon,other,fils,
 0x0077F57F,daughter,daughter,8,3,11,pokemon,other,fille,
 0x0077F662,"Didja know that if you talk to the
 Gym referees before beating the<0xFA>Gym Leader, they'll give you a<0xFA>free gift?<0xFB>Didja? Didja?","<0x51>Sabías que si hablas con los <0x02>rbitos
@@ -19635,8 +19637,8 @@ apporté mes ingrédients.<0xFB>Merci infiniment.",
 this pie.<0xFB>Please, take these in exchange for
 your hard work, young trainer.","I'm sure my <0xFD><0x03> will love
 this pie.<0xFB>Please, take these in exchange for
-your hard work, young trainer.",100,2,102,pokemon,dialogue,"Nul doute que <0xFD><0x03> va adorer
-cette tarte.<0xFB>Tiens, prends ceci en échange de
+your hard work, young trainer.",100,2,102,pokemon,dialogue,"Nul doute que mon <0xFD><0x03> va
+adorer cette tarte.<0xFB>Tiens, prends ceci en échange de
 ton dur labeur, jeune Dresseur.",
 0x0078BCFF,"My umbrella always protects me when
 it's raining!","My umbrella always protects me when
@@ -19779,6 +19781,7 @@ d'aussi bons petits plats sans<0xFA>ton aide précieuse.",
 10 Moomoo Milks",33,2,35,pokemon,description,"5 Baies Rangma 10
 Laits Meumeu",
 0x0078DA85,grandson,grandson,8,3,11,pokemon,other,petit-fils,
+0x0078DA8E,son,son,3,2,5,pokemon,other,fils,
 0x0078DA92,"Many trainers in Blizzard City love
 using Flying-type Pokémon.<0xFB>They pride themselves on their
 birds' resistance to cold.","Many trainers in Blizzard City love
@@ -24644,12 +24647,12 @@ Biologist, lives in Frozen Heights<0xFA>as well.<0xFB>He's known around here as 
 Arceus!<0xFB>I think his wife just gave birth to
 a <0xFD><0x03>, actually.<0xFB>However, I'm having difficultly
 remembering the <0xFD><0x02>'s name""<0xFB>Oh, I forgot to ask earlier, but
-what are your children's names?",346,2,348,pokemon,dialogue,"Zeph : {COLOR}ËUn ami à moi, biologiste
+what are your children's names?",346,2,348,pokemon,dialogue,"Zeph : <0xFC><0x01><0x08>Un ami à moi, biologiste
 Pokémon, vit aux Hauteurs<0xFA>Gelées aussi.<0xFB>Ici on l'appelle le "" Gardien de
 Borrius "".<0xFB>Il a même réussi à capturer
-Arceus !<0xFB>Je crois que sa femme vient d'avoir
-un {STR_VAR_2}.<0xFB>J'ai du mal à me souvenir du nom du
-{STR_VAR_1}...<0xFB>Au fait, comment s'appellent vos
+Arceus !<0xFB>Je crois que sa femme vient tout
+juste d'avoir un bébé.<0xFB>J'ai du mal à me souvenir de son
+prénom...<0xFB>Au fait, comment s'appellent vos
 enfants ?",
 0x007DD2A4,"Ivory: <0xFC><0x01><0x04>Their names are <0xFD><0x06> and
 Melony.<0xFB>They're the most beautiful children
@@ -24816,8 +24819,9 @@ sur la force obscure de<0xFA>Borrius pour l'utiliser et obtenir<0xFA>L'Arme Ulti
 tout,<0xFA>tu ne devrais plus hésiter à<0xFA>nous faire confiance.",
 0x007DDF90,"Zeph: <0xFC><0x01><0x08>You're Aros' <0xFD><0x03>""<0xFB>If I had known, I never would have
 tried to have you killed!<0xFB>I'm sorry, <0xFD><0x01>.<0xFB>I truly am.","Zeph: <0xFC><0x01><0x08>You're Aros' <0xFD><0x03>""<0xFB>If I had known, I never would have
-tried to have you killed!<0xFB>I'm sorry, <0xFD><0x01>.<0xFB>I truly am.",113,1,114,pokemon,dialogue,"Zeph : {COLOR}ËTu es le {STR_VAR_2} d'Aros...<0xFB>Si je l'avais su, je n'aurais jamais
-essayé de te tuer !<0xFB>Je suis désolé, {PLAYER}.<0xFB>Vraiment.",
+tried to have you killed!<0xFB>I'm sorry, <0xFD><0x01>.<0xFB>I truly am.",113,1,114,pokemon,dialogue,"Zeph : <0xFC><0x01><0x08>Alors c'est toi,
+<0xFD><0x03> d'Aros...<0xFB>Si je l'avais su, je n'aurais jamais
+essayé de te tuer !<0xFB>Je suis désolé, <0xFD><0x01>.<0xFB>Vraiment.",
 0x007DE002,"<0xFC><0x01><0x08>Marlon""<0xFB>We can't stay here any longer.<0xFB>It's time to rally our fighting
 force and head to Vivill Town.","<0xFC><0x01><0x08>Marlon""<0xFB>We can't stay here any longer.<0xFB>It's time to rally our fighting
 force and head to Vivill Town.",104,1,105,pokemon,description,"<0xFC><0x01><0x08>Marlon...<0xFB>Nous ne pouvons pas rester ici
@@ -24844,6 +24848,7 @@ possible.<0xFB>We don't have long.<0xFB>Head <0xFC><0x01><0x06>northeast<0xFC><0
 <0xFC><0x01><0x08>to get there the quickest.",139,2,141,pokemon,description,"{COLOR}ËRends-toi à {COLOR}ÉBourg Vivill {COLOR}Ëau plus
 vite. On n'a pas beaucoup de temps.<0xFB>Va au {COLOR}Énord-est{COLOR}Ë depuis la {COLOR}ÉVille de<0xFB>Dehara{COLOR}Ë pour
 y arriver vite.",
+0x007DE1E1,son,son,3,2,5,pokemon,other,fils,
 0x007DE1E5,daughter,daughter,8,1,9,pokemon,other,fille,
 0x007DE459,"Ooh hoo hoo!<0xFB>I'll be back tomorrow to look for
 more berries!","Ooh hoo hoo!<0xFB>I'll be back tomorrow to look for
@@ -57000,6 +57005,7 @@ bonnes choses sans ton aide.",
 10 Baya Ziuela, 2 Baya Biglia,<0xFA>2 Baya Maranga, 5 Leche Mu-mu",78,2,80,pokemon,description,10 Baies Sitrus<0xFA>10 Baies Prine<0xFA>2 Baies Éka<0xFA>2 Baies Rangma<0xFA>5 Laits Meumeu,
 0x01EEAF8D,5 Moomoo Milks,,14,2,16,pokemon,other,,
 0x01EEAF9C,grandson,grandson,8,3,11,pokemon,other,petit-fils,
+0x01EEAFA5,son,son,3,3,6,pokemon,other,fils,
 0x01EEAFA9,"Have you ever heard of <0xFC><0x01><0x06>Ayla<0xFC><0x01><0x04>?<0xFB>She's the one responsible for
 bringing Bill's PC to Borrius!<0xFB>Thanks to her, we can store our
 Pokémon somewhere!","<0x51>Has oído hablar de <0xFC><0x01><0x06>Ayla<0xFC><0x01><0x04>?<0xFB><0x52>Ella es la responsable de trasladar
@@ -67269,8 +67275,8 @@ te cacher.<0xFB>J'enverrai ta Poké Ball à la dérive,
 au milieu des vagues...<0xFB>Tu seras plus en sécurité en mer,
 que si tu restais avec moi.<0xFB>Si j'ai tort et que rien n'arrive,
 je te rappellerai.<0xFB>Mais si c'est notre dernière fois
-ensemble...<0xFB>Protège mon <0xFD><0x04> si <0xFD><0x03> est
-jamais en danger.<0xFB>Et si le mauvais genre tente
+ensemble...<0xFB>Protège mon enfant si un jour
+<0xFD><0x03> est en danger.<0xFB>Et si le mauvais genre tente
 de libérer ton vrai pouvoir...<0xFB>Alors fais confiance à <0xFD><0x02>.<0xFB>Adieu, mon vieil ami.",
 0x01F11AE9,"Farewell, my good friend.",,25,2,27,pokemon,dialogue,,
 0x01F11B03,"It's gone""","Se ha ido""",10,3,13,pokemon,location,Il est parti...,
@@ -76982,8 +76988,8 @@ mettre fin à la vie de {PLAYER} !",
 0x01F3B652,s life!,,7,3,10,pokemon,dialogue,,
 0x01F3B65A,"If that truly is the case, whether
 <0xFD><0x03> goes now or when the weapon is<0xFA>fired, makes no difference to me.","Si ese es realmente el caso, no me
-importa si <0xFD><0x01> desaparece<0xFA>ahora o cuando se dispare el arma.",102,2,104,pokemon,description,"Si c'est vraiment le cas, que <0xFD><0x03>
-parte ou quand l'arme sera tirée<0xFA>utilisée ne change rien pour moi.",
+importa si <0xFD><0x01> desaparece<0xFA>ahora o cuando se dispare el arma.",102,2,104,pokemon,description,"Si c'est vraiment le cas, que ce
+soit maintenant ou quand l'arme<0xFA>sera utilisée, ça ne change rien<0xFA>pour moi.",
 0x01F3B69F,"fired, makes no difference to me.",,33,2,35,pokemon,description,,
 0x01F3B6C1,"And before you think you can escape
 this, <0xFD><0x01>""<0xFB>Be aware""<0xFC><0x08><0x20> I know where your
@@ -77014,14 +77020,14 @@ VERS L'ORDINATEUR CENTRAL.",
 THE MAINFRAME.",,44,3,47,pokemon,system,,
 0x01F3B86F,"I can't believe my eyes""<0xFB>You""<0xFC><0x08><0x18> you're""<0xFC><0x08><0x18> you're my <0xFD><0x04>""<0xFB><0xFD><0x01>""<0xFB>No matter how old you get, I'll
 always recognize you!","No puedo creer lo que veo""<0xFB>Tú""<0xFC><0x08><0x18> eres""<0xFC><0x08><0x18> eres mi""<0xFC><0x08><0x18><0xFB><0xFD><0x01>""<0xFB><0x52>No importa la edad que tengas,
-siempre te reconoceré!",115,3,118,pokemon,dialogue,"Je n'en crois pas mes yeux...<0xFB>Tu...{PAUSE} tu es...{PAUSE} tu es mon {STR_VAR_3}...<0xFB>{PLAYER}... Peu importe<0xFB>ton âge, je te reconnaîtrai
-toujours !",
+siempre te reconoceré!",115,3,118,pokemon,dialogue,"Je n'en crois pas mes yeux...<0xFB>Tu...<0xFC><0x08><0x18> tu es...<0xFC><0x08><0x18> tu es mon enfant...<0xFB><0xFD><0x01>...<0xFB>Peu importe ton âge, je te
+reconnaîtrai toujours !",
 0x01F3B8CA,"ll
 always recognize you!",,24,3,27,pokemon,dialogue,,
 0x01F3B8E3,"Oh, they got to you too, huh?","Oh, <0x51>también te atraparon?",29,2,31,pokemon,dialogue,"Oh, ils t'ont eu toi aussi, hein ?",
 0x01F3B901,"Marlon, how do you know my
 <0xFD><0x04>?","Marlon, <0x51>cómo sabes de <0xFD><0x01>?",30,2,32,pokemon,dialogue,"Marlon, comment connais-tu
-mon <0xFD><0x04> ?",
+mon enfant ?",
 0x01F3B920,"We've run into each other a few
 times now.<0xFB>Your <0xFD><0x04> seems to have the
 same sense of justice as you""<0xFB>Always running in blindly when
@@ -77029,9 +77035,9 @@ same sense of justice as you""<0xFB>Always running in blindly when
 veces.<0xFB>Al parecer <0xFD><0x01> tiene el
 mismo sentido de la jutiscia que<0xFA>tú""<0xFB>Siempre corriendo a ciegas cuando no
 se quiere""",146,3,149,pokemon,dialogue,"On s'est croisés plusieurs fois
-déjà. Ton <0xFD><0x04> semble avoir<0xFB>le même sens de la justice
-que toi... Toujours à foncer<0xFB>tête baissée quand <0xFD><0x03>
-n'est pas voulu...",
+déjà.<0xFB>Ton enfant semble avoir le même
+sens de la justice que toi...<0xFB>Toujours à foncer tête baissée
+là où <0xFD><0x03> n'a rien à faire...",
 0x01F3B9B3,"Then, I guess you turned out just
 as I hoped you would, <0xFD><0x01>.<0xFB>I'm so proud, I'm at a loss
 for words""","Supongo que resultaste tal y como
@@ -78346,6 +78352,7 @@ C'est {COLOR}Éau nord-est{COLOR}Ë de la {COLOR}ÉVille de<0xFB>Dehara{COLOR}Ë
 prêt.",
 0x01F41AF8,",
 when you are ready.",,21,2,23,pokemon,dialogue,,
+0x01F41B0E,son,son,3,2,5,pokemon,other,fils,
 0x01F41B12,daughter,daughter,8,2,10,pokemon,other,fille,
 0x01F41B1F,"You're seriously only leaving
 Dehara now?<0xFB>Man, you sure are slow!<0xFB>Well, while you were loitering
@@ -80923,8 +80930,8 @@ je traînerai du côté du Battle<0xFA>Frontier, alors fais-moi signe<0xFA>si tu
 0x01F4D571,if you stop by!,,15,3,18,pokemon,dialogue,,
 0x01F4D581,"I knew you'd come and rescue me,
 <0xFD><0x01>!","Sabía que vendrías a rescatarme,
-<0xFD><0x01>.",36,2,38,pokemon,dialogue,"Je savais que tu
-viendrais me sauv<0xFD><0x01>",
+<0xFD><0x01>.",36,2,38,pokemon,dialogue,"Je savais que tu viendrais
+me sauver, <0xFD><0x01> !",
 0x01F4D5A6,"Your father would be so proud of
 the person you've become""","Tu padre estaría muy orgulloso de
 ti""",58,3,61,pokemon,dialogue,"Ton père serait
@@ -80934,13 +80941,13 @@ si fier de la personne que tu es...",
 I really do""","Lo extraño"" lo extraño""",27,2,29,pokemon,dialogue,,
 0x01F4D604,"But after all you've accomplished,
 I'm happy.","Pero a pesar de todo, estoy muy
-feliz.",45,2,47,pokemon,dialogue,"Mais après tout ce que
-tu as accompli, je sui",
+feliz.",45,2,47,pokemon,dialogue,"Mais après tout ce que tu as
+accompli, je suis heureuse.",
 0x01F4D629,m happy.,,8,2,10,pokemon,other,,
 0x01F4D632,"Happy knowing that my <0xFD><0x03> has
 exceeded all my expectations.","Feliz de saber que has superado
-mis expectativas.",58,3,61,pokemon,dialogue,"Heureuse de savoir que
-mon<0xFD><0x03>a dépassé toutes mes attentes.",
+mis expectativas.",58,3,61,pokemon,dialogue,"Heureuse de savoir que mon enfant
+a dépassé toutes mes attentes.",
 0x01F4D64A," has
 exceeded all my expectations.",,34,3,37,pokemon,dialogue,,
 0x01F4D66D,"Let's go home, <0xFD><0x01>.

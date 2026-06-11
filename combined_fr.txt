@@ -5795,7 +5795,7 @@
 0x77F0C4: Route 10\p<0x7B> Tehl Town <0x79>\nAuburn Waterwa\l<0x7C> Fallshore City
 0x77F139: Bourg Cratère\pUne ville bâtie sur la cendre.
 0x77F198: Mon grand-père connaît plein de\nmonde !\pTu devrais aller lui parler !
-0x77F1E3: Tu es son {STR_VAR_1} !\pJe savais que ma vue ne me trompait\npas !\pTon père était, pour faire simple,\nun homme incroyable.\pJe suis sûr que si tu te présentais\ncomme son {STR_VAR_1}, on te\laccueillerait aussitôt avec\lbeaucoup d'affection.\pPeu de gens ignorent ses\nexploits.\pC'est dommage qu'il ait disparu.\pSi quelqu'un savait ce qui lui est\narrivé, je pourrais enfin être en\lpaix.
+0x77F1E3: Tu es son enfant !\pJe savais bien que mes yeux ne me\ntrompaient pas !\pTon père était, pour faire simple,\nun homme extraordinaire.\pJe suis sûr que si tu te présentais\ncomme son enfant, les gens te\ltémoigneraient aussitôt beaucoup\ld'affection.\pRares sont ceux qui n'ont jamais\nentendu parler de ses exploits.\pQuel dommage qu'il ait disparu.\pSi seulement quelqu'un savait ce\nqu'il est advenu de lui, je\lpourrais enfin tourner la page.
 0x77F375: Oh. Je pensais vraiment que tu\nétais…\p\n
 0x77F3BF: Quoi ? Tu sais ce qui est arrivé à\n{COLOR}ÉAros{COLOR}Ë ?\pS'il te plaît ! Tu dois\nme le dire !\p…\pIl a été réduit en cendres…\pQuitter ce monde de cette façon est\nbien triste.
 0x77F452: C'est peut-être ironique, mais je\nveux te donner cet objet pour te\lremercier de m'avoir apporté un peu\lde paix.
@@ -5950,7 +5950,7 @@
 0x78BB9A: {COLOR}É{STR_VAR_1}{COLOR}Ç\pVeuillez les apporter dès que vous\nle pouvez.
 0x78BBC9: Ooh hoo hoo, vous avez apporté mes\ningrédients.\pMerci beaucoup.
 0x78BC10: La Vieille Dame a pris :\n{COLOR}É{STR_VAR_1}
-0x78BC9A: Je suis sûr que mon {STR_VAR_2}\naimera cette tarte.\pPrends ceci en échange de ton\ntravail, jeune Dresseur.
+0x78BC9A: Nul doute que mon <0xFD><0x03> va\nadorer cette tarte.\pTiens, prends ceci en échange de\nton dur labeur, jeune Dresseur.
 0x78BCFF: Mon parapluie me protège toujours\nquand il pleut !
 0x78BD31: Saviez-vous qu'il existe une Poké\nBall qui soigne un pokémon ?\pQuand vous capturez un Pokémon,\ntous ses dégâts sont annulés !\pN'auriez-vous pas aimé en avoir ?
 0x78BDCA: Au nord d'ici se trouve l'entrée\nd'une autoroute souterraine.\pLe seul problème est qu'elle est\nbloquée par des arbres maigres.\pJ'aimerais juste savoir comment les\ncontourner.
@@ -6980,7 +6980,7 @@
 0x7DCF55: Marlon : {COLOR}ËOui…\pEn tant que biologistes\nmoléculaires, on pensait y arriver.\lÇa devait être nous.\pMais seul Arceus a vraiment le\npouvoir de ramener les morts.\pOn a dû avancer.\pPuis, il y a un an, Ivory a donné\nnaissance à des jumeaux.\pLe plus beau moment de nos\nvies…\pDepuis, le vide dans nos cœurs est\npresque comblé…
 0x7DD0C7: Zeph : {COLOR}ËOù sont vos enfants ?
 0x7DD0ED: Ivory : {COLOR}ÇEuler Log garde nos enfants\naux Hauteurs Gelées\lpour cette visite.
-0x7DD149: Zeph : {COLOR}ËUn ami à moi, biologiste\nPokémon, vit aux Hauteurs\lGelées aussi.\pIci on l'appelle le « Gardien de\nBorrius ».\pIl a même réussi à capturer\nArceus !\pJe crois que sa femme vient d'avoir\nun {STR_VAR_2}.\pJ'ai du mal à me souvenir du nom du\n{STR_VAR_1}…\pAu fait, comment s'appellent vos\nenfants ?
+0x7DD149: Zeph : <0xFC><0x01><0x08>Un ami à moi, biologiste\nPokémon, vit aux Hauteurs\lGelées aussi.\pIci on l'appelle le « Gardien de\nBorrius ».\pIl a même réussi à capturer\nArceus !\pJe crois que sa femme vient tout\njuste d'avoir un bébé.\pJ'ai du mal à me souvenir de son\nprénom…\pAu fait, comment s'appellent vos\nenfants ?
 0x7DD2A4: Ivory : {COLOR}ÇIls s'appellent {RIVAL} et\nMelony.\pLes plus beaux enfants du\nmonde.
 0x7DD2FF: Zeph : {COLOR}ËEt avec\nde si beaux noms…
 0x7DD330: {COLOR}ËVoudriez-vous m'aider pour quelque\nchose ?
@@ -7010,7 +7010,7 @@
 0x7DDA44: Sans Aros, nous avons poursuivi\nles essais en sa mémoire.\pCependant, nos « Guerriers de\nl'Ombre » étaient durs à contrôler.\pCertains ont attaqué, me balafrant\nle visage…\pMalgré tout, nous avons continué.\pPendant des années, nous avons\ncapturé des Pokémon et\lles mêler aux cendres\ld'humains.\pPlus nous le faisions, plus notre\nhésitation à tuer diminuait.\pEn voyant qu'on ne pourrait pas\ncréer une créature gardant\lces souvenirs\lde sa vie passée,\lnous avons choisi une autre voie.
 0x7DDC4C: Zeph : {COLOR}ËMarlon, Ivory, il est temps\nd'essayer autre chose.\pCes dernières années, nous avons\npeu progressé.\pOn a créé quelques centaines de\nGuerriers de l'Ombre, mais ils\lrestent tous des bêtes sans esprit.\pVous avez tant sacrifié pour\nm'aider…\pVous avez abandonné vos enfants\npour moi…\pIl est temps de finir et de rentrer\nchez nous.\pJe propose de lancer l'Opération\nFleur Éternelle.\pSi on parvient à amener l'Arme\nUltime ici, on pourra\lramener nos enfants…
 0x7DDE5D: {COLOR}ËNous avons recueilli des infos\nsur la force obscure de\lBorrius pour l'utiliser et obtenir\lL'Arme Ultime.\pLa suite, tu la connais.\p…\p…\pPfiou…\pAssimile tout ça, {PLAYER}.\p…\p…\pMaintenant que tu sais presque\ntout,\ltu ne devrais plus hésiter à\lnous faire confiance.
-0x7DDF90: Zeph : {COLOR}ËTu es le {STR_VAR_2} d'Aros…\pSi je l'avais su, je n'aurais jamais\nessayé de te tuer !\pJe suis désolé, {PLAYER}.\pVraiment.
+0x7DDF90: Zeph : <0xFC><0x01><0x08>Alors c'est toi,\n<0xFD><0x03> d'Aros…\pSi je l'avais su, je n'aurais jamais\nessayé de te tuer !\pJe suis désolé, <0xFD><0x01>.\pVraiment.
 0x7DE002: {COLOR}ËMarlon…\pOn ne peut pas rester.\pRassemblons nos forces et allons à\nBourg Vivill.
 0x7DE06B: {COLOR}ËMarlon : Tout de suite, Zeph.\pAllons à Bourg Vivill au plus vite.\nOn n'aura sans doute pas beaucoup\pde temps avant\nle retour d'Aklove.
 0x7DE0EA: {COLOR}ËUne dernière chose, {PLAYER}.\pGarde la tenue, elle te va bien. Qui\nsait, ça peut servir un jour.\p\n
@@ -16871,7 +16871,7 @@
 0x1F11864: 15 ans plus tard
 0x1F11888: Hoopa…\pJe crains l'avenir, vieil ami\n- car si, non…{PAUSE} quand ELLE arrivera.
 0x1F118D6: Je ne pourrai pas te protéger\nsi elle tente quelque chose.\pNon…{PAUSE} elle tentera quelque chose.\pReste à savoir quoi.
-0x1F1194E: C'est pourquoi, mon ami, tu dois\nte cacher.\pJ'enverrai ta Poké Ball à la dérive,\nau milieu des vagues…\pTu seras plus en sécurité en mer,\nque si tu restais avec moi.\pSi j'ai tort et que rien n'arrive,\nje te rappellerai.\pMais si c'est notre dernière fois\nensemble…\pProtège mon {STR_VAR_3} si {STR_VAR_2} est\njamais en danger.\pEt si le mauvais genre tente\nde libérer ton vrai pouvoir…\pAlors fais confiance à {STR_VAR_1}.\pAdieu, mon vieil ami.
+0x1F1194E: C'est pourquoi, mon ami, tu dois\nte cacher.\pJ'enverrai ta Poké Ball à la dérive,\nau milieu des vagues…\pTu seras plus en sécurité en mer,\nque si tu restais avec moi.\pSi j'ai tort et que rien n'arrive,\nje te rappellerai.\pMais si c'est notre dernière fois\nensemble…\pProtège mon enfant si un jour\n<0xFD><0x03> est en danger.\pEt si le mauvais genre tente\nde libérer ton vrai pouvoir…\pAlors fais confiance à <0xFD><0x02>.\pAdieu, mon vieil ami.
 0x1F11B03: Il est parti…
 0x1F11B0E: Alors, tu es venu.\pFinissons-en.
 0x1F11B40: ARGH !\pComment exaucer le vœu de Papy\nsi je n'attrape aucun Pokémon ?
@@ -18404,16 +18404,16 @@
 0x1F3B4A8: Non… tu n'es pas sérieux… Le Cube\pn'accepterait jamais de matière\norganique vivante ! Je le saurais…{PAUSE}\pj'ai moi-même intégré les\nmesures de sécurité !
 0x1F3B52E: Hé… tu n'es vraiment plus à jour\ndepuis ta retraite, hein ? Fey\la fait un travail merveilleux\psur ce Cube spécial à elle.\nAlors regarde bien, Zeph\p- regarde jusqu'où est\nallé ton invention !
 0x1F3B5FF: Aklove, ne fais pas ça ! Ce que tu\pt'apprêtes à faire…{PAUSE} pourrait bien\nmettre fin à la vie de {PLAYER} !
-0x1F3B65A: Si c'est vraiment le cas, que {STR_VAR_2}\nparte ou quand l'arme sera tirée\lutilisée ne change rien pour moi.
+0x1F3B65A: Si c'est vraiment le cas, que ce\nsoit maintenant ou quand l'arme\lsera utilisée, ça ne change rien\lpour moi.
 0x1F3B6C1: Et avant que tu ne penses\npouvoir fuir ça, {PLAYER}…\pSache…{PAUSE}î je sais où vit ta\nmère. Je ne peux garantir\psa sécurité si tu m'attaques\nou si tu fuis…
 0x1F3B758: Bien, tu seras coopératif. Alors\pc'est un adieu, {PLAYER}. Espérons\nne jamais nous revoir.
 0x1F3B7AD: CHARGEMENT REÇU.\pTRAITEMENT.{PAUSE}.{PAUSE}.{PAUSE}
 0x1F3B7D6: TRAITEMENT TERMINÉ.\pMATIÈRE PENSANTE DÉTECTÉE.\pCOPIE.{PAUSE}.{PAUSE}.{PAUSE}
 0x1F3B819: ENTRÉE H005 COPIÉE\nAVEC SUCCÈS. LES DONNÉES\pONT ÉTÉ ENVOYÉES\nAU CENTRAL.
-0x1F3B86F: Je n'en crois pas mes yeux…\pTu…{PAUSE} tu es…{PAUSE} tu es mon {STR_VAR_3}…\p{PLAYER}… Peu importe\pton âge, je te reconnaîtrai\ntoujours !
+0x1F3B86F: Je n'en crois pas mes yeux…\pTu…<0xFC><0x08><0x18> tu es…<0xFC><0x08><0x18> tu es mon enfant…\p<0xFD><0x01>…\pPeu importe ton âge, je te\nreconnaîtrai toujours !
 0x1F3B8E3: Oh, ils t'ont eu toi aussi, hein ?
-0x1F3B901: Marlon, comment connais-tu\nmon {STR_VAR_3} ?
-0x1F3B920: On s'est croisés plusieurs fois\ndéjà. Ton {STR_VAR_3} semble avoir\ple même sens de la justice\nque toi… Toujours à foncer\ptête baissée quand {STR_VAR_2}\nn'est pas voulu…
+0x1F3B901: Marlon, comment connais-tu\nmon enfant ?
+0x1F3B920: On s'est croisés plusieurs fois\ndéjà.\pTon enfant semble avoir le même\nsens de la justice que toi…\pToujours à foncer tête baissée\nlà où <0xFD><0x03> n'a rien à faire…
 0x1F3B9B3: Alors, je suppose que tu es devenu\nexactement ce que j'espérais,\p{PLAYER}. Je suis si fier\nque je reste sans mots…
 0x1F3BA16: Whoa, attention !
 0x1F3BA27: Fais attention à ce qui t'entoure\nici, {PLAYER}. Des objets provenant\pde nombreux Dresseurs arrivent\nsans arrêt, alors tu ne sais\ljamais quand l'un va surgir\lde nulle part !
@@ -24381,7 +24381,7 @@
 0x778cb6: Ivory : <0xFC><0x01><0x04>Très bien, dans ce cas.\pJe vais accéder à ta petite\nrequête.\pMais sache que quand tu perdras,\nmon Pokémon te réduira en cendres !\pGo ! Incine...
 0x778d57: Marlon : <0xFC><0x01><0x08>Ivory !\pTu n'as pas le temps d'affronter ce\nDresseur maintenant.\pNous avons un planning serré à\nrespecter.\pFile, je vais le retenir pendant\nque tu t'échappes.
 0x77f198: Mon grand-père connaît plein de\ngens intéressants !\pTu devrais aller lui parler !
-0x77f1e3: Tu es son <0xFD><0x02> !\pJe savais bien que mes yeux ne me\ntrompaient pas !\pTon père était, pour faire simple,\nun homme extraordinaire.\pJe suis sûr que si tu te présentais\ncomme son <0xFD><0x02>, les gens te\ltémoigneraient aussitôt beaucoup\ld'affection.\pRares sont ceux qui n'ont jamais\nentendu parler de ses exploits.\pQuel dommage qu'il ait disparu.\pSi seulement quelqu'un savait ce\nqu'il est advenu de lui, je\lpourrais enfin tourner la page.
+0x77f1e3: Tu es son enfant !\pJe savais bien que mes yeux ne me\ntrompaient pas !\pTon père était, pour faire simple,\nun homme extraordinaire.\pJe suis sûr que si tu te présentais\ncomme son enfant, les gens te\ltémoigneraient aussitôt beaucoup\ld'affection.\pRares sont ceux qui n'ont jamais\nentendu parler de ses exploits.\pQuel dommage qu'il ait disparu.\pSi seulement quelqu'un savait ce\nqu'il est advenu de lui, je\lpourrais enfin tourner la page.
 0x77f375: Oh.\nJ'aurais juré que tu étais...\pMes yeux doivent baisser avec\nl'âge.
 0x77f452: Cela peut sembler un peu ironique,\nmais je tiens à t'offrir cet objet\len remerciement de m'avoir permis\lde tourner la page.
 0x780119: faire moi-même !\pC'est juste que... eh bien... quand\ntes parents m'ont confié ta garde,\lils m'ont demandé de veiller sur\ltoi jusqu'à tes 18 ans au moins...
@@ -24394,7 +24394,7 @@
 0x78b7eb: Il me faut encore :\n<0xFC><0x01><0x06><0xFD><0x02><0xFC><0x01><0x04>\pApporte-les-moi dès que tu peux,\ns'il te plaît.
 0x78b9a0: Log : <0xFC><0x01><0x08>Eh bien, il n'est pas de tout\nrepos, hein ?\pEt maintenant qu'il est parti, qui\nva faire mes courses ?
 0x78bbc9: Hou hou hou, on dirait que tu m'as\napporté mes ingrédients.\pMerci infiniment.
-0x78bc9a: Nul doute que <0xFD><0x03> va adorer\ncette tarte.\pTiens, prends ceci en échange de\nton dur labeur, jeune Dresseur.
+0x78bc9a: Nul doute que mon <0xFD><0x03> va\nadorer cette tarte.\pTiens, prends ceci en échange de\nton dur labeur, jeune Dresseur.
 0x78d90c: Reviens me voir un de ces jours.\pLes occasions de préparer des\ntartes ne manquent jamais.
 0x1eeae25: Reviens me voir un de ces jours.\pLes occasions de préparer des\ntartes ne manquent jamais.
 0x78db32: Le type Vol est le seul type qui\nn'est pas au sol.\pQu'est-ce qu'<0xFC><0x01><0x06>être au sol<0xFC><0x01><0x08> ?\pLes Pokémon au sol subissent les\ndégâts de Picots et profitent de\ll'effet des Champs, entre autres.\pTu en apprendras davantage au fil\nde tes combats.
@@ -24671,3 +24671,12 @@
 0x7c96da: J'ai la clé pour libérer les\nPokémon !\pMais tu ne l'auras pas !
 0x1f3e0ea: submergé par le nombre, il fut\nvaincu.\pMais imagine que quelqu'un ait les\nmoyens de le réveiller et de le\lcontrôler...
 0x1f9cef7: Mon petit frère est tout petit, il\nn'a pas pu aller bien loin.\pJe parie qu'il est quelque part sur\nla <0xFC><0x01><0x06>Route 8<0xFC><0x01><0x04> en ce moment.\pEt la dernière fois que je l'ai vu,\nil portait son costume\l<0xFC><0x01><0x06>Pikachu<0xFC><0x01><0x04> préféré.
+0x417FCC: fils
+0x77F57B: fils
+0x78DA8E: fils
+0x7DE1E1: fils
+0x1EEAFA5: fils
+0x1F41B0E: fils
+0x1F4D581: Je savais que tu viendrais\nme sauver, <0xFD><0x01> !
+0x1F4D604: Mais après tout ce que tu as\naccompli, je suis heureuse.
+0x1F4D632: Heureuse de savoir que mon enfant\na dépassé toutes mes attentes.
