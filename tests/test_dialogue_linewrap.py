@@ -58,6 +58,21 @@ class RewrapTests(unittest.TestCase):
         for width in line_widths(result):
             self.assertLessEqual(width, DEFAULT_MAX_LINE_WIDTH)
 
+    def test_fills_lines_to_the_edge(self):
+        # "Très captivant, si je / puis me permettre." broke at half the
+        # box; no line may break while the next word still fits on it.
+        result = rewrap("Très captivant, si je\npuis me permettre.")
+        lines = result.replace('<0xFA>', '\n').split('\n')
+        self.assertGreater(len(lines), 1)
+        from src.core.dialogue_linewrap import line_width, word_width, SPACE_WIDTH
+        for current, following in zip(lines, lines[1:]):
+            first_next = following.split(' ')[0]
+            self.assertGreater(
+                line_width(current) + SPACE_WIDTH + word_width(first_next),
+                DEFAULT_MAX_LINE_WIDTH,
+                f'line {current!r} broke early: {first_next!r} still fits',
+            )
+
     def test_reduces_three_lines_to_fewest(self):
         # Three inherited breaks, content fits two lines: the extra
         # scroll disappears with the merge.
@@ -94,6 +109,17 @@ class RewrapTests(unittest.TestCase):
         first_newline = result.find('\n')
         self.assertGreater(first_newline, 0)
         self.assertNotIn('\n', result[first_newline + 1:])
+
+    def test_spaced_punctuation_never_starts_a_line(self):
+        # French detached punctuation (« : », « ! », « ? ») is glued to
+        # the previous word: a break may not orphan it at line start.
+        result = rewrap('Il me faut :\n<0xFC><0x01><0x06><0xFD><0x02>')
+        for line in result.replace('<0xFA>', '\n').split('\n'):
+            self.assertFalse(
+                line.startswith((':', '!', '?')),
+                f'line starts with detached punctuation: {line!r}',
+            )
+        self.assertIn('faut :', result)
 
     def test_untouched_without_breaks(self):
         self.assertEqual(rewrap('PARLER'), 'PARLER')

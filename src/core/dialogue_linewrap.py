@@ -13,12 +13,15 @@ naturally, without changing the wording or any control code:
   ``<0xFB>`` (paragraph: clears the window) and ``<0xFA>`` (scroll one
   line). Those codes are preserved verbatim and in place.
 * Within a segment the existing ``\n`` breaks are removed and the words
-  re-distributed over the FEWEST lines that fit the box, choosing the
-  cut points that minimise raggedness. Short dialogues inherit breaks
-  from longer English lines (``Non ! Mon\nSepiatop !``) and read better
-  on a single line when they fit. If the words genuinely cannot fit
-  (long buffer placeholders such as the player name), extra lines are
-  added; the Gen III break rule below turns them into scrolls.
+  re-flowed greedily: each line is filled as close to the box edge as
+  possible before breaking, which also uses the fewest lines. Short
+  dialogues inherit breaks from longer English lines (``Non ! Mon\n
+  Sepiatop !``) and read better on a single line; longer ones must not
+  break while space remains on the current line. Buffer-bearing
+  segments (player/Pokémon names) keep their source line count,
+  balanced, because a buffer can render wider than its estimate. If the
+  words genuinely cannot fit, extra lines are added; the Gen III break
+  rule below turns them into scrolls.
 * Breaks are then normalised to the Gen III dialogue rule: the message
   box shows two lines, so the first break after the start of text or a
   ``<0xFB>`` is ``\n`` (0xFE) and every later break must scroll
@@ -123,10 +126,29 @@ def line_width(line: str) -> int:
     return sum(word_width(w) for w in words) + SPACE_WIDTH * (len(words) - 1)
 
 
+_PUNCT_ONLY_RE = re.compile(r'[!?:;.,"»«…-]+$')
+
+
 def _split_words(segment: str) -> List[str]:
-    """Split a segment into words, gluing ``<0xNN>`` codes to neighbours."""
+    """Split a segment into words, gluing ``<0xNN>`` codes to neighbours.
+
+    French spaced punctuation (`` !``, `` ?``, `` :``) must never start
+    a line: a token made only of punctuation is glued to the previous
+    word (space included) so no break can ever orphan it (``Sepiatop\n!``).
+    """
     words: List[str] = []
     buf: List[str] = []
+
+    def flush() -> None:
+        if not buf:
+            return
+        token = ''.join(buf)
+        buf.clear()
+        if words and _PUNCT_ONLY_RE.fullmatch(token):
+            words[-1] += ' ' + token
+        else:
+            words.append(token)
+
     i = 0
     while i < len(segment):
         match = _TOKEN_RE.match(segment, i)
@@ -136,14 +158,11 @@ def _split_words(segment: str) -> List[str]:
             continue
         ch = segment[i]
         if ch in ' \n\t':
-            if buf:
-                words.append(''.join(buf))
-                buf = []
+            flush()
         else:
             buf.append(ch)
         i += 1
-    if buf:
-        words.append(''.join(buf))
+    flush()
     return words
 
 
@@ -218,15 +237,37 @@ def _minimax_partition(widths: List[int], k: int) -> List[int]:
 _MAX_EXTRA_LINES = 4
 
 
-def rewrap_segment(segment: str, max_width: int = DEFAULT_MAX_LINE_WIDTH) -> str:
-    """Re-balance the ``\n`` breaks inside one display segment.
+def _greedy_partition(widths: List[int], max_width: int) -> List[int]:
+    """Fill each line as full as ``max_width`` allows, left to right.
 
-    Uses the FEWEST lines that keep every line inside the box: a short
-    dialogue whose words fit on a single line is merged onto one line
-    (breaks inherited from a longer English source read as incoherent
-    mid-sentence cuts). Lines are added (later normalised to scrolls)
-    only when the words cannot fit. Single-line segments are returned
-    unchanged.
+    Returns the cut indices (same convention as ``_feasible_partition``).
+    Greedy filling uses the fewest possible lines and pushes every break
+    as far right as it can go — lines run to the edge of the box instead
+    of being balanced half/half.
+    """
+    cuts: List[int] = []
+    current = 0
+    count = 0
+    for i, width in enumerate(widths):
+        added = width if count == 0 else SPACE_WIDTH + width
+        if count and current + added > max_width:
+            cuts.append(i)
+            current = width
+            count = 1
+        else:
+            current += added
+            count += 1
+    return cuts
+
+
+def rewrap_segment(segment: str, max_width: int = DEFAULT_MAX_LINE_WIDTH) -> str:
+    """Re-flow the ``\n`` breaks inside one display segment.
+
+    Plain segments are wrapped greedily: each line is filled as close to
+    the box edge as possible, which also yields the fewest lines — a
+    short dialogue whose words fit on a single line is merged onto one
+    line, and a break never happens while space remains on the current
+    line. Single-line segments are returned unchanged.
     """
     line_count = segment.count('\n') + 1
     if line_count < 2:
@@ -239,15 +280,17 @@ def rewrap_segment(segment: str, max_width: int = DEFAULT_MAX_LINE_WIDTH) -> str
 
     widths = [word_width(w) for w in words]
     # Runtime buffers (<0xFD><0xNN>) can render wider than their 54px
-    # estimate (battle prefixes, 10-char nicknames): merging their line
-    # into a fuller one risks clipping at the box edge, so only plain
-    # segments may use fewer lines than the source.
-    min_lines = 1 if '<0xFD>' not in segment else line_count
-    cuts = None
-    for k in range(min_lines, min(len(words), line_count + _MAX_EXTRA_LINES) + 1):
-        cuts = _feasible_partition(widths, k, max_width)
-        if cuts is not None:
-            break
+    # estimate (battle prefixes, 10-char nicknames): packing their line
+    # full risks clipping at the box edge, so buffer-bearing segments
+    # keep their source line count, balanced.
+    if '<0xFD>' not in segment:
+        cuts = _greedy_partition(widths, max_width)
+    else:
+        cuts = None
+        for k in range(line_count, min(len(words), line_count + _MAX_EXTRA_LINES) + 1):
+            cuts = _feasible_partition(widths, k, max_width)
+            if cuts is not None:
+                break
     if cuts is None:
         # A single word/buffer wider than the box — best effort.
         cuts = _minimax_partition(widths, line_count)
