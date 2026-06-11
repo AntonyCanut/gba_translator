@@ -24,3 +24,4 @@ package-lock.json
 # Auto-generated tickets (keep .gitkeep)
 tickets/auto-*.yaml
 /.singularity-worktrees/
+output/roms/*.ss[0-9]
