@@ -105,8 +105,8 @@ class TestSmartReinserterPipeline:
         with open(output, "rb") as f:
             rom_data = bytearray(f.read())
 
-        free_region_start = 0x1F80000
-        rom_data[free_region_start:free_region_start + 1000] = b"\xFF" * 1000
+        free_region_start = 0x1FE0000
+        rom_data[free_region_start:free_region_start + 2048] = b"\xFF" * 2048
 
         ptr_offset = 0x1F00050
         target_offset = 0x1F00100
@@ -133,18 +133,18 @@ class TestFreeSpaceAllocator:
     """Free space scanning and allocation."""
 
     def test_basic_allocation(self):
-        rom = bytearray(b"\x00" * 100 + b"\xFF" * 200 + b"\x00" * 100)
-        alloc = FreeSpaceAllocator(rom, min_block=16, start_offset=0)
+        rom = bytearray(b"\x00" * 256 + b"\xFF" * 0x1000 + b"\x00" * 256)
+        alloc = FreeSpaceAllocator(rom, start_offset=0)
 
         offset = alloc.allocate(50)
         assert offset is not None
-        # The first padding byte of a run is reserved (it may be the
-        # terminator of the preceding string), so allocation starts at 101.
-        assert offset == 101
+        # A margin at the start of each run is reserved (the leading 0xFF
+        # may terminate the preceding structure).
+        assert offset == 256 + FreeSpaceAllocator.RUN_MARGIN
 
     def test_multiple_allocations(self):
-        rom = bytearray(b"\x00" * 50 + b"\xFF" * 500 + b"\x00" * 50)
-        alloc = FreeSpaceAllocator(rom, min_block=16, start_offset=0)
+        rom = bytearray(b"\x00" * 64 + b"\xFF" * 0x2000 + b"\x00" * 64)
+        alloc = FreeSpaceAllocator(rom, start_offset=0)
 
         off1 = alloc.allocate(100)
         off2 = alloc.allocate(100)

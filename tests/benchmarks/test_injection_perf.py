@@ -90,10 +90,17 @@ class TestRelocationVsInPlace:
         assert t["elapsed"] < 5
 
     def test_relocation_injection(self, rom_32mb, timer):
+        import struct
         rom = bytearray(rom_32mb)
         # Plant some occupied data so the allocator has real blocks to scan
         for i in range(0, 4096, 2):
             rom[0x100 + i] = 0xAB
+        # Pointer sites must really reference the strings: sites whose
+        # current value does not match are treated as scan false positives.
+        for i in range(50):
+            rom[0x50 + i * 4:0x54 + i * 4] = struct.pack(
+                "<I", 0x08000000 + 0x100 + i * 2
+            )
         reinserter = SmartReinserter(rom, allow_relocate=True)
 
         translations = []

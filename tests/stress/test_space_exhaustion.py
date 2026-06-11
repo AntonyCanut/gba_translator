@@ -166,8 +166,8 @@ class TestBumpAllocatorNoReuse:
 
     def test_sequential_allocations_never_overlap(self):
         rom = make_fake_rom()
-        free_start = 0x1800000
-        rom[free_start:] = bytearray([0xFF] * (ROM_SIZE - free_start))
+        free_start = 0x600000
+        rom[free_start:free_start + 0x100000] = bytearray([0xFF] * 0x100000)
 
         allocator = FreeSpaceAllocator(rom, min_block=16, start_offset=free_start)
 
@@ -204,22 +204,24 @@ class TestBumpAllocatorNoReuse:
         assert results[-1] is None, "Allocator should return None when exhausted"
 
     def test_allocator_skips_non_padding_bytes(self):
+        # Blocks must be at least MIN_FREE_RUN to count as free space.
         rom = make_fake_rom()
-        free_start = 0x1800000
-        block_size = 128
+        free_start = 0x800000
+        block_size = FreeSpaceAllocator.MIN_FREE_RUN * 2
         rom[free_start:free_start + block_size] = bytearray([0xFF] * block_size)
         rom[free_start + block_size:free_start + block_size + 64] = bytearray([0x42] * 64)
         rom[free_start + block_size + 64:free_start + block_size + 64 + block_size] = (
             bytearray([0xFF] * block_size)
         )
 
-        allocator = FreeSpaceAllocator(rom, min_block=16, start_offset=free_start)
+        allocator = FreeSpaceAllocator(rom, start_offset=free_start)
 
-        addr1 = allocator.allocate(100)
+        size = block_size - 64
+        addr1 = allocator.allocate(size)
         assert addr1 is not None
         assert free_start <= addr1 < free_start + block_size
 
-        addr2 = allocator.allocate(100)
+        addr2 = allocator.allocate(size)
         assert addr2 is not None
         gap_end = free_start + block_size + 64
         assert addr2 >= gap_end, (
@@ -232,8 +234,8 @@ class TestGracefulDegradation:
 
     def test_partial_batch_leaves_early_entries_intact(self):
         rom = make_fake_rom()
-        free_start = ROM_SIZE - 200
-        rom[free_start:] = bytearray([0xFF] * 200)
+        free_start = ROM_SIZE - (FreeSpaceAllocator.MIN_FREE_RUN + 512)
+        rom[free_start:] = bytearray([0xFF] * (ROM_SIZE - free_start))
 
         entries = []
         for i in range(20):
@@ -246,7 +248,7 @@ class TestGracefulDegradation:
 
         reinserter = SmartReinserter(rom, allow_relocate=True)
         for entry in entries:
-            text = "G" * (entry["original_length"] + 20)
+            text = "G" * 300
             reinserter.reinsert_text({**entry, "translation": text})
         reinserter.flush_relocations()
 
@@ -274,7 +276,7 @@ class TestGracefulDegradation:
                 f"Successful entry {i} pointer doesn't point to free space"
             )
             found_term = False
-            for pos in range(target, min(target + 200, len(rom))):
+            for pos in range(target, min(target + 400, len(rom))):
                 if rom[pos] == POKEMON_TERMINATOR:
                     found_term = True
                     break

@@ -26,15 +26,20 @@ def timer():
     return perf_timer
 
 
+FREE_REGION_START = 0x1FE0000  # last 128 KB: genuine, non-excluded free space
+
+
 def _build_rom_with_slots(slot_size: int = SLOT_SIZE) -> bytearray:
     """Build a 32 MB ROM with sentinel bytes bounding each slot.
 
     Every *slot_size* bytes, a non-padding sentinel (0xAB) is placed so
     that SmartReinserter._detect_padding() terminates quickly instead of
-    scanning millions of consecutive 0xFF bytes.
+    scanning millions of consecutive 0xFF bytes. The last 8 MB is left as
+    one pure 0xFF run: the allocator only treats large runs as free space,
+    short inter-sentinel runs are considered live data.
     """
     data = bytearray(b"\xFF" * ROM_SIZE)
-    for offset in range(0, ROM_SIZE, slot_size):
+    for offset in range(0, FREE_REGION_START, slot_size):
         data[offset] = 0xAB
     return data
 
