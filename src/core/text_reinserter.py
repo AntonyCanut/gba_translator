@@ -123,6 +123,7 @@ class SmartReinserter:
         allow_relocate: bool = False,
         allow_fallback: bool = False,
         free_space_min: int = 16,
+        pointer_proof_rom: Optional[bytes] = None,
     ):
         """
         Initialise le réinserteur.
@@ -134,11 +135,16 @@ class SmartReinserter:
             allow_fallback: Synthétiser une traduction française plus courte
                 qui tient en place plutôt que de laisser l'anglais en place
                 (voir :class:`FallbackSynthesizer`).
+            pointer_proof_rom: ROM de la même base déjà traduite par un autre
+                hack (ex. la traduction espagnole). Un site dont la valeur y a
+                été réécrite vers une autre adresse ROM est un pointeur prouvé
+                réel: ses traducteurs l'ont repointé en relogeant ce texte.
         """
         self.rom_data = rom_data
         self.allow_truncate = allow_truncate
         self.allow_relocate = allow_relocate
         self.allow_fallback = allow_fallback
+        self.pointer_proof_rom = pointer_proof_rom
         self.fallback = FallbackSynthesizer() if allow_fallback else None
         self.free_space_min = free_space_min
         # Relocations are deferred until all in-place writes are done:
@@ -242,6 +248,21 @@ class SmartReinserter:
         aligned (literal pools, data tables) or sits right after a script
         opcode that takes a text pointer. Skipping a genuine reference is
         safe by comparison: the site keeps pointing at the original string.
+
+        Recognized script shapes (verified against the Unbound ROM):
+        - ``0F 00 <ptr>``      loadpointer, bank 0 (msgbox)
+        - ``85 <buf> <ptr>``   bufferstring
+        - ``67 <ptr>``         preparemsg — the pointer follows the opcode
+          byte *immediately* (a ``67 00 <ptr>`` shape does not exist and
+          used to wrongly reject every preparemsg dialogue)
+        - ``5C ...``           trainerbattle (text pointers at +6 and +10)
+        - ``<EWRAM u32> <ptr>``  battle-script ``setword``: CFRU prints
+          custom battle strings via ``setword gBattleStringLoader, <text>``
+          followed by ``printstring 0x184``, so the four bytes before the
+          site decode to an EWRAM address (0x02000000-0x0203FFFF)
+        - proof-ROM rewrite: the same site holds a *different* in-ROM
+          pointer in ``pointer_proof_rom`` (another translation of the same
+          base ROM relocated this very string and repointed the site)
         """
         rom = self.rom_data
         expected = struct.pack('<I', 0x08000000 + offset)
@@ -255,15 +276,32 @@ class SmartReinserter:
                 site % 4 == 0
                 or (site >= 2 and rom[site - 2] == 0x0F and rom[site - 1] == 0x00)
                 or (site >= 2 and rom[site - 2] == 0x85 and rom[site - 1] <= 0x0F)
-                or (site >= 2 and rom[site - 2] == 0x67 and rom[site - 1] == 0x00)
+                or (site >= 1 and rom[site - 1] == 0x67)
                 or (site >= 6 and rom[site - 6] == 0x5C)
                 or (site >= 10 and rom[site - 10] == 0x5C)
+                or (site >= 4 and self._is_ewram_word(rom, site - 4))
+                or self._proof_rom_repointed(site, expected)
             )
             if plausible:
                 kept.append(site)
             else:
                 self.stats['pointer_sites_rejected'] += 1
         return kept
+
+    @staticmethod
+    def _is_ewram_word(rom, pos: int) -> bool:
+        value = struct.unpack_from('<I', rom, pos)[0]
+        return 0x02000000 <= value < 0x02040000
+
+    def _proof_rom_repointed(self, site: int, expected: bytes) -> bool:
+        proof = self.pointer_proof_rom
+        if proof is None or site + 4 > len(proof):
+            return False
+        word = proof[site:site + 4]
+        if word == expected:
+            return False
+        value = struct.unpack('<I', word)[0]
+        return 0x08000000 <= value < 0x08000000 + len(proof)
 
     def _queue_relocation(self, encoded: bytes, pointer_offsets: List[int], offset: int) -> bool:
         self._pending_relocations.append((encoded, pointer_offsets, offset))
