@@ -87,6 +87,9 @@ async function main(): Promise<void> {
     } else if ((m = cmd.match(/^load(\d)$/))) {
       await client.loadState(parseInt(m[1]));
       await client.advanceFrames(10);
+    } else if ((m = cmd.match(/^key:([A-Z]+)$/))) {
+      await client.pressKey(m[1], 4);
+      await client.advanceFrames(60);
     } else if ((m = cmd.match(/^shot:(.+)$/))) {
       await client.screenshot(path.join(OUT_DIR, `${TAG}-${m[1]}.png`));
     } else if ((m = cmd.match(/^wait(\d+)$/))) {
