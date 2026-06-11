@@ -1,7 +1,7 @@
 {
   "conversion_date": "2026-06-11T14:24:56.820758",
   "source_csv": "2026-01-15_trilingual_translation.csv",
-  "total_translations": 20731,
+  "total_translations": 20734,
   "total_errors": 0,
   "total_warnings": 16814,
   "translations": [
@@ -31808,14 +31808,14 @@
     {
       "offset": 4174518,
       "original_text": "<0xFD>  is trying to\nlearn <0xFD><0x01>.<0xFB>",
-      "translation": "{FD00} tente d'apprendre\n{FD01}.<0xFA>",
-      "length": 33,
+      "translation": "<0xFD><0x00> tente d'apprendre\n<0xFD><0x01>.<0xFB>",
+      "length": 25,
       "original_length": 26,
-      "padding_used": 7,
+      "padding_used": -1,
       "encoding": "pokemon",
       "category": "description",
       "notes": "",
-      "too_long": true
+      "too_long": false
     },
     {
       "offset": 4174545,
@@ -34376,14 +34376,14 @@
     {
       "offset": 4180553,
       "original_text": "<0xFD><0x10>'s <0xFD><0x19>\nprevented <0xFD><0x13>'s<0xFA><0xFD>  from working!",
-      "translation": "{B_DEF_ABILITY} de {B_DEF_NAME_WITH_PREFIX}\nstoppe {UNKNOWN_STR}<0xFA>de {B_SCR_ACTIVE_NAME_WITH_PREFIX} !",
-      "length": 101,
+      "translation": "<0xFD><0x10>, avec <0xFD><0x19>,\nempêche <0xFD><0x13><0xFA>d'utiliser <0xFD><0x00> !",
+      "length": 39,
       "original_length": 39,
-      "padding_used": 62,
+      "padding_used": 0,
       "encoding": "pokemon",
       "category": "dialogue",
       "notes": "",
-      "too_long": true
+      "too_long": false
     },
     {
       "offset": 4180593,
@@ -35492,14 +35492,14 @@
     {
       "offset": 4182961,
       "original_text": "<0xFD><0x1C> <0xFD><0x1D> sent\nout <0xFD><0x06>!<0xFC><0x08><0x3C>",
-      "translation": "{FD1C} {FD1D} sent\nout {FD06}!{FC08}",
-      "length": 36,
+      "translation": "<0xFD><0x1C> <0xFD><0x1D> envoie\n<0xFD><0x06> !<0xFC><0x08><0x3C>",
+      "length": 20,
       "original_length": 21,
-      "padding_used": 15,
+      "padding_used": -1,
       "encoding": "pokemon",
       "category": "dialogue",
       "notes": "",
-      "too_long": true
+      "too_long": false
     },
     {
       "offset": 4182983,
@@ -35516,14 +35516,14 @@
     {
       "offset": 4183012,
       "original_text": "<0xFD><0x1C> <0xFD><0x1D> sent\nout <0xFD> !",
-      "translation": "{FD1C} {FD1D} sent\nout {FD00}!",
-      "length": 30,
+      "translation": "<0xFD><0x1C> <0xFD><0x1D> envoie\n<0xFD><0x00> !",
+      "length": 17,
       "original_length": 18,
-      "padding_used": 12,
+      "padding_used": -1,
       "encoding": "pokemon",
       "category": "dialogue",
       "notes": "",
-      "too_long": true
+      "too_long": false
     },
     {
       "offset": 4183031,
@@ -36788,14 +36788,14 @@
     {
       "offset": 4188049,
       "original_text": "<0xFC><0x05><0x05><0xFC><0x04><0x0D><0x0E><0x0F>Yes\nNo",
-      "translation": "{FC05}{FC04}Yes\nNo",
-      "length": 18,
+      "translation": "<0xFC><0x05><0x05><0xFC><0x04><0x0D><0x0E><0x0F>Oui\nNon",
+      "length": 15,
       "original_length": 14,
-      "padding_used": 4,
+      "padding_used": 1,
       "encoding": "pokemon",
       "category": "description",
       "notes": "",
-      "too_long": true
+      "too_long": false
     },
     {
       "offset": 4188064,
@@ -60090,11 +60090,11 @@
       "too_long": true
     },
     {
-      "offset": 7689799,
-      "original_text": "<0x5C><0x05>t   <0x5A><0x56><0x75><0x08>e<0x56><0x75><0x08><0x05>ó<0x55><0x75><0x08>What do people do if they need to go\nto a washroom?<0xFB>What if my rod hooks a big one while\nI'm in the washroom? I just can't go\"",
-      "translation": "<0x5C><0x05>t   <0x5A><0x56><0x75><0x08>e<0x56><0x75><0x08><0x05>ó<0x55><0x75><0x08>Que font les gens quand ils\ndoivent aller aux toilettes ?<0xFB>Et si ça mord pendant que j'y\nsuis ? Je ne peux pas y aller...",
-      "length": 139,
-      "original_length": 145,
+      "offset": 7689818,
+      "original_text": "What do people do if they need to go\nto a washroom?<0xFB>What if my rod hooks a big one while\nI'm in the washroom? I just can't go\"",
+      "translation": "Que font les gens quand ils\ndoivent aller aux toilettes ?<0xFB>Et si ça mord pendant que j'y\nsuis ? Je ne peux pas y aller...",
+      "length": 120,
+      "original_length": 126,
       "padding_used": -6,
       "encoding": "pokemon",
       "category": "dialogue",
@@ -60534,11 +60534,11 @@
       "too_long": false
     },
     {
-      "offset": 7718911,
-      "original_text": "<0x13><0x13><0x04>\n<0x13><0x13><0x10>\n<0xB6><0x04>\n<0x13><0x10>\n<0x11><0x11><0x13>\nDid you hear that, <0xFD><0x01>?<0xFB>It sounded like some Pokémon are\ntrapped in that cage over there!<0xFB>Let's go check it out.",
-      "translation": "<0x13><0x13><0x04>\n<0x13><0x13><0x10>\n<0xB6><0x04>\n<0x13><0x10>\n<0x11><0x11><0x13>\nTu as entendu, <0xFD><0x01> ?<0xFB>On dirait que des Pokémon sont\npiégés dans cette cage là-bas !<0xFB>Allons voir ça.",
-      "length": 116,
-      "original_length": 129,
+      "offset": 7718929,
+      "original_text": "Did you hear that, <0xFD><0x01>?<0xFB>It sounded like some Pokémon are\ntrapped in that cage over there!<0xFB>Let's go check it out.",
+      "translation": "Tu as entendu, <0xFD><0x01> ?<0xFB>On dirait que des Pokémon sont\npiégés dans cette cage là-bas !<0xFB>Allons voir ça.",
+      "length": 98,
+      "original_length": 111,
       "padding_used": -13,
       "encoding": "pokemon",
       "category": "dialogue",
@@ -62984,14 +62984,14 @@
     {
       "offset": 7823587,
       "original_text": "Sandslash: <0xFC><0x01><0x06>Slash!",
-      "translation": "Sandslash: {COLOR}ÉSlash!",
-      "length": 25,
+      "translation": "Sablaireau: <0xFC><0x01><0x06>Slash !",
+      "length": 22,
       "original_length": 20,
-      "padding_used": 5,
+      "padding_used": 2,
       "encoding": "pokemon",
       "category": "dialogue",
       "notes": "",
-      "too_long": true
+      "too_long": false
     },
     {
       "offset": 7823608,
@@ -80970,6 +80970,18 @@
       "too_long": true
     },
     {
+      "offset": 8332396,
+      "original_text": "<0xFC><0x01><0x08>Floette! Use Petal Blizzard!",
+      "translation": "<0xFC><0x01><0x08>Floette ! Blizzard Floral !",
+      "length": 30,
+      "original_length": 31,
+      "padding_used": -1,
+      "encoding": "pokemon",
+      "category": "dialogue",
+      "notes": "",
+      "too_long": false
+    },
+    {
       "offset": 8332428,
       "original_text": "Floette: <0xFC><0x01><0x08>Flo!",
       "translation": "Floette : {COLOR}ËFlo !",
@@ -80980,6 +80992,18 @@
       "category": "dialogue",
       "notes": "",
       "too_long": true
+    },
+    {
+      "offset": 8332479,
+      "original_text": "<0xFC><0x01><0x08>Floette! Use Petal Blizzard!",
+      "translation": "<0xFC><0x01><0x08>Floette ! Blizzard Floral !",
+      "length": 30,
+      "original_length": 31,
+      "padding_used": -1,
+      "encoding": "pokemon",
+      "category": "dialogue",
+      "notes": "",
+      "too_long": false
     },
     {
       "offset": 8332511,
@@ -82856,7 +82880,7 @@
     {
       "offset": 8356255,
       "original_text": "Jax: <0xFC><0x01><0x08>You got that, <0xFD><0x01>?<0xFB>We're going to <0xFC><0x01><0x06>Seaport City!",
-      "translation": "Jax : {COLOR}ËTu as compris, {PLAYER} ?<0xFB>On va à la {COLOR}ÉVille Portuaire{COLOR}Ë !",
+      "translation": "Jax : <0xFC><0x01><0x08>Tu as compris, {PLAYER} ?<0xFB>On va à la <0xFC><0x01><0x06>Ville Portuaire<0xFC><0x01><0x08> !",
       "length": 84,
       "original_length": 57,
       "padding_used": 27,
@@ -87440,7 +87464,7 @@
     {
       "offset": 9230844,
       "original_text": "Arthur: <0xFC><0x01><0x08>Not yet, Jax.<0xFB>I need you to first fly to Frozen\nHeights and bring Prof. Log here.",
-      "translation": "{COLOR}ËPas encore, Jax.<0xFB>Va à {COLOR}ÉHauteurs Gelées{COLOR}Ë\net ramène le Prof. Log ici.",
+      "translation": "<0xFC><0x01><0x08>Pas encore, Jax.<0xFB>Va à <0xFC><0x01><0x06>Hauteurs Gelées<0xFC><0x01><0x08>\net ramène le Prof. Log ici.",
       "length": 89,
       "original_length": 92,
       "padding_used": -3,
@@ -94028,7 +94052,7 @@
     {
       "offset": 9882684,
       "original_text": "<0xFD><0x13> Mega Evolved\ninto Mega <0xFD><0x34>!",
-      "translation": "{B_SCR_ACTIVE_NAME_WITH_PREFIX} Mega-Évolue\nen Mega {STRING}{LV} !",
+      "translation": "{B_SCR_ACTIVE_NAME_WITH_PREFIX} Mega-Évolue\nen Mega {STRING}<0x34> !",
       "length": 66,
       "original_length": 29,
       "padding_used": 37,
@@ -116456,14 +116480,14 @@
     {
       "offset": 10799857,
       "original_text": "<0xFC><0x01><0x07><0xFC><0x03><0x06>+",
-      "translation": "{FC01}{FC03}",
-      "length": 12,
+      "translation": "<0xFC><0x01><0x07><0xFC><0x03><0x06>+",
+      "length": 7,
       "original_length": 7,
-      "padding_used": 5,
+      "padding_used": 0,
       "encoding": "pokemon",
       "category": "description",
       "notes": "",
-      "too_long": true
+      "too_long": false
     },
     {
       "offset": 10799865,
@@ -144200,7 +144224,7 @@
     {
       "offset": 32374386,
       "original_text": "Sorry, Champ, but the <0xFC><0x01><0x06>Insane<0xFC><0x01><0x08> Classic\nLeaders Gauntlet is still locked.<0xFB>You'll need to clear the <0xFC><0x01><0x06>Expert<0xFC><0x01><0x08>\nClassic Leaders Gauntlet first.<0xFB>Just open up the <0xFC><0x01><0x06>Options Menu<0xFC><0x01><0x08> and\nlower your <0xFC><0x01><0x06>Battle Difficulty<0xFC><0x01><0x08>.",
-      "translation": "Désolé, Champion, l'{COLOR}ÉInsane{COLOR}Ë du\nDéfi Classique est encore bloqué.<0xFB>Tu dois d'abord terminer le {COLOR}ÉExpert{COLOR}Ë\n{COLOR}ÉDéfi Classique des Champions{COLOR}Ë.<0xFB>Ouvre le {COLOR}ÉMenu Options{COLOR}Ë et\nbaisse ta {COLOR}ÉDifficulté de combat{COLOR}Ë.",
+      "translation": "Désolé, Champion, l'<0xFC><0x01><0x06>Insane<0xFC><0x01><0x08> du\nDéfi Classique est encore bloqué.<0xFB>Tu dois d'abord terminer le <0xFC><0x01><0x06>Expert<0xFC><0x01><0x08>\n<0xFC><0x01><0x06>Défi Classique des Champions<0xFC><0x01><0x08>.<0xFB>Ouvre le <0xFC><0x01><0x06>Menu Options<0xFC><0x01><0x08> et\nbaisse ta <0xFC><0x01><0x06>Difficulté de combat<0xFC><0x01><0x08>.",
       "length": 265,
       "original_length": 222,
       "padding_used": 43,
@@ -144248,7 +144272,7 @@
     {
       "offset": 32375477,
       "original_text": "In the <0xFC><0x01><0x06>Frontier Leaders Gauntlet<0xFC><0x01><0x08>,\nyou'll be pitted against each Gym<0xFA>Leader, one after the other.<0xFB>Each battle is fought like a 6v6\nbattle in the Battle Frontier.<0xFB>Your Pokémon will automatically be\nset to <0x34> 100 for the fights, and<0xFA>your team cannot be adjusted in<0xFA>between each fight.<0xFB>However, you will see a preview of\nyour opponents' teams before each<0xFA>battle, and you will be allowed to<0xFA>choose your leads.<0xFB>If you can clear the gauntlet\nwithout taking a break, you will<0xFA>earn a generous amount of BP.<0xFB>This gauntlet is unaffected by your\nchosen <0xFC><0x01><0x06>Battle Difficulty<0xFC><0x01><0x08>.",
-      "translation": "Dans le {COLOR}ÉDéfi Frontière{COLOR}Ë,\ntu affronteras chaque Champion<0xFA>d'Arène, l'un après l'autre.<0xFB>Chaque combat se joue en 6v6\ncomme à la Frontière de Combat.<0xFB>Tes Pokémon seront mis au {LV} 100\npour les combats, et<0xFA>ton équipe ne pourra pas<0xFA>être modifiée entre combats.<0xFB>Cependant, tu verras un aperçu des\néquipes adverses avant chaque<0xFA>combat, et tu pourras<0xFA>choisir tes Pokémon de tête.<0xFB>Si tu termines le défi sans pause,\ntu gagneras pas mal de<0xFA>BP.<0xFB>Ce défi n'est pas affecté par ta\n{COLOR}ÉDifficulté de combat{COLOR}Ë.",
+      "translation": "Dans le {COLOR}ÉDéfi Frontière{COLOR}Ë,\ntu affronteras chaque Champion<0xFA>d'Arène, l'un après l'autre.<0xFB>Chaque combat se joue en 6v6\ncomme à la Frontière de Combat.<0xFB>Tes Pokémon seront mis au <0x34> 100\npour les combats, et<0xFA>ton équipe ne pourra pas<0xFA>être modifiée entre combats.<0xFB>Cependant, tu verras un aperçu des\néquipes adverses avant chaque<0xFA>combat, et tu pourras<0xFA>choisir tes Pokémon de tête.<0xFB>Si tu termines le défi sans pause,\ntu gagneras pas mal de<0xFA>BP.<0xFB>Ce défi n'est pas affecté par ta\n{COLOR}ÉDifficulté de combat{COLOR}Ë.",
       "length": 519,
       "original_length": 570,
       "padding_used": -51,
@@ -146960,7 +146984,7 @@
     {
       "offset": 32409844,
       "original_text": "That TM I gave you contains\n<0xFC><0x01><0x06>Aurora Veil<0xFC><0x01><0x08>.<0xFB>It has an effect similar to both\nReflect and Light Screen combined.<0xFB>The only catch is that it can only\nbe used in <0xFC><0x01><0x06>Hail<0xFC><0x01><0x08> weather.",
-      "translation": "La CT que je t'ai donnée contient\n{COLOR}ÉVoile Aurore{COLOR}Ë.<0xFB>Son effet combine\n{COLOR}ÉProtection{COLOR}Ë et {COLOR}ÉMur Lumière{COLOR}Ë.<0xFB>Mais elle ne peut être utilisée\nque sous la {COLOR}ÉGrêle{COLOR}Ë.",
+      "translation": "La CT que je t'ai donnée contient\n<0xFC><0x01><0x06>Voile Aurore<0xFC><0x01><0x08>.<0xFB>Son effet combine\n<0xFC><0x01><0x06>Protection<0xFC><0x01><0x08> et <0xFC><0x01><0x06>Mur Lumière<0xFC><0x01><0x08>.<0xFB>Mais elle ne peut être utilisée\nque sous la <0xFC><0x01><0x06>Grêle<0xFC><0x01><0x08>.",
       "length": 207,
       "original_length": 180,
       "padding_used": 27,
@@ -149408,7 +149432,7 @@
     {
       "offset": 32429712,
       "original_text": "That cave down there takes you out\nof town to Route 6.<0xFB>From there, it's a straight shot\nthrough Route 7, up Frost Mountain,<0xFA>and up Route 8 to <0xFC><0x01><0x06>Blizzard City<0xFC><0x01><0x08>.<0xFB>If you're going to hike all the way\nup there, make sure you have many<0xFA>Poké Balls for catching Pokémon.<0xFB>Now that the Skinny Tree blocking\nit has been cut down, it is much<0xFA>more frequently used.",
-      "translation": "Cette grotte là-bas mène\nhors de la ville vers la Route 6.<0xFB>De là, c'est tout\ndroit par la Route 7, le Mont Givre<0xFA>et\nla Route 8 jusqu'à {COLOR}ÉVille Blizzard{COLOR}Ë.<0xFB>Si tu montes à pied\njusque là-haut, prends beaucoup de<0xFA>Poké Balls.<0xFB>Maintenant que l'{COLOR}ÉArbre Maigre{COLOR}Ë\nbloquant le passage a été coupé,<0xFA>elle est beaucoup plus utilisée.",
+      "translation": "Cette grotte là-bas mène\nhors de la ville vers la Route 6.<0xFB>De là, c'est tout\ndroit par la Route 7, le Mont Givre<0xFA>et\nla Route 8 jusqu'à <0xFC><0x01><0x06>Ville Blizzard<0xFC><0x01><0x08>.<0xFB>Si tu montes à pied\njusque là-haut, prends beaucoup de<0xFA>Poké Balls.<0xFB>Maintenant que l'<0xFC><0x01><0x06>Arbre Maigre<0xFC><0x01><0x08>\nbloquant le passage a été coupé,<0xFA>elle est beaucoup plus utilisée.",
       "length": 345,
       "original_length": 354,
       "padding_used": -9,
@@ -159092,7 +159116,7 @@
     {
       "offset": 32508396,
       "original_text": "This statue is of the legendary\nfiery bird Pokémon, Moltres.<0xFB>Apparently it lives somewhere in\n<0xFC><0x01><0x06>Cinder Volcano<0xFC><0x01><0x04>, lighting up the sky<0xFA>with its flames at night.",
-      "translation": "Cette statue représente le Pokémon\noiseau de feu légendaire, {COLOR}ÉSulfura{COLOR}Ç.<0xFB>Il vit quelque part dans le\n{COLOR}ÉVolcan Cendreux{COLOR}Ç, illuminant le ciel<0xFA>avec ses flammes la nuit.",
+      "translation": "Cette statue représente le Pokémon\noiseau de feu légendaire, <0xFC><0x01><0x06>Sulfura<0xFC><0x01><0x04>.<0xFB>Il vit quelque part dans le\n<0xFC><0x01><0x06>Volcan Cendreux<0xFC><0x01><0x04>, illuminant le ciel<0xFA>avec ses flammes la nuit.",
       "length": 191,
       "original_length": 161,
       "padding_used": 30,
@@ -161540,7 +161564,7 @@
     {
       "offset": 32528670,
       "original_text": "Everyone around here is like,\n<0xB1>evolution this<0xB2> and <0xB1>evolution<0xFA>that.<0xB2><0xFB>But I think evolution is stupid!<0xFB>My personal favourite way of\npreventing evolution is not by<0xFA>pressing <0xF8><0x01> when my Pokémon is<0xFA>about to evolve, but by having it<0xFA>hold an <0xFC><0x01><0x06>Everstone<0xFC><0x01><0x08>.<0xFB>That way I can skip the whole\nevolution thing altogether!<0xFB>And you know what?<0xFB>I'll actually share one with you\nif you can show me a Pokémon that<0xFA>has never evolved and can't evolve!<0xFB>Do you have a Pokémon like this in\nyour party?",
-      "translation": "Ici, tout le monde dit,\n\" évolution par-ci \" et \" évolution<0xFA>par-là \".<0xFB>Mais je trouve l'évolution stupide !<0xFB>Ma méthode préférée pour empêcher\nl'évolution n'est pas d'appuyer sur<0xFA>le {COLOR}Ébouton B{COLOR}Ë quand mon<0xFA>Pokémon va évoluer, mais de lui<0xFA>faire tenir une {COLOR}ÉPierre Stase{COLOR}Ë.<0xFB>Comme ça, j'évite l'évolution\ncomplètement !<0xFB>Et tu sais quoi ?<0xFB>Je t'en donnerai une si tu me\nmontres un Pokémon qui n'a jamais<0xFA>évolué et ne peut pas évoluer !<0xFB>Tu as un Pokémon comme ça dans\nton équipe ?",
+      "translation": "Ici, tout le monde dit,\n\" évolution par-ci \" et \" évolution<0xFA>par-là \".<0xFB>Mais je trouve l'évolution stupide !<0xFB>Ma méthode préférée pour empêcher\nl'évolution n'est pas d'appuyer sur<0xFA>le <0xFC><0x01><0x06>bouton B<0xFC><0x01><0x08> quand mon<0xFA>Pokémon va évoluer, mais de lui<0xFA>faire tenir une <0xFC><0x01><0x06>Pierre Stase<0xFC><0x01><0x08>.<0xFB>Comme ça, j'évite l'évolution\ncomplètement !<0xFB>Et tu sais quoi ?<0xFB>Je t'en donnerai une si tu me\nmontres un Pokémon qui n'a jamais<0xFA>évolué et ne peut pas évoluer !<0xFB>Tu as un Pokémon comme ça dans\nton équipe ?",
       "length": 495,
       "original_length": 478,
       "padding_used": 17,
@@ -161804,7 +161828,7 @@
     {
       "offset": 32530848,
       "original_text": "It levels up to <0x34> <0xFD><0x03>!",
-      "translation": "Il monte au niv. {LV} {STR_VAR_2} !",
+      "translation": "Il monte au niv. <0x34> {STR_VAR_2} !",
       "length": 35,
       "original_length": 21,
       "padding_used": 14,
@@ -161816,7 +161840,7 @@
     {
       "offset": 32530870,
       "original_text": "It levels up to <0x34> <0xFD><0x03> when its\nAttack is greater than its Defense!",
-      "translation": "Il monte au niv. {LV} {STR_VAR_2} quand\nson Attaque dépasse sa Défense !",
+      "translation": "Il monte au niv. <0x34> {STR_VAR_2} quand\nson Attaque dépasse sa Défense !",
       "length": 72,
       "original_length": 65,
       "padding_used": 7,
@@ -161828,7 +161852,7 @@
     {
       "offset": 32530936,
       "original_text": "It levels up to <0x34> <0xFD><0x03> when its\nAttack equals its Defense!",
-      "translation": "Il monte au niv. {LV} {STR_VAR_2} quand\nson Attaque égale sa Défense !",
+      "translation": "Il monte au niv. <0x34> {STR_VAR_2} quand\nson Attaque égale sa Défense !",
       "length": 70,
       "original_length": 56,
       "padding_used": 14,
@@ -161840,7 +161864,7 @@
     {
       "offset": 32530993,
       "original_text": "It levels up to <0x34> <0xFD><0x03> when its\nAttack is less than its Defense!",
-      "translation": "Il monte au niv. {LV} {STR_VAR_2} quand\nl'Attaque < la Défense !",
+      "translation": "Il monte au niv. <0x34> {STR_VAR_2} quand\nl'Attaque < la Défense !",
       "length": 64,
       "original_length": 62,
       "padding_used": 2,
@@ -161852,7 +161876,7 @@
     {
       "offset": 32531056,
       "original_text": "It levels up to <0x34> <0xFD><0x03> and there's a\nspare Poké Ball in the Cube!",
-      "translation": "Il monte au niv. {LV} {STR_VAR_2} et il y a\nune Poké Ball libre dans le Cube !",
+      "translation": "Il monte au niv. <0x34> {STR_VAR_2} et il y a\nune Poké Ball libre dans le Cube !",
       "length": 78,
       "original_length": 63,
       "padding_used": 15,
@@ -161864,7 +161888,7 @@
     {
       "offset": 32531120,
       "original_text": "It levels up to <0x34> <0xFD><0x03> and it's\nmale!",
-      "translation": "Il monte au niv. {LV} {STR_VAR_2} et il est\nmâle !",
+      "translation": "Il monte au niv. <0x34> {STR_VAR_2} et il est\nmâle !",
       "length": 50,
       "original_length": 35,
       "padding_used": 15,
@@ -161876,7 +161900,7 @@
     {
       "offset": 32531156,
       "original_text": "It levels up to <0x34> <0xFD><0x03> and it's\nfemale!",
-      "translation": "Il monte au niv. {LV} {STR_VAR_2} et il est\nfemelle !",
+      "translation": "Il monte au niv. <0x34> {STR_VAR_2} et il est\nfemelle !",
       "length": 53,
       "original_length": 37,
       "padding_used": 16,
@@ -161888,7 +161912,7 @@
     {
       "offset": 32531194,
       "original_text": "It levels up to <0x34> <0xFD><0x03> at night!",
-      "translation": "Il monte au niv. {LV} {STR_VAR_2} la nuit !",
+      "translation": "Il monte au niv. <0x34> {STR_VAR_2} la nuit !",
       "length": 43,
       "original_length": 30,
       "padding_used": 13,
@@ -161900,7 +161924,7 @@
     {
       "offset": 32531225,
       "original_text": "It levels up to <0x34> <0xFD><0x03> during\nthe day!",
-      "translation": "Il monte au niv. {LV} {STR_VAR_2} le\njour !",
+      "translation": "Il monte au niv. <0x34> {STR_VAR_2} le\njour !",
       "length": 43,
       "original_length": 36,
       "padding_used": 7,
@@ -162008,7 +162032,7 @@
     {
       "offset": 32531915,
       "original_text": "It levels up to <0x34> <0xFD><0x03> when it's\nraining or foggy outside of battle!",
-      "translation": "Il monte au niv. {LV} {STR_VAR_2} s'il\npleut ou s'il y a du brouillard !",
+      "translation": "Il monte au niv. <0x34> {STR_VAR_2} s'il\npleut ou s'il y a du brouillard !",
       "length": 72,
       "original_length": 66,
       "padding_used": 6,
@@ -162020,7 +162044,7 @@
     {
       "offset": 32531982,
       "original_text": "It levels up to <0x34> <0xFD><0x03> when\nthere is a <0xFD><0x04>-type in the party!",
-      "translation": "Il monte au niv. {LV} {STR_VAR_2} quand\nun type {STR_VAR_3} est dans l'équipe !",
+      "translation": "Il monte au niv. <0x34> {STR_VAR_2} quand\nun type {STR_VAR_3} est dans l'équipe !",
       "length": 79,
       "original_length": 58,
       "padding_used": 21,
@@ -162092,7 +162116,7 @@
     {
       "offset": 32532226,
       "original_text": "It levels up to <0x34> <0xFD><0x03> between\n<0xFD><0x04> and <0xFD><0x07>!",
-      "translation": "Il monte au niv. {LV} {STR_VAR_2} entre\n{STR_VAR_3} et {VERSION} !",
+      "translation": "Il monte au niv. <0x34> {STR_VAR_2} entre\n{STR_VAR_3} et {VERSION} !",
       "length": 66,
       "original_length": 39,
       "padding_used": 27,
@@ -162140,7 +162164,7 @@
     {
       "offset": 32532380,
       "original_text": "It levels up to <0x34> <0xFD><0x03>\nwhile holding the <0xFD><0x04>!",
-      "translation": "Il monte au niv. {LV} {STR_VAR_2}\nen tenant le {STR_VAR_3} !",
+      "translation": "Il monte au niv. <0x34> {STR_VAR_2}\nen tenant le {STR_VAR_3} !",
       "length": 60,
       "original_length": 42,
       "padding_used": 18,
@@ -163592,7 +163616,7 @@
     {
       "offset": 32544471,
       "original_text": "<0xFC><0x01><0x02>The Lucky Egg level has been\nincreased to <0x34> <0xFD><0x03>!<0xFB>Pokémon will now gain <0xFC><0x01><0x06><0xFD><0x0C><0xFC><0x01><0x02><0xB9> the\namount of Exp. Points when held.",
-      "translation": "{COLOR}ÁLe niveau des OEufs Chance est passé\nà {LV} {STR_VAR_2} !<0xFB>Les Pokémon gagneront maintenant {COLOR}É{EVIL_LEGENDARY}{COLOR}Á×\nles Points Exp. en le tenant.",
+      "translation": "{COLOR}ÁLe niveau des OEufs Chance est passé\nà <0x34> {STR_VAR_2} !<0xFB>Les Pokémon gagneront maintenant {COLOR}É{EVIL_LEGENDARY}{COLOR}Á×\nles Points Exp. en le tenant.",
       "length": 162,
       "original_length": 119,
       "padding_used": 43,
@@ -163616,7 +163640,7 @@
     {
       "offset": 32544824,
       "original_text": "Greetings, are you here to have\nyour <0xFC><0x01><0x06>Lucky Eggs<0xFC><0x01><0x04> upgraded?<0xFB>I'll need <0xFC><0x01><0x06><0xFD><0x04> <0xFD><0x02><0xFC><0x01><0x04> to raise\ntheir luck further to <0xFC><0x01><0x06><0x34> <0xFD><0x03><0xFC><0x01><0x04>.",
-      "translation": "Bonjour, tu es là pour améliorer\ntes {COLOR}ÉOEufs Chance{COLOR}Ç ?<0xFB>J'ai besoin de {COLOR}É{STR_VAR_3} {STR_VAR_1}{COLOR}Ç pour\nporter leur chance à {COLOR}É{LV} {STR_VAR_2}{COLOR}Ç.",
+      "translation": "Bonjour, tu es là pour améliorer\ntes {COLOR}ÉOEufs Chance{COLOR}Ç ?<0xFB>J'ai besoin de {COLOR}É{STR_VAR_3} {STR_VAR_1}{COLOR}Ç pour\nporter leur chance à {COLOR}É<0x34> {STR_VAR_2}{COLOR}Ç.",
       "length": 182,
       "original_length": 128,
       "padding_used": 54,
@@ -163712,7 +163736,7 @@
     {
       "offset": 32545600,
       "original_text": "I make a ton of my money selling\nitems I find on Wild Pokémon.<0xFB>My Venonat's <0xFC><0x01><0x06>Compound Eyes<0xFC><0x01><0x08> helps\nme lure in the ones with items,<0xFA>then I switch out and use <0xFC><0x01><0x06>Knock Off<0xFC><0x01><0x08><0xFA>to nab 'em!",
-      "translation": "Je gagne beaucoup d'argent\navec objets de Pokémon sauvages.<0xFB>L'{COLOR}ÉOEil Composé{COLOR}Ë de mon {COLOR}ÉMimitoss{COLOR}Ë m'aide\nà attirer ceux avec des objets,<0xFA>puis je change et utilise {COLOR}ÉSabotage{COLOR}Ë<0xFA>pour les prendre !",
+      "translation": "Je gagne beaucoup d'argent\navec objets de Pokémon sauvages.<0xFB>L'<0xFC><0x01><0x06>OEil Composé<0xFC><0x01><0x08> de mon <0xFC><0x01><0x06>Mimitoss<0xFC><0x01><0x08> m'aide\nà attirer ceux avec des objets,<0xFA>puis je change et utilise <0xFC><0x01><0x06>Sabotage<0xFC><0x01><0x08><0xFA>pour les prendre !",
       "length": 231,
       "original_length": 187,
       "padding_used": 44,
@@ -170024,7 +170048,7 @@
     {
       "offset": 32595926,
       "original_text": "That's the <0xFC><0x01><0x06>Leaf Badge<0xFC><0x01><0x08>.<0xFB>That useful li'l thin' makes all\ntraded Pokémon up to <0x34> 26 keep<0xFA>listenin' to your fine, fine<0xFA>commands\"<0xFB>Oh, and take this cool, cool TM,\ntoooo\"",
-      "translation": "Voilà le {COLOR}ÉBadge Feuille{COLOR}Ë.<0xFB>Ce p'tit truc utile fait que les\nPokémon échangés jusqu'au Nv. {LV} 26<0xFA>écoutent tes superbes<0xFA>ordres...<0xFB>Oh, et prends aussi cette super CT,\naussiii...",
+      "translation": "Voilà le {COLOR}ÉBadge Feuille{COLOR}Ë.<0xFB>Ce p'tit truc utile fait que les\nPokémon échangés jusqu'au Nv. <0x34> 26<0xFA>écoutent tes superbes<0xFA>ordres...<0xFB>Oh, et prends aussi cette super CT,\naussiii...",
       "length": 189,
       "original_length": 171,
       "padding_used": 18,
@@ -170228,7 +170252,7 @@
     {
       "offset": 32598141,
       "original_text": "The Vision Badge will allow\noutsider Pokémon up to <0x34> 32<0xFA>you received in a trade to obey<0xFA>you without question.<0xFB>The HM <0xFC><0x01><0x06>Cut<0xFC><0x01><0x08> may also now be used\noutside of battle to remove small<0xFA>trees blocking your path.<0xFB>And as a token of goodwill, I\nbelieve this TM will be useful<0xFA>to you.",
-      "translation": "Le Badge Vision fait obéir les\nPokémon échangés jusqu'au Nv. {LV} 32<0xFA>que tu as reçus<0xFA>sans discuter.<0xFB>La CS {COLOR}ÉCoupe{COLOR}Ë peut aussi\nêtre utilisée hors combat pour<0xFA>retirer les petits arbres du chemin.<0xFB>Et en gage de bonne volonté, je\npense que cette CT te sera utile<0xFA>à toi.",
+      "translation": "Le Badge Vision fait obéir les\nPokémon échangés jusqu'au Nv. <0x34> 32<0xFA>que tu as reçus<0xFA>sans discuter.<0xFB>La CS {COLOR}ÉCoupe{COLOR}Ë peut aussi\nêtre utilisée hors combat pour<0xFA>retirer les petits arbres du chemin.<0xFB>Et en gage de bonne volonté, je\npense que cette CT te sera utile<0xFA>à toi.",
       "length": 278,
       "original_length": 276,
       "padding_used": 2,
@@ -170420,7 +170444,7 @@
     {
       "offset": 32600605,
       "original_text": "With that Badge, you can break\nrocks apart with <0xFC><0x01><0x06>Rock Smash<0xFC><0x01><0x04><0xFA>outside of battle.<0xFB>Not only that, all Pokémon up to\n<0x34> 36 will obey your commands.<0xFB>Oh, and perhaps this TM will be\nof some use.",
-      "translation": "Avec ce Badge, tu peux briser des\nrochers avec {COLOR}ÉÉclate-Roc{COLOR}Ç<0xFA>hors combat.<0xFB>En plus, tous les Pokémon jusqu'au\nNv. {LV} 36 obéiront à tes ordres.<0xFB>Oh, et cette CT pourrait aussi\nêtre utile.",
+      "translation": "Avec ce Badge, tu peux briser des\nrochers avec {COLOR}ÉÉclate-Roc{COLOR}Ç<0xFA>hors combat.<0xFB>En plus, tous les Pokémon jusqu'au\nNv. <0x34> 36 obéiront à tes ordres.<0xFB>Oh, et cette CT pourrait aussi\nêtre utile.",
       "length": 199,
       "original_length": 191,
       "padding_used": 8,
@@ -170540,7 +170564,7 @@
     {
       "offset": 32602205,
       "original_text": "With the Fall Badge, any Pokémon\nup to <0x34> 45 will obey ya.<0xFB>It also allows ya to move heavy\nboulders usin' <0xFC><0x01><0x06>Strength<0xFC><0x01><0x08>.<0xFB>Honestly, I don't rightly know why\nany strong Pokémon can't already<0xFA>do this\"<0xFB>But that's just one of the weird\nways the world works.<0xFB>Anyway, take this TM to go along\nwith that Badge.",
-      "translation": "Avec le Badge Chute, tout Pokémon\njusqu'au Nv. {LV} 45 t'obéira.<0xFB>Il permet aussi de déplacer de gros\nrochers avec {COLOR}ÉForce{COLOR}Ë.<0xFB>Franchement, je sais pas pourquoi\nles Pokémon costauds ne peuvent pas<0xFA>le faire déjà...<0xFB>Mais bon, c'est un truc\nbizarre.<0xFB>Bref, prends cette CT avec\nce Badge.",
+      "translation": "Avec le Badge Chute, tout Pokémon\njusqu'au Nv. <0x34> 45 t'obéira.<0xFB>Il permet aussi de déplacer de gros\nrochers avec {COLOR}ÉForce{COLOR}Ë.<0xFB>Franchement, je sais pas pourquoi\nles Pokémon costauds ne peuvent pas<0xFA>le faire déjà...<0xFB>Mais bon, c'est un truc\nbizarre.<0xFB>Bref, prends cette CT avec\nce Badge.",
       "length": 293,
       "original_length": 302,
       "padding_used": -9,
@@ -170660,7 +170684,7 @@
     {
       "offset": 32603829,
       "original_text": "The Battery Badge lets ya <0xFC><0x01><0x06>Surf<0xFC><0x01><0x08>\nover water and lava!<0xFB>But not only that, any Pokémon\nwill obey you as long as it's not<0xFA>over <0x34> 52!<0xFB>How electrifyin' is that?<0xFB>But yo, I ain't done yet!\nTake this TM, too!",
-      "translation": "Le Badge Zap permet {COLOR}ÉSurf{COLOR}Ë\nsur l'eau et la lave !<0xFB>Et en plus, tout Pokémon\nt'obéira tant qu'il n'est pas<0xFA>au-dessus du Nv. {LV} 52 !<0xFB>C'est électrisant, non ?<0xFB>Mais attends, c'est pas fini !\nPrends aussi cette CT !",
+      "translation": "Le Badge Zap permet {COLOR}ÉSurf{COLOR}Ë\nsur l'eau et la lave !<0xFB>Et en plus, tout Pokémon\nt'obéira tant qu'il n'est pas<0xFA>au-dessus du Nv. <0x34> 52 !<0xFB>C'est électrisant, non ?<0xFB>Mais attends, c'est pas fini !\nPrends aussi cette CT !",
       "length": 225,
       "original_length": 204,
       "padding_used": 21,
@@ -170792,7 +170816,7 @@
     {
       "offset": 32605432,
       "original_text": "That's the Ring Badge!<0xFB>Now all traded Pokémon up to <0x34> 57\nwill know who the real boss is!<0xFB>And you also get to climb up those\nrocky cliff things with the move<0xFA><0xFC><0x01><0x06>Rock Climb<0xFC><0x01><0x08>!<0xFB>Tell me that ain't useful!<0xFB>Oh yeah\" I guess you can have\nthis.<0xFB>Call it a goodwill gift from\nBig Mo.",
-      "translation": "Voilà le Badge Combat !<0xFB>Pokémon échangés, Nv {LV} 57 max\nsauront qui est le vrai boss !<0xFB>Et tu peux grimper ces falaises\navec la capacité<0xFA>{COLOR}ÉEscalade{COLOR}Ë !<0xFB>Dis que c'est pas utile !<0xFB>Oh ouais... je suppose que tu peux\nprendre ça.<0xFB>Dis que c'est un cadeau de\nBig Mo.",
+      "translation": "Voilà le Badge Combat !<0xFB>Pokémon échangés, Nv <0x34> 57 max\nsauront qui est le vrai boss !<0xFB>Et tu peux grimper ces falaises\navec la capacité<0xFA>{COLOR}ÉEscalade{COLOR}Ë !<0xFB>Dis que c'est pas utile !<0xFB>Oh ouais... je suppose que tu peux\nprendre ça.<0xFB>Dis que c'est un cadeau de\nBig Mo.",
       "length": 271,
       "original_length": 274,
       "padding_used": -3,
@@ -173000,7 +173024,7 @@
     {
       "offset": 32622966,
       "original_text": "Contrary to popular belief, this\nGym is not an Ice-type gym.<0xFB>It's a <0xFC><0x01><0x06>Flying<0xFC><0x01><0x08>-type Gym!<0xFB>And the best way to counter\nFlying-types is to clip their<0xFA>wings with <0xFC><0x01><0x06>ice<0xFC><0x01><0x08>, <0xFC><0x01><0x06>rocks<0xFC><0x01><0x08>,<0xFA>or <0xFC><0x01><0x06>electricity<0xFC><0x01><0x08>!<0xFB>But be careful, because there's a\ntailwind in this Gym!<0xFB>This <0xFC><0x01><0x06>Tailwind<0xFC><0x01><0x08> will increase the\nspeed of all Flying-type Pokémon,<0xFA>so don't get cocky just because<0xFA>your Pokémon might have a high<0xFA>speed stat.<0xFB>Unless it's part Flying-type,\nof course.<0xFB>Getting to Alice requires using\nthe fans and holes on the ground<0xFA>to move between levels of the Gym.<0xFB>It's not too complicated, just make\nsure you remember where you have<0xFA>and haven't been before.<0xFB>Good luck out there!",
-      "translation": "Contrairement aux idées reçues,\ncette Arène n'est pas de type {COLOR}ÉGlace{COLOR}Ë.<0xFB>C'est une Arène {COLOR}ÉVol{COLOR}Ë !<0xFB>Et le meilleur moyen de contrer les\ntypes Vol est de leur couper les<0xFA>ailes avec {COLOR}ÉGlace{COLOR}Ë, {COLOR}ÉRoche{COLOR}Ë,<0xFA>ou {COLOR}ÉÉlectrik{COLOR}Ë !<0xFB>Mais attention, car il y a un\nvent arrière dans cette Arène !<0xFB>Ce {COLOR}ÉVent Arrière{COLOR}Ë augmentera la\nVitesse de tous les Pokémon Vol,<0xFA>ne sois pas trop sûr de toi<0xFA>même si ton Pokémon a une bonne<0xFA>statistique de Vitesse.<0xFB>Sauf s'il est en partie Vol,\nbien sûr.<0xFB>Pour atteindre Alice, il faut\nutiliser les ventilateurs et les<0xFA>trous au sol pour changer d'étage.<0xFB>Ce n'est pas trop compliqué, mais\nsouviens-toi des endroits visités<0xFA>et de ceux qui ne le sont pas.<0xFB>Bonne chance !",
+      "translation": "Contrairement aux idées reçues,\ncette Arène n'est pas de type <0xFC><0x01><0x06>Glace<0xFC><0x01><0x08>.<0xFB>C'est une Arène <0xFC><0x01><0x06>Vol<0xFC><0x01><0x08> !<0xFB>Et le meilleur moyen de contrer les\ntypes Vol est de leur couper les<0xFA>ailes avec <0xFC><0x01><0x06>Glace<0xFC><0x01><0x08>, <0xFC><0x01><0x06>Roche<0xFC><0x01><0x08>,<0xFA>ou <0xFC><0x01><0x06>Électrik<0xFC><0x01><0x08> !<0xFB>Mais attention, car il y a un\nvent arrière dans cette Arène !<0xFB>Ce <0xFC><0x01><0x06>Vent Arrière<0xFC><0x01><0x08> augmentera la\nVitesse de tous les Pokémon Vol,<0xFA>ne sois pas trop sûr de toi<0xFA>même si ton Pokémon a une bonne<0xFA>statistique de Vitesse.<0xFB>Sauf s'il est en partie Vol,\nbien sûr.<0xFB>Pour atteindre Alice, il faut\nutiliser les ventilateurs et les<0xFA>trous au sol pour changer d'étage.<0xFB>Ce n'est pas trop compliqué, mais\nsouviens-toi des endroits visités<0xFA>et de ceux qui ne le sont pas.<0xFB>Bonne chance !",
       "length": 754,
       "original_length": 664,
       "padding_used": 90,
@@ -180936,6 +180960,18 @@
       "length": 24,
       "original_length": 23,
       "padding_used": 1,
+      "encoding": "pokemon",
+      "category": "dialogue",
+      "notes": "",
+      "too_long": false
+    },
+    {
+      "offset": 32693155,
+      "original_text": "<0xFD><0x02>! Use <0xFD><0x03>!",
+      "translation": "<0xFD><0x02> ! <0xFD><0x03> !",
+      "length": 9,
+      "original_length": 11,
+      "padding_used": -2,
       "encoding": "pokemon",
       "category": "dialogue",
       "notes": "",
@@ -199352,7 +199388,7 @@
     {
       "offset": 32867914,
       "original_text": "Wonderful!<0xFB>Please make sure your party\nconsists of only <0xFC><0x01><0x06>4 Kangaskhan<0xFC><0x01><0x04><0xFA>before we can begin filming the<0xFA><0xFC><0x01><0x06>Double Battle<0xFC><0x01><0x04>.<0xFB>They should ideally be levelled\n<0xFC><0x01><0x06><0x34> 70<0xFC><0x01><0x04> or higher.",
-      "translation": "Merveilleux !<0xFB>Assure-toi que ton équipe ne\ncontient que {COLOR}É4 Kangourex{COLOR}Ç<0xFA>avant qu'on ne puisse tourner le<0xFA>{COLOR}ÉCombat Duo{COLOR}Ç.<0xFB>Ils devraient être niveau\n{COLOR}É{LV} 70{COLOR}Ç ou plus.",
+      "translation": "Merveilleux !<0xFB>Assure-toi que ton équipe ne\ncontient que {COLOR}É4 Kangourex{COLOR}Ç<0xFA>avant qu'on ne puisse tourner le<0xFA>{COLOR}ÉCombat Duo{COLOR}Ç.<0xFB>Ils devraient être niveau\n{COLOR}É<0x34> 70{COLOR}Ç ou plus.",
       "length": 203,
       "original_length": 181,
       "padding_used": 22,
@@ -200792,7 +200828,7 @@
     {
       "offset": 32880120,
       "original_text": "Huah, fellow Trainer!<0xFB>I can <0xFC><0x01><0x06>upgrade<0xFC><0x01><0x08> the <0xFC><0x01><0x06>Macho Brace<0xFC><0x01><0x08> to\nmake training more efficient!<0xFB>Right now it is only a measly <0x34> <0xFD><0x04>,\nbut I can upgrade it to <0xFC><0x01><0x06><0x34> <0xFD><0x03><0xFC><0x01><0x08> in<0xFA>exchange for <0xFC><0x01><0x06><0xFD><0x03> <0xFD><0x02>s<0xFC><0x01><0x08>!",
-      "translation": "Houah, Dresseur !<0xFB>Je peux {COLOR}Éaméliorer{COLOR}Ë le {COLOR}ÉBrac. Macho{COLOR}Ë\npour l'entraînement efficace !<0xFB>Pour l'instant, il est {LV} {STR_VAR_3},\nmais le passer {COLOR}É{LV} {STR_VAR_2}{COLOR}Ë en<0xFA>échange de {COLOR}É{STR_VAR_2} {STR_VAR_1}s{COLOR}Ë !",
+      "translation": "Houah, Dresseur !<0xFB>Je peux {COLOR}Éaméliorer{COLOR}Ë le {COLOR}ÉBrac. Macho{COLOR}Ë\npour l'entraînement efficace !<0xFB>Pour l'instant, il est <0x34> {STR_VAR_3},\nmais le passer {COLOR}É<0x34> {STR_VAR_2}{COLOR}Ë en<0xFA>échange de {COLOR}É{STR_VAR_2} {STR_VAR_1}s{COLOR}Ë !",
       "length": 259,
       "original_length": 197,
       "padding_used": 62,
@@ -200828,7 +200864,7 @@
     {
       "offset": 32880419,
       "original_text": "<0xFC><0x01><0x02>The Macho Brace level has been\nincreased to <0x34> <0xFD><0x03>!<0xFB>Pokémon will now gain <0xFC><0x01><0x06><0xFD><0x03><0xB9><0xFC><0x01><0x02> the\namount of Effort Values when held.",
-      "translation": "{COLOR}ÁLe niveau du Brac. Macho est passé\nà {LV} {STR_VAR_2} !<0xFB>Les Pokémon gagneront désormais {COLOR}É{STR_VAR_2}×{COLOR}Á\nles Points d'Effort gagnés.",
+      "translation": "{COLOR}ÁLe niveau du Brac. Macho est passé\nà <0x34> {STR_VAR_2} !<0xFB>Les Pokémon gagneront désormais {COLOR}É{STR_VAR_2}×{COLOR}Á\nles Points d'Effort gagnés.",
       "length": 152,
       "original_length": 123,
       "padding_used": 29,
@@ -211208,7 +211244,7 @@
     {
       "offset": 32948033,
       "original_text": "Teehee\" did you know the <0xFC><0x01><0x06>Destiny\nKnot<0xFC><0x01><0x04> can be used during breeding?<0xFB>Betcha didn't!<0xFB>But s'okay, if you show me a <0xFC><0x01><0x06>girly<0xFC><0x01><0x04>\nPokémon that knows Attract, I'll<0xFA>give you one to use!<0xFB>Do you have a Pokémon you wanna\nshare with me?",
-      "translation": "Teehee... tu savais que le {COLOR}ÉNoeud\nDestin{COLOR}Ç sert en élevage ?<0xFB>Pari que non !<0xFB>Mais si tu me montres un {COLOR}Éféminin{COLOR}Ç\nPokémon qui connaît {COLOR}ÉAttraction{COLOR}Ç,<0xFA>je t'en donnerai un !<0xFB>Tu as un Pokémon à me\nmontrer ?",
+      "translation": "Teehee... tu savais que le <0xFC><0x01><0x06>Noeud\nDestin<0xFC><0x01><0x04> sert en élevage ?<0xFB>Pari que non !<0xFB>Mais si tu me montres un <0xFC><0x01><0x06>féminin<0xFC><0x01><0x04>\nPokémon qui connaît <0xFC><0x01><0x06>Attraction<0xFC><0x01><0x04>,<0xFA>je t'en donnerai un !<0xFB>Tu as un Pokémon à me\nmontrer ?",
       "length": 239,
       "original_length": 229,
       "padding_used": 10,
@@ -218960,7 +218996,7 @@
     {
       "offset": 33015190,
       "original_text": "<0xFC><0x01><0x02>The Amulet Coin level has been\nincreased to <0x34> <0xFD><0x03>!<0xFB><0xFC><0x01><0x06><0xFD><0x03><0xB9><0xFC><0x01><0x02> the amount of prize money will\nbe earned when brought into battle.",
-      "translation": "{COLOR}ÁLe niveau de la Pièce Rune a été\naugmenté à {LV} {STR_VAR_2} !<0xFB>{COLOR}É{STR_VAR_2}×{COLOR}Á le montant d'argent gagné sera\nobtenu en combat si elle est portée.",
+      "translation": "{COLOR}ÁLe niveau de la Pièce Rune a été\naugmenté à <0x34> {STR_VAR_2} !<0xFB>{COLOR}É{STR_VAR_2}×{COLOR}Á le montant d'argent gagné sera\nobtenu en combat si elle est portée.",
       "length": 167,
       "original_length": 129,
       "padding_used": 38,
@@ -218996,7 +219032,7 @@
     {
       "offset": 33015631,
       "original_text": "'Ello, again!\nYer Amulet Coin's <0x34> <0xFD><0x04>.<0xFB>If it's an upgrade yeh wan',\nI'm gunna need <0xFC><0x01><0x06><0xFD><0x03> <0xFD><0x02>s<0xFC><0x01><0x08>.",
-      "translation": "Salut encore !\nTa Pièce Rune est au niveau {LV} {STR_VAR_3}.<0xFB>Pour une amélioration, il me faudra\n{COLOR}É{STR_VAR_2} {STR_VAR_1}s{COLOR}Ë.",
+      "translation": "Salut encore !\nTa Pièce Rune est au niveau <0x34> {STR_VAR_3}.<0xFB>Pour une amélioration, il me faudra\n{COLOR}É{STR_VAR_2} {STR_VAR_1}s{COLOR}Ë.",
       "length": 138,
       "original_length": 95,
       "padding_used": 43,
@@ -221468,7 +221504,7 @@
     {
       "offset": 33032479,
       "original_text": "Greetings, mad one among madmen!<0xFB>If you wish, pay me <0xFC><0x01><0x06><0xFD><0x04> <0xFD><0x02><0xFC><0x01><0x08>\nand I will upgrade all of your<0xFA><0xFC><0x01><0x06>Power Items<0xFC><0x01><0x08> to <0xFC><0x01><0x06><0x34> <0xFD><0x03><0xFC><0x01><0x08>!",
-      "translation": "Salutations, fou parmi les fous !<0xFB>Si tu veux, paie-moi {COLOR}É{STR_VAR_3} {STR_VAR_1}{COLOR}Ë\net j'améliorerai tous tes<0xFA>{COLOR}ÉObjets Pouvoir{COLOR}Ë en {COLOR}É{LV} {STR_VAR_2}{COLOR}Ë !",
+      "translation": "Salutations, fou parmi les fous !<0xFB>Si tu veux, paie-moi {COLOR}É{STR_VAR_3} {STR_VAR_1}{COLOR}Ë\net j'améliorerai tous tes<0xFA>{COLOR}ÉObjets Pouvoir{COLOR}Ë en {COLOR}É<0x34> {STR_VAR_2}{COLOR}Ë !",
       "length": 189,
       "original_length": 128,
       "padding_used": 61,
@@ -221480,7 +221516,7 @@
     {
       "offset": 33032633,
       "original_text": "<0xFC><0x01><0x02>The Power Item level has been\nincreased to <0x34> <0xFD><0x03>!<0xFB>Pokémon will now gain an additional\n<0xFC><0x01><0x06><0xFD><0x0C><0xFC><0x01><0x02> Effort Values when one is held.",
-      "translation": "{COLOR}ÁLe niveau des Objets Pouvoir a\naugmenté à {LV} {STR_VAR_2} !<0xFB>Les Pokémon gagnent désormais des\nPoints d'Effort {COLOR}É{EVIL_LEGENDARY}{COLOR}Á quand tenu.",
+      "translation": "{COLOR}ÁLe niveau des Objets Pouvoir a\naugmenté à <0x34> {STR_VAR_2} !<0xFB>Les Pokémon gagnent désormais des\nPoints d'Effort {COLOR}É{EVIL_LEGENDARY}{COLOR}Á quand tenu.",
       "length": 163,
       "original_length": 128,
       "padding_used": 35,
@@ -228344,10 +228380,10 @@
     {
       "offset": 33084736,
       "original_text": "Congratulations on your winning\nstreak, challenger!<0xFB>The <0xFD><0x02> has sent word\nthat <0xFD><0x03> is impressed with you.<0xFB><0xFD><0x04> sees your skill, and <0xFD><0x03>'d like\nto challenge you to a battle!<0xFB>Are you ready to battle the\n<0xFD><0x02>?",
-      "translation": "Félicitations pour ta série de\nvictoires, challenger !<0xFB>Le <0xFD><0x02> a fait savoir que\n<0xFD><0x03> est impressionné par toi.<0xFB><0xFD><0x04> voit ton talent, et\n<0xFD><0x03> veut te défier !<0xFB>Es-tu prêt à affronter le\n<0xFD><0x02> ?",
-      "length": 181,
+      "translation": "Félicitations pour ta série de\nvictoires, challenger !<0xFB>Le <0xFD><0x02> a fait savoir\nqu'<0xFD><0x03> est impressionné par toi.<0xFB><0xFD><0x04> voit ton talent, et\n<0xFD><0x03> veut te défier !<0xFB>Es-tu prêt à affronter le\n<0xFD><0x02> ?",
+      "length": 180,
       "original_length": 199,
-      "padding_used": -18,
+      "padding_used": -19,
       "encoding": "pokemon",
       "category": "dialogue",
       "notes": "",
@@ -230936,7 +230972,7 @@
     {
       "offset": 33111798,
       "original_text": "You have yet to triumph in battle\nfacilities <0xFC><0x01><0x06><0xFD><0x02><0xFC><0x01><0x04> times.<0xFB>You will need to win <0xFC><0x01><0x06><0xFD><0x04><0xFC><0x01><0x04> more\ntime<0xFD><0x08> in order to have the ethos<0xFA>of battle merge with your soul.",
-      "translation": "Tu n'as pas triomphé dans les\ninstallations {COLOR}É{STR_VAR_1}{COLOR}Ç fois.<0xFB>Il te faudra gagner {COLOR}É{STR_VAR_3}{COLOR}Ç autre{s}\ntemps{EVIL_TEAM} pour que l'ethos<0xFA>du combat fusionne avec ton âme.",
+      "translation": "Tu n'as pas triomphé\n<0xFC><0x01><0x06><0xFD><0x02><0xFC><0x01><0x04> fois dans les installations<0xFA>de combat.<0xFB>Il te faudra <0xFC><0x01><0x06><0xFD><0x04><0xFC><0x01><0x04> victoire<0xFD><0x08> de plus\npour que l'ethos du combat<0xFA>fusionne avec ton âme.",
       "length": 201,
       "original_length": 161,
       "padding_used": 40,
@@ -238940,7 +238976,7 @@
     {
       "offset": 33142409,
       "original_text": "Before each battle, your opponent's\nteam will be revealed to you.<0xFB>Additionally, in each battle, a\ncertain move type may not be used.<0xFB>This will be revealed as well.<0xFB>Regarding moves that change types,\nthe type they change into is taken<0xFA>into account.<0xFB>It is at that point you must choose\na single Pokémon to fight against<0xFA>one of theirs.<0xFB>For every Trainer you defeat, you\nwill earn <0xFC><0x01><0x06>Battle Points<0xFC><0x01><0x08> (<0xFC><0x01><0x06>BP<0xFC><0x01><0x08>).<0xFB>However, do note that since this\nbattle facility is not part of the<0xFA>Battle Frontier, you will not earn<0xFA>any prints for your Frontier Card.<0xFB>If you want to interrupt your\nchallenge, your progress will be<0xFA>recorded for when you wish to<0xFA>continue.<0xFB>If at any point you leave without\nsaving, you will be disqualified<0xFA>from your challenge.<0xFB>Please be aware of that!",
-      "translation": "Avant chaque combat, l'équipe de\nton adversaire te sera révélée.<0xFB>De plus, à chaque combat, un\ntype de capacité ne pourra pas<0xFB>être utilisé. Cela sera indiqué<0xFB>aussi. Pour les capacités qui\nchangent de type, le type obtenu<0xFA>est pris en compte. À ce<0xFB>moment-là, tu dois choisir un\nseul Pokémon pour affronter l'un<0xFA>des leurs. Pour chaque Dresseur<0xFB>que tu bats, tu gagneras des\n{COLOR}ÉPoints de Combat{COLOR}Ë<0xFB>({COLOR}ÉPB{COLOR}Ë). Cependant,\ncomme cette installation ne fait<0xFA>pas partie de la {COLOR}ÉBattle<0xFA>Frontier{COLOR}Ë, tu ne gagneras<0xFB>aucun tampon sur ta Frontier\nCard. Si tu veux interrompre ton<0xFA>défi, ta progression sera<0xFA>enregistrée pour quand tu<0xFB>voudras continuer. Si tu quittes\nsans sauvegarder, tu seras<0xFA>disqualifié de ton défi. Merci<0xFB>d'en tenir compte !",
+      "translation": "Avant chaque combat, l'équipe de\nton adversaire te sera révélée.<0xFB>De plus, à chaque combat, un\ntype de capacité ne pourra pas<0xFB>être utilisé. Cela sera indiqué<0xFB>aussi. Pour les capacités qui\nchangent de type, le type obtenu<0xFA>est pris en compte. À ce<0xFB>moment-là, tu dois choisir un\nseul Pokémon pour affronter l'un<0xFA>des leurs. Pour chaque Dresseur<0xFB>que tu bats, tu gagneras des\n<0xFC><0x01><0x06>Points de Combat<0xFC><0x01><0x08><0xFB>(<0xFC><0x01><0x06>PB<0xFC><0x01><0x08>). Cependant,\ncomme cette installation ne fait<0xFA>pas partie de la <0xFC><0x01><0x06>Battle<0xFA>Frontier<0xFC><0x01><0x08>, tu ne gagneras<0xFB>aucun tampon sur ta Frontier\nCard. Si tu veux interrompre ton<0xFA>défi, ta progression sera<0xFA>enregistrée pour quand tu<0xFB>voudras continuer. Si tu quittes\nsans sauvegarder, tu seras<0xFA>disqualifié de ton défi. Merci<0xFB>d'en tenir compte !",
       "length": 757,
       "original_length": 762,
       "padding_used": -5,

@@ -2311,7 +2311,7 @@
 0x3FB248: {FD06} et\n{FD08}, revenez !
 0x3FB265: {FD00} a gagné{FD01}\n{FD34} points d'Exp. !\l
 0x3FB283: un bonus
-0x3FB2B6: {FD00} tente d'apprendre\n{FD01}.\l
+0x3FB2B6: <0xFD><0x00> tente d'apprendre\n<0xFD><0x01>.\p
 0x3FB2D1: Mais {FD00} ne peut pas\napprendre plus de quatre capacités.\l
 0x3FB2FC: Supprimer une capacité pour\nfaire de la place à {FD01} ?
 0x3FB32E: {FC08}Arrêter d'apprendre\n{FD01} ?
@@ -2578,7 +2578,7 @@
 0x3FCA13: {B_DEF_NAME_WITH_PREFIX} a pris\nl'attaque !
 0x3FCA27: ack!
 0x3FCA2C: La {B_LAST_ABILITY} de {UNKNOWN_STR}\nempêche le switch!\p
-0x3FCA49: {B_DEF_ABILITY} de {B_DEF_NAME_WITH_PREFIX}\nstoppe {UNKNOWN_STR}\lde {B_SCR_ACTIVE_NAME_WITH_PREFIX} !
+0x3FCA49: <0xFD><0x10>, avec <0xFD><0x19>,\nempêche <0xFD><0x13>\ld'utiliser <0xFD><0x00> !
 0x3FCA71: {B_SCR_ACTIVE_NAME_WITH_PREFIX} : {B_SCR_ACTIVE_ABILITY}\na rendu cela inefficace !
 0x3FCA8E: {B_EFF_NAME_WITH_PREFIX} : {B_EFF_ABILITY}\nempêche de broncher !
 0x3FCAAA: {B_ATK_NAME_WITH_PREFIX} : {B_ATK_ABILITY}\nannule {B_DEF_ABILITY} de\l{B_DEF_NAME_WITH_PREFIX} !
@@ -2674,9 +2674,9 @@
 0x3FD366: {B_TRAINER1_CLASS} {B_TRAINER1_NAME}\naimerais se battre !\p
 0x3FD383: {B_LINK_OPPONENT1_NAME}\nveut se battre!
 0x3FD397: {B_LINK_OPPONENT1_NAME} et {B_LINK_OPPONENT2_NAME}\nveulent se battre!
-0x3FD3B1: {FD1C} {FD1D} sent\nout {FD06}!{FC08}
+0x3FD3B1: <0xFD><0x1C> <0xFD><0x1D> envoie\n<0xFD><0x06> !<0xFC><0x08><0x3C>
 0x3FD3C7: {FD1C} {FD1D} envoie\n{FD06} et {FD08}!{FC08}
-0x3FD3E4: {FD1C} {FD1D} sent\nout {FD00}!
+0x3FD3E4: <0xFD><0x1C> <0xFD><0x1D> envoie\n<0xFD><0x00> !
 0x3FD407: {B_LINK_OPPONENT1_NAME} envoie\n{RIVAL} et {EVIL_TEAM}!
 0x3FD41E: {B_LINK_OPPONENT1_NAME} envoie {EVIL_LEADER}! {B_LINK_OPPONENT2_NAME}\nenvoie {EVIL_LEGENDARY}!
 0x3FD43E: {B_LINK_OPPONENT1_NAME} envoie\n{UNKNOWN_STR}!
@@ -2784,7 +2784,7 @@
 0x3FE766: PP
 0x3FE76A: Type/
 0x3FE770: {FC05}{FC04}
-0x3FE791: {FC05}{FC04}Yes\nNo
+0x3FE791: <0xFC><0x05><0x05><0xFC><0x04><0x0D><0x0E><0x0F>Oui\nNon
 0x3FE7A0: <0xFC><0x05><0x05><0xFC><0x04><0x0D><0x0E><0x0F>Envoyer\nqui ?
 0x3FE7B6: {FC05}{FC04}
 0x3FE7C5: -
@@ -2936,7 +2936,7 @@
 0xA4CADC: RAPIDE
 0xA4CAE1: MID
 0xA4CAEF: ×
-0xA4CAF1: {FC01}{FC03}
+0xA4CAF1: <0xFC><0x01><0x07><0xFC><0x03><0x06>+
 0xA4CB01: K.O. direct
 0xA4CB0C: Sans échec
 0xA4CB14: Contact
@@ -5509,7 +5509,6 @@
 0x75548F: Ce type vient d'en perdre un…
 0x755532: 9Quand ces étranges voyous sont\narrivés, on a vite verrouillé nos\lportes.\pSinon ils seraient sûrement entrés\ncomme toi\l et auraient pris nos\ltrésors pour leurs plans.
 0x755608: Ce type croit que tu es un gros\npoisson. Non, tu es un gros poisson
-0x755647: <0x5C><0x05>t   <0x5A><0x56><0x75><0x08>e<0x56><0x75><0x08><0x05>ó<0x55><0x75><0x08>Que font les gens quand ils\ndoivent aller aux toilettes ?\pEt si ça mord pendant que j'y\nsuis ? Je ne peux pas y aller...
 0x7556D9: J'ai perdu parce que j'essaie de ne\npas aller aux toilettes…
 0x75570E: Oh non ! J'ai le sentiment que je\nvais ferrer un gros !
 0x7557B1: Avec honneur, j'admets ma défaite !
@@ -5550,7 +5549,6 @@
 0x75C726: {COLOR}ËAlors dégage, sauf si tu\nveux… souffrir.
 0x75C74E: Sbire : {COLOR}ËBon choix.\pReste loin de cette porte et tu ne\nle regretteras pas.
 0x75C79D: {RIVAL} : {COLOR}ËOn dirait qu'il ne\nbougera pas, {PLAYER}.\pMieux vaut trouver une autre\nissue.
-0x75C7FF: <0x13><0x13><0x04>\n<0x13><0x13><0x10>\n<0xB6><0x04>\n<0x13><0x10>\n<0x11><0x11><0x13>\nTu as entendu, {PLAYER} ?\pOn dirait que des Pokémon sont\npiégés dans cette cage là-bas !\pAllons voir ça.
 0x75C9A5: La porte de la cage est ouverte.\nLes Pokémon sont partis.
 0x75C9D6: Le verrou a l'air fragile. Veux-tu\nle casser ?
 0x75CA0C: Le verrou est brisé, la cage est\nouverte.
@@ -5751,7 +5749,7 @@
 0x775E7B: {COLOR}ËJe file d'ici maintenant,\n{PLAYER}.\pJe suis sûr que tu peux te gérer\nseul à partir de maintenant.\pSi tu as des ennuis, utilise tes\nPokémon.
 0x775F18: {COLOR}ËOh, une dernière chose.\pDès que tu rentres, on va se battre.\nTu m'as impressionné tout à l'heure,\pet je veux voir comment je m'en sors\nface à toi.\lD'ici là, ne te fatigue\ppas\ntrop.
 0x7760B6: Wahh !\pCe Pokémon m'a fait mal !
-0x7760E3: Sandslash: {COLOR}ÉSlash!
+0x7760E3: Sablaireau: <0xFC><0x01><0x06>Slash !
 0x7760F8: Le Pokémon semble aller vers la\n{COLOR}ÉGrotte Stalactite.
 0x776197: C'est une statue du Pokémon\nLégendaire de Glace, Artikodin.\pIl est écrit qu'Artikodin servait\njadis de héraut d'une grande\lobscurité, mais qu'il vit près des\lHauteurs Gelées.
 0x7763EB: Je sais, hein ? La vie est parfois\nsi stressante !
@@ -7452,7 +7450,7 @@
 0x7F805A: Beladonis : {COLOR}ËJe ne sais pas, Jax.\pC'est tout ce que le sbire savait,\net toutes les données ont été\lpurgées.
 0x7F80CB: Jax : {COLOR}ËOn ne trouvera rien ici.\nIl faut prendre un bateau pour\p{COLOR}ÉBorrius Est{COLOR}Ë\ndepuis {COLOR}ÉVille Portuaire{COLOR}Ë !
 0x7F8154: Beladonis : {COLOR}ËD'accord.\nJe m'occupe des billets.\pRetrouvez-moi là-bas.
-0x7F819F: Jax : {COLOR}ËTu as compris, {PLAYER} ?\pOn va à la {COLOR}ÉVille Portuaire{COLOR}Ë !
+0x7F819F: Jax : <0xFC><0x01><0x08>Tu as compris, {PLAYER} ?\pOn va à la <0xFC><0x01><0x06>Ville Portuaire<0xFC><0x01><0x08> !
 0x7F81D9: Beladonis : {COLOR}ËExcusez-moi.\nJe dois y aller aussi.
 0x7F820C: {RIVAL} : {COLOR}ËJe vais le finir !
 0x7F8229: {RIVAL} : {COLOR}ËIls sont partis…\nTous partis !
@@ -7858,7 +7856,7 @@
 0x8CD8DC: Jax : {COLOR}ËVu des types\nen noir vers le {COLOR}ÉVolcan\lCendreux{COLOR}Ë !
 0x8CD935: Arthur : {COLOR}ËJ'expliquais justement à\n{PLAYER} ici leur but possible, et\lça confirme mes soupçons.\lIls veulent l'oiseau légendaire\p{COLOR}ÉSulfura{COLOR}Ë.\n
 0x8CD9D8: Jax : {COLOR}ËJe tente de les arrêter ?
-0x8CD9FC: {COLOR}ËPas encore, Jax.\pVa à {COLOR}ÉHauteurs Gelées{COLOR}Ë\net ramène le Prof. Log ici.
+0x8CD9FC: <0xFC><0x01><0x08>Pas encore, Jax.\pVa à <0xFC><0x01><0x06>Hauteurs Gelées<0xFC><0x01><0x08>\net ramène le Prof. Log ici.
 0x8CDA59: Jax : {COLOR}ËTout de suite, Papy !
 0x8CDA75: Log : {COLOR}ËHmm…\pC'est aussi grave que je craignais…\pQue proposes-tu,\nArthur ?
 0x8CDAD4: {COLOR}ËJax peut régler\nle problème.\pIl a déjà fait ses preuves.\nJe comptais l'envoyer contre ces\p« Ombres » pour les arrêter\navant qu'ils n'atteignent\lSulfura.
@@ -8496,7 +8494,7 @@
 0x96CAC6: {B_SCR_ACTIVE_NAME_WITH_PREFIX} :\n{B_LAST_ITEM} dim. {B_CURRENT_MOVE}
 0x96CAE2: Le {B_LAST_ITEM} renforce\n{B_CURRENT_MOVE} !
 0x96CB07: Le {B_LAST_ITEM} de {B_SCR_ACTIVE_NAME_WITH_PREFIX}\nréduit la puissance de {B_CURRENT_MOVE} !
-0x96CC3C: {B_SCR_ACTIVE_NAME_WITH_PREFIX} Mega-Évolue\nen Mega {STRING}{LV} !
+0x96CC3C: {B_SCR_ACTIVE_NAME_WITH_PREFIX} Mega-Évolue\nen Mega {STRING}<0x34> !
 0x96CC5A: Le vœu de {STRING}\na atteint {UNKNOWN_STR} !
 0x96CC7C: Une lumière vive va jaillir de\n{B_SCR_ACTIVE_NAME_WITH_PREFIX} !
 0x96CCA6: {B_SCR_ACTIVE_NAME_WITH_PREFIX} retrouve sa vraie puissance\ngrâce à l'Ultra-Burst !
@@ -14970,11 +14968,11 @@
 0x1EDFD74: Hé, Champion !\pSi tu veux participer au\n{COLOR}ÉDéfi des Champions{COLOR}Ë, vire\lce type qui te suit d'abord !
 0x1EDFDEC: Ça te tente de participer au\n{COLOR}ÉDéfi des Champions{COLOR}Ë ?
 0x1EDFE25: Il te faut au moins {COLOR}É2 Pokémon{COLOR}Ë si tu\nveux participer à ce défi.
-0x1EDFE72: Désolé, Champion, l'{COLOR}ÉInsane{COLOR}Ë du\nDéfi Classique est encore bloqué.\pTu dois d'abord terminer le {COLOR}ÉExpert{COLOR}Ë\n{COLOR}ÉDéfi Classique des Champions{COLOR}Ë.\pOuvre le {COLOR}ÉMenu Options{COLOR}Ë et\nbaisse ta {COLOR}ÉDifficulté de combat{COLOR}Ë.
+0x1EDFE72: Désolé, Champion, l'<0xFC><0x01><0x06>Insane<0xFC><0x01><0x08> du\nDéfi Classique est encore bloqué.\pTu dois d'abord terminer le <0xFC><0x01><0x06>Expert<0xFC><0x01><0x08>\n<0xFC><0x01><0x06>Défi Classique des Champions<0xFC><0x01><0x08>.\pOuvre le <0xFC><0x01><0x06>Menu Options<0xFC><0x01><0x08> et\nbaisse ta <0xFC><0x01><0x06>Difficulté de combat<0xFC><0x01><0x08>.
 0x1EDFF51: Pas de souci, Champion.\pSi tu veux participer un jour,\nviens me le dire.
 0x1EDFF92: Quel Défi des Champions veux-tu\nque j'explique ?
 0x1EDFFBB: Dans le {COLOR}ÉDéfi Classique{COLOR}Ë,\ntu affronteras chaque Champion\ld'Arène, l'un après l'autre.\pMalgré les combats d'affilée,\ntu pourras sauvegarder et\lajuster ton équipe entre\lchaque combat.\pQuant aux équipes des Champions,\nelles seront bien plus fortes\lque lors de tes combats\ldans leurs Arènes.\pIls combattent aussi avec les\nmêmes effets qu'avant,\lgarde ça en tête.\pSi tu bats un Champion d'Arène\net que tu as déjà\lreçu son Cristal Z,\lil te donnera la Gemme\ldu jour après le combat,\ls'il ne l'a pas déjà donnée.\pSi tu les bats tous,\ntu gagneras de super\lrécompenses !\pEt bien sûr, plus ta\n{COLOR}ÉDifficulté de combat{COLOR}Ë est élevée,\lmeilleures sont les récompenses.
-0x1EE02B5: Dans le {COLOR}ÉDéfi Frontière{COLOR}Ë,\ntu affronteras chaque Champion\ld'Arène, l'un après l'autre.\pChaque combat se joue en 6v6\ncomme à la Frontière de Combat.\pTes Pokémon seront mis au {LV} 100\npour les combats, et\lton équipe ne pourra pas\lêtre modifiée entre combats.\pCependant, tu verras un aperçu des\néquipes adverses avant chaque\lcombat, et tu pourras\lchoisir tes Pokémon de tête.\pSi tu termines le défi sans pause,\ntu gagneras pas mal de\lBP.\pCe défi n'est pas affecté par ta\n{COLOR}ÉDifficulté de combat{COLOR}Ë.
+0x1EE02B5: Dans le {COLOR}ÉDéfi Frontière{COLOR}Ë,\ntu affronteras chaque Champion\ld'Arène, l'un après l'autre.\pChaque combat se joue en 6v6\ncomme à la Frontière de Combat.\pTes Pokémon seront mis au <0x34> 100\npour les combats, et\lton équipe ne pourra pas\lêtre modifiée entre combats.\pCependant, tu verras un aperçu des\néquipes adverses avant chaque\lcombat, et tu pourras\lchoisir tes Pokémon de tête.\pSi tu termines le défi sans pause,\ntu gagneras pas mal de\lBP.\pCe défi n'est pas affecté par ta\n{COLOR}ÉDifficulté de combat{COLOR}Ë.
 0x1EE04F0: Tu veux lancer le Défi Classique\nen mode {COLOR}É{STR_VAR_1}{COLOR}Ë ?
 0x1EE0539: Va sur le côté gauche du terrain\npour commencer.
 0x1EE0578: Avis à tous les Champions d'Arène !\pAvis à tous les Champions d'Arène !\pBesoin de vous au Battleground !
@@ -15198,7 +15196,7 @@
 0x1EE8849: Mes mains resteront froides\npour l'éternité.
 0x1EE8876: Tu n'as pas assez de\n{STR_VAR_1}s.\pJe ne peux pas partager mes mains\nfroides pour rien…
 0x1EE88C7: Et si je te donnais une\n{COLOR}ÉCT gratuite{COLOR}Ë ?
-0x1EE88F4: La CT que je t'ai donnée contient\n{COLOR}ÉVoile Aurore{COLOR}Ë.\pSon effet combine\n{COLOR}ÉProtection{COLOR}Ë et {COLOR}ÉMur Lumière{COLOR}Ë.\pMais elle ne peut être utilisée\nque sous la {COLOR}ÉGrêle{COLOR}Ë.
+0x1EE88F4: La CT que je t'ai donnée contient\n<0xFC><0x01><0x06>Voile Aurore<0xFC><0x01><0x08>.\pSon effet combine\n<0xFC><0x01><0x06>Protection<0xFC><0x01><0x08> et <0xFC><0x01><0x06>Mur Lumière<0xFC><0x01><0x08>.\pMais elle ne peut être utilisée\nque sous la <0xFC><0x01><0x06>Grêle<0xFC><0x01><0x08>.
 0x1EE89A9: Tant pis, l'ami.
 0x1EE89B9: Un type dans une maison du coin\nfile\lun objet qui permet\lde re-combattre les Dresseurs.\pÇa ne marche pas vraiment en grotte,\nmais sur les routes, c'est utile !
 0x1EE8A66: {COLOR}ÇSalut !\nTu as un {COLOR}É{STR_VAR_1}{COLOR}Ç ?\pTu veux l'échanger contre mon\n{COLOR}É{STR_VAR_2}{COLOR}Ç ?\pC'est super pour\ncombattre ma maman !
@@ -15400,7 +15398,7 @@
 0x1EED358: As-tu déjà pris\nl'Autoroute KBT ?\pC'est une autoroute souterraine\nqui contourne Borrius Ouest !\p« KBT » veut dire\nKing Borrius the Third.\pC'était le roi de Borrius qui\ncréa l'idée d'une autoroute\là l'échelle de la région.
 0x1EED448: Les météorites de Bourg\nCratère sont chargées d'une sorte de\lpouvoir cosmique.\pOn dit que si un certain\nPokémon entre en contact avec l'une,\ldes choses étranges arriveront.
 0x1EED4EB: Cette grotte mène\nhors de la ville vers la Route 6.\pDe là, c'est tout\ndroit par la Route 7, le Mont Givre\let\nla Route 8 jusqu'à {COLOR}ÉVille Blizzard{COLOR}Ë.\pSi tu montes à pied\njusque là-haut, prends beaucoup de\lPoké\nBalls pour capturer des Pokémon.\pLa plupart évitent\nce chemin, car ils n'ont pas le\l{COLOR}ÉBadge Vision{COLOR}Ë.\pSans lui, impossible\nde couper l'{COLOR}ÉArbre Maigre{COLOR}Ë devant\ll'entrée.
-0x1EED690: Cette grotte là-bas mène\nhors de la ville vers la Route 6.\pDe là, c'est tout\ndroit par la Route 7, le Mont Givre\let\nla Route 8 jusqu'à {COLOR}ÉVille Blizzard{COLOR}Ë.\pSi tu montes à pied\njusque là-haut, prends beaucoup de\lPoké Balls.\pMaintenant que l'{COLOR}ÉArbre Maigre{COLOR}Ë\nbloquant le passage a été coupé,\lelle est beaucoup plus utilisée.
+0x1EED690: Cette grotte là-bas mène\nhors de la ville vers la Route 6.\pDe là, c'est tout\ndroit par la Route 7, le Mont Givre\let\nla Route 8 jusqu'à <0xFC><0x01><0x06>Ville Blizzard<0xFC><0x01><0x08>.\pSi tu montes à pied\njusque là-haut, prends beaucoup de\lPoké Balls.\pMaintenant que l'<0xFC><0x01><0x06>Arbre Maigre<0xFC><0x01><0x08>\nbloquant le passage a été coupé,\lelle est beaucoup plus utilisée.
 0x1EED7F3: J'ai entendu qu'à {COLOR}ÉTarmiganville{COLOR}Ç,\nquelqu'un enseigne l'art de la\l{COLOR}ÉMéga-Évolution{COLOR}Ç !
 0x1EED84F: J'ai entendu qu'à\n{COLOR}ÉTarmiganville{COLOR}Ç,\lquelqu'un enseigne la {COLOR}ÉMéga-\pÉvolution{COLOR}Ç !\nMais tu le savais déjà, non ?\pLe {STR_VAR_1} que tu portes te\ntrahit.
 0x1EED8F7: Tu savais que si tu\nparles aux arbitres d'Arène avant le\lChampion d'Arène, ils te donnent un\lcadeau gratuit ?\pTu savais ? Hein ?
@@ -16194,7 +16192,7 @@
 0x1F00858: Panneau Conseils Dresseurs lu\nsur le côté est du bâtiment.
 0x1F0089A: Regarde, regarde !\pJe vois la Ville de Dehara d'ici !\pC'est si proche qu'il n'y a même pas\nune route entre les deux !
 0x1F0090B: As-tu visité la\n{COLOR}ÉMaison Dresseurs{COLOR}Ë ?\pC'est le bâtiment noir et bleu au\nsud de la ville.\pTu peux y combattre les Dresseurs\nautant que tu veux.\pJ'ai même entendu dire qu'ils\npeuvent devenir plus forts avec toi.
-0x1F009EC: Cette statue représente le Pokémon\noiseau de feu légendaire, {COLOR}ÉSulfura{COLOR}Ç.\pIl vit quelque part dans le\n{COLOR}ÉVolcan Cendreux{COLOR}Ç, illuminant le ciel\lavec ses flammes la nuit.
+0x1F009EC: Cette statue représente le Pokémon\noiseau de feu légendaire, <0xFC><0x01><0x06>Sulfura<0xFC><0x01><0x04>.\pIl vit quelque part dans le\n<0xFC><0x01><0x06>Volcan Cendreux<0xFC><0x01><0x04>, illuminant le ciel\lavec ses flammes la nuit.
 0x1F00A8E: Tu vois cette Poké Ball jaune\nlà-bas ?\pC'est une {COLOR}ÉCT{COLOR}Ç, une capacité spéciale\nque tu peux enseigner à tes Pokémon\lautant de fois que tu veux !\pSi tu en trouves une, ouvre la\nBoîte CT et cherche la capacité que\ltu veux enseigner.\pLes Pokémon de ton équipe capables\nd'apprendre cette capacité seront\lmis en surbrillance.\pAinsi, tu n'auras pas à vérifier\nton équipe chaque fois que tu veux\len enseigner une !
 0x1F00C0A: Si tu obtiens une {COLOR}ÉCT{COLOR}Ç, ouvre la\nBoîte CT et cherche la capacité que\ltu veux enseigner.\pLes Pokémon de ton équipe capables\nd'apprendre cette capacité seront\lmis en surbrillance.\pAinsi, tu n'auras pas à vérifier\nton équipe chaque fois que tu veux\len enseigner une !
 0x1F00D02: Sais-tu ce qu'est une {COLOR}ÉGemme{COLOR}Ë ?
@@ -16401,7 +16399,7 @@
 0x1F05779: Il m'a échangé son {COLOR}ÉÉlektek{COLOR}Ë, alors\nj'ai utilisé un {COLOR}ÉÉlectriseur{COLOR}Ë comme\l{COLOR}ÉPierre Évo{COLOR}Ë, et il a évolué !
 0x1F057F0: Certains Pokémon n'évoluent\nque par échange.\pMais qui échange encore,\nhein ?\pCette mode est morte depuis des\nannées.\pMaintenant, tu peux les faire\névoluer avec une {COLOR}ÉPierre Lien{COLOR}Ë !\pRegarde !
 0x1F058BD: La {COLOR}ÉPierre Lien{COLOR}Ë permet de\nfaire évoluer ceux qui\ln'évoluent que par échange.
-0x1F0591E: Ici, tout le monde dit,\n« évolution par-ci » et « évolution\lpar-là ».\pMais je trouve l'évolution stupide !\pMa méthode préférée pour empêcher\nl'évolution n'est pas d'appuyer sur\lle {COLOR}Ébouton B{COLOR}Ë quand mon\lPokémon va évoluer, mais de lui\lfaire tenir une {COLOR}ÉPierre Stase{COLOR}Ë.\pComme ça, j'évite l'évolution\ncomplètement !\pEt tu sais quoi ?\pJe t'en donnerai une si tu me\nmontres un Pokémon qui n'a jamais\lévolué et ne peut pas évoluer !\pTu as un Pokémon comme ça dans\nton équipe ?
+0x1F0591E: Ici, tout le monde dit,\n" évolution par-ci " et " évolution\lpar-là ".\pMais je trouve l'évolution stupide !\pMa méthode préférée pour empêcher\nl'évolution n'est pas d'appuyer sur\lle <0xFC><0x01><0x06>bouton B<0xFC><0x01><0x08> quand mon\lPokémon va évoluer, mais de lui\lfaire tenir une <0xFC><0x01><0x06>Pierre Stase<0xFC><0x01><0x08>.\pComme ça, j'évite l'évolution\ncomplètement !\pEt tu sais quoi ?\pJe t'en donnerai une si tu me\nmontres un Pokémon qui n'a jamais\lévolué et ne peut pas évoluer !\pTu as un Pokémon comme ça dans\nton équipe ?
 0x1F05AFD: Quel Pokémon est-ce ?
 0x1F05B12: Oui, ce Pokémon n'a jamais\névolué et ne peut pas évoluer.\pComme promis, prends {COLOR}ÉPierre Stase{COLOR}Ë !
 0x1F05B72: Si un Pokémon tient {COLOR}ÉPierre Stase{COLOR}Ë,\nil n'évoluera pas !\pS'il en tient une en\npension, il transmet sa nature !\pLes Pierres Stase, c'est génial !\pSi tu en veux d'autres, j'ai\nentendu dire qu'il y en a plein\lcoincées dans les {COLOR}Émurs{COLOR}Ë\lde l'{COLOR}ÉAutoroute KBT{COLOR}Ë.\pMais comment les sortir ?\nAucune idée…
@@ -16421,15 +16419,15 @@
 0x1F06137: Choisis un nombre de 1 à {STR_VAR_2}.
 0x1F06153: J'ai dit {COLOR}É{STR_VAR_2}{COLOR}Ç façons !\pCe nombre est trop grand.
 0x1F0618A: {STR_VAR_1} évoluera si…\p{EVIL_LEGENDARY}
-0x1F061A0: Il monte au niv. {LV} {STR_VAR_2} !
-0x1F061B6: Il monte au niv. {LV} {STR_VAR_2} quand\nson Attaque dépasse sa Défense !
-0x1F061F8: Il monte au niv. {LV} {STR_VAR_2} quand\nson Attaque égale sa Défense !
-0x1F06231: Il monte au niv. {LV} {STR_VAR_2} quand\nl'Attaque < la Défense !
-0x1F06270: Il monte au niv. {LV} {STR_VAR_2} et il y a\nune Poké Ball libre dans le Cube !
-0x1F062B0: Il monte au niv. {LV} {STR_VAR_2} et il est\nmâle !
-0x1F062D4: Il monte au niv. {LV} {STR_VAR_2} et il est\nfemelle !
-0x1F062FA: Il monte au niv. {LV} {STR_VAR_2} la nuit !
-0x1F06319: Il monte au niv. {LV} {STR_VAR_2} le\njour !
+0x1F061A0: Il monte au niv. <0x34> {STR_VAR_2} !
+0x1F061B6: Il monte au niv. <0x34> {STR_VAR_2} quand\nson Attaque dépasse sa Défense !
+0x1F061F8: Il monte au niv. <0x34> {STR_VAR_2} quand\nson Attaque égale sa Défense !
+0x1F06231: Il monte au niv. <0x34> {STR_VAR_2} quand\nl'Attaque < la Défense !
+0x1F06270: Il monte au niv. <0x34> {STR_VAR_2} et il y a\nune Poké Ball libre dans le Cube !
+0x1F062B0: Il monte au niv. <0x34> {STR_VAR_2} et il est\nmâle !
+0x1F062D4: Il monte au niv. <0x34> {STR_VAR_2} et il est\nfemelle !
+0x1F062FA: Il monte au niv. <0x34> {STR_VAR_2} la nuit !
+0x1F06319: Il monte au niv. <0x34> {STR_VAR_2} le\njour !
 0x1F0633E: Il évolue avec une forte\namitié !\pTu sauras qu'il est prêt\nquand un {COLOR}Écœur{COLOR}Ç apparaît sur sa\lfiche.
 0x1F063B9: Il évolue avec une forte\namitié en journée !\pTu sauras qu'il est prêt\nquand un {COLOR}Écœur{COLOR}Ç apparaît sur sa\lfiche.
 0x1F06443: Il évolue avec une forte\namitié la nuit !\pTu sauras qu'il est prêt\nquand un {COLOR}Écœur{COLOR}Ç apparaît sur sa\lfiche.
@@ -16438,18 +16436,18 @@
 0x1F06568: Il est échangé en tenant le\n{STR_VAR_2} !
 0x1F0658A: On utilise le {STR_VAR_2} dessus !
 0x1F065A0: Il évolue quand sa Beauté est\nau maximum !
-0x1F065CB: Il monte au niv. {LV} {STR_VAR_2} s'il\npleut ou s'il y a du brouillard !
-0x1F0660E: Il monte au niv. {LV} {STR_VAR_2} quand\nun type {STR_VAR_3} est dans l'équipe !
+0x1F065CB: Il monte au niv. <0x34> {STR_VAR_2} s'il\npleut ou s'il y a du brouillard !
+0x1F0660E: Il monte au niv. <0x34> {STR_VAR_2} quand\nun type {STR_VAR_3} est dans l'équipe !
 0x1F06649: Il évolue au niv. {STR_VAR_2} !
 0x1F0665D: Il évolue la nuit en tenant\nle {STR_VAR_2} !
 0x1F06689: Il évolue le jour en tenant\nle {STR_VAR_2} !
 0x1F066BB: Il évolue quand il connaît\n{STR_VAR_2} !
 0x1F066DA: Il évolue quand un {STR_VAR_2} est\ndans l'équipe !
-0x1F06702: Il monte au niv. {LV} {STR_VAR_2} entre\n{STR_VAR_3} et {VERSION} !
+0x1F06702: Il monte au niv. <0x34> {STR_VAR_2} entre\n{STR_VAR_3} et {VERSION} !
 0x1F0672A: Il place 3 coups critiques en un\nseul combat !
 0x1F06757: Il subit {STR_VAR_2} dégâts à\n{STR_VAR_3} !
 0x1F06771: On utilise le {STR_VAR_2} dessus en\nse tenant sur {STR_VAR_3} !
-0x1F0679C: Il monte au niv. {LV} {STR_VAR_2}\nen tenant le {STR_VAR_3} !
+0x1F0679C: Il monte au niv. <0x34> {STR_VAR_2}\nen tenant le {STR_VAR_3} !
 0x1F067C7: On utilise le {STR_VAR_2} dessus\nen tenant le {STR_VAR_3} !
 0x1F067F2: On utilise le {STR_VAR_2} dessus\nla nuit !
 0x1F06811: Il évolue quand il connaît\n{STR_VAR_2} et qu'il est mâle !
@@ -16568,9 +16566,9 @@
 0x1F094EA: Incroyable…\pVraiment, tu es la personne la plus\nriche que j'aie connue.\pCette volonté…{PAUSE}î cette passion…{PAUSE}î\nje sais ce que je dois faire !\pÇa y est !\pJe n'aurai plus besoin d'économies\nà vie !
 0x1F095A6: Je suis libre de mes désirs\nmatériels.\pEt enfin…{PAUSE}î enfin, je suis vraiment\nriche.\pTrès impressionnant, Dresseur.\pCependant, je vois que ton désir\npour la richesse dépasse le mien…\pAlors, en récompense de ta\nvolonté…{PAUSE} ah, oui.\pPrends ces Œufs Chance.
 0x1F09699: Et en plus, laisse-moi les rendre\nencore plus chanceux !
-0x1F096D7: {COLOR}ÁLe niveau des Œufs Chance est passé\nà {LV} {STR_VAR_2} !\pLes Pokémon gagneront maintenant {COLOR}É{EVIL_LEGENDARY}{COLOR}Á×\nles Points Exp. en le tenant.
+0x1F096D7: {COLOR}ÁLe niveau des OEufs Chance est passé\nà <0x34> {STR_VAR_2} !\pLes Pokémon gagneront maintenant {COLOR}É{EVIL_LEGENDARY}{COLOR}Á×\nles Points Exp. en le tenant.
 0x1F0974F: Si tu veux, j'améliore encore\ntes Œufs Chance.\pMais il me faudra plus que des\nPoints Exp. pour les améliorer.\pApporte-moi {COLOR}É{STR_VAR_3} {STR_VAR_1}{COLOR}Ç et je\naméliorerai encore tes Œufs Chance.\pJe…{PAUSE} je viens de réaliser que j'ai\nbesoin de nourriture, après tout.
-0x1F09838: Bonjour, tu es là pour améliorer\ntes {COLOR}ÉŒufs Chance{COLOR}Ç ?\pJ'ai besoin de {COLOR}É{STR_VAR_3} {STR_VAR_1}{COLOR}Ç pour\nporter leur chance à {COLOR}É{LV} {STR_VAR_2}{COLOR}Ç.
+0x1F09838: Bonjour, tu es là pour améliorer\ntes {COLOR}ÉOEufs Chance{COLOR}Ç ?\pJ'ai besoin de {COLOR}É{STR_VAR_3} {STR_VAR_1}{COLOR}Ç pour\nporter leur chance à {COLOR}É<0x34> {STR_VAR_2}{COLOR}Ç.
 0x1F098B9: Non ? Alors tu aurais une pièce\navant de partir ?
 0x1F098EF: Je crains que tu n'aies pas assez\n{COLOR}É{STR_VAR_1}{COLOR}Ç.\pPas assez pour me nourrir\ncette semaine…
 0x1F0994C: Avec un bonus de {COLOR}É{EVIL_LEGENDARY}{COLOR}Ç× de Points Exp.,\nje ne peux plus rien faire\lpour tes Œufs Chance.\pComment vais-je me nourrir, moi ?
@@ -16578,7 +16576,7 @@
 0x1F09A3C: À chaque pas, tes Pokémon\ns'attachent plus à toi.\pSi tu as un Pokémon à la Pension,\nil gagnera aussi en puissance.
 0x1F09ABC: J'ai entendu que des gens font des\nbêtises sur la {COLOR}ÉRoute 9{COLOR}Ë.
 0x1F09AFF: Tu as entendu ?\pQuelqu'un a réglé le souci des\nfauteurs de Route 9 !
-0x1F09B40: Je gagne beaucoup d'argent\navec objets de Pokémon sauvages.\pL'{COLOR}ÉŒil Composé{COLOR}Ë de mon {COLOR}ÉMimitoss{COLOR}Ë m'aide\nà attirer ceux avec des objets,\lpuis je change et utilise {COLOR}ÉSabotage{COLOR}Ë\lpour les prendre !
+0x1F09B40: Je gagne beaucoup d'argent\navec objets de Pokémon sauvages.\pL'<0xFC><0x01><0x06>OEil Composé<0xFC><0x01><0x08> de mon <0xFC><0x01><0x06>Mimitoss<0xFC><0x01><0x08> m'aide\nà attirer ceux avec des objets,\lpuis je change et utilise <0xFC><0x01><0x06>Sabotage<0xFC><0x01><0x08>\lpour les prendre !
 0x1F09BFC: Avec le {COLOR}ÉBadge Chute{COLOR}Ç, tu peux\nacheter des {COLOR}ÉHyper Balls{COLOR}Ç !\pElles sont bien meilleures pour\ncapturer que des Super Balls.
 0x1F09C88: Un sanctuaire débordant de\nfleurs et de Pokémon.\nOn dit qu'un Pokémon rare\nvit au nord.
 0x1F09CF0: Bienvenue au Paradis Floral !\pPendant votre visite, prenez soin\nde respecter les fleurs et\lles Pokémon qui y vivent.
@@ -17082,7 +17080,7 @@
 0x1F15E32: Tu vois, je suis le genre de gars\nqui aime les fleurs.\pTu piges ?\pLa plus belle part de la nature,\n{STR_VAR_1}…\pTu vas planer rien qu'en les\nregardant ! On se lâche !
 0x1F15ECA: Wouah, mec…\pEh ben…\nCe combat, c'était autre chose…
 0x1F15EFF: C'est profond, {STR_VAR_1}.\pJ'sais pas si c'est le brouillard…\p…mais je l'ai vraiment senti, mec.\nCorps et âme.\pTiens. Prends ce super Badge,\npour battre Mirskle, Champion\ld'Arène des fleurs.
-0x1F15FD6: Voilà le {COLOR}ÉBadge Feuille{COLOR}Ë.\pCe p'tit truc utile fait que les\nPokémon échangés jusqu'au Nv. {LV} 26\lécoutent tes superbes\lordres…\pOh, et prends aussi cette super CT,\naussiii…
+0x1F15FD6: Voilà le {COLOR}ÉBadge Feuille{COLOR}Ë.\pCe p'tit truc utile fait que les\nPokémon échangés jusqu'au Nv. <0x34> 26\lécoutent tes superbes\lordres...\pOh, et prends aussi cette super CT,\naussiii...
 0x1F16082: C'est une CT.\pElle apprend à tes Pokémon une\ncapacité encore et encore, à autant\lde super Pokémon que tu veux.\pAlors ne te gêne pas pour\nrépandre l'amour.\pPrêche, {STR_VAR_1} !\pBref… la capacité, c'est {COLOR}ÉNœud Herbe{COLOR}Ë.\pJ'ai connu un type un jour.\nIl se cassait toujours la figure.\pIl disait que c'était un\nproblème génétique.\pLa vérité… je lui faisais\nNœud Herbe sans arrêt !\pHeureusement qu'il était léger,\nsinon ça aurait VRAIMENT fait mal.
 0x1F16225: Oh, mince…\pTu as déjà Nœud Herbe…
 0x1F1624C: Oh, attends.\pOn dirait que je ne vais pas\nt'affronter, finalement.\pIl te faudra plus d'un Pokémon\nsi tu veux me défier…
@@ -17099,7 +17097,7 @@
 0x1F1653E: Oh, ne faites pas attention.\nJe parlais simplement tout seul.\pJe suis Véga, le Champion de l'Arène\nde Bourg Cratère.\pQuand je suis arrivé ici, j'ai eu\ndu réconfort dans l'atmosphère\lsombre de cette ville.\pMes Pokémon et moi avons donc\naiguisé nos talents ici, jusqu'au\lsommet.\pAu fait, as-tu peur du\nnoir ?\pBeaucoup de gens, oui.\pSavoir exactement ce qui t'attend\ndonne du courage.\pMais trébucher à l'aveugle, sans\nsavoir quand l'ennemi frappera…\pLa peur détruit même les plus\ngrandes armées.\pVoyons si toi aussi, tu seras\nécrasé par l'atmosphère lourde\let ma puissance !
 0x1F1676C: Intéressant. Je pense que tu ferais\nun excellent agent.
 0x1F167A0: Remarquable. Tu as su utiliser\nles infos sur ton adversaire, moi\ly compris…\p…et rester ferme même\nsous la pression.\pPour ton esprit remarquable, le\n{COLOR}ÉBadge Vision{COLOR}Ë est à toi.
-0x1F1687D: Le Badge Vision fait obéir les\nPokémon échangés jusqu'au Nv. {LV} 32\lque tu as reçus\lsans discuter.\pLa CS {COLOR}ÉCoupe{COLOR}Ë peut aussi\nêtre utilisée hors combat pour\lretirer les petits arbres du chemin.\pEt en gage de bonne volonté, je\npense que cette CT te sera utile\là toi.
+0x1F1687D: Le Badge Vision fait obéir les\nPokémon échangés jusqu'au Nv. <0x34> 32\lque tu as reçus\lsans discuter.\pLa CS {COLOR}ÉCoupe{COLOR}Ë peut aussi\nêtre utilisée hors combat pour\lretirer les petits arbres du chemin.\pEt en gage de bonne volonté, je\npense que cette CT te sera utile\là toi.
 0x1F16992: {COLOR}ÉLarcin{COLOR}Ë vole l'objet tenu par un\nPokémon adverse.\pDans mon métier, je trouve\navantageux d'utiliser les\lressources de l'adversaire.
 0x1F16A23: Un dernier conseil.\pÉvite les ombres et reste dans la\nlumière autant que possible.\pFais ça, et tu éviteras de tomber\nen ruine.\pJe te le promets…
 0x1F16ABA: {COLOR}ÁNOTE !\pPar manque de temps, les\nobjets suivants sont reçus ici.\pNormalement, Véga n'apparaîtrait\npas ici et vous les recevriez\lailleurs.
@@ -17114,7 +17112,7 @@
 0x1F17047: Eh bien, qui l'eût cru ?\pOn dirait que le vent souffle\nen ma faveur.\pEt toi ?\pVas-tu laisser la tempête t'emporter\nquand tu résistes…\p…ou sauras-tu la chevaucher et\nte l'approprier ?\pBon, assez bavardé.\nDécollons !
 0x1F1712D: Incroyable !\pJe pensais que les vents étaient\navec moi, et j'ai quand même perdu !
 0x1F17172: Ah… j'imagine que c'est comme ça.\nTant pis.\pFélicitations pour ta victoire,\nvraiment.\pTiens.\nLe {COLOR}ÉBadge Ailes{COLOR}Ç est à toi.
-0x1F1721D: Avec ce Badge, tu peux briser des\nrochers avec {COLOR}ÉÉclate-Roc{COLOR}Ç\lhors combat.\pEn plus, tous les Pokémon jusqu'au\nNv. {LV} 36 obéiront à tes ordres.\pOh, et cette CT pourrait aussi\nêtre utile.
+0x1F1721D: Avec ce Badge, tu peux briser des\nrochers avec {COLOR}ÉÉclate-Roc{COLOR}Ç\lhors combat.\pEn plus, tous les Pokémon jusqu'au\nNv. <0x34> 36 obéiront à tes ordres.\pOh, et cette CT pourrait aussi\nêtre utile.
 0x1F172DD: {COLOR}ÉAéropique{COLOR}Ç est une capacité\nqui touche à coup sûr.\pC'est utile quand tes capacités\nratent un peu trop\lsouvent !\pUtilise-la si tu n'as pas envie de\nrentrer dans le vent\len combat.\pBon, ton regard me dit que tu as\ndes choses à faire et où aller.\pJe ne te retiens pas.\nEn avant !
 0x1F17415: Au fait, as-tu déjà rencontré ma\nfille ?\pElle ne quitte pas vraiment la\nVille Blizzard sauf si je l'emmène,\lcar le temps dehors est rude.\pC'est pour ça qu'elle embête tous\nceux qui passent chez nous pour voir\lleurs Pokémon.
 0x1F174F1: mignonne
@@ -17123,7 +17121,7 @@
 0x1F17516: Salut, partenaire.\nContent d'te revoir si vite.\pJ'espère que ma modeste demeure te\nplaît et tout.\pSinon, j'suis sûr qu'il y a\nautre chose par ici pour te\lrincer l'œil…\pJ'veux dire, t'as fait\ntout ce patelin et le suivant,\là chercher le p'tit vieux moi.\p…Je rigole, je rigole.\pCe regard me dit que tu te bats pas\npour t'amuser.\pÉcoute, j'suis pas là pour fouiner.\nC'est pas mes oignons.\pMais comme Champion d'Arène, je\npeux pas filer un Badge au premier\lcow-boy venu.\pAlors, on va régler ça.\pQue ce beau gars teste\nta trempe !
 0x1F17729: Bravo, partenaire.\pMais je pense toujours que si\non se battait pour le style,\lje gagnerais, sans souci.
 0x1F17796: Nom d'un chien… je pensais que le\nformat te ferait trébucher, mais tu\lm'as bien montré.\pOn dirait que le Badge est à toi.\pTiens.\nUn {COLOR}ÉBadge Chute{COLOR}Ë, offert par Mel.
-0x1F1785D: Avec le Badge Chute, tout Pokémon\njusqu'au Nv. {LV} 45 t'obéira.\pIl permet aussi de déplacer de gros\nrochers avec {COLOR}ÉForce{COLOR}Ë.\pFranchement, je sais pas pourquoi\nles Pokémon costauds ne peuvent pas\lle faire déjà…\pMais bon, c'est un truc\nbizarre.\pBref, prends cette CT avec\nce Badge.
+0x1F1785D: Avec le Badge Chute, tout Pokémon\njusqu'au Nv. <0x34> 45 t'obéira.\pIl permet aussi de déplacer de gros\nrochers avec {COLOR}ÉForce{COLOR}Ë.\pFranchement, je sais pas pourquoi\nles Pokémon costauds ne peuvent pas\lle faire déjà...\pMais bon, c'est un truc\nbizarre.\pBref, prends cette CT avec\nce Badge.
 0x1F1798C: Avec {COLOR}ÉFaçade{COLOR}Ë, si ton Pokémon\na un problème de statut, ça devient\ldeux fois plus puissant !\pUtilise-la pour que tes ennemis\nregrettent de te donner un statut !\pBon, file maintenant.\pJ'espère que tu trouveras ce que\ntu cherches.
 0x1F17A71: Bonne chance, et rappelle-toi,\nje suis toujours là si tu veux\lquelque chose de beau à regarder !
 0x1F17ACA: Arène Pokémon de Ville de Dehara
@@ -17132,7 +17130,7 @@
 0x1F17D5B: …\pTu m'entends ?\pJ'ai dit : montre-moi avec deux\nde tes Pokémon à la fois !\pUn seul, ça suffit pas !
 0x1F17DCC: Gaaaaah !\nTa techno a surclassé la mienne !
 0x1F17DF1: Pfiou… tu m'as bien grillé !\pOn dirait que tes machines de guerre\nsont meilleures que les miennes.\pRien à redire !\nJe dois te remettre ce {COLOR}ÉBadge Zap{COLOR}Ë !
-0x1F17EB5: Le Badge Zap permet {COLOR}ÉSurf{COLOR}Ë\nsur l'eau et la lave !\pEt en plus, tout Pokémon\nt'obéira tant qu'il n'est pas\lau-dessus du Nv. {LV} 52 !\pC'est électrisant, non ?\pMais attends, c'est pas fini !\nPrends aussi cette CT !
+0x1F17EB5: Le Badge Zap permet {COLOR}ÉSurf{COLOR}Ë\nsur l'eau et la lave !\pEt en plus, tout Pokémon\nt'obéira tant qu'il n'est pas\lau-dessus du Nv. <0x34> 52 !\pC'est électrisant, non ?\pMais attends, c'est pas fini !\nPrends aussi cette CT !
 0x1F17F82: Si t'es en difficulté, utilise\n{COLOR}ÉChange Éclair{COLOR}Ë pour t'en sortir !\pEt tu sais quoi ?\nOn remettra ça un de ces jours !\pSi tu veux discuter avec le vieux\nGalavan, traîne près des\lCentres Pokémon.\pJe reconstruirai mon 'mon de métal\npour la revanche !
 0x1F18085: Ne laisse rien se mettre sur ta\nroute, {PLAYER} !\pEt ne laisse aucun désavantage\nt'empêcher d'atteindre tes buts !
 0x1F180F7: Arène Pokémon de Ville d'Antisis
@@ -17142,7 +17140,7 @@
 0x1F18318: Et ça vaut pour ta petite bande,\nles « Black {PLAYER} ».\pMignon de vouloir t'imposer.
 0x1F18372: Ha ha ha ha !\pIls devraient t'appeler\nBig {PLAYER} !
 0x1F183A5: Gah ! Tout ce temps à cogner des\npetits poissons m'a ramolli !\pMême avec toutes les règles en place\npour me laisser toutes les cartes…\pHa ha ha ha ! D'accord, tu m'as eu !\pMême si Antisis est un taudis, j'ai\nquand même un statut officiel de\lChampion d'Arène !\pEt un Champion d'Arène donne ça à\ntout vainqueur !
-0x1F184F8: Voilà le Badge Combat !\pPokémon échangés, Nv {LV} 57 max\nsauront qui est le vrai boss !\pEt tu peux grimper ces falaises\navec la capacité\l{COLOR}ÉEscalade{COLOR}Ë !\pDis que c'est pas utile !\pOh ouais… je suppose que tu peux\nprendre ça.\pDis que c'est un cadeau de\nBig Mo.
+0x1F184F8: Voilà le Badge Combat !\pPokémon échangés, Nv <0x34> 57 max\nsauront qui est le vrai boss !\pEt tu peux grimper ces falaises\navec la capacité\l{COLOR}ÉEscalade{COLOR}Ë !\pDis que c'est pas utile !\pOh ouais... je suppose que tu peux\nprendre ça.\pDis que c'est un cadeau de\nBig Mo.
 0x1F1860B: {COLOR}ÉVampi-Poing{COLOR}Ë frappe et draine la\nsanté de ton adversaire !\pAlors, t'attends quoi ?\pDégage. T'es trop fort pour te\nperdre ici.\pY a bien plus gros poissons hors de\nces murs.\pSors et deviens le roi de\nl'étang, bon sang !\pHa ha ha ha !
 0x1F18710: Si tu reviens un jour à la Ville\nd'Antisis, {PLAYER}, sache que je te\lgarde à l'œil !\pHa ha ha ha !\pJ'ai un œil sur tout le monde ici !\nC'est mon boulot !
 0x1F18799: Arène Pokémon de Bourg Polder
@@ -17320,7 +17318,7 @@
 0x1F1C7E2: Bien joué !\pTu as trouvé ton chemin\ndans l'obscurité et vaincu\lVéga !\pPrends ceci, en plus, pour\nta victoire.
 0x1F1C85F: La Gemme que je t'ai donnée peut\nbooster une capacité {COLOR}ÉTénèbres{COLOR}Ë.\pAvec elle, libère ta\nfureur des ténèbres !\pMwahahahaha !
 0x1F1C8DF: Oh, c'est toi !\nChampion en devenir !\pComment tu trouves le temps\nici-haut ?\pBienvenue à l'Arène Blizzard !\pCommençons avec un peu\nd'Eau Fraîche.
-0x1F1C976: Contrairement aux idées reçues,\ncette Arène n'est pas de type {COLOR}ÉGlace{COLOR}Ë.\pC'est une Arène {COLOR}ÉVol{COLOR}Ë !\pEt le meilleur moyen de contrer les\ntypes Vol est de leur couper les\lailes avec {COLOR}ÉGlace{COLOR}Ë, {COLOR}ÉRoche{COLOR}Ë,\lou {COLOR}ÉÉlectrik{COLOR}Ë !\pMais attention, car il y a un\nvent arrière dans cette Arène !\pCe {COLOR}ÉVent Arrière{COLOR}Ë augmentera la\nVitesse de tous les Pokémon Vol,\lne sois pas trop sûr de toi\lmême si ton Pokémon a une bonne\lstatistique de Vitesse.\pSauf s'il est en partie Vol,\nbien sûr.\pPour atteindre Alice, il faut\nutiliser les ventilateurs et les\ltrous au sol pour changer d'étage.\pCe n'est pas trop compliqué, mais\nsouviens-toi des endroits visités\let de ceux qui ne le sont pas.\pBonne chance !
+0x1F1C976: Contrairement aux idées reçues,\ncette Arène n'est pas de type <0xFC><0x01><0x06>Glace<0xFC><0x01><0x08>.\pC'est une Arène <0xFC><0x01><0x06>Vol<0xFC><0x01><0x08> !\pEt le meilleur moyen de contrer les\ntypes Vol est de leur couper les\lailes avec <0xFC><0x01><0x06>Glace<0xFC><0x01><0x08>, <0xFC><0x01><0x06>Roche<0xFC><0x01><0x08>,\lou <0xFC><0x01><0x06>Électrik<0xFC><0x01><0x08> !\pMais attention, car il y a un\nvent arrière dans cette Arène !\pCe <0xFC><0x01><0x06>Vent Arrière<0xFC><0x01><0x08> augmentera la\nVitesse de tous les Pokémon Vol,\lne sois pas trop sûr de toi\lmême si ton Pokémon a une bonne\lstatistique de Vitesse.\pSauf s'il est en partie Vol,\nbien sûr.\pPour atteindre Alice, il faut\nutiliser les ventilateurs et les\ltrous au sol pour changer d'étage.\pCe n'est pas trop compliqué, mais\nsouviens-toi des endroits visités\let de ceux qui ne le sont pas.\pBonne chance !
 0x1F1CC0F: Même avec le vent contre toi,\ntu t'es battu courageusement et\ltriomphé !\pPrends ceci, en plus, pour\nta victoire.
 0x1F1CC88: La Gemme que je t'ai donnée peut\nbooster une capacité {COLOR}ÉVol{COLOR}Ë.\pAvec elle, tu peux porter un coup\nélégant, mais dévastateur !
 0x1F1CD12: Champion en devenir !\nComment vont les combats ?\pBienvenue à l'Arène de Fallshore !\pPrends de l'Eau Fraîche, tout droit\ndes bassins de l'Arène.
@@ -19007,7 +19005,7 @@
 0x1F5840E: Oh, timing parfait, Dresseur !\pJe viens de tourner mon film\nle plus récent dans cette forêt.\pLe titre du film est :\n« Kangourex v Kangourex :\lL'Aube du Kangourex »\pMalheureusement, l'acteur du rôle\ndu méchant principal est malade.\pAccepterais-tu de prendre\nsa place ?
 0x1F58521: Dommage…\nVraiment, dommage…
 0x1F5853A: Merveilleux !\pUne fois tous les Dresseurs battus\ndans forêt, apporte {COLOR}É4{COLOR}Ç {COLOR}ÉKangourex{COLOR}Ç\lforts pour une scène de combat\ldu film.\pCe sera filmé comme\nun {COLOR}ÉCombat Duo{COLOR}Ç.\pIls devraient être niveau\n{COLOR}É{LV} 70{COLOR}Ç ou plus.
-0x1F5864A: Merveilleux !\pAssure-toi que ton équipe ne\ncontient que {COLOR}É4 Kangourex{COLOR}Ç\lavant qu'on ne puisse tourner le\l{COLOR}ÉCombat Duo{COLOR}Ç.\pIls devraient être niveau\n{COLOR}É{LV} 70{COLOR}Ç ou plus.
+0x1F5864A: Merveilleux !\pAssure-toi que ton équipe ne\ncontient que {COLOR}É4 Kangourex{COLOR}Ç\lavant qu'on ne puisse tourner le\l{COLOR}ÉCombat Duo{COLOR}Ç.\pIls devraient être niveau\n{COLOR}É<0x34> 70{COLOR}Ç ou plus.
 0x1F58700: Merveilleux !\pMoteur… action !
 0x1F58723: Merveilleux, merveilleux, coupez !
 0x1F58748: Magnifique travail aujourd'hui.\pPour ta performance, tu as gagné\nl'un de ceux-ci.
@@ -19117,10 +19115,10 @@
 0x1F5B530: Si tu veux me voir à l'œuvre,\npasse me voir.
 0x1F5B576: F Itinéraire 10
 0x1F5B581: Houah, Dresseur !\pJ'entraîne corps et âme en fixant\ncet arbre avec intensité !\pPrends ça pour t'entraîner aussi !
-0x1F5B5F8: Houah, Dresseur !\pJe peux {COLOR}Éaméliorer{COLOR}Ë le {COLOR}ÉBrac. Macho{COLOR}Ë\npour l'entraînement efficace !\pPour l'instant, il est {LV} {STR_VAR_3},\nmais le passer {COLOR}É{LV} {STR_VAR_2}{COLOR}Ë en\léchange de {COLOR}É{STR_VAR_2} {STR_VAR_1}s{COLOR}Ë !
+0x1F5B5F8: Houah, Dresseur !\pJe peux {COLOR}Éaméliorer{COLOR}Ë le {COLOR}ÉBrac. Macho{COLOR}Ë\npour l'entraînement efficace !\pPour l'instant, il est <0x34> {STR_VAR_3},\nmais le passer {COLOR}É<0x34> {STR_VAR_2}{COLOR}Ë en\léchange de {COLOR}É{STR_VAR_2} {STR_VAR_1}s{COLOR}Ë !
 0x1F5B6BE: Tant pis, contente-toi d'un produit\ninférieur !
 0x1F5B6E4: Tu n'as pas assez de {STR_VAR_1}s pour\nque j'améliore ton Brac. Macho !
-0x1F5B723: {COLOR}ÁLe niveau du Brac. Macho est passé\nà {LV} {STR_VAR_2} !\pLes Pokémon gagneront désormais {COLOR}É{STR_VAR_2}×{COLOR}Á\nles Points d'Effort gagnés.
+0x1F5B723: {COLOR}ÁLe niveau du Brac. Macho est passé\nà <0x34> {STR_VAR_2} !\pLes Pokémon gagneront désormais {COLOR}É{STR_VAR_2}×{COLOR}Á\nles Points d'Effort gagnés.
 0x1F5B79F: Ton Brac. Macho est au maximum,\nau plus puissant !\pDans cet état, tu recevras\n{COLOR}É{STR_VAR_1}×{COLOR}Ë de Points d'Effort en\lt'entraînant avec !
 0x1F5B832: La mer…\pFurieuse un instant, calme comme la\nnature d'un Pokémon ensuite…
 0x1F5B879: Combattons.\pMontre-moi que tu peux être aussi\nfurieux que la mer.
@@ -19979,7 +19977,7 @@
 0x1F6BDE4: {COLOR}ÁSon cerveau semble aussi\nmou que du pudding.
 0x1F6BE19: Mmm…\nJ’adore le pudding !\pMon préféré est le chocolat !
 0x1F6BE49: Il existe une tradition : lorsque\ndeux Pokémon de Dresseurs différents\lse reproduisent ensemble, leur\lprogéniture a plus de chances de\lnaître chromatique.\pCette tradition se transmet depuis\ndes décennies et aurait ses\lracines dans les régions de l’Est.
-0x1F6BF41: Teehee… tu savais que le {COLOR}ÉNœud\nDestin{COLOR}Ç sert en élevage ?\pPari que non !\pMais si tu me montres un {COLOR}Éféminin{COLOR}Ç\nPokémon qui connaît {COLOR}ÉAttraction{COLOR}Ç,\lje t’en donnerai un !\pTu as un Pokémon à me\nmontrer ?
+0x1F6BF41: Teehee... tu savais que le <0xFC><0x01><0x06>Noeud\nDestin<0xFC><0x01><0x04> sert en élevage ?\pPari que non !\pMais si tu me montres un <0xFC><0x01><0x06>féminin<0xFC><0x01><0x04>\nPokémon qui connaît <0xFC><0x01><0x06>Attraction<0xFC><0x01><0x04>,\lje t'en donnerai un !\pTu as un Pokémon à me\nmontrer ?
 0x1F6C027: Quel Pokémon est-ce ?\nJe suis toute excitée !
 0x1F6C051: Oui ! C’est exactement ce que je\ncherchais !\pPrends un {COLOR}ÉNœud Destin{COLOR}Ç !
 0x1F6C09C: Quand un Pokémon tient le {COLOR}ÉNœud\nDestin{COLOR}Ç en élevage, cinq\l{COLOR}ÉIV{COLOR}Ç sont transmises\ldepuis les parents, au lieu\ldes trois habituelles.
@@ -20632,10 +20630,10 @@
 0x1F7C2F5: Et avec ça… il est temps\nque j’arrête.\pRien ne dépassera ça,\nje te le dis.\pMerci beaucoup, {STR_VAR_1}.\nEn signe de gratitude…\pEh bien, à côté,\nje suis un bon forgeron.\pJe pensais en faire un vrai boulot…\nmais la demande pour les\lstatues n’est plus\ltrès forte.\pÉcoute, tu peux être mon premier\nclient ! Qu’en dis-tu ?\pQue puis-je faire ?\nVoyons…\pTu as des Pièces Runes ?\pPour te remercier, je t’en fais une\namélioration gratuite.
 0x1F7C4D0: Tu as des Pièces Runes ?\pPour te remercier, je t’en fais une\namélioration gratuite.
 0x1F7C51F: Tu n’as rien de tel ?\pVa en chercher une, mets-la dans ton\nCube.\pEnsuite, reviens me parler.
-0x1F7C596: {COLOR}ÁLe niveau de la Pièce Rune a été\naugmenté à {LV} {STR_VAR_2} !\p{COLOR}É{STR_VAR_2}×{COLOR}Á le montant d’argent gagné sera\nobtenu en combat si elle est portée.
+0x1F7C596: {COLOR}ÁLe niveau de la Pièce Rune a été\naugmenté à <0x34> {STR_VAR_2} !\p{COLOR}É{STR_VAR_2}×{COLOR}Á le montant d'argent gagné sera\nobtenu en combat si elle est portée.
 0x1F7C618: {COLOR}ÁLe niveau de la Pièce Rune est déjà\nau maximum !\pÀ la place…
 0x1F7C656: Alors, ça te plaît ?\pQuand un Pokémon la porte\net sort, tu gagnes plus\ld’argent !\pOn peut encore augmenter,\nmais ce n’est\lpas donné.\pSi tu peux réunir {COLOR}É{STR_VAR_2} {STR_VAR_1}{COLOR}Ë,\nje peux faire une amélioration.
-0x1F7C74F: Salut encore !\nTa Pièce Rune est au niveau {LV} {STR_VAR_3}.\pPour une amélioration, il me faudra\n{COLOR}É{STR_VAR_2} {STR_VAR_1}s{COLOR}Ë.
+0x1F7C74F: Salut encore !\nTa Pièce Rune est au niveau <0x34> {STR_VAR_3}.\pPour une amélioration, il me faudra\n{COLOR}É{STR_VAR_2} {STR_VAR_1}s{COLOR}Ë.
 0x1F7C7AF: Pas aujourd’hui ?\nD’accord.\pRamène-les plus tard\nsi tu veux.
 0x1F7C7F0: Il te manque des\n{STR_VAR_1}s.\pVa en chercher d’autres,\npuis reviens.
 0x1F7C837: Comment va cette Pièce Rune ?\nÇa va ?\pC’est le niveau le plus haut.\nJ’espère qu’elle te sert.
@@ -20837,8 +20835,8 @@
 0x1F8068B: Je me suis entraîné comme un fou,\net mes Pokémon encore plus !
 0x1F806C6: Ouais, ouais !\nMême si j'ai perdu, je suis motivé !
 0x1F806F5: Pour un fou comme toi, ton\nentraînement a porté ses fruits !\pEt la folie née de la soif de\npuissance doit être récompensée !\pDresseur !\pTu as des {COLOR}ÉObjets Pouvoir{COLOR}Ë ?\pIls n'en ont pas l'air, mais mes\nbras servent à forger et frapper !\pAlors, laisse-moi améliorer tous tes\nObjets Pouvoir pour renforcer\lencore plus vite tes Pokémon !\pIl me faut juste des étoiles - {COLOR}É{STR_VAR_1}s{COLOR}Ë\npour être précis !\pTu peux obtenir un {STR_VAR_1} par\njour en brisant le {COLOR}ÉRocher de Défi{COLOR}Ë.\pCe rocher imposant, juste ici.\pPrends un Pokémon de type {COLOR}ÉCombat{COLOR}Ë et\nfraye-toi un chemin !
-0x1F8091F: Salutations, fou parmi les fous !\pSi tu veux, paie-moi {COLOR}É{STR_VAR_3} {STR_VAR_1}{COLOR}Ë\net j'améliorerai tous tes\l{COLOR}ÉObjets Pouvoir{COLOR}Ë en {COLOR}É{LV} {STR_VAR_2}{COLOR}Ë !
-0x1F809B9: {COLOR}ÁLe niveau des Objets Pouvoir a\naugmenté à {LV} {STR_VAR_2} !\pLes Pokémon gagnent désormais des\nPoints d'Effort {COLOR}É{EVIL_LEGENDARY}{COLOR}Á quand tenu.
+0x1F8091F: Salutations, fou parmi les fous !\pSi tu veux, paie-moi {COLOR}É{STR_VAR_3} {STR_VAR_1}{COLOR}Ë\net j'améliorerai tous tes\l{COLOR}ÉObjets Pouvoir{COLOR}Ë en {COLOR}É<0x34> {STR_VAR_2}{COLOR}Ë !
+0x1F809B9: {COLOR}ÁLe niveau des Objets Pouvoir a\naugmenté à <0x34> {STR_VAR_2} !\pLes Pokémon gagnent désormais des\nPoints d'Effort {COLOR}É{EVIL_LEGENDARY}{COLOR}Á quand tenu.
 0x1F80A3A: Rassemble les étoiles de Borrius\net reviens !
 0x1F80A6A: Hélas, il te manque {COLOR}É{STR_VAR_3} {STR_VAR_1}{COLOR}Ë\npour améliorer tes Objets Pouvoir.\pGagne plus d'étoiles\net reviens !
 0x1F80AD5: Avec tes Objets Pouvoir au max,\ntes Pokémon gagneront des\lPoints d'Effort {COLOR}É{EVIL_LEGENDARY}{COLOR}Ë en plus\lsi l'objet est tenu !\pDis-moi que c'est pas fou,\nfou parmi les fous !
@@ -21405,7 +21403,7 @@
 0x1F8D44F: Votre adversaire utilisera ces\nPokémon.\p{SE_SHOP} Choisir de nouveaux départs\n{B_BUTTON} Envoyer {STR_VAR_1} & {STR_VAR_2}
 0x1F8D49E: Le Cerveau de Frontière utilisera\nces Pokémon.\p{SE_SHOP} Choisir un nouveau départ\n{B_BUTTON} Envoyer {STR_VAR_1}
 0x1F8D4EC: Le Cerveau de Frontière utilisera\nces Pokémon.\p{SE_SHOP} Choisir de nouveaux départs\n{B_BUTTON} Envoyer {STR_VAR_1} & {STR_VAR_2}
-0x1F8D540: Félicitations pour ta série de\nvictoires, challenger !\pLe {STR_VAR_1} a fait savoir que\n{STR_VAR_2} est impressionné par toi.\p{STR_VAR_3} voit ton talent, et\n{STR_VAR_2} veut te défier !\pEs-tu prêt à affronter le\n{STR_VAR_1} ?
+0x1F8D540: Félicitations pour ta série de\nvictoires, challenger !\pLe <0xFD><0x02> a fait savoir\nqu'<0xFD><0x03> est impressionné par toi.\p<0xFD><0x04> voit ton talent, et\n<0xFD><0x03> veut te défier !\pEs-tu prêt à affronter le\n<0xFD><0x02> ?
 0x1F8D621: Palmer
 0x1F8D628: Salut !\nJe m'appelle Palmer.\pJ'ai beaucoup entendu parler de toi.\pTu es {PLAYER} de Frozen Heights,\nc'est bien ça ?\pTu es bien plus jeune que je\npensais. Alors, montre-moi.\pMontre-moi le lien que tu as forgé\navec tes Pokémon.\pMontre-moi ce que tu as appris lors\ndes combats contre les Dresseurs !
 0x1F8D72A: Je n'ai aucun souci à perdre face à\nun Dresseur aussi fort que toi !
@@ -21614,7 +21612,7 @@
 0x1F93CF0: Ces installations de combat sont\nplus qu'un jeu, c'est la vie.\pRien qu'en y entrant et en respirant\ncet air un peu rassis, on s'imprègne\lde l'ethos du\lcombat.\pVeux-tu accepter cet ethos du\ncombat dans le tissu de ton âme ?
 0x1F93DDF: Pour que l'ethos du combat fusionne\navec ton âme, tu devras triompher\ldans les installations de combat\l{COLOR}É{STR_VAR_1}{COLOR}Ç fois.\pBien sûr, cela n'inclut pas les\nSables de Combat puisque tu n'y\lcombats pas toi-même.
 0x1F93EAE: Je me sens tellement fort avec\nl'ethos du combat en l'âme, et toi ?
-0x1F93EF6: Tu n'as pas triomphé dans les\ninstallations {COLOR}É{STR_VAR_1}{COLOR}Ç fois.\pIl te faudra gagner {COLOR}É{STR_VAR_3}{COLOR}Ç autre{s}\ntemps{EVIL_TEAM} pour que l'ethos\ldu combat fusionne avec ton âme.
+0x1F93EF6: Tu n'as pas triomphé\n<0xFC><0x01><0x06><0xFD><0x02><0xFC><0x01><0x04> fois dans les installations\lde combat.\pIl te faudra <0xFC><0x01><0x06><0xFD><0x04><0xFC><0x01><0x04> victoire<0xFD><0x08> de plus\npour que l'ethos du combat\lfusionne avec ton âme.
 0x1F93F98: Je sens l'ethos du combat sur ton\nâme.\pÇa n'a aucun effet tangible, mais tu\nsens légèrement l'odeur de la Baie\lSitrus.\pSi tu es déçu, voici une récompense\nmodeste pour\lte remonter.
 0x1F9406B: L'ethos du combat et quelques\nshampoings parfumés Baie Sitrus\lsont à peu près pareils.\pLa différence, ça sonne mieux !
 0x1F940E9: Tour de Combat
@@ -22275,7 +22273,7 @@
 0x1F9B402: Bienvenue au Ring Challenge\nd'Antisis City ! Je suis\pton guide pour le Battle Ring.
 0x1F9B452: Veux-tu tenter le Battle\nRing Challenge ?
 0x1F9B484: Le Gym d'Antisis est une\ninstallation unique réservée aux\ldéfis de Combat Solo. Une fois\pcommencé, ton défi dure jusqu'à ce\nque tu veuilles te poser. Pour\pcommencer ton défi, tu dois entrer\navec trois Pokémon. Chaque Pokémon\psera placé au niveau 50 pour le\ndéfi. Les doublons d'espèce ou\pd'objet ne sont pas autorisés. La\nMéga-Évolution, les Capacités Z,\ple Dynamax, les Ceintures Force,\nles capacités explosives, Lien du\lDestin et Requiem sont interdits.\lRegigigas avec le Talent Tempo\pPerso ainsi que les Pokémon bannis\ndu palier {COLOR}ÉStandard{COLOR}Ë\lsont interdits.
-0x1F9B689: Avant chaque combat, l'équipe de\nton adversaire te sera révélée.\pDe plus, à chaque combat, un\ntype de capacité ne pourra pas\pêtre utilisé. Cela sera indiqué\paussi. Pour les capacités qui\nchangent de type, le type obtenu\lest pris en compte. À ce\pmoment-là, tu dois choisir un\nseul Pokémon pour affronter l'un\ldes leurs. Pour chaque Dresseur\pque tu bats, tu gagneras des\n{COLOR}ÉPoints de Combat{COLOR}Ë\p({COLOR}ÉPB{COLOR}Ë). Cependant,\ncomme cette installation ne fait\lpas partie de la {COLOR}ÉBattle\lFrontier{COLOR}Ë, tu ne gagneras\paucun tampon sur ta Frontier\nCard. Si tu veux interrompre ton\ldéfi, ta progression sera\lenregistrée pour quand tu\pvoudras continuer. Si tu quittes\nsans sauvegarder, tu seras\ldisqualifié de ton défi. Merci\pd'en tenir compte !
+0x1F9B689: Avant chaque combat, l'équipe de\nton adversaire te sera révélée.\pDe plus, à chaque combat, un\ntype de capacité ne pourra pas\pêtre utilisé. Cela sera indiqué\paussi. Pour les capacités qui\nchangent de type, le type obtenu\lest pris en compte. À ce\pmoment-là, tu dois choisir un\nseul Pokémon pour affronter l'un\ldes leurs. Pour chaque Dresseur\pque tu bats, tu gagneras des\n<0xFC><0x01><0x06>Points de Combat<0xFC><0x01><0x08>\p(<0xFC><0x01><0x06>PB<0xFC><0x01><0x08>). Cependant,\ncomme cette installation ne fait\lpas partie de la <0xFC><0x01><0x06>Battle\lFrontier<0xFC><0x01><0x08>, tu ne gagneras\paucun tampon sur ta Frontier\nCard. Si tu veux interrompre ton\ldéfi, ta progression sera\lenregistrée pour quand tu\pvoudras continuer. Si tu quittes\nsans sauvegarder, tu seras\ldisqualifié de ton défi. Merci\pd'en tenir compte !
 0x1F9B984: Pour tes combats, tu\npeux personnaliser les\préglages suivants :\n-Musique de combat -Fond de combat
 0x1F9B9E1: Quel registre veux-tu\nvoir ?
 0x1F9BA06: Actuel
@@ -24730,3 +24728,8 @@
 0x1F5A100: <0xFC><0x01><0x02><0xFD><0x01> remet tous les Oeufs\nde l'équipe.
 0x1F7927C: <0xFC><0x01><0x02><0xFD><0x01> remet\n<0xFD><0x03> <0xFD><0x02><0xFD><0x04>.
 0x1F9820C: Je mets <0xFC><0x01><0x06><0xFD><0x02><0xFC><0x01><0x08> dans\n<0xFC><0x01><0x06><0xFD><0x03><0xFC><0x01><0x08>, vraiment !?
+0x1F2DBA3: <0xFD><0x02> ! <0xFD><0x03> !
+0x7F246C: <0xFC><0x01><0x08>Floette ! Blizzard Floral !
+0x7F24BF: <0xFC><0x01><0x08>Floette ! Blizzard Floral !
+0x75565A: Que font les gens quand ils\ndoivent aller aux toilettes ?\pEt si ça mord pendant que j'y\nsuis ? Je ne peux pas y aller...
+0x75C811: Tu as entendu, <0xFD><0x01> ?\pOn dirait que des Pokémon sont\npiégés dans cette cage là-bas !\pAllons voir ça.

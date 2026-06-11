@@ -6558,8 +6558,8 @@ Nv. <0xFD><0x01> !<0xFC><0x0A><0xFB>",
 <0xFD><0x01> !<0xFC><0x0A><0xFB>",
 0x003FB2B6,"<0xFD>  is trying to
 learn <0xFD><0x01>.<0xFB>","<0xFD>  quiere aprender
-<0xFD><0x01>.<0xFB>",26,4,30,pokemon,description,"{FD00} tente d'apprendre
-{FD01}.<0xFA>",
+<0xFD><0x01>.<0xFB>",26,4,30,pokemon,description,"<0xFD><0x00> tente d'apprendre
+<0xFD><0x01>.<0xFB>",
 0x003FB2D1,"But, <0xFD>  can't learn
 more than four moves.<0xFB>","Pero, <0xFD>  ya conoce
 cuatro movimientos.<0xFB>",42,3,45,pokemon,description,"Mais {FD00} ne peut pas
@@ -7427,8 +7427,8 @@ prevents switching!<0xFB>",,28,2,30,pokemon,dialogue,"La {B_LAST_ABILITY} de {UN
 empêche le switch!<0xFB>",
 0x003FCA49,"<0xFD><0x10>'s <0xFD><0x19>
 prevented <0xFD><0x13>'s<0xFA><0xFD>  from working!","<0xFD><0x10>'s <0xFD><0x19>
-prevented <0xFD><0x13>'s<0xFA><0xFD>  from working!",39,2,41,pokemon,dialogue,"{B_DEF_ABILITY} de {B_DEF_NAME_WITH_PREFIX}
-stoppe {UNKNOWN_STR}<0xFA>de {B_SCR_ACTIVE_NAME_WITH_PREFIX} !",
+prevented <0xFD><0x13>'s<0xFA><0xFD>  from working!",39,2,41,pokemon,dialogue,"<0xFD><0x10>, avec <0xFD><0x19>,
+empêche <0xFD><0x13><0xFA>d'utiliser <0xFD><0x00> !",
 0x003FCA71,"<0xFD><0x13>'s <0xFD><0x1A>
 made it ineffective!","<0xFD><0x13>'s <0xFD><0x1A>
 made it ineffective!",28,2,30,pokemon,dialogue,"<0xFD><0x13> : <0xFD><0x1A>
@@ -7684,16 +7684,16 @@ want to battle!",25,3,28,pokemon,dialogue,"<0xFD><0x20> et <0xFD><0x21>
 veulent se battre!",
 0x003FD3B1,"<0xFD><0x1C> <0xFD><0x1D> sent
 out <0xFD><0x06>!<0xFC><0x08><0x3C>","<0x52><0xFD><0x1C> <0xFD><0x1D> saca a
-<0xFD><0x06>!<0xFC><0x08><0x3C>",21,3,24,pokemon,dialogue,"{FD1C} {FD1D} sent
-out {FD06}!{FC08}",
+<0xFD><0x06>!<0xFC><0x08><0x3C>",21,3,24,pokemon,dialogue,"<0xFD><0x1C> <0xFD><0x1D> envoie
+<0xFD><0x06> !<0xFC><0x08><0x3C>",
 0x003FD3C7,"<0xFD><0x1C> <0xFD><0x1D> sent
 out <0xFD><0x06> and <0xFD><0x08>!<0xFC><0x08><0x3C>","<0x52><0xFD><0x1C> <0xFD><0x1D> saca a
 <0xFD><0x06> y a <0xFD><0x08>!<0xFC><0x08><0x3C>",28,3,31,pokemon,dialogue,"{FD1C} {FD1D} envoie
 {FD06} et {FD08}!{FC08}",
 0x003FD3E4,"<0xFD><0x1C> <0xFD><0x1D> sent
 out <0xFD> !","<0x52><0xFD><0x1C> <0xFD><0x1D> saca a
-<0xFD> !",18,3,21,pokemon,dialogue,"{FD1C} {FD1D} sent
-out {FD00}!",
+<0xFD> !",18,3,21,pokemon,dialogue,"<0xFD><0x1C> <0xFD><0x1D> envoie
+<0xFD><0x00> !",
 0x003FD3F7,"<0xFD><0x20> sent out
 <0xFD><0x06>!","<0xFD><0x20> ssss out
 <0xFD><0x06>!",15,3,18,pokemon,dialogue,"<0xFD><0x20> envoie
@@ -8014,8 +8014,8 @@ Rocher{FC13}Fuite",
 0x003FE770,<0xFC><0x05><0x05><0xFC><0x04><0x0D><0x0E><0x0F><0xFF><0xFC><0x05><0x05><0xFC><0x04><0x0D><0x0E><0x0F>E<0x19>,<0xFC><0x05><0x05><0xFC><0x04><0x0D><0x0E><0x0F><0xFF><0xFC><0x05><0x05><0xFC><0x04><0x0D><0x0E><0x0F>E<0x19>,19,1,20,ascii,description,{FC05}{FC04},
 0x003FE791,"<0xFC><0x05><0x05><0xFC><0x04><0x0D><0x0E><0x0F>Yes
 No","<0xFC><0x05><0x05><0xFC><0x04><0x0D><0x0E><0x0F>Sí
-No ",14,1,15,pokemon,description,"{FC05}{FC04}Yes
-No",
+No ",14,1,15,pokemon,description,"<0xFC><0x05><0x05><0xFC><0x04><0x0D><0x0E><0x0F>Oui
+Non",
 0x003FE799,"Yes
 No",,6,1,7,pokemon,other,,
 0x003FE7A0,"<0xFC><0x05><0x05><0xFC><0x04><0x0D><0x0E><0x0F>Switch
@@ -17593,11 +17593,11 @@ besoin d'une pause.",
 No, you're a big-one-to-be!","This dude thinks you're a big one.
 No, you're a big-one-to-be!",62,4,66,pokemon,dialogue,"Ce type croit que tu es un gros
 poisson. Non, tu es un gros poisson",
-0x00755647,"<0x5C><0x05>t   <0x5A><0x56><0x75><0x08>e<0x56><0x75><0x08><0x05>ó<0x55><0x75><0x08>What do people do if they need to go
+0x0075565A,"What do people do if they need to go
 to a washroom?<0xFB>What if my rod hooks a big one while
-I'm in the washroom? I just can't go""","<0x5C><0x05>t   <0x5A><0x56><0x75><0x08>e<0x56><0x75><0x08><0x05>ó<0x55><0x75><0x08>What do people do if they need to go
+I'm in the washroom? I just can't go""","What do people do if they need to go
 to a washroom?<0xFB>What if my rod hooks a big one while
-I'm in the washroom? I just can't go""",145,3,148,pokemon,dialogue,"<0x5C><0x05>t   <0x5A><0x56><0x75><0x08>e<0x56><0x75><0x08><0x05>ó<0x55><0x75><0x08>Que font les gens quand ils
+I'm in the washroom? I just can't go""",126,3,129,pokemon,dialogue,"Que font les gens quand ils
 doivent aller aux toilettes ?<0xFB>Et si ça mord pendant que j'y
 suis ? Je ne peux pas y aller...",
 0x007556D9,"I lost because I'm trying to not go
@@ -17736,24 +17736,9 @@ going to move, <0xFD><0x01>.<0xFB>We'd better look for another way
 out of here.",97,1,98,pokemon,description,"{RIVAL} : {COLOR}ËOn dirait qu'il ne
 bougera pas, {PLAYER}.<0xFB>Mieux vaut trouver une autre
 issue.",
-0x0075C7FF,"<0x13><0x13><0x04>
-<0x13><0x13><0x10>
-<0xB6><0x04>
-<0x13><0x10>
-<0x11><0x11><0x13>
-Did you hear that, <0xFD><0x01>?<0xFB>It sounded like some Pokémon are
-trapped in that cage over there!<0xFB>Let's go check it out.","<0x13><0x13><0x04>
-<0x13><0x13><0x10>
-<0xB6><0x04>
-<0x13><0x10>
-<0x11><0x11><0x13>
-Did you hear that, <0xFD><0x01>?<0xFB>It sounded like some Pokémon are
-trapped in that cage over there!<0xFB>Let's go check it out.",129,2,131,pokemon,dialogue,"<0x13><0x13><0x04>
-<0x13><0x13><0x10>
-<0xB6><0x04>
-<0x13><0x10>
-<0x11><0x11><0x13>
-Tu as entendu, <0xFD><0x01> ?<0xFB>On dirait que des Pokémon sont
+0x0075C811,"Did you hear that, <0xFD><0x01>?<0xFB>It sounded like some Pokémon are
+trapped in that cage over there!<0xFB>Let's go check it out.","Did you hear that, <0xFD><0x01>?<0xFB>It sounded like some Pokémon are
+trapped in that cage over there!<0xFB>Let's go check it out.",111,2,113,pokemon,dialogue,"Tu as entendu, <0xFD><0x01> ?<0xFB>On dirait que des Pokémon sont
 piégés dans cette cage là-bas !<0xFB>Allons voir ça.",
 0x0075C975,"There are many Pokémon locked
 away in the cage""","Hay Pokémon encerrados en la jaula""",47,3,50,pokemon,description,"Il y a plein de Pokémon enfermés
@@ -18564,7 +18549,7 @@ face à toi.<0xFA>D'ici là, ne te fatigue<0xFB>pas
 trop.",
 0x00776071,<0x0F> <0xB6><0x60><0x77><0x08><0x09><0x02><0x02>I wish we had our own Pokémon.<0xFB>I'm always so bored at home.,<0x0F> <0xB6><0x60><0x77><0x08><0x09><0x02><0x02>I wish we had our own Pokémon.<0xFB>I'm always so bored at home.,68,1,69,pokemon,dialogue,,
 0x007760B6,Wahh!<0xFB>That Pokémon hurt me!,Wahh!<0xFB>That Pokémon hurt me!,27,1,28,pokemon,dialogue,Wahh !<0xFB>Ce Pokémon m'a fait mal !,
-0x007760E3,Sandslash: <0xFC><0x01><0x06>Slash!,Sandslash: <0xFC><0x01><0x06>Slash!,20,2,22,pokemon,dialogue,Sandslash: {COLOR}ÉSlash!,
+0x007760E3,Sandslash: <0xFC><0x01><0x06>Slash!,Sandslash: <0xFC><0x01><0x06>Slash!,20,2,22,pokemon,dialogue,Sablaireau: <0xFC><0x01><0x06>Slash !,
 0x007760F8,"The Pokémon appears to be heading
 towards <0xFC><0x01><0x06>Icicle Cave.",El Pokémon parece dirigirse a <0xFC><0x01><0x06>Cueva Icicle<0xFC><0x01><0x02>.,57,2,59,pokemon,description,"Le Pokémon semble aller vers la
 {COLOR}ÉGrotte Stalactite.",
@@ -25980,7 +25965,9 @@ tell us what the end game is.",98,1,99,pokemon,dialogue,"{COLOR}ËOn devrait se 
 plan final.",
 0x007F2419,<0xFC><0x01><0x04>Floette! Use Petal Blizzard!,<0xFC><0x01><0x04>Floette! Use Petal Blizzard!,31,2,33,pokemon,dialogue,{COLOR}ÇFloette ! Blizzard Floral !,
 0x007F2439,Floette: <0xFC><0x01><0x05>Flo!,Floette: <0xFC><0x01><0x05>Flo!,16,2,18,pokemon,dialogue,Floette : {COLOR}ÈFlo !,
+0x007F246C,<0xFC><0x01><0x08>Floette! Use Petal Blizzard!,<0xFC><0x01><0x08>Floette! Use Petal Blizzard!,31,2,33,pokemon,dialogue,<0xFC><0x01><0x08>Floette ! Blizzard Floral !,
 0x007F248C,Floette: <0xFC><0x01><0x08>Flo!,Floette: <0xFC><0x01><0x08>Flo!,16,2,18,pokemon,dialogue,Floette : {COLOR}ËFlo !,
+0x007F24BF,<0xFC><0x01><0x08>Floette! Use Petal Blizzard!,<0xFC><0x01><0x08>Floette! Use Petal Blizzard!,31,2,33,pokemon,dialogue,<0xFC><0x01><0x08>Floette ! Blizzard Floral !,
 0x007F24DF,Floette: <0xFC><0x01><0x04>Flo!,Floette: <0xFC><0x01><0x04>Flo!,16,3,19,pokemon,dialogue,Floette : {COLOR}ÇFlo !,
 0x007F24F3,"We're responsible for maintaining
 the power grid.<0xFB>If it were to go offline, all of
@@ -26707,7 +26694,7 @@ depuis {COLOR}ÉVille Portuaire{COLOR}Ë !",
 I'll arrange the tickets.<0xFB>You two should meet me there.","Looker: <0xFC><0x01><0x08>Agreed.
 I'll arrange the tickets.<0xFB>You two should meet me there.",74,2,76,pokemon,dialogue,"Looker : <0xFC><0x01><0x08>D'accord.
 Je m'occupe des billets.<0xFB>Retrouvez-moi là-bas tous les deux.",
-0x007F819F,"Jax: <0xFC><0x01><0x08>You got that, <0xFD><0x01>?<0xFB>We're going to <0xFC><0x01><0x06>Seaport City!","Jax: <0xFC><0x01><0x08>You got that, <0xFD><0x01>?<0xFB>We're going to <0xFC><0x01><0x06>Seaport City!",57,2,59,pokemon,dialogue,"Jax : {COLOR}ËTu as compris, {PLAYER} ?<0xFB>On va à la {COLOR}ÉVille Portuaire{COLOR}Ë !",
+0x007F819F,"Jax: <0xFC><0x01><0x08>You got that, <0xFD><0x01>?<0xFB>We're going to <0xFC><0x01><0x06>Seaport City!","Jax: <0xFC><0x01><0x08>You got that, <0xFD><0x01>?<0xFB>We're going to <0xFC><0x01><0x06>Seaport City!",57,2,59,pokemon,dialogue,"Jax : <0xFC><0x01><0x08>Tu as compris, {PLAYER} ?<0xFB>On va à la <0xFC><0x01><0x06>Ville Portuaire<0xFC><0x01><0x08> !",
 0x007F81D9,"Looker: <0xFC><0x01><0x08>Excuse me.
 I must be going now as well.","Looker: <0xFC><0x01><0x08>Excuse me.
 I must be going now as well.",50,2,52,pokemon,dialogue,"Beladonis : {COLOR}ËExcusez-moi.
@@ -29022,7 +29009,7 @@ bird Pokémon, <0xFC><0x01><0x06>Moltres<0xFC><0x01><0x08>.",162,2,164,pokemon,d
 0x008CD9D8,Jax: <0xFC><0x01><0x08>Should I try and stop them?,Jax: <0xFC><0x01><0x08>Should I try and stop them?,35,2,37,pokemon,dialogue,Jax : {COLOR}ËJe tente de les arrêter ?,
 0x008CD9FC,"Arthur: <0xFC><0x01><0x08>Not yet, Jax.<0xFB>I need you to first fly to Frozen
 Heights and bring Prof. Log here.","Arthur: <0xFC><0x01><0x08>Not yet, Jax.<0xFB>I need you to first fly to Frozen
-Heights and bring Prof. Log here.",92,2,94,pokemon,dialogue,"{COLOR}ËPas encore, Jax.<0xFB>Va à {COLOR}ÉHauteurs Gelées{COLOR}Ë
+Heights and bring Prof. Log here.",92,2,94,pokemon,dialogue,"<0xFC><0x01><0x08>Pas encore, Jax.<0xFB>Va à <0xFC><0x01><0x06>Hauteurs Gelées<0xFC><0x01><0x08>
 et ramène le Prof. Log ici.",
 0x008CDA59,"Jax: <0xFC><0x01><0x08>Right away, Grampa!","Jax: <0xFC><0x01><0x08>Right away, Grampa!",27,2,29,pokemon,dialogue,"Jax : {COLOR}ËTout de suite, Papy !",
 0x008CDA75,"Log: <0xFC><0x01><0x08>Hmm""<0xFB>So it is as bad as I feared""<0xFB>What do you think should be done
@@ -32315,7 +32302,7 @@ reduced <0xFD><0x14>'s power!",,27,2,29,pokemon,dialogue,"Le <0xFD><0x13> de <0x
 réduit la puissance de <0xFD><0x14> !",
 0x0096CC3C,"<0xFD><0x13> Mega Evolved
 into Mega <0xFD><0x34>!",,29,2,31,pokemon,dialogue,"{B_SCR_ACTIVE_NAME_WITH_PREFIX} Mega-Évolue
-en Mega {STRING}{LV} !",
+en Mega {STRING}<0x34> !",
 0x0096CC5A,"<0xFD><0x39>'s fervent wish
 has reached <0xFD> !","<0xFD><0x39>'s fervent wish
 has reached <0xFD> !",33,2,35,pokemon,dialogue,"Le voeu de {STRING}
@@ -38396,7 +38383,7 @@ maintenant ?",
 0x00A4CAB0,unknown location,Desconocida,16,2,18,pokemon,other,lieu inconnu,
 0x00A4CAC1,Ex Shadow Admin,Ex Admin Sombra,15,2,17,pokemon,location,Ex-Admin Ombre,
 0x00A4CAEF,×,×,1,2,3,pokemon,other,×,
-0x00A4CAF1,<0xFC><0x01><0x07><0xFC><0x03><0x06>+,<0xFC><0x01><0x07><0xFC><0x03><0x06>+,7,3,10,pokemon,description,{FC01}{FC03},
+0x00A4CAF1,<0xFC><0x01><0x07><0xFC><0x03><0x06>+,<0xFC><0x01><0x07><0xFC><0x03><0x06>+,7,3,10,pokemon,description,<0xFC><0x01><0x07><0xFC><0x03><0x06>+,
 0x00A4CAF9,Power: ,Poder: ,7,2,9,pokemon,location,Puissance :,
 0x00A4CB01,OHKO,OHKO,4,4,8,pokemon,other,K.O. direct,
 0x00A4CB0C,No Miss,No Miss,7,2,9,pokemon,location,Sans échec,
@@ -54741,10 +54728,10 @@ Classic Leaders Gauntlet first.<0xFB>Just open up the <0xFC><0x01><0x06>Options 
 lower your <0xFC><0x01><0x06>Battle Difficulty<0xFC><0x01><0x08>.","Sorry, Champ, but the <0xFC><0x01><0x06>Insane<0xFC><0x01><0x08> Classic
 Leaders Gauntlet is still locked.<0xFB>You'll need to clear the <0xFC><0x01><0x06>Expert<0xFC><0x01><0x08>
 Classic Leaders Gauntlet first.<0xFB>Just open up the <0xFC><0x01><0x06>Options Menu<0xFC><0x01><0x08> and
-lower your <0xFC><0x01><0x06>Battle Difficulty<0xFC><0x01><0x08>.",222,3,225,pokemon,dialogue,"Désolé, Champion, l'{COLOR}ÉInsane{COLOR}Ë du
-Défi Classique est encore bloqué.<0xFB>Tu dois d'abord terminer le {COLOR}ÉExpert{COLOR}Ë
-{COLOR}ÉDéfi Classique des Champions{COLOR}Ë.<0xFB>Ouvre le {COLOR}ÉMenu Options{COLOR}Ë et
-baisse ta {COLOR}ÉDifficulté de combat{COLOR}Ë.",
+lower your <0xFC><0x01><0x06>Battle Difficulty<0xFC><0x01><0x08>.",222,3,225,pokemon,dialogue,"Désolé, Champion, l'<0xFC><0x01><0x06>Insane<0xFC><0x01><0x08> du
+Défi Classique est encore bloqué.<0xFB>Tu dois d'abord terminer le <0xFC><0x01><0x06>Expert<0xFC><0x01><0x08>
+<0xFC><0x01><0x06>Défi Classique des Champions<0xFC><0x01><0x08>.<0xFB>Ouvre le <0xFC><0x01><0x06>Menu Options<0xFC><0x01><0x08> et
+baisse ta <0xFC><0x01><0x06>Difficulté de combat<0xFC><0x01><0x08>.",
 0x01EDFF51,"No prob, Champ.<0xFB>If you ever want to take part,
 just let me know.",<0x52>Vuelve cuando quieras!,64,2,66,pokemon,dialogue,"Pas de souci, Champion.<0xFB>Si tu veux participer un jour,
 viens me le dire.",
@@ -54791,7 +54778,7 @@ de tus oponentes antes de cada<0xFA>batalla y podrás elegir tus<0xFA>Líderes.<
 tomar un descanso, ganarás una<0xFA>generosa cantidad de PB.<0xFB>Este modo no se verá afectado por
 la <0xFC><0x01><0x06>Dificultad de Batalla<0xFC><0x01><0x08> que<0xFA>hayas elegido.",570,3,573,pokemon,dialogue,"Dans le {COLOR}ÉDéfi Frontière{COLOR}Ë,
 tu affronteras chaque Champion<0xFA>d'Arène, l'un après l'autre.<0xFB>Chaque combat se joue en 6v6
-comme à la Frontière de Combat.<0xFB>Tes Pokémon seront mis au {LV} 100
+comme à la Frontière de Combat.<0xFB>Tes Pokémon seront mis au <0x34> 100
 pour les combats, et<0xFA>ton équipe ne pourra pas<0xFA>être modifiée entre combats.<0xFB>Cependant, tu verras un aperçu des
 équipes adverses avant chaque<0xFA>combat, et tu pourras<0xFA>choisir tes Pokémon de tête.<0xFB>Si tu termines le défi sans pause,
 tu gagneras pas mal de<0xFA>BP.<0xFB>Ce défi n'est pas affecté par ta
@@ -56539,9 +56526,9 @@ Reflect and Light Screen combined.<0xFB>The only catch is that it can only
 be used in <0xFC><0x01><0x06>Hail<0xFC><0x01><0x08> weather.","Esa MT contiene <0xFC><0x01><0x06>Velo Aurora<0xFC><0x01><0x08>.<0xFB>Tiene un efecto similar al de
 Reflejo y Pantalla Luz combinados.<0xFB>El único incoveniente es que sólo
 se puede utilizar si hay <0xFC><0x01><0x06>Granizo<0xFC><0x01><0x08>.",180,2,182,pokemon,dialogue,"La CT que je t'ai donnée contient
-{COLOR}ÉVoile Aurore{COLOR}Ë.<0xFB>Son effet combine
-{COLOR}ÉProtection{COLOR}Ë et {COLOR}ÉMur Lumière{COLOR}Ë.<0xFB>Mais elle ne peut être utilisée
-que sous la {COLOR}ÉGrêle{COLOR}Ë.",
+<0xFC><0x01><0x06>Voile Aurore<0xFC><0x01><0x08>.<0xFB>Son effet combine
+<0xFC><0x01><0x06>Protection<0xFC><0x01><0x08> et <0xFC><0x01><0x06>Mur Lumière<0xFC><0x01><0x08>.<0xFB>Mais elle ne peut être utilisée
+que sous la <0xFC><0x01><0x06>Grêle<0xFC><0x01><0x08>.",
 0x01EE899F, weather.,,9,2,11,pokemon,other,,
 0x01EE89A9,"Your loss, pal.",<0x52>Te lo pierdes!,15,3,18,pokemon,dialogue,"Tant pis, l'ami.",
 0x01EE89B9,"Some guy in one of the residences
@@ -57660,8 +57647,8 @@ muchas Poké Ball para atrapar<0xFA>Pokémon.<0xFB>Ahora que el árbol flaco que
 bloquea ha sido cortado, se usa<0xFA>con muchas más frecuencia.",354,3,357,pokemon,dialogue,"Cette grotte là-bas mène
 hors de la ville vers la Route 6.<0xFB>De là, c'est tout
 droit par la Route 7, le Mont Givre<0xFA>et
-la Route 8 jusqu'à {COLOR}ÉVille Blizzard{COLOR}Ë.<0xFB>Si tu montes à pied
-jusque là-haut, prends beaucoup de<0xFA>Poké Balls.<0xFB>Maintenant que l'{COLOR}ÉArbre Maigre{COLOR}Ë
+la Route 8 jusqu'à <0xFC><0x01><0x06>Ville Blizzard<0xFC><0x01><0x08>.<0xFB>Si tu montes à pied
+jusque là-haut, prends beaucoup de<0xFA>Poké Balls.<0xFB>Maintenant que l'<0xFC><0x01><0x06>Arbre Maigre<0xFC><0x01><0x08>
 bloquant le passage a été coupé,<0xFA>elle est beaucoup plus utilisée.",
 0x01EED7DD,more frequently used.,,21,3,24,pokemon,other,,
 0x01EED7F3,"I heard there's someone in
@@ -63391,8 +63378,8 @@ stronger as you do.",,52,2,54,pokemon,dialogue,,
 fiery bird Pokémon, Moltres.<0xFB>Apparently it lives somewhere in
 <0xFC><0x01><0x06>Cinder Volcano<0xFC><0x01><0x04>, lighting up the sky<0xFA>with its flames at night.","Se dice que Moltres aparentemente
 vive en algún lugar del <0xFC><0x01><0x06>Volcán<0xFA>Ceniza<0xFC><0x01><0x04>, iluminando el cielo con sus<0xFA>llamas por la noche.",161,3,164,pokemon,description,"Cette statue représente le Pokémon
-oiseau de feu légendaire, {COLOR}ÉSulfura{COLOR}Ç.<0xFB>Il vit quelque part dans le
-{COLOR}ÉVolcan Cendreux{COLOR}Ç, illuminant le ciel<0xFA>avec ses flammes la nuit.",
+oiseau de feu légendaire, <0xFC><0x01><0x06>Sulfura<0xFC><0x01><0x04>.<0xFB>Il vit quelque part dans le
+<0xFC><0x01><0x06>Volcan Cendreux<0xFC><0x01><0x04>, illuminant le ciel<0xFA>avec ses flammes la nuit.",
 0x01F00A74,with its flames at night.,,25,3,28,pokemon,other,,
 0x01F00A8E,"You see that yellow Poké Ball
 down there?<0xFB>It's a <0xFC><0x01><0x06>TM<0xFC><0x01><0x04>, a special kind of move
@@ -64555,7 +64542,7 @@ evolución es presionando <0xF8><0x01> cuando<0xFA>mi Pokémon está a punto de<
 el asunto de la evolución.<0xFB><0x51>Y sabes qué?<0xFB><0x52>De hecho compartiré una contigo si
 puedes mostrarme un Pokémon que<0xFA>nunca haya evolucionado y no pueda<0xFA>evolucionar!<0xFB><0x51>Tienes a ese Pokémon contigo, eh?",478,2,480,pokemon,dialogue,"Ici, tout le monde dit,
 "" évolution par-ci "" et "" évolution<0xFA>par-là "".<0xFB>Mais je trouve l'évolution stupide !<0xFB>Ma méthode préférée pour empêcher
-l'évolution n'est pas d'appuyer sur<0xFA>le {COLOR}Ébouton B{COLOR}Ë quand mon<0xFA>Pokémon va évoluer, mais de lui<0xFA>faire tenir une {COLOR}ÉPierre Stase{COLOR}Ë.<0xFB>Comme ça, j'évite l'évolution
+l'évolution n'est pas d'appuyer sur<0xFA>le <0xFC><0x01><0x06>bouton B<0xFC><0x01><0x08> quand mon<0xFA>Pokémon va évoluer, mais de lui<0xFA>faire tenir une <0xFC><0x01><0x06>Pierre Stase<0xFC><0x01><0x08>.<0xFB>Comme ça, j'évite l'évolution
 complètement !<0xFB>Et tu sais quoi ?<0xFB>Je t'en donnerai une si tu me
 montres un Pokémon qui n'a jamais<0xFA>évolué et ne peut pas évoluer !<0xFB>Tu as un Pokémon comme ça dans
 ton équipe ?",
@@ -64663,35 +64650,35 @@ on the number you choose!",,58,3,61,pokemon,dialogue,,
 0x01F06137,Pick a number from 1 to <0xFD><0x03>.,Elige la opción 1 o <0xFD><0x03>.,27,3,30,pokemon,description,Choisis un nombre de 1 à <0xFD><0x03>.,
 0x01F06153,I said one of <0xFC><0x01><0x06><0xFD><0x03><0xFC><0x01><0x04> ways!<0xFB>That number is too large.,I said one of <0xFC><0x01><0x06><0xFD><0x03><0xFC><0x01><0x04> ways!<0xFB>That number is too large.,54,3,57,pokemon,dialogue,J'ai dit {COLOR}É{STR_VAR_2}{COLOR}Ç façons !<0xFB>Ce nombre est trop grand.,
 0x01F0618A,"<0xFD><0x02> will evolve if""<0xFB><0xFD><0x0C>","<0xFD><0x02> evoluciona si""<0xFB><0xFD><0x0C>",21,2,23,pokemon,description,<0xFD><0x02> évoluera si...<0xFB><0xFD><0x0C>,
-0x01F061A0,It levels up to <0x34> <0xFD><0x03>!,<0x52>Sube al Nv <0xFD><0x03>!,21,2,23,pokemon,dialogue,Il monte au niv. {LV} {STR_VAR_2} !,
+0x01F061A0,It levels up to <0x34> <0xFD><0x03>!,<0x52>Sube al Nv <0xFD><0x03>!,21,2,23,pokemon,dialogue,Il monte au niv. <0x34> {STR_VAR_2} !,
 0x01F061B6,"It levels up to <0x34> <0xFD><0x03> when its
 Attack is greater than its Defense!","It levels up to <0x34> <0xFD><0x03> when its
-Attack is greater than its Defense!",65,2,67,pokemon,dialogue,"Il monte au niv. {LV} {STR_VAR_2} quand
+Attack is greater than its Defense!",65,2,67,pokemon,dialogue,"Il monte au niv. <0x34> {STR_VAR_2} quand
 son Attaque dépasse sa Défense !",
 0x01F061F8,"It levels up to <0x34> <0xFD><0x03> when its
 Attack equals its Defense!","It levels up to <0x34> <0xFD><0x03> when its
-Attack equals its Defense!",56,2,58,pokemon,dialogue,"Il monte au niv. {LV} {STR_VAR_2} quand
+Attack equals its Defense!",56,2,58,pokemon,dialogue,"Il monte au niv. <0x34> {STR_VAR_2} quand
 son Attaque égale sa Défense !",
 0x01F06231,"It levels up to <0x34> <0xFD><0x03> when its
 Attack is less than its Defense!","It levels up to <0x34> <0xFD><0x03> when its
-Attack is less than its Defense!",62,2,64,pokemon,dialogue,"Il monte au niv. {LV} {STR_VAR_2} quand
+Attack is less than its Defense!",62,2,64,pokemon,dialogue,"Il monte au niv. <0x34> {STR_VAR_2} quand
 l'Attaque < la Défense !",
 0x01F06270,"It levels up to <0x34> <0xFD><0x03> and there's a
 spare Poké Ball in the Cube!","It levels up to <0x34> <0xFD><0x03> and there's a
-spare Poké Ball in the Cube!",63,2,65,pokemon,dialogue,"Il monte au niv. {LV} {STR_VAR_2} et il y a
+spare Poké Ball in the Cube!",63,2,65,pokemon,dialogue,"Il monte au niv. <0x34> {STR_VAR_2} et il y a
 une Poké Ball libre dans le Cube !",
 0x01F062B0,"It levels up to <0x34> <0xFD><0x03> and it's
 male!","It levels up to <0x34> <0xFD><0x03> and it's
-male!",35,2,37,pokemon,dialogue,"Il monte au niv. {LV} {STR_VAR_2} et il est
+male!",35,2,37,pokemon,dialogue,"Il monte au niv. <0x34> {STR_VAR_2} et il est
 mâle !",
 0x01F062D4,"It levels up to <0x34> <0xFD><0x03> and it's
 female!","It levels up to <0x34> <0xFD><0x03> and it's
-female!",37,2,39,pokemon,dialogue,"Il monte au niv. {LV} {STR_VAR_2} et il est
+female!",37,2,39,pokemon,dialogue,"Il monte au niv. <0x34> {STR_VAR_2} et il est
 femelle !",
-0x01F062FA,It levels up to <0x34> <0xFD><0x03> at night!,It levels up to <0x34> <0xFD><0x03> at night!,30,2,32,pokemon,dialogue,Il monte au niv. {LV} {STR_VAR_2} la nuit !,
+0x01F062FA,It levels up to <0x34> <0xFD><0x03> at night!,It levels up to <0x34> <0xFD><0x03> at night!,30,2,32,pokemon,dialogue,Il monte au niv. <0x34> {STR_VAR_2} la nuit !,
 0x01F06319,"It levels up to <0x34> <0xFD><0x03> during
 the day!","It levels up to <0x34> <0xFD><0x03> during
-the day!",36,2,38,pokemon,dialogue,"Il monte au niv. {LV} {STR_VAR_2} le
+the day!",36,2,38,pokemon,dialogue,"Il monte au niv. <0x34> {STR_VAR_2} le
 jour !",
 0x01F0633E,"It levels up when it has high
 friendship!<0xFB>You'll be able to tell it's ready
@@ -64733,11 +64720,11 @@ maxed out!",42,2,44,pokemon,dialogue,"Il évolue quand sa Beauté est
 au maximum !",
 0x01F065CB,"It levels up to <0x34> <0xFD><0x03> when it's
 raining or foggy outside of battle!","It levels up to <0x34> <0xFD><0x03> when it's
-raining or foggy outside of battle!",66,2,68,pokemon,dialogue,"Il monte au niv. {LV} {STR_VAR_2} s'il
+raining or foggy outside of battle!",66,2,68,pokemon,dialogue,"Il monte au niv. <0x34> {STR_VAR_2} s'il
 pleut ou s'il y a du brouillard !",
 0x01F0660E,"It levels up to <0x34> <0xFD><0x03> when
 there is a <0xFD><0x04>-type in the party!","It levels up to <0x34> <0xFD><0x03> when
-there is a <0xFD><0x04>-type in the party!",58,2,60,pokemon,dialogue,"Il monte au niv. {LV} {STR_VAR_2} quand
+there is a <0xFD><0x04>-type in the party!",58,2,60,pokemon,dialogue,"Il monte au niv. <0x34> {STR_VAR_2} quand
 un type {STR_VAR_3} est dans l'équipe !",
 0x01F06649,It levels up at <0xFD><0x03>!,It levels up at <0xFD><0x03>!,19,2,21,pokemon,dialogue,Il évolue au niv. <0xFD><0x03> !,
 0x01F0665D,"It levels up at night while holding
@@ -64758,7 +64745,7 @@ in the party!",39,2,41,pokemon,dialogue,"Il évolue quand un <0xFD><0x03> est
 dans l'équipe !",
 0x01F06702,"It levels up to <0x34> <0xFD><0x03> between
 <0xFD><0x04> and <0xFD><0x07>!","It levels up to <0x34> <0xFD><0x03> between
-<0xFD><0x04> and <0xFD><0x07>!",39,3,42,pokemon,dialogue,"Il monte au niv. {LV} {STR_VAR_2} entre
+<0xFD><0x04> and <0xFD><0x07>!",39,3,42,pokemon,dialogue,"Il monte au niv. <0x34> {STR_VAR_2} entre
 {STR_VAR_3} et {VERSION} !",
 0x01F0672A,"It lands 3 Critical Hits in a single
 battle!","It lands 3 Critical Hits in a single
@@ -64774,7 +64761,7 @@ standing on <0xFD><0x04>!",42,2,44,pokemon,dialogue,"On utilise le <0xFD><0x03> 
 se tenant sur <0xFD><0x04> !",
 0x01F0679C,"It levels up to <0x34> <0xFD><0x03>
 while holding the <0xFD><0x04>!","<0x52>Si sube al Nv <0xFD><0x03> o equipado
-con una <0xFD><0x04>!",42,3,45,pokemon,dialogue,"Il monte au niv. {LV} {STR_VAR_2}
+con una <0xFD><0x04>!",42,3,45,pokemon,dialogue,"Il monte au niv. <0x34> {STR_VAR_2}
 en tenant le {STR_VAR_3} !",
 0x01F067C7,"The <0xFD><0x03> is used on it
 while holding the <0xFD><0x04>!","The <0xFD><0x03> is used on it
@@ -65480,7 +65467,7 @@ increased to <0x34> <0xFD><0x03>!<0xFB>Pokémon will now gain <0xFC><0x01><0x06>
 amount of Exp. Points when held.","<0xFC><0x01><0x02><0x52>El Huevo Suerte ha aumentado al
 nivel <0xFD><0x03>!<0xFB>Los Pokémon ahora ganarán <0xFC><0x01><0x06>X2<0xFC><0x01><0x02>
 Puntos de Exp, cuando se sostenga.",119,3,122,pokemon,dialogue,"{COLOR}ÁLe niveau des OEufs Chance est passé
-à {LV} {STR_VAR_2} !<0xFB>Les Pokémon gagneront maintenant {COLOR}É{EVIL_LEGENDARY}{COLOR}Á×
+à <0x34> {STR_VAR_2} !<0xFB>Les Pokémon gagneront maintenant {COLOR}É{EVIL_LEGENDARY}{COLOR}Á×
 les Points Exp. en le tenant.",
 0x01F09729," the
 amount of Exp. Points when held.",,37,3,40,pokemon,description,,
@@ -65505,7 +65492,7 @@ their luck further to <0xFC><0x01><0x06><0x34> <0xFD><0x03><0xFC><0x01><0x04>.",
 Suerte<0xFC><0x01><0x04>?<0xFB>Necesito <0xFC><0x01><0x06><0xFD><0x04> <0xFD><0x02><0xFC><0x01><0x04> para
 aumentar su suerte aún más al<0xFA><0xFC><0x01><0x06>nivel <0xFD><0x03><0xFC><0x01><0x04>.",128,3,131,pokemon,dialogue,"Bonjour, tu es là pour améliorer
 tes {COLOR}ÉOEufs Chance{COLOR}Ç ?<0xFB>J'ai besoin de {COLOR}É{STR_VAR_3} {STR_VAR_1}{COLOR}Ç pour
-porter leur chance à {COLOR}É{LV} {STR_VAR_2}{COLOR}Ç.",
+porter leur chance à {COLOR}É<0x34> {STR_VAR_2}{COLOR}Ç.",
 0x01F098B9,"No? Then could you spare any change
 before you leave?","<0x51>No? <0x51>Entonces no tienes algo de
 comida, eh?",53,2,55,pokemon,dialogue,"Non ? Alors tu aurais une pièce
@@ -65549,8 +65536,8 @@ fauteurs de Route 9 !",
 items I find on Wild Pokémon.<0xFB>My Venonat's <0xFC><0x01><0x06>Compound Eyes<0xFC><0x01><0x08> helps
 me lure in the ones with items,<0xFA>then I switch out and use <0xFC><0x01><0x06>Knock Off<0xFC><0x01><0x08><0xFA>to nab 'em!","Gano mucho dinero vendiendo objetos
 que encuentro en Pokémon salvajes.",187,3,190,pokemon,dialogue,"Je gagne beaucoup d'argent
-avec objets de Pokémon sauvages.<0xFB>L'{COLOR}ÉOEil Composé{COLOR}Ë de mon {COLOR}ÉMimitoss{COLOR}Ë m'aide
-à attirer ceux avec des objets,<0xFA>puis je change et utilise {COLOR}ÉSabotage{COLOR}Ë<0xFA>pour les prendre !",
+avec objets de Pokémon sauvages.<0xFB>L'<0xFC><0x01><0x06>OEil Composé<0xFC><0x01><0x08> de mon <0xFC><0x01><0x06>Mimitoss<0xFC><0x01><0x08> m'aide
+à attirer ceux avec des objets,<0xFA>puis je change et utilise <0xFC><0x01><0x06>Sabotage<0xFC><0x01><0x08><0xFA>pour les prendre !",
 0x01F09BFC,"If you have the <0xFC><0x01><0x06>Fall Badge<0xFC><0x01><0x04>, you can
 buy <0xFC><0x01><0x06>Ultra Balls<0xFC><0x01><0x04>!<0xFB>They're way better at catching
 Pokémon than Great Balls.","<0x52>Si tienes la <0xFC><0x01><0x06>Medalla Otoño<0xFC><0x01><0x04>, puedes
@@ -68347,7 +68334,7 @@ from Mirskle!",,38,2,40,pokemon,dialogue,,
 traded Pokémon up to <0x34> 26 keep<0xFA>listenin' to your fine, fine<0xFA>commands""<0xFB>Oh, and take this cool, cool TM,
 toooo""","Es la <0xFC><0x01><0x06>Medalla Hoja<0xFC><0x01><0x08>.<0xFB>Esa pequeña cosa útil hace que
 todos los Pokémon intercambiados<0xFA>con Nv. 26 obedezcan tus órdenes""<0xFB>Ah, y esto también, una MT.",171,3,174,pokemon,dialogue,"Voilà le {COLOR}ÉBadge Feuille{COLOR}Ë.<0xFB>Ce p'tit truc utile fait que les
-Pokémon échangés jusqu'au Nv. {LV} 26<0xFA>écoutent tes superbes<0xFA>ordres...<0xFB>Oh, et prends aussi cette super CT,
+Pokémon échangés jusqu'au Nv. <0x34> 26<0xFA>écoutent tes superbes<0xFA>ordres...<0xFB>Oh, et prends aussi cette super CT,
 aussiii...",
 0x01F16082,"That's a Technical Machine.<0xFB>That teaches your Pokémon a
 move over and over, to as many<0xFA>fine, fine Pokémon as you want.<0xFB>So don't be shy about spreadin'
@@ -68470,7 +68457,7 @@ believe this TM will be useful<0xFA>to you.","La Medalla Visión permite que los
 Pokémon con Nv. 32 por intercambio<0xFA>te obedezcan sin dudar.<0xFB>La MO <0xFC><0x01><0x06>Corte<0xFC><0x01><0x08> ahora también se puede
 usar fuera de batalla para eliminar<0xFA>pequeños árboles que bloqueen tu<0xFA>camino.<0xFB>Y como muestra de buena voluntad,
 te daré esta MT.",276,1,277,pokemon,dialogue,"Le Badge Vision fait obéir les
-Pokémon échangés jusqu'au Nv. {LV} 32<0xFA>que tu as reçus<0xFA>sans discuter.<0xFB>La CS {COLOR}ÉCoupe{COLOR}Ë peut aussi
+Pokémon échangés jusqu'au Nv. <0x34> 32<0xFA>que tu as reçus<0xFA>sans discuter.<0xFB>La CS {COLOR}ÉCoupe{COLOR}Ë peut aussi
 être utilisée hors combat pour<0xFA>retirer les petits arbres du chemin.<0xFB>Et en gage de bonne volonté, je
 pense que cette CT te sera utile<0xFA>à toi.",
 0x01F1698A,to you.,,7,1,8,pokemon,dialogue,,
@@ -68593,7 +68580,7 @@ rocas con <0xFC><0x01><0x06>Golpe Roca<0xFC><0x01><0x04> fuera<0xFA>de batalla.<
 el Nv. 36 obedecerán tus órdenes.<0xFB>Ah, y quizás esta MT sea de alguna
 utilidad.",191,1,192,pokemon,dialogue,"Avec ce Badge, tu peux briser des
 rochers avec {COLOR}ÉÉclate-Roc{COLOR}Ç<0xFA>hors combat.<0xFB>En plus, tous les Pokémon jusqu'au
-Nv. {LV} 36 obéiront à tes ordres.<0xFB>Oh, et cette CT pourrait aussi
+Nv. <0x34> 36 obéiront à tes ordres.<0xFB>Oh, et cette CT pourrait aussi
 être utile.",
 0x01F172B0,"Oh, and perhaps this TM will be
 of some use.",,44,1,45,pokemon,description,,
@@ -68679,7 +68666,7 @@ Pokémon hasta el Nv. 45 te<0xFA>obedecerá.<0xFB>También podrás mover rocas u
 <0xFC><0x01><0x06>Fuerza<0xFC><0x01><0x08>.<0xFB>Aunque no sé por qué ningún Pokémon
 fuerte no puede hacer esto""<0xFB>Pero esa es sólo una de las extrañas
 formas en que funciona el mundo.<0xFB>De todos modos, te daré esta MT.",302,3,305,pokemon,dialogue,"Avec le Badge Chute, tout Pokémon
-jusqu'au Nv. {LV} 45 t'obéira.<0xFB>Il permet aussi de déplacer de gros
+jusqu'au Nv. <0x34> 45 t'obéira.<0xFB>Il permet aussi de déplacer de gros
 rochers avec {COLOR}ÉForce{COLOR}Ë.<0xFB>Franchement, je sais pas pourquoi
 les Pokémon costauds ne peuvent pas<0xFA>le faire déjà...<0xFB>Mais bon, c'est un truc
 bizarre.<0xFB>Bref, prends cette CT avec
@@ -68761,7 +68748,7 @@ Take this TM, too!","La Medalla Batería te permite usar
 te obedecerá siempre que no supere<0xFA>el Nv. 52!<0xFB><0x52>Pero todavía no he terminado!
 <0x52>Toma esta MT también!",204,2,206,pokemon,dialogue,"Le Badge Zap permet {COLOR}ÉSurf{COLOR}Ë
 sur l'eau et la lave !<0xFB>Et en plus, tout Pokémon
-t'obéira tant qu'il n'est pas<0xFA>au-dessus du Nv. {LV} 52 !<0xFB>C'est électrisant, non ?<0xFB>Mais attends, c'est pas fini !
+t'obéira tant qu'il n'est pas<0xFA>au-dessus du Nv. <0x34> 52 !<0xFB>C'est électrisant, non ?<0xFB>Mais attends, c'est pas fini !
 Prends aussi cette CT !",
 0x01F17F63,"t done yet!
 Take this TM, too!",,30,2,32,pokemon,dialogue,,
@@ -68853,7 +68840,7 @@ this.<0xFB>Call it a goodwill gift from
 Big Mo.","<0x52>Es la Medalla Anillo!<0xFB>Ahora todos los Pokémon de Nv. 57
 sabrán quién manda.<0xFB><0x52>Y también podrás escalar esos
 acantilados rocosos con el<0xFA>movimiento <0xFC><0x01><0x06>Treparrocas<0xFC><0x01><0x08>!<0xFB><0x52>Es muy útil la verdad!<0xFB>Oh, sí"" también puedes quedarte con
-esto.<0xFB>Tómalo como un regalo del Gran Mo.",274,2,276,pokemon,dialogue,"Voilà le Badge Combat !<0xFB>Pokémon échangés, Nv {LV} 57 max
+esto.<0xFB>Tómalo como un regalo del Gran Mo.",274,2,276,pokemon,dialogue,"Voilà le Badge Combat !<0xFB>Pokémon échangés, Nv <0x34> 57 max
 sauront qui est le vrai boss !<0xFB>Et tu peux grimper ces falaises
 avec la capacité<0xFA>{COLOR}ÉEscalade{COLOR}Ë !<0xFB>Dis que c'est pas utile !<0xFB>Oh ouais... je suppose que tu peux
 prendre ça.<0xFB>Dis que c'est un cadeau de
@@ -69843,9 +69830,9 @@ hay mucho viento!<0xFB><0x52>Este <0xFC><0x01><0x06>Viento Afín<0xFC><0x01><0x0
 velocidad de todos los Pokémon de<0xFA>tipo Volador, así que no seas<0xFA>arrogante sólo porque tu Pokémon<0xFA>tenga una alta estadística de alta<0xFA>velocidad!<0xFB>Llegar a Alice requiere usar los
 ventiladores y los agujeros en el<0xFA>suelo para moverse entre los<0xFA>niveles del Gimnasio.<0xFB>No es complicado, sólo asegúrate de
 recordar dónde has estado y dónde<0xFA>no has estado antes.<0xFB><0x52>Buena suerte!",664,2,666,pokemon,dialogue,"Contrairement aux idées reçues,
-cette Arène n'est pas de type {COLOR}ÉGlace{COLOR}Ë.<0xFB>C'est une Arène {COLOR}ÉVol{COLOR}Ë !<0xFB>Et le meilleur moyen de contrer les
-types Vol est de leur couper les<0xFA>ailes avec {COLOR}ÉGlace{COLOR}Ë, {COLOR}ÉRoche{COLOR}Ë,<0xFA>ou {COLOR}ÉÉlectrik{COLOR}Ë !<0xFB>Mais attention, car il y a un
-vent arrière dans cette Arène !<0xFB>Ce {COLOR}ÉVent Arrière{COLOR}Ë augmentera la
+cette Arène n'est pas de type <0xFC><0x01><0x06>Glace<0xFC><0x01><0x08>.<0xFB>C'est une Arène <0xFC><0x01><0x06>Vol<0xFC><0x01><0x08> !<0xFB>Et le meilleur moyen de contrer les
+types Vol est de leur couper les<0xFA>ailes avec <0xFC><0x01><0x06>Glace<0xFC><0x01><0x08>, <0xFC><0x01><0x06>Roche<0xFC><0x01><0x08>,<0xFA>ou <0xFC><0x01><0x06>Électrik<0xFC><0x01><0x08> !<0xFB>Mais attention, car il y a un
+vent arrière dans cette Arène !<0xFB>Ce <0xFC><0x01><0x06>Vent Arrière<0xFC><0x01><0x08> augmentera la
 Vitesse de tous les Pokémon Vol,<0xFA>ne sois pas trop sûr de toi<0xFA>même si ton Pokémon a une bonne<0xFA>statistique de Vitesse.<0xFB>Sauf s'il est en partie Vol,
 bien sûr.<0xFB>Pour atteindre Alice, il faut
 utiliser les ventilateurs et les<0xFA>trous au sol pour changer d'étage.<0xFB>Ce n'est pas trop compliqué, mais
@@ -73921,6 +73908,7 @@ Move in and strike!","<0x52><0xFD><0x01>, ataca!",23,3,26,pokemon,dialogue,"<0xF
 Passe à l'attaque !",
 0x01F2DB8D,"!
 Move in and strike!",,21,3,24,pokemon,dialogue,,
+0x01F2DBA3,<0xFD><0x02>! Use <0xFD><0x03>!,<0xFD><0x02>! Use <0xFD><0x03>!,11,2,13,pokemon,dialogue,<0xFD><0x02> ! <0xFD><0x03> !,
 0x01F2DBB6,"Alright, alright, I give up!
 I'll let you through!<0xFB>Please, have mercy on me!
 Don't hurt me anymore! Please!","<0x52>Está bien, está bien, me rindo!
@@ -83692,7 +83680,7 @@ consists of only <0xFC><0x01><0x06>4 Kangaskhan<0xFC><0x01><0x04><0xFA>before we
 formado por <0xFC><0x01><0x06>4 Kangaskhan<0xFC><0x01><0x04> antes<0xFA>de que filmemos la <0xFC><0x01><0x06>Batalla Doble<0xFC><0x01><0x04>.<0xFB>Lo ideal es que tengan un <0xFC><0x01><0x06>Nv 70<0xFC><0x01><0x04> o
 más.",181,1,182,pokemon,dialogue,"Merveilleux !<0xFB>Assure-toi que ton équipe ne
 contient que {COLOR}É4 Kangourex{COLOR}Ç<0xFA>avant qu'on ne puisse tourner le<0xFA>{COLOR}ÉCombat Duo{COLOR}Ç.<0xFB>Ils devraient être niveau
-{COLOR}É{LV} 70{COLOR}Ç ou plus.",
+{COLOR}É<0x34> 70{COLOR}Ç ou plus.",
 0x01F586F4, or higher.,,11,1,12,pokemon,other,,
 0x01F58700,"Wonderful!<0xFB>Lights, camera, action!","Wonderful!<0xFB>Lights, camera, action!",34,1,35,pokemon,dialogue,Merveilleux !<0xFB>Moteur... action !,
 0x01F58723,"Wonderful, wonderful, that's a wrap!","Wonderful, wonderful, that's a wrap!",36,1,37,pokemon,dialogue,"Merveilleux, merveilleux, coupez !",
@@ -84401,8 +84389,8 @@ make training more efficient!<0xFB>Right now it is only a measly <0x34> <0xFD><0
 but I can upgrade it to <0xFC><0x01><0x06><0x34> <0xFD><0x03><0xFC><0x01><0x08> in<0xFA>exchange for <0xFC><0x01><0x06><0xFD><0x03> <0xFD><0x02>s<0xFC><0x01><0x08>!","<0x52>Huah! Puedo <0xFC><0x01><0x06>actualizar<0xFC><0x01><0x08> tu <0xFC><0x01><0x06>Brazal
 Firme<0xFC><0x01><0x08> para hacer el entrenamiento<0xFA>más eficiente.<0xFB>En este momento tienes un Nv. <0xFD><0x04>,
 pero puedo actualizar a <0xFC><0x01><0x06>Nv. 3<0xFC><0x01><0x08> a<0xFA>cambio de <0xFC><0x01><0x06><0xFD><0x03> <0xFD><0x02><0xFC><0x01><0x08>.",197,2,199,pokemon,dialogue,"Houah, Dresseur !<0xFB>Je peux {COLOR}Éaméliorer{COLOR}Ë le {COLOR}ÉBrac. Macho{COLOR}Ë
-pour l'entraînement efficace !<0xFB>Pour l'instant, il est {LV} {STR_VAR_3},
-mais le passer {COLOR}É{LV} {STR_VAR_2}{COLOR}Ë en<0xFA>échange de {COLOR}É{STR_VAR_2} {STR_VAR_1}s{COLOR}Ë !",
+pour l'entraînement efficace !<0xFB>Pour l'instant, il est <0x34> {STR_VAR_3},
+mais le passer {COLOR}É<0x34> {STR_VAR_2}{COLOR}Ë en<0xFA>échange de {COLOR}É{STR_VAR_2} {STR_VAR_1}s{COLOR}Ë !",
 0x01F5B6BE,"Fine, settle for an inferior
 product!","Bien, <0x52>confórmate con eso entonces!",37,3,40,pokemon,dialogue,"Tant pis, contente-toi d'un produit
 inférieur !",
@@ -84417,7 +84405,7 @@ increased to <0x34> <0xFD><0x03>!<0xFB>Pokémon will now gain <0xFC><0x01><0x06>
 amount of Effort Values when held.","<0xFC><0x01><0x02>The Macho Brace level has been
 increased to <0x34> <0xFD><0x03>!<0xFB>Pokémon will now gain <0xFC><0x01><0x06><0xFD><0x03><0xB9><0xFC><0x01><0x02> the
 amount of Effort Values when held.",123,2,125,pokemon,dialogue,"{COLOR}ÁLe niveau du Brac. Macho est passé
-à {LV} {STR_VAR_2} !<0xFB>Les Pokémon gagneront désormais {COLOR}É{STR_VAR_2}×{COLOR}Á
+à <0x34> {STR_VAR_2} !<0xFB>Les Pokémon gagneront désormais {COLOR}É{STR_VAR_2}×{COLOR}Á
 les Points d'Effort gagnés.",
 0x01F5B79F,"Your Macho Brace is as powerful
 as it can get!<0xFB>In its current state, you will
@@ -88614,9 +88602,9 @@ Knot<0xFC><0x01><0x04> can be used during breeding?<0xFB>Betcha didn't!<0xFB>But
 Pokémon that knows Attract, I'll<0xFA>give you one to use!<0xFB>Do you have a Pokémon you wanna
 share with me?","Je, je"" <0x51>sabías que el <0xFC><0x01><0x06>Lazo Destino<0xFC><0x01><0x04>
 se puede usar durante la<0xFA>reproducción?<0xFB><0x52>Apuesto a que no!<0xFB>Pero bueno, si me muestras un
-Pokémon <0xFC><0x01><0x06>hembra<0xFC><0x01><0x04> que sepa Atracción,<0xFA><0x52>te daré uno para que lo uses!<0xFB><0x51>Tienes a ese Pokémon?",229,2,231,pokemon,dialogue,"Teehee... tu savais que le {COLOR}ÉNoeud
-Destin{COLOR}Ç sert en élevage ?<0xFB>Pari que non !<0xFB>Mais si tu me montres un {COLOR}Éféminin{COLOR}Ç
-Pokémon qui connaît {COLOR}ÉAttraction{COLOR}Ç,<0xFA>je t'en donnerai un !<0xFB>Tu as un Pokémon à me
+Pokémon <0xFC><0x01><0x06>hembra<0xFC><0x01><0x04> que sepa Atracción,<0xFA><0x52>te daré uno para que lo uses!<0xFB><0x51>Tienes a ese Pokémon?",229,2,231,pokemon,dialogue,"Teehee... tu savais que le <0xFC><0x01><0x06>Noeud
+Destin<0xFC><0x01><0x04> sert en élevage ?<0xFB>Pari que non !<0xFB>Mais si tu me montres un <0xFC><0x01><0x06>féminin<0xFC><0x01><0x04>
+Pokémon qui connaît <0xFC><0x01><0x06>Attraction<0xFC><0x01><0x04>,<0xFA>je t'en donnerai un !<0xFB>Tu as un Pokémon à me
 montrer ?",
 0x01F6C00A,"mon you wanna
 share with me?",,28,2,30,pokemon,dialogue,,
@@ -92264,7 +92252,7 @@ increased to <0x34> <0xFD><0x03>!<0xFB><0xFC><0x01><0x06><0xFD><0x03><0xB9><0xFC
 be earned when brought into battle.","<0xFC><0x01><0x02><0x52>Moneda Amuleto ha aumentado al
 <0xFC><0x01><0x06>Nivel <0xFD><0x03><0xFC><0x01><0x02>!<0xFB><0xFC><0x01><0x06>X<0xFD><0x03><0xFC><0x01><0x02> es la cantidad que se ganará
 cuando entres en una batalla.",129,2,131,pokemon,dialogue,"{COLOR}ÁLe niveau de la Pièce Rune a été
-augmenté à {LV} {STR_VAR_2} !<0xFB>{COLOR}É{STR_VAR_2}×{COLOR}Á le montant d'argent gagné sera
+augmenté à <0x34> {STR_VAR_2} !<0xFB>{COLOR}É{STR_VAR_2}×{COLOR}Á le montant d'argent gagné sera
 obtenu en combat si elle est portée.",
 0x01F7C5D4," the amount of prize money will
 be earned when brought into battle.",,67,2,69,pokemon,description,,
@@ -92286,7 +92274,7 @@ je peux faire une amélioration.",
 Yer Amulet Coin's <0x34> <0xFD><0x04>.<0xFB>If it's an upgrade yeh wan',
 I'm gunna need <0xFC><0x01><0x06><0xFD><0x03> <0xFD><0x02>s<0xFC><0x01><0x08>.","<0x52>Hola de nuevo!<0xFB>Si quieres mejorar tu Moneda Amuleto
 <0xFC><0x01><0x06>Nivel 3<0xFC><0x01><0x08>, necesitaré <0xFC><0x01><0x06><0xFD><0x03> <0xFD><0x02>s<0xFC><0x01><0x08>.",95,2,97,pokemon,dialogue,"Salut encore !
-Ta Pièce Rune est au niveau {LV} {STR_VAR_3}.<0xFB>Pour une amélioration, il me faudra
+Ta Pièce Rune est au niveau <0x34> {STR_VAR_3}.<0xFB>Pour une amélioration, il me faudra
 {COLOR}É{STR_VAR_2} {STR_VAR_1}s{COLOR}Ë.",
 0x01F7C7AF,"Not today?
 Awrigh'.<0xFB>Bring 'em later if yeh go changin'
@@ -93375,13 +93363,13 @@ smash your way through!",,31,1,32,pokemon,dialogue,,
 0x01F8091F,"Greetings, mad one among madmen!<0xFB>If you wish, pay me <0xFC><0x01><0x06><0xFD><0x04> <0xFD><0x02><0xFC><0x01><0x08>
 and I will upgrade all of your<0xFA><0xFC><0x01><0x06>Power Items<0xFC><0x01><0x08> to <0xFC><0x01><0x06><0x34> <0xFD><0x03><0xFC><0x01><0x08>!","<0x52>Si deseas el trabajo, págame con
 <0xFC><0x01><0x06><0xFD><0x04> <0xFD><0x02><0xFC><0x01><0x08> y actualizaré todos<0xFA>tus <0xFC><0x01><0x06>Objetos de Poder<0xFC><0x01><0x08> al <0xFC><0x01><0x06>Nivel 2<0xFC><0x01><0x08>!",128,2,130,pokemon,dialogue,"Salutations, fou parmi les fous !<0xFB>Si tu veux, paie-moi {COLOR}É{STR_VAR_3} {STR_VAR_1}{COLOR}Ë
-et j'améliorerai tous tes<0xFA>{COLOR}ÉObjets Pouvoir{COLOR}Ë en {COLOR}É{LV} {STR_VAR_2}{COLOR}Ë !",
+et j'améliorerai tous tes<0xFA>{COLOR}ÉObjets Pouvoir{COLOR}Ë en {COLOR}É<0x34> {STR_VAR_2}{COLOR}Ë !",
 0x01F809B9,"<0xFC><0x01><0x02>The Power Item level has been
 increased to <0x34> <0xFD><0x03>!<0xFB>Pokémon will now gain an additional
 <0xFC><0x01><0x06><0xFD><0x0C><0xFC><0x01><0x02> Effort Values when one is held.","<0xFC><0x01><0x02>The Power Item level has been
 increased to <0x34> <0xFD><0x03>!<0xFB>Pokémon will now gain an additional
 <0xFC><0x01><0x06><0xFD><0x0C><0xFC><0x01><0x02> Effort Values when one is held.",128,2,130,pokemon,dialogue,"{COLOR}ÁLe niveau des Objets Pouvoir a
-augmenté à {LV} {STR_VAR_2} !<0xFB>Les Pokémon gagnent désormais des
+augmenté à <0x34> {STR_VAR_2} !<0xFB>Les Pokémon gagnent désormais des
 Points d'Effort {COLOR}É{EVIL_LEGENDARY}{COLOR}Á quand tenu.",
 0x01F80A3A,"Gather the stars around Borrius
 and come again!","<0x52>Reúne todas las Estrellas de Borrius
@@ -96374,8 +96362,8 @@ to challenge you to a battle!<0xFB>Are you ready to battle the
 victorias!<0xFB><0x52>El <0xFD><0x02> ha enviado un mensaje
 y está impresionado contigo!<0xFB><0x52>Ha visto tus habilidades y quiere
 desafiarte a una batalla!<0xFB>Dime, <0x51>te gustaría luchar contra él?",199,2,201,pokemon,dialogue,"Félicitations pour ta série de
-victoires, challenger !<0xFB>Le <0xFD><0x02> a fait savoir que
-<0xFD><0x03> est impressionné par toi.<0xFB><0xFD><0x04> voit ton talent, et
+victoires, challenger !<0xFB>Le <0xFD><0x02> a fait savoir
+qu'<0xFD><0x03> est impressionné par toi.<0xFB><0xFD><0x04> voit ton talent, et
 <0xFD><0x03> veut te défier !<0xFB>Es-tu prêt à affronter le
 <0xFD><0x02> ?",
 0x01F8D608,<0xFD><0x01> received <0xFC><0x01><0x06><0xFD><0x02><0xFC><0x01><0x02> BP!,,24,2,26,pokemon,dialogue,<0xFD><0x01> reçoit <0xFC><0x01><0x06><0xFD><0x02><0xFC><0x01><0x02> BP !,
@@ -97655,9 +97643,9 @@ l'ethos du combat en l'âme, et toi ?",
 facilities <0xFC><0x01><0x06><0xFD><0x02><0xFC><0x01><0x04> times.<0xFB>You will need to win <0xFC><0x01><0x06><0xFD><0x04><0xFC><0x01><0x04> more
 time<0xFD><0x08> in order to have the ethos<0xFA>of battle merge with your soul.","Debes triunfar en las instalaciones
 de batalla <0xFC><0x01><0x06><0xFD><0x02><0xFC><0x01><0x04> veces.<0xFB>Necesitas ganar <0xFC><0x01><0x06><0xFD><0x04><0xFC><0x01><0x04> veces para
-que el espíritu de batalla se<0xFA>fusione con tu alma.",161,3,164,pokemon,dialogue,"Tu n'as pas triomphé dans les
-installations {COLOR}É{STR_VAR_1}{COLOR}Ç fois.<0xFB>Il te faudra gagner {COLOR}É{STR_VAR_3}{COLOR}Ç autre{s}
-temps{EVIL_TEAM} pour que l'ethos<0xFA>du combat fusionne avec ton âme.",
+que el espíritu de batalla se<0xFA>fusione con tu alma.",161,3,164,pokemon,dialogue,"Tu n'as pas triomphé
+<0xFC><0x01><0x06><0xFD><0x02><0xFC><0x01><0x04> fois dans les installations<0xFA>de combat.<0xFB>Il te faudra <0xFC><0x01><0x06><0xFD><0x04><0xFC><0x01><0x04> victoire<0xFD><0x08> de plus
+pour que l'ethos du combat<0xFA>fusionne avec ton âme.",
 0x01F93F78,of battle merge with your soul.,,31,3,34,pokemon,dialogue,,
 0x01F93F98,"I can smell the ethos of battle on
 your soul.<0xFB>It has no tangible effects, but you
@@ -99373,8 +99361,8 @@ ton adversaire te sera révélée.<0xFB>De plus, à chaque combat, un
 type de capacité ne pourra pas<0xFB>être utilisé. Cela sera indiqué<0xFB>aussi. Pour les capacités qui
 changent de type, le type obtenu<0xFA>est pris en compte. À ce<0xFB>moment-là, tu dois choisir un
 seul Pokémon pour affronter l'un<0xFA>des leurs. Pour chaque Dresseur<0xFB>que tu bats, tu gagneras des
-{COLOR}ÉPoints de Combat{COLOR}Ë<0xFB>({COLOR}ÉPB{COLOR}Ë). Cependant,
-comme cette installation ne fait<0xFA>pas partie de la {COLOR}ÉBattle<0xFA>Frontier{COLOR}Ë, tu ne gagneras<0xFB>aucun tampon sur ta Frontier
+<0xFC><0x01><0x06>Points de Combat<0xFC><0x01><0x08><0xFB>(<0xFC><0x01><0x06>PB<0xFC><0x01><0x08>). Cependant,
+comme cette installation ne fait<0xFA>pas partie de la <0xFC><0x01><0x06>Battle<0xFA>Frontier<0xFC><0x01><0x08>, tu ne gagneras<0xFB>aucun tampon sur ta Frontier
 Card. Si tu veux interrompre ton<0xFA>défi, ta progression sera<0xFA>enregistrée pour quand tu<0xFB>voudras continuer. Si tu quittes
 sans sauvegarder, tu seras<0xFA>disqualifié de ton défi. Merci<0xFB>d'en tenir compte !",
 0x01F9B96B,Please be aware of that!,,24,3,27,pokemon,dialogue,,
