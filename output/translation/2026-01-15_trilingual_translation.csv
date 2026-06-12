@@ -1522,7 +1522,7 @@ in <0xFC><0x01><0x06>Bellin Town<0xFC><0x01><0x04>.<0xFB>Or maybe, buy some <0xF
 prepared for the worst.<0xFB>Make me proud, honey!<0xFB>Take care!",327,9,336,pokemon,dialogue,"Ah, parfait ! Toi et tes Pokémon
 avez bien meilleure mine.<0xFB>Si les PV de tes Pokémon sont bas,
 soigne-les dans un<0xFB>{COLOR}ÉCentre Pokémon{COLOR}Ç !
-Le plus proche d'ici est à<0xFB>{COLOR}ÉBellin Town{COLOR}Ç.
+Le plus proche d'ici est à<0xFB>{COLOR}ÉBourg Bellin{COLOR}Ç.
 Ou achète des<0xFB>{COLOR}ÉPotions{COLOR}Ç au
 {COLOR}ÉPoké Mart{COLOR}Ç !<0xFB>C'est toujours bien de se préparer
 au pire.<0xFB>Rends-moi fier, chéri !<0xFB>Prends soin de toi !",
@@ -5228,7 +5228,7 @@ long ago.
 from space onto Crater Town
 long ago.
           ",83,3,86,pokemon,description,"Fragment du météorite tombé sur
-Crater Town il y a longtemps.
+Bourg Cratère il y a longtemps.
           
 ",
 0x003D90D7,"A key that disengages the 
@@ -5400,7 +5400,7 @@ who want to battle. The battery
 charges while traveling.","Dispositivo que busca a
 Entrenadores que quieren luchar.
 La batería se debe cargar.      ",89,3,92,pokemon,description,"Appareil pour repérer les Dresseurs
-vouleurs de combat. Batterie se
+voulant se battre. Batterie se
 recharge en marchant.",
 0x003DAC51,"A device that enables you to
 recall what you've heard and seen
@@ -7472,13 +7472,13 @@ sur <0xFD><0x11> !",
 0x003FCBA5,"<0xFD><0x0F>'s stats won't
 go any higher!","<0x52><0xFD><0x0F> sus stats
 no subirán más!",31,2,33,pokemon,dialogue,"Stats de <0xFD><0x0F>
-audessus du max !",
+au-dessus du max !",
 0x003FCBB4,"t
 go any higher!",,16,2,18,pokemon,dialogue,,
 0x003FCBC5,"<0xFD><0x10>'s stats won't
 go any lower!","<0xFD><0x10>'s stats won't
 go any lower!",30,2,32,pokemon,dialogue,"Stats de <0xFD><0x10>
-audessous du min !",
+au-dessous du min !",
 0x003FCBE4,A critical hit!,,15,3,18,pokemon,dialogue,Coup critique !,
 0x003FCBF4,It's a one-hit KO!,,18,2,20,pokemon,dialogue,K.O. en un coup !,
 0x003FCBF7,s a one-hit KO!,,15,2,17,pokemon,dialogue,,
@@ -9400,7 +9400,7 @@ of your progress to take a break.",71,2,73,pokemon,dialogue,"Sauvegarde ta progr
 faire une pause.",
 0x0041A0B7,"Adjust various game settings such as text
 speed, game rules, etc.","Adjust various game settings such as text
-speed, game rules, etc.",65,2,67,pokemon,description,"Régle divers paramètres comme la
+speed, game rules, etc.",65,2,67,pokemon,description,"Règle divers paramètres comme la
 vitesse du texte, les règles, etc.",
 0x0041A0F9,Close this Menu window.,Close this Menu window.,23,2,25,pokemon,system,Ferme cette fenêtre de Menu.,
 0x0041A111,"Retire from the SAFARI GAME and return to
@@ -14805,7 +14805,7 @@ déployées.",
 0x00482C89,,"Se lleva al rival
 y termina el
 combate.                                  ",0,319,319,pokemon,other,"L'ennemi est obligé de
-changer avec un ally. Dans la
+changer avec un allié. Dans la
 nature, la bataille se
 termine.",
 0x00482CD3,,"1. Turno: Vuela.
@@ -14942,7 +14942,7 @@ l'ennemi.",
 de púas tóxicas
 que pueden
 envenar al rival.     ",0,137,137,pokemon,other,"L'ennemi est poignardé avec
-une barbe toxique, etc.
+un dard toxique.
 Cela peut empoisonner
 l'ennemi.",
 0x0048328B,,"Ataca con 2
@@ -15387,9 +15387,9 @@ défense .",
 0x004845C5,,"Un muro hecho de
 luz que disminuye
 la potencia de
-Ataques Esp.  ",0,409,409,pokemon,other,"Un mur de lumière coupe
-les dégâts de Sp. Atk
-attaque pendant cinq
+Ataques Esp.  ",0,409,409,pokemon,other,"Un mur de lumière réduit
+les dégâts des attaques
+spéciales pendant cinq
 tours.",
 0x00484606,,"Nube negra que
 elimina los
@@ -15624,10 +15624,9 @@ et chaude d'intensité
 variable.",
 0x00484FB5,,"No tiene ningún
 efecto.
-Sólo salpica.                             ",0,138,138,pokemon,other,"L'utilisateur floppe
-simplement et
-éclabousse sans avoir
-d'effet .",
+Sólo salpica.                             ",0,138,138,pokemon,other,"L'utilisateur barbote et
+éclabousse autour de lui
+sans aucun effet.",
 0x0048503F,"Une grande pince
 mart<0x1A>le l'ennemi.
 Taux de critiques
@@ -16524,7 +16523,7 @@ empoisonner
 l'ennemi.",
 0x00487A07,,"Ataca con llamas
 intensas y que
-pueden quemar.                             ",0,1939,1939,pokemon,other,"Enorme explosion.
+pueden quemar.                             ",0,1939,1939,pokemon,other,"Énorme explosion.
 L'utilisateur ne peut
 pas agir au tour
 suivant.",
@@ -16626,8 +16625,7 @@ rendre",
 el cual no se puede
 evadir.                 ",0,676,676,pokemon,other,"Coup
 d'ombre
-impar
-able.",
+imparable.",
 0x00487F35,,"Golpe de sombras,
 el cual no se puede
 evadir.                   ",0,613,613,pokemon,other,"Pouvoir étrange qui
@@ -16924,7 +16922,7 @@ et des taux de capture des Pokémon.<0xFB>",
 0x0071CA70,Tehl Town,Pueblo Tela,9,7,16,pokemon,location,Ville de Tehl,
 0x0071FC80,Blizzard City,Ciudad Ventisca,13,2075,2088,pokemon,location,,
 0x00720E74,Fallshore City,Ciudad Costera,14,6,20,pokemon,location,Ville de Fallshore,
-0x00720E88,Frost Mountain,Montaña Helada,14,2,16,pokemon,location,Mont Frost,
+0x00720E88,Frost Mountain,Montaña Helada,14,2,16,pokemon,location,Mont Givre,
 0x00720EDB,îSp. Atk rises when burned.,,27,0,27,pokemon,other,îAtq.Spé. + si brûlé.,no-pointer: in-place only
 0x00720F5C,Frozen Heights,Pueblo Frío,14,3,17,pokemon,location,Hauteurs Gelées,
 0x00720F88,KINDLE ROAD,KINDLE ROAD,11,5,16,pokemon,location,CHEMIN BRASIER,
@@ -16954,11 +16952,11 @@ It shines with a dazzling light.",,44,97,141,pokemon,description,,
 0x00740001,"Dark Forest, Cinder Volcano, Crater
 Town, and Route 6","Dark Forest, Cinder Volcano, Crater
 Town, and Route 6",53,2,55,pokemon,description,"Forêt Obscure, Volcan Cendreux,
-Crater Town et Route 6",
+Bourg Cratère et Route 6",
 0x00740037,"Bellin Town, Icicle Cave, Route 2,
 and Dresco Town","Bellin Town, Icicle Cave, Route 2,
-and Dresco Town",50,4,54,pokemon,description,"Bellin Town, Grotte Stalactite,
-Route 2 et Dresco Town",
+and Dresco Town",50,4,54,pokemon,description,"Bourg Bellin, Grotte Stalactite,
+Route 2 et Bourg Dresco",
 0x00740088,"Hey, you!<0xFB>My Gramma makes really good food
 for dinner!<0xFB>You should stay and try it
 sometime!","Hey, you!<0xFB>My Gramma makes really good food
@@ -16992,8 +16990,8 @@ through the dark and take down<0xFA>Véga!<0xFB>Take this, as an extra reward fo
 your victory.","Well done!<0xFB>You managed to find your way
 through the dark and take down<0xFA>Véga!<0xFB>Take this, as an extra reward for
 your victory.",124,3,127,pokemon,dialogue,"Bien joué !<0xFB>Tu as trouvé ton chemin dans
-l'obscurité et vaincu Véga !<0xFA>Prends ça en récompense<0xFB>supplém
-entaire.",
+l'obscurité et vaincu Véga !<0xFA>Prends ça en récompense
+supplémentaire.",
 0x00741765,"That Gem I gave you can power up a
 single Dark-type move in battle.<0xFB>With it, you can unleash your dark
 fury!<0xFB>Mwahahahaha!","That Gem I gave you can power up a
@@ -17006,7 +17004,7 @@ Crater Town Gym.<0xFB>The somber atmosphere of this town
 has allowed me to channel all of my<0xFA>dark energy into one place.<0xFB>Are you prepared to face it?","I'm Véga, the Leader of the
 Crater Town Gym.<0xFB>The somber atmosphere of this town
 has allowed me to channel all of my<0xFA>dark energy into one place.<0xFB>Are you prepared to face it?",172,2,174,pokemon,dialogue,"Je suis Véga, Champion de l'Arène
-de Crater Town.<0xFB>L'atmosphère sombre de cette ville
+de Bourg Cratère.<0xFB>L'atmosphère sombre de cette ville
 m'a permis de canaliser toute mon<0xFA>énergie obscure en un lieu.<0xFB>Es-tu prêt à l'affronter ?",
 0x007419B7,"Well done.<0xFB>You've brightened up my day a
 little.","Well done.<0xFB>You've brightened up my day a
@@ -17026,7 +17024,7 @@ alors n'hésite pas à l'utiliser.",
 0x00741AF1,"Route 15<0xFB><0x7B> Route 2, Icicle Cave
 à Vivill Town","Route 15<0xFB><0x7B> Route 2, Icicle Cave
 à Vivill Town",45,2,47,pokemon,description,"Route 15<0xFB><0x7B> Route 2, Grotte
-Stalactite <0x7C> Vivill Town",
+Stalactite <0x7C> Bourg Vivill",
 0x00744BBF,"Hey, there, kid!<0xFB>-HACK- -COUGH-<0xFB>Welcome to your first Gym
 Challenge!<0xFB>Let me start you off with a small
 gift.<0xFB>-COUGH- -WHEEZE-","Hey, there, kid!<0xFB>-HACK- -COUGH-<0xFB>Welcome to your first Gym
@@ -17046,7 +17044,7 @@ the way""","To the east of here, beyond the
 watery Route 15, lies Vivill Town.<0xFB>But it seems like you'll need more
 than the HM Surf to get there.<0xFB>It looks like people are blocking
 the way""",175,5,180,pokemon,dialogue,"À l'est d'ici, au-delà de la Route
-15 aquatique, se trouve Vivill Town.<0xFB>Il te faudra plus que la CS Surf
+15 aquatique, se trouve Bourg Vivill.<0xFB>Il te faudra plus que la CS Surf
 pour y arriver.<0xFB>On dirait que des gens bloquent la
 route...",
 0x00744EF5,"Hey, there, travelling trainer.<0xFB>If you plan on challenging Mirskle,
@@ -17068,14 +17066,14 @@ Borrius est divisée en grandes<0xFA>îles !",
 fiery bird Pokémon, Moltres.<0xFB>Apparently it lives somewhere in
 Cinder Volcano, lighting up the sky<0xFA>with its flames at night.","This statue is of the legendary
 fiery bird Pokémon, Moltres.<0xFB>Apparently it lives somewhere in
-Cinder Volcano, lighting up the sky<0xFA>with its flames at night.",155,2,157,pokemon,description,"Cette statue représente Moltres,
+Cinder Volcano, lighting up the sky<0xFA>with its flames at night.",155,2,157,pokemon,description,"Cette statue représente Sulfura,
 le légendaire Pokémon oiseau de feu.<0xFB>Il vivrait quelque part dans Cinder
 Volcano, illuminant le ciel de ses<0xFA>flammes pendant la nuit.",
-0x007450DB,"Look, look!<0xFB>I can see Dehara City from here!","Look, look!<0xFB>I can see Dehara City from here!",44,2,46,pokemon,dialogue,"Regarde, regarde !<0xFB>Je vois Dehara City d'ici !",
+0x007450DB,"Look, look!<0xFB>I can see Dehara City from here!","Look, look!<0xFB>I can see Dehara City from here!",44,2,46,pokemon,dialogue,"Regarde, regarde !<0xFB>Je vois Ville de Dehara d'ici !",
 0x00745108,"Grim Woods<0xFB><0x7B> Cinder Volcano
 à Dresco Town","srim Woods<0xFB><0x7B> Cinder Volcano
 à Dresco Town",41,2,43,pokemon,description,"Grim Woods<0xFB><0x7B> Volcan Cendreux
-<0x7C> Dresco Town",
+<0x7C> Bourg Dresco",
 0x00745132,"<0x0F> P<0x56>à<0x08><0x09><0x06><0x02>We just undertook a major drug
 bust, but our targets got away,<0xFA>again""<0xFB>Now we're sulking.","<0x0F> P<0x56>à<0x08><0x09><0x06><0x02>We just undertook a major drug
 bust, but our targets got away,<0xFA>again""<0xFB>Now we're sulking.",97,2,99,pokemon,description,"<0x0F> P<0x56><0x7C><0x08><0x09><0x06><0x02>On vient de
@@ -17095,14 +17093,14 @@ Trainer House yet?<0xFB>It's the black and blue building at
 the south end of town.","Have you visited the Dresco Town
 Trainer House yet?<0xFB>It's the black and blue building at
 the south end of town.",110,2,112,pokemon,dialogue,"As-tu visité la Maison des
-Dresseurs à Dresco Town ?<0xFB>C'est le bâtiment noir et bleu au
+Dresseurs à Bourg Dresco ?<0xFB>C'est le bâtiment noir et bleu au
 sud de la ville.",
 0x00745316,"This is a relatively new entrance
 to the SES Expressway.<0xFB>So we're still working on building
 a bridge to it.","This is a relatively new entrance
 to the SES Expressway.<0xFB>So we're still working on building
 a bridge to it.",107,2,109,pokemon,description,"C'est une entrée plutôt récente de
-la SES Expressway.<0xFB>Nous sommes donc encore en train
+l'Autoroute KBT.<0xFB>Nous sommes donc encore en train
 d'y construire un pont.",
 0x00745382,"There's this really pretty place to
 the north of here called Flower<0xFA>Paradise!<0xFB>There are flowers everywhere!","There's this really pretty place to
@@ -17118,7 +17116,7 @@ Légendaire de Feu, Sulfura.<0xFB>On dit que Sulfura servait de héraut
 0x00745518,"Route 3<0xFB><0x79> Flower Paradise
 <0x7A> Dresco Town","Route 3<0xFB><0x79> Flower Paradise
 <0x7A> Dresco Town",39,361,400,pokemon,description,"Route 3<0xFB><0x79> Paradis Floral
-<0x7A> Dresco Town",
+<0x7A> Bourg Dresco",
 0x00745750,"If you change your mind let
 me know.","If you change your mind let
 me know.",36,2,38,pokemon,dialogue,"Si tu changes d'avis,
@@ -17141,7 +17139,7 @@ les affronter.<0xFB>Grâce à mes pouvoirs psy, je peux te
 téléporter de l'autre côté<0xFA>gratis !<0xFB>Alors, tu es partant ?",
 0x00745900,"Dresco Town Pokémon Gym
 Leader: Mirskle<0xFA>The high up hippy!","Dresco Town Pokémon Gym
-Leader: Mirskle<0xFA>The high up hippy!",58,2,60,pokemon,dialogue,"Arène Pokémon de Dresco Town
+Leader: Mirskle<0xFA>The high up hippy!",58,2,60,pokemon,dialogue,"Arène Pokémon de Bourg Dresco
 Champion : Mirskle<0xFA>Le hippie perché !",
 0x007459AF,"Whooooa""","Whooooa""",8,2,10,pokemon,other,Whooooa...,
 0x007459B8,"Breathe it all in""<0xFB>That wonderful smell!","Breathe it all in""<0xFB>That wonderful smell!",40,2,42,pokemon,dialogue,Inspire à fond...<0xFB>Quel parfum merveilleux !,
@@ -17461,8 +17459,8 @@ to head to <0xFC><0x01><0x06>Thundercap Mt. <0xFC><0x01><0x08>and<0xFA>save <0xF
 Jax back in Cinder Volcano, and I<0xFA>think you're up for the task.<0xFB>You can get to <0xFC><0x01><0x06>Thundercap Mt. <0xFC><0x01><0x08>
 by taking the highway southeast<0xFA>from the next town over, <0xFC><0x01><0x06>Crater<0xFA>Town<0xFC><0x01><0x08>.<0xFB>If you don't hurry, the Borrius
 region will be doomed.",372,2,374,pokemon,dialogue,"Arthur : <0xFC><0x01><0x08>Bien, bien.<0xFB>Quant à toi, <0xFD><0x01>, je veux que
-tu ailles au <0xFC><0x01><0x06>Thundercap Mt. <0xFC><0x01><0x08>pour<0xFA>sauver <0xFC><0x01><0x06>Zapdos<0xFC><0x01><0x08>.<0xFB>Tu as fait tes preuves en défendant
-Jax dans Cinder Volcano, et je<0xFA>pense que tu es à la hauteur.<0xFB>Tu peux rejoindre <0xFC><0x01><0x06>Thundercap Mt. <0xFC><0x01><0x08>
+tu ailles au <0xFC><0x01><0x06>Mont Thundercap <0xFC><0x01><0x08>pour<0xFA>sauver <0xFC><0x01><0x06>Électhor<0xFC><0x01><0x08>.<0xFB>Tu as fait tes preuves en défendant
+Jax dans Volcan Cendreux, et je<0xFA>pense que tu es à la hauteur.<0xFB>Tu peux rejoindre <0xFC><0x01><0x06>Mont Thundercap <0xFC><0x01><0x08>
 par l'autoroute au sud-est de la<0xFA>prochaine ville, <0xFC><0x01><0x06>Crater<0xFA>Town<0xFC><0x01><0x08>.<0xFB>Si tu ne te dépêches pas, la région
 de Borrius est condamnée.",
 0x00750AF3,"Log: <0xFC><0x01><0x08>I'll be heading back to <0xFC><0x01><0x06>Frozen
@@ -17490,7 +17488,7 @@ researchers like myself.<0xFB>So much history""<0xFB>So much mystery""",121,3,12
 imbued with some sort of cosmic<0xFA>power.<0xFB>They say that if a certain
 Pokémon comes in contact with<0xFA>one, strange things will happen.","The meteorites in Crater Town are
 imbued with some sort of cosmic<0xFA>power.<0xFB>They say that if a certain
-Pokémon comes in contact with<0xFA>one, strange things will happen.",162,2,164,pokemon,description,"Les météorites de Crater Town sont
+Pokémon comes in contact with<0xFA>one, strange things will happen.",162,2,164,pokemon,description,"Les météorites de Bourg Cratère sont
 imprégnées d'une sorte de pouvoir<0xFA>cosmique.<0xFB>On dit que si un certain Pokémon en
 contacte une, il se passera des<0xFA>choses étranges.",
 0x00750E32,"It's a mysterious meteorite that
@@ -17567,8 +17565,8 @@ SES Expressway!",63,2,65,pokemon,dialogue,,
 0x00754F11,Could you feel the people?,Could you feel the people?,26,3,29,pokemon,dialogue,As-tu senti les gens ?,
 0x00754F2C,"The SES Expressway runs from Crater
 Town to Tehl Town beneath us.","The SES Expressway runs from Crater
-Town to Tehl Town beneath us.",65,4,69,pokemon,description,"L'Autoroute SES va de Crater Town à
-Tehl Town sous nos pieds.",
+Town to Tehl Town beneath us.",65,4,69,pokemon,description,"L'Autoroute SES va de Bourg Cratère à
+Ville de Tehl sous nos pieds.",
 0x007551B9,"I wonder how much weight the ground
 can hold up?","I wonder how much weight the ground
 can hold up?",48,2,50,pokemon,dialogue,"Je me demande combien de poids le
@@ -17806,7 +17804,7 @@ imagine all of the secrets this<0xFA>it holds!<0xFB>Take this tablet for instanc
 years old, if not more.<0xFB>I intend to discover all of the
 secrets hidden within.<0xFB>Maybe if you come back some day,
 the truth will reveal itself...",432,3,435,pokemon,dialogue,"Qui aurait cru qu'il y avait toute
-une autre grotte dans Icicle Cave ?<0xFB>Sans ce Sablaireau, cet endroit
+une autre grotte dans la Grotte Stalactite ?<0xFB>Sans ce Sablaireau, cet endroit
 serait peut-être resté caché<0xFA>à jamais.<0xFB>Mais maintenant qu'il est
 accessible, imagine tous les<0xFA>secrets qu'il renferme !<0xFB>Prends cette tablette, par exemple.<0xFB>Elle doit avoir au moins mille ans,
 si ce n'est plus.<0xFB>Je compte découvrir tous les
@@ -17830,7 +17828,7 @@ endroit<0xFA>serait resté caché.<0xFB>Maintenant qu'on peut y entrer,
 imagine tous les secrets qu'il<0xFA>contient !<0xFB>Prends cette tablette par exemple.<0xFB>Elle doit avoir au moins mille ans,
 voire plus.<0xFB>Je compte découvrir tous les secrets
 qu'elle renferme.<0xFB>Reviens un jour, la vérité se
-révèlera peut-être...",
+révélera peut-être...",
 0x0075D9ED,Would you be able to...,,23,1,24,pokemon,dialogue,,
 0x0075DA05,Ahh!<0xFB>There it is again!<0xFB>It's come to steal more food!,Ahh!<0xFB>There it is again!<0xFB>It's come to steal more food!,53,2,55,pokemon,dialogue,Ahh !<0xFB>Le revoilà !<0xFB>Il vient voler plus de nourriture !,
 0x0075DA3B,It's stealing my food!,It's stealing my food!,22,1,23,pokemon,dialogue,Il vole ma nourriture !,
@@ -17951,7 +17949,7 @@ Pokémon car ils sont naturellement<0xFA>faibles face au feu.",
 0x00763577,<0xFC><0x01><0x04>Mission complete.<0xFB>Let's move out.,<0xFC><0x01><0x04>Mission complete.<0xFB>Let's move out.,36,1,37,pokemon,description,{COLOR}ÇMission accomplie.<0xFB>On se replie.,
 0x007638F9,"Oh""<0xFB>You don't have space in your party
 for the Egg""","Oh""<0xFB>You don't have space in your party
-for the Egg""",51,3,54,pokemon,dialogue,"Oh...<0xFB>Tu n'as pas de place dans ton equipe
+for the Egg""",51,3,54,pokemon,dialogue,"Oh...<0xFB>Tu n'as pas de place dans ton équipe
 pour l'OEuf...",
 0x0076392F,Raptor!,Raptor!,7,2,9,pokemon,dialogue,Raptor !,
 0x0076445C,"Would you also like me to keep the
@@ -18160,7 +18158,7 @@ pouvais pas gagner.",
 0x00770CF9,"This ecosystem must maintain a
 delicate balance.","This ecosystem must maintain a
 delicate balance.",48,3,51,pokemon,description,"Cet écosystème doit rester en
-equilibre fragile.",
+équilibre fragile.",
 0x00770D2A,"I enjoy going for leisurely strolls
 in this cave.","I enjoy going for leisurely strolls
 in this cave.",49,1,50,pokemon,dialogue,"J'aime flâner tranquillement dans
@@ -18350,7 +18348,7 @@ est tombée.<0xFB>Que s'est-il passé ?<0xFB>...<0xFB>Les Ombres se sont encore 
 <0xFC><0x01><0x06>Inverse Battle House<0xFC><0x01><0x08> and the<0xFA><0xFC><0x01><0x06>Mission HQ<0xFC><0x01><0x08>.<0xFB>Isn't that neat?
 It's so cool to live here!","Fallshore City is home of the
 <0xFC><0x01><0x06>Inverse Battle House<0xFC><0x01><0x08> and the<0xFA><0xFC><0x01><0x06>Mission HQ<0xFC><0x01><0x08>.<0xFB>Isn't that neat?
-It's so cool to live here!",126,2,128,pokemon,dialogue,"Fallshore City abrite la <0xFC><0x01><0x06>Maison du
+It's so cool to live here!",126,2,128,pokemon,dialogue,"Ville de Fallshore abrite la <0xFC><0x01><0x06>Maison du
 Combat Inversé<0xFC><0x01><0x08> et le <0xFC><0x01><0x06>QG des<0xFA>Missions<0xFC><0x01><0x08>.<0xFB>C'est pas génial ?
 C'est trop cool de vivre ici !",
 0x00772874,Go away.,Go away.,8,2,10,pokemon,location,Va-t'en.,
@@ -19730,7 +19728,7 @@ Pokémon si tu veux tenter<0xFA>l'Arène.",
 0x0078D43E,"Marlon: <0xFC><0x01><0x08>Alright, grunts.<0xFB>Our current objective is to head to
 <0xFC><0x01><0x06>Cinder Volcano <0xFC><0x01><0x08>and help Ivory<0xFA>obtain Specimen TRES.","Marlon: <0xFC><0x01><0x08>Alright, grunts.<0xFB>Our current objective is to head to
 <0xFC><0x01><0x06>Cinder Volcano <0xFC><0x01><0x08>and help Ivory<0xFA>obtain Specimen TRES.",121,2,123,pokemon,description,"Marlon : <0xFC><0x01><0x08>Bien, les sbires.<0xFB>Notre objectif actuel est d'aller
-au <0xFC><0x01><0x06>Cinder Volcano <0xFC><0x01><0x08>pour aider Ivory<0xFA>à obtenir le Spécimen TRES.",
+au <0xFC><0x01><0x06>Volcan Cendreux <0xFC><0x01><0x08>pour aider Ivory<0xFA>à obtenir le Spécimen TRES.",
 0x0078D4B8,"Grunts: <0xFC><0x01><0x08>Yes, sir!","Grunts: <0xFC><0x01><0x08>Sí, señr!",20,2,22,pokemon,dialogue,"Sbires : {COLOR}ËOui, chef !",
 0x0078D4C3,"Yes, sir!",,9,2,11,pokemon,dialogue,,
 0x0078D4CD,You learn something new every day!,<0x52>Tu aprendes algo nuevo cada día!,34,3,37,pokemon,dialogue,"On apprend quelque chose de neuf
@@ -19968,7 +19966,7 @@ big statue here.<0xFB>It'll make Tehl Town on par with
 all those cool towns with statues.","One day there's going to be a nice
 big statue here.<0xFB>It'll make Tehl Town on par with
 all those cool towns with statues.",119,2,121,pokemon,description,"Un jour, il y aura une belle
-grande statue ici.<0xFB>Ça mettra Tehl Town au niveau de
+grande statue ici.<0xFB>Ça mettra la Ville de Tehl au niveau de
 toutes ces villes cool avec leurs<0xFA>statues.",
 0x0078F5DA,"My brother and his friend are so
 cute!<0xFB>They look almost identical!","My brother and his friend are so
@@ -20361,7 +20359,7 @@ plutôt que dans la mer.",
 Come on! Who'd believe that?","I heard from a friend that under
 <0xFC><0x01><0x06>Tehl Town<0xFC><0x01><0x04>, that tiny town to the<0xFA>west of here, is a secret<0xFA>underground passage to <0xFC><0x01><0x06>Route 9<0xFC><0x01><0x04>.<0xFB>But there can't actually be""
 Come on! Who'd believe that?",193,2,195,pokemon,dialogue,"Un ami m'a dit que sous
-<0xFC><0x01><0x06>Tehl Town<0xFC><0x01><0x04>, ce petit village à<0xFA>l'ouest d'ici, se trouve un passage<0xFA>souterrain secret vers la <0xFC><0x01><0x06>Route 9<0xFC><0x01><0x04>.<0xFB>Mais ça ne peut pas exister...
+<0xFC><0x01><0x06>Ville de Tehl<0xFC><0x01><0x04>, ce petit village à<0xFA>l'ouest d'ici, se trouve un passage<0xFA>souterrain secret vers la <0xFC><0x01><0x06>Route 9<0xFC><0x01><0x04>.<0xFB>Mais ça ne peut pas exister...
 Allez ! Qui croirait ça ?",
 0x007A3406,"Young trainer.<0xFB>I have been carrying around this
 Egg with me ever since it was laid.<0xFB>However, I am willing to give it to
@@ -20451,7 +20449,7 @@ synthétisé dans le tube.",
 0x007A3FA7,The tube is empty.,The tube is empty.,18,26,44,pokemon,other,Le tube est vide.,
 0x007A3FD4,"No one from Tehl Town is allowed to
 leave this way, right now.<0xFB>Scram, kid!","No one from Tehl Town is allowed to
-leave this way, right now.<0xFB>Scram, kid!",74,2,76,pokemon,dialogue,"Personne de Tehl Town n'est
+leave this way, right now.<0xFB>Scram, kid!",74,2,76,pokemon,dialogue,"Personne de la Ville de Tehl n'est
 autorisé à passer par ici pour le<0xFA>moment.<0xFB>Du balai, gamin !",
 0x007A401F,"Brr""I'm starting to get chilly.
 I could use a win to get warmed up.","Brr""I'm starting to get chilly.
@@ -20647,7 +20645,7 @@ Eh bien, quelle montagne !",
 0x007A94E4,"Ivory: <0xFC><0x01><0x04>Zeph?<0xFB>Yeah, it's Ivory.<0xFB>I've successfully set up a barrier
 around Route 9 from Blizzard City.<0xFB>""<0xFB>Roger that sir.<0xFB>I'll head back down right away.","Ivory: <0xFC><0x01><0x04>seph?<0xFB>Yeah, it's Ivory.<0xFB>I've successfully set up a barrier
 around Route 9 from Blizzard City.<0xFB>""<0xFB>Roger that sir.<0xFB>I'll head back down right away.",153,3,156,pokemon,dialogue,"Ivory : <0xFC><0x01><0x04>Zeph ?<0xFB>Oui, c'est Ivory.<0xFB>J'ai installé une barrière autour
-de la Route 9, côté Blizzard City.<0xFB>""<0xFB>Bien reçu, monsieur.<0xFB>Je redescends tout de suite.",
+de la Route 9, côté Ville Blizzard.<0xFB>""<0xFB>Bien reçu, monsieur.<0xFB>Je redescends tout de suite.",
 0x007A96CD,format you play best in!,,24,2,26,pokemon,dialogue,,
 0x007A96E6,"All Pokémon have <0xFC><0x01><0x06>abilities <0xFC><0x01><0x08>which
 can be used in battle.<0xFB>Abilities can both help and hinder
@@ -20689,9 +20687,9 @@ Rock Smash, to break the ice!","<0xFC><0x01><0x04>For some reason, the entrance 
 the SES Expressway has frozen over.<0xFB>It's my job as Gym Leader of this
 city, to take care of it.<0xFB>Watch how I can use the move,
 Rock Smash, to break the ice!",191,4,195,pokemon,dialogue,"<0xFC><0x01><0x04>Bizarrement, l'entrée de la
-Voie Express SES a entièrement gelé.<0xFB>En tant que Champion d'Arène de
+Autoroute KBT a entièrement gelé.<0xFB>En tant que Champion d'Arène de
 cette ville, mon devoir est d'agir.<0xFB>Regarde : avec la capacité
-Eclate-Roc, je brise cette glace !",
+Éclate-Roc, je brise cette glace !",
 0x007AA251,"Just kidding, I'm not going
 anywhere.","Just kidding, I'm not going
 anywhere.",37,2,39,pokemon,description,"Je plaisante, je ne vais
@@ -20749,7 +20747,7 @@ properties.","I was training my <0xFC><0x01><0x06>Nosepass<0xFC><0x01><0x08> in
 <0xFC><0x01><0x06>Thundercap Mountain<0xFC><0x01><0x08> the other day,<0xFA>when all of a sudden it began to<0xFA>glow!<0xFB>The next thing I knew, it had
 evolved into a Probopass!<0xFB>That mountain must have some weird
 properties.",218,2,220,pokemon,dialogue,"L'autre jour, j'entraînais mon
-<0xFC><0x01><0x06>Nosepass<0xFC><0x01><0x08> dans <0xFC><0x01><0x06>Thundercap Mountain<0xFC><0x01><0x08><0xFA>quand soudain, il s'est mis à<0xFA>briller !<0xFB>L'instant d'après, il avait évolué
+<0xFC><0x01><0x06>Nosepass<0xFC><0x01><0x08> dans <0xFC><0x01><0x06>Mont Thundercap<0xFC><0x01><0x08><0xFA>quand soudain, il s'est mis à<0xFA>briller !<0xFB>L'instant d'après, il avait évolué
 en Probopass !<0xFB>Cette montagne doit avoir de
 drôles de propriétés.",
 0x007AAC3A,"You'd never catch me outside when
@@ -20927,7 +20925,7 @@ SES Expressway.","<0xFC><0x01><0x04><0xFD><0x01>, I forgot to show you
 something!<0xFB>Please come with me to the
 SES Expressway.",81,3,84,pokemon,dialogue,"<0xFC><0x01><0x04><0xFD><0x01>, j'ai oublié de te montrer
 quelque chose !<0xFB>Viens avec moi à la
-SES Expressway, s'il te plaît.",
+Autoroute KBT, s'il te plaît.",
 0x007B38CC,"Oh man, I haven't seen anyone beat
 Big Mo in a while, let alone clear<0xFA>the Ring Challenge!<0xFB>Well done!
 You've proven your toughness!<0xFB>Take this Gem to improve it even
@@ -21161,7 +21159,7 @@ Ouste ! Ouste !",
 ",
 0x007B4788,"Dresco Town<0xFB>The archipelago of the Borrius
 Region.","Dresco Town<0xFB>The archipelago of the Borrius
-Region.",50,2,52,pokemon,description,"Dresco Town<0xFB>L'archipel de la région de
+Region.",50,2,52,pokemon,description,"Bourg Dresco<0xFB>L'archipel de la région de
 Borrius.",
 0x007B484B,The door is locked.,Puerta cerrada.,19,2,21,pokemon,other,La porte est verrouillée.,
 0x007B489E,"That is not Hoopa!<0xFB>I have no time for you!
@@ -21312,7 +21310,7 @@ condition, this move'll get twice<0xFA>as powerful.<0xFB>Even stronger than Mega
 regret inflicting you with status!","TM42 contains <0xFC><0x01><0x06>Facade<0xFC><0x01><0x08>.<0xFB>If your Pokémon has a status
 condition, this move'll get twice<0xFA>as powerful.<0xFB>Even stronger than Mega Punch!<0xFB>Use it, and make your enemies
 regret inflicting you with status!",199,3,202,pokemon,dialogue,"La CT42 contient
-<0xFB>{COLOR}ÉFacade{COLOR}Ë. Si ton
+<0xFB>{COLOR}ÉFaçade{COLOR}Ë. Si ton
 <0xFA>Pokémon a un statut, la puissance
 <0xFB>double. Encore plus fort que Poing
 <0xFB>Météore ! Utilise-la et fais
@@ -21803,7 +21801,7 @@ seul ami...",
 0x007BBD97,"Nerd: <0xFC><0x01><0x08>Electivire""please""just
 listen to me""<0xFB>Return to your Poké Ball!","Nerd: <0xFC><0x01><0x08>Electivire""please""just
 listen to me""<0xFB>Return to your Poké Ball!",71,3,74,pokemon,dialogue,"Nerd : {COLOR}ËÉlekable, s'il te
-<0xFB>plait... écoute-moi... Rentre dans ta
+<0xFB>plaît... écoute-moi... Rentre dans ta
 Poké Ball !",
 0x007BBDDF,"<0xFC><0x01><0x08>I owe you one for helping my
 Electivire.<0xFB>I can't give you anything here, so
@@ -21811,7 +21809,7 @@ meet me in the <0xFC><0x01><0x06>Epidimy Town<0xFA>Pokémon Centre <0xFC><0x01><
 Electivire.<0xFB>I can't give you anything here, so
 meet me in the <0xFC><0x01><0x06>Epidimy Town<0xFA>Pokémon Centre <0xFC><0x01><0x08>if you want a<0xFA>reward for your help.",163,2,165,pokemon,dialogue,"<0xFC><0x01><0x08>Je te dois une fière chandelle pour
 mon Electivire.<0xFB>Je ne peux rien te donner ici, donc
-retrouve-moi au <0xFC><0x01><0x06>Centre Pokémon<0xFA>d'Epidimy Town <0xFC><0x01><0x08>si tu veux une<0xFA>récompense pour ton aide.",
+retrouve-moi au <0xFC><0x01><0x06>Centre Pokémon<0xFA>d'Ville d'Epidimy <0xFC><0x01><0x08>si tu veux une<0xFA>récompense pour ton aide.",
 0x007BBE83,"???: <0xFC><0x01><0x04>Epidimy Town you say""<0xFB>Then I must head there""for the
 sake of science""","???: <0xFC><0x01><0x04>Epidimy Town you say""<0xFB>Then I must head there""for the
 sake of science""",77,1,78,pokemon,dialogue,"??? : {COLOR}ÇVille d'Epidimy,
@@ -22175,7 +22173,7 @@ greener on the other side.<0xFB>That's especially true in Epidimy
 Town. Just look at the grass here!","They say the grass is always
 greener on the other side.<0xFB>That's especially true in Epidimy
 Town. Just look at the grass here!",124,2,126,pokemon,dialogue,"On dit que l'herbe est toujours
-plus verte ailleurs.<0xFB>C'est surtout vrai à Epidimy Town.
+plus verte ailleurs.<0xFB>C'est surtout vrai à Ville d'Epidimy.
 Regarde un peu l'herbe ici !",
 0x007C159C,"He's sleeping peacefully on the
 bench.<0xFB>Better leave him alone.","He's sleeping peacefully on the
@@ -22245,7 +22243,7 @@ large.<0xFB>I wonder where he could be""
 Maybe back in Antisis City?",163,2,165,pokemon,dialogue,"Beau travail !<0xFB>Tu as capturé les quatre voyous des
 Terror Granbull.<0xFB>Cependant, leur chef court
 toujours.<0xFB>Je me demande où il peut bien
-être... Peut-être à Antisis City ?",
+être... Peut-être à Ville d'Antisis ?",
 0x007C1CA9,"<0xFC><0x01><0x02>???: <0xFC><0x01><0x08>Hahaha!<0xFB>I, the great G-Roughs, haven't gone
 anywhere!","<0xFC><0x01><0x02>???: <0xFC><0x01><0x08>Hahaha!<0xFB>I, the great G-Roughs, haven't gone
 anywhere!",64,2,66,pokemon,dialogue,"{COLOR}Á???: {COLOR}ËHahaha !<0xFB>Moi, le grand G-Roughs, je suis
@@ -22283,7 +22281,7 @@ citizen such as yourself.","Thanks for all your help,
 Seaport City so he can't escape<0xFA>through there.<0xFB>Anyway, here's a reward for a model
 citizen such as yourself.",166,2,168,pokemon,dialogue,"Merci pour toute ton aide,
 <0xFD><0x01>.<0xFB>Je vais prévenir mes collègues de
-Seaport City par radio pour qu'il<0xFA>ne s'échappe pas par là.<0xFB>Enfin, voici une récompense pour un
+Ville Portuaire par radio pour qu'il<0xFA>ne s'échappe pas par là.<0xFB>Enfin, voici une récompense pour un
 citoyen modèle comme toi.",
 0x007C1F31,"I'm looking forward to solving more
 cases with you in the future.<0xFB>Until then, stay safe and be
@@ -23179,7 +23177,7 @@ lightning.<0xFB>A fierce storm.<0xFB>A world paralyzed.<0xFB>Heed my call!<0xFB>
 in which you dwell!",182,2,184,pokemon,dialogue,"{COLOR}ËL'un avec le tonnerre, l'autre avec
 l'éclair.<0xFB>Une tempête féroce.<0xFB>Un monde paralysé.<0xFB>Réponds à mon appel !<0xFB>Électhor !<0xFB>Sankren thoron !<0xFB>Je te l'ordonne !<0xFB>Sors des nuages orageux
 où tu demeures !",
-0x007C906A,"<0xFC><0x01><0x08>Now, Zapdos, you will become""","<0xFC><0x01><0x08>Now, Zapdos, you will become""",32,2,34,pokemon,dialogue,"<0xFC><0x01><0x08>Maintenant, Zapdos, tu vas
+0x007C906A,"<0xFC><0x01><0x08>Now, Zapdos, you will become""","<0xFC><0x01><0x08>Now, Zapdos, you will become""",32,2,34,pokemon,dialogue,"<0xFC><0x01><0x08>Maintenant, Électhor, tu vas
 devenir...",
 0x007C908B,"Grunt: <0xFC><0x01><0x08>Sir!
 Look out!","Grunt: <0xFC><0x01><0x08>Sir!
@@ -23365,8 +23363,8 @@ standing around in <0xFC><0x01><0x06>Tehl Town<0xFC><0x01><0x08>,<0xFA>actually"
 you rescue <0xFC><0x01><0x06>Zapdos<0xFC><0x01><0x08>.",313,2,315,pokemon,dialogue,"Pendant que je fais cela, vous
 devriez être vous diriger vers<0xFB>Le mouvement {COLOR}ÉForce{COLOR}Ë est nécessaire
 pour aller n'importe où à<0xFA>battre le {COLOR}ÉFallshore Gym{COLOR}Ë en premier.<0xFB>Je pense avoir vu le chef du gymnase
-debout dans les environs. {COLOR}ÉTehl Town{COLOR}Ë,<0xFA>en fait...<0xFB>Je vous rattraperai à nouveau après
-vous aurez sauvé {COLOR}ÉZapdos{COLOR}Ë.",
+debout dans les environs. {COLOR}ÉVille de Tehl{COLOR}Ë,<0xFA>en fait...<0xFB>Je vous rattraperai à nouveau après
+vous aurez sauvé {COLOR}ÉÉlecthor{COLOR}Ë.",
 0x007CDE4B,"Let's go, Starapator!","Let's go, Starapator!",21,1,22,pokemon,dialogue,"C'est parti, Starapator !",
 0x007CDE6C,"My Pokémon were very hard to
 find.<0xFB>They do not often appear in the
@@ -23399,7 +23397,7 @@ moins et nous entraîner davantage...",
 0x007CE128,"Huff""Puff""<0xFB>Jogging and battling make a tiring
 combo!","Huff""Puff""<0xFB>Jogging and battling make a tiring
 combo!",52,4,56,pokemon,dialogue,"Huff...Puff...<0xFB>Le jogging et les combats forment un
-combo fatiguant !",
+combo fatigant !",
 0x007CE1D4,They fight just like you do!,They fight just like you do!,28,2,30,pokemon,dialogue,Ils se battent comme vous !,
 0x007CE1F1,"I trained my Zangoose and Seviper
 to play together nicely!","I trained my Zangoose and Seviper
@@ -23512,7 +23510,7 @@ knows how to cross water.<0xFB>As you know, I've been looking for
 my parents, and my research is<0xFA>telling me that The Shadows were<0xFA>involved in their disappearance.<0xFB>I managed to track The Shadows to
 the Ruins of Void, but I can't get<0xFA>there on foot or by flight yet.<0xFB>If you need a way to ride the
 waves too, you should find <0xFC><0x01><0x06>Dehara<0xFA>City's surfing guy<0xFC><0x01><0x08>.<0xFB>See you later, <0xFD><0x01>.",478,3,481,pokemon,dialogue,"Alors, où vas-tu
-ensuite, {PLAYER} ?<0xFB>...<0xFB>Dehara City, hein
+ensuite, {PLAYER} ?<0xFB>...<0xFB>Ville de Dehara, hein
 ? J'y vais aussi.<0xFB>Log a mentionné un gars là-bas qui
 sait traverser l'eau.<0xFB>Comme vous le savez, j'ai cherché
 mes parents, et mes recherches<0xFA>me disent que les Ombres étaient<0xFA>impliquées dans leur disparition.<0xFB>J'ai réussi à retrouver les Ombres.
@@ -23544,7 +23542,7 @@ arreglemos.<0xFB>Mientras tanto, deberías hablar con
 nuestro jefe para encontrar otro<0xFA>camino a Ciudad Porto.",213,2,215,pokemon,dialogue,"Désolé, gamin !<0xFB>Un combat entre des Mangriff et
 Séviper a détruit le pont.<0xFB>Il faudra un certain temps avant que
 nous puissions le réparer.<0xFB>Vous devriez parler à notre patron
-de trouver un autre moyen de<0xFA>Seaport City en attendant.",
+de trouver un autre moyen de<0xFA>Ville Portuaire en attendant.",
 0x007CF26E,Seaport City in the meantime.,,29,2,31,pokemon,other,,
 0x007CF46D,"<0xFC><0x01><0x08>No""<0xFB>I shouldn't be feeling this way""<0xFB>Everything we've worked for is 
 about to transpire.<0xFB>I'll even be able to see my son
@@ -23845,9 +23843,9 @@ see his smile once again""",205,1,206,pokemon,dialogue,"Zeph : {COLOR}ËLe momen
 de mon rêve une réalité.<0xFB>Une fois que la force obscure sera
 libérée, je l'utiliserai pour<0xFA>de toutes ces années d'il y a...<0xFB>Alors, enfin, je pourrai revoir son
 sourire une fois de plus...",
-0x007D46F4,<0xFC><0x01><0x08>Zapdos!<0xFB>Come forth!,<0xFC><0x01><0x08>Zapdos!<0xFB>Come forth!,22,1,23,pokemon,dialogue,{COLOR}ËZapdos!<0xFB>Sortez!,
-0x007D470B,<0xFC><0x01><0x08>Moltres!<0xFB>Come forth!,<0xFC><0x01><0x08>Moltres!<0xFB>Come forth!,23,1,24,pokemon,dialogue,{COLOR}ËMoltres !<0xFB>Sortez !,
-0x007D4723,<0xFC><0x01><0x08>Articuno!<0xFB>Come forth!,<0xFC><0x01><0x08>Articuno!<0xFB>Come forth!,24,2,26,pokemon,dialogue,{COLOR}ËArticuno!<0xFB>Sortez!,
+0x007D46F4,<0xFC><0x01><0x08>Zapdos!<0xFB>Come forth!,<0xFC><0x01><0x08>Zapdos!<0xFB>Come forth!,22,1,23,pokemon,dialogue,{COLOR}ËÉlecthor!<0xFB>Sortez!,
+0x007D470B,<0xFC><0x01><0x08>Moltres!<0xFB>Come forth!,<0xFC><0x01><0x08>Moltres!<0xFB>Come forth!,23,1,24,pokemon,dialogue,{COLOR}ËSulfura !<0xFB>Sortez !,
+0x007D4723,<0xFC><0x01><0x08>Articuno!<0xFB>Come forth!,<0xFC><0x01><0x08>Articuno!<0xFB>Come forth!,24,2,26,pokemon,dialogue,{COLOR}ËArtikodin!<0xFB>Sortez!,
 0x007D473C,"<0xFC><0x01><0x08>With these three legendary bird
 Pokémon assembled here alongside<0xFA>the Void Stone, the seal can<0xFA>be broken.","<0xFC><0x01><0x08>With these three legendary bird
 Pokémon assembled here alongside<0xFA>the Void Stone, the seal can<0xFA>be broken.",107,2,109,pokemon,description,"{COLOR}ËAvec ces trois oiseaux légendaires
@@ -24080,7 +24078,7 @@ y avait "" trop d'eau"".<0xFB>Je pense que j'y serais peut-être
 resté pour toujours, si Zeph n'avait<0xFA>Ivory et moi de partir.",
 0x007D5E59,"What do you see, <0xFD><0x01>?<0xFB>""<0xFB>Snow, huh?<0xFB>Makes sense""<0xFB>Frozen Heights is the home your
 father chose for you, after all.","What do you see, <0xFD><0x01>?<0xFB>""<0xFB>Snow, huh?<0xFB>Makes sense""<0xFB>Frozen Heights is the home your
-father chose for you, after all.",111,2,113,pokemon,dialogue,"Que vois-tu, <0xFD><0x01> ?<0xFB>...<0xFB>De la neige, hein ?<0xFB>C'est logique...<0xFB>Frozen Heights est la maison que ton
+father chose for you, after all.",111,2,113,pokemon,dialogue,"Que vois-tu, <0xFD><0x01> ?<0xFB>...<0xFB>De la neige, hein ?<0xFB>C'est logique...<0xFB>Hauteurs Gelées est la maison que ton
 père a choisie pour toi, après tout.",
 0x007D5EC9,"You know, <0xFD><0x01>, I knew your
 father well.<0xFB>He was a good man.<0xFB>I even had the pleasure of working
@@ -24121,10 +24119,10 @@ THIS PUNISHMENT, AND TO THIS DAY<0xFA>HE STILL ROAMS THE WORLD, A<0xFA>THOUSAND 
 TRAPPED IN <0xFC><0x01><0x06>CINDER VOLCANO<0xFC><0x01><0x08>!<0xFB>BEFORE IT IS TOO LATE""<0xFB>THIS IS MY VERDICT!<0xFB>BEGONE!","MARLON!<0xFB>DABBLING IN THE FORBIDDEN ART.<0xFB>RESSURECTION.<0xFB>SIN.<0xFB>YOU WILL BE RETURNED TO YOUR
 WORLD, IMMORTAL UNTIL THE WORLD<0xFA>IS CLEANSED.<0xFB>ONLY ONE OTHER HAS EVER ENDURED
 THIS PUNISHMENT, AND TO THIS DAY<0xFA>HE STILL ROAMS THE WORLD, A<0xFA>THOUSAND YEARS LATER!<0xFB>RIGHT YOUR WRONGS!<0xFB>FREE THOSE WHOSE SOULS HAVE BEEN
-TRAPPED IN <0xFC><0x01><0x06>CINDER VOLCANO<0xFC><0x01><0x08>!<0xFB>BEFORE IT IS TOO LATE""<0xFB>THIS IS MY VERDICT!<0xFB>BEGONE!",382,1,383,pokemon,dialogue,"MARLON!<0xFB>BABLIER DANS L'ART INTERDIT.<0xFB>RESSURECTION.<0xFB>SIN.<0xFB>VOUS SEREZ RETOURNÉS DANS VOTRE
-MONDE, IMMORTEL JUSQU'À CE QUE LE<0xFA>SOIT NETTOYÉ.<0xFB>UN SEUL AUTRE A JAMAIS ENDURÉ CETTE
-PUNITION, ET À CE JOUR<0xFA>IL PARcourt ENCORE LE MONDE, A<0xFA>MILLE ANS PLUS TARD !<0xFB>CORRIGEZ VOS TORTS !<0xFB>LIBÉREZ CEUX DONT LES ÂMES ONT ÉTÉ
-PIÉGÉES DANS LE VOLCAN {COLOR}ÉCINDRE{COLOR}Ë!<0xFB>AVANT QU'IL NE SOIT TROP TARD...<0xFB>CECI EST MON VERDICT !<0xFB>COMMENCER !",
+TRAPPED IN <0xFC><0x01><0x06>CINDER VOLCANO<0xFC><0x01><0x08>!<0xFB>BEFORE IT IS TOO LATE""<0xFB>THIS IS MY VERDICT!<0xFB>BEGONE!",382,1,383,pokemon,dialogue,"MARLON !<0xFB>ADEPTE DE L'ART INTERDIT.<0xFB>LA RÉSURRECTION.<0xFB>LE PÉCHÉ.<0xFB>VOUS SEREZ RENVOYÉS DANS VOTRE
+MONDE, IMMORTELS JUSQU'À CE QUE LE<0xFA>MONDE SOIT PURIFIÉ.<0xFB>UN SEUL AUTRE A ENDURÉ CETTE
+PUNITION, ET À CE JOUR<0xFA>IL PARCOURT ENCORE LE MONDE,<0xFA>MILLE ANS PLUS TARD !<0xFB>CORRIGEZ VOS TORTS !<0xFB>LIBÉREZ CEUX DONT LES ÂMES ONT ÉTÉ
+PIÉGÉES DANS LE VOLCAN {COLOR}ÉCENDREUX{COLOR}Ë !<0xFB>AVANT QU'IL NE SOIT TROP TARD...<0xFB>CECI EST MON VERDICT !<0xFB>COMMENCEZ !",
 0x007D632C,"<0xFD><0x01>!<0xFB>PREMATURE DEATH.<0xFB>A CURSE ON YOUR SOUL.<0xFB>FOR AROS, I SHALL RESTORE YOU TO
 LIFE!<0xFB>ONE CONDITION.<0xFB>SUCCEED IN STOPPING THE ENDLESS
 TORMENT OF SOULS, OR I WILL<0xFA>RETURN YOU TO ASH.<0xFB>THIS IS MY VERDICT.<0xFB>BEGONE!","<0xFD><0x01>!<0xFB>PREMATURE DEATH.<0xFB>A CURSE ON YOUR SOUL.<0xFB>FOR AROS, I SHALL RESTORE YOU TO
@@ -24200,7 +24198,7 @@ the base in <0xFC><0x01><0x06>Vivill Town<0xFC><0x01><0x08>!<0xFB>We're not equi
 these""zombies right now!","Véga: <0xFC><0x01><0x08>All grunts, retreat back to
 the base in <0xFC><0x01><0x06>Vivill Town<0xFC><0x01><0x08>!<0xFB>We're not equipped to deal with
 these""zombies right now!",124,2,126,pokemon,dialogue,"Véga : {COLOR}ËTous les grognements,
-retournez à la base de {COLOR}ÉVivill Town{COLOR}Ë!<0xFB>Nous ne sommes pas équipés pour
+retournez à la base de {COLOR}ÉBourg Vivill{COLOR}Ë!<0xFB>Nous ne sommes pas équipés pour
 affronter ces... zombies pour le<0xFA>moment !",
 0x007D6CD7,Marlon: <0xFC><0x01><0x08>Oh no you don't!<0xFB>You're not getting away yet!,Marlon: <0xFC><0x01><0x08>Oh no you don't!<0xFB>You're not getting away yet!,56,2,58,pokemon,dialogue,"Marlon : {COLOR}ËOh non, tu ne t'échapperas
 pas ainsi !<0xFB>Tu ne t'en sortiras pas !",
@@ -24252,7 +24250,7 @@ I'll still know the location of<0xFA>your base.<0xFB>You ordered your grunts to 
 to <0xFC><0x01><0x06>Vivill Town<0xFC><0x01><0x08>, did you not?<0xFB>After I get Zeph from <0xFC><0x01><0x06>Frozen
 Heights<0xFC><0x01><0x08>, I'll head there to look<0xFA>for the Shadow Warriors.",239,2,241,pokemon,dialogue,"Marlon : {COLOR}ËMême si tu meurs, Véga, Je
 connaîtrai toujours l'emplacement de<0xFA>ta base.<0xFB>Tu as ordonné à tes grognements de
-se retirer à {COLOR}ÉVivill Town{COLOR}Ë, n'est-ce<0xFB>Après avoir récupéré Zeph de {COLOR}ÉFrozen
+se retirer à {COLOR}ÉBourg Vivill{COLOR}Ë, n'est-ce<0xFB>Après avoir récupéré Zeph de {COLOR}ÉFrozen
 Heights{COLOR}Ë, j'irai là-bas pour chercher<0xFA>l'Ombre. Guerriers.",
 0x007D761F,Véga: <0xFC><0x01><0x08>Groudon!<0xFB>Shake the earth!,Véga: <0xFC><0x01><0x08>Groudon!<0xFB>Shake the earth!,34,2,36,pokemon,dialogue,Véga : <0xFC><0x01><0x08>Groudon !<0xFB>Fais trembler la terre !,
 0x007D7642,"Véga: <0xFC><0x01><0x08>Can't keep your footing,
@@ -24284,7 +24282,7 @@ Arceus vous a renvoyé également.<0xFB>Mais à partir de maintenant, je dois
 faire les choses seul.<0xFB>Si vous venez à notre base à {COLOR}ÉFrozen
 Heights {COLOR}Ëaussi, Zeph n'acceptera pas<0xFA>m'aider à trouver les Shadow
 Warriors.<0xFB>Je suis reconnaissant pour votre
-aidez-moi, mais s'il vous plaît,<0xFA>{COLOR}Énotre base à Frozen Heights{COLOR}Ë.",
+aidez-moi, mais s'il vous plaît,<0xFA>{COLOR}Énotre base aux Hauteurs Gelées{COLOR}Ë.",
 0x007D7A4F,You put on the clothes.,You put on the clothes.,23,2,25,pokemon,dialogue,Vous mettez les vêtements.,
 0x007D7A67,"Your clothes are on the ground.
 Would you like to put them on?","Your clothes are on the ground.
@@ -24372,7 +24370,7 @@ superiors to hand out that HM to<0xFA>any trainers coming this way.<0xFB>Until t
 need to use that HM for <0xFC><0x01><0x06>Rock Climb<0xFC><0x01><0x08><0xFA>if you want to go to <0xFC><0x01><0x06>Seaport City<0xFC><0x01><0x08>.<0xFB>Just face that rock wall over
 there to use it.",252,4,256,pokemon,dialogue,"Mes supérieurs m'ont demandé de
 remettre ce HM à<0xFA>tous les entraîneurs venant par ici.<0xFB>Jusqu'à ce que le pont soit réparé,
-vous devrez utiliser ce HM pour<0xFA>Escalade si vous voulez vous rendre<0xFA>à {COLOR}ÉSeaport City{COLOR}Ë.<0xFB>Il suffit d'affronter cette paroi
+vous devrez utiliser ce HM pour<0xFA>Escalade si vous voulez vous rendre<0xFA>à {COLOR}ÉVille Portuaire{COLOR}Ë.<0xFB>Il suffit d'affronter cette paroi
 rocheuse au-dessus là pour<0xFA>l'utiliser.",
 0x007D8F5A,Which floor do you want?,Which floor do you want?,24,2,26,pokemon,dialogue,Quel étage souhaitez-vous ?,
 0x007D8F73,You're already on this floor.,You're already on this floor.,29,3,32,pokemon,dialogue,Tu es déjà à cet étage.,
@@ -25670,7 +25668,7 @@ this from me.",45,2,47,pokemon,dialogue,"Il te faut plus de place si tu veux
 it.","You should give that <0xFC><0x01><0x06>Pearl String
 <0xFC><0x01><0x08>to my fellow enthusiast in <0xFC><0x01><0x06>Dehara<0xFA>City<0xFC><0x01><0x08>.<0xFB>He'll pay a good deal of money for
 it.",124,4,128,pokemon,dialogue,"Tu devrais donner ce <0xFC><0x01><0x06>Chapelet
-Perles <0xFC><0x01><0x08>à mon collègue passionné de<0xFA><0xFC><0x01><0x06>Dehara City<0xFC><0x01><0x08>.<0xFB>Il te le rachètera à bon prix.",
+Perles <0xFC><0x01><0x08>à mon collègue passionné de<0xFA><0xFC><0x01><0x06>Ville de Dehara<0xFC><0x01><0x08>.<0xFB>Il te le rachètera à bon prix.",
 0x007EEE48,"No""
 You're no ghost""","No""
 You're no ghost""",20,3,23,pokemon,dialogue,"Non...
@@ -26670,7 +26668,7 @@ vanished without a trace.<0xFB>I immediately searched the
 warehouse for any stragglers, but<0xFA>but I was only able to find one<0xFA>grunt who remained behind.<0xFB>He informed me that all he knew,
 was that the Light of Ruin is<0xFA>heading somewhere in <0xFC><0x01><0x06>East Borrius<0xFC><0x01><0x08>.",580,2,582,pokemon,dialogue,"Beladonis : {COLOR}ËTu as raté,
 {PLAYER}.<0xFB>Comme prévu, j'attendais dehors
-l'entrepôt pour toi et {RIVAL},<0xFA>quand des silhouettes encapées sont<0xFA>sorties avec un grand Pokémon<0xFA>violet.<0xFB>J'étais prêt à les arrêter, quand
+l'entrepôt pour toi et {RIVAL},<0xFA>quand des silhouettes encapuchonnées sont<0xFA>sorties avec un grand Pokémon<0xFA>violet.<0xFB>J'étais prêt à les arrêter, quand
 le chef a crié quelque chose au<0xFA>Pokémon.<0xFA>Ensuite, ils ont disparu sans<0xFB>laisser de trace.
 J'ai fouillé l'entrepôt pour des<0xFB>traînards, mais je n'ai trouvé qu'un
 sbire resté.<0xFA>Il était seul.<0xFA>C'était tout.<0xFB>Il m'a dit seulement
@@ -26707,7 +26705,7 @@ Tous partis !",
 0x007F8248,"<0xFC><0x01><0x08><0xFD><0x01>!<0xFB>Where's the Light of Ruin?<0xFB>""<0xFB><0xFC><0x01><0x06>East Borrius<0xFC><0x01><0x08>?<0xFB>Then I need to hurry to <0xFC><0x01><0x06>Seaport
 City <0xFC><0x01><0x08>before the next boat leaves!","<0xFC><0x01><0x08><0xFD><0x01>!<0xFB>Where's the Light of Ruin?<0xFB>""<0xFB><0xFC><0x01><0x06>East Borrius<0xFC><0x01><0x08>?<0xFB>Then I need to hurry to <0xFC><0x01><0x06>Seaport
 City <0xFC><0x01><0x08>before the next boat leaves!",127,1,128,pokemon,dialogue,"<0xFC><0x01><0x08><0xFD><0x01> !<0xFB>Où est la Light of Ruin ?<0xFB>...<0xFB><0xFC><0x01><0x06>East Borrius<0xFC><0x01><0x08> ?<0xFB>Alors je dois me dépêcher d'aller à
-<0xFC><0x01><0x06>Seaport City <0xFC><0x01><0x08>avant le départ du<0xFA>prochain bateau !",
+<0xFC><0x01><0x06>Ville Portuaire <0xFC><0x01><0x08>avant le départ du<0xFA>prochain bateau !",
 0x007F885A,"Its a news report:<0xFB>The Terror Granbull, the gang
 responsible for terrorizing the<0xFA>citizens of Antisis City, has<0xFA>disappeared!<0xFB>Will this usher in a new age of
 peace and prosperity for the city,<0xFA>now that all crime has been wiped<0xFA>away?<0xFB>Citizens are encouraged to leave
@@ -26728,7 +26726,7 @@ all of Antisis City.","You wanna prove you're tough?
 Huh, boy?<0xFB>You're gonna wanna take on Big Mo.<0xFB>He's the biggest, toughest guy in
 all of Antisis City.",129,2,131,pokemon,dialogue,"Tu veux prouver que t'es un dur ?
 Hein, gamin ?<0xFB>Alors va te frotter à Big Mo.<0xFB>C'est le type le plus grand et le
-plus costaud de tout Antisis City.",
+plus costaud de tout Ville d'Antisis.",
 0x007F8BA7,"You wanna prove you're tough?
 Huh, girly?<0xFB>You're gonna wanna take on Big Mo.<0xFB>He's the biggest, toughest guy in
 all of Antisis City.","You wanna prove you're tough?
@@ -26871,7 +26869,7 @@ gang that used to run Antisis City.<0xFB>After the Black Ferrothorn kicked
 them out, they left this base<0xFA>abandoned.<0xFB>We fixed it up when we came, and
 even replaced the hole to the sewer<0xFA>with stairs!",228,2,230,pokemon,dialogue,"Cette base appartenait à l'ancien
 gang qui gérait Antisis.<0xFB>Après que les Black Ferrothorn les
-ont virés, ils ont laissé la base<0xFA>abandonée.<0xFB>On l'a retapée, et on a même
+ont virés, ils ont laissé la base<0xFA>abandonnée.<0xFB>On l'a retapée, et on a même
 remplacé le trou vers les égouts<0xFA>par des escaliers !",
 0x007F9C81,"<0xFC><0x01><0x08>It may not look like much right
 now, but once we take out the Black<0xFA>Ferrothorn, we'll fix it up.<0xFB>You're more than welcome to stick
@@ -27086,7 +27084,7 @@ et tes Pokémon !",
 kinds of Pokémon have shown up.","Since we built this sewer, all
 kinds of Pokémon have shown up.",62,5,67,pokemon,description,"Depuis la construction des égouts,
 toutes sortes de Pokémon sont venus.",
-0x007FBEE1,I looost!,I looost!,9,3,12,pokemon,dialogue,J'ai perduu !,
+0x007FBEE1,I looost!,I looost!,9,3,12,pokemon,dialogue,J'ai perdu !,
 0x007FBEEB,"Isn't it fun how shouting in a
 sewer makes your voice echo?","Isn't it fun how shouting in a
 sewer makes your voice echo?",59,4,63,pokemon,dialogue,"C'est marrant comme la voix fait
@@ -27162,7 +27160,7 @@ moi, Barbs ?<0xFB>Je dirige les Black Ferrothorn !<0xFB>Je suis les Black Ferrot
 0x007FCDE1,"Barbs: <0xFC><0x01><0x08>Let's see who the real
 toughest chump in Antisis City is!","Barbs: <0xFC><0x01><0x08>Let's see who the real
 toughest chump in Antisis City is!",67,3,70,pokemon,dialogue,"Barbs : <0xFC><0x01><0x08>Voyons qui est le vrai
-caïd d'Antisis City !",
+caïd d'Ville d'Antisis !",
 0x007FCE25,"Chaw ha ha ha!
 You don't disappoint <0xFD><0x01>!","Chaw ha ha ha!
 You don't disappoint <0xFD><0x01>!",39,2,41,pokemon,dialogue,"Chaw ha ha ha !
@@ -29026,7 +29024,7 @@ point.<0xFB>I was planning on sending him to
 confront these <0xB1>Shadows<0xB2> and stop<0xFA>them before they reach Moltres.",194,2,196,pokemon,dialogue,"Arthur : <0xFC><0x01><0x08>Je pense que Jax est capable
 de résoudre ce problème.<0xFB>Il a fait ses preuves
 jusqu'ici.<0xFB>Je comptais l'envoyer affronter ces
-<0xB1>Ombres<0xB2> et les arrêter avant<0xFA>qu'elles n'atteignent Moltres.",
+<0xB1>Ombres<0xB2> et les arrêter avant<0xFA>qu'elles n'atteignent Sulfura.",
 0x008CDB97,"Log: <0xFC><0x01><0x08>Of course.<0xFB>I'm sure the police are already on
 their way, but his assistance could<0xFA>be invaluble to them.","Log: <0xFC><0x01><0x08>Of course.<0xFB>I'm sure the police are already on
 their way, but his assistance could<0xFA>be invaluble to them.",111,2,113,pokemon,description,"Log : {COLOR}ËBien sûr.<0xFB>La police doit déjà être en route,
@@ -29072,7 +29070,7 @@ doomed""","We're running out of time,
 Mountain<0xFC><0x01><0x08> and save <0xFC><0x01><0x06>Zapdos<0xFC><0x01><0x08>!<0xFB>If it's captured too, we'll all be
 doomed""",143,3,146,pokemon,dialogue,"Le temps presse,
 <0xFD><0x01>.<0xFB>Tu dois te dépêcher d'aller à
-<0xFC><0x01><0x06>Thundercap Mountain<0xFC><0x01><0x08> et sauver<0xFA><0xFC><0x01><0x06>Zapdos<0xFC><0x01><0x08> !<0xFB>S'il est capturé aussi, nous sommes
+<0xFC><0x01><0x06>Mont Thundercap<0xFC><0x01><0x08> et sauver<0xFA><0xFC><0x01><0x06>Électhor<0xFC><0x01><0x08> !<0xFB>S'il est capturé aussi, nous sommes
 tous condamnés...",
 0x008CDF4B,"With all three legendary Pokémon
 in their grasp, The Shadows are<0xFA>only momemnts away from releasing<0xFA>the dark force.<0xFB>Jax is in <0xFC><0x01><0x06>Dehara City<0xFC><0x01><0x08> waiting to
@@ -29235,7 +29233,7 @@ téléportés aux Ruins of Void.<0xFB>J'ai donc tenté de m'y rendre
 également.<0xFB>Cependant, comme je n'ai pas de
 Pokémon, je n'ai pas pu y accéder.<0xFB>Dis-moi, <0xFD><0x01>, que vous est-il
 arrivé à tous les deux de l'autre<0xFA>côté de ce portail ?<0xFB>...<0xFB>...<0xFB>Je vois...<0xFB>Dans ce cas, je pense que le mieux
-est d'aller à <0xFC><0x01><0x06>Vivill Town<0xFC><0x01><0x08><0xFA>et d'aider les Ombres.<0xFB>Quand eux et la Light of Ruin
+est d'aller à <0xFC><0x01><0x06>Bourg Vivill<0xFC><0x01><0x08><0xFA>et d'aider les Ombres.<0xFB>Quand eux et la Light of Ruin
 s'affronteront, ce sera l'occasion<0xFA>parfaite d'intervenir et de tous<0xFA>les arrêter.<0xFB>Va aider les Ombres dans leur
 dernière mission.<0xFB>Une fois la victoire acquise, je
 t'attendrai dehors avec une équipe<0xFA>de policiers pour mettre fin à<0xFA>cette folie.",
@@ -30137,7 +30135,7 @@ attack. It will
 strike first.         ","The user extends
 its shadow to
 attack. It will
-strike first.         ",69,3,72,pokemon,description,"Etend son ombre
+strike first.         ",69,3,72,pokemon,description,"Étend son ombre
 pour attaquer.
 Frappe toujours
 en premier.",
@@ -30174,7 +30172,7 @@ faster than the eye
 can follow.","The user trades held
 items with the foe
 faster than the eye
-can follow.",71,3,74,pokemon,description,"Echange son objet
+can follow.",71,3,74,pokemon,description,"Échange son objet
 avec celui de
 l'ennemi à une
 vitesse fulgurante.",
@@ -30351,7 +30349,7 @@ body. It may also
 make the foe flinch.","The user crushes
 the foe with its
 body. It may also
-make the foe flinch.",72,3,75,pokemon,description,"Ecrase l'ennemi de
+make the foe flinch.",72,3,75,pokemon,description,"Écrase l'ennemi de
 tout son corps.
 Peut aussi
 l'apeurer.",
@@ -30813,7 +30811,7 @@ Sp. Atk stats of
 all Grass-type
 Pokémon are raised.",66,2,68,pokemon,description,"Augmente l'Attaque
 et l'Att. Spé de
-tous les Pokemon
+tous les Pokémon
 Plante.",
 0x00921CF1,"The Defense stat
 of all Grass-type
@@ -30822,7 +30820,7 @@ by a strange power.","The Defense stat
 of all Grass-type
 Pokémon is raised
 by a strange power.",72,3,75,pokemon,description,"Augmente la Défense
-de tous les Pokemon
+de tous les Pokémon
 Plante via une
 puissance étrange.",
 0x00921D3B,"The user's Sp. Atk
@@ -31184,7 +31182,7 @@ wave, the user
 damages same-type
 Pokemon in the
 surrounding area.",84,3,87,pokemon,description,"Onde étrange qui
-blesse les Pokemon
+blesse les Pokémon
 du même type dans
 les environs.
 ",
@@ -31263,7 +31261,7 @@ land and damages
 the opposing Pokemon
 with its power.",88,2,90,pokemon,description,"Puise l'énergie de
 la terre et blesse
-les Pokemon
+les Pokémon
 adverses avec
 celle-ci.",
 0x00922A21,Takes one hit with no damage.,,29,2,31,pokemon,other,Encaisse un coup sans dégâts.,
@@ -31792,7 +31790,7 @@ suie noire en cas de danger.",,64,104,168,pokemon,description,,
 0x00961B8E, ???,,4,4,8,pokemon,dialogue,,
 0x00961B93,   Fire,,7,3,10,pokemon,other,Feu,
 0x00964160,Own move type: Fairy,Own move type: Fairy,20,12,32,pokemon,other,Type de la capacité : Fee,
-0x00964180,Own Pokémon type: Fairy,Own Pokémon type: Fairy,23,9,32,pokemon,other,Type du Pokemon : Fee,
+0x00964180,Own Pokémon type: Fairy,Own Pokémon type: Fairy,23,9,32,pokemon,other,Type du Pokémon : Fee,
 0x009641A0,"Effect of foe's move on own Pokémon:<0xFB>   <0xF9><0x15>: Fighting, Bug, Fairy<0xFB>   <0xF9><0x16>: Ghost, Dark<0xFB>   <0xF9>á: Psychic","Effect of foe's move on own Pokémon:<0xFB>   <0xF9><0x15>: Fighting, Bug, Fairy<0xFB>   <0xF9><0x16>: Ghost, Dark<0xFB>   <0xF9>á: Psychic",98,14,112,pokemon,description,Effet cap. adverse :<0xFB>   {CIRCLE_DOT}: Com/Ins/Fee<0xFB>   {TRIANGLE}: Spe/Ten<0xFB>   {BIG_MULT_X}: Psy,
 0x00964210,"Effect on the opposing Pokémon:<0xFB>   <0xF9><0x15>: Normal, Rock, Steel, Ice, Dark<0xFB>   <0xF9><0x16>: Flying, Poison, Bug, Psychic,<0xFA>       Fairy<0xFB>   <0xF9>á: Ghost","Effect on the opposing Pokémon:<0xFB>   <0xF9><0x15>: Normal, Rock, Steel, Ice, Dark<0xFB>   <0xF9><0x16>: Flying, Poison, Bug, Psychic,<0xFA>       Fairy<0xFB>   <0xF9>á: Ghost",132,12,144,pokemon,description,Effet sur l'ennemi :<0xFB>   {CIRCLE_DOT}: Nor/Roc/Aci/Gla/Ten<0xFB>   {TRIANGLE}: Vol/Poi/Ins/Psy<0xFA>       Fee<0xFB>   {BIG_MULT_X}: Spe,
 0x009642A0,"Effect of foe's move on own Pokémon:<0xFB>   <0xF9><0x15>: Flying, Psychic, Fairy<0xFB>   <0xF9><0x16>: Rock, Bug, Dark","Effect of foe's move on own Pokémon:<0xFB>   <0xF9><0x15>: Flying, Psychic, Fairy<0xFB>   <0xF9><0x16>: Rock, Bug, Dark",89,7,96,pokemon,description,Effet cap. adverse :<0xFB>   {CIRCLE_DOT}: Vol/Psy/Fee<0xFB>   {TRIANGLE}: Roc/Ins/Ten,
@@ -32135,7 +32133,7 @@ puissance !",
 0x0096C02D,"<0xFD><0x0F> became fully
 charged due to its Power Herb!","<0x52><0xFD><0x0F> se ha cargado
 gracias a su Hierba <0x12>nica!",46,2,48,pokemon,dialogue,"<0xFD><0x0F> se charge à fond
-grace à son Herbe Pouvoir !",
+grâce à son Herbe Pouvoir !",
 0x0096C02F," became fully
 charged due to its Power Herb!",,44,2,46,pokemon,dialogue,,
 0x0096C05C,"<0xFD><0x0F> switched
@@ -32301,8 +32299,8 @@ poder de <0xFD><0x14>!",36,2,38,pokemon,dialogue,"Le <0xFD><0x16> renforce
 reduced <0xFD><0x14>'s power!",,27,2,29,pokemon,dialogue,"Le <0xFD><0x13> de <0xFD><0x16>
 réduit la puissance de <0xFD><0x14> !",
 0x0096CC3C,"<0xFD><0x13> Mega Evolved
-into Mega <0xFD><0x34>!",,29,2,31,pokemon,dialogue,"<0xFD><0x13> Mega-Évolue
-en Mega <0xFD><0x34><0x34> !",
+into Mega <0xFD><0x34>!",,29,2,31,pokemon,dialogue,"<0xFD><0x13> Méga-Évolue
+en Méga <0xFD><0x34><0x34> !",
 0x0096CC5A,"<0xFD><0x39>'s fervent wish
 has reached <0xFD> !","<0xFD><0x39>'s fervent wish
 has reached <0xFD> !",33,2,35,pokemon,dialogue,"Le voeu de {STRING}
@@ -32386,7 +32384,7 @@ du remplaçant par Pouvoir Z !",
 restored by the Z-Power!","<0xFD><0x13>'s HP was
 restored by the Z-Power!",36,1,37,pokemon,dialogue,"Les PV de <0xFD><0x13>
 sont restaurés par le Pouvoir Z !",
-0x009A436F,Select a Pokémon.,Select a Pokémon.,17,2,19,pokemon,location,Choisis un Pokemon.,
+0x009A436F,Select a Pokémon.,Select a Pokémon.,17,2,19,pokemon,location,Choisis un Pokémon.,
 0x00A34F61,Keeps user and allies awake.,Mantiene a todos despiertos.,28,1,29,pokemon,other,Garde lanceur et alliés éveillés.,
 0x00A34F7E,Multi-hit moves hit five times.,Múltiples golpes pegan 5 veces.,31,2,33,pokemon,description,Multi-coups frappent 5 fois.,
 0x00A34F9E,Turns electricity into Speed.,"Absorbe electric, sube Veloc.",29,2,31,pokemon,other,Élec -> Vitesse.,
@@ -32396,7 +32394,7 @@ sont restaurés par le Pouvoir Z !",
 0x00A35005,mon.,,4,2,6,pokemon,other,,
 0x00A3500A,Critical hits land more often.,Golpe crítico con frecuencia.,30,2,32,pokemon,other,Critiques plus fréquents.,
 0x00A35029,Boosts critical hits.,Sube golpe crítico.,21,2,23,pokemon,location,Booste les coups critiques.,
-0x00A3503F,Heals upon switching out.,Se cura al cambiar.,25,2,27,pokemon,other,Soigne en changeant de Pokemon.,
+0x00A3503F,Heals upon switching out.,Se cura al cambiar.,25,2,27,pokemon,other,Soigne en changeant de Pokémon.,
 0x00A35059,Status moves hit first.,Movimiento afecta.,23,2,25,pokemon,other,Cap. statut en priorité.,
 0x00A35071,Boosts same type attacks.,Sube Ataque al ser igual.,25,2,27,pokemon,other,Renforce les attaques de même type.,
 0x00A3508B,Prevents Defense reduction.,Evita reducción de Defensa.,27,2,29,pokemon,location,Empêche de baisser la Défense.,
@@ -32434,7 +32432,7 @@ sont restaurés par le Pouvoir Z !",
 0x00A353BB,Fainting damages the foe.,Desmayo daña al rival.,25,2,27,pokemon,other,Blesse l'ennemi en mourant.,
 0x00A353D5,May disable a foe's move.,Desactiva mov. del rival.,25,2,27,pokemon,other,Désactive une capacité.,
 0x00A353E7,s move.,,7,2,9,pokemon,other,,
-0x00A353EF,Lowers the foe's Speed if hit.,Baja Velocidad tras golpe.,30,2,32,pokemon,other,Baisse Vit. du Pokemon touché.,
+0x00A353EF,Lowers the foe's Speed if hit.,Baja Velocidad tras golpe.,30,2,32,pokemon,other,Baisse Vit. du Pokémon touché.,
 0x00A353FE,s Speed if hit.,,15,2,17,pokemon,other,,
 0x00A3540E,Spreads with contact.,Propaga al contacto.,21,3,24,pokemon,location,Se propage au contact.,
 0x00A35424,Hurts to touch.,,15,2,17,pokemon,location,Mal au contact.,
@@ -32474,7 +32472,7 @@ sont restaurés par le Pouvoir Z !",
 0x00A35781,KOing a foe ups highest stat.,Un KO sube la stat más alta.,29,2,31,pokemon,other,K.O. booste stat max.,
 0x00A3579F,May poison any type.,Envenena a todos.,20,2,22,pokemon,other,Peut empoisonner tout type.,
 0x00A357B4,Takes one hit with no damage.,Recibe golpe sin sufrir daño.,29,2,31,pokemon,other,Encaisse un coup sans dégâts.,
-0x00A357D2,Switches out below half HP.,Switches out below half HP.,27,2,29,pokemon,other,Change de Pokemon sous 1/2 PV.,
+0x00A357D2,Switches out below half HP.,Switches out below half HP.,27,2,29,pokemon,other,Change de Pokémon sous 1/2 PV.,
 0x00A357EE,Halves contact hits. Weak to Fire.,Halves contact hits. Weak to Fire.,34,2,36,pokemon,description,Divise dégâts contact. Faible Feu.,
 0x00A35825,Transforms below half HP.,Se transforma a bajos PS.,25,2,27,pokemon,other,Se transforme sous 1/2 PV.,
 0x00A3583F,Changes type to match Memory.,Cambia tipo según el Disco.,29,2,31,pokemon,other,Change le type selon la Mémoire.,
@@ -32509,7 +32507,7 @@ sur Champ Herbu.",
 0x00A35B16,Hits up Speed but drop Defense.,"Sube Vel, pero baja su Defensa.",31,2,33,pokemon,description,"Monte Vitesse, baisse Défense.",
 0x00A35B36,Doubles weight.,Dobla el peso.,15,2,17,pokemon,location,Double le poids.,
 0x00A35B46,Halves weight.,Mitad de peso.,14,1,15,pokemon,location,Divise le poids.,
-0x00A35B55,Flinching raises Speed.,Retrocede y sube Vel.,23,1,24,pokemon,location,L'apeurement augmente la Vitesse.,
+0x00A35B55,Flinching raises Speed.,Retrocede y sube Vel.,23,1,24,pokemon,location,Être apeuré augmente la Vitesse.,
 0x00A35B6D,Transforms upon entering battle.,Transforms upon entering battle.,32,1,33,pokemon,description,Se transforme en entrant au combat.,
 0x00A35B8E,Dark-type hits raise Attack.,Tipo Siniestro sube Ataque.,28,2,30,pokemon,other,Coups Ténèbres montent l'Attaque.,
 0x00A35BAB,Scary move types raise Speed.,Ataque aterrador sube Veloc.,29,1,30,pokemon,other,Types effrayants boostent Vitesse.,
@@ -32595,7 +32593,7 @@ booster l'Att. Spé.",
 frappent d'abord.",
 0x00A3635F,Tail moves hit first.,Tail moves hit first.,21,2,23,pokemon,other,"Capacités de queue
 frappent d'abord.",
-0x00A36375,Drill moves land critical hits.,Drill moves land critical hits.,31,2,33,pokemon,description,"Capacités percantes
+0x00A36375,Drill moves land critical hits.,Drill moves land critical hits.,31,2,33,pokemon,description,"Capacités perçantes
 font des critiques.",
 0x00A363A9,Stench,,6,11,17,pokemon,other,Puanteur,
 0x00A363BA,Drizzle,,7,10,17,pokemon,other,Crachin,
@@ -35305,7 +35303,7 @@ constituer son butin.",,67,89,156,pokemon,description,Pestilence,
 0x00A43929,All Badges,All Badges,10,2,12,pokemon,location,All Badges,
 0x00A43934,Game Clear,Game Clear,10,2,12,pokemon,location,Game Clear,
 0x00A4393F,Custom Flag,Custom Flag,11,1,12,pokemon,location,Custom Flag,
-0x00A4394B,Pokedexes,Pokedexes,9,2,11,pokemon,other,Pokedexes,
+0x00A4394B,Pokedexes,Pokedexes,9,2,11,pokemon,other,Pokédex,
 0x00A43955,Fly Spots,Fly Spots,9,2,11,pokemon,location,Fly Spots,
 0x00A4395F,Useful Key Items,Useful Key Items,16,2,18,pokemon,location,Useful Key Items,
 0x00A43970,General Useful Items,General Useful Items,20,2,22,pokemon,location,General Useful Items,
@@ -50102,7 +50100,7 @@ the holder from effects caused by
 making contact with the enemy.","Protege al Pokémon de los efectos
 que le producirá el contacto
 directo en combate.",98,3,101,pokemon,dialogue,"Objet à tenir protégeant des effets
-dûs au contact avec l'ennemi.
+dus au contact avec l'ennemi.
 ",
 0x00EB4317,"mon held item that protects
 the holder from effects caused by
@@ -54445,9 +54443,9 @@ est devenue un bidonville criminel,<0xFA>les touristes ne viennent plus<0xFA>à 
 Port is mainly used for the import<0xFA>of goods from other regions.<0xFB>Once dropped off here, the goods
 are moved along to Fallshore City<0xFA>where they can then be distributed<0xFA>across Borrius.","A diferencia de Ciudad Porto, el
 puerto de Antisis se utiliza para<0xFA>la importación de mercancías de<0xFA>otras regiones.<0xFB>Una vez que lleguen aquí los
-productos, se trasladan a Ciudad<0xFA>Costera para que sean distribuidos.",214,2,216,pokemon,description,"Contrairement à Seaport City, le
+productos, se trasladan a Ciudad<0xFA>Costera para que sean distribuidos.",214,2,216,pokemon,description,"Contrairement à la Ville Portuaire, le
 Port d'Antisis sert surtout à<0xFA>l'importation de marchandises<0xFA>d'autres régions.<0xFB>Une fois déposées ici, elles sont
-acheminées vers Fallshore City,<0xFA>où elles peuvent ensuite être<0xFA>distribuées dans tout Borrius.",
+acheminées vers la Ville de Fallshore,<0xFA>où elles peuvent ensuite être<0xFA>distribuées dans tout Borrius.",
 0x01EDED96,across Borrius.,,15,2,17,pokemon,other,,
 0x01EDEDA6,"The yellow barricades are moved
 routinely throughout the day to<0xFA>correspond to the arrivals of<0xFA>different shipments.<0xFB>If you want to get to an area
@@ -55620,7 +55618,7 @@ esos momentos?<0xFB>Deseo otra batalla para poder
 observar tus resultados.<0xFB>Dime, <0x51>le complacerías todo eso a
 este viejo?",747,3,750,pokemon,dialogue,"Ooh hoo hoo... ça fait des années...
 Des années, dis-je, à ressentir<0xFA>l'envie de croiser un<0xFA>autre Dresseur, encore.<0xFB>Bonjour à nouveau, et mes plus
-chaleuses félicitations pour être<0xFA>Champion.<0xFB>Et, je suppose, mes plus sincères
+chaleureuses félicitations pour être<0xFA>Champion.<0xFB>Et, je suppose, mes plus sincères
 remerciements d'avoir débarrassé le<0xFA>monde d'un terrible mal.<0xFB>Je me souviens du dernier combat,
 j'ai eu la chance de te croiser<0xFA>vers la fin de ta quête<0xFA>vers la Ligue Pokémon.<0xFB>Tu étais comme un Papilusion,
 tout juste sorti, sans autre choix<0xFA>que d'attendre que ses ailes sèchent<0xFA>et se raffermissent.<0xFB>Mais maintenant, je veux voir ta
@@ -56303,7 +56301,7 @@ a nice gift!","<0x51>Subiste toda la montaña desde
 Ciudad Cráter?<0xFB><0x52>Entonces estoy segura de que
 nuestro recibidor te ha dado un<0xFA>bonito regalo!",133,3,136,pokemon,dialogue,"Ouh là...
 Tu as l'air épuisé.<0xFB>Tu as grimpé toute la montagne
-depuis Crater Town ?<0xFB>Alors je suis sûr que notre
+depuis Bourg Cratère ?<0xFB>Alors je suis sûr que notre
 accueillant t'a offert un cadeau !",
 0x01EE7BD8,"m sure our greeter gave you
 a nice gift!",,40,3,43,pokemon,dialogue,,
@@ -56840,7 +56838,7 @@ come see me tomorrow!<0xFB>I'll focus even harder and win next
 time, for sure!","Estaba pensando en desafiar a
 <0xFC><0x01><0x06>Alice<0xFC><0x01><0x04>, la Líder de Gimnasio de<0xFA>Ciudad Ventisca, con eso, pero creo<0xFA>que eso está mejor contigo.<0xFB>Si quieres volver a hacer esto, <0x52>ven
 a verme mañana!",228,2,230,pokemon,dialogue,"Je pensais défier <0xFC><0x01><0x06>Alice<0xFC><0x01><0x04>, la
-Championne de Blizzard City, avec<0xFA>ça, mais je crois que ça te sera<0xFA>plus utile à toi.<0xFB>Si tu veux remettre ça, reviens
+Championne de Ville Blizzard, avec<0xFA>ça, mais je crois que ça te sera<0xFA>plus utile à toi.<0xFB>Si tu veux remettre ça, reviens
 me voir demain !<0xFB>La prochaine fois, je serai encore
 plus concentrée et je gagnerai !",
 0x01EEA427,"ll focus even harder and win next
@@ -57631,7 +57629,7 @@ de llevar muchas Poké Ball.<0xFB>Sin embargo, la mayoría no sigue ese
 camino porque no tienen la<0xFA><0xFC><0x01><0x06>Medalla Visión<0xFC><0x01><0x08>.<0xFB>Sin ella, no puedes cortar ese
 <0xFC><0x01><0x06>árbol<0xFC><0x01><0x08> frente a la entrada.",420,2,422,pokemon,dialogue,"Cette grotte mène hors de la ville
 vers la Route 6.<0xFB>De là, c'est tout droit par la
-Route 7, puis Frost Mountain,<0xFA>et la Route 8 jusqu'à <0xFC><0x01><0x06>Blizzard City<0xFC><0x01><0x08>.<0xFB>Si tu comptes grimper jusque
+Route 7, puis Mont Givre,<0xFA>et la Route 8 jusqu'à <0xFC><0x01><0x06>Ville Blizzard<0xFC><0x01><0x08>.<0xFB>Si tu comptes grimper jusque
 là-haut, prends beaucoup de<0xFA>Poké Balls pour capturer des Pokémon.<0xFB>Mais peu de gens passent par là,
 car ils n'ont pas le<0xFA><0xFC><0x01><0x06>Badge Vision<0xFC><0x01><0x08>.<0xFB>Sans lui, impossible d'abattre
 l'<0xFC><0x01><0x06>Arbre Frêle<0xFC><0x01><0x08> devant<0xFA>l'entrée.",
@@ -57661,7 +57659,7 @@ didn't you?<0xFB>That <0xFD><0x02> you're wearing
 gave it away.","<0x52>Escuché que alguien en <0xFC><0x01><0x06>Ciudad
 Tarmi<0xFC><0x01><0x04> te enseña el poder de la<0xFA><0xFC><0x01><0x06>Megaevolución<0xFC><0x01><0x04>!<0xFB>Pero eso ya lo sabías, <0x51>verdad?<0xFB>La <0xFD><0x02> que llevas puesta
 te delata.",167,2,169,pokemon,dialogue,"Il paraît que quelqu'un à
-<0xFC><0x01><0x06>Tarmigan Town<0xFC><0x01><0x04> enseigne<0xFA>l'art de la <0xFC><0x01><0x06>Méga-Evolution<0xFC><0x01><0x04> !<0xFB>Mais tu le savais déjà,
+<0xFC><0x01><0x06>Tarmiganville<0xFC><0x01><0x04> enseigne<0xFA>l'art de la <0xFC><0x01><0x06>Méga-Évolution<0xFC><0x01><0x04> !<0xFB>Mais tu le savais déjà,
 pas vrai ?<0xFB>Le <0xFD><0x02> que tu portes
 t'a trahi.",
 0x01EED8DE,"re wearing
@@ -57980,7 +57978,7 @@ a move?",,42,3,45,pokemon,dialogue,,
 0x01EEF42C,mon needs tutoring?,,19,2,21,pokemon,dialogue,,
 0x01EEF440,Which move should I teach?,,26,2,28,pokemon,dialogue,Quel move dois-je enseigner ?,
 0x01EEF45B,"<0xFC><0x01><0x02><0xFD><0x01> handed over a
-Heart Scale in exchange.",<0xFC><0x01><0x02>Has entregado Escama Corazón.,44,3,47,pokemon,description,"<0xFC><0x01><0x02><0xFD><0x01> remet une Ecaille Coeur
+Heart Scale in exchange.",<0xFC><0x01><0x02>Has entregado Escama Corazón.,44,3,47,pokemon,description,"<0xFC><0x01><0x02><0xFD><0x01> remet une Écaille Coeur
 en échange.",
 0x01EEF460," handed over a
 Heart Scale in exchange.",,39,3,42,pokemon,description,,
@@ -60300,7 +60298,7 @@ de Pokémon de la <0xFC><0x01><0x06>región de<0xFA>Alola<0xFC><0x01><0x08>.<0xF
 Cube Corp, et surtout la<0xFA>Société Scientifique.<0xFB>Ils mènent des expériences cruelles
 sur les Pokémon, y compris<0xFA>ceux dont je m'occupe !<0xFB>Hmm... ? J'ai des {COLOR}Éécailles neigeuses{COLOR}Ë
 collées à mes vêtements ?<0xFB>Oui, c'est vrai... j'aide à nourrir
-l'un de leurs essais importés,<0xFA>quand leur population a augmenté<0xFA>ici à Borrius, à {COLOR}ÉIcicle Cave{COLOR}Ë.<0xFB>J'ai oublié leurs noms... c'est un
+l'un de leurs essais importés,<0xFA>quand leur population a augmenté<0xFA>ici à Borrius, à {COLOR}ÉGrotte Stalactite{COLOR}Ë.<0xFB>J'ai oublié leurs noms... c'est un
 Pokémon de la {COLOR}Érégion<0xFA>Alola{COLOR}Ë...<0xFB>Comment s'appellent-ils ?",
 0x01EF3A1F,What were they called?,,22,3,25,pokemon,dialogue,,
 0x01EF3A36,"No"" that wasn't it""",<0x52>Ese no es!,19,2,21,pokemon,other,Non... ce n'était pas ça...,
@@ -60324,7 +60322,7 @@ Sandslash aren't native to Borrius.<0xFB>Someone always has to be here, to
 make sure they don't interfere with<0xFA>the other Pokémon in Icicle Cave""<0xFB>After all, it's impossible to capture
 the whole population now, anyway.",240,2,242,pokemon,description,"Ces Sabelette et Sablaireau de type
 Glace ne sont pas natifs de Borrius.<0xFB>Quelqu'un doit toujours être là pour
-éviter qu'ils n'embêtent<0xFA>les autres Pokémon d'Icicle Cave...<0xFB>De toute façon, il est impossible
+éviter qu'ils n'embêtent<0xFA>les autres Pokémon d'Grotte Stalactite...<0xFB>De toute façon, il est impossible
 capturer toute la population.",
 0x01EF3C36,"Down with Cube Corp.!
 Down with the Science Society!",<0x52>Todos caerán muy pronto!,52,2,54,pokemon,dialogue,"À bas Cube Corp. !
@@ -60904,7 +60902,7 @@ usándolo!",631,2,633,pokemon,dialogue,"Ce petit machin s'appelle un
 de {COLOR}É12 heures{COLOR}Ë.<0xFB>En d'autres termes, la nuit devient
 le jour, et le jour devient nuit !<0xFB>La plupart du temps, du moins,
 hoh, hoh...<0xFB>On dit que son créateur a récolté
-enormément d'énergie dans<0xFA>un endroit appelé... euh...{PAUSE}î la Grotte<0xFA>de l'Être...<0xFB>De l'énergie venant d'un Pokémon
+énormément d'énergie dans<0xFA>un endroit appelé... euh...{PAUSE}î la Grotte<0xFA>de l'Être...<0xFB>De l'énergie venant d'un Pokémon
 qui peut distordre le temps, nommé...<0xFA>hmm, oui...{PAUSE}î Dialga.<0xFB>Ça ne fonctionne que si son Dresseur
 en capture un et a collecté<0xFA>passivement son énergie...<0xFA>hoh, hoh.<0xFB>...<0xFB>Hoh, hoh ? Tu dis l'avoir capturé ?
 Et dans cette grotte en plus !<0xFB>Alors je pense que tu peux
@@ -60953,7 +60951,7 @@ on you yet!",,36,3,39,pokemon,dialogue,,
 0x01EF6DFE,"This person was found just outside
 the entrance to Icicle Cave.","Encontrado cerca de la entrada
 a Cueva Icicle.",63,2,65,pokemon,description,"Cette personne se trouvait juste
-devant l'entrée d'Icicle Cave.",
+devant l'entrée d'Grotte Stalactite.",
 0x01EF6E3E,"This person was found just up the
 stairs.","Encontrada subiendo las
 escaleras.",41,2,43,pokemon,description,"Cette personne était juste en haut
@@ -61452,7 +61450,7 @@ great as they can.",,25,2,27,pokemon,other,,
 captured by a Ranger hailing from<0xFA>Crater Town.<0xFB>Where did he get it from, though?<0xFB>Last I remember, there were no wild
 Clefairy around here""<0xFB>No wonder the one in the yard looks
 so sad"" it has no friends!",<0x51>Qué te trae a Cuidados Pokémon?,234,2,236,pokemon,dialogue,"Le Mélofée dans la cour a été
-capturé par un Ranger venu de<0xFA>Crater Town.<0xFB>Mais d'où l'a-t-il eu ?<0xFB>À ma connaissance, il n'y avait
+capturé par un Ranger venu de<0xFA>Bourg Cratère.<0xFB>Mais d'où l'a-t-il eu ?<0xFB>À ma connaissance, il n'y avait
 pas de Mélofée sauvage ici...<0xFB>Pas étonnant qu'il soit si triste...
 il n'a pas d'amis !",
 0x01EF89E7, it has no friends!,,19,2,21,pokemon,dialogue,,
@@ -61461,7 +61459,7 @@ the yard that was left by a Ranger<0xFA>hailing from Crater Town.<0xFB>Where did
 Clefairy around here""","There used to be a Clefairy out in
 the yard that was left by a Ranger<0xFA>hailing from Crater Town.<0xFB>Where did he get it from, though?<0xFB>Last I remember, there were no wild
 Clefairy around here""",187,2,189,pokemon,dialogue,"Il y avait jadis un Mélofée dans
-la cour, laissé par un Ranger<0xFA>venu de Crater Town.<0xFB>Mais d'où l'a-t-il eu ?<0xFB>À ma connaissance, il n'y avait
+la cour, laissé par un Ranger<0xFA>venu de Bourg Cratère.<0xFB>Mais d'où l'a-t-il eu ?<0xFB>À ma connaissance, il n'y avait
 pas de Mélofée sauvage ici...",
 0x01EF8AB7,"There are some horrible Trainers
 out there who breed, and breed,<0xFA>and breed"" and when they're done<0xFA>breeding, they release any Pokémon<0xFA>they don't want!<0xFB>How despicable!<0xFB>You're not one of those Trainers,
@@ -61824,7 +61822,7 @@ illustrious businessman in<0xFA>Seaport City.<0xFB>The apartment is in high dema
 I'm afraid you will not be able to<0xFA>rent it for yourself.","Este apartamento es propiedad de un
 ilustre empresario de Ciudad<0xFA>Porto.<0xFB>El apartamento tiene una gran
 demanda, por lo que no puede ser<0xFA>alquilado por nadie.",163,2,165,pokemon,dialogue,"Cet appartement appartient à un
-illustre homme d'affaires de<0xFA>Seaport City.<0xFB>L'appartement est très demandé,
+illustre homme d'affaires de<0xFA>Ville Portuaire.<0xFB>L'appartement est très demandé,
 je crains donc que tu ne puisses<0xFA>pas le louer pour toi.",
 0x01EFA591,rent it for yourself.,,21,2,23,pokemon,dialogue,,
 0x01EFA5A7,"I'm pretty lucky for scoring
@@ -61845,7 +61843,7 @@ Laisse-moi jouer avec ton Pokémon !",
 <0xFD><0x02>.",
 0x01EFA670,"But"" but"" but in Magnolia Town, I
 play so much with the Pokémon!<0xFB>They've all become super <0xFC><0x01><0x06>friendly<0xFC><0x01><0x08>!","Pero"" pero"" <0x52>pero en Pueblo Magnolia
-juego mucho con los Pokémon!",105,3,108,pokemon,dialogue,"Mais... mais... mais à Magnolia Town,
+juego mucho con los Pokémon!",105,3,108,pokemon,dialogue,"Mais... mais... mais à Bourg Magnolia,
 je joue tellement avec les Pokémon !<0xFB>Ils sont tous devenus super
 <0xFC><0x01><0x06>amicaux<0xFC><0x01><0x08> !",
 0x01EFA6DA,I can't play with an Egg!<0xFB>I wanna play with a Pokémon!,<0x52>Oye!<0xFB><0x52>No puedo jugar con un Huevo!,54,3,57,pokemon,dialogue,Je ne peux pas jouer avec un OEuf !<0xFB>Je veux jouer avec un Pokémon !,
@@ -62187,7 +62185,7 @@ any Yellow Shards.<0xFB>You can find them popping up
 occassionally in the Great Desert.<0xFB>If you come back with any, I'll be
 happy to teach your Pokémon.",178,4,182,pokemon,dialogue,"Il semblerait que tu n'aies aucun
 Tesson Jaune.<0xFB>On en voit parfois apparaître
-dans le Great Desert.<0xFB>Si tu en rapportes, je serai ravie
+dans le Grand Désert.<0xFB>Si tu en rapportes, je serai ravie
 d'instruire tes Pokémon.",
 0x01EFBCB8,"I am a balloon man!<0xFB>And I wish to see a balloon
 Pokémon!","<0x52>Soy un hombre de globos!
@@ -62232,7 +62230,7 @@ para el desierto, pero te hará un<0xFA>buen trabajo protegiendo tu<0xFA>cuerpo.
 que consigas un buen par de<0xFA><0xFC><0x01><0x06>Gafas Aislantes<0xFC><0x01><0x08>.<0xFB>De hecho, te podría dar las mías,
 pero primero demuestra lo fuerte<0xFA>que eres venciendo el <0xFC><0x01><0x06>Gimnasio<0xFC><0x01><0x08>.",606,2,608,pokemon,dialogue,"Laisse-moi te dire un truc,
 jeune homme.<0xFB>À l'est d'ici se trouve un
-vast désert.<0xFB>Il est si incroyable qu'on
+vaste désert.<0xFB>Il est si incroyable qu'on
 l'appelle le {COLOR}ÉGrand Désert{COLOR}Ë.<0xFB>Les mots ne suffisent pas
 à le décrire !<0xFB>Mais il est très difficile à
 traverser sans le bon équipement.<0xFB>Alors ne pense pas pouvoir
@@ -62921,7 +62919,7 @@ come here of your own free will.<0xFB>It may be a bit odd, considering
 where we are right now, but could<0xFA>you battle me?",541,3,544,pokemon,dialogue,"Oh, bonjour... Je suis Nex.<0xFB>Euh... qu'est-ce que tu fais ici,
 au juste ?<0xFB>Moi, j'attendais l'arrivée d'un
 ami, mais...<0xFB>Pardon ? Personne d'autre ne
-vivrait ici, dans le Distortion<0xFA>World ?<0xFB>Ha ha... c'est vrai, mais mon ami
+vivrait ici, dans le Distorsion<0xFA>World ?<0xFB>Ha ha... c'est vrai, mais mon ami
 est un cas particulier...<0xFB>Mais s'il n'est pas encore là,
 c'est qu'il ne viendra sans doute<0xFA>jamais...<0xFB>Rien d'étonnant : ce n'est pas
 comme si le temps passait ici,<0xFA>pas vraiment.<0xFB>Dis...<0xFB>Il faut être d'une grande force
@@ -62969,7 +62967,7 @@ diaria y no quiere que nadie lo<0xFA>moleste.<0xFB>Intenta enfrentarte al Líder
 Pokémon que cambie el clima con<0xFA><0xFC><0x01><0x06>Torm. Arena<0xFC><0x01><0x08> o <0xFC><0x01><0x06>Despejar<0xFC><0x01><0x08> podría<0xFA>ayudarte.<0xFB>Un amigo de mi abuelo está
 cambiando un <0xFC><0x01><0x06>Ducklett<0xFC><0x01><0x08> con<0xFA><0xFC><0x01><0x06>Despejar<0xFC><0x01><0x08>.",443,3,446,pokemon,dialogue,"Désolé, mais tu ne peux pas entrer
 ici pour le moment.<0xFB>Mon grand-père fait sa sieste
-quotidienne et ne veut pas qu'on<0xFA>le dérange.<0xFB>Essaie donc l'<0xFC><0x01><0x06>Arène de Dresco Town<0xFC><0x01><0x08>
+quotidienne et ne veut pas qu'on<0xFA>le dérange.<0xFB>Essaie donc l'<0xFC><0x01><0x06>Arène de Bourg Dresco<0xFC><0x01><0x08>
 en attendant.<0xFB>Il y a pas mal de brouillard à
 l'intérieur, alors un Pokémon avec<0xFA>une capacité qui change la météo,<0xFA>comme <0xFC><0x01><0x06>Tempête de Sable<0xFC><0x01><0x08> ou <0xFC><0x01><0x06>Anti-Brume<0xFC><0x01><0x08>,<0xFA>pourrait vraiment t'aider.<0xFB>Maintenant que j'y pense, un ami de
 mon grand-père cherchait récemment<0xFA>à échanger un <0xFC><0x01><0x06>Ducklett<0xFC><0x01><0x08> qui connaît<0xFA>Anti-Brume...",
@@ -63942,7 +63940,7 @@ Epidimy Town.<0xFB>Just look at the grass here!","Dicen que la hierba siempre es
 verde del otro lado.<0xFB>Eso es especialmente cierto en
 Ciudad Epidimia.",124,2,126,pokemon,dialogue,"On dit que l'herbe est toujours
 plus verte ailleurs.<0xFB>C'est particulièrement vrai à
-Epidimy Town.<0xFB>Regarde un peu l'herbe ici !",
+Ville d'Epidimy.<0xFB>Regarde un peu l'herbe ici !",
 0x01F033B8,Just look at the grass here!,,28,2,30,pokemon,dialogue,,
 0x01F033D5,"Epidimy Town is the epitome
 of bliss!<0xFB>""<0xFB>""<0xFB>What? You don't think it's funny?
@@ -63971,7 +63969,7 @@ dangereux, il y a<0xFA>plein de mauvais hommes là-bas.",
 through that hole down the stairs.<0xFB>It's really dangerous, so if you
 go, make sure you have lots of<0xFA>Revives and Paralyze Heals!","Puedes acceder a Mt. Trueno a través
 de ese agujero que baja por las<0xFA>escaleras.<0xFB>Ten cuidado, <0x52>es muy peligroso ese
-lugar!",157,2,159,pokemon,dialogue,"Thundercap Mt. est accessible par
+lugar!",157,2,159,pokemon,dialogue,"Mont Thundercap est accessible par
 ce trou en bas des escaliers.<0xFB>C'est très dangereux, alors si tu
 y vas, prends plein de Rappels et<0xFA>d'Anti-Paras !",
 0x01F035B3,Revives and Paralyze Heals!,,27,2,29,pokemon,dialogue,,
@@ -64003,10 +64001,10 @@ peak where Zapdos roosts.<0xFB>I don't recommend you use the
 entrance by Antisis City, though.<0xFB>That place is messed up""","Mt. Trueno tiene dos entradas
 diferentes: una en Ciudad Epidimia<0xFA>y otra en Ciudad Antisis.<0xFB>Estas entradas te llevan a la cima
 donde se posa Zapdos.<0xFB>Si embargo, no te recomiendo que
-uses la entrada de Ciudad Antisis.<0xFB>Está en malas condiciones""",242,3,245,pokemon,dialogue,"Thundercap Mt. a deux entrées
-différentes : l'une à Epidimy Town,<0xFA>et l'autre à Antisis City.<0xFB>Ces entrées mènent au sommet où
-Zapdos a élu domicile.<0xFB>Mais je te déconseille d'utiliser
-l'entrée près d'Antisis City.<0xFB>Cet endroit est complètement
+uses la entrada de Ciudad Antisis.<0xFB>Está en malas condiciones""",242,3,245,pokemon,dialogue,"Mont Thundercap a deux entrées
+différentes : l'une à Ville d'Epidimy,<0xFA>et l'autre à Ville d'Antisis.<0xFB>Ces entrées mènent au sommet où
+Électhor a élu domicile.<0xFB>Mais je te déconseille d'utiliser
+l'entrée près d'Ville d'Antisis.<0xFB>Cet endroit est complètement
 détraqué...",
 0x01F0383E,"I tried exploring Thundercap Mt.
 through the nearby entrance once.<0xFB>The opening where Zapdos is said to
@@ -64183,7 +64181,7 @@ Tellement décevant...",
 Thundercap Mt.?<0xFB>If you do, you're going to
 need these!","<0x51>Planeas explorar el Mt. Trueno?
 Si es así, <0x52>necesitarás esto!",79,3,82,pokemon,dialogue,"Tu comptes explorer
-Thundercap Mt. ?<0xFB>Si oui, tu vas avoir
+Mont Thundercap ?<0xFB>Si oui, tu vas avoir
 besoin de ça !",
 0x01F042A6,"re going to
 need these!",,23,3,26,pokemon,dialogue,,
@@ -64241,8 +64239,8 @@ at the peak!","Si estás trabajando en una Pokédex,
 <0x52>ve a <0xFC><0x01><0x06>Mt. Trueno<0xFC><0x01><0x04>!<0xFB>Allí viven muchos Pokémon de tipo
 Eléctrico.<0xFB><0x52>Incluso se dice que Zapdos se posa
 en la cima!",158,2,160,pokemon,dialogue,"Si tu remplis un Pokédex, va faire
-un tour à <0xFC><0x01><0x06>Thundercap Mt.<0xFC><0x01><0x04> !<0xFB>Toutes sortes de Pokémon de type
-Electrik rares y vivent.<0xFB>On dit même que Zapdos niche au
+un tour à <0xFC><0x01><0x06>Mont Thundercap<0xFC><0x01><0x04> !<0xFB>Toutes sortes de Pokémon de type
+Electrik rares y vivent.<0xFB>On dit même que Électhor niche au
 sommet !",
 0x01F045B1,"s even said that Zapdos roosts
 at the peak!",,43,2,45,pokemon,dialogue,,
@@ -64407,7 +64405,7 @@ by the <0xFC><0x01><0x06>KBT Expressway<0xFC><0x01><0x04> in <0xFC><0x01><0x06>T
 right now.<0xFB>He's probably off clearing his head
 by the <0xFC><0x01><0x06>KBT Expressway<0xFC><0x01><0x04> in <0xFC><0x01><0x06>Tehl Town<0xFC><0x01><0x04>.",126,2,128,pokemon,description,"Mel, le Champion d'Arène, n'est pas
 là en ce moment.<0xFB>Il est sans doute parti se changer
-les idées près de la <0xFC><0x01><0x06>KBT Expressway<0xFC><0x01><0x04><0xFA>à <0xFC><0x01><0x06>Tehl Town<0xFC><0x01><0x04>.",
+les idées près de la <0xFC><0x01><0x06>Autoroute KBT<0xFC><0x01><0x04><0xFA>à <0xFC><0x01><0x06>Ville de Tehl<0xFC><0x01><0x04>.",
 0x01F0513A,"My hidden power is telling me that
 you want this!",<0x51>Quieres mi Poder Oculto?,49,1,50,pokemon,dialogue,"Ma puissance cachée me dit que
 tu veux ça !",
@@ -65135,7 +65133,7 @@ they're all in on the revolution.","<0x52>Manos a la obra!<0xFB>Todo lo que nece
 curarte <0xFC><0x01><0x06><0xFD><0x02><0xFC><0x01><0x04> en un Centro Pokémon.<0xFB>Aparte del de Ciudad Antisis, todos
 están involucrados en la revolución.",162,2,164,pokemon,dialogue,"Travailleurs de tous les pays,
 unissez-vous !<0xFB>Tu n'as qu'à te soigner <0xFC><0x01><0x06><0xFD><0x02><0xFC><0x01><0x04>
-fois dans n'importe quel Centre<0xFA>Pokémon.<0xFB>Excepté celui d'Antisis City, ils
+fois dans n'importe quel Centre<0xFA>Pokémon.<0xFB>Excepté celui d'Ville d'Antisis, ils
 participent tous à la révolution.",
 0x01F0808B,re all in on the revolution.,,28,2,30,pokemon,other,,
 0x01F080A8,"Another proletarian brainwashed by
@@ -66227,7 +66225,7 @@ Entonces tendré que sufrir en<0xFA>silencio""",65,1,66,pokemon,description,"Oh,
 0x01F0CD3A,"Wonderful, wonderful.<0xFB>The closest Poké Mart is in
 Bellin Town, and they should be<0xFA>well stocked up with Antidotes!","<0x52>Perfecto! La Tienda Pokémon más
 cercana está en Ciudad Bellin,<0xFA><0x52>deberían tener muchos Antídotos!",113,1,114,pokemon,dialogue,"Merveilleux, merveilleux.<0xFB>La Boutique Pokémon la plus proche
-est à Bellin Town, et ils devraient<0xFA>avoir plein d'Antidotes en stock !",
+est à Bourg Bellin, et ils devraient<0xFA>avoir plein d'Antidotes en stock !",
 0x01F0CD8C,well stocked up with Antidotes!,,31,1,32,pokemon,dialogue,,
 0x01F0CDAC,"Wonderful, wonderful.<0xFB>I'm sure the Champion knows where
 to find a simple Antidote, yes?<0xFB>Hurry back now!","<0x52>Perfecto! La Tienda Pokémon más
@@ -66237,7 +66235,7 @@ trouver un simple Antidote, oui ?<0xFB>Reviens vite !",
 0x01F0CE14,"The closest Poké Mart is in
 Bellin Town, and they should be<0xFA>well stocked up with <0xFC><0x01><0x06>Antidotes<0xFC><0x01><0x08>!","<0x52>Perfecto! La Tienda Pokémon más
 cercana está en Ciudad Bellin,<0xFA><0x52>deberían tener muchos Antídotos!",97,3,100,pokemon,dialogue,"Le Poké Mart le plus proche est à
-Bellin Town, et il devrait être<0xFA>bien fourni en <0xFC><0x01><0x06>Antidotes<0xFC><0x01><0x08> !",
+Bourg Bellin, et il devrait être<0xFA>bien fourni en <0xFC><0x01><0x06>Antidotes<0xFC><0x01><0x08> !",
 0x01F0CE76,"I'm sure the Champion knows where
 to find a simple <0xFC><0x01><0x06>Antidote<0xFC><0x01><0x08>, yes?<0xFB>Hurry back now!","I'm sure the Champion knows where
 to find a simple <0xFC><0x01><0x06>Antidote<0xFC><0x01><0x08>, yes?<0xFB>Hurry back now!",87,1,88,pokemon,dialogue,"Je suis sûr que le Champion sait où
@@ -68334,8 +68332,7 @@ from Mirskle!",,38,2,40,pokemon,dialogue,,
 traded Pokémon up to <0x34> 26 keep<0xFA>listenin' to your fine, fine<0xFA>commands""<0xFB>Oh, and take this cool, cool TM,
 toooo""","Es la <0xFC><0x01><0x06>Medalla Hoja<0xFC><0x01><0x08>.<0xFB>Esa pequeña cosa útil hace que
 todos los Pokémon intercambiados<0xFA>con Nv. 26 obedezcan tus órdenes""<0xFB>Ah, y esto también, una MT.",171,3,174,pokemon,dialogue,"Voilà le {COLOR}ÉBadge Feuille{COLOR}Ë.<0xFB>Ce p'tit truc utile fait que les
-Pokémon échangés jusqu'au Nv. <0x34> 26<0xFA>écoutent tes superbes<0xFA>ordres...<0xFB>Oh, et prends aussi cette super CT,
-aussiii...",
+Pokémon échangés jusqu'au Nv. <0x34> 26<0xFA>écoutent tes superbes<0xFA>ordres...<0xFB>Oh, et prends aussi cette super, super CT...",
 0x01F16082,"That's a Technical Machine.<0xFB>That teaches your Pokémon a
 move over and over, to as many<0xFA>fine, fine Pokémon as you want.<0xFB>So don't be shy about spreadin'
 the love.<0xFB>Preach it, <0xFD><0x02>!<0xFB>Anyway"" that move's <0xFC><0x01><0x06>Grass Knot<0xFC><0x01><0x08>.<0xFB>I knew this guy once.
@@ -68593,7 +68590,7 @@ Up and at 'em!","<0xFC><0x01><0x06>Golpe Aéreo<0xFC><0x01><0x04> es un ataque c
 ataques fallan demasiadas veces!<0xFB><0x12>salo si no tienes ganas de intentar
 caminar contra el viento en una<0xFA>batalla.<0xFB>Ahora bien, esa mirada me dice que
 tienes lugares donde estar y cosas<0xFA>que hacer.<0xFB><0x52>No dejes que nada te detenga!
-<0x52>Suerte!",311,3,314,pokemon,dialogue,"{COLOR}ÉAéropique{COLOR}Ç est une capacité
+<0x52>Suerte!",311,3,314,pokemon,dialogue,"{COLOR}ÉAéropiqué{COLOR}Ç est une capacité
 qui touche à coup sûr.<0xFB>C'est utile quand tes capacités
 ratent un peu trop<0xFA>souvent !<0xFB>Utilise-la si tu n'as pas envie de
 rentrer dans le vent<0xFA>en combat.<0xFB>Bon, ton regard me dit que tu as
@@ -71091,7 +71088,7 @@ to Vivill Town when it's completed.<0xFB>We're working as fast as we can,
 but I have no idea when we'll<0xFA>get there.","Esta sección del túnel irá a Pueblo
 Villa cuando esté terminada.<0xFB>Estamos trabajando lo más rápido
 que podemos, pero no sé cuando lo<0xFA>estará.",144,2,146,pokemon,dialogue,"Cette section du tunnel ira jusqu'à
-Vivill Town une fois terminée.<0xFB>On travaille aussi vite que
+Bourg Vivill une fois terminée.<0xFB>On travaille aussi vite que
 possible, mais je ne sais pas du<0xFA>tout quand on y arrivera.",
 0x01F224CC,get there.,,10,2,12,pokemon,other,,
 0x01F224D7,"The walls of the tunnel just keep
@@ -71122,7 +71119,7 @@ flooding the KBT Expressway!<0xFB>We're going on strike until we can
 be assured it won't happen again!","<0x52>Estamos cansados de que el agua
 inunde la Autopista RBT!<0xFB><0x52>La huelga durará hata que estemos
 seguros de que no volverá a pasar!",127,3,130,pokemon,dialogue,"On en a assez de l'eau qui inonde
-la KBT Expressway !<0xFB>On fait grève jusqu'à avoir la
+l'Autoroute KBT !<0xFB>On fait grève jusqu'à avoir la
 garantie que ça ne se reproduira<0xFA>plus !",
 0x01F22742,t happen again!,,15,3,18,pokemon,dialogue,,
 0x01F22752,"No one's getting through here until
@@ -71386,7 +71383,7 @@ Dresco Town?<0xFB>That marker will automatically move
 when you have a new destination.","<0x51>Notaste la X amarilla sobre Pueblo
 Dresco?<0xFB>Ese marcador se moverá
 automáticamente cuando tengas un<0xFA>nuevo destino.",114,3,117,pokemon,dialogue,"Tu as remarqué le X jaune sur
-Dresco Town ?<0xFB>Ce marqueur se déplacera tout seul
+Bourg Dresco ?<0xFB>Ce marqueur se déplacera tout seul
 quand tu auras une nouvelle<0xFA>destination.",
 0x01F23789,"That marker will automatically move
 when you have a new destination.",,68,3,71,pokemon,dialogue,,
@@ -71403,7 +71400,7 @@ de Misiones, permíteme registrar<0xFA>mi solicitud anterior.<0xFB>Primero, debe
 los Pokémon en la Pokédex de<0xFA>Borrius.<0xFB><0x52>O como se conoce Pokédex Borrius
 Oriental!<0xFB>Los Pokémon que solo aparecen en
 Borrius Oriental quedan excluidos.",412,2,414,pokemon,dialogue,"Tu as remarqué le X jaune sur
-Dresco Town ?<0xFB>Ce marqueur se déplacera tout seul
+Bourg Dresco ?<0xFB>Ce marqueur se déplacera tout seul
 quand tu auras une nouvelle<0xFA>destination.<0xFB>Et tu sais quoi ?<0xFB>Maintenant que tu as ton propre
 Mission Log, laisse-moi y noter ma<0xFA>requête de tout à l'heure !<0xFB>D'abord, essaie de voir tous les
 Pokémon du Pokédex de Borrius.<0xFB>Ou, comme on l'appelle plus
@@ -71421,7 +71418,7 @@ Natasha Log, lives in <0xFC><0x01><0x06>Blizzard City<0xFC><0x01><0x08>.<0xFB>If
 upgrade your Pokédex and make it<0xFA>easier for you to encounter<0xFA>Pokémon you are looking for.","Además, mi hermana menor, Natasha
 Long, vive en <0xFC><0x01><0x06>Ciudad Ventisca<0xFC><0x01><0x08>.<0xFB>Si alguna vez la conoces, ella
 puede mejorar tu Pokédex y<0xFA>facilitarte el encuentro con los<0xFA>Pokémon que estás buscando.",195,2,197,pokemon,dialogue,"De plus, ma petite soeur,
-Natasha Log, vit à <0xFC><0x01><0x06>Blizzard City<0xFC><0x01><0x08>.<0xFB>Si tu la rencontres un jour, elle
+Natasha Log, vit à <0xFC><0x01><0x06>Ville Blizzard<0xFC><0x01><0x08>.<0xFB>Si tu la rencontres un jour, elle
 pourra améliorer ton Pokédex pour<0xFA>t'aider à trouver plus facilement<0xFA>les Pokémon que tu cherches.",
 0x01F23A75,mon you are looking for.,,24,2,26,pokemon,dialogue,,
 0x01F23A8E,"Oh!<0xFB>My memory seems to be going"" I
@@ -71987,7 +71984,7 @@ Game east of Polder Town.","Veo que no tienes racha en el Juego
 Safari.<0xFB>Puedes jugar una ronda en el Juego
 Safari al este de Pueblo Polder.",115,3,118,pokemon,dialogue,"Je vois que tu n'as aucune série en
 cours au Jeu Safari.<0xFB>Tu peux faire une partie du Jeu Safari
-à l'est de Polder Town.",
+à l'est de Bourg Polder.",
 0x01F26300,"You can play a round of the Safari
 Game east of Polder Town.",,60,3,63,pokemon,dialogue,,
 0x01F2633D,"I see you were only able to get a
@@ -72207,7 +72204,7 @@ réel.<0xFB>Je suis en paix...",
 0x01F27214,Vivllll!,,8,2,10,pokemon,dialogue,,
 0x01F2721D,"<0xFC><0x01><0x02>The Vivillon returned to its
 Trainer in Magnolia Town.",,57,2,59,pokemon,description,"<0xFC><0x01><0x02>Le Prismillon retourne à son
-Dresseur à Magnolia Town.",
+Dresseur à Bourg Magnolia.",
 0x01F27220,"The Vivillon returned to its
 Trainer in Magnolia Town.",,54,2,56,pokemon,description,,
 0x01F27257,Meadow,Floral,6,2,8,pokemon,other,Pré,
@@ -72355,7 +72352,7 @@ would like me to style?","Sí, soy la famosa estilista Furfrou
 conocida como Furfitré.<0xFB>Por <0xFC><0x01><0x06><0xB7><0xFD><0x02><0xFC><0x01><0x04>, puedo darle a  tu
 Furfrou un corte único.<0xFB>Dime, <0x51>tienes un <0xFC><0x01><0x06>Furfrou<0xFC><0x01><0x04> que
 quiera un corte nuevo?",175,3,178,pokemon,dialogue,"Oui, je suis la styliste star
-de Couafarel, Furfité.<0xFB>Pour {COLOR}É¥{STR_VAR_1}{COLOR}Ç, je donne à ton
+de Couafarel, Furfrité.<0xFB>Pour {COLOR}É¥{STR_VAR_1}{COLOR}Ç, je donne à ton
 Couafarel un style unique.<0xFB>As-tu le {COLOR}ÉCouafarel{COLOR}Ç que tu
 veux que je coiffe?",
 0x01F2797A," you
@@ -73248,7 +73245,7 @@ serait pas aussi connue!",
 Miltank!<0xFB>I bet the Moomoo Misses is all up
 in tears right about now""","<0x52>Unos tipos se llevaron a nuestros
 Miltank!<0xFB>Apuesto a que Missa está llorando
-ahora mismo""",101,1,102,pokemon,dialogue,"Des voyous ont enlevé notre Ecrémeuh !<0xFB>Madame Moomoo doit être en larmes à
+ahora mismo""",101,1,102,pokemon,dialogue,"Des voyous ont enlevé notre Écrémeuh !<0xFB>Madame Meumeu doit être en larmes à
 l'heure qu'il est...",
 0x01F2B7AD,<0xFC><0x01><0x06>Moooooo!,"<0xFC><0x01><0x06>Moooooo""",11,2,13,pokemon,dialogue,{COLOR}ÉMoooooo!,
 0x01F2B7B0,Moooooo!,,8,2,10,pokemon,dialogue,,
@@ -73993,7 +73990,7 @@ perfecto.<0xFB>Estamos adelantando el trabajo.<0xFB>No estoy seguro del por qué
 nuestro objetivo parece haberse<0xFA>trasladado antes de lo previsto.<0xFB>Con los Súper Soldados mejorados y
 el Paquete que necesitamos hoy,<0xFA>comenzaremos con todo.",263,1,264,pokemon,description,"Ah, Marlon, parfait timing.<0xFB>Nous avançons notre calendrier.<0xFB>Je ne sais pas pourquoi, mais notre
 cible semble s'être déplacée dans<0xFA>notre secteur plus tôt que prévu.<0xFB>Avec les Guerriers des Ombres
-améliorés et le colis requis arrive<0xFA>aufjourd'hui, nous pouvons
+améliorés et le colis requis arrivant<0xFA>aujourd'hui, nous pouvons
 lancer l'opération.",
 0x01F2E12D,"today, we can begin the operation.",,34,1,35,pokemon,description,,
 0x01F2E150,"Understood.<0xFB>There's just one more thing to
@@ -74494,7 +74491,7 @@ las detendrá antes de que lleguen<0xFA>a Moltres.",273,2,275,pokemon,dialogue,"
 ces <0xB1>Ombres<0xB2>.<0xFB>Jusqu'ici, il s'est montré être un
 Dresseur très capable...<0xFB>Et comme tu le sais, Euler, je le
 forme pour être mon successeur,<0xFA>alors je crois qu'il est notre<0xFA>meilleur espoir.<0xFB>Il affrontera ces <0xB1>Ombres<0xB2> et les
-arrêtera avant qu'elles atteignent<0xFA>Moltres.",
+arrêtera avant qu'elles atteignent<0xFA>Sulfura.",
 0x01F3036C,Moltres.,,8,2,10,pokemon,other,,
 0x01F30375,"Of course.<0xFB>That seems like a very reasonable
 plan, Arthur.","<0x52>Ya veo!<0xFB>Parece un plan muy razonable,
@@ -74661,7 +74658,7 @@ Volcano - and be quick.<0xFB>I don't think it's anything Jax can't
 handle, but he may appreciate<0xFA>your help.","<0xFD><0x01> ve al Volcán Ceniza lo
 más rápido.<0xFB>No creo que sea algo que Jax no
 pueda manejar, pero puede que<0xFA>necesite tu ayuda.",128,2,130,pokemon,dialogue,"En route, <0xFD><0x01>, direction
-Cinder Volcano, et fais vite.<0xFB>Je ne pense pas que ce soit
+Volcan Cendreux, et fais vite.<0xFB>Je ne pense pas que ce soit
 au-dessus des forces de Jax, mais<0xFA>ton aide sera peut-être<0xFA>la bienvenue.",
 0x01F30FF1,your help.,,10,2,12,pokemon,dialogue,,
 0x01F30FFC,"Looks like I'm here.<0xFB>I'd better get moving, then.",Ya estoy aquí. <0x52>Hora de la acción!,49,3,52,pokemon,description,"On dirait que je suis arrivé.<0xFB>Je ferais mieux d'avancer, alors.",
@@ -74689,7 +74686,7 @@ plus routinière.<0xFB>Mission accomplie.<0xFB>En route.",
 0x01F31166,s move out.,,11,2,13,pokemon,other,,
 0x01F31172,"<0xFC><0x01><0x08>Stop right there, Shadow!<0xFB>Return Moltres back to where
 it belongs!","<0xFC><0x01><0x08><0x52>Alto ahí, Sombra!<0xFB><0x52>Devuelve a Moltres a donde
-pertenece!",69,1,70,pokemon,dialogue,"<0xFC><0x01><0x08>Arrête-toi tout de suite, Ombre !<0xFB>Remets Moltres là où est
+pertenece!",69,1,70,pokemon,dialogue,"<0xFC><0x01><0x08>Arrête-toi tout de suite, Ombre !<0xFB>Remets Sulfura là où est
 sa place !",
 0x01F3118F,"Return Moltres back to where
 it belongs!",,40,1,41,pokemon,dialogue,,
@@ -74734,7 +74731,7 @@ Just focus on the mission!",,43,2,45,pokemon,dialogue,,
 sorry for myself.<0xFB>I gotta chase after them""","<0xFC><0x01><0x08>No""<0xFC><0x08><0x18> se escaparon con Moltres""<0xFB><0x52>Ah! Este no es el momento de sentir
 lástima por mí mismo.<0xFB>Los perseguiré""",113,2,115,pokemon,dialogue,"{COLOR}ËNon...{PAUSE} ils se sont enfuis avec
 Sulfura...<0xFB>Argh ! Ce n'est pas le moment
-dem'apitoyer.<0xFB>Je dois les poursuivre...",
+de m'apitoyer.<0xFB>Je dois les poursuivre...",
 0x01F3145D,"<0xFC><0x01><0x08>Huh? Wait, you're""<0xFC><0x08><0x20> <0xFD><0x01>,
 I think?<0xFB>Did Grampa Arthur send you here?<0xFB>""<0xFB>Ah, so you were sent as backup.<0xFB>Jeez, I got embarrassed in front
 of you""","<0xFC><0x01><0x08><0x51>Eh? Espera, tú eres""
@@ -74773,12 +74770,12 @@ la route à la sortie.",
 <0xFC><0x01><0x06>first 3<0xFC><0x01><0x02> viable Pokémon in your<0xFA>party will be selected for battle.","<0xFC><0x01><0x02>Si estás en equipo con Jax, los
 <0xFC><0x01><0x06>Primeros 3<0xFC><0x01><0x02> Pokémon de tu grupo<0xFA>serán los que lucharán.",104,2,106,pokemon,dialogue,"{COLOR}ÁPendant l'équipe avec Jax, les {COLOR}É3
 premiers{COLOR}Á Pokémon valides de ton<0xFA>équipe seront sélectionnés pour
-lecombat.",
+le combat.",
 0x01F316CC,party will be selected for battle.,,34,2,36,pokemon,system,,
 0x01F316EF,"Let's get to the exit as quick as
 possible and stop the Shadows from<0xFA>escaping with Moltres!","<0x52>Lleguemos a la salida lo más antes
 posible y evitemos que las Sombras<0xFA>escapen con Moltres!",91,2,93,pokemon,dialogue,"Allons à la sortie aussi vite que
-possible et empêchons les Ombres<0xFA>de s'enfuir avec Moltres !",
+possible et empêchons les Ombres<0xFA>de s'enfuir avec Sulfura !",
 0x01F31734,escaping with Moltres!,,22,2,24,pokemon,dialogue,,
 0x01F3174B,"<0xFC><0x01><0x08>Where are you going, <0xFD><0x01>?
 The exit's the other way!","<0xFC><0x01><0x08><0x51>A dónde vas, <0xFD><0x01>?
@@ -74792,7 +74789,7 @@ salida, <0xFD><0x01>.<0xFB>Seguiré adelante. <0x52>No te demores!",86,1,87,poke
 sortie, {PLAYER}.<0xFB>Je passe devant. Ne reste pas trop
 en arrière !",
 0x01F317C1,t stay too far behind!,,22,1,23,pokemon,dialogue,,
-0x01F317D8,Staravia! Use Aerial Ace!,,25,1,26,pokemon,dialogue,Étourvol ! Utilise Aéropique !,
+0x01F317D8,Staravia! Use Aerial Ace!,,25,1,26,pokemon,dialogue,Étourvol ! Utilise Aéropiqué !,
 0x01F317F2,<0xFC><0x01><0x06>Ravia!,"<0xFC><0x01><0x06>Ravia""",9,1,10,pokemon,dialogue,{COLOR}ÉRavia!,
 0x01F317F5,Ravia!,,6,1,7,pokemon,dialogue,,
 0x01F317FC,<0xFC><0x01><0x06>Raptor!,"<0xFC><0x01><0x06>Raptor""",10,2,12,pokemon,dialogue,{COLOR}ÉRaptor!,
@@ -74816,7 +74813,7 @@ at stake here""","<0x51>Reinado sombrío de terror?
 a Moltres.<0xFB>Quizás tengas unas idea moralista de
 que lo que estamos haciendo es<0xFA><0xB1>malo<0xB2>, <0x52>pero estás equivocado!<0xFB>Simplemente no entiendes lo que está
 en juego aquí""",240,1,241,pokemon,dialogue,"<0xB1>Règne de terreur des Ombres<0xB2> ?
-Sérieusement ?<0xFB>Nous avons Moltres, et nous sommes
+Sérieusement ?<0xFB>Nous avons Sulfura, et nous sommes
 tout à fait en droit de le garder.<0xFB>Tu as peut-être l'idée bien-pensante
 que ce que nous faisons est<0xFA><0xB1>mal<0xB2>, mais tu as tort !<0xFB>Tu ne comprends simplement pas ce
 qui est en jeu ici...",
@@ -74842,7 +74839,7 @@ vete.<0xFB>Puedo detenerlos hasta que escapes
 con Moltres.",132,1,133,pokemon,dialogue,"Bien sûr, Ivory. Je contrôle la
 situation.<0xFB>Prends les Guerriers des Ombres et
 pars.<0xFB>Je peux retenir ce garçon jusqu'à
-ceque tu t'échappes avec Sulfura.",
+ce que tu t'échappes avec Sulfura.",
 0x01F31ABE,"I can hold off this boy until
 you escape with Moltres.",,54,1,55,pokemon,dialogue,,
 0x01F31AF5,"<0xFC><0x01><0x08><0xFD><0x01>!
@@ -74851,7 +74848,7 @@ at stake here, we have to blast<0xFA>through him and chase after Moltres!","<0xF
 <0x52>Ayúdame contra él!<0xFB>No me importa lo que él diga que
 está realmente en juego aquí,<0xFA><0x52>tenemos que atravesarlo y<0xFA>perseguir a Moltres!",138,3,141,pokemon,dialogue,"<0xFC><0x01><0x08><0xFD><0x01> !
 Aide-moi contre lui !<0xFB>Peu importe ce qu'il prétend être
-en jeu, on doit le balayer et<0xFA>foncer après Moltres !",
+en jeu, on doit le balayer et<0xFA>foncer après Sulfura !",
 0x01F31B5B,through him and chase after Moltres!,,36,3,39,pokemon,dialogue,,
 0x01F31B80,"So, we meet again, <0xFD><0x01>.<0xFB>I take it, then, you've decided to
 make it your business to interfere?<0xFB>That's unfortunate.<0xFB>But two of you trying to get
@@ -74922,7 +74919,7 @@ Legendary Pokémon left - <0xFC><0x01><0x06>Zapdos<0xFC><0x01><0x08>.<0xFB>It's 
 before the Shadows can capture it.","Ya veo"" esto no es bueno.<0xFB>En este punto, solo queda un Pokémon
 Legendario, <0xFC><0x01><0x06>Zapdos<0xFC><0x01><0x08>.<0xFB>Es imperativo que sea rescatado
 antes de que las Sombras puedan<0xFA>capturarlo.",171,1,172,pokemon,dialogue,"Je vois...<0xFC><0x08>î ce n'est pas bon.<0xFB>Il ne reste désormais plus qu'un
-seul Pokémon Légendaire,<0xFA><0xFC><0x01><0x06>Zapdos<0xFC><0x01><0x08>.<0xFB>Il est impératif de le secourir
+seul Pokémon Légendaire,<0xFA><0xFC><0x01><0x06>Électhor<0xFC><0x01><0x08>.<0xFB>Il est impératif de le secourir
 avant que les Ombres ne le<0xFA>capturent.",
 0x01F31F5C,"s imperative that it be rescued
 before the Shadows can capture it.",,66,1,67,pokemon,description,,
@@ -74977,7 +74974,7 @@ after all.",,41,2,43,pokemon,description,,
 0x01F323B2,"My Staravia's still tired from the
 battle earlier, but I should still<0xFA>be able to give you a lift back to<0xFA><0xFC><0x01><0x06>Cinder Volcano<0xFC><0x01><0x08>.<0xFB>Do you want me to do that?","Mi Staravia está cansado por la
 batalla de antes, pero aún debería<0xFA>poder llevarte de regreso al<0xFA><0xFC><0x01><0x06>Volcán Ceniza<0xFC><0x01><0x08>.<0xFB><0x51>Quieres que lo haga?",153,2,155,pokemon,dialogue,"Mon Staravia est encore fatigué du
-combat de tout à l'heure, mais je<0xFA>devrais pouvoir te ramener au<0xFA><0xFC><0x01><0x06>Cinder Volcano<0xFC><0x01><0x08>.<0xFB>Tu veux que je le fasse ?",
+combat de tout à l'heure, mais je<0xFA>devrais pouvoir te ramener au<0xFA><0xFC><0x01><0x06>Volcan Cendreux<0xFC><0x01><0x08>.<0xFB>Tu veux que je le fasse ?",
 0x01F32431,Do you want me to do that?,,26,2,28,pokemon,dialogue,,
 0x01F3244C,Let's head out right away.,Salgamos de inmediato.,26,3,29,pokemon,other,Partons immédiatement.,
 0x01F32450,s head out right away.,,22,3,25,pokemon,other,,
@@ -75040,7 +75037,7 @@ si tu n'arrives même pas à<0xFA>battre <0xFD><0x02> dans un simple combat ?",
 0x01F328B1, in a simple battle?,,20,2,22,pokemon,dialogue,,
 0x01F328C6,"<0xFC><0x01><0x04>Zeph, I'm a scientist.<0xFB>My best skills lie elsewhere.","<0xFC><0x01><0x04>Zeph, Soy Científica.
 Mi talento es otra cosa.",55,2,57,pokemon,dialogue,"{COLOR}ÇZeph, je suis scientifique.<0xFB>Mes meilleures compétences sont
-dansun autre domaine.",
+dans un autre domaine.",
 0x01F328E0,My best skills lie elsewhere.,,29,2,31,pokemon,dialogue,,
 0x01F328FE,"Sigh""<0xFC><0x08><0x18> very well.<0xFB>In the absence of anyone else,
 Houndoom and I will personally<0xFA>show you the meaning of pain.","<0x5C>Suspiro""<0x5D> Muy bien.<0xFB>En ausencia de nadie más, Houndoom y
@@ -75050,10 +75047,10 @@ Démolosse et moi allons<0xFA>t'apprendre ce qu'est la douleur.",
 0x01F3296E,"<0xFC><0x01><0x04>Zeph, I'm not sure Houndoom alone
 will be enough to beat <0xFD><0x02>""","<0xFC><0x01><0x04>Zeph, no estoy segura de que
 Houndoom pueda vencerle""",63,2,65,pokemon,description,"{COLOR}ÇZeph, je ne suis pas sûr que
-Demolosse suffise à battre {STR_VAR_1}...",
+Démolosse suffise à battre {STR_VAR_1}...",
 0x01F329AE,"You doubt me, Ivory?<0xFB>Houndoom and I are more than
 capable of finishing <0xFD><0x02> off.","<0x51>Dudas de mí, Ivory?<0xFB>Houndoom y yo somos más que capaces
-de vencerle.",78,2,80,pokemon,dialogue,"Tu doutes de moi, Ivory ?<0xFB>Demolosse et moi sommes largement
+de vencerle.",78,2,80,pokemon,dialogue,"Tu doutes de moi, Ivory ?<0xFB>Démolosse et moi sommes largement
 capables d'en finir avec <0xFD><0x02>.",
 0x01F329F7, off.,,5,2,7,pokemon,other,,
 0x01F329FD,"Now then, <0xFD><0x01>.<0xFB>I've been quite patient with you,
@@ -75069,13 +75066,13 @@ for my son, too""","Tengo que reconocértelo. Eres más
 fuerte de lo que esperaba.<0xFB>Eso me gusta de ti, <0xFD><0x01>.
 Esa fuerza es algo que también<0xFA>deseaba para mi hijo""",146,2,148,pokemon,dialogue,"Je dois te reconnaître ça. Tu es
 plus fort que je ne le pensais.<0xFB>J'aime bien ça chez toi, <0xFD><0x02>.<0xFB>Cette force, je la voulais aussi
-pourmon fils...",
+pour mon fils...",
 0x01F32B21,"<0xFC><0x01><0x04>Zeph! Marlon has just sent word.<0xFB>He's finished with his investigation
 of the green-hatted boy.<0xFB>You'll want to hear this.","<0xFC><0x01><0x04><0x52>Zeph! Marlon acaba de enviar un
 mensaje.<0xFB>Ha terminado su investigación sobre
 aquel chico""<0xFB>De seguro querrás escuchar.",123,2,125,pokemon,dialogue,"{COLOR}ÇZeph ! Marlon vient d'envoyer un
 message.<0xFB>Il a terminé son enquête sur le
-garçonau chapeau vert.<0xFB>Tu vas vouloir entendre ça.",
+garçon au chapeau vert.<0xFB>Tu vas vouloir entendre ça.",
 0x01F32B87,ll want to hear this.,,21,2,23,pokemon,other,,
 0x01F32B9D,"Yes, what is it?<0xFB>""<0xFB>I see""","<0x51>Sí, que es eso?
 Ya veo""",25,2,27,pokemon,dialogue,"Oui, qu'y a-t-il ?<0xFB>...<0xFB>Je vois...",
@@ -75269,9 +75266,9 @@ ahora!",763,3,766,pokemon,dialogue,"Mmm ? <0xFD><0x01>...<0xFC><0x08>î c'est to
 cherches encore plus de Pokémon<0xFA>par ici ?<0xFB>Enfin, c'est ce que je fais ici,
 de toute façon.<0xFB>Côté progression, j'ai déjà
 enregistré plus de 100 espèces.<0xFB>Tu connais la soeur de Log ?
-Elle vit à <0xFC><0x01><0x06>Blizzard City<0xFC><0x01><0x08>.<0xFB>Et quand elle a vu où en était mon
-Pokédex, elle l'a amélioré avec la<0xFA>fonction <0xFC><0x01><0x06>DexNav<0xFC><0x01><0x08>, alors trouver<0xFA>des Pokémon rares est devenu un<0xFA>jeu d'enfant !<0xFB>...<0xFB>Je vois...<0xFC><0x08><0x18> il te faut la CS Eclate-Roc
-de Blizzard City...<0xFB>...<0xFC><0x08><0x18>et tu as décidé toi aussi d'avoir
+Elle vit à <0xFC><0x01><0x06>Ville Blizzard<0xFC><0x01><0x08>.<0xFB>Et quand elle a vu où en était mon
+Pokédex, elle l'a amélioré avec la<0xFA>fonction <0xFC><0x01><0x06>DexNav<0xFC><0x01><0x08>, alors trouver<0xFA>des Pokémon rares est devenu un<0xFA>jeu d'enfant !<0xFB>...<0xFB>Je vois...<0xFC><0x08><0x18> il te faut la CS Éclate-Roc
+de Ville Blizzard...<0xFB>...<0xFC><0x08><0x18>et tu as décidé toi aussi d'avoir
 une dent contre les Ombres, hein ?<0xFB>Eh bien, pendant que tu jouais les
 héros, je suis devenu bien plus<0xFA>fort.<0xFB>Tu n'as plus aucune chance contre
 moi, <0xFD><0x01>.<0xFB>En fait, je vais te le prouver, ici
@@ -75317,7 +75314,7 @@ the KBT Expressway.","<0x52><0xFD><0x01>, casi olvido mostrarte
 algo!<0xFB>Por favor, ven conmigo a la
 Autopista RBT.",79,3,82,pokemon,dialogue,"<0xFD><0x01>, j'ai oublié de te
 montrer quelque chose !<0xFB>Viens avec moi sur la
-KBT Expressway, s'il te plaît.",
+Autoroute KBT, s'il te plaît.",
 0x01F33F29,"Please, come with me to
 the KBT Expressway.",,43,3,46,pokemon,description,,
 0x01F33F55,"For some reason, the entrance to
@@ -75574,8 +75571,8 @@ and darkness!",,51,1,52,pokemon,dialogue,,
 0x01F34ED3,"<0xFC><0x01><0x04>Interesting.<0xFB>Then I ask you: why would we ever
 do that?<0xFB>Send our own region into chaos?","<0xFC><0x01><0x04>Ya veo""<0xFB>Entonces te pregunto, <0x51>por qué
 haríamos eso?<0xFB><0x51>Llevar nuestra región al caos?",90,1,91,pokemon,dialogue,"{COLOR}ÇIntéressant.<0xFB>Alors je te demande : pourquoi
-ferions- nous ça ?<0xFB>Plonger notre propre région dans
-lechaos ?",
+ferions-nous ça ?<0xFB>Plonger notre propre région dans
+le chaos ?",
 0x01F34F0E,Send our own region into chaos?,,31,1,32,pokemon,dialogue,,
 0x01F34F2E,"<0xFC><0x01><0x08>What?<0xFB>Well""<0xFC><0x08><0x20> rule the world?<0xFB>The dark force is an incredible
 power, and""","<0xFC><0x01><0x08><0x51>Qué?<0xFB>Bueno"" <0x51>gobernar el mundo?<0xFB>La Fuerza Oscura es un poder
@@ -76318,9 +76315,9 @@ last ounce of energy to summon one<0xFA>from another region""<0xFB>Just bring me
 pero hazlo bien esta vez.<0xFB>Invoca un Zapdos.<0xFB>No me importa desde dónde debes
 convocarlo.<0xFB>Incluso si tienes que gastar hasta
 el último gramo de energía para<0xFA>convocar a uno de otra región""<0xFB>Sólo tráeme un Zapdos.<0xFB><0x51>ENTENDIDO?",259,2,261,pokemon,dialogue,"Hoopa, je sais que c'est difficile
-pour toi, mais fais ça bien<0xFA>cette fois.<0xFB>Invoque un Zapdos.<0xFB>Peu m'importe d'où tu dois
+pour toi, mais fais ça bien<0xFA>cette fois.<0xFB>Invoque un Électhor.<0xFB>Peu m'importe d'où tu dois
 l'invoquer.<0xFB>Même si tu dois dépenser jusqu'à ta
-dernière once d'énergie pour en<0xFA>invoquer un depuis une autre<0xFA>région...<0xFB>Apporte-moi un Zapdos.<0xFB>COMPRIS ?",
+dernière once d'énergie pour en<0xFA>invoquer un depuis une autre<0xFA>région...<0xFB>Apporte-moi un Électhor.<0xFB>COMPRIS ?",
 0x01F382D9,UNDERSTOOD?,,11,2,13,pokemon,dialogue,,
 0x01F382ED,"That is more like it!
 Much better, Hoopa.","<0x52>Eso es más parecido!
@@ -76525,7 +76522,7 @@ GUARDIAN OF THIS SACRED GROUND!",,61,2,63,pokemon,dialogue,,
 PASSAGE""<0xFB>YOUR NEXT TRIAL AWAITS, FURTHER
 WITHIN THESE HALLS""","<0xFC><0x01><0x08>T<0x12> QUE AHORA POSEES EL DERECHO DE
 PASAR""<0xFB>TU PR<0x0E>XIMA PRUEBA TE ESPERA M<0x02>S
-ADELANTE""",96,3,99,pokemon,dialogue,"{COLOR}ËVOUS QUI POSSEDEZ À PRÉSENT LE
+ADELANTE""",96,3,99,pokemon,dialogue,"{COLOR}ËVOUS QUI POSSÉDEZ À PRÉSENT LE
 DROIT DE PASSAGE... VOTRE PROCHAINE<0xFB>ÉPREUVE VOUS ATTEND, PLUS
 LOIN DANS CES SALLES...",
 0x01F39326,Uh oh.,<0x52>Oh!,6,3,9,pokemon,location,Oh oh.,
@@ -78008,7 +78005,7 @@ to babysit for the time being.<0xFB>They're with him now, back in
 Frozen Heights.","<0xFC><0x01><0x04>Euler Long, un amigo nuestro, aceptó
 cuidar a los niños por el<0xFA>momento.<0xFB>Están con él, en Pueblo Frío.",115,2,117,pokemon,description,"<0xFC><0x01><0x04>Euler Log, un de nos amis, a
 accepté de les garder pour le<0xFA>moment.<0xFB>Ils sont auprès de lui, là-bas,
-à Frozen Heights.",
+à Hauteurs Gelées.",
 0x01F3FE7A,"re with him now, back in
 Frozen Heights.",,40,2,42,pokemon,description,,
 0x01F3FEA3,"Frozen Heights""<0xFC><0x08>î a friend of mine
@@ -78023,7 +78020,7 @@ ayudó a fundar mi propia empresa""<0xFB>Pero por aquí se le conoce como
 el <0xB1>Guardián de Borrius<0xB2>.<0xFB><0x52>Incluso logró hacerse amigo de uno
 de los llamados Pokémon <0xB1>Míticos<0xB2>!<0xFB>Creo que su esposa también dio a luz
 a su propio hijo, no hace mucho""<0xFB>Sin embargo, no recuerdo bien el
-nombre del niño""",368,2,370,pokemon,dialogue,"Frozen Heights...<0xFC><0x08>î un de mes amis
+nombre del niño""",368,2,370,pokemon,dialogue,"Hauteurs Gelées...<0xFC><0x08>î un de mes amis
 y habite aussi.<0xFB>C'est mon ancien associé...<0xFC><0x08><0x18> celui
 qui m'a aidé à fonder ma propre<0xFA>entreprise...<0xFB>Mais ici, on le connaît simplement
 comme le <0xB1>Gardien de Borrius<0xB2>.<0xFB>Il a même réussi à se lier d'amitié
@@ -79596,9 +79593,9 @@ way there would be to earn the<0xFA><0xFC><0x01><0x06>Antisis City<0xFC><0x01><0
 Grampa Arthur and I will see what<0xFA>we can come up with.","<0xFD><0x01>, ve a <0xFC><0x01><0x06>Ciudad Porto<0xFC><0x01><0x08> lo
 más rápido.<0xFB>Si aún no puedes volar, ve y gana
 la Medalla de Gimnasio de<0xFA><0xFC><0x01><0x06>Ciudad Antisis<0xFC><0x01><0x08> y luego dirígete<0xFA>hacia el este por <0xFC><0x01><0x06>Ruta 17<0xFC><0x01><0x08>.<0xFB>Mientras llegas, mi abuelo y yo
-veremos qué se nos ocurre.",265,2,267,pokemon,dialogue,"Alors <0xFD><0x01>, file à <0xFC><0x01><0x06>Seaport City<0xFC><0x01><0x08>
+veremos qué se nos ocurre.",265,2,267,pokemon,dialogue,"Alors <0xFD><0x01>, file à <0xFC><0x01><0x06>Ville Portuaire<0xFC><0x01><0x08>
 au plus vite !<0xFB>Si tu ne peux pas encore voler,
-le plus rapide est d'obtenir le<0xFA>Badge d'<0xFC><0x01><0x06>Antisis City<0xFC><0x01><0x08> et d'aller<0xFA>à l'est par la <0xFC><0x01><0x06>Route 17<0xFC><0x01><0x08>.<0xFB>Pendant que tu fais le trajet,
+le plus rapide est d'obtenir le<0xFA>Badge d'<0xFC><0x01><0x06>Ville d'Antisis<0xFC><0x01><0x08> et d'aller<0xFA>à l'est par la <0xFC><0x01><0x06>Route 17<0xFC><0x01><0x08>.<0xFB>Pendant que tu fais le trajet,
 Papy Arthur et moi allons voir<0xFA>ce qu'on peut trouver.",
 0x01F46FEA,we can come up with.,,20,2,22,pokemon,other,,
 0x01F46FFF,"Alright, Grampa Arthur, you ready?","Muy bien, abuelo, <0x51>estás listo?",34,3,37,pokemon,dialogue,"Bien, Papy Arthur, prêt ?",
@@ -79625,10 +79622,10 @@ nada.<0xFB>El barco tiene problemas con el motor
 y no hay nada que pueda hacer.<0xFB>Pero un amigo mío que me debe un
 favor puede llevarte a Pueblo<0xFA>Polder, si es tan urgente.<0xFB>Lo puedes encontrar en los muelles
 al norte de aquí.<0xFB>Muéstrale un Ticket S.S, dile que yo
-te envié y que debe llevarte de<0xFA>inmediato.",357,2,359,pokemon,dialogue,"Ecoute, l'ami.<0xFB>Je te l'ai déjà dit, désolé, mais
+te envié y que debe llevarte de<0xFA>inmediato.",357,2,359,pokemon,dialogue,"Écoute, l'ami.<0xFB>Je te l'ai déjà dit, désolé, mais
 on n'y peut rien.<0xFB>Le navire a des ennuis de moteur,
 et je ne peux rien y faire.<0xFB>Mais un ami qui me doit un service
-peut t'emmener à Polder Town,<0xFA>si c'est si urgent.<0xFB>Tu le trouveras sur les quais au
+peut t'emmener à Bourg Polder,<0xFA>si c'est si urgent.<0xFB>Tu le trouveras sur les quais au
 nord d'ici.<0xFB>Montre-lui un de ces Tickets S.S.,
 dis-lui que tu viens de ma part,<0xFA>et il t'y conduira.",
 0x01F4724D,take you there.,,15,2,17,pokemon,dialogue,,
@@ -79693,7 +79690,7 @@ alors on va préparer un plan pour<0xFA>contrer leur grand projet.<0xFB>Rejoins-
 peux, d'accord ?<0xFB>Pour atteindre le sommet de
 Crystal Peak, il te faudra le<0xFA>moyen de gravir les cascades""<0xFB>""<0xFB>Ouais""<0xFC><0x08><0x18> ta tête me dit que tu le
 sais""<0xFC><0x08><0x18> c'est l'histoire de tout<0xFA>ton Défi des Arènes""<0xFB>Exact""<0xFC><0x08><0x18> il te faut le Badge de
-<0xFC><0x01><0x06>Polder Town<0xFC><0x01><0x08>, et la CS associée.<0xFB>Bref, une fois que c'est fait,
+<0xFC><0x01><0x06>Bourg Polder<0xFC><0x01><0x08>, et la CS associée.<0xFB>Bref, une fois que c'est fait,
 file droit vers <0xFC><0x01><0x06>Crystal Peak<0xFC><0x01><0x08>.<0xFB>Compris ?
 On se voit là-haut, <0xFD><0x01>.",
 0x01F476EC,"<0xFD><0x01>!
@@ -80447,7 +80444,7 @@ missing out on all these years!<0xFB>I'm gonna show you how strong
 I've become!","<0x52>Escucha, viejo!<0xFB><0x52>No pasé los últimos quién sabe
 cuántos días buscándote sólo para<0xFA>ser feliz cuando te encontré!<0xFB><0x52>Te mostraré lo que te has estado
 perdiento todos estos años!<0xFB><0x52>Te mostraré lo fuerte que me he
-vuelto!",231,3,234,pokemon,dialogue,"Ecoute-moi bien, le vieux !<0xFB>J'ai pas passé je sais pas combien
+vuelto!",231,3,234,pokemon,dialogue,"Écoute-moi bien, le vieux !<0xFB>J'ai pas passé je sais pas combien
 de jours à te chercher juste pour<0xFA>être content de te retrouver !<0xFB>Je vais te montrer tout ce que tu
 as raté pendant toutes ces années !<0xFB>Je vais te montrer à quel point
 je suis devenu fort !",
@@ -80561,7 +80558,7 @@ qui nous ait réunis""<0xFB>Je suis content qu'on soit amis.<0xFB>Si rien d'autr
 pourquoi ne pas finir le reste<0xFA>du Défi des Arènes ?<0xFB>Le siège de Champion de Borrius
 est actuellement vacant""<0xFB>Et je ne vois personne de mieux
 que toi pour porter ce titre.<0xFB>La dernière Arène est à l'est de
-Magnolia Town, à <0xFC><0x01><0x06>Redwood Village<0xFC><0x01><0x08>.<0xFB>Bonne chance, <0xFD><0x01>.<0xFB>Je viendrai te féliciter quand
+Bourg Magnolia, à <0xFC><0x01><0x06>Bourg Redwood<0xFC><0x01><0x08>.<0xFB>Bonne chance, <0xFD><0x01>.<0xFB>Je viendrai te féliciter quand
 tu seras devenu le Champion !",
 0x01F4AF6A,"ll come and congratulate you
 once you become the Champ!",,55,1,56,pokemon,dialogue,,
@@ -80787,7 +80784,7 @@ how real Trainers battle!<0xFB>See you later, <0xFD><0x01>!","De todos modos, ir
 Porto<0xFC><0x01><0x08>, dicen que allí se reúnen<0xFA>los mejores Entrenadores del<0xFA>mundo.<0xFB>Ya que acaba de reabrir y todo eso,
 <0x52>seguramente habrán muchos<0xFA>Entrenadores ansiosos por luchar!<0xFB><0x52>Mi papá y yo les mostraremos cómo
 luchan los Entrenadores de<0xFA>verdad!<0xFB><0x52>Adiós, <0xFD><0x01>!",346,3,349,pokemon,dialogue,"Bref, on va aller jeter un oeil
-au <0xFC><0x01><0x06>Battle Frontier<0xFC><0x01><0x08>.<0xFB>C'est au <0xFC><0x01><0x06>nord<0xFC><0x01><0x08> de <0xFC><0x01><0x06>Seaport City<0xFC><0x01><0x08>,
+au <0xFC><0x01><0x06>Battle Frontier<0xFC><0x01><0x08>.<0xFB>C'est au <0xFC><0x01><0x06>nord<0xFC><0x01><0x08> de <0xFC><0x01><0x06>Ville Portuaire<0xFC><0x01><0x08>,
 et on dit que les meilleurs du<0xFA>monde entier s'y retrouvent.<0xFB>Vu que ça vient de rouvrir, il y
 aura des tonnes de Dresseurs qui<0xFA>ne rêvent que de se battre !<0xFB>Papa et moi, on va leur montrer
 ce qu'est un vrai Dresseur !<0xFB>On se revoit plus tard, <0xFD><0x01> !",
@@ -81944,7 +81941,7 @@ sentado y dejar que mis propias<0xFA>habilidades se estanquen, <0x51>verdad?<0xF
 sea la oportunidad, <0x52>me gustaría<0xFA>derrotarte!",632,2,634,pokemon,dialogue,"Attends un instant, <0xFD><0x01> !<0xFB>Es-tu surpris de me trouver
 ici ?<0xFB>Eh bien, j'ai cru entendre un cri
 familier m'appeler""<0xFB>C'est à ce moment que j'ai
-rencontré Zapdos.<0xFB>Non, pas celui du Mt. Thundercap""<0xFC><0x08><0x18>
+rencontré Électhor.<0xFB>Non, pas celui du Mt. Thundercap""<0xFC><0x08><0x18>
 celui qu'Aklove a utilisé pour<0xFA>la libération aux Ruines du Vide.<0xFB>J'ignore encore pourquoi il est
 venu, pourquoi il m'a choisi""<0xFB>Mais c'était un signe, je devais
 te retrouver et t'affronter<0xFA>une fois de plus !<0xFB>Pour être honnête, te vaincre est
@@ -82220,7 +82217,7 @@ clair de lune.",
 0x01F52FFC,"Will you come see Polder Town's
 famous Croagunk show?","<0x51>Has venido a ver el famoso baile de
 mis Croagunk?",53,1,54,pokemon,dialogue,"Tu viens voir le célèbre spectacle
-de Croagunk de Polder Town ?",
+de Croagunk de Bourg Polder ?",
 0x01F5301A,"s
 famous Croagunk show?",,23,1,24,pokemon,dialogue,,
 0x01F53032,"Okay!
@@ -82336,7 +82333,7 @@ Entrenadores a pescar más y así<0xFA>promocionar sus cañas de pescar.<0xFB>En
 cañas de pescar que obtienes<0xFA>tú mismo, <0x52>te daré una buena<0xFA>recompensa!<0xFB><0x51>Cómo suena eso?
 Genial, <0x51>verdad?<0xFB><0x52>Vuelve conmigo si has pescado al
 menos <0xFC><0x01><0x06><0xFD><0x02><0xFC><0x01><0x08> veces!",598,2,600,pokemon,dialogue,"Hé, Dresseur !<0xFB>Tu te souviens de moi ?
-Moi, je me souviens de toi.<0xFB>On s'est rencontrés à Gurun Town !<0xFB>J'espérais percer ici, dans l'Est
+Moi, je me souviens de toi.<0xFB>On s'est rencontrés à Bourg Gurun !<0xFB>J'espérais percer ici, dans l'Est
 de Borrius, mais le seul boulot<0xFA>trouvé, c'est la pêche""<0xFB>Bref, Cube Corp. m'a engagé comme
 promoteur d'articles de sport.<0xFB>Ils veulent que j'encourage les
 Dresseurs à pêcher plus, pour<0xFA>promouvoir leur gamme phare<0xFA>de cannes à pêche.<0xFB>Alors voici mes encouragements
@@ -83220,7 +83217,7 @@ trouve un accès au Commandement !",
 0x01F568B7,"Make your way to Seaport City and
 board a boat to East Borrius!","Ve a Ciudad Porto y súbete a un
 barco hasta Borrius Oriental.",63,3,66,pokemon,dialogue,"Dirige-toi vers la Ville Portuaire
-et prends bateau pour Borrius Est !",
+et prends le bateau pour Borrius Est !",
 0x01F568F7,"Ask a Sailor in Seaport City to
 take you to Polder Town!",,56,1,57,pokemon,dialogue,"Demande à un Marin de Portuaire
 pour aller à Bourg Polder !",
@@ -83253,7 +83250,7 @@ et défie la Ligue Pokémon !",
 0x01F56AA0,Check in with your mom!,<0x52>Habla con mamá!,23,3,26,pokemon,dialogue,Passe voir ta maman !,
 0x01F56AB8,"Buy an ADM in Seaport City in order
 to Dive underwater!","<0x52>Compra un ADM en Ciudad
-Porto y bucea bajo el agua!",55,2,57,pokemon,dialogue,"Achète un AMD à la Ville Portuaire
+Porto y bucea bajo el agua!",55,2,57,pokemon,dialogue,"Achète un ADM à la Ville Portuaire
 pour plonger sous l'eau !",
 0x01F56AF0,"Dive underwater at the Ruins of Void
 and rescue your mom from Aklove!","<0x52>Bucea en Ruinas Vacío y salva
@@ -85426,7 +85423,7 @@ esta MO a cualquier Aspirante que<0xFA>pase por aquí.<0xFB>Hasta que el puente 
 tendrás que usar la MO <0xFC><0x01><0x06>Treparrocas<0xFC><0x01><0x08><0xFA>si quieres ir a <0xFC><0x01><0x06>Ciudad Porto<0xFC><0x01><0x08>.<0xFB>Usa la MO que te dí en esa pared de
 allí.",252,2,254,pokemon,dialogue,"Mes supérieurs m'ont chargé de
 remettre cette CS à tous les<0xFA>Dresseurs qui passent par ici.<0xFB>Tant que le pont n'est pas réparé,
-tu devras utiliser la CS <0xFC><0x01><0x06>Escalade<0xFC><0x01><0x08><0xFA>pour aller à <0xFC><0x01><0x06>Seaport City<0xFC><0x01><0x08>.<0xFB>Place-toi face à cette paroi
+tu devras utiliser la CS <0xFC><0x01><0x06>Escalade<0xFC><0x01><0x08><0xFA>pour aller à <0xFC><0x01><0x06>Ville Portuaire<0xFC><0x01><0x08>.<0xFB>Place-toi face à cette paroi
 rocheuse pour l'utiliser.",
 0x01F5F159,"Just face that rock wall over
 there to use it.",,46,2,48,pokemon,description,,
@@ -85439,7 +85436,7 @@ arreglemos.<0xFB>Mientras tanto, deberías hablar con
 nuestro jefe para encontrar otro<0xFA>camino a Ciudad Porto.",213,3,216,pokemon,dialogue,"Désolé, petit !<0xFB>Une bagarre entre des Mangriff et
 Séviper a détruit le pont.<0xFB>Ça prendra du temps pour le
 réparer.<0xFB>Tu devrais parler à notre chef pour
-trouver un autre moyen d'aller à<0xFA>Seaport City en attendant.",
+trouver un autre moyen d'aller à<0xFA>Ville Portuaire en attendant.",
 0x01F5F240,Seaport City in the meantime.,,29,3,32,pokemon,other,,
 0x01F5F25E,It's a seashell.,Es una concha.,16,1,17,pokemon,location,C'est un coquillage.,
 0x01F5F261,s a seashell.,,13,1,14,pokemon,other,,
@@ -85556,7 +85553,7 @@ pour que ma chaîne de pêche soit<0xFA>aussi longue que possible.",
 0x01F5F87A,"Most of my friends came to Seaport
 City from far away regions.","La mayoría de mis amigos viven en
 Ciudad Porto.",62,3,65,pokemon,dialogue,"La plupart de mes amis sont venus à
-Seaport City en venant de loin.",
+Ville Portuaire en venant de loin.",
 0x01F5F8B9,"But then most of my friends went
 back to where they came from""","Pero yo prefiero vivir en Ciudad
 Antisis""",62,1,63,pokemon,dialogue,"Mais la plupart sont repartis
@@ -86113,7 +86110,7 @@ over there can teleport you to<0xFA>Dresco Town - the next town over.<0xFB>Even 
 on his offer, it's never a bad idea<0xFA>to be fully healed!","Si tienes prisa, el Psíquico de allí
 puede teletransportarte a Pueblo<0xFA>Dresco.<0xFB>Incluso si decides aceptar su oferta,
 <0x52>nunca es mala idea estar<0xFA>completamente curado!",188,1,189,pokemon,dialogue,"Si tu es pressé, le Psy là-bas peut
-te téléporter à Dresco Town, la<0xFA>ville suivante.<0xFB>Même si tu acceptes son offre, ce
+te téléporter à Bourg Dresco, la<0xFA>ville suivante.<0xFB>Même si tu acceptes son offre, ce
 n'est jamais une mauvaise idée<0xFA>d'être en pleine forme !",
 0x01F61BCF,to be fully healed!,,19,1,20,pokemon,dialogue,,
 0x01F61BE3,<0xFC><0x01><0x06>Cleeeeewoo!,"<0xFC><0x01><0x06>Cleeeeewoo""",14,2,16,pokemon,dialogue,{COLOR}ÉCleeeeewoo!,
@@ -86425,7 +86422,7 @@ grassy island!",,46,3,49,pokemon,dialogue,,
 this island.<0xFB>If you do, it won't be a grassy
 island anymore!",Pensé que no eras tan fuerte.,90,3,93,pokemon,dialogue,"Merci de ne pas Couper l'herbe sur
 cette île.<0xFB>Sinon, elle ne sera plus
-erbeuse !",
+herbeuse !",
 0x01F6304C,"t be a grassy
 island anymore!",,29,3,32,pokemon,dialogue,,
 0x01F6306A,I love the smell of the sea!,<0x52>Me encanta el mar!,28,3,31,pokemon,dialogue,J'adore l'odeur de la mer !,
@@ -86476,7 +86473,7 @@ te dirai un petit secret de<0xFA>pêche.",
 0x01F63387,Secret time!,<0x52>Te lo diré!,12,3,15,pokemon,dialogue,C'est l'heure du secret !,
 0x01F63394,"If you hook the same Pokémon many
 times in a row, odds are you'll<0xFA>encounter one that looks different<0xFA>than other Pokémon of its species.","Si enganchas al mismo Pokémon varias
-veces, lo más probable es que<0xFA>encuentres uno que se vea diferente<0xFA>a otros Pokémon de su especie.",135,2,137,pokemon,dialogue,"Si tu ferras le même Pokémon
+veces, lo más probable es que<0xFA>encuentres uno que se vea diferente<0xFA>a otros Pokémon de su especie.",135,2,137,pokemon,dialogue,"Si tu ferres le même Pokémon
 plusieurs fois d'affilée, tu as des<0xFA>chances d'en trouver un qui a une<0xFA>apparence différente.",
 0x01F63408,mon of its species.,,19,2,21,pokemon,other,,
 0x01F6341C,"Your lead Pokémon is a key
@@ -86530,7 +86527,7 @@ though.<0xFB>Once you hop it, the only way back
 here is through Grim Woods!","<0x52>El camino de abajo te llevará de
 regreso a Pueblo Dresco!<0xFB>Una vez que lo subes, <0x52>el único
 camino de regreso aquí es a<0xFA>través del Bosque Luna!",158,2,160,pokemon,dialogue,"Ce rebord te ramènera direct à
-Dresco Town !<0xFB>Réfléchis bien avant de
+Bourg Dresco !<0xFB>Réfléchis bien avant de
 l'utiliser.<0xFB>Une fois sauté, le seul chemin de
 retour passe par la Forêt Lugubre !",
 0x01F636FD,"Once you hop it, the only way back
@@ -86547,7 +86544,7 @@ heureux ?",
 0x01F637C7, elated?,,8,2,10,pokemon,dialogue,,
 0x01F637D0,"Maybe I've been spending too much
 time in the Dresco Town Gym.","Ya veo que te gustan""",62,2,64,pokemon,description,"Je passe peut-être trop de temps
-dans l'Arène de Dresco Town.",
+dans l'Arène de Bourg Dresco.",
 0x01F637D8,"ve been spending too much
 time in the Dresco Town Gym.",,54,2,56,pokemon,description,,
 0x01F6380F,"Mirskle has had a huge impact on
@@ -86868,19 +86865,19 @@ on Route 9.",,44,3,47,pokemon,description,,
 0x01F64AF4,"I think <0xFC><0x01><0x06>Figy Berries<0xFC><0x01><0x08> are
 fascinating.<0xFB>They recover lost HP, but cause
 confusion for Pokémon that don't<0xFA>like the taste!","Las <0xFC><0x01><0x06>Bayas Higog<0xFC><0x01><0x08> son las mejores.<0xFB><0x52>Recuperan los PS, pero causa
-confusión a los Pokémon que no<0xFA>les gusta el sabor!",124,2,126,pokemon,dialogue,"Les {COLOR}ÉBaies Wikib{COLOR}Ë sont
+confusión a los Pokémon que no<0xFA>les gusta el sabor!",124,2,126,pokemon,dialogue,"Les {COLOR}ÉBaies Wiki{COLOR}Ë sont
 fascinantes.<0xFB>Elles rendent des PV mais rendent
-confus les Pokémon qui n'aiment pas<0xFA>eur goût !",
+confus les Pokémon qui n'aiment pas<0xFA>leur goût !",
 0x01F64B61,like the taste!,,15,2,17,pokemon,dialogue,,
 0x01F64B71,"Looks like my Figy Berries didn't
 help!","<0x52>Mis Bayas no han servido de
-mucho!",39,2,41,pokemon,dialogue,"On dirait que mes Baies Wikib n'ont
+mucho!",39,2,41,pokemon,dialogue,"On dirait que mes Baies Wiki n'ont
 servi à rien !",
 0x01F64B91,"t
 help!",,7,2,9,pokemon,dialogue,,
 0x01F64B99,"Before letting your Pokémon hold a
 <0xFC><0x01><0x06>Figy Berry<0xFC><0x01><0x08>, make sure it doesn't<0xFA>have a conflicting <0xFC><0x01><0x06>Nature<0xFC><0x01><0x08>.",<0x52>Al parecer has tenido mucha suerte!,106,2,108,pokemon,dialogue,"Avant de faire tenir une
-{COLOR}ÉBaie Wikib{COLOR}Ë, vérifie que sa<0xFA>{COLOR}ÉNature{COLOR}Ë n'entre pas en conflit.",
+{COLOR}ÉBaie Wiki{COLOR}Ë, vérifie que sa<0xFA>{COLOR}ÉNature{COLOR}Ë n'entre pas en conflit.",
 0x01F64C04,"We're the Sun Trio!<0xFB>Beat us three to win a fantastic
 prize!","<0x52>Somos el Trío del Sol!
 <0x52>Si nos ganas, tendrás un premio!",59,2,61,pokemon,dialogue,"On est le Trio Soleil !<0xFB>Bats-nous tous les trois pour gagner
@@ -88880,7 +88877,7 @@ el fondo <0xFC><0x01><0x06>marino<0xFC><0x01><0x08> están llenas de<0xFA>muchos
 lugares, configura el modo del<0xFA><0xFC><0x01><0x06>Botón R<0xFC><0x01><0x08> en <0xFC><0x01><0x06>Escaneo de Minería<0xFC><0x01><0x08> en<0xFA>las <0xFC><0x01><0x06>Configuraciones<0xFC><0x01><0x08> y presiona <0xF8><0x03>.<0xFB>Si hay algún lugar en donde puedes
 excavar tesoros, <0x52>el ADM lo<0xFA>iluminará!<0xFB>Debes presionar <0xF8>  al lado de ese
 lugar para comenzar a cavar.",478,2,480,pokemon,dialogue,"Non seulement l'<0xFC><0x01><0x06>ADM<0xFC><0x01><0x08> remplace les
-CS, mais tu peux aussi t'en servir<0xFA>pour chercher des trésors !<0xFB>Les murs de la <0xFC><0x01><0x06>KBT Expressway<0xFC><0x01><0x08> et
+CS, mais tu peux aussi t'en servir<0xFA>pour chercher des trésors !<0xFB>Les murs de la <0xFC><0x01><0x06>Autoroute KBT<0xFC><0x01><0x08> et
 des <0xFC><0x01><0x06>fonds marins<0xFC><0x01><0x08> regorgent de<0xFA>trésors qui n'attendent que toi !<0xFB>Si tu es dans un de ces endroits,
 règle ton <0xFC><0x01><0x06>R-Button Mode<0xFC><0x01><0x08> sur <0xFC><0x01><0x06>Mining<0xFA>Scan<0xFC><0x01><0x08> dans le <0xFC><0x01><0x06>menu Options<0xFC><0x01><0x08>, puis<0xFA>appuie sur <0xF8><0x03>.<0xFB>S'il y a des coins où creuser
 autour de toi, l'ADM les fera<0xFA>briller !<0xFB>Appuie sur <0xF8>  près d'un de ces
@@ -89096,7 +89093,7 @@ you out! It's not running today.<0xFB>It leaves for Polder Town on
 <0xFC><0x01><0x06>Mondays<0xFC><0x01><0x08> and <0xFC><0x01><0x06>Fridays<0xFC><0x01><0x08>!","<0x52>Operar un barco todos los días es
 agotador!<0xFB>No está funcionando hoy.<0xFB><0x52>Sale hacia Pueblo Polder los
 <0xFC><0x01><0x06>Lunes<0xFC><0x01><0x08> y <0xFC><0x01><0x06>Viernes<0xFC><0x01><0x08>!",130,1,131,pokemon,dialogue,"Piloter un navire tous les jours,
-ça épuise ! Il ne navigue pas<0xFA>aujourd'hui.<0xFB>Il part pour Polder Town le <0xFC><0x01><0x06>lundi<0xFC><0x01><0x08>
+ça épuise ! Il ne navigue pas<0xFA>aujourd'hui.<0xFB>Il part pour Bourg Polder le <0xFC><0x01><0x06>lundi<0xFC><0x01><0x08>
 et le <0xFC><0x01><0x06>vendredi<0xFC><0x01><0x08> !",
 0x01F6E2BB,"Operating a ship more than once a
 day can wear you out!<0xFB>It already sailed today.","<0x52>Operar un barco más de una vez al
@@ -89617,7 +89614,7 @@ I grow up, too!",102,3,105,pokemon,dialogue,"Ouah<0xFB>! Ton combat avec mon pap
 trop chouette à regarder.<0xFB>Je veux devenir Dresseur Pokémon
 quand je serai grand, moi aussi !",
 0x01F70878,Frozen Heights<0xFB>An island town on a frozen lake.,"Pueblo Frío: <0x52>Un lugar con un inmenso
-lago!",47,2,49,pokemon,description,Frozen Heights<0xFB>Une ville-île sur un lac gelé.,
+lago!",47,2,49,pokemon,description,Hauteurs Gelées<0xFB>Une ville-île sur un lac gelé.,
 0x01F70887,An island town on a frozen lake.,,32,2,34,pokemon,description,,
 0x01F708A8,Log Pokémon Research Lab,<0x52>Laboratorio Pokémon!,24,2,26,pokemon,other,Labo de Recherche Pokémon de Log,
 0x01F708B0,mon Research Lab,,16,2,18,pokemon,other,,
@@ -89783,10 +89780,10 @@ Bout<0xFB>de l'Île "" <0x7A> Route 9
 du<0xFB>Mont Gelé "" <0x79> Ville de
 Blizzard <0x7A> Gelé/Rt7",
 0x01F710CC," Frost Mountain, Route 7",,24,2,26,pokemon,other,,
-0x01F710E5,Blizzard City<0xFB>The chilly mountain city.,Ciudad Ventisca: <0x52>El frío extremo!,39,2,41,pokemon,description,Ville de Blizzard<0xFB>La ville glaciale de la montagne.,
+0x01F710E5,Blizzard City<0xFB>The chilly mountain city.,Ciudad Ventisca: <0x52>El frío extremo!,39,2,41,pokemon,description,Ville Blizzard<0xFB>La ville glaciale de la montagne.,
 0x01F710F3,The chilly mountain city.,,25,2,27,pokemon,other,,
 0x01F7110D,"Blizzard City Pokémon Gym
-Leader: Alice<0xFA>The High-Flying Ice Queen",<0x52>Gimnasio Pokémon!,65,2,67,pokemon,description,"Arène Pokémon de Ville de Blizzard
+Leader: Alice<0xFA>The High-Flying Ice Queen",<0x52>Gimnasio Pokémon!,65,2,67,pokemon,description,"Arène Pokémon de Ville Blizzard
 Championne : Alice La Reine des<0xFA>Cieux Glacés",
 0x01F71135,The High-Flying Ice Queen,,25,2,27,pokemon,other,,
 0x01F7114F,"Route 9
@@ -89846,7 +89843,7 @@ Grottes<0xFB>des Falaises "" <0x7B> Ville de
 Fallshore <0x7C> Bourg<0xFA>Epidimy <0x79> Bourg Tarmigan",
 0x01F713D7, Tarmigan Town,,14,2,16,pokemon,other,,
 0x01F713E6,Epidimy Town<0xFB>The town of happiness and bliss.,"Ciudad Epidimia: <0x52>La alegría vive
-aquí!",45,1,46,pokemon,dialogue,Bourg Epidimy La<0xFB>ville du bonheur et de la félicité.,
+aquí!",45,1,46,pokemon,dialogue,Ville d'Epidimy La<0xFB>ville du bonheur et de la félicité.,
 0x01F713F3,The town of happiness and bliss.,,32,1,33,pokemon,description,,
 0x01F71414,"Thundercap Mt.
 Passage","Mt. Trueno
@@ -89861,7 +89858,7 @@ Légendaire Électrik Électhor. Il est<0xFB>écrit ici qu'Électhor servait
 autrefois à renforcer un sceau sur<0xFA>une grande obscurité, mais qu'il<0xFA>réside désormais au Mont Thundercap.",
 0x01F714CF,Thundercap Mt.,,14,1,15,pokemon,location,,
 0x01F714DE,"Thundercap Mt.<0xFB><0x7B> Epidimy Town
-à Antisis City",,44,2,46,pokemon,dialogue,"Mont Thundercap<0xFB><0x7B> Bourg Epidimy
+à Antisis City",,44,2,46,pokemon,dialogue,"Mont Thundercap<0xFB><0x7B> Ville d'Epidimy
 <0x7C> Ville d'Antisis",
 0x01F714FD, Antisis City,,13,2,15,pokemon,other,,
 0x01F7150B,"Tarmigan Town<0xFB>The town located on the
@@ -89900,7 +89897,7 @@ Ouest<0xFB>Thundercap "" <0x79> Ville de
 Dehara <0x7A> Bourg Tarmigan<0xFA><0x7B> Route 14",
 0x01F716C5, Route 14,,9,2,11,pokemon,other,,
 0x01F716CF,Dehara City<0xFB>An oasis at the edge of the desert.,"Ciudad Dehara: <0x52>Un oasis al borde
-del desierto!",47,2,49,pokemon,description,Dehara City<0xFB>Une oasis en bordure du désert.,
+del desierto!",47,2,49,pokemon,description,Ville de Dehara<0xFB>Une oasis en bordure du désert.,
 0x01F716DB,An oasis at the edge of the desert.,,35,2,37,pokemon,description,,
 0x01F716FF,"Dehara City Pokémon Gym
 Leader: Galavan<0xFA>The Brains Behind the War Machine","Dehara City Pokémon Gym
@@ -90180,14 +90177,14 @@ indisponible dans<0xFB>cette version ! Reviens dans une
 future mise à jour d'Unbound !",
 0x01F72684,mon Unbound!,,12,3,15,pokemon,dialogue,,
 0x01F72691,y,,1,2,3,ascii,other,"<0x79> Hauteurs
-Gelées <0x7A><0xFA>Bourg Cratère <0x7B> Ville de Blizzard",
+Gelées <0x7A><0xFA>Bourg Cratère <0x7B> Ville Blizzard",
 0x01F726B1, Blizzard City,,14,3,17,pokemon,other,,
 0x01F726C0,y,,1,2,3,ascii,other,"<0x79> Hauteurs Gelées, Ville de
 Blizzard <0x7A><0xFA>Bourg Cratère <0x7C> Bourg Dresco",
 0x01F726FC,y,,1,2,3,ascii,other,"<0x79> Bourg
-Cratère <0x7B><0xFA>Tehl <0x7C> Fallshore, Bourg Epidimy",
+Cratère <0x7B><0xFA>Tehl <0x7C> Fallshore, Ville d'Epidimy",
 0x01F72735,y,,1,2,3,ascii,other,"<0x79> Bourg Cratère, Ville
-de Tehl <0x7A> Ville<0xFA>de Fallshore <0x7C> Bourg Epidimy",
+de Tehl <0x7A> Ville<0xFA>de Fallshore <0x7C> Ville d'Epidimy",
 0x01F7276E,y,,1,2,3,ascii,other,"<0x79> Bourg
 Dresco <0x7A><0xFA>Dehara <0x7B> Cratère, Blizzard",
 0x01F727A7,y,,1,2,3,ascii,other,"<0x79> Bourg
@@ -90200,12 +90197,12 @@ Gurun <0x7A> Ville<0xFA>d'Antisis <0x7C> Ville Portuaire",
 0x01F7283A, Frozen Heights,,15,3,18,pokemon,other,,
 0x01F7284A,Exit B: Dresco Town,,19,3,22,pokemon,other,Sortie B : Bourg Dresco,
 0x01F7285E,Exit C: Crater Town,,19,3,22,pokemon,other,Sortie C : Bourg Cratère,
-0x01F72872,Exit D: Blizzard City,,21,3,24,pokemon,other,Sortie D : Ville de Blizzard,
+0x01F72872,Exit D: Blizzard City,,21,3,24,pokemon,other,Sortie D : Ville Blizzard,
 0x01F72888,Exit E: Tehl Town,,17,3,20,pokemon,other,Sortie E : Ville de Tehl,
 0x01F7288F, Tehl Town,,10,3,13,pokemon,other,,
 0x01F7289A,Exit F: Fallshore City,,22,3,25,pokemon,other,Sortie F : Ville de Fallshore,
 0x01F728A1, Fallshore City,,15,3,18,pokemon,other,,
-0x01F728B1,Exit G: Epidimy Town,,20,3,23,pokemon,dialogue,Sortie G : Bourg Epidimy,
+0x01F728B1,Exit G: Epidimy Town,,20,3,23,pokemon,dialogue,Sortie G : Ville d'Epidimy,
 0x01F728C6,Exit H: Dehara City,,19,3,22,pokemon,other,Sortie H : Ville de Dehara,
 0x01F728DA,Exit I: Gurun Town,,18,3,21,pokemon,other,Sortie I : Bourg Gurun,
 0x01F728ED,Exit J: Vivill Town,Exit J: Vivill Town,19,3,22,pokemon,other,Sortie J : Bourg Vivill,
@@ -90367,7 +90364,7 @@ des <0xFC><0x01><0x06>Grottes Cachées<0xFC><0x01><0x02> !<0xFB>Ces zones spéci
 masse depuis la chute de la<0xFA>météorite.<0xFB>Interagis avec les arbres et
 prépare-toi à affronter un Pokémon<0xFA>coriace !<0xFB>Et d'ailleurs, avec <0xFC><0x01><0x06>Coupe<0xFC><0x01><0x02>, tu en
 trouveras même une sur cette route !<0xFB>Alors gagne le Badge Vision à
-l'Arène de Crater Town, puis<0xFA>reviens ici pour la trouver !",
+l'Arène de Bourg Cratère, puis<0xFA>reviens ici pour la trouver !",
 0x01F73687,back here to find it!,,21,2,23,pokemon,dialogue,,
 0x01F7369D,"Trainer Tips!<0xFB>The button combination for running
 quickly from wild battles can be<0xFA>set from the <0xFC><0x01><0x06>Options Menu<0xFC><0x01><0x02>!<0xFB>By default, you can run quickly from
@@ -90461,7 +90458,7 @@ reloj para que los eventos puedan<0xFA>funcionar.",472,2,474,pokemon,dialogue,"A
 appareil pour accéder à plus<0xFA>d'événements quotidiens !<0xFB>Si tu le fais, tous les événements
 quotidiens risquent de ne plus<0xFA>fonctionner correctement, que tu<0xFA>aies tenté ou non d'y accéder<0xFA>plus d'une fois.<0xFB>Si tu l'as déjà fait par accident,
 tout n'est pas perdu.<0xFB>Si tu peux attendre jusqu'à la date
-choisie, c'est recommandé. Sinon,<0xFA>parle à un homme à Frozen Heights.<0xFB>Une seule fois, il peut remettre
+choisie, c'est recommandé. Sinon,<0xFA>parle à un homme aux Hauteurs Gelées.<0xFB>Une seule fois, il peut remettre
 ton horloge à l'heure pour que les<0xFA>événements quotidiens fonctionnent<0xFA>à nouveau.",
 0x01F73EA5,once more.,,10,2,12,pokemon,other,,
 0x01F73EB0,"Trainer Tips!<0xFB>Use Strength to push the boulders
@@ -90630,7 +90627,7 @@ Hyper Balls quand tu veux<0xFA>capturer des Pokémon puissants !<0xFB>Pokémon t
 {COLOR}ÉMasse Ball{COLOR}Á est<0xFA>idéale.<0xFB>Combat > {COLOR}É10 tours{COLOR}Á ?
 pense à la<0xFA>{COLOR}ÉChrono Ball{COLOR}Á.<0xFB>Combat court et l'adversaire a
 une Vitesse de base<0xFA>au-dessus de {COLOR}É100{COLOR}Á, pense à<0xFA>la {COLOR}ÉRapide Ball{COLOR}Á.<0xFB>Combat court et Pokémon lent,
-esaie de le capturer à<0xFA>la nuit avec une {COLOR}ÉSombre Ball{COLOR}Á.<0xFA><0xFB>Ces quatre Balls sont clés pour
+essaie de le capturer à<0xFA>la nuit avec une {COLOR}ÉSombre Ball{COLOR}Á.<0xFA><0xFB>Ces quatre Balls sont clés pour
 capturer vite ces Pokémon !",
 0x01F74DBB,mon quickly!,,12,2,14,pokemon,dialogue,,
 0x01F74DC8,"Trainer Tips!<0xFB>Thanks to the advancements of modern
@@ -91203,7 +91200,7 @@ BATTLE""<0xFB>OH, YOU SAID <0xB1>TRAINERS<0xB2>! SORRY!<0xFB>NO, I DON'T KNOW HO
 HERE - ASK THE CREW.","<0x51>QU<0x06>? LO SIENTO, VINE AQU<0x5A> PARA
 LUCHAR""<0xFB><0x52>OH, DIJISTE <0xB1>ENTRENADORES<0xB2>!
 <0x52>LO SIENTO!<0xFB>NO, NO S<0x06> CU<0x02>NTOS SEREMOS DE
-NOSOTROS, <0x52>ADI<0x0E>S!",127,2,129,pokemon,dialogue,"COMMERCANTS ? DÉSOLÉ, JE SUIS
+NOSOTROS, <0x52>ADI<0x0E>S!",127,2,129,pokemon,dialogue,"COMMERÇANTS ? DÉSOLÉ, JE SUIS
 VENU POUR BATTRE...<0xFB>AH, TU AS DIT "" DRESSEURS "" !<0xFB>NON, JE NE SAIS PAS COMBIEN NOUS
 SOMMES, DEMANDE À L'ÉQUIPAGE.",
 0x01F77902,"T KNOW HOW MANY OF US ARE
@@ -91242,8 +91239,8 @@ personne ne fait<0xFB>mieux Big Mo que Big Mo
 !",
 0x01F77B52," Big Mo, than Big Mo!",,21,2,23,pokemon,dialogue,,
 0x01F77B8E,<0xF8><0x0B>Pick <0xF8> Name <0xF8><0x01>Close <0xF8><0x02><0xF8><0x03>Page,,30,3,33,pokemon,description,{DPAD_LEFTRIGHT}Choisir {SE_SHOP}Nom {B_BUTTON}Fermer {L_BUTTON}{R_BUTTON}Page,
-0x01F77BAD,<0xF8><0x0B>Pick <0xF8> Edit <0xF8><0x01>Close <0xF8><0x02><0xF8><0x03>Page,,30,3,33,pokemon,description,{DPAD_LEFTRIGHT}Choisir {SE_SHOP}diter {B_BUTTON}Fermer {L_BUTTON}{R_BUTTON}Page,
-0x01F77BCC,<0xF8><0x0C>Pick <0xF8> Edit <0xF8><0x01>OK <0xF8><0x02><0xF8><0x03>Nature,,29,3,32,pokemon,description,{DPAD_ANY}Choisir {SE_SHOP}diter {B_BUTTON}OK {L_BUTTON}{R_BUTTON}Nature,
+0x01F77BAD,<0xF8><0x0B>Pick <0xF8> Edit <0xF8><0x01>Close <0xF8><0x02><0xF8><0x03>Page,,30,3,33,pokemon,description,{DPAD_LEFTRIGHT}Choisir {SE_SHOP}Éditer {B_BUTTON}Fermer {L_BUTTON}{R_BUTTON}Page,
+0x01F77BCC,<0xF8><0x0C>Pick <0xF8> Edit <0xF8><0x01>OK <0xF8><0x02><0xF8><0x03>Nature,,29,3,32,pokemon,description,{DPAD_ANY}Choisir {SE_SHOP}Éditer {B_BUTTON}OK {L_BUTTON}{R_BUTTON}Nature,
 0x01F77C17,<0xF8><0x0C>Change <0xF8> OK <0xF8><0x01>Cancel,,22,2,24,pokemon,system,{DPAD_ANY}Changer {SE_SHOP}OK {B_BUTTON}Annuler,
 0x01F77C27,Cancel,,6,2,8,pokemon,system,,
 0x01F77C2E,<0xF8><0x0C>Change <0xF8> OK <0xF8><0x01>Cancel <0xF8><0x02>Min <0xF8><0x03>Max,<0xF8><0x0C>Cambiar <0xF8> Ok <0xF8><0x01>Salir <0xF8><0x02>Mín <0xF8><0x03>Máx,34,3,37,pokemon,system,{DPAD_ANY}Changer {SE_SHOP}OK {B_BUTTON}Annuler {L_BUTTON}Min {R_BUTTON}Max,
@@ -91289,8 +91286,8 @@ Prof. Log's assistant.<0xFC><0x09>",,49,3,52,pokemon,description,"{STR_VAR_3} PB
 0x01F77F3A,<0xFD><0x02> cannot evolve yet.<0xFC><0x09>,,23,2,25,pokemon,description,{STR_VAR_1} ne peut pas encore évoluer.{PAUSE_UNTIL_PRESS},
 0x01F77F52,"This move can be taught by the
 Heart Scale maniac in Crater Town.<0xFC><0x09>","Este movimiento lo enseña el Maniaco
-de Ciudad Cráter.<0xFC><0x09>",67,2,69,pokemon,description,"Ce move peut être appris chez
-l'Écaillecoeur à Bourg.{PAUSE_UNTIL_PRESS}",
+de Ciudad Cráter.<0xFC><0x09>",67,2,69,pokemon,description,"Cette capacité peut être apprise
+chez l'Écaillecoeur à Bourg Cratère.{PAUSE_UNTIL_PRESS}",
 0x01F77F96,"This move can only be learned
 through breeding.<0xFC><0x09>",,49,2,51,pokemon,description,"Ce move ne s'apprend qu'en
 élevage.{PAUSE_UNTIL_PRESS}",
@@ -91463,7 +91460,7 @@ hidden section of Icicle Cave!","<0x52>Nunca podrás vencer a mi súper,
 raro e increíble Sandslash!<0xFB><0x52>Lo encontré en un lugar especial
 de Cueva Icicle!",127,2,129,pokemon,dialogue,"Tu ne battras jamais mon Sablaireau
 super rare et trop fort !<0xFB>Je l'ai trouvé tout en haut de ce
-coin secret de Grotte Stalactite !",
+coin secret de la Grotte Stalactite !",
 0x01F78D23,"I got it all the way up in this
 hidden section of Icicle Cave!",,62,2,64,pokemon,dialogue,,
 0x01F78D62,"Oh yeah?<0xFB>Well, my Miltank is super powerful,
@@ -92416,7 +92413,7 @@ Pokémon!<0xFB>Necesitas <0xFC><0x01><0x06><0xFD><0x02><0xFC><0x01><0x04>.<0xFB>
 Long<0xFC><0x01><0x04> en <0xFC><0x01><0x06>Ciudad Ventisca<0xFC><0x01><0x04>?<0xFB>Es una herramienta muy útil para
 encontrar nuevos Pokémon.",221,2,223,pokemon,dialogue,"Voyons voir...<0xFB>Oh oh ! Tu n'as attrapé que {COLOR}É{STR_VAR_3}{COLOR}Ç espèces
 de Pokémon !<0xFB>Il t'en faut {COLOR}É{STR_VAR_1}{COLOR}Ç.<0xFB>As-tu obtenu le {COLOR}ÉDexNav{COLOR}Ç de {COLOR}ÉNat Log{COLOR}Ç
-à {COLOR}ÉBlizzard City{COLOR}Ç ?<0xFB>C'est un outil pratique pour trouver
+à {COLOR}ÉVille Blizzard{COLOR}Ç ?<0xFB>C'est un outil pratique pour trouver
 de nouvelles espèces.",
 0x01F7D04F,mon.,,4,2,6,pokemon,other,,
 0x01F7D054,Seasonal Research,,17,3,20,pokemon,location,Recherche saisonnière,
@@ -92993,7 +92990,7 @@ n'interrompra Marlon pendant qu'il<0xFA>se prépare à capturer Électhor.",
 0x01F7F4ED,"The air in this mountain is
 electrifying!<0xFB>It's nothing like Antisis City.","<0x52>El aire en esta montaña es
 electrizante!",73,2,75,pokemon,dialogue,"L'air de cette montagne est
-electrisant !<0xFB>Rien à voir avec la Ville d'Antisis.",
+électrisant !<0xFB>Rien à voir avec la Ville d'Antisis.",
 0x01F7F51A,s nothing like Antisis City.,,28,2,30,pokemon,other,,
 0x01F7F537,"I'm clearly not electrified enough
 to win""",<0x51>No lo crees?,42,3,45,pokemon,description,"Je ne suis pas assez électrisé
@@ -93323,7 +93320,7 @@ Softies like you!",,46,3,49,pokemon,dialogue,,
 Town and terrorize 'em for fun.<0xFB>But then that white-haired Gym
 Leader always chases me away.<0xFB>I hope I give him such a headache""","A veces camino hasta Ciudad Epidimia
 y los asusto por diversión.<0xFB>Pero ese Líder de Gimnasio de pelo
-blanco siempre me ahuyenta.<0xFB>Espero darle dolor de cabeza""",160,2,162,pokemon,dialogue,"Parfois je vais à Bourg Epidimy
+blanco siempre me ahuyenta.<0xFB>Espero darle dolor de cabeza""",160,2,162,pokemon,dialogue,"Parfois je vais à Ville d'Epidimy
 et je les terrorise pour m'amuser.<0xFB>Mais ce Champion d'Arène aux
 cheveux blancs me chasse toujours.<0xFB>J'espère lui donner mal à la tête...",
 0x01F8068B,"I trained like a madman, and my
@@ -94451,7 +94448,7 @@ AU CENTRE.",
 0x01F85007,"People around here used to be
 afraid to leave their homes because<0xFA>of some cloaked gang that invaded<0xFA>our town.","Muchas personas tenían miedo de
 salir de sus casas debido a que<0xFA>unos tipos invadieron la ciudad.",109,3,112,pokemon,description,"Les gens d'ici avaient peur de
-sortir à cause d'une bande<0xFA>encapuchonnée qui a<0xFA>invadé notre ville.",
+sortir à cause d'une bande<0xFA>encapuchonnée qui a<0xFA>envahi notre ville.",
 0x01F8506B,our town.,,9,3,12,pokemon,other,,
 0x01F85075,"When the cloaked gang left town,
 the sun started shining, and the<0xFA>flowers started blooming again!<0xFB>I'm so happy, I want to share my
@@ -95487,7 +95484,7 @@ Blizzard City.","Encontrada cerca de algunos
 árboles al sur del camino de
 Ciudad Ventisca.",82,2,84,pokemon,description,"Cellule Zygarde près d'arbres sud
 du chemin menant à
-Blizzard City.",
+Ville Blizzard.",
 0x01F89494,"This Zygarde Cell was found by the
 frozen river on the east side of
 the route.","Encontrada junto al río helado
@@ -96380,7 +96377,7 @@ battles with Trainers!","<0x52>Hola, soy Palmer!
 pensaba.<0xFB>Me gustaría que me muestres el
 vínculo que has construido con<0xFA>tus Pokémon.<0xFB><0x52>Muéstrame todo lo que sabes sobre
 las batallas!",257,3,260,pokemon,dialogue,"Salut !
-Je m'appelle Palmer.<0xFB>J'ai beaucoup entendu parler de toi.<0xFB>Tu es <0xFD><0x01> de Frozen Heights,
+Je m'appelle Palmer.<0xFB>J'ai beaucoup entendu parler de toi.<0xFB>Tu es <0xFD><0x01> des Hauteurs Gelées,
 c'est bien ça ?<0xFB>Tu es bien plus jeune que je
 pensais. Alors, montre-moi.<0xFB>Montre-moi le lien que tu as forgé
 avec tes Pokémon.<0xFB>Montre-moi ce que tu as appris lors
@@ -96562,7 +96559,7 @@ Battle <0xFD><0x02>.",
 0x01F8E0F0,"Man"" I was looking forward to
 teaming up again, too""","Yo estaba deseando volver a formar
 equipo contigo""",52,2,54,pokemon,dialogue,"Mince... J'avais hâte qu'on refasse
-equipe aussi...",
+équipe aussi...",
 0x01F8E125,"<0xFD><0x01>!
 It's great to see you here!<0xFB>Do you want to fight together,
 just like old times?","<0x52><0xFD><0x01>! <0x52>Me alegro verte!<0xFB><0x51>Quieres luchar juntos, como en los
@@ -97295,7 +97292,7 @@ aesthetic and all battle mechanics<0xFA>will function as if the battle was<0xFA>
 <0xFC><0x01><0x06><0xFD><0x02>","Elige el fondo para las batallas.<0xFB>Ten en cuenta que este cambio
 puramente estético y todas las<0xFA>mecánicas de batalla funcionarán<0xFA>como si la batalla fuera en un<0xFA>terreno interior normal.<0xFB>El fondo actual es: <0xFC><0x01><0x06><0xFD><0x02><0xFC><0x01><0x08>.",219,2,221,pokemon,description,"Choisis le décor à afficher en
 combat.<0xFB>Note que ce changement est purement
-aesthétique et que toutes les<0xFA>mécaniques fonctionneront comme si<0xFA>le combat se passait en intérieur.<0xFB>Le décor actuel est :
+esthétique et que toutes les<0xFA>mécaniques fonctionneront comme si<0xFA>le combat se passait en intérieur.<0xFB>Le décor actuel est :
 {COLOR}É{STR_VAR_1}",
 0x01F924EE,"The battle BG has been set to:
 <0xFC><0x01><0x06><0xFD><0x02>",,36,2,38,pokemon,description,"Décor de combat réglé sur :
@@ -99311,7 +99308,7 @@ you have no place to store it?",,66,2,68,pokemon,dialogue,,
 0x01F9B402,"Welcome to the Antisis City
 Ring Challenge!<0xFB>I am your guide to the Battle Ring.","<0x52>Este es el Desafío del Anillo de
 Ciudad Antisis!<0xFB><0x52>Yo seré tu guía!",79,2,81,pokemon,dialogue,"Bienvenue au Ring Challenge
-d'Antisis City ! Je suis<0xFB>ton guide pour le Battle Ring.",
+d'Ville d'Antisis ! Je suis<0xFB>ton guide pour le Battle Ring.",
 0x01F9B42E,I am your guide to the Battle Ring.,,35,2,37,pokemon,dialogue,,
 0x01F9B452,"Would you like to take the Battle
 Ring Challenge?","<0x51>Te gustaría participar en el
@@ -99766,7 +99763,7 @@ elle me manque vraiment",
 0x01F9D1C3,"Please, take me back up to
 <0xFC><0x01><0x06>Blizzard City<0xFC><0x01><0x08>.<0xFB>I'll follow you there.","Por favor, llévame de regreso a
 <0xFC><0x01><0x06>Ciudad Ventisca<0xFC><0x01><0x08>.<0xFB><0x52>Te seguiré!",70,2,72,pokemon,dialogue,"S'il te plaît, ramène-moi à la
-{COLOR}ÉBlizzard City{COLOR}Ë. Je te<0xFB>suivrai là-bas.",
+{COLOR}ÉVille Blizzard{COLOR}Ë. Je te<0xFB>suivrai là-bas.",
 0x01F9D1F5,ll follow you there.,,20,2,22,pokemon,dialogue,,
 0x01F9D1F7, follow you there.,,18,0,18,pokemon,dialogue, Je t'y suivrai.,suffix string composed in scripts; leading space significant
 0x01F9D20A,<0xFC><0x01><0x02><0xFD><0x01> decided to go with Willy!,<0xFC><0x01><0x02>Has decidido ir con Willy.,31,2,33,pokemon,dialogue,<0xFC><0x01><0x02><0xFD><0x01> décide de suivre Willy !,
@@ -99797,7 +99794,7 @@ the KBT Expressway.","Rescata al hermano de un hombre
 de las garras de los <0xB1>Emboar
 Negros<0xB2>",85,2,87,pokemon,description,"Sauve le frère d'un homme
 des griffes du "" Black
-Emboar "" dans la KBT Expressway.",
+Emboar "" dans l'Autoroute KBT.",
 0x01F9D3A7," in
 the KBT Expressway.",,23,2,25,pokemon,other,,
 0x01F9D3BF,Brother,Brother,7,2,9,pokemon,other,Frère,
@@ -99834,7 +99831,7 @@ a Trainer.<0xFB>They say these Black Emboar are
 insanely vicious.","<0x52>Gracias!<0xFB>Probablemente puedas encontrar
 a mi hermano en la Autopista<0xFA>RBT.<0xFB>Iría yo mismo, pero soy un
 Entrenador demasiado débil.",171,3,174,pokemon,dialogue,"Merci ! Tu peux probablement<0xFB>trouver mon frère dans le
-nord de la KBT Expressway.<0xFB>J'irais bien moi-même, mais
+nord de l'Autoroute KBT.<0xFB>J'irais bien moi-même, mais
 je suis un Dresseur trop<0xFB>faible. On dit que ces Black
 Emboar sont sacrément vicieux.",
 0x01F9D63A,"They say these Black Emboar are
@@ -99973,12 +99970,12 @@ o puedes tomártelo con calma y<0xFA>pedalear.<0xFB>Búscanos si alguna vez est�
 Ciudad Antisis.<0xFB>Te daremos la bienvenida.",220,2,222,pokemon,dialogue,"C'est une puissante moto que
 tous les membres du Black<0xFB>{PLAYER} possèdent ! Tu peux
 appuyer sur {L_BUTTON} pour<0xFA>activer le turbo, ou y aller<0xFB>cool en pédalant. Passe nous
-voir si tu viens à Antisis City.<0xFB>On t'accueillera à bras ouverts.",
+voir si tu viens à Ville d'Antisis.<0xFB>On t'accueillera à bras ouverts.",
 0x01F9DF15,ll welcome you with open arms.,,30,2,32,pokemon,dialogue,,
 0x01F9DF34,"Welcome to the Black <0xFD><0x01>, kid!<0xFB>Look us up if you ever come
 by Antisis City.<0xFB>We'll welcome you with open arms.","Welcome to the Black <0xFD><0x01>, kid!<0xFB>Look us up if you ever come
 by Antisis City.<0xFB>We'll welcome you with open arms.",108,2,110,pokemon,dialogue,"Bienvenue dans le Black<0xFB><0xFD><0x01>, gamin ! Passe nous
-voir si tu viens à Antisis City.<0xFB>On t'accueillera à bras ouverts.",
+voir si tu viens à Ville d'Antisis.<0xFB>On t'accueillera à bras ouverts.",
 0x01F9DFA1,"Sorry you got caught up in
 all of that.<0xFB>I may have lied when I told you I
 hadn't heard from my brother.<0xFB>In truth, I knew he was the leader
@@ -100060,7 +100057,7 @@ minable !",
 0x01F9E528,Crikey.,"Viva""",7,2,9,pokemon,other,Incroyable.,
 0x01F9E530,"The Black Emboar won't fall
 so easily!",<0x52>Somos los mejores aunque te duela!,38,2,40,pokemon,dialogue,"Le Black Emboar ne
-tombera pas si aisement !",
+tombera pas si aisément !",
 0x01F9E545,"t fall
 so easily!",,17,2,19,pokemon,dialogue,,
 0x01F9E557,"Hey, hey, kid!
@@ -100119,7 +100116,7 @@ got here, and we even replaced the<0xFA>plugged up hole to the sewers with<0xFA>
 pertenecía a la antigua pandilla<0xFA>que solía dirigir Ciudad Antisis.<0xFB>Después de que los Ferrothorn Negros
 los expulsara, dejaron esta base<0xFA>lista para ser tomada.<0xFB>La hemos arreglado lo más que
 pudimos, <0x52>e incluso tapamos el<0xFA>hueco que da a las alcantarillas!",288,2,290,pokemon,dialogue,"Avant qu'on emménage, cette base
-appartenait à l'ancien gang qui<0xFA>faisait la loi à Antisis City.<0xFB>Après que les Black Ferrothorn
+appartenait à l'ancien gang qui<0xFA>faisait la loi à Ville d'Antisis.<0xFB>Après que les Black Ferrothorn
 les ont chassés, ils ont laissé<0xFA>cette base prête à être prise.<0xFB>On l'a bien retapée depuis qu'on
 est là, et on a même remplacé le<0xFA>trou bouché vers les égouts par<0xFA>un vrai escalier !",
 0x01F9E9FD,actual stairs!,,14,2,16,pokemon,dialogue,,
@@ -100503,7 +100500,7 @@ Leaves into a fine kind of mist.<0xFB>Hows about I share some with you
 for your effort?","<0x51>Sabes qué? Conozco a un tipo en
 Ciudad Dresco.<0xFB>Es capaz de convertir estas Hojas
 Oddish en una fina especie de<0xFA>niebla.<0xFB><0x51>Qué tal si te comparto una de esas?",160,3,163,pokemon,dialogue,"Tu sais quoi ? Je connais un
-gars à Ville Dresco. Il peut<0xFB>transformer ces Feuilles de
+gars à Bourg Dresco. Il peut<0xFB>transformer ces Feuilles de
 Mystherbe en une fine sorte<0xFB>de brume. Et si je t'en
 partageais un peu pour ton aide ?",
 0x01FA0221,"Hows about I share some with you
@@ -101116,7 +101113,7 @@ be strong to keep you busy!","You"" I remember you!<0xFB>You beat me badly back 
 Vivill Town hideout!<0xFB>You think you're hot stuff, don't
 you, little Champion?<0xFB>Hot stuff or not, I don't need to
 be strong to keep you busy!",193,2,195,pokemon,dialogue,"Toi... je me souviens de toi ! Tu<0xFB>m'as écrasé dans notre planque de
-Vivill Town ! Tu te prends pour un<0xFB>crack, petit Champion ? Crack ou
+Bourg Vivill ! Tu te prends pour un<0xFB>crack, petit Champion ? Crack ou
 pas, pas besoin<0xFB>d'être fort pour te
 retenir occupé !",
 0x01FA2E41,"Chaw ha ha ha!<0xFB>Wait, was that serious?<0xFB>I didn't think the brains behind
@@ -101324,7 +101321,7 @@ Return to Tarmigan Town with the
 Lunar Wing to wake up him.","<0x52>Un niño tiene una pesadilla!
 Regresa a Ciudad Tarmi con la
 Pluma Lunar y despiértalo.",94,2,96,pokemon,dialogue,"Un petit garçon fait un cauchemar !
-Retournez à Tarmigan Town avec la
+Retournez à Tarmiganville avec la
 Lun'Aile pour le réveiller.",
 0x01FA3E0A,Eldon,Eldon,5,2,7,pokemon,other,Eldon,
 0x01FA3E10,"I've lost my love of sailing since
@@ -101357,7 +101354,7 @@ en Ciudad Costera que puede<0xFA>llevarte allí.",242,2,244,pokemon,dialogue,"Su
 Seul toi peux réveiller mon fils de<0xFB>son horrible cauchemar... S'il te
 plaît, j'ai besoin<0xFB>de la Lun'Aile de
 l'île Pleine Lune pour le réveiller<0xFB>! Quand tu es prêt, j'ai un bateau à
-Fallshore City qui peut nous y<0xFA>emmener.",
+Ville de Fallshore qui peut nous y<0xFA>emmener.",
 0x01FA405B,take us there.,,14,2,16,pokemon,other,,
 0x01FA406A,"Please, I need the Lunar Wing from
 Fullmoon Island to awaken him!","<0x52>Por favor, Isla Lunar es la única
@@ -101415,7 +101412,7 @@ We'll never forget you!<0xFB>I'll be by the docks in Fallshore
 City if you ever need to set sail.","<0x52>Gracias!
 <0x52>Nunca te olvidaremos!<0xFB>Estaré en los muelles de Ciudad
 Costera si alguna vez quieres<0xFA>zarpar.",103,2,105,pokemon,dialogue,"Merci ! On ne
-t'oubliera jamais ! Je<0xFB>serai aux quais de Fallshore City si
+t'oubliera jamais ! Je<0xFB>serai aux quais de la Ville de Fallshore si
 tu veux prendre la mer.",
 0x01FA43FD,"ll be by the docks in Fallshore
 City if you ever need to set sail.",,66,2,68,pokemon,dialogue,,
@@ -102084,7 +102081,7 @@ los Horizon Negros.<0xFB>Tú y tus muchachos deberían unirse
 a nosotros, Byron.<0xFB><0x52>Tenemos suficiente personal para
 acabar con un ejército entero!",481,2,483,pokemon,dialogue,"Je m'appelle<0xFB>James. J'étais le chef
 du gang le plus dur et le plus<0xFA>coriace du coin, les <0xFD><0x01> Noirs<0xFB>! Mais ces Noacier Noirs nous ont
-fait la même chose qu'à vous. Ils<0xFB>nous ont virés d'Antisis City ! Moi
+fait la même chose qu'à vous. Ils<0xFB>nous ont virés d'Ville d'Antisis ! Moi
 et les <0xFD><0x01> Noirs étions perdus<0xFB>jusqu'à ce que la Patronne nous
 trouve. Elle nous<0xFB>a donné un nouveau<0xFB>but. Nous sommes maintenant
 fièrement connus sous le nom<0xFB>d'Horizon Noir. Toi et tes gars
@@ -102186,7 +102183,7 @@ Portuaire pour récupérer une récompense.",
 the old man that he has permission
 to move to Seaport City.","Ve a Ciudad Epidimia e infórmale
 al anciano que puede mudarse
-para Ciudad Porto.",93,3,96,pokemon,dialogue,"Retournez à Epidimy Town et informez
+para Ciudad Porto.",93,3,96,pokemon,dialogue,"Retournez à Ville d'Epidimy et informez
 le vieil homme qu'il a la permission
 de déménager à Ville Portuaire.",
 0x01FA78D0,"Head to Seaport City to pick up
@@ -102583,7 +102580,7 @@ like!",,38,2,40,pokemon,dialogue,,
 0x01FA902C,"We're the Black Ferrothorn!
 Rulers of Antisis City!","<0x52>Somos los poderosos Ferrothorn
 Negros!",51,2,53,pokemon,dialogue,"Nous sommes les Noacier Noirs ! Les
-maîtres d'Antisis City !",
+maîtres d'Ville d'Antisis !",
 0x01FA902F,"re the Black Ferrothorn!
 Rulers of Antisis City!",,48,2,50,pokemon,dialogue,,
 0x01FA9060,Not rulers of this battle!,<0x52>No tenemos reglas!,26,2,28,pokemon,dialogue,Pas les maîtres de ce combat !,
@@ -103287,7 +103284,7 @@ por completo, <0x52>nadie podrá<0xFA>interponerse en nuestro camino<0xFA>mientr
 convertiremos en la sede de<0xFA>nuestra nueva empresa!<0xFB><0x51>Quién necesita Ciudas Antisis?
 <0x52>Viva el Granbull Terror!",314,1,315,pokemon,dialogue,"{COLOR}ËUne fois que ces deux-là
 auront fini de se faire écraser par<0xFA>notre Aligatueur ultime, personne ne<0xFA>pourra se mettre en travers de notre<0xFA>chemin alors que nous revendiquons<0xFB>un nouveau foyer pour nous, les
-Terreur Granbull ! Nous marcherons<0xFA>sans opposition dans Polder Town et<0xFB>en ferons le siège de notre nouvelle<0xFB>entreprise ! Qui a besoin d'Antisis
+Terreur Granbull ! Nous marcherons<0xFA>sans opposition dans Bourg Polder et<0xFB>en ferons le siège de notre nouvelle<0xFB>entreprise ! Qui a besoin d'Antisis
 City ? Gruff sera si fier de nous tous, les Terreur Granbull !",
 0x01FAB6D7,"ll be so proud of all
 us Terror Granbull!",,41,1,42,pokemon,dialogue,,
@@ -103302,7 +103299,7 @@ quedaremos con los más fuertes.<0xFB><0x52>Pronto podremos llamar a Pueblo
 Polder nuestro hogar y no podrán<0xFA>hacer nada para detenernos!",274,1,275,pokemon,dialogue,"{COLOR}ËGrrr... Arr... Vous avez
 peut-être vaincu Aligatueur, mais<0xFB>sans Laggron, le
 marais est toujours<0xFA>dans le chaos.<0xFB>D'autres prétendants
-surgiront, et nous prendrons les<0xFA>forts pour nous-mêmes. Bientôt nous<0xFB>pourrons appeler Polder Town notre
+surgiront, et nous prendrons les<0xFA>forts pour nous-mêmes. Bientôt nous<0xFB>pourrons appeler Bourg Polder notre
 maison, et il n'y a rien que vous<0xFA>pourrez faire pour nous arrêter !",
 0x01FAB808,ll be able to do to stop us!,,28,1,29,pokemon,dialogue,,
 0x01FAB825,"<0xFC><0x01><0x08>Ahhh!
@@ -103420,7 +103417,7 @@ del grupo""",63,3,66,pokemon,dialogue,"Mon travail est de tenir notre boîte
 ici, et de ne pas la lécher... Eh<0xFB>bien... J'ai essayé.",
 0x01FABE8B, I tried.,,9,3,12,pokemon,dialogue,,
 0x01FABE95,"I miss Antisis City.<0xFB>We Terror Granbull used to live
-like kings!",<0x52>Extraño vivir en Ciudad Antisis!,64,2,66,pokemon,dialogue,"Antisis City me manque. Nous, les<0xFB>Terreur Granbull, vivions comme des
+like kings!",<0x52>Extraño vivir en Ciudad Antisis!,64,2,66,pokemon,dialogue,"Ville d'Antisis me manque. Nous, les<0xFB>Terreur Granbull, vivions comme des
 rois !",
 0x01FABEAA,"We Terror Granbull used to live
 like kings!",,43,2,45,pokemon,dialogue,,
@@ -103671,7 +103668,7 @@ Trouvez-le au Mont Thundercap 4E et
 ramenez-le à l'intello.",
 0x01FACC4F,"Return to Epidimy Town to
 receive your reward!","Return to Epidimy Town to
-receive your reward!",46,3,49,pokemon,dialogue,"Retournez à Epidimy Town pour
+receive your reward!",46,3,49,pokemon,dialogue,"Retournez à Ville d'Epidimy pour
 recevoir votre récompense !",
 0x01FACC7E,"A nerd's Electivire has been
 kidnapped! Head to Seaport City
@@ -103689,7 +103686,7 @@ to Epidimy Town from Seaport City.","The Science Society scientist has
 been defeated! Bring Electivire back
 to Epidimy Town from Seaport City.",105,2,107,pokemon,dialogue,"Le scientifique de la Société Scientifique a
 été vaincu ! Ramenez Élekable à
-Epidimy Town depuis Ville Portuaire.",
+Ville d'Epidimy depuis Ville Portuaire.",
 0x01FACD42,"No"" Electivire"" please!
 Why are you acting like this?","No"" Electivire"" <0x52>para!
 <0x51>Por qué estás actuando así?",53,2,55,pokemon,dialogue,"Non... Élekable... s'il te plaît !
@@ -103745,11 +103742,11 @@ meet me in the <0xFC><0x01><0x06>Epidimy Town<0xFA>Pokémon Center<0xFC><0x01><0
 Electivire.<0xFB>No puedo darte nada, así que reúnete
 conmigo en el Centro Pokémon de<0xFA><0xFC><0x01><0x06>Ciudad Epidimia<0xFC><0x01><0x08> si quieres una<0xFA>recompensa.",160,1,161,pokemon,dialogue,"Je vous en dois une pour avoir aidé
 mon Élekable.<0xFB>Je ne peux rien vous donner ici, alors
-retrouvez-moi au {COLOR}ÉCentre Pokémon<0xFA>d'Epidimy Town{COLOR}Ë si vous voulez une<0xFA>récompense pour votre aide.",
+retrouvez-moi au {COLOR}ÉCentre Pokémon<0xFA>d'Ville d'Epidimy{COLOR}Ë si vous voulez une<0xFA>récompense pour votre aide.",
 0x01FAD051,reward for your help.,,21,1,22,pokemon,dialogue,,
 0x01FAD067,"<0xFC><0x01><0x04>Epidimy Town, you say""<0xFB>Then I must head there"" for the
 sake of the Science Society""","<0xFC><0x01><0x04>Ciudad Epidimia""<0xFB>Debo dirigirme allí"" por el bien
-de la Sociedad Científica.",86,1,87,pokemon,dialogue,"{COLOR}ÇEpidimy Town, vous dites...<0xFB>Alors je dois m'y rendre... pour le
+de la Sociedad Científica.",86,1,87,pokemon,dialogue,"{COLOR}ÇVille d'Epidimy, vous dites...<0xFB>Alors je dois m'y rendre... pour le
 bien de la Société Scientifique...",
 0x01FAD0BE,"<0xFC><0x01><0x08>Sniff""<0xFB>My Electivire""<0xFB>This scientist came by and asked
 to take a look at him, but when I<0xFA>handed her his Poké Ball, she<0xFA>took off!<0xFB>Now my only friend is gone""","<0xFC><0x01><0x08>Mi Electivire""<0xFB>Esa científica vino y pidió echarle
@@ -103906,14 +103903,14 @@ you the true power of science!",,65,2,67,pokemon,dialogue,,
 0x01FADC75,"<0xFC><0x01><0x02>The Electivire seems to want to go
 with you back to Epidimy Town!<0xFB>Take it there?","<0xFC><0x01><0x02><0x52>Electivire quiere ir contigo de
 regreso a Ciudad Epidimia!<0xFB><0x51>Quieres llevarlo?",83,2,85,pokemon,dialogue,"<0xFC><0x01><0x02>L'Élekable semble vouloir te
-suivre jusqu'à Epidimy Town !<0xFB>L'y emmener ?",
+suivre jusqu'à Ville d'Epidimy !<0xFB>L'y emmener ?",
 0x01FADCBA,Take it there?,,14,2,16,pokemon,dialogue,,
 0x01FADCC9,"<0xFC><0x01><0x02>The Electivire seems to want to go
 with you back to Epidimy Town!<0xFB>But it can't go while there's someone
 following you""","<0xFC><0x01><0x02><0x52>Electivire quiere ir contigo de
 regreso a Ciudad Epidimia!<0xFB>Pero no puede irse mientras alguien
 esté siguiéndote""",121,2,123,pokemon,dialogue,"{COLOR}ÁL'Élekable semble vouloir retourner
-avec vous à Epidimy Town !<0xFB>Mais il ne peut pas y aller tant que quelqu'un
+avec vous à Ville d'Epidimy !<0xFB>Mais il ne peut pas y aller tant que quelqu'un
 vous suit...",
 0x01FADD43,"My Electivire came back to me!<0xFB>It must have been because of your
 efforts!<0xFB>Now, as promised, here are your
@@ -103958,7 +103955,7 @@ them back to Fallshore City.","The Swords of Justice are hiding in
 Victory Road! Capture and bring
 them back to Fallshore City.",96,2,98,pokemon,dialogue,"Les Lames de la Justice se cachent dans
 la Route Victoire ! Capturez-les et ramenez-les
-à Fallshore City.",
+à Ville de Fallshore.",
 0x01FAE008,"Bring the three Swords of Justice
 to Route 17 to uncover one last
 mystery.","Bring the three Swords of Justice
@@ -104108,7 +104105,7 @@ the Dresco Town Gym!<0xFB>For that, you can have these
 five Revives.","Oh, I remember you!<0xFB>You're that <0xFD><0x02> who assisted us in
 the Dresco Town Gym!<0xFB>For that, you can have these
 five Revives.",117,2,119,pokemon,dialogue,"Oh, je me souviens de vous !<0xFB>Vous êtes ce <0xFD><0x02> qui nous a aidés dans
-l'Arène de Dresco Town !<0xFB>Pour ça, vous pouvez avoir ces
+l'Arène de Bourg Dresco !<0xFB>Pour ça, vous pouvez avoir ces
 cinq Rappels.",
 0x01FAEA2A,"Say, would you like to help out by
 assisting the police again?","Say, would you like to help out by
@@ -104132,7 +104129,7 @@ criminal de Borrius se relaciona<0xFA>con las pandillas que estaban<0xFA>confina
 dominar la mayor parte de los<0xFA>territorio de allí, el llamado<0xFA><0xB1>Granbull Terror<0xB2>, abandonó su<0xFA>antigua base.<0xFB>Además, hemos tenido varios informes
 sobre varias miembros de la<0xFA>pandilla causando muchos<0xFA>problemas.<0xFB>Con nuestra fuerza policial tan
 dispersa, necesitamos a alguien<0xFA>fuerte como tú, para capturar a<0xFA>esos pandilleros.",522,2,524,pokemon,dialogue,"Ah, bien, bien.<0xFB>Alors, comme vous le savez, le problème de criminalité
-de Borrius concerne principalement les<0xFA>gangs qui étaient confinés ensemble<0xFA>à {COLOR}ÉAntisis City{COLOR}Ë.<0xFB>Récemment, cependant, le gang qui
+de Borrius concerne principalement les<0xFA>gangs qui étaient confinés ensemble<0xFA>à {COLOR}ÉVille d'Antisis{COLOR}Ë.<0xFB>Récemment, cependant, le gang qui
 dominait le plus de territoires là-bas,<0xFA>les soi-disant ""Terreur Granbull"", a quitté sa
 vieille base.<0xFB>De plus, il y a eu des rapports
 indiquant que plusieurs membres du gang
@@ -104186,7 +104183,7 @@ couiner, sale morveux !<0xFB>Implore la pitié des
 0x01FAEFC0,"Hold it right there!<0xFB>I'm arresting you, in the name of
 the Fallshore City Police!","<0x52>Sosténlo justo ahí!<0xFB><0x52>Le arrestraré en nombre de la
 Policía de Ciudad Costera!",81,4,85,pokemon,dialogue,"Halte là !<0xFB>Je vous arrête, au nom de
-la Police de Fallshore City !",
+la Police de la Ville de Fallshore !",
 0x01FAEFD7,"m arresting you, in the name of
 the Fallshore City Police!",,58,4,62,pokemon,dialogue,,
 0x01FAF012,"Uh oh - it's the cops!<0xFB>Scatter, boys!","<0x52>Oh, no, la Policía!
@@ -104299,7 +104296,7 @@ esfuerzos para capturar a esos 4<0xFA>ladrones cobardes!<0xFB>En cuanto al Líde
 prófugo""<0xFB>No lo he visto.
 <0x51>Quizás ha regresado a Ciudad<0xFA>Antisis, eh?",227,1,228,pokemon,dialogue,"Vous voilà, <0xFD><0x01>.<0xFB>Je dois vous féliciter pour vos vaillants
 efforts pour rassembler ces quatre<0xFA>voyous lâches.<0xFB>Quant au chef de la meute,
-cependant, qui reste en liberté...<0xFB>Je ne l'ai pas vu.<0xFB>Est-il retourné à Antisis City,
+cependant, qui reste en liberté...<0xFB>Je ne l'ai pas vu.<0xFB>Est-il retourné à Ville d'Antisis,
 peut-être ?",
 0x01FAF709,"Has he returned to Antisis City,
 perhaps?",,41,1,42,pokemon,dialogue,,
@@ -104544,7 +104541,7 @@ para mí.<0xFB>Según mis cálculos, hay <0xFD><0x02> niños en
 total.<0xFB>Mis escaneos indican que hay dos en
 zonas nevadas, uno en una ciudad<0xFA>de la costa, otro en un pueblo<0xFA>sombrío y triste.<0xFB>Has encontrado uno, así que eso
 solo deja <0xFC><0x01><0x06><0xFD><0x03><0xFC><0x01><0x08> más.<0xFB>Cuando encuentres a otro, escanéalo
-con tu Cubo V3 y envíame los datos.",721,2,723,pokemon,dialogue,"Qu'avez-vous dit ?<0xFB>Une enfant à Polder Town est tombée
+con tu Cubo V3 y envíame los datos.",721,2,723,pokemon,dialogue,"Qu'avez-vous dit ?<0xFB>Une enfant à Bourg Polder est tombée
 dans le coma à cause de trop regarder<0xFA>la télévision ?<0xFB>Alors ça doit être pire que ce que je
 craignais...<0xFB>J'ai reçu des rapports de toute
 la région d'enfants
@@ -104593,7 +104590,7 @@ of the <0xB1>television frenzy<0xB2>.<0xFB>You should return to Polder Town to
 claim your reward.","Todos los niños se han curado del
 <0xB1>frenesí televisivo<0xB2>.<0xFB>Deberías regresar a Pueblo Polder
 para reclamar tu recompensa.",118,2,120,pokemon,dialogue,"Tous les enfants ont été guéris
-de la ""frénésie de télévision"".<0xFB>Vous devriez retourner à Polder Town pour
+de la ""frénésie de télévision"".<0xFB>Vous devriez retourner à Bourg Polder pour
 réclamer votre récompense.",
 0x01FB0B04,"You should return to Polder Town to
 claim your reward.",,54,2,56,pokemon,dialogue,,
