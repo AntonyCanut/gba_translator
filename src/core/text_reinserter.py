@@ -49,13 +49,46 @@ class FreeSpaceAllocator:
         min_block: int = MIN_FREE_RUN,
         padding_bytes: Optional[List[int]] = None,
         start_offset: int = 0x100,
+        reserved_rom: Optional[bytes] = None,
     ):
+        """``reserved_rom``: same-base ROM (e.g. the Spanish translation)
+        whose own relocated text claims runs that are still 0xFF here. The
+        inline-overrides pass later mirrors that layout (it writes FR text
+        at the Spanish addresses), so any byte populated in ``reserved_rom``
+        must never be allocated — relocating a string there had it clobbered
+        by the mirror write (the Shadow Base door showed a move description
+        tail, "nche l'ennemi.").
+        """
         self.rom_data = rom_data
         self.min_block = max(self.MIN_FREE_RUN, min_block)
         self.padding_bytes = set(padding_bytes or [0xFF])
         self.start_offset = max(0, start_offset)
+        self.reserved_rom = reserved_rom
         self.blocks = self._scan_blocks()
         self.index = 0
+
+    def _carve_reserved(self, segments: List[tuple]) -> List[tuple]:
+        """Split out the bytes that ``reserved_rom`` populates."""
+        res = self.reserved_rom
+        if res is None:
+            return segments
+        padding = self.padding_bytes
+        carved: List[tuple] = []
+        for s, e in segments:
+            run_start = None
+            for i in range(s, min(e, len(res))):
+                if res[i] in padding:
+                    if run_start is None:
+                        run_start = i
+                else:
+                    if run_start is not None:
+                        carved.append((run_start, i))
+                        run_start = None
+            if run_start is not None:
+                carved.append((run_start, e))
+            elif e > len(res):
+                carved.append((len(res), e))
+        return carved
 
     def _scan_blocks(self) -> List[List[int]]:
         blocks: List[List[int]] = []
@@ -80,6 +113,7 @@ class FreeSpaceAllocator:
                         if e > hi:
                             carved.append((max(s, hi), e))
                     segments = carved
+                segments = self._carve_reserved(segments)
                 for s, e in segments:
                     seg = e - s
                     length = seg - 2 * self.RUN_MARGIN
@@ -313,7 +347,9 @@ class SmartReinserter:
             return
         if self.free_space_allocator is None:
             self.free_space_allocator = FreeSpaceAllocator(
-                self.rom_data, min_block=self.free_space_min
+                self.rom_data,
+                min_block=self.free_space_min,
+                reserved_rom=self.pointer_proof_rom,
             )
         pending, self._pending_relocations = self._pending_relocations, []
         for encoded, pointer_offsets, offset in pending:

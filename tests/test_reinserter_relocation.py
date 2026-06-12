@@ -64,6 +64,29 @@ class ReinserterRelocationTests(unittest.TestCase):
         alloc = allocator.allocate(64)
         self.assertEqual(alloc, 0x1000 + FreeSpaceAllocator.RUN_MARGIN)
 
+    def test_reserved_rom_bytes_are_never_allocated(self):
+        """Runs that are free here but populated in the reserved ROM (the
+        Spanish layout mirrored later by the inline-overrides pass) must be
+        skipped: a string relocated there was clobbered by the mirror write
+        (Shadow Base door showed a move-description tail)."""
+        from src.core.text_reinserter import FreeSpaceAllocator
+
+        rom = bytearray([0xAB] * 0x1000)
+        rom += b'\xff' * 0x4000           # 16KB free at 0x1000
+        rom += bytearray([0xAB] * 0x1000)
+
+        reserved = bytearray(rom)
+        # The reserved ROM populates the first 8KB of the run with text.
+        reserved[0x1000:0x3000] = b'\xD5' * 0x2000
+
+        allocator = FreeSpaceAllocator(bytearray(rom), reserved_rom=bytes(reserved))
+        self.assertEqual(len(allocator.blocks), 1)
+        start, length = allocator.blocks[0]
+        self.assertEqual(start, 0x3000 + FreeSpaceAllocator.RUN_MARGIN)
+        self.assertEqual(length, 0x2000 - 2 * FreeSpaceAllocator.RUN_MARGIN)
+        alloc = allocator.allocate(64)
+        self.assertGreaterEqual(alloc, 0x3000)
+
 
 class PlausiblePointerSiteTests(unittest.TestCase):
     """The site filter must accept every real script shape seen in Unbound
