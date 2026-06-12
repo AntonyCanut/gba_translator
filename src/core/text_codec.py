@@ -34,7 +34,16 @@ POKEMON_TABLE: Dict[str, int] = {
     'u': 0xE9, 'v': 0xEA, 'w': 0xEB, 'x': 0xEC, 'y': 0xED, 'z': 0xEE,
     '!': 0xAB, '?': 0xAC, '.': 0xAD, '-': 0xAE, ',': 0xB8,
     '\'': 0xB4, '"': 0xB0, '/': 0xBA, ':': 0xF0,
-    'À': 0x82, 'È': 0x83, 'É': 0x84,
+    # Accented uppercase, standard Gen III international charmap. Verified
+    # in-game by mGBA screenshot probes (À Ç È É Ê Ë Î Ï Ô Œ Ù Û) in both
+    # the dialogue and intro fullscreen fonts, and against the French
+    # species/move name tables of the source ROM (Électhor = 06 lecthor).
+    # The previous trio (À 0x82, È 0x83, É 0x84) pointed at empty glyphs /
+    # the superscript-e, rendering "Électhor" as "ᵉlecthor".
+    'À': 0x01, 'Á': 0x02, 'Â': 0x03, 'Ç': 0x04, 'È': 0x05, 'É': 0x06,
+    'Ê': 0x07, 'Ë': 0x08, 'Ì': 0x09, 'Î': 0x0B, 'Ï': 0x0C, 'Ò': 0x0D,
+    'Ó': 0x0E, 'Ô': 0x0F, 'Œ': 0x10, 'Ù': 0x11, 'Ú': 0x12, 'Û': 0x13,
+    'Ñ': 0x14, 'ß': 0x15, 'Í': 0x5A,
     # Verified against EN ROM prose ("It costs only <0xB7>50.",
     # "Hit <0xFD> time<0x5C>s<0x5D>!", "Brains <0x2D> Brawn"): Pokédollar,
     # parentheses, ampersand. Remaining entries follow the standard Gen III
@@ -57,14 +66,26 @@ SPANISH_EXTENDED_TABLE: Dict[str, int] = {
 
 POKEMON_TABLE.update(SPANISH_EXTENDED_TABLE)
 
-# French extended characters (reverse-engineered from ROM bytes)
+# French extended characters, standard Gen III international charmap.
+# Verified in-game by mGBA screenshot probes: à ç è é ê ë î ï ô œ ù û all
+# render at these codepoints in both the dialogue and intro fullscreen
+# fonts. ù was previously mapped to 0x7F, an empty glyph in the intro
+# fullscreen font and the vanilla FRLG fonts.
 FRENCH_EXTENDED_TABLE: Dict[str, int] = {
     'à': 0x16,  # chercher à manger
     'ç': 0x19,  # façon
     'è': 0x1A,  # très
+    'ê': 0x1C,  # être
+    'ë': 0x1D,  # Noël
+    'ì': 0x1E,
     'î': 0x20,  # naît
+    'ï': 0x21,  # naïf
+    'ò': 0x22,
+    'ô': 0x24,  # bientôt
+    'œ': 0x25,  # cœur
+    'ù': 0x26,  # où
+    'û': 0x28,  # sûr
     'â': 0x68,  # pâtissiers
-    'ù': 0x7F,  # où
 }
 
 POKEMON_TABLE.update(FRENCH_EXTENDED_TABLE)
@@ -77,41 +98,15 @@ SPANISH_ALIASES = {
 
 # Characters not present in the ROM font. Normalize to safe ASCII.
 ENCODE_ALIASES = {
-    'œ': 'oe',
-    'Œ': 'OE',
-    'ê': 'e',
-    'ô': 'o',
-    'û': 'u',
     'ä': 'a',
-    'ë': 'e',
-    'ï': 'i',
     'ö': 'o',
     'ü': 'u',
     'ÿ': 'y',
-    'Â': 'A',
-    'Ê': 'E',
-    'Î': 'I',
-    'Ô': 'O',
-    'Û': 'U',
     'Ä': 'A',
-    'Ë': 'E',
-    'Ï': 'I',
     'Ö': 'O',
     'Ü': 'U',
     'Ÿ': 'Y',
-    'Ç': 'ç',
-    'Ù': 'U',
-    'Ú': 'U',
-    'Ì': 'I',
-    'Í': 'I',
-    'Ò': 'O',
-    'Ó': 'O',
-    'Ñ': 'N',
-    'Á': 'A',
-    'ì': 'i',
-    'ò': 'o',
     '°': 'º',
-    'ß': 's',
     '！': '!',
     '？': '?',
     # Typographic characters normalized to encodable equivalents.

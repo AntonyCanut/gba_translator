@@ -28,7 +28,8 @@ describe('decodePokemonText', () => {
   });
 
   it('decodes accented characters (French/Spanish)', () => {
-    const data = new Uint8Array([0x84, 0xe0, 0xdd, 0xe7, 0xd9, POKEMON_TERMINATOR]); // É l i s e
+    // É is 0x06 (standard Gen III charmap, matches the ROM fonts).
+    const data = new Uint8Array([0x06, 0xe0, 0xdd, 0xe7, 0xd9, POKEMON_TERMINATOR]); // É l i s e
     expect(decodePokemonText(data)).toBe('Élise');
   });
 

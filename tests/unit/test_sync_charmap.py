@@ -118,8 +118,8 @@ class TestCharmapConsistency:
 
 
 class TestFrenchAccents:
-    REQUIRED_ACCENTS = list("éèàâçùî")
-    ALIAS_ACCENTS = list("êëûüïôœ")
+    REQUIRED_ACCENTS = list("éèàâçùîêëûïôœ")
+    ALIAS_ACCENTS = list("ü")
 
     def test_direct_french_accents_in_charmap(self):
         for accent in self.REQUIRED_ACCENTS:

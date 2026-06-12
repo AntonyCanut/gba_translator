@@ -39,12 +39,21 @@ CHAR_TO_BYTE: Dict[str, int] = {
     'k': 0xDF, 'l': 0xE0, 'm': 0xE1, 'n': 0xE2, 'o': 0xE3,
     'p': 0xE4, 'q': 0xE5, 'r': 0xE6, 's': 0xE7, 't': 0xE8,
     'u': 0xE9, 'v': 0xEA, 'w': 0xEB, 'x': 0xEC, 'y': 0xED, 'z': 0xEE,
-    # Accented uppercase
-    'À': 0x82, 'È': 0x83, 'É': 0x84,
-    # Accented lowercase (Spanish + French)
+    # Accented uppercase, standard Gen III international charmap. Verified
+    # in-game by mGBA screenshot probes (dialogue + intro fullscreen fonts)
+    # and against the French species/move name tables of the source ROM.
+    'À': 0x01, 'Á': 0x02, 'Â': 0x03, 'Ç': 0x04, 'È': 0x05, 'É': 0x06,
+    'Ê': 0x07, 'Ë': 0x08, 'Ì': 0x09, 'Î': 0x0B, 'Ï': 0x0C, 'Ò': 0x0D,
+    'Ó': 0x0E, 'Ô': 0x0F, 'Œ': 0x10, 'Ù': 0x11, 'Ú': 0x12, 'Û': 0x13,
+    'Ñ': 0x14, 'ß': 0x15, 'Í': 0x5A,
+    # Accented lowercase (Spanish + French), standard Gen III charmap.
+    # ù lived at 0x7F before: an empty glyph in the intro fullscreen font
+    # and the vanilla FRLG fonts; 0x26 renders everywhere.
     'à': 0x16, 'á': 0x17, 'ç': 0x19, 'è': 0x1A, 'é': 0x1B,
-    'î': 0x20, 'ó': 0x23, 'ú': 0x27, 'ñ': 0x29,
-    'â': 0x68, 'ù': 0x7F,
+    'ê': 0x1C, 'ë': 0x1D, 'ì': 0x1E, 'î': 0x20, 'ï': 0x21,
+    'ò': 0x22, 'ó': 0x23, 'ô': 0x24, 'œ': 0x25, 'ù': 0x26,
+    'ú': 0x27, 'û': 0x28, 'ñ': 0x29,
+    'â': 0x68,
     'í': 0x6F,
 }
 
