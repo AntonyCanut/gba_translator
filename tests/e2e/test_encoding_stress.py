@@ -73,16 +73,15 @@ class TestSpanishCharRoundTrip:
 class TestAliasCharacters:
     """Characters aliased to simpler forms encode without error."""
 
+    # Umlauts have no slot in the Gen III international charmap; everything
+    # else (ê ô û ë ï œ…) now encodes to its own standard glyph.
     ALIAS_PAIRS = [
-        ("ê", "e"),
-        ("ô", "o"),
-        ("û", "u"),
-        ("ë", "e"),
-        ("ï", "i"),
         ("ö", "o"),
         ("ü", "u"),
-        ("œ", "oe"),
+        ("ä", "a"),
     ]
+
+    DIRECT_CHARS = ["ê", "ô", "û", "ë", "ï", "œ"]
 
     def test_aliases_produce_same_bytes(self):
         for orig, alias in self.ALIAS_PAIRS:
@@ -93,11 +92,18 @@ class TestAliasCharacters:
                 f"({encoded_orig.hex()} vs {encoded_alias.hex()})"
             )
 
+    def test_former_aliases_encode_directly(self):
+        for char in self.DIRECT_CHARS:
+            encoded = TextEncoder.encode_pokemon(char)
+            assert len(encoded) == 2, f"'{char}' should be a single glyph"
+            assert TextDecoder.decode_pokemon(encoded) == char
+
     def test_alias_sentence(self):
         text = "Cœur brisé"
         encoded = TextEncoder.encode_pokemon(text)
         assert encoded[-1] == 0xFF
-        assert len(encoded) > 1
+        # Œ/œ are real glyphs (0x10/0x25): "Cœur brisé" is 10 bytes + 0xFF.
+        assert encoded == bytes([0xBD, 0x25, 0xE9, 0xE6, 0x00, 0xD6, 0xE6, 0xDD, 0xE7, 0x1B, 0xFF])
 
 
 class TestControlCodes:
