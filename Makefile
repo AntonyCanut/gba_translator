@@ -25,6 +25,7 @@ INLINE_FR_SCRIPT := scripts/apply_inline_overrides_fr.py
 REPAIR_LZ77_SCRIPT := scripts/repair_stable_lz77_blocks.py
 REPAIR_LOCALIZED_LZ77_SCRIPT := scripts/repair_localized_lz77_blocks.py
 REPOINT_STALE_SCRIPT := scripts/repoint_stale_text_pointers.py
+PATCH_FIXED_NAMES_SCRIPT := scripts/patch_fixed_table_names.py
 
 OUTPUT_DIR := output
 EXTRACT_DIR := $(OUTPUT_DIR)/extracted/extracted_texts
@@ -113,6 +114,7 @@ build-fr: $(ENGLISH_EXTRACT) $(SPANISH_EXTRACT) $(BUILD_SCRIPT)
 		--pointer-proof-rom $(SPANISH_ROM) \
 		--output $(FR_BUILD)
 	@$(PYTHON) $(PATCH_FONT_FR_SCRIPT) --rom $(FR_BUILD)
+	@$(PYTHON) $(PATCH_FIXED_NAMES_SCRIPT) --rom $(FR_BUILD)
 	@$(PYTHON) $(INLINE_FR_SCRIPT) \
 		--rom $(FR_BUILD) \
 		--source $(ENGLISH_ROM) \
