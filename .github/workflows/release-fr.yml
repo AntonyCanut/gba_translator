@@ -1,0 +1,47 @@
+name: Build & Release ROM FR
+
+on:
+  push:
+    branches: [unbound, master]
+  workflow_dispatch:
+
+jobs:
+  release-fr:
+    name: Build French ROM & Release
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Python 3.11
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: pip install -e ".[dev]"
+
+      - name: Build French ROM
+        run: make build-fr
+
+      - name: Publish release
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          SHA=$(git rev-parse --short HEAD)
+          DATE=$(date -u +'%Y-%m-%d')
+          MSG=$(git log -1 --pretty=%s)
+
+          # Suppress error if 'latest' release/tag doesn't exist yet
+          gh release delete latest --yes --cleanup-tag 2>/dev/null || true
+
+          gh release create latest \
+            --title "ROM FR — ${DATE} (${SHA})" \
+            --notes "**Commit :** \`${SHA}\` — ${MSG}
+
+Buildé automatiquement depuis la branche \`${GITHUB_REF_NAME}\`." \
+            --prerelease \
+            "output/roms/GenedRom-fr.gba#pokemon_unbound_fr.gba"
