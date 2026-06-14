@@ -1,3 +1,21 @@
+[build-system]
+requires = ["setuptools>=68.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "gba-translator"
+version = "0.1.0"
+description = "GBA ROM translation toolkit (EN→FR) for Pokemon Unbound / CFRU"
+requires-python = ">=3.11"
+dependencies = []
+
+[project.optional-dependencies]
+dev = ["pytest>=7.0"]
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["src*"]
+
 [tool.pytest.ini_options]
 testpaths = ["tests"]
 markers = [
