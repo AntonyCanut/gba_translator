@@ -32,7 +32,6 @@ jobs:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           SHA=$(git rev-parse --short HEAD)
-          DATE=$(date -u +'%Y-%m-%d')
           MSG=$(git log -1 --pretty=%s)
           NOTES=$(printf '**Commit :** `%s` — %s\n\nBuildé automatiquement depuis la branche `%s` (build #%s).' \
             "${SHA}" "${MSG}" "${GITHUB_REF_NAME}" "${{ github.run_number }}")
@@ -41,7 +40,8 @@ jobs:
           gh release delete latest --yes --cleanup-tag 2>/dev/null || true
 
           gh release create latest \
-            --title "ROM FR — ${DATE} (${SHA})" \
+            --title "FR.2.0.${{ github.run_number }}" \
             --notes "${NOTES}" \
             --prerelease \
+            --no-source-archives \
             "output/roms/GenedRom-fr.gba#pokemon_unbound_fr.gba"
