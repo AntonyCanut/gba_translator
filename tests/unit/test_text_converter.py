@@ -174,9 +174,9 @@ class TestCSVToJSONConverter(unittest.TestCase):
         csv_path.unlink(missing_ok=True)
 
     def test_edge_space_preserved_when_source_has_one(self):
-        # "The opposing " is concatenated with the Pokémon name by the
-        # battle engine: stripping the trailing space of the translation
-        # produced "L'adversaireRapion" in game.
+        # "The opposing " prefix was concatenated with the Pokémon name by the
+        # battle engine; the trailing space must survive CSV round-trip so the
+        # injector doesn't corrupt the string length.
         rows = [
             {
                 "offset": "0x00A4C61A",
