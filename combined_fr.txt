@@ -2355,8 +2355,8 @@
 0x3FB78A: {FD10} est déjà\nparalysé !
 0x3FB7A3: {FD10} n'est\nplus paralysé !
 0x3FB7BF: Le rêve de {FD10}\na été dévoré !
-0x3FB7D5: {FD0F} {FD00}\nne peut plus monter !
-0x3FB7EE: {FD10} {FD00}\nne peut plus baisser !
+0x3FB7D5: <0xFD><0x00> de <0xFD><0x0F>\nne peut plus monter !
+0x3FB7EE: <0xFD><0x00> de <0xFD><0x10>\nne peut plus baisser !
 0x3FB806: L'équipe {FD00}\nne fonctionne plus !
 0x3FB826: {UNKNOWN_STR} adverse\nne fonctionne plus !
 0x3FB844: {FD0F} est\nconfus !
@@ -2586,15 +2586,15 @@
 0x3FCAEF: {B_SCR_ACTIVE_NAME_WITH_PREFIX} : {B_SCR_ACTIVE_ABILITY} inefficace\nsur {B_EFF_NAME_WITH_PREFIX} !
 0x3FCB0C: {B_ATK_NAME_WITH_PREFIX} est trop effrayé pour bouger !
 0x3FCB26: Fantôme : Dehors…… Dehors……
-0x3FCB41: fortement
+0x3FCB41: fortement 
 0x3FCB4B: ose!
-0x3FCB50: fortement
+0x3FCB50: fortement 
 0x3FCB59: baisse !
-0x3FCB5F: {FD00} de {FD0F}\n{FD01}
-0x3FCB6A: {FD00} de {FD10}\n{FD01}
+0x3FCB5F: <0xFD><0x00> de <0xFD><0x0F>\n<0xFD><0x01>
+0x3FCB6A: <0xFD><0x00> de <0xFD><0x10>\n<0xFD><0x01>
 0x3FCB75: Avec {B_LAST_ITEM}, le {UNKNOWN_STR} de {B_SCR_ACTIVE_NAME_WITH_PREFIX}\n{PLAYER}
-0x3FCB8F: {FD00} de {FD0F}\n{FD01}
-0x3FCB9A: {FD00} de {FD10}\n{FD01}
+0x3FCB8F: <0xFD><0x00> de <0xFD><0x0F>\n<0xFD><0x01>
+0x3FCB9A: <0xFD><0x00> de <0xFD><0x10>\n<0xFD><0x01>
 0x3FCBA5: Stats de {B_ATK_NAME_WITH_PREFIX}\nau-dessus du max !
 0x3FCBC5: Stats de {B_DEF_NAME_WITH_PREFIX}\nau-dessous du min !
 0x3FCBE4: Coup critique !
@@ -2856,7 +2856,7 @@
 0xA4C12F: Une barrière mystérieuse apparaît\ndevant {B_SCR_ACTIVE_NAME_WITH_PREFIX}\let le protège !
 0xA4C17F: Mais la barrière mystérieuse a\nprotégé {B_DEF_NAME_WITH_PREFIX}\ldes impacts !
 0xA4C1C5: La barrière mystérieuse qui\nprotégeait {B_SCR_ACTIVE_NAME_WITH_PREFIX}\la disparu !
-0xA4C200: {FD13} {FD00}\n{FD01}
+0xA4C200: <0xFD><0x00> de <0xFD><0x13>\n<0xFD><0x01>
 0xA4C20B: {B_SCR_ACTIVE_NAME_WITH_PREFIX} annule les\nchangements de stats et talents\ldes autres Pokémon !
 0xA4C249: La tempête au-dessus de toi\nrenforce !
 0xA4C279: La tempête devient encore\nplus forte !
@@ -2897,7 +2897,7 @@
 0xA4C610: sévèrement
 0xA4C61A: L'adversaire 
 0xA4C628: adverse
-0xA4C636: sauvage
+0xA4C636: sauvage 
 0xA4C640: obscur
 0xA4C64C: L'adversaire 
 0xA4C659: adverse
@@ -7771,7 +7771,7 @@
 0x8BCE60: {B_DEF_NAME_WITH_PREFIX} tombe tout droit !\n
 0x8BCFD0: {B_ATK_NAME_WITH_PREFIX} pose un\nCarapiège !
 0x8BD140: {RIVAL} sauvage apparaît !\p
-0x8BD155: Le sauvage
+0x8BD155: sauvage 
 0x8BD3F0: Les changements de stats de\n{B_DEF_NAME_WITH_PREFIX} sont inversés !
 0x8BD420: Les capacités de\n{B_DEF_NAME_WITH_PREFIX} sont électrifiées !
 0x8BEE00: {B_DEF_NAME_WITH_PREFIX} tombe amoureux\nà cause du Nœud Destin !
