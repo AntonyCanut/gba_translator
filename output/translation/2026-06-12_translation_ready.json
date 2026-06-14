@@ -32312,26 +32312,28 @@
     {
       "offset": 4175829,
       "original_text": "<0xFD><0x0F>'s <0xFD> \nwon't go higher!",
-      "translation": "{FD0F} {FD00}\nne peut plus monter !",
+      "translation": "<0xFD><0x00> de <0xFD><0x0F>\nne peut plus monter !",
       "length": 35,
       "original_length": 24,
       "padding_used": 11,
       "encoding": "pokemon",
       "category": "dialogue",
       "notes": "",
-      "too_long": true
+      "too_long": true,
+      "modified": true
     },
     {
       "offset": 4175854,
       "original_text": "<0xFD><0x10>'s <0xFD> \nwon't go lower!",
-      "translation": "{FD10} {FD00}\nne peut plus baisser !",
+      "translation": "<0xFD><0x00> de <0xFD><0x10>\nne peut plus baisser !",
       "length": 36,
       "original_length": 23,
       "padding_used": 13,
       "encoding": "pokemon",
       "category": "dialogue",
       "notes": "",
-      "too_long": true
+      "too_long": true,
+      "modified": true
     },
     {
       "offset": 4175878,
@@ -34460,14 +34462,15 @@
     {
       "offset": 4180801,
       "original_text": "sharply ",
-      "translation": "fortement",
+      "translation": "fortement ",
       "length": 9,
       "original_length": 8,
       "padding_used": 1,
       "encoding": "pokemon",
       "category": "other",
       "notes": "",
-      "too_long": false
+      "too_long": false,
+      "modified": true
     },
     {
       "offset": 4180810,
@@ -34484,14 +34487,15 @@
     {
       "offset": 4180816,
       "original_text": "harshly ",
-      "translation": "fortement",
+      "translation": "fortement ",
       "length": 9,
       "original_length": 8,
       "padding_used": 1,
       "encoding": "pokemon",
       "category": "other",
       "notes": "",
-      "too_long": false
+      "too_long": false,
+      "modified": true
     },
     {
       "offset": 4180825,
@@ -34508,26 +34512,28 @@
     {
       "offset": 4180831,
       "original_text": "<0xFD><0x0F>'s <0xFD> \n<0xFD><0x01>",
-      "translation": "{FD00} de {FD0F}\n{FD01}",
+      "translation": "<0xFD><0x00> de <0xFD><0x0F>\n<0xFD><0x01>",
       "length": 23,
       "original_length": 10,
       "padding_used": 13,
       "encoding": "pokemon",
       "category": "description",
       "notes": "",
-      "too_long": true
+      "too_long": true,
+      "modified": true
     },
     {
       "offset": 4180842,
       "original_text": "<0xFD><0x10>'s <0xFD> \n<0xFD><0x01>",
-      "translation": "{FD00} de {FD10}\n{FD01}",
+      "translation": "<0xFD><0x00> de <0xFD><0x10>\n<0xFD><0x01>",
       "length": 23,
       "original_length": 10,
       "padding_used": 13,
       "encoding": "pokemon",
       "category": "description",
       "notes": "",
-      "too_long": true
+      "too_long": true,
+      "modified": true
     },
     {
       "offset": 4180853,
@@ -34544,26 +34550,28 @@
     {
       "offset": 4180879,
       "original_text": "<0xFD><0x0F>'s <0xFD> \n<0xFD><0x01>",
-      "translation": "{FD00} de {FD0F}\n{FD01}",
+      "translation": "<0xFD><0x00> de <0xFD><0x0F>\n<0xFD><0x01>",
       "length": 23,
       "original_length": 10,
       "padding_used": 13,
       "encoding": "pokemon",
       "category": "description",
       "notes": "",
-      "too_long": true
+      "too_long": true,
+      "modified": true
     },
     {
       "offset": 4180890,
       "original_text": "<0xFD><0x10>'s <0xFD> \n<0xFD><0x01>",
-      "translation": "{FD00} de {FD10}\n{FD01}",
+      "translation": "<0xFD><0x00> de <0xFD><0x10>\n<0xFD><0x01>",
       "length": 23,
       "original_length": 10,
       "padding_used": 13,
       "encoding": "pokemon",
       "category": "description",
       "notes": "",
-      "too_long": true
+      "too_long": true,
+      "modified": true
     },
     {
       "offset": 4180901,
@@ -86420,14 +86428,15 @@
     {
       "offset": 9163093,
       "original_text": "The wild ",
-      "translation": "Le sauvage",
+      "translation": "sauvage ",
       "length": 10,
       "original_length": 9,
       "padding_used": 1,
       "encoding": "pokemon",
       "category": "location",
       "notes": "",
-      "too_long": false
+      "too_long": false,
+      "modified": true
     },
     {
       "offset": 9163760,
@@ -115580,14 +115589,15 @@
     {
       "offset": 10797568,
       "original_text": "<0xFD><0x13>'s <0xFD> \n<0xFD><0x01>",
-      "translation": "{FD13} {FD00}\n{FD01}",
+      "translation": "<0xFD><0x00> de <0xFD><0x13>\n<0xFD><0x01>",
       "length": 20,
       "original_length": 10,
       "padding_used": 10,
       "encoding": "pokemon",
       "category": "description",
       "notes": "",
-      "too_long": true
+      "too_long": true,
+      "modified": true
     },
     {
       "offset": 10797579,
@@ -116048,14 +116058,15 @@
     {
       "offset": 10798646,
       "original_text": "The wild ",
-      "translation": "sauvage",
+      "translation": "sauvage ",
       "length": 7,
       "original_length": 9,
       "padding_used": -2,
       "encoding": "pokemon",
       "category": "location",
       "notes": "",
-      "too_long": false
+      "too_long": false,
+      "modified": true
     },
     {
       "offset": 10798656,
@@ -248824,6 +248835,15 @@
       "category": "description",
       "notes": "",
       "too_long": true
+    },
+    {
+      "offset": 4188303,
+      "original_text": "'s",
+      "translation": " ",
+      "encoding": "pokemon",
+      "category": "other",
+      "original_length": 2,
+      "modified": true
     }
   ]
 }
