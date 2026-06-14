@@ -160,3 +160,107 @@ def test_sequence_buffer_codes_match_english(fr_rom, en_rom, name, offset):
         f"{name} @0x{offset:X}: buffer (FD) references diverged from English\n"
         f"  FR: {fd_refs(fr_raw)}\n  EN: {fd_refs(en_raw)}"
     )
+
+
+# ---------------------------------------------------------------------------
+# Object-gain *script* guard (the non-text crash class).
+#
+# The string guards above only cover the dialogue the engine prints. The crash
+# the user reopened this ticket about happens at the *object gain* itself, after
+# the "Alors, prends cette CS pour aller le voir." box (screenshot): the NPC
+# event script runs ``giveitem CS``. That is plain script bytecode, not text, so
+# a build pass that mis-rewrote a relocated text pointer into the script (the
+# documented `_plausible_pointer_sites` false-positive class) would corrupt the
+# giveitem command and crash *without* any string looking wrong.
+#
+# This sequence was reproduced end-to-end in mGBA from the ticket save (kidnap
+# cutscene -> Ivory/Zeph battles -> portal escape -> hillbilly hands the CS):
+# the item (id 0x01B5) is added to the bag and the game does NOT crash on the
+# current build. These assertions pin the bytecode that makes that true so a
+# future rebuild can't silently regress it.
+# ---------------------------------------------------------------------------
+
+# Disassembled give-CS NPC event script (file offsets; addr = 0x08000000 + off).
+GIVE_CS_SCRIPT_LO = 0x1E79360
+GIVE_CS_SCRIPT_HI = 0x1E79460
+# The giveitem block right after the "give CS" dialogue:
+#   1A 00 80 B5 01   setorcopyvar 0x8000 = 0x01B5   (the CS item id)
+#   1A 01 80 01 00   setorcopyvar 0x8001 = 0x0001   (quantity)
+#   09 00            callstd 0                       (STD_OBTAIN_ITEM)
+GIVE_CS_GIVEITEM_OFF = 0x1E79392
+GIVE_CS_GIVEITEM_LEN = 12
+CS_ITEM_ID = 0x01B5
+
+ROM_BASE = 0x08000000
+ROM_END = 0x0A000000
+
+
+def _loadword_sites(rom: bytes, lo: int, hi: int):
+    """Yield (offset, pointer) for every ``loadword 0, <ptr>`` (0F 00 ptr4) in
+    [lo, hi) — i.e. every msgbox text operand the script feeds to callstd."""
+    i = lo
+    while i < hi - 5:
+        if rom[i] == 0x0F and rom[i + 1] == 0x00:
+            ptr = int.from_bytes(rom[i + 2:i + 6], "little")
+            yield (i, ptr)
+            i += 6
+            continue
+        i += 1
+
+
+def test_give_cs_giveitem_command_intact(fr_rom, en_rom):
+    """The ``giveitem`` block must stay byte-identical to English and still set
+    var 0x8000 to the CS id (0x01B5) and run ``callstd 0`` (STD_OBTAIN_ITEM).
+    Corruption here is the object-gain crash this ticket is about."""
+    fr_block = fr_rom[GIVE_CS_GIVEITEM_OFF:GIVE_CS_GIVEITEM_OFF + GIVE_CS_GIVEITEM_LEN]
+    en_block = en_rom[GIVE_CS_GIVEITEM_OFF:GIVE_CS_GIVEITEM_OFF + GIVE_CS_GIVEITEM_LEN]
+    assert fr_block == en_block, (
+        f"give-CS giveitem bytecode diverged from English @0x{GIVE_CS_GIVEITEM_OFF:X}\n"
+        f"  FR: {fr_block.hex()}\n  EN: {en_block.hex()}"
+    )
+    # Decode it explicitly so the guard fails loudly if the structure changes.
+    assert fr_block[0] == 0x1A and int.from_bytes(fr_block[1:3], "little") == 0x8000, (
+        "expected `setorcopyvar 0x8000, <item>`"
+    )
+    assert int.from_bytes(fr_block[3:5], "little") == CS_ITEM_ID, (
+        f"give-CS no longer grants item 0x{CS_ITEM_ID:X}"
+    )
+    assert fr_block[10:12] == b"\x09\x00", "expected `callstd 0` (STD_OBTAIN_ITEM)"
+
+
+def test_give_cs_script_bytecode_matches_english(fr_rom, en_rom):
+    """The whole give-CS event script must be byte-identical to English EXCEPT
+    at msgbox text-pointer operands, which the build legitimately rewrites when
+    it relocates a translated string. Any *other* diff is script-bytecode
+    corruption — the non-text object-gain crash class."""
+    allowed = set()
+    for off, _ in _loadword_sites(en_rom, GIVE_CS_SCRIPT_LO, GIVE_CS_SCRIPT_HI):
+        allowed.update(range(off + 2, off + 6))  # the 4 operand bytes only
+    corrupt = [
+        j
+        for j in range(GIVE_CS_SCRIPT_LO, GIVE_CS_SCRIPT_HI)
+        if fr_rom[j] != en_rom[j] and j not in allowed
+    ]
+    assert not corrupt, (
+        "give-CS script bytecode diverged from English outside msgbox operands "
+        f"(corruption): {[hex(c) for c in corrupt]}"
+    )
+
+
+def test_give_cs_script_msgbox_pointers_resolve(fr_rom):
+    """Every dialogue the give-CS script feeds to ``callstd`` must point at a
+    real, 0xFF-terminated ROM string — whether it was kept in place or relocated
+    by the build. A dangling operand here = the engine prints from garbage and
+    the CPU jumps off into the weeds during the object-gain scene."""
+    sites = list(_loadword_sites(fr_rom, GIVE_CS_SCRIPT_LO, GIVE_CS_SCRIPT_HI))
+    assert len(sites) >= 5, f"expected the give-CS script to render several boxes, found {len(sites)}"
+    for off, ptr in sites:
+        assert ROM_BASE <= ptr < ROM_END, (
+            f"loadword @0x{off:X} has non-ROM operand 0x{ptr:08X}"
+        )
+        target = ptr - ROM_BASE
+        end = fr_rom.find(b"\xff", target, target + MAX_STRING_BYTES)
+        assert end != -1, (
+            f"loadword @0x{off:X} -> 0x{ptr:08X}: string not 0xFF-terminated "
+            f"within {MAX_STRING_BYTES} bytes (dangling/relocated-to-garbage)"
+        )

@@ -35,3 +35,24 @@ button-mash playthrough is not deterministic enough for CI. Instead the crash
 
 As of the current build all of these pass: the give-CS sequence strings are
 byte-clean, so the text-corruption crash class is not present.
+
+### Reproduced end-to-end in mGBA (no crash on the current build)
+The full sequence *was* driven from this save to the exact reported screen and
+it does **not** crash on `output/roms/GenedRom-fr.gba`:
+
+1. Continue from this `.srm` (spawns at **Bourg Cratère**, the screenshot-1 spot)
+   and walk **down** — the kidnapping cut-scene triggers (map `6.12`).
+2. The Ivory/Zeph battles are the only RNG step. They are made deterministic by
+   driving mGBA over the Lua bridge with two cheats: pin the active party mon's
+   HP to max each turn (`gBattleMons[0].hp`, `0x02023C0C`) so it never faints,
+   and select the **super-effective** move (Carmache's *Morsure* / Dark beats the
+   Ghost foes — the default top-left *Double Baffe* is Normal and **immune**).
+3. After the portal escape the player lands in the corridor (map `46.0`) and the
+   hillbilly runs his give-CS script: the dialogue **"Alors, prends cette CS pour
+   aller le voir."** (screenshot 2) prints, then `giveitem` runs — item **0x01B5**
+   ends up in the bag and the game stays alive (`gSaveBlock1Ptr` valid throughout).
+
+The non-text crash class (a build pass corrupting the `giveitem` script bytecode
+or a relocated msgbox pointer) is now also guarded deterministically by
+`tests/e2e/test_object_gain_sequence.py::test_give_cs_giveitem_command_intact`
+and the two sibling `test_give_cs_script_*` checks.
