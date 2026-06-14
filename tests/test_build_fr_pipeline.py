@@ -18,10 +18,15 @@ silently come back:
 
 These assertions parse the Makefile only — no ROM required — so they run in the
 fast unit tier.
+
+Regression history (short-word translations):
+- T-63: short words like "Mom" (3 chars → 4 bytes with 0xFF terminator) were
+  silently skipped because the default ``--min-length`` was 12. Lowered to 4.
 """
 
 from __future__ import annotations
 
+import ast
 import re
 import unittest
 from pathlib import Path
@@ -163,6 +168,41 @@ class TestBuildFrPipeline(unittest.TestCase):
                 (ROOT / "scripts" / name).exists(),
                 f"scripts/{name} is missing",
             )
+
+
+class TestInlineOverrideMinLength(unittest.TestCase):
+    """Verify the --min-length default allows 3-char words like 'Mom' (4 bytes with 0xFF)."""
+
+    SCRIPT = ROOT / "scripts" / INLINE_OVERRIDE_SCRIPT
+
+    def _get_min_length_default(self) -> int:
+        """Parse the script's argparse definition and return the --min-length default."""
+        source = self.SCRIPT.read_text(encoding="utf-8")
+        tree = ast.parse(source)
+        for node in ast.walk(tree):
+            if not isinstance(node, ast.Call):
+                continue
+            func = node.func
+            name = (func.attr if isinstance(func, ast.Attribute) else
+                    func.id if isinstance(func, ast.Name) else None)
+            if name != "add_argument":
+                continue
+            args = [ast.literal_eval(a) for a in node.args if isinstance(a, ast.Constant)]
+            if "--min-length" not in args:
+                continue
+            for kw in node.keywords:
+                if kw.arg == "default" and isinstance(kw.value, ast.Constant):
+                    return int(kw.value.value)
+        raise AssertionError("--min-length argument not found in script")
+
+    def test_min_length_default_allows_short_words(self) -> None:
+        """Default must be ≤ 4 so 3-char words (4 bytes incl. 0xFF) are not skipped."""
+        default = self._get_min_length_default()
+        self.assertLessEqual(
+            default,
+            4,
+            f"--min-length default is {default}; must be ≤ 4 to translate 3-char words like 'Mom'",
+        )
 
 
 if __name__ == "__main__":

@@ -445,7 +445,7 @@ def main() -> int:
         type=Path,
         help='Translation JSON to skip pointer-based offsets',
     )
-    parser.add_argument('--min-length', type=int, default=12, help='Min inline length')
+    parser.add_argument('--min-length', type=int, default=4, help='Min inline byte length (incl. 0xFF terminator); 4 = 3-char words like "Mom"')
 
     args = parser.parse_args()
 
