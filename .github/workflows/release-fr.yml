@@ -25,7 +25,7 @@ jobs:
         run: pip install -e ".[dev]"
 
       - name: Build French ROM
-        run: make build-fr
+        run: make build-fr BUILD_NUMBER=${{ github.run_number }}
 
       - name: Publish release
         env:
@@ -34,14 +34,14 @@ jobs:
           SHA=$(git rev-parse --short HEAD)
           DATE=$(date -u +'%Y-%m-%d')
           MSG=$(git log -1 --pretty=%s)
+          NOTES=$(printf '**Commit :** `%s` — %s\n\nBuildé automatiquement depuis la branche `%s` (build #%s).' \
+            "${SHA}" "${MSG}" "${GITHUB_REF_NAME}" "${{ github.run_number }}")
 
           # Suppress error if 'latest' release/tag doesn't exist yet
           gh release delete latest --yes --cleanup-tag 2>/dev/null || true
 
           gh release create latest \
             --title "ROM FR — ${DATE} (${SHA})" \
-            --notes "**Commit :** \`${SHA}\` — ${MSG}
-
-Buildé automatiquement depuis la branche \`${GITHUB_REF_NAME}\`." \
+            --notes "${NOTES}" \
             --prerelease \
             "output/roms/GenedRom-fr.gba#pokemon_unbound_fr.gba"

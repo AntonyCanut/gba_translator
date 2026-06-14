@@ -8,6 +8,7 @@
 #   make validate-es - Byte-level validation against Spanish ROM
 
 PYTHON ?= python3
+BUILD_NUMBER ?= 0
 
 ROM_DIR := input/roms
 ENGLISH_ROM := $(ROM_DIR)/englishrom.gba
@@ -27,7 +28,7 @@ REPAIR_LOCALIZED_LZ77_SCRIPT := scripts/repair_localized_lz77_blocks.py
 REPOINT_STALE_SCRIPT := scripts/repoint_stale_text_pointers.py
 PATCH_FIXED_NAMES_SCRIPT := scripts/patch_fixed_table_names.py
 PATCH_TIME_FORMAT_SCRIPT := scripts/patch_time_format_fr.py
-PATCH_POKEDEX_SCRIPT := scripts/patch_pokedex_fr.py
+PATCH_VERSION_SCRIPT := scripts/patch_version_fr.py
 
 OUTPUT_DIR := output
 EXTRACT_DIR := $(OUTPUT_DIR)/extracted/extracted_texts
@@ -136,10 +137,7 @@ build-fr: $(ENGLISH_EXTRACT) $(SPANISH_EXTRACT) $(BUILD_SCRIPT)
 	@$(PYTHON) $(REPOINT_STALE_SCRIPT) \
 		--target $(FR_BUILD) \
 		--translations $(FR_TRANSLATION)
-	@$(PYTHON) $(PATCH_POKEDEX_SCRIPT) \
-		--rom $(FR_BUILD) \
-		--source $(ENGLISH_ROM) \
-		--translations $(FR_TRANSLATION)
+	@$(PYTHON) $(PATCH_VERSION_SCRIPT) --rom $(FR_BUILD) --build-number $(BUILD_NUMBER)
 
 validate-es: $(SPANISH_BUILD) $(VALIDATE_SCRIPT)
 	@$(PYTHON) $(VALIDATE_SCRIPT) \
