@@ -103,7 +103,7 @@
 0x1878B1: Je nage mieux que les Pokémon\nmarins.
 0x1878DD: Qu’y a-t-il au-delà de l’horizon ?
 0x1878F8: Glou !
-0x1878FE: Je vois les Ruines du Vide\nlà-bas !
+0x1878FE: Je vois les Ruines du Néant\nlà-bas !
 0x187925: J’ai essayé de plonger pour des\nPokémon, et ça a marché !
 0x187955: À l’aide !
 0x18795B: Tu ne peux plonger que là où la\nmer est sombre.
@@ -112,10 +112,10 @@
 0x1879D3: Je regarde la mer pour oublier\nle mauvais truc arrivé !
 0x187A11: Oh, j’adore ta monture !\nJe peux l’avoir si je gagne ?
 0x187A44: Oh ! J'ai perdu !
-0x187A50: Il y a encore du chemin jusqu’aux\nRuines du Vide.\pJe veux retourner à Bourg Dresco.
+0x187A50: Il y a encore du chemin jusqu’aux\nRuines du Néant.\pJe veux retourner à Bourg Dresco.
 0x187A9E: La natation, c’est top !\nLes coups de soleil, moins !
 0x187AC1: Choqué !
-0x187ACA: Mon ami voulait nager jusqu’aux\nRuines du Vide.
+0x187ACA: Mon ami voulait nager jusqu’aux\nRuines du Néant.
 0x187AFA: Ohé, toi !\nCes eaux sont traîtresses !
 0x187B25: Ooh !\nDangereux !
 0x187B35: M-mes jambes ! Crampes !\nGlou, glou…
@@ -2275,7 +2275,7 @@
 0x3EEE22: Route 16
 0x3EEE2B: Route 17
 0x3EEE34: Route 18
-0x3EEE7C: Bois Lugubres
+0x3EEE7C: Forêt Lugubres
 0x3EEE9F: Passage Souterrain
 0x3EEEC1: Grotte de la Vallée
 0x3EEED0: Route Victoire
@@ -5366,7 +5366,7 @@
 0x74037D: <0x11>\nMarlon : <0xFC><0x01><0x08>Cacnea, Coupe !
 0x740753: Tu es ma maman ?
 0x74145B: Héhooo…\pTu viens défier l'Arène ?
-0x74159F: Oh, c'est toi ! Champion en herbe !\nJe ne t'avais pas vu !\pBienvenue à l'Arène de Crater\pTown !\pCommence par un peu d'Eau\nFraîche.
+0x74159F: Oh, c'est toi ! Champion en herbe !\nJe ne t'avais pas vu !\pBienvenue à l'Arène de Bourg Cratère !\pCommence par un peu d'Eau\nFraîche.
 0x741625: Comme tu peux le voir (ou pas),\ncette Arène est centrée sur le type\pPour gagner ici, il te faut du\nsolide {COLOR}ÉCombat{COLOR}Ë,\l{COLOR}ÉFée{COLOR}Ë.\pBonne chance !
 0x7416E8: Bien joué !\pTu as trouvé ton chemin dans\nl'obscurité et vaincu Véga !\lPrends ça en récompense\nsupplémentaire.
 0x741765: Ce Joyau peut booster une capacité\nTénèbres en combat.\pAvec lui, libère ta fureur\nsombre !\pMwahahahaha !
@@ -5382,7 +5382,7 @@
 0x744FB3: La terre ici est morcelée en petits\nfragments.\pEn y pensant, toute la région de\nBorrius est divisée en grandes\lîles !
 0x74503F: Cette statue représente le Pokémon\nlégendaire de feu, Sulfura.\pIl vivrait quelque part dans le\nVolcan Cendreux, illuminant le ciel\lde ses flammes la nuit.
 0x7450DB: Regarde, regarde !\pJe vois Ville de Dehara d'ici !
-0x745108: Grim Woods\p<0x7B> Volcan Cendreux\n<0x7C> Bourg Dresco
+0x745108: Forêt Lugubre\p<0x7B> Volcan Cendreux\n<0x7C> Bourg Dresco
 0x745132: <0x0F> P<0x56><0x7C><0x08><0x09><0x06><0x02>On vient de\nrater un gros coup de filet,\lnos cibles ont encore filé...\pDu coup on boude.
 0x74528C: As-tu visité la Maison des\nDresseurs à Bourg Dresco ?\pC'est le bâtiment noir et bleu au\nsud de la ville.
 0x745382: Il y a un endroit magnifique au\nnord d'ici, le\lParadis Floral !\pIl y a des fleurs partout !
@@ -5498,7 +5498,7 @@
 0x7537CB: Tant pis…
 0x7537D6: Je suis là où j'aime être.
 0x754F11: As-tu senti les gens ?
-0x754F2C: L'Autoroute SES va de Bourg Cratère à\nVille de Tehl sous nos pieds.
+0x754F2C: L'Autoroute KBT va de Bourg Cratère à\nVille de Tehl sous nos pieds.
 0x7551B9: Je me demande combien de poids le\nsol peut supporter.
 0x7551EA: Assez pour un bon combat !
 0x755204: Si 100 personnes comme moi étaient\nici, le sol tiendrait ?
@@ -5790,7 +5790,7 @@
 0x779637: Log : {COLOR}ËJ'étudie les stats et taux de\ncapture des Pokémon.\pEt mon titre est\nProfesseur, pas\pvieux schnock !\pPar Arceus… Je te l'ai déjà trop\nrépété…\pBref, vous avez vécu une sacrée\népreuve.\pJe suis soulagé de vous savoir tous\nles deux indemnes.\pVous avez même réussi à obtenir vos\npropres Pokémon !\pJe comptais en donner un à {RIVAL}\nun jour, mais je n'ai plus à\lle faire !\pHo ho ho !
 0x7797CC: ho ho!
 0x7797D4: {RIVAL} : {COLOR}ËUn jour ?\pÇa fait 13 ans que tu t'occupes de\nmoi, vieux !\pJe te le demande depuis Arceus sait\ncombien de temps !\pFranchement, j'ai arrêté d'y croire\nil y a des années…
-0x77F0C4: Route 10\p<0x7B> Ville de Tehl <0x79>\nAuburn Waterwa\l<0x7C> Ville de Fallshore
+0x77F0C4: Route 10\p<0x7B> Ville de Tehl <0x79>\nVoie d'Eau Auburn\l<0x7C> Ville de Fallshore
 0x77F139: Bourg Cratère\pUne ville bâtie sur la cendre.
 0x77F198: Mon grand-père connaît plein de\nmonde !\pTu devrais aller lui parler !
 0x77F1E3: Tu es son enfant !\pJe savais bien que mes yeux ne me\ntrompaient pas !\pTon père était, pour faire simple,\nun homme extraordinaire.\pJe suis sûr que si tu te présentais\ncomme son enfant, les gens te\ltémoigneraient aussitôt beaucoup\ld'affection.\pRares sont ceux qui n'ont jamais\nentendu parler de ses exploits.\pQuel dommage qu'il ait disparu.\pSi seulement quelqu'un savait ce\nqu'il est advenu de lui, je\lpourrais enfin tourner la page.
@@ -6177,8 +6177,8 @@
 0x7A96E6: Tous les Pokémon ont des {COLOR}Étalents {COLOR}Ë\nutiles en combat.\pLes talents peuvent aider ou gêner\nleur porteur, selon le talent.\pCertains talents servent aussi hors\ncombat.\pMaîtrise-les si tu veux devenir un\nexcellent Dresseur.
 0x7A97DE: La plupart des Champions d'Arène\ncomptent sur la {COLOR}ÉMéga-Évolution {COLOR}Ç.\pTu dois te méfier et te préparer si\ntu veux les battre.\pSi tu ne sais pas ce qu'est la\nMéga-Évolution, pense à un\lsuper boost.
 0x7A99C5: Merci, {PLAYER}.\nJ'apprécie vraiment.\pJe vais tenter de trouver un accès à\nla {COLOR}ÉRoute 9{COLOR}Ë depuis la {COLOR}ÉVille de Tehl{COLOR}Ë.\pTu devrais probablement essayer\nquelque chose de similaire.
-0x7A9A75: Il y a trente ans, une météorite\nfonçait vers Borrius.\pLes astronomes de Ville Portuaire\nprédisaient que si elle n'était\lstoppée, elle tomberait sur\lValley City, ici, et détruirait\ltoute vie.\pEn urgence, nous avons évacué la\nville.\pAu moment de fuir par\nl'Autoroute SES, nous\lavons appris la nouvelle.\pLa météorite devait alors\nécraser la moitié de la région !\pSi nous avions fui\nsous terre, nous avions une\lgrande chance d'être enterrés.\pLe chaos a régné.\pTout semblait perdu… jusqu'à ce\nqu'IL arrive.\p{COLOR}ÉAros{COLOR}Ë, la légende.\pIl est arrivé avec Arceus\net a utilisé un petit Pokémon pour\ltéléporter tout le monde vers\lBorrius Est, en sécurité.\pIl comptait attaquer la météorite\nde face et la briser.\pAprès avoir tout mis à l'abri,\non raconte qu'il a chevauché\lun Rayquaza et percuté\lla météorite !\pElle a éclaté, et la plupart des\nfragments sont tombés sur\lValley City.\pLa ville fut détruite, mais Aros\navait sauvé la région.\pJe n'oublierai jamais cet acte\nqu'il a accompli.
-0x7A9E8F: {COLOR}ÇAutoroute SES\na gelé.\pEn tant que Championne de la ville,\nc'est mon travail de régler ça.\pRegarde comment je peux utiliser\nÉclate-Roc pour briser la glace !
+0x7A9A75: Il y a trente ans, une météorite\nfonçait vers Borrius.\pLes astronomes de Ville Portuaire\nprédisaient que si elle n'était\lstoppée, elle tomberait sur\lVille Vallée, ici, et détruirait\ltoute vie.\pEn urgence, nous avons évacué la\nville.\pAu moment de fuir par\nl'Autoroute KBT, nous\lavons appris la nouvelle.\pLa météorite devait alors\nécraser la moitié de la région !\pSi nous avions fui\nsous terre, nous avions une\lgrande chance d'être enterrés.\pLe chaos a régné.\pTout semblait perdu… jusqu'à ce\nqu'IL arrive.\p{COLOR}ÉAros{COLOR}Ë, la légende.\pIl est arrivé avec Arceus\net a utilisé un petit Pokémon pour\ltéléporter tout le monde vers\lBorrius Est, en sécurité.\pIl comptait attaquer la météorite\nde face et la briser.\pAprès avoir tout mis à l'abri,\non raconte qu'il a chevauché\lun Rayquaza et percuté\lla météorite !\pElle a éclaté, et la plupart des\nfragments sont tombés sur\lVille Vallée.\pLa ville fut détruite, mais Aros\navait sauvé la région.\pJe n'oublierai jamais cet acte\nqu'il a accompli.
+0x7A9E8F: {COLOR}ÇAutoroute KBT\na gelé.\pEn tant que Championne de la ville,\nc'est mon travail de régler ça.\pRegarde comment je peux utiliser\nÉclate-Roc pour briser la glace !
 0x7A9F78: 9{COLOR}ÇPlace-toi devant un rocher fissuré\net choisis un Pokémon pour briser.\pJ'espère que tu as compris les bases\nde l'Éclate-Roc !\pJe dois retourner à l'Arène, alors\nà une prochaine fois !
 0x7AA251: Je plaisante, je ne vais\nnulle part.
 0x7AA277: Je vais rester planté ici pour\nl'éternité.
@@ -6463,7 +6463,7 @@
 0x7C0649: Je ne te parle pas. Tu es trop\nméchant.
 0x7C06F6: Je te donnerai peut-être quelque\nchose aussi demain.
 0x7C0A2A: Non. Vous ne vous battez pas comme\ntel.
-0x7C0B71: Mel, le Champion, n'est pas là.\n\pIl vide sa tête sur l'Autoroute\nSES.
+0x7C0B71: Mel, le Champion, n'est pas là.\n\pIl vide sa tête sur l'Autoroute\nKBT.
 0x7C0C54: Un assistant de Log à Tehl te\n\loffrira un cadeau si tu as assez\n\lcapturé de Pokémon. J'espère qu'ils\n\pt'aideront à remplir ton Pokédex !\n
 0x7C0D3B: Certains Pokémon ici n'évoluent que\n\lavec une Pierre Eau .\n
 0x7C0D84: Nos forces seront vite dispersées.\n\pSi vous souhaitez donner un coup de\nmain, ce sera toujours apprécié.
@@ -6705,7 +6705,7 @@
 0x7C91CE: Coup critique !
 0x7C91DE: {COLOR}ËMaintenant, Électhor, il est temps\nde m'appartenir.
 0x7C9210: {COLOR}ËÇa a pris plus de temps que\nprévu.
-0x7C9239: {COLOR}ËIl est enfin temps d'aller aux\n{COLOR}ÉRuines du Vide{COLOR}Ë…
+0x7C9239: {COLOR}ËIl est enfin temps d'aller aux\n{COLOR}ÉRuines du Néant{COLOR}Ë…
 0x7C9272: {COLOR}ËJ'avais posté d'innombrables gardes\npour t'empêcher d'arriver !\pJ'ai même fait détruire l'escalier !\pComment as-tu réussi à tout\nenjamber… ?
 0x7C9302: {COLOR}ËEh, ça n'a plus d'importance. Nous\navons déjà gagné.\pÉlecthor m'appartient désormais.\pEt avec ce nouveau pouvoir, je vais\nenfin réussir à t'anéantir !
 0x7C9392: Peu importe si je perds ici. Nous\navons déjà gagné.
@@ -6732,7 +6732,7 @@
 0x7CA0DB: Ce type là-bas est mon seul ami\nmaintenant…
 0x7CA167: Qu'est-ce qui me frustre ici\n?\pLa police refuse d'agir car elle\nrefuse de\lcroire qu'une organisation obscure\lexiste !\pIls me traitent encore comme un\nenfant malgré ce que j'ai accompli…\pArgh…
 0x7CA25D: Attendez…\pJe me souviens maintenant…\pIl y a quelqu'un que je peux\ncontacter pour aide après tout…
-0x7CDD11: Pendant que je fais cela, vous\ndevriez être vous diriger vers\pLe mouvement {COLOR}ÉForce{COLOR}Ë est nécessaire\npour aller n'importe où à\lbattre le {COLOR}ÉFallshore Gym{COLOR}Ë en premier.\pJe pense avoir vu le chef du gymnase\ndebout dans les environs. {COLOR}ÉVille de Tehl{COLOR}Ë,\len fait…\pJe vous rattraperai à nouveau après\nvous aurez sauvé {COLOR}ÉÉlecthor{COLOR}Ë.
+0x7CDD11: Pendant que je fais cela, vous\ndevriez être vous diriger vers\pLe mouvement {COLOR}ÉForce{COLOR}Ë est nécessaire\npour aller n'importe où à\lbattre le {COLOR}ÉArène de Fallshore{COLOR}Ë en premier.\pJe pense avoir vu le chef du gymnase\ndebout dans les environs. {COLOR}ÉVille de Tehl{COLOR}Ë,\len fait…\pJe vous rattraperai à nouveau après\nvous aurez sauvé {COLOR}ÉÉlecthor{COLOR}Ë.
 0x7CDE4B: C'est parti, Starapator !
 0x7CDE6C: Mes Pokémon étaient très difficiles\nà trouver.\pIls n'apparaissent pas souvent dans\nla nature par ici.
 0x7CDEC1: Il semble que la rareté n’indique\npas une force exceptionnelle.
@@ -6763,7 +6763,7 @@
 0x7CEBF6: C’est ce que j’attendrais d’un\nporteur de Mega Evolution !
 0x7CEC2F: Beau travail, {PLAYER}.\pPour m'avoir vaincu une fois de\nplus, je veux que vous preniez ceci.
 0x7CEC72: Ce vieux con de Log m'a rattrapé il\ny a quelque temps.\pIl m'a donné ça et m'a dit que je\ndevrais te le donner la prochaine\lnous nous croiserions.\pIl m'a donné le mien aussi, mais il\nsait que je l'aurais détruit si\lil ne l'avait pas fait…
-0x7CED48: Alors, où vas-tu\nensuite, {PLAYER} ?\p…\pVille de Dehara, hein\n? J'y vais aussi.\pLog a mentionné un gars là-bas qui\nsait traverser l'eau.\pComme vous le savez, j'ai cherché\nmes parents, et mes recherches\lme disent que les Ombres étaient\limpliquées dans leur disparition.\pJ'ai réussi à retrouver les Ombres.\nà les Ruines du Vide, mais je ne\là pied ou en avion.\pSi vous avez également besoin d'un\nmoyen de surfer sur les vagues, vous\lle surfeur de la ville{COLOR}Ë.\pÀ plus tard, {PLAYER}.
+0x7CED48: Alors, où vas-tu\nensuite, {PLAYER} ?\p…\pVille de Dehara, hein\n? J'y vais aussi.\pLog a mentionné un gars là-bas qui\nsait traverser l'eau.\pComme vous le savez, j'ai cherché\nmes parents, et mes recherches\lme disent que les Ombres étaient\limpliquées dans leur disparition.\pJ'ai réussi à retrouver les Ombres.\nà les Ruines du Néant, mais je ne\là pied ou en avion.\pSi vous avez également besoin d'un\nmoyen de surfer sur les vagues, vous\lle surfeur de la ville{COLOR}Ë.\pÀ plus tard, {PLAYER}.
 0x7CEF27: Allez faire un peu plus d'espace\ndans votre Cube pour cette Méga
 0x7CEF61: Avez-vous fait de la place dans\nvotre Cube pour la Méga Pierre ?
 0x7CF046: Mes voyages ont-ils été vains ?
@@ -6789,8 +6789,8 @@
 0x7D0111: {COLOR}ËOh ! {PLAYER}!\pVous êtes arrivé juste à temps !
 0x7D0133: Looker : {COLOR}ËAh, c'est toi, {PLAYER}.\nDésolé, je ne t'ai pas vu, là-bas.\pJ'étais trop occupé à essayer de\ngagner cette machine à sous.\pTu sais, il y a en fait un Game\nCorner comme celui-ci à Kanto.\pSauf que là, c'était une couverture\npour Team Rocket…\pQuoi qu'il en soit, merci de m'avoir\nrencontré.\pLaissons-nous tous sortir, là où il\nfait plus calme, pour discuter.
 0x7D049A: Jax : {COLOR}ËQue se passe-t-il ?\p{PLAYER}!\nAttention !
-0x7D06E6: Ce sont les Ruines du Vide !\pEt ceux-là…\pCe sont des Shadow Grunts !
-0x7D2152: De toute façon, où sommes-nous ?\pEst-ce que ça pourrait être… les\nRuines du Vide ?
+0x7D06E6: Ce sont les Ruines du Néant !\pEt ceux-là…\pCe sont des Shadow Grunts !
+0x7D2152: De toute façon, où sommes-nous ?\pEst-ce que ça pourrait être… les\nRuines du Néant ?
 0x7D218B: ??? : {COLOR}ËC'est là que nous prenons\nposition , les hommes.\pPour le bien de la déliaison, ils ne\ndoivent pas être autorisés à monter\pExécutez le numéro d'ordre de Light\nof Ruin soixante-cinq !
 0x7D2229: Jax : {COLOR}ËÉtouraptor !\pSortez ces ombres !
 0x7D2254: Jax : {COLOR}ËÉTOURAPTOR !\pNOOOOON !
@@ -6907,11 +6907,11 @@
 0x7D72D5: {COLOR}ËQuand Zeph faisait creuser ici,\nles sbires\lont découvert un ancien Pokémon\lGroudon endormi sous le magma.\lIls l'ont aussitôt caché.\pAu lieu de prévenir Zeph,\nils l'ont recouvert vite\lpuis ont continué à creuser autour.\pS'ils avaient eu le bon objet\nà l'époque, peut-être que\lZeph n'aurait jamais perdu\ll'avantage.
 0x7D742F: {COLOR}ËGroudon !\pRépondez à l'Orbe rouge !\pÉveillez-vous et revenez à votre\nétat primordial !
 0x7D7480: Véga : {COLOR}ËQue vas-tu faire, Marlon ?\pSi tu continues à me retenir ici, je\nvais mourir et ta seule source\lsur l'endroit où se trouvent les\nShadow\lWarriors disparaîtra dans une\nbouffée de\lfumée.
-0x7D752F: Marlon : {COLOR}ËMême si tu meurs, Véga, Je\nconnaîtrai toujours l'emplacement de\lta base.\pTu as ordonné à tes grognements de\nse retirer à {COLOR}ÉBourg Vivill{COLOR}Ë, n'est-ce\pAprès avoir récupéré Zeph de {COLOR}ÉFrozen\nHeights{COLOR}Ë, j'irai là-bas pour chercher\ll'Ombre. Guerriers.
+0x7D752F: Marlon : {COLOR}ËMême si tu meurs, Véga, Je\nconnaîtrai toujours l'emplacement de\lta base.\pTu as ordonné à tes grognements de\nse retirer à {COLOR}ÉBourg Vivill{COLOR}Ë, n'est-ce\pAprès avoir récupéré Zeph de {COLOR}ÉHauteurs\nGelées{COLOR}Ë, j'irai là-bas pour chercher\ll'Ombre. Guerriers.
 0x7D7642: Véga : {COLOR}ËTu n'arrives pas à tenir,\nMarlon ?\pDans ce cas, jusqu'à ce qu'on se\nretrouve.
 0x7D768F: {COLOR}Ë{PLAYER}, empêche Groudon de\nravager la grotte.\pSinon, elle va s'effondrer et nous\nserons\lcoincés ici !
 0x7D770E: Le {STR_VAR_1} s'enfonça dans la lave et\nretomba dans un profond sommeil.
-0x7D7750: {COLOR}ËPas mal, {PLAYER}.\pJe comprends maintenant pourquoi\nArceus vous a renvoyé également.\pMais à partir de maintenant, je dois\nfaire les choses seul.\pSi vous venez à notre base à {COLOR}ÉFrozen\nHeights {COLOR}Ëaussi, Zeph n'acceptera pas\lm'aider à trouver les Shadow\nWarriors.\pJe suis reconnaissant pour votre\naidez-moi, mais s'il vous plaît,\l{COLOR}Énotre base aux Hauteurs Gelées{COLOR}Ë.
+0x7D7750: {COLOR}ËPas mal, {PLAYER}.\pJe comprends maintenant pourquoi\nArceus vous a renvoyé également.\pMais à partir de maintenant, je dois\nfaire les choses seul.\pSi vous venez à notre base à {COLOR}ÉHauteurs\nGelées {COLOR}Ëaussi, Zeph n'acceptera pas\lm'aider à trouver les Shadow\nWarriors.\pJe suis reconnaissant pour votre\naidez-moi, mais s'il vous plaît,\l{COLOR}Énotre base aux Hauteurs Gelées{COLOR}Ë.
 0x7D7A4F: Vous mettez les vêtements.
 0x7D7A67: Vos vêtements sont par terre.\nVoulez-vous les enfiler ?
 0x7D7AA6: Vous avez enfilé les vêtements et\nplacé l’uniforme de Marlon dans le\lCube.
@@ -7073,7 +7073,7 @@
 0x7E8C86: Un entrepôt tout ce qu'il y a de\nplus banal.\pRien à voir ici.
 0x7E8CC1: Bourg Vivill\pLa ville remplie de lumière et de\nprospérité.
 0x7E8CF8: La porte est verrouillée.
-0x7E8EF5: Merci !\pMon frère est sûrement dans\nl'Autoroute SES nord.\pJ'irais moi-même mais je suis trop\nfaible.\pOn dit que ces Black Emboar sont\nvraiment vicieux.
+0x7E8EF5: Merci !\pMon frère est sûrement dans\nl'Autoroute KBT nord.\pJ'irais moi-même mais je suis trop\nfaible.\pOn dit que ces Black Emboar sont\nvraiment vicieux.
 0x7E8FA1: C'est toi qui as demandé.
 0x7E90AB: {COLOR}ËHé ! Qui t'a dit que tu pouvais\npasser ?\pCet endroit est à nous, les Black\nEmboar !\pC'est notre Arène, gamin !\pDégage ! Rentre chez ta maman, petit\nparfait !
 0x7E9160: {COLOR}ËHa ! Très bien !\pLes morveux comme toi avec un avenir\nsi brillant…\pRetourne chez tes parents et sois\nsage.\pN'oublie pas ton biberon !
@@ -7472,7 +7472,7 @@
 0x7F96A5: Je suis allé aux égouts pour les\nchercher, mais impossible de les\ltrouver.\pTu dois te demander pourquoi mes\nchaussettes étaient dans les\ltoilettes.\pMais ça, c'est une autre histoire.\nPour une autre fois.\pJe me disais que tu pourrais\nchercher pour moi ?
 0x7F97CA: Merci, mec. Je savais pouvoir\ncompter sur toi.
 0x7F97F4: Merci, fille. Je savais pouvoir\ncompter sur toi.
-0x7F981F: Descends aux égouts chercher mes\nchaussettes.\pL'entrée principale est près de\nl'Autoroute SES.
+0x7F981F: Descends aux égouts chercher mes\nchaussettes.\pL'entrée principale est près de\nl'Autoroute KBT.
 0x7F987D: Je ne t'en veux pas, {PLAYER}.\nPas de rancune.\pJe devrai vivre sans mes chaussettes\npréférées désormais.\lSnif.
 0x7F98F6: Tu les as trouvées ! Beurk, elles\ppuent !
 0x7F9957: Euh… ah oui, je devrais te donner\nquelque chose\lpour ça.
@@ -7814,7 +7814,7 @@
 0x8CB6F7: Oh !\pMa mémoire flanche… j'ai encore une\nchose à te donner.\pLa prochaine fois que tu verras\n{RIVAL}, donne-lui ce Pokédex.
 0x8CB773: Il est plutôt froid avec moi depuis\nque ses parents me l'ont confié\lenfant, mais il semble bien\ls'entendre avec toi.\pJe suis sûr qu'avec le Pokédex, il\naccepterait d'aider.
 0x8CB82C: Va voir mon ami\nà {COLOR}ÉBourg Dresco{COLOR}Ë.\pJe compte sur toi.
-0x8CB872: {PLAYER}, vite au\n{COLOR}ÉMont Thundercap{COLOR}Ë !\pSi les Ombres y arrivent avant toi,\nBorrius est foutu !\pPar {COLOR}ÉAutoroute SES{COLOR}Ë\nvers le {COLOR}Ésud{COLOR}Ë vite.
+0x8CB872: {PLAYER}, vite au\n{COLOR}ÉMont Thundercap{COLOR}Ë !\pSi les Ombres y arrivent avant toi,\nBorrius est foutu !\pPar {COLOR}ÉAutoroute KBT{COLOR}Ë\nvers le {COLOR}Ésud{COLOR}Ë vite.
 0x8CB932: Avec Électhor en leur possession,\nil ne reste aux Ombres qu'à réunir\lles trois oiseaux aux {COLOR}ÉRuines du\lVide{COLOR}Ë pour libérer la force\pobscure.\nS'ils réussissent et brisent le\psceau…\nJe n'ose y penser.\pDépêche-toi d'y aller avec Jax pour\nfaire une dernière tentative.\pL'avenir est entre tes mains,\n{PLAYER} !
 0x8CBA7A: Maintenant que la force obscure est\nlibérée, notre fin est proche.\pMais en attendant, tout ce qu'on\npeut faire, c'est vivre normalement.
 0x8CBAEC: {PLAYER} !\pTu as sauvé Borrius !\nTu nous as tous sauvés !\pMerci !\pTon père serait fier de toi,\nGardien de Borrius.
@@ -7850,7 +7850,7 @@
 0x8CD15F: {COLOR}ËUne Poké Ball ? Ici ? Maintenant ?\pArceus existe donc vraiment…
 0x8CD1B2: {COLOR}ËPapy, il y a\nun moyen finalement…\pIl est temps que la fleur éternelle\nrefleurisse…
 0x8CD6A6: Hmm…\nVraiment…\pIl y a une émission à la télé\nqui pourrait raviver\lta mémoire.
-0x8CD70A: Excellent.\pTu le sais, la force obscure de\nBorrius a été scellée\lil y a des années.\pOn dit que si les trois Pokémon\nlégendaires, utilisés pour le sceau\lsont réunis aux\l{COLOR}ÉRuines du Vide{COLOR}Ë,\lle pouvoir peut être libéré.\pC'est sûrement ce que cherchent les\nvoyous que tu as croisés.\pIls veulent replonger Borrius\ndans les ombres.\pSi j'ai raison, leur prochaine cible\nsera…
+0x8CD70A: Excellent.\pTu le sais, la force obscure de\nBorrius a été scellée\lil y a des années.\pOn dit que si les trois Pokémon\nlégendaires, utilisés pour le sceau\lsont réunis aux\l{COLOR}ÉRuines du Néant{COLOR}Ë,\lle pouvoir peut être libéré.\pC'est sûrement ce que cherchent les\nvoyous que tu as croisés.\pIls veulent replonger Borrius\ndans les ombres.\pSi j'ai raison, leur prochaine cible\nsera…
 0x8CD8A6: ??? : {COLOR}ËPapy Arthur !
 0x8CD8BE: Arthur : {COLOR}ËQu'y a-t-il, Jax ?
 0x8CD8DC: Jax : {COLOR}ËVu des types\nen noir vers le {COLOR}ÉVolcan\lCendreux{COLOR}Ë !
@@ -7868,7 +7868,7 @@
 0x8CDDD0: Bon, {PLAYER}, tu devrais suivre\nJax.\pJe dirai à ta mère que tu seras\nparti un moment.\pJe suis sûr qu'elle comprendra.
 0x8CDE49: Rends-toi au {COLOR}ÉVolcan Cendreux{COLOR}Ë et\nregarde Jax sauver {COLOR}ÉSulfura{COLOR}Ë.\pTu pourrais gagner une expérience\nprécieuse comme ça.
 0x8CDEBB: On manque de temps, {PLAYER}.\nTu dois filer au {COLOR}ÉMont\pThundercap{COLOR}Ë pour sauver\n{COLOR}ÉÉlecthor{COLOR}Ë !\pS'il est capturé lui aussi, nous\nsommes fichus…
-0x8CDF4B: Avec les trois Pokémon légendaires\nen main, les Ombres ne sont plus\lqu'à quelques instants de libérer\lla force obscure.\pJax est à la {COLOR}ÉVille de Dehara{COLOR}Ë,\nprêt à t'emmener aux {COLOR}ÉRuins of Void{COLOR}Ë\let à empêcher les Ombres de\lmener leur plan à bien.
+0x8CDF4B: Avec les trois Pokémon légendaires\nen main, les Ombres ne sont plus\lqu'à quelques instants de libérer\lla force obscure.\pJax est à la {COLOR}ÉVille de Dehara{COLOR}Ë,\nprêt à t'emmener aux {COLOR}ÉRuines du Néant{COLOR}Ë\let à empêcher les Ombres de\lmener leur plan à bien.
 0x8CE03C: Alors, la force obscure a été\nlibérée…\pSi on ne l'arrête pas, elle peut\ndétruire toute la région !\pTu dois retrouver Jax et la sceller\nune fois de plus !
 0x8CE0C8: Bravo ! Lumière vaincue !\pTu nous as sauvés !\nTu es un vrai Gardien de\pBorrius !\pTon père serait fier.
 0x8CE141: Maintenant que tout est paisible\nà nouveau, pourquoi ne pas défier\lla {COLOR}ÉLigue Pokémon{COLOR}Ë ?\pAvec ton niveau, tu pourrais\nfacilement devenir le Maître.
@@ -7894,9 +7894,9 @@
 0x8CF52B: Un Pokémon rare
 0x8CF53A: Une Latiosite et une Latiasite
 0x8CF554: Le Charme Chroma
-0x8D072F: {RIVAL}: {COLOR}ËMec, tu quittes seulement\nla Ville de Dehara maintenant ?\pT'es vraiment lent !\pPendant que tu traînais, j'ai\ntrouvé comment atteindre les\lRuins of Void.\pMais quand je suis arrivé, il était\ntrop tard pour faire quoi que ce\psoit.\nQuelle que soit leur combine, les\pOmbres l'avaient déjà faite.\nIl y avait des traces de combat\let un drôle de tas de cendres au\psol.\nPeut-être pour un rituel ?\p…\p…\pQuoi !?\pC'est dingue !\pTu es mort et revenu à la vie !?
+0x8D072F: {RIVAL}: {COLOR}ËMec, tu quittes seulement\nla Ville de Dehara maintenant ?\pT'es vraiment lent !\pPendant que tu traînais, j'ai\ntrouvé comment atteindre les\lRuines du Néant.\pMais quand je suis arrivé, il était\ntrop tard pour faire quoi que ce\psoit.\nQuelle que soit leur combine, les\pOmbres l'avaient déjà faite.\nIl y avait des traces de combat\let un drôle de tas de cendres au\psol.\nPeut-être pour un rituel ?\p…\p…\pQuoi !?\pC'est dingue !\pTu es mort et revenu à la vie !?
 0x8D0906: {RIVAL}: {COLOR}ËQu'est-ce que…\pT'es censé être qui, toi ?
-0x8D0933: Looker: {COLOR}Ë…\p{PLAYER}, tu te demandes sûrement\npourquoi je ne t'ai pas suivi dans\lle portail avec Jax.\pQuand ce portail est apparu, j'ai\npris peur.\pAlors, contrairement à Jax, j'ai eu\nun réflexe de recul, ce qui m'a\lfait te perdre de vue.\pPour cela, je suis désolé.\pJe pensais que tu avais été envoyé\naux Ruins of Void.\pDu coup, j'ai essayé de m'y rendre\nmoi aussi.\pMais sans Pokémon à moi, je n'ai\npas pu l'atteindre.\pDis-moi, {PLAYER}, que s'est passé\npour vous deux de l'autre côté du\lportail ?\p…\p…\pJe vois…\pJe pense donc que le mieux est\nd'aller {COLOR}ÉBourg Vivill{COLOR}Ë\let aider les Ombres.\pQuand ils affronteront la Lumière\nde Ruine, ce sera l'occasion\ld'intervenir et de tous les\larrêter.\pVa aider les Ombres pour leur\nultime mission.\pUne fois que tu auras gagné, je te\nrejoindrai dehors avec une équipe\lde police pour en finir.
+0x8D0933: Looker: {COLOR}Ë…\p{PLAYER}, tu te demandes sûrement\npourquoi je ne t'ai pas suivi dans\lle portail avec Jax.\pQuand ce portail est apparu, j'ai\npris peur.\pAlors, contrairement à Jax, j'ai eu\nun réflexe de recul, ce qui m'a\lfait te perdre de vue.\pPour cela, je suis désolé.\pJe pensais que tu avais été envoyé\naux Ruines du Néant.\pDu coup, j'ai essayé de m'y rendre\nmoi aussi.\pMais sans Pokémon à moi, je n'ai\npas pu l'atteindre.\pDis-moi, {PLAYER}, que s'est passé\npour vous deux de l'autre côté du\lportail ?\p…\p…\pJe vois…\pJe pense donc que le mieux est\nd'aller {COLOR}ÉBourg Vivill{COLOR}Ë\let aider les Ombres.\pQuand ils affronteront la Lumière\nde Ruine, ce sera l'occasion\ld'intervenir et de tous les\larrêter.\pVa aider les Ombres pour leur\nultime mission.\pUne fois que tu auras gagné, je te\nrejoindrai dehors avec une équipe\lde police pour en finir.
 0x8D0CA6: {RIVAL}: {COLOR}ËHé !\nNe m'ignore pas !\pJe ne sais pas qui tu es ni ce qui\nse passe, mais si ça concerne les\lOmbres, je veux\len être !
 0x8D0D33: Looker: {COLOR}ËEt qui es-tu,\njeune homme ?
 0x8D0D5F: {RIVAL}: {COLOR}ËJe suis furieux !\pJ'étais à deux doigts de rattraper\nles Ombres et de trouver mes\lparents, et ils m'ont encore filé\lentre les doigts !\pMaintenant j'entends qu'ils vont à\nBourg Vivill ?\pAlors j'y vais aussi ! Pour les\narrêter une bonne fois pour toutes !
@@ -15440,7 +15440,7 @@
 0x1EEE8AA: chic
 0x1EEE8B0: ondulé
 0x1EEE8B7: joli
-0x1EEE8BE: Il y a vingt ans, une grosse\nmétéorite fonçait vers Borrius.\pLes astronomes de Cube Corp. ont\nprédit qu'elle tomberait sur\lValley City, ici, et détruirait la\lvie.\lNous avons évacué la ville en\purgence.\nEn fuyant par l'Autoroute KBT, une\pnouvelle est tombée : la météorite\nallait écraser la moitié de la\lrégion !\pFuir sous terre risquait de nous\nenterrer vivants.\pLe chaos a régné… jusqu'à ce\nqu'IL arrive.\l{COLOR}ÉAros{COLOR}Ë, la légende.\pAvec un petit Pokémon, il a\ptéléporté tout le monde vers East\nBorrius, en sécurité.\pIl comptait attaquer la météorite de\pface et la briser.\nAprès avoir mis tout le monde à\ll'abri, il aurait chevauché un\pRayquaza et percuté la météorite !\nElle a éclaté, et la plupart des\pfragments sont tombés sur Valley\nCity.\lLa ville fut détruite, mais Aros a\lsauvé la région.\pJe n'oublierai jamais son acte\nhéroïque.\l\p\n\p\n
+0x1EEE8BE: Il y a vingt ans, une grosse\nmétéorite fonçait vers Borrius.\pLes astronomes de Cube Corp. ont\nprédit qu'elle tomberait sur\lVille Vallée, ici, et détruirait la\lvie.\lNous avons évacué la ville en\purgence.\nEn fuyant par l'Autoroute KBT, une\pnouvelle est tombée : la météorite\nallait écraser la moitié de la\lrégion !\pFuir sous terre risquait de nous\nenterrer vivants.\pLe chaos a régné… jusqu'à ce\nqu'IL arrive.\l{COLOR}ÉAros{COLOR}Ë, la légende.\pAvec un petit Pokémon, il a\ptéléporté tout le monde vers Borrius Est, en sécurité.\pIl comptait attaquer la météorite de\pface et la briser.\nAprès avoir mis tout le monde à\ll'abri, il aurait chevauché un\pRayquaza et percuté la météorite !\nElle a éclaté, et la plupart des\pfragments sont tombés sur Ville Vallée.\lLa ville fut détruite, mais Aros a\lsauvé la région.\pJe n'oublierai jamais son acte\nhéroïque.\l\p\n\p\n
 0x1EEECCC: Après l'impact de la météorite, des\nannées plus tôt, deux Pokémon ont\lété découverts sur Terre.\pL'un d'eux était très\npuissant, capable d'exaucer tout\lvœu du cœur.\pAu début, les habitants\net moi trouvions ça merveilleux !\pOn pouvait s'en\nservir pour rebâtir notre ville !\pMais on a vite appris\nque tous nos vœux avaient un prix.\pCraignant un pire\ndésastre, ce Pokémon fut enfermé.\pMais maintenant que le {STR_VAR_2} d'Aros\nest devenu Champion, je pense qu'il\lest juste de te confier ce Pokémon\là.\pVoudrais-tu offrir\nun foyer aimant à ce Pokémon ?
 0x1EEEF16: Je vois…\pUn autre Dresseur viendra peut-être\nplus tard.\pBonne journée.
 0x1EEEF5B: Patiente ici, s'il te plaît.
@@ -18810,7 +18810,7 @@
 0x1F5534B: Cette CT a été trouvée achetée au\nMagasin.
 0x1F55376: Cette CT a été achetée au 4e étage.
 0x1F55393: Cette CT a été trouvée sur les\nfalaises via Escalade.
-0x1F553CB: Cette CT a été trouvée après avoir\nutilisé Coupe à l'extérieur de la\nsortie ouest du Bois Lugubre.
+0x1F553CB: Cette CT a été trouvée après avoir\nutilisé Coupe à l'extérieur de la\nsortie ouest du Forêt Lugubre.
 0x1F55412: Cette CT trouvée dans la salle\nnord. Recycle toujours !
 0x1F55453: Cette CT a été achetée au 4e étage.
 0x1F55470: Cette CT a été trouvée au -1 après\navoir glissé sur la glace et utilisé\nÉclate-Roc.
@@ -18955,7 +18955,7 @@
 0x1F57482: Boucliers
 0x1F5748A: Équipes préconfig.
 0x1F57497: Antre trouvée dans un Arbre Creux\naprès Escalade près de l'entrée du\nParadis Fleuri.
-0x1F574FD: Antre trouvée dans un Arbre Creux\naprès Coupe à l'extérieur de la\nsortie ouest du Bois Lugubre.
+0x1F574FD: Antre trouvée dans un Arbre Creux\naprès Coupe à l'extérieur de la\nsortie ouest du Forêt Lugubre.
 0x1F5755D: Antre trouvée dans un Arbre Creux\naprès Coupe au sud de la\nroute.
 0x1F575B8: Antre trouvée dans un Arbre Creux\naprès le pont à l'est de la\nroute.
 0x1F5761C: Antre trouvée dans un Arbre Creux\nsur la route reliant la Route 7\nà la Route 6.
@@ -19021,7 +19021,7 @@
 0x1F58AA3: J'ai remarqué un Pokémon curieux\nplus tôt.\pQuand je l'ai approché, il a changé\nd'apparence pour copier la mienne !\pNon…{PAUSE} ce n'était pas un\nMétamorph.\pJe pouvais au moins en être sûr.
 0x1F58B43: OÙ…\pSONT…\pLES…\pFANTÔMES !?
 0x1F58B5D: PAS… DE FANTÔMES !?
-0x1F58B6A: C'est la Forêt Séquoia ?\pC'est si lugubre ici, je pensais que\nce devait être le Bois Lugubre !
+0x1F58B6A: C'est la Forêt Séquoia ?\pC'est si lugubre ici, je pensais que\nce devait être le Forêt Lugubre !
 0x1F58BBB: Je suis complètement perdu, mais ça\nne me gêne pas !\pPlus j'avance, plus je trouve\nd'insectes !
 0x1F58C09: Argh, va te perdre !
 0x1F58C29: Si tu as une {COLOR}Éplace libre dans ton\néquipe{COLOR}Ë, plus une {COLOR}ÉPoké\lBall{COLOR}Ë de rechange quand tu fais\névoluer un\lNingale qui pullule ici, tu\ltrouveras un Pokémon dans ton équipe\laprès l'évolution !\pMais le processus nécessite une\n{COLOR}ÉPoké Ball{COLOR}Ë dans ton Cube, OK ?\pPAS Super Ball ou Hyper Ball,\njuste une {COLOR}ÉPoké Ball{COLOR}Ë.
@@ -19669,7 +19669,7 @@
 0x1F65146: Ils vont tous pleurer pour leur\nmaman !
 0x1F6516F: Qu'est-ce que tu veux, bouffon ?\pOn discute de choses importantes\nici !\pDégage !
 0x1F651C0: Porte de Route
-0x1F651CB: Aller au sud mène à l'Auburn\nWaterway, une route qui relie les\lRoutes 6 et 10.\pIl te faudra {COLOR}ÉSurf{COLOR}Ç pour\ny aller.
+0x1F651CB: Aller au sud mène à la Voie d'Eau Auburn, une route qui relie les\lRoutes 6 et 10.\pIl te faudra {COLOR}ÉSurf{COLOR}Ç pour\ny aller.
 0x1F65264: Route 7
 0x1F6526C: Tu as remarqué que les Rattata\nd'ici sont différents des\lRattata de la Route 2 ?
 0x1F652CC: Ils sont trop étranges...\nJe me demande pourquoi.
@@ -19806,8 +19806,8 @@
 0x1F67D78: Je suis la dernière ligne d’Ivory !\pTu as peut-être réussi à entrer\nsur la route, mais tu ne\lpasseras pas !
 0x1F67DF5: Je n’aurais vraiment pas dû tenter\nle destin comme ça…
 0x1F67E25: Erk… Ça devient trop chaud !\pTrès bien ! Je vais laisser Ivory\ns’occuper de vous elle-même !\lO-oui, voilà !
-0x1F67EAA: Ruines du Vide A
-0x1F67EBA: Ruines du Vide B
+0x1F67EAA: Ruines du Néant A
+0x1F67EBA: Ruines du Néant B
 0x1F67ECA: Anciennes ruines où l’on dit que la\nforce obscure fut scellée\nil y a des siècles.
 0x1F67F17: Besoin de soins, {PLAYER} ?
 0x1F67F29: Voilà, c’est fait, {PLAYER}.\pJe serai là si tu dois soigner\nà nouveau tes Pokémon.
@@ -20185,9 +20185,9 @@
 0x1F70C64: Avant {B_BUTTON}, check les flics !\n
 0x1F70CAC: Route 3 «\nRoute\pdu Paradis » <0x79> Paradis des\nFleurs <0x7A> Bourg Dresco
 0x1F70CE4: Paradis des Fleurs\pUn havre pour les fleurs.
-0x1F70D0E: Route 4 «\nZone\pdu Volcan » <0x7B> Grim Woods,\nVolcan Cendre, Route 5 <0x7C>\lBourg Dresco <0x7A> Route\l13
-0x1F70D64: Grim\pWoods <0x7B> Volcan Cendre\n<0x7C> Bourg Dresco
-0x1F70D8E: <0x7C> Grim Woods
+0x1F70D0E: Route 4 «\nZone\pdu Volcan » <0x7B> Forêt Lugubre,\nVolcan Cendre, Route 5 <0x7C>\lBourg Dresco <0x7A> Route\l13
+0x1F70D64: Forêt\pLugubre <0x7B> Volcan Cendre\n<0x7C> Bourg Dresco
+0x1F70D8E: <0x7C> Forêt Lugubre
 0x1F70D9B: Volcan de Cinder\nPassage
 0x1F70DB2: Route 5\n«\pVallée Humide » <0x79> Route 4,\nV. Cendre <0x7B> Cratère
 0x1F70E01: Route 5\n«\pVallée Humide » <0x79> Pension\nPokémon <0x7A> Bourg Cratère\l<0x7C> Route 4
@@ -20245,10 +20245,10 @@
 0x1F718B5: Maison Combat Duo\pProfitez des combats à deux !
 0x1F718E3: Quelque chose est écrit sur le mur.\p« Salle de dev Unbound »\pPas de budget pour un panneau ?
 0x1F71945: Zone d’Entraînement Guerrier Ombre
-0x1F71962: Route 13\n« Chenal de Borrius »\p<0x79> Route 4, Volcan Cendre,\nGrim Woods\l<0x7A> Route 14\l<0x7C> Ville de Dehara
-0x1F719C0: Route 13\n« Chenal de Borrius »\p<0x79> Route 4, Volcan Cendre,\nGrim Woods\l<0x7A> Route 14
-0x1F71A10: Route 14\n« Chenal de Borrius »\p<0x79> Route 13\n<0x7B> Route 6, Ruines du Vide\l<0x7C> Route 12
-0x1F71A5E: Route 14\n« Chenal de Borrius »\p<0x7B> Route 6\n<0x7C> Ruines du Vide, Route 12
+0x1F71962: Route 13\n« Chenal de Borrius »\p<0x79> Route 4, Volcan Cendre,\nForêt Lugubre\l<0x7A> Route 14\l<0x7C> Ville de Dehara
+0x1F719C0: Route 13\n« Chenal de Borrius »\p<0x79> Route 4, Volcan Cendre,\nForêt Lugubre\l<0x7A> Route 14
+0x1F71A10: Route 14\n« Chenal de Borrius »\p<0x79> Route 13\n<0x7B> Route 6, Ruines du Néant\l<0x7C> Route 12
+0x1F71A5E: Route 14\n« Chenal de Borrius »\p<0x7B> Route 6\n<0x7C> Ruines du Néant, Route 12
 0x1F71AA1: Grand Désert\p<0x7B> Ville de Dehara\n<0x7C> Bourg Gurun
 0x1F71AC9: Tombeau de Borrius\pIci repose le roi Borrius III.
 0x1F71AF5: Bourg Gurun\pUne ville qui a survécu aux sables\ndu temps.
@@ -22349,7 +22349,7 @@
 0x1F9DAA7: Je peux pas, James. Tu\nes mon frère. Tu comptes\pplus que tout pour moi.\pEt je peux pas te\nlaisser continuer sur cette voie !
 0x1F9DB17: Tu prétends tenir à moi, mais en\nvrai t'as zéro cran, frérot. Tu\pcontinues d'envoyer des Dresseurs\npour me harceler parce que t'es trop\lpeureux pour te salir les mains.
 0x1F9DBBE: Ce gosse, {PLAYER}, a du cran !
-0x1F9DBD7: Laisse-moi te dire ! Personne ne\pm'a jamais mis une telle raclée\nque {STR_VAR_2} ! J'ai même\prenommé le Black Emboar en Black\n{PLAYER}, d'après {STR_VAR_1} !\pC'est l'heure d'un nouveau\pdépart. Le Black {PLAYER} et\nmoi, on s'installe à Antisis\pCity ! J'ai entendu dire que\nl'ancien gang qui dirigeait\pl'endroit s'est fait chasser. Un\ntruc avec un Granbull Terrible,\pje sais plus... Cette ville est\nmûre pour être cueillie par le\pBlack {PLAYER} ! Gwa ha ha ha !
+0x1F9DBD7: Laisse-moi te dire ! Personne ne\pm'a jamais mis une telle raclée\nque {STR_VAR_2} ! J'ai même\prenommé le Black Emboar en Black\n{PLAYER}, d'après {STR_VAR_1} !\pC'est l'heure d'un nouveau\pdépart. Le Black {PLAYER} et\nmoi, on s'installe à Ville d'Antisis ! J'ai entendu dire que\nl'ancien gang qui dirigeait\pl'endroit s'est fait chasser. Un\ntruc avec un Granbull Terrible,\pje sais plus... Cette ville est\nmûre pour être cueillie par le\pBlack {PLAYER} ! Gwa ha ha ha !
 0x1F9DD50: Mais James, tu peux pas\njuste me laisser tout seul !
 0x1F9DD7E: J'ai pensé à faire de toi l'un des\nnôtres aussi, mais je peux pas avoir\lquelqu'un d'aussi faible dans mon\péquipe ! À la place, j'ai décidé de\nlaisser {PLAYER} rejoindre nos
 0x1F9DE0C: Bienvenue dans le Black {PLAYER},\pgamin ! Tous les membres doivent\navoir un Vélo, alors prends ça.
@@ -22849,7 +22849,7 @@
 0x1FAA672: Ce Pokémon a été trouvé près du\nMontagnard, du Karatéka et de la Combattante.
 0x1FAA6B6: Ce Pokémon a été trouvé pendant la\njournée sur la plage après avoir\namené Lunala.
 0x1FAA700: Ce Pokémon a été trouvé la nuit sur\nla plage après\navoir amené Solgaleo.
-0x1FAA746: Ce Pokémon a été trouvé la nuit sous\nles Ruines du Vide.
+0x1FAA746: Ce Pokémon a été trouvé la nuit sous\nles Ruines du Néant.
 0x1FAA781: Ce Pokémon a été trouvé pendant la\njournée au-dessus du Volcan Cinder\naprès avoir remonté la cascade.
 0x1FAA7DA: Ce Pokémon a été trouvé pendant la\njournée dans le canyon central.
 0x1FAA816: Ce Pokémon a été trouvé la nuit\naprès avoir utilisé Escalade du côté\nouest du 2ème étage.
@@ -22880,7 +22880,7 @@
 0x1FAB3F1: {COLOR}ÇWouah, on l'a fait ! Ces\pdeux Pokémon ne vont plus causer\nbeaucoup d'ennuis à partir de maintenant.
 0x1FAB44A: {COLOR}ËHaha, vous êtes tombés droit\ndans notre piège ! Grâce à ce gadget\pque la Société Scientifique nous a\nlaissé tester pour eux, nous\lpourrons transformer ce Pokémon en\lune force inarrêtable !
 0x1FAB4F6: {COLOR}ÇOh oh ! Ce voyou là-bas\pvient d'injecter à\ncet Aligatueur ce\ltruc scientifique. Et maintenant\pAligatueur devient de plus en plus\ngros ! On dirait\pqu'on va devoir le\ncalmer à nouveau.
-0x1FAB5C6: {COLOR}ËUne fois que ces deux-là\nauront fini de se faire écraser par\lnotre Aligatueur ultime, personne ne\lpourra se mettre en travers de notre\lchemin alors que nous revendiquons\pun nouveau foyer pour nous, les\nTerreur Granbull ! Nous marcherons\lsans opposition dans Bourg Polder et\pen ferons le siège de notre nouvelle\pentreprise ! Qui a besoin d'Antisis\nCity ? Gruff sera si fier de nous tous, les Terreur Granbull !
+0x1FAB5C6: {COLOR}ËUne fois que ces deux-là\nauront fini de se faire écraser par\lnotre Aligatueur ultime, personne ne\lpourra se mettre en travers de notre\lchemin alors que nous revendiquons\pun nouveau foyer pour nous, les\nTerreur Granbull ! Nous marcherons\lsans opposition dans Bourg Polder et\pen ferons le siège de notre nouvelle\pentreprise ! Qui a besoin d'Ville d'Antisis ? Gruff sera si fier de nous tous, les Terreur Granbull !
 0x1FAB712: {COLOR}ËGrrr… Arr… Vous avez\npeut-être vaincu Aligatueur, mais\psans Laggron, le\nmarais est toujours\ldans le chaos.\pD'autres prétendants\nsurgiront, et nous prendrons les\lforts pour nous-mêmes. Bientôt nous\ppourrons appeler Bourg Polder notre\nmaison, et il n'y a rien que vous\lpourrez faire pour nous arrêter !
 0x1FAB825: {COLOR}ËAhhh !\nLaggron s'est échappé\p! Je savais qu'on n'aurait pas dû\nacheter ces Poké-entraves au rabais\p! Dispersez-vous, les gars !\pDISPERSEZ-VOUS !
 0x1FAB898: {COLOR}ÇAh, Laggron, chéri, c'est\nbon de te ravoir. J'espère que ces\pTerreur Granbull ne t'ont pas trop\nfait mal. … Oui, je sais que ces\pvoyous doivent\pêtre punis, mais j'ai\nbesoin que tu restes ici dans le\lmarais pour que tu puisses rétablir\ll'équilibre. Ne t'inquiète pas, je\pgarderai un œil\nplus attentif sur le\lmarais à partir de maintenant. Si\pces voyous mettent un pied ici, je\nleur ferai la fête !
@@ -23001,10 +23001,10 @@
 0x1FAE6F3: Terreur Granbull
 0x1FAE704: Les Terreur Granbull
 0x1FAE718: Les Terreur Granbull sèment le\nchaos sur la Route 10 ! Aidez les autorités\nlocales à les rassembler.
-0x1FAE77D: Les Terreur Granbull se sont enfuis\nvers le Chenal Auburn ! Aidez les\nautorités locales à en arrêter 5.
-0x1FAE7E4: Les Terreur Granbull se sont enfuis\nvers le Chenal Auburn ! Aidez les\nautorités locales à en arrêter 4.
-0x1FAE84B: Les Terreur Granbull se sont enfuis\nvers le Chenal Auburn ! Aidez les\nautorités locales à en arrêter 3.
-0x1FAE8B2: Les Terreur Granbull se sont enfuis\nvers le Chenal Auburn ! Aidez les\nautorités locales à en arrêter 2.
+0x1FAE77D: Les Terreur Granbull se sont enfuis\nvers le Voie d'Eau Auburn ! Aidez les\nautorités locales à en arrêter 5.
+0x1FAE7E4: Les Terreur Granbull se sont enfuis\nvers le Voie d'Eau Auburn ! Aidez les\nautorités locales à en arrêter 4.
+0x1FAE84B: Les Terreur Granbull se sont enfuis\nvers le Voie d'Eau Auburn ! Aidez les\nautorités locales à en arrêter 3.
+0x1FAE8B2: Les Terreur Granbull se sont enfuis\nvers le Voie d'Eau Auburn ! Aidez les\nautorités locales à en arrêter 2.
 0x1FAE919: Seul le chef des Terreur Granbull\nreste à capturer ! Retrouvons-nous\nsur la Route 10 pour discuter du plan.
 0x1FAE97E: Voyou
 0x1FAE983: Voyou A
@@ -23350,7 +23350,7 @@
 0x1F51658: Ouahou !\nMême moi, j'ai perdu !\pEt te voilà prêt à défendre\nton titre de Maître !\pMoi, je file à la\nDragon-con.\pTu veux que je te rapporte\nquelque chose ?\pNon ? Tant pis pour toi.\nPlus de goodies pour moi !
 0x1F5175B: Hé, <0xFD><0x01> ! Je t'ai enfin\nrattrapé !\pC'est marrant, j'ai dû mettre mes\nBadges de côté, tout ça à cause\lde mon père"\pMais maintenant qu'on s'est tout\ndit, j'ai vaincu le Conseil 4\lrien que pour te voir.\pAlors revenons à ce qui compte\nvraiment.\pMoi"<0xFC><0x08><0x20> devenir le nouveau Maître !\pJ'ai réuni la crème de la crème\ndans cette équipe"\pAvec un Pokémon super rare trouvé\nau Volcan Cinder !\pPrêt, <0xFD><0x01> ?\nParce que tu vas y passer !
 0x1F51924: <0xFD><0x01> !\pPas question de te laisser passer\nsans un nouveau combat contre moi !\pComment regarder Papa en face si\nje ne peux même pas battre un\lmalheureux Dresseur ?\pAllez ! Cette fois, ta place au\nsommet est pour moi !
-0x1F51A99: Attends un instant, <0xFD><0x01> !\pEs-tu surpris de me trouver\nici ?\pEh bien, j'ai cru entendre un cri\nfamilier m'appeler"\pC'est à ce moment que j'ai\nrencontré Électhor.\pNon, pas celui du Mt. Thundercap"<0xFC><0x08><0x18>\ncelui qu'Aklove a utilisé pour\lla libération aux Ruines du Vide.\pJ'ignore encore pourquoi il est\nvenu, pourquoi il m'a choisi"\pMais c'était un signe, je devais\nte retrouver et t'affronter\lune fois de plus !\pPour être honnête, te vaincre est\nle but de <0xFD><0x06>, avant tout"\pMais je suis son père, je ne peux\npas laisser mes talents rouiller,\ln'est-ce pas ?\pAlors, aussi minces que soient mes\nchances, je veux tenter de\lte vaincre !
+0x1F51A99: Attends un instant, <0xFD><0x01> !\pEs-tu surpris de me trouver\nici ?\pEh bien, j'ai cru entendre un cri\nfamilier m'appeler"\pC'est à ce moment que j'ai\nrencontré Électhor.\pNon, pas celui du Mt. Thundercap"<0xFC><0x08><0x18>\ncelui qu'Aklove a utilisé pour\lla libération aux Ruines du Néant.\pJ'ignore encore pourquoi il est\nvenu, pourquoi il m'a choisi"\pMais c'était un signe, je devais\nte retrouver et t'affronter\lune fois de plus !\pPour être honnête, te vaincre est\nle but de <0xFD><0x06>, avant tout"\pMais je suis son père, je ne peux\npas laisser mes talents rouiller,\ln'est-ce pas ?\pAlors, aussi minces que soient mes\nchances, je veux tenter de\lte vaincre !
 0x1F51D12: Un instant, <0xFD><0x01>.\pJ'ai bien peur que <0xFD><0x06> et moi\nayons une rivalité familiale"\pQui de nous deux te prendra ton\ntitre de Maître en premier, moi,\lou <0xFD><0x06> ?\pEt j'ai ma fierté de Dresseur.\pJe ne peux pas me permettre de\nperdre face à <0xFD><0x06> si vite.\pAlors je vais tout mettre en jeu\npour te faire mordre la poussière !
 0x1F51E43: Je suppose qu'il ne fallait pas\nattendre moins du Maître.\pJusqu'où vas-tu te renforcer, et\nà quel point <0xFD><0x06> est-il loin\lde te surpasser ?\pEt bien sûr, serai-je assez fort\npour me tenir à ses côtés"
 0x1F51F11: Te voilà, <0xFD><0x01>.\pJe"<0xFC><0x08><0x18> eh bien, quand j'ai su que tu\nétais revenu à la Ligue Pokémon"\pJe me suis dit que c'était ma\nmeilleure chance de te réaffronter.\pJe ne sais pas trop pourquoi.\pEst-ce pour impressionner Marlon,\nou même <0xFD><0x06> ?\pOu cela vient-il de tout\nautre chose" ?\pJe ne m'en souviens plus très bien,\net pourtant, me voici.\pQuoi qu'il en soit, tu ne peux pas\nrefuser mon défi. Prépare-toi !
@@ -23593,7 +23593,7 @@
 0x17d80d: Salut !\nComment ça va ?\pTu es déjà allé au laboratoire du\nProfesseur Log ?
 0x1879d3: Je regarde la mer pour oublier\nle malheur qui est arrivé !
 0x1f5d57e: Je regarde la mer pour oublier\nle malheur qui est arrivé !
-0x187aca: Mon ami voulait nager jusqu'à\nThe Ruins of Void.
+0x187aca: Mon ami voulait nager jusqu'aux\nRuines du Néant.
 0x18909e: Cet air est magnifique !
 0x18d3d1: <0xFD><0x01> !\nTu devrais te reposer un peu.
 0x190365: Tu devrais faire des réserves de\n<0xFC><0x01><0x06>Potions<0xFC><0x01><0x08>.\pOn ne sait jamais quand on aura\nbesoin de soins en urgence.
@@ -23845,7 +23845,7 @@
 0x1f0426e: Tu comptes explorer\nMont Thundercap ?\pSi oui, tu vas avoir\nbesoin de ça !
 0x1f04509: Reviens me voir s'il y a d'autres\ncapacités à oublier.
 0x1f0453e: Si tu remplis un Pokédex, va faire\nun tour à <0xFC><0x01><0x06>Mont Thundercap<0xFC><0x01><0x04> !\pToutes sortes de Pokémon de type\nElectrik rares y vivent.\pOn dit même que Électhor niche au\nsommet !
-0x1f04906: Ouaip, je viens de finir de livrer\nles marchandises à tous les\lPoké Marts.\pJe vais bientôt rentrer à Antisis\nCity pour la nuit.\pMais on dirait qu'il me reste\nquelques objets.\pEt si au lieu de les jeter,\nje te les donnais !
+0x1f04906: Ouaip, je viens de finir de livrer\nles marchandises à tous les\lPoké Marts.\pJe vais bientôt rentrer à Ville d'Antisis pour la nuit.\pMais on dirait qu'il me reste\nquelques objets.\pEt si au lieu de les jeter,\nje te les donnais !
 0x1f04bf9: Tu ne me verras jamais dehors\nquand il pleut !\p...\pEn fait, la plupart des gens ici\nrentreraient sans doute s'abriter.
 0x1f05061: Mel, le Champion d'Arène, n'est pas\nlà en ce moment.\pIl est sans doute parti se changer\nles idées quelque part.
 0x1f050bb: Mel, le Champion d'Arène, n'est pas\nlà en ce moment.\pIl est sans doute parti se changer\nles idées près de la <0xFC><0x01><0x06>Autoroute KBT<0xFC><0x01><0x04>\là <0xFC><0x01><0x06>Ville de Tehl<0xFC><0x01><0x04>.
@@ -23926,7 +23926,7 @@
 0x1f14009: As-tu d'autres fossiles à\nressusciter en Pokémon ?
 0x1f140af: Il y a une chose que ce passionné\nveut à tout prix obtenir, quitte à\ldépenser beaucoup d'argent.\pAurais-tu un objet aussi rare ?\nAlors ?
 0x1f144d9: Oh, tu cherches une récompense ou\nun truc du genre ?\pAlors tiens, voilà pour toi.
-0x1f14b72: Ohhhhhhhh ouaiiiiiis !\pUn Dresseur qui prend la peine de\npêcher est venu chez moi !\pC'est l'inspiration qu'il me\nfallait pour repartir à zéro !\pC'est l'heure d'aller faire la\nfête à East Borrius, baby !\pSalut, Dresseur !
+0x1f14b72: Ohhhhhhhh ouaiiiiiis !\pUn Dresseur qui prend la peine de\npêcher est venu chez moi !\pC'est l'inspiration qu'il me\nfallait pour repartir à zéro !\pC'est l'heure d'aller faire la\nfête à Borrius Est, baby !\pSalut, Dresseur !
 0x1f14c9a: Tss...\pMenteur !\nTu n'as pas pêché 3 fois, je le sais !
 0x1f15650: Chuuut !\pTu les entends ?\nLes esprits prisonniers ?\pLeurs voix émanent de\nton Cube !\pTu dois les libérer !
 0x1f15b83: Oh là là...\nTu as l'air sur le point de tomber !\pTu n'as pas assez bu,\nc'est ça ?\pTiens, prends un peu de ma boisson.
@@ -23969,7 +23969,7 @@
 0x1f23077: Je suis le frère de la Famille Gem\nqui aime rôder dans le noir.\pJe peux apprendre <0xFC><0x01><0x06><0xFD><0x02><0xFC><0x01><0x08> à un\nPokémon pour <0xFC><0x01><0x06><0xFD><0x04> <0xFD><0x03>s<0xFC><0x01><0x08>.
 0x1f23252: Tu devrais rendre visite à ta\n<0xFC><0x01><0x06>mère<0xFC><0x01><0x08> avant de venir chercher\lmon colis, <0xFD><0x01>.\pElle doit se faire beaucoup de\nsouci pour toi.
 0x1f2375b: Tu as remarqué le X jaune sur\nBourg Dresco ?\pCe marqueur se déplacera tout seul\nquand tu auras une nouvelle\ldestination.
-0x1f237ce: Tu as remarqué le X jaune sur\nBourg Dresco ?\pCe marqueur se déplacera tout seul\nquand tu auras une nouvelle\ldestination.\pEt tu sais quoi ?\pMaintenant que tu as ton propre\nMission Log, laisse-moi y noter ma\lrequête de tout à l'heure !\pD'abord, essaie de voir tous les\nPokémon du Pokédex de Borrius.\pOu, comme on l'appelle plus\ncouramment, le Pokédex de\lWest Borrius.\pLes Pokémon qui n'apparaissent\nqu'à East Borrius en sont\lvolontairement exclus.
+0x1f237ce: Tu as remarqué le X jaune sur\nBourg Dresco ?\pCe marqueur se déplacera tout seul\nquand tu auras une nouvelle\ldestination.\pEt tu sais quoi ?\pMaintenant que tu as ton propre\nMission Log, laisse-moi y noter ma\lrequête de tout à l'heure !\pD'abord, essaie de voir tous les\nPokémon du Pokédex de Borrius.\pOu, comme on l'appelle plus\ncouramment, le Pokédex de\lBorrius Ouest.\pLes Pokémon qui n'apparaissent\nqu'à Borrius Est en sont\lvolontairement exclus.
 0x1f239ca: De plus, ma petite soeur,\nNatasha Log, vit à <0xFC><0x01><0x06>Ville Blizzard<0xFC><0x01><0x08>.\pSi tu la rencontres un jour, elle\npourra améliorer ton Pokédex pour\lt'aider à trouver plus facilement\lles Pokémon que tu cherches.
 0x1f23e0d: <0xFD><0x01> !\pTu as sauvé Borrius !\nTu nous as tous sauvés !\pMerci !\pTon père serait fier de toi,\nGardien de Borrius.\pMalheureusement, je n'ai plus\naucune mission à te confier.\pAs-tu pensé à affronter la\n<0xFC><0x01><0x06>Ligue Pokémon<0xFC><0x01><0x08> ?
 0x1f23f2f: Oh là là !\pTu as réussi !\nTu as vraiment réussi !\pTu as complété le Pokédex\nNational !\pMais si tu veux la récompense pour\nton excellent travail, il te faudra\lfaire de la place dans ton équipe.
@@ -24058,7 +24058,7 @@
 0x1f366de: Les autres sbires vont être\nfurieux...
 0x1f3766c: Comment fais-tu ça à chaque fois,\n<0xFD><0x01> ?\pJ'ai beau m'entraîner sans cesse,\ntu sembles toujours avoir deux\llongueurs d'avance...
 0x1f3797e: Et même si ton attitude mérite\nclairement d'être revue, <0xFD><0x06>,\ltu peux en avoir une aussi.
-0x1f379d3: Surf, hein...\nOuais, ça va m'être utile.\pJ'ai découvert que les Ombres\nétaient liées à la disparition de\lmes parents, et j'ai réussi à les\lpister jusqu'aux Ruins of Void.\pDès que j'aurai les indications,\nj'irai là-bas avec Surf découvrir\lce qui leur est arrivé, une bonne\lfois pour toutes !\pAlors... merci, j'imagine, Log.
+0x1f379d3: Surf, hein...\nOuais, ça va m'être utile.\pJ'ai découvert que les Ombres\nétaient liées à la disparition de\lmes parents, et j'ai réussi à les\lpister jusqu'aux Ruines du Néant.\pDès que j'aurai les indications,\nj'irai là-bas avec Surf découvrir\lce qui leur est arrivé, une bonne\lfois pour toutes !\pAlors... merci, j'imagine, Log.
 0x1f37db8: On se revoit plus tard, <0xFD><0x01>.\pLa prochaine fois, je te jure que\nje comblerai notre écart une bonne\lfois pour toutes !
 0x1f381e1: Hoopa, je sais que c'est difficile\npour toi, mais fais ça bien\lcette fois.\pInvoque un Électhor.\pPeu m'importe d'où tu dois\nl'invoquer.\pMême si tu dois dépenser jusqu'à ta\ndernière once d'énergie pour en\linvoquer un depuis une autre\lrégion...\pApporte-moi un Électhor.\pCOMPRIS ?
 0x1f390d6: Attends...<0xFC><0x08><0x18> je crois que cette\nexplosion vient de révéler une\lentrée vers les Ruins.
@@ -24190,7 +24190,7 @@
 0x1f5b389: Ouf...\pOn l'a échappé belle\nsur ce coup...
 0x1f5b3b3: Comme tu l'as vu, j'ai capturé ce\nPokémon en lançant une\l<0xFC><0x01><0x06>Poké Ball<0xFC><0x01><0x08>.\pMais ça ne marchera pas à tous\nles coups.\pSouvent, il faut affaiblir les\nPokémon avant de pouvoir\lles capturer.
 0x1f5b6e4: Tu n'as pas assez de <0xFD><0x02>\npour que j'améliore ta Brac. Macho !
-0x1f5b996: Si tu peux battre tous les Dresseurs\nd'ici et de l'Auburn Waterway,\lj'aimerais voir ta fureur aussi.
+0x1f5b996: Si tu peux battre tous les Dresseurs\nd'ici et de la Voie d'Eau Auburn,\lj'aimerais voir ta fureur aussi.
 0x1f5bb95: Dans le coin, on raconte que la\ngrotte s'appelle la <0xFC><0x01><0x06>Cave of Being<0xFC><0x01><0x08>.\pOn dit qu'elle ressemble aux\ngrottes des lacs de Sinnoh.
 0x1f5c7a4: Cet endroit me rappelle les Cliff\nCaves de la région de Johto.\pHein ? J'aurais pu trouver autre\nchose ?\pComme quoi ? Cliff Caves Remastered ?\nCliff Caves Recette Originale ?
 0x1f5c9a1: Tu savais que ton <0xFD><0x02>\npeut transformer des capacités\len <0xFC><0x01><0x06>Capacités Z<0xFC><0x01><0x08> ?\pCe sont des capacités surpuissantes\nutilisables une seule fois par\lcombat !\pFais tenir à ton Pokémon un\n<0xFC><0x01><0x06>Cristal Z<0xFC><0x01><0x08> du même type qu'une de\lses capacités, puis appuie sur <0xF8><0x04>\len choisissant la capacité pour\llancer une attaque dévastatrice !
@@ -24461,7 +24461,7 @@
 0x7ca0db: En fait, ce type là-bas est mon\nseul ami maintenant...
 0x7ce767: <0xFD><0x01> a reçu le Méga-Anneau de\nla Successeure Maxima !
 0x7cf825: <0xFC><0x01><0x08>Reste dans le sac, Pokémon\ninutile.
-0x7cf8d5: <0xFC><0x01><0x08>Nous n'avons plus de temps à\nperdre, Hoopa.\pJe ne voulais pas en arriver là,\nmais tu dois m'envoyer à travers\lun de tes anneaux jusqu'aux\lRuins of Void.\pJe pars devant, et comme tu ne\npeux pas voyager par tes propres\lanneaux sans point d'ancrage,\laccroche-toi au signal de mon Cube\lune fois que j'y serai.\pEssaie de rester discret, s'il te\nplaît.\pZeph ne doit pas découvrir notre\nplan.\pNe tarde pas trop, Hoopa.
+0x7cf8d5: <0xFC><0x01><0x08>Nous n'avons plus de temps à\nperdre, Hoopa.\pJe ne voulais pas en arriver là,\nmais tu dois m'envoyer à travers\lun de tes anneaux jusqu'aux\lRuines du Néant.\pJe pars devant, et comme tu ne\npeux pas voyager par tes propres\lanneaux sans point d'ancrage,\laccroche-toi au signal de mon Cube\lune fois que j'y serai.\pEssaie de rester discret, s'il te\nplaît.\pZeph ne doit pas découvrir notre\nplan.\pNe tarde pas trop, Hoopa.
 0x7cfb03: Ce col de montagne a une\nconfiguration très particulière.\pIl descend doucement, puis plonge\nd'un coup !
 0x7cfc66: J'aurais juré que le Pokémon des\nlégendes vient de passer par ici en\lflottant...
 0x7d22f4: <0xFC><0x01><0x08>On dirait que l'explosion a révélé\nune entrée des ruines.
@@ -24523,7 +24523,7 @@
 0x7f791e: Je m'amuse à embêter les gens\navec mes Pokémon puants.\pIls sont parfaits pour effrayer\nles gens. Et en plus, ils mordent.
 0x1f5e90a: Je m'amuse à embêter les gens\navec mes Pokémon puants.\pIls sont parfaits pour effrayer\nles gens. Et en plus, ils mordent.
 0x7f8154: Looker : <0xFC><0x01><0x08>D'accord.\nJe m'occupe des billets.\pRetrouvez-moi là-bas tous les deux.
-0x7f8248: <0xFC><0x01><0x08><0xFD><0x01> !\pOù est la Light of Ruin ?\p...\p<0xFC><0x01><0x06>East Borrius<0xFC><0x01><0x08> ?\pAlors je dois me dépêcher d'aller à\n<0xFC><0x01><0x06>Ville Portuaire <0xFC><0x01><0x08>avant le départ du\lprochain bateau !
+0x7f8248: <0xFC><0x01><0x08><0xFD><0x01> !\pOù est la Light of Ruin ?\p...\p<0xFC><0x01><0x06>Borrius Est<0xFC><0x01><0x08> ?\pAlors je dois me dépêcher d'aller à\n<0xFC><0x01><0x06>Ville Portuaire <0xFC><0x01><0x08>avant le départ du\lprochain bateau !
 0x7f8c2b: Hmm...\pTu dois être sacrément costaud si\ntu as battu Big Mo.\pC'est pas facile.\pTiens, prends ça en guise de\nfélicitations.
 0x1ede0e9: Hmm...\pTu dois être sacrément costaud si\ntu as battu Big Mo.\pC'est pas facile.\pTiens, prends ça en guise de\nfélicitations.
 0x7f8e80: J'espère bien te revoir, toi et\nton argent.
@@ -24560,7 +24560,7 @@
 0x8cdc55: Log : <0xFC><0x01><0x08>Bien, <0xFD><0x01>, je pense qu'il\nest temps pour toi de rentrer.\pTu as accompli ta mission, et je\nsuis sûr que tu manques à ta mère.
 0x8cdebb: Le temps presse,\n<0xFD><0x01>.\pTu dois te dépêcher d'aller à\n<0xFC><0x01><0x06>Mont Thundercap<0xFC><0x01><0x08> et sauver\l<0xFC><0x01><0x06>Électhor<0xFC><0x01><0x08> !\pS'il est capturé aussi, nous sommes\ntous condamnés...
 0x8ce0c8: Tu as réussi !\pTu as vaincu la Light of Ruin et\ntu nous as sauvés !\pTu es un vrai Gardien de Borrius !\pTon père serait fier.
-0x8d0933: Looker : <0xFC><0x01><0x08>...\p<0xFD><0x01>, tu dois te demander\npourquoi je ne t'ai pas suivi dans\lle portail avec Jax.\pVois-tu, dès que ce portail est\napparu, je me suis méfié.\pAinsi, contrairement à Jax, j'ai\nprudemment reculé d'un pas, ce qui\lm'a fait perdre votre trace.\pPour cela, je suis désolé.\pJe supposais que vous aviez été\ntéléportés aux Ruins of Void.\pJ'ai donc tenté de m'y rendre\négalement.\pCependant, comme je n'ai pas de\nPokémon, je n'ai pas pu y accéder.\pDis-moi, <0xFD><0x01>, que vous est-il\narrivé à tous les deux de l'autre\lcôté de ce portail ?\p...\p...\pJe vois...\pDans ce cas, je pense que le mieux\nest d'aller à <0xFC><0x01><0x06>Bourg Vivill<0xFC><0x01><0x08>\let d'aider les Ombres.\pQuand eux et la Light of Ruin\ns'affronteront, ce sera l'occasion\lparfaite d'intervenir et de tous\lles arrêter.\pVa aider les Ombres dans leur\ndernière mission.\pUne fois la victoire acquise, je\nt'attendrai dehors avec une équipe\lde policiers pour mettre fin à\lcette folie.
+0x8d0933: Looker : <0xFC><0x01><0x08>...\p<0xFD><0x01>, tu dois te demander\npourquoi je ne t'ai pas suivi dans\lle portail avec Jax.\pVois-tu, dès que ce portail est\napparu, je me suis méfié.\pAinsi, contrairement à Jax, j'ai\nprudemment reculé d'un pas, ce qui\lm'a fait perdre votre trace.\pPour cela, je suis désolé.\pJe supposais que vous aviez été\ntéléportés aux Ruines du Néant.\pJ'ai donc tenté de m'y rendre\négalement.\pCependant, comme je n'ai pas de\nPokémon, je n'ai pas pu y accéder.\pDis-moi, <0xFD><0x01>, que vous est-il\narrivé à tous les deux de l'autre\lcôté de ce portail ?\p...\p...\pJe vois...\pDans ce cas, je pense que le mieux\nest d'aller à <0xFC><0x01><0x06>Bourg Vivill<0xFC><0x01><0x08>\let d'aider les Ombres.\pQuand eux et la Light of Ruin\ns'affronteront, ce sera l'occasion\lparfaite d'intervenir et de tous\lles arrêter.\pVa aider les Ombres dans leur\ndernière mission.\pUne fois la victoire acquise, je\nt'attendrai dehors avec une équipe\lde policiers pour mettre fin à\lcette folie.
 0x8d0d33: Looker : <0xFC><0x01><0x08>Et qui es-tu donc,\njeune homme ?
 0x8d0f02: <0xFD><0x06> : <0xFC><0x01><0x08>... Très bien.\pMais dès que ce problème sera réglé,\nrien ne pourra m'empêcher de tous\lles traquer jusqu'au dernier !
 0xa4d739: <0xFD><0x02> a survécu au poison.\nLe poison s'est dissipé !
@@ -24612,7 +24612,7 @@
 0x788538: <0xFC><0x01><0x08>Je suis désolé pour tout ça.\pTiens, prends ceci pour la peine.
 0x788865: Marlon : <0xFC><0x01><0x08>As-tu bien reçu le\ncolis de la Boutique ?
 0x78d43e: Marlon : <0xFC><0x01><0x08>Bien, les sbires.\pNotre objectif actuel est d'aller\nau <0xFC><0x01><0x06>Volcan Cendreux <0xFC><0x01><0x08>pour aider Ivory\là obtenir le Spécimen TRES.
-0x78dc41: ne de West Borrius au design\lextérieur unique.\pL'aménagement intérieur de l'Arène\nne tiendrait pas dans une Arène\lnormale.
+0x78dc41: ne de Borrius Ouest au design\lextérieur unique.\pL'aménagement intérieur de l'Arène\nne tiendrait pas dans une Arène\lnormale.
 0x78e772: Le <0xFD><0x02> est profondément\nendormi...
 0x7a3fd4: Personne de la Ville de Tehl n'est\nautorisé à passer par ici pour le\lmoment.\pDu balai, gamin !
 0x7a4073: Ma mère souffre d'une terrible\nangoisse de séparation.\pTellement que lorsque j'ai\ndéménagé, elle m'a forcé à\laménager un chemin entre nos\lmaisons.
@@ -24661,7 +24661,7 @@
 0x77680c: <0xFC><0x01><0x08>Snif...\pJe connais le chemin de la maison\nà partir d'ici.\pC'était super de marcher avec toi !\nTu es le meilleur !
 0x78ce6a: Cette zone est interdite à tous\nceux qui ne sont pas membres des\lOmbres.\pComme tu n'es pas des nôtres,\ndu balai, gamin !
 0x78d982:  les tartes !\pJamais je n'aurais pu préparer\nd'aussi bons petits plats sans\lton aide précieuse.
-0x78dc2b:  : la seule Arène de West Borrius\nau style extérieur vraiment unique.\pSon agencement intérieur ne\ntiendrait jamais dans une Arène\lclassique.
+0x78dc2b:  : la seule Arène de Borrius Ouest\nau style extérieur vraiment unique.\pSon agencement intérieur ne\ntiendrait jamais dans une Arène\lclassique.
 0x791b8b: L'étrange créature a été aspirée\ndans le Cube !
 0x792af0: <0xFD><0x01> reçoit un Zygarde\ndu scientifique !
 0x7c6881: Ouaip, je fais les livraisons depuis\nle port d'Antisis la journée.\pSans moi, pas de Marché de\nFallshore !
