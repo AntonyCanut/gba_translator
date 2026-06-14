@@ -69,6 +69,21 @@ class TestApplyPatches(unittest.TestCase):
         self.assertIn(encode("Sam"), wd[2])
         self.assertIn(encode("Dim"), wd[2])
 
+    def test_bag_use_repoint(self):
+        # String patch: 9 bytes of free space → "Utiliser\xFF"
+        str_patch = next(p for p in PATCHES if p[0] == 0x284EAB)
+        self.assertEqual(str_patch[1], b"\xff" * 9)
+        self.assertEqual(str_patch[2], encode("Utiliser") + b"\xff")
+        # Six pointer patches: old address 0x084161A0 → new 0x08284EAB
+        old_ptr = b"\xa0\x61\x41\x08"
+        new_ptr = b"\xab\x4e\x28\x08"
+        ptr_offsets = [0x452EB8, 0x452EE0, 0x463150, 0x46437C, 0xA6BA64, 0xA6BA8C]
+        for poff in ptr_offsets:
+            patch = next((p for p in PATCHES if p[0] == poff), None)
+            self.assertIsNotNone(patch, f"missing pointer patch at 0x{poff:X}")
+            self.assertEqual(patch[1], old_ptr)
+            self.assertEqual(patch[2], new_ptr)
+
 
 if __name__ == "__main__":
     unittest.main()

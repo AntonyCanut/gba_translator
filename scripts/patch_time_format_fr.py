@@ -17,6 +17,9 @@ pipeline, so this post-build step patches the built ROM directly:
   " PM" suffix strings emptied;
 - month-abbreviation cells translated in place (iso-length: Janv.,
   Fevr., Mars, Avr., Mai, Juil., Aout, Sept., Dec.).
+- bag menu "Use" label repointed to "Utiliser" (string too long for
+  in-place replacement; written into free space at 0x284EAB, all six
+  pointer entries updated).
 
 Every patch verifies the bytes it expects (English original) and is
 idempotent (already-patched cells are skipped).
@@ -122,6 +125,19 @@ PATCHES = [
     (0x1F81EC7, *_slot(encode("Aug. ") + b"\xff", encode("Août "))),
     (0x1F81ECD, *_slot(encode("Sep. ") + b"\xff", encode("Sept."))),
     (0x1F81EDF, *_slot(encode("Dec. ") + b"\xff", encode("Déc. "))),
+    # --- bag menu "Use" → "Utiliser" ---
+    # "Use" (3 chars, 4 bytes with 0xFF) lives at 0x4161A0; "Utiliser"
+    # (8 chars, 9 bytes) cannot fit in place.  The Spanish translator
+    # repointed to 0x284EAB (free space in that build).  The same block
+    # is free space (0xFF) in the FR ROM, so we write there and redirect
+    # all six pointer entries from 0x084161A0 to 0x08284EAB.
+    (0x284EAB, b"\xff" * 9, encode("Utiliser") + b"\xff"),
+    (0x452EB8, b"\xa0\x61\x41\x08", b"\xab\x4e\x28\x08"),
+    (0x452EE0, b"\xa0\x61\x41\x08", b"\xab\x4e\x28\x08"),
+    (0x463150, b"\xa0\x61\x41\x08", b"\xab\x4e\x28\x08"),
+    (0x46437C, b"\xa0\x61\x41\x08", b"\xab\x4e\x28\x08"),
+    (0xA6BA64, b"\xa0\x61\x41\x08", b"\xab\x4e\x28\x08"),
+    (0xA6BA8C, b"\xa0\x61\x41\x08", b"\xab\x4e\x28\x08"),
 ]
 
 
