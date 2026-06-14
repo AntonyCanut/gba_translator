@@ -43,5 +43,4 @@ jobs:
             --title "FR.2.0.${{ github.run_number }}" \
             --notes "${NOTES}" \
             --prerelease \
-            --no-source-archives \
             "output/roms/GenedRom-fr.gba#pokemon_unbound_fr.gba"
