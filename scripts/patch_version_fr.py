@@ -195,12 +195,25 @@ def _make_char_tile(left_ch: str, right_ch: str) -> bytes:
     return bytes(tile)
 
 
-def _find_trailing_free(data: bytearray) -> int:
-    """Return the start offset of the trailing 0xFF block (4-byte aligned)."""
-    idx = len(data)
-    while idx > 0 and data[idx - 1] == 0xFF:
-        idx -= 1
-    return (idx + 3) & ~3
+def _find_free_block(data: bytearray, size: int, min_offset: int = 0x100) -> int:
+    """Find the first 4-byte-aligned run of 0xFF bytes of at least `size` bytes.
+
+    Scans the whole ROM (after ``min_offset``) rather than only the trailing
+    region, so it works even after other patches have consumed the tail.
+    """
+    i = min_offset
+    rom_size = len(data)
+    while i < rom_size:
+        if data[i] != 0xFF:
+            i += 1
+            continue
+        start = i
+        while i < rom_size and data[i] == 0xFF:
+            i += 1
+        aligned = (start + 3) & ~3
+        if i - aligned >= size:
+            return aligned
+    raise RuntimeError("Insufficient free space for title-screen version patch")
 
 
 def _read_gba_ptr(data: bytearray, off: int) -> int:
@@ -281,10 +294,9 @@ def patch_title_screen_version(data: bytearray, build_number: int) -> bool:
     ts_padded = ts_compressed + b"\xFF" * ((-len(ts_compressed)) & 3)
     tm_padded = tm_compressed + b"\xFF" * ((-len(tm_compressed)) & 3)
 
-    # Write to trailing free space
-    cursor = _find_trailing_free(data)
-    if cursor + len(ts_padded) + len(tm_padded) > len(data):
-        raise RuntimeError("Insufficient free space for title-screen version patch")
+    # Find a contiguous free block (0xFF) large enough for both datasets
+    total = len(ts_padded) + len(tm_padded)
+    cursor = _find_free_block(data, total)
 
     new_ts_off = cursor
     data[cursor:cursor + len(ts_padded)] = ts_padded
