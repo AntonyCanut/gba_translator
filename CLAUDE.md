@@ -228,3 +228,25 @@ make tickets
 8. **mGBA never save** — saving in-game during tests corrupts the `.sav` fixture files.
 9. **positional placeholders** — the build engine uses positional token replacement; never swap `{0}` and `{1}` in FR strings.
 10. **FA/FB opcodes** — these are outside the token file; do not add them to combined_fr.txt.
+
+## AI Configuration & capabilities
+
+Coding conventions and agent wiring live alongside this memory file:
+
+- **Rules** : [`.claude/project-rules.md`](.claude/project-rules.md) (architecture, source de
+  vérité) + [`.claude/rules/patterns/`](.claude/rules/patterns/00_index.md) (style par domaine :
+  python, archi, scripts, encodage, tests, outillage, nommage, interdits, git) +
+  [`.claude/rules/multitasking.md`](.claude/rules/multitasking.md) (worktrees, ports, concurrence).
+- **Sous-agents** : `rom-analyzer`, `translation-verifier`, `test-runner`
+  ([`.claude/agents/`](.claude/agents)).
+- **Slash commands** : `/build-fr`, `/run-tests`, `/sync-charmap`, `/validate-rom`
+  ([`.claude/commands/`](.claude/commands)).
+- **Skills** : [`.claude/skills/`](.claude/skills/README.md) (ordre de découverte :
+  plugins → projet → rédaction fraîche).
+- **Hooks** : PreToolUse bloque le contournement de hooks git / merge non-rebase /
+  écriture dans `input/roms/` ; PostToolUse lance `ruff`
+  ([`.claude/settings.json`](.claude/settings.json), scripts dans `.claude/hooks/`).
+- **MCP** : filesystem, image-tools, git ([`.mcp.json`](.mcp.json)).
+
+> Le projet est francophone : commits `type(scope): description` en français, **jamais**
+> de trailer `Co-Authored-By`, **jamais** contourner le hook pre-commit, rebase only.

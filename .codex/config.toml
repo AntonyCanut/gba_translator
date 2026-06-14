@@ -1,0 +1,38 @@
+# Configuration Codex — gba_translator
+# Voir AGENTS.md (## Conventions) et .claude/rules/patterns/ pour le style de code.
+
+# Modèle par défaut le plus capable pour ce dépôt de reverse-engineering.
+model = "gpt-5-codex"
+approval_policy = "on-request"
+
+[project]
+name = "gba_translator"
+language = "python"
+# Le Makefile est l'orchestrateur officiel : toute commande passe par `make`.
+test_command = "make test"
+lint_command = "ruff check ."
+build_command = "make build-fr"
+
+# ── Multitâche ──────────────────────────────────────────────────────────────
+# Plusieurs tickets en parallèle, isolés par worktree git. Sérialiser les tâches
+# qui buildent une ROM ou lancent l'émulateur (artefacts output/ + ports partagés).
+[multitask]
+isolation = "worktree"
+worktree_dir = ".singularity-worktrees"
+session_lock = ".singularity-session.lock"
+# Builds ROM / émulateur = exclusifs ; lecture/analyse = parallèle large.
+max_parallel_builds = 1
+
+# ── Hooks de cycle de vie ───────────────────────────────────────────────────
+# PreToolUse : bloque le contournement des hooks git, les merges non-rebase et
+#              l'écriture dans input/roms/ (lecture seule).
+# PostToolUse : lint ruff sur les fichiers Python édités.
+[hooks]
+pre_command = ".codex/hooks/block-hook-bypass.sh"
+post_edit   = ".codex/hooks/ruff-check.sh"
+
+# ── Skills réutilisables ────────────────────────────────────────────────────
+# Ordre de découverte : plugins installés -> skills projet -> rédaction fraîche.
+[skills]
+dir = ".codex/skills"
+discovery_order = ["plugins", "project", "fresh"]
