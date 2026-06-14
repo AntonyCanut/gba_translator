@@ -1,0 +1,20 @@
+{
+  "//": "Serveurs MCP exposés à Ollama — identiques au .mcp.json racine partagé avec Claude.",
+  "mcpServers": {
+    "filesystem": {
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-filesystem", "."],
+      "tools": ["read_file", "list_directory", "search_files"]
+    },
+    "image-tools": {
+      "command": "npx",
+      "args": ["-y", "@anthropic/mcp-image-tools"],
+      "tools": ["image_convert"]
+    },
+    "git": {
+      "command": "uvx",
+      "args": ["mcp-server-git", "--repository", "."],
+      "tools": ["git_log", "git_diff", "git_show"]
+    }
+  }
+}

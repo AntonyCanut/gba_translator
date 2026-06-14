@@ -1,0 +1,34 @@
+{
+  "//": "Câblage des capacités Ollama pour gba_translator. Réutilise les assets partagés avec Claude pour garder une seule source de vérité.",
+  "project": "gba_translator",
+  "language": "fr",
+  "rules": [
+    ".claude/project-rules.md",
+    ".claude/rules/patterns/",
+    ".claude/rules/multitasking.md"
+  ],
+  "multitask": {
+    "isolation": "worktree",
+    "worktreeDir": ".singularity-worktrees",
+    "sessionLock": ".singularity-session.lock",
+    "//": "Builds ROM / émulateur exclusifs (output/ + ports partagés) ; lecture/analyse parallèle large.",
+    "maxParallelBuilds": 1
+  },
+  "subagents": {
+    "dir": ".ollama/agents",
+    "available": ["rom-analyzer", "translation-verifier", "test-runner"]
+  },
+  "mcpConfig": ".ollama/mcp.json",
+  "hooks": {
+    "preCommand": ".ollama/hooks/block-hook-bypass.sh",
+    "postEdit": ".ollama/hooks/ruff-check.sh"
+  },
+  "skills": {
+    "dir": ".ollama/skills",
+    "discoveryOrder": ["plugins", "project", "fresh"]
+  },
+  "slashCommands": {
+    "dir": ".ollama/commands",
+    "available": ["build-fr", "run-tests", "sync-charmap", "validate-rom"]
+  }
+}

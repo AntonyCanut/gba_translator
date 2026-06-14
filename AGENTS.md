@@ -219,3 +219,61 @@ pytest --cov=src tests/
 6. `repair_stable_lz77_blocks.py` — restore LZ77 images
 7. `repair_localized_lz77_blocks.py` — restore localized LZ77
 8. `repoint_stale_text_pointers.py` — fix stale pointers
+
+## Conventions
+
+> Source de vérité détaillée : `.claude/project-rules.md` et
+> `.claude/rules/patterns/`. Codex DOIT s'y conformer — résumé ci-dessous.
+
+### Structure
+- `input/roms/` = **lecture seule** (`englishrom.gba`, `spanishrom.gba`), jamais modifiée.
+- Tout artefact généré va dans `output/` (`roms/`, `extracted/`, `differences/`,
+  `analysis/`, `reports/`, `translation/`), nommé `YYYY-MM-DD_description.ext`.
+- Code réutilisable dans `src/core/` (classes) ; scripts d'étape numérotés `NN_*.py`
+  dans `src/{extractors,analyzers,translators,validators}/` ; outils & patchs post-build
+  dans `scripts/`. Docs numérotées `NN_NOM.md` dans `docs/`.
+- **Racine** : uniquement `README.md`, `Makefile`, `pyproject.toml`, `pytest.ini`, la
+  couche E2E (`package.json`, `tsconfig*.json`, `playwright.config.ts`), `combined_fr.txt`,
+  `.gitignore`, et les fichiers de config d'assistant (`AGENTS.md`, `CLAUDE.md`). **Aucun**
+  `.py` ni markdown de travail à la racine.
+
+### Code
+- Python : `snake_case` fonctions, `PascalCase` classes, `UPPER_SNAKE_CASE` constantes,
+  type hints partout, docstrings Google **en français** sur l'API publique, `pathlib.Path`,
+  offsets en hexadécimal. OOP + DRY (factoriser dans `src/core/`). Quasi-stdlib : ne pas
+  ajouter de dépendance sans nécessité.
+- Encodage **Gen III** (pas ASCII) : terminateur `0xFF`, newline `0xFE`, control codes
+  `FC/FD/F8/F9/F7` multi-octets, pointeurs 32-bit LE base `0x08000000`. Toute modif de
+  `src/core/text_codec.py` → `make sync-charmap` + `make sync-charmap-check`.
+- TypeScript : `tsconfig` strict ES2022 ; tests Vitest (émulateur) / Playwright (E2E).
+
+### Outillage
+- Linter **ruff** (config par défaut) ; pas de formateur imposé. `ruff check` doit passer.
+- Hook `pre-commit` (`.git/hooks/pre-commit`) : `py_compile` + `ruff` + pytest rapide sur
+  les `.py` stagés. **Ne jamais le contourner** (`--no-verify`, `HUSKY=0`… interdits).
+
+### Tests
+- `make test` (rapide) / `make test-python` (standard) / `make test-vitest` /
+  `make test-playwright`. Markers : `benchmark`, `stress`, `slow`, `emulator`, `rom`.
+- **100 % de réussite obligatoire** : pas de skip, pas de fix hardcodé sur un offset ;
+  investiguer la cause racine, fix générique, re-tester tout le corpus.
+
+### Git
+- Conventional Commits **en français** : `type(scope): description` (`feat`, `fix`,
+  `refactor`, `docs`, `test`, `chore`, `ci`, `build`). Scopes : `core`, `translation`,
+  `patch`, `pokedex`, `inline`, `rom`, `ai`…
+- **Jamais** de trailer `Co-Authored-By`. **Jamais** contourner le hook. Historique
+  **linéaire** : `git rebase` only, pas de `git merge` ni `git pull` sans `--rebase`.
+- Branche de travail orchestré : `worktree/<slug>` ; intégration par rebase sur `unbound`.
+
+## Capacités Codex activées
+
+- **Multitâche** : isolation par worktree `.singularity-worktrees/<task-id>/`, verrou
+  `.singularity-session.lock`, ports émulateur non partagés. Sérialiser les tâches qui
+  buildent une ROM ou lancent l'émulateur ; paralléliser librement la lecture/analyse.
+  Détail : `.claude/rules/multitasking.md`.
+- **Hooks de cycle de vie** : voir `.codex/config.toml` (`[hooks]`) — garde-fous
+  pré-commande (bloque contournement de hook / merge / écriture ROM source) et lint ruff
+  post-édition, scripts dans `.codex/hooks/`.
+- **Skills réutilisables** : `.codex/skills/` (procédures projet) ; ordre de découverte
+  plugins → projet → rédaction fraîche. Voir `.codex/skills/README.md`.

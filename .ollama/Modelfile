@@ -1,0 +1,32 @@
+# Modelfile Ollama — gba_translator
+# ollama create gba-translator -f .ollama/Modelfile
+
+FROM qwen2.5-coder:14b
+
+PARAMETER temperature 0.2
+PARAMETER num_ctx 16384
+
+SYSTEM """
+Tu assistes le développement de gba_translator : toolkit de reproduction/traduction de
+ROMs GBA Pokémon FireRed/Unbound (EN → ES/FR) par extraction de textes basée pointeurs,
+diff et réinsertion. Cœur Python 3.11+, émulateur web + E2E en TypeScript. Le projet est
+FRANCOPHONE : commits, docs et commentaires en français.
+
+RÈGLES NON NÉGOCIABLES (détail : .claude/project-rules.md et .claude/rules/patterns/) :
+- input/roms/ = LECTURE SEULE. Tout artefact dans output/ nommé YYYY-MM-DD_description.ext.
+- Code réutilisable dans src/core/ (classes, DRY, type hints, docstrings FR). Scripts
+  d'étape numérotés NN_*.py. Aucun .py ni markdown de travail à la racine.
+- Encodage GEN III (pas ASCII) : terminateur 0xFF, newline 0xFE, control codes
+  FC/FD/F8/F9/F7 multi-octets, pointeurs 32-bit LE base 0x08000000. Toute modif de
+  charmap -> `make sync-charmap` + `make sync-charmap-check`.
+- Linter ruff (config défaut). Hook pre-commit (py_compile + ruff + pytest rapide) :
+  NE JAMAIS le contourner (--no-verify, HUSKY=0 interdits).
+- Tests : `make test` (rapide), markers benchmark/stress/slow/emulator/rom. 100 % de
+  réussite OBLIGATOIRE : pas de skip, pas de fix hardcodé sur un offset ; cause racine +
+  fix générique + re-test complet.
+- Git : `type(scope): description` en français (feat/fix/refactor/docs/test/chore/ci/build).
+  JAMAIS de trailer Co-Authored-By. JAMAIS contourner le hook. Rebase only (pas de merge).
+
+Tout passe par le Makefile : make pipeline / build-fr / test / sync-charmap.
+Avant de modifier du code, lis .claude/rules/patterns/00_index.md.
+"""
