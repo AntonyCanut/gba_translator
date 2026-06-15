@@ -56,3 +56,39 @@ The non-text crash class (a build pass corrupting the `giveitem` script bytecode
 or a relocated msgbox pointer) is now also guarded deterministically by
 `tests/e2e/test_object_gain_sequence.py::test_give_cs_giveitem_command_intact`
 and the two sibling `test_give_cs_script_*` checks.
+
+### ⚠️ FREEZE follow-up (the report is a *hang*, not a *reset*)
+
+The ticket was reopened with: *"le dialogue est bloqué … écran bloqué sur le
+dialogue … le jeu est freeze"*. This is a **freeze (soft-lock)**, a different
+failure class from a reset. Two things to know before trusting any "no crash"
+in-game result above:
+
+1. **A freeze never invalidates `gSaveBlock1Ptr`.** The reset detector used by
+   `scripts/probe_*.mts` (bad-saveblock-pointer) therefore **cannot** see a
+   freeze. "Game stays alive / `gSaveBlock1Ptr` valid throughout" is *also* true
+   of a hang — it is **not** evidence the box advanced.
+2. **The harness state flags are WRONG for this Unbound build.** Verified this
+   reopen: a visibly-open textbox ("Sbire : Vite !") reads `textActive=false`
+   (`getState` @`0x020375c0`), and **writing** the documented battle-HP address
+   (`gBattleMons[0].hp` @`0x02023C0C`, and the transient `0x0202_07xx–0c88` HP
+   buffers) **corrupts RAM into a black-screen hang**. Only player `map/pos`
+   (via `gSaveBlock1Ptr`) is trustworthy. So the cheat recipe in the section
+   above is unsafe — do not write those addresses.
+
+**Static verdict (deterministic, holds):** on the current build the entire
+give-CS chain is byte-clean — every dialogue string, the `giveitem` bytecode,
+all msgbox pointers, **and the granted item 0x01B5's name cell** (the FD02
+`bufferitemname` buffer source, now guarded by `test_give_cs_item_name_*`).
+The give-CS region is byte-identical between the committed ROM and the working
+tree, so no stale-build divergence exists there.
+
+**Reproduction status:** `scripts/repro_give_cs.mts` reaches the kidnap cutscene
+(map `6.12`) reliably and uses a **screenshot-static + position-frozen** freeze
+detector (the correct technique given the broken RAM flags). It cannot yet drive
+*past* the underleveled Ivory/Zeph RNG battle gauntlet with blind input, and
+every memory cheat corrupts the build, so the give-CS box could not be observed
+in-game under freeze detection this pass. To get a definitive in-game verdict,
+an mGBA **savestate captured right before the hillbilly's give-CS** (slot file
+`output/roms/GenedRom-fr.ss<n>`) is needed — then `repro_give_cs.mts` can
+`load<n>` it and freeze-test the box deterministically.
