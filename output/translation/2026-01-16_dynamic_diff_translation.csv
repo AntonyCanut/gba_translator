@@ -3004,13 +3004,13 @@ Jax, <0xFD><0x06>, <0xFD><0x01>","aores: Jax, <0xFD><0x06>, <0xFD><0x01>.",28,1,
 0x01F1ED3E,"Fallshore Pokémon Gym
 Leader: Mel<0xFB>Winning Trainers:
 Jax, <0xFD><0x06>","<0x52>Gimnasio Pokémon!
-Líder: Mel.<0xFB>Ganadores: Jax, <0xFD><0x06>.",59,1,60,pokemon,description,"Arène Pokémon de Ville de Fallshore
+Líder: Mel.<0xFB>Ganadores: Jax, <0xFD><0x06>.",59,1,60,pokemon,description,"Arène Pokémon de Fallshore
 Champion : Mel<0xFB>Dresseurs vainqueurs :
 Jax, <0xFD><0x06>",
 0x01F1ED7A,"Fallshore Pokémon Gym
 Leader: Mel<0xFB>Winning Trainers:
 Jax, <0xFD><0x06>, <0xFD><0x01>","<0x52>Gimnasio Pokémon!
-Líder: Mel.<0xFB>Ganadores: Jax, <0xFD><0x06>, <0xFD><0x01>.",63,2,65,pokemon,description,"Arène Pokémon de Ville de Fallshore
+Líder: Mel.<0xFB>Ganadores: Jax, <0xFD><0x06>, <0xFD><0x01>.",63,2,65,pokemon,description,"Arène Pokémon de Fallshore
 Champion : Mel<0xFB>Dresseurs vainqueurs :
 Jax, <0xFD><0x06>, <0xFD><0x01>",
 0x01F1EDF3,"Tarmigan Mansion
@@ -3044,7 +3044,7 @@ Jax, <0xFD><0x01>, <0xFD><0x06>",
 0x01F1EE71,"Dehara Pokémon Gym
 Leader: Galavan<0xFB>Winning Trainers:
 Jax, <0xFD><0x06>","<0x52>Gimnasio Pokémon!
-Líder: Galavan.<0xFB>Ganadores: Jax, <0xFD><0x06>.",60,2,62,pokemon,description,"Arène Pokémon de Ville de Dehara
+Líder: Galavan.<0xFB>Ganadores: Jax, <0xFD><0x06>.",60,2,62,pokemon,description,"Arène Pokémon de Dehara
 Champion : Galavan<0xFB>Dresseurs vainqueurs :
 Jax, <0xFD><0x06>",
 0x01F1EEEC,<0xFD><0x01>,<0xFD><0x01><0xFF>R<0xC1><0xDD><0xE1><0xE2><0xD5><0xE7><0xDD><0xE3>,2,2,4,pokemon,other,,
@@ -3297,7 +3297,7 @@ Expressway<0xFC><0x01><0x08> far <0xFC><0x01><0x06>south<0xFC><0x01><0x08> to go
 lo antes posible!<0xFB>Si las Sombras llegan antes que
 tú, <0x52>Borrius está perdido!<0xFB>Ve al norte del pueblo y toma la
 <0xFC><0x01><0x06>Autopista RBT<0xFC><0x01><0x08> para ir más rápido.",186,3,189,pokemon,dialogue,"{PLAYER}, dépêche-toi d'aller
-au {COLOR}ÉMont Thundercap{COLOR}Ë !<0xFB>Si les Ombres arrivent avant toi,
+au {COLOR}ÉMont Foudre{COLOR}Ë !<0xFB>Si les Ombres arrivent avant toi,
 Borrius est condamné !<0xFB>Au nord, prends la {COLOR}ÉRoute
 KBT{COLOR}Ë plein sud vite.",
 0x01F23D81,"Now that the dark force has been
@@ -3604,7 +3604,7 @@ discuss the next move.","Jax me contó la noticia.<0xFB><0x52>Has hecho un buen 
 Moltres y Articno de las Sombras.<0xFB>Jax está en <0xFC><0x01><0x06>Ciudad Dehara<0xFC><0x01><0x08> esperando
 el siguiente paso.",192,3,195,pokemon,dialogue,"Jax m'a raconté la nouvelle.<0xFB>Beau travail pour avoir sauvé
 Électhor, {PLAYER} !<0xFB>Il ne reste plus qu'à récupérer
-Sulfura et Artikodin des mains des<0xFA>Ombres.<0xFB>Jax est à la {COLOR}ÉVille de Dehara{COLOR}Ë,
+Sulfura et Artikodin des mains des<0xFA>Ombres.<0xFB>Jax est à la {COLOR}ÉDehara{COLOR}Ë,
 et attend pour discuter de la suite.",
 0x01F30F62,"How go your travels, <0xFD><0x01>?","<0x51>Cómo has estado, <0xFD><0x01>?",24,2,26,pokemon,dialogue,"Comment vont tes voyages, <0xFD><0x01> ?",
 0x01F30F7B,"Get moving, <0xFD><0x01>, to Cinder
@@ -3816,7 +3816,7 @@ aurait été entièrement effacée.",
 0x01F362D1,"I refuse to abandon my post.<0xFB>I must prevent <0xFD><0x01> from entering
 Thundercap Mt. at all cost.","Me niego a abandonar mi puesto.<0xFB>Debo evitar que <0xFD><0x01> entre
 en Mt. Trueno a toda costa.",88,3,91,pokemon,dialogue,"Je refuse d'abandonner mon poste.<0xFB>Je dois empêcher <0xFD><0x01> d'entrer au
-Mont Thundercap à tout prix.",
+Mont Foudre à tout prix.",
 0x01F3632A,"<0xFD><0x02>, hit 'em with a <0xFD><0x03>!","<0x52><0xFD><0x02>, usa <0xFD><0x03>!",22,3,25,pokemon,dialogue,"<0xFD><0x02>, frappe-les avec un <0xFD><0x03> !",
 0x01F36643,<0xFC><0x01><0x04>Uh oh!<0xFB><0xFD><0x01>'s hot on our tails!<0xFB>I'd better go warn Marlon!,"<0xFC><0x01><0x04><0x51>Eh?<0xFB><0x52><0xFD><0x01> está cerca de nosotros!
 <0x52>Debo avisar a Marlon!",59,3,62,pokemon,dialogue,"{COLOR}ÇOh oh !<0xFB>{PLAYER} est juste derrière nous !<0xFB>Je ferais mieux d'aller
@@ -4527,7 +4527,7 @@ strong Trainer like you!","Hola, <0xFD><0x01>. <0x51>Me recuerdas?
 <0x52>Soy Milo de Mt. Trueno!<0xFB><0x52>Vine hasta aquí para verte de
 nuevo!<0xFB><0x52>Tengamos una batalla!<0xFB><0x52>Apuesto a que será súper divertido
 con alguien tan fuerte como tú!",178,2,180,pokemon,dialogue,"Salut,<0xFD><0x01>!<0xFB>Tu te souviens moi?
-C'est Milo! Mont Thundercap!<0xFB>Je suis venu jusqu'ici rien
+C'est Milo! Mont Foudre!<0xFB>Je suis venu jusqu'ici rien
 que pour te revoir!<0xFB>Dis, on se fait combat!<0xFB>Je parie que ce sera super
 fun avec Dresseur au",
 0x01F5297C,"You're still super strong,
