@@ -45,9 +45,10 @@ TERMINATOR = 0xFF
 
 # Maximum visible lines of a move description and the usable pixel width of
 # one line. 142 px is the widest line found across every Spanish move
-# description; wrapping to this width is guaranteed to fit on screen.
+# description, but at that edge the screen still clipped a glyph, so we keep a
+# two-character safety margin (~12 px, glyphs average 6 px) and wrap to 130 px.
 MOVE_MAX_LINES = 5
-MOVE_LINE_WIDTH = 142
+MOVE_LINE_WIDTH = 130
 
 
 class MoveEntry(NamedTuple):

@@ -1,16 +1,18 @@
 # Descriptions d'attaque : correction et vérification
 
 Les descriptions d'attaque sont affichées dans l'écran « Capacités connues » sur
-**5 lignes maximum**, chaque ligne devant tenir sous **~142 px** (≈ 21 caractères
-de la police FRLG à chasse variable). Au-delà, le texte déborde :
+**5 lignes maximum**, chaque ligne devant tenir sous **~130 px** (≈ 21 caractères
+de la police FRLG à chasse variable, marge de 2 caractères incluse). Au-delà, le
+texte déborde :
 
 - **horizontalement** : les mots sont coupés au bord droit de la fenêtre ;
 - **verticalement** : les lignes au-delà de la 5ᵉ sont masquées.
 
-Le budget de 142 px est la **plus large ligne trouvée dans la ROM espagnole de
-référence** (la mise en page pour laquelle la fenêtre a été conçue, donc garantie
-de tenir à l'écran), exactement la méthode employée pour la fenêtre 3 lignes du
-Pokédex (`src/core/pokedex.py`).
+La **plus large ligne trouvée dans la ROM espagnole de référence** atteint 142 px,
+mais à ce bord un glyphe était encore rogné à l'écran (débordement d'un caractère).
+Le budget garde donc une **marge de sécurité de 2 caractères (~12 px)** et s'arrête
+à **130 px** — exactement la méthode employée pour la fenêtre 3 lignes du Pokédex
+(`src/core/pokedex.py`).
 
 ## Correction automatique (build FR)
 
@@ -56,7 +58,7 @@ Code de sortie : `0` si tout tient, `1` si au moins une description déborde
 (utilisable comme garde-fou de build).
 
 - La logique pure est dans `src/core/move_description_check.py` (testable sans
-  ROM) ; le budget (5 lignes, 142 px) et la table sont partagés avec
+  ROM) ; le budget (5 lignes, 130 px) et la table sont partagés avec
   `src/core/moves.py`.
 - Les descriptions sont lues via la table de pointeurs `gMoveDescriptionPointers`
   à **`0x99F190`** (indexée par numéro d'attaque), les noms via la table fixe à
@@ -69,8 +71,15 @@ Avant correction, **448 / 893** attaques débordaient. Beaucoup étaient
 **tronquées et fusionnées** avec l'attaque suivante (terminateur perdu lors d'une
 écriture sur place trop longue), p. ex. Morsure « …faire tressailIl grogne… » ou
 Jet-Pierres qui enchaînait plusieurs descriptions. Le patch ci-dessus ramène ce
-compte à **0** : 733 descriptions re-wrappées (dont 89 relocalisées) et 84
-raccourcies via les overrides curés.
+compte à **0**.
+
+Le budget a ensuite été resserré de **142 px à 130 px** (marge de 2 caractères) :
+à 142 px un glyphe débordait encore d'un caractère sur le bord droit. Ce
+resserrement fait basculer 63 descriptions supplémentaires hors fenêtre, toutes
+raccourcies à la main → **148 overrides curés** au total, **0 débordement**.
+
+Le terme de combat **« tressaillir » a aussi été remplacé par « apeurer »** (terme
+officiel Pokémon FR) partout dans les descriptions d'attaque et d'objets.
 
 ## Ajouter / corriger un raccourci
 

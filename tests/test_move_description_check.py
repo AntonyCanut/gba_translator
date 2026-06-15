@@ -46,7 +46,7 @@ class TestCheckDescriptionText(unittest.TestCase):
         self.assertEqual(len(lines), 6)
 
     def test_wide_line_overflows_horizontally(self):
-        # 30 caractères larges : nettement au-dessus de 120 px.
+        # 30 caractères larges : nettement au-dessus de 130 px.
         text = "Mmmmmmmmmmmmmmmmmmmmmmmmmmmmmm"
         lines, too_many = check_description_text(text)
         self.assertFalse(too_many)
@@ -151,7 +151,9 @@ class TestRealFrRom(unittest.TestCase):
         result = check_move(self.rom, idx)
         self.assertTrue(result.fits, result.reasons)
         # La fusion avec l'attaque suivante (« grogne », Charme) a disparu.
-        self.assertIn("tressaillir", result.description)
+        # Le terme officiel « apeurer » remplace « tressaillir » (cf. ticket).
+        self.assertIn("apeurer", result.description)
+        self.assertNotIn("tressaillir", result.description)
         self.assertNotIn("grogne", result.description)
 
     def test_jetpierres_fits(self):
