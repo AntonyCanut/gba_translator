@@ -99,6 +99,20 @@ _BLANK_RUN_SPLIT = re.compile(r'(\n{2,})')
 _SCROLL = '<0xFA>'
 _PAGE = '<0xFB>'
 
+# Characters that close a sentence (the screen may legitimately clear
+# after them). French detached punctuation and closing quotes/brackets
+# may trail the real terminator, so they are stripped before the test.
+_SENTENCE_END = frozenset('.!?…:')
+_SENTENCE_CLOSERS_RE = re.compile(r'(?:<0x[0-9A-Fa-f]{2}>|[\s»"”\'’)\]])+$')
+# A page that ends on a runtime buffer (player/Pokémon name) completes
+# its utterance dynamically — its content is unknown, so it is left as a
+# hard boundary rather than guessed mid-sentence.
+_TRAILING_BUFFER_RE = re.compile(r'<0xFD><0x[0-9A-Fa-f]{2}>\s*$')
+_LEADING_CODES_RE = re.compile(r'^(?:<0x[0-9A-Fa-f]{2}>|\s)+')
+# Lowercase letters (incl. French accents) that signal the next page
+# continues the previous sentence rather than starting a new one.
+_LOWER_CONT = frozenset('abcdefghijklmnopqrstuvwxyzàâäæçéèêëîïñôœùûüÿ')
+
 
 def _char_width(ch: str) -> int:
     """Pixel advance of one printable character (after font aliasing)."""
@@ -360,6 +374,61 @@ def collapse_empty_breaks(text: str) -> str:
     return _BREAK_RUN_RE.sub(strongest, text)
 
 
+def _page_ends_sentence(page: str) -> bool:
+    """True when ``page`` closes a sentence (a screen clear is justified).
+
+    Trailing control codes, spaces and closing punctuation (``»``, ``"``,
+    ``)``…) are stripped first so the real last character is tested. A
+    page ending on a runtime buffer (a name) is treated as finished: its
+    content is unknown, so the break is never guessed mid-sentence.
+    """
+    stripped = page.rstrip()
+    if _TRAILING_BUFFER_RE.search(stripped):
+        return True
+    core = _SENTENCE_CLOSERS_RE.sub('', stripped)
+    if not core:
+        return True
+    return core[-1] in _SENTENCE_END
+
+
+def _page_continues_lower(page: str) -> bool:
+    """True when ``page`` opens on a lowercase letter (a continuation).
+
+    Leading control codes and whitespace are skipped. A capital, digit,
+    buffer or symbol starts a new utterance or a label, so only a
+    lowercase first letter marks a sentence flowing across the break.
+    """
+    visible = _LEADING_CODES_RE.sub('', page)
+    return bool(visible) and visible[0] in _LOWER_CONT
+
+
+def demote_midsentence_pages(text: str) -> str:
+    """Soften ``<0xFB>`` page breaks that interrupt a running sentence.
+
+    ``<0xFB>`` pauses and *clears the whole window* before the next text;
+    doing that in the middle of a sentence makes the continuation appear
+    on a fresh screen (``Ce Pokémon m'a fait`` | ``mal !``) when a line
+    break would have read fluidly. Such a page — one whose text does not
+    end a sentence *and* whose next page resumes in lowercase — is demoted
+    to a scroll (``<0xFA>``), so ``rewrap`` then re-flows the words across
+    it instead of clearing the screen. Both codes are one byte, so the
+    encoded length never changes. Pages that fall on a real sentence
+    boundary, before a capitalised new sentence/label, or that end on a
+    runtime buffer are kept verbatim — their pacing is deliberate.
+    """
+    if _PAGE not in text:
+        return text
+    parts = _PAGE_SPLIT.split(text)
+    # re.split with one capture group yields [page, sep, page, sep, …];
+    # separators sit at the odd indices, the page before each at index-1.
+    for i in range(1, len(parts), 2):
+        if not _page_ends_sentence(parts[i - 1]) and _page_continues_lower(
+            parts[i + 1] if i + 1 < len(parts) else ''
+        ):
+            parts[i] = _SCROLL
+    return ''.join(parts)
+
+
 def normalize_breaks(text: str) -> str:
     """Enforce the Gen III dialogue break rule on ``text``.
 
@@ -447,7 +516,11 @@ def rewrap(text: str, max_width: int = DEFAULT_MAX_LINE_WIDTH) -> str:
     """Re-balance line breaks across every display segment of ``text``.
 
     Only ``<0xFB>`` (page: wait + clear the window) is a hard boundary —
-    it paces the dialogue and is kept in place. ``<0xFA>`` scrolls are
+    it paces the dialogue and is kept in place, *except* when it splits a
+    running sentence (``demote_midsentence_pages``): a screen clear whose
+    text does not end a sentence and whose continuation resumes in
+    lowercase is softened to a scroll so the words flow on instead of
+    jumping to a fresh screen. ``<0xFA>`` scrolls are
     mechanical: the box shows two lines, so their positions follow from
     the wrapping. Inside a page they are dissolved into ordinary breaks
     and the words re-flowed greedily across them, otherwise a 3+ line
@@ -462,6 +535,7 @@ def rewrap(text: str, max_width: int = DEFAULT_MAX_LINE_WIDTH) -> str:
     """
     if not _BREAK_RE.search(text):
         return text
+    text = demote_midsentence_pages(text)
     text = collapse_empty_breaks(text)
     out: List[str] = []
     for page in _PAGE_SPLIT.split(text):
