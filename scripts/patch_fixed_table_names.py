@@ -29,6 +29,10 @@ NAME_FIXES = {
     # Prof. Log's parcel item: never reached by the translation pipeline
     # (not in translation_ready.json nor Spanish extraction), stays English.
     0x879DFC: ("Parcel", "Colis", 7),
+    # Package item (delivered to rival): the translation pipeline writes "Paquet"
+    # at 0x879E74 (the extracted string with 12 leading zero-spaces), but the game
+    # reads the inline name cell at 0x879E80 (12 bytes into the padded entry).
+    0x879E80: ("Package", "Paquet", 8),
 }
 
 
