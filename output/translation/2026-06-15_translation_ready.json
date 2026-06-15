@@ -1,7 +1,7 @@
 {
-  "conversion_date": "2026-06-15T22:36:48.169666",
+  "conversion_date": "2026-06-15T22:50:36.330442",
   "source_csv": "2026-01-15_trilingual_translation.csv",
-  "total_translations": 20739,
+  "total_translations": 20741,
   "total_errors": 0,
   "total_warnings": 16793,
   "translations": [
@@ -71814,6 +71814,18 @@
       "too_long": true
     },
     {
+      "offset": 8136000,
+      "original_text": "Thundercap Mountain is a dangerous\nplace!<0xFB>I tried exploring it once, but oh\nboy, I got smoked!<0xFB>Ever since then, my lovely wife has\nbeen giving Max Repels to any<0xFA>travellers who talk to her.",
+      "translation": "Le Mont Foudre est un endroit\ndangereux !<0xFB>J'ai essayé d'y aller une fois, et\nouh, je me suis fait griller !<0xFB>Depuis, ma chère femme donne des\nRepousse Max chaque jour aux<0xFA>voyageurs qui lui parlent.",
+      "length": 196,
+      "original_length": 188,
+      "padding_used": 8,
+      "encoding": "pokemon",
+      "category": "dialogue",
+      "notes": "",
+      "too_long": true
+    },
+    {
       "offset": 8136211,
       "original_text": "These boulders have been placed so\nstrategically!<0xFB>It's almost as if someone doesn't\nwant people going this way<0xFA>right now\"",
       "translation": "Ces rochers ont été placés de\nfaçon si stratégique !<0xFB>On dirait presque que quelqu'un ne\nveut pas que les gens passent par<0xFA>là en ce moment...",
@@ -128790,6 +128802,18 @@
       "too_long": false
     },
     {
+      "offset": 11862636,
+      "original_text": "Thundercap Mt.",
+      "translation": "Mont Foudre",
+      "length": 11,
+      "original_length": 14,
+      "padding_used": -3,
+      "encoding": "pokemon",
+      "category": "location",
+      "notes": "",
+      "too_long": false
+    },
+    {
       "offset": 11862864,
       "original_text": "Vivill Warehouse",
       "translation": "Entrepôt de Vivill",
@@ -173793,9 +173817,9 @@
       "offset": 32635356,
       "original_text": "Who could have predicted there\nwould be a hidden section of<0xFA>Icicle Cave?<0xFB>If it had not been for that\nSandslash's sloppy digging, this<0xFA>place may have remained hidden for<0xFA>far longer.<0xFB>But now that it is accessible, I\nwas able to discover another one<0xFA>of the ancient relics!<0xFB>The tablet that <0xFD><0x02> here\" there are\nseveral similar around Borrius.<0xFB>On each is text in an ancient\ndialect, long since forgotten.<0xFB>However!<0xFB>After many years of studying the\nlanguage, I have created a device<0xFA>capable of translating the text.<0xFB>In fact, if you are willing to\nassist me in uncovering the secrets<0xFA>of these stone walls, I will be<0xFA>willing to share it with you.",
       "translation": "Qui aurait cru qu'il y avait une\nsection cachée de la Grotte<0xFA>Stalactite ?<0xFB>Sans le creusement maladroit de\nce Sablaireau, cet endroit serait<0xFA>resté caché bien plus<0xFA>longtemps.<0xFB>Maintenant que c'est ouvert, j'ai\npu découvrir une des anciennes<0xFA>reliques !<0xFB>La tablette qui est ici... il en\nexiste plusieurs dans Borrius.<0xFB>Sur chacune, un texte dans un\ndialecte ancien, oublié.<0xFB>Cependant !<0xFB>Après des années à étudier cette\nlangue, j'ai créé un appareil<0xFA>capable de traduire le texte.<0xFB>Si tu veux bien m'aider\nà percer les secrets de ces murs<0xFA>de pierre, je serai<0xFA>heureux de te le partager.",
-      "length": 575,
+      "length": 576,
       "original_length": 635,
-      "padding_used": -60,
+      "padding_used": -59,
       "encoding": "pokemon",
       "category": "dialogue",
       "notes": "",
