@@ -1522,7 +1522,7 @@ in <0xFC><0x01><0x06>Bellin Town<0xFC><0x01><0x04>.<0xFB>Or maybe, buy some <0xF
 prepared for the worst.<0xFB>Make me proud, honey!<0xFB>Take care!",327,9,336,pokemon,dialogue,"Ah, parfait ! Toi et tes Pokémon
 avez bien meilleure mine.<0xFB>Si les PV de tes Pokémon sont bas,
 soigne-les dans un<0xFB>{COLOR}ÉCentre Pokémon{COLOR}Ç !
-Le plus proche d'ici est à<0xFB>{COLOR}ÉBellinville{COLOR}Ç.
+Le plus proche d'ici est à<0xFB>{COLOR}ÉBourg Bellin{COLOR}Ç.
 Ou achète des<0xFB>{COLOR}ÉPotions{COLOR}Ç au
 {COLOR}ÉPoké Mart{COLOR}Ç !<0xFB>C'est toujours bien de se préparer
 au pire.<0xFB>Rends-moi fier, chéri !<0xFB>Prends soin de toi !",
@@ -5308,7 +5308,7 @@ lanceur.",
 Log from Bellin Town's Pokémon
 Mart.  ","Un Paquete que debe ser entregado
 al Prof. Long.",72,3,75,pokemon,description,"Colis pour le Prof. Log depuis le
-Magasin Pokémon de Bellinville.  
+Magasin Pokémon de Bourg Bellin.  
 ",
 0x003DA80E,"mon
 Mart.  ",,11,3,14,pokemon,other,,
@@ -5620,7 +5620,7 @@ Symbole d'honnêteté.
 0x003DED78,            Helix Fossil,,24,6,30,pokemon,other,,
 0x003DEDA4,            Dome Fossil,,23,3,26,pokemon,other,,
 0x003DEE28,            Town Map,,20,6,26,pokemon,other,,
-0x003DEED8,            Berry Pouch,,23,3,26,pokemon,other,            Sac à Baies,
+0x003DEED8,            Berry Pouch,,23,3,26,pokemon,other,,
 0x003DF038,            Lunar Wing,,22,4,26,pokemon,other,,
 0x003DF7E8,CHERI,CHERI,5,4,9,pokemon,other,CHERI,
 0x003E7F35,GOTCHA,GOTCHA,6,2,8,pokemon,other,GOTCHA,
@@ -6480,7 +6480,7 @@ Symbole d'honnêteté.
 0x003ECB48,UGLY,UGLY,4,4,8,pokemon,other,LAID,
 0x003EED08,Bellin Town,Ciudad Bellin,11,15,26,pokemon,location,Bellinville,
 0x003EED22,Crater Town,Ciudad Cráter,11,58,69,pokemon,location,Bourg Cratère,
-0x003EED67,Tarmigan Town,Ciudad Tarmi,13,3,16,pokemon,location,Tarmigan,
+0x003EED67,Tarmigan Town,Ciudad Tarmi,13,3,16,pokemon,location,Tarmiganville,
 0x003EED77,INDIGO PLATEAU,INDIGO PLATEAU,14,14,28,pokemon,location,PLATEAU INDIGO,
 0x003EED93,Route 4,Ruta 4,7,3,10,pokemon,location,Route 4,
 0x003EED9B,Route 10,Ruta 10,8,3,11,pokemon,location,Route 10,
@@ -8295,10 +8295,10 @@ endormis.{PAUSE_UNTIL_PRESS}",
 0x004166E1,"The TM Case will be
 put away.",Cerrar el Tubo MT<0x2D>MO.,29,5,34,pokemon,other,"La Boîte CT sera
 rangée.",
-0x0041670A,Berry Pouch,Saco Bayas,11,2,13,pokemon,location,Sac à Baies,
+0x0041670A,Berry Pouch,Saco Bayas,11,2,13,pokemon,location,Pochette Baies,
 0x00416716,"The Berry Pouch will be
-put away.",Cerrar el Saco Bayas.,33,3,36,pokemon,description,"Le Sac à Baies sera
-rangé.",
+put away.",Cerrar el Saco Bayas.,33,3,36,pokemon,description,"La Pochette Baies sera
+rangée.",
 0x0041673C,Sell,,4,3,7,pokemon,other,Vendre,
 0x00416741,See Ya!,,7,2,9,pokemon,dialogue,À plus !,
 0x00416757,Quit shopping.,Salir.,14,2,16,pokemon,location,Quitter les achats.,
@@ -8742,7 +8742,7 @@ Objet",
 0x00417DC7,Poké Balls Sector,Poké Balls,17,3,20,pokemon,location,Zone Poké Balls,
 0x00417DCB, Balls Sector,,13,3,16,pokemon,other,,
 0x00417DD9,TM Case,,7,2,9,pokemon,location,Boîtier CT,
-0x00417DE1,Berry Pouch,Saco Bayas,11,2,13,pokemon,location,Sac à Baies,
+0x00417DE1,Berry Pouch,Saco Bayas,11,2,13,pokemon,location,Pochette Baies,
 0x00417DED,Other,Other,5,2,7,pokemon,other,Autres,
 0x00417DF3,ONE ISLAND,ONE ISLAND,10,2,12,pokemon,location,ÎLE 1,
 0x00417DFE,TWO ISLAND,TWO ISLAND,10,2,12,pokemon,location,ÎLE 2,
@@ -16918,7 +16918,7 @@ et des taux de capture des Pokémon.<0xFB>",
 0x0071C98C,Ignores foe's stat changes.,,27,0,27,pokemon,other,Ignore les stats modifiées.,no-pointer: in-place only
 0x0071C9AC,Attack rises when stats fall.,,29,0,29,pokemon,other,Attaque + si une stat baisse.,no-pointer: in-place only
 0x0071C9D4,Sp. Atk rises when stats fall.,,30,0,30,pokemon,other,Atq.Spé. + si une stat baisse.,no-pointer: in-place only
-0x0071CA60,Dresco Town,Pueblo Dresco,11,5,16,pokemon,location,Bourg Dresco,
+0x0071CA60,Dresco Town,Pueblo Dresco,11,5,16,pokemon,location,Ville de Dresco,
 0x0071CA70,Tehl Town,Pueblo Tela,9,7,16,pokemon,location,Ville de Tehl,
 0x0071FC80,Blizzard City,Ciudad Ventisca,13,2075,2088,pokemon,location,,
 0x00720E74,Fallshore City,Ciudad Costera,14,6,20,pokemon,location,Ville de Fallshore,
@@ -16955,7 +16955,7 @@ Town, and Route 6",53,2,55,pokemon,description,"Forêt Obscure, Volcan Cendreux,
 Bourg Cratère et Route 6",
 0x00740037,"Bellin Town, Icicle Cave, Route 2,
 and Dresco Town","Bellin Town, Icicle Cave, Route 2,
-and Dresco Town",50,4,54,pokemon,description,"Bellinville, Grotte Stalactite,
+and Dresco Town",50,4,54,pokemon,description,"Bourg Bellin, Grotte Stalactite,
 Route 2 et Bourg Dresco",
 0x00740088,"Hey, you!<0xFB>My Gramma makes really good food
 for dinner!<0xFB>You should stay and try it
@@ -20337,7 +20337,7 @@ right now.<0xFB>He's probably off clearing his head
 somewhere.",89,1,90,pokemon,description,"Mel, le Champion, n'est pas là
 pour l'instant.<0xFB>Il doit être parti se changer les
 idées.",
-0x007A2565,Tarmigan Town,Ciudad Tarmi,13,2,15,pokemon,location,Tarmigan,
+0x007A2565,Tarmigan Town,Ciudad Tarmi,13,2,15,pokemon,location,Tarmiganville,
 0x007A281F,"The Pokémon walking around this
 lab all assist in the research.<0xFB>They're all special Pokémon known
 for eating dreams.","The Pokémon walking around this
@@ -21450,7 +21450,7 @@ lightning storms, you're out of<0xFA>luck.<0xFB>Those only happen to the east of
 here, by Epidimy Town.","Tarmigan Town is located on the
 <0xB1>Thundercap Highland<0xB2>.<0xFB>But if you came to see the
 lightning storms, you're out of<0xFA>luck.<0xFB>Those only happen to the east of
-here, by Epidimy Town.",175,2,177,pokemon,dialogue,"Tarmigan se trouve sur le
+here, by Epidimy Town.",175,2,177,pokemon,dialogue,"Tarmiganville se trouve sur le
 <0xFB>""Plateau Thundercap"". Mais si tu
 <0xFA>es venu voir les orages, pas
 besoin d'aller plus loin.",
@@ -21467,7 +21467,7 @@ youngster.<0xFB>Carpe diem, child!
 Seize the day!",282,1,283,pokemon,dialogue,"Ma famille possède le Manoir
 <0xFB>Tarmigan depuis des générations. En
 <0xFA>fait, mes ancêtres ont fondé
-<0xFB>Tarmigan ! Du coup, j'aime bien
+<0xFB>Tarmiganville ! Du coup, j'aime bien
 <0xFB>m'asseoir ici et regarder la ville
 <0xFB>de temps en temps. Ne fais pas comme
 moi, gamin. Carpe diem, enfant !",
@@ -23146,7 +23146,7 @@ goes all around Borrius.<0xFB>It a real backpacker's paradise!",156,3,159,pokemo
 0x007C898C,"I heard that there's someone in
 Tarmigan Town that teaches the art<0xFA>of Mega Evolution!","I heard that there's someone in
 Tarmigan Town that teaches the art<0xFA>of Mega Evolution!",85,3,88,pokemon,dialogue,"J'ai entendu dire que quelqu'un à
-Tarmigan enseigne l'art<0xFA>de la Méga-Évolution !",
+Tarmiganville enseigne l'art<0xFA>de la Méga-Évolution !",
 0x007C89E2,"Did you come up here to obtain the
 power of <0xFC><0x01><0x06>Mega Evolution<0xFC><0x01><0x08> from<0xFA><0xFC><0x01><0x06>Tarmigan Mansion<0xFC><0x01><0x08>?<0xFB>Most people who come here are
 usually after it.<0xFB>All this town has to offer
@@ -25756,7 +25756,7 @@ apprenant ça...",
 0x007EFA47,"Route 4<0xFB><0x7B> Grim Woods, Cinder Volcano
 Route 5<0xFA>à Dresco Town<0xFA><0x7A> Route 13","Route 4<0xFB><0x7B> Grim Woods, Cinder Volcano
 Route 5<0xFA>à Dresco Town<0xFA><0x7A> Route 13",69,3,72,pokemon,description,"Route 4<0xFB><0x7B> Forêt Lugubre, Volcan Cendreux
-Route 5<0xFA><0x7C> Bourg Dresco<0xFA><0x7A> Route 13",
+Route 5<0xFA><0x7C> Ville de Dresco<0xFA><0x7A> Route 13",
 0x007EFA8D,"What do you think you're doing?<0xFB>You can't go explore the Great
 Desert dressed like that!<0xFB>If you don't get the proper
 eyewear, I won't be able to let<0xFA>you through.","What do you think you're doing?<0xFB>You can't go explore the Great
@@ -27721,7 +27721,7 @@ provoqué une tempête de sable !",
 0x0087A000,            Town Map,,20,6,26,pokemon,other,,
 0x0087A02C,            VS Seeker,,21,5,26,pokemon,other,,
 0x0087A084,            TM Case,,19,7,26,pokemon,other,,
-0x0087A0B0,            Berry Pouch,,23,3,26,pokemon,other,            Sac à Baies,
+0x0087A0B0,            Berry Pouch,,23,3,26,pokemon,other,,
 0x0087A108,            Notebook,,20,5,25,pokemon,other,,
 0x0087A134,            Porta-PC,,20,5,25,pokemon,other,,
 0x0087A210,            Lunar Wing,,22,4,26,pokemon,other,,
@@ -57651,7 +57651,7 @@ bloquant le passage a été coupé,<0xFA>elle est beaucoup plus utilisée.",
 0x01EED7DD,more frequently used.,,21,3,24,pokemon,other,,
 0x01EED7F3,"I heard there's someone in
 <0xFC><0x01><0x06>Tarmigan Town<0xFC><0x01><0x04> who teaches<0xFA>the art of <0xFC><0x01><0x06>Mega Evolution<0xFC><0x01><0x04>!","<0x52>Escuché que alguien en <0xFC><0x01><0x06>Ciudad
-Tarmi<0xFC><0x01><0x04> te enseña el poder de la<0xFA><0xFC><0x01><0x06>Megaevolución<0xFC><0x01><0x04>!",91,3,94,pokemon,dialogue,"J'ai entendu qu'à {COLOR}ÉTarmigan{COLOR}Ç,
+Tarmi<0xFC><0x01><0x04> te enseña el poder de la<0xFA><0xFC><0x01><0x06>Megaevolución<0xFC><0x01><0x04>!",91,3,94,pokemon,dialogue,"J'ai entendu qu'à {COLOR}ÉTarmiganville{COLOR}Ç,
 quelqu'un enseigne l'art de la<0xFA>{COLOR}ÉMéga-Évolution{COLOR}Ç !",
 0x01EED84F,"I heard there's someone in
 <0xFC><0x01><0x06>Tarmigan Town<0xFC><0x01><0x04> who teaches<0xFA>the art of <0xFC><0x01><0x06>Mega Evolution<0xFC><0x01><0x04>!<0xFB>But you already knew that,
@@ -57659,7 +57659,7 @@ didn't you?<0xFB>That <0xFD><0x02> you're wearing
 gave it away.","<0x52>Escuché que alguien en <0xFC><0x01><0x06>Ciudad
 Tarmi<0xFC><0x01><0x04> te enseña el poder de la<0xFA><0xFC><0x01><0x06>Megaevolución<0xFC><0x01><0x04>!<0xFB>Pero eso ya lo sabías, <0x51>verdad?<0xFB>La <0xFD><0x02> que llevas puesta
 te delata.",167,2,169,pokemon,dialogue,"Il paraît que quelqu'un à
-<0xFC><0x01><0x06>Tarmigan<0xFC><0x01><0x04> enseigne<0xFA>l'art de la <0xFC><0x01><0x06>Méga-Évolution<0xFC><0x01><0x04> !<0xFB>Mais tu le savais déjà,
+<0xFC><0x01><0x06>Tarmiganville<0xFC><0x01><0x04> enseigne<0xFA>l'art de la <0xFC><0x01><0x06>Méga-Évolution<0xFC><0x01><0x04> !<0xFB>Mais tu le savais déjà,
 pas vrai ?<0xFB>Le <0xFD><0x02> que tu portes
 t'a trahi.",
 0x01EED8DE,"re wearing
@@ -63090,7 +63090,7 @@ près de ta maison.",
 near Bellin Town on the fast
 mountain road.","Este letrero fue leído cerca de
 Ciudad Bellin.",75,2,77,pokemon,description,"Panneau Conseils Dresseurs lu
-près de Bellinville sur la route
+près de Bourg Bellin sur la route
 de montagne rapide.",
 0x01EFFBC5,"This Trainer Tips sign was read
 by the path entering town.","Este letrero fue leído por la
@@ -63227,7 +63227,7 @@ stairs from Tarmigan Town.","Este letrero fue leído después de
 bajar las escaleras de los tramos
 de Ciudad Tarmi.",93,2,95,pokemon,description,"Panneau Conseils Dresseurs lu
 après le second escalier
-venant de Tarmigan.",
+venant de Tarmiganville.",
 0x01F0025E,"This Trainer Tips sign was read on
 the way into town, south of the
 Pokémon Center.","Este letrero fue leído cerca del
@@ -66225,7 +66225,7 @@ Entonces tendré que sufrir en<0xFA>silencio""",65,1,66,pokemon,description,"Oh,
 0x01F0CD3A,"Wonderful, wonderful.<0xFB>The closest Poké Mart is in
 Bellin Town, and they should be<0xFA>well stocked up with Antidotes!","<0x52>Perfecto! La Tienda Pokémon más
 cercana está en Ciudad Bellin,<0xFA><0x52>deberían tener muchos Antídotos!",113,1,114,pokemon,dialogue,"Merveilleux, merveilleux.<0xFB>La Boutique Pokémon la plus proche
-est à Bellinville, et ils devraient<0xFA>avoir plein d'Antidotes en stock !",
+est à Bourg Bellin, et ils devraient<0xFA>avoir plein d'Antidotes en stock !",
 0x01F0CD8C,well stocked up with Antidotes!,,31,1,32,pokemon,dialogue,,
 0x01F0CDAC,"Wonderful, wonderful.<0xFB>I'm sure the Champion knows where
 to find a simple Antidote, yes?<0xFB>Hurry back now!","<0x52>Perfecto! La Tienda Pokémon más
@@ -66235,7 +66235,7 @@ trouver un simple Antidote, oui ?<0xFB>Reviens vite !",
 0x01F0CE14,"The closest Poké Mart is in
 Bellin Town, and they should be<0xFA>well stocked up with <0xFC><0x01><0x06>Antidotes<0xFC><0x01><0x08>!","<0x52>Perfecto! La Tienda Pokémon más
 cercana está en Ciudad Bellin,<0xFA><0x52>deberían tener muchos Antídotos!",97,3,100,pokemon,dialogue,"Le Poké Mart le plus proche est à
-Bellinville, et il devrait être<0xFA>bien fourni en <0xFC><0x01><0x06>Antidotes<0xFC><0x01><0x08> !",
+Bourg Bellin, et il devrait être<0xFA>bien fourni en <0xFC><0x01><0x06>Antidotes<0xFC><0x01><0x08> !",
 0x01F0CE76,"I'm sure the Champion knows where
 to find a simple <0xFC><0x01><0x06>Antidote<0xFC><0x01><0x08>, yes?<0xFB>Hurry back now!","I'm sure the Champion knows where
 to find a simple <0xFC><0x01><0x06>Antidote<0xFC><0x01><0x08>, yes?<0xFB>Hurry back now!",87,1,88,pokemon,dialogue,"Je suis sûr que le Champion sait où
@@ -70879,7 +70879,7 @@ Many Ice-type Pokémon make
 it their home.","Una cueva ubicada debajo de
 Ciudad Bellin. Es su hogar para
 Pokémon de tipo Hielo.",86,3,89,pokemon,description,"Une petite grotte sous
-Bellinville.
+Bourg Bellin.
 De nombreux Pokémon Glace
 y vivent.",
 0x01F21780,"mon make
@@ -71305,7 +71305,7 @@ about you.",,37,2,39,pokemon,dialogue,,
 0x01F232BA,"Please get my package from the
 <0xFC><0x01><0x06>Bellin Town Poké Mart<0xFC><0x01><0x08>, <0xFD><0x01>.<0xFB>I need it, and only you can get it.","Por favor, recoge mi Paquete en
 <0xFC><0x01><0x06>Ciudad Bellin<0xFC><0x01><0x08>, en la Tienda Pokémon.",99,2,101,pokemon,dialogue,"Récupère mon colis au
-{COLOR}ÉPoké Mart de Bellinville{COLOR}Ë, {PLAYER}.<0xFB>J'en ai besoin, et toi seul peux
+{COLOR}ÉPoké Mart de Bourg Bellin{COLOR}Ë, {PLAYER}.<0xFB>J'en ai besoin, et toi seul peux
 l'avoir.",
 0x01F232FA,"I need it, and only you can get it.",,35,2,37,pokemon,dialogue,,
 0x01F2331E,"Oh, <0xFD><0x01>!
@@ -81175,7 +81175,7 @@ cauchemar, Fullmoon Island est<0xFA>toute proche""<0xFB>""
 0x01F4E230,"Save
 Discard
 Cancel",,19,2,21,pokemon,system,"Enregistrer
-Annuler",
+Abando",
 0x01F4E26F,"<0xFC><0x01><0x04>WARNING!<0xFC><0x01><0x02><0xFB>Once your battle difficulty is reduced,
 it cannot be raised to anywhere above<0xFA>Difficult until the game is cleared!<0xFB>Are you SURE you want to lower your
 battle difficulty?","<0xFC><0x01><0x04>WARNING!<0xFC><0x01><0x02><0xFB>Once your battle difficulty is reduced,
@@ -84762,7 +84762,7 @@ Borrius avec des escaliers creusés<0xFA>dans le flanc d'une montagne comme<0xFA
 0x01F5CCDF,You must know.,Debes saberlo.,14,3,17,pokemon,dialogue,Tu dois le savoir.,
 0x01F5CCEE,"To go between Tarmigan Town and
 Dehara City, you must first go<0xFA>down the mountain.","Para ir a Ciudad Dehara, primero
-debes bajar la montaña.",81,1,82,pokemon,dialogue,"Pour aller de Tarmigan à la
+debes bajar la montaña.",81,1,82,pokemon,dialogue,"Pour aller de Tarmiganville à la
 Ville de Dehara, tu dois d'abord<0xFA>descendre la montagne.",
 0x01F5CD2D,down the mountain.,,18,1,19,pokemon,other,,
 0x01F5CD40,"Hmm""<0xFB>This must be the way to Dehara
@@ -89642,11 +89642,11 @@ Gelées <0x7A> Icicle",
 <0x7A> Bellin Town<0xFA><0x7B> Icicle Cave","Ruta 1: <0x52>Montaña Nevada!<0xFB><0x79> Pueblo Frío
 <0x7A> Ciudad Bellin<0xFA><0x7B> Cueva Icicle",74,2,76,pokemon,description,"Route 1 ""
 Col<0xFB>Montagne Enneigée "" <0x79>
-Hauteurs Gelées <0x7A> Bellinville <0x7B> Grotte Icicle",
+Hauteurs Gelées <0x7A> Bourg<0xFA>Bellin <0x7B> Grotte Icicle",
 0x01F709A5, Icicle Cave,,12,2,14,pokemon,other,,
 0x01F709B2,"Bellin Town<0xFB>A quiet town nestled deep in the
 mountains.","Ciudad Bellin: <0x52>Una ciudad entre las
-montañas!",55,3,58,pokemon,description,"Bellinville<0xFB>Une ville paisible nichée au creux
+montañas!",55,3,58,pokemon,description,"Bourg Bellin<0xFB>Une ville paisible nichée au creux
 des montagnes.",
 0x01F709BE,"A quiet town nestled deep in the
 mountains.",,43,3,46,pokemon,description,,
@@ -89843,7 +89843,7 @@ famosas!",45,2,47,pokemon,dialogue,Maison Combat Inversé<0xFB>Amusez-vous !,
 <0xB1>The Cliff Caves<0xB2><0xFB><0x7B> Fallshore City
 à Epidimy Town<0xFA><0x79> Tarmigan Town",,74,2,76,pokemon,dialogue,"Route 11 ""
 Grottes<0xFB>des Falaises "" <0x7B> Ville de
-Fallshore <0x7C> Bourg<0xFA>Epidimy <0x79> Tarmigan",
+Fallshore <0x7C> Bourg<0xFA>Epidimy <0x79> Bourg Tarmigan",
 0x01F713D7, Tarmigan Town,,14,2,16,pokemon,other,,
 0x01F713E6,Epidimy Town<0xFB>The town of happiness and bliss.,"Ciudad Epidimia: <0x52>La alegría vive
 aquí!",45,1,46,pokemon,dialogue,Ville d'Epidimy La<0xFB>ville du bonheur et de la félicité.,
@@ -89865,7 +89865,7 @@ autrefois à renforcer un sceau sur<0xFA>une grande obscurité, mais qu'il<0xFA>
 <0x7C> Ville d'Antisis",
 0x01F714FD, Antisis City,,13,2,15,pokemon,other,,
 0x01F7150B,"Tarmigan Town<0xFB>The town located on the
-Thundercap Highland.",Ciudad Tarmi: <0x52>La ciudad del poder!,58,2,60,pokemon,description,"Tarmigan<0xFB>La ville située sur les
+Thundercap Highland.",Ciudad Tarmi: <0x52>La ciudad del poder!,58,2,60,pokemon,description,"Bourg Tarmigan<0xFB>La ville située sur les
 Hautes-Terres Thundercap.",
 0x01F71519,"The town located on the
 Thundercap Highland.",,44,2,46,pokemon,description,,
@@ -89897,7 +89897,7 @@ déverrouillée...",
 <0x7A> Tarmigan Town<0xFA><0x7B> Route 14","Ruta 12: <0x52>Paso Trueno!<0xFB><0x79> Ciudad Dehara
 <0x7A> Ciudad Tarmi<0xFA><0x7B> Ruta 14",73,2,75,pokemon,description,"Route 12 "" Escaliers
 Ouest<0xFB>Thundercap "" <0x79> Ville de
-Dehara <0x7A> Tarmigan<0xFA><0x7B> Route 14",
+Dehara <0x7A> Bourg Tarmigan<0xFA><0x7B> Route 14",
 0x01F716C5, Route 14,,9,2,11,pokemon,other,,
 0x01F716CF,Dehara City<0xFB>An oasis at the edge of the desert.,"Ciudad Dehara: <0x52>Un oasis al borde
 del desierto!",47,2,49,pokemon,description,Ville de Dehara<0xFB>Une oasis en bordure du désert.,
@@ -91342,13 +91342,13 @@ atención a la parte inferior de<0xFA>la interfaz mientras modificas tu<0xFA>Pok
 sauvegarder, et {L_BUTTON} et {R_BUTTON}<0xFA>pour défiler les pages facilement !<0xFB>Pour plus d'infos, regarde en bas
 <0xFA>l'interface pendant tes réglages.{PAUSE_UNTIL_PRESS}",
 0x01F783B8,Tarmigan Town,Ciudad Tarmi,13,2,15,pokemon,location,,
-0x01F783C6,Tarmigan Town D,Tarmigan Town D,15,2,17,pokemon,location,Tarmigan J,
-0x01F783D6,Tarmigan Town N,Tarmigan Town N,15,2,17,pokemon,location,Tarmigan N,
+0x01F783C6,Tarmigan Town D,Tarmigan Town D,15,2,17,pokemon,location,Tarmiganville J,
+0x01F783D6,Tarmigan Town N,Tarmigan Town N,15,2,17,pokemon,location,Tarmiganville N,
 0x01F783E6,"Tarmigan Town is located on the
 <0xB1>Thundercap Highland<0xB2>.<0xFB>But if you came to see the
 lightning storms, you're out<0xFA>of luck.<0xFB>Those only happen to the east of
 here, by Epidimy Town.","Me imagino que has venido a ver las
-tormentas eléctricas.",175,3,178,pokemon,dialogue,"Tarmigan se trouve sur le
+tormentas eléctricas.",175,3,178,pokemon,dialogue,"Tarmiganville se trouve sur le
 "" Plateau Thundercap "".<0xFB>Mais si tu es venu pour voir les
 orages, c'est<0xFA>raté.<0xFB>Ils ne frappent qu'à l'est d'ici,
 près de Bourg Épidimy.",
@@ -91402,7 +91402,7 @@ Ne tombe pas dans le vide sombre !",
 the mountains; it doesn't have its<0xFA>own entrance to the <0xFC><0x01><0x06>KBT Expressway<0xFC><0x01><0x04>!<0xFB>If you wanna go down the mountain,
 you'll have to walk or ask the<0xFA>teleporter to send you down.","Ciudad Tarmi está muy apartada en
 las montañas; <0x52>no tiene su propia<0xFA>entrada a la <0xFC><0x01><0x06>Autopista RBT<0xFC><0x01><0x04>!<0xFB>Si quieres bajar de las montañas,
-tendrás que pedirle al<0xFA>teletransportador que te envíe<0xFA>hacia abajo.",203,2,205,pokemon,dialogue,"Tarmigan est isolée dans les
+tendrás que pedirle al<0xFA>teletransportador que te envíe<0xFA>hacia abajo.",203,2,205,pokemon,dialogue,"Tarmiganville est isolée dans les
 montagnes et n'a pas sa<0xFA>propre entrée sur l'{COLOR}ÉAutoroute KBT{COLOR}Ç !<0xFB>Si tu veux descendre la montagne,
 tu devras marcher ou demander au<0xFA>Téléporteur de t'y envoyer.",
 0x01F788BB,teleporter to send you down.,,28,2,30,pokemon,dialogue,,
@@ -91423,7 +91423,7 @@ de la Mansión Tarmi durante<0xFA>generaciones.<0xFB>De hecho, <0x52>mis antepas
 responsables de la formación de la<0xFA>propia ciudad!<0xFB>Como tal, me gusta sentarme aquí y
 observar la ciudad de vez en cuando.",282,2,284,pokemon,dialogue,"Ma famille possède le Manoir
 Tarmigan depuis des générations.<0xFB>En fait, mes ancêtres ont fondé
-Tarmigan<0xFA>eux-mêmes !<0xFB>Du coup, j'aime m'asseoir ici et
+Tarmiganville<0xFA>eux-mêmes !<0xFB>Du coup, j'aime m'asseoir ici et
 regarder la ville de temps en temps.<0xFB>Ne reste pas assis comme moi,
 jeune homme.<0xFB>Carpe diem, enfant !
 Saisis le jour !",
@@ -91648,7 +91648,7 @@ partir.",
 0x01F79AFF,"Are you ready to wake up and return
 to Tarmigan Town?","Are you ready to wake up and return
 to Tarmigan Town?",53,3,56,pokemon,dialogue,"Prêt à te réveiller et revenir
-à Tarmigan ?",
+à Tarmiganville ?",
 0x01F79B35,"I'll be using this body to keep
 tabs on you.<0xFB>Speak to it when you're ready
 to leave.","I'll be using this body to keep
@@ -91699,7 +91699,7 @@ obtain the power of Mega Evolution!","Una mansión que está en Ciudad
 Tarmi desde su fundación.
 Derrota a la Sucesora de la
 mansión y obtén el poder de
-la Megaevolución.",135,1,136,pokemon,dialogue,"Un manoir ancien à Tarmigan
+la Megaevolución.",135,1,136,pokemon,dialogue,"Un manoir ancien à Tarmiganville
 depuis sa fondation.
 Bats la maîtresse du manoir pour
 obtenir le pouvoir Méga-Évolution !",
@@ -92146,7 +92146,7 @@ that sleeps under Bellin Town.","<0x52>Una estatua inspiradora! Trae al
 Pokémon que duerme debajo de
 Ciudad Bellin.",98,2,100,pokemon,dialogue,"Un homme a besoin d'inspiration
 pour sa statue finale !
-Apporte-lui le Pokémon sous Bellinville.",
+Apporte-lui le Pokémon sous Bellin.",
 0x01F7BEB0,"mon
 that sleeps under Bellin Town.",,34,2,36,pokemon,description,,
 0x01F7BED3,"'Scuse me, yeh couldn' spare a
@@ -92171,7 +92171,7 @@ un instant ?<0xFB>Écoute... j'étais un des meilleurs
 sculpteurs de Borrius.<0xFB>Mais récemment, mes talents se sont
 figés, la muse s'est tarie.<0xFB>C'est que... j'ai entendu parler
 d'un roi ancien, assez fort pour<0xFA>remorquer des pays<0xFA>avec des cordes.<0xFB>Des éons et des éons, qu'il a.<0xFB>Tu me croirais si je disais l'avoir
-trouvé ?<0xFB>Sous ma maison à Bellinville.
+trouvé ?<0xFB>Sous ma maison à Bellin.
 Là-dessous ?<0xFB>Je l'amènerais bien ici
 moi-même, mais il ne bouge pas.<0xFB>Aucune idée pour le réveiller.<0xFB>Mais bon... tu as l'air débrouillard
 tu pourrais l'amener ici ?",
@@ -92190,7 +92190,7 @@ how t' get it movin', but if yeh<0xFA>manage, bring it here.","<0x52>Muy bien!<0
 el fondo de Ciudad Bellin?<0xFB>Como dije, simplemente queda ahí.
 No se mueve, no ataca.<0xFB>Un verdadero misterio.<0xFB>Lo siento, no puedo ayudarte a
 descubrir cómo ponerlo en marcha,<0xFA>pero si lo consigues, tráelo hasta<0xFA>aquí.",268,1,269,pokemon,dialogue,"Bien, t'es un vrai champion.<0xFB>T'es déjà allé au fond
-de Bellinville ?<0xFB>Tu le verras là-bas.<0xFB>Comme je l'ai dit, il reste assis.
+de Bellin ?<0xFB>Tu le verras là-bas.<0xFB>Comme je l'ai dit, il reste assis.
 Il ne bouge pas, n'attaque pas.<0xFB>Véritable mystère.<0xFB>Désolé, je ne peux pas t'aider
 à le bouger, mais si tu y parviens,<0xFA>ramène-le ici.",
 0x01F7C219,"manage, bring it here.",,22,1,23,pokemon,other,,
@@ -95361,7 +95361,7 @@ of the cave below Bellin Town after
 using Rock Climb.","Encontrada en la cueva debajo
 de Ciudad Bellin después de
 usar Treparrocas.",88,2,90,pokemon,description,"Cellule Zygarde au B1F de la grotte
-sous Bellinville après avoir fait
+sous Bellin après avoir fait
 Escalade.",
 0x01F88E14,"This Zygarde Cell was found near
 the Black Belt on B1F.","Encontrada cerca del Karateka
@@ -101310,7 +101310,8 @@ Speak to the boy's father in
 Tarmigan Town.","A small boy is having a nightmare!
 Speak to the boy's father in
 Tarmigan Town.",78,3,81,pokemon,dialogue,"Un petit garçon fait un cauchemar !
-Parlez au père du garçon à Tarmigan.",
+Parlez au père du garçon à Tarmigan
+Town.",
 0x01FA3D4B,"A small boy is having a nightmare!
 Board a boat to Fullmoon Island
 and retrieve the Lunar Wing.","<0x52>Un niño tiene una pesadilla! Sube
@@ -101323,7 +101324,7 @@ Return to Tarmigan Town with the
 Lunar Wing to wake up him.","<0x52>Un niño tiene una pesadilla!
 Regresa a Ciudad Tarmi con la
 Pluma Lunar y despiértalo.",94,2,96,pokemon,dialogue,"Un petit garçon fait un cauchemar !
-Retournez à Tarmigan avec la
+Retournez à Tarmiganville avec la
 Lun'Aile pour le réveiller.",
 0x01FA3E0A,Eldon,Eldon,5,2,7,pokemon,other,Eldon,
 0x01FA3E10,"I've lost my love of sailing since
@@ -104455,7 +104456,7 @@ la casa norte del mercado.
 Su cerebro parecía gelatinoso.",94,2,96,pokemon,description,"Cette fille a été trouvée regardant la télé dans
 la maison au nord du marché.
 Son cerveau semblait gélatineux.",
-0x01FB0052,<0xFC><0x01><0x04>Mission Objective Updated:<0xFC><0x01><0x02>,<0xFC><0x01><0x04>Nueva Misión:<0xFC><0x01><0x02>,32,1,33,pokemon,description,<0xFC><0x01><0x04>Objectif Mission à jour:<0xFC><0x01><0x02>,
+0x01FB0052,<0xFC><0x01><0x04>Mission Objective Updated:<0xFC><0x01><0x02>,<0xFC><0x01><0x04>Nueva Misión:<0xFC><0x01><0x02>,32,1,33,pokemon,description,,
 0x01FB0073,<0xFC><0x01><0x04>Mission Complete:<0xFC><0x01><0x02>,<0xFC><0x01><0x04>Misión Cumplida: <0xFC><0x01><0x02>,23,1,24,pokemon,description,,
 0x01FB008B,<0xFC><0x01><0x02>Missions Completed: <0xFC><0x01><0x06><0xFD><0x02>,<0xFC><0x01><0x02>Misiones Cumplidas: <0xFC><0x01><0x06><0xFD><0x02>,28,2,30,pokemon,description,,
 0x01FB00A8,"My""<0xFC><0x08>î my daughter""<0xFB>She's fallen into a deep coma""<0xFB>It's because she""<0xFC><0x08>î she watched

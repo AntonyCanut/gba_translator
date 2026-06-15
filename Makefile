@@ -32,7 +32,6 @@ PATCH_BATTLE_PREFIX_SCRIPT := scripts/patch_battle_prefix_fr.py
 PATCH_VERSION_SCRIPT := scripts/patch_version_fr.py
 PATCH_POKEDEX_FR_SCRIPT := scripts/patch_pokedex_fr.py
 PATCH_POKEDEX_METRICS_FR_SCRIPT := scripts/patch_pokedex_metrics_fr.py
-PATCH_SHOP_FR_SCRIPT := scripts/patch_shop_fr.py
 
 OUTPUT_DIR := output
 EXTRACT_DIR := $(OUTPUT_DIR)/extracted/extracted_texts
@@ -148,7 +147,6 @@ build-fr: $(ENGLISH_EXTRACT) $(SPANISH_EXTRACT) $(BUILD_SCRIPT)
 		--source $(ENGLISH_ROM) \
 		--translations $(FR_TRANSLATION)
 	@$(PYTHON) $(PATCH_POKEDEX_METRICS_FR_SCRIPT) --rom $(FR_BUILD)
-	@$(PYTHON) $(PATCH_SHOP_FR_SCRIPT) --rom $(FR_BUILD)
 
 validate-es: $(SPANISH_BUILD) $(VALIDATE_SCRIPT)
 	@$(PYTHON) $(VALIDATE_SCRIPT) \
