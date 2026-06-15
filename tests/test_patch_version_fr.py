@@ -14,12 +14,15 @@ from scripts.patch_version_fr import (
     _FG,
     _TILESET_PTR_OFF,
     _TILEMAP_PTR_OFF,
+    _NFS_TILESET2_PTR,
     _lz77_compress,
     _lz77_decompress,
     _make_char_tile,
     _compute_checksum,
+    _read_gba_ptr,
     patch_version,
     patch_title_screen_version,
+    patch_not_for_sale_version,
 )
 
 EN_ROM = Path(__file__).parent.parent / "input" / "roms" / "englishrom.gba"
@@ -290,6 +293,72 @@ class TestPatchTitleScreenVersion(unittest.TestCase):
             fr_tile = _make_char_tile('F', 'R')
             self.assertEqual(first_new_tile, fr_tile,
                              f"build {build}: tile 138 is not 'FR'")
+
+
+# ---------------------------------------------------------------------------
+# patch_not_for_sale_version — requires EN ROM
+# ---------------------------------------------------------------------------
+
+@pytest.mark.rom
+class TestPatchNotForSaleVersion(unittest.TestCase):
+    @classmethod
+    def setUpClass(cls):
+        if not EN_ROM.exists():
+            pytest.skip("englishrom.gba not found")
+        cls.rom_data = EN_ROM.read_bytes()
+
+    def _patched(self) -> bytearray:
+        data = bytearray(self.rom_data)
+        patch_not_for_sale_version(data)
+        return data
+
+    def test_returns_true(self):
+        data = bytearray(self.rom_data)
+        self.assertTrue(patch_not_for_sale_version(data))
+
+    def test_tileset2_pointer_changes(self):
+        orig = struct.unpack_from("<I", self.rom_data, _NFS_TILESET2_PTR)[0]
+        data = self._patched()
+        new = struct.unpack_from("<I", data, _NFS_TILESET2_PTR)[0]
+        self.assertNotEqual(orig, new)
+
+    def test_new_tileset2_decompresses(self):
+        data = self._patched()
+        ts2_off = _read_gba_ptr(data, _NFS_TILESET2_PTR)
+        result = _lz77_decompress(data, ts2_off)
+        self.assertIsNotNone(result)
+        ts2, _ = result
+        self.assertEqual(len(ts2), 64 * 32)  # 64 tiles × 32 bytes
+
+    def test_tile19_is_blanked(self):
+        data = self._patched()
+        ts2_off = _read_gba_ptr(data, _NFS_TILESET2_PTR)
+        ts2, _ = _lz77_decompress(data, ts2_off)
+        blank = bytes([0x22] * 32)
+        self.assertEqual(ts2[19 * 32 : 20 * 32], blank)
+
+    def test_tile20_is_blanked(self):
+        data = self._patched()
+        ts2_off = _read_gba_ptr(data, _NFS_TILESET2_PTR)
+        ts2, _ = _lz77_decompress(data, ts2_off)
+        blank = bytes([0x22] * 32)
+        self.assertEqual(ts2[20 * 32 : 21 * 32], blank)
+
+    def test_other_tiles_unchanged(self):
+        """Tiles not touched by the patch must be identical to the original."""
+        orig_ts2_off = _read_gba_ptr(bytearray(self.rom_data), _NFS_TILESET2_PTR)
+        orig_ts2, _ = _lz77_decompress(self.rom_data, orig_ts2_off)
+        data = self._patched()
+        ts2_off = _read_gba_ptr(data, _NFS_TILESET2_PTR)
+        ts2, _ = _lz77_decompress(data, ts2_off)
+        for t in range(64):
+            if t in (19, 20):
+                continue
+            self.assertEqual(
+                ts2[t * 32 : (t + 1) * 32],
+                orig_ts2[t * 32 : (t + 1) * 32],
+                f"tile {t} was unexpectedly modified",
+            )
 
 
 if __name__ == "__main__":

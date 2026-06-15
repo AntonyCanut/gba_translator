@@ -131,6 +131,10 @@ _GBA_BASE = 0x08000000
 _TILESET_PTR_OFF = 0x1413AC
 _TILEMAP_PTR_OFF = 0x1413B8
 
+# NOT FOR SALE intro screen: pointer to LZ77-compressed 64-tile tileset2
+# Tiles 19 and 20 (VRAM 147/148) encode the "v2.1.1.1" pixel art.
+_NFS_TILESET2_PTR = 0x260210
+
 # Tilemap dimensions
 _TM_COLS = 32
 _TM_ROWS = 20
@@ -313,6 +317,37 @@ def patch_title_screen_version(data: bytearray, build_number: int) -> bool:
 
 
 # ---------------------------------------------------------------------------
+# NOT FOR SALE intro screen patch
+# ---------------------------------------------------------------------------
+
+
+def patch_not_for_sale_version(data: bytearray) -> bool:
+    """Remove 'v2.1.1.1' from the NOT FOR SALE intro screen.
+
+    The version text pixel art lives in tileset2 tiles 19 and 20 (VRAM 147/148).
+    Replacing them with solid background (color 2) erases the text while leaving
+    the surrounding box decoration intact.  Returns True if the ROM was modified.
+    """
+    ts2_rom_off = _read_gba_ptr(data, _NFS_TILESET2_PTR)
+    result = _lz77_decompress(data, ts2_rom_off)
+    if result is None:
+        raise RuntimeError(f"Failed to decompress NFS tileset2 at 0x{ts2_rom_off:07X}")
+    tileset2, _ = result
+
+    blank_tile = bytes([0x22] * 32)  # all background (palette color 2)
+    new_ts2 = bytearray(tileset2)
+    new_ts2[19 * 32 : 20 * 32] = blank_tile
+    new_ts2[20 * 32 : 21 * 32] = blank_tile
+
+    ts2_compressed = _lz77_compress(bytes(new_ts2))
+    ts2_padded = ts2_compressed + b"\xFF" * ((-len(ts2_compressed)) & 3)
+    cursor = _find_free_block(data, len(ts2_padded))
+    data[cursor : cursor + len(ts2_padded)] = ts2_padded
+    _write_gba_ptr(data, _NFS_TILESET2_PTR, cursor)
+    return True
+
+
+# ---------------------------------------------------------------------------
 # CLI entry point
 # ---------------------------------------------------------------------------
 
@@ -342,6 +377,12 @@ def main() -> int:
         print(f"Title-screen patch failed: {exc}", file=sys.stderr)
         return 1
 
+    try:
+        nfs_changed = patch_not_for_sale_version(data)
+    except Exception as exc:
+        print(f"NOT FOR SALE patch failed: {exc}", file=sys.stderr)
+        return 1
+
     args.rom.write_bytes(data)
 
     if header_changed:
@@ -354,6 +395,9 @@ def main() -> int:
 
     if screen_changed:
         print(f"Title screen: version display updated to 'FR.2.0.{args.build_number}'")
+
+    if nfs_changed:
+        print("NOT FOR SALE screen: version text erased (tiles 19/20 blanked)")
 
     return 0
 
