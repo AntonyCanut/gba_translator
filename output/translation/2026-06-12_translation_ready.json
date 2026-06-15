@@ -167429,6 +167429,30 @@
       "too_long": false
     },
     {
+      "offset": 32577662,
+      "original_text": "Yes   ",
+      "translation": "Oui   ",
+      "length": 7,
+      "original_length": 6,
+      "padding_used": 0,
+      "encoding": "pokemon",
+      "category": "description",
+      "notes": "",
+      "too_long": false
+    },
+    {
+      "offset": 32577669,
+      "original_text": "No",
+      "translation": "Non",
+      "length": 4,
+      "original_length": 2,
+      "padding_used": -1,
+      "encoding": "pokemon",
+      "category": "description",
+      "notes": "",
+      "too_long": false
+    },
+    {
       "offset": 32577672,
       "original_text": "Hoopa\"<0xFB>I worry, old friend, for the future\n- for if, no\"<0xFC><0x08><0x18> when SHE arrives.",
       "translation": "Hoopa...<0xFB>Je crains l'avenir, vieil ami,\ncar si, non...{PAUSE} quand ELLE arrivera.",
