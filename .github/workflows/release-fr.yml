@@ -27,6 +27,16 @@ jobs:
       - name: Build French ROM
         run: make build-fr BUILD_NUMBER=${{ github.run_number }}
 
+      - name: Upgrade gh CLI (needs ≥2.55.0 for --no-source-archives)
+        run: |
+          sudo mkdir -p -m 755 /etc/apt/keyrings
+          wget -qO- https://cli.github.com/packages/githubcli-archive-keyring.gpg \
+            | sudo tee /etc/apt/keyrings/githubcli-archive-keyring.gpg > /dev/null
+          sudo chmod go+r /etc/apt/keyrings/githubcli-archive-keyring.gpg
+          echo "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/githubcli-archive-keyring.gpg] https://cli.github.com/packages stable main" \
+            | sudo tee /etc/apt/sources.list.d/github-cli.list > /dev/null
+          sudo apt update && sudo apt install gh -y
+
       - name: Publish release
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -43,4 +53,5 @@ jobs:
             --title "FR.2.0.${{ github.run_number }}" \
             --notes "${NOTES}" \
             --prerelease \
+            --no-source-archives \
             "output/roms/GenedRom-fr.gba#pokemon_unbound_fr.gba"

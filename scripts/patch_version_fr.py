@@ -131,9 +131,15 @@ _GBA_BASE = 0x08000000
 _TILESET_PTR_OFF = 0x1413AC
 _TILEMAP_PTR_OFF = 0x1413B8
 
-# NOT FOR SALE intro screen: pointer to LZ77-compressed 64-tile tileset2
-# Tiles 19 and 20 (VRAM 147/148) encode the "v2.1.1.1" pixel art.
-_NFS_TILESET2_PTR = 0x260210
+# NOT FOR SALE intro screen: both background layers share the same 32×32 tilemap
+# (1024 entries × 2 bytes each).  Row 18 (0-indexed) is the version-text row;
+# columns 3, 5, 7, 9, 11, 13, 15 carry the version tile indices.  We replace
+# those entries with the surrounding frame-decoration entries from row 16 so
+# the version text disappears.  Both pointers must be updated.
+_NFS_TILEMAP_PTR_A = 0x260218
+_NFS_TILEMAP_PTR_B = 0x260220
+_NFS_VER_ROW = 18
+_NFS_VER_COLS = (3, 5, 7, 9, 11, 13, 15)
 
 # Tilemap dimensions
 _TM_COLS = 32
@@ -324,26 +330,32 @@ def patch_title_screen_version(data: bytearray, build_number: int) -> bool:
 def patch_not_for_sale_version(data: bytearray) -> bool:
     """Remove 'v2.1.1.1' from the NOT FOR SALE intro screen.
 
-    The version text pixel art lives in tileset2 tiles 19 and 20 (VRAM 147/148).
-    Replacing them with solid background (color 2) erases the text while leaving
-    the surrounding box decoration intact.  Returns True if the ROM was modified.
+    The NFS screen tilemap (shared by both background layers) has a version
+    row (row 18) where seven specific tile entries render the version string.
+    We copy the corresponding frame-decoration entries from row 16 into row 18
+    so the version text vanishes into the surrounding box border.  Both tilemap
+    pointers (0x260218 and 0x260220) are updated to the new location in free
+    space.  Returns True if the ROM was modified.
     """
-    ts2_rom_off = _read_gba_ptr(data, _NFS_TILESET2_PTR)
-    result = _lz77_decompress(data, ts2_rom_off)
+    tm_rom_off = _read_gba_ptr(data, _NFS_TILEMAP_PTR_A)
+    result = _lz77_decompress(data, tm_rom_off)
     if result is None:
-        raise RuntimeError(f"Failed to decompress NFS tileset2 at 0x{ts2_rom_off:07X}")
-    tileset2, _ = result
+        raise RuntimeError(
+            f"Failed to decompress NFS tilemap at 0x{tm_rom_off:07X}"
+        )
+    tilemap_bytes, _ = result
+    tilemap = bytearray(tilemap_bytes)
 
-    blank_tile = bytes([0x22] * 32)  # all background (palette color 2)
-    new_ts2 = bytearray(tileset2)
-    new_ts2[19 * 32 : 20 * 32] = blank_tile
-    new_ts2[20 * 32 : 21 * 32] = blank_tile
+    for col in _NFS_VER_COLS:
+        frame_entry = struct.unpack_from("<H", tilemap, (16 * 32 + col) * 2)[0]
+        struct.pack_into("<H", tilemap, (_NFS_VER_ROW * 32 + col) * 2, frame_entry)
 
-    ts2_compressed = _lz77_compress(bytes(new_ts2))
-    ts2_padded = ts2_compressed + b"\xFF" * ((-len(ts2_compressed)) & 3)
-    cursor = _find_free_block(data, len(ts2_padded))
-    data[cursor : cursor + len(ts2_padded)] = ts2_padded
-    _write_gba_ptr(data, _NFS_TILESET2_PTR, cursor)
+    tm_compressed = _lz77_compress(bytes(tilemap))
+    tm_padded = tm_compressed + b"\xFF" * ((-len(tm_compressed)) & 3)
+    cursor = _find_free_block(data, len(tm_padded))
+    data[cursor : cursor + len(tm_padded)] = tm_padded
+    _write_gba_ptr(data, _NFS_TILEMAP_PTR_A, cursor)
+    _write_gba_ptr(data, _NFS_TILEMAP_PTR_B, cursor)
     return True
 
 
@@ -397,7 +409,7 @@ def main() -> int:
         print(f"Title screen: version display updated to 'FR.2.0.{args.build_number}'")
 
     if nfs_changed:
-        print("NOT FOR SALE screen: version text erased (tiles 19/20 blanked)")
+        print("NOT FOR SALE screen: version text erased (tilemap row 18 patched)")
 
     return 0
 
