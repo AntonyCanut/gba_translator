@@ -25,3 +25,4 @@ package-lock.json
 tickets/auto-*.yaml
 /.singularity-worktrees/
 output/roms/*.ss[0-9]
+.mcp.json
