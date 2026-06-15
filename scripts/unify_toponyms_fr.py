@@ -14,7 +14,8 @@ the localisation incoherent:
 This one-shot data fix unifies each town to a single name:
 
 * Bellin   -> ``Bellinville``  (explicit request: "change tout pour Bellinville").
-* Tarmigan -> ``Tarmiganville`` (dominant form, 17 vs 3).
+* Tarmigan -> ``Tarmigan``      (explicit request: the short bare name is
+  preferred over the earlier "-ville" coinage -- shorter and more logical).
 * Dresco   -> ``Bourg Dresco``  (dominant form, 41 vs 2).
 
 The fix is applied to the three synchronised layers:
@@ -69,10 +70,13 @@ _RULES = [
     # --- Bellin -> Bellinville -------------------------------------------
     (re.compile(r'Bourg' + _SEP + r'Bellin\b'), 'Bellinville'),
     (re.compile(r'\bBellin\b'), 'Bellinville'),
-    # --- Tarmigan -> Tarmiganville (town-with-suffix forms only) ----------
-    (re.compile(r'Bourg' + _SEP + r'Tarmigan\b'), 'Tarmiganville'),
-    (re.compile(r'Tarmigan' + _SEP + r'Town\b'), 'Tarmiganville'),
-    (re.compile(r'\bà Tarmigan\b'), 'à Tarmiganville'),
+    # --- Tarmigan -> Tarmigan (short bare town name) ----------------------
+    # ``Tarmiganville`` is matched WITHOUT a leading word boundary on purpose:
+    # COLOR codes render glued to the word (e.g. "{COLOR}ÉTarmiganville"), so a
+    # leading \b would sit between two word chars (É|T) and never match.
+    (re.compile(r'Bourg' + _SEP + r'Tarmigan\b'), 'Tarmigan'),
+    (re.compile(r'Tarmigan' + _SEP + r'Town\b'), 'Tarmigan'),
+    (re.compile(r'Tarmiganville'), 'Tarmigan'),
     # --- Dresco -> Bourg Dresco (drop stray "Ville de Dresco") ------------
     (re.compile(r'\bVille de Dresco\b'), 'Bourg Dresco'),
 ]

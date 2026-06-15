@@ -6480,7 +6480,7 @@ Symbole d'honnêteté.
 0x003ECB48,UGLY,UGLY,4,4,8,pokemon,other,LAID,
 0x003EED08,Bellin Town,Ciudad Bellin,11,15,26,pokemon,location,Bellinville,
 0x003EED22,Crater Town,Ciudad Cráter,11,58,69,pokemon,location,Bourg Cratère,
-0x003EED67,Tarmigan Town,Ciudad Tarmi,13,3,16,pokemon,location,Tarmiganville,
+0x003EED67,Tarmigan Town,Ciudad Tarmi,13,3,16,pokemon,location,Tarmigan,
 0x003EED77,INDIGO PLATEAU,INDIGO PLATEAU,14,14,28,pokemon,location,PLATEAU INDIGO,
 0x003EED93,Route 4,Ruta 4,7,3,10,pokemon,location,Route 4,
 0x003EED9B,Route 10,Ruta 10,8,3,11,pokemon,location,Route 10,
@@ -20337,7 +20337,7 @@ right now.<0xFB>He's probably off clearing his head
 somewhere.",89,1,90,pokemon,description,"Mel, le Champion, n'est pas là
 pour l'instant.<0xFB>Il doit être parti se changer les
 idées.",
-0x007A2565,Tarmigan Town,Ciudad Tarmi,13,2,15,pokemon,location,Tarmiganville,
+0x007A2565,Tarmigan Town,Ciudad Tarmi,13,2,15,pokemon,location,Tarmigan,
 0x007A281F,"The Pokémon walking around this
 lab all assist in the research.<0xFB>They're all special Pokémon known
 for eating dreams.","The Pokémon walking around this
@@ -21450,7 +21450,7 @@ lightning storms, you're out of<0xFA>luck.<0xFB>Those only happen to the east of
 here, by Epidimy Town.","Tarmigan Town is located on the
 <0xB1>Thundercap Highland<0xB2>.<0xFB>But if you came to see the
 lightning storms, you're out of<0xFA>luck.<0xFB>Those only happen to the east of
-here, by Epidimy Town.",175,2,177,pokemon,dialogue,"Tarmiganville se trouve sur le
+here, by Epidimy Town.",175,2,177,pokemon,dialogue,"Tarmigan se trouve sur le
 <0xFB>""Plateau Thundercap"". Mais si tu
 <0xFA>es venu voir les orages, pas
 besoin d'aller plus loin.",
@@ -21467,7 +21467,7 @@ youngster.<0xFB>Carpe diem, child!
 Seize the day!",282,1,283,pokemon,dialogue,"Ma famille possède le Manoir
 <0xFB>Tarmigan depuis des générations. En
 <0xFA>fait, mes ancêtres ont fondé
-<0xFB>Tarmiganville ! Du coup, j'aime bien
+<0xFB>Tarmigan ! Du coup, j'aime bien
 <0xFB>m'asseoir ici et regarder la ville
 <0xFB>de temps en temps. Ne fais pas comme
 moi, gamin. Carpe diem, enfant !",
@@ -23146,7 +23146,7 @@ goes all around Borrius.<0xFB>It a real backpacker's paradise!",156,3,159,pokemo
 0x007C898C,"I heard that there's someone in
 Tarmigan Town that teaches the art<0xFA>of Mega Evolution!","I heard that there's someone in
 Tarmigan Town that teaches the art<0xFA>of Mega Evolution!",85,3,88,pokemon,dialogue,"J'ai entendu dire que quelqu'un à
-Tarmiganville enseigne l'art<0xFA>de la Méga-Évolution !",
+Tarmigan enseigne l'art<0xFA>de la Méga-Évolution !",
 0x007C89E2,"Did you come up here to obtain the
 power of <0xFC><0x01><0x06>Mega Evolution<0xFC><0x01><0x08> from<0xFA><0xFC><0x01><0x06>Tarmigan Mansion<0xFC><0x01><0x08>?<0xFB>Most people who come here are
 usually after it.<0xFB>All this town has to offer
@@ -57651,7 +57651,7 @@ bloquant le passage a été coupé,<0xFA>elle est beaucoup plus utilisée.",
 0x01EED7DD,more frequently used.,,21,3,24,pokemon,other,,
 0x01EED7F3,"I heard there's someone in
 <0xFC><0x01><0x06>Tarmigan Town<0xFC><0x01><0x04> who teaches<0xFA>the art of <0xFC><0x01><0x06>Mega Evolution<0xFC><0x01><0x04>!","<0x52>Escuché que alguien en <0xFC><0x01><0x06>Ciudad
-Tarmi<0xFC><0x01><0x04> te enseña el poder de la<0xFA><0xFC><0x01><0x06>Megaevolución<0xFC><0x01><0x04>!",91,3,94,pokemon,dialogue,"J'ai entendu qu'à {COLOR}ÉTarmiganville{COLOR}Ç,
+Tarmi<0xFC><0x01><0x04> te enseña el poder de la<0xFA><0xFC><0x01><0x06>Megaevolución<0xFC><0x01><0x04>!",91,3,94,pokemon,dialogue,"J'ai entendu qu'à {COLOR}ÉTarmigan{COLOR}Ç,
 quelqu'un enseigne l'art de la<0xFA>{COLOR}ÉMéga-Évolution{COLOR}Ç !",
 0x01EED84F,"I heard there's someone in
 <0xFC><0x01><0x06>Tarmigan Town<0xFC><0x01><0x04> who teaches<0xFA>the art of <0xFC><0x01><0x06>Mega Evolution<0xFC><0x01><0x04>!<0xFB>But you already knew that,
@@ -57659,7 +57659,7 @@ didn't you?<0xFB>That <0xFD><0x02> you're wearing
 gave it away.","<0x52>Escuché que alguien en <0xFC><0x01><0x06>Ciudad
 Tarmi<0xFC><0x01><0x04> te enseña el poder de la<0xFA><0xFC><0x01><0x06>Megaevolución<0xFC><0x01><0x04>!<0xFB>Pero eso ya lo sabías, <0x51>verdad?<0xFB>La <0xFD><0x02> que llevas puesta
 te delata.",167,2,169,pokemon,dialogue,"Il paraît que quelqu'un à
-<0xFC><0x01><0x06>Tarmiganville<0xFC><0x01><0x04> enseigne<0xFA>l'art de la <0xFC><0x01><0x06>Méga-Évolution<0xFC><0x01><0x04> !<0xFB>Mais tu le savais déjà,
+<0xFC><0x01><0x06>Tarmigan<0xFC><0x01><0x04> enseigne<0xFA>l'art de la <0xFC><0x01><0x06>Méga-Évolution<0xFC><0x01><0x04> !<0xFB>Mais tu le savais déjà,
 pas vrai ?<0xFB>Le <0xFD><0x02> que tu portes
 t'a trahi.",
 0x01EED8DE,"re wearing
@@ -63227,7 +63227,7 @@ stairs from Tarmigan Town.","Este letrero fue leído después de
 bajar las escaleras de los tramos
 de Ciudad Tarmi.",93,2,95,pokemon,description,"Panneau Conseils Dresseurs lu
 après le second escalier
-venant de Tarmiganville.",
+venant de Tarmigan.",
 0x01F0025E,"This Trainer Tips sign was read on
 the way into town, south of the
 Pokémon Center.","Este letrero fue leído cerca del
@@ -84762,7 +84762,7 @@ Borrius avec des escaliers creusés<0xFA>dans le flanc d'une montagne comme<0xFA
 0x01F5CCDF,You must know.,Debes saberlo.,14,3,17,pokemon,dialogue,Tu dois le savoir.,
 0x01F5CCEE,"To go between Tarmigan Town and
 Dehara City, you must first go<0xFA>down the mountain.","Para ir a Ciudad Dehara, primero
-debes bajar la montaña.",81,1,82,pokemon,dialogue,"Pour aller de Tarmiganville à la
+debes bajar la montaña.",81,1,82,pokemon,dialogue,"Pour aller de Tarmigan à la
 Ville de Dehara, tu dois d'abord<0xFA>descendre la montagne.",
 0x01F5CD2D,down the mountain.,,18,1,19,pokemon,other,,
 0x01F5CD40,"Hmm""<0xFB>This must be the way to Dehara
@@ -89843,7 +89843,7 @@ famosas!",45,2,47,pokemon,dialogue,Maison Combat Inversé<0xFB>Amusez-vous !,
 <0xB1>The Cliff Caves<0xB2><0xFB><0x7B> Fallshore City
 à Epidimy Town<0xFA><0x79> Tarmigan Town",,74,2,76,pokemon,dialogue,"Route 11 ""
 Grottes<0xFB>des Falaises "" <0x7B> Ville de
-Fallshore <0x7C> Bourg<0xFA>Epidimy <0x79> Tarmiganville",
+Fallshore <0x7C> Bourg<0xFA>Epidimy <0x79> Tarmigan",
 0x01F713D7, Tarmigan Town,,14,2,16,pokemon,other,,
 0x01F713E6,Epidimy Town<0xFB>The town of happiness and bliss.,"Ciudad Epidimia: <0x52>La alegría vive
 aquí!",45,1,46,pokemon,dialogue,Ville d'Epidimy La<0xFB>ville du bonheur et de la félicité.,
@@ -89865,7 +89865,7 @@ autrefois à renforcer un sceau sur<0xFA>une grande obscurité, mais qu'il<0xFA>
 <0x7C> Ville d'Antisis",
 0x01F714FD, Antisis City,,13,2,15,pokemon,other,,
 0x01F7150B,"Tarmigan Town<0xFB>The town located on the
-Thundercap Highland.",Ciudad Tarmi: <0x52>La ciudad del poder!,58,2,60,pokemon,description,"Tarmiganville<0xFB>La ville située sur les
+Thundercap Highland.",Ciudad Tarmi: <0x52>La ciudad del poder!,58,2,60,pokemon,description,"Tarmigan<0xFB>La ville située sur les
 Hautes-Terres Thundercap.",
 0x01F71519,"The town located on the
 Thundercap Highland.",,44,2,46,pokemon,description,,
@@ -89897,7 +89897,7 @@ déverrouillée...",
 <0x7A> Tarmigan Town<0xFA><0x7B> Route 14","Ruta 12: <0x52>Paso Trueno!<0xFB><0x79> Ciudad Dehara
 <0x7A> Ciudad Tarmi<0xFA><0x7B> Ruta 14",73,2,75,pokemon,description,"Route 12 "" Escaliers
 Ouest<0xFB>Thundercap "" <0x79> Ville de
-Dehara <0x7A> Tarmiganville<0xFA><0x7B> Route 14",
+Dehara <0x7A> Tarmigan<0xFA><0x7B> Route 14",
 0x01F716C5, Route 14,,9,2,11,pokemon,other,,
 0x01F716CF,Dehara City<0xFB>An oasis at the edge of the desert.,"Ciudad Dehara: <0x52>Un oasis al borde
 del desierto!",47,2,49,pokemon,description,Ville de Dehara<0xFB>Une oasis en bordure du désert.,
@@ -91342,13 +91342,13 @@ atención a la parte inferior de<0xFA>la interfaz mientras modificas tu<0xFA>Pok
 sauvegarder, et {L_BUTTON} et {R_BUTTON}<0xFA>pour défiler les pages facilement !<0xFB>Pour plus d'infos, regarde en bas
 <0xFA>l'interface pendant tes réglages.{PAUSE_UNTIL_PRESS}",
 0x01F783B8,Tarmigan Town,Ciudad Tarmi,13,2,15,pokemon,location,,
-0x01F783C6,Tarmigan Town D,Tarmigan Town D,15,2,17,pokemon,location,Tarmiganville J,
-0x01F783D6,Tarmigan Town N,Tarmigan Town N,15,2,17,pokemon,location,Tarmiganville N,
+0x01F783C6,Tarmigan Town D,Tarmigan Town D,15,2,17,pokemon,location,Tarmigan J,
+0x01F783D6,Tarmigan Town N,Tarmigan Town N,15,2,17,pokemon,location,Tarmigan N,
 0x01F783E6,"Tarmigan Town is located on the
 <0xB1>Thundercap Highland<0xB2>.<0xFB>But if you came to see the
 lightning storms, you're out<0xFA>of luck.<0xFB>Those only happen to the east of
 here, by Epidimy Town.","Me imagino que has venido a ver las
-tormentas eléctricas.",175,3,178,pokemon,dialogue,"Tarmiganville se trouve sur le
+tormentas eléctricas.",175,3,178,pokemon,dialogue,"Tarmigan se trouve sur le
 "" Plateau Thundercap "".<0xFB>Mais si tu es venu pour voir les
 orages, c'est<0xFA>raté.<0xFB>Ils ne frappent qu'à l'est d'ici,
 près de Bourg Épidimy.",
@@ -91402,7 +91402,7 @@ Ne tombe pas dans le vide sombre !",
 the mountains; it doesn't have its<0xFA>own entrance to the <0xFC><0x01><0x06>KBT Expressway<0xFC><0x01><0x04>!<0xFB>If you wanna go down the mountain,
 you'll have to walk or ask the<0xFA>teleporter to send you down.","Ciudad Tarmi está muy apartada en
 las montañas; <0x52>no tiene su propia<0xFA>entrada a la <0xFC><0x01><0x06>Autopista RBT<0xFC><0x01><0x04>!<0xFB>Si quieres bajar de las montañas,
-tendrás que pedirle al<0xFA>teletransportador que te envíe<0xFA>hacia abajo.",203,2,205,pokemon,dialogue,"Tarmiganville est isolée dans les
+tendrás que pedirle al<0xFA>teletransportador que te envíe<0xFA>hacia abajo.",203,2,205,pokemon,dialogue,"Tarmigan est isolée dans les
 montagnes et n'a pas sa<0xFA>propre entrée sur l'{COLOR}ÉAutoroute KBT{COLOR}Ç !<0xFB>Si tu veux descendre la montagne,
 tu devras marcher ou demander au<0xFA>Téléporteur de t'y envoyer.",
 0x01F788BB,teleporter to send you down.,,28,2,30,pokemon,dialogue,,
@@ -91423,7 +91423,7 @@ de la Mansión Tarmi durante<0xFA>generaciones.<0xFB>De hecho, <0x52>mis antepas
 responsables de la formación de la<0xFA>propia ciudad!<0xFB>Como tal, me gusta sentarme aquí y
 observar la ciudad de vez en cuando.",282,2,284,pokemon,dialogue,"Ma famille possède le Manoir
 Tarmigan depuis des générations.<0xFB>En fait, mes ancêtres ont fondé
-Tarmiganville<0xFA>eux-mêmes !<0xFB>Du coup, j'aime m'asseoir ici et
+Tarmigan<0xFA>eux-mêmes !<0xFB>Du coup, j'aime m'asseoir ici et
 regarder la ville de temps en temps.<0xFB>Ne reste pas assis comme moi,
 jeune homme.<0xFB>Carpe diem, enfant !
 Saisis le jour !",
@@ -91648,7 +91648,7 @@ partir.",
 0x01F79AFF,"Are you ready to wake up and return
 to Tarmigan Town?","Are you ready to wake up and return
 to Tarmigan Town?",53,3,56,pokemon,dialogue,"Prêt à te réveiller et revenir
-à Tarmiganville ?",
+à Tarmigan ?",
 0x01F79B35,"I'll be using this body to keep
 tabs on you.<0xFB>Speak to it when you're ready
 to leave.","I'll be using this body to keep
@@ -91699,7 +91699,7 @@ obtain the power of Mega Evolution!","Una mansión que está en Ciudad
 Tarmi desde su fundación.
 Derrota a la Sucesora de la
 mansión y obtén el poder de
-la Megaevolución.",135,1,136,pokemon,dialogue,"Un manoir ancien à Tarmiganville
+la Megaevolución.",135,1,136,pokemon,dialogue,"Un manoir ancien à Tarmigan
 depuis sa fondation.
 Bats la maîtresse du manoir pour
 obtenir le pouvoir Méga-Évolution !",
@@ -101310,7 +101310,7 @@ Speak to the boy's father in
 Tarmigan Town.","A small boy is having a nightmare!
 Speak to the boy's father in
 Tarmigan Town.",78,3,81,pokemon,dialogue,"Un petit garçon fait un cauchemar !
-Parlez au père du garçon à Tarmiganville.",
+Parlez au père du garçon à Tarmigan.",
 0x01FA3D4B,"A small boy is having a nightmare!
 Board a boat to Fullmoon Island
 and retrieve the Lunar Wing.","<0x52>Un niño tiene una pesadilla! Sube
@@ -101323,7 +101323,7 @@ Return to Tarmigan Town with the
 Lunar Wing to wake up him.","<0x52>Un niño tiene una pesadilla!
 Regresa a Ciudad Tarmi con la
 Pluma Lunar y despiértalo.",94,2,96,pokemon,dialogue,"Un petit garçon fait un cauchemar !
-Retournez à Tarmiganville avec la
+Retournez à Tarmigan avec la
 Lun'Aile pour le réveiller.",
 0x01FA3E0A,Eldon,Eldon,5,2,7,pokemon,other,Eldon,
 0x01FA3E10,"I've lost my love of sailing since
@@ -101386,7 +101386,7 @@ I'm going to return to Tarmigan.<0xFB>Please hurry and meet me at
 my home.","<0xFC><0x01><0x08>Ahora que tenemos la Pluma Lunar,
 regresaré a Ciudad Tarmi.<0xFB>Por favor, date prisa y salva a mi
 hijo.",105,2,107,pokemon,dialogue,"{COLOR}ËMaintenant que nous avons la
-Lun'Aile, je retourne à Tarmiganville.<0xFB>Merci de me rejoindre chez moi au
+Lun'Aile, je retourne à Tarmigan.<0xFB>Merci de me rejoindre chez moi au
 plus vite.",
 0x01FA4243,"Please hurry and meet me at
 my home.",,36,2,38,pokemon,dialogue,,
@@ -101482,7 +101482,7 @@ from their nightmares""","Nunca pensé que mi hijo caería en
 esta pesadilla sin fin""<0xFB>Sucedió en el pasado en Tarmi""<0xFB>Había personas que nunca despertaban
 de sus pesadillas""",161,3,164,pokemon,dialogue,"Je n'aurais jamais cru que notre
 fils tomberait dans ce cauchemar<0xFB>sans fin... C'est déjà arrivé par le
-passé à Tarmiganville... Il y a eu des gens<0xFB>qui ne se sont jamais réveillés de
+passé à Tarmigan... Il y a eu des gens<0xFB>qui ne se sont jamais réveillés de
 leurs cauchemars...",
 0x01FA48A7,"Our boy has too much energy!
 ""That's the best way to be!","<0x52>Mi hijo tiene mucha energía!
