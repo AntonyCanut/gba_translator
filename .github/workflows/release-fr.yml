@@ -27,6 +27,14 @@ jobs:
       - name: Build French ROM
         run: make build-fr BUILD_NUMBER=${{ github.run_number }}
 
+      - name: Verify version display
+        # Regression guard (B-19 / T-21): the freshly built ROM must show
+        # FR.2.0.<run_number> on the NOT FOR SALE screen and stamp the header.
+        run: |
+          python3 scripts/verify_version_display.py \
+            --rom output/roms/GenedRom-fr.gba \
+            --build-number ${{ github.run_number }}
+
       - name: Publish release
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
