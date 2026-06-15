@@ -27,14 +27,6 @@ jobs:
       - name: Build French ROM
         run: make build-fr BUILD_NUMBER=${{ github.run_number }}
 
-      - name: Upgrade gh CLI (needs ≥2.55.0 for --no-source-archives)
-        run: |
-          GH_VERSION=$(curl -sSL -o /dev/null -w '%{url_effective}' https://github.com/cli/cli/releases/latest | sed 's|.*/v||')
-          curl -sSL "https://github.com/cli/cli/releases/download/v${GH_VERSION}/gh_${GH_VERSION}_linux_amd64.tar.gz" \
-            | tar -xz -C /tmp
-          sudo install -m 755 "/tmp/gh_${GH_VERSION}_linux_amd64/bin/gh" /usr/local/bin/gh
-          gh --version
-
       - name: Publish release
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -51,5 +43,4 @@ jobs:
             --title "FR.2.0.${{ github.run_number }}" \
             --notes "${NOTES}" \
             --prerelease \
-            --no-source-archives \
             "output/roms/GenedRom-fr.gba#pokemon_unbound_fr.gba"
