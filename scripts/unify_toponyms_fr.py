@@ -43,14 +43,20 @@ COMBINED = ROOT / 'combined_fr.txt'
 CSV_PATH = ROOT / 'output/translation/2026-01-15_trilingual_translation.csv'
 
 
-def latest_translation_json() -> Path:
+def translation_jsons() -> list[Path]:
+    """All translation_ready snapshots.
+
+    ``make build-fr`` consumes the most recent one by mtime, but parallel
+    tickets can add fresher snapshots; unifying every snapshot keeps the build
+    correct whichever one is selected and avoids mtime-ordering surprises.
+    """
     candidates = sorted(
         (ROOT / 'output' / 'translation').glob('*_translation_ready.json'),
         key=lambda p: p.stat().st_mtime,
     )
     if not candidates:
         raise SystemExit('No *_translation_ready.json found.')
-    return candidates[-1]
+    return candidates
 
 
 # Separators that can appear between the two words of a name inside ROM text:
@@ -120,7 +126,6 @@ def fix_csv(dry: bool) -> int:
 
 
 def fix_json(dry: bool) -> int:
-    json_path = latest_translation_json()
     # offset -> real_max_length budget (from CSV) for too_long recomputation
     budget: dict[int, int] = {}
     with CSV_PATH.open(newline='', encoding='utf-8-sig') as handle:
@@ -139,29 +144,32 @@ def fix_json(dry: bool) -> int:
     except Exception as exc:  # pragma: no cover - metadata only
         print(f'  (note: encoder unavailable, length metadata kept: {exc})')
 
-    data = json.loads(json_path.read_text(encoding='utf-8'))
-    changed = 0
-    for item in data['translations']:
-        new = fix_fr(item.get('translation') or '')
-        if new == item.get('translation'):
-            continue
-        item['translation'] = new
-        changed += 1
-        if encoder is not None:
-            length = len(encoder.encode_pokemon(new)) - 1
-            item['length'] = length
-            orig_len = item.get('original_length')
-            if isinstance(orig_len, int):
-                item['padding_used'] = length - orig_len
-            cap = budget.get(item['offset'])
-            if cap is not None:
-                item['too_long'] = length > cap
-    if not dry:
-        json_path.write_text(
-            json.dumps(data, ensure_ascii=False, indent=2), encoding='utf-8'
-        )
-    print(f'{json_path.name} : {changed} entries changed')
-    return changed
+    total = 0
+    for json_path in translation_jsons():
+        data = json.loads(json_path.read_text(encoding='utf-8'))
+        changed = 0
+        for item in data['translations']:
+            new = fix_fr(item.get('translation') or '')
+            if new == item.get('translation'):
+                continue
+            item['translation'] = new
+            changed += 1
+            if encoder is not None:
+                length = len(encoder.encode_pokemon(new)) - 1
+                item['length'] = length
+                orig_len = item.get('original_length')
+                if isinstance(orig_len, int):
+                    item['padding_used'] = length - orig_len
+                cap = budget.get(item['offset'])
+                if cap is not None:
+                    item['too_long'] = length > cap
+        if changed and not dry:
+            json_path.write_text(
+                json.dumps(data, ensure_ascii=False, indent=2), encoding='utf-8'
+            )
+        print(f'{json_path.name} : {changed} entries changed')
+        total += changed
+    return total
 
 
 def main() -> int:
