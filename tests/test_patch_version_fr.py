@@ -14,7 +14,10 @@ from scripts.patch_version_fr import (
     _FG,
     _TILESET_PTR_OFF,
     _TILEMAP_PTR_OFF,
-    _NFS_TILESET2_PTR,
+    _NFS_TILEMAP_PTR_A,
+    _NFS_TILEMAP_PTR_B,
+    _NFS_VER_ROW,
+    _NFS_VER_COLS,
     _lz77_compress,
     _lz77_decompress,
     _make_char_tile,
@@ -316,49 +319,61 @@ class TestPatchNotForSaleVersion(unittest.TestCase):
         data = bytearray(self.rom_data)
         self.assertTrue(patch_not_for_sale_version(data))
 
-    def test_tileset2_pointer_changes(self):
-        orig = struct.unpack_from("<I", self.rom_data, _NFS_TILESET2_PTR)[0]
+    def test_tilemap_ptr_a_changes(self):
+        orig = struct.unpack_from("<I", self.rom_data, _NFS_TILEMAP_PTR_A)[0]
         data = self._patched()
-        new = struct.unpack_from("<I", data, _NFS_TILESET2_PTR)[0]
+        new = struct.unpack_from("<I", data, _NFS_TILEMAP_PTR_A)[0]
         self.assertNotEqual(orig, new)
 
-    def test_new_tileset2_decompresses(self):
+    def test_tilemap_ptr_b_changes(self):
+        orig = struct.unpack_from("<I", self.rom_data, _NFS_TILEMAP_PTR_B)[0]
         data = self._patched()
-        ts2_off = _read_gba_ptr(data, _NFS_TILESET2_PTR)
-        result = _lz77_decompress(data, ts2_off)
+        new = struct.unpack_from("<I", data, _NFS_TILEMAP_PTR_B)[0]
+        self.assertNotEqual(orig, new)
+
+    def test_both_ptrs_point_to_same_tilemap(self):
+        data = self._patched()
+        ptr_a = struct.unpack_from("<I", data, _NFS_TILEMAP_PTR_A)[0]
+        ptr_b = struct.unpack_from("<I", data, _NFS_TILEMAP_PTR_B)[0]
+        self.assertEqual(ptr_a, ptr_b)
+
+    def test_new_tilemap_decompresses(self):
+        data = self._patched()
+        tm_off = _read_gba_ptr(data, _NFS_TILEMAP_PTR_A)
+        result = _lz77_decompress(data, tm_off)
         self.assertIsNotNone(result)
-        ts2, _ = result
-        self.assertEqual(len(ts2), 64 * 32)  # 64 tiles × 32 bytes
+        tm, _ = result
+        self.assertEqual(len(tm), 32 * 32 * 2)  # 1024 entries × 2 bytes
 
-    def test_tile19_is_blanked(self):
+    def test_version_row_matches_frame_row(self):
+        """Row 18 version columns must now equal row 16 (frame row) entries."""
         data = self._patched()
-        ts2_off = _read_gba_ptr(data, _NFS_TILESET2_PTR)
-        ts2, _ = _lz77_decompress(data, ts2_off)
-        blank = bytes([0x22] * 32)
-        self.assertEqual(ts2[19 * 32 : 20 * 32], blank)
-
-    def test_tile20_is_blanked(self):
-        data = self._patched()
-        ts2_off = _read_gba_ptr(data, _NFS_TILESET2_PTR)
-        ts2, _ = _lz77_decompress(data, ts2_off)
-        blank = bytes([0x22] * 32)
-        self.assertEqual(ts2[20 * 32 : 21 * 32], blank)
-
-    def test_other_tiles_unchanged(self):
-        """Tiles not touched by the patch must be identical to the original."""
-        orig_ts2_off = _read_gba_ptr(bytearray(self.rom_data), _NFS_TILESET2_PTR)
-        orig_ts2, _ = _lz77_decompress(self.rom_data, orig_ts2_off)
-        data = self._patched()
-        ts2_off = _read_gba_ptr(data, _NFS_TILESET2_PTR)
-        ts2, _ = _lz77_decompress(data, ts2_off)
-        for t in range(64):
-            if t in (19, 20):
-                continue
+        tm_off = _read_gba_ptr(data, _NFS_TILEMAP_PTR_A)
+        tm, _ = _lz77_decompress(data, tm_off)
+        for col in _NFS_VER_COLS:
+            frame = struct.unpack_from("<H", tm, (16 * 32 + col) * 2)[0]
+            ver = struct.unpack_from("<H", tm, (_NFS_VER_ROW * 32 + col) * 2)[0]
             self.assertEqual(
-                ts2[t * 32 : (t + 1) * 32],
-                orig_ts2[t * 32 : (t + 1) * 32],
-                f"tile {t} was unexpectedly modified",
+                ver, frame,
+                f"col {col}: version entry 0x{ver:04X} != frame entry 0x{frame:04X}",
             )
+
+    def test_only_version_columns_changed(self):
+        """Exactly the 7 version columns in row 18 should differ from original."""
+        orig_tm_off = _read_gba_ptr(bytearray(self.rom_data), _NFS_TILEMAP_PTR_A)
+        orig_tm, _ = _lz77_decompress(self.rom_data, orig_tm_off)
+        data = self._patched()
+        tm_off = _read_gba_ptr(data, _NFS_TILEMAP_PTR_A)
+        tm, _ = _lz77_decompress(data, tm_off)
+        ver_entries = frozenset(_NFS_VER_ROW * 32 + col for col in _NFS_VER_COLS)
+        for i in range(len(orig_tm) // 2):
+            orig_e = struct.unpack_from("<H", orig_tm, i * 2)[0]
+            new_e = struct.unpack_from("<H", tm, i * 2)[0]
+            if i in ver_entries:
+                self.assertNotEqual(orig_e, new_e, f"entry {i} should have changed")
+            else:
+                self.assertEqual(orig_e, new_e,
+                                 f"entry {i} (row {i//32}, col {i%32}) was unexpectedly modified")
 
 
 if __name__ == "__main__":
