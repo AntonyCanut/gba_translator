@@ -162,40 +162,65 @@ def _write_gba_ptr(data: bytearray, off: int, rom_addr: int) -> None:
 _EN_TILEMAP_OFF = 0xE9BA30    # 32×32 tilemap (2048 bytes decompressed)
 _EN_LOCALIZED_OFF = 0xE9B598  # Localised tileset (40×32 = 1280 bytes decompressed)
 
-# ROM offsets of the GBA pointers the game reads to load each block
-_PTR_TILEMAP = 0x135B54       # → 0x08E9BA30 in EN/FR
-_PTR_LOCALIZED = 0x135B34     # → 0x08E9B598 in EN/FR
+# ROM offsets of the GBA pointers the game reads to load each block.
+#
+# CRITICAL: each block is referenced by MULTIPLE duplicate pointers scattered
+# through the summary-screen setup code. The info page ("Infos Pokémon") renders
+# through the *second* pointer group (0x135D8C / 0x135DBC / 0x13B5EC), NOT the
+# first. An earlier version of this patch only repointed the first group
+# (0x135B54 / 0x135B34); the game kept loading the Spanish-overwritten in-place
+# blocks via the un-patched duplicates, so the labels still showed "PE"/"T"/"EM"
+# in-game. ALL duplicate pointers must be repointed. The full sets below were
+# verified by scanning the whole ROM for pointers to 0x08E9BA30 and 0x08E9B598.
+_PTRS_TILEMAP = [0x135B54, 0x135D8C]            # → 0x08E9BA30 in EN/FR
+_PTRS_LOCALIZED = [0x135B34, 0x135DBC, 0x13B5EC]  # → 0x08E9B598 in EN/FR
 
 
 def _patch_lz77_block(
     fr: bytearray,
     en: bytes,
     en_offset: int,
-    ptr_offset: int,
+    ptr_offsets: list[int],
     label: str,
 ) -> bool:
-    """Replace the LZ77 block at *ptr_offset* with the EN version.
+    """Point every pointer in *ptr_offsets* at the EN version of the block.
 
-    Returns True if the ROM was modified.
+    The EN block is relocated once into free space; all duplicate pointers are
+    then redirected to that single relocated copy. Returns True if the ROM was
+    modified.
     """
     en_result = _lz77_decompress(en, en_offset)
     if en_result is None:
         raise RuntimeError(f"Failed to decompress EN {label} at 0x{en_offset:07X}")
     en_dec, _ = en_result
 
-    # Read current pointer in FR ROM and decompress what it points to
-    current_fr_off = _read_gba_ptr(fr, ptr_offset)
-    fr_result = _lz77_decompress(fr, current_fr_off)
-    if fr_result is not None:
-        fr_dec, _ = fr_result
-        if fr_dec == en_dec:
-            return False  # already patched
+    # Already fully patched? Only when EVERY pointer resolves to EN-equal data.
+    def _resolves_to_en(ptr_offset: int) -> bool:
+        cur = _read_gba_ptr(fr, ptr_offset)
+        res = _lz77_decompress(fr, cur)
+        return res is not None and res[0] == en_dec
 
-    compressed = _lz77_compress(en_dec)
-    padded = compressed + b"\xFF" * ((-len(compressed)) & 3)
-    cursor = _find_free_block(fr, len(padded))
-    fr[cursor:cursor + len(padded)] = padded
-    _write_gba_ptr(fr, ptr_offset, cursor)
+    if all(_resolves_to_en(p) for p in ptr_offsets):
+        return False
+
+    # Reuse an existing relocated EN copy if one of the pointers already targets
+    # it (avoids leaking a fresh free-space block on every rebuild).
+    cursor: int | None = None
+    for p in ptr_offsets:
+        cur = _read_gba_ptr(fr, p)
+        res = _lz77_decompress(fr, cur)
+        if res is not None and res[0] == en_dec:
+            cursor = cur
+            break
+
+    if cursor is None:
+        compressed = _lz77_compress(en_dec)
+        padded = compressed + b"\xFF" * ((-len(compressed)) & 3)
+        cursor = _find_free_block(fr, len(padded))
+        fr[cursor:cursor + len(padded)] = padded
+
+    for p in ptr_offsets:
+        _write_gba_ptr(fr, p, cursor)
     return True
 
 
@@ -260,11 +285,11 @@ def main() -> int:
 
     changes: list[str] = []
 
-    if _patch_lz77_block(fr, en, _EN_TILEMAP_OFF, _PTR_TILEMAP, "tilemap"):
-        changes.append("summary-screen tilemap restored from EN source")
+    if _patch_lz77_block(fr, en, _EN_TILEMAP_OFF, _PTRS_TILEMAP, "tilemap"):
+        changes.append("summary-screen tilemap restored from EN source (all pointers)")
 
-    if _patch_lz77_block(fr, en, _EN_LOCALIZED_OFF, _PTR_LOCALIZED, "localized tileset"):
-        changes.append("summary-screen localized tileset restored from EN source")
+    if _patch_lz77_block(fr, en, _EN_LOCALIZED_OFF, _PTRS_LOCALIZED, "localized tileset"):
+        changes.append("summary-screen localized tileset restored from EN source (all pointers)")
 
     if _patch_idno_label(fr):
         changes.append("IDNo. label restored at 0x416104")
