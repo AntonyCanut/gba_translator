@@ -26,6 +26,9 @@ NAME_FIXES = {
     # Aerial Ace: official French name is "Aéropiqué" (final é missing
     # in the source table; dialogue and TM40 text use the correct form).
     0x1B3A5C: ("Aéropique", "Aéropiqué", 13),
+    # Prof. Log's parcel item: never reached by the translation pipeline
+    # (not in translation_ready.json nor Spanish extraction), stays English.
+    0x879DFC: ("Parcel", "Colis", 7),
 }
 
 
@@ -41,9 +44,11 @@ def apply_name_fixes(data: bytearray, fixes: dict) -> int:
         new_bytes = encode(new)
         if len(new_bytes) + 1 > stride:
             raise ValueError(f"0x{offset:X}: {new!r} does not fit a {stride}-byte cell")
+        # Idempotency: check by new name length (handles old ≠ new lengths).
+        new_slice = bytes(data[offset : offset + len(new_bytes)])
+        if new_slice == new_bytes and data[offset + len(new_bytes)] == 0xFF:
+            continue  # already patched
         current = bytes(data[offset : offset + len(old_bytes)])
-        if current == new_bytes and data[offset + len(new_bytes)] == 0xFF:
-            continue  # already patched (idempotent)
         if current != old_bytes or data[offset + len(old_bytes)] != 0xFF:
             raise ValueError(
                 f"0x{offset:X}: cell does not hold expected name {old!r} "
