@@ -20,23 +20,34 @@ const KEY_MAP: Record<string, number> = {
 };
 
 function findMgba(): string {
+  // Explicit override wins. Needed because the bundled mGBA.app (0.10.x) has no
+  // `--script` CLI flag, so the bridge falls back to fragile AppleScript GUI
+  // automation; point MGBA_PATH at a `--script`-capable build (mGBA >= 0.11,
+  // e.g. /opt/homebrew/bin/mgba) to drive the emulator headlessly instead.
+  const override = process.env.MGBA_PATH;
+  if (override && fs.existsSync(override)) return override;
+
   const candidates = [
-    '/Applications/mGBA.app/Contents/MacOS/mGBA',
-    '/opt/homebrew/bin/mgba',
+    '/opt/homebrew/bin/mgba',                          // homebrew HEAD/0.11+: has --script
+    '/usr/local/bin/mgba',
+    '/Applications/mGBA.app/Contents/MacOS/mGBA',      // may be old 0.10.x (no --script)
   ];
-
-  for (const p of candidates) {
-    if (fs.existsSync(p)) return p;
-  }
-
-  for (const name of ['mgba-qt', 'mgba']) {
+  for (const name of ['mgba', 'mgba-qt']) {
     try {
       const found = execSync(`which ${name}`, { encoding: 'utf8' }).trim();
-      if (found) return found;
+      if (found) candidates.push(found);
     } catch { /* not found */ }
   }
 
-  throw new Error('mGBA not found. Install with: brew install mgba');
+  const existing = candidates.filter((p) => fs.existsSync(p));
+  if (existing.length === 0) {
+    throw new Error('mGBA not found. Install with: brew install mgba');
+  }
+  // Prefer a build that supports `--script`: it drives the Lua bridge headlessly
+  // instead of falling back to fragile AppleScript GUI automation (which breaks
+  // in headless/CI shells and blocked every prior reproduction attempt).
+  const scriptable = existing.find((p) => mgbaSupportsScript(p));
+  return scriptable ?? existing[0];
 }
 
 function mgbaSupportsScript(mgbaPath: string): boolean {
