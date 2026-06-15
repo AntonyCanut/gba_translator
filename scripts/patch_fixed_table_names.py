@@ -41,11 +41,15 @@ NAME_FIXES = {
     # preserved. Same case as Parcel/Package above: patched byte-exact here.
     0x3DEED8: (" " * 12 + "Berry Pouch", " " * 12 + "Sac à Baies", 26),
     0x87A0B0: (" " * 12 + "Berry Pouch", " " * 12 + "Sac à Baies", 26),
-    # Town Map item: the centered, space-padded name cells are absent from both
-    # translation_ready.json and the Spanish extraction. Same case as Parcel/Package.
-    # Note: these are already translated in the pipeline, so no patch needed.
-    # 0x3DEE28: (" " * 12 + "Town Map", " " * 12 + "Carte", 24),
-    # 0x87A000: (" " * 12 + "Town Map", " " * 12 + "Carte", 24),
+    # Town Map key item (bag name shown in the items list): the centered,
+    # space-padded name cells are absent from both translation_ready.json and the
+    # Spanish extraction, and combined_fr.txt has no entry for them, so neither the
+    # reinsertion nor the inline-override pass ever reaches them — they ship in
+    # English. Identical structure to Berry Pouch above: the game reads the name at
+    # base+12 (0x3DEE34 / 0x87A00C), so the whole 26-byte cell (12 leading spaces +
+    # name) is rewritten byte-exact here. "Carte" is the official French item name.
+    0x3DEE28: (" " * 12 + "Town Map", " " * 12 + "Carte", 26),
+    0x87A000: (" " * 12 + "Town Map", " " * 12 + "Carte", 26),
 }
 
 
