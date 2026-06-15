@@ -264,3 +264,72 @@ def test_give_cs_script_msgbox_pointers_resolve(fr_rom):
             f"loadword @0x{off:X} -> 0x{ptr:08X}: string not 0xFF-terminated "
             f"within {MAX_STRING_BYTES} bytes (dangling/relocated-to-garbage)"
         )
+
+
+# ---------------------------------------------------------------------------
+# Object-gain *item-name buffer* guard (a freeze class, not a reset class).
+#
+# The follow-up on this ticket reports a FREEZE ("le jeu est freeze", screen
+# stuck on the dialog), not a reset. The obtain message ``item_obtained``
+# (0x1A5DF1) is "<FD01> a obtenu\nle <FD02> !": FD02 = STR_VAR_2, which the std
+# ObtainItem script fills with the *name of the granted item* via a StringCopy
+# that runs until it hits a 0xFF. If the granted item's name string in the
+# expanded CFRU item table is not terminated (e.g. a translation overran it),
+# that copy runs away past the 14-byte name cell, overruns gStringVar2 and
+# corrupts adjacent RAM while building "obtenu le <ITEM> !" — a classic
+# soft-lock on the obtain box that NONE of the string/script guards above can
+# see (they only look at the dialogue strings, never the item the giveitem
+# grants). This guard pins the name-cell of item 0x01B5 (the CS the hillbilly
+# hands over) byte-clean.
+#
+# CFRU relocates & expands gItems; the table base was located by scanning for
+# the run where entry[i].itemId == i. Item struct: name[14], itemId @0xE.
+# ---------------------------------------------------------------------------
+
+ITEM_TABLE_BASE = 0x876074   # expanded CFRU gItems (id field == index past 437)
+ITEM_STRIDE = 44
+ITEM_NAME_LEN = 14
+ITEM_ID_OFFSET = 0x0E
+
+
+def _item_entry(rom: bytes, item_id: int) -> int:
+    return ITEM_TABLE_BASE + item_id * ITEM_STRIDE
+
+
+def test_give_cs_item_table_anchor_intact(fr_rom):
+    """Sanity anchor: the expanded item table still holds item 0x01B5 where we
+    expect it (its ``itemId`` field equals 0x01B5). If a rebuild relocates the
+    table this fails loudly instead of silently checking garbage bytes."""
+    o = _item_entry(fr_rom, CS_ITEM_ID)
+    idfield = int.from_bytes(fr_rom[o + ITEM_ID_OFFSET:o + ITEM_ID_OFFSET + 2], "little")
+    assert idfield == CS_ITEM_ID, (
+        f"item-table anchor moved: entry @0x{o:X} has itemId 0x{idfield:X}, "
+        f"expected 0x{CS_ITEM_ID:X} — update ITEM_TABLE_BASE"
+    )
+
+
+def test_give_cs_item_name_is_terminated(fr_rom):
+    """The granted item's 14-byte name cell MUST contain a 0xFF terminator.
+    Without it the obtain-message ``bufferitemname`` StringCopy runs away and
+    overruns gStringVar2 -> the "obtenu le <ITEM> !" box soft-locks/corrupts.
+    This is the object-gain *freeze* vector the reopened ticket reports."""
+    o = _item_entry(fr_rom, CS_ITEM_ID)
+    name_cell = fr_rom[o:o + ITEM_NAME_LEN]
+    assert b"\xff" in name_cell, (
+        f"granted item 0x{CS_ITEM_ID:X} name cell @0x{o:X} has no 0xFF terminator "
+        f"in {ITEM_NAME_LEN} bytes: {name_cell.hex()} -> bufferitemname would run "
+        f"away and freeze the obtain box"
+    )
+
+
+def test_give_cs_item_name_matches_english(fr_rom, en_rom):
+    """The granted item's name cell must stay byte-identical to English. The CS
+    is a TM-class item whose display name is built at runtime from the move
+    table; the FR build must not have rewritten this cell (a relocated text
+    pointer landing here would corrupt the obtain buffer)."""
+    o = _item_entry(fr_rom, CS_ITEM_ID)
+    assert fr_rom[o:o + ITEM_NAME_LEN] == en_rom[o:o + ITEM_NAME_LEN], (
+        f"granted item 0x{CS_ITEM_ID:X} name cell diverged from English @0x{o:X}\n"
+        f"  FR: {fr_rom[o:o + ITEM_NAME_LEN].hex()}\n"
+        f"  EN: {en_rom[o:o + ITEM_NAME_LEN].hex()}"
+    )
