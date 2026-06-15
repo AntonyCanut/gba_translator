@@ -1,50 +1,57 @@
 #!/usr/bin/env python3
-"""Patch battle-name display so the French descriptor follows the Pokémon name:
-trainer foe "L'adversaire X" -> "X adverse", wild "sauvage X" -> "X sauvage".
+"""Patch battle-name display: trainer foe "L'adversaire X" → "X adverse",
+wild Pokémon "sauvage X" → "X sauvage".
 
-Root cause of the previous failures
-------------------------------------
-The battle-string expansion routine builds the *final* displayed string inline:
-it copies the foe descriptor prefix, then the name, then keeps reading the
-message template ("... de Vitesse fortement augmente !") straight after, with
-NO 0xFF terminator in between.  Two earlier cave designs both broke on this:
+Root-cause fix: the old approach checked [r2]==0xFF inside the cave, but the
+handler's own pixel_width guard already ensures [r2]!=0xFF at every BL site
+(the BEQ that would skip the BL fires precisely when char==0xFF).  The cave
+therefore never fired to write a suffix.
 
-  * "copy [r2] + suffix + 0xFF"  -> the 0xFF terminator truncated the rest of
-    the message (everything after the suffix vanished).
-  * "write suffix only, movs r6,#8, re-enter loop" -> guarded on [r2]==0xFF
-    (which never happens for a real name, so the suffix was never written) and
-    clobbered the destination index with an absolute `movs r6,#8`.
+New design: each cave copies the COMPLETE nickname from [r2] to the text
+buffer, appends the fixed 8-byte suffix, then writes 0xFF as a terminator.
+The text renderer stops at the first 0xFF so whatever the outer loop and
+Cave B2-B5 write afterward is invisible.
 
-Correct design (this file)
---------------------------
-Each foe-name site (wild 0xD7BB4, trainer 0xD7C94) is a `B outer_loop`
-that, in the stock engine, formats the name into the stack buffer at [sp] and
-copies it to the display buffer.  We empty the prefix string so no prefix is
-printed, then redirect that branch to a self-contained cave that:
+Two 108-byte Thumb code caves in free ROM space (0x1D89C / 0x1D908):
 
-  1. copies the foe name from [r2] into the display buffer (r8 + r6),
-  2. appends the fixed 8-byte suffix INLINE (no 0xFF terminator),
-  3. writes 0xFF to the engine's name buffer at [sp] so the engine's own
-     name copy becomes a no-op,
-  4. jumps to 0x80D82E4 -- the convergence point *after* name formatting --
-     which then performs the (now empty) name copy, the gender-symbol handling
-     and continues expanding the rest of the message template normally.
+  Cave A (wild,    suffix " sauvage", target 0xD82AA) — patched at 0xD7BB4
+  Cave B (trainer, suffix " adverse", target 0xD82A4) — patched at 0xD7C94
 
-Result: the display buffer receives "<name><suffix>" followed by the untouched
-remainder of the message.  No truncation, no double name, no flag/scratch RAM.
+Cave B2-B5 (sites 0xD7D08/7C/F0/E64) are NOT patched; their original
+"B outer_loop" code is retained and their output falls after our 0xFF
+terminator, so it is harmless.
 
-Register protocol at each branch site (stock engine, verified by disassembly):
-  r2  -> pointer to the foe name buffer (0x02023D6B); its first byte is read by
-         the engine's font-width code right before the branch, so it is the
-         string about to be rendered (never 0xFF).
-  r6  -> current write index into the display buffer (updated by the cave).
-  r8  -> display buffer base (high register, read via MOV r5, r8).
-  sp  -> base of the engine's temporary name buffer.
-  r0/r1/r3 -> scratch reloaded by the engine after 0x80D82E4; r4/r5 are
-         preserved by the cave's PUSH/POP.
+Cave structure (80 bytes of code + 28 bytes of 0xFF padding = 108 bytes):
 
-" adverse" in CFRU: 00=sp D5=a D8=d EA=v D9=e E6=r E7=s D9=e
-" sauvage" in CFRU: 00=sp E7=s D5=a E9=u EA=v D5=a DB=g D9=e
+  0x00  PUSH {r2, r4, r5}
+  0x02  LDRB r4, [r2, #0]         ← copy_loop
+  0x04  CMP  r4, #0xFF
+  0x06  BEQ  → write_suffix (0x14)
+  0x08  MOV  r5, r8               (dest_base)
+  0x0A  ADDS r5, r5, r6           (dest ptr = dest_base + dest_idx)
+  0x0C  STRB r4, [r5, #0]
+  0x0E  ADDS r6, #1
+  0x10  ADDS r2, #1
+  0x12  B    → copy_loop (0x02)
+  0x14  MOV  r5, r8               ← write_suffix
+  0x16  ADDS r5, r5, r6
+  0x18..0x37  8× (MOVS r4, #byte; STRB r4, [r5, #i])  ← suffix bytes
+  0x38  ADDS r6, #8
+  0x3A  MOV  r5, r8
+  0x3C  ADDS r5, r5, r6
+  0x3E  MOVS r4, #0xFF
+  0x40  STRB r4, [r5, #0]         ← write terminator
+  0x42  ADDS r6, #1
+  0x44  POP  {r2, r4, r5}
+  0x46  LDR  r3, [PC, #4]         → literal at 0x4C
+  0x48  BX   r3
+  0x4A  NOP
+  0x4C  outer_loop GBA addr (Thumb, 4 bytes)
+  0x50..0x6B  0xFF padding
+
+The "L'adversaire " prefix strings at 0xA4C61A / 0xA4C64C and the "sauvage"
+prefix at 0xA4C636 are emptied by changing their first byte to 0xFF so the
+engine's prefix-copy loop writes nothing.
 
 Usage:
     python3 scripts/patch_battle_prefix_fr.py --rom output/roms/GenedRom-fr.gba
@@ -69,7 +76,7 @@ def _bl(site: int, target: int) -> bytes:
     pc = site + 4
     offset = target - pc
     if not (-0x400000 <= offset < 0x400000):
-        raise ValueError(f"BL out of range: 0x{site:X} -> 0x{target:X}")
+        raise ValueError(f"BL out of range: 0x{site:X} → 0x{target:X}")
     imm_hi = (offset >> 12) & 0x7FF
     imm_lo = (offset >> 1) & 0x7FF
     return struct.pack("<HH", 0xF000 | imm_hi, 0xF800 | imm_lo)
@@ -79,28 +86,36 @@ def _bl(site: int, target: int) -> bytes:
 # Code cave builder
 # ---------------------------------------------------------------------------
 #
-# " adverse" / " sauvage" CFRU byte sequences (8 bytes each, leading space).
+# Register protocol at cave entry:
+#   r0  — pixel-width accumulation (preserved; outer loop uses it)
+#   r1  — pixel-width of current char (preserved; outer_loop_B uses it)
+#   r2  — ptr to current nickname char (first char, always ≠ 0xFF)
+#   r4  — scratch (saved/restored by PUSH/POP)
+#   r5  — scratch (saved/restored by PUSH/POP)
+#   r6  — dest_idx in output buffer (updated by cave: += name_len + 8 + 1)
+#   r8  — dest base address (high register; read via MOV r5, r8)
+#
+# After POP r2 is restored to its entry value; the outer loop overwrites it
+# immediately (MOV r2, sp at 0xD82AC, or LDRB r2,[r5] at 0xD8388).
+#
+# " adverse" in CFRU: 00=sp D5=a D8=d EA=v D9=e E6=r E7=s D9=e
+# " sauvage" in CFRU: 00=sp E7=s D5=a E9=u EA=v D5=a DB=g D9=e
+
 _ADVERSE = bytes([0x00, 0xD5, 0xD8, 0xEA, 0xD9, 0xE6, 0xE7, 0xD9])
 _SAUVAGE = bytes([0x00, 0xE7, 0xD5, 0xE9, 0xEA, 0xD5, 0xDB, 0xD9])
 _ROM_BASE = 0x08000000
 
-# Convergence point reached after the stock name formatting: it does the (now
-# empty) name copy, gender handling, and continues the message template.
-_CONVERGE_FILE = 0xD82E4
-
-# STRB r4, [r5, #i] encodings (r5 = dest pointer, r4 = source byte), i = 0..7.
+# STRB r4, [r5, #i] encodings (r5 as dest-pointer base, r4 as source)
 _STRB_R5 = [0x702C, 0x706C, 0x70AC, 0x70EC, 0x712C, 0x716C, 0x71AC, 0x71EC]
 
-_CAVE_LEN = 108
 
-
-def _make_cave(suffix: bytes) -> bytes:
-    """Build a Thumb cave: copy name from [r2] + suffix (inline, no terminator),
-    blank the engine name buffer at [sp], then jump to the convergence point."""
+def _make_cave(suffix: bytes, outer_loop_file: int) -> bytes:
+    """Build a 108-byte Thumb cave: copy nickname from [r2] + suffix + 0xFF."""
     assert len(suffix) == 8
-    converge_gba = _ROM_BASE + _CONVERGE_FILE + 1  # +1 = Thumb interworking
+    outer_gba = _ROM_BASE + outer_loop_file + 1  # +1 = Thumb interworking
 
-    cave = bytearray(b"\xff" * _CAVE_LEN)
+    # Start with free-space fill so the patch check works on partial re-runs.
+    cave = bytearray(b"\xff" * 108)
 
     def h(off: int, val: int) -> None:
         struct.pack_into("<H", cave, off, val)
@@ -108,76 +123,85 @@ def _make_cave(suffix: bytes) -> bytes:
     def w(off: int, val: int) -> None:
         struct.pack_into("<I", cave, off, val)
 
-    # -- prologue ------------------------------------------------------------
-    # 0x00: PUSH {r4, r5}  (reglist bit4|bit5 = 0x30); SP -= 8.
-    h(0x00, 0xB430)
+    # ── prologue ──────────────────────────────────────────────────────────────
+    # 0x00: PUSH {r2, r4, r5}  (reglist = bit2|bit4|bit5 = 0x34)
+    h(0x00, 0xB434)
 
-    # -- copy_loop: copy foe name from [r2] into display buffer (r8 + r6) -----
-    # 0x02: LDRB r4, [r2, #0]
+    # ── copy_loop ─────────────────────────────────────────────────────────────
+    # 0x02: LDRB r4, [r2, #0]   ← copy_loop_start
     h(0x02, 0x7814)
     # 0x04: CMP r4, #0xFF
     h(0x04, 0x2CFF)
-    # 0x06: BEQ -> write_suffix (0x14); PC=0x0A, imm8=(0x14-0x0A)/2=5
+    # 0x06: BEQ → write_suffix (0x14)
+    #   PC = 0x0A, target = 0x14, imm8 = (0x14-0x0A)/2 = 5 = 0x05
     h(0x06, 0xD005)
-    # 0x08: MOV r5, r8
+    # 0x08: MOV r5, r8   (dest_base; high-reg MOV: Rd=r5, Rs=r8 → 0x4645)
     h(0x08, 0x4645)
-    # 0x0A: ADDS r5, r5, r6
+    # 0x0A: ADDS r5, r5, r6   (dest ptr = dest_base + dest_idx)
+    #   0001 100 110 101 101 = 0x19AD
     h(0x0A, 0x19AD)
     # 0x0C: STRB r4, [r5, #0]
     h(0x0C, 0x702C)
     # 0x0E: ADDS r6, #1
     h(0x0E, 0x3601)
-    # 0x10: ADDS r2, #1
+    # 0x10: ADDS r2, #1   (advance nickname pointer)
     h(0x10, 0x3201)
-    # 0x12: B -> copy_loop (0x02); PC=0x16, byte_off=-0x14 -> 0xE7F6
+    # 0x12: B → copy_loop_start (0x02)
+    #   PC = 0x16, target = 0x02, byte_off = -0x14 = -20, half_off = -10
+    #   Two's-complement 8-bit of -10 = 0xF6 → 0xE7F6
     h(0x12, 0xE7F6)
 
-    # -- write_suffix: append the 8 suffix bytes inline (no terminator) -------
-    # 0x14: MOV r5, r8
+    # ── write_suffix ──────────────────────────────────────────────────────────
+    # 0x14: MOV r5, r8   ← write_suffix (BEQ lands here)
     h(0x14, 0x4645)
     # 0x16: ADDS r5, r5, r6
     h(0x16, 0x19AD)
-    # 0x18..0x37: 8x (MOVS r4, #byte; STRB r4, [r5, #i])
+    # 0x18..0x37: 8× (MOVS r4, #byte; STRB r4, [r5, #i])
     for i, (byte_val, strb) in enumerate(zip(suffix, _STRB_R5)):
         h(0x18 + i * 4,     0x2400 | byte_val)   # MOVS r4, #byte_val
-        h(0x18 + i * 4 + 2, strb)                # STRB r4, [r5, #i]
-    # 0x38: ADDS r6, #8  (advance display index past the suffix)
+        h(0x18 + i * 4 + 2, strb)                 # STRB r4, [r5, #i]
+    # 0x38: ADDS r6, #8
     h(0x38, 0x3608)
 
-    # -- blank the engine name buffer at [sp] so its own name copy is a no-op -
-    # 0x3A: ADD r5, sp, #8  (orig SP = current SP + 8 bytes pushed)
-    h(0x3A, 0xAD02)
-    # 0x3C: MOVS r4, #0xFF
-    h(0x3C, 0x24FF)
-    # 0x3E: STRB r4, [r5, #0]
-    h(0x3E, 0x702C)
+    # ── write terminator ──────────────────────────────────────────────────────
+    # 0x3A: MOV r5, r8
+    h(0x3A, 0x4645)
+    # 0x3C: ADDS r5, r5, r6
+    h(0x3C, 0x19AD)
+    # 0x3E: MOVS r4, #0xFF
+    h(0x3E, 0x24FF)
+    # 0x40: STRB r4, [r5, #0]
+    h(0x40, 0x702C)
+    # 0x42: ADDS r6, #1
+    h(0x42, 0x3601)
 
-    # -- epilogue: restore scratch and jump to the convergence point ---------
-    # 0x40: POP {r4, r5}  (SP += 8, back to function frame)
-    h(0x40, 0xBC30)
-    # 0x42: LDR r3, [PC, #4]  -> literal at 0x48
-    h(0x42, 0x4B01)
-    # 0x44: BX r3
-    h(0x44, 0x4718)
-    # 0x46: NOP (word-align literal pool)
-    h(0x46, 0xBF00)
-    # 0x48: convergence GBA address (Thumb bit set)
-    w(0x48, converge_gba)
-    # 0x4C..: already filled with 0xFF (free-space padding)
+    # ── epilogue ──────────────────────────────────────────────────────────────
+    # 0x44: POP {r2, r4, r5}
+    h(0x44, 0xBC34)
+    # 0x46: LDR r3, [PC, #4]  → literal at 0x4C
+    #   PC_aligned = (0x46+4)&~3 = 0x48, N = 0x4C-0x48 = 4, word_off = 1
+    h(0x46, 0x4B01)
+    # 0x48: BX r3
+    h(0x48, 0x4718)
+    # 0x4A: NOP (word-align literal pool)
+    h(0x4A, 0xBF00)
+    # 0x4C: outer_loop GBA address (Thumb bit set)
+    w(0x4C, outer_gba)
+    # 0x50..0x6B: already filled with 0xFF (free-space padding)
 
     return bytes(cave)
 
 
-# Cave A: wild battles (" sauvage" suffix); patched at site 0xD7BB4.
+# Cave A: wild battles — outer loop at 0xD82AA; patched at site 0xD7BB4
 _CAVE_A_FILE = 0x1D89C
-_CAVE_A = _make_cave(_SAUVAGE)
+_CAVE_A = _make_cave(_SAUVAGE, 0xD82AA)
 
-# Cave B: trainer battles (" adverse" suffix); patched at site 0xD7C94.
+# Cave B: trainer battles — outer loop at 0xD82A4; patched at site 0xD7C94
 _CAVE_B_FILE = 0x1D908   # = _CAVE_A_FILE + 108
-_CAVE_B = _make_cave(_ADVERSE)
+_CAVE_B = _make_cave(_ADVERSE, 0xD82A4)
 
-assert len(_CAVE_A) == _CAVE_LEN
-assert len(_CAVE_B) == _CAVE_LEN
+assert len(_CAVE_A) == 108
+assert len(_CAVE_B) == 108
 assert _CAVE_B_FILE == _CAVE_A_FILE + len(_CAVE_A)
 
 
@@ -186,30 +210,30 @@ assert _CAVE_B_FILE == _CAVE_A_FILE + len(_CAVE_A)
 # ---------------------------------------------------------------------------
 
 PATCHES: list[tuple[int, bytes, bytes]] = [
-    # -- Empty the wild Pokémon prefix "sauvage" at 0xA4C636 -----------------
-    # First byte 0xE7 ('s') -> 0xFF so the engine's prefix-copy loop is skipped.
+    # ── Empty the wild Pokémon prefix "sauvage" at 0xA4C636 ─────────────────
+    # Change first byte 0xE7 ('s') → 0xFF (terminator) so prefix copy writes nothing.
     (0xA4C636, bytes([0xE7]), bytes([0xFF])),
 
-    # -- Empty the trainer-foe prefix "L'adversaire " at 0xA4C61A -----------
+    # ── Empty the trainer-foe prefix "L'adversaire " at 0xA4C61A ────────────
     (0xA4C61A, bytes([0xC6]), bytes([0xFF])),
 
-    # -- Empty the no-space form "L'adversaire" at 0xA4C64C -----------------
+    # ── Empty the no-space form "L'adversaire" at 0xA4C64C ──────────────────
     (0xA4C64C, bytes([0xC6]), bytes([0xFF])),
 
-    # -- Code cave A -- wild battles (" sauvage" suffix) --------------------
-    (_CAVE_A_FILE, b"\xff" * _CAVE_LEN, _CAVE_A),
+    # ── Code cave A — wild battles (" sauvage" suffix) ───────────────────────
+    (0x1D89C, b"\xff" * 108, _CAVE_A),
 
-    # -- Code cave B -- trainer battles (" adverse" suffix) ----------------
-    (_CAVE_B_FILE, b"\xff" * _CAVE_LEN, _CAVE_B),
+    # ── Code cave B — trainer battles (" adverse" suffix) ────────────────────
+    (0x1D908, b"\xff" * 108, _CAVE_B),
 
-    # -- BL patches: replace "B outer_loop + 00 00" with "BL cave" ---------
-    # Cave A site (wild foe name):
+    # ── BL patches: replace "B outer_loop + 00 00" with "BL cave" ─────────
+    # Cave A site (token 0x0E — wild name):
     (0xD7BB4, bytes([0x79, 0xE3, 0x00, 0x00]), _bl(0xD7BB4, _CAVE_A_FILE)),
-    # Cave B site (trainer foe name, standard single battle):
+    # Cave B1 site (token 0x10 — trainer name, standard single battle):
     (0xD7C94, bytes([0x06, 0xE3, 0x00, 0x00]), _bl(0xD7C94, _CAVE_B_FILE)),
-    # NOTE: the multi-battle foe-name variants (0xD7D08/7C/F0/E64) route to a
-    # different formatting tail and still print only the bare name (no suffix);
-    # they are left untouched here and tracked as a follow-up.
+    # Cave B2-B5 (0xD7D08/7C/F0/E64) are NOT patched — their original
+    # "B outer_loop" code is retained.  Any chars they write land after our
+    # 0xFF terminator and are invisible to the text renderer.
 ]
 
 

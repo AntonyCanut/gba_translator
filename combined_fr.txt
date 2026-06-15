@@ -425,7 +425,7 @@
 0x1A5EC0: Tes Pokémon ont retrouvé toute leur\nforme.\pSi l’énergie ou les PV de tes\nPokémon sont bas, viens nous voir.\pSi tu pars loin sur le terrain,\nachète des Potions\lau Magasin.\pOn compte sur toi !
 0x1A5F9B: Tes Pokémon ont retrouvé toute leur\nforme.\pOn compte sur toi !
 0x1A5FDF: {PLAYER} !\nBienvenue à la maison.\pOn dirait que tu as vécu pas mal\nd’aventures.\pTu devrais peut-être te reposer.\n
-0x1A6046: Ah, parfait ! Toi et tes Pokémon\navez bien meilleure mine.\pSi les PV de tes Pokémon sont bas,\nsoigne-les dans un\p{COLOR}ÉCentre Pokémon{COLOR}Ç !\nLe plus proche d’ici est à\p{COLOR}ÉBellinville{COLOR}Ç.\nOu achète des\p{COLOR}ÉPotions{COLOR}Ç au\n{COLOR}ÉPoké Mart{COLOR}Ç !\pC’est toujours bien de se préparer\nau pire.\pRends-moi fier, chéri !\pPrends soin de toi !
+0x1A6046: Ah, parfait ! Toi et tes Pokémon\navez bien meilleure mine.\pSi les PV de tes Pokémon sont bas,\nsoigne-les dans un\p{COLOR}ÉCentre Pokémon{COLOR}Ç !\nLe plus proche d’ici est à\p{COLOR}ÉBourg Bellin{COLOR}Ç.\nOu achète des\p{COLOR}ÉPotions{COLOR}Ç au\n{COLOR}ÉPoké Mart{COLOR}Ç !\pC’est toujours bien de se préparer\nau pire.\pRends-moi fier, chéri !\pPrends soin de toi !
 0x1A6196: 9{PLAYER} n’a plus de Pokémon\nutilisables !\p{PLAYER} panique et perd ¥{STR_VAR_1}…\p… … … …\p{PLAYER} s’évanouit !
 0x1A61E5: {PLAYER} n’a plus de Pokémon\nutilisables !\p{PLAYER} s’évanouit !
 0x1A6211: Salut !\nJe peux t’aider ?
@@ -574,7 +574,6 @@
 0x1BFAAD: Oh ? Mais tu n’as qu’un seul\nPokémon.\pReviens une autre fois.
 0x1BFAE8: Veux-tu récupérer ton Pokémon ?
 0x1BFB09: Si tu me laisses ce Pokémon, avec\nquoi vas-tu te battre ?\pReviens une autre fois.
-0x1BFB5A: Hein ?
 0x1BFC1B: HA : Ding-dong !\pLe temps est écoulé !\pHA : Ton JEU SAFARI est terminé !
 0x1BFC53: HA : Ding-dong !\pTu n’as plus de SAFARI BALLS !\pHA : Ton JEU SAFARI est terminé !
 0x1C0DB0: C’est bourré de livres Pokémon.\n
@@ -1367,7 +1366,7 @@
 0x3DA6CD: Frappe l'ennemi avec une attaque\ndure et écrasante. Il peut briser\ndes rochers fissurés.
 0x3DA71E: Une puissante attaque de charge. Il\npeut être utilisé pour escalader une\ncascade torrentielle .
 0x3DA76C: Attaque en deux tours : le lanceur\nplonge au premier, puis frappe au\nsecond.
-0x3DA7D1: Colis pour le Prof. Log depuis le\nMagasin Pokémon de Bellinville.  \n
+0x3DA7D1: Colis pour le Prof. Log depuis le\nMagasin Pokémon de Bourg Bellin.  \n
 0x3DA81A: Flûte qui réveillerait\ninstantanément n’importe quel\nPokémon. Son joli.
 0x3DA866: Paire de chaussettes crasseuses\ntrouvées dans les Égouts d’Antisis.
 0x3DA8B4: Colis contenant un Pokédex pour ton\nrival.
@@ -2254,7 +2253,7 @@
 0x3ECB48: LAID
 0x3EED08: Bellinville
 0x3EED22: Bourg Cratère
-0x3EED67: Tarmigan
+0x3EED67: Tarmiganville
 0x3EED77: PLATEAU INDIGO
 0x3EED93: Route 4
 0x3EED9B: Route 10
@@ -3160,8 +3159,8 @@
 0x4166D3: Boîte CT
 0x4166DB: Fermer
 0x4166E1: La Boîte CT sera\nrangée.
-0x41670A: Sac à Baies
-0x416716: Le Sac à Baies sera\nrangé.
+0x41670A: Pochette Baies
+0x416716: La Pochette Baies sera\nrangée.
 0x41673C: Vendre
 0x416741: À plus !
 0x416757: Quitter les achats.
@@ -3411,7 +3410,7 @@
 0x417DB6: Zone Objets clés
 0x417DC7: Zone Poké Balls
 0x417DD9: Boîtier CT
-0x417DE1: Sac à Baies
+0x417DE1: Pochette Baies
 0x417DED: Autres
 0x417DF3: ÎLE 1
 0x417DFE: ÎLE 2
@@ -3816,7 +3815,6 @@
 0x41B2D4: Déf. Spé
 0x41B2FF: Pouf !\p
 0x41B31B: Machine prête !\p
-0x41B329: Hein ?
 0x41B33D: MAJUSCULE
 0x41B343: minuscule
 0x41B349: Autres
@@ -5326,7 +5324,7 @@
 0x71CA04: S'affaiblit lorsqu'il est à moitié
 0x71CA30: Réduit temporairement de moitié\nl'Atk et la Spd.
 0x71CA56: attle.
-0x71CA60: Bourg Dresco
+0x71CA60: Ville de Dresco
 0x71CA70: Ville de Tehl
 0x7204A8: L'attaque augmente en cas
 0x7204C4: poule empoisonnée.
@@ -5364,7 +5362,7 @@
 0x724B09: Ho ho… c'est sûr que c'est humide…\ncomme un sauna…
 0x728430: Pierre étrange qui fait évoluer\ncertaines espèces de Pokémon. Elle\nbrille d'une lumière éclatante.
 0x740001: Forêt Obscure, Volcan Cendreux,\nBourg Cratère et Route 6
-0x740037: Bellinville, Grotte Stalactite,\nRoute 2 et Bourg Dresco
+0x740037: Bourg Bellin, Grotte Stalactite,\nRoute 2 et Bourg Dresco
 0x74037D: <0x11>\nMarlon : <0xFC><0x01><0x08>Cacnea, Coupe !
 0x740753: Tu es ma maman ?
 0x74145B: Héhooo…\pTu viens défier l'Arène ?
@@ -6097,7 +6095,7 @@
 0x796410: Le Roitiflam Noir !\nNe t'arrête jamais, pas de retour !
 0x796C75: Mel, le Champion, n'est pas là\npour l'instant.\pIl doit être parti se changer les\nidées.
 0x796CCF: Pardon.\pIl est sorti faire je ne sais quoi,\nreviens plus tard.
-0x7A2565: Tarmigan
+0x7A2565: Tarmiganville
 0x7A281F: Les Pokémon qui se promènent dans\nce labo aident tous la recherche.\pCe sont des Pokémon spéciaux connus\npour manger les rêves.
 0x7A2894: manger.
 0x7A289C: sont\ltrès utiles.
@@ -6338,9 +6336,9 @@
 0x7B8908: ad <0x7A> Itinéraire 3\n\l\n
 0x7B8989: L'Au-delà, Base de l'Ombre, Grand\nDésert, Bourg Gurun
 0x7B89FD: Deux ponts… Si tu me bats, je dis\n\plequel mène à la prochaine route !\n
-0x7B8A54: Tarmigan se trouve sur le\n\p"Plateau Thundercap". Mais si tu\n\les venu voir les orages, pas\nbesoin d'aller plus loin.
+0x7B8A54: Tarmiganville se trouve sur le\n\p"Plateau Thundercap". Mais si tu\n\les venu voir les orages, pas\nbesoin d'aller plus loin.
 0x7B8B04: le véritable Mont Thundercap.\n\l\n
-0x7B8B24: Ma famille possède le Manoir\n\pTarmigan depuis des générations. En\n\lfait, mes ancêtres ont fondé\n\pTarmigan ! Du coup, j'aime bien\n\pm'asseoir ici et regarder la ville\n\pde temps en temps. Ne fais pas comme\nmoi, gamin. Carpe diem, enfant !
+0x7B8B24: Ma famille possède le Manoir\n\pTarmigan depuis des générations. En\n\lfait, mes ancêtres ont fondé\n\pTarmiganville ! Du coup, j'aime bien\n\pm'asseoir ici et regarder la ville\n\pde temps en temps. Ne fais pas comme\nmoi, gamin. Carpe diem, enfant !
 0x7B8D25: Yo, salut mon gars ! Ça roule ? Je\n\pm'appelle Galavan. Si tu ne l'avais\n\ppas deviné, je suis le Champion ici.\n\pJe suis sûr que tu as galéré sur le\n\psol électrisant, hein ? T'inquiète,\n\ltu ne combattras plus en position de\nfaiblesse.\p\n\l\n
 0x7B8E39: 9Depuis l'Antiquité, le mythique\n\lDarkrai hante cette ville. On dit\n\pque chaque nuit, à une heure, il\n\lvient hanter les rêves des foules.\n\pPrends garde, enfant ! Ne tombe pas\ndans le vide noir !
 0x7B8F1B: Cette salle… c'est si dur d'y\nnaviguer…
@@ -6688,7 +6686,7 @@
 0x7C8844: Ivory : {COLOR}ÇCalcine-la aussi,\nDémolosse.\pOn n'a plus besoin d'elle.
 0x7C888A: Mais la plupart de mes amis sont\nrentrés d'où ils venaient…
 0x7C8981: un secret !
-0x7C898C: J'ai entendu dire que quelqu'un à\nTarmigan enseigne l'art\lde la Méga-Évolution !
+0x7C898C: J'ai entendu dire que quelqu'un à\nTarmiganville enseigne l'art\lde la Méga-Évolution !
 0x7C89E2: Es-tu venu ici pour obtenir le\npouvoir de la {COLOR}ÉMéga-Évolution{COLOR}Ë du\l{COLOR}ÉManoir Tarmigan{COLOR}Ë ?\pLa plupart des gens viennent pour\nça.\pÀ part ça, cette ville n'offre que\nd'horribles cauchemars.
 0x7C8AAE: cauchemars\lla nuit.
 0x7C8B33: N'hésite pas à revenir\nles voir quand tu veux.
@@ -7029,7 +7027,7 @@
 0x7E6783: Re-bonjour !\pComment vont mes anciens amis ?
 0x7E6862: J'espère avoir comblé tes envies !
 0x7E6883: Sans Surf, cette direction mène à\nune impasse.
-0x7E6B88: 9Route 12\p<0x79> Ville de\nDehara <0x7A> Tarmigan\l<0x7B> Route 14
+0x7E6B88: 9Route 12\p<0x79> Ville de\nDehara <0x7A> Tarmiganville\l<0x7B> Route 14
 0x7E6BBB: commerce
 0x7E6C2E: 9Il semble que ce soient les restes\nd'un Guerrier de l'Ombre.\pRetirer la cape\net l'apaiser ?
 0x7E6C96: Tu retires la cape du Guerrier de\nl'Ombre.
@@ -7251,7 +7249,7 @@
 0x7EF920: ??? : {COLOR}ËVite, scientifique !\pQu'est-ce que tu attends ?\pAttrape-la !
 0x7EF966: Assomme-le et enferme-le dans\nl'entrepôt !\pLe boss va péter un câble en\napprenant ça…
 0x7EF9CF: Assomme-la et enferme-la dans\nl'entrepôt !\pLe boss va péter un câble en\napprenant ça…
-0x7EFA47: Route 4\p<0x7B> Forêt Lugubre, Volcan Cendreux\nRoute 5\l<0x7C> Bourg Dresco\l<0x7A> Route 13
+0x7EFA47: Route 4\p<0x7B> Forêt Lugubre, Volcan Cendreux\nRoute 5\l<0x7C> Ville de Dresco\l<0x7A> Route 13
 0x7EFA8D: Qu'est-ce que tu fais ?\pTu ne peux pas explorer le Grand\nDésert habillé comme ça !\pSans lunettes adéquates, je ne te\nlaisserai pas passer.\lPas question.
 0x7F04CF: 9Quand je me tiens ici, je vois des\ntrucs trop cool !\pOn dirait que l'eau va dans les\narbres !
 0x7F052E: Ma grande sœur évite de dire des\ngros mots.\pMais à la place elle dit des trucs\ncomme « fèces » ou « bouse Tauros ».\pJe ne sais pas si c'est mieux que\nles vrais…\pQuand je serai grande, je dirai ces\ntrucs débiles aussi !
@@ -14877,7 +14875,6 @@
 0x1EDDE6F: J'étais heureux que mon\nfils rejoigne les Granbull Terreur.\pOui, un gang\nn'est pas le meilleur métier, mais\lau moins il en avait une !\pMaintenant, c'est un gars perdu.\pQuand aura-t-il un vrai\nboulot et quittera-t-il la maison ?
 0x1EDDF5F: Ces losers croient qu'Antisis\nest sûre depuis que les Granbull\lTerreur sont partis !\pHa ha !\pIls ont tout faux !
 0x1EDDFDA: Mon copain est tellement fort\net dur !\pPersonne n'est comme lui\nici dans la ville !\pÀ part Big Mo, bien sûr.
-0x1EDE051: Youhouuuuuuuuuuu !
 0x1EDE068: Tu veux prouver que t'es balèze ?\nHein, {STR_VAR_1} ?\pTu vas vouloir affronter Big Mo.\pC'est le plus grand et le plus dur\ntype de toute la Ville d'Antisis.
 0x1EDE0E9: Hmm…\pTu dois être coriace si tu as\nbattu Big Mo.\pC'est pas facile.\pTiens, prends ça pour te\nféliciter de ma part.
 0x1EDE162: Utilise ces Balls pour attraper\nencore plus de Pokémon coriaces.
@@ -15402,8 +15399,8 @@
 0x1EED448: Les météorites de Bourg\nCratère sont chargées d'une sorte de\lpouvoir cosmique.\pOn dit que si un certain\nPokémon entre en contact avec l'une,\ldes choses étranges arriveront.
 0x1EED4EB: Cette grotte mène\nhors de la ville vers la Route 6.\pDe là, c'est tout\ndroit par la Route 7, le Mont Givre\let\nla Route 8 jusqu'à {COLOR}ÉVille Blizzard{COLOR}Ë.\pSi tu montes à pied\njusque là-haut, prends beaucoup de\lPoké\nBalls pour capturer des Pokémon.\pLa plupart évitent\nce chemin, car ils n'ont pas le\l{COLOR}ÉBadge Vision{COLOR}Ë.\pSans lui, impossible\nde couper l'{COLOR}ÉArbre Maigre{COLOR}Ë devant\ll'entrée.
 0x1EED690: Cette grotte là-bas mène\nhors de la ville vers la Route 6.\pDe là, c'est tout\ndroit par la Route 7, le Mont Givre\let\nla Route 8 jusqu'à <0xFC><0x01><0x06>Ville Blizzard<0xFC><0x01><0x08>.\pSi tu montes à pied\njusque là-haut, prends beaucoup de\lPoké Balls.\pMaintenant que l'<0xFC><0x01><0x06>Arbre Maigre<0xFC><0x01><0x08>\nbloquant le passage a été coupé,\lelle est beaucoup plus utilisée.
-0x1EED7F3: J'ai entendu qu'à {COLOR}ÉTarmigan{COLOR}Ç,\nquelqu'un enseigne l'art de la\l{COLOR}ÉMéga-Évolution{COLOR}Ç !
-0x1EED84F: J'ai entendu qu'à\n{COLOR}ÉTarmigan{COLOR}Ç,\lquelqu'un enseigne la {COLOR}ÉMéga-\pÉvolution{COLOR}Ç !\nMais tu le savais déjà, non ?\pLe {STR_VAR_1} que tu portes te\ntrahit.
+0x1EED7F3: J'ai entendu qu'à {COLOR}ÉTarmiganville{COLOR}Ç,\nquelqu'un enseigne l'art de la\l{COLOR}ÉMéga-Évolution{COLOR}Ç !
+0x1EED84F: J'ai entendu qu'à\n{COLOR}ÉTarmiganville{COLOR}Ç,\lquelqu'un enseigne la {COLOR}ÉMéga-\pÉvolution{COLOR}Ç !\nMais tu le savais déjà, non ?\pLe {STR_VAR_1} que tu portes te\ntrahit.
 0x1EED8F7: Tu savais que si tu\nparles aux arbitres d'Arène avant le\lChampion d'Arène, ils te donnent un\lcadeau gratuit ?\pTu savais ? Hein ?
 0x1EED972: Et si\ntu leur parles après avoir battu le\lChampion d'Arène, ils donnent\laussi un cadeau ?\pTu savais ? Hein ?
 0x1EED9FD: On apprend du neuf chaque jour !
@@ -16149,7 +16146,7 @@
 0x1EFFA00: Merci d'avoir montré la\nlecture de base.\pTu m'as prouvé que c'est surfait,\net je quitte l'école\lpour devenir punk.\pAvant ça, prends ce livre.\pJe crois que le nom du proprio\nest dedans, mais je ne lis pas…
 0x1EFFB08: Qui a besoin d'école quand on a\nla musique et le spleen.
 0x1EFFB46: Panneau Conseils Dresseurs lu\nprès de ta maison.
-0x1EFFB79: Panneau Conseils Dresseurs lu\nprès de Bellinville sur la route\nde montagne rapide.
+0x1EFFB79: Panneau Conseils Dresseurs lu\nprès de Bourg Bellin sur la route\nde montagne rapide.
 0x1EFFBC5: Panneau Conseils Dresseurs lu\nprès du chemin qui entre en ville.
 0x1EFFC00: Panneau Conseils Dresseurs lu\nau 3F près de l'eau.
 0x1EFFC34: Panneau Conseils Dresseurs lu\nau 3F près du Leveinard.
@@ -16172,7 +16169,7 @@
 0x1F0012C: Panneau Conseils Dresseurs lu\ndans les herbes près du haut de\nla falaise.
 0x1F00179: Panneau Conseils Dresseurs lu\nprès de la statue d'Électhor.
 0x1F001B7: Panneau Conseils Dresseurs lu\nau 3F dans la salle\ndes dalles d'eau.
-0x1F00200: Panneau Conseils Dresseurs lu\naprès le second escalier\nvenant de Tarmigan.
+0x1F00200: Panneau Conseils Dresseurs lu\naprès le second escalier\nvenant de Tarmiganville.
 0x1F0025E: Panneau Conseils Dresseurs lu sur\nle chemin vers la ville, au sud du\nCentre Pokémon.
 0x1F002B1: Panneau Conseils Dresseurs lu\nsur le petit îlot trouvé en allant\nvers le sud vers la Route 14.
 0x1F00311: Panneau Conseils Dresseurs lu\nsur le petit îlot près des Ruines du\nNéant.
@@ -16685,9 +16682,9 @@
 0x1F0CAF5: Oh, bonjour, {PLAYER} !\pTa mère\nm'a dit que tu quittais la ville !\pC'est une super nouvelle !\pPuis-je te demander un service ?\pJe ne me sens pas très\nbien, peux-tu m'apporter un {COLOR}ÉAntidote{COLOR}Ë\lau Magasin\lPokémon.
 0x1F0CBFF: Oh, bonjour, {PLAYER} !\pFélicitations\npour être Champion !\pC'est une super nouvelle !\pPuis-je te demander un service ?\pJe ne me sens pas très\nbien, peux-tu m'apporter un {COLOR}ÉAntidote{COLOR}Ë\lau Magasin\lPokémon.
 0x1F0CCF8: Oh, c'est dommage, {PLAYER}.\pJe vais devoir souffrir en silence.
-0x1F0CD3A: Merveilleux, merveilleux.\pLe Magasin Pokémon le plus proche\nest à Bellinville, bien fourni\len Antidotes !
+0x1F0CD3A: Merveilleux, merveilleux.\pLe Magasin Pokémon le plus proche\nest à Bourg Bellin, bien fourni\len Antidotes !
 0x1F0CDAC: Merveilleux, merveilleux.\pJe suis sûr que le Champion sait où\ntrouver un simple Antidote, oui ?\pReviens vite !
-0x1F0CE14: Le Magasin Pokémon le plus proche\nest à Bellinville, bien fourni\len {COLOR}ÉAntidotes{COLOR}Ë !
+0x1F0CE14: Le Magasin Pokémon le plus proche\nest à Bourg Bellin, bien fourni\len {COLOR}ÉAntidotes{COLOR}Ë !
 0x1F0CE76: Je suis sûr que le Champion sait où\ntrouver un simple {COLOR}ÉAntidote{COLOR}Ë, oui ?\pReviens vite !
 0x1F0CECE: Merveilleux, {PLAYER}.\pJe prends cet\nAntidote.
 0x1F0CF09: C'est ce qu'il me fallait,\n{PLAYER} !\pMerci, j'apprécie vraiment !\pTu sais…{PAUSE} ton père aurait fait\nla même chose pour moi.\pMême pour une petite tâche, il\nétait toujours prêt à aider.\pJe vois que tu suis déjà\nses traces.\pEt qui sait ?\pPeut-être deviendras-tu un grand\nDresseur, comme lui !\pLe chemin sera long et\nardu, mais je sais\lque tu y arriveras.\pPrends cet objet pour\nt'aider.\pC'est une gemme rare qui peut\nbooster une attaque.\pUtilise-la bien.
@@ -17450,7 +17447,7 @@
 0x1F216A7: Hmph.\pMon entraînement est ruiné, merci\nà toi.
 0x1F216F0: LA PLAQUE\nEST LA CLÉ.
 0x1F21706: Traduire le texte ?
-0x1F21741: Une petite grotte sous\nBellinville.\nDe nombreux Pokémon Glace\ny vivent.
+0x1F21741: Une petite grotte sous\nBourg Bellin.\nDe nombreux Pokémon Glace\ny vivent.
 0x1F21798: Ooh hoo hoo hoo !\pJe me suis mis dans un sacré pétrin,\nvois-tu.\pJe ne peux plus glisser\ntout seul !\pTu veux bien m'aider en me donnant\nun élan ?
 0x1F21846: On dirait que tu m'as sorti de mon\npétrin !\pPour ça, tu as ma gratitude.
 0x1F2189B: Ooh hoo hoo hoo…
@@ -17535,7 +17532,7 @@
 0x1F2319E: Tâche ardue ! Voir tous les\nPokémon d'Ouest Borrius et rapporter\nau Prof. Log.
 0x1F231F2: Comme on disait, faut tous les\nattraper ! Voyage, et\nattrape tous les Pokémon !
 0x1F23252: Tu devrais voir ta {COLOR}Émère{COLOR}Ë avant\nde prendre mon colis, {PLAYER}.\pElle doit être très inquiète\npour toi.
-0x1F232BA: Récupère mon colis au\n{COLOR}ÉPoké Mart de Bellinville{COLOR}Ë, {PLAYER}.\pJ'en ai besoin, et toi seul peux\nl'avoir.
+0x1F232BA: Récupère mon colis au\n{COLOR}ÉPoké Mart de Bourg Bellin{COLOR}Ë, {PLAYER}.\pJ'en ai besoin, et toi seul peux\nl'avoir.
 0x1F2331E: Oh, {PLAYER} !\nTu es revenu avec mon colis !
 0x1F23360: Voyons s'ils ont envoyé ce qu'ils\ndevaient.\pNouveau matériel de recherche…{PAUSE}î\nok.\pLa science Pokémon la plus récente…{PAUSE}î\nok.\p…{PAUSE}îHein ?\pOù sont les Master Balls ?\pAs-tu ouvert ce colis et pris\nquelque chose dedans, {PLAYER} ?\p…\pAh…{PAUSE} je vois.\pTu as récupéré mon colis chez\ndes voyous…\pEt ils ont dû prendre les\nMaster Balls…
 0x1F234A9: Quoi !?\pTu les as vus utiliser ça pour\ncapturer Artikodin ?\pHmm…\pSi j'ai raison, on pourrait être en\ngrave danger…
@@ -18016,7 +18013,6 @@
 0x1F2F01A: {COLOR}Á{PLAYER} a reçu le Pokédex du\nProf. Log !
 0x1F2F045: Je me contente juste d'observer\nles espèces pour le Pokédex.\pCependant, si tu veux les données\ncomplètes des Pokémon, y compris\lleurs stats de base, tu devras les\ncapturer.\pVoici donc des outils pour capturer\nles Pokémon sauvages.
 0x1F2F123: Si tu n'es pas d'humeur à capturer\ndes Pokémon, utilise le Repousse que\lje t'ai donné pour les tenir à\ndistance.\pSi tu as besoin de quoi que ce soit\nd'autre, je serai dans mon labo.\pMais avant de partir, tu devrais\nrentrer chez toi prévenir ta mère.\pElle s'est beaucoup inquiétée pour\ntoi.\pBonne chance, {PLAYER}.\nMes recherches dépendent de toi !
-0x1F2F24D: Toi !
 0x1F2F252: Euh, pardon.
 0x1F2F269: Bonjour !\nPuis-je t'aider ?\p…\pAttends…{PAUSE} tu dis que le Prof. Log\nt'a envoyé chercher son colis ?
 0x1F2F2C8: Oh oh.\nJe savais que ce type était louche…
@@ -19198,7 +19194,7 @@
 0x1F5CC21: Ce col de montagne a une structure\nvraiment unique.\pTu ne verras aucune autre route à\nBorrius avec des escaliers creusés\ldans le flanc d'une montagne comme\lcelle-ci !
 0x1F5CCBF: Tu sais où tu vas ?
 0x1F5CCDF: Tu dois le savoir.
-0x1F5CCEE: Pour aller de Tarmigan à la\nVille de Dehara, tu dois d'abord\ldescendre la montagne.
+0x1F5CCEE: Pour aller de Tarmiganville à la\nVille de Dehara, tu dois d'abord\ldescendre la montagne.
 0x1F5CD40: Hmm…\pÇa doit être le chemin pour la Ville\nde Dehara !\pJ'en suis sûr !
 0x1F5CD7A: Je ne peux pas être perdue…
 0x1F5CD8B: Une belle Dresseuse ne peut pas se\nperdre !\pC'est impossible !
@@ -20177,8 +20173,8 @@
 0x1F708D0: Maison de {RIVAL}
 0x1F708DF: C’est une liste de choses que\n{RIVAL} prévoit de faire. Mieux\pvaut y aller !
 0x1F7091D: Route 1 « Col\nMontagne\pEnneigée » <0x79> Hauteurs\nGelées <0x7A> Icicle
-0x1F70967: Route 1 «\nCol\pMontagne Enneigée » <0x79>\nHauteurs Gelées <0x7A> Bellinville <0x7B> Grotte Icicle
-0x1F709B2: Bellinville\pUne ville paisible nichée au creux\ndes montagnes.
+0x1F70967: Route 1 «\nCol\pMontagne Enneigée » <0x79>\nHauteurs Gelées <0x7A> Bourg\lBellin <0x7B> Grotte Icicle
+0x1F709B2: Bourg Bellin\pUne ville paisible nichée au creux\ndes montagnes.
 0x1F709EA: C’est une statue du Pokémon Glace\nLégendaire Artikodin. Il est\pécrit ici qu’Artikodin servait\nautrefois à renforcer un sceau sur\lune grande obscurité, mais qu’il\laime maintenant voyager entre le\lMont Froid et les Hauteurs Gelées.
 0x1F70ABD: Grotte Icicle\nPassage
 0x1F70AD1: Route 2 «\nVoie\pOcéane » <0x7B> Bourg Dresco\n<0x7C> Icicle, Route 15
@@ -20221,19 +20217,19 @@
 0x1F71301: Arène Pokémon de Ville de Fallshore\nChampion : Mel Grâce et\lprestance
 0x1F7134A: Maison Combat Inversé\pAmusez-vous !
 0x1F71378: QG des Missions\pCherchez votre prochain boulot !
-0x1F7139B: Route 11 «\nGrottes\pdes Falaises » <0x7B> Ville de\nFallshore <0x7C> Bourg\lEpidimy <0x79> Tarmigan
+0x1F7139B: Route 11 «\nGrottes\pdes Falaises » <0x7B> Ville de\nFallshore <0x7C> Bourg\lEpidimy <0x79> Bourg Tarmigan
 0x1F713E6: Ville d'Epidimy La\pville du bonheur et de la félicité.
 0x1F71414: Mont Thundercap\nPassage
 0x1F7142B: C’est une statue du Pokémon\nLégendaire Électrik Électhor. Il est\pécrit ici qu’Électhor servait\nautrefois à renforcer un sceau sur\lune grande obscurité, mais qu’il\lréside désormais au Mont Thundercap.
 0x1F714DE: Mont Thundercap\p<0x7B> Ville d'Epidimy\n<0x7C> Ville d’Antisis
-0x1F7150B: Tarmigan\pLa ville située sur les\nHautes-Terres Thundercap.
+0x1F7150B: Bourg Tarmigan\pLa ville située sur les\nHautes-Terres Thundercap.
 0x1F71546: Manoir Tarmigan Réclame\ple pouvoir de la Méga-Évolution !
 0x1F7157A: Labo de Recherche Onirique\pNous étudions vos rêves.
 0x1F715A3: Auberge de Tarmigan… Le texte est\ntrop effacé pour être lu.
 0x1F715D0: Auberge de Tarmigan\pUn perchoir pour Dresseurs agités.\pFaites de beaux rêves dans nos lits\nsomptueux !
 0x1F71626: La porte est hermétiquement fermée.\nElle semble impossible à ouvrir.
 0x1F7165F: Étrange. La porte est\ndéverrouillée…
-0x1F71685: Route 12 « Escaliers\nOuest\pThundercap » <0x79> Ville de\nDehara <0x7A> Tarmigan\l<0x7B> Route 14
+0x1F71685: Route 12 « Escaliers\nOuest\pThundercap » <0x79> Ville de\nDehara <0x7A> Bourg Tarmigan\l<0x7B> Route 14
 0x1F716CF: Ville de\pDehara Une oasis au bord du désert.
 0x1F716FF: Arène Pokémon de Ville de Dehara\nChampion : Galavan Le cerveau\lderrière la machine de guerre
 0x1F71749: Trouve tout ce qu’il te faut au\nGrand Magasin de Dehara !
@@ -20494,15 +20490,15 @@
 0x1F78290: Leur nature avec {L_BUTTON} et {R_BUTTON}…\p
 0x1F782AF: Les faire évoluer avec {START_BUTTON}…\pEt même…\p
 0x1F782CF: …leur apprendre des capacités !\pAppuie sur {SE_SHOP} pour éditer, {B_BUTTON} pour\nsauvegarder, et {L_BUTTON} et {R_BUTTON}\lpour défiler les pages facilement !\pPour plus d’infos, regarde en bas\n\ll’interface pendant tes réglages.{PAUSE_UNTIL_PRESS}
-0x1F783C6: Tarmigan J
-0x1F783D6: Tarmigan N
-0x1F783E6: Tarmigan se trouve sur le\n« Plateau Thundercap ».\pMais si tu es venu pour voir les\norages, c’est\lraté.\pIls ne frappent qu’à l’est d’ici,\nprès de Bourg Épidimy.
+0x1F783C6: Tarmiganville J
+0x1F783D6: Tarmiganville N
+0x1F783E6: Tarmiganville se trouve sur le\n« Plateau Thundercap ».\pMais si tu es venu pour voir les\norages, c’est\lraté.\pIls ne frappent qu’à l’est d’ici,\nprès de Bourg Épidimy.
 0x1F78496: Je travaille dans l’installation\nappelée le Laboratoire des Rêves.\pOn fait ce que le nom dit,\non étudie les rêves.\pMon travail consiste à récolter une\nbrume spéciale\ldu Pokémon Mushana.\pMalheureusement, ça ne marche\npas bien.\pPour l’instant, je n’ai pu\nobtenir une capsule de brume.\pUne seule capsule m’est inutile,\nprends-la.
 0x1F78600: La {COLOR}ÉBrume de Rêve{COLOR}Ë peut donner\nun Talent Caché à un Pokémon.\pOn ne peut pas revenir en arrière\naprès ce changement.\pJe t’en donnerais plus si possible,\nmais notre Mushana ne semble plus\len produire beaucoup.\pSi tu trouves ton propre Mushana\nà combattre, il peut libérer de la\lBrume de Rêve si tu le bats.
 0x1F78733: Depuis les temps anciens, le\nPokémon fabuleux Darkrai\lhante cette ville.\pSi tu regardes bien, tu peux même\nvoir les esprits des pauvres\lâmes hantées par Darkrai.\pPrends garde, enfant !\nNe tombe pas dans le vide sombre !
-0x1F7880C: Tarmigan est isolée dans les\nmontagnes et n’a pas sa\lpropre entrée sur l’{COLOR}ÉAutoroute KBT{COLOR}Ç !\pSi tu veux descendre la montagne,\ntu devras marcher ou demander au\lTéléporteur de t’y envoyer.
+0x1F7880C: Tarmiganville est isolée dans les\nmontagnes et n’a pas sa\lpropre entrée sur l’{COLOR}ÉAutoroute KBT{COLOR}Ç !\pSi tu veux descendre la montagne,\ntu devras marcher ou demander au\lTéléporteur de t’y envoyer.
 0x1F788D8: Désolé, grand ménage du manoir\nen cours pour le\lmoment.\pSi tu veux affronter la Successeure,\nreviens plus tard.
-0x1F7896E: Ma famille possède le Manoir\nTarmigan depuis des générations.\pEn fait, mes ancêtres ont fondé\nTarmigan\leux-mêmes !\pDu coup, j’aime m’asseoir ici et\nregarder la ville de temps en temps.\pNe reste pas assis comme moi,\njeune homme.\pCarpe diem, enfant !\nSaisis le jour !
+0x1F7896E: Ma famille possède le Manoir\nTarmigan depuis des générations.\pEn fait, mes ancêtres ont fondé\nTarmiganville\leux-mêmes !\pDu coup, j’aime m’asseoir ici et\nregarder la ville de temps en temps.\pNe reste pas assis comme moi,\njeune homme.\pCarpe diem, enfant !\nSaisis le jour !
 0x1F78AC8: Es-tu venu ici pour obtenir le\npouvoir de la {COLOR}ÉMéga-Évolution{COLOR}Ë du\l{COLOR}ÉManoir Tarmigan{COLOR}Ë ?\pLa plupart des gens qui viennent ici\nsont là pour ça.\pCette ville n’a pas grand-chose à\noffrir, à part des\lcauchemars horribles, bien sûr.
 0x1F78BB5: Alors, tu as eu ce que tu voulais ?\pMaintenant que le pouvoir Méga-\nÉvolution est à toi, quoi de neuf ?\pCapacités Z ?\pJ’ai entendu dire qu’ils en usent\nbeaucoup dans l’Est de Borrius.\pMais pourquoi attendre d’y être ?\pTon {STR_VAR_1} peut activer les\nCapacités Z aussi !\pAlors, qu’attends-tu ?\pCommence à collectionner des\nCristaux Z !
 0x1F78CE2: Tu ne battras jamais mon Sablaireau\nsuper rare et trop fort !\pJe l’ai trouvé tout en haut de ce\ncoin secret de la Grotte Stalactite !
@@ -20533,14 +20529,14 @@
 0x1F799C0: M-mais la science !\pPense à toutes les possibilités !
 0x1F799EF: J’actionne l’interrupteur,\net…
 0x1F79A18: La machine a été activée !\pTu vas entrer dans un état de rêve\nd’une minute à l’autre.\pJe vais tenter de me greffer\nsur quelqu’un de ta mémoire pour\lte surveiller pendant ton sommeil.\pViens me voir quand tu voudras\npartir.
-0x1F79AFF: Prêt à te réveiller et revenir\nà Tarmigan ?
+0x1F79AFF: Prêt à te réveiller et revenir\nà Tarmiganville ?
 0x1F79B35: J’utiliserai ce corps pour te\nsurveiller.\pParle-lui quand tu voudras\npartir.
 0x1F79B8A: As-tu aimé revivre ton pire\ncauchemar ?\pAvec ces Plaques, je peux\nt’y renvoyer encore !
 0x1F79BF7: Hein ?\pMa machine ne réagit plus à ton\nCube.\pAs-tu retiré ces Plaques\ndu Cube ?
 0x1F79C51: Tous les Pokémon de ce laboratoire\nmangent des rêves.\pIls font ça grâce à la capacité\n{COLOR}ÉDévorêve{COLOR}Ç.\pTes Pokémon peuvent l’apprendre\naussi !
 0x1F79CED: {COLOR}ÉDévorêve{COLOR}Ç inflige des dégâts et\nrestaure des PV en même temps !\pMais ça ne marche que si la cible\ndort…
 0x1F79D90: Manoir Tarmigan
-0x1F79DA1: Un manoir ancien à Tarmigan\ndepuis sa fondation.\nBats la maîtresse du manoir pour\nobtenir le pouvoir Méga-Évolution !
+0x1F79DA1: Un manoir ancien à Tarmiganville\ndepuis sa fondation.\nBats la maîtresse du manoir pour\nobtenir le pouvoir Méga-Évolution !
 0x1F79E29: Quelque part ici se trouve\nla Successeure Maxima.\pSi tu la trouves, elle te donnera\nquelque chose de spécial.
 0x1F79E8F: Un interrupteur est caché dans une\nstatue du manoir.\pSi tu le trouves, il ouvrira un\nnouveau passage.
 0x1F79F04: Il existe plusieurs façons de te\nsoigner dans le\lmanoir.\pHonnêtement, c’est un peu redondant…
@@ -20625,10 +20621,10 @@
 0x1F7BDB7: Tiens, prends ça !
 0x1F7BDC9: Un assistant du Prof. Log à Tehl\nte donnera un cadeau si tu as\lcapturé assez\lde Pokémon.\pJ’espère que ça t’aidera à remplir\nle Pokédex !
 0x1F7BE61: Statue de Regi
-0x1F7BE70: Un homme a besoin d’inspiration\npour sa statue finale !\nApporte-lui le Pokémon sous Bellinville.
-0x1F7BED3: Excuse-moi, pourrais-tu m’accorder\nun instant ?\pÉcoute… j’étais un des meilleurs\nsculpteurs de Borrius.\pMais récemment, mes talents se sont\nfigés, la muse s’est tarie.\pC’est que… j’ai entendu parler\nd’un roi ancien, assez fort pour\lremorquer des pays\lavec des cordes.\pDes éons et des éons, qu’il a.\pTu me croirais si je disais l’avoir\ntrouvé ?\pSous ma maison à Bellinville.\nLà-dessous ?\pJe l’amènerais bien ici\nmoi-même, mais il ne bouge pas.\pAucune idée pour le réveiller.\pMais bon… tu as l’air débrouillard\ntu pourrais l’amener ici ?
+0x1F7BE70: Un homme a besoin d’inspiration\npour sa statue finale !\nApporte-lui le Pokémon sous Bellin.
+0x1F7BED3: Excuse-moi, pourrais-tu m’accorder\nun instant ?\pÉcoute… j’étais un des meilleurs\nsculpteurs de Borrius.\pMais récemment, mes talents se sont\nfigés, la muse s’est tarie.\pC’est que… j’ai entendu parler\nd’un roi ancien, assez fort pour\lremorquer des pays\lavec des cordes.\pDes éons et des éons, qu’il a.\pTu me croirais si je disais l’avoir\ntrouvé ?\pSous ma maison à Bellin.\nLà-dessous ?\pJe l’amènerais bien ici\nmoi-même, mais il ne bouge pas.\pAucune idée pour le réveiller.\pMais bon… tu as l’air débrouillard\ntu pourrais l’amener ici ?
 0x1F7C0EB: Tant pis alors.\pJe ne pensais pas que tu saurais\ncomment faire.
-0x1F7C123: Bien, t’es un vrai champion.\pT’es déjà allé au fond\nde Bellinville ?\pTu le verras là-bas.\pComme je l’ai dit, il reste assis.\nIl ne bouge pas, n’attaque pas.\pVéritable mystère.\pDésolé, je ne peux pas t’aider\nà le bouger, mais si tu y parviens,\lramène-le ici.
+0x1F7C123: Bien, t’es un vrai champion.\pT’es déjà allé au fond\nde Bellin ?\pTu le verras là-bas.\pComme je l’ai dit, il reste assis.\nIl ne bouge pas, n’attaque pas.\pVéritable mystère.\pDésolé, je ne peux pas t’aider\nà le bouger, mais si tu y parviens,\lramène-le ici.
 0x1F7C230: Ça…\pTu l’as fait ! La statue vivante…\ntu l’as vraiment fait bouger !\pBien, tiens-la immobile, je sors\nle vieux marteau\let le ciseau…
 0x1F7C2C0: Ouf… c’est mon plus\nbeau travail.
 0x1F7C2F5: Et avec ça… il est temps\nque j’arrête.\pRien ne dépassera ça,\nje te le dis.\pMerci beaucoup, {STR_VAR_1}.\nEn signe de gratitude…\pEh bien, à côté,\nje suis un bon forgeron.\pJe pensais en faire un vrai boulot…\nmais la demande pour les\lstatues n’est plus\ltrès forte.\pÉcoute, tu peux être mon premier\nclient ! Qu’en dis-tu ?\pQue puis-je faire ?\nVoyons…\pTu as des Pièces Runes ?\pPour te remercier, je t’en fais une\namélioration gratuite.
@@ -21249,7 +21245,7 @@
 0x1F88CF6: Cellule Zygarde derrière la maison\ndu vieux couple.
 0x1F88D31: Cellule Zygarde juste au sud\nde la glace sur la route.
 0x1F88D74: Cellule Zygarde à l'est de la ville\nprès de la clôture.
-0x1F88DBB: Cellule Zygarde au B1F de la grotte\nsous Bellinville après avoir fait\nEscalade.
+0x1F88DBB: Cellule Zygarde au B1F de la grotte\nsous Bellin après avoir fait\nEscalade.
 0x1F88E14: Cellule Zygarde près du Karatéka\nau B1F.
 0x1F88E4C: Cellule Zygarde près de l'échelle\naprès Surf au B2F.
 0x1F88E8E: Cellule Zygarde sur la plage après\nla Grotte Glace.
@@ -22564,9 +22560,9 @@
 0x1FA3C47: Le Cauchemar sans fin
 0x1FA3C5E: Un petit garçon fait un cauchemar !\nTrouvez comment le réveiller.
 0x1FA3C9C: Un petit garçon fait un cauchemar !\nPeut-être qu'un chercheur du Dream\nLab peut le réveiller.
-0x1FA3CFC: Un petit garçon fait un cauchemar !\nParlez au père du garçon à Tarmigan.
+0x1FA3CFC: Un petit garçon fait un cauchemar !\nParlez au père du garçon à Tarmigan\nTown.
 0x1FA3D4B: Un petit garçon fait un cauchemar !\nPrenez un bateau pour l'île Pleine\nLune et récupérez la Lun'Aile.
-0x1FA3DAB: Un petit garçon fait un cauchemar !\nRetournez à Tarmigan avec la\nLun'Aile pour le réveiller.
+0x1FA3DAB: Un petit garçon fait un cauchemar !\nRetournez à Tarmiganville avec la\nLun'Aile pour le réveiller.
 0x1FA3E0A: Eldon
 0x1FA3E10: J'ai perdu le goût de naviguer\ndepuis que mon fils est tombé dans\lce horrible cauchemar... Si\pseulement quelqu'un savait le\nguérir. Peut-être qu'un scientifique\pdu {COLOR}ÉDream Research\nLab{COLOR}Ë saurait...
 0x1FA3ECD: Cette scientifique a dit qu'il nous\nfaut la {COLOR}ÉLun'Aile{COLOR}Ë de\ll'{COLOR}ÉÎle Pleine Lune{COLOR}Ë\ppour soigner mon fils. Iriez-vous à\nl'{COLOR}ÉÎle Pleine Lune{COLOR}Ë\ppour moi ? Sinon pour mon fils ?
@@ -22833,7 +22829,6 @@
 0x1FAA18A: Oh, ce n'était rien après tout…
 0x1FAA1A8: Maintenant, comme je disais…
 0x1FAA1BE: Wahhhh ! C'est le monstre qui vit\ndans la forêt ! Le\pBonhomme de Neige\pCrabominable ! Sauve qui peut !
-0x1FAA21D: Aïe !
 0x1FAA222: {COLOR}ÉCrah rah rah rah rah !
 0x1FAA23B: Ce monstre était terrifiant ! On a\pdû le réveiller\npendant notre combat\pplus tôt. … Alors, je euh… suppose\pque j'ai fini\nd'entraîner ce Feunard\pmaintenant… Il est temps pour moi de\nla rendre à sa propriétaire.
 0x1FAA309: {COLOR}ÁLe {STR_VAR_1} s'est enfoui\ndans la neige.
@@ -23579,7 +23574,6 @@
 0x1F5A455: <0xFC><0x01><0x02><0xFD><0x01> a vendu <0xFD><0x02> OEuf<0xFD><0x04> de\nl'équipe pour <0xFD><0x03>¥ !
 0x1F5A47F: <0xFC><0x01><0x02><0xFD><0x01> a vendu <0xFD><0x02> OEuf<0xFD><0x04> de\nla Boîte pour <0xFD><0x03>¥ !
 0x1F66A96: <0xFC><0x01><0x02><0xFD><0x01> a remis 1 Tesson Bleu\net 1 Tesson Rouge.
-0x1F66AC6: Hwa !
 0x1F68158: <0xFC><0x01><0x02><0xFD><0x02> a traversé le portail !
 0x1F6DA73: <0xFC><0x01><0x02><0xFD><0x01> a remis\n4 <0xFD><0x02>s et 4 <0xFD><0x03>s.
 0x1F757A1: <0xFC><0x01><0x02>Tous les Dresseurs à bord ont\nété battus !
@@ -23711,7 +23705,6 @@
 0x1ee6c66: Il est temps de te mettre en route !\pSi tu cours après cet homme, tu\npourrais bien le rattraper !
 0x1ee6f9f: Si tu changes d'avis, je serai\ntoujours là à travailler !
 0x1ee794d: Terminé !\pBien, <0xFD><0x01>, fais de la place\net recule !\pTu es prêt, <0xFD><0x01> ?\pSois témoin de l'histoire en marche !
-0x1EE79B4: Aïe !
 0x1ee7b08: Ce n'est pas grave, <0xFD><0x02>.\pSi jamais tu changes d'avis,\nje serai là.
 0x1ee7f15: Chaque jour, j'essaie de cuisiner de\nbons repas pour ma famille.\pMais il me faut de l'inspiration.\pTu crois que tu pourrais me montrer\nun Pokémon de type <0xFC><0x01><0x06><0xFD><0x02><0xFC><0x01><0x04> ?
 0x1ee7fb0: Si tu captures un Pokémon de\ntype <0xFD><0x02>, viens me le\lmontrer !\pJe te donnerai un petit quelque\nchose.
@@ -23737,7 +23730,7 @@
 0x1eece02: Ce marais regorge de cachettes,\nqui sait ce qui peut bien\ls'y dissimuler ?
 0x1eed0c2: Avec de jolies fleurs, tout devient\njoli, même un marais gluant\lcomme celui-ci.
 0x1eed4eb: Cette grotte mène hors de la ville\nvers la Route 6.\pDe là, c'est tout droit par la\nRoute 7, puis Mont Givre,\let la Route 8 jusqu'à <0xFC><0x01><0x06>Ville Blizzard<0xFC><0x01><0x08>.\pSi tu comptes grimper jusque\nlà-haut, prends beaucoup de\lPoké Balls pour capturer des Pokémon.\pMais peu de gens passent par là,\ncar ils n'ont pas le\l<0xFC><0x01><0x06>Badge Vision<0xFC><0x01><0x08>.\pSans lui, impossible d'abattre\nl'<0xFC><0x01><0x06>Arbre Frêle<0xFC><0x01><0x08> devant\ll'entrée.
-0x1eed84f: Il paraît que quelqu'un à\n<0xFC><0x01><0x06>Tarmigan<0xFC><0x01><0x04> enseigne\ll'art de la <0xFC><0x01><0x06>Méga-Évolution<0xFC><0x01><0x04> !\pMais tu le savais déjà,\npas vrai ?\pLe <0xFD><0x02> que tu portes\nt'a trahi.
+0x1eed84f: Il paraît que quelqu'un à\n<0xFC><0x01><0x06>Tarmiganville<0xFC><0x01><0x04> enseigne\ll'art de la <0xFC><0x01><0x06>Méga-Évolution<0xFC><0x01><0x04> !\pMais tu le savais déjà,\npas vrai ?\pLe <0xFD><0x02> que tu portes\nt'a trahi.
 0x1eee7ce: Reviens demain montrer un autre\nPokémon à ma fille.
 0x1eee807: Oh, on dirait que non.\nC'est dommage.\pMa fille aurait adoré\nen voir un...
 0x1eeef6d: J'ai déverrouillé la maison au\nsud de la ville.\pLe Pokémon que nous avions enfermé\ns'y trouve.\pSache qu'une fois tiré de son\nsommeil, il te défiera pour\lle droit de le capturer.
@@ -23752,7 +23745,6 @@
 0x1ef14d7: <0xFC><0x01><0x02>Le Ditto a été emporté\npar le Drifloon.\pOh ?\pOn dirait que le Ditto a fait\ntomber quelque chose avant de\ldisparaître.
 0x1ef165a: Yo-hé !\pMes émeraudes, elles étaient toutes\nen feu !\pMaintenant elles brûlent plus, mais\ny'a des cristaux partout !\pCache les cristaux et retrouve mes\n<0xFC><0x01><0x06><0xFD><0x02> émeraudes<0xFC><0x01><0x08>, s'te plaît !
 0x1ef17bf: Yo-hé !\pT'as pas toutes les émeraudes !\pT'en as que <0xFC><0x01><0x06><0xFD><0x03><0xFC><0x01><0x08> émeraude<0xFD><0x07> !\pLes autres, elles brûlent encore !\pAhhhhhhhhhhhhhhhhhhh !\pRapporte-moi les <0xFC><0x01><0x06><0xFD><0x02><0xFC><0x01><0x08> émeraudes !
-0x1EF1862: Ahhhhhhhhhhhhhhhhhhh !
 0x1ef226f: Je viens de Hoenn.\pAlors je suis pour réduire les\nterres émergées par ici.\pIl n'y a pas assez d'eau,\ntu vois ?
 0x1ef24e2: L'énergie naturelle qu'on trouve\nici est encore plus forte que\ll'électricité !
 0x1ef28f8: Passe voir Cube Corp. un de ces\njours !\pGrâce à l'énergie qu'on ne trouve\nqu'ici, nous avons mis au point des\lproduits vraiment formidables !
@@ -23893,8 +23885,8 @@
 0x1f0c816: Le type bizarre de tout à l'heure\nnous a suivis jusqu'à la maison.\pMais je commence à me demander...\nEt s'il était vraiment notre papa ?
 0x1f0ca4b: Quand est-ce que papa rentre ?\nJe veux jouer avec papa !
 0x1f0caf5: Oh, bonjour, <0xFD><0x01> !\pTa mère m'a dit que tu quittais\nenfin la ville !\pC'est une excellente nouvelle !\pMaintenant, puis-je te demander un\nservice ?\pJe ne me sens pas très bien ces\nderniers temps, et j'espérais que\ltu pourrais m'acheter un\l<0xFC><0x01><0x06>Antidote<0xFC><0x01><0x08> à la Boutique Pokémon.
-0x1f0cd3a: Merveilleux, merveilleux.\pLa Boutique Pokémon la plus proche\nest à Bellinville, et ils devraient\lavoir plein d'Antidotes en stock !
-0x1f0ce14: Le Poké Mart le plus proche est à\nBellinville, et il devrait être\lbien fourni en <0xFC><0x01><0x06>Antidotes<0xFC><0x01><0x08> !
+0x1f0cd3a: Merveilleux, merveilleux.\pLa Boutique Pokémon la plus proche\nest à Bourg Bellin, et ils devraient\lavoir plein d'Antidotes en stock !
+0x1f0ce14: Le Poké Mart le plus proche est à\nBourg Bellin, et il devrait être\lbien fourni en <0xFC><0x01><0x06>Antidotes<0xFC><0x01><0x08> !
 0x1f0cece: Merveilleux, <0xFD><0x01>.\pJe vais te débarrasser de cet\nAntidote.
 0x1f0d340: Mais c'est notre voisin\nle Maître !\pComment vas-tu aujourd'hui,\n<0xFD><0x01> ?
 0x1f0d37f: On part à l'aventure,\n<0xFD><0x01> ?\pDans ce cas, laisse-moi te donner\nun petit conseil avant de partir !
@@ -24745,4 +24737,4 @@
 0x3E8EEF: Oui
 0x1F11885: Non
 0x1FB003F: <0xFC><0x01><0x04>Nouvelle Mission:<0xFC><0x01><0x02>
-0x1f11dd6: Possédé:<0xFC><0x06>  <0xFD><0x02>
+0x1FB0052: <0xFC><0x01><0x04>Objectif Mission à jour:<0xFC><0x01><0x02>
