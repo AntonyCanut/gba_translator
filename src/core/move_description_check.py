@@ -2,8 +2,9 @@
 """Vérifie que chaque description d'attaque tient dans la fenêtre de résumé.
 
 L'écran « Capacités connues » affiche la description d'une attaque dans une
-fenêtre de **5 lignes maximum**, chaque ligne devant rester sous ~142 px de
-large (environ 21 caractères de la police FRLG). Au-delà, le texte déborde :
+fenêtre de **5 lignes maximum**, chaque ligne devant rester sous ~130 px de
+large (~21 caractères de la police FRLG, marge de 2 caractères incluse).
+Au-delà, le texte déborde :
 horizontalement les mots sont coupés au bord droit, verticalement les lignes
 supplémentaires sont masquées (cf. les captures du ticket : Jet-Pierres et
 Morsure débordaient, Groz'Yeux tenait).
@@ -12,11 +13,11 @@ Les descriptions sont stockées dans la ROM via une table de pointeurs
 (``gMoveDescriptionPointers``) indexée par numéro d'attaque. Ce module lit la
 ROM construite, décode chaque description et signale celles qui débordent.
 
-Le budget (5 lignes, 142 px) et la table sont partagés avec
+Le budget (5 lignes, 130 px) et la table sont partagés avec
 :mod:`src.core.moves`, qui re-wrappe/relocalise chaque description au build
-(``scripts/patch_move_descriptions_fr.py``). La largeur de 142 px est la plus
-large ligne trouvée dans la ROM espagnole de référence — la mise en page pour
-laquelle la fenêtre a été conçue, donc garantie de tenir à l'écran. La police
+(``scripts/patch_move_descriptions_fr.py``). La ROM espagnole de référence va
+jusqu'à 142 px, mais un glyphe était encore rogné à ce bord : on garde donc une
+marge de sécurité de 2 caractères (~12 px) et on s'arrête à 130 px. La police
 étant à chasse variable, le pixel fait foi ; la limite « 21 caractères » du
 ticket n'en est qu'une approximation.
 police étant à chasse variable, le pixel fait foi ; la limite « 21 caractères »
