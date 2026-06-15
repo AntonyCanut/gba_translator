@@ -2,28 +2,23 @@
 """Vérifie que chaque description d'attaque tient dans la fenêtre de résumé.
 
 L'écran « Capacités connues » affiche la description d'une attaque dans une
-fenêtre de **5 lignes maximum**, chaque ligne devant rester sous ~120 px de
+fenêtre de **5 lignes maximum**, chaque ligne devant rester sous ~142 px de
 large (environ 21 caractères de la police FRLG). Au-delà, le texte déborde :
 horizontalement les mots sont coupés au bord droit, verticalement les lignes
 supplémentaires sont masquées (cf. les captures du ticket : Jet-Pierres et
-Morsure débordent, Groz'Yeux tient).
+Morsure débordaient, Groz'Yeux tenait).
 
 Les descriptions sont stockées dans la ROM via une table de pointeurs
 (``gMoveDescriptionPointers``) indexée par numéro d'attaque. Ce module lit la
-ROM construite, décode chaque description et signale celles qui débordent, afin
-de retravailler ces traductions dans ``combined_fr.txt``.
+ROM construite, décode chaque description et signale celles qui débordent.
 
-La table et les seuils ont été calibrés contre la ROM FR construite et
-confirmés octet pour octet contre les captures du ticket :
-
-==================  =====  ============  ==========
-Attaque             Lignes Largeur max   Verdict
-==================  =====  ============  ==========
-Groz'Yeux           4      110 px (20 c) tient
-Tempêtesable        5      118 px (21 c) tient
-Morsure             7      171 px (32 c) déborde
-Jet-Pierres         14     196 px (35 c) déborde
-==================  =====  ============  ==========
+Le budget (5 lignes, 142 px) et la table sont partagés avec
+:mod:`src.core.moves`, qui re-wrappe/relocalise chaque description au build
+(``scripts/patch_move_descriptions_fr.py``). La largeur de 142 px est la plus
+large ligne trouvée dans la ROM espagnole de référence — la mise en page pour
+laquelle la fenêtre a été conçue, donc garantie de tenir à l'écran. La police
+étant à chasse variable, le pixel fait foi ; la limite « 21 caractères » du
+ticket n'en est qu'une approximation.
 """
 
 from __future__ import annotations
@@ -32,6 +27,7 @@ import struct
 from dataclasses import dataclass
 from typing import List, Optional
 
+from src.core import moves
 from src.core.dialogue_linewrap import line_width
 from src.core.text_codec import TextDecoder
 
@@ -39,12 +35,11 @@ from src.core.text_codec import TextDecoder
 GBA_ROM_BASE = 0x08000000
 
 # Table de pointeurs des descriptions d'attaque, indexée par numéro d'attaque.
-# Localisée et vérifiée contre la ROM FR : desc[1] = Écras'Face (« Écrase
-# l'ennemi avec les pattes... »), desc[3] = Torgnoles (« giflé à plusieurs
-# reprises »). Le texte décodé reproduit exactement celui des captures du
-# ticket (Morsure, Jet-Pierres), ce qui confirme que c'est bien la table lue
-# par l'écran de résumé.
-MOVE_DESCRIPTION_TABLE = 0x99F190
+# Source unique partagée avec :mod:`src.core.moves` (qui re-wrappe/relocalise
+# les descriptions au build). Localisée et vérifiée contre la ROM FR :
+# desc[1] = Écras'Face, desc[44] = Morsure, desc[88] = Jet-Pierres. Le texte
+# décodé reproduit exactement l'écran de résumé in-game.
+MOVE_DESCRIPTION_TABLE = moves.MOVE_DESCRIPTION_TABLE
 
 # Table des noms d'attaque (déjà en français dans la ROM source), 894 cellules
 # de 13 octets. cf. src/core/fixed_tables.py (« attack names »).
@@ -58,15 +53,12 @@ TERMINATOR = 0xFF
 MAX_DESCRIPTION_BYTES = 512
 
 # --- Contraintes d'affichage de la fenêtre de description -------------------
-#: Nombre maximal de lignes affichées simultanément.
-MAX_LINES = 5
+#: Nombre maximal de lignes affichées simultanément (partagé avec moves).
+MAX_LINES = moves.MOVE_MAX_LINES
 
-#: Largeur utile de la fenêtre, en pixels. Calibré sur la ROM FR : les
-#: descriptions correctes plafonnent à 118 px (Tempêtesable, 21 caractères) ;
-#: les descriptions débordantes commencent à 123 px. Le seuil de 120 px sépare
-#: proprement les deux. La police étant à chasse variable, le pixel fait foi —
-#: la limite « 21 caractères » du ticket n'en est qu'une approximation.
-MAX_LINE_WIDTH = 120
+#: Largeur utile de la fenêtre, en pixels (partagé avec moves). 142 px est la
+#: plus large ligne de la ROM espagnole de référence — garantie de tenir.
+MAX_LINE_WIDTH = moves.MOVE_LINE_WIDTH
 
 #: Approximation « caractères affichés » du ticket (purement indicative).
 MAX_CHARS = 21

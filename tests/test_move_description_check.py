@@ -122,7 +122,13 @@ class TestSyntheticRom(unittest.TestCase):
 @pytest.mark.rom
 @unittest.skipUnless(os.path.isfile(FR_ROM), f"ROM FR absente ({FR_ROM})")
 class TestRealFrRom(unittest.TestCase):
-    """Vérité terrain : confirmée octet pour octet contre les captures."""
+    """Vérité terrain : ROM FR corrigée par patch_move_descriptions_fr.py.
+
+    Avant correction, Morsure (« …faire tressailIl grogne… ») et Jet-Pierres
+    débordaient et fusionnaient avec l'attaque suivante (cf. captures du
+    ticket). Après le patch de re-wrap/relocalisation, toutes les
+    descriptions tiennent dans la fenêtre de 5 lignes.
+    """
 
     @classmethod
     def setUpClass(cls):
@@ -140,23 +146,30 @@ class TestRealFrRom(unittest.TestCase):
         result = check_move(self.rom, idx)
         self.assertTrue(result.fits, result.reasons)
 
-    def test_morsure_overflows(self):
+    def test_morsure_fits_and_unmerged(self):
         idx = self._find_move("Morsure")
         result = check_move(self.rom, idx)
-        self.assertFalse(result.fits)
-        self.assertTrue(result.too_many_lines)
+        self.assertTrue(result.fits, result.reasons)
+        # La fusion avec l'attaque suivante (« grogne », Charme) a disparu.
+        self.assertIn("tressaillir", result.description)
+        self.assertNotIn("grogne", result.description)
 
-    def test_jetpierres_overflows(self):
+    def test_jetpierres_fits(self):
         idx = self._find_move("Jet-Pierres")
         result = check_move(self.rom, idx)
-        self.assertFalse(result.fits)
+        self.assertTrue(result.fits, result.reasons)
+        self.assertNotIn("tremblement", result.description)
 
-    def test_check_all_returns_results(self):
+    def test_all_moves_fit(self):
+        # Garde-fou de non-régression : aucune description ne déborde.
         results = check_all_moves(self.rom)
         self.assertGreater(len(results), 100)
-        # Au moins une attaque tient et au moins une déborde.
-        self.assertTrue(any(r.fits for r in results))
-        self.assertTrue(any(not r.fits for r in results))
+        overflow = [r for r in results if not r.fits]
+        self.assertEqual(
+            overflow, [],
+            "descriptions débordantes : "
+            + ", ".join(f"{r.name} {r.reasons}" for r in overflow[:10]),
+        )
 
 
 if __name__ == "__main__":
