@@ -30,6 +30,7 @@ PATCH_FIXED_NAMES_SCRIPT := scripts/patch_fixed_table_names.py
 PATCH_TIME_FORMAT_SCRIPT := scripts/patch_time_format_fr.py
 PATCH_BATTLE_PREFIX_SCRIPT := scripts/patch_battle_prefix_fr.py
 PATCH_VERSION_SCRIPT := scripts/patch_version_fr.py
+PATCH_POKEDEX_FR_SCRIPT := scripts/patch_pokedex_fr.py
 
 OUTPUT_DIR := output
 EXTRACT_DIR := $(OUTPUT_DIR)/extracted/extracted_texts
@@ -140,6 +141,10 @@ build-fr: $(ENGLISH_EXTRACT) $(SPANISH_EXTRACT) $(BUILD_SCRIPT)
 		--target $(FR_BUILD) \
 		--translations $(FR_TRANSLATION)
 	@$(PYTHON) $(PATCH_VERSION_SCRIPT) --rom $(FR_BUILD) --build-number $(BUILD_NUMBER)
+	@$(PYTHON) $(PATCH_POKEDEX_FR_SCRIPT) \
+		--rom $(FR_BUILD) \
+		--source $(ENGLISH_ROM) \
+		--translations $(FR_TRANSLATION)
 
 validate-es: $(SPANISH_BUILD) $(VALIDATE_SCRIPT)
 	@$(PYTHON) $(VALIDATE_SCRIPT) \
