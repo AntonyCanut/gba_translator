@@ -176,11 +176,19 @@ def test_sequence_buffer_codes_match_english(fr_rom, en_rom, name, offset):
 # documented `_plausible_pointer_sites` false-positive class) would corrupt the
 # giveitem command and crash *without* any string looking wrong.
 #
-# This sequence was reproduced end-to-end in mGBA from the ticket save (kidnap
-# cutscene -> Ivory/Zeph battles -> portal escape -> hillbilly hands the CS):
-# the item (id 0x01B5) is added to the bag and the game does NOT crash on the
-# current build. These assertions pin the bytecode that makes that true so a
-# future rebuild can't silently regress it.
+# Reproduction status (honest): the in-game gift is gated behind the Zeph DOUBLE
+# battle. Booting the ticket's own save in mGBA spawns the player BEFORE that
+# battle (map 0.0 -> walk south -> kidnap cutscene map 6.12 -> Zeph double
+# battle), and the give-CS NPC is only reachable by winning it. That RNG battle
+# is why no run (this one included) could drive the gift headlessly end-to-end --
+# it is NOT evidence the build is broken. What IS proven, statically and
+# decisively, is that every byte the engine touches on the gift path (the box
+# 0x1F3316D, the giveitem block, item 0x01B5's struct) is byte-identical to the
+# English ROM, which does not freeze. The user's own freeze screenshot shows the
+# box rendering the FULL, cleanly-accented French text ending exactly at "...le
+# voir." -- i.e. their ROM's give-CS box is itself intact (a corrupt/runaway box
+# would paint garbage past "le voir."). These assertions pin the bytecode that
+# keeps the gift path identical to English so a future rebuild cannot regress it.
 # ---------------------------------------------------------------------------
 
 # Disassembled give-CS NPC event script (file offsets; addr = 0x08000000 + off).

@@ -193,6 +193,47 @@ def check(user: bytes, en: bytes) -> list[str]:
     return problems
 
 
+# Script operands (file offsets of the `loadword 0, <ptr>` that feed callstd).
+GIVE_CS_BOX_OPERAND = 0x1E7938C   # loadword for the screenshot box ("...prends cette CS")
+
+
+def _decode(raw: bytes) -> str:
+    """Best-effort decode of a Pokémon string (without the trailing 0xFF)."""
+    try:
+        if str(PROJECT_ROOT) not in sys.path:
+            sys.path.insert(0, str(PROJECT_ROOT))
+        from src.core.text_codec import TextDecoder  # noqa: PLC0415
+        return TextDecoder.decode_pokemon(raw)
+    except Exception:  # pragma: no cover - decoder is optional for the verdict
+        return raw.hex()
+
+
+def _show_give_cs_box(rom: bytes) -> None:
+    """Print the give-CS dialogue box + obtain message exactly as the engine
+    resolves them (following the live script pointer), so the user can visually
+    confirm their ROM's text is intact."""
+    ptr = int.from_bytes(rom[GIVE_CS_BOX_OPERAND:GIVE_CS_BOX_OPERAND + 4], "little")
+    tgt = ptr - ROM_BASE_PTR
+    print("give-CS box : (the screenshot dialogue, as your ROM stores it)")
+    if not (0 <= tgt < len(rom)):
+        print(f"   pointer 0x{ptr:08X} is not a ROM address — CORRUPT")
+        print()
+        return
+    term = rom.find(b"\xff", tgt, tgt + MAX_STRING_BYTES)
+    relocated = "" if 0x1F00000 <= tgt < 0x1F80000 else "  [relocated to free space]"
+    if term == -1:
+        print(f"   @0x{tgt:X}{relocated}: NO 0xFF terminator within {MAX_STRING_BYTES} bytes — RUNAWAY")
+    else:
+        text = _decode(rom[tgt:term]).replace("{PAGE}", "\n   ─── ").replace("{SCROLL}", " / ")
+        print(f"   @0x{tgt:X}{relocated}  ({term - tgt} bytes, terminated)")
+        for line in text.split("\n"):
+            print(f"   | {line}")
+    obt = rom.find(b"\xff", OBTAIN_MSG_OFF, OBTAIN_MSG_OFF + MAX_STRING_BYTES)
+    if obt != -1:
+        print(f"obtain msg  : | {_decode(rom[OBTAIN_MSG_OFF:obt])}")
+    print()
+
+
 def main(argv: list[str]) -> int:
     user_path = pathlib.Path(argv[1]) if len(argv) > 1 else FR_ROM_PATH
     if not user_path.exists():
@@ -212,6 +253,14 @@ def main(argv: list[str]) -> int:
         clean = hashlib.sha256(FR_ROM_PATH.read_bytes()).hexdigest()
         print(f"clean build : {clean}{'  (EXACT MATCH)' if clean == hashlib.sha256(user).hexdigest() else ''}")
     print()
+
+    # Decode and SHOW the actual give-CS box exactly as the engine prints it, by
+    # following the live script pointer (not the fixed offset — the build may
+    # relocate it). This lets you eyeball whether YOUR ROM's box is intact: a
+    # freeze caused by data shows up here as truncated / garbage text or a box
+    # that never terminates. A clean ROM shows the full, correctly-accented box
+    # ending exactly at "Alors, prends cette CS pour aller le voir.".
+    _show_give_cs_box(user)
 
     problems = check(user, en)
     if not problems:
