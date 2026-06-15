@@ -9,23 +9,21 @@ sys.path.insert(0, str(Path(__file__).parent.parent))
 
 from scripts.patch_version_fr import (
     _CHAR_PIXELS,
-    _BG,
-    _DC,
-    _FG,
-    _TILESET_PTR_OFF,
-    _TILEMAP_PTR_OFF,
-    _NFS_TILEMAP_PTR_A,
-    _NFS_TILEMAP_PTR_B,
-    _NFS_VER_ROW,
-    _NFS_VER_COLS,
+    _VER_FG,
+    _VER_BG,
+    _VER_GRID_COLS,
+    _VER_GRID_ROWS,
+    _VER_TILE_START,
+    _NFS_TILESET_PTR_OFF,
     _lz77_compress,
     _lz77_decompress,
-    _make_char_tile,
     _compute_checksum,
     _read_gba_ptr,
+    _render_version_band,
+    _blit_band_to_tiles,
+    version_string,
     patch_version,
-    patch_title_screen_version,
-    patch_not_for_sale_version,
+    patch_intro_version,
 )
 
 EN_ROM = Path(__file__).parent.parent / "input" / "roms" / "englishrom.gba"
@@ -80,82 +78,69 @@ class TestCharPixels(unittest.TestCase):
         for ch, rows in _CHAR_PIXELS.items():
             for ri, row in enumerate(rows):
                 for ci, v in enumerate(row):
-                    self.assertIn(v, (0, 1),
-                                  f"char '{ch}'[{ri}][{ci}] = {v}")
+                    self.assertIn(v, (0, 1), f"char '{ch}'[{ri}][{ci}] = {v}")
 
     def test_required_chars_present(self):
+        # Every character that can appear in "FR.2.0.<build_number>".
         for ch in "FR.0123456789 ":
             self.assertIn(ch, _CHAR_PIXELS, f"missing char '{ch}'")
 
 
 # ---------------------------------------------------------------------------
-# _make_char_tile
+# version_string
 # ---------------------------------------------------------------------------
 
-class TestMakeCharTile(unittest.TestCase):
-    def _decode_tile(self, tile: bytes) -> list[list[int]]:
-        """Decode a 4bpp tile into an 8×8 list of palette indices."""
-        rows = []
-        for r in range(8):
-            row = []
-            for c in range(4):
-                b = tile[r * 4 + c]
-                row.append(b & 0xF)
-                row.append((b >> 4) & 0xF)
-            rows.append(row)
-        return rows
+class TestVersionString(unittest.TestCase):
+    def test_format(self):
+        self.assertEqual(version_string(5), "FR.2.0.5")
+        self.assertEqual(version_string(42), "FR.2.0.42")
+        self.assertEqual(version_string(0), "FR.2.0.0")
 
-    def test_tile_is_32_bytes(self):
-        tile = _make_char_tile('F', 'R')
-        self.assertEqual(len(tile), 32)
+    def test_fits_band_width(self):
+        # The band is _VER_GRID_COLS * 8 px wide; 4 px per glyph.
+        band_px = _VER_GRID_COLS * 8
+        for build in (1, 99, 999, 9999):
+            self.assertLessEqual(len(version_string(build)) * 4, band_px,
+                                 f"build {build} version string overflows band")
 
-    def test_row0_is_blank(self):
-        tile = _make_char_tile('F', 'R')
-        grid = self._decode_tile(tile)
-        self.assertTrue(all(p == _BG for p in grid[0]))
 
-    def test_row7_is_blank(self):
-        tile = _make_char_tile('F', 'R')
-        grid = self._decode_tile(tile)
-        self.assertTrue(all(p == _BG for p in grid[7]))
+# ---------------------------------------------------------------------------
+# _render_version_band / _blit_band_to_tiles
+# ---------------------------------------------------------------------------
 
-    def test_row6_is_decorative(self):
-        tile = _make_char_tile('F', 'R')
-        grid = self._decode_tile(tile)
-        self.assertTrue(all(p == _DC for p in grid[6]))
+class TestRenderBand(unittest.TestCase):
+    def test_band_dimensions(self):
+        band = _render_version_band("FR.2.0.5")
+        self.assertEqual(len(band), _VER_GRID_ROWS * 8)
+        self.assertEqual(len(band[0]), _VER_GRID_COLS * 8)
 
-    def test_space_char_is_all_background(self):
-        tile = _make_char_tile(' ', ' ')
-        grid = self._decode_tile(tile)
-        for r in range(5):
-            # Rows 1-5 should be all _BG for two spaces
-            self.assertTrue(all(p == _BG for p in grid[r + 1]))
+    def test_background_filled_with_bg_index(self):
+        # A space-only string leaves the whole band at the background index.
+        band = _render_version_band(" ")
+        self.assertTrue(all(p == _VER_BG for row in band for p in row))
 
-    def test_left_char_maps_to_cols_0_3(self):
-        """Verify 'F' appears in cols 0-3 (left half of the tile)."""
-        tile = _make_char_tile('F', ' ')
-        grid = self._decode_tile(tile)
-        expected = _CHAR_PIXELS['F']
-        for ri, row in enumerate(expected, 1):
-            for ci, pixel in enumerate(row):
-                pal = _FG if pixel else _BG
-                self.assertEqual(grid[ri][ci], pal,
-                                 f"'F' pixel mismatch at row {ri} col {ci}")
-        # Right half (space) must be all background in content rows
-        for ri in range(1, 6):
-            for ci in range(4, 8):
-                self.assertEqual(grid[ri][ci], _BG)
+    def test_text_paints_fg_pixels(self):
+        band = _render_version_band("FR.2.0.5")
+        fg_pixels = sum(1 for row in band for p in row if p == _VER_FG)
+        self.assertGreater(fg_pixels, 0)
+        # Only the two configured indices should ever appear.
+        self.assertTrue(all(p in (_VER_FG, _VER_BG) for row in band for p in row))
 
-    def test_right_char_maps_to_cols_4_7(self):
-        """Verify 'R' appears in cols 4-7 (right half of the tile)."""
-        tile = _make_char_tile(' ', 'R')
-        grid = self._decode_tile(tile)
-        expected = _CHAR_PIXELS['R']
-        for ri, row in enumerate(expected, 1):
-            for ci, pixel in enumerate(row):
-                pal = _FG if pixel else _BG
-                self.assertEqual(grid[ri][ci + 4], pal,
-                                 f"'R' pixel mismatch at row {ri} col {ci + 4}")
+    def test_blit_roundtrips_through_4bpp_tiles(self):
+        band = _render_version_band("FR.2.0.5")
+        n_tiles = _VER_GRID_COLS * _VER_GRID_ROWS
+        tileset = bytearray(32 * (_VER_TILE_START + n_tiles))
+        _blit_band_to_tiles(tileset, band)
+        # Decode the version tiles back and compare to the band.
+        for ty in range(_VER_GRID_ROWS):
+            for tx in range(_VER_GRID_COLS):
+                tile = _VER_TILE_START + ty * _VER_GRID_COLS + tx
+                base = tile * 32
+                for py in range(8):
+                    for px in range(8):
+                        b = tileset[base + py * 4 + (px >> 1)]
+                        idx = (b & 0xF) if (px & 1) == 0 else (b >> 4)
+                        self.assertEqual(idx, band[ty * 8 + py][tx * 8 + px])
 
 
 # ---------------------------------------------------------------------------
@@ -167,7 +152,6 @@ class TestPatchVersion(unittest.TestCase):
         rom = bytearray(0x100)
         rom[0xB2] = 0x96   # GBA magic
         rom[0xBC] = version_byte
-        # pre-seed a valid checksum
         rom[0xBD] = _compute_checksum(rom)
         return rom
 
@@ -195,11 +179,11 @@ class TestPatchVersion(unittest.TestCase):
 
 
 # ---------------------------------------------------------------------------
-# patch_title_screen_version — requires EN ROM
+# patch_intro_version — requires EN ROM
 # ---------------------------------------------------------------------------
 
 @pytest.mark.rom
-class TestPatchTitleScreenVersion(unittest.TestCase):
+class TestPatchIntroVersion(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
         if not EN_ROM.exists():
@@ -208,172 +192,59 @@ class TestPatchTitleScreenVersion(unittest.TestCase):
 
     def _patched(self, build_number: int) -> bytearray:
         data = bytearray(self.rom_data)
-        patch_title_screen_version(data, build_number)
+        patch_intro_version(data, build_number)
         return data
 
     def test_returns_true(self):
         data = bytearray(self.rom_data)
-        result = patch_title_screen_version(data, 42)
-        self.assertTrue(result)
+        self.assertTrue(patch_intro_version(data, 42))
 
     def test_tileset_pointer_changes(self):
-        orig_ts_off = struct.unpack_from("<I", self.rom_data, _TILESET_PTR_OFF)[0]
+        orig = struct.unpack_from("<I", self.rom_data, _NFS_TILESET_PTR_OFF)[0]
         data = self._patched(42)
-        new_ts_off = struct.unpack_from("<I", data, _TILESET_PTR_OFF)[0]
-        self.assertNotEqual(orig_ts_off, new_ts_off)
-
-    def test_tilemap_pointer_changes(self):
-        orig_tm_off = struct.unpack_from("<I", self.rom_data, _TILEMAP_PTR_OFF)[0]
-        data = self._patched(42)
-        new_tm_off = struct.unpack_from("<I", data, _TILEMAP_PTR_OFF)[0]
-        self.assertNotEqual(orig_tm_off, new_tm_off)
-
-    def test_new_tileset_decompresses(self):
-        from scripts.patch_version_fr import _read_gba_ptr
-        data = self._patched(42)
-        ts_off = _read_gba_ptr(data, _TILESET_PTR_OFF)
-        result = _lz77_decompress(data, ts_off)
-        self.assertIsNotNone(result)
-        tileset, _ = result
-        self.assertEqual(len(tileset) % 32, 0)
-
-    def test_new_tileset_has_more_tiles(self):
-        from scripts.patch_version_fr import _read_gba_ptr
-        data = self._patched(42)
-        ts_off = _read_gba_ptr(data, _TILESET_PTR_OFF)
-        tileset, _ = _lz77_decompress(data, ts_off)
-        # 138 original + new character tiles
-        self.assertGreater(len(tileset) // 32, 138)
-
-    def test_new_tilemap_decompresses_to_correct_size(self):
-        from scripts.patch_version_fr import _read_gba_ptr
-        data = self._patched(42)
-        tm_off = _read_gba_ptr(data, _TILEMAP_PTR_OFF)
-        result = _lz77_decompress(data, tm_off)
-        self.assertIsNotNone(result)
-        tilemap, _ = result
-        self.assertEqual(len(tilemap), 32 * 20 * 2)  # 1280 bytes
-
-    def test_version_row2_has_new_tile_indices(self):
-        from scripts.patch_version_fr import _read_gba_ptr
-        data = self._patched(42)
-        ts_off = _read_gba_ptr(data, _TILESET_PTR_OFF)
-        tileset, _ = _lz77_decompress(data, ts_off)
-        tm_off = _read_gba_ptr(data, _TILEMAP_PTR_OFF)
-        tilemap, _ = _lz77_decompress(data, tm_off)
-        orig_tile_count = 138  # EN tileset tile count
-        found_new_tile = False
-        for col in range(10, 20):
-            entry = struct.unpack_from("<H", tilemap, (2 * 32 + col) * 2)[0]
-            tile_idx = entry & 0x3FF
-            if tile_idx >= orig_tile_count:
-                found_new_tile = True
-                break
-        self.assertTrue(found_new_tile, "No new tile indices found in row 2 version area")
-
-    def test_different_build_numbers_produce_different_tiles(self):
-        from scripts.patch_version_fr import _read_gba_ptr
-        data1 = self._patched(5)
-        data2 = self._patched(42)
-        ts_off1 = _read_gba_ptr(data1, _TILESET_PTR_OFF)
-        ts_off2 = _read_gba_ptr(data2, _TILESET_PTR_OFF)
-        ts1, _ = _lz77_decompress(data1, ts_off1)
-        ts2, _ = _lz77_decompress(data2, ts_off2)
-        # The new tiles should differ between build #5 and build #42
-        self.assertNotEqual(ts1, ts2)
-
-    def test_version_string_fr_2_0(self):
-        """Every build should start the version string with 'FR.2.0.'"""
-        from scripts.patch_version_fr import _read_gba_ptr
-        for build in (1, 10, 99, 1000):
-            data = self._patched(build)
-            ts_off = _read_gba_ptr(data, _TILESET_PTR_OFF)
-            ts, _ = _lz77_decompress(data, ts_off)
-            tm_off = _read_gba_ptr(data, _TILEMAP_PTR_OFF)
-            tm, _ = _lz77_decompress(data, tm_off)
-            # First new tile (index 138) must represent 'F'+'R'
-            first_new_tile = ts[138 * 32:139 * 32]
-            fr_tile = _make_char_tile('F', 'R')
-            self.assertEqual(first_new_tile, fr_tile,
-                             f"build {build}: tile 138 is not 'FR'")
-
-
-# ---------------------------------------------------------------------------
-# patch_not_for_sale_version — requires EN ROM
-# ---------------------------------------------------------------------------
-
-@pytest.mark.rom
-class TestPatchNotForSaleVersion(unittest.TestCase):
-    @classmethod
-    def setUpClass(cls):
-        if not EN_ROM.exists():
-            pytest.skip("englishrom.gba not found")
-        cls.rom_data = EN_ROM.read_bytes()
-
-    def _patched(self) -> bytearray:
-        data = bytearray(self.rom_data)
-        patch_not_for_sale_version(data)
-        return data
-
-    def test_returns_true(self):
-        data = bytearray(self.rom_data)
-        self.assertTrue(patch_not_for_sale_version(data))
-
-    def test_tilemap_ptr_a_changes(self):
-        orig = struct.unpack_from("<I", self.rom_data, _NFS_TILEMAP_PTR_A)[0]
-        data = self._patched()
-        new = struct.unpack_from("<I", data, _NFS_TILEMAP_PTR_A)[0]
+        new = struct.unpack_from("<I", data, _NFS_TILESET_PTR_OFF)[0]
         self.assertNotEqual(orig, new)
 
-    def test_tilemap_ptr_b_changes(self):
-        orig = struct.unpack_from("<I", self.rom_data, _NFS_TILEMAP_PTR_B)[0]
-        data = self._patched()
-        new = struct.unpack_from("<I", data, _NFS_TILEMAP_PTR_B)[0]
-        self.assertNotEqual(orig, new)
+    def test_new_tileset_decompresses_to_same_size(self):
+        orig_off = _read_gba_ptr(bytearray(self.rom_data), _NFS_TILESET_PTR_OFF)
+        orig_ts, _ = _lz77_decompress(self.rom_data, orig_off)
+        data = self._patched(42)
+        new_off = _read_gba_ptr(data, _NFS_TILESET_PTR_OFF)
+        new_ts, _ = _lz77_decompress(data, new_off)
+        self.assertEqual(len(new_ts), len(orig_ts))
 
-    def test_both_ptrs_point_to_same_tilemap(self):
-        data = self._patched()
-        ptr_a = struct.unpack_from("<I", data, _NFS_TILEMAP_PTR_A)[0]
-        ptr_b = struct.unpack_from("<I", data, _NFS_TILEMAP_PTR_B)[0]
-        self.assertEqual(ptr_a, ptr_b)
+    def test_only_version_tiles_change(self):
+        orig_off = _read_gba_ptr(bytearray(self.rom_data), _NFS_TILESET_PTR_OFF)
+        orig_ts, _ = _lz77_decompress(self.rom_data, orig_off)
+        data = self._patched(42)
+        new_off = _read_gba_ptr(data, _NFS_TILESET_PTR_OFF)
+        new_ts, _ = _lz77_decompress(data, new_off)
+        n_tiles = _VER_GRID_COLS * _VER_GRID_ROWS
+        lo = _VER_TILE_START * 32
+        hi = (_VER_TILE_START + n_tiles) * 32
+        # Everything outside the version band is untouched.
+        self.assertEqual(orig_ts[:lo], new_ts[:lo])
+        self.assertEqual(orig_ts[hi:], new_ts[hi:])
+        # The version band itself changed.
+        self.assertNotEqual(orig_ts[lo:hi], new_ts[lo:hi])
 
-    def test_new_tilemap_decompresses(self):
-        data = self._patched()
-        tm_off = _read_gba_ptr(data, _NFS_TILEMAP_PTR_A)
-        result = _lz77_decompress(data, tm_off)
-        self.assertIsNotNone(result)
-        tm, _ = result
-        self.assertEqual(len(tm), 32 * 32 * 2)  # 1024 entries × 2 bytes
+    def test_version_band_matches_render(self):
+        data = self._patched(7)
+        new_off = _read_gba_ptr(data, _NFS_TILESET_PTR_OFF)
+        new_ts, _ = _lz77_decompress(data, new_off)
+        expected = bytearray(len(new_ts))
+        _blit_band_to_tiles(expected, _render_version_band(version_string(7)))
+        n_tiles = _VER_GRID_COLS * _VER_GRID_ROWS
+        lo = _VER_TILE_START * 32
+        hi = (_VER_TILE_START + n_tiles) * 32
+        self.assertEqual(new_ts[lo:hi], bytes(expected[lo:hi]))
 
-    def test_version_row_matches_frame_row(self):
-        """Row 18 version columns must now equal row 16 (frame row) entries."""
-        data = self._patched()
-        tm_off = _read_gba_ptr(data, _NFS_TILEMAP_PTR_A)
-        tm, _ = _lz77_decompress(data, tm_off)
-        for col in _NFS_VER_COLS:
-            frame = struct.unpack_from("<H", tm, (16 * 32 + col) * 2)[0]
-            ver = struct.unpack_from("<H", tm, (_NFS_VER_ROW * 32 + col) * 2)[0]
-            self.assertEqual(
-                ver, frame,
-                f"col {col}: version entry 0x{ver:04X} != frame entry 0x{frame:04X}",
-            )
-
-    def test_only_version_columns_changed(self):
-        """Exactly the 7 version columns in row 18 should differ from original."""
-        orig_tm_off = _read_gba_ptr(bytearray(self.rom_data), _NFS_TILEMAP_PTR_A)
-        orig_tm, _ = _lz77_decompress(self.rom_data, orig_tm_off)
-        data = self._patched()
-        tm_off = _read_gba_ptr(data, _NFS_TILEMAP_PTR_A)
-        tm, _ = _lz77_decompress(data, tm_off)
-        ver_entries = frozenset(_NFS_VER_ROW * 32 + col for col in _NFS_VER_COLS)
-        for i in range(len(orig_tm) // 2):
-            orig_e = struct.unpack_from("<H", orig_tm, i * 2)[0]
-            new_e = struct.unpack_from("<H", tm, i * 2)[0]
-            if i in ver_entries:
-                self.assertNotEqual(orig_e, new_e, f"entry {i} should have changed")
-            else:
-                self.assertEqual(orig_e, new_e,
-                                 f"entry {i} (row {i//32}, col {i%32}) was unexpectedly modified")
+    def test_different_build_numbers_differ(self):
+        a = self._patched(5)
+        b = self._patched(8)
+        a_ts, _ = _lz77_decompress(a, _read_gba_ptr(a, _NFS_TILESET_PTR_OFF))
+        b_ts, _ = _lz77_decompress(b, _read_gba_ptr(b, _NFS_TILESET_PTR_OFF))
+        self.assertNotEqual(a_ts, b_ts)
 
 
 if __name__ == "__main__":
