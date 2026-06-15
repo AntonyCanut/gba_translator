@@ -33,6 +33,7 @@ PATCH_VERSION_SCRIPT := scripts/patch_version_fr.py
 PATCH_POKEDEX_FR_SCRIPT := scripts/patch_pokedex_fr.py
 PATCH_POKEDEX_METRICS_FR_SCRIPT := scripts/patch_pokedex_metrics_fr.py
 PATCH_MOVE_DESC_FR_SCRIPT := scripts/patch_move_descriptions_fr.py
+PATCH_SUMMARY_LABELS_SCRIPT := scripts/patch_summary_labels_fr.py
 
 OUTPUT_DIR := output
 EXTRACT_DIR := $(OUTPUT_DIR)/extracted/extracted_texts
@@ -139,6 +140,7 @@ build-fr: $(ENGLISH_EXTRACT) $(SPANISH_EXTRACT) $(BUILD_SCRIPT)
 		--english $(ENGLISH_ROM) \
 		--spanish $(SPANISH_ROM) \
 		--require-pointer
+	@$(PYTHON) $(PATCH_SUMMARY_LABELS_SCRIPT) --rom $(FR_BUILD) --source $(ENGLISH_ROM)
 	@$(PYTHON) $(REPOINT_STALE_SCRIPT) \
 		--target $(FR_BUILD) \
 		--translations $(FR_TRANSLATION)
