@@ -19,6 +19,8 @@ large ligne trouvée dans la ROM espagnole de référence — la mise en page po
 laquelle la fenêtre a été conçue, donc garantie de tenir à l'écran. La police
 étant à chasse variable, le pixel fait foi ; la limite « 21 caractères » du
 ticket n'en est qu'une approximation.
+police étant à chasse variable, le pixel fait foi ; la limite « 21 caractères »
+du ticket n'en est qu'une approximation.
 """
 
 from __future__ import annotations
@@ -56,8 +58,8 @@ MAX_DESCRIPTION_BYTES = 512
 #: Nombre maximal de lignes affichées simultanément (partagé avec moves).
 MAX_LINES = moves.MOVE_MAX_LINES
 
-#: Largeur utile de la fenêtre, en pixels (partagé avec moves). 142 px est la
-#: plus large ligne de la ROM espagnole de référence — garantie de tenir.
+#: Largeur utile de la fenêtre, en pixels (partagé avec moves). 130 px = la
+#: plus large ligne espagnole (142 px) moins une marge de 2 caractères (~12 px).
 MAX_LINE_WIDTH = moves.MOVE_LINE_WIDTH
 
 #: Approximation « caractères affichés » du ticket (purement indicative).

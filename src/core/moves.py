@@ -7,10 +7,12 @@ little-endian entry points to a 0xFF-terminated description string shown on
 the « Capacités connues » summary screen.
 
 That window fits **five lines** at most, each line under
-:data:`MOVE_LINE_WIDTH` pixels. The Spanish ROM proves the budget: every
+:data:`MOVE_LINE_WIDTH` pixels. The Spanish ROM proves the upper bound: every
 Spanish move description wraps into at most five lines, none wider than
-142 px (the widest Spanish line — the reference layout the window was
-designed for). French translations inherit the English break positions and
+142 px (the widest Spanish line). In practice the rightmost pixels still
+clipped a glyph, so the budget keeps a **two-character safety margin**
+(~12 px) below that and wraps to 130 px. French translations inherit the
+English break positions and
 routinely spill onto a sixth line or past the right edge, so they must be
 re-wrapped (and, when genuinely too verbose, shortened upstream) to respect
 the five-line window — exactly the strategy :mod:`src.core.pokedex` uses for
