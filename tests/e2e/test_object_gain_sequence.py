@@ -269,6 +269,43 @@ def test_give_cs_script_msgbox_pointers_resolve(fr_rom):
         )
 
 
+def test_give_cs_relocated_strings_control_codes_well_formed(fr_rom):
+    """Follow EVERY give-CS msgbox pointer and validate the *control codes* of
+    the string it resolves to — for in-place AND build-relocated boxes alike.
+
+    This closes a real blind spot the ticket's "regarde comment jouent les
+    pointeurs" hint exposed: the other control-code guard only checks the
+    hardcoded in-place SEQUENCE offsets, while the build relocates the verbose
+    French boxes (e.g. 0x1F3316D's neighbours) to free space at build-specific
+    addresses (0x73xxxx) that the SEQUENCE list never names.
+
+    A relocated box whose last control code is a dangling ``FC``/``FD`` *eats*
+    its own ``0xFF`` terminator: the printer keeps reading the bytes after it as
+    text until the *next* terminator far downstream. Termination alone still
+    passes (it finds that later 0xFF), but the box paints past its end and never
+    yields back to the script — exactly the "fenêtre de dialogue se ferme pas /
+    jeu freeze" the user reports. ``_walk_control_codes`` raises on that shape.
+    """
+    sites = list(_loadword_sites(fr_rom, GIVE_CS_SCRIPT_LO, GIVE_CS_SCRIPT_HI))
+    for off, ptr in sites:
+        target = ptr - ROM_BASE
+        raw, term = _read_string(fr_rom, target)
+        assert term is not None, (
+            f"loadword @0x{off:X} -> 0x{ptr:08X}: no terminator (covered by "
+            f"resolve test, re-asserted here before walking control codes)"
+        )
+        try:
+            list(_walk_control_codes(raw))
+        except AssertionError as exc:
+            relocated = not (0x1F00000 <= target < 0x1F80000)
+            raise AssertionError(
+                f"give-CS box @0x{off:X} -> 0x{ptr:08X} "
+                f"({'RELOCATED' if relocated else 'in-place'}): malformed control "
+                f"code -> text printer runs past the box and the dialogue window "
+                f"never closes (freeze). {exc}"
+            ) from exc
+
+
 # ---------------------------------------------------------------------------
 # Object-gain *item-name buffer* guard (a freeze class, not a reset class).
 #

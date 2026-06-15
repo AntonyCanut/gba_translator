@@ -46,6 +46,18 @@ EN_ROM_PATH = PROJECT_ROOT / "input" / "roms" / "englishrom.gba"
 FR_ROM_PATH = PROJECT_ROOT / "output" / "roms" / "GenedRom-fr.gba"
 
 
+ROM_BASE_PTR = 0x08000000
+
+# Argument bytes per FC extended control command (Gen III ExtCtrlCode); a code
+# whose args would overrun the 0xFF terminator is "dangling" -> printer runaway.
+FC_ARG_COUNTS = {
+    0x01: 1, 0x02: 1, 0x03: 1, 0x04: 3, 0x05: 1, 0x06: 1,
+    0x08: 1, 0x0B: 2, 0x0C: 1, 0x0D: 1, 0x0E: 1, 0x10: 2,
+    0x11: 1, 0x12: 1, 0x13: 1, 0x14: 1, 0x19: 1,
+}
+RAW_ARG_PREFIXES = {0xF7: 1, 0xF8: 1, 0xF9: 1, 0xFD: 1}
+
+
 def _loadword_operand_bytes(rom: bytes, lo: int, hi: int) -> set[int]:
     """Offsets of every `loadword 0, <ptr>` (0F 00 ptr4) operand in [lo, hi)."""
     allowed: set[int] = set()
@@ -57,6 +69,45 @@ def _loadword_operand_bytes(rom: bytes, lo: int, hi: int) -> set[int]:
             continue
         i += 1
     return allowed
+
+
+def _loadword_pointers(rom: bytes, lo: int, hi: int) -> list[tuple[int, int]]:
+    """(operand_offset, pointer) for every `loadword 0, <ptr>` in [lo, hi)."""
+    out: list[tuple[int, int]] = []
+    i = lo
+    while i < hi - 5:
+        if rom[i] == 0x0F and rom[i + 1] == 0x00:
+            out.append((i, int.from_bytes(rom[i + 2:i + 6], "little")))
+            i += 6
+            continue
+        i += 1
+    return out
+
+
+def _dangling_control_code(rom: bytes, off: int, term: int) -> str | None:
+    """Return a description if a multi-byte control code in [off, term) would
+    consume the 0xFF terminator (its args overrun) -> the text printer never
+    stops at this box and the dialogue window never closes (freeze). Else None."""
+    i = off
+    while i < term:
+        b = rom[i]
+        if b == 0xFC:
+            cmd = rom[i + 1] if i + 1 < term + 1 else None
+            if cmd is None:
+                return f"dangling FC at +{i - off}"
+            length = 2 + FC_ARG_COUNTS.get(cmd, 0)
+            if i + length > term:  # args reach into / past the 0xFF
+                return f"FC {cmd:02X} truncated at +{i - off} (eats terminator)"
+            i += length
+            continue
+        if b in RAW_ARG_PREFIXES:
+            length = 1 + RAW_ARG_PREFIXES[b]
+            if i + length > term:
+                return f"dangling {b:02X} at +{i - off} (eats terminator)"
+            i += length
+            continue
+        i += 1
+    return None
 
 
 def _term(rom: bytes, off: int) -> int:
@@ -106,6 +157,38 @@ def check(user: bytes, en: bytes) -> list[str]:
         problems.append(
             f"obtain message @0x{OBTAIN_MSG_OFF:X} has NO 0xFF terminator -> obtain box freezes"
         )
+
+    # 5. Follow EVERY dialogue pointer the give-CS script feeds to callstd —
+    #    in-place AND build-relocated — and validate each resolves to a real,
+    #    0xFF-terminated string with no dangling control code. The build relocates
+    #    the verbose French boxes to free space at build-specific addresses, so a
+    #    fixed-offset check (1-4 above) never sees them. A relocated pointer that
+    #    lands on unwritten free space (0xFF) or a string whose last FC/FD eats
+    #    its terminator is the "dialogue window won't close / freeze" this ticket
+    #    is about. This is the check that actually follows the pointers.
+    for off, ptr in _loadword_pointers(user, GIVE_CS_SCRIPT_LO, GIVE_CS_SCRIPT_HI):
+        if not (ROM_BASE_PTR <= ptr < ROM_BASE_PTR + len(user)):
+            problems.append(
+                f"give-CS msgbox operand @0x{off:X} -> 0x{ptr:08X} is not a ROM "
+                f"pointer (corrupt/un-repointed) -> prints garbage / freezes"
+            )
+            continue
+        tgt = ptr - ROM_BASE_PTR
+        term = _term(user, tgt)
+        if term == -1:
+            relocated = not (0x1F00000 <= tgt < 0x1F80000)
+            problems.append(
+                f"give-CS dialogue @0x{off:X} -> 0x{ptr:08X} "
+                f"({'RELOCATED to free space' if relocated else 'in-place'}) has NO "
+                f"0xFF terminator -> the dialogue window never closes (FREEZE)"
+            )
+            continue
+        bad = _dangling_control_code(user, tgt, term)
+        if bad:
+            problems.append(
+                f"give-CS dialogue @0x{off:X} -> 0x{ptr:08X}: {bad} -> the text "
+                f"printer runs past the box and the window never closes (FREEZE)"
+            )
 
     return problems
 
