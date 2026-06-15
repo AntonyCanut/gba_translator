@@ -33,6 +33,14 @@ NAME_FIXES = {
     # at 0x879E74 (the extracted string with 12 leading zero-spaces), but the game
     # reads the inline name cell at 0x879E80 (12 bytes into the padded entry).
     0x879E80: ("Package", "Paquet", 8),
+    # Berry Pouch key item: the centered, space-padded name cells are absent
+    # from both translation_ready.json and the Spanish extraction, so the
+    # inline-override pass skips them (no reference entry) and they ship in
+    # English. The official French name "Sac à Baies" is byte-exact with
+    # "Berry Pouch" (11 glyphs), so the 12-space centering and cell size are
+    # preserved. Same case as Parcel/Package above: patched byte-exact here.
+    0x3DEED8: (" " * 12 + "Berry Pouch", " " * 12 + "Sac à Baies", 26),
+    0x87A0B0: (" " * 12 + "Berry Pouch", " " * 12 + "Sac à Baies", 26),
 }
 
 
