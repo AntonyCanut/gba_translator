@@ -33,6 +33,7 @@ PATCH_VERSION_SCRIPT := scripts/patch_version_fr.py
 PATCH_POKEDEX_FR_SCRIPT := scripts/patch_pokedex_fr.py
 PATCH_POKEDEX_METRICS_FR_SCRIPT := scripts/patch_pokedex_metrics_fr.py
 PATCH_MOVE_DESC_FR_SCRIPT := scripts/patch_move_descriptions_fr.py
+PATCH_DUP_MOVE_DESC_FR_SCRIPT := scripts/patch_dup_move_descriptions_fr.py
 PATCH_SUMMARY_LABELS_SCRIPT := scripts/patch_summary_labels_fr.py
 
 OUTPUT_DIR := output
@@ -154,6 +155,9 @@ build-fr: $(ENGLISH_EXTRACT) $(SPANISH_EXTRACT) $(BUILD_SCRIPT)
 		--rom $(FR_BUILD) \
 		--source $(ENGLISH_ROM) \
 		--translations $(FR_TRANSLATION)
+	@$(PYTHON) $(PATCH_DUP_MOVE_DESC_FR_SCRIPT) \
+		--rom $(FR_BUILD) \
+		--combined combined_fr.txt
 
 validate-es: $(SPANISH_BUILD) $(VALIDATE_SCRIPT)
 	@$(PYTHON) $(VALIDATE_SCRIPT) \
