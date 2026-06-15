@@ -894,7 +894,7 @@
 0x24F71F: Copie le talent spécial.
 0x24F737: Augmente l’Attaque.
 0x24F746: Empoisonne au contact.
-0x24F75E: Empêche de tressaillir.
+0x24F75E: Empêche d'être apeuré.
 0x24F772: Empêche le gel.
 0x24F785: Empêche les brûlures.
 0x24F795: Piège les Pokémon Acier.
@@ -1235,7 +1235,7 @@
 0x3D7900: Tenue, clochette apaisante qui rend\nle porteur calme et amical.\n
 0x3D7969: Tenue, dissipe l’amour. Usage\nunique.\n
 0x3D79C7: Tenue, booste une capacité, qui\nsera l’unique utilisable.\n
-0x3D7A22: Tenue, peut faire tressaillir\nl’ennemi en cas de dégâts.\n
+0x3D7A22: Tenue, peut apeurer\nl’ennemi en cas de dégâts.\n
 0x3D7A76: Tenue, poudre argentée qui booste\nles attaques Insecte.\n
 0x3D7AD6: Tenue, double l’argent gagné si le\nporteur combat.\n
 0x3D7B36: Tenue, repousse les Pokémon\nsauvages si le porteur est en tête.\n
@@ -1308,7 +1308,7 @@
 0x3D92BF: Fossile d’un ancien Pokémon marin.\nSemble être une racine.\n
 0x3D931A: Fossile d’un ancien Pokémon marin.\nSemble être une griffe.\n
 0x3D936F: Visière qui révèle les Pokémon\ninvisibles. Fabriquée par SILPH S.A.\n
-0x3D93C9: Attaque extrêmement puissante.\nSi l'utilisateur est touché avant\nd'agir, il tressaillira.
+0x3D93C9: Attaque extrêmement puissante.\nSi l'utilisateur est touché avant\nd'agir, il sera apeuré.
 0x3D942C: De grandes griffes acérées\ns'agrippent et frappent l'ennemi\navec une grande puissance.
 0x3D9473: L'ennemi reçoit un jet d'eau pulsé.\nCela peut aussi\nconfondre la cible.
 0x3D94C1: L'utilisateur calme et concentre\nson esprit pour augmenter son Att.\nSpé. et sa Déf. Spé.
@@ -4911,13 +4911,13 @@
 0x482D1D: Un long corps ou des tentacules\nsont utilisés pour lier\nl'ennemi pendant deux à cinq\ntours.
 0x482D66: L'ennemi est frappé avec\nune longue queue, vignes,\netc.
 0x482D96: L'ennemi est frappé avec des\nvignes minces ressemblant à des\nfouets. .
-0x482DC8: L'ennemi est piétiné avec\nun gros pied. Cela peut\nfaire tressaillir l'ennemi\n.
+0x482DC8: L'ennemi est piétiné avec\nun gros pied. Cela peut\nl'apeurer.
 0x482E08: Deux jambes sont utilisées\npour donner deux coups de\npied rapidement dans le même\ntour.
 0x482E45: L'ennemi est attaqué par\nun coup de pied tiré\navec une puissance\nmusclée.
 0x482E83: L'utilisateur saute haut,\npuis donne un coup de pied.\nS'il rate, l'utilisateur se\nblesse.
-0x482ECC: Un coup de pied rapide lors\nd'une roulade. Cela peut\nfaire tressaillir l'ennemi\n.
+0x482ECC: Un coup de pied rapide lors\nd'une roulade. Cela peut\nl'apeurer.
 0x482F0A: Beaucoup de sable est jeté\nsur le visage de l'ennemi,\nréduisant ainsi sa précision\n.
-0x482F4C: L'utilisateur sort sa tête\net enfonce. Cela peut\nfaire tressaillir l'ennemi\n.
+0x482F4C: L'utilisateur sort sa tête\net enfonce. Cela peut\nl'apeurer.
 0x482F8F: L'ennemi est frappé avec\nune corne très pointue\npour infliger des\ndégâts.
 0x482FD0: L'ennemi est frappé à\nplusieurs reprises avec une\ncorne ou un bec deux à cinq\nfois.
 0x483014: La corne tourne comme une\nperceuse pour percuter.\nL'ennemi s'évanouira s'il\ntouche.
@@ -4932,7 +4932,7 @@
 0x48328B: L'ennemi est poignardé deux\nfois avec des dards de pattes\navant . Cela peut empoisonner\nl'ennemi.
 0x4832D2: Des épingles pointues sont\ntirées sur l'ennemi et\nfrappent deux à cinq fois à la\nfois.
 0x483314: L'ennemi reçoit un\nregard intimidant qui\nréduit sa stat de\ndéfense.
-0x483358: L'utilisateur mord avec\ncrocs vicieux. Cela peut\nfaire tressaillir l'ennemi\n.
+0x483358: L'utilisateur mord avec\ncrocs vicieux. Cela peut\nl'apeurer.
 0x483397: Il grogne d'un air\nmignon pour faire\nbaisser l'Attaque de\nl'ennemi.
 0x4833DC: L'ennemi est obligé de\nchanger avec un allié. Dans la\nnature, la bataille se\ntermine.
 0x483426: Une chanson apaisante d'une\nvoix apaisante endort\nl'ennemi dans un profond\nsommeil.
@@ -5013,7 +5013,7 @@
 0x48482D: L'ennemi est léché et frappé\navec une longue langue .\nCela peut également\nparalyser.
 0x484871: L'ennemi est attaqué avec des\ngaz d'échappement. Cela peut\négalement empoisonner\nl'ennemi.
 0x4848B5: Des boues toxiques sont\njetées sur l'ennemi. Elles\npeuvent empoisonner la\ncible.
-0x4848F2: L'ennemi est matraqué avec\nun os tenu dans main. Cela\npeut faire tressaillir\nl'ennemi.
+0x4848F2: L'ennemi est matraqué avec\nun os tenu dans main. Cela\npeut l'apeurer.
 0x48493B: L'ennemi est frappé par\nune flamme intense. Il\npeut laisser la cible\nbrûlée.
 0x484986: Une puissante attaque de charge\n. Il peut également être\nutilisé pour escalader une\ncascade.
 0x4849CA: L’ennemi est coincé et\npressé par la coque de\nl’utilisateur pendant deux à\ncinq tours.
@@ -5045,8 +5045,8 @@
 0x4850D4: L'ennemi est ratissé avec\ndes griffes acérées ou\navec des faux deux à cinq\nfois.
 0x485114: L'utilisateur lance un os\nqui frappe l'ennemi une\nfois, puis une fois au\nretour.
 0x48515E: L'utilisateur dort deux\ntours pour restaurer tous\nses PV et guérir ses\naltérations.
-0x4851AD: De gros rochers sont lancés\nsur l'ennemi. Cela peut\nfaire tressaillir l'ennemi\n.
-0x4851EF: L'ennemi est attaqué avec\ndes crocs acérés. Cela peut\nfaire tressaillir l'ennemi\n.
+0x4851AD: De gros rochers sont lancés\nsur l'ennemi. Cela peut\nl'apeurer.
+0x4851EF: L'ennemi est attaqué avec\ndes crocs acérés. Cela peut\nl'apeurer.
 0x485231: L'utilisateur réduit son\nnombre de polygones pour\naffiner les bords et augmenter\nl'attaque.
 0x485277: L'utilisateur modifie son\ntype pour correspondre au\ntype de l'un de ses\nmouvements.
 0x4852B8: Une attaque simultanée à 3\nfaisceaux qui peut\nparalyser, brûler, ou geler\nl'ennemi.
@@ -5127,7 +5127,7 @@
 0x486729: Restaure les PV de\nl'utilisateur.\nQuantité selon la\nmétéo.
 0x486774: Attaque unique\ndont le type varie\nselon\nl'utilisateur.
 0x4867B7: Frappe l'ennemi\ndeux fois. Taux de\ncoups critiques\nélevé.
-0x4867FB: Une violente rafale\nattaque l'ennemi.\nPeut le faire\ntressaillir.
+0x4867FB: Une violente rafale\nattaque l'ennemi.\nPeut l'apeurer.
 0x48683A: Une forte pluie\ndure cinq tours et\nbooste les\ncapacités Eau.
 0x48687C: Le soleil brûle\ncinq tours et\nbooste les\ncapacités Feu.
 0x4868B8: Mâche l'ennemi\navec des crocs.\nPeut baisser sa\nDéfense.
@@ -5140,7 +5140,7 @@
 0x486AA6: Attaque qui baisse\nla Défense. Brise\naussi les roches\nfissurées.
 0x486AEF: Piège l'ennemi dans\nun tourbillon rapide\net cruel 2 à 5\ntours.
 0x486B36: Toute l'équipe\nattaque. Plus il y a\nd'alliés, plus ça\nfrappe fort.
-0x486B7E: Frappe en premier et\nfait tressaillir.\nUtilisable seulement au\n1er tour.
+0x486B7E: Frappe en premier et\napeure la cible.\nUtilisable seulement au\n1er tour.
 0x486BC7: Hurle sans arrêt 2\nà 5 tours,\nempêchant le\nsommeil.
 0x486C10: Emmagasine de la\npuissance pour plus\ntard. Jusqu'à trois\nfois.
 0x486C55: Libère d'un coup\nla puissance\nstockée pour\nattaquer.
@@ -5190,7 +5190,7 @@
 0x4877F3: Coup de pied\nflammé à haut\ncritique. Peut\nbrûler.
 0x48783A: Affaiblit les attaques\nÉlectrik tant que\nl'utilisateur reste au\ncombat.
 0x48787A: Attaque roulante sur\ncinq tours qui gagne en\npuissance à chaque\ntour.
-0x4878BC: Attaque avec des\nbras épineux.\nPeut faire\ntressaillir.
+0x4878BC: Attaque avec des\nbras épineux.\nPeut apeurer la cible.
 0x4878F5: Fainéantise pour\nrestaurer la\nmoitié des PV\nmax.
 0x487932: Cri\nassourdissant\nqui inflige des\ndégâts.
 0x487976: Crocs toxiques qui\npeuvent gravement\nempoisonner\nl'ennemi.
@@ -5198,7 +5198,7 @@
 0x487A07: Énorme explosion.\nL'utilisateur ne peut\npas agir au tour\nsuivant.
 0x487A53: Canon d'eau.\nL'utilisateur doit se\nreposer au tour\nsuivant.
 0x487A9E: Coup de poing\nrapide et dur. Peut\naussi booster\nl'Attaque.
-0x487AEB: Cri surprenant qui\npeut faire\ntressaillir\nl'ennemi.
+0x487AEB: Cri surprenant qui\npeut apeurer\nl'ennemi.
 0x487B2F: Attaque dont la\npuissance et le type\nvarient avec la\nmétéo.
 0x487B71: Parfum doux qui\nsoigne tous les\nstatuts du\ngroupe.
 0x487BBF: Pleurniche et fait\nchuter fortement\nla Déf. Spé\nadverse.
@@ -5214,7 +5214,7 @@
 0x487E72: Plus les PV sont\nhauts, plus\nl'attaque est\npuissante.
 0x487EB3: Rayon\nlumineux qui\npeut aussi\nrendre
 0x487EF6: Coup\nd'ombre\nimparable.
-0x487F35: Pouvoir étrange qui\npeut faire\ntressaillir\nl'ennemi.
+0x487F35: Pouvoir étrange qui\npeut apeurer\nl'ennemi.
 0x487F76: Uppercut\nprojeté vers le\nciel avec\nforce.
 0x487FB4: Piège l'ennemi dans une\ntempête de sable\ndouloureuse 2 à 5\ntours.
 0x487FF9: Froid ultime\nqui met K.O.\nsi ça\ntouche.
@@ -9102,14 +9102,14 @@
 0xA38DEA: Une attaque brutale qui absorbe la\nmoitié des dégâts qu'elle a infligés\npour restaurer les PV.\n
 0xA38E32: L'utilisateur se recroqueville,\naugmentant son attaque, sa défense\net sa précision.\n
 0xA38E70: L'ennemi est pris dans un vent\nviolent. Cela peut également\ndérouter l'ennemi.\n
-0xA38EB1: Des glaçons sont lâchés sur\nl'ennemi. Cela peut également faire\ntressaillir l’ennemi.\n
+0xA38EB1: Des glaçons sont lâchés sur\nl'ennemi. Cela peut aussi\nl'apeurer.\n
 0xA38EF2: Se réveille\npour booster\nAttaque et\nAtt. Spé.
 0xA38F30: Danse mystique\nqui monte Att.\nSpé, Déf. Spé\net Vitesse.
 0xA38F75: Des feuilles pointues entourent\nl’ennemi. Cela peut également\nréduire la précision de l’ennemi.\n
 0xA38FB8: L’utilisateur attaque les jambes de\nl’ennemi, réduisant ainsi sa\nstatistique de vitesse.\n
 0xA38FF2: Aboie menaçant.\nBaisse aussi\nl'Att. Spé\nennemie.
 0xA3902F: Résiste et\nattaque en\nbaissant l'Att.\nSpé adverse.
-0xA39075: L'utilisateur écrase l'ennemi avec\nson corps. Cela peut également faire\ntressaillir l’ennemi.\n
+0xA39075: L'utilisateur écrase l'ennemi avec\nson corps. Cela peut aussi\nl'apeurer.\n
 0xA390BE: L'utilisateur frappe violemment\nl'ennemi. Cela aboutit toujours à un\ncoup critique.\n
 0xA39106: L'ennemi est imprégné d'un acide\nspécial. Sa puissance double si\nl'ennemi est empoisonné.\n
 0xA39155: L'utilisateur lance un tacle\nélectrifié. Cela fait un peu mal à\nl'utilisateur.\n
@@ -9120,9 +9120,9 @@
 0xA392C2: Attaque intense\nqui baisse\nfort l'Att.\nSpé du lanceur.
 0xA39307: L'ennemi est poignardé par des\npierres aiguisées. Il a un taux de\ncoups critiques élevé.\n
 0xA39351: Si l’utilisateur agit après la\ncible, la puissance de cette attaque\nsera doublée.\n
-0xA3939A: L'utilisateur mord l'ennemi. Cela\npeut faire tressaillir l’ennemi ou\nle brûler.\n
-0xA393E1: L'utilisateur mord l'ennemi. Cela\npeut faire tressaillir l’ennemi ou\nle laisser gelé.\n
-0xA3942D: L'utilisateur mord l'ennemi. Cela\npeut faire tressaillir l’ennemi ou\nle laisser paralysé.   \n
+0xA3939A: L'utilisateur mord l'ennemi. Cela\npeut l'apeurer ou\nle brûler.\n
+0xA393E1: L'utilisateur mord l'ennemi. Cela\npeut l'apeurer ou\nle laisser gelé.\n
+0xA3942D: L'utilisateur mord l'ennemi. Cela\npeut l'apeurer ou\nle laisser paralysé.\n
 0xA3947A: Un tacle enflammé qui peut brûler\nl'ennemi. Cela fait également un peu\nmal à l'utilisateur.\n
 0xA394C9: L’ennemi est englouti par un feu\nintense qui ne manquera pas de\nlaisser une brûlure.\n
 0xA3950E: Cette attaque fait doubler les\ndégâts à une cible affectée par un\nproblème de statut.\n
@@ -9175,7 +9175,7 @@
 0xA3A1B6: L'utilisateur augmente fortement\nl'une de ses statistiques en\nappuyant sur ses points de stress.\n
 0xA3A1FE: Plus l’ennemi a augmenté ses\nstatistiques, plus la puissance de\nson attaque est grande.\n
 0xA3A243: Inflige le double des dégâts si\nl'ennemi a déjà subi des dégâts ce\ntour-ci.\n
-0xA3A285: Un tacle présentant une menace\ndévastatrice. Cela peut également\nfaire tressaillir la cible.\n
+0xA3A285: Un tacle présentant une menace\ndévastatrice. Cela peut aussi\napeurer la cible.\n
 0xA3A2D3: Tous les ennemis sont emmenés dans\nun monde d’obscurité totale qui les\nendort.\n
 0xA3A31C: Une attaque qui touche une cible\nprotégée. Cela lève également la\nprotection.\n
 0xA3A364: L'utilisateur disparaît puis frappe\nau tour suivant, touchant même les\nennemis protégés.\n
@@ -9313,7 +9313,7 @@
 0xA3CFB3: L’utilisateur attaque la gorge de\nl’ennemi pour l’empêcher d’utiliser\ndes mouvements émettant du son\npendant deux tours.\n
 0xA3D013: L’utilisateur tire des fils\nempoisonnés pour empoisonner la\ncible et réduire sa statistique de\nvitesse.\n
 0xA3D06D: L'utilisateur donne un coup de pied\ntropical à l'ennemi. Cela réduit\négalement l’attaque de l’ennemi.\n
-0xA3D0B9: Une forte explosion\nélectrique s'abat\nsur la cible.\nCela peut faire\ntressaillir la cible.
+0xA3D0B9: Une forte explosion\nélectrique s'abat\nsur la cible.\nCela peut l'apeurer.
 0xA3D10E: L'utilisateur électrise le sol\npendant cinq tours, alimentant ainsi\nles mouvements électriques et\névitant le sommeil.\n
 0xA3D16C: L'utilisateur transforme le sol en\nherbe pendant cinq tours, activant\nainsi les mouvements d'herbe et\nrestaurant les PV.\n
 0xA3D1C9: L'utilisateur couvre sol de brume\npendant cinq tours, réduisant de\nmoitié les mouvements du Dragon et\nempêchant son statut.\n
@@ -9426,7 +9426,7 @@
 0xA3F24A: L'utilisateur frappe\ntrois fois de suite. Cela\naboutit toujours à un coup\ncritique.
 0xA3F296: L'utilisateur attaque avec un\npouvoir psychique. Cela peut\nlaisser la cible avec des\ngelures.
 0xA3F2E3: L’utilisateur donne un coup\nde pied féroce qui réduit les\nstatistiques de défense de la\ncible.
-0xA3F32A: L'utilisateur attaque avec des\nflammes sombres et intenses. Cela\npeut également faire tressaillir\nl’ennemi.
+0xA3F32A: L'utilisateur attaque avec des\nflammes sombres et intenses. Cela\npeut aussi apeurer l’ennemi.
 0xA3F377: L’utilisateur attaque avec un\npouvoir psychique qui retire\n3 PP à la dernière\ncapacité de l’ennemi.
 0xA3F3C7: Une cage faite d'électricité\nqui emprisonne la cible\npendant quatre à cinq\ntours.
 0xA3F410: Plus les PV de l’utilisateur\nsont élevés, plus\ncette attaque devient\npuissante.
@@ -9440,7 +9440,7 @@
 0xA3F666: L'utilisateur se déchaîne\net crache des flammes\nvicieuses pendant deux à trois\ntours.
 0xA3F6A9: Le lanceur frappe la\ncible, se blessant un\npeu. Cette capacité\nfrappe en premier.
 0xA3F6FB: L'utilisateur lance sa\nchlorophylle accumulée sur\nl'ennemi. Cela nuit également à\nl'utilisateur.
-0xA3F74B: L'utilisateur lance des\nmorceaux géants de glace sur\nl'ennemi, ce qui peut le faire\ntressaillir.
+0xA3F74B: L'utilisateur lance des\nmorceaux géants de glace sur\nl'ennemi, ce qui peut l'apeurer.
 0xA3F796: Le lanceur danse pour\ncélébrer la victoire.\nAugmente Attaque,\nDéfense et Vitesse.
 0xA3F7E3: Écrase l'ennemi.\nBaisse la Défense\net la Déf. Spé du\nlanceur.
 0xA3F832: Des barbes susceptibles d'être\nempoisonnées sont lancées sur\nl'ennemi. Sa puissance double si\nl'ennemi est empoisonné.
@@ -24739,5 +24739,3 @@
 0x1FB003F: <0xFC><0x01><0x04>Nouvelle Mission:<0xFC><0x01><0x02>
 0x1FB0052: <0xFC><0x01><0x04>Objectif Mission à jour:<0xFC><0x01><0x02>
 0x001c0df1: Une Carte.
-0x3DEE28:             Carte
-0x87A000:             Carte
