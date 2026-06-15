@@ -2,14 +2,31 @@
 """Patch the FR ROM with the CI build number.
 
 Two patches are applied:
-1. GBA header byte 0xBC (software version field) is set to ``build_number & 0xFF``
-   and the header complement checksum at 0xBD is recomputed.
-2. The title screen version display (pre-rendered pixel art) is replaced with
-   the string "FR.2.0.<build_number>" drawn in the same 4px-wide font style as
-   the original "2.1.1.1" string.  The new tileset and tilemap are written into
-   trailing free space and the BG data pointers are updated accordingly.
 
-Usage:
+1. The GBA header byte 0xBC (software-version field) is set to
+   ``build_number & 0xFF`` and the header complement checksum at 0xBD is
+   recomputed.
+
+2. The in-game version display on the **NOT FOR SALE** intro screen is changed
+   from the pre-rendered ``v2.1.1.1`` to ``FR.2.0.<build_number>``.
+
+   The intro screen is a single BG0 layer (mode 0, charblock 0, screenblock 7).
+   Its ``v2.1.1.1`` string is pre-rendered as twelve 8x8 tiles (indices
+   0xE1-0xEC, a 6x2 grid) inside an LZ77-compressed tileset.  The tilemap that
+   places those tiles never changes, so we only have to redraw the twelve glyph
+   tiles in the tileset: we decompress it, paint ``FR.2.0.<build_number>`` over
+   the version band, recompress it into free space and update the single ROM
+   pointer that references it (at 0xEC610).
+
+History note — earlier revisions of this script targeted the wrong graphics:
+the old "title screen" pointers (0x1413AC / 0x1413B8) actually point at the
+Game Corner *slot machine* (CREDIT / PAYOUT), so the previous code corrupted
+that screen while leaving the real version display untouched.  The real Pokémon
+Unbound title screen (PRESS START) shows **no** version number at all; the only
+in-game version string is the one on the NOT FOR SALE screen handled here.
+
+Usage::
+
     python3 scripts/patch_version_fr.py --rom output/roms/GenedRom-fr.gba \\
         --build-number 42
 """
@@ -123,90 +140,14 @@ def patch_version(data: bytearray, build_number: int) -> bool:
 
 
 # ---------------------------------------------------------------------------
-# Title-screen version display patch
+# Shared ROM helpers
 # ---------------------------------------------------------------------------
 
 _GBA_BASE = 0x08000000
-# ROM offsets of the two GBA pointers we need to update
-_TILESET_PTR_OFF = 0x1413AC
-_TILEMAP_PTR_OFF = 0x1413B8
-
-# NOT FOR SALE intro screen: both background layers share the same 32×32 tilemap
-# (1024 entries × 2 bytes each).  Row 18 (0-indexed) is the version-text row;
-# columns 3, 5, 7, 9, 11, 13, 15 carry the version tile indices.  We replace
-# those entries with the surrounding frame-decoration entries from row 16 so
-# the version text disappears.  Both pointers must be updated.
-_NFS_TILEMAP_PTR_A = 0x260218
-_NFS_TILEMAP_PTR_B = 0x260220
-_NFS_VER_ROW = 18
-_NFS_VER_COLS = (3, 5, 7, 9, 11, 13, 15)
-
-# Tilemap dimensions
-_TM_COLS = 32
-_TM_ROWS = 20
-
-# Rows in the tilemap that show the version number
-_VER_ROW2 = 2
-_VER_ROW3 = 3
-_VER_COL_START = 10
-_VER_COL_COUNT = 10  # cols 10-19
-
-# Neutral tiles for clearing the version area (taken from EN tilemap)
-# Tile 84 is the blank spacer between the two version groups in row 2.
-# Tile 76 is the floor tile used in row 3 around the version area.
-_BLANK_ROW2 = 84
-_BLANK_ROW3 = 76
-
-# 4bpp palette indices — match the existing version tiles in the EN tileset
-_FG = 3    # text foreground
-_BG = 0xF  # background
-_DC = 0xC  # decorative separator line at the bottom of each tile
-
-# Character bitmaps: 4 px wide × 5 px tall, 1 = fg pixel, 0 = bg pixel.
-# Two characters are packed side-by-side into each 8×8 tile.
-_CHAR_PIXELS: dict[str, list[list[int]]] = {
-    '0': [[0,1,1,0],[1,0,0,1],[1,0,0,1],[1,0,0,1],[0,1,1,0]],
-    '1': [[0,0,1,0],[0,1,1,0],[0,0,1,0],[0,0,1,0],[0,1,1,1]],
-    '2': [[0,1,1,0],[0,0,0,1],[0,1,1,0],[1,0,0,0],[1,1,1,0]],
-    '3': [[0,1,1,0],[0,0,0,1],[0,1,1,0],[0,0,0,1],[0,1,1,0]],
-    '4': [[1,0,0,1],[1,0,0,1],[1,1,1,1],[0,0,0,1],[0,0,0,1]],
-    '5': [[1,1,1,0],[1,0,0,0],[1,1,1,0],[0,0,0,1],[1,1,1,0]],
-    '6': [[0,1,1,0],[1,0,0,0],[1,1,1,0],[1,0,0,1],[0,1,1,0]],
-    '7': [[1,1,1,0],[0,0,0,1],[0,0,1,0],[0,1,0,0],[0,1,0,0]],
-    '8': [[0,1,1,0],[1,0,0,1],[0,1,1,0],[1,0,0,1],[0,1,1,0]],
-    '9': [[0,1,1,0],[1,0,0,1],[0,1,1,1],[0,0,0,1],[0,1,1,0]],
-    'F': [[1,1,1,0],[1,0,0,0],[1,1,0,0],[1,0,0,0],[1,0,0,0]],
-    'R': [[1,1,0,0],[1,0,1,0],[1,1,0,0],[1,0,1,0],[1,0,0,1]],
-    '.': [[0,0,0,0],[0,0,0,0],[0,0,0,0],[0,0,0,0],[0,1,0,0]],
-    ' ': [[0,0,0,0],[0,0,0,0],[0,0,0,0],[0,0,0,0],[0,0,0,0]],
-}
-
-
-def _make_char_tile(left_ch: str, right_ch: str) -> bytes:
-    """Return a 32-byte 4bpp 8×8 tile with two version-font characters."""
-    lp = _CHAR_PIXELS.get(left_ch, _CHAR_PIXELS[' '])
-    rp = _CHAR_PIXELS.get(right_ch, _CHAR_PIXELS[' '])
-    tile = bytearray(32)
-    # Row 0: blank
-    for c in range(4):
-        tile[c] = _BG | (_BG << 4)
-    # Rows 1–5: character content (left char at cols 0-3, right at cols 4-7)
-    for ri, (lr, rr) in enumerate(zip(lp, rp), 1):
-        tile[ri * 4 + 0] = (_FG if lr[0] else _BG) | ((_FG if lr[1] else _BG) << 4)
-        tile[ri * 4 + 1] = (_FG if lr[2] else _BG) | ((_FG if lr[3] else _BG) << 4)
-        tile[ri * 4 + 2] = (_FG if rr[0] else _BG) | ((_FG if rr[1] else _BG) << 4)
-        tile[ri * 4 + 3] = (_FG if rr[2] else _BG) | ((_FG if rr[3] else _BG) << 4)
-    # Row 6: decorative separator
-    for c in range(4):
-        tile[6 * 4 + c] = _DC | (_DC << 4)
-    # Row 7: blank
-    for c in range(4):
-        tile[7 * 4 + c] = _BG | (_BG << 4)
-    return bytes(tile)
 
 
 def _find_free_block(data: bytearray, size: int, min_offset: int = 0x100) -> int:
-    """Find the first 4-byte-aligned run of 0xFF bytes of at least `size` bytes.
+    """Find the first 4-byte-aligned run of 0xFF bytes of at least ``size`` bytes.
 
     Scans the whole ROM (after ``min_offset``) rather than only the trailing
     region, so it works even after other patches have consumed the tail.
@@ -223,7 +164,7 @@ def _find_free_block(data: bytearray, size: int, min_offset: int = 0x100) -> int
         aligned = (start + 3) & ~3
         if i - aligned >= size:
             return aligned
-    raise RuntimeError("Insufficient free space for title-screen version patch")
+    raise RuntimeError("Insufficient free space for intro version patch")
 
 
 def _read_gba_ptr(data: bytearray, off: int) -> int:
@@ -237,125 +178,117 @@ def _write_gba_ptr(data: bytearray, off: int, rom_addr: int) -> None:
     struct.pack_into("<I", data, off, rom_addr + _GBA_BASE)
 
 
-def patch_title_screen_version(data: bytearray, build_number: int) -> bool:
-    """Replace the title-screen version display with 'FR.2.0.<build_number>'.
+# ---------------------------------------------------------------------------
+# NOT FOR SALE intro-screen version display
+# ---------------------------------------------------------------------------
+
+# The single ROM pointer that references the intro BG0 tileset (charblock 0).
+_NFS_TILESET_PTR_OFF = 0xEC610
+
+# Within the decompressed tileset the version glyphs occupy a 6-tile-wide,
+# 2-tile-tall band starting at tile index 0xE1 (tiles 0xE1-0xEC).
+_VER_TILE_START = 0xE1
+_VER_GRID_COLS = 6
+_VER_GRID_ROWS = 2
+
+# 4bpp palette indices used by the intro tiles: the glyph strokes are drawn in
+# index 4 (white) over an index-9 (black) tile background — matching exactly how
+# the original "v2.1.1.1" was encoded.
+_VER_FG = 4
+_VER_BG = 9
+
+# Character bitmaps: 4 px wide x 5 px tall, 1 = stroke pixel.  Narrow enough to
+# fit ``FR.2.0.<build_number>`` (up to 12 characters) across the 48 px band.
+_CHAR_PIXELS: dict[str, list[list[int]]] = {
+    '0': [[0, 1, 1, 0], [1, 0, 0, 1], [1, 0, 0, 1], [1, 0, 0, 1], [0, 1, 1, 0]],
+    '1': [[0, 0, 1, 0], [0, 1, 1, 0], [0, 0, 1, 0], [0, 0, 1, 0], [0, 1, 1, 1]],
+    '2': [[0, 1, 1, 0], [1, 0, 0, 1], [0, 0, 1, 0], [0, 1, 0, 0], [1, 1, 1, 1]],
+    '3': [[1, 1, 1, 0], [0, 0, 0, 1], [0, 1, 1, 0], [0, 0, 0, 1], [1, 1, 1, 0]],
+    '4': [[0, 0, 1, 1], [0, 1, 0, 1], [1, 1, 1, 1], [0, 0, 0, 1], [0, 0, 0, 1]],
+    '5': [[1, 1, 1, 1], [1, 0, 0, 0], [1, 1, 1, 0], [0, 0, 0, 1], [1, 1, 1, 0]],
+    '6': [[0, 1, 1, 0], [1, 0, 0, 0], [1, 1, 1, 0], [1, 0, 0, 1], [0, 1, 1, 0]],
+    '7': [[1, 1, 1, 1], [0, 0, 0, 1], [0, 0, 1, 0], [0, 1, 0, 0], [0, 1, 0, 0]],
+    '8': [[0, 1, 1, 0], [1, 0, 0, 1], [0, 1, 1, 0], [1, 0, 0, 1], [0, 1, 1, 0]],
+    '9': [[0, 1, 1, 0], [1, 0, 0, 1], [0, 1, 1, 1], [0, 0, 0, 1], [0, 1, 1, 0]],
+    'F': [[1, 1, 1, 1], [1, 0, 0, 0], [1, 1, 1, 0], [1, 0, 0, 0], [1, 0, 0, 0]],
+    'R': [[1, 1, 1, 0], [1, 0, 0, 1], [1, 1, 1, 0], [1, 0, 1, 0], [1, 0, 0, 1]],
+    '.': [[0, 0, 0, 0], [0, 0, 0, 0], [0, 0, 0, 0], [0, 0, 0, 0], [0, 1, 1, 0]],
+    ' ': [[0, 0, 0, 0], [0, 0, 0, 0], [0, 0, 0, 0], [0, 0, 0, 0], [0, 0, 0, 0]],
+}
+
+_GLYPH_W = 4   # advance per character (glyphs are 4 px wide, no extra gap)
+_GLYPH_H = 5
+
+
+def version_string(build_number: int) -> str:
+    """Return the version label rendered on the intro screen."""
+    return f"FR.2.0.{build_number}"
+
+
+def _render_version_band(text: str) -> list[list[int]]:
+    """Paint ``text`` into the version band as a grid of 4bpp palette indices.
+
+    The band is ``_VER_GRID_COLS`` x ``_VER_GRID_ROWS`` tiles (48 x 16 px).  The
+    background is filled with ``_VER_BG`` and the glyph strokes with ``_VER_FG``,
+    horizontally and vertically centred.
+    """
+    pw = _VER_GRID_COLS * 8
+    ph = _VER_GRID_ROWS * 8
+    band = [[_VER_BG] * pw for _ in range(ph)]
+    x0 = max(0, (pw - len(text) * _GLYPH_W) // 2)
+    y0 = (ph - _GLYPH_H) // 2
+    for i, ch in enumerate(text):
+        glyph = _CHAR_PIXELS.get(ch, _CHAR_PIXELS[' '])
+        for ry, row in enumerate(glyph):
+            for cx, on in enumerate(row):
+                if not on:
+                    continue
+                px = x0 + i * _GLYPH_W + cx
+                py = y0 + ry
+                if 0 <= px < pw and 0 <= py < ph:
+                    band[py][px] = _VER_FG
+    return band
+
+
+def _blit_band_to_tiles(tileset: bytearray, band: list[list[int]]) -> None:
+    """Write the rendered band over the version tiles (in place)."""
+    for ty in range(_VER_GRID_ROWS):
+        for tx in range(_VER_GRID_COLS):
+            tile = _VER_TILE_START + ty * _VER_GRID_COLS + tx
+            base = tile * 32
+            for py in range(8):
+                for px in range(0, 8, 2):
+                    lo = band[ty * 8 + py][tx * 8 + px] & 0xF
+                    hi = band[ty * 8 + py][tx * 8 + px + 1] & 0xF
+                    tileset[base + py * 4 + (px >> 1)] = lo | (hi << 4)
+
+
+def patch_intro_version(data: bytearray, build_number: int) -> bool:
+    """Replace 'v2.1.1.1' on the NOT FOR SALE screen with 'FR.2.0.<build>'.
 
     Returns True if the ROM was modified.
     """
-    # Read current tileset and tilemap offsets from the pointer table
-    ts_off = _read_gba_ptr(data, _TILESET_PTR_OFF)
-    tm_off = _read_gba_ptr(data, _TILEMAP_PTR_OFF)
-
-    # Decompress current tileset and tilemap
+    ts_off = _read_gba_ptr(data, _NFS_TILESET_PTR_OFF)
     result = _lz77_decompress(data, ts_off)
     if result is None:
-        raise RuntimeError(f"Failed to decompress tileset at 0x{ts_off:07X}")
+        raise RuntimeError(f"Failed to decompress intro tileset at 0x{ts_off:07X}")
     tileset, _ = result
-    num_tiles_orig = len(tileset) // 32
+    tileset = bytearray(tileset)
 
-    result = _lz77_decompress(data, tm_off)
-    if result is None:
-        raise RuntimeError(f"Failed to decompress tilemap at 0x{tm_off:07X}")
-    tilemap_bytes, _ = result
-    tilemap = bytearray(tilemap_bytes)  # mutable copy
-
-    # Build version string and split into pairs for tiles
-    ver = f"FR.2.0.{build_number}"
-    if len(ver) % 2:
-        ver += " "
-    pairs = [(ver[i], ver[i + 1]) for i in range(0, len(ver), 2)]
-
-    # Create new tiles (appended after the existing tileset tiles)
-    new_tile_data = b"".join(_make_char_tile(a, b) for a, b in pairs)
-    new_tileset = tileset + new_tile_data
-
-    # Tile indices for the new character tiles
-    first_new_idx = num_tiles_orig
-    tile_indices = list(range(first_new_idx, first_new_idx + len(pairs)))
-
-    # Update tilemap: center the version string across cols 10-19
-    num_ver_tiles = len(tile_indices)
-    # Available: _VER_COL_COUNT slots.  Center the string.
-    col_offset = (_VER_COL_COUNT - num_ver_tiles) // 2
-
-    def _tm_entry_off(row: int, col: int) -> int:
-        return (row * _TM_COLS + col) * 2
-
-    for i in range(_VER_COL_COUNT):
-        col = _VER_COL_START + i
-        tile_i = i - col_offset
-        entry_row2 = _tm_entry_off(_VER_ROW2, col)
-        entry_row3 = _tm_entry_off(_VER_ROW3, col)
-
-        if 0 <= tile_i < num_ver_tiles:
-            # Character tile in row 2; blank floor in row 3
-            struct.pack_into("<H", tilemap, entry_row2, tile_indices[tile_i] & 0x3FF)
-            struct.pack_into("<H", tilemap, entry_row3, _BLANK_ROW3)
-        else:
-            # Blank in both rows
-            struct.pack_into("<H", tilemap, entry_row2, _BLANK_ROW2)
-            struct.pack_into("<H", tilemap, entry_row3, _BLANK_ROW3)
-
-    # Compress both new datasets
-    ts_compressed = _lz77_compress(new_tileset)
-    tm_compressed = _lz77_compress(bytes(tilemap))
-
-    # Align to 4-byte boundaries
-    ts_padded = ts_compressed + b"\xFF" * ((-len(ts_compressed)) & 3)
-    tm_padded = tm_compressed + b"\xFF" * ((-len(tm_compressed)) & 3)
-
-    # Find a contiguous free block (0xFF) large enough for both datasets
-    total = len(ts_padded) + len(tm_padded)
-    cursor = _find_free_block(data, total)
-
-    new_ts_off = cursor
-    data[cursor:cursor + len(ts_padded)] = ts_padded
-    cursor += len(ts_padded)
-
-    new_tm_off = cursor
-    data[cursor:cursor + len(tm_padded)] = tm_padded
-
-    # Update the pointer table
-    _write_gba_ptr(data, _TILESET_PTR_OFF, new_ts_off)
-    _write_gba_ptr(data, _TILEMAP_PTR_OFF, new_tm_off)
-
-    return True
-
-
-# ---------------------------------------------------------------------------
-# NOT FOR SALE intro screen patch
-# ---------------------------------------------------------------------------
-
-
-def patch_not_for_sale_version(data: bytearray) -> bool:
-    """Remove 'v2.1.1.1' from the NOT FOR SALE intro screen.
-
-    The NFS screen tilemap (shared by both background layers) has a version
-    row (row 18) where seven specific tile entries render the version string.
-    We copy the corresponding frame-decoration entries from row 16 into row 18
-    so the version text vanishes into the surrounding box border.  Both tilemap
-    pointers (0x260218 and 0x260220) are updated to the new location in free
-    space.  Returns True if the ROM was modified.
-    """
-    tm_rom_off = _read_gba_ptr(data, _NFS_TILEMAP_PTR_A)
-    result = _lz77_decompress(data, tm_rom_off)
-    if result is None:
+    needed = (_VER_TILE_START + _VER_GRID_COLS * _VER_GRID_ROWS) * 32
+    if len(tileset) < needed:
         raise RuntimeError(
-            f"Failed to decompress NFS tilemap at 0x{tm_rom_off:07X}"
+            f"Intro tileset too small ({len(tileset)} bytes) for version band"
         )
-    tilemap_bytes, _ = result
-    tilemap = bytearray(tilemap_bytes)
 
-    for col in _NFS_VER_COLS:
-        frame_entry = struct.unpack_from("<H", tilemap, (16 * 32 + col) * 2)[0]
-        struct.pack_into("<H", tilemap, (_NFS_VER_ROW * 32 + col) * 2, frame_entry)
+    band = _render_version_band(version_string(build_number))
+    _blit_band_to_tiles(tileset, band)
 
-    tm_compressed = _lz77_compress(bytes(tilemap))
-    tm_padded = tm_compressed + b"\xFF" * ((-len(tm_compressed)) & 3)
-    cursor = _find_free_block(data, len(tm_padded))
-    data[cursor : cursor + len(tm_padded)] = tm_padded
-    _write_gba_ptr(data, _NFS_TILEMAP_PTR_A, cursor)
-    _write_gba_ptr(data, _NFS_TILEMAP_PTR_B, cursor)
+    compressed = _lz77_compress(bytes(tileset))
+    padded = compressed + b"\xFF" * ((-len(compressed)) & 3)
+    cursor = _find_free_block(data, len(padded))
+    data[cursor:cursor + len(padded)] = padded
+    _write_gba_ptr(data, _NFS_TILESET_PTR_OFF, cursor)
     return True
 
 
@@ -384,15 +317,9 @@ def main() -> int:
     header_changed = patch_version(data, args.build_number)
 
     try:
-        screen_changed = patch_title_screen_version(data, args.build_number)
-    except Exception as exc:
-        print(f"Title-screen patch failed: {exc}", file=sys.stderr)
-        return 1
-
-    try:
-        nfs_changed = patch_not_for_sale_version(data)
-    except Exception as exc:
-        print(f"NOT FOR SALE patch failed: {exc}", file=sys.stderr)
+        screen_changed = patch_intro_version(data, args.build_number)
+    except Exception as exc:  # noqa: BLE001 — surface a clear CI failure
+        print(f"Intro version patch failed: {exc}", file=sys.stderr)
         return 1
 
     args.rom.write_bytes(data)
@@ -406,10 +333,10 @@ def main() -> int:
         print(f"Header version already 0x{old_version:02X} — no change.")
 
     if screen_changed:
-        print(f"Title screen: version display updated to 'FR.2.0.{args.build_number}'")
-
-    if nfs_changed:
-        print("NOT FOR SALE screen: version text erased (tilemap row 18 patched)")
+        print(
+            "NOT FOR SALE screen: version display updated to "
+            f"'{version_string(args.build_number)}'"
+        )
 
     return 0
 
