@@ -47,5 +47,39 @@ class TestApplyNameFixes(unittest.TestCase):
             self.assertLessEqual(len(encode(old)) + 1, stride, hex(offset))
 
 
+class TestBerryPouchCells(unittest.TestCase):
+    """The Berry Pouch key item shipped in English from centered name cells
+    unreachable by the translation pipeline (absent from both
+    translation_ready.json and the Spanish extraction). "Pochette Baies"
+    (14 glyphs) overflowed the 12-byte name slots and silently fell back to
+    English; this regressed twice. "Sac à Baies" is byte-exact with
+    "Berry Pouch" (11 glyphs), so it can never overflow.
+    """
+
+    CENTERED = (0x3DEED8, 0x87A0B0)
+
+    def test_centered_cells_registered(self):
+        for offset in self.CENTERED:
+            self.assertIn(offset, NAME_FIXES, hex(offset))
+            old, new, _ = NAME_FIXES[offset]
+            self.assertEqual(old, " " * 12 + "Berry Pouch", hex(offset))
+            self.assertEqual(new, " " * 12 + "Sac à Baies", hex(offset))
+
+    def test_replacement_is_byte_exact(self):
+        # Same encoded length => no relocation, no pointer needed, no overflow.
+        for offset in self.CENTERED:
+            old, new, _ = NAME_FIXES[offset]
+            self.assertEqual(len(encode(new)), len(encode(old)), hex(offset))
+
+    def test_centered_cells_patch_in_place(self):
+        for offset in self.CENTERED:
+            old, new, stride = NAME_FIXES[offset]
+            data = _make_cell_rom(offset, old, stride)
+            self.assertEqual(apply_name_fixes(data, {offset: (old, new, stride)}), 1)
+            raw = encode(new)
+            self.assertEqual(bytes(data[offset : offset + len(raw)]), raw)
+            self.assertEqual(data[offset + len(raw)], 0xFF)
+
+
 if __name__ == "__main__":
     unittest.main()
