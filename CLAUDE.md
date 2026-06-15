@@ -189,10 +189,30 @@ make tickets
 - Control codes 2–3 bytes: `FC nn`, `FD nn`, `F8 nn`, `F9 nn`, `F7 nn nn`
 - `{COLOR}X` → `FC 01 NN`; `{LV}` → `0x34`
 
-### combined_fr.txt
-- ~957 duplicate offsets in the file; **last entry wins**
-- Small lowercase-only block near end of file is the **live** block — edits go there
-- Insertion is surgical (never use `csv.writer` — it would reformat 30k lines)
+### combined_fr.txt — SOURCE DE VÉRITÉ UNIQUE POUR LES TRADUCTIONS FR
+
+> **Ce fichier est le seul endroit où corriger du texte français visible en jeu.**
+> Toute correction faite ailleurs (autre repo, JSON intermédiaire, CSV) sera
+> écrasée au prochain `make build-fr`.
+
+Format de chaque ligne : `<offset_hex> <texte_FR>` (offset en hexa, espace, texte)
+
+**Règle des doublons (CRITIQUE)**
+- ~957 offsets sont présents en double dans le fichier
+- `apply_combined_fr.py` lit ligne par ligne avec `mapping[offset] = text` → **la dernière entrée gagne**
+- Le bloc en hexa **minuscule** vers la fin du fichier est la version vivante
+- Toujours éditer/ajouter dans ce bloc minuscule, jamais dans les entrées du haut
+
+**Workflow d'une correction**
+1. Trouver la **dernière** occurrence de l'offset dans `combined_fr.txt` (grep case-insensitive)
+2. Éditer cette ligne (insertion chirurgicale — ne jamais réécrire le fichier entier)
+3. Relancer la chaîne complète : `apply_combined_fr.py --extend` → CSV → JSON → `make build-fr`
+4. Vérifier les octets décodés dans la ROM (pas le fichier — des entrées peuvent être ignorées silencieusement)
+
+**Pièges**
+- Une entrée avec traduction VIDE ou encore anglaise n'est PAS traduite en ROM
+- Une traduction trop longue sans pointeur disponible est silencieusement ignorée
+- Ne jamais sauter `apply_combined_fr.py --extend` : les offsets absents du CSV n'atteignent jamais la ROM
 
 ### Trilingual CSV (CRLF hazard)
 - The CSV file uses CRLF line endings **and** LF inside field values
@@ -218,7 +238,7 @@ make tickets
 
 ## Non-Obvious Gotchas
 
-1. **combined_fr.txt duplicates** — last entry wins; always add to the lowercase block at the bottom, never to the top.
+1. **combined_fr.txt est la SEULE source de vérité FR** — toute correction de texte visible en jeu doit aller ici, pas dans un autre repo ou fichier intermédiaire. Last entry wins : toujours ajouter/corriger dans le bloc hexa minuscule en bas du fichier.
 2. **charmap sync** — Python `text_codec.py` and TypeScript must stay in sync; run `make sync-charmap-check` after any charmap edit.
 3. **test markers matter** — `emulator`, `rom`, `slow`, `stress` gates skip in CI. Fast suite: `-m "not slow and not stress and not emulator and not rom"`.
 4. **fixed tables** — `src/core/fixed_tables.py` lists regions whose addresses must never change. Passing `--allow-relocate` without this guard corrupts species/move name lookups.
