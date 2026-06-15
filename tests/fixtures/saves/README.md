@@ -83,12 +83,31 @@ all msgbox pointers, **and the granted item 0x01B5's name cell** (the FD02
 The give-CS region is byte-identical between the committed ROM and the working
 tree, so no stale-build divergence exists there.
 
-**Reproduction status:** `scripts/repro_give_cs.mts` reaches the kidnap cutscene
-(map `6.12`) reliably and uses a **screenshot-static + position-frozen** freeze
-detector (the correct technique given the broken RAM flags). It cannot yet drive
-*past* the underleveled Ivory/Zeph RNG battle gauntlet with blind input, and
-every memory cheat corrupts the build, so the give-CS box could not be observed
-in-game under freeze detection this pass. To get a definitive in-game verdict,
-an mGBA **savestate captured right before the hillbilly's give-CS** (slot file
-`output/roms/GenedRom-fr.ss<n>`) is needed — then `repro_give_cs.mts` can
-`load<n>` it and freeze-test the box deterministically.
+**Reproduction status (updated, screenshot reopen):** the freeze was reported
+again with a screenshot of the box stuck on the last page of dialogue
+`0x1F3316D` ("Alors, prends cette CS pour aller le voir.").
+
+What this `.srm` actually loads (measured this pass with `scripts/probe_load_givecs.mts`,
+which boots the FR ROM with a COPY of this save and reports map/pos — no memory
+cheats): Continue spawns at map `0.0:26,46`; walking **down** enters map `6.12`
+and the kidnap **battle** begins. The party is underleveled and blind A-mashing
+loses it (observed: Carmache / Grelaçon / Nodulithe fainted, only Fantominus &
+Hariyama left). So this save sits **before** the Ivory/Zeph battles, and the
+give-CS gift is reachable only by *winning* that RNG gauntlet — the documented
+blocker. The mGBA bridge itself works headlessly here (`mgba --script`), so the
+only obstacle is the battle, not the emulator.
+
+**The deterministic verdict (what actually closes this):** static analysis
+proved the entire give-CS path the engine touches is **byte-identical to the
+English ROM** apart from the translated dialogue strings — the event-script
+bytecode (`msgbox 0x1F3316D` → `giveitem 0x01B5` → `callstd 0`), the granted
+item's **whole 44-byte struct** (static name "TM112", *no* runtime move-table
+lookup), the dialogue's in-place slot (uses 465 of 484 bytes, no overflow), and
+the obtain message. English does not freeze here, so a clean FR build cannot
+either. A freeze on the current build is therefore a **stale / divergent ROM**.
+
+Run **`python3 scripts/verify_user_rom_givecs.py <your_rom.gba>`** on the ROM you
+are actually playing: it prints the SHA-256 and reports CLEAN vs DIVERGENT for
+the give-CS region. If it says CLEAN, the freeze is in an older build — rebuild
+with `make build-fr` / re-download the current patch. These invariants are
+pinned as CI guards in `tests/e2e/test_object_gain_sequence.py`.

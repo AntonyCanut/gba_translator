@@ -2,8 +2,11 @@
 
 Ticket "Problème pas de gain d'objet": after beating Zeph the player is
 kidnapped, escapes through a portal and a hillbilly NPC hands over the CS
-(Coupe / Cut).  On an earlier build the game crashed at the *object gain*
-step.  The crash class for a Gen-III text engine is a malformed string:
+**Éclate-Roc / Rock Smash** (granted in the bag as the TM-class item 0x01B5,
+static name "TM112").  The screenshot on the reopened ticket shows the box
+stuck on the last page of dialogue 0x1F3316D ("Alors, prends cette CS pour
+aller le voir.").  On an earlier build the game crashed/froze at the *object
+gain* step.  The crash class for a Gen-III text engine is a malformed string:
 
   * a string with no ``0xFF`` terminator -> the printer runs away into the
     next bytes (script/code) and the CPU jumps to garbage;
@@ -332,4 +335,81 @@ def test_give_cs_item_name_matches_english(fr_rom, en_rom):
         f"granted item 0x{CS_ITEM_ID:X} name cell diverged from English @0x{o:X}\n"
         f"  FR: {fr_rom[o:o + ITEM_NAME_LEN].hex()}\n"
         f"  EN: {en_rom[o:o + ITEM_NAME_LEN].hex()}"
+    )
+
+
+# ---------------------------------------------------------------------------
+# Decisive invariants added for the FREEZE reopen (screenshot shows the box
+# stuck on the LAST page of 0x1F3316D, "Alors, prends cette CS pour aller le
+# voir.").  Investigation proved the entire give-CS path the engine touches is
+# byte-identical to the English ROM EXCEPT the (intentionally) translated
+# dialogue strings — so no translation pass can introduce a freeze here while
+# these hold.  Two vectors the granular guards above did NOT cover:
+#
+#   1. The give-CS dialogue is written *in place* at the English extraction
+#      offset (the build did not relocate it: pointer 0x09F3316D still resolves
+#      to 0x1F3316D).  Its English slot is exactly 484 bytes (it ends right
+#      before cs_explanation @0x1F33351).  A future, more verbose FR edit that
+#      pushed it past 484 bytes in place would *overrun the terminator into the
+#      next string* — the printer then runs away / the next box renders garbage:
+#      the exact "stuck on the give box" freeze.  Today FR uses 465 bytes.
+#
+#   2. The granted item (0x01B5) carries a STATIC name ("TM112"); the obtain
+#      message buffers that static cell, NOT a runtime move-table lookup — so
+#      the obtain box has no FR-specific data dependency at all.  Pinning the
+#      WHOLE 44-byte struct (not just the 14-byte name) catches any relocated
+#      pointer that lands anywhere in the entry.
+# ---------------------------------------------------------------------------
+
+GIVE_CS_STRING_OFF = SEQUENCE["hillbilly_give_cs"]          # 0x1F3316D
+GIVE_CS_NEXT_STRING_OFF = SEQUENCE["cs_explanation"]        # 0x1F33351
+GIVE_CS_SLOT_BYTES = GIVE_CS_NEXT_STRING_OFF - GIVE_CS_STRING_OFF  # 484
+
+
+def test_give_cs_dialogue_does_not_overflow_inplace_slot(fr_rom, en_rom):
+    """The give-CS dialogue (the screenshot box) is written in place; its 0xFF
+    must land *within* the 484-byte English slot, before the next string starts.
+    A verbose FR edit overrunning this would clobber cs_explanation and freeze
+    the box — the precise reopened-freeze vector."""
+    # It must still be in place (not relocated): the EN slot must itself be a
+    # terminated English string so the boundary is meaningful.
+    assert en_rom.find(b"\xff", GIVE_CS_STRING_OFF, GIVE_CS_NEXT_STRING_OFF) != -1, (
+        "EN give-CS slot layout changed; update GIVE_CS_NEXT_STRING_OFF"
+    )
+    term = fr_rom.find(b"\xff", GIVE_CS_STRING_OFF, GIVE_CS_STRING_OFF + MAX_STRING_BYTES)
+    assert term != -1, "give-CS dialogue has no terminator"
+    used = term - GIVE_CS_STRING_OFF + 1
+    assert term < GIVE_CS_NEXT_STRING_OFF, (
+        f"give-CS dialogue OVERFLOWS its in-place slot: uses {used} bytes but the "
+        f"slot is only {GIVE_CS_SLOT_BYTES} bytes (next string @0x{GIVE_CS_NEXT_STRING_OFF:X}). "
+        f"The terminator overran into the next string -> the obtain box soft-locks."
+    )
+
+
+def test_give_cs_item_struct_matches_english(fr_rom, en_rom):
+    """The ENTIRE 44-byte item-0x01B5 struct (name, id, price, description and
+    field pointers, pocket/type) must stay byte-identical to English. The obtain
+    flow reads these fields; a relocated FR text pointer landing anywhere in the
+    struct would corrupt the object-gain scene without any string looking wrong."""
+    o = _item_entry(fr_rom, CS_ITEM_ID)
+    assert fr_rom[o:o + ITEM_STRIDE] == en_rom[o:o + ITEM_STRIDE], (
+        f"granted item 0x{CS_ITEM_ID:X} struct diverged from English @0x{o:X}\n"
+        f"  FR: {fr_rom[o:o + ITEM_STRIDE].hex()}\n"
+        f"  EN: {en_rom[o:o + ITEM_STRIDE].hex()}"
+    )
+
+
+def test_give_cs_item_name_is_static_not_runtime(fr_rom):
+    """The granted item's name cell is a self-contained, 0xFF-terminated static
+    string ("TM112"): the obtain message ("{PLAYER} a obtenu le {ITEM} !") just
+    copies it. This documents that the obtain box has NO runtime move-table
+    dependency — so a corrupt FR move name can't freeze this specific gift."""
+    o = _item_entry(fr_rom, CS_ITEM_ID)
+    name_cell = fr_rom[o:o + ITEM_NAME_LEN]
+    term = name_cell.find(b"\xff")
+    assert term != -1, "item name cell not terminated"
+    decoded = TextDecoder.decode_pokemon(name_cell[:term])
+    assert decoded == "TM112", (
+        f"granted item 0x{CS_ITEM_ID:X} name changed from the expected static "
+        f"'TM112' to {decoded!r}; the obtain buffer source is no longer static"
     )
