@@ -81,5 +81,34 @@ class TestBerryPouchCells(unittest.TestCase):
             self.assertEqual(data[offset + len(raw)], 0xFF)
 
 
+class TestTownMapCells(unittest.TestCase):
+    """The Town Map key item shipped in English ("Town Map") from the same
+    centered name cells as Berry Pouch: read by the bag at base+12
+    (0x3DEE34 / 0x87A00C), absent from translation_ready.json, the Spanish
+    extraction and combined_fr.txt, so neither reinsertion nor the inline pass
+    ever reaches them. "Carte" (5 glyphs) fits the cell with room to spare.
+    """
+
+    CENTERED = (0x3DEE28, 0x87A000)
+
+    def test_centered_cells_registered(self):
+        for offset in self.CENTERED:
+            self.assertIn(offset, NAME_FIXES, hex(offset))
+            old, new, _ = NAME_FIXES[offset]
+            self.assertEqual(old, " " * 12 + "Town Map", hex(offset))
+            self.assertEqual(new, " " * 12 + "Carte", hex(offset))
+
+    def test_centered_cells_patch_in_place(self):
+        # The game reads the name at base+12; after patching, that cell must
+        # decode to "Carte" and be 0xFF-terminated.
+        for offset in self.CENTERED:
+            old, new, stride = NAME_FIXES[offset]
+            data = _make_cell_rom(offset, old, stride)
+            self.assertEqual(apply_name_fixes(data, {offset: (old, new, stride)}), 1)
+            name_cell = offset + 12
+            self.assertEqual(bytes(data[name_cell : name_cell + 5]), encode("Carte"))
+            self.assertEqual(data[name_cell + 5], 0xFF)
+
+
 if __name__ == "__main__":
     unittest.main()
