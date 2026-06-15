@@ -1,9 +1,9 @@
 {
-  "conversion_date": "2026-06-15T13:46:57.723623",
+  "conversion_date": "2026-06-15T13:53:22.046097",
   "source_csv": "2026-01-15_trilingual_translation.csv",
-  "total_translations": 20740,
+  "total_translations": 20742,
   "total_errors": 0,
-  "total_warnings": 16800,
+  "total_warnings": 16798,
   "translations": [
     {
       "offset": 165760,
@@ -20468,10 +20468,10 @@
     {
       "offset": 4040884,
       "original_text": "A package containing a Pokédex\nfor your rival.",
-      "translation": "Colis contenant un Pokédex pour ton\nrival.",
-      "length": 42,
+      "translation": "Paquet contenant un Pokédex pour ton\nrival.",
+      "length": 43,
       "original_length": 46,
-      "padding_used": -4,
+      "padding_used": -3,
       "encoding": "pokemon",
       "category": "dialogue",
       "notes": "",
@@ -84684,6 +84684,30 @@
       "length": 6,
       "original_length": 4,
       "padding_used": 2,
+      "encoding": "pokemon",
+      "category": "other",
+      "notes": "",
+      "too_long": false
+    },
+    {
+      "offset": 8887804,
+      "original_text": "Parcel",
+      "translation": "Colis",
+      "length": 5,
+      "original_length": 6,
+      "padding_used": -1,
+      "encoding": "pokemon",
+      "category": "other",
+      "notes": "",
+      "too_long": false
+    },
+    {
+      "offset": 8887924,
+      "original_text": "            Package",
+      "translation": "Paquet",
+      "length": 6,
+      "original_length": 19,
+      "padding_used": -13,
       "encoding": "pokemon",
       "category": "other",
       "notes": "",
