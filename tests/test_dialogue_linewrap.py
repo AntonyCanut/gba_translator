@@ -2,6 +2,7 @@ import unittest
 
 from src.core.dialogue_linewrap import (
     DEFAULT_MAX_LINE_WIDTH,
+    demote_midsentence_pages,
     is_multiline_layout,
     line_width,
     line_widths,
@@ -267,6 +268,73 @@ class CollapseEmptyBreaksTests(unittest.TestCase):
         from src.core.dialogue_linewrap import collapse_empty_breaks
         text = 'a\nb<0xFA>c<0xFB>d'
         self.assertEqual(collapse_empty_breaks(text), text)
+
+
+class DemoteMidsentencePagesTests(unittest.TestCase):
+    """A <0xFB> page clears the screen; doing so mid-sentence is a bug."""
+
+    def test_midsentence_page_becomes_scroll(self):
+        # The sentence continues past the page break (next page starts
+        # lowercase): clearing the screen here is gratuitous, so the
+        # page is demoted to a scroll.
+        self.assertEqual(
+            demote_midsentence_pages('comment marche<0xFB>le Système.'),
+            'comment marche<0xFA>le Système.',
+        )
+
+    def test_keeps_page_after_sentence_end(self):
+        # "Bon." ends a sentence: the screen clear is a deliberate beat.
+        text = 'Bon.<0xFB>On y va ?'
+        self.assertEqual(demote_midsentence_pages(text), text)
+
+    def test_keeps_page_before_new_sentence(self):
+        # Next page starts with a capital — a fresh utterance or a label
+        # (sign, location name): the page stays a hard boundary.
+        text = 'Marché du Dresseur<0xFB>PLATEAU INDIGO'
+        self.assertEqual(demote_midsentence_pages(text), text)
+
+    def test_keeps_page_ending_with_buffer(self):
+        # A trailing runtime buffer completes the utterance dynamically;
+        # its content is unknown, so the page is left untouched.
+        text = "C'est <0xFD><0x01><0xFB>Voici la suite."
+        self.assertEqual(demote_midsentence_pages(text), text)
+
+    def test_demotes_through_trailing_control_codes(self):
+        # Colour codes at the page tail must not hide the real last
+        # character ("que") from the sentence-boundary test.
+        self.assertEqual(
+            demote_midsentence_pages('tu veux que<0xFC><0x01><0x02><0xFB>jouer.'),
+            'tu veux que<0xFC><0x01><0x02><0xFA>jouer.',
+        )
+
+    def test_leading_codes_on_next_page_dont_hide_lowercase(self):
+        self.assertEqual(
+            demote_midsentence_pages('marche<0xFB><0xFC><0x01><0x02>le jeu.'),
+            'marche<0xFA><0xFC><0x01><0x02>le jeu.',
+        )
+
+    def test_no_page_untouched(self):
+        self.assertEqual(demote_midsentence_pages('A\nB<0xFA>C'), 'A\nB<0xFA>C')
+
+    def test_idempotent(self):
+        text = 'comment marche<0xFB>le Système.'
+        once = demote_midsentence_pages(text)
+        self.assertEqual(demote_midsentence_pages(once), once)
+
+    def test_rewrap_merges_midsentence_page_fluidly(self):
+        # End-to-end: a mid-sentence screen clear no longer survives the
+        # full rewrap — the continuation flows as a scroll instead.
+        text = 'Je vais te montrer comment marche<0xFB>le Système.'
+        result = rewrap(text)
+        self.assertNotIn('<0xFB>', result)
+        # Wording preserved.
+        flat = result.replace('\n', ' ').replace('<0xFA>', ' ')
+        self.assertEqual(flat.split(), text.replace('<0xFB>', ' ').split())
+
+    def test_rewrap_keeps_paced_page(self):
+        # A page after a finished sentence is still a hard boundary.
+        result = rewrap('Oui.\nBon.<0xFB>On y va dès maintenant ?')
+        self.assertIn('Bon.<0xFB>On', result)
 
 
 class ElidedPronounBufferTests(unittest.TestCase):
