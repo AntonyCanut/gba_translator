@@ -120,6 +120,56 @@ class TestHeightPatches(unittest.TestCase):
         self.assertEqual(new[6:], b"\xc0\x46" * 4)
 
 
+class TestWailordBugFix(unittest.TestCase):
+    """Patch 14 fixes the ones-digit in the metres≥10 branch (Wailord only in Gen 3)."""
+
+    def test_bug_fix_patch_present(self):
+        p = next((p for p in PATCHES if p[0] == 0x105994), None)
+        self.assertIsNotNone(p, "Patch 14 (Wailord bug fix) missing from PATCHES list")
+
+    def test_buggy_bytes_are_old(self):
+        p = next(p for p in PATCHES if p[0] == 0x105994)
+        # Old (buggy): ADDS r0,#0xA1 / STRB r0,[r4]  — stores quotient (tens) again
+        self.assertEqual(p[1], b"\xa1\x30\x20\x70", "old bytes should be the buggy sequence")
+
+    def test_fixed_bytes_are_new(self):
+        p = next(p for p in PATCHES if p[0] == 0x105994)
+        # New (fixed): ADDS r1,#0xA1 / STRB r1,[r4]  — stores remainder (ones)
+        self.assertEqual(p[2], b"\xa1\x31\x21\x70", "new bytes should use r1 (remainder)")
+
+    def test_bug_fix_applies_on_synthetic_rom(self):
+        p = next(p for p in PATCHES if p[0] == 0x105994)
+        offset, old, new = p
+        size = offset + len(old) + 4
+        data = bytearray(size)
+        data[offset: offset + len(old)] = old
+        applied = apply_patches(data, [p])
+        self.assertEqual(applied, 1)
+        self.assertEqual(bytes(data[offset: offset + len(new)]), new)
+
+    def test_wailord_height_sim_is_correct(self):
+        """After fix: dm=145 → buffer[0]='1', buffer[1]='4', not '1','1'."""
+        # This simulates the patched Thumb code for Wailord (145 dm):
+        #   metres = 14, tens = 1, ones = 4, decimal = 5
+        dm = 145
+        metres = dm // 10       # 14
+        decimal = dm % 10       # 5
+        tens_m = metres // 10   # 1
+        ones_m = metres % 10    # 4  (the FIXED remainder, not quotient=1)
+
+        buf0 = tens_m + 0xA1    # 0xA2 = '1'
+        buf1 = ones_m + 0xA1    # 0xA5 = '4'  (was 0xA2 = '1' before fix)
+        buf2 = 0xAD             # '.'
+        buf3 = decimal + 0xA1   # 0xA6 = '5'
+        buf4 = 0xE1             # 'm'
+
+        self.assertEqual(buf0, 0xA2, "tens-of-metres digit should be '1'")
+        self.assertEqual(buf1, 0xA5, "ones-of-metres digit should be '4', not '1'")
+        self.assertEqual(buf2, 0xAD, "separator should be '.'")
+        self.assertEqual(buf3, 0xA6, "decimal digit should be '5'")
+        self.assertEqual(buf4, 0xE1, "unit should be 'm'")
+
+
 class TestStringTablePatches(unittest.TestCase):
     def test_ht_renamed_to_ta(self):
         p = next(p for p in PATCHES if p[0] == 0x415F98)

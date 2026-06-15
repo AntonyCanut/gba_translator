@@ -118,6 +118,22 @@ PATCHES: list[tuple[int, bytes, bytes]] = [
     #     displayed value X.Y already equals hg÷10 = kg with no code change.
     #     Trailing bytes zeroed (still within the same 5-byte slot).
     (0x415FA0, b"\xe0\xd6\xe7\xad\xff", b"\xdf\xdb\xff\x00\x00"),
+
+    # 14. Bug-fix: ones-digit of metres in the "metres ≥ 10" branch (4 bytes)
+    #
+    #     The branch at 0x105980 handles Pokémon taller than 9.9 m (only Wailord
+    #     at 145 dm in Gen 3).  After calling sdivide(whole_metres, 10), the
+    #     quotient (tens digit, already stored at buffer[0]) lands in r0 and the
+    #     remainder (ones digit) lands in r1.
+    #
+    #     Original patch-13 code at 0x105994 (written by the earlier session):
+    #       a1 30  ADDS r0, r0, #0xA1   ← BUG: uses quotient r0 (= tens again)
+    #       20 70  STRB r0, [r4]        ← stores tens digit a second time → "11.5m"
+    #
+    #     Fixed code (this patch):
+    #       a1 31  ADDS r1, r1, #0xA1   ← uses remainder r1 (= ones digit)
+    #       21 70  STRB r1, [r4]        ← stores ones digit correctly  → "14.5m"
+    (0x105994, b"\xa1\x30\x20\x70", b"\xa1\x31\x21\x70"),
 ]
 
 
