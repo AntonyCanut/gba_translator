@@ -371,22 +371,23 @@ def test_give_cs_item_name_is_terminated(fr_rom):
 
 
 def test_give_cs_item_name_matches_english(fr_rom, en_rom):
-    """The granted item's name cell must be properly terminated and fit in 14
-    bytes. The FR name is intentionally "CT112" (TM→CT rename); we verify
-    it is still terminated and that no relocated pointer overwrote the cell
-    with garbage (which would corrupt the obtain buffer)."""
+    """The granted item's name cell suffix must match English after the TM/CT prefix.
+
+    The FR build intentionally renames TM items to CT (feat c4fb226), so bytes
+    0-1 of the name cell differ from English by design ("CT" vs "TM").  Bytes
+    2 onwards (the number digits, terminator, and zero padding) must stay
+    byte-identical to English: any divergence there indicates a relocated text
+    pointer corrupted the obtain buffer, which causes the "obtenu le <ITEM>!"
+    box to soft-lock.
+    """
     o = _item_entry(fr_rom, CS_ITEM_ID)
-    name_cell = fr_rom[o:o + ITEM_NAME_LEN]
-    assert b"\xff" in name_cell, (
-        f"granted item 0x{CS_ITEM_ID:X} name cell @0x{o:X} has no 0xFF terminator: "
-        f"{name_cell.hex()} — obtain buffer would run past the name field"
-    )
-    decoded = TextDecoder.decode_pokemon(name_cell[:name_cell.find(b"\xff")])
-    assert decoded == "CT112", (
-        f"granted item 0x{CS_ITEM_ID:X} name cell @0x{o:X} holds {decoded!r} "
-        f"instead of expected 'CT112'\n"
-        f"  FR: {name_cell.hex()}\n"
-        f"  EN: {en_rom[o:o + ITEM_NAME_LEN].hex()}"
+    # Bytes 0-1 differ legitimately: EN has TM prefix, FR has CT prefix.
+    fr_suffix = fr_rom[o + 2:o + ITEM_NAME_LEN]
+    en_suffix = en_rom[o + 2:o + ITEM_NAME_LEN]
+    assert fr_suffix == en_suffix, (
+        f"granted item 0x{CS_ITEM_ID:X} name cell SUFFIX diverged from English @0x{o + 2:X}\n"
+        f"  FR suffix (bytes 2–13): {fr_suffix.hex()}\n"
+        f"  EN suffix (bytes 2–13): {en_suffix.hex()}"
     )
 
 
@@ -439,31 +440,36 @@ def test_give_cs_dialogue_does_not_overflow_inplace_slot(fr_rom, en_rom):
 
 
 def test_give_cs_item_struct_matches_english(fr_rom, en_rom):
-    """The item-0x01B5 struct fields after the name (itemId, price, description
-    and field pointers, pocket/type) must stay byte-identical to English. The
-    obtain flow reads these fields; a relocated FR text pointer landing anywhere
-    in the struct would corrupt the object-gain scene. Only the name cell
-    (bytes 0..ITEM_NAME_LEN-1) is intentionally different (TM112 → CT112)."""
+    """The 44-byte item-0x01B5 struct must match English except for the TM→CT
+    prefix rename (bytes 0-1 of the name cell, feat c4fb226).  Bytes 2 onwards
+    (number digits, terminator, padding, id, price, pointers, pocket/type) must
+    be byte-identical to English.  A relocated FR text pointer landing anywhere
+    in the struct would corrupt the object-gain scene without any string looking
+    wrong."""
     o = _item_entry(fr_rom, CS_ITEM_ID)
-    assert fr_rom[o + ITEM_NAME_LEN:o + ITEM_STRIDE] == en_rom[o + ITEM_NAME_LEN:o + ITEM_STRIDE], (
-        f"granted item 0x{CS_ITEM_ID:X} struct DATA (bytes {ITEM_NAME_LEN}–{ITEM_STRIDE}) "
-        f"diverged from English @0x{o + ITEM_NAME_LEN:X}\n"
-        f"  FR: {fr_rom[o + ITEM_NAME_LEN:o + ITEM_STRIDE].hex()}\n"
-        f"  EN: {en_rom[o + ITEM_NAME_LEN:o + ITEM_STRIDE].hex()}"
+    # bytes 0-1: TM prefix (EN) → CT prefix (FR) — intentional rename
+    fr_tail = fr_rom[o + 2:o + ITEM_STRIDE]
+    en_tail = en_rom[o + 2:o + ITEM_STRIDE]
+    assert fr_tail == en_tail, (
+        f"granted item 0x{CS_ITEM_ID:X} struct diverged from English @0x{o + 2:X} "
+        f"(skipping 2-byte TM→CT prefix)\n"
+        f"  FR tail: {fr_tail.hex()}\n"
+        f"  EN tail: {en_tail.hex()}"
     )
 
 
 def test_give_cs_item_name_is_static_not_runtime(fr_rom):
     """The granted item's name cell is a self-contained, 0xFF-terminated static
-    string ("CT112" after TM→CT rename): the obtain message copies it directly.
-    This documents that the obtain box has NO runtime move-table dependency —
-    so a corrupt FR move name can't freeze this specific gift."""
+    string ("CT112" in FR, after the TM→CT rename in feat c4fb226): the obtain
+    message ("{PLAYER} a obtenu le {ITEM} !") just copies it.  This documents
+    that the obtain box has NO runtime move-table dependency — so a corrupt FR
+    move name can't freeze this specific gift."""
     o = _item_entry(fr_rom, CS_ITEM_ID)
     name_cell = fr_rom[o:o + ITEM_NAME_LEN]
     term = name_cell.find(b"\xff")
     assert term != -1, "item name cell not terminated"
     decoded = TextDecoder.decode_pokemon(name_cell[:term])
     assert decoded == "CT112", (
-        f"granted item 0x{CS_ITEM_ID:X} name expected 'CT112' (static, post TM→CT "
-        f"rename) but found {decoded!r}; the obtain buffer source may no longer be static"
+        f"granted item 0x{CS_ITEM_ID:X} name is {decoded!r}; expected 'CT112' "
+        f"(FR rename of TM112 → CT112, feat c4fb226); the obtain buffer source is no longer static"
     )
