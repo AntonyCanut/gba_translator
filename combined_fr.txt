@@ -330,7 +330,7 @@
 0x19E9E5: Salut !\nJe suis un aide du Prof. Log.\pSi ton Pokédex contient {COLOR}É{STR_VAR_1}{COLOR}Ç\nespèces, je dois te récompenser.\lJe te remettrai une récompense.\pAlors, {PLAYER}, dis-moi.\pAs-tu des données sur\n{COLOR}É{STR_VAR_1}{COLOR}Ç espèces de Pokémon ?
 0x19EABE: sur au moins {STR_VAR_1} types de\nPokémon ?
 0x19EAE4: Super ! Tu as attrapé {COLOR}É{STR_VAR_3}{COLOR}Ç\nespèces !\pFélicitations !\nTiens !
-0x19EB59: Des objets au sol sont cachés.\nUse le {COLOR}ÉCherche-Objet{COLOR}Ç pour les voir.\pprès de toi.\nLa machine est un peu limitée.\pElle ne peut pas donner la\nposition exacte.\pElle indique juste la direction de\nl’objet.\pSerre-toi-en pour t’orienter, puis\ncherche la zone à la main.
+0x19EB59: Des objets au sol sont cachés.\nUse le {COLOR}ÉCherche-Objet{COLOR}Ç pour les voir.\pPrès de toi.\nLa machine est un peu limitée.\pElle ne peut pas donner la\nposition exacte.\pElle indique juste la direction de\nl’objet.\pSerre-toi-en pour t’orienter, puis\ncherche la zone à la main.
 0x19EFE0: Je suis le petit frère du Gourou\nde la Pêche.\pJ’adoooore pêcher !\nJe ne peux pas m’en passer.\pDis-moi, tu aimes pêcher ?
 0x19F05B: Génial ! J’aime ton style.\nJe pense qu’on peut être amis.\pPrends ça et pêche, jeune ami !
 0x19F0B2: {PLAYER} a reçu une Super Canne du\nfrère du Gourou de la Pêche.
@@ -653,7 +653,7 @@
 0x1C594F: Permet de déplacer des objets et\nd’utiliser un objet enregistré.
 0x1C5981: Si tu as besoin d’aide sur le jeu\nou sur les actions,\nappuie sur le bouton L ou R.
 0x1C59D5: Es-tu un garçon ?\nOu une fille ?
-0x1C59F7: tu es une fille ?
+0x1C59F7: Tu es une fille ?
 0x1C5A04: Dans le monde où tu vas entrer,\ntu vivras une grande aventure dont\ntu es le héros.
 0x1C5A6B: Parle aux gens et examine tout,\nque ce soit en ville, sur les\nroutes ou dans les grottes.\nCollecte infos et indices partout.
 0x1C5AEB: Pendant ton aventure, tu prendras\nbeaucoup de décisions.\n\nSouviens-toi, tes actes peuvent\ninfluer et changer le monde autour\nde toi.
@@ -5335,7 +5335,7 @@
 0x720EF7: une brûlure.
 0x720F03: î Réduit de moitié les dégâts
 0x720F27: îUps statut d'évasion de mouvement.
-0x720F41: je risque de rater.
+0x720F41: Je risque de rater.
 0x720F5C: Hauteurs Gelées
 0x720F6D: ld : carte
 0x720F88: CHEMIN BRASIER
@@ -5754,7 +5754,7 @@
 0x776197: C'est une statue du Pokémon\nLégendaire de Glace, Artikodin.\pIl est écrit qu'Artikodin servait\njadis de héraut d'une grande\lobscurité, mais qu'il vit près des\lHauteurs Gelées.
 0x7763EB: Je sais, hein ? La vie est parfois\nsi stressante !
 0x776441: Route 13\p<0x79> Route 4, Volcan Cendreux,\nForêt Lugubre\l<0x7A> Route 14\l<0x7C> Ville de Dehara
-0x77650A: tu es un dresseur de Pokémon\n!
+0x77650A: Tu es un dresseur de Pokémon\n!
 0x776522: Hein ? Je n'ai plus de Pokémon\n!
 0x77653D: Tu vas t'amuser ici.\pCet endroit est comme un labyrinthe.
 0x7765A0: Hmm ? Qu'est-ce que je fais\n?
@@ -5766,7 +5766,7 @@
 0x7768A4: "Qui construirait une ville au\nsommet d'une montagne gelée ?", tu\lEh bien, il y a environ 20 ans, un\pgroupe de Gardiens d'Oiseaux s'est\nréuni et a décidé qu'il lui fallait\lun endroit en hauteur pour entraîner\lses Pokémon.\pAvec l'aide d'un type nommé\n{COLOR}ÉAros{COLOR}Ë et de son\lbâti cette ville en moins d'un an !\pÇa m'étonne de voir ce que les gens\net les Pokémon peuvent accomplir\len travaillant ensemble.\pDis…\pTon visage me rappelle un peu le\nsien…
 0x776AF5: Je t'attendais…
 0x776B0E: Toi non ? Moi\nsi.
-0x7787F5: Pardon, Dresseur, pourrais-tu me\nprêter main-forte, s'il te plaît ?\pun grand festin, et il nous faut\nbeaucoup de miel pour le repas.\lJ'ai déjà recueilli sept pots,\pmais il m'en faut au moins trois de\nplus.\pOn dit qu'on peut en trouver sur des\nApitrini sauvages, mais j'ai peu de\lchance d'en attraper.\pAlors, qu'en dis-tu ?\pPeux-tu attraper trois Apitrini et\nme donner leur miel, s'il te plaît ?
+0x7787F5: Pardon, Dresseur, pourrais-tu me\nprêter main-forte, s'il te plaît ?\pUn grand festin, et il nous faut\nbeaucoup de miel pour le repas.\lJ'ai déjà recueilli sept pots,\pmais il m'en faut au moins trois de\nplus.\pOn dit qu'on peut en trouver sur des\nApitrini sauvages, mais j'ai peu de\lchance d'en attraper.\pAlors, qu'en dis-tu ?\pPeux-tu attraper trois Apitrini et\nme donner leur miel, s'il te plaît ?
 0x778982: Dommage.\pJe vais devoir continuer à chercher\nmoi-même alors.
 0x7789B9: Génial ! Merci d'accepter d'aider\n!\pOn trouve des Apitrini partout au\nParadis Floral, mais ils\lplus souvent dans les {COLOR}Éfleurs\lbleues{COLOR}Ç.\pEt rappelle-toi, il me faut au moins\n{COLOR}É3 pots de Miel{COLOR}Ç.
 0x778A80: Tu les as ! Merci infiniment !\nLaisse-moi te les prendre.
@@ -6763,7 +6763,7 @@
 0x7CEBF6: C’est ce que j’attendrais d’un\nporteur de Mega Evolution !
 0x7CEC2F: Beau travail, {PLAYER}.\pPour m'avoir vaincu une fois de\nplus, je veux que vous preniez ceci.
 0x7CEC72: Ce vieux con de Log m'a rattrapé il\ny a quelque temps.\pIl m'a donné ça et m'a dit que je\ndevrais te le donner la prochaine\lnous nous croiserions.\pIl m'a donné le mien aussi, mais il\nsait que je l'aurais détruit si\lil ne l'avait pas fait…
-0x7CED48: Alors, où vas-tu\nensuite, {PLAYER} ?\p…\pVille de Dehara, hein\n? J'y vais aussi.\pLog a mentionné un gars là-bas qui\nsait traverser l'eau.\pComme vous le savez, j'ai cherché\nmes parents, et mes recherches\lme disent que les Ombres étaient\limpliquées dans leur disparition.\pJ'ai réussi à retrouver les Ombres.\nà les Ruines du Néant, mais je ne\là pied ou en avion.\pSi vous avez également besoin d'un\nmoyen de surfer sur les vagues, vous\lle surfeur de la ville{COLOR}Ë.\pÀ plus tard, {PLAYER}.
+0x7CED48: Alors, où vas-tu\nensuite, {PLAYER} ?\p…\pVille de Dehara, hein\n? J'y vais aussi.\pLog a mentionné un gars là-bas qui\nsait traverser l'eau.\pComme vous le savez, j'ai cherché\nmes parents, et mes recherches\lme disent que les Ombres étaient\limpliquées dans leur disparition.\pJ'ai réussi à retrouver les Ombres.\nÀ les Ruines du Néant, mais je ne\là pied ou en avion.\pSi vous avez également besoin d'un\nmoyen de surfer sur les vagues, vous\lle surfeur de la ville{COLOR}Ë.\pÀ plus tard, {PLAYER}.
 0x7CEF27: Allez faire un peu plus d'espace\ndans votre Cube pour cette Méga
 0x7CEF61: Avez-vous fait de la place dans\nvotre Cube pour la Méga Pierre ?
 0x7CF046: Mes voyages ont-ils été vains ?
@@ -7118,7 +7118,7 @@
 0x7EA9B1: Apparemment pas !
 0x7EA9BC: Continue malgré la douleur !
 0x7EAA1B: Mon génie…
-0x7EAA26: Beaucoup de Pokémon ici profitent\ndu sol électrifié.\ldu terrain.\pÇa signifie que tu pars\ndésavantagé !
+0x7EAA26: Beaucoup de Pokémon ici profitent\ndu sol électrifié.\lDu terrain.\pÇa signifie que tu pars\ndésavantagé !
 0x7EAADB: C'est génial !
 0x7EAAE7: Galavan adore les Électrik, mais il\nne pouvait pas oublier l'Acier.
 0x7EAB7F: J'adore ça !
@@ -8319,7 +8319,7 @@
 0x951120: Baisse Vit. du foe touché.
 0x951140: Se propage au toucher
 0x951160: Objet tenu. Si touché,\nle porteur blesse\nl'attaquant au contact.
-0x9511D0: Objet tenu. Poison soigne.\nles autres prennent des\ndégâts.
+0x9511D0: Objet tenu. Poison soigne.\nLes autres prennent des\ndégâts.
 0x95122F: Vit. + en tempête sable.
 0x951250: Agir en dernier booste.
 0x951270: Toutes cap. touchent.
@@ -20107,7 +20107,7 @@
 0x1F6ED75: Tu es si fort. Je suis\nscié…
 0x1F6ED93: La {COLOR}ÉChrono Ball{COLOR}Ç n’est\npeut-être pas utile au début d’un\lcombat, mais elle est parfaite pour\lles légendaires.
 0x1F6EE15: Oublie les Chrono Balls, la\n{COLOR}ÉMasse Ball{COLOR}Ë est la\lBall top pour les légendaires !\pElles sont lourdes, et la Masse\nBall finit par mieux les\lcapturer qu’une Chrono max.\lTu doutes ?\pRégle Dernière Ball en\pToujours opt. dans le menu\net teste par toi-même.\lTu peux acheter des Masse Balls\pau {COLOR}Émarché{COLOR}Ë.\n
-0x1F6EFA7: Combattre dans la Maison de Combat\n{COLOR}ÉCamomons{COLOR}Ë est un\lsuper pour entraîner vite.\pn’oublie pas de régler l’ordre de\ntes capacités avant de combattre\llà-bas !
+0x1F6EFA7: Combattre dans la Maison de Combat\n{COLOR}ÉCamomons{COLOR}Ë est un\lsuper pour entraîner vite.\pN’oublie pas de régler l’ordre de\ntes capacités avant de combattre\llà-bas !
 0x1F6F052: J’ai entendu dire qu’un vendeur du\nmarché vend des Poké Balls spéciales\limportées tout droit de Johto !
 0x1F6F0B4: Certains jours, j’entends un cri\ntriste résonner entre les caisses.
 0x1F6F0F4: Vous entendez ça ?\pJ'ai entendu le cri de ce Pokémon\ntoute la journée.\pCela semble très triste et\nsolitaire, vous ne trouvez pas ?
@@ -20372,7 +20372,7 @@
 0x1F7488B: Astuces du Dresseur !\pVoyager ensemble rend tes\nPokémon plus amicaux !\pIls peuvent même évoluer ainsi !\nEt si tu es entré au\p{COLOR}ÉPanthéon{COLOR}Á, ces\nPokémon gagnent aussi des {COLOR}ÉExp.\lbonus{COLOR}Á !
 0x1F7496C: Astuces du Dresseur !\pAprès être entré au Panthéon,\ntu peux {COLOR}Édéfiler auto{COLOR}Á\len maintenant\p{R_BUTTON} ! Aussi en New Game+\net en Mode Sandbox.\pNe maintiens jamais {R_BUTTON}\nen lisant les panneaux Astuces !
 0x1F74A5D: Astuces du Dresseur !\pAprès le grand Boum du Portail,\ndes Pokémon rares et puissants\lsont apparus à Borrius ! Si\ptu en mets K.O. ou fuis, il\nrevient si tu rentres\lau\lPanthéon.
-0x1F74B42: Astuces du Dresseur !\pÉvite les Balls standards comme les\nHyper Balls quand tu veux\lcapturer des Pokémon puissants !\pPokémon très {COLOR}Élourd{COLOR}Á ? La\n{COLOR}ÉMasse Ball{COLOR}Á est\lidéale.\pCombat > {COLOR}É10 tours{COLOR}Á ?\npense à la\l{COLOR}ÉChrono Ball{COLOR}Á.\pCombat court et l’adversaire a\nune Vitesse de base\lau-dessus de {COLOR}É100{COLOR}Á, pense à\lla {COLOR}ÉRapide Ball{COLOR}Á.\pCombat court et Pokémon lent,\nessaie de le capturer à\lla nuit avec une {COLOR}ÉSombre Ball{COLOR}Á.\l\pCes quatre Balls sont clés pour\ncapturer vite ces Pokémon !
+0x1F74B42: Astuces du Dresseur !\pÉvite les Balls standards comme les\nHyper Balls quand tu veux\lcapturer des Pokémon puissants !\pPokémon très {COLOR}Élourd{COLOR}Á ? La\n{COLOR}ÉMasse Ball{COLOR}Á est\lidéale.\pCombat > {COLOR}É10 tours{COLOR}Á ?\nPense à la\l{COLOR}ÉChrono Ball{COLOR}Á.\pCombat court et l’adversaire a\nune Vitesse de base\lau-dessus de {COLOR}É100{COLOR}Á, pense à\lla {COLOR}ÉRapide Ball{COLOR}Á.\pCombat court et Pokémon lent,\nessaie de le capturer à\lla nuit avec une {COLOR}ÉSombre Ball{COLOR}Á.\l\pCes quatre Balls sont clés pour\ncapturer vite ces Pokémon !
 0x1F74DC8: Astuces du Dresseur !\pGrâce aux progrès scientifiques,\ntu peux commencer une nouvelle\laventure en {COLOR}ÉMode Sandbox{COLOR}Á !\pIl n’y a pas de post-game, mais\ntu es libre de capturer et\ld’entraîner n’importe quel\lPokémon, et de modifier leurs\lstats facilement ! Les Pokémon ne\psont que des nombres, après\ntout ! … Astuce\psponsorisée par Cube\pCorp.
 0x1F74F46: Astuces du Dresseur !\pTu peux personnaliser les\nmusiques d’exploration et de\lcombat dans les {COLOR}ÉOptions\lAudio{COLOR}Á du {COLOR}ÉMenu Options{COLOR}Á ! Tu peux\pmême appuyer sur {START_BUTTON} pour\nremettre la musique par défaut !
 0x1F75028: Continuer
