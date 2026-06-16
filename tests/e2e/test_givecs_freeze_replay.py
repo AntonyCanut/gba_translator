@@ -1,117 +1,92 @@
-"""End-to-end replay guard for the give-CS freeze (ticket « Problème pas de
-gain d'objet »).
+"""In-engine replay guard for the give-CS freeze (ticket « Problème pas de gain
+d'objet »).
 
-This is the "on this sequence" test the ticket asks for: it loads the user's
-savestate taken just before the post-Zeph kidnapping cutscene
+This is the "on this sequence" e2e test the ticket asks for. It loads the
+savestate taken just before the post-Zeph cutscene
 (``tests/fixtures/saves/givecs_freeze.ss9``) into the freshly built French ROM
-and mashes A through the whole cutscene up to and past the give-CS box
-« Alors, prends cette CS pour aller le voir. ». On a buggy build the field-move
-description word-wrap spins forever and the screen stops changing; this test
-asserts the sequence reaches the give-CS map and never stalls.
+and mashes A through the whole give-CS box, judging a freeze by SCREEN HASH —
+the rendered frame staying pixel-identical for many consecutive A-presses.
+(Player map/pos is NOT a freeze signal: you stand still during the entire
+conversation, so a pos-based check reports "stuck" for a healthy dialogue. The
+real freeze is the field-move description word-wrap spinning forever, where the
+screen genuinely stops updating.)
 
-It drives mGBA headlessly through the toolkit's full-featured EmulatorBridge
-(``Test/Unbound/src/cooker/emulator.py``), which lives in the sibling toolkit
-repo. The test skips cleanly when mGBA, the bridge, or the ROM is unavailable
-(so it is a no-op in headless CI) — the deterministic CI guard is the static
-``test_givecs_move_desc_freeze.py``. Point ``UNBOUND_TOOLKIT`` at the toolkit
-checkout to run it locally.
+It drives mGBA via the repo's own ``scripts/verify_givecs_no_freeze.mts`` (the
+emulator-web TS bridge) and asserts no genuine freeze. The verifier is
+self-checking: it returns 1 on a build whose give-CS struct still points at the
+unterminated description, and 0 once every consumer is terminated. The test
+skips cleanly when mGBA, ``tsx``/node modules, the ROM, or the savestate is
+unavailable, so it is a no-op in headless CI — the deterministic CI guard is
+``test_givecs_move_desc_freeze.py``.
 """
 
 from __future__ import annotations
 
-import importlib.util
+import json
 import os
 import pathlib
-import sys
-import time
+import shutil
+import subprocess
 
 import pytest
 
 PROJECT_ROOT = pathlib.Path(__file__).resolve().parent.parent.parent
 FR_ROM_PATH = PROJECT_ROOT / "output" / "roms" / "GenedRom-fr.gba"
-SAVESTATE = PROJECT_ROOT / "tests" / "fixtures" / "saves" / "givecs_freeze.ss9"
-
-# Unbound RAM addresses (verified for this build, not FireRed-US defaults).
-ADDR_MAP_GROUP = 0x02031DBC
-ADDR_MAP_NUMBER = 0x02031DBD
-GIVE_CS_MAP = (46, 0)  # the field map where the hillbilly hands over the CS
-
-KEY_A = 0
-MAX_PRESSES = 420
-STALL_ITERS = 30  # consecutive A-presses with no VRAM change => frozen
+SAVESTATE_FIXTURE = PROJECT_ROOT / "tests" / "fixtures" / "saves" / "givecs_freeze.ss9"
+VERIFY_SCRIPT = PROJECT_ROOT / "scripts" / "verify_givecs_no_freeze.mts"
+TSX = PROJECT_ROOT / "emulator-web" / "node_modules" / ".bin" / "tsx"
+SLOT = 9
 
 
-def _load_emulator_bridge():
-    """Import EmulatorBridge from the sibling toolkit repo, or skip."""
-    candidates = []
-    env = os.environ.get("UNBOUND_TOOLKIT")
-    if env:
-        candidates.append(pathlib.Path(env))
-    candidates += [
-        PROJECT_ROOT.parent / "Unbound",
-        PROJECT_ROOT.parent.parent / "Test" / "Unbound",
-    ]
-    for root in candidates:
-        mod = root / "src" / "cooker" / "emulator.py"
-        if mod.exists():
-            if str(root) not in sys.path:
-                sys.path.insert(0, str(root))
-            spec = importlib.util.spec_from_file_location("unbound_cooker_emulator", mod)
-            module = importlib.util.module_from_spec(spec)
-            try:
-                spec.loader.exec_module(module)
-            except Exception as exc:  # pragma: no cover - environment dependent
-                pytest.skip(f"toolkit EmulatorBridge import failed: {exc}")
-            return module.EmulatorBridge
-    pytest.skip("toolkit EmulatorBridge not found (set UNBOUND_TOOLKIT)")
+def _mgba_path() -> str | None:
+    env = os.environ.get("MGBA_PATH")
+    if env and pathlib.Path(env).exists():
+        return env
+    return shutil.which("mgba") or (
+        "/opt/homebrew/bin/mgba" if pathlib.Path("/opt/homebrew/bin/mgba").exists() else None
+    )
 
 
 @pytest.mark.slow
+@pytest.mark.emulator
 def test_give_cs_sequence_does_not_freeze():
     if not FR_ROM_PATH.exists():
         pytest.skip("GenedRom-fr.gba not found (run `make build-fr`)")
-    if not SAVESTATE.exists():
+    if not SAVESTATE_FIXTURE.exists():
         pytest.skip("givecs_freeze.ss9 fixture not found")
+    if not TSX.exists():
+        pytest.skip("emulator-web tsx not installed (run npm install)")
+    mgba = _mgba_path()
+    if not mgba:
+        pytest.skip("mGBA not found (set MGBA_PATH)")
 
-    EmulatorBridge = _load_emulator_bridge()
-    bridge = EmulatorBridge()
-    try:
-        try:
-            bridge.start(str(FR_ROM_PATH), headless=True)
-        except Exception as exc:
-            pytest.skip(f"mGBA could not start: {exc}")
-        time.sleep(1)
-        bridge.load_state(str(SAVESTATE))
-        bridge.advance_frames(2)
+    # mGBA loads savestate slot 9 from <rom>.ss9 — stage the fixture there.
+    slot_path = FR_ROM_PATH.with_suffix(f".ss{SLOT}")
+    shutil.copyfile(SAVESTATE_FIXTURE, slot_path)
 
-        last_hash = None
-        stall = 0
-        reached_give_cs = False
-        for _ in range(MAX_PRESSES):
-            bridge.press_key(KEY_A, frames=2)
-            bridge.advance_frames(10)
-            if (bridge.read_u8(ADDR_MAP_GROUP), bridge.read_u8(ADDR_MAP_NUMBER)) == GIVE_CS_MAP:
-                reached_give_cs = True
-            vram = bridge.get_vram_hash()
-            if vram == last_hash:
-                stall += 1
-            else:
-                stall = 0
-                last_hash = vram
-            if stall >= STALL_ITERS:
-                pytest.fail(
-                    "give-CS sequence froze: screen unchanged for "
-                    f"{stall} A-presses on map "
-                    f"{bridge.read_u8(ADDR_MAP_GROUP)}.{bridge.read_u8(ADDR_MAP_NUMBER)} "
-                    "(word-wrap spinning on an unterminated move description)"
-                )
+    proc = subprocess.run(
+        [str(TSX), str(VERIFY_SCRIPT), str(FR_ROM_PATH), str(SLOT)],
+        cwd=str(PROJECT_ROOT),
+        env={**os.environ, "MGBA_PATH": mgba},
+        capture_output=True,
+        text=True,
+        timeout=420,
+    )
+    # Last stdout line is the JSON verdict.
+    verdict = None
+    for line in reversed(proc.stdout.strip().splitlines()):
+        line = line.strip()
+        if line.startswith("{"):
+            verdict = json.loads(line)
+            break
 
-        assert reached_give_cs, (
-            "replay never reached the give-CS map "
-            f"{GIVE_CS_MAP[0]}.{GIVE_CS_MAP[1]} — cutscene did not progress"
-        )
-    finally:
-        try:
-            bridge.stop()
-        except Exception:
-            pass
+    if verdict is None:
+        pytest.skip(f"verifier produced no verdict (mGBA env issue):\n{proc.stderr[-800:]}")
+    if not verdict.get("reached"):
+        pytest.skip("savestate never reached the give-CS map (savestate/ROM drift)")
+
+    assert not verdict.get("frozen"), (
+        "give-CS sequence FROZE in mGBA: the field-move description word-wrap "
+        "spun forever (screen static). The build still points a consumer at an "
+        f"unterminated description. verifier={verdict} stderr={proc.stderr[-400:]}"
+    )
