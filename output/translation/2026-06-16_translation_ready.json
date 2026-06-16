@@ -1,9 +1,9 @@
 {
-  "conversion_date": "2026-06-16T20:40:16.033856",
+  "conversion_date": "2026-06-16T23:41:27.470430",
   "source_csv": "2026-01-15_trilingual_translation.csv",
-  "total_translations": 20745,
+  "total_translations": 20744,
   "total_errors": 0,
-  "total_warnings": 16790,
+  "total_warnings": 16791,
   "translations": [
     {
       "offset": 165760,
@@ -18608,22 +18608,22 @@
     {
       "offset": 4023007,
       "original_text": "Repousse les Pokémon sauvages\nfaibles pendant 200 pas.",
-      "translation": "Empêche les Pokémon faibles\nd'apparaître pendant 200 pas.",
-      "length": 57,
+      "translation": "Empêche les Pokémon faibles\nd'apparaître pendant 200 étapes.",
+      "length": 60,
       "original_length": 54,
-      "padding_used": 3,
+      "padding_used": 6,
       "encoding": "pokemon",
       "category": "description",
       "notes": "",
-      "too_long": false
+      "too_long": true
     },
     {
       "offset": 4023064,
       "original_text": "Repousse les Pokémon sauvages\nfaibles pendant 250 pas.",
-      "translation": "Empêche les Pokémon faibles\nd'apparaître pendant 250 pas.",
-      "length": 57,
+      "translation": "Empêche les Pokémon faibles\nd'apparaître pendant 250 étapes.",
+      "length": 60,
       "original_length": 54,
-      "padding_used": 3,
+      "padding_used": 6,
       "encoding": "pokemon",
       "category": "description",
       "notes": "",
@@ -18632,14 +18632,14 @@
     {
       "offset": 4023196,
       "original_text": "Repousse les Pokémon sauvages\nfaibles pendant 100 pas.",
-      "translation": "Empêche les Pokémon faibles\nd'apparaître pendant 100 pas.",
-      "length": 57,
+      "translation": "Empêche les Pokémon faibles\nd'apparaître pendant 100 étapes.",
+      "length": 60,
       "original_length": 54,
-      "padding_used": 3,
+      "padding_used": 6,
       "encoding": "pokemon",
       "category": "description",
       "notes": "",
-      "too_long": false
+      "too_long": true
     },
     {
       "offset": 4023253,
@@ -41720,14 +41720,14 @@
     {
       "offset": 4292057,
       "original_text": "TM Case",
-      "translation": "Boîtier CT",
-      "length": 10,
+      "translation": "Boîte CT",
+      "length": 8,
       "original_length": 7,
-      "padding_used": 3,
+      "padding_used": 1,
       "encoding": "pokemon",
       "category": "location",
       "notes": "",
-      "too_long": true
+      "too_long": false
     },
     {
       "offset": 4292065,
@@ -47360,10 +47360,10 @@
     {
       "offset": 4310105,
       "original_text": "Hey, everyone!\nDo you all have TMs?<0xFB>A TM, Technical Machine, is an\namazingly great item!<0xFB>It teaches Pokémon a move that\nit may not learn when leveling up!<0xFB>Isn't that just great? What a\nconvenient world we live in!<0xFB>Open the TM Case and check out\nthe TMs you have.<0xFB>You can check them out in detail,\ntoo.",
-      "translation": "Salut tout le monde ! Vous avez des\nCT ?<0xFB>Une CT, Capsule Technique,\nc'est super !<0xFB>Elle apprend à un Pokémon\nune capacité qu'il n'aurait pas.<0xFB>Génial, non ? Quel monde\npratique !<0xFB>Ouvre le Boîtier CT et regarde\nles CT que tu as.<0xFB>Tu peux aussi les examiner en\ndétail.",
-      "length": 263,
+      "translation": "Salut tout le monde ! Vous avez des\nCT ?<0xFB>Une CT, Capsule Technique,\nc'est super !<0xFB>Elle apprend à un Pokémon\nune capacité qu'il n'aurait pas.<0xFB>Génial, non ? Quel monde\npratique !<0xFB>Ouvre la Boîte CT et regarde\nles CT que tu as.<0xFB>Tu peux aussi les examiner en\ndétail.",
+      "length": 261,
       "original_length": 301,
-      "padding_used": -38,
+      "padding_used": -40,
       "encoding": "pokemon",
       "category": "dialogue",
       "notes": "",
@@ -78786,18 +78786,6 @@
       "too_long": false
     },
     {
-      "offset": 8299003,
-      "original_text": "TM98\nfrom the guy!",
-      "translation": "CT98\ndu type !",
-      "length": 14,
-      "original_length": 18,
-      "padding_used": -4,
-      "encoding": "pokemon",
-      "category": "dialogue",
-      "notes": "",
-      "too_long": false
-    },
-    {
       "offset": 8299022,
       "original_text": "If you ever see my brother again,\nplease let him know that I'm still<0xFA>worried about him.",
       "translation": "Si tu revois mon frère,\ndis-lui que je m'inquiète encore<0xFA>pour lui.",
@@ -79292,7 +79280,7 @@
     {
       "offset": 8308656,
       "original_text": "TM16<0xFC><0x13><0x4B><0xFC><0x06>  2 000 Coins",
-      "translation": "CT16{CLEAR_TO}{FONT_SMALL} 2 000 Jetons",
+      "translation": "TM16{CLEAR_TO}{FONT_SMALL} 2 000 Jetons",
       "length": 39,
       "original_length": 22,
       "padding_used": 17,
@@ -79304,7 +79292,7 @@
     {
       "offset": 8308679,
       "original_text": "TM32<0xFC><0x13><0x4B><0xFC><0x06>  3 000 Coins",
-      "translation": "CT32{CLEAR_TO}{FONT_SMALL} 3 000 Jetons",
+      "translation": "TM32{CLEAR_TO}{FONT_SMALL} 3 000 Jetons",
       "length": 39,
       "original_length": 22,
       "padding_used": 17,
@@ -79316,7 +79304,7 @@
     {
       "offset": 8308702,
       "original_text": "TM33<0xFC><0x13><0x4B><0xFC><0x06>  2 000 Coins",
-      "translation": "CT33{CLEAR_TO}{FONT_SMALL} 2 000 Jetons",
+      "translation": "TM33{CLEAR_TO}{FONT_SMALL} 2 000 Jetons",
       "length": 39,
       "original_length": 22,
       "padding_used": 17,
@@ -79328,7 +79316,7 @@
     {
       "offset": 8308725,
       "original_text": "TM58<0xFC><0x13><0x4B><0xFC><0x06>  1 000 Coins",
-      "translation": "CT58{CLEAR_TO}{FONT_SMALL} 1 000 Jetons",
+      "translation": "TM58{CLEAR_TO}{FONT_SMALL} 1 000 Jetons",
       "length": 39,
       "original_length": 22,
       "padding_used": 17,
@@ -79340,7 +79328,7 @@
     {
       "offset": 8308748,
       "original_text": "TM75<0xFC><0x13><0x4B><0xFC><0x06>  4 000 Coins",
-      "translation": "CT75{CLEAR_TO}{FONT_SMALL} 4 000 Jetons",
+      "translation": "TM75{CLEAR_TO}{FONT_SMALL} 4 000 Jetons",
       "length": 39,
       "original_length": 22,
       "padding_used": 17,
@@ -79352,7 +79340,7 @@
     {
       "offset": 8308771,
       "original_text": "TM87<0xFC><0x13><0x4B><0xFC><0x06>  2 000 Coins",
-      "translation": "CT87{CLEAR_TO}{FONT_SMALL} 2 000 Jetons",
+      "translation": "TM87{CLEAR_TO}{FONT_SMALL} 2 000 Jetons",
       "length": 39,
       "original_length": 22,
       "padding_used": 17,
@@ -79364,7 +79352,7 @@
     {
       "offset": 8308794,
       "original_text": "TM90<0xFC><0x13><0x4B><0xFC><0x06>  3 000 Coins",
-      "translation": "CT90{CLEAR_TO}{FONT_SMALL} 3 000 Jetons",
+      "translation": "TM90{CLEAR_TO}{FONT_SMALL} 3 000 Jetons",
       "length": 39,
       "original_length": 22,
       "padding_used": 17,
@@ -124592,10 +124580,10 @@
     {
       "offset": 11796224,
       "original_text": "Un spray qui soigne les blessures.\nRestaure 20 PV <0x16> un Pokémon.",
-      "translation": "Un médicament sous forme de spray.\nDécongèle un Pokémon gelé.",
-      "length": 61,
+      "translation": "Un spray qui soigne les blessures.\nRestaure 20 PV à un Pokémon.",
+      "length": 63,
       "original_length": 63,
-      "padding_used": -2,
+      "padding_used": 0,
       "encoding": "pokemon",
       "category": "dialogue",
       "notes": "",
