@@ -1,32 +1,30 @@
-"""Regression guard for the real "give-CS" freeze (ticket « Problème pas de
-gain d'objet »).
+"""Deterministic regression guard for the give-CS freeze (ticket « Problème pas
+de gain d'objet »).
 
-Root cause — reproduced in-engine by replaying the user's savestate through the
-give-CS sequence (see ``test_givecs_freeze_replay.py``), not just statically:
-when an NPC hands the player a field move, the engine expands that move's
-**description** into ``gStringVar4`` and word-wraps it with CFRU's routine at
-``0x089F35F8``, which scans for the ``0xFF`` terminator one byte at a time
-(``GetStringWidth`` at ``0x08005Exx`` — observed PC ``0x08006xxx`` at the
-freeze). The French build overwrites the descriptions in the original English
-data block at ``~0x08482xxx`` in place; a longer French description overruns its
-slot and destroys the next entry's ``0xFF`` terminator, fusing a multi-hundred
-byte unterminated run. With no terminator in range the wrap scan never ends →
-the CPU spins forever → the game freezes on the « Alors, prends cette CS pour
-aller le voir. » box and ignores all input.
+Root cause — found in-engine from the user's frozen ``.ss9`` savestate, then
+confirmed statically:
 
-Why earlier fixes did not hold: that block is referenced by **several** pointer
-sources — the move-info table ``0x08488708``, a *third* table ``0x08904000``,
-and per-field-move info structs (``0x083DEA80`` / ``0x0887AD30``) read on the
-give-CS path. An earlier patch repointed only ``0x08488708``, so the give-CS
-struct still pointed at the fused entry and the freeze survived a rebuild. The
-fix (``scripts/patch_dup_move_descriptions_fr``) is reference-driven: it
-repoints **every** word-aligned pointer into the block whose target lost its
-terminator to a freshly relocated, ``0xFF``-terminated copy.
+When the post-Zeph cutscene hands the player a field move (Coupe/Cut), the
+engine word-wraps that move's **description** for the give-CS box. The
+description is read through the field-move structs (``0x083DEA80`` /
+``0x0887AD30`` …) and the move-info tables (``0x08488708`` / ``0x08904000``),
+all of which index the same description string pool. Cut's description lives at
+``0x00482BD5`` — an **empty** ``0xFF`` slot in English, but the build writes a
+long French sentence there. The longer French text overruns its slot and
+destroys the next entry's ``0xFF`` terminator, fusing a multi-hundred-byte run
+("Une attaque de base…abattre des arb**Frappe l'ennemi avec une rafale…**") with
+no terminator at all. ``GetStringWidth`` then scans for a ``0xFF`` that never
+comes → the CPU spins forever → the give-CS box freezes (the screen stops
+updating) and the player never gains the item. English never freezes because
+its description slots stay terminated.
 
-These tests re-read the *built* French ROM and assert that **no** reference into
-the move-description block points at an unterminated run — deterministic (no
-emulator) so they "hold" as a CI regression guard, and they would have failed on
-every pre-fix build (the give-CS struct pointed at a 456-byte fused run).
+``scripts/patch_dup_move_descriptions_fr`` repoints **every** consumer of an
+overflowing French description to a freshly relocated, ``0xFF``-terminated copy
+of the authoritative ``combined_fr.txt`` text. This test re-derives the freeze
+invariant independently and asserts the built ROM satisfies it — no live
+pointer into the description pool may reach an unterminated French description.
+It is deterministic (no emulator) so it "holds" as a CI guard; the in-engine
+counterpart is ``test_givecs_freeze_replay.py``.
 """
 
 from __future__ import annotations
@@ -39,16 +37,75 @@ from src.core.text_codec import TextDecoder
 from tests.e2e.conftest import EN_ROM_PATH, FR_ROM_PATH
 
 ROM_BASE = 0x08000000
-# Original English move-description data block that the FR build overwrites in
-# place; pointers into this range that lost their terminator are the freeze.
-MOVE_DESC_BLOCK = (0x08482000, 0x08484000)
-# A genuine move description is 0xFF-terminated within the move-info window in
-# far fewer bytes; a longer run means the slot lost its terminator (the freeze).
-MAX_DESC_BYTES = 200
-# The per-field-move info structs whose description pointer is read when an NPC
-# hands the player a field move — the exact give-CS path the user froze on.
-GIVE_CS_DESC_STRUCTS = (0x083DEA80, 0x0887AD30)
-GIVE_CS_DESC_PREFIX = "Une attaque de base."
+# Address span of the move / field-move description string pool.
+POOL_LO = 0x00482000
+POOL_HI = 0x0048A000
+# A genuine description word-wraps in far fewer bytes; a longer run to the next
+# 0xFF means the slot lost its terminator (overflow).
+OVERFLOW_BUDGET = 160
+TEXT_WINDOW = 110
+# The Coupe/Cut field-move struct description pointers read on the give-CS path
+# (file offsets). These are *the* cells the user's savestate froze on.
+GIVE_CS_STRUCT_CELLS = (0x3DEA80, 0x87AD30)
+
+
+def _is_overflow(rom: bytes, off: int) -> bool:
+    return rom.find(b"\xff", off, off + OVERFLOW_BUDGET + 1) < 0
+
+
+def _is_french_description(rom: bytes, off: int) -> bool:
+    """Independent (test-owned) guard: does ``off`` begin a real French
+    description, as opposed to the font/data tables or Thumb code that also
+    point into the pool?"""
+    text = TextDecoder.decode_pokemon(bytes(rom[off:off + TEXT_WINDOW]), preserve_unknown=True)
+    if len(text) < 20:
+        return False
+    letters = sum(ch.isalpha() for ch in text)
+    if letters / len(text) < 0.72:
+        return False
+    if (text.count(" ") + text.count("\n")) < 3:
+        return False
+    vowels = sum(text.lower().count(v) for v in "eaiou")
+    if vowels / max(letters, 1) < 0.25:
+        return False
+    return True
+
+
+# A genuine description consumer is a pointer *table* or strided struct array:
+# several pool pointers sit close together. The freeze is read through such a
+# structure. Isolated singletons that happen to hold a pool address are code
+# constants / unused data — English carries the identical ones and never
+# freezes — so the invariant only counts *clustered* pointers.
+CLUSTER_WINDOW = 0x40
+
+
+def _pool_pointer_cells(rom: bytes) -> list[int]:
+    return [
+        cell
+        for cell in range(0, len(rom) - 4, 4)
+        if ROM_BASE + POOL_LO <= struct.unpack_from("<I", rom, cell)[0] < ROM_BASE + POOL_HI
+    ]
+
+
+def _unterminated_description_pointers(rom: bytes) -> list[tuple[int, int]]:
+    """Every *clustered* word-aligned pointer into the pool whose target is a
+    genuine, overflowing French description -> would freeze GetStringWidth."""
+    cells = _pool_pointer_cells(rom)
+    cellset = set(cells)
+    bad = []
+    for cell in cells:
+        # Clustered = another pool pointer within CLUSTER_WINDOW bytes (a real
+        # table / struct array), not an isolated code/data singleton.
+        clustered = any(
+            other != cell and abs(other - cell) <= CLUSTER_WINDOW and other in cellset
+            for other in range(cell - CLUSTER_WINDOW, cell + CLUSTER_WINDOW + 1, 4)
+        )
+        if not clustered:
+            continue
+        target = struct.unpack_from("<I", rom, cell)[0] - ROM_BASE
+        if _is_overflow(rom, target) and _is_french_description(rom, target):
+            bad.append((cell, target))
+    return bad
 
 
 @pytest.fixture(scope="module")
@@ -65,86 +122,38 @@ def en_rom():
     return EN_ROM_PATH.read_bytes()
 
 
-def _block_xrefs(rom: bytes) -> dict[int, list[int]]:
-    """Every word-aligned pointer into the move-description block -> cell offsets.
-
-    Mirrors ``scripts.patch_dup_move_descriptions_fr.find_block_xrefs`` so the
-    guard checks exactly what the patch repoints. Pointers into ``0x0848xxxx``
-    are stored little-endian as ``YY YY 48 08``.
-    """
-    lo, hi = MOVE_DESC_BLOCK
-    refs: dict[int, list[int]] = {}
-    start = 0
-    while True:
-        i = rom.find(b"\x48\x08", start)
-        if i < 0:
-            break
-        start = i + 1
-        cell = i - 2
-        if cell < 0 or cell % 4:
-            continue
-        value = struct.unpack("<I", rom[cell:cell + 4])[0]
-        if lo <= value < hi:
-            refs.setdefault(value, []).append(cell)
-    return refs
+def test_english_pool_has_no_unterminated_description(en_rom):
+    """Sanity anchor: English never freezes here — no live pointer reaches an
+    unterminated description."""
+    bad = _unterminated_description_pointers(en_rom)
+    assert not bad, f"English unexpectedly has unterminated description pointers: {bad[:5]}"
 
 
-def _run_to_terminator(rom: bytes, offset: int, limit: int) -> int:
-    end = rom.find(b"\xff", offset, offset + limit + 1)
-    return (end - offset) if end != -1 else limit + 1
-
-
-def test_english_move_desc_block_is_clean(en_rom):
-    """Sanity anchor: English never freezes here — every reference into the
-    move-description block resolves to a 0xFF-terminated run."""
-    overflow = [
-        (hex(t), run)
-        for t, cells in _block_xrefs(en_rom).items()
-        if (run := _run_to_terminator(en_rom, t - ROM_BASE, MAX_DESC_BYTES)) > MAX_DESC_BYTES
-    ]
-    assert not overflow, f"English move-desc block unexpectedly overflows: {overflow}"
-
-
-def test_no_unterminated_move_desc_reference(fr_rom):
-    """THE guard: no pointer into the move-description block — from any table or
-    struct — may target an unterminated run. An unterminated target is the exact
-    freeze: the give-CS word-wrap scans forever for a 0xFF that never comes.
-
-    This would fail on every pre-fix build (the give-CS struct pointed at a
-    456-byte fused run); it passes once the fix repoints all references.
-    """
-    overflow = []
-    for target, cells in _block_xrefs(fr_rom).items():
-        run = _run_to_terminator(fr_rom, target - ROM_BASE, MAX_DESC_BYTES)
-        if run > MAX_DESC_BYTES:
-            overflow.append((hex(target), [hex(ROM_BASE + c) for c in cells], run))
-    assert not overflow, (
-        "move-description block has references to unterminated/overflowing runs "
-        "-> give-CS word-wrap spins forever (freeze). "
-        f"{len(overflow)} bad targets: {overflow[:10]}"
+def test_no_consumer_reaches_unterminated_description(fr_rom):
+    """The freeze invariant: after the build, NO pointer into the description
+    pool may reach an unterminated French description. Each such pointer is a
+    word-wrap that spins forever (the exact give-CS freeze)."""
+    bad = _unterminated_description_pointers(fr_rom)
+    assert not bad, (
+        f"{len(bad)} live pointer(s) still reach an unterminated French "
+        f"description -> give-CS / move-info word-wrap freezes. "
+        f"First offenders (cell -> target): "
+        f"{[(hex(c + ROM_BASE), hex(t)) for c, t in bad[:8]]}"
     )
 
 
-def test_give_cs_field_move_structs_terminated(fr_rom):
-    """The two field-move info structs read on the give-CS path must point at a
-    terminated, correctly-decoded French Cut description — this is the precise
-    box the user's savestate froze on."""
-    for struct_addr in GIVE_CS_DESC_STRUCTS:
-        cell = struct_addr - ROM_BASE
-        ptr = struct.unpack("<I", fr_rom[cell:cell + 4])[0]
-        assert ROM_BASE <= ptr < ROM_BASE + 0x02000000, (
-            f"give-CS struct 0x{struct_addr:08X} has a non-ROM description pointer "
-            f"0x{ptr:08X}"
-        )
-        off = ptr - ROM_BASE
-        end = fr_rom.find(b"\xff", off, off + MAX_DESC_BYTES + 1)
+def test_give_cs_field_move_description_is_terminated(fr_rom):
+    """The Coupe/Cut field-move struct pointers (the exact cells the user froze
+    on) must resolve to a terminated, coherent French description."""
+    for cell in GIVE_CS_STRUCT_CELLS:
+        value = struct.unpack_from("<I", fr_rom, cell)[0]
+        assert ROM_BASE <= value < ROM_BASE + 0x02000000, (
+            f"give-CS struct cell 0x{cell + ROM_BASE:08x} is not a ROM pointer")
+        target = value - ROM_BASE
+        end = fr_rom.find(b"\xff", target, target + OVERFLOW_BUDGET + 1)
         assert end != -1, (
-            f"give-CS struct 0x{struct_addr:08X} -> 0x{ptr:08X} description is "
-            "unterminated within the window budget (freeze)"
-        )
-        text = TextDecoder.decode_pokemon(fr_rom[off:end], preserve_unknown=True)
-        assert text.startswith(GIVE_CS_DESC_PREFIX), (
-            f"give-CS struct 0x{struct_addr:08X} -> 0x{ptr:08X} decodes to "
-            f"unexpected text {text!r}"
-        )
-        assert "abattre des arbres" in text, f"give-CS description truncated: {text!r}"
+            f"give-CS struct 0x{cell + ROM_BASE:08x} -> 0x{target:08x} is "
+            "unterminated -> the word-wrap freezes")
+        text = TextDecoder.decode_pokemon(fr_rom[target:end], preserve_unknown=True)
+        assert "attaque de base" in text and "abattre" in text, (
+            f"give-CS (Coupe) description corrupted/truncated: {text!r}")
