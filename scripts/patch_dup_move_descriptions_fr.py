@@ -1,32 +1,46 @@
 #!/usr/bin/env python3
-"""Repoint the *duplicate* move-description table so the give-CS / move-info
-screen never freezes on an unterminated French string.
+"""Stop the give-CS / move-info freeze by terminating **every** reference to the
+duplicate move-description data block.
 
-Pokémon Unbound keeps **two** move-description pointer tables:
+Pokémon Unbound keeps the move descriptions in several places:
 
-* ``0x0899F190`` — the « Capacités connues » summary table, already re-wrapped
-  and relocated by :mod:`scripts.patch_move_descriptions_fr`.
-* ``0x08488708`` — a second table read by the move-info / give-CS path. The
-  generic builder writes the (longer) French descriptions over the original
-  English slots here, so a description routinely overruns its slot and
-  destroys the **0xFF terminator** of the next entry, fusing a long run of
-  descriptions with no terminator at all (≈720 bytes at 0x0848_2ACD).
+* ``0x0899F190`` — the « Capacités connues » summary table, re-wrapped and
+  relocated by :mod:`scripts.patch_move_descriptions_fr`.
+* a second copy of the descriptions packed contiguously in the original
+  English data block at ``~0x08482xxx``. The generic builder writes the
+  (longer) French descriptions over the original English slots here, so a
+  description routinely overruns its slot and destroys the **0xFF terminator**
+  of the next entry, fusing a long run of descriptions with no terminator at
+  all (≈720 bytes at 0x0848_2ACD).
+
+That block is referenced by **more than one** pointer table/struct:
+
+* ``0x08488708`` — move-info pointer table (346 entries),
+* ``0x08904000`` — a *third* parallel move-description pointer table,
+* per-field-move info structs (e.g. ``0x083DEA80`` / ``0x0887AD30``) whose
+  description pointer field is read when an NPC hands the player a field move
+  (the « give-CS » path).
 
 When the give-CS sequence hands the player a field move, the engine expands
-that move's description into a RAM buffer and word-wraps it with CFRU's
-``0x089F35F8`` routine, which scans for the 0xFF terminator one byte at a
-time (``GetStringWidth`` at ``0x08005Exx``). With no terminator in range the
-scan never ends → the CPU spins forever → the game freezes on the « Alors,
-prends cette CS… » box, ignoring all input. English never freezes because the
-English descriptions all fit their slots and stay terminated.
+that move's description into ``gStringVar4`` and word-wraps it with CFRU's
+``0x089F35F8`` routine, which scans for the 0xFF terminator one byte at a time
+(``GetStringWidth`` at ``0x08005Exx``). With no terminator in range the scan
+never ends → the CPU spins forever (observed PC ``0x08006xxx``) → the game
+freezes on the « Alors, prends cette CS pour aller le voir. » box, ignoring all
+input. English never freezes because the English descriptions all fit their
+slots and stay terminated.
 
-The fix mirrors :mod:`scripts.patch_move_descriptions_fr`: for every entry of
-the duplicate table whose stored string is unterminated (overflowed), take the
-authoritative French text — keyed by the entry's original ROM offset in
-``combined_fr.txt`` (the source of truth) — re-encode it (the encoder always
-appends 0xFF), relocate it into ROM free space and repoint the table cell.
-Termination alone removes the infinite loop; the relocated copy can never run
-into its neighbour again.
+The earlier version of this script repointed **only** ``0x08488708``. The
+give-CS path reads the description through the field-move struct / third table,
+which still pointed into the fused block — so the freeze survived a rebuild.
+
+This version is reference-driven instead of table-driven: it scans the whole
+ROM for every word-aligned pointer into the move-description block, and for
+each *overflowing* target it relocates the authoritative French text (keyed by
+the entry's original ROM offset in ``combined_fr.txt``, re-encoded so the
+encoder appends 0xFF) into free space **once**, then repoints **every**
+reference to that entry. No consumer is left pointing at an unterminated
+string, regardless of which table or struct reads it.
 """
 
 from __future__ import annotations
@@ -43,8 +57,10 @@ from src.core.text_codec import TextEncoder
 from src.core.text_reinserter import FreeSpaceAllocator
 
 ROM_POINTER_BASE = 0x08000000
-DUP_TABLE = 0x08488708          # second move-description pointer table
-DUP_TABLE_LEN = 346             # valid ROM pointers in the table
+# Original English move-description data block that the FR build overwrites in
+# place. Pointers into this range that lost their terminator are what freeze the
+# word-wrap. Bounds are generous; only *overflowing* targets are touched.
+MOVE_DESC_BLOCK = (0x08482000, 0x08484000)
 # A genuine move description fits the move-info window in well under this many
 # bytes; anything longer means the slot lost its 0xFF terminator (overflow).
 OVERFLOW_THRESHOLD = 160
@@ -63,13 +79,6 @@ def load_combined(path: Path) -> dict[int, str]:
     return mapping
 
 
-def _deref(rom: bytes, table_offset: int) -> int | None:
-    value = int.from_bytes(rom[table_offset:table_offset + 4], "little")
-    if ROM_POINTER_BASE <= value < ROM_POINTER_BASE + 0x02000000:
-        return value - ROM_POINTER_BASE
-    return None
-
-
 def _is_overflow(rom: bytes, offset: int) -> bool:
     """True when no 0xFF terminator is reachable within the slot budget."""
     end = rom.find(b"\xff", offset)
@@ -81,37 +90,65 @@ def encode_text(text: str) -> bytes:
     return TextEncoder.encode_pokemon(text.replace("\\n", "\n"))
 
 
+def find_block_xrefs(rom: bytes) -> dict[int, list[int]]:
+    """Map every move-description block target -> list of word-aligned pointer cells.
+
+    Pointers into ``0x0848xxxx`` are stored little-endian as ``YY YY 48 08``, so we
+    only have to look at positions where the high half-word is ``48 08``.
+    """
+    lo, hi = MOVE_DESC_BLOCK
+    refs: dict[int, list[int]] = {}
+    needle = b"\x48\x08"
+    start = 0
+    while True:
+        i = rom.find(needle, start)
+        if i < 0:
+            break
+        start = i + 1
+        cell = i - 2  # the 4-byte pointer begins two bytes before the high half
+        if cell < 0 or cell % 4 != 0:
+            continue
+        value = int.from_bytes(rom[cell:cell + 4], "little")
+        if lo <= value < hi:
+            refs.setdefault(value, []).append(cell)
+    return refs
+
+
 def apply(rom: bytearray, combined: dict[int, str],
           reserved_rom: bytes | None = None) -> dict:
     allocator = FreeSpaceAllocator(rom, reserved_rom=reserved_rom)
-    stats = {"total": 0, "overflow": 0, "relocated": 0,
+    refs = find_block_xrefs(rom)
+    stats = {"targets": 0, "overflow": 0, "relocated": 0, "repointed": 0,
              "already_ok": 0, "no_source": 0, "failed": 0}
+    relocated: dict[int, int] = {}  # original ptr -> new ptr
 
-    for i in range(DUP_TABLE_LEN):
-        cell = DUP_TABLE + i * 4 - ROM_POINTER_BASE
-        target = _deref(rom, cell)
-        if target is None:
-            continue
-        stats["total"] += 1
+    for target in sorted(refs):
+        stats["targets"] += 1
+        offset = target - ROM_POINTER_BASE
 
-        if not _is_overflow(rom, target):
+        if not _is_overflow(rom, offset):
             stats["already_ok"] += 1
             continue
         stats["overflow"] += 1
 
-        text = combined.get(target)
-        if text is None:
-            stats["no_source"] += 1
-            continue
+        if target not in relocated:
+            text = combined.get(offset)
+            if text is None:
+                stats["no_source"] += 1
+                continue
+            encoded = encode_text(text)
+            new_offset = allocator.allocate(len(encoded))
+            if new_offset is None:
+                stats["failed"] += 1
+                continue
+            rom[new_offset:new_offset + len(encoded)] = encoded
+            relocated[target] = new_offset + ROM_POINTER_BASE
+            stats["relocated"] += 1
 
-        encoded = encode_text(text)
-        new_offset = allocator.allocate(len(encoded))
-        if new_offset is None:
-            stats["failed"] += 1
-            continue
-        rom[new_offset:new_offset + len(encoded)] = encoded
-        rom[cell:cell + 4] = struct.pack("<I", new_offset + ROM_POINTER_BASE)
-        stats["relocated"] += 1
+        new_ptr = relocated[target]
+        for cell in refs[target]:
+            rom[cell:cell + 4] = struct.pack("<I", new_ptr)
+            stats["repointed"] += 1
 
     return stats
 
@@ -133,11 +170,12 @@ def main() -> int:
     stats = apply(rom, combined, reserved_rom=reserved)
     rom_path.write_bytes(rom)
 
-    print("✓ Table de descriptions d'attaque dupliquée (anti-freeze give-CS):")
-    print(f"   - Entrées valides:     {stats['total']}")
+    print("✓ Bloc de descriptions d'attaque dupliqué (anti-freeze give-CS):")
+    print(f"   - Cibles référencées:  {stats['targets']}")
     print(f"   - Déjà terminées:      {stats['already_ok']}")
     print(f"   - En débordement:      {stats['overflow']}")
     print(f"   - Relocalisées:        {stats['relocated']}")
+    print(f"   - Pointeurs repointés: {stats['repointed']}")
     if stats["no_source"]:
         print(f"   - Sans source:        {stats['no_source']}")
     if stats["failed"]:
