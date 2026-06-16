@@ -1,7 +1,7 @@
 {
-  "conversion_date": "2026-06-16T20:19:14.856716",
+  "conversion_date": "2026-06-16T20:40:16.033856",
   "source_csv": "2026-01-15_trilingual_translation.csv",
-  "total_translations": 20744,
+  "total_translations": 20745,
   "total_errors": 0,
   "total_warnings": 16790,
   "translations": [
@@ -78786,6 +78786,18 @@
       "too_long": false
     },
     {
+      "offset": 8299003,
+      "original_text": "TM98\nfrom the guy!",
+      "translation": "CT98\ndu type !",
+      "length": 14,
+      "original_length": 18,
+      "padding_used": -4,
+      "encoding": "pokemon",
+      "category": "dialogue",
+      "notes": "",
+      "too_long": false
+    },
+    {
       "offset": 8299022,
       "original_text": "If you ever see my brother again,\nplease let him know that I'm still<0xFA>worried about him.",
       "translation": "Si tu revois mon frère,\ndis-lui que je m'inquiète encore<0xFA>pour lui.",
@@ -79280,7 +79292,7 @@
     {
       "offset": 8308656,
       "original_text": "TM16<0xFC><0x13><0x4B><0xFC><0x06>  2 000 Coins",
-      "translation": "TM16{CLEAR_TO}{FONT_SMALL} 2 000 Jetons",
+      "translation": "CT16{CLEAR_TO}{FONT_SMALL} 2 000 Jetons",
       "length": 39,
       "original_length": 22,
       "padding_used": 17,
@@ -79292,7 +79304,7 @@
     {
       "offset": 8308679,
       "original_text": "TM32<0xFC><0x13><0x4B><0xFC><0x06>  3 000 Coins",
-      "translation": "TM32{CLEAR_TO}{FONT_SMALL} 3 000 Jetons",
+      "translation": "CT32{CLEAR_TO}{FONT_SMALL} 3 000 Jetons",
       "length": 39,
       "original_length": 22,
       "padding_used": 17,
@@ -79304,7 +79316,7 @@
     {
       "offset": 8308702,
       "original_text": "TM33<0xFC><0x13><0x4B><0xFC><0x06>  2 000 Coins",
-      "translation": "TM33{CLEAR_TO}{FONT_SMALL} 2 000 Jetons",
+      "translation": "CT33{CLEAR_TO}{FONT_SMALL} 2 000 Jetons",
       "length": 39,
       "original_length": 22,
       "padding_used": 17,
@@ -79316,7 +79328,7 @@
     {
       "offset": 8308725,
       "original_text": "TM58<0xFC><0x13><0x4B><0xFC><0x06>  1 000 Coins",
-      "translation": "TM58{CLEAR_TO}{FONT_SMALL} 1 000 Jetons",
+      "translation": "CT58{CLEAR_TO}{FONT_SMALL} 1 000 Jetons",
       "length": 39,
       "original_length": 22,
       "padding_used": 17,
@@ -79328,7 +79340,7 @@
     {
       "offset": 8308748,
       "original_text": "TM75<0xFC><0x13><0x4B><0xFC><0x06>  4 000 Coins",
-      "translation": "TM75{CLEAR_TO}{FONT_SMALL} 4 000 Jetons",
+      "translation": "CT75{CLEAR_TO}{FONT_SMALL} 4 000 Jetons",
       "length": 39,
       "original_length": 22,
       "padding_used": 17,
@@ -79340,7 +79352,7 @@
     {
       "offset": 8308771,
       "original_text": "TM87<0xFC><0x13><0x4B><0xFC><0x06>  2 000 Coins",
-      "translation": "TM87{CLEAR_TO}{FONT_SMALL} 2 000 Jetons",
+      "translation": "CT87{CLEAR_TO}{FONT_SMALL} 2 000 Jetons",
       "length": 39,
       "original_length": 22,
       "padding_used": 17,
@@ -79352,7 +79364,7 @@
     {
       "offset": 8308794,
       "original_text": "TM90<0xFC><0x13><0x4B><0xFC><0x06>  3 000 Coins",
-      "translation": "TM90{CLEAR_TO}{FONT_SMALL} 3 000 Jetons",
+      "translation": "CT90{CLEAR_TO}{FONT_SMALL} 3 000 Jetons",
       "length": 39,
       "original_length": 22,
       "padding_used": 17,

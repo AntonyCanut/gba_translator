@@ -371,14 +371,21 @@ def test_give_cs_item_name_is_terminated(fr_rom):
 
 
 def test_give_cs_item_name_matches_english(fr_rom, en_rom):
-    """The granted item's name cell must stay byte-identical to English. The CS
-    is a TM-class item whose display name is built at runtime from the move
-    table; the FR build must not have rewritten this cell (a relocated text
-    pointer landing here would corrupt the obtain buffer)."""
+    """The granted item's name cell must be properly terminated and fit in 14
+    bytes. The FR name is intentionally "CT112" (TM→CT rename); we verify
+    it is still terminated and that no relocated pointer overwrote the cell
+    with garbage (which would corrupt the obtain buffer)."""
     o = _item_entry(fr_rom, CS_ITEM_ID)
-    assert fr_rom[o:o + ITEM_NAME_LEN] == en_rom[o:o + ITEM_NAME_LEN], (
-        f"granted item 0x{CS_ITEM_ID:X} name cell diverged from English @0x{o:X}\n"
-        f"  FR: {fr_rom[o:o + ITEM_NAME_LEN].hex()}\n"
+    name_cell = fr_rom[o:o + ITEM_NAME_LEN]
+    assert b"\xff" in name_cell, (
+        f"granted item 0x{CS_ITEM_ID:X} name cell @0x{o:X} has no 0xFF terminator: "
+        f"{name_cell.hex()} — obtain buffer would run past the name field"
+    )
+    decoded = TextDecoder.decode_pokemon(name_cell[:name_cell.find(b"\xff")])
+    assert decoded == "CT112", (
+        f"granted item 0x{CS_ITEM_ID:X} name cell @0x{o:X} holds {decoded!r} "
+        f"instead of expected 'CT112'\n"
+        f"  FR: {name_cell.hex()}\n"
         f"  EN: {en_rom[o:o + ITEM_NAME_LEN].hex()}"
     )
 
@@ -432,29 +439,31 @@ def test_give_cs_dialogue_does_not_overflow_inplace_slot(fr_rom, en_rom):
 
 
 def test_give_cs_item_struct_matches_english(fr_rom, en_rom):
-    """The ENTIRE 44-byte item-0x01B5 struct (name, id, price, description and
-    field pointers, pocket/type) must stay byte-identical to English. The obtain
-    flow reads these fields; a relocated FR text pointer landing anywhere in the
-    struct would corrupt the object-gain scene without any string looking wrong."""
+    """The item-0x01B5 struct fields after the name (itemId, price, description
+    and field pointers, pocket/type) must stay byte-identical to English. The
+    obtain flow reads these fields; a relocated FR text pointer landing anywhere
+    in the struct would corrupt the object-gain scene. Only the name cell
+    (bytes 0..ITEM_NAME_LEN-1) is intentionally different (TM112 → CT112)."""
     o = _item_entry(fr_rom, CS_ITEM_ID)
-    assert fr_rom[o:o + ITEM_STRIDE] == en_rom[o:o + ITEM_STRIDE], (
-        f"granted item 0x{CS_ITEM_ID:X} struct diverged from English @0x{o:X}\n"
-        f"  FR: {fr_rom[o:o + ITEM_STRIDE].hex()}\n"
-        f"  EN: {en_rom[o:o + ITEM_STRIDE].hex()}"
+    assert fr_rom[o + ITEM_NAME_LEN:o + ITEM_STRIDE] == en_rom[o + ITEM_NAME_LEN:o + ITEM_STRIDE], (
+        f"granted item 0x{CS_ITEM_ID:X} struct DATA (bytes {ITEM_NAME_LEN}–{ITEM_STRIDE}) "
+        f"diverged from English @0x{o + ITEM_NAME_LEN:X}\n"
+        f"  FR: {fr_rom[o + ITEM_NAME_LEN:o + ITEM_STRIDE].hex()}\n"
+        f"  EN: {en_rom[o + ITEM_NAME_LEN:o + ITEM_STRIDE].hex()}"
     )
 
 
 def test_give_cs_item_name_is_static_not_runtime(fr_rom):
     """The granted item's name cell is a self-contained, 0xFF-terminated static
-    string ("TM112"): the obtain message ("{PLAYER} a obtenu le {ITEM} !") just
-    copies it. This documents that the obtain box has NO runtime move-table
-    dependency — so a corrupt FR move name can't freeze this specific gift."""
+    string ("CT112" after TM→CT rename): the obtain message copies it directly.
+    This documents that the obtain box has NO runtime move-table dependency —
+    so a corrupt FR move name can't freeze this specific gift."""
     o = _item_entry(fr_rom, CS_ITEM_ID)
     name_cell = fr_rom[o:o + ITEM_NAME_LEN]
     term = name_cell.find(b"\xff")
     assert term != -1, "item name cell not terminated"
     decoded = TextDecoder.decode_pokemon(name_cell[:term])
-    assert decoded == "TM112", (
-        f"granted item 0x{CS_ITEM_ID:X} name changed from the expected static "
-        f"'TM112' to {decoded!r}; the obtain buffer source is no longer static"
+    assert decoded == "CT112", (
+        f"granted item 0x{CS_ITEM_ID:X} name expected 'CT112' (static, post TM→CT "
+        f"rename) but found {decoded!r}; the obtain buffer source may no longer be static"
     )
