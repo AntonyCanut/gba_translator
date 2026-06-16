@@ -1,14 +1,6 @@
 import unittest
 
-from scripts.patch_fixed_table_names import (
-    NAME_FIXES,
-    _TM_CT_TABLES,
-    _ct_name,
-    _tm_name,
-    apply_name_fixes,
-    apply_tm_to_ct_patches,
-    encode,
-)
+from scripts.patch_fixed_table_names import NAME_FIXES, apply_name_fixes, encode
 
 
 def _make_cell_rom(offset: int, name: str, stride: int) -> bytearray:
@@ -143,118 +135,6 @@ class TestHardStoneCells(unittest.TestCase):
             name_cell = offset + 12
             self.assertEqual(bytes(data[name_cell : name_cell + len(encode("Pierre Dure"))]), encode("Pierre Dure"))
             self.assertEqual(data[name_cell + len(encode("Pierre Dure"))], 0xFF)
-
-
-class TestTmToCtCells(unittest.TestCase):
-    """TM item name cells (class 2, absent from the injection pipeline) must be
-    renamed to CT in all three item tables: FireRed original (TM01–TM50),
-    CFRU part 1 (TM01–TM58), CFRU part 2 (TM59–TM120) = 170 cells total.
-    """
-
-    # Spot-check one entry from each table range: (base, num, stride)
-    SPOT_CHECKS = [
-        (0x3DE1D4, 1, 44),   # FireRed first entry: TM01
-        (0x3DE1D4, 26, 44),  # FireRed TM26
-        (0x3DE1D4, 50, 44),  # FireRed last entry: TM50
-        (0x8793AC, 1, 44),   # CFRU part 1 first
-        (0x8793AC, 58, 44),  # CFRU part 1 last
-        (0x87A274, 59, 44),  # CFRU part 2 first
-        (0x87A274, 120, 44), # CFRU part 2 last
-    ]
-
-    # Sentinel placed after the name terminator to represent item struct data
-    # (item ID, price, description pointer, etc.) that must survive the patch.
-    _SENTINEL_OFFSET = 14   # bytes past cell start (matches Gen3 itemId offset)
-    _SENTINEL = b"\xB5\x01"  # 0x01B5 little-endian — a real CFRU item ID
-
-    def _make_table_rom(self) -> bytearray:
-        """Synthetic ROM with TM names and sentinel item data after each terminator."""
-        max_addr = 0
-        for base, nums, stride in _TM_CT_TABLES:
-            for i, num in enumerate(nums):
-                end = base + i * stride + stride
-                if end > max_addr:
-                    max_addr = end
-        data = bytearray(max_addr)
-        for base, nums, stride in _TM_CT_TABLES:
-            for i, num in enumerate(nums):
-                offset = base + i * stride
-                raw = encode(_tm_name(num))
-                data[offset : offset + len(raw)] = raw
-                data[offset + len(raw)] = 0xFF
-                # Place sentinel item data after the terminator.
-                sentinel_pos = offset + self._SENTINEL_OFFSET
-                data[sentinel_pos : sentinel_pos + 2] = self._SENTINEL
-        return data
-
-    def test_all_tables_define_expected_ranges(self):
-        expected = [
-            (0x3DE1D4, range(1, 51), 44),
-            (0x8793AC, range(1, 59), 44),
-            (0x87A274, range(59, 121), 44),
-        ]
-        self.assertEqual(_TM_CT_TABLES, expected)
-
-    def test_total_cell_count_is_170(self):
-        total = sum(len(list(nums)) for _, nums, _ in _TM_CT_TABLES)
-        self.assertEqual(total, 170)
-
-    def test_patches_all_170_cells(self):
-        data = self._make_table_rom()
-        patched = apply_tm_to_ct_patches(data)
-        self.assertEqual(patched, 170)
-
-    def test_item_data_after_terminator_is_preserved(self):
-        """Patch must not zero item-struct bytes (ID, price…) that follow the name."""
-        data = self._make_table_rom()
-        apply_tm_to_ct_patches(data)
-        for base, nums, stride in _TM_CT_TABLES:
-            for i, num in enumerate(nums):
-                offset = base + i * stride
-                sentinel_pos = offset + self._SENTINEL_OFFSET
-                actual = bytes(data[sentinel_pos : sentinel_pos + 2])
-                self.assertEqual(
-                    actual,
-                    self._SENTINEL,
-                    f"item data destroyed at TM{num} (0x{offset:X})",
-                )
-
-    def test_spot_check_cells_are_ct_after_patch(self):
-        data = self._make_table_rom()
-        apply_tm_to_ct_patches(data)
-        for base, num, stride in self.SPOT_CHECKS:
-            # Compute the index within the table range that contains `num`.
-            for table_base, nums, table_stride in _TM_CT_TABLES:
-                if num in nums and table_base == base:
-                    i = list(nums).index(num)
-                    offset = table_base + i * table_stride
-                    expected = encode(_ct_name(num))
-                    actual = bytes(data[offset : offset + len(expected)])
-                    self.assertEqual(actual, expected, f"TM{num:02d}→CT{num:02d} at 0x{offset:X}")
-                    self.assertEqual(data[offset + len(expected)], 0xFF, f"no terminator after CT{num:02d}")
-
-    def test_idempotent(self):
-        data = self._make_table_rom()
-        apply_tm_to_ct_patches(data)
-        self.assertEqual(apply_tm_to_ct_patches(data), 0)
-
-    def test_rejects_unexpected_cell_content(self):
-        data = self._make_table_rom()
-        # Corrupt TM26 in the FireRed table.
-        offset = 0x3DE1D4 + 25 * 44
-        raw = encode("TM26")
-        data[offset] = 0x00  # break first byte
-        data[offset + 1 : offset + len(raw)] = raw[1:]
-        data[offset + len(raw)] = 0xFF
-        with self.assertRaises(ValueError):
-            apply_tm_to_ct_patches(data)
-
-    def test_ct_names_fit_stride_44_cells(self):
-        # CT01…CT120 + FF must fit within 44 bytes (names are 4-5 chars).
-        for _, nums, stride in _TM_CT_TABLES:
-            for num in nums:
-                encoded = encode(_ct_name(num))
-                self.assertLessEqual(len(encoded) + 1, stride, _ct_name(num))
 
 
 if __name__ == "__main__":

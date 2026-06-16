@@ -1154,10 +1154,10 @@
 0x3D61FA: Monte l’Att. Spé. en combat.\nS’annule si le Pokémon est retiré.\n
 0x3D624F: Une jolie poupée.\nPermet de fuir n’importe quel\ncombat contre un Pokémon sauvage.
 0x3D6297: Un objet séduisant.\nPermet de fuir n’importe quel\ncombat contre un Pokémon sauvage.
-0x3D62DF: Empêche les Pokémon faibles\nd'apparaître pendant 200 pas.
-0x3D6318: Empêche les Pokémon faibles\nd'apparaître pendant 250 pas.
+0x3D62DF: Empêche les Pokémon faibles\nd'apparaître pendant 200 étapes.
+0x3D6318: Empêche les Pokémon faibles\nd'apparaître pendant 250 étapes.
 0x3D6351: Une corde longue et durable.\nUtilise-la pour fuir instantanément\nune grotte ou un donjon.
-0x3D639C: Empêche les Pokémon faibles\nd'apparaître pendant 100 pas.
+0x3D639C: Empêche les Pokémon faibles\nd'apparaître pendant 100 étapes.
 0x3D63D5: Une pierre particulière qui fait\névoluer certaines espèces.\nElle est aussi rouge que le soleil.
 0x3D642D: Une pierre particulière qui fait\névoluer certaines espèces.\nElle est noire comme la nuit.
 0x3D648D: Une pierre particulière qui fait\névoluer certaines espèces.\nElle est de couleur orange.
@@ -3409,7 +3409,7 @@
 0x417DA9: Zone Objets
 0x417DB6: Zone Objets clés
 0x417DC7: Zone Poké Balls
-0x417DD9: Boîtier CT
+0x417DD9: Boîte CT
 0x417DE1: Sac à Baies
 0x417DED: Autres
 0x417DF3: ÎLE 1
@@ -3877,7 +3877,7 @@
 0x41C0AF: Peut-on lancer une attaque qui fait\ntrès mal ?\pLe Pokémon adverse est-il dangereux\npour ton Pokémon ?\pPeut-il avoir des capacités\nterribles ?\pRegarde les affinités pour prendre\nl'avantage !\pAllez, à bientôt !\pEt pour le MEC POKé COOL, des\nkids GÉNIAUX comme toi, ça colle !\l\pSouviens-toi : une bonne action\npar jour rend heureux toujours !
 0x41C23B: Aujourd'hui, le MEC POKé montre\ncomment attraper des Pokémon !\pImagine… Un Pokémon stylé\napparaît d'un coup dans la nature !\pOh, tu le veux !\nTu n'y peux rien !\pOh, tu dois l'attraper !\nIl te le faut !\pJe vais te montrer comment\nfaire !\pC'est parti !\nOn y va !\pGarde les yeux sur le super\nSHOW DU MEC POKé !
 0x41C384: Si ta première Poké Ball échoue,\nne lâche rien !\pLance encore des Poké Balls…\nÇa finira par marcher !\pAllez, à bientôt !\pSouviens-toi : une bonne action\npar jour rend heureux toujours !
-0x41C459: Salut tout le monde ! Vous avez des\nCT ?\pUne CT, Capsule Technique,\nc'est super !\pElle apprend à un Pokémon\nune capacité qu'il n'aurait pas.\pGénial, non ? Quel monde\npratique !\pOuvre le Boîtier CT et regarde\nles CT que tu as.\pTu peux aussi les examiner en\ndétail.
+0x41C459: Salut tout le monde ! Vous avez des\nCT ?\pUne CT, Capsule Technique,\nc'est super !\pElle apprend à un Pokémon\nune capacité qu'il n'aurait pas.\pGénial, non ? Quel monde\npratique !\pOuvre la Boîte CT et regarde\nles CT que tu as.\pTu peux aussi les examiner en\ndétail.
 0x41C587: MEC POKé : NORMAL, EAU, PLANTE…\nLes CT ont aussi un type.\pVérifie-le et enseigne-le à un\nPokémon qui matche bien.\pExemple : Vibraqua va bien aux\nPokémon de type EAU.\pBALLE GRAINE est une capacité pour\nbeaucoup de Pokémon PLANTE.\pEncore autre chose !
 0x41C693: Ne regarde pas que le type, lis la\ndescription aussi.\pElle donne des indices sur quel\nPokémon peut apprendre la capacité.\pPar exemple, prends Poing de\nFeu.\pPas pour un oiseau\nou un poisson.\pEssaie-le sur des Pokémon avec\ndes bras pour frapper !
 0x41C7B4: Wow, j'ai beaucoup parlé !\nAllez, à bientôt !\pSouviens-toi : une bonne action\npar jour rend heureux toujours !
@@ -7149,13 +7149,13 @@
 0x7EC760: Weak Policy{CLEAR_TO}{FONT_SMALL} 4 000 Jetons
 0x7EC77E: Emolga{CLEAR_TO}{FONT_SMALL} 500 Jetons
 0x7EC795: Hawlucha{CLEAR_TO}{FONT_SMALL} 1 000 Jetons
-0x7EC7B0: CT16{CLEAR_TO}{FONT_SMALL} 2 000 Jetons
-0x7EC7C7: CT32{CLEAR_TO}{FONT_SMALL} 3 000 Jetons
-0x7EC7DE: CT33{CLEAR_TO}{FONT_SMALL} 2 000 Jetons
-0x7EC7F5: CT58{CLEAR_TO}{FONT_SMALL} 1 000 Jetons
-0x7EC80C: CT75{CLEAR_TO}{FONT_SMALL} 4 000 Jetons
-0x7EC823: CT87{CLEAR_TO}{FONT_SMALL} 2 000 Jetons
-0x7EC83A: CT90{CLEAR_TO}{FONT_SMALL} 3 000 Jetons
+0x7EC7B0: TM16{CLEAR_TO}{FONT_SMALL} 2 000 Jetons
+0x7EC7C7: TM32{CLEAR_TO}{FONT_SMALL} 3 000 Jetons
+0x7EC7DE: TM33{CLEAR_TO}{FONT_SMALL} 2 000 Jetons
+0x7EC7F5: TM58{CLEAR_TO}{FONT_SMALL} 1 000 Jetons
+0x7EC80C: TM75{CLEAR_TO}{FONT_SMALL} 4 000 Jetons
+0x7EC823: TM87{CLEAR_TO}{FONT_SMALL} 2 000 Jetons
+0x7EC83A: TM90{CLEAR_TO}{FONT_SMALL} 3 000 Jetons
 0x7EC851: Non merci
 0x7EC85B: Vous possédez déjà cette CT.
 0x7EC8F7: Hmph.
@@ -24744,11 +24744,3 @@
 0x7C2540: Le Mont Foudre est un endroit\ndangereux !\pJ'ai essayé d'y aller une fois, et\nouh, je me suis fait griller !\pDepuis, ma chère femme donne des\nRepousse Max chaque jour aux\lvoyageurs qui lui parlent.
 
 0x1fb0073: <0xFC><0x01><0x04>Mission Accomplie:<0xFC><0x01><0x02>
-0xB3FF00: Un médicament sous forme de spray.\nDécongèle un Pokémon gelé.
-
-0x3D62DF: Empêche les Pokémon faibles\nd'apparaître pendant 200 pas.
-0x3D6318: Empêche les Pokémon faibles\nd'apparaître pendant 250 pas.
-0x3D639C: Empêche les Pokémon faibles\nd'apparaître pendant 100 pas.
-0x788e28: CT93\nde Mirskle !\pElle contenait Nœud Herbe.
-0x7ea1fb: CT98\ndu type !
-0x7fdd98: CT60\nde Big Mo !

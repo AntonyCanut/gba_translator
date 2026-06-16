@@ -54,7 +54,7 @@ SPANISH_BUILD := $(ROM_OUT_DIR)/GenedRom-es.gba
 .DEFAULT_GOAL := pipeline
 
 .PHONY: pipeline verify-roms extract extract-en extract-es diff build-es build-fr validate-es trilingual-csv \
-	test test-python-fast test-python test-vitest test-playwright test-all \
+	test test-python-fast test-python test-rom test-vitest test-playwright test-all \
 	sync-charmap sync-charmap-check install install-playwright lint tickets report \
 	clean help
 
@@ -158,6 +158,8 @@ build-fr: $(ENGLISH_EXTRACT) $(SPANISH_EXTRACT) $(BUILD_SCRIPT)
 	@$(PYTHON) $(PATCH_DUP_MOVE_DESC_FR_SCRIPT) \
 		--rom $(FR_BUILD) \
 		--combined combined_fr.txt
+	@echo "✓ FR ROM built — vérification des traductions de lieux..."
+	@$(PYTHON) -m pytest tests/test_location_names_fr.py -q --tb=short
 
 validate-es: $(SPANISH_BUILD) $(VALIDATE_SCRIPT)
 	@$(PYTHON) $(VALIDATE_SCRIPT) \
@@ -180,6 +182,9 @@ test-python-fast:
 
 test-python:
 	@$(PYTHON) -m pytest tests/ -m "not emulator and not stress and not benchmark and not rom" -v
+
+test-rom:
+	@$(PYTHON) -m pytest tests/ -m rom -v
 
 test-vitest:
 	@cd emulator-web && npx vitest run
@@ -234,6 +239,7 @@ help:
 	@echo "    make test            - Alias for test-python-fast"
 	@echo "    make test-python-fast - pytest rapide (unit, sans benchmarks/stress/e2e/emulator)"
 	@echo "    make test-python     - pytest standard (sans emulator/stress/benchmark)"
+	@echo "    make test-rom        - Vérification des traductions dans la ROM buildée (pytest -m rom)"
 	@echo "    make test-vitest     - Vitest (emulator-web)"
 	@echo "    make test-playwright - Playwright E2E"
 	@echo "    make test-all        - test-python-fast + test-vitest + test-playwright"

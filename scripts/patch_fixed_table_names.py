@@ -56,6 +56,13 @@ NAME_FIXES = {
     # "Pierre Dure" (11 glyphs) fits the stride-26 cell (12 + 11 + FF + 2 pad).
     0x3DD32C: (" " * 12 + "Hard Stone", " " * 12 + "Pierre Dure", 26),
     0x878504: (" " * 12 + "Hard Stone", " " * 12 + "Pierre Dure", 26),
+    # TM Case key item: same class-2 structure. The cell starts at offset+0 with
+    # 12 CFRU space-bytes (0x00) followed by "TM Case" + FF, stride 26.
+    # The pipeline entries at 0x4166D3 and 0x417DD9 handle dialogue references;
+    # the game reads the bag-name from these fixed cells (absent from the JSON
+    # and the Spanish extraction). "Boîte CT" (8 glyphs) fits the 26-byte cell.
+    0x3DEEAC: (" " * 12 + "TM Case", " " * 12 + "Boîte CT", 26),
+    0x87A084: (" " * 12 + "TM Case", " " * 12 + "Boîte CT", 26),
 }
 
 

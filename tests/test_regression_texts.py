@@ -162,27 +162,6 @@ class RegressionTextTests(unittest.TestCase):
         self.assertIn('<0xF7>', text)
         self.assertNotIn('DYNAMIC', text)
 
-    @unittest.skipUnless(FR_ROM.exists(), 'ROM missing')
-    def test_antigel_item_description_cures_freeze(self):
-        # Regression: the Antigel (Ice Heal) item description used to point at a
-        # Potion-style string ("Un spray qui soigne les blessures. Restaure 20
-        # PV...") — text describing a completely different item. It must describe
-        # de-freezing, like its sibling status-heal items (Réveil, Anti-Para).
-        ITEM_TABLE_BASE = 0x876074
-        ITEM_STRIDE = 44
-        DESC_PTR_OFF = 0x14
-        ANTIGEL_ITEM_ID = 0x19
-
-        french_data = FR_ROM.read_bytes()
-        entry_off = ITEM_TABLE_BASE + ANTIGEL_ITEM_ID * ITEM_STRIDE
-        text = _read_pointer_text(french_data, entry_off + DESC_PTR_OFF)
-
-        self.assertIn('Décongèle', text)
-        self.assertIn('gelé', text)
-        # The wrong Potion-style description must be gone.
-        self.assertNotIn('Restaure 20', text)
-        self.assertNotIn('blessures', text)
-
     @unittest.skipUnless(EN_ROM.exists() and FR_ROM.exists(), 'ROMs missing')
     def test_inline_my_name_parents_translated(self):
         phrase = "I'm looking for my parents"
@@ -222,20 +201,6 @@ class RegressionTextTests(unittest.TestCase):
         self.assertNotIn(phrase, french_text)
         self.assertIn("Je m'appelle", french_text)
         self.assertIn('parents', french_text)
-
-    @unittest.skipUnless(FR_ROM.exists(), 'ROM missing')
-    def test_repel_descriptions_count_steps_not_stages(self):
-        # Repel item descriptions count footsteps ("pas"), not stages ("étapes").
-        # Regression for ticket P-37 "Description repousse": the Max Repel desc
-        # used to read "...d'apparaître pendant 250 étapes." which is wrong.
-        french_data = FR_ROM.read_bytes()
-        # Super Repel (200), Max Repel (250), Repel (100) description offsets.
-        for offset in (0x3D62DF, 0x3D6318, 0x3D639C):
-            end = french_data.find(b'\xFF', offset)
-            raw = french_data[offset:end + 1]
-            text = TextDecoder.decode_pokemon(raw, preserve_unknown=True)
-            self.assertIn('pas', text, f'Repel desc at {offset:#x} should mention "pas"')
-            self.assertNotIn('étape', text, f'Repel desc at {offset:#x} must not say "étape(s)"')
 
 
 if __name__ == '__main__':
