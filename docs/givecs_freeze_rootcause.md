@@ -1,90 +1,81 @@
 # Give-CS freeze — root cause and fix
 
 Ticket: **« Problème pas de gain d'objet »** (T-23). After beating Zeph the
-player is handed a field-move CS by a hillbilly NPC; on the French build the
-game **freezes** on the box « Alors, prends cette CS pour aller le voir. » and
-ignores all input. English never freezes.
+player is kidnapped, escapes, and a hillbilly NPC hands over a field-move CS; on
+the French build the game **freezes** on the box « Alors, prends cette CS pour
+aller le voir. » and ignores all input. English never freezes.
 
-## How it was found
+## How it was finally reproduced (and why earlier passes failed)
 
-The user supplied a **savestate taken on the frozen box**
-(`tests/fixtures/saves/givecs_freeze.ss1`, mGBA PNG savestate of the playable
-build `output/roms/GenedRom-fr.gba`, CRC `0x55fd4d49`). Loading it in mGBA and
-sampling the CPU showed the game is **hung**, not crashed:
+The user supplied a savestate taken **just before** the post-Zeph cutscene
+(`tests/fixtures/saves/givecs_freeze.ss9`). Loading it into the built French ROM
+and mashing A replays the whole kidnapping cutscene **without the RNG battle**
+that had blocked every earlier headless attempt — a deterministic entry point at
+last.
 
-- All `gMain` callbacks are NULL and the game state never changes; pressing A
-  does nothing — the screen stays on the box forever.
-- The PC spins permanently in `0x08005Exx–0x08006120`. Disassembly identifies
-  this as the engine's **`GetStringWidth`** routine: it walks a string one byte
-  at a time and stops only when it reads the `0xFF` terminator
-  (`0x08006100 cmp r0,#0xFF`).
-- The stack return address `0x089F3632` is inside a CFRU **word-wrap** routine
-  (`0x089F35F8`) that copies a source string into a stack buffer and repeatedly
-  calls `GetStringWidth` to break it into lines that fit a 195 px window.
+Mashing A reaches the give-CS box on map `46.0` and **freezes there**:
 
-The buffer being wrapped had **no `0xFF` terminator within 160+ bytes** and
-decoded to French **move descriptions** — including *« Une attaque de base.
-Elle peut être utilisée pour abattre des arbres… »*, the field description of
-the CS (Cut/Coupe) being received. With no terminator in range the wrap scan
-never ends → infinite loop → freeze.
+- The text printer's `currentChar` stops advancing and the screen stops changing.
+- The CPU spins in the engine's **`GetStringWidth`** routine (sampled PC
+  `0x08006xxx`), which walks a string one byte at a time until it reads `0xFF`.
+- `gStringVar4` (the display buffer, `0x02021D18`) contains **fused, unterminated
+  move descriptions** (Cut → Gust → Wing Attack → Ally Switch …) with **no `0xFF`
+  in 900+ bytes**. The wrap routine at `0x089F35F8` scans forever → freeze.
 
-Injecting a single `0xFF` into that buffer live (via the bridge `WRITE`
-command) makes the PC leave the wrap region — confirming termination is what
-releases the loop.
+This was reproduced on the *committed* "fixed" ROM, proving the earlier fix did
+not hold. Earlier passes only ever inspected the give-CS box text statically
+(byte-clean) or reached the box without being able to *press through* it.
 
 ## The defect (pure translation data)
 
-Unbound keeps **two** move-description pointer tables:
+The French build overwrites the move descriptions in the original English data
+block at `~0x08482xxx` **in place**. A longer French description overruns its
+fixed slot and destroys the next entry's `0xFF` terminator, fusing a
+multi-hundred-byte run with no terminator (e.g. 720 bytes at `0x0848_2ACD`,
+456 bytes at `0x0848_2BD5` = the Cut description handed out by the give-CS).
 
-| Table | Used by | State |
-|-------|---------|-------|
-| `0x0899F190` | « Capacités connues » summary | re-wrapped/relocated by `patch_move_descriptions_fr.py` (clean) |
-| `0x08488708` | move-info / **give-CS** path | **duplicate, never repointed** |
+That block is referenced by **several** pointer sources:
 
-The generic builder writes the longer French descriptions over the original
-English slots referenced by the **duplicate** table. A French description
-overruns its slot and overwrites the **next entry's `0xFF` terminator**, fusing
-a long run of descriptions with no terminator at all (≈720 bytes at
-`0x0848_2ACD`). Measured on the three artifacts:
+| Reference | Used by | Earlier state |
+|-----------|---------|---------------|
+| `0x0899F190` | « Capacités connues » summary | relocated by `patch_move_descriptions_fr` |
+| `0x08488708` | move-info table | repointed by the **first** version of `patch_dup_move_descriptions_fr` |
+| `0x08904000` | a **third** move-description table | **never repointed** |
+| `0x083DEA80`, `0x0887AD30` | per-field-move info structs (**give-CS path**) | **never repointed** |
 
-- English duplicate table: **0** unterminated entries → no freeze.
-- French build: **57–72** unterminated/overflowing entries (idx 6 =
-  `0x0848_2BD5` = the give-CS Cut description) → freeze.
-
-The give-CS event bytecode, the box `0x1F3316D` and the item struct are all
-byte-identical to English (verified by `test_object_gain_sequence.py`); the
-freeze is **only** the duplicate description table. This corrects the earlier
-conclusion that the freeze was not a translation-data problem.
+The earlier fix repointed **only** `0x08488708`. The give-CS path reads the
+description through the field-move struct (`0x083DEA80` → `0x0848_2BD5`), which
+still pointed at the fused run — so the freeze survived a rebuild. This is the
+same duplicate-pointer class as the summary-label bug: **every** copy of a
+pointer must be repointed.
 
 ## The fix
 
-`scripts/patch_dup_move_descriptions_fr.py` (run last in `make build-fr`):
+`scripts/patch_dup_move_descriptions_fr.py` (run last in `make build-fr`) is now
+**reference-driven** instead of table-driven:
 
-1. For every entry of table `0x08488708` whose stored string is unterminated
-   (no `0xFF` within 160 bytes),
-2. takes the authoritative French text keyed by the entry's original ROM offset
-   in `combined_fr.txt` (the source of truth),
-3. re-encodes it (the encoder always appends `0xFF`), relocates it into ROM free
-   space, and repoints the table cell.
+1. Scan the whole ROM for every word-aligned pointer into the move-description
+   block `[0x08482000, 0x08484000)`.
+2. For each target that is *overflowing* (no `0xFF` within 160 bytes), relocate
+   the authoritative French text — keyed by the entry's original ROM offset in
+   `combined_fr.txt` — into free space **once** (the encoder appends `0xFF`).
+3. Repoint **every** reference to that target (tables *and* field-move structs)
+   to the relocated, terminated copy.
 
-Termination alone removes the infinite loop; a relocated, terminated string can
-never run into its neighbour again. This is the same duplicate-pointer-table
-class as the summary-screen labels fix — both copies of a pointer table must be
-repointed.
+No consumer is left pointing at an unterminated string, regardless of which
+table or struct reads it.
 
 ### Verification
 
-- `scripts/patch_dup_move_descriptions_fr.py` relocates all 68 overflowing
-  entries into genuine `0xFF` free space; content byte-matches the authoritative
-  source; no relocations overlap; table `0x0899F190` and all other bytes are
-  untouched.
-- After patching: **0** unterminated entries in `0x08488708`; the give-CS Cut
-  description decodes to the full, terminated French text.
-- The patched ROM boots and runs (frames advance, no crash).
-- `tests/e2e/test_givecs_move_desc_freeze.py` is the deterministic CI guard:
-  it fails on the pre-patch ROM (57 overflow) and passes on the fixed build.
-
-The savestate is pre-fix RAM, so it can only ever *reproduce* the historical
-freeze; reaching give-CS on the rebuilt ROM is gated by the random Zeph double
-battle and was not replayed headlessly. The root cause (missing `0xFF`) is
-provably eliminated for every entry.
+- After `make build-fr`: **0** references into the block resolve to an
+  unterminated run (>200 bytes); the give-CS structs `0x083DEA80` / `0x0887AD30`
+  now point at the full, terminated French Cut description.
+- **In-engine replay** from `givecs_freeze.ss9` mashes A through the entire
+  cutscene and past the give-CS box with no freeze (the box closes, the player
+  regains control on map `46.0`). The same replay **freezes** on the pre-fix
+  build.
+- Deterministic CI guard `tests/e2e/test_givecs_move_desc_freeze.py` asserts no
+  block reference is unterminated — it fails on every pre-fix build (the give-CS
+  struct pointed at a 456-byte fused run) and passes on the fixed build.
+- Replay guard `tests/e2e/test_givecs_freeze_replay.py` exercises the real
+  sequence via mGBA (skips when mGBA/toolkit unavailable).
