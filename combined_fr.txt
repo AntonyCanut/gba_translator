@@ -7149,13 +7149,13 @@
 0x7EC760: Weak Policy{CLEAR_TO}{FONT_SMALL} 4 000 Jetons
 0x7EC77E: Emolga{CLEAR_TO}{FONT_SMALL} 500 Jetons
 0x7EC795: Hawlucha{CLEAR_TO}{FONT_SMALL} 1 000 Jetons
-0x7EC7B0: TM16{CLEAR_TO}{FONT_SMALL} 2 000 Jetons
-0x7EC7C7: TM32{CLEAR_TO}{FONT_SMALL} 3 000 Jetons
-0x7EC7DE: TM33{CLEAR_TO}{FONT_SMALL} 2 000 Jetons
-0x7EC7F5: TM58{CLEAR_TO}{FONT_SMALL} 1 000 Jetons
-0x7EC80C: TM75{CLEAR_TO}{FONT_SMALL} 4 000 Jetons
-0x7EC823: TM87{CLEAR_TO}{FONT_SMALL} 2 000 Jetons
-0x7EC83A: TM90{CLEAR_TO}{FONT_SMALL} 3 000 Jetons
+0x7EC7B0: CT16{CLEAR_TO}{FONT_SMALL} 2 000 Jetons
+0x7EC7C7: CT32{CLEAR_TO}{FONT_SMALL} 3 000 Jetons
+0x7EC7DE: CT33{CLEAR_TO}{FONT_SMALL} 2 000 Jetons
+0x7EC7F5: CT58{CLEAR_TO}{FONT_SMALL} 1 000 Jetons
+0x7EC80C: CT75{CLEAR_TO}{FONT_SMALL} 4 000 Jetons
+0x7EC823: CT87{CLEAR_TO}{FONT_SMALL} 2 000 Jetons
+0x7EC83A: CT90{CLEAR_TO}{FONT_SMALL} 3 000 Jetons
 0x7EC851: Non merci
 0x7EC85B: Vous possédez déjà cette CT.
 0x7EC8F7: Hmph.
@@ -24749,3 +24749,6 @@
 0x3D62DF: Empêche les Pokémon faibles\nd'apparaître pendant 200 pas.
 0x3D6318: Empêche les Pokémon faibles\nd'apparaître pendant 250 pas.
 0x3D639C: Empêche les Pokémon faibles\nd'apparaître pendant 100 pas.
+0x788e28: CT93\nde Mirskle !\pElle contenait Nœud Herbe.
+0x7ea1fb: CT98\ndu type !
+0x7fdd98: CT60\nde Big Mo !

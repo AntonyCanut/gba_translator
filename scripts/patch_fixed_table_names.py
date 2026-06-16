@@ -87,6 +87,55 @@ def apply_name_fixes(data: bytearray, fixes: dict) -> int:
     return patched
 
 
+# TM item-name tables: two contiguous runs in the CFRU extended table plus
+# the original FireRed table.  All use stride-44 cells.  No translation pass
+# touches these cells (absent from translation_ready.json and the Spanish
+# extraction), so they ship as "TM01"…"TM120" in English.  The French
+# abbreviation is "CT" (Capsule Technique).
+_TM_CT_TABLES = [
+    # FireRed original item table (TM01–TM50)
+    (0x3DE1D4, range(1, 51), 44),
+    # CFRU extended table, first run (TM01–TM58)
+    (0x8793AC, range(1, 59), 44),
+    # CFRU extended table, second run (TM59–TM120, gap after TM58)
+    (0x87A274, range(59, 121), 44),
+]
+
+
+def _tm_name(num: int) -> str:
+    return f"TM{num:02d}" if num < 100 else f"TM{num}"
+
+
+def _ct_name(num: int) -> str:
+    return f"CT{num:02d}" if num < 100 else f"CT{num}"
+
+
+def apply_tm_to_ct_patches(data: bytearray) -> int:
+    """Rename TM item name cells to CT in all known item tables."""
+    patched = 0
+    for base, nums, stride in _TM_CT_TABLES:
+        for i, num in enumerate(nums):
+            offset = base + i * stride
+            old_bytes = encode(_tm_name(num))
+            new_bytes = encode(_ct_name(num))
+            # Idempotency: skip if already CT.
+            new_slice = bytes(data[offset : offset + len(new_bytes)])
+            if new_slice == new_bytes and data[offset + len(new_bytes)] == 0xFF:
+                continue
+            current = bytes(data[offset : offset + len(old_bytes)])
+            if current != old_bytes or data[offset + len(old_bytes)] != 0xFF:
+                raise ValueError(
+                    f"0x{offset:X}: expected {_tm_name(num)!r}, "
+                    f"found {current.hex(' ')}"
+                )
+            # Only replace name + terminator; item data (ID, price, pointer…)
+            # that follows in the same stride must not be touched.
+            data[offset : offset + len(new_bytes)] = new_bytes
+            data[offset + len(new_bytes)] = 0xFF
+            patched += 1
+    return patched
+
+
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--rom", type=Path, default=Path("output/roms/GenedRom-fr.gba"))
@@ -94,9 +143,11 @@ def main() -> int:
 
     data = bytearray(args.rom.read_bytes())
     patched = apply_name_fixes(data, NAME_FIXES)
-    if patched:
+    tm_ct = apply_tm_to_ct_patches(data)
+    if patched or tm_ct:
         args.rom.write_bytes(data)
     print(f"Fixed-table name cells patched: {patched} (of {len(NAME_FIXES)})")
+    print(f"TM→CT item name cells renamed: {tm_ct}")
     return 0
 
 
