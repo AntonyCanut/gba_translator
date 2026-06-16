@@ -202,6 +202,20 @@ class RegressionTextTests(unittest.TestCase):
         self.assertIn("Je m'appelle", french_text)
         self.assertIn('parents', french_text)
 
+    @unittest.skipUnless(FR_ROM.exists(), 'ROM missing')
+    def test_repel_descriptions_count_steps_not_stages(self):
+        # Repel item descriptions count footsteps ("pas"), not stages ("étapes").
+        # Regression for ticket P-37 "Description repousse": the Max Repel desc
+        # used to read "...d'apparaître pendant 250 étapes." which is wrong.
+        french_data = FR_ROM.read_bytes()
+        # Super Repel (200), Max Repel (250), Repel (100) description offsets.
+        for offset in (0x3D62DF, 0x3D6318, 0x3D639C):
+            end = french_data.find(b'\xFF', offset)
+            raw = french_data[offset:end + 1]
+            text = TextDecoder.decode_pokemon(raw, preserve_unknown=True)
+            self.assertIn('pas', text, f'Repel desc at {offset:#x} should mention "pas"')
+            self.assertNotIn('étape', text, f'Repel desc at {offset:#x} must not say "étape(s)"')
+
 
 if __name__ == '__main__':
     unittest.main()
