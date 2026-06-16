@@ -4622,7 +4622,7 @@ en cas de coup dur.",
 the critical-hit ratio in a pinch.",,49,2,51,pokemon,description,,
 0x003D76A1,"When held by a Pokémon, it sharply
 raises one stat in a pinch.","Al llevarla, sube una estadística
-en caso de necesidad.",62,3,65,pokemon,description,"Tenue, hausse fortement une stat en
+en caso de necesidad.",62,3,65,pokemon,description,"Tenue, hausse beaucoup une stat en
 cas de coup dur.",
 0x003D76B4,"mon, it sharply
 raises one stat in a pinch.",,43,3,46,pokemon,description,,
@@ -5302,7 +5302,7 @@ ferocity, but one that also sharply
 reduces the user's Sp. Atk stat.","A maximum-power attack of great
 ferocity, but one that also sharply
 reduces the user's Sp. Atk stat.",100,2,102,pokemon,description,"Attaque maximale et féroce, mais
-baisse fortement l'Att. Spé. du
+baisse beaucoup l'Att. Spé. du
 lanceur.",
 0x003DA7D1,"A parcel to be delivered to Prof.
 Log from Bellin Town's Pokémon
@@ -7448,27 +7448,27 @@ had no effect on <0xFD><0x11>!",28,3,31,pokemon,dialogue,"<0xFD><0x13> : <0xFD><
 sur <0xFD><0x11> !",
 0x003FCB0C,<0xFD><0x0F> is too scared to move!,<0xFD><0x0F> is too scared to move!,25,2,27,pokemon,dialogue,<0xFD><0x0F> est trop effrayé pour bouger !,
 0x003FCB26,"Ghost: Get out"""" Get out""""","Ghost: Get out"""" Get out""""",26,3,29,pokemon,other,Fantôme : Dehors...... Dehors......,
-0x003FCB41,sharply ,,8,2,10,pokemon,other,fortement,
+0x003FCB41,sharply ,,8,2,10,pokemon,other,beaucoup,
 0x003FCB4A,rose!,,5,3,8,pokemon,dialogue,augmente !,
-0x003FCB50,harshly ,,8,2,10,pokemon,other,fortement,
+0x003FCB50,harshly ,,8,2,10,pokemon,other,beaucoup,
 0x003FCB59,fell!,,5,3,8,pokemon,dialogue,baisse !,
 0x003FCB5F,"<0xFD><0x0F>'s <0xFD> 
 <0xFD><0x01>","<0xFD><0x0F> <0xFD><0x01>
-<0xFD> .",10,3,13,pokemon,description,"{FD00} de {FD0F}
+<0xFD> .",10,3,13,pokemon,description,"{FD0F} de {FD00}
 {FD01}",
 0x003FCB6A,"<0xFD><0x10>'s <0xFD> 
 <0xFD><0x01>","<0xFD><0x10> <0xFD><0x01>
-<0xFD> .",10,2,12,pokemon,description,"{FD00} de {FD10}
+<0xFD> .",10,2,12,pokemon,description,"{FD10} de {FD00}
 {FD01}",
 0x003FCB75,"Using <0xFD><0x16>, the <0xFD>  of
 <0xFD><0x13> <0xFD><0x01>",,25,3,28,pokemon,description,"Avec {B_LAST_ITEM}, le {UNKNOWN_STR} de {B_SCR_ACTIVE_NAME_WITH_PREFIX}
 {PLAYER}",
 0x003FCB8F,"<0xFD><0x0F>'s <0xFD> 
 <0xFD><0x01>","<0xFD><0x0F> <0xFD> 
-<0xFD><0x01>",10,3,13,pokemon,description,"{FD00} de {FD0F}
+<0xFD><0x01>",10,3,13,pokemon,description,"{FD0F} de {FD00}
 {FD01}",
 0x003FCB9A,"<0xFD><0x10>'s <0xFD> 
-<0xFD><0x01>",,10,2,12,pokemon,description,"{FD00} de {FD10}
+<0xFD><0x01>",,10,2,12,pokemon,description,"{FD10} de {FD00}
 {FD01}",
 0x003FCBA5,"<0xFD><0x0F>'s stats won't
 go any higher!","<0x52><0xFD><0x0F> sus stats
@@ -8705,9 +8705,9 @@ Objet",
 0x00417B7C,MARSHBADGE,MARSHBADGE,10,1,11,pokemon,other,BADGE MARAIS,
 0x00417B87,VOLCANOBADGE,VOLCANOBADGE,12,1,13,pokemon,other,BADGE VOLCAN,
 0x00417B94,EARTHBADGE,EARTHBADGE,10,1,11,pokemon,other,BADGE TERRE,
-0x00417B9F,Someone's PC,PC Alguien,12,2,14,pokemon,location,PC de quelqu'un,
+0x00417B9F,Someone's PC,PC Alguien,12,2,14,pokemon,location,PC de ???,
 0x00417BA7,s PC,,4,2,6,pokemon,other,,
-0x00417BAC,Ayla's PC,PC Ayla,9,3,12,pokemon,location,PC d'Ayla,
+0x00417BAC,Ayla's PC,PC Ayla,9,3,12,pokemon,location,PC Ayla,
 0x00417BB1,s PC,,4,3,7,pokemon,other,,
 0x00417BB9,s PC,,4,3,7,pokemon,other,,
 0x00417BBE,Hall of Fame,,12,3,15,pokemon,location,Panthéon,
@@ -15294,7 +15294,7 @@ d'attaque .",
 0x00484165,,"Hace que aumente
 su Velocidad.                                    ",0,421,421,pokemon,other,"L'utilisateur détend et
 allège son corps pour
-fortement augmenter sa
+beaucoup augmenter sa
 vitesse.",
 0x004841E9,,"En cada turno al
 golpear se vuelve
@@ -15379,7 +15379,7 @@ Défense.","Crea una barrera
 para subir mucho
 la Defensa.                       ",65,413,478,pokemon,description,"L'utilisateur crée un mur
 solide qui augmente
-fortement sa statistique de
+beaucoup sa statistique de
 défense .",
 0x004845BB,fense.,,6,413,419,pokemon,other,,
 0x004845C5,,"Un muro hecho de
@@ -15521,7 +15521,7 @@ aumenta mucho
 la Defensa
 Especial.   ",0,256,256,pokemon,other,"Oublie quelque
 chose et augmente
-fortement Sp.
+beaucoup Sp.
 Déf.",
 0x00484B5B,,"Distrae al rival
 y baja su nivel
@@ -15793,7 +15793,7 @@ al rival para
 reducir su
 Velocidad.                  ",0,204,204,pokemon,other,"Des spores cotonneuses
 s'accrochent à l'ennemi,
-réduisant fortement sa
+réduisant beaucoup sa
 Vitesse.",
 0x004857DF,,"Baja con rencor
 PP del último
@@ -15831,7 +15831,7 @@ Vitesse.","Asusta al enemigo
 para bajar su
 Velocidad.                      ",64,140,204,pokemon,dialogue,"Effraie l'ennemi avec une
 grimace terrible qui
-baisse fortement sa
+baisse beaucoup sa
 Vitesse.",
 0x00485908,"duit fortement sa
 Vitesse.",,26,140,166,pokemon,other,,
@@ -15940,7 +15940,7 @@ successivement.",
 y reduce bastante
 su Ataque.                            ",0,966,966,pokemon,other,"Charme l'ennemi par une
 adorable pose,
-réduisant fortement son
+réduisant beaucoup son
 Attaque.",
 0x00485EE1,,"Deja al enemigo
 con al menos 1
@@ -16267,7 +16267,7 @@ l'ennemi.",
 Ataque Especial del 
 rival, y el usuario 
 cae.    ",0,281,281,pokemon,other,"L'utilisateur tombe K.O.
-mais baisse fortement
+mais baisse beaucoup
 l'Attaque et l'Att. Spé
 ennemies.",
 0x00486E79,,"Ataque que aumenta
@@ -16446,7 +16446,7 @@ terrain.",
 0x004876A7,,"Ráfaga de luz que
 sube muchísimo el
 Ataque Especial.          ",0,2803,2803,pokemon,other,"Éclair qui monte
-fortement l'Att.
+beaucoup l'Att.
 Spé de
 l'utilisateur.",
 0x004876E6,,"Fogonazo de luz
@@ -16467,7 +16467,7 @@ Spé.",
 el ataque del
 objetivo.                                ",0,2601,2601,pokemon,other,"Duvet qui recouvre
 l'ennemi et réduit
-fortement son
+beaucoup son
 Attaque.",
 0x004877BB,,"El rival entra
 en un estado de
@@ -16558,7 +16558,7 @@ groupe.",
 fuerte y así baja
 la Def. Esp. del
 rival.     ",0,1499,1499,pokemon,other,"Pleurniche et fait
-chuter fortement
+chuter beaucoup
 la Déf. Spé
 adverse.",
 0x00487BFF,,"Tiene un gran
@@ -16570,7 +16570,7 @@ critiques.",
 0x00487C46,,"Puede bajar 
 mucho el At. Esp
 del usuario.",0,1364,1364,pokemon,other,"Attaque intense qui
-réduit fortement
+réduit beaucoup
 l'Att. Spé de
 l'utilisateur.",
 0x00487C8B,,"Ignora los cambios
@@ -16784,7 +16784,7 @@ Inratable.",
 que baja el
 Ataque Especial
 del usuario.",195,1,196,ascii,description,"Attaque intense qui
-réduit fortement
+réduit beaucoup
 l'Att. Spé de
 l'utilisateur.",
 0x00488CA2,"The <0xFD><0x02> BERRY transformed into
@@ -28123,7 +28123,7 @@ kicked-up mat!",36,3,39,pokemon,dialogue,"<0xFD><0x14> est bloqué par le
 tatami soulevé !",
 0x008A9944,"<0xFD><0x0F>'s <0xFD><0x18> sharply
 raised its <0xFD> !","<0xFD><0x0F>'s <0xFD><0x18> sharply
-raised its <0xFD> !",30,3,33,pokemon,dialogue,"La {B_ATK_ABILITY} de {B_ATK_NAME_WITH_PREFIX} a fortement
+raised its <0xFD> !",30,3,33,pokemon,dialogue,"La {B_ATK_ABILITY} de {B_ATK_NAME_WITH_PREFIX} a beaucoup
 augmenté son {UNKNOWN_STR} !",
 0x008A9963,"<0xFD><0x0F> was hurt by
 <0xFD><0x10>'s Spiky Shield!","<0xFD><0x0F> was hurt by
@@ -30950,7 +30950,7 @@ Special Attack is
 harshly lowered.",91,3,94,pokemon,description,"Si l'ennemi est
 d'un autre sexe,
 son Att. Spé.
-baisse fortement.
+baisse beaucoup.
 ",
 0x0092212D,"A strong wind blows 
 away the target's 
@@ -31102,7 +31102,7 @@ and harshly lowers
 the foe's Attack if
 it makes contact.",94,3,97,pokemon,description,"Protège des dégâts
 et baisse
-fortement l'Attaque
+beaucoup l'Attaque
 adverse en cas de
 contact.",
 0x00922571,"The user sheds part
@@ -33169,7 +33169,7 @@ d'escalader.",
 le rendre confus.",,36,133,169,pokemon,description,,
 0x00A38941,,"Reduce la resistencia
 puliendo su cuerpo.",0,129,129,pokemon,other,"Poli son corps pour
-fortement booster
+beaucoup booster
 sa Vitesse.",
 0x00A389C2,"Le lanceur atterrit
 et se repose.
@@ -34642,7 +34642,7 @@ signature move. It
 harshly lowers the
 target's Speed.",68,3,71,pokemon,description,"La capacité signature de
 G-Max Krabboss. Elle
-baisse fortement la
+baisse beaucoup la
 Vitesse de la cible.",
 0x00A40363,s Speed.,,8,3,11,pokemon,other,,
 0x00A4036D,"G-Max Lapras'ssignature move. It
@@ -77828,7 +77828,7 @@ temps presse. En ce moment, Aklove<0xFB>est avec Fey pendant qu'elle étudie
 Hoopa. Quand elle aura fini, Aklove<0xFB>compte retourner son pouvoir contre
 Borrius... Si nous détruisons sa base<0xFB>pendant son absence, nous pourrons
 le prendre au piège à son retour,<0xFB>et sceller à nouveau le pouvoir de
-Hoopa. Sans lui, la puissance<0xFA>d'Aklove sera fortement<0xFA>diminuée.<0xFB>
+Hoopa. Sans lui, la puissance<0xFA>d'Aklove sera beaucoup<0xFA>diminuée.<0xFB>
 ",
 0x01F3F1F2,"s power will be
 greatly diminished.",,35,2,37,pokemon,description,,
@@ -79197,7 +79197,7 @@ del sombrero verde.<0xFB>Supongo que te estarás preguntando
 qué le pasó, <0x51>no es así?",308,2,310,pokemon,dialogue,"Mais peu importe, je suppose.
 Ce qui est fait est fait.<0xFB>Et malheureusement, je n'ai plus
 de Pokémon.<0xFB>Alors, passons un marché.<0xFB>J'ai quelque chose qui pourrait
-fortement t'intéresser...<0xFB>Oui...<0xFC><0x08><0x18> je parle, bien sûr, de ton
+beaucoup t'intéresser...<0xFB>Oui...<0xFC><0x08><0x18> je parle, bien sûr, de ton
 ami, le garçon au chapeau vert.<0xFB>J'imagine que tu te demandes ce
 qu'il est devenu, n'est-ce pas ?",
 0x01F453CB,"I expect you are wondering what
@@ -83346,7 +83346,7 @@ one shield, but if you use a move<0xFA>like <0xFC><0x01><0x06>Brick Break<0xFC><
 fighting is desperate, it'll throw<0xFA>up shields to defend itself.<0xFB>These shields will severely reduce
 the damage you can inflict until<0xFA>they're destroyed.<0xFB>Any attack will destroy at least
 one shield, but if you use a move<0xFA>like <0xFC><0x01><0x06>Brick Break<0xFC><0x01><0x04>, you can destroy<0xFA>two shields at a time!",314,3,317,pokemon,dialogue,"Parfois, quand le Pokémon que tu
-combats est désespéré, il lève<0xFA>des boucliers.<0xFB>Ces boucliers réduisent fortement
+combats est désespéré, il lève<0xFA>des boucliers.<0xFB>Ces boucliers réduisent beaucoup
 les dégâts que tu infliges jusqu'à<0xFA>leur destruction.<0xFB>Toute attaque détruit au moins
 un bouclier, mais si tu utilises<0xFA>une capacité {COLOR}ÉCasse-Brique{COLOR}Ç, tu peux<0xFA>casser deux boucliers d'un coup !",
 0x01F573B2,"If you have Pokémon stored in box
@@ -104595,3 +104595,6 @@ V3.<0xFB>Los datos fueron enviados al
 laboratorio de investigación.<0xFB>Niños restantes: <0xFC><0x01><0x06><0xFD><0x02><0xFC><0x01><0x02>.",128,5,133,pokemon,description,"{COLOR}ÁL'enfant a été scanné en utilisant le
 Cube.<0xFB>Les données ont été envoyées au scientifique du
 Laboratoire de Recherche Onirique.<0xFB>Enfants restants : {COLOR}É{STR_VAR_1}{COLOR}Á.",
+0x27795D,Pointed stones float in the air<0xFE>around the opposing team!,Pointed stones float in the air<0xFE>around the opposing team!,51,5,56,pokemon,move_effect,Des rocs pointus flottent autour de<0xFE>l'équipe adverse !,Stealth Rock effect - first part
+0x2779D4,Pointed stones dug into<0xFE><0xFD> !,Pointed stones dug into<0xFE><0xFD> !,34,6,40,pokemon,move_effect,"Les rocs pointus transpercent
+{UNKNOWN_STR} !",Stealth Rock effect - switch-in part
