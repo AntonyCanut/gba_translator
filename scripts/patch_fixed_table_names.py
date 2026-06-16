@@ -50,6 +50,12 @@ NAME_FIXES = {
     # name) is rewritten byte-exact here. "Carte" is the official French item name.
     0x3DEE28: (" " * 12 + "Town Map", " " * 12 + "Carte", 26),
     0x87A000: (" " * 12 + "Town Map", " " * 12 + "Carte", 26),
+    # Hard Stone hold item: same class-2 structure as Berry Pouch/Town Map.
+    # Absent from translation_ready.json and the Spanish extraction → never
+    # reached by the reinsertion or inline-override pass → ships in English.
+    # "Pierre Dure" (11 glyphs) fits the stride-26 cell (12 + 11 + FF + 2 pad).
+    0x3DD32C: (" " * 12 + "Hard Stone", " " * 12 + "Pierre Dure", 26),
+    0x878504: (" " * 12 + "Hard Stone", " " * 12 + "Pierre Dure", 26),
 }
 
 
