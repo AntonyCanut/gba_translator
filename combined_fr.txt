@@ -1225,7 +1225,7 @@
 0x3D75DE: Tenue, augmente l’Att. Spé. en cas\nde coup dur.
 0x3D761D: Tenue, augmente la Déf. Spé. en cas\nde coup dur.
 0x3D765C: Tenue, hausse le taux de critique\nen cas de coup dur.
-0x3D76A1: Tenue, hausse fortement une stat en\ncas de coup dur.
+0x3D76A1: Tenue, hausse beaucoup une stat en\ncas de coup dur.
 0x3D76E0: À moudre en poudre pour des\nmédicaments.
 0x3D771E: Tenue, lance un regard fourbe qui\nbaisse la Précision adverse.\n
 0x3D777C: Tenue, restaure toute stat baissée\nen combat. Usage unique.\n
@@ -1357,7 +1357,7 @@
 0x3DA369: L'ennemi est frappé avec des ailes\ndures comme l'acier. Peut aussi\naugmenter la Défense du lanceur.
 0x3DA3BD: Un pouvoir spécial est transmis à\nl'ennemi, l'amenant à échanger\ncapacités avec l'utilisateur.
 0x3DA416: Capacité qui vole les effets de\nmouvements de statut ou de soin\nutilisés par l'ennemi.
-0x3DA477: Attaque maximale et féroce, mais\nbaisse fortement l’Att. Spé. du\nlanceur.
+0x3DA477: Attaque maximale et féroce, mais\nbaisse beaucoup l’Att. Spé. du\nlanceur.
 0x3DA4DC: Attaque l'ennemi avec lames ou\ngriffes. Peut aussi couper des\narbres ou de l'herbe hors combat.
 0x3DA545: L'utilisateur s'envole au premier\ntour, puis attaque au suivant. Peut\nservir à voler vers une ville.
 0x3DA5AB: Crée une vague énorme qui s'écrase\nsur l'ennemi et permet aussi de\nvoyager sur l'eau.
@@ -2586,9 +2586,9 @@
 0x3FCAEF: {B_SCR_ACTIVE_NAME_WITH_PREFIX} : {B_SCR_ACTIVE_ABILITY} inefficace\nsur {B_EFF_NAME_WITH_PREFIX} !
 0x3FCB0C: {B_ATK_NAME_WITH_PREFIX} est trop effrayé pour bouger !
 0x3FCB26: Fantôme : Dehors…… Dehors……
-0x3FCB41: fortement
+0x3FCB41: beaucoup
 0x3FCB4B: ose!
-0x3FCB50: fortement
+0x3FCB50: beaucoup
 0x3FCB59: baisse !
 0x3FCB5F: {FD00} de {FD0F}\n{FD01}
 0x3FCB6A: {FD00} de {FD10}\n{FD01}
@@ -4985,7 +4985,7 @@
 0x484098: Une forte attaque\ntélékinésique. Cela peut\négalement réduire la Sp de\nl’ennemi. Statistique déf.
 0x4840DF: La suggestion hypnotique est\nutilisée pour faire tomber\nl'ennemi dans un sommeil profond\n.
 0x484123: L'utilisateur médite pour\néveiller son pouvoir et\naugmenter sa statistique\nd'attaque .
-0x484165: L'utilisateur détend et\nallège son corps pour\nfortement augmenter sa\nvitesse.
+0x484165: L'utilisateur détend et\nallège son corps pour\nbeaucoup augmenter sa\nvitesse.
 0x4841A8: Une attaque rapide\npresque invisible qui est\nsûre de frapper en\npremier.
 0x4841E9: Une attaque qui devient plus\nforte à chaque fois que\nl'utilisateur est touché au\ncombat.
 0x48422E: Permet de fuir tout Pokémon\nsauvage. Se téléporte au\ndernier Centre Pokémon\nvisité.
@@ -5000,7 +5000,7 @@
 0x4844B5: L'ennemi est exposé à\nun rayon sinistre qui\ndéclenche la\nconfusion.
 0x4844F3: L'utilisateur retire son corps\ndans sa coquille dure ,\naugmentant ainsi sa statistique\nde défense .
 0x48453C: Se recroqueville pour\ncacher ses points\nfaibles et augmente sa\nDéfense.
-0x484580: L'utilisateur crée un mur\nsolide qui augmente\nfortement sa statistique de\ndéfense .
+0x484580: L'utilisateur crée un mur\nsolide qui augmente\nbeaucoup sa statistique de\ndéfense .
 0x4845C5: Un mur de lumière réduit\nles dégâts des attaques\nspéciales pendant cinq\ntours.
 0x484606: Élimine tous les changements de\nstatistiques parmi tous les\nPokémon engagés dans la bataille\n.
 0x484647: Un mur de lumière réduit les\ndégâts des attaques\nphysiques pendant cinq\ntours.
@@ -5021,7 +5021,7 @@
 0x484A57: L'utilisateur augmente\nsa Défense au 1er tour,\npuis attaque au 2ème\ntour.
 0x484AA2: Des pointes acérées sont\ntirées sur l'ennemi pour\nfrapper deux à cinq\nfois.
 0x484AE1: L'ennemi est attaqué avec de\nlongs tentacules ou des\nvignes. Cela peut réduire la\nvitesse.
-0x484B27: Oublie quelque\nchose et augmente\nfortement Sp.\nDéf.
+0x484B27: Oublie quelque\nchose et augmente\nbeaucoup Sp.\nDéf.
 0x484B5B: L'utilisateur distrait\nl'ennemi en pliant une\ncuillère. Cela peut réduire la\nprécision.
 0x484BA1: Soigne l'utilisateur\njusqu'à la moitié de ses PV\nmax. Peut aussi soigner un\nallié.
 0x484BEB: Un fort coup de genou\nsautant . S'il manque,\nl'utilisateur est\nblessé.
@@ -5066,13 +5066,13 @@
 0x485679: Attaque désespérée plus\npuissante quand il reste\npeu de PV à\nl'utilisateur.
 0x4856C1: L'utilisateur change de type\npour se rendre résistant à la\ndernière attaque qu'il a\nsubie.
 0x48570C: Un vortex d'air est tiré\nsur l'ennemi. Il a un\ntaux de coups critiques\nélevé.
-0x485752: Des spores cotonneuses\ns'accrochent à l'ennemi,\nréduisant fortement sa\nVitesse.
+0x485752: Des spores cotonneuses\ns'accrochent à l'ennemi,\nréduisant beaucoup sa\nVitesse.
 0x485798: Attaque totale plus\npuissante quand il reste\npeu de PV à\nl'utilisateur.
 0x4857DF: Un coup qui réduit 2\nà 5 PP du dernier\ncoup utilisé par\nl'ennemi.
 0x48581E: Frappe l'ennemi avec\nune rafale de neige.\nCela peut provoquer\ngel.
 0x485857: Permet d'esquiver toutes\nles attaques. Peut\néchouer si utilisé à la\nsuite.
 0x4858A1: Un coup de poing lancé à\nvitesse aveuglante. Il est\ncertain de frapper en\npremier.
-0x4858E2: Effraie l'ennemi avec une\ngrimace terrible qui\nbaisse fortement sa\nVitesse.
+0x4858E2: Effraie l'ennemi avec une\ngrimace terrible qui\nbaisse beaucoup sa\nVitesse.
 0x485923: L'utilisateur se rapproche de\nl'ennemi de manière\ndésarmante, puis frappe sans\nfaute.
 0x48596B: L'utilisateur embrasse\nl'ennemi avec une douce\nmignardise qui sème la\nconfusion.
 0x4859AE: Maximise l'Attaque au\nprix de la moitié des\nPV max de\nl'utilisateur.
@@ -5092,7 +5092,7 @@
 0x485D77: Une tempête de sable de 5\ntours qui endommage tous les\ntypes sauf Roche, Sol et\nAcier.
 0x485DC1: Une attaque brutale qui\nabsorbe la moitié des dégâts\nqu'elle a infligés pour\nrestaurer les PV.
 0x485E09: L'utilisateur endure tout coup\navec 1 HP restant. Il peut\néchouer si est utilisé\nsuccessivement.
-0x485E55: Charme l'ennemi par une\nadorable pose,\nréduisant fortement son\nAttaque.
+0x485E55: Charme l'ennemi par une\nadorable pose,\nréduisant beaucoup son\nAttaque.
 0x485EA0: Une attaque roulante de 5\ntours qui devient plus forte\nà chaque fois que elle\nfrappe.
 0x485EE1: Une attaque retenue qui\nlaisse toujours à\nl'ennemi avec au moins 1\nHP.
 0x485F24: Une capacité qui rend l'ennemi\nconfus, mais qui augmente\négalement brusquement son\nAttaque.
@@ -5150,7 +5150,7 @@
 0x486D64: Met l'ennemi en rage,\nl'empêchant d'utiliser\ndeux fois la même\ncapacité.
 0x486DB1: Flatterie qui rend\nconfus mais monte\nl'Att. Spé.\nennemie.
 0x486DF2: Flamme pâle et\nsinistre qui\nbrûle\nl'ennemi.
-0x486E37: L'utilisateur tombe K.O.\nmais baisse fortement\nl'Attaque et l'Att. Spé\nennemies.
+0x486E37: L'utilisateur tombe K.O.\nmais baisse beaucoup\nl'Attaque et l'Att. Spé\nennemies.
 0x486E79: Attaque renforcée si\nl'utilisateur est\nbrûlé, empoisonné ou\nparalysé.
 0x486EBE: Attaque lancée\nen dernier.\nÉchoue si touché\navant.
 0x486F04: Double effet sur un\nennemi paralysé\nmais le guérit\nensuite.
@@ -5182,10 +5182,10 @@
 0x4875E5: Plonge au 1er\ntour puis\nfrappe au tour\nsuivant.
 0x487628: Rafale de coups de\npoing directs\nfrappant deux à cinq\nfois.
 0x48766B: Change le type\nde l'utilisateur\nselon le\nterrain.
-0x4876A7: Éclair qui monte\nfortement l'Att.\nSpé de\nl'utilisateur.
+0x4876A7: Éclair qui monte\nbeaucoup l'Att.\nSpé de\nl'utilisateur.
 0x4876E6: Lumière qui blesse.\nPeut aussi baisser\nla Déf. Spé de\nl'ennemi.
 0x48772D: Rafale de duvet sur\nl'ennemi. Peut\nbaisser son Att.\nSpé.
-0x487771: Duvet qui recouvre\nl'ennemi et réduit\nfortement son\nAttaque.
+0x487771: Duvet qui recouvre\nl'ennemi et réduit\nbeaucoup son\nAttaque.
 0x4877BB: Danse bancale qui\nrend confus tous\nles Pokémon au\ncombat.
 0x4877F3: Coup de pied\nflammé à haut\ncritique. Peut\nbrûler.
 0x48783A: Affaiblit les attaques\nÉlectrik tant que\nl'utilisateur reste au\ncombat.
@@ -5201,13 +5201,13 @@
 0x487AEB: Cri surprenant qui\npeut apeurer\nl'ennemi.
 0x487B2F: Attaque dont la\npuissance et le type\nvarient avec la\nmétéo.
 0x487B71: Parfum doux qui\nsoigne tous les\nstatuts du\ngroupe.
-0x487BBF: Pleurniche et fait\nchuter fortement\nla Déf. Spé\nadverse.
+0x487BBF: Pleurniche et fait\nchuter beaucoup\nla Déf. Spé\nadverse.
 0x487BFF: Vent\ntranchant à\nhaut taux de\ncritiques.
-0x487C46: Attaque intense qui\nréduit fortement\nl'Att. Spé de\nl'utilisateur.
+0x487C46: Attaque intense qui\nréduit beaucoup\nl'Att. Spé de\nl'utilisateur.
 0x487C8B: Annule totalement les\ntentatives\nd'augmenter l'esquive\nennemie.
 0x487CD2: Des rochers sont\nlancés. Baisse la\nVitesse si ça\ntouche.
 0x487D1D: Poussière argentée\nattaque l'ennemi.\nPeut monter les\nstats.
-0x487D68: Grincement\nmétallique qui\nbaisse fortement la\nDéf. Spé.
+0x487D68: Grincement\nmétallique qui\nbaisse beaucoup la\nDéf. Spé.
 0x487DB0: Mélodie agréable\nqui plonge dans\nun profond\nsommeil.
 0x487DEF: Fait rire l'ennemi,\nbaissant son\nAttaque et sa\nDéfense.
 0x487E30: Absorbe un pouvoir\nmystique pour\nmonter Défense et\nDéf. Spé.
@@ -5242,7 +5242,7 @@
 0x4885D3: Décharge rapide\nqui frappe\nl'ennemi.\nInratable.
 0x488614: Attaque avec une onde\nd'eau. Peut aussi\nrendre l'ennemi\nconfus.
 0x48865A: Attaque l'ennemi\npar une lumière au\n2e tour après\nusage.
-0x4886A1: Attaque intense qui\nréduit fortement\nl'Att. Spé de\nl'utilisateur.
+0x4886A1: Attaque intense qui\nréduit beaucoup\nl'Att. Spé de\nl'utilisateur.
 0x488CA2: La BAIE {STR_VAR_1} s'est changée en\nune BAIE {STR_VAR_2}.
 0x488CCE: La BAIE {STR_VAR_1} a déjà été\nobtenue.
 0x488CF6: Un RUBAN spécial a été remis aux\nPokémon de ton équipe.
@@ -6851,7 +6851,7 @@
 0x7D4F8E: Aklove : {COLOR}ËC'est une sage décision.\pMaintenant, éloignez-vous de mon\nchemin !
 0x7D4FC9: Zeph : {COLOR}ËJe suis désolé, Ivory.\pJe n'ai pas pu\nterminer la mission .\pCependant, ce n'est pas la fin.\pNous trouverons toujours un moyen de\nles ramener …
 0x7D5055: Aklove : {COLOR}ËEt maintenant, que\nl'événement principal commence.
-0x7D5083: {COLOR}ËHoopa, prépare-toi !\pVotre véritable pouvoir est sur le\npoint de sortir de la Bouteille\nPrison !\pEt en tant que votre Dresseur, je\npeux parfaitement y parvenir !
+0x7D5083: {COLOR}ËHoopa, prépare-toi !\pVotre véritable pouvoir est sur le\npoint d'être libéré de la bouteille\lde Prison !\pEt en tant que votre entraîneur, je\nsuis pleinement capable de le\llibérer !
 0x7D512A: Aklove : {COLOR}ËEnfin !\pJ'ai attendu ce moment pendant des\nannées !\pHoopa !\pLe sceau de ton pouvoir a enfin être\nbrisé !
 0x7D5198: Hoopa : {COLOR}ÉHou hou hou !
 0x7D51AF: Zeph : {COLOR}ËAklove, dis-moi !\pPourquoi fais-tu tout\ntout cela ?\pPeut-être que si nous avons un\nobjectif commun, nous pourrons
@@ -7651,7 +7651,7 @@
 0x8A98E9: Prévention protège {B_DEF_NAME_WITH_PREFIX} !
 0x8A9903: Vigilance protège {B_DEF_NAME_WITH_PREFIX} !
 0x8A991F: {B_CURRENT_MOVE} est bloqué par le\ntatami soulevé !
-0x8A9944: La {B_ATK_ABILITY} de {B_ATK_NAME_WITH_PREFIX} a fortement\naugmenté son {UNKNOWN_STR} !
+0x8A9944: La {B_ATK_ABILITY} de {B_ATK_NAME_WITH_PREFIX} a beaucoup\naugmenté son {UNKNOWN_STR} !
 0x8A9963: {B_DEF_NAME_WITH_PREFIX}\n{B_ATK_NAME_WITH_PREFIX} piqué !
 0x8A9BB0: Les effets de protection sont levés\ndu côté de la cible !
 0x8A9C40: {B_ATK_NAME_WITH_PREFIX} disparaît\ninstantanément !
@@ -8096,7 +8096,7 @@
 0x92102C: Frappe violemment.\nFait toujours un\ncoup critique.\n
 0x921075: Acide spécial qui\narrose la cible.\nPuissance doublée si\nelle est empoisonnée.
 0x9210C5: Bras empoisonné qui\ntransperce la cible.\nPeut aussi\nl'empoisonner.
-0x921112: Crache un fluide\ncorrosif. Baisse\nfortement la Déf.\nSpé. adverse.
+0x921112: Crache un fluide\ncorrosif. Baisse\nbeaucoup la Déf.\nSpé. adverse.
 0x921161: Le lanceur danse en\nflammes. Peut\nbooster son Att.\nSpé.
 0x9211AC: Pierres aiguisées\ntranspercent la\ncible. Taux de\ncritique élevé.
 0x9211F7: Morsure qui peut\napeurer ou brûler la\ncible.\n
@@ -8152,7 +8152,7 @@
 0x921FBA: Appelle ses sbires\npour rouer l'ennemi\nde coups.\nTaux de critique\nélevé.
 0x922013: Appelle ses sbires\npour protéger son\ncorps, augmentant\nsa Défense et sa\nDéf. Spé.
 0x922074: Appelle ses sbires\npour le soigner.\nRend jusqu'à la\nmoitié des PV\nmax.
-0x9220D1: Si l'ennemi est\nd'un autre sexe,\nson Att. Spé.\nbaisse fortement.\n
+0x9220D1: Si l'ennemi est\nd'un autre sexe,\nson Att. Spé.\nbaisse beaucoup.\n
 0x92212D: Fort vent qui\nbalaye les obstacles\net baisse\nl'Esquive de la\ncible.
 0x92218A: Attaque les\nadversaires avec\nd'innombrables\nrayons bleus\nprofonds.
 0x9221E4: Manifeste la force de la terre en\nlames de pierre pour\nfrapper les\nadversaires.
@@ -8164,7 +8164,7 @@
 0x922407: Utilise son pouvoir\npsy pour échanger\nson Attaque avec\nsa Défense.\n
 0x92245B: Par suggestion psy,\ntransfère ses\nproblèmes de\nstatut à la cible.\n
 0x9224B8: Tord violemment la\ncible. Plus elle a\nde PV, plus la\npuissance est\ngrande.
-0x922512: Protège des dégâts\net baisse\nfortement l'Attaque\nadverse en cas de\ncontact.
+0x922512: Protège des dégâts\net baisse\nbeaucoup l'Attaque\nadverse en cas de\ncontact.
 0x922571: Perd une partie de\nson corps pour\ns'alléger et\naugmenter beaucoup\nsa Vitesse.
 0x9225CA: Soulève une tempête\nde diamants qui\nblesse les ennemis.\nPeut aussi augmenter\nla Défense du lanceur.
 0x92262C: Une énorme vague de\nboue engloutit la\nzone. Peut aussi\nempoisonner les\nvictimes.
@@ -9058,7 +9058,7 @@
 0xA381CF: Taux de critique élevé.\nPeut aussi\nempoisonner\nl'ennemi.
 0xA38215: Libère une aura\nhorrible pouvant\naussi apeurer\nl'ennemi.
 0xA3825A: Lance une gerbe\nélectrique qui touche\ntous les Pokémon\net peut paralyser.         
-0xA382AD: Attaque intense qui\nfait chuter fortement\nl'Att. Spé. du\nlanceur.
+0xA382AD: Attaque intense qui\nfait chuter beaucoup\nl'Att. Spé. du\nlanceur.
 0xA382F2: Une onde de choc\nfrappe l'ennemi,\nvenue de la\nlarge bouche du lanceur.
 0xA3833E: Un coup violent qui\nvole la moitié des\ndégâts pour rendre\ndes PV.
 0xA38385: Le sol explose sous\nl'ennemi. Peut aussi\nbaisser la Déf. Spé.\nde l'ennemi.          
@@ -9082,7 +9082,7 @@
 0xA38864: Fouette violemment\nl'ennemi avec\nlianes ou\ntentacules.
 0xA388A6: Lacère l'ennemi\navec des lames psy.\nTaux de critique\nimportant.        
 0xA388F4: Charge pouvant rendre\nl'ennemi confus.\nPermet aussi\nd'escalader.
-0xA38941: Poli son corps pour\nfortement booster\nsa Vitesse.
+0xA38941: Poli son corps pour\nbeaucoup booster\nsa Vitesse.
 0xA38978: Lance un énorme\nrocher. Le lanceur\nne bouge pas\nau tour suivant.
 0xA389C2: Soin qui rend\njusqu'à la moitié\ndes PV max\ndu lanceur.
 0xA38A0F: Mitraille l'ennemi\navec des graines\ndures.
@@ -9141,7 +9141,7 @@
 0xA3987A: Énergie lumineuse\npouvant baisser\nla Déf. Spé\nennemie.
 0xA398C0: L'utilisateur\nmord l'ennemi\net mange sa baie\ns'il en tient une.
 0xA398FF: L'utilisateur\npicote l'ennemi,\ncueillant sa baie\ns'il en tient une.
-0xA39940: Augmente fortement l'attaque, Att.\nSpé et vitesse, mais réduit la\ndéfense et la Déf. Spé.\n
+0xA39940: Augmente beaucoup l'attaque, Att.\nSpé et vitesse, mais réduit la\ndéfense et la Déf. Spé.\n
 0xA3998B: L'utilisateur disperse un nuage de\npoudre, obligeant les ennemis à\nattaquer uniquement lui.\n
 0xA399D2: Inflige deux fois plus de dégâts à\nun ennemi endormi. Cependant, cela\nréveille également l'ennemi.\n
 0xA39A1B: L'ennemi est percé par des obus\ntranchants. Cela peut également\nréduire la défense de l’ennemi.\n
@@ -9169,10 +9169,10 @@
 0xA3A006: Att., Att. Spé,\nDéf. Spé et\nVitesse montent\nfort au 2e tour.
 0xA3A04E: La statistique de défense de tous\nles Pokémon de type Plante est\naugmentée par un étrange pouvoir.\n
 0xA3A097: Attaque et Att.\nSpé de tous les\nPokémon Plante\naugmentent.
-0xA3A0DA: En faisant tourner ses engrenages,\nl'utilisateur augmente son attaque\net augmente fortement sa vitesse.\n
+0xA3A0DA: En faisant tourner ses engrenages,\nl'utilisateur augmente son attaque\net augmente beaucoup sa vitesse.\n
 0xA3A127: Un filet collant tissé autour du\ngroupe ennemi pour ralentir\nl’arrivée des ennemis.\n
 0xA3A16F: L'utilisateur attaque avec une\npuissance stockée qui augmente avec\nchaque statistique augmentée.\n
-0xA3A1B6: L'utilisateur augmente fortement\nl'une de ses statistiques en\nappuyant sur ses points de stress.\n
+0xA3A1B6: L'utilisateur augmente beaucoup\nl'une de ses statistiques en\nappuyant sur ses points de stress.\n
 0xA3A1FE: Plus l’ennemi a augmenté ses\nstatistiques, plus la puissance de\nson attaque est grande.\n
 0xA3A243: Inflige le double des dégâts si\nl'ennemi a déjà subi des dégâts ce\ntour-ci.\n
 0xA3A285: Un tacle présentant une menace\ndévastatrice. Cela peut aussi\napeurer la cible.\n
@@ -9218,7 +9218,7 @@
 0xA3AF34: L'utilisateur tord\npuissamment la\ncible. Plus la cible\na de HP, plus sa\npuissance est grande.
 0xA3AF8E: L’utilisateur se\nprotège des dégâts et\nréduit considérablement\nl’attaque de l’ennemi\ns’il entre en contact.
 0xA3AFED: Une étrange onde psychique attaque\nla cible. Cette attaque inflige des\ndégâts physiques.\n
-0xA3B037: L'utilisateur perd une part de son\ncorps pour se rendre plus léger et\naugmenter fortement sa statistique\nde vitesse.\n
+0xA3B037: L'utilisateur perd une part de son\ncorps pour se rendre plus léger et\naugmenter beaucoup sa statistique\nde vitesse.\n
 0xA3B090: L'utilisateur déclenche une tempête\nde diamants pour endommager les\nennemis. Cela peut également\naugmenter la défense de\nl’utilisateur.
 0xA3B0F3: La zone autour de l’utilisateur est\nsubmergée par une vague de boue\ngéante. Cela peut également\nempoisonner les personnes touchées.\n
 0xA3B14D: L'utilisateur frappe\nla cible. Plus la\ndifférence de poids\nest grande, plus les\ndégâts sont importants.
@@ -9370,7 +9370,7 @@
 0xA3E256: L'utilisateur libère un\npuissant faisceau qui inflige\nle double de dégâts aux cibles\nDynamaxées.
 0xA3E2A6: Ignore les effets des\ncapacités et talents\nqui attirent les\ncapacités.
 0xA3E2EE: Le lanceur mord,\nempêchant la cible\net lui-même de se\nretirer.
-0xA3E338: L'utilisateur consomme\nsa Baie détenue, puis\naugmente fortement sa\nDéfense.
+0xA3E338: L'utilisateur consomme\nsa Baie détenue, puis\naugmente beaucoup sa\nDéfense.
 0xA3E37B: Toutes les statistiques de\nl’utilisateur sont augmentées, mais\nil ne peut plus se retirer ni\nfuir.
 0xA3E3C8: Goudron collant baisse\nla Vit. et rend plus\nvulnérable aux attaques\nFeu.
 0xA3E416: L'utilisateur disperse\nde la poudre magique qui\ntransforme la cible en type\nPsychique.
@@ -9382,7 +9382,7 @@
 0xA3E5C8: L'utilisateur\néchange les effets\nde chaque côté du\nchamp.
 0xA3E600: L'utilisateur augmente\ntoutes ses statistiques en\nutilisant une partie de ses\nPV.
 0xA3E63A: Plus la Défense\nest haute, plus\nles dégâts infligés\naugmentent.
-0xA3E67A: Augmente fortement\nAttaque et Att. Spé\nde la cible en la\ndécorant.
+0xA3E67A: Augmente beaucoup\nAttaque et Att. Spé\nde la cible en la\ndécorant.
 0xA3E6C4: Le lanceur bat son tambour\npour attaquer. La Vitesse\nde la cible\nbaisse.
 0xA3E70B: Piège la cible dans\nun piège en un instant\npour quatre à cinq\ntours.
 0xA3E74D: L'utilisateur lance une boule\nenflammée sur la cible. Cela\npeut également provoquer une\nbrûlure.
@@ -9483,7 +9483,7 @@
 0xA40258: La capacité signature de\nG-Max Miaouss. Elle\nconfond l'ennemi et crée\nde l'argent.
 0xA4029E: La capacité signature de\nG-Max Mackogneur. Elle\naugmente les chances de\ncoups critiques.
 0xA402E5: La capacité signature de\nG-Max Ectoplasma. Elle\nempêche l'ennemi de\ns'échapper.
-0xA40327: La capacité signature de\nG-Max Krabboss. Elle\nbaisse fortement la\nVitesse de la cible.
+0xA40327: La capacité signature de\nG-Max Krabboss. Elle\nbaisse beaucoup la\nVitesse de la cible.
 0xA4036D: La capacité signature de\nG-Max Lokhlass. Elle\nréduit les dégâts pendant\ncinq tours.
 0xA403AE: La capacité signature de\nG-Max Évoli. Elle\ncharme la\ncible.
 0xA403E6: La capacité signature de\nG-Max Ronflex. Elle\nrestaure les Baies\nmangées.
@@ -18521,7 +18521,7 @@
 0x1F3EDA8: Ce style de combat…{PAUSE} cette aura…{PAUSE}\nce n'est pas possible…{PAUSE} serais-tu\lvraiment {PLAYER}… !? Non, ce\pne peut pas être vrai !
 0x1F3EE0A: Zeph ! Assez ! Nous n'avons\npas le temps de nous battre\pentre nous ! {PLAYER} n'est\npas l'ennemi, c'est la\pLumière de la Ruine ! Et\ntu peux accepter ce fait,\pou je prendrai le commandement\nde ce qu'il reste\ldes Ombres.
 0x1F3EED6: Merci. Alors… Qu'as-tu prévu,\nZeph ? D'après ce que j'ai\pcompris, nous préparons\pune attaque sur la nouvelle\nbase de la Lumière\lde la Ruine ?
-0x1F3EF60: Exact… Je fais localiser leur base\ppar nos scientifiques restants. Une\nfois qu'ils l'auront trouvée, nous\pfrapperons la Lumière de la Ruine\npar surprise et la détruirons. Leur\lforce principale en déroute, nous\preprendrons la Bouteille Prison et\nles Guerriers des Ombres qu'il leur\lreste. Cependant, j'ignore encore\lcombien de temps il faudra pour les\plocaliser… Et malheureusement, le\ntemps presse. En ce moment, Aklove\pest avec Fey pendant qu'elle étudie\nHoopa. Quand elle aura fini, Aklove\pcompte retourner son pouvoir contre\nBorrius… Si nous détruisons sa base\ppendant son absence, nous pourrons\nle prendre au piège à son retour,\pet sceller à nouveau le pouvoir de\nHoopa. Sans lui, la puissance\ld'Aklove sera fortement\ldiminuée.\p\n
+0x1F3EF60: Exact… Je fais localiser leur base\ppar nos scientifiques restants. Une\nfois qu'ils l'auront trouvée, nous\pfrapperons la Lumière de la Ruine\npar surprise et la détruirons. Leur\lforce principale en déroute, nous\preprendrons la Bouteille Prison et\nles Guerriers des Ombres qu'il leur\lreste. Cependant, j'ignore encore\lcombien de temps il faudra pour les\plocaliser… Et malheureusement, le\ntemps presse. En ce moment, Aklove\pest avec Fey pendant qu'elle étudie\nHoopa. Quand elle aura fini, Aklove\pcompte retourner son pouvoir contre\nBorrius… Si nous détruisons sa base\ppendant son absence, nous pourrons\nle prendre au piège à son retour,\pet sceller à nouveau le pouvoir de\nHoopa. Sans lui, la puissance\ld'Aklove sera beaucoup\ldiminuée.\p\n
 0x1F3F216: Reçu, Zeph. Et je présume que tu\pes sûr que Fey ne se retournera pas\ncontre nous si nous agissons\l?
 0x1F3F277: J'en suis sûr, Marlon. En parlant\pavec certains de nos scientifiques,\nFey se moque des buts d'Aklove. Tout\lce qu'elle veut, c'est étudier le\ppouvoir de ce Pokémon. Elle lui\napportera son soutien, bien sûr,\pmais pour l'essentiel, c'est à\nAklove de réussir ou non.\lÉvidemment, nous ne devrions pas\lminimiser le danger qu'il représente\pà lui\nseul…
 0x1F3F3C9: Il me semble donc que, pour que\nnotre plan se déroule sans accroc,\lil nous faudra toute la main-d'œuvre\lpossible. Je propose donc d'emmener\p{PLAYER}\naussi.
@@ -18949,7 +18949,7 @@
 0x1F56D21: Puisque tu as découvert ce repaire,\nje te laisse cette zone.\pBonne chance pour le combat !\pJ'ai hâte de faire équipe avec toi\nun de ces jours !
 0x1F56DAB: Ce trou que tu vois ici est\nune Antre de Raid.\pDes Pokémon puissants habitent ces\nrepaire, une fois par jour, tu peux\lte battre pour tenter d'en capturer\lun dans chaque repaire de Borrius !\pCes Pokémon sont très forts, alors\nmieux vaut choisir le bon\lpartenaire pour te battre avec toi.\pQuand tu commences le combat, tu\nremarqueras que le Pokémon que tu\lcombats paraît très grand.\pC'est à cause du phénomène\n{COLOR}ÉDynamax{COLOR}Ç.\pIl restera ainsi pendant tout\nle combat et ne pourra être capturé\lqu'une fois vaincu et revenu à sa\ltaille normale.
 0x1F56FD0: Le Dynamax est un phénomène unique\nutilisable seulement dans des zones\lspéciales, comme ici.\pSi tu as maîtrisé le pouvoir de\nMéga-Évolution, tu pourras\lDynamaxer ton Pokémon aussi.\pPresque tous les Pokémon peuvent\nDynamaxer, mais si un Pokémon tient\lMéga-Gemme ou Cristal Z, il ne\lle pourra pas.\pPour Dynamaxer, appuie sur\n{START_BUTTON} quand le symbole\lDynamax apparaît.\pSi tu choisis de Dynamaxer ton\nPokémon, l'effet durera\lpendant trois tours.\pPendant ce temps, chacune des\ncapacités de ton Pokémon sera\lrenforcée en variantes spéciales\lappelées {COLOR}ÉMaxi-attaques{COLOR}Ç.\pCes Maxi-attaques sont bien plus\npuissantes que les attaques,\lalors profite-en à fond\lpendant le Dynamax !
-0x1F57277: Parfois, quand le Pokémon que tu\ncombats est désespéré, il lève\ldes boucliers.\pCes boucliers réduisent fortement\nles dégâts que tu infliges jusqu'à\lleur destruction.\pToute attaque détruit au moins\nun bouclier, mais si tu utilises\lune capacité {COLOR}ÉCasse-Brique{COLOR}Ç, tu peux\lcasser deux boucliers d'un coup !
+0x1F57277: Parfois, quand le Pokémon que tu\ncombats est désespéré, il lève\ldes boucliers.\pCes boucliers réduisent beaucoup\nles dégâts que tu infliges jusqu'à\lleur destruction.\pToute attaque détruit au moins\nun bouclier, mais si tu utilises\lune capacité {COLOR}ÉCasse-Brique{COLOR}Ç, tu peux\lcasser deux boucliers d'un coup !
 0x1F573B2: Si tu as des Pokémon dans la boîte\n« {STR_VAR_1} », ils peuvent être\lutilisés à la place de ton équipe.\pChaque rangée de la boîte est\nconsidérée comme sa propre équipe,\lce qui te permet de garder\ljusqu'à 5 équipes préconfigurées.
 0x1F5747A: Dynamax
 0x1F57482: Boucliers
@@ -24072,7 +24072,7 @@
 0x1f3a1f3: Toi...<0xFC><0x08>î pour qui te prends-tu !?\pAs-tu saboté la libération ?\pRéponds-moi !
 0x1f3a922: Voilà une sage décision.\pMaintenant, écarte-toi !
 0x1f3a9cf: Et maintenant, que le spectacle\ncommence.
-0x1f3a9f2: Hoopa ! Le moment est venu !\pTon véritable pouvoir va sortir de\nla Bouteille Prison !\pEt en tant que ton Dresseur, je\npeux parfaitement le contrôler !
+0x1f3a9f2: Hoopa ! Le moment est venu !\pTon véritable pouvoir va être\nlibéré de la Prison Bottle !\pEt en tant que ton Dresseur, je\nsuis tout à fait capable de le\lcontrôler !
 0x1f3ade9: Assez !\nHors de ma vue.\pLes Ombres, c'est terminé.\pIl est temps pour Borrius de voir\nla lumière...<0xFC><0x08><0x18> la Lumière du Néant !\pAh, mais d'abord...\pJe vois que notre invité d'honneur\na daigné se joindre à nous.\pSbires, amenez-moi <0xFD><0x02>.
 0x1f3aedd: Est-ce vraiment si surprenant,\nZeph ?\pToi et moi savons très bien que tu\nn'es pas l'autorité suprême ici.\pJe suis passé au-dessus de toi...\pJ'ai parlé à Fey.\pEt elle a accepté de me laisser sa\nbranche des Ombres, pour en faire\lce que je veux, tant que je lui\lfournis un petit échantillon du\lpouvoir de Hoopa à étudier.
 0x1f3b3e0: Quand on m'a confié le contrôle de\nces sbires, c'était assorti\ld'une requête.\pMa bienfaitrice semble beaucoup\ns'intéresser à toi, <0xFD><0x01>.\pC'est pourquoi...\p...j'ai reçu l'ordre de t'enfermer\ndans ce Cube même !
@@ -24127,7 +24127,7 @@
 0x1f45015: Et où crois-tu aller comme ça,\nZeph ?
 0x1f450f7: Quant à toi, <0xFD><0x01>...\pTu n'as été qu'une source d'ennuis\nconstante...<0xFC><0x08><0x18> une épine dans mon pied.\pLe Dresseur de Hoopa...<0xFC><0x08><0x18> celui qui\nveut s'emparer du titre...\pJe vais t'écraser ici, et ce\nfaisant...\pje prouverai que le pouvoir de\nHoopa n'appartient qu'à moi !
 0x1f45259: <0xFD><0x01> !\pTon évasion du Cube est une erreur\nde ma part !\pJ'aurais dû être plus minutieux et\nsuivre mes instructions à la\llettre...
-0x1f452d4: Mais peu importe, je suppose.\nCe qui est fait est fait.\pEt malheureusement, je n'ai plus\nde Pokémon.\pAlors, passons un marché.\pJ'ai quelque chose qui pourrait\nfortement t'intéresser...\pOui...<0xFC><0x08><0x18> je parle, bien sûr, de ton\nami, le garçon au chapeau vert.\pJ'imagine que tu te demandes ce\nqu'il est devenu, n'est-ce pas ?
+0x1f452d4: Mais peu importe, je suppose.\nCe qui est fait est fait.\pEt malheureusement, je n'ai plus\nde Pokémon.\pAlors, passons un marché.\pJ'ai quelque chose qui pourrait\nbeaucoup t'intéresser...\pOui...<0xFC><0x08><0x18> je parle, bien sûr, de ton\nami, le garçon au chapeau vert.\pJ'imagine que tu te demandes ce\nqu'il est devenu, n'est-ce pas ?
 0x1f45a05: Ce doit être ici...\pJe le sens !
 0x1f45a27: Hmm...\nQuelque chose cloche.\pCette plateforme semble différente\ndes autres.\pElle n'a pas bougé quand j'ai\nmarché sur le point central.\pAurions-nous manqué quelque chose ?
 0x1f45d28: Ce cri !\nTu as entendu ?\pCe devait être le Pokémon dont\nparlait Grampa Arthur !\pSi quelqu'un connaît la sortie,\nc'est bien ce Pokémon !\pAllons voir ça de plus près !
