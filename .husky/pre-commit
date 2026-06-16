@@ -1,0 +1,3 @@
+make test-python-fast
+npx tsc --noEmit
+npm --prefix emulator-web test
