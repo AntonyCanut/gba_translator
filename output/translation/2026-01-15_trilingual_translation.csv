@@ -1155,7 +1155,7 @@ hidden items close to you.<0xFB>The machine is a bit limited.
 It can't pinpoint item locations.<0xFB>What it does is show the direction
 where the item is.<0xFB>Use it to get your bearings, then
 search the area by hand.",298,9,307,pokemon,dialogue,"Des objets au sol sont cachés.
-Use le {COLOR}ÉCherche-Objet{COLOR}Ç pour les voir.<0xFB>près de toi.
+Use le {COLOR}ÉCherche-Objet{COLOR}Ç pour les voir.<0xFB>Près de toi.
 La machine est un peu limitée.<0xFB>Elle ne peut pas donner la
 position exacte.<0xFB>Elle indique juste la direction de
 l'objet.<0xFB>Serre-toi-en pour t'orienter, puis
@@ -3847,10 +3847,14 @@ around your team!",50,6,56,pokemon,dialogue,"Des pics toxik entourent toute ton
 around the opposing team!","<0x52>Puás esparcidas hacia el otro
 equipo!",57,3,60,pokemon,dialogue,"Des rocs pointus flottent autour de
 l'équipe adverse !",
+0x27795D,Pointed stones float in the air<0xFE>around the opposing team!,Pointed stones float in the air<0xFE>around the opposing team!,51,5,56,pokemon,move_effect,"Des rocs pointus flottent autour de
+l'équipe adverse !",Stealth Rock effect - first part
 0x00277999,"A sticky web has been laid out
 around the opposing team!","A sticky web has been laid out
 around the opposing team!",56,4,60,pokemon,dialogue,"Une toile gluante a été posée
 autour de l'équipe adverse !",
+0x2779D4,Pointed stones dug into<0xFE><0xFD> !,Pointed stones dug into<0xFE><0xFD> !,34,6,40,pokemon,move_effect,"Les rocs pointus transpercent
+{UNKNOWN_STR} !",Stealth Rock effect - switch-in part
 0x00277A12,"The spikes disappeared from around
 <0xFD><0x0F>'s feet!","The spikes disappeared from around
 <0xFD><0x0F>'s feet!",45,29,74,pokemon,dialogue,"Les picots autour de <0xFD><0x0F>
@@ -4201,13 +4205,13 @@ combat contre un Pokémon sauvage.",
 0x003D62DF,"Repousse les Pokémon sauvages
 faibles pendant 200 pas.","Repele a los Pokémon salvajes
 durante 200 pasos.        ",54,3,57,pokemon,description,"Empêche les Pokémon faibles
-d'apparaître pendant 200 étapes.",
+d'apparaître pendant 200 pas.",
 0x003D62F0,"mon sauvages
 faibles pendant 200 pas.",,37,3,40,pokemon,description,,
 0x003D6318,"Repousse les Pokémon sauvages
 faibles pendant 250 pas.","Repele a los Pokémon salvajes
 durante 250 pasos.        ",54,78,132,pokemon,description,"Empêche les Pokémon faibles
-d'apparaître pendant 250 étapes.",
+d'apparaître pendant 250 pas.",
 0x003D6329,"mon sauvages
 faibles pendant 250 pas.",,37,78,115,pokemon,description,,
 0x003D6351,,"Larga cuerda, que sirve para
@@ -4218,7 +4222,7 @@ une grotte ou un donjon.",
 0x003D639C,"Repousse les Pokémon sauvages
 faibles pendant 100 pas.","Repele a los Pokémon salvajes
 durante 100 pasos.        ",54,3,57,pokemon,description,"Empêche les Pokémon faibles
-d'apparaître pendant 100 étapes.",
+d'apparaître pendant 100 pas.",
 0x003D63AD,"mon sauvages
 faibles pendant 100 pas.",,37,3,40,pokemon,description,,
 0x003D63D5,"A peculiar stone that makes certain
@@ -18625,7 +18629,7 @@ a big feast soon, and we need lots<0xFA>of honey for our meal.<0xFB>I've already
 but I need at least three more.<0xFB>I heard they could be found on wild
 Combee, but I'm not having much<0xFA>luck catching them.<0xFB>So how about it?<0xFB>Are you able to catch three Combee
 and give me their honey please?",396,2,398,pokemon,dialogue,"Pardon, Dresseur, pourrais-tu me
-prêter main-forte, s'il te plaît ?<0xFB>un grand festin, et il nous faut
+prêter main-forte, s'il te plaît ?<0xFB>Un grand festin, et il nous faut
 beaucoup de miel pour le repas.<0xFA>J'ai déjà recueilli sept pots,<0xFB>mais il m'en faut au moins trois de
 plus.<0xFB>On dit qu'on peut en trouver sur des
 Apitrini sauvages, mais j'ai peu de<0xFA>chance d'en attraper.<0xFB>Alors, qu'en dis-tu ?<0xFB>Peux-tu attraper trois Apitrini et
@@ -23511,7 +23515,7 @@ ensuite, {PLAYER} ?<0xFB>...<0xFB>Ville de Dehara, hein
 ? J'y vais aussi.<0xFB>Log a mentionné un gars là-bas qui
 sait traverser l'eau.<0xFB>Comme vous le savez, j'ai cherché
 mes parents, et mes recherches<0xFA>me disent que les Ombres étaient<0xFA>impliquées dans leur disparition.<0xFB>J'ai réussi à retrouver les Ombres.
-à les Ruines du Néant, mais je ne<0xFA>à pied ou en avion.<0xFB>Si vous avez également besoin d'un
+À les Ruines du Néant, mais je ne<0xFA>à pied ou en avion.<0xFB>Si vous avez également besoin d'un
 moyen de surfer sur les vagues, vous<0xFA>le surfeur de la ville{COLOR}Ë.<0xFB>À plus tard, {PLAYER}.",
 0x007CEF27,"Go make some more space in your Cube
 for this Mega Stone.","Go make some more space in your Cube
@@ -25369,7 +25373,7 @@ une ampoule que tu ne devras pas<0xFA>l'éteindre plus tard.",
 0x007EAA26,"Many of the Pokémon in this Gym
 benefit from the electrified<0xFA>floor.<0xFB>Meaning, you're a disadvantage!","Many of the Pokémon in this Gym
 benefit from the electrified<0xFA>floor.<0xFB>Meaning, you're a disadvantage!",99,1,100,pokemon,dialogue,"Beaucoup de Pokémon ici profitent
-du sol électrifié.<0xFA>du terrain.<0xFB>Ça signifie que tu pars
+du sol électrifié.<0xFA>Du terrain.<0xFB>Ça signifie que tu pars
 désavantagé !",
 0x007EAADB,It's great!,It's great!,11,2,13,pokemon,dialogue,C'est génial !,
 0x007EAAE7,"Galavan loves Electric types, but
@@ -89272,7 +89276,7 @@ Battle House<0xFC><0x01><0x08> is a great way to<0xFA>train your Pokémon quickl
 of your Pokémon's moves before<0xFA>battling there!","Luchar en <0xFC><0x01><0x06>Casa Batalla Camomons<0xFC><0x01><0x08> es
 una excelente manera de entrenar<0xFA>a tus Pokémon.<0xFB><0x52>Pero no olvides establecer el orden
 de los movimientos de tus Pokémon!",170,3,173,pokemon,dialogue,"Combattre dans la Maison de Combat
-{COLOR}ÉCamomons{COLOR}Ë est un<0xFA>super pour entraîner vite.<0xFB>n'oublie pas de régler l'ordre de
+{COLOR}ÉCamomons{COLOR}Ë est un<0xFA>super pour entraîner vite.<0xFB>N'oublie pas de régler l'ordre de
 tes capacités avant de combattre<0xFA>là-bas !",
 0x01F6F042,battling there!,,15,3,18,pokemon,dialogue,,
 0x01F6F052,"I hear one of the vendors in the
@@ -90620,7 +90624,7 @@ Pokémon contrario es lento, intenta<0xFA>atrapar al Pokémon en la <0xFC><0x01>
 clave para capturar Pokémon<0xFA>extremadamente poderosos de una<0xFA>manera mucho más fácil!",645,2,647,pokemon,dialogue,"Astuces du Dresseur !<0xFB>Évite les Balls standards comme les
 Hyper Balls quand tu veux<0xFA>capturer des Pokémon puissants !<0xFB>Pokémon très {COLOR}Élourd{COLOR}Á ? La
 {COLOR}ÉMasse Ball{COLOR}Á est<0xFA>idéale.<0xFB>Combat > {COLOR}É10 tours{COLOR}Á ?
-pense à la<0xFA>{COLOR}ÉChrono Ball{COLOR}Á.<0xFB>Combat court et l'adversaire a
+Pense à la<0xFA>{COLOR}ÉChrono Ball{COLOR}Á.<0xFB>Combat court et l'adversaire a
 une Vitesse de base<0xFA>au-dessus de {COLOR}É100{COLOR}Á, pense à<0xFA>la {COLOR}ÉRapide Ball{COLOR}Á.<0xFB>Combat court et Pokémon lent,
 essaie de le capturer à<0xFA>la nuit avec une {COLOR}ÉSombre Ball{COLOR}Á.<0xFA><0xFB>Ces quatre Balls sont clés pour
 capturer vite ces Pokémon !",
@@ -104448,7 +104452,7 @@ la maison au nord du marché.
 Son cerveau semblait gélatineux.",
 0x01FB003F,<0xFC>ÀÇNew Mission:<0xFC>ÀÁ,,18,1,19,pokemon,other,<0xFC><0x01><0x04>Nouvelle Mission:<0xFC><0x01><0x02>,
 0x01FB0052,<0xFC><0x01><0x04>Mission Objective Updated:<0xFC><0x01><0x02>,<0xFC><0x01><0x04>Nueva Misión:<0xFC><0x01><0x02>,32,1,33,pokemon,description,<0xFC><0x01><0x04>Objectif Mission à jour:<0xFC><0x01><0x02>,
-0x01FB0073,<0xFC><0x01><0x04>Mission Complete:<0xFC><0x01><0x02>,<0xFC><0x01><0x04>Misión Cumplida: <0xFC><0x01><0x02>,23,1,24,pokemon,description,,
+0x01FB0073,<0xFC><0x01><0x04>Mission Complete:<0xFC><0x01><0x02>,<0xFC><0x01><0x04>Misión Cumplida: <0xFC><0x01><0x02>,23,1,24,pokemon,description,<0xFC><0x01><0x04>Mission Accomplie:<0xFC><0x01><0x02>,
 0x01FB008B,<0xFC><0x01><0x02>Missions Completed: <0xFC><0x01><0x06><0xFD><0x02>,<0xFC><0x01><0x02>Misiones Cumplidas: <0xFC><0x01><0x06><0xFD><0x02>,28,2,30,pokemon,description,,
 0x01FB00A8,"My""<0xFC><0x08>î my daughter""<0xFB>She's fallen into a deep coma""<0xFB>It's because she""<0xFC><0x08>î she watched
 too much television!<0xFB>If only there were someone out
@@ -104595,6 +104599,3 @@ V3.<0xFB>Los datos fueron enviados al
 laboratorio de investigación.<0xFB>Niños restantes: <0xFC><0x01><0x06><0xFD><0x02><0xFC><0x01><0x02>.",128,5,133,pokemon,description,"{COLOR}ÁL'enfant a été scanné en utilisant le
 Cube.<0xFB>Les données ont été envoyées au scientifique du
 Laboratoire de Recherche Onirique.<0xFB>Enfants restants : {COLOR}É{STR_VAR_1}{COLOR}Á.",
-0x27795D,Pointed stones float in the air<0xFE>around the opposing team!,Pointed stones float in the air<0xFE>around the opposing team!,51,5,56,pokemon,move_effect,Des rocs pointus flottent autour de<0xFE>l'équipe adverse !,Stealth Rock effect - first part
-0x2779D4,Pointed stones dug into<0xFE><0xFD> !,Pointed stones dug into<0xFE><0xFD> !,34,6,40,pokemon,move_effect,"Les rocs pointus transpercent
-{UNKNOWN_STR} !",Stealth Rock effect - switch-in part
