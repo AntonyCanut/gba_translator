@@ -1,9 +1,9 @@
 {
-  "conversion_date": "2026-06-16T23:49:16.450762",
+  "conversion_date": "2026-06-16T23:53:41.836605",
   "source_csv": "2026-01-15_trilingual_translation.csv",
-  "total_translations": 20745,
+  "total_translations": 20757,
   "total_errors": 0,
-  "total_warnings": 16789,
+  "total_warnings": 16782,
   "translations": [
     {
       "offset": 165760,
@@ -58256,10 +58256,10 @@
     {
       "offset": 7474804,
       "original_text": "Fallshore City",
-      "translation": "Ville de Fallshore",
-      "length": 18,
+      "translation": "Fallshore",
+      "length": 9,
       "original_length": 14,
-      "padding_used": 4,
+      "padding_used": -5,
       "encoding": "pokemon",
       "category": "location",
       "notes": "",
@@ -58314,6 +58314,18 @@
       "too_long": false
     },
     {
+      "offset": 7475972,
+      "original_text": "Icy Hole",
+      "translation": "Trou Glacé",
+      "length": 10,
+      "original_length": 8,
+      "padding_used": 2,
+      "encoding": "pokemon",
+      "category": "location",
+      "notes": "",
+      "too_long": false
+    },
+    {
       "offset": 7476220,
       "original_text": "Abilities don't affect moves.",
       "translation": "Ignore les talents.",
@@ -58334,6 +58346,18 @@
       "padding_used": -2,
       "encoding": "pokemon",
       "category": "other",
+      "notes": "",
+      "too_long": false
+    },
+    {
+      "offset": 7476456,
+      "original_text": "Glimmer Isle",
+      "translation": "Île Scintillante",
+      "length": 16,
+      "original_length": 12,
+      "padding_used": 4,
+      "encoding": "pokemon",
+      "category": "location",
       "notes": "",
       "too_long": false
     },
@@ -58382,6 +58406,18 @@
       "padding_used": 0,
       "encoding": "pokemon",
       "category": "location",
+      "notes": "",
+      "too_long": false
+    },
+    {
+      "offset": 7477608,
+      "original_text": "Epidimy Town",
+      "translation": "Ville d'Epidimy",
+      "length": 15,
+      "original_length": 12,
+      "padding_used": 3,
+      "encoding": "pokemon",
+      "category": "dialogue",
       "notes": "",
       "too_long": false
     },
@@ -128778,6 +128814,18 @@
       "too_long": false
     },
     {
+      "offset": 11862176,
+      "original_text": "Gurun Town",
+      "translation": "Bourg Gurun",
+      "length": 11,
+      "original_length": 10,
+      "padding_used": 1,
+      "encoding": "pokemon",
+      "category": "location",
+      "notes": "",
+      "too_long": false
+    },
+    {
       "offset": 11862256,
       "original_text": "Seaport City",
       "translation": "Ville Portuaire",
@@ -128808,6 +128856,18 @@
       "length": 10,
       "original_length": 11,
       "padding_used": -1,
+      "encoding": "pokemon",
+      "category": "location",
+      "notes": "",
+      "too_long": false
+    },
+    {
+      "offset": 11862548,
+      "original_text": "Antisis Sewers",
+      "translation": "Égouts d'Antisis",
+      "length": 16,
+      "original_length": 14,
+      "padding_used": 2,
       "encoding": "pokemon",
       "category": "location",
       "notes": "",
@@ -128874,6 +128934,18 @@
       "too_long": false
     },
     {
+      "offset": 11862988,
+      "original_text": "Cinder Volcano",
+      "translation": "Volcan Cendreux",
+      "length": 15,
+      "original_length": 14,
+      "padding_used": 1,
+      "encoding": "pokemon",
+      "category": "location",
+      "notes": "",
+      "too_long": false
+    },
+    {
       "offset": 11863236,
       "original_text": "Old Map",
       "translation": "Vieille Carte",
@@ -128922,6 +128994,18 @@
       "too_long": false
     },
     {
+      "offset": 11867364,
+      "original_text": "Dehara City",
+      "translation": "Dehara",
+      "length": 6,
+      "original_length": 11,
+      "padding_used": -5,
+      "encoding": "pokemon",
+      "category": "location",
+      "notes": "",
+      "too_long": false
+    },
+    {
       "offset": 11869168,
       "original_text": "Tomb of Borrius",
       "translation": "Tombeau de Borrius",
@@ -128934,12 +129018,48 @@
       "too_long": false
     },
     {
+      "offset": 11870836,
+      "original_text": "Pokémon Day Care",
+      "translation": "Pension Pokémon",
+      "length": 15,
+      "original_length": 16,
+      "padding_used": -1,
+      "encoding": "pokemon",
+      "category": "location",
+      "notes": "",
+      "too_long": false
+    },
+    {
+      "offset": 11870884,
+      "original_text": "Polder Town",
+      "translation": "Bourg Polder",
+      "length": 12,
+      "original_length": 11,
+      "padding_used": 1,
+      "encoding": "pokemon",
+      "category": "location",
+      "notes": "",
+      "too_long": false
+    },
+    {
       "offset": 11871504,
       "original_text": "ICEFALL CAVE",
       "translation": "GROTTE GELÉE",
       "length": 12,
       "original_length": 12,
       "padding_used": 0,
+      "encoding": "pokemon",
+      "category": "location",
+      "notes": "",
+      "too_long": false
+    },
+    {
+      "offset": 11874776,
+      "original_text": "Newmoon Island",
+      "translation": "Île du Croissant",
+      "length": 16,
+      "original_length": 14,
+      "padding_used": 2,
       "encoding": "pokemon",
       "category": "location",
       "notes": "",
@@ -128964,6 +129084,30 @@
       "length": 13,
       "original_length": 14,
       "padding_used": -1,
+      "encoding": "pokemon",
+      "category": "location",
+      "notes": "",
+      "too_long": false
+    },
+    {
+      "offset": 11875784,
+      "original_text": "Fullmoon Island",
+      "translation": "Île de la Lune",
+      "length": 14,
+      "original_length": 15,
+      "padding_used": -1,
+      "encoding": "pokemon",
+      "category": "location",
+      "notes": "",
+      "too_long": false
+    },
+    {
+      "offset": 11876268,
+      "original_text": "Redwood Village",
+      "translation": "Village Redwood",
+      "length": 15,
+      "original_length": 15,
+      "padding_used": 0,
       "encoding": "pokemon",
       "category": "location",
       "notes": "",
