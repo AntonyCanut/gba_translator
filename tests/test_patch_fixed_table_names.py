@@ -110,5 +110,32 @@ class TestTownMapCells(unittest.TestCase):
             self.assertEqual(data[name_cell + 5], 0xFF)
 
 
+class TestHardStoneCells(unittest.TestCase):
+    """Hard Stone hold item shipped in English from centered name cells
+    unreachable by the translation pipeline (absent from translation_ready.json
+    and the Spanish extraction). Both the FireRed table (0x3DD32C) and the
+    CFRU extended table (0x878504) must be patched to "Pierre Dure".
+    "Pierre Dure" (11 glyphs) fits stride-26 cells (12 spaces + 11 + FF + 2 pad).
+    """
+
+    CENTERED = (0x3DD32C, 0x878504)
+
+    def test_centered_cells_registered(self):
+        for offset in self.CENTERED:
+            self.assertIn(offset, NAME_FIXES, hex(offset))
+            old, new, _ = NAME_FIXES[offset]
+            self.assertEqual(old, " " * 12 + "Hard Stone", hex(offset))
+            self.assertEqual(new, " " * 12 + "Pierre Dure", hex(offset))
+
+    def test_centered_cells_patch_in_place(self):
+        for offset in self.CENTERED:
+            old, new, stride = NAME_FIXES[offset]
+            data = _make_cell_rom(offset, old, stride)
+            self.assertEqual(apply_name_fixes(data, {offset: (old, new, stride)}), 1)
+            name_cell = offset + 12
+            self.assertEqual(bytes(data[name_cell : name_cell + len(encode("Pierre Dure"))]), encode("Pierre Dure"))
+            self.assertEqual(data[name_cell + len(encode("Pierre Dure"))], 0xFF)
+
+
 if __name__ == "__main__":
     unittest.main()
