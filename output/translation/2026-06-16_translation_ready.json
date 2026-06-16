@@ -1,5 +1,5 @@
 {
-  "conversion_date": "2026-06-16T20:07:51.788148",
+  "conversion_date": "2026-06-16T20:19:14.856716",
   "source_csv": "2026-01-15_trilingual_translation.csv",
   "total_translations": 20744,
   "total_errors": 0,
@@ -124580,10 +124580,10 @@
     {
       "offset": 11796224,
       "original_text": "Un spray qui soigne les blessures.\nRestaure 20 PV <0x16> un Pokémon.",
-      "translation": "Un spray qui soigne les blessures.\nRestaure 20 PV à un Pokémon.",
-      "length": 63,
+      "translation": "Un médicament sous forme de spray.\nDécongèle un Pokémon gelé.",
+      "length": 61,
       "original_length": 63,
-      "padding_used": 0,
+      "padding_used": -2,
       "encoding": "pokemon",
       "category": "dialogue",
       "notes": "",
