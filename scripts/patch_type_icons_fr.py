@@ -14,10 +14,13 @@ There are TWO identical copies of this 16-tile-wide sheet in the ROM:
 Both are patched so every type display is French.
 
 Layout (per CFRU type_tables.s, confirmed by rendering the EN sheet):
-  Each icon is 32x12 px = 4 tiles wide.  Row 8-9 of the 2-tile-tall cell is the
-  solid pill colour; rows 10-15 hold the type name (fill = palette 15, drop
-  shadow = palette 14) on the pill colour.  We clear rows 10-15 to the pill
-  colour and re-stamp the French name centred, using a compact 5px bitmap font.
+  Each icon is 32x24 px = 4x3 tiles.  Rows 8-9 / 18-19 of the cell are the solid
+  pill colour; rows 10-16 hold the type name (fill = palette 15, drop shadow =
+  palette 14) on the pill colour, with the shadow spilling onto row 17.  We clear
+  rows 10-17 to the pill colour and re-stamp the French name centred, using the
+  game's OWN 7px-tall badge font — the glyphs are lifted pixel-for-pixel from the
+  English type sheet so the French names are the exact same height and style as
+  the untouched English/French art (POISON, DRAGON, …).
 
 Only types whose French name differs from the English art are redrawn; NORMAL,
 POISON, DRAGON, ELECTR and the ??? icon already read correctly in French and are
@@ -59,27 +62,31 @@ _SHADOW = 14    # drop-shadow (palette index)
 _TEXT_TOP = 10  # first pixel row of the name within the cell
 _TEXT_ROWS = range(10, 18)
 
-# Compact 5-row uppercase bitmap font (only the glyphs the names above need).
+# The game's OWN 7-row uppercase badge font, extracted pixel-for-pixel from the
+# English type sheet (FIRE/GROUND/ROCK/GHOST/WATER/NORMAL/BUG/PSYCHIC/GHOST).
+# Reusing these exact glyphs makes the French names the same height/style as the
+# untouched art.  V is absent from every English type name, so it is hand-drawn
+# in the same 3px column style as the font's Y/T.
 _FONT = {
-    "A": ["0110", "1001", "1111", "1001", "1001"],
-    "B": ["1110", "1001", "1110", "1001", "1110"],
-    "C": ["0111", "1000", "1000", "1000", "0111"],
-    "E": ["1111", "1000", "1110", "1000", "1111"],
-    "F": ["1111", "1000", "1110", "1000", "1000"],
-    "G": ["0111", "1000", "1011", "1001", "0111"],
-    "H": ["1001", "1001", "1111", "1001", "1001"],
-    "I": ["111", "010", "010", "010", "111"],
-    "L": ["1000", "1000", "1000", "1000", "1111"],
-    "M": ["10001", "11011", "10101", "10001", "10001"],
-    "N": ["1001", "1101", "1011", "1001", "1001"],
-    "O": ["0110", "1001", "1001", "1001", "0110"],
-    "P": ["1110", "1001", "1110", "1000", "1000"],
-    "R": ["1110", "1001", "1110", "1010", "1001"],
-    "S": ["0111", "1000", "0110", "0001", "1110"],
-    "T": ["111", "010", "010", "010", "010"],
-    "U": ["1001", "1001", "1001", "1001", "0110"],
-    "V": ["1001", "1001", "1001", "0110", "0110"],
-    "Y": ["1001", "0110", "0100", "0100", "0100"],
+    "A": ["0110", "1001", "1001", "1111", "1001", "1001", "1001"],
+    "B": ["1110", "1001", "1001", "1110", "1001", "1001", "1110"],
+    "C": ["0110", "1001", "1000", "1000", "1001", "1001", "0110"],
+    "E": ["1111", "1000", "1000", "1110", "1000", "1000", "1111"],
+    "F": ["1111", "1000", "1000", "1110", "1000", "1000", "1000"],
+    "G": ["0110", "1001", "1000", "1011", "1001", "1001", "0110"],
+    "H": ["1001", "1001", "1001", "1111", "1001", "1001", "1001"],
+    "I": ["111", "010", "010", "010", "010", "010", "111"],
+    "L": ["1000", "1000", "1000", "1000", "1000", "1000", "1111"],
+    "M": ["1001", "1111", "1001", "1001", "1001", "1001", "1001"],
+    "N": ["1001", "1101", "1101", "1011", "1011", "1001", "1001"],
+    "O": ["0110", "1001", "1001", "1001", "1001", "1001", "0110"],
+    "P": ["1110", "1001", "1001", "1110", "1000", "1000", "1000"],
+    "R": ["1110", "1001", "1001", "1110", "1001", "1001", "1001"],
+    "S": ["0110", "1001", "1000", "0110", "0001", "1001", "0110"],
+    "T": ["111", "010", "010", "010", "010", "010", "010"],
+    "U": ["1001", "1001", "1001", "1001", "1001", "1001", "0110"],
+    "V": ["101", "101", "101", "101", "101", "101", "010"],
+    "Y": ["101", "101", "101", "101", "010", "010", "010"],
 }
 
 
@@ -124,7 +131,7 @@ def _stamp_name(g: list[list[int]], name: str, pill: int) -> None:
     for ch in name:
         rows = _FONT[ch]
         w = len(rows[0])
-        for gy in range(5):
+        for gy in range(len(rows)):
             for gx in range(w):
                 if rows[gy][gx] == "1":
                     px, py = x + gx, _TEXT_TOP + gy

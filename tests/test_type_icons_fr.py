@@ -55,11 +55,11 @@ def test_french_names_rendered_in_both_copies():
             g = mod._read_icon(mod_rom, base, mod.TILEOFF[icon])
             mod._stamp_name(g, fr, g[8][0])
             mod._write_icon(mod_rom, base, mod.TILEOFF[icon], g)
-    # after stamping, the text band (rows 10-15) must contain fill pixels (15)
+    # after stamping, the text band (rows 10-16) must contain fill pixels (15)
     for base in mod.BASES:
         for icon in mod.FR_NAME:
             g = mod._read_icon(mod_rom, base, mod.TILEOFF[icon])
-            fills = sum(g[r][c] == mod._FILL for r in range(10, 16) for c in range(32))
+            fills = sum(g[r][c] == mod._FILL for r in range(10, 17) for c in range(32))
             assert fills > 0, f"{icon}@0x{base:07X}: no letter pixels stamped"
             # and it must differ from the blank-pill original
             assert g != mod._read_icon(rom, base, mod.TILEOFF[icon])
@@ -89,21 +89,31 @@ def test_steel_is_acier_per_owner_request():
     assert mod.FR_NAME["Steel"] == "ACIER"
 
 
-def test_no_residue_below_french_name():
-    """The full 8px-tall English-name band (rows 10-17) must be cleared, leaving
-    no leftover pixels below the (shorter) French name — regression guard for the
-    'word still showing underneath' bug. Exercised on an isolated grid seeded with
-    fake English letters in rows 16-17 (the bottom of an 8px name)."""
+def test_no_residue_from_previous_text():
+    """Re-stamping must wipe ALL prior pixels in the text band (rows 10-17) before
+    drawing — regression guard for the 'old word still showing' bug. We seed the
+    whole band with garbage fill, stamp the French name, and require the result to
+    be byte-identical to stamping the same name on a clean pill grid: i.e. nothing
+    of the previous content survives anywhere in the band."""
     pill = 0xB
     for fr in mod.FR_NAME.values():
-        g = [[0] * 32 for _ in range(24)]
+        clean = [[0] * 32 for _ in range(24)]
+        dirty = [[0] * 32 for _ in range(24)]
         for r in range(8, 20):
             for c in range(32):
-                g[r][c] = pill
-        for r in (16, 17):  # bottom two rows of a fake English name
-            for c in range(6, 26):
-                g[r][c] = mod._FILL
-        mod._stamp_name(g, fr, pill)
-        for r in (16, 17):
-            stray = [c for c in range(32) if g[r][c] != pill]
-            assert not stray, f"'{fr}': residue at row {r}: {stray}"
+                clean[r][c] = dirty[r][c] = pill
+        for r in mod._TEXT_ROWS:  # garbage from a previous (longer/English) name
+            for c in range(32):
+                dirty[r][c] = mod._FILL
+        mod._stamp_name(clean, fr, pill)
+        mod._stamp_name(dirty, fr, pill)
+        for r in mod._TEXT_ROWS:
+            assert dirty[r] == clean[r], f"'{fr}': residue survived at row {r}"
+
+
+def test_font_is_full_height():
+    """Every glyph must be the same 7px height as the game's original badge font
+    (matches the untouched English/French art height) — guards against a shorter
+    font sneaking back in."""
+    for ch, rows in mod._FONT.items():
+        assert len(rows) == 7, f"glyph '{ch}' is {len(rows)} rows, expected 7"
