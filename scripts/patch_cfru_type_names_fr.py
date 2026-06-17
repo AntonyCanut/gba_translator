@@ -8,10 +8,18 @@ independently of the pointer table at 0x3FEA28 (which was already repointed to
 « une capacité X » strings in free space by the main pipeline).
 
 This post-build step patches the TYPE NAME bytes in-place so the status window
-displays French type names.  Only replaces; never overflows the original slot.
+displays French type names.  Only replaces; never overflows the original slot,
+so names longer than the EN original are abbreviated (e.g. GLACE→GLA, ROCHE→ROC).
 
 Also fixes the frozen-status condition « ice » → « gel » at 0x3FE846 (same
 length, direct in-place patch; the pointer at 0x2500F0 still points there).
+
+IMPORTANT — type vs status must stay separate. « GEL » is the *frozen status*
+(see patch_status_abbrevs_fr.py FRZ→GEL and CONDITION_PATCHES below); it must
+never be reused as the *Ice type* name, or the summary window would conflate a
+status with a type. The Ice type is therefore « GLA » (abbrev of GLACE), and the
+frozen status stays « gel ». These two patch groups use different terminators
+(0x00 space for the packed type table, 0xFF for standalone status strings).
 """
 
 from __future__ import annotations
@@ -48,12 +56,29 @@ TYPE_PATCHES: list[tuple[int, str, str]] = [
     (0x3FE931, "GRASS",    "PLANT"),    # 5 → 5 exact fit  (abbrev PLANTE)
     (0x3FE93F, "ELECTRIC", "ÉLECTR"),   # 8 → 6 chars
     (0x3FE94F, "PSYCHIC",  "PSY"),      # 7 → 3 chars
-    (0x3FE95F, "ICE",      "GEL"),      # 3 → 3 exact fit  (« type Glace »)
-    # DRAGON  → DRAGON  (same)   skip
+    (0x3FE95F, "ICE",      "GLA"),      # 3 → 3 exact fit  (abbrev GLACE — NOT « GEL »)
+    # DRAGON  → DRAGON  (same in FR)   skip
     # DARK    → DARK    (4 chars, TÉNÈBRES=8 overflows)  skip
+    # NOTE  Ice/Glace MUST NOT be abbreviated to « GEL »: GEL is the *frozen
+    #       status* (cf. patch_status_abbrevs_fr.py FRZ→GEL and the battle
+    #       condition « gel » below). Using GEL for the *type* would collide
+    #       status and type in the summary window. The slot is only 3 bytes
+    #       wide (packed table, read by hardcoded offset), so the full word
+    #       « GLACE » (5) cannot fit in-place; « GLA » is the 3-char abbrev.
+    #       Likewise ROCK→ROC: « ROCHE » (5) overflows the 4-byte slot.
 ]
 
-# Frozen status condition: « ice » → « gel » at 0x3FE846 (3 chars, exact fit)
+# Type names that were shipped with a *previous* (now-corrected) FR value.
+# Listing the old value here lets the build self-heal: the patcher upgrades an
+# already-built FR ROM (e.g. one still holding « GEL ») to the new value instead
+# of warning « expected ICE got GEL — skip ».
+MIGRATE_FROM: dict[int, tuple[str, ...]] = {
+    0x3FE95F: ("GEL",),  # ICE: was wrongly abbreviated to the frozen-status word
+}
+
+# Frozen status condition: « ice » → « gel » at 0x3FE846 (3 chars, exact fit).
+# This IS the battle frozen *status* (legitimately « gel » in FR), 0xFF-terminated
+# and reached via a separate pointer (0x2500F0) — distinct from the type table above.
 CONDITION_PATCHES: list[tuple[int, str, str]] = [
     (0x3FE846, "ice", "gel"),
 ]
@@ -85,9 +110,10 @@ def apply_patches(rom_path: Path, dry_run: bool = False) -> int:
             current = _read_until(rom, offset, term_byte)
             if current == fr_text:
                 continue  # already done
-            if current != en_expected:
+            acceptable = (en_expected, *MIGRATE_FROM.get(offset, ()))
+            if current not in acceptable:
                 print(
-                    f"  WARN 0x{offset:07X}: expected «{en_expected}» got «{current}» — skip",
+                    f"  WARN 0x{offset:07X}: expected one of {acceptable} got «{current}» — skip",
                     file=sys.stderr,
                 )
                 continue
