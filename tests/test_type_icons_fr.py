@@ -83,5 +83,5 @@ def test_idempotent():
     assert p.read_bytes() == once, "patch is not idempotent"
 
 
-def test_steel_is_metal_per_owner_request():
-    assert mod.FR_NAME["Steel"] == "METAL"
+def test_steel_is_acier_per_owner_request():
+    assert mod.FR_NAME["Steel"] == "ACIER"
