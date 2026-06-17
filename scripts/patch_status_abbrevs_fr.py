@@ -1,17 +1,32 @@
 #!/usr/bin/env python3
 """Patch status condition abbreviations from English to official French.
 
-The Pokémon summary screen reads 3-letter status abbreviations from fixed
-addresses referenced by a pointer table at 0x3DFE18 (stride 8):
+The Pokémon summary screen reads 3-letter status abbreviations through a
+pointer table at 0x3DFE18 (stride 8 — a 4-byte pointer followed by 4 bytes of
+padding). Following each live pointer lands on a 3-char, 0xFF-terminated string
+(packed at 0x41790C..0x41791C in the stock EN ROM):
 
-  0x3DFE18 → SLP (Sleep)     → SOM (Sommeil)
-  0x3DFE20 → PSN (Poison)    → EMP (Empoisonné)
-  0x3DFE28 → PAR (Paralysis) → PAR (no change)
-  0x3DFE30 → BRN (Burn)      → BRL (Brûlure)
-  0x3DFE38 → FRZ (Frozen)    → GEL (Gelé)
+  idx0 → SLP (Sleep)     → DOR (Dort)
+  idx1 → PSN (Poison)    → EMP (Empoisonné)
+  idx2 → PAR (Paralysis) → PAR (no change)
+  idx3 → BRN (Burn)      → BRL (Brûlure)
+  idx4 → FRZ (Frozen)    → GEL (Gelé)
 
-These 3-char strings end with 0xFF and live at fixed EN-ROM addresses, so
-in-place replacement works exactly (3 bytes → 3 bytes, 0xFF terminator kept).
+Why this is a class-3 *post-build* patch and not a `combined_fr.txt` entry:
+these offsets never appear in the translation pipeline (absent from the
+injection JSON, the Spanish extract AND `combined_fr.txt`), so no translation
+pass touches them. A class-1 fix in `combined_fr.txt` would also be wiped every
+time that volatile file is regenerated. Patching the bytes in place here — as
+committed code wired into `make build-fr`, exactly like
+`patch_cfru_type_names_fr.py` for the type names — is immune to those rewrites.
+
+Each FR abbreviation is the same byte-length (3) as the EN original and ends
+with 0xFF, so in-place replacement is exact (the pointer never moves).
+
+The patch is idempotent and self-healing: it overwrites the EN original *or* any
+previously-shipped FR variant (e.g. the old "SOM" for sleep), so re-running it
+over an already-built ROM converges to the current target without a full
+rebuild.
 """
 
 from __future__ import annotations
@@ -33,23 +48,22 @@ GBA_BASE = 0x08000000
 PTR_TABLE_OFFSET = 0x3DFE18
 PTR_STRIDE = 8  # 4-byte pointer + 4 bytes padding
 
-# (EN text, FR text) — PAR unchanged, no entry needed
+# Each entry: table index, EN original, FR target, and the set of *prior* FR
+# variants we are willing to overwrite (so a re-run self-heals an older build).
 STATUS_PATCHES = [
-    ("SLP", "SOM"),  # index 0 — Sommeil
-    ("PSN", "EMP"),  # index 1 — Empoisonné
-    # index 2 = PAR, keep as-is
-    ("BRN", "BRL"),  # index 3 — Brûlure
-    ("FRZ", "GEL"),  # index 4 — Gelé
+    {"index": 0, "en": "SLP", "fr": "DOR", "prior": {"SOM"}},  # Dort
+    {"index": 1, "en": "PSN", "fr": "EMP", "prior": set()},    # Empoisonné
+    # index 2 = PAR, identical in FR → no entry
+    {"index": 3, "en": "BRN", "fr": "BRL", "prior": set()},    # Brûlure
+    {"index": 4, "en": "FRZ", "fr": "GEL", "prior": set()},    # Gelé
 ]
-# Which table indices to patch (skip PAR at index 2)
-STATUS_INDICES = [0, 1, 3, 4]
 
 
 def _encode(text: str) -> bytes:
     return bytes([ENC[c] for c in text])
 
 
-def _decode_at(rom: bytearray, off: int, maxlen: int = 8) -> str:
+def _decode_at(rom: bytes, off: int, maxlen: int = 8) -> str:
     chars = []
     for i in range(maxlen):
         b = rom[off + i]
@@ -59,11 +73,16 @@ def _decode_at(rom: bytearray, off: int, maxlen: int = 8) -> str:
     return "".join(chars)
 
 
-def apply_patches(rom_path: Path, dry_run: bool = False) -> int:
-    rom = bytearray(rom_path.read_bytes())
+def apply_to_rom(rom: bytearray, dry_run: bool = False) -> int:
+    """Patch status abbreviations in `rom` in place. Returns the change count."""
     changes = 0
 
-    for idx, (en_text, fr_text) in zip(STATUS_INDICES, STATUS_PATCHES):
+    for entry in STATUS_PATCHES:
+        idx = entry["index"]
+        en_text = entry["en"]
+        fr_text = entry["fr"]
+        accepted = {en_text} | entry["prior"]
+
         ptr_off = PTR_TABLE_OFFSET + idx * PTR_STRIDE
         ptr_raw = struct.unpack_from("<I", rom, ptr_off)[0]
         file_off = ptr_raw - GBA_BASE
@@ -77,33 +96,41 @@ def apply_patches(rom_path: Path, dry_run: bool = False) -> int:
 
         current = _decode_at(rom, file_off)
         if current == fr_text:
-            continue  # already patched
-        if current != en_text:
+            continue  # already at target
+        if current not in accepted:
             print(
-                f"  WARN 0x{file_off:06X} (index={idx}): expected «{en_text}» got «{current}» — skip",
+                f"  WARN 0x{file_off:06X} (index={idx}): expected one of "
+                f"{sorted(accepted)} got «{current}» — skip",
                 file=sys.stderr,
             )
             continue
 
         fr_encoded = _encode(fr_text)
-        en_len = len(en_text)
         fr_len = len(fr_encoded)
-        if fr_len > en_len:
+        cur_len = len(current)
+        if fr_len > cur_len:
             print(
-                f"  ERROR 0x{file_off:06X}: FR «{fr_text}» ({fr_len}) > EN «{en_text}» ({en_len}) — skip",
+                f"  ERROR 0x{file_off:06X}: FR «{fr_text}» ({fr_len}) longer than "
+                f"«{current}» ({cur_len}) — skip",
                 file=sys.stderr,
             )
             continue
 
         if not dry_run:
             rom[file_off : file_off + fr_len] = fr_encoded
-            # Pad any remaining bytes with 0xFF terminator
-            for j in range(fr_len, en_len):
+            # Keep the 0xFF terminator: pad any freed trailing bytes.
+            for j in range(fr_len, cur_len):
                 rom[file_off + j] = 0xFF
 
-        print(f"  0x{file_off:06X}  «{en_text}» → «{fr_text}»")
+        print(f"  0x{file_off:06X}  «{current}» → «{fr_text}»")
         changes += 1
 
+    return changes
+
+
+def apply_patches(rom_path: Path, dry_run: bool = False) -> int:
+    rom = bytearray(rom_path.read_bytes())
+    changes = apply_to_rom(rom, dry_run=dry_run)
     if not dry_run and changes:
         rom_path.write_bytes(rom)
     return changes
