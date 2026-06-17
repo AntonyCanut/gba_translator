@@ -40,8 +40,34 @@ class TestCleanBody:
         s = r"perd ¥{STR_VAR_1}…\p… … … …\p{PLAYER} s’évanouit !"
         assert mod.clean_body(s) == r"perd ¥{STR_VAR_1}…\p…\p{PLAYER} s’évanouit !"
 
+    def test_space_before_ellipsis_stripped_when_no_word_after(self):
+        # T3 : « mot … » -> « mot… » quand aucun mot n'est collé après.
+        assert mod.clean_body("Non …") == "Non…"
+        assert mod.clean_body("Je sais …") == "Je sais…"
+        assert mod.clean_body("vu … rien") == "vu… rien"  # mot après mais pas collé
+        assert mod.clean_body("vu   …") == "vu…"  # plusieurs espaces
+        assert mod.clean_body("fini …?") == "fini…?"  # ponctuation après, pas un mot
+        assert mod.clean_body("attends …\\p") == "attends…\\p"  # code après, pas un mot
+
+    def test_space_before_ellipsis_kept_when_word_glued_after(self):
+        # Ellipsis de tête : un mot collé après -> l'espace d'avant reste.
+        assert mod.clean_body("vu …rien") == "vu …rien"
+        assert mod.clean_body("Eh bien …Mais alors") == "Eh bien …Mais alors"
+
+    def test_space_before_ellipsis_kept_after_opening_punct(self):
+        # Ponctuation ouvrante / tiret de dialogue : espace typographique gardé.
+        assert mod.clean_body("« …") == "« …"
+        assert mod.clean_body("— …") == "— …"
+        assert mod.clean_body("( …") == "( …"
+
+    def test_space_before_combines_with_collapse(self):
+        # T2 puis T3 : « mot … … » -> « mot… ».
+        assert mod.clean_body("Bon … …") == "Bon…"
+        assert mod.clean_body("Bon … … rien") == "Bon… rien"
+
     def test_never_grows(self):
-        for s in ["Et...", "… … … …", "Dehors…… Dehors……", "Non…", r"…\p…"]:
+        for s in ["Et...", "… … … …", "Dehors…… Dehors……", "Non…", r"…\p…",
+                  "Non …", "vu …rien", "« …", "Bon … …"]:
             assert len(mod.clean_body(s)) <= len(s)
 
 
@@ -67,3 +93,11 @@ class TestCombinedFrIsClean:
             body = line.split(":", 1)[1] if ":" in line else line
             assert not ascii_dots.search(body), f"ASCII '...' restant : {line[:80]}"
             assert not run.search(body), f"rangée d'ellipses restante : {line[:80]}"
+
+    def test_no_residual_space_before_ellipsis(self):
+        # Garde-fou T3 : plus aucun « mot … » (sans mot collé après) ne subsiste.
+        path = _SCRIPT.parent.parent / "combined_fr.txt"
+        for line in path.read_text(encoding="utf-8").splitlines():
+            body = line.split(":", 1)[1] if ":" in line else line
+            m = mod.SPACE_BEFORE.search(body)
+            assert m is None, f"espace avant « … » restant : {line[:80]}"
