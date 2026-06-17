@@ -58,7 +58,7 @@ TYPE_PATCHES: list[tuple[int, str, str]] = [
     (0x3FE94F, "PSYCHIC",  "PSY"),      # 7 → 3 chars
     (0x3FE95F, "ICE",      "GLA"),      # 3 → 3 exact fit  (abbrev GLACE — NOT « GEL »)
     # DRAGON  → DRAGON  (same in FR)   skip
-    # DARK    → DARK    (4 chars, TÉNÈBRES=8 overflows)  skip
+    (0x3FE978, "DARK",    "TÈN"),      # 4 → 3 chars  (abbrev TÉNÈBRES; 1 space pad)
     # NOTE  Ice/Glace MUST NOT be abbreviated to « GEL »: GEL is the *frozen
     #       status* (cf. patch_status_abbrevs_fr.py FRZ→GEL and the battle
     #       condition « gel » below). Using GEL for the *type* would collide
@@ -74,6 +74,7 @@ TYPE_PATCHES: list[tuple[int, str, str]] = [
 # of warning « expected ICE got GEL — skip ».
 MIGRATE_FROM: dict[int, tuple[str, ...]] = {
     0x3FE95F: ("GEL",),  # ICE: was wrongly abbreviated to the frozen-status word
+    0x3FE978: (),        # DARK: no prior shipped value to migrate from
 }
 
 # Frozen status condition: « ice » → « gel » at 0x3FE846 (3 chars, exact fit).
