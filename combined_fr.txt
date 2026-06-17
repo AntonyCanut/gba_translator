@@ -2590,11 +2590,11 @@
 0x3FCB4B: ose!
 0x3FCB50: beaucoup
 0x3FCB59: baisse !
-0x3FCB5F: {FD0F} de {FD00}\n{FD01}
-0x3FCB6A: {FD10} de {FD00}\n{FD01}
+0x3FCB5F: {FD00} de {FD0F}\n{FD01}
+0x3FCB6A: {FD00} de {FD10}\n{FD01}
 0x3FCB75: Avec {B_LAST_ITEM}, le {UNKNOWN_STR} de {B_SCR_ACTIVE_NAME_WITH_PREFIX}\n{PLAYER}
-0x3FCB8F: {FD0F} de {FD00}\n{FD01}
-0x3FCB9A: {FD10} de {FD00}\n{FD01}
+0x3FCB8F: {FD00} de {FD0F}\n{FD01}
+0x3FCB9A: {FD00} de {FD10}\n{FD01}
 0x3FCBA5: Stats de {B_ATK_NAME_WITH_PREFIX}\nau-dessus du max !
 0x3FCBC5: Stats de {B_DEF_NAME_WITH_PREFIX}\nau-dessous du min !
 0x3FCBE4: Coup critique !
@@ -5894,7 +5894,7 @@
 0x788132: Je te le dis, tu es plus fort que\ncet Ace Hiker !
 0x788163: Personne ne connaît mieux les\nmontagnes que moi, je vous le dis.
 0x788255: 9Combien d'années ai-je passé\nici…\pSi seulement je pouvais perdre,\nmon voyage finirait…
-0x7882B8: Merci…\pMerci…\pMaintenant, mon voyage peut prendre\nfin …
+0x7882B8: Merci…\pMerci…\pMaintenant, mon voyage peut prendre\nfin…
 0x7882F7: Vous m'avez libéré…\pJe suis vraiment reconnaissant du\nfond de mon cœur…
 0x788429: Maintenant que l'entrée de la voie\nrapide SES est dégagée, les\pvoyageurs peuvent s'épargner la\nmontée en passant par là !
 0x788537: 9{COLOR}ËDésolé pour ça.\pPrends ça pour ton problème.
@@ -5955,7 +5955,7 @@
 0x78C0BF: Mel : {COLOR}ËJ'ai besoin de te\nparler.
 0x78C189: Waah ! Maintenant! Tout à l’heure !\nJ’étais sur le point de le lancer !
 0x78C2A8: 9Itinéraire 12
-0x78C2C9: Vous devez avoir plus de respect\npour un pêcheur …
+0x78C2C9: Vous devez avoir plus de respect\npour un pêcheur…
 0x78C2FD: 9Itinéraire 12
 0x78C364: Salut, surfeur ! Que dirais-tu d'un\ncombat en mer ?
 0x78C40F: C'est certainement là que tu m'as\nfait l'école.
@@ -6332,7 +6332,7 @@
 0x7B6C81: Le chemin à travers cette montagne\n\pest épuisant, non ? Laisse-moi te\nsoigner pour que tu continues
 0x7B6D11: Regarde ! Un dresseur perdu au Mont Foudroyant !
 0x7B85B9: Si tu complètes le Pokédex, visite\n\ple Mont Foudroyant. Plein de Pokémon\n\pÉlectrik rares y vivent. On dit même\nqu'Électhor niche au sommet !
-0x7B870C: Tu prépares un mauvais coup ? … Je\n\pvérifie juste. On ne sait jamais\n\pquand un vaurien va passer la porte.\n\p\n
+0x7B870C: Tu prépares un mauvais coup ?… Je\n\pvérifie juste. On ne sait jamais\n\pquand un vaurien va passer la porte.\n\p\n
 0x7B8908: ad <0x7A> Itinéraire 3\n\l\n
 0x7B8989: L'Au-delà, Base de l'Ombre, Grand\nDésert, Bourg Gurun
 0x7B89FD: Deux ponts… Si tu me bats, je dis\n\plequel mène à la prochaine route !\n
@@ -6769,7 +6769,7 @@
 0x7CF046: Mes voyages ont-ils été vains ?
 0x7CF05F: Le talent {COLOR}ÉVentouse{COLOR}Ë de mon\nSepiatroce m'aide à ramener des\lPokémon !\pEnfin, je crois qu'il a bien\nVentouse…
 0x7CF1B6: Désolé, gamin !\pUn combat entre des Mangriff et\nSéviper a détruit le pont.\pIl faudra un certain temps avant que\nnous puissions le réparer.\pVous devriez parler à notre patron\nde trouver un autre moyen de\lVille Portuaire en attendant.
-0x7CF46D: {COLOR}ËNon…\pJe ne devrais pas ressentir cela…\pTout ce pour quoi nous avons\ntravaillé est sur le point de se\lréaliser.\pJe pourrai même\nrevoir mon fils …
+0x7CF46D: {COLOR}ËNon…\pJe ne devrais pas ressentir cela…\pTout ce pour quoi nous avons\ntravaillé est sur le point de se\lréaliser.\pJe pourrai même\nrevoir mon fils…
 0x7CF4F0: ???: {COLOR}ËDésolé, vieil homme.\pSi tu as froid aux yeux maintenant,\ntu pourrais être un gros problème\lsur la route.\pJe ne peux pas avoir quoi que ce\nsoit qui s'oppose sur le chemin de\lla Libération.\pVotre fils devra simplement être\nsans père pour toujours.
 0x7CF825: {COLOR}ËReste dans le\nsac, Pokémon inutile.
 0x7CF84E: {COLOR}ËJe suppose que nous n'avons pas\nd'autre choix que de le laisser\pPeut-être qu'un entraîneur chanceux\nle trouvera et décidera d'entraîner\l.
@@ -6849,7 +6849,7 @@
 0x7D4DD8: Aklove : {COLOR}ËEn fait, c'était Hoopa\nagissant de son propre chef.\pIl était désespéré que quelqu'un le\nsauve de moi.\pIl se sentait obligé de protéger\n{PLAYER} car {STR_VAR_2} est son véritable\pJe ne veux rien de plus que de voir\n{PLAYER} éliminé.\pUne fois {STR_VAR_2} parti, Hoopa le fera enfin\nm'accepte comme son véritable\pAlors seulement pourrai-je utiliser\ntoute sa puissance, capable de\ldes masses terrestres entières…
 0x7D4F4B: Zeph : {COLOR}ËJe l'admets…\pJe n'ai aucune chance contre un\nPokémon comme celui-là.
 0x7D4F8E: Aklove : {COLOR}ËC'est une sage décision.\pMaintenant, éloignez-vous de mon\nchemin !
-0x7D4FC9: Zeph : {COLOR}ËJe suis désolé, Ivory.\pJe n'ai pas pu\nterminer la mission .\pCependant, ce n'est pas la fin.\pNous trouverons toujours un moyen de\nles ramener …
+0x7D4FC9: Zeph : {COLOR}ËJe suis désolé, Ivory.\pJe n'ai pas pu\nterminer la mission .\pCependant, ce n'est pas la fin.\pNous trouverons toujours un moyen de\nles ramener…
 0x7D5055: Aklove : {COLOR}ËEt maintenant, que\nl'événement principal commence.
 0x7D5083: {COLOR}ËHoopa, prépare-toi !\pVotre véritable pouvoir est sur le\npoint d'être libéré de la bouteille\lde Prison !\pEt en tant que votre entraîneur, je\nsuis pleinement capable de le\llibérer !
 0x7D512A: Aklove : {COLOR}ËEnfin !\pJ'ai attendu ce moment pendant des\nannées !\pHoopa !\pLe sceau de ton pouvoir a enfin être\nbrisé !
@@ -6937,7 +6937,7 @@
 0x7D990E: Zeph : {COLOR}ËMarlon a disparu…\pIvory m'a quitté pour retrouver son\nfils…\pÇa ne sert à\nrien de continuer plus…
 0x7D9974: Marlon : {COLOR}ËSortez-en, Zeph !\pReprenez vos esprits !\pC'est moi, Marlon !
 0x7D99C0: Zeph : {COLOR}ËMarlon ?\pEst-ce vraiment toi ?\pTu as l'air différent…\pCette cicatrice sur ton visage a\ndisparu…\pEt où est ton uniforme ?
-0x7D9A33: Marlon : {COLOR}ËOui, c'est moi, Zeph.\pJ'ai enlevé mon uniforme après que\nje me sois frayé un chemin ici.\pCe n'est pas comme si j'en aurais\nplus besoin …\pD'après ce que j'ai entendu des\ngrunts restants, les Shadows ont\lessentiellement dissous…
+0x7D9A33: Marlon : {COLOR}ËOui, c'est moi, Zeph.\pJ'ai enlevé mon uniforme après que\nje me sois frayé un chemin ici.\pCe n'est pas comme si j'en aurais\nplus besoin…\pD'après ce que j'ai entendu des\ngrunts restants, les Shadows ont\lessentiellement dissous…
 0x7D9B0D: Zeph : {COLOR}ËNous n’avons pas encore\nterminé…\pIl nous reste encore une mission à\naccomplir…
 0x7D9B56: Marlon : {COLOR}ËQue s'est-il passé, Zeph ?\pPourquoi avons-nous été abandonnés ?
 0x7D9B8D: Zeph : {COLOR}ËQuand Aklove s'est joué de\nmoi et lancé la déliaison,\lBeaucoup de sbires fascinés par sa\lpuissance ont prêté\lallégeance à la Lumière du Néant.\pCes imbéciles ne voient pas ce\nqu'ils ont fait…\pIls détruisent leurs\nfoyers…
@@ -12266,7 +12266,7 @@
 0x101A69C: iiii<
 0x101F052: RB AAQ {SUPER_RE}UR9/URP
 0x101F779: EB EQE QR!9UB
-0x101F887: E       9  9B …UE …{PLAY_BGM}{SUPER_RE}9RÎP?A \l{WAIT_SE}                                                                                                                                                                   9A {SUPER_RE}
+0x101F887: E       9  9B …UE…{PLAY_BGM}{SUPER_RE}9RÎP?A \l{WAIT_SE}                                                                                                                                                                   9A {SUPER_RE}
 0x1021176: AAAAR\l!
 0x102418C: iiiijyiizzji
 0x102D087: uTUR
@@ -14299,7 +14299,7 @@
 0x18B332A: RwAARAAABAwzDAzAAzD\pEAwÔl
 0x18B3473: R                            Ô      :   E   E   :           :   :êRêRwADQ\n
 0x18B36D4: êBREGRwEQRB
-0x18B3D7F: ÜQBQE…Î…Î            \nRRÎUQB B…Î Î    A                                                                                                                                                                                                     …   Q  …R           A   A AÎ QRAÎR
+0x18B3D7F: ÜQBQE…Î…Î            \nRRÎUQB B…Î Î    A…   Q  …R           A   A AÎ QRAÎR
 0x18B42C0: AAQRARRRRRRARR\pAR\pEA     :
 0x18B42DD: UBÔRB\p BAÔ A\p  A
 0x18B44BA: :EAÔUEA\pREATR:TRR:RRRERRR    Ô   Ô
@@ -15678,7 +15678,7 @@
 0x1EF45E6: Alors, tu as des\n{COLOR}ÉBalles Fer{COLOR}Ç ?\pJe peux en faire des {COLOR}ÉBeast Balls{COLOR}Ç\nsi tu veux.
 0x1EF4647: Combien de Balles Fer veux-tu\ncéder ?
 0x1EF466F: Tu vas céder {STR_VAR_1} des\nBalles Fer ?
-0x1EF4696: Upupupu…\pMerci bien.\pC'est tout un art… elles réagissent\nmal aux dimensions d'une\lPoké Ball…\pAlors je crée un espace alternatif,\net…{PAUSE}ß …{PAUSE}ß …{PAUSE}ß{PLAY_SE} voilà !
+0x1EF4696: Upupupu…\pMerci bien.\pC'est tout un art… elles réagissent\nmal aux dimensions d'une\lPoké Ball…\pAlors je crée un espace alternatif,\net…{PAUSE}ß…{PAUSE}ß…{PAUSE}ß{PLAY_SE} voilà !
 0x1EF474E: Upupupu…\pLes portails d'où surgissent ces\ncréatures réapparaissent souvent.\pJ'espère que tu utiliseras ces Beast\nBalls pour le bien, et que tu\lapaiseras ces menaces pour ce monde…
 0x1EF47EA: Pas intéressé ?\pComment ne pas trouver fascinants\nles monstres d'un autre monde ?
 0x1EF4838: Upupupu…\pTu n'as pas de Balles Fer…
@@ -18277,12 +18277,12 @@
 0x1F36E21: Je vais te montrer moi-même… La\ppuissance d'Électhor ! La puissance\nd'un Pokémon légendaire !
 0x1F36E74: Même avec un Pokémon légendaire…\ntout ça n'a servi à rien… !?
 0x1F36EB1: Alors…{PAUSE} c'en est fini pour moi.\pÉlecthor a détruit tous mes\nGuerriers des Ombres, et les\lSbires que j'ai amenés pour\lla mission ont tous été vaincus…\pJe m'incline… Je ne peux pas\pt'empêcher de me prendre Électhor\npar la force. Très bien,\pje relâche Électhor dans\nla nature. Je te donne\pma parole que je ne le\npoursuivrai plus…
-0x1F36FE6: Dis-moi que tu as de bonnes\nnouvelles pour moi. Électhor,\palors… ? … Vraiment ? C'est\pune excellente nouvelle\p! Je pensais que Marlon\ps'échapperait avec Électhor,\nmême si tu le battais.\lEt tu dis qu'il l'a juste\prelâché ? On dirait\pqu'il savait quand se\ncoucher, hein ?
+0x1F36FE6: Dis-moi que tu as de bonnes\nnouvelles pour moi. Électhor,\palors… ?… Vraiment ? C'est\pune excellente nouvelle\p! Je pensais que Marlon\ps'échapperait avec Électhor,\nmême si tu le battais.\lEt tu dis qu'il l'a juste\prelâché ? On dirait\pqu'il savait quand se\ncoucher, hein ?
 0x1F370D2: Bon, si Électhor est en sécurité,\non peut souffler pour l'instant.\lOh oui…{PAUSE} tu fais le Défi des Arènes,\pn'est-ce pas ? Dans ce cas,\ntu devrais probablement aller\pvoir le {COLOR}ÉManoir Tarmigan{COLOR}Ë. Ce\nn'est pas vraiment une Arène\pofficielle, mais considère ça\ncomme l'Arène 4,5 ! J'ai entendu\pdire que si tu bats la Successeure\ndu Manoir, tu pourras manier\lun nouveau pouvoir incroyable\l! Quel genre ? Ha ha,\pce serait gâcher\nla surprise !
 0x1F37282: … {FONT_SMALL}Tu es vraiment incroyable,\p{PLAYER}… Je veux dire…{PAUSE}\ntout seul, tu…
 0x1F372C3: Mais ne faisons pas une pause\ntrop longue. N'oublions pas\pque les Ombres rôdent encore dehors,\net qu'elles ont encore Sulfura\let Artikodin. Heureusement,\pj'ai fini de parler avec Papy,\net je crois savoir comment\lles récupérer. Une fois que\ptu auras fini avec le {COLOR}ÉManoir\nTarmigan{COLOR}Ë, va vers le {COLOR}Énord{COLOR}Ë\lvers la {COLOR}ÉRoute 12{COLOR}Ë. Je te\pretrouverai à la {COLOR}ÉVille de\nDehara{COLOR}Ë. On pourra passer\pen revue le plan pour les\nsauver des Ombres quand\ltu arriveras. Très\pbien, à bientôt !
 0x1F37486: Étouraptor !\pEn avant !
-0x1F374A2: Je t'ai enfin rattrapé ! J'ai\pbattu la Successeure Maxima,\nmais je me suis dit qu'un peu\lplus d'entraînement au Manoir\pne ferait pas de mal. Laisse-moi\ndeviner, tu as aussi obtenu\ple pouvoir de la Méga-Évolution\p? … Qu'est-ce que je raconte\n? Bien sûr que oui. Quelqu'un\pqui m'a battu autant de\nfois n'aurait pas été ralenti\lpar ça. Bien sûr, je vais\pmettre fin à ton record,\nici et maintenant !\lAllez ! Laisse-moi\pte montrer mon nouveau\npouvoir !
+0x1F374A2: Je t'ai enfin rattrapé ! J'ai\pbattu la Successeure Maxima,\nmais je me suis dit qu'un peu\lplus d'entraînement au Manoir\pne ferait pas de mal. Laisse-moi\ndeviner, tu as aussi obtenu\ple pouvoir de la Méga-Évolution\p?… Qu'est-ce que je raconte\n? Bien sûr que oui. Quelqu'un\pqui m'a battu autant de\nfois n'aurait pas été ralenti\lpar ça. Bien sûr, je vais\pmettre fin à ton record,\nici et maintenant !\lAllez ! Laisse-moi\pte montrer mon nouveau\npouvoir !
 0x1F37640: Pourquoi… ? Pourquoi rien de ce que\nje fais n'est jamais suffisant ?
 0x1F3766C: Comment fais-tu, {PLAYER} ?\pPeu importe mon entraînement,\ntu restes toujours devant moi…
 0x1F376D7: Huff…{PAUSE}î huff… Heureusement\pque j'ai réussi à vous rattraper\ntous les deux.
@@ -18293,21 +18293,21 @@
 0x1F3797E: Et même si ton attitude mérite\nun ajustement, {RIVAL}, tu\lpeux en avoir un aussi.
 0x1F379D3: Surf, hein…\nCe sera utile.\pJ'ai vu les Ombres liées\nà la disparition de mes parents,\let je les ai suivies jusqu'aux\lRuines du Néant.\pAvec l'itinéraire, je Surf\net je verrai ce qui leur arrive\lune bonne fois pour toutes !\pMerci, je suppose, Log.
 0x1F37AEE: Les Ombres, dis-tu ? Ah,\poui… ça me rappelle pourquoi\nje suis venu.
-0x1F37B33: {PLAYER}, Arthur m'a mis au\ncourant de tes récentes escapades.\pD'abord, félicitations pour\navoir sauvé Électhor. Mais\pévidemment, je n'ai jamais\ndouté de toi un instant,\p{PLAYER} ! Ho ho ho ! …\pBref, si tu veux aller\pdans la même direction\nque les Ombres… Un vieux\lcollègue à moi vit à la\pVille de Dehara, c'est\nun chercheur pointilleux\ldes Ruines du Néant.\lOn m'a dit que Jax est\pparti le chercher. Si\nbesoin, il pourra te\pdonner les indications\nde Surf.
+0x1F37B33: {PLAYER}, Arthur m'a mis au\ncourant de tes récentes escapades.\pD'abord, félicitations pour\navoir sauvé Électhor. Mais\pévidemment, je n'ai jamais\ndouté de toi un instant,\p{PLAYER} ! Ho ho ho !…\pBref, si tu veux aller\pdans la même direction\nque les Ombres… Un vieux\lcollègue à moi vit à la\pVille de Dehara, c'est\nun chercheur pointilleux\ldes Ruines du Néant.\lOn m'a dit que Jax est\pparti le chercher. Si\nbesoin, il pourra te\pdonner les indications\nde Surf.
 0x1F37D04: Un vieux type à la Ville de Dehara\nconnaît le chemin vers les Ruines\pdu Néant ? Ça règle où je vais aller\nensuite. Merci, Log, d'avoir dit\pquelque chose qui vaut la peine\nd'être entendu pour une fois.
 0x1F37DB8: À plus, {PLAYER}. La prochaine\pfois, je jure que je comblerai\ncet écart entre nous !
-0x1F37E09: Soupir…{PAUSE}î on dirait que son voyage\navec les Pokémon ne l'a pas\ldu tout adouci. …{PAUSE}îBon, bonne\pchance, {PLAYER}. Je prierai\npour ta réussite.
+0x1F37E09: Soupir…{PAUSE}î on dirait que son voyage\navec les Pokémon ne l'a pas\ldu tout adouci.…{PAUSE}îBon, bonne\pchance, {PLAYER}. Je prierai\npour ta réussite.
 0x1F37E91: Soupir…{PAUSE}î que suis-je censé faire\nmaintenant… ? Je n'ai rien à\pmontrer à Zeph et Ivory… L'objectif\nn'est plus atteignable sans\pÉlecthor… Devrait-on…{PAUSE} abandonner\nnotre cause ? Pour être honnête,\pje doute des extrêmes auxquels\pnous sommes allés… Je pense\nqu'il est temps de rentrer\pchez moi, auprès\nde mes enfants.
 0x1F37FAE: Incroyable…{PAUSE}î quel miracle de la\ntechnologie moderne ! Penser\pqu'un tel exploit soit possible…\nOh, Marlon…{PAUSE} tu avais si bien\pgéré, jusqu'à cette dernière\nbévue… Mais ne t'inquiète pas,\pje peux m'occuper du reste\nd'ici. En attendant, je pense\pque tu auras tout le temps\ndu monde pour réfléchir…{PAUSE}\let regretter.
 0x1F380EB: Qu'est-ce que…{PAUSE}î c'est que ça, Hoopa\p? Je te demande d'invoquer un autre\nÉlecthor pour compenser l'échec\lde Marlon, et tu m'apportes ça\p? Pathétique ! Ça ne ressemble\nmême pas à Électhor !
 0x1F38196: Quelle créature inutile…{PAUSE}\nelle ne fait que se terrer\ldans ce vieux sac !
 0x1F381E1: Hoopa, je sais que c'est difficile\npour toi, mais réussis cette\pfois. Invoque un Électhor.\pJe me moque d'où tu dois\nl'invoquer. Même si tu dois\pdépenser chaque once d'énergie\npour en invoquer un d'une\lautre région… Amène-moi\pjuste un Électhor.\pCOMPRIS ?
 0x1F382ED: Là, c'est mieux ! Bien\nmieux, Hoopa.
-0x1F3832D: Allô, vous me recevez ? …{PAUSE}îC'est\pmoi, le sbire que vous avez\nrencontré plus tôt. Je viens\pd'obtenir le dernier Pokémon\nnécessaire. Je vais me rendre\paux Ruines du Néant sous peu.\n…{PAUSE}îOui, bien sûr. Alors, comme\ppromis… Je vais prendre le\ncommandement de la branche\p? …{PAUSE}îCertainement, tant que\nHoopa est relativement indemne,\pvous pouvez découvrir ce que\nvous voulez. …{PAUSE}îPas d'inquiétude,\ll'élimination des Guerriers\pdes Ombres sera rapide\net propre. Il ne restera\laucune trace…{PAUSE}îCompris.\pNous reparlerons quand\pje rendrai compte\nde mes progrès.
+0x1F3832D: Allô, vous me recevez ?…{PAUSE}îC'est\pmoi, le sbire que vous avez\nrencontré plus tôt. Je viens\pd'obtenir le dernier Pokémon\nnécessaire. Je vais me rendre\paux Ruines du Néant sous peu.\n…{PAUSE}îOui, bien sûr. Alors, comme\ppromis… Je vais prendre le\ncommandement de la branche\p?…{PAUSE}îCertainement, tant que\nHoopa est relativement indemne,\pvous pouvez découvrir ce que\nvous voulez.…{PAUSE}îPas d'inquiétude,\ll'élimination des Guerriers\pdes Ombres sera rapide\net propre. Il ne restera\laucune trace…{PAUSE}îCompris.\pNous reparlerons quand\pje rendrai compte\nde mes progrès.
 0x1F3853F: Bien…{PAUSE} nous n'avons plus de temps\nà perdre. Avec Électhor entre\pmes mains, Zeph a enfin la dernière\npièce nécessaire pour lier le\lrituel. Maintenant…{PAUSE} ouvre un\pportail vers les Ruines du Néant,\nHoopa. Tu as sûrement encore\passez d'énergie pour ça, même\naprès avoir invoqué un Pokémon\laussi puissant… Évidemment,\pune fois que tu auras récupéré\ntout ton pouvoir, la fatigue\lne sera plus un problème…\pReprends des forces et rends-toi\nlà-bas aussi. Tu me trouveras\pgrâce au signal de mon Cube.\nEt pour rappel…{PAUSE}î reste discret.\pZeph a encore des fidèles\nqui pourraient s'avérer…{PAUSE}\pgênants. Il ne doit\npas savoir. Ça ruinerait\ptout. Je place ma confiance\nen toi une dernière\pfois, Hoopa, alors\nne te fourvoie\lpas !
 0x1F387F2: {PLAYER} ! Tu es là ! Désolé,\pje ne t'ai pas vu, je tuais\nle temps sur ces machines… Ce\pjeu {COLOR}ÉCloud Burst{COLOR}Ë est vraiment\naddictif, et je me suis laissé\lporter. Au passage, j'ai même\pgagné assez de Jetons pour\nacheter non pas une, mais deux\l{COLOR}ÉPilules Talent{COLOR}Ë ! Tu en as\pentendu parler ? Si un Pokémon\pa deux talents possibles,\nles Pilules changent\ll'un en l'autre.
 0x1F38960: Mais, Cloud Burst peut attendre.\pAllons dehors, là où c'est\nun peu moins bruyant.
-0x1F389BB: Bien, ça ira. Ok, écoute. Pendant\pque je t'attendais, j'ai vu un\ppaquet de sbires des Ombres partir\nvers l'ouest, en direction des\lRuines du Néant. D'après Papy,\pla seule raison d'y aller …{PAUSE} c'est\ns'ils ont tout ce qu'il faut\lpour faire le rituel de déliançage.\lTu sais, le rituel nécessaire\ppour libérer la force obscure.\nMais ça ne devrait pas être\ppossible sans Électhor… C'est\npourquoi Papy pense qu'ils\pvont tenter le déliançage quand\nmême et espérer que le rituel\lincomplet suffise pour leurs\lobjectifs. C'est notre chance\pd'y aller aussi et de reprendre\nArtikodin et Sulfura ! C'est\lparfait. Ils seront les\pseuls sur les ruines,\pdonc on n'aura pas à craindre\nqu'ils transforment\ldes innocents en\lces monstres !
+0x1F389BB: Bien, ça ira. Ok, écoute. Pendant\pque je t'attendais, j'ai vu un\ppaquet de sbires des Ombres partir\nvers l'ouest, en direction des\lRuines du Néant. D'après Papy,\pla seule raison d'y aller…{PAUSE} c'est\ns'ils ont tout ce qu'il faut\lpour faire le rituel de déliançage.\lTu sais, le rituel nécessaire\ppour libérer la force obscure.\nMais ça ne devrait pas être\ppossible sans Électhor… C'est\npourquoi Papy pense qu'ils\pvont tenter le déliançage quand\nmême et espérer que le rituel\lincomplet suffise pour leurs\lobjectifs. C'est notre chance\pd'y aller aussi et de reprendre\nArtikodin et Sulfura ! C'est\lparfait. Ils seront les\pseuls sur les ruines,\pdonc on n'aura pas à craindre\nqu'ils transforment\ldes innocents en\lces monstres !
 0x1F38C8F: Mais avant ça, première chose\n: tu devrais obtenir le Badge\ld'Arène de la Ville de Dehara.\pTu en auras besoin pour surfer\njusqu'aux Ruines du Néant\lavec moi, puisqu'il est\limpossible d'y aller à pied.\pD'accord, je rentre préparer\nmes Pokémon. Pendant\pce temps, va chercher\nce Badge.
 0x1F38DB0: Qu'est-ce que… ? {PLAYER},\pattention !
 0x1F38DCD: Ça va ? Que s'est-il passé ? D'un\ncoup, un anneau étrange est apparu,\pet on s'est fait aspirer ici…\nJ'avais peur de te perdre,\palors j'ai essayé de sauter\ndedans après toi…
@@ -18316,7 +18316,7 @@
 0x1F38EEF: Compris ? C'est ici que\pvous devez tenir. Pour\nle déliançage, ces deux-là\pne doivent pas monter\nici. Montrez-leur…{PAUSE} la\ppuissance de la Lumière\nde la Ruine !
 0x1F38FA1: Je ne les entends pas d'ici,\nmais quoi qu'ils disent, ça\lne doit rien annoncer de\pbon ! Étouraptor ! Occupe-toi\pde ces Ombres !
 0x1F39010: Étouraptor !\pÉTOURAPTOR !\pNOOOOOON !
-0x1F3902F: Cette explosion…{PAUSE}î elle a\ndétruit l'escalier ! Et\pÉtouraptor a…{PAUSE}î Étouraptor\pa- ! …\p… Snif… Guh…{PAUSE}î désolé…{PAUSE}î\pj'ai du mal…{PAUSE}î à rester\nconcentré…
+0x1F3902F: Cette explosion…{PAUSE}î elle a\ndétruit l'escalier ! Et\pÉtouraptor a…{PAUSE}î Étouraptor\pa- !…\p… Snif… Guh…{PAUSE}î désolé…{PAUSE}î\pj'ai du mal…{PAUSE}î à rester\nconcentré…
 0x1F390D6: Attends…{PAUSE} cette explosion\na dévoilé une entrée\ldans les Ruines.
 0x1F3911D: Tu devrais entrer et trouver un\nchemin vers le sommet. Je…{PAUSE}î je n'ai\pemmené qu'Étouraptor avec moi,\ndonc je ne peux pas venir. Je…{PAUSE}\presterai ici et je soignerai\ntes Pokémon, si tu veux.
 0x1F391C9: Je t'en prie…{PAUSE} retrouve Étouraptor\ppour moi. Cette explosion a dû le\nblesser horriblement. Quand tu\ple trouveras, crie vers moi.
@@ -18415,7 +18415,7 @@
 0x1F3BA16: Whoa, attention !
 0x1F3BA27: Fais attention à ce qui t'entoure\nici, {PLAYER}. Des objets provenant\pde nombreux Dresseurs arrivent\nsans arrêt, alors tu ne sais\ljamais quand l'un va surgir\lde nulle part !
 0x1F3BAE3: Mais pour l'instant, je pense qu'on\nest tranquilles. Ces plateformes\psont généralement sûres pour\nnous tenir. Même si elles ne\psont pas faites pour nous, bien\nsûr. Comme tu t'en doutes, cet\pendroit n'a pas été conçu pour\nla vie humaine. Envoyer des\pgens ici ne devrait même\npas être possible…
-0x1F3BBF1: Oh, j'ai oublié de demander.\nComment as-tu atterri ici,\ptoi aussi ? Et est-ce que Hoopa\nest entré en contact avec\ptoi ? Marlon me dit que ça\nfait 16 ans que je suis coincé\lici, tu as donc dû voir\pHoopa depuis. …
+0x1F3BBF1: Oh, j'ai oublié de demander.\nComment as-tu atterri ici,\ptoi aussi ? Et est-ce que Hoopa\nest entré en contact avec\ptoi ? Marlon me dit que ça\nfait 16 ans que je suis coincé\lici, tu as donc dû voir\pHoopa depuis.…
 0x1F3BCB8: Oh…{PAUSE} pauvre Hoopa… Je n'ai\pjamais voulu que ça lui\narrive… J'essayais de le\pprotéger en le jetant à\nla mer, mais il semble\lqu'il ait été mis en danger\pmalgré tout…
 0x1F3BD5C: Marlon, selon ce que je comprends,\nle projet Guerrier des Ombres\lest encore en cours… ? 16 ans…{PAUSE}\pet vous avez continué à infliger\nune telle cruauté aux gens\let aux Pokémon !?
 0x1F3BDFF: Nous étions désespérés, Aros\p! Et on ne pouvait nier les\nprogrès à chaque expérience.\pOn était si, si proches…
@@ -18429,7 +18429,7 @@
 0x1F3C4BC: S'y habituer… ? Ne me dis pas qu'on\pest coincés ici ! Il n'y a\pvraiment aucune sortie !?
 0x1F3C508: S'il y en avait une, je me serais\nlibéré depuis longtemps, Marlon.\pJ'ai tout essayé, alors à moins\nque tu n'aies une idée que\lje n'ai pas eue, habitue-toi\là ta nouvelle vie digitale.\pSoupir… Ce n'est pas si terrible,\premarque. Au moins, on\pn'a pas besoin de manger\nou de dormir !
 0x1F3C5F8: J'aurais vraiment voulu mieux\nte connaître, {PLAYER}. Si on\pa de la chance, on se retrouvera\npeut-être un jour…
-0x1F3C66D: Ce n'est pas possible…\nEst-ce que…{PAUSE} un\pCube V3 ? … C'en\pest un !
+0x1F3C66D: Ce n'est pas possible…\nEst-ce que…{PAUSE} un\pCube V3 ?… C'en\pest un !
 0x1F3C69A: Marlon, tu en as un aussi ?
 0x1F3C6B8: Oui. Mais quel\prapport avec…\n?
 0x1F3C6E8: Je sais comment vous libérer,\nmais seulement si j'ai raison\lsi ici est la troisième\lversion créée de l'Espace Cube.\pJe pense que oui, quand je suis\narrivé ici, l'endroit était\lvide d'objets. Le Cube V3 venait\pd'être dévoilé au public, mais\npersonne n'y avait accès encore.\lIl n'a pas fallu longtemps\ppour comprendre que j'étais\ncoincé dans un Espace Cube\lplus avancé. J'ai imaginé\pun plan pour me libérer,\nmais mon Cube à moi est\lun V2 obsolète. Mais pour\pvous deux…{PAUSE} je pense que\nça peut marcher !
@@ -18498,7 +18498,7 @@
 0x1F3E4AD: Tu perds l'équilibre, Marlon\p? Alors je vais en profiter\npour partir.
 0x1F3E4FA: Maudit…{PAUSE} il s'est échappé…
 0x1F3E511: {PLAYER} ! Tu dois arrêter\pla furie de Groudon ! Sinon,\nla grotte s'effondrera\pet nous serons tous\ndeux piégés ici !
-0x1F3E578: Ngh…{PAUSE} {PLAYER}, ça va ? …{PAUSE}Non\p! On a été séparés !
+0x1F3E578: Ngh…{PAUSE} {PLAYER}, ça va ?…{PAUSE}Non\p! On a été séparés !
 0x1F3E5B3: Ces Poké Balls de mon côté…{PAUSE}\nce sont les Pokémon de {PLAYER}\p? Elles ont dû tomber quand Groudon\na lancé cette attaque…{PAUSE}\pmes Pokémon sont trop blessés\npour affronter ce truc… !
 0x1F3E675: Attends…{PAUSE} {PLAYER} ! Laisse-moi\putiliser tes Poké Balls ! Je\ndirigerai tes Pokémon ! Dis-moi\psimplement si tu veux te\nbattre ou changer !
 0x1F3E6F0: {COLOR}ÁLe {STR_VAR_1} a sombré dans la lave\net s'est rendormi profondément.
@@ -18591,7 +18591,7 @@
 0x1F41C1E: Attends…{PAUSE} t'es censé être qui, toi\n?
 0x1F41C4C: {PLAYER}, tu as vu Jax ? La dernière\pfois, j'ai entendu qu'il comptait\nse rendre aux Ruines du Néant.
 0x1F41CA1: Peu importe ce que préparaient les\nOmbres, c'était déjà fait quand je\lsuis arrivé. J'ai vu des signes de\pcombat, mais personne n'était là…{PAUSE}\net ça inclut quelqu'un nommé\lJax.
-0x1F41D4C: {PLAYER}, tu es le dernier à l'avoir\nvu ! Que s'est-il passé là-dedans\p? … Aklove ? Jamais entendu parler…\pEt comme je le craignais, la force\pobscure a finalement été libérée…\n… Quoi !? Aros a été piégé dans un\pCube, tu dis ? Pure folie ! … Oh\nnon… Si je connais Zeph, il n'y a\pqu'une chose qu'il aurait pu faire\pavec Jax… Oh ? Tu dis que Jax\nn'était pas avec Zeph ? Ça me donne\pde l'espoir…{PAUSE} il doit encore être\pdehors… Je suis surpris que Zeph\pait accepté de travailler avec toi,\pmais tu connais l'adage… « L'ennemi\nde mon ennemi est mon ami.\l»\p\p\n\p\n\p\n\p\n
+0x1F41D4C: {PLAYER}, tu es le dernier à l'avoir\nvu ! Que s'est-il passé là-dedans\p?… Aklove ? Jamais entendu parler…\pEt comme je le craignais, la force\pobscure a finalement été libérée…\n… Quoi !? Aros a été piégé dans un\pCube, tu dis ? Pure folie !… Oh\nnon… Si je connais Zeph, il n'y a\pqu'une chose qu'il aurait pu faire\pavec Jax… Oh ? Tu dis que Jax\nn'était pas avec Zeph ? Ça me donne\pde l'espoir…{PAUSE} il doit encore être\pdehors… Je suis surpris que Zeph\pait accepté de travailler avec toi,\pmais tu connais l'adage… « L'ennemi\nde mon ennemi est mon ami.\l»\p\p\n\p\n\p\n\p\n
 0x1F41F58: {PLAYER}…{PAUSE} je n'aime pas ce que tu\nme dis. Si cet Aklove, celui qui\pcontrôle Hoopa, travaille avec Fey,\nalors ils sont une menace encore\lplus grande que je ne le pensais.\lEt si la Lumière de la Ruine est\pune branche comme les Ombres, alors\ncela ne peut signifier qu'une chose…\lUne campagne de recrutement…{PAUSE} pour\ptrouver plus de gens à transformer\nen ces abominations ! Comment Hoopa\ls'insère là-dedans, cependant, je\pn'en ai aucune\nidée…
 0x1F420E2: S'ils ont pris Jax…{PAUSE} non, je vais\nessayer de rester optimiste. Jax\pest débrouillard… Mais ces derniers\ptemps, il semble me contacter de\nmoins en moins… et avec moins de\lvigueur, à chaque fois. {PLAYER},\prends-toi à Bourg Vivill. Arrête\pla Lumière de la Ruine, et essaie\nde trouver Jax. Qu'il soit là de\pson plein gré ou non, je pense qu'il\nsera avec\leux.
 0x1F4222A: Ok, ça suffit ! J'en ai marre ! Je\nme suis tu tout ce temps, mais je\pne vais plus me faire ignorer !\nÉcoute, le vieux…{PAUSE} je ne sais pas\lqui tu es, ni ce qui se passe… Mais\psi ça a à voir avec les Ombres,\nalors je veux en être\p!\n
@@ -18626,7 +18626,7 @@
 0x1F430E2: Qu'est-ce que…{PAUSE}î c'est qui ce gars ?
 0x1F43107: Q-quoi ? Ce n'est même pas humain !
 0x1F4312B: Hé, {PLAYER} ! C'est l'un de tes\ppotes Ombres ? Fais-le arrêter\n!
-0x1F43162: Pfiou… c'était moins une… C'était\pquoi ce truc, au juste ? Quelques\nsecondes de plus et on finissait\pcarbonisés ! … Comment ? Ça\ns'appelle un Guerrier des Ombres\p? C'est…{PAUSE} euh, un nom pas très\pimaginatif,\phonnêtement.\p\n
+0x1F43162: Pfiou… c'était moins une… C'était\pquoi ce truc, au juste ? Quelques\nsecondes de plus et on finissait\pcarbonisés !… Comment ? Ça\ns'appelle un Guerrier des Ombres\p? C'est…{PAUSE} euh, un nom pas très\pimaginatif,\phonnêtement.\p\n
 0x1F4323A: Mais bon, au moins ça nous a rendu\nservice et dégagé le passage.\pEspérons qu'il n'y en ait pas trop\nd'autres…
 0x1F432A9: Stop…{PAUSE}î stop…{PAUSE}î tout de suite !{PAUSE_UNTIL_PRESS}
 0x1F432CA: Je me fiche que vous soyez déjà\nentrés… Je peux encore vous traîner\pdehors\n!
@@ -18746,7 +18746,7 @@
 0x1F45F68: Cette puissance, cette présence…{PAUSE}î\nc'était définitivement le maître\pde ce monde ! Aucun doute ! Regarde\ndevant !
 0x1F45FDA: Regarde…{PAUSE} il a dû décider de\nnous laisser partir.\pCe combat lui a sûrement fait de\nl'effet.\pMaintenant, je ne sais pas pour toi,\nmais j'ai clairement passé trop de\ltemps ici.\pJe tente ma chance\ndans ce portail.\pRentrons à la maison, {PLAYER}!
 0x1F460D1: Attends…{PAUSE}î ce ne serait pas… ?
-0x1F460E7: C'est la Grotte Faille…{PAUSE} ça veut dire… !\pOn doit être de retour dans notre\pmonde ! Mais, pourquoi… ? … Ah oui.\pOn dit que la Grotte Faille défie également\ples lois de la\nréalité.
+0x1F460E7: C'est la Grotte Faille…{PAUSE} ça veut dire… !\pOn doit être de retour dans notre\pmonde ! Mais, pourquoi… ?… Ah oui.\pOn dit que la Grotte Faille défie également\ples lois de la\nréalité.
 0x1F46179: Bref, maintenant qu'on est là,\nretournons-y.\p{PLAYER}…{PAUSE} que s'est-il passé aux\nRuines du Néant ?\p…\pAklove…\pAlors on n'a pas une seconde à\nperdre !
 0x1F46217: Non… pas cette fois…
 0x1F4622A: {PLAYER}, être coincé là-dedans m'a\nappris beaucoup de choses… Mais\psurtout, ça m'a appris que je ne\nsuis rien sans mes Pokémon. Je ne\pveux plus jamais me retrouver si\ninutile pour qui que ce soit.\pRetrouve-moi à Bourg Vivill. Je te\ppromets que cette fois, mes Pokémon\net moi serons prêts.
@@ -19015,7 +19015,7 @@
 0x1F58899: Désolé, Entraîneur !\pNous servons de barrages\njusqu'à la prochaine version de\lPokémon Unbound.\pExplorez le reste de Borrius en\nentre-temps.\pLes endroits où aller ne manquent\npas !
 0x1F58957: Hé, Dresseur !\pTu as l'air presque aussi fort que\ntu es perdu !\pBats-moi et je te dirai un secret !
 0x1F589B4: Wow ! Oké ! Oké !
-0x1F589C5: J'ai entendu cette femme parler\nlà-bas …\pParfois, si tu recules,\ntu avances !
+0x1F589C5: J'ai entendu cette femme parler\nlà-bas…\pParfois, si tu recules,\ntu avances !
 0x1F58A1E: As-tu remarqué un Pokémon étrange\nen traversant ces\lbois ?
 0x1F58A6B: Le Pokémon était très étrange…\nLaisse-moi t'en parler !
 0x1F58AA3: J'ai remarqué un Pokémon curieux\nplus tôt.\pQuand je l'ai approché, il a changé\nd'apparence pour copier la mienne !\pNon…{PAUSE} ce n'était pas un\nMétamorph.\pJe pouvais au moins en être sûr.
@@ -20373,7 +20373,7 @@
 0x1F7496C: Astuces du Dresseur !\pAprès être entré au Panthéon,\ntu peux {COLOR}Édéfiler auto{COLOR}Á\len maintenant\p{R_BUTTON} ! Aussi en New Game+\net en Mode Sandbox.\pNe maintiens jamais {R_BUTTON}\nen lisant les panneaux Astuces !
 0x1F74A5D: Astuces du Dresseur !\pAprès le grand Boum du Portail,\ndes Pokémon rares et puissants\lsont apparus à Borrius ! Si\ptu en mets K.O. ou fuis, il\nrevient si tu rentres\lau\lPanthéon.
 0x1F74B42: Astuces du Dresseur !\pÉvite les Balls standards comme les\nHyper Balls quand tu veux\lcapturer des Pokémon puissants !\pPokémon très {COLOR}Élourd{COLOR}Á ? La\n{COLOR}ÉMasse Ball{COLOR}Á est\lidéale.\pCombat > {COLOR}É10 tours{COLOR}Á ?\nPense à la\l{COLOR}ÉChrono Ball{COLOR}Á.\pCombat court et l’adversaire a\nune Vitesse de base\lau-dessus de {COLOR}É100{COLOR}Á, pense à\lla {COLOR}ÉRapide Ball{COLOR}Á.\pCombat court et Pokémon lent,\nessaie de le capturer à\lla nuit avec une {COLOR}ÉSombre Ball{COLOR}Á.\l\pCes quatre Balls sont clés pour\ncapturer vite ces Pokémon !
-0x1F74DC8: Astuces du Dresseur !\pGrâce aux progrès scientifiques,\ntu peux commencer une nouvelle\laventure en {COLOR}ÉMode Sandbox{COLOR}Á !\pIl n’y a pas de post-game, mais\ntu es libre de capturer et\ld’entraîner n’importe quel\lPokémon, et de modifier leurs\lstats facilement ! Les Pokémon ne\psont que des nombres, après\ntout ! … Astuce\psponsorisée par Cube\pCorp.
+0x1F74DC8: Astuces du Dresseur !\pGrâce aux progrès scientifiques,\ntu peux commencer une nouvelle\laventure en {COLOR}ÉMode Sandbox{COLOR}Á !\pIl n’y a pas de post-game, mais\ntu es libre de capturer et\ld’entraîner n’importe quel\lPokémon, et de modifier leurs\lstats facilement ! Les Pokémon ne\psont que des nombres, après\ntout !… Astuce\psponsorisée par Cube\pCorp.
 0x1F74F46: Astuces du Dresseur !\pTu peux personnaliser les\nmusiques d’exploration et de\lcombat dans les {COLOR}ÉOptions\lAudio{COLOR}Á du {COLOR}ÉMenu Options{COLOR}Á ! Tu peux\pmême appuyer sur {START_BUTTON} pour\nremettre la musique par défaut !
 0x1F75028: Continuer
 0x1F75031: Quitter
@@ -20409,17 +20409,17 @@
 0x1F75D4B: Le voyage est confortable, mais je\nn’aime pas la politique de\lconfidentialité. Je\pne peux verrouiller ma porte que\npour dormir ? Je\pvoulais juste aller ailleurs en\npaix, pas être défié par ces\llourdauds !
 0x1F75E38: Le premier coup de\nsifflet veut dire « Bonjour ! »\pLe second dit\n« L’océan est beau ! »\pLes troisième et quatrième disent\n« Tu profites de la\ltraversée ? »\pLe cinquième dit\n« Merci et à bientôt ! »\pSympa d’imaginer le navire\nqui parle !
 0x1F75F57: Je fonderai un gang un jour, quand\nj’aurai un bon nom ! Je\ppensais à « Les Corboss Noirs » !\nHein ? Les Corboss\psont déjà noirs ?
-0x1F75FF2: Oh là là, que c’est ENNUYEUX ici\n! Vraiment ennuyeux !\pRien à faire sauf dormir et\ncombattre les Dresseurs ! Eh\pbien, je vais leur\nmontrer ! Je vais tous\ples ennuyer ! Voyons s’ils aiment\nquand C’EST moi qui les assomme\pd’ennui ! Toi, tu cherchais\ndes Dresseurs… comme tout le\pmonde. Alors, ça va\n? Tu en as déjà marre ? …\p… Zut, je crois que\ntu ne m’écoutes même\pplus… mission accomplie\n!
+0x1F75FF2: Oh là là, que c’est ENNUYEUX ici\n! Vraiment ennuyeux !\pRien à faire sauf dormir et\ncombattre les Dresseurs ! Eh\pbien, je vais leur\nmontrer ! Je vais tous\ples ennuyer ! Voyons s’ils aiment\nquand C’EST moi qui les assomme\pd’ennui ! Toi, tu cherchais\ndes Dresseurs… comme tout le\pmonde. Alors, ça va\n? Tu en as déjà marre ?…\p… Zut, je crois que\ntu ne m’écoutes même\pplus… mission accomplie\n!
 0x1F76197: Oui, je suis assez mesquine pour\nfaire perdre du temps à un\lDresseur, au moins je l’avoue.
 0x1F761E6: Attaque de Tenaille\n! Droit sur la jambe\p! Ha ha ha ! Tu ne\nte débarrasseras pas si facile !\pTout le bateau tremble en entendant\nmon nom, je suis le gars Kokiyas\l! Bras, jambe ou\pvisage, je reste collé ! Alors\npendant que je m’accroche, je vais\pte parler de moi…Aïe ! Aïe !\nAïe ! Arrête de me donner\pdes coups de pied,\ppauvre visage\penvahissant\n!
 0x1F7636C: Oh… ce coup de sifflet a été aussi\npiquant qu’un talon aiguille…
-0x1F763AC: Bonjour. Regarde ton Pokémon.\nMaintenant\pregarde-moi. Retourne au\nPokémon. Retourne à\pmoi. Heureusement, ton Pokémon\nn’est pas un vieux grincheux qui\paime perdre du temps.\nRegarde en bas. Où es-tu ? Non,\ptu es toujours là,\psurprise ! … Tout est possible en\nExpert ! Je suis sur un bateau.
+0x1F763AC: Bonjour. Regarde ton Pokémon.\nMaintenant\pregarde-moi. Retourne au\nPokémon. Retourne à\pmoi. Heureusement, ton Pokémon\nn’est pas un vieux grincheux qui\paime perdre du temps.\nRegarde en bas. Où es-tu ? Non,\ptu es toujours là,\psurprise !… Tout est possible en\nExpert ! Je suis sur un bateau.
 0x1F764C0: Mes talents d’Expert étaient trop\nforts pour laisser finir ça !
-0x1F76502: Ouf… mes hémorroïdes refont des\nleurs… Ah, toi là,\ptu veux bien écouter une vieille\ndame se plaindre un peu ? Ce sont\lmes hémorroïdes… Elles sont\phorribles ! J’ai l’impression\pqu’un paquet de Voltorb\ns’est installé là… Ça rend\ls’asseoir pénible, et ça\plaisse des taches affreuses sur mes\nhabits… Tiens, j’ai des photos !\lOù ai-je mis la\pdernière photo du\pmédecin… Oui, celle juste dans\nmon, … Oh, tu\pverdis…\pMauvaise\pidée\npeut-être…
+0x1F76502: Ouf… mes hémorroïdes refont des\nleurs… Ah, toi là,\ptu veux bien écouter une vieille\ndame se plaindre un peu ? Ce sont\lmes hémorroïdes… Elles sont\phorribles ! J’ai l’impression\pqu’un paquet de Voltorb\ns’est installé là… Ça rend\ls’asseoir pénible, et ça\plaisse des taches affreuses sur mes\nhabits… Tiens, j’ai des photos !\lOù ai-je mis la\pdernière photo du\pmédecin… Oui, celle juste dans\nmon,… Oh, tu\pverdis…\pMauvaise\pidée\npeut-être…
 0x1F76713: Tu voulais combattre ? Pour moi\nchaque jour est un combat !\pUn combat contre ces\nfichues hémorroïdes !\lOh misère…
-0x1F76793: Ah ! Attends ! Je\ncrois savoir qui tu es !\pHein ? Tu ne sais pas qui je\nsuis ? Pas surprenant !\pJe suis un ex-membre des Ombres,\ntu n’as sûrement jamais vu mon\pvisage. Comment vont-ils ? Zeph\pa-t-il réussi à créer l’arme\nvivante parfaite ? Hein ?\pIl voulait juste ressusciter son\nfils ? Quelle blague ! À quoi\lbon un monstre\pinvincible si ce n’est pas\ppour écraser ses ennemis ?\nC’est ce raisonnement stupide qui\lm’a fait partir ! Bah… la\pSociété Scientifique recrute encore\n? … Je radote ! Ne\pt’inquiète pas, je finirai ce\nque Zeph a\pcommencé\pun\njour\l!
+0x1F76793: Ah ! Attends ! Je\ncrois savoir qui tu es !\pHein ? Tu ne sais pas qui je\nsuis ? Pas surprenant !\pJe suis un ex-membre des Ombres,\ntu n’as sûrement jamais vu mon\pvisage. Comment vont-ils ? Zeph\pa-t-il réussi à créer l’arme\nvivante parfaite ? Hein ?\pIl voulait juste ressusciter son\nfils ? Quelle blague ! À quoi\lbon un monstre\pinvincible si ce n’est pas\ppour écraser ses ennemis ?\nC’est ce raisonnement stupide qui\lm’a fait partir ! Bah… la\pSociété Scientifique recrute encore\n?… Je radote ! Ne\pt’inquiète pas, je finirai ce\nque Zeph a\pcommencé\pun\njour\l!
 0x1F76A2C: Le navire a déjà sifflé ?\nJ’ai vraiment trop parlé… De\ptoute façon, même le meilleur\nGuerrier Ombre ne te battrait\lpas. Désolé de\pt’avoir dérangé, amuse-toi avec\nles autres passagers.
-0x1F76AF4: Ah ! Tu ne t’en tireras pas si\nfacile, idiot ! J’ai\pplein d’histoires ! … Non,\pça va ! Je suis\nvraiment là pour combattre !
+0x1F76AF4: Ah ! Tu ne t’en tireras pas si\nfacile, idiot ! J’ai\pplein d’histoires !… Non,\pça va ! Je suis\nvraiment là pour combattre !
 0x1F76B75: Eh ben… pas la peine de le\nprendre si mal…
 0x1F76B9D: Oui, c’était méchant, mais bon…\nje devais.
 0x1F76BD3: J’espérais voir des Pokémon\nrares en combattant les\ppassagers… Mais personne ne\nnavigue avec un vélo ou un Pokémon\lvolant, donc c’est toujours les\lmêmes…
@@ -22335,7 +22335,7 @@
 0x1F9D3BF: Frère
 0x1F9D3C7: James
 0x1F9D3CD: Boss du Black Emboar
-0x1F9D3DF: Salut, Dresseur. …\pQuoi ? Tu veux que je\pdise quelque chose\nd'intéressant ? Très\pbien… Dernièrement,\pj'ai des ennuis avec mon\nfrère. Il s'est impliqué\pjusqu'au cou avec un\ngang qui se fait appeler\lle « Black Emboar ». Je\pne sais pas vraiment de\nquoi il retourne, mais\lje suis vraiment inquiet\ppour lui. Je n'ai pas\nparlé avec lui depuis\ldes jours, donc j'ai\ppeur qu'il lui soit\parrivé quelque chose.\p… Quoi ? Tu serais\nprêt à aller vérifier pour moi ?
+0x1F9D3DF: Salut, Dresseur.…\pQuoi ? Tu veux que je\pdise quelque chose\nd'intéressant ? Très\pbien… Dernièrement,\pj'ai des ennuis avec mon\nfrère. Il s'est impliqué\pjusqu'au cou avec un\ngang qui se fait appeler\lle « Black Emboar ». Je\pne sais pas vraiment de\nquoi il retourne, mais\lje suis vraiment inquiet\ppour lui. Je n'ai pas\nparlé avec lui depuis\ldes jours, donc j'ai\ppeur qu'il lui soit\parrivé quelque chose.\p… Quoi ? Tu serais\nprêt à aller vérifier pour moi ?
 0x1F9D58E: C'est toi qui as\ndébarqué chez moi pour demander.
 0x1F9D5C0: Merci ! Tu peux probablement\ptrouver mon frère dans le\nnord de l'Autoroute KBT.\pJ'irais bien moi-même, mais\nje suis un Dresseur trop\pfaible. On dit que ces Black\nEmboar sont sacrément vicieux.
 0x1F9D66C: Si tu vois mon frère,\ndis-lui que je suis\ltoujours inquiet pour lui.
@@ -22344,7 +22344,7 @@
 0x1F9D841: Gwa ha ha ha ! Viens !\nT'as du cran, gamin ! Je\pvais te montrer ce que\npeut faire celui qui\ltient le Black Emboar ensemble !
 0x1F9D8CB: Gwa ha ha ha !
 0x1F9D8D9: Pas si mauvais, gamin…\nJe t'aime bien. Écoute\pça… À partir de\pmaintenant, notre nom de\ngang sera le Black\p{PLAYER} ! Ouais ! On\nadopte ton nom viril !\pC'est un nom plus\nsauvage pour une équipe\pplus sauvage ! Le Black\n{PLAYER} ! Gwa ha ha ha ! Génial !
-0x1F9D9CB: Quoi, tu veux autre chose,\pgamin ? … Mon frère ?\pPff, ce boulet ne lâche\pjamais. Très bien, en\premerciement pour m'avoir\nbattu, je vais venir avec toi.
+0x1F9D9CB: Quoi, tu veux autre chose,\pgamin ?… Mon frère ?\pPff, ce boulet ne lâche\pjamais. Très bien, en\premerciement pour m'avoir\nbattu, je vais venir avec toi.
 0x1F9DA54: Je te l'ai dit maintes fois,\nfrérot, arrête d'essayer de\lt'en prendre au Black Emboar !
 0x1F9DAA7: Je peux pas, James. Tu\nes mon frère. Tu comptes\pplus que tout pour moi.\pEt je peux pas te\nlaisser continuer sur cette voie !
 0x1F9DB17: Tu prétends tenir à moi, mais en\nvrai t'as zéro cran, frérot. Tu\pcontinues d'envoyer des Dresseurs\npour me harceler parce que t'es trop\lpeureux pour te salir les mains.
@@ -22459,11 +22459,11 @@
 0x1FA08B6: On l'a échappé belle. Maintenant il\pne reste plus qu'à retrouver les\n{COLOR}ÉFeuilles de\lMystherbe{COLOR}Ë que j'ai planquées\let les ramener à notre base.
 0x1FA093B: Où elles sont ? Je sais pas, je les\pai planquées entre des caisses à\nl'{COLOR}Éouest{COLOR}Ë du port.\lUtilise une de ces {COLOR}ÉMachines\pCherche Objet{COLOR}Ë ou un truc\npour les trouver. Rejoins-moi à la\p{COLOR}Ébase{COLOR}Ë quand tu les\nauras.
 0x1FA0A1A: Allez,\p{STR_VAR_1} ! J'ai dit entre\n{COLOR}É20 h{COLOR}Ë et {COLOR}É0\ph{COLOR}Ë ! Tu as raté la livraison\n! Faudra retenter un autre soir.
-0x1FA0A96: Halte ! Vous\ptransportez de la\nmarchandise\pillégale ? Des Queues de\nRamoloss ou des Feuilles de\pMystherbe ? …\pNon, vous avez l'air\nclean. Circulez.
+0x1FA0A96: Halte ! Vous\ptransportez de la\nmarchandise\pillégale ? Des Queues de\nRamoloss ou des Feuilles de\pMystherbe ?…\pNon, vous avez l'air\nclean. Circulez.
 0x1FA0B14: Halte ! Montrez\pune pièce d'identité\nvalide si vous voulez passer.
 0x1FA0B7E: Votre identité\nest bonne. Passez.
 0x1FA0B9B: Oh ! Vous êtes un\nDresseur de très\phaut rang.\p{PLAYER}, c'est ça ? Je\pm'en souviendrai. Entrez et sortez\ncomme vous voulez.
-0x1FA0C16: Halte ! Vous\ptransportez de la\nmarchandise\pillégale ? Des Queues de\nRamoloss ou des Feuilles de\pMystherbe ? …\pHmm… Vous empestez\ples Feuilles de Mystherbe…
+0x1FA0C16: Halte ! Vous\ptransportez de la\nmarchandise\pillégale ? Des Queues de\nRamoloss ou des Feuilles de\pMystherbe ?…\pHmm… Vous empestez\ples Feuilles de Mystherbe…
 0x1FA0C8D: C'est sûrement\nrien… Vous n'êtes\pqu'un enfant, après tout. J'espère\nque quelqu'un d'aussi jeune ne se\lmêlerait pas de trafic aussi\phorrible… Vous pouvez y aller.\nPassez.
 0x1FA0D43: Offre et demande
 0x1FA0D55: Frappe le Black Ferrothorn là où ça\nfait mal en coupant les livraisons\nqu'un scientifique leur fournit.
@@ -22579,7 +22579,7 @@
 0x1FA429D: Dès que tu t'es approché de mon\nfils, la Lun'Aile s'est mise à\pbriller. Il s'est réveillé peu\naprès, mais on dirait que tu es\ptombé en transe. Maintenant te voir,\ntoi et mon fils, revenir à la\pnormale me fait du bien ! Je n'ai\npas grand-chose à t'offrir en\lremerciement, mais peut-être que\lceci te servira plus qu'à moi.
 0x1FA43D8: Merci ! On ne\nt'oubliera jamais ! Je\pserai aux quais de la Ville de Fallshore si\ntu veux prendre la mer.
 0x1FA4440: Je recherche actuellement de\nnouvelles façons de réveiller les\lPokémon de l'état Sommeil. Cela\ppourrait avoir beaucoup\nd'applications, alors s'il te plaît,\lne me dérange pas.
-0x1FA44EE: Oh, bonjour. Vous avez besoin de\nquelque chose ? … Un petit\pgarçon ne se réveille pas d'un\phorrible\pcauchemar ? Et son père a\nbesoin d'aide\ppour le soigner ? Ça\nressemble assez à mon domaine de\precherche. Je\nvais aller jeter un\pœil.
+0x1FA44EE: Oh, bonjour. Vous avez besoin de\nquelque chose ?… Un petit\pgarçon ne se réveille pas d'un\phorrible\pcauchemar ? Et son père a\nbesoin d'aide\ppour le soigner ? Ça\nressemble assez à mon domaine de\precherche. Je\nvais aller jeter un\pœil.
 0x1FA45D4: Je ne sais pas si\nça a servi, mais\lj'espère avoir pu aider un peu.
 0x1FA4623: J'ai entendu dire que vous aviez\nréussi à soigner ce garçon ! Je suis\pcontent d'avoir pu aider.
 0x1FA4672: {COLOR}ÁLe petit\ngarçon s'agite dans\pson sommeil. Il semble tourmenté… Il\nmarmonne quelque chose…\p“{COLOR}ËDar… Dark… me regarde…\n{COLOR}Á”
@@ -22667,7 +22667,7 @@
 0x1FA6591: Cet Écrémeuh a\nété trouvé près de\nl'océan du côté nord de la route.
 0x1FA65DA: Cet Écrémeuh a été trouvé près des\nArbres Fins du\ncôté sud de la route.
 0x1FA662A: Nos Écrémeuh sont notre fierté et\pnotre joie ! Ce serait terrible s'il\nleur arrivait quelque chose. On\pperdrait notre gagne-pain !
-0x1FA669E: Oh, mon Dieu !\pLes Écrémeuh, notre\nfierté et notre joie… Ils ont été\pvolés ! Des\nvoyous qui s'appellent\lles “Terreur Granbull” ou quelque\pchose comme ça sont venus et ont\npiqué nos Écrémeuh ! Comment\pallons-nous survivre sans eux ? …\pC'est ça ! Vous êtes le nouveau\pMaître de Borrius,\nn'est-ce pas ? Ne\pvoudriez-vous pas nous aider à\nrécupérer nos Écrémeuh ?
+0x1FA669E: Oh, mon Dieu !\pLes Écrémeuh, notre\nfierté et notre joie… Ils ont été\pvolés ! Des\nvoyous qui s'appellent\lles “Terreur Granbull” ou quelque\pchose comme ça sont venus et ont\npiqué nos Écrémeuh ! Comment\pallons-nous survivre sans eux ?…\pC'est ça ! Vous êtes le nouveau\pMaître de Borrius,\nn'est-ce pas ? Ne\pvoudriez-vous pas nous aider à\nrécupérer nos Écrémeuh ?
 0x1FA67CC: Merci, chéri, tu nous sauves ! Ces\nvoyous n'ont pas pu aller loin. Je\pparie qu'ils sont dans les\p{COLOR}ÉChamps Magnolia{COLOR}Ç en\nce moment.
 0x1FA6852: Nos Écrémeuh ne sont pas futés. Si\ntu t'approches d'eux dans les\p{COLOR}ÉChamps\nMagnolia{COLOR}Ç, ils\lfuiront jusqu'à heurter un mur.\pRamène-les vers la ville et on\nprendra le relais.
 0x1FA692E: Certains Écrémeuh\nsont revenus à la\pferme, mais il en reste dans les\n{COLOR}ÉChamps Magnolia{COLOR}Ç.
@@ -22694,7 +22694,7 @@
 0x1FA73C7: La Patronne n'est pas trop pour\nforcer tout le monde à utiliser le\lmême genre de Pokémon. Donc vous\ppouvez les garder.
 0x1FA7428: Alors c'est vendu.
 0x1FA7439: Allez, les gars ! On va à l'Horizon\nNoir ! Ces Noacier Noirs vont\pressentir une terreur que même les\nTerreur Granbull seuls ne pourraient\lpas provoquer !
-0x1FA74CF: Ça fait un bail, {PLAYER}. Comment\pça va sans les {PLAYER} Noirs pour\nte garder dans le droit chemin ? …\lAlors tu es devenu\pMaître, hein ? Je\psavais que j'avais l'œil pour le\ptalent ! Tu as vraiment du cran,\ngamin. C'est\pdommage que la Patronne\nne veuille pas que tu rejoignes\pl'Horizon Noir. Quelque chose à\npropos de “plans\pspéciaux” pour toi.\nBref, {PLAYER}, continue d'être le\pDresseur le plus courageux que je\nconnaisse !
+0x1FA74CF: Ça fait un bail, {PLAYER}. Comment\pça va sans les {PLAYER} Noirs pour\nte garder dans le droit chemin ?…\lAlors tu es devenu\pMaître, hein ? Je\psavais que j'avais l'œil pour le\ptalent ! Tu as vraiment du cran,\ngamin. C'est\pdommage que la Patronne\nne veuille pas que tu rejoignes\pl'Horizon Noir. Quelque chose à\npropos de “plans\pspéciaux” pour toi.\nBref, {PLAYER}, continue d'être le\pDresseur le plus courageux que je\nconnaisse !
 0x1FA765A: {COLOR}ÁL'Écrémeuh est rentré à la\nFerme Meumeu.
 0x1FA7687:  Un toit à soi
 0x1FA7698: Homme Riche
@@ -22822,7 +22822,7 @@
 0x1FA9EE0: Oh… Vous n'avez\ppas de place dans\nvotre équipe pour l'Œuf…
 0x1FA9F14: Vous avez reçu un Œuf de l'Idole !
 0x1FA9F37: Prenez soin du bébé de mon bébé !
-0x1FA9F54: Hein ? Qui êtes-vous ? Que\nfaites-vous ici ?\pC'est mon endroit\ntranquille pour entraîner mon\pprécieux Pokémon. Je n'aime pas\nquand d'autres personnes viennent\pici sans invitation. … Alors vous\pêtes venu pour m'enlever mon\nPokémon, c'est ça ? Je ne vous\plaisserai pas me la prendre !
+0x1FA9F54: Hein ? Qui êtes-vous ? Que\nfaites-vous ici ?\pC'est mon endroit\ntranquille pour entraîner mon\pprécieux Pokémon. Je n'aime pas\nquand d'autres personnes viennent\pici sans invitation.… Alors vous\pêtes venu pour m'enlever mon\nPokémon, c'est ça ? Je ne vous\plaisserai pas me la prendre !
 0x1FAA053: Vous… vous… vous avez battu ma précieuse !
 0x1FAA073: D'accord… À vrai dire, ce Feunard ne\pm'appartient pas vraiment… Je l'ai\nen quelque sorte…{PAUSE}\peuh…{PAUSE} emprunté ! Ouais, c'est\nça…{PAUSE} pour l'entraînement !\pElle était si seule, je me suis dit\nque je rendrais service à cette\pdame. J'étais sur le point de rentrer quand…
 0x1FAA159: Qu'est-ce que\pc'était ! Serait-ce… ?\pNon, ça ne peut pas être…
@@ -22830,7 +22830,7 @@
 0x1FAA1A8: Maintenant, comme je disais…
 0x1FAA1BE: Wahhhh ! C'est le monstre qui vit\ndans la forêt ! Le\pBonhomme de Neige\pCrabominable ! Sauve qui peut !
 0x1FAA222: {COLOR}ÉCrah rah rah rah rah !
-0x1FAA23B: Ce monstre était terrifiant ! On a\pdû le réveiller\npendant notre combat\pplus tôt. … Alors, je euh… suppose\pque j'ai fini\nd'entraîner ce Feunard\pmaintenant… Il est temps pour moi de\nla rendre à sa propriétaire.
+0x1FAA23B: Ce monstre était terrifiant ! On a\pdû le réveiller\npendant notre combat\pplus tôt.… Alors, je euh… suppose\pque j'ai fini\nd'entraîner ce Feunard\pmaintenant… Il est temps pour moi de\nla rendre à sa propriétaire.
 0x1FAA309: {COLOR}ÁLe {STR_VAR_1} s'est enfoui\ndans la neige.
 0x1FAA32B: {COLOR}ÉTaaaaales !
 0x1FAA339: Purge du portail FBA
@@ -22859,7 +22859,7 @@
 0x1FAA94E: Ce Pokémon a été trouvé la nuit près\nde la sortie vers la Route 8.
 0x1FAA986: Ce Pokémon a été trouvé pendant la\njournée sur une île au sud de la\nmaison du Gars Pêcheur.
 0x1FAA9DC: Ce Pokémon a été trouvé la nuit du\ncôté nord-ouest de la route.
-0x1FAAA20: Qu'est-ce que\pc'est, {PLAYER} ? Vous\navez capturé tous les Pokémon\ptrouvés dans les mystérieux portails\p? Bien joué ! … Qu'est-ce que c'est\p? Vous voulez une récompense pour\pvos efforts ? Je supposais que ces\pPokémon eux-mêmes seraient une\nrécompense suffisante, mais je dois\lm'être trompé. Dans ce cas, prenez\pceci.
+0x1FAAA20: Qu'est-ce que\pc'est, {PLAYER} ? Vous\navez capturé tous les Pokémon\ptrouvés dans les mystérieux portails\p? Bien joué !… Qu'est-ce que c'est\p? Vous voulez une récompense pour\pvos efforts ? Je supposais que ces\pPokémon eux-mêmes seraient une\nrécompense suffisante, mais je dois\lm'être trompé. Dans ce cas, prenez\pceci.
 0x1FAAB26: Toute une cargaison de ces Balls\nspéciales vient d'arriver par la\pposte. La Boutique Pokémon a enfin\nlancé un service de livraison, donc\lje n'aurai plus jamais besoin\ld'envoyer des gens récupérer mes\pcolis pour moi ! Ho ho ho !
 0x1FAABED: Oh ! Ma mémoire doit vraiment\pflancher avec\nmon vieil âge… Ces\pobjets sur ma\ntable sont pour vous\paussi. Je suis sûr que vous les\ntrouverez très utiles.
 0x1FAAC73: Vous pouvez avoir\nces objets sur ma\ptable aussi. Je suis sûr que vous\nles trouverez très utiles.
@@ -22883,7 +22883,7 @@
 0x1FAB5C6: {COLOR}ËUne fois que ces deux-là\nauront fini de se faire écraser par\lnotre Aligatueur ultime, personne ne\lpourra se mettre en travers de notre\lchemin alors que nous revendiquons\pun nouveau foyer pour nous, les\nTerreur Granbull ! Nous marcherons\lsans opposition dans Bourg Polder et\pen ferons le siège de notre nouvelle\pentreprise ! Qui a besoin d'Ville d'Antisis ? Gruff sera si fier de nous tous, les Terreur Granbull !
 0x1FAB712: {COLOR}ËGrrr… Arr… Vous avez\npeut-être vaincu Aligatueur, mais\psans Laggron, le\nmarais est toujours\ldans le chaos.\pD'autres prétendants\nsurgiront, et nous prendrons les\lforts pour nous-mêmes. Bientôt nous\ppourrons appeler Bourg Polder notre\nmaison, et il n'y a rien que vous\lpourrez faire pour nous arrêter !
 0x1FAB825: {COLOR}ËAhhh !\nLaggron s'est échappé\p! Je savais qu'on n'aurait pas dû\nacheter ces Poké-entraves au rabais\p! Dispersez-vous, les gars !\pDISPERSEZ-VOUS !
-0x1FAB898: {COLOR}ÇAh, Laggron, chéri, c'est\nbon de te ravoir. J'espère que ces\pTerreur Granbull ne t'ont pas trop\nfait mal. … Oui, je sais que ces\pvoyous doivent\pêtre punis, mais j'ai\nbesoin que tu restes ici dans le\lmarais pour que tu puisses rétablir\ll'équilibre. Ne t'inquiète pas, je\pgarderai un œil\nplus attentif sur le\lmarais à partir de maintenant. Si\pces voyous mettent un pied ici, je\nleur ferai la fête !
+0x1FAB898: {COLOR}ÇAh, Laggron, chéri, c'est\nbon de te ravoir. J'espère que ces\pTerreur Granbull ne t'ont pas trop\nfait mal.… Oui, je sais que ces\pvoyous doivent\pêtre punis, mais j'ai\nbesoin que tu restes ici dans le\lmarais pour que tu puisses rétablir\ll'équilibre. Ne t'inquiète pas, je\pgarderai un œil\nplus attentif sur le\lmarais à partir de maintenant. Si\pces voyous mettent un pied ici, je\nleur ferai la fête !
 0x1FAB9F6: {COLOR}ÇMerci, {PLAYER}, pour ton\naide pour réparer le marais et\lbattre ces sales vermines. Je te\psuis vraiment redevable. Voici un\ppetit paquet de ma gratitude pour\nton service.
 0x1FABA9E: {COLOR}ÇMerci encore, {PLAYER}. Moi,\pLaggron et le marais te sommes\nreconnaissants.
 0x1FABAE2: Ce marais est plein de Pokémon\npuissants. On va\pvoir qui parmi eux\nest le plus fort !
