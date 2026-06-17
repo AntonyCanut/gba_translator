@@ -94,7 +94,37 @@ def lz77_decompress(data: bytes, offset: int) -> Optional[Tuple[bytes, int]]:
     return bytes(out), src - offset
 
 
+def _lz77_best_match(data: bytes, pos: int, size: int) -> tuple:
+    """Find the longest back-reference at ``pos`` with overlapping-match support.
+
+    Scans right-to-left (smallest displacement first) so ties resolve to the
+    most-recent occurrence.  Handles overlapping matches (e.g. ABABAB) by
+    comparing byte-by-byte against the source array rather than using rfind,
+    which cannot find patterns that extend beyond the current window boundary.
+    """
+    max_len = min(18, size - pos)
+    window_start = max(0, pos - 0x1000)
+    best_len = 0
+    best_disp = 0
+    for w in range(pos - 1, window_start - 1, -1):
+        length = 0
+        while length < max_len and data[w + length] == data[pos + length]:
+            length += 1
+        if length > best_len:
+            best_len = length
+            best_disp = pos - w
+            if best_len == max_len:
+                break
+    return best_len, best_disp
+
+
 def lz77_compress(data: bytes) -> bytes:
+    """LZ77-compress *data* for GBA (header byte 0x10).
+
+    Uses proper byte-by-byte overlapping match detection and one-step lazy
+    evaluation (skip a short match at ``pos`` when ``pos+1`` offers a longer
+    one) to approach GBA-tool compression quality.
+    """
     size = len(data)
     out = bytearray()
     out.append(LZ77_MAGIC)
@@ -104,30 +134,28 @@ def lz77_compress(data: bytes) -> bytes:
         flags_pos = len(out)
         out.append(0)
         flags = 0
-        for i in range(8):
-            if pos >= size:
-                break
-            max_len = min(18, size - pos)
-            window_start = max(0, pos - 0x1000)
-            window = data[window_start:pos]
-            best_len = 0
-            best_disp = 0
-            if window:
-                for length in range(max_len, 2, -1):
-                    idx = window.rfind(data[pos:pos + length])
-                    if idx != -1:
-                        best_len = length
-                        best_disp = pos - (window_start + idx)
-                        break
-            if best_len >= 3:
-                flags |= 1 << (7 - i)
-                disp = best_disp - 1
-                out.append(((best_len - 3) << 4) | ((disp >> 8) & 0x0F))
-                out.append(disp & 0xFF)
-                pos += best_len
+        bit_i = 0
+        while bit_i < 8 and pos < size:
+            len0, disp0 = _lz77_best_match(data, pos, size)
+            if len0 >= 3:
+                # Lazy: if pos+1 yields a strictly longer match, emit a literal
+                # at pos and let the next iteration use the better match.
+                len1 = 0
+                if pos + 1 < size:
+                    len1, _ = _lz77_best_match(data, pos + 1, size)
+                if len1 > len0:
+                    out.append(data[pos])
+                    pos += 1
+                else:
+                    flags |= 1 << (7 - bit_i)
+                    d = disp0 - 1
+                    out.append(((len0 - 3) << 4) | ((d >> 8) & 0x0F))
+                    out.append(d & 0xFF)
+                    pos += len0
             else:
                 out.append(data[pos])
                 pos += 1
+            bit_i += 1
         out[flags_pos] = flags
     return bytes(out)
 
