@@ -35,6 +35,7 @@ PATCH_POKEDEX_METRICS_FR_SCRIPT := scripts/patch_pokedex_metrics_fr.py
 PATCH_MOVE_DESC_FR_SCRIPT := scripts/patch_move_descriptions_fr.py
 PATCH_DUP_MOVE_DESC_FR_SCRIPT := scripts/patch_dup_move_descriptions_fr.py
 PATCH_SUMMARY_LABELS_SCRIPT := scripts/patch_summary_labels_fr.py
+PATCH_CFRU_TYPE_NAMES_SCRIPT := scripts/patch_cfru_type_names_fr.py
 
 OUTPUT_DIR := output
 EXTRACT_DIR := $(OUTPUT_DIR)/extracted/extracted_texts
@@ -158,6 +159,7 @@ build-fr: $(ENGLISH_EXTRACT) $(SPANISH_EXTRACT) $(BUILD_SCRIPT)
 	@$(PYTHON) $(PATCH_DUP_MOVE_DESC_FR_SCRIPT) \
 		--rom $(FR_BUILD) \
 		--combined combined_fr.txt
+	@$(PYTHON) $(PATCH_CFRU_TYPE_NAMES_SCRIPT) --rom $(FR_BUILD)
 	@echo "✓ FR ROM built — vérification des traductions de lieux..."
 	@$(PYTHON) -m pytest tests/test_location_names_fr.py -q --tb=short
 
