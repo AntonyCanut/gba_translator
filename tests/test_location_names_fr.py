@@ -68,6 +68,10 @@ WORLD_MAP_LABELS = [
     (0xB535C8, "Île de la Lune",    "Fullmoon Island"),
     (0xB537AC, "Bois-Rouge",         "Redwood Village"),
     (0x720E74, "Fallshore",         "Fallshore City"),
+    # Nouveaux noms traduits (follow-up 2026-06-17)
+    (0x3EEF2D, "Grotte Faille",        "Rift Cave"),
+    (0xB500F0, "Port-en-mer",          "Seaport City"),
+    (0x3EEFEA, "Grotte de l'Être",     "Cave of Being"),
 ]
 
 
@@ -147,6 +151,48 @@ class TestLocationNamesFR(unittest.TestCase):
     def test_fallshore(self):
         """0x720E74: 'Fallshore' (was 'Ville de Fallshore' / 'Fallshore City')."""
         self._assert_label(0x720E74, "Fallshore", "Fallshore City")
+
+    def test_grotte_faille_worldmap(self):
+        """0x3EEF2D: 'Grotte Faille' (was 'Rift Cave')."""
+        self._assert_label(0x3EEF2D, "Grotte Faille", "Rift Cave")
+
+    def test_port_en_mer_worldmap(self):
+        """0xB500F0: 'Port-en-mer' (was 'Seaport City', formerly 'Ville Portuaire')."""
+        self._assert_label(0xB500F0, "Port-en-mer", "Seaport City")
+
+    def test_grotte_de_letre_worldmap(self):
+        """0x3EEFEA: 'Grotte de l'Être' (was 'Cave of Being')."""
+        self._assert_label(0x3EEFEA, "Grotte de l'Être", "Cave of Being")
+
+    def test_grotte_de_letre_worldmap2_via_pointer(self):
+        """0x1EEB8C0 label relocated to free space — follow ptr@0x1FB3E4C.
+
+        The original 'Cave of Being' bytes remain at 0x1EEB8C0 (text too long
+        to fit in place); the engine reads via a GBA pointer that now targets
+        the relocated 'Grotte de l'Être' string in free space.
+        """
+        text = _follow_ptr(self.rom, 0x1FB3E4C)
+        self.assertTrue(text, "Pointer at 0x1FB3E4C is invalid or points outside ROM")
+        self.assertIn(
+            "Grotte de l'Être",
+            text,
+            f"Expected \"Grotte de l'Être\" via ptr@0x1FB3E4C, got: {repr(text[:60])}",
+        )
+
+    def test_bourg_po_via_pointer(self):
+        """0x1F84FEF bonus text relocated — follow ptr@0x1FB3D8C.
+
+        'Bonus: Po Town' was identical in EN and ES (no inline diff), so the
+        engine accesses it via a GBA pointer.  The relocated FR string reads
+        'Bonus : Bourg-Pô'.
+        """
+        text = _follow_ptr(self.rom, 0x1FB3D8C)
+        self.assertTrue(text, "Pointer at 0x1FB3D8C is invalid or points outside ROM")
+        self.assertIn(
+            "Bourg-Pô",
+            text,
+            f"Expected 'Bourg-Pô' via ptr@0x1FB3D8C, got: {repr(text[:60])}",
+        )
 
     # ── Mont Foudre: pointer-based NPC dialogue ───────────────────────────────
 
