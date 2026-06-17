@@ -1,9 +1,9 @@
 {
-  "conversion_date": "2026-06-17T23:32:37.809829",
+  "conversion_date": "2026-06-17T23:43:07.765773",
   "source_csv": "2026-01-15_trilingual_translation.csv",
   "total_translations": 20770,
   "total_errors": 0,
-  "total_warnings": 16783,
+  "total_warnings": 16782,
   "translations": [
     {
       "offset": 165760,
@@ -84932,14 +84932,14 @@
     {
       "offset": 8934576,
       "original_text": "You are challenged by\n<0xFD><0x1C> <0xFD><0x1D>!<0xFB>",
-      "translation": "Vous êtes mis au défi par <0xFD><0x1C>\n<0xFD><0x1D>!<0xFB>",
-      "length": 33,
+      "translation": "Tu es défié par\n<0xFD><0x1C> <0xFD><0x1D>!<0xFB>",
+      "length": 23,
       "original_length": 29,
-      "padding_used": 4,
+      "padding_used": -6,
       "encoding": "pokemon",
       "category": "dialogue",
       "notes": "",
-      "too_long": true
+      "too_long": false
     },
     {
       "offset": 8942208,
