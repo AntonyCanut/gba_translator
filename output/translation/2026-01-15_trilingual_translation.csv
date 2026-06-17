@@ -3708,10 +3708,19 @@ power of Fairy-type moves.",,68,13,81,pokemon,description,,
 0x00245E94,Benjamin,,8,4,12,pokemon,other,,
 0x00245EBC,Benjamin,,8,4,12,pokemon,other,,
 0x0024F1A7,FIGHT,FIGHT,5,3,8,pokemon,other,COMBAT,
+0x0024F1AE,FLYING,FLYING,6,2,8,pokemon,other,VOL,
 0x0024F1B5,POISON,POISON,6,2,8,pokemon,other,POISON,
 0x0024F1BC,GROUND,GROUND,6,4,10,pokemon,other,SOL,
 0x0024F1C3,ROCK,ROCK,4,3,7,pokemon,other,ROCHE,
+0x0024F1CA,BUG,BUG,3,4,7,pokemon,other,INSECT,
+0x0024F1D1,GHOST,GHOST,5,4,9,pokemon,other,SPECTR,
+0x0024F1D8,STEEL,STEEL,5,6,11,pokemon,other,ACIER,
+0x0024F1E6,FIRE,FIRE,4,3,7,pokemon,other,FEU,
+0x0024F1ED,WATER,WATER,5,4,9,pokemon,other,EAU,
+0x0024F1F4,GRASS,GRASS,5,3,8,pokemon,other,PLANTE,
+0x0024F1FB,ELECTR,ELECTR,6,2,8,pokemon,other,ÉLECTR,
 0x0024F202,PSYCHC,PSYCHC,6,5,11,pokemon,other,PSY,
+0x0024F209,ICE,ICE,3,4,7,pokemon,other,GLACE,
 0x0024F217,DARK,DARK,4,5,9,pokemon,other,TÉNÈBRES,
 0x0024F3C2,  No special ability.,,21,2,23,pokemon,other,,
 0x0024F3D8,Helps repel wild Pokémon.,Repele Pokémon salvajes.,25,2,27,pokemon,other,"Aide à repousser les Pokémon
@@ -5679,6 +5688,7 @@ Symbole d'honnêteté.
 0x003E8218,CLEAR BODY,CLEAR BODY,10,2,12,pokemon,location,CORPS SAIN,
 0x003E8223,TORRENT,TORRENT,7,2,9,pokemon,other,TORRENT,
 0x003E822B,GHOST,GHOST,5,3,8,pokemon,other,SPECTRE,
+0x003E8231,ICE,ICE,3,2,5,pokemon,other,GLACE,
 0x003E8235,GUTS,GUTS,4,2,6,pokemon,other,CRAN,
 0x003E823A,ROUGH SKIN,ROUGH SKIN,10,2,12,pokemon,location,PEAU RUGUEUSE,
 0x003E8245,SHELL ARMOR,SHELL ARMOR,11,2,13,pokemon,location,COQUE ARMUR,
@@ -5742,6 +5752,7 @@ Symbole d'honnêteté.
 0x003E8477,MAGMA ARMOR,MAGMA ARMOR,11,2,13,pokemon,location,ARMUMAGMA,
 0x003E8483,WATER,WATER,5,2,7,pokemon,other,EAU,
 0x003E8489,WATER VEIL,WATER VEIL,10,2,12,pokemon,location,IGNIFU-VOILE,
+0x003E8494,BUG,BUG,3,2,5,pokemon,other,INSECTE,
 0x003E8498,SWARM,SWARM,5,2,7,pokemon,other,ESSAIM,
 0x003E849E,CUTE CHARM,CUTE CHARM,10,2,12,pokemon,location,JOLI SOURIRE,
 0x003E84A9,IMMUNITY,IMMUNITY,8,2,10,pokemon,other,IMMUNITÉ,
@@ -17198,6 +17209,8 @@ suffisait pas à assurer ma victoire.",
 anyone who passes by.","I'm camping out here to scare
 anyone who passes by.",51,5,56,pokemon,description,"Je campe ici pour effrayer les gens
 qui passent.",
+0x0074B2DF,Fallshore City<0xFB>The waterfall capital of Borrius.,"Ciudad Costera
+<0xB1>Las cascadas de Borrius<0xB2>",48,2,50,pokemon,description,Fallshore<0xFB>La capitale des cascades de Borrius.,
 0x0074B2EE,The waterfall capital of Borrius.,,33,2,35,pokemon,description,,
 0x0074B381,"Running across a bridge in the
 rain""<0xFB>It feels amazing!","Running across a bridge in the
@@ -17456,8 +17469,8 @@ to head to <0xFC><0x01><0x06>Thundercap Mt. <0xFC><0x01><0x08>and<0xFA>save <0xF
 Jax back in Cinder Volcano, and I<0xFA>think you're up for the task.<0xFB>You can get to <0xFC><0x01><0x06>Thundercap Mt. <0xFC><0x01><0x08>
 by taking the highway southeast<0xFA>from the next town over, <0xFC><0x01><0x06>Crater<0xFA>Town<0xFC><0x01><0x08>.<0xFB>If you don't hurry, the Borrius
 region will be doomed.",372,2,374,pokemon,dialogue,"Arthur : <0xFC><0x01><0x08>Bien, bien.<0xFB>Quant à toi, <0xFD><0x01>, je veux que
-tu ailles au <0xFC><0x01><0x06>Mont Foudre <0xFC><0x01><0x08>pour<0xFA>sauver <0xFC><0x01><0x06>Électhor<0xFC><0x01><0x08>.<0xFB>Tu as fait tes preuves en défendant
-Jax dans Volcan Cendreux, et je<0xFA>pense que tu es à la hauteur.<0xFB>Tu peux rejoindre <0xFC><0x01><0x06>Mont Foudre <0xFC><0x01><0x08>
+tu ailles au <0xFC><0x01><0x06>Mont Foudroyant <0xFC><0x01><0x08>pour<0xFA>sauver <0xFC><0x01><0x06>Électhor<0xFC><0x01><0x08>.<0xFB>Tu as fait tes preuves en défendant
+Jax dans Volcan Cendreux, et je<0xFA>pense que tu es à la hauteur.<0xFB>Tu peux rejoindre <0xFC><0x01><0x06>Mont Foudroyant <0xFC><0x01><0x08>
 par l'autoroute au sud-est de la<0xFA>prochaine ville, <0xFC><0x01><0x06>Crater<0xFA>Town<0xFC><0x01><0x08>.<0xFB>Si tu ne te dépêches pas, la région
 de Borrius est condamnée.",
 0x00750AF3,"Log: <0xFC><0x01><0x08>I'll be heading back to <0xFC><0x01><0x06>Frozen
@@ -18846,7 +18859,7 @@ from the Johto region.<0xFB>Why it's named Thundercap Mountain
 and not Cliff Cave is beyond me.","This place reminds of Cliff Cave
 from the Johto region.<0xFB>Why it's named Thundercap Mountain
 and not Cliff Cave is beyond me.",123,3,126,pokemon,description,"Cet endroit me rappelle la Grotte
-Falaise de Johto.<0xFB>Pourquoi le Mont Foudre et pas
+Falaise de Johto.<0xFB>Pourquoi le Mont Foudroyant et pas
 Grotte Falaise ? Mystère.",
 0x0077FD9C,"I believe I can touch the sky""","I believe I can touch the sky""",30,4,34,pokemon,dialogue,"Je crois que je peux toucher le
 ciel...",
@@ -20623,7 +20636,7 @@ psychic barrier around the route<0xFA>that's preventing me from flying in.",356,
 l'instant...<0xFB>...<0xFB>Eh bien... euh... j'ai été prise de
 court...<0xFB>Ouais...<0xFB>Bref, j'ai une faveur à te
 demander.<0xFB>Je sais que mon grand-père t'a dit
-d'aller au Mont Foudre, mais<0xFA>penses-tu pouvoir me donner un<0xFA>coup de main sur la {COLOR}ÉRoute 9{COLOR}Ë ?<0xFB>Les Ombres ont dressé une sorte de
+d'aller au Mont Foudroyant, mais<0xFA>penses-tu pouvoir me donner un<0xFA>coup de main sur la {COLOR}ÉRoute 9{COLOR}Ë ?<0xFB>Les Ombres ont dressé une sorte de
 barrière psychique sur la route<0xFA>qui m'empêche de voler.",
 0x007A86EE,"Here, enjoy this fresh handpicked
 ingredient from the garden.","Here, enjoy this fresh handpicked
@@ -20744,7 +20757,7 @@ properties.","I was training my <0xFC><0x01><0x06>Nosepass<0xFC><0x01><0x08> in
 <0xFC><0x01><0x06>Thundercap Mountain<0xFC><0x01><0x08> the other day,<0xFA>when all of a sudden it began to<0xFA>glow!<0xFB>The next thing I knew, it had
 evolved into a Probopass!<0xFB>That mountain must have some weird
 properties.",218,2,220,pokemon,dialogue,"L'autre jour, j'entraînais mon
-<0xFC><0x01><0x06>Nosepass<0xFC><0x01><0x08> dans <0xFC><0x01><0x06>Mont Foudre<0xFC><0x01><0x08><0xFA>quand soudain, il s'est mis à<0xFA>briller !<0xFB>L'instant d'après, il avait évolué
+<0xFC><0x01><0x06>Nosepass<0xFC><0x01><0x08> dans <0xFC><0x01><0x06>Mont Foudroyant<0xFC><0x01><0x08><0xFA>quand soudain, il s'est mis à<0xFA>briller !<0xFB>L'instant d'après, il avait évolué
 en Probopass !<0xFB>Cette montagne doit avoir de
 drôles de propriétés.",
 0x007AAC3A,"You'd never catch me outside when
@@ -20797,7 +20810,7 @@ blocking the entrance and saying<0xFA>that he's there to keep you from<0xFA>ente
 my head can't handle these<0xFA>complaints anymore.<0xFB>As this is likely your mess, meet
 me in <0xFC><0x01><0x06>Epidimy Town<0xFC><0x01><0x08> to help clean<0xFA>it up.<0xFB>I don't have all day, so take this
 to get yourself there faster.",446,2,448,pokemon,dialogue,"{COLOR}ËCes derniers temps, les habitants
-de Ville d'Epidimy se plaignent<0xFA>de ne pouvoir aller au Mont Foudre.<0xFB>Un type bizarre bloque l'entrée et
+de Ville d'Epidimy se plaignent<0xFA>de ne pouvoir aller au Mont Foudroyant.<0xFB>Un type bizarre bloque l'entrée et
 <0xFA>prétend être là pour t'empêcher
 <0xFA>d'entrer.<0xFB>Je ne sais pas ce qui se passe, mais
 je ne supporte plus ces<0xFA>plaintes.<0xFB>Comme c'est sûrement ton affaire,
@@ -20853,7 +20866,7 @@ to win""",42,1,43,pokemon,description,"Je ne suis clairement pas assez
 électrisé pour gagner...",
 0x007B14D6,"Thundercap Mt.<0xFB><0x7B> Epidimy Town
 à Antisis City","Thundercap Mt.<0xFB><0x7B> Epidimy Town
-à Antisis City",44,6,50,pokemon,dialogue,"Mont Foudre<0xFB><0x7B> Ville d'Epidimy
+à Antisis City",44,6,50,pokemon,dialogue,"Mont Foudroyant<0xFB><0x7B> Ville d'Epidimy
 <0x7C> Ville d'Antisis",
 0x007B1CE1,"I heard there was a rare Bird
 Pokémon around here somewhere.","I heard there was a rare Bird
@@ -21407,7 +21420,7 @@ continue on, worry free!",110,3,113,pokemon,dialogue,"Le chemin à travers cette
 soigner pour que tu continues",
 0x007B6D11,"Look!
 A Trainer lost in Thundercap Mt!","Look!
-A Trainer lost in Thundercap Mt!",38,20,58,pokemon,dialogue,Regarde ! Un dresseur perdu au Mont Foudre !,
+A Trainer lost in Thundercap Mt!",38,20,58,pokemon,dialogue,Regarde ! Un dresseur perdu au Mont Foudroyant !,
 0x007B85B9,"If you're working on a Pokédex,
 visit Thundercap Mountain.<0xFB>All sorts of rare Electric Pokémon
 live there.<0xFB>It's even said that Zapdos roosts
@@ -21415,7 +21428,7 @@ at the peak!","If you're working on a Pokédex,
 visit Thundercap Mountain.<0xFB>All sorts of rare Electric Pokémon
 live there.<0xFB>It's even said that Zapdos roosts
 at the peak!",152,2,154,pokemon,dialogue,"Si tu complètes le Pokédex, visite
-<0xFB>le Mont Foudre. Plein de Pokémon
+<0xFB>le Mont Foudroyant. Plein de Pokémon
 <0xFB>Électrik rares y vivent. On dit même
 qu'Électhor niche au sommet !",
 0x007B870C,"Are you up to no good?<0xFB>""<0xFB>Just checking.<0xFB>There's no telling when a ruffian
@@ -21671,7 +21684,7 @@ Thundercap Mt.<0xFB>I didn't think I would get lost
 in a place like this""","I just wanted to have a picnic in
 Thundercap Mt.<0xFB>I didn't think I would get lost
 in a place like this""",102,5,107,pokemon,dialogue,"Je voulais juste pique-niquer au
-<0xFB>Mont Foudre. Je ne pensais pas
+<0xFB>Mont Foudroyant. Je ne pensais pas
 me perdre dans un endroit pareil...",
 0x007BB0B8,That wasn't any fun for me!,That wasn't any fun for me!,27,3,30,pokemon,dialogue,"Ce n'était pas drôle pour moi !
 ",
@@ -22220,13 +22233,13 @@ ruines.",
 through that hole down the stairs.<0xFB>It's really dangerous, so if you
 go, make sure you have lots of<0xFA>revives and Paralyze Heals!","Thundercap Mountain can be accessed
 through that hole down the stairs.<0xFB>It's really dangerous, so if you
-go, make sure you have lots of<0xFA>revives and Paralyze Heals!",162,3,165,pokemon,dialogue,"On peut accéder à Mont Foudre par ce trou en bas des<0xFA>escaliers.<0xFB>C'est très dangereux, alors si tu
+go, make sure you have lots of<0xFA>revives and Paralyze Heals!",162,3,165,pokemon,dialogue,"On peut accéder à Mont Foudroyant par ce trou en bas des<0xFA>escaliers.<0xFB>C'est très dangereux, alors si tu
 y vas, prends plein de Rappels et<0xFA>d'Anti-Paras !",
 0x007C19F0,"I really wanna explore Thundercap
 Mountain!<0xFB>But my mommy says it's too
 dangerous 'cause there are a bunch<0xFA>of bad men on the other side.","I really wanna explore Thundercap
 Mountain!<0xFB>But my mommy says it's too
-dangerous 'cause there are a bunch<0xFA>of bad men on the other side.",135,2,137,pokemon,dialogue,"Je veux vraiment explorer le Mont Foudre !<0xFB>Mais maman dit que c'est trop
+dangerous 'cause there are a bunch<0xFA>of bad men on the other side.",135,2,137,pokemon,dialogue,"Je veux vraiment explorer le Mont Foudroyant !<0xFB>Mais maman dit que c'est trop
 dangereux, car il y a plein de<0xFA>mauvais types de l'autre côté.",
 0x007C1C05,"Great job!<0xFB>You rounded up all four of those
 Terror Granbull goons.<0xFB>However, their leader is still at
@@ -22346,7 +22359,7 @@ cette ville...",
 Mountain?<0xFB>If you do, you're going to need
 these!","Do you plan on exploring Thundercap
 Mountain?<0xFB>If you do, you're going to need
-these!",84,3,87,pokemon,dialogue,"Tu comptes explorer Mont Foudre ?<0xFB>Si c'est le cas, tu vas avoir
+these!",84,3,87,pokemon,dialogue,"Tu comptes explorer Mont Foudroyant ?<0xFB>Si c'est le cas, tu vas avoir
 besoin de ça !",
 0x007C24FF,"It never hurt to be prepared for
 anything!","It never hurt to be prepared for
@@ -22358,7 +22371,7 @@ boy, I got smoked!<0xFB>Ever since then, my lovely wife has
 been giving Max Repels to any<0xFA>travellers who talk to her.","Thundercap Mountain is a dangerous
 place!<0xFB>I tried exploring it once, but oh
 boy, I got smoked!<0xFB>Ever since then, my lovely wife has
-been giving Max Repels to any<0xFA>travellers who talk to her.",188,2,190,pokemon,dialogue,"Le Mont Foudre est un endroit
+been giving Max Repels to any<0xFA>travellers who talk to her.",188,2,190,pokemon,dialogue,"Le Mont Foudroyant est un endroit
 dangereux !<0xFB>J'ai essayé d'y aller une fois, et
 ouh, je me suis fait griller !<0xFB>Depuis, ma chère femme donne des
 Repousse Max chaque jour aux<0xFA>voyageurs qui lui parlent.",
@@ -22685,7 +22698,7 @@ d'Epidimy pour les terroriser.<0xFB>Mais ce Champion aux cheveux blancs
 me chasse toujours.<0xFB>Je lui donne un sacré mal de tête...",
 0x007C5289,"Thundercap Mt.
 East Entrance<0xFB>à Antisis City","Thundercap Mt.
-East Entrance<0xFB>à Antisis City",43,398,441,pokemon,description,"Mont Foudre
+East Entrance<0xFB>à Antisis City",43,398,441,pokemon,description,"Mont Foudroyant
 Entrée Est<0xFB><0x7C> Ville d'Antisis",
 0x007C5554,"Hello, there!<0xFB>Do you happen to have one of those
 rare <0xFC><0x01><0x06>Ice-type <0xFD><0x02><0xFC><0x01><0x08>?<0xFB>I've always had trouble getting my
@@ -23028,7 +23041,7 @@ I ever did see!<0xFB>A <0xFD><0x02> coming outta some magic
 portal!<0xFB>Where'd ya come from, <0xFD><0x02>?<0xFB>""<0xFB>What's that?<0xFB>Ya were tryin' to get to
 Thundercap Mt. when all of a<0xFA>sudden ya were kidnapped!<0xFB>Hoooo weeee!<0xFB>That sure sounds scary, <0xFD><0x02>.",260,3,263,pokemon,dialogue,"Hooo la la !<0xFB>Si c'est pas le truc le plus dingue
 que j'aie vu !<0xFB>Un <0xFD><0x02> sorti d'un portail
-magique !<0xFB>D'où tu viens, <0xFD><0x02> ?<0xFB>...<0xFB>Hein ?<0xFB>Tu essayais d'aller au Mont Foudre et soudain tu as<0xFA>été kidnappé !<0xFB>Hooo la la !<0xFB>Ça fait peur, <0xFD><0x02>.",
+magique !<0xFB>D'où tu viens, <0xFD><0x02> ?<0xFB>...<0xFB>Hein ?<0xFB>Tu essayais d'aller au Mont Foudroyant et soudain tu as<0xFA>été kidnappé !<0xFB>Hooo la la !<0xFB>Ça fait peur, <0xFD><0x02>.",
 0x007C7DFA,"Well, if ya hadn't been kidnapped,
 ya'd be havin' a lot less trouble<0xFA>gettin' to Thundercap Mt.<0xFB>Ya see, part of the ceiling
 collapsed not long ago and<0xFA>blocked off the road!<0xFB>And unless ya have the HM for <0xFC><0x01><0x06>Rock
@@ -23042,7 +23055,7 @@ Smash<0xFC><0x01><0x08>, you'll be in a bit of a<0xFA>pickle gettin' through 'em
 wouldn't still be talkin' to me.<0xFB>In thatta case, a friend of mine in
 <0xFC><0x01><0x06>Blizzard City<0xFC><0x01><0x08> can help ya out by<0xFA>giving ya Rock Smash.<0xFB>So, take this HM to help yurself
 get to him.",479,2,481,pokemon,dialogue,"Eh bien, sans cet enlèvement,
-tu aurais moins de mal<0xFA>à rejoindre le Mont Foudre.<0xFB>Tu vois, une partie du plafond
+tu aurais moins de mal<0xFA>à rejoindre le Mont Foudroyant.<0xFB>Tu vois, une partie du plafond
 s'est effondrée il y a peu et<0xFA>a bloqué la route !<0xFB>Et sans la CS {COLOR}ÉÉclate-
 Roc{COLOR}Ë, tu vas galérer pour<0xFA>passer.<0xFB>Mais...<0xFB>Je parie que tu ne l'as pas, sinon
 tu ne me parlerais pas.<0xFB>À {COLOR}ÉVille Blizzard{COLOR}Ë, un ami
@@ -23067,7 +23080,7 @@ Dégage ou je te dégage.",
 Thundercap Mountain at all cost.","Grunt: <0xFC><0x01><0x08>I refuse to abandon my post.<0xFB>I must prevent <0xFD><0x01> from entering
 Thundercap Mountain at all cost.",103,3,106,pokemon,dialogue,"Sbire : {COLOR}ËJe refuse
 d'abandonner mon poste.<0xFB>Je dois empêcher {PLAYER} d'entrer au
-Mont Foudre, à tout prix.",
+Mont Foudroyant, à tout prix.",
 0x007C8132,"Mel: <0xFC><0x01><0x08>I don't have time for this
 right now.<0xFB>My head is pounding and I have a
 Gym to run.","Mel: <0xFC><0x01><0x08>I don't have time for this
@@ -28789,7 +28802,7 @@ Expressway<0xFC><0x01><0x08> far <0xFC><0x01><0x06>south<0xFC><0x01><0x08> to go
 <0xFC><0x01><0x06>Thundercap Mountain<0xFC><0x01><0x08>!<0xFB>If The Shadows get there before
 you, Borrius is doomed!<0xFB>Head north of town and take the <0xFC><0x01><0x06>SES
 Expressway<0xFC><0x01><0x08> far <0xFC><0x01><0x06>south<0xFC><0x01><0x08> to go quickly.",191,2,193,pokemon,dialogue,"{PLAYER}, vite au
-{COLOR}ÉMont Foudre{COLOR}Ë !<0xFB>Si les Ombres y arrivent avant toi,
+{COLOR}ÉMont Foudroyant{COLOR}Ë !<0xFB>Si les Ombres y arrivent avant toi,
 Borrius est foutu !<0xFB>Par {COLOR}ÉAutoroute KBT{COLOR}Ë
 vers le {COLOR}Ésud{COLOR}Ë vite.",
 0x008CB932,"With Zapdos now in their possesion,
@@ -29076,7 +29089,7 @@ doomed""","We're running out of time,
 Mountain<0xFC><0x01><0x08> and save <0xFC><0x01><0x06>Zapdos<0xFC><0x01><0x08>!<0xFB>If it's captured too, we'll all be
 doomed""",143,3,146,pokemon,dialogue,"Le temps presse,
 <0xFD><0x01>.<0xFB>Tu dois te dépêcher d'aller à
-<0xFC><0x01><0x06>Mont Foudre<0xFC><0x01><0x08> et sauver<0xFA><0xFC><0x01><0x06>Électhor<0xFC><0x01><0x08> !<0xFB>S'il est capturé aussi, nous sommes
+<0xFC><0x01><0x06>Mont Foudroyant<0xFC><0x01><0x08> et sauver<0xFA><0xFC><0x01><0x06>Électhor<0xFC><0x01><0x08> !<0xFB>S'il est capturé aussi, nous sommes
 tous condamnés...",
 0x008CDF4B,"With all three legendary Pokémon
 in their grasp, The Shadows are<0xFA>only momemnts away from releasing<0xFA>the dark force.<0xFB>Jax is in <0xFC><0x01><0x06>Dehara City<0xFC><0x01><0x08> waiting to
@@ -45573,7 +45586,7 @@ fouetter l'ennemi.",
 0x00B50214,Antisis Sewers,Alcantarillas,14,6,20,pokemon,location,Égouts d'Antisis,
 0x00B50228,Magnolia Town,Pueblo Magnolia,13,15,28,pokemon,location,Bourg Magnolia,
 0x00B50244,Battle Circus,Battle Circus,13,7,20,pokemon,location,Cirque de Combat,
-0x00B5026C,Thundercap Mt.,Mt. Trueno,14,14,28,pokemon,location,Mont Foudre,
+0x00B5026C,Thundercap Mt.,Mt. Trueno,14,14,28,pokemon,location,Mont Foudroyant,
 0x00B50330,Antisis City,Ciudad Antisis,12,7,19,pokemon,location,,
 0x00B50350,Vivill Warehouse,Almacén Vivil,16,8,24,pokemon,location,Entrepôt de Vivill,
 0x00B503A0,Distortion World,Mundo Distorsión,16,8,24,pokemon,location,Monde Distorsion,
@@ -45619,7 +45632,7 @@ fortement la Vitesse.",,48,30,78,pokemon,description,,
 0x00B53528,Redwood Forest,Bosque Secuoya,14,2,16,pokemon,location,Forêt Séquoia,
 0x00B535C8,Fullmoon Island,Isla Lunar,15,3,18,pokemon,location,Île de la Lune,
 0x00B535E2,  Battle Frontier,,17,4,21,pokemon,other,,
-0x00B537AC,Redwood Village,Villa Secuoya,15,9,24,pokemon,location,Village Redwood,
+0x00B537AC,Redwood Village,Villa Secuoya,15,9,24,pokemon,location,Bois-Rouge,
 0x00B53814,Magnolia Fields,Campos Magnolia,15,5,20,pokemon,location,,
 0x00B58600,"Le lanceur attaque en
 projetant un gros
@@ -55182,7 +55195,7 @@ estaban atados como un lazo.<0xFB>En realidad"" ahora que estamos aquí""
 <0x51>te gustaría una revancha con<0xFA>este chico guapo?<0xFB>Quiero ver cómo realmente luchas
 contra las distracciones que te<0xFA>detengan.<0xFB><0x51>Qué dices?
 <0x51>Aceptas otro combate?",505,2,507,pokemon,dialogue,"Eh bien, regarde qui voilà...<0xFB>Si c'est pas <0xFD><0x01>.<0xFB>J'imagine que tout ce bazar après
-le Mont Foudre a payé, hein ?<0xFB>Depuis... t'as quelque chose de
+le Mont Foudroyant a payé, hein ?<0xFB>Depuis... t'as quelque chose de
 changé dans ta tête.<0xFB>Non, t'es pas devenu aussi beau
 que moi...<0xFB>Personne n'est plus charmant que
 le vieux Mel.<0xFB>Je veux dire, t'es plus détendu.<0xFB>Je me souviens qu'à mon Arène, vous
@@ -60996,7 +61009,7 @@ du tunnel.",
 house close to the entrance
 of Thundercap Mt.","Encontrada en la casa cerca de
 la entrada de Mt. Trueno.",74,2,76,pokemon,description,"Cette personne était dans la maison
-près de l'entrée du Mont Foudre.",
+près de l'entrée du Mont Foudroyant.",
 0x01EF7018,"This person was found on the 3F
 accessed by using Rock Climb on
 the western side of 2F.","Encontrado en Mt. Trueno tras
@@ -63341,7 +63354,7 @@ côté ouest de la route.",
 0x01F0073F,"This Trainer Tips sign was read
 by the exit to Redwood Village.","Este letrero fue leído junto a
 la salida de Bosque Secuoya.",63,2,65,pokemon,description,"Panneau Conseils Dresseurs lu
-près de la sortie vers Redwood.",
+près de la sortie vers Bois-Rouge.",
 0x01F0077F,"This Trainer Tips sign was read by
 the Youngster and Aroma Lady in
 the middle of the forest.","Este letrero fue leído cerca
@@ -63970,14 +63983,14 @@ blague avec le nom de la ville.",
 Thundercap Mt!<0xFB>But my mommy says it's too
 dangerous 'cause there are a bunch<0xFA>of bad men on the other side.","<0x52>Quiero explorar el Mt. Trueno!<0xFB>Pero mi mamá dice que es demasiado
 peligroso porque hay un montón de<0xFA>hombres malos del otro lado.",129,1,130,pokemon,dialogue,"Je veux vraiment explorer
-le Mont Foudre !<0xFB>Mais maman dit que c'est trop
+le Mont Foudroyant !<0xFB>Mais maman dit que c'est trop
 dangereux, il y a<0xFA>plein de mauvais hommes là-bas.",
 0x01F03513,of bad men on the other side.,,29,1,30,pokemon,other,,
 0x01F03531,"Thundercap Mt. can be accessed
 through that hole down the stairs.<0xFB>It's really dangerous, so if you
 go, make sure you have lots of<0xFA>Revives and Paralyze Heals!","Puedes acceder a Mt. Trueno a través
 de ese agujero que baja por las<0xFA>escaleras.<0xFB>Ten cuidado, <0x52>es muy peligroso ese
-lugar!",157,2,159,pokemon,dialogue,"Mont Foudre est accessible par
+lugar!",157,2,159,pokemon,dialogue,"Mont Foudroyant est accessible par
 ce trou en bas des escaliers.<0xFB>C'est très dangereux, alors si tu
 y vas, prends plein de Rappels et<0xFA>d'Anti-Paras !",
 0x01F035B3,Revives and Paralyze Heals!,,27,2,29,pokemon,dialogue,,
@@ -63991,7 +64004,7 @@ into Thundercap Mt., so you<0xFA>can't interfere with our plans.<0xFB>Even if I 
 toast without the power of<0xFA><0xFC><0x01><0x06>Mega Evolution<0xFC><0x01><0x08>.<0xFB>So don't you see?<0xFB>You should stay out here for your
 own good.",269,2,271,pokemon,dialogue,"Eh bien, eh bien, eh bien...
 Si ce n'est pas {PLAYER} !<0xFB>Marlon m'a dit de ne pas te laisser
-entrer au Mont Foudre, alors tu<0xFA>ne peux pas gêner nos plans.<0xFB>Même si je te laissais entrer, tu
+entrer au Mont Foudroyant, alors tu<0xFA>ne peux pas gêner nos plans.<0xFB>Même si je te laissais entrer, tu
 serais grillé sans le pouvoir de<0xFA>{COLOR}ÉMéga-Évolution{COLOR}Ë.<0xFB>Tu vois ?<0xFB>Tu ferais mieux de rester dehors
 pour ton propre bien.",
 0x01F036DD,"You placed yourself firmly on
@@ -64009,7 +64022,7 @@ peak where Zapdos roosts.<0xFB>I don't recommend you use the
 entrance by Antisis City, though.<0xFB>That place is messed up""","Mt. Trueno tiene dos entradas
 diferentes: una en Ciudad Epidimia<0xFA>y otra en Ciudad Antisis.<0xFB>Estas entradas te llevan a la cima
 donde se posa Zapdos.<0xFB>Si embargo, no te recomiendo que
-uses la entrada de Ciudad Antisis.<0xFB>Está en malas condiciones""",242,3,245,pokemon,dialogue,"Mont Foudre a deux entrées
+uses la entrada de Ciudad Antisis.<0xFB>Está en malas condiciones""",242,3,245,pokemon,dialogue,"Mont Foudroyant a deux entrées
 différentes : l'une à Ville d'Epidimy,<0xFA>et l'autre à Ville d'Antisis.<0xFB>Ces entrées mènent au sommet où
 Électhor a élu domicile.<0xFB>Mais je te déconseille d'utiliser
 l'entrée près d'Ville d'Antisis.<0xFB>Cet endroit est complètement
@@ -64024,7 +64037,7 @@ Mt. Trueno a través de la entrada<0xFA>cercana.<0xFB><0x52>La abertura donde se
 posa está muy arriba!<0xFB>De hecho, <0x52>me mareé mucho y me caí
 mientras subía!<0xFB>El médico dice que ahora sufro un
 traumatismo craneoencefálico menor.<0xFB><0x52>Llévate este objeto para no tener
-que preocuparme por ti!",307,3,310,pokemon,dialogue,"J'ai tenté le Mont Foudre
+que preocuparme por ti!",307,3,310,pokemon,dialogue,"J'ai tenté le Mont Foudroyant
 par l'entrée proche une fois.<0xFB>Là où Électhor
 doit se percher est très haut !<0xFB>J'ai eu le vertige et je suis tombé
 en grimpant !<0xFB>Le médecin dit que je souffre
@@ -64189,7 +64202,7 @@ Tellement décevant...",
 Thundercap Mt.?<0xFB>If you do, you're going to
 need these!","<0x51>Planeas explorar el Mt. Trueno?
 Si es así, <0x52>necesitarás esto!",79,3,82,pokemon,dialogue,"Tu comptes explorer
-Mont Foudre ?<0xFB>Si oui, tu vas avoir
+Mont Foudroyant ?<0xFB>Si oui, tu vas avoir
 besoin de ça !",
 0x01F042A6,"re going to
 need these!",,23,3,26,pokemon,dialogue,,
@@ -64201,7 +64214,7 @@ place!<0xFB>I tried exploring it once, but oh
 boy, I got smoked!<0xFB>Ever since then, my lovely wife has
 been giving Max Repels daily to any<0xFA>travellers who talk to her.","<0x52>Mt. Trueno es un lugar peligroso!<0xFB>Intenté explorarlo una vez, <0x52>pero
 nunca lo logré!<0xFB>Desde entonces, mi encantadora esposa
-ha estado dando Repelentes a<0xFA>quienes vayan a Mt. Trueno.",189,2,191,pokemon,dialogue,"Le Mont Foudre est un endroit
+ha estado dando Repelentes a<0xFA>quienes vayan a Mt. Trueno.",189,2,191,pokemon,dialogue,"Le Mont Foudroyant est un endroit
 dangereux !<0xFB>J'ai essayé d'y aller une fois, et
 ouh, je me suis fait griller !<0xFB>Depuis, ma chère femme donne des
 Repousse Max chaque jour aux<0xFA>voyageurs qui lui parlent.",
@@ -64247,7 +64260,7 @@ at the peak!","Si estás trabajando en una Pokédex,
 <0x52>ve a <0xFC><0x01><0x06>Mt. Trueno<0xFC><0x01><0x04>!<0xFB>Allí viven muchos Pokémon de tipo
 Eléctrico.<0xFB><0x52>Incluso se dice que Zapdos se posa
 en la cima!",158,2,160,pokemon,dialogue,"Si tu remplis un Pokédex, va faire
-un tour à <0xFC><0x01><0x06>Mont Foudre<0xFC><0x01><0x04> !<0xFB>Toutes sortes de Pokémon de type
+un tour à <0xFC><0x01><0x06>Mont Foudroyant<0xFC><0x01><0x04> !<0xFB>Toutes sortes de Pokémon de type
 Electrik rares y vivent.<0xFB>On dit même que Électhor niche au
 sommet !",
 0x01F045B1,"s even said that Zapdos roosts
@@ -66121,7 +66134,7 @@ le Cerveau de la Tour de Combat en<0xFA>Combat Multi standard !",
 the sooner you can challenge the<0xFA>Pokémon League and become the<0xFA>new Champion.","<0xFD><0x01>! Stopping by for a visit?<0xFB>You should hurry on over to
 <0xFC><0x01><0x06>Redwood Village<0xFC><0x01><0x08>!<0xFB>The sooner you beat the Gym there,
 the sooner you can challenge the<0xFA>Pokémon League and become the<0xFA>new Champion.",191,2,193,pokemon,dialogue,"{PLAYER} ! De passage ?<0xFB>Dépêche-toi d'aller à
-{COLOR}ÉBourg Redwood{COLOR}Ë !<0xFB>Plus vite tu bats l'Arène, plus vite
+{COLOR}ÉBois-Rouge{COLOR}Ë !<0xFB>Plus vite tu bats l'Arène, plus vite
 tu pourras défier<0xFA>la Ligue Pokémon et devenir le
 nouveau<0xFA>Champion.",
 0x01F0C52E,"<0xFD><0x01>! Stopping by for a visit?<0xFB>You should hurry on over to the
@@ -68958,7 +68971,7 @@ nomor'!","<0x52>No hay nada de que preocuparse!<0xFB><0x52>Las olas no te llevar
 lado!",78,2,80,pokemon,dialogue,"Plus rien à craindre,
 maintenant !<0xFB>Les vagues vont plus
 t'emporter !",
-0x01F18D80,Redwood Village Gym,Redwood Village Gym,19,2,21,pokemon,location,Arène Pokémon de Bourg Redwood,
+0x01F18D80,Redwood Village Gym,Redwood Village Gym,19,2,21,pokemon,location,Arène Pokémon de Bois-Rouge,
 0x01F18D94,Benjamin,Benjamín,8,2,10,pokemon,other,Benjamin,
 0x01F18D9D,Benjy,Benjy,5,3,8,pokemon,other,Benjy,
 0x01F18DA3,"Ooh hoo hoo hoo""<0xFB>It's been ages"" ages, I say, since
@@ -70323,7 +70336,7 @@ Jax, <0xFD><0x06>, <0xFD><0x01>",
 0x01F1EFE7,"Redwood Pokémon Gym
 Leader: Benjamin<0xFB>Winning Trainers:
 Jax","<0x52>Gimnasio Pokémon!
-Líder: Benjamín.<0xFB>Ganador: Jax.",58,2,60,pokemon,description,"Arène Pokémon de Bourg Redwood
+Líder: Benjamín.<0xFB>Ganador: Jax.",58,2,60,pokemon,description,"Arène Pokémon de Bois-Rouge
 Champion : Benjamin<0xFB>Dresseurs vainqueurs :
 Jax",
 0x01F1F01D,"
@@ -70331,13 +70344,13 @@ Jax",,4,2,6,pokemon,other,,
 0x01F1F022,"Redwood Pokémon Gym
 Leader: Benjamin<0xFB>Winning Trainers:
 Jax, <0xFD><0x01>","<0x52>Gimnasio Pokémon!
-Líder: Benjamín.<0xFB>Ganador: Jax, <0xFD><0x01>.",62,2,64,pokemon,description,"Arène Pokémon de Bourg Redwood
+Líder: Benjamín.<0xFB>Ganador: Jax, <0xFD><0x01>.",62,2,64,pokemon,description,"Arène Pokémon de Bois-Rouge
 Champion : Benjamin<0xFB>Dresseurs vainqueurs :
 Jax, <0xFD><0x01>",
 0x01F1F061,"Redwood Pokémon Gym
 Leader: Benjamin<0xFB>Winning Trainers:
 Jax, <0xFD><0x01>, <0xFD><0x06>","<0x52>Gimnasio Pokémon!
-Líder: Benjamín.<0xFB>Ganador: Jax, <0xFD><0x01>, <0xFD><0x06>.",66,3,69,pokemon,description,"Arène Pokémon de Bourg Redwood
+Líder: Benjamín.<0xFB>Ganador: Jax, <0xFD><0x01>, <0xFD><0x06>.",66,3,69,pokemon,description,"Arène Pokémon de Bois-Rouge
 Champion : Benjamin<0xFB>Dresseurs vainqueurs :
 Jax, <0xFD><0x01>, <0xFD><0x06>",
 0x01F1F0A4,"Ya ever met that Mirskle guy?<0xFB>Don't get too cozy with him - he's
@@ -71009,7 +71022,7 @@ for yerself.<0xFB>Now just keep heading <0xFC><0x01><0x06>east<0xFC><0x01><0x08>
 you reach <0xFC><0x01><0x06>Thundercap Mt.<0xFC><0x01><0x08>","Parece que te abriste un camino.<0xFB>Ahora sigue en dirección <0xFC><0x01><0x06>este<0xFC><0x01><0x08> hasta
 llegar a <0xFC><0x01><0x06>Mt. Trueno<0xFC><0x01><0x08>.",129,2,131,pokemon,dialogue,"Hoooo weeee !<0xFB>Tu as ouvert un passage
 pour toi.<0xFB>Continue vers {COLOR}Él'est{COLOR}Ë jusqu'à
-atteindre {COLOR}ÉMont Foudre{COLOR}Ë",
+atteindre {COLOR}ÉMont Foudroyant{COLOR}Ë",
 0x01F21E34,"These walls are full of treasure.<0xFB>I make my living by digging it out
 and selling as much as I can.<0xFB>I've hit my limit for now, though,
 so why don't you try instead of me?<0xFB>It'll cost you ¥<0xFC><0x01><0x06><0xFD><0x02><0xFC><0x01><0x08>, but you're
@@ -71457,7 +71470,7 @@ Expressway<0xFC><0x01><0x08> far <0xFC><0x01><0x06>south<0xFC><0x01><0x08> to go
 lo antes posible!<0xFB>Si las Sombras llegan antes que
 tú, <0x52>Borrius está perdido!<0xFB>Ve al norte del pueblo y toma la
 <0xFC><0x01><0x06>Autopista RBT<0xFC><0x01><0x08> para ir más rápido.",186,3,189,pokemon,dialogue,"{PLAYER}, dépêche-toi d'aller
-au {COLOR}ÉMont Foudre{COLOR}Ë !<0xFB>Si les Ombres arrivent avant toi,
+au {COLOR}ÉMont Foudroyant{COLOR}Ë !<0xFB>Si les Ombres arrivent avant toi,
 Borrius est condamné !<0xFB>Au nord, prends la {COLOR}ÉRoute
 KBT{COLOR}Ë plein sud vite.",
 0x01F23C9E, to go quickly.,,15,3,18,pokemon,other,,
@@ -72123,7 +72136,7 @@ Je crois que je me suis cogné...",
 0x01F26AD7,"I found my Pokémon when I bashed
 my head against a tree in Redwood<0xFA>Village!","<0x52>Encontré a mi Pokémon cuando me
 golpeé la cabeza contra un árbol!",75,2,77,pokemon,dialogue,"J'ai trouvé mon Pokémon en me cognant
-la tête contre un arbre à Redwood<0xFA>Village !",
+la tête contre un arbre à Bois-Rouge !",
 0x01F26B1A,Village!,,8,2,10,pokemon,dialogue,,
 0x01F26B32,Magnolia Town D,Magnolia Town D,15,2,17,pokemon,location,Bg Magnolia J,
 0x01F26B42,Magnolia Town N,Magnolia Town N,15,1,16,pokemon,location,Bg Magnolia N,
@@ -74579,7 +74592,7 @@ and save <0xFC><0x01><0x06>Zapdos<0xFC><0x01><0x08>!<0xFB>If it's captured too, 
 doomed""","Se nos acaba el tiempo,
 <0xFD><0x01>.<0xFB><0x52>Debes darte prisa e ir al <0xFC><0x01><0x06>Mt.
 Trueno<0xFC><0x01><0x08> y salvar a <0xFC><0x01><0x06>Zapdos<0xFC><0x01><0x08>.<0xFB>Si también lo capturan, estamos
-perdidos""",138,3,141,pokemon,dialogue,"On manque de temps, {PLAYER}.<0xFB>Tu dois vite aller au {COLOR}ÉMont Foudre{COLOR}Ë et sauver {COLOR}ÉÉlecthor{COLOR}Ë !<0xFB>S'il est capturé aussi, nous sommes
+perdidos""",138,3,141,pokemon,dialogue,"On manque de temps, {PLAYER}.<0xFB>Tu dois vite aller au {COLOR}ÉMont Foudroyant{COLOR}Ë et sauver {COLOR}ÉÉlecthor{COLOR}Ë !<0xFB>S'il est capturé aussi, nous sommes
 tous condamnés...",
 0x01F309BE,"Jax told me the news.<0xFB>A job well done saving Zapdos,
 <0xFD><0x01>!<0xFB>All that remains now is retrieving
@@ -74931,7 +74944,7 @@ avant que les Ombres ne le<0xFA>capturent.",
 0x01F31F5C,"s imperative that it be rescued
 before the Shadows can capture it.",,66,1,67,pokemon,description,,
 0x01F31F9F,"Zapdos""<0xFB>It lives in <0xFC><0x01><0x06>Thundercap Mt.<0xFC><0x01><0x08>, right?<0xFB>I'll head on out right away.","Zapdos""<0xFB>Vive en <0xFC><0x01><0x06>Mt. Trueno<0xFC><0x01><0x08>, <0x51>verdad?
-Saldré de inmediato.",77,1,78,pokemon,dialogue,"Électhor...<0xFB>Il vit au {COLOR}ÉMont Foudre{COLOR}Ë, non ?<0xFB>Je pars tout de suite.",
+Saldré de inmediato.",77,1,78,pokemon,dialogue,"Électhor...<0xFB>Il vit au {COLOR}ÉMont Foudroyant{COLOR}Ë, non ?<0xFB>Je pars tout de suite.",
 0x01F31FD2,ll head on out right away.,,26,1,27,pokemon,other,,
 0x01F31FED,"Actually, Jax, I have a different
 task for you.<0xFB>To the best of my knowledge,
@@ -74961,10 +74974,10 @@ quien se dirigirá a <0xFC><0x01><0x06>Mt. Trueno<0xFC><0x01><0x08> y<0xFA>salva
 valía defendiendo a Jax en<0xFA>Volcán Ceniza, y creo que estás a<0xFA>la altura de la tarea.<0xFB>Puedes dirigirte allí tomando la
 autopista hacia el sureste para<0xFA>poder llegar a <0xFC><0x01><0x06>Ciudad Cráter<0xFC><0x01><0x08>.<0xFB>Es posible que necesites la Medalla
 para viajar al <0xFC><0x01><0x06>Mt. Trueno<0xFC><0x01><0x08>, así<0xFA>que debes conseguirla como sea<0xFA>posible.",446,2,448,pokemon,dialogue,"Bien, bien.<0xFB>En attendant, {PLAYER} ira
-sauver {COLOR}ÉÉlecthor{COLOR}Ë au<0xFA>{COLOR}ÉMont Foudre{COLOR}Ë.<0xFB>{PLAYER}...{PAUSE} tu as fait tes preuves
+sauver {COLOR}ÉÉlecthor{COLOR}Ë au<0xFA>{COLOR}ÉMont Foudroyant{COLOR}Ë.<0xFB>{PLAYER}...{PAUSE} tu as fait tes preuves
 en défendant Jax au Volcan Cendreux,<0xFA>et je pense que tu es à la hauteur<0xFA>de la tâche.<0xFB>Tu peux t'y rendre en prenant
 l'autoroute au sud-est de la ville<0xFA>voisine, {COLOR}ÉBourg Cratère{COLOR}Ë.<0xFB>Il te faudra le Badge là-bas
-pour aller au {COLOR}ÉMont Foudre{COLOR}Ë,<0xFA>alors veille à en faire ta priorité<0xFA>absolue.",
+pour aller au {COLOR}ÉMont Foudroyant{COLOR}Ë,<0xFA>alors veille à en faire ta priorité<0xFA>absolue.",
 0x01F322E1,Badge is your utmost priority.,,30,2,32,pokemon,dialogue,,
 0x01F32300,"I'll head back to Frozen Heights,
 <0xFD><0x01>.<0xFB>I'll explain to your mother that
@@ -75155,7 +75168,7 @@ That sure sounds scary, <0xFD><0x02>.","<0x52>Guau""!<0xFB>Esto es lo más extra
 en mi vida.<0xFB>He visto salir a alguien de un portal
 mágico.<0xFB><0x51>De dónde vienes?<0xFB><0x51>Qué es eso""?<0xFB><0x51>Estabas intentando llegar al
 Mt. Trueno cuando de repente te<0xFA>secuestraron?<0xFB><0x52>Guau""! <0x52>Eso suena aterrador!",261,3,264,pokemon,dialogue,"Hoooo weeee !<0xFB>Si c'est pas la chose la plus folle
-que j'aie vue, un <0xFD><0x02> qui sort<0xFA>d'un portail magique !<0xFB>D'où tu viens, <0xFD><0x02> ?<0xFB>...<0xFB>Comment ?<0xFB>Tu essayais d'aller au Mont Foudre quand soudain tu t'es<0xFA>fait kidnapper ?<0xFB>Hoooo weeee !
+que j'aie vue, un <0xFD><0x02> qui sort<0xFA>d'un portail magique !<0xFB>D'où tu viens, <0xFD><0x02> ?<0xFB>...<0xFB>Comment ?<0xFB>Tu essayais d'aller au Mont Foudroyant quand soudain tu t'es<0xFA>fait kidnapper ?<0xFB>Hoooo weeee !
 Ça fait drôlement peur, <0xFD><0x02>.",
 0x01F3316D,"Well, if ya hadn't been kidnapped,
 ya'd be havin' a lot less trouble<0xFA>gettin' to Thundercap Mt.<0xFB>Ya see, part of the ceiling
@@ -75170,7 +75183,7 @@ derrumbó y bloqueó el camino""!<0xFB>Y a menos que tengas la MO para
 seguirías hablando conmigo.<0xFB>En ese caso, un amigo mío en <0xFC><0x01><0x06>Ciudad
 Ventisca<0xFC><0x01><0x08> puede ayudarte con<0xFA><0xFC><0x01><0x06>Golpe Roca<0xFC><0x01><0x08>.<0xFB>Entonces, toma esta MO para ayudarte
 a llegar hasta él.",483,2,485,pokemon,dialogue,"Eh bien, si tu n'avais pas été
-kidnappé, tu aurais bien moins de<0xFA>mal à atteindre le Mont Foudre.<0xFB>Tu vois, une partie du plafond s'est
+kidnappé, tu aurais bien moins de<0xFA>mal à atteindre le Mont Foudroyant.<0xFB>Tu vois, une partie du plafond s'est
 effondrée il y a peu et a bloqué la<0xFA>route !<0xFB>Et à moins d'avoir la CS {COLOR}ÉÉclate-
 Roc{COLOR}Ë, tu vas être un peu embêté pour<0xFA>passer.<0xFB>Mais...{PAUSE} je suppose que tu ne l'as,
 ou tu ne me parlerais plus.<0xFB>Dans ce cas, un ami à moi à la
@@ -75425,7 +75438,7 @@ eso?",487,2,489,pokemon,dialogue,"{PLAYER}!<0xFB>Euh...{PAUSE} j'espère que tu 
 sais...{PAUSE} vu ça...<0xFB>Enfin...{PAUSE} j'étais juste...{PAUSE} pris
 de court...<0xFB>Oublie ça.<0xFB>Écoute, j'ai une faveur à te
 demander.<0xFB>Je sais que mon papy t'a demandé
-d'aller au Mont Foudre, mais<0xFA>avant ça...<0xFB>Tu pourrais me donner un coup de
+d'aller au Mont Foudroyant, mais<0xFA>avant ça...<0xFB>Tu pourrais me donner un coup de
 main ?<0xFB>Tu vois, les Ombres ont mis une
 barrière invisible autour de la<0xFA>route où j'essayais de voler.<0xFB>J'ai besoin d'aide pour faire tomber
 ou trouver un autre accès à {COLOR}ÉRoute 9{COLOR}Ë.<0xFB>Tu pourrais me consacrer
@@ -75758,7 +75771,7 @@ Costera<0xFC><0x01><0x08> y ganar la Medalla de<0xFA>Gimnasio.<0xFB>La última v
 Gimnasio fue en <0xFC><0x01><0x06>Pueblo Tela<0xFC><0x01><0x08>.<0xFB>Una vez que hagas eso y hayas
 rescatado a Zapdos, nos veremos en<0xFA><0xFC><0x01><0x06>Ciudad Epidimia<0xFC><0x01><0x08>.",563,2,565,pokemon,dialogue,"Les {COLOR}ÉRuines du Néant{COLOR}Ë, a-t-il dit...<0xFB>{PLAYER}, je retourne prévenir Papy
 pour ce qui s'est passé.<0xFB>Pendant ce temps, tu devrais
-aller au {COLOR}ÉMont Foudre{COLOR}Ë.<0xFB>Tant que les Ombres n'ont pas
+aller au {COLOR}ÉMont Foudroyant{COLOR}Ë.<0xFB>Tant que les Ombres n'ont pas
 Électhor, on peut encore<0xFA>les arrêter !<0xFB>Oh oui...{PAUSE} comme tu as besoin de la
 capacité {COLOR}ÉForce{COLOR}Ë pour suivre le<0xFA>sentier de la montagne...<0xFB>Tu devrais sans doute retourner à
 {COLOR}ÉVille de Fallshore{COLOR}Ë et obtenir le<0xFA>Badge d'Arène là-bas.<0xFB>Je crois avoir vu le Champion
@@ -75832,7 +75845,7 @@ la ley a esos forajidos.<0xFB>Porque no sólo me veo bien, sino que
 también lo hago bien.<0xFB><0x52>Y lo hago mientras me veo bien!<0xFB>De todos modos, uno de ellos dijo
 que estaban vigilando la montaña<0xFA>para mantenerte lejos.<0xFB>Mencioné tu nombre y todo eso.<0xFB>Ahora, no sé exactamente en qué
 tipo de alboroto estás, pero te<0xFA>ayudaré a solucionarlo.<0xFB>Ten esto y ve a Epidimia rápido.",546,2,548,pokemon,dialogue,"Juste avant que tu arrives, j'ai
-entendu dire que des vauriens<0xFA>empêchaient les gens<0xFA>de {COLOR}ÉEpidimy{COLOR}Ë d'explorer le vieux<0xFA>{COLOR}ÉMont Foudre{COLOR}Ë.<0xFB>Je comptais remettre de l'ordre
+entendu dire que des vauriens<0xFA>empêchaient les gens<0xFA>de {COLOR}ÉEpidimy{COLOR}Ë d'explorer le vieux<0xFA>{COLOR}ÉMont Foudroyant{COLOR}Ë.<0xFB>Je comptais remettre de l'ordre
 chez ces hors-la-loi.<0xFB>Parce que j'ai la classe,
 je fais le bien, aussi.<0xFB>Et je le fais en restant classe !<0xFB>Bref, l'un d'eux a dit qu'ils
 gardaient la montagne pour<0xFA>t'empêcher d'entrer.<0xFB>Il a même mentionné ton nom.<0xFB>Je ne sais pas vraiment dans quel
@@ -75861,7 +75874,7 @@ vaurien.Bouge ou on te fera bouger.",
 0x01F362D1,"I refuse to abandon my post.<0xFB>I must prevent <0xFD><0x01> from entering
 Thundercap Mt. at all cost.","Me niego a abandonar mi puesto.<0xFB>Debo evitar que <0xFD><0x01> entre
 en Mt. Trueno a toda costa.",88,3,91,pokemon,dialogue,"Je refuse d'abandonner mon poste.<0xFB>Je dois empêcher <0xFD><0x01> d'entrer au
-Mont Foudre à tout prix.",
+Mont Foudroyant à tout prix.",
 0x01F362FF," from entering
 Thundercap Mt. at all cost.",,42,3,45,pokemon,description,,
 0x01F3632A,"<0xFD><0x02>, hit 'em with a <0xFD><0x03>!","<0x52><0xFD><0x02>, usa <0xFD><0x03>!",22,3,25,pokemon,dialogue,"<0xFD><0x02>, frappe-les avec un <0xFD><0x03> !",
@@ -80564,7 +80577,7 @@ qui nous ait réunis""<0xFB>Je suis content qu'on soit amis.<0xFB>Si rien d'autr
 pourquoi ne pas finir le reste<0xFA>du Défi des Arènes ?<0xFB>Le siège de Champion de Borrius
 est actuellement vacant""<0xFB>Et je ne vois personne de mieux
 que toi pour porter ce titre.<0xFB>La dernière Arène est à l'est de
-Bourg Magnolia, à <0xFC><0x01><0x06>Bourg Redwood<0xFC><0x01><0x08>.<0xFB>Bonne chance, <0xFD><0x01>.<0xFB>Je viendrai te féliciter quand
+Bourg Magnolia, à <0xFC><0x01><0x06>Bois-Rouge<0xFC><0x01><0x08>.<0xFB>Bonne chance, <0xFD><0x01>.<0xFB>Je viendrai te féliciter quand
 tu seras devenu le Champion !",
 0x01F4AF6A,"ll come and congratulate you
 once you become the Champ!",,55,1,56,pokemon,dialogue,,
@@ -81072,10 +81085,10 @@ into your nightmare""<0xFB>If anyone were to fall into a
 nightmare, the Fullmoon Island<0xFA>is close by""<0xFB>""
 """,327,2,329,pokemon,dialogue,"<0xFC><0x01><0x02>Darkrai""
 Ton pouvoir est immense.<0xFB>Sans le vouloir, tu plonges les
-humains et les Pokémon autour de<0xFA>toi dans d'affreux cauchemars""<0xFB>C'est pour ça que tu es venu ici""<0xFB>Newmoon Island""
+humains et les Pokémon autour de<0xFA>toi dans d'affreux cauchemars""<0xFB>C'est pour ça que tu es venu ici""<0xFB>Île du Croissant""
 Il n'y a personne d'autre que toi""<0xFB>Personne ne peut être entraîné
 dans ton cauchemar""<0xFB>Et si quelqu'un sombrait dans un
-cauchemar, Fullmoon Island est<0xFA>toute proche""<0xFB>""
+cauchemar, Île de la Lune est<0xFA>toute proche""<0xFB>""
 """,
 0x01F4DA6C,None,Nada,4,2,6,pokemon,other,Aucun,
 0x01F4DA71,Quick HMs,MO Rápida,9,2,11,pokemon,location,CS rapides,
@@ -81950,7 +81963,7 @@ sentado y dejar que mis propias<0xFA>habilidades se estanquen, <0x51>verdad?<0xF
 sea la oportunidad, <0x52>me gustaría<0xFA>derrotarte!",632,2,634,pokemon,dialogue,"Attends un instant, <0xFD><0x01> !<0xFB>Es-tu surpris de me trouver
 ici ?<0xFB>Eh bien, j'ai cru entendre un cri
 familier m'appeler""<0xFB>C'est à ce moment que j'ai
-rencontré Électhor.<0xFB>Non, pas celui du Mont Foudre""<0xFC><0x08><0x18>
+rencontré Électhor.<0xFB>Non, pas celui du Mont Foudroyant""<0xFC><0x08><0x18>
 celui qu'Aklove a utilisé pour<0xFA>la libération aux Ruines du Néant.<0xFB>J'ignore encore pourquoi il est
 venu, pourquoi il m'a choisi""<0xFB>Mais c'était un signe, je devais
 te retrouver et t'affronter<0xFA>une fois de plus !<0xFB>Pour être honnête, te vaincre est
@@ -83164,7 +83177,7 @@ Epidimy Town!",,40,3,43,pokemon,dialogue,"Obtiens Force auprès d'un homme à
 Ville d'Epidimy !",
 0x01F5655B,"Make a beeline for Thundercap Mt.
 and save Zapdos!","<0x52>Dirígete a Mt. Trueno y salva
-a Zapdos!",50,3,53,pokemon,dialogue,"File au Mont Foudre et sauve
+a Zapdos!",50,3,53,pokemon,dialogue,"File au Mont Foudroyant et sauve
 Électhor !",
 0x01F5658E,"Meet up with Jax in Epidimy Town
 to discuss your next move!","<0x52>Reúnete con Jax en Ciudad Epidimia
@@ -89855,7 +89868,7 @@ aquí!",45,1,46,pokemon,dialogue,Ville d'Epidimy La<0xFB>ville du bonheur et de 
 0x01F713F3,The town of happiness and bliss.,,32,1,33,pokemon,description,,
 0x01F71414,"Thundercap Mt.
 Passage","Mt. Trueno
-à Entrada",22,3,25,pokemon,location,"Mont Foudre
+à Entrada",22,3,25,pokemon,location,"Mont Foudroyant
 Passage",
 0x01F7142B,"It's a statue of the Legendary
 Electric-type Pokémon, Zapdos.<0xFB>It says here that Zapdos was once
@@ -89863,10 +89876,10 @@ used to reinforce a seal on a great<0xFA>darkness, but now it resides in<0xFA>Th
 tipo Eléctrico, Zapdos!<0xFB>Alguna vez fue usado para reforzar
 un sello en una gran oscuridad,<0xFA>pero ahora reside en Mt. Trueno.",178,1,179,pokemon,description,"C'est une statue du Pokémon
 Légendaire Électrik Électhor. Il est<0xFB>écrit ici qu'Électhor servait
-autrefois à renforcer un sceau sur<0xFA>une grande obscurité, mais qu'il<0xFA>réside désormais au Mont Foudre.",
+autrefois à renforcer un sceau sur<0xFA>une grande obscurité, mais qu'il<0xFA>réside désormais au Mont Foudroyant.",
 0x01F714CF,Thundercap Mt.,,14,1,15,pokemon,location,,
 0x01F714DE,"Thundercap Mt.<0xFB><0x7B> Epidimy Town
-à Antisis City",,44,2,46,pokemon,dialogue,"Mont Foudre<0xFB><0x7B> Ville d'Epidimy
+à Antisis City",,44,2,46,pokemon,dialogue,"Mont Foudroyant<0xFB><0x7B> Ville d'Epidimy
 <0x7C> Ville d'Antisis",
 0x01F714FD, Antisis City,,13,2,15,pokemon,other,,
 0x01F7150B,"Tarmigan Town<0xFB>The town located on the
@@ -89901,7 +89914,7 @@ déverrouillée...",
 <0xB1>West Thundercap Steps<0xB2><0xFB><0x79> Dehara City
 <0x7A> Tarmigan Town<0xFA><0x7B> Route 14","Ruta 12: <0x52>Paso Trueno!<0xFB><0x79> Ciudad Dehara
 <0x7A> Ciudad Tarmi<0xFA><0x7B> Ruta 14",73,2,75,pokemon,description,"Route 12 "" Escaliers
-Ouest<0xFB>Mont Foudre "" <0x79> Ville de
+Ouest<0xFB>Mont Foudroyant "" <0x79> Ville de
 Dehara <0x7A> Bourg Tarmigan<0xFA><0x7B> Route 14",
 0x01F716C5, Route 14,,9,2,11,pokemon,other,,
 0x01F716CF,Dehara City<0xFB>An oasis at the edge of the desert.,"Ciudad Dehara: <0x52>Un oasis al borde
@@ -90059,7 +90072,7 @@ Antisis<0xFA>sa gloire d'antan.",
 0x01F71F58, Antisis City,,13,1,14,pokemon,other,,
 0x01F71F66,"Thundercap Mt.
 East Entrance<0xFB>à Antisis City","Mt. Trueno
-<0x7B> Entrada<0xFB>à Ciudad Antisis",43,2,45,pokemon,description,"Mont Foudre
+<0x7B> Entrada<0xFB>à Ciudad Antisis",43,2,45,pokemon,description,"Mont Foudroyant
 Entrée Est<0xFB><0x7C> Ville d'Antisis",
 0x01F71F84, Antisis City,,13,2,15,pokemon,other,,
 0x01F71F92,"Route 17
@@ -90138,15 +90151,15 @@ sea breeze.",,42,2,44,pokemon,description,,
 0x01F723F8,"Magnolia Fields<0xFB><0x7B> Magnolia Town
 à Redwood Village","Campos Magnolia<0xFB><0x7B> Pueblo Magnolia
 à Villa Secuoya",49,2,51,pokemon,description,"Champs Magnolia<0xFB><0x7B> Bourg
-Magnolia <0x7C> Village Redwood",
+Magnolia <0x7C> Bois-Rouge",
 0x01F72419, Redwood Village,,16,2,18,pokemon,other,,
 0x01F7242A,"Redwood Village<0xFB>A quiet forest town with a
 mysterious air""","Villa Secuoya: <0x52>Una villa forestal
-con un aire misterioso!",58,2,60,pokemon,dialogue,"Village Redwood<0xFB>Village forestier calme à
+con un aire misterioso!",58,2,60,pokemon,dialogue,"Bois-Rouge<0xFB>Village forestier calme à
 l'air mystérieux...",
 0x01F72465,"Redwood Village Pokémon Gym
 Leader: Benjamin<0xFA>A Mature Child, or Immature Adult","Redwood Village Pokémon Gym
-Leader: Benjamin<0xFA>A Mature Child, or Immature Adult",78,2,80,pokemon,description,"Arène Pokémon du Village Redwood
+Leader: Benjamin<0xFA>A Mature Child, or Immature Adult",78,2,80,pokemon,description,"Arène Pokémon de Bois-Rouge
 Champion : Benjamin<0xFA>Enfant mature ou adulte immature",
 0x01F724B4,"Route 18
 <0xB1>Victory Ascent<0xB2><0xFB><0x7B>Gurun Town
@@ -90165,8 +90178,8 @@ Pokémon League.",59,2,61,pokemon,description,"Victory Road<0xFB>L'ultime épreu
 Pokémon.",
 0x01F72569,y,y,1,2,3,ascii,other,<0x79> Ligue Pokémon,
 0x01F7256F,mon League,,10,2,12,pokemon,other,,
-0x01F7257A,Redwood Forest<0xFB><0x7A>Cube Corp.,,26,2,28,pokemon,location,Forêt Redwood<0xFB><0x7A> Cube Corp.,
-0x01F72595,Redwood Forest<0xFB><0x79>Redwood Village,Bosque Secuoya<0xFB><0x79> Villa Secuoya,31,2,33,pokemon,location,Forêt Redwood<0xFB><0x79> Village Redwood,
+0x01F7257A,Redwood Forest<0xFB><0x7A>Cube Corp.,,26,2,28,pokemon,location,Forêt de Bois-Rouge<0xFB><0x7A> Cube Corp.,
+0x01F72595,Redwood Forest<0xFB><0x79>Redwood Village,Bosque Secuoya<0xFB><0x79> Villa Secuoya,31,2,33,pokemon,location,Forêt de Bois-Rouge<0xFB><0x79> Bois-Rouge,
 0x01F725A5,Redwood Village,,15,2,17,pokemon,location,,
 0x01F725B5,Cube Corp.<0xFB>Home of the Super Cube V3!,"Corporación Cubo: <0x52>Hogar del Cubo
 V3!",37,2,39,pokemon,dialogue,Cube Corp. Domicile<0xFB>du Super Cube V3 !,
@@ -92658,9 +92671,9 @@ to half health!",,24,2,26,pokemon,dialogue,,
 area that only evolve via a<0xFA><0xFC><0x01><0x06>Water Stone<0xFC><0x01><0x08>.","Algunos Pokémon en esta área solo
 evolucionan con una <0xFC><0x01><0x06>Piedra Agua<0xFC><0x01><0x08>.",78,2,80,pokemon,description,"Il y a quelques Pokémon ici qui
 n'évoluent que via une<0xFA>{COLOR}ÉPierre Eau{COLOR}Ë.",
-0x01F7E03B, Thundercap Mt.,,15,1,16,pokemon,other,Mont Foudre,
-0x01F7E04B,Thundercap Mt. A,Thundercap Mt. A,16,1,17,pokemon,location,Mont Foudre A,
-0x01F7E05C,Thundercap Mt. B,Thundercap Mt. B,16,2,18,pokemon,location,Mont Foudre B,
+0x01F7E03B, Thundercap Mt.,,15,1,16,pokemon,other,Mont Foudroyant,
+0x01F7E04B,Thundercap Mt. A,Thundercap Mt. A,16,1,17,pokemon,location,Mont Foudroyant A,
+0x01F7E05C,Thundercap Mt. B,Thundercap Mt. B,16,2,18,pokemon,location,Mont Foudroyant B,
 0x01F7E06D,"A mountain known for its frequent
 lightning storms.
 Legends say a powerful Pokémon
@@ -92701,7 +92714,7 @@ quelque chose demain aussi.",
 Thundercap Mt. 4F! Team up with
 him, and guide him to the exit.","<0x52>Un niño pequeño se ha perdido
 en Mt. Trueno! Forma equipo con
-él y guíalo hasta la salida.",96,2,98,pokemon,dialogue,"Un petit garçon s'est perdu au Mont Foudre 4F ! Fais équipe avec lui
+él y guíalo hasta la salida.",96,2,98,pokemon,dialogue,"Un petit garçon s'est perdu au Mont Foudroyant 4F ! Fais équipe avec lui
 et guide-le vers la sortie.",
 0x01F7E24D,"I'm Milo""<0xFB>I was catching Pokémon, and then
 I got lost""<0xFB>I'm so scared""<0xFB>Please!
@@ -93213,7 +93226,7 @@ dois être !",
 to be!",,36,2,38,pokemon,dialogue,,
 0x01F7FFA1,"Look!
 A Trainer lost in Thundercap Mt!",<0x52>Mira! <0x52>Alguien está perdido!,38,2,40,pokemon,dialogue,"Regarde !
-Un Dresseur perdu au Mont Foudre !",
+Un Dresseur perdu au Mont Foudroyant !",
 0x01F7FFC8,I strayed from the battle plan!,<0x52>Me desconcentré totalmente!,31,3,34,pokemon,dialogue,Je me suis écarté du plan !,
 0x01F7FFE8,"Me? No, I'm not lost.
 I live here!","<0x52>No estoy perdido!
@@ -93279,7 +93292,7 @@ C'est un début, non ?",
 Thundercap Mt.<0xFB>I didn't think I would get lost
 in a place like this""","Sólo quería hacer un picnic en
 Mt. Trueno.",102,2,104,pokemon,dialogue,"Je voulais juste pique-niquer au
-Mont Foudre.<0xFB>Je ne pensais pas me perdre
+Mont Foudroyant.<0xFB>Je ne pensais pas me perdre
 dans un endroit pareil...",
 0x01F80387,"What every good picnic needs is a
 cute setting, good food, and a<0xFA>fun battle!","<0x52>Lo que todo buen picnic necesita
@@ -98708,7 +98721,7 @@ experience!<0xFB>So many different ways to
 experience the heat of battle!","<0x52>Hola!<0xFB><0x51>Estás aquí por <0xFC><0x01><0x06>Torre Batalla<0xFC><0x01><0x04>?
 <0x52>Es la principal expriencia!<0xFB><0x52>Tantas formas diferentes de
 experimentar el Frente Batalla!",138,1,139,pokemon,dialogue,"Salut !
-Tu viens pour la {COLOR}ÉBattle Tower{COLOR}Ç ?<0xFB>C'est l'expérience Frontier
+Tu viens pour la {COLOR}ÉTour de Combat{COLOR}Ç ?<0xFB>C'est l'expérience Frontier
 ultime !<0xFB>Tellement de façons de ressentir la
 chaleur du combat !",
 0x01F98DAB,"So many different ways to
@@ -103670,7 +103683,7 @@ Find it in Thundercap Mt. 4F and
 bring it back to the nerd.","A nerd's Electivire has gone rogue!
 Find it in Thundercap Mt. 4F and
 bring it back to the nerd.",95,2,97,pokemon,dialogue,"L'Élekable d'un intello est devenu rebelle !
-Trouvez-le au Mont Foudre 4E et
+Trouvez-le au Mont Foudroyant 4E et
 ramenez-le à l'intello.",
 0x01FACC4F,"Return to Epidimy Town to
 receive your reward!","Return to Epidimy Town to
