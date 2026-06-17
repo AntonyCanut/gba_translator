@@ -52,8 +52,12 @@ FR_NAME = {
 
 _FILL = 15      # white letter fill (palette index)
 _SHADOW = 14    # drop-shadow (palette index)
-_TEXT_TOP = 10  # first pixel row of the name within the 16px-tall cell
-_TEXT_ROWS = range(10, 16)
+# Each icon is 4x3 tiles (32x24 px). The coloured pill spans rows 8-19; the
+# English type name is 8 px tall and occupies rows 10-17 — i.e. it spills into
+# the THIRD tile row. The whole 10-17 band MUST be cleared, or the bottom two
+# rows of the old English word survive below the (shorter) French name.
+_TEXT_TOP = 10  # first pixel row of the name within the cell
+_TEXT_ROWS = range(10, 18)
 
 # Compact 5-row uppercase bitmap font (only the glyphs the names above need).
 _FONT = {
@@ -88,8 +92,8 @@ def _name_width(name: str) -> int:
 
 
 def _read_icon(rom: bytearray, base: int, tileoff: int) -> list[list[int]]:
-    g = [[0] * 32 for _ in range(16)]
-    for tr in range(2):
+    g = [[0] * 32 for _ in range(24)]
+    for tr in range(3):
         for tc in range(4):
             off = base + (tileoff + tr * 16 + tc) * 32
             for r in range(8):
@@ -101,7 +105,7 @@ def _read_icon(rom: bytearray, base: int, tileoff: int) -> list[list[int]]:
 
 
 def _write_icon(rom: bytearray, base: int, tileoff: int, g: list[list[int]]) -> None:
-    for tr in range(2):
+    for tr in range(3):
         for tc in range(4):
             off = base + (tileoff + tr * 16 + tc) * 32
             for r in range(8):
@@ -124,7 +128,7 @@ def _stamp_name(g: list[list[int]], name: str, pill: int) -> None:
             for gx in range(w):
                 if rows[gy][gx] == "1":
                     px, py = x + gx, _TEXT_TOP + gy
-                    if 0 <= px < 32 and py < 16:
+                    if 0 <= px < 32 and py < 24:
                         g[py][px] = _FILL
         x += w + 1
     # drop shadow: pill pixel just below/right of a fill becomes the shadow colour
@@ -142,7 +146,7 @@ def apply_patches(rom_path: Path, dry_run: bool = False) -> int:
     rom = bytearray(rom_path.read_bytes())
     patched = 0
     for base in BASES:
-        if base + 0xB0 * 32 > len(rom):
+        if base + 0xD0 * 32 > len(rom):
             print(f"  SKIP base 0x{base:07X}: beyond ROM end", file=sys.stderr)
             continue
         for icon, fr in FR_NAME.items():
