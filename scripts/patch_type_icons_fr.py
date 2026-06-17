@@ -41,11 +41,11 @@ TILEOFF = {
 }
 
 # French type names (uppercase, no accents — the icon font has none).
-# « METAL » per the project owner's request (Steel); « TENEBR » abbreviates
+# « ACIER » per the project owner's request (Steel); « TENEBR » abbreviates
 # Ténèbres to fit the 32-px pill.
 FR_NAME = {
     "Fight": "COMBAT", "Flying": "VOL", "Ground": "SOL", "Rock": "ROCHE",
-    "Bug": "INSECT", "Ghost": "SPECTR", "Steel": "METAL", "Fire": "FEU",
+    "Bug": "INSECT", "Ghost": "SPECTR", "Steel": "ACIER", "Fire": "FEU",
     "Water": "EAU", "Grass": "PLANTE", "Psychic": "PSY", "Ice": "GLACE",
     "Dark": "TENEBR", "Fairy": "FEE",
 }
