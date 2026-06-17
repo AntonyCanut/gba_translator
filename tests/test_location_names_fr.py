@@ -59,14 +59,14 @@ WORLD_MAP_LABELS = [
     (0x7214E8, "Île Scintillante",  "Glimmer Isle"),
     (0x721968, "Ville d'Epidimy",   "Epidimy Town"),
     (0xB50214, "Égouts d'Antisis",  "Antisis Sewers"),
-    (0xB5026C, "Mont Foudre",       "Thundercap Mt."),
+    (0xB5026C, "Mont Foudroyant",   "Thundercap Mt."),
     (0xB503CC, "Volcan Cendreux",   "Cinder Volcano"),
     (0xB514E4, "Dehara",            "Dehara City"),
     (0xB52274, "Pension Pokémon",   "Pokemon Day Care"),
     (0xB522A4, "Bourg Polder",      "Polder Town"),
     (0xB531D8, "Île du Croissant",  "Newmoon Island"),
     (0xB535C8, "Île de la Lune",    "Fullmoon Island"),
-    (0xB537AC, "Village Redwood",   "Redwood Village"),
+    (0xB537AC, "Bois-Rouge",         "Redwood Village"),
     (0x720E74, "Fallshore",         "Fallshore City"),
 ]
 
@@ -112,9 +112,9 @@ class TestLocationNamesFR(unittest.TestCase):
         """0xB50214: 'Égouts d'Antisis' (was 'Antisis Sewers')."""
         self._assert_label(0xB50214, "Égouts d'Antisis", "Antisis Sewers")
 
-    def test_mont_foudre_worldmap(self):
-        """0xB5026C: 'Mont Foudre' (was 'Thundercap Mt.')."""
-        self._assert_label(0xB5026C, "Mont Foudre", "Thundercap Mt.")
+    def test_mont_foudroyant_worldmap(self):
+        """0xB5026C: 'Mont Foudroyant' (was 'Thundercap Mt.', formerly 'Mont Foudre')."""
+        self._assert_label(0xB5026C, "Mont Foudroyant", "Thundercap Mt.")
 
     def test_volcan_cendreux(self):
         """0xB503CC: 'Volcan Cendreux' (was 'Cinder Volcano')."""
@@ -140,9 +140,9 @@ class TestLocationNamesFR(unittest.TestCase):
         """0xB535C8: 'Île de la Lune' (was 'Fullmoon Island')."""
         self._assert_label(0xB535C8, "Île de la Lune", "Fullmoon Island")
 
-    def test_village_redwood(self):
-        """0xB537AC: 'Village Redwood' (was 'Redwood Village')."""
-        self._assert_label(0xB537AC, "Village Redwood", "Redwood Village")
+    def test_bois_rouge(self):
+        """0xB537AC: 'Bois-Rouge' (was 'Redwood Village', formerly 'Village Redwood')."""
+        self._assert_label(0xB537AC, "Bois-Rouge", "Redwood Village")
 
     def test_fallshore(self):
         """0x720E74: 'Fallshore' (was 'Ville de Fallshore' / 'Fallshore City')."""
@@ -150,8 +150,8 @@ class TestLocationNamesFR(unittest.TestCase):
 
     # ── Mont Foudre: pointer-based NPC dialogue ───────────────────────────────
 
-    def test_mont_foudre_npc_dialogue_pointer(self):
-        """Pointer at 0x7C252E must lead to French NPC dialogue (contains 'Foudre').
+    def test_mont_foudroyant_npc_dialogue_pointer(self):
+        """Pointer at 0x7C252E must lead to French NPC dialogue (contains 'Foudroyant').
 
         The pipeline relocates the translated string to free space and repoints
         0x7C252E.  The original English bytes at 0x7C2540 remain but are
@@ -161,9 +161,9 @@ class TestLocationNamesFR(unittest.TestCase):
         text = _follow_ptr(self.rom, 0x7C252E)
         self.assertTrue(text, "Pointer at 0x7C252E is invalid or points outside ROM")
         self.assertIn(
-            "Foudre",
+            "Foudroyant",
             text,
-            f"Expected 'Foudre' via ptr@0x7C252E, got: {repr(text[:60])}",
+            f"Expected 'Foudroyant' via ptr@0x7C252E, got: {repr(text[:60])}",
         )
         self.assertNotIn(
             "Thundercap",
