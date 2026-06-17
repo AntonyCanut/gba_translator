@@ -27,6 +27,7 @@ REPAIR_LZ77_SCRIPT := scripts/repair_stable_lz77_blocks.py
 REPAIR_LOCALIZED_LZ77_SCRIPT := scripts/repair_localized_lz77_blocks.py
 REPOINT_STALE_SCRIPT := scripts/repoint_stale_text_pointers.py
 PATCH_FIXED_NAMES_SCRIPT := scripts/patch_fixed_table_names.py
+PATCH_ITEM_NAMES_SCRIPT := scripts/patch_item_names_fr.py
 PATCH_TIME_FORMAT_SCRIPT := scripts/patch_time_format_fr.py
 PATCH_BATTLE_PREFIX_SCRIPT := scripts/patch_battle_prefix_fr.py
 PATCH_VERSION_SCRIPT := scripts/patch_version_fr.py
@@ -36,6 +37,7 @@ PATCH_MOVE_DESC_FR_SCRIPT := scripts/patch_move_descriptions_fr.py
 PATCH_DUP_MOVE_DESC_FR_SCRIPT := scripts/patch_dup_move_descriptions_fr.py
 PATCH_SUMMARY_LABELS_SCRIPT := scripts/patch_summary_labels_fr.py
 PATCH_CFRU_TYPE_NAMES_SCRIPT := scripts/patch_cfru_type_names_fr.py
+PATCH_STATUS_ABBREVS_SCRIPT := scripts/patch_status_abbrevs_fr.py
 
 OUTPUT_DIR := output
 EXTRACT_DIR := $(OUTPUT_DIR)/extracted/extracted_texts
@@ -125,6 +127,7 @@ build-fr: $(ENGLISH_EXTRACT) $(SPANISH_EXTRACT) $(BUILD_SCRIPT)
 		--output $(FR_BUILD)
 	@$(PYTHON) $(PATCH_FONT_FR_SCRIPT) --rom $(FR_BUILD)
 	@$(PYTHON) $(PATCH_FIXED_NAMES_SCRIPT) --rom $(FR_BUILD)
+	@$(PYTHON) $(PATCH_ITEM_NAMES_SCRIPT) --rom $(FR_BUILD)
 	@$(PYTHON) $(PATCH_TIME_FORMAT_SCRIPT) --rom $(FR_BUILD)
 	@$(PYTHON) $(PATCH_BATTLE_PREFIX_SCRIPT) --rom $(FR_BUILD)
 	@$(PYTHON) $(INLINE_FR_SCRIPT) \
@@ -160,6 +163,7 @@ build-fr: $(ENGLISH_EXTRACT) $(SPANISH_EXTRACT) $(BUILD_SCRIPT)
 		--rom $(FR_BUILD) \
 		--combined combined_fr.txt
 	@$(PYTHON) $(PATCH_CFRU_TYPE_NAMES_SCRIPT) --rom $(FR_BUILD)
+	@$(PYTHON) $(PATCH_STATUS_ABBREVS_SCRIPT) --rom $(FR_BUILD)
 	@echo "✓ FR ROM built — vérification des traductions de lieux..."
 	@$(PYTHON) -m pytest tests/test_location_names_fr.py -q --tb=short
 
