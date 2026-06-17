@@ -1,9 +1,9 @@
 {
-  "conversion_date": "2026-06-17T23:27:30.193613",
+  "conversion_date": "2026-06-17T23:32:37.809829",
   "source_csv": "2026-01-15_trilingual_translation.csv",
-  "total_translations": 20769,
+  "total_translations": 20770,
   "total_errors": 0,
-  "total_warnings": 16782,
+  "total_warnings": 16783,
   "translations": [
     {
       "offset": 165760,
@@ -34664,7 +34664,7 @@
     {
       "offset": 4180831,
       "original_text": "<0xFD><0x0F>'s <0xFD> \n<0xFD><0x01>",
-      "translation": "{FD0F} de {FD00}\n{FD01}",
+      "translation": "{FD00} de {FD0F}\n{FD01}",
       "length": 23,
       "original_length": 10,
       "padding_used": 13,
@@ -34676,7 +34676,7 @@
     {
       "offset": 4180842,
       "original_text": "<0xFD><0x10>'s <0xFD> \n<0xFD><0x01>",
-      "translation": "{FD10} de {FD00}\n{FD01}",
+      "translation": "{FD00} de {FD10}\n{FD01}",
       "length": 23,
       "original_length": 10,
       "padding_used": 13,
@@ -34700,7 +34700,7 @@
     {
       "offset": 4180879,
       "original_text": "<0xFD><0x0F>'s <0xFD> \n<0xFD><0x01>",
-      "translation": "{FD0F} de {FD00}\n{FD01}",
+      "translation": "{FD00} de {FD0F}\n{FD01}",
       "length": 23,
       "original_length": 10,
       "padding_used": 13,
@@ -34712,7 +34712,7 @@
     {
       "offset": 4180890,
       "original_text": "<0xFD><0x10>'s <0xFD> \n<0xFD><0x01>",
-      "translation": "{FD10} de {FD00}\n{FD01}",
+      "translation": "{FD00} de {FD10}\n{FD01}",
       "length": 23,
       "original_length": 10,
       "padding_used": 13,
@@ -115886,6 +115886,18 @@
       "padding_used": 14,
       "encoding": "pokemon",
       "category": "description",
+      "notes": "",
+      "too_long": true
+    },
+    {
+      "offset": 10797836,
+      "original_text": "You are challenged by\n<0xFD>ê <0xFD>ë and<0xFA><0xFD>+ <0xFD><0x2F>!<0xFB>",
+      "translation": "Tu es défié par\n{FD1C} {FD1D} et<0xFA>{FD2E} {FD2F}!<0xFB>",
+      "length": 48,
+      "original_length": 39,
+      "padding_used": 9,
+      "encoding": "pokemon",
+      "category": "dialogue",
       "notes": "",
       "too_long": true
     },
