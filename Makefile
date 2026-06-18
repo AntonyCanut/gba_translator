@@ -62,7 +62,7 @@ SPANISH_BUILD := $(ROM_OUT_DIR)/GenedRom-es.gba
 .DEFAULT_GOAL := pipeline
 
 .PHONY: pipeline verify-roms extract extract-en extract-es diff build-es build-fr validate-es trilingual-csv \
-	test test-python-fast test-python test-rom test-vitest test-playwright test-all \
+	test test-python-fast test-python test-rom check-translations test-vitest test-playwright test-all \
 	sync-charmap sync-charmap-check install install-playwright lint tickets report \
 	clean help
 
@@ -201,6 +201,10 @@ test-python:
 
 test-rom:
 	@$(PYTHON) -m pytest tests/ -m rom -v
+
+# Garde anti-régression des traductions FR (labels carte) — voir docs/20_TRANSLATION_PRESERVATION.md
+check-translations:
+	@$(PYTHON) scripts/check_translation_integrity.py
 
 test-vitest:
 	@cd emulator-web && npx vitest run
