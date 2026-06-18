@@ -2599,7 +2599,7 @@
 0x3FCBC5: Stats de {B_DEF_NAME_WITH_PREFIX}\nau-dessous du min !
 0x3FCBE4: Coup critique !
 0x3FCBF4: K.O. en un coup !
-0x3FCC07: <0xFC><0x08><0x20>1, <0xFC><0x08><0x0F>2, et<0xFC><0x08><0x0F>" <0xFC><0x08><0x0F>" <0xFC><0x08><0x0F>" <0xFC><0x08><0x0F><0xFC><0x10><0x31><0x00>Pouf !\p
+0x3FCC07: <0xFC><0x08><0x20>1, <0xFC><0x08><0x0F>2, et<0xFC><0x08><0x0F> <0xFC><0x08><0x0F> <0xFC><0x08><0x0F> <0xFC><0x08><0x0F><0xFC><0x10><0x31><0x00>Pouf !\p
 0x3FCC33: Et…\l
 0x3FCC39: Les CS ne peuvent pas être\noubliées maintenant.\p
 0x3FCC5B: Ce n'est pas très efficace…
@@ -23079,7 +23079,7 @@
 0x1A52DD: <0xFD><0x01> a trouvé\n<0xFD><0x02> <0xFD><0x03>(s) !
 0x3FB400: <0xFD><0x0F>\nest K.O. !\p
 0x41658C: <0xFD><0x01> utilise le\n<0xFD><0x03>.<0xFC><0x09>
-0x416EC6: 1, <0xFC><0x08><0x0F>2, et<0xFC><0x08><0x0F>" <0xFC><0x08><0x0F>" <0xFC><0x08><0x0F>" <0xFC><0x08><0x0F><0xFC><0x10><0x31><0x00>Pouf !\p<0xFD><0x02> oublie comment\nutiliser <0xFD><0x03>.\pEt…<0xFC><0x09>
+0x416EC6: 1, <0xFC><0x08><0x0F>2, et<0xFC><0x08><0x0F> <0xFC><0x08><0x0F> <0xFC><0x08><0x0F> <0xFC><0x08><0x0F><0xFC><0x10><0x31><0x00>Pouf !\p<0xFD><0x02> oublie comment\nutiliser <0xFD><0x03>.\pEt…<0xFC><0x09>
 0x4170BC: Ce Pokémon ne peut être\néchangé maintenant.
 0x4170E0: Un Oeuf ne peut être échangé.
 0x417130: L'autre Dresseur ne peut pas\naccepter ce Pokémon maintenant.
@@ -23095,15 +23095,15 @@
 0x41CF14: Sauvegarde des résultats\ndans le fichier.\nPatiente un instant.
 0x41DC48: \nNational Federation\n<0xFC><0x13><0x13>of the Blind\nPatricia A. Maurer\nJapan Braille Library\nEuropean Blind Union\n
 0x41DDE4: \n\nThe Royal New Zealand\nFoundation of the Blind\nGreg Moran\n\n
-0x41E4C0: <0xFD><0x02> oublie <0xFD><0x04>.\pEt"\p<0xFD><0x02>\napprend <0xFD><0x03>.
+0x41E4C0: <0xFD><0x02> oublie <0xFD><0x04>.\pEt\p<0xFD><0x02>\napprend <0xFD><0x03>.
 0x4571E0: La recherche par COMMUNICATION\nSANS FIL a été annulée.
 0x4574C4: <0xFD><0x03> t'a contacté.\nVeux-tu partager <0xFD><0x02> ?
 0x4574EC: <0xFD><0x03> t'a contacté.\nL'ajouter aux membres ?
 0x4575A4: Impossible de communiquer avec\nun Dresseur trop éloigné.\p
 0x4576C4: <0xFD><0x02> a accepté ton inscription\nen tant que membre.
 0x457734: Tu n'es plus membre.\p
-0x4577BC: Le lien par COMMUNICATION\nSANS FIL a été perdu"
-0x4577F8: Le lien avec ton ami a été\nperdu"
+0x4577BC: Le lien par COMMUNICATION\nSANS FIL a été perdu
+0x4577F8: Le lien avec ton ami a été\nperdu
 0x457860: Veux-tu le MODE\n<0xFD><0x03> ?
 0x45787C: Veux-tu le MODE\n<0xFD><0x03> ?
 0x457A98: <0xFD><0x02> : Tiens, on se retrouve !\nQue veux-tu faire cette fois ?
@@ -23126,12 +23126,12 @@
 0x458598: Oh, désolé.\nJ'ai trop à faire en ce moment.\lDiscutons une autre fois.\p
 0x458618: Cette capacité, hein ?\nBonne stratégie !\p
 0x458644: Bien joué !\nJ'en reste bouche bée !\p
-0x4586A0: Ce Pokémon"\nIl a été très bien élevé !\p
+0x4586A0: Ce Pokémon\nIl a été très bien élevé !\p
 0x4586D0: C'est ça !\nC'est la bonne capacité !\p
 0x458724: Tu changes de Pokémon\nau moment parfait !\p
 0x45879C: Arrête tes blagues !\nJ'ai mal à force de rire !\p
 0x4587D8: Oh ?\nC'est donc arrivé comme ça.\p
-0x4587FC: Hmhm" Quoi ?\nC'est donc ça que tu dis ?\p
+0x4587FC: Hmhm Quoi ?\nC'est donc ça que tu dis ?\p
 0x458918: J'espère mieux te connaître !\p
 0x45897C: Ravi de te connaître.\nReviens quand tu veux !\p
 0x4589E4: Grâce à un échange, j'ai enfin\nce Pokémon tant désiré.\p
@@ -23156,7 +23156,7 @@
 0x459544: <0xF7><0x01> : Ravi de t'avoir vu !<0xFC><0x08><0x3C>
 0x459564: <0xF7><0x01> : Enchanté !<0xFC><0x08><0x3C>
 0x754900: C'est toi !\nGrand <0xFD><0x02> qui m'a sauvé !\pTu es le meilleur !
-0x7A94E4: Ivory : <0xFC><0x01><0x04>Zeph ?\pOui, c'est Ivory.\pJ'ai installé une barrière autour\nde la Route 9, côté Ville Blizzard.\p"\pBien reçu, monsieur.\pJe redescends tout de suite.
+0x7A94E4: Ivory : <0xFC><0x01><0x04>Zeph ?\pOui, c'est Ivory.\pJ'ai installé une barrière autour\nde la Route 9, côté Ville Blizzard.\p\pBien reçu, monsieur.\pJe redescends tout de suite.
 0x7A9EA3: <0xFC><0x01><0x04>Bizarrement, l'entrée de la\nAutoroute KBT a entièrement gelé.\pEn tant que Champion d'Arène de\ncette ville, mon devoir est d'agir.\pRegarde : avec la capacité\nÉclate-Roc, je brise cette glace !
 0x7E8485: A remis <0xFC><0x01><0x06><0xFD><0x04> <0xFC><0x01><0x08>et\nreçu <0xFC><0x01><0x06>¥<0xFD><0x03><0xFC><0x01><0x08> !
 0x7EA772: Si tu me bats, je te dirai à\nquoi sert cette ampoule !
@@ -23279,7 +23279,7 @@
 0xA4CDC8: MAUVAIS TYPE DE SAUVEGARDE !\nPasse en Flash 128k.\pSi tu utilises VBA, pense à passer\nau bien meilleur <0xFC><0x01><0x06>mGBA<0xFC><0x01><0x02>.\pSinon, suis ces instructions pour\ncorriger le type de sauvegarde.\p<0xFC><0x01><0x04>Instructions VBA<0xFC><0x01><0x02> :\pD'abord, clique sur <0xFC><0x01><0x06>Options<0xFC><0x01><0x02> dans la\nbarre du haut.\pEnsuite, sous <0xFC><0x01><0x06>Emulator<0xFC><0x01><0x02>, choisis\nl'option <0xFC><0x01><0x06>Save Type<0xFC><0x01><0x02>.\pPuis clique sur <0xFC><0x01><0x06>Flash 128K<0xFC><0x01><0x02>.\pEnfin, ferme complètement l'émulateur\net relance-le.\p<0xFC><0x01><0x04>Instructions 3DS<0xFC><0x01><0x02> :\pUtilise le <0xFC><0x01><0x06>New Super Ultimate VC Injector\nfor 3DS<0xFC><0x01><0x02> pour créer le fichier CIA.\pUne fois ouvert, vérifie que le\n<0xFC><0x01><0x06>ROM Save Type<0xFC><0x01><0x02> est réglé sur :\p<0xFC><0x01><0x06>Flash 1Mbit (Macronix, ID: 0x09C2)\n+ RTC<0xFC><0x01><0x02>.\pLa <0xFC><0x01><0x06>méthode d'injection<0xFC><0x01><0x02> doit aussi\nêtre réglée sur <0xFC><0x01><0x06>GBA Virtual Console<0xFC><0x01><0x02>.\pSi ton émulateur n'est pas mentionné,\nchange d'émulateur.
 0xB50010: Forêt Gelée
 0x1EEAD21: <0xFC><0x01><0x02>La vieille dame a pris :\n<0xFC><0x01><0x06><0xFD><0x07>
-0x1EF4373: Voyons"\pTu n'as pas au moins <0xFC><0x01><0x06><0xFD><0x03><0xFC><0x01><0x08>\n<0xFC><0x01><0x06><0xFD><0x02>s<0xFC><0x01><0x08> !
+0x1EF4373: Voyons\pTu n'as pas au moins <0xFC><0x01><0x06><0xFD><0x03><0xFC><0x01><0x08>\n<0xFC><0x01><0x06><0xFD><0x02>s<0xFC><0x01><0x08> !
 0x1EFB250: <0xFC><0x01><0x02>Tu as remis <0xFC><0x01><0x06><0xFD><0x02><0xFC><0x01><0x02> <0xFC><0x01><0x06><0xFD><0x04><0xFC><0x01><0x02>\net reçu ¥<0xFC><0x01><0x06><0xFD><0x03><0xFC><0x01><0x02> !
 0x1F0DC27: Tu veux <0xFC><0x01><0x06><0xFD><0x04> <0xFD><0x02><0xFC><0x01><0x04> ?\nÇa fera <0xFC><0x01><0x06><0xFD><0x03><0xFC><0x01><0x04> Jetons.
 0x1F0E10C: <0xFC><0x01><0x02><0xFD><0x01> reçoit <0xFC><0x01><0x06><0xFD><0x02><0xFC><0x01><0x02> Jetons !
@@ -23288,45 +23288,45 @@
 0x1F2D705: Veux-tu prendre <0xFC><0x01><0x06><0xFD><0x02><0xFC><0x01><0x02>, le Pokémon\n<0xFC><0x01><0x06><0xFD><0x03><0xFC><0x01><0x02> ?
 0x1F46EF5: Alors <0xFD><0x01>, file à <0xFC><0x01><0x06>Ville Portuaire<0xFC><0x01><0x08>\nau plus vite !\pSi tu ne peux pas encore voler,\nle plus rapide est d'obtenir le\lBadge d'<0xFC><0x01><0x06>Ville d'Antisis<0xFC><0x01><0x08> et d'aller\là l'est par la <0xFC><0x01><0x06>Route 17<0xFC><0x01><0x08>.\pPendant que tu fais le trajet,\nPapy Arthur et moi allons voir\lce qu'on peut trouver.
 0x1F470F7: Écoute, l'ami.\pJe te l'ai déjà dit, désolé, mais\non n'y peut rien.\pLe navire a des ennuis de moteur,\net je ne peux rien y faire.\pMais un ami qui me doit un service\npeut t'emmener à Bourg Polder,\lsi c'est si urgent.\pTu le trouveras sur les quais au\nnord d'ici.\pMontre-lui un de ces Tickets S.S.,\ndis-lui que tu viens de ma part,\let il t'y conduira.
-0x1F474C3: Grand-père et moi, on part devant\nvers le sommet de Crystal Peak, <0xFD><0x01>.\pOn ne peut pas foncer à l'aveugle,\nalors on va préparer un plan pour\lcontrer leur grand projet.\pRejoins-nous aussi vite que tu\npeux, d'accord ?\pPour atteindre le sommet de\nCrystal Peak, il te faudra le\lmoyen de gravir les cascades"\p"\pOuais"<0xFC><0x08><0x18> ta tête me dit que tu le\nsais"<0xFC><0x08><0x18> c'est l'histoire de tout\lton Défi des Arènes"\pExact"<0xFC><0x08><0x18> il te faut le Badge de\n<0xFC><0x01><0x06>Bourg Polder<0xFC><0x01><0x08>, et la CS associée.\pBref, une fois que c'est fait,\nfile droit vers <0xFC><0x01><0x06>Crystal Peak<0xFC><0x01><0x08>.\pCompris ?\nOn se voit là-haut, <0xFD><0x01>.
-0x1F476EC: <0xFD><0x01> !\nQu'est-ce qui t'a retenu ?\pCe Jax et son grand-père m'ont\ncroisé en montant.\pIls m'ont dit de t'attendre ici,\nque tu ne tarderais pas trop à\lrejoindre le combat.\pBon, je me suis dit que grimper\nla montagne serait plus simple\lavec toi, alors me voilà.\pL'endroit grouille de sbires de\nLight of Ruin, après tout, pas\lfacile de grimper en solo.\pMais avant d'y aller"<0xFC><0x08><0x18> affronte-moi.\pUne petite vérification, histoire\nde voir si tu es d'attaque.\pJe saurai si tu as assez de force\npour grimper à mes côtés !
-0x1F47C61: On a presque atteint le sommet,\n<0xFD><0x01> !\pIl ne reste qu'à trouver comment\npasser devant ces sbires sans se\lfaire repérer.\pSi seulement on pouvait pousser\nquelque chose devant eux pour\lbloquer leur vue"
-0x1F47F5F: <0xFC><0x01><0x04>Je suis désolée, <0xFD><0x06>"\pJe"<0xFC><0x08><0x20> je ne peux plus revenir sur\nnotre accord.\pQuand la poussière sera retombée,\ntu verras que ça en valait la peine"\pEn attendant, je"<0xFC><0x08><0x20> je suis juste\nheureuse de te savoir de retour.\pReste ici, tu seras à l'abri des\nretombées.
+0x1F474C3: Grand-père et moi, on part devant\nvers le sommet de Crystal Peak, <0xFD><0x01>.\pOn ne peut pas foncer à l'aveugle,\nalors on va préparer un plan pour\lcontrer leur grand projet.\pRejoins-nous aussi vite que tu\npeux, d'accord ?\pPour atteindre le sommet de\nCrystal Peak, il te faudra le\lmoyen de gravir les cascades\p\pOuais<0xFC><0x08><0x18> ta tête me dit que tu le\nsais<0xFC><0x08><0x18> c'est l'histoire de tout\lton Défi des Arènes\pExact<0xFC><0x08><0x18> il te faut le Badge de\n<0xFC><0x01><0x06>Bourg Polder<0xFC><0x01><0x08>, et la CS associée.\pBref, une fois que c'est fait,\nfile droit vers <0xFC><0x01><0x06>Crystal Peak<0xFC><0x01><0x08>.\pCompris ?\nOn se voit là-haut, <0xFD><0x01>.
+0x1F476EC: <0xFD><0x01> !\nQu'est-ce qui t'a retenu ?\pCe Jax et son grand-père m'ont\ncroisé en montant.\pIls m'ont dit de t'attendre ici,\nque tu ne tarderais pas trop à\lrejoindre le combat.\pBon, je me suis dit que grimper\nla montagne serait plus simple\lavec toi, alors me voilà.\pL'endroit grouille de sbires de\nLight of Ruin, après tout, pas\lfacile de grimper en solo.\pMais avant d'y aller<0xFC><0x08><0x18> affronte-moi.\pUne petite vérification, histoire\nde voir si tu es d'attaque.\pJe saurai si tu as assez de force\npour grimper à mes côtés !
+0x1F47C61: On a presque atteint le sommet,\n<0xFD><0x01> !\pIl ne reste qu'à trouver comment\npasser devant ces sbires sans se\lfaire repérer.\pSi seulement on pouvait pousser\nquelque chose devant eux pour\lbloquer leur vue
+0x1F47F5F: <0xFC><0x01><0x04>Je suis désolée, <0xFD><0x06>\pJe<0xFC><0x08><0x20> je ne peux plus revenir sur\nnotre accord.\pQuand la poussière sera retombée,\ntu verras que ça en valait la peine\pEn attendant, je<0xFC><0x08><0x20> je suis juste\nheureuse de te savoir de retour.\pReste ici, tu seras à l'abri des\nretombées.
 0x1F48049: Si je suis là, ce n'est pas pour\nrester en sécurité !\pJe suis là pour empêcher la\ndestruction que tu prépares !\pTout ce temps, je voulais que papa\net toi reveniez, pour qu'on forme\là nouveau une famille.\pEt là, à peine je te retrouve,\ntu crois pouvoir t'en tirer\lavec un truc pareil !?\pPas question !\pTu as déjà détruit un foyer\nen nous quittant.\pJe ne te laisserai pas en\ndétruire un autre !
-0x1F482ED: Ngh"<0xFC><0x08><0x18> <0xFD><0x01>"<0xFC><0x08><0x18> prends"<0xFC><0x08><0x18> mes Pokémon"\pJe ne peux plus me battre"<0xFC><0x08><0x18> mais"<0xFC><0x08><0x18>\nils te soutiendront"
-0x1F484AE: <0xFC><0x01><0x04>Comme je le pensais"<0xFC><0x08><0x18> je ne pouvais\nque vous retarder.\pMais les préparatifs doivent être\npresque achevés à présent.\pIl ne me reste qu'à espérer que les\nsbires au-dessus vous retiendront\ljuste assez longtemps.\pAdieu"<0xFC><0x08><0x18> <0xFD><0x01>, <0xFD><0x06>.
-0x1F48854: Ha ha"<0xFC><0x08><0x18> merci, <0xFD><0x06>, même si\nc'était un peu facile.\pJe jure de tout faire pour me\nracheter, jusqu'à mon dernier jour.\pEt à propos de ta mère, elle m'a\nappris qu'Aklove est presque prêt\là activer l'Arme Ultime.\pHeureusement, nous ne sommes pas\ntrès loin du sommet.\pMais y monter, en revanche, est un\npeu moins simple"
+0x1F482ED: Ngh<0xFC><0x08><0x18> <0xFD><0x01><0xFC><0x08><0x18> prends<0xFC><0x08><0x18> mes Pokémon\pJe ne peux plus me battre<0xFC><0x08><0x18> mais<0xFC><0x08><0x18>\nils te soutiendront
+0x1F484AE: <0xFC><0x01><0x04>Comme je le pensais<0xFC><0x08><0x18> je ne pouvais\nque vous retarder.\pMais les préparatifs doivent être\npresque achevés à présent.\pIl ne me reste qu'à espérer que les\nsbires au-dessus vous retiendront\ljuste assez longtemps.\pAdieu<0xFC><0x08><0x18> <0xFD><0x01>, <0xFD><0x06>.
+0x1F48854: Ha ha<0xFC><0x08><0x18> merci, <0xFD><0x06>, même si\nc'était un peu facile.\pJe jure de tout faire pour me\nracheter, jusqu'à mon dernier jour.\pEt à propos de ta mère, elle m'a\nappris qu'Aklove est presque prêt\là activer l'Arme Ultime.\pHeureusement, nous ne sommes pas\ntrès loin du sommet.\pMais y monter, en revanche, est un\npeu moins simple
 0x1F48B25: Fais bien attention, <0xFD><0x06>.\pJ'attends ici avec Melony le temps\nque tu trouves un passage.\pOh, et donne l'objet qu'on t'a\ndemandé de trouver à l'entrepôt\là <0xFD><0x01>, tu veux bien ?\pIl devrait t'aider contre Aklove\ns'il tente quelque chose au sommet.
 0x1F48ED0: <0xFC><0x01><0x04>Tous les préparatifs sont\nterminés, Aklove.\pLes Guerriers des Ombres ont été\nintégrés avec succès\ldans l'arme.\pAvec l'énergie absorbée de la\nmontagne, elle est chargée à bloc.\pVous pouvez procéder à l'activation\nquand vous le souhaitez.
-0x1F48FD2: Je n'arrive toujours pas à croire\nqu'il était là, sous nos yeux.\pLe cristal au sommet du mont"<0xFC><0x08><0x18>\nles insurgés de Borrius ont dû\ll'amener ici il y a 3000 ans\lgrâce au pouvoir de Hoopa.\pLes livres d'histoire n'ont jamais\nmentionné ce petit détail"\pDire que j'ai perdu des heures\nentières à le chercher !\pMais peu importe, je peux enfin\nl'activer maintenant.
-0x1F4953C: Arrrrgh !\pPourquoi tous ces gêneurs\nsurgissent-ils de partout !?\p"\pSoit, ce n'est qu'une question de\ntemps avant votre défaite à tous.\pJe suis un homme patient"\pJ'ai attendu ce jour un an durant,\nalors quelques instants de plus ?
-0x1F496B6: <0xFC><0x01><0x04>Je suis désolé"<0xFC><0x08><0x20> Marlon"<0xFC><0x08><0x30> <0xFD><0x06>"<0xFC><0x08><0x30>\nC'est le seul moyen"
-0x1F49B96: Ha ha"<0xFC><0x08><0x20> hahahahaha"\pMalgré votre ingérence, il semble\nque j'aie triomphé !\pLa guerre vieille de 3000 ans"<0xFC><0x08><0x18>\na trouvé sa juste conclusion.\pLe grand roi n'aura plus à\nsouffrir pour l'éternité.\pQuand il saura que j'ai accompli\nce qu'il n'a pu faire, ses Pokémon\llui reviendront enfin"
-0x1F49D19: C'est simple, en vérité.\pTon Hoopa avait envoyé Houndoom\ndans une caverne vide de Cinder\lVolcano, un lieu sans le moindre\ldanger pour lui.\pTu m'y as ensuite envoyé aussi.\nEnsemble, nous avons pu fuir.\pUne fois dehors, j'ai contacté Fey\net elle a chargé l'Agent Véga de\lme guider ici.\pIl semble qu'elle n'ait jamais voulu\nte laisser semer la destruction"
-0x1F4A196: Ivory"<0xFC><0x08><0x20> je suis désolé"<0xFC><0x08><0x20> vraiment"<0xFC><0x08><0x20> je"<0xFC><0x08><0x20>\nj'aurais tellement voulu"\pMais je n'ai eu qu'un bref instant\npour me glisser ici après que\l<0xFD><0x01> a scellé le pouvoir de Hoopa.\pEt à ce moment-là"<0xFC><0x08><0x18> je ne pouvais\npas risquer d'être repéré !\pJe suis vraiment désolé, Ivory.
-0x1F4A2E3: Ivory"<0xFC><0x08><0x20> tu ne saisis toujours pas.\pOui, nous avons perdu un enfant,\nmais nous en avons gagné deux.\pDepuis ma rencontre avec <0xFD><0x06>"<0xFC><0x08><0x20> j'ai\ncompris ce que nous avons perdu\len les abandonnant il y a si\llongtemps.\pMais il n'est pas trop tard !\pNous pouvons recommencer"<0xFC><0x08><0x20> bâtir\nun nouveau lien avec eux !\pNous ne rattraperons jamais toutes\nces années perdues, mais nous\lpouvons au moins commencer.
+0x1F48FD2: Je n'arrive toujours pas à croire\nqu'il était là, sous nos yeux.\pLe cristal au sommet du mont<0xFC><0x08><0x18>\nles insurgés de Borrius ont dû\ll'amener ici il y a 3000 ans\lgrâce au pouvoir de Hoopa.\pLes livres d'histoire n'ont jamais\nmentionné ce petit détail\pDire que j'ai perdu des heures\nentières à le chercher !\pMais peu importe, je peux enfin\nl'activer maintenant.
+0x1F4953C: Arrrrgh !\pPourquoi tous ces gêneurs\nsurgissent-ils de partout !?\p\pSoit, ce n'est qu'une question de\ntemps avant votre défaite à tous.\pJe suis un homme patient\pJ'ai attendu ce jour un an durant,\nalors quelques instants de plus ?
+0x1F496B6: <0xFC><0x01><0x04>Je suis désolé<0xFC><0x08><0x20> Marlon<0xFC><0x08><0x30> <0xFD><0x06><0xFC><0x08><0x30>\nC'est le seul moyen
+0x1F49B96: Ha ha<0xFC><0x08><0x20> hahahahaha\pMalgré votre ingérence, il semble\nque j'aie triomphé !\pLa guerre vieille de 3000 ans<0xFC><0x08><0x18>\na trouvé sa juste conclusion.\pLe grand roi n'aura plus à\nsouffrir pour l'éternité.\pQuand il saura que j'ai accompli\nce qu'il n'a pu faire, ses Pokémon\llui reviendront enfin
+0x1F49D19: C'est simple, en vérité.\pTon Hoopa avait envoyé Houndoom\ndans une caverne vide de Cinder\lVolcano, un lieu sans le moindre\ldanger pour lui.\pTu m'y as ensuite envoyé aussi.\nEnsemble, nous avons pu fuir.\pUne fois dehors, j'ai contacté Fey\net elle a chargé l'Agent Véga de\lme guider ici.\pIl semble qu'elle n'ait jamais voulu\nte laisser semer la destruction
+0x1F4A196: Ivory<0xFC><0x08><0x20> je suis désolé<0xFC><0x08><0x20> vraiment<0xFC><0x08><0x20> je<0xFC><0x08><0x20>\nj'aurais tellement voulu\pMais je n'ai eu qu'un bref instant\npour me glisser ici après que\l<0xFD><0x01> a scellé le pouvoir de Hoopa.\pEt à ce moment-là<0xFC><0x08><0x18> je ne pouvais\npas risquer d'être repéré !\pJe suis vraiment désolé, Ivory.
+0x1F4A2E3: Ivory<0xFC><0x08><0x20> tu ne saisis toujours pas.\pOui, nous avons perdu un enfant,\nmais nous en avons gagné deux.\pDepuis ma rencontre avec <0xFD><0x06><0xFC><0x08><0x20> j'ai\ncompris ce que nous avons perdu\len les abandonnant il y a si\llongtemps.\pMais il n'est pas trop tard !\pNous pouvons recommencer<0xFC><0x08><0x20> bâtir\nun nouveau lien avec eux !\pNous ne rattraperons jamais toutes\nces années perdues, mais nous\lpouvons au moins commencer.
 0x1F4A6FB: Écoute-moi bien, le vieux !\pJ'ai pas passé je sais pas combien\nde jours à te chercher juste pour\lêtre content de te retrouver !\pJe vais te montrer tout ce que tu\nas raté pendant toutes ces années !\pJe vais te montrer à quel point\nje suis devenu fort !
 0x1F4A875: <0xFD><0x01> !\pUne dernière fois, je veux que tu\nte battes à mes côtés !\pTu vas m'aider à lui prouver à\nquel point je suis fort !\pLe battre seul ne suffit pas, je\ndois lui montrer que je suis aussi\lfort, sinon plus, que quelqu'un\lqui a pu vaincre Hoopa !\pLà, il saura vraiment le chemin\nque j'ai parcouru !
 0x1F4AA86: Tu sais, <0xFD><0x06>, je savais déjà\nquel chemin tu avais parcouru.\pMais ce n'est pas ta force au\ncombat qui me l'a appris.\pC'est ton coeur fier mais bon qui\nnous a tous sauvés du désastre.\pC'est ça qui fait de toi un\nDresseur vraiment fort.\pJe ne pourrais être plus fier de toi.
-0x1F4AD47: <0xFD><0x01>, ce n'est pas un secret, tu es\ndevenu aussi fort que moi"<0xFC><0x08><0x18> non,\lpeut-être même plus fort.\pMec, tu as fait un sacré chemin\ndepuis notre équipe formée dans\lla base des Ombres.\pQue ce soit le destin ou Hoopa\nqui nous ait réunis"\pJe suis content qu'on soit amis.\pSi rien d'autre ne t'occupe,\npourquoi ne pas finir le reste\ldu Défi des Arènes ?\pLe siège de Champion de Borrius\nest actuellement vacant"\pEt je ne vois personne de mieux\nque toi pour porter ce titre.\pLa dernière Arène est à l'est de\nBourg Magnolia, à <0xFC><0x01><0x06>Bois-Rouge<0xFC><0x01><0x08>.\pBonne chance, <0xFD><0x01>.\pJe viendrai te féliciter quand\ntu seras devenu le Champion !
-0x1F4B14C: Il paraît qu'il y a des fanas de\nTessons à travers Borrius, qui sont\laussi des maîtres des capacités.\pIls collectionnent les Tessons :\ns'ils peuvent apprendre à tes\lPokémon des techniques utiles\lpour la Ligue Pokémon, n'hésite\lpas à les chercher.\pBon, je devrais vraiment retourner\nà mes recherches.\pEt pendant ce temps, je verrai si\nArthur a retrouvé la trace de\lnotre fugitif"\pBonne chance, <0xFD><0x01> !\nJ'espère que tu vas exceller !
-0x1F4B2E0: Enfin, j'ai réussi à te\nrattraper, <0xFD><0x01> !\pJ'avais le moral à zéro après la\nfuite d'Aklove, mais te retrouver\lm'a aussitôt requinqué !\p"\pHein ? Pourquoi je suis là ?\pEh bien, drôle d'histoire"<0xFC><0x08><0x18> en\nfait, c'est Papi Arthur qui était\lle Champion de Borrius.\pMais depuis sa retraite, le titre\nde Champion est resté à prendre !\pTout ce temps, Papi Arthur\nm'entraînait comme remplaçant,\len m'envoyant combattre les\lmenaces qui visaient la région.\pJe suis sûr que c'est pour ça que\nle Prof. Log t'a confié toutes ces\lmissions aussi"\pLui et Papi ont toujours été un\npeu rivaux, ha ha !\pMais face à un adversaire digne,\nquelqu'un que je respecte, ce\lcombat promet d'être amusant !
+0x1F4AD47: <0xFD><0x01>, ce n'est pas un secret, tu es\ndevenu aussi fort que moi<0xFC><0x08><0x18> non,\lpeut-être même plus fort.\pMec, tu as fait un sacré chemin\ndepuis notre équipe formée dans\lla base des Ombres.\pQue ce soit le destin ou Hoopa\nqui nous ait réunis\pJe suis content qu'on soit amis.\pSi rien d'autre ne t'occupe,\npourquoi ne pas finir le reste\ldu Défi des Arènes ?\pLe siège de Champion de Borrius\nest actuellement vacant\pEt je ne vois personne de mieux\nque toi pour porter ce titre.\pLa dernière Arène est à l'est de\nBourg Magnolia, à <0xFC><0x01><0x06>Bois-Rouge<0xFC><0x01><0x08>.\pBonne chance, <0xFD><0x01>.\pJe viendrai te féliciter quand\ntu seras devenu le Champion !
+0x1F4B14C: Il paraît qu'il y a des fanas de\nTessons à travers Borrius, qui sont\laussi des maîtres des capacités.\pIls collectionnent les Tessons :\ns'ils peuvent apprendre à tes\lPokémon des techniques utiles\lpour la Ligue Pokémon, n'hésite\lpas à les chercher.\pBon, je devrais vraiment retourner\nà mes recherches.\pEt pendant ce temps, je verrai si\nArthur a retrouvé la trace de\lnotre fugitif\pBonne chance, <0xFD><0x01> !\nJ'espère que tu vas exceller !
+0x1F4B2E0: Enfin, j'ai réussi à te\nrattraper, <0xFD><0x01> !\pJ'avais le moral à zéro après la\nfuite d'Aklove, mais te retrouver\lm'a aussitôt requinqué !\p\pHein ? Pourquoi je suis là ?\pEh bien, drôle d'histoire<0xFC><0x08><0x18> en\nfait, c'est Papi Arthur qui était\lle Champion de Borrius.\pMais depuis sa retraite, le titre\nde Champion est resté à prendre !\pTout ce temps, Papi Arthur\nm'entraînait comme remplaçant,\len m'envoyant combattre les\lmenaces qui visaient la région.\pJe suis sûr que c'est pour ça que\nle Prof. Log t'a confié toutes ces\lmissions aussi\pLui et Papi ont toujours été un\npeu rivaux, ha ha !\pMais face à un adversaire digne,\nquelqu'un que je respecte, ce\lcombat promet d'être amusant !
 0x1F4B5B6: Maintenant que j'y pense, on s'est\ntoujours battus côte à côte, non ?\pAlors pour moi, la meilleure façon\nde jouer le titre de Champion,\lc'est deux Pokémon côte à côte !\pEt oui ! Ce sera donc un\nCombat Duo !\pTu es d'attaque ? J'ai monté\nma meilleure équipe pour ça !\pMe voilà, <0xFD><0x01> !
-0x1F4B80A: Tu sais, avant qu'on commence\nnotre combat, je repensais"\p"à toutes les fois où j'ai foncé,\net où tu m'as tiré d'affaire.\pMême à Crystal Peak, quand je\ncroyais avoir bien préparé mes\lPokémon, on n'aurait jamais\lgagné sans toi.\pEt malgré la victoire, je me suis\nrelâché et Aklove s'est enfui.\pC'est là que j'ai compris"\pMême si mes Pokémon deviennent\nplus forts, à quoi bon si je ne\lgrandis pas avec eux ?\pJ'imagine que c'est ça qui a fait\nla différence aujourd'hui.\pAlors, je vais devenir plus fort.\pPas seulement mes Pokémon.\pMoi.\pEt ce jour-là, on remet ça !\pJe prendrai ta couronne de mes\npropres mains !\pMais pour l'instant, allons te\nfaire reconnaître comme nouveau\lChampion de Borrius !\pAllez !\nLe registre est juste devant.\pSuis-moi !
-0x1F4BADE: Cette salle est le Panthéon"\pCela fait longtemps que je n'étais\npas entré ici"\pPapi Arthur m'y a amené quand\nj'étais petit, mais pas depuis.\pBref, <0xFD><0x01> !\nBienvenue au Panthéon !\pCette machine va garder une trace\npermanente de ton exploit.\pPose simplement tes Pokémon dessus\net le tour sera joué !\pEt encore une fois, <0xFD><0x01>,\nFELICITATIONS !
-0x1F4BDA6: <0xFD><0x01> !\pFélicitations !\pJe t'avais dit que je passerais\nquand tu serais Champion, non ?\pEh bien, me voilà !\pAlors, quels sont tes projets,\nmaintenant que tu es le plus fort\lde Borrius ?\p"\pTu n'en as aucun, hein ?\pEh bien, il paraît que la\nrénovation du Battle Frontier\lest enfin terminée.\pMon père et moi, on comptait y\nfaire un tour bientôt.
+0x1F4B80A: Tu sais, avant qu'on commence\nnotre combat, je repensais\p à toutes les fois où j'ai foncé,\net où tu m'as tiré d'affaire.\pMême à Crystal Peak, quand je\ncroyais avoir bien préparé mes\lPokémon, on n'aurait jamais\lgagné sans toi.\pEt malgré la victoire, je me suis\nrelâché et Aklove s'est enfui.\pC'est là que j'ai compris\pMême si mes Pokémon deviennent\nplus forts, à quoi bon si je ne\lgrandis pas avec eux ?\pJ'imagine que c'est ça qui a fait\nla différence aujourd'hui.\pAlors, je vais devenir plus fort.\pPas seulement mes Pokémon.\pMoi.\pEt ce jour-là, on remet ça !\pJe prendrai ta couronne de mes\npropres mains !\pMais pour l'instant, allons te\nfaire reconnaître comme nouveau\lChampion de Borrius !\pAllez !\nLe registre est juste devant.\pSuis-moi !
+0x1F4BADE: Cette salle est le Panthéon\pCela fait longtemps que je n'étais\npas entré ici\pPapi Arthur m'y a amené quand\nj'étais petit, mais pas depuis.\pBref, <0xFD><0x01> !\nBienvenue au Panthéon !\pCette machine va garder une trace\npermanente de ton exploit.\pPose simplement tes Pokémon dessus\net le tour sera joué !\pEt encore une fois, <0xFD><0x01>,\nFELICITATIONS !
+0x1F4BDA6: <0xFD><0x01> !\pFélicitations !\pJe t'avais dit que je passerais\nquand tu serais Champion, non ?\pEh bien, me voilà !\pAlors, quels sont tes projets,\nmaintenant que tu es le plus fort\lde Borrius ?\p\pTu n'en as aucun, hein ?\pEh bien, il paraît que la\nrénovation du Battle Frontier\lest enfin terminée.\pMon père et moi, on comptait y\nfaire un tour bientôt.
 0x1F4BEF9: Oui, félicitations, <0xFD><0x01> !\pJ'espérais avoir la chance de te\nvoir en personne à ton retour\là la maison.\pTu ne t'attendais pas à me revoir\ndans le vieux noir et rouge ?\pLa tenue que je t'ai laissée\nn'était pas la seule, tu sais !\pMais même après tout ça, j'ai\nsenti que je devais la reporter.\pIvory a disparu, alors j'espère\nque la retrouver sera plus simple\lsi je lui ressemble parfaitement.\pSi jamais tu entends quelque chose,\n<0xFD><0x01>, n'hésite pas à me\lprévenir.\pEt bien sûr, je n'ai pas oublié\nton père, crois-moi.\pJe cherche à le libérer du Cube,\nmais jusqu'ici, je n'ai pas eu\lbeaucoup de chance.\pQuand je trouverai du concret, tu\nauras une Mission, compte sur moi.
 0x1F4C192: Bref, on va aller jeter un oeil\nau <0xFC><0x01><0x06>Battle Frontier<0xFC><0x01><0x08>.\pC'est au <0xFC><0x01><0x06>nord<0xFC><0x01><0x08> de <0xFC><0x01><0x06>Ville Portuaire<0xFC><0x01><0x08>,\net on dit que les meilleurs du\lmonde entier s'y retrouvent.\pVu que ça vient de rouvrir, il y\naura des tonnes de Dresseurs qui\lne rêvent que de se battre !\pPapa et moi, on va leur montrer\nce qu'est un vrai Dresseur !\pOn se revoit plus tard, <0xFD><0x01> !
-0x1F4C838: Vous êtes en colère ?\nLa rage consume-t-elle votre âme ?\pC'est"<0xFC><0x08><0x18> exactement ce que j'ai\nressenti quand vous m'avez tout pris"\pTout ce que j'avais bâti si\ndurement, envolé en un clin d'oeil"\pJ'aurais enfin pu accomplir ce à\nquoi j'étais destiné"\pFey m'a abandonné et trahi"<0xFC><0x08><0x18>\nmais il est encore temps !\pJe vais recommencer !\pJe repartirai de zéro, sans avoir\nà compter sur qui que ce soit"\pComme cet idiot de Zeph !\nOu cette traîtresse de Fey !\pIls ne vous ont pas suivis, mais je\npeux encore me venger de vous deux !
-0x1F4CB68: C'est fini, Aklove.\nTes plans funestes s'arrêtent ici.\pDis-moi juste"<0xFC><0x08><0x18> la destruction\nde Borrius"\pC'était pour quoi !?\nDans quel but, tout ça !?\pToute cette destruction, toutes ces\nvies perdues"<0xFC><0x08><0x18> qu'est-ce que ça\laurait accompli !?
-0x1F4CE11: Admettons que tu aies raison.\pAdmettons que la légende soit\nvraie et que le roi soit en vie.\pMais 3000 ans"\pTu crois vraiment qu'il n'a pas\npassé une seconde à réfléchir ?\pOu à regretter ?\pN'est-il pas possible qu'il ne\nveuille plus la guerre ?\pComment le saurais-tu ?\pTu as juste projeté tes désirs\nsur un mythe et failli détruire\lnotre région pour ça !
-0x1F4CFCC: C'est vrai" c'est le fils de Zeph,\nlà-bas, n'est-ce pas ?\pJ'avais la responsabilité de\nveiller sur lui, et je"<0xFC><0x08><0x18> je l'ai\lfuie pour passer du temps avec\lmon propre fils.\pMais c'est une erreur que je suis\nvenu corriger.
-0x1F4D09B: Tu sais, tu aurais pu te venger\nsi facilement.\pLa mère de <0xFD><0x01>"<0xFC><0x08><0x18> le grand-père de Jax"<0xFC><0x08><0x18>\nle fils de Zeph"\pTu aurais pu en finir avec eux\nquand ils étaient à ta merci.\pMais tu ne pouvais pas renoncer à\nétaler ta supériorité, et tu les\las laissés en vie, préférant\laffronter <0xFD><0x01> et Jax.\pC'est ce que j'ai toujours pensé"<0xFC><0x08><0x18>\ntes pires instincts seraient la\lraison de ta défaite !
-0x1F4D42F: <0xFD><0x01>, on fait toujours équipe dans\nles pires situations, hein ?\p"En tout cas, je suis content qu'on\nse soit battus une dernière fois.\pTu es le Champion, après tout,\net il n'y a pas d'autre Dresseur\lavec qui j'aimerais me battre.\pSi tu veux refaire équipe un jour,\nje traînerai du côté du Battle\lFrontier, alors fais-moi signe\lsi tu passes par là !
+0x1F4C838: Vous êtes en colère ?\nLa rage consume-t-elle votre âme ?\pC'est<0xFC><0x08><0x18> exactement ce que j'ai\nressenti quand vous m'avez tout pris\pTout ce que j'avais bâti si\ndurement, envolé en un clin d'oeil\pJ'aurais enfin pu accomplir ce à\nquoi j'étais destiné\pFey m'a abandonné et trahi<0xFC><0x08><0x18>\nmais il est encore temps !\pJe vais recommencer !\pJe repartirai de zéro, sans avoir\nà compter sur qui que ce soit\pComme cet idiot de Zeph !\nOu cette traîtresse de Fey !\pIls ne vous ont pas suivis, mais je\npeux encore me venger de vous deux !
+0x1F4CB68: C'est fini, Aklove.\nTes plans funestes s'arrêtent ici.\pDis-moi juste<0xFC><0x08><0x18> la destruction\nde Borrius\pC'était pour quoi !?\nDans quel but, tout ça !?\pToute cette destruction, toutes ces\nvies perdues<0xFC><0x08><0x18> qu'est-ce que ça\laurait accompli !?
+0x1F4CE11: Admettons que tu aies raison.\pAdmettons que la légende soit\nvraie et que le roi soit en vie.\pMais 3000 ans\pTu crois vraiment qu'il n'a pas\npassé une seconde à réfléchir ?\pOu à regretter ?\pN'est-il pas possible qu'il ne\nveuille plus la guerre ?\pComment le saurais-tu ?\pTu as juste projeté tes désirs\nsur un mythe et failli détruire\lnotre région pour ça !
+0x1F4CFCC: C'est vrai c'est le fils de Zeph,\nlà-bas, n'est-ce pas ?\pJ'avais la responsabilité de\nveiller sur lui, et je<0xFC><0x08><0x18> je l'ai\lfuie pour passer du temps avec\lmon propre fils.\pMais c'est une erreur que je suis\nvenu corriger.
+0x1F4D09B: Tu sais, tu aurais pu te venger\nsi facilement.\pLa mère de <0xFD><0x01><0xFC><0x08><0x18> le grand-père de Jax<0xFC><0x08><0x18>\nle fils de Zeph\pTu aurais pu en finir avec eux\nquand ils étaient à ta merci.\pMais tu ne pouvais pas renoncer à\nétaler ta supériorité, et tu les\las laissés en vie, préférant\laffronter <0xFD><0x01> et Jax.\pC'est ce que j'ai toujours pensé<0xFC><0x08><0x18>\ntes pires instincts seraient la\lraison de ta défaite !
+0x1F4D42F: <0xFD><0x01>, on fait toujours équipe dans\nles pires situations, hein ?\p En tout cas, je suis content qu'on\nse soit battus une dernière fois.\pTu es le Champion, après tout,\net il n'y a pas d'autre Dresseur\lavec qui j'aimerais me battre.\pSi tu veux refaire équipe un jour,\nje traînerai du côté du Battle\lFrontier, alors fais-moi signe\lsi tu passes par là !
 0x1F4D749: Félicitations pour avoir terminé\nle Mode Sandbox de Pokémon Unbound !\pEn récompense spéciale, tous les\ncombats importants de l'après-jeu\lont été rassemblés en un seul\let même endroit !\pAchète des Pokémon à la Tour de\nCombat, puis profite du Battle\lFrontier autant que tu veux.\pSinon, parle à l'hôtesse dans\nle bâtiment d'entrée pour vivre\lles autres combats.
-0x1F4D924: <0xFC><0x01><0x02>Darkrai"\nTon pouvoir est immense.\pSans le vouloir, tu plonges les\nhumains et les Pokémon autour de\ltoi dans d'affreux cauchemars"\pC'est pour ça que tu es venu ici"\pÎle du Croissant"\nIl n'y a personne d'autre que toi"\pPersonne ne peut être entraîné\ndans ton cauchemar"\pEt si quelqu'un sombrait dans un\ncauchemar, Île de la Lune est\ltoute proche"\p"\n"
-0x1F4E5BF: Cette- cette Carte Dresseur !\nCette teinte sublime ! Cet éclat !\pJ'ai déjà vu des Dresseurs avec\ndes Cartes Dresseur Argent"\pMais tu es la première personne à\nles surpasser toutes avec cette\lCarte impressionnante.\pOh, <0xFD><0x01>, puis-je soigner\ntes Pokémon ?
-0x1F4E708: Oh" On dirait que tes Pokémon\nsont infectés par le Pokérus.\pOn sait peu de choses du Pokérus,\nsinon que c'est une forme de vie\lmicroscopique fixée aux Pokémon.\pUne fois infectés, les Pokémon\ngrandiraient remarquablement bien.
+0x1F4D924: <0xFC><0x01><0x02>Darkrai\nTon pouvoir est immense.\pSans le vouloir, tu plonges les\nhumains et les Pokémon autour de\ltoi dans d'affreux cauchemars\pC'est pour ça que tu es venu ici\pÎle du Croissant\nIl n'y a personne d'autre que toi\pPersonne ne peut être entraîné\ndans ton cauchemar\pEt si quelqu'un sombrait dans un\ncauchemar, Île de la Lune est\ltoute proche\p\n
+0x1F4E5BF: Cette- cette Carte Dresseur !\nCette teinte sublime ! Cet éclat !\pJ'ai déjà vu des Dresseurs avec\ndes Cartes Dresseur Argent\pMais tu es la première personne à\nles surpasser toutes avec cette\lCarte impressionnante.\pOh, <0xFD><0x01>, puis-je soigner\ntes Pokémon ?
+0x1F4E708: Oh On dirait que tes Pokémon\nsont infectés par le Pokérus.\pOn sait peu de choses du Pokérus,\nsinon que c'est une forme de vie\lmicroscopique fixée aux Pokémon.\pUne fois infectés, les Pokémon\ngrandiraient remarquablement bien.
 0x1F4E83A: Tes Pokémon ont retrouvé une\nsanté parfaite.\pEt rappelle-toi : si la <0xFC><0x01><0x06>Difficulté\nde Combat<0xFC><0x01><0x04> choisie est trop dure,\ltu peux la baisser <0xFC><0x01><0x06>définitivement<0xFC><0x01><0x04>\ljusqu'à la fin du jeu !\pNous te souhaitons d'exceller !
 0x1F4EDB2: Je vais t'expliquer comment marche\nle Club Pokémon Sans Fil.\pIci, au dernier étage, il y a\ndeux salles.\pD'abord, la salle de gauche.\nC'est la Salle Union.\pTu peux te connecter aux Dresseurs\nproches de toi qui sont aussi\lentrés dans la Salle Union via\ll'Adaptateur Sans Fil.\pAvec eux, tu peux discuter,\ncombattre et échanger.\pEnsuite, la salle de droite est\nle Coin Direct.\pTu peux y combattre avec tes\namis, mais les échanges n'y sont\lplus disponibles.\pUtilise Unbound Cloud si tu\nsouhaites échanger des Pokémon.\pParfois, tu ne trouveras pas tes\namis dans la Salle Union ou\ldans le Coin Direct.\pDans ce cas, rapproche-toi de\ntes amis.\pSi l'Adaptateur Sans Fil n'est pas\nconnecté, tu peux te relier avec\lun câble Game Link GBA.\pDans ce cas, tu dois aller au\nCoin Direct.\pProfite bien du Système de\nCommunication Sans Fil.
 0x1F4F1DA: Chaque membre du Conseil 4 aime\ninstaurer certaines conditions sur\lle terrain avant le combat.\pD'abord, il y a <0xFC><0x01><0x06>Moleman<0xFC><0x01><0x08>.\pIl aime déclencher une tempête de\nsable féroce, une tempête qui\linflige plus de dégâts qu'une\ltempête normale.\pCette tempête augmente aussi la\nDéf. Spé. des Pokémon de type Sol,\let ne disparaît pas si tu tentes\lde t'en débarrasser.\pEnsuite, il y a <0xFC><0x01><0x06>Elias<0xFC><0x01><0x08>.\pContre lui, tous les Pokémon de\ntype Spectre subissent moitié\lmoins de dégâts et ignorent les\lpièges quand leurs PV sont pleins.\pRune Protect et Clonage échouent\naussi, sauf pour un type Spectre.\pEn troisième vient <0xFC><0x01><0x06>Arabella<0xFC><0x01><0x08>.\pSa salle est emplie d'un\nChamp Brumeux.\pEt en plus, tout Pokémon de type\nFée envoyé voit sa plus faible\lstat défensive augmentée.\pEnfin vient <0xFC><0x01><0x06>Penny<0xFC><0x01><0x08>.\pUn arc-en-ciel dans sa salle\naugmente la chance d'effets\lsecondaires des types Dragon.\pPrépare-toi bien à ces conditions\navant de les affronter !
@@ -23334,36 +23334,36 @@
 0x1F4F791: Dresseur !\pUne fois la porte derrière moi\nfranchie, ton défi de la Ligue\lPokémon commencera.\pEt une fois commencé, aucun retour\npossible avant d'avoir triomphé\ldu défi.\pAs-tu soigné tes Pokémon ?\pAs-tu acheté les objets essentiels ?\pSi oui, tu peux commencer ton défi\nquand bon te semble.\pMontre la force qui t'a mené ici\net vise la gloire !
 0x1F4FA1B: Mon seul ami, c'est mon Pokémon.\pJe n'ai pas besoin d'autres amis\nque lui.\pLe lien entre un Dresseur et son\nmeilleur ami est incassable,\ltu ne trouves pas ?\pUn Dresseur et son meilleur ami\npeuvent relever tous les défis !\pMême la Ligue Pokémon !\pTu crois pouvoir la vaincre avec\nun seul Pokémon ?
 0x1F4FD34: Qui ose pénétrer le domaine de\nl'Homme-Taupe ?\pHabitant de la surface !\pDes années durant, mon peuple\ntaupe et moi avons vécu sous terre\lavec les seuls Pokémon de type Sol\let la Terre elle-même.\pDans ce monde sans soleil, nous\navons trempé nos âmes et gagné\len force !\pEt pourtant, tu cherches à nous\ndominer, comme tes ancêtres\ll'ont fait il y a tant d'années !?\pSoit ! Goûte à la colère du\npeuple taupe et de la Terre !
-0x1F50025: Ainsi, tu as vaincu l'élite des\nhommes et des hommes-taupes.\pIl est temps pour toi de prendre\nle trône de Champion.\pPasse la porte au centre de la\nsalle, juste dehors.\pJusqu'au jour où nous, peuple\ntaupe, le prendrons pour nous"
-0x1F500FA: Habitant de la surface !\nTu oses te montrer à nouveau ?\pJe te préviens, le peuple taupe ne\ntolère pas deux fois un affront !\pJ'ai trimé sous terre, renforçant\nmon lien avec la Terre\lelle-même"\pTout ça en préparation de ce jour !\pEt maintenant, je vais punir tous\nles habitants de la surface"\pEn commençant par toi !
-0x1F50338: Salut. Je suis Elias.\pOu plutôt, le cadavre autrefois\nconnu sous le nom d'Elias.\pFaut croire qu'être mort ne me\ndispense pas de mes devoirs de\lmembre du Conseil 4, hein ?\pSaleté de conjoncture"\pOuais. J'ai servi pendant des\nannées de mon vivant.\pPuis ces idiots ont déterré mon\ncorps après ma mort, et y ont\lfourré un Pokémon Spectre avec\lmon esprit.\pOh, ne te méprends pas.\pJ'ai toute ma tête, et mes Pokémon\nn'ont rien perdu de leur force.\pEn fait, je crois même qu'ils\nsont devenus encore plus forts"\pPff, autant nous battre avant que\ncette stupide prison de chair\lne tombe en morceaux.
-0x1F505EC: Bon, impossible de blâmer le\nmarché du travail pour ma défaite,\lon va en rester là.\pVa affronter le reste du Conseil 4.\pEt petit" évite de te faire\ndéterrer pour servir de cobaye\laprès ta mort, d'accord ?\pCrois-en mon expérience.\nC'est vraiment pas pratique.
-0x1F5077D: Hé.\nSurpris de me revoir ?\pPas la peine.\nJe me doutais que ça arriverait.\pIls n'arrêtent pas de me dire\nqu'on me trouvera un remplaçant,\lmais ce jour ne vient jamais"\pMais tu n'es pas venu écouter\nun silence de mort. Ou un mort.\pPff" Finissons-en avec ce\ncombat.
-0x1F5088E: Même si j'ai envie de trépasser"\pJ'ai bien envie de m'attarder ici\njuste le temps de te battre"\p"Après tout, vivant ou mort,\non ne me respecte déjà pas\ldes masses.\pBref, avance.\pIl reste des membres du Conseil 4\nà battre.
-0x1F509EB: Coucou, l'ami !\pMais non, je ne suis pas perdue !\pJe suis Arabella, Princesse Fée !\nJe fais partie du Conseil 4 !\pPapa était membre avant, mais\nil s'est fait renvoyer.\pAlors je me suis proposée, et me\nvoilà au Conseil 4 !\pC'est génial ! On me paie pour\naffronter des Dresseurs !\p"même si je dois en donner\nun peu à Papa.\pEt quand je gagne, j'invite des\ngens à mes goûters !\pAllez, l'ami !\pEn garde ! Je vais te montrer ce\nque vaut une princesse fée !
-0x1F50D4C: Coucou, <0xFD><0x01> !\nJe t'ai manqué ?\pJe viens juste de finir un goûter\navec mes amies.\pDésolée, il faudra attendre le\nprochain"\pOh ! Tu es venu pour un combat,\npas vrai" ?\pYoupi ! Tu vas voir comme je\nsuis devenue forte ! Si si !\pAllez ! Pour mes amies les fées\net pour Papa"\pArabella la princesse fée !\nTransformation !
-0x1F50F90: Salut, moi c'est Penny !\p"quoi ?\nCe que je porte là ?\pCe ne sont pas des habits, c'est\nmon pantalon Muplodocus breveté !\pJ'ai toujours adoré les Pokémon\nde type Dragon, alors j'aime\lleur ressembler !\pJe sais absolument tout sur eux,\net il n'y a pas un seul produit\ldérivé Dragon que je n'aie\lpas acheté !\pLes dragons, c'est le top !\pAvec leur queue, leurs ailes\net leur SOUFFLE DE FEU !\pUn vulgaire amateur comme toi n'a\naucune chance contre moi !\pJe vais te le prouver illico !\pGRAWR !
+0x1F50025: Ainsi, tu as vaincu l'élite des\nhommes et des hommes-taupes.\pIl est temps pour toi de prendre\nle trône de Champion.\pPasse la porte au centre de la\nsalle, juste dehors.\pJusqu'au jour où nous, peuple\ntaupe, le prendrons pour nous
+0x1F500FA: Habitant de la surface !\nTu oses te montrer à nouveau ?\pJe te préviens, le peuple taupe ne\ntolère pas deux fois un affront !\pJ'ai trimé sous terre, renforçant\nmon lien avec la Terre\lelle-même\pTout ça en préparation de ce jour !\pEt maintenant, je vais punir tous\nles habitants de la surface\pEn commençant par toi !
+0x1F50338: Salut. Je suis Elias.\pOu plutôt, le cadavre autrefois\nconnu sous le nom d'Elias.\pFaut croire qu'être mort ne me\ndispense pas de mes devoirs de\lmembre du Conseil 4, hein ?\pSaleté de conjoncture\pOuais. J'ai servi pendant des\nannées de mon vivant.\pPuis ces idiots ont déterré mon\ncorps après ma mort, et y ont\lfourré un Pokémon Spectre avec\lmon esprit.\pOh, ne te méprends pas.\pJ'ai toute ma tête, et mes Pokémon\nn'ont rien perdu de leur force.\pEn fait, je crois même qu'ils\nsont devenus encore plus forts\pPff, autant nous battre avant que\ncette stupide prison de chair\lne tombe en morceaux.
+0x1F505EC: Bon, impossible de blâmer le\nmarché du travail pour ma défaite,\lon va en rester là.\pVa affronter le reste du Conseil 4.\pEt petit évite de te faire\ndéterrer pour servir de cobaye\laprès ta mort, d'accord ?\pCrois-en mon expérience.\nC'est vraiment pas pratique.
+0x1F5077D: Hé.\nSurpris de me revoir ?\pPas la peine.\nJe me doutais que ça arriverait.\pIls n'arrêtent pas de me dire\nqu'on me trouvera un remplaçant,\lmais ce jour ne vient jamais\pMais tu n'es pas venu écouter\nun silence de mort. Ou un mort.\pPff Finissons-en avec ce\ncombat.
+0x1F5088E: Même si j'ai envie de trépasser\pJ'ai bien envie de m'attarder ici\njuste le temps de te battre\p Après tout, vivant ou mort,\non ne me respecte déjà pas\ldes masses.\pBref, avance.\pIl reste des membres du Conseil 4\nà battre.
+0x1F509EB: Coucou, l'ami !\pMais non, je ne suis pas perdue !\pJe suis Arabella, Princesse Fée !\nJe fais partie du Conseil 4 !\pPapa était membre avant, mais\nil s'est fait renvoyer.\pAlors je me suis proposée, et me\nvoilà au Conseil 4 !\pC'est génial ! On me paie pour\naffronter des Dresseurs !\p même si je dois en donner\nun peu à Papa.\pEt quand je gagne, j'invite des\ngens à mes goûters !\pAllez, l'ami !\pEn garde ! Je vais te montrer ce\nque vaut une princesse fée !
+0x1F50D4C: Coucou, <0xFD><0x01> !\nJe t'ai manqué ?\pJe viens juste de finir un goûter\navec mes amies.\pDésolée, il faudra attendre le\nprochain\pOh ! Tu es venu pour un combat,\npas vrai ?\pYoupi ! Tu vas voir comme je\nsuis devenue forte ! Si si !\pAllez ! Pour mes amies les fées\net pour Papa\pArabella la princesse fée !\nTransformation !
+0x1F50F90: Salut, moi c'est Penny !\p quoi ?\nCe que je porte là ?\pCe ne sont pas des habits, c'est\nmon pantalon Muplodocus breveté !\pJ'ai toujours adoré les Pokémon\nde type Dragon, alors j'aime\lleur ressembler !\pJe sais absolument tout sur eux,\net il n'y a pas un seul produit\ldérivé Dragon que je n'aie\lpas acheté !\pLes dragons, c'est le top !\pAvec leur queue, leurs ailes\net leur SOUFFLE DE FEU !\pUn vulgaire amateur comme toi n'a\naucune chance contre moi !\pJe vais te le prouver illico !\pGRAWR !
 0x1F51218: Tu n'as pas encore fini, hein ?\nVa affronter le reste du Conseil 4 !\pMoi ? Je vais chercher mon mug\nédition Unys Tranchodon et son\ltapis de souris.\pDépêche-toi, ils ne sont en vente\nque pendant encore trois jours !
 0x1F512EF: Ouahou !\nMême moi, j'ai perdu !\pEt te voilà devenu Maître\nde Borrius !\pIl est temps de passer la porte\ncentrale, juste dehors.\pMoi, je file à la\nDragon-con.\pTu veux que je te rapporte\nquelque chose ?\pNon ? Tant pis pour toi.\nPlus de goodies pour moi !
-0x1F513EE: Oh, te revoilà !\pJ'ai fait monter mes Dragons de\nniveau depuis notre combat !\pEt grâce à mon entraînement\nintensif, ma lecture assidue de\lDragon Mensuel et une fortune\len objets de collection Dragon"\pJe suis la plus grande experte\nen Dragons que tu verras jamais !\pEn garde ! Mes Dragons et moi\nbrûlons d'en découdre !\pGRAWR !
-0x1F5152F: Nooon" cet abonnement était\nsans résiliation possible" et\lje n'ai pas pu te battre"\pJe vais m'acheter un survêtement\nBruyverne pour me consoler.\pEt non, tu n'en auras pas.\pLe titre de double Maître de\nBorrius te suffit bien,\lpas vrai ?\pNe perds pas contre les autres"\navant que je te batte moi-même !
+0x1F513EE: Oh, te revoilà !\pJ'ai fait monter mes Dragons de\nniveau depuis notre combat !\pEt grâce à mon entraînement\nintensif, ma lecture assidue de\lDragon Mensuel et une fortune\len objets de collection Dragon\pJe suis la plus grande experte\nen Dragons que tu verras jamais !\pEn garde ! Mes Dragons et moi\nbrûlons d'en découdre !\pGRAWR !
+0x1F5152F: Nooon cet abonnement était\nsans résiliation possible et\lje n'ai pas pu te battre\pJe vais m'acheter un survêtement\nBruyverne pour me consoler.\pEt non, tu n'en auras pas.\pLe titre de double Maître de\nBorrius te suffit bien,\lpas vrai ?\pNe perds pas contre les autres\navant que je te batte moi-même !
 0x1F51658: Ouahou !\nMême moi, j'ai perdu !\pEt te voilà prêt à défendre\nton titre de Maître !\pMoi, je file à la\nDragon-con.\pTu veux que je te rapporte\nquelque chose ?\pNon ? Tant pis pour toi.\nPlus de goodies pour moi !
-0x1F5175B: Hé, <0xFD><0x01> ! Je t'ai enfin\nrattrapé !\pC'est marrant, j'ai dû mettre mes\nBadges de côté, tout ça à cause\lde mon père"\pMais maintenant qu'on s'est tout\ndit, j'ai vaincu le Conseil 4\lrien que pour te voir.\pAlors revenons à ce qui compte\nvraiment.\pMoi"<0xFC><0x08><0x20> devenir le nouveau Maître !\pJ'ai réuni la crème de la crème\ndans cette équipe"\pAvec un Pokémon super rare trouvé\nau Volcan Cinder !\pPrêt, <0xFD><0x01> ?\nParce que tu vas y passer !
+0x1F5175B: Hé, <0xFD><0x01> ! Je t'ai enfin\nrattrapé !\pC'est marrant, j'ai dû mettre mes\nBadges de côté, tout ça à cause\lde mon père\pMais maintenant qu'on s'est tout\ndit, j'ai vaincu le Conseil 4\lrien que pour te voir.\pAlors revenons à ce qui compte\nvraiment.\pMoi<0xFC><0x08><0x20> devenir le nouveau Maître !\pJ'ai réuni la crème de la crème\ndans cette équipe\pAvec un Pokémon super rare trouvé\nau Volcan Cinder !\pPrêt, <0xFD><0x01> ?\nParce que tu vas y passer !
 0x1F51924: <0xFD><0x01> !\pPas question de te laisser passer\nsans un nouveau combat contre moi !\pComment regarder Papa en face si\nje ne peux même pas battre un\lmalheureux Dresseur ?\pAllez ! Cette fois, ta place au\nsommet est pour moi !
-0x1F51A99: Attends un instant, <0xFD><0x01> !\pEs-tu surpris de me trouver\nici ?\pEh bien, j'ai cru entendre un cri\nfamilier m'appeler"\pC'est à ce moment que j'ai\nrencontré Électhor.\pNon, pas celui du Mont Foudroyant"<0xFC><0x08><0x18>\ncelui qu'Aklove a utilisé pour\lla libération aux Ruines du Néant.\pJ'ignore encore pourquoi il est\nvenu, pourquoi il m'a choisi"\pMais c'était un signe, je devais\nte retrouver et t'affronter\lune fois de plus !\pPour être honnête, te vaincre est\nle but de <0xFD><0x06>, avant tout"\pMais je suis son père, je ne peux\npas laisser mes talents rouiller,\ln'est-ce pas ?\pAlors, aussi minces que soient mes\nchances, je veux tenter de\lte vaincre !
-0x1F51D12: Un instant, <0xFD><0x01>.\pJ'ai bien peur que <0xFD><0x06> et moi\nayons une rivalité familiale"\pQui de nous deux te prendra ton\ntitre de Maître en premier, moi,\lou <0xFD><0x06> ?\pEt j'ai ma fierté de Dresseur.\pJe ne peux pas me permettre de\nperdre face à <0xFD><0x06> si vite.\pAlors je vais tout mettre en jeu\npour te faire mordre la poussière !
-0x1F51E43: Je suppose qu'il ne fallait pas\nattendre moins du Maître.\pJusqu'où vas-tu te renforcer, et\nà quel point <0xFD><0x06> est-il loin\lde te surpasser ?\pEt bien sûr, serai-je assez fort\npour me tenir à ses côtés"
-0x1F51F11: Te voilà, <0xFD><0x01>.\pJe"<0xFC><0x08><0x18> eh bien, quand j'ai su que tu\nétais revenu à la Ligue Pokémon"\pJe me suis dit que c'était ma\nmeilleure chance de te réaffronter.\pJe ne sais pas trop pourquoi.\pEst-ce pour impressionner Marlon,\nou même <0xFD><0x06> ?\pOu cela vient-il de tout\nautre chose" ?\pJe ne m'en souviens plus très bien,\net pourtant, me voici.\pQuoi qu'il en soit, tu ne peux pas\nrefuser mon défi. Prépare-toi !
-0x1F520A4: Oui, <0xFD><0x01> c'est moi, je reviens\npour un nouveau combat.\pQuelque chose s'agite en moi" comme\nsi je devais te vaincre, peu\limporte le prix"\pEst-ce ma fierté de Dresseur ?\nOu peut-être autre chose"\pDans tous les cas, je ne serai pas\ntranquille sans un dernier essai !
-0x1F521B0: Comme c'est étrange"\pTa victoire devrait me réjouir, et\npourtant je ne ressens que dépit"\pHmm" je suis sans doute plus\nmauvais perdant que je croyais.\pJe ne pense qu'à une chose :\nte vaincre, <0xFD><0x01>.\pMais avant ça, je dois rentrer\nvoir si <0xFD><0x06> ou Marlon ont\lun avis sur ma façon\lde me battre"
+0x1F51A99: Attends un instant, <0xFD><0x01> !\pEs-tu surpris de me trouver\nici ?\pEh bien, j'ai cru entendre un cri\nfamilier m'appeler\pC'est à ce moment que j'ai\nrencontré Électhor.\pNon, pas celui du Mont Foudroyant<0xFC><0x08><0x18>\ncelui qu'Aklove a utilisé pour\lla libération aux Ruines du Néant.\pJ'ignore encore pourquoi il est\nvenu, pourquoi il m'a choisi\pMais c'était un signe, je devais\nte retrouver et t'affronter\lune fois de plus !\pPour être honnête, te vaincre est\nle but de <0xFD><0x06>, avant tout\pMais je suis son père, je ne peux\npas laisser mes talents rouiller,\ln'est-ce pas ?\pAlors, aussi minces que soient mes\nchances, je veux tenter de\lte vaincre !
+0x1F51D12: Un instant, <0xFD><0x01>.\pJ'ai bien peur que <0xFD><0x06> et moi\nayons une rivalité familiale\pQui de nous deux te prendra ton\ntitre de Maître en premier, moi,\lou <0xFD><0x06> ?\pEt j'ai ma fierté de Dresseur.\pJe ne peux pas me permettre de\nperdre face à <0xFD><0x06> si vite.\pAlors je vais tout mettre en jeu\npour te faire mordre la poussière !
+0x1F51E43: Je suppose qu'il ne fallait pas\nattendre moins du Maître.\pJusqu'où vas-tu te renforcer, et\nà quel point <0xFD><0x06> est-il loin\lde te surpasser ?\pEt bien sûr, serai-je assez fort\npour me tenir à ses côtés
+0x1F51F11: Te voilà, <0xFD><0x01>.\pJe<0xFC><0x08><0x18> eh bien, quand j'ai su que tu\nétais revenu à la Ligue Pokémon\pJe me suis dit que c'était ma\nmeilleure chance de te réaffronter.\pJe ne sais pas trop pourquoi.\pEst-ce pour impressionner Marlon,\nou même <0xFD><0x06> ?\pOu cela vient-il de tout\nautre chose ?\pJe ne m'en souviens plus très bien,\net pourtant, me voici.\pQuoi qu'il en soit, tu ne peux pas\nrefuser mon défi. Prépare-toi !
+0x1F520A4: Oui, <0xFD><0x01> c'est moi, je reviens\npour un nouveau combat.\pQuelque chose s'agite en moi comme\nsi je devais te vaincre, peu\limporte le prix\pEst-ce ma fierté de Dresseur ?\nOu peut-être autre chose\pDans tous les cas, je ne serai pas\ntranquille sans un dernier essai !
+0x1F521B0: Comme c'est étrange\pTa victoire devrait me réjouir, et\npourtant je ne ressens que dépit\pHmm je suis sans doute plus\nmauvais perdant que je croyais.\pJe ne pense qu'à une chose :\nte vaincre, <0xFD><0x01>.\pMais avant ça, je dois rentrer\nvoir si <0xFD><0x06> ou Marlon ont\lun avis sur ma façon\lde me battre
 0x1F522DA: Je crains de ne pouvoir te laisser\npasser ces portes si facilement.\pVois-tu, mon fils me harcelait pour\nque je te trouve et te batte.\pEt en tant que père, je me dois\nde faire de mon mieux pour lui !\pAh, mais bien sûr, je ne te demande\npas de m'offrir la victoire par\lpitié.\pLaisse-moi me mesurer à la vraie\nforce du Maître de Borrius !
-0x1F52425: Ah" rien d'étonnant, j'imagine"\pÉtrange" je pensais qu'en mettant\nmon travail de côté, j'aurais plus\lde temps pour m'entraîner.\pMais comme toujours, tu avais\nplusieurs longueurs d'avance.\pMais crois-moi, ça ne se passera\npas pareil la prochaine fois !\pBon, je devrais commencer à prendre\nquelques photos de l'endroit"
-0x1F5254C: <0xFD><0x01> !\nAlors te revoilà enfin, hein ?\pDepuis ma défaite contre toi, j'ai\nlonguement réfléchi à ce qui\lme manquait"\pEt surtout à l'héritage de mon\nPapi Arthur"\pMais là, il ne s'agit pas de\nPapi. Ni même de moi.\pIl s'agit d'avoir un Dresseur fort\nen face de moi, qui ne demande\lqu'à être défié !\pEt c'est ça qui fait battre mon\ncoeur, peu importe où et quand !\pC'est parti, <0xFD><0x01> !
+0x1F52425: Ah rien d'étonnant, j'imagine\pÉtrange je pensais qu'en mettant\nmon travail de côté, j'aurais plus\lde temps pour m'entraîner.\pMais comme toujours, tu avais\nplusieurs longueurs d'avance.\pMais crois-moi, ça ne se passera\npas pareil la prochaine fois !\pBon, je devrais commencer à prendre\nquelques photos de l'endroit
+0x1F5254C: <0xFD><0x01> !\nAlors te revoilà enfin, hein ?\pDepuis ma défaite contre toi, j'ai\nlonguement réfléchi à ce qui\lme manquait\pEt surtout à l'héritage de mon\nPapi Arthur\pMais là, il ne s'agit pas de\nPapi. Ni même de moi.\pIl s'agit d'avoir un Dresseur fort\nen face de moi, qui ne demande\lqu'à être défié !\pEt c'est ça qui fait battre mon\ncoeur, peu importe où et quand !\pC'est parti, <0xFD><0x01> !
 0x1F526D4: De retour, <0xFD><0x01> ?\nEh bien, moi aussi.\pJ'ai beau perdre encore et encore,\nc'est plus fort que moi !\pChaque combat me permet de mesurer\nle fossé qu'il me reste à combler\lpour te rattraper !\pVoyons le niveau de force que je\ndois surpasser, <0xFD><0x01> !
 0x1F527B5: Encore du chemin avant de pouvoir\nme dire meilleur que toi,\lhein, <0xFD><0x01> ?\pJ'aurais dû m'en douter, le Maître\nde Borrius n'allait pas perdre\laussi facilement, pas vrai ?\pJe vais me recentrer, ainsi que\nmon lien avec mes Pokémon.\pEt la prochaine fois, je\nt'arracherai cette couronne !
-0x1F53537: Hé, Dresseur !\pTu te souviens de moi ?\nMoi, je me souviens de toi.\pOn s'est rencontrés à Bourg Gurun !\pJ'espérais percer ici, dans l'Est\nde Borrius, mais le seul boulot\ltrouvé, c'est la pêche"\pBref, Cube Corp. m'a engagé comme\npromoteur d'articles de sport.\pIls veulent que j'encourage les\nDresseurs à pêcher plus, pour\lpromouvoir leur gamme phare\lde cannes à pêche.\pAlors voici mes encouragements\npour toi !\pSi tu pêches au moins <0xFC><0x01><0x06><0xFD><0x02><0xFC><0x01><0x08>\nPokémon avec des cannes obtenues\lpar toi-même, tu auras droit\là une récompense !\pAlors, qu'en dis-tu ?\nGénial, non ?\pReviens me voir quand tu auras\npêché au moins <0xFC><0x01><0x06><0xFD><0x02><0xFC><0x01><0x08> fois !
+0x1F53537: Hé, Dresseur !\pTu te souviens de moi ?\nMoi, je me souviens de toi.\pOn s'est rencontrés à Bourg Gurun !\pJ'espérais percer ici, dans l'Est\nde Borrius, mais le seul boulot\ltrouvé, c'est la pêche\pBref, Cube Corp. m'a engagé comme\npromoteur d'articles de sport.\pIls veulent que j'encourage les\nDresseurs à pêcher plus, pour\lpromouvoir leur gamme phare\lde cannes à pêche.\pAlors voici mes encouragements\npour toi !\pSi tu pêches au moins <0xFC><0x01><0x06><0xFD><0x02><0xFC><0x01><0x08>\nPokémon avec des cannes obtenues\lpar toi-même, tu auras droit\là une récompense !\pAlors, qu'en dis-tu ?\nGénial, non ?\pReviens me voir quand tu auras\npêché au moins <0xFC><0x01><0x06><0xFD><0x02><0xFC><0x01><0x08> fois !
 0x1F53820: Après ta belle prestation,\nune dernière tâche t'attend.\pPromeus encore les cannes Cube\nCorp. en pêchant des Pokémon\lau moins 50 fois de plus, soit\lun total de <0xFC><0x01><0x06><0xFD><0x02><0xFC><0x01><0x08> fois !\pCe sera facile pour un fin\npêcheur tel que toi.
-0x1F53B2E: Un Dresseur fantastique !\pLaisse-moi te donner un petit\nconseil.\pPendant un combat de Dresseurs,\nsi on vole les objets de tes\lPokémon, pas de panique.\pIls te seront rendus sains et\nsaufs après le combat.\p"Mais les objets à usage unique\nsemblent disparaître.
+0x1F53B2E: Un Dresseur fantastique !\pLaisse-moi te donner un petit\nconseil.\pPendant un combat de Dresseurs,\nsi on vole les objets de tes\lPokémon, pas de panique.\pIls te seront rendus sains et\nsaufs après le combat.\p Mais les objets à usage unique\nsemblent disparaître.
 0x1F53D0A: Seul le pire des employés te\ndéconseillerait d'acheter\lun certain article.\pComme cette femme qui remplit\nles rayons, par exemple.\pElle n'a aucun sens du commerce.\pMoi, en revanche, je vais te\ndire ceci.\pAchète un max de <0xFC><0x01><0x06>Max Repousse<0xFC><0x01><0x08> !\pC'est le meilleur des Repousse en\nrapport qualité-prix !
 0x1F53E2C: Un conseil de Dresseur :\nn'achète pas d'Hyper Balls.\pElles ne valent pas leur prix.\pPréfère plutôt des Poké Balls\nspéciales comme la <0xFC><0x01><0x06>Rapide Ball<0xFC><0x01><0x04>\lou la <0xFC><0x01><0x06>Filet Ball<0xFC><0x01><0x04>.\pElles coûtent moins cher et\ncapturent souvent mieux.\pIl n'y en a pas ici, hélas, mais\nbien d'autres Boutiques de\lBorrius en vendent.
 0x1F54459: Ouah ! Beau travail !\nQuelle technique remarquable !\pJ'ignorais que toutes ces\ncapacités étaient des CT !\pGrâce à toi, j'ai compris la\nvraie richesse des CT.\pTu es un Maître des CT !\pMerci !\nJ'étais ravi de les voir !\pEn récompense, accepte ceci\nen cadeau !
@@ -23377,9 +23377,9 @@
 0x1F92D85: <0xFC><0x01><0x02><0xFD><0x01> reçoit <0xFD><0x02> !
 0x1F9333C: Désolé, mais la Zone de Combat\nest en cours de rénovation.
 0x1F9708C: Houah !\pJe peux réduire la stat <0xFC><0x01><0x06><0xFD><0x03><0xFC><0x01><0x08>\nde <0xFC><0x01><0x06><0xFD><0x02><0xFC><0x01><0x08> à <0xFC><0x01><0x06>zéro<0xFC><0x01><0x08> !\pJe le fais !?
-0x1F97681: La Puissance Cachée de <0xFC><0x01><0x06><0xFD><0x02><0xFC><0x01><0x04>\nest du type <0xFC><0x01><0x06><0xFD><0x04><0xFC><0x01><0x04>"\pChanger la Puissance Cachée\nde <0xFC><0x01><0x06><0xFD><0x02><0xFC><0x01><0x04> en <0xFC><0x01><0x06><0xFD><0x03><0xFC><0x01><0x04>" ?
-0x1F976EF: La Puissance Cachée de <0xFC><0x01><0x06><0xFD><0x02><0xFC><0x01><0x04> est\ndevenue <0xFC><0x01><0x06><0xFD><0x03><0xFC><0x01><0x04>"
-0x1F97745: Quoi"\pLa Puissance Cachée de <0xFC><0x01><0x06><0xFD><0x02><0xFC><0x01><0x04>\nest déjà du type <0xFC><0x01><0x06><0xFD><0x03><0xFC><0x01><0x04>"
+0x1F97681: La Puissance Cachée de <0xFC><0x01><0x06><0xFD><0x02><0xFC><0x01><0x04>\nest du type <0xFC><0x01><0x06><0xFD><0x04><0xFC><0x01><0x04>\pChanger la Puissance Cachée\nde <0xFC><0x01><0x06><0xFD><0x02><0xFC><0x01><0x04> en <0xFC><0x01><0x06><0xFD><0x03><0xFC><0x01><0x04> ?
+0x1F976EF: La Puissance Cachée de <0xFC><0x01><0x06><0xFD><0x02><0xFC><0x01><0x04> est\ndevenue <0xFC><0x01><0x06><0xFD><0x03><0xFC><0x01><0x04>
+0x1F97745: Quoi\pLa Puissance Cachée de <0xFC><0x01><0x06><0xFD><0x02><0xFC><0x01><0x04>\nest déjà du type <0xFC><0x01><0x06><0xFD><0x03><0xFC><0x01><0x04>
 0x1F9858F: Veux-tu donnnner <0xFC><0x01><0x06><0xFD><0x03><0xFC><0x01><0x08>\nà <0xFC><0x01><0x06><0xFD><0x02><0xFC><0x01><0x08> ?\lÇa coûûûte <0xFC><0x01><0x06><0xFD><0x04><0xFC><0x01><0x08> BP.
 0x1F98E23: Tu as <0xFC><0x01><0x06><0xFD><0x02><0xFC><0x01><0x02> BP.
 0x1F9954C: <0xFC><0x01><0x06><0xFD><0x0C><0xFD><0x07>,\nça fera <0xFC><0x01><0x06><0xFD><0x03><0xFD><0x07> BP. D'accord ?
@@ -23389,7 +23389,7 @@
 0x1F9BB4E: Le Caïd d'Antisis utilisera\n<0xFC><0x01><0x06><0xFD><0x02><0xFC><0x01><0x08>, <0xFC><0x01><0x06><0xFD><0x03><0xFC><0x01><0x08> ou\l<0xFC><0x01><0x06><0xFD><0x04><0xFC><0x01><0x08>.
 0x9678F0: <0xFD><0x13>\nest K.O. !\l
 0x41E145: <0xFC><0x01><0x02><0xFC><0x02><0x01><0xFC><0x03><0x03>L'échange a été annulé.
-0x41E199: <0xFC><0x01><0x02><0xFC><0x02><0x01><0xFC><0x03><0x03>En attente que ton ami\ntermine"
+0x41E199: <0xFC><0x01><0x02><0xFC><0x02><0x01><0xFC><0x03><0x03>En attente que ton ami\ntermine
 0x75318A: <0xFC><0x01><0x02>Tu as reniflé des feuilles de\nMystherbe.\pL'odeur répugnante te monte\nau nez.
 0x75DA84: <0xFC><0x01><0x02>Fille : <0xFC><0x01><0x04>Ouiiin !\pPapa ! Il m'a fait mal !
 0x75DAAF: <0xFC><0x01><0x02>Homme : <0xFC><0x01><0x08>C'est bon ma puce…\pPapa ne laissera plus ce\nPokémon te faire de mal.
@@ -23398,10 +23398,10 @@
 0x7B5C7C: <0xFC><0x01><0x02><0xFD><0x01> reçoit le Badge Automne\nde Mel !
 0x7C0506: <0xFC><0x01><0x02><0xFD><0x01> reçoit le Badge Éclair\nde Galavan !
 0x7C5A7F: <0xFC><0x01><0x04>N'attends aucune pitié de\n<0xFC><0x01><0x02>The Shadows<0xFC><0x01><0x04> !
-0x7D6147: <0xFC><0x01><0x02>Marlon : <0xFC><0x01><0x08>Arceus"\pLe créateur de l'univers"
-0x7D617A: <0xFC><0x01><0x02>Arceus : <0xFC><0x01><0x08>"OUI.\pVOICI L'HEURE DE TON JUGEMENT.
+0x7D6147: <0xFC><0x01><0x02>Marlon : <0xFC><0x01><0x08>Arceus\pLe créateur de l'univers
+0x7D617A: <0xFC><0x01><0x02>Arceus : <0xFC><0x01><0x08>OUI.\pVOICI L'HEURE DE TON JUGEMENT.
 0x7E7FE2: <0xFC><0x01><0x02>Tu as donné un Os Rare au gars\ncontre 10000¥.
-0x7F2207: Sbire 1 : <0xFC><0x01><0x08>Les secousses ont cessé"\p<0xFC><0x01><0x02>Sbire 2 : <0xFC><0x01><0x04>Ça veut dire qu'ils\nsont entrés ?\p<0xFC><0x01><0x02>Sbire 3 : <0xFC><0x01><0x08>Tenez-vous prêts,\nils descendent l'escalier !
+0x7F2207: Sbire 1 : <0xFC><0x01><0x08>Les secousses ont cessé\p<0xFC><0x01><0x02>Sbire 2 : <0xFC><0x01><0x04>Ça veut dire qu'ils\nsont entrés ?\p<0xFC><0x01><0x02>Sbire 3 : <0xFC><0x01><0x08>Tenez-vous prêts,\nils descendent l'escalier !
 0x7F991F: <0xFC><0x01><0x02><0xFD><0x01> a remis les chaussettes\nsales au sbire de Black <0xFD><0x01>.
 0x8CB66F: <0xFC><0x01><0x02><0xFD><0x01> reçoit 5 Poké Balls\nde Log !
 0x1EE0A84: <0xFC><0x01><0x02>Le Défi des Champions Classiques :\ndifficulté <0xFC><0x01><0x06>Démente<0xFC><0x01><0x02> débloquée !
@@ -23427,11 +23427,11 @@
 0x1F0A83E: <0xFC><0x01><0x02>Galeking te repousse avec son\npuissant Hurlement !
 0x1F0B48A: <0xFC><0x01><0x02>La porte est scellée.
 0x1F0BE5E: <0xFC><0x01><0x02><0xFD><0x01> reçoit de Maman le module\nde combat du Super Cube !
-0x1F0D98F: <0xFC><0x01><0x02>Cresselia s'est envolée"\pQuelque chose scintille là où\nse trouvait Cresselia"
-0x1F0D9E7: <0xFC><0x01><0x02>Quelque chose scintille là où\nse trouvait Cresselia"
+0x1F0D98F: <0xFC><0x01><0x02>Cresselia s'est envolée\pQuelque chose scintille là où\nse trouvait Cresselia
+0x1F0D9E7: <0xFC><0x01><0x02>Quelque chose scintille là où\nse trouvait Cresselia
 0x1F0E1D0: <0xFC><0x01><0x02>Oups !\nPas de Boîte Jetons !
 0x1F0E1F3: <0xFC><0x01><0x02>Tu as trop de Jetons !
-0x1F0E66E: Il faut la <0xFC><0x01><0x06>Boîte Jetons<0xFC><0x01><0x02>"
+0x1F0E66E: Il faut la <0xFC><0x01><0x06>Boîte Jetons<0xFC><0x01><0x02>
 0x1F0EF49: Veux-tu activer le\n<0xFC><0x01><0x06>New Game +<0xFC><0x01><0x02> ?
 0x1F106BE: Veux-tu activer le\nrandomiseur d'<0xFC><0x01><0x06>espèces<0xFC><0x01><0x02> ?
 0x1F106F5: Le randomiseur d'<0xFC><0x01><0x06>espèces<0xFC><0x01><0x02>\na été activé.
@@ -23439,8 +23439,8 @@
 0x1F107D3: Le randomiseur de <0xFC><0x01><0x06>Talents<0xFC><0x01><0x02>\na été activé.
 0x1F109DA: Veux-tu activer le\n<0xFC><0x01><0x06>Mode Sandbox<0xFC><0x01><0x02> ?
 0x1F1516B: <0xFC><0x01><0x02><0xFD><0x01> reçoit un Oeuf du\nKinésiste !
-0x1F15D08: <0xFC><0x01><0x02><0xFD><0x02> renifle la\nplante étrange"\pIl semble plus fort !
-0x1F15D7F: <0xFC><0x01><0x02>L'Ortide de Mirskle renifle la\nplante étrange"\pIl semble plus fort !
+0x1F15D08: <0xFC><0x01><0x02><0xFD><0x02> renifle la\nplante étrange\pIl semble plus fort !
+0x1F15D7F: <0xFC><0x01><0x02>L'Ortide de Mirskle renifle la\nplante étrange\pIl semble plus fort !
 0x1F15FAA: <0xFC><0x01><0x02><0xFD><0x01> reçoit le Badge Feuille\nde Mirskle !
 0x1F16852: <0xFC><0x01><0x02><0xFD><0x01> reçoit le Badge Vision\nde Véga !
 0x1F171F2: <0xFC><0x01><0x02><0xFD><0x01> reçoit le Badge Ailes\nd'Alice !
@@ -23454,24 +23454,24 @@
 0x1F24D71: <0xFC><0x01><0x02><0xFD><0x01> reprend le Stat Scanner.
 0x1F2721D: <0xFC><0x01><0x02>Le Prismillon retourne à son\nDresseur à Bourg Magnolia.
 0x1F28305: <0xFC><0x01><0x02>On dirait que quelqu'un a oublié\nson mouchoir.\pRendons-le à son propriétaire !
-0x1F2AE3C: "\p<0xFC><0x01><0x02>Le garçon propose un échange.\pVeux-tu échanger un\n<0xFC><0x01><0x06><0xFD><0x02><0xFC><0x01><0x02> contre son <0xFC><0x01><0x06><0xFD><0x03><0xFC><0x01><0x02> ?
+0x1F2AE3C:\p<0xFC><0x01><0x02>Le garçon propose un échange.\pVeux-tu échanger un\n<0xFC><0x01><0x06><0xFD><0x02><0xFC><0x01><0x02> contre son <0xFC><0x01><0x06><0xFD><0x03><0xFC><0x01><0x02> ?
 0x1F2AE94: <0xFC><0x01><0x02>Le garçon ne cherche pas ce\nPokémon.\pIl veut un <0xFC><0x01><0x06><0xFD><0x02><0xFC><0x01><0x02>.
 0x1F2B7B9: <0xFC><0x01><0x02>Le <0xFD><0x02> dort.
 0x1F31574: <0xFC><0x01><0x02><0xFD><0x01> décide de suivre Jax !
-0x1F47B99: Bon sang"<0xFC><0x08><0x18> Ivory commence VRAIMENT\nà me taper sur les nerfs"\pIl y a peu, j'avais hâte de\nrencontrer mes parents, mais on\ldirait qu'elle se fiche de moi\let de ma soeur !\pC'est quoi, son problème ?
-0x1F4822B: <0xFC><0x01><0x04>Désolé, <0xFD><0x06>"<0xFC><0x08><0x18> mais c'est pour\nton bien.\pReste ici, à l'abri du danger,\njusqu'à la fin du sommet.
-0x1F48620: Non, Krookodile !\nTu ne peux pas pousser !\pUn rocher bloque le passage !\pArgh"<0xFC><0x08><0x18> si seulement un de mes\nPokémon connaissait Tunnel"
-0x1F49193: Quoi !? Toi"<0xFC><0x08><0x20> comment est-ce\npossible !\pCe ne peut être"<0xFC><0x08><0x18> Hoopa !
-0x1F49366: Tss"<0xFC><0x08><0x18> comme tu voudras.\pJe dois juste te neutraliser\nassez longtemps.\pHoopa ! Prépare-toi à"
-0x1F49B36: Quoi !? L'Arme"<0xFC><0x08><0x18> elle s'est\nactivée toute seule !
-0x1F4A48E: C'est"<0xFC><0x08><0x18> fini ?
-0x1F4A6B1: Alors, c'est la fin,\n<0xFD><0x01> ?\pNon"<0xFC><0x08><0x18> il me reste encore une\nchose à faire.
-0x1F4AB82: Le vieux"<0xFC><0x08><0x20> non"<0xFC><0x08><0x20> Papa"\pIl t'en a fallu du temps"<0xFC><0x08><0x18> pour\nenfin dire ça"
-0x1F4ACDC: Hé, <0xFD><0x01>"<0xFC><0x08><0x18>\nJe veux te donner ceci.\pJe l'ai ramassé quand on était\nenfermés dans la base des Shadows.
-0x1F4B75A: "\p"donc"<0xFC><0x08><0x18> voilà.\p"\pJe vois. Ça se tient,\naprès tout.\pJ'ai toujours su que tu étais le\nplus fort de nous deux, même\lavec l'avance que j'avais sur toi"
-0x1F4C7F4: Oh ! <0xFD><0x01> !\nIl t'a fait ça à toi aussi !?\pLe fourbe"<0xFC><0x08><0x18> il va le payer !
-0x1F4CA28: Il est fou"<0xFC><0x08><0x18> il croit vraiment\npouvoir recommencer"\pPrudence, <0xFD><0x01>.\nIl est toujours aussi déterminé.\pFais équipe avec moi, et mettons\nfin à ses plans pour de bon !\pFinissons-en une fois pour toutes !
-0x1F4CB0C: Pourquoi"<0xFC><0x08><0x18> pourquoi me voler\ntout ce que j'ai"\pMes rêves"<0xFC><0x08><0x18> mes biens"<0xFC><0x08><0x18>\nma"<0xFC><0x08><0x18> victoire"
+0x1F47B99: Bon sang<0xFC><0x08><0x18> Ivory commence VRAIMENT\nà me taper sur les nerfs\pIl y a peu, j'avais hâte de\nrencontrer mes parents, mais on\ldirait qu'elle se fiche de moi\let de ma soeur !\pC'est quoi, son problème ?
+0x1F4822B: <0xFC><0x01><0x04>Désolé, <0xFD><0x06><0xFC><0x08><0x18> mais c'est pour\nton bien.\pReste ici, à l'abri du danger,\njusqu'à la fin du sommet.
+0x1F48620: Non, Krookodile !\nTu ne peux pas pousser !\pUn rocher bloque le passage !\pArgh<0xFC><0x08><0x18> si seulement un de mes\nPokémon connaissait Tunnel
+0x1F49193: Quoi !? Toi<0xFC><0x08><0x20> comment est-ce\npossible !\pCe ne peut être<0xFC><0x08><0x18> Hoopa !
+0x1F49366: Tss<0xFC><0x08><0x18> comme tu voudras.\pJe dois juste te neutraliser\nassez longtemps.\pHoopa ! Prépare-toi à
+0x1F49B36: Quoi !? L'Arme<0xFC><0x08><0x18> elle s'est\nactivée toute seule !
+0x1F4A48E: C'est<0xFC><0x08><0x18> fini ?
+0x1F4A6B1: Alors, c'est la fin,\n<0xFD><0x01> ?\pNon<0xFC><0x08><0x18> il me reste encore une\nchose à faire.
+0x1F4AB82: Le vieux<0xFC><0x08><0x20> non<0xFC><0x08><0x20> Papa\pIl t'en a fallu du temps<0xFC><0x08><0x18> pour\nenfin dire ça
+0x1F4ACDC: Hé, <0xFD><0x01><0xFC><0x08><0x18>\nJe veux te donner ceci.\pJe l'ai ramassé quand on était\nenfermés dans la base des Shadows.
+0x1F4B75A:\p donc<0xFC><0x08><0x18> voilà.\p\pJe vois. Ça se tient,\naprès tout.\pJ'ai toujours su que tu étais le\nplus fort de nous deux, même\lavec l'avance que j'avais sur toi
+0x1F4C7F4: Oh ! <0xFD><0x01> !\nIl t'a fait ça à toi aussi !?\pLe fourbe<0xFC><0x08><0x18> il va le payer !
+0x1F4CA28: Il est fou<0xFC><0x08><0x18> il croit vraiment\npouvoir recommencer\pPrudence, <0xFD><0x01>.\nIl est toujours aussi déterminé.\pFais équipe avec moi, et mettons\nfin à ses plans pour de bon !\pFinissons-en une fois pour toutes !
+0x1F4CB0C: Pourquoi<0xFC><0x08><0x18> pourquoi me voler\ntout ce que j'ai\pMes rêves<0xFC><0x08><0x18> mes biens<0xFC><0x08><0x18>\nma<0xFC><0x08><0x18> victoire
 0x1F5946C: <0xFC><0x01><0x02><0xFD><0x02> veut encore t'affronter !
 0x1F59C1B: <0xFC><0x01><0x02><0xFD><0x01> reçoit ¥<0xFD><0x02> de\nla femme !
 0x1F59E12: <0xFC><0x01><0x02>Le bébé dort paisiblement.
@@ -23493,7 +23493,7 @@
 0x1F78A89: <0xFC><0x01><0x02>La fillette a disparu.\pÉtait-elle vraiment là ?
 0x1F7E2CA: <0xFC><0x01><0x02><0xFD><0x01> décide de suivre Milo !
 0x1F7E41A: <0xFC><0x01><0x02>En faisant équipe avec Milo,\ntes <0xFC><0x01><0x06>3 premiers<0xFC><0x01><0x02> Pokémon valides\lseront choisis pour le combat.
-0x1F7ED32: Zzzz"\p<0xFC><0x01><0x02>Elle semble s'être endormie\nà son poste.\pMieux vaut passer ailleurs.
+0x1F7ED32: Zzzz\p<0xFC><0x01><0x02>Elle semble s'être endormie\nà son poste.\pMieux vaut passer ailleurs.
 0x1F82C70: <0xFC><0x01><0x02><0xFD><0x01> trouve\nun Oeuf rare !
 0x1F84F23: <0xFC><0x01><0x02><0xFD><0x02> se fond dans un voile\nde glace.
 0x1F86526: <0xFC><0x01><0x02>Le Guerrier de l'Ombre combat\nactuellement une Floette.\pRetirer sa cape ?
@@ -23501,14 +23501,14 @@
 0x1F87890: <0xFC><0x01><0x02>Le Guerrier de l'Ombre reste\nimmobile.
 0x1F92746: <0xFC><0x01><0x02>L'Empreinte <0xFC><0x01><0x06><0xFD><0x02><0xFC><0x01><0x02> s'ajoute à\nla Carte Frontière de <0xFD><0x01> !
 0x1F92C5F: <0xFC><0x01><0x02><0xFD><0x01> reçoit le Pokédex !
-0x1F97B08: <0xFC><0x01><0x02>Le regard de <0xFD><0x02> est vide.\pComme s'il ne te reconnaissait\nplus"
+0x1F97B08: <0xFC><0x01><0x02>Le regard de <0xFD><0x02> est vide.\pComme s'il ne te reconnaissait\nplus
 0x1F9CB7E: <0xFC><0x01><0x02>La fillette semble avoir été\nemportée par le vent.
 0x1F9CDC0: <0xFC><0x01><0x02><0xFD><0x01> reçoit ¥4000 !
 0x1F9D20A: <0xFC><0x01><0x02><0xFD><0x01> décide de suivre Willy !
 0x1FA0192: <0xFC><0x01><0x02>Le sbire se sent plus fort !
 0x1FA0B4E: <0xFC><0x01><0x02>Tu montres ta Carte Dresseur\nau garde.
 0x1FA1B7C: <0xFC><0x01><0x02>Le savant est assommé.
-0x1FAA2EF: <0xFC><0x01><0x02>Le <0xFD><0x02> dort\nprofondément"
+0x1FAA2EF: <0xFC><0x01><0x02>Le <0xFD><0x02> dort\nprofondément
 0x1FAAD21: <0xFC><0x01><0x02>C'est un objet rare appartenant\nau Prof. Log.
 0x1FAB000: <0xFC><0x01><0x02><0xFD><0x01> décide de suivre Tessy !
 0x1FAC792: <0xFC><0x01><0x02><0xFD><0x01> décide de suivre la\nfillette !
@@ -23519,26 +23519,26 @@
 0x277A12: Les picots autour de <0xFD><0x0F>\nont disparu !
 0x416537: Jetons :\n<0xFD><0x02><0xFC><0x09>
 0x4171CC: Pas un OEuf.
-0x41B2F1: 2, et " " " 
+0x41B2F1: 2, et
 0x41CF50: Tu veux rejouer à BERRY CRUSH ?
-0x41E118: <0xFC><0x01><0x02><0xFC><0x02><0x01><0xFC><0x03><0x03>Attente communication"\nPatiente.
+0x41E118: <0xFC><0x01><0x02><0xFC><0x02><0x01><0xFC><0x03><0x03>Attente communication\nPatiente.
 0x41E16B: <0xFC><0x01><0x02><0xFC><0x02><0x01><0xFC><0x03><0x03>C'est ton seul Pokémon\npour le combat.
-0x41E493: <0xFC><0x08><0x20>1, <0xFC><0x08><0x0F>2, et <0xFC><0x08><0x0F>" <0xFC><0x08><0x0F>" <0xFC><0x08><0x0F>" <0xFC><0x08><0x0F><0xFC><0x10><0x31><0x00>Pouf !\p
+0x41E493: <0xFC><0x08><0x20>1, <0xFC><0x08><0x0F>2, et <0xFC><0x08><0x0F> <0xFC><0x08><0x0F> <0xFC><0x08><0x0F> <0xFC><0x08><0x0F><0xFC><0x10><0x31><0x00>Pouf !\p
 0x4571B8: Recommence depuis le début.
 0x4574A0: <0xFD><0x03> te contacte pour\n<0xFD><0x02>. Accepter ?
 0x457514: <0xFD><0x02> !\nOK pour ces membres ?
 0x457530: Annuler le MODE <0xFD><0x02>\navec ces membres ?
-0x4578BC: Attente de la réponse de <0xFD><0x02>\nsur l'échange"
+0x4578BC: Attente de la réponse de <0xFD><0x02>\nsur l'échange
 0x457950: Communication avec <0xFD><0x02><0xFC><0x08><0x0F>.<0xFC><0x08><0x0F>.<0xFC><0x08><0x0F>.\n<0xFC><0x08><0x0F>.<0xFC><0x08><0x0F>.<0xFC><0x08><0x0F>.<0xFC><0x08><0x0F>.<0xFC><0x08><0x0F>.<0xFC><0x08><0x0F>.<0xFC><0x08><0x0F>.<0xFC><0x08><0x0F>.<0xFC><0x08><0x0F>.<0xFC><0x08><0x0F>.<0xFC><0x08><0x0F>.<0xFC><0x08><0x0F>.<0xFC><0x08><0x0F>.<0xFC><0x08><0x0F>.<0xFC><0x08><0x0F>.<0xFC><0x08><0x0F>.<0xFC><0x08><0x0F>.<0xFC><0x08><0x0F>.
 0x4579BC: Patiente un instant<0xFC><0x08><0x0F>.<0xFC><0x08><0x0F>.<0xFC><0x08><0x0F>.<0xFC><0x08><0x0F>.<0xFC><0x08><0x0F>.<0xFC><0x08><0x0F>.\n<0xFC><0x08><0x0F>.<0xFC><0x08><0x0F>.<0xFC><0x08><0x0F>.<0xFC><0x08><0x0F>.<0xFC><0x08><0x0F>.<0xFC><0x08><0x0F>.<0xFC><0x08><0x0F>.<0xFC><0x08><0x0F>.<0xFC><0x08><0x0F>.<0xFC><0x08><0x0F>.<0xFC><0x08><0x0F>.<0xFC><0x08><0x0F>.<0xFC><0x08><0x0F>.<0xFC><0x08><0x0F>.<0xFC><0x08><0x0F>.<0xFC><0x08><0x0F>.<0xFC><0x08><0x0F>.<0xFC><0x08><0x0F>.
 0x4580C0: Pour me présenter, je vais te\nmontrer ma Carte Dresseur.
 0x458164: Très bien !\nDiscutons !<0xFC><0x08><0x3C>
 0x4581B0: Désolé de l'attente !\nDiscutons.<0xFC><0x08><0x3C>
-0x458218: Accès au chat"<0xFC><0x08><0x3C>
-0x45836C: Oh ? Où ai-je mis ma Carte\nDresseur ?"\lDésolé ! Une autre fois !\p
+0x458218: Accès au chat<0xFC><0x08><0x3C>
+0x45836C: Oh ? Où ai-je mis ma Carte\nDresseur ?\lDésolé ! Une autre fois !\p
 0x4584FC: Oh, d'accord.\nReviens quand tu veux !\p
-0x458528: Oh"\nPasse quand tu veux.\p
-0x458898: Autrement dit"\nOui ! C'est ça !\p
+0x458528: Oh\nPasse quand tu veux.\p
+0x458898: Autrement dit\nOui ! C'est ça !\p
 0x45893C: On se montre nos Cartes Dresseur\npour faire connaissance.\p
 0x458A24: Je fais un échange de Pokémon.\p
 0x458A98: <0xFD><0x02> consulte le\nTABLEAU ÉCHANGE.\p
@@ -23550,7 +23550,7 @@
 0x459160: Berry Crush !\nChoisis le Meneur.
 0x459188: Cueillette Baies Dodrio !\nChoisis le Meneur.
 0x459314: Aucune News partagée\npour le moment.
-0x7F165E: Sbire 1 : <0xFC><0x01><0x08>Euh"go"Floe"
+0x7F165E: Sbire 1 : <0xFC><0x01><0x08>Euh go Floe
 0x830068: Le voeu ardent de <0xFD><0x02>\nest parvenu à <0xFD><0x00> !
 0x920637: Flammes écarlates\nsur tous les Pokémon\nau combat. Peut\naussi brûler.
 0xA4D65C: Course auto <0xFC><0x01><0x06>activée<0xFC><0x01><0x02>.
@@ -23560,16 +23560,16 @@
 0xA4D6ED: Le Surf turbo a été <0xFC><0x01><0x06>activé<0xFC><0x01><0x02>.
 0x1EEF27E: <0xFC><0x01><0x02>Réveiller le Pokémon ?
 0x1EEFAB6: <0xFC><0x01><0x02>Le <0xFD><0x02> a fui.
-0x1EFED09: <0xFC><0x01><0x02>Le Pokémon observe calmement\n<0xFD><0x01>"
-0x1EFED2E: <0xFC><0x01><0x02>Giratina observe calmement\n<0xFD><0x01>"
+0x1EFED09: <0xFC><0x01><0x02>Le Pokémon observe calmement\n<0xFD><0x01>
+0x1EFED2E: <0xFC><0x01><0x02>Giratina observe calmement\n<0xFD><0x01>
 0x1F07B4F: <0xFC><0x01><0x02><0xFD><0x02> a été relâché.\nAu revoir, <0xFD><0x02> !
 0x1F0EF23: <0xFC><0x01><0x02>Passer le dialogue/la scène ?
 0x1F10DC2: Le <0xFC><0x01><0x06>Mode Sandbox<0xFC><0x01><0x02> a été activé.
 0x1F367B4: <0xFC><0x01><0x02><0xFD><0x01> a levé la barrière !
 0x1F367D2: <0xFC><0x01><0x02>Les Pokémon libérés semblent\ngravir la montagne.
-0x1F430AF: Allez"<0xFC><0x08><0x10> ouvre-toi"<0xFC><0x08><0x30>
-0x1F47351: On y est"<0xFC><0x08><0x18> c'est Borrius Est !
-0x1F49AA3: Non"<0xFC><0x08><0x18> Non"<0xFC><0x08><0x18> Non !\pC'est impossible !\pC'EST IMPOSSIBLE !
+0x1F430AF: Allez<0xFC><0x08><0x10> ouvre-toi<0xFC><0x08><0x30>
+0x1F47351: On y est<0xFC><0x08><0x18> c'est Borrius Est !
+0x1F49AA3: Non<0xFC><0x08><0x18> Non<0xFC><0x08><0x18> Non !\pC'est impossible !\pC'EST IMPOSSIBLE !
 0x1F5A439: <0xFC><0x01><0x02><0xFD><0x01> a vendu l'OEuf : <0xFD><0x02>¥ !
 0x1F5A455: <0xFC><0x01><0x02><0xFD><0x01> a vendu <0xFD><0x02> OEuf<0xFD><0x04> de\nl'équipe pour <0xFD><0x03>¥ !
 0x1F5A47F: <0xFC><0x01><0x02><0xFD><0x01> a vendu <0xFD><0x02> OEuf<0xFD><0x04> de\nla Boîte pour <0xFD><0x03>¥ !
@@ -24680,8 +24680,8 @@
 0x7BD1BB: Goon 1 : <0xFC><0x01><0x08>Hein ?\nC'est quoi ce môme ?\pOn va l'amocher et lui piquer\nson fric !
 0x41B03F: Ici, à <0xFD><0x02>,<0x30><0xFD><0x01>\na obtenu l'objet <0xFD><0x03>.
 0x7D761F: Véga : <0xFC><0x01><0x08>Groudon !\pFais trembler la terre !
-0x7F3707: Guerrier Ombre : <0xFC><0x01><0x08>Toi""""\pMeurs"""
-0x8CD194: <0xFC><0x01><0x08>Ce Pokémon"
+0x7F3707: Guerrier Ombre : <0xFC><0x01><0x08>Toi\pMeurs
+0x8CD194: <0xFC><0x01><0x08>Ce Pokémon
 0xA4A98C: <0xFC><0x01><0x02><0xFC><0x03><0x09>Coup critique !
 0xA4A9A2: <0xFC><0x01><0x02><0xFC><0x03><0x09>Coup critique<0xFC><0x01><0x01><0xFC><0x03><0x06> sur\n<0xFD><0x10>!
 0xA4D712: Le Turbo Surf a été <0xFC><0x01><0x06>désactivé<0xFC><0x01><0x02>.
@@ -24695,10 +24695,10 @@
 0x1F23344: <0xFC><0x01><0x02><0xFD><0x01> livre le colis.
 0x1F24D0C: <0xFC><0x01><0x02><0xFD><0x01> remet le Carnet.
 0x1F24FE7: <0xFC><0x01><0x02><0xFD><0x01> remet le\nScanner de Stats.
-0x1F4AFA2: <0xFD><0x01> !\pArthur vient de m'annoncer la\nbonne nouvelle !\pDieu merci, tu nous reviens en un\nseul morceau !\pEt bien sûr, merci à toi !\pToi, Jax, <0xFD><0x06>"<0xFC><0x08><0x18> vous avez tout\ndonné pour sauver Borrius.\pBien sûr, on m'a dit que tout n'est\npas encore réglé avec ce\l<0xB1>Aklove<0xB2>, mais tu pourras t'en\lsoucier plus tard, je suppose.\pPour l'instant, pense plutôt à ce\nsiège vide, celui du Champion !\pAlors tiens, voilà qui devrait\nt'être utile.
-0x1F4C7AF: Aklove !\pJe suis là, sans escorte, comme\nconvenu"<0xFC><0x08><0x18> maintenant rends-nous\lPapi Arthur !
-0x1F4CC4B: Très bien"<0xFC><0x08><0x20> je vais te le dire"\pMon ancêtre, celui que les légendes\nnomment <0xB1>le roi étranger<0xB2>\lde la Grande Guerre"\pAujourd'hui encore, 3000 ans plus\ntard, il parcourt toujours ce monde.\pUne fois achevé ce qu'il avait\ncommencé"<0xFC><0x08><0x18> une fois cette guerre\lmenée à son vrai terme"\pAlors il pourrait reposer en paix.\pLa soumission de Borrius"<0xFC><0x08><0x18> aurait\nenfin exaucé sa dernière volonté.\pMais maintenant"<0xFC><0x08><0x18> ce n'est plus\npossible"
-0x1F50BD0: Quand tu en auras fini avec le reste\ndu Conseil 4, tu viendras encore à\lun de mes goûters ?\pOn va tellement s'amuser !\pSinon" dis-moi : tu sais ce que\nveut dire <0xB1>bon à rien<0xB2> ?\pC'est comme ça qu'on appelle Papa\nmaintenant.
+0x1F4AFA2: <0xFD><0x01> !\pArthur vient de m'annoncer la\nbonne nouvelle !\pDieu merci, tu nous reviens en un\nseul morceau !\pEt bien sûr, merci à toi !\pToi, Jax, <0xFD><0x06><0xFC><0x08><0x18> vous avez tout\ndonné pour sauver Borrius.\pBien sûr, on m'a dit que tout n'est\npas encore réglé avec ce\l<0xB1>Aklove<0xB2>, mais tu pourras t'en\lsoucier plus tard, je suppose.\pPour l'instant, pense plutôt à ce\nsiège vide, celui du Champion !\pAlors tiens, voilà qui devrait\nt'être utile.
+0x1F4C7AF: Aklove !\pJe suis là, sans escorte, comme\nconvenu<0xFC><0x08><0x18> maintenant rends-nous\lPapi Arthur !
+0x1F4CC4B: Très bien<0xFC><0x08><0x20> je vais te le dire\pMon ancêtre, celui que les légendes\nnomment <0xB1>le roi étranger<0xB2>\lde la Grande Guerre\pAujourd'hui encore, 3000 ans plus\ntard, il parcourt toujours ce monde.\pUne fois achevé ce qu'il avait\ncommencé<0xFC><0x08><0x18> une fois cette guerre\lmenée à son vrai terme\pAlors il pourrait reposer en paix.\pLa soumission de Borrius<0xFC><0x08><0x18> aurait\nenfin exaucé sa dernière volonté.\pMais maintenant<0xFC><0x08><0x18> ce n'est plus\npossible
+0x1F50BD0: Quand tu en auras fini avec le reste\ndu Conseil 4, tu viendras encore à\lun de mes goûters ?\pOn va tellement s'amuser !\pSinon dis-moi : tu sais ce que\nveut dire <0xB1>bon à rien<0xB2> ?\pC'est comme ça qu'on appelle Papa\nmaintenant.
 0x1F58176: <0xFC><0x01><0x02>La personne suspecte s'enfuit !
 0x1F58198: <0xFC><0x01><0x02>La Cellule suspecte s'enfuit !
 0x1F581B8: <0xFC><0x01><0x02>L'arbre suspect s'enfuit !
@@ -24707,7 +24707,7 @@
 0x1F86276: <0xFC><0x01><0x02>Ouille !\nC'est brûlant !
 0x1F8848D: Changer le talent de <0xFC><0x01><0x06><0xFD><0x02><0xFC><0x01><0x08>\npour <0xFC><0x01><0x06><0xFD><0x03><0xFC><0x01><0x08> ?
 0x1F8EB12: <0xFC><0x01><0x08>Toi !
-0x8AA942: <0xFC><0x08><0x20>1, <0xFC><0x08><0x0F>2, et<0xFC><0x08><0x0F>" <0xFC><0x08><0x0F>" <0xFC><0x08><0x0F>" <0xFC><0x08><0x0F><0xFC><0x10><0x31> Pouf !
+0x8AA942: <0xFC><0x08><0x20>1, <0xFC><0x08><0x0F>2, et<0xFC><0x08><0x0F> <0xFC><0x08><0x0F> <0xFC><0x08><0x0F> <0xFC><0x08><0x0F><0xFC><0x10><0x31> Pouf !
 0x3FD560: Ennemi
 0x415E88: <0xFC><0x01><0x0F><0xFC><0x03><0x0E>Cherche
 0x415EB0: <0xFC><0x01><0x0F><0xFC><0x03><0x0E>Autre
@@ -24715,16 +24715,16 @@
 0x4163A7: Dépôt de <0xFD><0x03>\n×<0xFD><0x02>.
 0x4177C5: Retrait de <0xFD><0x03>\n×<0xFD><0x02>.
 0x78B828: Il me faut :\n<0xFC><0x01><0x06><0xFD><0x02>
-0x1EEA6F9: Gahhhhhhhh"<0xFB><0xFC><0x01><0x02>Son cerveau a l'air grillé.
+0x1EEA6F9: Gahhhhhhhh<0xFB><0xFC><0x01><0x02>Son cerveau a l'air grillé.
 0x1EEF45B: <0xFC><0x01><0x02><0xFD><0x01> remet une Écaille Cœur\nen échange.
 0x1F02BD3: <0xFC><0x01><0x02><0xFD><0x01> remet <0xFD><0x03>\n×<0xFD><0x02>.
 0x1F05E90: <0xFC><0x01><0x06><0xFD><0x02><0xFC><0x01><0x04>!<0xFC><0x01><0x04><0xFB>Je veux voir un <0xFC><0x01><0x06><0xFD><0x02><0xFC><0x01><0x04> !
 0x1F0A86E: <0xFC><0x01><0x02>Galeking a mystérieusement\ndisparu.
 0x1F146F6: <0xFC><0x01><0x02><0xFD><0x01> remet\n<0xFD><0x03> ×<0xFD><0x02>.
 0x1F2AED5: <0xFC><0x01><0x02>Hein ?<0xFB>Pikachu semble tenir\ndes vêtements.
-0x1F3D5AE: <0xFC><0x01><0x04>Monsieur"<0xFC><0x08><0x18> euh"<0xFC><0x08><0x18> excusez-moi" ?
-0x1F47376: Hein ? Là-haut"<0xFC><0x08><0x18> au-dessus du Pic Cristal" !
-0x1F4D5E8: Il me manque.<0xFC><0x08><0x50>\nVraiment"
+0x1F3D5AE: <0xFC><0x01><0x04>Monsieur<0xFC><0x08><0x18> euh<0xFC><0x08><0x18> excusez-moi ?
+0x1F47376: Hein ? Là-haut<0xFC><0x08><0x18> au-dessus du Pic Cristal !
+0x1F4D5E8: Il me manque.<0xFC><0x08><0x50>\nVraiment
 0x1F5A100: <0xFC><0x01><0x02><0xFD><0x01> remet tous les Oeufs\nde l'équipe.
 0x1F7927C: <0xFC><0x01><0x02><0xFD><0x01> remet\n<0xFD><0x03> <0xFD><0x02><0xFD><0x04>.
 0x1F9820C: Je mets <0xFC><0x01><0x06><0xFD><0x02><0xFC><0x01><0x08> dans\n<0xFC><0x01><0x06><0xFD><0x03><0xFC><0x01><0x08>, vraiment !?
@@ -24789,4 +24789,3 @@
 
 0x78d781: Dresco
 0x1eff254: Dresco
-0xa4a8e0: C'est super efficace sur\n<0xFD><0x10> !
