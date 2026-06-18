@@ -35,17 +35,24 @@ L'agent ne doit **jamais** recourir à ces pratiques dans ce dépôt.
 
 ## Traductions — combined_fr.txt et ROM FR
 
-> **Contexte :** Le commit c7c1ede (Claude Haiku 4.5, 2026-06-15) a effacé 11 labels carte
-> du monde en réécrivant combined_fr.txt lors d'une correction de dialogue. Ce bug peut se
-> reproduire dès qu'un script touche le fichier en bulk. Les règles ci-dessous l'empêchent.
+> **Contexte :** Le commit c7c1ede (2026-06-15, libellé « correct 'And' to 'Et' ») a
+> silencieusement ramené **97 entrées** (dont 94 noms de lieux) à leur forme anglaise/périmée,
+> en réécrivant combined_fr.txt depuis une working copy **périmée**. Les lignes existaient
+> toujours — seules leurs **valeurs** avaient régressé, donc aucun `grep -c` ne l'a vu.
+> Récupéré par B-52. **Doc de référence : [`docs/20_TRANSLATION_PRESERVATION.md`](../../../docs/20_TRANSLATION_PRESERVATION.md).**
+> Les règles ci-dessous l'empêchent.
 
 - ❌ **Réécrire `combined_fr.txt` en entier** — ni sed, ni regex globale, ni script de
   réécriture massive. Modification **chirurgicale** uniquement : insérer/corriger une entrée
   à la fois, toujours à la fin du fichier (bloc hexa minuscule, last entry wins).
-- ❌ **Modifier `combined_fr.txt` sans vérifier les labels carte** — après toute modification
-  du fichier, confirmer que les 13 labels 0xB5xxxx/0x72xxxx sont toujours présents :
-  `grep -cE "^0x(B500A0|721304|7214[Ee]8|721968|B50214|B503[Cc][Cc]|B514[Ee]4|B52274|B522[Aa]4|B531[Dd]8|B535[Cc]8|B537[Aa][Cc]|720[Ee]74)" combined_fr.txt`
-  → doit retourner **13**.
+- ❌ **Éditer `combined_fr.txt` depuis une working copy périmée** — `git status` propre +
+  `git log -1 combined_fr.txt` avant toute édition ; ne jamais régénérer le fichier depuis
+  une source plus ancienne que `HEAD`.
+- ❌ **Modifier `combined_fr.txt` sans relancer la garde de valeur** — un `grep -c` ne suffit
+  PAS (il compte des lignes, pas la valeur résolue last-wins). Après toute édition, lancer :
+  `python3 scripts/check_translation_integrity.py` → doit afficher **13 [OK]** et sortir avec
+  le code **0**. La garde contrôle la valeur réellement injectée des 13 labels carte
+  (0xB5xxxx/0x72xxxx), absents du CSV trilingue.
 - ❌ **Committer une ROM buildée sans `make test-rom`** — `make build-fr` auto-lance les tests
   ROM, mais si le build est relancé manuellement (`python3 scripts/...`), toujours finir par
   `make test-rom` avant tout commit de la ROM.

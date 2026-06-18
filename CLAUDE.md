@@ -203,11 +203,12 @@ Format de chaque ligne : `<offset_hex> <texte_FR>` (offset en hexa, espace, text
 - Le bloc en hexa **minuscule** vers la fin du fichier est la version vivante
 - Toujours éditer/ajouter dans ce bloc minuscule, jamais dans les entrées du haut
 
-**Workflow d'une correction**
-1. Trouver la **dernière** occurrence de l'offset dans `combined_fr.txt` (grep case-insensitive)
+**Workflow d'une correction** (détails : [`docs/20_TRANSLATION_PRESERVATION.md`](docs/20_TRANSLATION_PRESERVATION.md))
+1. `git status` propre, puis trouver la **dernière** occurrence de l'offset dans `combined_fr.txt` (grep case-insensitive)
 2. Éditer cette ligne (insertion chirurgicale — ne jamais réécrire le fichier entier)
-3. Relancer la chaîne complète : `apply_combined_fr.py --extend` → CSV → JSON → `make build-fr`
-4. Vérifier les octets décodés dans la ROM (pas le fichier — des entrées peuvent être ignorées silencieusement)
+3. `python3 scripts/check_translation_integrity.py` → 13 [OK], exit 0 (garde anti-régression des labels carte)
+4. Relancer la chaîne complète : `apply_combined_fr.py --extend` → CSV → JSON → `make build-fr`
+5. Vérifier les octets décodés dans la ROM (pas le fichier — des entrées peuvent être ignorées silencieusement)
 
 **Pièges**
 - Une entrée avec traduction VIDE ou encore anglaise n'est PAS traduite en ROM
@@ -248,7 +249,7 @@ Format de chaque ligne : `<offset_hex> <texte_FR>` (offset en hexa, espace, text
 8. **mGBA never save** — saving in-game during tests corrupts the `.sav` fixture files.
 9. **positional placeholders** — the build engine uses positional token replacement; never swap `{0}` and `{1}` in FR strings.
 10. **FA/FB opcodes** — these are outside the token file; do not add them to combined_fr.txt.
-11. **Labels carte du monde = inline non-CSV** — les 13 offsets 0xB5xxxx/0x72xxxx (Trou Glacé, Mont Foudre, Volcan Cendreux, etc.) ne sont PAS dans le CSV trilingue. Ils survivent UNIQUEMENT dans combined_fr.txt (bloc bas minuscule). N'importe quelle réécriture massive de combined_fr.txt les efface silencieusement (c7c1ede). Vérifier après tout edit : `grep -cE "^0x(B500A0|721304|7214[Ee]8|721968|B50214|B503[Cc][Cc]|B514[Ee]4|B52274|B522[Aa]4|B531[Dd]8|B535[Cc]8|B537[Aa][Cc]|720[Ee]74)" combined_fr.txt` → 13.
+11. **Labels carte du monde = inline non-CSV** — les 13 offsets 0xB5xxxx/0x72xxxx (Trou Glacé, Volcan Cendreux, Île de la Lune, etc.) ne sont PAS dans le CSV trilingue. Ils survivent UNIQUEMENT dans combined_fr.txt (bloc bas minuscule). Une réécriture massive — ou une working copy périmée — les ramène silencieusement à l'anglais (c7c1ede a régressé 97 entrées). Un `grep -c` ne suffit PAS : c7c1ede a réécrit les **valeurs**, pas supprimé les lignes. Vérifier après tout edit la valeur résolue : `python3 scripts/check_translation_integrity.py` → 13 [OK], exit 0. Voir [`docs/20_TRANSLATION_PRESERVATION.md`](docs/20_TRANSLATION_PRESERVATION.md).
 12. **make test-rom obligatoire** — après tout `make build-fr`, lancer `make test-rom`. Si un test échoue, la ROM est invalide et ne doit pas être committée. Voir `.claude/rules/patterns/forbidden.md#traductions`.
 
 ## AI Configuration & capabilities
