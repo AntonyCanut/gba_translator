@@ -1,9 +1,9 @@
 {
-  "conversion_date": "2026-06-19T00:05:03.483201",
+  "conversion_date": "2026-06-19T00:12:11.763863",
   "source_csv": "2026-01-15_trilingual_translation.csv",
   "total_translations": 20774,
   "total_errors": 0,
-  "total_warnings": 16761,
+  "total_warnings": 16756,
   "translations": [
     {
       "offset": 165760,
@@ -4364,10 +4364,10 @@
     {
       "offset": 1725571,
       "original_text": "Welcome to our Pokémon Centre!<0xFB>Would you like me to heal your\nPokémon back to perfect health?",
-      "translation": "Bienvenue au Centre Pokémon !<0xFB>Veux-tu que je soigne tes Pokémon\nà fond ?",
-      "length": 72,
+      "translation": "Bienvenue au Centre Pokémon !<0xFB>Veux-tu que je remette tes Pokémon\nen pleine forme ?",
+      "length": 82,
       "original_length": 93,
-      "padding_used": -21,
+      "padding_used": -11,
       "encoding": "pokemon",
       "category": "dialogue",
       "notes": "",
@@ -4376,22 +4376,22 @@
     {
       "offset": 1725665,
       "original_text": "Okay, I'll take your Pokémon for a\nfew seconds.",
-      "translation": "D'accord, je prends tes Pokémon\nquelques secondes.",
-      "length": 50,
+      "translation": "D'accord ! Je prends tes Pokémon\nun instant.",
+      "length": 44,
       "original_length": 47,
-      "padding_used": 3,
+      "padding_used": -3,
       "encoding": "pokemon",
       "category": "dialogue",
       "notes": "",
-      "too_long": true
+      "too_long": false
     },
     {
       "offset": 1725713,
       "original_text": "Stay safe out there!",
-      "translation": "Reste prudent dehors !",
-      "length": 22,
+      "translation": "Prends soin de toi !",
+      "length": 20,
       "original_length": 20,
-      "padding_used": 2,
+      "padding_used": 0,
       "encoding": "pokemon",
       "category": "dialogue",
       "notes": "",
@@ -4400,10 +4400,10 @@
     {
       "offset": 1725739,
       "original_text": "Thank you for waiting.\nWe've restored your Pokémon to<0xFA>full health.",
-      "translation": "Merci d'avoir patienté.\nTes Pokémon sont de nouveau<0xFA>en pleine forme.",
-      "length": 68,
+      "translation": "Merci d'avoir patienté !\nTes Pokémon sont\nen pleine santé !",
+      "length": 59,
       "original_length": 66,
-      "padding_used": 2,
+      "padding_used": -7,
       "encoding": "pokemon",
       "category": "dialogue",
       "notes": "",
@@ -4796,26 +4796,26 @@
     {
       "offset": 1728192,
       "original_text": "Your Pokémon have been healed\nto perfect health.<0xFB>If your Pokémon's energy, HP,\nis down, please come see us.<0xFB>If you're planning to go far in the\nfield, you should buy some Potions<0xFA>at the Pokémon Mart.<0xFB>We hope you excel!",
-      "translation": "Vos Pokémon sont maintenant\nen pleine forme.<0xFB>Si l'énergie de vos Pokémon, les PV,\nbaisse, venez nous voir.<0xFB>Si vous comptez partir loin, achetez\ndes Potions à la Boutique Pokémon<0xFA>avant de partir.<0xFB>Nous vous souhaitons de réussir !",
-      "length": 228,
+      "translation": "Tes Pokémon sont maintenant\nen pleine forme !<0xFB>Si leurs PV baissent, reviens\nnous voir sans hésiter.<0xFB>Si tu pars loin, achète des\nPotions à la Boutique Pokémon<0xFA>avant de partir.<0xFB>Bonne chance, Dresseur !",
+      "length": 199,
       "original_length": 218,
-      "padding_used": 10,
+      "padding_used": -19,
       "encoding": "pokemon",
       "category": "dialogue",
       "notes": "",
-      "too_long": true
+      "too_long": false
     },
     {
       "offset": 1728411,
       "original_text": "Your Pokémon have been healed\nto perfect health.<0xFB>We hope you excel!",
-      "translation": "Vos Pokémon sont maintenant\nen pleine forme.<0xFB>Nous vous souhaitons de réussir !",
-      "length": 78,
+      "translation": "Tes Pokémon sont\nen pleine forme !<0xFB>Bonne chance, Dresseur !",
+      "length": 59,
       "original_length": 67,
-      "padding_used": 11,
+      "padding_used": -8,
       "encoding": "pokemon",
       "category": "dialogue",
       "notes": "",
-      "too_long": true
+      "too_long": false
     },
     {
       "offset": 1728479,
@@ -62168,26 +62168,26 @@
     {
       "offset": 7802733,
       "original_text": "Healing time!",
-      "translation": "Temps de soigner !",
-      "length": 18,
+      "translation": "On les soigne !",
+      "length": 15,
       "original_length": 13,
-      "padding_used": 5,
+      "padding_used": 2,
       "encoding": "pokemon",
       "category": "dialogue",
       "notes": "",
-      "too_long": true
+      "too_long": false
     },
     {
       "offset": 7802747,
       "original_text": "Time to heal up!",
-      "translation": "On se remet d'aplomb !",
-      "length": 22,
+      "translation": "Retour en forme !",
+      "length": 17,
       "original_length": 16,
-      "padding_used": 6,
+      "padding_used": 1,
       "encoding": "pokemon",
       "category": "dialogue",
       "notes": "",
-      "too_long": true
+      "too_long": false
     },
     {
       "offset": 7802999,
