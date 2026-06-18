@@ -2590,11 +2590,11 @@
 0x3FCB4B: ose!
 0x3FCB50: beaucoup
 0x3FCB59: baisse !
-0x3FCB5F: {FD00} de {FD0F}\n{FD01}
-0x3FCB6A: {FD00} de {FD10}\n{FD01}
+0x3FCB5F: <0xFD><0x00> de <0xFD><0x0F>\n<0xFD><0x01>
+0x3FCB6A: <0xFD><0x00> de <0xFD><0x10>\n<0xFD><0x01>
 0x3FCB75: Avec {B_LAST_ITEM}, le {UNKNOWN_STR} de {B_SCR_ACTIVE_NAME_WITH_PREFIX}\n{PLAYER}
-0x3FCB8F: {FD00} de {FD0F}\n{FD01}
-0x3FCB9A: {FD00} de {FD10}\n{FD01}
+0x3FCB8F: <0xFD><0x00> de <0xFD><0x0F>\n<0xFD><0x01>
+0x3FCB9A: <0xFD><0x00> de <0xFD><0x10>\n<0xFD><0x01>
 0x3FCBA5: Stats de {B_ATK_NAME_WITH_PREFIX}\nau-dessus du max !
 0x3FCBC5: Stats de {B_DEF_NAME_WITH_PREFIX}\nau-dessous du min !
 0x3FCBE4: Coup critique !
@@ -15809,8 +15809,8 @@
 0x1EF76E2: Veux-tu que je garde aussi\ntes autres Œufs ?\pJ'en ai {COLOR}É{STR_VAR_1}{COLOR}Ë en tout.
 0x1EF773D: Très bien, je les garde tous.\nMerci !
 0x1EF7764: Très bien, je continue de garder\ntes Œufs.
-0x1EF779A: Tu n'as plus de place…\pPuis-je l'envoyer au PC ?\nLa boîte actuelle est « {COLOR}É{STR_VAR_1}{COLOR}Ë ».
-0x1EF77F7: Tu n'as plus de place…\pPuis-je envoyer les Œufs que j'ai\nau PC ?\pJ'en ai {COLOR}É{STR_VAR_2}{COLOR}Ë en tout, et\nla boîte actuelle est « {COLOR}É{STR_VAR_1}{COLOR}Ë ».
+0x1EF779A: Tu n'as plus de place.\pPuis-je l'envoyer au PC ?\nLa boîte actuelle est « {COLOR}É{STR_VAR_1}{COLOR}Ë ».
+0x1EF77F7: Tu n'as plus de place.\pPuis-je envoyer les Œufs que j'ai\nau PC ?\pJ'en ai {COLOR}É{STR_VAR_2}{COLOR}Ë en tout, et\nla boîte actuelle est « {COLOR}É{STR_VAR_1}{COLOR}Ë ».
 0x1EF788F: Ça peut prendre un peu de temps.\pMerci d'attendre\nquelques instants.
 0x1EF78D6: C'est fait.\pLes Œufs restants ont été envoyés\nau PC.\pPrends-en bien soin.
 0x1EF7921: C'est fait.\pL'Œuf restant a été envoyé\nau PC.\pPrends-en bien soin.

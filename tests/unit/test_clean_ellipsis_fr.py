@@ -101,3 +101,38 @@ class TestCombinedFrIsClean:
             body = line.split(":", 1)[1] if ":" in line else line
             m = mod.SPACE_BEFORE.search(body)
             assert m is None, f"espace avant « … » restant : {line[:80]}"
+
+
+class TestBoxTransferPromptNoEllipsis:
+    """Garde-fou ticket R-09 : le dialogue de transfert d'un Pokémon/Œuf vers
+    une Boîte du PC (« Tu n'as plus de place… ») ne doit plus porter de points
+    de suspension inutiles après « place » — ils n'apportaient rien au dialogue
+    (l'anglais d'origine dit simplement « You have no room for it! »)."""
+
+    # 0x1EF779A : transfert d'un Pokémon ; 0x1EF77F7 : transfert des Œufs.
+    OFFSETS = ("0x1EF779A", "0x1EF77F7")
+
+    def _entries(self):
+        path = _SCRIPT.parent.parent / "combined_fr.txt"
+        wanted = {o.lower() for o in self.OFFSETS}
+        found = {}
+        for line in path.read_text(encoding="utf-8").splitlines():
+            if ":" not in line:
+                continue
+            off, body = line.split(":", 1)
+            if off.strip().lower() in wanted:
+                found[off.strip().lower()] = body  # dernière entrée gagne
+        return found
+
+    def test_offsets_present(self):
+        found = self._entries()
+        for off in self.OFFSETS:
+            assert off.lower() in found, f"offset {off} absent de combined_fr.txt"
+
+    def test_no_ellipsis_after_place(self):
+        for off, body in self._entries().items():
+            assert "place…" not in body, f"{off} : « place… » résiduel"
+            assert "place..." not in body, f"{off} : « place... » résiduel"
+            assert "Tu n'as plus de place." in body, (
+                f"{off} : le dialogue doit dire « Tu n'as plus de place. »"
+            )
