@@ -1298,7 +1298,7 @@ capacité à un OEuf.",
 0x001A5075,<0xFD><0x01> booted up the PC.,Has accedido al PC.,20,3,23,pokemon,other,<0xFD><0x01> a allumé le PC.,
 0x001A5077, booted up the PC.,,18,3,21,pokemon,other,,
 0x001A508A,Which PC should be accessed?,<0x51>A cuál PC quieres acceder?,28,2,30,pokemon,dialogue,Quel PC doit être utilisé ?,
-0x001A50A7,Accessed Someone's PC.,Acceso al PC <0x53><0x54>.,22,2,24,pokemon,location,PC de Quelqu'un utilisé.,
+0x001A50A7,Accessed Someone's PC.,Acceso al PC <0x53><0x54>.,22,2,24,pokemon,location,PC de ??? utilisé.,
 0x001A50B8,s PC.,,5,2,7,pokemon,other,,
 0x001A50BE,Pokémon Storage System opened.,Almacenamiento de los Pokémon.,30,2,32,pokemon,other,Système de Stockage ouvert.,
 0x001A50C2,mon Storage System opened.,,26,2,28,pokemon,other,,
@@ -1451,7 +1451,7 @@ ton Pokédex ?",
 Someone's PC.<0xFB>It was placed in 
 Box <0xB1><0xFD><0x02>.<0xB2>","<0xFD><0x03> se ha transferido a
 una Caja del PC.<0xFC><0x09>",63,3,66,pokemon,description,"<0xFD><0x03> a été transféré vers
-le PC de Quelqu'un.<0xFB>Il a été placé dans
+le PC de ???.<0xFB>Il a été placé dans
 la Boîte <0xFD><0x02>.",
 0x001A5D31,"<0xFD><0x03> was transferred to
 Ayla's PC.<0xFB>It was placed in 
@@ -1464,7 +1464,7 @@ Someone's PC was full.<0xFB><0xFD><0x03> was transferred to
 Box <0xB1><0xFD><0x02>.<0xB2>","<0xB1><0xFD><0x04><0xB2> del PC <0x53><0x54> está
 llena.<0xFB><0xFD><0x03> es transferido a
 <0xB1><0xFD><0x02><0xB2>",66,3,69,pokemon,description,"La Boîte <0xFD><0x04> du PC de
-Quelqu'un était pleine.<0xFB><0xFD><0x03> a été transféré dans
+??? était pleine.<0xFB><0xFD><0x03> a été transféré dans
 la Boîte <0xFD><0x02>.",
 0x001A5DB1,"Box <0xB1><0xFD><0x04><0xB2> on
 Ayla's PC was full.<0xFB><0xFD><0x03> was transferred to
@@ -37539,6 +37539,9 @@ la douleur !",
 0x00A4A8B9,"Ha!
 That was a truly intense fight!",<0x52>Esa fue una pelea muy intensa!,35,3,38,pokemon,dialogue,"Ha !
 Combat vraiment intense !",
+0x00A4A8E0,"It's super effective on
+<0xFD>Œ!",<0x52>Es supereficaz en <0xFD>Œ!,27,2,29,pokemon,dialogue,"C'est super efficace sur
+<0xFD><0x10> !",
 0x00A4A8FC,"It's super effective on <0xFD><0x3D>
 <0xFD><0x3B> and <0xFD><0x3C>!","<0x52>Es supereficaz en <0xFD><0x3D>
 <0xFD><0x3B> y <0xFD><0x3C>!",37,3,40,pokemon,dialogue,"Super efficace sur <0xFD><0x3D>
