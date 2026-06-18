@@ -166,6 +166,19 @@ class TestStringTablePatches(unittest.TestCase):
         self.assertEqual(p[2][1], 0xDB)  # 'g'
         self.assertEqual(p[2][2], 0xFF)  # terminator
 
+    def test_weight_divisor_lbs_to_kg(self):
+        # The pounds→kg value fix: conversion divisor 4536 → 10000 so the
+        # formatter's input becomes kg×100 instead of pounds×100.  The
+        # multiplier literal (100000) must NOT also be patched here — it is
+        # reused for digit extraction.
+        p = next(p for p in PATCHES if p[0] == 0x105AD4)
+        self.assertEqual(int.from_bytes(p[1], "little"), 4536)
+        self.assertEqual(int.from_bytes(p[2], "little"), 10000)
+        self.assertNotIn(
+            0x105AD0, [off for off, _, _ in PATCHES],
+            "0x105AD0 (×100000) is reused for digit extraction; must stay",
+        )
+
 
 # ---------------------------------------------------------------------------
 # Faithful behaviour test: execute the patched Thumb routine under an emulator.
@@ -234,6 +247,100 @@ def _emulate_height(rom: bytes, dm: int) -> str:
     except UcError:
         pass
     return _decode_metric(bytes(uc.mem_read(sp + 0x0C, 8)))
+
+
+def _decode_weight(buf: bytes) -> str:
+    """Decode the visible CFRU weight buffer to an ASCII 'X.Y' string.
+
+    The buffer holds only the numeric part (digits + period); the "kg" label
+    is printed separately by the engine and is not in this buffer.
+    """
+    out = []
+    for x in buf:
+        if _CFRU_DIGIT_0 <= x <= _CFRU_DIGIT_0 + 9:
+            out.append(str(x - _CFRU_DIGIT_0))
+        elif x == _CFRU_PERIOD:
+            out.append(".")
+        elif x == 0xFF:
+            break  # terminator
+        elif x == 0x00:
+            continue  # leading blank (suppressed digit)
+        else:
+            out.append(f"<{x:02X}>")
+    return "".join(out)
+
+
+def _emulate_weight(rom: bytes, hg: int) -> str:
+    """Run PrintMonWeight on the patched ROM for a stored weight of *hg* hg.
+
+    Starts just after the species 'seen?' check (0x105A92) with the hectogram
+    value preloaded in r4 — the state the routine is in for a seen Pokémon —
+    and reads the formatted numeric buffer that starts at sp+0xB (the three
+    bytes at sp+8 are the FC 14 05 colour control code).
+    """
+    from unicorn import Uc, UC_ARCH_ARM, UC_MODE_THUMB, UcError
+    from unicorn.arm_const import UC_ARM_REG_SP, UC_ARM_REG_LR, UC_ARM_REG_R4
+
+    uc = Uc(UC_ARCH_ARM, UC_MODE_THUMB)
+    rom_size = (len(rom) + 0xFFF) & ~0xFFF
+    uc.mem_map(0x08000000, rom_size)
+    uc.mem_write(0x08000000, rom)
+    uc.mem_map(0x03000000, 0x8000)  # IWRAM / stack
+    sp = 0x03007F00
+    uc.reg_write(UC_ARM_REG_SP, sp)
+    uc.reg_write(UC_ARM_REG_R4, hg)
+    uc.reg_write(UC_ARM_REG_LR, 0x08000001)
+    try:
+        uc.emu_start(0x08105A92 | 1, 0x08105BE6, count=8000)
+    except UcError:
+        pass
+    return _decode_weight(bytes(uc.mem_read(sp + 0x0B, 12)))
+
+
+@unittest.skipUnless(_UNICORN, "unicorn engine not installed")
+@unittest.skipUnless(os.path.exists(_FR_ROM), "built FR ROM not present")
+class TestPatchedWeightRenders(unittest.TestCase):
+    """Execute the real patched weight routine and verify rendered kilogrammes.
+
+    This is the test that would have caught the "weight too high" bug: the
+    earlier run only relabelled "lbs."→"kg" and never executed the routine, so
+    the pound *value* (≈2.2× kg) stayed on screen under a kg label.
+    """
+
+    @classmethod
+    def setUpClass(cls):
+        cls.rom = open(_FR_ROM, "rb").read()
+
+    def _check(self, hg, expected):
+        self.assertEqual(_emulate_weight(self.rom, hg), expected, f"hg={hg}")
+
+    def test_sub_one_kg(self):
+        self._check(1, "0.1")    # Gastly 0.1 kg
+        self._check(8, "0.8")    # Castform 0.8 kg
+        self._check(9, "0.9")
+
+    def test_single_digit_kg(self):
+        self._check(69, "6.9")   # Bulbasaur 6.9 kg (was "15.2" = pounds)
+        self._check(40, "4.0")
+        self._check(90, "9.0")
+
+    def test_two_and_three_digit_kg(self):
+        self._check(100, "10.0")
+        self._check(905, "90.5")    # Charizard 90.5 kg
+        self._check(2200, "220.0")
+        self._check(4600, "460.0")  # Snorlax 460.0 kg
+        self._check(3980, "398.0")  # Wailord 398.0 kg
+
+    def test_max_realistic_kg(self):
+        self._check(9999, "999.9")
+
+    def test_never_pounds_and_never_garbage(self):
+        # Every realistic stored weight must render exactly hg/10 kg with one
+        # decimal, never the pound value and never a stray glyph.
+        for hg in range(1, 5000):
+            s = _emulate_weight(self.rom, hg)
+            self.assertNotIn("<", s, f"garbage glyph for hg={hg}: {s}")
+            self.assertEqual(s, f"{hg // 10}.{hg % 10}", f"hg={hg}")
 
 
 @unittest.skipUnless(_UNICORN, "unicorn engine not installed")

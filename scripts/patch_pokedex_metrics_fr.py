@@ -7,8 +7,8 @@ patches the built ROM to show:
 
   - height: "X.Ym"  (X = dm÷10 = whole metres, Y = dm%10 = decimal digit;
     no floating-point required — the game already stores height in decimetres)
-  - weight: "X.Y kg"  (the CFRU lookup table is an identity: value returned
-    equals hg, so X.Y = hg÷10 = kg; only the unit label needs changing)
+  - weight: "X.Y kg"  (see weight section below — both the value math and the
+    unit label have to change; relabelling alone left pounds on screen)
 
 Labels in the Pokédex info panel are updated in-place:
   - "Ht"   → "Ta"  (Taille)
@@ -65,6 +65,42 @@ English original: it already writes tens = r2 and ones = metres mod 10 from
 the 0x1E4684 modulo helper (remainder in r0) — both correct.  Earlier code
 "fixed" a non-bug here by reading r1 instead of r0; that is intentionally NOT
 reintroduced.
+
+──────────────────────────────────────────────────────────────────────────
+How the weight routine (PrintMonWeight at 0x105A3C) is converted
+──────────────────────────────────────────────────────────────────────────
+
+Weight is stored in hectograms (hg); 1 hg = 0.1 kg, so kg = hg ÷ 10.
+
+The English routine converts hg to pounds and formats the result with a
+single decimal:
+
+    0x105A92  ldr  r7, [pc] → 0x186A0 (100000)   ; multiplier
+    0x105A96  muls r0, r7, r0                     ; r0 = hg × 100000
+    0x105A98  ldr  r1, [pc] → 0x11B8  (4536)      ; divisor
+    0x105A9A  bl   0x1E4018 (signed divide)       ; r6 = hg × 100000 / 4536
+
+That quotient is *pounds × 100* (1 hg ≈ 0.22046 lb).  The generic base-10
+formatter that follows prints r6 with the decimal point one place from the
+end, i.e. it displays **r6 ÷ 100** with one decimal digit.  So pounds appear
+on screen.  An earlier attempt only relabelled "lbs." → "kg" and left this
+math intact, which left the pound *value* under a "kg" label — every weight
+was ≈2.2× too high (Bulbasaur read "15.2 kg" instead of "6.9 kg").
+
+To show kilogrammes we need the formatter's input to be kg × 100 = hg × 10.
+The multiplier literal (100000) is reused later as the first digit-extraction
+divisor, so it must stay; only the conversion divisor changes:
+
+    r6 = hg × 100000 / 10000 = hg × 10 = kg × 100   →   formatter prints kg.
+
+  • 0x105AD4  literal 4536 (0x11B8) → 10000 (0x2710)
+
+That single literal edit is the whole value fix.  Because hg × 10 is always a
+multiple of 10, the dropped units digit (hundredths) is always 0 and the
+routine's "round the hundredths" block (0x105AA0) never fires.  The hg × 100000
+multiply is unchanged from the English code, so the 32-bit overflow ceiling
+(hg ≥ 42949 ≈ 4295 kg, far above any real species) is not a new regression.
+The unit label "lbs." → "kg" is patch 10 below.
 
 Every patch verifies the bytes it expects (English original) and is
 idempotent (already-patched cells are skipped without error).
@@ -124,6 +160,13 @@ PATCHES: list[tuple[int, bytes, bytes]] = [
 
     # 7. Inch-mark character (0xB2) → blank (0x00 = space in CFRU)
     (0x1059C2, b"\xb2\x20", b"\x00\x20"),
+
+    # ── Weight function at 0x105A3C ──────────────────────────────────────────
+    # 7b. Conversion divisor: 4536 (hg→lbs×100) → 10000 (hg→kg×100).
+    #     Yields r6 = hg×100000/10000 = kg×100; the formatter then prints kg.
+    #     The multiplier literal (100000 @0x105AD0) is reused for digit
+    #     extraction and is intentionally left untouched.
+    (0x105AD4, b"\xb8\x11\x00\x00", b"\x10\x27\x00\x00"),
 
     # ── String table at 0x415F98 ─────────────────────────────────────────────
     # 8. "Ht\xFF" → "Ta\xFF"  (Taille)
