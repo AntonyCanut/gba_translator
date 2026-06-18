@@ -136,3 +136,49 @@ class TestBoxTransferPromptNoEllipsis:
             assert "Tu n'as plus de place." in body, (
                 f"{off} : le dialogue doit dire « Tu n'as plus de place. »"
             )
+
+
+class TestBoxTransferNameNoGuillemetEllipsis:
+    """Garde-fou ticket R-09 (relance) : le dialogue « {Pokémon} a été
+    transféré… Il a été placé dans la Boîte « {nom} » » entourait le nom de la
+    Boîte de guillemets « … ».
+
+    Or l'encodeur mappe « / » (comme " “ ”) sur l'octet 0xB0, qui dans la
+    police FireRed/CFRU est le glyphe d'ellipse « … » (le « caractère spécial
+    qui s'affiche à la place de trois points » mentionné par le ticket). Le nom
+    de la Boîte s'affichait donc en jeu comme « la Boîte … Box1 … » — des points
+    de suspension inutiles entourant un mot. Les guillemets ont été retirés."""
+
+    # Les 5 messages « transféré vers le PC / placé dans la Boîte ».
+    OFFSETS = ("0x1A5CF1", "0x1A5D31", "0x1A5D6E", "0x1A5DB1", "0x1F682A6")
+
+    def _entries(self):
+        path = _SCRIPT.parent.parent / "combined_fr.txt"
+        wanted = {o.lower() for o in self.OFFSETS}
+        found = {}
+        for line in path.read_text(encoding="utf-8").splitlines():
+            if ":" not in line:
+                continue
+            off, body = line.split(":", 1)
+            if off.strip().lower() in wanted:
+                found[off.strip().lower()] = body  # dernière entrée gagne
+        return found
+
+    def test_offsets_present(self):
+        found = self._entries()
+        for off in self.OFFSETS:
+            assert off.lower() in found, f"offset {off} absent de combined_fr.txt"
+
+    def test_no_guillemets_around_box_name(self):
+        for off, body in self._entries().items():
+            assert "«" not in body and "»" not in body, (
+                f"{off} : guillemet résiduel (s'affiche comme « … » en jeu)"
+            )
+
+    def test_box_name_still_present(self):
+        # La traduction doit toujours nommer la Boîte via son STR_VAR, juste
+        # sans les guillemets-ellipses qui l'entouraient.
+        for off, body in self._entries().items():
+            assert "Boîte {STR_VAR" in body, (
+                f"{off} : le nom de la Boîte ({{STR_VAR}}) a disparu"
+            )
