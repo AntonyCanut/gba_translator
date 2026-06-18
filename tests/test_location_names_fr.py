@@ -72,6 +72,8 @@ WORLD_MAP_LABELS = [
     (0x3EEF2D, "Grotte Faille",        "Rift Cave"),
     (0xB500F0, "Port-en-mer",          "Seaport City"),
     (0x3EEFEA, "Grotte de l'Être",     "Cave of Being"),
+    # Renommage Dresco Town → Dresco (follow-up 2026-06-18)
+    (0x71CA60, "Dresco",               "Dresco Town"),
 ]
 
 
@@ -215,6 +217,67 @@ class TestLocationNamesFR(unittest.TestCase):
             "Thundercap",
             text,
             f"'Thundercap' still in NPC dialogue via ptr@0x7C252E: {repr(text[:60])}",
+        )
+
+    # ── Dresco: renamed from "Dresco Town" (follow-up 2026-06-18) ────────────
+
+    def test_dresco_worldmap(self):
+        """0x71CA60: 'Dresco' (was 'Dresco Town')."""
+        self._assert_label(0x71CA60, "Dresco", "Dresco Town")
+
+    def test_dresco_zone_name_inline(self):
+        """0x78D781: 'Dresco' in-place (was 'Dresco Town', ptr@0x78D779).
+
+        This is the zone name string used for the in-game area popup.
+        The FR text fits in-place (7 ≤ 12 bytes), so no relocation occurs.
+        """
+        text = _read_at(self.rom, 0x78D781).strip()
+        self.assertEqual(
+            text,
+            "Dresco",
+            f"Zone name at 0x78D781: expected 'Dresco', got {repr(text)}",
+        )
+
+    def test_dresco_zone_name_eff254(self):
+        """0x1EFF254: 'Dresco' in-place (was 'Dresco Town', ptrs@0x1E93A0C + 0x1EAF944).
+
+        This string is pointed to by two places and precedes the day/night
+        label pair at 0x1EFF260 ('Dresco D') / 0x1EFF26E ('Dresco N').
+        """
+        text = _read_at(self.rom, 0x1EFF254).strip()
+        self.assertEqual(
+            text,
+            "Dresco",
+            f"Zone name at 0x1EFF254: expected 'Dresco', got {repr(text)}",
+        )
+
+    def test_no_active_pointer_to_dresco_town(self):
+        """No GBA pointer in the ROM should point to a 'Dresco Town' string.
+
+        Orphaned English bytes remain in place after pipeline injection but
+        must not be reachable via any active ROM pointer.
+        """
+        base = 0x08000000
+        rom = self.rom
+        # Encode 'Dresco Town' (without terminator) using known EN ROM bytes
+        dresco_town_bytes = bytes.fromhex("bee6d9e7d7e300cee3eb")
+        live: list = []
+        pos = 0
+        while True:
+            p = rom.find(dresco_town_bytes, pos)
+            if p == -1:
+                break
+            ptr_val = struct.pack("<I", p + base)
+            count = rom.count(ptr_val)
+            if count > 0:
+                end = rom.find(b"\xff", p)
+                txt = TextDecoder.decode_pokemon(rom[p : end + 1])
+                live.append((hex(p), count, txt[:60]))
+            pos = p + 1
+        self.assertEqual(
+            live,
+            [],
+            f"Found {len(live)} live pointer(s) to 'Dresco Town' string(s): {live}",
         )
 
     def test_no_active_pointer_to_thundercap(self):

@@ -315,7 +315,7 @@ Je peux l'avoir si je gagne ?",
 0x00187A50,"It's still a long way to
 The Ruins of Void.<0xFB>I want to go back to Dresco Town.","It's still a long way to
 The Ruins of Void.<0xFB>I want to go back to Dresco Town.",77,1,78,pokemon,dialogue,"Il y a encore du chemin jusqu'aux
-Ruines du Néant.<0xFB>Je veux retourner à Bourg Dresco.",
+Ruines du Néant.<0xFB>Je veux retourner à Dresco.",
 0x00187A9E,"Swimming's great!
 Sunburns aren't!","Swimming's great!
 Sunburns aren't!",34,2,36,pokemon,dialogue,"La natation, c'est top !
@@ -16926,7 +16926,7 @@ et des taux de capture des Pokémon.<0xFB>",
 0x0071C98C,Ignores foe's stat changes.,,27,0,27,pokemon,other,Ignore les stats modifiées.,no-pointer: in-place only
 0x0071C9AC,Attack rises when stats fall.,,29,0,29,pokemon,other,Attaque + si une stat baisse.,no-pointer: in-place only
 0x0071C9D4,Sp. Atk rises when stats fall.,,30,0,30,pokemon,other,Atq.Spé. + si une stat baisse.,no-pointer: in-place only
-0x0071CA60,Dresco Town,Pueblo Dresco,11,5,16,pokemon,location,Ville de Dresco,
+0x0071CA60,Dresco Town,Pueblo Dresco,11,5,16,pokemon,location,Dresco,
 0x0071CA70,Tehl Town,Pueblo Tela,9,7,16,pokemon,location,Ville de Tehl,
 0x0071FC80,Blizzard City,Ciudad Ventisca,13,2075,2088,pokemon,location,,
 0x00720E74,Fallshore City,Ciudad Costera,14,6,20,pokemon,location,Fallshore,
@@ -16965,7 +16965,7 @@ Bourg Cratère et Route 6",
 0x00740037,"Bellin Town, Icicle Cave, Route 2,
 and Dresco Town","Bellin Town, Icicle Cave, Route 2,
 and Dresco Town",50,4,54,pokemon,description,"Bourg Bellin, Grotte Stalactite,
-Route 2 et Bourg Dresco",
+Route 2 et Dresco",
 0x00740088,"Hey, you!<0xFB>My Gramma makes really good food
 for dinner!<0xFB>You should stay and try it
 sometime!","Hey, you!<0xFB>My Gramma makes really good food
@@ -17082,7 +17082,7 @@ Volcano, illuminant le ciel de ses<0xFA>flammes pendant la nuit.",
 0x00745108,"Grim Woods<0xFB><0x7B> Cinder Volcano
 à Dresco Town","srim Woods<0xFB><0x7B> Cinder Volcano
 à Dresco Town",41,2,43,pokemon,description,"Forêt Lugubre<0xFB><0x7B> Volcan Cendreux
-<0x7C> Bourg Dresco",
+<0x7C> Dresco",
 0x00745132,"<0x0F> P<0x56>à<0x08><0x09><0x06><0x02>We just undertook a major drug
 bust, but our targets got away,<0xFA>again""<0xFB>Now we're sulking.","<0x0F> P<0x56>à<0x08><0x09><0x06><0x02>We just undertook a major drug
 bust, but our targets got away,<0xFA>again""<0xFB>Now we're sulking.",97,2,99,pokemon,description,"<0x0F> P<0x56><0x7C><0x08><0x09><0x06><0x02>On vient de
@@ -17102,7 +17102,7 @@ Trainer House yet?<0xFB>It's the black and blue building at
 the south end of town.","Have you visited the Dresco Town
 Trainer House yet?<0xFB>It's the black and blue building at
 the south end of town.",110,2,112,pokemon,dialogue,"As-tu visité la Maison des
-Dresseurs à Bourg Dresco ?<0xFB>C'est le bâtiment noir et bleu au
+Dresseurs à Dresco ?<0xFB>C'est le bâtiment noir et bleu au
 sud de la ville.",
 0x00745316,"This is a relatively new entrance
 to the SES Expressway.<0xFB>So we're still working on building
@@ -17125,7 +17125,7 @@ Légendaire de Feu, Sulfura.<0xFB>On dit que Sulfura servait de héraut
 0x00745518,"Route 3<0xFB><0x79> Flower Paradise
 <0x7A> Dresco Town","Route 3<0xFB><0x79> Flower Paradise
 <0x7A> Dresco Town",39,361,400,pokemon,description,"Route 3<0xFB><0x79> Paradis Floral
-<0x7A> Bourg Dresco",
+<0x7A> Dresco",
 0x00745750,"If you change your mind let
 me know.","If you change your mind let
 me know.",36,2,38,pokemon,dialogue,"Si tu changes d'avis,
@@ -17148,7 +17148,7 @@ les affronter.<0xFB>Grâce à mes pouvoirs psy, je peux te
 téléporter de l'autre côté<0xFA>gratis !<0xFB>Alors, tu es partant ?",
 0x00745900,"Dresco Town Pokémon Gym
 Leader: Mirskle<0xFA>The high up hippy!","Dresco Town Pokémon Gym
-Leader: Mirskle<0xFA>The high up hippy!",58,2,60,pokemon,dialogue,"Arène Pokémon de Bourg Dresco
+Leader: Mirskle<0xFA>The high up hippy!",58,2,60,pokemon,dialogue,"Arène Pokémon de Dresco
 Champion : Mirskle<0xFA>Le hippie perché !",
 0x007459AF,"Whooooa""","Whooooa""",8,2,10,pokemon,other,Whooooa...,
 0x007459B8,"Breathe it all in""<0xFB>That wonderful smell!","Breathe it all in""<0xFB>That wonderful smell!",40,2,42,pokemon,dialogue,Inspire à fond...<0xFB>Quel parfum merveilleux !,
@@ -19755,6 +19755,7 @@ Dresseur, tu es devenu un dresseur<0xFA>plutôt doué.<0xFB>Tu as largement dép
 0x0078D662,Bellin Town,sellin Town,11,2,13,pokemon,location,,
 0x0078D6A9,Ruins of Void,Ruinas Vacío,13,6,19,pokemon,location,,
 0x0078D764,Shadow Base,Base Sombra,11,4,15,pokemon,location,,
+0x0078D781,Dresco Town,Dresco Town,11,3,14,pokemon,location,Dresco,
 0x0078D7EC,Bellin Town,kellin Town,11,3,14,pokemon,location,,
 0x0078D86B,Route 9,Ruta 9,7,2,9,pokemon,location,,
 0x0078D889,"I'm sure I'll enjoy smashing this
@@ -21170,7 +21171,7 @@ Ouste ! Ouste !",
 ",
 0x007B4788,"Dresco Town<0xFB>The archipelago of the Borrius
 Region.","Dresco Town<0xFB>The archipelago of the Borrius
-Region.",50,2,52,pokemon,description,"Bourg Dresco<0xFB>L'archipel de la région de
+Region.",50,2,52,pokemon,description,"Dresco<0xFB>L'archipel de la région de
 Borrius.",
 0x007B484B,The door is locked.,Puerta cerrada.,19,2,21,pokemon,other,La porte est verrouillée.,
 0x007B489E,"That is not Hoopa!<0xFB>I have no time for you!
@@ -21938,7 +21939,7 @@ the Dresco Town Gym!<0xFB>For that, you can have these
 five Revives.","Oh, I remember you!<0xFB>You're that <0xFD><0x02> who assisted us in
 the Dresco Town Gym!<0xFB>For that, you can have these
 five Revives.",117,2,119,pokemon,dialogue,"Oh, je me souviens de toi !<0xFB>Tu es ce <0xFD><0x02> qui nous a aidés
-à l'Arène de Bourg Dresco !<0xFB>Pour cela, tu peux avoir ces cinq
+à l'Arène de Dresco !<0xFB>Pour cela, tu peux avoir ces cinq
 réanimations.",
 0x007BCAD5,"Say, would you like to help out by
 assisting the police again?","Say, would you like to help out by
@@ -25776,7 +25777,7 @@ apprenant ça...",
 0x007EFA47,"Route 4<0xFB><0x7B> Grim Woods, Cinder Volcano
 Route 5<0xFA>à Dresco Town<0xFA><0x7A> Route 13","Route 4<0xFB><0x7B> Grim Woods, Cinder Volcano
 Route 5<0xFA>à Dresco Town<0xFA><0x7A> Route 13",69,3,72,pokemon,description,"Route 4<0xFB><0x7B> Forêt Lugubre, Volcan Cendreux
-Route 5<0xFA><0x7C> Ville de Dresco<0xFA><0x7A> Route 13",
+Route 5<0xFA><0x7C> Dresco<0xFA><0x7A> Route 13",
 0x007EFA8D,"What do you think you're doing?<0xFB>You can't go explore the Great
 Desert dressed like that!<0xFB>If you don't get the proper
 eyewear, I won't be able to let<0xFA>you through.","What do you think you're doing?<0xFB>You can't go explore the Great
@@ -28727,11 +28728,11 @@ on, but I need him to confirm it.<0xFB>You have your own Pokémon now, so
 this shouldn't be too difficult.<0xFB>You can get to <0xFC><0x01><0x06>Dresco Town<0xFC><0x01><0x08> by going
 through <0xFC><0x01><0x06>Icicle Cave<0xFC><0x01><0x08>.",404,1,405,pokemon,dialogue,"Encore un service
 pour toi, {PLAYER}.<0xFB>Un vieil ami vit à
-{COLOR}ÉBourg Dresco{COLOR}Ë.<0xFB>Il connaît bien l'histoire de
+{COLOR}ÉDresco{COLOR}Ë.<0xFB>Il connaît bien l'histoire de
 Borrius.<0xFB>Raconte-lui tout ce qui s'est passé
 jusqu'ici.<0xFB>J'ai une théorie sur ce qui se passe
 mais j'ai besoin qu'il confirme.<0xFB>Tu as tes propres Pokémon, donc
-ce ne sera pas trop dur.<0xFB>Va {COLOR}ÉBourg Dresco{COLOR}Ë via
+ce ne sera pas trop dur.<0xFB>Va {COLOR}ÉDresco{COLOR}Ë via
 {COLOR}ÉGrotte Stalactite{COLOR}Ë.",
 0x008CB3F5,"Oh!
 Silly me!<0xFB>How can I expect you to find <0xFC><0x01><0x06>Icicle
@@ -28751,7 +28752,7 @@ having plenty of Pokémon Kanto<0xFA>does not.","And you know what?<0xFB>If you'
 should assist me with another task!<0xFB>My friend, Oak, requested that I
 give his Pokédex to two trainers.<0xFB>It's some sort of high-tech
 encyclopedia for recording Pokémon<0xFA>data.<0xFB>Apparently, Borrius is known for
-having plenty of Pokémon Kanto<0xFA>does not.",300,2,302,pokemon,dialogue,"Et tu sais quoi ?<0xFB>Si tu vas à Bourg Dresco, tu devrais
+having plenty of Pokémon Kanto<0xFA>does not.",300,2,302,pokemon,dialogue,"Et tu sais quoi ?<0xFB>Si tu vas à Dresco, tu devrais
 m'aider pour une autre tâche !<0xFB>Mon ami Chen m'a demandé de donner
 son Pokédex à deux Dresseurs.<0xFB>C'est une encyclopédie high-tech
 pour enregistrer les données de<0xFA>Pokémon.<0xFB>Apparemment, Borrius regorge de
@@ -28795,7 +28796,7 @@ accepterait d'aider.",
 0x008CB82C,"Please visit my friend in <0xFC><0x01><0x06>Dresco
 Town<0xFC><0x01><0x08>, <0xFD><0x01>.<0xFB>I'm counting on you.","Please visit my friend in <0xFC><0x01><0x06>Dresco
 Town<0xFC><0x01><0x08>, <0xFD><0x01>.<0xFB>I'm counting on you.",69,3,72,pokemon,dialogue,"Va voir mon ami
-à {COLOR}ÉBourg Dresco{COLOR}Ë.<0xFB>Je compte sur toi.",
+à {COLOR}ÉDresco{COLOR}Ë.<0xFB>Je compte sur toi.",
 0x008CB872,"<0xFD><0x01>, You need to hurry to
 <0xFC><0x01><0x06>Thundercap Mountain<0xFC><0x01><0x08>!<0xFB>If The Shadows get there before
 you, Borrius is doomed!<0xFB>Head north of town and take the <0xFC><0x01><0x06>SES
@@ -62977,9 +62978,9 @@ monde.<0xFB>Merci pour le combat, c'était sympa.",
 for others"" only that Pokémon""","I understand"" this world isn't meant
 for others"" only that Pokémon""",67,2,69,pokemon,dialogue,"Je comprends... ce monde n'est pas
 pour les autres... seulement lui...",
-0x01EFF254,Dresco Town,,11,2,13,pokemon,location,,
-0x01EFF260,Dresco Town D,Dresco Town D,13,2,15,pokemon,location,Bourg Dresco D,
-0x01EFF26E,Dresco Town N,Dresco Town N,13,2,15,pokemon,location,Bourg Dresco N,
+0x01EFF254,Dresco Town,,11,2,13,pokemon,location,Dresco,
+0x01EFF260,Dresco Town D,Dresco Town D,13,2,15,pokemon,location,Dresco D,
+0x01EFF26E,Dresco Town N,Dresco Town N,13,2,15,pokemon,location,Dresco N,
 0x01EFF27C,Trainer House,Trainer House,13,2,15,pokemon,location,Maison des Dresseurs,
 0x01EFF28A,"I'm sorry, but you can't go in here
 right now.<0xFB>My grandfather is taking his daily
@@ -62993,7 +62994,7 @@ diaria y no quiere que nadie lo<0xFA>moleste.<0xFB>Intenta enfrentarte al Líder
 Pokémon que cambie el clima con<0xFA><0xFC><0x01><0x06>Torm. Arena<0xFC><0x01><0x08> o <0xFC><0x01><0x06>Despejar<0xFC><0x01><0x08> podría<0xFA>ayudarte.<0xFB>Un amigo de mi abuelo está
 cambiando un <0xFC><0x01><0x06>Ducklett<0xFC><0x01><0x08> con<0xFA><0xFC><0x01><0x06>Despejar<0xFC><0x01><0x08>.",443,3,446,pokemon,dialogue,"Désolé, mais tu ne peux pas entrer
 ici pour le moment.<0xFB>Mon grand-père fait sa sieste
-quotidienne et ne veut pas qu'on<0xFA>le dérange.<0xFB>Essaie donc l'<0xFC><0x01><0x06>Arène de Bourg Dresco<0xFC><0x01><0x08>
+quotidienne et ne veut pas qu'on<0xFA>le dérange.<0xFB>Essaie donc l'<0xFC><0x01><0x06>Arène de Dresco<0xFC><0x01><0x08>
 en attendant.<0xFB>Il y a pas mal de brouillard à
 l'intérieur, alors un Pokémon avec<0xFA>une capacité qui change la météo,<0xFA>comme <0xFC><0x01><0x06>Tempête de Sable<0xFC><0x01><0x08> ou <0xFC><0x01><0x06>Anti-Brume<0xFC><0x01><0x08>,<0xFA>pourrait vraiment t'aider.<0xFB>Maintenant que j'y pense, un ami de
 mon grand-père cherchait récemment<0xFA>à échanger un <0xFC><0x01><0x06>Ducklett<0xFC><0x01><0x08> qui connaît<0xFA>Anti-Brume...",
@@ -63462,7 +63463,7 @@ Grim Woods.<0xFB>It's filled with lots of cool Bug-
 and Ghost-type Pokémon.<0xFB>You should check it out when you
 have a chance.","Al oeste de Pueblo Dresco se
 encuentra el Bosque Luna.<0xFB><0x52>Está lleno de Pokémon de tipo Bicho
-y Fantasma!<0xFB>Deberías ir cuando puedas.",148,2,150,pokemon,dialogue,"À l'ouest de Bourg Dresco se trouve
+y Fantasma!<0xFB>Deberías ir cuando puedas.",148,2,150,pokemon,dialogue,"À l'ouest de Dresco se trouve
 la Forêt Lugubre.<0xFB>Elle regorge de Pokémon Insecte
 et Spectre.<0xFB>Tu devrais y faire un tour quand tu
 le pourras.",
@@ -68294,7 +68295,7 @@ mine maintenant.<0xFB>Essaie d'être plus prudent en
 voyageant par cette chaleur !",
 0x01F15C17,"Do try to be more careful while
 travelling in this heat!",,56,2,58,pokemon,dialogue,,
-0x01F15C54,Dresco Town Gym,Dresco Town Gym,15,2,17,pokemon,location,Arène Pokémon de Bourg Dresco,
+0x01F15C54,Dresco Town Gym,Dresco Town Gym,15,2,17,pokemon,location,Arène Pokémon de Dresco,
 0x01F15C64,Mirskle,Mirskle,7,1,8,pokemon,other,Mirskle,
 0x01F15C6C,"Huh?
 Oh""<0xFC><0x08><0x18> hey there, <0xFD><0x02>""<0xFB>How'z it hangin'?<0xFB>Your Pokémon wanna sniff on some
@@ -70236,13 +70237,13 @@ malheureusement, je suis coincé<0xFA>dans ces Arènes.<0xFB>Bonne chance, champ
 0x01F1EBCA,"Dresco Pokémon Gym
 Leader: Mirskle<0xFB>Winning Trainers:
 Jax, <0xFD><0x06>","<0x52>Gimnasio Pokémon!
-Líder: Mirskle.<0xFB>Ganadores: Jax, <0xFD><0x06>.",60,2,62,pokemon,description,"Arène Pokémon de Bourg Dresco
+Líder: Mirskle.<0xFB>Ganadores: Jax, <0xFD><0x06>.",60,2,62,pokemon,description,"Arène Pokémon de Dresco
 Champion : Mirskle<0xFB>Dresseurs vainqueurs :
 Jax, <0xFD><0x06>",
 0x01F1EC07,"Dresco Pokémon Gym
 Leader: Mirskle<0xFB>Winning Trainers:
 Jax, <0xFD><0x06>, <0xFD><0x01>","<0x52>Gimnasio Pokémon!
-Líder: Mirskle.<0xFB>Ganadores: Jax, <0xFD><0x06>, <0xFD><0x01>.",64,2,66,pokemon,description,"Arène Pokémon de Bourg Dresco
+Líder: Mirskle.<0xFB>Ganadores: Jax, <0xFD><0x06>, <0xFD><0x01>.",64,2,66,pokemon,description,"Arène Pokémon de Dresco
 Champion : Mirskle<0xFB>Dresseurs vainqueurs :
 Jax, <0xFD><0x06>, <0xFD><0x01>",
 0x01F1EC48,"Crater Pokémon Gym
@@ -70731,7 +70732,7 @@ igual!<0xFB><0x52>Te lo prometo!",545,3,548,pokemon,dialogue,"As-tu envisagé le
 {PLAYER} ?<0xFB>Comme dans ma région de Hoenn,
 il y a 8 Arènes à Borrius.<0xFB>Si tu les bats toutes, tu seras
 vu comme un Dresseur puissant.<0xFB>J'ai déjà commencé, mais j'ai eu
-du mal à Bourg Dresco.<0xFB>Le Champion utilisait sans cesse
+du mal à Dresco.<0xFB>Le Champion utilisait sans cesse
 {COLOR}É{STR_VAR_1}{COLOR}Ë sur mes Pokémon, alors<0xFA>j'ai cherché un moyen de les<0xFA>empêcher de {STR_VAR_2}.<0xFB>J'ai trouvé ces {COLOR}ÉLunettes
 Filtre{COLOR}Ë, il n'avait aucune<0xFA>chance après ça !<0xFB>Bonne chance, {PLAYER}.<0xFB>La prochaine fois, le combat ne
 se passera pas comme celui-ci !<0xFB>Je te le promets !",
@@ -70754,7 +70755,7 @@ igual!<0xFB><0x52>Te lo prometo!",545,2,547,pokemon,dialogue,"As-tu envisagé le
 {PLAYER} ?<0xFB>Comme dans ma région de Hoenn,
 il y a 8 Arènes à Borrius.<0xFB>Si tu les bats toutes, tu seras
 vu comme un Dresseur puissant.<0xFB>J'ai déjà commencé, mais j'ai eu
-du mal à Bourg Dresco.<0xFB>Le Champion utilisait sans cesse
+du mal à Dresco.<0xFB>Le Champion utilisait sans cesse
 {COLOR}É{STR_VAR_1}{COLOR}Ë sur mes Pokémon, alors<0xFA>j'ai cherché un moyen de les<0xFA>empêcher de {STR_VAR_2}.<0xFB>J'ai trouvé ces {COLOR}ÉBaies
 Maron{COLOR}Ë, il n'avait aucune<0xFA>chance après ça !<0xFB>Bonne chance, {PLAYER}.<0xFB>La prochaine fois, le combat ne
 se passera pas comme celui-ci !<0xFB>Je te le promets !",
@@ -71382,7 +71383,7 @@ pasando, pero necesito que él lo<0xFA>confirme.<0xFB>Ya tienes tu propio Pokém
 no debería ser difícil.<0xFB>Puedes llegar a <0xFC><0x01><0x06>Pueblo Dresco<0xFC><0x01><0x08>
 pasando por <0xFC><0x01><0x06>Cueva Icicle<0xFC><0x01><0x08>.",406,1,407,pokemon,dialogue,"J'ai une dernière course pour toi
 à faire, {PLAYER}.<0xFB>Un vieil ami à moi vit à
-{COLOR}ÉBourg Dresco{COLOR}Ë.<0xFB>Il connaît très bien l'histoire de
+{COLOR}ÉDresco{COLOR}Ë.<0xFB>Il connaît très bien l'histoire de
 Borrius.<0xFB>Raconte-lui tout ce qui s'est
 passé jusqu'ici.<0xFB>J'ai une théorie sur ce qui se
 passe, mais il doit la confirmer.<0xFB>Tu as tes propres Pokémon, donc ça
@@ -71409,7 +71410,7 @@ Dresco Town?<0xFB>That marker will automatically move
 when you have a new destination.","<0x51>Notaste la X amarilla sobre Pueblo
 Dresco?<0xFB>Ese marcador se moverá
 automáticamente cuando tengas un<0xFA>nuevo destino.",114,3,117,pokemon,dialogue,"Tu as remarqué le X jaune sur
-Bourg Dresco ?<0xFB>Ce marqueur se déplacera tout seul
+Dresco ?<0xFB>Ce marqueur se déplacera tout seul
 quand tu auras une nouvelle<0xFA>destination.",
 0x01F23789,"That marker will automatically move
 when you have a new destination.",,68,3,71,pokemon,dialogue,,
@@ -71426,7 +71427,7 @@ de Misiones, permíteme registrar<0xFA>mi solicitud anterior.<0xFB>Primero, debe
 los Pokémon en la Pokédex de<0xFA>Borrius.<0xFB><0x52>O como se conoce Pokédex Borrius
 Oriental!<0xFB>Los Pokémon que solo aparecen en
 Borrius Oriental quedan excluidos.",412,2,414,pokemon,dialogue,"Tu as remarqué le X jaune sur
-Bourg Dresco ?<0xFB>Ce marqueur se déplacera tout seul
+Dresco ?<0xFB>Ce marqueur se déplacera tout seul
 quand tu auras une nouvelle<0xFA>destination.<0xFB>Et tu sais quoi ?<0xFB>Maintenant que tu as ton propre
 Mission Log, laisse-moi y noter ma<0xFA>requête de tout à l'heure !<0xFB>D'abord, essaie de voir tous les
 Pokémon du Pokédex de Borrius.<0xFB>Ou, comme on l'appelle plus
@@ -71465,8 +71466,7 @@ Pokédex, il acceptera d'aider.",
 0x01F23B95,d be willing to assist.,,23,2,25,pokemon,other,,
 0x01F23BAD,"Please visit my friend in <0xFC><0x01><0x06>Dresco
 Town<0xFC><0x01><0x08>, <0xFD><0x01>.<0xFB>I'm counting on you.","Por favor, visita a mi amigo en
-<0xFC><0x01><0x06>Pueblo Dresco<0xFC><0x01><0x08>.<0xFB><0x52>Cuento contigo!",69,3,72,pokemon,dialogue,"Va voir mon ami à {COLOR}ÉBourg
-Dresco{COLOR}Ë, {PLAYER}.<0xFB>Je compte sur toi.",
+<0xFC><0x01><0x06>Pueblo Dresco<0xFC><0x01><0x08>.<0xFB><0x52>Cuento contigo!",69,3,72,pokemon,dialogue,"Va voir mon ami à {COLOR}ÉDresco{COLOR}Ë, {PLAYER}.<0xFB>Je compte sur toi.",
 0x01F23BE0,m counting on you.,,18,3,21,pokemon,dialogue,,
 0x01F23BF3,"<0xFD><0x01>, you need to hurry to
 <0xFC><0x01><0x06>Thundercap Mt.<0xFC><0x01><0x08>!<0xFB>If the Shadows get there before
@@ -74560,7 +74560,7 @@ Gym Badge?<0xFB>To think that you'd make this much
 progress so quickly""","<0x51>Es esa"" la Medalla de Gimnasio de
 zueblo Dresco?<0xFB>Y pensar que harás tanto en tan
 poco tiempo""",100,3,103,pokemon,dialogue,"Est-ce que c'est...{PAUSE} le Badge de
-l'Arène de Bourg Dresco ?<0xFB>Penser que tu aurais progressé
+l'Arène de Dresco ?<0xFB>Penser que tu aurais progressé
 autant si vite...",
 0x01F3068C,"You see, Euler?<0xFB>I think that Badge shows that
 <0xFD><0x01>'s more than capable of<0xFA>taking care of <0xFD><0x02>self.<0xFB>Right now, the four of us are the
@@ -83121,11 +83121,10 @@ du Prof. Log !",
 Pokédex a <0xFD><0x06>!",50,1,51,pokemon,dialogue,"Va à la Grotte Icicle, apporte le
 Pokédex à <0xFD><0x06> !",
 0x01F561F5,dex to him!,,11,1,12,pokemon,dialogue,,
-0x01F56201,Challenge the Dresco Town Gym!,,30,3,33,pokemon,dialogue,Défie l'Arène de Bourg Dresco !,
+0x01F56201,Challenge the Dresco Town Gym!,,30,3,33,pokemon,dialogue,Défie l'Arène de Dresco !,
 0x01F56220,"Talk to Prof. Log's friend in
 Dresco Town!","<0x52>Habla con el amigo del Prof.
-Long!",42,3,45,pokemon,dialogue,"Parle à l'ami du Prof. Log à Bourg
-Dresco !",
+Long!",42,3,45,pokemon,dialogue,Parle à l'ami du Prof. Log à Dresco !,
 0x01F56232,"s friend in
 Dresco Town!",,24,3,27,pokemon,dialogue,,
 0x01F5624B,"Make a beeline for Cinder Volcano
@@ -84996,7 +84995,7 @@ Je peux l'avoir si je gagne ?",
 0x01F5D7F8,"It's still a long way to
 the Ruins of Void.<0xFB>I want to go back to Dresco Town.","Todavía queda un largo camino hasta
 Ruinas Vacío.",77,2,79,pokemon,dialogue,"Il reste encore un long chemin
-jusqu'aux Ruines du Néant.<0xFB>Je veux rentrer à Bourg Dresco.",
+jusqu'aux Ruines du Néant.<0xFB>Je veux rentrer à Dresco.",
 0x01F5D824,I want to go back to Dresco Town.,,33,2,35,pokemon,dialogue,,
 0x01F5D846,"The weather's gorgeous!
 Perfect for a battle!","<0x52>El clima está perfecto para una
@@ -86137,7 +86136,7 @@ over there can teleport you to<0xFA>Dresco Town - the next town over.<0xFB>Even 
 on his offer, it's never a bad idea<0xFA>to be fully healed!","Si tienes prisa, el Psíquico de allí
 puede teletransportarte a Pueblo<0xFA>Dresco.<0xFB>Incluso si decides aceptar su oferta,
 <0x52>nunca es mala idea estar<0xFA>completamente curado!",188,1,189,pokemon,dialogue,"Si tu es pressé, le Psy là-bas peut
-te téléporter à Bourg Dresco, la<0xFA>ville suivante.<0xFB>Même si tu acceptes son offre, ce
+te téléporter à Dresco, la<0xFA>ville suivante.<0xFB>Même si tu acceptes son offre, ce
 n'est jamais une mauvaise idée<0xFA>d'être en pleine forme !",
 0x01F61BCF,to be fully healed!,,19,1,20,pokemon,dialogue,,
 0x01F61BE3,<0xFC><0x01><0x06>Cleeeeewoo!,"<0xFC><0x01><0x06>Cleeeeewoo""",14,2,16,pokemon,dialogue,{COLOR}ÉCleeeeewoo!,
@@ -86160,8 +86159,7 @@ psychiques, je peux te téléporter<0xFA>gratuitement de l'autre côté !<0xFB>A
 0x01F61D03,"What do you say, are you in?",,28,3,31,pokemon,dialogue,,
 0x01F61D20,"What do you say, should I teleport
 you to Dresco Town?","<0x51>Qué dices?
-<0x51>Te teletransportas a Pueblo Dresco?",54,3,57,pokemon,dialogue,"Alors, je te téléporte à Dresco
-Town ?",
+<0x51>Te teletransportas a Pueblo Dresco?",54,3,57,pokemon,dialogue,"Alors, je te téléporte à Dresco ?",
 0x01F61D57,"Here we go!<0xFB>Abra, Kadabra, Reuniclus!","<0x52>Vamos!
 <0x52>Abra, Kadabra, Reuniclus!",37,3,40,pokemon,dialogue,"C'est parti !<0xFB>Abra, Kadabra, Symbios !",
 0x01F61D63,"Abra, Kadabra, Reuniclus!",,25,3,28,pokemon,dialogue,,
@@ -86554,7 +86552,7 @@ though.<0xFB>Once you hop it, the only way back
 here is through Grim Woods!","<0x52>El camino de abajo te llevará de
 regreso a Pueblo Dresco!<0xFB>Una vez que lo subes, <0x52>el único
 camino de regreso aquí es a<0xFA>través del Bosque Luna!",158,2,160,pokemon,dialogue,"Ce rebord te ramènera direct à
-Bourg Dresco !<0xFB>Réfléchis bien avant de
+Dresco !<0xFB>Réfléchis bien avant de
 l'utiliser.<0xFB>Une fois sauté, le seul chemin de
 retour passe par la Forêt Lugubre !",
 0x01F636FD,"Once you hop it, the only way back
@@ -86571,7 +86569,7 @@ heureux ?",
 0x01F637C7, elated?,,8,2,10,pokemon,dialogue,,
 0x01F637D0,"Maybe I've been spending too much
 time in the Dresco Town Gym.","Ya veo que te gustan""",62,2,64,pokemon,description,"Je passe peut-être trop de temps
-dans l'Arène de Bourg Dresco.",
+dans l'Arène de Dresco.",
 0x01F637D8,"ve been spending too much
 time in the Dresco Town Gym.",,54,2,56,pokemon,description,,
 0x01F6380F,"Mirskle has had a huge impact on
@@ -89688,18 +89686,18 @@ Passage",
 <0xB1>Ocean Lane<0xB2><0xFB><0x7B> Dresco Town
 à Icicle Cave, Route 15","Ruta 2: <0x52>Mar Rojo!<0xFB><0x7B> Pueblo Dresco
 à Cueva Icicle, Ruta 15",58,2,60,pokemon,description,"Route 2 ""
-Voie<0xFB>Océane "" <0x7B> Bourg Dresco
+Voie<0xFB>Océane "" <0x7B> Dresco
 <0x7C> Icicle, Route 15",
 0x01F70AF5," Icicle Cave, Route 15",,22,2,24,pokemon,other,,
 0x01F70B0C,"Dresco Town<0xFB>The archipelago of the Borrius
 Region.","Pueblo Dresco: <0x52>El archipiélago de
-Borrius!",50,2,52,pokemon,description,"Bourg Dresco<0xFB>L'archipel de la région de
+Borrius!",50,2,52,pokemon,description,"Dresco<0xFB>L'archipel de la région de
 Borrius.",
 0x01F70B18,"The archipelago of the Borrius
 Region.",,38,2,40,pokemon,description,,
 0x01F70B3F,"Dresco Town Pokémon Gym
 Leader: Mirskle<0xFA>The Mellow Master of Flowers","Dresco Town Pokémon Gym
-Leader: Mirskle<0xFA>The Mellow Master of Flowers",68,2,70,pokemon,description,"Arène Pokémon de Bourg Dresco
+Leader: Mirskle<0xFA>The Mellow Master of Flowers",68,2,70,pokemon,description,"Arène Pokémon de Dresco
 Champion : Mirskle Le Maître<0xFA>Paisible des Fleurs",
 0x01F70B84,Trainer House<0xFB>Battle to your heart's content!,"Casa del Entrenador: <0x52>Lucha con
 el corazón!",45,3,48,pokemon,dialogue,Maison des<0xFB>Dresseurs Combattez à volonté !,
@@ -89720,7 +89718,7 @@ make sure the popo ain't in sight!",71,2,73,pokemon,dialogue,"Avant {B_BUTTON}, 
 <0xB1>Paradise Road<0xB2><0xFB><0x79> Flower Paradise
 <0x7A> Dresco Town",,55,2,57,pokemon,description,"Route 3 ""
 Route<0xFB>du Paradis "" <0x79> Paradis des
-Fleurs <0x7A> Bourg Dresco",
+Fleurs <0x7A> Dresco",
 0x01F70CD7, Dresco Town,,12,2,14,pokemon,other,,
 0x01F70CE4,Flower Paradise<0xFB>A safe haven for flowers.,,41,2,43,pokemon,description,Paradis des Fleurs<0xFB>Un havre pour les fleurs.,
 0x01F70CF4,A safe haven for flowers.,,25,2,27,pokemon,other,,
@@ -89730,11 +89728,11 @@ Route 5<0xFA>à Dresco Town<0xFA><0x7A> Route 13","Ruta 4: <0x52>Zona Volcán!<0
 Ruta 5<0xFB>à Pueblo Dresco
 <0x7A> Ruta 13",85,2,87,pokemon,description,"Route 4 ""
 Zone<0xFB>du Volcan "" <0x7B> Forêt Lugubre,
-Volcan Cendre, Route 5 <0x7C><0xFA>Bourg Dresco <0x7A> Route<0xFA>13",
+Volcan Cendre, Route 5 <0x7C><0xFA>Dresco <0x7A> Route<0xFA>13",
 0x01F70D5A, Route 13,,9,2,11,pokemon,other,,
 0x01F70D64,"Grim Woods<0xFB><0x7B> Cinder Volcano
 à Dresco Town",,41,3,44,pokemon,description,"Forêt<0xFB>Lugubre <0x7B> Volcan Cendre
-<0x7C> Bourg Dresco",
+<0x7C> Dresco",
 0x01F70D8E,|,,1,2,3,ascii,other,<0x7C> Forêt Lugubre,
 0x01F70D8F, Grim Woods,,11,2,13,pokemon,other,,
 0x01F70D9B,"Cinder Volcano
@@ -90206,22 +90204,20 @@ future mise à jour d'Unbound !",
 Gelées <0x7A><0xFA>Bourg Cratère <0x7B> Ville Blizzard",
 0x01F726B1, Blizzard City,,14,3,17,pokemon,other,,
 0x01F726C0,y,,1,2,3,ascii,other,"<0x79> Hauteurs Gelées, Ville de
-Blizzard <0x7A><0xFA>Bourg Cratère <0x7C> Bourg Dresco",
+Blizzard <0x7A><0xFA>Bourg Cratère <0x7C> Dresco",
 0x01F726FC,y,,1,2,3,ascii,other,"<0x79> Bourg
 Cratère <0x7B><0xFA>Tehl <0x7C> Fallshore, Ville d'Epidimy",
 0x01F72735,y,,1,2,3,ascii,other,"<0x79> Bourg Cratère, Ville
 de Tehl <0x7A> Ville<0xFA>de Fallshore <0x7C> Ville d'Epidimy",
-0x01F7276E,y,,1,2,3,ascii,other,"<0x79> Bourg
-Dresco <0x7A><0xFA>Dehara <0x7B> Cratère, Blizzard",
-0x01F727A7,y,,1,2,3,ascii,other,"<0x79> Bourg
-Dresco <0x7A><0xFA>Ville de Dehara <0x7C> Bourg Gurun",
+0x01F7276E,y,,1,2,3,ascii,other,"<0x79> Dresco <0x7A><0xFA>Dehara <0x7B> Cratère, Blizzard",
+0x01F727A7,y,,1,2,3,ascii,other,<0x79> Dresco <0x7A><0xFA>Ville de Dehara <0x7C> Bourg Gurun,
 0x01F727D0,z,,1,2,3,ascii,other,"<0x7A> Ville d'Antisis, Ville
 Portuaire <0x7B><0xFA>Ville de Dehara <0x7C> Bourg Gurun",
 0x01F72808,y,,1,2,3,ascii,other,"<0x79> Bourg
 Gurun <0x7A> Ville<0xFA>d'Antisis <0x7C> Ville Portuaire",
 0x01F72833,Exit A: Frozen Heights,Salida A: Pueblo Frío,22,3,25,pokemon,other,Sortie A : Hauteurs Gelées,
 0x01F7283A, Frozen Heights,,15,3,18,pokemon,other,,
-0x01F7284A,Exit B: Dresco Town,,19,3,22,pokemon,other,Sortie B : Bourg Dresco,
+0x01F7284A,Exit B: Dresco Town,,19,3,22,pokemon,other,Sortie B : Dresco,
 0x01F7285E,Exit C: Crater Town,,19,3,22,pokemon,other,Sortie C : Bourg Cratère,
 0x01F72872,Exit D: Blizzard City,,21,3,24,pokemon,other,Sortie D : Ville Blizzard,
 0x01F72888,Exit E: Tehl Town,,17,3,20,pokemon,other,Sortie E : Ville de Tehl,
@@ -100525,7 +100521,7 @@ Leaves into a fine kind of mist.<0xFB>Hows about I share some with you
 for your effort?","<0x51>Sabes qué? Conozco a un tipo en
 Ciudad Dresco.<0xFB>Es capaz de convertir estas Hojas
 Oddish en una fina especie de<0xFA>niebla.<0xFB><0x51>Qué tal si te comparto una de esas?",160,3,163,pokemon,dialogue,"Tu sais quoi ? Je connais un
-gars à Bourg Dresco. Il peut<0xFB>transformer ces Feuilles de
+gars à Dresco. Il peut<0xFB>transformer ces Feuilles de
 Mystherbe en une fine sorte<0xFB>de brume. Et si je t'en
 partageais un peu pour ton aide ?",
 0x01FA0221,"Hows about I share some with you
@@ -100534,8 +100530,7 @@ for your effort?",,49,3,52,pokemon,dialogue,,
 Oddish Leaves into more of that<0xFA><0xFC><0x01><0x06>Dream Mist<0xFC><0x01><0x08>.<0xFB>Bring him some <0xFC><0x01><0x06>Oddish<0xFC><0x01><0x08>, and he'll
 happily do it for ya.","Mi chico en <0xFC><0x01><0x06>Ciudad Dresco<0xFC><0x01><0x08> puede
 convertir muchas Hojas Oddish en<0xFA><0xFC><0x01><0x06>Humo Onírico<0xFC><0x01><0x08>.<0xFB><0x52>Llévale un poco de <0xFC><0x01><0x06>Hojas Oddish<0xFC><0x01><0x08>
-y hará lo que dije!",150,2,152,pokemon,dialogue,"Mon gars à {COLOR}ÉVille
-Dresco{COLOR}Ë peut changer les<0xFA>Feuilles de Mystherbe en encore plus<0xFB>de {COLOR}ÉBrume de Rêve{COLOR}Ë.
+y hará lo que dije!",150,2,152,pokemon,dialogue,"Mon gars à {COLOR}ÉDresco{COLOR}Ë peut changer les<0xFA>Feuilles de Mystherbe en encore plus<0xFB>de {COLOR}ÉBrume de Rêve{COLOR}Ë.
 Apporte-lui des<0xFA>Mystherbe, il le fera avec plaisir.",
 0x01FA02D1,"ll
 happily do it for ya.",,24,2,26,pokemon,other,,
@@ -104129,7 +104124,7 @@ the Dresco Town Gym!<0xFB>For that, you can have these
 five Revives.","Oh, I remember you!<0xFB>You're that <0xFD><0x02> who assisted us in
 the Dresco Town Gym!<0xFB>For that, you can have these
 five Revives.",117,2,119,pokemon,dialogue,"Oh, je me souviens de vous !<0xFB>Vous êtes ce <0xFD><0x02> qui nous a aidés dans
-l'Arène de Bourg Dresco !<0xFB>Pour ça, vous pouvez avoir ces
+l'Arène de Dresco !<0xFB>Pour ça, vous pouvez avoir ces
 cinq Rappels.",
 0x01FAEA2A,"Say, would you like to help out by
 assisting the police again?","Say, would you like to help out by
