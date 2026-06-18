@@ -15,20 +15,62 @@ Labels in the Pokédex info panel are updated in-place:
   - "Wt"   → "Po"  (Poids)
   - "lbs." → "kg"
 
-Height function patches (0x1058C4 area) rewrite six small sequences:
-  1. Literal pool multiplier 10000 → 1  (eliminates the inch-scaling step)
-  2. First divisor 254 → 10  (feet conversion → dm÷10 = whole metres)
-  3. Second divisor 120 → 10  (12-inch period → dm%10 = decimal digit)
-  4. MOV r6,r0 → MOV r6,r5  (carry integer metres from r5 into r6)
-  5. Inch-modulo block → dm%10 block  (r0 = dm – 10·metres = decimal digit)
-  6. MOV r5,r0 → MOV r5,r1  (take decimal digit from result register)
-  7. Feet-mark character (0xB4) → period (0xAD)
-  8. Decimal-digit display: removes BL+shift, writes digit+0xA1 directly
-  9. 'm' unit write: replaces inch-digit BL with MOVS r0,#0xE1 / STRB
-  10. Inch-mark character (0xB2) → blank (0x00 = space in CFRU)
+──────────────────────────────────────────────────────────────────────────
+How the height routine (PrintMonHeight at 0x1058C4) is converted
+──────────────────────────────────────────────────────────────────────────
+
+The English routine computes feet/inches by scaling the stored decimetre
+value into tenth-inches (× 10000 / 254), then dividing by 120 (feet) and
+10 (inches), and finally formatting "F'II\"".  Three ROM helper routines are
+called along the way:
+
+  0x1E4018  signed divide   → quotient in r0
+  0x1E460C  unsigned divide → quotient in r0  (r1 is NOT a clean remainder;
+                              on its dividend<divisor fast-path r1 is left
+                              equal to the divisor — this is the trap that
+                              broke every earlier attempt)
+  0x1E4684  unsigned modulo → remainder in r0
+
+For metric we only need:  metres = dm÷10  and  decimal = dm mod 10.
+The stored decimetre value stays in r4 for the whole routine, so the
+decimal digit is computed directly with `dm − 10·metres` — no helper call,
+no reliance on a "remainder register".
+
+Patch map (offsets are file offsets = ROM addr − 0x08000000):
+
+  1. 0x10597C  literal pool 10000 → 1   (dm × 1 = dm; kills the inch scaling)
+  2. 0x105926  MOVS r1,#254 → MOVS r1,#10  (first divide now yields dm÷10 = metres,
+               stored in r5 by the untouched `adds r5,r0,#0` at 0x10592C)
+  3. 0x10592E  38-byte clean block replacing the English feet/inch arithmetic:
+                 adds r6,r5,#0   ; r6 = metres
+                 movs r0,#10
+                 muls r0,r6      ; r0 = 10·metres
+                 subs r0,r4,r0   ; r0 = dm − 10·metres = decimal digit (0-9)
+                 adds r5,r0,#0   ; r5 = decimal digit
+                 (28 bytes of NOP padding)
+               After this block r6 = metres and r5 = decimal.  The untouched
+               tail at 0x105954 (`adds r0,r6 / movs r1,#10 / bl 0x1E460C /
+               adds r2,r0`) then puts tens-of-metres (metres÷10) in r2 for the
+               single-digit vs two-digit branch decision — correct for any
+               height, not just Gen-3 values.
+  4. 0x10599C  feet-mark 0xB4 → period 0xAD  (the "." in "X.Ym")
+  5. 0x1059A4  decimal-digit write: strip the helper call, write r5 directly
+                 adds r0,r5,#0 / adds r0,#0xA1 / strb r0,[r4] / NOP×3
+  6. 0x1059B0  unit write: 'm' (0xE1) instead of the imperial inch digit
+                 add r4,sp,#0x10 / movs r0,#0xE1 / strb r0,[r4] / NOP×4
+  7. 0x1059C2  inch-mark 0xB2 → blank 0x00  (trailing char after "X.Ym")
+
+The two-digit-metres branch (0x105980, e.g. Wailord 14.5 m) is left as the
+English original: it already writes tens = r2 and ones = metres mod 10 from
+the 0x1E4684 modulo helper (remainder in r0) — both correct.  Earlier code
+"fixed" a non-bug here by reading r1 instead of r0; that is intentionally NOT
+reintroduced.
 
 Every patch verifies the bytes it expects (English original) and is
 idempotent (already-patched cells are skipped without error).
+
+The full conversion is validated end-to-end by executing the patched Thumb
+code under an emulator in tests/test_patch_pokedex_metrics_fr.py.
 
 Usage:
     python3 scripts/patch_pokedex_metrics_fr.py --rom output/roms/GenedRom-fr.gba
@@ -42,98 +84,56 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 
+# Clean metres/decimal block written over the English feet/inch arithmetic at
+# 0x10592E (38 bytes).  See module docstring, patch 3.
+_HEIGHT_BLOCK_NEW = (
+    bytes.fromhex("2e1c0a207043201a051c")   # adds r6,r5 / movs r0,#10 / muls r0,r6 / subs r0,r4,r0 / adds r5,r0
+    + b"\xc0\x46" * 14                        # NOP padding to fill the 38-byte span
+)
+_HEIGHT_BLOCK_OLD = bytes.fromhex(
+    "0a21def0a8fe042800d90a35281c7821def065fe061c3001801bc000281a0a21def05dfe051c"
+)
+assert len(_HEIGHT_BLOCK_NEW) == len(_HEIGHT_BLOCK_OLD) == 0x105954 - 0x10592E
+
 # (offset, expected_old_bytes, replacement_new_bytes)
 PATCHES: list[tuple[int, bytes, bytes]] = [
     # ── Height function at 0x1058C4 ─────────────────────────────────────────
     # 1. Literal pool: multiplier 10000 (0x00002710) → 1 (0x00000001)
-    #    Old: LDR r0, [PC] loads 10000 for the inch-scaling multiply.
-    #    New: loads 1, so dm × 1 = dm (no-op multiply; divisions handle rest).
     (0x10597C, b"\x10\x27\x00\x00", b"\x01\x00\x00\x00"),
 
-    # 2. First divisor MOVS r1,#254 → MOVS r1,#10
-    #    Old: dm × 10000 / 254 ≈ total tenth-inches.
-    #    New: dm × 1 / 10 = whole metres.
+    # 2. First divisor MOVS r1,#254 → MOVS r1,#10  (dm ÷ 10 = whole metres)
     (0x105926, b"\xfe\x21", b"\x0a\x21"),
 
-    # 3. Second divisor MOVS r1,#120 → MOVS r1,#10
-    #    Old: total_tenth_inches / 120 = feet (12 inches × 10 tenth-inches).
-    #    New: dm / 10 used only for dm%10 calculation here.
-    (0x10593C, b"\x78\x21", b"\x0a\x21"),
+    # 3. Clean metres/decimal block (replaces the feet/inch arithmetic)
+    (0x10592E, _HEIGHT_BLOCK_OLD, _HEIGHT_BLOCK_NEW),
 
-    # 4. MOV r6,r0 → MOV r6,r5
-    #    r5 already holds whole metres (dm÷10); carry that into r6 explicitly
-    #    so the subsequent dm%10 block can use r6 = metres.
-    (0x105942, b"\x06\x1c", b"\x2e\x1c"),
-
-    # 5. Inch-modulo block (8 bytes) → dm%10 block
-    #    Old: LSLS/SUBS/LSLS/SUBS sequence computing remaining tenth-inches.
-    #    New: MOVS r0,#10 / MULS r0,r6 / SUBS r0,r4,r0 / NOP
-    #         r0 = 10·metres; r4 = dm; r4−r0 = dm%10 (decimal digit, 0-9).
-    (0x105944,
-     b"\x30\x01\x80\x1b\xc0\x00\x28\x1a",
-     b"\x0a\x20\x70\x43\x20\x1a\xc0\x46"),
-
-    # 6. MOV r5,r0 → MOV r5,r1
-    #    After the dm%10 computation r1 holds the decimal digit;
-    #    store it in r5 for later use in the digit-write patches below.
-    (0x105952, b"\x05\x1c", b"\x0d\x1c"),
-
-    # 7. Feet-mark character (0xB4) → period (0xAD)
-    #    MOVS r0,#0xB4 (foot apostrophe) → MOVS r0,#0xAD (decimal point).
+    # 4. Feet-mark character (0xB4) → period (0xAD)
     (0x10599C, b"\xb4\x20", b"\xad\x20"),
 
-    # 8. Decimal-digit write: strip BL+shift, write digit directly (12 bytes)
-    #    Old: MOV r0,r5 / MOVS r1,#10 / BL digit_fn / ADDS r0,#0xA1 / STRB
-    #    New: MOV r0,r5 / ADDS r0,#0xA1 / STRB / NOP / NOP / NOP
-    #         r5 = dm%10 ∈ [0,9]; +0xA1 maps to CFRU digit chars 0xA1-0xAA.
+    # 5. Decimal-digit write: strip BL+shift, write r5 (decimal) directly (12 bytes)
+    #    adds r0,r5,#0 / adds r0,#0xA1 / strb r0,[r4] / NOP×3
     (0x1059A4,
      b"\x28\x1c\x0a\x21\xde\xf0\x30\xfe\xa1\x30\x20\x70",
      b"\x28\x1c\xa1\x30\x20\x70\xc0\x46\xc0\x46\xc0\x46"),
 
-    # 9. 'm' unit write: replace inch-digit BL with direct char write (14 bytes)
-    #    Old: ADD r4,SP,#0x10 / MOV r0,r5 / MOVS r1,#10 / BL / ADDS #0xA1 / STRB
-    #    New: ADD r4,SP,#0x10 / MOVS r0,#0xE1 / STRB r0,[r4] / NOP×5
-    #         0xE1 = 'm' in CFRU charmap (a=0xD5, m=0xD5+12=0xE1).
+    # 6. 'm' unit write: replace inch-digit BL with direct char write (14 bytes)
+    #    add r4,sp,#0x10 / movs r0,#0xE1 ('m') / strb r0,[r4] / NOP×5
     (0x1059B0,
      b"\x04\xac\x28\x1c\x0a\x21\xde\xf0\x65\xfe\xa1\x30\x20\x70",
      b"\x04\xac\xe1\x20\x20\x70\xc0\x46\xc0\x46\xc0\x46\xc0\x46"),
 
-    # 10. Inch-mark character (0xB2) → blank (0x00 = space in CFRU)
-    #     The trailing inch mark after the inch digit is replaced with a space
-    #     so it renders invisibly after "X.Ym".
+    # 7. Inch-mark character (0xB2) → blank (0x00 = space in CFRU)
     (0x1059C2, b"\xb2\x20", b"\x00\x20"),
 
     # ── String table at 0x415F98 ─────────────────────────────────────────────
-    # 11. "Ht\xFF" → "Ta\xFF"  (Taille)
-    #     H=0xC2 t=0xE8 → T=0xCE a=0xD5  (same 3-byte slot, in-place)
+    # 8. "Ht\xFF" → "Ta\xFF"  (Taille)
     (0x415F98, b"\xc2\xe8\xff", b"\xce\xd5\xff"),
 
-    # 12. "Wt\xFF" → "Po\xFF"  (Poids)
-    #     W=0xD1 t=0xE8 → P=0xCA o=0xE3  (same 3-byte slot, in-place)
+    # 9. "Wt\xFF" → "Po\xFF"  (Poids)
     (0x415F9B, b"\xd1\xe8\xff", b"\xca\xe3\xff"),
 
-    # 13. "lbs.\xFF" → "kg\xFF\x00\x00"  (unit label, weight stays numeric kg)
-    #     l=0xE0 b=0xD6 s=0xE7 .=0xAD → k=0xDF g=0xDB \xFF \x00 \x00
-    #     The CFRU weight lookup table is an identity for hg ∈ [1,251], so the
-    #     displayed value X.Y already equals hg÷10 = kg with no code change.
-    #     Trailing bytes zeroed (still within the same 5-byte slot).
+    # 10. "lbs.\xFF" → "kg\xFF\x00\x00"  (weight stays numeric kg; identity table)
     (0x415FA0, b"\xe0\xd6\xe7\xad\xff", b"\xdf\xdb\xff\x00\x00"),
-
-    # 14. Bug-fix: ones-digit of metres in the "metres ≥ 10" branch (4 bytes)
-    #
-    #     The branch at 0x105980 handles Pokémon taller than 9.9 m (only Wailord
-    #     at 145 dm in Gen 3).  After calling sdivide(whole_metres, 10), the
-    #     quotient (tens digit, already stored at buffer[0]) lands in r0 and the
-    #     remainder (ones digit) lands in r1.
-    #
-    #     Original patch-13 code at 0x105994 (written by the earlier session):
-    #       a1 30  ADDS r0, r0, #0xA1   ← BUG: uses quotient r0 (= tens again)
-    #       20 70  STRB r0, [r4]        ← stores tens digit a second time → "11.5m"
-    #
-    #     Fixed code (this patch):
-    #       a1 31  ADDS r1, r1, #0xA1   ← uses remainder r1 (= ones digit)
-    #       21 70  STRB r1, [r4]        ← stores ones digit correctly  → "14.5m"
-    (0x105994, b"\xa1\x30\x20\x70", b"\xa1\x31\x21\x70"),
 ]
 
 
