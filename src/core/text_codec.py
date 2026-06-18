@@ -34,6 +34,13 @@ POKEMON_TABLE: Dict[str, int] = {
     'u': 0xE9, 'v': 0xEA, 'w': 0xEB, 'x': 0xEC, 'y': 0xED, 'z': 0xEE,
     '!': 0xAB, '?': 0xAC, '.': 0xAD, '-': 0xAE, ',': 0xB8,
     '\'': 0xB4, '"': 0xB0, '/': 0xBA, ':': 0xF0,
+    # Directional double-quote glyphs. In the FireRed/CFRU font 0xB0 is the
+    # ELLIPSIS glyph "…" (NOT a straight quote), so any quotation mark routed
+    # to 0xB0 renders in-game as "…". The real quote glyphs are 0xB1 "“" and
+    # 0xB2 "”" — the very bytes the English ROM uses itself, verified in its
+    # prose: <0xB1>evolution this<0xB2>. Guillemets/curly quotes are folded
+    # onto these in ENCODE_ALIASES; straight " is resolved by direction below.
+    '“': 0xB1, '”': 0xB2,
     # Accented uppercase, standard Gen III international charmap. Verified
     # in-game by mGBA screenshot probes (À Ç È É Ê Ë Î Ï Ô Œ Ù Û) in both
     # the dialogue and intro fullscreen fonts, and against the French
@@ -110,12 +117,15 @@ ENCODE_ALIASES = {
     '！': '!',
     '？': '?',
     # Typographic characters normalized to encodable equivalents.
-    '‘': "'",   # ‘
-    '’': "'",   # ’
-    '“': '"',   # “
-    '”': '"',   # ”
-    '«': '"',   # «
-    '»': '"',   # »
+    '‘': "'",   # ‘ → straight apostrophe (0xB4)
+    '’': "'",   # ’ → straight apostrophe (0xB4)
+    # Double quotes are directional: open guillemet/curly → "“" (0xB1),
+    # close → "”" (0xB2). They previously collapsed to '"' → 0xB0, the
+    # ellipsis glyph, so « cellules » rendered in-game as "… cellules …".
+    # "“"/"”" themselves are NOT aliased here — they map to 0xB1/0xB2
+    # directly in POKEMON_TABLE.
+    '«': '“',   # « → left double quote glyph (0xB1)
+    '»': '”',   # » → right double quote glyph (0xB2)
     '…': '...', # …
     '—': '-',   # —
     '–': '-',   # –
@@ -138,6 +148,31 @@ CONTROL_CODE_DECODE = {
 }
 
 HEX_TOKEN_RE = re.compile(r'^(?:0x)?([0-9A-Fa-f]{2})$')
+
+
+def _resolve_straight_double_quotes(text: str) -> str:
+    """Turn ambiguous straight ``"`` into directional quote glyphs.
+
+    The font has no straight double-quote glyph: 0xB0 is the ellipsis, so a
+    straight ``"`` left mapped there renders in-game as "…". A straight quote
+    is therefore always a quotation mark; alternate open "“" (0xB1) / close
+    "”" (0xB2) so balanced pairs render correctly. Worst case for an
+    unbalanced run is a cosmetic open/close swap — never an ellipsis. Quote
+    glyphs are one byte, like 0xB0, so string length (and pointers) are
+    unaffected. Runs inside ``<0xNN>`` hex tokens are left untouched (they
+    never contain ``"``).
+    """
+    if '"' not in text:
+        return text
+    out = []
+    open_next = True
+    for ch in text:
+        if ch == '"':
+            out.append('“' if open_next else '”')
+            open_next = not open_next
+        else:
+            out.append(ch)
+    return ''.join(out)
 
 
 class TextEncoder:
@@ -188,6 +223,7 @@ class TextEncoder:
     def encode_pokemon(cls, text: str) -> bytes:
         for src, dst in ENCODE_ALIASES.items():
             text = text.replace(src, dst)
+        text = _resolve_straight_double_quotes(text)
 
         encoded = []
         i = 0

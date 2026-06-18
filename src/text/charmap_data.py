@@ -21,6 +21,12 @@ CHAR_TO_BYTE: Dict[str, int] = {
     # Punctuation
     '!': 0xAB, '?': 0xAC, '.': 0xAD, '-': 0xAE, '"': 0xB0,
     "'": 0xB4, ',': 0xB8, '/': 0xBA, ':': 0xF0,
+    # Directional double-quote glyphs. 0xB0 is the ELLIPSIS glyph in this
+    # font, so quotes use 0xB1 "“" / 0xB2 "”" (the bytes the English ROM uses
+    # itself: <0xB1>…<0xB2>). Curly quotes are listed before the guillemets so
+    # BYTE_TO_CHAR (first char wins) decodes 0xB1→“ and 0xB2→”; the guillemets
+    # let the generated TS encoder fold « » onto the same glyphs.
+    '“': 0xB1, '”': 0xB2, '«': 0xB1, '»': 0xB2,
     # Verified against EN ROM prose: Pokédollar, parentheses, ampersand.
     # Remaining entries follow the standard Gen III international charmap.
     '¥': 0xB7, '(': 0x5C, ')': 0x5D, '&': 0x2D,

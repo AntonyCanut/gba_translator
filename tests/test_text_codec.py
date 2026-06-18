@@ -84,6 +84,48 @@ class TextCodecTests(unittest.TestCase):
             )
             self.assertEqual(TextDecoder.decode_pokemon(bytes([byte, 0xFF])), char)
 
+    def test_quotes_encode_to_quote_glyphs_not_ellipsis(self):
+        """Quotation marks must render as quotes, never as the ellipsis glyph.
+
+        In the FireRed/CFRU font 0xB0 is "…" (the ellipsis), and the real
+        double-quote glyphs are 0xB1 "“" / 0xB2 "”" — the bytes the English
+        ROM uses itself (<0xB1>evolution this<0xB2>). Folding guillemets and
+        curly quotes onto 0xB0 made « cellules » render in-game as
+        "… cellules …" (ticket: Zygarde cells/cores dialogue). Guillemets and
+        curly double quotes must map directionally to 0xB1/0xB2 and emit no
+        0xB0.
+        """
+        for text in ('« cellules »', '“cellules”', '«noyaux»'):
+            encoded = TextEncoder.encode_pokemon(text)
+            self.assertNotIn(
+                0xB0, encoded,
+                msg=f"{text!r} must not encode the ellipsis byte 0xB0",
+            )
+            self.assertIn(0xB1, encoded, msg=f"{text!r} missing open-quote 0xB1")
+            self.assertIn(0xB2, encoded, msg=f"{text!r} missing close-quote 0xB2")
+
+        # Opening guillemet/curly → 0xB1, closing → 0xB2 (directional).
+        self.assertEqual(TextEncoder.encode_pokemon('«')[0], 0xB1)
+        self.assertEqual(TextEncoder.encode_pokemon('»')[0], 0xB2)
+        self.assertEqual(TextEncoder.encode_pokemon('“')[0], 0xB1)
+        self.assertEqual(TextEncoder.encode_pokemon('”')[0], 0xB2)
+        self.assertEqual(TextDecoder.decode_pokemon(bytes([0xB1, 0xB2, 0xFF])), '“”')
+
+    def test_straight_quotes_resolve_to_directional_glyphs(self):
+        """Ambiguous straight " becomes alternating “ ”, never the ellipsis.
+
+        The font has no straight-quote glyph (0xB0 is the ellipsis), so a
+        balanced pair "x" must render as “x”, not "…x…".
+        """
+        encoded = TextEncoder.encode_pokemon('"x"')
+        self.assertNotIn(0xB0, encoded)
+        self.assertEqual(encoded[0], 0xB1)   # opening
+        self.assertEqual(encoded[2], 0xB2)   # closing
+        # The ellipsis character itself stays the literal three dots (0xAD*3),
+        # so this change does not touch genuine ellipses.
+        self.assertEqual(TextEncoder.encode_pokemon('Hmm…'), bytes(
+            [0xC2, 0xE1, 0xE1, 0xAD, 0xAD, 0xAD, 0xFF]))
+
     def test_electhor_species_name_bytes(self):
         """Matches the species-name table of the source ROM (Électhor)."""
         encoded = TextEncoder.encode_pokemon('Électhor')
