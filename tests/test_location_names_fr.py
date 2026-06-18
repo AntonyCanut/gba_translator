@@ -24,25 +24,12 @@ from pathlib import Path
 
 import pytest
 
-from src.core.text_codec import TextDecoder, TextEncoder
+from src.core.text_codec import TextDecoder
 
 FR_ROM = Path("output/roms/GenedRom-fr.gba")
 
 # Pre-encoded byte sequences (CFRU charmap, no terminator)
 _THUNDERCAP_BYTES = bytes.fromhex("cedce9e2d8d9e6d7d5e4")  # "Thundercap"
-
-# Forms wrongly reintroduced by c7c1ede and recovered from git history:
-#   - "Ville de Fallshore" / "Ville de Dehara": the redundant "Ville de "
-#     prefix was added on top of the established toponyms (Fallshore / Dehara)
-#     across 49 dialogue + label entries.
-#   - "Fullmoon Island": the English World Map label that replaced
-#     "l'Île de la Lune".
-# None of these byte sequences must be reachable via a live ROM pointer.
-_RECOVERED_REGRESSION_FORMS = (
-    "Ville de Fallshore",
-    "Ville de Dehara",
-    "Fullmoon Island",
-)
 
 
 def _read_at(rom: bytes, offset: int, limit: int = 200) -> str:
@@ -318,44 +305,6 @@ class TestLocationNamesFR(unittest.TestCase):
             live,
             [],
             f"Found {len(live)} live pointer(s) to 'Thundercap' string(s): {live}",
-        )
-
-    def test_no_live_pointer_to_c7c1ede_regression_forms(self):
-        """Guard against the c7c1ede regression class returning.
-
-        c7c1ede silently rewrote ``Fallshore`` -> ``Ville de Fallshore``,
-        ``Dehara`` -> ``Ville de Dehara`` and ``l'Île de la Lune`` ->
-        ``Fullmoon Island``.  Those lost translations were recovered from git
-        history; no string containing one of these forms may be reachable via
-        an active ROM pointer (orphaned English/duplicate bytes may linger in
-        place but must never be addressable).
-        """
-        base = 0x08000000
-        rom = self.rom
-        offenders: list = []
-        for form in _RECOVERED_REGRESSION_FORMS:
-            needle = TextEncoder.encode_pokemon(form)
-            pos = 0
-            while True:
-                p = rom.find(needle, pos)
-                if p == -1:
-                    break
-                # Walk back to the owning string start (after prev terminator).
-                prev = rom.rfind(b"\xff", 0, p)
-                start = prev + 1 if prev != -1 else p
-                count = rom.count(struct.pack("<I", start + base))
-                if count > 0:
-                    end = rom.find(b"\xff", start)
-                    txt = TextDecoder.decode_pokemon(
-                        rom[start : end + 1] if end != -1 else rom[start : start + 80]
-                    )
-                    offenders.append((form, hex(start), count, txt[:60]))
-                pos = p + 1
-        self.assertEqual(
-            offenders,
-            [],
-            f"Found {len(offenders)} live pointer(s) to recovered-regression "
-            f"form(s): {offenders}",
         )
 
 

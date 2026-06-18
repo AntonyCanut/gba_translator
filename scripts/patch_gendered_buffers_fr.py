@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Patch gendered buffer strings (man/woman, boy/girl, son/daughter) to French.
+"""Patch gendered buffer strings (man/woman, boy/girl, son/daughter, him/her) to French.
 
 These are small buffers inserted by script opcode 85 (bufferstring) and
 referenced by many dialogues via control codes like FD02 (STR_VAR_1).
@@ -45,6 +45,13 @@ GENDERED_BUFFERS = [
     (0x01FA17C4, bytes.fromhex('c7d5e2ff'), 'Hom'),  # Man → Hom
     (0x01FA17C8, bytes.fromhex('ebe3e1d5e2ff'), 'femme'),  # woman
     (0x01FA17CE, bytes.fromhex('d1e3e1d5e2ff'), 'Femme'),  # Woman
+
+    # him/her pronoun buffers (object pronouns loaded by bufferstring before dialogue)
+    # him (3 bytes) → le (2 bytes, already translated via pipeline)
+    # her (3 bytes) → la (2 bytes, fits in 4-byte slot)
+    # she/She (3 bytes each) → elle/Elle would need 4 bytes — don't fit; left as-is
+    (0x78922E, bytes.fromhex('dcd9e6ff'), 'la'),   # her → la
+    (0x1FA7652, bytes.fromhex('dcd9e6ff'), 'la'),   # her → la (second set)
 ]
 
 
