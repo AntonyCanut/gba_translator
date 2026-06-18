@@ -1351,19 +1351,20 @@ vers le PC.",
 0x001A5422, booted up the PC.,,18,2,20,pokemon,other,,
 0x001A5483,"Welcome to our Pokémon Centre!<0xFB>Would you like me to heal your
 Pokémon back to perfect health?","<0x52>Hola! <0x52>Este es el Centro Pokémon!<0xFB><0x51>Quieres que tus Pokémon descansen
-y recuperen su salud?",93,2,95,pokemon,dialogue,"Bienvenue au Centre Pokémon !<0xFB>Veux-tu que je soigne tes Pokémon
-à fond ?",
+y recuperen su salud?",93,2,95,pokemon,dialogue,"Bienvenue au Centre Pokémon !<0xFB>Veux-tu que je remette tes Pokémon
+en pleine forme ?",
 0x001A54C5,mon back to perfect health?,,27,2,29,pokemon,dialogue,,
 0x001A54E1,"Okay, I'll take your Pokémon for a
-few seconds.","Bien, dame unos segundos.",47,2,49,pokemon,dialogue,"D'accord, je prends tes Pokémon
-quelques secondes.",
+few seconds.","Bien, dame unos segundos.",47,2,49,pokemon,dialogue,"D'accord ! Je prends tes Pokémon
+un instant.",
 0x001A54FA,"mon for a
 few seconds.",,22,2,24,pokemon,other,,
-0x001A5511,Stay safe out there!,<0x52>Esperamos volver a verte,20,6,26,pokemon,dialogue,Reste prudent dehors !,
+0x001A5511,Stay safe out there!,<0x52>Esperamos volver a verte,20,6,26,pokemon,dialogue,Prends soin de toi !,
 0x001A552B,"Thank you for waiting.
 We've restored your Pokémon to<0xFA>full health.","<0x52>Tus Pokémon han recobrado toda su
-energía!<0xFB>",66,2,68,pokemon,dialogue,"Merci d'avoir patienté.
-Tes Pokémon sont de nouveau<0xFA>en pleine forme.",
+energía!<0xFB>",66,2,68,pokemon,dialogue,"Merci d'avoir patienté !
+Tes Pokémon sont
+en pleine santé !",
 0x001A5561,full health.,,12,2,14,pokemon,other,,
 0x001A556E,"The water is dyed a deep blue""
 Would you like to Surf?","El agua está super calmada.
@@ -1490,14 +1491,14 @@ to perfect health.<0xFB>If your Pokémon's energy, HP,
 is down, please come see us.<0xFB>If you're planning to go far in the
 field, you should buy some Potions<0xFA>at the Pokémon Mart.<0xFB>We hope you excel!","<0x52>Tus Pokémon están curados!<0xFB><0x52>Toda la energía de tus Pokémon ha
 sido restablecida!<0xFB><0x52>Te recomiendo que compres muchos
-objetos que te puedan ayudar en un<0xFA>combate, los podrás conseguir en<0xFA>la Tienda Pokémon!",218,2,220,pokemon,dialogue,"Vos Pokémon sont maintenant
-en pleine forme.<0xFB>Si l'énergie de vos Pokémon, les PV,
-baisse, venez nous voir.<0xFB>Si vous comptez partir loin, achetez
-des Potions à la Boutique Pokémon<0xFA>avant de partir.<0xFB>Nous vous souhaitons de réussir !",
+objetos que te puedan ayudar en un<0xFA>combate, los podrás conseguir en<0xFA>la Tienda Pokémon!",218,2,220,pokemon,dialogue,"Tes Pokémon sont maintenant
+en pleine forme !<0xFB>Si leurs PV baissent, reviens
+nous voir sans hésiter.<0xFB>Si tu pars loin, achète des
+Potions à la Boutique Pokémon<0xFA>avant de partir.<0xFB>Bonne chance, Dresseur !",
 0x001A5F88,We hope you excel!,,18,2,20,pokemon,dialogue,,
 0x001A5F9B,"Your Pokémon have been healed
-to perfect health.<0xFB>We hope you excel!",<0x52>Tus Pokémon han sido curados!,67,1,68,pokemon,dialogue,"Vos Pokémon sont maintenant
-en pleine forme.<0xFB>Nous vous souhaitons de réussir !",
+to perfect health.<0xFB>We hope you excel!",<0x52>Tus Pokémon han sido curados!,67,1,68,pokemon,dialogue,"Tes Pokémon sont
+en pleine forme !<0xFB>Bonne chance, Dresseur !",
 0x001A5FCC,We hope you excel!,,18,1,19,pokemon,dialogue,,
 0x001A5FDF,"<0xFD><0x01>!
 Welcome home.<0xFB>It sounds like you had quite
@@ -18187,8 +18188,8 @@ heal your Pokémon for free!","<0x52>Si puedes vencerme, curaré a tus
 Pokémon gratis!",62,2,64,pokemon,dialogue,"Salut ! Si tu me bats, je soignerai
 tes Pokémon gratuitement !",
 0x00770F39,mon for free!,,13,2,15,pokemon,dialogue,,
-0x00770F6D,Healing time!,Healing time!,13,3,16,pokemon,dialogue,Temps de soigner !,
-0x00770F7B,Time to heal up!,Time to heal up!,16,2,18,pokemon,dialogue,On se remet d'aplomb !,
+0x00770F6D,Healing time!,Healing time!,13,3,16,pokemon,dialogue,On les soigne !,
+0x00770F7B,Time to heal up!,Time to heal up!,16,2,18,pokemon,dialogue,Retour en forme !,
 0x00771077,"Technology is incredible!<0xFB>You can now play GBA ROMs
 on your phone and computer!","Technology is incredible!<0xFB>You can now play GBA ROMs
 on your phone and computer!",79,2,81,pokemon,dialogue,"La technologie est incroyable !<0xFB>Tu peux jouer aux ROM GBA sur ton
