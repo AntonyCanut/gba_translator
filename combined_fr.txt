@@ -74,7 +74,7 @@
 0x185A37: Wow !\nTes Badges sont trop classes !
 0x185A56: Pas assez !
 0x185A62: Tu as eu ces Badges auprès des\nChampions d’Arène. Je le sais !
-0x18650B: Hmm…\pÇa doit être le chemin vers la\nVille de Dehara !\pJ’en suis sûr !
+0x18650B: Hmm…\pÇa doit être le chemin vers la\nDehara !\pJ’en suis sûr !
 0x186549: Je ne peux pas être perdue…
 0x18655A: Une belle dresseuse comme moi,\nse perdre ?\pImpossible !\pJe sais exactement où je vais…
 0x18664F: Quand je siffle, j’entends un écho.
@@ -5328,7 +5328,7 @@
 0x71CA70: Ville de Tehl
 0x7204A8: L'attaque augmente en cas
 0x7204C4: poule empoisonnée.
-0x720E74: Ville de Fallshore
+0x720E74: Fallshore
 0x720E88: Mont Givre
 0x720ED4: moins.
 0x720EDB: îAtq.Spé. + si brûlé.
@@ -5381,7 +5381,7 @@
 0x744F54: J'aime rendre service aux\nvoyageurs.\pC'est mon hobby.
 0x744FB3: La terre ici est morcelée en petits\nfragments.\pEn y pensant, toute la région de\nBorrius est divisée en grandes\lîles !
 0x74503F: Cette statue représente le Pokémon\nlégendaire de feu, Sulfura.\pIl vivrait quelque part dans le\nVolcan Cendreux, illuminant le ciel\lde ses flammes la nuit.
-0x7450DB: Regarde, regarde !\pJe vois Ville de Dehara d'ici !
+0x7450DB: Regarde, regarde !\pJe vois Dehara d'ici !
 0x745108: Forêt Lugubre\p<0x7B> Volcan Cendreux\n<0x7C> Dresco
 0x745132: <0x0F> P<0x56><0x7C><0x08><0x09><0x06><0x02>On vient de\nrater un gros coup de filet,\lnos cibles ont encore filé…\pDu coup on boude.
 0x74528C: As-tu visité la Maison des\nDresseurs à Dresco ?\pC'est le bâtiment noir et bleu au\nsud de la ville.
@@ -5735,7 +5735,7 @@
 0x77373A: J'aime faire comme si j'étais fait\npour mieux que rester planté\lici dans cette grotte.
 0x7737C6: Encore un peu plus loin !
 0x7737DD: Cette grotte est plutôt petite,\nn'est-ce pas ?
-0x77389C: Ville de Fallshore
+0x77389C: Fallshore
 0x775B90: Sbire : {COLOR}ËVous commencez\nvraiment à me taper sur les nerfs !\pSepiatop !\pMontre à {STR_VAR_1} qu'on ne\ncherche pas {COLOR}ÁLes
 0x775C06: Je savais que c'était une mauvaise\nidée de les enfermer ici…
 0x775C38: Voilà ce qui arrive quand tu\nprovoques les Ombres !
@@ -5753,7 +5753,7 @@
 0x7760F8: Le Pokémon semble aller vers la\n{COLOR}ÉGrotte Stalactite.
 0x776197: C'est une statue du Pokémon\nLégendaire de Glace, Artikodin.\pIl est écrit qu'Artikodin servait\njadis de héraut d'une grande\lobscurité, mais qu'il vit près des\lHauteurs Gelées.
 0x7763EB: Je sais, hein ? La vie est parfois\nsi stressante !
-0x776441: Route 13\p<0x79> Route 4, Volcan Cendreux,\nForêt Lugubre\l<0x7A> Route 14\l<0x7C> Ville de Dehara
+0x776441: Route 13\p<0x79> Route 4, Volcan Cendreux,\nForêt Lugubre\l<0x7A> Route 14\l<0x7C> Dehara
 0x77650A: Tu es un dresseur de Pokémon\n!
 0x776522: Hein ? Je n'ai plus de Pokémon\n!
 0x77653D: Tu vas t'amuser ici.\pCet endroit est comme un labyrinthe.
@@ -5790,7 +5790,7 @@
 0x779637: Log : {COLOR}ËJ'étudie les stats et taux de\ncapture des Pokémon.\pEt mon titre est\nProfesseur, pas\pvieux schnock !\pPar Arceus… Je te l'ai déjà trop\nrépété…\pBref, vous avez vécu une sacrée\népreuve.\pJe suis soulagé de vous savoir tous\nles deux indemnes.\pVous avez même réussi à obtenir vos\npropres Pokémon !\pJe comptais en donner un à {RIVAL}\nun jour, mais je n'ai plus à\lle faire !\pHo ho ho !
 0x7797CC: ho ho!
 0x7797D4: {RIVAL} : {COLOR}ËUn jour ?\pÇa fait 13 ans que tu t'occupes de\nmoi, vieux !\pJe te le demande depuis Arceus sait\ncombien de temps !\pFranchement, j'ai arrêté d'y croire\nil y a des années…
-0x77F0C4: Route 10\p<0x7B> Ville de Tehl <0x79>\nVoie d'Eau Auburn\l<0x7C> Ville de Fallshore
+0x77F0C4: Route 10\p<0x7B> Ville de Tehl <0x79>\nVoie d'Eau Auburn\l<0x7C> Fallshore
 0x77F139: Bourg Cratère\pUne ville bâtie sur la cendre.
 0x77F198: Mon grand-père connaît plein de\nmonde !\pTu devrais aller lui parler !
 0x77F1E3: Tu es son enfant !\pJe savais bien que mes yeux ne me\ntrompaient pas !\pTon père était, pour faire simple,\nun homme extraordinaire.\pJe suis sûr que si tu te présentais\ncomme son enfant, les gens te\ltémoigneraient aussitôt beaucoup\ld'affection.\pRares sont ceux qui n'ont jamais\nentendu parler de ses exploits.\pQuel dommage qu'il ait disparu.\pSi seulement quelqu'un savait ce\nqu'il est advenu de lui, je\lpourrais enfin tourner la page.
@@ -6022,7 +6022,7 @@
 0x78F5DA: Mon frère et son ami sont si\nmignons !\pIls se ressemblent presque !
 0x78F61D: Aïe !\nPris dans une toile électrique !
 0x78F7F2: Il y a des cascades très bruyantes\nà mon Arène, et ce\lfracas me fait mal à la tête.\pÇa me donne envie de juste\nlâcher un Poing Mégaton !
-0x78F87D: Oh, désolé !\nJ'ai oublié de me présenter !\pJe suis Mel, le Champion d'Arène de\n{COLOR}ÉVille de Fallshore{COLOR}Ë.\pTu es un challenger ?\nAlors retrouve-moi à l'Arène.\pLà, je n'ai pas trop envie de\nrentrer, alors si tu ne me donnes\lpas un bon combat, je lâche mon\lPoing Mégaton !
+0x78F87D: Oh, désolé !\nJ'ai oublié de me présenter !\pJe suis Mel, le Champion d'Arène de\n{COLOR}ÉFallshore{COLOR}Ë.\pTu es un challenger ?\nAlors retrouve-moi à l'Arène.\pLà, je n'ai pas trop envie de\nrentrer, alors si tu ne me donnes\lpas un bon combat, je lâche mon\lPoing Mégaton !
 0x78FA39: Tu m'as libéré !
 0x78FA4A: 9Une Gemme est un objet tenu rare\nqui booste une seule attaque en\lcombat, puis disparaît\lpour toujours.\pChaque Gemme correspond à un type\nprécis, et ne renforce que ce\ltype de capacité.\pChaque Champion d'Arène de Borrius\na au moins un Pokémon tenant une\lGemme, alors prudence.\pSi ça t'inquiète, tu peux utiliser\nla capacité {COLOR}ÉCalcination{COLOR}Ë pour\lfondre leur Gemme avant\lqu'ils puissent l'utiliser.
 0x78FBE3: Tu dois être un Dresseur chevronné.
@@ -6034,7 +6034,7 @@
 0x7916C1: Laisse-moi te dire un secret.\pLe Champion d'Arène de Dehara,\nGalavan utilise des Électrik.\pIl essaie de surprendre ceux qui\nutilisent des Pokémon Eau.\pMais quand il n'est pas d'humeur,\nil baisse le pont entre la ville\let son Arène.\pAlors si tu veux l'affronter,\ntu devras patienter.
 0x7917E7: D'ici, on accède au Tombeau de\nBorrius.\pOn raconte que l'ancien roi, qui a\ninvoqué la force obscure jadis,\ly est enterré.\pMais tu ne pourras pas aller plus\nloin sans la permission de Galavan,\lalors n'essaie même pas.
 0x7918D7: C'est mon travail de veiller à ce\nque cette ville reste un bel oasis\lau bord du désert.\pTous ces arbres ne sont pas\nnaturels ici.\pC'est moi qui les ai\nplantés !
-0x791982: La Ville de Dehara est le parfait\nmélange entre tourisme et vie.\pTout ce quartier est conçu pour\nattirer les touristes, mais\lles gens peuvent toujours vivre\lici, au nord-est\lde la ville.
+0x791982: La Dehara est le parfait\nmélange entre tourisme et vie.\pTout ce quartier est conçu pour\nattirer les touristes, mais\lles gens peuvent toujours vivre\lici, au nord-est\lde la ville.
 0x791BBA: Tu as collecté {COLOR}É{STR_VAR_3} pour cent{COLOR}Á\nde cellules.
 0x791C58: C'est un Super Cube dans ta\npoche ?\p…\pOui !\pTu es la personne que je\ncherchais !\pViens avec moi.
 0x791E5D: {COLOR}ÇDes fragments d'un Pokémon nommé\nZygarde apparaissent partout\là Borrius.\pCependant, ces fragments ne peuvent\nêtre vus que si tu as un Super Cube\lavec une fonction spéciale.
@@ -6528,7 +6528,7 @@
 0x7C2705: Je vais te montrer pourquoi faut\npas traîner au Port d'Antisis !
 0x7C2748: Voilà pourquoi…
 0x7C27A4: Voleur ! Repose ça !\nC'est mon bien le plus précieux !
-0x7C2809: Contrairement à la Ville Portuaire,\nle Port d'Antisis sert à l'import\lde biens des autres régions.\pUne fois déposés ici, ils partent\nvers la Ville de Fallshore\lpour être distribués\lpartout à Borrius.
+0x7C2809: Contrairement à la Ville Portuaire,\nle Port d'Antisis sert à l'import\lde biens des autres régions.\pUne fois déposés ici, ils partent\nvers la Fallshore\lpour être distribués\lpartout à Borrius.
 0x7C28DB: Les barricades jaunes bougent\nrégulièrement dans la journée pour\lcoïncider avec l'arrivée de\ldifférentes cargaisons.\pSi tu veux accéder à une zone\nbloquée, tu devras juste\lrevenir plus tard.
 0x7C29A5: Ouais, c'est moi qui transporte les\nmarchandises vers Fallshore le jour.\pC'est trop dangereux de passer par\nla Ville d'Antisis, d'où ce\ltravail.
 0x7C2A3F: Tu sais ce qui est pas juste ?\pC'est que je dois passer un\ncontrôle strict juste pour\laccéder au port et bosser\lchaque jour !\pSans ces crétins de la Ville\nd'Antisis, ce serait même pas\lun problème.
@@ -6763,7 +6763,7 @@
 0x7CEBF6: C’est ce que j’attendrais d’un\nporteur de Mega Evolution !
 0x7CEC2F: Beau travail, {PLAYER}.\pPour m'avoir vaincu une fois de\nplus, je veux que vous preniez ceci.
 0x7CEC72: Ce vieux con de Log m'a rattrapé il\ny a quelque temps.\pIl m'a donné ça et m'a dit que je\ndevrais te le donner la prochaine\lnous nous croiserions.\pIl m'a donné le mien aussi, mais il\nsait que je l'aurais détruit si\lil ne l'avait pas fait…
-0x7CED48: Alors, où vas-tu\nensuite, {PLAYER} ?\p…\pVille de Dehara, hein\n? J'y vais aussi.\pLog a mentionné un gars là-bas qui\nsait traverser l'eau.\pComme vous le savez, j'ai cherché\nmes parents, et mes recherches\lme disent que les Ombres étaient\limpliquées dans leur disparition.\pJ'ai réussi à retrouver les Ombres.\nÀ les Ruines du Néant, mais je ne\là pied ou en avion.\pSi vous avez également besoin d'un\nmoyen de surfer sur les vagues, vous\lle surfeur de la ville{COLOR}Ë.\pÀ plus tard, {PLAYER}.
+0x7CED48: Alors, où vas-tu\nensuite, {PLAYER} ?\p…\pDehara, hein\n? J'y vais aussi.\pLog a mentionné un gars là-bas qui\nsait traverser l'eau.\pComme vous le savez, j'ai cherché\nmes parents, et mes recherches\lme disent que les Ombres étaient\limpliquées dans leur disparition.\pJ'ai réussi à retrouver les Ombres.\nÀ les Ruines du Néant, mais je ne\là pied ou en avion.\pSi vous avez également besoin d'un\nmoyen de surfer sur les vagues, vous\lle surfeur de la ville{COLOR}Ë.\pÀ plus tard, {PLAYER}.
 0x7CEF27: Allez faire un peu plus d'espace\ndans votre Cube pour cette Méga
 0x7CEF61: Avez-vous fait de la place dans\nvotre Cube pour la Méga Pierre ?
 0x7CF046: Mes voyages ont-ils été vains ?
@@ -7217,7 +7217,7 @@
 0x7EED2A: Le gars a pris {COLOR}É5 Pierres Dures{COLOR}Ë.
 0x7EED4C: Oh, tu veux sûrement quelque\nchose en récompense ?
 0x7EED80: Il te faut plus de place si tu veux\nça de moi.
-0x7EEDAE: Tu devrais donner cette {COLOR}ÉPerle\nTriple{COLOR}Ë à mon autre passionné à la\l{COLOR}ÉVille de Dehara{COLOR}Ë.\pIl la paiera très bien.\n
+0x7EEDAE: Tu devrais donner cette {COLOR}ÉPerle\nTriple{COLOR}Ë à mon autre passionné à la\l{COLOR}ÉDehara{COLOR}Ë.\pIl la paiera très bien.\n
 0x7EEE48: Non…\nTu n'es pas un fantôme…
 0x7EEE5D: Pourquoi n'y a-t-il pas de Pokémon\nSpectre ici ?
 0x7EEEB3: Je dois être…
@@ -7868,7 +7868,7 @@
 0x8CDDD0: Bon, {PLAYER}, tu devrais suivre\nJax.\pJe dirai à ta mère que tu seras\nparti un moment.\pJe suis sûr qu'elle comprendra.
 0x8CDE49: Rends-toi au {COLOR}ÉVolcan Cendreux{COLOR}Ë et\nregarde Jax sauver {COLOR}ÉSulfura{COLOR}Ë.\pTu pourrais gagner une expérience\nprécieuse comme ça.
 0x8CDEBB: On manque de temps, {PLAYER}.\nTu dois filer au {COLOR}ÉMont Foudroyant{COLOR}Ë pour sauver\n{COLOR}ÉÉlecthor{COLOR}Ë !\pS'il est capturé lui aussi, nous\nsommes fichus…
-0x8CDF4B: Avec les trois Pokémon légendaires\nen main, les Ombres ne sont plus\lqu'à quelques instants de libérer\lla force obscure.\pJax est à la {COLOR}ÉVille de Dehara{COLOR}Ë,\nprêt à t'emmener aux {COLOR}ÉRuines du Néant{COLOR}Ë\let à empêcher les Ombres de\lmener leur plan à bien.
+0x8CDF4B: Avec les trois Pokémon légendaires\nen main, les Ombres ne sont plus\lqu'à quelques instants de libérer\lla force obscure.\pJax est à la {COLOR}ÉDehara{COLOR}Ë,\nprêt à t'emmener aux {COLOR}ÉRuines du Néant{COLOR}Ë\let à empêcher les Ombres de\lmener leur plan à bien.
 0x8CE03C: Alors, la force obscure a été\nlibérée…\pSi on ne l'arrête pas, elle peut\ndétruire toute la région !\pTu dois retrouver Jax et la sceller\nune fois de plus !
 0x8CE0C8: Bravo ! Lumière vaincue !\pTu nous as sauvés !\nTu es un vrai Gardien de\pBorrius !\pTon père serait fier.
 0x8CE141: Maintenant que tout est paisible\nà nouveau, pourquoi ne pas défier\lla {COLOR}ÉLigue Pokémon{COLOR}Ë ?\pAvec ton niveau, tu pourrais\nfacilement devenir le Maître.
@@ -7894,7 +7894,7 @@
 0x8CF52B: Un Pokémon rare
 0x8CF53A: Une Latiosite et une Latiasite
 0x8CF554: Le Charme Chroma
-0x8D072F: {RIVAL}: {COLOR}ËMec, tu quittes seulement\nla Ville de Dehara maintenant ?\pT'es vraiment lent !\pPendant que tu traînais, j'ai\ntrouvé comment atteindre les\lRuines du Néant.\pMais quand je suis arrivé, il était\ntrop tard pour faire quoi que ce\psoit.\nQuelle que soit leur combine, les\pOmbres l'avaient déjà faite.\nIl y avait des traces de combat\let un drôle de tas de cendres au\psol.\nPeut-être pour un rituel ?\p…\p…\pQuoi !?\pC'est dingue !\pTu es mort et revenu à la vie !?
+0x8D072F: {RIVAL}: {COLOR}ËMec, tu quittes seulement\nla Dehara maintenant ?\pT'es vraiment lent !\pPendant que tu traînais, j'ai\ntrouvé comment atteindre les\lRuines du Néant.\pMais quand je suis arrivé, il était\ntrop tard pour faire quoi que ce\psoit.\nQuelle que soit leur combine, les\pOmbres l'avaient déjà faite.\nIl y avait des traces de combat\let un drôle de tas de cendres au\psol.\nPeut-être pour un rituel ?\p…\p…\pQuoi !?\pC'est dingue !\pTu es mort et revenu à la vie !?
 0x8D0906: {RIVAL}: {COLOR}ËQu'est-ce que…\pT'es censé être qui, toi ?
 0x8D0933: Looker: {COLOR}Ë…\p{PLAYER}, tu te demandes sûrement\npourquoi je ne t'ai pas suivi dans\lle portail avec Jax.\pQuand ce portail est apparu, j'ai\npris peur.\pAlors, contrairement à Jax, j'ai eu\nun réflexe de recul, ce qui m'a\lfait te perdre de vue.\pPour cela, je suis désolé.\pJe pensais que tu avais été envoyé\naux Ruines du Néant.\pDu coup, j'ai essayé de m'y rendre\nmoi aussi.\pMais sans Pokémon à moi, je n'ai\npas pu l'atteindre.\pDis-moi, {PLAYER}, que s'est passé\npour vous deux de l'autre côté du\lportail ?\p…\p…\pJe vois…\pJe pense donc que le mieux est\nd'aller {COLOR}ÉBourg Vivill{COLOR}Ë\let aider les Ombres.\pQuand ils affronteront la Lumière\nde Ruine, ce sera l'occasion\ld'intervenir et de tous les\larrêter.\pVa aider les Ombres pour leur\nultime mission.\pUne fois que tu auras gagné, je te\nrejoindrai dehors avec une équipe\lde police pour en finir.
 0x8D0CA6: {RIVAL}: {COLOR}ËHé !\nNe m'ignore pas !\pJe ne sais pas qui tu es ni ce qui\nse passe, mais si ça concerne les\lOmbres, je veux\len être !
@@ -11788,7 +11788,7 @@
 0xB52510: GROTTE GELÉE
 0xB53514: Paradis Floral
 0xB53528: Forêt Séquoia
-0xB535BC: +   À   ’=♂ËFullmoon Island
+0xB535BC: +   À   ’=♂Ël'Île de la Lune
 0xB6FB10: Ruines du Néant
 0xC0EBA8: jiy{NAME_END}kiiRky
 0xC47C2D: ÀozQz
@@ -14907,7 +14907,7 @@
 0x1EDEB42: Tu prépares un mauvais coup ?\p…\pJe vérifie.\pOn ne sait pas quand un voyou\npassera le contrôle du portail.
 0x1EDEBAC: Je veille sur ce port depuis\nl'époque où la glorieuse Ville\ld'Antisis brillait…\pCe port est tout ce qui reste\nde cette ville…
 0x1EDEC2B: Ce phare était autrefois un phare\nd'espoir pour les touristes.\pMais depuis que la Ville d'Antisis\nest devenue un bidonville criminel,\lles touristes ne viennent plus\là ce port.
-0x1EDECCF: Contrairement à la Ville Portuaire,\nle Port d'Antisis sert à l'import\lde biens des autres régions.\pUne fois déposés ici, ils partent\nvers la Ville de Fallshore\lpour être distribués\lpartout à Borrius.
+0x1EDECCF: Contrairement à la Ville Portuaire,\nle Port d'Antisis sert à l'import\lde biens des autres régions.\pUne fois déposés ici, ils partent\nvers la Fallshore\lpour être distribués\lpartout à Borrius.
 0x1EDEDA6: Les barricades jaunes bougent\nrégulièrement dans la journée pour\lcoïncider avec l'arrivée de\ldifférentes cargaisons.\pSi tu veux accéder à une zone\nbloquée, tu devras juste\lrevenir plus tard.
 0x1EDEE70: Tu sais ce qui est pas juste ?\pC'est que je dois passer un\ncontrôle strict juste pour\laccéder au port et bosser\lchaque jour !\pSans ces crétins de la Ville\nd'Antisis, ce serait même pas\lun problème.
 0x1EDEF4A: Halte !\pIdentifie-toi !
@@ -15709,7 +15709,7 @@
 0x1EF4EEA: Bien essayé.\pJe sais très bien que tu n'as pas\nassez de {STR_VAR_1} à échanger.
 0x1EF4F2B: C'est…{PAUSE} c'est…{PAUSE} un Éclat Comète !?\pOublie les PP Plus, pour chacun,\nje te donne un {COLOR}ÉPP Max{COLOR}Ë !
 0x1EF4F91: Donc, tu veux céder {COLOR}É{STR_VAR_1}{COLOR}Ë\n{COLOR}ÉÉclats Comète{COLOR}Ë contre\l{COLOR}É{STR_VAR_1}{COLOR}Ë de mes {COLOR}ÉPP Max{COLOR}Ë ?
-0x1EF5005: Ah, le Champion daigne visiter\nnotre modeste quartier général.\pIl y a un Pokémon confié\nà un {COLOR}ÉRanger{COLOR}Ç, à {COLOR}ÉVille de Fallshore{COLOR}Ç.\pSi tu es assez attentionné pour\nle dompter, montre-le\lmoi.
+0x1EF5005: Ah, le Champion daigne visiter\nnotre modeste quartier général.\pIl y a un Pokémon confié\nà un {COLOR}ÉRanger{COLOR}Ç, à {COLOR}ÉFallshore{COLOR}Ç.\pSi tu es assez attentionné pour\nle dompter, montre-le\lmoi.
 0x1EF50DF: Ah oui, pas de doute :\nc'est bien le Pokémon confié\lau Ranger.\pTrès bien… je veux te donner\ncelui-ci, un autre de son espèce.
 0x1EF517F: D'après ces notes de recherche\nreçues d'Alola…\pCe Pokémon a été créé à l'image du\nPokémon légendaire Arceus…\pIls voulaient recréer son pouvoir\npour combattre des créatures d'un\lautre monde.\pNous avons tenté pareil à Borrius,\nmais nos résultats n'ont pas été\lmeilleurs que les leurs.\pLe Pokémon que je t'ai donné était\nl'un des deux que nous avons créés.\pMais au cas où viendrait un jour\noù ses vrais pouvoirs pourraient\lêtre libérés…\pAlors je peux créer les outils dont\nil a besoin pour changer de type.
 0x1EF5373: Oh, d'abord, trouve un PC ou un\nPorygon, pour libérer une\lplace dans l'équipe.
@@ -16045,7 +16045,7 @@
 0x1EFD3C7: A vaincu Golche dans un combat\nstimulant.
 0x1EFD3F0: A vaincu Lixdel et Thanasis\ndans un dur combat en duo.
 0x1EFD430: A vaincu Criminon dans un combat\nsurvolté.
-0x1EFD457: Bats tous les devs d'Unbound à\nVille de Dehara en une journée !
+0x1EFD457: Bats tous les devs d'Unbound à\nDehara en une journée !
 0x1EFD496: Les gars d'en bas prétendent avoir\ncréé le monde où l'on vit.\pIls doivent être fous.\nQui croirait ça ?
 0x1EFD508: Les gars d'en bas prétendent avoir\ncréé le monde où l'on vit.\pIls doivent être fous.\pQuelqu'un devrait les remettre\nà leur place.\pTu crois pouvoir le faire ?
 0x1EFD5B1: Je savais pouvoir compter sur toi !\pSi tu peux battre tous les gars\nd'en bas en une seule journée, et\lme le signaler le même jour,\lje te donnerai un truc que j'ai…\lsubtilisé durant\lleur absence.
@@ -16190,7 +16190,7 @@
 0x1F007DC: Panneau Conseils Dresseurs lu\nprès de la sortie vers Cube Corp.
 0x1F00816: Panneau Conseils Dresseurs lu\ndu côté ouest du bâtiment.
 0x1F00858: Panneau Conseils Dresseurs lu\nsur le côté est du bâtiment.
-0x1F0089A: Regarde, regarde !\pJe vois la Ville de Dehara d'ici !\pC'est si proche qu'il n'y a même pas\nune route entre les deux !
+0x1F0089A: Regarde, regarde !\pJe vois la Dehara d'ici !\pC'est si proche qu'il n'y a même pas\nune route entre les deux !
 0x1F0090B: As-tu visité la\n{COLOR}ÉMaison Dresseurs{COLOR}Ë ?\pC'est le bâtiment noir et bleu au\nsud de la ville.\pTu peux y combattre les Dresseurs\nautant que tu veux.\pJ'ai même entendu dire qu'ils\npeuvent devenir plus forts avec toi.
 0x1F009EC: Cette statue représente le Pokémon\noiseau de feu légendaire, <0xFC><0x01><0x06>Sulfura<0xFC><0x01><0x04>.\pIl vit quelque part dans le\n<0xFC><0x01><0x06>Volcan Cendreux<0xFC><0x01><0x04>, illuminant le ciel\lavec ses flammes la nuit.
 0x1F00A8E: Tu vois cette Poké Ball jaune\nlà-bas ?\pC'est une {COLOR}ÉCT{COLOR}Ç, une capacité spéciale\nque tu peux enseigner à tes Pokémon\lautant de fois que tu veux !\pSi tu en trouves une, ouvre la\nBoîte CT et cherche la capacité que\ltu veux enseigner.\pLes Pokémon de ton équipe capables\nd'apprendre cette capacité seront\lmis en surbrillance.\pAinsi, tu n'auras pas à vérifier\nton équipe chaque fois que tu veux\len enseigner une !
@@ -16356,8 +16356,8 @@
 0x1F0453E: Si tu complètes le Pokédex,\nvisite le {COLOR}ÉMont Foudroyant{COLOR}Ç !\pPlein de Pokémon Électrik rares y\nvivent.\pOn dit même qu'Électhor niche\nau sommet !
 0x1F045DD: Une {COLOR}ÉSombre Ball{COLOR}Ë est l'une des\nmeilleures Balls la nuit ou\ldans une grotte.\pElle est bien plus utile que la\nmédiocre Hyper Ball.\pEn plus, elle a un super\nnom !\pSombre !\nLa Sombre Ball !\pJe crois même qu'elle peut capturer\net contrôler les ténèbres\ldans les cœurs.
 0x1F046E2: J'ai entendu dire qu'ailleurs les\nHyper Potions sont diluées.\pCelui qui a eu cette idée est\nun voleur et un escroc.
-0x1F0476F: Ville de Fallshore D
-0x1F04780: Ville de Fallshore N
+0x1F0476F: Fallshore D
+0x1F04780: Fallshore N
 0x1F04791: Salut !\pObjets pour baisser les stats ici !
 0x1F047BA: Houah !\pObjets pour augmenter les stats !
 0x1F047E3: Que dirais-tu d'un Lait Meumeu ?\pC'est la fierté de\nBourg Magnolia !\pDonne-le à un Pokémon pour\nrestaurer ses PV !\pJe te le laisse pour ¥550.
@@ -17117,14 +17117,14 @@
 0x1F17415: Au fait, as-tu déjà rencontré ma\nfille ?\pElle ne quitte pas vraiment la\nVille Blizzard sauf si je l'emmène,\lcar le temps dehors est rude.\pC'est pour ça qu'elle embête tous\nceux qui passent chez nous pour voir\lleurs Pokémon.
 0x1F174F1: mignonne
 0x1F174F7: chérie
-0x1F174FF: Arène Pokémon de Ville de Fallshore
+0x1F174FF: Arène Pokémon de Fallshore
 0x1F17516: Salut, partenaire.\nContent d'te revoir si vite.\pJ'espère que ma modeste demeure te\nplaît et tout.\pSinon, j'suis sûr qu'il y a\nautre chose par ici pour te\lrincer l'œil…\pJ'veux dire, t'as fait\ntout ce patelin et le suivant,\là chercher le p'tit vieux moi.\p…Je rigole, je rigole.\pCe regard me dit que tu te bats pas\npour t'amuser.\pÉcoute, j'suis pas là pour fouiner.\nC'est pas mes oignons.\pMais comme Champion d'Arène, je\npeux pas filer un Badge au premier\lcow-boy venu.\pAlors, on va régler ça.\pQue ce beau gars teste\nta trempe !
 0x1F17729: Bravo, partenaire.\pMais je pense toujours que si\non se battait pour le style,\lje gagnerais, sans souci.
 0x1F17796: Nom d'un chien… je pensais que le\nformat te ferait trébucher, mais tu\lm'as bien montré.\pOn dirait que le Badge est à toi.\pTiens.\nUn {COLOR}ÉBadge Chute{COLOR}Ë, offert par Mel.
 0x1F1785D: Avec le Badge Chute, tout Pokémon\njusqu'au Nv. <0x34> 45 t'obéira.\pIl permet aussi de déplacer de gros\nrochers avec {COLOR}ÉForce{COLOR}Ë.\pFranchement, je sais pas pourquoi\nles Pokémon costauds ne peuvent pas\lle faire déjà…\pMais bon, c'est un truc\nbizarre.\pBref, prends cette CT avec\nce Badge.
 0x1F1798C: Avec {COLOR}ÉFaçade{COLOR}Ë, si ton Pokémon\na un problème de statut, ça devient\ldeux fois plus puissant !\pUtilise-la pour que tes ennemis\nregrettent de te donner un statut !\pBon, file maintenant.\pJ'espère que tu trouveras ce que\ntu cherches.
 0x1F17A71: Bonne chance, et rappelle-toi,\nje suis toujours là si tu veux\lquelque chose de beau à regarder !
-0x1F17ACA: Arène Pokémon de Ville de Dehara
+0x1F17ACA: Arène Pokémon de Dehara
 0x1F17ADA: Galavan
 0x1F17AE2: Yo, ça va, l'ami ?\nComment ça va ?\pMoi, c'est Galavan.\pJe suis Champion d'Arène, au cas où\nça se voit pas.\pAlors, t'as aimé mon Arène ?\pLe magnétisme et l'électricité sous\ntes pieds t'ont compliqué la vie ?\pHa ha ha ! C'est le but !\nL'invention naît de la nécessité !\pLes machines et la techno évoluent\nparce que l'ancien n'était\lpas assez bon !\pC'est ce que mon Arène veut\ntester !\pAlors comment vas-tu avancer quand\nla faiblesse évidente n'est plus\lutilisable ?\pJe veux que tu me montres\ncomment tu t'adaptes !\pEt montre-le moi avec deux\nde tes Pokémon à la fois !\pSinon, moi, Galavan, je te grille\njusqu'à ce que tu ne bouges plus !
 0x1F17D5B: …\pTu m'entends ?\pJ'ai dit : montre-moi avec deux\nde tes Pokémon à la fois !\pUn seul, ça suffit pas !
@@ -17352,13 +17352,13 @@
 0x1F1EC82: Arène Pokémon de Bourg Cratère\nChampion : Véga\pDresseurs vainqueurs :\nJax, {RIVAL}, {PLAYER}
 0x1F1ECC0: Arène Pokémon de Ville Blizzard\nChampion : Alice\pDresseurs vainqueurs :\nJax, {RIVAL}
 0x1F1ECFD: Arène Pokémon de Ville Blizzard\nChampion : Alice\pDresseurs vainqueurs :\nJax, {RIVAL}, {PLAYER}
-0x1F1ED3E: Arène Pokémon de Ville de Fallshore\nChampion : Mel\pDresseurs vainqueurs :\nJax, {RIVAL}
-0x1F1ED7A: Arène Pokémon de Ville de Fallshore\nChampion : Mel\pDresseurs vainqueurs :\nJax, {RIVAL}, {PLAYER}
+0x1F1ED3E: Arène Pokémon de Fallshore\nChampion : Mel\pDresseurs vainqueurs :\nJax, {RIVAL}
+0x1F1ED7A: Arène Pokémon de Fallshore\nChampion : Mel\pDresseurs vainqueurs :\nJax, {RIVAL}, {PLAYER}
 0x1F1EDBA: Manoir Tarmigan\nSuccesseure : Maxima\pDresseurs vainqueurs :\nJax
 0x1F1EDF3: Manoir Tarmigan\nSuccesseure : Maxima\pDresseurs vainqueurs :\nJax, {PLAYER}
 0x1F1EE30: Manoir Tarmigan\nSuccesseure : Maxima\pDresseurs vainqueurs :\nJax, {PLAYER}, {RIVAL}
-0x1F1EE71: Arène Pokémon de Ville de Dehara\nChampion : Galavan\pDresseurs vainqueurs :\nJax, {RIVAL}
-0x1F1EEAE: Arène Pokémon de Ville de Dehara\nChampion : Galavan\pDresseurs vainqueurs :\nJax, {RIVAL}, {PLAYER}
+0x1F1EE71: Arène Pokémon de Dehara\nChampion : Galavan\pDresseurs vainqueurs :\nJax, {RIVAL}
+0x1F1EEAE: Arène Pokémon de Dehara\nChampion : Galavan\pDresseurs vainqueurs :\nJax, {RIVAL}, {PLAYER}
 0x1F1EEEF: Arène Pokémon de Ville d'Antisis\nChampion : Big Mo\pDresseurs vainqueurs :\nJax, {RIVAL}
 0x1F1EF2C: Arène Pokémon de Ville d'Antisis\nChampion : Big Mo\pDresseurs vainqueurs :\nJax, {RIVAL}, {PLAYER}
 0x1F1EF6D: Arène Pokémon de Bourg Polder\nChampion : Tessy\pDresseurs vainqueurs :\nJax, {RIVAL}
@@ -18066,7 +18066,7 @@
 0x1F307EB: Très bien, {PLAYER}, tu peux suivre\nJax.\pJe vais…{PAUSE}î dire à ta mère que tu as\nterminé ma tâche et que tu es\lparti relever le défi des Champions.\pOui, ça fera l'affaire.
 0x1F30899: Ne te force pas, {PLAYER}.\pSi tu te sens trop blessé pour\ncontinuer, tu dois te replier.\pJax t'aidera, si jamais.\pBonne chance, jeune homme.
 0x1F30933: On manque de temps, {PLAYER}.\pTu dois vite aller au {COLOR}ÉMont Foudroyant{COLOR}Ë et sauver {COLOR}ÉÉlecthor{COLOR}Ë !\pS'il est capturé aussi, nous sommes\ntous condamnés…
-0x1F309BE: Jax m'a raconté la nouvelle.\pBeau travail pour avoir sauvé\nÉlecthor, {PLAYER} !\pIl ne reste plus qu'à récupérer\nSulfura et Artikodin des mains des\lOmbres.\pJax est à la {COLOR}ÉVille de Dehara{COLOR}Ë,\net attend pour discuter de la suite.
+0x1F309BE: Jax m'a raconté la nouvelle.\pBeau travail pour avoir sauvé\nÉlecthor, {PLAYER} !\pIl ne reste plus qu'à récupérer\nSulfura et Artikodin des mains des\lOmbres.\pJax est à la {COLOR}ÉDehara{COLOR}Ë,\net attend pour discuter de la suite.
 0x1F30A7F: Alors, la force obscure a été\nlibérée…\pSi elle n'est pas arrêtée, elle\npourrait détruire toute la région !\pTu dois trouver Jax et la sceller\nà nouveau !
 0x1F30B16: Tu l'as fait !\pTu as vaincu la Lumière de la Ruine\net nous as sauvés !\pTu es un véritable Gardien de\nBorrius !\pTon père serait fier.
 0x1F30B8F: Maintenant que tout est à nouveau\npaisible, pourquoi ne pas tenter la\l{COLOR}ÉLigue Pokémon{COLOR}Ë ?\pJe suis sûr que quelqu'un avec ton\nniveau pourrait devenir Maître.
@@ -18233,12 +18233,12 @@
 0x1F357F8: Donc ils ont réussi à s'échapper…\pJax, tu dois les poursuivre !\pS'ils brisent la pierre et utilisent\nla bouteille, les résultats\lseraient catastrophiques !
 0x1F35890: Je sais…{PAUSE} savez-vous où ils peuvent\naller, Dr Harth ?
 0x1F358CE: S'ils veulent libérer le sceau\nsur la pierre, ils iront\lau {COLOR}ÉRuines du Néant{COLOR}Ë.\pSeul cet endroit permet d'obtenir\nla bouteille qu'elle contient.
-0x1F3595F: Les {COLOR}ÉRuines du Néant{COLOR}Ë, a-t-il dit…\p{PLAYER}, je retourne prévenir Papy\npour ce qui s'est passé.\pPendant ce temps, tu devrais\naller au {COLOR}ÉMont Foudroyant{COLOR}Ë.\pTant que les Ombres n'ont pas\nÉlecthor, on peut encore\lles arrêter !\pOh oui…{PAUSE} comme tu as besoin de la\ncapacité {COLOR}ÉForce{COLOR}Ë pour suivre le\lsentier de la montagne…\pTu devrais sans doute retourner à\n{COLOR}ÉVille de Fallshore{COLOR}Ë et obtenir le\lBadge d'Arène là-bas.\pJe crois avoir vu le Champion\nla dernière fois à {COLOR}ÉVille de Tehl{COLOR}Ë.\pUne fois ça fait et Électhor\nsauvé, je te rejoindrai à\l{COLOR}ÉVille d'Epidimy{COLOR}Ë.
+0x1F3595F: Les {COLOR}ÉRuines du Néant{COLOR}Ë, a-t-il dit…\p{PLAYER}, je retourne prévenir Papy\npour ce qui s'est passé.\pPendant ce temps, tu devrais\naller au {COLOR}ÉMont Foudroyant{COLOR}Ë.\pTant que les Ombres n'ont pas\nÉlecthor, on peut encore\lles arrêter !\pOh oui…{PAUSE} comme tu as besoin de la\ncapacité {COLOR}ÉForce{COLOR}Ë pour suivre le\lsentier de la montagne…\pTu devrais sans doute retourner à\n{COLOR}ÉFallshore{COLOR}Ë et obtenir le\lBadge d'Arène là-bas.\pJe crois avoir vu le Champion\nla dernière fois à {COLOR}ÉVille de Tehl{COLOR}Ë.\pUne fois ça fait et Électhor\nsauvé, je te rejoindrai à\l{COLOR}ÉVille d'Epidimy{COLOR}Ë.
 0x1F35B93: Ouf…{PAUSE}î rien ne vaut de quitter\nla vie citadine et revenir\là Mère Nature.\pJe veux dire, comment avoir un\nbronzage naturel comme le mien ?\pLa beauté, ça se travaille, après\ntout.\pLa beauté est la vertu la plus\nimportante, pas vrai ?
 0x1F35CA5: Exact. Tu sais ce qui est important\ndans la vie. Ça me plaît.
 0x1F35CDB: Partenaire, tu ignores ce que tu\nrates, alors.
 0x1F35D05: Cet endroit est parfait pour ma\nroutine.\pQuand je reviens à l'Arène, la brume\ndes cascades sublime mon corps\lbien sculpté.\pTu veux toucher ? Des pectoraux\nnaturels, juste ici.
-0x1F35DB2: Oh, désolé, moi c'est Mel, le\nChampion de la {COLOR}ÉVille de Fallshore{COLOR}Ë.\pDésolé de ne pas avoir été là quand\ntu es passé, mais bon…{PAUSE} ma séance\ld'entraînement n'attend personne.\pÇa met la pression, mais les filles\nà l'Arène n'ont pas l'air de\ls'en plaindre…\pBref, j'en ai presque fini pour\naujourd'hui, donc si tu veux\lcombattre, j'ai du temps.\pÀ bientôt, partenaire.
+0x1F35DB2: Oh, désolé, moi c'est Mel, le\nChampion de la {COLOR}ÉFallshore{COLOR}Ë.\pDésolé de ne pas avoir été là quand\ntu es passé, mais bon…{PAUSE} ma séance\ld'entraînement n'attend personne.\pÇa met la pression, mais les filles\nà l'Arène n'ont pas l'air de\ls'en plaindre…\pBref, j'en ai presque fini pour\naujourd'hui, donc si tu veux\lcombattre, j'ai du temps.\pÀ bientôt, partenaire.
 0x1F35EF7: Juste un petit mot avec toi avant\nque tu files.
 0x1F35F2D: Juste avant que tu arrives, j'ai\nentendu dire que des vauriens\lempêchaient les gens\lde {COLOR}ÉEpidimy{COLOR}Ë d'explorer le vieux\l{COLOR}ÉMont Foudroyant{COLOR}Ë.\pJe comptais remettre de l'ordre\nchez ces hors-la-loi.\pParce que j'ai la classe,\nje fais le bien, aussi.\pEt je le fais en restant classe !\pBref, l'un d'eux a dit qu'ils\ngardaient la montagne pour\lt'empêcher d'entrer.\pIl a même mentionné ton nom.\pJe ne sais pas vraiment dans quel\nbazar tu es embarqué,\lmais je vais t'aider.\pAlors prends ça et file à Epidimy\nplus vite.
 0x1F36150: {COLOR}ËComme les autres CS, si tu as un\nPokémon qui peut l'apprendre,\lil peut l'utiliser.\pChoisis un Pokémon qui peut\nl'apprendre, et tant qu'il n'a pas\ldéjà quatre capacités CS,\lcet outil te mène\llà où tu es déjà allé.\pBref, ne me fais pas attendre trop\nlongtemps, partenaire.\pTu ne veux pas rater mon\ntravail impeccable !
@@ -18293,8 +18293,8 @@
 0x1F3797E: Et même si ton attitude mérite\nun ajustement, {RIVAL}, tu\lpeux en avoir un aussi.
 0x1F379D3: Surf, hein…\nCe sera utile.\pJ'ai vu les Ombres liées\nà la disparition de mes parents,\let je les ai suivies jusqu'aux\lRuines du Néant.\pAvec l'itinéraire, je Surf\net je verrai ce qui leur arrive\lune bonne fois pour toutes !\pMerci, je suppose, Log.
 0x1F37AEE: Les Ombres, dis-tu ? Ah,\poui… ça me rappelle pourquoi\nje suis venu.
-0x1F37B33: {PLAYER}, Arthur m'a mis au\ncourant de tes récentes escapades.\pD'abord, félicitations pour\navoir sauvé Électhor. Mais\pévidemment, je n'ai jamais\ndouté de toi un instant,\p{PLAYER} ! Ho ho ho !…\pBref, si tu veux aller\pdans la même direction\nque les Ombres… Un vieux\lcollègue à moi vit à la\pVille de Dehara, c'est\nun chercheur pointilleux\ldes Ruines du Néant.\lOn m'a dit que Jax est\pparti le chercher. Si\nbesoin, il pourra te\pdonner les indications\nde Surf.
-0x1F37D04: Un vieux type à la Ville de Dehara\nconnaît le chemin vers les Ruines\pdu Néant ? Ça règle où je vais aller\nensuite. Merci, Log, d'avoir dit\pquelque chose qui vaut la peine\nd'être entendu pour une fois.
+0x1F37B33: {PLAYER}, Arthur m'a mis au\ncourant de tes récentes escapades.\pD'abord, félicitations pour\navoir sauvé Électhor. Mais\pévidemment, je n'ai jamais\ndouté de toi un instant,\p{PLAYER} ! Ho ho ho !…\pBref, si tu veux aller\pdans la même direction\nque les Ombres… Un vieux\lcollègue à moi vit à la\pDehara, c'est\nun chercheur pointilleux\ldes Ruines du Néant.\lOn m'a dit que Jax est\pparti le chercher. Si\nbesoin, il pourra te\pdonner les indications\nde Surf.
+0x1F37D04: Un vieux type à la Dehara\nconnaît le chemin vers les Ruines\pdu Néant ? Ça règle où je vais aller\nensuite. Merci, Log, d'avoir dit\pquelque chose qui vaut la peine\nd'être entendu pour une fois.
 0x1F37DB8: À plus, {PLAYER}. La prochaine\pfois, je jure que je comblerai\ncet écart entre nous !
 0x1F37E09: Soupir…{PAUSE}î on dirait que son voyage\navec les Pokémon ne l'a pas\ldu tout adouci.…{PAUSE}îBon, bonne\pchance, {PLAYER}. Je prierai\npour ta réussite.
 0x1F37E91: Soupir…{PAUSE}î que suis-je censé faire\nmaintenant… ? Je n'ai rien à\pmontrer à Zeph et Ivory… L'objectif\nn'est plus atteignable sans\pÉlecthor… Devrait-on…{PAUSE} abandonner\nnotre cause ? Pour être honnête,\pje doute des extrêmes auxquels\pnous sommes allés… Je pense\nqu'il est temps de rentrer\pchez moi, auprès\nde mes enfants.
@@ -18308,7 +18308,7 @@
 0x1F387F2: {PLAYER} ! Tu es là ! Désolé,\pje ne t'ai pas vu, je tuais\nle temps sur ces machines… Ce\pjeu {COLOR}ÉCloud Burst{COLOR}Ë est vraiment\naddictif, et je me suis laissé\lporter. Au passage, j'ai même\pgagné assez de Jetons pour\nacheter non pas une, mais deux\l{COLOR}ÉPilules Talent{COLOR}Ë ! Tu en as\pentendu parler ? Si un Pokémon\pa deux talents possibles,\nles Pilules changent\ll'un en l'autre.
 0x1F38960: Mais, Cloud Burst peut attendre.\pAllons dehors, là où c'est\nun peu moins bruyant.
 0x1F389BB: Bien, ça ira. Ok, écoute. Pendant\pque je t'attendais, j'ai vu un\ppaquet de sbires des Ombres partir\nvers l'ouest, en direction des\lRuines du Néant. D'après Papy,\pla seule raison d'y aller…{PAUSE} c'est\ns'ils ont tout ce qu'il faut\lpour faire le rituel de déliançage.\lTu sais, le rituel nécessaire\ppour libérer la force obscure.\nMais ça ne devrait pas être\ppossible sans Électhor… C'est\npourquoi Papy pense qu'ils\pvont tenter le déliançage quand\nmême et espérer que le rituel\lincomplet suffise pour leurs\lobjectifs. C'est notre chance\pd'y aller aussi et de reprendre\nArtikodin et Sulfura ! C'est\lparfait. Ils seront les\pseuls sur les ruines,\pdonc on n'aura pas à craindre\nqu'ils transforment\ldes innocents en\lces monstres !
-0x1F38C8F: Mais avant ça, première chose\n: tu devrais obtenir le Badge\ld'Arène de la Ville de Dehara.\pTu en auras besoin pour surfer\njusqu'aux Ruines du Néant\lavec moi, puisqu'il est\limpossible d'y aller à pied.\pD'accord, je rentre préparer\nmes Pokémon. Pendant\pce temps, va chercher\nce Badge.
+0x1F38C8F: Mais avant ça, première chose\n: tu devrais obtenir le Badge\ld'Arène de la Dehara.\pTu en auras besoin pour surfer\njusqu'aux Ruines du Néant\lavec moi, puisqu'il est\limpossible d'y aller à pied.\pD'accord, je rentre préparer\nmes Pokémon. Pendant\pce temps, va chercher\nce Badge.
 0x1F38DB0: Qu'est-ce que… ? {PLAYER},\pattention !
 0x1F38DCD: Ça va ? Que s'est-il passé ? D'un\ncoup, un anneau étrange est apparu,\pet on s'est fait aspirer ici…\nJ'avais peur de te perdre,\palors j'ai essayé de sauter\ndedans après toi…
 0x1F38E6B: Où est-on ? Attends…{PAUSE}î est-ce\pque…{PAUSE}î ce sont les Ruines du Néant ?
@@ -18895,7 +18895,7 @@
 0x1F56313: Monte le Mont Givre et dirige-toi\nvers la Ville Blizzard !
 0x1F56353: Défie l'Arène de Blizzard !
 0x1F56374: Obtiens Éclate-Roc auprès de l'ami\ndu Maître Coupe à Ville Blizzard !
-0x1F563B2: Voyage vers le sud via l'Autoroute\nKBT jusqu'à la Ville de Fallshore !
+0x1F563B2: Voyage vers le sud via l'Autoroute\nKBT jusqu'à la Fallshore !
 0x1F563ED: Descends la Route 10 jusqu'à la\nVille de Tehl !
 0x1F56417: Explore la Ville de Tehl et trouve\nun chemin vers la Route 9 !
 0x1F5644A: Devance Ombres jusqu'à la maison\nchez l'ami d'Arthur, Route 9 !
@@ -19137,7 +19137,7 @@
 0x1F5BB95: On dit que cette grotte s'appelle\nla {COLOR}ÉGrotte de l'Être{COLOR}Ë.\pOn dit qu'elle rappelle les grottes\ndes lacs de Sinnoh.
 0x1F5BC20: Il pleut tout le temps ici !\nPourquoi il pleut tout le temps ?
 0x1F5BC59: Mais… mais… la pluie était censée\nme donner l'avantage !
-0x1F5BC94: Ailleurs, à la Ville de Fallshore,\nil ne pleut que par moments.\pAlors pourquoi il pleut tout le\ntemps sur la Route 10 ?
+0x1F5BC94: Ailleurs, à la Fallshore,\nil ne pleut que par moments.\pAlors pourquoi il pleut tout le\ntemps sur la Route 10 ?
 0x1F5BCFB: Route 11
 0x1F5BD05: Grotte Falaise
 0x1F5BD10: Au-delà des rochers,\nun océan.\pQuelque part dans cet océan\nse trouve la paisible région\ld'Alola.\pLà-bas, ils ont pour tradition\nque chacune de leurs îles soit\lprotégée par une divinité.\pTu t'es déjà demandé ce que ce\nserait si chacune des îles de\lBorrius en avait aussi une ?\pPeut-être pas dans ton esprit,\nmais moi, oui.
@@ -19194,7 +19194,7 @@
 0x1F5CC21: Ce col de montagne a une structure\nvraiment unique.\pTu ne verras aucune autre route à\nBorrius avec des escaliers creusés\ldans le flanc d'une montagne comme\lcelle-ci !
 0x1F5CCBF: Tu sais où tu vas ?
 0x1F5CCDF: Tu dois le savoir.
-0x1F5CCEE: Pour aller de Tarmiganville à la\nVille de Dehara, tu dois d'abord\ldescendre la montagne.
+0x1F5CCEE: Pour aller de Tarmiganville à la\nDehara, tu dois d'abord\ldescendre la montagne.
 0x1F5CD40: Hmm…\pÇa doit être le chemin pour la Ville\nde Dehara !\pJ'en suis sûr !
 0x1F5CD7A: Je ne peux pas être perdue…
 0x1F5CD8B: Une belle Dresseuse ne peut pas se\nperdre !\pC'est impossible !
@@ -20209,12 +20209,12 @@
 0x1F7114F: Route 9 «\nBois\pAutl » <0x79> Route 7, Mont Gelé\n<0x7A> Ville de Tehl
 0x1F7118A: Route 9 «\nBois\pAutl » <0x79> Route 7, Mont Gelé\n<0x7C> Tehl, Route 10
 0x1F711CF: Ville de\pTehl Une ville où c’est\nperpétuellement l’automne.
-0x1F711FF: Route 10 «\nRivière\pd’Automne » <0x7B> Ville de\nTehl <0x79> Voie d’Eau Auburn\l<0x7C> Ville de Fallshore
+0x1F711FF: Route 10 «\nRivière\pd’Automne » <0x7B> Ville de\nTehl <0x79> Voie d’Eau Auburn\l<0x7C> Fallshore
 0x1F71246: Route 10 «\nRivière\pd’Automne » <0x7B> Ville de\nTehl, Voie Auburn -> Fallshore
 0x1F7128C: <0x79> Voie d’Eau Auburn
 0x1F7129E: Voie d’Eau\pAuburn <0x79> Route 6, Grotte\nVallée <0x7A> Route 10
-0x1F712D0: Ville de Fallshore\pChutes d’eau de Borrius.
-0x1F71301: Arène Pokémon de Ville de Fallshore\nChampion : Mel Grâce et\lprestance
+0x1F712D0: Fallshore\pChutes d’eau de Borrius.
+0x1F71301: Arène Pokémon de Fallshore\nChampion : Mel Grâce et\lprestance
 0x1F7134A: Maison Combat Inversé\pAmusez-vous !
 0x1F71378: QG des Missions\pCherchez votre prochain boulot !
 0x1F7139B: Route 11 «\nGrottes\pdes Falaises » <0x7B> Ville de\nFallshore <0x7C> Bourg\lEpidimy <0x79> Bourg Tarmigan
@@ -20231,7 +20231,7 @@
 0x1F7165F: Étrange. La porte est\ndéverrouillée…
 0x1F71685: Route 12 « Escaliers\nOuest\pMont Foudroyant » <0x79> Ville de\nDehara <0x7A> Bourg Tarmigan\l<0x7B> Route 14
 0x1F716CF: Ville de\pDehara Une oasis au bord du désert.
-0x1F716FF: Arène Pokémon de Ville de Dehara\nChampion : Galavan Le cerveau\lderrière la machine de guerre
+0x1F716FF: Arène Pokémon de Dehara\nChampion : Galavan Le cerveau\lderrière la machine de guerre
 0x1F71749: Trouve tout ce qu’il te faut au\nGrand Magasin de Dehara !
 0x1F71777: 1F : Comptoir Service\n2F : Marché Dresseur\l3F : Objets d’Évolution\l4F : Rayon CT\l5F : Boîte Médicaments\l6F : Cadeaux Sages
 0x1F717E5: 2F : Marché Dresseur\pArticles top pour Dresseurs !
@@ -20245,11 +20245,11 @@
 0x1F718B5: Maison Combat Duo\pProfitez des combats à deux !
 0x1F718E3: Quelque chose est écrit sur le mur.\p« Salle de dev Unbound »\pPas de budget pour un panneau ?
 0x1F71945: Zone d’Entraînement Guerrier Ombre
-0x1F71962: Route 13\n« Chenal de Borrius »\p<0x79> Route 4, Volcan Cendreux,\nForêt Lugubre\l<0x7A> Route 14\l<0x7C> Ville de Dehara
+0x1F71962: Route 13\n« Chenal de Borrius »\p<0x79> Route 4, Volcan Cendreux,\nForêt Lugubre\l<0x7A> Route 14\l<0x7C> Dehara
 0x1F719C0: Route 13\n« Chenal de Borrius »\p<0x79> Route 4, Volcan Cendreux,\nForêt Lugubre\l<0x7A> Route 14
 0x1F71A10: Route 14\n« Chenal de Borrius »\p<0x79> Route 13\n<0x7B> Route 6, Ruines du Néant\l<0x7C> Route 12
 0x1F71A5E: Route 14\n« Chenal de Borrius »\p<0x7B> Route 6\n<0x7C> Ruines du Néant, Route 12
-0x1F71AA1: Grand Désert\p<0x7B> Ville de Dehara\n<0x7C> Bourg Gurun
+0x1F71AA1: Grand Désert\p<0x7B> Dehara\n<0x7C> Bourg Gurun
 0x1F71AC9: Tombeau de Borrius\pIci repose le roi Borrius III.
 0x1F71AF5: Bourg Gurun\pUne ville qui a survécu aux sables\ndu temps.
 0x1F71B2C: C’est une statue du Pokémon titan\nlégendaire.\pOn dit qu’autrefois, les titans\nont aidé Regigigas à réunir\lla région de Borrius.\pLeur demeure actuelle\nest inconnue.
@@ -20315,17 +20315,17 @@
 0x1F726FC: <0x79> Bourg\nCratère <0x7B>\lTehl <0x7C> Fallshore, Ville d'Epidimy
 0x1F72735: <0x79> Bourg Cratère, Ville\nde Tehl <0x7A> Ville\lde Fallshore <0x7C> Ville d'Epidimy
 0x1F7276E: <0x79> Dresco <0x7A>\lDehara <0x7B> Cratère, Blizzard
-0x1F727A7: <0x79> Dresco <0x7A>\lVille de Dehara <0x7C> Bourg Gurun
-0x1F727D0: <0x7A> Ville d’Antisis, Ville\nPortuaire <0x7B>\lVille de Dehara <0x7C> Bourg Gurun
+0x1F727A7: <0x79> Dresco <0x7A>\lDehara <0x7C> Bourg Gurun
+0x1F727D0: <0x7A> Ville d’Antisis, Ville\nPortuaire <0x7B>\lDehara <0x7C> Bourg Gurun
 0x1F72808: <0x79> Bourg\nGurun <0x7A> Ville\ld’Antisis <0x7C> Ville Portuaire
 0x1F72833: Sortie A : Hauteurs Gelées
 0x1F7284A: Sortie B : Dresco
 0x1F7285E: Sortie C : Bourg Cratère
 0x1F72872: Sortie D : Ville Blizzard
 0x1F72888: Sortie E : Ville de Tehl
-0x1F7289A: Sortie F : Ville de Fallshore
+0x1F7289A: Sortie F : Fallshore
 0x1F728B1: Sortie G : Ville d'Epidimy
-0x1F728C6: Sortie H : Ville de Dehara
+0x1F728C6: Sortie H : Dehara
 0x1F728DA: Sortie I : Bourg Gurun
 0x1F728ED: Sortie J : Bourg Vivill
 0x1F72901: Sortie K : Ville d’Antisis
@@ -20763,7 +20763,7 @@
 0x1F7F4ED: L'air de cette montagne est\nélectrisant !\pRien à voir avec la Ville d'Antisis.
 0x1F7F537: Je ne suis pas assez électrisé\npour gagner…
 0x1F7F562: Je devrais peut-être retourner à\nla Ville d'Antisis.\pJe ne suis pas à la hauteur ici.
-0x1F7F5A7: Tu savais ?\pLe Champion d'Arène de\nla Ville de Dehara s'entraîne ici.
+0x1F7F5A7: Tu savais ?\pLe Champion d'Arène de\nla Dehara s'entraîne ici.
 0x1F7F5E7: Waouh, tu es fort !\nTu t'entraînes ici aussi ?
 0x1F7F612: Je dois m'entraîner plus pour\nrivaliser avec ce Champion.
 0x1F7F649: Ah !\nPris dans une toile électrique !
@@ -22566,7 +22566,7 @@
 0x1FA3E0A: Eldon
 0x1FA3E10: J'ai perdu le goût de naviguer\ndepuis que mon fils est tombé dans\lce horrible cauchemar… Si\pseulement quelqu'un savait le\nguérir. Peut-être qu'un scientifique\pdu {COLOR}ÉDream Research\nLab{COLOR}Ë saurait…
 0x1FA3ECD: Cette scientifique a dit qu'il nous\nfaut la {COLOR}ÉLun'Aile{COLOR}Ë de\ll'{COLOR}ÉÎle Pleine Lune{COLOR}Ë\ppour soigner mon fils. Iriez-vous à\nl'{COLOR}ÉÎle Pleine Lune{COLOR}Ë\ppour moi ? Sinon pour mon fils ?
-0x1FA3F77: Super, merci ! On compte sur toi !\nSeul toi peux réveiller mon fils de\pson horrible cauchemar… S'il te\nplaît, j'ai besoin\pde la Lun'Aile de\nl'île Pleine Lune pour le réveiller\p! Quand tu es prêt, j'ai un bateau à\nVille de Fallshore qui peut nous y\lemmener.
+0x1FA3F77: Super, merci ! On compte sur toi !\nSeul toi peux réveiller mon fils de\pson horrible cauchemar… S'il te\nplaît, j'ai besoin\pde la Lun'Aile de\nl'île Pleine Lune pour le réveiller\p! Quand tu es prêt, j'ai un bateau à\nFallshore qui peut nous y\lemmener.
 0x1FA406A: Il me faut la\nLun'Aile pour l'aider.
 0x1FA40AC: Tu veux appareiller ?
 0x1FA40C3: …Toi… Tu es\pprêt à aller à l'île\nPleine Lune pour nous ?
@@ -22577,7 +22577,7 @@
 0x1FA4268: Apporte la\nLun'Aile à mon fils.
 0x1FA428F: Tu es réveillé !
 0x1FA429D: Dès que tu t'es approché de mon\nfils, la Lun'Aile s'est mise à\pbriller. Il s'est réveillé peu\naprès, mais on dirait que tu es\ptombé en transe. Maintenant te voir,\ntoi et mon fils, revenir à la\pnormale me fait du bien ! Je n'ai\npas grand-chose à t'offrir en\lremerciement, mais peut-être que\lceci te servira plus qu'à moi.
-0x1FA43D8: Merci ! On ne\nt'oubliera jamais ! Je\pserai aux quais de la Ville de Fallshore si\ntu veux prendre la mer.
+0x1FA43D8: Merci ! On ne\nt'oubliera jamais ! Je\pserai aux quais de la Fallshore si\ntu veux prendre la mer.
 0x1FA4440: Je recherche actuellement de\nnouvelles façons de réveiller les\lPokémon de l'état Sommeil. Cela\ppourrait avoir beaucoup\nd'applications, alors s'il te plaît,\lne me dérange pas.
 0x1FA44EE: Oh, bonjour. Vous avez besoin de\nquelque chose ?… Un petit\pgarçon ne se réveille pas d'un\phorrible\pcauchemar ? Et son père a\nbesoin d'aide\ppour le soigner ? Ça\nressemble assez à mon domaine de\precherche. Je\nvais aller jeter un\pœil.
 0x1FA45D4: Je ne sais pas si\nça a servi, mais\lj'espère avoir pu aider un peu.
@@ -22985,7 +22985,7 @@
 0x1FADEF7: Utilisez l'{COLOR}ÉÉlectriseur{COLOR}Ë sur un {COLOR}ÉÉlektek{COLOR}Ë\npour le faire évoluer.
 0x1FADF36: Fba Épées de Justice
 0x1FADF4A: Les Lames de la Justice sont arrivées\ndepuis Unys ! Traquez-les\net capturez-les.
-0x1FADFA7: Les Lames de la Justice se cachent dans\nla Route Victoire ! Capturez-les et ramenez-les\nà Ville de Fallshore.
+0x1FADFA7: Les Lames de la Justice se cachent dans\nla Route Victoire ! Capturez-les et ramenez-les\nà Fallshore.
 0x1FAE008: Ramenez les trois Lames de la Justice\nà la Route 17 pour découvrir un dernier\nmystère.
 0x1FAE053: Les Lames de la Justice de la\nrégion d'Unys…\pPourquoi seraient-elles ici ?\pElles n'y sont pas !\pPas encore du moins…\pAvec le temps, les choses pourraient changer…
 0x1FAE0D1: Les Lames de la Justice de la région d'Unys\nsont apparues !\pPourquoi seraient-elles ici ?\pLe grand Boom des Portails, voilà pourquoi !\pAllez-vous les capturer et me les\nmontrer ?
@@ -23021,7 +23021,7 @@
 0x1FAEE2C: Hein ?\nC'est un sale gosse !\pMec, qui s'approche d'un grand gang\nde gens sans protection, hein ?\pTabassons-{STR_VAR_2} et volons\ntout son argent !
 0x1FAEEB7: C'est ça ! Il n'y a personne à blâmer\nà part toi-même, sale gosse !
 0x1FAEEF1: Ta maman ne t'a jamais dit de ne pas\nsuivre les inconnus n'importe où ?\pEh bien, on va te montrer pourquoi…\nà la dure !\pAlors viens, laisse-moi t'entendre\ncouiner, sale morveux !\pImplore la pitié des\n{COLOR}ÉTerreur Granbull{COLOR}É !
-0x1FAEFC0: Halte là !\pJe vous arrête, au nom de\nla Police de la Ville de Fallshore !
+0x1FAEFC0: Halte là !\pJe vous arrête, au nom de\nla Police de la Fallshore !
 0x1FAF012: Oh oh, c'est les flics !\pDispersez-vous, les gars !
 0x1FAF038: Quoi !? Revenez ici, bandes de\nlâches !\pVous êtes plus nombreux que ces clowns, facilement !\pGah… attendez un peu, vous regretterez\nde vous être mis en travers de notre chemin !
 0x1FAF0C5: Mince… ils se sont échappés…\pPourtant, toute cette eau signifie qu'il\nn'y a pas trop d'endroits pour\ns'échapper de nous.\pIls n'ont pas pu aller bien loin.\nSéparons-nous et cherchons-les.
@@ -23675,7 +23675,7 @@
 0x1edde6f: Quel bonheur pour mon fils quand\nil a rejoint les Terror Granbull.\pOui, j'admets que rejoindre un\ngang n'est pas la meilleure des\lcarrières, mais au moins il en\lavait une !\pMaintenant, ce n'est plus qu'un\nmoins que rien.\pQuand va-t-il enfin trouver un\nvrai travail et quitter la maison ?
 0x1ede263: Vous devrez posséder une pièce\nd'identité valide si vous souhaitez\laccéder au port.
 0x1ede32c: Salut, <0xFD><0x01> !\pTu peux aller et venir comme\nbon te semble.\pAvec une Carte Dresseur comme la\ntienne, tu as largement prouvé\lqu'on peut te faire confiance.
-0x1edeccf: Contrairement à la Ville Portuaire, le\nPort d'Antisis sert surtout à\ll'importation de marchandises\ld'autres régions.\pUne fois déposées ici, elles sont\nacheminées vers la Ville de Fallshore,\loù elles peuvent ensuite être\ldistribuées dans tout Borrius.
+0x1edeccf: Contrairement à la Ville Portuaire, le\nPort d'Antisis sert surtout à\ll'importation de marchandises\ld'autres régions.\pUne fois déposées ici, elles sont\nacheminées vers la Fallshore,\loù elles peuvent ensuite être\ldistribuées dans tout Borrius.
 0x1edf12a: Ahhhhh…\pL'odeur infecte s'est évaporée…\nTu as toute ma gratitude.
 0x1edf169: Jusqu'à ce que les doux arômes\nnous réunissent à nouveau, je te\ldis adieu.
 0x1edffbb: Dans le <0xFC><0x01><0x06>Classic Leaders Gauntlet<0xFC><0x01><0x08>,\ntu affronteras chaque Champion\ld'Arène, l'un après l'autre.\pMais même si les combats\ns'enchaînent, tu pourras\lsauvegarder et ajuster ton équipe\lentre chaque combat.\pQuant aux équipes des Champions,\nils utiliseront des Pokémon bien\lplus forts que lors de tes combats\ldans leurs Arènes.\pIls combattront aussi avec les\nmêmes effets de combat qu'à\ll'époque, alors garde ça en tête.\pSi tu parviens à battre un\nChampion et que tu as déjà reçu\lson Cristal Z, il te donnera son\lJoyau quotidien après le combat,\là moins qu'il ne te l'ait déjà\ldonné.\pSi tu parviens à tous les battre,\ntu gagneras des prix fantastiques !\pEt bien sûr, plus ta <0xFC><0x01><0x06>Difficulté\nde Combat<0xFC><0x01><0x08> est élevée, meilleurs\lseront les prix à gagner.
@@ -24264,7 +24264,7 @@
 0x1f6f60a: Marlon, chef !\pJe sais de quoi ça a l'air, mais je\nvous jure, je ne paresse pas !\pZeph m'a dit de regarder les infos\net de surveiller toute personne qui\lpourrait appartenir à la Light of\lRuin.
 0x1f6fe96: Le plus grand soin est apporté à la\nsynthèse de cette nouvelle série de\lGuerriers des Ombres.\pCes Guerriers des Ombres seront les\nplus puissants jamais créés !\pIls seront invincibles !\pEt la Light of Ruin n'aura aucune\nchance contre eux !
 0x1f70e7d: Au fil du voyage, ton Pokémon\ngrandit avec toi…\pRestez toujours liés par l'amitié.\n-Pension Pokémon
-0x1f716cf: Ville de Dehara\pUne oasis en bordure du désert.
+0x1f716cf: Dehara\pUne oasis en bordure du désert.
 0x1f718e3: Quelque chose est griffonné sur le\nmur.\p<0xB1>Salle de Développement d'Unbound<0xB2>\pIls n'avaient pas les moyens de\nse payer un panneau ?
 0x1f71b2c: C'est une statue des Pokémon titans\nLégendaires.\pIl est écrit qu'aux temps anciens,\nles titans ont aidé Regigigas à\lunifier la région de Borrius.\pLeur demeure actuelle est\ninconnue.
 0x1f7252d: Victory Road\pL'ultime épreuve avant la Ligue\nPokémon.
@@ -24499,7 +24499,7 @@
 0x7ed1f2: Grâce à mes efforts, ce désert est\nun vrai paradis pour les Pokémon !\pUn véritable complexe du désert !
 0x7ee8f6: Vous recevez un Lapras de la part\ndu pêcheur !
 0x7eecfb: Parfait, tu les as trouvés.\pDonne-les-moi.
-0x7eedae: Tu devrais donner ce <0xFC><0x01><0x06>Chapelet\nPerles <0xFC><0x01><0x08>à mon collègue passionné de\l<0xFC><0x01><0x06>Ville de Dehara<0xFC><0x01><0x08>.\pIl te le rachètera à bon prix.
+0x7eedae: Tu devrais donner ce <0xFC><0x01><0x06>Chapelet\nPerles <0xFC><0x01><0x08>à mon collègue passionné de\l<0xFC><0x01><0x06>Dehara<0xFC><0x01><0x08>.\pIl te le rachètera à bon prix.
 0x7eeebe: Comment je sors d'ici ?
 0x1f87a10: Comment je sors d'ici ?
 0x7ef24f: Avant, les gens avaient peur de\nsortir de chez eux à cause de\lcette bande encapuchonnée.
@@ -24603,7 +24603,7 @@
 0x771420: Comment va mon ancien Pokémon ?
 0x77229f: Vendeur : <0xFC><0x01><0x08>Désolé monsieur, je ne\npeux pas faire ça.\pCe colis appartient déjà à\nquelqu'un.
 0x772549: …obtenue.\pLe seul hic, c'est qu'elle ne peut\nêtre utilisée que sous la grêle.
-0x7727c5: Ville de Fallshore abrite la <0xFC><0x01><0x06>Maison du\nCombat Inversé<0xFC><0x01><0x08> et le <0xFC><0x01><0x06>QG des\lMissions<0xFC><0x01><0x08>.\pC'est pas génial ?\nC'est trop cool de vivre ici !
+0x7727c5: Fallshore abrite la <0xFC><0x01><0x06>Maison du\nCombat Inversé<0xFC><0x01><0x08> et le <0xFC><0x01><0x06>QG des\lMissions<0xFC><0x01><0x08>.\pC'est pas génial ?\nC'est trop cool de vivre ici !
 0x772a91: Hmm…\nComment récupérer cet objet ?
 0x776157: Salut <0xFD><0x01> !\pComment vas-tu ?\pJe préparais justement à manger\npour ma famille.
 0x778eb1: Oh…\pTu es <0xFD><0x01>, c'est ça ?\p<0xFD><0x06> m'a parlé de toi.\pN'y vois rien de personnel, mais\névite de te mettre en travers de\lson chemin.\pIl n'a pas de temps à te consacrer.
