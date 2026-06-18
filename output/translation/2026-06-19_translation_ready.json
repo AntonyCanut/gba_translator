@@ -1,9 +1,9 @@
 {
-  "conversion_date": "2026-06-19T00:38:54.400024",
+  "conversion_date": "2026-06-19T01:00:11.468800",
   "source_csv": "2026-01-15_trilingual_translation.csv",
-  "total_translations": 20773,
+  "total_translations": 20780,
   "total_errors": 0,
-  "total_warnings": 16751,
+  "total_warnings": 16749,
   "translations": [
     {
       "offset": 165760,
@@ -63032,14 +63032,14 @@
     {
       "offset": 7813276,
       "original_text": "Fallshore City",
-      "translation": "Ville de Fallshore",
-      "length": 18,
+      "translation": "Fallshore",
+      "length": 9,
       "original_length": 14,
-      "padding_used": 4,
+      "padding_used": -5,
       "encoding": "pokemon",
       "category": "location",
       "notes": "",
-      "too_long": true
+      "too_long": false
     },
     {
       "offset": 7822224,
@@ -65870,6 +65870,18 @@
       "padding_used": -2,
       "encoding": "pokemon",
       "category": "dialogue",
+      "notes": "",
+      "too_long": false
+    },
+    {
+      "offset": 7919383,
+      "original_text": "Dehara City",
+      "translation": "Dehara",
+      "length": 6,
+      "original_length": 11,
+      "padding_used": -5,
+      "encoding": "pokemon",
+      "category": "location",
       "notes": "",
       "too_long": false
     },
@@ -154710,6 +154722,18 @@
       "too_long": false
     },
     {
+      "offset": 32470072,
+      "original_text": "Pokémon Day Care",
+      "translation": "Pension Pokémon",
+      "length": 15,
+      "original_length": 16,
+      "padding_used": -1,
+      "encoding": "pokemon",
+      "category": "location",
+      "notes": "",
+      "too_long": false
+    },
+    {
       "offset": 32470089,
       "original_text": "The home of a lovely old couple\nthat will raise Pokémon for you.\nLeave two Pokémon with them, and\nthey may find up to 100 Eggs!",
       "translation": "La maison d'un couple adorable\nqui élève des Pokémon pour vous.\nLaissez-leur deux Pokémon, et\nils pourront trouver 100 OEufs !",
@@ -155860,6 +155884,18 @@
       "category": "location",
       "notes": "",
       "too_long": true
+    },
+    {
+      "offset": 32478784,
+      "original_text": "Dehara City",
+      "translation": "Dehara",
+      "length": 6,
+      "original_length": 11,
+      "padding_used": -5,
+      "encoding": "pokemon",
+      "category": "location",
+      "notes": "",
+      "too_long": false
     },
     {
       "offset": 32478796,
@@ -161438,6 +161474,18 @@
       "padding_used": -8,
       "encoding": "pokemon",
       "category": "dialogue",
+      "notes": "",
+      "too_long": false
+    },
+    {
+      "offset": 32524128,
+      "original_text": "Fallshore City",
+      "translation": "Fallshore",
+      "length": 9,
+      "original_length": 14,
+      "padding_used": -5,
+      "encoding": "pokemon",
+      "category": "location",
       "notes": "",
       "too_long": false
     },
@@ -174998,6 +175046,18 @@
       "padding_used": 0,
       "encoding": "pokemon",
       "category": "dialogue",
+      "notes": "",
+      "too_long": false
+    },
+    {
+      "offset": 32642872,
+      "original_text": "Icy Hole",
+      "translation": "Trou Glacé",
+      "length": 10,
+      "original_length": 8,
+      "padding_used": 2,
+      "encoding": "pokemon",
+      "category": "location",
       "notes": "",
       "too_long": false
     },
@@ -193386,6 +193446,18 @@
       "too_long": false
     },
     {
+      "offset": 32823492,
+      "original_text": "Newmoon Island",
+      "translation": "Île du Croissant",
+      "length": 16,
+      "original_length": 14,
+      "padding_used": 2,
+      "encoding": "pokemon",
+      "category": "location",
+      "notes": "",
+      "too_long": true
+    },
+    {
       "offset": 32823507,
       "original_text": "<0xFC><0x01><0x02>Darkrai melted away into the\ndarkness\"",
       "translation": "{COLOR}ÁDarkrai s'est\ndissous dans ténèbres...",
@@ -195830,6 +195902,18 @@
       "padding_used": 0,
       "encoding": "pokemon",
       "category": "other",
+      "notes": "",
+      "too_long": false
+    },
+    {
+      "offset": 32844404,
+      "original_text": "Polder Town",
+      "translation": "Bourg Polder",
+      "length": 12,
+      "original_length": 11,
+      "padding_used": 1,
+      "encoding": "pokemon",
+      "category": "location",
       "notes": "",
       "too_long": false
     },
