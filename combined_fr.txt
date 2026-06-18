@@ -112,7 +112,7 @@
 0x1879D3: Je regarde la mer pour oublier\nle mauvais truc arrivé !
 0x187A11: Oh, j’adore ta monture !\nJe peux l’avoir si je gagne ?
 0x187A44: Oh ! J'ai perdu !
-0x187A50: Il y a encore du chemin jusqu’aux\nRuines du Néant.\pJe veux retourner à Bourg Dresco.
+0x187A50: Il y a encore du chemin jusqu’aux\nRuines du Néant.\pJe veux retourner à Dresco.
 0x187A9E: La natation, c’est top !\nLes coups de soleil, moins !
 0x187AC1: Choqué !
 0x187ACA: Mon ami voulait nager jusqu’aux\nRuines du Néant.
@@ -5324,7 +5324,7 @@
 0x71CA04: S'affaiblit lorsqu'il est à moitié
 0x71CA30: Réduit temporairement de moitié\nl'Atk et la Spd.
 0x71CA56: attle.
-0x71CA60: Ville de Dresco
+0x71CA60: Dresco
 0x71CA70: Ville de Tehl
 0x7204A8: L'attaque augmente en cas
 0x7204C4: poule empoisonnée.
@@ -5362,7 +5362,7 @@
 0x724B09: Ho ho… c'est sûr que c'est humide…\ncomme un sauna…
 0x728430: Pierre étrange qui fait évoluer\ncertaines espèces de Pokémon. Elle\nbrille d'une lumière éclatante.
 0x740001: Forêt Obscure, Volcan Cendreux,\nBourg Cratère et Route 6
-0x740037: Bourg Bellin, Grotte Stalactite,\nRoute 2 et Bourg Dresco
+0x740037: Bourg Bellin, Grotte Stalactite,\nRoute 2 et Dresco
 0x74037D: <0x11>\nMarlon : <0xFC><0x01><0x08>Cacnea, Coupe !
 0x740753: Tu es ma maman ?
 0x74145B: Héhooo…\pTu viens défier l'Arène ?
@@ -5382,15 +5382,15 @@
 0x744FB3: La terre ici est morcelée en petits\nfragments.\pEn y pensant, toute la région de\nBorrius est divisée en grandes\lîles !
 0x74503F: Cette statue représente le Pokémon\nlégendaire de feu, Sulfura.\pIl vivrait quelque part dans le\nVolcan Cendreux, illuminant le ciel\lde ses flammes la nuit.
 0x7450DB: Regarde, regarde !\pJe vois Ville de Dehara d'ici !
-0x745108: Forêt Lugubre\p<0x7B> Volcan Cendreux\n<0x7C> Bourg Dresco
+0x745108: Forêt Lugubre\p<0x7B> Volcan Cendreux\n<0x7C> Dresco
 0x745132: <0x0F> P<0x56><0x7C><0x08><0x09><0x06><0x02>On vient de\nrater un gros coup de filet,\lnos cibles ont encore filé…\pDu coup on boude.
-0x74528C: As-tu visité la Maison des\nDresseurs à Bourg Dresco ?\pC'est le bâtiment noir et bleu au\nsud de la ville.
+0x74528C: As-tu visité la Maison des\nDresseurs à Dresco ?\pC'est le bâtiment noir et bleu au\nsud de la ville.
 0x745382: Il y a un endroit magnifique au\nnord d'ici, le\lParadis Floral !\pIl y a des fleurs partout !
 0x7453EE: C'est une statue du Pokémon\nLégendaire de Feu, Sulfura.\pOn dit que Sulfura servait de héraut\nà une grande obscurité, mais\lqu'il réside désormais dans le\lVolcan Cendreux.
-0x745518: Route 3\p<0x79> Paradis Floral\n<0x7A> Bourg Dresco
+0x745518: Route 3\p<0x79> Paradis Floral\n<0x7A> Dresco
 0x745750: Si tu changes d'avis,\ndis-le-moi.
 0x745775: Hé gamin !\nÉcoute.\pLa route devant est remplie de\nDresseurs qui veulent se battre.\pCertains l'ont même surnommée «\nRoute Défi ».\pMais je comprends si tu ne veux pas\nles affronter.\pGrâce à mes pouvoirs psy, je peux te\ntéléporter de l'autre côté\lgratis !\pAlors, tu es partant ?
-0x745900: Arène Pokémon de Bourg Dresco\nChampion : Mirskle\lLe hippie perché !
+0x745900: Arène Pokémon de Dresco\nChampion : Mirskle\lLe hippie perché !
 0x74593B: Dresco Pokémon Gym Leader :\nMirskle\pEntraîneurs gagnants :\n{RIVAL}
 0x745973: Arène Pokémon Dresco\nChampion : Mirskle\pVainqueurs : {RIVAL},\n{PLAYER}
 0x7459AF: Whooooa…
@@ -6287,7 +6287,7 @@
 0x7B46F3: C'est Hoopa ! Hoopa ! Tu es le\n\pGardien de Borrius ! Prends la\nMaster Ball !
 0x7B4748: Alors je n'ai pas le temps pour toi\nOuste ! Ouste !
 0x7B4772: Allons-y, Étouraptor.\n
-0x7B4787: 9Ville de Dresco L'archipel de la\n\prégion de Borrius.\n
+0x7B4787: 9Dresco L'archipel de la\n\prégion de Borrius.\n
 0x7B489E: Ce n'est pas Hoopa ! Je n'ai pas de\n\ptemps pour toi ! Ouste ! Ouste !\n
 0x7B48D5: Gardien de Borrius ! Quel plaisir\nd'être en ta présence !
 0x7B4997: Ce phare était autrefois un symbole\n\pd'espoir pour les touristes. Mais\n\ldepuis que la Ville d'Antisis est\n\ldevenue un quartier plein de crimes,\nles touristes ne viennent plus dans
@@ -6434,7 +6434,7 @@
 0x7BC810: Alors c'est réglé, allons-y.\n
 0x7BC82D: Merci d'avoir aidé à retrouver le\n\pvoleur de nourriture ! Comme promis,\nvoici ta petite chose.
 0x7BC886: Cette CT contient {COLOR}ÉHone\n\pClaws{COLOR}Ë. Si tu prévois\n\pd'affronter le {COLOR}ÉDresco\nGym{COLOR}Ë, ça t'aidera beaucoup. C'est\lplein de brouillard là-bas, on y\lvoit très mal…
-0x7BCA5F: Oh, je me souviens de toi !\pTu es ce {STR_VAR_1} qui nous a aidés\nà l'Arène de Bourg Dresco !\pPour cela, tu peux avoir ces cinq\nréanimations.
+0x7BCA5F: Oh, je me souviens de toi !\pTu es ce {STR_VAR_1} qui nous a aidés\nà l'Arène de Dresco !\pPour cela, tu peux avoir ces cinq\nréanimations.
 0x7BCAD5: Dites, voudriez-vous nous aider en\nassistant à nouveau la police ?
 0x7BCB14: Souhaitez-vous donner un coup de\nmain à la police locale ?
 0x7BCBFB: Ne sais-tu pas qu'il est impoli de\ncouper la réunion de quelqu'un\ld'autre ?
@@ -7249,7 +7249,7 @@
 0x7EF920: ??? : {COLOR}ËVite, scientifique !\pQu'est-ce que tu attends ?\pAttrape-la !
 0x7EF966: Assomme-le et enferme-le dans\nl'entrepôt !\pLe boss va péter un câble en\napprenant ça…
 0x7EF9CF: Assomme-la et enferme-la dans\nl'entrepôt !\pLe boss va péter un câble en\napprenant ça…
-0x7EFA47: Route 4\p<0x7B> Forêt Lugubre, Volcan Cendreux\nRoute 5\l<0x7C> Ville de Dresco\l<0x7A> Route 13
+0x7EFA47: Route 4\p<0x7B> Forêt Lugubre, Volcan Cendreux\nRoute 5\l<0x7C> Dresco\l<0x7A> Route 13
 0x7EFA8D: Qu'est-ce que tu fais ?\pTu ne peux pas explorer le Grand\nDésert habillé comme ça !\pSans lunettes adéquates, je ne te\nlaisserai pas passer.\lPas question.
 0x7F04CF: 9Quand je me tiens ici, je vois des\ntrucs trop cool !\pOn dirait que l'eau va dans les\narbres !
 0x7F052E: Ma grande sœur évite de dire des\ngros mots.\pMais à la place elle dit des trucs\ncomme « fèces » ou « bouse Tauros ».\pJe ne sais pas si c'est mieux que\nles vrais…\pQuand je serai grande, je dirai ces\ntrucs débiles aussi !
@@ -7805,15 +7805,15 @@
 0x8CB14B: Alors où sont mes Master Balls ?\pQuelqu'un a forcément fouillé là\ndedans !
 0x8CB199: …\pAh…\nJe vois.\pTu as récupéré mon colis sur des\nvoyous…\pIls ont dû prendre les\nMaster Balls…\p…
 0x8CB1FD: Quoi !?\pTu les as vus en utiliser une pour\ncapturer Artikodin ?\pHmm…\pSi j'ai raison, on est peut-être en\ngrand danger…
-0x8CB260: Encore un service\npour toi, {PLAYER}.\pUn vieil ami vit à\n{COLOR}ÉBourg Dresco{COLOR}Ë.\pIl connaît bien l'histoire de\nBorrius.\pRaconte-lui tout ce qui s'est passé\njusqu'ici.\pJ'ai une théorie sur ce qui se passe\nmais j'ai besoin qu'il confirme.\pTu as tes propres Pokémon, donc\nce ne sera pas trop dur.\pVa {COLOR}ÉBourg Dresco{COLOR}Ë via\n{COLOR}ÉGrotte Stalactite{COLOR}Ë.
+0x8CB260: Encore un service\npour toi, {PLAYER}.\pUn vieil ami vit à\n{COLOR}ÉDresco{COLOR}Ë.\pIl connaît bien l'histoire de\nBorrius.\pRaconte-lui tout ce qui s'est passé\njusqu'ici.\pJ'ai une théorie sur ce qui se passe\nmais j'ai besoin qu'il confirme.\pTu as tes propres Pokémon, donc\nce ne sera pas trop dur.\pVa {COLOR}ÉDresco{COLOR}Ë via\n{COLOR}ÉGrotte Stalactite{COLOR}Ë.
 0x8CB3F5: Oh ! Quel étourdi !\nComment te demander de trouver la\p{COLOR}ÉGrotte Stalactite{COLOR}Ë si tu n'en connais\npas le chemin ?\pCette {COLOR}ÉCarte{COLOR}Ë devrait beaucoup\nt'aider !
-0x8CB47B: Et tu sais quoi ?\pSi tu vas à Bourg Dresco, tu devrais\nm'aider pour une autre tâche !\pMon ami Chen m'a demandé de donner\nson Pokédex à deux Dresseurs.\pC'est une encyclopédie high-tech\npour enregistrer les données de\lPokémon.\pApparemment, Borrius regorge de\nPokémon qu'on ne trouve pas à\lKanto.
+0x8CB47B: Et tu sais quoi ?\pSi tu vas à Dresco, tu devrais\nm'aider pour une autre tâche !\pMon ami Chen m'a demandé de donner\nson Pokédex à deux Dresseurs.\pC'est une encyclopédie high-tech\npour enregistrer les données de\lPokémon.\pApparemment, Borrius regorge de\nPokémon qu'on ne trouve pas à\lKanto.
 0x8CB5A8: {COLOR}Á{PLAYER} reçoit le Pokédex du\nProf. Log !
 0x8CB5D3: On ne peut pas avoir des données\nprécises en ne voyant qu'un Pokémon.\pIl faut le capturer pour des données\ncomplètes.\pVoici donc quelques outils pour\nattraper des Pokémon sauvages.
 0x8CB695: Si tu ne sais pas capturer les\nPokémon sauvages, un de mes amis sur\lla Route 1 peut te montrer.
 0x8CB6F7: Oh !\pMa mémoire flanche… j'ai encore une\nchose à te donner.\pLa prochaine fois que tu verras\n{RIVAL}, donne-lui ce Pokédex.
 0x8CB773: Il est plutôt froid avec moi depuis\nque ses parents me l'ont confié\lenfant, mais il semble bien\ls'entendre avec toi.\pJe suis sûr qu'avec le Pokédex, il\naccepterait d'aider.
-0x8CB82C: Va voir mon ami\nà {COLOR}ÉBourg Dresco{COLOR}Ë.\pJe compte sur toi.
+0x8CB82C: Va voir mon ami\nà {COLOR}ÉDresco{COLOR}Ë.\pJe compte sur toi.
 0x8CB872: {PLAYER}, vite au\n{COLOR}ÉMont Foudroyant{COLOR}Ë !\pSi les Ombres y arrivent avant toi,\nBorrius est foutu !\pPar {COLOR}ÉAutoroute KBT{COLOR}Ë\nvers le {COLOR}Ésud{COLOR}Ë vite.
 0x8CB932: Avec Électhor en leur possession,\nil ne reste aux Ombres qu'à réunir\lles trois oiseaux aux {COLOR}ÉRuines du\lVide{COLOR}Ë pour libérer la force\pobscure.\nS'ils réussissent et brisent le\psceau…\nJe n'ose y penser.\pDépêche-toi d'y aller avec Jax pour\nfaire une dernière tentative.\pL'avenir est entre tes mains,\n{PLAYER} !
 0x8CBA7A: Maintenant que la force obscure est\nlibérée, notre fin est proche.\pMais en attendant, tout ce qu'on\npeut faire, c'est vivre normalement.
@@ -16126,8 +16126,8 @@
 0x1EFF02C: Je vois…\pJe pensais que Giratina avait été\nvaincu, vu le changement de\lstructure de ce monde.\pMais vu ta force, je\ncomprends comment.\pDans ce cas, tiens, prends ça.
 0x1EFF0E3: Ça permet à Giratina de garder sa\nforme originelle, même hors du\lMonde Distorsion.\pJe comptais le remettre à quelqu'un,\nmais puisqu'il n'est pas\là, je devrais le donner à quelqu'un\lqui en est digne.\pJe devrais rentrer dans mon propre\nmonde.\pMerci pour le combat, c'était sympa.
 0x1EFF20E: Je comprends… ce monde n'est pas\npour les autres… seulement lui…
-0x1EFF260: Bourg Dresco D
-0x1EFF26E: Bourg Dresco N
+0x1EFF260: Dresco D
+0x1EFF26E: Dresco N
 0x1EFF27C: Maison des Dresseurs
 0x1EFF28A: Désolé, tu ne peux pas\nentrer maintenant.\pMon grand-père fait sa sieste\ndu jour et ne veut pas être\ldérangé.\pVa défier l'{COLOR}ÉArène Dresco{COLOR}Ë\npendant l'attente.\pIl y a du brouillard, donc un\nPokémon avec une capacité\l{COLOR}ÉTempête de Sable{COLOR}Ë ou\l{COLOR}ÉAnti-Brume{COLOR}Ë est utile.\pEn y pensant, un ami de mon\ngrand-père voulait\ldonner un {COLOR}ÉCouaneton{COLOR}Ë\lavec Anti-Brume, récemment…
 0x1EFF446: As-tu remarqué tous les adorables\npetits Pokémon sur la {COLOR}ÉRoute 2{COLOR}Ç ?\pBeaucoup n'évoluent qu'après\ns'être attachés à toi.\pPuis-je voir l'un de ces Pokémon si\ntu en as attrapé un ?
@@ -16199,7 +16199,7 @@
 0x1F00D23: Une Gemme est un objet tenu\nqui booste une attaque\lpar combat.\pChaque Gemme correspond à un type\net ne renforce que ce\ltype.\pLes Gemmes disparaissent après usage\nmais comme les objets consommables,\lelles te sont rendues après\lles combats importants,\lcomme les Champions d'Arène.\pÀ Borrius, les Champions ont\nau moins un Pokémon avec\lune Gemme.\pSi ça t'inquiète, tu peux\nutiliser {COLOR}ÉCalcination{COLOR}Ë\lpour fondre leur Gemme avant\lqu'ils s'en servent.
 0x1F00F39: Tu es un Dresseur expérimenté.
 0x1F00F5D: C'est une entrée assez récente de\nl'Autoroute KBT.\pLe pont qui y mène est encore en\nconstruction.
-0x1F00FC4: À l'ouest de Bourg Dresco se trouve\nla Forêt Lugubre.\pElle regorge de Pokémon Insecte\net Spectre.\pTu devrais y faire un tour quand tu\nle pourras.
+0x1F00FC4: À l'ouest de Dresco se trouve\nla Forêt Lugubre.\pElle regorge de Pokémon Insecte\net Spectre.\pTu devrais y faire un tour quand tu\nle pourras.
 0x1F01059: Hé, toi !\pDresseur !\pAttends !
 0x1F01074: C'est un Super Cube dans ta\npoche ?\p…\pOui !\pTu es exactement la personne que je\ncherchais !\pS'il te plaît, viens avec moi.
 0x1F010E6: La Ligue Pokémon diffuse un\nspécial sur l'histoire de Borrius.\pVeux-tu le regarder ?\n(Comme la cinématique d'ouverture)
@@ -17072,7 +17072,7 @@
 0x1F15ACF: Les boutiques font une remise\nle jour de ton anniversaire.\pMais comme toute bonne chose,\nil y a un hic.\pCertes, les objets sont moins chers,\nmais tu gagneras moins en\lles revendant.
 0x1F15B83: Oh là là…\nTu as l'air épuisé !\pTu n'as pas assez bu de\nliquide ?\pTiens, prends un peu du mien.
 0x1F15BED: Oh, bien, tu as bien meilleure\nmine maintenant.\pEssaie d'être plus prudent en\nvoyageant par cette chaleur !
-0x1F15C54: Arène Pokémon de Bourg Dresco
+0x1F15C54: Arène Pokémon de Dresco
 0x1F15C64: Mirskle
 0x1F15C6C: Hein ?\nOh…{PAUSE} salut, {STR_VAR_1}…\pÇa plane ?\pTes Pokémon veulent renifler un peu\neuh…{PAUSE} Encens Rose ?\pC'est super pour l'âme.\nÇa te rend zen, tout doux…
 0x1F15D42: Oh… c'est quoi ça ?\pOn dirait qu'Ortide veut\nrenifler aussi…
@@ -17346,8 +17346,8 @@
 0x1F1E688: Connais-tu l'étrange\naffaire de Benjamin Papilusion ?\pNé Papilusion, il a mis K.O.\nun Chenipan, et Benjamin a rajeuni\ltoute sa vie.\pEt dans l'esprit de Papilusion,\nnotre Champion Benjamin a conçu\lcette Arène.\pEt tu l'as deviné, ici les\nDresseurs utilisent des {COLOR}ÉInsecte{COLOR}Ë !\pDes types {COLOR}ÉRoche{COLOR}Ë, {COLOR}ÉVol{COLOR}Ë, ou\n{COLOR}ÉFeu{COLOR}Ë les remettront\là leur place.\pMais attention, ici quand un Pokémon\nest vaincu, il régresse\là un état antérieur.\pLes Pokémon ne tombent K.O. que\nquand ils ne peuvent plus régresser.\pÀ cause de cette règle unique,\nles Pokémon ne gagnent pas d'Exp.\ldans cette Arène.\pEt pour trouver Benjamin, écoute\nbien ceci.\pDans chaque salle du mur,\ndes boutons cachés dans les rochers.\pAppuie dessus dans le bon ordre,\net tu ouvriras un chemin vers\lBenjamin.\pEt quel est le bon ordre ?\pTout ce que je peux te dire,\nc'est de repenser à l'étrange\laffaire de Benjamin Papilusion…
 0x1F1EA32: Champion en devenir !\nTu l'as fait !\pTu as terminé les huit Arènes\nde Borrius !\pFélicitations !\pPour ton travail, prends cette\nultime Gemme.
 0x1F1EAC7: Cette Gemme boostera une\ncapacité {COLOR}ÉInsecte{COLOR}Ë en combat.\pEt maintenant que tu l'as, il ne te\nreste qu'à\ldéfier la Ligue Pokémon.\pJ'aimerais venir avec toi, mais\nmalheureusement, je suis coincé\ldans ces Arènes.\pBonne chance, champion en devenir !
-0x1F1EBCA: Arène Pokémon de Bourg Dresco\nChampion : Mirskle\pDresseurs vainqueurs :\nJax, {RIVAL}
-0x1F1EC07: Arène Pokémon de Bourg Dresco\nChampion : Mirskle\pDresseurs vainqueurs :\nJax, {RIVAL}, {PLAYER}
+0x1F1EBCA: Arène Pokémon de Dresco\nChampion : Mirskle\pDresseurs vainqueurs :\nJax, {RIVAL}
+0x1F1EC07: Arène Pokémon de Dresco\nChampion : Mirskle\pDresseurs vainqueurs :\nJax, {RIVAL}, {PLAYER}
 0x1F1EC48: Arène Pokémon de Bourg Cratère\nChampion : Véga\pDresseurs vainqueurs :\nJax, {RIVAL}
 0x1F1EC82: Arène Pokémon de Bourg Cratère\nChampion : Véga\pDresseurs vainqueurs :\nJax, {RIVAL}, {PLAYER}
 0x1F1ECC0: Arène Pokémon de Ville Blizzard\nChampion : Alice\pDresseurs vainqueurs :\nJax, {RIVAL}
@@ -17407,8 +17407,8 @@
 0x1F208E6: Dans ce cas, j'espère que tu as\nattrapé de bons Pokémon pour\lremplir ses pages, hein ?\pCombattons !\pQui sait, tu me battras peut-être\ncette fois !
 0x1F20983: Si j'avais su que tu pouvais\nattraper ça je l'aurais fait tôt.
 0x1F209D0: Bon, d'accord.\pJe suppose que je peux aider à\nremplir ce truc.\pSi ça me rend un peu plus fort,\nj'accepte.\pEt quand je trouverai mes parents,\nils ne me reconnaîtront même pas\lavec toute ma puissance !\pAh, oui.\pEt pour me l'avoir apporté,\ntu peux prendre ceci.
-0x1F20AD0: As-tu envisagé le Défi des Arènes,\n{PLAYER} ?\pComme dans ma région de Hoenn,\nil y a 8 Arènes à Borrius.\pSi tu les bats toutes, tu seras\nvu comme un Dresseur puissant.\pJ'ai déjà commencé, mais j'ai eu\ndu mal à Bourg Dresco.\pLe Champion utilisait sans cesse\n{COLOR}É{STR_VAR_1}{COLOR}Ë sur mes Pokémon, alors\lj'ai cherché un moyen de les\lempêcher de {STR_VAR_2}.\pJ'ai trouvé ces {COLOR}ÉLunettes\nFiltre{COLOR}Ë, il n'avait aucune\lchance après ça !\pBonne chance, {PLAYER}.\pLa prochaine fois, le combat ne\nse passera pas comme celui-ci !\pJe te le promets !
-0x1F20CF2: As-tu envisagé le Défi des Arènes,\n{PLAYER} ?\pComme dans ma région de Hoenn,\nil y a 8 Arènes à Borrius.\pSi tu les bats toutes, tu seras\nvu comme un Dresseur puissant.\pJ'ai déjà commencé, mais j'ai eu\ndu mal à Bourg Dresco.\pLe Champion utilisait sans cesse\n{COLOR}É{STR_VAR_1}{COLOR}Ë sur mes Pokémon, alors\lj'ai cherché un moyen de les\lempêcher de {STR_VAR_2}.\pJ'ai trouvé ces {COLOR}ÉBaies\nMaron{COLOR}Ë, il n'avait aucune\lchance après ça !\pBonne chance, {PLAYER}.\pLa prochaine fois, le combat ne\nse passera pas comme celui-ci !\pJe te le promets !
+0x1F20AD0: As-tu envisagé le Défi des Arènes,\n{PLAYER} ?\pComme dans ma région de Hoenn,\nil y a 8 Arènes à Borrius.\pSi tu les bats toutes, tu seras\nvu comme un Dresseur puissant.\pJ'ai déjà commencé, mais j'ai eu\ndu mal à Dresco.\pLe Champion utilisait sans cesse\n{COLOR}É{STR_VAR_1}{COLOR}Ë sur mes Pokémon, alors\lj'ai cherché un moyen de les\lempêcher de {STR_VAR_2}.\pJ'ai trouvé ces {COLOR}ÉLunettes\nFiltre{COLOR}Ë, il n'avait aucune\lchance après ça !\pBonne chance, {PLAYER}.\pLa prochaine fois, le combat ne\nse passera pas comme celui-ci !\pJe te le promets !
+0x1F20CF2: As-tu envisagé le Défi des Arènes,\n{PLAYER} ?\pComme dans ma région de Hoenn,\nil y a 8 Arènes à Borrius.\pSi tu les bats toutes, tu seras\nvu comme un Dresseur puissant.\pJ'ai déjà commencé, mais j'ai eu\ndu mal à Dresco.\pLe Champion utilisait sans cesse\n{COLOR}É{STR_VAR_1}{COLOR}Ë sur mes Pokémon, alors\lj'ai cherché un moyen de les\lempêcher de {STR_VAR_2}.\pJ'ai trouvé ces {COLOR}ÉBaies\nMaron{COLOR}Ë, il n'avait aucune\lchance après ça !\pBonne chance, {PLAYER}.\pLa prochaine fois, le combat ne\nse passera pas comme celui-ci !\pJe te le promets !
 0x1F20F14: s'empoisonner
 0x1F20F25: s'endormir
 0x1F20F34: Prépare-toi à affronter la force\ninvincible de mon short !
@@ -17536,16 +17536,16 @@
 0x1F2331E: Oh, {PLAYER} !\nTu es revenu avec mon colis !
 0x1F23360: Voyons s'ils ont envoyé ce qu'ils\ndevaient.\pNouveau matériel de recherche…{PAUSE}î\nok.\pLa science Pokémon la plus récente…{PAUSE}î\nok.\p…{PAUSE}îHein ?\pOù sont les Master Balls ?\pAs-tu ouvert ce colis et pris\nquelque chose dedans, {PLAYER} ?\p…\pAh…{PAUSE} je vois.\pTu as récupéré mon colis chez\ndes voyous…\pEt ils ont dû prendre les\nMaster Balls…
 0x1F234A9: Quoi !?\pTu les as vus utiliser ça pour\ncapturer Artikodin ?\pHmm…\pSi j'ai raison, on pourrait être en\ngrave danger…
-0x1F2350C: J'ai une dernière course pour toi\nà faire, {PLAYER}.\pUn vieil ami à moi vit à\n{COLOR}ÉBourg Dresco{COLOR}Ë.\pIl connaît très bien l'histoire de\nBorrius.\pRaconte-lui tout ce qui s'est\npassé jusqu'ici.\pJ'ai une théorie sur ce qui se\npasse, mais il doit la confirmer.\pTu as tes propres Pokémon, donc ça\nne devrait pas être trop dur.\pTu peux y arriver en passant par\n{COLOR}ÉGrotte Stalactite{COLOR}Ë.
+0x1F2350C: J'ai une dernière course pour toi\nà faire, {PLAYER}.\pUn vieil ami à moi vit à\n{COLOR}ÉDresco{COLOR}Ë.\pIl connaît très bien l'histoire de\nBorrius.\pRaconte-lui tout ce qui s'est\npassé jusqu'ici.\pJ'ai une théorie sur ce qui se\npasse, mais il doit la confirmer.\pTu as tes propres Pokémon, donc ça\nne devrait pas être trop dur.\pTu peux y arriver en passant par\n{COLOR}ÉGrotte Stalactite{COLOR}Ë.
 0x1F236A3: Oh !\nQuelle étourdie !\pComment veux-tu trouver la\n{COLOR}ÉGrotte Stalactite{COLOR}Ë sans plan ?\pCette {COLOR}ÉCarte de la Région{COLOR}Ë devrait\nt'aider énormément !
 0x1F23729: Maintenant, jetons un œil à la\nCarte de la Région, d'accord ?
-0x1F2375B: As-tu remarqué le X jaune sur\nBourg Dresco ?\pCe marqueur se déplacera tout seul\nquand tu auras une nouvelle cible.
-0x1F237CE: As-tu remarqué le X jaune sur\nBourg Dresco ?\pCe marqueur se déplacera tout seul\nquand tu auras une nouvelle cible.\pEt tu sais quoi ?\pAvec ton Journal de\nMissions, laisse-moi noter\lma requête d'avant !\pD'abord, vise à voir tous les\nPokémon du Pokédex de Borrius.\pOu, comme on l'appelle souvent,\nle Pokédex d'Ouest Borrius.\pLes Pokémon visibles seulement en\nEst Borrius sont exclus.
+0x1F2375B: As-tu remarqué le X jaune sur\nDresco ?\pCe marqueur se déplacera tout seul\nquand tu auras une nouvelle cible.
+0x1F237CE: As-tu remarqué le X jaune sur\nDresco ?\pCe marqueur se déplacera tout seul\nquand tu auras une nouvelle cible.\pEt tu sais quoi ?\pAvec ton Journal de\nMissions, laisse-moi noter\lma requête d'avant !\pD'abord, vise à voir tous les\nPokémon du Pokédex de Borrius.\pOu, comme on l'appelle souvent,\nle Pokédex d'Ouest Borrius.\pLes Pokémon visibles seulement en\nEst Borrius sont exclus.
 0x1F2396B: Une fois cette tâche accomplie,\nvise à capturer tous les Pokémon\llistés dans le Pokédex !\pHo ho ho !
 0x1F239CA: De plus, ma sœur cadette,\nNatasha Log, vit à {COLOR}ÉVille Blizzard{COLOR}Ë.\pSi tu la vois, elle peut\naméliorer ton Pokédex et t'aider\la rencontrer les Pokémon que tu\lcherches.
 0x1F23A8E: Oh !\pMa mémoire flanche… J'ai encore\nquelque chose à te donner.\pS'il te plaît, quand tu verras\n{RIVAL}, donne-lui ce Pokédex.
 0x1F23B0B: Il est froid avec moi depuis\nqu'il est arrivé, mais il semble\lbien s'entendre avec toi.\pJe suis sûr que si tu lui donnes le\nPokédex, il acceptera d'aider.
-0x1F23BAD: Va voir mon ami à {COLOR}ÉBourg\nDresco{COLOR}Ë, {PLAYER}.\pJe compte sur toi.
+0x1F23BAD: Va voir mon ami à {COLOR}ÉDresco{COLOR}Ë, {PLAYER}.\pJe compte sur toi.
 0x1F23BF3: {PLAYER}, dépêche-toi d'aller\nau {COLOR}ÉMont Foudroyant{COLOR}Ë !\pSi les Ombres arrivent avant toi,\nBorrius est condamné !\pAu nord, prends la {COLOR}ÉRoute\nKBT{COLOR}Ë plein sud vite.
 0x1F23CAE: Ho ho ho !\p{PLAYER} !\nJ'ai entendu la bonne nouvelle !\pÉlecthor est sain et sauf, on peut\nbien dormir.\pMais tes courses ne sont pas\nfinies !\pTu dois récupérer Artikodin et\nSulfura auprès des Ombres.
 0x1F23D81: La force obscure est libérée,\nla fin de Borrius\lest proche.\p{PLAYER} !\pTu dois trouver Jax et l'aider à\nsceller ce pouvoir encore une fois !
@@ -18060,7 +18060,7 @@
 0x1F303F6: Bon, {PLAYER}, je pense qu'il est\ntemps que tu rentres chez toi.\pTu as terminé ta course, et je suis\nsûr que ta mère te manque.\pMais je suis quand même surpris que\ntu sois arrivé ici si facilement…\pIl va falloir que je me vante auprès\nde ta mère du petit {STR_VAR_1} fiable\lque tu es devenu !\pHo ho ho !
 0x1F30506: Attends un instant, Euler.\pJe sais que Jax est capable, mais je\npense que ce jeune {STR_VAR_1} peut être\laussi utile.\p{PLAYER} a déjà affronté les Ombres,\net Jax pourrait bien bénéficier de\ll'aide supplémentaire que {PLAYER}\lpeut apporter.
 0x1F305EB: De l'aide ?\pArthur, {PLAYER} est devenu Dresseur\nil y a très peu de temps…
-0x1F30627: Est-ce que c'est…{PAUSE} le Badge de\nl'Arène de Bourg Dresco ?\pPenser que tu aurais progressé\nautant si vite…
+0x1F30627: Est-ce que c'est…{PAUSE} le Badge de\nl'Arène de Dresco ?\pPenser que tu aurais progressé\nautant si vite…
 0x1F3068C: Tu vois, Euler ?\pJe pense que ce Badge montre que\n{PLAYER} est plus que capable de\ls'occuper de {STR_VAR_1}.\pEn ce moment, nous quatre sommes les\nseuls à connaître le véritable but\ldes Ombres.\pAvoir un autre Dresseur capable de\nse battre contre eux…{PAUSE} tu vois\lbien où je veux en venir.
 0x1F3078A: Hmm…\pTu as peut-être raison.\pSi ça tourne mal, nous aurons besoin\nde toute l'aide possible.
 0x1F307EB: Très bien, {PLAYER}, tu peux suivre\nJax.\pJe vais…{PAUSE}î dire à ta mère que tu as\nterminé ma tâche et que tu es\lparti relever le défi des Champions.\pOui, ça fera l'affaire.
@@ -18886,8 +18886,8 @@
 0x1F56178: Cherche Marlon et récupère le colis\ndu Prof. Log !
 0x1F561AB: Rends son colis au Prof. Log !
 0x1F561CE: Va à la Grotte Icicle, apporte le\nPokédex à {RIVAL} !
-0x1F56201: Défie l'Arène de Bourg Dresco !
-0x1F56220: Parle à l'ami du Prof. Log à Bourg\nDresco !
+0x1F56201: Défie l'Arène de Dresco !
+0x1F56220: Parle à l'ami du Prof. Log à Dresco !
 0x1F5624B: File au Volcan Cendreux et sauve\nSulfura !
 0x1F5627F: Défie l'Arène de Bourg Cratère !
 0x1F5629E: Utilise l'Autoroute KBT pour aller\nau sud de Bourg Cratère.
@@ -19246,7 +19246,7 @@
 0x1F5D747: Si je devais chevaucher un Pokémon\nsur la mer, je voudrais un Lokhlass.\pLokhlass est si grand, je parie\nqu'il me garderait au sec.
 0x1F5D7B9: Oh, j'adore ta monture !\nJe peux l'avoir si je gagne ?
 0x1F5D7EC: Oh ! J'ai perdu !
-0x1F5D7F8: Il reste encore un long chemin\njusqu'aux Ruines du Néant.\pJe veux rentrer à Bourg Dresco.
+0x1F5D7F8: Il reste encore un long chemin\njusqu'aux Ruines du Néant.\pJe veux rentrer à Dresco.
 0x1F5D846: Le temps est magnifique !\nParfait pour un combat !
 0x1F5D874: Aïïïe !
 0x1F5D87E: Ne m'éclabousse pas le visage !\nTu vas ruiner le maquillage.
@@ -19492,10 +19492,10 @@
 0x1F61A0A: Comment ça ?\pUn Jeune ne serait pas du genre à\ndéfier la\lLigue Pokémon ?\pJe parie le contraire !\pUn jour, tu me verras dans la\nsalle du Champion !\pJe te le garantis !
 0x1F61ABA: F Route 2
 0x1F61AC4: Tu descends de la montagne ?\nTu dois être épuisé.\pLaisse-moi soigner tes Pokémon\npour toi.
-0x1F61B26: Si tu es pressé, le Psy là-bas peut\nte téléporter à Bourg Dresco, la\lville suivante.\pMême si tu acceptes son offre, ce\nn'est jamais une mauvaise idée\ld'être en pleine forme !
+0x1F61B26: Si tu es pressé, le Psy là-bas peut\nte téléporter à Dresco, la\lville suivante.\pMême si tu acceptes son offre, ce\nn'est jamais une mauvaise idée\ld'être en pleine forme !
 0x1F61BE3: {COLOR}ÉCleeeeewoo!
 0x1F61BF2: Hé, gamin !\nÉcoute.\pLa route plus loin est pleine de\nDresseurs qui veulent se battre.\pCertains l'ont même appelée\n« Route Défi ».\pMais si tu ne veux pas les\ncombattre, je comprends.\pAvec mes incroyables pouvoirs\npsychiques, je peux te téléporter\lgratuitement de l'autre côté !\pAlors, qu'en dis-tu, tu es partant ?
-0x1F61D20: Alors, je te téléporte à Dresco\nTown ?
+0x1F61D20: Alors, je te téléporte à Dresco ?
 0x1F61D57: C'est parti !\pAbra, Kadabra, Symbios !
 0x1F61D7D: Si tu changes d'avis,\ndis-le-moi.
 0x1F61DA2: Hé, mec, tu es sur la Route\nDéfi pour t'entraîner, hein ?
@@ -19579,11 +19579,11 @@
 0x1F63660: À l'heure des soins !
 0x1F6366E: C'est l'heure de soigner !
 0x1F6367F: C'est fait !\nReste prudent là-bas !
-0x1F6369D: Ce rebord te ramènera direct à\nBourg Dresco !\pRéfléchis bien avant de\nl'utiliser.\pUne fois sauté, le seul chemin de\nretour passe par la Forêt Lugubre !
+0x1F6369D: Ce rebord te ramènera direct à\nDresco !\pRéfléchis bien avant de\nl'utiliser.\pUne fois sauté, le seul chemin de\nretour passe par la Forêt Lugubre !
 0x1F6373C: …\pPars.
 0x1F63792: {COLOR}ÉPrassss!
 0x1F6379E: Combattre aussi haut te rend-il…\nheureux ?
-0x1F637D0: Je passe peut-être trop de temps\ndans l'Arène de Bourg Dresco.
+0x1F637D0: Je passe peut-être trop de temps\ndans l'Arène de Dresco.
 0x1F6380F: Mirskle a beaucoup influencé ma\nfaçon de vivre.\pBeaucoup disent qu'il est une\nmauvaise influence pour les enfants,\lmais moi, je suis ravi !
 0x1F63895: Je suis ici depuis des jours, mais\nje n'attrape rien de bien.
 0x1F638D7: Bon, retour à la pêche,\nje suppose.
@@ -20177,16 +20177,16 @@
 0x1F709B2: Bourg Bellin\pUne ville paisible nichée au creux\ndes montagnes.
 0x1F709EA: C’est une statue du Pokémon Glace\nLégendaire Artikodin. Il est\pécrit ici qu’Artikodin servait\nautrefois à renforcer un sceau sur\lune grande obscurité, mais qu’il\laime maintenant voyager entre le\lMont Froid et les Hauteurs Gelées.
 0x1F70ABD: Grotte Icicle\nPassage
-0x1F70AD1: Route 2 «\nVoie\pOcéane » <0x7B> Bourg Dresco\n<0x7C> Icicle, Route 15
-0x1F70B0C: Bourg Dresco\pL’archipel de la région de\nBorrius.
-0x1F70B3F: Arène Pokémon de Bourg Dresco\nChampion : Mirskle Le Maître\lPaisible des Fleurs
+0x1F70AD1: Route 2 «\nVoie\pOcéane » <0x7B> Dresco\n<0x7C> Icicle, Route 15
+0x1F70B0C: Dresco\pL’archipel de la région de\nBorrius.
+0x1F70B3F: Arène Pokémon de Dresco\nChampion : Mirskle Le Maître\lPaisible des Fleurs
 0x1F70B84: Maison des\pDresseurs Combattez à volonté !
 0x1F70BB2: C’est une statue du Pokémon Feu\nLégendaire Sulfura. Il est\pécrit ici que Sulfura servait\nautrefois à renforcer un sceau sur\lune grande obscurité, mais qu’il\lréside désormais au Volcan Cendre.
 0x1F70C64: Avant {B_BUTTON}, check les flics !\n
-0x1F70CAC: Route 3 «\nRoute\pdu Paradis » <0x79> Paradis des\nFleurs <0x7A> Bourg Dresco
+0x1F70CAC: Route 3 «\nRoute\pdu Paradis » <0x79> Paradis des\nFleurs <0x7A> Dresco
 0x1F70CE4: Paradis des Fleurs\pUn havre pour les fleurs.
-0x1F70D0E: Route 4 «\nZone\pdu Volcan » <0x7B> Forêt Lugubre,\nVolcan Cendre, Route 5 <0x7C>\lBourg Dresco <0x7A> Route\l13
-0x1F70D64: Forêt\pLugubre <0x7B> Volcan Cendre\n<0x7C> Bourg Dresco
+0x1F70D0E: Route 4 «\nZone\pdu Volcan » <0x7B> Forêt Lugubre,\nVolcan Cendre, Route 5 <0x7C>\lDresco <0x7A> Route\l13
+0x1F70D64: Forêt\pLugubre <0x7B> Volcan Cendre\n<0x7C> Dresco
 0x1F70D8E: <0x7C> Forêt Lugubre
 0x1F70D9B: Volcan de Cinder\nPassage
 0x1F70DB2: Route 5\n«\pVallée Humide » <0x79> Route 4,\nV. Cendre <0x7B> Cratère
@@ -20311,15 +20311,15 @@
 0x1F725DB: Bâtiment Principal Cube\pCorp. Là où la magie\nopère ! Visites ouvertes !
 0x1F72629: L’intérieur de Cube Corp. est\nindisponible dans\pcette version ! Reviens dans une\nfuture mise à jour d’Unbound !
 0x1F72691: <0x79> Hauteurs\nGelées <0x7A>\lBourg Cratère <0x7B> Ville Blizzard
-0x1F726C0: <0x79> Hauteurs Gelées, Ville de\nBlizzard <0x7A>\lBourg Cratère <0x7C> Bourg Dresco
+0x1F726C0: <0x79> Hauteurs Gelées, Ville de\nBlizzard <0x7A>\lBourg Cratère <0x7C> Dresco
 0x1F726FC: <0x79> Bourg\nCratère <0x7B>\lTehl <0x7C> Fallshore, Ville d'Epidimy
 0x1F72735: <0x79> Bourg Cratère, Ville\nde Tehl <0x7A> Ville\lde Fallshore <0x7C> Ville d'Epidimy
-0x1F7276E: <0x79> Bourg\nDresco <0x7A>\lDehara <0x7B> Cratère, Blizzard
-0x1F727A7: <0x79> Bourg\nDresco <0x7A>\lVille de Dehara <0x7C> Bourg Gurun
+0x1F7276E: <0x79> Dresco <0x7A>\lDehara <0x7B> Cratère, Blizzard
+0x1F727A7: <0x79> Dresco <0x7A>\lVille de Dehara <0x7C> Bourg Gurun
 0x1F727D0: <0x7A> Ville d’Antisis, Ville\nPortuaire <0x7B>\lVille de Dehara <0x7C> Bourg Gurun
 0x1F72808: <0x79> Bourg\nGurun <0x7A> Ville\ld’Antisis <0x7C> Ville Portuaire
 0x1F72833: Sortie A : Hauteurs Gelées
-0x1F7284A: Sortie B : Bourg Dresco
+0x1F7284A: Sortie B : Dresco
 0x1F7285E: Sortie C : Bourg Cratère
 0x1F72872: Sortie D : Ville Blizzard
 0x1F72888: Sortie E : Ville de Tehl
@@ -22433,8 +22433,8 @@
 0x1F9FFDB: J'ai caché les Feuilles de\nMystherbe entre des caisses sur le\lcôté {COLOR}Éouest{COLOR}Ë du port.\pUtilise un de ces {COLOR}ÉCherche\nObjet{COLOR}Ë ou un truc du genre\ppour les trouver. Ah, et l'endroit\noù je les ai cachées ne sera jamais\lbloqué par une barrière, donc ne\lcherche pas dans un coin qui peut\pêtre bloqué. Capisce ?
 0x1FA0107: Ha ha ha ! Je savais que si\pquelqu'un pouvait le faire,\nc'était toi ! Allez,\pdonne-moi ces Feuilles de Mystherbe.
 0x1FA015B: Wouah… Sentir ces\pfeuilles, ça dégage\nvraiment l'esprit…
-0x1FA01B2: Tu sais quoi ? Je connais un\ngars à Bourg Dresco. Il peut\ptransformer ces Feuilles de\nMystherbe en une fine sorte\pde brume. Et si je t'en\npartageais un peu pour ton aide ?
-0x1FA0253: Mon gars à {COLOR}ÉVille\nDresco{COLOR}Ë peut changer les\lFeuilles de Mystherbe en encore plus\pde {COLOR}ÉBrume de Rêve{COLOR}Ë.\nApporte-lui des\lMystherbe, il le fera avec plaisir.
+0x1FA01B2: Tu sais quoi ? Je connais un\ngars à Dresco. Il peut\ptransformer ces Feuilles de\nMystherbe en une fine sorte\pde brume. Et si je t'en\npartageais un peu pour ton aide ?
+0x1FA0253: Mon gars à {COLOR}ÉDresco{COLOR}Ë peut changer les\lFeuilles de Mystherbe en encore plus\pde {COLOR}ÉBrume de Rêve{COLOR}Ë.\nApporte-lui des\lMystherbe, il le fera avec plaisir.
 0x1FA02EA: Marin
 0x1FA02F1: Sbire C
 0x1FA02F8: Sbire Black {PLAYER}
@@ -23012,7 +23012,7 @@
 0x1FAE991: Agent
 0x1FAE999: Gruff
 0x1FAE99F: Bonjour, bon citoyen !
-0x1FAE9B4: Oh, je me souviens de vous !\pVous êtes ce {STR_VAR_1} qui nous a aidés dans\nl'Arène de Bourg Dresco !\pPour ça, vous pouvez avoir ces\ncinq Rappels.
+0x1FAE9B4: Oh, je me souviens de vous !\pVous êtes ce {STR_VAR_1} qui nous a aidés dans\nl'Arène de Dresco !\pPour ça, vous pouvez avoir ces\ncinq Rappels.
 0x1FAEA2A: Dites, voudriez-vous aider en\nassistant la police à nouveau ?
 0x1FAEA69: Ah… ces Badges signifient que vous êtes\nprobablement assez fort…\pSeriez-vous prêt à prêter main-forte\nà la force de police locale ?
 0x1FAEAE2: Ah, bien, bien.\pAlors, comme vous le savez, le problème de criminalité\nde Borrius concerne principalement les\lgangs qui étaient confinés ensemble\là {COLOR}ÉVille d'Antisis{COLOR}Ë.\pRécemment, cependant, le gang qui\ndominait le plus de territoires là-bas,\lles soi-disant “Terreur Granbull”, a quitté sa\nvieille base.\pDe plus, il y a eu des rapports\nindiquant que plusieurs membres du gang\nse sont rassemblés et causent des\lennuis dans divers endroits.\pAvec notre force de police si dispersée,\nnous avons besoin d'un Dresseur fort tel que\nvous pour aider à rassembler\lces voyous.
@@ -23822,7 +23822,7 @@
 0x1efea11: Pas de souci !\pTant que tu as des Luxe Balls dans\nton Cube, je peux changer les Balls\lde tes Pokémon quand tu veux !
 0x1efec34: Où crois-tu aller comme ça ?\pTu ne peux pas explorer le Great\nDesert dans cette tenue !\pSans les lunettes de protection\nqu'il faut, je ne pourrai pas\lte laisser passer.
 0x1efeda8: Oh, bonjour… Je suis Nex.\pEuh… qu'est-ce que tu fais ici,\nau juste ?\pMoi, j'attendais l'arrivée d'un\nami, mais…\pPardon ? Personne d'autre ne\nvivrait ici, dans le Distorsion\lWorld ?\pHa ha… c'est vrai, mais mon ami\nest un cas particulier…\pMais s'il n'est pas encore là,\nc'est qu'il ne viendra sans doute\ljamais…\pRien d'étonnant : ce n'est pas\ncomme si le temps passait ici,\lpas vraiment.\pDis…\pIl faut être d'une grande force\npour venir ici de son plein gré.\pC'est peut-être un peu étrange, vu\noù nous sommes, mais accepterais-tu\lde m'affronter ?
-0x1eff28a: Désolé, mais tu ne peux pas entrer\nici pour le moment.\pMon grand-père fait sa sieste\nquotidienne et ne veut pas qu'on\lle dérange.\pEssaie donc l'<0xFC><0x01><0x06>Arène de Bourg Dresco<0xFC><0x01><0x08>\nen attendant.\pIl y a pas mal de brouillard à\nl'intérieur, alors un Pokémon avec\lune capacité qui change la météo,\lcomme <0xFC><0x01><0x06>Tempête de Sable<0xFC><0x01><0x08> ou <0xFC><0x01><0x06>Anti-Brume<0xFC><0x01><0x08>,\lpourrait vraiment t'aider.\pMaintenant que j'y pense, un ami de\nmon grand-père cherchait récemment\là échanger un <0xFC><0x01><0x06>Ducklett<0xFC><0x01><0x08> qui connaît\lAnti-Brume…
+0x1eff28a: Désolé, mais tu ne peux pas entrer\nici pour le moment.\pMon grand-père fait sa sieste\nquotidienne et ne veut pas qu'on\lle dérange.\pEssaie donc l'<0xFC><0x01><0x06>Arène de Dresco<0xFC><0x01><0x08>\nen attendant.\pIl y a pas mal de brouillard à\nl'intérieur, alors un Pokémon avec\lune capacité qui change la météo,\lcomme <0xFC><0x01><0x06>Tempête de Sable<0xFC><0x01><0x08> ou <0xFC><0x01><0x06>Anti-Brume<0xFC><0x01><0x08>,\lpourrait vraiment t'aider.\pMaintenant que j'y pense, un ami de\nmon grand-père cherchait récemment\là échanger un <0xFC><0x01><0x06>Ducklett<0xFC><0x01><0x08> qui connaît\lAnti-Brume…
 0x1eff4f6: Lequel de tes Pokémon évolue quand\nil s'attache à son Dresseur ?
 0x1eff539: Correct ! Ce Pokémon n'évolue\nqu'une fois attaché à toi !\pL'évolution prend généralement du\ntemps, mais si tu lui fais tenir\lceci, il s'attachera à toi bien\lplus vite !
 0x1eff7ac: Tu sais lire ?\nTout le monde ne sait pas.\pMoi non, et j'ai déjà redoublé le\nCP plusieurs fois.\pTu peux me montrer le pouvoir\nincroyable de la lecture ?\pLes panneaux Astuces de Dresseur\nsont de bons exemples de mots.
@@ -23968,8 +23968,8 @@
 0x1f22f2f: Je suis le frère de la Famille Gem\nqui peut voir ton avenir.\pJe peux apprendre <0xFC><0x01><0x06><0xFD><0x02><0xFC><0x01><0x08> à un\nPokémon pour <0xFC><0x01><0x06><0xFD><0x04> <0xFD><0x03>s<0xFC><0x01><0x08>.
 0x1f23077: Je suis le frère de la Famille Gem\nqui aime rôder dans le noir.\pJe peux apprendre <0xFC><0x01><0x06><0xFD><0x02><0xFC><0x01><0x08> à un\nPokémon pour <0xFC><0x01><0x06><0xFD><0x04> <0xFD><0x03>s<0xFC><0x01><0x08>.
 0x1f23252: Tu devrais rendre visite à ta\n<0xFC><0x01><0x06>mère<0xFC><0x01><0x08> avant de venir chercher\lmon colis, <0xFD><0x01>.\pElle doit se faire beaucoup de\nsouci pour toi.
-0x1f2375b: Tu as remarqué le X jaune sur\nBourg Dresco ?\pCe marqueur se déplacera tout seul\nquand tu auras une nouvelle\ldestination.
-0x1f237ce: Tu as remarqué le X jaune sur\nBourg Dresco ?\pCe marqueur se déplacera tout seul\nquand tu auras une nouvelle\ldestination.\pEt tu sais quoi ?\pMaintenant que tu as ton propre\nMission Log, laisse-moi y noter ma\lrequête de tout à l'heure !\pD'abord, essaie de voir tous les\nPokémon du Pokédex de Borrius.\pOu, comme on l'appelle plus\ncouramment, le Pokédex de\lBorrius Ouest.\pLes Pokémon qui n'apparaissent\nqu'à Borrius Est en sont\lvolontairement exclus.
+0x1f2375b: Tu as remarqué le X jaune sur\nDresco ?\pCe marqueur se déplacera tout seul\nquand tu auras une nouvelle\ldestination.
+0x1f237ce: Tu as remarqué le X jaune sur\nDresco ?\pCe marqueur se déplacera tout seul\nquand tu auras une nouvelle\ldestination.\pEt tu sais quoi ?\pMaintenant que tu as ton propre\nMission Log, laisse-moi y noter ma\lrequête de tout à l'heure !\pD'abord, essaie de voir tous les\nPokémon du Pokédex de Borrius.\pOu, comme on l'appelle plus\ncouramment, le Pokédex de\lBorrius Ouest.\pLes Pokémon qui n'apparaissent\nqu'à Borrius Est en sont\lvolontairement exclus.
 0x1f239ca: De plus, ma petite soeur,\nNatasha Log, vit à <0xFC><0x01><0x06>Ville Blizzard<0xFC><0x01><0x08>.\pSi tu la rencontres un jour, elle\npourra améliorer ton Pokédex pour\lt'aider à trouver plus facilement\lles Pokémon que tu cherches.
 0x1f23e0d: <0xFD><0x01> !\pTu as sauvé Borrius !\nTu nous as tous sauvés !\pMerci !\pTon père serait fier de toi,\nGardien de Borrius.\pMalheureusement, je n'ai plus\naucune mission à te confier.\pAs-tu pensé à affronter la\n<0xFC><0x01><0x06>Ligue Pokémon<0xFC><0x01><0x08> ?
 0x1f23f2f: Oh là là !\pTu as réussi !\nTu as vraiment réussi !\pTu as complété le Pokédex\nNational !\pMais si tu veux la récompense pour\nton excellent travail, il te faudra\lfaire de la place dans ton équipe.
@@ -24621,7 +24621,7 @@
 0x7a7e6b: Le symbole sur nos poitrines\nreprésente l'anneau unique pour\lles gouverner tous.
 0x7aab5f: L'autre jour, j'entraînais mon\n<0xFC><0x01><0x06>Nosepass<0xFC><0x01><0x08> dans <0xFC><0x01><0x06>Mont Foudroyant<0xFC><0x01><0x08>\lquand soudain, il s'est mis à\lbriller !\pL'instant d'après, il avait évolué\nen Probopass !\pCette montagne doit avoir de\ndrôles de propriétés.
 0x7b387a: <0xFC><0x01><0x04><0xFD><0x01>, j'ai oublié de te montrer\nquelque chose !\pViens avec moi à la\nAutoroute KBT, s'il te plaît.
-0x7b4788: Bourg Dresco\pL'archipel de la région de\nBorrius.
+0x7b4788: Dresco\pL'archipel de la région de\nBorrius.
 0x7b484b: La porte est verrouillée.
 0x7b87ab: Un type aux cheveux roux est sorti\nde nulle part et a anéanti tous\lmes Pokémon avant même que j'aie\lle temps de réagir !
 0x7ba306: Sbire : <0xFC><0x01><0x08>Je suis vraiment désolé,\nchef. Les gens que vous m'aviez\ldemandé de surveiller ont trouvé\ldes Pokémon et se sont échappés.
@@ -24786,3 +24786,6 @@
 
 0x3fd47d: Vas-y, <0xFD><0x00>!
 0x3fd497: L'ennemi faiblit!\nVas-y, <0xFD><0x00>!
+
+0x78d781: Dresco
+0x1eff254: Dresco
