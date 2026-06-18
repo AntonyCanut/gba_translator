@@ -1,9 +1,9 @@
 {
   "conversion_date": "2026-06-18T10:49:15.122576",
   "source_csv": "2026-01-15_trilingual_translation.csv",
-  "total_translations": 20770,
+  "total_translations": 20771,
   "total_errors": 0,
-  "total_warnings": 16776,
+  "total_warnings": 16777,
   "translations": [
     {
       "offset": 165760,
@@ -36196,6 +36196,18 @@
       "category": "dialogue",
       "notes": "",
       "too_long": false
+    },
+    {
+      "offset": 4183632,
+      "original_text": "<0xFD>ó used\n<0xFD>à!",
+      "translation": "<0xFD><0x23> utilise\n<0xFD><0x16> !",
+      "length": 15,
+      "original_length": 11,
+      "padding_used": 4,
+      "encoding": "pokemon",
+      "category": "dialogue",
+      "notes": "",
+      "too_long": true
     },
     {
       "offset": 4183644,
