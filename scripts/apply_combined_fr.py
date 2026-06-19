@@ -94,6 +94,26 @@ def _load_combined(path: Path) -> Tuple[Dict[int, str], int]:
     return mapping, skipped
 
 
+def _load_critical(path: Path) -> Dict[int, str]:
+    """Load the critical-strings guard file (lines starting with # are comments)."""
+    mapping: Dict[int, str] = {}
+    if not path.exists():
+        return mapping
+    with path.open('r', encoding='utf-8') as handle:
+        for line in handle:
+            line = line.rstrip('\n')
+            stripped = line.strip()
+            if not stripped or stripped.startswith('#'):
+                continue
+            match = LINE_RE.match(line)
+            if not match:
+                continue
+            offset = int(match.group(1), 16)
+            text = _normalize_text(match.group(2))
+            mapping[offset] = text
+    return mapping
+
+
 def _load_csv(path: Path) -> Tuple[List[dict], List[str]]:
     with path.open('r', encoding='utf-8-sig', newline='') as handle:
         reader = csv.DictReader(handle)
@@ -176,6 +196,12 @@ def main() -> int:
         default=Path('input/roms/englishrom.gba'),
         help='English ROM (padding detection for --extend)',
     )
+    parser.add_argument(
+        '--critical',
+        type=Path,
+        default=Path('data/critical_strings_fr.txt'),
+        help='Critical-strings guard file (entries always override combined_fr.txt)',
+    )
     args = parser.parse_args()
 
     if not args.combined.exists():
@@ -186,6 +212,13 @@ def main() -> int:
         return 1
 
     combined_map, skipped = _load_combined(args.combined)
+
+    # Critical strings always take highest priority — they override combined_fr.txt
+    # and cannot be accidentally dropped by future edits to that file.
+    critical_map = _load_critical(args.critical)
+    if critical_map:
+        combined_map.update(critical_map)
+        print(f'Critical strings applied: {len(critical_map)} (from {args.critical})')
     rows, fieldnames = _load_csv(args.csv)
 
     if 'offset' not in fieldnames or 'translation' not in fieldnames:
