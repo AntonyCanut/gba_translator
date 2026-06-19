@@ -1,7 +1,7 @@
 {
-  "conversion_date": "2026-06-19T12:22:27.973921",
+  "conversion_date": "2026-06-19T13:00:32.506739",
   "source_csv": "2026-01-15_trilingual_translation.csv",
-  "total_translations": 20780,
+  "total_translations": 20781,
   "total_errors": 0,
   "total_warnings": 16749,
   "translations": [
@@ -84698,6 +84698,18 @@
       "padding_used": 12,
       "encoding": "pokemon",
       "category": "description",
+      "notes": "",
+      "too_long": false
+    },
+    {
+      "offset": 8390784,
+      "original_text": "It had no effect on\n<0xFD>Œ\"",
+      "translation": "Aucun effet sur\n<0xFD><0x10>...",
+      "length": 21,
+      "original_length": 23,
+      "padding_used": -2,
+      "encoding": "pokemon",
+      "category": "other",
       "notes": "",
       "too_long": false
     },
