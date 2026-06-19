@@ -1,0 +1,24 @@
+# Chaînes critiques FR — règles de préservation permanente
+#
+# Ces entrées DOIVENT toujours être présentes dans combined_fr.txt
+# et dans la ROM FR. apply_combined_fr.py --critical les fusionne
+# en dernier (elles priment sur le reste du fichier).
+#
+# Format : 0xOFFSET: texte_français
+# Règles :
+#   - Toujours utiliser les codes bruts (<0xFD><0x10>) et non les
+#     placeholders accolades ({B_DEF_NAME_WITH_PREFIX}) qui sont
+#     écrits en clair dans la ROM et font gonfler la taille.
+#   - Terminer par <0xFF> implicite (l'injecteur l'ajoute).
+#   - Ne pas modifier cet encodage : les tests valident octet par octet.
+
+# === Messages d'efficacité en combat ===
+
+# "It's super effective on <name>!" — offset réel du moteur (pas 0xA4A8DD)
+0xa4a8e0: C'est super efficace sur\n<0xFD><0x10> !
+
+# "It had no effect on <name>..." — offset réel (0x800880, pas dans l'extraction normale)
+0x800880: Aucun effet sur\n<0xFD><0x10>…
+
+# "It's super effective!" (forme courte sans nom)
+0x3FCC74: C'est super efficace !

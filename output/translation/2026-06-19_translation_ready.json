@@ -1,7 +1,7 @@
 {
-  "conversion_date": "2026-06-19T13:00:32.506739",
+  "conversion_date": "2026-06-19T23:39:25.348813",
   "source_csv": "2026-01-15_trilingual_translation.csv",
-  "total_translations": 20781,
+  "total_translations": 20782,
   "total_errors": 0,
   "total_warnings": 16749,
   "translations": [
@@ -113940,6 +113940,18 @@
       "length": 30,
       "original_length": 35,
       "padding_used": -5,
+      "encoding": "pokemon",
+      "category": "dialogue",
+      "notes": "",
+      "too_long": false
+    },
+    {
+      "offset": 10791136,
+      "original_text": "It's super effective on\n<0xFD>Œ!",
+      "translation": "C'est super efficace sur\n<0xFD><0x10> !",
+      "length": 29,
+      "original_length": 27,
+      "padding_used": 2,
       "encoding": "pokemon",
       "category": "dialogue",
       "notes": "",
