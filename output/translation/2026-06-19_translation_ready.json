@@ -1,9 +1,9 @@
 {
-  "conversion_date": "2026-06-19T23:39:25.348813",
+  "conversion_date": "2026-06-19T23:48:18.849428",
   "source_csv": "2026-01-15_trilingual_translation.csv",
   "total_translations": 20782,
   "total_errors": 0,
-  "total_warnings": 16749,
+  "total_warnings": 16752,
   "translations": [
     {
       "offset": 165760,
@@ -34628,14 +34628,14 @@
     {
       "offset": 4180810,
       "original_text": "rose!",
-      "translation": "augmente !",
-      "length": 10,
+      "translation": "!",
+      "length": 1,
       "original_length": 5,
-      "padding_used": 5,
+      "padding_used": -4,
       "encoding": "pokemon",
       "category": "dialogue",
       "notes": "",
-      "too_long": true
+      "too_long": false
     },
     {
       "offset": 4180816,
@@ -34652,10 +34652,10 @@
     {
       "offset": 4180825,
       "original_text": "fell!",
-      "translation": "baisse !",
-      "length": 8,
+      "translation": "!",
+      "length": 1,
       "original_length": 5,
-      "padding_used": 3,
+      "padding_used": -4,
       "encoding": "pokemon",
       "category": "dialogue",
       "notes": "",
@@ -34664,26 +34664,26 @@
     {
       "offset": 4180831,
       "original_text": "<0xFD><0x0F>'s <0xFD> \n<0xFD><0x01>",
-      "translation": "<0xFD><0x00> de <0xFD><0x0F>\n<0xFD><0x01>",
-      "length": 11,
+      "translation": "<0xFD><0x00> de <0xFD><0x0F>\naugmente <0xFD><0x01>",
+      "length": 20,
       "original_length": 10,
-      "padding_used": 1,
+      "padding_used": 10,
       "encoding": "pokemon",
       "category": "description",
       "notes": "",
-      "too_long": false
+      "too_long": true
     },
     {
       "offset": 4180842,
       "original_text": "<0xFD><0x10>'s <0xFD> \n<0xFD><0x01>",
-      "translation": "<0xFD><0x00> de <0xFD><0x10>\n<0xFD><0x01>",
-      "length": 11,
+      "translation": "<0xFD><0x00> de <0xFD><0x10>\naugmente <0xFD><0x01>",
+      "length": 20,
       "original_length": 10,
-      "padding_used": 1,
+      "padding_used": 10,
       "encoding": "pokemon",
       "category": "description",
       "notes": "",
-      "too_long": false
+      "too_long": true
     },
     {
       "offset": 4180853,
@@ -34700,26 +34700,26 @@
     {
       "offset": 4180879,
       "original_text": "<0xFD><0x0F>'s <0xFD> \n<0xFD><0x01>",
-      "translation": "<0xFD><0x00> de <0xFD><0x0F>\n<0xFD><0x01>",
-      "length": 11,
+      "translation": "<0xFD><0x00> de <0xFD><0x0F>\nbaisse <0xFD><0x01>",
+      "length": 18,
       "original_length": 10,
-      "padding_used": 1,
+      "padding_used": 8,
       "encoding": "pokemon",
       "category": "description",
       "notes": "",
-      "too_long": false
+      "too_long": true
     },
     {
       "offset": 4180890,
       "original_text": "<0xFD><0x10>'s <0xFD> \n<0xFD><0x01>",
-      "translation": "<0xFD><0x00> de <0xFD><0x10>\n<0xFD><0x01>",
-      "length": 11,
+      "translation": "<0xFD><0x00> de <0xFD><0x10>\nbaisse <0xFD><0x01>",
+      "length": 18,
       "original_length": 10,
-      "padding_used": 1,
+      "padding_used": 8,
       "encoding": "pokemon",
       "category": "description",
       "notes": "",
-      "too_long": false
+      "too_long": true
     },
     {
       "offset": 4180901,

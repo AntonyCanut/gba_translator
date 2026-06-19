@@ -1,23 +1,40 @@
 """Regression guard for the battle stat-change effect messages (ticket B-35).
 
-In battle, the "{Pokémon}'s {Stat} rose/fell!" templates must read in correct
-French word order: "[STAT] de [NOM]" (e.g. "Attaque de Pikachu"), NOT the
-inverted "[NOM] de [STAT]". The buffer mapping (verified against the EN ROM)
-is:
+In battle, the "{Pokémon}'s {Stat} rose/fell!" templates must read in correct,
+idiomatic French. Two things are pinned here:
 
-    <0xFD><0x00>  -> stat name buffer   (e.g. "Attaque")
+1. Word order of the noun phrase: "[STAT] de [NOM]" (e.g. "Défense de Pikachu"),
+   NOT the inverted "[NOM] de [STAT]".
+2. Placement of the intensity adverb. The engine builds the verb buffer
+   (<0xFD><0x01>) as ``[modifier?] + [verb]`` and the modifier is ALWAYS
+   prepended (English "sharply rose!"). Authoring the verb as "augmente !" and
+   the modifier as "beaucoup " therefore produced "beaucoup augmente !" — wrong
+   French order ("la phrase manque de sens").
+
+   The fix moves the conjugated verb INTO the templates and shrinks the verb
+   buffer to just "!". With the verb fixed in the template, the prepended
+   modifier now lands *after* the verb:
+
+       template (rise) = "<0xFD><0x00> de <0xFD><0x0F>\\naugmente <0xFD><0x01>"
+       verb buffer     = "!"
+       modifier        = "beaucoup "   (rise & fall)
+
+       +1 : "Défense de Pikachu\\naugmente !"           (buffer = "!")
+       +2 : "Défense de Pikachu\\naugmente beaucoup !"  (buffer = "beaucoup " + "!")
+       -1 : "Défense de Pikachu\\nbaisse !"
+       -2 : "Défense de Pikachu\\nbaisse beaucoup !"
+
+Buffer mapping (verified against the EN ROM, FireRed STRINGID enum):
+
+    <0xFD><0x00>  -> stat name buffer        (e.g. "Défense")
     <0xFD><0x0F>  -> attacker name buffer
     <0xFD><0x10>  -> defender name buffer
-    <0xFD><0x01>  -> verb buffer        (e.g. "augmente !")
+    <0xFD><0x01>  -> intensity+terminator buffer ("!" or "beaucoup !")
 
-This order regressed three times because the templates were authored with the
-unsupported brace syntax ({FD00}) — which the encoder writes out as the literal
-characters "{FD00}" (garbage, far too long) rather than the control byte 0xFD
-0x00 — and because the two tokens were swapped. This test pins both the source
-order in combined_fr.txt and the encoded byte order.
-
-The +2/-2 intensity modifier ("beaucoup", formerly "sharply ") must keep a
-trailing space so it does not run into the verb ("beaucoupaugmente !").
+    0x3FCB5F / 0x3FCB6A  -> RISE templates (attacker / defender)  [STRINGID 0xC9/0xCA]
+    0x3FCB8F / 0x3FCB9A  -> FALL templates (attacker / defender)  [STRINGID 0xCB/0xCC]
+    0x3FCB41 / 0x3FCB50  -> modifier (rise / fall), "beaucoup "
+    0x3FCB4A / 0x3FCB59  -> verb buffer (rise / fall), "!"
 """
 
 from __future__ import annotations
@@ -29,10 +46,13 @@ from src.core.text_codec import TextEncoder
 
 COMBINED = Path(__file__).resolve().parent.parent / "combined_fr.txt"
 
-# attacker-name templates / defender-name templates
+# rise-direction templates / fall-direction templates
+RISE_TEMPLATES = (0x3FCB5F, 0x3FCB6A)
+FALL_TEMPLATES = (0x3FCB8F, 0x3FCB9A)
 ATK_TEMPLATES = (0x3FCB5F, 0x3FCB8F)
 DEF_TEMPLATES = (0x3FCB6A, 0x3FCB9A)
 MODIFIERS = (0x3FCB41, 0x3FCB50)
+VERB_BUFFERS = (0x3FCB4A, 0x3FCB59)
 
 
 def _last_entries() -> dict[int, str]:
@@ -50,6 +70,12 @@ def _encode(text: str) -> bytes:
     # combined_fr.txt uses \n as the newline escape; the encoder maps it via
     # the control table, so feed a real newline.
     return TextEncoder.encode(text.replace("\\n", "\n"), "pokemon")
+
+
+def _decode_buffer(text: str) -> str:
+    """Render a combined_fr value to a plain string, resolving the explicit
+    <0x00> space token, for assertions about the displayed text."""
+    return text.replace("<0x00>", " ").replace("\\n", "\n")
 
 
 def test_templates_use_control_byte_not_brace_syntax():
@@ -97,8 +123,39 @@ def test_encoded_byte_order_stat_then_de_then_name():
         )
 
 
+def test_verb_is_baked_into_template_before_buffer():
+    """The conjugated verb must live in the template (after the name buffer,
+    before the trailing <0xFD><0x01>), so the prepended modifier lands after it.
+
+    Rise templates carry "augmente"; fall templates carry "baisse"."""
+    entries = _last_entries()
+    for off in RISE_TEMPLATES:
+        text = entries[off]
+        assert "augmente" in text, f"{off:#x} rise template lost verb: {text!r}"
+        assert text.index("augmente") < text.index("<0x01>"), (
+            f"{off:#x} verb must precede the intensity buffer: {text!r}"
+        )
+    for off in FALL_TEMPLATES:
+        text = entries[off]
+        assert "baisse" in text, f"{off:#x} fall template lost verb: {text!r}"
+        assert text.index("baisse") < text.index("<0x01>"), (
+            f"{off:#x} verb must precede the intensity buffer: {text!r}"
+        )
+
+
+def test_verb_buffer_is_only_the_exclamation():
+    """With the verb in the template, the verb buffer must shrink to just "!"
+    so ±1 renders "augmente !" and ±2 renders "augmente beaucoup !"."""
+    entries = _last_entries()
+    for off in VERB_BUFFERS:
+        text = entries[off]
+        assert _decode_buffer(text).strip() == "!", (
+            f"{off:#x} verb buffer must be just '!': {text!r}"
+        )
+
+
 def test_modifier_keeps_trailing_space():
-    """'beaucoup' must end with a space so it does not stick to the verb.
+    """'beaucoup' must end with a space so it does not stick to the '!'.
 
     The trailing separator is authored as the explicit space byte token
     <0x00> (literal trailing spaces get trimmed by line-based tooling)."""
@@ -107,3 +164,36 @@ def test_modifier_keeps_trailing_space():
         text = entries[off]
         enc = _encode(text)[:-1]  # drop terminator
         assert enc.endswith(b"\x00"), f"{off:#x} modifier lost trailing space: {text!r}"
+
+
+def test_rendered_order_is_verb_then_modifier():
+    """End-to-end: simulate the engine (buffer = modifier + verb) and assert the
+    +2 message reads "augmente beaucoup !" — verb first, intensity adverb after —
+    NOT the old "beaucoup augmente !"."""
+    entries = _last_entries()
+
+    def render(template_off: int, modifier_off: int | None, verb_off: int) -> str:
+        # Resolve buffer pieces (these carry the explicit <0x00> space token).
+        verb_buf = _decode_buffer(entries[verb_off])
+        modifier = _decode_buffer(entries[modifier_off]) if modifier_off else ""
+        buff2 = modifier + verb_buf  # engine prepends the modifier
+        # Substitute the FD control tokens on the RAW template first, then the
+        # newline escape; the templates have no standalone <0x00> token.
+        text = entries[template_off]
+        text = text.replace("<0xFD><0x00>", "Défense")
+        text = text.replace("<0xFD><0x0F>", "Pikachu").replace("<0xFD><0x10>", "Pikachu")
+        text = text.replace("<0xFD><0x01>", buff2)
+        return text.replace("\\n", "\n")
+
+    # +1 / +2 rise
+    assert render(0x3FCB5F, None, 0x3FCB4A) == "Défense de Pikachu\naugmente !"
+    assert render(0x3FCB5F, 0x3FCB41, 0x3FCB4A) == "Défense de Pikachu\naugmente beaucoup !"
+    # -1 / -2 fall
+    assert render(0x3FCB9A, None, 0x3FCB59) == "Défense de Pikachu\nbaisse !"
+    assert render(0x3FCB9A, 0x3FCB50, 0x3FCB59) == "Défense de Pikachu\nbaisse beaucoup !"
+
+    # And the broken order must NOT appear.
+    plus_two = render(0x3FCB5F, 0x3FCB41, 0x3FCB4A)
+    assert plus_two.index("augmente") < plus_two.index("beaucoup"), (
+        f"verb must precede the adverb: {plus_two!r}"
+    )
