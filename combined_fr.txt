@@ -5460,7 +5460,7 @@
 0x7501A0: Il y a tellement de Pokémon Feu ici\n!
 0x7501C5: Je brûle de bonheur !
 0x7501E9: Je devrais vérifier si j'ai de la\nfièvre…
-0x7502A5: {COLOR}ÇMagcargo!\pUtilisez Plume de lave !
+0x7502A5: {COLOR}ÇVolcaropod!\pUtilisez Plume de lave !
 0x75034D: Jax : {COLOR}ËÉtouraptor, utilise
 0x750370: Jax : {COLOR}ËVotre règne d'ombre\ns'arrête ici et maintenant !\pJe ne vous laisserai pas fuir le\nVolcan Cendreux avec Sulfura !
 0x7503EA: Marlon : {COLOR}ËJEUNE INSOLENT !\pPour qui te prends-tu pour menacer\nles Ombres !?\pOn nous a ordonné d'aider Lady\nIvory, alors ne crois pas une\lseconde que tu peux nous stopper !
@@ -6728,7 +6728,7 @@
 0x7C9EFB: {COLOR}ÇQuant à toi, {PLAYER}, je ne te\ntuerai pas maintenant.\pTu dois devenir un exemple pour\nquiconque est assez stupide pour\lcroire pouvoir affronter les\lShadows.\pJe vais faire ce que Marlon et Zeph\nn'ont pas réussi à faire.\pIl est temps d'en\nfinir au combat !
 0x7CA003: C'est décevant.
 0x7CA01A: {COLOR}Ç…\pJ'ai peut-être échoué aussi, mais\nnous n'avons pas encore fini ici !\pDémolosse !\pJe veux que les cendres {STR_VAR_1} tachent le\nsol noir !
-0x7CA08C: Ivoire : {COLOR}ÇHoundoom !\pFaites-le maintenant, avant que {STR_VAR_2} ne\ns'éloigne de nouveau !
+0x7CA08C: Ivoire : {COLOR}ÇDémolosse !\pFaites-le maintenant, avant que {STR_VAR_2} ne\ns'éloigne de nouveau !
 0x7CA0DB: Ce type là-bas est mon seul ami\nmaintenant…
 0x7CA167: Qu'est-ce qui me frustre ici\n?\pLa police refuse d'agir car elle\nrefuse de\lcroire qu'une organisation obscure\lexiste !\pIls me traitent encore comme un\nenfant malgré ce que j'ai accompli…\pArgh…
 0x7CA25D: Attendez…\pJe me souviens maintenant…\pIl y a quelqu'un que je peux\ncontacter pour aide après tout…
@@ -6843,7 +6843,7 @@
 0x7D4A9A: Zeph : {COLOR}ËEt qu'est-ce que ça serait ?
 0x7D4ABB: Aklove : {COLOR}ËSi vous voulez libérer le\npouvoir de la bouteille de prison,\ldoit être quelque part pour que ce\npouvoir\laille.\pOu plus précisément, vous avez\nbesoin du Pokémon qui était\l, quelque chose qui vous manque.\pBien sûr, vous sauriez que si je\nn'avais pas effacé ce détail de vos\lfichiers.\pHonnêtement, je Je savais qu'il\nserait facile de vous manipuler si\lvotre organisation, mais je ne\npensais pas\lque ce serait aussi simple !\pVous avez fait le jeu de mes mains,\nZeph !\pVous avez descellé la bouteille de\nprison juste devant moi !\pEt maintenant je peux l'utiliser\npour vraiment terminer la déliaison
 0x7D4CF4: Zeph : {COLOR}ËWha…\pComment oses-tu me ridiculiser !\pTu vas payer pour ça !
-0x7D4D37: Zeph : {COLOR}ËHoundoom !\pIncinérez cet imbécile !
+0x7D4D37: Zeph : {COLOR}ËDémolosse !\pIncinérez cet imbécile !
 0x7D4D60: Aklove : {COLOR}ËHoopa ! Débarrasse-toi de\nHoundoom !
 0x7D4D87: Zeph : {COLOR}ËPas question…\pMon Démolosse…\pAlors c'est toi qui as sauvé {PLAYER}\ntoutes ces fois…
 0x7D4DD8: Aklove : {COLOR}ËEn fait, c'était Hoopa\nagissant de son propre chef.\pIl était désespéré que quelqu'un le\nsauve de moi.\pIl se sentait obligé de protéger\n{PLAYER} car {STR_VAR_2} est son véritable\pJe ne veux rien de plus que de voir\n{PLAYER} éliminé.\pUne fois {STR_VAR_2} parti, Hoopa le fera enfin\nm'accepte comme son véritable\pAlors seulement pourrai-je utiliser\ntoute sa puissance, capable de\ldes masses terrestres entières…
@@ -7148,7 +7148,7 @@
 0x7EC744: Leftovers{CLEAR_TO}{FONT_SMALL} 3 000 Jetons
 0x7EC760: Weak Policy{CLEAR_TO}{FONT_SMALL} 4 000 Jetons
 0x7EC77E: Emolga{CLEAR_TO}{FONT_SMALL} 500 Jetons
-0x7EC795: Hawlucha{CLEAR_TO}{FONT_SMALL} 1 000 Jetons
+0x7EC795: Brutalibré{CLEAR_TO}{FONT_SMALL} 1 000 Jetons
 0x7EC7B0: CT16{CLEAR_TO}{FONT_SMALL} 2 000 Jetons
 0x7EC7C7: CT32{CLEAR_TO}{FONT_SMALL} 3 000 Jetons
 0x7EC7DE: CT33{CLEAR_TO}{FONT_SMALL} 2 000 Jetons
@@ -10537,7 +10537,7 @@
 0xA441F7: Smogon Scalemons
 0xA44208: Smogon 350 Cup
 0xA44217: Smogon Averagemons
-0xA4422A: Smogon Benjamin Butterfree
+0xA4422A: Smogon Benjamin Papilusion
 0xA44245: Mega Brawl
 0xA44250: Dynamax Standard
 0xA44261: Smogon National Dex OU
@@ -12068,7 +12068,7 @@
 0xEB65CF: Méga-Gemme pour Charmina. Permet de\nMéga-Évoluer en combat.\n
 0xEB6624: Méga-Gemme pour Élecsprint. Permet\nde Méga-Évoluer en combat.\n
 0xEB667A: Méga-Gemme pour Sharpedo. Permet de\nMéga-Évoluer en combat.\n
-0xEB66CF: Méga-Gemme pour Camerupt. Permet de\nMéga-Évoluer en combat.\n
+0xEB66CF: Méga-Gemme pour Camérupt. Permet de\nMéga-Évoluer en combat.\n
 0xEB6724: Méga-Gemme pour Altaria. Permet de\nMéga-Évoluer en combat.\n
 0xEB6778: Méga-Gemme pour Branette. Permet de\nMéga-Évoluer en combat.\n
 0xEB67CC: Méga-Gemme pour Absol. Permet de\nMéga-Évoluer en combat.\n
@@ -12469,7 +12469,7 @@
 0x165E0B8: Maître de la courtoisie et de\nl'escrime, il se bat en utilisant\ndes épées étendues sur ses coudes.
 0x165E110: Il contrôle trois unités\nMini-Nas grâce au magnétisme.
 0x165E15D: On dit qu'il abrite les esprits\nperdus et les guide chez eux.
-0x165E1A7: Les légendes des régions enneigées\ndisent qu'une femme perdue sur une\nmontagne glacée renaît en Froslass.
+0x165E1A7: Les légendes des régions enneigées\ndisent qu'une femme perdue sur une\nmontagne glacée renaît en Momartik.
 0x165E209: Son corps est plasma.\nIl infiltre les appareils\nélectroniques et sème le chaos.
 0x165E267: Connu comme « l'être du savoir\n». On dit qu'il efface la mémoire\nde ceux qui croisent son regard.
 0x165E2D0: Connu comme « l'être\nde l'émotion ». Il a appris le\nchagrin, la douleur et la joie.
@@ -12586,7 +12586,7 @@
 0x1660B0D: Ils paralysent leurs proies puis\nles entraînent dans leurs repaires,\nà huit kilomètres sous la surface.
 0x1660B6F: Moyade rôde autour des\npaquebots et pétroliers de luxe,\nespérant entraîner ses proies.
 0x1660BD0: La membrane\nspéciale enveloppant Mamanbo a la\ncapacité de guérir les blessures.
-0x1660C1A: Les Joltik des villes\naspirent l'électricité\ndes prises des maisons.
+0x1660C1A: Les Statitik des villes\naspirent l'électricité\ndes prises des maisons.
 0x1660C82: Attaqués, ils créent\nune barrière électrique en\ncrachant des fils chargés.
 0x1660CE4: Ils plantent leurs pointes\ndans les parois des grottes et\nabsorbent les minéraux de la roche.
 0x1660D3B: En tournant autour de ses\ntrois pointes hérissées, il\npeut anéantir un adversaire.
@@ -12612,9 +12612,9 @@
 0x166146B: Si l'adversaire ne peut être\nparalysé, il se contorsionne\ntrès vite et s'effondre.
 0x16614CA: Il est fier de sa vitesse.\nCe qu'il perd en puissance,\nil le compense en quantité.
 0x1661533: Ils utilisent la fourrure de leurs\nbras comme fouet pour frapper.
-0x166157C: Il traverse les tunnels étroits\ncreusés par Excadrill et Onix. Il\nattrape ses proies avec ses griffes.
+0x166157C: Il traverse les tunnels étroits\ncreusés par Minotaupe et Onix. Il\nattrape ses proies avec ses griffes.
 0x16615E4: La science ancienne a façonné ce\nPokémon à partir d'argile. Il est\nactif depuis des milliers d'années.
-0x166163F: Golurk a été créé pour protéger\nhumains et Pokémon. Ils fonctionnent\ngrâce à une énergie mystérieuse.
+0x166163F: Golemastoc a été créé pour protéger\nhumains et Pokémon. Ils fonctionnent\ngrâce à une énergie mystérieuse.
 0x1661693: Ignorant leurs blessures, ils\nattaquent en enfonçant les lames\nde leur corps dans la proie.
 0x16616F9: Scalproie poursuit ses\nproies avec un grand groupe\nde Scalpion, puis les achève.
 0x166175F: Leur fourrure duveteuse\nabsorbe les dégâts, même\navec un violent coup de tête.
@@ -12622,8 +12622,8 @@
 0x166181A: Plus ils ont de cicatrices,\nplus ces courageux soldats du ciel\nreçoivent le respect de leurs pairs.
 0x166187B: Ils protègent leurs postérieurs\navec des os trouvés. Ils\npoursuivent les Pokémon faibles.
 0x16618DE: Il dispose habilement les os de\nses proies pour construire son nid.\nLa plupart des os sont des Osselait.
-0x1661940: Il respire par un trou dans sa\nqueue tout en brûlant d'un feu\ninterne. Durant est sa proie.
-0x16619A1: Durant creuse des nids en montagne.\nIls construisent des tunnels\ncomplexes comme des labyrinthes.
+0x1661940: Il respire par un trou dans sa\nqueue tout en brûlant d'un feu\ninterne. Fermite est sa proie.
+0x16619A1: Fermite creuse des nids en montagne.\nIls construisent des tunnels\ncomplexes comme des labyrinthes.
 0x16619FF: Il mord tout et n'est\npas difficile. S'en approcher\nsans précaution est dangereux.
 0x1661A61: Les deux têtes ne s'entendent\npas. Celui qui mange plus\nque l'autre devient le leader.
 0x1661AC0: Il répond au mouvement\nen attaquant. Ce Pokémon\nà trois têtes dévore tout.
@@ -17049,7 +17049,7 @@
 0x1F1529A: Je le sens… tu as trouvé tous\nles trésors du tombeau !\pMais avant de te récompenser,\ntu dois faire de la place\ldans ton équipe.
 0x1F15329: Cet Œuf devait être caché dans\nle tombeau depuis des siècles !\pSi tu n'avais pas découvert la\nchambre funéraire, il n'aurait\ljamais trouvé de Dresseur pour lui.
 0x1F153C2: Objet trouvé derrière un pilier\nau 1F.
-0x1F153ED: Objet trouvé entre deux Dusknoir\ndu haut, au B4F.
+0x1F153ED: Objet trouvé entre deux Noctunoir\ndu haut, au B4F.
 0x1F15426: Objet trouvé près de l'échelle\nvers le bas au B3F.
 0x1F1545A: Objet trouvé près de l'échelle\nen haut du B2F.
 0x1F15495: Objet trouvé près du pilier\nen bas du B2F.
@@ -17799,7 +17799,7 @@
 0x1F2AAB5: WROOOOOAR!\p…\pDésolé, {PLAYER}, je reviens de\nDragonCon.\pC'est le bruit d'un Dragon\nappelé\l« Éthernatos ».\pUn vrai cauchemar. Il ressemble pas\nà un Dragon!\pHeureusement qu'il n'est pas à\nBorrius!\pMais tu PEUX\ntrouver ceci!
 0x1F2ABFD: Cette {COLOR}ÉDracozélite{COLOR}Ç est\nplus forte que chaque faux {COLOR}ÉDragon{COLOR}Ç !\pQui a besoin de ces trucs\nquand tu peux percer tes adversaires\lavec ce Cristal\lZ !\pJe parie qu’ils n’ont pas ça là d’où\nvient ce faux Dragon.
 0x1F2ACF4: Tout le monde dit la même\nchose…\pIls s’attendaient à une Dresseuse\nDragon plus élégante et\lmature…\pPff ! Je suis mature, ma cassette\nest classée « Mature » !
-0x1F2ADC8: {COLOR}ÁTu inspectes la jaquette de la\nvidéo…\pÇa…{PAUSE} ce n'est PAS une chose\nagréable à faire à un Goomy.
+0x1F2ADC8: {COLOR}ÁTu inspectes la jaquette de la\nvidéo…\pÇa…{PAUSE} ce n'est PAS une chose\nagréable à faire à un Mucuscule.
 0x1F2AE2B: Pikachu
 0x1F2AE37: Leaf
 0x1F2AF07: {COLOR}ÁLa tenue de {STR_VAR_1} est\ndisponible dans la Boîte Costumes!
@@ -19378,7 +19378,7 @@
 0x1F5F5A3: Quel dommage.\nC'est vraiment regrettable.
 0x1F5F5C8: Tu es vraiment un as des airs.
 0x1F5F5E8: Tu n'as aucun Pokémon que j'accepte\nd'affronter.\pSeuls les Pokémon de type {COLOR}ÉVol{COLOR}Ë ou\nceux avec le Talent {COLOR}ÉLévitation{COLOR}Ë\lpeuvent se battre contre les miens.
-0x1F5F67F: Notre combat aérien m'a comblé de\njoie.\pPrends cette Méga-Gemme pour\n{COLOR}ÉPidgeot{COLOR}Ë\len guise de remerciement !
+0x1F5F67F: Notre combat aérien m'a comblé de\njoie.\pPrends cette Méga-Gemme pour\n{COLOR}ÉRoucarnage{COLOR}Ë\len guise de remerciement !
 0x1F5F705: Notre combat aérien m'a comblé de\njoie.\pPrends ces Ailes en guise de\nremerciement !
 0x1F5F769: Quel dommage.\nTu n'as pas de place pour des ailes.
 0x1F5F796: Notre combat aérien m'a rempli de\njoie !\pRefaisons ça demain.
@@ -19450,7 +19450,7 @@
 0x1F6095F: Comme un vrai noble, tu l'as fait !\pTu as vaincu tous les Dresseurs\nici sur la Route 18 !\pEt comme il se doit, moi aussi\ndois te défier en personne !
 0x1F609F5: Quel duel royal, mené avec\nhonneur et dignité.
 0x1F60A32: Récompense pour tes efforts…
-0x1F60A56: Ceci est une Méga-Gemme pour\n{COLOR}ÉSableye{COLOR}Ç.\pSi tu as un lien fort avec l'un\nd'eux, donne-lui ça et votre lien\lrenverra les changements de statut !
+0x1F60A56: Ceci est une Méga-Gemme pour\n{COLOR}ÉTénéfix{COLOR}Ç.\pSi tu as un lien fort avec l'un\nd'eux, donne-lui ça et votre lien\lrenverra les changements de statut !
 0x1F60AF5: Je suis la reine de la Route 18 !\pQu'est-ce que ça veut dire ?\pBats tous les Dresseurs de cette\nroute pour le découvrir !
 0x1F60B58: Ce plateau marque le début de la\nlongue montée vers la Route Victoire\let la Ligue Pokémon.\pLà, les Dresseurs affrontent le\nConseil 4 pour une chance\lde devenir le Champion de Borrius.\pEs-tu l'un d'eux ?
 0x1F60C35: Alors mes soupçons se confirment…\p…\pPrends ceci !
@@ -20415,7 +20415,7 @@
 0x1F7636C: Oh… ce coup de sifflet a été aussi\npiquant qu’un talon aiguille…
 0x1F763AC: Bonjour. Regarde ton Pokémon.\nMaintenant\pregarde-moi. Retourne au\nPokémon. Retourne à\pmoi. Heureusement, ton Pokémon\nn’est pas un vieux grincheux qui\paime perdre du temps.\nRegarde en bas. Où es-tu ? Non,\ptu es toujours là,\psurprise !… Tout est possible en\nExpert ! Je suis sur un bateau.
 0x1F764C0: Mes talents d’Expert étaient trop\nforts pour laisser finir ça !
-0x1F76502: Ouf… mes hémorroïdes refont des\nleurs… Ah, toi là,\ptu veux bien écouter une vieille\ndame se plaindre un peu ? Ce sont\lmes hémorroïdes… Elles sont\phorribles ! J’ai l’impression\pqu’un paquet de Voltorb\ns’est installé là… Ça rend\ls’asseoir pénible, et ça\plaisse des taches affreuses sur mes\nhabits… Tiens, j’ai des photos !\lOù ai-je mis la\pdernière photo du\pmédecin… Oui, celle juste dans\nmon,… Oh, tu\pverdis…\pMauvaise\pidée\npeut-être…
+0x1F76502: Ouf… mes hémorroïdes refont des\nleurs… Ah, toi là,\ptu veux bien écouter une vieille\ndame se plaindre un peu ? Ce sont\lmes hémorroïdes… Elles sont\phorribles ! J’ai l’impression\pqu’un paquet de Voltorbe\ns’est installé là… Ça rend\ls’asseoir pénible, et ça\plaisse des taches affreuses sur mes\nhabits… Tiens, j’ai des photos !\lOù ai-je mis la\pdernière photo du\pmédecin… Oui, celle juste dans\nmon,… Oh, tu\pverdis…\pMauvaise\pidée\npeut-être…
 0x1F76713: Tu voulais combattre ? Pour moi\nchaque jour est un combat !\pUn combat contre ces\nfichues hémorroïdes !\lOh misère…
 0x1F76793: Ah ! Attends ! Je\ncrois savoir qui tu es !\pHein ? Tu ne sais pas qui je\nsuis ? Pas surprenant !\pJe suis un ex-membre des Ombres,\ntu n’as sûrement jamais vu mon\pvisage. Comment vont-ils ? Zeph\pa-t-il réussi à créer l’arme\nvivante parfaite ? Hein ?\pIl voulait juste ressusciter son\nfils ? Quelle blague ! À quoi\lbon un monstre\pinvincible si ce n’est pas\ppour écraser ses ennemis ?\nC’est ce raisonnement stupide qui\lm’a fait partir ! Bah… la\pSociété Scientifique recrute encore\n?… Je radote ! Ne\pt’inquiète pas, je finirai ce\nque Zeph a\pcommencé\pun\njour\l!
 0x1F76A2C: Le navire a déjà sifflé ?\nJ’ai vraiment trop parlé… De\ptoute façon, même le meilleur\nGuerrier Ombre ne te battrait\lpas. Désolé de\pt’avoir dérangé, amuse-toi avec\nles autres passagers.
@@ -20731,7 +20731,7 @@
 0x1F7EA97: Pendant des années, je me suis\nisolé dans cette grotte.\pAprès tout ce temps, je suis\nle Dresseur le plus puissant ici.\pPeux-tu espérer me prendre ce titre\nà moi ?
 0x1F7EB36: Mon titre…\nToutes ces années pour rien…
 0x1F7EB62: Ce qui est fait est fait.\pJe ne récupérerai jamais ces années\nde ma vie.\pTout ce que je peux faire, c'est\navancer.\pJe n'en aurai plus besoin.
-0x1F7EBF0: C'est une Méga-Gemme pour le\nPokémon {COLOR}ÉAmpharos{COLOR}Ë.\pSeuls les Dresseurs les plus forts\npeuvent bien l'utiliser.\pAdieu, Dresseur.
+0x1F7EBF0: C'est une Méga-Gemme pour le\nPokémon {COLOR}ÉPharamp{COLOR}Ë.\pSeuls les Dresseurs les plus forts\npeuvent bien l'utiliser.\pAdieu, Dresseur.
 0x1F7EC6C: Pendant des années, je me suis\nisolé dans cette grotte.\pAprès tout ce temps, je suis\nle Dresseur le plus puissant ici.\pSi tu veux me défier pour\nce titre, bats d'abord\ltous les autres Dresseurs.
 0x1F7ED85: Pourquoi tant de hâte ?\pTu n'iras pas jusqu'à Électhor,\npeu importe ta vitesse !
 0x1F7EDD0: Bon, tant pis…
@@ -21520,7 +21520,7 @@
 0x1F9148E: Smogon Scalemons est un format où\nles stats des Pokémon, sauf PV,\lsont ajustées pour un total\lproche de 600.\pScalemons suit les clauses Smogon\nUbers standard, sauf pour autoriser\ldes Pokémon bannis.\pLes Pokémon tenant les objets\nsuivants ne peuvent pas participer:\pÉcaille Océan, Dent Océan,\nÉvolizélite, Évoluroc, BouleLumière,\lMasse Os, Éctoplasmite, Mysdibulite,\let Charminite.\pLes Pokémon avec les talents\nsuivants ne peuvent pas participer:\pPiège, Coloforce et Marque\nOmbre.\pPour plus d'informations, vois :\n{COLOR}Ésmogon.com/forums/threads/\lscalemons.3607934/
 0x1F916D8: Averagemons est un format qui\nvise à égaliser le terrain.\pChaque Pokémon reçoit exactement le\nmême total de stats : 100 par\lstat.\pAveragemons suit les clauses OU\nstandard, sans ses bans.\pLes Pokémon tenant les objets\nsuivants ne peuvent pas participer:\pMasse Os, Dent Océan, Boule\nLumière, Mysdibulite, Charminite,\lÉvoluroc, Éctoplasmite, Évolizélite.\pLes Pokémon avec les talents\nsuivants ne peuvent pas participer:\pColoforce, Force Pure, Marque Ombre,\net Piège.\pLes Pokémon avec les capacités\nsuivantes ne peuvent pas participer:\pBabil et Relais.\pPour plus d'informations, vois :\n{COLOR}Ésmogon.com/forums/threads/\laveragemons.3590605/
 0x1F91970: Smogon 350 Cup est un format où\nles Pokémon avec un total de stats\linférieur à 350 voient chacune de\lleurs stats doublées.\p350 Cup utilise les clauses Smogon\nUbers standard.\pLes Pokémon tenant les objets\nsuivants ne peuvent pas participer:\pÉvoluroc, Boule Lumière, Dent Océan\net Évolizélite.\pLes Pokémon avec les talents\nsuivants ne peuvent pas participer:\pMarque Ombre et Piège.\pPour plus d'infos, vois :\n{COLOR}Ésmogon.com/forums/threads/350-cup.\l3589641/
-0x1F91B2B: Smogon Benjamin Butterfree est un\nformat où vaincre un Pokémon\lle fait régresser en une\lforme précédente au lieu de\ltomber K.O.\pLes Pokémon ne tombent K.O. que\ns'ils ne régressent plus.\pAprès régression, tout changement de\nstat est réinitialisé, et tout état\lnon-volatile est soigné.\pDe plus, les Pokémon oublieront\nles capacités qu'ils ne peuvent pas\lapprendre naturellement.\pBenjamin Butterfree suit les clauses\nSmogon OU standard.\pPour plus d'informations, vois :\n{COLOR}Ésmogon.com/forums/threads/\lbenjamin-butterfree.3605680/
+0x1F91B2B: Smogon Benjamin Papilusion est un\nformat où vaincre un Pokémon\lle fait régresser en une\lforme précédente au lieu de\ltomber K.O.\pLes Pokémon ne tombent K.O. que\ns'ils ne régressent plus.\pAprès régression, tout changement de\nstat est réinitialisé, et tout état\lnon-volatile est soigné.\pDe plus, les Pokémon oublieront\nles capacités qu'ils ne peuvent pas\lapprendre naturellement.\pBenjamin Papilusion suit les clauses\nSmogon OU standard.\pPour plus d'informations, vois :\n{COLOR}Ésmogon.com/forums/threads/\lbenjamin-butterfree.3605680/
 0x1F91D26: En format Méga Baston, il n'y a\naucune limite au nombre de Pokémon\lpouvant méga-évoluer par équipe.\pMéga Baston suit les restrictions\nstandard sur espèces et objets, avec\lune exception pour autoriser\lSachanobi.\pPour plus d'infos, vois la\ndescription de « {COLOR}ÉStandard{VERSION} ».
 0x1F91E48: C'est une version spéciale du\nniveau standard qui autorise\lle Dynamax.\pCependant, les Pokémon ne peuvent\npas Méga-Évoluer ni subir une\lRéversion Primale, Ultra-Burst,\lou des Capacités Z ici.\pPour plus d'infos, vois la\ndescription de « {COLOR}ÉStandard{VERSION} ».
 0x1F91F4F: C'est une version spéciale de\nl'OU de Smogon.\pElle suit la plupart des règles de\nSmogon OU, à l'exception d'avoir\lses propres listes de bans.\pDe plus, les Pokémon peuvent Dynamax\ndans ce niveau.\pPour plus d'informations, vois :\n{COLOR}Ésmogon.com/dex/ss/formats/\lnational-dex/
@@ -21660,7 +21660,7 @@
 0x1F9432D: Smogon Scalemons
 0x1F9433E: Smogon 350 Cup
 0x1F9434D: Smogon Averagemons
-0x1F94360: Smogon Benjamin Butterfree
+0x1F94360: Smogon Benjamin Papilusion
 0x1F9437B: Méga Baston
 0x1F94386: Standard Dynamax
 0x1F94397: Smogon National Dex OU
@@ -22496,7 +22496,7 @@
 0x1FA1E0C: Tu vois, mon\p{STR_VAR_1} ? On a ces\nboosters, et on peut utiliser ce\lPokémon pour en fabriquer d'autres\ppour nous !\pGagnant-gagnant ! On se\nvoit à la base une fois que j'aurai\lréglé ça avec James, d'accord ?
 0x1FA1EE4: Black Ferrothorn
 0x1FA1EF5: Chef Black Ferrothorn
-0x1FA1F0B: Territoire Ferrothorn
+0x1FA1F0B: Territoire Noacier
 0x1FA1F1B: Barbs
 0x1FA1F21: La bataille d'Antisis
 0x1FA1F37: Il est temps d'attaquer le Black\nFerrothorn !\nFrappe-les chez eux !
@@ -23302,7 +23302,7 @@
 0x1F4953C: Arrrrgh !\pPourquoi tous ces gêneurs\nsurgissent-ils de partout !?\p\pSoit, ce n'est qu'une question de\ntemps avant votre défaite à tous.\pJe suis un homme patient\pJ'ai attendu ce jour un an durant,\nalors quelques instants de plus ?
 0x1F496B6: <0xFC><0x01><0x04>Je suis désolé<0xFC><0x08><0x20> Marlon<0xFC><0x08><0x30> <0xFD><0x06><0xFC><0x08><0x30>\nC'est le seul moyen
 0x1F49B96: Ha ha<0xFC><0x08><0x20> hahahahaha\pMalgré votre ingérence, il semble\nque j'aie triomphé !\pLa guerre vieille de 3000 ans<0xFC><0x08><0x18>\na trouvé sa juste conclusion.\pLe grand roi n'aura plus à\nsouffrir pour l'éternité.\pQuand il saura que j'ai accompli\nce qu'il n'a pu faire, ses Pokémon\llui reviendront enfin
-0x1F49D19: C'est simple, en vérité.\pTon Hoopa avait envoyé Houndoom\ndans une caverne vide de Cinder\lVolcano, un lieu sans le moindre\ldanger pour lui.\pTu m'y as ensuite envoyé aussi.\nEnsemble, nous avons pu fuir.\pUne fois dehors, j'ai contacté Fey\net elle a chargé l'Agent Véga de\lme guider ici.\pIl semble qu'elle n'ait jamais voulu\nte laisser semer la destruction
+0x1F49D19: C'est simple, en vérité.\pTon Hoopa avait envoyé Démolosse\ndans une caverne vide de Cinder\lVolcano, un lieu sans le moindre\ldanger pour lui.\pTu m'y as ensuite envoyé aussi.\nEnsemble, nous avons pu fuir.\pUne fois dehors, j'ai contacté Fey\net elle a chargé l'Agent Véga de\lme guider ici.\pIl semble qu'elle n'ait jamais voulu\nte laisser semer la destruction
 0x1F4A196: Ivory<0xFC><0x08><0x20> je suis désolé<0xFC><0x08><0x20> vraiment<0xFC><0x08><0x20> je<0xFC><0x08><0x20>\nj'aurais tellement voulu\pMais je n'ai eu qu'un bref instant\npour me glisser ici après que\l<0xFD><0x01> a scellé le pouvoir de Hoopa.\pEt à ce moment-là<0xFC><0x08><0x18> je ne pouvais\npas risquer d'être repéré !\pJe suis vraiment désolé, Ivory.
 0x1F4A2E3: Ivory<0xFC><0x08><0x20> tu ne saisis toujours pas.\pOui, nous avons perdu un enfant,\nmais nous en avons gagné deux.\pDepuis ma rencontre avec <0xFD><0x06><0xFC><0x08><0x20> j'ai\ncompris ce que nous avons perdu\len les abandonnant il y a si\llongtemps.\pMais il n'est pas trop tard !\pNous pouvons recommencer<0xFC><0x08><0x20> bâtir\nun nouveau lien avec eux !\pNous ne rattraperons jamais toutes\nces années perdues, mais nous\lpouvons au moins commencer.
 0x1F4A6FB: Écoute-moi bien, le vieux !\pJ'ai pas passé je sais pas combien\nde jours à te chercher juste pour\lêtre content de te retrouver !\pJe vais te montrer tout ce que tu\nas raté pendant toutes ces années !\pJe vais te montrer à quel point\nje suis devenu fort !
@@ -23370,7 +23370,7 @@
 0x1F56B78: Il semble y avoir un Pokémon\ndans l'antre !
 0x1F70878: Hauteurs Gelées\pUne ville-île sur un lac gelé.
 0x1F77D21: <0xFD><0x02> apprend\n<0xFD><0x03> !<0xFC><0x09>
-0x1F82BBC: <0xFC><0x01><0x02>Toxapex s'est gorgé de poison\npour augmenter\lsa taille !
+0x1F82BBC: <0xFC><0x01><0x02>Prédastérie s'est gorgé de poison\npour augmenter\lsa taille !
 0x1F8D608: <0xFD><0x01> reçoit <0xFC><0x01><0x06><0xFD><0x02><0xFC><0x01><0x02> BP !
 0x1F8E9AE: Le record <0xFC><0x01><0x06><0xFD><0x0C><0xFC><0x01><0x08> a été obtenu\nlors d'un combat <0xFC><0x01><0x06><0xFD><0x02><0xFC><0x01><0x08>\lau format <0xFC><0x01><0x06><0xFD><0x03><0xFC><0x01><0x08>.\pLa série a duré <0xFC><0x01><0x06><0xFD><0x0B><0xFC><0x01><0x08> combats.\pLe niveau était fixé à <0xFC><0x01><0x06><0xFD><0x04><0xFC><0x01><0x08> et\nles <0xFC><0x01><0x06>Combats Inversés<0xFC><0x01><0x08> sur <0xFC><0x01><0x06><0xFD><0x07><0xFC><0x01><0x08>.\pLes espèces utilisées :\n-<0xFC><0x01><0x06><0xFD><0x08><0xFC><0x01><0x08>\l-<0xFC><0x01><0x06><0xFD><0x09><0xFC><0x01><0x08>\l-<0xFC><0x01><0x06><0xFD><0x0A><0xFC><0x01><0x08>
 0x1F8F63C: Tour de Combat : bienvenue !\pJe te guide vers les Salles\nde Combat Solo et Duo.
@@ -23460,7 +23460,7 @@
 0x1F31574: <0xFC><0x01><0x02><0xFD><0x01> décide de suivre Jax !
 0x1F47B99: Bon sang<0xFC><0x08><0x18> Ivory commence VRAIMENT\nà me taper sur les nerfs\pIl y a peu, j'avais hâte de\nrencontrer mes parents, mais on\ldirait qu'elle se fiche de moi\let de ma soeur !\pC'est quoi, son problème ?
 0x1F4822B: <0xFC><0x01><0x04>Désolé, <0xFD><0x06><0xFC><0x08><0x18> mais c'est pour\nton bien.\pReste ici, à l'abri du danger,\njusqu'à la fin du sommet.
-0x1F48620: Non, Krookodile !\nTu ne peux pas pousser !\pUn rocher bloque le passage !\pArgh<0xFC><0x08><0x18> si seulement un de mes\nPokémon connaissait Tunnel
+0x1F48620: Non, Crocorible !\nTu ne peux pas pousser !\pUn rocher bloque le passage !\pArgh<0xFC><0x08><0x18> si seulement un de mes\nPokémon connaissait Tunnel
 0x1F49193: Quoi !? Toi<0xFC><0x08><0x20> comment est-ce\npossible !\pCe ne peut être<0xFC><0x08><0x18> Hoopa !
 0x1F49366: Tss<0xFC><0x08><0x18> comme tu voudras.\pJe dois juste te neutraliser\nassez longtemps.\pHoopa ! Prépare-toi à
 0x1F49B36: Quoi !? L'Arme<0xFC><0x08><0x18> elle s'est\nactivée toute seule !
@@ -23579,7 +23579,7 @@
 0x1F757A1: <0xFC><0x01><0x02>Tous les Dresseurs à bord ont\nété battus !
 0x1F7D8EA: La Nature <0xFC><0x01><0x06><0xFD><0x03><0xFC><0x01><0x08>\npour <0xFC><0x01><0x06><0xFD><0x02><0xFC><0x01><0x08> ?
 0x1F7DBC5: Pour <0xFC><0x01><0x06>50000<0xFC><0x01><0x08>¥, donner la Nature\n<0xFC><0x01><0x06><0xFD><0x03><0xFC><0x01><0x08> à <0xFC><0x01><0x06><0xFD><0x02><0xFC><0x01><0x08> ?
-0x1F82C04: <0xFC><0x01><0x02>Toxapex a fui sous le sable.
+0x1F82C04: <0xFC><0x01><0x02>Prédastérie a fui sous le sable.
 0x1F851EA: <0xFC><0x01><0x02><0xFD><0x02> s'enfonce dans l'océan.
 0x1F92055: <0xFC><0x01><0x02>Voir les disponibilités ?
 0x1F96B5B: <0xFC><0x01><0x02><0xFD><0x02> frémit au début\nde l'opération !
@@ -23587,7 +23587,7 @@
 0x1FAC652: <0xFC><0x01><0x02>La petite fille a disparu.
 0x1FACE6A: <0xFC><0x01><0x02>Aider l'intello ?
 0x1FAE575: <0xFC><0x01><0x02>Tes Pokémon tremblent dans leurs\nPoké Balls !
-0x1F25BE0: <0xFC><0x01><0x02>Tornadus et Thundurus se sont envolés !
+0x1F25BE0: <0xFC><0x01><0x02>Boréas et Fulguris se sont envolés !
 
 0x1774e3: Il y a un interrupteur quelque part\nqui ouvre un passage vers Maxima.
 0x17d80d: Salut !\nComment ça va ?\pTu es déjà allé au laboratoire du\nProfesseur Log ?
@@ -23740,9 +23740,9 @@
 0x1ef0e29: Par ici tu regardes, oui, oui.
 0x1ef0e4b: Et hop, le cristal monte, oui, oui.\pEt badaboum !
 0x1ef0ee4: Si montent les cristaux des\ntotems, disparaissent les autres\lcristaux, oui, oui !\pSi descendent les cristaux,\nreviennent les autres cristaux,\loui, oui.
-0x1ef1276: <0xFC><0x01><0x04>Merci, <0xFD><0x02> !\pElle a été enlevée par un de ces\nPokémon maléfiques… un <0xFC><0x01><0x06>Drifloon<0xFC><0x01><0x04> !\pSi tu trouves le Drifloon, tu\nretrouveras ma fille !
-0x1ef1408: <0xFC><0x01><0x02>La petite fille a été emportée\npar le Drifloon.
-0x1ef14d7: <0xFC><0x01><0x02>Le Ditto a été emporté\npar le Drifloon.\pOh ?\pOn dirait que le Ditto a fait\ntomber quelque chose avant de\ldisparaître.
+0x1ef1276: <0xFC><0x01><0x04>Merci, <0xFD><0x02> !\pElle a été enlevée par un de ces\nPokémon maléfiques… un <0xFC><0x01><0x06>Baudrive<0xFC><0x01><0x04> !\pSi tu trouves le Baudrive, tu\nretrouveras ma fille !
+0x1ef1408: <0xFC><0x01><0x02>La petite fille a été emportée\npar le Baudrive.
+0x1ef14d7: <0xFC><0x01><0x02>Le Métamorph a été emporté\npar le Baudrive.\pOh ?\pOn dirait que le Métamorph a fait\ntomber quelque chose avant de\ldisparaître.
 0x1ef165a: Yo-hé !\pMes émeraudes, elles étaient toutes\nen feu !\pMaintenant elles brûlent plus, mais\ny'a des cristaux partout !\pCache les cristaux et retrouve mes\n<0xFC><0x01><0x06><0xFD><0x02> émeraudes<0xFC><0x01><0x08>, s'te plaît !
 0x1ef17bf: Yo-hé !\pT'as pas toutes les émeraudes !\pT'en as que <0xFC><0x01><0x06><0xFD><0x03><0xFC><0x01><0x08> émeraude<0xFD><0x07> !\pLes autres, elles brûlent encore !\pAhhhhhhhhhhhhhhhhhhh !\pRapporte-moi les <0xFC><0x01><0x06><0xFD><0x02><0xFC><0x01><0x08> émeraudes !
 0x1ef226f: Je viens de Hoenn.\pAlors je suis pour réduire les\nterres émergées par ici.\pIl n'y a pas assez d'eau,\ntu vois ?
@@ -23792,8 +23792,8 @@
 0x1efa64e: <0xFC><0x01><0x02>Le petit garçon a joué avec\n<0xFD><0x02>.
 0x1efa670: Mais… mais… mais à Bourg Magnolia,\nje joue tellement avec les Pokémon !\pIls sont tous devenus super\n<0xFC><0x01><0x06>amicaux<0xFC><0x01><0x08> !
 0x1efa711: Je veux encore jouer avec tes\nPokémon demain !
-0x1efada2: <0xFC><0x01><0x02>Tu as relancé le Pyukumuku\ndans la mer…
-0x1efadd2: <0xFC><0x01><0x02>Il n'y a plus de Pyukumuku\nsur la plage.
+0x1efada2: <0xFC><0x01><0x02>Tu as relancé le Concombaffe\ndans la mer…
+0x1efadd2: <0xFC><0x01><0x02>Il n'y a plus de Concombaffe\nsur la plage.
 0x1efb09d: Hmm… Ce n'est pas tout à fait ce\nque je cherche.\pJe ne pense pas que mon maître se\nsatisfera d'une telle odeur…
 0x1efb250: <0xFC><0x01><0x02>Tu as donné <0xFC><0x01><0x06><0xFD><0x02><0xFC><0x01><0x02> <0xFC><0x01><0x06><0xFD><0x04><0xFC><0x01><0x02>\net reçu ¥<0xFC><0x01><0x06><0xFD><0x03><0xFC><0x01><0x02> !
 0x1efb28c: Marché conclu !\nJ'ai déniché un minerai que j'adore !
@@ -23822,7 +23822,7 @@
 0x1efea11: Pas de souci !\pTant que tu as des Luxe Balls dans\nton Cube, je peux changer les Balls\lde tes Pokémon quand tu veux !
 0x1efec34: Où crois-tu aller comme ça ?\pTu ne peux pas explorer le Great\nDesert dans cette tenue !\pSans les lunettes de protection\nqu'il faut, je ne pourrai pas\lte laisser passer.
 0x1efeda8: Oh, bonjour… Je suis Nex.\pEuh… qu'est-ce que tu fais ici,\nau juste ?\pMoi, j'attendais l'arrivée d'un\nami, mais…\pPardon ? Personne d'autre ne\nvivrait ici, dans le Distorsion\lWorld ?\pHa ha… c'est vrai, mais mon ami\nest un cas particulier…\pMais s'il n'est pas encore là,\nc'est qu'il ne viendra sans doute\ljamais…\pRien d'étonnant : ce n'est pas\ncomme si le temps passait ici,\lpas vraiment.\pDis…\pIl faut être d'une grande force\npour venir ici de son plein gré.\pC'est peut-être un peu étrange, vu\noù nous sommes, mais accepterais-tu\lde m'affronter ?
-0x1eff28a: Désolé, mais tu ne peux pas entrer\nici pour le moment.\pMon grand-père fait sa sieste\nquotidienne et ne veut pas qu'on\lle dérange.\pEssaie donc l'<0xFC><0x01><0x06>Arène de Dresco<0xFC><0x01><0x08>\nen attendant.\pIl y a pas mal de brouillard à\nl'intérieur, alors un Pokémon avec\lune capacité qui change la météo,\lcomme <0xFC><0x01><0x06>Tempête de Sable<0xFC><0x01><0x08> ou <0xFC><0x01><0x06>Anti-Brume<0xFC><0x01><0x08>,\lpourrait vraiment t'aider.\pMaintenant que j'y pense, un ami de\nmon grand-père cherchait récemment\là échanger un <0xFC><0x01><0x06>Ducklett<0xFC><0x01><0x08> qui connaît\lAnti-Brume…
+0x1eff28a: Désolé, mais tu ne peux pas entrer\nici pour le moment.\pMon grand-père fait sa sieste\nquotidienne et ne veut pas qu'on\lle dérange.\pEssaie donc l'<0xFC><0x01><0x06>Arène de Dresco<0xFC><0x01><0x08>\nen attendant.\pIl y a pas mal de brouillard à\nl'intérieur, alors un Pokémon avec\lune capacité qui change la météo,\lcomme <0xFC><0x01><0x06>Tempête de Sable<0xFC><0x01><0x08> ou <0xFC><0x01><0x06>Anti-Brume<0xFC><0x01><0x08>,\lpourrait vraiment t'aider.\pMaintenant que j'y pense, un ami de\nmon grand-père cherchait récemment\là échanger un <0xFC><0x01><0x06>Couaneton<0xFC><0x01><0x08> qui connaît\lAnti-Brume…
 0x1eff4f6: Lequel de tes Pokémon évolue quand\nil s'attache à son Dresseur ?
 0x1eff539: Correct ! Ce Pokémon n'évolue\nqu'une fois attaché à toi !\pL'évolution prend généralement du\ntemps, mais si tu lui fais tenir\lceci, il s'attachera à toi bien\lplus vite !
 0x1eff7ac: Tu sais lire ?\nTout le monde ne sait pas.\pMoi non, et j'ai déjà redoublé le\nCP plusieurs fois.\pTu peux me montrer le pouvoir\nincroyable de la lecture ?\pLes panneaux Astuces de Dresseur\nsont de bons exemples de mots.
@@ -23834,8 +23834,8 @@
 0x1f01c94: Dans sa jeunesse, mon mari\nparcourait le monde à la recherche\lde Pokémon rares.\pHélas, sa quête a été interrompue\nquand il est tombé gravement\lmalade.\pSi tu as le Pokémon qu'il\nrecherche, accepterais-tu de\ll'échanger avec lui ?\pLe docteur dit que ça pourrait\naccélérer sa guérison.
 0x1f0279b: Mmm…\pÇa sent bon…\p…\pEuh… enfin bref, tiens !
 0x1f027cd: C'est de la <0xFC><0x01><0x06>Brume des Rêves<0xFC><0x01><0x08>.\pFais-la inhaler à un Pokémon pour\ndébloquer son <0xFC><0x01><0x06>Talent Caché<0xFC><0x01><0x08>.\pMais fais bien attention à ne pas\nla respirer toi-même !
-0x1f02854: Te revoilà, <0xFD><0x01> !\pTu m'as donné <0xFC><0x01><0x06><0xFD><0x03> Oddish<0xFC><0x01><0x08> pour\nl'instant. Il m'en faut <0xFC><0x01><0x06><0xFD><0x02><0xFC><0x01><0x08> pour\lfaire une brume spéciale…\pTu veux m'en donner d'autres ?
-0x1f02ab1: Apporte-moi <0xFC><0x01><0x06><0xFD><0x02><0xFC><0x01><0x08> Oddish de plus et\nje te ferai une brume spéciale.
+0x1f02854: Te revoilà, <0xFD><0x01> !\pTu m'as donné <0xFC><0x01><0x06><0xFD><0x03> Mystherbe<0xFC><0x01><0x08> pour\nl'instant. Il m'en faut <0xFC><0x01><0x06><0xFD><0x02><0xFC><0x01><0x08> pour\lfaire une brume spéciale…\pTu veux m'en donner d'autres ?
+0x1f02ab1: Apporte-moi <0xFC><0x01><0x06><0xFD><0x02><0xFC><0x01><0x08> Mystherbe de plus et\nje te ferai une brume spéciale.
 0x1f0314e: Tu devrais battre autant d'Arènes\nPokémon que possible.\pPlus tu as de Badges, plus les\nPoké Marts te proposent d'objets.
 0x1f03358: On dit que l'herbe est toujours\nplus verte ailleurs.\pC'est particulièrement vrai à\nVille d'Epidimy.\pRegarde un peu l'herbe ici !
 0x1f03531: Mont Foudroyant est accessible par\nce trou en bas des escaliers.\pC'est très dangereux, alors si tu\ny vas, prends plein de Rappels et\ld'Anti-Paras !
@@ -23854,7 +23854,7 @@
 0x1f05393: Tiens.\nPrends-en bien soin.\pC'est un Oeuf très spécial.
 0x1f05459: Comme tu voudras, alors…\pSi tu changes d'avis et veux faire\néclore cet Oeuf, je serai ici.
 0x1f05515: Le Champion d'Arène, Mel, vit ici\nquand il n'est pas à l'Arène ou en\ltrain d'admirer des arbres aux\lcouleurs vives.\pMoi, je m'occupe juste de sa maison\nquand il n'est pas là.
-0x1f05779: Il m'a échangé son <0xFC><0x01><0x06>Electabuzz<0xFC><0x01><0x08>, alors\nj'ai utilisé un <0xFC><0x01><0x06>Electirizer<0xFC><0x01><0x08> comme une\l<0xFC><0x01><0x06>Evolution Stone<0xFC><0x01><0x08>, et il a évolué !
+0x1f05779: Il m'a échangé son <0xFC><0x01><0x06>Élektek<0xFC><0x01><0x08>, alors\nj'ai utilisé un <0xFC><0x01><0x06>Electirizer<0xFC><0x01><0x08> comme une\l<0xFC><0x01><0x06>Evolution Stone<0xFC><0x01><0x08>, et il a évolué !
 0x1f057f0: Certains Pokémon ne peuvent\névoluer que lors d'un échange.\pMais qui échange encore de nos\njours, hein ?\pCette mode est passée depuis des\nannées.\pMaintenant, on peut faire évoluer\nces Pokémon avec une <0xFC><0x01><0x06>Link Stone<0xFC><0x01><0x08> !\pRegarde, tu vas voir !
 0x1f05b72: Si un Pokémon tient une <0xFC><0x01><0x06>Everstone<0xFC><0x01><0x08>,\nil n'évoluera pas !\pS'il en tient une pendant la\nreproduction, il transmettra sa\lnature !\pElles sont géniales, ces\nEverstones, non ?\pSi tu en veux d'autres, il paraît\nqu'il y en a tout un tas coincées\ldans les <0xFC><0x01><0x06>murs<0xFC><0x01><0x08> de la <0xFC><0x01><0x06>KBT\lExpressway<0xFC><0x01><0x08>.\pComment les récupérer, par contre ?\nAucune idée…
 0x1f05d58: Non, ce n'est pas un des Pokémon\nque je cherche.\pJe cherche un Pokémon qui n'a pas\névolué et qui ne pourra jamais\lévoluer.
@@ -23862,7 +23862,7 @@
 0x1f060b7: <0xFD><0x02> peut évoluer de\n<0xFC><0x01><0x06><0xFD><0x03><0xFC><0x01><0x04> façons différentes !\pChoisis un nombre entre 1 et <0xFD><0x03>.\pJe te dirai comment il évolue selon\nle nombre que tu choisis !
 0x1f06b65: Bienvenue au QG des Missions !\pC'est la première fois que tu\nviens ici, pas vrai ?\pDis-moi, sais-tu ce que sont les\n<0xFC><0x01><0x06>Missions<0xFC><0x01><0x08> ?
 0x1f0729e: Quelque chose me dit que si tu\namènes un certain Pokémon avec ce\l<0xFC><0x01><0x06><0xFD><0x02><0xFC><0x01><0x08> là où <0xFC><0x01><0x06>seuls les plus forts\lpeuvent aller<0xFC><0x01><0x08>, quelque chose de\lpuissant pourrait t'approcher…
-0x1f07ab1: M'as-tu apporté un <0xFC><0x01><0x06>Butterfree de\nniveau 70<0xFC><0x01><0x08> ?
+0x1f07ab1: M'as-tu apporté un <0xFC><0x01><0x06>Papilusion de\nniveau 70<0xFC><0x01><0x08> ?
 0x1f07ec2: Viens là, petit, sans faire de\nbruit.\pToute notre région est secrètement\ncontrôlée par la bourgeoisie et\lles capitalistes.\pNous, la classe ouvrière, devons\nnous unir et nous soulever contre\leux au nom du communisme !\pLeur faiblesse : les services\ngratuits.\pSi tu te soignes assez de fois dans\nun Centre Pokémon, leur machine\ld'oppression s'effondrera.
 0x1f08005: Travailleurs de tous les pays,\nunissez-vous !\pTu n'as qu'à te soigner <0xFC><0x01><0x06><0xFD><0x02><0xFC><0x01><0x04>\nfois dans n'importe quel Centre\lPokémon.\pExcepté celui d'Ville d'Antisis, ils\nparticipent tous à la révolution.
 0x1f08541: Nos registres montrent que tu as\nfait assez d'achats.\pNous pouvons maintenant lancer\nnotre révolution capitaliste.\pTiens, prends ceci.\pTu en auras besoin dans notre lutte\ncontre ces porcs de communistes.
@@ -23873,9 +23873,9 @@
 0x1f09a3c: Chaque pas que tu fais rend tes\nPokémon plus attachés à toi.\pSi tu as un Pokémon à la Pension,\nil deviendra plus fort aussi.
 0x1f09abc: Il paraît qu'une bande de types\nprépare un mauvais coup sur la\l<0xFC><0x01><0x06>Route 9<0xFC><0x01><0x08>.
 0x1f0a939: Pour ta superbe démonstration de\ntalent au combat, je te remets ce\lCristal Z spécial.
-0x1f0a991: Cette Mimikium Z permet d'activer\nla Capacité Z exclusive de <0xFC><0x01><0x06>Mimikyu<0xFC><0x01><0x08>\len améliorant son <0xFC><0x01><0x06>Play Rough<0xFC><0x01><0x08>.
+0x1f0a991: Cette Mimikium Z permet d'activer\nla Capacité Z exclusive de <0xFC><0x01><0x06>Mimiqui<0xFC><0x01><0x08>\len améliorant son <0xFC><0x01><0x06>Play Rough<0xFC><0x01><0x08>.
 0x1f0adcc: Fu fu fu…\pArriver jusqu'ici n'est pas une\nmince affaire.\pMais sache qu'on ne nous appelle\npas le <0xB1>Devil Duo<0xB2> pour rien !\pSi tu veux nous affronter, tu dois\npouvoir te battre <0xFC><0x01><0x06>deux contre deux<0xFC><0x01><0x04>\lavec uniquement des types <0xFC><0x01><0x06>Fighting<0xFC><0x01><0x04>\let <0xFC><0x01><0x06>Dragon<0xFC><0x01><0x04> à tes côtés.
-0x1f0b2db: Tu as déjà lu les comics de\nCrobatman ?\pC'est juste un type ordinaire qui\nse déguise en Crobat pour\lcombattre le crime !\pMais entre toi et moi, je ne vois\npas pourquoi il ne laisse pas ses\lPokémon se battre à sa place…
+0x1f0b2db: Tu as déjà lu les comics de\nCrobatman ?\pC'est juste un type ordinaire qui\nse déguise en Nostenfer pour\lcombattre le crime !\pMais entre toi et moi, je ne vois\npas pourquoi il ne laisse pas ses\lPokémon se battre à sa place…
 0x1f0b48a: <0xFC><0x01><0x02>La porte est solidement scellée.
 0x1f0b4a6: Ce panneau a quelque chose\nd'irrésistible…
 0x1f0b632: C'est vrai ?\nTu quittes la maison, <0xFD><0x01> ?\pAlors n'oublie pas de retirer tes\nobjets du PC avant de partir !
@@ -23948,7 +23948,7 @@
 0x1f1bc7e: La porte menant au Champion\nd'Arène est déjà déverrouillée.
 0x1f1bf9c: Salut, gamin !\p-KOF- -KOF-\pBienvenue dans ton premier défi\nd'Arène !\pLaisse-moi te donner un petit\ncadeau pour commencer.\p-KOF- -KHHH-
 0x1f1c3fc: Comme tu peux le voir, ou pas,\ncette Arène est dédiée au type\l<0xFC><0x01><0x06>Ténèbres<0xFC><0x01><0x08>.\pPour gagner ici, un bon point de\ndépart serait d'amener des types\l<0xFC><0x01><0x06>Combat<0xFC><0x01><0x08>, <0xFC><0x01><0x06>Insecte<0xFC><0x01><0x08> ou <0xFC><0x01><0x06>Fée<0xFC><0x01><0x08>.\pMais attention : à cause des\nnombreux Dresseurs qui peinent ici,\ldes <0xFC><0x01><0x06>émotions négatives<0xFC><0x01><0x08> rempliront\ll'air pendant tes combats.\pCes émotions infligent des dégâts\nà la fin de chaque tour.\pSeuls les types <0xFC><0x01><0x06>Ténèbres<0xFC><0x01><0x08>, <0xFC><0x01><0x06>Psy<0xFC><0x01><0x08> et\n<0xFC><0x01><0x06>Spectre<0xFC><0x01><0x08>, ainsi que les Pokémon avec\lles talents <0xFC><0x01><0x06>Magic Guard<0xFC><0x01><0x08>, <0xFC><0x01><0x06>Unaware<0xFC><0x01><0x08> ou\l<0xFC><0x01><0x06>Oblivious<0xFC><0x01><0x08>, n'y sont pas sensibles.\pSi les émotions négatives te posent\nproblème, amener un Pokémon qui n'y\lest pas sensible pourrait bien\lt'aider.\pMaintenant, atteindre Véga, qui\ndirige cette Arène, est assez\lsimple.\pTraverse les couloirs sombres sans\nte faire repérer.\pSi on te repère, tu devras soit\naffronter des Dresseurs, soit\lretourner au début du couloir.\pChaque Dresseur vaincu éclairera\nla pièce, alors je te conseille\lde tous les battre d'abord.\pBonne chance !
-0x1f1cd9a: Mel ?\nBah, c'est juste un gars <0xFC><0x01><0x06>normal<0xFC><0x01><0x08> !\pSi c'était une Arène de type Normal\nnormale, je dirais que des types\lCombat seraient parfaits pour le\lbattre.\pMais ce n'est pas le cas.\pDans cette Arène, tous les combats\nsont des <0xFC><0x01><0x06>Combats Inversés<0xFC><0x01><0x08> !\pAutrement dit, toutes les affinités\nde type sont inversées.\pAlors, devine quel type serait le\nmieux placé pour battre Mel ?\p…\pExact ! Il n'y en a pas !\pLes attaques <0xFC><0x01><0x06>Spectre<0xFC><0x01><0x08> seront super\nefficaces contre ses types Normal,\lmais les attaques Normal seront\laussi super efficaces sur le type\lSpectre.\pTa meilleure option contre Mel :\nun Pokémon qui connaît des attaques\lSpectre sans être de ce type\llui-même.\pSi tu veux t'entraîner à ce genre\nde combat, va voir l'<0xFC><0x01><0x06>Inverse Battle\lHouse<0xFC><0x01><0x08> en ville.\pPour commencer, descends le\ntoboggan à côté de moi.\pTon but est d'utiliser le Lapras\npour remonter jusqu'ici.\pMais fais d'abord le plein de\nprovisions.\pImpossible de revenir en arrière\navant d'avoir atteint Mel.
+0x1f1cd9a: Mel ?\nBah, c'est juste un gars <0xFC><0x01><0x06>normal<0xFC><0x01><0x08> !\pSi c'était une Arène de type Normal\nnormale, je dirais que des types\lCombat seraient parfaits pour le\lbattre.\pMais ce n'est pas le cas.\pDans cette Arène, tous les combats\nsont des <0xFC><0x01><0x06>Combats Inversés<0xFC><0x01><0x08> !\pAutrement dit, toutes les affinités\nde type sont inversées.\pAlors, devine quel type serait le\nmieux placé pour battre Mel ?\p…\pExact ! Il n'y en a pas !\pLes attaques <0xFC><0x01><0x06>Spectre<0xFC><0x01><0x08> seront super\nefficaces contre ses types Normal,\lmais les attaques Normal seront\laussi super efficaces sur le type\lSpectre.\pTa meilleure option contre Mel :\nun Pokémon qui connaît des attaques\lSpectre sans être de ce type\llui-même.\pSi tu veux t'entraîner à ce genre\nde combat, va voir l'<0xFC><0x01><0x06>Inverse Battle\lHouse<0xFC><0x01><0x08> en ville.\pPour commencer, descends le\ntoboggan à côté de moi.\pTon but est d'utiliser le Lokhlass\npour remonter jusqu'ici.\pMais fais d'abord le plein de\nprovisions.\pImpossible de revenir en arrière\navant d'avoir atteint Mel.
 0x1f1d4f5: Ce Joyau est un objet rare qui peut\nbooster une attaque de type <0xFC><0x01><0x06>Fée<0xFC><0x01><0x08>\len combat.\pLe type Fée est déjà l'un des\nmeilleurs en attaque, et avec ce\lJoyau, il devient encore plus fort !
 0x1f1d5f9: Galavan aime utiliser des Pokémon\nde type <0xFC><0x01><0x06>Electrik<0xFC><0x01><0x08> et <0xFC><0x01><0x06>Acier<0xFC><0x01><0x08>.\pJe dirais que les Pokémon de type\nSol sont parfaits contre lui, mais\lça ne marchera pas dans cette Arène.\pMalheureusement, le sol ici est\n<0xFC><0x01><0x06>magnétisé<0xFC><0x01><0x08>.\pDu coup, tous les Pokémon <0xFC><0x01><0x06>Electrik<0xFC><0x01><0x08>\net <0xFC><0x01><0x06>Acier<0xFC><0x01><0x08> flottent au-dessus du sol !\pImpossible de les toucher avec des\ncapacités de type Sol, il te faudra\ldonc trouver un autre moyen de leur\linfliger de gros dégâts.\pPour l'énigme, le but est d'abaisser\nles barrières électriques pour\latteindre Galavan.\pBonne chance !
 0x1f1dce5: Dans l'ensemble, Big Mo adore les\nPokémon grands, lents et costauds,\lsouvent de type <0xFC><0x01><0x06>Combat<0xFC><0x01><0x08>.\pSi tu es un Dresseur ordinaire avec\nun type <0xFC><0x01><0x06>Vol<0xFC><0x01><0x08>, <0xFC><0x01><0x06>Psy<0xFC><0x01><0x08> ou <0xFC><0x01><0x06>Fée<0xFC><0x01><0x08>,\ltu peux gagner sans problème !\pMais avant d'affronter Big Mo, tu\ndevras réussir le <0xFC><0x01><0x06>Défi du Ring<0xFC><0x01><0x08>\lde l'Arène.\pEt là, aucune capacité de type\n<0xFC><0x01><0x06>Vol<0xFC><0x01><0x08>, <0xFC><0x01><0x06>Psy<0xFC><0x01><0x08> ou <0xFC><0x01><0x06>Fée<0xFC><0x01><0x08> n'est\lautorisée.\pÇa peut sembler dur, mais\nfranchement, si tu n'utilises pas\lde Pokémon faible au type Combat,\lce sera un jeu d'enfant.\pEt sache que selon l'intensité que\ntu choisis, il peut aussi y avoir\ldes restrictions lors du combat\lcontre Big Mo.\pLes <0xFC><0x01><0x06>gars du fond<0xFC><0x01><0x08> t'expliqueront\nles règles du combat, alors pas\lbesoin de tout retenir.\pBonne chance sur le ring !
@@ -23978,8 +23978,8 @@
 0x1f24d2c: Voilà ! Les améliorations sont\nterminées ! Reprends ton\lStat Scanner.
 0x1f25a78: Tu n'as pas assez de ces\n<0xFC><0x01><0x06><0xFD><0x02>s<0xFC><0x01><0x04> pour ça…
 0x1f25c77: Ces Pokémon semblent avoir fui en\nte voyant.\pJ'espère qu'ils ne terrorisent pas\nd'autres coins de Borrius…
-0x1f25ce4: Le grand Landorus !\pIl est revenu bénir nos récoltes !
-0x1f25d1c: Le grand Landorus a disparu !\pOh… quand reviendra-t-il bénir\nnos champs ?
+0x1f25ce4: Le grand Démétéros !\pIl est revenu bénir nos récoltes !
+0x1f25d1c: Le grand Démétéros a disparu !\pOh… quand reviendra-t-il bénir\nnos champs ?
 0x1f25ef7: <0xFC><0x01><0x02>Invoquant le pouvoir de la terre,\nLandorus a pris une taille énorme !
 0x1f26289: Je suis sûr que quelqu'un, quelque\npart, saura dompter ces bêtes.
 0x1f262c9: Je vois que tu n'as aucune série en\ncours au Jeu Safari.\pTu peux faire une partie du Jeu Safari\nà l'est de Bourg Polder.
@@ -24042,7 +24042,7 @@
 0x1f31c8c: <0xFC><0x01><0x02>Choisis jusqu'à trois Pokémon\npour combattre.
 0x1f31e7a: En tout cas, merci, <0xFD><0x01>, il\nétait bien plus coriace que prévu…\pRetournons chez Papy lui\nraconter ce qui s'est passé.
 0x1f31ef3: Je vois…<0xFC><0x08>î ce n'est pas bon.\pIl ne reste désormais plus qu'un\nseul Pokémon Légendaire,\l<0xFC><0x01><0x06>Électhor<0xFC><0x01><0x08>.\pIl est impératif de le secourir\navant que les Ombres ne le\lcapturent.
-0x1f323b2: Mon Staravia est encore fatigué du\ncombat de tout à l'heure, mais je\ldevrais pouvoir te ramener au\l<0xFC><0x01><0x06>Volcan Cendreux<0xFC><0x01><0x08>.\pTu veux que je le fasse ?
+0x1f323b2: Mon Étourvol est encore fatigué du\ncombat de tout à l'heure, mais je\ldevrais pouvoir te ramener au\l<0xFC><0x01><0x06>Volcan Cendreux<0xFC><0x01><0x08>.\pTu veux que je le fasse ?
 0x1f3253b: Ah, pile à l'heure.\pDis-moi, <0xFD><0x02>, quel est\nton nom ?\p…\p<0xFD><0x01>, c'est ça ?\pNous nous rencontrons enfin.\pJe suis Zeph, l'homme tapi dans les\nOmbres derrière cette organisation.
 0x1f3275f: Très bien, si tu refuses de parler,\nalors Ivory va devoir te donner\lune petite…<0xFC><0x08><0x18> motivation.
 0x1f339b2: Mmm ? <0xFD><0x01>…<0xFC><0x08>î c'est toi ?\pQu'est-ce qui t'amène jusqu'ici ?\pAttends…<0xFC><0x08><0x18> ne me dis pas…<0xFC><0x08><0x18> que tu\ncherches encore plus de Pokémon\lpar ici ?\pEnfin, c'est ce que je fais ici,\nde toute façon.\pCôté progression, j'ai déjà\nenregistré plus de 100 espèces.\pTu connais la sœur de Log ?\nElle vit à <0xFC><0x01><0x06>Ville Blizzard<0xFC><0x01><0x08>.\pEt quand elle a vu où en était mon\nPokédex, elle l'a amélioré avec la\lfonction <0xFC><0x01><0x06>DexNav<0xFC><0x01><0x08>, alors trouver\ldes Pokémon rares est devenu un\ljeu d'enfant !\p…\pJe vois…<0xFC><0x08><0x18> il te faut la CS Éclate-Roc\nde Ville Blizzard…\p…<0xFC><0x08><0x18>et tu as décidé toi aussi d'avoir\nune dent contre les Ombres, hein ?\pEh bien, pendant que tu jouais les\nhéros, je suis devenu bien plus\lfort.\pTu n'as plus aucune chance contre\nmoi, <0xFD><0x01>.\pEn fait, je vais te le prouver, ici\net maintenant !
@@ -24143,7 +24143,7 @@
 0x1f487e7: Mais bon…<0xFC><0x08>î je veux bien retenter\nle coup.\pAu moins, tu n'essaies pas de tout\nfaire exploser, comme Ivory.
 0x1f48999: Pourquoi ? Il ne doit pas rester\nplus de deux ou trois sbires.
 0x1f48e5c: <0xFC><0x06> Ça ne sert à rien de foncer et\nde se faire capturer !\pNe t'en fais pas, Papi et moi avons\nun plan.\pMaintenant écoute bien<0xFC><0x06><0x01>…
-0x1f49330: Gastrodon ! Retiens-moi avec\nta Glu !
+0x1f49330: Tritosor ! Retiens-moi avec\nta Glu !
 0x1f49621: Tenez bon, Hoopa et Ivory !\pNe les laissez pas approcher de\nl'arme !\pQuand j'en aurai fini avec ce\n<0xB1>héros<0xB2>, je tirerai avec l'Arme\let tout sera terminé.
 0x1f496ef: <0xFD><0x01> ! Bats Hoopa et désactive\ncette arme !
 0x1f497cb: Toi… ! Tu es vraiment le Pokémon\nle plus inutile et pathétique !\pTu as échoué trop de fois aux\ntâches les plus simples !
@@ -24159,17 +24159,17 @@
 0x1f52f37: <0xFC><0x01><0x02>Meloetta apprécie ta\nperformance.\pIl te reconnaît le droit de\nl'affronter !
 0x1f52f8e: <0xFC><0x01><0x02>Meloetta est déçu que tu n'aies pas\npu le vaincre en concours de danse.
 0x1f52fda: <0xFD><0x02> s'est envolé au\nclair de lune.
-0x1f52ffc: Tu viens voir le célèbre spectacle\nde Croagunk de Bourg Polder ?
-0x1f53140: Bien ! Trouve le Croagunk que je\nt'ai demandé de suivre !
-0x1f53174: <0xFC><0x01><0x04>Ce Croagunk tient l'objet\n<0xFD><0x02>, c'est ça ?
-0x1f5319d: <0xFC><0x01><0x04>Tu as…\n…\lentièrement raison !\pCe Croagunk te remet le prix :\n<0xFD><0x02> !
+0x1f52ffc: Tu viens voir le célèbre spectacle\nde Cradopaud de Bourg Polder ?
+0x1f53140: Bien ! Trouve le Cradopaud que je\nt'ai demandé de suivre !
+0x1f53174: <0xFC><0x01><0x04>Ce Cradopaud tient l'objet\n<0xFD><0x02>, c'est ça ?
+0x1f5319d: <0xFC><0x01><0x04>Tu as…\n…\lentièrement raison !\pCe Cradopaud te remet le prix :\n<0xFD><0x02> !
 0x1f56c08: Veux-tu y jeter un\nWishing Piece ?
 0x1f56dab: Ce trou que tu vois là est ce qu'on\nappelle un Antre de Raid.\pDe puissants Pokémon habitent ces\nantres, et une fois par jour, tu\lpeux te battre pour tenter d'en\lcapturer un dans chaque antre de\lBorrius !\pCes Pokémon sont super forts, alors\nmieux vaut bien choisir le\lpartenaire qui combattra avec toi.\pQuand le combat commence, tu\nremarqueras que le Pokémon en face\la l'air très grand.\pC'est à cause du phénomène que l'on\nappelle <0xFC><0x01><0x06>Dynamax<0xFC><0x01><0x04>.\pIl restera ainsi pendant tout le\ncombat et ne pourra être capturé\lqu'une fois vaincu et revenu à sa\ltaille normale.
 0x1f57f5b: Je suis épuisée…\pJ'ai tout essayé pour déplacer ce\nSnorlax, mais il ne bouge pas\ld'un poil.\pJe voulais voir mon copain, mais il\nm'a quittée, alors je ne sais même\lplus pourquoi j'essaie encore…
 0x1f58372: Bien, maintenant moi pouvoir\nredevenir meilleur Neurochirurgien\lPokémon du monde.\pPrends ça pour aider toi parce que\ntoi avoir aidé moi.
-0x1f5853a: Magnifique !\pQuand tu auras vaincu tous les\nDresseurs de cette forêt, amène\l<0xFC><0x01><0x06>4<0xFC><0x01><0x04> <0xFC><0x01><0x06>Kangaskhan<0xFC><0x01><0x04> costauds pour une\lscène de combat importante du film.\pElle sera tournée à la manière d'un\n<0xFC><0x01><0x06>Combat Duo<0xFC><0x01><0x04>.\pIdéalement, ils devraient être de\n<0xFC><0x01><0x06><0x34> 70<0xFC><0x01><0x04> ou plus.
+0x1f5853a: Magnifique !\pQuand tu auras vaincu tous les\nDresseurs de cette forêt, amène\l<0xFC><0x01><0x06>4<0xFC><0x01><0x04> <0xFC><0x01><0x06>Kangourex<0xFC><0x01><0x04> costauds pour une\lscène de combat importante du film.\pElle sera tournée à la manière d'un\n<0xFC><0x01><0x06>Combat Duo<0xFC><0x01><0x04>.\pIdéalement, ils devraient être de\n<0xFC><0x01><0x06><0x34> 70<0xFC><0x01><0x04> ou plus.
 0x1f591fb: Notre petite ville est protégée par\nle Gardien de la Forêt.\pPourtant, le Gardien de la Forêt\nn'a pas été vu depuis des années.\pOn dit que si l'on amène un vieil\nami du Gardien de la Forêt, il\lse montrera de nouveau.
-0x1f598d8: Salut, Dresseur Pokémon.\pEn ce moment même, ta Boîte\nactuelle, <0xB1><0xFC><0x01><0x06><0xFD><0x02><0xFC><0x01><0x08><0xB2>, contient\l<0xFC><0x01><0x06><0xFD><0x04><0xFC><0x01><0x08> Magikarp.\pTon but est d'y mettre <0xFC><0x01><0x06><0xFD><0x03><0xFC><0x01><0x08> de ces\nbestioles.\pReviens quand ce sera fait.
+0x1f598d8: Salut, Dresseur Pokémon.\pEn ce moment même, ta Boîte\nactuelle, <0xB1><0xFC><0x01><0x06><0xFD><0x02><0xFC><0x01><0x08><0xB2>, contient\l<0xFC><0x01><0x06><0xFD><0x04><0xFC><0x01><0x08> Magicarpe.\pTon but est d'y mettre <0xFC><0x01><0x06><0xFD><0x03><0xFC><0x01><0x08> de ces\nbestioles.\pReviens quand ce sera fait.
 0x1f59b69: Ah, te voilà de retour avec mon\npetit-fils.\pJ'ai fini mon travail pour\naujourd'hui, je peux donc m'occuper\lde lui pour le reste de la journée.\pVoici le paiement pour tes\nservices.
 0x1f59c82: Promène-toi avec mon petit-fils\nle temps que je finisse mon travail.
 0x1f59cc4: Ma fille me confie son fils tous\nles jours, donc tes services seront\là nouveau requis demain.
@@ -24252,7 +24252,7 @@
 0x1f6e238: Piloter un navire tous les jours,\nça épuise ! Il ne navigue pas\laujourd'hui.\pIl part pour Bourg Polder le <0xFC><0x01><0x06>lundi<0xFC><0x01><0x08>\net le <0xFC><0x01><0x06>vendredi<0xFC><0x01><0x08> !
 0x1f6e3b3: Le S.S. Marine part pour East\nBorrius chaque <0xFC><0x01><0x06>lundi<0xFC><0x01><0x08> et <0xFC><0x01><0x06>vendredi<0xFC><0x01><0x08>.
 0x1f6e64b: Allons, Sparky.\nNe te moque pas de moi.\pJe vois que tu n'as pas assez\nd'argent.
-0x1f6e7af: Hou hou hou hou !\pCe <0xFC><0x01><0x06>Castform<0xFC><0x01><0x08> est un Pokémon vraiment\nrare !\pEt comme toi, il est maître de la\nmétéo et de l'amitié !\pJusqu'à ce que tes voyages nous\nréunissent à nouveau, adieu.
+0x1f6e7af: Hou hou hou hou !\pCe <0xFC><0x01><0x06>Morphéo<0xFC><0x01><0x08> est un Pokémon vraiment\nrare !\pEt comme toi, il est maître de la\nmétéo et de l'amitié !\pJusqu'à ce que tes voyages nous\nréunissent à nouveau, adieu.
 0x1f6e89e: Bonjour.\pBienvenue à la Maison de Combat\nCamomons.\pIci, tous les Pokémon prennent les\ntypes de leurs deux premières\lcapacités.\pN'hésite pas à affronter les\nDresseurs présents autant de fois\lque tu le souhaites.\pSi tu veux une explication sur le\ntype de combat pratiqué ici, viens\lme parler.
 0x1f6f171: Le <0xFD><0x02> s'est enfui dans\nl'entrepôt.
 0x1f6f1f9: Pour ouvrir cette porte, il faut\nune Carte Magnétique de Niveau\ld'Accès : <0xFC><0x01><0x06><0xFD><0x02><0xFC><0x01><0x02>.
@@ -24329,11 +24329,11 @@
 0x74503f: Cette statue représente Sulfura,\nle légendaire Pokémon oiseau de feu.\pIl vivrait quelque part dans Cinder\nVolcano, illuminant le ciel de ses\lflammes pendant la nuit.
 0x745382: Il y a un endroit superbe au nord\nd'ici qui s'appelle Flower\lParadise !\pIl y a des fleurs partout !
 0x745d52: Maintenant que l'entrée de la SES\nExpressway n'est plus scellée, j'ai\lenfin pu m'entraîner !\pDis, ça te dirait d'affronter mes\nPokémon fraîchement entraînés ?
-0x746471: Parfois, les <0xFC><0x01><0x06>Feuilles d'Oddish <0xFC><0x01><0x08>me\nmontent à la tête et je vois des\lchoses qui n'existent pas.
-0x74bcad: On va voir s'ils osent poser des\npièges quand tu es là, Hitmontop !\pOn va dominer le tier <0xFC><0x01><0x06>OU Doubles<0xFC><0x01><0x08> !\pIls tomberont tous sous ta pointe\ncrânienne !
+0x746471: Parfois, les <0xFC><0x01><0x06>Feuilles de Mystherbe <0xFC><0x01><0x08>me\nmontent à la tête et je vois des\lchoses qui n'existent pas.
+0x74bcad: On va voir s'ils osent poser des\npièges quand tu es là, Kapoera !\pOn va dominer le tier <0xFC><0x01><0x06>OU Doubles<0xFC><0x01><0x08> !\pIls tomberont tous sous ta pointe\ncrânienne !
 0x74ff66: Qu'est-ce qui se passe ?\p…\pOh, attends…\pTu es le gamin qui vit un peu\nplus bas sur la route.\p<0xFD><0x01>, c'est ça ?\pTu sais ce qu'on fait ici ?
 0x75097e: Arthur : <0xFC><0x01><0x08>Bien, bien.\pQuant à toi, <0xFD><0x01>, je veux que\ntu ailles au <0xFC><0x01><0x06>Mont Foudroyant <0xFC><0x01><0x08>pour\lsauver <0xFC><0x01><0x06>Électhor<0xFC><0x01><0x08>.\pTu as fait tes preuves en défendant\nJax dans Volcan Cendreux, et je\lpense que tu es à la hauteur.\pTu peux rejoindre <0xFC><0x01><0x06>Mont Foudroyant <0xFC><0x01><0x08>\npar l'autoroute au sud-est de la\lprochaine ville, <0xFC><0x01><0x06>Crater\lTown<0xFC><0x01><0x08>.\pSi tu ne te dépêches pas, la région\nde Borrius est condamnée.
-0x753107: Salut <0xFD><0x02>…\pComment ça va, mon pote ?\pTu veux renifler des Feuilles\nd'Oddish ?\pC'est très bon pour l'âme.\nTout devient doux et tranquille…
+0x753107: Salut <0xFD><0x02>…\pComment ça va, mon pote ?\pTu veux renifler des Feuilles\nde Mystherbe ?\pC'est très bon pour l'âme.\nTout devient doux et tranquille…
 0x75318a: <0xFC><0x01><0x02>Vous reniflez des Feuilles de\nMystherbe.\pL'odeur répugnante vous assaille\nles narines.
 0x755204: Si 100 personnes comme moi se tenaient\nici, tu crois que le sol tiendrait ?
 0x75b918: Les gens qui vivent ici refusent de\nme laisser entrer, alors je suis\lobligé de rester là.
@@ -24373,7 +24373,7 @@
 0x775e7b: <0xFC><0x01><0x08>Je m'en vais maintenant,\n<0xFD><0x01>.\pJe suis sûr que tu sauras te\ndébrouiller à partir d'ici.\pSi tu as le moindre souci, fais\nappel à tes Pokémon.
 0x77653d: Tu vas bien t'amuser ici.\pCet endroit est un vrai labyrinthe.
 0x7768a4: <0xB1>Qui bâtit une ville au sommet\nd'une montagne gelée ?<0xB2> Tu te\lposes sûrement la question.\pEh bien, il y a environ 20 ans, des\nOrnithologues se sont réunis et ont\ldécidé qu'ils voulaient un endroit\lbien en hauteur pour entraîner\lleurs Pokémon.\pAvec l'aide d'un certain\n<0xFC><0x01><0x06>Aros<0xFC><0x01><0x08> et de son Arceus, ils ont\lbâti cette ville en moins d'un an !\pÇa m'épate, tout ce que les humains\net les Pokémon peuvent accomplir en\ltravaillant ensemble.\pDis donc…\pTon visage me rappelle un peu le\nsien…
-0x7789b9: Génial !\nMerci d'accepter de m'aider !\pOn trouve des Combee partout dans\nFlower Paradise, mais ils\lapparaissent plus souvent dans les\l<0xFC><0x01><0x06>fleurs bleues<0xFC><0x01><0x04>.\pEt n'oublie pas, il me faut au\nmoins <0xFC><0x01><0x06>3 pots de Miel<0xFC><0x01><0x04>.
+0x7789b9: Génial !\nMerci d'accepter de m'aider !\pOn trouve des Apitrini partout dans\nFlower Paradise, mais ils\lapparaissent plus souvent dans les\l<0xFC><0x01><0x06>fleurs bleues<0xFC><0x01><0x04>.\pEt n'oublie pas, il me faut au\nmoins <0xFC><0x01><0x06>3 pots de Miel<0xFC><0x01><0x04>.
 0x778a80: Tu les as ! Merci beaucoup !\nLaisse-moi t'en débarrasser.
 0x778cb6: Ivory : <0xFC><0x01><0x04>Très bien, dans ce cas.\pJe vais accéder à ta petite\nrequête.\pMais sache que quand tu perdras,\nmon Pokémon te réduira en cendres !\pGo ! Incine…
 0x778d57: Marlon : <0xFC><0x01><0x08>Ivory !\pTu n'as pas le temps d'affronter ce\nDresseur maintenant.\pNous avons un planning serré à\nrespecter.\pFile, je vais le retenir pendant\nque tu t'échappes.
@@ -24418,8 +24418,8 @@
 0x7bad0b: Il paraît qu'un Pokémon a des\nchampignons qui poussent sur son\ldos.\pPas par ici, cependant.\nJe me demande s'ils ont bon goût ?
 0x7baf13: J'ai été séparé de mes amis…\pJ'ai mes Pokémon avec moi donc\nça va, mais…
 0x7bba9e: Veux-tu protéger l'intello ?
-0x7bbac2: Intello : <0xFC><0x01><0x08>Merci !\nMerci de m'avoir protégé !\pMaintenant, affronte mon Electivire\net ramène-le à la raison !
-0x7bbddf: <0xFC><0x01><0x08>Je te dois une fière chandelle pour\nmon Electivire.\pJe ne peux rien te donner ici, donc\nretrouve-moi au <0xFC><0x01><0x06>Centre Pokémon\ld'Ville d'Epidimy <0xFC><0x01><0x08>si tu veux une\lrécompense pour ton aide.
+0x7bbac2: Intello : <0xFC><0x01><0x08>Merci !\nMerci de m'avoir protégé !\pMaintenant, affronte mon Élekable\net ramène-le à la raison !
+0x7bbddf: <0xFC><0x01><0x08>Je te dois une fière chandelle pour\nmon Élekable.\pJe ne peux rien te donner ici, donc\nretrouve-moi au <0xFC><0x01><0x06>Centre Pokémon\ld'Ville d'Epidimy <0xFC><0x01><0x08>si tu veux une\lrécompense pour ton aide.
 0x7bc0b1: Comment ?\nLog t'a donné un truc pour moi ?
 0x1f2076d: Comment ?\nLog t'a donné un truc pour moi ?
 0x7bc13c: Eh bien, si Log te fait remplir ça,\nvoyons si ça t'a rendu plus fort !
@@ -24446,14 +24446,14 @@
 0x7c563a: Le <0xFD><0x03> que je t'ai échangé,\nest-ce qu'il t'a été utile ?
 0x1f01c63: Le <0xFD><0x03> que je t'ai échangé,\nest-ce qu'il t'a été utile ?
 0x7c5687: Hmmm ?\nCe <0xFC><0x01><0x06><0xFD><0x02> n'est pas de type\lGlace<0xFC><0x01><0x08>.\pPense à moi si tu en obtiens un.
-0x7c56ca: On vient de réaliser une grosse\nsaisie de drogue et d'arrêter enfin\lle criminel qui vendait des\l<0xFC><0x01><0x06>Feuilles d'Oddish <0xFC><0x01><0x08>à Borrius !\pMaintenant, on danse ici pour\nfêter ça.
+0x7c56ca: On vient de réaliser une grosse\nsaisie de drogue et d'arrêter enfin\lle criminel qui vendait des\l<0xFC><0x01><0x06>Feuilles de Mystherbe <0xFC><0x01><0x08>à Borrius !\pMaintenant, on danse ici pour\nfêter ça.
 0x7c5a32: <0xFC><0x01><0x08>Encore toi !\pQu'est-ce que tu fais ici ?
 0x7c6562: La petite fille semble avoir été\nemportée par le vent.
 0x7c6593: Ouiiin !\pCe gros coup de vent m'a emportée\njusqu'ici !\pLaisse-moi m'accrocher à toi pour\nne pas m'envoler encore !
 0x7c794f: Zeph : <0xFC><0x01><0x08>Si Ivory n'y arrive pas,\nHoundoom et moi devrons t'apprendre\lnous-mêmes le sens du mot douleur !
 0x7c7a3e: <0xFC><0x01><0x08>Profite de ta victoire tant que tu\nle peux, car tu vas bientôt quitter\lce monde.\pTe laisser en vie est désormais\ntrop risqué.
 0x7c81a5: <0xFC><0x01><0x08>Tu peux gérer la suite,\n<0xFD><0x01>.\pQuoi qu'ils manigancent, ils ne\nveulent visiblement pas que tu\lt'en mêles.\pAlors fais-toi plaisir.
-0x7c87ba: Ivory : <0xFC><0x01><0x04>Houndoom !\pZeph t'a confié à moi dans un seul\nbut !\pRéduis ce vieux fou en cendres !
+0x7c87ba: Ivory : <0xFC><0x01><0x04>Démolosse !\pZeph t'a confié à moi dans un seul\nbut !\pRéduis ce vieux fou en cendres !
 0x7c8ba6: Eh bien, si tu changes d'avis,\nfais-le-moi savoir.\pJe me ferai un plaisir de te\nmontrer.
 0x7c906a: <0xFC><0x01><0x08>Maintenant, Électhor, tu vas\ndevenir…
 0x7c980f: Veux-tu désactiver la barrière\net les libérer ?
@@ -24497,7 +24497,7 @@
 0x7ebfc3: Thank you ! Merci !\pAvec ça, je peux créer un menu\nsuperbe !\pMes clients vont adorer !
 0x7ec209: Il paraît que des Dresseurs aux\nétages supérieurs voudront se\lbattre contre toi.\pTu devrais faire le plein d'objets\nessentiels auprès des vendeurs de\lcet étage.
 0x7ed1f2: Grâce à mes efforts, ce désert est\nun vrai paradis pour les Pokémon !\pUn véritable complexe du désert !
-0x7ee8f6: Vous recevez un Lapras de la part\ndu pêcheur !
+0x7ee8f6: Vous recevez un Lokhlass de la part\ndu pêcheur !
 0x7eecfb: Parfait, tu les as trouvés.\pDonne-les-moi.
 0x7eedae: Tu devrais donner ce <0xFC><0x01><0x06>Chapelet\nPerles <0xFC><0x01><0x08>à mon collègue passionné de\l<0xFC><0x01><0x06>Ville de Dehara<0xFC><0x01><0x08>.\pIl te le rachètera à bon prix.
 0x7eeebe: Comment je sors d'ici ?
@@ -24548,7 +24548,7 @@
 0x8aa575: Il n'y a pas de Kyurem\ndans l'équipe !
 0x8aa596: Les fusions multiples sont\ninterdites !
 0x8aa5b8: Pas assez de place dans l'équipe !
-0x8aa96d: Ce Rotom est déjà entré dans\nle moteur de cet appareil.
+0x8aa96d: Ce Motisma est déjà entré dans\nle moteur de cet appareil.
 0x8cc49c: L'avantage de l'armée de Kalos fut\nperdu presque instantanément.\pDès son entrée sur le champ de\nbataille, la force obscure utilisa\lson pouvoir pour créer des portails\let renvoyer l'armée d'invasion à\lKalos…
 0x8ccd61: Je sais que je lui ai dit qu'utiliser\nson pouvoir était une mauvaise idée,\lmais je crains que bientôt, il ne\lm'écoute plus…
 0x8ccdd2: Voilà pourquoi je dois faire ça !
@@ -24619,7 +24619,7 @@
 0x7a5a40: Jax : <0xFC><0x01><0x08>Oh, salut, <0xFD><0x01>.\pAlors toi aussi, on t'a envoyé ici,\nhein ?\p…\pJe vois…
 0x7a7309: Mes oiseaux vont devenir de plus en\nplus forts à partir de maintenant !
 0x7a7e6b: Le symbole sur nos poitrines\nreprésente l'anneau unique pour\lles gouverner tous.
-0x7aab5f: L'autre jour, j'entraînais mon\n<0xFC><0x01><0x06>Nosepass<0xFC><0x01><0x08> dans <0xFC><0x01><0x06>Mont Foudroyant<0xFC><0x01><0x08>\lquand soudain, il s'est mis à\lbriller !\pL'instant d'après, il avait évolué\nen Probopass !\pCette montagne doit avoir de\ndrôles de propriétés.
+0x7aab5f: L'autre jour, j'entraînais mon\n<0xFC><0x01><0x06>Tarinor<0xFC><0x01><0x08> dans <0xFC><0x01><0x06>Mont Foudroyant<0xFC><0x01><0x08>\lquand soudain, il s'est mis à\lbriller !\pL'instant d'après, il avait évolué\nen Tarinorme !\pCette montagne doit avoir de\ndrôles de propriétés.
 0x7b387a: <0xFC><0x01><0x04><0xFD><0x01>, j'ai oublié de te montrer\nquelque chose !\pViens avec moi à la\nAutoroute KBT, s'il te plaît.
 0x7b4788: Dresco\pL'archipel de la région de\nBorrius.
 0x7b484b: La porte est verrouillée.
