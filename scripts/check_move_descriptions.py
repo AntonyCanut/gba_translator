@@ -2,7 +2,7 @@
 """Vérifie que chaque description d'attaque tient dans la fenêtre de résumé.
 
 L'écran « Capacités connues » affiche la description d'une attaque sur **5
-lignes maximum**, chaque ligne devant rester sous ~120 px (≈ 21 caractères de
+lignes maximum**, chaque ligne devant rester sous ~122 px (≈ 21 caractères de
 la police FRLG). Au-delà, le texte déborde : mots coupés au bord droit
 (horizontal) ou lignes masquées (vertical) — cf. les captures du ticket.
 
@@ -23,7 +23,7 @@ Exemples
 
     # Sur une autre ROM / avec des seuils personnalisés
     python3 scripts/check_move_descriptions.py --rom output/roms/GenedRom-fr.gba \\
-        --max-lines 5 --max-width 120
+        --max-lines 5 --max-width 122
 
 Code de sortie : 0 si toutes les descriptions tiennent, 1 si au moins une
 déborde (utilisable comme garde-fou de build).

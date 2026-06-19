@@ -33,7 +33,7 @@ def _deref(rom, offset):
 
 
 class MoveWrappingTests(unittest.TestCase):
-    """Budget de la fenêtre (5 lignes, 130 px)."""
+    """Budget de la fenêtre (5 lignes, 122 px)."""
 
     def test_short_text_fits(self):
         self.assertTrue(moves.fits("Une charge\nbasique."))

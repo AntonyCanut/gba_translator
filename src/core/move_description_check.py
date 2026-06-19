@@ -2,9 +2,8 @@
 """Vérifie que chaque description d'attaque tient dans la fenêtre de résumé.
 
 L'écran « Capacités connues » affiche la description d'une attaque dans une
-fenêtre de **5 lignes maximum**, chaque ligne devant rester sous ~130 px de
-large (~21 caractères de la police FRLG, marge de 2 caractères incluse).
-Au-delà, le texte déborde :
+fenêtre de **5 lignes maximum**, chaque ligne devant rester sous ~122 px de
+large (~21 caractères de la police FRLG). Au-delà, le texte déborde :
 horizontalement les mots sont coupés au bord droit, verticalement les lignes
 supplémentaires sont masquées (cf. les captures du ticket : Jet-Pierres et
 Morsure débordaient, Groz'Yeux tenait).
@@ -13,15 +12,16 @@ Les descriptions sont stockées dans la ROM via une table de pointeurs
 (``gMoveDescriptionPointers``) indexée par numéro d'attaque. Ce module lit la
 ROM construite, décode chaque description et signale celles qui débordent.
 
-Le budget (5 lignes, 130 px) et la table sont partagés avec
+Le budget (5 lignes, 122 px) et la table sont partagés avec
 :mod:`src.core.moves`, qui re-wrappe/relocalise chaque description au build
-(``scripts/patch_move_descriptions_fr.py``). La ROM espagnole de référence va
-jusqu'à 142 px, mais un glyphe était encore rogné à ce bord : on garde donc une
-marge de sécurité de 2 caractères (~12 px) et on s'arrête à 130 px. La police
-étant à chasse variable, le pixel fait foi ; la limite « 21 caractères » du
-ticket n'en est qu'une approximation.
-police étant à chasse variable, le pixel fait foi ; la limite « 21 caractères »
-du ticket n'en est qu'une approximation.
+(``scripts/patch_move_descriptions_fr.py``). Le budget est calibré sur le
+*wrapping d'origine du jeu* : en décodant chaque description originale avec ses
+sauts de ligne codés en dur (``0xFE``), 99 % des lignes du moteur tiennent en
+<= 122 px (max propre ~124 px). Les budgets antérieurs (142 px puis 130 px,
+estimés sur la ROM espagnole) laissaient les lignes courir 6-8 px au-delà de ce
+bord, ce qui rognait à l'écran. La police étant à chasse variable, le pixel
+fait foi ; la limite « 21 caractères » du ticket en est une bonne
+approximation (~21 × 5,8 px ≈ 122 px).
 """
 
 from __future__ import annotations
@@ -59,8 +59,8 @@ MAX_DESCRIPTION_BYTES = 512
 #: Nombre maximal de lignes affichées simultanément (partagé avec moves).
 MAX_LINES = moves.MOVE_MAX_LINES
 
-#: Largeur utile de la fenêtre, en pixels (partagé avec moves). 130 px = la
-#: plus large ligne espagnole (142 px) moins une marge de 2 caractères (~12 px).
+#: Largeur utile de la fenêtre, en pixels (partagé avec moves). 122 px = la
+#: 99e centile des lignes du wrapping d'origine du jeu (max propre ~124 px).
 MAX_LINE_WIDTH = moves.MOVE_LINE_WIDTH
 
 #: Approximation « caractères affichés » du ticket (purement indicative).
