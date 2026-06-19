@@ -7,11 +7,16 @@ little-endian entry points to a 0xFF-terminated description string shown on
 the « Capacités connues » summary screen.
 
 That window fits **five lines** at most, each line under
-:data:`MOVE_LINE_WIDTH` pixels. The Spanish ROM proves the upper bound: every
-Spanish move description wraps into at most five lines, none wider than
-142 px (the widest Spanish line). In practice the rightmost pixels still
-clipped a glyph, so the budget keeps a **two-character safety margin**
-(~12 px) below that and wraps to 130 px. French translations inherit the
+:data:`MOVE_LINE_WIDTH` pixels. The **base game itself** proves the real
+budget: decoding every original description with its hardcoded line breaks
+(``0xFE``), 99 % of the engine's own lines are <= 122 px and the cleanly
+wrapped maximum is ~124 px (the few 150 px+ outliers are unwrapped Unbound
+"new move" entries the engine reflows at runtime). Earlier passes guessed
+142 px then 130 px from the Spanish ROM, but at 125-130 px the rightmost
+glyphs still clipped — those budgets simply let the balancer repack lines
+back to the new edge, so the margin was never real. We therefore wrap to
+**122 px**, matching the engine's own 99th-percentile line and the ticket's
+"21 caractères affichés" (~21 x 5.8 px). French translations inherit the
 English break positions and
 routinely spill onto a sixth line or past the right edge, so they must be
 re-wrapped (and, when genuinely too verbose, shortened upstream) to respect
@@ -44,11 +49,14 @@ ROM_POINTER_BASE = 0x08000000
 TERMINATOR = 0xFF
 
 # Maximum visible lines of a move description and the usable pixel width of
-# one line. 142 px is the widest line found across every Spanish move
-# description, but at that edge the screen still clipped a glyph, so we keep a
-# two-character safety margin (~12 px, glyphs average 6 px) and wrap to 130 px.
+# one line. Calibrated against the *base game's own* hardcoded wrapping: across
+# every original description, 99 % of the engine's lines are <= 122 px and the
+# cleanly wrapped maximum is ~124 px. Wrapping to 122 px keeps every line inside
+# the width the engine itself proves safe (and matches the ticket's "21
+# caractères"). The previous 130 px let lines run 6-8 px past that edge, which
+# clipped on screen — the bug this budget fixes.
 MOVE_MAX_LINES = 5
-MOVE_LINE_WIDTH = 130
+MOVE_LINE_WIDTH = 122
 
 
 class MoveEntry(NamedTuple):

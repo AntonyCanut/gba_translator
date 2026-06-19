@@ -46,7 +46,7 @@ class TestCheckDescriptionText(unittest.TestCase):
         self.assertEqual(len(lines), 6)
 
     def test_wide_line_overflows_horizontally(self):
-        # 30 caractères larges : nettement au-dessus de 130 px.
+        # 30 caractères larges : nettement au-dessus de 122 px.
         text = "Mmmmmmmmmmmmmmmmmmmmmmmmmmmmmm"
         lines, too_many = check_description_text(text)
         self.assertFalse(too_many)
