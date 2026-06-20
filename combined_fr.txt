@@ -413,7 +413,7 @@
 0x1A5BC5: 9Connexion au PC du Prof. Log…\pConnexion au Système d’Éval\ndu Pokédex…
 0x1A5C03: Veux-tu que j’évalue ton Pokédex ?\n
 0x1A5C2E: Lien avec le PC du Prof. Log coupé.
-0x1A5C4D: Une voix retentit :\n« Ne t’enfuis pas ! »
+0x1A5C4D: Une voix retentit :\n«Ne t’enfuis pas !»
 0x1A5CDF: La porte est ouverte…
 0x1A5CF1: {STR_VAR_2} a été transféré vers\nle PC de ???.\pIl a été placé dans\nla Boîte {STR_VAR_1}.
 0x1A5D31: {STR_VAR_2} a été transféré vers\nle PC d’Ayla.\pIl a été placé dans\nla Boîte {STR_VAR_1}.
@@ -512,9 +512,9 @@
 0x1BD338: Quel Mode de Combat veux-tu\njouer ?
 0x1BD362: Veux-tu utiliser le Système\nBroyeur Baies ?
 0x1BD390: Il y a trois Modes de Combat.\pLe Combat Solo est pour deux\nDresseurs avec au moins un Pokémon.\pChaque Dresseur a un Pokémon en\ncombat à la fois.\pLe Combat Duo est pour deux\nDresseurs avec minimum deux Pokémon.\pChaque Dresseur envoie deux\nPokémon en combat.\pLe Combat Multi est pour quatre\nDresseurs avec au moins un Pokémon.\pChaque Dresseur a un Pokémon en\ncombat à la fois.
-0x1BD51B: Décidez lequel de vous deux sera\nChef.\pL’autre doit ensuite choisir\n« Rejoindre Groupe ».
-0x1BD582: Décidez lequel de vous quatre sera\nChef de Groupe.\pLes autres doivent ensuite choisir\n« Rejoindre Groupe ».
-0x1BD5F1: Décidez qui sera Chef de Groupe.\nLes autres doivent ensuite choisir\p« Rejoindre Groupe ».\n
+0x1BD51B: Décidez lequel de vous deux sera\nChef.\pL’autre doit ensuite choisir\n«Rejoindre Groupe».
+0x1BD582: Décidez lequel de vous quatre sera\nChef de Groupe.\pLes autres doivent ensuite choisir\n«Rejoindre Groupe».
+0x1BD5F1: Décidez qui sera Chef de Groupe.\nLes autres doivent ensuite choisir\p«Rejoindre Groupe».\n
 0x1BD65B: Bienvenue dans la Salle Union du\nClub Sans Fil Pokémon.\pIci, tu peux interagir directement\navec d’autres Dresseurs, parfois\linconnus.\pVeux-tu entrer dans la salle ?
 0x1BD706: Les Dresseurs de la Salle Union\nsont ceux autour de toi déjà entrés.\l\pTu peux y faire plein de choses,\ncomme échanger des salutations.\pTu peux inscrire deux Pokémon au\nN. 30 pour un combat un contre un.\pTu peux participer à un chat à\ndeux à cinq.\pOu inscrire un Pokémon à\nl’échange.\pVeux-tu entrer dans la salle ?
 0x1BD86A: Profite bien de la Salle Union.\n
@@ -3709,7 +3709,7 @@
 0x41A50B: Rencontré d'autres Dresseurs\nau SALON UNION.
 0x41A53A: Parti de {STR_VAR_2}\nà {STR_VAR_1} vers la\nprochaine destination.
 0x41A566: Après réflexion, remplacé\n{DYNAMIC} dans {DYNAMIC} par\n{DYNAMIC} dans {DYNAMIC}.
-0x41A59C: Après réflexion, transféré\n{DYNAMIC} de la Boîte "{DYNAMIC} "\nvers "{DYNAMIC}".
+0x41A59C: Après réflexion, transféré\n{DYNAMIC} de la Boîte "{DYNAMIC}"\nvers "{DYNAMIC}".
 0x41A5D9: Échangé {DYNAMIC} et {DYNAMIC}\ndans {DYNAMIC} .
 0x41A5FA: Déplacé {DYNAMIC} dans {DYNAMIC} .
 0x41A60A: Échangé {DYNAMIC} de {DYNAMIC} \navec {DYNAMIC} de l'équipe.
@@ -4688,19 +4688,19 @@
 0x4574E9: {STR_VAR_2} vous a contacté. Ajouter\naux membres ?
 0x457512: {STR_VAR_1}!\nMembres OK ?
 0x45752E: Annuler {STR_VAR_1} MODE avec ces\nmembres ?
-0x457553: « OK » envoyé à\n{STR_VAR_1}.
+0x457553: «OK» envoyé à\n{STR_VAR_1}.
 0x45756C: L’autre dresseur ne semble pas être\ndisponible maintenant…\p
 0x4575A3: Tu ne peux pas transmettre avec\nun Dresseur trop éloigné.\p
 0x4575DC: L'autre ou les autres dresseurs ne\nsont pas encore prêts.\p
 0x457644: Il y a un membre qui ne peut plus\nrester disponible.\p
-0x4576AC: {STR_VAR_1} a renvoyé un « OK » !
+0x4576AC: {STR_VAR_1} a renvoyé un «OK» !
 0x4576C2: {STR_VAR_1} a accepté ton\ninscription en tant que membre.
 0x4576FF: {STR_VAR_1}!\nEn attente d'autres membres !
 0x45771C: Cesser d'être membre ?
 0x457731: Tu as cessé d'être membre.\p
 0x4577B9: Le lien WIRELESS COMMUNICATION\nSYSTEM a été interrompu…
 0x4577F5: Le lien avec ton ami a été\ninterrompu…
-0x457824: {STR_VAR_1} a répondu : « Non… »
+0x457824: {STR_VAR_1} a répondu : «Non…»
 0x457879: Veux-tu le {STR_VAR_2}\nMODE ?
 0x4578BA: En attente de la réponse de\n{STR_VAR_1} concernant l'échange…
 0x457A70: Bonjour ! Voulez-vous faire quelque\nchose ?
@@ -5389,7 +5389,7 @@
 0x7453EE: C'est une statue du Pokémon\nLégendaire de Feu, Sulfura.\pOn dit que Sulfura servait de héraut\nà une grande obscurité, mais\lqu'il réside désormais dans le\lVolcan Cendreux.
 0x745518: Route 3\p<0x79> Paradis Floral\n<0x7A> Dresco
 0x745750: Si tu changes d'avis,\ndis-le-moi.
-0x745775: Hé gamin !\nÉcoute.\pLa route devant est remplie de\nDresseurs qui veulent se battre.\pCertains l'ont même surnommée «\nRoute Défi ».\pMais je comprends si tu ne veux pas\nles affronter.\pGrâce à mes pouvoirs psy, je peux te\ntéléporter de l'autre côté\lgratis !\pAlors, tu es partant ?
+0x745775: Hé gamin !\nÉcoute.\pLa route devant est remplie de\nDresseurs qui veulent se battre.\pCertains l'ont même surnommée «\nRoute Défi».\pMais je comprends si tu ne veux pas\nles affronter.\pGrâce à mes pouvoirs psy, je peux te\ntéléporter de l'autre côté\lgratis !\pAlors, tu es partant ?
 0x745900: Arène Pokémon de Dresco\nChampion : Mirskle\lLe hippie perché !
 0x74593B: Champion d'Arène de Dresco :\nMirskle\pEntraîneurs gagnants :\n{RIVAL}
 0x745973: Arène Pokémon Dresco\nChampion : Mirskle\pVainqueurs : {RIVAL},\n{PLAYER}
@@ -5451,7 +5451,7 @@
 0x74F960: ASTUCES DRESSEUR !\pMaintiens {COLOR}ÉB{COLOR}Á pour\ncourir !\pAppuie sur {COLOR}ÉL{COLOR}Á pour\nactiver la course auto !
 0x74FB43: Stop !\pQue t'ai-je dit sur le voyage dans\nmon Cube Espace ?\pCe n'est pas parce que tu ne peux\npas voyager par tes Anneaux que tu\lpeux utiliser mon Cube sans\lpermission !
 0x74FBEF: Et c'est toi qui les as amenés ici\n?
-0x74FC26: Je ne sais pas ce que tu voulais\nd'eux, mais tu es un boulet depuis\lJe ne suis peut-être pas ton vrai\l« tuteur », mais je suis ton\pdresseur maintenant ! Et tu obéiras\n!\pCes deux-là ne te sauveront pas de\pmoi !
+0x74FC26: Je ne sais pas ce que tu voulais\nd'eux, mais tu es un boulet depuis\lJe ne suis peut-être pas ton vrai\l«tuteur», mais je suis ton\pdresseur maintenant ! Et tu obéiras\n!\pCes deux-là ne te sauveront pas de\pmoi !
 0x74FD13: Quelle plaie…
 0x74FECD: Il est inconscient.\pQu'est-ce que c'est ?\pIl y a quelque chose écrit sur son\nT-shirt.\pC'est son nom !\nC'est…
 0x74FF2A: Son nom est-il {RIVAL} ?
@@ -6189,7 +6189,7 @@
 0x7AA7DC: {STR_VAR_1} !\nIl est si doux et rose !\pTu devrais utiliser la {COLOR}ÉPierre Ovale{COLOR}Ç\npour le faire évoluer !
 0x7AA853: L'énergie électrique dans l'air…\nC'est si mystérieux !
 0x7AA94D: Mince !
-0x7AA9BD: Ici, tout le monde dit,\n« évolution par-ci » et « évolution\lpar-là ».\pMais je trouve l'évolution stupide !\pMa méthode préférée pour empêcher\nl'évolution n'est pas d'appuyer sur\lle {COLOR}Ébouton B{COLOR}Ë quand mon\lPokémon va évoluer, mais de lui\lfaire tenir une {COLOR}ÉPierre Stase{COLOR}Ë.\pComme ça, j'évite l'évolution\ncomplètement !
+0x7AA9BD: Ici, tout le monde dit,\n«évolution par-ci» et «évolution\lpar-là».\pMais je trouve l'évolution stupide !\pMa méthode préférée pour empêcher\nl'évolution n'est pas d'appuyer sur\lle {COLOR}Ébouton B{COLOR}Ë quand mon\lPokémon va évoluer, mais de lui\lfaire tenir une {COLOR}ÉPierre Stase{COLOR}Ë.\pComme ça, j'évite l'évolution\ncomplètement !
 0x7AAB04: Ton {COLOR}É{STR_VAR_1}{COLOR}Ç doit tenir la {COLOR}ÉPierre Ovale\n{COLOR}Ç pendant la {COLOR}Éjournée{COLOR}Ç !
 0x7AAB4D: Fascinant !
 0x7AAB5E: 9J'entraînais mon {COLOR}ÉTarinor{COLOR}Ë au\n{COLOR}ÉMont Foudroyant{COLOR}Ë l'autre jour,\lquand soudain il s'est mis à\lbriller !\pLa minute d'après, il avait évolué\nen Tarinorme !\pCette montagne doit avoir des\npropriétés étranges.
@@ -6450,7 +6450,7 @@
 0x7BFCEE: Pleurnicher…\n
 0x7BFCF6: {COLOR}ÁFlic : {COLOR}ËArrêt pour\n\pdivers crimes. Vous venez avec moi.\n
 0x7BFDBF: 9Brut.\n
-0x7BFE09: À Borrius, on sait que les voyous\n\lsont principalement confinés à la\n\pVille d'Antisis. Cependant, l'un des\n\lgangs de là-bas, les « Granbull\n\pTerreur », semble avoir quitté cette\n\lzone. Nous avons reçu plusieurs\n\lrapports récemment sur certains\n\pmembres qui se rassemblent et\n\lcausent des problèmes sur la\n\l{COLOR}ÉRoute 10{COLOR}Ë. Nos forces\n\pde police sont assez dispersées en\n\pce moment, et toute aide pour\narrêter ces crétins serait très
+0x7BFE09: À Borrius, on sait que les voyous\n\lsont principalement confinés à la\n\pVille d'Antisis. Cependant, l'un des\n\lgangs de là-bas, les «Granbull\n\pTerreur», semble avoir quitté cette\n\lzone. Nous avons reçu plusieurs\n\lrapports récemment sur certains\n\pmembres qui se rassemblent et\n\lcausent des problèmes sur la\n\l{COLOR}ÉRoute 10{COLOR}Ë. Nos forces\n\pde police sont assez dispersées en\n\pce moment, et toute aide pour\narrêter ces crétins serait très
 0x7C02A9: {COLOR}ÇJe veux que vous regardiez\nce qui va se passer .
 0x7C02D9: {COLOR}ÇHarth, rends la pierre du\n\pvide. Sois coopératif. Sinon, je ne\npeux pas garantir la sécurité de ta
 0x7C0350: Femme : {COLOR}ÇNe fais pas ça !\nCède pas ou nous serons condamnés !
@@ -6736,7 +6736,7 @@
 0x7CDE4B: C'est parti, Starapator !
 0x7CDE6C: Mes Pokémon étaient très difficiles\nà trouver.\pIls n'apparaissent pas souvent dans\nla nature par ici.
 0x7CDEC1: Il semble que la rareté n’indique\npas une force exceptionnelle.
-0x7CDEF9: Mon rêve est d'un jour faire équipe\navec un dresseur de type Combat.\pNous nous appellerons… « Brains &\nBrawn ».
+0x7CDEF9: Mon rêve est d'un jour faire équipe\navec un dresseur de type Combat.\pNous nous appellerons… «Brains &\nBrawn».
 0x7CDFED: C'est d'autant plus amusant à\ngrimper !
 0x7CE008: Quand je descends les falaises, je\ntrouve des choses très intéressantes\ldans les coquillages sur la plage !
 0x7CE0FC: Je suppose que nous devons courir\nmoins et nous entraîner davantage…
@@ -6782,7 +6782,7 @@
 0x7CFB5C: Un homme à capuche rouge a été\npoussé dans l’océan.\pIl n’a pas encore refait surface non\nplus…
 0x7CFC66: J'aurais juré que ce Pokémon des\nlégendes flottait\lpar ici à l'instant…
 0x7CFCBA: Passer par cette porte peut soit\nvous amener à la ville de Dehara,\lRoute 12.
-0x7CFD04: Seriez-vous {PLAYER}\npar hasard ?\p…\pJe le pensais.\pJe vous ai reconnu sur cette photo\nJ'ai trouvé de vous sur les\linternets.\pJe m'appelle Looker.\pAgent Looker, de la Police\nInternationale.\pJe venais juste de finir de\nm'occuper de Team Rocket dans la\lrégion de Kanto, quand j'ai été\ldéployé pour faire face à une\lsituation qui se préparait dans la\lrégion de Borrius.\pUn jeune homme, Jax, je crois, m'a\ninformé que vous aviez des\lpreuves de crimes commis par une\lorganisation se faisant appeler\l« Les Ombres ».\pVeuillez me rencontrer dans le\n{COLOR}ÉDehara Game Corner {COLOR}Ëafin que nous\lpuissions discuter de tout cela.\pJax est là aussi.\pLooker, dehors.
+0x7CFD04: Seriez-vous {PLAYER}\npar hasard ?\p…\pJe le pensais.\pJe vous ai reconnu sur cette photo\nJ'ai trouvé de vous sur les\linternets.\pJe m'appelle Looker.\pAgent Looker, de la Police\nInternationale.\pJe venais juste de finir de\nm'occuper de Team Rocket dans la\lrégion de Kanto, quand j'ai été\ldéployé pour faire face à une\lsituation qui se préparait dans la\lrégion de Borrius.\pUn jeune homme, Jax, je crois, m'a\ninformé que vous aviez des\lpreuves de crimes commis par une\lorganisation se faisant appeler\l«Les Ombres».\pVeuillez me rencontrer dans le\n{COLOR}ÉDehara Game Corner {COLOR}Ëafin que nous\lpuissions discuter de tout cela.\pJax est là aussi.\pLooker, dehors.
 0x7D0046: Il semble être profondément absorbé\ndans un jeu de machine à sous.
 0x7D0078: Looker : {COLOR}ËJax ! Le jeu a finalement\nété payé !\pJe viens de gagner gros !
 0x7D00B5: Jax : {COLOR}ËTout à l'heure, M. Looker ?\nJ'ai encaissé il y a longtemps !\pJ'ai déjà gagné gros plusieurs fois\n!
@@ -6816,7 +6816,7 @@
 0x7D3A41: Grunt 2 : {COLOR}ËNous n'avons pas encore\nfini ici !\pC'est à mon tour de vous abattre !
 0x7D3A86: Jax : {COLOR}ËAttends !
 0x7D3A94: Jax : {COLOR}Ë{PLAYER} a des choses plus\nimportantes à faire que de s'occuper\pSi tu veux embaucher quelqu'un,\npourquoi ne m'essayes pas pour ma
-0x7D3B16: {COLOR}Ë{PLAYER}!\pJe m'occuperai de ces crétins.\pVous allez arrêter les Ombres de\neffectuer leur « déliaison ».\pNous comptons sur vous.
+0x7D3B16: {COLOR}Ë{PLAYER}!\pJe m'occuperai de ces crétins.\pVous allez arrêter les Ombres de\neffectuer leur «déliaison».\pNous comptons sur vous.
 0x7D3BE7: Une fois que nous aurons pris soin\nde vous, nous allons terminer
 0x7D3C72: D'accord, vous êtes prêt, {PLAYER}.\pJe serai là si vous avez besoin de\nguérir à nouveau.
 0x7D3CB4: {PLAYER}!\pJ'essaie de combattre ces\ngrognements, mais je peux te guérir
@@ -6870,11 +6870,11 @@
 0x7D57DF: {COLOR}ËHoopa!\pInvoquez une incinération !
 0x7D5801: Aklove : {COLOR}ËAdieu, {PLAYER}.
 0x7D5C3C: Vous devez vous demander où nous\nsommes, ai-je raison ?\p…\pJe le pensais.\pJe suppose que vous pourriez dire\nque c'est ce que les gens appellent\pC'est ici que le grand créateur de\nl'univers, Arceus lui-même,\ljuge ceux qui ont\lquitté le monde.
-0x7D5D38: J'ai entendu dire que cet endroit\nest censé refléter votre maison.\p…\pJe ne sais pas ce que vous voyez,\nmais je vois la mer partout où je\pLa région d'où je viens…\pEh bien, comme certains diraient, il\ny avait « trop d'eau».\pJe pense que j'y serais peut-être\nresté pour toujours, si Zeph n'avait\lIvory et moi de partir.
+0x7D5D38: J'ai entendu dire que cet endroit\nest censé refléter votre maison.\p…\pJe ne sais pas ce que vous voyez,\nmais je vois la mer partout où je\pLa région d'où je viens…\pEh bien, comme certains diraient, il\ny avait «trop d'eau».\pJe pense que j'y serais peut-être\nresté pour toujours, si Zeph n'avait\lIvory et moi de partir.
 0x7D5E59: Que vois-tu, {PLAYER} ?\p…\pDe la neige, hein ?\pC'est logique…\pHauteurs Gelées est la maison que ton\npère a choisie pour toi, après tout.
 0x7D5EC9: Tu sais, {PLAYER}, je connaissais\nbien ton père.\pC'était un homme bien.\pJ'ai même eu le plaisir de\ntravailler avec lui à un moment
 0x7D5F3D: Il disait que même les pires hommes\navaient eu un bon but un jour.\lSes mots ont résonné jusqu'à ma\nmort.\l\p\p\n
-0x7D5FD1: Je sais que vous devez avoir\nl'impression que je suis une sorte\lméchant », mais je ne peux même pas\ncommencer à\lvous dire à quel point cette notion\nest fausse.\pCela semble juste à cause de les\nchoses dont vous avez été témoin que\lShadows.
+0x7D5FD1: Je sais que vous devez avoir\nl'impression que je suis une sorte\lméchant», mais je ne peux même pas\ncommencer à\lvous dire à quel point cette notion\nest fausse.\pCela semble juste à cause de les\nchoses dont vous avez été témoin que\lShadows.
 0x7D60AC: Nous avons commencé avec de bonnes\nintentions.\pCe n'est que quelque temps plus tard\nque les choses ont commencé à\lnous échapper.\pQuand est-ce que tout a mal tourné…
 0x7D612C: Il est temps, {PLAYER}.
 0x7D613B: MARLON. {PLAYER}.
@@ -6884,7 +6884,7 @@
 0x7D65BE: …{PLAYER}?\pMais…mais…mais tu es censé être mort\n!\pComment est-ce possible ?\pJe dois prévenir les autres !
 0x7D68A1: Marlon : {COLOR}ËVéga!\pComment as-tu pu trahir Les Ombres\n!?
 0x7D68D5: Véga : {COLOR}ËMarlon!?\pAklove nous a dit qu'il t'avait tué\n!
-0x7D6905: Marlon : {COLOR}ËJe m'en fiche de ce que\ncette personne « Aklove » t'a dit !\pQu'as-tu fait de tous les Shadow\nWarriors ?
+0x7D6905: Marlon : {COLOR}ËJe m'en fiche de ce que\ncette personne «Aklove» t'a dit !\pQu'as-tu fait de tous les Shadow\nWarriors ?
 0x7D6975: Véga : {COLOR}ËNe t'inquiète pas, Marlon.\pIls ont été transférés dans un\nendroit plus…sécurisé, bien avant
 0x7D69D7: Marlon : {COLOR}ËDis-moi\noù ils sont, Véga!\pOu alors aide-moi, je te ferai\ntransformer en l'un d'entre eux !
 0x7D6A35: Véga : {COLOR}ËPensez-vous que vous pouvez\ntoujours me donner des ordres ?\pJe ne suis plus un agent infiltré\ndes Ombres.\pAklove m'a fait promouvoir, et\nmaintenant je suis un administrateur\pEt à partir de maintenant, ma\npremière mission est pratiquement
@@ -6977,7 +6977,7 @@
 0x7DCF55: Marlon : {COLOR}ËOui…\pEn tant que biologistes\nmoléculaires, on pensait y arriver.\lÇa devait être nous.\pMais seul Arceus a vraiment le\npouvoir de ramener les morts.\pOn a dû avancer.\pPuis, il y a un an, Ivory a donné\nnaissance à des jumeaux.\pLe plus beau moment de nos\nvies…\pDepuis, le vide dans nos cœurs est\npresque comblé…
 0x7DD0C7: Zeph : {COLOR}ËOù sont vos enfants ?
 0x7DD0ED: Ivory : {COLOR}ÇEuler Log garde nos enfants\naux Hauteurs Gelées\lpour cette visite.
-0x7DD149: Zeph : <0xFC><0x01><0x08>Un ami à moi, biologiste\nPokémon, vit aux Hauteurs\lGelées aussi.\pIci on l'appelle le « Gardien de\nBorrius ».\pIl a même réussi à capturer\nArceus !\pJe crois que sa femme vient tout\njuste d'avoir un bébé.\pJ'ai du mal à me souvenir de son\nprénom…\pAu fait, comment s'appellent vos\nenfants ?
+0x7DD149: Zeph : <0xFC><0x01><0x08>Un ami à moi, biologiste\nPokémon, vit aux Hauteurs\lGelées aussi.\pIci on l'appelle le «Gardien de\nBorrius».\pIl a même réussi à capturer\nArceus !\pJe crois que sa femme vient tout\njuste d'avoir un bébé.\pJ'ai du mal à me souvenir de son\nprénom…\pAu fait, comment s'appellent vos\nenfants ?
 0x7DD2A4: Ivory : {COLOR}ÇIls s'appellent {RIVAL} et\nMelony.\pLes plus beaux enfants du\nmonde.
 0x7DD2FF: Zeph : {COLOR}ËEt avec\nde si beaux noms…
 0x7DD330: {COLOR}ËVoudriez-vous m'aider pour quelque\nchose ?
@@ -7004,7 +7004,7 @@
 0x7DD8CB: {COLOR}ËMarlon, Ivory, on ne peut pas se\nlaisser abattre !\pMais je ne pense plus que nous\npuissions réussir à trois.\pIl nous faut\nplus de bras.
 0x7DD974: Marlon : {COLOR}ËOù trouver l'argent pour\nembaucher ?
 0x7DD9B0: Zeph : {COLOR}ËL'argent n'est pas un\nproblème.\pJ'ai assez épargné en vendant Cube\nCorp.\pAvec ça, on peut payer les sbires\nanonymes dont on a besoin…
-0x7DDA44: Sans Aros, nous avons poursuivi\nles essais en sa mémoire.\pCependant, nos « Guerriers de\nl'Ombre » étaient durs à contrôler.\pCertains ont attaqué, me balafrant\nle visage…\pMalgré tout, nous avons continué.\pPendant des années, nous avons\ncapturé des Pokémon et\lles mêler aux cendres\ld'humains.\pPlus nous le faisions, plus notre\nhésitation à tuer diminuait.\pEn voyant qu'on ne pourrait pas\ncréer une créature gardant\lces souvenirs\lde sa vie passée,\lnous avons choisi une autre voie.
+0x7DDA44: Sans Aros, nous avons poursuivi\nles essais en sa mémoire.\pCependant, nos «Guerriers de\nl'Ombre» étaient durs à contrôler.\pCertains ont attaqué, me balafrant\nle visage…\pMalgré tout, nous avons continué.\pPendant des années, nous avons\ncapturé des Pokémon et\lles mêler aux cendres\ld'humains.\pPlus nous le faisions, plus notre\nhésitation à tuer diminuait.\pEn voyant qu'on ne pourrait pas\ncréer une créature gardant\lces souvenirs\lde sa vie passée,\lnous avons choisi une autre voie.
 0x7DDC4C: Zeph : {COLOR}ËMarlon, Ivory, il est temps\nd'essayer autre chose.\pCes dernières années, nous avons\npeu progressé.\pOn a créé quelques centaines de\nGuerriers de l'Ombre, mais ils\lrestent tous des bêtes sans esprit.\pVous avez tant sacrifié pour\nm'aider…\pVous avez abandonné vos enfants\npour moi…\pIl est temps de finir et de rentrer\nchez nous.\pJe propose de lancer l'Opération\nFleur Éternelle.\pSi on parvient à amener l'Arme\nUltime ici, on pourra\lramener nos enfants…
 0x7DDE5D: {COLOR}ËNous avons recueilli des infos\nsur la force obscure de\lBorrius pour l'utiliser et obtenir\lL'Arme Ultime.\pLa suite, tu la connais.\p…\p…\pPfiou…\pAssimile tout ça, {PLAYER}.\p…\p…\pMaintenant que tu sais presque\ntout,\ltu ne devrais plus hésiter à\lnous faire confiance.
 0x7DDF90: Zeph : <0xFC><0x01><0x08>Alors c'est toi,\n<0xFD><0x03> d'Aros…\pSi je l'avais su, je n'aurais jamais\nessayé de te tuer !\pJe suis désolé, <0xFD><0x01>.\pVraiment.
@@ -7252,7 +7252,7 @@
 0x7EFA47: Route 4\p<0x7B> Forêt Lugubre, Volcan Cendreux\nRoute 5\l<0x7C> Dresco\l<0x7A> Route 13
 0x7EFA8D: Qu'est-ce que tu fais ?\pTu ne peux pas explorer le Grand\nDésert habillé comme ça !\pSans lunettes adéquates, je ne te\nlaisserai pas passer.\lPas question.
 0x7F04CF: 9Quand je me tiens ici, je vois des\ntrucs trop cool !\pOn dirait que l'eau va dans les\narbres !
-0x7F052E: Ma grande sœur évite de dire des\ngros mots.\pMais à la place elle dit des trucs\ncomme « fèces » ou « bouse Tauros ».\pJe ne sais pas si c'est mieux que\nles vrais…\pQuand je serai grande, je dirai ces\ntrucs débiles aussi !
+0x7F052E: Ma grande sœur évite de dire des\ngros mots.\pMais à la place elle dit des trucs\ncomme «fèces» ou «bouse Tauros».\pJe ne sais pas si c'est mieux que\nles vrais…\pQuand je serai grande, je dirai ces\ntrucs débiles aussi !
 0x7F06D4: un zOWLE.
 0x7F06FD: Tu traînais, j'ai cherché\nl'Ombre sans succès.\lPas de chance.\lRien trouvé.
 0x7F0787: Et il n'y a même personne\nà qui demander.\pCette ville est quasi déserte…\pJ'ai vu un type en cape près d'un\nentrepôt\lau nord, c'est tout.
@@ -7285,7 +7285,7 @@
 0x7F19B1: Oh allez !
 0x7F19BD: {COLOR}ËJe m'en fiche de te stopper.\nC'est ton ami qui doit payer pour\pce qu'il m'a fait !\n
 0x7F1F4F: Sbire : {COLOR}ËToi…\pJe reviendrai !\pTu as eu de la chance cette fois,\nmais quand j'aurai des renforts,\ltu seras grillé !
-0x7F1FC3: {COLOR}ËIl n'avait aucune chance.\nPeut-être avec des « rangées et\prangées » de sbires.\nMais seul ? Non !\pAu fait, que crois-tu arrivé à ces\psbires ?\n
+0x7F1FC3: {COLOR}ËIl n'avait aucune chance.\nPeut-être avec des «rangées et\prangées» de sbires.\nMais seul ? Non !\pAu fait, que crois-tu arrivé à ces\psbires ?\n
 0x7F208D: Plus tôt
 0x7F20A4: Véga : {COLOR}ËIci l'Admin Véga.\nJe surveille depuis la salle de\pcommande.\nTous les sbires, tenez bon !\pQuand l'Ombre enfoncera la porte,\panéantissez-les !\nIls sont peu nombreux, nous les\psurpassons largement.\nIls n'ont aucune chance !\pEnveloppez-les dans la Lumière du\pNéant !
 0x7F21D7: Sbire : {COLOR}ËTenez bon tout le monde !\pIls arrivent !
@@ -7443,7 +7443,7 @@
 0x7F79D5: Laisse tomber !\nJe n'ai pas besoin de ton fric !
 0x7F79F9: Route 16\p<0x79> Bourg Gurun\n<0x7A> Ville d'Antisis
 0x7F7C2D: {COLOR}Ë{PLAYER} ! Ravi de te voir.\pOn doit parler de beaucoup de\nchoses.
-0x7F7C71: {COLOR}ËJe mettais Jax au courant\nde tout ce qui s'est passé depuis ta\l« disparition » de Dehara.
+0x7F7C71: {COLOR}ËJe mettais Jax au courant\nde tout ce qui s'est passé depuis ta\l«disparition» de Dehara.
 0x7F7CD9: Jax : {COLOR}ËBeladonis m'a tout raconté.\nIl s'en est passé depuis que j'ai\pété envoyé dans le Monde\nDistorsion…\pJ'y étais quelques heures quand tu\nes arrivé,\lmais bien plus de temps\ls'était écoulé dans le vrai monde.
 0x7F7DCC: Beladonis : {COLOR}ËTu as raté,\n{PLAYER}.\pComme prévu, j'attendais dehors\nl'entrepôt pour toi et {RIVAL},\lquand des silhouettes encapuchonnées sont\lsorties avec un grand Pokémon\lviolet.\pJ'étais prêt à les arrêter, quand\nle chef a crié quelque chose au\lPokémon.\lEnsuite, ils ont disparu sans\plaisser de trace.\nJ'ai fouillé l'entrepôt pour des\ptraînards, mais je n'ai trouvé qu'un\nsbire resté.\lIl était seul.\lC'était tout.\pIl m'a dit seulement\nque la Lumière du Néant\lse dirige vers {COLOR}ÉBorrius Est{COLOR}Ë.
 0x7F8011: Jax : {COLOR}Ë{COLOR}ÉBorrius Est{COLOR}Ë ?\pQue ferait la Lumière du Néant là-\nbas ?
@@ -7859,7 +7859,7 @@
 0x8CD9FC: <0xFC><0x01><0x08>Pas encore, Jax.\pVa à <0xFC><0x01><0x06>Hauteurs Gelées<0xFC><0x01><0x08>\net ramène le Prof. Log ici.
 0x8CDA59: Jax : {COLOR}ËTout de suite, Papy !
 0x8CDA75: Log : {COLOR}ËHmm…\pC'est aussi grave que je craignais…\pQue proposes-tu,\nArthur ?
-0x8CDAD4: {COLOR}ËJax peut régler\nle problème.\pIl a déjà fait ses preuves.\nJe comptais l'envoyer contre ces\p« Ombres » pour les arrêter\navant qu'ils n'atteignent\lSulfura.
+0x8CDAD4: {COLOR}ËJax peut régler\nle problème.\pIl a déjà fait ses preuves.\nJe comptais l'envoyer contre ces\p«Ombres» pour les arrêter\navant qu'ils n'atteignent\lSulfura.
 0x8CDB97: Log : {COLOR}ËBien sûr.\pLa police doit déjà être en route,\nmais son aide pourrait leur être\lprécieuse.
 0x8CDC07: Jax : {COLOR}ËCompris, Papy. Je pars.\pJe les arrêterai et sauverai\pSulfura !
 0x8CDC55: Log : {COLOR}ËBon, {PLAYER}, je pense\nqu'il est temps que tu rentres.\pTu as terminé ta course, et ta mère\ndoit s'inquiéter.
@@ -8265,7 +8265,7 @@
 0x92FC14: Mega Blaster
 0x92FC22: Déclic Tactique
 0x92FC30: Renforce les capacités Fée.
-0x92FC4C: Inverse les talents « Aura ».
+0x92FC4C: Inverse les talents «Aura».
 0x92FC67: Normal -> Glace.
 0x92FC8A: Normal -> Fée.
 0x92FCAF: Normal -> Vol.
@@ -10903,7 +10903,7 @@
 0xA462CA: Si un Pokémon a Pickpocket,\nça en fait un type\lvoleur ?
 0xA46313: J'aimerais un Pokémon voleur.\nJe gagnerais avec !
 0xA4634A: J'ai cette pulsion de voler la\nsérie des autres.
-0xA4638A: Je me surnomme « Le Gribouilleur »,\navec un masque de voleur,\lje deviens anonyme,\lni vu ni connu.
+0xA4638A: Je me surnomme «Le Gribouilleur»,\navec un masque de voleur,\lje deviens anonyme,\lni vu ni connu.
 0xA463FF: Un bon politicien vaut bien un\ncambrioleur honnête.
 0xA4643F: Nous, les voleurs, on sait qu'il y\na mille façons de rafler une série.
 0xA4647C: C'est moi qui ai monté les\nbâtiments du coin.
@@ -11068,7 +11068,7 @@
 0xA47CC9: Je… Je sais nager, hein !\nPas besoin de bouée !
 0xA47CFC: Je… Je ne mens pas !
 0xA47D0E: C'est… C'est vrai !
-0xA47D1D: Le sable est brûlant !\pÇa me fait « Aïe, aïe, aïe ! »\n
+0xA47D1D: Le sable est brûlant !\pÇa me fait «Aïe, aïe, aïe !»\n
 0xA47D5B: Aïe, aïe, aïe !
 0xA47D6D: J'adore la mer !
 0xA47D7D: Je suis une fille amoureuse de sa\nbouée ! Ravie de te voir !
@@ -11858,7 +11858,7 @@
 0xEB1FCC: Appareil pour suivre l'état des\nPokémon à la Pension Route 5.\n
 0xEB201D: Appareil lisant le dialecte ancien\n"Braille". Plus parlé depuis 1000\nans.
 0xEB2085: Appareil trouvant les Dresseurs de\nBoréus avides de combat et archivant\nleurs équipes.
-0xEB20E8: Carnet de recherche sur les\ncapacités. Inscrit : « Propriété de\nl'assistant du Prof. Log ».
+0xEB20E8: Carnet de recherche sur les\ncapacités. Inscrit : «Propriété de\nl'assistant du Prof. Log».
 0xEB214C: Accès portable au stockage Pokémon.\nNe fonctionne pas partout.\n
 0xEB21B6: Appareil distordant le temps : les\nhoraires AM deviennent PM et\ninversement.
 0xEB221F: Anneau permettant la Méga-Évolution\nà un Pokémon tenant une Méga-Gemme.\n
@@ -12451,7 +12451,7 @@
 0x165DA5E: Dans l'obscurité des abysses,\nles Luminéon ressemblent à\ndes étoiles du ciel nocturne.
 0x165DABA: Les scientifiques ont découvert\nque les motifs distinctifs sur son\ndos diffèrent selon les régions.
 0x165DB0C: Au printemps, il fait pousser des\nbaies avec la texture de friandises\nglacées autour de son ventre.
-0x165DB60: Il couvre de neige de vastes\nzones en levant des blizzards. On\nl'appelle « Monstre de glace ».
+0x165DB60: Il couvre de neige de vastes\nzones en levant des blizzards. On\nl'appelle «Monstre de glace».
 0x165DBC0: Il envoie des signaux en\ngravant d'étranges motifs\nsur les arbres et la glace.
 0x165DC13: Exposé à un champ magnétique\nspécial, il a évolué. Trois\nunités génèrent le magnétisme.
 0x165DC69: Sa longue langue est couverte\nde bave. Sa salive contient\nun solvant qui engourdit.
@@ -12471,9 +12471,9 @@
 0x165E15D: On dit qu'il abrite les esprits\nperdus et les guide chez eux.
 0x165E1A7: Les légendes des régions enneigées\ndisent qu'une femme perdue sur une\nmontagne glacée renaît en Momartik.
 0x165E209: Son corps est plasma.\nIl infiltre les appareils\nélectroniques et sème le chaos.
-0x165E267: Connu comme « l'être du savoir\n». On dit qu'il efface la mémoire\nde ceux qui croisent son regard.
-0x165E2D0: Connu comme « l'être\nde l'émotion ». Il a appris le\nchagrin, la douleur et la joie.
-0x165E329: Connu comme « l'être de la\nvolonté ». Il dort au fond d'un\nlac pour garder l'équilibre.
+0x165E267: Connu comme «l'être du savoir\n». On dit qu'il efface la mémoire\nde ceux qui croisent son regard.
+0x165E2D0: Connu comme «l'être\nde l'émotion». Il a appris le\nchagrin, la douleur et la joie.
+0x165E329: Connu comme «l'être de la\nvolonté». Il dort au fond d'un\nlac pour garder l'équilibre.
 0x165E38C: Un Pokémon légendaire de Sinnoh.\nOn dit que le temps s'écoule\nlorsque le cœur de Dialga bat.
 0x165E3E1: Il peut déformer l'espace. On\nle décrit comme une divinité\nde la mythologie de Sinnoh.
 0x165E43D: Il vit dans des grottes\nvolcaniques. Il s'enfonce avec ses\npieds en croix pour ramper aux murs.
@@ -12636,7 +12636,7 @@
 0x1661D41: D'innombrables restes calcinés\nendommagent le paysage des\nlieux traversés par Fulguris.
 0x1661D9B: Quand la queue de Reshiram\ns'évase, l'énergie thermique déplace\nl'atmosphère et modifie le climat.
 0x1661DFE: Ce Pokémon apparaît\ndans les légendes. Dans sa queue, un\ngénérateur géant crée l'électricité.
-0x1661E5F: Les terres visitées par Démétéros\ndonnent des récoltes abondantes. On\nl'a salué « Gardien des Champs ».
+0x1661E5F: Les terres visitées par Démétéros\ndonnent des récoltes abondantes. On\nl'a salué «Gardien des Champs».
 0x1661EC4: Il peut produire de l'air\nultrafroid. Son corps est gelé.
 0x1661EF6: Il parcourt le monde à la surface\ndes océans et des rivières.\nIl apparaît sur les fronts de mer.
 0x1661F5E: Des chansons célèbres s'inspirent\ndes mélodies de Meloetta.
@@ -12782,7 +12782,7 @@
 0x16653C2: Le gardien de Poni\ncontrôle l'eau. Il peut créer une\neau pure qui efface toute impureté.
 0x166542B: Son corps est gazeux\net fragile. Il grandit lentement\nen accumulant la poussière de l'air.
 0x1665483: En absorbant la lumière,\nCosmovum continue de croître.\nSa coquille dorée est très solide.
-0x16654DB: Dans\nde vieux écrits, on l'appelle\n« la bête qui dévore le soleil ».
+0x16654DB: Dans\nde vieux écrits, on l'appelle\n«la bête qui dévore le soleil».
 0x1665538: Il invoque parfois des pouvoirs\net des formes de vie inconnues\nvia des trous vers d'autres mondes.
 0x166559F: Forme de vie d'un autre\nmonde, appelée UC, on pense qu'elle\nproduit une neurotoxine puissante.
 0x1665601: Mouscoto\nparade et montre ses muscles\nanormalement gonflés. C'est une UC.
@@ -12895,11 +12895,11 @@
 0x166820A: Les marais ont\ndonné à Ursaluna un corps robuste et\nle pouvoir de manipuler la tourbe.
 0x166826C: Il se drape des âmes\nde camarades morts avant d'atteindre\nleur but en remontant le courant.
 0x16682D9: Il a un poison virulent\net une grande force. Solitaire,\ncette espèce ne vit pas en meute.
-0x1668346: Ses pointes en\nlance et son tempérament sauvage lui\nvalent le surnom « démon des mers ».
+0x1668346: Ses pointes en\nlance et son tempérament sauvage lui\nvalent le surnom «démon des mers».
 0x166839B: Selon\nla légende, son amour fait naître\nune nouvelle vie sur toute la terre.
 0x16683FD: Quand le soleil se couche, il\ns'active. Il parcourt la ville pour\ntrouver de la nourriture à Rattatac.
 0x166846C: Il force ses Rattata à\nramasser la nourriture. Il ne mange\nque le plus nutritif et délicieux.
-0x16684D9: Il concentre l'énergie\npsy dans sa queue et la chevauche.\nOn l'appelle aussi « hodad ».
+0x16684D9: Il concentre l'énergie\npsy dans sa queue et la chevauche.\nOn l'appelle aussi «hodad».
 0x166854B: Il vit en montagne enneigée.\nSa coque d'acier est si dure qu'il\nne peut pas se rouler en boule.
 0x16685B8: Il traverse les\nplaines enneigées à vive allure. Ses\ngrosses griffes fendent la neige.
 0x1668625: Par temps chaud, il fabrique des\néclats de glace avec ses six queues\net les disperse pour se rafraîchir.
@@ -15020,7 +15020,7 @@
 0x1EE1F1E: {COLOR}ÇLe {COLOR}ÉFlyinium Z{COLOR}Ç change une attaque\nde type {COLOR}ÉVol{COLOR}Ç en {COLOR}ÉCapacité Z{COLOR}Ç.\pLes Capacités Z s'utilisent\nune fois par combat.\pGarde-le en tête.\pPlus l'ascension est rude,\nplus la chute fait mal…\pComme tout Pokémon le sait\naprès un {COLOR}ÉPiqué Supersonique{COLOR}Ç !
 0x1EE203B: {PLAYER} !\nAlors tu es là aussi…\pJ'ai eu envie de me battre encore,\nme revoilà pour un autre essai !\pJe m'en fiche du nombre de fois,\ndu nombre de chutes…\pIl me suffit d'un seul\ninstant.\pTu es d'accord, non ?
 0x1EE2113: {COLOR}ÇOh, zut.\pJe ne pense pas que cette série\ndéfaites soit une coïncidence\l… tiens.\pJ'ai quelque chose qui pourrait\nt'être utile pour le combat.
-0x1EE21BE: La vérité ?\pJe n'ai pas la patience pour ceux\nqui parlent de « destin » ou\lde bêtises du genre.\pCe que les gens appellent destin,\nj'appelle ça « chance calculée ».\pMême avec 99 % de chances de perdre…\pSi ma vie était en jeu,\nje miserais sur ce 1 %.\pTu comprends, non ?
+0x1EE21BE: La vérité ?\pJe n'ai pas la patience pour ceux\nqui parlent de «destin» ou\lde bêtises du genre.\pCe que les gens appellent destin,\nj'appelle ça «chance calculée».\pMême avec 99 % de chances de perdre…\pSi ma vie était en jeu,\nje miserais sur ce 1 %.\pTu comprends, non ?
 0x1EE22C9: Eh bien, regarde qui voilà…\pSi c'est pas {PLAYER}.\pJ'imagine que tout ce bazar après\nle Mont Foudroyant a payé, hein ?\pDepuis… t'as quelque chose de\nchangé dans ta tête.\pNon, t'es pas devenu aussi beau\nque moi…\pPersonne n'est plus charmant que\nle vieux Mel.\pJe veux dire, t'es plus détendu.\pJe me souviens qu'à mon Arène, vous\nétiez tendus comme un lasso.\pD'ailleurs… maintenant qu'on est là…\nça te dit une revanche avec ce beau\lgaillard ?\pJe veux voir comment tu te bats\npour de vrai, sans distractions.\pAlors, qu'est-ce que t'en dis ?\nUne autre rodéo ?
 0x1EE24C3: Ah… je bouge pas avant\ndemain.\pSi tu changes d'avis… je serai\njuste là.
 0x1EE2521: Voilà l'esprit. Je vais me rendre\ntranquillement à la zone de combat.
@@ -15151,7 +15151,7 @@
 0x1EE70FC: C'est mon travail d'accueillir les\nvoyageurs fatigués qui montent\ljusqu'à la Ville Blizzard.\pPrendre l'Autoroute KBT est facile,\nmais grimper… c'est dur.
 0x1EE7188: Si on était faits pour voler
 0x1EE71A0: Les humains peuvent voler ? Vole\n20 Jolies Plumes à Goélise ou\nBekipan pour le découvrir !
-0x1EE71F5: Ah, {PLAYER}!\pMerci d'être passé.\pAs-tu déjà entendu le dicton que\nma grand-mère aimait tant ?\p« Si les humains devaient voler,\nils auraient des ailes de Scorplane\let des plumes comme un Roucoups. »\pJe suis sûre d'avoir la première\npartie, mais…\pJ'ai besoin d'un petit coup de main\npour la seconde.\pAlors si tu as un peu de temps,\npourrais-tu aider\lune brave dame ?
+0x1EE71F5: Ah, {PLAYER}!\pMerci d'être passé.\pAs-tu déjà entendu le dicton que\nma grand-mère aimait tant ?\p«Si les humains devaient voler,\nils auraient des ailes de Scorplane\let des plumes comme un Roucoups.»\pJe suis sûre d'avoir la première\npartie, mais…\pJ'ai besoin d'un petit coup de main\npour la seconde.\pAlors si tu as un peu de temps,\npourrais-tu aider\lune brave dame ?
 0x1EE7369: Ah, excellent !\pAlors, laisse-moi expliquer\nle problème.\pIl me faut les plumes nécessaires\npour finir les ailes sur\llesquelles je travaille.\pMais pas n'importe quelles plumes :\nil me faut des {COLOR}ÉJolies Plumes{COLOR}Ç.\p{COLOR}É{STR_VAR_2}{COLOR}Ç, pour être exacte.\pJe pourrais utiliser d'autres ailes,\nmais une dame doit avoir de belles\lchoses, non ?\pAlors, peux-tu m'apporter {COLOR}É{STR_VAR_2}{COLOR}Ç\n{COLOR}ÉJolies Plumes{COLOR}Ç et me les ramener\lici, tu auras aussi\lune récompense !\pTu peux trouver des Jolies Plumes\nsur des {COLOR}ÉGoélise{COLOR}Ç\let {COLOR}ÉBekipan{COLOR}Ç sauvages.\pSi tu as un Pokémon avec Larcin,\nImplore ou Sabotage, ce sera\lbeaucoup plus simple.\pJe recommande {COLOR}ÉSabotage{COLOR}Ç,\ncar tu n'as pas besoin de\lreprendre l'objet.\pAussi, un Pokémon avec {COLOR}ÉŒil Composé{COLOR}Ç\nou {COLOR}ÉChanceux{COLOR}Ç en tête de\lton équipe augmente les chances\lque des Pokémon tiennent un objet,\lalors garde ça en tête !
 0x1EE76D5: Alors {STR_VAR_1}, je ne pense pas que\ncette quantité de Jolies Plumes\lsuffise…\pIl m'en faut {COLOR}É{STR_VAR_2} Jolies Plumes{COLOR}Ç.\pJe pourrais utiliser d'autres ailes,\nmais une dame doit avoir de belles\lchoses, non ?\pMon conseil ?\pUtilise le {COLOR}ÉDexNav{COLOR}Ç pour attraper un\n{COLOR}ÉRapion{COLOR}Ç au {COLOR}ÉTalent Caché{COLOR}Ç, {COLOR}ÉRoute 9{COLOR}Ç.\pIl apprend {COLOR}ÉSabotage{COLOR}Ç, et\nà son évolution, son Talent Caché\ldevient {COLOR}ÉChanceux{COLOR}Ç !\pC'est parfait pour voler des\n{COLOR}ÉJolies Plumes{COLOR}Ç aux {COLOR}ÉGoélise{COLOR}Ç\let {COLOR}ÉBekipan{COLOR}Ç sauvages.\pJe compte sur toi, {STR_VAR_1},\nvoyons si on est à la hauteur !
 0x1EE78FB: Ah ! Ce sont les Jolies Plumes\nque j'ai demandées !
@@ -15205,7 +15205,7 @@
 0x1EE8B71: {COLOR}ÇOh…\pTu ne sais pas qui est ma maman ?\nJe vais te dénoncer !
 0x1EE8BB3: {COLOR}ÇJe suis petit, pas idiot.\nCe n'est pas un {COLOR}É{STR_VAR_1}{COLOR}Ç !
 0x1EE8BE6: La Championne d'Arène, {COLOR}ÉAlice{COLOR}Ç,\nvite au rez-de-chaussée.\pElle gère l'Arène la plupart du\ntemps, alors elle laisse\lsouvent son enfant seul.\pMoi, je ne laisserais jamais mon\nfils seul à la maison.\pSon esprit est trop fragile.\pIl ne supporte pas d'être sans\nsa maman !
-0x1EE8CE0: « Qui construit une ville au sommet\nd'une montagne gelée ? » tu te\ldemandes peut-être.\pEh bien, il y a environ 20 ans, des\nOrnithologues se sont réunis et\lont décidé de créer un bel endroit\lpour entraîner leurs Pokémon.\pAvec l'aide d'un type nommé Aros\net de son Pokémon partenaire, ils\lont construit cette ville en moins\nd'un an !\pÇa m'étonne toujours de voir ce que\nles gens et les Pokémon peuvent agir\len travaillant ensemble.\pDis…\pTon visage me le rappelle\nun peu…
+0x1EE8CE0: «Qui construit une ville au sommet\nd'une montagne gelée ?» tu te\ldemandes peut-être.\pEh bien, il y a environ 20 ans, des\nOrnithologues se sont réunis et\lont décidé de créer un bel endroit\lpour entraîner leurs Pokémon.\pAvec l'aide d'un type nommé Aros\net de son Pokémon partenaire, ils\lont construit cette ville en moins\nd'un an !\pÇa m'étonne toujours de voir ce que\nles gens et les Pokémon peuvent agir\len travaillant ensemble.\pDis…\pTon visage me le rappelle\nun peu…
 0x1EE8E92: Nat Log
 0x1EE8E9A: Oh !\nTu es {PLAYER} !\pEuler m'a dit que tu viendrais.\pOh, qui suis-je ?\pJe n'en ai pas l'air, mais je suis\nsa sœur ! Natasha Log !\pIl m'a dit d'attendre un nouveau\nDresseur avec un Pokédex, si tu as\lattrapé au moins {COLOR}É{STR_VAR_1}{COLOR}Ç espèces de\lPokémon, j'ai ce qu'il faut\lpréparé.
 0x1EE8F94: Hmm…\pTu n'as attrapé que {STR_VAR_2} espèces\npour l'instant.\pAtteins {COLOR}É{STR_VAR_1}{COLOR}Ç et j'améliorerai ton\nPokédex !
@@ -15214,7 +15214,7 @@
 0x1EE9125: Je m'appelle Ayla !\pSous la tutelle de Nat, j'ai pu\namener le PC de Bill à\lBorrius et créer ma version !\pGrâce à mes améliorations, tu peux\nstocker jusqu'à {COLOR}É750{COLOR}Ç Pokémon\ldifférents dans mon PC !\pC'est bien plus que les 420\nautorisés par le PC de Bill.
 0x1EE9228: Assistante de Nat, je peux\nexpliquer le DexNav.
 0x1EE926A: Le DexNav est un appareil\ncomplexe.\pJe peux l'expliquer\nquand tu veux.
-0x1EE92D1: Le DexNav a deux parties:\nune {COLOR}Éinterface{COLOR}Ë et {COLOR}Ébarre de recherche{COLOR}Ë.\pL'interface est accessible depuis\nle {COLOR}ÉMenu Start{COLOR}Ë et permet de\lchoisir un Pokémon à chercher.\pSi un Pokémon peut être trouvé ici,\net s'il\lest marqué « {COLOR}Évu{COLOR}Ë »\ldans ton Pokédex, il\lapparaîtra comme recherché.\pUne fois un Pokémon choisi avec {SE_SHOP},\nil apparaît sur la barre\lde recherche tant qu'elle est active\pPour trouver le Pokémon choisi,\ngarde l'œil ouvert pour des\lphénomènes comme {COLOR}Éherbe frémissante{COLOR}Ë\lou {COLOR}Énuages de poussière{COLOR}Ë en grotte.\pTu dois t'en approcher lentement,\nsinon le Pokémon s'enfuit.\pNote que si le Pokémon n'est\npas enregistré comme « {COLOR}Écapturé{COLOR}Ë »\ldans ton Pokédex, il sera difficile\lde le trouver avant capture.\pQuand tu rencontres un Pokémon\navec le DexNav,\lson {COLOR}Éniveau de recherche{COLOR}Ë monte,\let les recherches seront meilleures.
+0x1EE92D1: Le DexNav a deux parties:\nune {COLOR}Éinterface{COLOR}Ë et {COLOR}Ébarre de recherche{COLOR}Ë.\pL'interface est accessible depuis\nle {COLOR}ÉMenu Start{COLOR}Ë et permet de\lchoisir un Pokémon à chercher.\pSi un Pokémon peut être trouvé ici,\net s'il\lest marqué «{COLOR}Évu{COLOR}Ë»\ldans ton Pokédex, il\lapparaîtra comme recherché.\pUne fois un Pokémon choisi avec {SE_SHOP},\nil apparaît sur la barre\lde recherche tant qu'elle est active\pPour trouver le Pokémon choisi,\ngarde l'œil ouvert pour des\lphénomènes comme {COLOR}Éherbe frémissante{COLOR}Ë\lou {COLOR}Énuages de poussière{COLOR}Ë en grotte.\pTu dois t'en approcher lentement,\nsinon le Pokémon s'enfuit.\pNote que si le Pokémon n'est\npas enregistré comme «{COLOR}Écapturé{COLOR}Ë»\ldans ton Pokédex, il sera difficile\lde le trouver avant capture.\pQuand tu rencontres un Pokémon\navec le DexNav,\lson {COLOR}Éniveau de recherche{COLOR}Ë monte,\let les recherches seront meilleures.
 0x1EE965F: Quand tu cherches un Pokémon,\ntu peux choisir de chercher\ldes Pokémon terrestres ou\laquatiques.\pLes Pokémon aquatiques incluent\nceux trouvés en Surf et à\lla Pêche.\pCependant, les Pokémon pêchés\nn'apparaissent que si\ltu as la Canne nécessaire\lpour les attraper.\pDe plus, quel que soit\nle Pokémon\lque tu cherches, il sera\lbien plus difficile à trouver si\ltu n'as pas déjà capturé\lson espèce.
 0x1EE983C: Plus ton niveau de recherche monte,\nplus tu obtiens de stats parfaites.\pLe potentiel d'une stat parfaite\nest indiqué sur la barre\lde recherche par une étoile argentée\lquand tu t'approches du Pokémon.\pUn Pokémon peut avoir jusqu'à trois\nstats parfaites, indiquées par\lune étoile dorée.
 0x1EE9946: Certains Pokémon peuvent apparaître\navec des capacités spéciales.\pCela arrive plus souvent avec un\nniveau de recherche élevé.\pQu'il ait ou non une capacité,\nsi ton niveau est assez haut,\lla première capacité\ldu Pokémon sera\lindiquée sur la barre de recherche\lquand tu t'approches du Pokémon.
@@ -15395,7 +15395,7 @@
 0x1EED32E: Ville de cratère
 0x1EED33C: Bourg Cratère J
 0x1EED34A: Bourg Cratère N
-0x1EED358: As-tu déjà pris\nl'Autoroute KBT ?\pC'est une autoroute souterraine\nqui contourne Borrius Ouest !\p« KBT » veut dire\nKing Borrius the Third.\pC'était le roi de Borrius qui\ncréa l'idée d'une autoroute\là l'échelle de la région.
+0x1EED358: As-tu déjà pris\nl'Autoroute KBT ?\pC'est une autoroute souterraine\nqui contourne Borrius Ouest !\p«KBT» veut dire\nKing Borrius the Third.\pC'était le roi de Borrius qui\ncréa l'idée d'une autoroute\là l'échelle de la région.
 0x1EED448: Les météorites de Bourg\nCratère sont chargées d'une sorte de\lpouvoir cosmique.\pOn dit que si un certain\nPokémon entre en contact avec l'une,\ldes choses étranges arriveront.
 0x1EED4EB: Cette grotte mène\nhors de la ville vers la Route 6.\pDe là, c'est tout\ndroit par la Route 7, le Mont Givre\let\nla Route 8 jusqu'à {COLOR}ÉVille Blizzard{COLOR}Ë.\pSi tu montes à pied\njusque là-haut, prends beaucoup de\lPoké\nBalls pour capturer des Pokémon.\pLa plupart évitent\nce chemin, car ils n'ont pas le\l{COLOR}ÉBadge Vision{COLOR}Ë.\pSans lui, impossible\nde couper l'{COLOR}ÉArbre Maigre{COLOR}Ë devant\ll'entrée.
 0x1EED690: Cette grotte là-bas mène\nhors de la ville vers la Route 6.\pDe là, c'est tout\ndroit par la Route 7, le Mont Givre\let\nla Route 8 jusqu'à <0xFC><0x01><0x06>Ville Blizzard<0xFC><0x01><0x08>.\pSi tu montes à pied\njusque là-haut, prends beaucoup de\lPoké Balls.\pMaintenant que l'<0xFC><0x01><0x06>Arbre Maigre<0xFC><0x01><0x08>\nbloquant le passage a été coupé,\lelle est beaucoup plus utilisée.
@@ -15650,7 +15650,7 @@
 0x1EF31EC: Oh non… mon uniforme\na déteint au lavage…\pJ'espère qu'ils ne verront pas d'un\nmauvais œil ma tenue décontractée…
 0x1EF3256: J'ai payé en {COLOR}ÉCapsules d'Argent{COLOR}Ç\npour booster le potentiel Pokémon…\pEt j'ai payé un scientifique de la\n{COLOR}ÉZone de Combat{COLOR}Ç pour changer la\l{COLOR}ÉNature{COLOR}Ç de mes Pokémon…\pEt alors si je sacrifie leur bien-\nêtre et leur bonheur ?\pCe qui compte, c'est qu'ils gagnent\nun combat !
 0x1EF336E: Les employés de Cube Corp. sont si\nsympas qu'ils prennent le temps\lde faire des visites\ldu lieu !\pMais il paraît qu'il existe un labo\nsecret souterrain qu'ils ne montrent\ljamais.
-0x1EF3437: Ces Rangers ne font que dénoncer\nles « maux » de Cube Corp.\pSache qu'il n'y a rien de mal chez\nCube Corp. !\pIls ont même été assez généreux pour\noffrir aux policiers des secteurs\lde stockage en plus dans\lnos Cubes !\pPourquoi ? Pour mieux servir la\npopulation, bien sûr !\pDis-moi, est-ce vraiment mal ?
+0x1EF3437: Ces Rangers ne font que dénoncer\nles «maux» de Cube Corp.\pSache qu'il n'y a rien de mal chez\nCube Corp. !\pIls ont même été assez généreux pour\noffrir aux policiers des secteurs\lde stockage en plus dans\lnos Cubes !\pPourquoi ? Pour mieux servir la\npopulation, bien sûr !\pDis-moi, est-ce vraiment mal ?
 0x1EF357F: Maintenant que la direction a été\nremaniée, que va\ldevenir Cube Corp. ?\pCherchera-t-on vraiment à\naméliorer la vie des citoyens de\lBorrius, ou était-ce un mensonge\ldès le départ ?
 0x1EF364A: Il n'y a pas de Centre Pokémon ici,\nchez Cube Corp., alors laisse-moi\lsoigner tes Pokémon !
 0x1EF36A5: Même sans Centre Pokémon ici, tu\nne manqueras pas de {COLOR}ÉPorygon{COLOR}Ç\lsi tu veux accéder\lau PC Pokémon.\pPratique, non ?\pCes scientifiques ont pensé à\ntout !
@@ -15809,8 +15809,8 @@
 0x1EF76E2: Veux-tu que je garde aussi\ntes autres Œufs ?\pJ'en ai {COLOR}É{STR_VAR_1}{COLOR}Ë en tout.
 0x1EF773D: Très bien, je les garde tous.\nMerci !
 0x1EF7764: Très bien, je continue de garder\ntes Œufs.
-0x1EF779A: Tu n'as plus de place.\pPuis-je l'envoyer au PC ?\nLa boîte actuelle est « {COLOR}É{STR_VAR_1}{COLOR}Ë ».
-0x1EF77F7: Tu n'as plus de place.\pPuis-je envoyer les Œufs que j'ai\nau PC ?\pJ'en ai {COLOR}É{STR_VAR_2}{COLOR}Ë en tout, et\nla boîte actuelle est « {COLOR}É{STR_VAR_1}{COLOR}Ë ».
+0x1EF779A: Tu n'as plus de place.\pPuis-je l'envoyer au PC ?\nLa boîte actuelle est «{COLOR}É{STR_VAR_1}{COLOR}Ë».
+0x1EF77F7: Tu n'as plus de place.\pPuis-je envoyer les Œufs que j'ai\nau PC ?\pJ'en ai {COLOR}É{STR_VAR_2}{COLOR}Ë en tout, et\nla boîte actuelle est «{COLOR}É{STR_VAR_1}{COLOR}Ë».
 0x1EF788F: Ça peut prendre un peu de temps.\pMerci d'attendre\nquelques instants.
 0x1EF78D6: C'est fait.\pLes Œufs restants ont été envoyés\nau PC.\pPrends-en bien soin.
 0x1EF7921: C'est fait.\pL'Œuf restant a été envoyé\nau PC.\pPrends-en bien soin.
@@ -15871,12 +15871,12 @@
 0x1EF8AB7: Il y a des Dresseurs affreux qui\nfont des élevages, encore et encore,\let quand ils ont fini\ld'élever, ils relâchent les Pokémon\lqu'ils ne veulent pas !\pQuelle horreur !\pTu n'es pas de ceux-là,\nhein ?
 0x1EF8B88: Beurk, toi encore ! Tu viens\nme laisser d'autres Pokémon ?
 0x1EF8BC4: Beurk ! Tu l'es ?\nQuelle horreur !\p…Bon, je ne peux pas t'empêcher de\nrelâcher ces Pokémon, alors\lque dirais-tu de me les confier\là la place ?
-0x1EF8C46: Alors, tu veux me laisser\nles Pokémon de la Boîte « {COLOR}É{STR_VAR_1}{COLOR}Ç »\lavec moi ?
-0x1EF8C8E: Tu ne reverras jamais ces\nPokémon.\pEs-tu VRAIMENT sûr de vouloir\nme laisser tous tes Pokémon de la\lBoîte « {COLOR}É{STR_VAR_1}{COLOR}Ç » avec moi ?
-0x1EF8D0E: Très bien, les Pokémon de la Boîte\n« {COLOR}É{STR_VAR_1}{COLOR}Ç » auront désormais un\lfoyer aimant chez moi.\pTu es un Dresseur abject et j'espère\nque tu te repentiras.
+0x1EF8C46: Alors, tu veux me laisser\nles Pokémon de la Boîte «{COLOR}É{STR_VAR_1}{COLOR}Ç»\lavec moi ?
+0x1EF8C8E: Tu ne reverras jamais ces\nPokémon.\pEs-tu VRAIMENT sûr de vouloir\nme laisser tous tes Pokémon de la\lBoîte «{COLOR}É{STR_VAR_1}{COLOR}Ç» avec moi ?
+0x1EF8D0E: Très bien, les Pokémon de la Boîte\n«{COLOR}É{STR_VAR_1}{COLOR}Ç» auront désormais un\lfoyer aimant chez moi.\pTu es un Dresseur abject et j'espère\nque tu te repentiras.
 0x1EF8DA6: Je m'en doutais.\nTu n'en as pas l'air.
 0x1EF8DD2: Beurk, quelle horreur !
-0x1EF8DE7: Heureusement, tu n'as aucun Pokémon\ndans la Boîte « {COLOR}É{STR_VAR_1}{COLOR}Ç ».\pJe n'aurai pas à sauver de Pokémon\nà cause de toi cette fois-ci.
+0x1EF8DE7: Heureusement, tu n'as aucun Pokémon\ndans la Boîte «{COLOR}É{STR_VAR_1}{COLOR}Ç».\pJe n'aurai pas à sauver de Pokémon\nà cause de toi cette fois-ci.
 0x1EF8E58: Tout le monde connaît les cap. Œuf.\pCe sont des capacités spéciales que\nles Pokémon n'apprennent qu'en\lse reproduisant avec un Pokémon\lqui en connaît.\pMais écoute.\pJ'ai une technique spéciale qui peut\ntransférer des cap. Œuf d'un Pokémon\là un autre !\pÀ condition qu'ils soient de la même\nfamille évolutive, bien sûr.\pAlors, tu veux que je transfère des\ncap. Œuf d'un Pokémon\là un autre ?\pÇa ne coûte que ¥{COLOR}É{STR_VAR_1}{COLOR}Ë.
 0x1EF8FED: Veux-tu transférer des cap. Œuf\nd'un Pokémon à un autre de la même\lfamille évolutive ?\pÇa ne coûte que ¥{COLOR}É{STR_VAR_1}{COLOR}Ë.
 0x1EF9068: De quel Pokémon veux-tu\ntransférer les cap. Œuf ?
@@ -15909,7 +15909,7 @@
 0x1EF9AC9: Cette grotte s'appelle la {COLOR}ÉGrotte Faille{COLOR}Ë.\pDans mes recherches, j'ai trouvé\nqu'elle ressemble à la {COLOR}ÉGrotte Retour{COLOR}Ë\lde Sinnoh.\pSerait-elle liée au mystérieux\nmonde appelé\l{COLOR}ÉMonde Distorsion{COLOR}Ë ?
 0x1EF9B99: Tu ne cuis pas dans ces vêtements ?\pQu'est-ce qui t'a poussé à porter\ncette tenue dans le désert ?
 0x1EF9BF7: C'est quoi cette tenue ?\pTu ne pouvais pas faire pire\npour t'habiller ici !\pCe look de cape et d'épée va\nte griller sur place !
-0x1EF9C88: Ta tenue dégage vraiment l'aura\nde « Champion »,\ltu sais ?\pPersonne d'autre que toi ne pourrait\nporter ça, Champion !
+0x1EF9C88: Ta tenue dégage vraiment l'aura\nde «Champion»,\ltu sais ?\pPersonne d'autre que toi ne pourrait\nporter ça, Champion !
 0x1EF9D11: Ta tenue a l'air fraîche !\pCe n'est pas parfait pour le désert,\nmais tu ne bouilliras pas.
 0x1EF9D78: Ta tenue est bien argentée !\pOu c'est un reflet doré que je\nvois ?\pQuoi qu'il en soit, tu as vraiment\nl'air d'un héros avec ça !
 0x1EF9DF9: J'ai essayé de traverser le\n{COLOR}ÉGrand Désert{COLOR}Ç à l'est de la ville,\lmais la tempête de sable trop forte.\pElle me fouettait le visage,\net je ne voyais rien.\pSans {COLOR}ÉLunettes Sable{COLOR}Ç pour protéger\nmes yeux, c'était impossible d'aller\lplus loin.\pJe sais qu'un gars du coin en a\nune collection entière, mais il est\ltrès pointilleux sur à qui il les\ldonne.
@@ -16268,7 +16268,7 @@
 0x1F0263C: Quel Mystherbe me donneras-tu ?
 0x1F0265B: Tu veux me donner {STR_VAR_1} ?
 0x1F0269A: Tu veux me donner le {COLOR}ÉMystherbe {STR_VAR_1}{COLOR}Ë\nde ton équipe ?
-0x1F026FF: Tu veux me donner le {COLOR}ÉMystherbe {STR_VAR_2}{COLOR}Ë\ndans la Boîte « {COLOR}É{STR_VAR_1}{COLOR}Ë » ?
+0x1F026FF: Tu veux me donner le {COLOR}ÉMystherbe {STR_VAR_2}{COLOR}Ë\ndans la Boîte «{COLOR}É{STR_VAR_1}{COLOR}Ë» ?
 0x1F0273A: On dirait que j'ai juste assez de\nMystherbe pour faire une brume pour\ltes Pokémon !\pLaisse-moi une seconde…
 0x1F0279B: Mmm…\pÇa sent bon…\p…\pEuh… bref, tiens !
 0x1F027CD: C'est la {COLOR}ÉBrume Rêve{COLOR}Ë.\pFais-la respirer à un Pokémon pour\nactiver son {COLOR}ÉTalent Caché{COLOR}Ë.\pSurtout, ne l'inhale pas\ntoi-même !
@@ -16280,7 +16280,7 @@
 0x1F029CC: Impossible de récolter des Feuilles\nMystherbe sur un Œuf…
 0x1F029F7: Impossible de récolter des Feuilles\nMystherbe sur ce Pokémon.\pCe n'est pas un Mystherbe…
 0x1F02A3C: Je ne peux prendre ce Mystherbe.\pTu n'aurais plus de Pokémon\npour te battre…
-0x1F02A80: Tu n'as aucun Mystherbe dans la\nBoîte « {COLOR}É{STR_VAR_1}{COLOR}Ë »…
+0x1F02A80: Tu n'as aucun Mystherbe dans la\nBoîte «{COLOR}É{STR_VAR_1}{COLOR}Ë»…
 0x1F02AB1: Encore {COLOR}É{STR_VAR_1}{COLOR}Ë\nde Mystherbe, et je ferai une brume.
 0x1F02AF2: Héééé…\pTu veux acheter des herbes ?
 0x1F02B14: Reviens quand tu veuxuuuu…
@@ -16399,7 +16399,7 @@
 0x1F05779: Il m'a échangé son {COLOR}ÉÉlektek{COLOR}Ë, alors\nj'ai utilisé un {COLOR}ÉÉlectriseur{COLOR}Ë comme\l{COLOR}ÉPierre Évo{COLOR}Ë, et il a évolué !
 0x1F057F0: Certains Pokémon n'évoluent\nque par échange.\pMais qui échange encore,\nhein ?\pCette mode est morte depuis des\nannées.\pMaintenant, tu peux les faire\névoluer avec une {COLOR}ÉPierre Lien{COLOR}Ë !\pRegarde !
 0x1F058BD: La {COLOR}ÉPierre Lien{COLOR}Ë permet de\nfaire évoluer ceux qui\ln'évoluent que par échange.
-0x1F0591E: Ici, tout le monde dit,\n" évolution par-ci " et " évolution\lpar-là ".\pMais je trouve l'évolution stupide !\pMa méthode préférée pour empêcher\nl'évolution n'est pas d'appuyer sur\lle <0xFC><0x01><0x06>bouton B<0xFC><0x01><0x08> quand mon\lPokémon va évoluer, mais de lui\lfaire tenir une <0xFC><0x01><0x06>Pierre Stase<0xFC><0x01><0x08>.\pComme ça, j'évite l'évolution\ncomplètement !\pEt tu sais quoi ?\pJe t'en donnerai une si tu me\nmontres un Pokémon qui n'a jamais\lévolué et ne peut pas évoluer !\pTu as un Pokémon comme ça dans\nton équipe ?
+0x1F0591E: Ici, tout le monde dit,\n"évolution par-ci" et "évolution\lpar-là".\pMais je trouve l'évolution stupide !\pMa méthode préférée pour empêcher\nl'évolution n'est pas d'appuyer sur\lle <0xFC><0x01><0x06>bouton B<0xFC><0x01><0x08> quand mon\lPokémon va évoluer, mais de lui\lfaire tenir une <0xFC><0x01><0x06>Pierre Stase<0xFC><0x01><0x08>.\pComme ça, j'évite l'évolution\ncomplètement !\pEt tu sais quoi ?\pJe t'en donnerai une si tu me\nmontres un Pokémon qui n'a jamais\lévolué et ne peut pas évoluer !\pTu as un Pokémon comme ça dans\nton équipe ?
 0x1F05AFD: Quel Pokémon est-ce ?
 0x1F05B12: Oui, ce Pokémon n'a jamais\névolué et ne peut pas évoluer.\pComme promis, prends {COLOR}ÉPierre Stase{COLOR}Ë !
 0x1F05B72: Si un Pokémon tient {COLOR}ÉPierre Stase{COLOR}Ë,\nil n'évoluera pas !\pS'il en tient une en\npension, il transmet sa nature !\pLes Pierres Stase, c'est génial !\pSi tu en veux d'autres, j'ai\nentendu dire qu'il y en a plein\lcoincées dans les {COLOR}Émurs{COLOR}Ë\lde l'{COLOR}ÉAutoroute KBT{COLOR}Ë.\pMais comment les sortir ?\nAucune idée…
@@ -16410,7 +16410,7 @@
 0x1F05EB5: {STR_VAR_1} !\nIl est si doux et rose !\pTu devrais utiliser la {COLOR}ÉPierre Ovale{COLOR}Ç\npour le faire évoluer !
 0x1F05F04: Ton {COLOR}É{STR_VAR_1}{COLOR}Ç doit tenir la {COLOR}ÉPierre Ovale\n{COLOR}Ç pendant la {COLOR}Éjournée{COLOR}Ç !
 0x1F05F4D: Ouaaah !\nJe veux voir un {COLOR}É{STR_VAR_1}{COLOR}Ç !
-0x1F05FA4: Salut ! On m'appelle le « maître de\nl'évolution » !\pJe connais toutes les façons\nqu'ont les Pokémon d'évoluer !\pTu veux savoir comment ton\nPokémon évolue ?
+0x1F05FA4: Salut ! On m'appelle le «maître de\nl'évolution» !\pJe connais toutes les façons\nqu'ont les Pokémon d'évoluer !\pTu veux savoir comment ton\nPokémon évolue ?
 0x1F06025: Je vois, ma sagesse t'intimide\npour demander, hein ?
 0x1F06062: Quel Pokémon veux-tu\nconnaître ?
 0x1F0608B: Un Œuf…\pN'évolue pas !
@@ -16562,7 +16562,7 @@
 0x1F0925A: Je suis si riche que ma piscine a\nsa propre piscine !\pEt pourtant…{PAUSE}î et pourtant, tout\nl'argent ne me rend pas heureux.\pLa vraie richesse réside dans une\nmonnaie luxueuse : les Points Exp. !\pAlors, veux-tu me montrer ton désir\nde devenir vraiment riche ?
 0x1F0935A: Alors, montre-moi ta soif de\nvraie richesse.\pPour être vraiment riche, fais\nobtenir {COLOR}É{STR_VAR_1}{COLOR}Ç Points Exp.\lau total en une seule journée.
 0x1F093F2: Hm. Je n'en attendais pas moins\nd'un crétin matérialiste.
-0x1F09434: Actuellement, tes Pokémon ont gagné\n{COLOR}É{STR_VAR_2}{COLOR}Ç Point{VERSION} Exp. aujourd'hui.\pMais tu dois encore en gagner\n{COLOR}É{STR_VAR_3}{COLOR}Ç Point{EVIL_TEAM} Exp.\pAlors seulement tu dépasseras le\nstatut de « moyennement riche ».
+0x1F09434: Actuellement, tes Pokémon ont gagné\n{COLOR}É{STR_VAR_2}{COLOR}Ç Point{VERSION} Exp. aujourd'hui.\pMais tu dois encore en gagner\n{COLOR}É{STR_VAR_3}{COLOR}Ç Point{EVIL_TEAM} Exp.\pAlors seulement tu dépasseras le\nstatut de «moyennement riche».
 0x1F094EA: Incroyable…\pVraiment, tu es la personne la plus\nriche que j'aie connue.\pCette volonté…{PAUSE}î cette passion…{PAUSE}î\nje sais ce que je dois faire !\pÇa y est !\pJe n'aurai plus besoin d'économies\nà vie !
 0x1F095A6: Je suis libre de mes désirs\nmatériels.\pEt enfin…{PAUSE}î enfin, je suis vraiment\nriche.\pTrès impressionnant, Dresseur.\pCependant, je vois que ton désir\npour la richesse dépasse le mien…\pAlors, en récompense de ta\nvolonté…{PAUSE} ah, oui.\pPrends ces Œufs Chance.
 0x1F09699: Et en plus, laisse-moi les rendre\nencore plus chanceux !
@@ -16602,18 +16602,18 @@
 0x1F0A717: Une petite montagne connue\npour relier la Route 7 à la Route 8.\nMalgré son nom, il y a\npeu de glace à l'intérieur.
 0x1F0A789: Tu vois ces rochers au mur ?\pSi tu as un Pokémon pouvant\nutiliser {COLOR}ÉEscalade{COLOR}Ë, tu peux grimper !
 0x1F0A81D: ATTAQUER\nPAR DERRIÈRE\nEST LA CLÉ.
-0x1F0A892: Je te préviens, on ne nous appelle\npas le « Duo Démoniaque » pour rien.\pCe combat ne se passera pas\ncomme tu l'espères.\pTu es prévenu…
+0x1F0A892: Je te préviens, on ne nous appelle\npas le «Duo Démoniaque» pour rien.\pCe combat ne se passera pas\ncomme tu l'espères.\pTu es prévenu…
 0x1F0A912: On dirait que mon avertissement\nétait inutile…
 0x1F0A939: Pour ta belle démonstration\nde talent, je te remets\lce Z-Cristal spécial.
 0x1F0A991: Le Mimikium Z sert à\nactiver la Capacité Z de {COLOR}ÉMimiqui{COLOR}Ë\len renforçant {COLOR}ÉCâlinerie{COLOR}Ë.
-0x1F0A9FD: Beaucoup nous appellent le « Duo\nDémoniaque ».\pCe surnom nous a été donné après\navoir battu tous ceux qu'on a\lcroisés.\pAinsi, nous ne défions que les\nDresseurs les plus forts.\pTu n'y es pas encore.
-0x1F0AABD: On nous appelle le « Duo Démon ».\pCe surnom nous a été donné après\navoir battu tous ceux qu'on a\lcroisés.\pSi tu veux nous vaincre, tu dois\ncombattre en {COLOR}Édeux contre deux{COLOR}Ë\lavec {COLOR}ÉCombat{COLOR}Ë et {COLOR}ÉDragon{COLOR}Ë.
-0x1F0ABA6: Fu fu fu…\pVenir ici n'est pas simple.\pSache toutefois qu'on ne nous\nappelle pas le « Duo Démoniaque »\lpour rien !\pPrépare-toi à l'abîme !
+0x1F0A9FD: Beaucoup nous appellent le «Duo\nDémoniaque».\pCe surnom nous a été donné après\navoir battu tous ceux qu'on a\lcroisés.\pAinsi, nous ne défions que les\nDresseurs les plus forts.\pTu n'y es pas encore.
+0x1F0AABD: On nous appelle le «Duo Démon».\pCe surnom nous a été donné après\navoir battu tous ceux qu'on a\lcroisés.\pSi tu veux nous vaincre, tu dois\ncombattre en {COLOR}Édeux contre deux{COLOR}Ë\lavec {COLOR}ÉCombat{COLOR}Ë et {COLOR}ÉDragon{COLOR}Ë.
+0x1F0ABA6: Fu fu fu…\pVenir ici n'est pas simple.\pSache toutefois qu'on ne nous\nappelle pas le «Duo Démoniaque»\lpour rien !\pPrépare-toi à l'abîme !
 0x1F0AC39: En effet, tu étais prêt…
 0x1F0AC54: Pour ton excellent combat, je te\nprésente\lce Z-Cristal spécial.
 0x1F0ACA3: Si tu offres le {COLOR}ÉMimikium Z{COLOR}Ç à un\n{COLOR}ÉMimiqui{COLOR}Ç, tu peux renforcer {COLOR}ÉCâlinerie{COLOR}Ç\len sa Capacité Z.
-0x1F0AD1C: Fu fu fu…\pVenir ici n'est pas simple.\pSache toutefois qu'on ne nous\nappelle pas le « Duo Démoniaque »\lpour rien !\pToi, malheureusement, tu n'es pas\nencore de taille à nous affronter.
-0x1F0ADCC: Fu fu fu…\pVenir ici n'est pas simple.\pSache toutefois qu'on ne nous\nappelle pas le « Duo Démoniaque »\lpour rien !\pSi tu veux nous affronter, tu dois\npouvoir combattre {COLOR}Édeux contre\ldeux{COLOR}Ç avec des {COLOR}ÉCombat{COLOR}Ç et {COLOR}ÉDragon{COLOR}Ç\là tes côtés.
+0x1F0AD1C: Fu fu fu…\pVenir ici n'est pas simple.\pSache toutefois qu'on ne nous\nappelle pas le «Duo Démoniaque»\lpour rien !\pToi, malheureusement, tu n'es pas\nencore de taille à nous affronter.
+0x1F0ADCC: Fu fu fu…\pVenir ici n'est pas simple.\pSache toutefois qu'on ne nous\nappelle pas le «Duo Démoniaque»\lpour rien !\pSi tu veux nous affronter, tu dois\npouvoir combattre {COLOR}Édeux contre\ldeux{COLOR}Ç avec des {COLOR}ÉCombat{COLOR}Ç et {COLOR}ÉDragon{COLOR}Ç\là tes côtés.
 0x1F0AECE: On dit qu'un oiseau bleu rare\nvit au sommet du Mont Givre.
 0x1F0AF03: Il y vivait, mais des voyous\nl'ont chassé.
 0x1F0AF31: Des voyous avec une énorme\ntête de Granbull ont tenté\lde capturer l'oiseau bleu rare\lqui vivait au Mont Givre.\pMais il en a changé une bonne partie\nen esquimaux et a filé\lquelque part.\pJe me demande s'il reviendra…
@@ -16784,7 +16784,7 @@
 0x1F0EEE8: Et comme c'est Happy Hour…
 0x1F0EF10: Francis
 0x1F0EF18: Fresia
-0x1F0EF76: New Game + a été activé.\pVérifie la Boîte « {COLOR}É{STR_VAR_1}{COLOR}Á » pour les\nPokémon transférés.\p{COLOR}ÊN'OUBLIE PAS DE SAUVEGARDER\nAVANT DE SAUVER !
+0x1F0EF76: New Game + a été activé.\pVérifie la Boîte «{COLOR}É{STR_VAR_1}{COLOR}Á» pour les\nPokémon transférés.\p{COLOR}ÊN'OUBLIE PAS DE SAUVEGARDER\nAVANT DE SAUVER !
 0x1F0F004: New Game + est une option spéciale\nqui permet de recommencer une partie\lavec des bonus spéciaux :\p1) Une équipe de 6 Pokémon\npeut être transférée dans la partie.\pCes 6 Pokémon viennent\nde l'équipe de la sauvegarde.\pLes Pokémon reviendront en forme\nde base et oublieront leurs attaques\lsauf les Cap. Œuf.\pLes objets tenus\nsont conservés, sauf les Z-Cristaux.\pDe plus, les stats\ncomme les EV et IV sont conservés.\p2) Si tu as obtenu\nces objets sur l'ancienne sauvegarde\lils seront transférés vers\lla nouvelle partie :\pScanner de Stats, Moto, DexNav,\nCherch'Objet, Baby Monitor, ADM,\lCatalogue Dresseurs, Charme Chroma,\lCharme Ovale, Charme Capture,\lPierre Magma, Carte Frontière,\lPorta-PC, Retireur de Temps,\laméliorations d'objet et BP gagné.\p3) La difficulté peut être\naugmentée ou réduite à tout moment\lsans pénalité.\p4) Certains puzzles de l'histoire\nrésolus dans l'ancienne sauvegarde\lresteront résolus.\p5) Si la Carte Frontière est\ntransférée, la Frontière de Combat\lsera accessible dès\ll'arrivée à Ville Portuaire.\p6) Des PNJ pour\nmodifier IV, EV et natures seront\ldisponibles à Bourg Cratère jusqu'à\lla fin du jeu (hors\lmode Sandbox).\pNote que certains peuvent\ndemander des BP, alors veille à\len gagner assez avant de lancer la\lnouvelle partie.\p7) Certains Pokémon\nlégendaires bloqués au post-game\lseront obtenables avant\lla fin du jeu.
 0x1F0F5A6: Bienvenue dans Pokémon Unbound !\n\nAvant de commencer à jouer,\nsache que ceci est un jeu de fans\nà but non lucratif.\n\nSi tu as payé pour ce jeu,\nréclame ton argent immédiatement !
 0x1F0F64D: Dans le monde qui s'ouvre à toi,\ntu vivras une grande aventure\ndont tu seras le héros.\n\nLe monde est vaste. Prends le temps\nde l'explorer, rien ne presse.
@@ -16890,7 +16890,7 @@
 0x1F12046: Tourne, vire, sable, délire…
 0x1F12064: Belliciste
 0x1F1206E: Deviens un Lucario Immortel !\nMène {STR_VAR_1} combats pour l'initiation.
-0x1F120B3: Je suis membre d'un puissant culte\nde guerriers, les\lLucario Immortels.\pAutrefois, nous combattions\npas pour l'argent, mais pour jouer.\pMais la société moderne juge les\ncombats humains « inhumains »,\lalors on combat avec nos Pokémon.\pAs-tu ce qu'il faut\npour devenir l'un des nôtres ?
+0x1F120B3: Je suis membre d'un puissant culte\nde guerriers, les\lLucario Immortels.\pAutrefois, nous combattions\npas pour l'argent, mais pour jouer.\pMais la société moderne juge les\ncombats humains «inhumains»,\lalors on combat avec nos Pokémon.\pAs-tu ce qu'il faut\npour devenir l'un des nôtres ?
 0x1F121E3: Pour finir ton initiation,\ntu dois goûter au frisson du combat\lau moins {COLOR}É{STR_VAR_1}{COLOR}Ë fois.
 0x1F12246: Tout le monde n'a pas le cœur\nde devenir un Lucario Immortel.
 0x1F12282: Tu as livré beaucoup de combats.\pMais pour être un vrai membre\ndes Lucario Immortels, tu dois en\lfaire encore {COLOR}É{STR_VAR_3}{COLOR}Ë.
@@ -17137,7 +17137,7 @@
 0x1F18108: Big Mo
 0x1F1810F: Eh bien, regarde qui veut tuer\nson ennui !\pT'es le gamin que j'ai croisé sur\nla Route 16, non ?\p…\pAlors, tu t'appelles {PLAYER} !\pHa ! Alors je ferais mieux de\nme présenter correctement aussi !\pIci, tout le monde m'appelle\nBig Mo !\pEt je suis le seul à tenir\nles bas-fonds d'Antisis\lsous contrôle !\pTous les gangs sont sous mon talon,\ncompris ?\p{EVIL_LEGENDARY}\pOn n'arrive pas ici en\nétant une mauviette !\pAlors viens ! Voyons ce que tu peux\nfaire au parrain d'Antisis !
 0x1F182D8: Peu importe leur taille,\nils doivent lécher mes bottes !
-0x1F18318: Et ça vaut pour ta petite bande,\nles « Black {PLAYER} ».\pMignon de vouloir t'imposer.
+0x1F18318: Et ça vaut pour ta petite bande,\nles «Black {PLAYER}».\pMignon de vouloir t'imposer.
 0x1F18372: Ha ha ha ha !\pIls devraient t'appeler\nBig {PLAYER} !
 0x1F183A5: Gah ! Tout ce temps à cogner des\npetits poissons m'a ramolli !\pMême avec toutes les règles en place\npour me laisser toutes les cartes…\pHa ha ha ha ! D'accord, tu m'as eu !\pMême si Antisis est un taudis, j'ai\nquand même un statut officiel de\lChampion d'Arène !\pEt un Champion d'Arène donne ça à\ntout vainqueur !
 0x1F184F8: Voilà le Badge Combat !\pPokémon échangés, Nv <0x34> 57 max\nsauront qui est le vrai boss !\pEt tu peux grimper ces falaises\navec la capacité\l{COLOR}ÉEscalade{COLOR}Ë !\pDis que c'est pas utile !\pOh ouais… je suppose que tu peux\nprendre ça.\pDis que c'est un cadeau de\nBig Mo.
@@ -17275,7 +17275,7 @@
 0x1F1B32C: Tu as survécu au ring,\nmais tu as aussi battu Big Mo !\pJe suis pas facile à impressionner,\nmais tu as fait le boulot, gamin.
 0x1F1B3A8: Ici, c'est l'Arène d'Antisis !\pTu crois avoir ce qu'il faut pour\nsurvivre au ring et battre Big Mo ?
 0x1F1B408: Peu de challengers survivent au\nring comme toi.\pTu es spécial, gamin.
-0x1F1B45C: Big Mo a changé notre vieux Défi\ndu Ring en une sorte de\lcentre de combat chic.\pIl a même convaincu ces crétins de\nla Frontière de Combat d'envoyer\lun de leurs bouffons pour arbitrer !\pMais quoi qu'il fasse, il n'a\npas réussi à convaincre d'ajouter\lcomme centre de combat « officiel ».\pAlors, comme tu n'as aucune\nrécompense en gagnant ici, si tu\larrives quand même à {COLOR}É100{COLOR}Ë victoires,\ltu auras une nouvelle étoile sur ta\lCarte Dresseur.\pC'est-y pas mignon ?
+0x1F1B45C: Big Mo a changé notre vieux Défi\ndu Ring en une sorte de\lcentre de combat chic.\pIl a même convaincu ces crétins de\nla Frontière de Combat d'envoyer\lun de leurs bouffons pour arbitrer !\pMais quoi qu'il fasse, il n'a\npas réussi à convaincre d'ajouter\lcomme centre de combat «officiel».\pAlors, comme tu n'as aucune\nrécompense en gagnant ici, si tu\larrives quand même à {COLOR}É100{COLOR}Ë victoires,\ltu auras une nouvelle étoile sur ta\lCarte Dresseur.\pC'est-y pas mignon ?
 0x1F1B62C: Tu crois vraiment pouvoir battre\nBig Mo sans capacités de type {COLOR}É{STR_VAR_1}{COLOR}Ë\l? Hein ?
 0x1F1B67A: Tu crois vraiment pouvoir battre\nBig Mo quand ta {COLOR}Évitesse{COLOR}Ë vaut\lton {COLOR}Époids{COLOR}Ë, et que tu {COLOR}Éne peux pas{COLOR}Ë\lutiliser de {COLOR}ÉTalents prioritaires{COLOR}Ë ?
 0x1F1B708: Tu crois vraiment pouvoir battre\nBig Mo quand ta {COLOR}Évitesse{COLOR}Ë vaut\lton {COLOR}Époids{COLOR}Ë, et que tu {COLOR}Éne peux pas{COLOR}Ë\lutiliser des {COLOR}ÉFée{COLOR}Ë ou des {COLOR}ÉTalents\lprioritaires{COLOR}Ë, hein ?
@@ -17311,7 +17311,7 @@
 0x1F1BF74: Utilise tes souvenirs.\nIls te guideront.
 0x1F1BF9C: Hé, gamin !\p-KOF- -TOUX-\pBienvenue à ton premier Défi\nd'Arène !\pLaisse-moi commencer avec un\npetit cadeau.\p-TOUX- -SOUFFLE-
 0x1F1C019: Le Champion d'Arène, Mirskle,\npréfère les Pokémon floraux.\pAvec un Pokémon {COLOR}ÉFeu{COLOR}Ë ou\nun Pokémon {COLOR}ÉVol{COLOR}Ë, tu devrais\lle battre sans souci !\p-TOUX- -TOUX-\pSache que Mirskle aime\nremplir son Arène de brouillard\lpar moments, et ça peut\lmodifier tes combats.\pÇa te permettra d'esquiver\nfacilement, mais tu auras\lplus de mal à les toucher !\pTa stratégie principale devrait\nêtre de retirer le Brouillard\ldu terrain, puis de le mettre sur\lton adversaire.\pTu sais, avec une capacité comme\n{COLOR}ÉTempête de Sable{COLOR}Ë ou {COLOR}ÉAnti-Brume{COLOR}Ë.\pBonne chance !\p-TOUX- -SOUFFLE-
-0x1F1C272: Je suis impressionné !\pTu as battu Mirskle même avec les\nyeux pleins de « brouillard » !\pPrends ceci comme preuve en plus de\nta victoire ici.
+0x1F1C272: Je suis impressionné !\pTu as battu Mirskle même avec les\nyeux pleins de «brouillard» !\pPrends ceci comme preuve en plus de\nta victoire ici.
 0x1F1C2F4: C'est une Gemme rare qui peut\nbooster une capacité {COLOR}ÉPlante{COLOR}Ë\len combat pour toi !\pJe suis sûr qu'elle t'aidera,\nchampion en devenir.
 0x1F1C376: Oh, c'est toi !\nChampion en devenir !\pJe ne t'avais pas vu !\pBienvenue à l'Arène Bourg-Cratère !\pCommençons avec un peu\nd'Eau Fraîche.
 0x1F1C3FC: Comme tu peux le voir ou non, cette\nArène tourne autour des {COLOR}ÉTénèbres{COLOR}Ë.\pPour gagner ici, un bon départ\nserait d'amener des types\l{COLOR}ÉCombat{COLOR}Ë, {COLOR}ÉInsecte{COLOR}Ë ou {COLOR}ÉFée{COLOR}Ë.\pAttention, à cause des nombreux\nDresseurs qui peinent dans cette\lArène, des {COLOR}Éondes négatives{COLOR}Ë partout\lpendant tes combats.\pCes émotions infligeront des dégâts\nà la fin de chaque tour.\pSeuls les types {COLOR}ÉTénèbres{COLOR}Ë, {COLOR}ÉPsy{COLOR}Ë,\n{COLOR}ÉSpectre{COLOR}Ë, et les Pokémon avec les\lTalents {COLOR}ÉGarde Magik{COLOR}Ë, {COLOR}ÉInconscient{COLOR}Ë, ou\l{COLOR}ÉBenêt{COLOR}Ë ne sont pas affectés.\pSi tu galères à cause des\némotions négatives, amener un\lPokémon non affecté pourrait\lvraiment t'aider.\pPour atteindre Véga, le Champion,\nc'est assez simple.\pParcours les couloirs peu éclairés,\net ne te fais pas repérer.\pSi tu te fais repérer, tu devras\naffronter des Dresseurs ou être\lrenvoyé au début\ldu couloir.\pChaque Dresseur battu éclairera\nla salle, donc je\lte conseille de tous les affronter.\pBonne chance !
@@ -17387,7 +17387,7 @@
 0x1F1FEA4: Pour l'instant, ces {COLOR}É{STR_VAR_3}{COLOR}Ë\ntablette{EVIL_TEAM} restent un mystère.\pQuand tu auras tout découvert,\nviens me voir\lpour une récompense.
 0x1F1FF3C: Tu l'as fait !\pTu as percé les secrets derrière\nchacune des anciennes tablettes de\lBorrius !\pMême moi, le plus grand esprit de\nla Société d'Archéologie, je n'ai\lpas réussi.\pJe dois l'avouer… je t'ai peut-être\nmal jugé au début.\pMais j'ai compris qu'il y a\nbien plus en chacun qu'il n'y\lparaît au premier regard.\pTu as mes excuses et, encore une\nfois, merci.
 0x1F200CB: Je suis sûr que tu as vu les antres\nanciens derrière chaque tablette,\ln'est-ce pas ?\pUne fois un antre vidé pour la\njournée, lance un {COLOR}ÉMorceau\lVœu{COLOR}Ë dedans.\pCela fera apparaître un nouveau\nPokémon.\pSur ce, je te salue, Dresseur,\net te dis adieu.\pÀ bientôt !
-0x1F201E9: Tablette trouvée dans la section\ncachée de la Grotte Stalactite\ndécouverte durant « Le Voleur ».
+0x1F201E9: Tablette trouvée dans la section\ncachée de la Grotte Stalactite\ndécouverte durant «Le Voleur».
 0x1F20247: Cette tablette a été trouvée au 2F\naprès avoir sauté sur des rochers\nprès du mur le plus haut.
 0x1F202AE: Cette tablette a été trouvée au B1F\nprès de l'échelle vers la Route 6,\net sous la cascade.
 0x1F2030A: Cette tablette a été trouvée au 1F\naprès avoir utilisé Escalade dans la\npartie nord-ouest de la caverne.
@@ -17400,7 +17400,7 @@
 0x1F2050C: Ce Leveinard demande {COLOR}É¥{STR_VAR_1}{COLOR}Á pour soigner\nles Dresseurs en mode Insane.
 0x1F20544: Si tu es assez fou pour tenter\nInsane, alors tu dois être assez\lfou pour acheter des objets de soin,\lou prêt à payer le prix de\l6 Guérisons, 5 Rappels et\l6 Max Élixirs à chaque fois que\ltu as besoin de te soigner.\pTu n'aimes pas ça ?\pJoue à une difficulté plus basse.\pCe mode de jeu n'est pas fait pour\nceux qui veulent la voie\lfacile.\pTu es prévenu.
 0x1F2069F: Tu n'as pas assez d'argent.
-0x1F206C0: {PLAYER} !\nQuel hasard de te voir ici !\pJe pensais que tu faisais une\ndes « corvées » de Log, ou un truc.\p…\pAh, c'est le cas. Typique.\pQuel radin.\nIl ne fait rien lui-même.
+0x1F206C0: {PLAYER} !\nQuel hasard de te voir ici !\pJe pensais que tu faisais une\ndes «corvées» de Log, ou un truc.\p…\pAh, c'est le cas. Typique.\pQuel radin.\nIl ne fait rien lui-même.
 0x1F2076D: Quoi ?\nLog t'a filé un truc pour moi ?
 0x1F207BE: Oh, super… je n'aurai jamais la\nvoix de Log hors de ma tête.\pMais, euh…{PAUSE} merci, j'imagine.\pIl t'a demandé de remplir ça,\nn'est-ce pas ?
 0x1F20844: Dans ce cas, j'espère que tu as\nattrapé de bons Pokémon pour\lremplir ses pages, hein ?\pCombattons !\pJe veux voir si tu t'es amélioré\ndepuis la dernière fois !
@@ -17790,15 +17790,15 @@
 0x1F2A205: Qui ose couper la pause café du\nHomme-Taupe?\pOh, c'est toi, habitant de la\nsurface…!\pHmph. La Ligue m'a chargé de donner\ncet objet rare au nouveau\lChampion.\pPrends-le, et laisse-moi à ma\nsolitude, habitant de la surface.
 0x1F2A2E9: C'est le {COLOR}ÉTellurifère Z{COLOR}Ë, trésor\nprisé des gens taupes.\pC'était notre plus grande arme\ncontre nos oppresseurs, avant qu'ils\lne nous chassent sous terre…\pTch… mais il ne te servira à rien,\nhabitant de la surface, car mes\lsemblables et moi surpasserons son\limmense pouvoir.\pJe le jure, au nom de tous\nles gens taupes!
 0x1F2A424: J'admets que le café ici…\nest pas mal.\pIl me rappelle beaucoup les\nassiettes de terre que ma mère me\lpréparait quand j'étais jeune.\pPeut-être que j'en ferai la seule\nchose gardée de la surface,\llorsque notre vengeance sera là…
-0x1F2A508: Salut, {PLAYER}… drôle d'endroit,\nhein?\pOn m'a dit, ou plutôt, le Pokémon\ndans mon corps\la été prévenu…\pQue je devais te donner ceci, pour\nm'avoir battu.\p« Mieux vaut tard que jamais »,\nils ont dit… hah…
+0x1F2A508: Salut, {PLAYER}… drôle d'endroit,\nhein?\pOn m'a dit, ou plutôt, le Pokémon\ndans mon corps\la été prévenu…\pQue je devais te donner ceci, pour\nm'avoir battu.\p«Mieux vaut tard que jamais»,\nils ont dit… hah…
 0x1F2A5E9: Ce {COLOR}ÉSpectrozélite{COLOR}Ë est\neffrayant.\pToute capacité {COLOR}ÉSpectre{COLOR}Ë devient\nterrifiante…\pElle pourrait presque effrayer le\nPokémon qui traîne cette prison de\lchair en dehors de ma peau…\pPresque…
 0x1F2A6BE: La Ligue ne me paie\nplus.\pJe suis mort, donc pas besoin de\nmanger, et je ne me fatigue pas, je\lne dors pas, je n'ai pas besoin de\lloyer.\pJe passe je ne sais combien de temps\nà faire ce que la Ligue et cette\lchose stupide veulent…\pCe qui inclut aller chercher du\ncafé…\pQui n'est même pas pour moi…\pEt payé parce que mon hôte vole aux\nautres clients.
 0x1F2A844: {PLAYER}!\pTu es venu pour notre goûter !\pHein ?\pOù est papa ?\pEh bien… il est à la maison,\nil cherche un autre travail.\pMais si je rentre avant la nuit,\nça ne le dérange pas, promis !\pTiens, j’ai un cadeau pour notre\ninvité surprise !
 0x1F2A91C: La {COLOR}ÉFéeromzélite{COLOR}Ç contient toute la\npuissance de mes amis de type {COLOR}ÉFée{COLOR}Ç!\pLe pouvoir féerique enverra tes\nennemis valser!
 0x1F2A98E: Hein ? Tu veux savoir pourquoi j’ai\n tout ce thé ici ?\pPapa a dit de ne rien apporter de\nnourriture ou boisson non achetée au\lcafé ici, c’est impoli.\pAlors j’ai acheté tous les thés ici\net j’ai fait un goûter avec\ltous mes amis !\pPas de café, par contre.\pPapa dit que je suis trop jeune.
-0x1F2AAB5: WROOOOOAR!\p…\pDésolé, {PLAYER}, je reviens de\nDragonCon.\pC'est le bruit d'un Dragon\nappelé\l« Éthernatos ».\pUn vrai cauchemar. Il ressemble pas\nà un Dragon!\pHeureusement qu'il n'est pas à\nBorrius!\pMais tu PEUX\ntrouver ceci!
+0x1F2AAB5: WROOOOOAR!\p…\pDésolé, {PLAYER}, je reviens de\nDragonCon.\pC'est le bruit d'un Dragon\nappelé\l«Éthernatos».\pUn vrai cauchemar. Il ressemble pas\nà un Dragon!\pHeureusement qu'il n'est pas à\nBorrius!\pMais tu PEUX\ntrouver ceci!
 0x1F2ABFD: Cette {COLOR}ÉDracozélite{COLOR}Ç est\nplus forte que chaque faux {COLOR}ÉDragon{COLOR}Ç !\pQui a besoin de ces trucs\nquand tu peux percer tes adversaires\lavec ce Cristal\lZ !\pJe parie qu’ils n’ont pas ça là d’où\nvient ce faux Dragon.
-0x1F2ACF4: Tout le monde dit la même\nchose…\pIls s’attendaient à une Dresseuse\nDragon plus élégante et\lmature…\pPff ! Je suis mature, ma cassette\nest classée « Mature » !
+0x1F2ACF4: Tout le monde dit la même\nchose…\pIls s’attendaient à une Dresseuse\nDragon plus élégante et\lmature…\pPff ! Je suis mature, ma cassette\nest classée «Mature» !
 0x1F2ADC8: {COLOR}ÁTu inspectes la jaquette de la\nvidéo…\pÇa…{PAUSE} ce n'est PAS une chose\nagréable à faire à un Mucuscule.
 0x1F2AE2B: Pikachu
 0x1F2AE37: Leaf
@@ -17816,8 +17816,8 @@
 0x1F2B7AD: {COLOR}ÉMoooooo!
 0x1F2B7D8: Métamol
 0x1F2B7DE: {COLOR}ÇSalut!\nPar ici, s'il te plaît!
-0x1F2B7FA: {COLOR}ÇExcitant! Viva! Frisson!\nC'est « Quiz Show »!\pLe challenger est--cette personne!
-0x1F2B858: {COLOR}ËBienvenue!\p« Quiz Show » commence!\pRéponds aux questions, et deviens\nplus brillant!\pCommençons… par… une question!
+0x1F2B7FA: {COLOR}ÇExcitant! Viva! Frisson!\nC'est «Quiz Show»!\pLe challenger est--cette personne!
+0x1F2B858: {COLOR}ËBienvenue!\p«Quiz Show» commence!\pRéponds aux questions, et deviens\nplus brillant!\pCommençons… par… une question!
 0x1F2B8E4: {COLOR}ÇCourage!
 0x1F2B8F2: {COLOR}ËQuestion!
 0x1F2B901: {COLOR}ÇOh là là! C'est difficile!\n\pLe challenger peut-il répondre?
@@ -17832,7 +17832,7 @@
 0x1F2BA7A: {COLOR}ËOh, non. Dommage!\pCe n'est pas ça,\nc'est faux!
 0x1F2BAC7: {COLOR}ÇBeau boulot!\nBeau boulot!
 0x1F2BAE7: {COLOR}ËOuais, beau boulot!\pTiens… Prends ça.\nC'est un Petit Champi!
-0x1F2BB31: {COLOR}ÇExcitant! Palpitant! Viva!\nFrisson! C'est « Quiz Show »!\pÀ demain!
+0x1F2BB31: {COLOR}ÇExcitant! Palpitant! Viva!\nFrisson! C'est «Quiz Show»!\pÀ demain!
 0x1F2BB7E: Aimes-tu les jeux télé?
 0x1F2BB96: Je veux passer à la télé!
 0x1F2BBBF: {COLOR}ËComment appelle-t-on un combat\nPokémon deux contre deux?
@@ -17841,7 +17841,7 @@
 0x1F2BC57: {COLOR}ËQuel Pokémon naît des températures\net pressions\lprofondes sous terre?
 0x1F2BCA2: {COLOR}ËQuelle était la couleur d’origine\ndes ailes d’un Dracaufeu Chroma ?
 0x1F2BCDD: {COLOR}ËDe quelle couleur sont les ponts de\nla Route 8?
-0x1F2BD08: {COLOR}ËQue signifie le « T » d'« Autoroute\nKBT »?
+0x1F2BD08: {COLOR}ËQue signifie le «T» d'«Autoroute\nKBT»?
 0x1F2BD3C: {COLOR}ËLes ruines célèbres à Borrius Ouest\ns'appellent les Ruines de quoi?
 0x1F2BD80: {COLOR}ËQui sont les créatures mystérieuses\nqui habitent notre monde?
 0x1F2BDBC: {COLOR}ËComment s'appelle ma fille?
@@ -17995,10 +17995,10 @@
 0x1F2E491: Bientôt…{PAUSE} Nous touchons au but…\pTrès vite, ce pouvoir sera enfin à\nnous…
 0x1F2E4F2: {PLAYER} !\nTu as enfin réussi à sortir !
 0x1F2E50F: Tu as déjà rencontré le vieux Log ?\pIl paraît qu'il est expert des stats\nPokémon, ou peu importe…\pJe viens de le mettre au courant de\nce qui s'est passé.
-0x1F2E593: J'étudie tous les aspects des stats\nPokémon et des taux de capture.\pEt mon titre est Professeur,\npas « vieux » !\pBref, ça a dû être toute une\népreuve pour vous deux.\pJe suis soulagé de voir que vous\nn'avez rien.\pEt on dirait que vous avez même\nréussi à obtenir des Pokémon rares !\pJe comptais donner un Pokémon à\n{RIVAL} un de ces jours, mais ce ne\lsera plus nécessaire !\pHo ho ho !
+0x1F2E593: J'étudie tous les aspects des stats\nPokémon et des taux de capture.\pEt mon titre est Professeur,\npas «vieux» !\pBref, ça a dû être toute une\népreuve pour vous deux.\pJe suis soulagé de voir que vous\nn'avez rien.\pEt on dirait que vous avez même\nréussi à obtenir des Pokémon rares !\pJe comptais donner un Pokémon à\n{RIVAL} un de ces jours, mais ce ne\lsera plus nécessaire !\pHo ho ho !
 0x1F2E6FE: Un jour ?\pÇa fait une semaine que je suis là,\net j'en attendais un tout de suite !
 0x1F2E742: J'allais évidemment t'en donner un,\n{RIVAL} !\pIl y a plein de corvées que je suis\ntrop vieux pour faire, après tout !\pC'est juste que…{PAUSE} tu tiens\nabsolument à chercher tes parents.\pJe ne cesse de te dire que personne\nne les a vus depuis des années !\pMême s'ils sont encore à Borrius,\nles retrouver est une tâche bien\ltrop grande pour toi seul.\pJ'espérais que tu l'accepterais\navant de te donner un Pokémon, mais\ltu refuses d'écouter !
-0x1F2E8E9: Peut-être que tu es mon « tuteur\nlégal » ou peu importe à Borrius,\lmais tu ne me connais pas du tout !\pJe suis fort ! Assez fort pour me\ndébrouiller seul !\pEt quand je verrai mes parents, ils\nverront à quel point je suis fort !\pComme tu vas le voir toi aussi !
+0x1F2E8E9: Peut-être que tu es mon «tuteur\nlégal» ou peu importe à Borrius,\lmais tu ne me connais pas du tout !\pJe suis fort ! Assez fort pour me\ndébrouiller seul !\pEt quand je verrai mes parents, ils\nverront à quel point je suis fort !\pComme tu vas le voir toi aussi !
 0x1F2E9D8: Allez, {PLAYER} !\pJe te dois un combat,\nlaisse-moi vous montrer comment\lun vrai Dresseur s’y prend !
 0x1F2EA3B: Allez, {PLAYER} !\pJe t’ai promis de te montrer,\nalors regarde bien comment un vrai\lDresseur s’y prend !
 0x1F2EA9B: Quoi ? J'ai… j'ai perdu !?
@@ -18016,7 +18016,7 @@
 0x1F2F252: Euh, pardon.
 0x1F2F269: Bonjour !\nPuis-je t'aider ?\p…\pAttends…{PAUSE} tu dis que le Prof. Log\nt'a envoyé chercher son colis ?
 0x1F2F2C8: Oh oh.\nJe savais que ce type était louche…
-0x1F2F2F2: Voilà le topo, gamin.\pJ'ai déjà donné le colis à l'homme\nqui était juste là.\pMais si tu dois blâmer quelqu'un\npour ce souci, blâme Prof. Log.\pJe lui ai dit qu'il devait me dire\nqui il enverrait, mais il répétait\l« quelqu'un viendra ».\pJe ne peux plus rien faire pour toi\nà ce stade, mais si tu poursuis\lcet homme, peut-être que tu pourras\lle rattraper avant qu'il parte !
+0x1F2F2F2: Voilà le topo, gamin.\pJ'ai déjà donné le colis à l'homme\nqui était juste là.\pMais si tu dois blâmer quelqu'un\npour ce souci, blâme Prof. Log.\pJe lui ai dit qu'il devait me dire\nqui il enverrait, mais il répétait\l«quelqu'un viendra».\pJe ne peux plus rien faire pour toi\nà ce stade, mais si tu poursuis\lcet homme, peut-être que tu pourras\lle rattraper avant qu'il parte !
 0x1F2F468: As-tu reçu le colis à la\nBoutique ?
 0x1F2F493: Oui, monsieur.
 0x1F2F4A4: As-tu fait preuve de discrétion ?
@@ -18054,7 +18054,7 @@
 0x1F30167: Pas encore, Jax.\pD'abord, j'ai besoin que tu voles\naux Hauteurs Gelées et que tu amènes\lle Prof. Log ici.\pIl doit être mis au courant de ce\nqui s'est passé.
 0x1F301F7: Tout de suite, Papy !
 0x1F3020B: Hmm…\pDonc, c'est aussi grave que je le\ncraignais…\pQue penses-tu qu'il faille faire,\nArthur ?
-0x1F30263: Jax va décoller pour intercepter\nces « Ombres ».\pJusqu'ici, il a prouvé qu'il est\nun Dresseur assez capable…\pEt comme tu le sais, Euler, je l'ai\nformé pour me succéder, donc je\lpense que c'est notre atout.\pIl va affronter ces « Ombres » et\nles arrêter avant qu'ils atteignent\lSulfura.
+0x1F30263: Jax va décoller pour intercepter\nces «Ombres».\pJusqu'ici, il a prouvé qu'il est\nun Dresseur assez capable…\pEt comme tu le sais, Euler, je l'ai\nformé pour me succéder, donc je\lpense que c'est notre atout.\pIl va affronter ces «Ombres» et\nles arrêter avant qu'ils atteignent\lSulfura.
 0x1F30375: Bien sûr.\pÇa semble un plan très raisonnable,\nArthur.
 0x1F303B0: Compris, Papy.\pJe pars tout de suite.\pJe vais les arrêter et sauver\nSulfura !
 0x1F303F6: Bon, {PLAYER}, je pense qu'il est\ntemps que tu rentres chez toi.\pTu as terminé ta course, et je suis\nsûr que ta mère te manque.\pMais je suis quand même surpris que\ntu sois arrivé ici si facilement…\pIl va falloir que je me vante auprès\nde ta mère du petit {STR_VAR_1} fiable\lque tu es devenu !\pHo ho ho !
@@ -18101,7 +18101,7 @@
 0x1F31807: Skelénox ! Utilise Représailles !
 0x1F3181D: Cacnea ! Utilise Feinte !
 0x1F31841: Votre règne d'ombre et de terreur\nse termine ici et maintenant !\pJe ne vous laisserai pas quitter le\nVolcan Cendreux, Sulfura en main !
-0x1F318B2: « Règne d'ombre et de terreur » ?\nSérieusement ?\pNous avons Sulfura, et nous sommes\ntout à fait en droit de le garder.\pTu te fais peut-être l'idée\nauto-justifiée que ce que nous\lfaisons est « mal », mais tu te\ntrompes !\pTu ne comprends tout simplement\npasce qui est en jeu ici…
+0x1F318B2: «Règne d'ombre et de terreur» ?\nSérieusement ?\pNous avons Sulfura, et nous sommes\ntout à fait en droit de le garder.\pTu te fais peut-être l'idée\nauto-justifiée que ce que nous\lfaisons est «mal», mais tu te\ntrompes !\pTu ne comprends tout simplement\npasce qui est en jeu ici…
 0x1F319A3: {COLOR}ÇC'est ça, Marlon. Fais-le patienter\nencore un peu.\pCes Guerriers des Ombres sont dehors\nsous la lumière depuis longtemps…\pIls redeviendront poussière s'ils\nrestent ici.\pJe dois retourner à la base avec eux\nmaintenant.
 0x1F31A70: Bien sûr, Ivory. Je contrôle la\nsituation.\pPrends les Guerriers des Ombres et\npars.\pJe peux retenir ce garçon jusqu'à\nce que tu t'échappes avec Sulfura.
 0x1F31AF5: {COLOR}Ë{PLAYER}! Aide-moi\ncontre lui !\pJe me fiche de ce qu'il prétend être\nen jeu, on doit le dégommer et filer\laprès Sulfura !
@@ -18206,7 +18206,7 @@
 0x1F34E4D: {COLOR}ËQuoi d'autre ?\pCapturer les oiseaux légendaires…{PAUSE}\nvoler la Pierre Prison…\pVous comptez plonger Borrius dans la\nguerre et les ténèbres !
 0x1F34ED3: {COLOR}ÇIntéressant.\pAlors je te demande : pourquoi\nferions-nous ça ?\pPlonger notre propre région dans\nle chaos ?
 0x1F34F2E: {COLOR}ËQuoi ?\pEh bien…{PAUSE}î dominer le monde ?\pLa force obscure est un pouvoir\nincroyable, et…
-0x1F34F7C: {COLOR}ÇJe m'en doutais. Tu ne penses qu'à\ndes motifs simples et immatures.\pTu crois que la « force que nous\nvoulons libérer » sert à détruire.\pEn vérité, nous voulons sauver.\pSauver ce que nous avons perdu,\nune injustice que nous réparerons…
+0x1F34F7C: {COLOR}ÇJe m'en doutais. Tu ne penses qu'à\ndes motifs simples et immatures.\pTu crois que la «force que nous\nvoulons libérer» sert à détruire.\pEn vérité, nous voulons sauver.\pSauver ce que nous avons perdu,\nune injustice que nous réparerons…
 0x1F3506D: {COLOR}ËHein ? De quoi tu parles ?\pJe ne comprends rien à ce que tu dis\n!
 0x1F350B8: {COLOR}ÇJe ne vais pas perdre plus de temps\nà expliquer.\pCe temps sera mieux employé à\nm'assurer que toi…{PAUSE}î et ton ami\lprès de la porte, vous serez réglés.
 0x1F35149: {COLOR}Ë{PLAYER} ! Tu arrives à point !\pLes Ombres ont la Pierre Prison,\nl'objet nécessaire pour libérer la\lforce obscure !\pTu dois m'aider à récupérer\nce truc !
@@ -18262,7 +18262,7 @@
 0x1F3680C: Les Pokémon que tu as libérés\nréparent les escaliers !
 0x1F3683C: Un avec le vent,\nun avec la foudre…\pL'œil qui voit tout de l'orage en\nfurie !\pÀ présent, deviens l'éclair qui\nterrasse tout le mal !\pSankren thoron !\pDescends, Électhor, vers moi !\nFais rugir le tonnerre du ciel !\pSors des nuages orageux où tu\nrésides !
 0x1F36947: Enfin, la dernière clé apparaît\ndevant nous…{PAUSE}î et maintenant…
-0x1F36988: Quoi, il a mis ce Guerrier des\nOmbres K.O. en un seul coup !?\pElle est belle, sa « résistance\nélectrique »…
+0x1F36988: Quoi, il a mis ce Guerrier des\nOmbres K.O. en un seul coup !?\pElle est belle, sa «résistance\nélectrique»…
 0x1F369ED: Tous les Guerriers des Ombres\nrestants, maîtrisez Électhor !
 0x1F36A1D: Tch…{PAUSE} voilà donc son attaque\nChange-Éclair…
 0x1F36A45: Bon, Électhor, tu ne me laisses pas\nd'autre choix…
@@ -18346,7 +18346,7 @@
 0x1F39A54: On n'en a pas fini ! À mon\ptour de t'abattre !
 0x1F39A87: Attends !
 0x1F39A8D: {PLAYER} a mieux à faire\nque de s'occuper de vous.\pSi tu veux te battre, essaie\ndonc de te mesurer à moi !
-0x1F39B06: {PLAYER} ! Je ne sais pas comment\pc'est possible, mais d'après\nce que ces types disaient, les\lOmbres doivent avoir capturé\lÉlecthor ! Je m'occupe de ces\pgars. Pendant ce temps, tu\pdois empêcher les Ombres\nde faire leur « déliançage\l» ! Dépêche-toi ! Il n'y\pa plus de temps !
+0x1F39B06: {PLAYER} ! Je ne sais pas comment\pc'est possible, mais d'après\nce que ces types disaient, les\lOmbres doivent avoir capturé\lÉlecthor ! Je m'occupe de ces\pgars. Pendant ce temps, tu\pdois empêcher les Ombres\nde faire leur «déliançage\l» ! Dépêche-toi ! Il n'y\pa plus de temps !
 0x1F39C0D: {COLOR}ÇJe t'ai eu ! Tu n'apprendras\ndonc jamais, gamin ?
 0x1F39C40: Avance. Tu vas vouloir\nvoir ça…
 0x1F39C6E: {COLOR}ÇToutes les préparations sont\nterminées, Zeph. Tu peux\pprocéder au déliançage\nquand tu es prêt.
@@ -18382,7 +18382,7 @@
 0x1F3AA96: Enfin… j'ai tant attendu\ncet instant… Hoopa\p! Le sceau sur ton\ppouvoir est enfin\nrompu !
 0x1F3AAFD: {COLOR}ÉHoo hoo hoo !
 0x1F3AB0D: Aklove ! Dis-moi ! Quelle raison\ppeux-tu avoir de faire ça\n? Si nous partageons un but\pcommun, nous pourrions\npeut-être coopérer !
-0x1F3AB89: Insensé…{PAUSE} nos buts sont\nopposés. Je suis un descendant du\p« roi étranger » de la guerre.\nMon but est simplement de finir\pce qu'il a commencé, et gagner\nla guerre. Avec le pouvoir de\pHoopa enfin libre, je vais amener\nl'arme qu'il a créée, et l'utiliser\lpour faire pleuvoir le feu\let la destruction sur Borrius\p! Alors, enfin, sa souffrance\nprendra fin… Maintenant,\pdis-moi, Zeph. Quels étaient\ntes objectifs ?
+0x1F3AB89: Insensé…{PAUSE} nos buts sont\nopposés. Je suis un descendant du\p«roi étranger» de la guerre.\nMon but est simplement de finir\pce qu'il a commencé, et gagner\nla guerre. Avec le pouvoir de\pHoopa enfin libre, je vais amener\nl'arme qu'il a créée, et l'utiliser\lpour faire pleuvoir le feu\let la destruction sur Borrius\p! Alors, enfin, sa souffrance\nprendra fin… Maintenant,\pdis-moi, Zeph. Quels étaient\ntes objectifs ?
 0x1F3AD0F: Mes objectifs ? Il n'y en\pavait qu'un…{PAUSE}î un seul que\nje gardais toujours en\ptête… C'était…{PAUSE}î le revoir…\pMon petit garçon…
 0x1F3AD8B: Ah…{PAUSE} quel gâchis…{PAUSE} tant de pouvoir\npour un souhait si maigre… Tu\pmanques d'ambition, Zeph !
 0x1F3ADE9: Assez ! Disparais de ma vue.\nLes Ombres sont finies. Il\pest temps que Borrius voie\pla lumière…{PAUSE} la Lumière de\nla Ruine ! Ah, mais d'abord…\pJe vois que notre invité\pd'honneur s'est décidé à\nnous rejoindre. Sbires,\pamenez-moi {STR_VAR_1}.
@@ -18512,7 +18512,7 @@
 0x1F3E9FD: Tes vêtements sont au\nsol. Les remettre ?
 0x1F3EA2A: L'uniforme de Marlon est dispo\ndans la Boîte à Costumes !
 0x1F3EA60: Aros
-0x1F3EA65: …et donc Fey a ordonné aux sbires\nrejoindre la « Lumière de la Ruine »\pd'Aklove. Tu comprends, Marlon\p? Franchement, que des sbires et des\nscientifiques aient été autorisés\là rester relève du miracle…
+0x1F3EA65: …et donc Fey a ordonné aux sbires\nrejoindre la «Lumière de la Ruine»\pd'Aklove. Tu comprends, Marlon\p? Franchement, que des sbires et des\nscientifiques aient été autorisés\là rester relève du miracle…
 0x1F3EB13: Je vois…{PAUSE} je n'avais aucune idée\nque les choses avaient empiré\pà ce point… Mais je crois savoir\ncomment combler le manque. Et\pje sais que ça ne va pas forcément\nte plaire, mais…
 0x1F3EBBA: Hein… ? C'est mon\puniforme ! {PLAYER}…{PAUSE}\pc'est toi ?
 0x1F3EBEB: Quoi !? Toi…{PAUSE}î tu es… Non\n! Ce ne peut pas être\ptoi ! Tu es…{PAUSE} tu dois\pêtre un espion ! Aklove…{PAUSE}\ncombien de temps\pvas-tu me faire\nsouffrir… ?
@@ -18542,20 +18542,20 @@
 0x1F3FC84: Bien sûr…\pEn tant que chercheurs, si quelqu'un\npouvait trouver un moyen, ce serait\lnous.\pMais il n'existe pas de façon de\nramener les morts.\pNous avons dû continuer à\navancer.\pPuis, il y a un an, Ivory a mis au\nmonde des jumeaux…\pC'était l'un des jours les plus\nheureux de nos vies.\pNotre premier enfant nous manque,\nmais les nouveaux ont comblé les\lvides dans nos cœurs…
 0x1F3FE01: C'est vrai… Où sont-ils maintenant,\ppuis-je demander ?
 0x1F3FE2F: {COLOR}ÇEuler Log, un ami à nous, a accepté\nde les garder pour le moment. Ils\psont avec lui, aux Hauteurs\nGelées.
-0x1F3FEA3: Hauteurs Gelées…{PAUSE}î un ami\nà moi y vit aussi.\pC'est mon ex-partenaire…{PAUSE} celui\nqui m'a aidé à fonder ma société.\pIci, on l'appelle le « Gardien de\nBorrius ».\pIl s'est lié d'amitié avec un\nPokémon dit « mythique » !\pJe crois que sa femme a récemment\ndonné naissance à leur enfant…\pCependant, je ne me souviens plus\nde son nom…
+0x1F3FEA3: Hauteurs Gelées…{PAUSE}î un ami\nà moi y vit aussi.\pC'est mon ex-partenaire…{PAUSE} celui\nqui m'a aidé à fonder ma société.\pIci, on l'appelle le «Gardien de\nBorrius».\pIl s'est lié d'amitié avec un\nPokémon dit «mythique» !\pJe crois que sa femme a récemment\ndonné naissance à leur enfant…\pCependant, je ne me souviens plus\nde son nom…
 0x1F40014: Vos nouveaux jumeaux ?\nLeurs noms ?
 0x1F40045: {COLOR}ÇIls s'appellent {RIVAL} et Melony.\nCe sont les plus beaux enfants\pdu\nmonde.
 0x1F40099: Oui…{PAUSE} Ivory et moi sommes les\nparents de {RIVAL} et Melony.\p{RIVAL}…{PAUSE} arrivé ici, il nous\ncherche, non ?\pJ'ai regretté de les laisser, mais\naprès tant de temps\lloin d'eux, j'espérais qu'ils\npourraient voir leur grand\lfrère…\pAh…{PAUSE}î que j'ai été stupide…
 0x1F401B6: Peut-être devrais-je prendre la\nsuite… Quand j'ai appris que nous\pavions tous ressenti la douleur de\nperdre nos propres enfants, j'ai\lfait une offre. Nos connaissances\pscientifiques réunies…{PAUSE} unies sous\nun but commun… Je sentais qu'avec\lcette détermination, nous pourrions\paccomplir\nl'impossible.
 0x1F402C4: Bien sûr, Marlon et Ivory étaient\ntrès sceptiques, mais après bien des\lessais, je les ai convaincus.
 0x1F40320: Ils ont accepté de renvoyer leurs\nenfants chez eux à Hoenn puis de\lvenir vivre à Borrius sans eux. Sans\pdistraction, j'étais certain que\nnous réussirions.
-0x1F403B9: Cependant, comme nous l'avons vite\nvu, nous trois ne pouvions que faire\lun certain chemin seuls. Nous nous\psommes donc associés à une\norganisation indépendante appelée\lla « Société Scientifique ».
+0x1F403B9: Cependant, comme nous l'avons vite\nvu, nous trois ne pouvions que faire\lun certain chemin seuls. Nous nous\psommes donc associés à une\norganisation indépendante appelée\lla «Société Scientifique».
 0x1F40462: Avec leur aide, nos recherches ont\nbrusquement accéléré. Cependant,\pces recherches nécessitaient mon\nattention totale. Et ainsi,\préalisant que je ne pouvais plus\nsuperviser tant de projets, j'ai\lquitté mon poste de PDG de Cube\lCorp.
 0x1F40559: À ma place, j'ai confié cela à une\njeune femme…{PAUSE} Fey, la leader de la\lSociété Scientifique.
 0x1F405AD: Oui…{PAUSE} Zeph est l'inventeur du Super\nCube. Le premier Cube, destiné au\psimple stockage, était un effort\ncollaboratif entre lui, ton père\let Fey. C'est ce qui a permis à Cube\pCorp. de décoller et de devenir\nl'influence majeure à Borrius\lqu'elle est aujourd'hui.
 0x1F406A5: Et voilà comment elle me remercie,\naprès tout ça… ! Elle a pratiquement\pvolé Cube Corp., la société que j'ai\nfondée de mes propres mains… Et elle\llaisse Aklove voler mes Ombres\pégalement…\n!
 0x1F4075D: Pfff… Je ne devrais pas ressasser\pça maintenant. Enfin bref…{PAUSE}î c'est\pFey qui nous a donné le modèle du\nprojet, comme tu l'as probablement\ldeviné.
-0x1F407E3: Ainsi, avant de quitter mon poste\nde PDG, j'ai créé une nouvelle\lbranche chez Cube\lCorp. dédiée aux efforts de\nrésurrection.\pJe l'ai appelée la branche Ombre.\nComme tu la connais, les « Ombres ».\pPour préserver l'image de Cube\nCorp., je devais m'assurer que nos\lexpériences n'aient aucun lien\lavec l'entreprise.\pAinsi libérés, nous pouvions tester\nsans crainte.
+0x1F407E3: Ainsi, avant de quitter mon poste\nde PDG, j'ai créé une nouvelle\lbranche chez Cube\lCorp. dédiée aux efforts de\nrésurrection.\pJe l'ai appelée la branche Ombre.\nComme tu la connais, les «Ombres».\pPour préserver l'image de Cube\nCorp., je devais m'assurer que nos\lexpériences n'aient aucun lien\lavec l'entreprise.\pAinsi libérés, nous pouvions tester\nsans crainte.
 0x1F40954: Ivory, rapport de situation.
 0x1F4096B: {COLOR}ÇNous sommes prêts à commencer le\npremier essai, Zeph.{COLOR}Ë
 0x1F4099D: Alors commençons, d'accord ? Tout\ple monde, à vos postes.
@@ -18591,23 +18591,23 @@
 0x1F41C1E: Attends…{PAUSE} t'es censé être qui, toi\n?
 0x1F41C4C: {PLAYER}, tu as vu Jax ? La dernière\pfois, j'ai entendu qu'il comptait\nse rendre aux Ruines du Néant.
 0x1F41CA1: Peu importe ce que préparaient les\nOmbres, c'était déjà fait quand je\lsuis arrivé. J'ai vu des signes de\pcombat, mais personne n'était là…{PAUSE}\net ça inclut quelqu'un nommé\lJax.
-0x1F41D4C: {PLAYER}, tu es le dernier à l'avoir\nvu ! Que s'est-il passé là-dedans\p?… Aklove ? Jamais entendu parler…\pEt comme je le craignais, la force\pobscure a finalement été libérée…\n… Quoi !? Aros a été piégé dans un\pCube, tu dis ? Pure folie !… Oh\nnon… Si je connais Zeph, il n'y a\pqu'une chose qu'il aurait pu faire\pavec Jax… Oh ? Tu dis que Jax\nn'était pas avec Zeph ? Ça me donne\pde l'espoir…{PAUSE} il doit encore être\pdehors… Je suis surpris que Zeph\pait accepté de travailler avec toi,\pmais tu connais l'adage… « L'ennemi\nde mon ennemi est mon ami.\l»\p\p\n\p\n\p\n\p\n
+0x1F41D4C: {PLAYER}, tu es le dernier à l'avoir\nvu ! Que s'est-il passé là-dedans\p?… Aklove ? Jamais entendu parler…\pEt comme je le craignais, la force\pobscure a finalement été libérée…\n… Quoi !? Aros a été piégé dans un\pCube, tu dis ? Pure folie !… Oh\nnon… Si je connais Zeph, il n'y a\pqu'une chose qu'il aurait pu faire\pavec Jax… Oh ? Tu dis que Jax\nn'était pas avec Zeph ? Ça me donne\pde l'espoir…{PAUSE} il doit encore être\pdehors… Je suis surpris que Zeph\pait accepté de travailler avec toi,\pmais tu connais l'adage… «L'ennemi\nde mon ennemi est mon ami.\l»\p\p\n\p\n\p\n\p\n
 0x1F41F58: {PLAYER}…{PAUSE} je n'aime pas ce que tu\nme dis. Si cet Aklove, celui qui\pcontrôle Hoopa, travaille avec Fey,\nalors ils sont une menace encore\lplus grande que je ne le pensais.\lEt si la Lumière de la Ruine est\pune branche comme les Ombres, alors\ncela ne peut signifier qu'une chose…\lUne campagne de recrutement…{PAUSE} pour\ptrouver plus de gens à transformer\nen ces abominations ! Comment Hoopa\ls'insère là-dedans, cependant, je\pn'en ai aucune\nidée…
 0x1F420E2: S'ils ont pris Jax…{PAUSE} non, je vais\nessayer de rester optimiste. Jax\pest débrouillard… Mais ces derniers\ptemps, il semble me contacter de\nmoins en moins… et avec moins de\lvigueur, à chaque fois. {PLAYER},\prends-toi à Bourg Vivill. Arrête\pla Lumière de la Ruine, et essaie\nde trouver Jax. Qu'il soit là de\pson plein gré ou non, je pense qu'il\nsera avec\leux.
 0x1F4222A: Ok, ça suffit ! J'en ai marre ! Je\nme suis tu tout ce temps, mais je\pne vais plus me faire ignorer !\nÉcoute, le vieux…{PAUSE} je ne sais pas\lqui tu es, ni ce qui se passe… Mais\psi ça a à voir avec les Ombres,\nalors je veux en être\p!\n
 0x1F42322: Oh ! Toutes mes excuses ! Je ne\nvoulais pas être impoli. Qui es-tu\pdonc ?
 0x1F42360: Je suis furieux ! Je me fiche de\pcette Lumière de la Ruin ou quoi\nque ce soit… J'étais à deux doigts\pde retrouver les Ombres et mes\nparents, et ils m'ont encore échappé\l! Alors si j'entends dire qu'ils\pvont à Bourg Vivill, c'est là que\nje vais\l!
 0x1F42454: S'il te plaît, attends !\pLes Ombres sont nos\npions.\pEnjeu bien plus grand.\nPatience.\lVengeance plus tard, d'accord ?
-0x1F425C7: {PLAYER}, puisque c'est\nofficiellement ta « mission », je\lt'attendrai à {COLOR}ÉBourg Vivill{COLOR}Ë. Et pour\ptoi, je jouerai même sympa avec les\nOmbres jusqu'à ce qu'on ait fini.\lNe sois pas en retard,\p{PLAYER}.
+0x1F425C7: {PLAYER}, puisque c'est\nofficiellement ta «mission», je\lt'attendrai à {COLOR}ÉBourg Vivill{COLOR}Ë. Et pour\ptoi, je jouerai même sympa avec les\nOmbres jusqu'à ce qu'on ait fini.\lNe sois pas en retard,\p{PLAYER}.
 0x1F4267F: Ce garçon…{PAUSE} il a de la repartie… Eh\nbien, je te souhaite bonne chance\pà Bourg Vivill, {PLAYER}. Dis-moi\ncomment ça s'est passé dès que tu\pseras\nrevenu.
 0x1F4270C: Pfiou, il était temps que tu\narrives, {PLAYER}.
 0x1F42731: Désolé…{PAUSE} je suis un peu à cran.\pJe me rapproche…{PAUSE} si près de savoir\nce qui est arrivé à mes\lparents…\pÇa me fait perdre mon\ncalme.
 0x1F427CE: Pendant que tu venais, j'ai essayé\nd'explorer la zone pour chercher\lles Ombres, mais… jusqu'ici je n'ai\lvu aucune trace d'eux.
-0x1F4284D: C'est bizarre…{PAUSE} on dirait que la\nville entière est déserte. La seule\ppersonne que j'ai vue, c'est ce type\navec un symbole étrange sur ses\lvêtements, qui traînait près de\ll'entrepôt au nord de la ville.\pC'est la base de ces types de la\n« Lumière de la Ruine » ?
+0x1F4284D: C'est bizarre…{PAUSE} on dirait que la\nville entière est déserte. La seule\ppersonne que j'ai vue, c'est ce type\navec un symbole étrange sur ses\lvêtements, qui traînait près de\ll'entrepôt au nord de la ville.\pC'est la base de ces types de la\n«Lumière de la Ruine» ?
 0x1F42926: Eh bien, une seule façon de savoir.\nJe passe devant. Si c'est leur base,\ples Ombres ne seront pas\nloin\lderrière.
 0x1F429A1: Tu es l'un de ces voyous de la\nLumière de la Ruine, pas vrai ?\pQu'est-ce que tu fais dans ce trou\nà rats, d'ailleurs ?
 0x1F42A09: Ce que je fais ici ne te regarde\npas, gamin. Tu partiras si tu sais\pce qui est bon pour\ntoi.
-0x1F42A6C: Je crois qu'on est au bon endroit,\n{PLAYER} ! Il crie « suspect » à\pplein nez.
+0x1F42A6C: Je crois qu'on est au bon endroit,\n{PLAYER} ! Il crie «suspect» à\pplein nez.
 0x1F42AB7: Tu ne berneras personne, mon vieux.\pOn sait que c'est ton quartier\ngénéral, et on va forcer l'entrée\lque tu le veuilles ou non !
 0x1F42B34: CHZKKK…{PAUSE}îMadame…{PAUSE} on dirait qu'ils\psont venus finalement. Mais, vous\naviez dit qu'ils auraient une petite\parmée avec eux… Non, ce ne sont que\ndeux Dresseurs… Bien reçu. Pas\pbesoin de renforts, je peux\pm'en\pcharger.\n
 0x1F42C00: Vous avez fait une grosse erreur\nen venant ici seuls.
@@ -18635,7 +18635,7 @@
 0x1F43384: Bien, je vais devoir prévenir tout\nle monde en personne !
 0x1F433B7: Et tu te dis garde ? Attaquer\pquelqu'un avec un Pokémon affaibli,\nc'est la meilleure façon de perdre !
 0x1F43417: Espèce de…! Je reviendrai ! Quand\pj'aurai des renforts, vous êtes\pcuits tous les deux\n!
-0x1F43468: Si c'est tout ce que la Lumière de\nla Ruine a, ça va être facile ! Et\psa fameuse « branche » de sbires…\nJe me demande où ils sont,\pd'ailleurs ?
+0x1F43468: Si c'est tout ce que la Lumière de\nla Ruine a, ça va être facile ! Et\psa fameuse «branche» de sbires…\nJe me demande où ils sont,\pd'ailleurs ?
 0x1F434E7: /× N'est plus utilisé
 0x1F434F9: {CLEAR_TO}beIl y a quelques instants
 0x1F43508: {COLOR}ÇIci votre administrateur.\pJe suivrai la situation depuis la\nsalle de commande.\pSbires, restez fermes !\pQuand les traîtres franchiront la\nporte, anéantissez-les !\pLeur effectif est réduit, et nous\nsommes bien plus nombreux.\pIls n'ont aucune chance !\pEnveloppez-les dans la Lumière de la\nRuine !
@@ -18700,7 +18700,7 @@
 0x1F44CC3: C'est exactement ce que tu as\nentendu, gamin !\pTes parents sont\nles méchants !
 0x1F44D03: Aklove, ça suffit !
 0x1F44D1A: {RIVAL}, on voulait rentrer…\pVraiment…
-0x1F44D45: « Encore un jour. » C'est le\pmensonge qu'on se répétait, sans\ncesse. Mais après ma blessure…{PAUSE} je\psavais que la seule façon de la\njustifier, c'était de rentrer avec\lton frère. Il fallait continuer…{PAUSE}\ppour que notre famille soit entière\nà nouveau…
+0x1F44D45: «Encore un jour.» C'est le\pmensonge qu'on se répétait, sans\ncesse. Mais après ma blessure…{PAUSE} je\psavais que la seule façon de la\njustifier, c'était de rentrer avec\lton frère. Il fallait continuer…{PAUSE}\ppour que notre famille soit entière\nà nouveau…
 0x1F44E27: C'est quoi cette logique stupide\n!? Mon frère est mort et enterré\p! Et moi ? Et Melony ? Les vies\nqu'on a dû vivre comptaient pour\pvous ? Et même toutes ces fois où\nj'étais si près… Vous n'avez même\pjamais tendu la main pour dire que\nvous alliez bien\p!\n
 0x1F44F1D: ASSEZ ! Tes bavardages incessants\pcommencent à\nm'agacer.
 0x1F44F57: Hoopa, tu sais quoi faire du\ngarçon.
@@ -18771,8 +18771,8 @@
 0x1F46C6D: Eh bien…{PAUSE} je n'y ai pas vraiment\nréfléchi. J'ai enfin trouvé ce que\pje cherchais, et c'est la dernière\nchose que je voulais… Tout ce que\lje peux dire, c'est que si Aklove\pveut détruire Borrius avec une arme,\nil devra d'abord passer sur mon\lcorps. Je n'ai pas décidé si je\lvoulais être avec mes parents, mais\psi c'est le cas, je voudrais être\navec eux ici. J'ai vraiment commencé\là m'attacher à Borrius, tu sais ?\pEt personne, absolument PERSONNE,\nne m'arrachera encore mes\pparents.\n
 0x1F46E37: Bazoucan ! En route !
 0x1F54B5D: Cette CT a été trouvée au-dessus du\nTombeau de Borrius via Escalade.
-0x1F54BA1: Cette CT a été donnée pour\n« Mauvaise Baby-sitter ».
-0x1F54BD9: Cette CT a été donnée pour\n« Sauveur de l'Île ».
+0x1F54BA1: Cette CT a été donnée pour\n«Mauvaise Baby-sitter».
+0x1F54BD9: Cette CT a été donnée pour\n«Sauveur de l'Île».
 0x1F54C11: Cette CT a été trouvée au-dessus de\nl'Autoroute KBT via Cascade.
 0x1F54C53: Cette CT a été trouvée au centre du\nlac.
 0x1F54C80: Cette CT a été trouvée au -3 après\navoir utilisé Éclate-Roc.
@@ -18800,13 +18800,13 @@
 0x1F5515D: Cette CT a été achetée au\nmarché.
 0x1F55187: Cette CT a été trouvée près d'une\nclôture au-dessus du Campeur.
 0x1F551BB: Cette CT a été trouvée achetée au\nMagasin.
-0x1F551E6: Cette CT a été donnée pour\n« Le Voleur de Nourriture ».
+0x1F551E6: Cette CT a été donnée pour\n«Le Voleur de Nourriture».
 0x1F5521B: Cette CT a été achetée au\nmarché.
 0x1F55245: Cette CT a été achetée pour 24 PB à\nla boutique.
 0x1F55274: Cette CT a été trouvée au nord du\nCentre Pokémon, via Coupe.
 0x1F552B3: Cette CT a été reçue en récompense\npour avoir battu le Champion.
 0x1F552F2: Cette CT a été achetée pour 4000\nPièces.
-0x1F55318: Cette CT a été récompensée pour\navoir terminé « Récolte de Miel ».
+0x1F55318: Cette CT a été récompensée pour\navoir terminé «Récolte de Miel».
 0x1F5534B: Cette CT a été trouvée achetée au\nMagasin.
 0x1F55376: Cette CT a été achetée au 4e étage.
 0x1F55393: Cette CT a été trouvée sur les\nfalaises via Escalade.
@@ -18817,7 +18817,7 @@
 0x1F554BC: Cette CT a été reçue en cadeau au\nMagasin.
 0x1F554E8: Cette CT a été trouvée au RDC dans\nla salle de droite après avoir caché\nles cristaux jaunes.
 0x1F55530: Cette CT a été trouvée au 1er étage\naprès avoir pris une autre échelle.
-0x1F5556C: Cette CT a été récompensée pour\navoir terminé « L'Enfant Égaré ».
+0x1F5556C: Cette CT a été récompensée pour\navoir terminé «L'Enfant Égaré».
 0x1F555A2: Cette CT a été trouvée après Surf\njusqu'au sol rocheux, via Escalade.
 0x1F555E8: Cette CT a été achetée pour 4000\nPièces.
 0x1F5560E: Cette CT est trouvée au -1, dans\nla réserve Ombres, après Force\net Éclate-Roc.
@@ -18842,7 +18842,7 @@
 0x1F55A42: Cette CT a été trouvée près de\nl'océan entre deux corniches après\navoir combattu le Trio Solaire.
 0x1F55A93: Cette CT a été trouvée achetée au\nMagasin.
 0x1F55ABE: Cette CT a été trouvée après avoir\nutilisé Escalade.
-0x1F55AE8: Cette CT a été récompensée pour\navoir terminé « L'Emboar Noir ».
+0x1F55AE8: Cette CT a été récompensée pour\navoir terminé «L'Emboar Noir».
 0x1F55B1F: Cette CT se trouve dans l'entrepôt\noù un scientifique expérimentait\nsur un Élekable.
 0x1F55B88: Cette CT a été trouvée près d'un\nCollectionneur d'Insectes au nord de\nla forêt.
 0x1F55BCE: Cette CT a été trouvée après\nEscalade et tablette détruite.
@@ -18850,12 +18850,12 @@
 0x1F55C3A: Cette CT a été achetée pour 48 PB à\nla boutique.
 0x1F55C69: Cette CT a été trouvée après avoir\nutilisé Escalade sur la plage est.
 0x1F55CA8: Cette CT a été trouvée après avoir\nutilisé Surf.
-0x1F55CCC: Cette CT a été donnée pour\n« Le Granbull Terrifiant ».
+0x1F55CCC: Cette CT a été donnée pour\n«Le Granbull Terrifiant».
 0x1F55D06: Cette CT a été reçue en récompense\npour avoir montré un Pokémon avec\nOndes Étranges.
 0x1F55D51: Cette CT a été trouvée dans le coin\nd'herbe à côté de l'entrée du Mont\nGivré.
 0x1F55DA1: Cette CT a été reçue d'un clown\naprès lui avoir montré un Pokémon\nqui connaissait Doux Parfum.
 0x1F55DF6: Cette CT a été trouvée après avoir\nplongé dans le Labo de Recherche.
-0x1F55E35: Cette CT a été récompensée pour\navoir terminé « Durs Comme le Roc ».
+0x1F55E35: Cette CT a été récompensée pour\navoir terminé «Durs Comme le Roc».
 0x1F55E70: Cette CT a été trouvée au milieu de\nla Route du Défi, via Coupe.
 0x1F55EB3: Cette CT a été achetée pour 2000\nPièces.
 0x1F55ED9: Cette CT a été reçue en cadeau au\nmarché.
@@ -18864,7 +18864,7 @@
 0x1F55F6A: Cette CT a été trouvée après être\nremonté avec l'AMD.
 0x1F55F9C: Cette CT a été reçue en cadeau dans\nl'une des maisons du sud.
 0x1F55FDA: Cette CT a été trouvée après avoir\nutilisé Cascade.
-0x1F56003: Cette CT a été récompensée pour\n« Protecteur du Marais ».
+0x1F56003: Cette CT a été récompensée pour\n«Protecteur du Marais».
 0x1F56040: Missions
 0x1F56055: Type {R_BUTTON}
 0x1F5605C: Actives
@@ -18950,7 +18950,7 @@
 0x1F56DAB: Ce trou que tu vois ici est\nune Antre de Raid.\pDes Pokémon puissants habitent ces\nrepaire, une fois par jour, tu peux\lte battre pour tenter d'en capturer\lun dans chaque repaire de Borrius !\pCes Pokémon sont très forts, alors\nmieux vaut choisir le bon\lpartenaire pour te battre avec toi.\pQuand tu commences le combat, tu\nremarqueras que le Pokémon que tu\lcombats paraît très grand.\pC'est à cause du phénomène\n{COLOR}ÉDynamax{COLOR}Ç.\pIl restera ainsi pendant tout\nle combat et ne pourra être capturé\lqu'une fois vaincu et revenu à sa\ltaille normale.
 0x1F56FD0: Le Dynamax est un phénomène unique\nutilisable seulement dans des zones\lspéciales, comme ici.\pSi tu as maîtrisé le pouvoir de\nMéga-Évolution, tu pourras\lDynamaxer ton Pokémon aussi.\pPresque tous les Pokémon peuvent\nDynamaxer, mais si un Pokémon tient\lMéga-Gemme ou Cristal Z, il ne\lle pourra pas.\pPour Dynamaxer, appuie sur\n{START_BUTTON} quand le symbole\lDynamax apparaît.\pSi tu choisis de Dynamaxer ton\nPokémon, l'effet durera\lpendant trois tours.\pPendant ce temps, chacune des\ncapacités de ton Pokémon sera\lrenforcée en variantes spéciales\lappelées {COLOR}ÉMaxi-attaques{COLOR}Ç.\pCes Maxi-attaques sont bien plus\npuissantes que les attaques,\lalors profite-en à fond\lpendant le Dynamax !
 0x1F57277: Parfois, quand le Pokémon que tu\ncombats est désespéré, il lève\ldes boucliers.\pCes boucliers réduisent beaucoup\nles dégâts que tu infliges jusqu'à\lleur destruction.\pToute attaque détruit au moins\nun bouclier, mais si tu utilises\lune capacité {COLOR}ÉCasse-Brique{COLOR}Ç, tu peux\lcasser deux boucliers d'un coup !
-0x1F573B2: Si tu as des Pokémon dans la boîte\n« {STR_VAR_1} », ils peuvent être\lutilisés à la place de ton équipe.\pChaque rangée de la boîte est\nconsidérée comme sa propre équipe,\lce qui te permet de garder\ljusqu'à 5 équipes préconfigurées.
+0x1F573B2: Si tu as des Pokémon dans la boîte\n«{STR_VAR_1}», ils peuvent être\lutilisés à la place de ton équipe.\pChaque rangée de la boîte est\nconsidérée comme sa propre équipe,\lce qui te permet de garder\ljusqu'à 5 équipes préconfigurées.
 0x1F5747A: Dynamax
 0x1F57482: Boucliers
 0x1F5748A: Équipes préconfig.
@@ -19002,7 +19002,7 @@
 0x1F58349: Encore des coups de boule !\n{COLOR}É{STR_VAR_3}{COLOR}Ë fois de plus, {EVIL_TEAM} !
 0x1F58372: Bien, je peux redevenir le meilleur\nneurochirurgien Pokémon\ldu monde.\pPrends ça pour t'aider\naprès ton aide.
 0x1F583E2: Moi aller mieux bientôt. Cerveau\npas trop cassé.
-0x1F5840E: Oh, timing parfait, Dresseur !\pJe viens de tourner mon film\nle plus récent dans cette forêt.\pLe titre du film est :\n« Kangourex v Kangourex :\lL'Aube du Kangourex »\pMalheureusement, l'acteur du rôle\ndu méchant principal est malade.\pAccepterais-tu de prendre\nsa place ?
+0x1F5840E: Oh, timing parfait, Dresseur !\pJe viens de tourner mon film\nle plus récent dans cette forêt.\pLe titre du film est :\n«Kangourex v Kangourex :\lL'Aube du Kangourex»\pMalheureusement, l'acteur du rôle\ndu méchant principal est malade.\pAccepterais-tu de prendre\nsa place ?
 0x1F58521: Dommage…\nVraiment, dommage…
 0x1F5853A: Merveilleux !\pUne fois tous les Dresseurs battus\ndans forêt, apporte {COLOR}É4{COLOR}Ç {COLOR}ÉKangourex{COLOR}Ç\lforts pour une scène de combat\ldu film.\pCe sera filmé comme\nun {COLOR}ÉCombat Duo{COLOR}Ç.\pIls devraient être niveau\n{COLOR}É{LV} 70{COLOR}Ç ou plus.
 0x1F5864A: Merveilleux !\pAssure-toi que ton équipe ne\ncontient que {COLOR}É4 Kangourex{COLOR}Ç\lavant qu'on ne puisse tourner le\l{COLOR}ÉCombat Duo{COLOR}Ç.\pIls devraient être niveau\n{COLOR}É<0x34> 70{COLOR}Ç ou plus.
@@ -19045,7 +19045,7 @@
 0x1F594F5: Salut, Dresseur de Pokémon.\pJe suis membre des Cuissardes,\ncomme toi !\pEt j'ai un travail\npour toi.\pTu connais le Pokémon\n{COLOR}ÉMagicarpe{COLOR}Ë ?\p…\pPourquoi je demande, bien sûr que tu\nsais !\pQui ne connaît pas ce Pokémon\ncélèbre ?\pJe veux que tu en places\n{COLOR}É{STR_VAR_1}{COLOR}Ë dans une {COLOR}Éseule Boîte{COLOR}Ë.\pQuand tu auras fait ça, je les\nreprendrai pour toi, et je te\ldonnerai quelque chose de mieux en\léchange.\pEn tant que membre estimé des\nCuissardes, ce devrait être facile\lpour toi !
 0x1F596DE: Oh là là, Dresseur de Pokémon !\pJe n'arrive pas à croire que tu l'as\nfait !\pTu as vraiment mis {STR_VAR_1}\nMagicarpe dans une Boîte !\pJe veux dire, une tâche comme ça\ndemande une sacrée dévotion.\pMais après tout, tu es membre des\nCuissardes.\pAlors laisse-moi les prendre pour\ntoi.\pEt pour un membre aussi distingué,\nje veux que tu prennes ceci.
 0x1F59821: Salut, Dresseur de Pokémon.\pJe suis membre des Cuissardes !\pSi tu veux rejoindre notre club,\nparle au président du club à\lVille Portuaire.\pTu sais, cette ville portuaire de\nBorrius Ouest ?
-0x1F598D8: Salut, Dresseur de Pokémon.\pEn ce moment, ta Boîte\n« {COLOR}É{STR_VAR_1}{COLOR}Ë »: {COLOR}É{STR_VAR_3}{COLOR}Ë Magicarpe\ldedans.\pTon objectif est d'en mettre {COLOR}É{STR_VAR_2}{COLOR}Ë\nlà-dedans.\pReviens quand ce sera fait.
+0x1F598D8: Salut, Dresseur de Pokémon.\pEn ce moment, ta Boîte\n«{COLOR}É{STR_VAR_1}{COLOR}Ë»: {COLOR}É{STR_VAR_3}{COLOR}Ë Magicarpe\ldedans.\pTon objectif est d'en mettre {COLOR}É{STR_VAR_2}{COLOR}Ë\nlà-dedans.\pReviens quand ce sera fait.
 0x1F5999A: En fait, fais d'abord de la place\ndans ton équipe pour lui, Dresseur.
 0x1F599DC: Le savais-tu ?\pLes Magicarpe ne sont pas vraiment\nles plus faibles des Pokémon !\pCe titre revient à la forme solo de\nFroussardine !\pUn poisson inutile lui aussi jusqu'à\nce qu'il grandisse !
 0x1F59A7E: Oh, mon dieu.\pMa fille m'a laissé son jeune fils,\nmais je suis trop prise aujourd'hui\lpour m'en occuper correctement.\pAccepterais-tu de t'en occuper\npendant que je termine mon travail ?
@@ -19070,7 +19070,7 @@
 0x1F5A365: Quel Œuf veux-tu me vendre\nà moi ?
 0x1F5A38A: Es-tu sûr de vouloir me vendre\ncet Œuf ?
 0x1F5A3B5: Es-tu sûr de vouloir me vendre tous\nles Œufs de ton équipe ?
-0x1F5A3F5: Es-tu sûr de vouloir me vendre tous\nles Œufs de la Boîte « {COLOR}É{STR_VAR_1}{COLOR}Ë » ?
+0x1F5A3F5: Es-tu sûr de vouloir me vendre tous\nles Œufs de la Boîte «{COLOR}É{STR_VAR_1}{COLOR}Ë» ?
 0x1F5A4A7: Ravi de faire affaire avec toi !\pReviens me voir si tu as d'autres\nŒufs à vendre.
 0x1F5A4FA: Pense à moi si tu trouves un Œuf\ndont tu ne veux pas.
 0x1F5A539: Tu n'as aucun Œuf dans\nton équipe…
@@ -19494,7 +19494,7 @@
 0x1F61AC4: Tu descends de la montagne ?\nTu dois être épuisé.\pLaisse-moi soigner tes Pokémon\npour toi.
 0x1F61B26: Si tu es pressé, le Psy là-bas peut\nte téléporter à Dresco, la\lville suivante.\pMême si tu acceptes son offre, ce\nn'est jamais une mauvaise idée\ld'être en pleine forme !
 0x1F61BE3: {COLOR}ÉCleeeeewoo!
-0x1F61BF2: Hé, gamin !\nÉcoute.\pLa route plus loin est pleine de\nDresseurs qui veulent se battre.\pCertains l'ont même appelée\n« Route Défi ».\pMais si tu ne veux pas les\ncombattre, je comprends.\pAvec mes incroyables pouvoirs\npsychiques, je peux te téléporter\lgratuitement de l'autre côté !\pAlors, qu'en dis-tu, tu es partant ?
+0x1F61BF2: Hé, gamin !\nÉcoute.\pLa route plus loin est pleine de\nDresseurs qui veulent se battre.\pCertains l'ont même appelée\n«Route Défi».\pMais si tu ne veux pas les\ncombattre, je comprends.\pAvec mes incroyables pouvoirs\npsychiques, je peux te téléporter\lgratuitement de l'autre côté !\pAlors, qu'en dis-tu, tu es partant ?
 0x1F61D20: Alors, je te téléporte à Dresco ?
 0x1F61D57: C'est parti !\pAbra, Kadabra, Symbios !
 0x1F61D7D: Si tu changes d'avis,\ndis-le-moi.
@@ -19790,7 +19790,7 @@
 0x1F6787F: Gah… Ça faisait mal…\pMais je vais me dire que ça donne\nà Lady Ivory une chance de te\lmettre au tapis elle-même !\pHa ha ha !
 0x1F678F5: La force obscure !\nOn régnera sur Borrius !
 0x1F67923: Enfin… je crois qu’on régnera\nsur Borrius, quoi…
-0x1F67951: Enfin, ça s’appelle la « force\nobscure », alors…\pOn ne va pas s’en servir pour autre\nchose que gâcher la journée\lde quelqu’un, tu crois pas ?
+0x1F67951: Enfin, ça s’appelle la «force\nobscure», alors…\pOn ne va pas s’en servir pour autre\nchose que gâcher la journée\lde quelqu’un, tu crois pas ?
 0x1F679D4: Prépare-toi à subir la colère\ndes Ombres !
 0x1F679FE: Pff… c’était quoi, cette colère,\nau juste ?
 0x1F67A2A: Ha ! Tu ne nous battras jamais tous\nde toute façon !\pOn a tous les appuis pour revenir\nencore et encore !
@@ -19918,7 +19918,7 @@
 0x1F6A2F3: Je savais qu’on compterait sur toi\nencore une fois, Champion !
 0x1F6A326: Les {COLOR}ÉSharpedo{COLOR}Ë nagent\n{COLOR}Ésous l’eau{COLOR}Ë sur la {COLOR}ÉRoute 17{COLOR}Ë.\pLes gars du QG m’ont dit\nqu’il y en a environ {COLOR}É{STR_VAR_1}{COLOR}Ë qui\lse sont agités.\pOh, et je dois te prévenir : tout\nSharpedo calmé risque de\lse réagiter si tu\lrefais surface.\pNe sors pas de l’eau avant de\nles avoir tous\lcalmés.\pSi tu es malin, ce dont je ne doute\npas, fais le plein d’objets de soin\lavant d’y descendre.
 0x1F6A4F1: Je n’ai aucun doute :\ntu es le Champion !\pAccepte ce paiement pour\nton aide à la police.
-0x1F6A56A: « Ne demande pas ce que ta région\npeut faire pour toi, mais ce que tu\lpeux faire pour elle. »\pJe n’ai jamais vu quelqu’un qui\nincarne mieux ces mots,\lChampion.\pÀ notre prochaine rencontre, adieu.
+0x1F6A56A: «Ne demande pas ce que ta région\npeut faire pour toi, mais ce que tu\lpeux faire pour elle.»\pJe n’ai jamais vu quelqu’un qui\nincarne mieux ces mots,\lChampion.\pÀ notre prochaine rencontre, adieu.
 0x1F6A61A: Salut, Dresseur Pokémon !\pJe fais partie des Cuissardes !\pComme le nom l’indique, on est un\nclub de pêche !\pPourquoi ne pas nous rejoindre pour\npêcher un peu ?
 0x1F6A6B5: C’est la loi des marées, hein ?\pMoi, j’abandonne pas. Si tu changes\nd’avis, reviens me voir !
 0x1F6A71B: Génial ! Tu es le troisième\nmembre des Cuissardes !\pC’est parti !\pJ’annonce la Prise du jour\ndes Cuissardes !\pLe Pokémon que l’on pêche\naujourd’hui est {COLOR}É{STR_VAR_1}{COLOR}Ë !\pSi tu en attrapes un, montre-le-moi\ns’il te plaît !
@@ -20040,7 +20040,7 @@
 0x1F6D499: On peut déjà bouger\nles rochers !
 0x1F6D4C5: L’ADM a rendu possible le\ndéplacement des rochers.
 0x1F6D4F7: Il est déjà possible de bouger les\nrochers.
-0x1F6D527: Tu vois ce grand navire\pnoir ? C’est le prototype d’un\nbateau appelé « L’Ombre\p». Il a été conçu pour traverser\nl’océan silencieusement en plein\lmilieu de la nuit.\pUn mystérieux « Z »\nl’a financé.
+0x1F6D527: Tu vois ce grand navire\pnoir ? C’est le prototype d’un\nbateau appelé «L’Ombre\p». Il a été conçu pour traverser\nl’océan silencieusement en plein\lmilieu de la nuit.\pUn mystérieux «Z»\nl’a financé.
 0x1F6D60A: Ces navires font partie de la série\nSeagallop Hi-Speed. Ils sont\ppeut-être petits, mais ils peuvent\nfiler sur l’océan plus vite que\ln’importe quel gros navire !
 0x1F6D68F: Pas marre de trimballer un Pokémon\npour casser les rochers, un autre\lpour pousser les blocs, et un autre\lpour couper les arbres\pL’{COLOR}ÉADM{COLOR}Ë règle ça ! Non\pseulement il fait tout ça pour toi,\nmais tu peux aussi l’attacher à ton\lPokémon comme un jetpack pour qu’il\lpuisse utiliser Vol !\pTu peux même l’accrocher comme une\nforeuse à ton Pokémon pour\lt’échapper des grottes !\pUn jour il sera bon marché, mais\npour l’instant, il reste encore un\lpeu cher à l’achat.
 0x1F6D883: Si tu as un ADM, tu peux l’utiliser\npour\pminer des trésors ! Il existe trois\nendroits pour miner à Borrius :\ll’Autoroute KBT, sous l’eau, ou dans\lune\ppièce de Crystal Peak. Miner sur\nl’Autoroute KBT donne une bonne\lvariété d’objets, miner sous l’eau\ldonne plus de Fossiles, et miner à\lCrystal Peak donne plus de\lGemmes.
@@ -20172,25 +20172,25 @@
 0x1F708C1: Maison de {PLAYER}
 0x1F708D0: Maison de {RIVAL}
 0x1F708DF: C’est une liste de choses que\n{RIVAL} prévoit de faire. Mieux\pvaut y aller !
-0x1F7091D: Route 1 « Col\nMontagne\pEnneigée » <0x79> Hauteurs\nGelées <0x7A> Icicle
-0x1F70967: Route 1 «\nCol\pMontagne Enneigée » <0x79>\nHauteurs Gelées <0x7A> Bourg\lBellin <0x7B> Grotte Icicle
+0x1F7091D: Route 1 «Col\nMontagne\pEnneigée» <0x79> Hauteurs\nGelées <0x7A> Icicle
+0x1F70967: Route 1 «\nCol\pMontagne Enneigée» <0x79>\nHauteurs Gelées <0x7A> Bourg\lBellin <0x7B> Grotte Icicle
 0x1F709B2: Bourg Bellin\pUne ville paisible nichée au creux\ndes montagnes.
 0x1F709EA: C’est une statue du Pokémon Glace\nLégendaire Artikodin. Il est\pécrit ici qu’Artikodin servait\nautrefois à renforcer un sceau sur\lune grande obscurité, mais qu’il\laime maintenant voyager entre le\lMont Froid et les Hauteurs Gelées.
 0x1F70ABD: Grotte Icicle\nPassage
-0x1F70AD1: Route 2 «\nVoie\pOcéane » <0x7B> Dresco\n<0x7C> Icicle, Route 15
+0x1F70AD1: Route 2 «\nVoie\pOcéane» <0x7B> Dresco\n<0x7C> Icicle, Route 15
 0x1F70B0C: Dresco\pL’archipel de la région de\nBorrius.
 0x1F70B3F: Arène Pokémon de Dresco\nChampion : Mirskle Le Maître\lPaisible des Fleurs
 0x1F70B84: Maison des\pDresseurs Combattez à volonté !
 0x1F70BB2: C’est une statue du Pokémon Feu\nLégendaire Sulfura. Il est\pécrit ici que Sulfura servait\nautrefois à renforcer un sceau sur\lune grande obscurité, mais qu’il\lréside désormais au Volcan Cendre.
 0x1F70C64: Avant {B_BUTTON}, check les flics !\n
-0x1F70CAC: Route 3 «\nRoute\pdu Paradis » <0x79> Paradis des\nFleurs <0x7A> Dresco
+0x1F70CAC: Route 3 «\nRoute\pdu Paradis» <0x79> Paradis des\nFleurs <0x7A> Dresco
 0x1F70CE4: Paradis des Fleurs\pUn havre pour les fleurs.
-0x1F70D0E: Route 4 «\nZone\pdu Volcan » <0x7B> Forêt Lugubre,\nVolcan Cendre, Route 5 <0x7C>\lDresco <0x7A> Route\l13
+0x1F70D0E: Route 4 «\nZone\pdu Volcan» <0x7B> Forêt Lugubre,\nVolcan Cendre, Route 5 <0x7C>\lDresco <0x7A> Route\l13
 0x1F70D64: Forêt\pLugubre <0x7B> Volcan Cendre\n<0x7C> Dresco
 0x1F70D8E: <0x7C> Forêt Lugubre
 0x1F70D9B: Volcan de Cinder\nPassage
-0x1F70DB2: Route 5\n«\pVallée Humide » <0x79> Route 4,\nV. Cendre <0x7B> Cratère
-0x1F70E01: Route 5\n«\pVallée Humide » <0x79> Pension\nPokémon <0x7A> Bourg Cratère\l<0x7C> Route 4
+0x1F70DB2: Route 5\n«\pVallée Humide» <0x79> Route 4,\nV. Cendre <0x7B> Cratère
+0x1F70E01: Route 5\n«\pVallée Humide» <0x79> Pension\nPokémon <0x7A> Bourg Cratère\l<0x7C> Route 4
 0x1F70E41: <0x79> Pension Pokémon\n<0x7A> Bourg Cratère\l<0x7C> Route 4
 0x1F70E6C: Pension Pokémon
 0x1F70E7D: En voyage, ton Pokémon grandit avec\ntoi…\pReste toujours lié par l’amitié.\n-Pension Pokémon
@@ -20199,25 +20199,25 @@
 0x1F70F31: Arène Pokémon de Bourg Cratère\nChampion : Véga L’Ombre toujours\lprésente
 0x1F70F70: Autoroute KBT\pAutoroute souterraine de Borrius.
 0x1F70F9D: Grotte Vallée
-0x1F70FA9: Route 6 «\nChemin\pdes Patates » <0x79> Grotte\nVallée <0x7A> Voie d’Eau\lAuburn <0x7B> Route 7, Mont\lGelé <0x7C> Route 14
-0x1F71004: Route 7 «\nBout\pde l’Île » <0x79> Mont Gelé,\nRoute 8 <0x7A> Route 9\l<0x7C> Route 6
-0x1F71049: Route 7 «\nBout\pde l’Île » <0x7A> Route 9\n<0x7B> Mont Gelé, Route 8\l<0x7C> Route 6
+0x1F70FA9: Route 6 «\nChemin\pdes Patates» <0x79> Grotte\nVallée <0x7A> Voie d’Eau\lAuburn <0x7B> Route 7, Mont\lGelé <0x7C> Route 14
+0x1F71004: Route 7 «\nBout\pde l’Île» <0x79> Mont Gelé,\nRoute 8 <0x7A> Route 9\l<0x7C> Route 6
+0x1F71049: Route 7 «\nBout\pde l’Île» <0x7A> Route 9\n<0x7B> Mont Gelé, Route 8\l<0x7C> Route 6
 0x1F7108E: Mont Gelé
-0x1F7109D: Route 8 « Sommet\ndu\pMont Gelé » <0x79> Ville de\nBlizzard <0x7A> Gelé/Rt7
+0x1F7109D: Route 8 «Sommet\ndu\pMont Gelé» <0x79> Ville de\nBlizzard <0x7A> Gelé/Rt7
 0x1F710E5: Ville Blizzard\pLa ville glaciale de la montagne.
 0x1F7110D: Arène Pokémon de Ville Blizzard\nChampionne : Alice La Reine des\lCieux Glacés
-0x1F7114F: Route 9 «\nBois\pAutl » <0x79> Route 7, Mont Gelé\n<0x7A> Ville de Tehl
-0x1F7118A: Route 9 «\nBois\pAutl » <0x79> Route 7, Mont Gelé\n<0x7C> Tehl, Route 10
+0x1F7114F: Route 9 «\nBois\pAutl» <0x79> Route 7, Mont Gelé\n<0x7A> Ville de Tehl
+0x1F7118A: Route 9 «\nBois\pAutl» <0x79> Route 7, Mont Gelé\n<0x7C> Tehl, Route 10
 0x1F711CF: Ville de\pTehl Une ville où c’est\nperpétuellement l’automne.
-0x1F711FF: Route 10 «\nRivière\pd’Automne » <0x7B> Ville de\nTehl <0x79> Voie d’Eau Auburn\l<0x7C> Ville de Fallshore
-0x1F71246: Route 10 «\nRivière\pd’Automne » <0x7B> Ville de\nTehl, Voie Auburn -> Fallshore
+0x1F711FF: Route 10 «\nRivière\pd’Automne» <0x7B> Ville de\nTehl <0x79> Voie d’Eau Auburn\l<0x7C> Ville de Fallshore
+0x1F71246: Route 10 «\nRivière\pd’Automne» <0x7B> Ville de\nTehl, Voie Auburn -> Fallshore
 0x1F7128C: <0x79> Voie d’Eau Auburn
 0x1F7129E: Voie d’Eau\pAuburn <0x79> Route 6, Grotte\nVallée <0x7A> Route 10
 0x1F712D0: Ville de Fallshore\pChutes d’eau de Borrius.
 0x1F71301: Arène Pokémon de Ville de Fallshore\nChampion : Mel Grâce et\lprestance
 0x1F7134A: Maison Combat Inversé\pAmusez-vous !
 0x1F71378: QG des Missions\pCherchez votre prochain boulot !
-0x1F7139B: Route 11 «\nGrottes\pdes Falaises » <0x7B> Ville de\nFallshore <0x7C> Bourg\lEpidimy <0x79> Bourg Tarmigan
+0x1F7139B: Route 11 «\nGrottes\pdes Falaises» <0x7B> Ville de\nFallshore <0x7C> Bourg\lEpidimy <0x79> Bourg Tarmigan
 0x1F713E6: Ville d'Epidimy La\pville du bonheur et de la félicité.
 0x1F71414: Mont Foudroyant\nPassage
 0x1F7142B: C’est une statue du Pokémon\nLégendaire Électrik Électhor. Il est\pécrit ici qu’Électhor servait\nautrefois à renforcer un sceau sur\lune grande obscurité, mais qu’il\lréside désormais au Mont Foudroyant.
@@ -20229,7 +20229,7 @@
 0x1F715D0: Auberge de Tarmigan\pUn perchoir pour Dresseurs agités.\pFaites de beaux rêves dans nos lits\nsomptueux !
 0x1F71626: La porte est hermétiquement fermée.\nElle semble impossible à ouvrir.
 0x1F7165F: Étrange. La porte est\ndéverrouillée…
-0x1F71685: Route 12 « Escaliers\nOuest\pMont Foudroyant » <0x79> Ville de\nDehara <0x7A> Bourg Tarmigan\l<0x7B> Route 14
+0x1F71685: Route 12 «Escaliers\nOuest\pMont Foudroyant» <0x79> Ville de\nDehara <0x7A> Bourg Tarmigan\l<0x7B> Route 14
 0x1F716CF: Ville de\pDehara Une oasis au bord du désert.
 0x1F716FF: Arène Pokémon de Ville de Dehara\nChampion : Galavan Le cerveau\lderrière la machine de guerre
 0x1F71749: Trouve tout ce qu’il te faut au\nGrand Magasin de Dehara !
@@ -20243,12 +20243,12 @@
 0x1F71873: 6F : Cadeaux Sages
 0x1F71885: Salle de Jeu Nuage\pLe terrain des adultes !
 0x1F718B5: Maison Combat Duo\pProfitez des combats à deux !
-0x1F718E3: Quelque chose est écrit sur le mur.\p« Salle de dev Unbound »\pPas de budget pour un panneau ?
+0x1F718E3: Quelque chose est écrit sur le mur.\p«Salle de dev Unbound»\pPas de budget pour un panneau ?
 0x1F71945: Zone d’Entraînement Guerrier Ombre
-0x1F71962: Route 13\n« Chenal de Borrius »\p<0x79> Route 4, Volcan Cendre,\nForêt Lugubre\l<0x7A> Route 14\l<0x7C> Ville de Dehara
-0x1F719C0: Route 13\n« Chenal de Borrius »\p<0x79> Route 4, Volcan Cendre,\nForêt Lugubre\l<0x7A> Route 14
-0x1F71A10: Route 14\n« Chenal de Borrius »\p<0x79> Route 13\n<0x7B> Route 6, Ruines du Néant\l<0x7C> Route 12
-0x1F71A5E: Route 14\n« Chenal de Borrius »\p<0x7B> Route 6\n<0x7C> Ruines du Néant, Route 12
+0x1F71962: Route 13\n«Chenal de Borrius»\p<0x79> Route 4, Volcan Cendre,\nForêt Lugubre\l<0x7A> Route 14\l<0x7C> Ville de Dehara
+0x1F719C0: Route 13\n«Chenal de Borrius»\p<0x79> Route 4, Volcan Cendre,\nForêt Lugubre\l<0x7A> Route 14
+0x1F71A10: Route 14\n«Chenal de Borrius»\p<0x79> Route 13\n<0x7B> Route 6, Ruines du Néant\l<0x7C> Route 12
+0x1F71A5E: Route 14\n«Chenal de Borrius»\p<0x7B> Route 6\n<0x7C> Ruines du Néant, Route 12
 0x1F71AA1: Grand Désert\p<0x7B> Ville de Dehara\n<0x7C> Bourg Gurun
 0x1F71AC9: Tombeau de Borrius\pIci repose le roi Borrius III.
 0x1F71AF5: Bourg Gurun\pUne ville qui a survécu aux sables\ndu temps.
@@ -20261,8 +20261,8 @@
 0x1F71CA1: Laboratoire
 0x1F71CAE: Salle de Repos
 0x1F71CB8: Réseau Électrique
-0x1F71CC3: Route 15 « Ruban\nNorthsea »\p<0x7B> Route 2, Grotte\nIcicle <0x7C> Bourg Vivill
-0x1F71D04: Route 16 « Canyon\nAride » <0x79>\pBourg Gurun\n<0x7A> Ville\ld’Antisis <0x7C> Route 17
+0x1F71CC3: Route 15 «Ruban\nNorthsea»\p<0x7B> Route 2, Grotte\nIcicle <0x7C> Bourg Vivill
+0x1F71D04: Route 16 «Canyon\nAride» <0x79>\pBourg Gurun\n<0x7A> Ville\ld’Antisis <0x7C> Route 17
 0x1F71D44: Quelqu’un a tagué tout le\npanneau…
 0x1F71D6A: QG Ferrothorn Noir\pReste à l’écart si tu sais ce qui\nest bon pour toi !
 0x1F71DA8: Arène Pokémon de Ville d’Antisis\nChampion : Big Mo\pMaillon suprême de la chaîne !
@@ -20271,7 +20271,7 @@
 0x1F71E18: {COLOR}ÁC’est un reportage :\pLe Granbull Terrifiant, le gang\ncélèbre pour avoir fait d’Antisis\lune zone de crime,\la disparu !\pUne ère de paix et de prospérité\npour la ville ? Les habitants sont\pencouragés à sortir et à rendre à\nAntisis\lsa gloire d’antan.
 0x1F71F45: Port d’Antisis\p<0x7B> Ville d’Antisis
 0x1F71F66: Mont Foudroyant\nEntrée Est\p<0x7C> Ville d’Antisis
-0x1F71F92: Route 17 « Falaises\nEst » <0x7B>\pRoute 16\n<0x7C> Ville Portuaire
+0x1F71F92: Route 17 «Falaises\nEst» <0x7B>\pRoute 16\n<0x7C> Ville Portuaire
 0x1F71FC6: Frontière de Combat\p<0x79> Tour Combat, Sables Combat\n<0x7B> Mine Combat\l<0x7C> Cirque Combat
 0x1F72011: Tour Combat\pNe perds jamais ! Gagne toujours !
 0x1F72038: Mine Combat\pAtteins de nouveaux fonds !
@@ -20300,8 +20300,8 @@
 0x1F723F8: Champs Magnolia\p<0x7B> Bourg\nMagnolia <0x7C> Bois-Rouge
 0x1F7242A: Bois-Rouge\pVillage forestier calme à\nl’air mystérieux…
 0x1F72465: Arène Pokémon de Bois-Rouge\nChampion : Benjamin\lEnfant mature ou adulte immature
-0x1F724B4: Route 18\n« Ascension Victoire »\p<0x7B> Bourg Gurun\n<0x7C> Ligue Pokémon
-0x1F724EA: Route 18\n« Ascension Victoire »\p<0x7B> Bourg Gurun\n<0x79> Ligue Pokémon
+0x1F724B4: Route 18\n«Ascension Victoire»\p<0x7B> Bourg Gurun\n<0x7C> Ligue Pokémon
+0x1F724EA: Route 18\n«Ascension Victoire»\p<0x7B> Bourg Gurun\n<0x79> Ligue Pokémon
 0x1F72520: Route Victoire
 0x1F7252D: Route Victoire\pDernier défi avant la Ligue\nPokémon.
 0x1F72569: <0x79> Ligue Pokémon
@@ -20351,7 +20351,7 @@
 0x1F73A33: Astuces du Dresseur !\pLes Pokémon Électrik sont\nimmunisés à la\pparalysie ! Les Pokémon Plante sont\nimmunisés aux poudres et spores !
 0x1F73AAD: Astuces du Dresseur !\pAppuyer sur {SELECT_BUTTON} permet\nd’utiliser un des six objets\penregistrés ! Pour enregistrer un\nobjet, sélectionne-le dans les\lObjets Importants puis choisis\p{COLOR}ÉEnregistrer{COLOR}Á. Le\nsecond objet enregistré est prêt\lrapidement avec {L_BUTTON} si l’option\l{COLOR}ÉMode Bouton L{COLOR}Á est sur {COLOR}ÉObjet Reg 2{COLOR}Á.
 0x1F73BDE: Astuces du Dresseur !\pSaute sur les rochers pour\ntraverser l’eau !
-0x1F73C16: Astuces du Dresseur !\pQuand tu captures un Pokémon, la\nPoké Ball peut parfois ne bouger\lqu’une fois. C’est\pune « capture critique » et plus tu\ncaptures de Pokémon, plus elle\la de chances d’arriver.
+0x1F73C16: Astuces du Dresseur !\pQuand tu captures un Pokémon, la\nPoké Ball peut parfois ne bouger\lqu’une fois. C’est\pune «capture critique» et plus tu\ncaptures de Pokémon, plus elle\la de chances d’arriver.
 0x1F73CD7: Astuces du Dresseur !\pNe change jamais la date de\nton appareil pour plus d’événements\pdu jour ! Sinon, ils peuvent\ntous cesser de marcher,\lmême si tu n’as pas triché plus\ld’une fois. Si tu l’as déjà\lfait, tout n’est pas\pperdu. Si tu peux attendre\nla date que tu as mise,\pattends. Sinon, parle à un homme\naux Hauteurs Gelées. Il peut\lremettre l’horloge une fois pour\lque les\pévénements\nquotidiens\lrefonctionnent.
 0x1F73EB0: Astuces du Dresseur !\pUtilise Force pour pousser les\nblocs sur les plaques de pression !
 0x1F73EFA: Astuces du Dresseur !\pSi tu vois un cœur dans le\nrésumé d’un Pokémon,\lcela veut dire que tu commences\là te lier avec lui !\pPlus le lien est fort, plus le cœur\nse remplit.\pUn Pokémon avec un cœur presque\nplein est prêt à évoluer s’il\lrequiert une évolution par {COLOR}Éamitié{COLOR}Á !
@@ -20407,8 +20407,8 @@
 0x1F75BFD: Presque à chaque voyage, je\nvois un pauvre type seul qui veut\lparler.\pOn l’appelle le gars Kokiyas,\ncomme le Pokémon, il ne lâche\ljamais.
 0x1F75CB1: Parfois, un Dresseur légendaire\nde Kanto voyage\lsur ce navire.\pPourquoi ? Il a sûrement mieux\nà affronter.
 0x1F75D4B: Le voyage est confortable, mais je\nn’aime pas la politique de\lconfidentialité. Je\pne peux verrouiller ma porte que\npour dormir ? Je\pvoulais juste aller ailleurs en\npaix, pas être défié par ces\llourdauds !
-0x1F75E38: Le premier coup de\nsifflet veut dire « Bonjour ! »\pLe second dit\n« L’océan est beau ! »\pLes troisième et quatrième disent\n« Tu profites de la\ltraversée ? »\pLe cinquième dit\n« Merci et à bientôt ! »\pSympa d’imaginer le navire\nqui parle !
-0x1F75F57: Je fonderai un gang un jour, quand\nj’aurai un bon nom ! Je\ppensais à « Les Corboss Noirs » !\nHein ? Les Corboss\psont déjà noirs ?
+0x1F75E38: Le premier coup de\nsifflet veut dire «Bonjour !»\pLe second dit\n«L’océan est beau !»\pLes troisième et quatrième disent\n«Tu profites de la\ltraversée ?»\pLe cinquième dit\n«Merci et à bientôt !»\pSympa d’imaginer le navire\nqui parle !
+0x1F75F57: Je fonderai un gang un jour, quand\nj’aurai un bon nom ! Je\ppensais à «Les Corboss Noirs» !\nHein ? Les Corboss\psont déjà noirs ?
 0x1F75FF2: Oh là là, que c’est ENNUYEUX ici\n! Vraiment ennuyeux !\pRien à faire sauf dormir et\ncombattre les Dresseurs ! Eh\pbien, je vais leur\nmontrer ! Je vais tous\ples ennuyer ! Voyons s’ils aiment\nquand C’EST moi qui les assomme\pd’ennui ! Toi, tu cherchais\ndes Dresseurs… comme tout le\pmonde. Alors, ça va\n? Tu en as déjà marre ?…\p… Zut, je crois que\ntu ne m’écoutes même\pplus… mission accomplie\n!
 0x1F76197: Oui, je suis assez mesquine pour\nfaire perdre du temps à un\lDresseur, au moins je l’avoue.
 0x1F761E6: Attaque de Tenaille\n! Droit sur la jambe\p! Ha ha ha ! Tu ne\nte débarrasseras pas si facile !\pTout le bateau tremble en entendant\nmon nom, je suis le gars Kokiyas\l! Bras, jambe ou\pvisage, je reste collé ! Alors\npendant que je m’accroche, je vais\pte parler de moi…Aïe ! Aïe !\nAïe ! Arrête de me donner\pdes coups de pied,\ppauvre visage\penvahissant\n!
@@ -20425,7 +20425,7 @@
 0x1F76BD3: J’espérais voir des Pokémon\nrares en combattant les\ppassagers… Mais personne ne\nnavigue avec un vélo ou un Pokémon\lvolant, donc c’est toujours les\lmêmes…
 0x1F76C84: J’ai déménagé à Borrius pour\nfuir le crime chez moi… Et\pje tombe dans un endroit\nencore plus criminel ! Je vais\lpasser mes nerfs sur\ptoi\n!
 0x1F76D3B: Zut alors…
-0x1F76D4C: Peut-être devrais-je\nrepartir… J’ai\pentendu du bien d’une région\nappelée « Orre », rien de\lmauvais n’y arrive, hein ?
+0x1F76D4C: Peut-être devrais-je\nrepartir… J’ai\pentendu du bien d’une région\nappelée «Orre», rien de\lmauvais n’y arrive, hein ?
 0x1F76DD0: J’ai déménagé à Borrius pour\nfuir le crime chez moi… Et\pje tombe dans un endroit\nencore plus criminel ! Je veux\ljuste rentrer avant\pque quelque chose de pire\nn’arrive…
 0x1F76E91: Où que j’aille, il y a des\nDresseurs avec de nouvelles\lfaçons peut-être injustes de\lcombattre. Affronte-moi\pà la loyale !
 0x1F76F2B: Voilà qui me fait regretter les\njours plus simples…
@@ -20447,9 +20447,9 @@
 0x1F7769E: J’ai perdu dans un choc de\nforce…
 0x1F776C7: C’était instructif… Je me\pdemande combien de temps tu\nresteras actif en\pvieillissant… Même Arthur,\nl’ancien Champion, n’était pas\laussi plein d’entrain !
 0x1F77776: Pas envie de combattre, mais je ne\nme lasse pas d’écouter les\lbruits des combats dans la\lcabine à côté. Je\pm’amuse à deviner ce qui se passe\n!
-0x1F7782D: QU’AS-TU DIT ? BATON\n? BEURRE ? AH, «\pBATTLE » ! DÉSOLÉ !\nJE SUIS UN PEU SOURD !\pBIEN SÛR QUE JE TE COMBATS !
+0x1F7782D: QU’AS-TU DIT ? BATON\n? BEURRE ? AH, «\pBATTLE» ! DÉSOLÉ !\nJE SUIS UN PEU SOURD !\pBIEN SÛR QUE JE TE COMBATS !
 0x1F7788F: AH, MON DIEU… QUEL CHOC !
-0x1F778B1: COMMERÇANTS ? DÉSOLÉ, JE SUIS\nVENU POUR BATTRE…\pAH, TU AS DIT « DRESSEURS » !\pNON, JE NE SAIS PAS COMBIEN NOUS\nSOMMES, DEMANDE À L’ÉQUIPAGE.
+0x1F778B1: COMMERÇANTS ? DÉSOLÉ, JE SUIS\nVENU POUR BATTRE…\pAH, TU AS DIT «DRESSEURS» !\pNON, JE NE SAIS PAS COMBIEN NOUS\nSOMMES, DEMANDE À L’ÉQUIPAGE.
 0x1F77931: PARDON ? OÙ SONT LES AUTRES QUOI\p? TRAITRES ? ON A DES\nTRAITRES À BORD ?\pAH, DRESSEURS ! DÉSOLÉ, SOURD\p! JE NE SAIS PAS,\nDEMANDE À L’ÉQUIPAGE !
 0x1F779C2: Hein !? J’ai rien fait !\nJe transporte rien d’illégal !
 0x1F779FF: Peut-être que je n’aurais pas\ndû me battre… Ça n’a rien arrangé…
@@ -20492,7 +20492,7 @@
 0x1F782CF: …leur apprendre des capacités !\pAppuie sur {SE_SHOP} pour éditer, {B_BUTTON} pour\nsauvegarder, et {L_BUTTON} et {R_BUTTON}\lpour défiler les pages facilement !\pPour plus d’infos, regarde en bas\n\ll’interface pendant tes réglages.{PAUSE_UNTIL_PRESS}
 0x1F783C6: Tarmiganville J
 0x1F783D6: Tarmiganville N
-0x1F783E6: Tarmiganville se trouve sur le\n« Plateau Foudre ».\pMais si tu es venu pour voir les\norages, c’est\lraté.\pIls ne frappent qu’à l’est d’ici,\nprès de Bourg Épidimy.
+0x1F783E6: Tarmiganville se trouve sur le\n«Plateau Foudre».\pMais si tu es venu pour voir les\norages, c’est\lraté.\pIls ne frappent qu’à l’est d’ici,\nprès de Bourg Épidimy.
 0x1F78496: Je travaille dans l’installation\nappelée le Laboratoire des Rêves.\pOn fait ce que le nom dit,\non étudie les rêves.\pMon travail consiste à récolter une\nbrume spéciale\ldu Pokémon Mushana.\pMalheureusement, ça ne marche\npas bien.\pPour l’instant, je n’ai pu\nobtenir une capsule de brume.\pUne seule capsule m’est inutile,\nprends-la.
 0x1F78600: La {COLOR}ÉBrume de Rêve{COLOR}Ë peut donner\nun Talent Caché à un Pokémon.\pOn ne peut pas revenir en arrière\naprès ce changement.\pJe t’en donnerais plus si possible,\nmais notre Mushana ne semble plus\len produire beaucoup.\pSi tu trouves ton propre Mushana\nà combattre, il peut libérer de la\lBrume de Rêve si tu le bats.
 0x1F78733: Depuis les temps anciens, le\nPokémon fabuleux Darkrai\lhante cette ville.\pSi tu regardes bien, tu peux même\nvoir les esprits des pauvres\lâmes hantées par Darkrai.\pPrends garde, enfant !\nNe tombe pas dans le vide sombre !
@@ -20756,7 +20756,7 @@
 0x1F7F272: Les Pokémon d'ici gênaient,\nalors on les a rassemblés\let enfermés dans la cage électrique.\pComment l'ouvrir ?\pHa ! Je ne te le dirai jamais !
 0x1F7F310: Je déteste les Pokémon\nd'ici…
 0x1F7F337: Je ne sais pas ce qui est pire :\nperdre contre toi ou griller.
-0x1F7F372: Même si tu continues, je ne dirai\npas quel sbire a\lla clé pour libérer les Pokémon !\p…Oh mince. J'ai lâché le mot\n« clé »…
+0x1F7F372: Même si tu continues, je ne dirai\npas quel sbire a\lla clé pour libérer les Pokémon !\p…Oh mince. J'ai lâché le mot\n«clé»…
 0x1F7F400: C'est une impasse, mon gars !\pMême si tu me bats, tu ne\ninterrompras pas Marlon !
 0x1F7F453: On dirait que ça ne t'a pas empêché\nde me démolir, hein… ?
 0x1F7F488: Les escaliers sont détruits, rien\nn'interrompra Marlon pendant qu'il\lse prépare à capturer Électhor.
@@ -20923,7 +20923,7 @@
 0x1F81EC1: Juillet 
 0x1F81F2F: Quelque chose a sonné dans le mur !\n{STR_VAR_1} confirmé !
 0x1F81F5B: Bon, écoute bien, petit !\pTu vas creuser avec mon propre\nmarteau et ma pioche !\pAppuie sur {SE_SHOP} pour creuser\ntoutes sortes de choses !\pSi tu veux changer d'outil,\nappuie sur {L_BUTTON} ou {R_BUTTON} !\pJe suis sûr que tu peux sortir un\ntrésor avant que le mur tombe.\pTu peux le faire !\nBonne chance !
-0x1F82087: …\pOh ? Une note collée\ndans l'ADM.\p« Chasse au trésor ! »\pL'ADM est équipé de\nson propre marteau et sa pioche !\pAppuie sur {SE_SHOP} pour creuser\ntoutes sortes de choses !\pSi tu veux changer d'outil,\nappuie sur {L_BUTTON} ou {R_BUTTON} !\pJe suis sûr que tu peux les sortir\navant que le mur ne s'effondre\lau sol !\pTu peux le faire !\nBonne chance !
+0x1F82087: …\pOh ? Une note collée\ndans l'ADM.\p«Chasse au trésor !»\pL'ADM est équipé de\nson propre marteau et sa pioche !\pAppuie sur {SE_SHOP} pour creuser\ntoutes sortes de choses !\pSi tu veux changer d'outil,\nappuie sur {L_BUTTON} ou {R_BUTTON} !\pJe suis sûr que tu peux les sortir\navant que le mur ne s'effondre\lau sol !\pTu peux le faire !\nBonne chance !
 0x1F821E0: Le mur s'est effondré !
 0x1F821F4: Tout a été extrait !
 0x1F8220B: A{STR_VAR_2} {STR_VAR_1}\na été trouvé.
@@ -21196,7 +21196,7 @@
 0x1F87B73: Collecte les mystérieuses cellules\nvertes qui apparaissent à Borrius !
 0x1F87BB9: Merci d'être venu avec moi.\p…\pQuoi ?\pTu n'avais pas vraiment le\nchoix ?\pN'importe quoi.\pJe ne vois pas de quoi tu\nparles.\pPassons aux choses sérieuses.
 0x1F87C60: {COLOR}ÇRécemment, des fragments de\nZygarde apparaissent partout\là Borrius.\pMais on ne peut les voir qu'avec un\nSuper Cube équipé d'un module\lspécial.
-0x1F87D1C: Zygarde est un Pokémon de Kalos\nqui apparaît quand l'écosystème est\len danger.\pPourquoi il apparaît ici maintenant\nreste un mystère.\pNous cherchons la réponse, mais il\nnous faut quelqu'un pour aller\lcollecter toutes les « cellules »\let « noyaux » de Zygarde.
+0x1F87D1C: Zygarde est un Pokémon de Kalos\nqui apparaît quand l'écosystème est\len danger.\pPourquoi il apparaît ici maintenant\nreste un mystère.\pNous cherchons la réponse, mais il\nnous faut quelqu'un pour aller\lcollecter toutes les «cellules»\let «noyaux» de Zygarde.
 0x1F87E23: {COLOR}ÇPenses-tu pouvoir aider notre\nrecherche ?\pIl nous faut un Dresseur qui compte\nvoyager dans plusieurs endroits\lde Borrius.
 0x1F87EB8: {COLOR}ÇDommage, mais on ne peut pas te\nforcer, hélas.
 0x1F87EFB: Génial !\pMerci d'avoir accepté d'aider !\pPeux-tu me donner ton\nCube un instant…\p…\pVoilà !\pTon Super Cube a été mis à jour pour\nvoir et collecter les Cellules de\lZygarde qui couvrent Borrius Ouest\let Est.\pQuand tu en auras au moins {COLOR}É10{COLOR}Ë\npour cent, viens voir ma femme.\pBonne chance !
@@ -21370,7 +21370,7 @@
 0x1F8C07C: Bienvenue à la Mine de Combat !\pJe suis ta guide pour les Salles de\nCombat.
 0x1F8C0BD: Veux-tu tenter le défi\nde la Mine de Combat ?
 0x1F8C0EF: Quel format de Combat veux-tu ?\nChaque format a son set de niveaux.
-0x1F8C12E: La Mine de Combat est un lieu pour\ndes défis spéciaux.\pUne fois commencé, ton défi dure\njusqu'à battre l'Excavateur de la\lMine ou choisir de te reposer.\pÀ chaque niveau où tu descends dans\nla mine, un Dresseur t'attend.\pLe format choisi détermine\nquel niveau ils peuvent utiliser,\let ta profondeur règle d'autres\lparamètres comme Solo ou\lDuo, le niveau, la taille d'équipe,\lles Combats Inversés et le Dynamax.\pPour la liste des niveaux, vois ma\nsection « {COLOR}ÉNiveaux de Combat{COLOR}Ë ».\pPour chaque Dresseur vaincu, tu\nrecevras des {COLOR}ÉPoints de Combat{COLOR}Ë ({COLOR}ÉPC{COLOR}Ë).\pAprès leur défaite, certains\nDresseurs peuvent laisser les objets\lqu'ils minaient.\pSi tu veux interrompre ton défi, ta\nprogression sera\lenregistrée pour quand tu voudras\lreprendre.\pSi tu pars sans sauvegarder, tu\nseras disqualifié de ton\ldéfi.\pMerci d'en tenir compte !
+0x1F8C12E: La Mine de Combat est un lieu pour\ndes défis spéciaux.\pUne fois commencé, ton défi dure\njusqu'à battre l'Excavateur de la\lMine ou choisir de te reposer.\pÀ chaque niveau où tu descends dans\nla mine, un Dresseur t'attend.\pLe format choisi détermine\nquel niveau ils peuvent utiliser,\let ta profondeur règle d'autres\lparamètres comme Solo ou\lDuo, le niveau, la taille d'équipe,\lles Combats Inversés et le Dynamax.\pPour la liste des niveaux, vois ma\nsection «{COLOR}ÉNiveaux de Combat{COLOR}Ë».\pPour chaque Dresseur vaincu, tu\nrecevras des {COLOR}ÉPoints de Combat{COLOR}Ë ({COLOR}ÉPC{COLOR}Ë).\pAprès leur défaite, certains\nDresseurs peuvent laisser les objets\lqu'ils minaient.\pSi tu veux interrompre ton défi, ta\nprogression sera\lenregistrée pour quand tu voudras\lreprendre.\pSi tu pars sans sauvegarder, tu\nseras disqualifié de ton\ldéfi.\pMerci d'en tenir compte !
 0x1F8C485: Pour tes combats, tu peux régler\nles paramètres suivants :\p-Musique de combat\n-Décor de combat
 0x1F8C4E2: Dans la Mine de Combat, le format\nchoisi détermine quel niveau peut\lêtre choisi pour chaque combat.\pChaque niveau a son règlement unique\npour combattre.\pPour valider un ensemble,\nton équipe de six doit être\léligible dans chaque niveau inclus\ldans l'ensemble.
 0x1F8C5FF: Quel ensemble de niveaux veux-tu\nconnaître ?
@@ -21501,7 +21501,7 @@
 0x1F9000D: La Tour de Combat est un lieu pour\nles défis Solo, Duo, Multi et\lMétronome.\pDans les Salles Métronome, tu\nrecevras une équipe de 6 Pokémon\laléatoires dont les seules\lcapacités seront Métronome.\pTous les combats en Salles\nMétronome se font en Combat Duo,\let aucune trace de ta série ne\lsera conservée.\pAinsi, ton défi dure\njusqu'à ce que tu te retires.\pPour chaque Dresseur vaincu, tu\nrecevras {COLOR}É10 Points de Combat{COLOR}Ç ({COLOR}ÉBP{COLOR}Ç).\pAucun Dresseur spécial ni le\nCerveau de Frontière ne viendront.\pSi tu pars sans sauvegarder,\ntu seras disqualifié\lde ton défi.\pMerci d'en tenir compte !
 0x1F90295: Pour tes combats, tu peux régler\nles paramètres suivants :\p-Niveau de combat\n-Niveau des Pokémon\l-Nombre de Pokémon par équipe\l-Combat Inversé\l-Musique de combat\l-Décor de combat
 0x1F9033A: En Combats Solo, tu combats\navec 3 ou 6 Pokémon.\pEn Combats Duo, tu combats\navec 4 ou 6 Pokémon.\pEn Combats Multi, tu combats\navec 2 ou 3 Pokémon.\pSi tu combats avec 6\nPokémon et que ce n'est pas\lun Combat Aléatoire, tu verras\ll'équipe adverse avant les\lcombats et tu pourras choisir un\llead.\pSi tu combats avec 4 ou\nmoins Pokémon dans ton équipe et\lque tu es en Combat Aléatoire,\ltu pourras choisir\lquels Pokémon aléatoires tu veux\lutiliser.\pChaque combat sur 10\navec cette sélection aléatoire sera\lcomposé de ton équipe précédente\let de celle de l'adversaire.
-0x1F905EF: Si tu as des Pokémon dans la boîte\n« {STR_VAR_1} », ils peuvent être\lutilisés à la place de ton équipe.\pChaque rangée de la boîte est\nconsidérée comme sa propre équipe.\pAinsi, cela permet jusqu'à\n5 équipes prédéfinies différentes.
+0x1F905EF: Si tu as des Pokémon dans la boîte\n«{STR_VAR_1}», ils peuvent être\lutilisés à la place de ton équipe.\pChaque rangée de la boîte est\nconsidérée comme sa propre équipe.\pAinsi, cela permet jusqu'à\n5 équipes prédéfinies différentes.
 0x1F906B1: Les combats se font dans divers\nniveaux différents.\pChaque niveau a son propre règlement\npour combattre.
 0x1F9072E: Quel niveau veux-tu\nconnaître ?
 0x1F90757: C'est le niveau par défaut.\pDans ce niveau, les espèces ou\nobjets en double sont interdits.\pEn plus des Œufs, la plupart des\nPokémon légendaires et mythiques ne\lsont pas autorisés.
@@ -21513,16 +21513,16 @@
 0x1F90C0E: En format GS Cup, jusqu'à deux\nPokémon restreints peuvent être\lutilisés par équipe en Combat Duo.\pEn Combats Multi, un seul\nPokémon restreint peut être utilisé\lpar Dresseur.\pLes Pokémon restreints sont des\nPokémon comme Mewtwo et Groudon.\pDe plus, les espèces et objets en\ndouble sont interdits.\pCe niveau n'est disponible qu'en\nformat Double ou Multi.
 0x1F90D60: Smogon Monotype est un format où\ntous les Pokémon de ton équipe\ldoivent partager un type commun.\pLes Pokémon mono ou double type\nsont autorisés.\pSi un Pokémon peut méga-évoluer,\nlui et sa Méga-Évolution doivent\lpartager un type avec\lle reste de l'équipe.\pPour plus d'infos, vois\nles deux liens :\p{COLOR}Ésmogon.com/dex/sm/formats/monotype\nsmogon.com/dex/ss/formats/monotype
 0x1F90ED0: Smogon Camomons est un format où\ntous les Pokémon prennent les types\lde leurs deux premières attaques.\pCamomons utilise les clauses\nSmogon OU standard.\pPour plus d'informations, vois :\n{COLOR}Ésmogon.com/dex/sm/formats/camomons/
-0x1F90F9C: Uber Camomons est un format\noù les Pokémon prennent les types\lde leurs deux premières attaques.\pUber Camomons utilise les clauses\nSmogon Uber standard.\pPour plus d'informations, vois\nl'explication de « {COLOR}ÉSmogon\lCamomons{VERSION} » et\l{COLOR}Ésmogon.com/dex/sm/formats/uber
-0x1F91096: Little Cup Camomons est un format\noù les Pokémon prennent les types\lde leurs deux premières attaques.\pLittle Cup Camomons suit les clauses\nSmogon Little Cup standard.\pPour plus d'informations, vois\nl'explication de « {COLOR}ÉSmogon\lCamomons{VERSION} » et\l{COLOR}Ésmogon.com/dex/sm/formats/lc
-0x1F911A0: Middle Cup Camomons est un format\noù les Pokémon prennent les types\lde leurs deux premières attaques.\pMiddle Cup Camomons suit les clauses\nMiddle Cup standard.\pPour plus d'informations, vois\nl'explication de « {COLOR}ÉSmogon\lCamomons{VERSION} » et « {COLOR}ÉMiddle Cup{VERSION} ».
-0x1F91296: GS Cup Camomons est un format\noù les Pokémon prennent les types\lde leurs deux premières attaques.\pEn format GS Cup, jusqu'à deux\nPokémon restreints peuvent être\lutilisés par équipe en Combat Duo.\pEn Combats Multi, un seul\nPokémon restreint peut être utilisé\lpar Dresseur.\pLes Pokémon restreints sont des\nPokémon comme Mewtwo et Groudon.\pDe plus, les espèces et objets en\ndouble sont interdits.\pCe niveau n'est disponible qu'en\nformat Double ou Multi.\pPour plus d'informations, vois\nl'explication de « {COLOR}ÉSmogon\lCamomons{VERSION} ».
+0x1F90F9C: Uber Camomons est un format\noù les Pokémon prennent les types\lde leurs deux premières attaques.\pUber Camomons utilise les clauses\nSmogon Uber standard.\pPour plus d'informations, vois\nl'explication de «{COLOR}ÉSmogon\lCamomons{VERSION}» et\l{COLOR}Ésmogon.com/dex/sm/formats/uber
+0x1F91096: Little Cup Camomons est un format\noù les Pokémon prennent les types\lde leurs deux premières attaques.\pLittle Cup Camomons suit les clauses\nSmogon Little Cup standard.\pPour plus d'informations, vois\nl'explication de «{COLOR}ÉSmogon\lCamomons{VERSION}» et\l{COLOR}Ésmogon.com/dex/sm/formats/lc
+0x1F911A0: Middle Cup Camomons est un format\noù les Pokémon prennent les types\lde leurs deux premières attaques.\pMiddle Cup Camomons suit les clauses\nMiddle Cup standard.\pPour plus d'informations, vois\nl'explication de «{COLOR}ÉSmogon\lCamomons{VERSION}» et «{COLOR}ÉMiddle Cup{VERSION}».
+0x1F91296: GS Cup Camomons est un format\noù les Pokémon prennent les types\lde leurs deux premières attaques.\pEn format GS Cup, jusqu'à deux\nPokémon restreints peuvent être\lutilisés par équipe en Combat Duo.\pEn Combats Multi, un seul\nPokémon restreint peut être utilisé\lpar Dresseur.\pLes Pokémon restreints sont des\nPokémon comme Mewtwo et Groudon.\pDe plus, les espèces et objets en\ndouble sont interdits.\pCe niveau n'est disponible qu'en\nformat Double ou Multi.\pPour plus d'informations, vois\nl'explication de «{COLOR}ÉSmogon\lCamomons{VERSION}».
 0x1F9148E: Smogon Scalemons est un format où\nles stats des Pokémon, sauf PV,\lsont ajustées pour un total\lproche de 600.\pScalemons suit les clauses Smogon\nUbers standard, sauf pour autoriser\ldes Pokémon bannis.\pLes Pokémon tenant les objets\nsuivants ne peuvent pas participer:\pÉcaille Océan, Dent Océan,\nÉvolizélite, Évoluroc, BouleLumière,\lMasse Os, Éctoplasmite, Mysdibulite,\let Charminite.\pLes Pokémon avec les talents\nsuivants ne peuvent pas participer:\pPiège, Coloforce et Marque\nOmbre.\pPour plus d'informations, vois :\n{COLOR}Ésmogon.com/forums/threads/\lscalemons.3607934/
 0x1F916D8: Averagemons est un format qui\nvise à égaliser le terrain.\pChaque Pokémon reçoit exactement le\nmême total de stats : 100 par\lstat.\pAveragemons suit les clauses OU\nstandard, sans ses bans.\pLes Pokémon tenant les objets\nsuivants ne peuvent pas participer:\pMasse Os, Dent Océan, Boule\nLumière, Mysdibulite, Charminite,\lÉvoluroc, Éctoplasmite, Évolizélite.\pLes Pokémon avec les talents\nsuivants ne peuvent pas participer:\pColoforce, Force Pure, Marque Ombre,\net Piège.\pLes Pokémon avec les capacités\nsuivantes ne peuvent pas participer:\pBabil et Relais.\pPour plus d'informations, vois :\n{COLOR}Ésmogon.com/forums/threads/\laveragemons.3590605/
 0x1F91970: Smogon 350 Cup est un format où\nles Pokémon avec un total de stats\linférieur à 350 voient chacune de\lleurs stats doublées.\p350 Cup utilise les clauses Smogon\nUbers standard.\pLes Pokémon tenant les objets\nsuivants ne peuvent pas participer:\pÉvoluroc, Boule Lumière, Dent Océan\net Évolizélite.\pLes Pokémon avec les talents\nsuivants ne peuvent pas participer:\pMarque Ombre et Piège.\pPour plus d'infos, vois :\n{COLOR}Ésmogon.com/forums/threads/350-cup.\l3589641/
 0x1F91B2B: Smogon Benjamin Papilusion est un\nformat où vaincre un Pokémon\lle fait régresser en une\lforme précédente au lieu de\ltomber K.O.\pLes Pokémon ne tombent K.O. que\ns'ils ne régressent plus.\pAprès régression, tout changement de\nstat est réinitialisé, et tout état\lnon-volatile est soigné.\pDe plus, les Pokémon oublieront\nles capacités qu'ils ne peuvent pas\lapprendre naturellement.\pBenjamin Papilusion suit les clauses\nSmogon OU standard.\pPour plus d'informations, vois :\n{COLOR}Ésmogon.com/forums/threads/\lbenjamin-butterfree.3605680/
-0x1F91D26: En format Méga Baston, il n'y a\naucune limite au nombre de Pokémon\lpouvant méga-évoluer par équipe.\pMéga Baston suit les restrictions\nstandard sur espèces et objets, avec\lune exception pour autoriser\lSachanobi.\pPour plus d'infos, vois la\ndescription de « {COLOR}ÉStandard{VERSION} ».
-0x1F91E48: C'est une version spéciale du\nniveau standard qui autorise\lle Dynamax.\pCependant, les Pokémon ne peuvent\npas Méga-Évoluer ni subir une\lRéversion Primale, Ultra-Burst,\lou des Capacités Z ici.\pPour plus d'infos, vois la\ndescription de « {COLOR}ÉStandard{VERSION} ».
+0x1F91D26: En format Méga Baston, il n'y a\naucune limite au nombre de Pokémon\lpouvant méga-évoluer par équipe.\pMéga Baston suit les restrictions\nstandard sur espèces et objets, avec\lune exception pour autoriser\lSachanobi.\pPour plus d'infos, vois la\ndescription de «{COLOR}ÉStandard{VERSION}».
+0x1F91E48: C'est une version spéciale du\nniveau standard qui autorise\lle Dynamax.\pCependant, les Pokémon ne peuvent\npas Méga-Évoluer ni subir une\lRéversion Primale, Ultra-Burst,\lou des Capacités Z ici.\pPour plus d'infos, vois la\ndescription de «{COLOR}ÉStandard{VERSION}».
 0x1F91F4F: C'est une version spéciale de\nl'OU de Smogon.\pElle suit la plupart des règles de\nSmogon OU, à l'exception d'avoir\lses propres listes de bans.\pDe plus, les Pokémon peuvent Dynamax\ndans ce niveau.\pPour plus d'informations, vois :\n{COLOR}Ésmogon.com/dex/ss/formats/\lnational-dex/
 0x1F92074: Quels réglages veux-tu\nchanger ?
 0x1F9209D: Choisis le niveau dans lequel tu\nveux combattre.\pLe niveau actuel est :\n{COLOR}É{STR_VAR_1}
@@ -21598,7 +21598,7 @@
 0x1F93B6D: Tu veux affronter {STR_VAR_1} ?
 0x1F93B86: Quel Boss de Mission veux-tu\naffronter ?
 0x1F93BB3: Quel Boss de Mission veux-tu\naffronter ?
-0x1F93BE5: Tu veux affronter le boss final de\n« {STR_VAR_1} » ?
+0x1F93BE5: Tu veux affronter le boss final de\n«{STR_VAR_1}» ?
 0x1F93C12: Veux-tu retourner au Battle\nFrontier ?
 0x1F93C43: Expliquer le Frontier
 0x1F93C54: Maison des devs
@@ -21882,7 +21882,7 @@
 0x1F97890: Dragon
 0x1F97897: Ténèbres
 0x1F9789C: Fée
-0x1F978A2: Regarde la dernière percée de la\nSociété Scientifique…\l{COLOR}ÉChangement de Nature{COLOR}Ç !\pIls nous ont traités de fous, disant\nqu'on « blessait les Pokémon »…\pIdiots ! Des idiots, je dis, dignes\nde pourrir au fond de la terre !\pAhem… bref…\pTu veux, par hasard, changer la\n{COLOR}ÉNature{COLOR}Ç d'un Pokémon ?\pÇa te coûtera {COLOR}É{STR_VAR_1}{COLOR}Ç BP.\nTu as actuellement {COLOR}É{STR_VAR_2}{COLOR}Ç BP.
+0x1F978A2: Regarde la dernière percée de la\nSociété Scientifique…\l{COLOR}ÉChangement de Nature{COLOR}Ç !\pIls nous ont traités de fous, disant\nqu'on «blessait les Pokémon»…\pIdiots ! Des idiots, je dis, dignes\nde pourrir au fond de la terre !\pAhem… bref…\pTu veux, par hasard, changer la\n{COLOR}ÉNature{COLOR}Ç d'un Pokémon ?\pÇa te coûtera {COLOR}É{STR_VAR_1}{COLOR}Ç BP.\nTu as actuellement {COLOR}É{STR_VAR_2}{COLOR}Ç BP.
 0x1F979FD: Quel Pokémon veux-tu\nchanger de {COLOR}ÉNature{COLOR}Ç ?
 0x1F97A34: Quelle {COLOR}ÉNature{COLOR}Ç veux-tu donner à\n{STR_VAR_1} ?
 0x1F97A62: Veux-tu donner à {COLOR}É{STR_VAR_1}{COLOR}Ç\nla Nature {COLOR}É{STR_VAR_2}{COLOR}Ç ?
@@ -22331,11 +22331,11 @@
 0x1F9D2C9: {COLOR}ËSnif… Je connais le\pchemin pour rentrer à partir\pd'ici. J'ai aimé marcher avec\ntoi ! T'es le meilleur !
 0x1F9D31F: C'est toi ! Le grand\nDresseur qui m'a sauvé !\pT'es le meilleur !
 0x1F9D358: Le Black Emboar
-0x1F9D369: Sauve le frère d'un homme\ndes griffes du « Black\nEmboar » dans l'Autoroute KBT.
+0x1F9D369: Sauve le frère d'un homme\ndes griffes du «Black\nEmboar» dans l'Autoroute KBT.
 0x1F9D3BF: Frère
 0x1F9D3C7: James
 0x1F9D3CD: Boss du Black Emboar
-0x1F9D3DF: Salut, Dresseur.…\pQuoi ? Tu veux que je\pdise quelque chose\nd'intéressant ? Très\pbien… Dernièrement,\pj'ai des ennuis avec mon\nfrère. Il s'est impliqué\pjusqu'au cou avec un\ngang qui se fait appeler\lle « Black Emboar ». Je\pne sais pas vraiment de\nquoi il retourne, mais\lje suis vraiment inquiet\ppour lui. Je n'ai pas\nparlé avec lui depuis\ldes jours, donc j'ai\ppeur qu'il lui soit\parrivé quelque chose.\p… Quoi ? Tu serais\nprêt à aller vérifier pour moi ?
+0x1F9D3DF: Salut, Dresseur.…\pQuoi ? Tu veux que je\pdise quelque chose\nd'intéressant ? Très\pbien… Dernièrement,\pj'ai des ennuis avec mon\nfrère. Il s'est impliqué\pjusqu'au cou avec un\ngang qui se fait appeler\lle «Black Emboar». Je\pne sais pas vraiment de\nquoi il retourne, mais\lje suis vraiment inquiet\ppour lui. Je n'ai pas\nparlé avec lui depuis\ldes jours, donc j'ai\ppeur qu'il lui soit\parrivé quelque chose.\p… Quoi ? Tu serais\nprêt à aller vérifier pour moi ?
 0x1F9D58E: C'est toi qui as\ndébarqué chez moi pour demander.
 0x1F9D5C0: Merci ! Tu peux probablement\ptrouver mon frère dans le\nnord de l'Autoroute KBT.\pJ'irais bien moi-même, mais\nje suis un Dresseur trop\pfaible. On dit que ces Black\nEmboar sont sacrément vicieux.
 0x1F9D66C: Si tu vois mon frère,\ndis-lui que je suis\ltoujours inquiet pour lui.
@@ -22397,7 +22397,7 @@
 0x1F9F0F2: Hey, {PLAYER}, tu veux aider\navec un petit problème que\lj'ai avec ces Black Ferrothorn ?
 0x1F9F14B: Voilà l'affaire. Je me battais\pcontre ces sbires pour étendre notre\nterritoire, mais ils m'ont\lcomplètement pulvérisé. Je sais pas\pcomment ils s'y sont pris, mais je\nles battais tout du long… jusqu'au\lmoment où je les battais plus. Je\pveux vraiment les remettre à leur\nplace et agrandir notre territoire,\lmais je suis tout simplement pas\passez fort. Tu crois que tu peux\ntous les deux les battre pour moi ?
 0x1F9F2A0: T'as du cran, {PLAYER}. Je\pvais t'emmener les voir tout\pde suite. J'espère que tu es prêt !
-0x1F9F2DF: Hmph. Où sont ces «\ptripes » dont James\nn'arrête pas de parler ?
+0x1F9F2DF: Hmph. Où sont ces «\ptripes» dont James\nn'arrête pas de parler ?
 0x1F9F316: Vu les crapules que c'est,\nils vont probablement se\lmettre à deux contre toi. Tu\pdevrais préparer au moins\ndeux Pokémon pour combattre,\lau cas où ils le feraient.
 0x1F9F3A3: Prêt à retenter ta\nchance, {PLAYER} ? Ces\psbires doivent être\nremis à leur place.
 0x1F9F3F5: Tu leur en as mis plein la vue,\nces sbires Black Ferrothorn,\p{PLAYER}. Le pont devant notre\nbase est maintenant totalement\psous notre contrôle. Tu l'as fait,\p{PLAYER}. Grâce à toi, j'ai un peu\nplus étendu notre territoire. T'es\pvraiment le Dresseur le plus\ntéméraire que je connaisse.
