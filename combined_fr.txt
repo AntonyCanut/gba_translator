@@ -5391,7 +5391,7 @@
 0x745750: Si tu changes d'avis,\ndis-le-moi.
 0x745775: Hé gamin !\nÉcoute.\pLa route devant est remplie de\nDresseurs qui veulent se battre.\pCertains l'ont même surnommée «\nRoute Défi ».\pMais je comprends si tu ne veux pas\nles affronter.\pGrâce à mes pouvoirs psy, je peux te\ntéléporter de l'autre côté\lgratis !\pAlors, tu es partant ?
 0x745900: Arène Pokémon de Dresco\nChampion : Mirskle\lLe hippie perché !
-0x74593B: Champion d'Arène de Dresco :\nMirskle\pEntraîneurs gagnants :\n{RIVAL}
+0x74593B: Dresco Pokémon Gym Leader :\nMirskle\pEntraîneurs gagnants :\n{RIVAL}
 0x745973: Arène Pokémon Dresco\nChampion : Mirskle\pVainqueurs : {RIVAL},\n{PLAYER}
 0x7459AF: Whooooa…
 0x7459B8: Inspire à fond…\pQuel parfum merveilleux !
@@ -5921,7 +5921,7 @@
 0x788F69: Oh, non…\pTu as déjà Nœud Herbe…
 0x788F90: Oh, attends.\pOn dirait que je ne me battrai\nplus contre toi.\pIl te faudra plus d'un Pokémon\nsi tu veux m'affronter…
 0x78900B: Tout le monde se planque !\pLes flics reviennent nous choper !
-0x78903B: Officier 1 : {COLOR}ËHé, gamin !\pAvez-vous vu dans quelle direction\nle Champion d'Arène courait ?\pIl est recherché pour trafic de\nFeuilles étranges !
+0x78903B: Officier 1 : {COLOR}ËHé, gamin !\pAvez-vous vu dans quelle direction\nle Gym Leader courait ?\pIl est recherché pour trafic de\nFeuilles étranges !
 0x7890AB: Voudriez-vous leur dire ?
 0x7890C8: Agent 1 : <0xFC><0x01><0x08>Visiblement, <0xFD><0x03> n'est\npas au courant, Frank…\pOn laisse filer ?
 0x78910F: Agent 2 : <0xFC><0x01><0x08>Laissons filer.\p<0xFD><0x04> est sans doute une victime\ndes mensonges de Mirskle.\pPauvre gamin…
@@ -6433,7 +6433,7 @@
 0x7BC6EF: Alors j'avais raison. Tu avais faim\n\pcar la nourriture ne venait plus.\n\pFaisons un marché, Sablaireau. Si tu\n\pdeviens mon Pokémon et que tu\n\lm'aides à gagner des combats, je\n\lsoutiendrai toi, tes amis et ta\n\lfamille avec l'argent qu'on gagnera.\n\pÇa te va ?\n
 0x7BC810: Alors c'est réglé, allons-y.\n
 0x7BC82D: Merci d'avoir aidé à retrouver le\n\pvoleur de nourriture ! Comme promis,\nvoici ta petite chose.
-0x7BC886: Cette CT contient {COLOR}ÉHone\n\pClaws{COLOR}Ë. Si tu prévois\n\pd'affronter l'{COLOR}ÉArène de\nDresco{COLOR}Ë, ça t'aidera beaucoup. C'est\lplein de brouillard là-bas, on y\lvoit très mal…
+0x7BC886: Cette CT contient {COLOR}ÉHone\n\pClaws{COLOR}Ë. Si tu prévois\n\pd'affronter le {COLOR}ÉDresco\nGym{COLOR}Ë, ça t'aidera beaucoup. C'est\lplein de brouillard là-bas, on y\lvoit très mal…
 0x7BCA5F: Oh, je me souviens de toi !\pTu es ce {STR_VAR_1} qui nous a aidés\nà l'Arène de Dresco !\pPour cela, tu peux avoir ces cinq\nréanimations.
 0x7BCAD5: Dites, voudriez-vous nous aider en\nassistant à nouveau la police ?
 0x7BCB14: Souhaitez-vous donner un coup de\nmain à la police locale ?
@@ -6732,7 +6732,7 @@
 0x7CA0DB: Ce type là-bas est mon seul ami\nmaintenant…
 0x7CA167: Qu'est-ce qui me frustre ici\n?\pLa police refuse d'agir car elle\nrefuse de\lcroire qu'une organisation obscure\lexiste !\pIls me traitent encore comme un\nenfant malgré ce que j'ai accompli…\pArgh…
 0x7CA25D: Attendez…\pJe me souviens maintenant…\pIl y a quelqu'un que je peux\ncontacter pour aide après tout…
-0x7CDD11: Pendant que je fais cela, vous\ndevriez être vous diriger vers\pLe mouvement {COLOR}ÉForce{COLOR}Ë est nécessaire\npour aller n'importe où à\lbattre le {COLOR}ÉArène de Fallshore{COLOR}Ë en premier.\pJe pense avoir vu le Champion d'Arène\ndebout dans les environs. {COLOR}ÉVille de Tehl{COLOR}Ë,\len fait…\pJe vous rattraperai à nouveau après\nvous aurez sauvé {COLOR}ÉÉlecthor{COLOR}Ë.
+0x7CDD11: Pendant que je fais cela, vous\ndevriez être vous diriger vers\pLe mouvement {COLOR}ÉForce{COLOR}Ë est nécessaire\npour aller n'importe où à\lbattre le {COLOR}ÉArène de Fallshore{COLOR}Ë en premier.\pJe pense avoir vu le chef du gymnase\ndebout dans les environs. {COLOR}ÉVille de Tehl{COLOR}Ë,\len fait…\pJe vous rattraperai à nouveau après\nvous aurez sauvé {COLOR}ÉÉlecthor{COLOR}Ë.
 0x7CDE4B: C'est parti, Starapator !
 0x7CDE6C: Mes Pokémon étaient très difficiles\nà trouver.\pIls n'apparaissent pas souvent dans\nla nature par ici.
 0x7CDEC1: Il semble que la rareté n’indique\npas une force exceptionnelle.
@@ -7041,7 +7041,7 @@
 0x7E6F9E: J'ai deux fois plus de cerveau.\pMa victoire est assurée !
 0x7E6FD4: Je n'ai plus de cerveau.
 0x7E700B: Les types en bas prétendent avoir\ncréé notre monde.\pMoi je pense que c'est du pur fumier\nde Tauros.
-0x7E7128: Champion d'Arène de\nDehara : Galavan\pEntraîneurs gagnants : {RIVAL},\n{PLAYER}
+0x7E7128: Dehara Pokémon Gym\nLeader : Galavan\pEntraîneurs gagnants : {RIVAL},\n{PLAYER}
 0x7E74E0: Va, jeune homme !\pExplore le Grand Désert !
 0x7E7553: 9Mon père m'a mise en congé\ncar j'étais une mauvaise fille.\pMaintenant, je dois rester dans ce\ncoin pour toujours.
 0x7E75BB: Ma fille a voulu aller seule dans\nla Grotte Faille.\pElle a eu de la chance que quelqu'un\nl'arrête.\pSi elle était entrée…\pJe frémis en pensant à ce qui aurait\npu arriver !
@@ -7114,7 +7114,7 @@
 0x7EA889: Je ne suis pas paralysé, mais tu\nm'as foudroyé !
 0x7EA8E3: Tu étais proche, pourtant.
 0x7EA8FB: Ce n'est pas parce que tu as allumé\nune ampoule que tu ne devras pas\ll'éteindre plus tard.
-0x7EA953: portez cette arène.
+0x7EA953: portez ce gymnase.
 0x7EA9B1: Apparemment pas !
 0x7EA9BC: Continue malgré la douleur !
 0x7EAA1B: Mon génie…
@@ -15466,7 +15466,7 @@
 0x1EEFA68: Il y a un passage caché derrière\nla bibliothèque.\pLe suivre ?
 0x1EEFAAB: {COLOR}ÉFriiie!
 0x1EEFACA: Certains\nobjets ne servent qu'à être vendus.\pSi tu en\ntrouves un, vends-le immédiatement.\pJ'ai même entendu\ndire que des maniaques les achètent\lencore plus cher\lque les Poké Marts.
-0x1EEFBB4: J'ai essayé cette Arène, mais je\nn'ai même pas atteint le Champion !\pIl faisait si sombre que je ne\nsavais pas où j'allais.\pJe {COLOR}Éne pouvais même pas{COLOR}Ç\nutiliser\p{COLOR}ÉFlash{COLOR}Ç pour y voir mieux !\nJ'espère que cette CT te servira.
+0x1EEFBB4: J'ai essayé ce Gym, mais je n'ai\nmême pas atteint le Champion !\pIl faisait si sombre que je ne\nsavais pas où j'allais.\pJe {COLOR}Éne pouvais même pas{COLOR}Ç\nutiliser\p{COLOR}ÉFlash{COLOR}Ç pour y voir mieux !\nJ'espère que cette CT te servira.
 0x1EEFC99: {COLOR}ÉFlash{COLOR}Ç éclaire les\ngrottes sombres.
 0x1EEFCC9: Yo ! Bonne affaire.\pÉchange ton {COLOR}É{STR_VAR_2}{COLOR}Ë\ncontre mon {COLOR}É{STR_VAR_1}{COLOR}Ë ?
 0x1EEFD15: Hé, merci ! Profite bien de ce\n{STR_VAR_1} !
@@ -22272,7 +22272,7 @@
 0x1F9B314: paragruel
 0x1F9B402: Bienvenue au Ring Challenge\nd'Ville d'Antisis ! Je suis\pton guide pour le Battle Ring.
 0x1F9B452: Veux-tu tenter le Battle\nRing Challenge ?
-0x1F9B484: L'Arène d'Antisis est une\ninstallation unique réservée aux\ldéfis de Combat Solo. Une fois\pcommencé, ton défi dure jusqu'à ce\nque tu veuilles te poser. Pour\pcommencer ton défi, tu dois entrer\navec trois Pokémon. Chaque Pokémon\psera placé au niveau 50 pour le\ndéfi. Les doublons d'espèce ou\pd'objet ne sont pas autorisés. La\nMéga-Évolution, les Capacités Z,\ple Dynamax, les Ceintures Force,\nles capacités explosives, Lien du\lDestin et Requiem sont interdits.\lRegigigas avec le Talent Tempo\pPerso ainsi que les Pokémon bannis\ndu palier {COLOR}ÉStandard{COLOR}Ë\lsont interdits.
+0x1F9B484: Le Gym d'Antisis est une\ninstallation unique réservée aux\ldéfis de Combat Solo. Une fois\pcommencé, ton défi dure jusqu'à ce\nque tu veuilles te poser. Pour\pcommencer ton défi, tu dois entrer\navec trois Pokémon. Chaque Pokémon\psera placé au niveau 50 pour le\ndéfi. Les doublons d'espèce ou\pd'objet ne sont pas autorisés. La\nMéga-Évolution, les Capacités Z,\ple Dynamax, les Ceintures Force,\nles capacités explosives, Lien du\lDestin et Requiem sont interdits.\lRegigigas avec le Talent Tempo\pPerso ainsi que les Pokémon bannis\ndu palier {COLOR}ÉStandard{COLOR}Ë\lsont interdits.
 0x1F9B689: Avant chaque combat, l'équipe de\nton adversaire te sera révélée.\pDe plus, à chaque combat, un\ntype de capacité ne pourra pas\pêtre utilisé. Cela sera indiqué\paussi. Pour les capacités qui\nchangent de type, le type obtenu\lest pris en compte. À ce\pmoment-là, tu dois choisir un\nseul Pokémon pour affronter l'un\ldes leurs. Pour chaque Dresseur\pque tu bats, tu gagneras des\n<0xFC><0x01><0x06>Points de Combat<0xFC><0x01><0x08>\p(<0xFC><0x01><0x06>PB<0xFC><0x01><0x08>). Cependant,\ncomme cette installation ne fait\lpas partie de la <0xFC><0x01><0x06>Battle\lFrontier<0xFC><0x01><0x08>, tu ne gagneras\paucun tampon sur ta Frontier\nCard. Si tu veux interrompre ton\ldéfi, ta progression sera\lenregistrée pour quand tu\pvoudras continuer. Si tu quittes\nsans sauvegarder, tu seras\ldisqualifié de ton défi. Merci\pd'en tenir compte !
 0x1F9B984: Pour tes combats, tu\npeux personnaliser les\préglages suivants :\n-Musique de combat -Fond de combat
 0x1F9B9E1: Quel registre veux-tu\nvoir ?
