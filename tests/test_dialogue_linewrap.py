@@ -2,6 +2,7 @@ import unittest
 
 from src.core.dialogue_linewrap import (
     DEFAULT_MAX_LINE_WIDTH,
+    _split_words,
     demote_midsentence_pages,
     is_multiline_layout,
     line_width,
@@ -10,6 +11,33 @@ from src.core.dialogue_linewrap import (
     rewrap,
     rewrap_multiline,
 )
+
+
+class SplitWordsQuoteTests(unittest.TestCase):
+    """An opening quote must weld to the word it introduces, not the
+    previous one — otherwise a re-wrap can orphan it at the end of a line
+    (``... choisir «`` ⏎ ``Rejoindre``)."""
+
+    def test_opening_guillemet_glues_to_following_word(self):
+        words = _split_words('choisir « Rejoindre Groupe ».')
+        self.assertIn('« Rejoindre', words)
+        self.assertNotIn('choisir «', words)
+
+    def test_opening_curly_quote_glues_to_following_word(self):
+        words = _split_words('a dit “ bonjour ” poliment')
+        self.assertNotIn('dit “', words)
+        self.assertTrue(
+            any(w.startswith('“ bonjour') for w in words),
+            f'opening curly quote not welded to its word: {words!r}',
+        )
+
+    def test_closing_guillemet_still_glues_to_previous_word(self):
+        words = _split_words('« Rejoindre Groupe »')
+        self.assertIn('Groupe »', words)
+
+    def test_lone_opening_quote_is_kept(self):
+        # No following word — the quote must not be silently dropped.
+        self.assertEqual(_split_words('bonjour «'), ['bonjour', '«'])
 
 
 class NormalizeBreaksTests(unittest.TestCase):
@@ -159,6 +187,19 @@ class RewrapTests(unittest.TestCase):
                 f'line starts with detached punctuation: {line!r}',
             )
         self.assertIn('faut :', result)
+
+    def test_opening_quote_not_orphaned_at_line_end(self):
+        # An opening guillemet that the wrapper had glued to the previous
+        # word could land alone at the end of a line, with the quoted word
+        # on the next line. The quote now travels with the word it opens.
+        text = 'L’autre doit ensuite\nchoisir « Rejoindre Groupe ».'
+        result = rewrap(text)
+        for line in result.replace('<0xFA>', '\n').split('\n'):
+            self.assertFalse(
+                line.rstrip().endswith(('«', '“', '‹')),
+                f'line ends with an orphaned opening quote: {line!r}',
+            )
+        self.assertIn('« Rejoindre', result)
 
     def test_untouched_without_breaks(self):
         self.assertEqual(rewrap('PARLER'), 'PARLER')

@@ -167,28 +167,43 @@ def line_width(line: str) -> int:
     return sum(word_width(w) for w in words) + SPACE_WIDTH * (len(words) - 1)
 
 
-_PUNCT_ONLY_RE = re.compile(r'[!?:;.,"»«…-]+$')
+_PUNCT_ONLY_RE = re.compile(r'[!?:;.,"»”›…-]+$')
+# Opening quotes are spaced away from the word they introduce in French
+# (``« mot``, ``“ mot``). They must weld to that *following* word, never
+# the previous one, or a break orphans them at the end of a line
+# (``choisir «`` ⏎ ``Rejoindre``).
+_OPEN_QUOTE_ONLY_RE = re.compile(r'[«“‹]+$')
 
 
 def _split_words(segment: str) -> List[str]:
     """Split a segment into words, gluing ``<0xNN>`` codes to neighbours.
 
     French spaced punctuation (`` !``, `` ?``, `` :``) must never start
-    a line: a token made only of punctuation is glued to the previous
-    word (space included) so no break can ever orphan it (``Sepiatop\n!``).
+    a line: a token made only of (closing) punctuation is glued to the
+    previous word (space included) so no break can ever orphan it
+    (``Sepiatop\n!``). An *opening* quote (``«``, ``“``) is the mirror
+    case: it is glued to the *following* word so a break never strands it
+    at line end (``choisir «\nRejoindre``).
     """
     words: List[str] = []
     buf: List[str] = []
+    pending: List[str] = []  # opening quote(s) awaiting the next word
 
     def flush() -> None:
         if not buf:
             return
         token = ''.join(buf)
         buf.clear()
-        if words and _PUNCT_ONLY_RE.fullmatch(token):
+        if _OPEN_QUOTE_ONLY_RE.fullmatch(token):
+            pending.append(token)
+            return
+        if words and not pending and _PUNCT_ONLY_RE.fullmatch(token):
             words[-1] += ' ' + token
-        else:
-            words.append(token)
+            return
+        if pending:
+            token = ' '.join([*pending, token])
+            pending.clear()
+        words.append(token)
 
     i = 0
     while i < len(segment):
@@ -204,6 +219,10 @@ def _split_words(segment: str) -> List[str]:
             buf.append(ch)
         i += 1
     flush()
+    if pending:
+        # An opening quote with no following word — keep it rather than
+        # silently drop it (degenerate input, e.g. a trailing ``«``).
+        words.append(' '.join(pending))
     return words
 
 
