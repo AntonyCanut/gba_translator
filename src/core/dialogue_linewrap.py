@@ -168,11 +168,15 @@ def line_width(line: str) -> int:
 
 
 _PUNCT_ONLY_RE = re.compile(r'[!?:;.,"»”›…-]+$')
-# Opening quotes are spaced away from the word they introduce in French
-# (``« mot``, ``“ mot``). They must weld to that *following* word, never
-# the previous one, or a break orphans them at the end of a line
-# (``choisir «`` ⏎ ``Rejoindre``).
-_OPEN_QUOTE_ONLY_RE = re.compile(r'[«“‹]+$')
+# Quote tokens that may *open* a quotation and are therefore spaced away
+# from the word they introduce (``« mot``, ``“ mot``, and the straight
+# ``"`` the pipeline uses for guillemets — ``" mot``). A standalone
+# straight quote is ambiguous (it also *closes*), so its direction is
+# resolved by what follows: a word ⇒ opening (weld forward), punctuation
+# or end-of-segment ⇒ closing (weld back). Unambiguous closers (``»``,
+# ``”``) and detached punctuation stay in ``_PUNCT_ONLY_RE`` and always
+# weld to the previous word.
+_OPEN_QUOTE_ONLY_RE = re.compile(r'[«“‹"]+$')
 
 
 def _split_words(segment: str) -> List[str]:
@@ -181,13 +185,27 @@ def _split_words(segment: str) -> List[str]:
     French spaced punctuation (`` !``, `` ?``, `` :``) must never start
     a line: a token made only of (closing) punctuation is glued to the
     previous word (space included) so no break can ever orphan it
-    (``Sepiatop\n!``). An *opening* quote (``«``, ``“``) is the mirror
-    case: it is glued to the *following* word so a break never strands it
-    at line end (``choisir «\nRejoindre``).
+    (``Sepiatop\n!``). A quote is the mirror case: an *opening* quote
+    must weld to the word it introduces so a break never strands it at
+    line end (``choisir «\nRejoindre``). Quote tokens are held in
+    ``pending`` and resolved by what comes next — a word means they were
+    opening (prepended to it), punctuation or the segment end means they
+    were closing (appended to the previous word).
     """
     words: List[str] = []
     buf: List[str] = []
-    pending: List[str] = []  # opening quote(s) awaiting the next word
+    pending: List[str] = []  # quote(s) whose direction is not yet known
+
+    def attach_pending_back() -> None:
+        """The held quotes turned out to be closing — weld them back."""
+        if not pending:
+            return
+        held = ' '.join(pending)
+        pending.clear()
+        if words:
+            words[-1] += ' ' + held
+        else:
+            words.append(held)
 
     def flush() -> None:
         if not buf:
@@ -195,11 +213,21 @@ def _split_words(segment: str) -> List[str]:
         token = ''.join(buf)
         buf.clear()
         if _OPEN_QUOTE_ONLY_RE.fullmatch(token):
+            # Opening candidate: hold it until the next token reveals
+            # whether it opens (a word follows) or closes (punctuation
+            # or the segment ends follow).
             pending.append(token)
             return
-        if words and not pending and _PUNCT_ONLY_RE.fullmatch(token):
-            words[-1] += ' ' + token
+        if _PUNCT_ONLY_RE.fullmatch(token):
+            # Detached/closing punctuation welds to the previous word; a
+            # quote held just before it was therefore a closing one.
+            attach_pending_back()
+            if words:
+                words[-1] += ' ' + token
+            else:
+                words.append(token)
             return
+        # A real word: any held quote was opening — weld it forward.
         if pending:
             token = ' '.join([*pending, token])
             pending.clear()
@@ -219,10 +247,9 @@ def _split_words(segment: str) -> List[str]:
             buf.append(ch)
         i += 1
     flush()
-    if pending:
-        # An opening quote with no following word — keep it rather than
-        # silently drop it (degenerate input, e.g. a trailing ``«``).
-        words.append(' '.join(pending))
+    # Quotes still held at the segment end never found a word to open, so
+    # they were closing — weld them back rather than orphan them.
+    attach_pending_back()
     return words
 
 

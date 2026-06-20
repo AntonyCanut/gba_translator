@@ -35,9 +35,27 @@ class SplitWordsQuoteTests(unittest.TestCase):
         words = _split_words('« Rejoindre Groupe »')
         self.assertIn('Groupe »', words)
 
+    def test_straight_quote_opening_glues_forward(self):
+        # The pipeline stores guillemets as straight quotes; an opening
+        # one ("…) is followed by a word, so it welds forward.
+        words = _split_words('choisir " Rejoindre Groupe ".')
+        self.assertIn('" Rejoindre', words)
+        self.assertNotIn('choisir "', words)
+
+    def test_straight_quote_closing_glues_back(self):
+        # A standalone straight quote that closes (a word precedes, then
+        # punctuation/end) welds back to its word, never orphaned forward.
+        words = _split_words('a renvoyé un " OK " !')
+        self.assertNotIn('"', words)  # never a bare quote token
+        self.assertTrue(
+            any(w.startswith('" OK') for w in words),
+            f'opening straight quote not welded forward: {words!r}',
+        )
+
     def test_lone_opening_quote_is_kept(self):
-        # No following word — the quote must not be silently dropped.
-        self.assertEqual(_split_words('bonjour «'), ['bonjour', '«'])
+        # No following word — the quote is closing here and welds back to
+        # the previous word rather than being orphaned or dropped.
+        self.assertEqual(_split_words('bonjour «'), ['bonjour «'])
 
 
 class NormalizeBreaksTests(unittest.TestCase):
@@ -192,14 +210,19 @@ class RewrapTests(unittest.TestCase):
         # An opening guillemet that the wrapper had glued to the previous
         # word could land alone at the end of a line, with the quoted word
         # on the next line. The quote now travels with the word it opens.
-        text = 'L’autre doit ensuite\nchoisir « Rejoindre Groupe ».'
-        result = rewrap(text)
-        for line in result.replace('<0xFA>', '\n').split('\n'):
-            self.assertFalse(
-                line.rstrip().endswith(('«', '“', '‹')),
-                f'line ends with an orphaned opening quote: {line!r}',
-            )
-        self.assertIn('« Rejoindre', result)
+        # Real cases: a guillemet (0x1BD51B) and its pipeline straight-quote
+        # form, which is what the build actually re-wraps.
+        for text, welded in (
+            ('L’autre doit ensuite\nchoisir « Rejoindre Groupe ».', '« Rejoindre'),
+            ('L’autre doit ensuite\nchoisir " Rejoindre Groupe ".', '" Rejoindre'),
+        ):
+            result = rewrap(text)
+            for line in result.replace('<0xFA>', '\n').split('\n'):
+                self.assertFalse(
+                    line.rstrip().endswith(('«', '“', '‹', '"')),
+                    f'line ends with an orphaned opening quote: {line!r}',
+                )
+            self.assertIn(welded, result)
 
     def test_untouched_without_breaks(self):
         self.assertEqual(rewrap('PARLER'), 'PARLER')
