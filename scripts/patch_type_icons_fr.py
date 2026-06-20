@@ -43,6 +43,25 @@ TILEOFF = {
     "Psychic": 0x84, "Ice": 0x4C, "Dark": 0x8C, "Fairy": 0xA8,
 }
 
+# Fairy is a CFRU-ADDED type, and unlike the 18 vanilla badges (which sit at the
+# same tile offset in both sheets) its badge lives at a DIFFERENT tile offset in
+# each copy:
+#   * battle-menu copy (0x961A00):  Fairy badge at tile 0xA8  (the TILEOFF default)
+#   * summary-screen copy (0xB1EC64): Fairy badge at tile 0x100
+# In the summary copy, tile 0xA8 is unused garbage — so the single shared 0xA8
+# offset stamped "FEE" into nothing while the real summary badge at 0x100 kept
+# reading "FAIRY". Per-base overrides pin each copy to the tile the engine
+# actually renders. (Verified by decoding both sheets: only Fairy's letter tiles
+# differ in position between the two copies; every vanilla type shares its offset.)
+TILEOFF_OVERRIDE = {
+    0xB1EC64: {"Fairy": 0x100},
+}
+
+
+def _tileoff(base: int, icon: str) -> int:
+    """Tile offset of ``icon`` within the sheet at ``base`` (per-copy override)."""
+    return TILEOFF_OVERRIDE.get(base, {}).get(icon, TILEOFF[icon])
+
 # French type names (uppercase, no accents — the icon font has none).
 # « ACIER » per the project owner's request (Steel); « TENEBR » abbreviates
 # Ténèbres to fit the 32-px pill.
@@ -161,7 +180,7 @@ def apply_patches(rom_path: Path, dry_run: bool = False) -> int:
             if missing:
                 print(f"  ERROR {icon}: no glyph for {missing} — skip", file=sys.stderr)
                 continue
-            tileoff = TILEOFF[icon]
+            tileoff = _tileoff(base, icon)
             g = _read_icon(rom, base, tileoff)
             pill = g[8][0]  # rows 8-9 are the solid pill colour
             if not dry_run:
