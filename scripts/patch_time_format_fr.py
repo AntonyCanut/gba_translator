@@ -20,6 +20,9 @@ pipeline, so this post-build step patches the built ROM directly:
 - bag menu "Use" label repointed to "Utiliser" (string too long for
   in-place replacement; written into free space at 0x284EAB, all six
   pointer entries updated).
+- dialogue speaker "Mom" label repointed to "Maman" (string too long
+  for in-place replacement; written into free space at 0x284EBC, all
+  five pointer entries updated).
 
 Every patch verifies the bytes it expects (English original) and is
 idempotent (already-patched cells are skipped).
@@ -138,6 +141,17 @@ PATCHES = [
     (0x46437C, b"\xa0\x61\x41\x08", b"\xab\x4e\x28\x08"),
     (0xA6BA64, b"\xa0\x61\x41\x08", b"\xab\x4e\x28\x08"),
     (0xA6BA8C, b"\xa0\x61\x41\x08", b"\xab\x4e\x28\x08"),
+    # --- dialogue speaker "Mom" → "Maman" ---
+    # "Mom" (3 chars, 4 bytes with 0xFF) lives at 0x1F0BA1F (GBA
+    # 0x09F0BA1F); "Maman" (5 chars, 6 bytes) cannot fit in place.
+    # Free space immediately follows the Utiliser block at 0x284EBC;
+    # redirect all five pointer entries from 0x09F0BA1F to 0x08284EBC.
+    (0x284EBC, b"\xff" * 6, encode("Maman") + b"\xff"),
+    (0x1E6E411, b"\x1f\xba\xf0\x09", b"\xbc\x4e\x28\x08"),
+    (0x1E6E432, b"\x1f\xba\xf0\x09", b"\xbc\x4e\x28\x08"),
+    (0x1E6E44B, b"\x1f\xba\xf0\x09", b"\xbc\x4e\x28\x08"),
+    (0x1E6E47A, b"\x1f\xba\xf0\x09", b"\xbc\x4e\x28\x08"),
+    (0x1E6E4B1, b"\x1f\xba\xf0\x09", b"\xbc\x4e\x28\x08"),
 ]
 
 
