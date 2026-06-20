@@ -97,6 +97,11 @@ export default defineConfig({
       testMatch: 'specs/deps-upgrade.spec.ts',
       use: { browserName: 'chromium' },
     },
+    {
+      name: 'ho-oh-lugia-encounter',
+      testMatch: 'specs/ho-oh-lugia-encounter.spec.ts',
+      use: { browserName: 'chromium' },
+    },
   ],
   webServer: {
     command: 'npx tsx src/server.ts',

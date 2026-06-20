@@ -327,6 +327,7 @@ ITEM_NAMES = {
     "Swift Wing": "Aile Vitesse",
     "Pretty Wing": "Jolie Plume",
     "Silver Wing": "Aile Argentée",
+    "Rainbow Wing": "Aile Aurore",
     # Nectars
     "Red Nectar": "Nectar Rouge",
     "Pink Nectar": "Nectar Rose",
