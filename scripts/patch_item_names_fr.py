@@ -43,6 +43,7 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 
 from src.text.charmap_data import BYTE_TO_CHAR, CHAR_TO_BYTE
+from src.core.text_codec import TextEncoder
 
 # CFRU item table (gItems). Each entry is 44 bytes: name[14] then item data
 # (id u16 at +14, price u16 at +16, …, description pointer at +0x14). Only the
@@ -364,6 +365,8 @@ ITEM_NAMES = {
     "HM06": "CS06",
     "HM07": "CS07",
     "HM08": "CS08",
+    # Unbound custom battle items — trailing-space variant in source ROM
+    "Muscle ": "Muscle+",
 }
 
 # Every inline item-name cell we translate, keyed by the in-ROM English string.
@@ -430,6 +433,45 @@ def apply_item_name_fixes(data: bytearray, names: dict) -> int:
     return patched
 
 
+# ROM offset → corrected French description (3 lines max to fit the bag window).
+# "Muscle " (item #83) ships a 4-line description that overflows the display;
+# the shorter version below fits without cutting any meaning.
+ITEM_DESC_OVERRIDES: dict[int, str] = {
+    0xB40FC0: (
+        "Monte fortement le taux de\n"
+        "critiques. Usage unique. Annulé\n"
+        "si le Pokémon se retire."
+    ),
+}
+
+ROM_POINTER_BASE = 0x08000000
+DESC_PTR_OFFSET = 0x14  # within each 44-byte item entry
+
+
+def apply_item_desc_fixes(data: bytearray) -> int:
+    """Overwrite specific item description strings in-place.
+
+    Each key in ITEM_DESC_OVERRIDES is a raw ROM offset where the description
+    bytes live. The new text must be shorter than (or equal to) the original
+    so it always fits without relocation. The encoder appends 0xFF automatically.
+    Returns the number of overrides applied.
+    """
+    patched = 0
+    for rom_offset, french_text in ITEM_DESC_OVERRIDES.items():
+        encoded = TextEncoder.encode_pokemon(french_text)
+        if rom_offset + len(encoded) > len(data):
+            print(f"  WARN: desc override at 0x{rom_offset:X} out of ROM range — skipped")
+            continue
+        # Measure current length to ensure we don't expand the slot
+        end = data.find(b"\xff", rom_offset)
+        if end < 0 or len(encoded) > (end - rom_offset + 1):
+            print(f"  WARN: desc override at 0x{rom_offset:X} would expand slot — skipped")
+            continue
+        data[rom_offset:rom_offset + len(encoded)] = encoded
+        patched += 1
+    return patched
+
+
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--rom", type=Path, default=Path("output/roms/GenedRom-fr.gba"))
@@ -437,9 +479,12 @@ def main() -> int:
 
     data = bytearray(args.rom.read_bytes())
     patched = apply_item_name_fixes(data, ALL_NAMES)
-    if patched:
+    desc_patched = apply_item_desc_fixes(data)
+    if patched or desc_patched:
         args.rom.write_bytes(data)
     print(f"Item name cells translated: {patched} (of {len(ALL_NAMES)} known)")
+    if desc_patched:
+        print(f"Item description overrides applied: {desc_patched}")
     return 0
 
 
