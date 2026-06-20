@@ -503,3 +503,179 @@ class TestEncounterAreaStringTermination:
         assert en_bytes == fr_bytes or len(fr_bytes) > 0, (
             f"String at 0x{off:06X}: FR is empty"
         )
+
+
+# ---------------------------------------------------------------------------
+# 5. Encounter flag logic (setflag/checkflag bytes EN = FR)
+# ---------------------------------------------------------------------------
+
+
+class TestEncounterFlagLogic:
+    """The flag-related bytes (setflag 0x29, checkflag 0x2A) inside the
+    Ho-Oh and Lugia encounter scripts must be byte-identical between EN and
+    FR — any divergence would alter the encounter gate logic (e.g. prevent
+    re-encounter, skip the battle command, or break the post-battle flag).
+
+    Flag 0x0700 is the «Ho-Oh encountered» flag; setflag is called at the
+    moment the encounter fires, checkflag guards the re-entry path.
+    Flags 0x0988 / 0x0994 / 0x0999 / 0x099A serve similar roles for Lugia
+    and the broader encounter sequence.
+    """
+
+    # (offset, expected_3_bytes, label)
+    FLAG_ENTRIES: list[tuple[int, bytes, str]] = [
+        (0x7BB22A, bytes([0x29, 0x88, 0x09]), "setflag 0x0988 (Lugia event)"),
+        (0x7BB241, bytes([0x2A, 0x94, 0x09]), "checkflag 0x0994"),
+        (0x7BB4BA, bytes([0x29, 0x00, 0x07]), "setflag 0x0700 (Ho-Oh encountered)"),
+        (0x7BB4C5, bytes([0x2A, 0x00, 0x07]), "checkflag 0x0700 (Ho-Oh gate)"),
+        (0x7BB51C, bytes([0x2A, 0x88, 0x09]), "checkflag 0x0988"),
+        (0x7BB8D5, bytes([0x2A, 0x99, 0x09]), "checkflag 0x0999"),
+        (0x7BBC4E, bytes([0x29, 0x6B, 0x02]), "setflag 0x026B"),
+        (0x7BBC6B, bytes([0x2A, 0x6B, 0x02]), "checkflag 0x026B"),
+        (0x7BBC93, bytes([0x29, 0x07, 0x08]), "setflag 0x0807"),
+        (0x7BBCAA, bytes([0x2A, 0x07, 0x08]), "checkflag 0x0807"),
+        (0x7BBD5A, bytes([0x2A, 0x9A, 0x09]), "checkflag 0x099A"),
+    ]
+
+    def test_flag_bytes_match_en(self, en_rom, fr_rom):
+        """All setflag/checkflag instructions in the encounter scripts must
+        be byte-identical between EN and FR."""
+        for off, expected, label in self.FLAG_ENTRIES:
+            en_bytes = en_rom[off : off + 3]
+            fr_bytes = fr_rom[off : off + 3]
+            assert en_bytes == fr_bytes, (
+                f"{label} at 0x{off:06X}: "
+                f"EN={en_bytes.hex(' ')} ≠ FR={fr_bytes.hex(' ')}"
+            )
+
+    def test_flag_bytes_match_expected_values(self, fr_rom):
+        """The setflag/checkflag bytes must equal their known correct values —
+        this guards against the EN ROM itself being corrupted."""
+        for off, expected, label in self.FLAG_ENTRIES:
+            fr_bytes = fr_rom[off : off + 3]
+            assert fr_bytes == expected, (
+                f"{label} at 0x{off:06X}: "
+                f"expected {expected.hex(' ')}, got {fr_bytes.hex(' ')}"
+            )
+
+    def test_hooh_flag_0700_set_before_check(self, fr_rom):
+        """setflag 0x0700 (at 0x7BB4BA) must appear BEFORE checkflag 0x0700
+        (at 0x7BB4C5) — the check guards the re-entry path and only makes
+        sense after the flag is set at encounter time."""
+        SET_OFF   = 0x7BB4BA
+        CHECK_OFF = 0x7BB4C5
+        assert SET_OFF < CHECK_OFF, (
+            f"setflag 0x0700 at 0x{SET_OFF:X} should precede "
+            f"checkflag 0x0700 at 0x{CHECK_OFF:X}"
+        )
+        set_bytes   = fr_rom[SET_OFF   : SET_OFF   + 3]
+        check_bytes = fr_rom[CHECK_OFF : CHECK_OFF + 3]
+        assert set_bytes   == bytes([0x29, 0x00, 0x07]), (
+            f"setflag 0x0700 at 0x{SET_OFF:X}: got {set_bytes.hex(' ')}"
+        )
+        assert check_bytes == bytes([0x2A, 0x00, 0x07]), (
+            f"checkflag 0x0700 at 0x{CHECK_OFF:X}: got {check_bytes.hex(' ')}"
+        )
+
+    def test_lugia_flag_0988_set_before_check(self, fr_rom):
+        """setflag 0x0988 (at 0x7BB22A) must appear BEFORE checkflag 0x0988
+        (at 0x7BB51C) — same ordering invariant as the Ho-Oh flag."""
+        SET_OFF   = 0x7BB22A
+        CHECK_OFF = 0x7BB51C
+        assert SET_OFF < CHECK_OFF
+        assert fr_rom[SET_OFF   : SET_OFF   + 3] == bytes([0x29, 0x88, 0x09])
+        assert fr_rom[CHECK_OFF : CHECK_OFF + 3] == bytes([0x2A, 0x88, 0x09])
+
+
+# ---------------------------------------------------------------------------
+# 6. Méga-Bracelet item integrity
+# ---------------------------------------------------------------------------
+
+
+class TestMegaBraceletIntegrity:
+    """The Méga-Bracelet is the key item obtained at the Ho-Oh encounter spot.
+    Its name must be translated (EN «Mega Bracelet» → FR «Méga-Bracelet»),
+    terminated correctly, and its description must also be properly terminated
+    so GetStringWidth never loops.
+
+    The item lives at index 0x21A in the standard item table (base 0x876074,
+    stride 44), placing the struct at 0x87BCEC.  CFRU changed this entry to
+    use a name POINTER (bytes 0-3 = GBA ptr to name string) rather than an
+    inline 14-byte name.  The name string lives at the same ROM address in
+    both EN and FR (pointer unchanged); only the content at that address
+    differs.  The description pointer sits at the standard +0x14 offset within
+    the item struct.
+    """
+
+    ITEM_TABLE_BASE = 0x876074
+    ITEM_STRIDE     = 44
+    MEGA_BRAC_IDX   = 0x21A                                     # item index
+    # Struct base: 0x876074 + 0x21A * 44 = 0x87BCEC
+    MEGA_BRAC_BASE  = ITEM_TABLE_BASE + MEGA_BRAC_IDX * ITEM_STRIDE
+    DESC_PTR_OFFSET = 0x14
+
+    # EN name bytes starting with M-e-g-a
+    EN_NAME_PREFIX = bytes([0xC7, 0xD9, 0xDB, 0xD5])       # "Mega"
+
+    # FR name bytes starting with M-é-g-a-  (é = 0x1B, - = 0xAE)
+    FR_NAME_PREFIX = bytes([0xC7, 0x1B, 0xDB, 0xD5, 0xAE]) # "Méga-"
+
+    def _name_off(self, rom: bytes) -> int | None:
+        """Follow the name pointer at MEGA_BRAC_BASE to get the name string offset."""
+        return _deref(rom, self.MEGA_BRAC_BASE)
+
+    def test_mega_bracelet_name_translated_to_french(self, en_rom, fr_rom):
+        """The name string at the pointed-to address must differ between EN and FR."""
+        en_off = self._name_off(en_rom)
+        fr_off = self._name_off(fr_rom)
+        assert en_off is not None, f"EN name pointer at 0x{self.MEGA_BRAC_BASE:06X} is invalid"
+        assert fr_off is not None, f"FR name pointer at 0x{self.MEGA_BRAC_BASE:06X} is invalid"
+        en_name = en_rom[en_off : en_off + 14]
+        fr_name = fr_rom[fr_off : fr_off + 14]
+        assert en_name != fr_name, (
+            f"Méga-Bracelet name at ptr→0x{fr_off:06X} is still EN — "
+            f"translation not applied"
+        )
+
+    def test_mega_bracelet_fr_name_starts_with_mega_accent(self, fr_rom):
+        """FR name must start with 'Méga-' (0xC7 0x1B 0xDB 0xD5 0xAE)."""
+        fr_off = self._name_off(fr_rom)
+        assert fr_off is not None, f"FR name pointer at 0x{self.MEGA_BRAC_BASE:06X} invalid"
+        fr_prefix = fr_rom[fr_off : fr_off + len(self.FR_NAME_PREFIX)]
+        assert fr_prefix == self.FR_NAME_PREFIX, (
+            f"Méga-Bracelet FR name at ptr→0x{fr_off:06X}: "
+            f"expected {self.FR_NAME_PREFIX.hex(' ')}, got {fr_prefix.hex(' ')}"
+        )
+
+    def test_mega_bracelet_fr_name_terminated(self, fr_rom):
+        """FR Mega Bracelet name must be terminated with 0xFF within 14 bytes."""
+        fr_off = self._name_off(fr_rom)
+        assert fr_off is not None, f"FR name pointer at 0x{self.MEGA_BRAC_BASE:06X} invalid"
+        raw, terminated = _read_str(fr_rom, fr_off, 14)
+        assert terminated, (
+            f"Méga-Bracelet name at ptr→0x{fr_off:06X} has no 0xFF terminator"
+        )
+
+    def test_mega_bracelet_description_pointer_valid(self, fr_rom):
+        """Description pointer at MEGA_BRAC_BASE + 0x14 must be a valid ROM address."""
+        desc_ptr_off = self.MEGA_BRAC_BASE + self.DESC_PTR_OFFSET
+        target = _deref(fr_rom, desc_ptr_off)
+        assert target is not None, (
+            f"Méga-Bracelet description pointer at 0x{desc_ptr_off:06X} is not a "
+            f"valid GBA ROM pointer (raw: {fr_rom[desc_ptr_off:desc_ptr_off+4].hex(' ')})"
+        )
+        assert target < len(fr_rom), (
+            f"Méga-Bracelet description pointer targets 0x{target:06X}, outside ROM"
+        )
+
+    def test_mega_bracelet_description_terminated(self, fr_rom):
+        """FR Mega Bracelet description must be terminated with 0xFF."""
+        desc_ptr_off = self.MEGA_BRAC_BASE + self.DESC_PTR_OFFSET
+        target = _deref(fr_rom, desc_ptr_off)
+        if target is None:
+            pytest.skip("Description pointer invalid — covered by test above")
+        raw, terminated = _read_str(fr_rom, target)
+        assert terminated, (
+            f"Méga-Bracelet description at 0x{target:06X} has no 0xFF terminator "
+            f"— GetStringWidth would loop on this item's help text"
+        )
