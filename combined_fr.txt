@@ -425,7 +425,7 @@
 0x1A5EC0: Tes Pokémon ont retrouvé toute leur\nforme.\pSi l’énergie ou les PV de tes\nPokémon sont bas, viens nous voir.\pSi tu pars loin sur le terrain,\nachète des Potions\lau Magasin.\pOn compte sur toi !
 0x1A5F9B: Tes Pokémon ont retrouvé toute leur\nforme.\pOn compte sur toi !
 0x1A5FDF: {PLAYER} !\nBienvenue à la maison.\pOn dirait que tu as vécu pas mal\nd’aventures.\pTu devrais peut-être te reposer.\n
-0x1A6046: Ah, parfait ! Toi et tes Pokémon\navez bien meilleure mine.\pSi les PV de tes Pokémon sont bas,\nsoigne-les dans un\p{COLOR}ÉCentre Pokémon{COLOR}Ç !\nLe plus proche d’ici est à\p{COLOR}ÉBourg Bellin{COLOR}Ç.\nOu achète des\p{COLOR}ÉPotions{COLOR}Ç au\n{COLOR}ÉPoké Mart{COLOR}Ç !\pC’est toujours bien de se préparer\nau pire.\pRends-moi fier, chéri !\pPrends soin de toi !
+0x1A6046: Ah, parfait ! Toi et tes Pokémon\navez bien meilleure mine.\pSi les PV de tes Pokémon sont bas,\nsoigne-les dans un\p{COLOR}ÉCentre Pokémon{COLOR}Ç !\nLe plus proche d’ici est à\p{COLOR}ÉBourg Bellin{COLOR}Ç.\nOu achète des\p{COLOR}ÉPotions{COLOR}Ç à la\n{COLOR}ÉBoutique Pokémon{COLOR}Ç !\pC’est toujours bien de se préparer\nau pire.\pRends-moi fier, chéri !\pPrends soin de toi !
 0x1A6196: 9{PLAYER} n’a plus de Pokémon\nutilisables !\p{PLAYER} panique et perd ¥{STR_VAR_1}…\p…\p{PLAYER} s’évanouit !
 0x1A61E5: {PLAYER} n’a plus de Pokémon\nutilisables !\p{PLAYER} s’évanouit !
 0x1A6211: Salut !\nJe peux t’aider ?
@@ -6782,7 +6782,7 @@
 0x7CFB5C: Un homme à capuche rouge a été\npoussé dans l’océan.\pIl n’a pas encore refait surface non\nplus…
 0x7CFC66: J'aurais juré que ce Pokémon des\nlégendes flottait\lpar ici à l'instant…
 0x7CFCBA: Passer par cette porte peut soit\nvous amener à la ville de Dehara,\lRoute 12.
-0x7CFD04: Seriez-vous {PLAYER}\npar hasard ?\p…\pJe le pensais.\pJe vous ai reconnu sur cette photo\nJ'ai trouvé de vous sur les\linternets.\pJe m'appelle Looker.\pAgent Looker, de la Police\nInternationale.\pJe venais juste de finir de\nm'occuper de Team Rocket dans la\lrégion de Kanto, quand j'ai été\ldéployé pour faire face à une\lsituation qui se préparait dans la\lrégion de Borrius.\pUn jeune homme, Jax, je crois, m'a\ninformé que vous aviez des\lpreuves de crimes commis par une\lorganisation se faisant appeler\l«Les Ombres».\pVeuillez me rencontrer dans le\n{COLOR}ÉDehara Game Corner {COLOR}Ëafin que nous\lpuissions discuter de tout cela.\pJax est là aussi.\pLooker, dehors.
+0x7CFD04: Seriez-vous {PLAYER}\npar hasard ?\p…\pJe le pensais.\pJe vous ai reconnu sur cette photo\nJ'ai trouvé de vous sur les\linternets.\pJe m'appelle Looker.\pAgent Looker, de la Police\nInternationale.\pJe venais juste de finir de\nm'occuper de Team Rocket dans la\lrégion de Kanto, quand j'ai été\ldéployé pour faire face à une\lsituation qui se préparait dans la\lrégion de Borrius.\pUn jeune homme, Jax, je crois, m'a\ninformé que vous aviez des\lpreuves de crimes commis par une\lorganisation se faisant appeler\l«Les Ombres».\pVeuillez me rencontrer au\n{COLOR}ÉCasino de Dehara {COLOR}Ëafin que nous\lpuissions discuter de tout cela.\pJax est là aussi.\pLooker, dehors.
 0x7D0046: Il semble être profondément absorbé\ndans un jeu de machine à sous.
 0x7D0078: Looker : {COLOR}ËJax ! Le jeu a finalement\nété payé !\pJe viens de gagner gros !
 0x7D00B5: Jax : {COLOR}ËTout à l'heure, M. Looker ?\nJ'ai encaissé il y a longtemps !\pJ'ai déjà gagné gros plusieurs fois\n!
@@ -7797,7 +7797,7 @@
 0x8CA8C3: Fonction {COLOR}ÉJournal\nde Quêtes{COLOR}Ç pour ton Cube !\pElle suit tout ce qu'on te demande !\nOh, et avant d'oublier, tu as laissé\pun composant clé de ton Super Cube\nsur le sol de ta chambre.\lÇa ne servait pas avant, mais comme\ptu as maintenant ton propre Pokémon,\ntu en auras besoin pour\lutiliser des objets\len combat.
 0x8CAA11: {COLOR}Á{PLAYER} reçoit le Module Combat du\nSuper Cube de Maman !
 0x8CAA4A: Au cas où tu oublies,\nle Super Cube sert de sac.\pMais les sacs de DalMart\nne gardent que 42 objets.\lLe Super Cube, {COLOR}ÉCube{COLOR}Ç,\la de la place infinie !\lIl numérise les objets.\pEn bref, rien à porter.\nC'est comme si tu ne portais\lrien de plus\lsur toi !\pSois prudent dehors, chéri !\pApporte le colis du Prof. Log !
-0x8CAF99: Va au {COLOR}ÉPoké Mart\nde Bellinville{COLOR}Ë, {PLAYER}.\pJ'en ai besoin, toi seul.
+0x8CAF99: Va à la {COLOR}ÉBoutique Pokémon\nde Bellinville{COLOR}Ë, {PLAYER}.\pJ'en ai besoin, toi seul.
 0x8CAFFD: Oh, {PLAYER} !\nTu as rapporté mon colis !
 0x8CB023: {PLAYER} livre le colis.
 0x8CB03C: Ah !\pUn envoi de mon ami Chen, dans la\nrégion de Kanto !\pVoyons voir…\pPoké Balls, Pokédex… et… hein ?\nOù sont les Master Balls ?\pAs-tu ouvert ce colis et pris\nquelque chose, {PLAYER} ?
@@ -15109,7 +15109,7 @@
 0x1EE5FF1: Comment va mon ancien Pokémon ?\pJ'espère que tu lui as fait\ndécouvrir ce merveilleux monde !
 0x1EE6082: Ne me dérangez pas, citoyen.\nJe suis en service.
 0x1EE60B2: Qu'est-ce qu'il y a, citoyen ?\nUn colis volé ?\pJe laisse les Rangers Pokémon\ns'en charger.\pJe suis en service.
-0x1EE6115: As-tu pris le temps de voir les\ninstallations locales ?\pLe {COLOR}ÉCentre Pokémon{COLOR}Ë soigne tes\nPokémon gratuitement.\pLe {COLOR}ÉPoké Mart{COLOR}Ë vend des objets\nutiles aux Dresseurs.\pDans la plupart des villes, ces deux\nbâtiments se distinguent par leurs\lcouleurs rouge et bleue.
+0x1EE6115: As-tu pris le temps de voir les\ninstallations locales ?\pLe {COLOR}ÉCentre Pokémon{COLOR}Ë soigne tes\nPokémon gratuitement.\pLa {COLOR}ÉBoutique Pokémon{COLOR}Ë vend des objets\nutiles aux Dresseurs.\pDans la plupart des villes, ces deux\nbâtiments se distinguent par leurs\lcouleurs rouge et bleue.
 0x1EE621D: Cette statue là-bas représente le\nPokémon légendaire Artikodin.\pElle a été construite de A à Z par\nmon père lui-même !\pD'ailleurs, sache qu'il parcourt\nBorrius en construisant\ldes statues comme celle-ci dans\lplein de villes !\pMon père est trop cool !\pMais pas autant que le\nclimat ici !\pAhahaha !
 0x1EE6359: Pousse-toi !\pJ'essaie de regarder la télé !
 0x1EE6398: Une télé ?\nC'est quoi ?\pMoi, je joue aux jeux vidéo sur le\ntéléphone de papa !
@@ -17532,7 +17532,7 @@
 0x1F2319E: Tâche ardue ! Voir tous les\nPokémon d'Ouest Borrius et rapporter\nau Prof. Log.
 0x1F231F2: Comme on disait, faut tous les\nattraper ! Voyage, et\nattrape tous les Pokémon !
 0x1F23252: Tu devrais voir ta {COLOR}Émère{COLOR}Ë avant\nde prendre mon colis, {PLAYER}.\pElle doit être très inquiète\npour toi.
-0x1F232BA: Récupère mon colis au\n{COLOR}ÉPoké Mart de Bourg Bellin{COLOR}Ë, {PLAYER}.\pJ'en ai besoin, et toi seul peux\nl'avoir.
+0x1F232BA: Récupère mon colis à la\n{COLOR}ÉBoutique Pokémon de Bourg Bellin{COLOR}Ë, {PLAYER}.\pJ'en ai besoin, et toi seul peux\nl'avoir.
 0x1F2331E: Oh, {PLAYER} !\nTu es revenu avec mon colis !
 0x1F23360: Voyons s'ils ont envoyé ce qu'ils\ndevaient.\pNouveau matériel de recherche…{PAUSE}î\nok.\pLa science Pokémon la plus récente…{PAUSE}î\nok.\p…{PAUSE}îHein ?\pOù sont les Master Balls ?\pAs-tu ouvert ce colis et pris\nquelque chose dedans, {PLAYER} ?\p…\pAh…{PAUSE} je vois.\pTu as récupéré mon colis chez\ndes voyous…\pEt ils ont dû prendre les\nMaster Balls…
 0x1F234A9: Quoi !?\pTu les as vus utiliser ça pour\ncapturer Artikodin ?\pHmm…\pSi j'ai raison, on pourrait être en\ngrave danger…
@@ -21948,15 +21948,15 @@
 0x1F98785: Premier Talent
 0x1F98793: Second Talent
 0x1F987A2: Talent Caché
-0x1F987B1: Je suis un peu une connaisseuse\ndes combats ici.\pSi tu remportes {COLOR}É{STR_VAR_1}{COLOR}Ç combats\nau total aujourd'hui dans la {COLOR}ÉBattle\lTower{COLOR}Ç, la {COLOR}ÉBattle Mine{COLOR}Ç et le {COLOR}ÉBattle\lCircus{COLOR}Ç réunis, je te donnerai\ldes PB pour tes efforts.
+0x1F987B1: Je suis un peu une connaisseuse\ndes combats ici.\pSi tu remportes {COLOR}É{STR_VAR_1}{COLOR}Ç combats\nau total aujourd'hui dans la {COLOR}ÉTour de\lCombat{COLOR}Ç, la {COLOR}ÉMine de Combat{COLOR}Ç et le {COLOR}ÉCirque de\lCombat{COLOR}Ç réunis, je te donnerai\ldes PB pour tes efforts.
 0x1F98894: Pour l'instant, tu as gagné {COLOR}É{STR_VAR_2}{COLOR}Ç\ncombat{VERSION} aujourd'hui.\pContinue !\pIl te reste {COLOR}É{STR_VAR_3}{COLOR}Ç combat{EVIL_TEAM}\nà faire !
 0x1F98901: Oh, je vois que tu as gagné\n{COLOR}É{STR_VAR_2}{COLOR}Ç combat{VERSION} aujourd'hui.\pPrends ces PB pour tes\nefforts !
 0x1F9895B: Chaque jour, j'espère voir de beaux\nsuccès comme celui que tu\lm'as montré.
-0x1F989B4: J'ai remarqué un type louche qui\ntraîne tard devant la {COLOR}ÉBattle\lTower{COLOR}Ë.\pIl paraît qu'il propose de super\naffaires, puis t'arnaque.\pJe me méfierais à ta place.
-0x1F98A6B: J'adore le {COLOR}ÉBattle Sands{COLOR}Ç !\pRegarder d'autres combattre avec tes\nPokémon préférés, c'est si amusant !\pSans parler du fait que c'est très\nfacile pour gagner des PB.\pAucune autre installation de combat\nne serait mon endroit favori.
-0x1F98B4D: Le {COLOR}ÉBattle Circus{COLOR}Ë !\pTellement fun !\pQue va-t-il se passer ensuite ?\pAttends et vois !
-0x1F98B99: Certains vendeurs changent\npériodiquement dans la journée.\pSi tu veux faire du shopping, reste\nautant dehors que possible\lpour acheter.\pJe trouve que le {COLOR}ÉBattle Sands{COLOR}Ç est\nun bon moyen de patienter.
-0x1F98C6E: Y a pas de mine comme la {COLOR}ÉBattle\nMine{COLOR}Ë, j'te l'dis.\pDans la plupart des mines… tu sais\nà quoi t'attendre.\pPas dans la Battle Mine, j'te l'dis.\pChaque étage bouleverse\n tout.\pC'est une sacrée expérience !
+0x1F989B4: J'ai remarqué un type louche qui\ntraîne tard devant la {COLOR}ÉTour de\lCombat{COLOR}Ë.\pIl paraît qu'il propose de super\naffaires, puis t'arnaque.\pJe me méfierais à ta place.
+0x1F98A6B: J'adore les {COLOR}ÉSables de Combat{COLOR}Ç !\pRegarder d'autres combattre avec tes\nPokémon préférés, c'est si amusant !\pSans parler du fait que c'est très\nfacile pour gagner des PB.\pAucune autre installation de combat\nne serait mon endroit favori.
+0x1F98B4D: Le {COLOR}ÉCirque de Combat{COLOR}Ë !\pTellement fun !\pQue va-t-il se passer ensuite ?\pAttends et vois !
+0x1F98B99: Certains vendeurs changent\npériodiquement dans la journée.\pSi tu veux faire du shopping, reste\nautant dehors que possible\lpour acheter.\pJe trouve que les {COLOR}ÉSables de Combat{COLOR}Ç sont\nun bon moyen de patienter.
+0x1F98C6E: Y a pas de mine comme la {COLOR}ÉMine de\nCombat{COLOR}Ë, j'te l'dis.\pDans la plupart des mines… tu sais\nà quoi t'attendre.\pPas dans la Mine de Combat, j'te l'dis.\pChaque étage bouleverse\n tout.\pC'est une sacrée expérience !
 0x1F98D59: Salut !\nTu viens pour la {COLOR}ÉTour de Combat{COLOR}Ç ?\pC'est l'expérience Frontier\nultime !\pTellement de façons de ressentir la\nchaleur du combat !
 0x1F98DE4: Accès au système d'archives…
 0x1F98DFE: Quel registre veux-tu\nconsulter ?
