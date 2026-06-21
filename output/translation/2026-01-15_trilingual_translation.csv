@@ -1312,7 +1312,7 @@ capacité à un OEuf.",
 in the <0xFD><0x04>.","Metes <0xFD><0x03> en
 <0xFD><0x04>.",24,3,27,pokemon,description,"<0xFD><0x01> a rangé <0xFD><0x03>
 dans la <0xFD><0x04>.",
-0x001A5231,<0xFD><0x01> found one <0xFD><0x03>!,,16,2,18,pokemon,dialogue,<0xFD><0x01> trouve <0xFD><0x03> !,
+0x001A5231,<0xFD><0x01> found one <0xFD><0x03>!,,16,2,18,pokemon,dialogue,<0xFD><0x01> trouve un <0xFD><0x03> !,
 0x001A5242,"Too bad!
 The Bag is full""","Too bad!
 The Bag is full""",25,2,27,pokemon,dialogue,"Dommage !
@@ -28355,7 +28355,7 @@ by <0xFD><0x0F>'s <0xFD><0x18>!",27,5,32,pokemon,dialogue,"<0xFD><0x10> est tour
 <0xFD><0x18> !",
 0x008B8180,"<0xFD><0x0F> found one
 <0xFD><0x16> with <0xFD><0x18>!","<0xFD><0x0F> found one
-<0xFD><0x16> with <0xFD><0x18>!",24,8,32,pokemon,dialogue,"<0xFD><0x0F> trouve
+<0xFD><0x16> with <0xFD><0x18>!",24,8,32,pokemon,dialogue,"<0xFD><0x0F> trouve un
 <0xFD><0x16> avec <0xFD><0x18> !",
 0x008B8280,"<0xFD><0x0F> harvested
 one <0xFD><0x16> with <0xFD><0x18>!","<0xFD><0x0F> harvested
@@ -37971,7 +37971,7 @@ by the sea of fire!",30,3,33,pokemon,dialogue,"<0xFD><0x0F> est brûlé
 par la Mer de Feu !",
 0x00A4B666,"<0xFD><0x13> found one
 <0xFD><0x16>!","<0xFD><0x13> found one
-<0xFD><0x16>!",16,2,18,pokemon,dialogue,"<0xFD><0x13> trouve
+<0xFD><0x16>!",16,2,18,pokemon,dialogue,"<0xFD><0x13> trouve un
 <0xFD><0x16> !",
 0x00A4B677,"Both Pokémon will faint in
 three turns!","Both Pokémon will faint in
@@ -66875,8 +66875,7 @@ Borrius ! Mais d'abord...",
 0x01F0F800,Choose a skin tone.,,19,3,22,pokemon,other,Choisis une couleur de peau.,
 0x01F0F814,Choose a hair colour.,,21,3,24,pokemon,other,Choisis une couleur de cheveux.,
 0x01F0F82A,Choose a jacket colour.,,23,3,26,pokemon,other,Choisis une couleur de veste.,
-0x01F0F842,Choose a trim colour.,,21,3,24,pokemon,other,"Choisis une couleur de
-ceinture et de bottes.",
+0x01F0F842,Choose a trim colour.,,21,3,24,pokemon,other,Choisis une couleur de bordure.,
 0x01F0F858,Is this who you'll play as?,<0x51>Eso sería todo?,27,2,29,pokemon,dialogue,Est-ce ton personnage ?,
 0x01F0F868,ll play as?,,11,2,13,pokemon,dialogue,,
 0x01F0F874,"Last, but not least, what is
@@ -67317,7 +67316,7 @@ in by the king, and supervised by<0xFA>his progeny, until this very day.",103,13
 recueilli par le roi, puis surveillé<0xFA>par sa descendance, jusqu'à ce jour.",
 0x01F1184B,            16 Years Ago,            Hace 16 años.,24,12,36,pokemon,other,Il y a 16 ans,
 0x01F11864,           15 Years Later,,25,5,30,pokemon,other,15 ans plus tard,
-0x01F1187E,Yes   ,Sí    ,6,2,8,pokemon,location,,
+0x01F1187E,Yes   ,Sí    ,6,2,8,pokemon,location,Oui   ,
 0x01F11885,No,No,2,2,4,pokemon,other,Non,
 0x01F11888,"Hoopa""<0xFB>I worry, old friend, for the future
 - for if, no""<0xFC><0x08><0x18> when SHE arrives.","Hoopa""<0xFB>Me preocupo, viejo amigo, por el
@@ -84778,7 +84777,7 @@ Le prendre ?",
 0x01F5CAD2,"mon in the bag!
 Take it?",,24,3,27,pokemon,dialogue,,
 0x01F5CAEB,"<0xFD><0x01> found a <0xFD><0x02>!
-It has a <0xFC><0x01><0x06><0xFD><0x03><0xFC><0x01><0x02> nature.",Has recibido a <0xFD><0x02>.,40,2,42,pokemon,dialogue,"<0xFD><0x01> trouve <0xFD><0x02> !
+It has a <0xFC><0x01><0x06><0xFD><0x03><0xFC><0x01><0x02> nature.",Has recibido a <0xFD><0x02>.,40,2,42,pokemon,dialogue,"<0xFD><0x01> trouve un <0xFD><0x02> !
 De nature <0xFC><0x01><0x06><0xFD><0x03><0xFC><0x01><0x02>.",
 0x01F5CB0B, nature.,,8,2,10,pokemon,other,,
 0x01F5CB14,"You don't have enough space for

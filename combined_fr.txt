@@ -373,7 +373,7 @@
 0x1A51F6: Obtenu {STR_VAR_2} !
 0x1A5207: Le Sac est plein…
 0x1A5218: {PLAYER} a rangé {STR_VAR_2}\ndans la {STR_VAR_3}.
-0x1A5231: {FD01} trouve {FD03} !
+0x1A5231: {FD01} trouve un {FD03} !
 0x1A5242: Dommage !\nLe Sac est plein…
 0x1A526C: {PLAYER} a rangé les Jetons dans\nla Boîte Jetons.
 0x1A5294: Dommage !\nLa Boîte Jetons est pleine…
@@ -7705,7 +7705,7 @@
 0x8B7F30: Le Déguisement de\n{B_DEF_NAME_WITH_PREFIX} servait de leurre !
 0x8B7F60: Le Déguisement de\n{B_DEF_NAME_WITH_PREFIX} est brisé !
 0x8B8030: {B_DEF_NAME_WITH_PREFIX} est tourmenté par la {B_ATK_ABILITY} de\n{B_ATK_NAME_WITH_PREFIX} !
-0x8B8180: {B_ATK_NAME_WITH_PREFIX} trouve\n{B_LAST_ITEM} avec {B_ATK_ABILITY} !
+0x8B8180: {B_ATK_NAME_WITH_PREFIX} trouve un\n{B_LAST_ITEM} avec {B_ATK_ABILITY} !
 0x8B8280: {B_ATK_NAME_WITH_PREFIX} récolte un {B_LAST_ITEM} grâce à\n{B_ATK_ABILITY} !
 0x8B84A0: La {B_ATK_ABILITY} de\n{B_ATK_NAME_WITH_PREFIX} rend ton équipe trop\lnerveuse pour manger des Baies !
 0x8B84E0: {B_ATK_NAME_WITH_PREFIX}\n{B_ATK_ABILITY} : Baies KO !
@@ -11387,7 +11387,7 @@
 0xA4B601: {B_ATK_NAME_WITH_PREFIX} est blessé\npar les éclats !
 0xA4B61F: {B_ATK_NAME_WITH_PREFIX} n'est plus\naffligé par les éclats !
 0xA4B647: {B_ATK_NAME_WITH_PREFIX} est brûlé\npar la Mer de Feu !
-0xA4B666: {B_SCR_ACTIVE_NAME_WITH_PREFIX} trouve\n{B_LAST_ITEM} !
+0xA4B666: {B_SCR_ACTIVE_NAME_WITH_PREFIX} trouve un\n{B_LAST_ITEM} !
 0xA4B677: Les deux Pokémon tomberont K.O.\ndans trois tours !
 0xA4B69F: L'équipe {STRING} est prise\ndans des lianes !
 0xA4B6BF: {B_ATK_NAME_WITH_PREFIX} est blessé par\nles coups de G-Max Lianes !
@@ -16794,7 +16794,7 @@
 0x1F0F800: Choisis une couleur de peau.
 0x1F0F814: Choisis une couleur de cheveux.
 0x1F0F82A: Choisis une couleur de veste.
-0x1F0F842: Choisis une couleur de\nceinture et de bottes.
+0x1F0F842: Choisis une couleur de bordure.
 0x1F0F858: Est-ce ton personnage ?
 0x1F0F874: Et\nenfin, comment t'appelles-tu ?
 0x1F0F89C: Ton nom est {PLAYER} ?
@@ -23478,7 +23478,7 @@
 0x1F59E36: <0xFC><0x01><0x02>Le bébé commence à te suivre\npartout !
 0x1F59EB5: <0xFC><0x01><0x02>Le bébé gigote joyeusement\ndans sa poussette.
 0x1F5AE1C: <0xFC><0x01><0x02>Un gros tas de neige bloque\nla route.\pMieux vaut passer ailleurs.
-0x1F5CAEB: <0xFD><0x01> trouve <0xFD><0x02> !\nDe nature <0xFC><0x01><0x06><0xFD><0x03><0xFC><0x01><0x02>.
+0x1F5CAEB: <0xFD><0x01> trouve un <0xFD><0x02> !\nDe nature <0xFC><0x01><0x06><0xFD><0x03><0xFC><0x01><0x02>.
 0x1F5E54B: <0xFC><0x01><0x02>Une chose invisible barre la voie.
 0x1F5E687: <0xFC><0x01><0x02>Une chose invisible barre la voie.\pUtiliser le Scope Devon ?
 0x1F5E6C2: <0xFC><0x01><0x02><0xFD><0x01> sort le Scope Devon.
@@ -24831,3 +24831,6 @@
 0xa43f3c: Les pics toxiques ont disparu\ndes pieds de <0xFD><0x10> !
 0xa4e7c5: GROUAAAAAH !<0xFB>
 0x1f4c2ed: <0xFD><0x01>, toutes mes\nfélicitations !\pJ'ai appris la nouvelle !\pDire qu'après tout ce temps, j'ai\nenfin battu le vieil Arthur !\pHo ho ho !\pEuh… excuse-moi.\pBon, venons-en à la raison\nde ma visite.\pJ'ai encore une mission à te\nconfier !\pTu pensais en avoir fini avec\nelles, n'est-ce pas ?\pHo ho ho !\pEuh… bref, depuis que tu as\nvaincu Hoopa au sommet du Pic\lCristal, de mystérieux portails\lsont apparus autour de Borrius.\pQuand on s'en approche, de\npuissants Pokémon en surgiraient.\pEn tant que Gardien de Borrius,\nde nom comme de rang, il te\lrevient de veiller sur ces\lPokémon.\pJe suppose que bien souvent, si tu\ncaptures le Pokémon, le portail\ldisparaîtra définitivement.\pCela dit, il est peu probable\nqu'ils restent fermés à jamais…\pQuoi qu'il en soit !\pCapture les Pokémon cachés dans\nces mystérieux portails.\pCertains portails n'apparaissent\nqu'avec des Pokémon précis, mais\lles Pokémon qu'ils abritent\ldoivent être capturés malgré tout.\pEt si un portail refuse de\ndisparaître après la capture,\lil te suffira de l'enregistrer\ldans ton Pokédex.
+
+# --- Oui/Non menus (choix variante/randomizer Nouvelle Partie) ---
+0x1f1187e: Oui   
