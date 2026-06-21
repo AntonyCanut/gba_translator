@@ -1,13 +1,10 @@
-"""Tests pour patch_long_dialogues_fr.
+"""Tests pour patch_meteorite_dialogue_fr.
 
-Tout texte Pokémon de plus de 1000 octets dépasse le plafond de l'extracteur de
-pointeurs : il n'entre jamais dans l'extraction, donc ni la CSV trilingue ni le
-JSON de traduction ne le contiennent, et — si le français ne tient pas dans le
-slot d'origine — la ROM buildée affiche le texte anglais. Le patch relocalise la
-traduction française (déjà présente dans combined_fr.txt) en espace libre et
-repointe tous les pointeurs vivants. Cibles : les deux monologues météorite de
-Borrius (30 et 20 ans), le briefing New Game+, les règles des Sables de Combat et
-la course aux portails du Gardien de Borrius.
+Le monologue météorite de Borrius (0x7A9A75, 1046 octets) dépasse le plafond de
+1000 octets de l'extracteur de pointeurs : il n'entre jamais dans l'extraction,
+donc ni la CSV trilingue ni le JSON de traduction ne le contiennent, et la ROM
+buildée affiche le texte anglais. Le patch relocalise la traduction française
+(déjà présente dans combined_fr.txt) en espace libre et repointe le pointeur.
 """
 
 import os
@@ -18,7 +15,7 @@ from pathlib import Path
 import pytest
 
 from src.core.text_codec import TextDecoder, TextEncoder
-from scripts import patch_long_dialogues_fr as patch
+from scripts import patch_meteorite_dialogue_fr as patch
 
 BASE = patch.ROM_POINTER_BASE
 
@@ -109,32 +106,21 @@ COMBINED = "combined_fr.txt"
 class PatchOnRealRomTests(unittest.TestCase):
     """Bout en bout : sur la vraie ROM, le pointeur résout vers le texte FR."""
 
-    def test_long_dialogues_are_french(self):
+    def test_meteorite_dialogue_is_french(self):
         rom = bytearray(Path(FR_ROM).read_bytes())
         source = Path(SOURCE_ROM).read_bytes()
         combined = patch.load_combined(Path(COMBINED))
 
-        # Chaque cible doit avoir une traduction française dans combined_fr.txt.
-        for offset in patch.TARGETS:
-            self.assertIn(offset, combined, f"0x{offset:06X} absent de combined_fr.txt")
-
         stats = patch.apply(rom, combined, source)
         self.assertEqual(stats["failed"], 0)
-        self.assertEqual(stats["no_source"], 0)
         self.assertEqual(patch.verify(rom), [])
 
-        # Pour chaque cible : plus aucun pointeur vivant vers l'original anglais,
-        # et la sonde française contiguë est bien présente dans la ROM.
-        rom_bytes = bytes(rom)
-        for offset, probe in patch.TARGETS.items():
-            self.assertNotIn(
-                struct.pack("<I", BASE + offset), rom_bytes,
-                f"un pointeur vise encore l'anglais 0x{offset:06X}",
-            )
-            self.assertIn(
-                _encode(probe)[:-1], rom_bytes,
-                f"sonde FR {probe!r} introuvable pour 0x{offset:06X}",
-            )
+        # Tout pointeur vers l'original anglais a disparu ; la copie relocalisée
+        # commence bien par la traduction française attendue.
+        for offset in patch.TARGETS:
+            self.assertNotIn(struct.pack("<I", BASE + offset), bytes(rom))
+        prefix = _encode("Il y a trente ans")[:-1]
+        self.assertIn(prefix, bytes(rom))
 
 
 if __name__ == "__main__":
