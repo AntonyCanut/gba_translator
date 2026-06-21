@@ -26,6 +26,7 @@ INLINE_FR_SCRIPT := scripts/apply_inline_overrides_fr.py
 REPAIR_LZ77_SCRIPT := scripts/repair_stable_lz77_blocks.py
 REPAIR_LOCALIZED_LZ77_SCRIPT := scripts/repair_localized_lz77_blocks.py
 REPOINT_STALE_SCRIPT := scripts/repoint_stale_text_pointers.py
+PATCH_RITUAL_SCRIPT := scripts/patch_legendary_ritual_fr.py
 PATCH_FIXED_NAMES_SCRIPT := scripts/patch_fixed_table_names.py
 PATCH_ITEM_NAMES_SCRIPT := scripts/patch_item_names_fr.py
 PATCH_TIME_FORMAT_SCRIPT := scripts/patch_time_format_fr.py
@@ -37,7 +38,7 @@ PATCH_POKEDEX_CATEGORY_FR_SCRIPT := scripts/patch_pokedex_category_fr.py
 PATCH_MOVE_DESC_FR_SCRIPT := scripts/patch_move_descriptions_fr.py
 PATCH_DUP_MOVE_DESC_FR_SCRIPT := scripts/patch_dup_move_descriptions_fr.py
 PATCH_TM_ITEM_DESC_FR_SCRIPT := scripts/patch_tm_item_descriptions_fr.py
-PATCH_LONG_DIALOGUES_FR_SCRIPT := scripts/patch_long_dialogues_fr.py
+PATCH_METEORITE_DIALOGUE_FR_SCRIPT := scripts/patch_meteorite_dialogue_fr.py
 PATCH_SUMMARY_LABELS_SCRIPT := scripts/patch_summary_labels_fr.py
 PATCH_CFRU_TYPE_NAMES_SCRIPT := scripts/patch_cfru_type_names_fr.py
 PATCH_STATUS_ABBREVS_SCRIPT := scripts/patch_status_abbrevs_fr.py
@@ -157,6 +158,7 @@ build-fr: $(ENGLISH_EXTRACT) $(SPANISH_EXTRACT) $(BUILD_SCRIPT)
 	@$(PYTHON) $(REPOINT_STALE_SCRIPT) \
 		--target $(FR_BUILD) \
 		--translations $(FR_TRANSLATION)
+	@$(PYTHON) $(PATCH_RITUAL_SCRIPT) --rom $(FR_BUILD) --source $(ENGLISH_ROM)
 	@$(PYTHON) $(PATCH_VERSION_SCRIPT) --rom $(FR_BUILD) --build-number $(BUILD_NUMBER)
 	@$(PYTHON) $(PATCH_POKEDEX_FR_SCRIPT) \
 		--rom $(FR_BUILD) \
@@ -175,7 +177,7 @@ build-fr: $(ENGLISH_EXTRACT) $(SPANISH_EXTRACT) $(BUILD_SCRIPT)
 		--rom $(FR_BUILD) \
 		--combined combined_fr.txt \
 		--reference-rom $(SPANISH_ROM)
-	@$(PYTHON) $(PATCH_LONG_DIALOGUES_FR_SCRIPT) \
+	@$(PYTHON) $(PATCH_METEORITE_DIALOGUE_FR_SCRIPT) \
 		--rom $(FR_BUILD) \
 		--source $(ENGLISH_ROM) \
 		--combined combined_fr.txt \
