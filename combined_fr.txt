@@ -425,7 +425,7 @@
 0x1A5EC0: Tes Pokémon ont retrouvé toute leur\nforme.\pSi l’énergie ou les PV de tes\nPokémon sont bas, viens nous voir.\pSi tu pars loin sur le terrain,\nachète des Potions\lau Magasin.\pOn compte sur toi !
 0x1A5F9B: Tes Pokémon ont retrouvé toute leur\nforme.\pOn compte sur toi !
 0x1A5FDF: {PLAYER} !\nBienvenue à la maison.\pOn dirait que tu as vécu pas mal\nd’aventures.\pTu devrais peut-être te reposer.\n
-0x1A6046: Ah, parfait ! Toi et tes Pokémon\navez bien meilleure mine.\pSi les PV de tes Pokémon sont bas,\nsoigne-les dans un\p{COLOR}ÉCentre Pokémon{COLOR}Ç !\nLe plus proche d’ici est à\p{COLOR}ÉBourg Bellin{COLOR}Ç.\nOu achète des\p{COLOR}ÉPotions{COLOR}Ç à la\n{COLOR}ÉBoutique Pokémon{COLOR}Ç !\pC’est toujours bien de se préparer\nau pire.\pRends-moi fier, chéri !\pPrends soin de toi !
+0x1A6046: Ah, parfait ! Toi et tes Pokémon\navez bien meilleure mine.\pSi les PV de tes Pokémon sont bas,\nsoigne-les dans un\p{COLOR}ÉCentre Pokémon{COLOR}Ç !\nLe plus proche d’ici est à\p{COLOR}ÉBourg Bellin{COLOR}Ç.\nOu achète des\p{COLOR}ÉPotions{COLOR}Ç au\n{COLOR}ÉPoké Mart{COLOR}Ç !\pC’est toujours bien de se préparer\nau pire.\pRends-moi fier, chéri !\pPrends soin de toi !
 0x1A6196: 9{PLAYER} n’a plus de Pokémon\nutilisables !\p{PLAYER} panique et perd ¥{STR_VAR_1}…\p…\p{PLAYER} s’évanouit !
 0x1A61E5: {PLAYER} n’a plus de Pokémon\nutilisables !\p{PLAYER} s’évanouit !
 0x1A6211: Salut !\nJe peux t’aider ?
@@ -6782,7 +6782,7 @@
 0x7CFB5C: Un homme à capuche rouge a été\npoussé dans l’océan.\pIl n’a pas encore refait surface non\nplus…
 0x7CFC66: J'aurais juré que ce Pokémon des\nlégendes flottait\lpar ici à l'instant…
 0x7CFCBA: Passer par cette porte peut soit\nvous amener à la ville de Dehara,\lRoute 12.
-0x7CFD04: Seriez-vous {PLAYER}\npar hasard ?\p…\pJe le pensais.\pJe vous ai reconnu sur cette photo\nJ'ai trouvé de vous sur les\linternets.\pJe m'appelle Looker.\pAgent Looker, de la Police\nInternationale.\pJe venais juste de finir de\nm'occuper de Team Rocket dans la\lrégion de Kanto, quand j'ai été\ldéployé pour faire face à une\lsituation qui se préparait dans la\lrégion de Borrius.\pUn jeune homme, Jax, je crois, m'a\ninformé que vous aviez des\lpreuves de crimes commis par une\lorganisation se faisant appeler\l«Les Ombres».\pVeuillez me rencontrer au\n{COLOR}ÉCasino de Dehara {COLOR}Ëafin que nous\lpuissions discuter de tout cela.\pJax est là aussi.\pLooker, dehors.
+0x7CFD04: Seriez-vous {PLAYER}\npar hasard ?\p…\pJe le pensais.\pJe vous ai reconnu sur cette photo\nJ'ai trouvé de vous sur les\linternets.\pJe m'appelle Looker.\pAgent Looker, de la Police\nInternationale.\pJe venais juste de finir de\nm'occuper de Team Rocket dans la\lrégion de Kanto, quand j'ai été\ldéployé pour faire face à une\lsituation qui se préparait dans la\lrégion de Borrius.\pUn jeune homme, Jax, je crois, m'a\ninformé que vous aviez des\lpreuves de crimes commis par une\lorganisation se faisant appeler\l«Les Ombres».\pVeuillez me rencontrer dans le\n{COLOR}ÉDehara Game Corner {COLOR}Ëafin que nous\lpuissions discuter de tout cela.\pJax est là aussi.\pLooker, dehors.
 0x7D0046: Il semble être profondément absorbé\ndans un jeu de machine à sous.
 0x7D0078: Looker : {COLOR}ËJax ! Le jeu a finalement\nété payé !\pJe viens de gagner gros !
 0x7D00B5: Jax : {COLOR}ËTout à l'heure, M. Looker ?\nJ'ai encaissé il y a longtemps !\pJ'ai déjà gagné gros plusieurs fois\n!
@@ -7063,9 +7063,9 @@
 0x7E86D9: C'est mon travail de garder les\ntorches allumées la nuit ici.\pLe désert peut être froid maintenant\nque le soleil est couché.\pCes torches sont notre seule source\nfiable de chaleur actuellement.
 0x7E8786: C'est étrange d'avoir une forêt\npleine de rares Insecte si près d'un\ldésert.\pC'est Borrius !
 0x7E880A: Bourg Gurun\pUne ville qui a survécu au sable du\ntemps.
-0x7E8841: Tu penses pouvoir entrer ici et\nembêter les Roitiflam Noir ?
+0x7E8841: Tu penses pouvoir entrer ici et\nembêter les Black Emboar ?
 0x7E8885: Tu crois.
-0x7E888D: On est les Roitiflam Noir, morveux !
+0x7E888D: On est les Black Emboar, morveux !
 0x7E88D7: J'ai passé des années à chercher le\nsecret des Pokémon Regi !\pJ'ai fait des progrès récemment :\nRegirock doit vivre dans cette\lformation rocheuse étrange du Grand\lDésert.\pSi seulement on\npouvait le libérer…
 0x7E89C1: C'est une statue du Pokémon Roche\nlégendaire, Regirock.\pIl est écrit qu'autrefois, Regirock\naidait Regigigas à former et\lassembler la région de Borrius.\pIl vit maintenant quelque part dans\nle Grand Désert.
 0x7E8AA2: Le désert se termine rapidement\naprès la sortie au sud de\lcette ville.\pCependant, la route vers Antisis et\nPort-en-mer\ln'est pas aussi simple qu'on\lpourrait le croire…
@@ -7073,23 +7073,23 @@
 0x7E8C86: Un entrepôt tout ce qu'il y a de\nplus banal.\pRien à voir ici.
 0x7E8CC1: Bourg Vivill\pLa ville remplie de lumière et de\nprospérité.
 0x7E8CF8: La porte est verrouillée.
-0x7E8EF5: Merci !\pMon frère est sûrement dans\nl'Autoroute KBT nord.\pJ'irais moi-même mais je suis trop\nfaible.\pOn dit que ces Roitiflam Noir sont\nvraiment vicieux.
+0x7E8EF5: Merci !\pMon frère est sûrement dans\nl'Autoroute KBT nord.\pJ'irais moi-même mais je suis trop\nfaible.\pOn dit que ces Black Emboar sont\nvraiment vicieux.
 0x7E8FA1: C'est toi qui as demandé.
-0x7E90AB: {COLOR}ËHé ! Qui t'a dit que tu pouvais\npasser ?\pCet endroit est à nous, les Roitiflam\nNoir !\pC'est notre Arène, gamin !\pDégage ! Rentre chez ta maman, petit\nparfait !
+0x7E90AB: {COLOR}ËHé ! Qui t'a dit que tu pouvais\npasser ?\pCet endroit est à nous, les Black\nEmboar !\pC'est notre Arène, gamin !\pDégage ! Rentre chez ta maman, petit\nparfait !
 0x7E9160: {COLOR}ËHa ! Très bien !\pLes morveux comme toi avec un avenir\nsi brillant…\pRetourne chez tes parents et sois\nsage.\pN'oublie pas ton biberon !
-0x7E91E6: {COLOR}ËQu'est-ce que tu as dit, môme ?\pJe vais t'apprendre à respecter les\nRoitiflam Noir !\pJe vais écraser tes jolis Pokémon au\nsol !\pAvec plaisir !
+0x7E91E6: {COLOR}ËQu'est-ce que tu as dit, môme ?\pJe vais t'apprendre à respecter les\nBlack Emboar !\pJe vais écraser tes jolis Pokémon au\nsol !\pAvec plaisir !
 0x7E9283: Vraiment mauvais !
-0x7E928F: {COLOR}ËNe prends pas la grosse tête parce\nque tu m'as battu !\pSi tu veux vraiment te frotter aux\nRoitiflam Noir,\lva défier notre chef !\pIl se cache quelque part dans ce\ntunnel !
-0x7E934E: Tu crois faire quoi,\nmorveux ?\pIci, c'est le paradis des Roitiflam\nNoir…\pUn parasite comme toi n'a rien à\nfaire ici…\pNe me dis pas que tu penses pouvoir\ntenir tête au chef des\lRoitiflam Noir ?
-0x7E9423: C'est tout ?\pNon, il te reste une option :\nva-t'en !\pIci, c'est le repaire des Roitiflam\nNoir.\pOn n'a nulle part où aller et on ne\nveut personne sur notre\lchemin.
+0x7E928F: {COLOR}ËNe prends pas la grosse tête parce\nque tu m'as battu !\pSi tu veux vraiment te frotter aux\nBlack Emboar,\lva défier notre chef !\pIl se cache quelque part dans ce\ntunnel !
+0x7E934E: Tu crois faire quoi,\nmorveux ?\pIci, c'est le paradis des Black\nEmboar…\pUn parasite comme toi n'a rien à\nfaire ici…\pNe me dis pas que tu penses pouvoir\ntenir tête au chef des\lBlack Emboar ?
+0x7E9423: C'est tout ?\pNon, il te reste une option :\nva-t'en !\pIci, c'est le repaire des Black\nEmboar.\pOn n'a nulle part où aller et on ne\nveut personne sur notre\lchemin.
 0x7E94CB: Le sol ici est électrifié.
 0x7E94EA: 4F : Coin des CT
-0x7E9529: Gwa ha ha ha ! Apporte-toi !\nTu as du cran, gamin !\pJe vais te montrer ce que le gars\nqui tient les Roitiflam Noir\lpeut vraiment faire !
+0x7E9529: Gwa ha ha ha ! Apporte-toi !\nTu as du cran, gamin !\pJe vais te montrer ce que le gars\nqui tient les Black Emboar\lpeut vraiment faire !
 0x7E95B2: Gwa ha ha ha !
 0x7E95C0: Tu n'es pas si mauvais, gamin…\nje t'aime bien.\pÉcoute ça…\pDésormais, notre équipe s'appellera\nles Black {PLAYER} !\pOn adopte ton nom dur et\nféroce !\pUn nom plus sauvage pour une équipe\nplus sauvage !\pLes Black {PLAYER} !\nGwa ha ha ha ! Génial !
 0x7E96B2: Quoi, tu veux autre chose, gamin ?\p…\pMon frère ?\pBon sang, ce punk ne s'arrête\njamais.\pIl est temps que je règle les choses\navec lui, une fois pour toutes.
 0x7E9734: Qu'est-ce que tu veux, gamin ?\pOn est occupés !
-0x7E9872: Gwahahaha ! Apporte-toi ! Tu as du\ncran, gamin !\pJe vais te montrer ce que le gars\nqui tient les Roitiflam Noir\lpeut vraiment faire !
+0x7E9872: Gwahahaha ! Apporte-toi ! Tu as du\ncran, gamin !\pJe vais te montrer ce que le gars\nqui tient les Black Emboar\lpeut vraiment faire !
 0x7E98FB: Gwahahaha !
 0x7E9909: Pas si mal,\ngamin… Je t'aime bien.\pÉcoute ça…\pDésormais, notre équipe s'appellera\nles Black {PLAYER} !\pOuais ! On prend ton nom plein de\ncran !\pUn nom plus sauvage pour une équipe\nplus sauvage !\pLes Black {PLAYER} ! Gwahahaha !\nGénial !
 0x7E99FB: Quoi, tu veux autre chose, gamin ?\p…\pMon frère ?\pPfff, ce boulet n'arrête pas.\pIl est temps de régler ça une bonne\nfois…
@@ -7097,16 +7097,16 @@
 0x7E9C25: Frère : {COLOR}ËJe ne peux pas, James.\nTu es mon frère.\pTu comptes pour moi.\pJe ne peux pas te laisser continuer\ncomme ça !
 0x7E9CA1: James : {COLOR}ËTu dis tenir à moi, mais tu\nn'as pas de cran, frérot.\pTu envoies des dresseurs me harceler\nparce que tu as trop peur de te\lsalir les mains.
 0x7E9D4B: {COLOR}ËCe gamin, {PLAYER}, a du cran !
-0x7E9D68: {COLOR}ËLaisse-moi te dire !\pPersonne ne m'a jamais démoli comme\nlui !\pJ'ai même renommé les Roitiflam Noir\nen Black {PLAYER}, en son honneur !\pC'est un nouveau départ.\pLes Black {PLAYER} et moi partons à\nla Ville d'Antisis !\pOn dit que l'ancien gang là-bas a\nété chassé.\pMaintenant la ville est mûre pour\nles Black {PLAYER} !\pGwahahaha !
+0x7E9D68: {COLOR}ËLaisse-moi te dire !\pPersonne ne m'a jamais démoli comme\nlui !\pJ'ai même renommé les Black Emboar\nen Black {PLAYER}, en son honneur !\pC'est un nouveau départ.\pLes Black {PLAYER} et moi partons à\nla Ville d'Antisis !\pOn dit que l'ancien gang là-bas a\nété chassé.\pMaintenant la ville est mûre pour\nles Black {PLAYER} !\pGwahahaha !
 0x7E9EC0: Frère : {COLOR}ËMais James, tu ne peux pas\nme laisser seul !
 0x7E9EFA: James : {COLOR}ËJ'ai pensé à te recruter,\nmais je ne veux pas\ld'un faible dans mon gang !\pJe préfère laisser {PLAYER} rejoindre\nnos rangs.
 0x7E9F91: {COLOR}ËBienvenue chez les Black {PLAYER},\ngamin !\pTous les membres doivent avoir un\nvélo, alors prends ça.
 0x7E9FDE: {COLOR}ËSi tu passes par la Ville\nd'Antisis, viens nous voir.\pOn t'accueillera à bras ouverts.
 0x7EA030: {PLAYER} reçoit une Bicyclette du\nchef des Black {PLAYER} !
-0x7EA067: {COLOR}ËDésolé que tu te sois retrouvé mêlé\nà tout ça.\pJ'ai menti en disant que je n'avais\npas de nouvelles de mon frère.\pEn vérité, je savais qu'il était le\nchef des Roitiflam Noir.\pJe craignais que tu refuses d'aider\nsi tu savais que tu te battrais\lcontre leur chef.\pMais maintenant il est parti, et je\nsuis seul pour de bon…\pMerci de m'avoir aidé.\pPrends cette CT en remerciement.
+0x7EA067: {COLOR}ËDésolé que tu te sois retrouvé mêlé\nà tout ça.\pJ'ai menti en disant que je n'avais\npas de nouvelles de mon frère.\pEn vérité, je savais qu'il était le\nchef des Black Emboar.\pJe craignais que tu refuses d'aider\nsi tu savais que tu te battrais\lcontre leur chef.\pMais maintenant il est parti, et je\nsuis seul pour de bon…\pMerci de m'avoir aidé.\pPrends cette CT en remerciement.
 0x7EA1EB: {PLAYER} a reçu la\nCT98 du gars !
 0x7EA20E: Si tu revois mon frère,\ndis-lui que je m'inquiète encore\lpour lui.
-0x7EA26A: {COLOR}ËLaisse-moi te dire !\pPersonne ne m'a jamais démoli comme\nelle !\pJ'ai même renommé les Roitiflam Noir\nen Black {PLAYER}, en son honneur !\pC'est un nouveau départ.\pLes Black {PLAYER} et moi partons à\nla Ville d'Antisis !\pOn dit que l'ancien gang là-bas a\nété chassé.\pMaintenant la ville est mûre pour\nles Black {PLAYER} !\pGwahahaha !
+0x7EA26A: {COLOR}ËLaisse-moi te dire !\pPersonne ne m'a jamais démoli comme\nelle !\pJ'ai même renommé les Black Emboar\nen Black {PLAYER}, en son honneur !\pC'est un nouveau départ.\pLes Black {PLAYER} et moi partons à\nla Ville d'Antisis !\pOn dit que l'ancien gang là-bas a\nété chassé.\pMaintenant la ville est mûre pour\nles Black {PLAYER} !\pGwahahaha !
 0x7EA704: C'est une façon de surmonter ça.
 0x7EA7A9: Maintenant je te le dirai.
 0x7EA7BD: Ces ampoules contrôlent le flux\nd'électricité dans l'Arène.\pAllume-les ou éteins-les, et le\ncourant se détourne vers ou depuis\lelles.
@@ -7797,7 +7797,7 @@
 0x8CA8C3: Fonction {COLOR}ÉJournal\nde Quêtes{COLOR}Ç pour ton Cube !\pElle suit tout ce qu'on te demande !\nOh, et avant d'oublier, tu as laissé\pun composant clé de ton Super Cube\nsur le sol de ta chambre.\lÇa ne servait pas avant, mais comme\ptu as maintenant ton propre Pokémon,\ntu en auras besoin pour\lutiliser des objets\len combat.
 0x8CAA11: {COLOR}Á{PLAYER} reçoit le Module Combat du\nSuper Cube de Maman !
 0x8CAA4A: Au cas où tu oublies,\nle Super Cube sert de sac.\pMais les sacs de DalMart\nne gardent que 42 objets.\lLe Super Cube, {COLOR}ÉCube{COLOR}Ç,\la de la place infinie !\lIl numérise les objets.\pEn bref, rien à porter.\nC'est comme si tu ne portais\lrien de plus\lsur toi !\pSois prudent dehors, chéri !\pApporte le colis du Prof. Log !
-0x8CAF99: Va à la {COLOR}ÉBoutique Pokémon\nde Bellinville{COLOR}Ë, {PLAYER}.\pJ'en ai besoin, toi seul.
+0x8CAF99: Va au {COLOR}ÉPoké Mart\nde Bellinville{COLOR}Ë, {PLAYER}.\pJ'en ai besoin, toi seul.
 0x8CAFFD: Oh, {PLAYER} !\nTu as rapporté mon colis !
 0x8CB023: {PLAYER} livre le colis.
 0x8CB03C: Ah !\pUn envoi de mon ami Chen, dans la\nrégion de Kanto !\pVoyons voir…\pPoké Balls, Pokédex… et… hein ?\nOù sont les Master Balls ?\pAs-tu ouvert ce colis et pris\nquelque chose, {PLAYER} ?
@@ -10562,7 +10562,7 @@
 0xA444DE: au soleil !
 0xA444EA: dans une tempête de sable !
 0xA444FA: sous la grêle !
-0xA4450A: with strong winds blowing!\pFlying-type Pokémon take less\ndamage from super effective moves!
+0xA4450A: avec un vent fort qui souffle !\pLes Pokémon Volant subissent moins\nde dégâts des coups super efficaces !
 0xA44566: dans une Distorsion !\pLes plus lents agissent d'abord !
 0xA44599: dans une Zone Magique !\pLa plupart des objets tenus n'ont\nplus aucun effet !
 0xA445CA: dans une Zone Étrange !\pLes stats de Défense et de Déf.\nSpé. sont échangées !
@@ -15109,7 +15109,7 @@
 0x1EE5FF1: Comment va mon ancien Pokémon ?\pJ'espère que tu lui as fait\ndécouvrir ce merveilleux monde !
 0x1EE6082: Ne me dérangez pas, citoyen.\nJe suis en service.
 0x1EE60B2: Qu'est-ce qu'il y a, citoyen ?\nUn colis volé ?\pJe laisse les Rangers Pokémon\ns'en charger.\pJe suis en service.
-0x1EE6115: As-tu pris le temps de voir les\ninstallations locales ?\pLe {COLOR}ÉCentre Pokémon{COLOR}Ë soigne tes\nPokémon gratuitement.\pLa {COLOR}ÉBoutique Pokémon{COLOR}Ë vend des objets\nutiles aux Dresseurs.\pDans la plupart des villes, ces deux\nbâtiments se distinguent par leurs\lcouleurs rouge et bleue.
+0x1EE6115: As-tu pris le temps de voir les\ninstallations locales ?\pLe {COLOR}ÉCentre Pokémon{COLOR}Ë soigne tes\nPokémon gratuitement.\pLe {COLOR}ÉPoké Mart{COLOR}Ë vend des objets\nutiles aux Dresseurs.\pDans la plupart des villes, ces deux\nbâtiments se distinguent par leurs\lcouleurs rouge et bleue.
 0x1EE621D: Cette statue là-bas représente le\nPokémon légendaire Artikodin.\pElle a été construite de A à Z par\nmon père lui-même !\pD'ailleurs, sache qu'il parcourt\nBorrius en construisant\ldes statues comme celle-ci dans\lplein de villes !\pMon père est trop cool !\pMais pas autant que le\nclimat ici !\pAhahaha !
 0x1EE6359: Pousse-toi !\pJ'essaie de regarder la télé !
 0x1EE6398: Une télé ?\nC'est quoi ?\pMoi, je joue aux jeux vidéo sur le\ntéléphone de papa !
@@ -17532,7 +17532,7 @@
 0x1F2319E: Tâche ardue ! Voir tous les\nPokémon d'Ouest Borrius et rapporter\nau Prof. Log.
 0x1F231F2: Comme on disait, faut tous les\nattraper ! Voyage, et\nattrape tous les Pokémon !
 0x1F23252: Tu devrais voir ta {COLOR}Émère{COLOR}Ë avant\nde prendre mon colis, {PLAYER}.\pElle doit être très inquiète\npour toi.
-0x1F232BA: Récupère mon colis à la\n{COLOR}ÉBoutique Pokémon de Bourg Bellin{COLOR}Ë, {PLAYER}.\pJ'en ai besoin, et toi seul peux\nl'avoir.
+0x1F232BA: Récupère mon colis au\n{COLOR}ÉPoké Mart de Bourg Bellin{COLOR}Ë, {PLAYER}.\pJ'en ai besoin, et toi seul peux\nl'avoir.
 0x1F2331E: Oh, {PLAYER} !\nTu es revenu avec mon colis !
 0x1F23360: Voyons s'ils ont envoyé ce qu'ils\ndevaient.\pNouveau matériel de recherche…{PAUSE}î\nok.\pLa science Pokémon la plus récente…{PAUSE}î\nok.\p…{PAUSE}îHein ?\pOù sont les Master Balls ?\pAs-tu ouvert ce colis et pris\nquelque chose dedans, {PLAYER} ?\p…\pAh…{PAUSE} je vois.\pTu as récupéré mon colis chez\ndes voyous…\pEt ils ont dû prendre les\nMaster Balls…
 0x1F234A9: Quoi !?\pTu les as vus utiliser ça pour\ncapturer Artikodin ?\pHmm…\pSi j'ai raison, on pourrait être en\ngrave danger…
@@ -18842,7 +18842,7 @@
 0x1F55A42: Cette CT a été trouvée près de\nl'océan entre deux corniches après\navoir combattu le Trio Solaire.
 0x1F55A93: Cette CT a été trouvée achetée au\nMagasin.
 0x1F55ABE: Cette CT a été trouvée après avoir\nutilisé Escalade.
-0x1F55AE8: Cette CT a été récompensée pour\navoir terminé «Le Roitiflam Noir».
+0x1F55AE8: Cette CT a été récompensée pour\navoir terminé «L'Emboar Noir».
 0x1F55B1F: Cette CT se trouve dans l'entrepôt\noù un scientifique expérimentait\nsur un Élekable.
 0x1F55B88: Cette CT a été trouvée près d'un\nCollectionneur d'Insectes au nord de\nla forêt.
 0x1F55BCE: Cette CT a été trouvée après\nEscalade et tablette détruite.
@@ -19745,8 +19745,8 @@
 0x1F66784: Route 9 - 10
 0x1F66791: J’aime ma fille à la folie.\pJe ne supporte pas de rester\nune seule journée sans la voir.\pJe commettrais des crimes atroces\npour elle !\pVoilà à quel point je l’aime.
 0x1F6683B: Borrius est foutu…\pPlus rien ne nous retient,\non se glisse dans le prochain\lbateau pour Hoenn !
-0x1F668A0: Tu sais, c’était peut-être\njuste moi…\pMais je jurerais que Jax avait l’air\nperturbé par quelque chose.\pEt je ne pense pas que ce soit lié à\nces malfrats qui ont filé avec la\lPierre Prison, non plus…
-0x1F6695C: {COLOR}ÇCes voyous ont fait irruption\nici et ont pillé notre maison!\pIls nous ont plaqués au mur, et\nnous avons dû regarder impuissants\lpendant qu’ils fouillaient chez nous\lpour la Pierre Prison.
+0x1F668A0: Tu sais, c’était peut-être\njuste moi…\pMais je jurerais que Jax avait l’air\nperturbé par quelque chose.\pEt je ne pense pas que ce soit lié à\nces malfrats qui ont filé avec la\lPierre de Prison, non plus…
+0x1F6695C: {COLOR}ÇCes voyous ont fait irruption\nici et ont pillé notre maison!\pIls nous ont plaqués au mur, et\nnous avons dû regarder impuissants\lpendant qu’ils fouillaient chez nous\lpour la Pierre de Prison.
 0x1F66A10: Chants mystiques, kwaah!\pTon Pokémon veut {COLOR}ÉChâtiment{COLOR}Ç, skree ?\n{COLOR}É1 Éclat bleu{COLOR}Ç et {COLOR}É1 Éclat rouge{COLOR}Ç, ok.
 0x1F66A81: Quel Pokémon est-ce donc ?
 0x1F66ACB: Huhu… Graa…\nPas assez de {STR_VAR_1}s…
@@ -20335,7 +20335,7 @@
 0x1F72A6D: {COLOR}ÁAstuces du Dresseur !\pOuvre le {COLOR}ÉMenu Options{COLOR}Á pour activer\nPrompts de save + CS Rapides !\pSi {COLOR}ÉPrompts de save{COLOR}Á sont actifs,\non te demandera si tu veux sauver\lavant ou après les moments clés !\pSi {COLOR}ÉCS Rapides{COLOR}Á sont actifs,\nles capacités terrain s’utilisent\lsans requérir de confirmation !\p{L_BUTTON}/{R_BUTTON} permettent aussi de\nfaire défiler les pages d’options !
 0x1F72BD8: Astuces du Dresseur !\pLes Pokémon gagnent des Exp. en\ncombat.\pLes Exp. les rendent\nplus forts.\pTes Pokémon gagnent aussi des Exp.\nmême si tu attrapes un Pokémon\ladverse !\pSi tes Pokémon montent trop de\nniveau, les autres Dresseurs\lgagneront aussi en puissance.\pPour éviter le sur-niveau et une\nmontée de difficulté,\lactive le cap\nde niveau dans le\l{COLOR}ÉMenu Options{COLOR}Á en mettant {COLOR}ÉGain Exp.{COLOR}Á\lsur {COLOR}ÉPartage Exp. Capé{COLOR}Á.\lUne option clé pour toi.
 0x1F72DD1: Astuces du Dresseur !\pParle à cette Leveinard, tes\nPokémon seront pleinement\psoignés ! Si tu perds un combat,\ntu reviendras ici aussi !
-0x1F72E65: Astuces du Dresseur !\pTout Pokémon ayant combattu\nreçoit les Exp. Avec\ple {COLOR}ÉMulti Exp{COLOR}Á activé dans le\n{COLOR}ÉMenu Options{COLOR}Á, les Pokémon non\lparticipatifs prennent aussi leur\lpart\ld’Exp.
+0x1F72E65: Astuces du Dresseur !\pTout Pokémon ayant combattu\nreçoit les Exp. Avec\pl’{COLOR}ÉExp. Share{COLOR}Á activé dans le\n{COLOR}ÉMenu Options{COLOR}Á, les Pokémon non\lparticipatifs prennent aussi leur\lpart\ld’Exp.
 0x1F72F5A: Astuces du Dresseur !\pEn sélectionnant une attaque en\ncombat, certains symboles\ppeuvent apparaître. Cela\ndépend de l’efficacité sur la\pcible. Une {COLOR}É<0x79>{COLOR}Á verte indique super\nefficace. Une\p{COLOR}È<0x7A>{COLOR}Á jaune indique peu efficace.\nUne\p{COLOR}Ê×{COLOR}Á rouge indique aucun effet.\nUn + indique le bonus de\pmême\ntype.
 0x1F730E7: Astuces du Dresseur !\pL’option {COLOR}ÉRestriction d’Objets{COLOR}Á permet\nde choisir combien d’objets tu peux\lutiliser en combat !\pSi tu choisis {COLOR}ÉAucun Objet{COLOR}Á, aucun\nDresseur ne pourra en utiliser\lnon plus !\pAu minimum, {COLOR}É4 Objets Seulement{COLOR}Á doit\nêtre activé pour {COLOR}ÉExpert{COLOR}Á, {COLOR}ÉAucun Objet{COLOR}Á\ldevient obligatoire pour {COLOR}ÉInsane{COLOR}Á.\pEnvie d’un défi ? Choisis\n{COLOR}ÉObjets Adversaire Seulement{COLOR}Á\l: eux peuvent utiliser des\lobjets, pas toi !\pCe dernier choix marche pour toute\nla difficulté.
 0x1F732BD: Astuces du Dresseur !\p{L_BUTTON} et {SELECT_BUTTON} permettent de\nchanger vite de Pokémon dans la\pliste ! {L_BUTTON} auto-sélectionne un\nPokémon à permuter, et {SELECT_BUTTON} met\lle Pokémon actuel en tête d’équipe !
@@ -21695,7 +21695,7 @@
 0x1F945B3: Combat ! Sbire de la Lumière\nÉternelle
 0x1F945CF: Combat ! Ivory
 0x1F945DD: Combat ! Aklove
-0x1F945EC: Combat ! Roitiflam Noir
+0x1F945EC: Combat ! Black Emboar
 0x1F94601: Combat ! James
 0x1F9460F: Combat ! Granbull de Terreur
 0x1F94627: Combat ! Gruff
@@ -21948,15 +21948,15 @@
 0x1F98785: Premier Talent
 0x1F98793: Second Talent
 0x1F987A2: Talent Caché
-0x1F987B1: Je suis un peu une connaisseuse\ndes combats ici.\pSi tu remportes {COLOR}É{STR_VAR_1}{COLOR}Ç combats\nau total aujourd'hui dans la {COLOR}ÉTour de\lCombat{COLOR}Ç, la {COLOR}ÉMine de Combat{COLOR}Ç et le {COLOR}ÉCirque de\lCombat{COLOR}Ç réunis, je te donnerai\ldes PB pour tes efforts.
+0x1F987B1: Je suis un peu une connaisseuse\ndes combats ici.\pSi tu remportes {COLOR}É{STR_VAR_1}{COLOR}Ç combats\nau total aujourd'hui dans la {COLOR}ÉBattle\lTower{COLOR}Ç, la {COLOR}ÉBattle Mine{COLOR}Ç et le {COLOR}ÉBattle\lCircus{COLOR}Ç réunis, je te donnerai\ldes PB pour tes efforts.
 0x1F98894: Pour l'instant, tu as gagné {COLOR}É{STR_VAR_2}{COLOR}Ç\ncombat{VERSION} aujourd'hui.\pContinue !\pIl te reste {COLOR}É{STR_VAR_3}{COLOR}Ç combat{EVIL_TEAM}\nà faire !
 0x1F98901: Oh, je vois que tu as gagné\n{COLOR}É{STR_VAR_2}{COLOR}Ç combat{VERSION} aujourd'hui.\pPrends ces PB pour tes\nefforts !
 0x1F9895B: Chaque jour, j'espère voir de beaux\nsuccès comme celui que tu\lm'as montré.
-0x1F989B4: J'ai remarqué un type louche qui\ntraîne tard devant la {COLOR}ÉTour de\lCombat{COLOR}Ë.\pIl paraît qu'il propose de super\naffaires, puis t'arnaque.\pJe me méfierais à ta place.
-0x1F98A6B: J'adore les {COLOR}ÉSables de Combat{COLOR}Ç !\pRegarder d'autres combattre avec tes\nPokémon préférés, c'est si amusant !\pSans parler du fait que c'est très\nfacile pour gagner des PB.\pAucune autre installation de combat\nne serait mon endroit favori.
-0x1F98B4D: Le {COLOR}ÉCirque de Combat{COLOR}Ë !\pTellement fun !\pQue va-t-il se passer ensuite ?\pAttends et vois !
-0x1F98B99: Certains vendeurs changent\npériodiquement dans la journée.\pSi tu veux faire du shopping, reste\nautant dehors que possible\lpour acheter.\pJe trouve que les {COLOR}ÉSables de Combat{COLOR}Ç sont\nun bon moyen de patienter.
-0x1F98C6E: Y a pas de mine comme la {COLOR}ÉMine de\nCombat{COLOR}Ë, j'te l'dis.\pDans la plupart des mines… tu sais\nà quoi t'attendre.\pPas dans la Mine de Combat, j'te l'dis.\pChaque étage bouleverse\n tout.\pC'est une sacrée expérience !
+0x1F989B4: J'ai remarqué un type louche qui\ntraîne tard devant la {COLOR}ÉBattle\lTower{COLOR}Ë.\pIl paraît qu'il propose de super\naffaires, puis t'arnaque.\pJe me méfierais à ta place.
+0x1F98A6B: J'adore le {COLOR}ÉBattle Sands{COLOR}Ç !\pRegarder d'autres combattre avec tes\nPokémon préférés, c'est si amusant !\pSans parler du fait que c'est très\nfacile pour gagner des PB.\pAucune autre installation de combat\nne serait mon endroit favori.
+0x1F98B4D: Le {COLOR}ÉBattle Circus{COLOR}Ë !\pTellement fun !\pQue va-t-il se passer ensuite ?\pAttends et vois !
+0x1F98B99: Certains vendeurs changent\npériodiquement dans la journée.\pSi tu veux faire du shopping, reste\nautant dehors que possible\lpour acheter.\pJe trouve que le {COLOR}ÉBattle Sands{COLOR}Ç est\nun bon moyen de patienter.
+0x1F98C6E: Y a pas de mine comme la {COLOR}ÉBattle\nMine{COLOR}Ë, j'te l'dis.\pDans la plupart des mines… tu sais\nà quoi t'attendre.\pPas dans la Battle Mine, j'te l'dis.\pChaque étage bouleverse\n tout.\pC'est une sacrée expérience !
 0x1F98D59: Salut !\nTu viens pour la {COLOR}ÉTour de Combat{COLOR}Ç ?\pC'est l'expérience Frontier\nultime !\pTellement de façons de ressentir la\nchaleur du combat !
 0x1F98DE4: Accès au système d'archives…
 0x1F98DFE: Quel registre veux-tu\nconsulter ?
@@ -22330,50 +22330,50 @@
 0x1F9D295: {COLOR}ËSnif… Je crois\ppas que ce soit le bon\nchemin pour rentrer…
 0x1F9D2C9: {COLOR}ËSnif… Je connais le\pchemin pour rentrer à partir\pd'ici. J'ai aimé marcher avec\ntoi ! T'es le meilleur !
 0x1F9D31F: C'est toi ! Le grand\nDresseur qui m'a sauvé !\pT'es le meilleur !
-0x1F9D358: Le Roitiflam Noir
-0x1F9D369: Sauve le frère d'un homme\ndes griffes du «Roitiflam\nNoir» dans l'Autoroute KBT.
+0x1F9D358: Le Black Emboar
+0x1F9D369: Sauve le frère d'un homme\ndes griffes du «Black\nEmboar» dans l'Autoroute KBT.
 0x1F9D3BF: Frère
 0x1F9D3C7: James
-0x1F9D3CD: Boss du Roitiflam Noir
-0x1F9D3DF: Salut, Dresseur.…\pQuoi ? Tu veux que je\pdise quelque chose\nd'intéressant ? Très\pbien… Dernièrement,\pj'ai des ennuis avec mon\nfrère. Il s'est impliqué\pjusqu'au cou avec un\ngang qui se fait appeler\lle «Roitiflam Noir». Je\pne sais pas vraiment de\nquoi il retourne, mais\lje suis vraiment inquiet\ppour lui. Je n'ai pas\nparlé avec lui depuis\ldes jours, donc j'ai\ppeur qu'il lui soit\parrivé quelque chose.\p… Quoi ? Tu serais\nprêt à aller vérifier pour moi ?
+0x1F9D3CD: Boss du Black Emboar
+0x1F9D3DF: Salut, Dresseur.…\pQuoi ? Tu veux que je\pdise quelque chose\nd'intéressant ? Très\pbien… Dernièrement,\pj'ai des ennuis avec mon\nfrère. Il s'est impliqué\pjusqu'au cou avec un\ngang qui se fait appeler\lle «Black Emboar». Je\pne sais pas vraiment de\nquoi il retourne, mais\lje suis vraiment inquiet\ppour lui. Je n'ai pas\nparlé avec lui depuis\ldes jours, donc j'ai\ppeur qu'il lui soit\parrivé quelque chose.\p… Quoi ? Tu serais\nprêt à aller vérifier pour moi ?
 0x1F9D58E: C'est toi qui as\ndébarqué chez moi pour demander.
-0x1F9D5C0: Merci ! Tu peux probablement\ptrouver mon frère dans le\nnord de l'Autoroute KBT.\pJ'irais bien moi-même, mais\nje suis un Dresseur trop\pfaible. On dit que ces Roitiflam\nNoir sont sacrément vicieux.
+0x1F9D5C0: Merci ! Tu peux probablement\ptrouver mon frère dans le\nnord de l'Autoroute KBT.\pJ'irais bien moi-même, mais\nje suis un Dresseur trop\pfaible. On dit que ces Black\nEmboar sont sacrément vicieux.
 0x1F9D66C: Si tu vois mon frère,\ndis-lui que je suis\ltoujours inquiet pour lui.
-0x1F9D6C4: Qu'est-ce que tu crois\nque tu fais, morveux ?\pIci, c'est le paradis\nultime du Roitiflam Noir… Un petit\pnuisible comme toi n'a\nrien à faire ici… Tu\ppenses vraiment pouvoir\ntenir face à moi, le\lchef du Roitiflam Noir ?
-0x1F9D799: C'est tout ce que t'as ?\pNan, il te reste une\noption : dégage ! C'est\pnotre endroit, le Roitiflam\nNoir. On n'a nulle\ppart où aller, et on ne\nveut personne qui nous gêne.
-0x1F9D841: Gwa ha ha ha ! Viens !\nT'as du cran, gamin ! Je\pvais te montrer ce que\npeut faire celui qui\ltient le Roitiflam Noir ensemble !
+0x1F9D6C4: Qu'est-ce que tu crois\nque tu fais, morveux ?\pIci, c'est le paradis\nultime du Black Emboar… Un petit\pnuisible comme toi n'a\nrien à faire ici… Tu\ppenses vraiment pouvoir\ntenir face à moi, le\lchef du Black Emboar ?
+0x1F9D799: C'est tout ce que t'as ?\pNan, il te reste une\noption : dégage ! C'est\pnotre endroit, le Black\nEmboar. On n'a nulle\ppart où aller, et on ne\nveut personne qui nous gêne.
+0x1F9D841: Gwa ha ha ha ! Viens !\nT'as du cran, gamin ! Je\pvais te montrer ce que\npeut faire celui qui\ltient le Black Emboar ensemble !
 0x1F9D8CB: Gwa ha ha ha !
 0x1F9D8D9: Pas si mauvais, gamin…\nJe t'aime bien. Écoute\pça… À partir de\pmaintenant, notre nom de\ngang sera le Black\p{PLAYER} ! Ouais ! On\nadopte ton nom viril !\pC'est un nom plus\nsauvage pour une équipe\pplus sauvage ! Le Black\n{PLAYER} ! Gwa ha ha ha ! Génial !
 0x1F9D9CB: Quoi, tu veux autre chose,\pgamin ?… Mon frère ?\pPff, ce boulet ne lâche\pjamais. Très bien, en\premerciement pour m'avoir\nbattu, je vais venir avec toi.
-0x1F9DA54: Je te l'ai dit maintes fois,\nfrérot, arrête d'essayer de\lt'en prendre au Roitiflam Noir !
+0x1F9DA54: Je te l'ai dit maintes fois,\nfrérot, arrête d'essayer de\lt'en prendre au Black Emboar !
 0x1F9DAA7: Je peux pas, James. Tu\nes mon frère. Tu comptes\pplus que tout pour moi.\pEt je peux pas te\nlaisser continuer sur cette voie !
 0x1F9DB17: Tu prétends tenir à moi, mais en\nvrai t'as zéro cran, frérot. Tu\pcontinues d'envoyer des Dresseurs\npour me harceler parce que t'es trop\lpeureux pour te salir les mains.
 0x1F9DBBE: Ce gosse, {PLAYER}, a du cran !
-0x1F9DBD7: Laisse-moi te dire ! Personne ne\pm'a jamais mis une telle raclée\nque {STR_VAR_2} ! J'ai même\prenommé le Roitiflam Noir en Black\n{PLAYER}, d'après {STR_VAR_1} !\pC'est l'heure d'un nouveau\pdépart. Le Black {PLAYER} et\nmoi, on s'installe à Ville d'Antisis ! J'ai entendu dire que\nl'ancien gang qui dirigeait\pl'endroit s'est fait chasser. Un\ntruc avec un Granbull Terrible,\pje sais plus… Cette ville est\nmûre pour être cueillie par le\pBlack {PLAYER} ! Gwa ha ha ha !
+0x1F9DBD7: Laisse-moi te dire ! Personne ne\pm'a jamais mis une telle raclée\nque {STR_VAR_2} ! J'ai même\prenommé le Black Emboar en Black\n{PLAYER}, d'après {STR_VAR_1} !\pC'est l'heure d'un nouveau\pdépart. Le Black {PLAYER} et\nmoi, on s'installe à Ville d'Antisis ! J'ai entendu dire que\nl'ancien gang qui dirigeait\pl'endroit s'est fait chasser. Un\ntruc avec un Granbull Terrible,\pje sais plus… Cette ville est\nmûre pour être cueillie par le\pBlack {PLAYER} ! Gwa ha ha ha !
 0x1F9DD50: Mais James, tu peux pas\njuste me laisser tout seul !
 0x1F9DD7E: J'ai pensé à faire de toi l'un des\nnôtres aussi, mais je peux pas avoir\lquelqu'un d'aussi faible dans mon\péquipe ! À la place, j'ai décidé de\nlaisser {PLAYER} rejoindre nos
 0x1F9DE0C: Bienvenue dans le Black {PLAYER},\pgamin ! Tous les membres doivent\navoir un Vélo, alors prends ça.
 0x1F9DE57: C'est une puissante moto que\ntous les membres du Black\p{PLAYER} possèdent ! Tu peux\nappuyer sur {L_BUTTON} pour\lactiver le turbo, ou y aller\pcool en pédalant. Passe nous\nvoir si tu viens à Ville d'Antisis.\pOn t'accueillera à bras ouverts.
 0x1F9DF34: Bienvenue dans le Black\p{PLAYER}, gamin ! Passe nous\nvoir si tu viens à Ville d'Antisis.\pOn t'accueillera à bras ouverts.
-0x1F9DFA1: Désolé que tu te sois retrouvé\nmêlé à tout ça. J'ai peut-être\pmenti quand je t'ai dit que je\nn'avais pas eu de nouvelles de mon\pfrère. En vérité, je savais qu'il\nétait le chef du Roitiflam Noir. Je\ppensais juste que tu n'aurais pas\nvoulu aider si tu savais que tu\lallais affronter leur chef. Mais\pmaintenant il est parti pour de\nbon, et je suis tout seul… Je me\psens tellement idiot… Quoi qu'il\pen soit, merci de m'avoir aidé.\pPrends ce CT pour ton temps.
+0x1F9DFA1: Désolé que tu te sois retrouvé\nmêlé à tout ça. J'ai peut-être\pmenti quand je t'ai dit que je\nn'avais pas eu de nouvelles de mon\pfrère. En vérité, je savais qu'il\nétait le chef du Black Emboar. Je\ppensais juste que tu n'aurais pas\nvoulu aider si tu savais que tu\lallais affronter leur chef. Mais\pmaintenant il est parti pour de\nbon, et je suis tout seul… Je me\psens tellement idiot… Quoi qu'il\pen soit, merci de m'avoir aidé.\pPrends ce CT pour ton temps.
 0x1F9E13D: Hé ! Ouais, toi, le\npetit morveux là !\pApproche !
-0x1F9E173: Hé ! Qui t'a dit que tu\npouvais passer par ici ? Cet\pendroit nous appartient, le\nRoitiflam Noir ! C'est comme\pnotre Arène, gamin ! Alors\pdu balai ! Rentre chez ta\nmaman, p'tit lèche-bottes !
+0x1F9E173: Hé ! Qui t'a dit que tu\npouvais passer par ici ? Cet\pendroit nous appartient, le\nBlack Emboar ! C'est comme\pnotre Arène, gamin ! Alors\pdu balai ! Rentre chez ta\nmaman, p'tit lèche-bottes !
 0x1F9E225: Ha ! Très bien ! Les\pmorveux comme toi avec\nun avenir si brillant…\pRentre donc à la maison,\net sois sage avec tes\pparents. N'oublie pas ton biberon !
-0x1F9E2A9: Qu'est-ce que t'as dit,\psale mocheté ? Je vais\nt'apprendre à prendre le\pRoitiflam Noir au sérieux !\nJe vais écraser tes jolis\pPokémon dans le sol ! Avec plaisir !
+0x1F9E2A9: Qu'est-ce que t'as dit,\psale mocheté ? Je vais\nt'apprendre à prendre le\pBlack Emboar au sérieux !\nJe vais écraser tes jolis\pPokémon dans le sol ! Avec plaisir !
 0x1F9E343: Vraiment nul !
-0x1F9E34F: Ne prends pas la grosse tête\nparce que tu m'as battu ! Si\ptu veux vraiment te battre\ncontre le Roitiflam Noir, va\lte mesurer à notre chef ! Il\pest quelque part dans ce tunnel !
-0x1F9E3FB: {COLOR}ËHé ! Qui t'a dit que\ntu pouvais passer par ici ?\pC'est le territoire du Roitiflam\pNoir ! Retourne d'où tu viens !
+0x1F9E34F: Ne prends pas la grosse tête\nparce que tu m'as battu ! Si\ptu veux vraiment te battre\ncontre le Black Emboar, va\lte mesurer à notre chef ! Il\pest quelque part dans ce tunnel !
+0x1F9E3FB: {COLOR}ËHé ! Qui t'a dit que\ntu pouvais passer par ici ?\pC'est le territoire du Black\pEmboar ! Retourne d'où tu viens !
 0x1F9E466: Hein ? Un gamin ?
 0x1F9E472: Minus.
 0x1F9E479: Dégage, morveux.
-0x1F9E489: Tu crois pouvoir débarquer ici et\nimportuner le Roitiflam Noir ?
+0x1F9E489: Tu crois pouvoir débarquer ici et\nimportuner le Black Emboar ?
 0x1F9E4CD: Tu crois.
-0x1F9E4D5: On est le Roitiflam Noir, espèce de\nminable !
-0x1F9E4F8: Tu sais qui on est ? On\pest le Roitiflam Noir !
+0x1F9E4D5: On est le Black Emboar, espèce de\nminable !
+0x1F9E4F8: Tu sais qui on est ? On\pest le Black Emboar !
 0x1F9E528: Incroyable.
-0x1F9E530: Le Roitiflam Noir ne\ntombera pas si aisément !
+0x1F9E530: Le Black Emboar ne\ntombera pas si aisément !
 0x1F9E557: Hé, hé, gamin ! C'est\ndangereux !
-0x1F9E576: Le Roitiflam Noir ! On ne s'arrête\njamais, et on ne regarde jamais en arrière !
+0x1F9E576: Le Black Emboar ! On ne s'arrête\njamais, et on ne regarde jamais en arrière !
 0x1F9E5A9: Qu'est-ce que tu veux,\pgamin ? On est occupés !
 0x1F9E5C7: {PLAYER} ! Te voilà !\pBienvenue au QG du Black\n{PLAYER} !
 0x1F9E5F4: Ça paie pas de mine pour\nl'instant, mais je te jure, une\lfois qu'on aura viré ces Black\lFerrothorns, on va retaper\pl'endroit. Évidemment, on serait\nravis que tu restes pour nous\laider à gérer ces losers. Je suis\poccupé à élaborer une stratégie en\nbéton pour notre attaque, alors en\lattendant, pourquoi ne pas aider\ltes camarades du Black {PLAYER} ?
@@ -23755,9 +23755,9 @@
 0x1ef377c: Désolé, champion !\pTu veux bien attendre un peu\navant d'entrer là-dedans ?\pJ'attends que ma copine arrive,\nalors il me faut toute la place\lpour guetter sa venue !\pMerci à toi, champion !
 0x1ef3f7a: Grr…<0xFC><0x08><0x18> Je dois partir pour\nl'instant, Cube Corp…\pMais je reviendrai, encore et\nencore, jusqu'à ce que justice\lsoit faite !
 0x1ef4373: Allons bon…\pTu n'as même pas <0xFC><0x01><0x06><0xFD><0x03><0xFC><0x01><0x08>\n<0xFC><0x01><0x06><0xFD><0x02>s<0xFC><0x01><0x08> !
-0x1ef43ad: Oupoupoupou…\pJe te reconnais… tu es le Champion\nde Borrius, pas vrai ?\pAs-tu déjà trouvé ces étranges\nportails à travers Borrius ?\pEt as-tu vu d'étranges créatures\nd'une autre dimension surgir\lde l'autre côté…\pDes créatures féroces, résistantes\nà presque toutes les Poké Balls\lde ton Cube ?\pEh bien, il te faut une Poké Ball\nspéciale pour les affronter : les\l<0xFC><0x01><0x06>Ultra Balls<0xFC><0x01><0x04> !\pEt il se trouve justement que je\nsais les fabriquer !\pIl me faut juste la matière première\nessentielle : des <0xFC><0x01><0x06>Balles Fer<0xFC><0x01><0x04>.\pSi tu m'en apportes assez, je peux\nte créer des <0xFC><0x01><0x06>Ultra Balls<0xFC><0x01><0x04>.
-0x1ef4859: Mwahahaha ! Hé, toi, Dresseur !\pSi tu me le permets, je vais te\nmontrer un exploit scientifique que\lbeaucoup croient impossible !\pDonne-moi <0xFC><0x01><0x06><0xFD><0x03> Pierres Stase<0xFC><0x01><0x08> et je\nles transformerai en une Pierre\lÉvolutive rare de ton choix !
-0x1ef4cfc: Alors, tu acceptes de céder tes\n<0xFC><0x01><0x06><0xFD><0x03> <0xFD><0x02>s<0xFC><0x01><0x08> en échange de\l<0xFC><0x01><0x06><0xFD><0x04><0xFC><0x01><0x08> de mes <0xFC><0x01><0x06>PP Plus<0xFC><0x01><0x08> ?
+0x1ef43ad: Oupoupoupou…\pJe te reconnais… tu es le Champion\nde Borrius, pas vrai ?\pAs-tu déjà trouvé ces étranges\nportails à travers Borrius ?\pEt as-tu vu d'étranges créatures\nd'une autre dimension surgir\lde l'autre côté…\pDes créatures féroces, résistantes\nà presque toutes les Poké Balls\lde ton Cube ?\pEh bien, il te faut une Poké Ball\nspéciale pour les affronter : les\l<0xFC><0x01><0x06>Beast Balls<0xFC><0x01><0x04> !\pEt il se trouve justement que je\nsais les fabriquer !\pIl me faut juste la matière première\nessentielle : des <0xFC><0x01><0x06>Iron Balls<0xFC><0x01><0x04>.\pSi tu m'en apportes assez, je peux\nte créer des <0xFC><0x01><0x06>Beast Balls<0xFC><0x01><0x04>.
+0x1ef4859: Mwahahaha ! Hé, toi, Dresseur !\pSi tu me le permets, je vais te\nmontrer un exploit scientifique que\lbeaucoup croient impossible !\pDonne-moi <0xFC><0x01><0x06><0xFD><0x03> Everstones<0xFC><0x01><0x08> et je les\ntransformerai en une Pierre\ld'Evolution rare de ton choix !
+0x1ef4cfc: Alors, tu acceptes de céder tes\n<0xFC><0x01><0x06><0xFD><0x03> <0xFD><0x02>s<0xFC><0x01><0x08> en échange de\l<0xFC><0x01><0x06><0xFD><0x04><0xFC><0x01><0x08> de mes <0xFC><0x01><0x06>PP Ups<0xFC><0x01><0x08> ?
 0x1ef4d92: Et maintenant, à moi de tenir ma part\ndu marché… tiens !
 0x1ef4e08: Grr…\p<0xFC><0x06> (Comme il doit être dur d'élever ma\nglorieuse armée de Fossiles<0xFC><0x06><0x01>…<0xFC><0x06> ?)\p<0xFC><0x06><0x01>Euh… peu importe.\pSi tu trouves des Morceaux d'Etoile\nou des Fossiles, préviens-moi vite.
 0x1ef4f91: Donc, tu acceptes d'échanger <0xFC><0x01><0x06><0xFD><0x02><0xFC><0x01><0x08>\nde tes <0xFC><0x01><0x06>Morceaux Comète<0xFC><0x01><0x08> contre\l<0xFC><0x01><0x06><0xFD><0x02><0xFC><0x01><0x08> de mes <0xFC><0x01><0x06>PP Max<0xFC><0x01><0x08> ?
@@ -23803,7 +23803,7 @@
 0x1efb878: Prends-en bien soin !\pReviens me voir quand tu auras <0xFC><0x01><0x06><0xFD><0x02>\nBadges<0xFC><0x01><0x04>, je t'en donnerai un autre.
 0x1efb8d5: J'arrive à me reposer bien plus\nmaintenant que j'ai moins de\lPokémon à surveiller !\pMerci pour ça, Dresseur !
 0x1efb9a2: Salut !\pMa grand-mère apprend une capacité\naux Pokémon en échange de\lTessons Jaunes.\pSi tu n'as pas encore eu l'occasion\nd'en trouver, laisse-moi t'aider.
-0x1efba81: Bonjour, mon petit.\pMes longues années d'expertise\nPokémon m'ont donné la capacité\ld'enseigner <0xFC><0x01><0x06>Poing Éclair<0xFC><0x01><0x04>.\pMais si tu veux que j'enseigne\ncette capacité à l'un de tes\lPokémon, ça coûtera <0xFC><0x01><0x06>2 Tessons Jaunes<0xFC><0x01><0x04>.\pAlors, qu'en dis-tu ?
+0x1efba81: Bonjour, mon petit.\pMes longues années d'expertise\nPokémon m'ont donné la capacité\ld'enseigner <0xFC><0x01><0x06>Thunder Punch<0xFC><0x01><0x04>.\pMais si tu veux que j'enseigne\ncette capacité à l'un de tes\lPokémon, ça coûtera <0xFC><0x01><0x06>2 Tessons Jaunes<0xFC><0x01><0x04>.\pAlors, qu'en dis-tu ?
 0x1efbba7: Reviens autant de fois\nque tu le souhaites.\pTant que tu as des <0xFC><0x01><0x06>Tessons Jaunes<0xFC><0x01><0x04>,\nbien sûr.
 0x1efbc05: Il semblerait que tu n'aies aucun\nTesson Jaune.\pOn en voit parfois apparaître\ndans le Grand Désert.\pSi tu en rapportes, je serai ravie\nd'instruire tes Pokémon.
 0x1efbcf1: Oui ! C'est ça !\pTiens, c'est pour toi !\nJe te donne l'objet Ballon !
@@ -23854,9 +23854,9 @@
 0x1f05393: Tiens.\nPrends-en bien soin.\pC'est un Oeuf très spécial.
 0x1f05459: Comme tu voudras, alors…\pSi tu changes d'avis et veux faire\néclore cet Oeuf, je serai ici.
 0x1f05515: Le Champion d'Arène, Mel, vit ici\nquand il n'est pas à l'Arène ou en\ltrain d'admirer des arbres aux\lcouleurs vives.\pMoi, je m'occupe juste de sa maison\nquand il n'est pas là.
-0x1f05779: Il m'a échangé son <0xFC><0x01><0x06>Élektek<0xFC><0x01><0x08>, alors\nj'ai utilisé un <0xFC><0x01><0x06>Électriseur<0xFC><0x01><0x08> comme une\l<0xFC><0x01><0x06>Pierre Évolutive<0xFC><0x01><0x08>, et il a évolué !
+0x1f05779: Il m'a échangé son <0xFC><0x01><0x06>Élektek<0xFC><0x01><0x08>, alors\nj'ai utilisé un <0xFC><0x01><0x06>Electirizer<0xFC><0x01><0x08> comme une\l<0xFC><0x01><0x06>Evolution Stone<0xFC><0x01><0x08>, et il a évolué !
 0x1f057f0: Certains Pokémon ne peuvent\névoluer que lors d'un échange.\pMais qui échange encore de nos\njours, hein ?\pCette mode est passée depuis des\nannées.\pMaintenant, on peut faire évoluer\nces Pokémon avec une <0xFC><0x01><0x06>Link Stone<0xFC><0x01><0x08> !\pRegarde, tu vas voir !
-0x1f05b72: Si un Pokémon tient une\n<0xFC><0x01><0x06>Pierre Stase<0xFC><0x01><0x08>, il n'évoluera pas !\pS'il en tient une pendant la\nreproduction, il transmettra sa\lnature !\pElles sont géniales, ces\nPierres Stase, non ?\pSi tu en veux d'autres, il paraît\nqu'il y en a tout un tas coincées\ldans les <0xFC><0x01><0x06>murs<0xFC><0x01><0x08> de la <0xFC><0x01><0x06>KBT\lExpressway<0xFC><0x01><0x08>.\pComment les récupérer, par contre ?\nAucune idée…
+0x1f05b72: Si un Pokémon tient une <0xFC><0x01><0x06>Everstone<0xFC><0x01><0x08>,\nil n'évoluera pas !\pS'il en tient une pendant la\nreproduction, il transmettra sa\lnature !\pElles sont géniales, ces\nEverstones, non ?\pSi tu en veux d'autres, il paraît\nqu'il y en a tout un tas coincées\ldans les <0xFC><0x01><0x06>murs<0xFC><0x01><0x08> de la <0xFC><0x01><0x06>KBT\lExpressway<0xFC><0x01><0x08>.\pComment les récupérer, par contre ?\nAucune idée…
 0x1f05d58: Non, ce n'est pas un des Pokémon\nque je cherche.\pJe cherche un Pokémon qui n'a pas\névolué et qui ne pourra jamais\lévoluer.
 0x1f06025: Je vois, tu es bien trop ébloui par\nma sagesse pour oser demander,\lc'est ça ?
 0x1f060b7: <0xFD><0x02> peut évoluer de\n<0xFC><0x01><0x06><0xFD><0x03><0xFC><0x01><0x04> façons différentes !\pChoisis un nombre entre 1 et <0xFD><0x03>.\pJe te dirai comment il évolue selon\nle nombre que tu choisis !
@@ -23873,8 +23873,8 @@
 0x1f09a3c: Chaque pas que tu fais rend tes\nPokémon plus attachés à toi.\pSi tu as un Pokémon à la Pension,\nil deviendra plus fort aussi.
 0x1f09abc: Il paraît qu'une bande de types\nprépare un mauvais coup sur la\l<0xFC><0x01><0x06>Route 9<0xFC><0x01><0x08>.
 0x1f0a939: Pour ta superbe démonstration de\ntalent au combat, je te remets ce\lCristal Z spécial.
-0x1f0a991: Cette Mimikium Z permet d'activer\nla Capacité Z exclusive de <0xFC><0x01><0x06>Mimiqui<0xFC><0x01><0x08>\len améliorant son <0xFC><0x01><0x06>Câlinerie<0xFC><0x01><0x08>.
-0x1f0adcc: Fu fu fu…\pArriver jusqu'ici n'est pas une\nmince affaire.\pMais sache qu'on ne nous appelle\npas le <0xB1>Devil Duo<0xB2> pour rien !\pSi tu veux nous affronter, tu dois\npouvoir te battre <0xFC><0x01><0x06>deux contre deux<0xFC><0x01><0x04>\lavec uniquement des types <0xFC><0x01><0x06>Combat<0xFC><0x01><0x04>\let <0xFC><0x01><0x06>Dragon<0xFC><0x01><0x04> à tes côtés.
+0x1f0a991: Cette Mimikium Z permet d'activer\nla Capacité Z exclusive de <0xFC><0x01><0x06>Mimiqui<0xFC><0x01><0x08>\len améliorant son <0xFC><0x01><0x06>Play Rough<0xFC><0x01><0x08>.
+0x1f0adcc: Fu fu fu…\pArriver jusqu'ici n'est pas une\nmince affaire.\pMais sache qu'on ne nous appelle\npas le <0xB1>Devil Duo<0xB2> pour rien !\pSi tu veux nous affronter, tu dois\npouvoir te battre <0xFC><0x01><0x06>deux contre deux<0xFC><0x01><0x04>\lavec uniquement des types <0xFC><0x01><0x06>Fighting<0xFC><0x01><0x04>\let <0xFC><0x01><0x06>Dragon<0xFC><0x01><0x04> à tes côtés.
 0x1f0b2db: Tu as déjà lu les comics de\nCrobatman ?\pC'est juste un type ordinaire qui\nse déguise en Nostenfer pour\lcombattre le crime !\pMais entre toi et moi, je ne vois\npas pourquoi il ne laisse pas ses\lPokémon se battre à sa place…
 0x1f0b48a: <0xFC><0x01><0x02>La porte est solidement scellée.
 0x1f0b4a6: Ce panneau a quelque chose\nd'irrésistible…
@@ -23947,7 +23947,7 @@
 0x1f1bc43: Le bouton incrusté dans ce rocher\na déjà été enfoncé.
 0x1f1bc7e: La porte menant au Champion\nd'Arène est déjà déverrouillée.
 0x1f1bf9c: Salut, gamin !\p-KOF- -KOF-\pBienvenue dans ton premier défi\nd'Arène !\pLaisse-moi te donner un petit\ncadeau pour commencer.\p-KOF- -KHHH-
-0x1f1c3fc: Comme tu peux le voir, ou pas,\ncette Arène est dédiée au type\l<0xFC><0x01><0x06>Ténèbres<0xFC><0x01><0x08>.\pPour gagner ici, un bon point de\ndépart serait d'amener des types\l<0xFC><0x01><0x06>Combat<0xFC><0x01><0x08>, <0xFC><0x01><0x06>Insecte<0xFC><0x01><0x08> ou <0xFC><0x01><0x06>Fée<0xFC><0x01><0x08>.\pMais attention : à cause des\nnombreux Dresseurs qui peinent ici,\ldes <0xFC><0x01><0x06>émotions négatives<0xFC><0x01><0x08> rempliront\ll'air pendant tes combats.\pCes émotions infligent des dégâts\nà la fin de chaque tour.\pSeuls les types <0xFC><0x01><0x06>Ténèbres<0xFC><0x01><0x08>, <0xFC><0x01><0x06>Psy<0xFC><0x01><0x08> et\n<0xFC><0x01><0x06>Spectre<0xFC><0x01><0x08>, ainsi que les Pokémon avec\lles talents <0xFC><0x01><0x06>Garde Magik<0xFC><0x01><0x08>, <0xFC><0x01><0x06>Inconscient<0xFC><0x01><0x08>\lou <0xFC><0x01><0x06>Benêt<0xFC><0x01><0x08>, n'y sont pas sensibles.\pSi les émotions négatives te posent\nproblème, amener un Pokémon qui n'y\lest pas sensible pourrait bien\lt'aider.\pMaintenant, atteindre Véga, qui\ndirige cette Arène, est assez\lsimple.\pTraverse les couloirs sombres sans\nte faire repérer.\pSi on te repère, tu devras soit\naffronter des Dresseurs, soit\lretourner au début du couloir.\pChaque Dresseur vaincu éclairera\nla pièce, alors je te conseille\lde tous les battre d'abord.\pBonne chance !
+0x1f1c3fc: Comme tu peux le voir, ou pas,\ncette Arène est dédiée au type\l<0xFC><0x01><0x06>Ténèbres<0xFC><0x01><0x08>.\pPour gagner ici, un bon point de\ndépart serait d'amener des types\l<0xFC><0x01><0x06>Combat<0xFC><0x01><0x08>, <0xFC><0x01><0x06>Insecte<0xFC><0x01><0x08> ou <0xFC><0x01><0x06>Fée<0xFC><0x01><0x08>.\pMais attention : à cause des\nnombreux Dresseurs qui peinent ici,\ldes <0xFC><0x01><0x06>émotions négatives<0xFC><0x01><0x08> rempliront\ll'air pendant tes combats.\pCes émotions infligent des dégâts\nà la fin de chaque tour.\pSeuls les types <0xFC><0x01><0x06>Ténèbres<0xFC><0x01><0x08>, <0xFC><0x01><0x06>Psy<0xFC><0x01><0x08> et\n<0xFC><0x01><0x06>Spectre<0xFC><0x01><0x08>, ainsi que les Pokémon avec\lles talents <0xFC><0x01><0x06>Magic Guard<0xFC><0x01><0x08>, <0xFC><0x01><0x06>Unaware<0xFC><0x01><0x08> ou\l<0xFC><0x01><0x06>Oblivious<0xFC><0x01><0x08>, n'y sont pas sensibles.\pSi les émotions négatives te posent\nproblème, amener un Pokémon qui n'y\lest pas sensible pourrait bien\lt'aider.\pMaintenant, atteindre Véga, qui\ndirige cette Arène, est assez\lsimple.\pTraverse les couloirs sombres sans\nte faire repérer.\pSi on te repère, tu devras soit\naffronter des Dresseurs, soit\lretourner au début du couloir.\pChaque Dresseur vaincu éclairera\nla pièce, alors je te conseille\lde tous les battre d'abord.\pBonne chance !
 0x1f1cd9a: Mel ?\nBah, c'est juste un gars <0xFC><0x01><0x06>normal<0xFC><0x01><0x08> !\pSi c'était une Arène de type Normal\nnormale, je dirais que des types\lCombat seraient parfaits pour le\lbattre.\pMais ce n'est pas le cas.\pDans cette Arène, tous les combats\nsont des <0xFC><0x01><0x06>Combats Inversés<0xFC><0x01><0x08> !\pAutrement dit, toutes les affinités\nde type sont inversées.\pAlors, devine quel type serait le\nmieux placé pour battre Mel ?\p…\pExact ! Il n'y en a pas !\pLes attaques <0xFC><0x01><0x06>Spectre<0xFC><0x01><0x08> seront super\nefficaces contre ses types Normal,\lmais les attaques Normal seront\laussi super efficaces sur le type\lSpectre.\pTa meilleure option contre Mel :\nun Pokémon qui connaît des attaques\lSpectre sans être de ce type\llui-même.\pSi tu veux t'entraîner à ce genre\nde combat, va voir l'<0xFC><0x01><0x06>Inverse Battle\lHouse<0xFC><0x01><0x08> en ville.\pPour commencer, descends le\ntoboggan à côté de moi.\pTon but est d'utiliser le Lokhlass\npour remonter jusqu'ici.\pMais fais d'abord le plein de\nprovisions.\pImpossible de revenir en arrière\navant d'avoir atteint Mel.
 0x1f1d4f5: Ce Joyau est un objet rare qui peut\nbooster une attaque de type <0xFC><0x01><0x06>Fée<0xFC><0x01><0x08>\len combat.\pLe type Fée est déjà l'un des\nmeilleurs en attaque, et avec ce\lJoyau, il devient encore plus fort !
 0x1f1d5f9: Galavan aime utiliser des Pokémon\nde type <0xFC><0x01><0x06>Electrik<0xFC><0x01><0x08> et <0xFC><0x01><0x06>Acier<0xFC><0x01><0x08>.\pJe dirais que les Pokémon de type\nSol sont parfaits contre lui, mais\lça ne marchera pas dans cette Arène.\pMalheureusement, le sol ici est\n<0xFC><0x01><0x06>magnétisé<0xFC><0x01><0x08>.\pDu coup, tous les Pokémon <0xFC><0x01><0x06>Electrik<0xFC><0x01><0x08>\net <0xFC><0x01><0x06>Acier<0xFC><0x01><0x08> flottent au-dessus du sol !\pImpossible de les toucher avec des\ncapacités de type Sol, il te faudra\ldonc trouver un autre moyen de leur\linfliger de gros dégâts.\pPour l'énigme, le but est d'abaisser\nles barrières électriques pour\latteindre Galavan.\pBonne chance !
@@ -24068,11 +24068,11 @@
 0x1f39c40: En route.\nTu vas vouloir voir ça…
 0x1f39ccc: Merci, Ivory.\pJuste…<0xFC><0x08><0x18> une dernière chose avant\nde commencer.\pMarlon…<0xFC><0x08><0x18> où est-il, exactement ?
 0x1f39ec5: Mais quoi qu'il en soit, avec ou\nsans lui, la libération doit\lavoir lieu.
-0x1f3a061: Avec ces trois Pokémon oiseaux\nlégendaires réunis ici aux côtés\lde la Pierre Prison, le sceau\lpeut être brisé.
+0x1f3a061: Avec ces trois Pokémon oiseaux\nlégendaires réunis ici aux côtés\lde la Prison Stone, le sceau\lpeut être brisé.
 0x1f3a1f3: Toi…<0xFC><0x08>î pour qui te prends-tu !?\pAs-tu saboté la libération ?\pRéponds-moi !
 0x1f3a922: Voilà une sage décision.\pMaintenant, écarte-toi !
 0x1f3a9cf: Et maintenant, que le spectacle\ncommence.
-0x1f3a9f2: Hoopa ! Le moment est venu !\pTon véritable pouvoir va être\nlibéré de la Bouteille Prison !\pEt en tant que ton Dresseur, je\nsuis tout à fait capable de le\lcontrôler !
+0x1f3a9f2: Hoopa ! Le moment est venu !\pTon véritable pouvoir va être\nlibéré de la Prison Bottle !\pEt en tant que ton Dresseur, je\nsuis tout à fait capable de le\lcontrôler !
 0x1f3ade9: Assez !\nHors de ma vue.\pLes Ombres, c'est terminé.\pIl est temps pour Borrius de voir\nla lumière…<0xFC><0x08><0x18> la Lumière du Néant !\pAh, mais d'abord…\pJe vois que notre invité d'honneur\na daigné se joindre à nous.\pSbires, amenez-moi <0xFD><0x02>.
 0x1f3aedd: Est-ce vraiment si surprenant,\nZeph ?\pToi et moi savons très bien que tu\nn'es pas l'autorité suprême ici.\pJe suis passé au-dessus de toi…\pJ'ai parlé à Fey.\pEt elle a accepté de me laisser sa\nbranche des Ombres, pour en faire\lce que je veux, tant que je lui\lfournis un petit échantillon du\lpouvoir de Hoopa à étudier.
 0x1f3b3e0: Quand on m'a confié le contrôle de\nces sbires, c'était assorti\ld'une requête.\pMa bienfaitrice semble beaucoup\ns'intéresser à toi, <0xFD><0x01>.\pC'est pourquoi…\p…j'ai reçu l'ordre de t'enfermer\ndans ce Cube même !
@@ -24491,8 +24491,8 @@
 0x7de002: <0xFC><0x01><0x08>Marlon…\pNous ne pouvons pas rester ici\nplus longtemps.\pIl est temps de rassembler nos\ntroupes et de partir pour Vivill\lTown.
 0x7de0ea: <0xFC><0x01><0x08>Oh, une dernière chose,\n<0xFD><0x01>.\pGarde la tenue, elle te va bien.\pQui sait, elle pourrait te servir\nun jour.
 0x7e7d68: Tu pourras électriser tes ennemis\nquand tu apprendras son attaque !
-0x7e91e6: <0xFC><0x01><0x08>Qu'est-ce que t'as dit, sale\nmorveux ?\pJe vais t'apprendre à prendre le\nRoitiflam Noir au sérieux !\pJe vais écraser tes jolis Pokémon\njusqu'à les mettre au tapis !\pEt avec plaisir !
-0x7e97f3: <0x75><0x08><0x4F><0x07> <0x4E>à<0x7C><0x08><0x51>  à<0x06><0x50><0x02> <0x02><0xFC><0x01><0x08>Hé ! Qui t'a permis de passer\npar ici ?\pC'est le territoire des Roitiflam\nNoir !\pRetourne d'où tu viens !
+0x7e91e6: <0xFC><0x01><0x08>Qu'est-ce que t'as dit, sale\nmorveux ?\pJe vais t'apprendre à prendre le\nBlack Emboar au sérieux !\pJe vais écraser tes jolis Pokémon\njusqu'à les mettre au tapis !\pEt avec plaisir !
+0x7e97f3: <0x75><0x08><0x4F><0x07> <0x4E>à<0x7C><0x08><0x51>  à<0x06><0x50><0x02> <0x02><0xFC><0x01><0x08>Hé ! Qui t'a permis de passer\npar ici ?\pC'est le territoire des Black\nEmboar !\pRetourne d'où tu viens !
 0x7ea889: Je ne suis pas paralysé, mais je\nsuis frappé par ton charme !
 0x7ebfc3: Thank you ! Merci !\pAvec ça, je peux créer un menu\nsuperbe !\pMes clients vont adorer !
 0x7ec209: Il paraît que des Dresseurs aux\nétages supérieurs voudront se\lbattre contre toi.\pTu devrais faire le plein d'objets\nessentiels auprès des vendeurs de\lcet étage.
@@ -24822,4 +24822,11 @@
 0x7ee8f6: Tu as reçu un Lokhlass\ndu pêcheur !
 0x1f5d747: Si je devais chevaucher un Pokémon\nsur la mer, ce serait Lokhlass.\pLokhlass est si grand, je parie\nqu'il me garderait au sec sur l'eau.
 0x1ef9716: Waouh, <0xFD><0x02> !\pSi un Pokémon utilise Surf,\nil peut chevaucher une vague !\pEt si un Pokémon de type Feu\nva au volcan, il peut surfer\nsur la lave !
-0x1f4c2ed: <0xFD><0x01>, toutes mes\nfélicitations !\pJ'ai appris la nouvelle !\pDire qu'après tout ce temps, j'ai\nenfin battu le vieil Arthur !\pHo ho ho !\pEuh… excuse-moi.\pBon, venons-en à la raison\nde ma visite.\pJ'ai encore une mission à te\nconfier !\pTu pensais en avoir fini avec\nelles, n'est-ce pas ?\pHo ho ho !\pEuh… bref, depuis que tu as\nvaincu Hoopa au sommet du Pic\lCristal, de mystérieux portails\lsont apparus autour de Borrius.\pQuand on s'en approche, de\npuissants Pokémon en surgiraient.\pEn tant que Gardien de Borrius,\nde nom comme de rang, il te\lrevient de veiller sur ces\lPokémon.\pJe suppose que bien souvent, si tu\ncaptures le Pokémon, le portail\ldisparaîtra définitivement.\pCela dit, il est peu probable\nqu'ils restent fermés à jamais…\pQuoi qu'il en soit !\pCapture les Pokémon cachés dans\nces mystérieux portails.\pCertains portails n'apparaissent\nqu'avec des Pokémon précis, mais\lles Pokémon qu'ils abritent\ldoivent être capturés malgré tout.\pEt si un portail refuse de\ndisparaître après la capture,\lil te suffira de l'enregistrer\ldans ton Pokédex.
+
+# --- Effets de pièges de combat (Pics de Poison, Pics Pointus, Pics d'Acier) ---
+0xa43ceb: <0xFD><0x02> est introuvable à proximité.\nEssaie de chercher ailleurs !
+0xa43dbe: Des pics toxiques se sont éparpillés\nautour de l'équipe de <0xFD><0x35> !
+0xa43f03: Des rocs pointus ont blessé\n<0xFD><0x10> !
+0xa43f1f: L'acier pointu a blessé\n<0xFD><0x10> !
+0xa43f3c: Les pics toxiques ont disparu\ndes pieds de <0xFD><0x10> !
+0xa4e7c5: GROUAAAAAH !<0xFB>

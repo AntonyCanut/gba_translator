@@ -1524,8 +1524,8 @@ prepared for the worst.<0xFB>Make me proud, honey!<0xFB>Take care!",327,9,336,po
 avez bien meilleure mine.<0xFB>Si les PV de tes Pokémon sont bas,
 soigne-les dans un<0xFB>{COLOR}ÉCentre Pokémon{COLOR}Ç !
 Le plus proche d'ici est à<0xFB>{COLOR}ÉBourg Bellin{COLOR}Ç.
-Ou achète des<0xFB>{COLOR}ÉPotions{COLOR}Ç à la
-{COLOR}ÉBoutique Pokémon{COLOR}Ç !<0xFB>C'est toujours bien de se préparer
+Ou achète des<0xFB>{COLOR}ÉPotions{COLOR}Ç au
+{COLOR}ÉPoké Mart{COLOR}Ç !<0xFB>C'est toujours bien de se préparer
 au pire.<0xFB>Rends-moi fier, chéri !<0xFB>Prends soin de toi !",
 0x001A6197,"<0xFD><0x01> is out of usable
 Pokémon!<0xFB><0xFD><0x01> panicked and lost ¥<0xFD><0x02>""<0xFB>"" "" "" ""<0xFB><0xFD><0x01> whited out!","<0xFD><0x01> is out of usable
@@ -23654,8 +23654,8 @@ par hasard ?<0xFB>...<0xFB>Je le pensais.<0xFB>Je vous ai reconnu sur cette phot
 J'ai trouvé de vous sur les<0xFA>internets.<0xFB>Je m'appelle Looker.<0xFB>Agent Looker, de la Police
 Internationale.<0xFB>Je venais juste de finir de
 m'occuper de Team Rocket dans la<0xFA>région de Kanto, quand j'ai été<0xFA>déployé pour faire face à une<0xFA>situation qui se préparait dans la<0xFA>région de Borrius.<0xFB>Un jeune homme, Jax, je crois, m'a
-informé que vous aviez des<0xFA>preuves de crimes commis par une<0xFA>organisation se faisant appeler<0xFA>""Les Ombres"".<0xFB>Veuillez me rencontrer au
-{COLOR}ÉCasino de Dehara {COLOR}Ëafin que nous<0xFA>puissions discuter de tout cela.<0xFB>Jax est là aussi.<0xFB>Looker, dehors.",
+informé que vous aviez des<0xFA>preuves de crimes commis par une<0xFA>organisation se faisant appeler<0xFA>""Les Ombres"".<0xFB>Veuillez me rencontrer dans le
+{COLOR}ÉDehara Game Corner {COLOR}Ëafin que nous<0xFA>puissions discuter de tout cela.<0xFB>Jax est là aussi.<0xFB>Looker, dehors.",
 0x007D0046,"He appears to be deeply engrossed
 in a slot game.","He appears to be deeply engrossed
 in a slot game.",49,2,51,pokemon,description,"Il semble être profondément absorbé
@@ -25105,9 +25105,9 @@ temps.",
 0x007E8841,"You think you can just come in here
 and mess with the Black Emboar?","You think you can just come in here
 and mess with the Black Emboar?",67,3,70,pokemon,dialogue,"Tu penses pouvoir entrer ici et
-embêter les Roitiflam Noir ?",
+embêter les Black Emboar ?",
 0x007E8885,You do.,You do.,7,2,9,pokemon,dialogue,Tu crois.,
-0x007E888D,"We're the Black Emboar, you litch!","We're the Black Emboar, you litch!",34,3,37,pokemon,dialogue,"On est les Roitiflam Noir, morveux !",
+0x007E888D,"We're the Black Emboar, you litch!","We're the Black Emboar, you litch!",34,3,37,pokemon,dialogue,"On est les Black Emboar, morveux !",
 0x007E88D7,"I've spent years trying to uncover
 the secret of the Regi Pokémon!<0xFB>I've had some progress lately and
 discovered that Regirock must live<0xFA>in that strange rock formation in<0xFA>the Great Desert.<0xFB>Now if only there were some way to
@@ -25162,7 +25162,7 @@ in the northern SES Expressway.<0xFB>I'd go myself, but I'm too weak of
 a trainer.<0xFB>They say these Black Emboar are
 insanely vicious.",171,2,173,pokemon,dialogue,"Merci !<0xFB>Mon frère est sûrement dans
 l'Autoroute KBT nord.<0xFB>J'irais moi-même mais je suis trop
-faible.<0xFB>On dit que ces Roitiflam Noir sont
+faible.<0xFB>On dit que ces Black Emboar sont
 vraiment vicieux.",
 0x007E8FA1,You're the one who asked.,You're the one who asked.,25,2,27,pokemon,dialogue,C'est toi qui as demandé.,
 0x007E90AB,"<0xFC><0x01><0x08>Hey! Who said ya can pass through
@@ -25172,8 +25172,8 @@ ma, ya little goody-two-shoes punk!","<0xFC><0x01><0x08>Hey! Who said ya can pas
 here?<0xFB>This place belongs to us, the Black
 Emboar!<0xFB>It's like our Gym, kid!<0xFB>So scram! Toddle off home to your
 ma, ya little goody-two-shoes punk!",180,2,182,pokemon,dialogue,"{COLOR}ËHé ! Qui t'a dit que tu pouvais
-passer ?<0xFB>Cet endroit est à nous, les Roitiflam
-Noir !<0xFB>C'est notre Arène, gamin !<0xFB>Dégage ! Rentre chez ta maman, petit
+passer ?<0xFB>Cet endroit est à nous, les Black
+Emboar !<0xFB>C'est notre Arène, gamin !<0xFB>Dégage ! Rentre chez ta maman, petit
 parfait !",
 0x007E9160,"<0xFC><0x01><0x08>Ha! Fine!<0xFB>Brats like you with a future so
 bright""<0xFB>Just go on back home and be nice to
@@ -25188,7 +25188,7 @@ right down to the ground!<0xFB>With relish!","<0xFC><0x01><0x08>What didja say, 
 Emboar seriously!<0xFB>I'll pummel your pretty Pokémon
 right down to the ground!<0xFB>With relish!",156,2,158,pokemon,dialogue,"<0xFC><0x01><0x08>Qu'est-ce que t'as dit, sale
 morveux ?<0xFB>Je vais t'apprendre à prendre le
-Roitiflam Noir au sérieux !<0xFB>Je vais écraser tes jolis Pokémon
+Black Emboar au sérieux !<0xFB>Je vais écraser tes jolis Pokémon
 jusqu'à les mettre au tapis !<0xFB>Et avec plaisir !",
 0x007E9283,Really bad!,<0x52>Muy mal!,11,2,13,pokemon,dialogue,Vraiment mauvais !,
 0x007E928F,"<0xFC><0x01><0x08>Don't get all high and mighty
@@ -25197,7 +25197,7 @@ with the Black Emboar,<0xFA>go duke it out with our leader!<0xFB>He's somewhere 
 ganaste!<0xFB>Si realmente quieres pelear con
 los Emboar Negro, <0x52>enfréntate a<0xFA>nuestro Líder!<0xFB><0x52>Está en algún lugar de este túnel!",174,1,175,pokemon,dialogue,"{COLOR}ËNe prends pas la grosse tête parce
 que tu m'as battu !<0xFB>Si tu veux vraiment te frotter aux
-Roitiflam Noir,<0xFA>va défier notre chef !<0xFB>Il se cache quelque part dans ce
+Black Emboar,<0xFA>va défier notre chef !<0xFB>Il se cache quelque part dans ce
 tunnel !",
 0x007E9322,s somewhere in this tunnel!,,27,1,28,pokemon,dialogue,,
 0x007E934E,"What do you think you're up to,
@@ -25209,10 +25209,10 @@ brat?<0xFB>This is the Black Emboar's ultimate
 paradise""<0xFB>A little pest like you has no
 business here""<0xFB>It couldn't be that you think you
 can stand up to me, the head of the<0xFA>Black Emboar?",212,3,215,pokemon,dialogue,"Tu crois faire quoi,
-morveux ?<0xFB>Ici, c'est le paradis des Roitiflam
-Noir...<0xFB>Un parasite comme toi n'a rien à
+morveux ?<0xFB>Ici, c'est le paradis des Black
+Emboar...<0xFB>Un parasite comme toi n'a rien à
 faire ici...<0xFB>Ne me dis pas que tu penses pouvoir
-tenir tête au chef des<0xFA>Roitiflam Noir ?",
+tenir tête au chef des<0xFA>Black Emboar ?",
 0x007E9423,"That all you got?<0xFB>Nah, you got one option left--get
 lost!<0xFB>This is our place, the Black
 Emboar.<0xFB>We got no place else to go, and we
@@ -25220,8 +25220,8 @@ don't want nobody gettin' in our<0xFA>way.","<0x51>Y así querías enfrentarme?<
 piérdete!<0xFB>Este lugar es de los Emboar
 Negros.<0xFB>No tenemos otro lugar a donde ir,
 y tampoco nos iremos.",167,2,169,pokemon,dialogue,"C'est tout ?<0xFB>Non, il te reste une option :
-va-t'en !<0xFB>Ici, c'est le repaire des Roitiflam
-Noir.<0xFB>On n'a nulle part où aller et on ne
+va-t'en !<0xFB>Ici, c'est le repaire des Black
+Emboar.<0xFB>On n'a nulle part où aller et on ne
 veut personne sur notre<0xFA>chemin.",
 0x007E94C6,way.,,4,2,6,pokemon,other,,
 0x007E94CB,The floor here is electrified.,The floor here is electrified.,30,3,33,pokemon,other,Le sol ici est électrifié.,
@@ -25231,15 +25231,15 @@ veut personne sur notre<0xFA>chemin.",
 0x007E97F3,"<0x75><0x08><0x4F><0x07> <0x4E>à<0x7C><0x08><0x51>  à<0x06><0x50><0x02> <0x02><0xFC><0x01><0x08>Hey! Who said ya can pass through
 here?<0xFB>This is Black Emboar territory!<0xFB>Go back from where you came from!","<0x75><0x08><0x4F><0x07> <0x4E>à<0x7C><0x08><0x51>  à<0x06><0x50><0x02> <0x02><0xFC><0x01><0x08>Hey! Who said ya can pass through
 here?<0xFB>This is Black Emboar territory!<0xFB>Go back from where you came from!",126,3,129,pokemon,dialogue,"<0x75><0x08><0x4F><0x07> <0x4E>à<0x7C><0x08><0x51>  à<0x06><0x50><0x02> <0x02><0xFC><0x01><0x08>Hé ! Qui t'a permis de passer
-par ici ?<0xFB>C'est le territoire des Roitiflam
-Noir !<0xFB>Retourne d'où tu viens !",
+par ici ?<0xFB>C'est le territoire des Black
+Emboar !<0xFB>Retourne d'où tu viens !",
 0x007E9872,"Gwa ha ha ha! Bring it!
 You've got you share of guts, kid!<0xFB>I'll show you what the guy who
 holds the Black Emboar together can<0xFA>really do!","<0x52>Ja, ja, ja! <0x52>Vaya! <0x52>Tienes tus
 agallas!<0xFB><0x52>Te mostraré lo que realmente puede
 hacer el tipo que mantiene unido a<0xFA>los Emboar Negros!",136,3,139,pokemon,dialogue,"Gwahahaha ! Apporte-toi ! Tu as du
 cran, gamin !<0xFB>Je vais te montrer ce que le gars
-qui tient les Roitiflam Noir<0xFA>peut vraiment faire !",
+qui tient les Black Emboar<0xFA>peut vraiment faire !",
 0x007E98F0,really do!,,10,3,13,pokemon,dialogue,,
 0x007E98FB,Gwa ha ha ha!,Gwa ha ha ha!,13,2,15,pokemon,dialogue,Gwahahaha !,
 0x007E9909,"You ain't half bad, kid""
@@ -25288,7 +25288,7 @@ to the Black <0xFD><0x01>, after him!<0xFB>So it's time for a fresh start.<0xFB>
 to Antisis City!<0xFB>I hear the old gang that used to
 run that joint got run outta town.<0xFB>Now that city is ripe for the
 picking by the Black <0xFD><0x01>!<0xFB>Gwa ha ha ha!",343,2,345,pokemon,dialogue,"{COLOR}ËLaisse-moi te dire !<0xFB>Personne ne m'a jamais démoli comme
-lui !<0xFB>J'ai même renommé les Roitiflam Noir
+lui !<0xFB>J'ai même renommé les Black Emboar
 en Black {PLAYER}, en son honneur !<0xFB>C'est un nouveau départ.<0xFB>Les Black {PLAYER} et moi partons à
 la Ville d'Antisis !<0xFB>On dit que l'ancien gang là-bas a
 été chassé.<0xFB>Maintenant la ville est mûre pour
@@ -25330,7 +25330,7 @@ wanted to help if you knew you'd<0xFA>be going up against their leader.<0xFB>But
 all alone for good""<0xFB>Anyways, thank you for helping me.<0xFB>Please take this TM as my thanks.",387,2,389,pokemon,dialogue,"{COLOR}ËDésolé que tu te sois retrouvé mêlé
 à tout ça.<0xFB>J'ai menti en disant que je n'avais
 pas de nouvelles de mon frère.<0xFB>En vérité, je savais qu'il était le
-chef des Roitiflam Noir.<0xFB>Je craignais que tu refuses d'aider
+chef des Black Emboar.<0xFB>Je craignais que tu refuses d'aider
 si tu savais que tu te battrais<0xFA>contre leur chef.<0xFB>Mais maintenant il est parti, et je
 suis seul pour de bon...<0xFB>Merci de m'avoir aidé.<0xFB>Prends cette CT en remerciement.",
 0x007EA1EB,"<0xFD><0x01> received the TM98
@@ -25356,7 +25356,7 @@ to the Black <0xFD><0x01>, after her!<0xFB>So it's time for a fresh start.<0xFB>
 to Antisis City!<0xFB>I hear the old gang that used to
 run that joint got run outta town.<0xFB>Now that city is ripe for the
 picking by the Black <0xFD><0x01>!<0xFB>Gwa ha ha ha!",344,31,375,pokemon,dialogue,"{COLOR}ËLaisse-moi te dire !<0xFB>Personne ne m'a jamais démoli comme
-elle !<0xFB>J'ai même renommé les Roitiflam Noir
+elle !<0xFB>J'ai même renommé les Black Emboar
 en Black {PLAYER}, en son honneur !<0xFB>C'est un nouveau départ.<0xFB>Les Black {PLAYER} et moi partons à
 la Ville d'Antisis !<0xFB>On dit que l'ancien gang là-bas a
 été chassé.<0xFB>Maintenant la ville est mûre pour
@@ -28691,7 +28691,7 @@ ne gardent que 42 objets.<0xFA>Le Super Cube, {COLOR}ÉCube{COLOR}Ç,<0xFA>a de 
 C'est comme si tu ne portais<0xFA>rien de plus<0xFA>sur toi !<0xFB>Sois prudent dehors, chéri !<0xFB>Apporte le colis du Prof. Log !",
 0x008CAF99,"Please get my package from the
 <0xFC><0x01><0x06>Bellin Town Poké Mart<0xFC><0x01><0x08>, <0xFD><0x01>.<0xFB>I need it, and only you can get it.","Please get my package from the
-<0xFC><0x01><0x06>Bellin Town Poké Mart<0xFC><0x01><0x08>, <0xFD><0x01>.<0xFB>I need it, and only you can get it.",99,2,101,pokemon,dialogue,"Va à la {COLOR}ÉBoutique Pokémon
+<0xFC><0x01><0x06>Bellin Town Poké Mart<0xFC><0x01><0x08>, <0xFD><0x01>.<0xFB>I need it, and only you can get it.",99,2,101,pokemon,dialogue,"Va au {COLOR}ÉPoké Mart
 de Bellinville{COLOR}Ë, {PLAYER}.<0xFB>J'en ai besoin, toi seul.",
 0x008CAFFD,"Oh, <0xFD><0x01>!
 You returned with my package!","Oh, <0xFD><0x01>!
@@ -35419,8 +35419,8 @@ introuvable ici.",
 be found here.",,22,2,24,pokemon,other,,
 0x00A43CEB,"<0xFD><0x02> couldn't be found nearby.
 Try looking in a different area!","<0x52>No se ha encontrado a <0xFD><0x02>!
-<0x52>Intenta buscar en otro lugar!",61,3,64,pokemon,dialogue,"<0xFD><0x02> couldn't be found nearby.
-Try looking in a different area!",
+<0x52>Intenta buscar en otro lugar!",61,3,64,pokemon,dialogue,"<0xFD><0x02> est introuvable à proximité.
+Essaie de chercher ailleurs !",
 0x00A43CF5,"t be found nearby.
 Try looking in a different area!",,51,3,54,pokemon,dialogue,,
 0x00A43D29,"It's too dark to search for
@@ -35440,8 +35440,8 @@ autour de l'équipe <0xFD><0x35> !",
 0x00A43DB7, team!,,6,2,8,pokemon,dialogue,,
 0x00A43DBE,"Poison spikes were scattered all
 around <0xFD><0x35> team!","<0x52>Tu equipo ha sido rodeado por púas
-tóxicas!<0xFB>",48,2,50,pokemon,dialogue,"Poison spikes were scattered all
-around <0xFD><0x35>= team!",
+tóxicas!<0xFB>",48,2,50,pokemon,dialogue,"Des pics toxiques se sont éparpillés
+autour de l'équipe de <0xFD><0x35> !",
 0x00A43DE8, team!,,6,2,8,pokemon,dialogue,,
 0x00A43DEF,"Pointed stones float in the air
 around <0xFD><0x35> team!",,47,3,50,pokemon,dialogue,"Pointed stones float in the air
@@ -35469,16 +35469,16 @@ par les Picots !",
 0x00A43EEB," is hurt
 by the Spikes!",,23,2,25,pokemon,dialogue,,
 0x00A43F03,"Pointed stones dug into
-<0xFD><0x10>!",,27,2,29,pokemon,dialogue,"Pointed stones dug into
-<0xFD><0x10>!",
+<0xFD><0x10>!",,27,2,29,pokemon,dialogue,"Des rocs pointus ont blessé
+<0xFD><0x10> !",
 0x00A43F1F,"The sharp steel bit into
 <0xFD><0x10>!","The sharp steel bit into
-<0xFD><0x10>!",28,2,30,pokemon,dialogue,"The sharp steel bit into
-<0xFD><0x10>!",
+<0xFD><0x10>!",28,2,30,pokemon,dialogue,"L'acier pointu a blessé
+<0xFD><0x10> !",
 0x00A43F3C,"The Toxic Spikes disappeared from
 around <0xFD><0x10>'s feet!","<0x52>Las puás tóxicas han
-desaparecido!",51,3,54,pokemon,dialogue,"The Toxic Spikes disappeared from
-around <0xFD><0x10>'s feet!",
+desaparecido!",51,3,54,pokemon,dialogue,"Les pics toxiques ont disparu
+des pieds de <0xFD><0x10> !",
 0x00A43F68,s feet!,,7,3,10,pokemon,dialogue,,
 0x00A43F70,"<0xFD><0x10> was caught
 in a Sticky Web!",,30,2,32,pokemon,dialogue,"<0xFD><0x10> est piégé dans
@@ -35567,8 +35567,8 @@ Psy renforcées et sont immunisés<0xFA>aux attaques prioritaires !",
 0x00A444EA,in a sandstorm!,En tormenta.,15,3,18,pokemon,dialogue,dans une tempête de sable !,
 0x00A444FA,in a hailstorm!,En granizo.,15,2,17,pokemon,dialogue,sous la grêle !,
 0x00A4450A,"with strong winds blowing!<0xFB>Flying-type Pokémon take less
-damage from super effective moves!",Los Pokémon de tipo Volador reciben<0xFA>menos daño con movimientos súper<0xFA>efectivos.,91,3,94,pokemon,dialogue,"with strong winds blowing!<0xFB>Flying-type Pokémon take less
-damage from super effective moves!",
+damage from super effective moves!",Los Pokémon de tipo Volador reciben<0xFA>menos daño con movimientos súper<0xFA>efectivos.,91,3,94,pokemon,dialogue,"avec un vent fort qui souffle !<0xFB>Les Pokémon Volant subissent moins
+de dégâts des coups super efficaces !",
 0x00A44535,"mon take less
 damage from super effective moves!",,48,3,51,pokemon,dialogue,,
 0x00A44566,in a Trick Room!<0xFB>Slower Pokémon get to move first!,Los Pokémon más lentos se mueven<0xFA>primero.,50,3,53,pokemon,dialogue,dans une Distorsion !<0xFB>Les plus lents agissent d'abord !,
@@ -38944,7 +38944,7 @@ Tout ce dont je rêvais...<0xFB> ",
 0x00A4E79E,"Ah!
 But we're not done fighting yet!<0xFB> ",<0x52>Todavía no hemos terminado!<0xFB>,38,1,39,pokemon,dialogue,"Ah !
 Mais on n'a pas fini de se battre !<0xFB> ",
-0x00A4E7C5,WROOOOOAR!<0xFB> ,<0x52>NOOOOO!<0xFB>,12,3,15,pokemon,dialogue,WROOOOOAR!<0xFB> ,
+0x00A4E7C5,WROOOOOAR!<0xFB> ,<0x52>NOOOOO!<0xFB>,12,3,15,pokemon,dialogue,GROUAAAAAH !<0xFB>,
 0x00A4E7D2,"Let's do this!
 We can still come out on top!<0xFB> ",<0x52>Todavía podemos llegar a la cima!<0xFB>,46,1,47,pokemon,dialogue,"On y va !
 On peut encore gagner !<0xFB> ",
@@ -56005,7 +56005,7 @@ Pokémon for free.<0xFB>The <0xFC><0x01><0x06>Poké Mart<0xFC><0x01><0x08> sells
 items for Trainers.<0xFB>In most other towns, the two
 buildings can be distinguished by<0xFA>their unique red and blue colours.",<0x51>Te gusta Ciudad Bellin?,263,2,265,pokemon,dialogue,"As-tu pris le temps de voir les
 installations locales ?<0xFB>Le {COLOR}ÉCentre Pokémon{COLOR}Ë soigne tes
-Pokémon gratuitement.<0xFB>La {COLOR}ÉBoutique Pokémon{COLOR}Ë vend des objets
+Pokémon gratuitement.<0xFB>Le {COLOR}ÉPoké Mart{COLOR}Ë vend des objets
 utiles aux Dresseurs.<0xFB>Dans la plupart des villes, ces deux
 bâtiments se distinguent par leurs<0xFA>couleurs rouge et bleue.",
 0x01EE61FA,their unique red and blue colours.,,34,2,36,pokemon,description,,
@@ -60500,10 +60500,10 @@ de Borrius, pas vrai ?<0xFB>As-tu déjà trouvé ces étranges
 portails à travers Borrius ?<0xFB>Et as-tu vu d'étranges créatures
 d'une autre dimension surgir<0xFA>de l'autre côté...<0xFB>Des créatures féroces, résistantes
 à presque toutes les Poké Balls<0xFA>de ton Cube ?<0xFB>Eh bien, il te faut une Poké Ball
-spéciale pour les affronter : les<0xFA><0xFC><0x01><0x06>Ultra Balls<0xFC><0x01><0x04> !<0xFB>Et il se trouve justement que je
+spéciale pour les affronter : les<0xFA><0xFC><0x01><0x06>Beast Balls<0xFC><0x01><0x04> !<0xFB>Et il se trouve justement que je
 sais les fabriquer !<0xFB>Il me faut juste la matière première
-essentielle : des <0xFC><0x01><0x06>Balles Fer<0xFC><0x01><0x04>.<0xFB>Si tu m'en apportes assez, je peux
-te créer des <0xFC><0x01><0x06>Ultra Balls<0xFC><0x01><0x04>.",
+essentielle : des <0xFC><0x01><0x06>Iron Balls<0xFC><0x01><0x04>.<0xFB>Si tu m'en apportes assez, je peux
+te créer des <0xFC><0x01><0x06>Beast Balls<0xFC><0x01><0x04>.",
 0x01EF45DC, for you.,,9,3,12,pokemon,dialogue,,
 0x01EF45E6,"So, have you brought any
 <0xFC><0x01><0x06>Iron Balls<0xFC><0x01><0x04>?<0xFB>I'll make <0xFC><0x01><0x06>Beast Balls<0xFC><0x01><0x04> out of
@@ -60549,8 +60549,8 @@ demonstrate a feat of science many<0xFA>believe to be impossible!<0xFB>Just give
 transform them into a rare Evolution<0xFA>Stone - any kind you please!","<0x52>Ja, ja, ja! <0x52>Estás aquí!<0xFB><0x52>Si me lo permites, te demostraré
 una hazaña científica que muchos<0xFA>consideran imposible!<0xFB>Solo entrégame <0xFC><0x01><0x06><0xFD><0x03> Piedraeterna<0xFC><0x01><0x08>,
 y las transformaré en una rara<0xFA>Piedra Evolutiva, <0x52>del tipo que<0xFA>quieras!",230,2,232,pokemon,dialogue,"Mwahahaha ! Hé, toi, Dresseur !<0xFB>Si tu me le permets, je vais te
-montrer un exploit scientifique que<0xFA>beaucoup croient impossible !<0xFB>Donne-moi <0xFC><0x01><0x06><0xFD><0x03> Pierres Stase<0xFC><0x01><0x08> et je
-les transformerai en une Pierre<0xFA>Évolutive rare de ton choix !",
+montrer un exploit scientifique que<0xFA>beaucoup croient impossible !<0xFB>Donne-moi <0xFC><0x01><0x06><0xFD><0x03> Everstones<0xFC><0x01><0x08> et je les
+transformerai en une Pierre<0xFA>d'Evolution rare de ton choix !",
 0x01EF4923,Stone - any kind you please!,,28,2,30,pokemon,dialogue,,
 0x01EF4940,Which Stone shall I make for you?,<0x51>Qué Piedra debo hacer para ti?,33,2,35,pokemon,dialogue,Quelle Pierre veux-tu que je crée ?,
 0x01EF4962,"Then, you want me to turn your
@@ -60606,7 +60606,7 @@ you trade?",,16,2,18,pokemon,dialogue,,
 0x01EF4CFC,"So, you're willing to part with your
 <0xFC><0x01><0x06><0xFD><0x03> <0xFD><0x02>s<0xFC><0x01><0x08>, in exchange for<0xFA><0xFC><0x01><0x06><0xFD><0x04><0xFC><0x01><0x08> of my <0xFC><0x01><0x06>PP Ups<0xFC><0x01><0x08>?","Entonces, <0x51>quieres cambiar <0xFC><0x01><0x06><0xFD><0x03>
 <0xFD><0x02>s<0xFC><0x01><0x08> por <0xFC><0x01><0x06><0xFD><0x04><0xFC><0x01><0x08> de mis <0xFC><0x01><0x06>Máx PP<0xFC><0x01><0x08>?",95,1,96,pokemon,dialogue,"Alors, tu acceptes de céder tes
-<0xFC><0x01><0x06><0xFD><0x03> <0xFD><0x02>s<0xFC><0x01><0x08> en échange de<0xFA><0xFC><0x01><0x06><0xFD><0x04><0xFC><0x01><0x08> de mes <0xFC><0x01><0x06>PP Plus<0xFC><0x01><0x08> ?",
+<0xFC><0x01><0x06><0xFD><0x03> <0xFD><0x02>s<0xFC><0x01><0x08> en échange de<0xFA><0xFC><0x01><0x06><0xFD><0x04><0xFC><0x01><0x08> de mes <0xFC><0x01><0x06>PP Ups<0xFC><0x01><0x08> ?",
 0x01EF4D5C,"Excellent! I'll just take those,
 thank you very much!",<0x52>Excelente! <0x52>Muchas gracias!,53,3,56,pokemon,dialogue,"Excellent ! Je prends ça,
 merci beaucoup !",
@@ -62215,7 +62215,7 @@ expert, I have gained the ability<0xFA>to teach the move, <0xFC><0x01><0x06>Thun
 teach one of your Pokémon this<0xFA>move, it'll cost <0xFC><0x01><0x06>2 Yellow Shards<0xFC><0x01><0x04>.<0xFB>What do you say?","<0x52>Hola! Gracias a mis muchos años
 como experta en Pokémon, he<0xFA>adquirido la capacidad de poder<0xFA>enseñar, <0xFC><0x01><0x06>Puño Trueno<0xFC><0x01><0x04>.<0xFB>Pero si quieres que le enseñe este
 movimiento a uno de tus Pokémon,<0xFA>te costará <0xFC><0x01><0x06><0xFD><0x03> Partes Amarillas<0xFC><0x01><0x04>.<0xFB><0x51>Qué dices?",245,2,247,pokemon,dialogue,"Bonjour, mon petit.<0xFB>Mes longues années d'expertise
-Pokémon m'ont donné la capacité<0xFA>d'enseigner <0xFC><0x01><0x06>Poing Éclair<0xFC><0x01><0x04>.<0xFB>Mais si tu veux que j'enseigne
+Pokémon m'ont donné la capacité<0xFA>d'enseigner <0xFC><0x01><0x06>Thunder Punch<0xFC><0x01><0x04>.<0xFB>Mais si tu veux que j'enseigne
 cette capacité à l'un de tes<0xFA>Pokémon, ça coûtera <0xFC><0x01><0x06>2 Tessons Jaunes<0xFC><0x01><0x04>.<0xFB>Alors, qu'en dis-tu ?",
 0x01EFBB66,What do you say?,,16,2,18,pokemon,dialogue,,
 0x01EFBB77,"Which Pokémon should learn
@@ -64561,7 +64561,7 @@ terriblement seul...",
 0x01F05779,"He traded me his <0xFC><0x01><0x06>Electabuzz<0xFC><0x01><0x08>, so I
 used an <0xFC><0x01><0x06>Electirizer<0xFC><0x01><0x08> on it like an<0xFA><0xFC><0x01><0x06>Evolution Stone<0xFC><0x01><0x08>, and it evolved!","Me cambió su <0xFC><0x01><0x06>Electabuzz<0xFC><0x01><0x08> equipado
 con <0xFC><0x01><0x06>Electrizador<0xFC><0x01><0x08> y nunca evolucionó.",118,2,120,pokemon,dialogue,"Il m'a échangé son <0xFC><0x01><0x06>Élektek<0xFC><0x01><0x08>, alors
-j'ai utilisé un <0xFC><0x01><0x06>Électriseur<0xFC><0x01><0x08> comme une<0xFA><0xFC><0x01><0x06>Pierre Évolutive<0xFC><0x01><0x08>, et il a évolué !",
+j'ai utilisé un <0xFC><0x01><0x06>Electirizer<0xFC><0x01><0x08> comme une<0xFA><0xFC><0x01><0x06>Evolution Stone<0xFC><0x01><0x08>, et il a évolué !",
 0x01F057DE,", and it evolved!",,17,2,19,pokemon,dialogue,,
 0x01F057F0,"There are some Pokémon that can
 only evolve during a trade.<0xFB>But who really trades anymore,
@@ -64612,10 +64612,10 @@ there are a whole bunch of them<0xFA>stuck in the <0xFC><0x01><0x06>walls<0xFC><
 I have no idea""","Si un Pokémon tiene una <0xFC><0x01><0x06>Piedraeterna<0xFC><0x01><0x08>,
 <0x52>no evolucionará!<0xFB>Si un Pokémon lleva una mientras
 se reproduce, <0x52>transmitirá su<0xFA>naturaleza!<0xFB>Si estás buscando más, he oído que
-hay un montón de ellas atrapadas<0xFA>en las <0xFC><0x01><0x06>paredes<0xFC><0x01><0x08> de <0xFC><0x01><0x06>Autopista RBT<0xFC><0x01><0x08>.<0xFB>Pero, <0x51>cómo las consigues?<0xFB>Pues"" <0x52>no tengo idea!",314,2,316,pokemon,dialogue,"Si un Pokémon tient une
-<0xFC><0x01><0x06>Pierre Stase<0xFC><0x01><0x08>, il n'évoluera pas !<0xFB>S'il en tient une pendant la
+hay un montón de ellas atrapadas<0xFA>en las <0xFC><0x01><0x06>paredes<0xFC><0x01><0x08> de <0xFC><0x01><0x06>Autopista RBT<0xFC><0x01><0x08>.<0xFB>Pero, <0x51>cómo las consigues?<0xFB>Pues"" <0x52>no tengo idea!",314,2,316,pokemon,dialogue,"Si un Pokémon tient une <0xFC><0x01><0x06>Everstone<0xFC><0x01><0x08>,
+il n'évoluera pas !<0xFB>S'il en tient une pendant la
 reproduction, il transmettra sa<0xFA>nature !<0xFB>Elles sont géniales, ces
-Pierres Stase, non ?<0xFB>Si tu en veux d'autres, il paraît
+Everstones, non ?<0xFB>Si tu en veux d'autres, il paraît
 qu'il y en a tout un tas coincées<0xFA>dans les <0xFC><0x01><0x06>murs<0xFC><0x01><0x08> de la <0xFC><0x01><0x06>KBT<0xFA>Expressway<0xFC><0x01><0x08>.<0xFB>Comment les récupérer, par contre ?
 Aucune idée...",
 0x01F05CAD,"I'll stick around in the Evolution
@@ -65791,7 +65791,7 @@ talent au combat, je te remets ce<0xFA>Cristal Z spécial.",
 0x01F0A991,"That Mimikium Z can be used to
 activate <0xFC><0x01><0x06>Mimikyu's<0xFC><0x01><0x08> signature Z-Move<0xFA>by upgrading its <0xFC><0x01><0x06>Play Rough<0xFC><0x01><0x08>.","That Mimikium Z can be used to
 activate <0xFC><0x01><0x06>Mimikyu's<0xFC><0x01><0x08> signature Z-Move<0xFA>by upgrading its <0xFC><0x01><0x06>Play Rough<0xFC><0x01><0x08>.",107,2,109,pokemon,description,"Cette Mimikium Z permet d'activer
-la Capacité Z exclusive de <0xFC><0x01><0x06>Mimiqui<0xFC><0x01><0x08><0xFA>en améliorant son <0xFC><0x01><0x06>Câlinerie<0xFC><0x01><0x08>.",
+la Capacité Z exclusive de <0xFC><0x01><0x06>Mimiqui<0xFC><0x01><0x08><0xFA>en améliorant son <0xFC><0x01><0x06>Play Rough<0xFC><0x01><0x08>.",
 0x01F0A9FD,"Many call us the <0xB1>Devil Duo.<0xB2><0xFB>It was a nickname conferred upon us
 after defeating every opponent we<0xFA>came across.<0xFB>As such, we will only challenge the
 strongest Trainers.<0xFB>You are not there yet.","Muchos nos llaman el <0xB1>Dúo
@@ -65844,7 +65844,7 @@ must be capable of battling <0xFC><0x01><0x06>two on<0xFA>two<0xFC><0x01><0x04> 
 luchar <0xFC><0x01><0x06>dos contra dos<0xFC><0x01><0x04> con sólo<0xFA>el tipo <0xFC><0x01><0x06>Volador<0xFC><0x01><0x04> y <0xFC><0x01><0x06>Dragón<0xFC><0x01><0x04>.",257,3,260,pokemon,dialogue,"Fu fu fu...<0xFB>Arriver jusqu'ici n'est pas une
 mince affaire.<0xFB>Mais sache qu'on ne nous appelle
 pas le <0xB1>Devil Duo<0xB2> pour rien !<0xFB>Si tu veux nous affronter, tu dois
-pouvoir te battre <0xFC><0x01><0x06>deux contre deux<0xFC><0x01><0x04><0xFA>avec uniquement des types <0xFC><0x01><0x06>Combat<0xFC><0x01><0x04><0xFA>et <0xFC><0x01><0x06>Dragon<0xFC><0x01><0x04> à tes côtés.",
+pouvoir te battre <0xFC><0x01><0x06>deux contre deux<0xFC><0x01><0x04><0xFA>avec uniquement des types <0xFC><0x01><0x06>Fighting<0xFC><0x01><0x04><0xFA>et <0xFC><0x01><0x06>Dragon<0xFC><0x01><0x04> à tes côtés.",
 0x01F0AEBA,types at your side.,,19,3,22,pokemon,dialogue,,
 0x01F0AECE,"They say a rare blue bird
 lives atop Frost Mountain.","Dicen que un Pokémon Raro vive en
@@ -69832,7 +69832,7 @@ cette Arène est dédiée au type<0xFA><0xFC><0x01><0x06>Ténèbres<0xFC><0x01><
 départ serait d'amener des types<0xFA><0xFC><0x01><0x06>Combat<0xFC><0x01><0x08>, <0xFC><0x01><0x06>Insecte<0xFC><0x01><0x08> ou <0xFC><0x01><0x06>Fée<0xFC><0x01><0x08>.<0xFB>Mais attention : à cause des
 nombreux Dresseurs qui peinent ici,<0xFA>des <0xFC><0x01><0x06>émotions négatives<0xFC><0x01><0x08> rempliront<0xFA>l'air pendant tes combats.<0xFB>Ces émotions infligent des dégâts
 à la fin de chaque tour.<0xFB>Seuls les types <0xFC><0x01><0x06>Ténèbres<0xFC><0x01><0x08>, <0xFC><0x01><0x06>Psy<0xFC><0x01><0x08> et
-<0xFC><0x01><0x06>Spectre<0xFC><0x01><0x08>, ainsi que les Pokémon avec<0xFA>les talents <0xFC><0x01><0x06>Garde Magik<0xFC><0x01><0x08>, <0xFC><0x01><0x06>Inconscient<0xFC><0x01><0x08><0xFA>ou <0xFC><0x01><0x06>Benêt<0xFC><0x01><0x08>, n'y sont pas sensibles.<0xFB>Si les émotions négatives te posent
+<0xFC><0x01><0x06>Spectre<0xFC><0x01><0x08>, ainsi que les Pokémon avec<0xFA>les talents <0xFC><0x01><0x06>Magic Guard<0xFC><0x01><0x08>, <0xFC><0x01><0x06>Unaware<0xFC><0x01><0x08> ou<0xFA><0xFC><0x01><0x06>Oblivious<0xFC><0x01><0x08>, n'y sont pas sensibles.<0xFB>Si les émotions négatives te posent
 problème, amener un Pokémon qui n'y<0xFA>est pas sensible pourrait bien<0xFA>t'aider.<0xFB>Maintenant, atteindre Véga, qui
 dirige cette Arène, est assez<0xFA>simple.<0xFB>Traverse les couloirs sombres sans
 te faire repérer.<0xFB>Si on te repère, tu devras soit
@@ -71358,8 +71358,8 @@ souci pour toi.",
 about you.",,37,2,39,pokemon,dialogue,,
 0x01F232BA,"Please get my package from the
 <0xFC><0x01><0x06>Bellin Town Poké Mart<0xFC><0x01><0x08>, <0xFD><0x01>.<0xFB>I need it, and only you can get it.","Por favor, recoge mi Paquete en
-<0xFC><0x01><0x06>Ciudad Bellin<0xFC><0x01><0x08>, en la Tienda Pokémon.",99,2,101,pokemon,dialogue,"Récupère mon colis à la
-{COLOR}ÉBoutique Pokémon de Bourg Bellin{COLOR}Ë, {PLAYER}.<0xFB>J'en ai besoin, et toi seul peux
+<0xFC><0x01><0x06>Ciudad Bellin<0xFC><0x01><0x08>, en la Tienda Pokémon.",99,2,101,pokemon,dialogue,"Récupère mon colis au
+{COLOR}ÉPoké Mart de Bourg Bellin{COLOR}Ë, {PLAYER}.<0xFB>J'en ai besoin, et toi seul peux
 l'avoir.",
 0x01F232FA,"I need it, and only you can get it.",,35,2,37,pokemon,dialogue,,
 0x01F2331E,"Oh, <0xFD><0x01>!
@@ -76782,7 +76782,7 @@ Artikodin ! Paraît !",
 0x01F3A061,"With these three legendary bird
 Pokémon assembled here alongside<0xFA>the Prison Stone, the seal can<0xFA>be broken.","Con las Aves Legendarias reunidas y
 junto con la Piedra Prisión, el<0xFA>sello se puede romper.",106,3,109,pokemon,description,"Avec ces trois Pokémon oiseaux
-légendaires réunis ici aux côtés<0xFA>de la Pierre Prison, le sceau<0xFA>peut être brisé.",
+légendaires réunis ici aux côtés<0xFA>de la Prison Stone, le sceau<0xFA>peut être brisé.",
 0x01F3A0C1,be broken.,,10,3,13,pokemon,other,,
 0x01F3A0CC,"One with the shadows, one with
 the night""<0xFB>A dark hole traced by a ring
@@ -76897,7 +76897,7 @@ released from the Prison Bottle!<0xFB>And as your Trainer, I am fully
 capable of controlling it!","<0x52>Hoopa! <0x52>El tiempo ha llegado!<0xFB><0x52>Tu verdadero poder está a punto de
 ser liberado de la Botella!<0xFB><0x52>Y como tu Guardián, soy capaz de
 controlarlo!",148,1,149,pokemon,dialogue,"Hoopa ! Le moment est venu !<0xFB>Ton véritable pouvoir va être
-libéré de la Bouteille Prison !<0xFB>Et en tant que ton Dresseur, je
+libéré de la Prison Bottle !<0xFB>Et en tant que ton Dresseur, je
 suis tout à fait capable de le<0xFA>contrôler !",
 0x01F3AA4C,"And as your Trainer, I am fully
 capable of controlling it!",,58,1,59,pokemon,dialogue,,
@@ -83002,7 +83002,7 @@ utilisé Escalade.",
 0x01F55AE8,"This TM was awarded for completing
 <0xB1>The Black Emboar<0xB2>.","Recibida por completar la misión
 <0xB1>Emboar Negros<0xB2>.",54,3,57,pokemon,description,"Cette CT a été récompensée pour
-avoir terminé ""Le Roitiflam Noir"".",
+avoir terminé ""L'Emboar Noir"".",
 0x01F55B1F,"This TM was found in the warehouse
 where a Science Society scientist
 was experimenting on an Electivire.","Encontrada en el almacén donde un
@@ -87392,14 +87392,14 @@ un poco desanimado por algo.<0xFB>Y tampoco creo que haya sido sólo
 porque no pudo recuperar la Piedra<0xFA>Prisión""",187,2,189,pokemon,dialogue,"Tu sais, c'était peut-être
 juste moi...<0xFB>Mais je jurerais que Jax avait l'air
 perturbé par quelque chose.<0xFB>Et je ne pense pas que ce soit lié à
-ces malfrats qui ont filé avec la<0xFA>Pierre Prison, non plus...",
+ces malfrats qui ont filé avec la<0xFA>Pierre de Prison, non plus...",
 0x01F6695C,"<0xFC><0x01><0x04>Those thugs just waltzed on in
 here and ransacked our home!<0xFB>They pinned us to the wall, and
 we were forced to watch helplessly<0xFA>while they scoured our home for<0xFA>the Prison Stone.","<0xFC><0x01><0x04><0x52>Esos matones simplemente entraron y
 saquearon nuestra casa!<0xFB>Debemos recupera la Piedra Prisión
 o estaremos perdidos.",179,2,181,pokemon,dialogue,"{COLOR}ÇCes voyous ont fait irruption
 ici et ont pillé notre maison!<0xFB>Ils nous ont plaqués au mur, et
-nous avons dû regarder impuissants<0xFA>pendant qu'ils fouillaient chez nous<0xFA>pour la Pierre Prison.",
+nous avons dû regarder impuissants<0xFA>pendant qu'ils fouillaient chez nous<0xFA>pour la Pierre de Prison.",
 0x01F669FE,the Prison Stone.,,17,2,19,pokemon,other,,
 0x01F66A10,"Mystical chants, kwaah!<0xFB>You want Pokémon learn <0xFC><0x01><0x06>Hex<0xFC><0x01><0x04>, skree?
 <0xFC><0x01><0x06>1 Blue Shard<0xFC><0x01><0x04> and <0xFC><0x01><0x06>1 Red Shard<0xFC><0x01><0x04> it be.","<0x52>Cantos místicos!<0xFB><0x51>Quieres que un Pokémon aprenda
@@ -90323,7 +90323,7 @@ battle receives full Exp. Points.<0xFB>If the <0xFC><0x01><0x06>Exp. Share<0xFC>
 the <0xFC><0x01><0x06>Options<0xFC><0x01><0x02> Menu, any Pokémon<0xFA>that didn't participate will still<0xFA>receive a portion of the Exp.<0xFA>Points earned in battle.","<0x52>Consejo!<0xFB>Cualquier Pokémon que participe en
 la batalla recibe Puntos de<0xFA>Experiencia.<0xFB>Si el <0xFC><0x01><0x06>Repartir Experiencia<0xFC><0x01><0x02> está
 habilitado en la <0xFC><0x01><0x06>Configuración<0xFC><0x01><0x02>,<0xFA>cualquier Pokémon aunque no haya<0xFA>luchado, recibirá parte de esa<0xFA>Experiencia.",244,2,246,pokemon,dialogue,"Astuces du Dresseur !<0xFB>Tout Pokémon ayant combattu
-reçoit les Exp. Avec<0xFB>le {COLOR}ÉMulti Exp{COLOR}Á activé dans le
+reçoit les Exp. Avec<0xFB>l'{COLOR}ÉExp. Share{COLOR}Á activé dans le
 {COLOR}ÉMenu Options{COLOR}Á, les Pokémon non<0xFA>participatifs prennent aussi leur<0xFA>part<0xFA>d'Exp.",
 0x01F72F41,Points earned in battle.,,24,2,26,pokemon,other,,
 0x01F72F5A,"Trainer Tips!<0xFB>When selecting an attack in battle,
@@ -97795,7 +97795,7 @@ shampoings parfumés Baie Sitrus<0xFA>sont à peu près pareils.<0xFB>La différ
 Éternelle",
 0x01F945CF,Battle! Ivory,Pista Ivory,13,2,15,pokemon,dialogue,Combat ! Ivory,
 0x01F945DD,Battle! Aklove,Pista Aklove,14,2,16,pokemon,dialogue,Combat ! Aklove,
-0x01F945EC,Battle! Black Emboar,P. Emboar Negros,20,2,22,pokemon,dialogue,Combat ! Roitiflam Noir,
+0x01F945EC,Battle! Black Emboar,P. Emboar Negros,20,2,22,pokemon,dialogue,Combat ! Black Emboar,
 0x01F94601,Battle! James,Pista James,13,2,15,pokemon,dialogue,Combat ! James,
 0x01F9460F,Battle! Terror Granbull,P. Granbull Terror,23,2,25,pokemon,dialogue,Combat ! Granbull de Terreur,
 0x01F94627,Battle! Gruff,Pista Brusco,13,2,15,pokemon,dialogue,Combat ! Gruff,
@@ -98676,7 +98676,7 @@ comes to battling here.<0xFB>If you can win a total of <0xFC><0x01><0x06><0xFD><
 battles today in the <0xFC><0x01><0x06>Battle<0xFA>Tower<0xFC><0x01><0x04>, <0xFC><0x01><0x06>Battle Mine<0xFC><0x01><0x04>, and <0xFC><0x01><0x06>Battle<0xFA>Circus<0xFC><0x01><0x04> combined, I'll grant you<0xFA>BP for your hard work.","Sé muchas cosas de aquí.<0xFB>Si puedes ganar un total de <0xFC><0x01><0x06><0xFD><0x02><0xFC><0x01><0x04> hoy
 en <0xFC><0x01><0x06>Torre Batalla<0xFC><0x01><0x04>, <0xFC><0x01><0x06>Mina Batalla<0xFC><0x01><0x04> y<0xFA>en <0xFC><0x01><0x06>Circo Batalla<0xFC><0x01><0x04> combinados, te<0xFA>concederé PB por tu arduo trabajo.",226,3,229,pokemon,dialogue,"Je suis un peu une connaisseuse
 des combats ici.<0xFB>Si tu remportes {COLOR}É{STR_VAR_1}{COLOR}Ç combats
-au total aujourd'hui dans la {COLOR}ÉTour de<0xFA>Combat{COLOR}Ç, la {COLOR}ÉMine de Combat{COLOR}Ç et le {COLOR}ÉCirque de<0xFA>Combat{COLOR}Ç réunis, je te donnerai<0xFA>des PB pour tes efforts.",
+au total aujourd'hui dans la {COLOR}ÉBattle<0xFA>Tower{COLOR}Ç, la {COLOR}ÉBattle Mine{COLOR}Ç et le {COLOR}ÉBattle<0xFA>Circus{COLOR}Ç réunis, je te donnerai<0xFA>des PB pour tes efforts.",
 0x01F9887D,BP for your hard work.,,22,3,25,pokemon,dialogue,,
 0x01F98894,"So far, it seems you've won <0xFC><0x01><0x06><0xFD><0x03><0xFC><0x01><0x04>
 battle<0xFD><0x07> today.<0xFB>Keep it up!<0xFB>You only have <0xFC><0x01><0x06><0xFD><0x04><0xFC><0x01><0x04> more battle<0xFD><0x08>
@@ -98705,7 +98705,7 @@ then swindles you.<0xFB>I'd be on your guard around him.","Hay un tipo que ha es
 de noche en las afueras de <0xFC><0x01><0x06>Torre<0xFA>Batalla<0xFC><0x01><0x08>.<0xFB>Se dice que ofrece grandes ofertas,
 pero luego te estafa.<0xFB><0x52>Estaré atento cuando esté cerca
 de él!",182,3,185,pokemon,dialogue,"J'ai remarqué un type louche qui
-traîne tard devant la {COLOR}ÉTour de<0xFA>Combat{COLOR}Ë.<0xFB>Il paraît qu'il propose de super
+traîne tard devant la {COLOR}ÉBattle<0xFA>Tower{COLOR}Ë.<0xFB>Il paraît qu'il propose de super
 affaires, puis t'arnaque.<0xFB>Je me méfierais à ta place.",
 0x01F98A4C,d be on your guard around him.,,30,3,33,pokemon,dialogue,,
 0x01F98A6B,"I just love the <0xFC><0x01><0x06>Battle Sands<0xFC><0x01><0x04>!<0xFB>Watching as others battle with your
@@ -98714,13 +98714,13 @@ super easy way to earn BP.<0xFB>There's no other battle facility
 I'd call my favourite.","<0x52>Me encanta <0xFC><0x01><0x06>Arena Batalla<0xFC><0x01><0x04>!<0xFB><0x52>Ver cómo otros luchan con tus
 amados Pokémon es muy entretenido!<0xFB>Sin mencionar el hecho de que es una
 forma más fácil de ganar PB.<0xFB>No hay otra instalación de batalla
-que más me guste.",225,2,227,pokemon,dialogue,"J'adore les {COLOR}ÉSables de Combat{COLOR}Ç !<0xFB>Regarder d'autres combattre avec tes
+que más me guste.",225,2,227,pokemon,dialogue,"J'adore le {COLOR}ÉBattle Sands{COLOR}Ç !<0xFB>Regarder d'autres combattre avec tes
 Pokémon préférés, c'est si amusant !<0xFB>Sans parler du fait que c'est très
 facile pour gagner des PB.<0xFB>Aucune autre installation de combat
 ne serait mon endroit favori.",
 0x01F98B38,d call my favourite.,,20,2,22,pokemon,dialogue,,
 0x01F98B4D,The <0xFC><0x01><0x06>Battle Circus<0xFC><0x01><0x08>!<0xFB>Loads of fun!<0xFB>What will happen next?<0xFB>Wait and see!,"<0x52>El <0xFC><0x01><0x06>Circo Batalla<0xFC><0x01><0x08>!<0xFB><0x52>Mucha diversión!
-<0x51>Qué pasará después?",75,3,78,pokemon,dialogue,Le {COLOR}ÉCirque de Combat{COLOR}Ë !<0xFB>Tellement fun !<0xFB>Que va-t-il se passer ensuite ?<0xFB>Attends et vois !,
+<0x51>Qué pasará después?",75,3,78,pokemon,dialogue,Le {COLOR}ÉBattle Circus{COLOR}Ë !<0xFB>Tellement fun !<0xFB>Que va-t-il se passer ensuite ?<0xFB>Attends et vois !,
 0x01F98B8B,Wait and see!,,13,3,16,pokemon,dialogue,,
 0x01F98B99,"Some of the vendors change
 periodically during the day.<0xFB>You'll want to stay outside as much
@@ -98730,7 +98730,7 @@ periódicamente durante el día.<0xFB>Me aburre esperar tanto a mi
 vendendor favorito.<0xFB>Creo que <0xFC><0x01><0x06>Arena Batalla<0xFC><0x01><0x04> es una
 buena manera de pasar el tiempo<0xFA>mientras espero.",212,2,214,pokemon,dialogue,"Certains vendeurs changent
 périodiquement dans la journée.<0xFB>Si tu veux faire du shopping, reste
-autant dehors que possible<0xFA>pour acheter.<0xFB>Je trouve que les {COLOR}ÉSables de Combat{COLOR}Ç sont
+autant dehors que possible<0xFA>pour acheter.<0xFB>Je trouve que le {COLOR}ÉBattle Sands{COLOR}Ç est
 un bon moyen de patienter.",
 0x01F98C40," is a good
 way to pass the time while I wait.",,45,2,47,pokemon,dialogue,,
@@ -98740,9 +98740,9 @@ what you're getting yourself into.<0xFB>Not in the Battle Mine, I tells ya.<0xFB
 things up.<0xFB>It's a harrowing experience!","No hay ninguna mina como <0xFC><0x01><0x06>Mina
 Batalla<0xFC><0x01><0x08>, te lo digo.<0xFB>La mayoría de las otras minas""
 bueno"" ya sabes lo que te quiero<0xFA>decir.<0xFB>Cada piso por el que bajas hace
-temblar las cosas.<0xFB><0x52>Es una experiencia desgarradora!",234,1,235,pokemon,dialogue,"Y a pas de mine comme la {COLOR}ÉMine de
-Combat{COLOR}Ë, j'te l'dis.<0xFB>Dans la plupart des mines... tu sais
-à quoi t'attendre.<0xFB>Pas dans la Mine de Combat, j'te l'dis.<0xFB>Chaque étage bouleverse
+temblar las cosas.<0xFB><0x52>Es una experiencia desgarradora!",234,1,235,pokemon,dialogue,"Y a pas de mine comme la {COLOR}ÉBattle
+Mine{COLOR}Ë, j'te l'dis.<0xFB>Dans la plupart des mines... tu sais
+à quoi t'attendre.<0xFB>Pas dans la Battle Mine, j'te l'dis.<0xFB>Chaque étage bouleverse
  tout.<0xFB>C'est une sacrée expérience !",
 0x01F98D3F,s a harrowing experience!,,25,1,26,pokemon,dialogue,,
 0x01F98D59,"Howdy!
@@ -99837,19 +99837,19 @@ The big Trainer who saved me!<0xFB>You're the best!","<0x52>Eres tú!
 <0x52>Muchas gracias por ayudarme!",56,2,58,pokemon,dialogue,"C'est toi ! Le grand
 Dresseur qui m'a sauvé !<0xFB>T'es le meilleur !",
 0x01F9D34B,re the best!,,12,2,14,pokemon,dialogue,,
-0x01F9D358,The Black Emboar,Emboar Negros,16,3,19,pokemon,location,Le Roitiflam Noir,
+0x01F9D358,The Black Emboar,Emboar Negros,16,3,19,pokemon,location,Le Black Emboar,
 0x01F9D369,"Rescue a man's brother from the
 clutches of the <0xB1>Black Emboar<0xB2> in
 the KBT Expressway.","Rescata al hermano de un hombre
 de las garras de los <0xB1>Emboar
 Negros<0xB2>",85,2,87,pokemon,description,"Sauve le frère d'un homme
-des griffes du ""Roitiflam
-Noir"" dans l'Autoroute KBT.",
+des griffes du ""Black
+Emboar"" dans l'Autoroute KBT.",
 0x01F9D3A7," in
 the KBT Expressway.",,23,2,25,pokemon,other,,
 0x01F9D3BF,Brother,Brother,7,2,9,pokemon,other,Frère,
 0x01F9D3C7,James,James,5,2,7,pokemon,other,James,
-0x01F9D3CD,Black Emboar Boss,Jefe Emboar Negro,17,2,19,pokemon,location,Boss du Roitiflam Noir,
+0x01F9D3CD,Black Emboar Boss,Jefe Emboar Negro,17,2,19,pokemon,location,Boss du Black Emboar,
 0x01F9D3DF,"Hey, Trainer.<0xFB>""<0xFB>What? You want me to say something
 interesting?<0xFB>Fine, then""<0xFB>Lately, I've been having trouble
 with my brother.<0xFB>He's gotten himself in deep with
@@ -99864,7 +99864,7 @@ pero estoy realmente preocupado<0xFA>por su seguirdad!<0xFB><0x52>No he hablado 
 días, así que temo que le haya<0xFA>pasado algo malo!<0xFB>""<0xFB><0x51>Te gustaría ayudarme?",430,2,432,pokemon,dialogue,"Salut, Dresseur....<0xFB>Quoi ? Tu veux que je<0xFB>dise quelque chose
 d'intéressant ? Très<0xFB>bien... Dernièrement,<0xFB>j'ai des ennuis avec mon
 frère. Il s'est impliqué<0xFB>jusqu'au cou avec un
-gang qui se fait appeler<0xFA>le ""Roitiflam Noir"". Je<0xFB>ne sais pas vraiment de
+gang qui se fait appeler<0xFA>le ""Black Emboar"". Je<0xFB>ne sais pas vraiment de
 quoi il retourne, mais<0xFA>je suis vraiment inquiet<0xFB>pour lui. Je n'ai pas
 parlé avec lui depuis<0xFA>des jours, donc j'ai<0xFB>peur qu'il lui soit<0xFB>arrivé quelque chose.<0xFB>... Quoi ? Tu serais
 prêt à aller vérifier pour moi ?",
@@ -99882,8 +99882,8 @@ insanely vicious.","<0x52>Gracias!<0xFB>Probablemente puedas encontrar
 a mi hermano en la Autopista<0xFA>RBT.<0xFB>Iría yo mismo, pero soy un
 Entrenador demasiado débil.",171,3,174,pokemon,dialogue,"Merci ! Tu peux probablement<0xFB>trouver mon frère dans le
 nord de l'Autoroute KBT.<0xFB>J'irais bien moi-même, mais
-je suis un Dresseur trop<0xFB>faible. On dit que ces Roitiflam
-Noir sont sacrément vicieux.",
+je suis un Dresseur trop<0xFB>faible. On dit que ces Black
+Emboar sont sacrément vicieux.",
 0x01F9D63A,"They say these Black Emboar are
 insanely vicious.",,49,3,52,pokemon,description,,
 0x01F9D66C,"If you ever see my brother again,
@@ -99901,9 +99901,9 @@ Emboar Negros""<0xFB>Una pequeña plaga como tú no tiene
 nada que hacer aquí""<0xFB><0x51>Crees que puedes enfrentarme a
 mí, el Jefe de los Emboar Negros?",212,3,215,pokemon,dialogue,"Qu'est-ce que tu crois
 que tu fais, morveux ?<0xFB>Ici, c'est le paradis
-ultime du Roitiflam Noir... Un petit<0xFB>nuisible comme toi n'a
+ultime du Black Emboar... Un petit<0xFB>nuisible comme toi n'a
 rien à faire ici... Tu<0xFB>penses vraiment pouvoir
-tenir face à moi, le<0xFA>chef du Roitiflam Noir ?",
+tenir face à moi, le<0xFA>chef du Black Emboar ?",
 0x01F9D787,the Black Emboar?,,17,3,20,pokemon,dialogue,,
 0x01F9D799,"That all you got?<0xFB>Nah, you got one option
 left--get lost!<0xFB>This is our place, the
@@ -99912,8 +99912,8 @@ don't want nobody gettin' in our way.","That all you got?<0xFB>Nah, you got one 
 left--get lost!<0xFB>This is our place, the
 Black Emboar.<0xFB>We got no place else to go, and we
 don't want nobody gettin' in our way.",167,3,170,pokemon,dialogue,"C'est tout ce que t'as ?<0xFB>Nan, il te reste une
-option : dégage ! C'est<0xFB>notre endroit, le Roitiflam
-Noir. On n'a nulle<0xFB>part où aller, et on ne
+option : dégage ! C'est<0xFB>notre endroit, le Black
+Emboar. On n'a nulle<0xFB>part où aller, et on ne
 veut personne qui nous gêne.",
 0x01F9D841,"Gwa ha ha ha! Bring it!
 You've got your share of guts, kid!<0xFB>I'll show you what the guy who
@@ -99921,7 +99921,7 @@ holds the Black Emboar together<0xFA>can really do!","<0x52>Ja, ja, ja! <0x52>Va
 agallas!<0xFB><0x52>Te mostraré lo que realmente puede
 hacer el tipo que mantiene unido a<0xFA>los Emboar Negros!",137,3,140,pokemon,dialogue,"Gwa ha ha ha ! Viens !
 T'as du cran, gamin ! Je<0xFB>vais te montrer ce que
-peut faire celui qui<0xFA>tient le Roitiflam Noir ensemble !",
+peut faire celui qui<0xFA>tient le Black Emboar ensemble !",
 0x01F9D8BC,can really do!,,14,3,17,pokemon,dialogue,,
 0x01F9D8CB,Gwa ha ha ha!,"<0x52>Ja, ja, ja!",13,2,15,pokemon,dialogue,Gwa ha ha ha !,
 0x01F9D8D9,"You ain't half bad, kid""
@@ -99951,7 +99951,7 @@ battu, je vais venir avec toi.",
 0x01F9DA54,"I've told you time and time again,
 bro, quit tryin' to mess with<0xFA>the Black Emboar!","Te lo he dicho miles de veces,
 hermano, <0x52>deja de meterte con los<0xFA>Emboar Negros!",82,3,85,pokemon,dialogue,"Je te l'ai dit maintes fois,
-frérot, arrête d'essayer de<0xFA>t'en prendre au Roitiflam Noir !",
+frérot, arrête d'essayer de<0xFA>t'en prendre au Black Emboar !",
 0x01F9DA95,the Black Emboar!,,17,3,20,pokemon,dialogue,,
 0x01F9DAA7,"I can't, James.
 You're my brother.<0xFB>You mean everything to me.<0xFB>And I can't let you go down this
@@ -99984,7 +99984,7 @@ Emboar Negros por <0xFD><0x01><0xFA>Negros, en honor a <0xFD><0x01>.<0xFB>Así q
 mudaremos a Ciudad Antisis!<0xFB>He oído que la vieja pandilla que
 dirigía ese antro se fue de la<0xFA>ciudad.<0xFB>Granbull Terror, o algo así""<0xFB><0x52>Esa ciudad será saqueada por los
 <0xFD><0x01> Negros!<0xFB><0x52>Ja, ja!",376,2,378,pokemon,dialogue,"Laisse-moi te dire ! Personne ne<0xFB>m'a jamais mis une telle raclée
-que <0xFD><0x03> ! J'ai même<0xFB>renommé le Roitiflam Noir en Black
+que <0xFD><0x03> ! J'ai même<0xFB>renommé le Black Emboar en Black
 <0xFD><0x01>, d'après <0xFD><0x02> !<0xFB>C'est l'heure d'un nouveau<0xFB>départ. Le Black <0xFD><0x01> et
 moi, on s'installe à Ville d'Antisis ! J'ai entendu dire que
 l'ancien gang qui dirigeait<0xFB>l'endroit s'est fait chasser. Un
@@ -100039,7 +100039,7 @@ y yo me quedé solo""<0xFB>Me siento tan avergonzado por esto""<0xFB>De todos mo
 ayudarme.<0xFB>Por favor, toma esta MT.",411,1,412,pokemon,dialogue,"Désolé que tu te sois retrouvé
 mêlé à tout ça. J'ai peut-être<0xFB>menti quand je t'ai dit que je
 n'avais pas eu de nouvelles de mon<0xFB>frère. En vérité, je savais qu'il
-était le chef du Roitiflam Noir. Je<0xFB>pensais juste que tu n'aurais pas
+était le chef du Black Emboar. Je<0xFB>pensais juste que tu n'aurais pas
 voulu aider si tu savais que tu<0xFA>allais affronter leur chef. Mais<0xFB>maintenant il est parti pour de
 bon, et je suis tout seul... Je me<0xFB>sens tellement idiot... Quoi qu'il<0xFB>en soit, merci de m'avoir aidé.<0xFB>Prends ce CT pour ton temps.",
 0x01F9E11A,Please take this TM for your time.,,34,1,35,pokemon,dialogue,,
@@ -100056,7 +100056,7 @@ aquí?<0xFB><0x52>Este lugar pertenece a los Emboar
 Negros!<0xFB><0x52>Es como nuestro Gimnasio!<0xFB><0x52>Así que lárgate!
 <0x52>Vete a casa con tu madre,<0xFA>sabandija!",177,2,179,pokemon,dialogue,"Hé ! Qui t'a dit que tu
 pouvais passer par ici ? Cet<0xFB>endroit nous appartient, le
-Roitiflam Noir ! C'est comme<0xFB>notre Arène, gamin ! Alors<0xFB>du balai ! Rentre chez ta
+Black Emboar ! C'est comme<0xFB>notre Arène, gamin ! Alors<0xFB>du balai ! Rentre chez ta
 maman, p'tit lèche-bottes !",
 0x01F9E1DF,"So scram! Toddle off home to your
 ma, ya little goody-two-shoes punk!",,69,2,71,pokemon,dialogue,,
@@ -100073,7 +100073,7 @@ Emboar seriously!<0xFB>I'll pummel your pretty Pokémon
 right down to the ground!<0xFB>With relish!","<0x51>Qué dijiste idiota?<0xFB><0x52>Te enseñaré a tomarte enserio a los
 Emboar Negros!<0xFB><0x52>Golpearé a tus lindos Pokémon
 hasta derribarlos al suelo!<0xFB>Y lo haré con gusto""",153,2,155,pokemon,dialogue,"Qu'est-ce que t'as dit,<0xFB>sale mocheté ? Je vais
-t'apprendre à prendre le<0xFB>Roitiflam Noir au sérieux !
+t'apprendre à prendre le<0xFB>Black Emboar au sérieux !
 Je vais écraser tes jolis<0xFB>Pokémon dans le sol ! Avec plaisir !",
 0x01F9E336,With relish!,,12,2,14,pokemon,dialogue,,
 0x01F9E343,Really bad!,<0x52>Muy mal!,11,2,13,pokemon,dialogue,Vraiment nul !,
@@ -100083,12 +100083,12 @@ with the Black Emboar, go duke<0xFA>it out with our leader!<0xFB>He's somewhere 
 ganaste!<0xFB>Si realmente quieres pelear con
 los Emboar Negros, <0x52>enfréntate<0xFA>a nuestro Líder!<0xFB>Está en algún lugar de este túnel.",171,2,173,pokemon,dialogue,"Ne prends pas la grosse tête
 parce que tu m'as battu ! Si<0xFB>tu veux vraiment te battre
-contre le Roitiflam Noir, va<0xFA>te mesurer à notre chef ! Il<0xFB>est quelque part dans ce tunnel !",
+contre le Black Emboar, va<0xFA>te mesurer à notre chef ! Il<0xFB>est quelque part dans ce tunnel !",
 0x01F9E3DF,s somewhere in this tunnel!,,27,2,29,pokemon,dialogue,,
 0x01F9E3FB,"<0xFC><0x01><0x08>Hey! Who said ya can pass
 through here?<0xFB>This is Black Emboar territory!<0xFB>Go back to where you came from!","<0xFC><0x01><0x08><0x52>Ey! <0x51>Quién dijo que puedes pasar?<0xFB><0x52>Este es territorio de los Emboar
 Negros!<0xFB><0x52>Vete en este instante!",106,3,109,pokemon,dialogue,"{COLOR}ËHé ! Qui t'a dit que
-tu pouvais passer par ici ?<0xFB>C'est le territoire du Roitiflam<0xFB>Noir ! Retourne d'où tu viens !",
+tu pouvais passer par ici ?<0xFB>C'est le territoire du Black<0xFB>Emboar ! Retourne d'où tu viens !",
 0x01F9E446,Go back to where you came from!,,31,3,34,pokemon,dialogue,,
 0x01F9E466,Huh? A kid?,<0x51>Eh? <0x51>Y tú?,11,2,13,pokemon,dialogue,Hein ? Un gamin ?,
 0x01F9E472,Twerp.,"Vaya""",6,2,8,pokemon,other,Minus.,
@@ -100096,17 +100096,17 @@ tu pouvais passer par ici ?<0xFB>C'est le territoire du Roitiflam<0xFB>Noir ! Re
 0x01F9E489,"You think you can just come in here
 and mess with the Black Emboar?","<0x51>Crees que puedes meterte con los
 Emboar Negros?",67,3,70,pokemon,dialogue,"Tu crois pouvoir débarquer ici et
-importuner le Roitiflam Noir ?",
+importuner le Black Emboar ?",
 0x01F9E4CD,You do.,"Mierda""",7,2,9,pokemon,dialogue,Tu crois.,
-0x01F9E4D5,"We're the Black Emboar, you litch!",<0x52>Somos los mejores!,34,3,37,pokemon,dialogue,"On est le Roitiflam Noir, espèce de
+0x01F9E4D5,"We're the Black Emboar, you litch!",<0x52>Somos los mejores!,34,3,37,pokemon,dialogue,"On est le Black Emboar, espèce de
 minable !",
 0x01F9E4D8,"re the Black Emboar, you litch!",,31,3,34,pokemon,dialogue,,
 0x01F9E4F8,Do you know who we are?<0xFB>We're the Black Emboar!,"<0x51>Sabes quiénes somos?
-<0x52>Los Emboar Negros!",47,2,49,pokemon,dialogue,Tu sais qui on est ? On<0xFB>est le Roitiflam Noir !,
+<0x52>Los Emboar Negros!",47,2,49,pokemon,dialogue,Tu sais qui on est ? On<0xFB>est le Black Emboar !,
 0x01F9E513,re the Black Emboar!,,20,2,22,pokemon,dialogue,,
 0x01F9E528,Crikey.,"Viva""",7,2,9,pokemon,other,Incroyable.,
 0x01F9E530,"The Black Emboar won't fall
-so easily!",<0x52>Somos los mejores aunque te duela!,38,2,40,pokemon,dialogue,"Le Roitiflam Noir ne
+so easily!",<0x52>Somos los mejores aunque te duela!,38,2,40,pokemon,dialogue,"Le Black Emboar ne
 tombera pas si aisément !",
 0x01F9E545,"t fall
 so easily!",,17,2,19,pokemon,dialogue,,
@@ -100115,7 +100115,7 @@ It's dangerous!","<0x52>Oye, esto es peligroso!",30,2,32,pokemon,dialogue,"Hé, 
 dangereux !",
 0x01F9E569,s dangerous!,,12,2,14,pokemon,dialogue,,
 0x01F9E576,"The Black Emboar!
-Never stop, and never look back!",<0x52>Debes irte en este instante!,50,2,52,pokemon,dialogue,"Le Roitiflam Noir ! On ne s'arrête
+Never stop, and never look back!",<0x52>Debes irte en este instante!,50,2,52,pokemon,dialogue,"Le Black Emboar ! On ne s'arrête
 jamais, et on ne regarde jamais en arrière !",
 0x01F9E5A9,Whad'ya want kid?<0xFB>We're busy!,<0x52>No sabes en que te metes!,29,2,31,pokemon,dialogue,"Qu'est-ce que tu veux,<0xFB>gamin ? On est occupés !",
 0x01F9E5BE,re busy!,,8,2,10,pokemon,dialogue,,
