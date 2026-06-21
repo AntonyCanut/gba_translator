@@ -191,3 +191,45 @@ def test_gang_proper_nouns_are_preserved_in_source():
     assert "Black Noacier" not in text and "Black Roitiflam" not in text
     # no broken elision such as « d'Mystherbe » survived the apply step
     assert "d'Mystherbe" not in text
+
+
+# --- Black Emboar gang dialogue: translation + gender-buffer removal -------
+
+import re as _re
+
+GANG_LIVING = _re.compile(r'Black(\\[nlp]| )(Emboar|\{PLAYER\}|<0xFD>)')
+
+
+def _last_bodies(text):
+    """offset(lower, no leading zeros) -> body of its LAST occurrence."""
+    out = {}
+    for m in _re.finditer(r'(?im)^\s*0x([0-9A-Fa-f]+)\s*:\s*(.*)$', text):
+        out[m.group(1).lower().lstrip('0')] = m.group(2)
+    return out
+
+
+def test_living_gang_dialogue_is_translated_to_french():
+    """No reachable (last-wins) line still references the player's gang in
+    English, whether written as ``Black {PLAYER}`` or the raw ``Black <0xFD>``
+    token. ``Black Ferrothorn`` (rival gang) and the unreachable fixed-width
+    Trainer-class cell 0x23E7A1 are deliberately out of scope."""
+    bodies = _last_bodies(COMBINED.read_text(encoding="utf-8"))
+    offenders = [
+        f"0x{off}" for off, body in bodies.items()
+        if off != "23e7a1" and GANG_LIVING.search(body)
+    ]
+    assert offenders == [], f"untranslated gang refs still reachable: {offenders}"
+    # the canonical French gang name is actually present
+    assert "Roitiflam Noir" in COMBINED.read_text(encoding="utf-8")
+
+
+def test_runtime_gender_buffers_removed_from_gang_speeches():
+    """The two boss speeches referenced the player through the gendered pronoun
+    buffers <0xFD><0x03>/<0xFD><0x02> ("as he/she did", "my boy/girl"), which
+    render incoherently in French. They must be gone (replaced by the
+    player-name buffer <0xFD><0x01> or neutral wording)."""
+    bodies = _last_bodies(COMBINED.read_text(encoding="utf-8"))
+    for off in ("1f9dbd7", "1fa13f5"):
+        body = bodies[off]
+        assert "{STR_VAR_1}" not in body and "{STR_VAR_2}" not in body, off
+        assert "<0xFD><0x02>" not in body and "<0xFD><0x03>" not in body, off
