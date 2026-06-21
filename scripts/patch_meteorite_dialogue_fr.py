@@ -1,15 +1,14 @@
 #!/usr/bin/env python3
-"""Translate the long « Borrius meteorite » cutscene that the generic pipeline
-can never reach.
+"""Translate the long cutscene prose blocks that the generic pipeline can never
+reach (the « Borrius meteorite » monologue and its siblings).
 
 Root cause (found statically against the English ROM + the extraction):
 
-The Valley-City elder's meteorite monologue is a **single** 1046-byte string at
-``0x007A9A75`` (« Thirty years ago, a large meteorite was hurtling towards
-Borrius… »). The pointer-based extractor caps every string at
-``max_text_length = 1000`` bytes (:mod:`src.extractors.pointer_text_extractor`),
-so ``_read_text`` returns ``None`` for this offset and it never enters
-``englishrom_texts.json``. With no extraction entry:
+Each target is a **single** prose string whose ``0xFF`` terminator sits beyond
+the pointer-based extractor's ``max_text_length = 1000`` cap
+(:mod:`src.extractors.pointer_text_extractor`). ``_read_text`` returns ``None``
+for it, so the offset never enters ``englishrom_texts.json``. With no extraction
+entry:
 
 * ``apply_combined_fr.py --extend`` cannot add it to the trilingual CSV
   (it only extends offsets present in the English extraction), so it never
@@ -19,17 +18,21 @@ so ``_read_text`` returns ``None`` for this offset and it never enters
   capped the same way, and the French text is far longer than the slot, so an
   in-place write would be rejected as ``too_long`` anyway.
 
-The authoritative French translation already lives in ``combined_fr.txt`` at the
-same offset, but every delivery path drops it, so the built ROM still shows the
-English text. This post-build patch closes that gap the same way the move /
-field-move description patches do: encode the ``combined_fr.txt`` text with the
+The authoritative French translations already live in ``combined_fr.txt`` at the
+same offsets, but every delivery path drops them, so the built ROM still shows
+the English text. This post-build patch closes that gap the same way the move /
+field-move description patches do: encode each ``combined_fr.txt`` value with the
 shared control-code machinery, relocate one ``0xFF``-terminated copy into free
 space, and repoint **every** referrer to it.
 
-The string is referenced by a single, 2-byte-aligned pointer at ``0x0074B0AA``;
-the patch is reference-driven (it scans the whole ROM for live pointers to the
-original offset) so it also covers any duplicate referrer without hard-coding
-the pointer cell.
+The patch is reference-driven — it scans the whole ROM for live pointers to each
+original offset — so it covers every (possibly duplicated) referrer without
+hard-coding any pointer cell, and it is idempotent (an offset whose original is
+no longer pointed at, i.e. already relocated, is skipped).
+
+The covered offsets are listed in :data:`TARGETS`; use
+``scripts`` discovery against the English ROM (prose blocks > 1000 bytes) to add
+new ones, then add the French text to ``combined_fr.txt``.
 """
 
 from __future__ import annotations
@@ -60,9 +63,20 @@ ROM_POINTER_BASE = 0x08000000
 DEFAULT_COMBINED = REPO_ROOT / "combined_fr.txt"
 
 # Oversized (> extractor cap) cutscene strings that are otherwise undeliverable.
-# original English offset -> a short French prefix used to prove the relocation.
+# Each is a single prose block whose 0xFF terminator sits beyond the extractor's
+# 1000-byte cap, so it never enters the English extraction → never reaches the
+# trilingual CSV / translation JSON → the generic inject pass cannot relocate it,
+# even though combined_fr.txt holds a correct French translation. This patch
+# relocates each French copy into free space and repoints every live referrer.
+#
+# original English offset -> a short, contiguous French prefix used to prove the
+# relocation actually landed (must appear verbatim before any line/page break).
 TARGETS: dict[int, str] = {
-    0x7A9A75: "Il y a trente ans",  # Valley-City elder, meteorite monologue
+    0x7A9A75: "Il y a trente ans",            # Valley-City elder, 30-years meteorite monologue
+    0x1EEE8BE: "Il y a vingt ans",            # Aros legend, 20-years meteorite monologue
+    0x1F0F004: "une option spéciale",         # New Game+ briefing
+    0x1F8E271: "Les Sables de Combat sont un lieu",  # Combat Sands rules
+    0x1F4C2ED: "toutes mes",                  # Borrius Guardian, gate-race quest
 }
 
 _OFFSET_LINE = re.compile(r"^0x([0-9A-Fa-f]+):\s?(.*)$")
@@ -184,7 +198,7 @@ def main() -> int:
     remaining = verify(rom)
     rom_path.write_bytes(rom)
 
-    print("✓ Dialogue météorite (Borrius) — relocalisation + repointage :")
+    print("✓ Longs dialogues (météorite Borrius & co.) — relocalisation + repointage :")
     print(f"   - Cibles relocalisées : {stats['targets']}")
     print(f"   - Pointeurs repointés : {stats['repointed']}")
     if stats["skipped"]:
