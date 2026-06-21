@@ -221,3 +221,107 @@ def test_all_ritual_strings_terminated(fr: bytes):
         "freeze the cutscene before Lugia triggers:\n"
         + "\n".join(f"  site 0x{s:07X} -> text 0x{o:07X}" for s, o in unterminated)
     )
+
+
+# --- B-56 follow-up: prove CAPTURE is not a dead end, for BOTH legendaries ---
+#
+# The reopened report is specifically "after CAPTURING Ho-Oh, the scene that
+# leads to Lugia never plays". Decoded from both ROMs, each battle block handles
+# all three relevant wild-battle outcomes and advances the ritual on every one:
+#
+#   outcome 7 (CAUGHT)        -> setflag <caught-flag>; setvar VAR_0x8000=0x800F
+#   outcomes 4/5 (RAN/TELE)   -> setvar VAR_0x8000=0x800F
+#   fall-through (1 = WON)    -> setvar VAR_0x8000=0x800F
+#
+# so the progression var is set THREE times per block (once per branch), and the
+# caught branch additionally raises a per-legendary "caught" flag. None of this
+# differs EN vs FR.
+ADVANCE_VAR_3X = 3
+HOOH_CAUGHT_SETFLAG = bytes([0x29, 0xDF, 0x15])   # setflag 0x15DF @ 0x1E8CC94
+LUGIA_CAUGHT_SETFLAG = bytes([0x29, 0xDE, 0x15])  # setflag 0x15DE @ 0x1E8CBFB
+
+# Block spans (battle-command start -> just past the outcome handler).
+LUGIA_BLOCK = (LUGIA_SETWILD, HOOH_SETWILD)         # 0x1E8CB9B .. 0x1E8CC34
+HOOH_BLOCK = (HOOH_SETWILD, HOOH_SETWILD + 0xCC)    # 0x1E8CC34 .. 0x1E8CD00
+
+
+@pytest.mark.parametrize(
+    "block, setflag, name",
+    [
+        (HOOH_BLOCK, HOOH_CAUGHT_SETFLAG, "Ho-Oh (caught flag 0x15DF)"),
+        (LUGIA_BLOCK, LUGIA_CAUGHT_SETFLAG, "Lugia (caught flag 0x15DE)"),
+    ],
+)
+def test_caught_branch_advances_and_raises_flag(en, fr, block, setflag, name):
+    """Capturing each legendary advances the ritual AND raises its caught flag.
+
+    This is the crux of the reopened B-56 report. If catching Ho-Oh (or Lugia)
+    with a Quick Ball were a dead end, the caught branch would be missing either
+    the progression var or the flag. Both are present, and identical EN vs FR.
+    """
+    lo, hi = block
+    seg_fr = fr[lo:hi]
+    seg_en = en[lo:hi]
+
+    assert setflag in seg_fr, (
+        f"{name}: caught branch must raise its caught flag {setflag.hex()} "
+        "(missing -> capture may dead-end the ritual)"
+    )
+    # All three outcome branches (WON / RAN-TELE / CAUGHT) advance the ritual.
+    assert seg_fr.count(ADVANCE_VAR) == ADVANCE_VAR_3X, (
+        f"{name}: expected the progression var on all 3 outcome branches, "
+        f"found {seg_fr.count(ADVANCE_VAR)}"
+    )
+    # And EN behaves identically -> this is NOT an FR-specific change.
+    assert seg_en.count(ADVANCE_VAR) == seg_fr.count(ADVANCE_VAR)
+    assert (setflag in seg_en) == (setflag in seg_fr)
+
+
+def test_lugia_block_is_wired_like_hooh(en, fr):
+    """The Lugia battle block exists and mirrors Ho-Oh's outcome handling.
+
+    Guards against a build that drops/relocates the Lugia battle wiring while
+    leaving Ho-Oh intact. Both blocks must contain: the setwildbattle command,
+    the outcome read (specialvar 0xB4), and the progression advance.
+    """
+    for off, species, name in (
+        (LUGIA_SETWILD, SPECIES_LUGIA, "Lugia"),
+        (HOOH_SETWILD, SPECIES_HOOH, "Ho-Oh"),
+    ):
+        block = fr[off:off + 0x90]
+        assert block[0] == 0xB6 and block[1] == species, f"{name}: setwildbattle wiring"
+        assert OUTCOME_READ in block, f"{name}: outcome read missing"
+        assert ADVANCE_VAR in block, f"{name}: progression advance missing"
+
+
+# Cross-build guard: the build the user actually downloads (the release ROM) must
+# carry the same ritual logic as the freshly-built output ROM. All shipped FR
+# builds share EN's encounter logic; only relocated text differs.
+_CANDIDATE_RELEASE_BUILDS = [
+    PROJECT_ROOT.parent / "Unbound" / "release" / "pokemon_unbound_fr.gba",
+    PROJECT_ROOT.parent / "Unbound" / "data" / "frenchrom.gba",
+]
+
+
+@pytest.mark.parametrize(
+    "release_path", _CANDIDATE_RELEASE_BUILDS, ids=lambda p: p.name
+)
+def test_release_build_ritual_logic_matches_en(en, release_path):
+    """Any shipped FR release build's ritual logic is byte-identical to EN.
+
+    Same invariant as test_ritual_logic_byte_identical, applied to the release
+    artefacts the user plays — so a stale/older download is also covered.
+    """
+    if not release_path.exists():
+        pytest.skip(f"{release_path.name} not present")
+    rel = release_path.read_bytes()
+    ranges = _diff_ranges(en, rel, RITUAL_LO, RITUAL_HI)
+    non_pointer = [
+        (a, b) for a, b in ranges
+        if not ((b - a) == 4 and _is_ptr(en, a) and _is_ptr(rel, a))
+    ]
+    assert not non_pointer, (
+        f"{release_path.name}: NON-text byte differs from EN in the ritual "
+        f"script (encounter-logic regression): "
+        + ", ".join(f"0x{a:07X}..0x{b:07X}" for a, b in non_pointer)
+    )
