@@ -106,7 +106,7 @@ COMBINED = "combined_fr.txt"
 class PatchOnRealRomTests(unittest.TestCase):
     """Bout en bout : sur la vraie ROM, le pointeur résout vers le texte FR."""
 
-    def test_meteorite_dialogue_is_french(self):
+    def test_long_dialogues_are_french(self):
         rom = bytearray(Path(FR_ROM).read_bytes())
         source = Path(SOURCE_ROM).read_bytes()
         combined = patch.load_combined(Path(COMBINED))
@@ -115,12 +115,17 @@ class PatchOnRealRomTests(unittest.TestCase):
         self.assertEqual(stats["failed"], 0)
         self.assertEqual(patch.verify(rom), [])
 
-        # Tout pointeur vers l'original anglais a disparu ; la copie relocalisée
-        # commence bien par la traduction française attendue.
-        for offset in patch.TARGETS:
-            self.assertNotIn(struct.pack("<I", BASE + offset), bytes(rom))
-        prefix = _encode("Il y a trente ans")[:-1]
-        self.assertIn(prefix, bytes(rom))
+        # Pour CHAQUE cible : plus aucun pointeur vivant vers l'original anglais,
+        # et la copie relocalisée contient bien le préfixe français attendu.
+        for offset, prefix in patch.TARGETS.items():
+            self.assertNotIn(
+                struct.pack("<I", BASE + offset), bytes(rom),
+                msg=f"0x{offset:08X}: un pointeur vise encore l'original anglais",
+            )
+            self.assertIn(
+                _encode(prefix)[:-1], bytes(rom),
+                msg=f"0x{offset:08X}: préfixe FR « {prefix} » absent de la ROM",
+            )
 
 
 if __name__ == "__main__":
