@@ -28,6 +28,15 @@ sys.path.insert(0, str(ROOT_DIR))
 
 GBA_BASE = 0x08000000
 
+# Event-script bytecode whose bytes coincidentally read as a valid text
+# pointer must never be repointed: the pointer scan that feeds this pass
+# cannot tell a real pointer from a `setflag`/operand run that happens to
+# equal a string's GBA address. These windows live inside the Ho-Oh/Lugia
+# ritual script and read as 0x09F62908 ("I swam, of course!"); rewriting them
+# breaks the cutscene so the legendary battle never launches. See
+# scripts/patch_legendary_ritual_fr.py for the full diagnosis.
+PROTECTED_SCRIPT_OFFSETS: frozenset[int] = frozenset({0x1E8C677, 0x1E8C782})
+
 
 def _parse_pointer_locations(entry: dict) -> list[int]:
     locations = []
@@ -137,6 +146,9 @@ def repoint(
 
         for loc in stale:
             if in_translated_text(loc):
+                continue
+            if loc in PROTECTED_SCRIPT_OFFSETS:
+                # Script bytecode masquerading as a text pointer — leave it.
                 continue
             struct.pack_into('<I', rom, loc, target)
             fixed += 1
