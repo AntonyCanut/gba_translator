@@ -1,0 +1,223 @@
+"""E2E regression guard: the Ho-Oh -> Lugia *ritual* cutscene is byte-for-byte
+logic-identical between EN and FR, and contains no unterminated strings.
+
+== What this protects ==
+
+The reported bug ("after the Ho-Oh battle, the Lugia battle never triggers, in
+FR") would, if it were a *translation* regression, have to manifest as one of
+exactly two things inside the encounter script:
+
+  1. a SCRIPT-COMMAND change  -> the FR pipeline overwrote a setflag / compare /
+     goto / battle opcode, breaking the chain that leads from Ho-Oh to Lugia; or
+  2. an UNTERMINATED STRING   -> an in-place FR string lost its 0xFF terminator,
+     so GetStringWidth loops forever (a freeze) before the Lugia command runs.
+
+Both are checked here against the real ROMs.
+
+== Where the encounter actually lives ==
+
+Ho-Oh and Lugia are summoned by Hoopa during the Aklove "Prison Bottle" ritual
+in the Temple of the Void. The script is in CFRU-expanded ROM:
+
+  region              [0x1E8B000, 0x1E8D400)
+  Lugia setwildbattle  0x1E8CB9B : b6 f9 00 4b 00 00   (f9 00 = Lugia, dex 249)
+  Ho-Oh setwildbattle  0x1E8CC34 : b6 fa 00 4b 00 00   (fa 00 = Ho-Oh, dex 250)
+
+After each battle the script reads the outcome:
+
+  ... 25 38 01      special 0x0138         (run the scripted wild battle)
+      27            waitstate
+      26 0d 80 b4   specialvar VAR_0x800D = special 0xB4   (= battle outcome)
+      21 0d 80 ..   compare VAR_0x800D to {4,5,7} -> branch
+
+and BOTH the "defeated" (fall-through) and "caught" (outcome 7) branches set the
+progression var `16 00 80 0f 80` = setvar VAR_0x8000 = 0x800F, so catching Ho-Oh
+with a Quick Ball does NOT dead-end the ritual — it advances to Lugia exactly
+like defeating it. (This was the prime suspect for the report; it is ruled out
+in code.)
+
+== The invariant ==
+
+Across the whole region, EVERY byte that differs between EN and FR is a 4-byte
+text pointer (EN -> 0x09Fxxxxx original text region, FR -> relocated free space).
+There is not a single differing script-command byte. If a future build ever
+mutates one encounter opcode, `test_ritual_logic_byte_identical` goes red.
+"""
+
+from __future__ import annotations
+
+import pathlib
+
+import pytest
+
+PROJECT_ROOT = pathlib.Path(__file__).resolve().parent.parent.parent
+EN_ROM_PATH = PROJECT_ROOT / "input" / "roms" / "englishrom.gba"
+FR_ROM_PATH = PROJECT_ROOT / "output" / "roms" / "GenedRom-fr.gba"
+
+GBA_BASE = 0x08000000
+GBA_END = 0x0A000000
+
+# The Aklove / Hoopa portal ritual script region.
+RITUAL_LO = 0x1E8B000
+RITUAL_HI = 0x1E8D400
+
+# Verified battle-command offsets (setwildbattle opcode 0xB6, species, lvl, item).
+LUGIA_SETWILD = 0x1E8CB9B  # b6 f9 00 4b 00 00
+HOOH_SETWILD = 0x1E8CC34   # b6 fa 00 4b 00 00
+SPECIES_LUGIA = 0xF9
+SPECIES_HOOH = 0xFA
+
+# specialvar VAR_0x800D = special 0xB4  -> reads the battle outcome.
+OUTCOME_READ = bytes([0x26, 0x0D, 0x80, 0xB4, 0x00])
+# setvar VAR_0x8000 = 0x800F  -> the ritual-progression advance.
+ADVANCE_VAR = bytes([0x16, 0x00, 0x80, 0x0F, 0x80])
+
+
+@pytest.fixture(scope="module")
+def en() -> bytes:
+    if not EN_ROM_PATH.exists():
+        pytest.skip("englishrom.gba not found")
+    return EN_ROM_PATH.read_bytes()
+
+
+@pytest.fixture(scope="module")
+def fr() -> bytes:
+    if not FR_ROM_PATH.exists():
+        pytest.skip("GenedRom-fr.gba not found")
+    return FR_ROM_PATH.read_bytes()
+
+
+def _rd32(rom: bytes, o: int) -> int:
+    return rom[o] | rom[o + 1] << 8 | rom[o + 2] << 16 | rom[o + 3] << 24
+
+
+def _is_ptr(rom: bytes, o: int) -> bool:
+    if o + 4 > len(rom):
+        return False
+    return GBA_BASE <= _rd32(rom, o) < GBA_END
+
+
+def _diff_ranges(en: bytes, fr: bytes, lo: int, hi: int):
+    ranges = []
+    i = lo
+    while i < hi:
+        if en[i] != fr[i]:
+            j = i
+            while j < hi and en[j] != fr[j]:
+                j += 1
+            ranges.append((i, j))
+            i = j
+        else:
+            i += 1
+    return ranges
+
+
+def test_ritual_logic_byte_identical(en: bytes, fr: bytes):
+    """Every EN/FR difference in the ritual script is a relocated text pointer.
+
+    Zero script-command bytes may differ. A failure here means the translation
+    pipeline mutated an encounter opcode (flag / compare / goto / battle), which
+    is exactly the class of change that could stop Lugia from triggering.
+    """
+    ranges = _diff_ranges(en, fr, RITUAL_LO, RITUAL_HI)
+    assert ranges, "expected text-pointer relocations in the FR ritual region"
+
+    non_pointer = []
+    for a, b in ranges:
+        # A legitimate translation diff is a 4-byte run that is a valid ROM
+        # pointer in BOTH roms (EN original text -> FR relocated free space).
+        if (b - a) == 4 and _is_ptr(en, a) and _is_ptr(fr, a):
+            continue
+        non_pointer.append((a, b, en[a:b].hex(), fr[a:b].hex()))
+
+    assert not non_pointer, (
+        "FR translation altered NON-text bytes in the Ho-Oh/Lugia ritual script "
+        "(possible encounter-logic regression):\n"
+        + "\n".join(
+            f"  0x{a:07X}..0x{b:07X} EN={eh} FR={fh}" for a, b, eh, fh in non_pointer
+        )
+    )
+
+
+def test_battle_commands_present_and_identical(en: bytes, fr: bytes):
+    """Both setwildbattle commands exist, with the right species, identical EN/FR."""
+    for off, species, name in (
+        (LUGIA_SETWILD, SPECIES_LUGIA, "Lugia"),
+        (HOOH_SETWILD, SPECIES_HOOH, "Ho-Oh"),
+    ):
+        assert fr[off] == 0xB6, f"{name}: setwildbattle opcode 0xB6 missing @ 0x{off:07X}"
+        assert fr[off + 1] == species, (
+            f"{name}: species byte 0x{species:02X} missing @ 0x{off + 1:07X} "
+            f"(got 0x{fr[off + 1]:02X})"
+        )
+        assert fr[off + 2] == 0x00, f"{name}: species high byte must be 0x00"
+        # Logic must match EN exactly across the whole 6-byte command.
+        assert en[off:off + 6] == fr[off:off + 6], (
+            f"{name}: setwildbattle command differs EN vs FR @ 0x{off:07X}"
+        )
+
+
+def test_outcome_read_follows_each_battle(en: bytes, fr: bytes):
+    """The battle-outcome read (specialvar 0xB4) appears shortly after each battle."""
+    for off, name in ((LUGIA_SETWILD, "Lugia"), (HOOH_SETWILD, "Ho-Oh")):
+        window = fr[off:off + 0x20]
+        assert OUTCOME_READ in window, (
+            f"{name}: battle-outcome read {OUTCOME_READ.hex()} not found after "
+            f"setwildbattle @ 0x{off:07X}"
+        )
+
+
+def test_catching_hooh_does_not_dead_end_lugia(en: bytes, fr: bytes):
+    """Both the 'defeated' and 'caught' Ho-Oh branches set the progression var.
+
+    Documents (and guards) the in-code fact that capturing Ho-Oh with a Quick
+    Ball advances the ritual to Lugia exactly like KO'ing it — the outcome-7
+    (CAUGHT) branch sets `setvar VAR_0x8000 = 0x800F` just like the fall-through
+    (defeated) branch. The two occurrences live in the Ho-Oh block, between its
+    battle command and the next block.
+    """
+    block = fr[HOOH_SETWILD:HOOH_SETWILD + 0x90]
+    occurrences = block.count(ADVANCE_VAR)
+    assert occurrences >= 2, (
+        "expected the Ho-Oh progression var (setvar VAR_0x8000=0x800F) on BOTH "
+        f"the defeated and caught branches; found {occurrences} occurrence(s). "
+        "If this drops to 1, catching Ho-Oh may no longer chain into Lugia."
+    )
+    # And the same logic must hold in EN (proves it is not an FR-specific change).
+    assert en[HOOH_SETWILD:HOOH_SETWILD + 0x90].count(ADVANCE_VAR) == occurrences
+
+
+def _loadpointer_text_refs(rom: bytes, lo: int, hi: int):
+    """Yield (site, target_offset) for every `0F 00 <ptr>` text load in [lo,hi)."""
+    refs = []
+    for o in range(lo, hi - 6):
+        if rom[o] == 0x0F and rom[o + 1] == 0x00:
+            p = _rd32(rom, o + 2)
+            if GBA_BASE <= p < GBA_END:
+                refs.append((o, p - GBA_BASE))
+    return refs
+
+
+def test_all_ritual_strings_terminated(fr: bytes):
+    """No string referenced by the ritual script is unterminated (freeze guard).
+
+    An in-place FR string that overflowed its slot would lose the neighbouring
+    0xFF, and the engine's word-wrapper would loop forever when the box renders
+    — appearing in-game as "the game froze and Lugia never came". Every text
+    pointer in the script must resolve to a 0xFF within a sane length.
+    """
+    MAX = 800  # longest legit multi-page dialogue here is ~632 bytes, terminated.
+    refs = _loadpointer_text_refs(fr, RITUAL_LO, RITUAL_HI)
+    assert len(refs) > 100, "sanity: expected many text refs in the ritual script"
+
+    unterminated = []
+    for site, off in refs:
+        window = fr[off:off + MAX]
+        if 0xFF not in window:
+            unterminated.append((site, off))
+
+    assert not unterminated, (
+        "Unterminated FR string(s) referenced by the ritual script — would "
+        "freeze the cutscene before Lugia triggers:\n"
+        + "\n".join(f"  site 0x{s:07X} -> text 0x{o:07X}" for s, o in unterminated)
+    )
