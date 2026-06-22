@@ -34,17 +34,22 @@ the ``setflag`` chain mangled the script never reaches the battle: after
 simply stands in the overworld and **the battle never starts** — and because
 the ritual never advances, Lugia never appears either. On the English ROM the
 same save launches the battle normally, proving it is a build artifact and
-not a translation choice. The identical corruption exists twice, once on the
-Ho-Oh branch (0x1E8C677) and once on the Lugia branch (0x1E8C782).
+not a translation choice. The identical corruption occurs at **13 sites**
+across the legendary cutscene scripts — Groudon's Red-Orb summon (0x1E59D1F),
+the Ho-Oh branch (0x1E8C677), the Lugia branch (0x1E8C782) and ~10 siblings.
 
 THE FIX
 -------
 Restore the four canonical script bytes at each site from the English source
-ROM. This leaves every legitimately-relocated French *string* pointer intact
-(those are real pointers and are correctly French) and only undoes the two
-false-positive writes into script bytecode. Verified in-engine with mGBA: the
-Ho-Oh battle auto-launches after the cutscene exactly as on the English ROM,
-with the French dialogue (incl. the "Hoo hoo hoo !" cry) preserved.
+ROM. Sites are *discovered* by signature (CANON window preceded by a `setflag`
+opcode), not enumerated — an earlier allow-list of just Ho-Oh/Lugia left the
+Groudon summon (and 8 other sites) clobbered after every rebuild. This leaves
+every legitimately-relocated French *string* pointer intact (the two genuine
+relocated pointers 0x1E8738D / 0x1E873B4 share the bytes but lack the leading
+`setflag` opcode, so discovery excludes them) and only undoes the false-positive
+writes into script bytecode. Verified in-engine with mGBA: the legendary battle
+auto-launches after the cutscene exactly as on the English ROM, with the French
+dialogue preserved.
 
 Usage:
     python3 scripts/patch_legendary_ritual_fr.py \
@@ -59,24 +64,55 @@ from pathlib import Path
 
 GBA_BASE = 0x08000000
 
-# File offsets of the two clobbered script windows. Both sit inside the
-# legendary-ritual event script (0x1E8B000-0x1E8D400) and, in English, hold
-# the canonical bytes 08 29 F6 09 (the tail of `setflag 0x08E2` plus
-# `setflag 0x09F6`). The corruption rewrites them to a French-text pointer
-# (0x08C277E1 -> "J'ai nagé, bien sûr !"), which is the signature we expect.
-RITUAL_SCRIPT_FIXES: tuple[tuple[int, str], ...] = (
-    (0x1E8C677, "Ho-Oh branch"),
-    (0x1E8C782, "Lugia branch"),
-)
+# The canonical 4-byte window at every clobbered site: the tail of
+# `setflag 0x08E2` plus `setflag 0x09F6`. In little-endian it equals
+# 0x09F62908 — the English address of "I swam, of course!" — which is exactly
+# why the repointer false-matched script bytecode here.
+CANON = bytes((0x08, 0x29, 0xF6, 0x09))
+SETFLAG_OPCODE = 0x29
 
 # The relocated French string the repointer wrongly pointed these windows at.
 # Used only as a sanity signature so the patch is a strict no-op once correct.
 CORRUPT_POINTER = 0x08C277E1
 
+# Named branches kept for documentation/logging. Discovery (below) finds these
+# AND the ~10 other cutscene scripts sharing the identical setflag-chain
+# signature — an allow-list of just Ho-Oh/Lugia previously left Groudon (and 8
+# others) clobbered after every rebuild, so the summon looped forever.
+NAMED_SITES: dict[int, str] = {
+    0x1E59D1F: "Groudon (Red Orb summon)",
+    0x1E8C677: "Ho-Oh branch",
+    0x1E8C782: "Lugia branch",
+}
+
+
+def discover_clobbered_sites(source: bytes) -> list[int]:
+    """Every event-script `setflag` chain whose 4-byte window equals CANON.
+
+    A genuine *relocated text pointer* also holds CANON in the English source
+    (it really is a pointer to "I swam, of course!"), so the window alone is
+    ambiguous. The discriminator is the preceding byte: a real setflag chain
+    has the previous `setflag` opcode (0x29) two bytes before the window; a
+    genuine pointer does not. This includes Groudon/Ho-Oh/Lugia + ~10 sibling
+    cutscene scripts and excludes the two legitimate relocated pointers
+    (0x1E8738D, 0x1E873B4) that must stay French.
+    """
+    sites: list[int] = []
+    start = 0
+    while True:
+        off = source.find(CANON, start)
+        if off == -1:
+            break
+        start = off + 1
+        if off >= 2 and source[off - 2] == SETFLAG_OPCODE:
+            sites.append(off)
+    return sites
+
 
 def patch(rom: bytearray, source: bytes) -> int:
     fixed = 0
-    for offset, label in RITUAL_SCRIPT_FIXES:
+    for offset in discover_clobbered_sites(source):
+        label = NAMED_SITES.get(offset, "cutscene setflag chain")
         canonical = source[offset:offset + 4]
         current = bytes(rom[offset:offset + 4])
         if current == canonical:
