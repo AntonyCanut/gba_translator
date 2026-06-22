@@ -7649,7 +7649,7 @@ va utiliser {PLAYER}.<0xFB>Changer ?
 {UNKNOWN_STR} !",
 0x003FD1C7,"You defeated
 <0xFD><0x1C> <0xFD><0x1D>!<0xFB>",<0x52><0xFD><0x1C> <0xFD><0x1D> ha perdido!<0xFB>,20,4,24,pokemon,dialogue,"Vaincu <0xFD><0x1C>
-<0xFD><0x1D>!<0xFB>",
+<0xFD><0x1D>!<0xFC><0x08><0x7F><0xFB>",
 0x003FD1DF,"<0xFD>ó threw a ROCK
 at the <0xFD><0x06>!",<0x52>Has lanzado una roca a ,26,3,29,pokemon,dialogue,"{B_PLAYER_NAME} a lancé un ROCHE
 sur le {RIVAL} !",
@@ -17217,9 +17217,14 @@ suffisait pas à assurer ma victoire.",
 anyone who passes by.","I'm camping out here to scare
 anyone who passes by.",51,5,56,pokemon,description,"Je campe ici pour effrayer les gens
 qui passent.",
+0x0074B29E,"Epidimy Town<0xFB>A quaint town surrounded by
+mountains.","Epidimy Town<0xFB>A quaint town surrounded by
+mountains.",51,3,54,pokemon,dialogue,"Ville d'Epidimy<0xFB>Une ville pittoresque entourée de
+montagnes.",
 0x0074B2DF,Fallshore City<0xFB>The waterfall capital of Borrius.,"Ciudad Costera
 <0xB1>Las cascadas de Borrius<0xB2>",48,2,50,pokemon,description,Fallshore<0xFB>La capitale des cascades de Borrius.,
 0x0074B2EE,The waterfall capital of Borrius.,,33,2,35,pokemon,description,,
+0x0074B31C,Tehl Town<0xFB>A town where it's always Autumn.,Tehl Town<0xFB>A town where it's always Autumn.,42,2,44,pokemon,description,Ville de Tehl<0xFB>Une ville où c'est toujours l'Automne.,
 0x0074B381,"Running across a bridge in the
 rain""<0xFB>It feels amazing!","Running across a bridge in the
 rain""<0xFB>It feels amazing!",54,4,58,pokemon,dialogue,"Courir sur un pont sous la pluie...
@@ -18125,8 +18130,8 @@ lives in the forest!<0xFB><0xFC><0x01><0x06>The Crabominable Snowman<0xFC><0x01>
 dans la forêt !<0xFB>{COLOR}ÉLe Crabe Yéti{COLOR}Ë !<0xFB>Sauvez-vous !",
 0x00765B7E,"Route 17<0xFB><0x7B> Route 16
 à Seaport City","Route 17<0xFB><0x7B> Route 16
-à Seaport City",34,4,38,pokemon,description,"Route 17<0xFB><0x7B> Route 16 <0x7C>
-Ville Portuaire",
+à Seaport City",34,4,38,pokemon,description,"Route 17<0xFB><0x7B> Route 16
+<0x7C> Ville Portuaire",
 0x00765BFF,Come on!,Come on!,8,7,15,pokemon,dialogue,Allez !,
 0x0076CE9D,"You're in for a real shocker, kid.<0xFB>I've just called back all grunts
 standing guard at the barrier, so<0xFA>now we're all over this route!","You're in for a real shocker, kid.<0xFB>I've just called back all grunts
@@ -18788,10 +18793,35 @@ would, years ago""",175,4,179,pokemon,dialogue,"{RIVAL} : {COLOR}ËUn jour ?<0xF
 moi, vieux !<0xFB>Je te le demande depuis Arceus sait
 combien de temps !<0xFB>Franchement, j'ai arrêté d'y croire
 il y a des années...",
+0x0077EFC1,"Route 7<0xFB><0x79> Frost Mountain, Route 8
+<0x7A> Route 9<0xFA><0x7C> Route 6","Route 7<0xFB><0x79> Frost Mountain, Route 8
+<0x7A> Route 9<0xFA><0x7C> Route 6",53,2,55,pokemon,description,"Route 7<0xFB><0x79> Mont Givre, Route 8
+<0x7A> Route 9<0xFA><0x7C> Route 6",
 0x0077F003,Frost Mountain,Montaña Helada,14,2,16,pokemon,location,,
+0x0077F01E,"Route 8<0xFB><0x79> Blizzard City
+<0x7A> Frost Mountain, Route 7","Route 8<0xFB><0x79> Blizzard City
+<0x7A> Frost Mountain, Route 7",49,2,51,pokemon,description,"Route 8<0xFB><0x79> Ville Blizzard
+<0x7A> Mont Givre, Route 7",
+0x0077F05C,"Route 9<0xFB><0x79> Route 7, Frost Mountain
+<0x7A> Tehl Town","Route 9<0xFB><0x79> Route 7, Frost Mountain
+<0x7A> Tehl Town",45,2,47,pokemon,description,"Route 9<0xFB><0x79> Route 7, Mont Givre
+<0x7A> Ville de Tehl",
+0x0077F096,"Route 9<0xFB><0x79> Route 7, Frost Mountain
+<0x7C> Tehl Town","Route 9<0xFB><0x79> Route 7, Frost Mountain
+<0x7C> Tehl Town",45,2,47,pokemon,description,"Route 9<0xFB><0x79> Route 7, Mont Givre
+<0x7C> Ville de Tehl",
+0x0077F0D0,"Route 10<0xFB><0x7B> Tehl Town
+<0x79> Auburn Waterwa<0xFA><0x7C> Fallshore City","Route 10<0xFB><0x7B> Tehl Town
+<0x79> Auburn Waterwa<0xFA><0x7C> Fallshore City",54,2,56,pokemon,description,"Route 10<0xFB><0x7B> Ville de Tehl
+<0x79> Voie d'Eau Auburn<0xFA><0x7C> Ville de Fallshore",
+0x0077F113,"Route 10<0xFB><0x7B> Tehl Town
+<0x7C> Fallshore City","Route 10<0xFB><0x7B> Tehl Town
+<0x7C> Fallshore City",37,2,39,pokemon,description,"Route 10<0xFB><0x7B> Ville de Tehl
+<0x7C> Ville de Fallshore",
 0x0077F139,Crater Town<0xFB>A town built from ash.,Ciudad Cráter: <0x52>Hecha de cenizas!,34,2,36,pokemon,description,Bourg Cratère<0xFB>Une ville bâtie sur la cendre.,
 0x0077F145,A town built from ash.,,22,2,24,pokemon,other,,
 0x0077F15C,<0x6A><0x5A><0x0F> <0x68><0xF1><0x77><0x08><0x09><0x03><0x6C><0x02>Frozen Heights<0xFB>An island town on a frozen lake.,<0x6A><0x5A><0x0F> <0x68><0xF1><0x77><0x08><0x09><0x03><0x6C><0x02>Frozen Heights<0xFB>An island town on a frozen lake.,59,2,61,pokemon,description,,
+0x0077F168,Frozen Heights<0xFB>An island town on a frozen lake.,Frozen Heights<0xFB>An island town on a frozen lake.,47,2,49,pokemon,description,Hauteurs Gelées<0xFB>Une ville insulaire sur un lac gelé.,
 0x0077F198,"My grandfather knows a lot of
 interesting people!<0xFB>You should talk to him!","My grandfather knows a lot of
 interesting people!<0xFB>You should talk to him!",73,4,77,pokemon,dialogue,"Mon grand-père connaît plein de
@@ -18973,6 +19003,7 @@ n'ai même pas atteint le Champion !<0xFB>Il faisait si sombre que je ne
 voyais pas où j'allais.<0xFB>Même Flash ne m'a pas aidée à y voir
 plus clair.<0xFB>C'est dire l'obscurité.",
 0x007806F6,"Grint 2: <0xFC><0x01><0x08>Alright, then.<0xFB>Let's move into position.","Grint 2: <0xFC><0x01><0x08>Alright, then.<0xFB>Let's move into position.",52,1,53,pokemon,description,Sbire 2 : {COLOR}ËTrès bien.<0xFB>En position.,
+0x007808DE,Epidimy Town<0xFB>The town of happiness and bliss.,Epidimy Town<0xFB>The town of happiness and bliss.,45,2,47,pokemon,dialogue,Ville d'Epidimy<0xFB>La ville du bonheur et de la joie.,
 0x007809B9,Crikey.,Crikey.,7,3,10,pokemon,other,Bigre.,
 0x007809C4,"Hi there, young traveller.
 Your Pokémon look tired.<0xFB>Let me heal them for you.","Hi there, young traveller.
@@ -20528,6 +20559,10 @@ was sent here?<0xFB>It feels like I arrived only
 hours ago""",112,5,117,pokemon,dialogue,"{COLOR}ËLa vraie question est...<0xFB>Combien de temps a passé depuis
 qu'on m'a envoyé ici ?<0xFB>J'ai l'impression d'être arrivé il
 y a à peine quelques heures...",
+0x007A6B49,"Route 6<0xFB><0x79> Valley Cave
+<0x7A> Auburn Waterway<0xFA><0x7B> Route 7, Frost Mountain<0xFA><0x7C> Route 14","Route 6<0xFB><0x79> Valley Cave
+<0x7A> Auburn Waterway<0xFA><0x7B> Route 7, Frost Mountain<0xFA><0x7C> Route 14",76,6,82,pokemon,description,"Route 6<0xFB><0x79> Grotte Vallée
+<0x7A> Voie d'Eau Auburn<0xFA><0x7B> Route 7, Mont Givre<0xFA><0x7C> Route 14",
 0x007A6BB4,Stop!<0xFB>Identify yourself!,Stop!<0xFB>Identify yourself!,24,9,33,pokemon,dialogue,Halte !<0xFB>Identifie-toi !,
 0x007A6C49,"Why are we after Zapdos?<0xFB>""<0xFB>Beats me.","Why are we after Zapdos?<0xFB>""<0xFB>Beats me.",36,2,38,pokemon,dialogue,Pourquoi on poursuit Électhor ?<0xFB>...<0xFB>Aucune idée.,
 0x007A6D09,"Blizzard City Pokémon Gym
@@ -21153,6 +21188,10 @@ cher.",
 No respect for their elders.","Youngsters like you""
 No respect for their elders.",49,11,60,pokemon,dialogue,"Les jeunes comme toi... Aucun respect
 pour les aînés.",
+0x007B456B,"Bellin Town<0xFB>A quiet town nestled deep in the
+mountains.","Bellin Town<0xFB>A quiet town nestled deep in the
+mountains.",55,2,57,pokemon,description,"Bellinville<0xFB>Une ville paisible nichée au coeur des
+montagnes.",
 0x007B45A3,"Trainer House
 Battle to your heart's content!","Trainer House
 Battle to your heart's content!",45,7,52,pokemon,dialogue,"Maison des Dresseurs Combat à
@@ -21453,10 +21492,30 @@ will sneak past the gate check.",105,3,108,pokemon,dialogue,"Tu prépares un mau
 out of nowhere and obliterated all<0xFA>of my Pokémon before I even had a<0xFA>chance to react!","This guy with red hair just came
 out of nowhere and obliterated all<0xFA>of my Pokémon before I even had a<0xFA>chance to react!",118,3,121,pokemon,dialogue,"Un type aux cheveux roux est sorti
 de nulle part et a anéanti tous<0xFA>mes Pokémon avant même que j'aie<0xFA>le temps de réagir !",
+0x007B882F,"Route 11<0xFB><0x7B> Fallshore City
+<0x7C> Epidimy Town","Route 11<0xFB><0x7B> Fallshore City
+<0x7C> Epidimy Town",40,2,42,pokemon,dialogue,"Route 11<0xFB><0x7B> Ville de Fallshore
+<0x7C> Ville d'Epidimy",
+0x007B8864,"Route 1<0xFB><0x79> Frozen Heights
+<0x7A> Bellin Town, Icicle Cave","Route 1<0xFB><0x79> Frozen Heights
+<0x7A> Bellin Town, Icicle Cave",51,2,53,pokemon,description,"Route 1<0xFB><0x79> Hauteurs Gelées
+<0x7A> Bellinville, Grotte Stalactite",
+0x007B88A4,"Route 1<0xFB><0x79> Frozen Heights, Icicle Cave
+<0x7A> Bellin Town","Route 1<0xFB><0x79> Frozen Heights, Icicle Cave
+<0x7A> Bellin Town",51,2,53,pokemon,description,"Route 1<0xFB><0x79> Hauteurs Gelées, Grotte Stalactite
+<0x7A> Bellinville",
+0x007B88E4,"Route 2<0xFB><0x7B> Dresco Town
+<0x7C> Icicle Cave","Route 2<0xFB><0x7B> Dresco Town
+<0x7C> Icicle Cave",35,2,37,pokemon,description,"Route 2<0xFB><0x7B> Dresco
+<0x7C> Grotte Stalactite",
 0x007B8989,"Afterlife, Shadow Base,
 Great Desert, Gurun Town","Afterlife, Shadow Base,
 Great Desert, Gurun Town",48,2,50,pokemon,description,"L'Au-delà, Base de l'Ombre, Grand
 Désert, Bourg Gurun",
+0x007B89DB,"Route 5<0xFB><0x79> Route 4
+<0x7A> Crater Town","Route 5<0xFB><0x79> Route 4
+<0x7A> Crater Town",31,3,34,pokemon,description,"Route 5<0xFB><0x79> Route 4
+<0x7A> Bourg Cratère",
 0x007B89FD,"Two bridges""<0xFB>If you beat me, I'll tell you which
 one gets you to the next route!","Dos puentes""<0xFB><0x52>Si me ganas, te diré cuál te llevará
 a la siguiente ruta!",80,7,87,pokemon,dialogue,"Deux ponts... Si tu me bats, je dis
@@ -21576,9 +21635,8 @@ chef. Les gens que vous m'aviez<0xFA>demandé de surveiller ont trouvé<0xFA>des
 ",
 0x007BA378,"Auburn Waterway<0xFB><0x79> Route 6, Valley Cave
 <0x7A> Route 10","Auburn Waterway<0xFB><0x79> Route 6, Valley Cave
-<0x7A> Route 10",49,3,52,pokemon,description,"Voie d'Eau Auburn <0x79> Route
-<0xFB>6, Grotte Vallée <0x7A> Route
-10",
+<0x7A> Route 10",49,3,52,pokemon,description,"Voie d'Eau Auburn<0xFB><0x79> Route 6, Grotte Vallée
+<0x7A> Route 10",
 0x007BA408,Power Grid,Power Grid,10,2,12,pokemon,location,"Centrale
 ",
 0x007BA42C,Dream Research Lab<0xFB>We study your dreams.,Dream Research Lab<0xFB>We study your dreams.,40,2,42,pokemon,dialogue,"Laboratoire des Rêves Nous étudions
@@ -24883,8 +24941,8 @@ more berries!",60,1,61,pokemon,dialogue,"Ouh hou hou !<0xFB>Je reviens demain ch
 baies !",
 0x007DE4DA,"Great Desert<0xFB><0x7B> Dehara City
 à Gurun Town","Great Desert<0xFB><0x7B> Dehara City
-à Gurun Town",39,94,133,pokemon,description,"Grand Désert<0xFB><0x7B> Ville de
-Dehara <0x7C> Bourg Gurun",
+à Gurun Town",39,94,133,pokemon,description,"Grand Désert<0xFB><0x7B> Ville de Dehara
+<0x7C> Bourg Gurun",
 0x007DE560,"<0xFC><0x01><0x08>Now, someone take his ashes to the
 lab!<0xFB>Let's at least make something
 useful of this failure.","<0xFC><0x01><0x08>Now, someone take his ashes to the
@@ -24950,6 +25008,10 @@ Dresseur.",
 way just leads to a dead end.","Unless you can Surf, going this
 way just leads to a dead end.",61,712,773,pokemon,dialogue,"Sans Surf, cette direction mène à
 une impasse.",
+0x007E6B89,"Route 12<0xFB><0x79> Dehara City
+<0x7A> Tarmigan Town<0xFA><0x7B> Route 14","Route 12<0xFB><0x79> Dehara City
+<0x7A> Tarmigan Town<0xFA><0x7B> Route 14",49,4,53,pokemon,description,"Route 12<0xFB><0x79> Ville de Dehara
+<0x7A> Tarmiganville<0xFA><0x7B> Route 14",
 0x007E6C96,"You removed the cloak from the
 Shadow Warrior.","You removed the cloak from the
 Shadow Warrior.",46,2,48,pokemon,dialogue,"Tu retires la cape du Guerrier de
@@ -27437,7 +27499,7 @@ est parvenu à <0xFD><0x00> !",
 0x0083008C,"<0xFD> 's <0xFD><0x01> is reacting
 to <0xFD><0x02>'s <0xFD><0x03>!","<0xFD> 's <0xFD><0x01> is ssacting
 to <0xFD><0x02>'s <0xFD><0x03>!",31,1,32,pokemon,dialogue,"Le <0xFD><0x01> de <0xFD><0x00> réagit
-à la <0xFD><0x03> de <0xFD><0x02> !",
+au <0xFD><0x03> de <0xFD><0x02>!",
 0x00830CE0,"<0xFD><0x0F>'s <0xFD><0x18>
 made it rain!","<0xFD><0x0F>'s <0xFD><0x18>
 made it rain!",21,2,23,pokemon,dialogue,"Les <0xFD><0x0F> de <0xFD><0x18> ont fait
@@ -32345,6 +32407,10 @@ poder de <0xFD><0x14>!",36,2,38,pokemon,dialogue,"Le <0xFD><0x16> renforce
 0x0096CB07,"<0xFD><0x13>'s <0xFD><0x16>
 reduced <0xFD><0x14>'s power!",,27,2,29,pokemon,dialogue,"Le <0xFD><0x13> de <0xFD><0x16>
 réduit la puissance de <0xFD><0x14> !",
+0x0096CC1C,"<0xFD> 's <0xFD>à is reacting
+to <0xFD><0x39>'s <0xFD>À!","<0x52><0xFD>à ha reaccionado a
+<0xFD>À de <0xFD><0x39>!",31,3,34,pokemon,dialogue,"Le <0xFD><0x16> de <0xFD><0x00> réagit
+au <0xFD><0x01> de <0xFD><0x39>!",
 0x0096CC3C,"<0xFD><0x13> Mega Evolved
 into Mega <0xFD><0x34>!",,29,2,31,pokemon,dialogue,"<0xFD><0x13> Méga-Évolue
 en Méga <0xFD><0x34><0x34> !",
@@ -38340,8 +38406,7 @@ apparaît !<0xFB>",
 0x00A4C666,your,,4,3,7,pokemon,dialogue,ton,
 0x00A4C66B,Your,,4,3,7,pokemon,dialogue,Ton,
 0x00A4C670,"You got <0xB7><0xFD> 
-for winning!",,24,3,27,pokemon,dialogue,"Tu gagnes ¥{UNKNOWN_STR} !
-",
+for winning!",,24,3,27,pokemon,dialogue,Tu gagnes ¥{UNKNOWN_STR} !<0xFC><0x09>,
 0x00A4C67A," 
 for winning!",,14,3,17,pokemon,dialogue,,
 0x00A4C689,"You have no more Pokémon
@@ -75103,12 +75168,12 @@ Démolosse et moi allons<0xFA>t'apprendre ce qu'est la douleur.",
 0x01F32950,show you the meaning of pain.,,29,2,31,pokemon,dialogue,,
 0x01F3296E,"<0xFC><0x01><0x04>Zeph, I'm not sure Houndoom alone
 will be enough to beat <0xFD><0x02>""","<0xFC><0x01><0x04>Zeph, no estoy segura de que
-Houndoom pueda vencerle""",63,2,65,pokemon,description,"{COLOR}ÇZeph, je ne suis pas sûr que
-Démolosse suffise à battre {STR_VAR_1}...",
+Houndoom pueda vencerle""",63,2,65,pokemon,description,"<0xFC><0x01><0x04>Zeph, je ne suis pas sûr que
+Démolosse suffise à te battre...",
 0x01F329AE,"You doubt me, Ivory?<0xFB>Houndoom and I are more than
 capable of finishing <0xFD><0x02> off.","<0x51>Dudas de mí, Ivory?<0xFB>Houndoom y yo somos más que capaces
 de vencerle.",78,2,80,pokemon,dialogue,"Tu doutes de moi, Ivory ?<0xFB>Démolosse et moi sommes largement
-capables d'en finir avec <0xFD><0x02>.",
+capables d'en finir avec toi.",
 0x01F329F7, off.,,5,2,7,pokemon,other,,
 0x01F329FD,"Now then, <0xFD><0x01>.<0xFB>I've been quite patient with you,
 but I'm afraid you've forced<0xFA>my hand.<0xFB>Time to suffer for your interference!","Bien, <0xFD><0x01>.<0xFB>He sido bastante paciente contigo,
@@ -79272,8 +79337,7 @@ est. Tu veux le voir<0xFB>?",
 0x01F4544C,"Then, in that case""",,19,2,21,pokemon,other,"Alors, dans ce cas...",
 0x01F45460,"Hoopa, take this for your wounds.","Hoopa, ten esto para tus heridas.",33,2,35,pokemon,dialogue,"Hoopa, prends ça pour te soigner.",
 0x01F45482,"Now, send <0xFD><0x01> to join <0xFD><0x02> friend!","Ahora, envía a <0xFD><0x01> con
-su amigo.",31,2,33,pokemon,dialogue,"Envoie <0xFD><0x01> rejoindre son ami
-<0xFD><0x02> !",
+su amigo.",31,2,33,pokemon,dialogue,Envoie {PLAYER} rejoindre son ami !,
 0x01F45499, friend!,,8,2,10,pokemon,dialogue,,
 0x01F454E9,"<0xFD><0x01>! Is that really you?<0xFB>I didn't think I'd see a friendly
 face in here.<0xFB>I don't know how long I've been
@@ -102083,8 +102147,8 @@ gosse ! Ne {STR_VAR_2} sous-estimez<0xFB>pas, ou vous allez vous faire botter
 les fesses plus vite que vous ne<0xFA>pouvez dire ""Granbull"" !",
 0x01FA6E9F,"Don't worry about a thing, Boss!<0xFB>I'm gonna beat <0xFD><0x02> so hard, <0xFD><0x03>'s
 gonna cry for <0xFD><0x04> momma!","<0x52>No se preocupe, Jefe!<0xFB><0x52>Lo golpearemos tan fuerte que
-llorará por su mami!",88,1,89,pokemon,dialogue,"Ne vous inquiétez de rien, Patron !<0xFB>Je vais frapper {STR_VAR_1} si fort,
-qu'{STR_VAR_2} va pleurer sa mère !",
+llorará por su mami!",88,1,89,pokemon,dialogue,"Ne vous inquiétez de rien, Patron !<0xFB>Je vais te frapper si fort
+que tu vas pleurer ta mère !",
 0x01FA6EF0, momma!,,7,1,8,pokemon,dialogue,,
 0x01FA6EF8,"Owowowow""",<0x52><0x51>Qué?!,9,2,11,pokemon,other,Aïe aïe aïe...,
 0x01FA6F02,"You dumbo!<0xFB>You can't use your Granbull like
