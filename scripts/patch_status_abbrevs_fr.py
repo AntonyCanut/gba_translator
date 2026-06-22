@@ -6,7 +6,7 @@ pointer table at 0x3DFE18 (stride 8 — a 4-byte pointer followed by 4 bytes of
 padding). Following each live pointer lands on a 3-char, 0xFF-terminated string
 (packed at 0x41790C..0x41791C in the stock EN ROM):
 
-  idx0 → SLP (Sleep)     → DOR (Dort)
+  idx0 → SLP (Sleep)     → SOM (Sommeil)
   idx1 → PSN (Poison)    → EMP (Empoisonné)
   idx2 → PAR (Paralysis) → PAR (no change)
   idx3 → BRN (Burn)      → BRL (Brûlure)
@@ -24,9 +24,9 @@ Each FR abbreviation is the same byte-length (3) as the EN original and ends
 with 0xFF, so in-place replacement is exact (the pointer never moves).
 
 The patch is idempotent and self-healing: it overwrites the EN original *or* any
-previously-shipped FR variant (e.g. the old "SOM" for sleep), so re-running it
-over an already-built ROM converges to the current target without a full
-rebuild.
+previously-shipped FR variant (e.g. the old "DOR" for sleep), so re-running it
+over an already-built ROM converges to the current target ("SOM", the official
+French abbreviation for Sommeil) without a full rebuild.
 """
 
 from __future__ import annotations
@@ -51,7 +51,7 @@ PTR_STRIDE = 8  # 4-byte pointer + 4 bytes padding
 # Each entry: table index, EN original, FR target, and the set of *prior* FR
 # variants we are willing to overwrite (so a re-run self-heals an older build).
 STATUS_PATCHES = [
-    {"index": 0, "en": "SLP", "fr": "DOR", "prior": {"SOM"}},  # Dort
+    {"index": 0, "en": "SLP", "fr": "SOM", "prior": {"DOR"}},  # Sommeil
     {"index": 1, "en": "PSN", "fr": "EMP", "prior": set()},    # Empoisonné
     # index 2 = PAR, identical in FR → no entry
     {"index": 3, "en": "BRN", "fr": "BRL", "prior": set()},    # Brûlure
