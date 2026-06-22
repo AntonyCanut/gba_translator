@@ -78,7 +78,8 @@ _LETTERS: dict[str, list[list[bool]]] = {
     "G": [[_B,_L,_L,_B],[_L,_B,_B,_B],[_L,_B,_B,_B],[_L,_B,_L,_L],[_L,_B,_B,_L],[_B,_L,_L,_B]],
     "M": [[_L,_B,_B,_L],[_L,_L,_B,_B],[_L,_B,_L,_B],[_L,_B,_B,_L],[_L,_B,_B,_L],[_L,_B,_B,_L]],
     "O": [[_B,_L,_L,_B],[_L,_B,_B,_L],[_L,_B,_B,_L],[_L,_B,_B,_L],[_L,_B,_B,_L],[_B,_L,_L,_B]],
-    "S": [[_L,_L,_L,_L],[_L,_B,_B,_B],[_L,_L,_L,_L],[_B,_B,_B,_L],[_B,_B,_B,_L],[_L,_L,_L,_L]],
+    # S extracted pixel-for-pixel from the English SLP badge (curved, not blocky)
+    "S": [[_B,_L,_L,_B],[_L,_B,_B,_L],[_L,_L,_B,_B],[_B,_B,_L,_L],[_L,_B,_B,_L],[_B,_L,_L,_B]],
 }
 
 # ── Status slot patches ───────────────────────────────────────────────────────
