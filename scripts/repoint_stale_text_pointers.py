@@ -40,6 +40,22 @@ PROTECTED_SCRIPT_OFFSETS: frozenset[int] = frozenset(
     {0x1E8C677, 0x1E8C782, 0x1E59D1F}
 )
 
+# CFRU `setflag` opcode. A "stale pointer" whose bytes are really the operand
+# tail of a `setflag X / setflag Y` chain is script bytecode, not a pointer
+# slot, and must never be repointed.
+SETFLAG_OPCODE = 0x29
+
+
+def _is_setflag_chain(rom: bytearray, loc: int) -> bool:
+    """True if the 4-byte window at ``loc`` is the operand tail of a
+    ``setflag X / setflag Y`` chain: byte two-before is the 0x29 ``setflag``
+    opcode and the window's second byte is another ``setflag`` opcode (the run
+    ``29 XX <op> 29 YY ZZ`` the repointer false-matches). A genuine relocated
+    text pointer never has this shape."""
+    if loc < 2 or loc + 4 > len(rom):
+        return False
+    return rom[loc - 2] == SETFLAG_OPCODE and rom[loc + 1] == SETFLAG_OPCODE
+
 
 def _parse_pointer_locations(entry: dict) -> list[int]:
     locations = []
@@ -152,6 +168,13 @@ def repoint(
                 continue
             if loc in PROTECTED_SCRIPT_OFFSETS:
                 # Script bytecode masquerading as a text pointer — leave it.
+                continue
+            if _is_setflag_chain(rom, loc):
+                # General guard: the stale "pointer" is the operand tail of a
+                # `setflag X / setflag Y` chain (0x29 opcode both two-before and
+                # at the window's second byte), not a real pointer slot. Writing
+                # it mangles the script. This catches every site with the
+                # Ho-Oh/Lugia/Groudon signature without an explicit allow-list.
                 continue
             struct.pack_into('<I', rom, loc, target)
             fixed += 1

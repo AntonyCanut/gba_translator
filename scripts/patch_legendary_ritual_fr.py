@@ -34,22 +34,32 @@ the ``setflag`` chain mangled the script never reaches the battle: after
 simply stands in the overworld and **the battle never starts** — and because
 the ritual never advances, Lugia never appears either. On the English ROM the
 same save launches the battle normally, proving it is a build artifact and
-not a translation choice. The identical corruption exists three times: on the
-Ho-Oh branch (0x1E8C677), the Lugia branch (0x1E8C782), and — same false match,
-same corrupt pointer 0x08C277E1 — in the Groudon/Red-Orb summoning script at
-0x1E59D1F, right before its own ``setwildbattle`` + ``special 0x138`` launcher.
-On the Groudon site the looping dialogue "Groudon ! Réponds à mon Orbe Rouge !"
-never advances because the mangled ``setflag`` chain stops the script before the
-battle launches.
+not a translation choice. The same false match recurs **everywhere** the byte
+run ``08 29 F6 09`` appears as the tail of a ``setflag X / setflag 0x09F6``
+pair — at least a dozen event-script sites, including:
+  * Ho-Oh branch   0x1E8C677
+  * Lugia branch   0x1E8C782
+  * Groudon/Red-Orb summon  0x1E59D1F (looping "Groudon ! Réponds à mon Orbe
+    Rouge !" — the script never reaches its own ``setwildbattle`` +
+    ``special 0x138`` launcher)
+  * plus ~10 further setflag-chain windows across other cutscene scripts.
+The two windows at 0x1E8738D / 0x1E873B4 hold the *same* bytes but are genuine
+relocated text pointers (preceded by pointer bytes, not a ``setflag`` opcode),
+so they are correctly French and must NOT be reverted.
 
 THE FIX
 -------
-Restore the four canonical script bytes at each site from the English source
-ROM. This leaves every legitimately-relocated French *string* pointer intact
-(those are real pointers and are correctly French) and only undoes the two
-false-positive writes into script bytecode. Verified in-engine with mGBA: the
-Ho-Oh battle auto-launches after the cutscene exactly as on the English ROM,
-with the French dialogue (incl. the "Hoo hoo hoo !" cry) preserved.
+Auto-discover every clobbered site and restore the four canonical script bytes
+from the English source ROM. A site is a script clobber (not a legit pointer)
+iff the FR ROM holds the corrupt pointer 0x08C277E1, the English ROM holds the
+canonical ``08 29 F6 09`` window, AND that window is the operand tail of a
+``setflag`` chain (the byte two before it is the 0x29 ``setflag`` opcode). This
+leaves every legitimately-relocated French *string* pointer intact and only
+undoes the false-positive writes into script bytecode. Verified in-engine with
+mGBA on the Ho-Oh branch: the battle auto-launches after the cutscene exactly
+as on the English ROM, with the French dialogue (incl. "Hoo hoo hoo !")
+preserved; the other sites are byte-identical-to-English restorations of the
+same proven signature.
 
 Usage:
     python3 scripts/patch_legendary_ritual_fr.py \
@@ -64,13 +74,11 @@ from pathlib import Path
 
 GBA_BASE = 0x08000000
 
-# File offsets of the three clobbered script windows. Each sits inside a
-# legendary-ritual event script and, in English, holds the canonical bytes
-# 08 29 F6 09 (the tail of `setflag 0x08E2` plus `setflag 0x09F6`). The
-# corruption rewrites them to a French-text pointer
-# (0x08C277E1 -> "J'ai nagé, bien sûr !"), which is the signature we expect.
-# Ho-Oh/Lugia live in the Ruines du Néant ritual (0x1E8B000-0x1E8D400); the
-# Groudon/Red-Orb summon lives in its own ritual script around 0x1E59xxx.
+# Named script clobber sites kept for documentation / sanity. These are the
+# legendary-ritual cutscenes the bug was reported against; the patch also
+# auto-discovers every other site with the same signature. Ho-Oh/Lugia live in
+# the Ruines du Néant ritual (0x1E8B000-0x1E8D400); the Groudon/Red-Orb summon
+# lives in its own ritual script around 0x1E59xxx.
 RITUAL_SCRIPT_FIXES: tuple[tuple[int, str], ...] = (
     (0x1E8C677, "Ho-Oh branch"),
     (0x1E8C782, "Lugia branch"),
@@ -78,13 +86,49 @@ RITUAL_SCRIPT_FIXES: tuple[tuple[int, str], ...] = (
 )
 
 # The relocated French string the repointer wrongly pointed these windows at.
-# Used only as a sanity signature so the patch is a strict no-op once correct.
+# Used as a strict signature so the patch is a no-op once correct, and never
+# touches a site holding anything else.
 CORRUPT_POINTER = 0x08C277E1
+
+# Canonical script bytes: little-endian 0x09F62908 == `<...>08` + `setflag
+# 0x09F6` (29 F6 09). The repointer false-matched this run as the English
+# address of the string "I swam, of course!" and overwrote it.
+CANONICAL_WINDOW = bytes([0x08, 0x29, 0xF6, 0x09])
+
+# CFRU `setflag` opcode. A canonical window that is the operand tail of a
+# `setflag` chain is script bytecode (its byte two-before is this opcode), not a
+# genuine relocated text pointer — that is what distinguishes a clobber from a
+# legitimate relocation that happens to share the same bytes.
+SETFLAG_OPCODE = 0x29
+
+
+def discover_clobbered_sites(rom: bytes, source: bytes) -> list[int]:
+    """Find every offset where the FR ROM holds the corrupt pointer, the English
+    source holds the canonical `setflag`-chain window, and that window sits in a
+    `setflag` chain (byte two-before == 0x29). Those are false-positive script
+    clobbers; sites that merely share the bytes as a real relocated pointer
+    (different preceding byte) are excluded."""
+    needle = CORRUPT_POINTER.to_bytes(4, "little")
+    sites: list[int] = []
+    start = 0
+    while True:
+        i = rom.find(needle, start)
+        if i == -1:
+            break
+        start = i + 1
+        if i < 2 or i + 4 > len(source):
+            continue
+        if source[i:i + 4] == CANONICAL_WINDOW and source[i - 2] == SETFLAG_OPCODE:
+            sites.append(i)
+    return sites
 
 
 def patch(rom: bytearray, source: bytes) -> int:
     fixed = 0
-    for offset, label in RITUAL_SCRIPT_FIXES:
+    labels = {off: name for off, name in RITUAL_SCRIPT_FIXES}
+    targets = set(labels) | set(discover_clobbered_sites(rom, source))
+    for offset in sorted(targets):
+        label = labels.get(offset, "discovered setflag-chain site")
         canonical = source[offset:offset + 4]
         current = bytes(rom[offset:offset + 4])
         if current == canonical:
