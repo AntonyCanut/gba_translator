@@ -6,7 +6,8 @@ lecture little-endian vaut 0x09F62908 = l'adresse anglaise de "I swam, of
 course!") et l'a réécrite avec l'adresse de la chaîne française relocalisée
 (0x08C277E1). Le script corrompu n'atteint plus `setwildbattle` : le combat de
 légendaire ne se lance jamais. Ce patch restaure les octets canoniques depuis la
-ROM anglaise aux deux sites (Ho-Oh 0x1E8C677, Lugia 0x1E8C782).
+ROM anglaise aux trois sites (Ho-Oh 0x1E8C677, Lugia 0x1E8C782, Groudon/Orbe
+Rouge 0x1E59D1F — même faux-positif, même pointeur corrompu 0x08C277E1).
 """
 
 import unittest

@@ -1,7 +1,11 @@
 import struct
 import unittest
 
-from scripts.repoint_stale_text_pointers import repoint, GBA_BASE
+from scripts.repoint_stale_text_pointers import (
+    repoint,
+    GBA_BASE,
+    PROTECTED_SCRIPT_OFFSETS,
+)
 
 
 def _rom(size=0x200):
@@ -138,6 +142,40 @@ class RepointStalePointersTests(unittest.TestCase):
         self.assertEqual(
             struct.unpack_from('<I', rom, 0x88)[0], GBA_BASE + original
         )
+
+    def test_protected_script_offset_is_vetoed(self):
+        # Legendary-ritual script bytecode (Ho-Oh/Lugia and Groudon/Red-Orb)
+        # holds `setflag` runs whose little-endian window coincidentally equals
+        # a relocated string's GBA address (0x09F62908 -> "I swam, of course!").
+        # Repointing them mangles the setflag chain so the legendary battle
+        # never launches and the summon dialogue loops (B-56 / Groudon ticket).
+        # Every PROTECTED_SCRIPT_OFFSETS site must be left untouched even when it
+        # looks exactly like a stale pointer.
+        for protected in PROTECTED_SCRIPT_OFFSETS:
+            with self.subTest(offset=hex(protected)):
+                rom = _rom(protected + 0x10)
+                original = 0x40
+                relocated = 0x100
+                english = b'\xbb\xbc\xff'
+                rom[original:original + 3] = english
+                rom[relocated:relocated + 3] = b'\xbd\xbe\xff'
+                # one real pointer already re-targeted; the "stale" one is the
+                # protected script window holding the original GBA address.
+                struct.pack_into('<I', rom, 0x10, GBA_BASE + relocated)
+                struct.pack_into('<I', rom, protected, GBA_BASE + original)
+
+                fixed = repoint(
+                    rom,
+                    [self._entry(original, english, [0x10, protected])],
+                    {original},
+                )
+
+                self.assertEqual(fixed, 0)
+                self.assertEqual(
+                    struct.unpack_from('<I', rom, protected)[0],
+                    GBA_BASE + original,
+                    f'protected script offset {protected:#x} was clobbered',
+                )
 
 
 if __name__ == '__main__':
