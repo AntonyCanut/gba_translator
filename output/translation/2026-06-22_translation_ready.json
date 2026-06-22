@@ -1,9 +1,9 @@
 {
-  "conversion_date": "2026-06-22T19:43:07.418217",
+  "conversion_date": "2026-06-22T20:25:40.308255",
   "source_csv": "2026-01-15_trilingual_translation.csv",
   "total_translations": 20807,
   "total_errors": 0,
-  "total_warnings": 16758,
+  "total_warnings": 16757,
   "translations": [
     {
       "offset": 165760,
@@ -58784,7 +58784,7 @@
     {
       "offset": 7609073,
       "original_text": "Route 15<0xFB><0x7B> Route 2, Icicle Cave\nà Vivill Town",
-      "translation": "Route 15<0xFB><0x7B> Route 2, Grotte\nStalactite <0x7C> Bourg Vivill",
+      "translation": "Route 15<0xFB><0x7B> Route 2, Grotte Stalactite\n<0x7C> Bourg Vivill",
       "length": 52,
       "original_length": 45,
       "padding_used": 7,
@@ -215732,7 +215732,7 @@
     {
       "offset": 32973292,
       "original_text": "Some words are scrawled onto the\nsteel beams. They say:<0xFB><0x79> KBT Expressway",
-      "translation": "Des mots sont griffonnés sur les\npoutres d'acier. Ils<0xFB>disent : <0x79> Autoroute KBT",
+      "translation": "Des mots sont griffonnés sur les\npoutres d'acier. Ils disent :<0xFB><0x79> Autoroute KBT",
       "length": 78,
       "original_length": 72,
       "padding_used": 6,
@@ -215828,14 +215828,14 @@
     {
       "offset": 32973651,
       "original_text": "<0x79>Magnolia Town\nàCrystal Peak",
-      "translation": "<0x79> Bourg\nMagnolia <0x7C> Crystal Peak",
-      "length": 31,
+      "translation": "<0x79> Bourg Magnolia\n<0x7C> Pic Cristal",
+      "length": 30,
       "original_length": 28,
-      "padding_used": 3,
+      "padding_used": 2,
       "encoding": "pokemon",
       "category": "description",
       "notes": "",
-      "too_long": true
+      "too_long": false
     },
     {
       "offset": 32973680,

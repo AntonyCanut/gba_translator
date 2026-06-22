@@ -65,6 +65,9 @@ TARGETS: dict[int, str] = {
     0x1F727A7: "Dresco",
     0x1F727D0: "Ville d'Antisis, Ville Portuaire",
     0x1F72808: "Bourg Gurun",
+    # Cootes Marsh mini-panel: EN starts with the ↑ arrow byte too (1-byte
+    # undeliverable). FR arrow was mid-line before the line-start fix (P-68).
+    0x1F72353: "Bourg Magnolia",
 }
 
 _OFFSET_LINE = re.compile(r"^0x([0-9A-Fa-f]+):\s?(.*)$")

@@ -24924,3 +24924,13 @@
 0x1F727A7: <0x79> Dresco\n<0x7A> Ville de Dehara\l<0x7C> Bourg Gurun
 0x1F727D0: <0x7A> Ville d'Antisis, Ville Portuaire\n<0x7B> Ville de Dehara\l<0x7C> Bourg Gurun
 0x1F72808: <0x79> Bourg Gurun\n<0x7A> Ville d'Antisis\l<0x7C> Ville Portuaire
+
+# --- Règle flèche-en-début-de-ligne : panneaux manqués par B-74 (P-68) ---
+# Audit EN-ancré (scripts/audit_arrow_line_start_fr.py) : ces panneaux gardaient
+# une flèche (0x79-0x7C) en milieu de ligne alors que l'anglais l'a en DÉBUT de
+# ligne. Re-formatés sur la structure EN (flèche juste après \n/\l/\p).
+0x741AF1: Route 15\p<0x7B> Route 2, Grotte Stalactite\n<0x7C> Bourg Vivill
+0x7B8908: ad\l<0x7A> Route 3
+0x7E6B88: 9Route 12\p<0x79> Ville de Dehara\n<0x7A> Tarmiganville\l<0x7B> Route 14
+0x1F721EC: Des mots sont griffonnés sur les\npoutres d’acier. Ils disent :\p<0x79> Autoroute KBT
+0x1F72353: <0x79> Bourg Magnolia\n<0x7C> Pic Cristal
