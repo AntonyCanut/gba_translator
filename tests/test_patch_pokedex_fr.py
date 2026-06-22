@@ -112,5 +112,37 @@ class PatchPokedexTests(unittest.TestCase):
         self.assertEqual(_decode(rom, new_offset).replace("\n", " "), description)
 
 
+    def test_skip_no_space_when_existing_text_fits(self):
+        # Relocation needed (encoded > source slot) but no free-space block
+        # available. The text already in the ROM fits ≤3 lines → skip_no_space,
+        # not a hard failure; exit code should stay 0.
+        short_source = "Un Pokémon vif."
+        # Long FR translation: wrap_lines() splits it into 3 lines so the
+        # encoded rewrapped form differs from the raw (no-newline) form already
+        # written in the ROM by the build engine, triggering the relocation path.
+        fr_text = (
+            "Il se nourrit de graines et de petits insectes "
+            "trouvés dans les prairies et les forêts."
+        )
+        src = bytearray(0x4000)
+        rom = bytearray(0x4000)
+        slot = 0x400
+        # Source slot: short description (capacity < encoded-rewrapped length)
+        src_enc = _encode(short_source)
+        src[slot:slot + len(src_enc)] = src_enc
+        src[0x100:0x104] = self._ptr(slot)
+        # FR ROM slot: raw (un-rewrapped) FR translation, fits ≤3 lines
+        fr_enc = _encode(fr_text)
+        rom[slot:slot + len(fr_enc)] = fr_enc
+        rom[0x100:0x104] = self._ptr(slot)
+        # No large 0xFF run → allocator finds no free blocks → allocate() returns None
+
+        stats = patch_pokedex_fr.apply(rom, bytes(src), {slot: fr_text}, {})
+        self.assertEqual(stats["failed"], 0, "should not be a hard failure")
+        self.assertEqual(stats["skip_no_space"], 1, "should count as benign skip")
+        # ROM is unchanged: the existing FR text is preserved in place
+        self.assertEqual(_decode(rom, slot), fr_text)
+
+
 if __name__ == "__main__":
     unittest.main()
