@@ -35,6 +35,12 @@
         "hooks": [
           { "type": "command", "command": "sh .claude/hooks/ruff-check.sh" }
         ]
+      },
+      {
+        "matcher": "Bash",
+        "hooks": [
+          { "type": "command", "command": "sh .claude/hooks/verify-commit-content.sh" }
+        ]
       }
     ]
   }
