@@ -177,6 +177,38 @@ class RepointStalePointersTests(unittest.TestCase):
                     f'protected script offset {protected:#x} was clobbered',
                 )
 
+    def test_setflag_chain_window_is_vetoed_without_allowlist(self):
+        # Root-cause guard: a stale "pointer" that is really the operand tail of
+        # a `setflag X / setflag Y` chain (0x29 two-before AND as the window's
+        # 2nd byte) must be left alone even when its offset is NOT in
+        # PROTECTED_SCRIPT_OFFSETS. original = 0x2940 so GBA_BASE+original encodes
+        # as 40 29 00 08 — its 2nd byte is the 0x29 `setflag` opcode, exactly the
+        # Ho-Oh/Lugia/Groudon false-match shape.
+        rom = _rom(0x4000)
+        original = 0x2940
+        relocated = 0x3000
+        english = b'\xbb\xbc\xff'
+        rom[original:original + 3] = english
+        rom[relocated:relocated + 3] = b'\xbd\xbe\xff'
+        loc = 0x100
+        self.assertNotIn(loc, PROTECTED_SCRIPT_OFFSETS)
+        struct.pack_into('<I', rom, 0x10, GBA_BASE + relocated)
+        struct.pack_into('<I', rom, loc, GBA_BASE + original)  # 40 29 00 08
+        rom[loc - 2] = 0x29  # preceding `setflag` opcode -> script chain
+        self.assertEqual(rom[loc + 1], 0x29)  # sanity: window 2nd byte is setflag
+
+        fixed = repoint(
+            rom,
+            [self._entry(original, english, [0x10, loc])],
+            {original},
+        )
+
+        self.assertEqual(fixed, 0)
+        self.assertEqual(
+            struct.unpack_from('<I', rom, loc)[0], GBA_BASE + original,
+            'setflag-chain script window was clobbered by the repointer',
+        )
+
 
 if __name__ == '__main__':
     unittest.main()

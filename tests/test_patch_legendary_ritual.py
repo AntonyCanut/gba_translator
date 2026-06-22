@@ -56,6 +56,36 @@ class PatchLegendaryRitualTests(unittest.TestCase):
         with self.assertRaises(SystemExit):
             patch.patch(rom, source)
 
+    def test_discovers_unlisted_setflag_chain_site(self):
+        # A clobbered site NOT in the named list must still be repaired when it
+        # carries the signature: FR holds the corrupt pointer, English holds the
+        # canonical window, preceded by a `setflag` opcode (0x29).
+        src = bytearray(self._source())
+        site = 0x1000
+        src[site - 2] = 0x29              # `setflag` opcode before the window
+        src[site:site + 4] = CANON        # canonical 08 29 F6 09 window
+        source = bytes(src)
+        rom = bytearray(source)
+        rom[site:site + 4] = CORRUPT      # clobbered in the FR build
+        fixed = patch.patch(rom, source)
+        self.assertEqual(bytes(rom[site:site + 4]), CANON)
+        self.assertGreaterEqual(fixed, 1)
+
+    def test_legit_relocated_pointer_not_reverted(self):
+        # Same canonical bytes, but NOT preceded by a setflag opcode: this is a
+        # genuine relocated French text pointer (e.g. 0x1E8738D) and must be left
+        # exactly as the build produced it.
+        src = bytearray(self._source())
+        site = 0x2000
+        src[site - 2] = 0xF6              # pointer context, not a setflag opcode
+        src[site:site + 4] = CANON
+        source = bytes(src)
+        rom = bytearray(source)
+        rom[site:site + 4] = CORRUPT      # correctly relocated FR pointer
+        fixed = patch.patch(rom, source)
+        self.assertEqual(bytes(rom[site:site + 4]), CORRUPT)  # untouched
+        self.assertEqual(fixed, 0)
+
 
 if __name__ == "__main__":
     unittest.main()
