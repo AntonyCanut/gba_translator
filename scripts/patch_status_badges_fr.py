@@ -9,7 +9,7 @@ of 4 tiles each:
 Slot layout (verified by decoding block 0x0B1E11C of englishrom.gba):
   slot 0 (pal4,  purple) : PSN  → EMP  (Empoisonné)
   slot 1 (pal6,  yellow) : PAR  → PAR  (unchanged)
-  slot 2 (pal8,  blue)   : SLP  → DOR  (Dort)
+  slot 2 (pal8,  blue)   : SLP  → SOM  (Sommeil)
   slot 3 (pal10, cyan)   : FRZ  → GEL  (Gelé)
   slot 4 (pal12, red)    : BRN  → BRL  (Brûlure)
   slot 5 (pal4)          : TOX? → unchanged (garbled / unused)
@@ -78,6 +78,7 @@ _LETTERS: dict[str, list[list[bool]]] = {
     "G": [[_B,_L,_L,_B],[_L,_B,_B,_B],[_L,_B,_B,_B],[_L,_B,_L,_L],[_L,_B,_B,_L],[_B,_L,_L,_B]],
     "M": [[_L,_B,_B,_L],[_L,_L,_B,_B],[_L,_B,_L,_B],[_L,_B,_B,_L],[_L,_B,_B,_L],[_L,_B,_B,_L]],
     "O": [[_B,_L,_L,_B],[_L,_B,_B,_L],[_L,_B,_B,_L],[_L,_B,_B,_L],[_L,_B,_B,_L],[_B,_L,_L,_B]],
+    "S": [[_L,_L,_L,_L],[_L,_B,_B,_B],[_L,_L,_L,_L],[_B,_B,_B,_L],[_B,_B,_B,_L],[_L,_L,_L,_L]],
 }
 
 # ── Status slot patches ───────────────────────────────────────────────────────
@@ -85,7 +86,7 @@ _LETTERS: dict[str, list[list[bool]]] = {
 # Slot 1 (PAR→PAR) and slot 5 (garbled) are intentionally excluded.
 _STATUS_PATCHES: list[tuple[int, str, str, str]] = [
     (0, "E", "M", "P"),   # PSN → EMP
-    (2, "D", "O", "R"),   # SLP → DOR
+    (2, "S", "O", "M"),   # SLP → SOM
     (3, "G", "E", "L"),   # FRZ → GEL
     (4, "B", "R", "L"),   # BRN → BRL  (B and R unchanged; only N→L)
 ]
@@ -221,7 +222,7 @@ def _patch_block(rom: bytearray, offset: int) -> bool:
     tiles = bytearray(decompressed)
     changes: list[str] = []
 
-    # ── 1. 3-letter status badges (PSN→EMP, SLP→DOR, FRZ→GEL, BRN→BRL) ──────
+    # ── 1. 3-letter status badges (PSN→EMP, SLP→SOM, FRZ→GEL, BRN→BRL) ──────
     for slot, a, b_ltr, c in _STATUS_PATCHES:
         bg = _read_slot_bg(tiles, slot)
         t1, t2 = _make_3letter_tiles(
