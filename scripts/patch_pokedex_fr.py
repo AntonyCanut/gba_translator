@@ -76,7 +76,7 @@ def apply(
     """Re-wrap/relocate every Pokédex description in ``rom`` (mutated)."""
     allocator = FreeSpaceAllocator(rom, reserved_rom=reserved_rom)
     stats = {"total": 0, "rewrapped": 0, "relocated": 0, "shortened": 0,
-             "skipped": 0, "failed": 0, "unchanged": 0}
+             "skipped": 0, "skip_no_space": 0, "failed": 0, "unchanged": 0}
 
     for entry in pokedex.iter_entries(source):
         stats["total"] += 1
@@ -140,6 +140,17 @@ def apply(
         else:
             new_offset = allocator.allocate(len(encoded))
             if new_offset is None:
+                # Espace libre insuffisant pour relocaliser. Vérifier si le
+                # texte déjà en place dans la ROM tient dans la fenêtre : si
+                # oui, l'entrée s'affiche correctement → skip bénin ;
+                # sinon, c'est un vrai échec d'affichage.
+                existing_end = rom.find(b"\xff", target)
+                existing = rom[target:existing_end + 1] if 0 <= existing_end - target <= 400 else b""
+                if existing:
+                    existing_text = TextDecoder.decode_pokemon(existing[:-1], preserve_unknown=True)
+                    if pokedex.is_description(existing_text) and pokedex.fits(existing_text):
+                        stats["skip_no_space"] += 1
+                        continue
                 stats["failed"] += 1
                 continue
             rom[new_offset:new_offset + len(encoded)] = encoded
@@ -184,8 +195,10 @@ def main() -> int:
     print(f"   - Raccourcies (data): {stats['shortened']}")
     if stats["skipped"]:
         print(f"   - Sans traduction:    {stats['skipped']}")
+    if stats["skip_no_space"]:
+        print(f"   - Déjà OK (pas d'esp): {stats['skip_no_space']}")
     if stats["failed"]:
-        print(f"   - ÉCHECS:             {stats['failed']}")
+        print(f"   - ÉCHECS (affichage): {stats['failed']}")
         return 1
     return 0
 
