@@ -34,8 +34,13 @@ the ``setflag`` chain mangled the script never reaches the battle: after
 simply stands in the overworld and **the battle never starts** — and because
 the ritual never advances, Lugia never appears either. On the English ROM the
 same save launches the battle normally, proving it is a build artifact and
-not a translation choice. The identical corruption exists twice, once on the
-Ho-Oh branch (0x1E8C677) and once on the Lugia branch (0x1E8C782).
+not a translation choice. The identical corruption exists three times: on the
+Ho-Oh branch (0x1E8C677), the Lugia branch (0x1E8C782), and — same false match,
+same corrupt pointer 0x08C277E1 — in the Groudon/Red-Orb summoning script at
+0x1E59D1F, right before its own ``setwildbattle`` + ``special 0x138`` launcher.
+On the Groudon site the looping dialogue "Groudon ! Réponds à mon Orbe Rouge !"
+never advances because the mangled ``setflag`` chain stops the script before the
+battle launches.
 
 THE FIX
 -------
@@ -59,14 +64,17 @@ from pathlib import Path
 
 GBA_BASE = 0x08000000
 
-# File offsets of the two clobbered script windows. Both sit inside the
-# legendary-ritual event script (0x1E8B000-0x1E8D400) and, in English, hold
-# the canonical bytes 08 29 F6 09 (the tail of `setflag 0x08E2` plus
-# `setflag 0x09F6`). The corruption rewrites them to a French-text pointer
+# File offsets of the three clobbered script windows. Each sits inside a
+# legendary-ritual event script and, in English, holds the canonical bytes
+# 08 29 F6 09 (the tail of `setflag 0x08E2` plus `setflag 0x09F6`). The
+# corruption rewrites them to a French-text pointer
 # (0x08C277E1 -> "J'ai nagé, bien sûr !"), which is the signature we expect.
+# Ho-Oh/Lugia live in the Ruines du Néant ritual (0x1E8B000-0x1E8D400); the
+# Groudon/Red-Orb summon lives in its own ritual script around 0x1E59xxx.
 RITUAL_SCRIPT_FIXES: tuple[tuple[int, str], ...] = (
     (0x1E8C677, "Ho-Oh branch"),
     (0x1E8C782, "Lugia branch"),
+    (0x1E59D1F, "Groudon branch"),
 )
 
 # The relocated French string the repointer wrongly pointed these windows at.
