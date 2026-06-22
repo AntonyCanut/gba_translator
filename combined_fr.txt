@@ -24843,6 +24843,8 @@
 
 # --- B-53 : dialogues du Centre Pokémon de Borrius (majuscules + mots réduits) ---
 # Cluster 0x1F4E5xx : variante du Centre Pokémon, traductions automatiques dégradées
+# 0x1F4E528 = string inline sans pointeur : FR raccourcie pour tenir dans 63 octets
+0x1f4e528: Bienvenue au Centre Pokémon !\nPuis-je soigner tes Pokémon ?
 0x1f4e599: Bienvenue dans notre Centre\nPokémon !
 0x1f4e6d8: D'accord ! Je prends tes\nPokémon un instant.
 0x1f4e7ed: Merci d'avoir patienté !\nTes Pokémon sont en pleine forme.
