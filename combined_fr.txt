@@ -24848,3 +24848,41 @@
 0x1f4e599: Bienvenue dans notre Centre\nPokémon !
 0x1f4e6d8: D'accord ! Je prends tes\nPokémon un instant.
 0x1f4e7ed: Merci d'avoir patienté !\nTes Pokémon sont en pleine forme.
+# --- Panneaux de route : corrections de format (flèches + sauts de ligne) ---
+# Règle "dernière entrée gagne" : ces lignes remplacent les versions mal formatées.
+
+# FIX 0x765B7E : flèche <0x7C> était avant \n au lieu d'après
+0x765B7E: Route 17\p<0x7B> Route 16\n<0x7C> Ville Portuaire
+
+# FIX 0x77F0C4 : flèche <0x79> était avant \n au lieu d'après
+0x77F0C4: Route 10\p<0x7B> Ville de Tehl\n<0x79> Voie d'Eau Auburn\l<0x7C> Ville de Fallshore
+
+# FIX 0x7BA378 : format cassé (page-break au milieu du contenu)
+0x7BA378: Voie d'Eau Auburn\p<0x79> Route 6, Grotte Vallée\n<0x7A> Route 10
+
+# FIX 0x7DE4DA : flèche <0x7C> était après nom de ville au lieu de début de ligne
+0x7DE4DA: Grand Désert\p<0x7B> Ville de Dehara\n<0x7C> Bourg Gurun
+
+# --- Panneaux de route manquants (Frozen Heights / Mont Givre / Ville Blizzard) ---
+0x77EFC1: Route 7\p<0x79> Mont Givre, Route 8\n<0x7A> Route 9\l<0x7C> Route 6
+0x77F01E: Route 8\p<0x79> Ville Blizzard\n<0x7A> Mont Givre, Route 7
+0x77F05C: Route 9\p<0x79> Route 7, Mont Givre\n<0x7A> Ville de Tehl
+0x77F096: Route 9\p<0x79> Route 7, Mont Givre\n<0x7C> Ville de Tehl
+0x77F0D0: Route 10\p<0x7B> Ville de Tehl\n<0x79> Voie d'Eau Auburn\l<0x7C> Ville de Fallshore
+0x77F113: Route 10\p<0x7B> Ville de Tehl\n<0x7C> Ville de Fallshore
+
+# --- Panneaux de route manquants (Bourg Cratère / Bellinville) ---
+0x7A6B49: Route 6\p<0x79> Grotte Vallée\n<0x7A> Voie d'Eau Auburn\l<0x7B> Route 7, Mont Givre\l<0x7C> Route 14
+0x7B882F: Route 11\p<0x7B> Ville de Fallshore\n<0x7C> Ville d'Epidimy
+0x7B8864: Route 1\p<0x79> Hauteurs Gelées\n<0x7A> Bellinville, Grotte Stalactite
+0x7B88A4: Route 1\p<0x79> Hauteurs Gelées, Grotte Stalactite\n<0x7A> Bellinville
+0x7B88E4: Route 2\p<0x7B> Dresco\n<0x7C> Grotte Stalactite
+0x7B89DB: Route 5\p<0x79> Route 4\n<0x7A> Bourg Cratère
+0x7E6B89: Route 12\p<0x79> Ville de Dehara\n<0x7A> Tarmiganville\l<0x7B> Route 14
+
+# --- Panneaux d'entrée de ville manquants ---
+0x77F168: Hauteurs Gelées\pUne ville insulaire sur un lac gelé.
+0x74B29E: Ville d'Epidimy\pUne ville pittoresque entourée de\nmontagnes.
+0x74B31C: Ville de Tehl\pUne ville où c'est toujours l'Automne.
+0x7808DE: Ville d'Epidimy\pLa ville du bonheur et de la joie.
+0x7B456B: Bellinville\pUne ville paisible nichée au coeur des\nmontagnes.
