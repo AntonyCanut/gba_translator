@@ -8176,8 +8176,13 @@ n'est pas installé.",
 0x00415FF2,Area Unknown,Desconocida,12,4,16,pokemon,location,Zone inconnue,
 0x00416002,Page,Pág,4,3,7,pokemon,other,Page,
 0x00416007, Welcome to the Hall of Fame!,,29,4,33,pokemon,dialogue,Bienvenue au Panthéon !,
+0x00416008,Welcome to the Hall of Fame!,<0x52>Felicitaciones!,28,4,32,pokemon,dialogue,Bienvenue au Panthéon !,
 0x0041608F," The Hall of Fame data is
 corrupted.",,36,3,39,pokemon,description,"Données du Panthéon
+corrompues.",
+0x00416090,"The Hall of Fame data is
+corrupted.","The Hall Of Fame data is
+corrupted.",35,3,38,pokemon,description,"Données du Panthéon
 corrompues.",
 0x004160B4,Hall of Fame No. <0xFD><0x02>,Hall de la Fama: <0xFD><0x02>,19,2,21,pokemon,other,Panthéon No. <0xFD><0x02>,
 0x004160C8,"League Champion!
@@ -16940,6 +16945,7 @@ et des taux de capture des Pokémon.<0xFB>",
 0x00721304,Icy Hole,Agujero Helado,8,32,40,pokemon,location,Trou Glacé,
 0x007213FC,Abilities don't affect moves.,,29,0,29,pokemon,other,Ignore les talents.,no-pointer: in-place only
 0x00721437, KBT Expressway,,15,6,21,pokemon,other,Autoroute KBT,
+0x00721438,KBT Expressway,Autopista RBT,14,6,20,pokemon,location,Autoroute KBT,
 0x00721464,Crystal Peak,Pico Cristal,12,12,24,pokemon,location,,
 0x007214E8,Glimmer Isle,Isla Tenue,12,5,17,pokemon,location,Île Scintillante,
 0x0072167C,FIVE ISLE MEADOW,FIVE ISLE MEADOW,16,4,20,pokemon,location,PRAIRIE ÎLE 5,
@@ -67315,7 +67321,7 @@ in by the king, and supervised by<0xFA>his progeny, until this very day.",103,13
 recueilli par le roi, puis surveillé<0xFA>par sa descendance, jusqu'à ce jour.",
 0x01F1184B,            16 Years Ago,            Hace 16 años.,24,12,36,pokemon,other,Il y a 16 ans,
 0x01F11864,           15 Years Later,,25,5,30,pokemon,other,15 ans plus tard,
-0x01F1187E,Yes   ,Sí    ,6,2,8,pokemon,location,Oui   ,
+0x01F1187E,Yes   ,Sí    ,6,2,8,pokemon,location,Oui,
 0x01F11885,No,No,2,2,4,pokemon,other,Non,
 0x01F11888,"Hoopa""<0xFB>I worry, old friend, for the future
 - for if, no""<0xFC><0x08><0x18> when SHE arrives.","Hoopa""<0xFB>Me preocupo, viejo amigo, por el
