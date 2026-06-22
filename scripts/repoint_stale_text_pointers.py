@@ -31,11 +31,40 @@ GBA_BASE = 0x08000000
 # Event-script bytecode whose bytes coincidentally read as a valid text
 # pointer must never be repointed: the pointer scan that feeds this pass
 # cannot tell a real pointer from a `setflag`/operand run that happens to
-# equal a string's GBA address. These windows live inside the Ho-Oh/Lugia
-# ritual script and read as 0x09F62908 ("I swam, of course!"); rewriting them
+# equal a string's GBA address. These windows live inside the legendary-ritual
+# cutscene scripts and read as 0x09F62908 ("I swam, of course!"); rewriting them
 # breaks the cutscene so the legendary battle never launches. See
 # scripts/patch_legendary_ritual_fr.py for the full diagnosis.
+#
+# These named offsets are kept as defense-in-depth, but the real guard is the
+# general `_is_setflag_chain` veto below: there are ~13 such windows across the
+# cutscene scripts (Groudon 0x1E59D1F, Ho-Oh 0x1E8C677, Lugia 0x1E8C782, ...),
+# and an allow-list inevitably misses some — as happened when only these two
+# were protected and the Groudon summon kept looping after every rebuild.
 PROTECTED_SCRIPT_OFFSETS: frozenset[int] = frozenset({0x1E8C677, 0x1E8C782})
+
+SETFLAG_OPCODE = 0x29
+
+
+def _is_setflag_chain(rom: bytes, loc: int) -> bool:
+    """True if ``loc`` is inside a run of adjacent ``setflag`` instructions
+    rather than at a genuine text pointer.
+
+    CFRU/pokeemerald ``setflag`` encodes as ``29 LL HH`` (opcode 0x29 + a
+    little-endian 2-byte flag id). Two adjacent setflags read as
+    ``29 a0 a1 29 b0 b1``; the 4-byte window that starts on the first flag's
+    high operand byte is ``a1 29 b0 b1`` — a value the pointer scan happily
+    mistakes for a string address (e.g. ``08 29 F6 09`` == 0x09F62908). The
+    discriminator is the two ``setflag`` opcodes flanking the window: this
+    window's 2nd byte and the byte two positions before it are both 0x29 for
+    a real chain, but not for a genuine relocated text pointer. This is
+    string-address-agnostic, so it protects every such window for any
+    relocated string — not just an enumerated allow-list."""
+    return (
+        loc >= 2
+        and rom[loc - 2] == SETFLAG_OPCODE
+        and rom[loc + 1] == SETFLAG_OPCODE
+    )
 
 
 def _parse_pointer_locations(entry: dict) -> list[int]:
@@ -147,7 +176,7 @@ def repoint(
         for loc in stale:
             if in_translated_text(loc):
                 continue
-            if loc in PROTECTED_SCRIPT_OFFSETS:
+            if loc in PROTECTED_SCRIPT_OFFSETS or _is_setflag_chain(rom, loc):
                 # Script bytecode masquerading as a text pointer — leave it.
                 continue
             struct.pack_into('<I', rom, loc, target)

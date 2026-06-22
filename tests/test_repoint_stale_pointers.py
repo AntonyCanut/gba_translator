@@ -1,7 +1,11 @@
 import struct
 import unittest
 
-from scripts.repoint_stale_text_pointers import repoint, GBA_BASE
+from scripts.repoint_stale_text_pointers import (
+    repoint,
+    GBA_BASE,
+    _is_setflag_chain,
+)
 
 
 def _rom(size=0x200):
@@ -110,6 +114,41 @@ class RepointStalePointersTests(unittest.TestCase):
         self.assertEqual(fixed, 0)
         self.assertEqual(
             struct.unpack_from('<I', rom, 0x20)[0], GBA_BASE + original
+        )
+
+    def test_setflag_chain_is_vetoed_without_allowlist(self):
+        # A stale "pointer" location that is really a `setflag` chain
+        # (29 LL HH 29 LL HH) must never be rewritten — even when it is NOT in
+        # PROTECTED_SCRIPT_OFFSETS. This is the Groudon-summon regression: the
+        # window's bytes == the original string address, so it looks stale, but
+        # it is script bytecode. Overwriting it breaks the cutscene → loop.
+        rom = _rom(0x4000)
+        # A string whose GBA address has 0x29 as its 2nd byte, so the stale
+        # window itself reads like `setflag`'s opcode in the middle.
+        original = 0x2900                      # GBA 0x08002900 -> LE 00 29 00 08
+        self.assertEqual((GBA_BASE + original) >> 8 & 0xFF, 0x29)
+        relocated = 0x100
+        rom[relocated:relocated + 3] = b'\xbd\xbe\xff'
+        english = b'\xbb\xbc\xff'
+        rom[original:original + 3] = english
+        # The clobber-prone location: flanked by setflag opcodes
+        # (loc-2 == 0x29, and the window's own 2nd byte loc+1 == 0x29).
+        loc = 0x80
+        rom[loc - 2] = 0x29                    # previous setflag opcode
+        struct.pack_into('<I', rom, loc, GBA_BASE + original)
+        self.assertTrue(_is_setflag_chain(rom, loc))
+        # one already-retargeted pointer + the stale setflag-chain location
+        struct.pack_into('<I', rom, 0x10, GBA_BASE + relocated)
+
+        fixed = repoint(
+            rom,
+            [self._entry(original, english, [0x10, loc])],
+            {original},
+        )
+
+        self.assertEqual(fixed, 0)
+        self.assertEqual(
+            struct.unpack_from('<I', rom, loc)[0], GBA_BASE + original
         )
 
     def test_location_inside_translated_text_is_vetoed(self):

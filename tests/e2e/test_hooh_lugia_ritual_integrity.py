@@ -325,3 +325,69 @@ def test_release_build_ritual_logic_matches_en(en, release_path):
         f"script (encounter-logic regression): "
         + ", ".join(f"0x{a:07X}..0x{b:07X}" for a, b in non_pointer)
     )
+
+
+# --- P-70: the repointer clobbers EVERY legendary-cutscene setflag chain ---
+#
+# The Ho-Oh/Lugia checks above guard only the [0x1E8B000, 0x1E8D400) region, but
+# the same `repoint_stale_text_pointers` false-match hits 13 sites ROM-wide,
+# including Groudon's Red-Orb summon (0x1E59D1F). When only Ho-Oh/Lugia were
+# patched, every rebuild left the other 11 (Groudon among them) clobbered and the
+# summon dialogue looped forever. This guard fails on ANY clobbered site.
+#
+# Signature: a 4-byte window == `08 29 F6 09` (LE 0x09F62908, the EN address of
+# "I swam, of course!") that the repointer rewrites to the relocated FR pointer
+# 0x08C277E1. A real setflag chain has the *previous* setflag opcode (0x29) two
+# bytes before the window; the two genuine relocated text pointers that share the
+# bytes (0x1E8738D, 0x1E873B4) do not, and must stay French.
+_SETFLAG_WINDOW = bytes([0x08, 0x29, 0xF6, 0x09])
+_SETFLAG_OPCODE = 0x29
+_CORRUPT_FR_POINTER = bytes([0xE1, 0x77, 0xC2, 0x08])  # 0x08C277E1 LE
+_GENUINE_RELOCATED_POINTERS = (0x1E8738D, 0x1E873B4)
+
+
+def _setflag_chain_sites(rom: bytes):
+    sites, start = [], 0
+    while True:
+        off = rom.find(_SETFLAG_WINDOW, start)
+        if off == -1:
+            break
+        start = off + 1
+        if off >= 2 and rom[off - 2] == _SETFLAG_OPCODE:
+            sites.append(off)
+    return sites
+
+
+def test_no_legendary_setflag_chain_is_clobbered(en: bytes, fr: bytes):
+    """Every legendary-cutscene `setflag` chain is restored to EN (battle launches).
+
+    Discovered by signature (not an allow-list) so Groudon and its ~10 siblings
+    are covered, not just Ho-Oh/Lugia. A clobbered site = the relocated FR
+    pointer 0x08C277E1 sitting in script bytecode -> the cutscene never reaches
+    `special 0x138` and the summon loops.
+    """
+    sites = _setflag_chain_sites(en)
+    assert len(sites) >= 13, f"sanity: expected >=13 setflag-chain sites, found {len(sites)}"
+
+    clobbered = [
+        off for off in sites
+        if bytes(fr[off:off + 4]) != bytes(en[off:off + 4])
+    ]
+    assert not clobbered, (
+        "Clobbered legendary-cutscene setflag chain(s) — the summon will loop "
+        "and the legendary battle never launches:\n"
+        + "\n".join(
+            f"  0x{o:07X} EN={en[o:o+4].hex()} FR={fr[o:o+4].hex()}"
+            for o in clobbered
+        )
+    )
+
+
+def test_genuine_relocated_pointers_stay_french(fr: bytes):
+    """The two real relocated text pointers sharing the setflag bytes are NOT
+    reverted to EN by the repair (they legitimately point at relocated FR text)."""
+    for off in _GENUINE_RELOCATED_POINTERS:
+        assert bytes(fr[off:off + 4]) == _CORRUPT_FR_POINTER, (
+            f"genuine relocated pointer 0x{off:07X} should stay the FR pointer "
+            f"{_CORRUPT_FR_POINTER.hex()}, found {fr[off:off+4].hex()}"
+        )
