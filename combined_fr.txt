@@ -24887,50 +24887,11 @@
 0x7808DE: Ville d'Epidimy\pLa ville du bonheur et de la joie.
 0x7B456B: Bellinville\pUne ville paisible nichée au coeur des\nmontagnes.
 
-# --- B-74 : panneaux Carte du monde (cluster 0x1F70xxx) ---
-# Bug P-68 : auto-traduction avait déplacé les flèches en milieu de ligne,
-# cassé les sauts de ligne et utilisé des toponymes incohérents/anglais.
-# Re-traduits depuis l'anglais : flèches (0x79-0x7C) en DÉBUT de ligne, structure EN respectée.
-0x1F7091D: Route 1\n«Col Enneigé»\p<0x79> Hauteurs Gelées\n<0x7A> Bellinville, Grotte Stalactite
-0x1F70967: Route 1\n«Col Enneigé»\p<0x79> Hauteurs Gelées\n<0x7A> Bellinville\l<0x7B> Grotte Stalactite
-0x1F70AD1: Route 2\n«Voie Océane»\p<0x7B> Dresco\n<0x7C> Grotte Stalactite, Route 15
-0x1F70CAC: Route 3\n«Route du Paradis»\p<0x79> Paradis Floral\n<0x7A> Dresco
-0x1F70D0E: Route 4\n«Zone du Volcan»\p<0x7B> Forêt Lugubre, Volcan Cendreux,\nRoute 5\l<0x7C> Dresco\l<0x7A> Route 13
-0x1F70D64: Forêt Lugubre\p<0x7B> Volcan Cendreux\n<0x7C> Dresco
-0x1F70DB2: Route 5\n«Vallée Humide»\p<0x79> Route 4, Volcan Cendreux\n<0x7B> Bourg Cratère, Pension Pokémon
-0x1F70E01: Route 5\n«Vallée Humide»\p<0x79> Pension Pokémon\n<0x7A> Bourg Cratère\l<0x7C> Route 4
-0x1F70FA9: Route 6\n«Chemin des Patates»\p<0x79> Grotte Vallée\n<0x7A> Voie d'Eau Auburn\l<0x7B> Route 7, Mont Givre\l<0x7C> Route 14
-0x1F71004: Route 7\n«Bout de l'Île»\p<0x79> Mont Givre, Route 8\n<0x7A> Route 9\l<0x7C> Route 6
-0x1F71049: Route 7\n«Bout de l'Île»\p<0x7A> Route 9\n<0x7B> Mont Givre, Route 8\l<0x7C> Route 6
-0x1F7109D: Route 8\n«Sommet du Mont Givre»\p<0x79> Ville Blizzard\n<0x7A> Mont Givre, Route 7
-0x1F7114F: Route 9\n«Bois Autl»\p<0x79> Route 7, Mont Givre\n<0x7A> Ville de Tehl
-0x1F7118A: Route 9\n«Bois Autl»\p<0x79> Route 7, Mont Givre\n<0x7C> Ville de Tehl, Route 10
-0x1F711FF: Route 10\n«Rivière d'Automne»\p<0x7B> Ville de Tehl\n<0x79> Voie d'Eau Auburn\l<0x7C> Ville de Fallshore
-0x1F71246: Route 10\n«Rivière d'Automne»\p<0x7B> Ville de Tehl, Voie d'Eau Auburn\n<0x7C> Ville de Fallshore
-0x1F7129E: Voie d'Eau Auburn\p<0x79> Route 6, Grotte Vallée\n<0x7A> Route 10
-0x1F7139B: Route 11\n«Grottes des Falaises»\p<0x7B> Ville de Fallshore\n<0x7C> Ville d'Epidimy\l<0x79> Tarmiganville
-0x1F71685: Route 12\n«Escaliers Ouest»\p<0x79> Ville de Dehara\n<0x7A> Tarmiganville\l<0x7B> Route 14
-0x1F71CC3: Route 15\n«Ruban Northsea»\p<0x7B> Route 2, Grotte Stalactite\n<0x7C> Bourg Vivill
-0x1F71D04: Route 16\n«Canyon Aride»\p<0x79> Bourg Gurun\n<0x7A> Ville d'Antisis\l<0x7C> Route 17
-0x1F71F92: Route 17\n«Falaises Est»\p<0x7B> Route 16\n<0x7C> Ville Portuaire
-0x1F72310: Marais de Cootes\p<0x79> Bourg Magnolia\n<0x7A> Bourg Polder\l<0x7B> Pic Cristal
-0x1F72370: Marais de Cootes\p<0x79> Bourg Magnolia\n<0x7A> Bourg Polder\l<0x7C> Pic Cristal
-0x1F723F8: Champs Magnolia\p<0x7B> Bourg Magnolia\n<0x7C> Bois-Rouge
-0x1F72691: <0x79> Hauteurs Gelées\n<0x7A> Bourg Cratère\l<0x7B> Ville Blizzard
-0x1F726C0: <0x79> Hauteurs Gelées, Ville Blizzard\n<0x7A> Bourg Cratère\l<0x7C> Dresco
-0x1F726FC: <0x79> Bourg Cratère\n<0x7B> Ville de Tehl\l<0x7C> Ville de Fallshore, Ville d'Epidimy
-0x1F72735: <0x79> Bourg Cratère, Ville de Tehl\n<0x7A> Ville de Fallshore\l<0x7C> Ville d'Epidimy
-0x1F7276E: <0x79> Dresco\n<0x7A> Ville de Dehara\l<0x7B> Bourg Cratère, Ville Blizzard
-0x1F727A7: <0x79> Dresco\n<0x7A> Ville de Dehara\l<0x7C> Bourg Gurun
-0x1F727D0: <0x7A> Ville d'Antisis, Ville Portuaire\n<0x7B> Ville de Dehara\l<0x7C> Bourg Gurun
-0x1F72808: <0x79> Bourg Gurun\n<0x7A> Ville d'Antisis\l<0x7C> Ville Portuaire
-
-# --- Règle flèche-en-début-de-ligne : panneaux manqués par B-74 (P-68) ---
-# Audit EN-ancré (scripts/audit_arrow_line_start_fr.py) : ces panneaux gardaient
-# une flèche (0x79-0x7C) en milieu de ligne alors que l'anglais l'a en DÉBUT de
-# ligne. Re-formatés sur la structure EN (flèche juste après \n/\l/\p).
-0x741AF1: Route 15\p<0x7B> Route 2, Grotte Stalactite\n<0x7C> Bourg Vivill
-0x7B8908: ad\l<0x7A> Route 3
-0x7E6B88: 9Route 12\p<0x79> Ville de Dehara\n<0x7A> Tarmiganville\l<0x7B> Route 14
-0x1F721EC: Des mots sont griffonnés sur les\npoutres d’acier. Ils disent :\p<0x79> Autoroute KBT
-0x1F72353: <0x79> Bourg Magnolia\n<0x7C> Pic Cristal
+# --- Frost Mountain = Mont Givre (uniformisation) ---
+0x1f70fa9: Route 6 «Chemin\pdes Patates» <0x79> Grotte\nVallée <0x7A> Voie Auburn <0x7B> Route 7, Mont\lGivre <0x7C> Route 14
+0x1f71004: Route 7 «\nBout\pde l'Île» <0x79> Mont Givre,\nRoute 8 <0x7A> Route 9\l<0x7C> Route 6
+0x1f71049: Route 7 «\nBout\pde l'Île» <0x7A> Route 9\n<0x7B> Mont Givre, Route 8\l<0x7C> Route 6
+0x1f7108e: Mont Givre
+0x1f7109d: Route 8 «Sommet\ndu\pMont Givre» <0x79> Ville de\nBlizzard <0x7A> Givre/Rt7
+0x1f7114f: Route 9 «\nBois\pAutl» <0x79> Route 7, Mont Givre\n<0x7A> Ville de Tehl
+0x1f7118a: Route 9 «\nBois\pAutl» <0x79> Route 7, Mont Givre\n<0x7C> Tehl, Route 10
