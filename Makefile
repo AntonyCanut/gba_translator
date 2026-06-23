@@ -35,11 +35,11 @@ PATCH_VERSION_SCRIPT := scripts/patch_version_fr.py
 PATCH_POKEDEX_FR_SCRIPT := scripts/patch_pokedex_fr.py
 PATCH_POKEDEX_METRICS_FR_SCRIPT := scripts/patch_pokedex_metrics_fr.py
 PATCH_POKEDEX_CATEGORY_FR_SCRIPT := scripts/patch_pokedex_category_fr.py
+PATCH_POKEDEX_CATEGORIES_FR_SCRIPT := scripts/patch_pokedex_categories_fr.py
 PATCH_MOVE_DESC_FR_SCRIPT := scripts/patch_move_descriptions_fr.py
 PATCH_DUP_MOVE_DESC_FR_SCRIPT := scripts/patch_dup_move_descriptions_fr.py
 PATCH_TM_ITEM_DESC_FR_SCRIPT := scripts/patch_tm_item_descriptions_fr.py
 PATCH_METEORITE_DIALOGUE_FR_SCRIPT := scripts/patch_meteorite_dialogue_fr.py
-PATCH_WORLDMAP_JUNCTION_FR_SCRIPT := scripts/patch_worldmap_junction_panels_fr.py
 PATCH_SUMMARY_LABELS_SCRIPT := scripts/patch_summary_labels_fr.py
 PATCH_CFRU_TYPE_NAMES_SCRIPT := scripts/patch_cfru_type_names_fr.py
 PATCH_STATUS_ABBREVS_SCRIPT := scripts/patch_status_abbrevs_fr.py
@@ -167,6 +167,7 @@ build-fr: $(ENGLISH_EXTRACT) $(SPANISH_EXTRACT) $(BUILD_SCRIPT)
 		--translations $(FR_TRANSLATION)
 	@$(PYTHON) $(PATCH_POKEDEX_METRICS_FR_SCRIPT) --rom $(FR_BUILD)
 	@$(PYTHON) $(PATCH_POKEDEX_CATEGORY_FR_SCRIPT) --rom $(FR_BUILD)
+	@$(PYTHON) $(PATCH_POKEDEX_CATEGORIES_FR_SCRIPT) --rom $(FR_BUILD)
 	@$(PYTHON) $(PATCH_MOVE_DESC_FR_SCRIPT) \
 		--rom $(FR_BUILD) \
 		--source $(ENGLISH_ROM) \
@@ -179,11 +180,6 @@ build-fr: $(ENGLISH_EXTRACT) $(SPANISH_EXTRACT) $(BUILD_SCRIPT)
 		--combined combined_fr.txt \
 		--reference-rom $(SPANISH_ROM)
 	@$(PYTHON) $(PATCH_METEORITE_DIALOGUE_FR_SCRIPT) \
-		--rom $(FR_BUILD) \
-		--source $(ENGLISH_ROM) \
-		--combined combined_fr.txt \
-		--reference-rom $(SPANISH_ROM)
-	@$(PYTHON) $(PATCH_WORLDMAP_JUNCTION_FR_SCRIPT) \
 		--rom $(FR_BUILD) \
 		--source $(ENGLISH_ROM) \
 		--combined combined_fr.txt \
