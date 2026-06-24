@@ -159,7 +159,8 @@ build-fr: $(ENGLISH_EXTRACT) $(SPANISH_EXTRACT) $(BUILD_SCRIPT)
 	@$(PYTHON) $(PATCH_SUMMARY_LABELS_SCRIPT) --rom $(FR_BUILD) --source $(ENGLISH_ROM)
 	@$(PYTHON) $(REPOINT_STALE_SCRIPT) \
 		--target $(FR_BUILD) \
-		--translations $(FR_TRANSLATION)
+		--translations $(FR_TRANSLATION) \
+		--source $(ENGLISH_ROM)
 	@$(PYTHON) $(PATCH_RITUAL_SCRIPT) --rom $(FR_BUILD) --source $(ENGLISH_ROM)
 	@$(PYTHON) $(PATCH_VERSION_SCRIPT) --rom $(FR_BUILD) --build-number $(BUILD_NUMBER)
 	@$(PYTHON) $(PATCH_POKEDEX_FR_SCRIPT) \

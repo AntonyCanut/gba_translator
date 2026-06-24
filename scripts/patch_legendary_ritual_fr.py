@@ -111,6 +111,7 @@ def discover_clobbered_sites(source: bytes) -> list[int]:
 
 def patch(rom: bytearray, source: bytes) -> int:
     fixed = 0
+    rom_end = GBA_BASE + len(rom)
     for offset in discover_clobbered_sites(source):
         label = NAMED_SITES.get(offset, "cutscene setflag chain")
         canonical = source[offset:offset + 4]
@@ -119,13 +120,18 @@ def patch(rom: bytearray, source: bytes) -> int:
             print(f"  {offset:#08x} ({label}): already canonical {canonical.hex()}")
             continue
         current_ptr = int.from_bytes(current, "little")
-        if current_ptr != CORRUPT_POINTER:
-            # Unexpected content: refuse to guess. Better to fail loudly than
-            # to silently overwrite a legitimately-different build.
+        # A discovered site is a `setflag` chain in the English source, so its
+        # only legitimate FR value is the canonical one. Any difference is a
+        # repointer/LZ77 false-match that overwrote the window with a relocated
+        # string's GBA address — and that address varies with the free-space
+        # layout (0x08C277E1 in older builds, anything in 0x08xxxxxx now). So
+        # restore canonical whenever the window holds a GBA ROM pointer; only
+        # refuse for content that is neither canonical nor a plausible pointer.
+        if not (GBA_BASE <= current_ptr < rom_end):
             raise SystemExit(
                 f"Refusing to patch {offset:#08x} ({label}): expected the "
-                f"corrupt pointer {CORRUPT_POINTER:#010x} or the canonical "
-                f"bytes {canonical.hex()}, found {current.hex()}"
+                f"canonical bytes {canonical.hex()} or a clobbered GBA pointer, "
+                f"found {current.hex()}"
             )
         rom[offset:offset + 4] = canonical
         print(
