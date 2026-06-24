@@ -105,9 +105,16 @@ def repoint(
     rom: bytearray,
     texts: list[dict],
     translated_offsets: set[int],
+    english: bytes | None = None,
 ) -> int:
     fixed = 0
     rom_size = len(rom)
+    # Script bytecode (e.g. the legendary-ritual `setflag` chains) is never
+    # translated, so the English source holds its pristine bytes. Earlier build
+    # steps can disturb the live ROM around a chain, making the live-ROM
+    # heuristic miss it; the English source never lies. Veto against it when
+    # available (falls back to the live ROM for standalone use).
+    veto_rom = english if english is not None else rom
 
     # The pointer scan records every 4-byte window that decodes to a ROM
     # address — including plain text (the '<terminator><FC><01><08>' run
@@ -176,7 +183,11 @@ def repoint(
         for loc in stale:
             if in_translated_text(loc):
                 continue
-            if loc in PROTECTED_SCRIPT_OFFSETS or _is_setflag_chain(rom, loc):
+            if (
+                loc in PROTECTED_SCRIPT_OFFSETS
+                or _is_setflag_chain(veto_rom, loc)
+                or _is_setflag_chain(rom, loc)
+            ):
                 # Script bytecode masquerading as a text pointer — leave it.
                 continue
             struct.pack_into('<I', rom, loc, target)
@@ -201,6 +212,12 @@ def main() -> int:
         required=True,
         help='Translation JSON (only these strings can have been relocated)',
     )
+    parser.add_argument(
+        '--source',
+        type=Path,
+        default=Path('input/roms/englishrom.gba'),
+        help='English source ROM — pristine bytecode used to veto setflag chains',
+    )
     args = parser.parse_args()
 
     for path in (args.target, args.english_texts, args.translations):
@@ -215,7 +232,8 @@ def main() -> int:
         if isinstance(item.get('offset'), int)
     }
     rom = bytearray(args.target.read_bytes())
-    fixed = repoint(rom, data.get('texts', []), translated_offsets)
+    english = args.source.read_bytes() if args.source.exists() else None
+    fixed = repoint(rom, data.get('texts', []), translated_offsets, english)
     args.target.write_bytes(rom)
     print(f'Stale pointers re-targeted: {fixed}')
     return 0

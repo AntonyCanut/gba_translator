@@ -52,16 +52,38 @@ from scripts.clean_ellipsis_fr import clean_body  # noqa: E402
 COMBINED = REPO / "combined_fr.txt"
 R09_COMMIT = "d1aaa6f"
 STRAIGHT = '"'  # U+0022 — the decoded ex-ellipsis byte 0xB0
-ELLIPSIS = "…"
+# The ellipsis pause is restored as the raw font glyph byte 0xB0 (renders as
+# "…" in the FireRed/CFRU font) rather than "…"/"..." (which the encoder expands
+# to three 0xad periods = 3 bytes). 0xB0 is exactly the byte the English source
+# used for these pauses, so the restored entry is the SAME length as the lone
+# quote it replaces — it stays in its in-place slot and consumes no free space
+# (a 3-byte "…" would push ~30 entries over their slot, forcing whole-string
+# relocations that exhaust the ROM's tiny free-space margin and regress other
+# post-build patches). See memory unbound-guillemets-render-as-ellipsis: after
+# the encoder fix 0xB0 is no longer emitted for quotes, so it is free to mean
+# ellipsis again. Raw-byte form per unbound-brace-control-token-relocation.
+ELLIPSIS = "<0xB0>"
+_LEGACY = "…"  # earlier restoration form (3-byte); still matched for idempotency
 
 _OFF = re.compile(r"(0x[0-9a-fA-F]+):(.*)")
+_B0_RUN = re.compile(r"<0xB0>(?:[ \t]*<0xB0>)+")
+
+
+def _collapse(text: str) -> str:
+    """Collapse a run of adjacent 0xB0 tokens (optionally space-separated) to one
+    — a single pause beat, matching the project's clean-ellipsis policy."""
+    return _B0_RUN.sub(ELLIPSIS, text)
 
 
 def _to_ellipsis(text: str) -> str:
-    """Turn ex-ellipsis quotes into '…', then apply the project ellipsis policy
-    (collapse runs, normalise spacing — see scripts/clean_ellipsis_fr.py) so a
-    burst like ``Toi""""`` becomes a single ``Toi…`` rather than ``Toi…………``."""
-    return clean_body(text.replace(STRAIGHT, ELLIPSIS))
+    """Turn ex-ellipsis quotes into the 1-byte 0xB0 glyph, collapsing runs."""
+    return _collapse(text.replace(STRAIGHT, ELLIPSIS))
+
+
+def _legacy_ellipsis(text: str) -> str:
+    """The earlier 3-byte '…' restoration form, kept so an already-restored file
+    is recognised and re-normalised to the 0xB0 form (idempotent upgrade)."""
+    return clean_body(text.replace(STRAIGHT, _LEGACY))
 
 
 def load_r09_pairs() -> dict[str, tuple[str, str]]:
@@ -116,22 +138,24 @@ def run(apply: bool) -> int:
 
     for off, (before, after) in pairs.items():
         converted = _to_ellipsis(before)
+        legacy = _legacy_ellipsis(before)
         entries = index.get(off, [])
         if not entries:
             reworded.append(f"{off} (offset absent)")
             continue
         did = False
         for i, body, nl in entries:
-            if body == after:
-                # deleted form still present -> restore ellipses
+            if body == converted:
+                already.append(off)
+                did = True
+                break
+            if body in (after, legacy):
+                # deleted form, or earlier 3-byte '…' restoration -> normalise
+                # to the 1-byte 0xB0 glyph form.
                 off_raw = lines[i].split(":", 1)[0]
                 lines[i] = f"{off_raw}:{converted}{nl}"
                 report.append((off, body, converted))
                 restored += 1
-                did = True
-                break
-            if body == converted:
-                already.append(off)
                 did = True
                 break
         if not did:
@@ -172,23 +196,26 @@ def _restore_reworded(before: str, after: str, living: str) -> str:
     The deletion (before→after) only removed ``"`` glyphs; word context around
     each quote is preserved. We walk `before`, and for every ``"`` we locate its
     left/right anchors (a few surrounding chars that survive in `living`) and
-    splice a ``…`` back in. Falls back to None if anchors are ambiguous.
+    splice the 0xB0 glyph back in. A site already carrying the earlier ``…`` form
+    is upgraded in place; an already-0xB0 site is left untouched (idempotent).
+    Falls back to None if anchors are ambiguous.
     """
     result = living
     # Process quotes right-to-left so earlier indices stay valid.
     positions = [m.start() for m in re.finditer(re.escape(STRAIGHT), before)]
     for pos in reversed(positions):
         left = before[max(0, pos - 12):pos]
-        right = before[pos + 1:pos + 13]
-        # use the longest unique suffix of left present in result
         anchor_l = _unique_suffix(left, result)
         if anchor_l is None:
             return None
         at = result.find(anchor_l) + len(anchor_l)
-        if result[at:at + 1] == ELLIPSIS:
-            continue  # already restored — keep idempotent
+        if result[at:at + len(ELLIPSIS)] == ELLIPSIS:
+            continue  # already 0xB0 — idempotent
+        if result[at:at + 1] == _LEGACY:
+            result = result[:at] + ELLIPSIS + result[at + 1:]  # upgrade '…'
+            continue
         result = result[:at] + ELLIPSIS + result[at:]
-    return clean_body(result)
+    return _collapse(result)
 
 
 def _unique_suffix(left: str, hay: str) -> str | None:
