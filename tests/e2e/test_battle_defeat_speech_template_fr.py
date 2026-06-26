@@ -79,8 +79,14 @@ def test_no_mike_campeur_corruption(fr_bytes):
 
 
 def test_cluster_matches_english_layout(en_bytes, fr_bytes):
-    """The control-code/switch-out cluster is language-neutral and must match EN,
-    so every fixed pointer in it lands on the right string."""
+    """The control-code cluster bytes must match EN so fixed pointers land correctly.
+
+    Note: the three trainer recall strings (0x3FB21F / 0x3FB235 / 0x3FB248) are
+    referenced by an external pointer table (0x3FE504 / 0x3FE50C / 0x3FE510) that
+    ``patch_battle_recall_strings_fr.py`` repoints to French translations in free
+    space.  The cluster itself stays byte-for-byte identical to EN — only the
+    external pointers change — so this assertion remains valid.
+    """
     en_cluster = en_bytes[STRINGID0_BODY_OFF:CLUSTER_END]
     fr_cluster = fr_bytes[STRINGID0_BODY_OFF:CLUSTER_END]
     assert fr_cluster == en_cluster, (
