@@ -1,36 +1,39 @@
-"""E2E: end-of-battle *victory* messages render in French and pause to be read.
+"""E2E: end-of-battle *victory* messages render in French and wait to be read.
 
-Ticket "Combats & Dialogues" — follow-up « Et en cas de victoire ? »
--------------------------------------------------------------------
+Ticket "Combats & Dialogues" — follow-up
+----------------------------------------
 The defeat path is already covered by ``test_battle_defeat_messages_fr.py``.
-This test is its mirror for the WIN path: the user asked us to look at the
-English version to understand why the end-of-battle phrase had no time to be
-read, then verify the French in the BUILT ROM. When the player *wins* a trainer
+This test is its mirror for the WIN path. When the player *wins* a trainer
 battle the engine shows two strings, at fixed offsets the pipeline does NOT
 repoint:
 
     0x003FD1C7  victory announce : "You defeated <class> <name>!"  (gBattleStringsTable)
     0x00A4C670  prize money      : "You got ¥<X> for winning!"     (0xA4xxxx region)
 
-Why each needs a *different* pause code
----------------------------------------
-* 0x3FD1C7 lives in the battle string table. In BATTLE text a page break <0xFB>
-  does NOT wait for a button — it is advanced by the script's frame timer
-  (waitmessage), so "You defeated X!" flashed by. The game's own readable battle
-  lines (e.g. "Wild <mon> appeared!{FC:08:7F}") use the TIMED pause FC 08 7F
-  (~127 frames ≈ 2.1 s). The fix appends that timed pause BEFORE the page break
-  so the announce is held, then the box clears and the prize money follows.
-* 0xA4C670 lives in the 0xA4xxxx region whose sibling prize/loss lines use the
-  wait-for-button code FC 09. The win money line had no wait code at all, so the
-  fix ends it with FC 09 (like the defeat lines).
+Both English lines flash by (the announce ends with a page break only, which in
+BATTLE text auto-advances on the frame timer; the money line has no wait code at
+all). The fix makes BOTH end with the wait-for-button code FC 09
+(PAUSE_UNTIL_PRESS): the player presses A to continue, so each line is readable
+no matter the timer.
+
+Why FC 09 on the victory announce (and not the timed pause FC 08)
+-----------------------------------------------------------------
+A first attempt appended a TIMED pause <0xFC><0x08><0x7F> (~2.1 s) to the
+announce; the user reported it STILL passed too fast (a fixed timer is
+subjective). The sibling prize line already ships with FC 09 in the build the
+user plays and does NOT freeze — proving FC 09 is handled safely by the battle
+message system — so the announce now mirrors it: end on FC 09, no page break
+(the battle engine clears the box after the press). The wording also changed
+from the terse "Vaincu <Dresseur> !" to the natural "Tu as battu <Dresseur> !"
+the user asked for.
 
 Both English originals are shorter-bounded slots that are NOT repointed, so the
 French must fit in place (FR length <= EN length) or the pipeline drops it and
 the slot keeps its English bytes.
 
 A green result means winning against Karatéka Mike shows French victory text
-that stays on screen long enough to read, then a French prize line that waits
-for a button press — not English that flashes by.
+that waits for a button press, then a French prize line that also waits — not
+English that flashes by.
 
 Run standalone:  pytest tests/e2e/test_battle_victory_messages_fr.py -v
 """
@@ -101,29 +104,36 @@ class TestFrenchVictoryMessages:
         text = _decode(raw)
         for marker in _ENGLISH_MARKERS:
             assert marker not in text, f"0x3FD1C7 still English: {text!r}"
-        assert "Vaincu" in text, f"0x3FD1C7 not French: {text!r}"
+        assert "Tu as battu" in text, (
+            f"0x3FD1C7 must read 'Tu as battu ...' (user request): {text!r}"
+        )
+        assert "Vaincu" not in text, f"0x3FD1C7 still terse 'Vaincu': {text!r}"
         # In-place injection: FR must not exceed the English slot length.
         en_len = len(_string_at(en_bytes, VICTORY_OFFSET))
         assert len(raw) <= en_len, (
             f"0x3FD1C7 FR {len(raw)}B exceeds EN slot {en_len}B -> would be dropped"
         )
 
-    def test_victory_announce_holds_with_timed_pause(self, fr_bytes):
-        """The announce must carry the timed pause FC 08 7F BEFORE the page break
-        so "Vaincu <Dresseur> !" stays on screen long enough to read."""
+    def test_victory_announce_waits_for_button(self, fr_bytes):
+        """The announce must end with the wait-for-button code FC 09 so the
+        player presses to continue — the definitive fix for "passes too fast".
+        Mirrors the prize sibling: end on FC 09, no page break."""
         raw = _string_at(fr_bytes, VICTORY_OFFSET)
-        assert _FC08_TIMED in raw, (
-            f"0x3FD1C7 must hold with the timed pause FC 08 7F; got {raw.hex()}"
+        assert raw.endswith(_FC09_WAIT + bytes([POKEMON_TERMINATOR])), (
+            f"0x3FD1C7 must end with the FC09 wait code; got {raw.hex()}"
         )
-        # Pause holds the text, THEN the page break clears the box.
-        assert raw.endswith(_PAGE_BREAK + bytes([POKEMON_TERMINATOR])), raw.hex()
-        assert raw.index(_FC08_TIMED) < raw.rindex(_PAGE_BREAK), (
-            f"the timed pause must precede the page break: {raw.hex()}"
+        # The superseded timed pause (reported as still too fast) must be gone.
+        assert _FC08_TIMED not in raw, (
+            f"0x3FD1C7 must not keep the timed pause FC 08 7F: {raw.hex()}"
+        )
+        # No page break — like the prize line; the battle engine clears the box.
+        assert _PAGE_BREAK not in raw, (
+            f"0x3FD1C7 must not carry a page break: {raw.hex()}"
         )
 
     def test_victory_announce_keeps_class_and_name_buffers(self, fr_bytes):
         """The <class>/<name> buffers (FD 1C / FD 1D) must survive so the line
-        renders the real trainer ("Vaincu Karatéka Mike !")."""
+        renders the real trainer ("Tu as battu Karatéka Mike !")."""
         raw = _string_at(fr_bytes, VICTORY_OFFSET)
         assert b"\xfd\x1c" in raw, "trainer class buffer FD1C lost"
         assert b"\xfd\x1d" in raw, "trainer name buffer FD1D lost"
