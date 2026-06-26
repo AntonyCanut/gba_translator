@@ -336,13 +336,21 @@ def test_release_build_ritual_logic_matches_en(en, release_path):
 # summon dialogue looped forever. This guard fails on ANY clobbered site.
 #
 # Signature: a 4-byte window == `08 29 F6 09` (LE 0x09F62908, the EN address of
-# "I swam, of course!") that the repointer rewrites to the relocated FR pointer
-# 0x08C277E1. A real setflag chain has the *previous* setflag opcode (0x29) two
-# bytes before the window; the two genuine relocated text pointers that share the
-# bytes (0x1E8738D, 0x1E873B4) do not, and must stay French.
+# "I swam, of course!") that the repointer rewrites to the relocated FR text
+# pointer (the address of "J'ai nagé, bien sûr !"). A real setflag chain has the
+# *previous* setflag opcode (0x29) two bytes before the window; the two genuine
+# relocated text pointers that share the bytes (0x1E8738D, 0x1E873B4) do not, and
+# must stay French.
+#
+# The relocated FR address is BUILD-DEPENDENT (free-space layout shifts as
+# translations are added — 0x08C277E1 in older builds, 0x08C421A6 here, "anything
+# in 0x08xxxxxx" per patch_legendary_ritual_fr.py). So the genuine-pointer guard
+# below checks the *property* (still FR, not reverted to EN), never a frozen
+# address.
 _SETFLAG_WINDOW = bytes([0x08, 0x29, 0xF6, 0x09])
 _SETFLAG_OPCODE = 0x29
-_CORRUPT_FR_POINTER = bytes([0xE1, 0x77, 0xC2, 0x08])  # 0x08C277E1 LE
+_EN_RITUAL_TEXT_PTR = 0x09F62908  # EN "I swam, of course!" — must NOT come back
+_FR_RITUAL_TEXT_HEAD = bytes([0xC4, 0xB4])  # "J'" — start of "J'ai nagé, bien sûr !"
 _GENUINE_RELOCATED_POINTERS = (0x1E8738D, 0x1E873B4)
 
 
@@ -383,11 +391,43 @@ def test_no_legendary_setflag_chain_is_clobbered(en: bytes, fr: bytes):
     )
 
 
-def test_genuine_relocated_pointers_stay_french(fr: bytes):
+def test_genuine_relocated_pointers_stay_french(en: bytes, fr: bytes):
     """The two real relocated text pointers sharing the setflag bytes are NOT
-    reverted to EN by the repair (they legitimately point at relocated FR text)."""
+    reverted to EN by the repair (they legitimately point at relocated FR text).
+
+    Guards the *property*, not a frozen address: each must (a) be a valid GBA
+    pointer, (b) NOT revert to the EN pointer 0x09F62908 ("I swam, of course!"),
+    (c) agree with its twin, and (d) resolve to the French string
+    "J'ai nagé, bien sûr !" (not the English original). The exact relocated
+    address shifts between builds as free space is reallocated.
+    """
+    targets = []
     for off in _GENUINE_RELOCATED_POINTERS:
-        assert bytes(fr[off:off + 4]) == _CORRUPT_FR_POINTER, (
-            f"genuine relocated pointer 0x{off:07X} should stay the FR pointer "
-            f"{_CORRUPT_FR_POINTER.hex()}, found {fr[off:off+4].hex()}"
+        ptr = _rd32(fr, off)
+        assert GBA_BASE <= ptr < GBA_END, (
+            f"genuine relocated pointer 0x{off:07X} = 0x{ptr:08X} is not a valid "
+            "GBA ROM pointer"
         )
+        assert ptr != _EN_RITUAL_TEXT_PTR, (
+            f"genuine relocated pointer 0x{off:07X} reverted to the EN text pointer "
+            f"0x{_EN_RITUAL_TEXT_PTR:08X} -> the ritual line would show English"
+        )
+        targets.append(ptr)
+
+    assert targets[0] == targets[1], (
+        "the two genuine pointers must share one relocated FR string; got "
+        f"0x{targets[0]:08X} and 0x{targets[1]:08X}"
+    )
+
+    fr_off = targets[0] - GBA_BASE
+    fr_text = fr[fr_off : fr_off + 32]
+    en_off = _EN_RITUAL_TEXT_PTR - GBA_BASE
+    en_text = en[en_off : en_off + 32]
+    assert fr_text[: fr_text.find(0xFF)] != en_text[: en_text.find(0xFF)], (
+        f"relocated text at 0x{targets[0]:08X} equals the EN original "
+        "('I swam, of course!') — not translated"
+    )
+    assert fr_text[:2] == _FR_RITUAL_TEXT_HEAD, (
+        "relocated FR text should be \"J'ai nagé, bien sûr !\" (starts with \"J'\"); "
+        f"got {fr_text[:8].hex()}"
+    )
