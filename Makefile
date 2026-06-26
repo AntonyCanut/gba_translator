@@ -49,6 +49,7 @@ PATCH_TYPE_ICONS_SCRIPT := scripts/patch_type_icons_fr.py
 PATCH_SHOP_FR_SCRIPT := scripts/patch_shop_fr.py
 PATCH_GENDERED_BUFFERS_SCRIPT := scripts/patch_gendered_buffers_fr.py
 PATCH_BATTLE_STRING_TEMPLATES_SCRIPT := scripts/patch_battle_string_templates_fr.py
+PATCH_BATTLE_RECALL_STRINGS_SCRIPT := scripts/patch_battle_recall_strings_fr.py
 
 OUTPUT_DIR := output
 EXTRACT_DIR := $(OUTPUT_DIR)/extracted/extracted_texts
@@ -195,6 +196,7 @@ build-fr: $(ENGLISH_EXTRACT) $(SPANISH_EXTRACT) $(BUILD_SCRIPT)
 	@$(PYTHON) $(PATCH_CFRU_TYPE_NAMES_SCRIPT) --rom $(FR_BUILD)
 	@$(PYTHON) $(PATCH_STATUS_ABBREVS_SCRIPT) --rom $(FR_BUILD)
 	@$(PYTHON) $(PATCH_BATTLE_STRING_TEMPLATES_SCRIPT) --rom $(FR_BUILD) --source $(ENGLISH_ROM)
+	@$(PYTHON) $(PATCH_BATTLE_RECALL_STRINGS_SCRIPT) --rom $(FR_BUILD)
 	@$(PYTHON) $(PATCH_STATUS_BADGES_SCRIPT) --rom $(FR_BUILD)
 	@$(PYTHON) $(PATCH_TYPE_ICONS_SCRIPT) --rom $(FR_BUILD)
 	@$(PYTHON) $(PATCH_SHOP_FR_SCRIPT) --rom $(FR_BUILD)

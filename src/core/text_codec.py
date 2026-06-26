@@ -148,6 +148,11 @@ CONTROL_CODE_DECODE = {
 }
 
 HEX_TOKEN_RE = re.compile(r'^(?:0x)?([0-9A-Fa-f]{2})$')
+# Matches {FDxx}, {FCxx}, {FExx} etc. brace-style control-code tokens.
+# These appear in combined_fr.txt and JSON translations as human-readable
+# placeholders.  encode_pokemon emits them as raw 2-byte sequences when
+# _apply_control_placeholders has not already expanded them.
+BRACE_CTRL_RE = re.compile(r'^([0-9A-Fa-f]{2})([0-9A-Fa-f]{2})$')
 
 
 def _resolve_straight_double_quotes(text: str) -> str:
@@ -198,6 +203,26 @@ class TextEncoder:
             return None
         return int(match.group(1), 16), end + 1
 
+    @staticmethod
+    def _parse_brace_token(text: str, index: int) -> Optional[Tuple[Tuple[int, ...], int]]:
+        """Parse a {FDxx}-style brace control-code token.
+
+        Returns (bytes_tuple, new_index) when the brace content is exactly four
+        hex digits (two bytes), e.g. ``{FD24}`` → ``(0xFD, 0x24)``.  Returns
+        None for {COLOR} and other non-hex brace tokens so the caller can fall
+        through to positional-placeholder logic.
+        """
+        if text[index] != '{':
+            return None
+        end = text.find('}', index + 1)
+        if end == -1:
+            return None
+        token = text[index + 1:end]
+        match = BRACE_CTRL_RE.match(token)
+        if not match:
+            return None
+        return (int(match.group(1), 16), int(match.group(2), 16)), end + 1
+
     @classmethod
     def encode_ascii(cls, text: str) -> bytes:
         encoded = []
@@ -232,6 +257,13 @@ class TextEncoder:
             if token:
                 value, i = token
                 encoded.append(value)
+                continue
+
+            brace = cls._parse_brace_token(text, i)
+            if brace:
+                (b0, b1), i = brace
+                encoded.append(b0)
+                encoded.append(b1)
                 continue
 
             char = text[i]
