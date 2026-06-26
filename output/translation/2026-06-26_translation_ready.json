@@ -1,5 +1,5 @@
 {
-  "conversion_date": "2026-06-26T17:55:57.270628",
+  "conversion_date": "2026-06-26T19:16:10.460157",
   "source_csv": "2026-01-15_trilingual_translation.csv",
   "total_translations": 20807,
   "total_errors": 0,
@@ -35456,10 +35456,10 @@
     {
       "offset": 4182471,
       "original_text": "You defeated\n<0xFD><0x1C> <0xFD><0x1D>!<0xFB>",
-      "translation": "Vaincu <0xFD><0x1C>\n<0xFD><0x1D>!<0xFC><0x08><0x7F><0xFB>",
-      "length": 17,
+      "translation": "Tu as battu <0xFD><0x1C>\n<0xFD><0x1D>!<0xFC><0x09>",
+      "length": 20,
       "original_length": 20,
-      "padding_used": -3,
+      "padding_used": 0,
       "encoding": "pokemon",
       "category": "dialogue",
       "notes": "",
