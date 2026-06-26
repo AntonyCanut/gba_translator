@@ -1,9 +1,9 @@
 {
-  "conversion_date": "2026-06-26T19:16:10.460157",
+  "conversion_date": "2026-06-26T23:59:53.601318",
   "source_csv": "2026-01-15_trilingual_translation.csv",
-  "total_translations": 20807,
+  "total_translations": 20821,
   "total_errors": 0,
-  "total_warnings": 16762,
+  "total_warnings": 16721,
   "translations": [
     {
       "offset": 165760,
@@ -31460,10 +31460,10 @@
     {
       "offset": 4124284,
       "original_text": "Grim Woods",
-      "translation": "Forêt Lugubres",
-      "length": 14,
+      "translation": "Forêt Lugubre",
+      "length": 13,
       "original_length": 10,
-      "padding_used": 4,
+      "padding_used": 3,
       "encoding": "pokemon",
       "category": "location",
       "notes": "",
@@ -31845,21 +31845,21 @@
       "offset": 4174364,
       "original_text": "<0xFD>+",
       "translation": "{FD2E}",
-      "length": 6,
+      "length": 2,
       "original_length": 2,
-      "padding_used": 4,
+      "padding_used": 0,
       "encoding": "pokemon",
       "category": "other",
       "notes": "",
-      "too_long": true
+      "too_long": false
     },
     {
       "offset": 4174367,
       "original_text": "<0xFD><0x1D>: <0xFD><0x06>, come back!",
       "translation": "{FD06}, come back!",
-      "length": 18,
+      "length": 14,
       "original_length": 18,
-      "padding_used": 0,
+      "padding_used": -4,
       "encoding": "pokemon",
       "category": "dialogue",
       "notes": "",
@@ -31881,9 +31881,9 @@
       "offset": 4174389,
       "original_text": "<0xFD><0x1D>: <0xFD><0x08>, come back!",
       "translation": "{FD08}, come back!",
-      "length": 18,
+      "length": 14,
       "original_length": 18,
-      "padding_used": 0,
+      "padding_used": -4,
       "encoding": "pokemon",
       "category": "dialogue",
       "notes": "",
@@ -31893,9 +31893,9 @@
       "offset": 4174408,
       "original_text": "<0xFD><0x1D>: <0xFD><0x06> and\n<0xFD><0x08>, come back!",
       "translation": "{FD06} et\n{FD08}, revenez !",
-      "length": 27,
+      "length": 19,
       "original_length": 25,
-      "padding_used": 2,
+      "padding_used": -6,
       "encoding": "pokemon",
       "category": "dialogue",
       "notes": "",
@@ -31917,9 +31917,9 @@
       "offset": 4174437,
       "original_text": "<0xFD>  gained<0xFD><0x01>\n<0xFD><0x34> Exp. Points!<0xFB>",
       "translation": "{FD00} a gagné{FD01}\n{FD34} points d'Exp. !<0xFA>",
-      "length": 44,
+      "length": 32,
       "original_length": 28,
-      "padding_used": 16,
+      "padding_used": 4,
       "encoding": "pokemon",
       "category": "dialogue",
       "notes": "",
@@ -31977,9 +31977,9 @@
       "offset": 4174545,
       "original_text": "But, <0xFD>  can't learn\nmore than four moves.<0xFB>",
       "translation": "Mais {FD00} ne peut pas\napprendre plus de quatre capacités.<0xFA>",
-      "length": 60,
+      "length": 56,
       "original_length": 42,
-      "padding_used": 18,
+      "padding_used": 14,
       "encoding": "pokemon",
       "category": "description",
       "notes": "",
@@ -32013,9 +32013,9 @@
       "offset": 4174638,
       "original_text": "<0xFC><0x08><0x20>Stop learning\n<0xFD><0x01>?",
       "translation": "{FC08}Arrêter d'apprendre\n{FD01} ?",
-      "length": 34,
+      "length": 26,
       "original_length": 20,
-      "padding_used": 14,
+      "padding_used": 6,
       "encoding": "pokemon",
       "category": "dialogue",
       "notes": "",
@@ -32025,13 +32025,13 @@
       "offset": 4174659,
       "original_text": "<0xFD>  did not learn\n<0xFD><0x01>.<0xFB>",
       "translation": "{FD00} n'a pas appris\n{FD01}.<0xFA>",
-      "length": 30,
+      "length": 22,
       "original_length": 21,
-      "padding_used": 9,
+      "padding_used": 1,
       "encoding": "pokemon",
       "category": "description",
       "notes": "",
-      "too_long": true
+      "too_long": false
     },
     {
       "offset": 4174681,
@@ -32169,13 +32169,13 @@
       "offset": 4175173,
       "original_text": "Hit <0xFD>  time<0x5C>s<0x5D>!",
       "translation": "Touché {FD00} fois !",
-      "length": 20,
+      "length": 16,
       "original_length": 15,
-      "padding_used": 5,
+      "padding_used": 1,
       "encoding": "pokemon",
       "category": "dialogue",
       "notes": "",
-      "too_long": true
+      "too_long": false
     },
     {
       "offset": 4175189,
@@ -32325,13 +32325,13 @@
       "offset": 4175440,
       "original_text": "<0xFD><0x13>'s <0xFD>è\nburned <0xFD><0x11>!",
       "translation": "{FD13} {FD1A}\nburned {FD11}!",
-      "length": 28,
+      "length": 16,
       "original_length": 18,
-      "padding_used": 10,
+      "padding_used": -2,
       "encoding": "pokemon",
       "category": "dialogue",
       "notes": "",
-      "too_long": true
+      "too_long": false
     },
     {
       "offset": 4175459,
@@ -32469,21 +32469,21 @@
       "offset": 4175829,
       "original_text": "<0xFD><0x0F>'s <0xFD> \nwon't go higher!",
       "translation": "{FD0F} {FD00}\nne peut plus monter !",
-      "length": 35,
+      "length": 27,
       "original_length": 24,
-      "padding_used": 11,
+      "padding_used": 3,
       "encoding": "pokemon",
       "category": "dialogue",
       "notes": "",
-      "too_long": true
+      "too_long": false
     },
     {
       "offset": 4175854,
       "original_text": "<0xFD><0x10>'s <0xFD> \nwon't go lower!",
       "translation": "{FD10} {FD00}\nne peut plus baisser !",
-      "length": 36,
+      "length": 28,
       "original_length": 23,
-      "padding_used": 13,
+      "padding_used": 5,
       "encoding": "pokemon",
       "category": "dialogue",
       "notes": "",
@@ -32493,13 +32493,13 @@
       "offset": 4175878,
       "original_text": "Your team's <0xFD> \nstopped working!",
       "translation": "L'équipe {FD00}\nne fonctionne plus !",
-      "length": 36,
+      "length": 32,
       "original_length": 31,
-      "padding_used": 5,
+      "padding_used": 1,
       "encoding": "pokemon",
       "category": "dialogue",
       "notes": "",
-      "too_long": true
+      "too_long": false
     },
     {
       "offset": 4175910,
@@ -32913,13 +32913,13 @@
       "offset": 4176771,
       "original_text": "<0xFD><0x0F> was freed\nfrom <0xFD> !",
       "translation": "{FD0F} est libéré\nde {FD00} !",
-      "length": 29,
+      "length": 21,
       "original_length": 21,
-      "padding_used": 8,
+      "padding_used": 0,
       "encoding": "pokemon",
       "category": "dialogue",
       "notes": "",
-      "too_long": true
+      "too_long": false
     },
     {
       "offset": 4176793,
@@ -33021,13 +33021,13 @@
       "offset": 4176994,
       "original_text": "<0xFD><0x28>'s <0xFD> \nwore off!",
       "translation": "{FD28} {FD00}\nwore off!",
-      "length": 23,
+      "length": 15,
       "original_length": 17,
-      "padding_used": 6,
+      "padding_used": -2,
       "encoding": "pokemon",
       "category": "dialogue",
       "notes": "",
-      "too_long": true
+      "too_long": false
     },
     {
       "offset": 4177012,
@@ -33261,13 +33261,13 @@
       "offset": 4177486,
       "original_text": "<0xFD>ó picked up\n¥<0xFD> !<0xFB>",
       "translation": "{FD23} picked up\n¥{FD00}!<0xFA>",
-      "length": 26,
+      "length": 18,
       "original_length": 18,
-      "padding_used": 8,
+      "padding_used": 0,
       "encoding": "pokemon",
       "category": "dialogue",
       "notes": "",
-      "too_long": true
+      "too_long": false
     },
     {
       "offset": 4177505,
@@ -33465,21 +33465,21 @@
       "offset": 4177875,
       "original_text": "Reduced <0xFD><0x10>'s\n<0xFD>  by <0xFD><0x01>!",
       "translation": "Réduit {FD00} de {FD10}\nde {FD01} !",
-      "length": 35,
+      "length": 23,
       "original_length": 22,
-      "padding_used": 13,
+      "padding_used": 1,
       "encoding": "pokemon",
       "category": "dialogue",
       "notes": "",
-      "too_long": true
+      "too_long": false
     },
     {
       "offset": 4177898,
       "original_text": "<0xFD><0x0F> stole\n<0xFD><0x10>'s <0xFD>à!",
       "translation": "{FD0F} stole\n{FD10} {FD16}!",
-      "length": 27,
+      "length": 15,
       "original_length": 17,
-      "padding_used": 10,
+      "padding_used": -2,
       "encoding": "pokemon",
       "category": "dialogue",
       "notes": "",
@@ -33861,13 +33861,13 @@
       "offset": 4178807,
       "original_text": "<0xFD><0x0F> copied\n<0xFD><0x10>'s <0xFD>ç!",
       "translation": "{FD0F} copied\n{FD10} {FD19}!",
-      "length": 28,
+      "length": 16,
       "original_length": 18,
-      "padding_used": 10,
+      "padding_used": -2,
       "encoding": "pokemon",
       "category": "dialogue",
       "notes": "",
-      "too_long": true
+      "too_long": false
     },
     {
       "offset": 4178826,
@@ -34377,13 +34377,13 @@
       "offset": 4180162,
       "original_text": "<0xFD><0x13> traced\n<0xFD> 's <0xFD><0x01>!",
       "translation": "{FD13} traced\n{FD00} {FD01}!",
-      "length": 28,
+      "length": 16,
       "original_length": 18,
-      "padding_used": 10,
+      "padding_used": -2,
       "encoding": "pokemon",
       "category": "dialogue",
       "notes": "",
-      "too_long": true
+      "too_long": false
     },
     {
       "offset": 4180181,
@@ -34401,13 +34401,13 @@
       "offset": 4180205,
       "original_text": "<0xFD><0x10>'s <0xFD>ç\nblocks <0xFD><0x14>!",
       "translation": "{FD10} {FD19}\nblocks {FD14}!",
-      "length": 28,
+      "length": 16,
       "original_length": 18,
-      "padding_used": 10,
+      "padding_used": -2,
       "encoding": "pokemon",
       "category": "dialogue",
       "notes": "",
-      "too_long": true
+      "too_long": false
     },
     {
       "offset": 4180243,
@@ -34845,13 +34845,13 @@
       "offset": 4181152,
       "original_text": "<0xFC><0x10><0x11> <0xFD><0x0F> fled\nusing its <0xFD>à!<0xFB>",
       "translation": "{FC10} {FD0F} a fui\navec {FD16}!<0xFA>",
-      "length": 33,
+      "length": 21,
       "original_length": 26,
-      "padding_used": 7,
+      "padding_used": -5,
       "encoding": "pokemon",
       "category": "dialogue",
       "notes": "",
-      "too_long": true
+      "too_long": false
     },
     {
       "offset": 4181179,
@@ -35661,13 +35661,13 @@
       "offset": 4182983,
       "original_text": "<0xFD><0x1C> <0xFD><0x1D> sent\nout <0xFD><0x06> and <0xFD><0x08>!<0xFC><0x08><0x3C>",
       "translation": "{FD1C} {FD1D} envoie\n{FD06} et {FD08}!{FC08}",
-      "length": 44,
+      "length": 24,
       "original_length": 28,
-      "padding_used": 16,
+      "padding_used": -4,
       "encoding": "pokemon",
       "category": "dialogue",
       "notes": "",
-      "too_long": true
+      "too_long": false
     },
     {
       "offset": 4183012,
@@ -36345,9 +36345,9 @@
       "offset": 4183970,
       "original_text": "Gotcha!\n<0xFD><0x3A> was caught!<0xFC><0x0A><0xFC><0x0B><0x42><0x01><0xFB>",
       "translation": "Attrapé!\n{FD3A} a été capturé!{FC0A}{FC0B}<0xFA>",
-      "length": 43,
+      "length": 31,
       "original_length": 29,
-      "padding_used": 14,
+      "padding_used": 2,
       "encoding": "pokemon",
       "category": "dialogue",
       "notes": "",
@@ -36357,13 +36357,13 @@
       "offset": 4184000,
       "original_text": "Gotcha!\n<0xFD><0x3A> was caught!<0xFC><0x0A><0xFC><0x0B><0x42><0x01><0xFC><0x08>ù",
       "translation": "Attrapé!\n{FD3A} a été capturé!{FC0A}{FC0B}{FC08}",
-      "length": 48,
+      "length": 32,
       "original_length": 31,
-      "padding_used": 17,
+      "padding_used": 1,
       "encoding": "pokemon",
       "category": "dialogue",
       "notes": "",
-      "too_long": true
+      "too_long": false
     },
     {
       "offset": 4184032,
@@ -36585,9 +36585,9 @@
       "offset": 4184498,
       "original_text": "<0xFD><0x13>'s <0xFD><0x16>\nrestored <0xFD> 's PP!",
       "translation": "{FD16} de {FD13}\na restauré les PP de {FD00}!",
-      "length": 45,
+      "length": 33,
       "original_length": 25,
-      "padding_used": 20,
+      "padding_used": 8,
       "encoding": "pokemon",
       "category": "dialogue",
       "notes": "",
@@ -36897,25 +36897,25 @@
       "offset": 4187941,
       "original_text": "<0xFC><0x05><0x05><0xFC><0x04><0x0D><0x0E><0x0F>Fight<0xFC><0x13><0x38>Bag\nPokémon<0xFC><0x13><0x38>Run",
       "translation": "{FC05}{FC04}Combat{FC13}Sac\nPokémon{FC13}Fuite",
-      "length": 46,
+      "length": 30,
       "original_length": 33,
-      "padding_used": 13,
+      "padding_used": -3,
       "encoding": "pokemon",
       "category": "description",
       "notes": "",
-      "too_long": true
+      "too_long": false
     },
     {
       "offset": 4187975,
       "original_text": "<0xFC><0x05><0x05><0xFC><0x04><0x0D><0x0E><0x0F>Ball<0xFC><0x13><0x38>Bait\nRock<0xFC><0x13><0x38>Run",
       "translation": "{FC05}{FC04}Ball{FC13}Appât\nRocher{FC13}Fuite",
-      "length": 45,
+      "length": 29,
       "original_length": 30,
-      "padding_used": 15,
+      "padding_used": -1,
       "encoding": "pokemon",
       "category": "description",
       "notes": "",
-      "too_long": true
+      "too_long": false
     },
     {
       "offset": 4188006,
@@ -37137,13 +37137,13 @@
       "offset": 4188276,
       "original_text": "<0xFC><0x02> Win",
       "translation": "{FC02} Win",
-      "length": 10,
+      "length": 6,
       "original_length": 6,
-      "padding_used": 4,
+      "padding_used": 0,
       "encoding": "pokemon",
       "category": "other",
       "notes": "",
-      "too_long": true
+      "too_long": false
     },
     {
       "offset": 4188283,
@@ -58410,6 +58410,18 @@
       "too_long": false
     },
     {
+      "offset": 7470208,
+      "original_text": "Blizzard City",
+      "translation": "Ville Blizzard",
+      "length": 14,
+      "original_length": 13,
+      "padding_used": 1,
+      "encoding": "pokemon",
+      "category": "location",
+      "notes": "",
+      "too_long": false
+    },
+    {
       "offset": 7474804,
       "original_text": "Fallshore City",
       "translation": "Fallshore",
@@ -58470,6 +58482,18 @@
       "too_long": false
     },
     {
+      "offset": 7475508,
+      "original_text": "Lost Tunnel",
+      "translation": "Tunnel Perdu",
+      "length": 12,
+      "original_length": 11,
+      "padding_used": 1,
+      "encoding": "pokemon",
+      "category": "location",
+      "notes": "",
+      "too_long": false
+    },
+    {
       "offset": 7475972,
       "original_text": "Icy Hole",
       "translation": "Trou Glacé",
@@ -58511,6 +58535,18 @@
       "translation": "Autoroute KBT",
       "length": 13,
       "original_length": 14,
+      "padding_used": -1,
+      "encoding": "pokemon",
+      "category": "location",
+      "notes": "",
+      "too_long": false
+    },
+    {
+      "offset": 7476324,
+      "original_text": "Crystal Peak",
+      "translation": "Pic Cristal",
+      "length": 11,
+      "original_length": 12,
       "padding_used": -1,
       "encoding": "pokemon",
       "category": "location",
@@ -66042,12 +66078,36 @@
       "too_long": false
     },
     {
+      "offset": 7919202,
+      "original_text": "Bellin Town",
+      "translation": "Bellinville",
+      "length": 11,
+      "original_length": 11,
+      "padding_used": 0,
+      "encoding": "pokemon",
+      "category": "location",
+      "notes": "",
+      "too_long": false
+    },
+    {
       "offset": 7919383,
       "original_text": "Dehara City",
       "translation": "Dehara",
       "length": 6,
       "original_length": 11,
       "padding_used": -5,
+      "encoding": "pokemon",
+      "category": "location",
+      "notes": "",
+      "too_long": false
+    },
+    {
+      "offset": 7919460,
+      "original_text": "Shadow Base",
+      "translation": "Base Ombre",
+      "length": 10,
+      "original_length": 11,
+      "padding_used": -1,
       "encoding": "pokemon",
       "category": "location",
       "notes": "",
@@ -66064,6 +66124,54 @@
       "category": "location",
       "notes": "",
       "too_long": false
+    },
+    {
+      "offset": 7919596,
+      "original_text": "Bellin Town",
+      "translation": "Bellinville",
+      "length": 11,
+      "original_length": 11,
+      "padding_used": 0,
+      "encoding": "pokemon",
+      "category": "location",
+      "notes": "",
+      "too_long": false
+    },
+    {
+      "offset": 7919633,
+      "original_text": "Crater Town",
+      "translation": "Bourg Cratère",
+      "length": 13,
+      "original_length": 11,
+      "padding_used": 2,
+      "encoding": "pokemon",
+      "category": "location",
+      "notes": "",
+      "too_long": false
+    },
+    {
+      "offset": 7919697,
+      "original_text": "Blizzard City",
+      "translation": "Ville Blizzard",
+      "length": 14,
+      "original_length": 13,
+      "padding_used": 1,
+      "encoding": "pokemon",
+      "category": "location",
+      "notes": "",
+      "too_long": false
+    },
+    {
+      "offset": 7919743,
+      "original_text": "Tehl Town",
+      "translation": "Ville de Tehl",
+      "length": 13,
+      "original_length": 9,
+      "padding_used": 4,
+      "encoding": "pokemon",
+      "category": "location",
+      "notes": "",
+      "too_long": true
     },
     {
       "offset": 7919753,
@@ -115197,9 +115305,9 @@
       "offset": 10793882,
       "original_text": "<0xFD><0x14> raised <0xFD><0x36>\nteam's <0xFD> !",
       "translation": "{B_CURRENT_MOVE} a augmenté les {UNKNOWN_STR}\nde l'équipe {FD36} !",
-      "length": 66,
+      "length": 62,
       "original_length": 23,
-      "padding_used": 43,
+      "padding_used": 39,
       "encoding": "pokemon",
       "category": "dialogue",
       "notes": "",
@@ -116145,13 +116253,13 @@
       "offset": 10797568,
       "original_text": "<0xFD><0x13>'s <0xFD> \n<0xFD><0x01>",
       "translation": "{FD13} {FD00}\n{FD01}",
-      "length": 20,
+      "length": 8,
       "original_length": 10,
-      "padding_used": 10,
+      "padding_used": -2,
       "encoding": "pokemon",
       "category": "description",
       "notes": "",
-      "too_long": true
+      "too_long": false
     },
     {
       "offset": 10797579,
@@ -116229,13 +116337,13 @@
       "offset": 10797836,
       "original_text": "You are challenged by\n<0xFD>ê <0xFD>ë and<0xFA><0xFD>+ <0xFD><0x2F>!<0xFB>",
       "translation": "Tu es défié par\n{FD1C} {FD1D} et<0xFA>{FD2E} {FD2F}!<0xFB>",
-      "length": 48,
+      "length": 32,
       "original_length": 39,
-      "padding_used": 9,
+      "padding_used": -7,
       "encoding": "pokemon",
       "category": "dialogue",
       "notes": "",
-      "too_long": true
+      "too_long": false
     },
     {
       "offset": 10797876,
@@ -116289,25 +116397,25 @@
       "offset": 10798002,
       "original_text": "<0xFD>+ <0xFD><0x2F>\nwithdrew <0xFD> !",
       "translation": "{FD2E} {FD2F}\nrappelle {FD00} !",
-      "length": 31,
+      "length": 19,
       "original_length": 18,
-      "padding_used": 13,
+      "padding_used": 1,
       "encoding": "pokemon",
       "category": "dialogue",
       "notes": "",
-      "too_long": true
+      "too_long": false
     },
     {
       "offset": 10798021,
       "original_text": "<0xFD>+ <0xFD><0x2F> sent\nout <0xFD> !",
       "translation": "{FD2E} {FD2F} envoie\n{FD00} !",
-      "length": 29,
+      "length": 17,
       "original_length": 18,
-      "padding_used": 11,
+      "padding_used": -1,
       "encoding": "pokemon",
       "category": "dialogue",
       "notes": "",
-      "too_long": true
+      "too_long": false
     },
     {
       "offset": 10798040,
@@ -116337,25 +116445,25 @@
       "offset": 10798085,
       "original_text": "<0xFD><0x32> <0xFD><0x33>\nwithdrew <0xFD> !",
       "translation": "{FD32} {FD33}\nrappelle {FD00} !",
-      "length": 31,
+      "length": 19,
       "original_length": 18,
-      "padding_used": 13,
+      "padding_used": 1,
       "encoding": "pokemon",
       "category": "dialogue",
       "notes": "",
-      "too_long": true
+      "too_long": false
     },
     {
       "offset": 10798104,
       "original_text": "<0xFD><0x32> <0xFD><0x33> sent\nout <0xFD> !",
       "translation": "{FD32} {FD33} envoie\n{FD00} !",
-      "length": 29,
+      "length": 17,
       "original_length": 18,
-      "padding_used": 11,
+      "padding_used": -1,
       "encoding": "pokemon",
       "category": "dialogue",
       "notes": "",
-      "too_long": true
+      "too_long": false
     },
     {
       "offset": 10798123,
@@ -116373,13 +116481,13 @@
       "offset": 10798168,
       "original_text": "<0xFD><0x1C> <0xFD><0x1D> and\n<0xFD>+ <0xFD><0x2F><0xFA>were defeated!<0xFB>",
       "translation": "{FD1C} {FD1D} et\n{FD2E} {FD2F}<0xFB>ont été vaincus!<0xFA>",
-      "length": 48,
+      "length": 32,
       "original_length": 31,
-      "padding_used": 17,
+      "padding_used": 1,
       "encoding": "pokemon",
       "category": "dialogue",
       "notes": "",
-      "too_long": true
+      "too_long": false
     },
     {
       "offset": 10798200,
@@ -116769,61 +116877,61 @@
       "offset": 10799031,
       "original_text": "<0xFC><0x05><0x05><0xFC><0x04><0x0D><0x0E><0x0F>Fight<0xFC><0x13><0x38>Cube\nPokémon<0xFC><0x13><0x38>Run",
       "translation": "{FC05}{FC04}Combat{FC13}Cube\nPokémon{FC13}Fuite",
-      "length": 47,
+      "length": 31,
       "original_length": 34,
-      "padding_used": 13,
+      "padding_used": -3,
       "encoding": "pokemon",
       "category": "description",
       "notes": "",
-      "too_long": true
+      "too_long": false
     },
     {
       "offset": 10799066,
       "original_text": "<0xFC><0x05><0x05><0xFC><0x04><0x0D><0x0E><0x0F>Fight<0xFC><0x13><0x38><0xFC><0x04><0x0F><0x0E><0x0B>Cube\n<0xFC><0x04><0x0D><0x0E><0x0F>Pokémon<0xFC><0x13><0x38>Run",
       "translation": "{FC05}{FC04}Combat{FC13}{FC04}Cube\n{FC04}Pokémon{FC13}Fuite",
-      "length": 59,
+      "length": 35,
       "original_length": 44,
-      "padding_used": 15,
+      "padding_used": -9,
       "encoding": "pokemon",
       "category": "description",
       "notes": "",
-      "too_long": true
+      "too_long": false
     },
     {
       "offset": 10799111,
       "original_text": "<0xFC><0x05><0x05><0xFC><0x04><0x0D><0x0E><0x0F>Fight<0xFC><0x13><0x38>Cube\nPokémon<0xFC><0x13><0x38>Back",
       "translation": "{FC05}{FC04}Combat{FC13}Cube\nPokémon{FC13}Retour",
-      "length": 48,
+      "length": 32,
       "original_length": 35,
-      "padding_used": 13,
+      "padding_used": -3,
       "encoding": "pokemon",
       "category": "description",
       "notes": "",
-      "too_long": true
+      "too_long": false
     },
     {
       "offset": 10799147,
       "original_text": "<0xFC><0x05><0x05><0xFC><0x04><0x0D><0x0E><0x0F>Fight<0xFC><0x13><0x38><0xFC><0x04><0x0F><0x0E><0x0B>Cube\n<0xFC><0x04><0x0D><0x0E><0x0F>Pokémon<0xFC><0x13><0x38>Back",
       "translation": "{FC05}{FC04}Combat{FC13}{FC04}Cube\n{FC04}Pokémon{FC13}Retour",
-      "length": 60,
+      "length": 36,
       "original_length": 45,
-      "padding_used": 15,
+      "padding_used": -9,
       "encoding": "pokemon",
       "category": "description",
       "notes": "",
-      "too_long": true
+      "too_long": false
     },
     {
       "offset": 10799193,
       "original_text": "<0xFC><0x05><0x05><0xFC><0x04><0x0D><0x0E><0x0F>Catch<0xFC><0x13><0x38>End",
       "translation": "{FC05}{FC04}Capture{FC13}Fin",
-      "length": 28,
+      "length": 16,
       "original_length": 19,
-      "padding_used": 9,
+      "padding_used": -3,
       "encoding": "pokemon",
       "category": "description",
       "notes": "",
-      "too_long": true
+      "too_long": false
     },
     {
       "offset": 10799213,
@@ -129390,6 +129498,18 @@
       "too_long": false
     },
     {
+      "offset": 11862832,
+      "original_text": "Antisis City",
+      "translation": "Ville d'Antisis",
+      "length": 15,
+      "original_length": 12,
+      "padding_used": 3,
+      "encoding": "pokemon",
+      "category": "location",
+      "notes": "",
+      "too_long": false
+    },
+    {
       "offset": 11862864,
       "original_text": "Vivill Warehouse",
       "translation": "Entrepôt de Vivill",
@@ -129498,6 +129618,18 @@
       "too_long": false
     },
     {
+      "offset": 11869868,
+      "original_text": "Antisis Port",
+      "translation": "Port d'Antisis",
+      "length": 14,
+      "original_length": 12,
+      "padding_used": 2,
+      "encoding": "pokemon",
+      "category": "location",
+      "notes": "",
+      "too_long": false
+    },
+    {
       "offset": 11870836,
       "original_text": "Pokémon Day Care",
       "translation": "Pension Pokémon",
@@ -129522,11 +129654,35 @@
       "too_long": false
     },
     {
+      "offset": 11870932,
+      "original_text": "Safari Zone",
+      "translation": "Zone Safari",
+      "length": 11,
+      "original_length": 11,
+      "padding_used": 0,
+      "encoding": "pokemon",
+      "category": "dialogue",
+      "notes": "",
+      "too_long": false
+    },
+    {
       "offset": 11871504,
       "original_text": "ICEFALL CAVE",
       "translation": "GROTTE GELÉE",
       "length": 12,
       "original_length": 12,
+      "padding_used": 0,
+      "encoding": "pokemon",
+      "category": "location",
+      "notes": "",
+      "too_long": false
+    },
+    {
+      "offset": 11874720,
+      "original_text": "Hidden Grotto",
+      "translation": "Grotte Cachée",
+      "length": 13,
+      "original_length": 13,
       "padding_used": 0,
       "encoding": "pokemon",
       "category": "location",
@@ -129588,6 +129744,18 @@
       "length": 10,
       "original_length": 15,
       "padding_used": -5,
+      "encoding": "pokemon",
+      "category": "location",
+      "notes": "",
+      "too_long": false
+    },
+    {
+      "offset": 11876372,
+      "original_text": "Magnolia Fields",
+      "translation": "Champs Magnolia",
+      "length": 15,
+      "original_length": 15,
+      "padding_used": 0,
       "encoding": "pokemon",
       "category": "location",
       "notes": "",
