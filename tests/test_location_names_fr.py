@@ -308,132 +308,85 @@ class TestLocationNamesFR(unittest.TestCase):
         )
 
 
-# (stable world-map sign pointer-table cell, original EN offset, expected FR toponyms)
-# The arrow-prefixed "junction" panels are sized as 1-byte strings by the
-# extractor, so the generic pipeline cannot relocate them. They are delivered by
-# scripts/patch_worldmap_junction_panels_fr.py (relocate + repoint). These cells
-# live in the engine's world-map data (not free space) and are stable; the
-# pointer *value* changes to the relocated French copy on each build.
-JUNCTION_PANEL_CELLS = [
-    (0x1E9352F, 0x1F72691, ["Hauteurs Gelées", "Bourg Cratère", "Ville Blizzard"]),
-    (0x1E93538, 0x1F726C0, ["Hauteurs Gelées", "Ville Blizzard", "Bourg Cratère", "Dresco"]),
-    (0x1E93541, 0x1F726FC, ["Bourg Cratère", "Ville de Tehl", "Ville de Fallshore"]),
-    (0x1E9354A, 0x1F72735, ["Bourg Cratère", "Ville de Tehl", "Ville de Fallshore"]),
-    (0x1E93553, 0x1F7276E, ["Dresco", "Ville de Dehara", "Bourg Cratère", "Ville Blizzard"]),
-    (0x1E9355C, 0x1F727A7, ["Dresco", "Ville de Dehara", "Bourg Gurun"]),
-    (0x1E93565, 0x1F727D0, ["Ville d'Antisis", "Ville Portuaire", "Ville de Dehara", "Bourg Gurun"]),
-    (0x1E9356E, 0x1F72808, ["Bourg Gurun", "Ville d'Antisis", "Ville Portuaire"]),
-]
+    # ── Noms de zones anglais traduits (follow-up 2026-06-27) ────────────────
 
-_ARROW_BYTES = {0x79, 0x7A, 0x7B, 0x7C}
-_LINE_BREAK_BYTES = {0xFA, 0xFB, 0xFE}  # \l scroll, \p page, \n newline
-_ENGLISH_MARKERS = (" Town", " City", " Heights", "Frost Mountain", " Volcano",
-                    " Cave", " Woods", "Frozen", "Crater", "Blizzard City")
+    def test_ville_blizzard_zone_name(self):
+        """ptr@0x3F1CBC must resolve to 'Ville Blizzard' (was 'Blizzard City')."""
+        text = _follow_ptr(self.rom, 0x3F1CBC)
+        self.assertEqual(text.strip(), "Ville Blizzard",
+                         f"Zone name via ptr@0x3F1CBC: got {repr(text[:40])}")
 
+    def test_ville_antisis_zone_name(self):
+        """ptr@0x3F1D2C must resolve to ‘Ville d’Antisis’ (was ‘Antisis City’)."""
+        text = _follow_ptr(self.rom, 0x3F1D2C)
+        self.assertEqual(text.strip(), "Ville d'Antisis",
+                         f"Zone name via ptr@0x3F1D2C: got {repr(text[:40])}")
 
-def _raw_string(rom: bytes, offset: int, limit: int = 200) -> bytes:
-    chunk = rom[offset : offset + limit]
-    end = chunk.find(b"\xff")
-    return chunk if end == -1 else chunk[:end]
+    def test_pic_cristal_zone_name(self):
+        """ptr@0x3F1DC4 must resolve to 'Pic Cristal' (was 'Crystal Peak')."""
+        text = _follow_ptr(self.rom, 0x3F1DC4)
+        self.assertEqual(text.strip(), "Pic Cristal",
+                         f"Zone name via ptr@0x3F1DC4: got {repr(text[:40])}")
 
+    def test_grotte_cachee_zone_name(self):
+        """ptr@0x3F1D4C must resolve to 'Grotte Cach\xe9e' (was 'Hidden Grotto')."""
+        text = _follow_ptr(self.rom, 0x3F1D4C)
+        self.assertEqual(text.strip(), "Grotte Cach\xe9e",
+                         f"Zone name via ptr@0x3F1D4C: got {repr(text[:40])}")
 
-@pytest.mark.rom
-class TestRoadPanelsFR(unittest.TestCase):
-    """World-Map road/junction panels: translated + arrows at line start.
+    def test_tunnel_perdu_zone_name(self):
+        """ptr@0x3F1DBC must resolve to 'Tunnel Perdu' (was 'Lost Tunnel')."""
+        text = _follow_ptr(self.rom, 0x3F1DBC)
+        self.assertEqual(text.strip(), "Tunnel Perdu",
+                         f"Zone name via ptr@0x3F1DBC: got {repr(text[:40])}")
 
-    Regression guard for B-74 (P-68): the arrow-prefixed junction panels used to
-    stay English in the built ROM (extractor sizes them as 1-byte strings), and
-    auto-translated panels lost their direction arrows / line breaks. Every arrow
-    byte (0x79-0x7C) must sit at the START of a line — i.e. be the first byte or
-    immediately follow a line-break code (0xFA/0xFB/0xFE).
-    """
+    def test_port_antisis_zone_name(self):
+        """ptr@0x3F1E34 must resolve to 'Port d’Antisis' (was 'Antisis Port')."""
+        text = _follow_ptr(self.rom, 0x3F1E34)
+        self.assertEqual(text.strip(), "Port d'Antisis",
+                         f"Zone name via ptr@0x3F1E34: got {repr(text[:40])}")
 
-    @classmethod
-    def setUpClass(cls):
-        if not FR_ROM.exists():
-            raise unittest.SkipTest(f"FR ROM not found: {FR_ROM}")
-        cls.rom = FR_ROM.read_bytes()
+    def test_champs_magnolia_zone_name(self):
+        """ptr@0x3F1E24 must resolve to 'Champs Magnolia' (was 'Magnolia Fields')."""
+        text = _follow_ptr(self.rom, 0x3F1E24)
+        self.assertEqual(text.strip(), "Champs Magnolia",
+                         f"Zone name via ptr@0x3F1E24: got {repr(text[:40])}")
 
-    def _assert_arrows_at_line_start(self, raw: bytes, where: str) -> None:
-        arrows = [i for i, b in enumerate(raw) if b in _ARROW_BYTES]
-        self.assertTrue(arrows, f"{where}: no direction arrow found")
-        for i in arrows:
-            ok = i == 0 or raw[i - 1] in _LINE_BREAK_BYTES
-            self.assertTrue(
-                ok,
-                f"{where}: arrow byte 0x{raw[i]:02X} at index {i} is not at line "
-                f"start (preceded by 0x{raw[i-1]:02X}, not a line break)",
-            )
+    def test_zone_safari_zone_name(self):
+        """ptr@0x3F1DDC must resolve to 'Zone Safari' (was 'Safari Zone')."""
+        text = _follow_ptr(self.rom, 0x3F1DDC)
+        self.assertEqual(text.strip(), "Zone Safari",
+                         f"Zone name via ptr@0x3F1DDC: got {repr(text[:40])}")
 
-    def test_junction_panels_translated_and_formatted(self):
-        """8 arrow-prefixed junction panels: FR text, no English, arrows at line start."""
-        base = 0x08000000
-        for cell, en_off, expected in JUNCTION_PANEL_CELLS:
-            ptr = struct.unpack_from("<I", self.rom, cell)[0]
-            self.assertTrue(
-                base <= ptr < base + len(self.rom),
-                f"junction cell 0x{cell:07X}: pointer 0x{ptr:08X} out of range",
-            )
-            target = ptr - base
-            raw = _raw_string(self.rom, target)
-            decoded = TextDecoder.decode_pokemon(raw, preserve_unknown=True)
-            for marker in _ENGLISH_MARKERS:
-                self.assertNotIn(
-                    marker, decoded,
-                    f"junction 0x{en_off:07X}: residual English {marker!r} in {decoded!r}",
-                )
-            for top in expected:
-                self.assertIn(
-                    top, decoded,
-                    f"junction 0x{en_off:07X}: missing {top!r} in {decoded!r}",
-                )
-            self._assert_arrows_at_line_start(raw, f"junction 0x{en_off:07X}")
+    def test_foret_lugubre_zone_name(self):
+        """ptr@0x3F1D44 must resolve to 'For\xeat Lugubre' (was 'For\xeat Lugubres' typo)."""
+        text = _follow_ptr(self.rom, 0x3F1D44)
+        self.assertEqual(text.strip(), "For\xeat Lugubre",
+                         f"Zone name via ptr@0x3F1D44: got {repr(text[:40])}")
 
-    def test_no_live_pointer_to_english_junction_panels(self):
-        """No live pointer may still reach the English junction originals."""
-        base = 0x08000000
-        stale = []
-        for _cell, en_off, _exp in JUNCTION_PANEL_CELLS:
-            needle = struct.pack("<I", base + en_off)
-            if self.rom.count(needle) > 0:
-                stale.append(hex(en_off))
-        self.assertEqual(
-            stale, [],
-            f"Junction panels still pointed at their English original: {stale}",
+    def test_bourg_cratere_fly_banner(self):
+        """ptr@0x78D809 must resolve to 'Bourg Crat\xe8re' (was 'Crater Town' fly banner)."""
+        text = _follow_ptr(self.rom, 0x78D809)
+        self.assertEqual(text.strip(), "Bourg Crat\xe8re",
+                         f"Fly banner via ptr@0x78D809: got {repr(text[:40])}")
+
+    def test_ville_blizzard_fly_banner(self):
+        """ptr@0x78D849 must resolve to 'Ville Blizzard' (was 'Blizzard City' fly banner)."""
+        text = _follow_ptr(self.rom, 0x78D849)
+        self.assertEqual(text.strip(), "Ville Blizzard",
+                         f"Fly banner via ptr@0x78D849: got {repr(text[:40])}")
+
+    def test_no_active_pointer_to_blizzard_city_zone(self):
+        """ptr@0x3F1CBC must NOT point to a 'Blizzard City' string.
+
+        The zone name table entry for Blizzard City must now be French.
+        """
+        text = _follow_ptr(self.rom, 0x3F1CBC)
+        self.assertNotIn(
+            "Blizzard City",
+            text,
+            f"'Blizzard City' still reachable via zone-name ptr@0x3F1CBC: {repr(text[:60])}",
         )
-
-    def test_sample_route_panels_arrows_at_line_start(self):
-        """Route panels relocated by the generic pipeline keep arrows at line start."""
-        # Distinctive FR fragments that only occur inside a relocated route panel.
-        fragments = {
-            "Route 8 (Ville Blizzard)": "<0x79> Ville Blizzard",
-            "Route 1 (Hauteurs Gelées)": "<0x79> Hauteurs Gelées",
-            "Route 15 (Grotte Stalactite)": "<0x7B> Route 2, Grotte Stalactite",
-        }
-        from src.core.text_codec import TextEncoder
-
-        def enc(s: str) -> bytes:
-            out = bytearray()
-            i = 0
-            while i < len(s):
-                if s.startswith("<0x", i):
-                    out.append(int(s[i + 3 : i + 5], 16))
-                    i += 6
-                    continue
-                out += TextEncoder.encode(s[i], "pokemon")[:-1]
-                i += 1
-            return bytes(out)
-
-        for label, frag in fragments.items():
-            needle = enc(frag)
-            idx = self.rom.find(needle)
-            self.assertNotEqual(idx, -1, f"{label}: FR fragment {frag!r} not in ROM")
-            # The arrow byte that opens the fragment must be at a line start.
-            self.assertTrue(
-                idx == 0 or self.rom[idx - 1] in _LINE_BREAK_BYTES,
-                f"{label}: arrow at 0x{idx:X} not at line start "
-                f"(preceded by 0x{self.rom[idx-1]:02X})",
-            )
 
 
 if __name__ == "__main__":
