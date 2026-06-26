@@ -24943,3 +24943,27 @@
 0x1f5caeb: <0xFD><0x01> trouve <0xFD><0x02> !\nDe nature <0xFC><0x01><0x06><0xFD><0x03><0xFC><0x01><0x02>.
 0x3fc591: {B_ATK_NAME_WITH_PREFIX} trouve\n{B_LAST_ITEM} !
 0x1f2d412: Bref<0xB0><0xFC><0x08><0x18> tu vois, ils détestent\nquand les gens fouinent.\pOn ferait mieux de chercher\nune autre sortie, allons-y.
+
+# --- Noms de zones encore en anglais (menu Envol / popup de zone) ---
+# Blizzard City / Antisis City / Crystal Peak / Hidden Grotto / Lost Tunnel
+# Port d'Antisis / Champs Magnolia / Zone Safari
+0x71fc80: Ville Blizzard
+0xb50330: Ville d'Antisis
+0x721464: Pic Cristal
+0xb531a0: Grotte Cachée
+0x721134: Tunnel Perdu
+0xb51eac: Port d'Antisis
+0xb53814: Champs Magnolia
+0xb522d4: Zone Safari
+
+# Correction typo : Forêt Lugubres → Forêt Lugubre (last-wins sur 0x3EEE7C)
+0x3eee7c: Forêt Lugubre
+
+# --- Bannières d'arrivée en ville (fly banners 0x78Dxxx) ---
+# Crater Town / Blizzard City / Tehl Town / Bellinville (x2) / Base Ombre
+0x78d662: Bellinville
+0x78d764: Base Ombre
+0x78d7ec: Bellinville
+0x78d811: Bourg Cratère
+0x78d851: Ville Blizzard
+0x78d87f: Ville de Tehl
