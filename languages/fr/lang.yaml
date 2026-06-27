@@ -1,0 +1,65 @@
+# French language descriptor — Pokémon Unbound EN→FR
+#
+# ⚠️  French is COMPLETE and byte-perfect. It is built by the dedicated,
+#     hand-tuned recipe `make build-fr` (see Makefile). This descriptor
+#     DOCUMENTS that build; it does not replace it. Never reroute FR through
+#     the generic `scripts/build_language.py` driver — doing so would risk a
+#     byte drift in a translation that is currently 100% validated.
+code: fr
+name: French
+native_name: Français
+builder_language: french          # value passed to the generic builder --language
+status: complete                  # complete | in_progress
+build: dedicated                  # dedicated (make build-fr) | generic (build_language.py)
+
+combined: combined_fr.txt
+critical: data/critical_strings_fr.txt
+output_rom: GenedRom-fr.gba
+version_label: FR.2.0.0
+
+# Extra glyphs the font must render beyond plain ASCII.
+font_glyphs: "àâçèéêëîïôùûüœÀÂÇÈÉÊËÎÏÔÙÛÜŒ"
+
+# In-game status-condition abbreviations (official FR localisation).
+status_abbrev:
+  poison: EMP
+  burn: BRL
+  freeze: GEL
+  paralysis: PAR
+  sleep: SOM
+  faint: KO
+
+# The full proven post-build patch sequence, in order. Executed by
+# `make build-fr`; listed here so every language can be compared against the
+# canonical French pipeline. Steps map to scripts/patch_*_fr.py.
+patches:
+  - gendered_buffers
+  - font
+  - fixed_table_names
+  - item_names
+  - time_format
+  - battle_prefix
+  - inline
+  - repair_lz77
+  - repair_localized_lz77
+  - summary_labels
+  - repoint_stale
+  - legendary_ritual
+  - version
+  - pokedex
+  - pokedex_metrics
+  - pokedex_categories
+  - pokedex_category_order
+  - move_descriptions
+  - dup_move_descriptions
+  - tm_item_descriptions
+  - meteorite_dialogue
+  - worldmap_junction
+  - cfru_type_names
+  - status_abbrevs
+  - battle_string_templates
+  - battle_recall_strings
+  - status_badges
+  - type_icons
+  - shop
+  - mission_descriptions

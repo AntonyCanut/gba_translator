@@ -1,0 +1,39 @@
+# Italian language descriptor — Pokémon Unbound EN→IT
+#
+# WORK IN PROGRESS. Italian is built by the generic driver
+# `scripts/build_language.py it`. Translations live in
+# languages/it/combined_it.txt (same `<offset_hex>: <text>` format as
+# combined_fr.txt). Offsets not present there stay English.
+code: it
+name: Italian
+native_name: Italiano
+builder_language: italian         # value passed to the generic builder --language
+status: in_progress               # complete | in_progress
+build: generic                    # dedicated (make build-fr) | generic (build_language.py)
+
+combined: languages/it/combined_it.txt
+critical: languages/it/critical_strings_it.txt   # optional; created when needed
+output_rom: GenedRom-it.gba
+version_label: IT.0.1.0
+
+# Extra glyphs the font must render beyond plain ASCII.
+# Italian only needs grave/acute vowels — all already covered by the FR font
+# glyph set, so the shared font patch applies cleanly.
+font_glyphs: "àèéìíîòóùúÀÈÉÌÒÙ"
+
+# In-game status-condition abbreviations (official IT localisation).
+status_abbrev:
+  poison: PSN
+  burn: SCT
+  freeze: CON
+  paralysis: PAR
+  sleep: SON
+  faint: KO
+
+# Generic post-build patches applied by scripts/build_language.py.
+# Only language-agnostic mechanics are listed; richer FR-only passes
+# (pokédex rewrap, mission boxes, …) are added per language as their data
+# matures.
+patches:
+  - font
+  - inline

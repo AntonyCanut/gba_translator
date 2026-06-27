@@ -58,7 +58,10 @@ DIFF_DIR := $(OUTPUT_DIR)/differences
 REPORT_DIR := $(OUTPUT_DIR)/reports
 ROM_OUT_DIR := $(OUTPUT_DIR)/roms
 FR_BUILD := $(ROM_OUT_DIR)/GenedRom-fr.gba
-FR_TRANSLATION := $(shell ls -t $(OUTPUT_DIR)/translation/*_translation_ready.json 2>/dev/null | head -n 1)
+# Only date-prefixed JSONs are French. The generic multi-language driver writes
+# <code>_translation_ready.json (e.g. it_/de_), which must NEVER be picked here —
+# otherwise build-fr would inject another language and the FR ROM would change.
+FR_TRANSLATION := $(shell ls -t $(OUTPUT_DIR)/translation/[0-9]*_translation_ready.json 2>/dev/null | head -n 1)
 
 ENGLISH_EXTRACT := $(EXTRACT_DIR)/englishrom_texts.json
 SPANISH_EXTRACT := $(EXTRACT_DIR)/spanishrom_texts.json
@@ -70,6 +73,7 @@ SPANISH_BUILD := $(ROM_OUT_DIR)/GenedRom-es.gba
 .DEFAULT_GOAL := pipeline
 
 .PHONY: pipeline verify-roms extract extract-en extract-es diff build-es build-fr validate-es trilingual-csv \
+	build-it build-de build-lang build-all release-all langs \
 	test test-python-fast test-python test-rom check-translations test-vitest test-playwright test-all \
 	sync-charmap sync-charmap-check install install-playwright lint tickets report \
 	clean help
@@ -209,6 +213,40 @@ build-fr: $(ENGLISH_EXTRACT) $(SPANISH_EXTRACT) $(BUILD_SCRIPT)
 	@echo "✓ FR ROM built — vérification des traductions de lieux..."
 	@$(PYTHON) -m pytest tests/test_location_names_fr.py -q --tb=short
 
+## --------------- Multi-language builds ---------------
+# French keeps its dedicated byte-perfect recipe above (build-fr). Italian and
+# German are driven generically from their languages/<code>/ descriptors.
+
+build-it:
+	@$(PYTHON) scripts/build_language.py it --build-number $(BUILD_NUMBER)
+
+build-de:
+	@$(PYTHON) scripts/build_language.py de --build-number $(BUILD_NUMBER)
+
+# Build any registered generic language: make build-lang LANG_CODE=it
+build-lang:
+	@if [ -z "$(LANG_CODE)" ]; then \
+		echo "Usage: make build-lang LANG_CODE=<code>   (e.g. it, de)"; \
+		echo "Registered languages:"; $(MAKE) --no-print-directory langs; \
+		exit 1; \
+	fi
+	@$(PYTHON) scripts/build_language.py $(LANG_CODE) --build-number $(BUILD_NUMBER)
+
+# Build every language: FR (dedicated) + IT + DE (generic).
+build-all: build-fr build-it build-de
+	@echo "✓ All languages built (FR, IT, DE)."
+
+# Build all three and package them into output/release/ (ROMs + zips + checksums).
+release-all: build-all
+	@$(PYTHON) scripts/package_release.py --build-number $(BUILD_NUMBER)
+	@echo "✓ Release ready in output/release/"
+
+# List the languages declared in the languages/ registry.
+langs:
+	@$(PYTHON) -c "import sys; sys.path.insert(0, '.'); from src.i18n import load_registry; \
+r = load_registry(); print('Registered languages:'); \
+[print(f'  {c.code}  {c.name:9} {c.status:12} build={c.build:9} -> {c.output_rom}') for c in r.buildable()]"
+
 validate-es: $(SPANISH_BUILD) $(VALIDATE_SCRIPT)
 	@$(PYTHON) $(VALIDATE_SCRIPT) \
 		--output-rom $(SPANISH_BUILD) \
@@ -283,9 +321,17 @@ help:
 	@echo "    make extract         - Pointer-based extraction EN+ES"
 	@echo "    make diff            - Diff + offset map"
 	@echo "    make build-es        - Build Spanish ROM"
-	@echo "    make build-fr        - Build French ROM (latest translation_ready.json)"
+	@echo "    make build-fr        - Build French ROM (dedicated byte-perfect recipe)"
 	@echo "    make validate-es     - Byte-level validation"
 	@echo "    make trilingual-csv  - Export EN/ES/FR translation CSV"
+	@echo ""
+	@echo "  Multi-language (see docs/21_MULTILANGUE.md):"
+	@echo "    make langs           - List languages declared in languages/"
+	@echo "    make build-it        - Build Italian ROM (generic driver)"
+	@echo "    make build-de        - Build German ROM (generic driver)"
+	@echo "    make build-lang LANG_CODE=it - Build any generic language"
+	@echo "    make build-all       - Build FR + IT + DE"
+	@echo "    make release-all     - Build all three and package output/release/"
 	@echo ""
 	@echo "  Tests:"
 	@echo "    make test            - Alias for test-python-fast"

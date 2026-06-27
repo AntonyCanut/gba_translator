@@ -1,0 +1,196 @@
+#!/usr/bin/env python3
+"""Generic, language-agnostic ROM build driver.
+
+Builds a translated Pokémon Unbound ROM for any ``build: generic`` language
+declared in the ``languages/`` registry (currently Italian and German).
+
+    python3 scripts/build_language.py it
+    python3 scripts/build_language.py de --build-number 3
+
+French is intentionally **not** built here: it uses the dedicated, byte-perfect
+``make build-fr`` recipe. Asking this driver to build French prints how to do it
+and exits, so the proven FR pipeline can never be byte-drifted by accident.
+
+Pipeline for a generic language:
+    1. ensure EN/ES pointer extractions exist
+    2. combined_<code>.txt → trilingual CSV → translation-ready JSON
+    3. generic ROM builder (relocate + fallback)
+    4. language-agnostic post-build patches declared in the descriptor
+       (`font`, `inline`, …)
+"""
+
+from __future__ import annotations
+
+import argparse
+import importlib.util
+import subprocess
+import sys
+from pathlib import Path
+
+REPO_ROOT = Path(__file__).resolve().parents[1]
+sys.path.insert(0, str(REPO_ROOT))
+
+from src.i18n import RegistryError, load_registry  # noqa: E402
+
+PYTHON = sys.executable or "python3"
+
+ENGLISH_ROM = REPO_ROOT / "input/roms/englishrom.gba"
+SPANISH_ROM = REPO_ROOT / "input/roms/spanishrom.gba"
+EXTRACT_DIR = REPO_ROOT / "output/extracted/extracted_texts"
+ENGLISH_EXTRACT = EXTRACT_DIR / "englishrom_texts.json"
+SPANISH_EXTRACT = EXTRACT_DIR / "spanishrom_texts.json"
+TRANSLATION_DIR = REPO_ROOT / "output/translation"
+
+EXTRACT_SCRIPT = REPO_ROOT / "src/extractors/pointer_text_extractor.py"
+BUILD_SCRIPT = REPO_ROOT / "src/translators/19_build_translated_rom_generic.py"
+CSV_TO_JSON_SCRIPT = REPO_ROOT / "src/translators/09_csv_to_json_v2.py"
+APPLY_COMBINED_SCRIPT = REPO_ROOT / "scripts/apply_combined_fr.py"
+PATCH_FONT_SCRIPT = REPO_ROOT / "scripts/patch_font_fr.py"
+INLINE_SCRIPT = REPO_ROOT / "scripts/apply_inline_overrides_fr.py"
+
+
+def run(cmd: list, *, cwd: Path = REPO_ROOT) -> None:
+    printable = " ".join(str(part) for part in cmd)
+    print(f"\n$ {printable}")
+    subprocess.run([str(part) for part in cmd], cwd=str(cwd), check=True)
+
+
+def _load_module(path: Path):
+    spec = importlib.util.spec_from_file_location(path.stem.lstrip("0123456789_"), path)
+    module = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(module)
+    return module
+
+
+def ensure_extractions() -> None:
+    if not ENGLISH_ROM.exists():
+        raise SystemExit(f"English ROM not found: {ENGLISH_ROM}")
+    EXTRACT_DIR.mkdir(parents=True, exist_ok=True)
+    if not ENGLISH_EXTRACT.exists():
+        run([PYTHON, EXTRACT_SCRIPT, ENGLISH_ROM, "--output", ENGLISH_EXTRACT, "--scan-all-pointers"])
+    if SPANISH_ROM.exists() and not SPANISH_EXTRACT.exists():
+        run([PYTHON, EXTRACT_SCRIPT, SPANISH_ROM, "--output", SPANISH_EXTRACT, "--scan-all-pointers"])
+
+
+def _latest_base_csv() -> Path:
+    candidates = sorted(
+        TRANSLATION_DIR.glob("*_trilingual_translation.csv"),
+        key=lambda p: p.stat().st_mtime,
+    )
+    if not candidates:
+        raise SystemExit(
+            "No trilingual base CSV found in output/translation/. "
+            "Run `make trilingual-csv` first."
+        )
+    return candidates[-1]
+
+
+def generate_translation_json(config) -> Path:
+    """combined_<code>.txt → trilingual CSV → translation-ready JSON."""
+    combined = config.combined_path(REPO_ROOT)
+    if not combined.exists():
+        raise SystemExit(f"Combined translation file not found: {combined}")
+
+    TRANSLATION_DIR.mkdir(parents=True, exist_ok=True)
+    base_csv = _latest_base_csv()
+    lang_csv = TRANSLATION_DIR / f"{config.code}_trilingual_translation.csv"
+    out_json = config.translation_json_path(REPO_ROOT)
+
+    critical = config.critical_path(REPO_ROOT)
+    # apply_combined_fr.py is language-agnostic: it only fills the translation
+    # column from whatever combined file / critical file we point it at.
+    apply_cmd = [
+        PYTHON, APPLY_COMBINED_SCRIPT,
+        "--combined", combined,
+        "--csv", base_csv,
+        "--output", lang_csv,
+        "--extend",
+        "--english", ENGLISH_EXTRACT,
+        "--spanish", SPANISH_EXTRACT,
+        "--rom", ENGLISH_ROM,
+        "--critical", critical if critical else (REPO_ROOT / "nonexistent.txt"),
+    ]
+    run(apply_cmd)
+
+    # Convert with an explicit output path so we never clobber the dated FR JSON.
+    csv_to_json = _load_module(CSV_TO_JSON_SCRIPT)
+    validator = csv_to_json.TranslationValidator(
+        input_path=lang_csv, output_path=out_json, allow_too_long=True
+    )
+    stats = validator.validate_and_convert()
+    print(f"✓ Translation JSON: {out_json.name} ({stats['successful']} entries)")
+    return out_json
+
+
+def build_rom(config, translation_json: Path) -> Path:
+    out_rom = config.output_rom_path(REPO_ROOT)
+    out_rom.parent.mkdir(parents=True, exist_ok=True)
+    cmd = [
+        PYTHON, BUILD_SCRIPT,
+        "--source", ENGLISH_ROM,
+        "--translations", translation_json,
+        "--language", config.builder_language,
+        "--allow-relocate",
+        "--allow-fallback",
+        "--output", out_rom,
+    ]
+    if SPANISH_ROM.exists():
+        cmd += ["--pointer-proof-rom", SPANISH_ROM]
+    run(cmd)
+    return out_rom
+
+
+def apply_patches(config, out_rom: Path) -> None:
+    combined = config.combined_path(REPO_ROOT)
+    for step in config.patches:
+        if step == "font":
+            run([PYTHON, PATCH_FONT_SCRIPT, "--rom", out_rom])
+        elif step == "inline":
+            run([
+                PYTHON, INLINE_SCRIPT,
+                "--rom", out_rom,
+                "--source", ENGLISH_ROM,
+                "--combined", combined,
+                "--reference-texts", SPANISH_EXTRACT,
+            ])
+        else:
+            print(f"⚠ skipping unknown/unsupported generic patch step: {step!r}")
+
+
+def main() -> int:
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("language", help="Language code (e.g. it, de)")
+    parser.add_argument("--build-number", type=int, default=0)
+    args = parser.parse_args()
+
+    try:
+        registry = load_registry()
+        config = registry.get(args.language)
+    except RegistryError as exc:
+        print(f"Error: {exc}", file=sys.stderr)
+        return 2
+
+    if config.is_dedicated:
+        print(
+            f"{config.name} uses its dedicated, byte-perfect recipe.\n"
+            f"  Build it with:  make build-{config.code}"
+        )
+        return 0
+
+    print("=" * 70)
+    print(f"🌍 GENERIC MULTI-LANGUAGE BUILD — {config.name} ({config.code})")
+    print("=" * 70)
+
+    ensure_extractions()
+    translation_json = generate_translation_json(config)
+    out_rom = build_rom(config, translation_json)
+    apply_patches(config, out_rom)
+
+    print("\n" + "=" * 70)
+    print(f"✓ {config.name} ROM built: {out_rom.relative_to(REPO_ROOT)}")
+    print("=" * 70)
+    return 0
+
+
+if __name__ == "__main__":
+    raise SystemExit(main())
