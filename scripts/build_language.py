@@ -53,6 +53,7 @@ REPAIR_LZ77_SCRIPT = REPO_ROOT / "scripts/repair_stable_lz77_blocks.py"
 REPAIR_LOCALIZED_LZ77_SCRIPT = REPO_ROOT / "scripts/repair_localized_lz77_blocks.py"
 REPOINT_STALE_SCRIPT = REPO_ROOT / "scripts/repoint_stale_text_pointers.py"
 PATCH_RITUAL_SCRIPT = REPO_ROOT / "scripts/patch_legendary_ritual_fr.py"
+PATCH_VERSION_SCRIPT = REPO_ROOT / "scripts/patch_version_fr.py"
 
 # Text patches that can be parameterised with the language's combined file.
 PATCH_STATUS_ABBREVS_SCRIPT = REPO_ROOT / "scripts/patch_status_abbrevs_fr.py"
@@ -191,12 +192,17 @@ def _font_script_for(code: str) -> Path:
     return lang_script if lang_script.exists() else _PATCH_FONT_FR
 
 
-def apply_patches(config, out_rom: Path, translation_json: Path | None = None) -> None:
+def apply_patches(config, out_rom: Path, translation_json: Path | None = None,
+                  build_number: int = 0) -> None:
     """Run every post-build patch step declared in the language descriptor.
 
     ``translation_json`` is required for the ``repoint_stale`` and
     ``move_descriptions`` steps; those steps are silently skipped when it is
     not provided (e.g. when called from tests without a full build).
+
+    ``build_number`` feeds the ``version`` step, which stamps the in-game
+    NOT FOR SALE version display with ``<CODE>.2.0.<build_number>`` (e.g.
+    ``IT.2.0.42`` for the Italian build).
     """
     combined = config.combined_path(REPO_ROOT)
     for step in config.patches:
@@ -247,6 +253,18 @@ def apply_patches(config, out_rom: Path, translation_json: Path | None = None) -
                 PYTHON, PATCH_RITUAL_SCRIPT,
                 "--rom", out_rom,
                 "--source", ENGLISH_ROM,
+            ])
+
+        elif step == "version":
+            # Stamp the in-game NOT FOR SALE screen with this language's tag,
+            # e.g. IT.2.0.<build> for Italian — so the running build advertises
+            # which language it is. patch_version_fr.py is language-agnostic via
+            # its --lang-code flag.
+            run([
+                PYTHON, PATCH_VERSION_SCRIPT,
+                "--rom", out_rom,
+                "--lang-code", config.code,
+                "--build-number", str(build_number),
             ])
 
         # ── Text patches parameterised from the language descriptor ──────────
@@ -310,7 +328,7 @@ def main() -> int:
     ensure_extractions()
     translation_json = generate_translation_json(config)
     out_rom = build_rom(config, translation_json)
-    apply_patches(config, out_rom, translation_json)
+    apply_patches(config, out_rom, translation_json, args.build_number)
 
     print("\n" + "=" * 70)
     print(f"✓ {config.name} ROM built: {out_rom.relative_to(REPO_ROOT)}")

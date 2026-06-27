@@ -212,6 +212,11 @@ _CHAR_PIXELS: dict[str, list[list[int]]] = {
     '9': [[0, 1, 1, 0], [1, 0, 0, 1], [0, 1, 1, 1], [0, 0, 0, 1], [0, 1, 1, 0]],
     'F': [[1, 1, 1, 1], [1, 0, 0, 0], [1, 1, 1, 0], [1, 0, 0, 0], [1, 0, 0, 0]],
     'R': [[1, 1, 1, 0], [1, 0, 0, 1], [1, 1, 1, 0], [1, 0, 1, 0], [1, 0, 0, 1]],
+    # Glyphs for the other language prefixes: IT (Italian), DE (German).
+    'I': [[1, 1, 1, 1], [0, 1, 1, 0], [0, 1, 1, 0], [0, 1, 1, 0], [1, 1, 1, 1]],
+    'T': [[1, 1, 1, 1], [0, 1, 1, 0], [0, 1, 1, 0], [0, 1, 1, 0], [0, 1, 1, 0]],
+    'D': [[1, 1, 1, 0], [1, 0, 0, 1], [1, 0, 0, 1], [1, 0, 0, 1], [1, 1, 1, 0]],
+    'E': [[1, 1, 1, 1], [1, 0, 0, 0], [1, 1, 1, 0], [1, 0, 0, 0], [1, 1, 1, 1]],
     '.': [[0, 0, 0, 0], [0, 0, 0, 0], [0, 0, 0, 0], [0, 0, 0, 0], [0, 1, 1, 0]],
     ' ': [[0, 0, 0, 0], [0, 0, 0, 0], [0, 0, 0, 0], [0, 0, 0, 0], [0, 0, 0, 0]],
 }
@@ -220,9 +225,15 @@ _GLYPH_W = 4   # advance per character (glyphs are 4 px wide, no extra gap)
 _GLYPH_H = 5
 
 
-def version_string(build_number: int) -> str:
-    """Return the version label rendered on the intro screen."""
-    return f"FR.2.0.{build_number}"
+def version_string(build_number: int, lang_code: str = "fr") -> str:
+    """Return the version label rendered on the intro screen.
+
+    The label is ``<PREFIX>.2.0.<build_number>`` where ``PREFIX`` is the
+    upper-cased language code (``FR`` for French, ``IT`` for Italian, ``DE``
+    for German…).  This is what makes the NOT FOR SALE screen advertise which
+    language build is running.
+    """
+    return f"{lang_code.upper()}.2.0.{build_number}"
 
 
 def _render_version_band(text: str) -> list[list[int]]:
@@ -263,8 +274,11 @@ def _blit_band_to_tiles(tileset: bytearray, band: list[list[int]]) -> None:
                     tileset[base + py * 4 + (px >> 1)] = lo | (hi << 4)
 
 
-def patch_intro_version(data: bytearray, build_number: int) -> bool:
-    """Replace 'v2.1.1.1' on the NOT FOR SALE screen with 'FR.2.0.<build>'.
+def patch_intro_version(data: bytearray, build_number: int, lang_code: str = "fr") -> bool:
+    """Replace 'v2.1.1.1' on the NOT FOR SALE screen with '<PREFIX>.2.0.<build>'.
+
+    ``lang_code`` selects the prefix glyphs (``fr`` → ``FR``, ``it`` → ``IT``…),
+    so each language build advertises itself on the intro screen.
 
     Returns True if the ROM was modified.
     """
@@ -281,7 +295,7 @@ def patch_intro_version(data: bytearray, build_number: int) -> bool:
             f"Intro tileset too small ({len(tileset)} bytes) for version band"
         )
 
-    band = _render_version_band(version_string(build_number))
+    band = _render_version_band(version_string(build_number, lang_code))
     _blit_band_to_tiles(tileset, band)
 
     compressed = _lz77_compress(bytes(tileset))
@@ -301,6 +315,9 @@ def main() -> int:
     parser.add_argument("--rom", type=Path, default=Path("output/roms/GenedRom-fr.gba"))
     parser.add_argument("--build-number", type=int, required=True,
                         help="CI build counter (e.g. GITHUB_RUN_NUMBER)")
+    parser.add_argument("--lang-code", default="fr",
+                        help="Language code shown as the version prefix "
+                             "(fr→FR, it→IT, de→DE). Default: fr")
     args = parser.parse_args()
 
     if not args.rom.exists():
@@ -317,7 +334,7 @@ def main() -> int:
     header_changed = patch_version(data, args.build_number)
 
     try:
-        screen_changed = patch_intro_version(data, args.build_number)
+        screen_changed = patch_intro_version(data, args.build_number, args.lang_code)
     except Exception as exc:  # noqa: BLE001 — surface a clear CI failure
         print(f"Intro version patch failed: {exc}", file=sys.stderr)
         return 1
@@ -335,7 +352,7 @@ def main() -> int:
     if screen_changed:
         print(
             "NOT FOR SALE screen: version display updated to "
-            f"'{version_string(args.build_number)}'"
+            f"'{version_string(args.build_number, args.lang_code)}'"
         )
 
     return 0

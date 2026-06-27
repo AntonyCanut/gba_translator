@@ -17,7 +17,9 @@ build: generic                    # dedicated (make build-fr) | generic (build_l
 combined: languages/de/combined_de.txt
 critical: languages/de/critical_strings_de.txt   # optional; created when needed
 output_rom: GenedRom-de.gba
-version_label: DE.0.1.0
+# Shown in-game on the NOT FOR SALE screen as DE.2.0.<build> (the trailing
+# component is the CI build number stamped by the `version` patch step).
+version_label: DE.2.0.0
 
 # Extra glyphs the font must render beyond plain ASCII.
 font_glyphs: "äöüßÄÖÜ"
@@ -42,6 +44,8 @@ status_abbrev:
 #
 # Language-aware (data already in status_abbrev above):
 #   status_abbrevs         write DE status abbreviations (GIF/VBR/GEF/SCH/…) into ROM
+#   version                stamp the NOT FOR SALE screen with DE.2.0.<build>
+#                          so the running build advertises it is the German one
 #
 # Richer passes (pokédex rewrap, mission boxes, move descriptions, …) will be
 # added here as German translations for those subsystems mature.
@@ -53,3 +57,4 @@ patches:
   - repoint_stale
   - legendary_ritual
   - status_abbrevs
+  - version
