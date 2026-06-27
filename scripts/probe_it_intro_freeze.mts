@@ -22,9 +22,21 @@ fs.mkdirSync(OUT, { recursive: true });
 function md5(p: string) { try { return crypto.createHash('md5').update(fs.readFileSync(p)).digest('hex'); } catch { return ''; } }
 
 async function sv4(c: MgbaBridgeClient) {
-  const raw = await c.readMemory(0x02021D18, 1000);
-  const hex = Array.from(raw.slice(0, 200)).map((b) => b.toString(16).padStart(2, '0')).join(' ');
-  return { text: decodePokemonText(raw).trim(), hex };
+  // Read every named string buffer + the wider message area and report each.
+  const parts: string[] = [];
+  for (const [name, addr, len] of [
+    ['gSV1', 0x02021d18, 16], ['gSV2', 0x02021d28, 16], ['gSV3', 0x02021d38, 16], ['gSV4', 0x02021d48, 1000],
+    ['gDisp', 0x02021fc0, 1000],
+  ] as const) {
+    try {
+      const raw = await c.readMemory(addr as number, len as number);
+      const t = decodePokemonText(raw).trim();
+      if (t.length > 1) parts.push(`${name}="${t.replace(/\n/g, '/').slice(0, 80)}"`);
+    } catch { /* */ }
+  }
+  const raw = await c.readMemory(0x02021d48, 200);
+  const hex = Array.from(raw.slice(0, 120)).map((b) => b.toString(16).padStart(2, '0')).join(' ');
+  return { text: parts.join('  '), hex };
 }
 
 async function main() {
@@ -42,7 +54,8 @@ async function main() {
   const distinct: string[] = [];
   for (let i = 0; i < 160; i++) {
     await c.pressKey('A', 4);
-    // Micro-advance so the buffer is sampled right up to the moment of a hang.
+    if (i % 4 === 3) { await c.pressKey('START', 4); } // confirm the naming keyboard (START == OK)
+    // Micro-advance so the buffer + screenshot are sampled right up to the hang.
     for (let m = 0; m < 8; m++) {
       let buf = { text: '', hex: '' };
       try { buf = await sv4(c); } catch { /* */ }
@@ -50,6 +63,7 @@ async function main() {
         lastBuf = buf;
         if (!distinct.includes(buf.text)) { distinct.push(buf.text); console.error(`[${i}.${m}] sv4="${buf.text.replace(/\n/g, ' / ').slice(0, 110)}"`); }
       }
+      try { await c.screenshot(`${OUT}/frame-${String(i).padStart(3, '0')}-${m}.png`); } catch { /* */ }
       try {
         await c.advanceFrames(5);
       } catch (e) {
