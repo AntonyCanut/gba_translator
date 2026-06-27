@@ -5,9 +5,8 @@
 # languages/de/combined_de.txt (same `<offset_hex>: <text>` format as
 # combined_fr.txt). Offsets not present there stay English.
 #
-# NOTE: German adds ä ö ü ß, which are NOT in the shared FR font glyph set.
-# The generic `font` step is therefore disabled below until a DE font patch
-# provides those glyphs; ASCII fallbacks (ae/oe/ue/ss) are used meanwhile.
+# ä ö ü Ä Ö Ü are now in the charmap (slots 0x63-0x60) and have glyphs
+# drawn by scripts/patch_font_de.py, so the `font` step is active.
 code: de
 name: German
 native_name: Deutsch
@@ -33,6 +32,7 @@ status_abbrev:
   faint: KO
 
 # Generic post-build patches applied by scripts/build_language.py.
-# `font` is intentionally omitted (umlauts/ß need a dedicated DE font patch).
+# `font` runs patch_font_de.py which draws ä ö ü Ä Ö Ü glyphs.
 patches:
+  - font
   - inline

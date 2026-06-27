@@ -1,5 +1,16 @@
 #!/usr/bin/env python3
-"""Patch FR font glyphs for French accents in a GBA ROM."""
+"""Patch DE font glyphs for German umlauts (ä ö ü Ä Ö Ü) in a GBA ROM.
+
+ß is already present in the charmap at 0x15 and has a glyph in the ROM's
+international font block; this script only handles the six umlaut characters
+assigned to free slots 0x60-0x65:
+
+    0x60 = Ä   0x61 = Ö   0x62 = Ü
+    0x63 = ä   0x64 = ö   0x65 = ü
+
+Each umlaut glyph is built by combining the base letter's pixels with the
+diaeresis dots extracted from the matching ë/Ë reference pair in the ROM.
+"""
 
 from __future__ import annotations
 
@@ -11,19 +22,27 @@ from typing import Iterable, List, Optional, Tuple
 LZ77_MAGIC = 0x10
 FONT_SIZE = 0x2000
 GLYPH_SIZE = 32
-MIN_GLYPH_DENSITY = 5
 
-CP_A = 0xD5
-CP_ACUTE_A = 0x17
-CP_GRAVE_A = 0x16
-CP_C = 0xD7
-CP_C_CEDILLA = 0x19
-# ü (0x65) is now in the charmap; build it from u + ë-vs-e diaeresis so FR
-# text that uses ü renders correctly instead of falling back to the empty slot.
-CP_U_LC = 0xE9
-CP_E_LC = 0xD9
-CP_E_LC_DIAR = 0x1D  # ë
-CP_U_UMLAUT_LC = 0x65  # ü
+# Charmap codepoints used as building blocks
+CP_A_UC = 0xBB   # 'A'
+CP_O_UC = 0xC9   # 'O'
+CP_U_UC = 0xCF   # 'U'
+CP_E_UC = 0xBF   # 'E'
+CP_E_UC_DIAR = 0x08  # 'Ë'  — source of uppercase diaeresis dots
+
+CP_A_LC = 0xD5   # 'a'
+CP_O_LC = 0xE3   # 'o'
+CP_U_LC = 0xE9   # 'u'
+CP_E_LC = 0xD9   # 'e'
+CP_E_LC_DIAR = 0x1D  # 'ë'  — source of lowercase diaeresis dots
+
+# Target codepoints for German umlauts (assigned in charmap_data.py)
+CP_A_UMLAUT_UC = 0x60  # 'Ä'
+CP_O_UMLAUT_UC = 0x61  # 'Ö'
+CP_U_UMLAUT_UC = 0x62  # 'Ü'
+CP_A_UMLAUT_LC = 0x63  # 'ä'
+CP_O_UMLAUT_LC = 0x64  # 'ö'
+CP_U_UMLAUT_LC = 0x65  # 'ü'
 
 WIDTH_TABLE_OFFSETS = [
     0x1FB100,
@@ -101,13 +120,6 @@ def lz77_decompress(data: bytes, offset: int) -> Optional[Tuple[bytes, int]]:
 
 
 def _lz77_best_match(data: bytes, pos: int, size: int) -> tuple:
-    """Find the longest back-reference at ``pos`` with overlapping-match support.
-
-    Scans right-to-left (smallest displacement first) so ties resolve to the
-    most-recent occurrence.  Handles overlapping matches (e.g. ABABAB) by
-    comparing byte-by-byte against the source array rather than using rfind,
-    which cannot find patterns that extend beyond the current window boundary.
-    """
     max_len = min(18, size - pos)
     window_start = max(0, pos - 0x1000)
     best_len = 0
@@ -125,12 +137,6 @@ def _lz77_best_match(data: bytes, pos: int, size: int) -> tuple:
 
 
 def lz77_compress(data: bytes) -> bytes:
-    """LZ77-compress *data* for GBA (header byte 0x10).
-
-    Uses proper byte-by-byte overlapping match detection and one-step lazy
-    evaluation (skip a short match at ``pos`` when ``pos+1`` offers a longer
-    one) to approach GBA-tool compression quality.
-    """
     size = len(data)
     out = bytearray()
     out.append(LZ77_MAGIC)
@@ -144,8 +150,6 @@ def lz77_compress(data: bytes) -> bytes:
         while bit_i < 8 and pos < size:
             len0, disp0 = _lz77_best_match(data, pos, size)
             if len0 >= 3:
-                # Lazy: if pos+1 yields a strictly longer match, emit a literal
-                # at pos and let the next iteration use the better match.
                 len1 = 0
                 if pos + 1 < size:
                     len1, _ = _lz77_best_match(data, pos + 1, size)
@@ -188,20 +192,12 @@ def glyph_pixels(font: bytes, codepoint: int) -> List[int]:
 
 
 def glyph_density(font: bytes, codepoint: int) -> int:
-    pixels = glyph_pixels(font, codepoint)
-    return sum(1 for p in pixels if p)
-
-
+    return sum(1 for p in glyph_pixels(font, codepoint) if p)
 
 
 def is_font_block(font: bytes) -> bool:
     sample = [0xA1, 0xA2, 0xA3, 0xBB, 0xBC, 0xD5, 0xD7]
-    score = 0
-    for cp in sample:
-        density = glyph_density(font, cp)
-        if 5 < density < 60:
-            score += 1
-    return score >= 4
+    return sum(1 for cp in sample if 5 < glyph_density(font, cp) < 60) >= 4
 
 
 def find_font_blocks(rom: bytes) -> List[Lz77Block]:
@@ -227,18 +223,6 @@ def find_font_blocks(rom: bytes) -> List[Lz77Block]:
     return blocks
 
 
-def extract_cedilla_mask(font: bytes) -> List[Tuple[int, int]]:
-    base = glyph_pixels(font, CP_C)
-    cedilla = glyph_pixels(font, CP_C_CEDILLA)
-    mask: List[Tuple[int, int]] = []
-    for y in range(6, 8):
-        for x in range(8):
-            idx = y * 8 + x
-            if base[idx] == 0 and cedilla[idx] != 0:
-                mask.append((x, y))
-    return mask
-
-
 def dominant_color(pixels: Iterable[int]) -> int:
     counts = Counter([p for p in pixels if p])
     if not counts:
@@ -246,96 +230,77 @@ def dominant_color(pixels: Iterable[int]) -> int:
     return counts.most_common(1)[0][0]
 
 
-def build_grave_a(font: bytes) -> bytes:
-    base = glyph_pixels(font, CP_A)
-    acute = glyph_pixels(font, CP_ACUTE_A)
-
-    positions = [
-        (x, y, acute[y * 8 + x])
-        for y in range(2)
-        for x in range(8)
-        if acute[y * 8 + x] != 0 and acute[y * 8 + x] != base[y * 8 + x]
-    ]
-    if not positions:
-        return pixels_to_tile(base)
-
-    avg_x = sum(x for x, _, _ in positions) / len(positions)
-    shift = int(round(avg_x - 1.0))
-    shift = max(1, min(6, shift))
-
-    out = base[:]
-    for x, y, val in positions:
-        nx = x - shift
-        if 0 <= nx < 8:
-            idx = y * 8 + nx
-            if val > out[idx]:
-                out[idx] = val
-
-    return pixels_to_tile(out)
+def extract_diaeresis_dots(font: bytes, with_diar_cp: int, base_cp: int) -> List[Tuple[int, int, int]]:
+    """Return list of (x, y, color) pixels that form the diaeresis in `with_diar_cp` vs `base_cp`."""
+    with_pix = glyph_pixels(font, with_diar_cp)
+    base_pix = glyph_pixels(font, base_cp)
+    dots = []
+    for y in range(8):
+        for x in range(8):
+            idx = y * 8 + x
+            if with_pix[idx] != 0 and base_pix[idx] == 0:
+                dots.append((x, y, with_pix[idx]))
+    return dots
 
 
-def build_u_umlaut(font: bytes) -> bytes:
-    """Build ü from u + diaeresis extracted from ë vs e."""
-    u_pix = glyph_pixels(font, CP_U_LC)
-    e_diar = glyph_pixels(font, CP_E_LC_DIAR)
-    e_base = glyph_pixels(font, CP_E_LC)
+def build_umlaut(font: bytes, base_cp: int, diar_dots: List[Tuple[int, int, int]]) -> bytes:
+    """Build an umlaut glyph: shift base letter down if needed, then place diaeresis dots.
 
-    dots = [(x, y, e_diar[y * 8 + x])
-            for y in range(8) for x in range(8)
-            if e_diar[y * 8 + x] != 0 and e_base[y * 8 + x] == 0]
-    if not dots:
-        return pixels_to_tile(u_pix)
+    Strategy:
+      1. Find the topmost row occupied by diaeresis dots.
+      2. Find the topmost row occupied by the base letter.
+      3. If the dots would collide with the letter top, shift the letter down by the
+         number of dot rows (at most 2), losing bottom pixels of the letter.
+         This is unavoidable in an 8×8 grid — the result is still legible.
+      4. Write dots at the computed positions.
+    """
+    if not diar_dots:
+        return pixels_to_tile(glyph_pixels(font, base_cp))
 
-    min_dot_y = min(y for _, y, _ in dots)
-    dots_norm = [(x, y - min_dot_y, v) for x, y, v in dots]
-    dot_rows = max(y for _, y, _ in dots_norm) + 1
+    base_pix = glyph_pixels(font, base_cp)
+    color = dominant_color(base_pix)
 
-    u_top = next((y for y in range(8) if any(u_pix[y * 8 + x] for x in range(8))), 8)
-    shift = max(0, min(2, dot_rows - u_top))
+    # Normalise dots to start at row 0
+    min_dot_y = min(y for _, y, _ in diar_dots)
+    dots_normalised = [(x, y - min_dot_y, v) for x, y, v in diar_dots]
+    dot_rows_needed = max(y for _, y, _ in dots_normalised) + 1  # typically 1 or 2
 
+    # Find topmost row in base letter
+    base_top = next(
+        (y for y in range(8) if any(base_pix[y * 8 + x] for x in range(8))), 8
+    )
+
+    # Decide shift: shift only when the letter top would collide with dot rows
+    shift = max(0, dot_rows_needed - base_top)
+    shift = min(shift, 2)  # cap at 2 rows to avoid destroying the letter
+
+    # Build shifted base
     out = [0] * 64
     for y in range(8 - shift):
         for x in range(8):
-            out[(y + shift) * 8 + x] = u_pix[y * 8 + x]
-    for x, y, val in dots_norm:
+            out[(y + shift) * 8 + x] = base_pix[y * 8 + x]
+
+    # Place diaeresis dots
+    for x, y, val in dots_normalised:
         if y < 8:
-            out[y * 8 + x] = val
+            out[y * 8 + x] = val if val else color
 
     return pixels_to_tile(out)
 
 
-def build_cedilla(font: bytes, fallback_mask: List[Tuple[int, int]]) -> bytes:
-    base = glyph_pixels(font, CP_C)
-    cedilla = glyph_pixels(font, CP_C_CEDILLA)
-
-    local_mask = extract_cedilla_mask(font)
-    use_mask = local_mask if len(local_mask) >= max(2, len(fallback_mask) // 2) else fallback_mask
-    color = dominant_color(base)
-
-    out = base[:]
-    for x, y in use_mask:
-        idx = y * 8 + x
-        if out[idx] == 0:
-            out[idx] = color
-
-    return pixels_to_tile(out)
-
-
-def patch_width_tables(rom: bytearray) -> int:
+def patch_width_tables(rom: bytearray, umlauts: List[Tuple[int, int]]) -> int:
+    """Set umlaut glyph widths equal to their base letter widths in every width table."""
     patched = 0
     for offset in WIDTH_TABLE_OFFSETS:
         if offset + 0x100 > len(rom):
             continue
-        a_width = rom[offset + CP_A]
-        if a_width == 0:
-            continue
-        if rom[offset + CP_GRAVE_A] != a_width:
-            rom[offset + CP_GRAVE_A] = a_width
-            patched += 1
-        u_width = rom[offset + CP_U_LC]
-        if u_width != 0 and rom[offset + CP_U_UMLAUT_LC] != u_width:
-            rom[offset + CP_U_UMLAUT_LC] = u_width
-            patched += 1
+        for umlaut_cp, base_cp in umlauts:
+            base_width = rom[offset + base_cp]
+            if base_width == 0:
+                continue
+            if rom[offset + umlaut_cp] != base_width:
+                rom[offset + umlaut_cp] = base_width
+                patched += 1
     return patched
 
 
@@ -359,29 +324,43 @@ def apply_patches(rom: bytearray) -> Tuple[int, int, int]:
     if not blocks:
         raise RuntimeError("No font blocks found to patch.")
 
-    fallback_mask: List[Tuple[int, int]] = []
-    for block in blocks:
-        mask = extract_cedilla_mask(block.decompressed)
-        if len(mask) > len(fallback_mask):
-            fallback_mask = mask
-    if not fallback_mask:
-        fallback_mask = [(1, 7), (2, 7), (5, 7), (6, 7), (7, 7)]
+    # Width-table pairs: (umlaut_cp, base_cp)
+    width_pairs = [
+        (CP_A_UMLAUT_UC, CP_A_UC),
+        (CP_O_UMLAUT_UC, CP_O_UC),
+        (CP_U_UMLAUT_UC, CP_U_UC),
+        (CP_A_UMLAUT_LC, CP_A_LC),
+        (CP_O_UMLAUT_LC, CP_O_LC),
+        (CP_U_UMLAUT_LC, CP_U_LC),
+    ]
 
     patched_fonts = 0
     relocated_fonts = 0
     allocator = FreeSpaceAllocator(rom)
+
     for block in blocks:
         font = bytearray(block.decompressed)
         original = bytes(font)
-        grave_tile = build_grave_a(original)
-        if font[CP_GRAVE_A * GLYPH_SIZE: (CP_GRAVE_A + 1) * GLYPH_SIZE] != grave_tile:
-            font[CP_GRAVE_A * GLYPH_SIZE: (CP_GRAVE_A + 1) * GLYPH_SIZE] = grave_tile
-        cedilla_tile = build_cedilla(original, fallback_mask)
-        if font[CP_C_CEDILLA * GLYPH_SIZE: (CP_C_CEDILLA + 1) * GLYPH_SIZE] != cedilla_tile:
-            font[CP_C_CEDILLA * GLYPH_SIZE: (CP_C_CEDILLA + 1) * GLYPH_SIZE] = cedilla_tile
-        u_umlaut_tile = build_u_umlaut(original)
-        if font[CP_U_UMLAUT_LC * GLYPH_SIZE: (CP_U_UMLAUT_LC + 1) * GLYPH_SIZE] != u_umlaut_tile:
-            font[CP_U_UMLAUT_LC * GLYPH_SIZE: (CP_U_UMLAUT_LC + 1) * GLYPH_SIZE] = u_umlaut_tile
+
+        # Extract diaeresis dots from Ë vs E (uppercase) and ë vs e (lowercase)
+        uc_dots = extract_diaeresis_dots(original, CP_E_UC_DIAR, CP_E_UC)
+        lc_dots = extract_diaeresis_dots(original, CP_E_LC_DIAR, CP_E_LC)
+
+        umlaut_targets = [
+            (CP_A_UMLAUT_UC, CP_A_UC, uc_dots),
+            (CP_O_UMLAUT_UC, CP_O_UC, uc_dots),
+            (CP_U_UMLAUT_UC, CP_U_UC, uc_dots),
+            (CP_A_UMLAUT_LC, CP_A_LC, lc_dots),
+            (CP_O_UMLAUT_LC, CP_O_LC, lc_dots),
+            (CP_U_UMLAUT_LC, CP_U_LC, lc_dots),
+        ]
+
+        for target_cp, base_cp, dots in umlaut_targets:
+            tile = build_umlaut(original, base_cp, dots)
+            slot = slice(target_cp * GLYPH_SIZE, (target_cp + 1) * GLYPH_SIZE)
+            if bytes(font[slot]) != tile:
+                font[slot] = tile
+
         if bytes(font) == original:
             continue
 
@@ -389,9 +368,8 @@ def apply_patches(rom: bytearray) -> Tuple[int, int, int]:
         if len(compressed) <= block.compressed_len:
             rom[block.offset:block.offset + len(compressed)] = compressed
             if len(compressed) < block.compressed_len:
-                pad_start = block.offset + len(compressed)
-                pad_len = block.compressed_len - len(compressed)
-                rom[pad_start:pad_start + pad_len] = b"\x00" * pad_len
+                pad = block.offset + len(compressed)
+                rom[pad:pad + block.compressed_len - len(compressed)] = b"\x00" * (block.compressed_len - len(compressed))
             patched_fonts += 1
             continue
 
@@ -405,12 +383,14 @@ def apply_patches(rom: bytearray) -> Tuple[int, int, int]:
         relocated_fonts += 1
         patched_fonts += 1
 
-    patched_tables = patch_width_tables(rom)
+    patched_tables = patch_width_tables(rom, width_pairs)
     return patched_fonts, patched_tables, relocated_fonts
 
 
 def main() -> int:
-    parser = argparse.ArgumentParser(description="Patch French glyphs (à, ç) in a GBA ROM font.")
+    parser = argparse.ArgumentParser(
+        description="Patch German umlaut glyphs (ä ö ü Ä Ö Ü) in a GBA ROM font."
+    )
     parser.add_argument("--rom", required=True, help="Path to the ROM to patch")
     args = parser.parse_args()
 
@@ -424,7 +404,7 @@ def main() -> int:
 
     print(
         f"Patched {patched_fonts} font block(s), relocated {relocated_fonts} block(s), "
-        f"and updated {patched_tables} width table(s)."
+        f"and updated {patched_tables} width table entries."
     )
     return 0
 
