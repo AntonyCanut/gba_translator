@@ -2,7 +2,7 @@
 """
 27 - Complete Test Summary and Report
 
-Synthèse complète de tous les tests effectués sur la ROM espagnole.
+Complete summary of all tests performed on the Spanish ROM.
 
 Usage:
     python src/translators/27_complete_test_summary.py
@@ -17,7 +17,7 @@ sys.path.insert(0, str(Path(__file__).parent.parent.parent))
 
 
 class CompleteTestSummary:
-    """Synthèse complète des tests."""
+    """Complete test summary."""
     
     def __init__(self):
         self.summary = {
@@ -29,7 +29,7 @@ class CompleteTestSummary:
         }
     
     def run(self) -> bool:
-        """Générer la synthèse."""
+        """Generate the summary."""
         print("="*80)
         print("📊 COMPLETE TEST SUMMARY - SPANISH ROM VALIDATION")
         print("="*80)
@@ -43,7 +43,7 @@ class CompleteTestSummary:
         return True
     
     def _load_test_results(self):
-        """Charger tous les résultats de tests."""
+        """Load all test results."""
         print("\n📁 Loading test results...")
         
         reports_dir = Path('output/reports')
@@ -82,10 +82,10 @@ class CompleteTestSummary:
                 print(f"   ⏭️  {description}: Not found")
     
     def _compile_metrics(self):
-        """Compiler les métriques."""
+        """Compile metrics."""
         print("\n📊 Compiling metrics...")
-        
-        # Charger le rapport de build
+
+        # Load the build report
         try:
             with open(Path('output/reports/2026-01-14_sprom_build_report.json'), 'r') as f:
                 build_data = json.load(f)
@@ -99,7 +99,7 @@ class CompleteTestSummary:
         except:
             pass
         
-        # Charger validation offsetss
+        # Load offset validation
         try:
             with open(Path('output/reports/2026-01-14_offset_validation_complete.json'), 'r') as f:
                 validation_data = json.load(f)
@@ -115,7 +115,7 @@ class CompleteTestSummary:
         except:
             pass
         
-        # Charger analyse avancée
+        # Load advanced analysis
         try:
             with open(Path('output/reports/2026-01-14_advanced_offset_analysis.json'), 'r') as f:
                 analysis_data = json.load(f)
@@ -134,20 +134,20 @@ class CompleteTestSummary:
         print("   ✅ Metrics compiled")
     
     def _generate_verdict(self):
-        """Générer le verdict final."""
+        """Generate the final verdict."""
         print("\n🔍 Generating verdict...")
-        
+
         metrics = self.summary['key_metrics']
-        
-        # Vérifier tous les critères
+
+        # Verify all criteria
         checks = {
             'build_success': metrics.get('build', {}).get('success_rate', 0) >= 99.5,
             'validation_perfect': metrics.get('validation', {}).get('match_rate', 0) >= 99.9,
-            'file_integrity': True,  # À partir des tests
-            'binary_correct': True   # À partir des tests
+            'file_integrity': True,  # From tests
+            'binary_correct': True   # From tests
         }
-        
-        # Nombre de checks réussis
+
+        # Number of checks passed
         passed = sum(1 for v in checks.values() if v)
         total = len(checks)
         
@@ -161,7 +161,7 @@ class CompleteTestSummary:
         print(f"   Verdict: {self.summary['overall_verdict']}")
     
     def _print_summary(self):
-        """Afficher la synthèse."""
+        """Print the summary."""
         print("\n" + "="*80)
         print("✅ FINAL SUMMARY - SPANISH ROM VALIDATION COMPLETE")
         print("="*80)
@@ -238,7 +238,7 @@ class CompleteTestSummary:
         print(f"   4. Deploy to production when ready")
     
     def _save_summary(self):
-        """Sauvegarder la synthèse."""
+        """Save the summary."""
         print(f"\n💾 Saving summary...")
         
         try:

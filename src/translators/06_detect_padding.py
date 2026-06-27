@@ -2,8 +2,8 @@
 """
 06 - Detect Padding
 
-Analyse le padding disponible pour tous les textes à traduire.
-Génère un JSON enrichi avec les informations de padding.
+Analyse available padding for all texts to translate.
+Generates an enriched JSON with padding information.
 
 Usage:
     python src/translators/06_detect_padding.py
@@ -22,7 +22,7 @@ import json
 from pathlib import Path
 from datetime import datetime
 
-# Ajouter src au path
+# Add src to path
 sys.path.insert(0, str(Path(__file__).parent.parent.parent))
 
 from src.core.rom_reader import ROMReader, ROMError
@@ -31,22 +31,22 @@ from src.core.padding_detector import PaddingDetector
 
 def find_latest_diff_file() -> Path:
     """
-    Trouve le fichier diff_only.json le plus récent.
+    Find the most recent diff_only.json file.
 
     Returns:
-        Path: Chemin vers le fichier diff_only
+        Path: Path to the diff_only file
     """
     diff_dir = Path('output/differences')
     if not diff_dir.exists():
         raise FileNotFoundError("output/differences/ not found")
 
-    # Chercher fichiers diff_only
+    # Find diff_only files
     diff_files = list(diff_dir.glob('*_diff_only.json'))
 
     if not diff_files:
         raise FileNotFoundError("No *_diff_only.json found in output/differences/")
 
-    # Retourner le plus récent
+    # Return the most recent
     return max(diff_files, key=lambda p: p.stat().st_mtime)
 
 
@@ -56,51 +56,51 @@ def main():
     print("="*80)
     print()
 
-    # 1. Charger ROM
+    # 1. Load ROM
     rom_path = Path('input/roms/englishrom.gba')
-    print(f"📖 Chargement ROM: {rom_path}")
+    print(f"📖 Loading ROM: {rom_path}")
 
     try:
         rom = ROMReader(str(rom_path))
         rom.load()
         info = rom.get_rom_info()
         print(f"   ROM: {info['title']} ({info['game_code']})")
-        print(f"   Taille: {info['size_mb']} MB")
+        print(f"   Size: {info['size_mb']} MB")
     except (FileNotFoundError, ROMError) as e:
-        print(f"❌ Erreur: {e}")
+        print(f"❌ Error: {e}")
         sys.exit(1)
 
     print()
 
-    # 2. Charger différences
+    # 2. Load differences
     try:
         diff_file = find_latest_diff_file()
-        print(f"📄 Chargement différences: {diff_file.name}")
+        print(f"📄 Loading differences: {diff_file.name}")
 
         with open(diff_file, 'r', encoding='utf-8') as f:
             diff_data = json.load(f)
 
         texts = diff_data['texts']
-        print(f"   Textes à analyser: {len(texts)}")
+        print(f"   Texts to analyse: {len(texts)}")
     except (FileNotFoundError, json.JSONDecodeError) as e:
-        print(f"❌ Erreur: {e}")
+        print(f"❌ Error: {e}")
         sys.exit(1)
 
     print()
 
-    # 3. Analyser padding
-    print("🔍 Analyse du padding disponible (recherche étendue)...")
+    # 3. Analyse padding
+    print("🔍 Analysing available padding (extended search)...")
     detector = PaddingDetector(rom)
 
-    # Utiliser extended_search=True pour trouver plus de padding
+    # Use extended_search=True to find more padding
     enriched_texts = detector.analyze_all_texts(texts, extended_search=True)
 
-    print(f"✅ {len(enriched_texts)} textes analysés")
+    print(f"✅ {len(enriched_texts)} texts analysed")
     print()
 
-    # 4. Afficher statistiques
+    # 4. Display statistics
     print("="*80)
-    print("STATISTIQUES PADDING")
+    print("PADDING STATISTICS")
     print("="*80)
 
     report = detector.generate_report()
@@ -126,20 +126,20 @@ def main():
         print(f"  {rec}")
     print()
 
-    # 5. Sauvegarder résultats
+    # 5. Save results
     date_str = datetime.now().strftime('%Y-%m-%d')
 
-    # Rapport d'analyse
+    # Analysis report
     analysis_dir = Path('output/analysis')
     analysis_dir.mkdir(parents=True, exist_ok=True)
 
     analysis_path = analysis_dir / f"{date_str}_padding_analysis.json"
-    print(f"💾 Sauvegarde analyse: {analysis_path}")
+    print(f"💾 Saving analysis: {analysis_path}")
 
     with open(analysis_path, 'w', encoding='utf-8') as f:
         json.dump(report, f, indent=2, ensure_ascii=False)
 
-    # Textes enrichis
+    # Enriched texts
     diff_with_padding = {
         'rom_name': diff_data['rom_name'],
         'rom_size': diff_data['rom_size'],
@@ -149,21 +149,21 @@ def main():
     }
 
     enriched_path = Path('output/differences') / f"{date_str}_diff_with_padding.json"
-    print(f"💾 Sauvegarde textes enrichis: {enriched_path}")
+    print(f"💾 Saving enriched texts: {enriched_path}")
 
     with open(enriched_path, 'w', encoding='utf-8') as f:
         json.dump(diff_with_padding, f, indent=2, ensure_ascii=False)
 
     print()
     print("="*80)
-    print("✅ ANALYSE TERMINÉE")
+    print("✅ ANALYSIS COMPLETE")
     print("="*80)
     print()
-    print(f"Fichiers générés:")
+    print(f"Generated files:")
     print(f"  - {analysis_path}")
     print(f"  - {enriched_path}")
     print()
-    print("Prochaine étape:")
+    print("Next step:")
     print("  python src/translators/08_json_to_csv.py")
     print()
 

@@ -2,8 +2,8 @@
 """
 23 - Spanish ROM Final Validation
 
-Validation finale pour confirmer que la ROM espagnole
-générée est correcte et prête pour l'émulateur.
+Final validation to confirm that the generated Spanish ROM
+is correct and ready for the emulator.
 
 Usage:
     python src/translators/23_validate_spanish_rom_final.py
@@ -17,15 +17,15 @@ sys.path.insert(0, str(Path(__file__).parent.parent.parent))
 
 
 class FinalSpanishROMValidation:
-    """Validation finale de la ROM espagnole."""
-    
+    """Final validation of the Spanish ROM."""
+
     def run(self):
-        """Exécuter validation."""
+        """Run validation."""
         print("="*70)
         print("✅ SPANISH ROM FINAL VALIDATION")
         print("="*70)
         
-        # 1. Vérifier que les ROMs existent
+        # 1. Check that ROM files exist
         print("\n1️⃣  Checking ROM files:")
         
         english_rom = Path('input/roms/englishrom.gba')
@@ -40,7 +40,7 @@ class FinalSpanishROMValidation:
         print(f"   Spanish ROM: {spanish_size/1024/1024:.2f} MB ✅" if spanish_size else "   Spanish ROM: NOT FOUND ❌")
         print(f"   Output ROM: {output_size/1024/1024:.2f} MB ✅" if output_size else "   Output ROM: NOT FOUND ❌")
         
-        # 2. Vérifier le rapport
+        # 2. Check the build report
         print("\n2️⃣  Checking build report:")
         
         report_path = Path('output/reports/2026-01-14_sprom_build_report.json')
@@ -62,7 +62,7 @@ class FinalSpanishROMValidation:
         else:
             print("   ❌ Report not found!")
         
-        # 3. Validation des tailles de fichier
+        # 3. File size validation
         print("\n3️⃣  File size validation:")
         
         print(f"   Expected size: 32 MB (33,554,432 bytes)")
@@ -75,7 +75,7 @@ class FinalSpanishROMValidation:
         else:
             print(f"   ⚠️  {33554432 - output_size} bytes too small")
         
-        # 4. Vérification des bytes
+        # 4. Binary byte verification
         print("\n4️⃣  Binary validation (sampling):")
         
         if output_rom.exists() and spanish_rom.exists():
@@ -84,11 +84,11 @@ class FinalSpanishROMValidation:
             with open(spanish_rom, 'rb') as f:
                 spanish_data = f.read()
             
-            # Vérifier quelques offsets
+            # Check a few offsets
             test_offsets = [
-                0x100000,   # Zone médiane
-                0x1000000,  # Zone différente
-                0x1586306,  # Offset de test connu
+                0x100000,   # Middle zone
+                0x1000000,  # Different zone
+                0x1586306,  # Known test offset
             ]
             
             all_match = True
@@ -108,7 +108,7 @@ class FinalSpanishROMValidation:
             else:
                 print(f"\n   ⚠️  Some mismatches found (might be expected)")
         
-        # 5. Résumé final
+        # 5. Final summary
         print("\n" + "="*70)
         print("📊 VALIDATION SUMMARY")
         print("="*70)

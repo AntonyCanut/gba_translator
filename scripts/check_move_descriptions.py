@@ -1,32 +1,32 @@
 #!/usr/bin/env python3
-"""Vérifie que chaque description d'attaque tient dans la fenêtre de résumé.
+"""Check that each move description fits within the summary screen window.
 
-L'écran « Capacités connues » affiche la description d'une attaque sur **5
-lignes maximum**, chaque ligne devant rester sous ~122 px (≈ 21 caractères de
-la police FRLG). Au-delà, le texte déborde : mots coupés au bord droit
-(horizontal) ou lignes masquées (vertical) — cf. les captures du ticket.
+The "Known Moves" screen displays a move description over **5 lines maximum**,
+each line staying under ~122 px (≈ 21 characters in the FRLG font). Beyond
+that, text overflows: words cut off at the right edge (horizontal) or lines
+hidden (vertical) — see ticket screenshots.
 
-Ce script lit la ROM FR construite, décode chaque description d'attaque via la
-table de pointeurs ``gMoveDescriptionPointers`` et liste celles qui débordent,
-afin de retravailler ces traductions dans ``combined_fr.txt``.
+This script reads the built FR ROM, decodes each move description via the
+``gMoveDescriptionPointers`` pointer table, and lists those that overflow,
+so they can be reworked in ``combined_fr.txt``.
 
-Exemples
+Examples
 --------
-    # Audit complet, ne lister que les attaques qui débordent
+    # Full audit, list only overflowing moves
     python3 scripts/check_move_descriptions.py
 
-    # Tout afficher (OK inclus), avec le détail ligne par ligne
+    # Show everything (including OK), with per-line detail
     python3 scripts/check_move_descriptions.py --all --verbose
 
-    # Export JSON de la liste à retravailler
+    # Export JSON of moves to rework
     python3 scripts/check_move_descriptions.py --json out/move_overflow.json
 
-    # Sur une autre ROM / avec des seuils personnalisés
+    # On a different ROM / with custom thresholds
     python3 scripts/check_move_descriptions.py --rom output/roms/GenedRom-fr.gba \\
         --max-lines 5 --max-width 122
 
-Code de sortie : 0 si toutes les descriptions tiennent, 1 si au moins une
-déborde (utilisable comme garde-fou de build).
+Exit code: 0 if all descriptions fit, 1 if at least one overflows
+(usable as a build gate).
 """
 
 from __future__ import annotations
@@ -49,10 +49,10 @@ DEFAULT_ROM = Path("output/roms/GenedRom-fr.gba")
 
 
 def _format_result(result: MoveDescriptionResult, verbose: bool) -> str:
-    status = "OK    " if result.fits else "DÉBORDE"
+    status = "OK    " if result.fits else "OVERFLOW"
     head = (
         f"[{status}] #{result.index:<3} {result.name:<18} "
-        f"{result.line_count} ligne(s), max {result.max_line_width} px"
+        f"{result.line_count} line(s), max {result.max_line_width} px"
     )
     if result.fits and not verbose:
         return head
@@ -91,48 +91,48 @@ def _result_to_dict(result: MoveDescriptionResult) -> dict:
 
 def main(argv: list[str] | None = None) -> int:
     parser = argparse.ArgumentParser(
-        description="Vérifie que les descriptions d'attaque tiennent dans la "
-        "fenêtre de résumé (5 lignes × ~21 caractères)."
+        description="Check that move descriptions fit within the summary "
+        "screen window (5 lines × ~21 characters)."
     )
     parser.add_argument(
         "--rom",
         type=Path,
         default=DEFAULT_ROM,
-        help=f"ROM FR à auditer (défaut : {DEFAULT_ROM})",
+        help=f"FR ROM to audit (default: {DEFAULT_ROM})",
     )
     parser.add_argument(
         "--max-lines",
         type=int,
         default=MAX_LINES,
-        help=f"Nombre de lignes maximal (défaut : {MAX_LINES})",
+        help=f"Maximum number of lines (default: {MAX_LINES})",
     )
     parser.add_argument(
         "--max-width",
         type=int,
         default=MAX_LINE_WIDTH,
-        help=f"Largeur de ligne maximale en pixels (défaut : {MAX_LINE_WIDTH})",
+        help=f"Maximum line width in pixels (default: {MAX_LINE_WIDTH})",
     )
     parser.add_argument(
         "--all",
         action="store_true",
-        help="Afficher aussi les attaques qui tiennent (pas seulement les débordantes)",
+        help="Also show moves that fit (not just overflowing ones)",
     )
     parser.add_argument(
         "--verbose",
         "-v",
         action="store_true",
-        help="Détailler chaque ligne (largeur px, caractères)",
+        help="Detail each line (width in px, characters)",
     )
     parser.add_argument(
         "--json",
         type=Path,
         default=None,
-        help="Écrire le rapport complet en JSON à ce chemin",
+        help="Write the full report as JSON to this path",
     )
     args = parser.parse_args(argv)
 
     if not args.rom.is_file():
-        parser.error(f"ROM introuvable : {args.rom}")
+        parser.error(f"ROM not found: {args.rom}")
 
     rom = bytearray(args.rom.read_bytes())
     results = check_all_moves(
@@ -146,13 +146,13 @@ def main(argv: list[str] | None = None) -> int:
 
     print()
     print(
-        f"{len(results)} attaque(s) vérifiée(s) — "
-        f"{len(results) - len(overflow)} OK, {len(overflow)} à retravailler "
-        f"(seuils : {args.max_lines} lignes, {args.max_width} px/ligne)."
+        f"{len(results)} move(s) checked — "
+        f"{len(results) - len(overflow)} OK, {len(overflow)} to rework "
+        f"(thresholds: {args.max_lines} lines, {args.max_width} px/line)."
     )
     if overflow:
         names = ", ".join(f"{r.name} (#{r.index})" for r in overflow)
-        print(f"À retravailler dans combined_fr.txt : {names}")
+        print(f"To rework in combined_fr.txt: {names}")
 
     if args.json is not None:
         args.json.parent.mkdir(parents=True, exist_ok=True)
@@ -167,7 +167,7 @@ def main(argv: list[str] | None = None) -> int:
         args.json.write_text(
             json.dumps(payload, ensure_ascii=False, indent=2), encoding="utf-8"
         )
-        print(f"Rapport JSON écrit : {args.json}")
+        print(f"JSON report written: {args.json}")
 
     return 1 if overflow else 0
 

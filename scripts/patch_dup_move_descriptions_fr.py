@@ -198,18 +198,18 @@ def main() -> int:
     remaining = verify(rom, combined)
     rom_path.write_bytes(rom)
 
-    print("✓ Descriptions d'attaque dupliquées / structs CS (anti-freeze give-CS):")
-    print(f"   - Cibles débordantes:   {stats['targets']}")
-    print(f"   - Pointeurs trouvés:    {stats['referrers']}")
-    print(f"   - Pointeurs repointés:  {stats['repointed']}")
-    print(f"   - Rejetées (data/code): {stats['rejected']}")
+    print("✓ Duplicate move descriptions / HM structs (anti-freeze give-HM):")
+    print(f"   - Overflowing targets:  {stats['targets']}")
+    print(f"   - Pointers found:       {stats['referrers']}")
+    print(f"   - Pointers repointed:   {stats['repointed']}")
+    print(f"   - Rejected (data/code): {stats['rejected']}")
     if stats["no_source"]:
-        print(f"   - Sans source (skip):  {stats['no_source']}")
+        print(f"   - No source (skip):    {stats['no_source']}")
     if stats["failed"]:
-        print(f"   - ÉCHECS (free space): {stats['failed']}")
+        print(f"   - FAILED (free space): {stats['failed']}")
         return 1
     if remaining:
-        print(f"   - ✗ RESTE {len(remaining)} pointeurs vers une description non terminée:")
+        print(f"   - ✗ {len(remaining)} pointers still reach an unterminated description:")
         for cell, target in remaining[:10]:
             print(f"       0x{cell + ROM_POINTER_BASE:08x} -> 0x{target:08x}")
         return 1

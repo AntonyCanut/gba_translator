@@ -2,8 +2,8 @@
 """
 26 - Comparative ROM Analysis
 
-Compare en détail la ROM anglaise, espagnole, et la sortie
-pour identifier tous les patterns de différence.
+Compares in detail the English, Spanish, and output ROMs
+to identify all difference patterns.
 
 Usage:
     python src/translators/26_comparative_rom_analysis.py
@@ -19,7 +19,7 @@ sys.path.insert(0, str(Path(__file__).parent.parent.parent))
 
 
 class ComparativeROMAnalysis:
-    """Analyse comparative des ROMs."""
+    """Comparative analysis of ROMs."""
     
     def __init__(self):
         self.english_texts = {}
@@ -35,7 +35,7 @@ class ComparativeROMAnalysis:
         }
     
     def run(self) -> bool:
-        """Exécuter analyse comparative."""
+        """Run comparative analysis."""
         print("="*70)
         print("🔀 COMPARATIVE ROM ANALYSIS")
         print("="*70)
@@ -52,19 +52,19 @@ class ComparativeROMAnalysis:
         return True
     
     def _load_data(self) -> bool:
-        """Charger les données."""
+        """Load data."""
         print("\n📥 Loading data...")
-        
+
         try:
-            # Charger textes anglais
+            # Load English texts
             english_path = Path('output/extracted/extracted_texts/englishrom_texts.json')
             with open(english_path, 'r', encoding='utf-8') as f:
                 data = json.load(f)
                 for item in data.get('texts', []):
                     offset = item['offset']
                     self.english_texts[offset] = item
-            
-            # Charger textes espagnols
+
+            # Load Spanish texts
             spanish_path = Path('output/extracted/extracted_texts/text_tables_analysis_spanish.json')
             if spanish_path.exists():
                 with open(spanish_path, 'r', encoding='utf-8') as f:
@@ -76,7 +76,7 @@ class ComparativeROMAnalysis:
             print(f"✅ English texts: {len(self.english_texts):,}")
             print(f"✅ Spanish texts: {len(self.spanish_texts):,}")
             
-            # Charger les ROMs
+            # Load ROMs
             with open(Path('input/roms/englishrom.gba'), 'rb') as f:
                 self.english_rom_data = f.read()
             
@@ -96,7 +96,7 @@ class ComparativeROMAnalysis:
             return False
     
     def _analyze_rom_info(self):
-        """Analyser les infos ROM."""
+        """Analyze ROM info."""
         print("\n📊 Analyzing ROM info...")
         
         self.comparison['rom_info'] = {
@@ -119,14 +119,14 @@ class ComparativeROMAnalysis:
         print(f"   Output:  {len(self.output_rom_data):,} bytes")
     
     def _analyze_offset_comparison(self):
-        """Comparer les offsets."""
+        """Compare offsets."""
         print("\n🔍 Analyzing offset comparison...")
         
         english_offsets = set(self.english_texts.keys())
         spanish_offsets = set(self.spanish_texts.keys()) if self.spanish_texts else set()
         output_texts = len(self.english_texts)
         
-        # Offsets présents dans English
+        # Offsets present in English only
         only_english = english_offsets - spanish_offsets
         both_roms = english_offsets & spanish_offsets
         only_spanish = spanish_offsets - english_offsets
@@ -147,7 +147,7 @@ class ComparativeROMAnalysis:
         print(f"   Only Spanish: {len(only_spanish):,}")
     
     def _analyze_content(self):
-        """Analyser le contenu."""
+        """Analyze content."""
         print("\n📝 Analyzing content...")
         
         valid_count = 0
@@ -164,13 +164,13 @@ class ComparativeROMAnalysis:
             valid_count += 1
             english_bytes += length
             
-            # Vérifier si ce texte existe dans Spanish
+            # Check if this text exists in Spanish
             if offset in self.spanish_texts:
                 spanish_item = self.spanish_texts[offset]
                 spanish_length = spanish_item.get('length', 0)
                 spanish_bytes += spanish_length
                 
-                # Comparer les bytes
+                # Compare bytes
                 try:
                     english_data = self.english_rom_data[offset:offset+length]
                     spanish_data = self.spanish_rom_data[offset:offset+spanish_length]
@@ -195,7 +195,7 @@ class ComparativeROMAnalysis:
         print(f"   Matched to output: {match_count:,} ({100*match_count/valid_count:.2f}%)")
     
     def _verify_output(self):
-        """Vérifier la sortie."""
+        """Verify the output."""
         print("\n✅ Verifying output ROM...")
         
         verification = {
@@ -205,12 +205,12 @@ class ComparativeROMAnalysis:
             'binary_samples': []
         }
         
-        # Vérifier en-tête
+        # Check header
         if (self.output_rom_data[:4] == self.spanish_rom_data[:4] == 
             bytes([0x00, 0x00, 0x00, 0xEA])):
             verification['header_check'] = True
         
-        # Sampler différents offsets
+        # Sample different offsets
         sample_offsets = [0x100000, 0x1000000, 0x1586306, 0x2000000, 0x2500000]
         for sample_offset in sample_offsets:
             if sample_offset < len(self.spanish_rom_data):
@@ -233,7 +233,7 @@ class ComparativeROMAnalysis:
         print(f"   Binary samples: {sum(1 for s in verification['binary_samples'] if s['match'])}/{len(verification['binary_samples'])} match")
     
     def _generate_report(self):
-        """Générer rapport."""
+        """Generate report."""
         print("\n" + "="*70)
         print("📋 COMPARATIVE ANALYSIS SUMMARY")
         print("="*70)
@@ -271,7 +271,7 @@ class ComparativeROMAnalysis:
         self._save_report()
     
     def _save_report(self):
-        """Sauvegarder rapport."""
+        """Save report."""
         print(f"\n💾 Saving comparative analysis...")
         
         try:

@@ -2,17 +2,17 @@
 """
 19 - Generic Translated ROM Builder
 
-Système générique et intelligent pour construire des ROMs traduites.
+Generic and intelligent system for building translated ROMs.
 
 Features:
-- Fonctionne avec n'importe quelles ROMs source/destination
-- Détection automatique de la langue
-- Validation complète
-- Rapport détaillé
-- Extensible pour d'autres projets ROM
+- Works with any source/destination ROMs
+- Automatic language detection
+- Full validation
+- Detailed report
+- Extensible to other ROM projects
 
 Usage:
-    # Construire ROM espagnole
+    # Build Spanish ROM
     python src/translators/19_build_translated_rom_generic.py \
         --source input/roms/englishrom.gba \
         --reference input/roms/spanishrom.gba \
@@ -20,7 +20,7 @@ Usage:
         --language spanish \
         --output output/roms/spanishrom_final.gba
 
-    # Construire ROM française (depuis différences)
+    # Build French ROM (from differences)
     python src/translators/19_build_translated_rom_generic.py \
         --source input/roms/englishrom.gba \
         --translations output/translation/french_texts.json \
@@ -28,11 +28,11 @@ Usage:
         --output output/roms/frenchrom_final.gba
 
 Input:
-    - source: ROM de base (généralement anglaise)
-    - reference: ROM source à copier (optionnel si translations fourni)
-    - translations: JSON avec traductions (optionnel si reference fourni)
-    - offset_map: Mapping d'offsets pour textes déplacés
-    - language: Code langue (es, fr, etc.)
+    - source: Base ROM (usually English)
+    - reference: Source ROM to copy from (optional if translations provided)
+    - translations: JSON with translations (optional if reference provided)
+    - offset_map: Offset mapping for relocated texts
+    - language: Language code (es, fr, etc.)
 
 Output:
     - output ROM file
@@ -71,7 +71,7 @@ def _strip_accents(ch: str) -> str:
 
 @dataclass
 class BuildConfig:
-    """Configuration pour construction ROM."""
+    """Configuration for ROM construction."""
     source_rom: Path
     reference_rom: Optional[Path] = None
     translations_json: Optional[Path] = None
@@ -89,7 +89,7 @@ class BuildConfig:
     output_report: Optional[Path] = None
     
     def validate(self) -> Tuple[bool, str]:
-        """Valide configuration."""
+        """Validates configuration."""
         if not self.source_rom.exists():
             return False, f"Source ROM not found: {self.source_rom}"
         
@@ -113,7 +113,7 @@ class BuildConfig:
 
 @dataclass
 class BuildStats:
-    """Statistiques de construction."""
+    """Build statistics."""
     total_texts: int = 0
     successfully_copied: int = 0
     successfully_replaced: int = 0
@@ -145,18 +145,18 @@ class BuildStats:
             self.errors = []
     
     def to_dict(self) -> dict:
-        """Convertir en dictionnaire."""
+        """Convert to dictionary."""
         return asdict(self)
 
 
 class TranslatedROMBuilder:
     """
-    Constructeur générique de ROMs traduites.
-    
-    Stratégies disponibles:
-    1. COPY: Copier les bytes directement depuis ROM de référence
-    2. TRANSLATE: Réinsérer textes traduits depuis JSON
-    3. HYBRID: Copier d'abord, puis appliquer traductions localisées
+    Generic translated ROM builder.
+
+    Available strategies:
+    1. COPY: Copy bytes directly from the reference ROM
+    2. TRANSLATE: Reinsert translated texts from JSON
+    3. HYBRID: Copy first, then apply localized translations
     """
 
     def __init__(self, config: BuildConfig):
@@ -406,38 +406,38 @@ class TranslatedROMBuilder:
         return cls._replace_placeholders(translation, other_sequences)
 
     def run(self) -> bool:
-        """Exécuter la construction complète."""
+        """Run the full build."""
         print("="*70)
         print(f"🚀 GENERIC ROM BUILDER - {self.config.language.upper()}")
         print("="*70)
-        
+
         # Validation
         valid, msg = self.config.validate()
         if not valid:
             print(f"❌ {msg}")
             return False
-        
-        # Générer chemins de sortie si nécessaire
+
+        # Generate output paths if needed
         if not self.config.output_rom or not self.config.output_report:
             self._generate_output_paths()
-        
-        # Charger ROMs
+
+        # Load ROMs
         if not self._load_roms():
             return False
-        
-        # Charger textes
+
+        # Load texts
         if not self._load_texts():
             return False
 
-        # Charger offset map si disponible
+        # Load offset map if available
         if not self._load_offset_map():
             return False
-        
-        # Choisir stratégie
+
+        # Choose strategy
         strategy = self._choose_strategy()
-        print(f"\n📋 Stratégie: {strategy.upper()}")
+        print(f"\n📋 Strategy: {strategy.upper()}")
         
-        # Exécuter stratégie
+        # Execute strategy
         if strategy == "copy":
             if not self._strategy_copy():
                 return False
@@ -450,12 +450,12 @@ class TranslatedROMBuilder:
         else:
             print(f"❌ Unknown strategy: {strategy}")
             return False
-        
-        # Sauvegarder
+
+        # Save
         if not self._save_rom():
             return False
-        
-        # Rapport
+
+        # Report
         if not self._save_report():
             return False
         
@@ -463,7 +463,7 @@ class TranslatedROMBuilder:
         return True
 
     def _generate_output_paths(self):
-        """Générer chemins de sortie automatiques."""
+        """Generate automatic output paths."""
         output_dir = Path('output/roms')
         output_dir.mkdir(parents=True, exist_ok=True)
         
@@ -512,13 +512,13 @@ class TranslatedROMBuilder:
 
     def _load_extracted_texts(self, path: Path, label: str) -> Optional[Dict[int, Dict]]:
         if not path.exists():
-            print(f"⚠️  Textes {label} introuvables: {path}")
+            print(f"⚠️  Texts {label} not found: {path}")
             return None
         try:
             with open(path, 'r', encoding='utf-8') as f:
                 data = json.load(f)
         except Exception as e:
-            print(f"⚠️  Erreur chargement textes {label}: {e}")
+            print(f"⚠️  Error loading texts {label}: {e}")
             return None
 
         texts = {}
@@ -528,7 +528,7 @@ class TranslatedROMBuilder:
                 continue
             texts[offset] = item
 
-        print(f"✅ Textes {label}: {len(texts)}")
+        print(f"✅ Texts {label}: {len(texts)}")
         return texts
 
     def _get_original_length(self, offset: int) -> Optional[int]:
@@ -663,38 +663,38 @@ class TranslatedROMBuilder:
         }
 
     def _load_roms(self) -> bool:
-        """Charger les ROMs."""
-        print("\n📖 Chargement des ROMs...")
-        
+        """Load ROMs."""
+        print("\n📖 Loading ROMs...")
+
         try:
             with open(self.config.source_rom, 'rb') as f:
                 self.source_rom_data = bytearray(f.read())
-            
+
             source_size = len(self.source_rom_data) / (1024 * 1024)
-            print(f"✅ ROM source: {self.config.source_rom.name} ({source_size:.2f} MB)")
-            
-            # Copier pour sortie
+            print(f"✅ Source ROM: {self.config.source_rom.name} ({source_size:.2f} MB)")
+
+            # Copy for output
             self.output_rom_data = bytearray(self.source_rom_data)
-            
-            # Charger ROM de référence si fournie
+
+            # Load reference ROM if provided
             if self.config.reference_rom:
                 with open(self.config.reference_rom, 'rb') as f:
                     self.reference_rom_data = bytearray(f.read())
-                
+
                 ref_size = len(self.reference_rom_data) / (1024 * 1024)
-                print(f"✅ ROM référence: {self.config.reference_rom.name} ({ref_size:.2f} MB)")
-            
+                print(f"✅ Reference ROM: {self.config.reference_rom.name} ({ref_size:.2f} MB)")
+
             return True
-        
+
         except Exception as e:
-            print(f"❌ Erreur chargement: {e}")
+            print(f"❌ Loading error: {e}")
             import traceback
             traceback.print_exc()
             return False
 
     def _load_texts(self) -> bool:
-        """Charger les textes et traductions."""
-        print("\n📝 Chargement des textes...")
+        """Load texts and translations."""
+        print("\n📝 Loading texts...")
 
         source_texts_path = self._default_texts_path(self.config.source_rom)
         self.english_texts = self._load_extracted_texts(
@@ -702,18 +702,18 @@ class TranslatedROMBuilder:
             f"source ({self.config.source_rom.stem})",
         )
 
-        # Sans l'extraction source, la réinsertion ne connaît pas la longueur
-        # d'origine des textes et en ignore des milliers ("trop longs").
+        # Without source extraction, the reinserter doesn't know the original
+        # length of texts and skips thousands of them ("too long").
         if self.config.translations_json and not self.english_texts:
-            print("❌ Textes source requis pour réinsérer des traductions.")
-            print(f"   Lancez d'abord: make extract (génère {source_texts_path})")
+            print("❌ Source texts required to reinsert translations.")
+            print(f"   Run first: make extract (generates {source_texts_path})")
             return False
 
         if self.config.reference_rom:
             reference_texts_path = self._default_texts_path(self.config.reference_rom)
             self.reference_texts = self._load_extracted_texts(
                 reference_texts_path,
-                f"référence ({self.config.reference_rom.stem})",
+                f"reference ({self.config.reference_rom.stem})",
             )
 
         if self.config.translations_json:
@@ -722,7 +722,7 @@ class TranslatedROMBuilder:
                     data = json.load(f)
                 self.translation_payload = data
             except Exception as e:
-                print(f"❌ Erreur chargement traductions: {e}")
+                print(f"❌ Error loading translations: {e}")
                 return False
 
             if isinstance(data, dict) and 'translation_pairs' in data:
@@ -733,7 +733,7 @@ class TranslatedROMBuilder:
                     if offset is None:
                         continue
                     self.translations[offset] = self._build_translation_from_pair(offset, pair)
-                print(f"✅ Paires de traduction: {len(self.translations)}")
+                print(f"✅ Translation pairs: {len(self.translations)}")
             else:
                 self.translation_kind = 'plain'
                 if isinstance(data, dict):
@@ -754,12 +754,12 @@ class TranslatedROMBuilder:
                         continue
                     self.translations[offset] = self._normalize_translation_item(offset, item)
 
-                print(f"✅ Traductions: {len(self.translations)}")
+                print(f"✅ Translations: {len(self.translations)}")
 
         return True
 
     def _load_offset_map(self) -> bool:
-        """Charger le mapping d'offsets si disponible."""
+        """Load offset mapping if available."""
         self.offset_map = []
         self.offset_map_stats = {}
 
@@ -771,7 +771,7 @@ class TranslatedROMBuilder:
                 with open(map_path, 'r', encoding='utf-8') as f:
                     data = json.load(f)
             except Exception as e:
-                print(f"❌ Erreur chargement offset map: {e}")
+                print(f"❌ Error loading offset map: {e}")
                 return False
         elif isinstance(self.translation_payload, dict) and 'offset_map' in self.translation_payload:
             data = self.translation_payload.get('offset_map')
@@ -804,11 +804,11 @@ class TranslatedROMBuilder:
 
     def _choose_strategy(self) -> str:
         """
-        Choisir intelligemment la stratégie.
-        
-        - COPY: ROM référence disponible → copier directement
-        - TRANSLATE: Seulement traductions JSON → réinsérer
-        - HYBRID: Les deux → copier puis adapter
+        Intelligently choose the strategy.
+
+        - COPY: Reference ROM available → copy directly
+        - TRANSLATE: Only JSON translations → reinsert
+        - HYBRID: Both → copy then adapt
         """
         if self.config.reference_rom and self.config.translations_json:
             return "hybrid"
@@ -909,7 +909,7 @@ class TranslatedROMBuilder:
         if not self.config.reference_rom or not self.reference_rom_data:
             return
 
-        print("\n🔁 Copie des tables de pointeurs (référence)...")
+        print("\n🔁 Copying pointer tables (reference)...")
 
         extractor = PointerTextExtractor(
             rom_path=self.config.reference_rom,
@@ -933,7 +933,7 @@ class TranslatedROMBuilder:
         self.stats.pointer_tables_copied += tables_copied
         self.stats.pointer_table_bytes_copied += bytes_copied
 
-        print(f"✅ Tables copiées: {tables_copied} ({bytes_copied} bytes)")
+        print(f"✅ Tables copied: {tables_copied} ({bytes_copied} bytes)")
 
     def _copy_text_pointers(self) -> None:
         if not self.config.copy_text_pointers:
@@ -943,7 +943,7 @@ class TranslatedROMBuilder:
         if not self.reference_texts:
             return
 
-        print("\n🔁 Copie des pointeurs texte (référence)...")
+        print("\n🔁 Copying text pointers (reference)...")
 
         text_offsets = set(self.reference_texts.keys())
         ref_data = self.reference_rom_data
@@ -974,7 +974,7 @@ class TranslatedROMBuilder:
         self.stats.text_pointers_copied += copied
         self.stats.text_pointer_bytes_copied += bytes_copied
 
-        print(f"✅ Pointeurs texte copiés: {copied} ({bytes_copied} bytes)")
+        print(f"✅ Text pointers copied: {copied} ({bytes_copied} bytes)")
 
     def _copy_inline_texts(self) -> None:
         if not self.config.copy_inline_texts:
@@ -984,7 +984,7 @@ class TranslatedROMBuilder:
         if not self.reference_rom_data or not self.source_rom_data or not self.output_rom_data:
             return
 
-        print("\n🔁 Copie des textes inline (sans pointeurs)...")
+        print("\n🔁 Copying inline texts (without pointers)...")
 
         min_length = 12
         max_length = 500
@@ -1053,7 +1053,7 @@ class TranslatedROMBuilder:
             self.output_rom_data[offset:end] = raw
             self.stats.inline_texts_copied += 1
 
-        print(f"✅ Textes inline copiés: {self.stats.inline_texts_copied}")
+        print(f"✅ Inline texts copied: {self.stats.inline_texts_copied}")
 
     def _build_copy_translations(self) -> Tuple[List[Dict], Dict[str, int]]:
         translations: List[Dict] = []
@@ -1150,14 +1150,14 @@ class TranslatedROMBuilder:
 
     def _strategy_copy(self) -> bool:
         """
-        Stratégie COPY: Copier bytes depuis ROM de référence.
-        
-        Meilleure pour construire exactement une ROM connue.
+        COPY strategy: Copy bytes from reference ROM.
+
+        Best for building an exact known ROM.
         """
-        print("\n🔄 Stratégie COPY: Copie directe des textes...")
+        print("\n🔄 COPY strategy: Direct text copy...")
 
         if not self.reference_rom_data:
-            print("❌ ROM de référence requise pour stratégie COPY")
+            print("❌ Reference ROM required for COPY strategy")
             return False
 
         if self.config.copy_reference_texts and self.reference_texts:
@@ -1192,9 +1192,9 @@ class TranslatedROMBuilder:
                 and self.stats.skipped_only_in_spanish == 0
                 and self.stats.skipped_only_in_english == 0
             ):
-                print("❌ Aucun mapping de texte disponible (offset map ou extraction manquante).")
+                print("❌ No text mapping available (offset map or extraction missing).")
                 return False
-            print("⚠️  Aucun texte à copier.")
+            print("⚠️  No text to copy.")
             return True
 
         reinserter = SmartReinserter(
@@ -1209,7 +1209,7 @@ class TranslatedROMBuilder:
         for i, translation in enumerate(translations, start=1):
             reinserter.reinsert_text(translation)
             if i % 5000 == 0:
-                print(f"   Traité: {i}/{len(translations)}")
+                print(f"   Processed: {i}/{len(translations)}")
 
         report = reinserter.get_report()
         self.reinserter_reports['copy'] = report
@@ -1226,7 +1226,7 @@ class TranslatedROMBuilder:
         self.stats.skipped_too_long += stats['skipped_too_long']
         self.stats.errors.extend(report.get('warnings', []))
 
-        print(f"✅ Copie complétée: {self.stats.successfully_copied}/{self.stats.total_texts}")
+        print(f"✅ Copy completed: {self.stats.successfully_copied}/{self.stats.total_texts}")
 
         self._copy_pointer_tables()
         self._copy_text_pointers()
@@ -1235,14 +1235,14 @@ class TranslatedROMBuilder:
 
     def _strategy_translate(self) -> bool:
         """
-        Stratégie TRANSLATE: Réinsérer textes traduits.
-        
-        Pour traductions personnalisées depuis JSON.
+        TRANSLATE strategy: Reinsert translated texts.
+
+        For custom translations from JSON.
         """
-        print("\n🔄 Stratégie TRANSLATE: Réinsertion des traductions...")
+        print("\n🔄 TRANSLATE strategy: Reinsertion of translations...")
 
         if not self.translations:
-            print("❌ Aucune traduction fournie")
+            print("❌ No translations provided")
             return False
 
         self.stats.total_texts = len(self.translations)
@@ -1252,7 +1252,7 @@ class TranslatedROMBuilder:
         self.stats.skipped_fixed_table += prep_stats['fixed_table']
 
         if not translations:
-            print("⚠️  Aucun texte à réinsérer.")
+            print("⚠️  No text to reinsert.")
             return True
 
         reinserter = SmartReinserter(
@@ -1267,7 +1267,7 @@ class TranslatedROMBuilder:
         for i, translation in enumerate(translations, start=1):
             reinserter.reinsert_text(translation)
             if i % 5000 == 0:
-                print(f"   Traité: {i}/{len(translations)}")
+                print(f"   Processed: {i}/{len(translations)}")
 
         report = reinserter.get_report()
         self.reinserter_reports['translate'] = report
@@ -1284,26 +1284,26 @@ class TranslatedROMBuilder:
         self.stats.skipped_too_long += stats['skipped_too_long']
         self.stats.errors.extend(report.get('warnings', []))
 
-        print(f"✅ Traduction complétée: {self.stats.successfully_replaced}/{self.stats.total_texts}")
+        print(f"✅ Translation completed: {self.stats.successfully_replaced}/{self.stats.total_texts}")
         return True
 
     def _strategy_hybrid(self) -> bool:
         """
-        Stratégie HYBRID: Copier d'abord, puis appliquer traductions.
-        
-        Utile pour variations localisées d'une même base.
+        HYBRID strategy: Copy first, then apply translations.
+
+        Useful for localized variations of the same base.
         """
-        print("\n🔄 Stratégie HYBRID: Copie + traductions...")
-        
-        # D'abord copier depuis référence
+        print("\n🔄 HYBRID strategy: Copy + translations...")
+
+        # First copy from reference
         if not self._strategy_copy():
             return False
-        
-        # Puis appliquer traductions localisées
-        print("\n   Puis appliquer traductions localisées...")
+
+        # Then apply localized translations
+        print("\n   Then applying localized translations...")
 
         if not self.translations:
-            print("   Aucun ajustement local fourni.")
+            print("   No local adjustments provided.")
             return True
 
         translations, prep_stats = self._prepare_translations()
@@ -1312,7 +1312,7 @@ class TranslatedROMBuilder:
         self.stats.skipped_fixed_table += prep_stats['fixed_table']
 
         if not translations:
-            print("   Aucun texte à réinsérer.")
+            print("   No text to reinsert.")
             return True
 
         reinserter = SmartReinserter(
@@ -1327,7 +1327,7 @@ class TranslatedROMBuilder:
         for i, translation in enumerate(translations, start=1):
             reinserter.reinsert_text(translation)
             if i % 5000 == 0:
-                print(f"   Traité: {i}/{len(translations)}")
+                print(f"   Processed: {i}/{len(translations)}")
 
         report = reinserter.get_report()
         self.reinserter_reports['hybrid_translate'] = report
@@ -1344,29 +1344,29 @@ class TranslatedROMBuilder:
         self.stats.skipped_too_long += stats['skipped_too_long']
         self.stats.errors.extend(report.get('warnings', []))
 
-        print(f"   +{stats['successful']} traductions localisées appliquées")
+        print(f"   +{stats['successful']} localized translations applied")
 
         return True
 
     def _save_rom(self) -> bool:
-        """Sauvegarder la ROM."""
-        print(f"\n💾 Sauvegarde de la ROM...")
-        
+        """Save the ROM."""
+        print(f"\n💾 Saving ROM...")
+
         try:
             with open(self.config.output_rom, 'wb') as f:
                 f.write(self.output_rom_data)
-            
+
             rom_size = self.config.output_rom.stat().st_size / (1024 * 1024)
-            print(f"✅ ROM sauvegardée: {self.config.output_rom.name} ({rom_size:.2f} MB)")
+            print(f"✅ ROM saved: {self.config.output_rom.name} ({rom_size:.2f} MB)")
             return True
-        
+
         except Exception as e:
-            print(f"❌ Erreur sauvegarde: {e}")
+            print(f"❌ Save error: {e}")
             return False
 
     def _save_report(self) -> bool:
-        """Sauvegarder le rapport."""
-        print(f"\n📊 Génération du rapport...")
+        """Save the report."""
+        print(f"\n📊 Generating report...")
         
         report = {
             'timestamp': datetime.now().isoformat(),
@@ -1396,48 +1396,48 @@ class TranslatedROMBuilder:
             with open(self.config.output_report, 'w', encoding='utf-8') as f:
                 json.dump(report, f, indent=2, ensure_ascii=False)
             
-            print(f"✅ Rapport sauvegardé: {self.config.output_report.name}")
+            print(f"✅ Report saved: {self.config.output_report.name}")
             return True
-        
+
         except Exception as e:
-            print(f"❌ Erreur rapport: {e}")
+            print(f"❌ Report error: {e}")
             return False
 
     def _print_summary(self):
-        """Afficher résumé final."""
+        """Print final summary."""
         print("\n" + "="*70)
-        print("✨ CONSTRUCTION RÉUSSIE!")
+        print("✨ BUILD SUCCESSFUL!")
         print("="*70)
         print(f"\n📁 ROM: {self.config.output_rom}")
-        print(f"📊 Rapport: {self.config.output_report}")
-        print(f"\n📈 Statistiques:")
-        print(f"   - Total textes: {self.stats.total_texts}")
-        print(f"   - Copiés: {self.stats.successfully_copied}")
-        print(f"   - Remplacés: {self.stats.successfully_replaced}")
-        print(f"   - Inchangés: {self.stats.unchanged}")
-        print(f"   - Échoués: {self.stats.failed}")
+        print(f"📊 Report: {self.config.output_report}")
+        print(f"\n📈 Statistics:")
+        print(f"   - Total texts: {self.stats.total_texts}")
+        print(f"   - Copied: {self.stats.successfully_copied}")
+        print(f"   - Replaced: {self.stats.successfully_replaced}")
+        print(f"   - Unchanged: {self.stats.unchanged}")
+        print(f"   - Failed: {self.stats.failed}")
         if self.stats.corrupted:
-            print(f"   - Corrompus: {self.stats.corrupted}")
+            print(f"   - Corrupted: {self.stats.corrupted}")
         if self.stats.used_padding:
-            print(f"   - Padding utilisé: {self.stats.used_padding}")
+            print(f"   - Padding used: {self.stats.used_padding}")
         if self.stats.truncated:
-            print(f"   - Tronqués: {self.stats.truncated}")
+            print(f"   - Truncated: {self.stats.truncated}")
         if self.stats.fallback_used:
-            print(f"   - Repli FR synthétisé: {self.stats.fallback_used}")
+            print(f"   - Fallback synthesized: {self.stats.fallback_used}")
         if self.stats.skipped_too_long:
-            print(f"   - Trop longs ignorés: {self.stats.skipped_too_long}")
+            print(f"   - Too long, skipped: {self.stats.skipped_too_long}")
         if self.stats.skipped_only_in_spanish:
-            print(f"   - Espagnol sans cible: {self.stats.skipped_only_in_spanish}")
+            print(f"   - Spanish without target: {self.stats.skipped_only_in_spanish}")
         if self.stats.skipped_only_in_english:
-            print(f"   - Anglais sans source: {self.stats.skipped_only_in_english}")
+            print(f"   - English without source: {self.stats.skipped_only_in_english}")
         if self.stats.skipped_missing_reference:
-            print(f"   - Référence manquante: {self.stats.skipped_missing_reference}")
+            print(f"   - Missing reference: {self.stats.skipped_missing_reference}")
         if self.stats.pointer_tables_copied:
-            print(f"   - Tables de pointeurs copiées: {self.stats.pointer_tables_copied}")
+            print(f"   - Pointer tables copied: {self.stats.pointer_tables_copied}")
         if self.stats.text_pointers_copied:
-            print(f"   - Pointeurs texte copiés: {self.stats.text_pointers_copied}")
+            print(f"   - Text pointers copied: {self.stats.text_pointers_copied}")
         if self.stats.inline_texts_copied:
-            print(f"   - Textes inline copiés: {self.stats.inline_texts_copied}")
+            print(f"   - Inline texts copied: {self.stats.inline_texts_copied}")
 
 
 def main():

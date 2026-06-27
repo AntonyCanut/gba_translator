@@ -186,14 +186,14 @@ def main() -> int:
     stats = apply(rom, source, text_map, overrides, reserved_rom=reserved)
     rom_path.write_bytes(rom)
 
-    print("✓ Descriptions d'attaque (5 lignes):")
-    print(f"   - Attaques traitées:  {stats['total']}")
-    print(f"   - Réécrites (<=5l):   {stats['rewrapped']}")
-    print(f"   - Déjà conformes:     {stats['unchanged']}")
-    print(f"   - Relocalisées:       {stats['relocated']}")
-    print(f"   - Raccourcies (data): {stats['shortened']}")
+    print("✓ Move descriptions (5 lines):")
+    print(f"   - Moves processed:    {stats['total']}")
+    print(f"   - Rewrapped (<=5l):   {stats['rewrapped']}")
+    print(f"   - Already compliant:  {stats['unchanged']}")
+    print(f"   - Relocated:          {stats['relocated']}")
+    print(f"   - Shortened (data):   {stats['shortened']}")
     if stats["failed"]:
-        print(f"   - ÉCHECS:             {stats['failed']}")
+        print(f"   - FAILED:             {stats['failed']}")
         return 1
     return 0
 

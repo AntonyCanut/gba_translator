@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
 """
-08 - JSON to CSV Converter (Version Orientée Objet)
+08 - JSON to CSV Converter (Object-Oriented Version)
 
-Convertit le fichier JSON enrichi avec padding vers un CSV pour traduction.
-Utilise les classes réutilisables du module core.
+Converts the padded enriched JSON file to a CSV for translation.
+Uses reusable classes from the core module.
 
 Usage:
     python src/translators/08_json_to_csv_v2.py [json_file]
@@ -19,7 +19,7 @@ import sys
 from pathlib import Path
 from datetime import datetime
 
-# Ajouter src au path
+# Add src to path
 sys.path.insert(0, str(Path(__file__).parent.parent.parent))
 
 from src.core.text_converter import JSONToCSVConverter
@@ -27,21 +27,21 @@ from src.core.text_converter import JSONToCSVConverter
 
 class TranslationCSVGenerator:
     """
-    Génère un CSV de traduction depuis un JSON enrichi.
+    Generates a translation CSV from an enriched JSON.
 
     Attributes:
-        converter (JSONToCSVConverter): Convertisseur JSON→CSV
-        input_path (Path): Chemin du JSON source
-        output_path (Path): Chemin du CSV de sortie
+        converter (JSONToCSVConverter): JSON→CSV converter
+        input_path (Path): Path to the source JSON
+        output_path (Path): Path to the output CSV
     """
 
     def __init__(self, input_path: Path = None, output_path: Path = None):
         """
-        Initialise le générateur.
+        Initializes the generator.
 
         Args:
-            input_path: Chemin du JSON (None = auto-détection)
-            output_path: Chemin du CSV (None = génération automatique)
+            input_path: Path to the JSON (None = auto-detect)
+            output_path: Path to the CSV (None = auto-generate)
         """
         self.converter = JSONToCSVConverter()
         self.input_path = input_path or self._find_latest_json()
@@ -49,13 +49,13 @@ class TranslationCSVGenerator:
 
     def _find_latest_json(self) -> Path:
         """
-        Trouve le fichier JSON enrichi le plus récent.
+        Finds the most recent enriched JSON file.
 
         Returns:
-            Path: Chemin vers le fichier
+            Path: Path to the file
 
         Raises:
-            FileNotFoundError: Si aucun fichier trouvé
+            FileNotFoundError: If no file found
         """
         diff_dir = Path('output/differences')
         if not diff_dir.exists():
@@ -72,10 +72,10 @@ class TranslationCSVGenerator:
 
     def _generate_output_path(self) -> Path:
         """
-        Génère le chemin de sortie avec date.
+        Generates the output path with date.
 
         Returns:
-            Path: Chemin du CSV de sortie
+            Path: Path to the output CSV
         """
         output_dir = Path('output/translation')
         output_dir.mkdir(parents=True, exist_ok=True)
@@ -85,10 +85,10 @@ class TranslationCSVGenerator:
 
     def generate(self) -> dict:
         """
-        Génère le CSV de traduction.
+        Generates the translation CSV.
 
         Returns:
-            dict: Statistiques de conversion
+            dict: Conversion statistics
 
         Example:
             >>> generator = TranslationCSVGenerator()
@@ -96,31 +96,31 @@ class TranslationCSVGenerator:
             >>> print(stats['total_texts'])
             14436
         """
-        # Charger JSON
-        print(f"📄 Chargement: {self.input_path.name}")
+        # Load JSON
+        print(f"📄 Loading: {self.input_path.name}")
         self.converter.load_from_json(self.input_path)
 
-        # Catégoriser textes
-        print("🔍 Catégorisation des textes...")
+        # Categorize texts
+        print("🔍 Categorizing texts...")
         self.converter.categorize_all()
 
-        # Sauvegarder CSV
-        print(f"💾 Génération CSV: {self.output_path.name}")
+        # Save CSV
+        print(f"💾 Generating CSV: {self.output_path.name}")
         self.converter.save_to_csv(self.output_path)
 
-        # Retourner statistiques
+        # Return statistics
         return self.converter.get_statistics()
 
     def print_statistics(self, stats: dict) -> None:
         """
-        Affiche les statistiques de conversion.
+        Prints conversion statistics.
 
         Args:
-            stats: Dictionnaire de statistiques
+            stats: Statistics dictionary
         """
         print()
         print("=" * 80)
-        print("STATISTIQUES PAR CATÉGORIE")
+        print("STATISTICS BY CATEGORY")
         print("=" * 80)
 
         total = stats['total_texts']
@@ -131,62 +131,62 @@ class TranslationCSVGenerator:
         print()
 
     def print_instructions(self) -> None:
-        """Affiche les instructions pour les traducteurs."""
+        """Prints instructions for translators."""
         print("=" * 80)
-        print("✅ CONVERSION TERMINÉE")
+        print("✅ CONVERSION COMPLETE")
         print("=" * 80)
         print()
-        print(f"Fichier généré: {self.output_path}")
+        print(f"Generated file: {self.output_path}")
         print()
-        print("Instructions pour les traducteurs:")
+        print("Instructions for translators:")
         print("-" * 80)
-        print("1. Ouvrir le CSV dans Excel, Google Sheets ou LibreOffice")
-        print("2. Remplir la colonne 'translation' avec vos traductions")
-        print("3. Respecter la colonne 'real_max_length' (longueur max avec padding)")
-        print("4. Utiliser la colonne 'notes' pour commentaires si nécessaire")
-        print("5. Sauvegarder et exécuter: python src/translators/09_csv_to_json_v2.py")
+        print("1. Open the CSV in Excel, Google Sheets or LibreOffice")
+        print("2. Fill in the 'translation' column with your translations")
+        print("3. Respect the 'real_max_length' column (max length with padding)")
+        print("4. Use the 'notes' column for comments if needed")
+        print("5. Save and run: python src/translators/09_csv_to_json_v2.py")
         print()
-        print("Colonnes importantes:")
-        print("  - original_text: Texte anglais à traduire")
-        print("  - original_length: Longueur du texte anglais")
-        print("  - padding_available: Bytes de padding disponibles")
-        print("  - real_max_length: Longueur MAXIMALE autorisée (original + padding)")
-        print("  - translation: VOTRE TRADUCTION (à remplir)")
+        print("Important columns:")
+        print("  - original_text: English text to translate")
+        print("  - original_length: Length of the English text")
+        print("  - padding_available: Available padding bytes")
+        print("  - real_max_length: MAXIMUM allowed length (original + padding)")
+        print("  - translation: YOUR TRANSLATION (to fill in)")
         print()
 
 
 def main():
-    """Point d'entrée principal."""
+    """Main entry point."""
     print("=" * 80)
     print("08 - JSON TO CSV CONVERTER (v2 - OOP)")
     print("=" * 80)
     print()
 
-    # Gérer argument optionnel
+    # Handle optional argument
     input_path = None
     if len(sys.argv) > 1:
         input_path = Path(sys.argv[1])
         if not input_path.exists():
-            print(f"❌ Erreur: Fichier non trouvé: {input_path}")
+            print(f"❌ Error: File not found: {input_path}")
             sys.exit(1)
 
     try:
-        # Créer générateur
+        # Create generator
         generator = TranslationCSVGenerator(input_path=input_path)
 
-        # Générer CSV
+        # Generate CSV
         stats = generator.generate()
 
-        # Afficher résultats
-        print(f"✅ {stats['total_texts']} textes exportés")
+        # Display results
+        print(f"✅ {stats['total_texts']} texts exported")
         generator.print_statistics(stats)
         generator.print_instructions()
 
     except FileNotFoundError as e:
-        print(f"❌ Erreur: {e}")
+        print(f"❌ Error: {e}")
         sys.exit(1)
     except Exception as e:
-        print(f"❌ Erreur inattendue: {e}")
+        print(f"❌ Unexpected error: {e}")
         import traceback
         traceback.print_exc()
         sys.exit(1)

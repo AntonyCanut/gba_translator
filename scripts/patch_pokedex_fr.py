@@ -140,10 +140,10 @@ def apply(
         else:
             new_offset = allocator.allocate(len(encoded))
             if new_offset is None:
-                # Espace libre insuffisant pour relocaliser. Vérifier si le
-                # texte déjà en place dans la ROM tient dans la fenêtre : si
-                # oui, l'entrée s'affiche correctement → skip bénin ;
-                # sinon, c'est un vrai échec d'affichage.
+                # Insufficient free space to relocate. Check whether the text
+                # already in place in the ROM fits the window: if so, the entry
+                # displays correctly → benign skip;
+                # otherwise it is a genuine display failure.
                 existing_end = rom.find(b"\xff", target)
                 existing = rom[target:existing_end + 1] if 0 <= existing_end - target <= 400 else b""
                 if existing:
@@ -188,17 +188,17 @@ def main() -> int:
     rom_path.write_bytes(rom)
 
     print("✓ Pokédex 3-line rewrap:")
-    print(f"   - Entrées traitées:   {stats['total']}")
-    print(f"   - Réécrites (<=3l):   {stats['rewrapped']}")
-    print(f"   - Déjà conformes:     {stats['unchanged']}")
-    print(f"   - Relocalisées:       {stats['relocated']}")
-    print(f"   - Raccourcies (data): {stats['shortened']}")
+    print(f"   - Entries processed:  {stats['total']}")
+    print(f"   - Rewrapped (<=3l):   {stats['rewrapped']}")
+    print(f"   - Already compliant:  {stats['unchanged']}")
+    print(f"   - Relocated:          {stats['relocated']}")
+    print(f"   - Shortened (data):   {stats['shortened']}")
     if stats["skipped"]:
-        print(f"   - Sans traduction:    {stats['skipped']}")
+        print(f"   - No translation:     {stats['skipped']}")
     if stats["skip_no_space"]:
-        print(f"   - Déjà OK (pas d'esp): {stats['skip_no_space']}")
+        print(f"   - Already OK (no space): {stats['skip_no_space']}")
     if stats["failed"]:
-        print(f"   - ÉCHECS (affichage): {stats['failed']}")
+        print(f"   - FAILED (display):   {stats['failed']}")
         return 1
     return 0
 

@@ -2,8 +2,8 @@
 """
 21 - Diagnose Spanish ROM Failures
 
-Analyse les 6 textes qui échouent lors de la construction de la ROM espagnole
-pour comprendre exactement pourquoi ils échouent et comment les corriger.
+Analyzes the 6 texts that fail during Spanish ROM construction
+to understand exactly why they fail and how to fix them.
 
 Usage:
     python src/translators/21_diagnose_spanish_rom_failures.py
@@ -20,7 +20,7 @@ sys.path.insert(0, str(Path(__file__).parent.parent.parent))
 
 @dataclass
 class FailedText:
-    """Représente un texte qui a échoué."""
+    """Represents a failed text."""
     offset: int
     length: int
     english_text: str
@@ -30,7 +30,7 @@ class FailedText:
 
 
 class SpanishROMFailureDiagnostics:
-    """Diagnostique les 6 textes qui échouent dans la ROM espagnole."""
+    """Diagnoses the 6 texts that fail in the Spanish ROM."""
     
     def __init__(self):
         self.english_texts = {}
@@ -38,26 +38,26 @@ class SpanishROMFailureDiagnostics:
         self.failed_texts: List[FailedText] = []
     
     def run(self) -> bool:
-        """Exécuter le diagnostic."""
+        """Run the diagnostic."""
         print("="*70)
         print("🔍 SPANISH ROM FAILURE DIAGNOSTICS")
         print("="*70)
         
-        # Charger les données
+        # Load data
         if not self._load_data():
             return False
-        
-        # Analyser tous les offsets pour identifier les problèmes
+
+        # Analyze all offsets to identify problems
         self._analyze_failures()
-        
-        # Afficher les résultats
+
+        # Display results
         self._print_results()
         
         return True
     
     def _load_data(self) -> bool:
-        """Charger les textes extracteds."""
-        print("\n📥 Chargement des données...")
+        """Load extracted texts."""
+        print("\n📥 Loading data...")
         
         english_path = Path('output/extracted/extracted_texts/englishrom_texts.json')
         spanish_path = Path('output/extracted/extracted_texts/spanishrom_texts.json')
@@ -68,38 +68,38 @@ class SpanishROMFailureDiagnostics:
                     data = json.load(f)
                     for item in data.get('texts', []):
                         self.english_texts[item['offset']] = item
-                print(f"✅ Textes anglais: {len(self.english_texts)}")
-            
+                print(f"✅ English texts: {len(self.english_texts)}")
+
             if spanish_path.exists():
                 with open(spanish_path, 'r', encoding='utf-8') as f:
                     data = json.load(f)
                     for item in data.get('texts', []):
                         self.spanish_texts[item['offset']] = item
-                print(f"✅ Textes espagnols: {len(self.spanish_texts)}")
-            
+                print(f"✅ Spanish texts: {len(self.spanish_texts)}")
+
             return True
         except Exception as e:
-            print(f"❌ Erreur chargement: {e}")
+            print(f"❌ Loading error: {e}")
             return False
     
     def _analyze_failures(self):
-        """Analyser les raisons d'échec."""
-        print("\n🔬 Analyse des échecs...")
+        """Analyze failure reasons."""
+        print("\n🔬 Analyzing failures...")
         
-        # Charger les offsets anglais
+        # Load English offsets
         all_offsets = list(self.english_texts.keys())
         
-        print(f"Total textes attendus: {len(all_offsets)}")
-        print(f"Textes trouvés en espagnol: {len(self.spanish_texts)}")
-        print(f"Différence: {len(all_offsets) - len(self.spanish_texts)}")
-        
-        # Trouver les offsets manquants
+        print(f"Total expected texts: {len(all_offsets)}")
+        print(f"Texts found in Spanish: {len(self.spanish_texts)}")
+        print(f"Difference: {len(all_offsets) - len(self.spanish_texts)}")
+
+        # Find missing offsets
         missing_offsets = []
         for offset in all_offsets:
             if offset not in self.spanish_texts:
                 missing_offsets.append(offset)
-        
-        print(f"\n🔴 Offsets MANQUANTS en espagnol: {len(missing_offsets)}")
+
+        print(f"\n🔴 Offsets MISSING in Spanish: {len(missing_offsets)}")
         
         for i, offset in enumerate(missing_offsets[:20]):  # Top 20
             english = self.english_texts.get(offset, {})
@@ -121,8 +121,8 @@ class SpanishROMFailureDiagnostics:
             )
             self.failed_texts.append(failure)
         
-        # Analyser les problèmes de longueur
-        print(f"\n📏 Vérification des longueurs...")
+        # Analyze length issues
+        print(f"\n📏 Checking lengths...")
         
         length_issues = []
         for offset in self.spanish_texts.keys():
@@ -157,8 +157,8 @@ class SpanishROMFailureDiagnostics:
                 print(f"   English: {english.get('text', '')[:40]}...")
                 print(f"   Spanish: {spanish.get('text', '')[:40]}...")
         
-        # Analyser les longueurs invalides
-        print(f"\n🚨 Vérification des longueurs invalides...")
+        # Analyze invalid lengths
+        print(f"\n🚨 Checking invalid lengths...")
         
         invalid_lengths = []
         for offset, text_info in self.english_texts.items():
@@ -187,73 +187,73 @@ class SpanishROMFailureDiagnostics:
                 print(f"   Offset 0x{offset:08X}: length={length}")
     
     def _print_results(self):
-        """Afficher les résultats."""
+        """Print results."""
         print("\n" + "="*70)
-        print("📊 RÉSULTATS")
+        print("📊 RESULTS")
         print("="*70)
-        
-        print(f"\n📌 Raisons potentielles des 6 échecs:")
-        print("""
-1. LONGUEURS INVALIDES (0 ou > 1000)
-   - Ces offsets ont une longueur invalide
-   - Impossible de copier/valider
-   - Raison probable: erreur d'extraction
-   
-2. OFFSETS MANQUANTS EN ESPAGNOL
-   - Offset existe en anglais mais pas en espagnol
-   - ROM espagnole a une structure différente
-   - Raison probable: ROM locale ne contient pas ce texte
-   
-3. LONGUEURS DIFFÉRENTES
-   - Même offset mais longueurs différentes
-   - Impossible de copier directement (format incompatible)
-   - Raison probable: texts stockés différemment
 
-4. CORRUPTION DE DONNÉES
-   - Données corrupted lors de l'extraction
-   - Impossible de valider
-   - Raison probable: problème dans la ROM source
+        print(f"\n📌 Potential reasons for the 6 failures:")
+        print("""
+1. INVALID LENGTHS (0 or > 1000)
+   - These offsets have an invalid length
+   - Cannot copy/validate
+   - Probable reason: extraction error
+
+2. MISSING OFFSETS IN SPANISH
+   - Offset exists in English but not in Spanish
+   - Spanish ROM has a different structure
+   - Probable reason: local ROM does not contain this text
+
+3. DIFFERENT LENGTHS
+   - Same offset but different lengths
+   - Cannot copy directly (incompatible format)
+   - Probable reason: texts stored differently
+
+4. DATA CORRUPTION
+   - Data corrupted during extraction
+   - Cannot validate
+   - Probable reason: issue in the source ROM
 """)
         
         if self.failed_texts:
-            print(f"\n🔍 Détails des {len(self.failed_texts)} problèmes identifiés:\n")
-            
+            print(f"\n🔍 Details of {len(self.failed_texts)} identified problems:\n")
+
             for i, failure in enumerate(self.failed_texts[:10], 1):
                 print(f"{i}. Offset 0x{failure.offset:08X} (length={failure.length})")
-                print(f"   Raison: {failure.failure_reason}")
+                print(f"   Reason: {failure.failure_reason}")
                 print(f"   English: {failure.english_text[:50]}...")
                 if failure.spanish_text != '[NOT FOUND]':
                     print(f"   Spanish: {failure.spanish_text[:50]}...")
-                print(f"   Solutions possibles:")
+                print(f"   Possible fixes:")
                 for sugg in failure.suggestions:
                     print(f"     - {sugg}")
                 print()
         
-        # Recommandations
-        print("\n💡 RECOMMANDATIONS:")
+        # Recommendations
+        print("\n💡 RECOMMENDATIONS:")
         print("""
-✅ ROM Espagnole actuelle: 99.98% succès (339,815/339,821)
+✅ Current Spanish ROM: 99.98% success (339,815/339,821)
 
-Les 6 textes qui échouent sont probablement:
-1. Offsets invalides (longueur 0 ou > 1000)
-2. Textes n'existant pas dans ROM espagnole
-3. Données corrupted lors de l'extraction
+The 6 failing texts are probably:
+1. Invalid offsets (length 0 or > 1000)
+2. Texts that don't exist in the Spanish ROM
+3. Data corrupted during extraction
 
-💡 PROCHAINES ÉTAPES:
+💡 NEXT STEPS:
 
-1. Vérifier les détails exacts des 6 échecs
-   └─ Voir output/reports/2026-01-14_sprom_build_report.json
+1. Check exact details of the 6 failures
+   └─ See output/reports/2026-01-14_sprom_build_report.json
 
-2. Analyser si c'est acceptable (0.02% loss)
-   └─ Généralement acceptable pour build de ROM
+2. Analyze if this is acceptable (0.02% loss)
+   └─ Generally acceptable for ROM building
 
-3. Options de correction:
-   ├─ Laisser tels quels (0.02% = 6 textes/339K)
-   ├─ Pré-traiter extraction pour valider longueurs
-   └─ Ajouter fallback vers ROM anglaise pour ces cas
+3. Fix options:
+   ├─ Leave as-is (0.02% = 6 texts/339K)
+   ├─ Pre-process extraction to validate lengths
+   └─ Add fallback to English ROM for these cases
 
-4. Pour autres langues:
-   └─ Utiliser TRANSLATE strategy + validation stricte
+4. For other languages:
+   └─ Use TRANSLATE strategy + strict validation
 """)
 
 

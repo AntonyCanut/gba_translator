@@ -2,16 +2,16 @@
 """
 12 - Validate Reproduced ROM Integrity
 
-Valide que la ROM reproduite (Spanish texts in English ROM)
-fonctionne correctement et correspond à la ROM espagnole originale.
+Validates that the reproduced ROM (Spanish texts in English ROM)
+works correctly and matches the original Spanish ROM.
 
 Usage:
     python src/translators/12_validate_reproduced_rom.py [rom_path]
 
 Input:
-    - output/roms/*_spanishrom_reproduction.gba (ROM reproduite)
-    - input/roms/spanishrom.gba (ROM de référence)
-    - output/extracted/extracted_texts/*.json (textes extraits)
+    - output/roms/*_spanishrom_reproduction.gba (reproduced ROM)
+    - input/roms/spanishrom.gba (reference ROM)
+    - output/extracted/extracted_texts/*.json (extracted texts)
 
 Output:
     - output/reports/YYYY-MM-DD_validation_report.json
@@ -31,7 +31,7 @@ from src.core.text_validator import TextValidator
 
 class ReproducedROMValidator:
     """
-    Valide l'intégrité de la ROM reproduite.
+    Validates the integrity of the reproduced ROM.
     """
 
     def __init__(self, reproduced_rom_path: str = None):
@@ -74,7 +74,7 @@ class ReproducedROMValidator:
         }
 
     def _find_latest_reproduction_rom(self) -> Path:
-        """Trouve la ROM reproduite la plus récente."""
+        """Finds the most recent reproduced ROM."""
         rom_dir = Path('output/roms')
         rom_files = list(rom_dir.glob('*_spanishrom_reproduction.gba'))
         
@@ -84,57 +84,57 @@ class ReproducedROMValidator:
         return max(rom_files, key=lambda p: p.stat().st_mtime)
 
     def _generate_output_paths(self):
-        """Génère les chemins de sortie."""
+        """Generates the output paths."""
         self.output_report_dir.mkdir(parents=True, exist_ok=True)
         date_str = datetime.now().strftime('%Y-%m-%d')
         self.output_report_path = self.output_report_dir / f"{date_str}_validation_reproduced_rom.json"
 
     def _check_rom_exists(self) -> bool:
-        """Vérifie que la ROM reproduite existe."""
-        print("📋 Vérification existence ROM reproduite...")
-        
+        """Checks that the reproduced ROM exists."""
+        print("📋 Checking reproduced ROM existence...")
+
         if not self.reproduced_rom_path.exists():
-            print(f"❌ ROM non trouvée: {self.reproduced_rom_path}")
+            print(f"❌ ROM not found: {self.reproduced_rom_path}")
             self.results['errors'].append(f"ROM not found: {self.reproduced_rom_path}")
             return False
-        
-        print(f"✅ ROM trouvée: {self.reproduced_rom_path.name}")
+
+        print(f"✅ ROM found: {self.reproduced_rom_path.name}")
         self.results['rom_exists'] = True
         return True
 
     def _check_rom_size(self) -> bool:
-        """Vérifie la taille de la ROM."""
-        print("📏 Vérification taille ROM...")
-        
+        """Checks the ROM size."""
+        print("📏 Checking ROM size...")
+
         try:
             rom_size = self.reproduced_rom_path.stat().st_size
             reference_size = self.reference_rom_path.stat().st_size if self.reference_rom_path.exists() else 16*1024*1024
-            
+
             print(f"   Reproduced: {rom_size / (1024*1024):.2f} MB")
             print(f"   Reference:  {reference_size / (1024*1024):.2f} MB")
-            
+
             if rom_size == reference_size:
-                print(f"✅ Tailles identiques")
+                print(f"✅ Sizes identical")
                 self.results['rom_size_valid'] = True
                 self.results['integrity_checks']['size_matches_reference'] = True
                 return True
             else:
                 diff_mb = abs(rom_size - reference_size) / (1024*1024)
-                print(f"⚠️  Différence: {diff_mb:.2f} MB")
-                self.results['rom_size_valid'] = True  # Pas critique
+                print(f"⚠️  Difference: {diff_mb:.2f} MB")
+                self.results['rom_size_valid'] = True  # Not critical
                 return True
-        
+
         except Exception as e:
-            print(f"❌ Erreur taille: {e}")
+            print(f"❌ Size error: {e}")
             self.results['errors'].append(f"Size check error: {e}")
             return False
 
     def _extract_texts_from_roms(self) -> bool:
-        """Extrait les textes des ROMs."""
-        print("📖 Extraction des textes...")
-        
+        """Extracts texts from the ROMs."""
+        print("📖 Extracting texts...")
+
         try:
-            # Charger les textes extraits (au lieu de les re-extraire)
+            # Load extracted texts (instead of re-extracting)
             with open(self.spanish_texts_path, 'r', encoding='utf-8') as f:
                 data = json.load(f)
                 texts_list = data.get('texts', [])
@@ -145,21 +145,21 @@ class ReproducedROMValidator:
                 texts_list = data.get('texts', [])
                 self.english_texts = {item['offset']: item['text'] for item in texts_list}
             
-            print(f"✅ Textes chargés:")
-            print(f"   - Textes anglais: {len(self.english_texts)}")
-            print(f"   - Textes de référence (ES): {len(self.reference_texts)}")
+            print(f"✅ Texts loaded:")
+            print(f"   - English texts: {len(self.english_texts)}")
+            print(f"   - Reference texts (ES): {len(self.reference_texts)}")
             
             self.results['texts_extracted'] = True
             return True
         
         except Exception as e:
-            print(f"❌ Erreur extraction: {e}")
+            print(f"❌ Extraction error: {e}")
             self.results['errors'].append(f"Text extraction error: {e}")
             return False
 
     def _compare_texts(self) -> bool:
-        """Compare les textes de la ROM reproduite vs référence."""
-        print("🔍 Comparaison des textes...")
+        """Compares texts from the reproduced ROM vs reference."""
+        print("🔍 Comparing texts...")
         
         try:
             comparison = self.results['text_comparison']
@@ -168,71 +168,71 @@ class ReproducedROMValidator:
             mismatches = []
             
             for offset_str, ref_text in self.reference_texts.items():
-                # Vérifier si le texte est valide
+                # Check if the text is valid
                 if self.validator.is_corrupted(ref_text):
                     comparison['corrupted_reference'] += 1
                     continue
                 
-                # Pour maintenant, on considère que les textes insérés sont corrects
-                # (On pourrait ré-extraire et comparer, mais c'est complexe)
-                # On va vérifier la cohérence avec ce qu'on a inséré
-                
+                # For now, we assume inserted texts are correct
+                # (We could re-extract and compare, but that is complex)
+                # We verify consistency with what was inserted
+
                 english_text = self.english_texts.get(offset_str, '')
-                
-                # Si c'est un texte inchangé (EN == ES)
+
+                # If unchanged (EN == ES)
                 if english_text == ref_text:
                     comparison['identical'] += 1
                 else:
-                    # C'était un texte modifié en ES
+                    # This was a text modified in ES
                     comparison['different'] += 1
             
-            # Calculer le taux
+            # Calculate the rate
             if comparison['total'] > 0:
                 comparison['mismatch_rate'] = (
                     comparison['different'] / comparison['total'] * 100
                 )
             
-            print(f"✅ Comparaison complétée:")
+            print(f"✅ Comparison completed:")
             print(f"   - Total: {comparison['total']}")
-            print(f"   - Identiques (EN=ES): {comparison['identical']}")
-            print(f"   - Différents (EN≠ES): {comparison['different']}")
-            print(f"   - Corrompus: {comparison['corrupted_reference']}")
-            print(f"   - Taux de modification: {comparison['mismatch_rate']:.1f}%")
+            print(f"   - Identical (EN=ES): {comparison['identical']}")
+            print(f"   - Different (EN≠ES): {comparison['different']}")
+            print(f"   - Corrupted: {comparison['corrupted_reference']}")
+            print(f"   - Modification rate: {comparison['mismatch_rate']:.1f}%")
             
             return True
         
         except Exception as e:
-            print(f"❌ Erreur comparaison: {e}")
+            print(f"❌ Comparison error: {e}")
             self.results['errors'].append(f"Comparison error: {e}")
             return False
 
     def _check_header_validity(self) -> bool:
-        """Vérifie la validité de l'en-tête ROM."""
-        print("🏷️  Vérification en-tête ROM...")
-        
+        """Checks the validity of the ROM header."""
+        print("🏷️  Checking ROM header...")
+
         try:
             with open(self.reproduced_rom_path, 'rb') as f:
-                # Lire les premiers bytes
+                # Read first bytes
                 header = f.read(4)
                 f.seek(0xA0)  # Game Title offset
                 game_title = f.read(12)
-                
+
                 print(f"   Header: {header.hex()}")
                 print(f"   Game Title: {game_title}")
-                
-                # En-tête GBA basique (approximatif)
+
+                # Basic GBA header (approximate)
                 self.results['integrity_checks']['header_valid'] = True
-                print(f"✅ En-tête valide")
-                
+                print(f"✅ Header valid")
+
                 return True
-        
+
         except Exception as e:
-            print(f"⚠️  Erreur vérification header: {e}")
+            print(f"⚠️  Header verification error: {e}")
             return False
 
     def _comprehensive_integrity_check(self) -> bool:
-        """Fait une vérification intégrité complète."""
-        print("✔️  Vérification intégrité complète...")
+        """Performs a comprehensive integrity check."""
+        print("✔️  Comprehensive integrity check...")
         
         checks = [
             self.results['rom_exists'],
@@ -244,16 +244,16 @@ class ReproducedROMValidator:
         all_passed = all(checks)
         
         if all_passed:
-            print(f"✅ Toutes les vérifications passées!")
+            print(f"✅ All checks passed!")
             self.results['integrity_checks']['all_texts_readable'] = True
             return True
         else:
-            print(f"⚠️  Certaines vérifications ont échoué")
-            return True  # Pas critique
+            print(f"⚠️  Some checks failed")
+            return True  # Not critical
 
     def _save_report(self):
-        """Sauvegarde le rapport de validation."""
-        print(f"\n📊 Génération du rapport...")
+        """Saves the validation report."""
+        print(f"\n📊 Generating report...")
         
         report = {
             'timestamp': datetime.now().isoformat(),
@@ -268,55 +268,55 @@ class ReproducedROMValidator:
             with open(self.output_report_path, 'w', encoding='utf-8') as f:
                 json.dump(report, f, indent=2, ensure_ascii=False)
             
-            print(f"✅ Rapport sauvegardé: {self.output_report_path.name}")
+            print(f"✅ Report saved: {self.output_report_path.name}")
             return True
-        
+
         except Exception as e:
-            print(f"❌ Erreur rapport: {e}")
+            print(f"❌ Report error: {e}")
             return False
 
     def run(self) -> bool:
-        """Lance la validation complète."""
+        """Runs the full validation."""
         print("="*70)
-        print("🔍 VALIDATION ROM REPRODUITE")
+        print("🔍 REPRODUCED ROM VALIDATION")
         print("="*70)
-        
-        # Générer chemins
+
+        # Generate paths
         self._generate_output_paths()
-        
-        # Étapes
+
+        # Steps
         steps = [
-            ("Vérification existence", self._check_rom_exists),
-            ("Vérification taille", self._check_rom_size),
-            ("Extraction textes", self._extract_texts_from_roms),
-            ("Comparaison textes", self._compare_texts),
-            ("Vérification en-tête", self._check_header_validity),
-            ("Vérification intégrité", self._comprehensive_integrity_check),
-            ("Génération rapport", self._save_report)
+            ("Checking existence", self._check_rom_exists),
+            ("Checking size", self._check_rom_size),
+            ("Extracting texts", self._extract_texts_from_roms),
+            ("Comparing texts", self._compare_texts),
+            ("Checking header", self._check_header_validity),
+            ("Checking integrity", self._comprehensive_integrity_check),
+            ("Generating report", self._save_report)
         ]
-        
+
         for step_name, step_func in steps:
             try:
                 if not step_func():
-                    print(f"⚠️  {step_name} partielle")
-                    # Continue même si certaines vérifications échouent
+                    print(f"⚠️  {step_name} partial")
+                    # Continue even if some checks fail
             except Exception as e:
                 print(f"⚠️  Exception {step_name}: {e}")
-        
-        # Résumé final
+
+        # Final summary
         print("\n" + "="*70)
-        print("✨ VALIDATION COMPLÉTÉE")
+        print("✨ VALIDATION COMPLETE")
         print("="*70)
-        
+
         text_cmp = self.results['text_comparison']
-        print(f"\n📊 Résumé:")
-        print(f"   - ROM existe: {'✅' if self.results['rom_exists'] else '❌'}")
-        print(f"   - Taille valide: {'✅' if self.results['rom_size_valid'] else '❌'}")
-        print(f"   - En-tête valide: {'✅' if self.results['integrity_checks']['header_valid'] else '❌'}")
-        print(f"   - Textes comparés: {text_cmp['total']}")
-        print(f"   - Taux modification: {text_cmp['mismatch_rate']:.1f}%")
-        
-        print(f"\n📁 Rapport: {self.output_report_path}")
+        print(f"\n📊 Summary:")
+        print(f"   - ROM exists: {'✅' if self.results['rom_exists'] else '❌'}")
+        print(f"   - Size valid: {'✅' if self.results['rom_size_valid'] else '❌'}")
+        print(f"   - Header valid: {'✅' if self.results['integrity_checks']['header_valid'] else '❌'}")
+        print(f"   - Texts compared: {text_cmp['total']}")
+        print(f"   - Modification rate: {text_cmp['mismatch_rate']:.1f}%")
+
+        print(f"\n📁 Report: {self.output_report_path}")
         
         return True
 

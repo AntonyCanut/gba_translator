@@ -2,16 +2,16 @@
 """
 16 - Build French ROM
 
-Construit la ROM française en:
-1. Chargeant les différences anglaises (textes à traduire)
-2. Insérant les traductions françaises dans la ROM anglaise
+Builds the French ROM by:
+1. Loading English differences (texts to translate)
+2. Inserting French translations into the English ROM
 
 Usage:
     python src/translators/16_build_french_rom.py [french_translation_json]
 
 Input:
-    - input/roms/englishrom.gba (ROM source anglaise)
-    - output/translation/[french_translation].json (traductions françaises)
+    - input/roms/englishrom.gba (English source ROM)
+    - output/translation/[french_translation].json (French translations)
     - output/differences/englishrom_diff_only.json (fallback)
 
 Output:
@@ -35,8 +35,8 @@ from src.core.text_reinserter import TextEncoder
 
 class FrenchROMBuilder:
     """
-    Construit la ROM française en utilisant les traductions français
-    et les réinsère dans la ROM anglaise.
+    Builds the French ROM using French translations
+    and reinserts them into the English ROM.
     """
 
     def __init__(self, translation_path: Optional[str] = None):
@@ -67,30 +67,30 @@ class FrenchROMBuilder:
         }
 
     def _find_translation(self, provided_path: Optional[str]) -> Path:
-        """Trouve le fichier de traduction français."""
+        """Finds the French translation file."""
         if provided_path:
             path = Path(provided_path)
             if path.exists():
                 return path
-            print(f"⚠️  Fichier fourni non trouvé: {path}")
-        
-        # Chercher le fichier le plus récent
+            print(f"⚠️  Provided file not found: {path}")
+
+        # Look for the most recent file
         translation_dir = Path('output/translation')
         if translation_dir.exists():
             json_files = list(translation_dir.glob('*french*.json')) + \
                         list(translation_dir.glob('*fr*.json'))
             if json_files:
                 latest = max(json_files, key=lambda p: p.stat().st_mtime)
-                print(f"   Utilisant: {latest.name}")
+                print(f"   Using: {latest.name}")
                 return latest
-        
-        # Fallback: utiliser les différences
-        print(f"⚠️  Aucune traduction française trouvée")
-        print(f"   Fallback: utilisation des différences anglaises")
+
+        # Fallback: use differences
+        print(f"⚠️  No French translation found")
+        print(f"   Fallback: using English differences")
         return None
 
     def _generate_output_paths(self):
-        """Génère les chemins de sortie."""
+        """Generates output paths."""
         self.output_rom_dir.mkdir(parents=True, exist_ok=True)
         self.output_report_dir.mkdir(parents=True, exist_ok=True)
         
@@ -99,32 +99,32 @@ class FrenchROMBuilder:
         self.output_report_path = self.output_report_dir / f"{date_str}_french_build_report.json"
 
     def _load_texts(self) -> bool:
-        """Charge les textes anglais et les traductions françaises."""
-        print("📖 Chargement des textes et traductions...")
-        
-        # Charger textes anglais
+        """Loads English texts and French translations."""
+        print("📖 Loading texts and translations...")
+
+        # Load English texts
         if not self.english_texts_path.exists():
-            print(f"❌ Fichier non trouvé: {self.english_texts_path}")
+            print(f"❌ File not found: {self.english_texts_path}")
             return False
-        
+
         try:
             with open(self.english_texts_path, 'r', encoding='utf-8') as f:
                 data = json.load(f)
                 texts_list = data.get('texts', [])
                 self.english_texts = {item['offset']: item['text'] for item in texts_list}
-            
-            print(f"✅ Textes anglais chargés: {len(self.english_texts)}")
+
+            print(f"✅ English texts loaded: {len(self.english_texts)}")
         except Exception as e:
-            print(f"❌ Erreur chargement textes anglais: {e}")
+            print(f"❌ Error loading English texts: {e}")
             return False
-        
-        # Charger traductions françaises
+
+        # Load French translations
         if self.translation_path and self.translation_path.exists():
             try:
                 with open(self.translation_path, 'r', encoding='utf-8') as f:
                     data = json.load(f)
-                    
-                    # Supporter plusieurs formats JSON
+
+                    # Support multiple JSON formats
                     if 'translations' in data:
                         translations = data['translations']
                         self.french_texts = {
@@ -136,185 +136,185 @@ class FrenchROMBuilder:
                         texts_list = data.get('texts', [])
                         self.french_texts = {item['offset']: item.get('french', item.get('text', '')) for item in texts_list}
                     else:
-                        # Supposer que c'est un dict direct {offset: text}
+                        # Assume it is a direct dict {offset: text}
                         self.french_texts = data
-                
-                print(f"✅ Traductions françaises chargées: {len(self.french_texts)}")
+
+                print(f"✅ French translations loaded: {len(self.french_texts)}")
             except Exception as e:
-                print(f"❌ Erreur chargement traductions: {e}")
-                print(f"   Utilisant les différences comme fallback...")
+                print(f"❌ Error loading translations: {e}")
+                print(f"   Using differences as fallback...")
                 if not self._load_differences():
                     return False
         else:
             if not self._load_differences():
                 return False
-        
+
         return True
 
     def _load_differences(self) -> bool:
-        """Charge les différences en tant que fallback."""
+        """Loads differences as a fallback."""
         if not self.differences_path.exists():
-            print(f"❌ Fichier de différences non trouvé: {self.differences_path}")
+            print(f"❌ Differences file not found: {self.differences_path}")
             return False
-        
+
         try:
             with open(self.differences_path, 'r', encoding='utf-8') as f:
                 data = json.load(f)
                 texts_list = data.get('texts', [])
                 self.french_texts = {item['offset']: item['text'] for item in texts_list}
-            
-            print(f"✅ Différences anglaises chargées (fallback): {len(self.french_texts)}")
+
+            print(f"✅ English differences loaded (fallback): {len(self.french_texts)}")
             return True
         except Exception as e:
-            print(f"❌ Erreur chargement différences: {e}")
+            print(f"❌ Error loading differences: {e}")
             return False
 
     def _copy_rom(self) -> bool:
-        """Crée une copie de la ROM anglaise."""
-        print("\n📋 Copie de la ROM anglaise...")
-        
+        """Creates a copy of the English ROM."""
+        print("\n📋 Copying English ROM...")
+
         if not self.english_rom_path.exists():
-            print(f"❌ ROM non trouvée: {self.english_rom_path}")
+            print(f"❌ ROM not found: {self.english_rom_path}")
             return False
-        
+
         try:
             shutil.copy2(self.english_rom_path, self.output_rom_path)
             rom_size_mb = self.output_rom_path.stat().st_size / (1024 * 1024)
-            print(f"✅ ROM copiée: {self.output_rom_path.name} ({rom_size_mb:.2f} MB)")
-            
-            # Charger les données ROM en mémoire
+            print(f"✅ ROM copied: {self.output_rom_path.name} ({rom_size_mb:.2f} MB)")
+
+            # Load ROM data into memory
             with open(self.output_rom_path, 'rb') as f:
                 self.rom_data = bytearray(f.read())
-            
+
             return True
-        
+
         except Exception as e:
-            print(f"❌ Erreur copie: {e}")
+            print(f"❌ Copy error: {e}")
             return False
 
     def _replace_french_texts(self) -> bool:
-        """Remplace vraiment les textes anglais par les traductions françaises."""
-        print("\n🔄 Remplacement des textes par les traductions françaises...")
-        
+        """Actually replaces English texts with French translations."""
+        print("\n🔄 Replacing texts with French translations...")
+
         self.stats['total_texts'] = len(self.french_texts)
-        
+
         for offset, french_text in self.french_texts.items():
             try:
                 english_text = self.english_texts.get(offset, '')
-                
-                # Vérifier si le texte français est valide
+
+                # Check if French text is valid
                 if not french_text or not self.validator.is_valid_game_text(french_text):
                     if self.validator.is_corrupted(french_text):
                         self.stats['corrupted_french_texts'] += 1
                     continue
-                
-                # Si les textes sont identiques, ne pas modifier
+
+                # If texts are identical, do not modify
                 if french_text == english_text:
                     self.stats['unchanged_texts'] += 1
                     continue
-                
-                # Encoder avec encodage Pokémon (pas UTF-8!)
+
+                # Encode using Pokémon encoding (not UTF-8!)
                 try:
                     french_bytes = TextEncoder.encode_pokemon(french_text)
                     english_bytes = TextEncoder.encode_pokemon(english_text)
-                    
+
                     rom_offset = int(offset) if isinstance(offset, (int, str)) else 0
-                    
-                    # Remplacer si la longueur le permet
+
+                    # Replace if length allows
                     if len(french_bytes) <= len(english_bytes):
-                        # Remplacer directement
+                        # Replace directly
                         self.rom_data[rom_offset:rom_offset + len(french_bytes)] = french_bytes
-                        
-                        # Remplir avec 0xFF si le texte français est plus court
+
+                        # Pad with 0xFF if French text is shorter
                         if len(french_bytes) < len(english_bytes):
                             padding = b'\xff' * (len(english_bytes) - len(french_bytes))
                             self.rom_data[rom_offset + len(french_bytes):rom_offset + len(english_bytes)] = padding
-                        
+
                         self.stats['successfully_replaced'] += 1
                     else:
-                        # Texte français trop long - tronquer
+                        # French text too long - truncate
                         self.rom_data[rom_offset:rom_offset + len(english_bytes)] = french_bytes[:len(english_bytes)]
                         self.stats['too_long'] += 1
                         self.stats['successfully_replaced'] += 1
-                
+
                 except Exception as inner_e:
                     self.stats['failed_replacements'] += 1
                     self.stats['errors'].append({
                         'offset': hex(offset) if isinstance(offset, int) else offset,
                         'error': f"Replacement failed: {str(inner_e)}"
                     })
-            
+
             except Exception as e:
                 self.stats['failed_replacements'] += 1
                 self.stats['errors'].append({
                     'offset': hex(offset) if isinstance(offset, int) else offset,
                     'error': str(e)
                 })
-        
-        print(f"✅ Remplacement complété:")
-        print(f"   - Remplacés: {self.stats['successfully_replaced']}")
-        print(f"   - Échoués: {self.stats['failed_replacements']}")
-        print(f"   - Non modifiés: {self.stats['unchanged_texts']}")
+
+        print(f"✅ Replacement complete:")
+        print(f"   - Replaced: {self.stats['successfully_replaced']}")
+        print(f"   - Failed: {self.stats['failed_replacements']}")
+        print(f"   - Unchanged: {self.stats['unchanged_texts']}")
         if self.stats['too_long'] > 0:
-            print(f"   - Tronqués (trop longs): {self.stats['too_long']}")
-        print(f"   - Corrompus (ignorés): {self.stats['corrupted_french_texts']}")
-        
+            print(f"   - Truncated (too long): {self.stats['too_long']}")
+        print(f"   - Corrupted (skipped): {self.stats['corrupted_french_texts']}")
+
         return True
 
     def _save_modified_rom(self) -> bool:
-        """Sauvegarde la ROM modifiée avec les textes français."""
-        print(f"\n💾 Sauvegarde de la ROM modifiée...")
-        
+        """Saves the modified ROM with French texts."""
+        print(f"\n💾 Saving modified ROM...")
+
         try:
             if self.rom_data is None:
-                print(f"❌ Données ROM non chargées")
+                print(f"❌ ROM data not loaded")
                 return False
-            
+
             with open(self.output_rom_path, 'wb') as f:
                 f.write(self.rom_data)
-            
+
             rom_size_mb = self.output_rom_path.stat().st_size / (1024 * 1024)
-            print(f"✅ ROM sauvegardée: {self.output_rom_path.name}")
-            print(f"   - Taille: {rom_size_mb:.2f} MB")
-            print(f"   - Textes modifiés: {self.stats['successfully_replaced']}")
-            
+            print(f"✅ ROM saved: {self.output_rom_path.name}")
+            print(f"   - Size: {rom_size_mb:.2f} MB")
+            print(f"   - Texts modified: {self.stats['successfully_replaced']}")
+
             return True
-        
+
         except Exception as e:
-            print(f"❌ Erreur sauvegarde: {e}")
+            print(f"❌ Save error: {e}")
             import traceback
             traceback.print_exc()
             return False
 
     def _verify_rom_integrity(self) -> bool:
-        """Vérifie l'intégrité de la ROM produite."""
-        print(f"\n🔍 Vérification de l'intégrité de la ROM...")
-        
+        """Checks the integrity of the produced ROM."""
+        print(f"\n🔍 Checking ROM integrity...")
+
         try:
             if not self.output_rom_path.exists():
-                print(f"❌ ROM de sortie non trouvée")
+                print(f"❌ Output ROM not found")
                 return False
-            
+
             rom_size = self.output_rom_path.stat().st_size
             expected_size = self.english_rom_path.stat().st_size
-            
-            print(f"   Taille output: {rom_size / (1024*1024):.2f} MB")
-            print(f"   Taille source: {expected_size / (1024*1024):.2f} MB")
-            
+
+            print(f"   Output size: {rom_size / (1024*1024):.2f} MB")
+            print(f"   Source size: {expected_size / (1024*1024):.2f} MB")
+
             if rom_size == expected_size:
-                print(f"✅ Tailles identiques ✓")
+                print(f"✅ Sizes match ✓")
                 return True
             else:
-                print(f"⚠️  Tailles différentes (mais acceptable)")
+                print(f"⚠️  Sizes differ (but acceptable)")
                 return True
-        
+
         except Exception as e:
-            print(f"❌ Erreur vérification: {e}")
+            print(f"❌ Verification error: {e}")
             return False
 
     def _save_report(self):
-        """Sauvegarde le rapport."""
-        print(f"\n📊 Génération du rapport...")
+        """Saves the report."""
+        print(f"\n📊 Generating report...")
         
         total_processed = (self.stats['successfully_replaced'] + 
                           self.stats['failed_replacements'] + 
@@ -348,60 +348,60 @@ class FrenchROMBuilder:
             with open(self.output_report_path, 'w', encoding='utf-8') as f:
                 json.dump(report, f, indent=2, ensure_ascii=False)
             
-            print(f"✅ Rapport sauvegardé: {self.output_report_path.name}")
+            print(f"✅ Report saved: {self.output_report_path.name}")
             return True
-        
+
         except Exception as e:
-            print(f"❌ Erreur rapport: {e}")
+            print(f"❌ Report error: {e}")
             return False
 
     def run(self) -> bool:
-        """Lance la construction complète de la ROM française."""
+        """Runs the complete French ROM build."""
         print("="*70)
-        print("🚀 CONSTRUCTION ROM FRANÇAISE")
+        print("🚀 BUILDING FRENCH ROM")
         print("="*70)
-        
-        # Générer chemins de sortie
+
+        # Generate output paths
         self._generate_output_paths()
-        
-        # Étapes
+
+        # Steps
         steps = [
-            ("Chargement des textes et traductions", self._load_texts),
-            ("Copie ROM anglaise", self._copy_rom),
-            ("Remplacement textes français", self._replace_french_texts),
-            ("Sauvegarde ROM modifiée", self._save_modified_rom),
-            ("Vérification intégrité", self._verify_rom_integrity),
-            ("Génération rapport", self._save_report)
+            ("Loading texts and translations", self._load_texts),
+            ("Copying English ROM", self._copy_rom),
+            ("Replacing French texts", self._replace_french_texts),
+            ("Saving modified ROM", self._save_modified_rom),
+            ("Checking integrity", self._verify_rom_integrity),
+            ("Generating report", self._save_report)
         ]
-        
+
         for step_name, step_func in steps:
             try:
                 if not step_func():
-                    print(f"\n❌ Échec: {step_name}")
+                    print(f"\n❌ Failed: {step_name}")
                     return False
             except Exception as e:
-                print(f"\n❌ Exception {step_name}: {e}")
+                print(f"\n❌ Exception in {step_name}: {e}")
                 import traceback
                 traceback.print_exc()
                 return False
-        
+
         print("\n" + "="*70)
-        print("✨ CONSTRUCTION RÉUSSIE - ROM FRANÇAISE CRÉÉE!")
+        print("✨ BUILD SUCCESSFUL - FRENCH ROM CREATED!")
         print("="*70)
-        print(f"\n📁 ROM de sortie: {self.output_rom_path}")
-        print(f"📊 Rapport: {self.output_report_path}")
-        print(f"\n✅ Textes insérés: {self.stats['successfully_replaced']}")
-        print(f"⚠️  Non modifiés: {self.stats['unchanged_texts']}")
-        print(f"❌ Échoués: {self.stats['failed_replacements']}")
+        print(f"\n📁 Output ROM: {self.output_rom_path}")
+        print(f"📊 Report: {self.output_report_path}")
+        print(f"\n✅ Texts inserted: {self.stats['successfully_replaced']}")
+        print(f"⚠️  Unchanged: {self.stats['unchanged_texts']}")
+        print(f"❌ Failed: {self.stats['failed_replacements']}")
         if self.stats['too_long'] > 0:
-            print(f"📏 Tronqués: {self.stats['too_long']}")
-        print(f"\nLa ROM est maintenant en FRANÇAIS!")
-        
+            print(f"📏 Truncated: {self.stats['too_long']}")
+        print(f"\nThe ROM is now in FRENCH!")
+
         return True
 
 
 def main():
-    # Vérifier si un chemin est fourni en argument
+    # Check if a path is provided as argument
     translation_path = sys.argv[1] if len(sys.argv) > 1 else None
     
     builder = FrenchROMBuilder(translation_path)

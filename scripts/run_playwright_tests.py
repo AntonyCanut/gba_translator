@@ -41,7 +41,7 @@ def start_emulator_server(
     rom_path: str = "",
 ) -> subprocess.Popen | None:
     if not EMULATOR_WEB_DIR.exists():
-        print("[orchestrator] emulator-web/ introuvable, skip du serveur")
+        print("[orchestrator] emulator-web/ not found, skipping server")
         return None
 
     env = {**os.environ, "PORT": str(port)}
@@ -50,7 +50,7 @@ def start_emulator_server(
 
     node_modules = EMULATOR_WEB_DIR / "node_modules"
     if not node_modules.exists():
-        print("[orchestrator] Installation des dépendances emulator-web...")
+        print("[orchestrator] Installing emulator-web dependencies...")
         subprocess.run(
             ["npm", "install"],
             cwd=str(EMULATOR_WEB_DIR),
@@ -58,7 +58,7 @@ def start_emulator_server(
             capture_output=True,
         )
 
-    print(f"[orchestrator] Démarrage du serveur émulateur sur le port {port}...")
+    print(f"[orchestrator] Starting emulator server on port {port}...")
     proc = subprocess.Popen(
         ["npx", "tsx", "src/server.ts"],
         cwd=str(EMULATOR_WEB_DIR),
@@ -69,10 +69,10 @@ def start_emulator_server(
 
     time.sleep(2)
     if proc.poll() is not None:
-        print("[orchestrator] Le serveur n'a pas démarré")
+        print("[orchestrator] Server failed to start")
         return None
 
-    print(f"[orchestrator] Serveur démarré (PID: {proc.pid})")
+    print(f"[orchestrator] Server started (PID: {proc.pid})")
     return proc
 
 
@@ -84,7 +84,7 @@ def stop_server(proc: subprocess.Popen | None) -> None:
         proc.wait(timeout=5)
     except (subprocess.TimeoutExpired, OSError):
         proc.kill()
-    print("[orchestrator] Serveur arrêté")
+    print("[orchestrator] Server stopped")
 
 
 def run_playwright_tests(extra_args: list[str] | None = None) -> int:
@@ -92,7 +92,7 @@ def run_playwright_tests(extra_args: list[str] | None = None) -> int:
     if extra_args:
         cmd.extend(extra_args)
 
-    print(f"\n[orchestrator] Exécution: {' '.join(cmd)}")
+    print(f"\n[orchestrator] Running: {' '.join(cmd)}")
     print("=" * 60)
 
     result = subprocess.run(cmd, cwd=str(PROJECT_ROOT))
@@ -110,7 +110,7 @@ def find_latest_report() -> Path | None:
 
 def display_summary(report_path: Path | None) -> int:
     if report_path is None:
-        print("\n[orchestrator] Aucun rapport trouvé.")
+        print("\n[orchestrator] No report found.")
         return 1
 
     with open(report_path, encoding="utf-8") as f:
@@ -124,22 +124,22 @@ def display_summary(report_path: Path | None) -> int:
     duration = report.get("duration", 0)
 
     print(f"\n{'='*60}")
-    print(f"{BOLD}  RÉSUMÉ DES TESTS PLAYWRIGHT{RESET}")
+    print(f"{BOLD}  PLAYWRIGHT TEST SUMMARY{RESET}")
     print(f"{'='*60}")
     print(f"  ROM: {report.get('rom', '?')}")
-    print(f"  Durée: {duration / 1000:.1f}s")
+    print(f"  Duration: {duration / 1000:.1f}s")
     print()
 
     pass_color = GREEN if failed == 0 else RED
     print(f"  Total:   {total}")
-    print(f"  {GREEN}Réussis: {passed}{RESET}")
+    print(f"  {GREEN}Passed: {passed}{RESET}")
     if failed > 0:
-        print(f"  {RED}Échoués: {failed}{RESET}")
+        print(f"  {RED}Failed: {failed}{RESET}")
     if skipped > 0:
-        print(f"  Ignorés: {skipped}")
+        print(f"  Skipped: {skipped}")
 
     rate = (passed / total * 100) if total > 0 else 0
-    print(f"\n  {pass_color}Taux de réussite: {rate:.1f}%{RESET}")
+    print(f"\n  {pass_color}Success rate: {rate:.1f}%{RESET}")
 
     if errors:
         print(f"\n{'─'*60}")
@@ -162,16 +162,16 @@ def display_summary(report_path: Path | None) -> int:
 
     if ticket_files:
         print(f"\n{'─'*60}")
-        print(f"  TICKETS: {len(ticket_files)} total, {open_tickets} ouverts")
+        print(f"  TICKETS: {len(ticket_files)} total, {open_tickets} open")
         print(f"{'─'*60}")
 
     print(f"\n{'='*60}")
 
     md_reports = sorted(REPORTS_DIR.glob("report-*.md"), reverse=True) if REPORTS_DIR.exists() else []
     if md_reports:
-        print(f"  Rapport détaillé: {md_reports[0]}")
+        print(f"  Detailed report: {md_reports[0]}")
 
-    print(f"  Rapport JSON: {report_path}")
+    print(f"  JSON report: {report_path}")
     print(f"{'='*60}\n")
 
     return 0 if failed == 0 else 1
@@ -179,24 +179,24 @@ def display_summary(report_path: Path | None) -> int:
 
 def main() -> int:
     parser = argparse.ArgumentParser(
-        description="Orchestrer les tests Playwright GBA Translator"
+        description="Orchestrate GBA Translator Playwright tests"
     )
     parser.add_argument(
         "--port",
         type=int,
         default=3000,
-        help="Port du serveur émulateur (défaut: 3000)",
+        help="Emulator server port (default: 3000)",
     )
-    parser.add_argument("--rom", default="", help="Chemin vers la ROM")
+    parser.add_argument("--rom", default="", help="Path to the ROM")
     parser.add_argument(
         "--no-server",
         action="store_true",
-        help="Ne pas démarrer le serveur (déjà en cours)",
+        help="Do not start the server (already running)",
     )
     parser.add_argument(
         "playwright_args",
         nargs="*",
-        help="Arguments supplémentaires pour Playwright",
+        help="Extra arguments for Playwright",
     )
 
     args = parser.parse_args()
@@ -214,7 +214,7 @@ def main() -> int:
         return exit_code if exit_code != 0 else summary_code
 
     except KeyboardInterrupt:
-        print("\n[orchestrator] Interrompu par l'utilisateur")
+        print("\n[orchestrator] Interrupted by user")
         return 130
     finally:
         stop_server(server_proc)

@@ -2,13 +2,13 @@
 """
 09 - CSV to JSON Converter
 
-Convertit le CSV traduit vers un JSON pour réinsertion dans la ROM.
+Converts the translated CSV to a JSON for reinsertion into the ROM.
 
 Usage:
     python src/translators/09_csv_to_json.py [csv_file]
 
 Input:
-    - output/translation/*_translation_template.csv (ou fichier spécifié)
+    - output/translation/*_translation_template.csv (or specified file)
 
 Output:
     - output/translation/YYYY-MM-DD_translation_ready.json
@@ -24,65 +24,65 @@ from typing import List, Dict
 
 def find_latest_csv_file() -> Path:
     """
-    Trouve le fichier CSV le plus récent.
+    Finds the most recent CSV file.
 
     Returns:
-        Path: Chemin vers le fichier
+        Path: Path to the file
     """
     translation_dir = Path('output/translation')
     if not translation_dir.exists():
         raise FileNotFoundError("output/translation/ not found")
 
-    # Chercher fichiers CSV
+    # Search for CSV files
     csv_files = list(translation_dir.glob('*_translation_*.csv'))
 
     if not csv_files:
         raise FileNotFoundError("No CSV files found in output/translation/")
 
-    # Retourner le plus récent
+    # Return the most recent
     return max(csv_files, key=lambda p: p.stat().st_mtime)
 
 
 def validate_translation(row: dict) -> tuple[bool, str]:
     """
-    Valide une ligne de traduction.
+    Validates a translation row.
 
     Args:
-        row: Ligne du CSV
+        row: CSV row
 
     Returns:
         tuple: (is_valid, error_message)
     """
     translation = row.get('translation', '').strip()
 
-    # Vérifier si traduction existe
+    # Check if translation exists
     if not translation:
-        return False, "Traduction manquante"
+        return False, "Missing translation"
 
-    # Vérifier longueur
+    # Check length
     try:
         real_max = int(row['real_max_length'])
         trans_len = len(translation)
 
         if trans_len > real_max:
-            return False, f"Trop long: {trans_len} > {real_max} (débordement: {trans_len - real_max})"
+            return False, f"Too long: {trans_len} > {real_max} (overflow: {trans_len - real_max})"
 
     except (ValueError, KeyError) as e:
-        return False, f"Erreur de validation: {e}"
+        return False, f"Validation error: {e}"
 
     return True, ""
 
 
 def csv_to_json(csv_path: Path, json_path: Path) -> dict:
     """
-    Convertit CSV vers JSON et valide les traductions.
+    Converts CSV to JSON and validates translations.
 
     Args:
-        csv_path: Chemin vers le CSV traduit
-        json_path: Chemin de sortie du JSON
+        csv_path: Path to the translated CSV
+        json_path: Output path for the JSON
 
     Returns:
-        dict: Statistiques de conversion et validation
+        dict: Conversion and validation statistics
     """
     translations = []
     errors = []
@@ -94,16 +94,16 @@ def csv_to_json(csv_path: Path, json_path: Path) -> dict:
         for row_num, row in enumerate(reader, start=2):  # Start at 2 (header = 1)
             translation = row.get('translation', '').strip()
 
-            # Ignorer lignes vides
+            # Skip empty rows
             if not translation:
                 warnings.append({
                     'row': row_num,
                     'offset': row.get('offset', 'unknown'),
-                    'message': 'Traduction manquante'
+                    'message': 'Missing translation'
                 })
                 continue
 
-            # Valider
+            # Validate
             is_valid, error_msg = validate_translation(row)
 
             if not is_valid:
@@ -116,11 +116,11 @@ def csv_to_json(csv_path: Path, json_path: Path) -> dict:
                 })
                 continue
 
-            # Convertir offset (0x12345678 → 305441400)
+            # Convert offset (0x12345678 → 305441400)
             offset_str = row['offset'].replace('0x', '')
             offset = int(offset_str, 16)
 
-            # Ajouter traduction
+            # Add translation
             translations.append({
                 'offset': offset,
                 'original_text': row['original_text'],
@@ -133,7 +133,7 @@ def csv_to_json(csv_path: Path, json_path: Path) -> dict:
                 'notes': row.get('notes', '')
             })
 
-    # Sauvegarder JSON
+    # Save JSON
     output = {
         'conversion_date': datetime.now().isoformat(),
         'source_csv': csv_path.name,
@@ -146,7 +146,7 @@ def csv_to_json(csv_path: Path, json_path: Path) -> dict:
     with open(json_path, 'w', encoding='utf-8') as f:
         json.dump(output, f, indent=2, ensure_ascii=False)
 
-    # Stats
+    # Statistics
     stats = {
         'total_rows': len(translations) + len(errors) + len(warnings),
         'successful': len(translations),
@@ -163,84 +163,84 @@ def main():
     print("="*80)
     print()
 
-    # 1. Trouver fichier CSV
+    # 1. Find CSV file
     if len(sys.argv) > 1:
         csv_path = Path(sys.argv[1])
         if not csv_path.exists():
-            print(f"❌ Erreur: Fichier non trouvé: {csv_path}")
+            print(f"❌ Error: File not found: {csv_path}")
             sys.exit(1)
     else:
         try:
             csv_path = find_latest_csv_file()
-            print(f"📄 Fichier trouvé: {csv_path.name}")
+            print(f"📄 File found: {csv_path.name}")
         except FileNotFoundError as e:
-            print(f"❌ Erreur: {e}")
+            print(f"❌ Error: {e}")
             sys.exit(1)
 
     print()
 
-    # 2. Créer chemin de sortie
+    # 2. Create output path
     output_dir = Path('output/translation')
     output_dir.mkdir(parents=True, exist_ok=True)
 
     date_str = datetime.now().strftime('%Y-%m-%d')
     json_path = output_dir / f"{date_str}_translation_ready.json"
 
-    # 3. Convertir et valider
-    print("🔄 Conversion CSV → JSON...")
-    print("🔍 Validation des traductions...")
+    # 3. Convert and validate
+    print("🔄 Converting CSV → JSON...")
+    print("🔍 Validating translations...")
     print()
 
     stats = csv_to_json(csv_path, json_path)
 
-    # 4. Afficher résultats
+    # 4. Print results
     print("="*80)
-    print("RÉSULTATS DE LA CONVERSION")
+    print("CONVERSION RESULTS")
     print("="*80)
-    print(f"Total lignes:           {stats['total_rows']}")
-    print(f"Traductions réussies:   {stats['successful']}")
-    print(f"Erreurs:                {len(stats['errors'])}")
-    print(f"Avertissements:         {len(stats['warnings'])}")
+    print(f"Total rows:             {stats['total_rows']}")
+    print(f"Successful translations:{stats['successful']}")
+    print(f"Errors:                 {len(stats['errors'])}")
+    print(f"Warnings:               {len(stats['warnings'])}")
     print()
 
-    # 5. Afficher erreurs
+    # 5. Print errors
     if stats['errors']:
         print("="*80)
-        print("❌ ERREURS DÉTECTÉES")
+        print("❌ ERRORS DETECTED")
         print("="*80)
-        for error in stats['errors'][:10]:  # Limiter à 10
-            print(f"\nLigne {error['row']} - Offset {error['offset']}")
+        for error in stats['errors'][:10]:  # Limit to 10
+            print(f"\nRow {error['row']} - Offset {error['offset']}")
             print(f"  Original:    {error['original']}")
-            print(f"  Traduction:  {error['translation']}")
-            print(f"  Erreur:      {error['error']}")
+            print(f"  Translation: {error['translation']}")
+            print(f"  Error:       {error['error']}")
 
         if len(stats['errors']) > 10:
-            print(f"\n... et {len(stats['errors']) - 10} autres erreurs")
+            print(f"\n... and {len(stats['errors']) - 10} more errors")
 
         print()
-        print("⚠️ Veuillez corriger ces erreurs avant de continuer.")
+        print("⚠️ Please fix these errors before continuing.")
         sys.exit(1)
 
-    # 6. Afficher avertissements
+    # 6. Print warnings
     if stats['warnings']:
         print("="*80)
-        print("⚠️ AVERTISSEMENTS")
+        print("⚠️ WARNINGS")
         print("="*80)
         for warning in stats['warnings'][:5]:
-            print(f"Ligne {warning['row']} - {warning['offset']}: {warning['message']}")
+            print(f"Row {warning['row']} - {warning['offset']}: {warning['message']}")
 
         if len(stats['warnings']) > 5:
-            print(f"... et {len(stats['warnings']) - 5} autres avertissements")
+            print(f"... and {len(stats['warnings']) - 5} more warnings")
         print()
 
-    # 7. Succès
+    # 7. Success
     print("="*80)
-    print("✅ CONVERSION RÉUSSIE")
+    print("✅ CONVERSION SUCCESSFUL")
     print("="*80)
     print()
-    print(f"Fichier généré: {json_path}")
+    print(f"Generated file: {json_path}")
     print()
-    print("Prochaine étape:")
+    print("Next step:")
     print("  python src/translators/10_reinsert_smart.py")
     print()
 

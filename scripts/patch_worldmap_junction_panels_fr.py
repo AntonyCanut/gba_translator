@@ -177,18 +177,18 @@ def main() -> int:
     remaining = verify(rom)
     rom_path.write_bytes(rom)
 
-    print("✓ Panneaux jonction Carte du monde — relocalisation + repointage :")
-    print(f"   - Cibles relocalisées : {stats['targets']}")
-    print(f"   - Pointeurs repointés : {stats['repointed']}")
+    print("✓ World-Map junction panels — relocation + repointing:")
+    print(f"   - Targets relocated:      {stats['targets']}")
+    print(f"   - Pointers repointed:     {stats['repointed']}")
     if stats["skipped"]:
-        print(f"   - Déjà relocalisé (skip) : {stats['skipped']}")
+        print(f"   - Already relocated (skip): {stats['skipped']}")
     if stats["no_source"]:
-        print(f"   - Sans source FR : {stats['no_source']}")
+        print(f"   - No FR source:           {stats['no_source']}")
     if stats["failed"]:
-        print(f"   - ÉCHECS (free space) : {stats['failed']}")
+        print(f"   - FAILED (free space):    {stats['failed']}")
         return 1
     if remaining:
-        print("   - ✗ Vérification échouée :")
+        print("   - ✗ Verification failed:")
         for offset, why in remaining:
             print(f"       0x{offset:08X}: {why}")
         return 1

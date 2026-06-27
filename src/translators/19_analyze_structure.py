@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
 """
-19 - Analyse structurelle: Indices vs données directes
+19 - Structural analysis: Indices vs direct data
 
-Hypothèse: Les 11 cas d'échec utilisent peut-être un système d'INDIRECTION
-via des indices plutôt que des données directes.
+Hypothesis: The 11 failure cases may use an INDIRECTION system
+via indices rather than direct data.
 """
 
 import sys
@@ -17,7 +17,7 @@ from src.core.rom_reader import ROMReader
 
 
 def analyze_structure():
-    """Analyse la structure des données autour des 11 offsets."""
+    """Analyzes the data structure around the 11 offsets."""
     
     report_path = Path('output/tests/2026-01-14_spanish_simulation_report.json')
     with open(report_path, 'r', encoding='utf-8') as f:
@@ -32,28 +32,28 @@ def analyze_structure():
     
     print()
     print("=" * 80)
-    print("🔬 ANALYSE STRUCTURELLE: Indices vs Données Directes")
+    print("🔬 STRUCTURAL ANALYSIS: Indices vs Direct Data")
     print("=" * 80)
     print()
     
-    print("Observation clé: Les bytes à l'offset sont IDENTIQUES")
-    print("                Mais les données SUIVANTES sont DIFFÉRENTES")
+    print("Key observation: The bytes at the offset are IDENTICAL")
+    print("                But the FOLLOWING data is DIFFERENT")
     print()
-    print("Cela suggère: Peut-être que l'INDICE/CODE est le même,")
-    print("              mais l'implémentation diffère")
+    print("This suggests: Perhaps the INDEX/CODE is the same,")
+    print("               but the implementation differs")
     print()
     
-    # Pour chaque cas échoué
+    # For each failed case
     for i, failure in enumerate(failures, 1):
         offset = int(failure['offset'], 16)
-        
+
         en_byte = english_rom.rom_data[offset]
         es_byte = spanish_rom.rom_data[offset]
-        
-        # Chercher le terminateur NULL
+
+        # Search for the NULL terminator
         en_term = None
         es_term = None
-        
+
         for j in range(offset, min(offset + 100, len(english_rom.rom_data))):
             if en_term is None and english_rom.rom_data[j] == 0x00:
                 en_term = j - offset
@@ -61,28 +61,28 @@ def analyze_structure():
                 es_term = j - offset
             if en_term is not None and es_term is not None:
                 break
-        
+
         print(f"{i:2d}. 0x{offset:08X}")
-        print(f"    Byte à offset: EN=0x{en_byte:02X}, ES=0x{es_byte:02X}")
-        print(f"    Terminateur (distance): EN=+{en_term or '?'}, ES=+{es_term or '?'}")
-        
-        # Analyser la structure
+        print(f"    Byte at offset: EN=0x{en_byte:02X}, ES=0x{es_byte:02X}")
+        print(f"    Terminator (distance): EN=+{en_term or '?'}, ES=+{es_term or '?'}")
+
+        # Analyze the structure
         if en_term and es_term:
             if en_term == es_term:
-                print(f"    → Même longueur! Peut-être une SUBSTITUTION directe")
+                print(f"    → Same length! Perhaps a direct SUBSTITUTION")
             else:
-                print(f"    → Longueurs DIFFÉRENTES: {en_term} vs {es_term}")
-        
-        # Extraire et comparer les séquences
+                print(f"    → DIFFERENT lengths: {en_term} vs {es_term}")
+
+        # Extract and compare sequences
         en_seq = english_rom.rom_data[offset:offset + (en_term or 20)]
         es_seq = spanish_rom.rom_data[offset:offset + (es_term or 20)]
-        
+
         if en_seq == es_seq:
-            print(f"    ✅ Les séquences sont IDENTIQUES!")
+            print(f"    ✅ Sequences are IDENTICAL!")
         else:
-            # Compter les différences
+            # Count differences
             diffs = sum(1 for a, b in zip(en_seq, es_seq) if a != b)
-            print(f"    ❌ Les séquences diffèrent à {diffs} positions")
+            print(f"    ❌ Sequences differ at {diffs} positions")
         
         print()
 

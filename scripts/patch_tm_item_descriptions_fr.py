@@ -170,15 +170,15 @@ def main() -> int:
     stats = apply(rom, combined, reserved_rom=reserved)
     rom_path.write_bytes(rom)
 
-    print("✓ Descriptions d'objets CT/CS (anti-freeze sac):")
-    print(f"   - Machines (CT/CS):   {stats['machines']}")
-    print(f"   - Relocalisées:       {stats['relocated']}")
-    print(f"   - Saines (en place):  {stats['in_place_ok']}")
-    print(f"   - Hors zone fusionnée:{stats['skipped_outside']}")
+    print("✓ TM/HM item descriptions (anti-freeze bag):")
+    print(f"   - Machines (TM/HM):   {stats['machines']}")
+    print(f"   - Relocated:          {stats['relocated']}")
+    print(f"   - Healthy (in place): {stats['in_place_ok']}")
+    print(f"   - Outside fused zone: {stats['skipped_outside']}")
     if stats["missing_text"]:
-        print(f"   - Texte manquant:     {stats['missing_text']}")
+        print(f"   - Missing text:       {stats['missing_text']}")
     if stats["failed"]:
-        print(f"   - ÉCHECS (free space):{stats['failed']}")
+        print(f"   - FAILED (free space):{stats['failed']}")
         return 1
     return 0
 
