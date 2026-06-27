@@ -22,10 +22,45 @@ from __future__ import annotations
 
 import argparse
 import json
+import re
 import sys
 from collections import defaultdict
 from pathlib import Path
 from typing import Optional
+
+# Reverse CFRU charmap (byte value -> character) used to decode the raw
+# ``{XX}`` hex tokens that some JSON dumps leave behind for bytes the dump tool
+# could not map (e.g. ``{B4}`` for the apostrophe 0xB4). Left untouched, those
+# tokens reach the encoder verbatim and render as garbage (``?B4?``) in-game,
+# inflating every apostrophe by 3 bytes and overflowing string slots.
+sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "src"))
+try:  # pragma: no cover - exercised by the IT build, charmap always present
+    from text import charmap_data as _cd
+
+    _BYTE_TO_CHAR: dict[int, str] = {}
+    for _ch, _b in _cd.CHAR_TO_BYTE.items():
+        _BYTE_TO_CHAR.setdefault(_b, _ch)
+except Exception:  # pragma: no cover - defensive
+    _BYTE_TO_CHAR = {}
+
+_HEX_TOKEN_RE = re.compile(r"\{([0-9A-Fa-f]{2})\}")
+
+
+def decode_hex_tokens(text: str) -> str:
+    """Replace raw ``{XX}`` hex tokens with their CFRU character.
+
+    Only tokens that decode to a single printable character are substituted;
+    anything else is left intact so genuine markup is never corrupted.
+    """
+
+    def _sub(match: "re.Match[str]") -> str:
+        byte = int(match.group(1), 16)
+        ch = _BYTE_TO_CHAR.get(byte)
+        if ch is not None and len(ch) == 1 and ch.isprintable():
+            return ch
+        return match.group(0)
+
+    return _HEX_TOKEN_RE.sub(_sub, text)
 
 
 def parse_json(json_file: Path) -> dict[str, str]:
@@ -75,6 +110,7 @@ def escape_text(text: str) -> str:
     on a single physical line with line breaks written as the two-character
     escape ``\\n``. Values that already use the ``\\n`` escape are unaffected.
     """
+    text = decode_hex_tokens(text)
     return text.replace("\r\n", "\n").replace("\r", "\n").replace("\n", "\\n")
 
 

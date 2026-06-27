@@ -88,6 +88,42 @@ def test_generator_escapes_real_newlines():
     assert gen.escape_text("already\\nescaped") == "already\\nescaped"
 
 
+RAW_HEX_TOKEN_RE = re.compile(r"\{[0-9A-Fa-f]{2}\}")
+
+
+def test_combined_it_has_no_raw_hex_tokens():
+    """No ``{XX}`` raw-byte tokens may survive in the source.
+
+    The JSON dump left bytes it could not map as ``{XX}`` literals (e.g. ``{B4}``
+    for the apostrophe). The encoder does not understand them: it renders ``?B4?``
+    in-game and inflates every apostrophe by 3 bytes, overflowing string slots and
+    freezing the intro. They must be decoded to their CFRU character at import.
+    """
+    offenders = []
+    for lineno, raw in enumerate(COMBINED_IT.read_text(encoding="utf-8").splitlines(), 1):
+        # Skip the offset prefix; tokens only matter inside the translated text.
+        text = raw.split(":", 1)[1] if ":" in raw else raw
+        for m in RAW_HEX_TOKEN_RE.finditer(text):
+            offenders.append((lineno, m.group(0)))
+    assert not offenders, (
+        f"{len(offenders)} raw {{XX}} hex token(s) left in combined_it.txt; "
+        f"first few: {offenders[:8]}"
+    )
+
+
+def test_generator_decodes_hex_tokens():
+    """The JSON→combined generator must decode ``{XX}`` tokens to characters."""
+    gen = _load_module("scripts/process_italian_translations.py")
+    # Apostrophe and Run/Fight menu letters that previously leaked as garbage.
+    assert gen.decode_hex_tokens("c{B4}è fretta") == "c'è fretta"
+    assert gen.decode_hex_tokens("{C0}uggi") == "Fuggi"
+    assert gen.decode_hex_tokens("{A5}.000 GETTONI") == "4.000 GETTONI"
+    # escape_text applies the decode as part of normalization.
+    assert "{B4}" not in gen.escape_text("l{B4}aiuto")
+    # Idempotent: a clean string is unchanged.
+    assert gen.decode_hex_tokens("nessun token") == "nessun token"
+
+
 def test_normalizer_is_idempotent_and_lossless():
     """Re-normalizing the (already single-line) file folds nothing."""
     norm = _load_module("scripts/normalize_combined_multiline.py")
