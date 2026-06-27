@@ -1,9 +1,12 @@
 """Load and validate the per-language build descriptors under ``languages/``.
 
 A descriptor is a small YAML file (``languages/<code>/lang.yaml``) declaring how
-a target language is built. French is ``build: dedicated`` (the hand-tuned,
-byte-perfect ``make build-fr`` recipe); Italian and German are
-``build: generic`` (driven by ``scripts/build_language.py``).
+a target language is built.  Three descriptor classes exist:
+
+- ``build: dedicated`` — French, hand-tuned byte-perfect recipe (``make build-fr``).
+- ``build: generic``   — Italian / German, driven by ``scripts/build_language.py``.
+- ``build: none``      — English / Spanish, reference-only extractions (no build step).
+  These carry ``status: source`` or ``status: reference`` and have no output ROM.
 
 This module has no side effects and never touches a ROM, so it is fully
 unit-testable without the 32 MB game files.
@@ -24,15 +27,16 @@ LANGUAGES_DIR = REPO_ROOT / "languages"
 REQUIRED_KEYS = (
     "code",
     "name",
-    "builder_language",
     "status",
     "build",
     "combined",
-    "output_rom",
 )
 
-VALID_STATUS = {"complete", "in_progress"}
-VALID_BUILD = {"dedicated", "generic"}
+# Keys required only for buildable languages (build ≠ none)
+BUILDABLE_REQUIRED_KEYS = ("builder_language", "output_rom")
+
+VALID_STATUS = {"complete", "in_progress", "source", "reference"}
+VALID_BUILD = {"dedicated", "generic", "none"}
 
 
 class RegistryError(RuntimeError):
@@ -45,11 +49,11 @@ class LanguageConfig:
 
     code: str
     name: str
-    builder_language: str
     status: str
     build: str
     combined: str
-    output_rom: str
+    output_rom: str = ""          # empty for build: none languages
+    builder_language: str = ""    # empty for build: none languages
     native_name: str = ""
     critical: Optional[str] = None
     version_label: str = ""
@@ -59,6 +63,11 @@ class LanguageConfig:
     descriptor_path: Optional[Path] = None
 
     # -- convenience accessors -------------------------------------------------
+    @property
+    def is_reference(self) -> bool:
+        """True for source/reference languages (build: none) — no build step."""
+        return self.build == "none"
+
     @property
     def is_complete(self) -> bool:
         return self.status == "complete"
@@ -76,7 +85,10 @@ class LanguageConfig:
             return None
         return (root / self.critical).resolve()
 
-    def output_rom_path(self, root: Path = REPO_ROOT) -> Path:
+    def output_rom_path(self, root: Path = REPO_ROOT) -> Optional[Path]:
+        """None for reference languages (build: none)."""
+        if not self.output_rom:
+            return None
         return (root / "output" / "roms" / self.output_rom).resolve()
 
     def translation_json_path(self, root: Path = REPO_ROOT) -> Path:
@@ -112,8 +124,18 @@ class LanguageRegistry:
             ) from None
 
     def buildable(self) -> List[LanguageConfig]:
-        """Every language, in a stable order with French first."""
-        return sorted(self.languages.values(), key=lambda c: (c.code != "fr", c.code))
+        """Buildable languages only (build ≠ none), French first."""
+        return sorted(
+            (c for c in self.languages.values() if not c.is_reference),
+            key=lambda c: (c.code != "fr", c.code),
+        )
+
+    def references(self) -> List[LanguageConfig]:
+        """Reference-only languages (build: none), sorted by code."""
+        return sorted(
+            (c for c in self.languages.values() if c.is_reference),
+            key=lambda c: c.code,
+        )
 
 
 def _validate(data: dict, source: Path) -> LanguageConfig:
@@ -135,6 +157,15 @@ def _validate(data: dict, source: Path) -> LanguageConfig:
             f"{source}: invalid build {build!r} (expected one of {sorted(VALID_BUILD)})"
         )
 
+    # builder_language and output_rom are required only for buildable languages.
+    if build != "none":
+        missing_build = [k for k in BUILDABLE_REQUIRED_KEYS if not data.get(k)]
+        if missing_build:
+            raise RegistryError(
+                f"{source}: missing required key(s) for build={build!r}: "
+                f"{', '.join(missing_build)}"
+            )
+
     code = data["code"]
     if source.parent.name != code:
         raise RegistryError(
@@ -142,14 +173,19 @@ def _validate(data: dict, source: Path) -> LanguageConfig:
             f"name {source.parent.name!r}"
         )
 
+    # output_rom may be "~" (YAML null) for reference languages.
+    raw_output_rom = data.get("output_rom") or ""
+    if raw_output_rom == "~":
+        raw_output_rom = ""
+
     return LanguageConfig(
         code=code,
         name=data["name"],
-        builder_language=data["builder_language"],
+        builder_language=data.get("builder_language", ""),
         status=status,
         build=build,
         combined=data["combined"],
-        output_rom=data["output_rom"],
+        output_rom=raw_output_rom,
         native_name=data.get("native_name", ""),
         critical=data.get("critical"),
         version_label=data.get("version_label", ""),

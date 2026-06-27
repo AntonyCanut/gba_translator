@@ -14,7 +14,8 @@ import yaml
 from src.i18n import LanguageRegistry, RegistryError, load_registry
 from src.i18n.registry import REPO_ROOT, _validate, load_registry as _load
 
-EXPECTED_LANGUAGES = {"fr", "it", "de"}
+EXPECTED_BUILDABLE = {"fr", "it", "de"}
+EXPECTED_REFERENCES = {"en", "es"}
 
 
 @pytest.fixture(scope="module")
@@ -23,7 +24,8 @@ def registry() -> LanguageRegistry:
 
 
 def test_registry_discovers_all_languages(registry):
-    assert EXPECTED_LANGUAGES.issubset(set(registry.codes()))
+    assert EXPECTED_BUILDABLE.issubset(set(registry.codes()))
+    assert EXPECTED_REFERENCES.issubset(set(registry.codes()))
 
 
 def test_french_is_complete_and_dedicated(registry):
@@ -47,15 +49,22 @@ def test_new_languages_are_generic_and_in_progress(registry, code):
     assert not cfg.is_dedicated
 
 
-def test_every_language_has_required_metadata(registry):
+def test_every_buildable_language_has_required_metadata(registry):
     required_status = {"poison", "burn", "freeze", "paralysis", "sleep", "faint"}
-    for cfg in registry:
-        assert cfg.builder_language
-        assert cfg.output_rom.endswith(".gba")
+    for cfg in registry.buildable():
+        assert cfg.builder_language, f"{cfg.code} missing builder_language"
+        assert cfg.output_rom.endswith(".gba"), f"{cfg.code} bad output_rom"
         assert cfg.version_label, f"{cfg.code} missing version_label"
         assert required_status.issubset(set(cfg.status_abbrev)), (
             f"{cfg.code} status_abbrev missing keys"
         )
+
+
+def test_reference_languages_have_no_output_rom(registry):
+    for cfg in registry.references():
+        assert cfg.is_reference
+        assert not cfg.output_rom, f"{cfg.code} should have no output_rom"
+        assert cfg.output_rom_path(REPO_ROOT) is None
 
 
 def test_combined_files_exist(registry):
@@ -66,18 +75,21 @@ def test_combined_files_exist(registry):
 
 
 def test_output_rom_names_are_unique(registry):
-    roms = [cfg.output_rom for cfg in registry]
+    roms = [cfg.output_rom for cfg in registry.buildable()]
     assert len(roms) == len(set(roms)), "duplicate output ROM names in registry"
 
 
 def test_buildable_orders_french_first(registry):
     order = [cfg.code for cfg in registry.buildable()]
     assert order[0] == "fr"
+    # Reference languages must NOT appear in the buildable list
+    ref_codes = {cfg.code for cfg in registry.references()}
+    assert not ref_codes.intersection(set(order))
 
 
 def test_translation_json_paths_are_distinct(registry):
-    paths = {cfg.translation_json_path(REPO_ROOT) for cfg in registry}
-    assert len(paths) == len(registry)
+    paths = {cfg.translation_json_path(REPO_ROOT) for cfg in registry.buildable()}
+    assert len(paths) == len(registry.buildable())
 
 
 def test_get_unknown_language_raises(registry):

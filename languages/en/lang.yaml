@@ -1,0 +1,22 @@
+# English language descriptor — Pokémon Unbound EN (source ROM)
+#
+# This is the SOURCE language, not a translation target.
+# combined_en.txt is an extraction of the English ROM text at every offset
+# present in combined_fr.txt.  It serves as a reference for translators.
+#
+# Regenerate:
+#   python3 scripts/extract_combined_rom.py \
+#       --rom input/roms/englishrom.gba \
+#       --ref languages/fr/combined_fr.txt \
+#       --out languages/en/combined_en.txt --lang EN
+code: en
+name: English
+native_name: English
+status: source               # source (reference ROM, not a translation target)
+build: none                  # no build target — reference file only
+
+combined: languages/en/combined_en.txt
+output_rom: ~                # no output ROM
+version_label: EN.source
+
+font_glyphs: ""              # Latin-only, no extra glyphs needed
