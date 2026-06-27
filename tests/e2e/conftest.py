@@ -8,11 +8,31 @@ import pathlib
 
 import pytest
 
-PROJECT_ROOT = pathlib.Path(__file__).resolve().parent.parent.parent
+
+def _resolve_project_root() -> pathlib.Path:
+    """Return the main project root even when running from a git worktree.
+
+    Worktrees live under .singularity-worktrees/ — ROMs and reports stay
+    in the main project directory and are not copied to worktrees.
+    Set GBA_PROJECT_ROOT to override.
+    """
+    import os
+    env = os.environ.get("GBA_PROJECT_ROOT")
+    if env:
+        return pathlib.Path(env)
+    here = pathlib.Path(__file__).resolve()
+    for parent in here.parents:
+        if parent.name == ".singularity-worktrees":
+            return parent.parent
+    return here.parent.parent.parent
+
+
+PROJECT_ROOT = _resolve_project_root()
 
 EN_ROM_PATH = PROJECT_ROOT / "input" / "roms" / "englishrom.gba"
 ES_ROM_PATH = PROJECT_ROOT / "input" / "roms" / "spanishrom.gba"
 FR_ROM_PATH = PROJECT_ROOT / "output" / "roms" / "GenedRom-fr.gba"
+IT_ROM_PATH = PROJECT_ROOT / "output" / "roms" / "GenedRom-it.gba"
 
 TRANSLATION_READY = PROJECT_ROOT / "output" / "translation" / "2026-01-16_translation_ready.json"
 FRENCH_TEXTS = PROJECT_ROOT / "output" / "translation" / "french_texts.json"
@@ -37,6 +57,16 @@ def fr_rom_path():
     if not FR_ROM_PATH.exists():
         pytest.skip("GenedRom-fr.gba not found in output/roms/")
     return FR_ROM_PATH
+
+
+@pytest.fixture
+def it_rom_path():
+    if not IT_ROM_PATH.exists():
+        pytest.skip(
+            "GenedRom-it.gba not found in output/roms/ — "
+            "run: python3 scripts/build_language.py it"
+        )
+    return IT_ROM_PATH
 
 
 @pytest.fixture
