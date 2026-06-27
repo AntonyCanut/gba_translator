@@ -13,7 +13,7 @@ from pathlib import Path
 
 REPO = Path(__file__).resolve().parent.parent
 SCRIPT = REPO / "scripts" / "restore_ellipsis_pauses_fr.py"
-COMBINED = REPO / "combined_fr.txt"
+COMBINED = REPO / "languages/fr/combined_fr.txt"
 
 spec = importlib.util.spec_from_file_location("restore_ellipsis_pauses_fr", SCRIPT)
 mod = importlib.util.module_from_spec(spec)

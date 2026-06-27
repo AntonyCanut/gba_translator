@@ -31,7 +31,7 @@ from pathlib import Path
 
 from src.core.dialogue_linewrap import word_width, SPACE_WIDTH
 
-COMBINED_FR = Path(__file__).resolve().parent.parent / "combined_fr.txt"
+COMBINED_FR = Path(__file__).resolve().parent.parent / "languages/fr/combined_fr.txt"
 _LINE_RE = re.compile(r"^0x([0-9A-Fa-f]+):\s?(.*)$")
 
 # Conservative usable width of the 3-line bounty box, in pixels (see module

@@ -27,7 +27,7 @@ import pytest
 from src.core.text_codec import TextDecoder
 
 FR_ROM = Path("output/roms/GenedRom-fr.gba")
-COMBINED_FR = Path(__file__).resolve().parent.parent / "combined_fr.txt"
+COMBINED_FR = Path(__file__).resolve().parent.parent / "languages/fr/combined_fr.txt"
 CRITICAL_STRINGS = Path(__file__).resolve().parent.parent / "data" / "critical_strings_fr.txt"
 
 

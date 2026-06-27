@@ -113,7 +113,7 @@ def load_english(path: Path) -> dict[int, str]:
 
 def main() -> int:
     parser = argparse.ArgumentParser(description='Audit French translation quality.')
-    parser.add_argument('--combined', type=Path, default=Path('combined_fr.txt'))
+    parser.add_argument('--combined', type=Path, default=Path('languages/fr/combined_fr.txt'))
     parser.add_argument(
         '--english',
         type=Path,

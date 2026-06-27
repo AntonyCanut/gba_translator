@@ -124,7 +124,7 @@ def find_lost(path: str, commits: int | None) -> list[tuple[int, str, str]]:
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument(
-        "--combined", default="combined_fr.txt", help="Path to combined_fr.txt"
+        "--combined", default="languages/fr/combined_fr.txt", help="Path to combined_fr.txt"
     )
     parser.add_argument(
         "--commits", type=int, default=50, help="How many recent commits to scan"

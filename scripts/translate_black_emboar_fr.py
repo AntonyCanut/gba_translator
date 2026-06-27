@@ -22,7 +22,7 @@ import re
 import sys
 from pathlib import Path
 
-PATH = Path(__file__).resolve().parents[1] / 'combined_fr.txt'
+PATH = Path(__file__).resolve().parents[1] / "languages/fr/combined_fr.txt"
 LINE_RE = re.compile(r'^\s*0x([0-9A-Fa-f]+)\s*:\s*(.*)$')
 GANG = re.compile(r'Black(\\[nlp]| )(Emboar|\{PLAYER\})')
 

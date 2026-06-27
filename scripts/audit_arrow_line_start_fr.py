@@ -50,7 +50,7 @@ BREAK_ESCAPES = {"n": 0xFE, "l": 0xFA, "p": 0xFB}
 BREAK_BRACES = {"PAGE", "SCROLL", "NEWLINE", "LINE", "CLEAR"}
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
-DEFAULT_COMBINED = REPO_ROOT / "combined_fr.txt"
+DEFAULT_COMBINED = REPO_ROOT / "languages/fr/combined_fr.txt"
 DEFAULT_ENGLISH = REPO_ROOT / "input/roms/englishrom.gba"
 ROM_POINTER_BASE = 0x08000000
 

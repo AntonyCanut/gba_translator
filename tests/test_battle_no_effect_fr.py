@@ -80,7 +80,7 @@ class TestBattleNoEffectFr(unittest.TestCase):
     def test_combined_fr_entry_uses_raw_bytes_not_brace_syntax(self) -> None:
         """0x800880 in combined_fr.txt must use <0xFD><0x10> (not {B_DEF_NAME_WITH_PREFIX})."""
         import re
-        combined = Path(__file__).resolve().parent.parent / "combined_fr.txt"
+        combined = Path(__file__).resolve().parent.parent / "languages/fr/combined_fr.txt"
         line_re = re.compile(r"^0x([0-9A-Fa-f]+):\s?(.*)$")
         entries: dict[int, str] = {}
         for line in combined.read_text(encoding="utf-8").splitlines():

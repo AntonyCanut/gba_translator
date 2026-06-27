@@ -51,7 +51,7 @@ from apply_inline_overrides_fr import (  # noqa: E402
 )
 
 ROM_POINTER_BASE = 0x08000000
-DEFAULT_COMBINED = REPO_ROOT / "combined_fr.txt"
+DEFAULT_COMBINED = REPO_ROOT / "languages/fr/combined_fr.txt"
 
 # Arrow-prefixed World-Map junction panels (extractor sees them as 1-byte
 # strings → undeliverable by the generic pipeline). original English offset ->

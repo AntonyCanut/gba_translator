@@ -12,7 +12,7 @@ builder_language: french          # value passed to the generic builder --langua
 status: complete                  # complete | in_progress
 build: dedicated                  # dedicated (make build-fr) | generic (build_language.py)
 
-combined: combined_fr.txt
+combined: languages/fr/combined_fr.txt
 critical: data/critical_strings_fr.txt
 output_rom: GenedRom-fr.gba
 version_label: FR.2.0.0

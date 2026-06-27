@@ -44,7 +44,7 @@ from pathlib import Path
 
 from src.core.text_codec import TextEncoder
 
-COMBINED = Path(__file__).resolve().parent.parent / "combined_fr.txt"
+COMBINED = Path(__file__).resolve().parent.parent / "languages/fr/combined_fr.txt"
 
 # rise-direction templates / fall-direction templates
 RISE_TEMPLATES = (0x3FCB5F, 0x3FCB6A)

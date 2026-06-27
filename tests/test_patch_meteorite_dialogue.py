@@ -95,7 +95,7 @@ class SyntheticRelocationTests(unittest.TestCase):
 
 FR_ROM = os.path.join("output", "roms", "GenedRom-fr.gba")
 SOURCE_ROM = os.path.join("input", "roms", "englishrom.gba")
-COMBINED = "combined_fr.txt"
+COMBINED = "languages/fr/combined_fr.txt"
 
 
 @pytest.mark.rom

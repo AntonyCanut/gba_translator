@@ -49,7 +49,7 @@ sys.path.insert(0, str(REPO))
 
 from scripts.clean_ellipsis_fr import clean_body  # noqa: E402
 
-COMBINED = REPO / "combined_fr.txt"
+COMBINED = REPO / "languages/fr/combined_fr.txt"
 R09_COMMIT = "d1aaa6f"
 STRAIGHT = '"'  # U+0022 — the decoded ex-ellipsis byte 0xB0
 # The ellipsis pause is restored as the raw font glyph byte 0xB0 (renders as
@@ -89,7 +89,7 @@ def _legacy_ellipsis(text: str) -> str:
 def load_r09_pairs() -> dict[str, tuple[str, str]]:
     """Return {offset_lower: (before_with_quotes, after_deleted)} from R-09."""
     diff = subprocess.run(
-        ["git", "show", R09_COMMIT, "--", "combined_fr.txt"],
+        ["git", "show", R09_COMMIT, "--", "languages/fr/combined_fr.txt"],
         cwd=REPO, capture_output=True, text=True, check=True,
     ).stdout.splitlines()
     removed: dict[str, str] = {}

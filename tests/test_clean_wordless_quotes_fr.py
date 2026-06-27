@@ -13,7 +13,7 @@ import pytest
 
 REPO = Path(__file__).resolve().parent.parent
 SCRIPT = REPO / "scripts" / "clean_wordless_quotes_fr.py"
-COMBINED = REPO / "combined_fr.txt"
+COMBINED = REPO / "languages/fr/combined_fr.txt"
 ENGLISH_ROM = REPO / "input" / "roms" / "englishrom.gba"
 
 spec = importlib.util.spec_from_file_location("clean_wordless_quotes_fr", SCRIPT)

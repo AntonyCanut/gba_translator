@@ -72,7 +72,7 @@ def transform_line(line: str) -> str:
 
 def main() -> int:
     ap = argparse.ArgumentParser(description=__doc__)
-    ap.add_argument('path', nargs='?', default='combined_fr.txt')
+    ap.add_argument('path', nargs='?', default="languages/fr/combined_fr.txt")
     ap.add_argument('--apply', action='store_true',
                     help='écrit les modifications (sinon dry-run + diff)')
     ap.add_argument('--max-show', type=int, default=0,

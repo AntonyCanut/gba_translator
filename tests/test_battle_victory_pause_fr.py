@@ -54,7 +54,7 @@ Run standalone:  pytest tests/test_battle_victory_pause_fr.py -v
 import re
 from pathlib import Path
 
-COMBINED_FR = Path(__file__).resolve().parent.parent / "combined_fr.txt"
+COMBINED_FR = Path(__file__).resolve().parent.parent / "languages/fr/combined_fr.txt"
 _LINE_RE = re.compile(r"^0x([0-9A-Fa-f]+):\s?(.*)$")
 
 VICTORY_OFFSET = 0x3FD1C7

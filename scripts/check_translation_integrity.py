@@ -43,7 +43,7 @@ from typing import Dict, List, Optional
 # Format d'une ligne : « 0x<hex>: <texte FR> » (identique à apply_combined_fr.py).
 LINE_RE = re.compile(r"^\s*0x([0-9A-Fa-f]+)\s*:\s*(.*)$")
 
-DEFAULT_COMBINED = Path(__file__).resolve().parents[1] / "combined_fr.txt"
+DEFAULT_COMBINED = Path(__file__).resolve().parents[1] / "languages/fr/combined_fr.txt"
 
 
 @dataclass(frozen=True)

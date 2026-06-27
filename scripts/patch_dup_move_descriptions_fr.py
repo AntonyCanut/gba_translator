@@ -59,7 +59,7 @@ POOL_HI = 0x0048A000
 OVERFLOW_THRESHOLD = 160
 # Window decoded to decide whether an (unterminated) target is real French text.
 TEXT_WINDOW = 110
-DEFAULT_COMBINED = Path(__file__).resolve().parent.parent / "combined_fr.txt"
+DEFAULT_COMBINED = Path(__file__).resolve().parent.parent / "languages/fr/combined_fr.txt"
 
 _OFFSET_LINE = re.compile(r"^0x([0-9A-Fa-f]+):\s?(.*)$")
 

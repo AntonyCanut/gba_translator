@@ -31,7 +31,7 @@ def test_french_is_complete_and_dedicated(registry):
     assert fr.is_complete
     assert fr.is_dedicated
     assert fr.build == "dedicated"
-    assert fr.combined == "combined_fr.txt"
+    assert fr.combined == "languages/fr/combined_fr.txt"
     assert fr.output_rom == "GenedRom-fr.gba"
     # FR must keep its full proven post-build patch sequence documented.
     assert len(fr.patches) >= 25

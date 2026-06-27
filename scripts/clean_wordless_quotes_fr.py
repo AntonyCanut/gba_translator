@@ -55,7 +55,7 @@ sys.path.insert(0, str(REPO))
 
 from src.core.text_codec import TextDecoder  # noqa: E402
 
-COMBINED = REPO / "combined_fr.txt"
+COMBINED = REPO / "languages/fr/combined_fr.txt"
 ENGLISH_ROM = REPO / "input" / "roms" / "englishrom.gba"
 
 STRAIGHT = '"'  # U+0022

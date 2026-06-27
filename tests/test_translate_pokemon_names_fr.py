@@ -168,7 +168,7 @@ def test_process_translates_and_reports_alert():
 
 # --- end-to-end guard on the real, applied combined_fr.txt -----------------
 
-COMBINED = REPO / "combined_fr.txt"
+COMBINED = REPO / "languages/fr/combined_fr.txt"
 
 
 def test_applied_combined_is_idempotent_and_alert_free():

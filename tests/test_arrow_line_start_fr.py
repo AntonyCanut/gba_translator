@@ -24,7 +24,7 @@ from pathlib import Path
 from scripts import audit_arrow_line_start_fr as audit
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
-COMBINED = REPO_ROOT / "combined_fr.txt"
+COMBINED = REPO_ROOT / "languages/fr/combined_fr.txt"
 ENGLISH_ROM = REPO_ROOT / "input/roms/englishrom.gba"
 
 # Panels B-74 missed and this ticket fixed — must now be arrow-clean.

@@ -159,7 +159,7 @@ def main() -> int:
     parser.add_argument(
         '--combined',
         type=Path,
-        default=Path('combined_fr.txt'),
+        default=Path('languages/fr/combined_fr.txt'),
         help='Path to combined_fr.txt',
     )
     parser.add_argument(
