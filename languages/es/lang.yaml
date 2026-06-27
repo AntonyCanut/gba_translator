@@ -1,0 +1,22 @@
+# Spanish language descriptor — Pokémon Unbound ES (reference ROM)
+#
+# This is a REFERENCE language extracted from the community Spanish ROM.
+# combined_es.txt is an extraction at every offset present in combined_fr.txt.
+# The Spanish ROM is a community translation; some strings remain in English.
+#
+# Regenerate:
+#   python3 scripts/extract_combined_rom.py \
+#       --rom input/roms/spanishrom.gba \
+#       --ref languages/fr/combined_fr.txt \
+#       --out languages/es/combined_es.txt --lang ES
+code: es
+name: Spanish
+native_name: Español
+status: reference            # reference (community translation, not maintained here)
+build: none                  # no build target — reference file only
+
+combined: languages/es/combined_es.txt
+output_rom: ~                # no output ROM
+version_label: ES.community
+
+font_glyphs: "áéíóúüñÁÉÍÓÚÜÑ¡¿"
