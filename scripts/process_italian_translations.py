@@ -1,18 +1,19 @@
 #!/usr/bin/env python3
-"""Process Italian translations JSON → combined_it.txt with smart diffing.
+"""Process Italian translations JSON → combined_it.txt with smart merging.
 
 Usage:
-    # First import: convert JSON to combined_it.txt
-    python3 scripts/process_italian_translations.py Italian_Translations.json --output languages/it/combined_it.txt
+    # Import / update (always merges with existing file if present)
+    python3 scripts/process_italian_translations.py Italian_Translations_v2.json
 
-    # Update with new JSON: diff and merge smart updates
-    python3 scripts/process_italian_translations.py Italian_Translations_v2.json --compare languages/it/combined_it.txt --output languages/it/combined_it.txt --show-diff
+    # With diff display
+    python3 scripts/process_italian_translations.py Italian_Translations_v2.json --compare languages/it/combined_it.txt --show-diff
 
 Features:
     - Converts Italian translation JSON to CFRU combined_<code>.txt format
+    - Merges with existing combined_it.txt: existing entries not in JSON are preserved
+    - JSON entries override existing entries for the same offset
     - Filters out unchanged entries (identical to English original)
     - Removes corrupted script/binary entries
-    - Intelligently diffs old vs new to show only actual translation updates
     - Preserves control codes, accents, and escape sequences
     - Handles duplicate offsets (last entry wins, case-insensitive)
 """
@@ -175,10 +176,28 @@ def main():
                     print(f"       before: {old_text[:50]}...")
                     print(f"       after:  {new_text[:50]}...")
 
-    # Write output
-    print(f"\n✍️  Writing {args.output}...")
+    # Merge with existing combined file when output already exists
+    # Existing entries not present in the JSON are preserved (new JSON overrides on conflict)
     output_file = args.output
     output_file.parent.mkdir(parents=True, exist_ok=True)
+
+    if output_file.exists():
+        existing = read_combined(output_file)
+        before_count = len(existing)
+        # Merge: existing baseline, JSON entries override
+        merged = {**existing, **entries}
+        preserved = len(merged) - len(entries)
+        added_from_existing = len(merged) - len(entries)
+        print(f"\n🔀 Merging with existing {output_file.name}...")
+        print(f"   Existing entries: {before_count}")
+        print(f"   From JSON: {len(entries)}")
+        only_in_existing = len([o for o in existing if o not in entries])
+        print(f"   Kept from existing (not in JSON): {only_in_existing}")
+        print(f"   Total after merge: {len(merged)}")
+        entries = merged
+
+    # Write output
+    print(f"\n✍️  Writing {output_file}...")
 
     # Build header comment
     header_lines = [
@@ -190,15 +209,9 @@ def main():
         "# Offsets absent from this file keep their English text.",
         "# Last entry wins for a duplicated offset (case-insensitive).",
         "#",
+        f"# Updated from {args.json_file.name}",
+        "#",
     ]
-
-    # Merge with existing comments if updating
-    if args.compare and args.compare.exists():
-        header_lines.append(f"# Updated from {args.json_file.name}")
-    else:
-        header_lines.append(f"# Generated from {args.json_file.name}")
-
-    header_lines.append("#")
 
     # Write header + entries
     with open(output_file, 'w', encoding='utf-8') as f:
