@@ -3,7 +3,7 @@
 
 This is the regression guard for the version-display feature fixed in B-19.
 It reads back the **NOT FOR SALE** intro screen of a ROM and proves that the
-version band literally spells ``FR.2.0.<build_number>`` — independently of the
+version band literally spells ``FR.2.1.<build_number>`` — independently of the
 code that wrote it (a blind glyph decoder, not a byte comparison against the
 renderer).  It also checks the GBA header software-version byte (0xBC).
 
@@ -20,7 +20,7 @@ Usage::
     python3 scripts/verify_version_display.py \\
         --rom output/roms/GenedRom-fr.gba --build-number 42
 
-Exit code 0 means the displayed version matches ``FR.2.0.<build_number>``.
+Exit code 0 means the displayed version matches ``FR.2.1.<build_number>``.
 A non-zero exit code (with a diagnostic on stderr) means the ROM would *not*
 show the expected version — this is what fails the CI release pipeline.
 """

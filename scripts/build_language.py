@@ -201,8 +201,8 @@ def apply_patches(config, out_rom: Path, translation_json: Path | None = None,
     not provided (e.g. when called from tests without a full build).
 
     ``build_number`` feeds the ``version`` step, which stamps the in-game
-    NOT FOR SALE version display with ``<CODE>.2.0.<build_number>`` (e.g.
-    ``IT.2.0.42`` for the Italian build).
+    NOT FOR SALE version display with ``<CODE>.2.1.<build_number>`` (e.g.
+    ``IT.2.1.42`` for the Italian build).
     """
     combined = config.combined_path(REPO_ROOT)
     for step in config.patches:
@@ -257,7 +257,7 @@ def apply_patches(config, out_rom: Path, translation_json: Path | None = None,
 
         elif step == "version":
             # Stamp the in-game NOT FOR SALE screen with this language's tag,
-            # e.g. IT.2.0.<build> for Italian — so the running build advertises
+            # e.g. IT.2.1.<build> for Italian — so the running build advertises
             # which language it is. patch_version_fr.py is language-agnostic via
             # its --lang-code flag.
             run([

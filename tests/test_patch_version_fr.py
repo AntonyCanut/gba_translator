@@ -81,7 +81,7 @@ class TestCharPixels(unittest.TestCase):
                     self.assertIn(v, (0, 1), f"char '{ch}'[{ri}][{ci}] = {v}")
 
     def test_required_chars_present(self):
-        # Every character that can appear in "FR.2.0.<build_number>".
+        # Every character that can appear in "FR.2.1.<build_number>".
         for ch in "FR.0123456789 ":
             self.assertIn(ch, _CHAR_PIXELS, f"missing char '{ch}'")
 
@@ -110,19 +110,19 @@ class TestCharPixels(unittest.TestCase):
 
 class TestVersionString(unittest.TestCase):
     def test_format(self):
-        self.assertEqual(version_string(5), "FR.2.0.5")
-        self.assertEqual(version_string(42), "FR.2.0.42")
-        self.assertEqual(version_string(0), "FR.2.0.0")
+        self.assertEqual(version_string(5), "FR.2.1.5")
+        self.assertEqual(version_string(42), "FR.2.1.42")
+        self.assertEqual(version_string(0), "FR.2.1.0")
 
     def test_default_is_french(self):
         # Omitting lang_code must keep the proven FR behaviour byte-for-byte.
         self.assertEqual(version_string(42), version_string(42, "fr"))
 
     def test_language_prefix(self):
-        self.assertEqual(version_string(5, "it"), "IT.2.0.5")
-        self.assertEqual(version_string(42, "de"), "DE.2.0.42")
+        self.assertEqual(version_string(5, "it"), "IT.2.1.5")
+        self.assertEqual(version_string(42, "de"), "DE.2.1.42")
         # Codes are upper-cased so the descriptor's lowercase code works.
-        self.assertEqual(version_string(7, "IT"), "IT.2.0.7")
+        self.assertEqual(version_string(7, "IT"), "IT.2.1.7")
 
     def test_fits_band_width(self):
         # The band is _VER_GRID_COLS * 8 px wide; 4 px per glyph.
@@ -140,7 +140,7 @@ class TestVersionString(unittest.TestCase):
 
 class TestRenderBand(unittest.TestCase):
     def test_band_dimensions(self):
-        band = _render_version_band("FR.2.0.5")
+        band = _render_version_band("FR.2.1.5")
         self.assertEqual(len(band), _VER_GRID_ROWS * 8)
         self.assertEqual(len(band[0]), _VER_GRID_COLS * 8)
 
@@ -150,14 +150,14 @@ class TestRenderBand(unittest.TestCase):
         self.assertTrue(all(p == _VER_BG for row in band for p in row))
 
     def test_text_paints_fg_pixels(self):
-        band = _render_version_band("FR.2.0.5")
+        band = _render_version_band("FR.2.1.5")
         fg_pixels = sum(1 for row in band for p in row if p == _VER_FG)
         self.assertGreater(fg_pixels, 0)
         # Only the two configured indices should ever appear.
         self.assertTrue(all(p in (_VER_FG, _VER_BG) for row in band for p in row))
 
     def test_blit_roundtrips_through_4bpp_tiles(self):
-        band = _render_version_band("FR.2.0.5")
+        band = _render_version_band("FR.2.1.5")
         n_tiles = _VER_GRID_COLS * _VER_GRID_ROWS
         tileset = bytearray(32 * (_VER_TILE_START + n_tiles))
         _blit_band_to_tiles(tileset, band)

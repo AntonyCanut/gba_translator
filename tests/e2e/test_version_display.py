@@ -1,15 +1,15 @@
-"""E2E: in-game version display ("FR.2.0.<build>") on the intro screens.
+"""E2E: in-game version display ("FR.2.1.<build>") on the intro screens.
 
 Builds the version display the way the release pipeline does — by running the
 production ``patch_version_fr`` over the real English ROM — and then reads the
 result back with the *independent* blind decoder in
 ``scripts.verify_version_display`` to prove the **NOT FOR SALE** screen literally
-spells ``FR.2.0.<build_number>`` and the header software-version byte matches.
+spells ``FR.2.1.<build_number>`` and the header software-version byte matches.
 
 Note on the title screen
 ------------------------
 The ticket asked to verify "the title screen and NOT FOR SALE screen both
-display FR.2.0.<build>".  The dependency B-19 established that Pokémon Unbound's
+display FR.2.1.<build>".  The dependency B-19 established that Pokémon Unbound's
 real title screen (PRESS START) shows **no** version string at all — the only
 in-game version display is on the NOT FOR SALE screen.  The old "title screen"
 pointers (0x1413AC / 0x1413B8) actually address the Game Corner slot machine,
@@ -62,7 +62,7 @@ def _build_versioned_rom(en_rom_bytes: bytes, build_number: int,
 
 @pytest.mark.rom
 class TestNotForSaleVersionDisplay:
-    """The NOT FOR SALE screen must display FR.2.0.<build_number>."""
+    """The NOT FOR SALE screen must display FR.2.1.<build_number>."""
 
     @pytest.mark.parametrize("build", _BUILD_NUMBERS)
     def test_screen_displays_expected_version(self, en_rom_bytes, build):
@@ -82,8 +82,8 @@ class TestNotForSaleVersionDisplay:
         a = decode_version_string(_build_versioned_rom(en_rom_bytes, 5))
         b = decode_version_string(_build_versioned_rom(en_rom_bytes, 8))
         assert a != b
-        assert a == "FR.2.0.5"
-        assert b == "FR.2.0.8"
+        assert a == "FR.2.1.5"
+        assert b == "FR.2.1.8"
 
 
 @pytest.mark.rom
@@ -98,7 +98,7 @@ class TestMultiLanguageVersionDisplay:
         rom = _build_versioned_rom(en_rom_bytes, build, lang)
         displayed = decode_version_string(rom)
         assert displayed == version_string(build, lang)
-        assert displayed.startswith(f"{prefix}.2.0.")
+        assert displayed.startswith(f"{prefix}.2.1.")
 
     @pytest.mark.parametrize("lang", ["it", "de"])
     def test_full_verification_passes_per_language(self, en_rom_bytes, lang):
@@ -126,7 +126,7 @@ class TestTitleScreenInvariant:
 
     def test_unpatched_en_rom_does_not_show_fr_version(self, en_rom_bytes):
         # Sanity: the stock EN ROM does not already spell an FR.2.0 string.
-        assert not decode_version_string(en_rom_bytes).startswith("FR.2.0.")
+        assert not decode_version_string(en_rom_bytes).startswith("FR.2.1.")
 
 
 @pytest.mark.rom
