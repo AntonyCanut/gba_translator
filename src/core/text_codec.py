@@ -97,6 +97,18 @@ FRENCH_EXTENDED_TABLE: Dict[str, int] = {
 
 POKEMON_TABLE.update(FRENCH_EXTENDED_TABLE)
 
+# German umlauts — assigned to free slots 0x60-0x65 by commit 2c97f4e.
+# Glyphs are drawn by scripts/patch_font_de.py (DE build only).
+# These entries must live in POKEMON_TABLE so skip_aliases can reach them;
+# ENCODE_ALIASES used to fold them to ASCII before table lookup (dead code).
+GERMAN_UMLAUT_TABLE: Dict[str, int] = {
+    'Ä': 0x60, 'Ö': 0x61, 'Ü': 0x62,
+    'ä': 0x63, 'ö': 0x64, 'ü': 0x65,
+}
+GERMAN_UMLAUT_CHARS: frozenset = frozenset(GERMAN_UMLAUT_TABLE)
+
+POKEMON_TABLE.update(GERMAN_UMLAUT_TABLE)
+
 # Spanish alias characters mapped to base punctuation.
 SPANISH_ALIASES = {
     '¡': '!',
@@ -104,6 +116,9 @@ SPANISH_ALIASES = {
 }
 
 # Characters not present in the ROM font. Normalize to safe ASCII.
+# ä ö ü Ä Ö Ü are listed here as ASCII fallbacks for FR/IT/ES (no glyphs).
+# For DE, pass skip_aliases=GERMAN_UMLAUT_CHARS to encode_pokemon so they
+# bypass these aliases and reach their POKEMON_TABLE slots 0x60-0x65.
 ENCODE_ALIASES = {
     'ä': 'a',
     'ö': 'o',
@@ -245,9 +260,10 @@ class TextEncoder:
         return bytes(encoded)
 
     @classmethod
-    def encode_pokemon(cls, text: str) -> bytes:
+    def encode_pokemon(cls, text: str, skip_aliases: frozenset = frozenset()) -> bytes:
         for src, dst in ENCODE_ALIASES.items():
-            text = text.replace(src, dst)
+            if src not in skip_aliases:
+                text = text.replace(src, dst)
         text = _resolve_straight_double_quotes(text)
 
         encoded = []
@@ -285,11 +301,11 @@ class TextEncoder:
         return bytes(encoded)
 
     @classmethod
-    def encode(cls, text: str, encoding: str) -> bytes:
+    def encode(cls, text: str, encoding: str, skip_aliases: frozenset = frozenset()) -> bytes:
         if encoding == 'ascii':
             return cls.encode_ascii(text)
         if encoding == 'pokemon':
-            return cls.encode_pokemon(text)
+            return cls.encode_pokemon(text, skip_aliases=skip_aliases)
         raise ValueError(f"Unknown encoding: {encoding}")
 
 
