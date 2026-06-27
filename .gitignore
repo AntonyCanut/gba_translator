@@ -11,6 +11,8 @@ output/extracted/extracted_texts/
 output/extracted
 output/reports/
 output/proofs/
+# regenerable: scripts/audit_translation_coverage.py
+output/audit/
 
 # Playwright
 test-results/
