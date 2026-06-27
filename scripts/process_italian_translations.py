@@ -64,11 +64,25 @@ def parse_json(json_file: Path) -> dict[str, str]:
     return entries, skipped
 
 
+def escape_text(text: str) -> str:
+    """Encode in-game line breaks as the literal ``\\n`` escape.
+
+    The build parser (apply_combined_fr.py) reads the combined file line by line
+    and silently drops any physical line that is not ``0x<offset>: <text>``. A
+    JSON ``translated`` value carrying *real* newline characters would therefore
+    spill across several physical lines and lose everything after the first one
+    (truncating multi-line strings — e.g. the game intro). Each entry must stay
+    on a single physical line with line breaks written as the two-character
+    escape ``\\n``. Values that already use the ``\\n`` escape are unaffected.
+    """
+    return text.replace("\r\n", "\n").replace("\r", "\n").replace("\n", "\\n")
+
+
 def format_entries(entries: dict[str, str]) -> list[str]:
     """Format entries as combined_it.txt lines, sorted by offset."""
     lines = []
     for offset in sorted(entries.keys()):
-        text = entries[offset]
+        text = escape_text(entries[offset])
         lines.append(f"{offset}: {text}")
     return lines
 
