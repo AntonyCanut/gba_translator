@@ -48,6 +48,7 @@ PATCH_STATUS_BADGES_SCRIPT := scripts/patch_status_badges_fr.py
 PATCH_TYPE_ICONS_SCRIPT := scripts/patch_type_icons_fr.py
 PATCH_SHOP_FR_SCRIPT := scripts/patch_shop_fr.py
 PATCH_MISSION_DESC_FR_SCRIPT := scripts/patch_mission_descriptions_fr.py
+PATCH_ZONE_NAMES_FR_SCRIPT := scripts/patch_zone_names_fr.py
 PATCH_GENDERED_BUFFERS_SCRIPT := scripts/patch_gendered_buffers_fr.py
 PATCH_BATTLE_STRING_TEMPLATES_SCRIPT := scripts/patch_battle_string_templates_fr.py
 PATCH_BATTLE_RECALL_STRINGS_SCRIPT := scripts/patch_battle_recall_strings_fr.py
@@ -216,6 +217,11 @@ build-fr: $(ENGLISH_EXTRACT) $(SPANISH_EXTRACT) $(BUILD_SCRIPT)
 	@$(PYTHON) $(PATCH_TYPE_ICONS_SCRIPT) --rom $(FR_BUILD)
 	@$(PYTHON) $(PATCH_SHOP_FR_SCRIPT) --rom $(FR_BUILD)
 	@$(PYTHON) $(PATCH_MISSION_DESC_FR_SCRIPT) \
+		--rom $(FR_BUILD) \
+		--source $(ENGLISH_ROM) \
+		--combined languages/fr/combined_fr.txt \
+		--reference-rom $(SPANISH_ROM)
+	@$(PYTHON) $(PATCH_ZONE_NAMES_FR_SCRIPT) \
 		--rom $(FR_BUILD) \
 		--source $(ENGLISH_ROM) \
 		--combined languages/fr/combined_fr.txt \
