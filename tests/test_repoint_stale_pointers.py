@@ -151,6 +151,35 @@ class RepointStalePointersTests(unittest.TestCase):
             struct.unpack_from('<I', rom, loc)[0], GBA_BASE + original
         )
 
+    def test_unaligned_location_is_vetoed(self):
+        # A real text pointer lives in a pointer table or a Thumb/ARM LDR
+        # literal pool — always 4-byte aligned. The `--scan-all-pointers`
+        # extraction also records unaligned 4-byte windows that merely *read*
+        # as an address but are mid-code/mid-data bytes. Re-writing those
+        # corrupts code/data: on the Italian build every such write was
+        # unaligned and one froze the naming screen. Unaligned stale locations
+        # must be left alone.
+        rom = _rom()
+        original = 0x40
+        relocated = 0x100
+        english = b'\xbb\xbc\xff'
+        rom[original:original + 3] = english
+        rom[relocated:relocated + 3] = b'\xbd\xbe\xff'
+        struct.pack_into('<I', rom, 0x10, GBA_BASE + relocated)
+        loc = 0x21  # deliberately unaligned
+        struct.pack_into('<I', rom, loc, GBA_BASE + original)
+
+        fixed = repoint(
+            rom,
+            [self._entry(original, english, [0x10, loc])],
+            {original},
+        )
+
+        self.assertEqual(fixed, 0)
+        self.assertEqual(
+            struct.unpack_from('<I', rom, loc)[0], GBA_BASE + original
+        )
+
     def test_location_inside_translated_text_is_vetoed(self):
         # A "pointer" window overlapping a translated string's bytes is
         # really text that coincidentally decodes to the address — writing

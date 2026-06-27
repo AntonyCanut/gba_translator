@@ -183,6 +183,17 @@ def repoint(
         for loc in stale:
             if in_translated_text(loc):
                 continue
+            # A genuine text pointer lives in a pointer table or an ARM/Thumb
+            # LDR literal pool — both are 4-byte aligned. The byte-by-byte
+            # `--scan-all-pointers` extraction also records unaligned 4-byte
+            # windows that merely *read* as an address but are really mid-code
+            # or mid-data bytes. Re-writing those corrupts executable code or
+            # game data: on the Italian build all 29 such writes were unaligned
+            # false positives, and one clobbered the naming-screen setup so the
+            # game froze opening the keyboard right after character creation.
+            # Requiring alignment keeps every real repoint while dropping these.
+            if loc % 4 != 0:
+                continue
             if (
                 loc in PROTECTED_SCRIPT_OFFSETS
                 or _is_setflag_chain(veto_rom, loc)
