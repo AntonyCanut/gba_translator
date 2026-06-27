@@ -59,6 +59,14 @@ PATCH_STATUS_ABBREVS_SCRIPT = REPO_ROOT / "scripts/patch_status_abbrevs_fr.py"
 PATCH_TM_ITEM_DESC_SCRIPT = REPO_ROOT / "scripts/patch_tm_item_descriptions_fr.py"
 PATCH_MOVE_DESC_SCRIPT = REPO_ROOT / "scripts/patch_move_descriptions_fr.py"
 
+# Diff + trilingual-CSV generation (needed when output/translation/ is empty).
+DIFF_SCRIPT = REPO_ROOT / "src/analyzers/11_pointer_text_diff.py"
+TRILINGUAL_SCRIPT = REPO_ROOT / "src/translators/28_export_trilingual_csv.py"
+DIFF_DIR = REPO_ROOT / "output/differences"
+DIFF_REPORT = DIFF_DIR / "pointer_text_differences.json"
+PAIRS_REPORT = DIFF_DIR / "pointer_translation_pairs.json"
+OFFSET_MAP = DIFF_DIR / "pointer_offset_map.json"
+
 
 def run(cmd: list, *, cwd: Path = REPO_ROOT) -> None:
     printable = " ".join(str(part) for part in cmd)
@@ -84,15 +92,41 @@ def ensure_extractions() -> None:
 
 
 def _latest_base_csv() -> Path:
+    """Retourne le CSV trilingue le plus récent, en le générant si nécessaire."""
+    candidates = sorted(
+        TRANSLATION_DIR.glob("*_trilingual_translation.csv"),
+        key=lambda p: p.stat().st_mtime,
+    )
+    if candidates:
+        return candidates[-1]
+
+    # Aucun CSV trilingue — le générer automatiquement.
+    if not DIFF_REPORT.exists():
+        if not ENGLISH_EXTRACT.exists() or not SPANISH_EXTRACT.exists():
+            raise SystemExit(
+                "Impossible de générer le CSV trilingue : fichiers d'extraction manquants. "
+                "Relancez `make build-it` depuis zéro (les ROMs sources sont nécessaires)."
+            )
+        DIFF_DIR.mkdir(parents=True, exist_ok=True)
+        run([
+            PYTHON, DIFF_SCRIPT,
+            "--english", ENGLISH_EXTRACT,
+            "--spanish", SPANISH_EXTRACT,
+            "--diff-out", DIFF_REPORT,
+            "--pairs-out", PAIRS_REPORT,
+            "--map-out", OFFSET_MAP,
+        ])
+
+    TRANSLATION_DIR.mkdir(parents=True, exist_ok=True)
+    # Passer explicitement l'extraction EN pour éviter la dépendance à *_diff_with_padding.json.
+    run([PYTHON, TRILINGUAL_SCRIPT, "--english", ENGLISH_EXTRACT])
+
     candidates = sorted(
         TRANSLATION_DIR.glob("*_trilingual_translation.csv"),
         key=lambda p: p.stat().st_mtime,
     )
     if not candidates:
-        raise SystemExit(
-            "No trilingual base CSV found in output/translation/. "
-            "Run `make trilingual-csv` first."
-        )
+        raise SystemExit("La génération du CSV trilingue a échoué : aucun fichier produit.")
     return candidates[-1]
 
 
