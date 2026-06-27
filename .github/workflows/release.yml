@@ -24,7 +24,7 @@ jobs:
       - name: Install dependencies
         run: pip install -e ".[dev]"
 
-      # ── French (dedicated byte-perfect recipe) ──────────────────────────────
+      # ── French (dedicated byte-perfect recipe) — mandatory ──────────────────
       - name: Build French ROM
         run: make build-fr BUILD_NUMBER=${{ github.run_number }}
 
@@ -37,35 +37,57 @@ jobs:
             --lang-code fr \
             --build-number ${{ github.run_number }}
 
-      # ── Italian (generic driver) ────────────────────────────────────────────
+      # ── Italian (generic driver) — best-effort so a transient IT problem ────
+      # never drops the proven FR release. A failure here is surfaced loudly at
+      # the end of the job, after FR has shipped.
       - name: Build Italian ROM
+        id: build_it
+        continue-on-error: true
         run: make build-it BUILD_NUMBER=${{ github.run_number }}
 
       - name: Verify IT version display
-        # The Italian build must advertise itself: the NOT FOR SALE screen
-        # shows IT.2.0.<run_number> (not FR) so players can tell the builds apart.
+        id: verify_it
+        if: steps.build_it.outcome == 'success'
+        continue-on-error: true
         run: |
           python3 scripts/verify_version_display.py \
             --rom output/roms/GenedRom-it.gba \
             --lang-code it \
             --build-number ${{ github.run_number }}
 
-      # ── Publish both ROMs in a single release ───────────────────────────────
+      # ── Publish: FR always, IT when it built & verified ─────────────────────
       - name: Publish release
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          IT_OK: ${{ steps.build_it.outcome == 'success' && steps.verify_it.outcome == 'success' }}
         run: |
           SHA=$(git rev-parse --short HEAD)
           MSG=$(git log -1 --pretty=%s)
-          NOTES=$(printf '**Commit :** `%s` — %s\n\nBuildé automatiquement depuis la branche `%s` (build #%s).\n\n- 🇫🇷 `pokemon_unbound_fr.gba` — FR.2.0.%s\n- 🇮🇹 `pokemon_unbound_it.gba` — IT.2.0.%s' \
-            "${SHA}" "${MSG}" "${GITHUB_REF_NAME}" "${{ github.run_number }}" "${{ github.run_number }}" "${{ github.run_number }}")
+          RUN=${{ github.run_number }}
+
+          ASSETS=( "output/roms/GenedRom-fr.gba#pokemon_unbound_fr.gba" )
+          NOTES=$(printf '**Commit :** `%s` — %s\n\nBuildé automatiquement depuis la branche `%s` (build #%s).\n\n- 🇫🇷 `pokemon_unbound_fr.gba` — FR.2.0.%s' \
+            "${SHA}" "${MSG}" "${GITHUB_REF_NAME}" "${RUN}" "${RUN}")
+
+          if [ "${IT_OK}" = "true" ] && [ -f output/roms/GenedRom-it.gba ]; then
+            ASSETS+=( "output/roms/GenedRom-it.gba#pokemon_unbound_it.gba" )
+            NOTES="${NOTES}"$(printf '\n- 🇮🇹 `pokemon_unbound_it.gba` — IT.2.0.%s' "${RUN}")
+          else
+            NOTES="${NOTES}"$(printf '\n- 🇮🇹 build italienne indisponible pour ce build.')
+          fi
 
           # Suppress error if 'latest' release/tag doesn't exist yet
           gh release delete latest --yes --cleanup-tag 2>/dev/null || true
 
           gh release create latest \
-            --title "FR/IT.2.0.${{ github.run_number }}" \
+            --title "Unbound 2.0.${RUN}" \
             --notes "${NOTES}" \
             --prerelease \
-            "output/roms/GenedRom-fr.gba#pokemon_unbound_fr.gba" \
-            "output/roms/GenedRom-it.gba#pokemon_unbound_it.gba"
+            "${ASSETS[@]}"
+
+      # ── Surface an IT failure AFTER FR has shipped ──────────────────────────
+      - name: Fail if Italian ROM was not delivered
+        if: steps.build_it.outcome != 'success' || steps.verify_it.outcome != 'success'
+        run: |
+          echo "::error::Italian ROM build/verify failed — FR was still released, but IT was skipped."
+          exit 1
