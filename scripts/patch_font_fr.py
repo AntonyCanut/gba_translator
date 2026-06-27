@@ -18,12 +18,6 @@ CP_ACUTE_A = 0x17
 CP_GRAVE_A = 0x16
 CP_C = 0xD7
 CP_C_CEDILLA = 0x19
-# ü (0x65) is now in the charmap; build it from u + ë-vs-e diaeresis so FR
-# text that uses ü renders correctly instead of falling back to the empty slot.
-CP_U_LC = 0xE9
-CP_E_LC = 0xD9
-CP_E_LC_DIAR = 0x1D  # ë
-CP_U_UMLAUT_LC = 0x65  # ü
 
 WIDTH_TABLE_OFFSETS = [
     0x1FB100,
@@ -274,36 +268,6 @@ def build_grave_a(font: bytes) -> bytes:
     return pixels_to_tile(out)
 
 
-def build_u_umlaut(font: bytes) -> bytes:
-    """Build ü from u + diaeresis extracted from ë vs e."""
-    u_pix = glyph_pixels(font, CP_U_LC)
-    e_diar = glyph_pixels(font, CP_E_LC_DIAR)
-    e_base = glyph_pixels(font, CP_E_LC)
-
-    dots = [(x, y, e_diar[y * 8 + x])
-            for y in range(8) for x in range(8)
-            if e_diar[y * 8 + x] != 0 and e_base[y * 8 + x] == 0]
-    if not dots:
-        return pixels_to_tile(u_pix)
-
-    min_dot_y = min(y for _, y, _ in dots)
-    dots_norm = [(x, y - min_dot_y, v) for x, y, v in dots]
-    dot_rows = max(y for _, y, _ in dots_norm) + 1
-
-    u_top = next((y for y in range(8) if any(u_pix[y * 8 + x] for x in range(8))), 8)
-    shift = max(0, min(2, dot_rows - u_top))
-
-    out = [0] * 64
-    for y in range(8 - shift):
-        for x in range(8):
-            out[(y + shift) * 8 + x] = u_pix[y * 8 + x]
-    for x, y, val in dots_norm:
-        if y < 8:
-            out[y * 8 + x] = val
-
-    return pixels_to_tile(out)
-
-
 def build_cedilla(font: bytes, fallback_mask: List[Tuple[int, int]]) -> bytes:
     base = glyph_pixels(font, CP_C)
     cedilla = glyph_pixels(font, CP_C_CEDILLA)
@@ -331,10 +295,6 @@ def patch_width_tables(rom: bytearray) -> int:
             continue
         if rom[offset + CP_GRAVE_A] != a_width:
             rom[offset + CP_GRAVE_A] = a_width
-            patched += 1
-        u_width = rom[offset + CP_U_LC]
-        if u_width != 0 and rom[offset + CP_U_UMLAUT_LC] != u_width:
-            rom[offset + CP_U_UMLAUT_LC] = u_width
             patched += 1
     return patched
 
@@ -379,9 +339,6 @@ def apply_patches(rom: bytearray) -> Tuple[int, int, int]:
         cedilla_tile = build_cedilla(original, fallback_mask)
         if font[CP_C_CEDILLA * GLYPH_SIZE: (CP_C_CEDILLA + 1) * GLYPH_SIZE] != cedilla_tile:
             font[CP_C_CEDILLA * GLYPH_SIZE: (CP_C_CEDILLA + 1) * GLYPH_SIZE] = cedilla_tile
-        u_umlaut_tile = build_u_umlaut(original)
-        if font[CP_U_UMLAUT_LC * GLYPH_SIZE: (CP_U_UMLAUT_LC + 1) * GLYPH_SIZE] != u_umlaut_tile:
-            font[CP_U_UMLAUT_LC * GLYPH_SIZE: (CP_U_UMLAUT_LC + 1) * GLYPH_SIZE] = u_umlaut_tile
         if bytes(font) == original:
             continue
 
