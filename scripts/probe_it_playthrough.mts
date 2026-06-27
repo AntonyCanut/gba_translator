@@ -89,9 +89,9 @@ async function main() {
   await c.pressKey('START', 4); await adv(c, 90);
   await c.pressKey('A', 4); await adv(c, 90);
   let lastHash = '', same = 0;
-  for (let i = 0; i < 70; i++) {
+  for (let i = 0; i < 160; i++) {
     await c.pressKey('A', 4);
-    if (i % 4 === 3) await c.pressKey('START', 4); // confirm naming keyboard
+    if (i < 20 && i % 4 === 3) await c.pressKey('START', 4); // confirm naming keyboard (early only)
     if (!await adv(c, 40)) return finish(c, `intro-${i}`);
     await harvest(c, 'intro');
     const h = md5(await shot(c, `intro-${String(i).padStart(2, '0')}`));
@@ -102,18 +102,29 @@ async function main() {
   await shot(c, '01-after-intro');
 
   // ---- Explore overworld to trigger the first battle ----
-  const dirs = ['UP', 'DOWN', 'LEFT', 'RIGHT', 'UP', 'RIGHT', 'DOWN', 'LEFT'] as const;
+  // Persist in one direction for a stretch (real traversal), interacting with A,
+  // and rotate direction when the player position stops changing (blocked).
+  const dirs = ['DOWN', 'RIGHT', 'UP', 'LEFT'] as const;
   let battleReached = await inBattle(c);
+  let dirIdx = 0;
+  const playerPos = async () => { try { const s = await c.getState() as { playerX?: number; playerY?: number }; return `${s.playerX},${s.playerY}`; } catch { return ''; } };
+  let prevPos = await playerPos();
   lastHash = ''; same = 0;
-  for (let i = 0; i < 160 && !battleReached; i++) {
-    // advance any dialogue / interact
-    await c.pressKey('A', 4); if (!await adv(c, 18)) return finish(c, `ow-A-${i}`);
-    const dir = dirs[i % dirs.length];
-    for (let s = 0; s < 3; s++) { await c.pressKey(dir, 8); if (!await adv(c, 12)) return finish(c, `ow-${dir}-${i}`); }
-    if (i % 6 === 0) await harvest(c, 'overworld');
-    if (i % 8 === 0) {
+  for (let i = 0; i < 320 && !battleReached; i++) {
+    const dir = dirs[dirIdx % dirs.length];
+    for (let s = 0; s < 6 && !battleReached; s++) {
+      await c.pressKey(dir, 8); if (!await adv(c, 12)) return finish(c, `ow-${dir}-${i}`);
+      await c.pressKey('A', 4); if (!await adv(c, 14)) return finish(c, `ow-A-${i}`); // talk / advance
+      battleReached = await inBattle(c);
+    }
+    const pos = await playerPos();
+    if (pos === prevPos) dirIdx++; // blocked → turn
+    prevPos = pos;
+    if (i % 5 === 0) await harvest(c, 'overworld');
+    if (i % 6 === 0) {
       const h = md5(await shot(c, `ow-${String(i).padStart(3, '0')}`));
       if (h && h === lastHash) same++; else { same = 0; lastHash = h; }
+      if (same >= 30) { console.error(`overworld screen stable ${same}x — likely stuck/frozen at i=${i}`); break; }
     }
     battleReached = await inBattle(c);
   }
