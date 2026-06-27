@@ -116,8 +116,8 @@ def main():
     parser.add_argument(
         "--output",
         type=Path,
-        required=True,
-        help="Output combined_it.txt file"
+        default=Path("languages/it/combined_it.txt"),
+        help="Output file (default: languages/it/combined_it.txt)"
     )
     parser.add_argument(
         "--compare",
