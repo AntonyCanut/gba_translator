@@ -207,6 +207,56 @@ class TestNoPointerFallback(unittest.TestCase):
         self.assertEqual(entry["original_length"], 3)
 
 
+class TestDedicatedPatchExclusion(unittest.TestCase):
+    """Offsets owned by dedicated post-build patches must never reach the JSON.
+
+    The arrow-prefixed World-Map junction panels appear in the EN extraction as
+    1-byte strings, so prepare_fr_json used to emit them as too_long entries that
+    the generic builder relocated + re-wrapped — clobbering the byte-exact layout
+    that patch_worldmap_junction_panels_fr.py guarantees and breaking its verify.
+    """
+
+    # A real junction offset owned by patch_worldmap_junction_panels_fr.
+    JUNCTION_OFFSET = 0x1F726C0
+
+    def _en_json_with_arrow(self) -> dict:
+        # Extractor sees the leading arrow byte (0x79) as a 1-byte string.
+        return _en_extraction([
+            {"offset": 0x10, "byte_length": 5, "length": 5,
+             "encoding": "pokemon", "decoded_text": "Hello", "text": "Hello"},
+            {"offset": self.JUNCTION_OFFSET, "byte_length": 2, "length": 2,
+             "encoding": "pokemon", "decoded_text": "", "text": ""},
+        ])
+
+    def test_junction_offset_excluded_even_with_en_entry(self) -> None:
+        """A junction offset present in EN extraction must be left out entirely."""
+        combined = [
+            f"0x{self.JUNCTION_OFFSET:08X}: <0x79> Hauteurs Gelees, Ville Blizzard"
+            "\\n<0x7A> Bourg Cratere\\l<0x7C> Dresco",
+            "0x00000010: Bonjour",
+        ]
+        rom = _build_fake_rom({self.JUNCTION_OFFSET: b"\x79\xFF"})
+        result = _run_prepare(combined, self._en_json_with_arrow(), rom)
+        offsets = {t["offset"] for t in result["translations"]}
+        self.assertNotIn(
+            self.JUNCTION_OFFSET, offsets,
+            "junction-panel offset must be excluded so its dedicated patch owns it",
+        )
+        self.assertIn(0x10, offsets, "unrelated entries must still be produced")
+
+    def test_exclusion_set_matches_patch_targets(self) -> None:
+        """The exclusion set must stay in sync with the junction patch's TARGETS."""
+        import scripts.prepare_fr_json as module
+        import importlib
+        importlib.reload(module)
+        sys.path.insert(0, str(ROOT / "scripts"))
+        from patch_worldmap_junction_panels_fr import TARGETS
+        self.assertEqual(
+            set(module.DEDICATED_PATCH_OFFSETS), set(TARGETS),
+            "DEDICATED_PATCH_OFFSETS must equal the junction patch TARGETS",
+        )
+
+
 class TestPrepareFrNoiPipeline(unittest.TestCase):
     """Makefile wiring: prepare-fr must pass --english-rom."""
 

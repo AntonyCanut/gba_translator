@@ -24,9 +24,27 @@ from pathlib import Path
 from typing import Dict, Optional
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
+sys.path.insert(0, str(Path(__file__).resolve().parent))  # scripts/ for sibling import
 
 from src.core.text_codec import TextDecoder, TextEncoder
 from src.core.text_converter import JSONToCSVConverter
+
+# Offsets owned by dedicated, byte-exact post-build patches that the generic
+# builder must NOT touch. The arrow-prefixed World-Map junction panels are seen
+# by the extractor as 1-byte strings (leading 0x79–0x7C arrow), so they arrive
+# here with original_length==1 and a much longer FR → too_long → the generic
+# relocator moves *and* reflows them, destroying the arrow-at-line-start layout
+# and the contiguous fragments that patch_worldmap_junction_panels_fr.py
+# verifies. Leaving the EN original in place lets that patch relocate them
+# verbatim. Kept in sync by importing the patch's canonical TARGETS.
+try:
+    from patch_worldmap_junction_panels_fr import TARGETS as _JUNCTION_TARGETS
+    DEDICATED_PATCH_OFFSETS = frozenset(_JUNCTION_TARGETS)
+except Exception:  # pragma: no cover - import fallback keeps the build resilient
+    DEDICATED_PATCH_OFFSETS = frozenset({
+        0x1F72353, 0x1F72691, 0x1F726C0, 0x1F726FC, 0x1F7276E,
+        0x1F727A7, 0x1F727D0, 0x1F72808, 0x1F72735,
+    })
 
 # Identical to apply_combined_fr.py so both scripts treat the source file the same way
 LINE_RE = re.compile(r'^\s*0x([0-9A-Fa-f]+)\s*:\s*(.*)$')
@@ -151,8 +169,14 @@ def main() -> int:
     categorizer = JSONToCSVConverter()
     translations = []
     missing_en = 0
+    excluded_dedicated = 0
 
     for offset in sorted(fr_map):
+        if offset in DEDICATED_PATCH_OFFSETS:
+            # Owned by a dedicated post-build patch — leave the EN original in
+            # place so the generic relocator does not re-wrap it.
+            excluded_dedicated += 1
+            continue
         fr_text = fr_map[offset]
         en_entry = en_map.get(offset)
         if not en_entry:
@@ -189,6 +213,8 @@ def main() -> int:
         rom_bytes = args.english_rom.read_bytes()
         rom_size = len(rom_bytes)
         for offset in sorted(fr_map):
+            if offset in DEDICATED_PATCH_OFFSETS:
+                continue
             if en_map.get(offset):
                 continue
             fr_text = fr_map[offset]
@@ -244,6 +270,8 @@ def main() -> int:
         json.dump(payload, fh, ensure_ascii=False)
 
     print(f'\n✓ {len(translations)} translations written to {output_path}')
+    if excluded_dedicated:
+        print(f'  ({excluded_dedicated} offsets left to dedicated post-build patches)')
     if nopoi_added:
         print(f'  ({nopoi_added} no-pointer in-place entries recovered from ROM)')
     if nopoi_skipped_long:
