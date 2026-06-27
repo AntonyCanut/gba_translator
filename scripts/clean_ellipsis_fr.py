@@ -1,68 +1,66 @@
 #!/usr/bin/env python3
-"""Nettoie les points de suspension surutilisés dans combined_fr.txt.
+"""Clean overused ellipsis characters in combined_fr.txt.
 
-Contexte (demande utilisateur) :
-  - Le jeu rend un caractère spécial « … » (ellipsis) qui économise 2 octets
-    par rapport à trois points ASCII « ... ».
-  - Les « ... » sont parfois utilisés à outrance / placés n'importe comment
-    (rangées de points « … … … … », « ……… ……… ……… », doublons « …… »)
-    et ne servent pas le dialogue.
+Context:
+  - The game renders a special « … » (ellipsis) character that saves 2 bytes
+    compared to three ASCII dots « ... ».
+  - The « ... » are sometimes used excessively / placed arbitrarily
+    (dot runs « … … … … », « ……… ……… ……… », duplicates « …… »)
+    and do not serve the dialogue.
 
-Politique (sûre — ne fait QUE raccourcir les chaînes, donc jamais de
-débordement de pointeur ; ne supprime jamais une ellipsis isolée qui sert le
-dialogue) :
-  T1  Trois points ASCII (3+) « ... » -> « … » (réalise l'économie de 2 octets).
-  T2  Toute SUITE de 2 ellipses ou plus, séparées uniquement par des espaces
-      (« …… », « … … », « ……… », « … … … … ») -> une seule « … ».
-      (Garde une pause/beat unique, supprime le spam de points.)
-  T3  Espace(s) entre le MOT d'avant et « … » quand AUCUN mot n'est collé
-      après l'ellipsis (« Non … » -> « Non… », « vu … rien » -> « vu… rien »)
-      -> on colle l'ellipsis au mot précédent.
-      Cas conservés : un mot collé APRÈS (« vu …rien » = ellipsis de tête ->
-      l'espace d'avant reste) et une ponctuation ouvrante / tiret de dialogue
-      avant l'espace (« « … », « — … ») dont l'espace est typographique.
+Policy (safe — only shortens strings, so no pointer overflow; never removes
+an isolated ellipsis that serves the dialogue):
+  T1  Three or more ASCII dots « ... » -> « … » (saves 2 bytes per occurrence).
+  T2  Any RUN of 2 or more ellipses separated only by spaces
+      (« …… », « … … », « ……… », « … … … … ») -> a single « … ».
+      (Keeps a single pause/beat, removes dot spam.)
+  T3  Space(s) between the preceding WORD and « … » when NO word is attached
+      after the ellipsis (« Non … » -> « Non… », « vu … rien » -> « vu… rien »)
+      -> attach the ellipsis to the preceding word.
+      Preserved cases: a word attached AFTER (« vu …rien » = leading ellipsis ->
+      the preceding space stays) and an opening punctuation / dialogue dash
+      before the space (« « … », « — … ») whose space is typographic.
 
-NE TOUCHE PAS :
-  - une ellipsis isolée « … » (hésitation, fin en suspens — sert le dialogue) ;
-  - les beats de pause sur des pages séparées « …\\p… » (rythme volontaire) ;
-  - les codes de contrôle ({...}, \\n \\p \\l) — aucun ne contient de points.
+DOES NOT TOUCH:
+  - an isolated ellipsis « … » (hesitation, open ending — serves the dialogue);
+  - pause beats on separate pages « …\\p… » (intentional rhythm);
+  - control codes ({...}, \\n \\p \\l) — none contain dots.
 
-Insertion chirurgicale : seules les lignes contenant des points de suspension
-sont modifiées ; tout le reste (offsets, formatage, fins de ligne LF) est
-préservé octet pour octet.
+Surgical insertion: only lines containing ellipsis characters are modified;
+everything else (offsets, formatting, LF line endings) is preserved byte for byte.
 """
 import argparse
 import re
 import sys
 
-# Suite d'ellipses (… ou ... déjà normalisés) séparées par des espaces.
+# Run of ellipses (… or already-normalized ...) separated by spaces.
 RUN = re.compile(r'…(?:[ \t]*…)+')
-# 3 points ASCII ou plus.
+# 3 or more ASCII dots.
 ASCII_DOTS = re.compile(r'\.{3,}')
-# Caractères qui, juste avant l'espace, FONT GARDER l'espace : ponctuation
-# ouvrante, guillemets, apostrophes, tirets de dialogue (l'espace y est
-# typographique, pas un « mot d'avant »).
-_KEEP_BEFORE = '«("“‘\'’[{¿¡—–-…'
-# T3 : espace(s) entre un mot et « … » lorsqu'aucun mot n'est collé après
-# l'ellipsis (lookahead négatif `\w`). Le motif EXIGE un vrai caractère de
-# contenu avant l'espace (groupe 1) — il n'agit donc jamais sur l'espace de
-# format en tête d'entrée ni après une ponctuation ouvrante.
+# Characters that, just before the space, KEEP the space: opening punctuation,
+# quotation marks, apostrophes, dialogue dashes (the space is typographic,
+# not a "preceding word").
+_KEEP_BEFORE = '«(""“‘\'’[{¿¡—–-…'
+# T3: space(s) between a word and « … » when no word is attached after
+# the ellipsis (negative lookahead `\w`). The pattern REQUIRES a real content
+# character before the space (group 1) — so it never acts on leading format
+# spaces or spaces after opening punctuation.
 SPACE_BEFORE = re.compile(
     r'([^\s' + re.escape(_KEEP_BEFORE) + r'])[ \t]+…(?!\w)')
 
 
 def clean_body(body: str) -> str:
-    # T1 : ASCII -> caractère ellipsis (économie 2 octets/occurrence).
+    # T1: ASCII -> ellipsis character (saves 2 bytes per occurrence).
     body = ASCII_DOTS.sub('…', body)
-    # T2 : suite de 2+ ellipses -> une seule.
+    # T2: run of 2+ ellipses -> single one.
     body = RUN.sub('…', body)
-    # T3 : colle « … » au mot précédent si aucun mot n'est collé après.
+    # T3: attach « … » to the preceding word if no word is attached after.
     body = SPACE_BEFORE.sub(r'\1…', body)
     return body
 
 
 def transform_line(line: str) -> str:
-    # Protège le préfixe « 0xOFFSET: » (sans points/ellipses de toute façon).
+    # Preserve the « 0xOFFSET: » prefix (no dots/ellipses there anyway).
     idx = line.find(':')
     if idx < 0:
         return clean_body(line)
@@ -74,9 +72,9 @@ def main() -> int:
     ap = argparse.ArgumentParser(description=__doc__)
     ap.add_argument('path', nargs='?', default="languages/fr/combined_fr.txt")
     ap.add_argument('--apply', action='store_true',
-                    help='écrit les modifications (sinon dry-run + diff)')
+                    help='write modifications (otherwise dry-run + diff)')
     ap.add_argument('--max-show', type=int, default=0,
-                    help='nb max d\'entrées modifiées à afficher (0 = toutes)')
+                    help='max number of modified entries to display (0 = all)')
     args = ap.parse_args()
 
     with open(args.path, encoding='utf-8') as fh:
@@ -91,20 +89,20 @@ def main() -> int:
             changed.append((i, line, new))
             lines[i] = new
 
-    print(f'Entrées modifiées : {len(changed)}')
+    print(f'Entries modified: {len(changed)}')
     shown = changed if args.max_show == 0 else changed[:args.max_show]
     for i, old, new in shown:
         off = old.split(':', 1)[0]
-        print(f'\n--- {off} (ligne {i + 1})')
-        print(f'  AVANT: {old[:200]}')
-        print(f'  APRÈS: {new[:200]}')
+        print(f'\n--- {off} (line {i + 1})')
+        print(f'  BEFORE: {old[:200]}')
+        print(f'  AFTER:  {new[:200]}')
 
     if args.apply:
         with open(args.path, 'w', encoding='utf-8') as fh:
             fh.write('\n'.join(lines))
-        print(f'\nÉcrit {args.path} ({len(changed)} entrées nettoyées).')
+        print(f'\nWritten {args.path} ({len(changed)} entries cleaned).')
     else:
-        print('\n[dry-run] Relancer avec --apply pour écrire.')
+        print('\n[dry-run] Rerun with --apply to write.')
     return 0
 
 

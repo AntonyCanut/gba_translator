@@ -2,17 +2,17 @@
 """
 20 - Prepare Translation Template
 
-Crée un template de traduction à partir des différences et du Spanish ROM.
+Creates a translation template from differences and the Spanish ROM.
 
 Usage:
     python src/translators/20_prepare_translation_template.py \
         --output output/translation/french_texts.json \
         [--use-spanish-as-base]
-        
+
 Features:
-- Extrait les textes anglais différents
-- Peut pré-remplir avec traduction espagnole comme base
-- Génère template prêt pour traduction
+- Extracts different English texts
+- Can pre-fill with Spanish translation as base
+- Generates template ready for translation
 """
 
 import sys
@@ -25,7 +25,7 @@ sys.path.insert(0, str(Path(__file__).parent.parent.parent))
 
 
 class TranslationTemplateGenerator:
-    """Prépare un template de traduction."""
+    """Prepares a translation template."""
     
     def __init__(self):
         self.english_texts = {}
@@ -33,71 +33,71 @@ class TranslationTemplateGenerator:
         self.differences = {}
     
     def run(self, output_path: Path, use_spanish_base: bool = False) -> bool:
-        """Générer le template."""
+        """Generate the template."""
         print("="*70)
         print("📝 TRANSLATION TEMPLATE GENERATOR")
         print("="*70)
         
-        # Charger les données
+        # Load data
         if not self._load_data():
             return False
-        
-        # Préparer template
+
+        # Prepare template
         template = self._prepare_template(use_spanish_base)
-        
-        # Sauvegarder
+
+        # Save
         return self._save_template(template, output_path)
     
     def _load_data(self) -> bool:
-        """Charger les données d'extraction."""
-        print("\n📥 Chargement des données...")
+        """Load extraction data."""
+        print("\n📥 Loading data...")
         
         english_path = Path('output/extracted/extracted_texts/englishrom_texts.json')
         spanish_path = Path('output/extracted/extracted_texts/spanishrom_texts.json')
         diff_path = Path('output/differences/differences.json')
         
         try:
-            # Charger anglais
+            # Load English
             if english_path.exists():
                 with open(english_path, 'r', encoding='utf-8') as f:
                     data = json.load(f)
                     for item in data.get('texts', []):
                         self.english_texts[item['offset']] = item
-                print(f"✅ Textes anglais: {len(self.english_texts)}")
-            
-            # Charger espagnol
+                print(f"✅ English texts: {len(self.english_texts)}")
+
+            # Load Spanish
             if spanish_path.exists():
                 with open(spanish_path, 'r', encoding='utf-8') as f:
                     data = json.load(f)
                     for item in data.get('texts', []):
                         self.spanish_texts[item['offset']] = item
-                print(f"✅ Textes espagnols: {len(self.spanish_texts)}")
-            
-            # Charger différences
+                print(f"✅ Spanish texts: {len(self.spanish_texts)}")
+
+            # Load differences
             if diff_path.exists():
                 with open(diff_path, 'r', encoding='utf-8') as f:
                     data = json.load(f)
                     diffs_list = data.get('differences', [])
-                    # Convertir en dict avec offset comme clé
+                    # Convert to dict with offset as key
                     for diff in diffs_list:
                         offset = diff.get('offset')
                         if offset:
                             self.differences[offset] = diff
-                print(f"✅ Différences: {len(self.differences)}")
-            
+                print(f"✅ Differences: {len(self.differences)}")
+
             return True
-        
+
         except Exception as e:
-            print(f"❌ Erreur chargement: {e}")
+            print(f"❌ Loading error: {e}")
             return False
     
     def _prepare_template(self, use_spanish_base: bool = False) -> Dict:
-        """Préparer le template."""
-        print("\n✍️  Préparation du template...")
+        """Prepare the template."""
+        print("\n✍️  Preparing template...")
         
         translations = []
         
-        # Pour chaque différence trouvée
+        # For each found difference
         for offset, diff_info in self.differences.items():
             try:
                 offset = int(offset)
@@ -111,12 +111,12 @@ class TranslationTemplateGenerator:
             spanish_text = spanish.get('text', '')
             length = english.get('length', 100)
             
-            # Créer entry de traduction
+            # Create translation entry
             entry = {
                 'offset': offset,
                 'english': english_text,
                 'spanish': spanish_text,
-                'text': spanish_text if use_spanish_base else '',  # Pré-remplir avec espagnol
+                'text': spanish_text if use_spanish_base else '',  # Pre-fill with Spanish
                 'length': length,
                 'encoding': 'pokemon',
                 'category': self._guess_category(english_text),
@@ -126,7 +126,7 @@ class TranslationTemplateGenerator:
             
             translations.append(entry)
         
-        print(f"✅ Template préparé: {len(translations)} entrées")
+        print(f"✅ Template prepared: {len(translations)} entries")
         
         template = {
             'rom_name': 'englishrom.gba',
@@ -140,7 +140,7 @@ class TranslationTemplateGenerator:
         return template
     
     def _guess_category(self, text: str) -> str:
-        """Deviner la catégorie du texte."""
+        """Guess the text category."""
         text_lower = text.lower()
         
         if any(x in text_lower for x in ['wild', 'appeared', 'battle', 'trainer']):
@@ -157,8 +157,8 @@ class TranslationTemplateGenerator:
             return 'other'
     
     def _save_template(self, template: Dict, output_path: Path) -> bool:
-        """Sauvegarder le template."""
-        print(f"\n💾 Sauvegarde du template...")
+        """Save the template."""
+        print(f"\n💾 Saving template...")
         
         try:
             output_path.parent.mkdir(parents=True, exist_ok=True)
@@ -166,11 +166,11 @@ class TranslationTemplateGenerator:
             with open(output_path, 'w', encoding='utf-8') as f:
                 json.dump(template, f, indent=2, ensure_ascii=False)
             
-            print(f"✅ Template sauvegardé: {output_path.name}")
+            print(f"✅ Template saved: {output_path.name}")
             return True
-        
+
         except Exception as e:
-            print(f"❌ Erreur sauvegarde: {e}")
+            print(f"❌ Save error: {e}")
             return False
 
 

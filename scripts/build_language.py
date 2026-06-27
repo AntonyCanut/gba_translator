@@ -92,7 +92,7 @@ def ensure_extractions() -> None:
 
 
 def _latest_base_csv() -> Path:
-    """Retourne le CSV trilingue le plus récent, en le générant si nécessaire."""
+    """Return the most recent trilingual CSV, generating it if necessary."""
     candidates = sorted(
         TRANSLATION_DIR.glob("*_trilingual_translation.csv"),
         key=lambda p: p.stat().st_mtime,
@@ -100,12 +100,12 @@ def _latest_base_csv() -> Path:
     if candidates:
         return candidates[-1]
 
-    # Aucun CSV trilingue — le générer automatiquement.
+    # No trilingual CSV found — generate it automatically.
     if not DIFF_REPORT.exists():
         if not ENGLISH_EXTRACT.exists() or not SPANISH_EXTRACT.exists():
             raise SystemExit(
-                "Impossible de générer le CSV trilingue : fichiers d'extraction manquants. "
-                "Relancez `make build-it` depuis zéro (les ROMs sources sont nécessaires)."
+                "Cannot generate trilingual CSV: extraction files are missing. "
+                "Re-run `make build-it` from scratch (source ROMs are required)."
             )
         DIFF_DIR.mkdir(parents=True, exist_ok=True)
         run([
@@ -118,7 +118,7 @@ def _latest_base_csv() -> Path:
         ])
 
     TRANSLATION_DIR.mkdir(parents=True, exist_ok=True)
-    # Passer explicitement l'extraction EN pour éviter la dépendance à *_diff_with_padding.json.
+    # Pass the EN extraction explicitly to avoid depending on *_diff_with_padding.json.
     run([PYTHON, TRILINGUAL_SCRIPT, "--english", ENGLISH_EXTRACT])
 
     candidates = sorted(
@@ -126,7 +126,7 @@ def _latest_base_csv() -> Path:
         key=lambda p: p.stat().st_mtime,
     )
     if not candidates:
-        raise SystemExit("La génération du CSV trilingue a échoué : aucun fichier produit.")
+        raise SystemExit("Trilingual CSV generation failed: no output file produced.")
     return candidates[-1]
 
 

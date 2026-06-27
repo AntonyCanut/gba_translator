@@ -173,15 +173,15 @@ def main() -> int:
             })
 
     print('=' * 60)
-    print('Audit traduction FR — combined_fr.txt')
+    print('FR translation audit — combined_fr.txt')
     print('=' * 60)
-    print(f'Entrées analysées      : {len(combined)}')
+    print(f'Entries analyzed       : {len(combined)}')
     for key, label in (
-        ('byte_image', 'Byte-images (kana/fullwidth) — corrompent la ROM'),
-        ('unencodable', "Caractères non encodables (afficheront '?')"),
-        ('untranslated', 'Probablement non traduites (anglais)'),
-        ('placeholder_orphan', 'Placeholders sans séquence de contrôle EN'),
-        ('overflow', f'Lignes visuelles > {MAX_VISUAL_LINE} caractères'),
+        ('byte_image', 'Byte-images (kana/fullwidth) — corrupt the ROM'),
+        ('unencodable', "Unencodable characters (will display as '?')"),
+        ('untranslated', 'Probably untranslated (English)'),
+        ('placeholder_orphan', 'Placeholders without EN control sequence'),
+        ('overflow', f'Visual lines > {MAX_VISUAL_LINE} characters'),
     ):
         print(f'{label:52s}: {len(issues[key])}')
 
@@ -189,7 +189,7 @@ def main() -> int:
     args.report.write_text(
         json.dumps(issues, ensure_ascii=False, indent=2), encoding='utf-8'
     )
-    print(f'\nRapport: {args.report}')
+    print(f'\nReport: {args.report}')
 
     corrupting = len(issues['byte_image']) + len(issues['unencodable'])
     if args.strict and corrupting:

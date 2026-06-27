@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 """
-20 - DÉCOUVERTE: Substitutions directes vs Relocalisations réelles
+20 - DISCOVERY: Direct substitutions vs actual Relocations
 
-Analyse détaillée pour comprendre le mécanisme exact.
+Detailed analysis to understand the exact mechanism.
 """
 
 import sys
@@ -15,7 +15,7 @@ from src.core.rom_reader import ROMReader
 
 
 def extract_and_analyze():
-    """Extrait et analyse les données réelles."""
+    """Extracts and analyzes the actual data."""
     
     report_path = Path('output/tests/2026-01-14_spanish_simulation_report.json')
     with open(report_path, 'r', encoding='utf-8') as f:
@@ -30,7 +30,7 @@ def extract_and_analyze():
     
     print()
     print("=" * 80)
-    print("🎯 DÉCOUVERTE: Stratégies de la ROM espagnole")
+    print("🎯 DISCOVERY: Spanish ROM strategies")
     print("=" * 80)
     print()
     
@@ -41,8 +41,8 @@ def extract_and_analyze():
         offset = int(failure['offset'], 16)
         en_text = failure['english_text']
         es_text = failure['spanish_text']
-        
-        # Trouver la longueur réelle
+
+        # Find the actual length
         en_term = None
         es_term = None
         
@@ -53,7 +53,7 @@ def extract_and_analyze():
                 es_term = j - offset
         
         if en_term == es_term and en_term is not None:
-            # Substitution directe
+            # Direct substitution
             substitutions.append({
                 'offset': offset,
                 'length': en_term,
@@ -63,7 +63,7 @@ def extract_and_analyze():
                 'es_bytes': spanish_rom.rom_data[offset:offset+es_term],
             })
         else:
-            # Relocalisation probable
+            # Probable relocation
             relocations.append({
                 'offset': offset,
                 'en_length': en_term,
@@ -72,39 +72,39 @@ def extract_and_analyze():
                 'es_text': es_text,
             })
     
-    print(f"📊 Résultats:")
-    print(f"   - Substitutions directes (même longueur): {len(substitutions)}")
-    print(f"   - Relocalisations (longueurs différentes): {len(relocations)}")
+    print(f"📊 Results:")
+    print(f"   - Direct substitutions (same length): {len(substitutions)}")
+    print(f"   - Relocations (different lengths): {len(relocations)}")
     print()
     
     if substitutions:
         print("=" * 80)
-        print("SUBSTITUTIONS DIRECTES (in-place replacement)")
+        print("DIRECT SUBSTITUTIONS (in-place replacement)")
         print("=" * 80)
         print()
         
         for sub in substitutions:
-            print(f"Offset 0x{sub['offset']:08X} (longueur: {sub['length']} bytes)")
+            print(f"Offset 0x{sub['offset']:08X} (length: {sub['length']} bytes)")
             print(f"  EN text: \"{sub['en_text'][:50]}...\"" if len(sub['en_text']) > 50 else f"  EN text: \"{sub['en_text']}\"")
             print(f"  ES text: \"{sub['es_text'][:50]}...\"" if len(sub['es_text']) > 50 else f"  ES text: \"{sub['es_text']}\"")
             
-            # Analyser les bytes
+            # Analyze bytes
             en_hex = ' '.join(f'{b:02x}' for b in sub['en_bytes'][:20])
             es_hex = ' '.join(f'{b:02x}' for b in sub['es_bytes'][:20])
             print(f"  EN bytes: {en_hex}...")
             print(f"  ES bytes: {es_hex}...")
             
-            # Chercher un pattern d'encodage
-            # Vérifier si c'est un encodage différent (XOR, shift, etc.)
+            # Search for an encoding pattern
+            # Check if it's a different encoding (XOR, shift, etc.)
             xor_values = [a ^ b for a, b in zip(sub['en_bytes'], sub['es_bytes'])]
             if len(set(xor_values)) == 1:
-                print(f"  ⚡ PATTERN: XOR constant avec 0x{xor_values[0]:02X}!")
+                print(f"  ⚡ PATTERN: constant XOR with 0x{xor_values[0]:02X}!")
             
             print()
     
     if relocations:
         print("=" * 80)
-        print("RELOCALISATIONS (textes déplacés ailleurs)")
+        print("RELOCATIONS (texts moved elsewhere)")
         print("=" * 80)
         print()
         
@@ -113,7 +113,7 @@ def extract_and_analyze():
             print(f"  EN length: {rel['en_length']} bytes → ES length: {rel['es_length']} bytes")
             print(f"  EN text: \"{rel['en_text'][:40]}...\"" if len(rel['en_text']) > 40 else f"  EN text: \"{rel['en_text']}\"")
             print(f"  ES text: \"{rel['es_text'][:40]}...\"" if len(rel['es_text']) > 40 else f"  ES text: \"{rel['es_text']}\"")
-            print(f"  💡 Les données sont probablement DANS LA ROM mais à un offset DIFFÉRENT")
+            print(f"  💡 The data is probably IN THE ROM but at a DIFFERENT offset")
             print()
 
 

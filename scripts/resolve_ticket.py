@@ -35,7 +35,7 @@ def resolve_ticket(ticket_path: Path, resolution: str = "") -> bool:
     content = ticket_path.read_text(encoding="utf-8")
 
     if "status: resolved" in content or 'status: "resolved"' in content:
-        print(f"Le ticket {ticket_path.name} est déjà résolu.")
+        print(f"Ticket {ticket_path.name} is already resolved.")
         return False
 
     content = re.sub(
@@ -58,34 +58,34 @@ def resolve_ticket(ticket_path: Path, resolution: str = "") -> bool:
 
 
 def main() -> None:
-    parser = argparse.ArgumentParser(description="Résoudre un ticket auto-généré")
-    parser.add_argument("ticket_id", help="ID ou nom partiel du ticket à résoudre")
+    parser = argparse.ArgumentParser(description="Resolve an auto-generated ticket")
+    parser.add_argument("ticket_id", help="ID or partial name of the ticket to resolve")
     parser.add_argument(
         "--dir",
         type=Path,
         default=TICKETS_DIR,
-        help="Répertoire des tickets (défaut: tickets/)",
+        help="Tickets directory (default: tickets/)",
     )
     parser.add_argument(
         "--resolution",
         "-r",
         default="",
-        help="Message de résolution",
+        help="Resolution message",
     )
 
     args = parser.parse_args()
 
     ticket_path = find_ticket(args.dir, args.ticket_id)
     if not ticket_path:
-        print(f"Ticket non trouvé: {args.ticket_id}")
+        print(f"Ticket not found: {args.ticket_id}")
         sys.exit(1)
 
-    print(f"Résolution du ticket: {ticket_path.name}")
+    print(f"Resolving ticket: {ticket_path.name}")
 
     if resolve_ticket(ticket_path, args.resolution):
-        print(f"Ticket résolu avec succès.")
+        print(f"Ticket resolved successfully.")
     else:
-        print(f"Le ticket n'a pas pu être résolu.")
+        print(f"Ticket could not be resolved.")
         sys.exit(1)
 
 

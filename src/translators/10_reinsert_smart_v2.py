@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
 """
-10 - Smart Text Reinsertion (Version Orientée Objet)
+10 - Smart Text Reinsertion (Object-Oriented Version)
 
-Réinsère les textes traduits dans la ROM avec gestion intelligente du padding.
-Utilise les classes réutilisables du module core.
+Reinserts translated texts into the ROM with intelligent padding management.
+Uses reusable classes from the core module.
 
 Usage:
     python src/translators/10_reinsert_smart_v2.py [translation_json]
@@ -22,7 +22,7 @@ import json
 from pathlib import Path
 from datetime import datetime
 
-# Ajouter src au path
+# Add src to path
 sys.path.insert(0, str(Path(__file__).parent.parent.parent))
 
 from src.core.text_reinserter import ROMTranslationManager
@@ -30,13 +30,13 @@ from src.core.text_reinserter import ROMTranslationManager
 
 class TranslationApplicator:
     """
-    Applique des traductions à une ROM GBA.
+    Applies translations to a GBA ROM.
 
     Attributes:
-        rom_manager (ROMTranslationManager): Gestionnaire de ROM
-        translation_path (Path): Chemin du JSON de traductions
-        output_rom_path (Path): Chemin de la ROM de sortie
-        report_path (Path): Chemin du rapport
+        rom_manager (ROMTranslationManager): ROM manager
+        translation_path (Path): Path to translations JSON
+        output_rom_path (Path): Path to output ROM
+        report_path (Path): Path to report
     """
 
     def __init__(
@@ -45,11 +45,11 @@ class TranslationApplicator:
         translation_path: Path = None
     ):
         """
-        Initialise l'applicateur.
+        Initializes the applicator.
 
         Args:
-            rom_path: Chemin de la ROM source
-            translation_path: Chemin du JSON (None = auto-détection)
+            rom_path: Path to the source ROM
+            translation_path: Path to the JSON (None = auto-detect)
         """
         self.rom_path = rom_path
         self.translation_path = translation_path or self._find_latest_json()
@@ -60,13 +60,13 @@ class TranslationApplicator:
 
     def _find_latest_json(self) -> Path:
         """
-        Trouve le fichier JSON de traductions le plus récent.
+        Finds the most recent translations JSON file.
 
         Returns:
-            Path: Chemin vers le fichier
+            Path: Path to the file
 
         Raises:
-            FileNotFoundError: Si aucun fichier trouvé
+            FileNotFoundError: If no file is found
         """
         translation_dir = Path('output/translation')
         if not translation_dir.exists():
@@ -81,10 +81,10 @@ class TranslationApplicator:
 
     def _generate_output_path(self) -> Path:
         """
-        Génère le chemin de sortie de la ROM.
+        Generates the output path for the ROM.
 
         Returns:
-            Path: Chemin de la ROM de sortie
+            Path: Output ROM path
         """
         output_dir = Path('output/roms')
         output_dir.mkdir(parents=True, exist_ok=True)
@@ -94,10 +94,10 @@ class TranslationApplicator:
 
     def _generate_report_path(self) -> Path:
         """
-        Génère le chemin du rapport.
+        Generates the report path.
 
         Returns:
-            Path: Chemin du rapport JSON
+            Path: Path to the JSON report
         """
         report_dir = Path('output/reports')
         report_dir.mkdir(parents=True, exist_ok=True)
@@ -107,41 +107,41 @@ class TranslationApplicator:
 
     def load_translations(self) -> None:
         """
-        Charge les traductions depuis le JSON.
+        Loads translations from the JSON file.
 
         Raises:
-            FileNotFoundError: Si le fichier n'existe pas
-            json.JSONDecodeError: Si le JSON est invalide
+            FileNotFoundError: If the file does not exist
+            json.JSONDecodeError: If the JSON is invalid
         """
-        print(f"📄 Chargement traductions: {self.translation_path.name}")
+        print(f"📄 Loading translations: {self.translation_path.name}")
 
         with open(self.translation_path, 'r', encoding='utf-8') as f:
             data = json.load(f)
 
         self.translations = data['translations']
-        print(f"   {len(self.translations)} traductions à insérer")
+        print(f"   {len(self.translations)} translations to insert")
 
     def load_rom(self) -> None:
         """
-        Charge la ROM source.
+        Loads the source ROM.
 
         Raises:
-            FileNotFoundError: Si la ROM n'existe pas
+            FileNotFoundError: If the ROM does not exist
         """
-        print(f"📖 Chargement ROM: {self.rom_path}")
+        print(f"📖 Loading ROM: {self.rom_path}")
 
         self.rom_manager = ROMTranslationManager(self.rom_path)
         info = self.rom_manager.get_rom_info()
 
         print(f"   ROM: {info['title']} ({info['game_code']})")
-        print(f"   Taille: {info['size_mb']} MB")
+        print(f"   Size: {info['size_mb']} MB")
 
     def apply_translations(self) -> dict:
         """
-        Applique toutes les traductions à la ROM.
+        Applies all translations to the ROM.
 
         Returns:
-            dict: Rapport de réinsertion
+            dict: Reinsertion report
 
         Example:
             >>> applicator = TranslationApplicator()
@@ -150,131 +150,131 @@ class TranslationApplicator:
             100
         """
         print()
-        print("🔄 Réinsertion des traductions...")
+        print("🔄 Reinserting translations...")
 
-        # Appliquer traductions avec progression
+        # Apply translations with progress tracking
         total = len(self.translations)
         for i in range(0, total, 1000):
             batch = self.translations[i:min(i + 1000, total)]
             self.rom_manager.reinserter.reinsert_all(batch)
-            print(f"   Traité: {min(i + 1000, total)}/{total}")
+            print(f"   Processed: {min(i + 1000, total)}/{total}")
 
         report = self.rom_manager.reinserter.get_report()
 
         print()
-        print(f"✅ {total} textes traités")
+        print(f"✅ {total} texts processed")
         print()
 
         return report
 
     def save_rom(self) -> None:
-        """Sauvegarde la ROM modifiée."""
-        print(f"💾 Sauvegarde ROM: {self.output_rom_path}")
+        """Saves the modified ROM."""
+        print(f"💾 Saving ROM: {self.output_rom_path}")
         self.rom_manager.save_rom(str(self.output_rom_path))
 
     def save_report(self, report: dict) -> None:
         """
-        Sauvegarde le rapport de réinsertion.
+        Saves the reinsertion report.
 
         Args:
-            report: Rapport à sauvegarder
+            report: Report to save
         """
-        print(f"💾 Sauvegarde rapport: {self.report_path}")
+        print(f"💾 Saving report: {self.report_path}")
 
         with open(self.report_path, 'w', encoding='utf-8') as f:
             json.dump(report, f, indent=2, ensure_ascii=False)
 
     def print_results(self, report: dict) -> None:
         """
-        Affiche les résultats de la réinsertion.
+        Displays the reinsertion results.
 
         Args:
-            report: Rapport de réinsertion
+            report: Reinsertion report
         """
         print()
         print("=" * 80)
-        print("RÉSULTATS DE LA RÉINSERTION")
+        print("REINSERTION RESULTS")
         print("=" * 80)
 
         stats = report['statistics']
-        print(f"Total textes:         {stats['total_texts']}")
-        print(f"Succès:               {stats['successful']}")
-        print(f"Échecs:               {stats['failed']}")
-        print(f"Utilisé padding:      {stats['used_padding']}")
-        print(f"Taux de succès:       {stats['success_rate']}")
+        print(f"Total texts:          {stats['total_texts']}")
+        print(f"Success:              {stats['successful']}")
+        print(f"Failed:               {stats['failed']}")
+        print(f"Used padding:         {stats['used_padding']}")
+        print(f"Success rate:         {stats['success_rate']}")
         print()
 
-        # Afficher warnings
+        # Display warnings
         if report['warnings']:
-            print("⚠️ AVERTISSEMENTS:")
+            print("⚠️ WARNINGS:")
             for warning in report['warnings'][:5]:
                 print(f"  {warning['offset']}: {warning['error']}")
             if len(report['warnings']) > 5:
-                print(f"  ... et {len(report['warnings']) - 5} autres")
+                print(f"  ... and {len(report['warnings']) - 5} more")
             print()
 
     def print_success(self) -> None:
-        """Affiche le message de succès."""
+        """Displays the success message."""
         print("=" * 80)
-        print("✅ RÉINSERTION TERMINÉE")
+        print("✅ REINSERTION COMPLETE")
         print("=" * 80)
         print()
-        print(f"ROM traduite: {self.output_rom_path}")
-        print(f"Rapport:      {self.report_path}")
+        print(f"Translated ROM: {self.output_rom_path}")
+        print(f"Report:         {self.report_path}")
         print()
-        print("Prochaine étape:")
-        print("  Tester la ROM sur un émulateur (mGBA, VBA, etc.)")
+        print("Next step:")
+        print("  Test the ROM on an emulator (mGBA, VBA, etc.)")
         print()
 
     def run(self) -> None:
         """
-        Exécute le processus complet de réinsertion.
+        Executes the full reinsertion process.
 
         Example:
             >>> applicator = TranslationApplicator()
             >>> applicator.run()
         """
         try:
-            # Charger données
+            # Load data
             self.load_translations()
             print()
             self.load_rom()
 
-            # Appliquer traductions
+            # Apply translations
             report = self.apply_translations()
 
-            # Sauvegarder résultats
+            # Save results
             self.save_rom()
             self.save_report(report)
 
-            # Afficher résultats
+            # Display results
             self.print_results(report)
             self.print_success()
 
         except Exception as e:
             print()
-            print(f"❌ Erreur: {e}")
+            print(f"❌ Error: {e}")
             import traceback
             traceback.print_exc()
             sys.exit(1)
 
 
 def main():
-    """Point d'entrée principal."""
+    """Main entry point."""
     print("=" * 80)
     print("10 - SMART TEXT REINSERTION (v2 - OOP)")
     print("=" * 80)
     print()
 
-    # Gérer argument optionnel
+    # Handle optional argument
     translation_path = None
     if len(sys.argv) > 1:
         translation_path = Path(sys.argv[1])
         if not translation_path.exists():
-            print(f"❌ Erreur: Fichier non trouvé: {translation_path}")
+            print(f"❌ Error: File not found: {translation_path}")
             sys.exit(1)
 
-    # Créer et exécuter applicateur
+    # Create and run applicator
     applicator = TranslationApplicator(translation_path=translation_path)
     applicator.run()
 

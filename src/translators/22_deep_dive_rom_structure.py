@@ -2,8 +2,8 @@
 """
 22 - Deep Dive ROM Structure Analysis
 
-Analyse en profondeur pourquoi la ROM espagnole a 10,852 offsets manquants
-et comment la structure des deux ROMs diffère.
+In-depth analysis of why the Spanish ROM has 10,852 missing offsets
+and how the structure of the two ROMs differs.
 
 Usage:
     python src/translators/22_deep_dive_rom_structure.py
@@ -19,14 +19,14 @@ sys.path.insert(0, str(Path(__file__).parent.parent.parent))
 
 
 class DeepDiveAnalysis:
-    """Analyse en profondeur la structure des ROMs."""
-    
+    """In-depth analysis of ROM structure."""
+
     def __init__(self):
         self.english_texts = {}
         self.spanish_texts = {}
-    
+
     def run(self):
-        """Exécuter l'analyse."""
+        """Run the analysis."""
         print("="*70)
         print("🔬 DEEP DIVE ROM STRUCTURE ANALYSIS")
         print("="*70)
@@ -37,7 +37,7 @@ class DeepDiveAnalysis:
         self._analyze_structure()
     
     def _load_data(self) -> bool:
-        """Charger les données."""
+        """Load data."""
         print("\n📥 Loading extracted texts...")
         
         english_path = Path('output/extracted/extracted_texts/englishrom_texts.json')
@@ -62,10 +62,10 @@ class DeepDiveAnalysis:
             return False
     
     def _analyze_structure(self):
-        """Analyser la structure."""
+        """Analyze the structure."""
         print("\n🔍 Structure Analysis:\n")
         
-        # 1. Distribution des offsets
+        # 1. Offset distribution
         english_offsets = sorted(self.english_texts.keys())
         spanish_offsets = sorted(self.spanish_texts.keys())
         
@@ -81,14 +81,14 @@ class DeepDiveAnalysis:
         print(f"   Total English: {len(english_offsets)}")
         print(f"   Total Spanish: {len(spanish_offsets)}")
         
-        # 2. Analyse des offsets manquants
+        # 2. Analysis of missing offsets
         print(f"\n🔴 Missing Offsets in Spanish ROM:")
         print(f"   Count: {len(only_english)}")
         
-        # Grouper par zones
+        # Group by zones
         zones = defaultdict(list)
         for offset in only_english:
-            zone = offset // 0x10000  # Grouper par 64K
+            zone = offset // 0x10000  # Group by 64K
             zones[zone].append(offset)
         
         print(f"   Distribution by 64K zones:")
@@ -98,7 +98,7 @@ class DeepDiveAnalysis:
             zone_end = (zone + 1) * 0x10000
             print(f"      0x{zone_start:08X}-0x{zone_end:08X}: {len(offsets)} texts")
         
-        # 3. Analyse des longueurs
+        # 3. Length analysis
         print(f"\n📏 Length Analysis:")
         
         english_lengths = defaultdict(int)
@@ -106,7 +106,7 @@ class DeepDiveAnalysis:
         
         for item in self.english_texts.values():
             length = item.get('length', 0)
-            length_bucket = (length // 10) * 10  # Grouper par 10
+            length_bucket = (length // 10) * 10  # Group by 10
             english_lengths[length_bucket] += 1
         
         for item in self.spanish_texts.values():
@@ -118,10 +118,10 @@ class DeepDiveAnalysis:
         print(f"   Spanish total texts: {len(self.spanish_texts)}")
         print(f"   Difference: {len(self.english_texts) - len(self.spanish_texts)}")
         
-        # 4. Vérifier la continuation des textes
+        # 4. Check text continuity
         print(f"\n🔗 Text Continuity:")
-        
-        # Pour chaque texte, vérifier si offset+length = prochain offset
+
+        # For each text, check if offset+length = next offset
         english_continuous = 0
         english_gaps = 0
         
@@ -162,10 +162,10 @@ class DeepDiveAnalysis:
         print(f"      Gaps: {spanish_gaps}")
         print(f"      Ratio: {100*spanish_continuous/(spanish_continuous+spanish_gaps):.1f}% continuous")
         
-        # 5. Hypothèses
-        print(f"\n💡 HYPOTHÈSES:")
+        # 5. Hypotheses
+        print(f"\n💡 HYPOTHESES:")
         print(f"""
-1. ROM STRUCTURE DIFFÉRENTE
+1. DIFFERENT ROM STRUCTURE
    ├─ Spanish ROM has 10,852 fewer text offsets
    ├─ Suggests different text storage/layout
    └─ Some texts may be combined or relocated
@@ -174,7 +174,7 @@ class DeepDiveAnalysis:
    ├─ English extraction: 339,821 texts
    ├─ Spanish extraction: 339,716 texts
    ├─ Difference: 105 texts
-   ├─ Plus 10,852 offsets manquants = extraction problem
+   ├─ Plus 10,852 missing offsets = extraction problem
    └─ Suggests extraction scanner finds different texts
    
 3. ROM DIFFERENCES
@@ -199,8 +199,8 @@ class DeepDiveAnalysis:
    └─ Alternative: Build smarter offset mapping system
 """)
         
-        # 6. Recommandations
-        print(f"\n✅ RECOMMANDATIONS:")
+        # 6. Recommendations
+        print(f"\n✅ RECOMMENDATIONS:")
         print(f"""
 STATUS: Spanish ROM is CORRECT (99.98% success)
 

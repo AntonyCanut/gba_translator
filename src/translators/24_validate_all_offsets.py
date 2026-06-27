@@ -2,12 +2,12 @@
 """
 24 - Complete Offset Validation
 
-Teste TOUS les offsets dans la ROM espagnole pour valider
-que chaque byte a été copié correctement.
+Tests ALL offsets in the Spanish ROM to validate
+that every byte was copied correctly.
 
 Usage:
     python src/translators/24_validate_all_offsets.py
-    
+
     Or with sampling (faster):
     python src/translators/24_validate_all_offsets.py --sample 0.1
 """
@@ -24,7 +24,7 @@ sys.path.insert(0, str(Path(__file__).parent.parent.parent))
 
 @dataclass
 class OffsetValidationResult:
-    """Résultat de validation pour un offset."""
+    """Validation result for an offset."""
     offset: int
     length: int
     match: bool
@@ -35,7 +35,7 @@ class OffsetValidationResult:
 
 
 class CompleteOffsetValidator:
-    """Valide tous les offsets de la ROM espagnole."""
+    """Validates all offsets in the Spanish ROM."""
     
     def __init__(self, sample_rate: float = 1.0):
         self.english_texts = {}
@@ -55,7 +55,7 @@ class CompleteOffsetValidator:
         }
     
     def run(self) -> bool:
-        """Exécuter validation complète."""
+        """Run complete validation."""
         print("="*70)
         print("🔬 COMPLETE OFFSET VALIDATION")
         print("="*70)
@@ -73,11 +73,11 @@ class CompleteOffsetValidator:
         return True
     
     def _load_data(self) -> bool:
-        """Charger les données."""
+        """Load data."""
         print("\n📥 Loading data...")
-        
+
         try:
-            # Charger les textes anglais
+            # Load English texts
             english_path = Path('output/extracted/extracted_texts/englishrom_texts.json')
             with open(english_path, 'r', encoding='utf-8') as f:
                 data = json.load(f)
@@ -87,7 +87,7 @@ class CompleteOffsetValidator:
             
             print(f"✅ English texts: {len(self.english_texts):,}")
             
-            # Charger les ROMs
+            # Load ROMs
             with open(Path('input/roms/englishrom.gba'), 'rb') as f:
                 self.english_rom_data = f.read()
             print(f"✅ English ROM: {len(self.english_rom_data):,} bytes")
@@ -106,19 +106,19 @@ class CompleteOffsetValidator:
             return False
     
     def _validate_all_offsets(self):
-        """Valider tous les offsets."""
+        """Validate all offsets."""
         print("\n🔍 Validating offsets...")
         
         offsets = sorted(self.english_texts.keys())
         total_offsets = len(offsets)
         
-        # Déterminer quels offsets tester
+        # Determine which offsets to test
         if self.sample_rate < 1.0:
             # Sampling
             step = int(1.0 / self.sample_rate)
             test_offsets = offsets[::step]
         else:
-            # Tous
+            # All
             test_offsets = offsets
         
         print(f"   Total to test: {len(test_offsets):,}")
@@ -133,7 +133,7 @@ class CompleteOffsetValidator:
                     self.statistics['total_skipped'] += 1
                     continue
                 
-                # Obtenir les bytes
+                # Get the bytes
                 if offset + length > len(self.spanish_rom_data):
                     self.statistics['total_skipped'] += 1
                     continue
@@ -142,7 +142,7 @@ class CompleteOffsetValidator:
                 output_bytes = self.output_rom_data[offset:offset + length]
                 english_bytes = self.english_rom_data[offset:offset + length]
                 
-                # Comparer
+                # Compare
                 match = spanish_bytes == output_bytes
                 
                 result = OffsetValidationResult(
@@ -170,17 +170,17 @@ class CompleteOffsetValidator:
                 })
                 self.statistics['total_skipped'] += 1
             
-            # Afficher progression
+            # Display progress
             if (i + 1) % 10000 == 0:
                 match_rate = 100 * self.statistics['total_match'] / max(1, self.statistics['total_tested'])
                 print(f"   Progress: {i+1}/{len(test_offsets)} ({match_rate:.2f}% match)")
         
-        # Calculer le taux de match
+        # Calculate match rate
         if self.statistics['total_tested'] > 0:
             self.statistics['match_rate'] = 100 * self.statistics['total_match'] / self.statistics['total_tested']
     
     def _print_results(self):
-        """Afficher les résultats."""
+        """Print results."""
         print("\n" + "="*70)
         print("📊 VALIDATION RESULTS")
         print("="*70)
@@ -203,7 +203,7 @@ class CompleteOffsetValidator:
                 print(f"      Spanish: {result.spanish_bytes[:20].hex()}...")
                 print(f"      Output:  {result.output_bytes[:20].hex()}...")
                 
-                # Trouver le premier byte différent
+                # Find the first differing byte
                 for j, (s, o) in enumerate(zip(result.spanish_bytes, result.output_bytes)):
                     if s != o:
                         print(f"      First diff at byte {j}: Spanish={s:02X} vs Output={o:02X}")
@@ -215,7 +215,7 @@ class CompleteOffsetValidator:
                 print(f"   Offset 0x{err['offset']:08X}: {err['error']}")
     
     def _save_report(self):
-        """Sauvegarder le rapport."""
+        """Save the report."""
         print(f"\n💾 Saving report...")
         
         report = {

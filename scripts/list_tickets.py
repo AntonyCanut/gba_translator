@@ -59,11 +59,11 @@ def list_tickets(
 
 def print_tickets(tickets: list[dict[str, str]]) -> None:
     if not tickets:
-        print("Aucun ticket trouvé.")
+        print("No tickets found.")
         return
 
     print(f"\n{'='*80}")
-    print(f"  Tickets ({len(tickets)} trouvés)")
+    print(f"  Tickets ({len(tickets)} found)")
     print(f"{'='*80}\n")
 
     current_severity = ""
@@ -75,9 +75,9 @@ def print_tickets(tickets: list[dict[str, str]]) -> None:
         symbol = STATUS_SYMBOLS.get(ticket["status"], "[ ]")
         print(f"  {symbol} {ticket['file']}")
         print(f"      {ticket['title']}")
-        print(f"      Catégorie: {ticket['category']} | Sévérité: {ticket['severity']}")
+        print(f"      Category: {ticket['category']} | Severity: {ticket['severity']}")
         print(f"      Test: {ticket['source_test']}")
-        print(f"      Créé: {ticket['created']}")
+        print(f"      Created: {ticket['created']}")
         print()
 
     by_status = {}
@@ -85,32 +85,32 @@ def print_tickets(tickets: list[dict[str, str]]) -> None:
         by_status.setdefault(t["status"], []).append(t)
 
     print(f"{'='*80}")
-    print(f"  Résumé:")
+    print(f"  Summary:")
     for status, group in sorted(by_status.items()):
         print(f"    {status}: {len(group)}")
     print(f"{'='*80}\n")
 
 
 def main() -> None:
-    parser = argparse.ArgumentParser(description="Lister les tickets auto-générés")
+    parser = argparse.ArgumentParser(description="List auto-generated tickets")
     parser.add_argument(
         "--dir",
         type=Path,
         default=TICKETS_DIR,
-        help="Répertoire des tickets (défaut: tickets/)",
+        help="Tickets directory (default: tickets/)",
     )
     parser.add_argument(
         "--status",
         choices=["open", "in_progress", "resolved"],
-        help="Filtrer par statut",
+        help="Filter by status",
     )
-    parser.add_argument("--category", help="Filtrer par catégorie (ex: CRASH, WRONG_TEXT)")
+    parser.add_argument("--category", help="Filter by category (e.g. CRASH, WRONG_TEXT)")
     parser.add_argument(
         "--severity",
         choices=["critical", "major", "minor"],
-        help="Filtrer par sévérité",
+        help="Filter by severity",
     )
-    parser.add_argument("--json", action="store_true", help="Sortie JSON")
+    parser.add_argument("--json", action="store_true", help="JSON output")
 
     args = parser.parse_args()
 

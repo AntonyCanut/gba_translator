@@ -1,33 +1,33 @@
 #!/usr/bin/env python3
 """
-Garde anti-régression des traductions FR (combined_fr.txt).
+Anti-regression guard for FR translations (combined_fr.txt).
 
-Empêche la reproduction du bug c7c1ede : une réécriture en masse de
-``combined_fr.txt`` qui « ramène » silencieusement des labels carte du monde à
-leur forme anglaise/périmée (Fallshore → Ville de Fallshore, Île de la Lune →
+Prevents the recurrence of bug c7c1ede: a mass rewrite of
+``combined_fr.txt`` that silently reverted world-map labels to their
+English/stale form (Fallshore → Ville de Fallshore, Île de la Lune →
 Fullmoon Island, etc.).
 
-Principe de la vérification (cf. ``docs/20_TRANSLATION_PRESERVATION.md``)
-------------------------------------------------------------------------
-1. On parse ``combined_fr.txt`` avec la **même règle que la chaîne de build** :
-   un offset présent plusieurs fois → **la dernière entrée gagne**
-   (``apply_combined_fr.py`` fait ``mapping[offset] = text``). Le bloc hexa
-   minuscule en bas de fichier est donc la version vivante.
-2. Pour chaque offset critique, on contrôle la valeur **résolue** (last-wins) :
-   - PRÉSENCE   : l'offset doit résoudre vers un texte non vide ;
-   - NON-RÉGRESSION : la valeur ne doit pas être une forme anglaise/périmée connue.
+Verification principle (see ``docs/20_TRANSLATION_PRESERVATION.md``)
+--------------------------------------------------------------------
+1. ``combined_fr.txt`` is parsed with the **same rule as the build chain**:
+   an offset appearing multiple times → **last entry wins**
+   (``apply_combined_fr.py`` does ``mapping[offset] = text``). The lowercase
+   hex block at the bottom of the file is therefore the live version.
+2. For each critical offset, the **resolved** value is checked (last-wins):
+   - PRESENCE       : the offset must resolve to a non-empty string;
+   - NON-REGRESSION : the value must not be a known English/stale form.
 
-Un simple ``grep -c`` ne suffit PAS : c7c1ede n'a pas supprimé les lignes, il a
-réécrit leur **valeur**. La garde contrôle donc la valeur résolue, pas la
-présence d'une ligne.
+A plain ``grep -c`` is NOT sufficient: c7c1ede did not delete lines, it
+rewrote their **value**. The guard checks the resolved value, not the
+presence of a line.
 
-Sortie : code 0 si tout est conforme, code 1 si au moins une régression.
+Exit code: 0 if everything is compliant, 1 if at least one regression found.
 
 Usage
 -----
     python3 scripts/check_translation_integrity.py
-    python3 scripts/check_translation_integrity.py --file chemin/combined_fr.txt
-    python3 scripts/check_translation_integrity.py --json   # rapport machine
+    python3 scripts/check_translation_integrity.py --file path/to/combined_fr.txt
+    python3 scripts/check_translation_integrity.py --json   # machine-readable JSON report
 """
 
 from __future__ import annotations
@@ -40,7 +40,7 @@ from dataclasses import dataclass, field
 from pathlib import Path
 from typing import Dict, List, Optional
 
-# Format d'une ligne : « 0x<hex>: <texte FR> » (identique à apply_combined_fr.py).
+# Line format: « 0x<hex>: <FR text> » (same as apply_combined_fr.py).
 LINE_RE = re.compile(r"^\s*0x([0-9A-Fa-f]+)\s*:\s*(.*)$")
 
 DEFAULT_COMBINED = Path(__file__).resolve().parents[1] / "languages/fr/combined_fr.txt"
@@ -48,18 +48,18 @@ DEFAULT_COMBINED = Path(__file__).resolve().parents[1] / "languages/fr/combined_
 
 @dataclass(frozen=True)
 class CriticalLabel:
-    """Un label de la carte du monde à protéger contre la régression EN/périmée."""
+    """A world-map label to protect against EN/stale regression."""
 
     offset: int
     name: str
     expected_fr: str
-    # Formes anglaises ou périmées qui constituent une régression (insensible à la casse).
+    # English or stale forms that constitute a regression (case-insensitive).
     forbidden_forms: tuple[str, ...]
 
 
-# Les 13 labels carte du monde sauvés par B-52 (commit c7c1ede les avait écrasés).
-# Ces offsets 0xB5xxxx / 0x72xxxx ne vivent QUE dans combined_fr.txt : ils sont
-# absents du CSV trilingue, donc invisibles aux autres garde-fous.
+# The 13 world-map labels saved by B-52 (commit c7c1ede had overwritten them).
+# These 0xB5xxxx / 0x72xxxx offsets live ONLY in combined_fr.txt: they are
+# absent from the trilingual CSV, so invisible to other guards.
 CRITICAL_LABELS: tuple[CriticalLabel, ...] = (
     CriticalLabel(0xB500A0, "Bourg Gurun", "Bourg Gurun", ("ourg Gurum", "Bourg Gurum")),
     CriticalLabel(0x721304, "Trou Glacé", "Trou Glacé", ("Icy Hole",)),
@@ -79,7 +79,7 @@ CRITICAL_LABELS: tuple[CriticalLabel, ...] = (
 
 @dataclass
 class LabelResult:
-    """Résultat de la vérification d'un label critique."""
+    """Result of a critical label check."""
 
     label: CriticalLabel
     resolved: Optional[str]
@@ -89,7 +89,7 @@ class LabelResult:
 
 @dataclass
 class IntegrityReport:
-    """Bilan global de la garde d'intégrité."""
+    """Overall result of the integrity guard."""
 
     total_entries: int
     distinct_offsets: int
@@ -106,10 +106,10 @@ class IntegrityReport:
 
 
 def load_last_wins(path: Path) -> tuple[Dict[int, str], int]:
-    """Parse combined_fr.txt en appliquant la règle last-wins de la chaîne de build.
+    """Parse combined_fr.txt applying the last-wins rule used by the build chain.
 
-    Retourne ``(mapping, total_entries)`` où ``mapping[offset]`` est la **dernière**
-    valeur rencontrée (insensible à la casse de l'offset, car l'offset est un int).
+    Returns ``(mapping, total_entries)`` where ``mapping[offset]`` is the **last**
+    value encountered (offset case-insensitive, since it is stored as an int).
     """
 
     mapping: Dict[int, str] = {}
@@ -126,21 +126,21 @@ def load_last_wins(path: Path) -> tuple[Dict[int, str], int]:
 
 
 def check_label(label: CriticalLabel, mapping: Dict[int, str]) -> LabelResult:
-    """Contrôle présence + non-régression d'un label critique."""
+    """Check presence + non-regression for a critical label."""
 
     resolved = mapping.get(label.offset)
     if resolved is None:
-        return LabelResult(label, None, False, "offset absent de combined_fr.txt")
+        return LabelResult(label, None, False, "offset absent from combined_fr.txt")
     if not resolved.strip():
-        return LabelResult(label, resolved, False, "traduction vide (ne sera pas écrite en ROM)")
+        return LabelResult(label, resolved, False, "empty translation (will not be written to ROM)")
     for bad in label.forbidden_forms:
         if resolved.casefold() == bad.casefold():
-            return LabelResult(label, resolved, False, f"régression vers la forme interdite « {bad} »")
+            return LabelResult(label, resolved, False, f"regression to forbidden form « {bad} »")
     return LabelResult(label, resolved, True, "ok")
 
 
 def build_report(path: Path) -> IntegrityReport:
-    """Construit le rapport d'intégrité pour un combined_fr.txt donné."""
+    """Build the integrity report for a given combined_fr.txt."""
 
     mapping, total = load_last_wins(path)
     distinct = len(mapping)
@@ -155,11 +155,11 @@ def build_report(path: Path) -> IntegrityReport:
 
 def _render_human(report: IntegrityReport) -> str:
     lines = [
-        "Garde d'intégrité des traductions FR (combined_fr.txt)",
-        f"  entrées totales   : {report.total_entries}",
-        f"  offsets distincts : {report.distinct_offsets}",
-        f"  doublons (last-wins): {report.duplicate_offsets}",
-        f"  labels carte protégés : {len(report.results)}",
+        "FR translation integrity guard (combined_fr.txt)",
+        f"  total entries      : {report.total_entries}",
+        f"  distinct offsets   : {report.distinct_offsets}",
+        f"  duplicates (last-wins): {report.duplicate_offsets}",
+        f"  protected map labels  : {len(report.results)}",
         "",
     ]
     for result in report.results:
@@ -170,9 +170,9 @@ def _render_human(report: IntegrityReport) -> str:
             lines.append(f"         ↳ {result.reason}")
     lines.append("")
     if report.ok:
-        lines.append("✅ Aucun label carte régressé — combined_fr.txt conforme.")
+        lines.append("✅ No map label regressed — combined_fr.txt is compliant.")
     else:
-        lines.append(f"❌ {len(report.failures)} label(s) régressé(s) — voir docs/20_TRANSLATION_PRESERVATION.md")
+        lines.append(f"❌ {len(report.failures)} label(s) regressed — see docs/20_TRANSLATION_PRESERVATION.md")
     return "\n".join(lines)
 
 
@@ -202,13 +202,13 @@ def main(argv: Optional[List[str]] = None) -> int:
         "--file",
         type=Path,
         default=DEFAULT_COMBINED,
-        help="chemin vers combined_fr.txt (défaut : racine du dépôt)",
+        help="path to combined_fr.txt (default: repo root)",
     )
-    parser.add_argument("--json", action="store_true", help="émettre un rapport JSON machine")
+    parser.add_argument("--json", action="store_true", help="emit a machine-readable JSON report")
     args = parser.parse_args(argv)
 
     if not args.file.exists():
-        print(f"erreur : fichier introuvable : {args.file}", file=sys.stderr)
+        print(f"error: file not found: {args.file}", file=sys.stderr)
         return 2
 
     report = build_report(args.file)

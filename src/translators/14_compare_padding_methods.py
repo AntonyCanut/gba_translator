@@ -2,8 +2,8 @@
 """
 14 - Compare Padding Detection Methods
 
-Compare la détection standard vs améliorée pour identifier
-les gains potentiels sur les cas de débordement 7-10 bytes.
+Compares standard vs enhanced detection to identify
+potential gains on 7-10 byte overflow cases.
 
 Usage:
     python src/translators/14_compare_padding_methods.py
@@ -21,7 +21,7 @@ import json
 from pathlib import Path
 from datetime import datetime
 
-# Ajouter src au path
+# Add src to path
 sys.path.insert(0, str(Path(__file__).parent.parent.parent))
 
 from src.core.rom_reader import ROMReader
@@ -31,19 +31,19 @@ from src.core.enhanced_padding_detector import EnhancedPaddingDetector
 
 class PaddingMethodComparator:
     """
-    Compare les méthodes de détection de padding.
+    Compares padding detection methods.
 
-    Compare PaddingDetector standard vs EnhancedPaddingDetector
-    pour identifier les améliorations possibles.
+    Compares standard PaddingDetector vs EnhancedPaddingDetector
+    to identify possible improvements.
     """
 
     def __init__(self, rom_path: str, diff_only_path: Path):
         """
-        Initialise le comparateur.
+        Initializes the comparator.
 
         Args:
-            rom_path: Chemin vers la ROM
-            diff_only_path: Chemin vers diff_only.json
+            rom_path: Path to the ROM
+            diff_only_path: Path to diff_only.json
         """
         self.rom = ROMReader(rom_path)
         self.diff_only_path = diff_only_path
@@ -59,28 +59,28 @@ class PaddingMethodComparator:
         }
 
     def load_rom(self) -> None:
-        """Charge la ROM."""
-        print("📖 Chargement ROM...")
+        """Loads the ROM."""
+        print("📖 Loading ROM...")
         self.rom.load()
         info = self.rom.get_rom_info()
         print(f"   ROM: {info['title']} ({info['game_code']})")
-        print(f"   Taille: {info['size_mb']} MB")
+        print(f"   Size: {info['size_mb']} MB")
 
     def load_texts(self) -> None:
-        """Charge les textes à analyser."""
+        """Loads the texts to analyze."""
         print()
-        print("📄 Chargement textes...")
+        print("📄 Loading texts...")
 
         with open(self.diff_only_path, 'r', encoding='utf-8') as f:
             data = json.load(f)
 
         self.texts = data['texts']
-        print(f"   Textes chargés: {len(self.texts)}")
+        print(f"   Texts loaded: {len(self.texts)}")
 
     def analyze_standard(self) -> None:
-        """Analyse avec méthode standard."""
+        """Analysis with standard method."""
         print()
-        print("🔍 Analyse avec détection STANDARD...")
+        print("🔍 Analysis with STANDARD detection...")
 
         self.standard_detector = PaddingDetector(self.rom)
         enriched = self.standard_detector.analyze_all_texts(self.texts)
@@ -91,13 +91,13 @@ class PaddingMethodComparator:
         }
 
         stats = self.results['standard']['report']['statistics']
-        print(f"✅ Analyse terminée")
-        print(f"   Padding moyen: {stats['average_padding']}")
+        print(f"✅ Analysis complete")
+        print(f"   Average padding: {stats['average_padding']}")
 
     def analyze_enhanced(self) -> None:
-        """Analyse avec méthode améliorée."""
+        """Analysis with enhanced method."""
         print()
-        print("🔍 Analyse avec détection AMÉLIORÉE...")
+        print("🔍 Analysis with ENHANCED detection...")
 
         self.enhanced_detector = EnhancedPaddingDetector(
             self.rom,
@@ -111,18 +111,18 @@ class PaddingMethodComparator:
         }
 
         stats = self.results['enhanced']['report']['statistics']
-        print(f"✅ Analyse terminée")
-        print(f"   Padding moyen: {stats['average_padding']}")
+        print(f"✅ Analysis complete")
+        print(f"   Average padding: {stats['average_padding']}")
 
     def compare_results(self) -> dict:
         """
-        Compare les deux méthodes.
+        Compares the two methods.
 
         Returns:
-            dict: Rapport de comparaison
+            dict: Comparison report
         """
         print()
-        print("📊 Comparaison des méthodes...")
+        print("📊 Comparing methods...")
 
         standard_texts = self.results['standard']['enriched_texts']
         enhanced_texts = self.results['enhanced']['enriched_texts']
@@ -157,7 +157,7 @@ class PaddingMethodComparator:
                 if confidence == 'high':
                     high_confidence_gains += 1
 
-        # Trier par gain
+        # Sort by gain
         improvements.sort(key=lambda x: x['gain'], reverse=True)
 
         comparison = {
@@ -180,13 +180,13 @@ class PaddingMethodComparator:
 
     def _categorize_by_gain(self, improvements: list) -> dict:
         """
-        Catégorise les améliorations par range de gain.
+        Categorizes improvements by gain range.
 
         Args:
-            improvements: Liste des améliorations
+            improvements: List of improvements
 
         Returns:
-            dict: Statistiques par range
+            dict: Statistics by range
         """
         ranges = {
             '1-3 bytes': 0,
@@ -210,28 +210,28 @@ class PaddingMethodComparator:
 
     def print_comparison(self, comparison: dict) -> None:
         """
-        Affiche le rapport de comparaison.
+        Prints the comparison report.
 
         Args:
-            comparison: Rapport de comparaison
+            comparison: Comparison report
         """
         print()
         print("=" * 80)
-        print("RÉSULTATS DE LA COMPARAISON")
+        print("COMPARISON RESULTS")
         print("=" * 80)
 
-        print(f"Textes analysés:         {comparison['total_texts']}")
-        print(f"Améliorations trouvées:  {comparison['improvements_found']}")
-        print(f"Gain total de padding:   {comparison['total_padding_gain']} bytes")
-        print(f"Gain moyen:              {comparison['average_gain']:.1f} bytes")
+        print(f"Texts analyzed:          {comparison['total_texts']}")
+        print(f"Improvements found:      {comparison['improvements_found']}")
+        print(f"Total padding gain:      {comparison['total_padding_gain']} bytes")
+        print(f"Average gain:            {comparison['average_gain']:.1f} bytes")
         print()
 
-        print(f"Gains haute confiance:   {comparison['high_confidence_gains']}")
-        print(f"Pourcentage:             {comparison['high_confidence_percentage']:.1f}%")
+        print(f"High-confidence gains:   {comparison['high_confidence_gains']}")
+        print(f"Percentage:              {comparison['high_confidence_percentage']:.1f}%")
         print()
 
         print("=" * 80)
-        print("PAR RANGE DE GAIN")
+        print("BY GAIN RANGE")
         print("=" * 80)
 
         for range_name, count in comparison['by_gain_range'].items():
@@ -240,21 +240,21 @@ class PaddingMethodComparator:
 
         print()
         print("=" * 80)
-        print("TOP 10 AMÉLIORATIONS")
+        print("TOP 10 IMPROVEMENTS")
         print("=" * 80)
 
         for i, imp in enumerate(comparison['top_20_improvements'][:10], 1):
             print(f"\n{i}. Offset {imp['offset']} - Gain: +{imp['gain']} bytes ({imp['confidence']})")
-            print(f"   Texte: \"{imp['text']}\"")
+            print(f"   Text: \"{imp['text']}\"")
             print(f"   Standard: {imp['standard_padding']} → Max {imp['standard_max']}")
-            print(f"   Amélioré: {imp['extended_padding']} → Max {imp['extended_max']}")
+            print(f"   Enhanced: {imp['extended_padding']} → Max {imp['extended_max']}")
 
     def save_report(self) -> Path:
         """
-        Sauvegarde le rapport complet.
+        Saves the complete report.
 
         Returns:
-            Path: Chemin du fichier sauvegardé
+            Path: Path of the saved file
         """
         output_dir = Path('output/analysis')
         output_dir.mkdir(parents=True, exist_ok=True)
@@ -277,10 +277,10 @@ class PaddingMethodComparator:
 
     def run(self) -> dict:
         """
-        Exécute la comparaison complète.
+        Runs the complete comparison.
 
         Returns:
-            dict: Rapport de comparaison
+            dict: Comparison report
         """
         self.load_rom()
         self.load_texts()
@@ -292,25 +292,25 @@ class PaddingMethodComparator:
 
         print()
         print("=" * 80)
-        print("✅ COMPARAISON TERMINÉE")
+        print("✅ COMPARISON COMPLETE")
         print("=" * 80)
         print()
-        print(f"Rapport sauvegardé: {report_path}")
+        print(f"Report saved: {report_path}")
         print()
 
-        # Recommandations
-        print("RECOMMANDATIONS:")
+        # Recommendations
+        print("RECOMMENDATIONS:")
         print("-" * 80)
 
         total_improvements = comparison['improvements_found']
         high_conf = comparison['high_confidence_gains']
 
         if high_conf > 0:
-            print(f"✅ {high_conf} améliorations haute confiance détectées")
-            print("   → Recommandé d'utiliser EnhancedPaddingDetector")
+            print(f"✅ {high_conf} high-confidence improvements detected")
+            print("   → Recommended to use EnhancedPaddingDetector")
         else:
-            print("⚠️ Aucune amélioration haute confiance détectée")
-            print("   → PaddingDetector standard suffisant")
+            print("⚠️ No high-confidence improvements detected")
+            print("   → Standard PaddingDetector is sufficient")
 
         print()
 
@@ -318,7 +318,7 @@ class PaddingMethodComparator:
 
 
 def find_latest_diff_file() -> Path:
-    """Trouve le fichier diff_only.json le plus récent."""
+    """Finds the most recent diff_only.json file."""
     diff_dir = Path('output/differences')
     if not diff_dir.exists():
         raise FileNotFoundError("output/differences/ not found")
@@ -332,7 +332,7 @@ def find_latest_diff_file() -> Path:
 
 
 def main():
-    """Point d'entrée principal."""
+    """Main entry point."""
     print("=" * 80)
     print("14 - COMPARE PADDING DETECTION METHODS")
     print("=" * 80)
@@ -340,30 +340,30 @@ def main():
 
     rom_path = 'input/roms/englishrom.gba'
 
-    # Vérifier ROM
+    # Check ROM
     if not Path(rom_path).exists():
-        print(f"❌ Erreur: {rom_path} non trouvé")
+        print(f"❌ Error: {rom_path} not found")
         sys.exit(1)
 
-    # Trouver diff_only
+    # Find diff_only
     try:
         diff_only_path = find_latest_diff_file()
-        print(f"📄 Fichier diff: {diff_only_path.name}")
+        print(f"📄 Diff file: {diff_only_path.name}")
     except FileNotFoundError as e:
-        print(f"❌ Erreur: {e}")
+        print(f"❌ Error: {e}")
         sys.exit(1)
 
     print()
 
     try:
-        # Créer et exécuter comparateur
+        # Create and run comparator
         comparator = PaddingMethodComparator(rom_path, diff_only_path)
         comparison = comparator.run()
 
         sys.exit(0)
 
     except Exception as e:
-        print(f"❌ Erreur inattendue: {e}")
+        print(f"❌ Unexpected error: {e}")
         import traceback
         traceback.print_exc()
         sys.exit(1)

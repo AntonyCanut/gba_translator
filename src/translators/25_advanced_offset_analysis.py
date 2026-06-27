@@ -2,11 +2,11 @@
 """
 25 - Advanced Offset Analysis
 
-Analyse détaillée:
-- Distribution des longueurs
-- Patterns de stockage
-- Vérification des frontières
-- Analyse des bytes consécutifs
+Detailed analysis:
+- Length distribution
+- Storage patterns
+- Boundary verification
+- Consecutive byte analysis
 
 Usage:
     python src/translators/25_advanced_offset_analysis.py
@@ -22,7 +22,7 @@ sys.path.insert(0, str(Path(__file__).parent.parent.parent))
 
 
 class AdvancedOffsetAnalysis:
-    """Analyse avancée des offsets."""
+    """Advanced offset analysis."""
     
     def __init__(self):
         self.english_texts = {}
@@ -38,7 +38,7 @@ class AdvancedOffsetAnalysis:
         }
     
     def run(self) -> bool:
-        """Exécuter analyse complète."""
+        """Run complete analysis."""
         print("="*70)
         print("🔬 ADVANCED OFFSET ANALYSIS")
         print("="*70)
@@ -55,11 +55,11 @@ class AdvancedOffsetAnalysis:
         return True
     
     def _load_data(self) -> bool:
-        """Charger les données."""
+        """Load data."""
         print("\n📥 Loading data...")
-        
+
         try:
-            # Charger les textes anglais
+            # Load English texts
             english_path = Path('output/extracted/extracted_texts/englishrom_texts.json')
             with open(english_path, 'r', encoding='utf-8') as f:
                 data = json.load(f)
@@ -69,11 +69,11 @@ class AdvancedOffsetAnalysis:
             
             print(f"✅ English texts: {len(self.english_texts):,}")
             
-            # Charger les ROMs
+            # Load ROMs
             with open(Path('input/roms/englishrom.gba'), 'rb') as f:
                 self.english_rom_data = f.read()
             print(f"✅ English ROM: {len(self.english_rom_data):,} bytes")
-            
+
             with open(Path('input/roms/spanishrom.gba'), 'rb') as f:
                 self.spanish_rom_data = f.read()
             print(f"✅ Spanish ROM: {len(self.spanish_rom_data):,} bytes")
@@ -88,7 +88,7 @@ class AdvancedOffsetAnalysis:
             return False
     
     def _analyze_length_distribution(self):
-        """Analyser distribution des longueurs."""
+        """Analyze length distribution."""
         print("\n📊 Analyzing length distribution...")
         
         offsets = sorted(self.english_texts.keys())
@@ -110,7 +110,7 @@ class AdvancedOffsetAnalysis:
             'total_bytes': sum(lengths)
         }
         
-        # Distribution par ranges
+        # Distribution by range
         ranges = {
             '1-10': 0,
             '11-50': 0,
@@ -145,7 +145,7 @@ class AdvancedOffsetAnalysis:
             print(f"      {range_name:12} bytes: {count:8,} texts ({pct:5.2f}%)")
     
     def _analyze_consecutive_texts(self):
-        """Analyser les textes consécutifs."""
+        """Analyze consecutive texts."""
         print("\n🔗 Analyzing consecutive texts...")
         
         offsets = sorted(self.english_texts.keys())
@@ -162,7 +162,7 @@ class AdvancedOffsetAnalysis:
             
             next_offset = offsets[i+1]
             
-            # Si le prochain offset suit directement
+            # If the next offset follows immediately
             if offset + length == next_offset:
                 consecutive_count += 1
                 current_group.append((offset, length))
@@ -183,7 +183,7 @@ class AdvancedOffsetAnalysis:
             print(f"   Largest group: {max(len(g) for g in consecutive_groups)} texts")
     
     def _analyze_gaps(self):
-        """Analyser les gaps entre offsets."""
+        """Analyze gaps between offsets."""
         print("\n🔲 Analyzing gaps between offsets...")
         
         offsets = sorted(self.english_texts.keys())
@@ -230,7 +230,7 @@ class AdvancedOffsetAnalysis:
                 print(f"      {size:12}: {count:8,} gaps ({pct:5.2f}%)")
     
     def _analyze_boundaries(self):
-        """Analyser l'intégrité des limites."""
+        """Analyze boundary integrity."""
         print("\n🔒 Analyzing boundary integrity...")
         
         offsets = sorted(self.english_texts.keys())
@@ -243,7 +243,7 @@ class AdvancedOffsetAnalysis:
             if length <= 0 or length > 1000:
                 continue
             
-            # Vérifier que l'offset + length ne dépasse pas ROM
+            # Check that offset + length does not exceed ROM size
             if offset + length > len(self.spanish_rom_data):
                 boundary_errors.append({
                     'offset': offset,
@@ -252,7 +252,7 @@ class AdvancedOffsetAnalysis:
                     'rom_size': len(self.spanish_rom_data)
                 })
             
-            # Vérifier que Spanish et Output ont le même contenu
+            # Check that Spanish and Output have the same content
             try:
                 spanish_bytes = self.spanish_rom_data[offset:offset + length]
                 output_bytes = self.output_rom_data[offset:offset + length]
@@ -276,7 +276,7 @@ class AdvancedOffsetAnalysis:
             print(f"   ✅ All boundaries are intact!")
     
     def _generate_detailed_report(self):
-        """Générer rapport détaillé."""
+        """Generate detailed report."""
         print("\n" + "="*70)
         print("📋 DETAILED ANALYSIS REPORT")
         print("="*70)
@@ -308,11 +308,11 @@ class AdvancedOffsetAnalysis:
         else:
             print(f"   ⚠️  {self.analysis['boundary_errors']} boundary errors")
         
-        # Sauvegarder rapport
+        # Save report
         self._save_report()
-    
+
     def _save_report(self):
-        """Sauvegarder le rapport JSON."""
+        """Save the JSON report."""
         print(f"\n💾 Saving detailed analysis...")
         
         try:

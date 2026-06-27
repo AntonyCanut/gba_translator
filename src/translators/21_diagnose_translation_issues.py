@@ -2,16 +2,16 @@
 """
 21 - Diagnose Translation Issues
 
-Analyse en détail les problèmes dans les traductions pour comprendre
-pourquoi certains textes échouent lors de la construction de ROM.
+Analyzes translation problems in detail to understand
+why certain texts fail during ROM construction.
 
 Features:
-- Valide chaque texte individuellement
-- Encode et teste Pokémon encoding
-- Détecte textes trop longs/courts
-- Analyse caractères non supportés
-- Génère rapport détaillé
-- Suggest corrections
+- Validates each text individually
+- Encodes and tests Pokémon encoding
+- Detects texts that are too long/short
+- Analyzes unsupported characters
+- Generates a detailed report
+- Suggests corrections
 
 Usage:
     python src/translators/21_diagnose_translation_issues.py \
@@ -35,7 +35,7 @@ from src.core.text_reinserter import TextEncoder
 
 @dataclass
 class TextIssue:
-    """Représente un problème identifié."""
+    """Represents an identified problem."""
     offset: int
     issue_type: str
     severity: str  # critical, warning, info
@@ -47,7 +47,7 @@ class TextIssue:
 
 
 class TranslationDiagnostics:
-    """Diagnostique les problèmes de traduction."""
+    """Diagnoses translation problems."""
     
     def __init__(self, translations_path: Path):
         self.translations_path = translations_path
@@ -68,7 +68,7 @@ class TranslationDiagnostics:
         }
     
     def run(self) -> bool:
-        """Exécuter diagnostic complet."""
+        """Run complete diagnostic."""
         print("="*70)
         print("🔍 TRANSLATION DIAGNOSTICS")
         print("="*70)
@@ -76,19 +76,19 @@ class TranslationDiagnostics:
         if not self._load_translations():
             return False
         
-        print(f"\n📊 Analysant {len(self.translations)} textes...")
-        
+        print(f"\n📊 Analyzing {len(self.translations)} texts...")
+
         for i, (offset, item) in enumerate(self.translations.items()):
             self._diagnose_single_text(offset, item)
-            
+
             if (i + 1) % 5000 == 0:
-                print(f"   Analysé: {i+1}/{len(self.translations)}")
+                print(f"   Analyzed: {i+1}/{len(self.translations)}")
         
         self._print_summary()
         return True
     
     def _load_translations(self) -> bool:
-        """Charger les traductions."""
+        """Load translations."""
         try:
             with open(self.translations_path, 'r', encoding='utf-8') as f:
                 data = json.load(f)
@@ -100,21 +100,21 @@ class TranslationDiagnostics:
                     if offset:
                         self.translations[offset] = item
             
-            print(f"✅ {len(self.translations)} traductions chargées")
+            print(f"✅ {len(self.translations)} translations loaded")
             self.statistics['total'] = len(self.translations)
             return True
         
         except Exception as e:
-            print(f"❌ Erreur chargement: {e}")
+            print(f"❌ Loading error: {e}")
             return False
     
     def _diagnose_single_text(self, offset: int, item: Dict):
-        """Diagnostiquer un seul texte."""
+        """Diagnose a single text."""
         english_text = item.get('english', '')
         french_text = item.get('text', '') or item.get('french', '')
         length = item.get('length', 0)
-        
-        # Check 1: Texte vide
+
+        # Check 1: Empty text
         if not french_text or not french_text.strip():
             self.statistics['empty'] += 1
             if french_text == english_text:
@@ -132,12 +132,12 @@ class TranslationDiagnostics:
                 ))
             return
         
-        # Check 2: Texte inchangé
+        # Check 2: Unchanged text
         if french_text == english_text:
             self.statistics['unchanged'] += 1
             return
         
-        # Check 3: Validité basique
+        # Check 3: Basic validity
         if not self.validator.is_valid_game_text(french_text):
             self.statistics['invalid'] += 1
             self.issues.append(TextIssue(
@@ -151,12 +151,12 @@ class TranslationDiagnostics:
             ))
             return
         
-        # Check 4: Encodage Pokémon
+        # Check 4: Pokémon encoding
         try:
             encoded_french = TextEncoder.encode_pokemon(french_text)
             encoded_english = TextEncoder.encode_pokemon(english_text)
             
-            # Check 5: Longueur
+            # Check 5: Length
             if len(encoded_french) > length:
                 self.statistics['too_long'] += 1
                 extra = len(encoded_french) - length
@@ -182,7 +182,7 @@ class TranslationDiagnostics:
                     length=length
                 ))
             
-            # Check 6: Caractères spéciaux
+            # Check 6: Special characters
             special_chars = self._find_unsupported_chars(french_text)
             if special_chars:
                 self.statistics['special_chars'] += 1
@@ -197,7 +197,7 @@ class TranslationDiagnostics:
                     suggested_fix='Replace with supported Pokémon encoding chars'
                 ))
             
-            # Si on arrive ici, c'est valide
+            # If we get here, it's valid
             self.statistics['valid'] += 1
         
         except Exception as e:
@@ -213,10 +213,10 @@ class TranslationDiagnostics:
             ))
     
     def _find_unsupported_chars(self, text: str) -> str:
-        """Trouver les caractères non supportés."""
+        """Find unsupported characters."""
         unsupported = set()
-        
-        # Caractères supportés en Pokémon
+
+        # Supported characters in Pokémon encoding
         supported = set('abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789 -.,!?\'":;()[]{}àèéùçœæ\n')
         
         for char in text:
@@ -226,7 +226,7 @@ class TranslationDiagnostics:
         return ''.join(sorted(unsupported))
     
     def _print_summary(self):
-        """Afficher résumé."""
+        """Print summary."""
         print("\n" + "="*70)
         print("📊 DIAGNOSTIC SUMMARY")
         print("="*70)
@@ -265,7 +265,7 @@ class TranslationDiagnostics:
                     print(f"   Fix: {issue.suggested_fix}")
     
     def save_report(self, output_path: Path) -> bool:
-        """Sauvegarder le rapport."""
+        """Save the report."""
         print(f"\n💾 Saving detailed report...")
         
         report = {
@@ -305,7 +305,7 @@ class TranslationDiagnostics:
             return False
     
     def _generate_recommendations(self) -> List[str]:
-        """Générer des recommandations."""
+        """Generate recommendations."""
         recs = []
         
         too_long_count = self.statistics['too_long']
