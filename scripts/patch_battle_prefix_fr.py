@@ -250,10 +250,17 @@ def apply_patches(data: bytearray, patches: list = PATCHES) -> int:
         if current == new:
             continue  # already patched
         if current != old:
-            raise ValueError(
-                f"0x{offset:X}: unexpected bytes {current.hex(' ')} "
-                f"(expected {old.hex(' ')})"
-            )
+            # Single-byte → 0xFF patches zero the first byte of a text prefix
+            # so the engine's prefix-copy loop writes nothing.  The FR builder
+            # may have already replaced the English text with a French
+            # translation at this offset; we must zero it regardless.
+            if len(old) == 1 and new == bytes([0xFF]):
+                pass  # write 0xFF unconditionally
+            else:
+                raise ValueError(
+                    f"0x{offset:X}: unexpected bytes {current.hex(' ')} "
+                    f"(expected {old.hex(' ')})"
+                )
         data[offset: offset + len(new)] = new
         applied += 1
     return applied
