@@ -27,3 +27,12 @@ tickets/auto-*.yaml
 /.singularity-worktrees/
 output/roms/*.ss[0-9]
 .mcp.json
+
+# Multi-language build artifacts (regenerate: make build-it / build-de / release-all)
+output/release/
+output/roms/GenedRom-it.gba
+output/roms/GenedRom-de.gba
+output/translation/it_*.json
+output/translation/de_*.json
+output/translation/it_*.csv
+output/translation/de_*.csv

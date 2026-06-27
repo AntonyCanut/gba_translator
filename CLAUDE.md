@@ -115,6 +115,13 @@ make pipeline
 # Build French ROM
 make build-fr                   # uses latest output/translation/*_translation_ready.json
 
+# Multi-language (see docs/21_MULTILANGUE.md)
+make langs                      # list languages declared in languages/<code>/lang.yaml
+make build-it                   # Italian (generic driver scripts/build_language.py)
+make build-de                   # German  (generic driver)
+make build-all                  # FR (dedicated) + IT + DE
+make release-all                # build all three + package output/release/
+
 # Tests — fast (unit only, no ROM/emulator)
 make test                       # alias: test-python-fast
 python3 -m pytest tests/ -x --ignore=tests/benchmarks --ignore=tests/e2e \
@@ -153,6 +160,29 @@ make tickets
 6. `repair_stable_lz77_blocks.py` — restore LZ77-compressed images
 7. `repair_localized_lz77_blocks.py` — restore localized LZ77 blocks
 8. `repoint_stale_text_pointers.py` — fix any stale pointers after relocation
+
+## Multi-language architecture (FR / IT / DE …)
+
+Languages are declared in a registry: `languages/<code>/lang.yaml`, loaded by
+`src/i18n` (`load_registry()`), with translations in
+`languages/<code>/combined_<code>.txt` (French keeps `combined_fr.txt` at root).
+
+- **French = `build: dedicated`.** It is COMPLETE and byte-perfect; it keeps the
+  full hand-tuned `make build-fr` recipe above. **Never** reroute FR through the
+  generic driver — `make build-fr` must keep producing the exact same ROM hash.
+- **Italian / German = `build: generic`**, built by `scripts/build_language.py
+  <code>`: `combined_<code>.txt` → trilingual CSV (`apply_combined_fr.py`, which
+  is language-agnostic) → `<code>_translation_ready.json` → generic builder →
+  per-language patches (`font`, `inline`).
+- Shared code, per-language data only. `apply_combined_fr.py`,
+  `apply_inline_overrides_fr.py`, `patch_font_fr.py` are reused across languages
+  via CLI args (the `_fr` name is historical).
+- Charmap caveat: `à è é ì í î ò ó ù ú ç ß` encode; `ä ö ü` do **not** yet — German
+  transliterates umlauts (`ae/oe/ue/ss`) until a DE charmap+font extension lands.
+- `make release-all` → `scripts/package_release.py` writes ROMs + zips +
+  `SHA256SUMS.txt` + `RELEASE_MANIFEST.json` to `output/release/`.
+
+Full guide: `docs/21_MULTILANGUE.md`. Tests: `tests/test_language_registry.py`.
 
 ## Domain Glossary
 

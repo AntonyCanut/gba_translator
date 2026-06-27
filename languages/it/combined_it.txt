@@ -1,0 +1,26 @@
+# combined_it.txt — Italian translations for Pokémon Unbound (EN→IT)
+#
+# Same format as combined_fr.txt:  <offset_hex>: <text_IT>
+#   \n  -> line break        \l -> <0xFA> (scroll)      \p -> <0xFB> (clear)
+# Lines starting with '#' and blank lines are ignored.
+# Offsets absent from this file keep their English text.
+# Last entry wins for a duplicated offset (case-insensitive).
+#
+# STATUS: seed / work in progress. These entries prove the EN→IT pipeline
+# end to end; the bulk of the script still needs translating.
+#
+# --- seed entries (verified against the English extraction) ---
+0x1724DC: Ho perso un po' della mia paghetta
+0x1724F9: Sapevi che i Pokémon si evolvono?
+0x1773FD: Te lo dico io.
+0x17747B: E chi non lo farebbe?
+0x177489: Non ancora del tutto!
+0x177498: Non trovo l'Erede Maxima!
+0x1774CB: Oh, no! Ho perso!
+0x17A017: Dov'è il fantasma?
+0x17A02B: Devo aver sognato
+0x17D866: Lab. Ricerche Pokémon Tronco
+0x183482: Grotta della Valle
+0x183509: Mi hai battuto.
+0x1835A0: Non ci credo!
+0x18364C: Per favore, non fissarmi.

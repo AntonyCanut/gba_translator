@@ -1,0 +1,38 @@
+# German language descriptor — Pokémon Unbound EN→DE
+#
+# WORK IN PROGRESS. German is built by the generic driver
+# `scripts/build_language.py de`. Translations live in
+# languages/de/combined_de.txt (same `<offset_hex>: <text>` format as
+# combined_fr.txt). Offsets not present there stay English.
+#
+# NOTE: German adds ä ö ü ß, which are NOT in the shared FR font glyph set.
+# The generic `font` step is therefore disabled below until a DE font patch
+# provides those glyphs; ASCII fallbacks (ae/oe/ue/ss) are used meanwhile.
+code: de
+name: German
+native_name: Deutsch
+builder_language: german          # value passed to the generic builder --language
+status: in_progress               # complete | in_progress
+build: generic                    # dedicated (make build-fr) | generic (build_language.py)
+
+combined: languages/de/combined_de.txt
+critical: languages/de/critical_strings_de.txt   # optional; created when needed
+output_rom: GenedRom-de.gba
+version_label: DE.0.1.0
+
+# Extra glyphs the font must render beyond plain ASCII.
+font_glyphs: "äöüßÄÖÜ"
+
+# In-game status-condition abbreviations (official DE localisation).
+status_abbrev:
+  poison: GIF
+  burn: VBR
+  freeze: GEF
+  paralysis: PAR
+  sleep: SCH
+  faint: KO
+
+# Generic post-build patches applied by scripts/build_language.py.
+# `font` is intentionally omitted (umlauts/ß need a dedicated DE font patch).
+patches:
+  - inline

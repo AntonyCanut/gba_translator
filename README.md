@@ -1,8 +1,30 @@
-# Pokemon FireRed - Spanish ROM Reproduction
+# Pokémon Unbound — Multi-language ROM Translation Toolkit
 
-Goal: reverse engineer two GBA ROMs (original English and translated Spanish) and reproduce the Spanish ROM logically and deterministically.
+Translate Pokémon Unbound (CFRU/BPRE01) from English into several languages from
+one toolkit. The Spanish reproduction below is the original reverse-engineering
+foundation; on top of it the project now builds **French** (complete,
+byte-perfect), **Italian** and **German** (in progress).
 
-## Quick start
+## Languages
+
+```bash
+make langs           # list languages declared in languages/
+make build-fr        # French — dedicated, byte-perfect recipe
+make build-it        # Italian — generic driver
+make build-de        # German — generic driver
+make build-all       # build FR + IT + DE
+make release-all     # build all three + package output/release/ (ROMs, zips, checksums)
+```
+
+Each language is declared by a small descriptor in `languages/<code>/lang.yaml`
+with its translations in `languages/<code>/combined_<code>.txt` (French keeps
+`combined_fr.txt` at the repo root). See **[docs/21_MULTILANGUE.md](docs/21_MULTILANGUE.md)**
+for the full guide, including how to add a new language.
+
+> French is the reference translation and stays byte-perfect: it has its own
+> dedicated recipe and is never rerouted through the generic driver.
+
+## Quick start (Spanish reproduction foundation)
 
 1. Drop ROMs here:
    - `input/roms/englishrom.gba`
