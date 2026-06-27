@@ -9,23 +9,22 @@
 # STATUS: seed / work in progress. These entries prove the EN→DE pipeline
 # end to end; the bulk of the script still needs translating.
 #
-# ⚠️ The shared CFRU charmap has no ä/ö/ü glyphs yet, so umlauts are written
-#    with the standard ae/oe/ue/ss transliteration until a DE charmap+font
-#    extension lands (see follow-up ticket). ß encodes but is also spelled
-#    out for consistency.
+# ä ö ü Ä Ö Ü are now fully encodable (charmap slots 0x63-0x60, glyphs drawn
+# by scripts/patch_font_de.py). Use real umlauts below — no ae/oe/ue needed.
+# ß is at 0x15 and has a ROM glyph; use it directly.
 #
 # --- seed entries (verified against the English extraction) ---
 0x1724DC: Ich habe etwas Taschengeld verloren
 0x1724F9: Wusstest du, dass sich Pokémon entwickeln?
 0x1773FD: Ich sag's dir.
-0x17747B: Wer wuerde das nicht?
+0x17747B: Wer würde das nicht?
 0x177489: Noch nicht ganz!
 0x177498: Ich finde Nachfolger Maxima nicht!
 0x1774CB: Oh nein! Ich habe verloren!
 0x17A017: Wo ist das Gespenst?
-0x17A02B: Ich muss getraeumt haben
+0x17A02B: Ich muss geträumt haben
 0x17D866: Klotz-Pokémon-Forschungslabor
-0x183482: Talhoehle
+0x183482: Talhöhle
 0x183509: Du hast mich besiegt.
 0x1835A0: Ich kann es nicht glauben!
 0x18364C: Bitte starr mich nicht so an.

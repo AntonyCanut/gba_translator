@@ -45,7 +45,7 @@ EXTRACT_SCRIPT = REPO_ROOT / "src/extractors/pointer_text_extractor.py"
 BUILD_SCRIPT = REPO_ROOT / "src/translators/19_build_translated_rom_generic.py"
 CSV_TO_JSON_SCRIPT = REPO_ROOT / "src/translators/09_csv_to_json_v2.py"
 APPLY_COMBINED_SCRIPT = REPO_ROOT / "scripts/apply_combined_fr.py"
-PATCH_FONT_SCRIPT = REPO_ROOT / "scripts/patch_font_fr.py"
+_PATCH_FONT_FR = REPO_ROOT / "scripts/patch_font_fr.py"
 INLINE_SCRIPT = REPO_ROOT / "scripts/apply_inline_overrides_fr.py"
 
 
@@ -140,11 +140,17 @@ def build_rom(config, translation_json: Path) -> Path:
     return out_rom
 
 
+def _font_script_for(code: str) -> Path:
+    """Return the language-specific font patch script, falling back to the FR one."""
+    lang_script = REPO_ROOT / f"scripts/patch_font_{code}.py"
+    return lang_script if lang_script.exists() else _PATCH_FONT_FR
+
+
 def apply_patches(config, out_rom: Path) -> None:
     combined = config.combined_path(REPO_ROOT)
     for step in config.patches:
         if step == "font":
-            run([PYTHON, PATCH_FONT_SCRIPT, "--rom", out_rom])
+            run([PYTHON, _font_script_for(config.code), "--rom", out_rom])
         elif step == "inline":
             run([
                 PYTHON, INLINE_SCRIPT,
