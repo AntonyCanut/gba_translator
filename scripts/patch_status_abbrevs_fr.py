@@ -35,6 +35,7 @@ import argparse
 import struct
 import sys
 from pathlib import Path
+from typing import List
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 
@@ -48,6 +49,17 @@ GBA_BASE = 0x08000000
 PTR_TABLE_OFFSET = 0x3DFE18
 PTR_STRIDE = 8  # 4-byte pointer + 4 bytes padding
 
+# English originals at each table index (game-engine order, fixed).
+# key = lang.yaml status_abbrev key, value = (table_index, EN_3char)
+_EN_STATUS = {
+    "sleep":     (0, "SLP"),
+    "poison":    (1, "PSN"),
+    "paralysis": (2, "PAR"),
+    "burn":      (3, "BRN"),
+    "freeze":    (4, "FRZ"),
+    # "faint" → "KO" is not stored in this table; skip it.
+}
+
 # Each entry: table index, EN original, FR target, and the set of *prior* FR
 # variants we are willing to overwrite (so a re-run self-heals an older build).
 STATUS_PATCHES = [
@@ -57,6 +69,28 @@ STATUS_PATCHES = [
     {"index": 3, "en": "BRN", "fr": "BRL", "prior": set()},    # Brûlure
     {"index": 4, "en": "FRZ", "fr": "GEL", "prior": set()},    # Gelé
 ]
+
+
+def _patches_from_registry(abbrevs: dict) -> List[dict]:
+    """Build a STATUS_PATCHES-compatible list from a lang.yaml status_abbrev dict.
+
+    Entries whose target equals the EN original are silently omitted (no-op).
+    No ``prior`` healing is needed for a first-time build — the only accepted
+    predecessor is the English string itself.
+    """
+    patches = []
+    for key, (idx, en_abbrev) in _EN_STATUS.items():
+        target = abbrevs.get(key, "").strip().upper()
+        if not target or target == en_abbrev:
+            continue  # identical to EN → skip (e.g. PAR stays PAR)
+        if len(target) != 3:
+            print(
+                f"  WARN status_abbrev[{key!r}]={target!r}: expected 3 chars — skip",
+                file=sys.stderr,
+            )
+            continue
+        patches.append({"index": idx, "en": en_abbrev, "fr": target, "prior": set()})
+    return sorted(patches, key=lambda e: e["index"])
 
 
 def _encode(text: str) -> bytes:
@@ -73,11 +107,21 @@ def _decode_at(rom: bytes, off: int, maxlen: int = 8) -> str:
     return "".join(chars)
 
 
-def apply_to_rom(rom: bytearray, dry_run: bool = False) -> int:
-    """Patch status abbreviations in `rom` in place. Returns the change count."""
+def apply_to_rom(
+    rom: bytearray,
+    dry_run: bool = False,
+    patches: List[dict] | None = None,
+) -> int:
+    """Patch status abbreviations in `rom` in place. Returns the change count.
+
+    ``patches`` defaults to the module-level ``STATUS_PATCHES`` (French).
+    Pass a list built by ``_patches_from_registry()`` for other languages.
+    """
+    if patches is None:
+        patches = STATUS_PATCHES
     changes = 0
 
-    for entry in STATUS_PATCHES:
+    for entry in patches:
         idx = entry["index"]
         en_text = entry["en"]
         fr_text = entry["fr"]
@@ -128,9 +172,13 @@ def apply_to_rom(rom: bytearray, dry_run: bool = False) -> int:
     return changes
 
 
-def apply_patches(rom_path: Path, dry_run: bool = False) -> int:
+def apply_patches(
+    rom_path: Path,
+    dry_run: bool = False,
+    patches: List[dict] | None = None,
+) -> int:
     rom = bytearray(rom_path.read_bytes())
-    changes = apply_to_rom(rom, dry_run=dry_run)
+    changes = apply_to_rom(rom, dry_run=dry_run, patches=patches)
     if not dry_run and changes:
         rom_path.write_bytes(rom)
     return changes
@@ -140,9 +188,25 @@ def main() -> None:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--rom", required=True, type=Path)
     parser.add_argument("--dry-run", action="store_true")
+    parser.add_argument(
+        "--lang-code",
+        default=None,
+        help=(
+            "Language code to read status_abbrev from the registry "
+            "(e.g. 'it', 'de'). Defaults to the built-in French table."
+        ),
+    )
     args = parser.parse_args()
 
-    n = apply_patches(args.rom, dry_run=args.dry_run)
+    patches = None
+    if args.lang_code and args.lang_code != "fr":
+        from src.i18n import load_registry
+        registry = load_registry()
+        config = registry.get(args.lang_code)
+        patches = _patches_from_registry(config.status_abbrev)
+        print(f"  Using status_abbrev from registry: {config.code} ({config.name})")
+
+    n = apply_patches(args.rom, dry_run=args.dry_run, patches=patches)
     suffix = " (dry-run)" if args.dry_run else ""
     print(f"patch_status_abbrevs_fr: {n} patch(es) applied{suffix}")
 
