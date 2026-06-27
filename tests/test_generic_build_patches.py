@@ -21,6 +21,7 @@ from scripts.build_language import (
     PATCH_RITUAL_SCRIPT,
     PATCH_STATUS_ABBREVS_SCRIPT,
     PATCH_TM_ITEM_DESC_SCRIPT,
+    PATCH_VERSION_SCRIPT,
     PYTHON,
     REPAIR_LOCALIZED_LZ77_SCRIPT,
     REPAIR_LZ77_SCRIPT,
@@ -33,7 +34,8 @@ from src.i18n import load_registry
 REGISTRY = load_registry()
 
 
-def _collected_calls(config, steps: List[str], translation_json=None) -> list:
+def _collected_calls(config, steps: List[str], translation_json=None,
+                     build_number=0) -> list:
     """Run apply_patches with a patched ``run()`` and collect calls."""
 
     class _FakeConfig:
@@ -50,7 +52,7 @@ def _collected_calls(config, steps: List[str], translation_json=None) -> list:
         calls_made.append([str(p) for p in cmd])
 
     with mock_patch("scripts.build_language.run", side_effect=fake_run):
-        apply_patches(_FakeConfig(), fake_rom, translation_json)
+        apply_patches(_FakeConfig(), fake_rom, translation_json, build_number)
 
     return calls_made
 
@@ -133,6 +135,27 @@ def test_status_abbrevs_passes_lang_code_de():
     cmd = calls[0]
     lang_idx = cmd.index("--lang-code")
     assert cmd[lang_idx + 1] == "de"
+
+
+# ─── version ─────────────────────────────────────────────────────────────────
+
+def test_version_step_passes_lang_code_and_build_number():
+    config = REGISTRY.get("it")
+    calls = _collected_calls(config, ["version"], build_number=42)
+    assert len(calls) == 1
+    cmd = calls[0]
+    assert str(PATCH_VERSION_SCRIPT) in cmd
+    assert "--lang-code" in cmd
+    assert cmd[cmd.index("--lang-code") + 1] == "it"
+    assert "--build-number" in cmd
+    assert cmd[cmd.index("--build-number") + 1] == "42"
+
+
+def test_version_step_in_it_descriptor():
+    # The IT descriptor must request the in-game version tag so the build
+    # advertises itself as Italian.
+    config = REGISTRY.get("it")
+    assert "version" in config.patches
 
 
 # ─── unknown step warning ────────────────────────────────────────────────────

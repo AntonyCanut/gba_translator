@@ -37,7 +37,7 @@ _ROM_SIZE = 0x200000
 _TILESET_PAYLOAD_OFF = 0x100000
 
 
-def _build_fake_rom(build_number: int) -> bytearray:
+def _build_fake_rom(build_number: int, lang_code: str = "fr") -> bytearray:
     """Construct a minimal ROM whose NOT FOR SALE band renders ``build_number``."""
     rom = bytearray(b"\xFF" * _ROM_SIZE)
     rom[0xB2] = 0x96  # GBA magic
@@ -47,7 +47,9 @@ def _build_fake_rom(build_number: int) -> bytearray:
     # Render + blit the version band into a tileset of the expected length.
     n_tiles = _VER_TILE_START + _VER_GRID_COLS * _VER_GRID_ROWS
     tileset = bytearray(32 * n_tiles)
-    _blit_band_to_tiles(tileset, _render_version_band(version_string(build_number)))
+    _blit_band_to_tiles(
+        tileset, _render_version_band(version_string(build_number, lang_code))
+    )
 
     compressed = _lz77_compress(bytes(tileset))
     rom[_TILESET_PAYLOAD_OFF:_TILESET_PAYLOAD_OFF + len(compressed)] = compressed
@@ -92,6 +94,32 @@ class TestVerify(unittest.TestCase):
         rom[0xBC] = 0x00  # corrupt the header software-version byte
         problems = verify(rom, 42)
         self.assertTrue(any("0xBC" in p for p in problems))
+
+
+class TestMultiLanguageVersion(unittest.TestCase):
+    """The version tag must advertise the language prefix (IT, DE…)."""
+
+    def test_italian_band_decodes_to_it(self):
+        rom = _build_fake_rom(42, "it")
+        self.assertEqual(decode_version_string(rom), "IT.2.0.42")
+
+    def test_german_band_decodes_to_de(self):
+        rom = _build_fake_rom(7, "de")
+        self.assertEqual(decode_version_string(rom), "DE.2.0.7")
+
+    def test_verify_passes_for_matching_lang(self):
+        rom = _build_fake_rom(42, "it")
+        self.assertEqual(verify(rom, 42, "it"), [])
+
+    def test_verify_rejects_wrong_lang(self):
+        # An Italian ROM checked as if it were French must be flagged.
+        rom = _build_fake_rom(42, "it")
+        problems = verify(rom, 42, "fr")
+        self.assertTrue(any("NOT FOR SALE" in p for p in problems))
+
+    def test_no_question_marks_for_it(self):
+        rom = _build_fake_rom(1234, "it")
+        self.assertNotIn("?", decode_version_string(rom))
 
 
 class TestSlotMachinePointers(unittest.TestCase):

@@ -51,11 +51,12 @@ def en_rom_bytes() -> bytes:
     return EN_ROM.read_bytes()
 
 
-def _build_versioned_rom(en_rom_bytes: bytes, build_number: int) -> bytearray:
+def _build_versioned_rom(en_rom_bytes: bytes, build_number: int,
+                         lang_code: str = "fr") -> bytearray:
     """Apply the production version patches to a fresh copy of the EN ROM."""
     data = bytearray(en_rom_bytes)
     patch_version(data, build_number)
-    patch_intro_version(data, build_number)
+    patch_intro_version(data, build_number, lang_code)
     return data
 
 
@@ -83,6 +84,32 @@ class TestNotForSaleVersionDisplay:
         assert a != b
         assert a == "FR.2.0.5"
         assert b == "FR.2.0.8"
+
+
+@pytest.mark.rom
+class TestMultiLanguageVersionDisplay:
+    """Each language build must advertise its own prefix (IT, DE…) on the
+    NOT FOR SALE screen — proven on the real EN ROM via the blind decoder.
+    """
+
+    @pytest.mark.parametrize("lang,prefix", [("it", "IT"), ("de", "DE")])
+    @pytest.mark.parametrize("build", _BUILD_NUMBERS)
+    def test_screen_displays_language_prefix(self, en_rom_bytes, lang, prefix, build):
+        rom = _build_versioned_rom(en_rom_bytes, build, lang)
+        displayed = decode_version_string(rom)
+        assert displayed == version_string(build, lang)
+        assert displayed.startswith(f"{prefix}.2.0.")
+
+    @pytest.mark.parametrize("lang", ["it", "de"])
+    def test_full_verification_passes_per_language(self, en_rom_bytes, lang):
+        rom = _build_versioned_rom(en_rom_bytes, 42, lang)
+        assert verify(rom, 42, lang) == []
+
+    def test_italian_rom_is_not_mistaken_for_french(self, en_rom_bytes):
+        # An Italian build verified as French must fail — the tag really differs.
+        rom = _build_versioned_rom(en_rom_bytes, 42, "it")
+        problems = verify(rom, 42, "fr")
+        assert any("NOT FOR SALE" in p for p in problems)
 
 
 @pytest.mark.rom

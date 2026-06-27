@@ -135,10 +135,11 @@ def slot_machine_pointers(rom_data: bytes | bytearray) -> tuple[int, ...]:
     )
 
 
-def verify(rom_data: bytes | bytearray, build_number: int) -> list[str]:
+def verify(rom_data: bytes | bytearray, build_number: int,
+           lang_code: str = "fr") -> list[str]:
     """Return a list of human-readable problems (empty list == all good)."""
     problems: list[str] = []
-    expected = version_string(build_number)
+    expected = version_string(build_number, lang_code)
 
     # 1. Header software-version byte.
     header_byte = rom_data[0xBC]
@@ -168,6 +169,9 @@ def main() -> int:
                         default=Path("output/roms/GenedRom-fr.gba"))
     parser.add_argument("--build-number", type=int, required=True,
                         help="Expected CI build counter (e.g. GITHUB_RUN_NUMBER)")
+    parser.add_argument("--lang-code", default="fr",
+                        help="Expected language prefix (fr→FR, it→IT, de→DE). "
+                             "Default: fr")
     args = parser.parse_args()
 
     if not args.rom.exists():
@@ -179,8 +183,8 @@ def main() -> int:
         print(f"Not a valid GBA ROM: {args.rom}", file=sys.stderr)
         return 1
 
-    problems = verify(data, args.build_number)
-    expected = version_string(args.build_number)
+    problems = verify(data, args.build_number, args.lang_code)
+    expected = version_string(args.build_number, args.lang_code)
     if problems:
         print(f"✗ Version display verification FAILED for {args.rom}:",
               file=sys.stderr)

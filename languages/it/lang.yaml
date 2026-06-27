@@ -14,7 +14,9 @@ build: generic                    # dedicated (make build-fr) | generic (build_l
 combined: languages/it/combined_it.txt
 critical: languages/it/critical_strings_it.txt   # optional; created when needed
 output_rom: GenedRom-it.gba
-version_label: IT.0.1.0
+# Shown in-game on the NOT FOR SALE screen as IT.2.0.<build> (the trailing
+# component is the CI build number stamped by the `version` patch step).
+version_label: IT.2.0.0
 
 # Extra glyphs the font must render beyond plain ASCII.
 # Italian only needs grave/acute vowels — all already covered by the FR font
@@ -40,6 +42,8 @@ status_abbrev:
 #
 # Language-aware (data already in status_abbrev above):
 #   status_abbrevs         write IT status abbreviations (SCT/CON/SON/…) into ROM
+#   version                stamp the NOT FOR SALE screen with IT.2.0.<build>
+#                          so the running build advertises it is the Italian one
 #
 # Richer passes (pokédex rewrap, mission boxes, move descriptions, …) will be
 # added here as Italian translations for those subsystems mature.
@@ -51,3 +55,4 @@ patches:
   - repoint_stale
   - legendary_ritual
   - status_abbrevs
+  - version

@@ -85,6 +85,24 @@ class TestCharPixels(unittest.TestCase):
         for ch in "FR.0123456789 ":
             self.assertIn(ch, _CHAR_PIXELS, f"missing char '{ch}'")
 
+    def test_language_prefix_chars_present(self):
+        # The other buildable language prefixes (IT, DE) need their letters too.
+        for ch in "ITDE":
+            self.assertIn(ch, _CHAR_PIXELS, f"missing language prefix char '{ch}'")
+
+    def test_glyph_bitmaps_are_unique(self):
+        # The blind OCR decoder relies on every non-space glyph being a distinct
+        # bitmap; a collision would make IT/DE/FR misread.
+        seen = {}
+        for ch, rows in _CHAR_PIXELS.items():
+            if ch == " ":
+                continue
+            key = tuple(tuple(r) for r in rows)
+            self.assertNotIn(
+                key, seen, f"glyph '{ch}' collides with '{seen.get(key)}'"
+            )
+            seen[key] = ch
+
 
 # ---------------------------------------------------------------------------
 # version_string
@@ -96,12 +114,24 @@ class TestVersionString(unittest.TestCase):
         self.assertEqual(version_string(42), "FR.2.0.42")
         self.assertEqual(version_string(0), "FR.2.0.0")
 
+    def test_default_is_french(self):
+        # Omitting lang_code must keep the proven FR behaviour byte-for-byte.
+        self.assertEqual(version_string(42), version_string(42, "fr"))
+
+    def test_language_prefix(self):
+        self.assertEqual(version_string(5, "it"), "IT.2.0.5")
+        self.assertEqual(version_string(42, "de"), "DE.2.0.42")
+        # Codes are upper-cased so the descriptor's lowercase code works.
+        self.assertEqual(version_string(7, "IT"), "IT.2.0.7")
+
     def test_fits_band_width(self):
         # The band is _VER_GRID_COLS * 8 px wide; 4 px per glyph.
         band_px = _VER_GRID_COLS * 8
         for build in (1, 99, 999, 9999):
-            self.assertLessEqual(len(version_string(build)) * 4, band_px,
-                                 f"build {build} version string overflows band")
+            for lang in ("fr", "it", "de"):
+                self.assertLessEqual(
+                    len(version_string(build, lang)) * 4, band_px,
+                    f"build {build}/{lang} version string overflows band")
 
 
 # ---------------------------------------------------------------------------
