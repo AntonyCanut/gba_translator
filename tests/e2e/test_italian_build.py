@@ -17,8 +17,11 @@ import os
 import pathlib
 import re
 import struct
+import sys
 
 import pytest
+
+sys.path.insert(0, str(pathlib.Path(__file__).resolve().parents[2]))
 
 
 def _resolve_project_root() -> pathlib.Path:
@@ -258,4 +261,30 @@ class TestRomEncodingSpots:
             f"{corrupted} pointer-sized values changed from valid EN to invalid IT. "
             "The generic pipeline baseline is ~51 for IT and ~115 for FR; >200 suggests "
             "a regression in pointer tracking."
+        )
+
+
+class TestVersionDisplay:
+    """The NOT FOR SALE intro screen must display the IT language tag.
+
+    This is the regression guard for the ``version`` patch step in
+    ``languages/it/lang.yaml``.  If that step is accidentally removed the
+    NOT FOR SALE screen reverts to the original Unbound ``v2.1.1.1`` tile
+    graphics and the CI verifier rejects the ROM.
+    """
+
+    def test_not_for_sale_displays_it_prefix(self, it_rom_data):
+        from scripts.verify_version_display import decode_version_string
+        displayed = decode_version_string(it_rom_data)
+        assert displayed.startswith("IT.2.0."), (
+            f"NOT FOR SALE screen shows {displayed!r} instead of 'IT.2.0.<build>'. "
+            "The 'version' patch step may be missing from languages/it/lang.yaml."
+        )
+
+    def test_verify_passes_for_actual_build_number(self, it_rom_data):
+        from scripts.verify_version_display import verify
+        build_number = it_rom_data[0xBC]
+        problems = verify(it_rom_data, build_number, "it")
+        assert problems == [], (
+            f"Version verify failed (build #{build_number}): {problems}"
         )
