@@ -60,7 +60,7 @@ def load_whitelist(path: Path) -> set[str]:
 
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--combined", default="combined_fr.txt")
+    parser.add_argument("--combined", default="languages/fr/combined_fr.txt")
     parser.add_argument(
         "--whitelist", default="scripts/spellcheck_whitelist_fr.txt"
     )

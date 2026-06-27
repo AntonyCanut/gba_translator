@@ -65,7 +65,7 @@ OVERFLOW_BUDGET = 120
 # is ever touched. "CT" = Capsule Technique (TM), "CS" = Capacité Secrète (HM).
 MACHINE_PREFIXES = ("CT", "CS")
 
-DEFAULT_COMBINED = Path(__file__).resolve().parent.parent / "combined_fr.txt"
+DEFAULT_COMBINED = Path(__file__).resolve().parent.parent / "languages/fr/combined_fr.txt"
 LINE_RE = re.compile(r"\s*0x([0-9a-fA-F]+)\s*:\s*(.*)")
 
 

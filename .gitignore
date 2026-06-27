@@ -28,6 +28,31 @@ tickets/auto-*.yaml
 output/roms/*.ss[0-9]
 .mcp.json
 
+# Session/planning artifacts (one-off notes, never source-of-truth)
+SESSION_*.md
+CLEANUP_PLAN.md
+restructure.sh
+
+# ROM save files and debug artifacts
+output/roms/*.sav
+output/roms/*.sav.*
+output/roms/FRtest*
+data/saves/
+input/roms/*.ss[0-9]
+
+# mGBA one-off debug scripts (per-bug probes; reusable probes are tracked)
+scripts/b56_*.mts
+scripts/groudon_*.mts
+scripts/nav_*.mts
+scripts/probe_b78_*.mts
+
+# Generated translation artifacts (date-stamped; regenerate with make build-fr)
+output/translation/20??-??-??_*.json
+output/translation/20??-??-??_*.csv
+
+# Temporary language files
+languages/*/combined_*_new.txt
+
 # Multi-language build artifacts (regenerate: make build-it / build-de / release-all)
 output/release/
 output/roms/GenedRom-it.gba

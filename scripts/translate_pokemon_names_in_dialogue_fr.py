@@ -64,7 +64,7 @@ from src.core.dialogue_linewrap import (  # noqa: E402
     line_width,
 )
 
-COMBINED = ROOT / "combined_fr.txt"
+COMBINED = ROOT / "languages/fr/combined_fr.txt"
 NAME_MAP = ROOT / "data" / "pokemon_names_en_fr.json"
 REPORT = ROOT / "output" / "reports" / "pokemon_name_overflow_fr.md"
 

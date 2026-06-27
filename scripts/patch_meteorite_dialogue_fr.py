@@ -60,7 +60,7 @@ from apply_inline_overrides_fr import (  # noqa: E402
 )
 
 ROM_POINTER_BASE = 0x08000000
-DEFAULT_COMBINED = REPO_ROOT / "combined_fr.txt"
+DEFAULT_COMBINED = REPO_ROOT / "languages/fr/combined_fr.txt"
 
 # Oversized (> extractor cap) cutscene strings that are otherwise undeliverable.
 # Each is a single prose block whose 0xFF terminator sits beyond the extractor's

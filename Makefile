@@ -151,7 +151,7 @@ build-fr: $(ENGLISH_EXTRACT) $(SPANISH_EXTRACT) $(BUILD_SCRIPT)
 	@$(PYTHON) $(INLINE_FR_SCRIPT) \
 		--rom $(FR_BUILD) \
 		--source $(ENGLISH_ROM) \
-		--combined combined_fr.txt \
+		--combined languages/fr/combined_fr.txt \
 		--reference-texts $(SPANISH_EXTRACT) \
 		--translations $(FR_TRANSLATION)
 	@$(PYTHON) $(REPAIR_LZ77_SCRIPT) \
@@ -183,20 +183,20 @@ build-fr: $(ENGLISH_EXTRACT) $(SPANISH_EXTRACT) $(BUILD_SCRIPT)
 		--translations $(FR_TRANSLATION)
 	@$(PYTHON) $(PATCH_DUP_MOVE_DESC_FR_SCRIPT) \
 		--rom $(FR_BUILD) \
-		--combined combined_fr.txt
+		--combined languages/fr/combined_fr.txt
 	@$(PYTHON) $(PATCH_TM_ITEM_DESC_FR_SCRIPT) \
 		--rom $(FR_BUILD) \
-		--combined combined_fr.txt \
+		--combined languages/fr/combined_fr.txt \
 		--reference-rom $(SPANISH_ROM)
 	@$(PYTHON) $(PATCH_METEORITE_DIALOGUE_FR_SCRIPT) \
 		--rom $(FR_BUILD) \
 		--source $(ENGLISH_ROM) \
-		--combined combined_fr.txt \
+		--combined languages/fr/combined_fr.txt \
 		--reference-rom $(SPANISH_ROM)
 	@$(PYTHON) $(PATCH_WORLDMAP_JUNCTION_FR_SCRIPT) \
 		--rom $(FR_BUILD) \
 		--source $(ENGLISH_ROM) \
-		--combined combined_fr.txt \
+		--combined languages/fr/combined_fr.txt \
 		--reference-rom $(SPANISH_ROM)
 	@$(PYTHON) $(PATCH_CFRU_TYPE_NAMES_SCRIPT) --rom $(FR_BUILD)
 	@$(PYTHON) $(PATCH_STATUS_ABBREVS_SCRIPT) --rom $(FR_BUILD)
@@ -208,7 +208,7 @@ build-fr: $(ENGLISH_EXTRACT) $(SPANISH_EXTRACT) $(BUILD_SCRIPT)
 	@$(PYTHON) $(PATCH_MISSION_DESC_FR_SCRIPT) \
 		--rom $(FR_BUILD) \
 		--source $(ENGLISH_ROM) \
-		--combined combined_fr.txt \
+		--combined languages/fr/combined_fr.txt \
 		--reference-rom $(SPANISH_ROM)
 	@echo "✓ FR ROM built — vérification des traductions de lieux..."
 	@$(PYTHON) -m pytest tests/test_location_names_fr.py -q --tb=short

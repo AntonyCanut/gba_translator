@@ -86,7 +86,7 @@ class TestCombinedFrIsClean:
     « ... » ASCII ni rangées d'ellipses dans un même segment."""
 
     def test_no_residual_ascii_dots_or_runs(self):
-        path = _SCRIPT.parent.parent / "combined_fr.txt"
+        path = _SCRIPT.parent.parent / "languages/fr/combined_fr.txt"
         run = re.compile(r"…(?:[ \t]*…)+")
         ascii_dots = re.compile(r"\.{3,}")
         for line in path.read_text(encoding="utf-8").splitlines():
@@ -96,7 +96,7 @@ class TestCombinedFrIsClean:
 
     def test_no_residual_space_before_ellipsis(self):
         # Garde-fou T3 : plus aucun « mot … » (sans mot collé après) ne subsiste.
-        path = _SCRIPT.parent.parent / "combined_fr.txt"
+        path = _SCRIPT.parent.parent / "languages/fr/combined_fr.txt"
         for line in path.read_text(encoding="utf-8").splitlines():
             body = line.split(":", 1)[1] if ":" in line else line
             m = mod.SPACE_BEFORE.search(body)
@@ -113,7 +113,7 @@ class TestBoxTransferPromptNoEllipsis:
     OFFSETS = ("0x1EF779A", "0x1EF77F7")
 
     def _entries(self):
-        path = _SCRIPT.parent.parent / "combined_fr.txt"
+        path = _SCRIPT.parent.parent / "languages/fr/combined_fr.txt"
         wanted = {o.lower() for o in self.OFFSETS}
         found = {}
         for line in path.read_text(encoding="utf-8").splitlines():
@@ -153,7 +153,7 @@ class TestBoxTransferNameNoGuillemetEllipsis:
     OFFSETS = ("0x1A5CF1", "0x1A5D31", "0x1A5D6E", "0x1A5DB1", "0x1F682A6")
 
     def _entries(self):
-        path = _SCRIPT.parent.parent / "combined_fr.txt"
+        path = _SCRIPT.parent.parent / "languages/fr/combined_fr.txt"
         wanted = {o.lower() for o in self.OFFSETS}
         found = {}
         for line in path.read_text(encoding="utf-8").splitlines():

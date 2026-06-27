@@ -37,7 +37,7 @@ from pathlib import Path
 import pytest
 
 # combined_fr.txt lives at the repository root, next to the Makefile.
-COMBINED_FR = Path(__file__).resolve().parent.parent / "combined_fr.txt"
+COMBINED_FR = Path(__file__).resolve().parent.parent / "languages/fr/combined_fr.txt"
 
 # Line format: "0x<hex offset>: <French text>"  (text may contain ': ' itself)
 _LINE_RE = re.compile(r"^0x([0-9A-Fa-f]+):\s?(.*)$")

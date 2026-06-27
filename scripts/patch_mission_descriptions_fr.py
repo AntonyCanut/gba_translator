@@ -54,7 +54,7 @@ from apply_inline_overrides_fr import (  # noqa: E402
 )
 
 ROM_POINTER_BASE = 0x08000000
-DEFAULT_COMBINED = REPO_ROOT / "combined_fr.txt"
+DEFAULT_COMBINED = REPO_ROOT / "languages/fr/combined_fr.txt"
 
 # Usable width of the 3-line bounty box (px). A line wider than this auto-wraps
 # in-game; in-game evidence places the box between 170 (fits) and 188 (wraps).

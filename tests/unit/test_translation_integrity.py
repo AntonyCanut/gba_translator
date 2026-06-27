@@ -19,7 +19,7 @@ sys.path.insert(0, str(ROOT / "scripts"))
 
 import check_translation_integrity as cti  # noqa: E402
 
-REAL_COMBINED = ROOT / "combined_fr.txt"
+REAL_COMBINED = ROOT / "languages/fr/combined_fr.txt"
 
 
 class TestRealCombinedFr:

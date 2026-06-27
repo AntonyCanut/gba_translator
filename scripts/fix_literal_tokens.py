@@ -35,7 +35,7 @@ builder_module = importlib.import_module(
 Builder = builder_module.TranslatedROMBuilder
 
 ROOT = Path(__file__).resolve().parents[1]
-COMBINED = ROOT / 'combined_fr.txt'
+COMBINED = ROOT / "languages/fr/combined_fr.txt"
 CSV_PATH = ROOT / 'output/translation/2026-01-15_trilingual_translation.csv'
 JSON_PATH = ROOT / 'output/translation/2026-06-11_translation_ready.json'
 EN_ROM = ROOT / 'input/roms/englishrom.gba'
