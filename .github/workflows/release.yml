@@ -25,6 +25,11 @@ jobs:
         run: pip install -e ".[dev]"
 
       # ── French (dedicated byte-perfect recipe) — mandatory ──────────────────
+      # Generate the translation JSON from combined_fr.txt + EN extraction.
+      # The trilingual CSV is gitignored, so it must be regenerated in CI.
+      - name: Prepare French translation JSON
+        run: make prepare-fr
+
       - name: Build French ROM
         run: make build-fr BUILD_NUMBER=${{ github.run_number }}
 

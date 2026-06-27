@@ -51,6 +51,7 @@ PATCH_MISSION_DESC_FR_SCRIPT := scripts/patch_mission_descriptions_fr.py
 PATCH_GENDERED_BUFFERS_SCRIPT := scripts/patch_gendered_buffers_fr.py
 PATCH_BATTLE_STRING_TEMPLATES_SCRIPT := scripts/patch_battle_string_templates_fr.py
 PATCH_BATTLE_RECALL_STRINGS_SCRIPT := scripts/patch_battle_recall_strings_fr.py
+PREPARE_FR_SCRIPT := scripts/prepare_fr_json.py
 
 OUTPUT_DIR := output
 EXTRACT_DIR := $(OUTPUT_DIR)/extracted/extracted_texts
@@ -72,7 +73,7 @@ SPANISH_BUILD := $(ROM_OUT_DIR)/GenedRom-es.gba
 
 .DEFAULT_GOAL := pipeline
 
-.PHONY: pipeline verify-roms extract extract-en extract-es diff build-es build-fr validate-es trilingual-csv \
+.PHONY: pipeline verify-roms extract extract-en extract-es diff build-es build-fr prepare-fr validate-es trilingual-csv \
 	build-it build-de build-lang build-all release-all langs \
 	test test-python-fast test-python test-rom check-translations test-vitest test-playwright test-all \
 	sync-charmap sync-charmap-check install install-playwright lint tickets report \
@@ -110,6 +111,14 @@ $(DIFF_REPORT): $(ENGLISH_EXTRACT) $(SPANISH_EXTRACT) $(DIFF_SCRIPT)
 		--diff-out $(DIFF_REPORT) \
 		--pairs-out $(PAIRS_REPORT) \
 		--map-out $(OFFSET_MAP)
+
+## prepare-fr: generate translation_ready.json from combined_fr.txt + EN extraction.
+## Required in CI where the trilingual CSV is not committed.  Run before build-fr.
+prepare-fr: $(ENGLISH_EXTRACT) $(PREPARE_FR_SCRIPT)
+	@$(PYTHON) $(PREPARE_FR_SCRIPT) \
+		--combined languages/fr/combined_fr.txt \
+		--english $(ENGLISH_EXTRACT) \
+		--critical data/critical_strings_fr.txt
 
 build-es: $(OFFSET_MAP) $(BUILD_SCRIPT)
 	@if [ ! -f "$(SPANISH_ROM)" ]; then \
@@ -321,6 +330,7 @@ help:
 	@echo "    make extract         - Pointer-based extraction EN+ES"
 	@echo "    make diff            - Diff + offset map"
 	@echo "    make build-es        - Build Spanish ROM"
+	@echo "    make prepare-fr      - Generate translation JSON from combined_fr.txt (CI step)"
 	@echo "    make build-fr        - Build French ROM (dedicated byte-perfect recipe)"
 	@echo "    make validate-es     - Byte-level validation"
 	@echo "    make trilingual-csv  - Export EN/ES/FR translation CSV"
