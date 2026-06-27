@@ -35,7 +35,7 @@ jobs:
 
       - name: Verify FR version display
         # Regression guard (B-19 / T-21): the FR ROM must show
-        # FR.2.0.<run_number> on the NOT FOR SALE screen and stamp the header.
+        # FR.2.1.<run_number> on the NOT FOR SALE screen and stamp the header.
         run: |
           python3 scripts/verify_version_display.py \
             --rom output/roms/GenedRom-fr.gba \
@@ -71,12 +71,12 @@ jobs:
           RUN=${{ github.run_number }}
 
           ASSETS=( "output/roms/GenedRom-fr.gba#pokemon_unbound_fr.gba" )
-          NOTES=$(printf '**Commit :** `%s` — %s\n\nBuildé automatiquement depuis la branche `%s` (build #%s).\n\n- 🇫🇷 `pokemon_unbound_fr.gba` — FR.2.0.%s' \
+          NOTES=$(printf '**Commit :** `%s` — %s\n\nBuildé automatiquement depuis la branche `%s` (build #%s).\n\n- 🇫🇷 `pokemon_unbound_fr.gba` — FR.2.1.%s' \
             "${SHA}" "${MSG}" "${GITHUB_REF_NAME}" "${RUN}" "${RUN}")
 
           if [ "${IT_OK}" = "true" ] && [ -f output/roms/GenedRom-it.gba ]; then
             ASSETS+=( "output/roms/GenedRom-it.gba#pokemon_unbound_it.gba" )
-            NOTES="${NOTES}"$(printf '\n- 🇮🇹 `pokemon_unbound_it.gba` — IT.2.0.%s' "${RUN}")
+            NOTES="${NOTES}"$(printf '\n- 🇮🇹 `pokemon_unbound_it.gba` — IT.2.1.%s' "${RUN}")
           else
             NOTES="${NOTES}"$(printf '\n- 🇮🇹 build italienne indisponible pour ce build.')
           fi
@@ -85,7 +85,7 @@ jobs:
           gh release delete latest --yes --cleanup-tag 2>/dev/null || true
 
           gh release create latest \
-            --title "Unbound 2.0.${RUN}" \
+            --title "Unbound 2.1.${RUN}" \
             --notes "${NOTES}" \
             --prerelease \
             "${ASSETS[@]}"

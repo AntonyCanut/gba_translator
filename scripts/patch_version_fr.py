@@ -8,13 +8,13 @@ Two patches are applied:
    recomputed.
 
 2. The in-game version display on the **NOT FOR SALE** intro screen is changed
-   from the pre-rendered ``v2.1.1.1`` to ``FR.2.0.<build_number>``.
+   from the pre-rendered ``v2.1.1.1`` to ``FR.2.1.<build_number>``.
 
    The intro screen is a single BG0 layer (mode 0, charblock 0, screenblock 7).
    Its ``v2.1.1.1`` string is pre-rendered as twelve 8x8 tiles (indices
    0xE1-0xEC, a 6x2 grid) inside an LZ77-compressed tileset.  The tilemap that
    places those tiles never changes, so we only have to redraw the twelve glyph
-   tiles in the tileset: we decompress it, paint ``FR.2.0.<build_number>`` over
+   tiles in the tileset: we decompress it, paint ``FR.2.1.<build_number>`` over
    the version band, recompress it into free space and update the single ROM
    pointer that references it (at 0xEC610).
 
@@ -198,7 +198,7 @@ _VER_FG = 4
 _VER_BG = 9
 
 # Character bitmaps: 4 px wide x 5 px tall, 1 = stroke pixel.  Narrow enough to
-# fit ``FR.2.0.<build_number>`` (up to 12 characters) across the 48 px band.
+# fit ``FR.2.1.<build_number>`` (up to 12 characters) across the 48 px band.
 _CHAR_PIXELS: dict[str, list[list[int]]] = {
     '0': [[0, 1, 1, 0], [1, 0, 0, 1], [1, 0, 0, 1], [1, 0, 0, 1], [0, 1, 1, 0]],
     '1': [[0, 0, 1, 0], [0, 1, 1, 0], [0, 0, 1, 0], [0, 0, 1, 0], [0, 1, 1, 1]],
@@ -228,12 +228,12 @@ _GLYPH_H = 5
 def version_string(build_number: int, lang_code: str = "fr") -> str:
     """Return the version label rendered on the intro screen.
 
-    The label is ``<PREFIX>.2.0.<build_number>`` where ``PREFIX`` is the
+    The label is ``<PREFIX>.2.1.<build_number>`` where ``PREFIX`` is the
     upper-cased language code (``FR`` for French, ``IT`` for Italian, ``DE``
     for German…).  This is what makes the NOT FOR SALE screen advertise which
     language build is running.
     """
-    return f"{lang_code.upper()}.2.0.{build_number}"
+    return f"{lang_code.upper()}.2.1.{build_number}"
 
 
 def _render_version_band(text: str) -> list[list[int]]:
@@ -275,7 +275,7 @@ def _blit_band_to_tiles(tileset: bytearray, band: list[list[int]]) -> None:
 
 
 def patch_intro_version(data: bytearray, build_number: int, lang_code: str = "fr") -> bool:
-    """Replace 'v2.1.1.1' on the NOT FOR SALE screen with '<PREFIX>.2.0.<build>'.
+    """Replace 'v2.1.1.1' on the NOT FOR SALE screen with '<PREFIX>.2.1.<build>'.
 
     ``lang_code`` selects the prefix glyphs (``fr`` → ``FR``, ``it`` → ``IT``…),
     so each language build advertises itself on the intro screen.

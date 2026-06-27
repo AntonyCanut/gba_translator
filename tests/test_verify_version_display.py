@@ -2,7 +2,7 @@
 
 These synthesise an in-memory ROM whose NOT FOR SALE tileset is built with the
 production renderer, then prove the *independent* blind decoder reads back the
-exact ``FR.2.0.<build>`` string and that ``verify()`` catches mismatches.
+exact ``FR.2.1.<build>`` string and that ``verify()`` catches mismatches.
 """
 
 import struct
@@ -68,9 +68,9 @@ class TestBlindDecoder(unittest.TestCase):
             )
 
     def test_decode_independent_of_renderer(self):
-        # The decoder must literally spell "FR.2.0.7", not just match bytes.
+        # The decoder must literally spell "FR.2.1.7", not just match bytes.
         rom = _build_fake_rom(7)
-        self.assertEqual(decode_version_string(rom), "FR.2.0.7")
+        self.assertEqual(decode_version_string(rom), "FR.2.1.7")
 
     def test_no_question_marks(self):
         rom = _build_fake_rom(1234)
@@ -101,11 +101,11 @@ class TestMultiLanguageVersion(unittest.TestCase):
 
     def test_italian_band_decodes_to_it(self):
         rom = _build_fake_rom(42, "it")
-        self.assertEqual(decode_version_string(rom), "IT.2.0.42")
+        self.assertEqual(decode_version_string(rom), "IT.2.1.42")
 
     def test_german_band_decodes_to_de(self):
         rom = _build_fake_rom(7, "de")
-        self.assertEqual(decode_version_string(rom), "DE.2.0.7")
+        self.assertEqual(decode_version_string(rom), "DE.2.1.7")
 
     def test_verify_passes_for_matching_lang(self):
         rom = _build_fake_rom(42, "it")
