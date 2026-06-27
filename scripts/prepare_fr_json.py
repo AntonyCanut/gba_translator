@@ -25,7 +25,7 @@ from typing import Dict, Optional
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 
-from src.core.text_codec import TextEncoder
+from src.core.text_codec import TextDecoder, TextEncoder
 from src.core.text_converter import JSONToCSVConverter
 
 # Identical to apply_combined_fr.py so both scripts treat the source file the same way
@@ -114,6 +114,12 @@ def main() -> int:
         help='Critical-strings guard file; entries override combined_fr.txt',
     )
     parser.add_argument(
+        '--english-rom',
+        type=Path,
+        default=Path('input/roms/englishrom.gba'),
+        help='English ROM for no-pointer in-place fallback (default: input/roms/englishrom.gba)',
+    )
+    parser.add_argument(
         '--output',
         type=Path,
         default=None,
@@ -174,6 +180,50 @@ def main() -> int:
             'too_long': fr_length > original_length,
         })
 
+    # Fallback: for offsets absent from the EN extraction, read the ROM directly.
+    # These are inline texts with no GBA pointer — they must be injected in-place,
+    # so we only include them when the FR encoding fits within the EN byte count.
+    nopoi_added = 0
+    nopoi_skipped_long = 0
+    if missing_en > 0 and args.english_rom.exists():
+        rom_bytes = args.english_rom.read_bytes()
+        rom_size = len(rom_bytes)
+        for offset in sorted(fr_map):
+            if en_map.get(offset):
+                continue
+            fr_text = fr_map[offset]
+            if not fr_text or offset >= rom_size:
+                continue
+            # Read EN string until the CFRU terminator (0xFF).
+            end = offset
+            while end < rom_size and rom_bytes[end] != 0xFF:
+                end += 1
+            en_len = end - offset
+            # Require at least 3 bytes (e.g. "OK\xff") to avoid patching garbage.
+            if en_len < 3:
+                continue
+            fr_length = _encoded_length(fr_text, 'pokemon')
+            if fr_length == 0 or fr_length > en_len:
+                nopoi_skipped_long += 1
+                continue
+            en_raw = bytes(rom_bytes[offset:end + 1])
+            original_text = TextDecoder.decode_pokemon(en_raw, preserve_unknown=True)
+            category = categorizer.categorize_text(original_text, offset)
+            translations.append({
+                'offset': offset,
+                'original_text': original_text,
+                'translation': fr_text,
+                'length': fr_length,
+                'original_length': en_len,
+                'padding_used': fr_length - en_len,
+                'encoding': 'pokemon',
+                'category': category,
+                'notes': 'no-pointer: in-place only',
+                'too_long': False,
+            })
+            nopoi_added += 1
+        missing_en -= nopoi_added
+
     output_path = args.output
     if output_path is None:
         date_str = datetime.now().strftime('%Y-%m-%d')
@@ -194,6 +244,10 @@ def main() -> int:
         json.dump(payload, fh, ensure_ascii=False)
 
     print(f'\n✓ {len(translations)} translations written to {output_path}')
+    if nopoi_added:
+        print(f'  ({nopoi_added} no-pointer in-place entries recovered from ROM)')
+    if nopoi_skipped_long:
+        print(f'  ({nopoi_skipped_long} no-pointer entries skipped: FR too long for in-place)')
     if missing_en:
         print(f'  ({missing_en} offsets from combined_fr.txt had no matching EN entry — skipped)')
     return 0
