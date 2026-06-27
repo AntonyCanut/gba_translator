@@ -15088,7 +15088,7 @@
 0x1EE54CB: {COLOR}ÇDonnez-moi un M !\pDonnez-moi un E !\pDonnez-moi un L !\pQu'est-ce que ça fait ?\pMel, Mel, Mel !\pGoooooooooo, Mel !\p…Quoi ?\pJe suis la pom-pom girl de Mel.\pMon job, c'est de l'encourager,\net je m'en fiche si ça te gêne !
 0x1EE559F: {COLOR}ËTu crois vraiment pouvoir battre\nBig Mo ? Hein ?
 0x1EE55D4: Donnez-moi un V
-0x1EE55DE: Sois victorieux en battant les huit\nChampions d'Arène de Borrius dans le\nDéfi Classique des Champions !
+0x1EE55DE: Bats les huit Champions\nd'Arène de Borrius dans\nle Défi Classique !
 0x1EE563C: Tu vois ce Pokémon juste à côté de\nmoi ?\pC'est le Pokémon Victoire Mythique,\n{COLOR}ÉVictini{COLOR}Ç.\pOn dit qu'il apporte la victoire aux\nDresseurs qui l'utilisent.\pMais en réalité, la victoire vient\nsi Victini choisit de partager\lson pouvoir avec son Dresseur.\pEt malheureusement pour moi, il ne\nsemble pas vouloir aider\lquelqu'un qui dépend trop de lui.\pPeut-être… s'il voyait un Dresseur\ncapable de gagner encore et encore,\lsans miracle…\pEn fait, maintenant que j'y pense,\ntu es le Champion, non ?\pLes Champions passent souvent\npar ce club…\pAlors je me suis dit : si tu pouvais\nles battre tous les huit à nouveau…\pPenses-tu pouvoir montrer {COLOR}ÉVictini{COLOR}Ç\nque tu es digne d'être son\lDresseur idéal ?
 0x1EE590F: Oh… je vois.\nJ'espérais que tu dirais oui…\pVictini fait des bêtises\nparce qu'il est frustré\là cause de moi.
 0x1EE597F: Oh, merci beaucoup !\pVictini et moi resterons ici\npour le moment.\pJ'ai juste besoin de vous voir\nici, au Battleground, briller\lpar vos victoires…\pMais ce n'est pas suffisant…\pJe pense que pour satisfaire\nVictini…\pTu dois terminer tout le\n{COLOR}ÉDéfi Classique des Champions{COLOR}Ç.\pBats les huit Champions d'Arène de\nBorrius, comme seul le\lChampion de notre région le peut !
@@ -15150,7 +15150,7 @@
 0x1EE70C0: Salut !\nBienvenue à la Ville Blizzard !\pTu as l'air fatigué, un encas ?
 0x1EE70FC: C'est mon travail d'accueillir les\nvoyageurs fatigués qui montent\ljusqu'à la Ville Blizzard.\pPrendre l'Autoroute KBT est facile,\nmais grimper… c'est dur.
 0x1EE7188: Si on était faits pour voler
-0x1EE71A0: Les humains peuvent voler ? Vole\n20 Jolies Plumes à Goélise ou\nBekipan pour le découvrir !
+0x1EE71A0: L'Homme peut-il voler ?\nVole 20 Jolies Plumes\nà Goélise ou Bekipan !
 0x1EE71F5: Ah, {PLAYER}!\pMerci d'être passé.\pAs-tu déjà entendu le dicton que\nma grand-mère aimait tant ?\p«Si les humains devaient voler,\nils auraient des ailes de Scorplane\let des plumes comme un Roucoups.»\pJe suis sûre d'avoir la première\npartie, mais…\pJ'ai besoin d'un petit coup de main\npour la seconde.\pAlors si tu as un peu de temps,\npourrais-tu aider\lune brave dame ?
 0x1EE7369: Ah, excellent !\pAlors, laisse-moi expliquer\nle problème.\pIl me faut les plumes nécessaires\npour finir les ailes sur\llesquelles je travaille.\pMais pas n'importe quelles plumes :\nil me faut des {COLOR}ÉJolies Plumes{COLOR}Ç.\p{COLOR}É{STR_VAR_2}{COLOR}Ç, pour être exacte.\pJe pourrais utiliser d'autres ailes,\nmais une dame doit avoir de belles\lchoses, non ?\pAlors, peux-tu m'apporter {COLOR}É{STR_VAR_2}{COLOR}Ç\n{COLOR}ÉJolies Plumes{COLOR}Ç et me les ramener\lici, tu auras aussi\lune récompense !\pTu peux trouver des Jolies Plumes\nsur des {COLOR}ÉGoélise{COLOR}Ç\let {COLOR}ÉBekipan{COLOR}Ç sauvages.\pSi tu as un Pokémon avec Larcin,\nImplore ou Sabotage, ce sera\lbeaucoup plus simple.\pJe recommande {COLOR}ÉSabotage{COLOR}Ç,\ncar tu n'as pas besoin de\lreprendre l'objet.\pAussi, un Pokémon avec {COLOR}ÉŒil Composé{COLOR}Ç\nou {COLOR}ÉChanceux{COLOR}Ç en tête de\lton équipe augmente les chances\lque des Pokémon tiennent un objet,\lalors garde ça en tête !
 0x1EE76D5: Alors {STR_VAR_1}, je ne pense pas que\ncette quantité de Jolies Plumes\lsuffise…\pIl m'en faut {COLOR}É{STR_VAR_2} Jolies Plumes{COLOR}Ç.\pJe pourrais utiliser d'autres ailes,\nmais une dame doit avoir de belles\lchoses, non ?\pMon conseil ?\pUtilise le {COLOR}ÉDexNav{COLOR}Ç pour attraper un\n{COLOR}ÉRapion{COLOR}Ç au {COLOR}ÉTalent Caché{COLOR}Ç, {COLOR}ÉRoute 9{COLOR}Ç.\pIl apprend {COLOR}ÉSabotage{COLOR}Ç, et\nà son évolution, son Talent Caché\ldevient {COLOR}ÉChanceux{COLOR}Ç !\pC'est parfait pour voler des\n{COLOR}ÉJolies Plumes{COLOR}Ç aux {COLOR}ÉGoélise{COLOR}Ç\let {COLOR}ÉBekipan{COLOR}Ç sauvages.\pJe compte sur toi, {STR_VAR_1},\nvoyons si on est à la hauteur !
@@ -15250,8 +15250,8 @@
 0x1EEA888: Tarte sucrée
 0x1EEA892: Tarte juteuse
 0x1EEA89C: Tarte ultime
-0x1EEA8A9: Apporte 1 Baie Pêcha, 1 Baie Qualot\net 1 Eau Fraîche pour aider\nà fêter un anniversaire.
-0x1EEA909: Apporte 3 Baies Fraive, 5 Myrte,\n5 Baies Siam et 5\nLaits Meumeu pour un anniversaire.
+0x1EEA8A9: Apporte 1 Baie Pêcha, 1 Baie\nQualot et 1 Eau Fraîche pour\naider à fêter un anniversaire.
+0x1EEA909: Apporte 3 Baies Fraive, 5\nMyrte, 5 Baies Siam et 5 Laits\nMeumeu pour un anniversaire.
 0x1EEA96A: Apporte 10 Baies Sitrus, 10 Prine,\n2 Baies Éka, 2 Baies Rangma\net 5 Laits Meumeu pour la tarte.
 0x1EEA9D0: Hé, jeune Dresseur !\pSerais-tu assez gentil pour m'aider\nsur une tâche ?
 0x1EEAA17: Ahaha, jeune Dresseur !\pSerais-tu assez gentil pour m'aider\nsur une autre tâche ?
@@ -15347,7 +15347,7 @@
 0x1EEC6E6: Prends ça.
 0x1EEC6F1: C'est un cadeau pour m'avoir battu.\pDonne-le à un {COLOR}ÉCamérupt{COLOR}Ë et il pourra\nMéga-Évoluer en combat,\lsi tu as une Clef de Voûte.
 0x1EEC787: Chasseur du marais
-0x1EEC79B: Aide un scientifique à étudier les\nPokémon du Marais de Cootes !\nUtilise le DexNav pour les capturer.
+0x1EEC79B: Aide un scientifique sur les\nPokémon du Marais de Cootes !\nCapture-les au DexNav.
 0x1EEC801: Salut, Dresseur.\pOh ! Je vois que tu as un DexNav.\nJ'ai justement une tâche pour toi.\pUtiliserais-tu ton DexNav pour\nt'aider à capturer tous les\lPokémon de cette zone ?\pJe veux tout savoir sur les\nPokémon du Marais de Cootes.
 0x1EEC8F1: Salut, Dresseur.\pSi tu obtiens un DexNav,\nreviens me voir.\pJ'ai une tâche qui ne peut être\nfaite que par un Dresseur\lmuni d'un DexNav.
 0x1EEC98E: Parfait !\pReviens me voir quand ton DexNav\nindiquera que tous les\lPokémon d'ici ont été capturés.
@@ -15407,7 +15407,7 @@
 0x1EEDA20: Oh, regarde-moi ce petit malin.
 0x1EEDA3F: Marmonner… marmonner…\p…attendre le signal…\pChuchoter… chuchoter…\p…vigie en place…\pMarmonner… marmonner…
 0x1EEDA96: Mineur Major
-0x1EEDAA2: Utilise l'ADM pour percer les\nportes effondrées de l'Autoroute KBT\net capture {STR_VAR_1} Strassie.
+0x1EEDAA2: Perce les portes de\nl'Autoroute KBT à l'ADM et\ncapture {STR_VAR_1} Strassie.
 0x1EEDB03: Des rumeurs parlent de\nPokémon rares nommés {COLOR}ÉStrassie{COLOR}Ë dans\ll'Autoroute KBT.\pMais elles\ndisent qu'ils se trouvent seulement\lderrière des portes effondrées\lqui jonchent le tunnel.\pSi seulement\non pouvait {COLOR}Éminer{COLOR}Ë les gravats…
 0x1EEDC0B: Cet ADM que tu as, c'est la machine\nqu'il me faut !\pJe cherche à détruire les portes\neffondrées de l'Autoroute KBT et tu\lpeux m'aider !\lS'il te plaît, utilise ton\p{COLOR}ÉADM{COLOR}Ë et aide-moi !\n
 0x1EEDCFB: Splendide !\pMa tâche : détruire les\n{COLOR}Éportes effondrées{COLOR}Ë de\ll'{COLOR}ÉAutoroute KBT{COLOR}Ë\lavec ton {COLOR}ÉADM{COLOR}Ë et\lcapturer {COLOR}É3 Strassie{COLOR}Ë.\pPour briser une porte, charge ton\nADM.\lCharge-le avec {COLOR}É3 Argiles\pLumière{COLOR}Ë pour qu'il soit\nassez puissant.\lOn trouve l'Argile Lumière en\pminant les murs de l'Autoroute KBT.\pQuand c'est fait, reviens me voir\npour une récompense.\l\p\n
@@ -15549,7 +15549,7 @@
 0x1EF100F: Ces cristaux\nregorgent vraiment de merveilles.\pCreuse un peu\net tu trouveras des tas de gemmes !\pEt si je t'en donnais une ?
 0x1EF1088: Je cherche des gemmes dans cette\npièce avec mon ADM tous les jours.\pSi vous avez un ADM, vous devriez\ncreuser ici aussi !\pC'est le seul endroit à Pic Cristal\noù vous pouvez !
 0x1EF1124: Un ballon violet
-0x1EF1137: Une petite fille a été enlevée\npar un Baudrive ! Trouve-la et\nramène-la saine et sauve à sa mère.
+0x1EF1137: Une fillette a été enlevée\npar un Baudrive ! Retrouve-la\net ramène-la à sa mère.
 0x1EF11A0: {COLOR}ÇOh mon Dieu…\pMa fille, je ne la trouve pas !\pNous étions en vacances ici\nquand, soudain, un Pokémon maléfique\ll'a emportée !\pJe l'ai suivi jusqu'ici,\nmais je l'ai perdu de vue…\pS'il te plaît, {STR_VAR_1}, cherche-la !
 0x1EF1276: {COLOR}ÇMerci, {STR_VAR_1}!\pElle a été prise\npar un de ces Pokémon malfaisants…\p{COLOR}ÉBaudrive{COLOR}Ç ! Si tu\nle trouves, tu trouveras ma fille !
 0x1EF12F9: {COLOR}ÇOh, chérie…\pQue vais-je faire maintenant… ?
@@ -15559,7 +15559,7 @@
 0x1EF143C: {COLOR}ÇOh, Dieu merci, tu es de retour !\pCe… ce… Pokémon maléfique\nne laisse pas ma fille tranquille !\pPeu importe ce que je fais, il\nne veut pas…{PAUSE}î partir…{PAUSE}î aller…{PAUSE}î urk…
 0x1EF14D7: {COLOR}ÁLe\nIdem a été emporté par le Baudrive.\pOh ?\pOn dirait que l'Idem a laissé\nquelque chose avant de disparaître.
 0x1EF154A: Émeraudes flamboyantes
-0x1EF155B: Recherchez partout des émeraudes\nchaudes cachées sous les cristaux.
+0x1EF155B: Recherchez partout\ndes émeraudes chaudes\ncachées sous les cristaux.
 0x1EF1599: Heeyo !\pJ'ai des émeraudes toutes fiya !\pElles étaient si chaudes que\nj'ai dû les enterrer dans le sol !\pMais là, oh non !\pDes cristaux les ont couvertes !\pAhhhhhhhhhhhhhhhhhhh !\pTrouve mes\némeraudes, chaud chaud, steuplé ?
 0x1EF165A: Heeyo !\pMes émeraudes étaient en fiya !\pMaintenant plus\nde fiya, mais des cristaux partout !\pCache les\ncristaux et trouve les {COLOR}É{STR_VAR_1}{COLOR}Ë, steuplé !
 0x1EF16F4: Heeyo !\pC'est l'homme aux muffins !\pDonne-moi mes émeraudes !\pAhhhhhhhhhhhhhhhhhh !
@@ -15838,7 +15838,7 @@
 0x1EF7DCD: Tu veux récupérer ton Pokémon ?
 0x1EF7DEE: Si tu me laisses ce Pokémon,\navec quoi te battras-tu ?\pReviens plus tard.
 0x1EF7E3F: Hyperosmie extrême
-0x1EF7E52: Parfums suaves ! Montre des\nPokémon différents issus d'objets\nEncens.
+0x1EF7E52: Parfums suaves ! Montre\ndes Pokémon différents\nissus d'objets Encens.
 0x1EF7E99: Parfums suaves ! Montre un\nGoinfrex à l'Éleveur Pokémon.
 0x1EF7ED8: Parfums suaves ! Montre un\nOkéoké à l'Éleveur Pokémon.
 0x1EF7F15: Parfums suaves ! Montre un\nPtiravi à l'Éleveur Pokémon.
@@ -16215,7 +16215,7 @@
 0x1F01663: Oh.\nJ'aurais juré que tu étais…\pMa vue doit baisser avec\nl'âge.
 0x1F016AD: Bonjour, {STR_VAR_2} d'Aros.\nJ'espère que ton voyage va bien.
 0x1F016E4: Ne coupe pas le courant
-0x1F016FD: Entraîne-toi à sauver des vies en\nsauvegardant au moins {STR_VAR_1} fois.
+0x1F016FD: Entraîne-toi à sauver\ndes vies en sauvegardant\nau moins {STR_VAR_1} fois.
 0x1F01739: Anecdote : sais-tu que quand tu\néteins ta console sans\lsauvegarder, une bombe explose\let détruit notre monde ?\pTu ne le vois pas, car une dimension\nparallèle est créée quand tu\lrecharges.\pMerci de ne plus détruire notre\nmonde.\p{COLOR}É{STR_VAR_1}{COLOR}Ë fois, OK.
 0x1F01867: Merci d'avoir accepté de ne pas\nrelancer l'armageddon.\pJe te récompenserai quand tu auras\n{COLOR}É{STR_VAR_1}{COLOR}Ë.
 0x1F018E5: Certaines personnes veulent juste\nvoir le monde brûler…
@@ -16501,7 +16501,7 @@
 0x1F07781: Ail-dorable !\pJ'ai vu de magnifiques ailes que\nje n'avais jamais vues !\pComme promis, je vais partager mes\nailes avec toi !
 0x1F077FA: Après toutes ces belles ailes,\nj'en ai pour la vie !
 0x1F0784D: Au revoir, Papilusion
-0x1F07861: La douce tristesse des adieux !\nCrée un lien fort avec un Papilusion\nen l'entraînant au moins au niv. 70.
+0x1F07861: Doux adieux ! Crée un lien\nfort avec un Papilusion\nen l'amenant au niv. 70.
 0x1F078CB: Non…\pIl me faut un Dresseur expert\nqui a battu le Conseil 4 pour ma\ltâche.
 0x1F07929: Ah, le Champion de la région de\nBorrius !\pJ'ai justement une requête pour\nquelqu'un de ton niveau.\pTu veux l'entendre ?
 0x1F079B1: La tâche est simple : entraîne un\n{COLOR}ÉPapilusion{COLOR}Ë au niveau {COLOR}É70{COLOR}Ë et\lprésente-le-moi.\pIl peut être au-dessus du niv. 70,\nmais pas en dessous.\pUne fois fait, je te dirai la\nsuite de la tâche.
@@ -16516,7 +16516,7 @@
 0x1F07D7B: Ce Papilusion est bien niv. 70\nou plus, mais pas par toi\ltoi-même !\pJe veux voir un Papilusion entraîné\nau moins au niv. 70.
 0x1F07E1E: Mais…\pSi tu ne le relâches pas, comment\nPapilusion trouvera l'amour ?
 0x1F07E65: La Révolution communiste
-0x1F07E7E: Levez-vous au nom du communisme !\nSoigne-toi {STR_VAR_1} fois aux Centres.
+0x1F07E7E: Levez-vous au nom du\ncommunisme ! Soigne-toi\n{STR_VAR_1} fois aux Centres.
 0x1F07EC2: Viens ici, gamin, discrètement.\pToute la région est secrètement\ncontrôlée par la bourgeoisie\let les capitalistes.\pNous, la classe ouvrière, devons\nnous unir et nous lever contre\leux au nom du communisme !\pLeur faiblesse : services gratuits.\pSi tu te soignes assez au Centre\nPokémon, leur machine\ld'oppression s'effondrera.
 0x1F08005: Ouvriers du monde, unissez-vous !\pIl suffit de te soigner {COLOR}É{STR_VAR_1}{COLOR}Ç\nfois dans un Centre Pokémon.\pSauf celui d'Antisis, ils sont tous\navec la révolution.
 0x1F080A8: Encore un prolétaire lavé par\nla machine capitaliste de tyrannie.
@@ -16558,7 +16558,7 @@
 0x1F0912A: Mais fais de la place dans\nton équipe, d'abord !
 0x1F09154: Le Pokémon que je t'ai donné\ns'appelle Mew.\pOn dit que tous les Pokémon\ndescendent de cette espèce.\pNous l'avons cloné à la Société\nScientifique, donc celui que tu as\ln'est qu'une copie.
 0x1F0920D: Millionnaire d'Exp.
-0x1F0921E: L'Exp. est comme l'or. Gagne {STR_VAR_1}\nen un jour pour être vraiment riche.
+0x1F0921E: L'Exp. est comme l'or.\nGagne {STR_VAR_1} en un jour\npour être vraiment riche.
 0x1F0925A: Je suis si riche que ma piscine a\nsa propre piscine !\pEt pourtant…{PAUSE}î et pourtant, tout\nl'argent ne me rend pas heureux.\pLa vraie richesse réside dans une\nmonnaie luxueuse : les Points Exp. !\pAlors, veux-tu me montrer ton désir\nde devenir vraiment riche ?
 0x1F0935A: Alors, montre-moi ta soif de\nvraie richesse.\pPour être vraiment riche, fais\nobtenir {COLOR}É{STR_VAR_1}{COLOR}Ç Points Exp.\lau total en une seule journée.
 0x1F093F2: Hm. Je n'en attendais pas moins\nd'un crétin matérialiste.
@@ -16678,7 +16678,7 @@
 0x1F0CA42: Zeph Jr.
 0x1F0CA4B: Quand papa rentre ?\nJe veux jouer avec papa !
 0x1F0CA7E: Aide de voisinage
-0x1F0CA95: Ton voisin a besoin d'aide !\nApporte-lui un Antidote du\nMagasin Pokémon pour le soigner.
+0x1F0CA95: Ton voisin a besoin d'aide !\nApporte-lui un Antidote\ndu Magasin Pokémon.
 0x1F0CAF5: Oh, bonjour, {PLAYER} !\pTa mère\nm'a dit que tu quittais la ville !\pC'est une super nouvelle !\pPuis-je te demander un service ?\pJe ne me sens pas très\nbien, peux-tu m'apporter un {COLOR}ÉAntidote{COLOR}Ë\lau Magasin\lPokémon.
 0x1F0CBFF: Oh, bonjour, {PLAYER} !\pFélicitations\npour être Champion !\pC'est une super nouvelle !\pPuis-je te demander un service ?\pJe ne me sens pas très\nbien, peux-tu m'apporter un {COLOR}ÉAntidote{COLOR}Ë\lau Magasin\lPokémon.
 0x1F0CCF8: Oh, c'est dommage, {PLAYER}.\pJe vais devoir souffrir en silence.
@@ -16765,7 +16765,7 @@
 0x1F0E68D: Une vieille machine à sous !\pMais la quantité de Jetons dans ta\nBoîte Jetons la surcharge !\pDépense des Jetons\navant d'y jouer.
 0x1F0E712: HORS SERVICE\nC'est cassé.
 0x1F0E72F: Une vie sans regrets
-0x1F0E744: Fais-les éclater\n! Joue à Cloud Burst et collecte\n3000 Jetons en un jour. Restant : {STR_VAR_1}
+0x1F0E744: À fond ! Joue à Cloud Burst\net gagne 3000 Jetons en\nun jour. Restant : {STR_VAR_1}
 0x1F0E798: Ma mère disait de trouver un job\nque j'aime.\pMais le travail demande des efforts,\nalors je suis devenu joueur.\pParfois, je gagne,\nparfois, je dois\lau Noacier Noir.\pJe veux arrêter, mais je suis le\nmeilleur, et je ne peux pas quitter\ltant que je suis numéro un.\pTu peux me battre aux ballons ?
 0x1F0E8BB: Tu as du cran.\pPour battre mon record, tu dois\ncollecter au moins {COLOR}É{STR_VAR_1}{COLOR}Ë Jetons en\lune journée en jouant à {COLOR}ÉCloud Burst{COLOR}Ë.\pJe t'aurais donné des Jetons,\nmais je dois encore de l'argent\lau Noacier Noir.
 0x1F0E997: Oh, tu es quelqu'un de droit,\nne voulant pas céder aux vices\ldu jeu ?
@@ -16950,7 +16950,7 @@
 0x1F12FF3:  Bois Noir
 0x1F12FFF: Une forêt inquiétante remplie de\nPokémon Spectre.\nBeaucoup d'enfants ont disparu\ndans ces bois.
 0x1F13064: Coupe-Herbe
-0x1F13071: Aide un riche homme d'affaires à\nouvrir sa crêperie de rêve en\ncoupant l'herbe de la Forêt Lugubre.
+0x1F13071: Aide un riche patron : coupe\ntoute l'herbe de la Forêt\nLugubre pour sa crêperie.
 0x1F130DC: Bonjour, Dresseur !\pTu es exactement la personne\nque je cherche.\pJe suis un homme d'affaires voulant\nconstruire ma crêperie de rêve\lici, en forêt.\pIl y a juste un souci.\pToute cette herbe haute\ngêne le chantier.\pPeux-tu utiliser Coupe\npour tout faucher ?
 0x1F13208: Excellent !\pVa utiliser {COLOR}ÉCoupe{COLOR}Ë pour\ntout faucher !
 0x1F13254: Ne t'inquiète pas, Dresseur, je\ntrouverai quelqu'un pour aménager\lmon terrain contre bonne paye.
@@ -16999,7 +16999,7 @@
 0x1F141BF: C'est un peu différent.\nTu trouves pas aussi ? Pas vrai ?
 0x1F141FF: Si tu changes d'avis, veux-tu\nme vendre l'objet rare ?\lTu veux ?
 0x1F14247: Dur à cuire
-0x1F1425C: Rien n'est plus dur en ce monde\nqu'une Pierre Dure !\nRamasse-en 20 pour un passionné.
+0x1F1425C: Rien de plus dur qu'une\nPierre Dure ! Ramasse-en\n20 pour un passionné.
 0x1F142BE: Hé, toi.\nJ'ai une faveur à te demander.\pJe suis un passionné.\pUn amateur de trucs durs, si je\npuis dire.\pMais contrairement à mon pote,\nje ne veux pas t'acheter\ln'importe quoi.\pJe veux juste que tu ramasses\n{COLOR}É{STR_VAR_1} Pierres Dures{COLOR}Ë pour moi.\pTu peux faire ça ?
 0x1F143CA: Yee haw !\pDes {COLOR}ÉPierres Dures{COLOR}Ë peuvent sortir\nen cassant du roc au {COLOR}ÉGrand Désert{COLOR}Ë.\pEt si tu creuses les murs de\nl'{COLOR}ÉAutoroute KBT{COLOR}Ë,\lt'en trouveras aussi.
 0x1F1447F: Ces objets durs dans ton Cube sont\nceux que j'ai demandés !\pAllez, laisse-moi te les prendre.
@@ -17038,7 +17038,7 @@
 0x1F14C84: Tch…\pLes jeunes d'aujourd'hui…
 0x1F14C9A: Tch…\pTu mens !\nTu n'as pas pêché 3 fois !
 0x1F14CD2: Chasseur de trésors
-0x1F14CE2: Retourne au Tombeau de Borrius et\ntrouve tous les objets cachés !
+0x1F14CE2: Retourne au Tombeau de\nBorrius et trouve tous\nles objets cachés !
 0x1F14D23: Pendant que tu errais dans le\ndésert, as-tu trouvé\ll'entrée du Tombeau\lde Borrius ?\pIci, on dit que les anciens\nde Borrius y cachaient\lbeaucoup de trésors.
 0x1F14DFC: C'est toi !\pLe Dresseur qui a trouvé la\nchambre funéraire du Tombeau !\pTout le monde en parle !\pAlors, accepte ma\ndemande !
 0x1F14E8B: Tu ne sais même pas ce que c'est\net tu acceptes déjà ?\pTu es audacieux !\pPas étonnant que tu aies réussi\nle Tombeau de Borrius !\pVoici ma demande.\pJe suis sûr que tu as vu\nqu'il y avait peu de trésors\lvisibles dans le tombeau.\pOn dit par ici que les\nanciens de Borrius utilisaient\ldes matériaux pour camoufler\lleurs trésors.\pJe veux donc que tu retournes\nau tombeau et trouves chaque objet\lque les anciens ont caché.\pTu crois pouvoir le faire ?
@@ -17378,7 +17378,7 @@
 0x1F1F728: {PLAYER}, tu es arrivé à la\nLigue Pokémon !\pAlors, tu veux les ragots de Galavan\nsur le Conseil 4, hein ?\pSi tu as le temps de papoter, c'est\ndu temps à mieux préparer l'assaut\lfinal, non ?\pT'inquiète pas !\pVieux Galavan est derrière toi, tout\nle long, alors fonce !\pHa ha ha !
 0x1F1F850: Une grotte remplie de\nstalactites.\nDe nombreux Pokémon Glace\ny vivent.
 0x1F1F8AB: Suis-je aveugle ?
-0x1F1F8B7: Découvre les secrets derrière les\ntablettes de pierre mystérieuses !
+0x1F1F8B7: Découvre les secrets\nderrière les tablettes\nde pierre mystérieuses !
 0x1F1F8F0: Salut, étranger !\pExplore bien la Grotte Stalactite.\pElle n'a pas l'air si grande, mais\nelle l'est plus qu'on ne croit !\pPas plus tard que l'autre jour, j'ai\nvu un Pokémon creuser un passage\ldans le mur vers ce qui doit être\lune toute nouvelle grotte !
 0x1F1F9DC: Qui aurait cru qu'il y avait une\nsection cachée de la Grotte\lStalactite ?\pSans le creusement maladroit de\nce Sablaireau, cet endroit serait\lresté caché bien plus\llongtemps.\pMaintenant que c'est ouvert, j'ai\npu découvrir une des anciennes\lreliques !\pLa tablette qui est ici… il en\nexiste plusieurs dans Borrius.\pSur chacune, un texte dans un\ndialecte ancien, oublié.\pCependant !\pAprès des années à étudier cette\nlangue, j'ai créé un appareil\lcapable de traduire le texte.\pSi tu veux bien m'aider\nà percer les secrets de ces murs\lde pierre, je serai\lheureux de te le partager.
 0x1F1FC58: Hmph… c'est bien dommage.\pPersonne à la Société d'Archéologie\nn'a réussi à apprendre ce dialecte…\lsauf moi, bien sûr.\pJe doute qu'un Dresseur novice\ncomme toi puisse le lire sans mon\laide.
@@ -17529,7 +17529,7 @@
 0x1F230EE: Sœur de la Famille Gemme\nqui est une princesse féerique !\pJe peux enseigner {COLOR}É{STR_VAR_1}{COLOR}Ç à un\nPokémon pour {COLOR}É{STR_VAR_3} {STR_VAR_2}s{COLOR}Ç.
 0x1F23170: Pokédex d'Ouest Borrius
 0x1F23189: Pokédex National
-0x1F2319E: Tâche ardue ! Voir tous les\nPokémon d'Ouest Borrius et rapporter\nau Prof. Log.
+0x1F2319E: Tâche ardue ! Voir tous\nles Pokémon d'Ouest Borrius\net rapporter au Prof. Log.
 0x1F231F2: Comme on disait, faut tous les\nattraper ! Voyage, et\nattrape tous les Pokémon !
 0x1F23252: Tu devrais voir ta {COLOR}Émère{COLOR}Ë avant\nde prendre mon colis, {PLAYER}.\pElle doit être très inquiète\npour toi.
 0x1F232BA: Récupère mon colis au\n{COLOR}ÉPoké Mart de Bourg Bellin{COLOR}Ë, {PLAYER}.\pJ'en ai besoin, et toi seul peux\nl'avoir.
@@ -17611,7 +17611,7 @@
 0x1F25F3E: {COLOR}ÇAttends!\pTu vois ces empreintes ici ?\pElles sont à moi !\pJ'ai marché dans du fumier à la\nferme et je l'ai traîné\ljusqu'ici !\pC'est pas fascinant ?\pJe dois prendre une photo !
 0x1F25FF0: Fais toujours bien attention où tu\nmarches !\pOn sait jamais quand on peut marcher\ndans du fumier !\pMais laisse-moi te dire, ça fait des\nphotos fascinantes !
 0x1F26096: Le Gibier Le Plus Dangereux
-0x1F260AE: Les Pokémon sont les bêtes les plus\ndangereuses. Dompte-les en faisant\nun record de 25 dans le Parc Safari.
+0x1F260AE: Dompte ces bêtes féroces :\nétablis un record de\n25 au Parc Safari.
 0x1F26110: Dresseur, je cherche un maître des\nbêtes les plus dangereuses…\lles Pokémon.\pIls crachent du feu, invoquent la\nfoudre, contrôlent l'esprit.\pLe gibier ultime.\pPeux-tu avoir une série d'au moins\n{COLOR}É{STR_VAR_1}{COLOR}Ë Pokémon au Parc Safari\let en maîtriser\lces créatures ?
 0x1F26237: Bonne chance, souviens-toi que\ntu n'as que 30 Safari Balls au plus\ldans une partie.
 0x1F26289: Je suis sûr qu'il y a quelqu'un\nqui peut dompter ces bêtes.
@@ -17725,7 +17725,7 @@
 0x1F280AA: Fufufu… Pas assez de place pour\nun Œuf.
 0x1F280E8: La brise marine est apaisante.\pFais une pause!\nDétends-toi!\pLaisse le vent t'envelopper…\pIl faut vivre l'instant présent,\ntu sais?
 0x1F2816F: Mouchoir Perdu
-0x1F2817A: Un client du Café Magnolia a perdu\nson mouchoir! Rends-le-lui vendredi\nmatin.
+0x1F2817A: Un client du Café Magnolia\na perdu son mouchoir!\nRends-le-lui vendredi matin.
 0x1F281D7: Mon mouchoir, c'est ma vie.\nJe ne peux pas imaginer vivre sans.\pRessens-tu la même chose pour ton\nmouchoir?
 0x1F28243: Mon mouchoir!\nTu l'as trouvé!\pJ'ai dû le faire tomber en venant\nau café la dernière fois.\pHeureusement que tu étais là pour le\nramasser!\pS'il te plaît, en remerciement, je\nveux que tu acceptes ce cadeau.
 0x1F2835D: Bonjour, j'ai amené mon Pokémon\ndirectement du ranch.
@@ -18995,7 +18995,7 @@
 0x1F580CA: Hé !\pTu as vu une jolie fille avec un\nSimiabraz ?\p…\pElle est partie vers le Village\nSéquoia ?\pJ'arrive ma belle !\pTiens, c'est pour le dérangement.\nMerci, Champ !
 0x1F58169: {COLOR}ÉGrrrrwaf !
 0x1F581D8: Nigaud
-0x1F581E2: T'es bouché ? Fonce des têtes de\nPokémon sur arbres {STR_VAR_1} fois !
+0x1F581E2: T'es bouché ? Fonce des\ntêtes de Pokémon sur\narbres {STR_VAR_1} fois !
 0x1F5821D: J'me suis cogné la tête aux arbres\ntrop de fois…\pMaintenant, je parle mal.\pJ'déteste arbres qui m'ont rendu\nbête.\pMoi fâché !\pMoi vouloir vengeance !\pTu le fais pour moi ?\pUtilise {COLOR}ÉCoup d'Boule{COLOR}Ë sur les arbres\npour bien se tenir {COLOR}É{STR_VAR_1}{COLOR}Ë fois !
 0x1F582EC: Bien, attaque les arbres avec Coup\nd'Boule, et ceux qui les protègent.
 0x1F58328: Oké, moi vais faire mal aux arbres\nmoi-même !
@@ -19041,7 +19041,7 @@
 0x1F592D2: Stupéfiant…\pLe Gardien de la Forêt s'est révélé\nà toi.\pIl a dû sentir un vieil ami parmi\nles membres de ton équipe.\pEt en plus, il semble te défier en\ncombat.\pTu as ma bénédiction pour le défier\net le capturer, si tu veux.
 0x1F593D8: Félicitations pour ta capture du\nGardien de la Forêt.\pVeille sur lui et protège-le, comme\nil nous a protégés et\lsurveillés.
 0x1F5948C: Ruée vers l'Écume
-0x1F5949B: Ce sont les Pokémon les plus\ninutiles ! Magicarpe ! Peux-tu en\nplacer 30 dans ta Boîte actuelle ?
+0x1F5949B: Le Pokémon le plus inutile :\nMagicarpe ! Peux-tu en\nmettre 30 dans ta Boîte ?
 0x1F594F5: Salut, Dresseur de Pokémon.\pJe suis membre des Cuissardes,\ncomme toi !\pEt j'ai un travail\npour toi.\pTu connais le Pokémon\n{COLOR}ÉMagicarpe{COLOR}Ë ?\p…\pPourquoi je demande, bien sûr que tu\nsais !\pQui ne connaît pas ce Pokémon\ncélèbre ?\pJe veux que tu en places\n{COLOR}É{STR_VAR_1}{COLOR}Ë dans une {COLOR}Éseule Boîte{COLOR}Ë.\pQuand tu auras fait ça, je les\nreprendrai pour toi, et je te\ldonnerai quelque chose de mieux en\léchange.\pEn tant que membre estimé des\nCuissardes, ce devrait être facile\lpour toi !
 0x1F596DE: Oh là là, Dresseur de Pokémon !\pJe n'arrive pas à croire que tu l'as\nfait !\pTu as vraiment mis {STR_VAR_1}\nMagicarpe dans une Boîte !\pJe veux dire, une tâche comme ça\ndemande une sacrée dévotion.\pMais après tout, tu es membre des\nCuissardes.\pAlors laisse-moi les prendre pour\ntoi.\pEt pour un membre aussi distingué,\nje veux que tu prennes ceci.
 0x1F59821: Salut, Dresseur de Pokémon.\pJe suis membre des Cuissardes !\pSi tu veux rejoindre notre club,\nparle au président du club à\lVille Portuaire.\pTu sais, cette ville portuaire de\nBorrius Ouest ?
@@ -19464,7 +19464,7 @@
 0x1F60E64: …\pTu peux passer.
 0x1F60E74: Au-delà se trouve l'entrée de la\nRoute Victoire.\pC'est le dernier obstacle que les\nDresseurs doivent surmonter s'ils\lveulent affronter le Conseil 4\lpour devenir le Champion de Borrius.
 0x1F60F28: Héros du Panthéon
-0x1F60F39: Deviens un grand Champion ! Entre\nau Panthéon en équipes monotype.
+0x1F60F39: Deviens un grand Champion !\nEntre au Panthéon\nen équipes monotype.
 0x1F60F7E: Connais-tu le\nPanthéon ?\pC'est l'endroit où tu vas si tu\nbats la Ligue Pokémon !\pUn jour, l'ancien Champion,\nArtie y est allé tellement de fois,\lil s'est fixé l'objectif d'aller\llà avec une équipe composée\ld'un seul type.\pHélas, il n'a jamais atteint ce but,\net n'est entré qu'avec des équipes\lmonotype pour 17 types sur 18.\pPeut-être veux-tu relever le\ndéfi à sa place ?
 0x1F61114: Tu relèves le défi ?\nSuper !\pEnchaîne les victoires !\pIl y a {COLOR}É18{COLOR}Ë types au total et tu dois\nentrer au Panthéon avec une équipe\lpour chacune.\pEt garde ça en tête : si tu fais\nMéga-Évoluer un Pokémon,\lL'espèce de base et la Méga\lcompteront pour le type de l'équipe.\pDisons que tu veux utiliser un\nMéga-Léviator.\pEn plus d'une équipe Eau, tu peux\nl'utiliser dans les équipes Vol et\lTénèbres !
 0x1F612C4: Alors Artie restera toujours\nle Champion ultime !
@@ -19602,7 +19602,7 @@
 0x1F63D3D: Rebonjour !\pComment vont mes vieux amis ?
 0x1F63D7A: {COLOR}ËMoustillon
 0x1F63D86: Jour des jambes
-0x1F63D8E: C'est le jour des jambes ! Marche\n{STR_VAR_1} pas pour muscler tes mollets.
+0x1F63D8E: C'est le jour des jambes !\nMarche {STR_VAR_1} pas pour\nmuscler tes mollets.
 0x1F63DC4: Aujourd'hui, c'est le jour des\njambes.\pC'est le jour le plus important\nde la semaine.\pCertains sautent le jour des\njambes, mais ils ont tort.\pMarcher est la meilleure façon de\nfaire travailler les jambes.\pSi tu marches assez, je te donnerai\nune récompense pour célébrer ça.
 0x1F63EAC: Génial !\pFais {COLOR}É{STR_VAR_1}{COLOR}Ë pas\npour vraiment muscler tes mollets.
 0x1F63EF3: Très bien, retourne à la salle et\nsoulève des haltères, mollets mous !
@@ -19942,7 +19942,7 @@
 0x1F6ADB0: Wow ! Incroyable !\n{STR_VAR_1} est siiii grand !\pMonter sur {STR_VAR_1}\nserait trop amusant !\pQuand on est en hauteur, on voit\ndes toits et des montagnes au loin\let d’autres choses qu’on ne voit\n\ld’habitude.\pC’est pour ça que j’aime les grandes\nchoses !
 0x1F6AE93: Merci de m’avoir montré un grand\nPokémon !\pJe serais encore plus heureux si tu\nm’en montrais un demain aussi !
 0x1F6AEF7: Affres de la faim
-0x1F6AF07: Une femme triste n’a plus faim\nces derniers temps. Amène-lui divers\nPokémon pour la réconforter !
+0x1F6AF07: Une femme triste n'a plus\nd'appétit. Amène-lui divers\nPokémon pour la réconforter !
 0x1F6AF5B: Une femme n’a plus faim du tout.\nAmène-lui un Pokémon en forme de\nconcombre de mer pour l’aider !
 0x1F6AFBD: Une femme n’a plus faim du tout.\nAmène-lui un Pokémon au gros\nnez et moustache pour l’aider !
 0x1F6B023: Je n’ai pas trop mangé\nces temps-ci…\pIl me faudrait entendre un cri\nqui ressemble à une mastication.\pÇa me donnerait faim.\pTu connais ça ?\pUn Pokémon en forme de {COLOR}Éconcombre\nde mer{COLOR}Ç a un cri qui sonne\lcomme s’il mâchait quelque chose !\pJ’aimerais l’entendre un jour.
@@ -20621,7 +20621,7 @@
 0x1F7BDB7: Tiens, prends ça !
 0x1F7BDC9: Un assistant du Prof. Log à Tehl\nte donnera un cadeau si tu as\lcapturé assez\lde Pokémon.\pJ’espère que ça t’aidera à remplir\nle Pokédex !
 0x1F7BE61: Statue de Regi
-0x1F7BE70: Un homme a besoin d’inspiration\npour sa statue finale !\nApporte-lui le Pokémon sous Bellin.
+0x1F7BE70: Un homme cherche l'inspiration\npour sa statue ! Amène-lui le\nPokémon endormi sous Bellin.
 0x1F7BED3: Excuse-moi, pourrais-tu m’accorder\nun instant ?\pÉcoute… j’étais un des meilleurs\nsculpteurs de Borrius.\pMais récemment, mes talents se sont\nfigés, la muse s’est tarie.\pC’est que… j’ai entendu parler\nd’un roi ancien, assez fort pour\lremorquer des pays\lavec des cordes.\pDes éons et des éons, qu’il a.\pTu me croirais si je disais l’avoir\ntrouvé ?\pSous ma maison à Bellin.\nLà-dessous ?\pJe l’amènerais bien ici\nmoi-même, mais il ne bouge pas.\pAucune idée pour le réveiller.\pMais bon… tu as l’air débrouillard\ntu pourrais l’amener ici ?
 0x1F7C0EB: Tant pis alors.\pJe ne pensais pas que tu saurais\ncomment faire.
 0x1F7C123: Bien, t’es un vrai champion.\pT’es déjà allé au fond\nde Bellin ?\pTu le verras là-bas.\pComme je l’ai dit, il reste assis.\nIl ne bouge pas, n’attaque pas.\pVéritable mystère.\pDésolé, je ne peux pas t’aider\nà le bouger, mais si tu y parviens,\lramène-le ici.
@@ -20655,7 +20655,7 @@
 0x1F7CF37: …Oh. Je vois.\pQuand tu auras {COLOR}É{STR_VAR_1}{COLOR}Ç espèces de Pokémon,\nreviens.
 0x1F7CF76: Voyons voir…\pOh oh ! Tu n’as attrapé que {COLOR}É{STR_VAR_3}{COLOR}Ç espèces\nde Pokémon !\pIl t’en faut {COLOR}É{STR_VAR_1}{COLOR}Ç.\pAs-tu obtenu le {COLOR}ÉDexNav{COLOR}Ç de {COLOR}ÉNat Log{COLOR}Ç\nà {COLOR}ÉVille Blizzard{COLOR}Ç ?\pC’est un outil pratique pour trouver\nde nouvelles espèces.
 0x1F7D054: Recherche saisonnière
-0x1F7D066: Aide un chercheur à étudier les\nformes saisonnières à Borrius en lui\napportant divers Haydaim.
+0x1F7D066: Aide un chercheur sur les\nformes saisonnières en lui\napportant divers Haydaim.
 0x1F7D0C5: Aide un chercheur à étudier les\nformes saisonnières en lui\napportant un Haydaim Printemps.
 0x1F7D122: Aide un chercheur à étudier les\nformes saisonnières en lui\napportant un Haydaim Été.
 0x1F7D17F: Aide un chercheur à étudier les\nformes saisonnières en lui\napportant un Haydaim Automne.
@@ -20702,7 +20702,7 @@
 0x1F7E199: Je pourrais te donner\nquelque chose demain aussi.
 0x1F7E1D7: L’enfant égaré
 0x1F7E1E7: Milo
-0x1F7E1EC: Un petit garçon s’est perdu au Mont Foudroyant 4F ! Fais équipe avec lui\net guide-le vers la sortie.
+0x1F7E1EC: Un garçon s'est perdu au Mont\nFoudroyant 4F ! Rejoins-le\net guide-le vers la sortie.
 0x1F7E24D: Je suis Milo…\pJe capturais des Pokémon et je me\nsuis perdu…\pJ’ai si peur…\pS’il te plaît !\nAmène-moi à la sortie !
 0x1F7E2B7: Oh…\nJ’ai si peur…
 0x1F7E2E9: Je garderai tes Pokémon en forme\ntout le temps !
@@ -21193,7 +21193,7 @@
 0x1F87B25: L'essaim…\nNon !
 0x1F87B34: Je pensais avoir l'essaim\nultime…
 0x1F87B58: La Centrale des Cellules
-0x1F87B73: Collecte les mystérieuses cellules\nvertes qui apparaissent à Borrius !
+0x1F87B73: Collecte les mystérieuses\ncellules vertes qui\napparaissent à Borrius !
 0x1F87BB9: Merci d'être venu avec moi.\p…\pQuoi ?\pTu n'avais pas vraiment le\nchoix ?\pN'importe quoi.\pJe ne vois pas de quoi tu\nparles.\pPassons aux choses sérieuses.
 0x1F87C60: {COLOR}ÇRécemment, des fragments de\nZygarde apparaissent partout\là Borrius.\pMais on ne peut les voir qu'avec un\nSuper Cube équipé d'un module\lspécial.
 0x1F87D1C: Zygarde est un Pokémon de Kalos\nqui apparaît quand l'écosystème est\len danger.\pPourquoi il apparaît ici maintenant\nreste un mystère.\pNous cherchons la réponse, mais il\nnous faut quelqu'un pour aller\lcollecter toutes les «cellules»\let «noyaux» de Zygarde.
@@ -21608,7 +21608,7 @@
 0x1F93C80: Boss de Mission
 0x1F93C8D: Boss de Mission sauvage
 0x1F93C9F: Plus qu'un jeu
-0x1F93CB0: Inspire l'ethos du combat ! Gagne\n{STR_VAR_1} fois dans les installations.
+0x1F93CB0: Inspire l'ethos du\ncombat ! Gagne {STR_VAR_1}\nfois dans les installations.
 0x1F93CF0: Ces installations de combat sont\nplus qu'un jeu, c'est la vie.\pRien qu'en y entrant et en respirant\ncet air un peu rassis, on s'imprègne\lde l'ethos du\lcombat.\pVeux-tu accepter cet ethos du\ncombat dans le tissu de ton âme ?
 0x1F93DDF: Pour que l'ethos du combat fusionne\navec ton âme, tu devras triompher\ldans les installations de combat\l{COLOR}É{STR_VAR_1}{COLOR}Ç fois.\pBien sûr, cela n'inclut pas les\nSables de Combat puisque tu n'y\lcombats pas toi-même.
 0x1F93EAE: Je me sens tellement fort avec\nl'ethos du combat en l'âme, et toi ?
@@ -22295,7 +22295,7 @@
 0x1F9C606: Héhé… pas mal, {PLAYER}. Je\ppensais pas que quelqu'un\nfinirait vraiment tout le\lRing Challenge, tu sais ?\pMais s'il y avait bien\nquelqu'un pour y arriver,\pc'était toi. Hé… si tu ne\nt'es pas lassé de battre ces\pfaibles… Pourquoi ne pas\nvoir jusqu'où tu peux pousser\pta série ? Au pire, ça\nrappellera à ces rigolos la\pdistance qui les sépare de\ntoi ! Ha ha ha ha ! Allez, à\pplus, {PLAYER} ! La prochaine\nfois qu'on se voit, je perds plus !
 0x1F9C7CE: Ha ha ha ha ! Incroyable, tu m'as\nencore battu !
 0x1F9C7FB: T'as été négligent, en pensant être\nle meilleur du monde, hein, gamin ?
-0x1F9C853: Une fillette Baigneuse a disparu\n! Retrouve-la et ramène-la saine\net sauve à sa mère inquiète.
+0x1F9C853: Une fillette Baigneuse\na disparu ! Retrouve-la\net ramène-la à sa mère.
 0x1F9C8B0: Mère
 0x1F9C8B7: Oh mon dieu… Ma fille, je ne la\ptrouve nulle part ! Nous étions en\pvacances à la {COLOR}Éplage{COLOR}Ç\nquand tout à coup, elle a disparu !\pS'il te plaît, {STR_VAR_1},\nretrouve-la !
 0x1F9C948: Merci, {STR_VAR_1} ! En\papparence, elle ressemble à une\n{COLOR}ÉBaigneuse{COLOR}Ç ordinaire.
@@ -22314,7 +22314,7 @@
 0x1F9CD8C: On a oublié d'offrir un\ncadeau à la personne qui m'a aidée !
 0x1F9CDD6: Maman… Qu'est-ce qui\pt'est arrivé… ?
 0x1F9CDF4: Mauvaise baby-sitter
-0x1F9CE03: Un jeune garçon en costume de\nPikachu s'est enfui de chez lui vers\nla Route 8 ! Trouve-le et ramène-le\nchez lui sain et sauf.
+0x1F9CE03: Un garçon déguisé en Pikachu\na fui vers la Route 8 !\nRamène-le sain et sauf.
 0x1F9CE6C: Mon frère ! Aide-moi,\ps'il te plaît ! Je le\pgardais quand il a dévalé\nla montagne ! Aide-moi à\ple retrouver, je t'en prie !
 0x1F9CEDD: Je ne te remercierai jamais assez !\pMon frère est petit, alors il n'a\npas pu aller bien loin. Je parie\pqu'il est quelque part sur la\n{COLOR}ÉRoute 8{COLOR}Ç en ce\pmoment. La dernière fois que je l'ai\nvu, il portait son costume préféré
 0x1F9CFB4: Mes parents vont me tuer !
@@ -22384,7 +22384,7 @@
 0x1F9EA0C: On prépare une stratégie\npour abattre les Black Ferrothorn.
 0x1F9EA4F: Quand on aura viré ces Black\nFerrothorn, je vais prendre\ll'un de leurs canapés pour\pmoi. Parie qu'ils en ont un\ntas dans leur base luxueuse !
 0x1F9EAE4: Emportées à l'égout
-0x1F9EAF1: Quelqu'un a des soucis de toilettes\n! Aide ton camarade du {PLAYER}\nNoir en récupérant ses\nchaussettes dans les égouts.
+0x1F9EAF1: Souci de plomberie ! Aide\nton {PLAYER} Noir à sortir\nses chaussettes de l'égout.
 0x1F9EB55: Hey, {PLAYER}, mon pote, ça\nroule ? Écoute, {PLAYER},\pl'autre jour j'ai…{PAUSE}\neuh…{PAUSE} tiré la chasse\lavec ma paire de chaussettes\lpréférée dedans. Je suis\pdescendu aux égouts pour les\nchercher, mais impossible de\lles trouver, quoi que je fasse.\pJe sais ce que tu dois penser.\nPourquoi mes chaussettes\pétaient dans les toilettes,\ndéjà ? Eh bien…{PAUSE}\peuh…{PAUSE} c'est pas si\nimportant… Alors je me\pdisais, peut-être que tu\npourrais fouiller à ma place ?
 0x1F9ED0F: Merci, {PLAYER}. Je savais que je\npouvais compter sur toi. Tu peux\putiliser l'escalier qui mène en bas\ndans le coin, ou tu peux simplement\lutiliser l'entrée principale dehors.
 0x1F9EDA0: Tu les as trouvées ! Mais\palors, qu'est-ce qu'elles puent !
@@ -22423,7 +22423,7 @@
 0x1F9FA9A: T'es un Dresseur sacrément\ntéméraire, {PLAYER} ! Je\pconnais personne d'autre qui\naurait eu le cran d'affronter\ldeux Dresseurs boostés en même\ptemps ! Tu sais quoi… repasse\nà la base et je te donnerai un\lpetit quelque chose pour ton aide.
 0x1F9FB74: Vous en voulez encore,\pmauviettes ? Alors on va\nvous écraser encore une fois !
 0x1F9FBBF: Drôles de docks
-0x1F9FBCD: Faire l'innocent, ça rapporte. Aide\nun camarade du {PLAYER} Noir à\nfaire passer de la marchandise hors
+0x1F9FBCD: Fais l'innocent ! Aide un\n{PLAYER} Noir à passer des\ncolis hors du port après 20h.
 0x1F9FC2A: Trouve les Feuilles de Mystherbe\ncachées à l'ouest du port d'Antisis\net fais-les sortir discrètement vers
 0x1F9FC8C: {PLAYER}, mon {STR_VAR_1} ! J'ai\pune livraison de euh…{PAUSE}\nEncens Rose qui arrive au\l{COLOR}Éport d'Antisis{COLOR}Ë\pun de ces soirs. Mais c'est trop\ndifficile de les faire sortir du\pport tout seul. C'est là que tu\pinterviens. Tu vas me retrouver\naux docks, prendre la livraison\let la faire sortir jusqu'à la\pbase. Capisce ?
 0x1F9FDB3: Aww… Pourquoi tu fais\pça, {PLAYER} ? Je\ncroyais qu'on était\pcomme une famille maintenant !
@@ -22466,7 +22466,7 @@
 0x1FA0C16: Halte ! Vous\ptransportez de la\nmarchandise\pillégale ? Des Queues de\nRamoloss ou des Feuilles de\pMystherbe ?…\pHmm… Vous empestez\ples Feuilles de Mystherbe…
 0x1FA0C8D: C'est sûrement\nrien… Vous n'êtes\pqu'un enfant, après tout. J'espère\nque quelqu'un d'aussi jeune ne se\lmêlerait pas de trafic aussi\phorrible… Vous pouvez y aller.\nPassez.
 0x1FA0D43: Offre et demande
-0x1FA0D55: Frappe le Black Ferrothorn là où ça\nfait mal en coupant les livraisons\nqu'un scientifique leur fournit.
+0x1FA0D55: Affaiblis le Black Ferrothorn\nen coupant les vivres qu'un\nscientifique lui fournit.
 0x1FA0DB8: {PLAYER} ! Mon\p{STR_VAR_1} ! Écoute\pun peu. Ces Black\pFerrothorns, ils\nont plein de matos. Ils ont les\pconnexions pour gonfler leurs\nPokémon à bloc. Si on veut les\ldescendre, faut couper leur\pravitaillement, tu vois ? Bonne\nnouvelle, je sais\lexactement où ils\pchopent tout ça. Y a une\nscientifique pas loin d'ici. Elle\pleur refourgue les\nderniers boosters\pque la Société\nScientifique balance\lau marché noir.\lJ'ai pas le cran d'y\paller seul, mais avec toi… ce\nserait une autre\phistoire, tu m'suis\n? Alors, tu viens,\pmon {STR_VAR_1} ?
 0x1FA1057: Sérieux, mon {STR_VAR_1} ? J'y crois\ppas !
 0x1FA1088: Génial, mon {STR_VAR_1} ! On va\pgonfler nos\nPokémon à bloc, tu vois\l? On y va ! Cette\pscientifique vit\pdans la maison juste à côté du\nCentre Pokémon.\pJe file t'attendre\nlà-bas, mon {STR_VAR_1} !
@@ -22601,7 +22601,7 @@
 0x1FA4D97: {COLOR}ÁLe Pokémon vous fixe avec\ndes yeux froids et morts…
 0x1FA4DC9: {COLOR}ÁLe Pokémon a utilisé le\npouvoir du cauchemar pour grandir !
 0x1FA4E0E: Le voleur de nourriture
-0x1FA4E1F: Un mystérieux Pokémon de glace vole\nde la nourriture ! Traquez-le et\nrécupérez ce qui a été volé.
+0x1FA4E1F: Un Pokémon de glace vole de\nla nourriture ! Traquez-le\net récupérez le butin volé.
 0x1FA4E7A: Je ne sais plus\pquoi faire. Souvent,\nce Pokémon vient chez moi voler ma\lnourriture. Si j'avais un\p{COLOR}ÉPokédex{COLOR}Ë, je saurais\nce que c'est et comment l'arrêter…\pSi tu en obtiens un, tu pourrais\nrevenir m'aider ?
 0x1FA4F76: Je ne sais plus\pquoi faire. Tous les\nquelques jours,\lcet horrible Pokémon\pvient dans ma maison et vole ma\nnourriture. Je\lpourrais l'arrêter si\pj'avais un Pokémon, mais\nmalheureusement je n'en ai pas. Oh !\pJ'ai une idée ! Pourriez-vous…
 0x1FA5069: Ahh ! Le revoilà !\pIl est venu voler\pplus de nourriture !
@@ -22631,7 +22631,7 @@
 0x1FA57E3: Merci d'avoir aidé à traquer le\nvoleur de\pnourriture ! Comme promis,\nvoici votre petite récompense.
 0x1FA583C: Cette CT contient\p{COLOR}ÉAiguisage{COLOR}Ë. Si vous\nvoulez défier l'{COLOR}ÉArène de\pDresco{COLOR}Ë, ça vous aidera.\nLà-bas, c'est plein de brouillard.
 0x1FA58D0: Gardiens du Lac
-0x1FA58E6: Aidez un scientifique à percer les\nsecrets de la Grotte de l'Être !
+0x1FA58E6: Aidez un scientifique à\npercer les secrets de\nla Grotte de l'Être !
 0x1FA5923: Allez à la Grotte de l'Être pour\ncommencer à étudier ses mystères !
 0x1FA595C: Parcourez Borrius et capturez les 3\nPokémon restants qui se sont envolés\nde la Grotte de l'Être.
 0x1FA59B4: Parcourez Borrius et capturez les 2\nPokémon restants qui se sont envolés\nde la Grotte de l'Être.
@@ -22701,7 +22701,7 @@
 0x1FA76A1: Motard
 0x1FA76A7: Swizer
 0x1FA76AE: Taureau
-0x1FA76B4: Un pauvre vieil homme a besoin d'une\nnouvelle maison ! Cherchez dans\nBorrius toutes les maisons disponibles.
+0x1FA76B4: Un pauvre vieillard cherche\nun toit ! Trouve dans Borrius\ntoutes les maisons libres.
 0x1FA770C: Le Pokémon d'un riche homme\nd'affaires a disparu ! Aidez-le à\nretrouver son précieux ami.
 0x1FA7766: Ramenez l'homme riche chez lui en\nsécurité avant qu'il ne lui arrive quelque chose de fâcheux…
 0x1FA77A6: N'amenez que des types Glace et Fée\npour sauver un riche homme\nd'affaires de quelques voyous dans l'entrepôt ouest.
@@ -22780,7 +22780,7 @@
 0x1FA929D: Barbs va être furieux !
 0x1FA92B4: Barbs dirige les Noacier Noirs d'une\nmain de fer !
 0x1FA92E8: Sauveur de l'Île
-0x1FA92F7: Un Montagnard a besoin de votre aide\npour quitter une île ! Amenez un\nPokémon avec Tunnel pour l'aider à s'échapper.
+0x1FA92F7: Un Montagnard est bloqué sur\nune île ! Amène un Pokémon\nsachant Tunnel pour l'aider.
 0x1FA9353: Ouh là là, Dresseur ! Je suis dans\pun sacré pétrin, et je me demande si\nvous pouvez m'aider. Je suis arrivé\psur cette île en creusant depuis un\ntunnel caché, mais mon Gravalanch a\loublié Tunnel quand il a appris une\lnouvelle capacité. Maintenant je\psuis coincé ici sans moyen de\nquitter cette île. Pouvez-vous\pm'aider à rentrer chez moi ?
 0x1FA9468: Génial ! Tout ce dont vous avez\pbesoin est un Pokémon qui connaît\n{COLOR}ÉTunnel{COLOR}Ë. En avez-vous\pun avec vous ?
 0x1FA94BB: Incroyable ! La dernière chose que\pje vais vous demander est si vous\nêtes prêt à entrer dans le tunnel.\pIl n'y a pas de retour possible\navant d'avoir atteint l'autre sortie.
@@ -22812,7 +22812,7 @@
 0x1FA9B26: Merci pour toute votre aide ! Tenez,\nprenez cette CT. J'avais oublié que\pje l'avais tout ce temps.
 0x1FA9B77: La CT28 contient\p{COLOR}ÉTunnel{COLOR}Ë. Nous aurions\ndû l'utiliser tout de suite, hein ?
 0x1FA9BBC: Neuf Queues de Neige
-0x1FA9BCF: Une idole ne peut pas se produire\nsans son précieux Pokémon !\nRetrouvez le cambrioleur qui a volé son Pokémon.
+0x1FA9BCF: Une idole a perdu son\nPokémon ! Retrouve le\ncambrioleur qui le lui a volé.
 0x1FA9C32: Cambrioleur
 0x1FA9C3A: Que vais-je faire… Mon bébé adoré\pm'a été enlevé\npar un… un… escroc !\pComment puis-je monter sur scène\nsans elle ? S'il vous plaît,\paidez-moi à récupérer mon bébé !
 0x1FA9CD0: Oh, merci ! Merci, merci ! Je sais\pque mon bébé a été emmené par un\phomme vêtu de gris. Mais c'est tout\nce que je sais…\pJ'aimerais savoir où\nil est allé…
@@ -22865,7 +22865,7 @@
 0x1FAAC73: Vous pouvez avoir\nces objets sur ma\ptable aussi. Je suis sûr que vous\nles trouverez très utiles.
 0x1FAACC8: On dirait que c'était hier que je\nvous ai envoyé dans le monde… Le\ptemps passe vite !
 0x1FAAD50: Protecteur du Marais
-0x1FAAD67: Les Terreur Granbull sèment la\nzizanie ! Faites équipe avec Tessy\npour trouver son Laggron et rétablir l'ordre.
+0x1FAAD67: Les Terreur Granbull sèment\nla zizanie ! Aide Tessy\nà retrouver son Laggron.
 0x1FAADCC: {PLAYER}, viens ici, chéri. J'ai\nbesoin de ton aide pour un problème.\pTu vois, des voyous sèment la\nzizanie, juste ici dans le Marais de\lCootes. Et mon Laggron, qui est le\pprotecteur de ce marais, a disparu\ncomme un vegan à un barbecue !\lLaggron est censé maintenir\pl'équilibre délicat de cet\nécosystème unique, mais sans lui,\lrien ne calme ces voyous ! Je dois\larrêter leurs manigances et\pretrouver mon Laggron, pour que\nl'équilibre puisse être rétabli dans\lle marais. Mais, tu vois, je ne peux\ppas éliminer tous ces voyous toute\nseule. Alors, qu'est-ce que t'en\pdis, partant pour une aventure avec\nla vieille Tessy ?
 0x1FAB020: Génial ! Je suis aussi heureuse\nqu'un Ronflex à l'heure du souper.\pAllons botter les\nfesses de quelques\pGranbull et sauver le marais ! Je\ngarderai tes Pokémon soignés aussi.
 0x1FAB0AE: {COLOR}ÁEn faisant équipe avec\nTessy, les {COLOR}É3\lpremiers{COLOR}Á Pokémon de votre équipe seront sélectionnés pour le combat.
@@ -22984,7 +22984,7 @@
 0x1FADEA1: On dirait que vous devrez faire de la\nplace dans votre équipe avant que je puisse\lvous donner votre récompense.
 0x1FADEF7: Utilisez l'{COLOR}ÉÉlectriseur{COLOR}Ë sur un {COLOR}ÉÉlektek{COLOR}Ë\npour le faire évoluer.
 0x1FADF36: Fba Épées de Justice
-0x1FADF4A: Les Lames de la Justice sont arrivées\ndepuis Unys ! Traquez-les\net capturez-les.
+0x1FADF4A: Les Lames de la Justice\nsont arrivées depuis Unys !\nTraquez-les et capturez-les.
 0x1FADFA7: Les Lames de la Justice se cachent dans\nla Route Victoire ! Capturez-les et ramenez-les\nà Ville de Fallshore.
 0x1FAE008: Ramenez les trois Lames de la Justice\nà la Route 17 pour découvrir un dernier\nmystère.
 0x1FAE053: Les Lames de la Justice de la\nrégion d'Unys…\pPourquoi seraient-elles ici ?\pElles n'y sont pas !\pPas encore du moins…\pAvec le temps, les choses pourraient changer…
@@ -23000,7 +23000,7 @@
 0x1FAE695: Que les lames soient avec vous, jeune\nDresseur.
 0x1FAE6F3: Terreur Granbull
 0x1FAE704: Les Terreur Granbull
-0x1FAE718: Les Terreur Granbull sèment le\nchaos sur la Route 10 ! Aidez les autorités\nlocales à les rassembler.
+0x1FAE718: Les Terreur Granbull ravagent\nla Route 10 ! Aide les\nautorités à les capturer.
 0x1FAE77D: Les Terreur Granbull se sont enfuis\nvers le Voie d'Eau Auburn ! Aidez les\nautorités locales à en arrêter 5.
 0x1FAE7E4: Les Terreur Granbull se sont enfuis\nvers le Voie d'Eau Auburn ! Aidez les\nautorités locales à en arrêter 4.
 0x1FAE84B: Les Terreur Granbull se sont enfuis\nvers le Voie d'Eau Auburn ! Aidez les\nautorités locales à en arrêter 3.
