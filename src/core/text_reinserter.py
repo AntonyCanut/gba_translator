@@ -158,6 +158,7 @@ class SmartReinserter:
         allow_fallback: bool = False,
         free_space_min: int = 16,
         pointer_proof_rom: Optional[bytes] = None,
+        skip_encode_aliases: frozenset = frozenset(),
     ):
         """
         Initialise le réinserteur.
@@ -173,6 +174,8 @@ class SmartReinserter:
                 hack (ex. la traduction espagnole). Un site dont la valeur y a
                 été réécrite vers une autre adresse ROM est un pointeur prouvé
                 réel: ses traducteurs l'ont repointé en relogeant ce texte.
+            skip_encode_aliases: Characters whose ENCODE_ALIASES entries are
+                skipped during encode_pokemon (use GERMAN_UMLAUT_CHARS for DE).
         """
         self.rom_data = rom_data
         self.allow_truncate = allow_truncate
@@ -181,6 +184,7 @@ class SmartReinserter:
         self.pointer_proof_rom = pointer_proof_rom
         self.fallback = FallbackSynthesizer() if allow_fallback else None
         self.free_space_min = free_space_min
+        self.skip_encode_aliases = skip_encode_aliases
         # Relocations are deferred until all in-place writes are done:
         # the free-space scan must see the final state of the inter-string
         # padding, otherwise a relocated string can land in padding that an
@@ -436,7 +440,7 @@ class SmartReinserter:
             if raw_bytes is not None:
                 encoded = raw_bytes
             else:
-                encoded = TextEncoder.encode(text, encoding)
+                encoded = TextEncoder.encode(text, encoding, skip_aliases=self.skip_encode_aliases)
             encoded_len = len(encoded)
 
             if original_length is None:
@@ -471,7 +475,7 @@ class SmartReinserter:
                 if allow_fallback and self.fallback is not None and text and max_length > 0:
                     result = self.fallback.shrink_to_fit(text, encoding, max_length)
                     if result.fits:
-                        encoded = TextEncoder.encode(result.text, encoding)
+                        encoded = TextEncoder.encode(result.text, encoding, skip_aliases=self.skip_encode_aliases)
                         encoded_len = len(encoded)
                         self.stats['fallback_used'] += 1
                         self.stats['warnings'].append({

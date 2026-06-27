@@ -1,6 +1,6 @@
 import unittest
 
-from src.core.text_codec import TextEncoder, TextDecoder
+from src.core.text_codec import TextEncoder, TextDecoder, GERMAN_UMLAUT_CHARS
 
 
 class TextCodecTests(unittest.TestCase):
@@ -133,6 +133,67 @@ class TextCodecTests(unittest.TestCase):
             encoded,
             bytes([0x06, 0xE0, 0xD9, 0xD7, 0xE8, 0xDC, 0xE3, 0xE6, 0xFF]),
         )
+
+    def test_german_umlauts_fold_to_ascii_by_default(self):
+        """Without skip_aliases, ä/ö/ü/Ä/Ö/Ü fold to ASCII (FR/IT/ES safe).
+
+        ENCODE_ALIASES maps them to a/o/u/A/O/U before table lookup, so no
+        byte from slots 0x60-0x65 is emitted — those slots have no glyph in
+        the FR/IT/ES font.
+        """
+        self.assertEqual(TextEncoder.encode_pokemon('ä')[0], 0xD5)  # 'a'
+        self.assertEqual(TextEncoder.encode_pokemon('ö')[0], 0xE3)  # 'o'
+        self.assertEqual(TextEncoder.encode_pokemon('ü')[0], 0xE9)  # 'u'
+        self.assertEqual(TextEncoder.encode_pokemon('Ä')[0], 0xBB)  # 'A'
+        self.assertEqual(TextEncoder.encode_pokemon('Ö')[0], 0xC9)  # 'O'
+        self.assertEqual(TextEncoder.encode_pokemon('Ü')[0], 0xCF)  # 'U'
+
+    def test_german_umlauts_encode_to_de_slots_with_skip_aliases(self):
+        """With skip_aliases=GERMAN_UMLAUT_CHARS, umlauts reach slots 0x60-0x65.
+
+        These slots have real glyphs in the DE ROM (drawn by patch_font_de.py).
+        The test proves the fix for B-81 / F-50: ENCODE_ALIASES was stripping
+        umlauts before table lookup, so 0x60-0x65 were never emitted.
+        """
+        expected = {
+            'Ä': 0x60, 'Ö': 0x61, 'Ü': 0x62,
+            'ä': 0x63, 'ö': 0x64, 'ü': 0x65,
+        }
+        for char, byte in expected.items():
+            encoded = TextEncoder.encode_pokemon(char, skip_aliases=GERMAN_UMLAUT_CHARS)
+            self.assertEqual(
+                encoded[0], byte,
+                msg=f"DE: {char!r} should encode to 0x{byte:02X}, got 0x{encoded[0]:02X}",
+            )
+
+    def test_german_umlaut_word_de(self):
+        """Full word 'Talhöhle' with skip_aliases encodes ö as 0x64."""
+        encoded = TextEncoder.encode_pokemon('Talhöhle', skip_aliases=GERMAN_UMLAUT_CHARS)
+        # T=0xCE a=0xD5 l=0xE0 h=0xDC ö=0x64 h=0xDC l=0xE0 e=0xD9 FF
+        self.assertEqual(encoded[4], 0x64, "ö in 'Talhöhle' must encode to 0x64 (DE slot)")
+        # Sanity: without skip_aliases, ö folds to o (0xE3)
+        encoded_fr = TextEncoder.encode_pokemon('Talhöhle')
+        self.assertEqual(encoded_fr[4], 0xE3)
+
+    def test_french_accents_unaffected_by_skip_aliases(self):
+        """French accented chars (à ç è etc.) are unaffected by DE skip_aliases."""
+        fr_chars = {'à': 0x16, 'ç': 0x19, 'è': 0x1A, 'é': 0x1B, 'ê': 0x1C}
+        for char, byte in fr_chars.items():
+            encoded = TextEncoder.encode_pokemon(char, skip_aliases=GERMAN_UMLAUT_CHARS)
+            self.assertEqual(
+                encoded[0], byte,
+                msg=f"FR accent {char!r} should be unaffected by DE skip_aliases",
+            )
+
+    def test_decode_german_umlaut_slots(self):
+        """Decoder correctly maps bytes 0x60-0x65 back to Ä Ö Ü ä ö ü."""
+        cases = [
+            (0x60, 'Ä'), (0x61, 'Ö'), (0x62, 'Ü'),
+            (0x63, 'ä'), (0x64, 'ö'), (0x65, 'ü'),
+        ]
+        for byte, char in cases:
+            decoded = TextDecoder.decode_pokemon(bytes([byte, 0xFF]))
+            self.assertEqual(decoded, char, msg=f"0x{byte:02X} should decode to {char!r}")
 
 
 if __name__ == '__main__':

@@ -60,7 +60,7 @@ from src.core.dialogue_linewrap import (
     rewrap_multiline,
 )
 from src.core.fixed_tables import in_fixed_table
-from src.core.text_codec import TextDecoder
+from src.core.text_codec import TextDecoder, GERMAN_UMLAUT_CHARS
 from src.core.text_reinserter import SmartReinserter
 from src.extractors.pointer_text_extractor import PointerTextExtractor
 
@@ -181,6 +181,17 @@ class TranslatedROMBuilder:
         if self._pointer_proof_data is None:
             self._pointer_proof_data = self.config.pointer_proof_rom.read_bytes()
         return self._pointer_proof_data
+
+    def _skip_encode_aliases(self) -> frozenset:
+        """Return the set of alias source-chars to bypass for this language.
+
+        German (lang='german') has real umlaut glyphs at POKEMON_TABLE slots
+        0x60-0x65 — encoding must NOT fold ä/ö/ü/Ä/Ö/Ü to ASCII first.
+        Every other language falls through to the default ASCII fallback.
+        """
+        if self.config.language == 'german':
+            return GERMAN_UMLAUT_CHARS
+        return frozenset()
 
     CONTROL_TOKEN_RE = re.compile(r'<0x([0-9A-Fa-f]{2})>')
     COLOR_MARKER_RE = re.compile(r'\{COLOR\}([A-Za-zÀ-ÿ])')
@@ -1192,6 +1203,7 @@ class TranslatedROMBuilder:
             allow_relocate=self.config.allow_relocate,
             allow_fallback=self.config.allow_fallback,
             pointer_proof_rom=self._pointer_proof_bytes(),
+            skip_encode_aliases=self._skip_encode_aliases(),
         )
 
         for i, translation in enumerate(translations, start=1):
@@ -1249,6 +1261,7 @@ class TranslatedROMBuilder:
             allow_relocate=self.config.allow_relocate,
             allow_fallback=self.config.allow_fallback,
             pointer_proof_rom=self._pointer_proof_bytes(),
+            skip_encode_aliases=self._skip_encode_aliases(),
         )
 
         for i, translation in enumerate(translations, start=1):
@@ -1308,6 +1321,7 @@ class TranslatedROMBuilder:
             allow_relocate=self.config.allow_relocate,
             allow_fallback=self.config.allow_fallback,
             pointer_proof_rom=self._pointer_proof_bytes(),
+            skip_encode_aliases=self._skip_encode_aliases(),
         )
 
         for i, translation in enumerate(translations, start=1):
