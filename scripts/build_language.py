@@ -48,6 +48,17 @@ APPLY_COMBINED_SCRIPT = REPO_ROOT / "scripts/apply_combined_fr.py"
 _PATCH_FONT_FR = REPO_ROOT / "scripts/patch_font_fr.py"
 INLINE_SCRIPT = REPO_ROOT / "scripts/apply_inline_overrides_fr.py"
 
+# Anti-freeze / anti-corruption patches (language-agnostic mechanics).
+REPAIR_LZ77_SCRIPT = REPO_ROOT / "scripts/repair_stable_lz77_blocks.py"
+REPAIR_LOCALIZED_LZ77_SCRIPT = REPO_ROOT / "scripts/repair_localized_lz77_blocks.py"
+REPOINT_STALE_SCRIPT = REPO_ROOT / "scripts/repoint_stale_text_pointers.py"
+PATCH_RITUAL_SCRIPT = REPO_ROOT / "scripts/patch_legendary_ritual_fr.py"
+
+# Text patches that can be parameterised with the language's combined file.
+PATCH_STATUS_ABBREVS_SCRIPT = REPO_ROOT / "scripts/patch_status_abbrevs_fr.py"
+PATCH_TM_ITEM_DESC_SCRIPT = REPO_ROOT / "scripts/patch_tm_item_descriptions_fr.py"
+PATCH_MOVE_DESC_SCRIPT = REPO_ROOT / "scripts/patch_move_descriptions_fr.py"
+
 
 def run(cmd: list, *, cwd: Path = REPO_ROOT) -> None:
     printable = " ".join(str(part) for part in cmd)
@@ -146,11 +157,18 @@ def _font_script_for(code: str) -> Path:
     return lang_script if lang_script.exists() else _PATCH_FONT_FR
 
 
-def apply_patches(config, out_rom: Path) -> None:
+def apply_patches(config, out_rom: Path, translation_json: Path | None = None) -> None:
+    """Run every post-build patch step declared in the language descriptor.
+
+    ``translation_json`` is required for the ``repoint_stale`` and
+    ``move_descriptions`` steps; those steps are silently skipped when it is
+    not provided (e.g. when called from tests without a full build).
+    """
     combined = config.combined_path(REPO_ROOT)
     for step in config.patches:
         if step == "font":
             run([PYTHON, _font_script_for(config.code), "--rom", out_rom])
+
         elif step == "inline":
             run([
                 PYTHON, INLINE_SCRIPT,
@@ -159,6 +177,74 @@ def apply_patches(config, out_rom: Path) -> None:
                 "--combined", combined,
                 "--reference-texts", SPANISH_EXTRACT,
             ])
+
+        # ── Anti-freeze / anti-corruption mechanics (language-agnostic) ──────
+
+        elif step == "repair_lz77":
+            run([
+                PYTHON, REPAIR_LZ77_SCRIPT,
+                "--target", out_rom,
+                "--english", ENGLISH_ROM,
+                "--spanish", SPANISH_ROM,
+            ])
+
+        elif step == "repair_localized_lz77":
+            run([
+                PYTHON, REPAIR_LOCALIZED_LZ77_SCRIPT,
+                "--target", out_rom,
+                "--english", ENGLISH_ROM,
+                "--spanish", SPANISH_ROM,
+                "--require-pointer",
+            ])
+
+        elif step == "repoint_stale":
+            if translation_json is None:
+                print("⚠ skipping repoint_stale: translation_json not available")
+            else:
+                run([
+                    PYTHON, REPOINT_STALE_SCRIPT,
+                    "--target", out_rom,
+                    "--translations", translation_json,
+                    "--source", ENGLISH_ROM,
+                ])
+
+        elif step == "legendary_ritual":
+            run([
+                PYTHON, PATCH_RITUAL_SCRIPT,
+                "--rom", out_rom,
+                "--source", ENGLISH_ROM,
+            ])
+
+        # ── Text patches parameterised from the language descriptor ──────────
+
+        elif step == "status_abbrevs":
+            run([
+                PYTHON, PATCH_STATUS_ABBREVS_SCRIPT,
+                "--rom", out_rom,
+                "--lang-code", config.code,
+            ])
+
+        elif step == "tm_item_descriptions":
+            cmd = [
+                PYTHON, PATCH_TM_ITEM_DESC_SCRIPT,
+                "--rom", out_rom,
+                "--combined", combined,
+            ]
+            if SPANISH_ROM.exists():
+                cmd += ["--reference-rom", SPANISH_ROM]
+            run(cmd)
+
+        elif step == "move_descriptions":
+            if translation_json is None:
+                print("⚠ skipping move_descriptions: translation_json not available")
+            else:
+                run([
+                    PYTHON, PATCH_MOVE_DESC_SCRIPT,
+                    "--rom", out_rom,
+                    "--source", ENGLISH_ROM,
+                    "--translations", translation_json,
+                ])
+
         else:
             print(f"⚠ skipping unknown/unsupported generic patch step: {step!r}")
 
@@ -190,7 +276,7 @@ def main() -> int:
     ensure_extractions()
     translation_json = generate_translation_json(config)
     out_rom = build_rom(config, translation_json)
-    apply_patches(config, out_rom)
+    apply_patches(config, out_rom, translation_json)
 
     print("\n" + "=" * 70)
     print(f"✓ {config.name} ROM built: {out_rom.relative_to(REPO_ROOT)}")

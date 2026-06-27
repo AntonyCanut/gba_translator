@@ -16,6 +16,7 @@ from scripts.patch_status_abbrevs_fr import (
     apply_to_rom,
     _encode,
     _decode_at,
+    _patches_from_registry,
 )
 
 EN_ROM = Path(__file__).parent.parent / "input" / "roms" / "englishrom.gba"
@@ -139,6 +140,71 @@ class TestBuiltFrRom(unittest.TestCase):
         for idx, fr in EXPECTED_FR.items():
             self.assertEqual(_decode_index(self.rom, idx), fr)
         self.assertEqual(_decode_index(self.rom, 2), "PAR")
+
+
+class TestPatchesFromRegistry(unittest.TestCase):
+    """Unit-test _patches_from_registry() with synthetic abbrev dicts."""
+
+    def test_italian_abbrevs_produce_correct_patches(self):
+        it_abbrevs = {
+            "poison": "PSN",     # same as EN → skipped
+            "burn": "SCT",
+            "freeze": "CON",
+            "paralysis": "PAR",  # same as EN → skipped
+            "sleep": "SON",
+            "faint": "KO",       # not in the table → ignored
+        }
+        patches = _patches_from_registry(it_abbrevs)
+        targets = {e["index"]: e["fr"] for e in patches}
+        # poison (PSN==PSN) and paralysis (PAR==PAR) must be absent
+        self.assertNotIn(1, targets)  # poison
+        self.assertNotIn(2, targets)  # paralysis
+        # actual changes
+        self.assertEqual(targets[3], "SCT")  # burn
+        self.assertEqual(targets[4], "CON")  # freeze
+        self.assertEqual(targets[0], "SON")  # sleep
+
+    def test_german_abbrevs_produce_correct_patches(self):
+        de_abbrevs = {
+            "poison": "GIF",
+            "burn": "VBR",
+            "freeze": "GEF",
+            "paralysis": "PAR",  # same as EN → skipped
+            "sleep": "SCH",
+            "faint": "KO",
+        }
+        patches = _patches_from_registry(de_abbrevs)
+        targets = {e["index"]: e["fr"] for e in patches}
+        self.assertNotIn(2, targets)  # PAR == PAR
+        self.assertEqual(targets[0], "SCH")  # sleep
+        self.assertEqual(targets[1], "GIF")  # poison
+        self.assertEqual(targets[3], "VBR")  # burn
+        self.assertEqual(targets[4], "GEF")  # freeze
+
+    def test_prior_set_is_empty_for_registry_derived_patches(self):
+        patches = _patches_from_registry({"sleep": "SON"})
+        self.assertEqual(patches[0]["prior"], set())
+
+    def test_all_same_as_en_returns_empty(self):
+        all_same = {"sleep": "SLP", "poison": "PSN", "paralysis": "PAR",
+                    "burn": "BRN", "freeze": "FRZ"}
+        self.assertEqual(_patches_from_registry(all_same), [])
+
+    def test_apply_to_rom_uses_registry_patches(self):
+        rom, _ = _build_synthetic_rom(
+            {0: "SLP", 1: "PSN", 2: "PAR", 3: "BRN", 4: "FRZ"}
+        )
+        it_patches = _patches_from_registry({
+            "sleep": "SON", "poison": "PSN", "paralysis": "PAR",
+            "burn": "SCT", "freeze": "CON", "faint": "KO",
+        })
+        changed = apply_to_rom(rom, patches=it_patches)
+        self.assertEqual(changed, 3)  # sleep, burn, freeze changed; PSN/PAR skipped
+        self.assertEqual(_decode_index(rom, 0), "SON")
+        self.assertEqual(_decode_index(rom, 1), "PSN")  # unchanged
+        self.assertEqual(_decode_index(rom, 2), "PAR")  # unchanged
+        self.assertEqual(_decode_index(rom, 3), "SCT")
+        self.assertEqual(_decode_index(rom, 4), "CON")
 
 
 if __name__ == "__main__":

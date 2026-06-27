@@ -49,6 +49,33 @@ def test_new_languages_are_generic_and_in_progress(registry, code):
     assert not cfg.is_dedicated
 
 
+MECHANICAL_PATCHES = {
+    "repair_lz77",
+    "repair_localized_lz77",
+    "repoint_stale",
+    "legendary_ritual",
+}
+
+
+@pytest.mark.parametrize("code", ["it", "de"])
+def test_generic_languages_include_mechanical_patches(registry, code):
+    """IT and DE must declare the anti-freeze mechanical patch steps."""
+    cfg = registry.get(code)
+    missing = MECHANICAL_PATCHES - set(cfg.patches)
+    assert not missing, (
+        f"{code} descriptor is missing mechanical patch steps: {sorted(missing)}"
+    )
+
+
+@pytest.mark.parametrize("code", ["it", "de"])
+def test_generic_languages_include_status_abbrevs_patch(registry, code):
+    """IT and DE must declare status_abbrevs so abbreviations are written to ROM."""
+    cfg = registry.get(code)
+    assert "status_abbrevs" in cfg.patches, (
+        f"{code} descriptor is missing the status_abbrevs patch step"
+    )
+
+
 def test_every_buildable_language_has_required_metadata(registry):
     required_status = {"poison", "burn", "freeze", "paralysis", "sleep", "faint"}
     for cfg in registry.buildable():

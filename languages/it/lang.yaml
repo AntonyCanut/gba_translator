@@ -30,10 +30,24 @@ status_abbrev:
   sleep: SON
   faint: KO
 
-# Generic post-build patches applied by scripts/build_language.py.
-# Only language-agnostic mechanics are listed; richer FR-only passes
-# (pokédex rewrap, mission boxes, …) are added per language as their data
-# matures.
+# Post-build patches applied by scripts/build_language.py.
+#
+# Anti-freeze / anti-corruption (language-agnostic mechanics — always applied):
+#   repair_lz77            restore stable EN=ES LZ77 UI blocks corrupted by the builder
+#   repair_localized_lz77  copy localized (EN≠ES) LZ77 blocks from the Spanish ROM
+#   repoint_stale          re-target text pointers reverted by the LZ77 repair passes
+#   legendary_ritual       restore Ho-Oh/Lugia cutscene setflag chain clobbered by repointer
+#
+# Language-aware (data already in status_abbrev above):
+#   status_abbrevs         write IT status abbreviations (SCT/CON/SON/…) into ROM
+#
+# Richer passes (pokédex rewrap, mission boxes, move descriptions, …) will be
+# added here as Italian translations for those subsystems mature.
 patches:
   - font
   - inline
+  - repair_lz77
+  - repair_localized_lz77
+  - repoint_stale
+  - legendary_ritual
+  - status_abbrevs
