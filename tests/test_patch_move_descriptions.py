@@ -148,7 +148,9 @@ SOURCE_ROM = os.path.join("input", "roms", "englishrom.gba")
 def _latest_translation():
     import glob
 
-    files = sorted(glob.glob(os.path.join("output", "translation", "*_translation_ready.json")))
+    # Only dated FR JSON files (names start with a digit). Excludes it_/de_
+    # prefixed files so the test never applies Italian/German text to the FR ROM.
+    files = sorted(glob.glob(os.path.join("output", "translation", "[0-9]*_translation_ready.json")))
     return files[-1] if files else None
 
 
