@@ -82,6 +82,7 @@ _CONTROL_TOKEN_MAP = {
     "[buffer3]": "<0xFD><0x04>",
     "[rival]": "<0xFD><0x06>",
     "{player}": "<0xFD><0x01>",
+    "[player]": "<0xFD><0x01>",  # square-bracket variant used by JSON v3+ exports
     # Flow control
     "[pause]": "<0xFC><0x09>",
     # Sound macros (Classic Leaders Gauntlet completion string 0x1ee09a8)
@@ -182,6 +183,12 @@ _BACKSLASH_HEX_RE = re.compile(
 # after ``0600`` stays, becoming ``<0xFC><0x06><0x00>1``).
 _CC_ESCAPE_RE = re.compile(r"\\CC((?:[0-9A-Fa-f]{2})+)", re.IGNORECASE)
 
+# General ``\\NN`` fallback — any double-backslash + 2 hex digits not covered
+# by the specific _BACKSLASH_HEX_MAP entries above (e.g. ``\\00``, ``\\0F``–
+# ``\\3A`` that appear in JSON v3+ battle-message templates) → ``<0xFD><0xNN>``.
+# Must run AFTER the specific map so existing entries are not double-converted.
+_BACKSLASH_HEX_GENERAL_RE = re.compile(r"\\\\([0-9A-Fa-f]{2})")
+
 
 def _decode_cc_escape(match: "re.Match[str]") -> str:
     """Decode a ``\\CCxxyyzz`` sequence into ``<0xFC><0xXX><0xYY><0xZZ>``."""
@@ -195,12 +202,16 @@ def _decode_cc_escape(match: "re.Match[str]") -> str:
 def normalize_backslash_escapes(text: str) -> str:
     r"""Convert backslash-hex escape sequences to raw CFRU ``<0xNN>`` form.
 
-    Three escape conventions used by the Italian dump are handled:
+    Four escape conventions used by the Italian dump are handled:
 
     * ``\CCxxyy`` — FC control-code prefix (SINGLE backslash) followed by
       argument bytes.  ``\CC0820`` → ``<0xFC><0x08><0x20>``.
-    * ``\\07``–``\\0C`` — FD string-buffer placeholders (DOUBLE backslash in
-      the file).  ``\\07`` → ``<0xFD><0x07>`` (buffer 7, e.g. player age).
+    * ``\\07``–``\\0C`` — FD string-buffer placeholders (DOUBLE backslash,
+      pre-mapped range).  ``\\07`` → ``<0xFD><0x07>`` (buffer 7).
+    * ``\\NN`` (general) — any remaining double-backslash + 2 hex digits
+      (e.g. ``\\00``, ``\\0F``–``\\3A`` in battle-message templates) →
+      ``<0xFD><0xNN>``.  Must run after the specific map (Step 2) so
+      pre-mapped entries are not double-converted.
     * ``\ad`` / ``\au`` / ``\al`` / ``\ar`` / ``\qo`` / ``\qc`` — map
       directional glyphs and curly-quote delimiters (SINGLE backslash).
 
@@ -211,12 +222,16 @@ def normalize_backslash_escapes(text: str) -> str:
     text = _BACKSLASH_LITERAL_RE.sub(
         lambda m: _BACKSLASH_LITERAL_MAP[m.group(0)], text
     )
-    # Step 2: double-backslash FD buffer tokens (\\07 … \\0C)
+    # Step 2: pre-mapped double-backslash FD buffer tokens (\\07 … \\0C)
     text = _BACKSLASH_HEX_RE.sub(
         lambda m: _BACKSLASH_HEX_MAP[m.group(0)], text
     )
     # Step 3: \CC<hex_pairs> → <0xFC>…  (single backslash)
     text = _CC_ESCAPE_RE.sub(_decode_cc_escape, text)
+    # Step 4: general \\NN → <0xFD><0xNN> (any remaining double-backslash hex)
+    text = _BACKSLASH_HEX_GENERAL_RE.sub(
+        lambda m: f"<0xFD><0x{m.group(1).upper()}>", text
+    )
     return text
 
 
@@ -251,19 +266,35 @@ def parse_json(json_file: Path) -> dict[str, str]:
     for entry in data["entries"]:
         original = entry.get("original", "")
         translated = entry.get("translated", "")
+        # ``translation_source`` is the English text with semantic tokens resolved
+        # (available in v3+ exports); used as a quote-free comparison baseline.
+        translation_source = entry.get("translation_source", "")
         offset = entry.get("address", "").lower()
 
         if not offset or not translated:
             continue
 
+        # JSON v3+ wraps the ``original`` field in literal quotes ("…"); strip them
+        # before comparing so unchanged entries are still detected.
+        original_unquoted = original.strip('"')
+
         # Filter 1: Skip unchanged entries (identical to English)
-        if translated == original or translated.strip() == original.strip():
+        if (
+            translated == original
+            or translated.strip() == original.strip()
+            or translated == original_unquoted
+            or (translation_source and translated == translation_source)
+        ):
             skipped["unchanged"] += 1
             continue
 
-        # Filter 2: Skip corrupted/binary script entries (heuristic: looks like garbage)
-        # These typically have random chars, control codes mixed with text, [kun], etc.
-        if entry.get("category") == "scripts" and translated == original:
+        # Filter 2: Skip entries with untranslatable / corrupted content.
+        # ``[kun]`` is a Japanese honorific that only appears in un-localised
+        # entries — in scripts it is corruption noise; in battle_messages it is
+        # an unconverted Pokémon-name placeholder that would render as ``?kun?``
+        # in-game.  Drop these across ALL categories; the English text is better
+        # than broken Italian.
+        if "[kun]" in translated:
             skipped["corrupted"] += 1
             continue
 
