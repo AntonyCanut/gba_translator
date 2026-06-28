@@ -65,11 +65,12 @@ POINTER_CELLS = {
     0x1F0F9FA: 0x1E6FC26,
 }
 
-# Italian texts.  ``{player}`` is expanded to the GBA player-name runtime buffer
-# ``<0xFD><0x01>`` before encoding.  ``\n`` → 0xFE (line break), ``\l`` → 0xFA
-# (scroll), ``\p`` → 0xFB (page break).
+# Italian texts — kept byte-identical to combined_it.txt (the drift guard below
+# enforces it).  The player-name runtime buffer is the raw control sequence
+# ``<0xFD><0x01>`` (combined_it.txt normalizes ``{player}`` to it at import).
+# ``\n`` → 0xFE (line break), ``\l`` → 0xFA (scroll), ``\p`` → 0xFB (page break).
 IT_TEXTS: dict[int, str] = {
-    0x1F0F89C: "Il tuo nome è {player}?",
+    0x1F0F89C: "Il tuo nome è <0xFD><0x01>?",
     0x1F0F9DD: "Ti dimentichi di salvare spesso?",
     0x1F0F9FA: (
         "Ti piacciono gli enigmi\\nimpegnativi? Questo include enigmi"

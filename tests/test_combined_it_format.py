@@ -132,3 +132,87 @@ def test_normalizer_is_idempotent_and_lossless():
         lines.pop()
     _, joined = norm.normalize_lines(lines)
     assert joined == 0, "combined_it.txt still contains multi-line entries"
+
+
+# ── Control-token (colour / buffer / name) normalization ────────────────────
+
+# Bracket/brace control tokens from the Italian dump. The encoder has no glyph
+# for ``[`` / ``]`` / ``{`` / ``}``, so any survivor renders as ``?green?`` etc.
+CONTROL_TOKEN_RE = re.compile(
+    r"\[(?:green|red|blue|black|lightgreen|orange|darknavyblue"
+    r"|buffer[123]|rival|pause)\]|\{player\}"
+)
+
+
+def test_combined_it_has_no_bracket_control_tokens():
+    """No ``[green]`` / ``[buffer1]`` / ``{player}`` tokens may survive.
+
+    These are colour codes (FC 01 NN), string buffers (FD NN) and name
+    placeholders the dump wrote in its own readable convention. Left untouched
+    the encoder spells them out as ``?green??buffer1??black?`` in-game (the
+    reported bug). They must be converted to raw ``<0xNN>`` control codes.
+    """
+    offenders = []
+    for lineno, raw in enumerate(COMBINED_IT.read_text(encoding="utf-8").splitlines(), 1):
+        if raw.lstrip().startswith("#"):
+            continue
+        text = raw.split(":", 1)[1] if ":" in raw else raw
+        for m in CONTROL_TOKEN_RE.finditer(text):
+            offenders.append((lineno, m.group(0)))
+    assert not offenders, (
+        f"{len(offenders)} literal control token(s) left in combined_it.txt; "
+        f"first few: {offenders[:8]}"
+    )
+
+
+def test_normalize_control_tokens_mappings():
+    """Each token maps to its exact CFRU control sequence (verified vs EN ROM)."""
+    gen = _load_module("scripts/process_italian_translations.py")
+    n = gen.normalize_control_tokens
+    # Colours → FC 01 NN
+    assert n("[green]") == "<0xFC><0x01><0x06>"
+    assert n("[red]") == "<0xFC><0x01><0x04>"
+    assert n("[blue]") == "<0xFC><0x01><0x08>"
+    assert n("[black]") == "<0xFC><0x01><0x02>"
+    assert n("[lightgreen]") == "<0xFC><0x01><0x07>"
+    assert n("[orange]") == "<0xFC><0x01><0x05>"
+    assert n("[darknavyblue]") == "<0xFC><0x01><0x0F>"
+    # Buffers / names → FD NN
+    assert n("[buffer1]") == "<0xFD><0x02>"
+    assert n("[buffer2]") == "<0xFD><0x03>"
+    assert n("[buffer3]") == "<0xFD><0x04>"
+    assert n("[rival]") == "<0xFD><0x06>"
+    assert n("{player}") == "<0xFD><0x01>"
+    # Flow control
+    assert n("[pause]") == "<0xFC><0x09>"
+
+
+def test_normalize_control_tokens_in_context():
+    """The exact difficulty string from the bug report converts byte-for-byte.
+
+    English raw at 0x1F10323 is ``…su <FC0106><FD02><FC0102>.`` (green buffer1
+    black) — the Italian must produce the identical control bytes.
+    """
+    gen = _load_module("scripts/process_italian_translations.py")
+    out = gen.normalize_control_tokens("impostata su [green][buffer1][black].")
+    assert out == "impostata su <0xFC><0x01><0x06><0xFD><0x02><0xFC><0x01><0x02>."
+    # A coloured word keeps its letters intact (no glyph eaten).
+    assert gen.normalize_control_tokens("di [green]Pozioni[blue].") == (
+        "di <0xFC><0x01><0x06>Pozioni<0xFC><0x01><0x08>."
+    )
+
+
+def test_normalize_control_tokens_leaves_plain_brackets():
+    """Square brackets that are not known tokens must be left untouched."""
+    gen = _load_module("scripts/process_italian_translations.py")
+    assert gen.normalize_control_tokens("vedi [nota] e {altro}") == "vedi [nota] e {altro}"
+    # Idempotent on already-raw text.
+    assert gen.normalize_control_tokens("<0xFC><0x01><0x06>") == "<0xFC><0x01><0x06>"
+
+
+def test_escape_text_applies_control_normalization():
+    """escape_text normalizes control tokens as part of import."""
+    gen = _load_module("scripts/process_italian_translations.py")
+    out = gen.escape_text("Ciao {player}!\nUsa [green]Pozioni[black].")
+    assert "{player}" not in out and "[green]" not in out
+    assert out == "Ciao <0xFD><0x01>!\\nUsa <0xFC><0x01><0x06>Pozioni<0xFC><0x01><0x02>."
