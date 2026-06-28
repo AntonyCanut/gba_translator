@@ -84,6 +84,11 @@ _CONTROL_TOKEN_MAP = {
     "{player}": "<0xFD><0x01>",
     # Flow control
     "[pause]": "<0xFC><0x09>",
+    # Sound macros (Classic Leaders Gauntlet completion string 0x1ee09a8)
+    # Verified byte-for-byte from EN ROM: FC 17 / FC 0A / FC 18
+    "[pause_music]": "<0xFC><0x17>",
+    "[wait_sound]": "<0xFC><0x0A>",
+    "[resume_music]": "<0xFC><0x18>",
 }
 
 # Match the exact known tokens only — never a stray ``[`` or ``{`` in real text.
@@ -96,11 +101,123 @@ def normalize_control_tokens(text: str) -> str:
     """Convert Italian-dump control tokens into raw CFRU ``<0xNN>`` sequences.
 
     Colours (``[green]`` …), string buffers (``[buffer1]`` …), name
-    placeholders (``{player}``, ``[rival]``) and ``[pause]`` are replaced with
-    the exact control bytes the encoder emits verbatim. Any other text — including
-    legitimate square brackets — is left untouched.
+    placeholders (``{player}``, ``[rival]``), ``[pause]``, and sound-control
+    macros (``[pause_music]``, ``[wait_sound]``, ``[resume_music]``) are
+    replaced with the exact control bytes the encoder emits verbatim. Any other
+    text — including legitimate square brackets — is left untouched.
     """
     return _CONTROL_TOKEN_RE.sub(lambda m: _CONTROL_TOKEN_MAP[m.group(0)], text)
+
+
+# ---------------------------------------------------------------------------
+# Backslash-hex escape normalization
+#
+# The Italian dump uses two backslash-based conventions that the build pipeline
+# does not understand.  Left untouched, the encoder sees a raw ``\`` (no glyph
+# → ``?``) followed by literal hex digits and renders gibberish in-game.
+#
+# 1. ``\CCxxyyzz…`` — FC control-code sequence.
+#    ``\CC`` is a fixed prefix that stands for byte 0xFC; the following hex
+#    digits (always an even count) are the argument bytes, one per two-char pair.
+#    Examples verified against the EN ROM:
+#      ``\CC0820`` → FC 08 20 → ``<0xFC><0x08><0x20>``  (timed pause 32 frames)
+#      ``\CC0B0C01`` → FC 0B 0C 01 → ``<0xFC><0x0B><0x0C><0x01>``  (play SE)
+#    The regex is greedy over complete byte pairs; a trailing odd hex digit is
+#    left untouched so that ``\CC06001,000`` → ``<0xFC><0x06><0x00>1,000``.
+#
+# 2. ``\\XX`` or ``\XX`` — raw FD buffer code or navigation glyph.
+#    IMPORTANT: the file uses DIFFERENT backslash counts per token family:
+#      • FD buffer placeholders (FD 07 … FD 0C) appear as DOUBLE-backslash
+#        ``\\07`` … ``\\0C`` in the file (bytes 5C 5C NN NN). This is how the
+#        original import script stored them when it processed the JSON.
+#      • Navigation tokens ``\au``, ``\al``, ``\ar``, ``\qo``, ``\qc``, ``\ad``
+#        appear as SINGLE-backslash (byte 5C), e.g. ``\au`` = 5C 61 75.
+#    FD buffer IDs confirmed by byte-for-byte comparison with the EN ROM:
+#      ``\\07`` → FD 07 → ``<0xFD><0x07>``   (buffer 7, e.g. player age)
+#      ``\\08`` → FD 08 → ``<0xFD><0x08>``   (buffer 8, Frontier count)
+#    Navigation arrow / quote bytes verified against EN ROM path descriptions:
+#      ``\au`` → 0x79 (↑)   ``\ad`` → 0x7A (↓)
+#      ``\al`` → 0x7B (←)   ``\ar`` → 0x7C (→)
+#      ``\qo`` → 0xB1 (")   ``\qc`` → 0xB2 (")
+#
+# All mappings verified byte-for-byte against the EN ROM.
+
+# Literal tokens with non-hex characters (or single-backslash navigation tokens
+# that must be processed FIRST so they are not partially consumed later).
+# All use a SINGLE backslash prefix in the file.
+_BACKSLASH_LITERAL_MAP: dict[str, str] = {
+    r"\au": "<0x79>",  # up arrow ↑ (map/route descriptions)
+    r"\al": "<0x7B>",  # left arrow ←
+    r"\ar": "<0x7C>",  # right arrow →
+    r"\qo": "<0xB1>",  # opening curly quote "
+    r"\qc": "<0xB2>",  # closing curly quote "
+    r"\ad": "<0x7A>",  # down arrow ↓ (single backslash, confirmed by ROM scan)
+}
+_BACKSLASH_LITERAL_RE = re.compile(
+    "|".join(re.escape(tok) for tok in _BACKSLASH_LITERAL_MAP)
+)
+
+# FD buffer-ID tokens — stored with a DOUBLE backslash in the file (``\\07`` etc.)
+# because the original import script left them un-decoded and Python's write path
+# preserved the raw ``\\`` escape.  Each key is a two-char raw prefix (``r"\\07"``
+# = Python string ``\\07`` = bytes 5C 5C 30 37), matched as TWO literal backslashes.
+_BACKSLASH_HEX_MAP: dict[str, str] = {
+    r"\\07": "<0xFD><0x07>",
+    r"\\08": "<0xFD><0x08>",
+    r"\\09": "<0xFD><0x09>",
+    r"\\0A": "<0xFD><0x0A>",
+    r"\\0a": "<0xFD><0x0A>",
+    r"\\0B": "<0xFD><0x0B>",
+    r"\\0b": "<0xFD><0x0B>",
+    r"\\0C": "<0xFD><0x0C>",
+    r"\\0c": "<0xFD><0x0C>",
+}
+_BACKSLASH_HEX_RE = re.compile(
+    "|".join(re.escape(tok) for tok in _BACKSLASH_HEX_MAP)
+)
+
+# ``\CC<hex_pairs>`` → ``<0xFC>`` + one ``<0xNN>`` per byte pair.
+# The regex matches only complete byte pairs (even hex-digit count) so a
+# trailing odd digit is left as plain text (e.g. ``\CC06001`` → the ``1``
+# after ``0600`` stays, becoming ``<0xFC><0x06><0x00>1``).
+_CC_ESCAPE_RE = re.compile(r"\\CC((?:[0-9A-Fa-f]{2})+)", re.IGNORECASE)
+
+
+def _decode_cc_escape(match: "re.Match[str]") -> str:
+    """Decode a ``\\CCxxyyzz`` sequence into ``<0xFC><0xXX><0xYY><0xZZ>``."""
+    hex_str = match.group(1)
+    parts = ["<0xFC>"]
+    for i in range(0, len(hex_str), 2):
+        parts.append(f"<0x{hex_str[i:i+2].upper()}>")
+    return "".join(parts)
+
+
+def normalize_backslash_escapes(text: str) -> str:
+    r"""Convert backslash-hex escape sequences to raw CFRU ``<0xNN>`` form.
+
+    Three escape conventions used by the Italian dump are handled:
+
+    * ``\CCxxyy`` — FC control-code prefix (SINGLE backslash) followed by
+      argument bytes.  ``\CC0820`` → ``<0xFC><0x08><0x20>``.
+    * ``\\07``–``\\0C`` — FD string-buffer placeholders (DOUBLE backslash in
+      the file).  ``\\07`` → ``<0xFD><0x07>`` (buffer 7, e.g. player age).
+    * ``\ad`` / ``\au`` / ``\al`` / ``\ar`` / ``\qo`` / ``\qc`` — map
+      directional glyphs and curly-quote delimiters (SINGLE backslash).
+
+    The standard line-break escapes ``\n``, ``\l``, ``\p`` are not affected.
+    Already-converted ``<0xNN>`` sequences are left untouched (idempotent).
+    """
+    # Step 1: single-backslash literal tokens (navigation arrows, quotes)
+    text = _BACKSLASH_LITERAL_RE.sub(
+        lambda m: _BACKSLASH_LITERAL_MAP[m.group(0)], text
+    )
+    # Step 2: double-backslash FD buffer tokens (\\07 … \\0C)
+    text = _BACKSLASH_HEX_RE.sub(
+        lambda m: _BACKSLASH_HEX_MAP[m.group(0)], text
+    )
+    # Step 3: \CC<hex_pairs> → <0xFC>…  (single backslash)
+    text = _CC_ESCAPE_RE.sub(_decode_cc_escape, text)
+    return text
 
 
 def decode_hex_tokens(text: str) -> str:
@@ -169,6 +286,7 @@ def escape_text(text: str) -> str:
     """
     text = decode_hex_tokens(text)
     text = normalize_control_tokens(text)
+    text = normalize_backslash_escapes(text)
     return text.replace("\r\n", "\n").replace("\r", "\n").replace("\n", "\\n")
 
 
@@ -217,11 +335,62 @@ def diff_translations(old: dict[str, str], new: dict[str, str]) -> dict[str, str
     return changes
 
 
+def normalize_combined_file(path: Path) -> int:
+    """Re-normalize all backslash-hex and control tokens in an existing combined file.
+
+    Reads every entry, applies ``decode_hex_tokens``, ``normalize_control_tokens``,
+    and ``normalize_backslash_escapes`` in place, then rewrites the file.
+    The header comments are preserved; sort order is unchanged.
+    Returns the number of entries that were modified.
+    """
+    header_lines: list[str] = []
+    entry_lines: list[str] = []
+    with open(path, "r", encoding="utf-8") as fh:
+        for raw in fh:
+            stripped = raw.rstrip("\n")
+            if stripped.lstrip().startswith("#") or not stripped.strip():
+                header_lines.append(stripped)
+            else:
+                entry_lines.append(stripped)
+
+    changed = 0
+    out_lines: list[str] = []
+    for line in entry_lines:
+        if ":" not in line:
+            out_lines.append(line)
+            continue
+        offset_part, text_part = line.split(":", 1)
+        text = text_part.lstrip(" ")
+        norm = decode_hex_tokens(text)
+        norm = normalize_control_tokens(norm)
+        norm = normalize_backslash_escapes(norm)
+        if norm != text:
+            changed += 1
+        out_lines.append(f"{offset_part}: {norm}")
+
+    with open(path, "w", encoding="utf-8") as fh:
+        fh.write("\n".join(header_lines) + "\n")
+        fh.write("\n".join(out_lines) + "\n")
+
+    return changed
+
+
 def main():
     parser = argparse.ArgumentParser(
         description="Process Italian translations JSON → combined_it.txt with smart diffing"
     )
-    parser.add_argument("json_file", type=Path, help="Italian translations JSON file")
+    parser.add_argument(
+        "json_file",
+        nargs="?",
+        type=Path,
+        help="Italian translations JSON file (omit when using --normalize-existing)"
+    )
+    parser.add_argument(
+        "--normalize-existing",
+        metavar="FILE",
+        type=Path,
+        help="Re-normalize all backslash-hex tokens in an existing combined file (no JSON needed)"
+    )
     parser.add_argument(
         "--output",
         type=Path,
@@ -240,6 +409,19 @@ def main():
     )
 
     args = parser.parse_args()
+
+    if args.normalize_existing:
+        target = args.normalize_existing
+        if not target.exists():
+            print(f"❌ File not found: {target}", file=sys.stderr)
+            return 1
+        print(f"🔧 Normalizing backslash-hex tokens in {target}…")
+        n = normalize_combined_file(target)
+        print(f"✓ Done — {n} entr{'y' if n == 1 else 'ies'} updated.")
+        return 0
+
+    if not args.json_file:
+        parser.error("json_file is required unless --normalize-existing is used")
 
     # Parse JSON
     print(f"📖 Parsing {args.json_file}...")

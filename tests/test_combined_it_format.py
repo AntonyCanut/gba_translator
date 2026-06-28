@@ -216,3 +216,169 @@ def test_escape_text_applies_control_normalization():
     out = gen.escape_text("Ciao {player}!\nUsa [green]Pozioni[black].")
     assert "{player}" not in out and "[green]" not in out
     assert out == "Ciao <0xFD><0x01>!\\nUsa <0xFC><0x01><0x06>Pozioni<0xFC><0x01><0x02>."
+
+
+# ── Sound-macro normalization ─────────────────────────────────────────────────
+
+
+def test_sound_macros_in_control_token_map():
+    """[pause_music]/[wait_sound]/[resume_music] must map to verified FC bytes.
+
+    Verified byte-for-byte from EN ROM at 0x1ee09a8 (Classic Leaders Gauntlet):
+    the sequence after «Bravo!» is FC 17 / FC 0B 0C 01 / FC 0A / FC 18.
+    """
+    gen = _load_module("scripts/process_italian_translations.py")
+    n = gen.normalize_control_tokens
+    assert n("[pause_music]") == "<0xFC><0x17>"
+    assert n("[wait_sound]") == "<0xFC><0x0A>"
+    assert n("[resume_music]") == "<0xFC><0x18>"
+
+
+def test_gauntlet_string_converts_byte_for_byte():
+    """The Gauntlet completion string (0x1ee09a8) converts to exact ROM bytes.
+
+    EN ROM after «Bravo!»: FC 17 FC 0B 0C 01 FC 0A FC 18
+    IT dump: [pause_music]\\CC0B0C01[wait_sound][resume_music]
+    """
+    gen = _load_module("scripts/process_italian_translations.py")
+    fragment = "Bravo![pause_music]\\CC0B0C01[wait_sound][resume_music] Per il tuo"
+    # Apply the full escape_text pipeline (single backslash before CC)
+    out = gen.escape_text(fragment)
+    assert "[pause_music]" not in out
+    assert "[wait_sound]" not in out
+    assert "[resume_music]" not in out
+    assert "\\CC" not in out
+    assert out == (
+        "Bravo!"
+        "<0xFC><0x17>"
+        "<0xFC><0x0B><0x0C><0x01>"
+        "<0xFC><0x0A>"
+        "<0xFC><0x18>"
+        " Per il tuo"
+    )
+
+
+# ── Backslash-hex normalization ───────────────────────────────────────────────
+
+# Regex that must match ZERO times in the normalized file: any residual \CC or
+# \\XX (double-backslash + hex) that the pipeline cannot encode.
+_RESIDUAL_CC_RE = re.compile(r"\\CC[0-9A-Fa-f]")
+_RESIDUAL_DOUBLE_HEX_RE = re.compile(r"\\\\[0-9A-Fa-f]{2}")
+
+
+def test_combined_it_has_no_cc_escape_tokens():
+    r"""No ``\CC`` control-code escape sequences may survive in the file.
+
+    The dump used ``\CCxxyy`` as a shorthand for FC-prefixed control sequences.
+    Left untouched, the backslash renders as ``?CC0820?`` in-game.
+    The importer must expand them to ``<0xFC><0xXX><0xYY>`` raw form.
+    """
+    offenders = []
+    for lineno, raw in enumerate(COMBINED_IT.read_text(encoding="utf-8").splitlines(), 1):
+        if raw.lstrip().startswith("#"):
+            continue
+        text = raw.split(":", 1)[1] if ":" in raw else raw
+        if _RESIDUAL_CC_RE.search(text):
+            offenders.append((lineno, text[:60]))
+    assert not offenders, (
+        f"{len(offenders)} residual \\CC token(s) left in combined_it.txt; "
+        f"first few: {offenders[:5]}"
+    )
+
+
+def test_combined_it_has_no_double_backslash_hex_tokens():
+    r"""No ``\\07``–``\\0C`` double-backslash FD-buffer tokens may survive.
+
+    The dump wrote FD-buffer placeholders as ``\\07``…``\\0C`` (double backslash).
+    The encoder does not understand them; they render as garbage in-game.
+    """
+    offenders = []
+    for lineno, raw in enumerate(COMBINED_IT.read_text(encoding="utf-8").splitlines(), 1):
+        if raw.lstrip().startswith("#"):
+            continue
+        text = raw.split(":", 1)[1] if ":" in raw else raw
+        if _RESIDUAL_DOUBLE_HEX_RE.search(text):
+            offenders.append((lineno, text[:60]))
+    assert not offenders, (
+        f"{len(offenders)} residual double-backslash hex token(s) in combined_it.txt; "
+        f"first few: {offenders[:5]}"
+    )
+
+
+def test_normalize_backslash_cc_escapes():
+    r"""``\CC<hex_pairs>`` must expand to ``<0xFC>`` + per-pair bytes.
+
+    Verified against EN ROM:
+    - ``\CC0820`` → FC 08 20 (timed pause 32 frames)
+    - ``\CC0818`` → FC 08 18 (timed pause 24 frames)
+    - ``\CC0B0C01`` → FC 0B 0C 01 (play SE with song ID 0x0C01)
+    - ``\CC040D0E0F`` → FC 04 0D 0E 0F (4 argument bytes)
+    Trailing odd digit is NOT consumed: ``\CC06001,000`` → ``<0xFC><0x06><0x00>1,000``.
+    """
+    gen = _load_module("scripts/process_italian_translations.py")
+    n = gen.normalize_backslash_escapes
+    assert n("\\CC0820") == "<0xFC><0x08><0x20>"
+    assert n("\\CC0818") == "<0xFC><0x08><0x18>"
+    assert n("\\CC0B0C01") == "<0xFC><0x0B><0x0C><0x01>"
+    assert n("\\CC040D0E0F") == "<0xFC><0x04><0x0D><0x0E><0x0F>"
+    # Trailing odd digit is text, not part of the escape
+    assert n("\\CC06001,000") == "<0xFC><0x06><0x00>1,000"
+    # Embedded in sentence
+    assert n("parola.\\CC0820 Fine.") == "parola.<0xFC><0x08><0x20> Fine."
+    # Idempotent
+    assert n("<0xFC><0x08><0x20>") == "<0xFC><0x08><0x20>"
+
+
+def test_normalize_backslash_fd_buffer_tokens():
+    r"""Double-backslash ``\\07``–``\\0C`` must decode to ``<0xFD><0xNN>``.
+
+    These are FD string-buffer placeholders verified byte-for-byte from EN ROM:
+    - ``\\07`` → FD 07 (buffer 7: player age, item counts, …)
+    - ``\\08`` → FD 08 (buffer 8: Frontier example count)
+    - ``\\0C`` → FD 0C (buffer 12: Lucky Egg multiplier)
+    The double backslash is the file convention (the original import stored the
+    raw ``\\07`` from JSON without decoding it).
+    """
+    gen = _load_module("scripts/process_italian_translations.py")
+    n = gen.normalize_backslash_escapes
+    # Double-backslash tokens (as they appear in the file)
+    assert n("hai \\\\07 anni!") == "hai <0xFD><0x07> anni!"
+    assert n("[green]\\\\07[red]") == "[green]<0xFD><0x07>[red]"
+    assert n("\\\\08 esempi") == "<0xFD><0x08> esempi"
+    assert n("\\\\0C volte") == "<0xFD><0x0C> volte"
+    # Case-insensitive hex digits
+    assert n("\\\\0c volte") == "<0xFD><0x0C> volte"
+    # Already-converted form is left alone
+    assert n("<0xFD><0x07>") == "<0xFD><0x07>"
+
+
+def test_normalize_backslash_navigation_tokens():
+    r"""Single-backslash navigation tokens must decode to their raw arrow bytes.
+
+    Verified against EN ROM route descriptions:
+    - ``\au`` → 0x79 (↑)   ``\ad`` → 0x7A (↓)
+    - ``\al`` → 0x7B (←)   ``\ar`` → 0x7C (→)
+    - ``\qo`` → 0xB1 (")   ``\qc`` → 0xB2 (")
+    """
+    gen = _load_module("scripts/process_italian_translations.py")
+    n = gen.normalize_backslash_escapes
+    assert n("\\au Frozen Heights \\ad Bellin Town") == (
+        "<0x79> Frozen Heights <0x7A> Bellin Town"
+    )
+    assert n("\\al Grim Woods \\ar Dresco Town \\ad Percorso 13") == (
+        "<0x7B> Grim Woods <0x7C> Dresco Town <0x7A> Percorso 13"
+    )
+    assert n("\\qoPercorso 1\\qc") == "<0xB1>Percorso 1<0xB2>"
+
+
+def test_escape_text_applies_backslash_normalization():
+    r"""escape_text must normalize backslash-hex tokens as part of import."""
+    gen = _load_module("scripts/process_italian_translations.py")
+    # CC escape in a real sentence
+    out = gen.escape_text("fine.\\CC0820 Poi")
+    assert "\\CC" not in out
+    assert out == "fine.<0xFC><0x08><0x20> Poi"
+    # Double-backslash FD buffer in a real sentence
+    out = gen.escape_text("hai \\\\07 anni!")
+    assert "\\\\07" not in out
+    assert out == "hai <0xFD><0x07> anni!"
