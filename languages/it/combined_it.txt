@@ -6,7 +6,7 @@
 # Offsets absent from this file keep their English text.
 # Last entry wins for a duplicated offset (case-insensitive).
 #
-# Updated from 8e5dd45b-c138-4459-94b1-a12246085bb5-Italian Translations (2).json
+# Updated from d82a9dba-d0fc-4a43-b39a-6d0e0290e64e-Italian Translations (3).json
 #
 0x1660052: Ognuno di loro porta una maschera\nche era il suo volto quando era\lumano.
 0x1663ae6: Si rilassa in luoghi stretti e bui\ned è noto che usi la tasca o la\lborsa del suo Allenatore come nido.
@@ -1394,9 +1394,9 @@
 0x194028: Oh\. Che delusione\.
 0x194045: Ciao, <0xFD><0x01>! Come abboccano i\npesci?
 0x19406f: Oh, no! Avevo un bel regalo per te,\nma non hai spazio per prenderlo!
-0x194234: L'impulso di combattere con\nqualcuno con cui ti sei già\lscontrato\. Ti è mai venuto? Sono\n\nsicuro di sì. Anch'io volevo\naffrontare certe persone ancora e\lancora. Così, le ho distribuite.\n\nPer favore, prendine una!
-0x19430f: Usa quel dispositivo e troverai\nAllenatori in cerca di una\lrivincita. Però devi caricarne la\n\nbatteria per usarlo.
-0x194381: Come si usa il Ricercasfide? Non\nc'è nulla di complicato. Usalo\lfacendo beep-beep-beep, e gli\n\nAllenatori intorno a te se ne\naccorgeranno. Se un Allenatore\lvuole una rivincita, te lo farà\n\nsapere subito. Ricarica la batteria\ne usalo mentre sei su una strada.
+0x194234: Hai mai voluto risfidare qualcuno\ngià affrontato? Io sì. Per questo\ldistribuisco questi strumenti.\n\nPrendine uno!
+0x19430f: Usa questo dispositivo e troverai\nAllenatori pronti alla rivincita.\lDevi caricarne la batteria per\n\nusarlo.
+0x194381: Come si usa il Cercasfide? È\nsemplice. Usalo e gli Allenatori\lvicini ti noteranno. Se qualcuno\n\nvuole la rivincita, lo saprai\nsubito. Carica la batteria e usalo\lsu una strada.
 0x1949cb: Ciao! Hai un <0xFD><0x02>? Vuoi\nscambiarlo con il mio <0xFD><0x03>?
 0x1949fd: Che peccato.
 0x194a0d: \.Questo non è un <0xFD><0x02>. Se ne\ntrovi uno, per favore scambiamelo!
@@ -1510,32 +1510,32 @@
 0x1a2de0: Se i tuoi Pokémon devono imparare\nuna mossa, mi serve una Squama\lCuore.
 0x1a2e20: Eh? Non c'è nemmeno una mossa che\npossa insegnare a un Uovo.
 0x1a5075: <0xFD><0x01> ha acceso il PC.
-0x1a50a7: Hai aperto il PC di qualcuno.
-0x1a50be: Il Sistema di Deposito Pokémon si è\naperto.
-0x1a50dd: Hai aperto il PC di <0xFD><0x01>.
-0x1a50ef: Accesso al PC di Ayla.
+0x1a50a7: PC di qualcuno aperto.
+0x1a50be: Deposito Pokémon aperto.
+0x1a50dd: PC di <0xFD><0x01> aperto.
+0x1a50ef: PC di Ayla aperto.
 0x1a5190: Torna ancora!
 0x1a51f6: Hai ottenuto <0xFD><0x03>!
-0x1a5200: lui <0xFD><0x03>!
-0x1a5218: <0xFD><0x01> ha messo il <0xFD><0x03> nel\n<0xFD><0x04>.
-0x1a5231: <0xFD><0x01> ha trovato un <0xFD><0x03>!
+0x1a5200: <0xFD><0x03>!
+0x1a5218: <0xFD><0x01> mette <0xFD><0x03> in\n<0xFD><0x04>.
+0x1a5231: <0xFD><0x01> trova <0xFD><0x03>!
 0x1a5242: Peccato! La Borsa è piena\.
-0x1a525c: <0xFD><0x01> ha trovato <0xFD><0x02>\n<0xFD><0x03>!
-0x1a526c: <0xFD><0x01> ha messo le Monete nella\nPortamonete.
-0x1a5294: Peccato! Il Portamonete è pieno\.
+0x1a525c: <0xFD><0x01>: <0xFD><0x02> <0xFD><0x03>!
+0x1a526c: <0xFD><0x01> mette le Monete nel\nPortamonete.
+0x1a5294: Peccato! Portamonete pieno\.
 0x1a52b4: Peccato! Non c'è nulla in cui\nmetterli\.
 0x1a5301: Peccato! Non c'è più spazio per un\naltro <0xFD><0x03>\.
 0x1a532f: <0xFD><0x03> è stato trasferito al PC.
 0x1a5420: <0xFD><0x01> ha acceso il PC.
-0x1a5483: Benvenuto nel nostro Centro\nPokémon! Vuoi che curi i tuoi\lPokémon e li riporti in perfetta\n\nsalute?
-0x1a5511: Stai attento là fuori!
+0x1a5483: Benvenuto al Centro Pokémon! Vuoi\ncurare i tuoi Pokémon?
+0x1a5511: Stai al sicuro!
 0x1a556e: L'acqua è tinta di un blu intenso\.\nVuoi usare Surf?
-0x1a55a5: <0xFD><0x02> ha usato Surf!
-0x1a55b3: La corrente è troppo forte! Surf\nnon può essere usato qui\.
+0x1a55a5: <0xFD><0x02> usa Surf!
+0x1a55b3: La corrente è forte! Surf non si\npuò usare qui\.
 0x1a561a: Mi dispiace moltissimo. Il Club\nWireless Pokémon è in fase di\ladeguamento in questo momento.
 0x1a5667: Sembra che sia in fase di\nregolazione\.
 0x1a56a7: Vuoi dare un soprannome a questo\n<0xFD><0x02>?
-0x1a5700: <0xFD><0x01> ha dissotterrato un\n<0xFD><0x03> dalle profondità del\lterreno.
+0x1a5700: <0xFD><0x01> ha trovato <0xFD><0x03> sotto\nterra.
 0x1a58a7: Vediamo\. Oh-oh! Hai catturato solo\n<0xFC><0x01><0x06><0xFD><0x04><0xFC><0x01><0x04> specie di Pokémon! Ti\lservono <0xFC><0x01><0x06><0xFD><0x02><0xFC><0x01><0x04> specie.
 0x1a5909: \.Ah. Capisco. Quando avrai <0xFC><0x01><0x06><0xFD><0x02><0xFC><0x01><0x04>\ntipi di Pokémon, torna pure.
 0x1a594d: Oh! Vedo che non hai spazio per\n<0xFD><0x03>.
@@ -1550,23 +1550,23 @@
 0x1a5b4a: Grazie, sei un amico!
 0x1a5b60: Come sta il mio vecchio <0xFD><0x03>?\nIl mio <0xFD><0x02> sta benissimo!
 0x1a5b88: Bingo! La Cardchiave ha aperto la\nporta!
-0x1a5bc6: Accesso al PC del Prof. Log\. Accesso\nal Sistema di valutazione del\lPokédex\.
+0x1a5bc6: PC del Prof. Log\. Sistema\nvalutazione Pokédex\.
 0x1a5c03: Vuoi far valutare il tuo Pokédex?
-0x1a5c2e: Collegamento chiuso al PC del Prof.\nLog.
+0x1a5c2e: Link PC Log chiuso.
 0x1a5c4d: Si udì una voce, <0xB1>Non scappare!<0xB2>
 0x1a5cdf: La porta è aperta\.
-0x1a5cf1: <0xFD><0x03> è stato trasferito nel PC\ndi qualcuno. È stato messo nel Box\l<0xB1><0xFD><0x02>.<0xB2>
-0x1a5d31: <0xFD><0x03> è stato trasferito al PC\ndi Ayla. È stato depositato nel Box\l<0xB1><0xFD><0x02>.<0xB2>
-0x1a5d6e: Il Box <0xB1><0xFD><0x04><0xB2> nel PC di\nqualcuno era pieno. <0xFD><0x03> è\lstato trasferito al Box <0xB1><0xFD><0x02>.<0xB2>
-0x1a5db1: Box <0xB1><0xFD><0x04><0xB2> nel PC di Ayla era\npieno. <0xFD><0x03> è stato trasferito\lnel Box <0xB1><0xFD><0x02>.<0xB2>
-0x1a5e31: Non c'è più spazio per i Pokémon! I\nBox Pokémon sono pieni e non\lpossono accettarne altri!
-0x1a5e89: Per prima cosa, dovresti curare\ncompletamente i tuoi Pokémon.
-0x1a5ec0: I tuoi Pokémon sono stati curati\nfino alla salute perfetta. Se\ll'energia dei tuoi Pokémon, gli HP,\n\nè bassa, vieni a trovarci. Se hai\nintenzione di andare lontano sul\lcampo, dovresti comprare delle\n\nPozioni al Poké Market. Speriamo\nche tu abbia successo!
-0x1a5f9b: I tuoi Pokémon sono stati curati\nfino a raggiungere la piena salute.\lSperiamo che tu abbia successo!
-0x1a5fdf: <0xFD><0x01>! Bentornato/a a casa.\nSembra che tu abbia vissuto\lun'esperienza notevole. Forse\n\ndovresti riposarti un attimo.
-0x1a6046: Oh, bene! Tu e i tuoi Pokémon state\nmolto meglio. Se i PS dei tuoi\lPokémon sono bassi, prova a curarli\n\nin un <0xFC><0x01><0x06>Centro Pokémon<0xFC><0x01><0x04>! Credo che il\npiù vicino da qui sia a <0xFC><0x01><0x06>Bellin\lTown<0xFC><0x01><0x04>. Oppure, compra delle <0xFC><0x01><0x06>Pozioni<0xFC><0x01><0x04>\n\nal <0xFC><0x01><0x06>Pokémarket<0xFC><0x01><0x04>! Non è mai una\ncattiva idea prepararsi al peggio.\lFammi fare bella figura, tesoro!\n\nStammi bene!
-0x1a6197: <0xFD><0x01> non ha più Pokémon\nutilizzabili! <0xFD><0x01> è andato nel\lpanico e ha perso $<0xFD><0x02>\. \. \. \. \.\n\n<0xFD><0x01> è andato KO!
-0x1a61e5: <0xFD><0x01> non ha più Pokémon\nutilizzabili! <0xFD><0x01> è andato KO!
+0x1a5cf1: <0xFD><0x03> al PC di qualcuno. Messo\nnel Box <0xB1><0xFD><0x02><0xB2>
+0x1a5d31: <0xFD><0x03> al PC di Ayla. Messo nel\nBox <0xB1><0xFD><0x02><0xB2>
+0x1a5d6e: Box <0xB1><0xFD><0x04><0xB2> pieno. <0xFD><0x03>\ntrasferito al Box <0xB1><0xFD><0x02><0xB2>
+0x1a5db1: Box <0xB1><0xFD><0x04><0xB2> pieno. <0xFD><0x03>\ntrasferito al Box <0xB1><0xFD><0x02><0xB2>
+0x1a5e31: Non c'è spazio per Pokémon! I Box\nsono pieni!
+0x1a5e89: Prima cura del tutto i tuoi\nPokémon.
+0x1a5ec0: I tuoi Pokémon sono guariti del\ntutto. Se hanno pochi PS, torna da\lnoi. Se andrai lontano, compra\n\nPozioni al Poké Market. Speriamo tu\nfaccia strada!
+0x1a5f9b: I tuoi Pokémon sono guariti del\ntutto. Buona fortuna!
+0x1a5fdf: <0xFD><0x01>! Bentornato. Sembra sia\nstata dura. Forse dovresti riposare\lun po'.
+0x1a6046: Oh, bene! Tu e i tuoi Pokémon state\nmeglio. Se i PS sono bassi, cura la\lsquadra in un <0xFC><0x01><0x06>Centro Pokémon<0xFC><0x01><0x04>. Il\n\npiù vicino è a <0xFC><0x01><0x06>Bellin Town<0xFC><0x01><0x04>. Oppure\ncompra <0xFC><0x01><0x06>Pozioni<0xFC><0x01><0x04> al <0xFC><0x01><0x06>Poké Mart<0xFC><0x01><0x04>. Meglio\lessere pronti. Rendimi fiera!\n\nStammi bene!
+0x1a6197: <0xFD><0x01> non ha più Pokémon! Ha\nperso $<0xFD><0x02>\. \. \. \. <0xFD><0x01> è KO!
+0x1a61e5: <0xFD><0x01> non ha più Pokémon!\n<0xFD><0x01> è KO!
 0x1a6211: Salve! Posso aiutarti?
 0x1a622c: C'è un questionario. Vuoi\ncompilarlo?
 0x1a6265: Grazie per aver dedicato il tuo\ntempo a compilare il nostro\lquestionario. Il tuo feedback verrà\n\nusato come riferimento futuro.
@@ -1574,7 +1574,7 @@
 0x1a6359: Una volta salvata la partita,\npotrai accedere al DONO SEGRETO.
 0x1a6393: Grazie per aver acceduto al Sistema\nRegalo Segreto.
 0x1a63c4: <0xFD><0x02> è volato via!
-0x1a6c74: L'acqua è tinta di un blu intenso\.
+0x1a6c74: L'acqua è blu intenso\.
 0x1a6ca3: Il tuo progresso nel Pokédex è:\n<0xFD><0x02> Pokémon visti e <0xFD><0x03>\lPokémon catturati. <0xFC><0x06><0x02>Valutazione del\n\nProf. Log:
 0x1a71aa: E il tuo Pokédex Nazionale è:\n<0xFD><0x02> Pokémon visti e <0xFD><0x03>\lPokémon ottenuti.
 0x1a71ee: Non vedo l'ora di vederti\ncompletare il Pokédex Nazionale!
@@ -1684,7 +1684,7 @@
 0x1bfc1b: PA: Din-don! Tempo scaduto! PA: Il\ntuo SAFARI GAME è finito!
 0x1bfc53: PA: Din-dong! Hai esaurito le\nSAFARI BALL! PA: La tua partita\lSafari è finita!
 0x1c0db0: È stipato di libri sui Pokémon.
-0x1c0df1: Una mappa della regione.
+0x1c0df1: Mappa.
 0x1c0dfd: Wow! Un sacco di roba Pokémon!
 0x1c0e19: Piatti e stoviglie sono ordinati in\nfila.
 0x1c0e40: Ha un profumo delizioso! Qualcuno\nha cucinato qui.
@@ -1865,7 +1865,7 @@
 0x1ee144f: Perfetto. Allora ti aspetterò\nnell'area lotta.
 0x1ee1486: <0xFC><0x01><0x08>Proprio come l'oscurità segue la\nluce, la tua sconfitta è imminente!
 0x1ee14e2: <0xFC><0x01><0x08>Heh\. Vedo che non consideri il\ndiventare Campione la fine della\ltua crescita. Ho scatenato davvero\n\ntutto quello che avevo, eppure il\nmio intelletto, la mia forza\. non è\lbastato. Molto bene. Credo che tu\n\nmeriti uno dei miei Cristalli Z\npreferiti\.
-0x1ee15cc: <0xFC><0x01><0x08>Un Pokémon che tiene quel <0xFC><0x01><0x06>Darkinium\nZ<0xFC><0x01><0x08>\npotenzierà i suoi attacchi di tipo\n<0xFC><0x01><0x06>Buio<0xFC><0x01><0x08>,\lsia per aumentarne la potenza sia\nper\lsferrare un colpo devastante.\pTuttavia, può prosciugare l'energia\ndel suo\nAllenatore, quindi si consiglia\ldi usarlo solo una volta per lotta.\p<0xFC><0x01><0x06>Eclissi del Buco Nero<0xFC><0x01><0x08>\.\n\nMi ricorda molto un\ncollega agente che conoscevo una\nvolta.\pIndossava così tanti travestimenti\nche alla fine dimenticò\nil suo vero nome e volto\.\ne divenne molto simile a un\labisso senza fine\.
+0x1ee15cc: <0xFC><0x01><0x08>Un Pokémon che tiene <0xFC><0x01><0x06>un Darkinium Z<0xFC><0x01><0x08>\npotenzierà i suoi attacchi <0xFC><0x01><0x06>di tipo\lBuio<0xFC><0x01><0x08>, sia per aumentarne la forza\n\nsia per sferrare un colpo potente.\nTuttavia, può esaurire l'energia\ldel suo Allenatore, quindi si\n\nconsiglia di usarlo solo una volta\nper lotta. <0xFC><0x01><0x06>Black Hole Eclipse<0xFC><0x01><0x08>\. Mi\lricorda molto un agente che\n\nconoscevo una volta. Indossava così\ntanti travestimenti che alla fine\ldimenticò il suo vero nome e il suo\n\nvolto\. e divenne molto simile a un\nabisso senza fine\.
 0x1ee1779: <0xFD><0x01>\. che piacere rivederti. Ho\npassato in rassegna le informazioni\lche ho raccolto nel nostro ultimo\n\ncombattimento\. Credo di avere ora\ninformazioni sufficienti per avere\lmaggiori possibilità di vittoria.\n\nSe sei d'accordo, ti andrebbe di\ncombattere ancora una volta?
 0x1ee185c: <0xFC><0x01><0x08>Tsk\. Vedo. C'era qualcosa di\ndiverso, rispetto all'ultima volta\.\lMa non cercherò scuse. Tieni, un\n\npiccolo premio da parte mia, per\naver soddisfatto ancora una volta\lle mie aspettative.
 0x1ee1904: Ricordo di aver detto una volta che\nsaresti diventato un buon agente.\lOra però credo che questa\n\nprofessione ti si addica ancora di\npiù. Una vita di segretezza è per\lchi ha segreti da nascondere\. che\n\nnon possono mai vedere la luce\. E io\.<0xFC><0x08><0x18>\nno, lascia stare. Non è cosa per un\leroe pubblico come te saperlo.
@@ -1892,7 +1892,7 @@
 0x1ee2db1: Ah, che campione che sei! E per un\ncampione così, facciamo la nostra\llotta come una <0xFC><0x01><0x06>Lotta in Doppio<0xFC><0x01><0x08>!\n\nForza, corriamo all'area lotta!
 0x1ee2e33: <0xFC><0x01><0x08>Le mie macchine di guerra sono\ncariche e pronte a partire!\lWoooooar!
 0x1ee2e8d: <0xFC><0x01><0x08>Gaaaah! Come fai a continuare a\nfare quella roba? Sul serio? Beh,\lper il vecchio Galavan si torna al\n\ntavolo da disegno, e pure così\npresto\. Anzi, perché non migliori\lanche tu le tue abilità in lotta?\n\nQui ho due di questi Cristalli Z\.\nah, sono proprio un tipo\lfantastico, te li lascio tutti e\n\ndue!
-0x1ee2f9f: <0xFC><0x01><0x06>Accium Z<0xFC><0x01><0x08>, <0xFC><0x01><0x06>Electrium Z<0xFC><0x01><0x08>\. questi due\ncristalli potenziano le mosse di\ntipo\n<0xFC><0x01><0x06>Acciaio<0xFC><0x01><0x08> e <0xFC><0x01><0x06>Elettro<0xFC><0x01><0x08>.\pPeccato che non si possano usare\nentrambi\nnella stessa lotta, ma immagino che\nla\nvita non sia sempre giusta.\pOnestamente, non riesco a decidere\nquale\nsia il migliore per scuotere il\ncampo\ndi battaglia.\pSchiacciali al suolo con <0xFC><0x01><0x06>Centrovite\nEsplosiva<0xFC><0x01><0x08>.\pO lasciali tremanti sul pavimento\ncon\nuna bella <0xFC><0x01><0x06>Gigavolt Folgorante<0xFC><0x01><0x08>?\pSono entrambi fantastici!
+0x1ee2f9f: <0xFC><0x01><0x06>Steelium Z<0xFC><0x01><0x08>, <0xFC><0x01><0x06>Electrium Z<0xFC><0x01><0x08>\. quei due\ncristalli potenziano gli attacchi\ldi tipo <0xFC><0x01><0x06>Acciaio<0xFC><0x01><0x08> e <0xFC><0x01><0x06>Elettro<0xFC><0x01><0x08>. Peccato\n\nche non si possano usare entrambi\nnella stessa lotta, ma immagino che\la volte la vita non sia giusta. A\n\ndire il vero, non riesco proprio a\ndecidere quale sia meglio per\lsconvolgere il campo di battaglia.\n\nRiducili in poltiglia con <0xFC><0x01><0x06>Corkscrew\nCrash<0xFC><0x01><0x08>\. Oppure lasciali a contorcersi\la terra con un bel <0xFC><0x01><0x06>Gigavolt Havoc<0xFC><0x01><0x08>?\n\nSono entrambi fantastici!
 0x1ee3151: <0xFD><0x01>! Sei tornato! Tempismo\nperfetto! Ci sono ancora qualche\lbug nel mio modo di lottare, credo,\n\nma c'è un solo modo per scoprirlo!\nEd è con un bel vecchio test sul\lcampo! Aiuterò anche a mettere a\n\npunto la tua squadra! Aiutiamoci a\nvicenda qui!
 0x1ee3248: <0xFC><0x01><0x08>Gaaaah! Di nuovo in panne! Dobbiamo\nrifarlo prima o poi! Tieni,\lconsidera questo una promessa da\n\nparte mia, perché il vecchio\nGalavan non ha ancora finito con\lte!
 0x1ee32da: C'è uno stereotipo tra gli\nAllenatori di tipo Elettro\. Pare che\ltu debba essere bravo con le\n\nmacchine perfino per allenarli a\ndovere. Voglio dire, il vecchio\lGalavan non crede nelle etichette,\n\nma capisco il loro punto. Hai VISTO\ni danni che possono fare alla\lnostra tecnologia? Finiremmo in\n\nrovina se non potessimo riparare da\nsoli ciò che rompono! Ah ah ah ah!
@@ -2346,7 +2346,7 @@
 0x1ef45e6: Allora, hai portato delle <0xFC><0x01><0x06>Iron\nBalls<0xFC><0x01><0x04>? Posso ricavarne delle <0xFC><0x01><0x06>Beast\lBalls<0xFC><0x01><0x04>, se vuoi.
 0x1ef4647: Quante Ferropalle vuoi cedere?
 0x1ef466f: Vuoi cedere <0xFD><0x02> Palle Ferro?
-0x1ef4696: Upupupu\.\pGrazie mille.\pC'è un'arte in tutto questo\.\nreagiscono\nmale alle dimensioni all'interno di\nuna\nPoké Ball\.\pQuindi, creo uno spazio alternativo\nper\nloro, e\.<0xFC><0x08><0x15> \.<0xFC><0x08><0x15> \.<0xFC><0x08><0x15><0xFC><0x10><0x31><0x00>co fatto!
+0x1ef4696: Upupupu\. Grazie infinite. C'è\nun'arte in tutto questo\. reagiscono\lmale alle dimensioni all'interno di\n\nuna Poké Ball\. Perciò, creo per loro\nuno spazio alternativo, e\.<0xFC><0x08><0x15> \.<0xFC><0x08><0x15> \.<0xFC><0x08><0x15><0xFC><0x10><0x31><0x00>ci\lsiamo!
 0x1ef474e: Upupupu\. I portali da cui emergono\nquelle creature tendono a\lriapparire. Spero che userai quelle\n\nBeast Ball per il bene, e che\ndomerai queste minacce per il\lnostro mondo\.
 0x1ef47ea: Non ti interessa? Come fai a non\ntrovare affascinanti i mostri di un\laltro mondo?
 0x1ef4838: Upupupu\. Non hai Palle Fero\.
@@ -2817,7 +2817,7 @@
 0x1f0374b: Thundercap Mt. ha due ingressi\ndiversi: uno a Epidimy Town e\ll'altro ad Antisis City. Questi\n\ningressi ti portano alla cima dove\nsosta Zapdos. Però non ti consiglio\ldi usare l'ingresso vicino ad\n\nAntisis City. Quel posto è un\ncasino\.
 0x1f0383e: Ho provato una volta a esplorare\nThundercap Mt. dall'ingresso qui\lvicino. L'apertura dove si dice che\n\nZapdos si posi va davvero molto in\nalto! In realtà mi è venuto un\lfortissimo giramento di testa e\n\nsono caduto mentre scalavo! Il\ndottore dice che ora soffro di un\llieve trauma cranico. Prendi questo\n\noggetto, così non dovrai\npreoccuparti anche tu di un trauma\lcranico.
 0x1f03972: Se il tuo Pokémon indossa <0xFC><0x01><0x06>Elmo\nRoccioso<0xFC><0x01><0x04>, qualsiasi Pokémon che lo\ltocchi subirà un trauma cranico!
-0x1f039da: <0xFC><0x01><0x02>Peccato! Non c'è spazio nel Cubo\nper un <0xFD><0x03>!
+0x1f039da: <0xFC><0x01><0x02>Peccato! Non c'è spazio per\n<0xFD><0x03>!
 0x1f03a0c: Uah! Sposta i massi con la pura\nforza! Prendi questo!
 0x1f03a3c: <0xFC><0x01><0x06>Forza<0xFC><0x01><0x08> ti permette di spostare massi\ngiganteschi con la forza bruta! Ma\lsolo se hai la <0xFC><0x01><0x06>Medaglia Autunno<0xFC><0x01><0x08>\n\ndella Palestra di Fallshore! Huah!
 0x1f03ac0: Un giorno diventerò un ninja! I\nmiei genitori attaccano con la\lforza bruta, ma io sarò furtivo! Mi\n\nnasconderò nelle buche nella sabbia\ne spaventerò gli Allenatori!
@@ -3199,7 +3199,7 @@
 0x1f0f82a: Scegli il colore della giacca.
 0x1f0f842: Scegli un colore per le rifiniture.
 0x1f0f858: È questo il personaggio con cui\nvuoi giocare?
-0x1f0f874: E per finire, come ti chiami?
+0x1f0f874: Ultimo, ma non meno importante,\nqual è il tuo nome?
 0x1f0f89c: Il tuo nome è <0xFD><0x01>?
 0x1f0f8ad: Ora determiniamo il modo migliore\nper farti giocare. È la prima volta\lche giochi a Pokémon Unbound?
 0x1f0f91a: State usando gli emulatori Eclipse,\nGPemu, JohnGBA o No$GBA?
@@ -3624,10 +3624,11 @@
 0x1f1f647: Sei quasi arrivato, <0xFD><0x01>!\nL'ultima salita verso la Lega\lPokémon sta per cominciare! E\n\nconoscendoti, sono sicuro che ci\narriverai sano e salvo! Non posso\ldire lo stesso degli Allenatori che\n\nincontrerai lungo la strada, però\.\nAh ah ah!
 0x1f1f728: <0xFD><0x01>, sei arrivato alla Lega\nPokémon! Allora, vuoi sentire i\lpettegolezzi del vecchio Galavan\n\nsui Superquattro, eh? Amico, se hai\ntempo per chiacchierare, è tempo\lspeso meglio a prepararti per\n\nl'assalto finale, no? Non\npreoccuparti per niente! Il vecchio\lGalavan è con te, fino in fondo,\n\nquindi vai e fagliela vedere! Ah ah\nah!
 0x1f1f8ab: Sono cieco?
+0x1f1f8b7: Scopri i segreti dietro\nle misteriose tavolette\ndi pietra!
 0x1f1f8f0: Ciao, straniero! Prenditi il tempo\nper esplorare Icicle Cave. Potrebbe\lnon sembrare così grande, ma è più\n\ngrande di quanto sembri! Anzi,\nproprio l'altro giorno ho visto un\lPokémon scavare attraverso il muro\n\nfino a quella che dev'essere una\ngrotta completamente nuova!
 0x1f1f9dc: Chi avrebbe mai potuto prevedere\nche ci fosse una sezione nascosta\ldella Grotta Ghiacciata? Se non\n\nfosse stato per gli scavi sciatti\ndi quel Sandslash, questo posto\lsarebbe potuto rimanere nascosto\n\nmolto più a lungo. Ma ora che è\naccessibile, sono stato in grado di\lscoprire un altro dei manufatti\n\nantichi! La tavoletta che <0xFD><0x02>\nqui\. Ce ne sono diverse simili in\lgiro per Borrius. Su ciascuna c'è\n\nun testo in un dialetto antico, da\ntempo dimenticato. Tuttavia! Dopo\lmolti anni di studio della lingua,\n\nho creato un dispositivo in grado\ndi tradurre il testo. In effetti,\lse sei disposto ad aiutarmi a\n\nsvelare i segreti di queste pareti\ndi pietra, sarò lieto di\lcondividerlo con te.
 0x1f1fc58: Tsk\. è piuttosto sfortunato. Nessuno\nnella Società di Archeologia è\lriuscito a imparare questo dialetto\.\n\na parte me, ovviamente. Dubito che\nun Allenatore inesperto come te\lpossa leggerlo senza il mio aiuto.
-0x1f1fd2b: Meraviglioso! Questo è il\ndispositivo di cui avrai bisogno\lper leggere il testo su queste\n\ntavolette.
+0x1f1fd2b: Meraviglioso! Ti servirà per\nleggere il testo su queste\ltavolette.
 0x1f1fd7a: Con <0xFC><0x01><0x06><0xFD><0x02><0xFC><0x01><0x08> in mano, sarai in\ngrado di tradurre l'antico\ldialetto, se lo desideri. Anzi,\n\npotrebbe esserti utile scoprire\ncosa si nasconde dietro queste\ltavolette. Una volta che avrai\n\nrisolto l'enigma di ogni tavoletta\ndi Borrius, vieni a trovarmi, e ti\lricompenserò per i tuoi sforzi.
 0x1f1fea4: Adesso, i segreti dietro <0xFC><0x01><0x06><0xFD><0x04><0xFC><0x01><0x08>\ntavoletta<0xFD><0x08> non sono ancora stati\lsvelati. Una volta che avrai\n\nscoperto cosa si nasconde dietro a\ntutte, vieni a trovarmi per una\lricompensa.
 0x1f1ff3c: Ce l'hai fatta! Hai scoperto i\nsegreti dietro ciascuna delle\lantiche tavolette di pietra a\n\nBorrius! Nemmeno io, la mente più\nbrillante della Società di\lArcheologia, sono riuscito a\n\nrisolvere i misteri. Devo essere\nonesto\. Potrei averti giudicato male\lall'inizio. Tuttavia, ho imparato\n\nche c'è sicuramente di più in una\npersona di quanto si possa\ldiscernere a prima vista. Hai le\n\nmie scuse, e ancora una volta, i\nmiei ringraziamenti.
@@ -3732,7 +3733,7 @@
 0x1f232ba: Per favore ritira il mio pacco dal\n<0xFC><0x01><0x06>Bellin Town Poké Mart<0xFC><0x01><0x08>, <0xFD><0x01>. Mi\lserve, e solo tu puoi prenderlo.
 0x1f2331e: Oh, <0xFD><0x01>! Sei tornato con il\nmio pacco!
 0x1f23344: <0xFC><0x01><0x02><0xFD><0x01> ha consegnato il pacco.
-0x1f23360: Ora, fammi controllare se hanno\nmandato\nquello che dovevano.\pNuova attrezzatura di ricerca\.<0xFC><0x08><0x20>\ncontrollato.\pL'ultima novità nella scienza\nPokémon\.<0xFC><0x08><0x20>\ncontrollato.\p\.<0xFC><0x08><0x20>Eh?\pDove sono le Master Ball?\pHai aperto questo pacco e preso\nqualcosa, <0xFD><0x01>?\p\.\pAh\.<0xFC><0x08><0x18> Capisco.\pHai recuperato il mio pacco da\ndei malviventi\.\pE devono aver preso le\nMaster Ball\.
+0x1f23360: Ora, fammi controllare se hanno\ninviato quello che dovevano. Nuovo\lequipaggiamento di ricerca\.<0xFC><0x08><0x20>\n\ncontrollo. L'ultima novità della\nscienza Pokémon\.<0xFC><0x08><0x20> controllo. \.<0xFC><0x08><0x20>Eh? Dove\lsono le Master Ball? Hai aperto\n\nquesto pacco e preso qualcosa,\n<0xFD><0x01>? \. Ah\.<0xFC><0x08><0x18> capisco. Hai\lrecuperato il mio pacco da dei\n\nteppisti\. E devono aver preso le\nMaster Ball\.
 0x1f234a9: Cosa!? Li hai visti usarne uno per\ncatturare Articuno? Hmm\. Se ho\lragione, potremmo essere in grave\n\npericolo\.
 0x1f2350c: Ho un'altra commissione per te,\n<0xFD><0x01>. Un mio vecchio amico vive\la <0xFC><0x01><0x06>Dresco Town<0xFC><0x01><0x08>. Conosce molto bene\n\nla storia di Borrius. Ho bisogno\nche gli racconti tutto ciò che è\laccaduto finora. Ho una teoria su\n\nquello che sta succedendo, ma ho\nbisogno che la confermi. Adesso hai\lil tuo Pokémon, quindi non dovrebbe\n\nessere troppo difficile. Puoi\narrivare a <0xFC><0x01><0x06>Dresco Town<0xFC><0x01><0x08> passando per\l<0xFC><0x01><0x06>Icicle Cave<0xFC><0x01><0x08>.
 0x1f236a3: Oh! Che sbadata! Come posso\naspettarmi che tu trovi <0xFC><0x01><0x06>Caverna di\lGhiaccio<0xFC><0x01><0x08> se non conosci la strada?\n\nQuesta <0xFC><0x01><0x06>Mappa Città<0xFC><0x01><0x08> ti sarà di\ngrande aiuto!
@@ -4386,7 +4387,7 @@
 0x1f37b33: <0xFD><0x01>, Arthur mi ha messo al\ncorrente delle tue recenti\lscorribande. Per prima cosa,\n\nlasciami congratularmi con te per\naver salvato Zapdos. Ma ovviamente,\lnon ho mai dubitato di te nemmeno\n\nper un momento, <0xFD><0x01>! Ho ho ho!\n\. Comunque, se stai cercando di\landare nella stessa direzione delle\n\nOmbre\. C'è un mio vecchio collega\nche vive a Città di Dehara, uno\lscrupoloso ricercatore delle Rovine\n\ndel Vuoto. Mi hanno detto che Jax è\nandato avanti per cercarlo. Se\lnecessario, può darti le\n\nindicazioni per Surf.
 0x1f37d04: Un vecchio a Dehara City conosce la\nstrada per le Rovine del Vuoto?\lSuppongo che questo chiarisca dove\n\nandrò dopo. Grazie, Log, per aver\ndetto qualcosa che valesse la pena\lascoltare per una volta.
 0x1f37db8: Ci vediamo, <0xFD><0x01>. La prossima\nvolta, giuro che colmerò davvero il\ldivario tra noi!
-0x1f37e09: Sigh\.<0xFC><0x08><0x20> sembra che il suo viaggio\ncon i Pokémon non l'abbia affatto\nammorbito\l.\p\.<0xFC><0x08><0x20>h, buona fortuna, <0xFD><0x01>.\nPregherò per il tuo successo.
+0x1f37e09: Sigh\.<0xFC><0x08><0x20> sembra che il suo viaggio con\ni Pokémon non l'abbia affatto reso\lpiù tranquillo. \.<0xFC><0x08><0x20>Buona fortuna,\n\n<0xFD><0x01>. Pregherò per il tuo\nsuccesso.
 0x1f37e91: Sigh\.<0xFC><0x08><0x20> ora che diavolo dovrei fare\.?\nNon ho nulla da mostrare a Zeph e\lIvory\. Il nostro obiettivo non è più\n\nraggiungibile senza Zapdos\. Dovremmo\.<0xFC><0x08><0x18>\nabbandonare la nostra causa? A dire\lil vero, ho avuto dei dubbi su fin\n\ndove ci siamo spinti\. Credo sia ora\nche torni a casa, dai miei figli.
 0x1f37fae: Incredibile\.<0xFC><0x08><0x20> una meraviglia della\ntecnologia moderna! Pensare che\lun'impresa simile fosse persino\n\npossibile\. Oh, Marlon\.<0xFC><0x08><0x18> avevi fatto\ncosì bene, fino a quell'ultimo\lerrore\. Ma non preoccuparti, perché\n\nda qui in poi posso occuparmi io\ndel resto. Nel frattempo, credo che\lavrai tutto il tempo del mondo per\n\nla riflessione\.<0xFC><0x08><0x18> e il rimpianto.
 0x1f380eb: Che\.<0xFC><0x08><0x20> cos'è esattamente questa roba,\nHoopa? Ti chiedo di evocare un\laltro Zapdos, per compensare il\n\nfallimento di Marlon, e tu mi porti\nquesto? Patetico! Questo non\lassomiglia nemmeno a Zapdos!
@@ -4620,7 +4621,7 @@
 0x1f3f64a: Stai dicendo che non solo siete\nsopravvissuti entrambi a un viaggio\ldentro il Cubo, ma che c'era anche\n\nqualcun altro? Qualcuno che sapeva\ndell'esistenza degli Shadow\lWarriors?
 0x1f3f6f5: È stato Aros, Zeph. Fey lo ha\nimprigionato là dentro sedici anni\lfa. E non solo, a quanto pare Aros\n\nè anche il padre di <0xFD><0x01>.
 0x1f3f771: Aros!? Capisco\.<0xFC><0x08><0x18> quindi è questo che\nne è stato di lui\. Beh, allora non\lsono sorpreso. Era sempre rapido a\n\nindividuare i bug in qualsiasi\nsistema. Se qualcuno potesse\ltrovare una via d'uscita, per\n\nquanto difettosa, sarebbe\nsicuramente lui\.
-0x1f3f846: Quindi, <0xFD><0x01>\. saresti disposto\na\ndarci il tuo aiuto?\pIntendiamo raccogliere tutte le\nrisorse\nche possiamo e puntare direttamente\nalla Luce della Rovina.\p\.\pSì, lo so: tu e le Ombre\.<0xFC><0x08><0x18> non\nabbiamo sempre avuto la stessa\nopinione, vero?\pAllora, se ti affidassi i nostri\nsegreti\npiù importanti, sarebbe abbastanza?\pIn tal caso, lascia che ti spieghi\nquale fosse il nostro vero scopo\.\pIl vero scopo delle Ombre\.
+0x1f3f846: Quindi, <0xFD><0x01>\. saresti disposto a\nprestarci il tuo aiuto? Intendiamo\lraccogliere quante più risorse\n\npossiamo e puntare direttamente\nalla Luce della Rovina\. Sì, ne sono\lconsapevole - tu e le Ombre\.<0xFC><0x08><0x18> non\n\nsempre siamo andati d'accordo,\nvero? Allora, se ti affidassi i\lnostri segreti più importanti,\n\nsarebbe sufficiente? In tal caso,\nlasciami spiegare quale fosse il\lnostro vero scopo\. Il vero scopo\n\ndelle Ombre\.
 0x1f3f9c8: Tutto ebbe inizio diciassette anni\nfa\. Il figlio di Zeph era appena\lmorto. Come suoi vecchi amici,\n\nsiamo venuti a trovarlo dalla\nnostra regione natale, Hoenn\.
 0x1f3fa54: <0xFC><0x01><0x04>Zeph\.<0xFC><0x08><0x18> come te la cavi? Mi dispiace\ntanto\.<0xFC><0x08><0x18> Marlon e io abbiamo appena\lsentito\.<0xFC><0x08><0x20> di tuo figlio\.
 0x1f3fab5: Ivory\.<0xFC><0x08><0x18> Marlon\.<0xFC><0x08><0x18> grazie per le vostre\ncondoglianze. È bello rivedervi\ldopo tutti questi anni\.
@@ -5014,7 +5015,7 @@
 0x1f4bda6: <0xFD><0x01>! Congratulazioni! Ti avevo\ndetto che sarei passato dopo che\lfossi diventato il Campione, no?\n\nEccoci qui! Allora, quali sono i\ntuoi piani ora che sei l'Allenatore\lpiù forte di Borrius? \. Non ne hai\n\nnessuno, eh? Beh, ho sentito che i\nlavori di ristrutturazione\ldell'Area Lotta sono finalmente\n\nstati completati. Io e mio padre\navevamo intenzione di andarci\lpresto a dare un'occhiata.
 0x1f4bef9: Sì, congratulazioni, <0xFD><0x01>!\nSperavo di avere la possibilità di\lvederti di persona quando sei\n\ntornato a casa. Sei sorpreso di\nvedermi di nuovo con il vecchio\labito nero e rosso? Quell'abito che\n\nti ho lasciato non era il mio\nunico, sai! Ma anche dopo tutto\lquello che è successo, ho sentito\n\nil bisogno di indossarlo di nuovo.\nIvory è ancora scomparsa, quindi\lspero che sarà più facile trovarla\n\nse assomiglio proprio a lei. Se\ndovessi sentire qualcosa, <0xFD><0x01>,\lnon esitare a farmelo sapere. E\n\nnaturalmente, non pensare che mi\nsia dimenticato di tuo padre. Ho\lcercato di liberarlo dal Cubo, ma\n\nfinora non ho avuto molta fortuna.\nQuando troverò qualcosa di utile,\lmi assicurerò di avere una Missione\n\nper te.
 0x1f4c192: Comunque, andremo a dare\nun'occhiata alla <0xFC><0x01><0x06>Battle Frontier<0xFC><0x01><0x08>.\lSi trova appena a <0xFC><0x01><0x06>nord<0xFC><0x01><0x08> di <0xFC><0x01><0x06>Seaport\n\nCity<0xFC><0x01><0x08>, e si dice che il meglio del\nmeglio da tutto il mondo si raduni\llì. Dato che ha appena riaperto, ci\n\nsaranno sicuramente sciami di\nAllenatori impazienti di lottare!\lIo e mio padre mostreremo loro come\n\nlottano i veri Allenatori! Ci\nvediamo dopo, <0xFD><0x01>!
-0x1f4c2ed: <0xFD><0x01>, il mio <0xFD><0x02>, le mie\npiù sentite congratulazioni!\pHo sentito la notizia!\pPensare che, dopo tutto questo\ntempo,\nho finalmente superato il vecchio\nArthur!\pHo ho ho!\pEhm\. mi scusi.\pOra, il mio <0xFD><0x02>, il motivo\ndella\nmia visita.\pHo un'altra commissione per te!\pPensavi di aver finito con queste,\nvero?\pHo ho ho!\pEhm\. comunque, in seguito alla tua\nsconfitta di Hoopa in cima al Picco\nCristallo, misteriosi portali hanno\niniziato ad apparire in giro per\nBorrius.\pSi dice che, avvicinandosi, ne\nsaltino\nfuori potenti Pokémon.\pCome Guardiano di Borrius, sia di\nnome\nche di fatto, è tua responsabilità\nprenderti cura di questi Pokémon.\pPresumo che, nella maggior parte\ndei\ncasi, se catturi il Pokémon, i\nportali\nscompariranno definitivamente.\pSebbene sia dubbio che rimarranno\ntutti spariti per sempre\.\pIn ogni caso!\pCattura i Pokémon che si trovano in\nquesti misteriosi portali.\pAlcuni portali potrebbero apparire\nsolo se porti con te specifici\nPokémon,\nma i Pokémon in quei portali devono\nessere catturati a prescindere.\pE se un portale si rifiuta di\nscomparire definitivamente dopo\naver\ncatturato il Pokémon, basterà\nregistrarlo nel tuo Pokédex.
+0x1f4c2ed: <0xFD><0x01>, il mio <0xFD><0x02>,\nvivissime congratulazioni! Ho\lsentito la notizia! Pensare che,\n\ndopo tutto questo tempo, alla fine\nho battuto il vecchio Arthur! Ho ho\lho! Ehm\. scusate. Ora, il mio\n\n<0xFD><0x02>, il motivo della mia\nvisita. Ho ancora un'altra\lcommissione per te! Pensavi di aver\n\nfinito con quelle, vero? Ho ho ho!\nEhm\. comunque, dopo la tua sconfitta\ldi Hoopa in cima al Crystal Peak,\n\nmisteriosi portali hanno cominciato\nad apparire in tutta Borrius. Si\ldice che, quando ci si avvicina,\n\npotenti Pokémon balzino fuori. In\nquanto Guardiano di Borrius, di\lnome e di fatto, è tua\n\nresponsabilità occuparti di questi\nPokémon. Presumo che, nella maggior\lparte dei casi, se catturi il\n\nPokémon, i portali scompariranno\ndefinitivamente. Anche se è dubbio\lche tutti spariranno per sempre\. In\n\nogni caso! Cattura i Pokémon\ntrovati in questi misteriosi\lportali. Alcuni portali potrebbero\n\napparire solo se porti con te\nPokémon specifici, ma i Pokémon in\lquei portali devono comunque essere\n\ncatturati. E se un portale si\nrifiutasse di scomparire\ldefinitivamente dopo aver catturato\n\nil Pokémon, sarà sufficiente\nregistrarlo nel Pokédex.
 0x1f4c712: E con questo, me ne vado! Saluta\ntua madre da parte mia, d'accordo,\l<0xFD><0x01>?
 0x1f4c75e: Dunque, sei venuto\. Ah ah ah ah\. non\nè che avessi molta scelta in merito\.
 0x1f4c7af: Aklove! Sono venuto da solo come\nhai chiesto\.<0xFC><0x08><0x18> ora restituisci Nonno\lArthur!
@@ -5297,6 +5298,63 @@
 0x1f543ef: Ci sono ancora altre MT! <0xFC><0x01><0x06><0xFD><0x04><0xFC><0x01><0x04>\nancora in totale! Se le raccogli\ltutte, ti darò un regalo\n\nfantastico!
 0x1f54459: Wow! Ottimo lavoro! Hai un ottimo\nintuito tecnico! Non sapevo che\ltutte queste mosse fossero delle\n\nMT! Grazie a te, ho capito la vera\nprofondità delle MT. Sei un Maestro\ldelle MT! Grazie! Ero entusiasta di\n\nvederle! Come ricompensa, ti prego\ndi accettare questo regalo!
 0x1f5454c: Oh! Sei un Maestro delle MT! Grazie\nper avermi mostrato tante MT. Usa\lun sacco di mosse diverse e libera\n\ntutto il potenziale del tuo\nPokémon!
+0x1f56117: Prendi il pacco del\nProf. Log al\nPokémon-Market di Bellin\nTown!
+0x1f5614a: Segui l'uomo che ha\nrubato il pacco del\nProf. Log!
+0x1f56178: Cerca Marlon e recupera\nil pacco del Prof. Log!
+0x1f561ab: Restituisci il pacco al\nProf. Log!
+0x1f561ce: Vai alla Icicle Cave e\nconsegna il Pokédex di\n<0xFD><0x06>!
+0x1f56201: Sfida la Palestra di\nDresco Town!
+0x1f56220: Parla con l'amico del\nProf. Log a Dresco Town!
+0x1f5624b: Dirigiti subito al\nCinder Volcano e salva\nMoltres!
+0x1f5627f: Sfida la Palestra di\nCrater Town!
+0x1f5629e: Usa la KBT Expressway\nper andare a sud di\nCrater Town.
+0x1f562d1: Attraversa Valley Cave e\ndirigiti verso Blizzard\nCity!
+0x1f56313: Sali su Frost Mountain e\ndirigiti verso Blizzard\nCity!
+0x1f56353: Sfida la Palestra di\nBlizzard City!
+0x1f56374: Ottieni Spaccaroccia\ndall'amico del Maestro\ndel Taglio a Blizzard\nCity!
+0x1f563b2: Viaggia verso sud lungo\nla KBT Expressway fino a\nFallshore City!
+0x1f563ed: Percorri il Percorso 10\nfino a Tehl Town!
+0x1f56417: Dai un'occhiata a Tehl\nTown e trova un modo per\nraggiungere il Percorso\n9!
+0x1f5644a: Batti gli Shadows fino\nalla casa dell'amico di\nArthur sul Percorso 9!
+0x1f56482: Parla con il\nCapopalestra di\nFallshore City a Tehl\nTown!
+0x1f564b6: Sfida la Palestra di\nFallshore City!
+0x1f564d8: Ottieni il potere della\nmegaevoluzione alla\nVilla Tarmigan!
+0x1f56516: Segui Mel fino a Epidimy\nTown!
+0x1f56532: Ottieni Forza da un uomo\na Epidimy Town!
+0x1f5655b: Dirigiti subito al Monte\nThundercap e salva\nZapdos!
+0x1f5658e: Incontra Jax a Epidimy\nTown per discutere la\ntua prossima mossa!
+0x1f565ca: Percorri il Percorso 12\nfino a Dehara City!
+0x1f565eb: Parla con Jax al Casinò\ndi Dehara!
+0x1f56612: Esplora le Rovine del\nVuoto e raggiungi la\ncima!
+0x1f5664a: Il Registro missioni non\nè collegato.
+0x1f5666c: Aiuta Marlon a\ndistruggere i Guerrieri\nOmbra nel Vulcano\nCinder!
+0x1f566a7: Segui Marlon e Véga\nnelle profondità del\nVulcano Cinder!
+0x1f566da: Torna alla base delle\nOmbre a Frozen Heights e\ntrova Zeph!
+0x1f56717: Sfida la Palestra di\nDehara City!
+0x1f56736: Ottieni gli Occhialoni\nda un Montanaro a Dehara\nCity!
+0x1f56766: Attraversa il Grande\nDeserto fino a Vivill\nTown!
+0x1f5679d: Incontra <0xFD><0x06>\ndavanti al magazzino di\nVivill Town!
+0x1f567cf: Entra nel magazzino di\nVivill Town!
+0x1f567f6: Guardati intorno nel\nMagazzino Vivill e trova\nun modo per entrare nel\nCentro di Comando!
+0x1f5683b: Sfida Aklove!
+0x1f5684d: Fuggi dal Mondo\nDistorto!
+0x1f5686a: Salta attraverso il\nportale!
+0x1f56883: Incontra Jax a Vivill\nTown!
+0x1f5689c: Sfida la Palestra di\nAntisis!
+0x1f568b7: Raggiungi Seaport City e\nsali su una nave per\nBorrius Est!
+0x1f568f7: Chiedi a un marinaio a\nSeaport City di portarti\na Polder Town!
+0x1f56930: Sfida la Palestra di\nPolder!
+0x1f5694a: Dirigiti dritto in cima\na Crystal Peak e salva\nBorrius!
+0x1f56986: Sconfiggi Ivory e\ncontinua la scalata fino\nin cima a Crystal Peak!
+0x1f569c7: Sconfiggi Hoopa per\naprirti un passaggio\nverso l'Arma Suprema!
+0x1f569fb: Disattiva l'Arma\nSuprema!
+0x1f56a19: Fai squadra con <0xFD><0x06>\nun'ultima volta per\nsconfiggere Marlon!
+0x1f56a49: Sfida la Palestra di\nRedwood!
+0x1f56a64: Dirigiti a est da Gurun\nTown e sfida la Lega\nPokémon!
+0x1f56aa0: Vai a trovare tua madre!
+0x1f56ab8: Compra un ADM a Seaport\nCity per usare Sub\nsott'acqua!
+0x1f56af0: Usa Sub sott'acqua alle\nRuins of Void e salva\ntua madre da Aklove!
+0x1f56b36: La storia principale è\nstata completata.\nDivertiti a esplorare\nBorrius!
 0x1f56b78: Sembra esserci un Pokémon nella\ntana!
 0x1f56ba2: La tana è vuota.
 0x1f56bb4: Scegli fino a 3 Pokémon da usare\nnella lotta contro <0xFD><0x03>.
@@ -5796,6 +5854,9 @@
 0x1f68158: <0xFC><0x01><0x02><0xFD><0x02> è passato attraverso il\nportale!
 0x1f68177: <0xFC><0x01><0x02><0xFD><0x02> se l'è data a gambe\.
 0x1f68186: <0xFC><0x01><0x06>Susuiiiii!
+0x1f68219: È apparso un selvatico <0xFD><0x03>!
+0x1f6822d: Sfere rimaste: <0xFD><0x03> \btn0CSposta\n\btn00Sfera \btn04Bacca \btn01Fuggi
+0x1f6825b: <0xFD><0x03> è stato catturato!
 0x1f68460: Benvenuto nella Zona Safari! Con\nsoli $500, puoi giocare al Safari\lGame. Vuoi giocare?
 0x1f684c1: Va bene. Torna ancora!
 0x1f684da: Saranno 500 dollari, per favore!
@@ -7975,6 +8036,9 @@
 0x1fafaee: Accidenti\.! Non posso credere che\nnon mi sia mai venuto in mente di\lfarlo\. Sigh\. ma comunque, è stato un\n\nottimo lavoro lì, <0xFD><0x01>.\nChiamerò i miei colleghi a Seaport\lCity, per intercettarlo al porto.\n\nNon c'è altro che possiamo fare\nqui, quindi per ora, prendi questo.\lConsideralo una ricompensa per aver\n\nfatto la tua parte ad aiutare la\ncomunità.
 0x1fafc21: Forse un'altra volta\. Potrei\nchiederti aiuto per risolvere un\laltro caso. Fino ad allora, stai al\n\nsicuro e resta vigile.
 0x1fafc94: Troppa TV
+0x1fb003f: <0xFC><0x01><0x04>Nuova missione:<0xFC><0x01><0x02>
+0x1fb0052: <0xFC><0x01><0x04>Obiettivo della missione aggiornato:<0xFC><0x01><0x02>
+0x1fb0073: <0xFC><0x01><0x04>Missione completata:<0xFC><0x01><0x02>
 0x1fb008b: <0xFC><0x01><0x02>Missioni completate: <0xFC><0x01><0x06><0xFD><0x02>
 0x1fb00a8: Mia\.<0xFC><0x08><0x20> mia figlia\. È caduta in un coma\nprofondo\. È perché lei\.<0xFC><0x08><0x20> ha guardato\ltroppa televisione! Se solo ci\n\nfosse qualcuno là fuori che potesse\naiutarla\. Sembri un Allenatore con\lmolta esperienza in giro per il\n\nmondo. Forse conosci qualcuno che\npotrebbe aiutarla?
 0x1fb019a: Sapevo di aver fatto bene a\nchiedere a te! Oh, grazie! Ti\lprego, trova qualcuno che possa\n\nripristinare la coscienza di mia\nfiglia. Forse uno scienziato o\lqualcosa del genere? Sono sicuro\n\nche da qualche parte ci sia un\nistituto che fa ricerche sul\lcervello\.
@@ -8179,6 +8243,315 @@
 0x26d6bd: Salve, viaggiatore. Ho tre Pokémon\nche hanno disperatamente bisogno di\lun Allenatore affettuoso. Te ne\n\nprenderesti cura per me?
 0x26d733: Oh, va bene allora. Se cambi idea\nsei sempre il benvenuto!
 0x270fa1: Ho provato ad attraversare il\nGrande Deserto a est della città,\lma la tempesta di sabbia era troppo\n\nforte. Continuava a sbattermi la\nsabbia in faccia e non riuscivo a\lvedere nulla. Senza alcun tipo di\n\nprotezione, è impossibile andare da\nnessuna parte. Vorrei solo trovare\lun po'\.
+0x3d4f00: Cattura qualsiasi Pokémon\nselvatico senza fallire.
+0x3d4f26: Una Ball di altissimo livello che offre\nuna probabilità di cattura dei Pokémon\nsuperiore a quella di una Super Ball.
+0x3d4f78: Una Poké Ball di buona qualità che\noffre una percentuale di cattura\npiù alta di una Poké Ball standard.
+0x3d4fd0: Una sfera lanciata per catturare\nun Pokémon selvatico. Ha un design\nin stile capsula.
+0x3d501a: Una speciale Safari Ball usata\nsolo nella Zona Safari. Ha un\nmotivo mimetico.
+0x3d5077: Una Ball un po' diversa che\nfunziona particolarmente bene sui\nPokémon di tipo Acqua e Coleottero.
+0x3d50cc: Una Ball un po' diversa che\nfunziona particolarmente bene sui\nPokémon in fondo al mare.
+0x3d511d: Una Ball un po' diversa che\nfunziona particolarmente bene con\ni Pokémon più deboli.
+0x3d5165: Una Ball un po' diversa che\nfunziona particolarmente bene sui\nPokémon catturati in precedenza.
+0x3d51b4: Una Ball un po' diversa che\ndiventa progressivamente migliore\nquanto più turni passano in lotta.
+0x3d5216: Una Ball comoda che fa diventare\nrapidamente amichevole un Pokémon\nselvatico catturato.
+0x3d5263: Una Ball rara, realizzata\nappositamente per commemorare un\nqualche evento.
+0x3d52b2: Una medicina per ferite spray.\nRipristina i PS di un Pokémon di\n20 punti.
+0x3d52ff: Una medicina di tipo spray. Cura\nun Pokémon dall'avvelenamento.
+0x3d533d: Una medicina di tipo spray. Cura\nla scottatura di un Pokémon.
+0x3d5374: Una medicina spray. Scongela un\nPokémon congelato.
+0x3d53a9: Una medicina di tipo spray.\nRisveglia un Pokémon addormentato.
+0x3d53df: Una medicina di tipo spray. Cura\nun Pokémon dalla paralisi.
+0x3d541b: Una medicina che ripristina\ncompletamente i PS e cura\nqualsiasi problema di stato di un Pokémon.
+0x3d546f: Una medicina spray per le ferite.\nRipristina completamente i PS di\nun Pokémon.
+0x3d54b5: Una medicina per ferite spray.\nRipristina i PS di un Pokémon di\n200 punti.
+0x3d5503: Una medicina per ferite spray.\nRipristina i PS di un Pokémon di\n50 punti.
+0x3d5550: Una medicina spray. Cura tutti i\nproblemi di stato di un Pokémon.
+0x3d5598: Una medicina che rianima un\nPokémon svenuto, ripristinandogli\nmetà dei PS massimi.
+0x3d55ec: Una medicina che rianima un\nPokémon svenuto, ripristinandone\ncompletamente i PS.
+0x3d562b: Acqua ricca di minerali.\nRipristina 50 PS a un Pokémon.
+0x3d567e: Una bibita gassata. Ripristina 60\nPS a un Pokémon.
+0x3d56c2: Una bibita molto dolce. Ripristina\n80 PS a un Pokémon.
+0x3d5706: Latte altamente nutriente.\nRipristina i PS di un Pokémon di\n100 punti.
+0x3d574f: Una polvere medicinale molto\namara. Ripristina 50 PS di un\nPokémon.
+0x3d579e: Una radice molto amara. Ripristina\ndi 200 PS a un Pokémon.
+0x3d57e3: Una polvere medicinale molto\namara. Cura tutti i problemi di\nstato di un Pokémon.
+0x3d5833: Una pianta medicinale molto\namara. Rianima un Pokémon\nsvenuto, ripristinandone completamente i PS.
+0x3d5883: Ripristina di 10 PP i PP di una\nmossa scelta di un Pokémon.
+0x3d58bf: Ripristina completamente i PP di\nuna mossa scelta di un Pokémon.
+0x3d58f4: Ripristina i PP di tutte le mosse\ndi un Pokémon di 10 punti\nciascuno.
+0x3d5934: Ripristina completamente i PP di\ntutte le mosse di un Pokémon.
+0x3d5968: La specialità locale di Lavaridge\nTown. Cura tutti i problemi di\nstato di un Pokémon.
+0x3d59bb: Un flauto di vetro blu che\nrisveglia un Pokémon addormentato.
+0x3d59ef: Un flauto di vetro giallo che fa\nuscire un Pokémon dalla\nconfusione.
+0x3d5a2d: Un flauto di vetro rosso che fa\nuscire un Pokémon\ndall'innamoramento.
+0x3d5a6a: Un flauto di vetro nero.\nSoffiandoci sopra, aumenta il\nlivello dei Pokémon selvatici.
+0x3d5ab0: appaia.
+0x3d5ab8: Un flauto di vetro bianco.\nSoffiandoci sopra, abbassa il\nlivello dei Pokémon selvatici.
+0x3d5afd: appaia.
+0x3d5b06: Un succo puro al 100%. Ripristina\n20 PS a un Pokémon.
+0x3d5b49: Rianima tutti i Pokémon esausti,\nripristinando completamente i PS.
+0x3d5b7a: Sale puro ottenuto sott'acqua. È\nestremamente salato.
+0x3d5bc5: Una graziosa conchiglia trovata\nsott'acqua. È a strisce blu e\nbianche.
+0x3d5c1a: Un piccolo frammento rosso.\nSembra provenire da una specie di\nstrumento costruito molto tempo fa.
+0x3d5c66: Un piccolo frammento blu. Sembra\nprovenire da una specie di\nstrumento costruito molto tempo fa.
+0x3d5cb3: Un piccolo frammento giallo.\nSembra provenire da una sorta di\nstrumento costruito molto tempo fa.
+0x3d5d02: Un piccolo frammento verde.\nSembra provenire da una specie di\nstrumento costruito molto tempo fa.
+0x3d5d50: Una bevanda nutriente per Pokémon.\nAumenta i PS base di un Pokémon.
+0x3d5d96: Una bevanda nutriente per Pokémon.\nAumenta la statistica base Attacco\ndi un Pokémon.
+0x3d5de5: Una bevanda nutriente per Pokémon.\nAumenta la statistica base Difesa\ndi un Pokémon.
+0x3d5e35: Una bevanda nutriente per Pokémon.\nAumenta la statistica base\nVelocità di un Pokémon.
+0x3d5e83: Una bevanda nutriente per Pokémon.\nAumenta la statistica base Attacco\nSpeciale di un Pokémon.
+0x3d5ed3: Una caramella ricca di energia. Fa\nsalire di un livello un Pokémon.
+0x3d5f20: Aumenta leggermente i PP massimi\ndi una mossa scelta di un Pokémon.
+0x3d5f63: Una bevanda nutriente per Pokémon.\nAumenta la statistica base Difesa\nSpeciale di un Pokémon.
+0x3d5fb3: Porta i PP della mossa selezionata\nal massimo per un Pokémon.
+0x3d5ffa: Un oggetto che impedisce la riduzione\ndelle statistiche dei Pokémon della\nsquadra per cinque turni dopo l'uso.
+0x3d604d: Aumenta la probabilità di colpo\ncritico dei Pokémon in lotta.\nL'effetto svanisce se il Pokémon viene ritirato.
+0x3d60a8: Aumenta la statistica Attacco dei\nPokémon in lotta. Svanisce se il\nPokémon viene richiamato.
+0x3d60fc: Aumenta la statistica Difesa dei\nPokémon in lotta. Svanisce se il\nPokémon viene richiamato.
+0x3d6151: Aumenta la statistica Velocità dei\nPokémon in lotta. Svanisce se il\nPokémon viene richiamato.
+0x3d61a4: Aumenta la statistica Precisione\ndei Pokémon in lotta. Svanisce se\nil Pokémon viene richiamato.
+0x3d61fa: Aumenta la statistica Att. Sp. dei\nPokémon in lotta. Svanisce se il\nPokémon viene richiamato.
+0x3d624f: Una bambola attraente. Usala per\nfuggire da qualsiasi lotta contro\nun Pokémon selvatico.
+0x3d6297: Un oggetto attraente. Usalo per\nfuggire da qualsiasi lotta contro\nun Pokémon selvatico.
+0x3d62df: Impedisce che appaiano Pokémon\nselvatici deboli per 200 passi.
+0x3d6318: Impedisce che appaiano Pokémon\nselvatici deboli per 250 passi.
+0x3d6351: Una corda lunga e resistente.\nUsala per fuggire all'istante da\nuna grotta o da un sotterraneo.
+0x3d639c: Impedisce che appaiano Pokémon\nselvatici deboli per 100 passi.
+0x3d63d5: Una pietra particolare che fa\nevolvere alcune specie di Pokémon.\nÈ rossa come il sole.
+0x3d642d: Una pietra particolare che fa\nevolvere certe specie di Pokémon.\nÈ nera come il cielo notturno.
+0x3d648d: Una pietra peculiare che fa\nevolvere alcune specie di Pokémon.\nÈ di colore arancione.
+0x3d64e2: Una pietra particolare che fa\nevolvere alcune specie di Pokémon.\nHa un motivo a fulmine.
+0x3d653f: Una pietra particolare che fa\nevolvere alcune specie di Pokémon.\nÈ di un azzurro chiaro e limpido.
+0x3d6598: Una pietra particolare che fa\nevolvere alcune specie di Pokémon.\nHa un motivo a foglia.
+0x3d65ee: Un fungo piccolo e raro. È molto\napprezzato da certe persone.
+0x3d6633: Un fungo grande e raro. È molto\napprezzato da certe persone.
+0x3d6677: Una perla relativamente piccola\nche scintilla di un bel colore\nargento. Si può vendere a poco.
+0x3d66d0: Una perla di notevoli dimensioni che\nscintilla di un bel colore\nargentato. Può essere venduta a caro prezzo.
+0x3d672c: Una bella sabbia rossa, soffice e\nsetosa. Può essere venduta a un\nprezzo elevato.
+0x3d6778: Una scheggia di una gemma preziosa\nche scintilla di un colore rosso.\nSi può vendere a un prezzo elevato.
+0x3d67ce: Una pepita d'oro puro che emana un\nlucente bagliore. Può essere\nvenduta a caro prezzo.
+0x3d6825: Una graziosa squama a forma di\ncuore, estremamente rara. Brilla\ndebolmente nei colori dell'arcobaleno.
+0x3d6887: Un pezzo di Lettera con un\nsimpatico disegno di Zigzagoon.\nDeve essere tenuta da un Pokémon.
+0x3d68d8: Un pezzo di Lettera con un\nsimpatico disegno di Wingull. Deve\nessere tenuta da un Pokémon.
+0x3d6927: Un pezzo di Lettera con un\nsimpatico disegno di Pikachu. Deve\nessere tenuta da un Pokémon.
+0x3d6976: Un pezzo di Lettera con un\nsimpatico disegno di Magnemite.\nDeve essere tenuta da un Pokémon.
+0x3d69c7: Un foglio di Posta con una\nsimpatica stampa di Slakoth. Deve\nessere tenuto da un Pokémon.
+0x3d6a16: Un foglio di Posta con una\nsimpatica stampa di Wailmer. Deve\nessere tenuto da un Pokémon.
+0x3d6a65: Un pezzo di Mail da far tenere a\nun Pokémon. Porterà la stampa del\nPokémon che lo tiene.
+0x3d6ac0: Un foglio di Posta con una\nsimpatica stampa di Duskull. Deve\nessere tenuto da un Pokémon.
+0x3d6b0f: Un pezzo di Lettera con un\nsimpatico disegno di Bellossom.\nDeve essere tenuta da un Pokémon.
+0x3d6b60: Un oggetto Posta da far tenere a\nun Pokémon. Porterà l'impronta del\nPokémon che lo tiene.
+0x3d6bbb: Un pezzo di Posta con una stampa\nsplendida e sfarzosa. Va tenuto da\nun Pokémon.
+0x3d6c13: Un pezzo di Posta con la stampa di\ntre adorabili Pokémon. Va tenuto\nda un Pokémon.
+0x3d6c6b: Quando lo tiene un Pokémon, in\nlotta viene usato per curare la\nparalisi.
+0x3d6cb0: Se tenuto da un Pokémon, verrà\nusato in lotta per risvegliarlo.
+0x3d6cee: Se tenuto da un Pokémon, verrà\nusato in lotta per curare un\navvelenamento.
+0x3d6d30: Se tenuto da un Pokémon, verrà\nusato in lotta per curare una\nscottatura.
+0x3d6d72: Quando lo tiene un Pokémon, verrà\nusato in lotta per scongelarlo.
+0x3d6db4: Se tenuto da un Pokémon, verrà\nusato in lotta per ripristinare 10\nPP.
+0x3d6df8: Se tenuto da un Pokémon, verrà\nusato in lotta per ripristinare 10\nPS.
+0x3d6e3c: Quando lo tiene un Pokémon, in\nlotta viene usato per curare la\nconfusione.
+0x3d6e81: Quando lo tiene un Pokémon, in\nlotta viene usato per curare\nqualsiasi problema.
+0x3d6ec8: Quando lo tiene un Pokémon, verrà\nusato in lotta per recuperare 30\nPS.
+0x3d6f0c: Strumento tenuto che ripristina i\nPS, ma può confondere chi lo usa.
+0x3d6f4c: Strumento tenuto che ripristina i\nPS, ma può confondere chi lo usa.
+0x3d6f8c: Strumento tenuto che ripristina i\nPS, ma può confondere chi lo usa.
+0x3d6fcc: Strumento tenuto che ripristina i\nPS, ma può confondere chi lo usa.
+0x3d700c: Strumento tenuto che ripristina i\nPS, ma può confondere chi lo usa.
+0x3d704c: Può essere macinato in polvere\ncome ingrediente per medicine.
+0x3d708a: Può essere macinato in polvere\ncome ingrediente per medicinali.
+0x3d70c8: Può essere macinato in polvere\ncome ingrediente per medicinali.
+0x3d7106: Può essere macinato in polvere\ncome ingrediente per medicinali.
+0x3d7144: Può essere macinato in polvere\ncome ingrediente per medicinali.
+0x3d7182: Può essere macinato in polvere\ncome ingrediente per medicinali.
+0x3d71c0: Può essere macinato in polvere\ncome ingrediente per medicinali.
+0x3d71fe: Può essere macinato in polvere\ncome ingrediente per medicinali.
+0x3d723c: Può essere macinato in polvere\ncome ingrediente per medicinali.
+0x3d727a: Può essere macinato in polvere\ncome ingrediente per medicinali.
+0x3d72b8: Può essere macinato in polvere\ncome ingrediente per medicinali.
+0x3d72f6: Può essere macinato in polvere\ncome ingrediente per medicinali.
+0x3d7334: Può essere macinato in polvere\ncome ingrediente per medicinali.
+0x3d7372: Può essere macinato in polvere\ncome ingrediente per medicinali.
+0x3d73b0: Può essere macinato in polvere\ncome ingrediente per medicinali.
+0x3d73ee: Può essere macinato in polvere\ncome ingrediente per medicinali.
+0x3d742c: Può essere macinato in polvere\ncome ingrediente per medicinali.
+0x3d746a: Può essere macinato in polvere\ncome ingrediente per medicinali.
+0x3d74a8: Può essere macinato in polvere\ncome ingrediente per medicinali.
+0x3d74e6: Può essere macinato in polvere\ncome ingrediente per medicinali.
+0x3d7524: Se tenuto da un Pokémon, aumenta\nla statistica Attacco in caso di\nbisogno.
+0x3d7562: Se tenuto da un Pokémon, aumenta\nla statistica Difesa in caso di\nbisogno.
+0x3d75a1: Se tenuto da un Pokémon, aumenta\nla statistica Velocità in caso di\nbisogno.
+0x3d75de: Se tenuto da un Pokémon, aumenta\nla statistica Attacco Speciale in\ncaso di bisogno.
+0x3d761d: Se tenuto da un Pokémon, aumenta\nla statistica Difesa Speciale in\ncaso di bisogno.
+0x3d765c: Quando lo tiene un Pokémon,\naumenta il tasso di colpi critici\nquando è in difficoltà.
+0x3d76a1: Se tenuto da un Pokémon, aumenta\nmolto una statistica in caso di\nbisogno.
+0x3d76e0: Può essere macinato in polvere\ncome ingrediente per medicinali.
+0x3d771e: Un oggetto da tenere da un Pokémon.\nRiflette un bagliore ingannevole che\nabbassa la precisione dell'avversario.
+0x3d777c: Un oggetto da tenere da un Pokémon.\nRipristina qualsiasi statistica\nabbassata in lotta. Si può usare una sola volta.
+0x3d77df: Un oggetto da tenere da un Pokémon.\nFavorisce una forte crescita ma\nriduce la Velocità mentre è tenuto.
+0x3d783d: Attivandolo, tutti i Pokémon della\ntua squadra riceveranno Punti\nEsperienza dalle lotte.
+0x3d789f: Un oggetto da tenere da un Pokémon. Un\nartiglio leggero e affilato. Chi lo\ntiene può riuscire a colpire per primo.
+0x3d7900: Un oggetto da far tenere a un Pokémon.\nUna campanella dal suono rassicurante\nche rende chi la tiene calmo e amichevole.
+0x3d7969: Un oggetto da tenere da un Pokémon.\nLo fa uscire dalla sua\ninfatuazione. Può essere usato una sola volta.
+0x3d79c7: Un oggetto da tenere da un\nPokémon. Potenzia una mossa, che\ndiventa l'unica utilizzabile.
+0x3d7a22: Un oggetto da tenere da parte di\nun Pokémon. Può far tentennare il\nnemico quando subisce danni.
+0x3d7a76: Un oggetto da tenere da un Pokémon. Una\npolvere d'argento scintillante che\npotenzia la potenza delle mosse di tipo Coleottero.
+0x3d7ad6: Strumento tenuto da un Pokémon.\nRaddoppia i soldi della lotta se\nil Pokémon che lo tiene partecipa.
+0x3d7b36: Un oggetto da tenere da un Pokémon.\nTiene lontani i Pokémon selvatici se\nil portatore è il primo della squadra.
+0x3d7b93: Un globo da far tenere a Latios o\nLatias. Aumenta le statistiche\nAtt. Sp. e Dif. Sp.
+0x3d7be5: Un oggetto da tenere da Clamperl.\nUna zanna che brilla di un argento\nintenso. Aumenta la statistica Att. Sp.
+0x3d7c45: Un oggetto da tenere da Clamperl.\nUna squama che brilla di un tenue\nrosa. Aumenta la statistica Dif. Sp.
+0x3d7ca4: Un oggetto da tenere da un Pokémon. Il\nPokémon che lo tiene può fuggire con\nsicurezza da qualsiasi Pokémon selvatico.
+0x3d7d02: Un oggetto da tenere da un\nPokémon. Il Pokémon che lo tiene\nnon può evolversi.
+0x3d7d53: Un oggetto da tenere da un Pokémon.\nIl Pokémon che lo tiene può resistere\na un attacco, restando con solo 1 PS.
+0x3d7db1: Un oggetto da far tenere a un Pokémon.\nUn uovo pieno di felicità che fa\nguadagnare più punti esperienza in battaglia.
+0x3d7e17: Un oggetto da tenere da un Pokémon.\nUna lente che aumenta la probabilità\ndi brutto colpo del Pokémon che la tiene.
+0x3d7e7a: Un oggetto da far tenere a un Pokémon.\nUna speciale pellicola metallica che\naumenta la potenza delle mosse di tipo Acciaio.
+0x3d7ede: Un oggetto da tenere da parte per un\nPokémon. Il Pokémon che lo tiene\nrecupera gradualmente i PS durante la lotta.
+0x3d7f37: Una scaglia spessa e resistente.\nPotrebbe essere tenuta da un\nPokémon di tipo Drago.
+0x3d7f79: Una sfera da tenere da Pikachu che\npotenzia le statistiche offensive.\nToccarla può causare scariche elettriche.
+0x3d7fd5: Un oggetto da tenere da un Pokémon.\nUna sabbia soffice e setosa che\npotenzia la potenza delle mosse di tipo Terra.
+0x3d8036: Un oggetto da tenere da un Pokémon. Una\npietra dura e infrangibile che potenzia\nla potenza delle mosse di tipo Roccia.
+0x3d8096: Un oggetto da tenere da un Pokémon. Un\nseme infuso di energia vitale che\npotenzia la potenza delle mosse di tipo Erba.
+0x3d80fa: Un oggetto da tenere da un Pokémon.\nUn paio di occhiali dall'aspetto\nlosco che potenzia le mosse di tipo Buio.
+0x3d8158: Un oggetto da tenere da un Pokémon.\nUna cintura che potenzia la\ndeterminazione e le mosse di tipo Lotta.
+0x3d81b3: Un oggetto da tenere da un Pokémon.\nUn potente magnete che potenzia la\npotenza delle mosse di tipo Elettro.
+0x3d8214: Un oggetto da tenere da un Pokémon.\nUna gemma a forma di goccia che\npotenzia la potenza delle mosse di tipo Acqua.
+0x3d8276: Un oggetto da tenere da un Pokémon. Un\nbecco lungo e affilato che potenzia la\npotenza delle mosse di tipo Volante.
+0x3d82d6: Un oggetto da far tenere a un Pokémon.\nUn piccolo aculeo velenoso che aumenta\nla potenza delle mosse di tipo Veleno.
+0x3d833b: Un oggetto da tenere da un Pokémon. Un\npezzo di ghiaccio che respinge il\ncalore e potenzia le mosse di tipo Ghiaccio.
+0x3d8397: Un oggetto da tenere da parte di un\nPokémon. Una targhetta sinistra e\ninquietante che potenzia le mosse di tipo Spettro.
+0x3d83ec: Un oggetto da tenere da un Pokémon. Un\ncucchiaio impregnato di potere telecinetico\nche potenzia la potenza delle mosse di tipo Psico.
+0x3d844e: Un oggetto da tenere da un\nPokémon. Un combustibile che\npotenzia la forza delle mosse di tipo Fuoco.
+0x3d84ac: Un oggetto da tenere da un Pokémon.\nUna zanna dura e affilata che potenzia\nla potenza delle mosse di tipo ड्रago.
+0x3d850f: Un oggetto da tenere da un Pokémon.\nUna sontuosa sciarpa che potenzia la\npotenza delle mosse di tipo Normale.
+0x3d856e: Un dispositivo trasparente pieno\ndi ogni genere di dati. È prodotto\ndalla Silph S.p.A.
+0x3d85ba: Un oggetto da tenere da un\nPokémon. Il Pokémon che lo tiene\nrecupera dei PS quando colpisce il nemico.
+0x3d8616: Un oggetto da tenere da un\nPokémon. Potenzia leggermente la\npotenza delle mosse di tipo Acqua.
+0x3d8669: Un oggetto da tenere da parte per un\nPokémon. Il suo aroma ingannevole\nriduce leggermente la precisione del nemico.
+0x3d86c0: Un guanto da far tenere a Chansey.\nAumenta la probabilità di colpo\ncritico di Chansey.
+0x3d8709: Una polvere fine e dura da far\ntenere a Ditto. Aumenta la Difesa\ndi Ditto.
+0x3d8754: Un osso duro di qualche tipo da\ntenere da parte per Cubone o\nMarowak. Aumenta la statistica Attacco.
+0x3d87ab: Un gambo di porro da tenere da\nparte per Farfetch'd. Aumenta il\ntasso di colpo critico di Farfetch'd.
+0x3d8802: Uno strumento da tenere da parte di un\nPokémon. Aumenta la condizione CLASSE\ndel Pokémon che lo tiene nei CONTESTS.
+0x3d885f: Uno strumento da tenere da parte di un\nPokémon. Aumenta la condizione BELLEZZA\ndel Pokémon che lo tiene nei CONTESTS.
+0x3d88be: Uno strumento da tenere da parte di un\nPokémon. Aumenta la condizione GRAZIA\ndel Pokémon che lo tiene nei CONTESTS.
+0x3d891b: Uno strumento da tenere da parte di un\nPokémon. Aumenta la condizione\nINTELLIGENZA del Pokémon che lo tiene nei CONTESTS.
+0x3d8979: Uno strumento da tenere da parte di un\nPokémon. Aumenta la condizione GRINTA\ndel Pokémon che lo tiene nei CONTESTS.
+0x3d89d7: Una bicicletta pieghevole almeno\ndue volte più veloce che andare a\npiedi.
+0x3d8a14: Un astuccio per contenere le\nMonete ottenute al Casinò. Può\ncontenere fino a 9.999 Monete.
+0x3d8a66: Un dispositivo usato per trovare oggetti.\nSe nelle vicinanze c'è un oggetto\nnascosto quando viene usato, emette un segnale.
+0x3d8acc: Una vecchia e malandata canna da\npesca. Usala in qualsiasi specchio\nd'acqua per pescare Pokémon selvatici.
+0x3d8b23: Una nuova canna da pesca di buona\nqualità. Usala in qualsiasi specchio\nd'acqua per pescare Pokémon selvatici.
+0x3d8b7b: Una fantastica canna da pesca\nhi-tech. Usala in qualsiasi\nspecchio d'acqua per pescare Pokémon selvatici.
+0x3d8bd4: Un biglietto necessario per\nviaggiare in nave tra Borrius Ovest\ne Borrius Est. Ha il disegno di una nave.
+0x3d8c2e: Il pass necessario per entrare ai\nPokémon CONTESTS. Riporta il\ndisegno di un nastro premio.
+0x3d8c8a: Un pratico annaffiatoio. Usalo per\nfavorire una crescita forte delle\nBACCHE piantate nel terreno soffice.
+0x3d8ce2: Un pacco contenente componenti\nmeccanici di qualche tipo\nrealizzati dalla DEVON CORPORATION.
+0x3d8d37: Un sacco usato per raccogliere\nautomaticamente la cenere vulcanica\ndurante le passeggiate sulla cenere profonda.
+0x3d8d85: La chiave di NEW MAUVILLE,\ncostruita sotto MAUVILLE CITY.
+0x3d8dcb: Una bicicletta pieghevole in grado\ndi fare acrobazie come salti e\nimpennate.
+0x3d8e10: Una custodia per contenere \Po\Ke\Bl\Lo\CkS\nfatta con un BERRY BLENDER. Quando\nviene agitata, rilascia un \Po\Ke\Bl\Lo\Ck.
+0x3d8e68: Una lettera estremamente\nimportante per ROCCO da parte\ndel PRESIDENTE della DEVON CORPORATION.
+0x3d8ebd: Il biglietto necessario per salpare su\nun traghetto verso una lontana isola\ndel sud. Riporta il disegno di un'isola.
+0x3d8f2a: Una sfera che emana una luce\nrossa. Si dice contenga un potere\nincredibile dai tempi antichi.
+0x3d8f7f: Una sfera che emana una luce blu.\nSi dice contenga un potere\nincredibile dai tempi antichi.
+0x3d8fd5: Un dispositivo usato per cercare\nforme di vita nell'acqua. Sembra\ntroppo difficile da usare.
+0x3d9025: Un paio di occhiali protettivi.\nPermettono a un Allenatore di\nattraversare persino le tempeste di sabbia del deserto.
+0x3d9083: Un frammento di meteorite caduto\ndallo spazio su Crater Town molto\ntempo fa.
+0x3d90d7: Una chiave che disattiva la\nbarriera elettrica degli Shadows a\nThundercap Mt.
+0x3d9139: Una chiave a scheda che sblocca\nle porte con livello di\nautorizzazione 2 nella base degli Shadows.
+0x3d919b: Una chiave a scheda che sblocca\nle porte con livello di\nautorizzazione 3 nella base degli Shadows.
+0x3d91fd: Una chiave a scheda che sblocca\nle porte con livello di\nautorizzazione 1 nella base degli Shadows.
+0x3d925f: Una chiave che apre il vano di\ncarico nella NAVE ABBANDONATA. È\nvecchia e sembra rompersi facilmente.
+0x3d92bf: Il fossile di un antico Pokémon che\nviveva sul fondale marino. Sembra\nfar parte di una radice di pianta.
+0x3d931a: Fossile di un antico Pokémon che\nvive sui fondali marini. Sembra\nessere parte di un artiglio.
+0x3d936f: Un rilevatore che segnala la\npresenza di qualsiasi Pokémon\ninvisibile. È prodotto dalla Devon Corp.
+0x3d93c9: Un attacco estremamente potente.\nTuttavia, se l'utilizzatore viene\ncolpito prima di usare la mossa, tentenna.
+0x3d942c: Artigli affilati e enormi\nghermiscono e squarciano\nrapidamente il nemico con grande potenza.
+0x3d9473: Una raffica pulsante d'acqua\ncolpisce il nemico. Può anche\nconfondere il bersaglio.
+0x3d94c1: L'utilizzatore calma il proprio\nspirito e concentra la mente per\naumentare Att. Sp. e Dif. Sp.
+0x3d9518: Un ruggito selvaggio che costringe il\nbersaglio a ritirarsi dal\ncombattimento. In natura, BOATO pone fine alla lotta.
+0x3d9576: Una mossa che avvelena gravemente\nil nemico. Il danno da veleno\naumenta a ogni turno.
+0x3d95c7: Invoca una tempesta di grandine che dura\ncinque turni. La tempesta di grandine\ndanneggia tutti i tipi tranne il tipo Ghiaccio.
+0x3d962b: L'utilizzatore tende tutti i\nmuscoli e si irrobustisce,\naumentando sia l'Attacco che la Difesa.
+0x3d9687: L'utilizzatore spara semi al\nbersaglio in rapida successione.\nVengono sparati da due a cinque semi alla volta.
+0x3d96e1: Una mossa variabile che cambia\ntipo e potenza a seconda del\nPokémon che la usa.
+0x3d9730: Il tempo diventa soleggiato per\ncinque turni. In questo periodo, le\nmosse di tipo FUOCO sono potenziate.
+0x3d978d: Un nemico provocato può\ninfuriarsi. Potrà quindi usare\nsolo mosse d'attacco.
+0x3d97de: Un raggio gelido viene scagliato\ncontro il nemico. Può lasciare il\nbersaglio congelato.
+0x3d9823: Un violento attacco di neve e\nvento che colpisce tutti i nemici\nin lotta. Può anche congelarli.
+0x3d987a: Un attacco violento che infligge danni\ningenti al bersaglio. Tuttavia,\nl'utilizzatore deve riposarsi nel turno successivo.
+0x3d98dc: Per cinque turni viene creata una\nbarriera di luce. Riduce i danni\nsubiti dagli attacchi di Att. Sp.
+0x3d9930: L'utilizzatore è completamente protetto\ndagli attacchi nel turno in cui viene\nusata. Può fallire se usata consecutivamente.
+0x3d9998: Viene evocata una forte pioggia per\ncinque turni. In questo periodo, le\nmosse di tipo ACQUA sono potenziate.
+0x3d99f2: L'utilizzatore colpisce il\nbersaglio con tentacoli o radici,\nsottraendo PS al bersaglio e curandosi.
+0x3d9a51: Protegge il gruppo con uno scudo\nda ogni problema di stato per\ncinque turni.
+0x3d9a9f: Questa mossa d'attacco diventa più\npotente quanto più il Pokémon non\nsopporta il suo Allenatore.
+0x3d9aef: Un attacco in 2 turni che usa il primo\nturno per assorbire la luce solare, poi\ncolpisce il nemico nel turno successivo.
+0x3d9b58: Il nemico viene colpito con una\nrobusta coda d'acciaio. Può\nridurre la Difesa del bersaglio.
+0x3d9bb0: Un'enorme scarica di elettricità\nviene lanciata contro il nemico.\nPuò causare paralisi.
+0x3d9bfe: Colpisce il nemico con un enorme\nfulmine. Può causare paralisi.
+0x3d9c3f: Provoca un terremoto che colpisce\ntutti i Pokémon in lotta, tranne\nl'utilizzatore.
+0x3d9c8c: Questa mossa d'attacco diventa più\npotente quanto più il Pokémon\nvuole bene al suo Allenatore.
+0x3d9cd9: Un attacco in 2 turni in cui\nl'utilizzatore si sotterra, poi\ncolpisce. Può essere usata per uscire dalle grotte.
+0x3d9d3c: Un potente colpo di energia\ntelecinetica colpisce il bersaglio.\nPuò abbassare la Dif. Sp. del bersaglio.
+0x3d9d9c: Il nemico viene colpito da una\nmassa d'ombra. Può anche ridurne\nla Dif. Sp.
+0x3d9ded: Colpisce il bersaglio con un pugno\nduro come la roccia, ecc. Frantuma\nbarriere come RIFLESSO e SCHERMOLUCE.
+0x3d9e50: L'utilizzatore inizia a muoversi\ncosì rapidamente da creare copie\nillusorie per aumentare la sua elusività.
+0x3d9eac: Viene eretta una barriera resistente\nper cinque turni. Riduce i danni degli\nattacchi fisici per tutto questo tempo.
+0x3d9f0f: Una rapida scarica elettrica\ncolpisce il nemico. Questo attacco\nè impossibile da schivare.
+0x3d9f60: Il nemico viene arrostito da una\npesante fiammata. Può anche\nlasciarlo bruciato.
+0x3d9fb4: Fango tossico viene scagliato\ncontro il nemico con grande forza.\nPuò anche avvelenare il bersaglio.
+0x3da007: Viene evocata una tempesta di sabbia\nche dura cinque turni. Danneggia tutti\ni tipi tranne ROCCIA, TERRA e ACCIAIO.
+0x3da06b: Il nemico viene incenerito da\nun'intensa fiammata. Può anche\nlasciarlo bruciato.
+0x3da0be: Vengono scagliati dei massi contro\nil nemico. Se colpisce, riduce\nanche la Velocità del bersaglio.
+0x3da111: Un attacco estremamente rapido\ncontro un singolo bersaglio. È\nimpossibile da schivare.
+0x3da159: Se il bersaglio viene infuriato da\nquesta mossa, non può usare la\nstessa mossa due volte di fila.
+0x3da1b6: Una mossa d'attacco che diventa\nmolto potente se l'utilizzatore è\navvelenato, bruciato o paralizzato.
+0x3da20f: Una mossa d'attacco che può avere\nun effetto aggiuntivo a seconda\ndel terreno di lotta.
+0x3da262: Una mossa che fa addormentare\nl'utilizzatore per due turni per\nripristinare PS e guarire da ogni problema di stato.
+0x3da2c4: Il bersaglio, se è di sesso\nopposto a quello\ndell'utilizzatore, si innamora e può non attaccare.
+0x3da31e: Un attacco che dà all'utilizzatore\nl'opportunità di rubare lo\nstrumento tenuto dal nemico.
+0x3da369: Il nemico viene colpito con ali\ndure come l'acciaio. Può anche\naumentare la Difesa dell'utilizzatore.
+0x3da3bd: Un potere speciale viene trasmesso\nal nemico, facendogli scambiare le\nabilità con l'utilizzatore.
+0x3da416: Una mossa che ruba gli effetti di\nqualunque mossa di cambiamento di stato o\ndi guarigione che il bersaglio tenta di usare.
+0x3da477: Una mossa di potenza massima e di grande\nferocia, ma che riduce drasticamente la\nstatistica Att. Sp. dell'utilizzatore.
+0x3da4dc: Attacca il nemico con lame o artigli\naffilati. Può anche abbattere alberi\nsottili e l'erba fuori dalla lotta.
+0x3da545: L'utilizzatore si libra in volo nel primo turno,\npoi attacca nel turno successivo. Può essere usata\nper volare verso qualsiasi città già conosciuta.
+0x3da5ab: Crea un'enorme onda, poi la\nabbatte sul bersaglio. Può essere\nusata per viaggiare sull'acqua.
+0x3da608: L'utilizzatore accumula un'enorme potenza,\npoi si lancia contro il nemico. Può essere\nusata per spostare grossi massi rotondi.
+0x3da66d: Scatena un potente lampo di luce\nche riduce la precisione del\nbersaglio. Illumina anche le grotte buie.
+0x3da6cd: Colpisce il nemico con un attacco\nduro come la roccia. Può\nfrantumare i massi spaccati.
+0x3da71e: Un potente attacco di carica. Può\nessere usato per risalire una\ncascata impetuosa.
+0x3da76c: Un attacco in 2 turni in cui\nl'utilizzatore si immerge sott'acqua\nnel primo turno, poi colpisce nel turno successivo.
+0x3da7d1: Un pacco da consegnare al Prof.\nLog dal Pokémon Mart di Bellin\nTown.
+0x3da81a: Un flauto che si dice risvegli\nistantaneamente qualunque Pokémon.\nHa un tono incantevole.
+0x3da866: Un paio di calzini sporchi trovati\nnelle fogne di Antisis City.
+0x3da8b4: Un pacco contenente un Pokédex per\nil tuo rivale.
+0x3da907: Un anello che permette ai Pokémon\nche tengono una Megapietra di\nMegaevolversi in lotta.
+0x3da95a: Un pezzo d'ambra che contiene i\ngeni di un antico Pokémon. È\ntrasparente con una sfumatura rossastra.
+0x3da9bb: Una chiave a scheda che sblocca le\nporte con livello di accesso 1 nel\nThe Shadow.
+0x3daa0a: Una chiave che aziona l'ascensore\nnel nascondiglio del TEAM ROCKET.\nReca il logo del TEAM ROCKET.
+0x3daa64: Il fossile di un antico Pokémon\nche viveva sui fondali marini.\nSembra essere parte di una conchiglia.
+0x3daabd: Fossile di un antico Pokémon che\nvive sui fondali marini. Sembra\nessere parte di una conchiglia.
+0x3dab13: Un apparecchio che rende visibili\ni Pokémon invisibili. È prodotto\ndalla SILPH CO.
+0x3dab59: Una bicicletta pieghevole che\npermette di muoversi più\nvelocemente delle SCARPE DA CORSA.
+0x3dab9f: Una mappa molto comoda che si può\nconsultare in qualsiasi momento.\nMostra persino la tua posizione attuale.
+0x3dabf7: Un dispositivo che segnala la presenza\ndi Allenatori che vogliono combattere.\nLa batteria si ricarica mentre viaggi.
+0x3dac51: Un dispositivo che ti permette di\nricordare ciò che hai sentito e\nvisto sulle persone famose.
+0x3daca5: Una custodia per contenere MT e\nMN. È collocata nel settore del\nCubo per gli oggetti importanti.
+0x3dad01: Una sacca per portare le Bacche. È\ncollocata nel settore del Cubo per\ngli oggetti importanti.
+0x3dad5c: Un televisore sintonizzato su un\nprogramma con consigli utili per\nAllenatori alle prime armi.
+0x3dadae: Un pass per i traghetti tra ONE,\nTWO e THREE ISLAND. Riporta il\ndisegno di tre isole.
+0x3dae08: Un pass per i traghetti tra\nAranciopoli e le Isole Sevii.\nPresenta il disegno di un arcobaleno.
+0x3dae68: Un tè aromatico preparato da\nun'anziana signora. Disseta\npersino la sete peggiore.
+0x3daeb6: Un biglietto necessario per salire\na bordo della nave per NAVEL ROCK.\nBrilla di una luce mistica.
+0x3daf07: Un biglietto necessario per salire\na bordo della nave per BIRTH\nISLAND. Splende magnificamente.
+0x3daf52: Un barattolo per conservare la\nPOLVERE BACCA prodotta con un\nFRANTUMABACCHE.
+0x3daf8d: Una gemma di squisita bellezza che\nemana una luce rossa. Simboleggia\nla passione.
+0x3dafd6: Una gemma di squisita bellezza che\nemana una luce blu. Simboleggia\nl'onestà.
 0x3eed08: Bellin Town
 0x3eed22: Città Cratere
 0x3eed67: Cittadina di Tarmigan
@@ -8233,7 +8606,419 @@
 0x3ef207: Rovine del Deserto
 0x3ef214: Tomba Ghiacciata
 0x3ef22e: Dept. di Dehara
+0x3fb500: Fuori!<0xFC><0x09>
+0x3fb508: <0xFD><0x13> impedisce la fuga con <0xFD><0x1A>!
+0x3fb525: Non puoi fuggire!
+0x3fb534: <0xFD><0x0F> non può fuggire!
+0x3fb545: Colpito <0xFD><0x00> volte!
+0x3fb555: <0xFD><0x11> si è addormentato!
+0x3fb565: <0xFD><0x13>'s <0xFD><0x1A> ha fatto addormentare <0xFD><0x11>!
+0x3fb57c: <0xFD><0x10> sta già dormendo!
+0x3fb592: <0xFD><0x0F> è già addormentato!
+0x3fb5a8: <0xFD><0x10> non è stato influenzato!
+0x3fb5bc: <0xFD><0x11> è stato avvelenato!
+0x3fb5cd: <0xFD><0x13>'s <0xFD><0x1A> ha avvelenato <0xFD><0x11>!
+0x3fb5e2: <0xFD><0x0F> subisce danni a causa del veleno!
+0x3fb5f8: <0xFD><0x10> è già avvelenato.
+0x3fb610: <0xFD><0x11> è gravemente avvelenato!
+0x3fb626: <0xFD><0x10>L'energia di <0xFD><0x10> è stata drenata!
+0x3fb641: <0xFD><0x11> è stato bruciato!
+0x3fb650: <0xFD><0x13>'s <0xFD><0x1A> ha scottato <0xFD><0x11>!
+0x3fb663: <0xFD><0x0F> è danneggiato dalla scottatura!
+0x3fb67b: <0xFD><0x10> è già bruciato.
+0x3fb692: <0xFD><0x11> è stato congelato completamente!
+0x3fb6a7: <0xFD><0x13>'s <0xFD><0x1A> ha congelato <0xFD><0x11>!
+0x3fb6bf: <0xFD><0x0F> è congelato!
+0x3fb6d3: <0xFD><0x10> si è scongelato!
+0x3fb6e5: <0xFD><0x0F> si è scongelato!
+0x3fb6f7: <0xFD><0x0F> è stato scongelato da <0xFD><0x14>!
+0x3fb70f: <0xFD><0x11> è paralizzato! Potrebbe non\nriuscire a muoversi!
+0x3fb73a: <0xFD><0x13>'s <0xFD><0x1A> ha paralizzato <0xFD><0x11>! Potrebbe\nnon riuscire a muoversi!
+0x3fb76a: <0xFD><0x0F> è paralizzato! Non può muoversi!
+0x3fb78a: <0xFD><0x10> è già paralizzato!
+0x3fb7a3: <0xFD><0x10> è guarito dalla paralisi!
+0x3fb7bf: <0xFD><0x10>Il sogno di <0xFD><0x10> è stato divorato!
+0x3fb7d5: <0xFD><0x0F>'s <0xFD><0x00> non può aumentare\nulteriormente!
+0x3fb7ee: <0xFD><0x10>La <0xFD><0x10> di <0xFD><0x00> non può più scendere!
+0x3fb806: <0xFD><0x00> della tua squadra non funziona\npiù!
+0x3fb826: La mossa <0xFD><0x00> del nemico non funziona\npiù!
+0x3fb844: <0xFD><0x0F> è confuso!
+0x3fb854: <0xFD><0x0F> si è ripreso dalla confusione!
+0x3fb871: <0xFD><0x11> si è confuso!
+0x3fb885: <0xFD><0x10> è già confuso!
+0x3fb89d: <0xFD><0x10> si è innamorato!
+0x3fb8ae: <0xFD><0x0F> è innamorato di <0xFD><0x13>!
+0x3fb8c5: <0xFD><0x0F> è immobilizzato dall'amore!
+0x3fb8e0: <0xFD><0x10> è stato spazzato via!
+0x3fb8f3: <0xFD><0x0F> è diventato di tipo <0xFD><0x00>!
+0x3fb914: <0xFD><0x0F> ha tentennato!
+0x3fb921: <0xFD><0x10> ha recuperato PS!
+0x3fb935: <0xFD><0x10>I PS di <0xFD><0x10> sono al massimo!
+0x3fb946: <0xFD><0x2A>La <0xFD><0x2A> di <0xFD><0x14> ha aumentato la Dif.\nSp.!
+0x3fb95e: <0xFD><0x2A>'s <0xFD><0x14> ha aumentato di poco la\nDifesa Speciale!
+0x3fb97f: <0xFD><0x2A>La <0xFD><0x2A> di <0xFD><0x14> ha aumentato la Difesa!
+0x3fb997: <0xFD><0x2A>'s <0xFD><0x14> ha aumentato di poco la\nDifesa!
+0x3fb9b8: <0xFD><0x38>La squadra di <0xFD><0x38> è avvolta da un\nvelo!
+0x3fb9d9: <0xFD><0x10>La squadra di <0xFD><0x10> è protetta da\nSalvaguardia!
+0x3fb9ff: <0xFD><0x38>La squadra di <0xFD><0x38> non è più protetta\nda Salvaguardia!
+0x3fba2f: <0xFD><0x0F> si è addormentato!
+0x3fba41: <0xFD><0x0F> ha dormito ed è guarito!
+0x3fba5e: <0xFD><0x0F> ha scatenato un turbine!
+0x3fba79: <0xFD><0x0F> ha assorbito la luce del sole!
+0x3fba8e: <0xFD><0x0F> ha abbassato la testa!
+0x3fbab2: <0xFD><0x0F> è volato in alto!
+0x3fbac3: <0xFD><0x0F> ha scavato una buca!
+0x3fbad2: <0xFD><0x0F> si è nascosto sott'acqua!
+0x3fbae5: <0xFD><0x0F> è balzato in piedi!
+0x3fbaf3: <0xFD><0x10> è stato stritolato da Legatutto\ndi <0xFD><0x0F>!
+0x3fbb11: <0xFD><0x10> è stato intrappolato nel vortice!
+0x3fbb2f: <0xFD><0x10> è stato intrappolato da <0xFD><0x14>!
+0x3fbb4c: <0xFD><0x10> è stato avvolto da <0xFD><0x0F>!
+0x3fbb62: <0xFD><0x0F> ha stretto in una morsa <0xFD><0x10>!
+0x3fbb71: <0xFD><0x0F> subisce danni da <0xFD><0x00>!
+0x3fbb83: <0xFD><0x0F> è stato liberato da <0xFD><0x00>!
+0x3fbb99: <0xFD><0x0F> ha continuato e si è schiantato!
+0x3fbbb4: <0xFD><0x2A> è avvolto nella Nebbia!
+0x3fbbd0: <0xFD><0x13> è protetto da Nebbia!
+0x3fbbe9: <0xFD><0x0F> si sta caricando!
+0x3fbbff: <0xFD><0x0F> subisce il contraccolpo!
+0x3fbc16: <0xFD><0x0F> si è protetto!
+0x3fbc2b: <0xFD><0x0F> è colpito dalla tempesta di\nsabbia!
+0x3fbc4c: <0xFD><0x0F> è colpito dalla grandine!
+0x3fbc62: <0xFD><0x28>L'effetto di <0xFD><0x28> di <0xFD><0x00> è svanito!
+0x3fbc74: <0xFD><0x10> è stato seminato!
+0x3fbc83: <0xFD><0x10> ha schivato l'attacco!
+0x3fbc99: <0xFD><0x0F>I PS di <0xFD><0x0F> vengono succhiati da\nParassiseme!
+0x3fbcbe: <0xFD><0x0F> è profondamente addormentato.
+0x3fbcd1: <0xFD><0x0F> si è svegliato!
+0x3fbcdd: Ma l'Uproar di <0xFD><0x13> l'ha tenuto\nsveglio!
+0x3fbcfc: <0xFD><0x0F> si è svegliato nel Baccano!
+0x3fbd16: <0xFD><0x0F> ha scatenato un gran baccano!
+0x3fbd2b: <0xFD><0x0F> sta facendo Baccano!
+0x3fbd43: <0xFD><0x0F> si è calmato.
+0x3fbd53: Ma <0xFD><0x10> non può dormire con Boato!
+0x3fbd74: <0xFD><0x0F> ha accumulato <0xFD><0x00>!
+0x3fbd86: <0xFD><0x0F> non può accumulare altro!
+0x3fbda3: Ma <0xFD><0x10> non può dormire con Boato!
+0x3fbdc4: Ma Schiamazzo ha tenuto <0xFD><0x10> sveglio!
+0x3fbde2: <0xFD><0x10> è rimasto sveglio grazie al suo\n<0xFD><0x19>!
+0x3fbe00: <0xFD><0x0F> sta immagazzinando energia!
+0x3fbe16: <0xFD><0x0F> ha sprigionato energia!
+0x3fbe2b: <0xFD><0x0F> è diventato confuso a causa della\nfatica!
+0x3fbe4e: <0xFD><0x23> ha raccolto $<0xFD><0x00>!
+0x3fbe61: <0xFD><0x10> non ha avuto effetto!
+0x3fbe73: <0xFD><0x0F> si è trasformato in <0xFD><0x00>!
+0x3fbe8b: <0xFD><0x0F> ha creato un Sostituto!
+0x3fbea1: <0xFD><0x0F> ha già un Sostituto!
+0x3fbebe: Il Sostituto ha subito danni al\nposto di <0xFD><0x10>!
+0x3fbee2: <0xFD><0x10>Il Sostituto di <0xFD><0x10> è svanito!
+0x3fbefa: <0xFD><0x0F> deve ricaricarsi!
+0x3fbf0c: <0xFD><0x10>La Ira di <0xFD><0x10> sta crescendo!
+0x3fbf23: <0xFD><0x10>La <0xFD><0x10> di <0xFD><0x00> è stata disabilitata!
+0x3fbf39: <0xFD><0x0F> non è più inibito!
+0x3fbf51: <0xFD><0x10> ha ricevuto Encore!
+0x3fbf63: <0xFD><0x0F>L'Encore di <0xFD><0x0F> è terminato!
+0x3fbf76: <0xFD><0x0F> ha preso di mira <0xFD><0x10>!
+0x3fbf89: <0xFD><0x0F> ha appreso <0xFD><0x00>!
+0x3fbf99: <0xFD><0x0F> cerca di portare con sé il suo\navversario!
+0x3fbfbf: <0xFD><0x10> ha portato via <0xFD><0x0F> con sé!
+0x3fbfd3: Ridotto il <0xFD><0x10> di <0xFD><0x00> di <0xFD><0x01>!
+0x3fbfea: <0xFD><0x0F> ha rubato <0xFD><0x10>'s <0xFD><0x16>!
+0x3fc011: <0xFD><0x10> è caduto in un Incubo!
+0x3fc02b: <0xFD><0x0F> è bloccato in un Incubo!
+0x3fc048: <0xFD><0x0F> ha ridotto i propri PS e ha\nlanciato una Maledizione su <0xFD><0x10>!
+0x3fc072: <0xFD><0x0F> è afflitto dalla Maledizione!
+0x3fc090: Le punte sono state sparse\ntutt'intorno alla squadra\navversaria!
+0x3fc0dc: <0xFD><0x0F> ha individuato <0xFD><0x10>!
+0x3fc0ee: <0xFD><0x0F>Il contatore di Perish di <0xFD><0x0F> è\nsceso a <0xFD><0x00>!
+0x3fc10c: <0xFD><0x0F> si è preparato!
+0x3fc11e: <0xFD><0x10> ha resistito al colpo!
+0x3fc132: Magnitudo <0xFD><0x00>!
+0x3fc140: <0xFD><0x0F> ha ridotto i propri PS e\nmassimizzato l'Attacco!
+0x3fc168: <0xFD><0x0F> ha copiato le variazioni delle\nstatistiche di <0xFD><0x10>!
+0x3fc185: <0xFD><0x0F> si è liberato da <0xFD><0x10>'s <0xFD><0x00>!
+0x3fc19d: <0xFD><0x0F> si è liberato di Parassiseme!
+0x3fc1c6: <0xFD><0x0F> è fuggito dalla lotta!
+0x3fc1db: <0xFD><0x0F> ha previsto un attacco!
+0x3fc1f1: <0xFD><0x10> ha subito l'attacco di <0xFD><0x00>!
+0x3fc208: <0xFD><0x0F> ha scelto <0xFD><0x14> come suo destino!
+0x3fc224: <0xFD><0x00>L'attacco di <0xFD><0x00>!
+0x3fc231: <0xFD><0x10> è diventato il centro\ndell'attenzione!
+0x3fc254: <0xFD><0x0F> ha iniziato a caricare energia!
+0x3fc26d: Forza Natura si è trasformata in <0xFD><0x14>!
+0x3fc28a: <0xFD><0x0F>Lo stato di <0xFD><0x0F> è tornato normale!
+0x3fc2aa: <0xFD><0x10> è stato colpito da Tormento!
+0x3fc2c7: <0xFD><0x0F> sta concentrando la sua\nattenzione!
+0x3fc2e3: <0xFD><0x10> è caduto nella Provocazione!
+0x3fc2fa: <0xFD><0x0F> è pronto ad aiutare <0xFD><0x10>!
+0x3fc312: <0xFD><0x0F> ha scambiato lo strumento con il\nsuo avversario!
+0x3fc337: <0xFD><0x0F> ha ottenuto <0xFD><0x00>.
+0x3fc347: <0xFD><0x10> ha ottenuto <0xFD><0x01>.
+0x3fc357: <0xFD><0x0F> ha ottenuto <0xFD><0x00>. <0xFD><0x10> ha ottenuto\n<0xFD><0x01>.
+0x3fc377: <0xFD><0x0F> ha copiato la <0xFD><0x10> di <0xFD><0x19>!
+0x3fc38a: <0xFD><0x0F> ha espresso un desiderio!
+0x3fc39a: <0xFD><0x00>Il desiderio di <0xFD><0x00> si è avverato!
+0x3fc3af: <0xFD><0x0F> ha messo radici!
+0x3fc3c5: <0xFD><0x0F> ha assorbito nutrienti con le sue\nradici!
+0x3fc3eb: <0xFD><0x10> si è ancorato con le radici!
+0x3fc40e: <0xFD><0x0F> ha reso <0xFD><0x10> assonnato!
+0x3fc421: <0xFD><0x0F> ha fatto cadere <0xFD><0x10>'s <0xFD><0x16>!
+0x3fc439: <0xFD><0x0F> ha scambiato la sua abilità con\nquella dell'avversario!
+0x3fc461: <0xFD><0x0F> ha sigillato le mosse\ndell'avversario!
+0x3fc483: <0xFD><0x0F> vuole che l'avversario porti\nrancore!
+0x3fc4ab: <0xFD><0x0F>La <0xFD><0x0F> di <0xFD><0x00> ha perso tutti i suoi PP\na causa di Rancore!
+0x3fc4d6: <0xFD><0x0F> si è avvolto in <0xFD><0x14>!
+0x3fc4f0: <0xFD><0x0F>La <0xFD><0x0F> di <0xFD><0x14> è stata rispedita al\nmittente da Specchiovelo!
+0x3fc518: <0xFD><0x0F> attende che il suo avversario\nfaccia una mossa!
+0x3fc53d: <0xFD><0x10> ha rubato la mossa di <0xFD><0x13>!
+0x3fc554: La potenza dell'elettricità è stata\nindebolita!
+0x3fc576: La potenza del Fuoco si è\nindebolita!
+0x3fc591: <0xFD><0x0F> ha trovato un <0xFD><0x16>!
+0x3fc5a2: Un aroma rilassante si è diffuso\nnell'area!
+0x3fc5cc: Gli strumenti non possono essere\nusati ora.<0xFC><0x08><0x40>
+0x3fc5e8: Per <0xFD><0x13>, <0xFD><0x16> <0xFD><0x00>
+0x3fc60c: <0xFD><0x0F> ha perso la concentrazione e non\nsi è potuto muovere!
+0x3fc631: <0xFD><0x10> è stato trascinato fuori!
+0x3fc646: La barriera si è frantumata!
+0x3fc65a: Ma non ha avuto effetto!
+0x3fc670: <0xFD><0x12> non ha più mosse!
+0x3fc687: <0xFD><0x12>La <0xFD><0x12> di <0xFD><0x14> è disabilitata!
+0x3fc69d: <0xFD><0x12> non può usare la stessa mossa due\nvolte di fila a causa di Tormento!
+0x3fc6d6: <0xFD><0x12> non può usare <0xFD><0x14> dopo\nProvocazione!
+0x3fc6f8: <0xFD><0x12> non può usare la mossa sigillata\n<0xFD><0x14>!
+0x3fc715: <0xFD><0x13>La <0xFD><0x13> di <0xFD><0x1A> ha fatto piovere!
+0x3fc72b: <0xFD><0x13>'s <0xFD><0x1A> ha aumentato la sua Velocità!
+0x3fc745: <0xFD><0x10> è stato protetto da <0xFD><0x19>!
+0x3fc75d: <0xFD><0x10>'s <0xFD><0x19> impedisce a <0xFD><0x0F> di usare <0xFD><0x14>!
+0x3fc780: <0xFD><0x10> ha recuperato PS usando la sua <0xFD><0x19>!
+0x3fc79d: <0xFD><0x10>'s <0xFD><0x19> ha reso <0xFD><0x14> inutile!
+0x3fc7b6: <0xFD><0x10>La <0xFD><0x10> di <0xFD><0x19> l'ha reso di tipo <0xFD><0x00>!
+0x3fc7d3: <0xFD><0x11>L'abilità di <0xFD><0x11> <0xFD><0x19> impedisce la\nparalisi!
+0x3fc7ef: <0xFD><0x10>'s <0xFD><0x19> impedisce il corteggiamento!
+0x3fc809: <0xFD><0x11>L'abilità di <0xFD><0x11> <0xFD><0x19> impedisce\nl'avvelenamento!
+0x3fc825: <0xFD><0x10>'s <0xFD><0x19> impedisce la confusione!
+0x3fc841: <0xFD><0x10>'s <0xFD><0x19> ha aumentato la sua potenza\ndi Fuoco!
+0x3fc860: <0xFD><0x10> si è ancorato!
+0x3fc873: con <0xFD><0x19>!
+0x3fc87b: <0xFD><0x13>'s <0xFD><0x1A> abbassa l'Attacco di <0xFD><0x10>!
+0x3fc895: <0xFD><0x13>'s <0xFD><0x1A> impedisce la diminuzione\ndelle statistiche!
+0x3fc8b1: <0xFD><0x10>'s <0xFD><0x19> ferisce <0xFD><0x0F>!
+0x3fc8c2: <0xFD><0x13> ha copiato <0xFD><0x00> di <0xFD><0x01>!
+0x3fc8d5: <0xFD><0x11>La <0xFD><0x11> di <0xFD><0x1B> impedisce le scottature!
+0x3fc8ed: <0xFD><0x10>La <0xFD><0x10> di <0xFD><0x19> blocca <0xFD><0x14>!
+0x3fc900: <0xFD><0x13>'s <0xFD><0x1A> blocca <0xFD><0x14>!
+0x3fc913: <0xFD><0x0F> ha ripristinato i PS con <0xFD><0x18>!
+0x3fc92c: poco!
+0x3fc935: <0xFD><0x13>'s <0xFD><0x1A> ha sollevato una tempesta di\nsabbia!
+0x3fc955: <0xFD><0x13>'s <0xFD><0x1A> ha intensificato i raggi del\nsole!
+0x3fc979: <0xFD><0x13>'s <0xFD><0x1A> impedisce la perdita di <0xFD><0x00>!
+0x3fc993: <0xFD><0x10>'s <0xFD><0x19> ha fatto innamorare <0xFD><0x0F>!
+0x3fc9aa: <0xFD><0x10>La <0xFD><0x10> di <0xFD><0x19> ha reso inefficace <0xFD><0x14>!
+0x3fc9c7: <0xFD><0x13>Il problema di <0xFD><0x13> di <0xFD><0x1A> è stato\ncurato da <0xFD><0x00>!
+0x3fc9e5: Ha assorbito la Melma Liquida!
+0x3fca03: <0xFD><0x13> si è trasformato!
+0x3fca13: <0xFD><0x10> ha subito l'attacco!
+0x3fca2c: <0xFD><0x00>L'abilità di <0xFD><0x00> <0xFD><0x17> impedisce il\ncambio!
+0x3fca49: <0xFD><0x10>'s <0xFD><0x19> ha impedito a <0xFD><0x13>'s <0xFD><0x00> di\nfunzionare!
+0x3fca71: <0xFD><0x13>L'abilità di <0xFD><0x13> <0xFD><0x1A> lo ha reso\ninefficace!
+0x3fca8e: <0xFD><0x11>L'abilità di <0xFD><0x11> <0xFD><0x1B> impedisce il\ntentennamento!
+0x3fcaaa: <0xFD><0x0F>'s <0xFD><0x18> impedisce a <0xFD><0x10>'s <0xFD><0x19> di\nfunzionare!
+0x3fcad1: <0xFD><0x13>'s <0xFD><0x1A> ha guarito il suo problema di\n<0xFD><0x00>!
+0x3fcaef: <0xFD><0x13>La <0xFD><0x13> di <0xFD><0x1A> non ha avuto effetto su\n<0xFD><0x11>!
+0x3fcb0c: <0xFD><0x0F> ha troppa paura per muoversi!
+0x3fcb26: Fantasma: Vattene\.\. Vattene\.\.
+0x3fcb41: di molto
+0x3fcb4a: è aumentata!
+0x3fcb50: gravemente
+0x3fcb59: svenuto!
+0x3fcb5f: <0xFD><0x0F> di <0xFD><0x00> <0xFD><0x01>
+0x3fcb6a: <0xFD><0x10> di <0xFD><0x00> <0xFD><0x01>
+0x3fcb75: Usando <0xFD><0x16>, <0xFD><0x00> di <0xFD><0x13> <0xFD><0x01>
+0x3fcb8f: <0xFD><0x0F> di <0xFD><0x00> <0xFD><0x01>
+0x3fcb9a: <0xFD><0x10> di <0xFD><0x00> <0xFD><0x01>
+0x3fcba5: <0xFD><0x0F>Le statistiche di <0xFD><0x0F> non possono\npiù salire!
+0x3fcbc5: <0xFD><0x10>Le statistiche di <0xFD><0x10> non possono\npiù scendere!
+0x3fcbe4: Colpo critico!
+0x3fcbf4: È un KO in un colpo solo!
+0x3fcc07: <0xFC><0x08><0x20>1, <0xFC><0x08><0x0F>2, e<0xFC><0x08><0x0F>\. <0xFC><0x08><0x0F>\. <0xFC><0x08><0x0F>\. <0xFC><0x08><0x0F><0xFC><0x10><0x31><0x00>Puf!
+0x3fcc33: E\.
+0x3fcc39: Le mosse MN non possono essere\ndimenticate ora.
+0x3fcc5b: Non è molto efficace\.
+0x3fcc74: È superefficace!
+0x3fcc8a: <0xFC><0x10><0x11><0x00>Scappato con successo!
+0x3fcca0: <0xFC><0x10><0x11><0x00><0xFD><0x0F> è scappato usando la sua <0xFD><0x16>!
+0x3fccbb: <0xFC><0x10><0x11><0x00><0xFD><0x0F> è scappato usando <0xFD><0x18>!
+0x3fccd2: <0xFC><0x10><0x11><0x00>Il Pokémon selvatico <0xFD><0x00> è fuggito!
+0x3fcce4: Il giocatore ha sconfitto <0xFD><0x20>!
+0x3fccf8: Il giocatore ha sconfitto <0xFD><0x20> e <0xFD><0x21>!
+0x3fcd0f: Il giocatore ha perso contro <0xFD><0x20>!
+0x3fcd27: Il giocatore ha perso contro <0xFD><0x20> e <0xFD><0x21>!
+0x3fcd41: Il giocatore ha pareggiato con <0xFD><0x20>!
+0x3fcd66: Il giocatore ha pareggiato con <0xFD><0x20> e\n<0xFD><0x21>!
+0x3fcd92: <0xFC><0x10><0x11><0x00><0xFD><0x20> è fuggito!
+0x3fcd9f: <0xFC><0x10><0x11><0x00><0xFD><0x20> e <0xFD><0x21> sono fuggiti!
+0x3fcdb3: No! Non si può scappare da una\nlotta tra Allenatori!
+0x3fcde2: Non puoi fuggire!
+0x3fcdf2: Ma non è successo niente!
+0x3fce08: Ma non è riuscito!
+0x3fce17: Si è fatto male per la confusione!
+0x3fce38: Speculmossa è fallita!
+0x3fce50: Ha iniziato a piovere!
+0x3fce64: È iniziato un diluvio!
+0x3fce78: La pioggia continua a cadere.
+0x3fce90: L'acquazzone continua.
+0x3fcea8: La pioggia è cessata.
+0x3fceba: Si è alzata una tempesta di sabbia!
+0x3fcece: La tempesta di sabbia infuria.
+0x3fcee3: La tempesta di sabbia si è placata.
+0x3fcefb: La luce del sole si è\nintensificata!
+0x3fcf14: La luce del sole è intensa.
+0x3fcf2c: La luce del sole si è attenuata.
+0x3fcf40: Ha iniziato a grandinare!
+0x3fcf54: La grandine continua a cadere.
+0x3fcf6c: La grandine è cessata.
+0x3fcf7e: Ma non è riuscito a rigurgitare\nnulla!
+0x3fcfa0: Ma non è riuscito a ingoiare nulla!
+0x3fcfc2: Il vento si è trasformato in\nOndacalda!
+0x3fcfe4: Tutte le variazioni delle\nstatistiche sono state annullate!
+0x3fd006: Monete sparse ovunque!
+0x3fd022: Era troppo debole per creare un\nSostituto!
+0x3fd048: I Pokémon in lotta hanno condiviso\nil dolore!
+0x3fd068: Una campana ha suonato!
+0x3fd077: Tutti i Pokémon colpiti andranno KO\nin tre turni!
+0x3fd0a7: Non ci sono più PP per questa\nmossa!
+0x3fd0ca: Ma non c'erano più PP per la mossa!
+0x3fd0f1: <0xFD><0x0F> ha ignorato gli ordini mentre\ndormiva!
+0x3fd111: <0xFD><0x0F> ha ignorato gli ordini!
+0x3fd124: <0xFD><0x0F> si è addormentato!
+0x3fd135: <0xFD><0x0F> sta poltrendo!
+0x3fd14b: <0xFD><0x0F> non obbedisce!
+0x3fd15a: <0xFD><0x0F> si è voltato dall'altra parte!
+0x3fd16a: <0xFD><0x0F> ha finto di non accorgersene!
+0x3fd186: <0xFD><0x1C><0xFD><0x1D><0xFD><0x1C> <0xFD><0x1D> sta per usare <0xFD><0x01>. <0xFD><0x23>\ncambiare Pokémon?
+0x3fd1b8: <0xFD><0x0F> ha imparato <0xFD><0x00>!
+0x3fd1c7: Hai sconfitto <0xFD><0x1C> <0xFD><0x1D>!
+0x3fd1df: <0xFD><0x23> ha lanciato un SASSO contro\n<0xFD><0x06>!
+0x3fd1fa: <0xFD><0x23> ha lanciato dell'Esca al\n<0xFD><0x06>!
+0x3fd218: <0xFD><0x06> sta osservando\nattentamente!
+0x3fd232: <0xFD><0x06> è arrabbiato!
+0x3fd23f: <0xFD><0x06> sta mangiando!
+0x3fd24d: <0xFC><0x10><0x42><0x00>Annunciatore: Hai esaurito le\nSafari Ball! Fine del gioco!
+0x3fd284: È apparso un <0xFD><0x06> selvatico!
+0x3fd297: È apparso un <0xFD><0x06> selvatico!
+0x3fd2aa: È apparso un <0xFD><0x06> selvatico!<0xFC><0x08><0x7F>
+0x3fd2bf: Sono apparsi i selvatici <0xFD><0x06> e\n<0xFD><0x08>!
+0x3fd2d9: Il Ghost è apparso! Accidenti! Il\nGhost non può essere identificato!
+0x3fd30d: Il Fantasma è apparso!
+0x3fd322: Il Silph Scope ha rivelato\nl'identità del Pokémon Spettro!
+0x3fd34d: Il Fantasma era <0xFD><0x06>!
+0x3fd366: <0xFD><0x1C><0xFD><0x1D><0xFD><0x1C> <0xFD><0x1D> vuole sfidarti!
+0x3fd383: <0xFD><0x20> vuole sfidarti!
+0x3fd397: <0xFD><0x20> e <0xFD><0x21> vogliono sfidarti!
+0x3fd3b1: <0xFD><0x1C><0xFD><0x1D><0xFD><0x1C> <0xFD><0x1D> ha mandato in campo <0xFD><0x06>!<0xFC><0x08><0x3C>
+0x3fd3c7: <0xFD><0x1C><0xFD><0x1D><0xFD><0x1C> <0xFD><0x1D> ha mandato in campo <0xFD><0x06>\ne <0xFD><0x08>!<0xFC><0x08><0x3C>
+0x3fd3e4: <0xFD><0x1C><0xFD><0x1D><0xFD><0x1C> <0xFD><0x1D> ha mandato in campo <0xFD><0x00>!
+0x3fd3f7: <0xFD><0x20> manda in campo <0xFD><0x06>!
+0x3fd407: <0xFD><0x20> ha mandato in campo <0xFD><0x06> e <0xFD><0x08>!
+0x3fd41e: <0xFD><0x20> ha mandato in campo <0xFD><0x0A>! <0xFD><0x21> ha\nmandato in campo <0xFD><0x0C>!
+0x3fd43e: <0xFD><0x20> manda in campo <0xFD><0x00>!
+0x3fd44e: <0xFD><0x22> manda in campo <0xFD><0x00>!
+0x3fd475: Vai! <0xFD><0x00>!
+0x3fd47d: Forza! <0xFD><0x00>!
+0x3fd488: Forza, <0xFD><0x00>!
+0x3fd497: Il tuo avversario è debole! Vai, <0xFD><0x00>!
+0x3fd4b5: <0xFD><0x1F> ha mandato in campo <0xFD><0x0B>! Vai! <0xFD><0x09>!
+0x3fd4cd: <0xFD><0x00>, basta così! Torna!
+0x3fd4eb: <0xFD><0x00>, torna!
+0x3fd4fa: <0xFD><0x00>, va bene! Torna!
+0x3fd50d: <0xFD><0x00>, bravo! Torna qui!
+0x3fd522: <0xFD><0x1C><0xFD><0x1D><0xFD><0x1C> <0xFD><0x1D> ha ritirato <0xFD><0x00>!
+0x3fd535: <0xFD><0x20> ha ritirato <0xFD><0x00>!
+0x3fd545: <0xFD><0x22> ha ritirato <0xFD><0x00>!
+0x3fd555: Selvatico
+0x3fd55b: Nemico
+0x3fd560: Nemico
+0x3fd564: Alleato
+0x3fd569: Nemico
+0x3fd56d: Alleato
+0x3fd572: Nemico
+0x3fd576: Alleato
+0x3fd57b: <0xFD><0x0F> ha usato <0xFD><0x01>
+0x3fd590: PS
+0x3fd593: Attacco
+0x3fd59a: Difesa
+0x3fd5a2: Velocità
+0x3fd5a8: Att. Sp.
+0x3fd5b0: Dif. Sp.
+0x3fd5b8: precisione
+0x3fd5c1: evasione
+0x3fd5ef: Era troppo piccante!
+0x3fd5ff: era troppo secco!
+0x3fd60c: era troppo dolce!
+0x3fd61b: era troppo amaro!
+0x3fd62b: era troppo aspro!
+0x3fd64f: Ë<0xFD><0x23> ha usato <0xFD><0x16>!
+0x3fd65c: Il vecchio ha usato <0xFD><0x16>!
+0x3fd671: Il Poké Dude ha usato <0xFD><0x16>!
+0x3fd688: <0xFD><0x1C><0xFD><0x1D><0xFD><0x1C> <0xFD><0x1D> ha usato <0xFD><0x16>!
+0x3fd697: L'Allenatore ha bloccato la Poké\nBall!
+0x3fd6b5: Non fare il ladro!
+0x3fd6c7: Ha schivato la Ball lanciata!\nQuesto Pokémon non può essere\ncatturato!
+0x3fd700: Hai mancato il Pokémon!
+0x3fd718: Oh, no! Il Pokémon si è liberato!
+0x3fd738: Oh no! Sembrava catturato!
+0x3fd757: Argh! Ci ero quasi riuscito!
+0x3fd76d: Accidenti! Era così vicino!
+0x3fd7a2: Preso! <0xFD><0x3A> è stato catturato!<0xFC><0x0A><0xFC><0x0B><0x42><0x01>
+0x3fd7c0: Preso! <0xFD><0x3A> è stato catturato!<0xFC><0x0A><0xFC><0x0B><0x42><0x01><0xFC><0x08><0x7F>
+0x3fd7e0: Vuoi dare un soprannome al <0xFD><0x3A>\ncatturato?
+0x3fd804: <0xFD><0x06> è stato inviato al PC <0xFD><0x27>.
+0x3fd81a: di qualcuno
+0x3fd824: di Bill
+0x3fd82b: <0xFD><0x3A>I dati di <0xFD><0x3A> sono stati aggiunti al\nPokédex.
+0x3fd850: Sta piovendo.
+0x3fd85f: Infuria una tempesta di sabbia.
+0x3fd876: Il Box è pieno! Non puoi catturare\naltri Pokémon!
+0x3fd8a2: Bacca Enigma
+0x3fd8af: Bacca
+0x3fd8b9: <0xFD><0x13>'s <0xFD><0x16> ha curato la paralisi!
+0x3fd8d2: <0xFD><0x13>La <0xFD><0x13> di <0xFD><0x16> ha curato il veleno!
+0x3fd8e8: <0xFD><0x13>'s <0xFD><0x16> ha guarito la sua scottatura!
+0x3fd901: <0xFD><0x13>Il <0xFD><0x13> di <0xFD><0x16> l'ha scongelato!
+0x3fd917: <0xFD><0x13>'s <0xFD><0x16> lo ha svegliato dal sonno!
+0x3fd937: <0xFD><0x13>'s <0xFD><0x16> lo ha fatto uscire dalla\nconfusione!
+0x3fd95c: <0xFD><0x13>La <0xFD><0x13> di <0xFD><0x16> ha curato il suo\nproblema di <0xFD><0x00>!
+0x3fd97a: <0xFD><0x13>'s <0xFD><0x16> ha riportato il suo stato\nalla normalità!
+0x3fd999: <0xFD><0x13>'s <0xFD><0x16> ha recuperato i PS!
+0x3fd9b2: <0xFD><0x13>'s <0xFD><0x16> ha ripristinato i PP di <0xFD><0x00>!
+0x3fd9cc: <0xFD><0x13>L'abilità di <0xFD><0x13> <0xFD><0x16> ha curato il suo\nstato alterato!
+0x3fd9e9: <0xFD><0x13> ha ripristinato i PS con <0xFD><0x16>!
+0x3fda02: poco!
+0x3fda0b: <0xFD><0x16>L'effetto di <0xFD><0x16> consente di usare\nsolo <0xFD><0x14>!
+0x3fda33: <0xFD><0x10> è rimasto in piedi grazie al suo\n<0xFD><0x16>!
+0x3fda4d: <0xFD><0x23> ha suonato il <0xFD><0x16>. Ora è una\nmelodia orecchiabile!
+0x3fda7a: <0xFD><0x23> ha suonato il <0xFD><0x16>.
+0x3fda8c: Il Pokémon che ha sentito il Flauto\nsi è svegliato!
+0x3fdab1: Lanci una Ball adesso, giusto? I\.\nfarò del mio meglio!
+0x3fdae2: Log: Oh, per l'amor del cielo\.\nSempre così insistente. <0xFD><0x23>. Non hai\nmai fatto una lotta Pokémon prima,\nvero? Una lotta Pokémon è quando\ngli Allenatori mettono i loro\nPokémon l'uno contro l'altro.
+0x3fdb92: L'Allenatore che fa svenire i\nPokémon dell'altro Allenatore\nportando i loro PS a <0xB1>0,<0xB2> vince.
+0x3fdbef: Ma invece di parlarne, imparerai di\npiù con l'esperienza. Prova a\nlottare e vedi da solo.
+0x3fdc58: Registro: Infliggere danni al\nnemico è la chiave di ogni lotta.
+0x3fdc95: Registro: Ridurre le statistiche\ndel nemico ti darà un vantaggio.
+0x3fdcd2: Log: Tieni d'occhio i PS del tuo\nPokémon. Sverrà se i PS scendono a\n<0xB1>0.<0xB2>
+0x3fdd23: Log: No! Non si può fuggire da una\nlotta Pokémon contro un Allenatore!
+0x3fdd64: Registro: Mh! Ottimo! Se vinci,\nottieni denaro in premio e i tuoi\nPokémon cresceranno! Lotta contro\naltri Allenatori e rendi forti i\ntuoi Pokémon!
+0x3fddeb: Log: Hm\. Che delusione\. Se vinci,\nguadagni denaro premio e i tuoi\nPokémon crescono. Ma se perdi, <0xFD><0x23>,\nfinisci per pagare denaro premio\.\nTuttavia, visto che questa volta\nnon eri stato avvertito, pagherò io\nper te. Ma le cose non andranno\ncosì una volta fuori da queste\nporte. Ecco perché devi rafforzare\ni tuoi Pokémon combattendo contro\nPokémon selvatici.
+0x3fe672: Oh? <0xFD><0x02> si sta evolvendo!
+0x3fe688: Congratulazioni! Il tuo <0xFD><0x02> si\nè evoluto in <0xFD><0x03>!<0xFC><0x0A>
+0x3fe6b5: Eh? <0xFD><0x02> ha smesso di\nevolversi!
+0x3fe6d5: Cosa farà <0xFD><0x12>?
+0x3fe6e6: Cosa lancerà <0xFD><0x23>?
+0x3fe6fa: Che farà il vecchio?
+0x3fe714: <0xFC><0x08><0x10>Link in standby\.
 0x3fe725: <0xFC><0x05><0x05><0xFC><0x04><0x0D><0x0E><0x0F>Lotta<0xFC><0x13><0x38><0xBA>g\nPokémon<0xFC><0x13><0x38>Fuggi
+0x3fe747: <0xFC><0x05><0x05><0xFC><0x04><0x0D><0x0E><0x0F><0xBA>ll<0xFC><0x13><0x38><0xBA>it\nSasso<0xFC><0x13><0x38>Fuggi
+0x3fe76a: Tipo/
 0x415a66: Pokémon
 0x415df7: Pokémon della prateria
 0x415e09: Pokémon della foresta
@@ -8273,16 +9058,23 @@
 0x416296: Opzione
 0x41629d: Esci
 0x4162a2: Ritira
-0x4162cd: Oggetti
+0x4162cd: Ogg.
 0x4162d3: POKÉ BALL
-0x4162de: Strumenti Chiave
-0x4162e8: Deposita strumento
+0x4162de: Chiave
+0x4162e8: Deposita
 0x4162f5: Chiudi Cubo
+0x41697e: Cambia
+0x416984: Manda in campo
 0x41698d: Cambia
 0x416994: Riassunto
+0x4169a3: Entra
+0x4169a9: Nessun ingresso
 0x4169b2: Prendi
 0x4169b7: Leggi
 0x4169bc: Scambia
+0x4169c2: PS
+0x4169c5: Att. Sp.
+0x4169cd: Dif. Sp.
 0x4169dc: Non avrà alcun effetto.<0xFC><0x09>
 0x416ae2: Non può essere usato finché non si\nottiene una nuova Medaglia.<0xFC><0x09>
 0x416db3: <0xFD><0x02> ha imparato <0xFD><0x03>!
@@ -8446,9 +9238,9 @@
 0x417d86: Colosseo
 0x417d90: Cavo Game Link
 0x417da0: Wireless
-0x417da9: Settore strumenti
-0x417db6: Settore strumenti chiave
-0x417dc7: Settore Poké Ball
+0x417da9: Settore ogg.
+0x417db6: Sett. chiave
+0x417dc7: Sett. Poké Ball
 0x417dd9: Porta MT
 0x417de1: Sacchetto Bacche
 0x417ded: Altro
@@ -8618,6 +9410,35 @@
 0x418eb0: \btn00OK
 0x418eb5: \btn0CSposta
 0x418ebc: \btn0AScegli
+0x419782: \?00 di natura. Ottenuto tramite\nscambio.
+0x41979d: \?00 di natura. Ottenuto tramite\nscambio.
+0x4197b8: \?00Natura \?00. Incontrato in un incontro\nfatidico quando era al livello\n[LV] \?01.
+0x4197ed: \?00Natura \?00. Incontrato in un incontro\nfatidico quando era al livello\n[LV] \?01.
+0x419822: \?00 natura. Incontrato a \?02 al [LV]\n\?01.
+0x419841: \?00 natura. Incontrato a \?02 al [LV]\n\?01.
+0x419860: \?00Natura \?00. Apparentemente incontrato\na \?02 al [LV] \?01.
+0x41988a: \?00 natura. Pare sia stato incontrato\na \?02 al [LV] \?01.
+0x4198b4: \?00 natura. Schiuso: \?02 al [LV] \?01.
+0x4198d5: \?00 natura. Schiuso: \?02 al [LV] \?01.
+0x41992f: \?00 di natura. Incontrato in un\nincontro fatidico (schiuso: \?02 al\n[LV] \?01).
+0x41996d: \?00 di natura. Incontrato in un\nincontro fatidico (schiuso: \?02 al\n[LV] \?01).
+0x4199ab: \?00 di natura. Sembra sia stato\nincontrato in un incontro fatidico\n(schiuso: \?02 al [LV] \?01).
+0x4199f4: \?00 di natura. Sembra sia stato\nincontrato in un incontro fatidico\n(schiuso: \?02 al [LV] \?01).
+0x419a3d: Uno strano Uovo Pokémon trovato\ndalla coppia della Pensione\nPokémon.
+0x419a6e: Un insolito Uovo Pokémon ottenuto\ndall'uomo viaggiatore.
+0x419aa2: Un Uovo Pokémon meravigliosamente\ninsolito ottenuto in un bel posto.
+0x419ade: Un insolito Uovo Pokémon ottenuto\nda una vecchia signora alla SPA.
+0x419b18: Un particolare Uovo Pokémon\nottenuto in uno scambio.
+0x419b44: Sembra che questo Uovo impiegherà\nmolto tempo a schiudersi.
+0x419b7b: Cosa nascerà da questo? Ci vorrà un\npo' di tempo.
+0x419bae: Si muove di tanto in tanto.\nDovrebbe schiudersi presto.
+0x419bdb: Fa dei rumori. Sta quasi per\nschiudersi!
+0x419c0b: uno scambio
+0x419c13: Da qualche parte
+0x419c1d: Info Pokémon
+0x419c2a: Abilità Pokémon
+0x419c39: Mosse conosciute
+0x419c45: Nessun dato
 0x419c5a: Conferma
 0x419cda: Nome:
 0x419ce1: N. ID
@@ -9918,6 +10739,21 @@
 0x7b3979: Quella Gemma che ti ho dato può\npotenziare una singola mossa di\ltipo Lotta in lotta. Se la usi,\n\nsembrerai ancora più tosto di\nquanto già non sei!
 0x7b39fa: Forse dovrei tornare a Antisis\nCity. Qui sono fuori dalla mia\lportata.
 0x7b3ac9: La tua abilità fa sembrare il mio\nequipaggiamento di gomma inutile.\lForse dovrei investire in una marca\n\npiù costosa.
+0x7b3eb0: Una Poké Ball speciale con una\npercentuale di successo maggiore se usata\nall'inizio di una lotta con un Pokémon selvatico.
+0x7b3f15: Miele dolce dal profumo intenso.\nAttira i Pokémon se usato\nnell'erba, nelle grotte o su alberi speciali.
+0x7b3f80: Strumento da dare a un Pokémon.\nProlunga la durata di mosse come\nRiflesso e Schermoluce usate da chi lo tiene.
+0x7b3fe1: Pietra particolare che fa evolvere\ndeterminate specie di Pokémon. È\nnera come la notte.
+0x7b403e: Pietra particolare che fa evolvere\ndeterminate specie di Pokémon. Ha\nla forma di un uovo.
+0x7b4097: Strumento protettivo di qualche\ntipo. È estremamente rigido e\npesante. È amato da un certo Pokémon.
+0x7b40fa: Osso di enorme valore per\nl'archeologia Pokémon. Può essere\nvenduto nei negozi a un prezzo elevato.
+0x7b4170: Sacchetto pieno di un profumo\nfragrante ma intenso, amato da\ncerti Pokémon.
+0x7b41c1: Dolce soffice e zuccherato fatto di\npanna morbida, gonfia, montata e\nmescolata, amato da un certo Pokémon.
+0x7b4225: Squama misteriosa che fa evolvere\ncerti Pokémon. Brilla dei colori\ndell'arcobaleno.
+0x7b4273: Strumento da dare a un Pokémon.\nQuesta fascia aumenta l'Attacco,\nma consente l'uso di una sola mossa.
+0x7b42d3: Strumento da dare a un Pokémon. Questi\nocchiali aumentano l'Attacco Speciale,\nma consentono l'uso di una sola mossa.
+0x7b4336: Strumento da dare a un Pokémon.\nQuesta sciarpa aumenta la Velocità,\nma consente l'uso di una sola mossa.
+0x7b4395: Strumento da dare a un Pokémon.\nAttacco e Attacco Speciale aumentano\nse viene colpito da una mossa superefficace.
+0x7b4406: Perle molto grandi che brillano di\nun bel colore argentato. Un\nmaniaco le comprerà a caro prezzo.
 0x7b44ca: Giovani come voi\. Nessun rispetto\nper gli anziani.
 0x7b456b: Bellin Town Una tranquilla\ncittadina nascosta in profondità\ltra le montagne.
 0x7b45a3: Casa Allenatori: combatti a\nvolontà!
@@ -11064,7 +11900,7 @@
 0x7f8ca4: Usa quelle Poké Ball per catturare\nancora più Pokémon tosti.
 0x7f8cd6: Non ti servono.
 0x7f8cea: Weeeeeeeeeewhoooooooo!
-0x7f8e1b: Sì\.Credo che i tuoi Pokémon siano\nguariti. Però non ho frequentato la\lscuola per infermieri, quindi non\n\nposso dirlo con certezza.
+0x7f8e1b: Sì\.Credo che i tuoi Pokémon siano\nguariti. Non sono infermiera,\lquindi non garantisco.
 0x7f8e80: Spero davvero di rivedere te e i\ntuoi soldi.
 0x7f8eae: Benvenuto al Quartier Generale\ndella Polizia di Antisis City! \. In\lrealtà, ora è solo casa mia. Le\n\nbande da queste parti sono\ndiventate troppo turbolente per\lnoi, ultimamente.
 0x7f8f39: È bello che qualcuno della tua età\nstia perseguendo la sana carriera\ldi Allenatore di Pokémon. È molto\n\nmeglio che far parte di una gang.\nFidati, lo so. Vedo quello che\lsuccede qui intorno.
@@ -11922,6 +12758,8 @@
 0x8aaa77: <0xFD><0x03> si è trasformato nella\nforma <0xFC><0x01><0x0F>Incarnate<0xFC><0x01><0x02>!
 0x8ab7d0: È pieno di scatoloni di cartone con\ndentro apparecchi elettrici.
 0x8b2fbb: Tieni premuto il <0xFC><0x01><0x06>pulsante B <0xFC><0x01><0x02>per\ncorrere!
+0x8bd140: Un <0xFD><0x06> selvatico è apparso!
+0x8bd155: Il Pokémon selvatico
 0x8c579e: <0xFD><0x02> ha scacciato via la\nnebbia!
 0x8c57b4: <0xFD><0x02> ha usato <0xFD><0x03>! Ma non\nc'era alcuna nebbia da disperdere\.
 0x8ca6c5: <0xFC><0x01><0x02>Mamma: <0xFC><0x01><0x04><0xFD><0x01>! Dove sei stato?\nEro davvero preoccupata per te! \.\lAccidenti\. Dev'essere stato davvero\n\nspaventoso! Sono davvero contenta\nche ora tu stia bene! Prima di fare\lqualsiasi altra cosa, dovresti fare\n\nun bel riposo lungo.
@@ -12010,7 +12848,7 @@
 0x8ce1df: Come vanno i tuoi viaggi, <0xFD><0x01>?
 0x8ce9cb: Benvenuto in Pokémon Unbound! Prima\ndi iniziare a giocare, tieni\npresente che questo è un fangame\n\nnon a scopo di lucro. Se hai pagato\nper questo gioco, chiedi subito il\nrimborso!
 0x8cea72: Con questo in mente, sei quasi\npronto per entrare nella regione di\nBorrius! Ma prima\.
-0x8ceb24: E per finire, come ti chiami?
+0x8ceb24: Ultimo, ma non meno importante,\nqual è il tuo nome?
 0x8ceb4c: Il tuo nome è <0xFD><0x01>?
 0x8ceb5d: Giorno presente
 0x8cefb1: Benvenuto al Quartier Generale\ndelle Missioni! È la tua prima\lvolta qui, vero? Allora dimmi,\n\nconosci le <0xFC><0x01><0x06>Missioni<0xFC><0x01><0x08>?
@@ -13923,10 +14761,60 @@
 0xa43998: MT e MN
 0xa439a4: Tutti gli strumenti
 0xa43d50: Eh? Il DexNav sta rilevando un\nPokémon insolito!
+0xa4b23c: <0xFD><0x11> si è assiderato!
+0xa4b24e: <0xFD><0x0F> è danneggiato dal suo\nassideramento!
+0xa4b26b: <0xFD><0x0F>L'assideramento di <0xFD><0x0F> è stato\ncurato da <0xFD><0x14>!
+0xa4b28b: <0xFD><0x10>L'assideramento di <0xFD><0x10> è stato\ncurato!
+0xa4b2a5: <0xFD><0x0F>L'assideramento di <0xFD><0x0F> è stato\ncurato!
+0xa4b2bf: <0xFD><0x13> di <0xFD><0x16> ha curato il suo\nassideramento!
+0xa4b2dc: <0xFD><0x13>Le statistiche di <0xFD><0x13> non sono\ndiminuite!
+0xa4b2f9: <0xFD><0x13> di <0xFD><0x00> non è diminuita!
+0xa4b312: <0xFD><0x13> non va in confusione!
+0xa4b32e: <0xFD><0x13> blocca <0xFD><0x14>!
+0xa4b33c: Ma l'aura di <0xFD><0x10> impedisce la\ntrasformazione!
+0xa4b363: Ma l'aura di <0xFD><0x10> ha bloccato la\nmossa!
+0xa4b383: <0xFD><0x37>L'effetto di <0xFD><0x37> della squadra <0xFD><0x00> è\nsvanito!
+0xa4b39a: <0xFD><0x14> ha innalzato <0xFD><0x36> della squadra <0xFD><0x00>!
+0xa4b3b2: Velaurora protegge la squadra <0xFD><0x36>\ndalle mosse fisiche e speciali!
+0xa4b3f3: <0xFD><0x38>La squadra <0xFD><0x38> è stata avvolta dalla\nNebbia!
+0xa4b414: <0xFD><0x38>L'effetto di <0xFD><0x38> della squadra <0xFD><0x00> è\nsvanito!
+0xa4b42b: <0xFD><0x13>L'effetto di Provocazione su <0xFD><0x13> è\nsvanito!
+0xa4b440: <0xFD><0x38>Il Ventoincoda della squadra <0xFD><0x38> si\nè placato!
+0xa4b460: <0xFD><0x38>L'effetto di Fortuncanto della\nsquadra <0xFD><0x38> è svanito!
+0xa4b480: L'arcobaleno dal lato della squadra\n<0xFD><0x36> è scomparso!
+0xa4b4ab: Il mare di fuoco attorno alla\nsquadra <0xFD><0x36> è scomparso!
+0xa4c515: È apparso un <0xFD><0x06> selvatico!
+0xa4c52a: Sono apparsi un <0xFD><0x06> selvatico\ne un <0xFD><0x08> selvatico!
+0xa4c54d: <0xFD><0x06> e <0xFD><0x08> hanno attaccato!
+0xa4c562: <0xFD><0x06> del Mondo Distorto è\napparso!
+0xa4c587: È il tuo peggior incubo!
+0xa4c5a3: <0xFD><0x06> è apparso!
+0xa4c5b1: È apparso un <0xFD><0x06> selvatico!<0xFC><0x08><0x7F>
+0xa4c5c8: Un <0xFD><0x06> selvatico è apparso!
+0xa4c636: Il Pokémon selvatico
+0xa4c640: Il Pokémon Ombra
+0xa4c64c: Il Pokémon avversario
+0xa4c659: il Pokémon avversario
+0xa4c666: il tuo
+0xa4c66b: Il tuo
+0xa4c670: Hai ottenuto $<0xFD><0x00> per la vittoria!
+0xa4c689: Non hai più Pokémon in grado di\nlottare!
+0xa4c6b3: Sei andato nel panico e hai perso\n$<0xFD><0x00>\. \. \. \. \. Sei stato sopraffatto dalla\nsconfitta!<0xFC><0x09>
+0xa4c6fd: Non hai più Pokémon in grado di\nlottare! Hai perso contro <0xFD><0x1C> <0xFD><0x1D>!<0xFC><0x09>
+0xa4c740: Hai pagato $<0xFD><0x00> come premio in denaro\.\n\. \. \. \. Sei stato sopraffatto dalla\nsconfitta!<0xFC><0x09>
+0xa4c790: Sei stato sopraffatto dalla\nsconfitta!<0xFC><0x09>
 0xa4c7b7: <0xFC><0x05><0x05><0xFC><0x04><0x0D><0x0E><0x0F>Lotta<0xFC><0x13><0x38>Pokémon\nCubo<0xFC><0x13><0x38>Fuggi
 0xa4c7da: <0xFC><0x05><0x05><0xFC><0x04><0x0D><0x0E><0x0F>Lotta<0xFC><0x13><0x38><0xFC><0x04><0x0F><0x0E><0x0B>Pokémon Cubo <0xFC><0x04><0x0D><0x0E><0x0F>Pokémon<0xFC><0x13><0x38>Fuga
 0xa4c807: <0xFC><0x05><0x05><0xFC><0x04><0x0D><0x0E><0x0F>Lotta<0xFC><0x13><0x38>Pokémon\nCubo<0xFC><0x13><0x38><0xBA>
 0xa4c82b: <0xFC><0x05><0x05><0xFC><0x04><0x0D><0x0E><0x0F>Lotta<0xFC><0x13><0x38><0xFC><0x04><0x0F><0x0E><0x0B>Cubo\n<0xFC><0x04><0x0D><0x0E><0x0F>Pokémon<0xFC><0x13><0x38><0xBA>
+0xa4c859: <0xFC><0x05><0x05><0xFC><0x04><0x0D><0x0E><0x0F><0xCA>tch<0xFC><0x13><0x38>Fine
+0xa4c86d: <0xFD><0x06> è debole! Lancia una Ball\nora!
+0xa4c88b: <0xFD><0x1C><0xFD><0x1D>Squadra di <0xFD><0x1C> <0xFD><0x1D>
+0xa4c898: <0xFD><0x20>Squadra di <0xFD><0x20>
+0xa4c8a3: <0xFD><0x1C><0xFD><0x1D>Squadra di <0xFD><0x1C> <0xFD><0x1D> Squadra di <0xFD><0x2E> <0xFD><0x2F>
+0xa4c8bd: <0xFD><0x20>Squadra di <0xFD><0x20> Squadra di <0xFD><0x21>
+0xa4c8d2: Il resto della tua squadra ha\nottenuto Punti Esperienza grazie al\nCondividi Esp.!
+0xa4c915: assideramento
 0xa4d61c: Un secondo oggetto nel Cubo può\nessere assegnato a \btn02 per usarlo\lfacilmente.
 0xa4d65c: La corsa automatica è stata\n<0xFC><0x01><0x06>attivata<0xFC><0x01><0x02>.
 0xa4d67d: La corsa automatica è stata\n<0xFC><0x01><0x06>disattivata<0xFC><0x01><0x02>.
@@ -14002,9 +14890,9 @@
 0xa4e1b1: Acquistato
 0xa4e1bb: Smettila di zoomare!
 0xa4e1f1: Sposta
-0xa4e4d7: Lista Pokémon
+0xa4e4d7: Lista Poké
 0xa4e4e4: Cubo V3
-0xa4e4ec: Salva partita
+0xa4e4ec: Salva
 0xa4e4f6: Impostazioni di gioco
 0xa4e504: Esci \btn09
 0xa4e50d: Esci \btn08
@@ -14075,6 +14963,44 @@
 0xd29c58: Il Pokémon non subisce\ndanni dalle mosse di\ntipo Terra.
 0xd29f90: Il Pokémon non subisce\ndanni dalle mosse di\ntipo Terra.
 0xd2a510: Il Pokémon non subisce\ndanni dalle mosse di\ntipo Terra.
+0xeb1f16: Un biglietto necessario per salire\na bordo della nave per Glimmer\nIsle. Scintilla al chiaro di luna.
+0xeb1f69: Un dispositivo usato per vedere le\nstatistiche nascoste e i set di mosse dei\nPokémon. Non è adatto a un Allenatore medio.
+0xeb1fcc: Un dispositivo usato per\ncontrollare lo stato dei Pokémon\nalla Pensione Pokémon del Percorso 5.
+0xeb201d: Un dispositivo usato per leggere un\nantico dialetto noto come <0xB1>Braille.<0xB2>\nNon viene parlato da oltre 1000 anni.
+0xeb2085: Un dispositivo usato per trovare\nAllenatori desiderosi di lottare a\nBorrius. Tiene anche traccia delle loro squadre.
+0xeb2308: Bracciale che permette ai Pokémon\ncon una Megapietra di\nmegaevolversi in lotta.
+0xeb2354: Un comodo contenitore per riporre\ngli abiti. Usalo per cambiarti,\noltre che per cambiare alcuni colori.
+0xeb23b6: Medicina spray. Cura un Pokémon\ndall'assideramento.
+0xeb23f0: Aumenta di molto l'Attacco dei\nPokémon in lotta. L'effetto\nsvanisce se il Pokémon viene ritirato.
+0xeb244c: Aumenta di molto la Difesa dei\nPokémon in lotta. L'effetto\nsvanisce se il Pokémon viene ritirato.
+0xeb24a9: Aumenta di molto la Velocità di un\nPokémon in lotta. L'effetto\nsvanisce se il Pokémon viene ritirato.
+0xeb2504: Aumenta di molto l'Attacco Speciale\ndi un Pokémon in lotta. L'effetto\nsvanisce se il Pokémon viene ritirato.
+0xeb2561: Aumenta di molto la Difesa Speciale\ndi un Pokémon in lotta. L'effetto\nsvanisce se il Pokémon viene ritirato.
+0xeb25be: Aumenta di molto la Precisione di\nun Pokémon in lotta. L'effetto\nsvanisce se il Pokémon viene ritirato.
+0xeb261c: Una capsula che permette a un\nPokémon con due abilità di passare\ndall'una all'altra quando viene usata.
+0xeb267c: Nebbia in capsule che permette a\nun Pokémon di passare alla sua\nabilità speciale quando viene usata.
+0xeb26cd: Una polvere che può conferire o\nrimuovere il fattore Gigamax da\nalcune specie di Pokémon.
+0xeb2725: Strumento da usare su un Pokémon.\nAumenta leggermente i PS di base\ndi un singolo Pokémon.
+0xeb277a: Strumento da usare su un Pokémon.\nAumenta leggermente l'Attacco di\nbase di un singolo Pokémon.
+0xeb2ccb: Una Poké Ball speciale progettata per\ncatturare le Ultracreature. Ha un basso\ntasso di successo con gli altri Pokémon.
+0xeb2d2e: Se tenuto da un Pokémon, viene\nusato in lotta per curare il\ncongelamento.
+0xeb2d73: Se tenuto da un Pokémon, viene\nusato in lotta per recuperare 1/4\ndei PS.
+0xeb2db8: Usato su un Pokémon, lo rende più\namichevole, ma ne riduce anche i\nPS.
+0xeb2df7: Usato su un Pokémon, lo rende più\namichevole, ma ne riduce anche\nl'Attacco.
+0xeb2e3a: Usato su un Pokémon, lo rende più\namichevole, ma ne riduce anche la\nDifesa.
+0xeb2e7e: Usato su un Pokémon, lo rende più\namichevole, ma ne riduce anche\nl'Attacco Speciale.
+0xeb2ec2: Usato su un Pokémon, lo rende più\namichevole, ma ne riduce anche la\nDifesa Speciale.
+0xeb2f06: Usato su un Pokémon, lo rende più\namichevole, ma ne riduce anche la\nVelocità.
+0xeb2f48: Rende un Pokémon leggermente più\nfacile da catturare nella Zona\nSafari.
+0xeb2f87: Due di questi fanno muovere meno\nspesso un Pokémon nella Zona\nSafari.
+0xeb2fc7: Rende un Pokémon più veloce e più\nfacile da catturare nella Zona\nSafari.
+0xeb3008: Riduce l'area di movimento di un\nPokémon nella Zona Safari.
+0xeb3043: Rende più probabile che un Pokémon\nabbia con sé uno strumento nella\nZona Safari.
+0xeb3083: Non ha alcuna utilità pratica, se\nnon per la mossa Dononaturale.
+0xeb30ba: Se tenuto, fa recuperare PS quando\nsi subisce una mossa\nsuperefficace.
+0xeb30f3: Se tenuto, riduce i danni subiti\nda una mossa di tipo Fuoco\nsuperefficace.
+0xeb3135: Se tenuto, riduce i danni subiti\nda una mossa di tipo Acqua\nsuperefficace.
+0xeb3178: Se tenuto, riduce i danni subiti\nda una mossa di tipo Elettro\nsuperefficace.
 0xeb90ea: Polvere Luminosa
 0xeb90f8: Polvere Argentea
 0xeb9106: Dente Abissale
@@ -14106,6 +15032,6 @@
 0xeb92ce: Amuleto Cattura
 0xeb92dd: Capsula Abilità
 0xeb92ed: Biglietto Scintillante
-0xeb92fc: Convertitore Braille
+0xeb92fc: Lettore Braille
 0xeb930e: Catalogo Allenatori
 0xf8f4f7: ik<0xFC><0x77>
