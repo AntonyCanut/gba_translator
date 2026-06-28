@@ -264,6 +264,43 @@ class TestRomEncodingSpots:
         )
 
 
+class TestColorControlCodes:
+    """Colour / buffer control codes must render as real CFRU codes, not as the
+    literal ``[green]`` / ``[buffer1]`` dump tokens (the reported bug, which
+    showed ``?green??buffer1??black?`` in the difficulty prompt)."""
+
+    def _encode(self, text: str) -> bytes:
+        from src.core.text_codec import TextEncoder
+        return TextEncoder.encode(text, "pokemon")[:-1]  # drop terminator
+
+    def test_difficulty_string_has_real_color_codes(self, it_rom_data):
+        """The difficulty prompt must carry green(FC0106)+buffer1(FD02)+black(FC0102)."""
+        signature = (
+            self._encode("impostata su ")
+            + bytes([0xFC, 0x01, 0x06, 0xFD, 0x02, 0xFC, 0x01, 0x02])
+            + self._encode(".")
+        )
+        assert it_rom_data.find(signature) != -1, (
+            "Difficulty string with real colour control codes not found — "
+            "[green]/[buffer1]/[black] tokens were not converted."
+        )
+
+    def test_no_literal_bracket_color_tokens(self, it_rom_data):
+        """No encoded ``[green]`` / ``[buffer1]`` token bytes may survive.
+
+        ``[`` and ``]`` have no font glyph, so the broken form encodes as
+        ``?green?`` (0xAC + 'green' + 0xAC).  Plain English words like
+        "green hat" are unaffected — they lack the surrounding ``?`` glyphs.
+        """
+        question = self._encode("?")  # 0xAC, the glyph '[' / ']' fall back to
+        for token in ("green", "buffer1", "black", "blue", "red"):
+            broken = question + self._encode(token) + question
+            assert it_rom_data.find(broken) == -1, (
+                f"Literal '[{token}]' token bytes still present in IT ROM — "
+                "control-token normalization did not run."
+            )
+
+
 class TestVersionDisplay:
     """The NOT FOR SALE intro screen must display the IT language tag.
 
