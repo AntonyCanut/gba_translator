@@ -14,8 +14,11 @@ import yaml
 from src.i18n import LanguageRegistry, RegistryError, load_registry
 from src.i18n.registry import REPO_ROOT, _validate, load_registry as _load
 
-EXPECTED_BUILDABLE = {"fr", "it", "de"}
+EXPECTED_BUILDABLE = {"fr", "it", "de", "indie"}
 EXPECTED_REFERENCES = {"en", "es"}
+
+# Generic (non-dedicated) buildable languages driven by build_language.py.
+GENERIC_CODES = ["it", "de", "indie"]
 
 
 @pytest.fixture(scope="module")
@@ -41,7 +44,7 @@ def test_french_is_complete_and_dedicated(registry):
         assert step in fr.patches, f"FR descriptor lost patch step {step!r}"
 
 
-@pytest.mark.parametrize("code", ["it", "de"])
+@pytest.mark.parametrize("code", GENERIC_CODES)
 def test_new_languages_are_generic_and_in_progress(registry, code):
     cfg = registry.get(code)
     assert cfg.build == "generic"
@@ -57,9 +60,9 @@ MECHANICAL_PATCHES = {
 }
 
 
-@pytest.mark.parametrize("code", ["it", "de"])
+@pytest.mark.parametrize("code", GENERIC_CODES)
 def test_generic_languages_include_mechanical_patches(registry, code):
-    """IT and DE must declare the anti-freeze mechanical patch steps."""
+    """Generic languages must declare the anti-freeze mechanical patch steps."""
     cfg = registry.get(code)
     missing = MECHANICAL_PATCHES - set(cfg.patches)
     assert not missing, (
@@ -67,9 +70,9 @@ def test_generic_languages_include_mechanical_patches(registry, code):
     )
 
 
-@pytest.mark.parametrize("code", ["it", "de"])
+@pytest.mark.parametrize("code", GENERIC_CODES)
 def test_generic_languages_include_status_abbrevs_patch(registry, code):
-    """IT and DE must declare status_abbrevs so abbreviations are written to ROM."""
+    """Generic languages must declare status_abbrevs so abbreviations reach ROM."""
     cfg = registry.get(code)
     assert "status_abbrevs" in cfg.patches, (
         f"{code} descriptor is missing the status_abbrevs patch step"

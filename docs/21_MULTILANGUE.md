@@ -21,6 +21,8 @@ languages/
   it/combined_it.txt           #   translations  <offset_hex>: <text>
   de/lang.yaml                 # German — build: generic
   de/combined_de.txt
+  indie/lang.yaml              # Indie — build: generic (reuses the FR font)
+  indie/combined_indie.txt
 ```
 
 `lang.yaml` is the single source of truth read by the Makefile, the build
@@ -56,9 +58,10 @@ make langs           # list registered languages
 make build-fr        # French — dedicated, byte-perfect recipe (unchanged)
 make build-it        # Italian — generic driver
 make build-de        # German — generic driver
+make build-indie     # Indie — generic driver (reuses the FR font)
 make build-lang LANG_CODE=it   # any generic language
-make build-all       # FR + IT + DE
-make release-all     # build all three + package output/release/
+make build-all       # FR + IT + DE + Indie
+make release-all     # build every registered language + package output/release/
 ```
 
 `release-all` writes, per language, the full `.gba`, a `.zip`, and global
@@ -101,6 +104,10 @@ partially-translated language still produces a bootable ROM.
   (`ae/oe/ue/ss`) until a dedicated DE charmap + font extension is added; the
   generic `font` step is disabled for German for the same reason.
 * Italian reuses the French font glyphs, so its `font` step is enabled.
+* Indie also reuses the French font (no `patch_font_indie.py`), so the `font`
+  step falls back to `patch_font_fr.py` and the full FR accented set renders.
+  It seeds with a near-empty `combined_indie.txt`, so an untranslated offset
+  stays English and the build is bootable from day one.
 
 ## What stays per-language (necessary duplication)
 

@@ -1,0 +1,66 @@
+# Indie language descriptor — Pokémon Unbound EN→Indie
+#
+# WORK IN PROGRESS. "Indie" is a fresh translation target, built by the
+# generic driver `scripts/build_language.py indie`. Translations live in
+# languages/indie/combined_indie.txt (same `<offset_hex>: <text>` format as
+# combined_fr.txt). Offsets not present there stay English, so a freshly
+# created (near-empty) combined file simply produces an English ROM tagged
+# as the Indie build — the starting point for incremental translation.
+#
+# Indie reuses the French font (no language-specific patch_font_indie.py), so
+# the `font` step falls back to scripts/patch_font_fr.py and renders the same
+# accented glyph set. Add scripts/patch_font_indie.py later if Indie needs
+# glyphs the FR font does not cover.
+code: indie
+name: Indie
+native_name: Indie
+builder_language: indie            # value passed to the generic builder --language
+status: in_progress                # complete | in_progress
+build: generic                     # dedicated (make build-fr) | generic (build_language.py)
+
+combined: languages/indie/combined_indie.txt
+critical: languages/indie/critical_strings_indie.txt   # optional; created when needed
+output_rom: GenedRom-indie.gba
+# Shown in-game on the NOT FOR SALE screen as INDIE.2.1.<build> (the trailing
+# component is the CI build number stamped by the `version` patch step).
+version_label: IN.2.0.0
+
+# Extra glyphs the font must render beyond plain ASCII. Indie seeds with the
+# full FR accented set so accented translations render out of the box.
+font_glyphs: "àâäçèéêëîïôœùûüÀÂÇÈÉÊËÎÏÔŒÙÛÜ"
+
+# In-game status-condition abbreviations. Indie starts from the English source
+# abbreviations and can be localised as translations mature.
+status_abbrev:
+  poison: PSN
+  burn: BRN
+  freeze: FRZ
+  paralysis: PAR
+  sleep: SLP
+  faint: KO
+
+# Post-build patches applied by scripts/build_language.py.
+# `font` falls back to patch_font_fr.py (Indie reuses the FR glyph set).
+#
+# Anti-freeze / anti-corruption (language-agnostic mechanics — always applied):
+#   repair_lz77            restore stable EN=ES LZ77 UI blocks corrupted by the builder
+#   repair_localized_lz77  copy localized (EN≠ES) LZ77 blocks from the Spanish ROM
+#   repoint_stale          re-target text pointers reverted by the LZ77 repair passes
+#   legendary_ritual       restore Ho-Oh/Lugia cutscene setflag chain clobbered by repointer
+#
+# Language-aware (data already in status_abbrev above):
+#   status_abbrevs         write Indie status abbreviations (PSN/BRN/FRZ/…) into ROM
+#   version                stamp the NOT FOR SALE screen with INDIE.2.1.<build>
+#                          so the running build advertises it is the Indie one
+#
+# Richer passes (pokédex rewrap, mission boxes, move descriptions, …) will be
+# added here as Indie translations for those subsystems mature.
+patches:
+  - font
+  - inline
+  - repair_lz77
+  - repair_localized_lz77
+  - repoint_stale
+  - legendary_ritual
+  - status_abbrevs
+  - version
