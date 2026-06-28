@@ -45,6 +45,63 @@ except Exception:  # pragma: no cover - defensive
 
 _HEX_TOKEN_RE = re.compile(r"\{([0-9A-Fa-f]{2})\}")
 
+# ---------------------------------------------------------------------------
+# Control-token normalization
+#
+# The Italian community dump marks colours, buffers and name placeholders with
+# its own readable token convention (``[green]``, ``[buffer1]``, ``{player}``…)
+# instead of the raw CFRU control codes the build pipeline understands. Left
+# untouched, ``[`` / ``]`` / ``{`` / ``}`` are not in the font charmap, so the
+# encoder renders them as ``?`` and spells the token name out literally — the
+# screen reads ``?green??buffer1??black?`` instead of a coloured, buffered word.
+#
+# Each token maps to exactly one raw control sequence, verified byte-for-byte
+# against the English ROM (``output/extracted/extracted_texts/englishrom_texts.json``):
+# every clean-aligned string agreed on the same code (e.g. ``[green]`` → FC 01 06
+# in 2027/2027 cases, ``[buffer1]`` → FD 02 in 791/791, ``{player}`` → FD 01 in
+# 670/670). We emit the raw ``<0xNN>`` form (the same tokens combined_fr.txt uses)
+# so the rest of the proven pipeline encodes them directly — and, because the
+# colour is explicit per token, the result is faithful to the Italian
+# translator's own choices and immune to English-vs-Italian positional drift.
+#
+#   Colours  → <0xFC><0x01><0xNN>   (FC 01 NN, the Gen III SET_TEXT_COLOR code)
+#   Buffers  → <0xFD><0xNN>         (FD NN, the FireRed string-buffer placeholder)
+#   [pause]  → <0xFC><0x09>         (FC 09, PAUSE_UNTIL_PRESS)
+_CONTROL_TOKEN_MAP = {
+    # Colours (FC 01 NN)
+    "[green]": "<0xFC><0x01><0x06>",
+    "[red]": "<0xFC><0x01><0x04>",
+    "[blue]": "<0xFC><0x01><0x08>",
+    "[black]": "<0xFC><0x01><0x02>",
+    "[lightgreen]": "<0xFC><0x01><0x07>",
+    "[orange]": "<0xFC><0x01><0x05>",
+    "[darknavyblue]": "<0xFC><0x01><0x0F>",
+    # String buffers / name placeholders (FD NN)
+    "[buffer1]": "<0xFD><0x02>",
+    "[buffer2]": "<0xFD><0x03>",
+    "[buffer3]": "<0xFD><0x04>",
+    "[rival]": "<0xFD><0x06>",
+    "{player}": "<0xFD><0x01>",
+    # Flow control
+    "[pause]": "<0xFC><0x09>",
+}
+
+# Match the exact known tokens only — never a stray ``[`` or ``{`` in real text.
+_CONTROL_TOKEN_RE = re.compile(
+    "|".join(re.escape(tok) for tok in _CONTROL_TOKEN_MAP)
+)
+
+
+def normalize_control_tokens(text: str) -> str:
+    """Convert Italian-dump control tokens into raw CFRU ``<0xNN>`` sequences.
+
+    Colours (``[green]`` …), string buffers (``[buffer1]`` …), name
+    placeholders (``{player}``, ``[rival]``) and ``[pause]`` are replaced with
+    the exact control bytes the encoder emits verbatim. Any other text — including
+    legitimate square brackets — is left untouched.
+    """
+    return _CONTROL_TOKEN_RE.sub(lambda m: _CONTROL_TOKEN_MAP[m.group(0)], text)
+
 
 def decode_hex_tokens(text: str) -> str:
     """Replace raw ``{XX}`` hex tokens with their CFRU character.
@@ -111,6 +168,7 @@ def escape_text(text: str) -> str:
     escape ``\\n``. Values that already use the ``\\n`` escape are unaffected.
     """
     text = decode_hex_tokens(text)
+    text = normalize_control_tokens(text)
     return text.replace("\r\n", "\n").replace("\r", "\n").replace("\n", "\\n")
 
 
