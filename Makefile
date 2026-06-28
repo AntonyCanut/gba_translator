@@ -76,7 +76,7 @@ SPANISH_BUILD := $(ROM_OUT_DIR)/GenedRom-es.gba
 .DEFAULT_GOAL := pipeline
 
 .PHONY: pipeline verify-roms extract extract-en extract-es diff build-es build-fr prepare-fr validate-es trilingual-csv \
-	build-it build-de build-lang build-all release-all langs \
+	build-it build-de build-indie build-lang build-all release-all langs \
 	test test-python-fast test-python test-rom check-translations test-vitest test-playwright test-all \
 	sync-charmap sync-charmap-check install install-playwright lint tickets report \
 	clean help
@@ -244,6 +244,9 @@ build-it:
 build-de:
 	@$(PYTHON) scripts/build_language.py de --build-number $(BUILD_NUMBER)
 
+build-indie:
+	@$(PYTHON) scripts/build_language.py indie --build-number $(BUILD_NUMBER)
+
 # Build any registered generic language: make build-lang LANG_CODE=it
 build-lang:
 	@if [ -z "$(LANG_CODE)" ]; then \
@@ -253,9 +256,9 @@ build-lang:
 	fi
 	@$(PYTHON) scripts/build_language.py $(LANG_CODE) --build-number $(BUILD_NUMBER)
 
-# Build every language: FR (dedicated) + IT + DE (generic).
-build-all: build-fr build-it build-de
-	@echo "✓ All languages built (FR, IT, DE)."
+# Build every language: FR (dedicated) + IT + DE + Indie (generic).
+build-all: build-fr build-it build-de build-indie
+	@echo "✓ All languages built (FR, IT, DE, Indie)."
 
 # Build all three and package them into output/release/ (ROMs + zips + checksums).
 release-all: build-all
@@ -351,8 +354,9 @@ help:
 	@echo "    make langs           - List languages declared in languages/"
 	@echo "    make build-it        - Build Italian ROM (generic driver)"
 	@echo "    make build-de        - Build German ROM (generic driver)"
+	@echo "    make build-indie     - Build Indie ROM (generic driver)"
 	@echo "    make build-lang LANG_CODE=it - Build any generic language"
-	@echo "    make build-all       - Build FR + IT + DE"
+	@echo "    make build-all       - Build FR + IT + DE + Indie"
 	@echo "    make release-all     - Build all three and package output/release/"
 	@echo ""
 	@echo "  Tests:"
