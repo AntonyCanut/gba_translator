@@ -54,6 +54,7 @@ REPAIR_LOCALIZED_LZ77_SCRIPT = REPO_ROOT / "scripts/repair_localized_lz77_blocks
 REPOINT_STALE_SCRIPT = REPO_ROOT / "scripts/repoint_stale_text_pointers.py"
 PATCH_RITUAL_SCRIPT = REPO_ROOT / "scripts/patch_legendary_ritual_fr.py"
 PATCH_VERSION_SCRIPT = REPO_ROOT / "scripts/patch_version_fr.py"
+PATCH_INTRO_QUESTIONS_IT_SCRIPT = REPO_ROOT / "scripts/patch_intro_questions_it.py"
 
 # Text patches that can be parameterised with the language's combined file.
 PATCH_STATUS_ABBREVS_SCRIPT = REPO_ROOT / "scripts/patch_status_abbrevs_fr.py"
@@ -254,6 +255,9 @@ def apply_patches(config, out_rom: Path, translation_json: Path | None = None,
                 "--rom", out_rom,
                 "--source", ENGLISH_ROM,
             ])
+
+        elif step == "intro_questions_it":
+            run([PYTHON, PATCH_INTRO_QUESTIONS_IT_SCRIPT, "--rom", out_rom])
 
         elif step == "version":
             # Stamp the in-game NOT FOR SALE screen with this language's tag,
