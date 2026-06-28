@@ -138,14 +138,16 @@ def test_normalizer_is_idempotent_and_lossless():
 
 # Bracket/brace control tokens from the Italian dump. The encoder has no glyph
 # for ``[`` / ``]`` / ``{`` / ``}``, so any survivor renders as ``?green?`` etc.
+# ``[player]`` (square-bracket variant) appeared in JSON v3+ exports alongside
+# ``{player}``; both must be converted to ``<0xFD><0x01>``.
 CONTROL_TOKEN_RE = re.compile(
     r"\[(?:green|red|blue|black|lightgreen|orange|darknavyblue"
-    r"|buffer[123]|rival|pause)\]|\{player\}"
+    r"|buffer[123]|rival|pause|player)\]|\{player\}"
 )
 
 
 def test_combined_it_has_no_bracket_control_tokens():
-    """No ``[green]`` / ``[buffer1]`` / ``{player}`` tokens may survive.
+    """No ``[green]`` / ``[buffer1]`` / ``{player}`` / ``[player]`` tokens may survive.
 
     These are colour codes (FC 01 NN), string buffers (FD NN) and name
     placeholders the dump wrote in its own readable convention. Left untouched
