@@ -126,19 +126,30 @@ class FreeSpaceAllocator:
     def allocate(self, size: int) -> Optional[int]:
         if size <= 0:
             return None
-        for idx in range(self.index, len(self.blocks)):
-            start, length = self.blocks[idx]
-            if length >= size:
-                alloc = start
-                new_start = start + size
-                new_length = length - size
-                if new_length >= self.MIN_REMAINDER:
-                    self.blocks[idx] = [new_start, new_length]
-                    self.index = idx
-                else:
-                    self.index = idx + 1
-                return alloc
-        return None
+        # Best-fit: pick the smallest block that still fits. First-fit wasted
+        # large blocks on small strings and left every big block fragmented,
+        # so the Italian build (whose relocation demand is close to the total
+        # free space) ran out early. Best-fit keeps large blocks intact for the
+        # large strings that genuinely need them and packs the leftovers far
+        # more tightly. Scanning all 150-ish blocks per call is negligible.
+        best_idx = -1
+        best_length = None
+        for idx, (start, length) in enumerate(self.blocks):
+            if length >= size and (best_length is None or length < best_length):
+                best_idx = idx
+                best_length = length
+                if length == size:
+                    break
+        if best_idx < 0:
+            return None
+        start, length = self.blocks[best_idx]
+        alloc = start
+        new_length = length - size
+        if new_length > 0:
+            self.blocks[best_idx] = [start + size, new_length]
+        else:
+            self.blocks.pop(best_idx)
+        return alloc
 
 
 class SmartReinserter:
@@ -190,6 +201,12 @@ class SmartReinserter:
         # padding, otherwise a relocated string can land in padding that an
         # in-place write later expands into (and vice versa), corrupting both.
         self._pending_relocations: List[tuple] = []
+        # Identical encoded strings (incl. terminator) are relocated once and
+        # their pointer sites all aimed at the single shared copy. Relocated
+        # text is read-only, so sharing is safe and recovers a large amount of
+        # free space (the IT build relocates thousands of duplicate trainer
+        # class names / repeated dialogue lines).
+        self._relocation_cache: Dict[bytes, int] = {}
         self.free_space_allocator: Optional[FreeSpaceAllocator] = None
         self.stats = {
             'total': 0,
@@ -356,12 +373,43 @@ class SmartReinserter:
                 reserved_rom=self.pointer_proof_rom,
             )
         pending, self._pending_relocations = self._pending_relocations, []
+        # Place the shortest strings first. Free space is a hard budget (the
+        # Italian build's relocation demand exceeds the total free space), so
+        # when not everything fits we maximise the *number* of strings that get
+        # their translation — leaving only the few longest ones in English
+        # instead of an arbitrary offset-ordered slice. Stable sort keeps the
+        # original order among equal-length strings.
+        pending.sort(key=lambda item: len(item[0]))
         for encoded, pointer_offsets, offset in pending:
             self._relocate_text(encoded, pointer_offsets, offset)
 
     def _relocate_text(self, encoded: bytes, pointer_offsets: List[int], offset: int) -> bool:
         if not self.free_space_allocator:
             return False
+
+        # Reuse an already-relocated identical string instead of spending more
+        # free space on a second byte-for-byte copy.
+        cached = self._relocation_cache.get(encoded)
+        if cached is not None:
+            updated = 0
+            for pointer_offset in pointer_offsets:
+                if self._write_pointer(pointer_offset, cached):
+                    updated += 1
+            if updated == 0:
+                self.stats['relocation_failed'] += 1
+                self.stats['warnings'].append({
+                    'offset': f"0x{offset:08X}",
+                    'text': encoded[:32].hex(),
+                    'error': 'relocation_failed_no_pointers_updated',
+                })
+                return False
+            self.stats['relocated'] += 1
+            self.stats['relocated_deduplicated'] = (
+                self.stats.get('relocated_deduplicated', 0) + 1
+            )
+            self.stats['success'] += 1
+            return True
+
         new_offset = self.free_space_allocator.allocate(len(encoded))
         if new_offset is None:
             self.stats['relocation_failed'] += 1
@@ -389,6 +437,7 @@ class SmartReinserter:
             })
             return False
 
+        self._relocation_cache[encoded] = new_offset
         self.stats['relocated'] += 1
         self.stats['relocated_bytes'] += len(encoded)
         self.stats['success'] += 1
@@ -559,6 +608,7 @@ class SmartReinserter:
                 'relocated': self.stats['relocated'],
                 'relocation_failed': self.stats['relocation_failed'],
                 'relocated_bytes': self.stats['relocated_bytes'],
+                'relocated_deduplicated': self.stats.get('relocated_deduplicated', 0),
                 'truncated': self.stats['truncated'],
                 'fallback_used': self.stats['fallback_used'],
                 'skipped_too_long': self.stats['skipped_too_long'],
