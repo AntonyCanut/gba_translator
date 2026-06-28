@@ -247,8 +247,11 @@ class TestGracefulDegradation:
             entries.append(entry)
 
         reinserter = SmartReinserter(rom, allow_relocate=True)
-        for entry in entries:
-            text = "G" * 300
+        for i, entry in enumerate(entries):
+            # Each string must be distinct: identical relocated strings are
+            # deduplicated (they share a single copy), which would let the whole
+            # batch fit and defeat the exhaustion scenario this test exercises.
+            text = "G" * 299 + chr(ord("A") + i)
             reinserter.reinsert_text({**entry, "translation": text})
         reinserter.flush_relocations()
 
