@@ -33,11 +33,13 @@ Strategy
   we just overwrite the text there with the correct bytes.  Safe because the encoded
   IT texts (18 and 33 bytes respectively) are never longer than the available slot at
   the target.
-* 0x1F0F9FA — **relocate & repoint**: use a full-ROM pointer scan to detect whether
-  the live pointer still reaches the original English offset.  If yes, allocate free
-  space, write the full Italian text, and repoint every referrer.  If no referrers
-  remain (pipeline already relocated), the patch is a no-op and the pipeline is
-  trusted to have written the full text.
+* 0x1F0F9FA — **relocate & repoint**: unless the live pointer already reaches a copy
+  of the canonical full text, allocate free space, write the full Italian text, and
+  repoint the live pointer cell (plus any pointer still aimed at the original English
+  offset or at the pipeline's relocated copy).  This works whether or not the pipeline
+  already relocated the string — it always anchors the live pointer to the canonical
+  text rather than giving up when the original offset has no referrers left (which used
+  to leave the verify step failing and skip the entire Italian release).
 """
 
 from __future__ import annotations
@@ -74,6 +76,14 @@ IT_TEXTS: dict[int, str] = {
         "\\lche vanno da quelli d'infiltrazione\\n\\na quelli con i massi."
     ),
 }
+
+# Offsets whose live pointer already targets a slot big enough for the Italian
+# text — overwrite the bytes in place.
+DIRECT_WRITE_OFFSETS = (0x1F0F89C, 0x1F0F9DD)
+# Offset whose full Italian text overflows the original English slot — the build
+# pipeline relocates it, so this patch repoints the live pointer at a copy of the
+# canonical full text.
+RELOCATE_OFFSET = 0x1F0F9FA
 
 
 def _normalize(text: str) -> str:
@@ -122,7 +132,7 @@ def patch(rom: bytearray) -> dict:
     allocator = FreeSpaceAllocator(rom)
 
     # ── Direct-write targets (pointer already points to the right slot) ───────
-    for offset in (0x1F0F89C, 0x1F0F9DD):
+    for offset in DIRECT_WRITE_OFFSETS:
         cell = POINTER_CELLS[offset]
         target = _read_ptr(rom, cell)
         if target is None:
@@ -146,32 +156,40 @@ def patch(rom: bytearray) -> dict:
         stats["direct_written"] += 1
 
     # ── Relocate-and-repoint target ───────────────────────────────────────────
-    offset = 0x1F0F9FA
+    # The full Italian text overflows the original 104-byte English slot, so the
+    # build pipeline already relocates it to free space and repoints the live
+    # referrer.  By the time this patch runs the *original* offset usually has no
+    # referrers left — they now target the pipeline's relocated copy, whose
+    # bytes may differ (e.g. the wrapper recomputed the line breaks).  Repoint
+    # via the live pointer cell so the canonical full text is guaranteed wherever
+    # the pipeline left the pointer, instead of giving up when the original
+    # offset has no referrers (which made the verify step fail and skip the whole
+    # Italian build).
+    offset = RELOCATE_OFFSET
     encoded = _encode(IT_TEXTS[offset])
-    referrers = _find_referrers(rom, offset)
+    cell = POINTER_CELLS[offset]
+    live_target = _read_ptr(rom, cell)
 
-    if not referrers:
-        # Pointer was already updated by a previous build — check whether the
-        # live target already holds the full Italian text.
-        cell = POINTER_CELLS[offset]
-        target = _read_ptr(rom, cell)
-        if target is not None and rom[target : target + len(encoded)] == encoded:
-            print(f"  0x{offset:08X}: already fully translated — skip")
-        else:
-            print(
-                f"  0x{offset:08X}: no referrers to original and live text differs"
-                f" — cannot relocate safely; skip"
-            )
+    if live_target is not None and rom[live_target : live_target + len(encoded)] == encoded:
+        print(f"  0x{offset:08X}: already fully translated at 0x{live_target:X} — skip")
         stats["skipped"] += 1
     else:
+        # Collect every cell that must reference the relocated copy: the canonical
+        # pointer cell, any pointer still aimed at the original English offset,
+        # and any pointer aimed at the pipeline's relocated copy.
+        referrers = set(_find_referrers(rom, offset))
+        referrers.add(cell)
+        if live_target is not None:
+            referrers.update(_find_referrers(rom, live_target))
+
         new_offset = allocator.allocate(len(encoded))
         if new_offset is None:
             print(f"  0x{offset:08X}: free-space allocation failed — skip")
             stats["failed"] += 1
         else:
             rom[new_offset : new_offset + len(encoded)] = encoded
-            for cell in referrers:
-                _write_ptr(rom, cell, new_offset)
+            for ref in sorted(referrers):
+                _write_ptr(rom, ref, new_offset)
             print(
                 f"  0x{offset:08X}: relocated {len(encoded)} bytes to"
                 f" 0x{new_offset:X}; repointed {len(referrers)} pointer(s)"
@@ -201,7 +219,7 @@ def verify(rom: bytes) -> list[tuple[int, str]]:
     return bad
 
 
-def main() -> int:
+def main(argv: list[str] | None = None) -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument(
         "--rom",
@@ -209,7 +227,7 @@ def main() -> int:
         type=Path,
         help="Italian ROM to patch in place (e.g. output/roms/GenedRom-it.gba)",
     )
-    args = parser.parse_args()
+    args = parser.parse_args(argv)
 
     rom_path: Path = args.rom
     if not rom_path.exists():
