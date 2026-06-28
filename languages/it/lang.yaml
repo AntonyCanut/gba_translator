@@ -54,5 +54,6 @@ patches:
   - repair_localized_lz77
   - repoint_stale
   - legendary_ritual
+  - intro_questions_it   # fix 3 character-creation questions that bypass pipeline
   - status_abbrevs
   - version
