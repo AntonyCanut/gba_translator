@@ -89,10 +89,18 @@ class TestRomIntegrity:
     """The Italian ROM must be a valid 32 MB GBA file."""
 
     def test_rom_exists(self):
-        assert IT_ROM_PATH.exists(), (
-            f"Italian ROM not found at {IT_ROM_PATH}. "
-            "Run: python3 scripts/build_language.py it"
-        )
+        # The Italian ROM is a best-effort, non-committed build artifact: unlike
+        # the proven FR ROM it is NOT checked into git, CI ignores tests/e2e, and
+        # release.yml builds it on-demand with continue-on-error so a transient IT
+        # problem never drops the FR release. When it has not been built locally
+        # this test skips (matching every other test in this file) rather than
+        # hard-failing on an intentionally-absent file.
+        if not IT_ROM_PATH.exists():
+            pytest.skip(
+                f"GenedRom-it.gba not found at {IT_ROM_PATH} — "
+                "run: python3 scripts/build_language.py it"
+            )
+        assert IT_ROM_PATH.is_file()
 
     def test_rom_size(self, it_rom_data):
         assert len(it_rom_data) == GBA_ROM_SIZE, (
