@@ -8,16 +8,24 @@ official French name is **Armurouillée** (a portmanteau of "Armure" +
 "rouillée"). The activation message lowers Defense and sharply raises Speed.
 
 The garbled rendering seen in the report — the ability-name cell plus the
-"X de Vitesse fortementaugmente !" message — came from three regressions that
+"X de Vitesse fortementaugmente !" message — came from two regressions that
 have since been fixed:
   * the ability-name cell at 0xA37069 (fixed-width 17-byte slot, no pointer);
-  * the stat-change verb adverb losing its trailing space
-    ("fortement " → "fortementaugmente");
   * the stat-change template word order ("{stat} de {name}\n{verb}").
 
-These tests lock those fixes so a future rebuild (which re-points / restores
-EN strings — see scripts/repoint_stale_text_pointers.py) cannot reintroduce
-the typo.
+The activation-message wording itself was later redesigned by ticket B-35
+(commits 28573962 / 3050eef2): the engine always prepends the intensity
+modifier to the verb buffer, so the conjugated verb ("augmente"/"baisse") was
+moved INTO the template and the modifier changed from "fortement " to
+"beaucoup " (authored with an explicit <0x00> space token, since line-based
+tooling trims literal trailing spaces) — see
+tests/test_battle_stat_change_order_fr.py for the full rationale and the
+end-to-end rendering proof ("Défense de Pikachu\\naugmente beaucoup !").
+
+These tests lock the *current* (post-B-35) wording so a future rebuild
+(which re-points / restores EN strings — see
+scripts/repoint_stale_text_pointers.py) cannot reintroduce the typo or
+silently revert the B-35 word-order fix.
 """
 
 import json
@@ -80,24 +88,30 @@ class TestNodulithePassiveName:
 
 @pytest.mark.rom
 class TestWeakArmorActivationMessage:
-    """The 'passive triggered' message that read 'fortementaugmente !'."""
+    """The 'passive triggered' message that read 'fortementaugmente !'.
+
+    Post-B-35, the conjugated verb lives in the template and the intensity
+    modifier is "beaucoup " (not "fortement ") — see module docstring.
+    """
 
     def test_adverb_keeps_trailing_space(self, translations):
-        """'sharply'/'harshly' → 'fortement ' (trailing space restored)."""
+        """'sharply'/'harshly' → 'beaucoup<0x00>' (explicit space token)."""
         for offset in (0x3FCB41, 0x3FCB50):
             entry = translations.get(offset)
             assert entry is not None, f"Missing stat adverb entry at 0x{offset:X}"
-            assert entry["translation"] == "fortement ", (
+            assert entry["translation"] == "beaucoup<0x00>", (
                 f"0x{offset:X}: got {entry['translation']!r}, "
-                "expected 'fortement ' (trailing space)"
+                "expected 'beaucoup<0x00>' (explicit trailing space token)"
             )
 
     def test_stat_template_word_order(self, translations):
-        """Template must read '{stat} de {name}\\n{verb}', not 'name de stat'."""
+        """Template must read '{stat} de {name}\\naugmente {verb}', not 'name de stat'."""
         # Control codes are stored as literal "<0xFD>" placeholders in the
         # translation JSON. FD00 = stat buffer, FD0F = battler-name buffer.
+        # The conjugated verb ("augmente") is baked into the template since
+        # B-35, ahead of the intensity+terminator buffer (<0xFD><0x01>).
         entry = translations.get(0x3FCB5F)
         assert entry is not None, "Missing stat-change template at 0x3FCB5F"
-        assert entry["translation"] == "<0xFD><0x00> de <0xFD><0x0F>\n<0xFD><0x01>", (
+        assert entry["translation"] == "<0xFD><0x00> de <0xFD><0x0F>\naugmente <0xFD><0x01>", (
             f"Unexpected stat template: {entry['translation']!r}"
         )
