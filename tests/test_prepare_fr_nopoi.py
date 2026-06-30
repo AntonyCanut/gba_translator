@@ -206,6 +206,25 @@ class TestNoPointerFallback(unittest.TestCase):
         # EN_BYTES has 3 content bytes before the 0xFF terminator.
         self.assertEqual(entry["original_length"], 3)
 
+    def test_english_raw_bytes_populated_for_inplace_entry(self) -> None:
+        """No-pointer entries must carry the raw EN bytes for control-code extraction.
+
+        Without this, the generic builder's _extract_control_sequences had no
+        raw_bytes_hex to fall back to and parsed FC 01 NN macros out of the
+        *decoded* text, where the argument bytes render as plain glyphs
+        (e.g. 0x08 -> 'E with diaeresis') instead of <0xNN> tokens — leaving
+        {COLOR}X macros unresolved (literal '?COLOR?' in the built ROM).
+        """
+        result = _run_prepare(
+            self._make_combined("Oui"),
+            self.en_json,
+            self.rom,
+        )
+        offsets = {t["offset"]: t for t in result["translations"]}
+        entry = offsets.get(self.EN_OFFSET)
+        self.assertIsNotNone(entry)
+        self.assertEqual(entry.get("english_raw_bytes"), self.EN_BYTES.hex())
+
 
 class TestDedicatedPatchExclusion(unittest.TestCase):
     """Offsets owned by dedicated post-build patches must never reach the JSON.
