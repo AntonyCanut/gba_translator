@@ -83,10 +83,11 @@ class TestRomContentMatchesTranslation:
 
         assert checked > 0, "No entries were checked"
         match_pct = matches / checked * 100
-        # Longest entries are almost all relocated to free space, so they
-        # won't be found at their original offset — only in-place matches count.
-        assert match_pct >= 1.0, (
-            f"Only {match_pct:.1f}% of top-100 longest entries match "
+        # Most injected in-place entries decode back verbatim; some of the
+        # longest get relocated to free space (won't match at their original
+        # offset). A healthy injection keeps the bulk in place.
+        assert match_pct >= 50.0, (
+            f"Only {match_pct:.1f}% of the longest injected entries match "
             f"({matches}/{checked})"
         )
 
@@ -220,12 +221,14 @@ class TestCorruptedBytesDetection:
             term = chunk.find(POKEMON_TERMINATOR)
             if term <= 0:
                 continue
-            string_bytes = chunk[:term]
-            # Fixed-width fields (e.g. item descriptions) pad with literal
-            # trailing spaces in the English source itself, which legitimately
-            # encode as runs of 0x00 — only flag a run longer than whatever
-            # run already exists in original_text, i.e. one *introduced* by
-            # the translation/injection rather than inherited from the source.
+            # 0x00 is the space glyph in this encoding, so trailing box-padding
+            # (spaces, present in the EN source too) is not corruption: strip a
+            # trailing run of spaces (0x00) and newlines (0xFE) before scanning.
+            string_bytes = chunk[:term].rstrip(b"\x00\xFE")
+            # Fixed-width fields (e.g. item descriptions) can also carry interior
+            # padding inherited from the English source; only flag an interior
+            # run longer than whatever run already exists in original_text — i.e.
+            # one *introduced* by the translation/injection, not inherited.
             source_max_run = 0
             run = 0
             for ch in entry.get("original_text", ""):
