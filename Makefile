@@ -39,6 +39,7 @@ PATCH_POKEDEX_CATEGORY_ORDER_FR_SCRIPT := scripts/patch_pokedex_category_order_f
 PATCH_MOVE_DESC_FR_SCRIPT := scripts/patch_move_descriptions_fr.py
 PATCH_DUP_MOVE_DESC_FR_SCRIPT := scripts/patch_dup_move_descriptions_fr.py
 PATCH_TM_ITEM_DESC_FR_SCRIPT := scripts/patch_tm_item_descriptions_fr.py
+PATCH_GIVECS_GIFT_ITEM_FR_SCRIPT := scripts/patch_givecs_gift_item_fr.py
 PATCH_METEORITE_DIALOGUE_FR_SCRIPT := scripts/patch_meteorite_dialogue_fr.py
 PATCH_WORLDMAP_JUNCTION_FR_SCRIPT := scripts/patch_worldmap_junction_panels_fr.py
 PATCH_SUMMARY_LABELS_SCRIPT := scripts/patch_summary_labels_fr.py
@@ -200,6 +201,9 @@ build-fr: $(ENGLISH_EXTRACT) $(SPANISH_EXTRACT) $(BUILD_SCRIPT)
 		--rom $(FR_BUILD) \
 		--combined languages/fr/combined_fr.txt \
 		--reference-rom $(SPANISH_ROM)
+	@$(PYTHON) $(PATCH_GIVECS_GIFT_ITEM_FR_SCRIPT) \
+		--rom $(FR_BUILD) \
+		--source $(ENGLISH_ROM)
 	@$(PYTHON) $(PATCH_METEORITE_DIALOGUE_FR_SCRIPT) \
 		--rom $(FR_BUILD) \
 		--source $(ENGLISH_ROM) \
