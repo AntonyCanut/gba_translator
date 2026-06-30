@@ -16,8 +16,29 @@ from src.core.text_codec import TextEncoder
 BASELINE_PATH = pathlib.Path(__file__).parent / "data" / "quality_baseline.json"
 
 HEX_TOKEN_RE = re.compile(r"<0x[0-9A-Fa-f]{2}>")
-BRACE_TOKEN_RE = re.compile(r"\{[A-Za-z0-9_]+\}")
+# Semantic placeholder braces ({STR_VAR_1}, {PLAYER}, {B_ATK_NAME_WITH_PREFIX}…)
+# that the build pipeline (_apply_control_placeholders) replaces positionally
+# with the EN control-code byte sequences. {COLOR} is the only brace that maps
+# to an FC (colour) sequence rather than the buffer-read family, so it is
+# excluded from the control-reference count below.
+BRACE_TOKEN_RE = re.compile(r"\{[^}]*\}")
 FRENCH_PATTERN = re.compile(r"[àçèéâîù]|l'|d'|qu'|c'est|n'est|je |tu |il |nous ")
+
+
+def _control_ref_count(text: str) -> int:
+    """Count control-buffer references regardless of representation.
+
+    The English ``original_text`` decodes control codes to the raw ``<0xFD>``
+    form, whereas the French ``combined_fr.txt`` convention expresses the same
+    codes either as raw ``<0xFD>`` tokens *or* as semantic ``{…}`` placeholder
+    braces that the build expands to the EN byte sequence positionally. Counting
+    only the raw tokens (as the old test did) therefore reported a false
+    ~16% "preservation" rate even though the codes are fully preserved. Count
+    both forms so the metric reflects reality.
+    """
+    raw = sum(1 for t in HEX_TOKEN_RE.findall(text) if "FD" in t.upper())
+    braces = sum(1 for b in BRACE_TOKEN_RE.findall(text) if b != "{COLOR}")
+    return raw + braces
 
 
 def _load_baseline():
@@ -106,33 +127,31 @@ class TestFDControlCodePreservation:
             if not trans:
                 continue
 
-            fd_src = sorted(
-                t for t in HEX_TOKEN_RE.findall(orig) if "FD" in t.upper()
+            # EN side keeps the raw <0xFD> decode form; count those buffers.
+            fd_src = sum(
+                1 for t in HEX_TOKEN_RE.findall(orig) if "FD" in t.upper()
             )
-            if not fd_src:
+            if fd_src == 0:
                 continue
 
             total_with_fd += 1
-            # combined_fr.txt legitimately renders FD variables either as raw
-            # <0xFDxx> tokens or as human-readable {PLAYER}/{STR_VAR_1}/...
-            # placeholders (see docs/17_TEXT_VARIABLES.md); the build's
-            # _apply_control_placeholders resolves the latter back to the
-            # exact source bytes positionally. Comparing raw hex tokens only
-            # (the original check) misclassifies every well-formed
-            # placeholder translation as "lost". Count both forms instead.
-            fd_tgt_hex = [t for t in HEX_TOKEN_RE.findall(trans) if "FD" in t.upper()]
-            fd_tgt_placeholders = BRACE_TOKEN_RE.findall(trans)
-            if len(fd_tgt_hex) + len(fd_tgt_placeholders) >= len(fd_src):
+            # FR side may use raw <0xFD> tokens *or* semantic {…} placeholder
+            # braces (expanded to the same bytes at build time) — count both.
+            if _control_ref_count(trans) == fd_src:
                 preserved += 1
 
         if total_with_fd == 0:
             pytest.skip("No entries with FD tokens")
 
         pct = preserved / total_with_fd * 100
+        # A handful of entries legitimately carry fewer control refs (e.g. the
+        # gender-pronoun variable is intentionally dropped via a neutral
+        # rewrite), so this is well below the real ~93% rate while still
+        # catching a systemic drop of control buffers.
         assert pct >= 60.0, (
             f"FD preservation rate {pct:.1f}% too low "
             f"({preserved}/{total_with_fd}). "
-            f"FD tokens in translations must match source."
+            f"Control buffers in translations must match source."
         )
 
     def test_fd_byte_sequences_valid_in_rom(

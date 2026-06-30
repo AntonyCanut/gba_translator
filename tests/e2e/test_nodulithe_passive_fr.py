@@ -36,7 +36,17 @@ import pytest
 from src.core.text_codec import TextDecoder
 
 FR_ROM = Path("output/roms/GenedRom-fr.gba")
-FR_TRANSLATION = Path("output/translation/2026-06-12_translation_ready.json")
+
+
+def _latest_translation_ready() -> Path:
+    """Newest ``*_translation_ready.json`` (regenerated, never committed)."""
+    candidates = sorted(Path("output/translation").glob("*_translation_ready.json"))
+    return candidates[-1] if candidates else Path(
+        "output/translation/translation_ready.json"
+    )
+
+
+FR_TRANSLATION = _latest_translation_ready()
 
 # Ability-name table: fixed-width cells of 17 bytes (name + 0xFF + padding).
 # "Weak Armor" lives at file offset 0xA37069; the engine reads the cell in
