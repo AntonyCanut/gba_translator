@@ -145,6 +145,31 @@ class TestHardStoneCells(unittest.TestCase):
             self.assertEqual(data[name_cell + len(encode("Pierre Dure"))], 0xFF)
 
 
+class TestWeakArmorCell(unittest.TestCase):
+    """Roggenrola/Nodulithe's passive ability "Weak Armor" shipped in English
+    from a fixed-width 17-byte cell, no pointer (absent from
+    translation_ready.json and the Spanish extraction). Official French name
+    is "Armurouillée" (Armure + rouillée).
+    """
+
+    OFFSET = 0xA37069
+
+    def test_cell_registered(self):
+        self.assertIn(self.OFFSET, NAME_FIXES)
+        old, new, stride = NAME_FIXES[self.OFFSET]
+        self.assertEqual(old, "Weak Armor")
+        self.assertEqual(new, "Armurouillée")
+        self.assertEqual(stride, 17)
+
+    def test_cell_patches_in_place(self):
+        old, new, stride = NAME_FIXES[self.OFFSET]
+        data = _make_cell_rom(self.OFFSET, old, stride)
+        self.assertEqual(apply_name_fixes(data, {self.OFFSET: (old, new, stride)}), 1)
+        raw = encode(new)
+        self.assertEqual(bytes(data[self.OFFSET : self.OFFSET + len(raw)]), raw)
+        self.assertEqual(data[self.OFFSET + len(raw)], 0xFF)
+
+
 class TestTmToCtCells(unittest.TestCase):
     """TM item name cells (class 2, absent from the injection pipeline) must be
     renamed to CT in all three item tables: FireRed original (TM01–TM50),
