@@ -4,6 +4,8 @@ Provides ROM paths, translation files, and shared test data
 for end-to-end testing of the full translation pipeline.
 """
 
+from __future__ import annotations
+
 import pathlib
 
 import pytest
@@ -36,7 +38,7 @@ def _resolve_main_project_root() -> pathlib.Path:
 PROJECT_ROOT = pathlib.Path(__file__).resolve().parent.parent.parent
 MAIN_PROJECT_ROOT = _resolve_main_project_root()
 
-def _latest_translation_ready() -> pathlib.Path:
+def _latest_translation_ready() -> pathlib.Path | None:
     """Return the most recent ``*_translation_ready.json`` to test against.
 
     ``make prepare-fr`` regenerates ``<YYYY-MM-DD>_translation_ready.json`` with
@@ -44,18 +46,22 @@ def _latest_translation_ready() -> pathlib.Path:
     fixtures at a hard-coded date silently skips every dependent test as soon as
     the file is regenerated, so glob for the newest dated file instead.
 
+    The glob is anchored to the YYYY-MM-DD prefix (not a bare
+    `*_translation_ready.json`) so it can't match other languages' files like
+    `it_translation_ready.json`, which sorts after every dated FR filename and
+    would otherwise be picked as "latest".
+
     The generated file is not git-tracked, so a worktree only has its own copy
     when this checkout ran ``make prepare-fr``; otherwise it lives in the main
     project checkout. Search the worktree first, then fall back to the main
-    checkout. Falls back to a stable sentinel (which won't exist → skip) when
-    nothing is present anywhere.
+    checkout. Returns None when nothing is present anywhere.
     """
     for root in (PROJECT_ROOT, MAIN_PROJECT_ROOT):
         translation_dir = root / "output" / "translation"
-        candidates = sorted(translation_dir.glob("*_translation_ready.json"))
+        candidates = sorted(translation_dir.glob("????-??-??_translation_ready.json"))
         if candidates:
             return candidates[-1]
-    return PROJECT_ROOT / "output" / "translation" / "translation_ready.json"
+    return None
 
 
 # Git-tracked: always read from this checkout's own worktree.
@@ -103,10 +109,10 @@ def it_rom_path():
 
 @pytest.fixture
 def translation_ready_path():
-    if not TRANSLATION_READY.exists():
+    if TRANSLATION_READY is None or not TRANSLATION_READY.exists():
         pytest.skip(
-            "no *_translation_ready.json in output/translation/ "
-            "— run: make prepare-fr"
+            "no *_translation_ready.json found in output/translation/ — "
+            "run: make prepare-fr"
         )
     return TRANSLATION_READY
 
@@ -139,8 +145,11 @@ def injected_rom(tmp_path_factory):
     """Inject translations into a copy of the English ROM (module-scoped)."""
     if not EN_ROM_PATH.exists():
         pytest.skip("englishrom.gba not found")
-    if not TRANSLATION_READY.exists():
-        pytest.skip("translation_ready.json not found")
+    if TRANSLATION_READY is None or not TRANSLATION_READY.exists():
+        pytest.skip(
+            "no *_translation_ready.json found in output/translation/ — "
+            "run: make prepare-fr"
+        )
 
     import json
     import shutil

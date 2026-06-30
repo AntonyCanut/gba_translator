@@ -34,19 +34,9 @@ from pathlib import Path
 import pytest
 
 from src.core.text_codec import TextDecoder
+from tests.e2e.conftest import TRANSLATION_READY
 
 FR_ROM = Path("output/roms/GenedRom-fr.gba")
-
-
-def _latest_translation_ready() -> Path:
-    """Newest ``*_translation_ready.json`` (regenerated, never committed)."""
-    candidates = sorted(Path("output/translation").glob("*_translation_ready.json"))
-    return candidates[-1] if candidates else Path(
-        "output/translation/translation_ready.json"
-    )
-
-
-FR_TRANSLATION = _latest_translation_ready()
 
 # Ability-name table: fixed-width cells of 17 bytes (name + 0xFF + padding).
 # "Weak Armor" lives at file offset 0xA37069; the engine reads the cell in
@@ -72,9 +62,9 @@ def rom_data():
 
 @pytest.fixture(scope="module")
 def translations():
-    if not FR_TRANSLATION.exists():
-        pytest.skip(f"Translation file not found: {FR_TRANSLATION}")
-    data = json.loads(FR_TRANSLATION.read_text(encoding="utf-8"))
+    if TRANSLATION_READY is None or not TRANSLATION_READY.exists():
+        pytest.skip("no *_translation_ready.json found in output/translation/")
+    data = json.loads(TRANSLATION_READY.read_text(encoding="utf-8"))
     return {t["offset"]: t for t in data["translations"]}
 
 
