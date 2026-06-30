@@ -7495,12 +7495,12 @@
 0x7FA877: Parfait !\nTu l'as capturé !\pÇa apprendra à cette dame !\pSon Pokémon est maintenant aux mains\nd'un dresseur de premier ordre !
 0x7FA8DD: Pourquoi l'avoir mis K.O. ?\pMaintenant il faut le soigner et tu\ndois le rebattre !
 0x7FA940: Tadmorv est soigné.\nPrêt à le combattre encore ?
-0x7FB156: Voilà la situation.\pJ'ai affronté ces goons \nNoirépine il y a quelque temps,\lils m'ont pulvérisé.\pL'un d'eux a aussi utilisé le\nPokémon de son partenaire contre\lmoi, je n'avais aucune chance.\pJe veux les remettre à leur place,\nmais je ne suis pas assez fort.\lTu crois pouvoir les battre tous\ples deux pour moi ?\n
+0x7FB156: Voilà la situation.\pJ'ai affronté ces\nNoirépine il y a quelque temps,\lils m'ont pulvérisé.\pL'un d'eux a aussi utilisé le\nPokémon de son partenaire contre\lmoi, je n'avais aucune chance.\pJe veux les remettre à leur place,\nmais je ne suis pas assez fort.\lTu crois pouvoir les battre tous\ples deux pour moi ?\n
 0x7FB28A: Tu as du cran, {PLAYER}.\pJe t'y emmène.
 0x7FB2B6: Hmph.\nJe croyais que tu avais du cran, gamin.
 0x7FB2D9: Il te faut au moins deux Pokémon\ns'ils t'attaquent à deux.
 0x7FB318: Prêt à retenter, {PLAYER} ?\nCes goons doivent être remis à leur\pplace.\n
-0x7FB369: Tu leur as montré, à ces \nNoirépine, {PLAYER}.\pTu es vraiment le dresseur le plus\ncourageux que je connaisse.
+0x7FB369: Tu as maté ces\nNoirépine, {PLAYER}.\pTu es le dresseur le plus\ncourageux que je connaisse.
 0x7FB3C9: L'objet que je t'ai donné est vital\npour un dresseur plein de cran.\pDès que l'ennemi touche ton Pokémon,\nil se blesse aussi.
 0x7FB449: Ces goons ne me dérangeront plus.\nMerci {PLAYER}.
 0x7FB47F: Je voulais te donner un objet, mais\ntu n'as pas de place.
@@ -7539,7 +7539,7 @@
 0x7FCBE9: Barbs : {COLOR}ËLes {PLAYER} Noir ?\pVous devez être le gang bas de gamme\ndont j'entends parler…\pQuelqu'un devrait vous remettre à\nvotre place !\pEt ce quelqu'un, c'est moi !\pC'est qui ce {PLAYER} ?\nPourquoi en parler ?\pJe vais le dégommer et vous donner\nune leçon !
 0x7FCCF4: James : {COLOR}ËCe gars, juste là !
 0x7FCD16: {COLOR}ËMais tu es loin d'être assez fort\npour battre {PLAYER} !\pTu seras écrasé !
-0x7FCD63: Barbs : {COLOR}ËChaw ha ha ha !\pTu penses qu'un gamin peut me battre\nmoi, Barbs ?\pJe dirige les Noirépine !\pJe suis les Noirépine !
+0x7FCD63: Barbs : {COLOR}ËChaw ha ha !\pTu crois qu'un gamin peut me battre,\nBarbs ?\pJe dirige les Noirépine !\pJe suis les Noirépine !
 0x7FCDE1: Barbs : {COLOR}ËVoyons qui est le plus dur\nde la Ville d'Antisis !
 0x7FCE25: Chaw ha ha ha !\nTu ne déçois pas, {PLAYER} !
 0x7FCE4D: Barbs : {COLOR}ËBien joué,\n{PLAYER}.\pJe serais fier si tu étais des\nnôtres, les Noirépine.\pDommage que tu sois fidèle à ces\nclowns.\pEn parlant de clowns, on dirait que\nmes gars les ont démolis !
@@ -14827,7 +14827,7 @@
 0x1EDCDB7: Port d'Antisis
 0x1EDCDC4: Voici la Ville d'Antisis ! C'est\pl'antithèse du bonheur !
 0x1EDCDF8: Les Noirépine étaient\nle gang le plus dur de la ville\ljusqu'à notre arrivée !\pLes {PLAYER} Noir !
-0x1EDCE5A: On est les Noirépine ! On\npossède cette ville !
+0x1EDCE5A: On est les Noirépine ! On\npossède la ville !
 0x1EDCE88: On est les Noirépine !\nDégage de notre chemin !
 0x1EDCEB9: Tu crois faire quoi, hein, gamin ?\nC'est le territoire des \pNoirépine !\nT'es pas le bienvenu ici !
 0x1EDCF1B: Hé ! Qu'est-ce qui se passe\nlà-dedans ?\pTu trouves ça drôle\nde me verrouiller dehors ? Hein ?
@@ -14841,7 +14841,7 @@
 0x1EDD126: Je suis des Black Ferrothorn !\nFixe-moi trop longtemps\pet je te pique !\n
 0x1EDD174: Ces {PLAYER} Noir se mettent\ntoujours en travers…\pHé ! Arrête de mater !\n
 0x1EDD1B1: On est les Noirépine !\nPersonne ne nous fera tomber !
-0x1EDD1EF: On vient d'expulser l'ancien gang\nd'ici hors de la ville !\pOn est prêts à diriger maintenant !\nOn est les Noirépine !
+0x1EDD1EF: On vient d'expulser l'ancien gang\nd'ici hors de la ville !\pOn dirige maintenant !\nOn est les Noirépine !
 0x1EDD25A: Un jour, on va dégager ces {PLAYER}\nNoir hors de la ville…\pHé ! Arrête de mater !\n
 0x1EDD2A8: On a chassé le nouveau gang\nd'ici !\pLes Black {PLAYER} sont partis !\nOn est les Black Ferrothorn !
 0x1EDD316: La poubelle est vide.
@@ -20262,7 +20262,7 @@
 0x1F71CC3: Route 15 «Ruban\nNorthsea»\p<0x7B> Route 2, Grotte\nIcicle <0x7C> Bourg Vivill
 0x1F71D04: Route 16 «Canyon\nAride» <0x79>\pBourg Gurun\n<0x7A> Ville\ld’Antisis <0x7C> Route 17
 0x1F71D44: Quelqu’un a tagué tout le\npanneau…
-0x1F71D6A: QG Noirépine\pReste à l’écart si tu sais ce qui\nest bon pour toi !
+0x1F71D6A: QG Noirépine\pReste à l’écart,\npour ton bien !
 0x1F71DA8: Arène Pokémon de Ville d’Antisis\nChampion : Big Mo\pMaillon suprême de la chaîne !
 0x1F71DF0: Entrepôt d’Antisis
 0x1F71E09: <0x7C> Port d’Antisis
@@ -22375,10 +22375,10 @@
 0x1F9E5A9: Qu'est-ce que tu veux,\pgamin ? On est occupés !
 0x1F9E5C7: {PLAYER} ! Te voilà !\pBienvenue au QG du {PLAYER}\nNoir !
 0x1F9E5F4: Ça paie pas de mine pour\nl'instant, mais je te jure, une\lfois qu'on aura viré ces \lNoirépine, on va retaper\pl'endroit. Évidemment, on serait\nravis que tu restes pour nous\laider à gérer ces losers. Je suis\poccupé à élaborer une stratégie en\nbéton pour notre attaque, alors en\lattendant, pourquoi ne pas aider\ltes camarades du {PLAYER} Noir ?
-0x1F9E745: Tu arrives pile au bon moment,\p{PLAYER}. On a trouvé comment on\nallait faire pour abattre ces\pNoirépine. On va tenter\nun coup de poker et attaquer par\ples égouts. Gwa ha ha ha ! Ces\ptas de viande arrogants ne\nsauront pas ce qui les frappe !
+0x1F9E745: Tu arrives pile au bon moment,\p{PLAYER}. On a trouvé le plan pour\nabattre ces\pNoirépine. On va tenter\nun coup de poker et attaquer par\ples égouts. Gwa ha ha ha ! Ces\ptas de viande ne\nsauront pas ce qui les frappe !
 0x1F9E81F: Les gars ! Enfourchez\nvos motos ! On va aux égouts !
-0x1F9E852: Je suis occupé à élaborer une\nstratégie en béton pour notre\lattaque contre les \pNoirépine. En attendant,\npourquoi n'aiderais-tu pas\ltes camarades du {PLAYER} Noir ?
-0x1F9E8EB: Avant qu'on emménage, cette base\nappartenait à l'ancien gang qui\lfaisait la loi à Ville d'Antisis.\pAprès que les Noirépine\nles ont chassés, ils ont laissé\lcette base prête à être prise.\pOn l'a bien retapée depuis qu'on\nest là, et on a même remplacé le\ltrou bouché vers les égouts par\lun vrai escalier !
+0x1F9E852: Je prépare une\nstratégie en béton pour notre\lattaque contre les \pNoirépine. En attendant,\npourquoi n'aiderais-tu pas\ltes camarades du {PLAYER} Noir ?
+0x1F9E8EB: Avant qu'on emménage, cette base\nappartenait à l'ancien gang qui\lfaisait la loi à Ville d'Antisis.\pAprès que les Noirépine\nles ont chassés, ils ont laissé\lcette base prête à être prise.\pOn l'a retapée depuis qu'on\nest là, et on a remplacé le\ltrou vers les égouts par\lun vrai escalier !
 0x1F9EA0C: On prépare une stratégie\npour abattre les Noirépine.
 0x1F9EA4F: Quand on aura viré ces \nNoirépine, je vais prendre\ll'un de leurs canapés pour\pmoi. Parie qu'ils en ont un\ntas dans leur base luxueuse !
 0x1F9EAE4: Emportées à l'égout
@@ -22398,12 +22398,12 @@
 0x1F9F2DF: Hmph. Où sont ces «\ptripes» dont James\nn'arrête pas de parler ?
 0x1F9F316: Vu les crapules que c'est,\nils vont probablement se\lmettre à deux contre toi. Tu\pdevrais préparer au moins\ndeux Pokémon pour combattre,\lau cas où ils le feraient.
 0x1F9F3A3: Prêt à retenter ta\nchance, {PLAYER} ? Ces\psbires doivent être\nremis à leur place.
-0x1F9F3F5: Tu leur en as mis plein la vue,\nces sbires Noirépine,\p{PLAYER}. Le pont devant notre\nbase est maintenant totalement\psous notre contrôle. Tu l'as fait,\p{PLAYER}. Grâce à toi, j'ai un peu\nplus étendu notre territoire. T'es\pvraiment le Dresseur le plus\ntéméraire que je connaisse.
+0x1F9F3F5: Tu leur as montré, à ces\nsbires Noirépine, {PLAYER}.\pLe pont devant notre base est\nmaintenant sous notre contrôle.\pGrâce à toi, j'ai étendu notre\nterritoire, {PLAYER}.\pT'es vraiment le Dresseur\nle plus téméraire que je connaisse.
 0x1F9F4E1: Les {COLOR}ÉObjets Pouvoir{COLOR}Ë\nsont essentiels pour un Dresseur\ptéméraire. Ils rendent\nl'entraînement de tes Pokémon bien
 0x1F9F553: Ces sbires vont laisser\nce pont tranquille\ppendant un moment. Merci, {PLAYER}.
 0x1F9F59C: Rory
 0x1F9F5A1: Chad
-0x1F9F5A6: Hé, les nazes Noirépine\n! Je viens pour une revanche !
+0x1F9F5A6: Hé, les nazes Noirépine\n! Je viens me venger !
 0x1F9F5DB: Tu entends, Chad ? Ce\pminable pense vraiment qu'il\npeut nous battre ! Il ne se\psouvient pas de la raclée\nqu'on lui a mise la dernière fois ?
 0x1F9F657: Oh, je vais pas me\nbattre. Mon pote\p{PLAYER} va vous démolir\nà ma place !
 0x1F9F6B5: Ah oui ? Eh bien on va\pdevoir écraser\n{STR_VAR_1} ensemble !
@@ -22413,9 +22413,9 @@
 0x1F9F7E9: Quoi… pas possible…\nTu m'as fait voler mes chaussettes !
 0x1F9F80F: Ces trucs qu'on a piqués à ces\nscientifiques sont complètement
 0x1F9F84B: Allez, mec ! Comment ça\na pu arriver ?
-0x1F9F870: Quoi…{PAUSE}î tu devrais pas\npouvoir battre le Noirépine !\pNos peaux sont aussi dures que du\lfer !
+0x1F9F870: Quoi…{PAUSE}î tu peux pas\nbattre le Noirépine !\pNos peaux sont dures comme du\lfer !
 0x1F9F8C6: Chad ! Récupère tes Pokémon\nidiots ! On va utiliser ces\pdopants qu'on a piqués à\nces idiots de scientifiques.
-0x1F9F92B: Tu ne pouvais déjà pas gagner\navant, alors tu n'as clairement\laucune chance maintenant ! On\pva te montrer de quoi les\nPokémon appartenant au \lNoirépine sont vraiment capables !
+0x1F9F92B: Tu ne pouvais déjà pas gagner\navant, alors tu n'as\laucune chance maintenant ! On\pva te montrer de quoi les\nPokémon appartenant au \lNoirépine sont vraiment capables !
 0x1F9F9D4: Maintenant tu vois qui est le vrai\ngang le plus solide ici ! Vos peaux\pne sont pas épaisses, elles sont\naussi molles qu'un Lippouti !\pMaintenant, dégagez d'ici avant que\nje lance {PLAYER} sur vous encore
 0x1F9FA76: Barbs vous fera payer pour ça !
 0x1F9FA9A: T'es un Dresseur sacrément\ntéméraire, {PLAYER} ! Je\pconnais personne d'autre qui\naurait eu le cran d'affronter\ldeux Dresseurs boostés en même\ptemps ! Tu sais quoi… repasse\nà la base et je te donnerai un\lpetit quelque chose pour ton aide.
@@ -23665,7 +23665,7 @@
 0x1edcf64: J'ai trop peur d'entrer dans la\nville…\pIl y a des gens mauvais partout !
 0x1edcfa9: Je suis venu ici avec mon petit-fils\npour lui montrer la ville où j'ai\lgrandi, mais il a bien trop peur\ld'y entrer.\pQuelque temps après mon départ,\nelle a été envahie par des voyous.
 0x1edd126: Je suis membre des \nNoirépine !\pFixe-moi trop longtemps et je\nte pique !
-0x1edd2a8: On vient de virer le nouveau gang\nde la ville !\pLes <0xFD><0x01> Noir, c'est fini pour\nde bon ! Nous, on est les \lNoirépine !
+0x1edd2a8: On vient de virer le nouveau gang\nde la ville !\pLes <0xFD><0x01> Noir, c'est fini pour\nde bon ! On est les \lNoirépine !
 0x1edd316: La poubelle est vide.
 0x1edd348: La benne à ordures est vide.
 0x1edd35f: Un Pokémon se nourrit des ordures\ndans la benne.\pLe Pokémon attaque !
