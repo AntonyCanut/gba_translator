@@ -10,21 +10,21 @@ import pytest
 
 
 def _resolve_project_root() -> pathlib.Path:
-    """Return the main project root even when running from a git worktree.
+    """Return the project root the tests are actually running from.
 
-    Worktrees live under .singularity-worktrees/ — ROMs and reports stay
-    in the main project directory and are not copied to worktrees.
-    Set GBA_PROJECT_ROOT to override.
+    Defaults to the checkout containing this file — when running inside a
+    git worktree (.singularity-worktrees/<id>/), that's the worktree's own
+    checkout, so tests exercise the ROM that was built/checked out there
+    instead of silently reading whatever the main checkout happens to have
+    at that moment (which can be mid-edit from a concurrent task). Set
+    GBA_PROJECT_ROOT to explicitly point at a different (e.g. shared/
+    canonical) checkout.
     """
     import os
     env = os.environ.get("GBA_PROJECT_ROOT")
     if env:
         return pathlib.Path(env)
-    here = pathlib.Path(__file__).resolve()
-    for parent in here.parents:
-        if parent.name == ".singularity-worktrees":
-            return parent.parent
-    return here.parent.parent.parent
+    return pathlib.Path(__file__).resolve().parent.parent.parent
 
 
 PROJECT_ROOT = _resolve_project_root()
