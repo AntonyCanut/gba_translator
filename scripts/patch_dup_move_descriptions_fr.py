@@ -85,6 +85,31 @@ def is_overflow(rom: bytes, offset: int) -> bool:
     return end < 0
 
 
+def is_clobbered_inplace(rom: bytes, offset: int, combined: dict[int, str]) -> bool:
+    """True when a *terminated* description slot renders the wrong text.
+
+    A correctly written description always starts right after a ``0xFF``
+    terminator. When a pointer's target is preceded by a non-terminator byte the
+    target lands **inside** another string, so it renders only that string's
+    tail (a fragment) — never its own description. This happens when an
+    EN-empty description slot (e.g. Coupe/Cut's at ``0x00482BD5``, a lone
+    ``0xFF`` in English) is packed over by the move-description relocation that
+    runs first: the give-CS struct cell then points mid-string at a terminated
+    but wrong fragment, which :func:`is_overflow` cannot catch (it *is*
+    terminated, so there is no freeze — only wrong content).
+
+    Only fixable when ``combined`` carries authoritative text for that exact
+    slot and the bytes in place do not already match it.
+    """
+    if offset <= 0 or rom[offset - 1] == 0xFF:
+        return False
+    text = combined.get(offset)
+    if text is None:
+        return False
+    encoded = encode_text(text)
+    return rom[offset:offset + len(encoded)] != encoded
+
+
 def is_french_description(rom: bytes, offset: int) -> bool:
     """Strict guard: does ``offset`` begin a real French description?
 
@@ -114,10 +139,16 @@ def apply(rom: bytearray, combined: dict[int, str],
           reserved_rom: bytes | None = None) -> dict:
     allocator = FreeSpaceAllocator(rom, reserved_rom=reserved_rom)
     stats = {"referrers": 0, "targets": 0, "repointed": 0,
-             "no_source": 0, "rejected": 0, "failed": 0}
+             "no_source": 0, "rejected": 0, "failed": 0, "clobbered": 0}
 
-    # 1) Collect every word-aligned pointer into the pool whose target is a
-    #    genuine, overflowing French description -> {target: [referrer cells]}.
+    # 1) Collect every word-aligned pointer into the pool that resolves to wrong
+    #    text -> {target: [referrer cells]}. Two distinct failure modes:
+    #    a) overflow: the target lost its 0xFF terminator -> word-wrap freezes;
+    #    b) clobbered in place: the target is terminated but lands mid-string,
+    #       so it renders another description's tail (the give-CS Coupe/Cut bug,
+    #       which is *not* a freeze — only wrong content). Both are repaired the
+    #       same way: relocate one terminated copy of the authoritative
+    #       combined_fr text and repoint every referrer to it.
     referrers: dict[int, list[int]] = {}
     rejected: set[int] = set()
     base, end = 0, len(rom) - 4
@@ -126,12 +157,14 @@ def apply(rom: bytearray, combined: dict[int, str],
         if not (ROM_POINTER_BASE + POOL_LO <= value < ROM_POINTER_BASE + POOL_HI):
             continue
         target = value - ROM_POINTER_BASE
-        if not is_overflow(rom, target):
-            continue
-        if not is_french_description(rom, target):
-            rejected.add(target)
-            continue
-        referrers.setdefault(target, []).append(cell)
+        if is_overflow(rom, target):
+            if not is_french_description(rom, target):
+                rejected.add(target)
+                continue
+            referrers.setdefault(target, []).append(cell)
+        elif is_clobbered_inplace(rom, target, combined):
+            stats["clobbered"] += 1
+            referrers.setdefault(target, []).append(cell)
 
     stats["rejected"] = len(rejected)
     stats["targets"] = len(referrers)
@@ -164,8 +197,10 @@ def apply(rom: bytearray, combined: dict[int, str],
 
 
 def verify(rom: bytes, combined: dict[int, str]) -> list[tuple[int, int]]:
-    """Return any remaining (cell, target) where a live pointer still reaches an
-    overflowing description that we had authoritative text for (must be empty)."""
+    """Return any remaining (cell, target) where a live pointer still resolves to
+    wrong text we had authoritative source for: either an overflowing
+    (unterminated) description, or a terminated-but-clobbered in-place slot
+    (give-CS Coupe/Cut). After a successful pass this must be empty."""
     bad = []
     for cell in range(0, len(rom) - 4, 4):
         value = int.from_bytes(rom[cell:cell + 4], "little")
@@ -175,6 +210,8 @@ def verify(rom: bytes, combined: dict[int, str]) -> list[tuple[int, int]]:
         if (is_overflow(rom, target)
                 and is_french_description(rom, target)
                 and target in combined):
+            bad.append((cell, target))
+        elif is_clobbered_inplace(rom, target, combined):
             bad.append((cell, target))
     return bad
 
@@ -199,7 +236,8 @@ def main() -> int:
     rom_path.write_bytes(rom)
 
     print("✓ Duplicate move descriptions / HM structs (anti-freeze give-HM):")
-    print(f"   - Overflowing targets:  {stats['targets']}")
+    print(f"   - Wrong-text targets:   {stats['targets']}")
+    print(f"   - Clobbered in-place:   {stats['clobbered']}")
     print(f"   - Pointers found:       {stats['referrers']}")
     print(f"   - Pointers repointed:   {stats['repointed']}")
     print(f"   - Rejected (data/code): {stats['rejected']}")
