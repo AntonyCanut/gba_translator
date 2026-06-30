@@ -6664,7 +6664,7 @@
 0x7C7A3E: {COLOR}ËProfite de ta victoire tant que tu\npeux, car tu vas quitter ce\lmonde.\pIl est trop risqué de te laisser en\nvie maintenant.
 0x7C7ABE: {COLOR}ËDémolosse !\pCalcination !
 0x7C7AD7: Zeph : {COLOR}ËAttends !\pDémolosse !\nReviens !\pIl se passe quelque chose !
-0x7C7C9B: 9Zeph : {COLOR}ËSbires !\pAttrapez cet intrus avant qu'il ne s'enfuie !
+0x7C7C9B: 9Zeph : <0xFC><0x01><0x08>Sbires !\pAttrapez-le, vite !
 0x7C7CF5: Hooo la la !\pSi c'est pas le truc le plus dingue\nque j'aie vu !\pUn {STR_VAR_1} sorti d'un portail\nmagique !\pD'où tu viens, {STR_VAR_1} ?\p…\pHein ?\pTu essayais d'aller au Mont Foudroyant et soudain tu as\lété kidnappé !\pHooo la la !\pÇa fait peur, {STR_VAR_1}.
 0x7C7DFA: Eh bien, sans cet enlèvement,\ntu aurais moins de mal\là rejoindre le Mont Foudroyant.\pTu vois, une partie du plafond\ns'est effondrée il y a peu et\la bloqué la route !\pEt sans la CS {COLOR}ÉÉclate-\nRoc{COLOR}Ë, tu vas galérer pour\lpasser.\pMais…\pJe parie que tu ne l'as pas, sinon\ntu ne me parlerais pas.\pÀ {COLOR}ÉVille Blizzard{COLOR}Ë, un ami\npeut t'aider en\lte donnant Éclate-Roc.\pAlors prends cette CS pour le\nrejoindre.
 0x7C7FDA: Hooo la la !\pOn dirait que tu as vu\nmon ami.\pVa casser ces rochers et donne-leur\nune bonne raclée !
@@ -6727,8 +6727,8 @@
 0x7C9D29: {PLAYER}!\pQue faites-vous ici ?\pEssayez-vous de terminer votre\nPokédex ?\p…\pDonc vous essayez d'obtenir Rock\nSmash afin d'arrêter les Ombres…\pEh bien, pendant que vous couriez\njouer au héros, je suis devenu\lbeaucoup plus puissant.\pVous n'avez même aucune chance\ncontre moi plus.\pEn fait, je vais démontrer ma\npuissance, ici et maintenant !
 0x7C9EFB: {COLOR}ÇQuant à toi, {PLAYER}, je ne te\ntuerai pas maintenant.\pTu dois devenir un exemple pour\nquiconque est assez stupide pour\lcroire pouvoir affronter les\lShadows.\pJe vais faire ce que Marlon et Zeph\nn'ont pas réussi à faire.\pIl est temps d'en\nfinir au combat !
 0x7CA003: C'est décevant.
-0x7CA01A: {COLOR}Ç…\pJ'ai peut-être échoué aussi, mais\nnous n'avons pas encore fini ici !\pDémolosse !\pJe veux que ses cendres tachent le\nsol noir !
-0x7CA08C: Ivoire : {COLOR}ÇDémolosse !\pFaites-le maintenant, avant qu'il ne\ns'éloigne de nouveau !
+0x7CA01A: {COLOR}Ç…\pÉchec ou pas, on n'a pas fini\nici !\pDémolosse !\pQue ses cendres tachent le sol\nnoir !
+0x7CA08C: Ivoire : {COLOR}ÇDémolosse !\pVite, avant sa fuite !
 0x7CA0DB: Ce type là-bas est mon seul ami\nmaintenant…
 0x7CA167: Qu'est-ce qui me frustre ici\n?\pLa police refuse d'agir car elle\nrefuse de\lcroire qu'une organisation obscure\lexiste !\pIls me traitent encore comme un\nenfant malgré ce que j'ai accompli…\pArgh…
 0x7CA25D: Attendez…\pJe me souviens maintenant…\pIl y a quelqu'un que je peux\ncontacter pour aide après tout…
@@ -17926,7 +17926,7 @@
 0x1F2CBB6: Qu'est-ce que… ?\pComment es-tu entré ici ?
 0x1F2CBDA: Vite, scientifique !\nQu'est-ce que tu fais planté là ?\pAttrape cet intrus !
 0x1F2CC17: Assomme {STR_VAR_1} et enferme {STR_VAR_1}\ndans l'entrepôt !\pZeph va péter un plomb quand il\napprendra ça…
-0x1F2CC7E: {STR_VAR_3} est inconsciente, Hoopa.
+0x1F2CC7E: {STR_VAR_3} K.O., Hoopa.
 0x1F2CC98: Arrête !\pNe t’ai-je pas dit maintes fois de\nrester hors de mon Cube Space\lsans autorisation ?\pJe sais que tu ne peux plus\nvoyager\lpar tes anneaux, mais ce n’est\lpas une raison pour me désobéir !
 0x1F2CD70: Et c'est toi qui as amené\ncet intrus ici ?
 0x1F2CDA7: Je ne sais pas ce que tu voulais\n{STR_VAR_1} faire, mais tu me gênes sans cesse\ldepuis que je t’ai trouvé à la plage\ll’an dernier !\pJe ne suis pas ton vrai gardien,\nmais je suis ton Dresseur désormais!\pEt comme Dresseur, je t’ordonne\nde cesser ces enfantillages…{PAUSE}\lMAINTENANT !
