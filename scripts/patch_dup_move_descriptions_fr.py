@@ -61,6 +61,21 @@ OVERFLOW_THRESHOLD = 160
 TEXT_WINDOW = 110
 DEFAULT_COMBINED = Path(__file__).resolve().parent.parent / "languages/fr/combined_fr.txt"
 
+# Field-move / give-CS description slots that are **empty** (immediate 0xFF) in
+# English but must hold their authoritative French description. Their consumers
+# are clustered field-move structs (``0x083DEA80`` / ``0x0887AD30``) and the
+# move-info tables (``0x08488708`` / ``0x08904000``) — all reading the give-CS
+# box. Cut/Coupe lives at ``0x00482BD5``.
+#
+# These need a dedicated guard because a *neighbouring* French move description
+# can overflow forward and drop its ``0xFF`` *inside* this slot, leaving it
+# terminated-but-corrupt (e.g. ``'tistique\nAttack .'``). Such a slot is no
+# longer "overflowing", so the reference-driven scan above skips it — yet every
+# consumer still resolves to a garbage (and, on a different build, possibly
+# unterminated → freezing) fragment. The guard relocates the authoritative,
+# 0xFF-terminated ``combined_fr.txt`` text and repoints *every* referrer.
+FIELD_MOVE_DESC_OFFSETS = (0x00482BD5,)
+
 _OFFSET_LINE = re.compile(r"^0x([0-9A-Fa-f]+):\s?(.*)$")
 
 
@@ -135,11 +150,55 @@ def is_french_description(rom: bytes, offset: int) -> bool:
     return True
 
 
+def pool_referrers(rom: bytes, target: int) -> list[int]:
+    """Every word-aligned pointer cell holding ``ROM_POINTER_BASE + target``."""
+    value = (ROM_POINTER_BASE + target).to_bytes(4, "little")
+    cells, i = [], rom.find(value)
+    while i >= 0:
+        if i % 4 == 0:
+            cells.append(i)
+        i = rom.find(value, i + 1)
+    return cells
+
+
+def force_field_move_descriptions(rom: bytearray, combined: dict[int, str],
+                                  allocator: FreeSpaceAllocator, stats: dict) -> None:
+    """Guarantee the give-CS field-move description slots resolve to their
+    authoritative ``combined_fr.txt`` text.
+
+    Unlike the reference-driven pass, this is *not* gated on overflow: a slot
+    clobbered by a neighbour's overflow is terminated-but-corrupt, which that
+    pass cannot see. The content guard is the strongest possible — we only act
+    when the in-place bytes differ from the authoritative encoded text — and we
+    repoint *every* referrer (field-move structs + move-info tables)."""
+    for off in FIELD_MOVE_DESC_OFFSETS:
+        text = combined.get(off)
+        if text is None:
+            continue
+        encoded = encode_text(text)
+        if rom[off:off + len(encoded)] == encoded:
+            continue  # already written correctly in place — leave it alone
+        cells = pool_referrers(rom, off)
+        if not cells:
+            continue
+        new_offset = allocator.allocate(len(encoded))
+        if new_offset is None:
+            stats["failed"] += 1
+            continue
+        rom[new_offset:new_offset + len(encoded)] = encoded
+        pointer = struct.pack("<I", new_offset + ROM_POINTER_BASE)
+        for cell in cells:
+            rom[cell:cell + 4] = pointer
+            stats["repointed"] += 1
+        stats["field_move"] += 1
+
+
 def apply(rom: bytearray, combined: dict[int, str],
           reserved_rom: bytes | None = None) -> dict:
     allocator = FreeSpaceAllocator(rom, reserved_rom=reserved_rom)
     stats = {"referrers": 0, "targets": 0, "repointed": 0,
-             "no_source": 0, "rejected": 0, "failed": 0, "clobbered": 0}
+             "no_source": 0, "rejected": 0, "failed": 0,
+             "clobbered": 0, "field_move": 0}
 
     # 1) Collect every word-aligned pointer into the pool that resolves to wrong
     #    text -> {target: [referrer cells]}. Two distinct failure modes:
@@ -193,6 +252,10 @@ def apply(rom: bytearray, combined: dict[int, str],
             rom[cell:cell + 4] = pointer
             stats["repointed"] += 1
 
+    # 3) Dedicated guard for empty-in-English give-CS field-move description
+    #    slots that a neighbour's overflow left terminated-but-corrupt.
+    force_field_move_descriptions(rom, combined, allocator, stats)
+
     return stats
 
 
@@ -240,6 +303,7 @@ def main() -> int:
     print(f"   - Clobbered in-place:   {stats['clobbered']}")
     print(f"   - Pointers found:       {stats['referrers']}")
     print(f"   - Pointers repointed:   {stats['repointed']}")
+    print(f"   - Field-move guarded:   {stats['field_move']}")
     print(f"   - Rejected (data/code): {stats['rejected']}")
     if stats["no_source"]:
         print(f"   - No source (skip):    {stats['no_source']}")
