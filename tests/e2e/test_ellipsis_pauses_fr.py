@@ -61,9 +61,9 @@ class TestEllipsisPausesInBuiltRom:
         )
 
     def test_link_lost_message_pause(self, fr_rom_bytes):
-        """« …a été perdu… » carries the ellipsis glyph."""
-        s = _find_string_containing(fr_rom_bytes, "perdu", "COMMUNICATION")
-        assert _ELLIPSIS_BYTE in s, "the link-lost pause lost its ellipsis"
+        """« …a été interrompu… » carries the ellipsis glyph."""
+        s = _find_string_containing(fr_rom_bytes, "interrompu", "COMMUNICATION")
+        assert _ELLIPSIS_BYTE in s, "the link-interrupted pause lost its ellipsis"
 
     def test_hesitation_run_collapsed_to_single_glyph(self, fr_rom_bytes):
         """« Toi… Meurs… » (English "You………/Die………") keeps single-beat pauses."""
