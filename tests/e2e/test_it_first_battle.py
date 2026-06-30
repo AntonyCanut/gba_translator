@@ -38,9 +38,16 @@ _HERE = pathlib.Path(__file__).resolve()
 
 
 def _project_root() -> pathlib.Path:
-    for p in _HERE.parents:
-        if p.name == ".singularity-worktrees":
-            return p.parent
+    """Return the project root the tests are actually running from.
+
+    Defaults to the checkout containing this file (the worktree's own
+    checkout when run inside .singularity-worktrees/<id>/), so tests use
+    the ROM built there rather than the main checkout. Set GBA_PROJECT_ROOT
+    to explicitly point elsewhere.
+    """
+    env_root = os.environ.get("GBA_PROJECT_ROOT")
+    if env_root:
+        return pathlib.Path(env_root)
     return _HERE.parent.parent.parent
 
 
