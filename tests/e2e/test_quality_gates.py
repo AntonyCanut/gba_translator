@@ -16,6 +16,7 @@ from src.core.text_codec import TextEncoder
 BASELINE_PATH = pathlib.Path(__file__).parent / "data" / "quality_baseline.json"
 
 HEX_TOKEN_RE = re.compile(r"<0x[0-9A-Fa-f]{2}>")
+BRACE_TOKEN_RE = re.compile(r"\{[A-Za-z0-9_]+\}")
 FRENCH_PATTERN = re.compile(r"[àçèéâîù]|l'|d'|qu'|c'est|n'est|je |tu |il |nous ")
 
 
@@ -112,10 +113,16 @@ class TestFDControlCodePreservation:
                 continue
 
             total_with_fd += 1
-            fd_tgt = sorted(
-                t for t in HEX_TOKEN_RE.findall(trans) if "FD" in t.upper()
-            )
-            if fd_src == fd_tgt:
+            # combined_fr.txt legitimately renders FD variables either as raw
+            # <0xFDxx> tokens or as human-readable {PLAYER}/{STR_VAR_1}/...
+            # placeholders (see docs/17_TEXT_VARIABLES.md); the build's
+            # _apply_control_placeholders resolves the latter back to the
+            # exact source bytes positionally. Comparing raw hex tokens only
+            # (the original check) misclassifies every well-formed
+            # placeholder translation as "lost". Count both forms instead.
+            fd_tgt_hex = [t for t in HEX_TOKEN_RE.findall(trans) if "FD" in t.upper()]
+            fd_tgt_placeholders = BRACE_TOKEN_RE.findall(trans)
+            if len(fd_tgt_hex) + len(fd_tgt_placeholders) >= len(fd_src):
                 preserved += 1
 
         if total_with_fd == 0:
