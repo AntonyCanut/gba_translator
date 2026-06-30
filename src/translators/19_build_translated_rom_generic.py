@@ -69,6 +69,20 @@ def _strip_accents(ch: str) -> str:
     return unicodedata.normalize('NFD', ch)[:1]
 
 
+def _reinsert_in_offset_order(translations: List[Dict]) -> List[Dict]:
+    """Return the translations in a fixed, input-order-independent sequence.
+
+    The translation JSON is regenerated through different paths (the trilingual
+    CSV pipeline vs ``prepare_fr_json``) that emit the same entries in different
+    orders. In-place reinsertion is order-sensitive where neighbouring cells
+    write overlapping spans (the type-name table holds near-identical cells one
+    byte apart, so the last writer wins), which made a no-change rebuild drift
+    a fraction of a percent of the ROM. Sorting by offset (entries are unique
+    per offset after the upstream dict-dedup) pins a single canonical layout.
+    """
+    return sorted(translations, key=lambda t: t.get('offset', 0))
+
+
 @dataclass
 class BuildConfig:
     """Configuration for ROM construction."""
@@ -1197,6 +1211,9 @@ class TranslatedROMBuilder:
             print("⚠️  No text to copy.")
             return True
 
+        # Deterministic traversal order (see _reinsert_in_offset_order).
+        translations = _reinsert_in_offset_order(translations)
+
         reinserter = SmartReinserter(
             self.output_rom_data,
             allow_truncate=self.config.allow_truncate,
@@ -1254,6 +1271,9 @@ class TranslatedROMBuilder:
         if not translations:
             print("⚠️  No text to reinsert.")
             return True
+
+        # Deterministic traversal order (see _reinsert_in_offset_order).
+        translations = _reinsert_in_offset_order(translations)
 
         reinserter = SmartReinserter(
             self.output_rom_data,
@@ -1314,6 +1334,9 @@ class TranslatedROMBuilder:
         if not translations:
             print("   No text to reinsert.")
             return True
+
+        # Deterministic traversal order (see _reinsert_in_offset_order).
+        translations = _reinsert_in_offset_order(translations)
 
         reinserter = SmartReinserter(
             self.output_rom_data,
