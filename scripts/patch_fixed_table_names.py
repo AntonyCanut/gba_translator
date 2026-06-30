@@ -63,6 +63,11 @@ NAME_FIXES = {
     # and the Spanish extraction). "Boîte CT" (8 glyphs) fits the 26-byte cell.
     0x3DEEAC: (" " * 12 + "TM Case", " " * 12 + "Boîte CT", 26),
     0x87A084: (" " * 12 + "TM Case", " " * 12 + "Boîte CT", 26),
+    # Roggenrola/Nodulithe ability "Weak Armor": fixed-width 17-byte cell,
+    # no pointer. Absent from translation_ready.json and the Spanish
+    # extraction, so it ships untouched in English. Official French name
+    # is "Armurouillée" (Armure + rouillée).
+    0xA37069: ("Weak Armor", "Armurouillée", 17),
 }
 
 
