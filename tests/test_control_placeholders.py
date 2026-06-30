@@ -1,7 +1,7 @@
 import importlib
 import unittest
 
-from src.core.text_codec import TextEncoder
+from src.core.text_codec import TextDecoder, TextEncoder
 
 
 builder_module = importlib.import_module('src.translators.19_build_translated_rom_generic')
@@ -111,6 +111,36 @@ class ControlPlaceholderTests(unittest.TestCase):
             TranslatedROMBuilder._apply_control_placeholders(translation, english),
             expected,
         )
+
+    def test_color_macro_resolved_from_raw_bytes_no_pointer(self):
+        # Regression: for no-pointer offsets, decode_pokemon(preserve_unknown=True)
+        # has no notion of FC 01 NN as a 3-byte control sequence — it decodes the
+        # command/argument bytes byte-by-byte through the charmap, so they come
+        # out as printable glyphs ('\xc0' -> 'A0' style mojibake) glued right
+        # after the literal "<0xFC>" token instead of "<0xFC><0x01><0xNN>".
+        # Without english_raw_bytes, _extract_control_sequences falls back to
+        # scanning <0xNN> tokens in that decoded text and only ever recovers the
+        # bare FC byte, so {COLOR}X is left untouched -> encoded as literal
+        # "?COLOR?" in the ROM. Passing english_raw_bytes (now populated by
+        # prepare_fr_json.py for the no-pointer path) lets the raw-byte scanner
+        # recover the full FC 01 NN sequence regardless of how it decoded.
+        raw = bytes([0xFC, 0x01, 0x08])
+        english = TextDecoder.decode_pokemon(raw, preserve_unknown=True)
+        english_raw = raw.hex()
+        translation = '{COLOR}Ë'
+        expected = '<0xFC><0x01><0x08>'
+
+        # Without raw bytes, the macro is left unresolved (the literal bug).
+        unresolved = TranslatedROMBuilder._apply_control_placeholders(
+            translation, english
+        )
+        self.assertEqual(unresolved, translation)
+
+        # With english_raw_bytes available, it resolves correctly.
+        resolved = TranslatedROMBuilder._apply_control_placeholders(
+            translation, english, english_raw
+        )
+        self.assertEqual(resolved, expected)
 
 
 if __name__ == '__main__':
