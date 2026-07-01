@@ -11,6 +11,9 @@
 # French font, so the full accented glyph set is available.
 #
 # --- seed entries (short, proven-translatable offsets shared with the DE/IT seeds) ---
-0x1773FD: मैं तुम्हें बता रहा हूँ।
-0x177489: अभी तक नहीं!
-0x183509: तुम मुझे पीट देते हो।
+# Hindi rendered in Hunterian (Latin) transliteration: the Indie target reuses the
+# French font, which has no Devanagari glyphs, so native Devanagari would encode to
+# rows of '?' (0xAC fallback). Romanised Latin keeps the Hindi wording encodable.
+0x1773FD: Main tumhein bata raha hoon.
+0x177489: Abhi tak nahin!
+0x183509: Tum mujhe peet dete ho.
