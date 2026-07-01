@@ -199,7 +199,7 @@ class TestLocationNamesFR(unittest.TestCase):
     # ── Mont Foudre: pointer-based NPC dialogue ───────────────────────────────
 
     def test_mont_foudroyant_npc_dialogue_pointer(self):
-        """Pointer at 0x7C252E must lead to French NPC dialogue (contains 'Grondant').
+        """Pointer at 0x7C252E must lead to French NPC dialogue (contains 'Foudroyant').
 
         The pipeline relocates the translated string to free space and repoints
         0x7C252E.  The original English bytes at 0x7C2540 remain but are
@@ -209,9 +209,9 @@ class TestLocationNamesFR(unittest.TestCase):
         text = _follow_ptr(self.rom, 0x7C252E)
         self.assertTrue(text, "Pointer at 0x7C252E is invalid or points outside ROM")
         self.assertIn(
-            "Grondant",
+            "Foudroyant",
             text,
-            f"Expected 'Grondant' via ptr@0x7C252E, got: {repr(text[:60])}",
+            f"Expected 'Foudroyant' via ptr@0x7C252E, got: {repr(text[:60])}",
         )
         self.assertNotIn(
             "Thundercap",
