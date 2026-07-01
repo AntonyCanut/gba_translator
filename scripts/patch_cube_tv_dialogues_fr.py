@@ -62,7 +62,7 @@ DEFAULT_COMBINED = REPO_ROOT / "languages/fr/combined_fr.txt"
 # original English offset -> a short, contiguous French prefix used to prove
 # the relocation landed (must appear verbatim before any line/page break).
 TARGETS: dict[int, str] = {
-    0x1F01074: "C'est un Super Cube dans ta",      # Mom, prologue
+    0x1F01074: "C'est un Cube V3 dans ta",         # Mom, prologue
     0x1FB052C: "Qu'avez-vous dit ?",                 # TV-mission, opening line
     0x1FB07FE: "Vous n'avez pas encore rassemblé\nde données",  # TV-mission, follow-up
 }
