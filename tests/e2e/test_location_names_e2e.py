@@ -5,7 +5,7 @@ untranslated on the world map, in zone-name pop-ups, and in dialogue.  Earlier
 slices fixed parts of this:
 
   * B-52 recovered the toponyms ``c7c1ede`` had silently reverted.
-  * B-51 standardised every ``Cinder Volcano`` reference to ``Volcan Cendreux``.
+  * B-51 standardised every ``Cinder Volcano`` reference to ``Volcan Cendré``.
   * The World-Map *label* table (0x72xxxx / 0xB5xxxx) was translated and is
     guarded by ``tests/test_location_names_fr.py`` (byte read at the label
     offset).
@@ -104,19 +104,19 @@ def _reachable_standalone(rom: bytes, text: str) -> list:
 # menu).
 P29_LOCATIONS = [
     # english bullet,     fr_canon,            english_forms,                             worldmap_off, ptr
-    ("Icy Hole",          "Gouffre Glacial",        ["Icy Hole"],                              0x721304,     True),
+    ("Icy Hole",          "Gouffre Gelé",           ["Icy Hole"],                              0x721304,     True),
     ("ourg Gurum (B)",    "Gurenbourg",       [],                                        0xB500A0,     False),
-    ("Fullmoon Island",   "Île Pleine Lune",    ["Fullmoon Island"],                       0xB535C8,     False),
-    ("Newmoon Island",    "Île Nouvelle Lune",  ["Newmoon Island"],                        0xB531D8,     True),
+    ("Fullmoon Island",   "Île Pleinelune",     ["Fullmoon Island"],                       0xB535C8,     False),
+    ("Newmoon Island",    "Île Nouvellune",     ["Newmoon Island"],                        0xB531D8,     True),
     ("Glimmer Island",    "Île Scintillante",  ["Glimmer Isle", "Glimmer Island"],        0x7214E8,     False),
-    ("Polder Town",       "Polder sur Rive",      ["Polder Town"],                           0xB522A4,     True),
+    ("Polder Town",       "Polderive",            ["Polder Town"],                           0xB522A4,     True),
     ("Redwood Village",   "Rougebois",        ["Redwood Village"],                       0xB537AC,     False),
     ("Antisis Sewers",    "Égouts d'Antésia",  ["Antisis Sewers"],                        0xB50214,     True),
-    ("Thundercap Mt.",    "Pic Grondant",   ["Thundercap Mt.", "Thundercap"],          0xB5026C,     True),
-    ("Epidimy Town",      "Épidimi",   ["Epidimy Town"],                          0x721968,     True),
-    ("Rive-d'Automne",         "Rive-d'Automne",         ["Fallshore City", "Ville de Fallshore"],  0x720E74,     True),
+    ("Thundercap Mt.",    "Mont Foudroyant",["Thundercap Mt.", "Thundercap"],          0xB5026C,     True),
+    ("Epidimy Town",      "Épidia",    ["Epidimy Town"],                          0x721968,     True),
+    ("Fallshore City",    "Rivapolis",              ["Fallshore City", "Ville de Fallshore"],  0x720E74,     True),
     ("Dehara City",       "Daherapolis",            ["Dehara City", "Ville de Dehara"],        0xB514E4,     True),
-    ("Cinder Volcano",    "Volcan Cendreux",   ["Cinder Volcano"],                        0xB503CC,     True),
+    ("Cinder Volcano",    "Volcan Cendré",     ["Cinder Volcano"],                        0xB503CC,     True),
     ("Pokemon Day Care",  "Pension Pokémon",   ["Pokemon Day Care", "Pokémon Day Care"],  0xB52274,     True),
 ]
 

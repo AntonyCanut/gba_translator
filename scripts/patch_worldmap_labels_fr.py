@@ -51,7 +51,7 @@ DEFAULT_COMBINED = REPO_ROOT / "languages/fr/combined_fr.txt"
 # write landed; the bytes actually written come from combined_fr.txt).
 TARGETS: dict[int, str] = {
     0xB500A0: "Gurenbourg",       # Gurun Town  (was "Bourg Gurun")
-    0xB535C8: "Île Pleine Lune",  # Fullmoon Island  (was "Île de la Lune")
+    0xB535C8: "Île Pleinelune",   # Fullmoon Island  (v3; was "Île Pleine Lune")
 }
 
 _OFFSET_LINE = re.compile(r"^0x([0-9A-Fa-f]+):\s?(.*)$")

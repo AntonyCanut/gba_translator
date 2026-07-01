@@ -85,7 +85,7 @@ class TestPatchZoneNamesFr(unittest.TestCase):
         return {
             0x071FC80: "Cimistral",
             0x0B51EAC: "Port d'Antésia",
-            0x078D811: "Cratéria",
+            0x078D811: "Cratéris",
             0x078D851: "Cimistral",
         }
 
