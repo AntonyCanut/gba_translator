@@ -14,11 +14,11 @@ body instead of the malformed original.
 """
 
 from scripts.patch_font_fr import (
-    CP_A,
     CP_ACUTE_E,
     CP_E,
     CP_GRAVE_A,
     CP_GRAVE_E,
+    acute_accent_positions,
     build_acute_e,
     build_grave_a,
     build_grave_e,
@@ -70,12 +70,20 @@ class TestAccentedEGlyphsInBuiltRom:
         assert checked, "no à-patched render font block found in the built ROM"
 
     def test_e_accents_are_distinct(self, fr_rom_path):
-        """é and è must not collapse to the same tile."""
+        """é and è must not collapse to the same tile in blocks that actually
+        carry an accent. (Some secondary fonts have no extractable á accent, so
+        à/é/è all fall back to the bare base letter by design — those are
+        skipped here.)"""
         rom = fr_rom_path.read_bytes()
+        checked = 0
         for block in find_font_blocks(rom):
             font = block.decompressed
             if _tile(font, CP_GRAVE_A) != build_grave_a(font):
                 continue
+            if not acute_accent_positions(font):
+                continue  # no accent source -> à/é/è render as bare letters
+            checked += 1
             assert _tile(font, CP_ACUTE_E) != _tile(font, CP_GRAVE_E), (
                 "é and è resolved to identical glyphs in a patched block"
             )
+        assert checked, "no accent-bearing render block found to compare é/è"
