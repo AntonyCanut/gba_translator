@@ -54,23 +54,23 @@ def _follow_ptr(rom: bytes, ptr_offset: int, limit: int = 400) -> str:
 # All 14 location names committed in feat(toponyms) 3824f11, recovered from
 # the regression introduced by c7c1ede.
 WORLD_MAP_LABELS = [
-    (0xB500A0, "Bourg Gurun",       "ourg Gurun (was off-by-1)"),
-    (0x721304, "Trou Glacé",        "Icy Hole"),
+    (0xB500A0, "Gurenbourg",       "ourg Gurun (was off-by-1)"),
+    (0x721304, "Gouffre Gelé",        "Icy Hole"),
     (0x7214E8, "Île Scintillante",  "Glimmer Isle"),
-    (0x721968, "Ville d'Epidimy",   "Epidimy Town"),
-    (0xB50214, "Égouts d'Antisis",  "Antisis Sewers"),
+    (0x721968, "Épidia",   "Epidimy Town"),
+    (0xB50214, "Égouts d'Antésia",  "Antisis Sewers"),
     (0xB5026C, "Mont Foudroyant",   "Thundercap Mt."),
-    (0xB503CC, "Volcan Cendreux",   "Cinder Volcano"),
-    (0xB514E4, "Dehara",            "Dehara City"),
+    (0xB503CC, "Volcan Cendré",   "Cinder Volcano"),
+    (0xB514E4, "Daherapolis",            "Dehara City"),
     (0xB52274, "Pension Pokémon",   "Pokemon Day Care"),
-    (0xB522A4, "Bourg Polder",      "Polder Town"),
-    (0xB531D8, "Île du Croissant",  "Newmoon Island"),
-    (0xB535C8, "Île de la Lune",    "Fullmoon Island"),
-    (0xB537AC, "Bois-Rouge",         "Redwood Village"),
-    (0x720E74, "Fallshore",         "Fallshore City"),
+    (0xB522A4, "Polderive",      "Polder Town"),
+    (0xB531D8, "Île Nouvellune",  "Newmoon Island"),
+    (0xB535C8, "Île Pleinelune",    "Fullmoon Island"),
+    (0xB537AC, "Rougebois",         "Redwood Village"),
+    (0x720E74, "Rivapolis",         "Fallshore City"),
     # Nouveaux noms traduits (follow-up 2026-06-17)
     (0x3EEF2D, "Grotte Faille",        "Rift Cave"),
-    (0xB500F0, "Port-en-mer",          "Seaport City"),
+    (0xB500F0, "Naville",          "Seaport City"),
     (0x3EEFEA, "Grotte de l'Être",     "Cave of Being"),
     # Renommage Dresco Town → Dresco (follow-up 2026-06-18)
     (0x71CA60, "Dresco",               "Dresco Town"),
@@ -99,68 +99,68 @@ class TestLocationNamesFR(unittest.TestCase):
         )
 
     def test_bourg_gurun(self):
-        """0xB500A0: 'Bourg Gurun' (off-by-1 byte fix, was 'ourg Gurun')."""
-        self._assert_label(0xB500A0, "Bourg Gurun", "ourg Gurun")
+        """0xB500A0: 'Gurenbourg' (off-by-1 byte fix, was 'ourg Gurun')."""
+        self._assert_label(0xB500A0, "Gurenbourg", "ourg Gurun")
 
     def test_trou_glace(self):
-        """0x721304: 'Trou Glacé' (was 'Icy Hole')."""
-        self._assert_label(0x721304, "Trou Glacé", "Icy Hole")
+        """0x721304: 'Gouffre Gelé' (was 'Icy Hole')."""
+        self._assert_label(0x721304, "Gouffre Gelé", "Icy Hole")
 
     def test_ile_scintillante(self):
         """0x7214E8: 'Île Scintillante' (was 'Glimmer Isle')."""
         self._assert_label(0x7214E8, "Île Scintillante", "Glimmer Isle")
 
     def test_ville_epidimy(self):
-        """0x721968: 'Ville d'Epidimy' (was 'Epidimy Town')."""
-        self._assert_label(0x721968, "Ville d'Epidimy", "Epidimy Town")
+        """0x721968: 'Épidimi' (was 'Epidimy Town')."""
+        self._assert_label(0x721968, "Épidia", "Epidimy Town")
 
     def test_egouts_antisis(self):
-        """0xB50214: 'Égouts d'Antisis' (was 'Antisis Sewers')."""
-        self._assert_label(0xB50214, "Égouts d'Antisis", "Antisis Sewers")
+        """0xB50214: 'Égouts d'Antésia' (was 'Antisis Sewers')."""
+        self._assert_label(0xB50214, "Égouts d'Antésia", "Antisis Sewers")
 
     def test_mont_foudroyant_worldmap(self):
-        """0xB5026C: 'Mont Foudroyant' (was 'Thundercap Mt.', formerly 'Mont Foudre')."""
+        """0xB5026C: 'Pic Grondant' (was 'Thundercap Mt.', formerly 'Mont Foudre')."""
         self._assert_label(0xB5026C, "Mont Foudroyant", "Thundercap Mt.")
 
     def test_volcan_cendreux(self):
         """0xB503CC: 'Volcan Cendreux' (was 'Cinder Volcano')."""
-        self._assert_label(0xB503CC, "Volcan Cendreux", "Cinder Volcano")
+        self._assert_label(0xB503CC, "Volcan Cendré", "Cinder Volcano")
 
     def test_dehara(self):
         """0xB514E4: 'Dehara' (was 'Dehara City')."""
-        self._assert_label(0xB514E4, "Dehara", "Dehara City")
+        self._assert_label(0xB514E4, "Daherapolis", "Dehara City")
 
     def test_pension_pokemon(self):
         """0xB52274: 'Pension Pokémon' (was 'Pokémon Day Care')."""
         self._assert_label(0xB52274, "Pension Pokémon", "Pokemon Day Care")
 
     def test_bourg_polder(self):
-        """0xB522A4: 'Bourg Polder' (was 'Polder Town')."""
-        self._assert_label(0xB522A4, "Bourg Polder", "Polder Town")
+        """0xB522A4: 'Polder sur Rive' (was 'Polder Town')."""
+        self._assert_label(0xB522A4, "Polderive", "Polder Town")
 
     def test_ile_du_croissant(self):
-        """0xB531D8: 'Île du Croissant' (was 'Newmoon Island')."""
-        self._assert_label(0xB531D8, "Île du Croissant", "Newmoon Island")
+        """0xB531D8: 'Île Nouvelle Lune' (was 'Newmoon Island')."""
+        self._assert_label(0xB531D8, "Île Nouvellune", "Newmoon Island")
 
     def test_ile_de_la_lune(self):
-        """0xB535C8: 'Île de la Lune' (was 'Fullmoon Island')."""
-        self._assert_label(0xB535C8, "Île de la Lune", "Fullmoon Island")
+        """0xB535C8: 'Île Pleine Lune' (was 'Fullmoon Island')."""
+        self._assert_label(0xB535C8, "Île Pleinelune", "Fullmoon Island")
 
     def test_bois_rouge(self):
-        """0xB537AC: 'Bois-Rouge' (was 'Redwood Village', formerly 'Village Redwood')."""
-        self._assert_label(0xB537AC, "Bois-Rouge", "Redwood Village")
+        """0xB537AC: 'Rougebois' (was 'Redwood Village', formerly 'Village Redwood')."""
+        self._assert_label(0xB537AC, "Rougebois", "Redwood Village")
 
     def test_fallshore(self):
         """0x720E74: 'Fallshore' (was 'Ville de Fallshore' / 'Fallshore City')."""
-        self._assert_label(0x720E74, "Fallshore", "Fallshore City")
+        self._assert_label(0x720E74, "Rivapolis", "Fallshore City")
 
     def test_grotte_faille_worldmap(self):
-        """0x3EEF2D: 'Grotte Faille' (was 'Rift Cave')."""
+        """0x3EEF2D: 'Grotte Falaise' (was 'Rift Cave')."""
         self._assert_label(0x3EEF2D, "Grotte Faille", "Rift Cave")
 
     def test_port_en_mer_worldmap(self):
-        """0xB500F0: 'Port-en-mer' (was 'Seaport City', formerly 'Ville Portuaire')."""
-        self._assert_label(0xB500F0, "Port-en-mer", "Seaport City")
+        """0xB500F0: 'Naville' (was 'Seaport City', formerly 'Ville Portuaire')."""
+        self._assert_label(0xB500F0, "Naville", "Seaport City")
 
     def test_grotte_de_letre_worldmap(self):
         """0x3EEFEA: 'Grotte de l'Être' (was 'Cave of Being')."""
@@ -311,15 +311,15 @@ class TestLocationNamesFR(unittest.TestCase):
     # ── Noms de zones anglais traduits (follow-up 2026-06-27) ────────────────
 
     def test_ville_blizzard_zone_name(self):
-        """ptr@0x3F1CBC must resolve to 'Ville Blizzard' (was 'Blizzard City')."""
+        """ptr@0x3F1CBC must resolve to 'Cimistral' (was 'Blizzard City')."""
         text = _follow_ptr(self.rom, 0x3F1CBC)
-        self.assertEqual(text.strip(), "Ville Blizzard",
+        self.assertEqual(text.strip(), "Cimistral",
                          f"Zone name via ptr@0x3F1CBC: got {repr(text[:40])}")
 
     def test_ville_antisis_zone_name(self):
         """ptr@0x3F1D2C must resolve to ‘Ville d’Antisis’ (was ‘Antisis City’)."""
         text = _follow_ptr(self.rom, 0x3F1D2C)
-        self.assertEqual(text.strip(), "Ville d'Antisis",
+        self.assertEqual(text.strip(), "Antésia",
                          f"Zone name via ptr@0x3F1D2C: got {repr(text[:40])}")
 
     def test_pic_cristal_zone_name(self):
@@ -343,11 +343,11 @@ class TestLocationNamesFR(unittest.TestCase):
     def test_port_antisis_zone_name(self):
         """ptr@0x3F1E34 must resolve to 'Port d’Antisis' (was 'Antisis Port')."""
         text = _follow_ptr(self.rom, 0x3F1E34)
-        self.assertEqual(text.strip(), "Port d'Antisis",
+        self.assertEqual(text.strip(), "Port d'Antésia",
                          f"Zone name via ptr@0x3F1E34: got {repr(text[:40])}")
 
     def test_champs_magnolia_zone_name(self):
-        """ptr@0x3F1E24 must resolve to 'Champs Magnolia' (was 'Magnolia Fields')."""
+        """ptr@0x3F1E24 must resolve to 'Champs de Magnolia' (was 'Magnolia Fields')."""
         text = _follow_ptr(self.rom, 0x3F1E24)
         self.assertEqual(text.strip(), "Champs Magnolia",
                          f"Zone name via ptr@0x3F1E24: got {repr(text[:40])}")
@@ -359,21 +359,21 @@ class TestLocationNamesFR(unittest.TestCase):
                          f"Zone name via ptr@0x3F1DDC: got {repr(text[:40])}")
 
     def test_foret_lugubre_zone_name(self):
-        """ptr@0x3F1D44 must resolve to 'For\xeat Lugubre' (was 'For\xeat Lugubres' typo)."""
+        """ptr@0x3F1D44 must resolve to 'Bois Lugubres' (was 'Bois Lugubress' typo)."""
         text = _follow_ptr(self.rom, 0x3F1D44)
-        self.assertEqual(text.strip(), "For\xeat Lugubre",
+        self.assertEqual(text.strip(), "Boissombre",
                          f"Zone name via ptr@0x3F1D44: got {repr(text[:40])}")
 
     def test_bourg_cratere_fly_banner(self):
-        """ptr@0x78D809 must resolve to 'Bourg Crat\xe8re' (was 'Crater Town' fly banner)."""
+        """ptr@0x78D809 must resolve to 'Cratéria' (was 'Crater Town' fly banner)."""
         text = _follow_ptr(self.rom, 0x78D809)
-        self.assertEqual(text.strip(), "Bourg Crat\xe8re",
+        self.assertEqual(text.strip(), "Cratéris",
                          f"Fly banner via ptr@0x78D809: got {repr(text[:40])}")
 
     def test_ville_blizzard_fly_banner(self):
-        """ptr@0x78D849 must resolve to 'Ville Blizzard' (was 'Blizzard City' fly banner)."""
+        """ptr@0x78D849 must resolve to 'Cimistral' (was 'Blizzard City' fly banner)."""
         text = _follow_ptr(self.rom, 0x78D849)
-        self.assertEqual(text.strip(), "Ville Blizzard",
+        self.assertEqual(text.strip(), "Cimistral",
                          f"Fly banner via ptr@0x78D849: got {repr(text[:40])}")
 
     def test_no_active_pointer_to_blizzard_city_zone(self):

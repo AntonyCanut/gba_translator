@@ -83,10 +83,10 @@ class TestPatchZoneNamesFr(unittest.TestCase):
     def _make_combined(self) -> dict[int, str]:
         """Return combined_fr.txt entries for each TARGETS offset."""
         return {
-            0x071FC80: "Ville Blizzard",
-            0x0B51EAC: "Port d'Antisis",
-            0x078D811: "Bourg Cratère",
-            0x078D851: "Ville Blizzard",
+            0x071FC80: "Cimistral",
+            0x0B51EAC: "Port d'Antésia",
+            0x078D811: "Cratéris",
+            0x078D851: "Cimistral",
         }
 
     def _make_rom(self) -> bytearray:

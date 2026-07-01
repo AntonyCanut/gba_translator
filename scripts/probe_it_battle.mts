@@ -40,8 +40,11 @@ const ADDR = {
   bt1: 0x02022F58, bt2: 0x02022FD8, bt3: 0x02023058,
 };
 
-// Italian battle keywords checked against all text buffers.
-const BATTLE_RE = /Lotta|Fuggi|Borsa|selvagg|usa |è apparso|appare|nemic|Punti Ferita|P\.F\.|in fuga|guadagna|Punti Esp/i;
+// Italian battle keywords checked against all text buffers. Includes the
+// trainer-challenge lines (Unbound's first battle is scripted, not a wild
+// encounter) so the explore phase can detect the battle as soon as the
+// challenge text appears, not only once the Fight/Bag/Run menu renders.
+const BATTLE_RE = /Lotta|Fuggi|Borsa|selvagg|usa |è apparso|appare|nemic|Punti Ferita|P\.F\.|in fuga|guadagna|Punti Esp|vuole combattere|ti sfida|manda in campo|scende in campo|ti ha sfidato/i;
 // Italian victory indicators.
 const VICTORY_RE = /guadagna|Punti Esp|livell|è cresciut|sconfitt|messo K\.?O|svenuto|in fuga|ha vinto|vinto!/i;
 // English tokens that must not appear in Italian text.
@@ -124,8 +127,13 @@ async function main(): Promise<void> {
     await c.pressKey('A', 4);    await c.advanceFrames(120);
 
     let lastHash = '', same = 0;
-    // ~220 iterations × 40 frames ≈ 147 s — generous budget for the Unbound prologue.
-    for (let i = 0; i < 220; i++) {
+    // 700 iterations × 40 frames. The Italian build's opening narrative (the
+    // Hoopa "Spazio Cubo" cutscene ahead of the regular professor intro) runs
+    // well past the 220-iteration budget previously used here — confirmed by
+    // observing harvested dialogue text still mid-cutscene at the old budget's
+    // boundary. Pure A-mashing (no directional presses) avoids accidentally
+    // toggling a Yes/No confirmation prompt mid-cutscene.
+    for (let i = 0; i < 700; i++) {
       await c.pressKey('A', 4);
       // Naming keyboard (BPRE): START confirms the selected name in early steps.
       if (i < 25 && i % 4 === 3) await c.pressKey('START', 4);
@@ -155,29 +163,49 @@ async function main(): Promise<void> {
   }
 
   // ---- Phase 2: drive into the first scripted battle ----
-  // Unbound's first battle is scripted (not a wild encounter), so pressing A
-  // through NPC dialogue/event scripts is the correct trigger — not wandering.
+  // Unbound's first battle is scripted (not a wild encounter), triggered by
+  // actually walking into the trainer's sightline — pure A-mashing in place
+  // never moves the player far enough to reach it. Walk a real direction,
+  // talking (A) along the way to clear any dialogue/event script that blocks
+  // movement, and turn to the next direction once the player position stops
+  // changing (blocked by scenery/an NPC), mirroring the proven traversal
+  // logic in probe_it_playthrough.mts.
   const dirs = ['DOWN', 'RIGHT', 'UP', 'LEFT'] as const;
   let battleDetected = false;
   let lastHash2 = '', same2 = 0;
   let fixtureSaved = false;
+  let dirIdx = 0;
 
-  for (let i = 0; i < 480 && !battleDetected; i++) {
-    // 5 A-presses per every 6 steps (script/dialogue advance); 1 directional.
-    if (i % 6 === 5) {
-      await c.pressKey(dirs[Math.floor(i / 6) % 4], 8);
-      await c.advanceFrames(18);
-    } else {
-      await c.pressKey('A', 4);
-      await c.advanceFrames(32);
+  const playerPos = async (): Promise<string> => {
+    try {
+      const s = await c.getState() as { playerX?: number; playerY?: number };
+      return `${s.playerX},${s.playerY}`;
+    } catch { return ''; }
+  };
+  let prevPos = await playerPos();
+
+  // 1800 outer iterations (×6 substeps). Verified against the real IT ROM:
+  // the previous 480-iteration budget got the player walking and picking up
+  // an overworld item but ran out before reaching the trainer's sightline —
+  // wall-clock cost is cheap (mGBA runs far faster than real-time headless),
+  // so the budget is sized generously rather than precisely.
+  for (let i = 0; i < 1800 && !battleDetected; i++) {
+    const dir = dirs[dirIdx % dirs.length];
+    for (let s = 0; s < 6 && !battleDetected; s++) {
+      await c.pressKey(dir, 8); await c.advanceFrames(14);
+      await c.pressKey('A', 4); await c.advanceFrames(18);
+
+      const txt = await harvestText(c, 'explore');
+      if (BATTLE_RE.test(txt)) {
+        battleDetected = true;
+        console.error(`[probe] First battle detected at explore i=${i}.${s}`);
+        break;
+      }
     }
 
-    const txt = await harvestText(c, 'explore');
-    if (BATTLE_RE.test(txt)) {
-      battleDetected = true;
-      console.error(`[probe] First battle detected at explore i=${i}`);
-      break;
-    }
+    const pos = await playerPos();
+    if (pos === prevPos) dirIdx++; // blocked → turn to the next direction
+    prevPos = pos;
 
     if (i % 10 === 0) {
       const p = path.join(OUT, `explore-${String(i).padStart(3, '0')}.png`);

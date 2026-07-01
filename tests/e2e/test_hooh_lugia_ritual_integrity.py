@@ -112,6 +112,30 @@ def _diff_ranges(en: bytes, fr: bytes, lo: int, hi: int):
     return ranges
 
 
+def _ritual_non_pointer_diffs(en: bytes, other: bytes, lo: int, hi: int):
+    """EN/`other` diff ranges in [lo, hi) that are NOT a relocated text pointer.
+
+    A relocated FR pointer occupies some 4-byte span; if it coincidentally
+    shares one or more bytes with the EN pointer (e.g. both addresses fall in
+    the same 0x09xxxxxx region), the *measured* diff range shrinks below 4
+    bytes even though the underlying change is still a clean pointer
+    relocation. Accept any diff range covered by SOME 4-byte window where
+    both EN and `other` hold a valid GBA ROM pointer — this is opcode
+    agnostic, since the ritual script loads text pointers via more than one
+    command (`0F 00 <ptr>` as well as single-byte opcodes like 0x67).
+    """
+    non_pointer = []
+    for a, b in _diff_ranges(en, other, lo, hi):
+        covered = any(
+            _is_ptr(en, s) and _is_ptr(other, s)
+            for s in range(max(lo, b - 4), min(a, hi - 4) + 1)
+        )
+        if covered:
+            continue
+        non_pointer.append((a, b, en[a:b].hex(), other[a:b].hex()))
+    return non_pointer
+
+
 def test_ritual_logic_byte_identical(en: bytes, fr: bytes):
     """Every EN/FR difference in the ritual script is a relocated text pointer.
 
@@ -122,14 +146,7 @@ def test_ritual_logic_byte_identical(en: bytes, fr: bytes):
     ranges = _diff_ranges(en, fr, RITUAL_LO, RITUAL_HI)
     assert ranges, "expected text-pointer relocations in the FR ritual region"
 
-    non_pointer = []
-    for a, b in ranges:
-        # A legitimate translation diff is a 4-byte run that is a valid ROM
-        # pointer in BOTH roms (EN original text -> FR relocated free space).
-        if (b - a) == 4 and _is_ptr(en, a) and _is_ptr(fr, a):
-            continue
-        non_pointer.append((a, b, en[a:b].hex(), fr[a:b].hex()))
-
+    non_pointer = _ritual_non_pointer_diffs(en, fr, RITUAL_LO, RITUAL_HI)
     assert not non_pointer, (
         "FR translation altered NON-text bytes in the Ho-Oh/Lugia ritual script "
         "(possible encounter-logic regression):\n"
@@ -315,10 +332,8 @@ def test_release_build_ritual_logic_matches_en(en, release_path):
     if not release_path.exists():
         pytest.skip(f"{release_path.name} not present")
     rel = release_path.read_bytes()
-    ranges = _diff_ranges(en, rel, RITUAL_LO, RITUAL_HI)
     non_pointer = [
-        (a, b) for a, b in ranges
-        if not ((b - a) == 4 and _is_ptr(en, a) and _is_ptr(rel, a))
+        (a, b) for a, b, _, _ in _ritual_non_pointer_diffs(en, rel, RITUAL_LO, RITUAL_HI)
     ]
     assert not non_pointer, (
         f"{release_path.name}: NON-text byte differs from EN in the ritual "

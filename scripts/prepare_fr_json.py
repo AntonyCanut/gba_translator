@@ -238,6 +238,7 @@ def main() -> int:
             translations.append({
                 'offset': offset,
                 'original_text': original_text,
+                'english_raw_bytes': en_raw.hex(),
                 'translation': fr_text,
                 'length': fr_length,
                 'original_length': en_len,

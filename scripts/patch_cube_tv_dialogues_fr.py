@@ -1,32 +1,38 @@
 #!/usr/bin/env python3
-"""Translate the World-Map *junction* panels that the generic pipeline drops.
+"""Translate the Cube V3 prologue + Borrius TV-mission dialogues that the
+generic pipeline leaves in English (B-98).
 
-Root cause (found statically against the English ROM + the extraction):
+Root cause (found statically against the built French ROM):
 
-The World-Map sign cluster (``0x1F70xxx``–``0x1F72xxx``) is split in two shapes:
+Each target *is* present in the English extraction and *does* have a
+``translation_ready.json`` entry, but the entry is ``too_long`` for its
+in-place slot. The generic relocation pass (``--allow-relocate``) only
+repoints pointer sites that ``_plausible_pointer_sites``
+(:mod:`src.core.text_reinserter`) recognises as a genuine text reference —
+4-byte aligned cells, or a small set of known script-opcode shapes
+(``loadpointer``, ``bufferstring``, ``preparemsg``, ``trainerbattle``...).
+That heuristic is intentionally conservative (a previous over-eager pass
+corrupted the battle engine), so any other site is left untouched, still
+holding the address of the original — English — string.
 
-* **Route panels** start with a route name (``Route 8\\n"Frost Mountain Peak"\\p
-  <arrow> …``). The pointer-text extractor sizes them correctly, so
-  ``apply_combined_fr.py`` carries them into the trilingual CSV / translation
-  JSON and the generic builder relocates + repoints them normally.
-* **Junction panels** start *directly* with a direction arrow byte
-  (``0x79``–``0x7C``) — e.g. ``<0x79> Frozen Heights\\n<0x7A> Crater Town\\l
-  <0x7B> Blizzard City``. The extractor treats the leading arrow as a 1-byte
-  string (``original_length == 1``, ``real_max_length == 3``), so the French
-  text is far too long to write in place and there is no usable extraction
-  entry to relocate from. Every delivery path therefore drops it and the built
-  ROM keeps the English junction sign (this is the literal panel the user
-  reported: *Frozen Heights / Crater Town / Blizzard City*).
+``0x1F01074`` (Mom's "Is that a Super Cube in your pocket?" prologue line)
+and ``0x1FB052C`` (the TV-mission scientist's opening line) are already
+fully migrated by the generic pass — their only referrer was a recognised
+shape and now points at a relocated French copy. ``0x1FB07FE`` (the
+TV-mission "you still have yet to gather data" follow-up) has *two*
+referrers in the English ROM; the generic pass repointed one (a recognised
+``loadpointer`` site) but left the other — preceded by an unrecognised
+opcode byte — pointing at the dead English original, so the built ROM still
+shows English there.
 
-The correct French translations already live in ``combined_fr.txt`` at the same
-offsets (arrows kept at line start). This post-build patch closes the gap the
-same way :mod:`patch_meteorite_dialogue_fr` does: encode each ``combined_fr.txt``
-value with the shared control-code machinery, relocate one ``0xFF``-terminated
-copy into free space, and repoint **every** live referrer to it.
-
-The patch is reference-driven (it scans the whole ROM for live pointers to each
-original offset) and idempotent: an offset whose original is no longer pointed
-at — already relocated by the generic pass or a previous run — is skipped.
+This post-build patch closes that gap the same way
+:mod:`patch_meteorite_dialogue_fr` and :mod:`patch_worldmap_junction_panels_fr`
+do: encode each ``combined_fr.txt`` value with the shared control-code
+machinery, relocate one ``0xFF``-terminated copy into free space, and
+repoint **every** live referrer to it. It is reference-driven (scans the
+whole ROM for live pointers to each original offset) and idempotent — a
+target whose original is no longer pointed at (already fully migrated, as
+with the first two offsets above) is skipped.
 """
 
 from __future__ import annotations
@@ -53,21 +59,12 @@ from apply_inline_overrides_fr import (  # noqa: E402
 ROM_POINTER_BASE = 0x08000000
 DEFAULT_COMBINED = REPO_ROOT / "languages/fr/combined_fr.txt"
 
-# Arrow-prefixed World-Map junction panels (extractor sees them as 1-byte
-# strings → undeliverable by the generic pipeline). original English offset ->
-# a short, contiguous French fragment used to prove the relocation landed.
+# original English offset -> a short, contiguous French prefix used to prove
+# the relocation landed (must appear verbatim before any line/page break).
 TARGETS: dict[int, str] = {
-    0x1F72691: "Cimes Gelées",
-    0x1F726C0: "Cimes Gelées, Cimistral",
-    0x1F726FC: "Cratéris",
-    0x1F72735: "Cratéris, Automnia",
-    0x1F7276E: "Dresco",
-    0x1F727A7: "Dresco",
-    0x1F727D0: "Antésia, Naville",
-    0x1F72808: "Gurenbourg",
-    # Cootes Marsh mini-panel: EN starts with the ↑ arrow byte too (1-byte
-    # undeliverable). FR arrow was mid-line before the line-start fix (P-68).
-    0x1F72353: "Magnolia",
+    0x1F01074: "C'est un Cube V3 dans ta",         # Mom, prologue
+    0x1FB052C: "Qu'avez-vous dit ?",                 # TV-mission, opening line
+    0x1FB07FE: "Vous n'avez pas encore rassemblé\nde données",  # TV-mission, follow-up
 }
 
 _OFFSET_LINE = re.compile(r"^0x([0-9A-Fa-f]+):\s?(.*)$")
@@ -112,6 +109,8 @@ def apply(
     for offset in TARGETS:
         referrers = find_referrers(rom, offset)
         if not referrers:
+            # Nothing points at the original string any more — already
+            # relocated by the generic pass or a previous run.
             stats["skipped"] += 1
             continue
         text = combined.get(offset)
@@ -143,7 +142,7 @@ def verify(rom: bytes) -> list[tuple[int, str]]:
             continue
         encoded_prefix = TextEncoder.encode(prefix, "pokemon")[:-1]  # drop 0xFF
         if encoded_prefix not in rom:
-            bad.append((offset, "French fragment not found in ROM"))
+            bad.append((offset, "French prefix not found in ROM"))
     return bad
 
 
@@ -177,7 +176,7 @@ def main() -> int:
     remaining = verify(rom)
     rom_path.write_bytes(rom)
 
-    print("✓ World-Map junction panels — relocation + repointing:")
+    print("✓ Cube V3 prologue & TV-mission dialogues — relocation + repointing:")
     print(f"   - Targets relocated:      {stats['targets']}")
     print(f"   - Pointers repointed:     {stats['repointed']}")
     if stats["skipped"]:

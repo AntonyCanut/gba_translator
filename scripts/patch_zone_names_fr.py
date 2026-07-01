@@ -59,10 +59,10 @@ DEFAULT_COMBINED = REPO_ROOT / "languages/fr/combined_fr.txt"
 # texts are not in the EN pointer extraction.  Value = short FR fragment used
 # to verify the relocation landed correctly.
 TARGETS: dict[int, str] = {
-    0x071FC80: "Ville Blizzard",   # was "Blizzard City"  (zone-name table)
-    0x0B51EAC: "Port d'Antisis",   # was "Antisis Port"   (zone-name table)
-    0x078D811: "Bourg Crat",       # was "Crater Town"    (fly-banner cluster)
-    0x078D851: "Ville Blizzard",   # was "Blizzard City"  (fly-banner cluster)
+    0x071FC80: "Cimistral",        # Blizzard City  (zone-name table)
+    0x0B51EAC: "Port d'Antésia",   # Antisis Port   (zone-name table)
+    0x078D811: "Cratéris",         # Crater Town    (fly-banner cluster)
+    0x078D851: "Cimistral",        # Blizzard City  (fly-banner cluster)
 }
 
 _OFFSET_LINE = re.compile(r"^0x([0-9A-Fa-f]+):\s?(.*)$")

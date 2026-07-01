@@ -196,6 +196,17 @@ class SmartReinserter:
         self.fallback = FallbackSynthesizer() if allow_fallback else None
         self.free_space_min = free_space_min
         self.skip_encode_aliases = skip_encode_aliases
+        # Pristine snapshot of the ROM as it was *before* any reinsertion, used
+        # for original-length inference and padding detection. Reading the live
+        # ``rom_data`` instead made those measurements depend on how many
+        # neighbours had already been written, so the same translation could be
+        # judged "fits in place" or "too long → fallback/relocate" depending on
+        # input order. That flipped which strings relocated and reshuffled the
+        # whole free-space layout, so a no-change rebuild from a differently
+        # ordered translation JSON drifted ~0.2 % of the ROM. Measuring against
+        # the immutable source makes the decision a property of the source
+        # layout alone — order-independent and reproducible.
+        self._source_snapshot = bytes(rom_data)
         # Relocations are deferred until all in-place writes are done:
         # the free-space scan must see the final state of the inter-string
         # padding, otherwise a relocated string can land in padding that an
@@ -224,26 +235,32 @@ class SmartReinserter:
         }
 
     def _infer_original_length(self, offset: int, encoding: str, max_length: int = 1000) -> int:
+        # Measured against the pristine snapshot, never the live ROM, so the
+        # answer does not depend on how many neighbours were written first.
+        src = self._source_snapshot
         terminator = 0x00 if encoding == 'ascii' else 0xFF
         length = 0
         for i in range(max_length):
-            if offset + i >= len(self.rom_data):
+            if offset + i >= len(src):
                 break
-            if self.rom_data[offset + i] == terminator:
+            if src[offset + i] == terminator:
                 break
             length += 1
         return length
 
     def _detect_padding(self, offset: int, length: int, encoding: str) -> int:
+        # Padding is the inter-string gap in the *source* layout; reading the
+        # live ROM made it shrink/grow with prior writes (order-dependent).
+        src = self._source_snapshot
         end = offset + length
-        if end >= len(self.rom_data):
+        if end >= len(src):
             return 0
         terminator = 0x00 if encoding == 'ascii' else 0xFF
-        if self.rom_data[end] == terminator:
+        if src[end] == terminator:
             end += 1
         padding = 0
-        while end + padding < len(self.rom_data):
-            byte = self.rom_data[end + padding]
+        while end + padding < len(src):
+            byte = src[end + padding]
             if byte in (0x00, 0xFF):
                 padding += 1
             else:
@@ -319,7 +336,12 @@ class SmartReinserter:
           pointer in ``pointer_proof_rom`` (another translation of the same
           base ROM relocated this very string and repointed the site)
         """
-        rom = self.rom_data
+        # Verify against the pristine snapshot: a prior in-place write can
+        # clobber the bytes at (or around) a candidate site, which would flip
+        # the value/opcode checks and, with them, whether this string relocates
+        # — making the layout depend on processing order. In the source the
+        # site still holds the original pointer, so the decision is stable.
+        rom = self._source_snapshot
         expected = struct.pack('<I', 0x08000000 + offset)
         kept = []
         for site in sites:
@@ -377,9 +399,19 @@ class SmartReinserter:
         # Italian build's relocation demand exceeds the total free space), so
         # when not everything fits we maximise the *number* of strings that get
         # their translation — leaving only the few longest ones in English
-        # instead of an arbitrary offset-ordered slice. Stable sort keeps the
-        # original order among equal-length strings.
-        pending.sort(key=lambda item: len(item[0]))
+        # instead of an arbitrary offset-ordered slice.
+        #
+        # The tie-break is a *total* order — (encoded bytes, source offset) —
+        # not the input order. The translation JSON is regenerated through
+        # different paths (the trilingual-CSV pipeline vs prepare_fr_json) that
+        # emit the same entries in a different sequence; a stable-by-length sort
+        # then placed equal-length strings in that incoming order, so a
+        # no-change rebuild reshuffled the free-space packing and every
+        # repointed pointer (~0.2 % of the ROM drifted each rebuild). A canonical
+        # key makes the layout depend only on the *set* of translations, so the
+        # same content always yields byte-identical bytes. (item[0] is the
+        # encoded string, item[2] the source offset, unique per entry.)
+        pending.sort(key=lambda item: (len(item[0]), item[0], item[2]))
         for encoded, pointer_offsets, offset in pending:
             self._relocate_text(encoded, pointer_offsets, offset)
 
@@ -582,7 +614,12 @@ class SmartReinserter:
         Args:
             translations: Liste de dictionnaires de traduction
         """
-        for translation in translations:
+        # Process in ascending offset order so the result does not depend on the
+        # input sequence. Some neighbouring entries write overlapping spans (e.g.
+        # the type-name table holds two near-identical cells one byte apart); the
+        # last writer wins, so a fixed traversal order is what makes a no-change
+        # rebuild from a differently ordered translation set byte-identical.
+        for translation in sorted(translations, key=lambda t: t.get('offset', 0)):
             self.reinsert_text(translation)
         self.flush_relocations()
 

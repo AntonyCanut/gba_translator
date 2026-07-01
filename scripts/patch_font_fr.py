@@ -19,6 +19,9 @@ CP_ACUTE_A = 0x17
 CP_GRAVE_A = 0x16
 CP_C = 0xD7
 CP_C_CEDILLA = 0x19
+CP_E = 0xD9
+CP_GRAVE_E = 0x1A
+CP_ACUTE_E = 0x1B
 
 WIDTH_TABLE_OFFSETS = [
     0x1FB100,
@@ -283,23 +286,37 @@ def dominant_color(pixels: Iterable[int]) -> int:
     return counts.most_common(1)[0][0]
 
 
-def build_grave_a(font: bytes) -> bytes:
+def acute_accent_positions(font: bytes) -> List[Tuple[int, int, int]]:
+    """Extract the compact acute accent from ``á`` (rows 0-1 only).
+
+    Returns the ``(x, y, value)`` pixels of the acute accent that differ from
+    the bare base ``a`` glyph — i.e. the accent stroke itself, without the
+    letter body.  This is the proven-good source used to rebuild ``à``, ``é``
+    and ``è`` (the standalone é/è glyphs in the international font are drawn too
+    high and crush the letter body, so we never copy them verbatim).
+    """
     base = glyph_pixels(font, CP_A)
     acute = glyph_pixels(font, CP_ACUTE_A)
-
-    positions = [
+    return [
         (x, y, acute[y * 8 + x])
         for y in range(2)
         for x in range(8)
         if acute[y * 8 + x] != 0 and acute[y * 8 + x] != base[y * 8 + x]
     ]
-    if not positions:
-        return pixels_to_tile(base)
 
+
+def grave_shift(positions: List[Tuple[int, int, int]]) -> int:
+    """Horizontal shift that turns the acute accent into a grave accent."""
     avg_x = sum(x for x, _, _ in positions) / len(positions)
     shift = int(round(avg_x - 1.0))
-    shift = max(1, min(6, shift))
+    return max(1, min(6, shift))
 
+
+def overlay_accent(
+    base: List[int], positions: List[Tuple[int, int, int]], shift: int = 0
+) -> List[int]:
+    """Overlay accent ``positions`` onto a copy of ``base`` (shifted left by
+    ``shift``), keeping the darker pixel where they overlap."""
     out = base[:]
     for x, y, val in positions:
         nx = x - shift
@@ -307,8 +324,33 @@ def build_grave_a(font: bytes) -> bytes:
             idx = y * 8 + nx
             if val > out[idx]:
                 out[idx] = val
+    return out
 
-    return pixels_to_tile(out)
+
+def build_grave_a(font: bytes) -> bytes:
+    base = glyph_pixels(font, CP_A)
+    positions = acute_accent_positions(font)
+    if not positions:
+        return pixels_to_tile(base)
+    return pixels_to_tile(overlay_accent(base, positions, grave_shift(positions)))
+
+
+def build_acute_e(font: bytes) -> bytes:
+    """Rebuild ``é`` from the clean ``e`` body plus the compact acute accent."""
+    base = glyph_pixels(font, CP_E)
+    positions = acute_accent_positions(font)
+    if not positions:
+        return pixels_to_tile(base)
+    return pixels_to_tile(overlay_accent(base, positions))
+
+
+def build_grave_e(font: bytes) -> bytes:
+    """Rebuild ``è`` from the clean ``e`` body plus the compact grave accent."""
+    base = glyph_pixels(font, CP_E)
+    positions = acute_accent_positions(font)
+    if not positions:
+        return pixels_to_tile(base)
+    return pixels_to_tile(overlay_accent(base, positions, grave_shift(positions)))
 
 
 def build_cedilla(font: bytes, fallback_mask: List[Tuple[int, int]]) -> bytes:
@@ -330,15 +372,23 @@ def build_cedilla(font: bytes, fallback_mask: List[Tuple[int, int]]) -> bytes:
 
 def patch_width_tables(rom: bytearray) -> int:
     patched = 0
+    # Alias each accented glyph's advance width to its bare base letter so the
+    # rebuilt à/é/è render with the same spacing as a/e.
+    aliases = [
+        (CP_GRAVE_A, CP_A),
+        (CP_ACUTE_E, CP_E),
+        (CP_GRAVE_E, CP_E),
+    ]
     for offset in WIDTH_TABLE_OFFSETS:
         if offset + 0x100 > len(rom):
             continue
-        a_width = rom[offset + CP_A]
-        if a_width == 0:
-            continue
-        if rom[offset + CP_GRAVE_A] != a_width:
-            rom[offset + CP_GRAVE_A] = a_width
-            patched += 1
+        for accent_cp, base_cp in aliases:
+            base_width = rom[offset + base_cp]
+            if base_width == 0:
+                continue
+            if rom[offset + accent_cp] != base_width:
+                rom[offset + accent_cp] = base_width
+                patched += 1
     return patched
 
 
@@ -379,6 +429,12 @@ def apply_patches(rom: bytearray) -> Tuple[int, int, int]:
         grave_tile = build_grave_a(original)
         if font[CP_GRAVE_A * GLYPH_SIZE: (CP_GRAVE_A + 1) * GLYPH_SIZE] != grave_tile:
             font[CP_GRAVE_A * GLYPH_SIZE: (CP_GRAVE_A + 1) * GLYPH_SIZE] = grave_tile
+        acute_e_tile = build_acute_e(original)
+        if font[CP_ACUTE_E * GLYPH_SIZE: (CP_ACUTE_E + 1) * GLYPH_SIZE] != acute_e_tile:
+            font[CP_ACUTE_E * GLYPH_SIZE: (CP_ACUTE_E + 1) * GLYPH_SIZE] = acute_e_tile
+        grave_e_tile = build_grave_e(original)
+        if font[CP_GRAVE_E * GLYPH_SIZE: (CP_GRAVE_E + 1) * GLYPH_SIZE] != grave_e_tile:
+            font[CP_GRAVE_E * GLYPH_SIZE: (CP_GRAVE_E + 1) * GLYPH_SIZE] = grave_e_tile
         cedilla_tile = build_cedilla(original, fallback_mask)
         if font[CP_C_CEDILLA * GLYPH_SIZE: (CP_C_CEDILLA + 1) * GLYPH_SIZE] != cedilla_tile:
             font[CP_C_CEDILLA * GLYPH_SIZE: (CP_C_CEDILLA + 1) * GLYPH_SIZE] = cedilla_tile
@@ -410,7 +466,7 @@ def apply_patches(rom: bytearray) -> Tuple[int, int, int]:
 
 
 def main() -> int:
-    parser = argparse.ArgumentParser(description="Patch French glyphs (à, ç) in a GBA ROM font.")
+    parser = argparse.ArgumentParser(description="Patch French glyphs (à, é, è, ç) in a GBA ROM font.")
     parser.add_argument("--rom", required=True, help="Path to the ROM to patch")
     args = parser.parse_args()
 

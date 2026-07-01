@@ -68,22 +68,22 @@ def _load_last_wins() -> dict[int, str]:
 LOCATION_LABELS = [
     # 'ourg Gurun' (missing leading B) is a *prefix* of the correct value, so it
     # can't be banned as a substring — the exact-match test guards the off-by-1.
-    (0xB500A0, "Bourg Gurun",      "ourg Gurun (off-by-1 B)", []),
-    (0x721304, "Trou Glacé",       "Icy Hole",               ["Icy Hole", "Icy hole"]),
+    (0xB500A0, "Gurenbourg",      "ourg Gurun (off-by-1 B)", []),
+    (0x721304, "Gouffre Gelé",       "Icy Hole",               ["Icy Hole", "Icy hole"]),
     (0x7214E8, "Île Scintillante", "Glimmer Isle",           ["Glimmer Isle", "Glimmer island"]),
-    (0x721968, "Ville d'Epidimy",  "Epidimy Town",           ["Epidimy Town"]),
-    (0xB50214, "Égouts d'Antisis", "Antisis Sewers",         ["Antisis Sewers"]),
-    (0xB5026C, "Mont Foudroyant",  "Thundercap Mt.",         ["Thundercap", "Mont Foudre"]),
-    (0xB503CC, "Volcan Cendreux",  "Cinder Volcano",         ["Cinder Volcano"]),
-    (0xB514E4, "Dehara",           "Dehara City",            ["Dehara City", "Ville de Dehara"]),
+    (0x721968, "Épidia",  "Epidimy Town",           ["Epidimy Town"]),
+    (0xB50214, "Égouts d'Antésia", "Antisis Sewers",         ["Antisis Sewers"]),
+    (0xB5026C, "Mont Foudroyant",  "Thundercap Mt.",     ["Thundercap", "Pic Grondant"]),
+    (0xB503CC, "Volcan Cendré",  "Cinder Volcano",         ["Cinder Volcano", "Cendreux"]),
+    (0xB514E4, "Daherapolis",           "Dehara City",            ["Dehara City", "Ville de Dehara"]),
     (0xB52274, "Pension Pokémon",  "Pokemon Day Care",       ["Day Care", "Pokemon Day Care"]),
-    (0xB522A4, "Bourg Polder",     "Polder Town",            ["Polder Town"]),
-    (0xB531D8, "Île du Croissant", "Newmoon Island",         ["Newmoon Island"]),
-    (0xB535C8, "Île de la Lune",   "Fullmoon Island",        ["Fullmoon Island"]),
-    (0xB537AC, "Bois-Rouge",       "Redwood Village",        ["Redwood Village", "Village Redwood"]),
-    (0x720E74, "Fallshore",        "Fallshore City",         ["Fallshore City", "Ville de Fallshore"]),
+    (0xB522A4, "Polderive",     "Polder Town",            ["Polder Town", "Polder sur Rive"]),
+    (0xB531D8, "Île Nouvellune", "Newmoon Island",         ["Newmoon Island"]),
+    (0xB535C8, "Île Pleinelune",   "Fullmoon Island",        ["Fullmoon Island"]),
+    (0xB537AC, "Rougebois",       "Redwood Village",        ["Redwood Village", "Village Redwood"]),
+    (0x720E74, "Rivapolis",        "Fallshore City",         ["Fallshore City", "Ville de Fallshore"]),
     (0x3EEF2D, "Grotte Faille",    "Rift Cave",              ["Rift Cave"]),
-    (0xB500F0, "Port-en-mer",      "Seaport City",           ["Seaport City", "Ville Portuaire"]),
+    (0xB500F0, "Naville",      "Seaport City",           ["Seaport City", "Ville Portuaire"]),
     (0x3EEFEA, "Grotte de l'Être", "Cave of Being",          ["Cave of Being"]),
     (0x71CA60, "Dresco",           "Dresco Town",            ["Dresco Town"]),
 ]
@@ -171,7 +171,7 @@ class TestLocationNamesCombinedFR:
             "Expected 0x720E74 to be duplicated in combined_fr.txt to exercise "
             f"last-wins; found {len(dupes)} occurrence(s)."
         )
-        assert combined[0x720E74].strip() == "Fallshore"
+        assert combined[0x720E74].strip() == "Rivapolis"
 
 
 if __name__ == "__main__":

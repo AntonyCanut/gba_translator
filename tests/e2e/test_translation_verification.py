@@ -51,8 +51,16 @@ class TestRomContentMatchesTranslation:
             e for e in data.get("translations", [])
             if e.get("translation") and not e.get("too_long")
         ]
-        entries.sort(key=lambda e: len(e.get("translation", "")), reverse=True)
-        sample = entries[:100]
+        # The injected_rom fixture only reinserts the first 500 valid entries
+        # (in file/offset order) to keep the module-scoped build fast — every
+        # other offset still holds the untouched English source. Sampling the
+        # "longest" entries from the full corpus almost always lands outside
+        # that injected slice, so the in-place comparison is checking ROM
+        # bytes that were never written by this fixture in the first place.
+        # Restrict the candidate pool to the same slice that was injected.
+        injected_pool = entries[:500]
+        injected_pool.sort(key=lambda e: len(e.get("translation", "")), reverse=True)
+        sample = injected_pool[:100]
 
         matches = 0
         checked = 0
@@ -62,7 +70,10 @@ class TestRomContentMatchesTranslation:
                 continue
 
             expected = _normalize_for_comparison(entry["translation"])
-            decoded = _decode_rom_string_at(rom_data, offset)
+            # A couple of the longest in-place entries (multi-page dialogue
+            # with many <0xFB> page breaks) encode past the default 500-byte
+            # read window, which would truncate them before the comparison.
+            decoded = _decode_rom_string_at(rom_data, offset, max_len=700)
             expected_norm = _normalize_for_comparison(expected)
             decoded_norm = _normalize_for_comparison(decoded)
             checked += 1
@@ -72,10 +83,11 @@ class TestRomContentMatchesTranslation:
 
         assert checked > 0, "No entries were checked"
         match_pct = matches / checked * 100
-        # Longest entries are almost all relocated to free space, so they
-        # won't be found at their original offset — only in-place matches count.
-        assert match_pct >= 1.0, (
-            f"Only {match_pct:.1f}% of top-100 longest entries match "
+        # Most injected in-place entries decode back verbatim; some of the
+        # longest get relocated to free space (won't match at their original
+        # offset). A healthy injection keeps the bulk in place.
+        assert match_pct >= 50.0, (
+            f"Only {match_pct:.1f}% of the longest injected entries match "
             f"({matches}/{checked})"
         )
 
@@ -209,15 +221,31 @@ class TestCorruptedBytesDetection:
             term = chunk.find(POKEMON_TERMINATOR)
             if term <= 0:
                 continue
-            string_bytes = chunk[:term]
-            # 0x00 is space in Pokemon encoding, but consecutive 0x00 is suspicious
+            # 0x00 is the space glyph in this encoding, so trailing box-padding
+            # (spaces, present in the EN source too) is not corruption: strip a
+            # trailing run of spaces (0x00) and newlines (0xFE) before scanning.
+            string_bytes = chunk[:term].rstrip(b"\x00\xFE")
+            # Fixed-width fields (e.g. item descriptions) can also carry interior
+            # padding inherited from the English source; only flag an interior
+            # run longer than whatever run already exists in original_text — i.e.
+            # one *introduced* by the translation/injection, not inherited.
+            source_max_run = 0
+            run = 0
+            for ch in entry.get("original_text", ""):
+                if ch == " ":
+                    run += 1
+                    source_max_run = max(source_max_run, run)
+                else:
+                    run = 0
+            allowed_run = max(source_max_run, 4)
+
             null_run = 0
             for b in string_bytes:
                 if b == 0x00:
                     null_run += 1
                 else:
                     null_run = 0
-                if null_run >= 5:
+                if null_run > allowed_run:
                     corrupted.append(hex(offset))
                     break
 
