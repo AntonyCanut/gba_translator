@@ -29,11 +29,11 @@ GANG = re.compile(r'Black(\\[nlp]| )(Emboar|\{PLAYER\})')
 # Hand-written replacements (full body, after the "0x...: " prefix).
 CUSTOM = {
     '1f9d8d9': r"Pas si mauvais, gamin…\nJe t'aime bien. Écoute\pça… À partir de\pmaintenant, notre nom de\ngang sera le\p{PLAYER} Noir ! Ouais ! On\nadopte ton nom viril !\pC'est un nom plus\nsauvage pour une équipe\pplus sauvage ! Le\n{PLAYER} Noir ! Gwa ha ha ha ! Génial !",
-    '1f9de57': r"C'est une puissante moto que\ntous les membres des\p{PLAYER} Noir possèdent ! Tu peux\nappuyer sur {L_BUTTON} pour\lactiver le turbo, ou y aller\pcool en pédalant. Passe nous\nvoir si tu viens à Ville d'Antisis.\pOn t'accueillera à bras ouverts.",
-    '1f9df34': r"Bienvenue chez les\p{PLAYER} Noir, gamin ! Passe nous\nvoir si tu viens à Ville d'Antisis.\pOn t'accueillera à bras ouverts.",
+    '1f9de57': r"C'est une puissante moto que\ntous les membres des\p{PLAYER} Noir possèdent ! Tu peux\nappuyer sur {L_BUTTON} pour\lactiver le turbo, ou y aller\pcool en pédalant. Passe nous\nvoir si tu viens à Antésia.\pOn t'accueillera à bras ouverts.",
+    '1f9df34': r"Bienvenue chez les\p{PLAYER} Noir, gamin ! Passe nous\nvoir si tu viens à Antésia.\pOn t'accueillera à bras ouverts.",
     '1f9e3fb': r"{COLOR}ËHé ! Qui t'a dit que\ntu pouvais passer par ici ?\pC'est le territoire du\pRoitiflam Noir ! Retourne d'où tu viens !",
     # --- runtime-gender entries: raw <0xFD><0x01> = player name, no braces ---
-    '1f9dbd7': r"Laisse-moi te dire ! Personne ne\pm'a jamais autant démoli\nque <0xFD><0x01> ! J'ai même\prenommé le Roitiflam Noir en\n<0xFD><0x01> Noir, en son honneur !\pC'est l'heure d'un nouveau\pdépart. Les <0xFD><0x01> Noir et\nmoi, on s'installe à Ville d'Antisis ! J'ai entendu dire que\nl'ancien gang qui dirigeait\pl'endroit s'est fait chasser. Un\ntruc avec un Granbull Terrible,\pje sais plus… Cette ville est\nmûre pour être cueillie par les\p<0xFD><0x01> Noir ! Gwa ha ha ha !",
+    '1f9dbd7': r"Laisse-moi te dire ! Personne ne\pm'a jamais autant démoli\nque <0xFD><0x01> ! J'ai même\prenommé le Roitiflam Noir en\n<0xFD><0x01> Noir, en son honneur !\pC'est l'heure d'un nouveau\pdépart. Les <0xFD><0x01> Noir et\nmoi, on s'installe à Antésia ! J'ai entendu dire que\nl'ancien gang qui dirigeait\pl'endroit s'est fait chasser. Un\ntruc avec un Granbull Terrible,\pje sais plus… Cette ville est\nmûre pour être cueillie par les\p<0xFD><0x01> Noir ! Gwa ha ha ha !",
     '1fa13f5': r"<0xFD><0x01> ! Mon pote !\pTu le\psens ? On est\npresque prêts à tomber\pces Black Ferrothorns, tu vois ?\nMaintenant qu'ils n'ont plus leur\ldopant, ils tiendront pas face à\lnous, les <0xFD><0x01> Noir !",
 }
 

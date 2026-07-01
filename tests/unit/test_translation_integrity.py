@@ -91,7 +91,7 @@ class TestRegressionDetection:
 
     def test_missing_offset_fails(self, tmp_path: Path):
         target = tmp_path / "partial.txt"
-        target.write_text("0xB500A0: Bourg Gurun\n", encoding="utf-8")
+        target.write_text("0xB500A0: Gurenbourg\n", encoding="utf-8")
         report = cti.build_report(target)
         assert not report.ok
         absent = [r for r in report.failures if "absent" in r.reason]
