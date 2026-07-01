@@ -57,17 +57,17 @@ DEFAULT_COMBINED = REPO_ROOT / "languages/fr/combined_fr.txt"
 # strings → undeliverable by the generic pipeline). original English offset ->
 # a short, contiguous French fragment used to prove the relocation landed.
 TARGETS: dict[int, str] = {
-    0x1F72691: "Hauteurs Gelées",
-    0x1F726C0: "Hauteurs Gelées, Ville Blizzard",
-    0x1F726FC: "Bourg Cratère",
-    0x1F72735: "Bourg Cratère, Ville de Tehl",
+    0x1F72691: "Cimes Gelées",
+    0x1F726C0: "Cimes Gelées, Cimistral",
+    0x1F726FC: "Cratéria",
+    0x1F72735: "Cratéria, Bourg-Tel",
     0x1F7276E: "Dresco",
     0x1F727A7: "Dresco",
-    0x1F727D0: "Ville d'Antisis, Ville Portuaire",
-    0x1F72808: "Bourg Gurun",
+    0x1F727D0: "Antésia, Naville",
+    0x1F72808: "Gurenbourg",
     # Cootes Marsh mini-panel: EN starts with the ↑ arrow byte too (1-byte
     # undeliverable). FR arrow was mid-line before the line-start fix (P-68).
-    0x1F72353: "Bourg Magnolia",
+    0x1F72353: "Magnolia",
 }
 
 _OFFSET_LINE = re.compile(r"^0x([0-9A-Fa-f]+):\s?(.*)$")

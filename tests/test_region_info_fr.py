@@ -33,7 +33,7 @@ FR_ROM = Path("output/roms/GenedRom-fr.gba")
 
 FALLSHORE_INFO_OFFSET = 0x74B2DF
 FALLSHORE_INFO_POINTER = 0x74B2D7  # GBA pointer (0x0874B2DF) that reaches the blurb
-EXPECTED_FR = "Fallshore<0xFB>La capitale des cascades de Borrius."
+EXPECTED_FR = "Rive-d'Automne<0xFB>Capitale des cascades de Borrius."
 _ENGLISH_BYTES = TextEncoder.encode_pokemon("The waterfall capital of Borrius")
 
 
