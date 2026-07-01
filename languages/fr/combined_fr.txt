@@ -6034,8 +6034,8 @@
 0x7918D7: C'est mon travail de veiller à ce\nque cette ville reste un bel oasis\lau bord du désert.\pTous ces arbres ne sont pas\nnaturels ici.\pC'est moi qui les ai\nplantés !
 0x791982: La Ville de Dehara est le parfait\nmélange entre tourisme et vie.\pTout ce quartier est conçu pour\nattirer les touristes, mais\lles gens peuvent toujours vivre\lici, au nord-est\lde la ville.
 0x791BBA: Tu as collecté {COLOR}É{STR_VAR_3} pour cent{COLOR}Á\nde cellules.
-0x791C58: C'est un Super Cube dans ta\npoche ?\p…\pOui !\pTu es la personne que je\ncherchais !\pViens avec moi.
-0x791E5D: {COLOR}ÇDes fragments d'un Pokémon nommé\nZygarde apparaissent partout\là Borrius.\pCependant, ces fragments ne peuvent\nêtre vus que si tu as un Super Cube\lavec une fonction spéciale.
+0x791C58: C'est un Cube V3 dans ta\npoche ?\p…\pOui !\pTu es la personne que je\ncherchais !\pViens avec moi.
+0x791E5D: {COLOR}ÇDes fragments d'un Pokémon nommé\nZygarde apparaissent partout\là Borrius.\pCependant, ces fragments ne peuvent\nêtre vus que si tu as un Cube V3\lavec une fonction spéciale.
 0x791F17: {COLOR}ËZygarde est un Pokémon de Kalos\nqui apparaît quand l'écosystème est\len danger.\pPourquoi il apparaît ici, à présent,\nreste un mystère.\pNous cherchons la réponse, mais il\nnous faut quelqu'un pour\lramasser toutes les “cellules” et\l“cœurs” de Zygarde.
 0x792026: {COLOR}ÇPenses-tu pouvoir nous aider\ndans nos recherches ?\pNous avons besoin d'un Dresseur\nexpérimenté qui parcourt Borrius.
 0x7920A9: {COLOR}ÇTu es sûr de toi ?\pTon aide serait précieuse\npour nous.
@@ -7792,9 +7792,9 @@
 0x8CA5E0: Le {B_LAST_ITEM} de\n{B_DEF_NAME_WITH_PREFIX} a restauré sa santé !
 0x8CA792: Tu ne te sens pas mieux\nmaintenant, ma chérie ?\pPrête à faire la course pour le\nProf. Log ?
 0x8CA7EF: Snif…\pJe savais que ce jour viendrait où\ntu quitterais la maison…\pLa télé le disait.\pSi ton père pouvait te voir\nmaintenant… il serait si fier !\pEh bien, si tu cours pour le Prof.\nLog, il te faudra\lça !
-0x8CA8C3: Fonction {COLOR}ÉJournal\nde Quêtes{COLOR}Ç pour ton Cube !\pElle suit tout ce qu'on te demande !\nOh, et avant d'oublier, tu as laissé\pun composant clé de ton Super Cube\nsur le sol de ta chambre.\lÇa ne servait pas avant, mais comme\ptu as maintenant ton propre Pokémon,\ntu en auras besoin pour\lutiliser des objets\len combat.
-0x8CAA11: {COLOR}Á{PLAYER} reçoit le Module Combat du\nSuper Cube de Maman !
-0x8CAA4A: Au cas où tu oublies,\nle Super Cube sert de sac.\pMais les sacs de DalMart\nne gardent que 42 objets.\lLe Super Cube, {COLOR}ÉCube{COLOR}Ç,\la de la place infinie !\lIl numérise les objets.\pEn bref, rien à porter.\nC'est comme si tu ne portais\lrien de plus\lsur toi !\pSois prudent dehors, chéri !\pApporte le colis du Prof. Log !
+0x8CA8C3: Fonction {COLOR}ÉJournal\nde Quêtes{COLOR}Ç pour ton Cube !\pElle suit tout ce qu'on te demande !\nOh, et avant d'oublier, tu as laissé\pun composant clé de ton Cube V3\nsur le sol de ta chambre.\lÇa ne servait pas avant, mais comme\ptu as maintenant ton propre Pokémon,\ntu en auras besoin pour\lutiliser des objets\len combat.
+0x8CAA11: {COLOR}Á{PLAYER} reçoit le Module Combat du\nCube V3 de Maman !
+0x8CAA4A: Au cas où tu oublies,\nle Cube V3 sert de sac.\pMais les sacs de DalMart\nne gardent que 42 objets.\lLe Cube V3, {COLOR}ÉCube{COLOR}Ç,\la de la place infinie !\lIl numérise les objets.\pEn bref, rien à porter.\nC'est comme si tu ne portais\lrien de plus\lsur toi !\pSois prudent dehors, chéri !\pApporte le colis du Prof. Log !
 0x8CAF99: Va au {COLOR}ÉPoké Mart\nde Bellinville{COLOR}Ë, {PLAYER}.\pJ'en ai besoin, toi seul.
 0x8CAFFD: Oh, {PLAYER} !\nTu as rapporté mon colis !
 0x8CB023: {PLAYER} livre le colis.
@@ -16199,7 +16199,7 @@
 0x1F00F5D: C'est une entrée assez récente de\nl'Autoroute KBT.\pLe pont qui y mène est encore en\nconstruction.
 0x1F00FC4: À l'ouest de Dresco se trouve\nla Forêt Lugubre.\pElle regorge de Pokémon Insecte\net Spectre.\pTu devrais y faire un tour quand tu\nle pourras.
 0x1F01059: Hé, toi !\pDresseur !\pAttends !
-0x1F01074: C'est un Super Cube dans ta\npoche ?\p…\pOui !\pTu es exactement la personne que je\ncherchais !\pS'il te plaît, viens avec moi.
+0x1F01074: C'est un Cube V3 dans ta\npoche ?\p…\pOui !\pTu es exactement la personne que je\ncherchais !\pS'il te plaît, viens avec moi.
 0x1F010E6: La Ligue Pokémon diffuse un\nspécial sur l'histoire de Borrius.\pVeux-tu le regarder ?\n(Comme la cinématique d'ouverture)
 0x1F0115C: Jax,\n\nJ'ai emmené ton grand-père dans les\n{COLOR}Éprofondeurs{COLOR}Á des {COLOR}ÉRuines du Néant{COLOR}Á.\n\nViens seul si tu veux\nle revoir.\n\n-A
 0x1F011E5: {PLAYER}, quelle splendide tenue\ntu portes !\pElle me rappelle ce que je mettais\nquand j'étais moi-même Champion !\pAh, les souvenirs…
@@ -16650,10 +16650,10 @@
 0x1F0BA23: {PLAYER} !\nOù étais-tu ?\pJ'étais vraiment inquiète pour toi !\p…\pWahou…\pÇa fait vraiment peur !\nJe suis soulagée que tu sois sauf !\pAvant toute chose, tu devrais\nprendre un long repos.
 0x1F0BAE5: Tu te sens mieux,\nchéri ?\pMaintenant, tu as l'énergie pour\nfaire la course du Prof. Log !
 0x1F0BB4B: Snif…\pJe savais que ce jour viendrait,\ncelui où tu quitterais la maison…\pLa télé l'avait dit.\pSi ton père pouvait te voir\nmaintenant…{PAUSE}î il serait si fier !\pEh bien, si tu fais des courses pour\nle Prof. Log, il te faudra\lça !
-0x1F0BC27: {COLOR}Á{PLAYER} a reçu le Journal des\nMissions du Super Cube !
-0x1F0BC67: Fonction {COLOR}ÉJournal des Missions{COLOR}Ç\npour ton Super Cube !\pElle garde trace de tout ce qu'on\nt'a demandé !\pPour l'utiliser, ouvre-la depuis\nle {COLOR}ÉMenu Start{COLOR}Ç.\pEt maintenant que tu l'as, pourquoi\nne pas noter la demande\ldu Prof. Log ?
-0x1F0BD67: Et avant d'oublier, tu as laissé\nune pièce clé de ton Super Cube\lsur le sol de ta chambre.\pJe sais qu'avant, c'était\ninutile, mais maintenant que tu as\lton propre Pokémon, tu en auras\lbesoin pour ces objets\lde boost en combat.
-0x1F0BE99: Au cas où tu aurais oublié, le\nSuper Cube fonctionne comme un sac.\pMais contrairement aux sacs du\nMagasin Pokémon qui tiennent 42\lobjets, le Super Cube, ou {COLOR}ÉCube{COLOR}Ç,\la un espace\linfini !\pIl numérise les données de l'objet,\nsi bien que c'est comme si\ltu ne portais\lrien du tout !\pEt en plus, tu peux même trier\nautomatiquement le Cube en\lappuyant sur {START_BUTTON} !\pPratique, non ?\pBien sûr, si tu trouves le Cube\nun peu chargé même après tri,\lutilise {L_BUTTON} et {R_BUTTON}\lpour le parcourir rapidement.\pOh, et tu peux même y ranger\nle cadeau d'adieu que j'ai préparé !
+0x1F0BC27: {COLOR}Á{PLAYER} a reçu le Journal des\nMissions du Cube V3 !
+0x1F0BC67: C'est la fonction {COLOR}ÉJournal des Missions{COLOR}Ç\npour ton Cube V3 !\pElle garde une trace de tout ce\nqu'on t'a demandé !\pPour t'en servir, ouvre-la\ndepuis le {COLOR}ÉMenu Start{COLOR}Ç.\pEt maintenant que tu en as une,\nautant y noter tout de suite\lla demande du Prof. Log, non ?
+0x1F0BD67: Et avant d'oublier, tu as laissé\nune pièce clé de ton Cube V3\lsur le sol de ta chambre.\pJe sais qu'avant, c'était\ninutile, mais maintenant que tu as\lton propre Pokémon, tu en auras\lbesoin pour ces objets\lde boost en combat.
+0x1F0BE99: Au cas où tu aurais oublié, le\nCube V3 fonctionne comme un sac.\pMais contrairement aux sacs du\nMagasin Pokémon qui tiennent 42\lobjets, le Cube V3, ou {COLOR}ÉCube{COLOR}Ç,\la un espace\linfini !\pIl numérise les données de l'objet,\nsi bien que c'est comme si\ltu ne portais\lrien du tout !\pEt en plus, tu peux même trier\nautomatiquement le Cube en\lappuyant sur {START_BUTTON} !\pPratique, non ?\pBien sûr, si tu trouves le Cube\nun peu chargé même après tri,\lutilise {L_BUTTON} et {R_BUTTON}\lpour le parcourir rapidement.\pOh, et tu peux même y ranger\nle cadeau d'adieu que j'ai préparé !
 0x1F0C11C: C'est une {COLOR}ÉBoîte à Costumes{COLOR}Ç !\pTu peux changer de tenue à\ntout moment.\pJ'y ai mis des couleurs, mais si tu\ntrouves d'autres tenues, pense à\lles y ranger\laussi.\pPrends soin de toi, chéri !\pApporte son colis au Prof. Log !
 0x1F0C237: {PLAYER} !\nTu devrais te reposer un peu.
 0x1F0C259: Joyeux anniversaire, {PLAYER} !\nTu devrais te reposer un peu.
@@ -20305,7 +20305,7 @@
 0x1F72569: <0x79> Ligue Pokémon
 0x1F7257A: Forêt de Bois-Rouge\p<0x7A> Cube Corp.
 0x1F72595: Forêt de Bois-Rouge\p<0x79> Bois-Rouge
-0x1F725B5: Cube Corp. Domicile\pdu Super Cube V3 !
+0x1F725B5: Cube Corp. Domicile\pdu Cube V3 !
 0x1F725DB: Bâtiment Principal Cube\pCorp. Là où la magie\nopère ! Visites ouvertes !
 0x1F72629: L’intérieur de Cube Corp. est\nindisponible dans\pcette version ! Reviens dans une\nfuture mise à jour d’Unbound !
 0x1F72691: <0x79> Hauteurs\nGelées <0x7A>\lBourg Cratère <0x7B> Ville Blizzard
@@ -21193,11 +21193,11 @@
 0x1F87B58: La Centrale des Cellules
 0x1F87B73: Collecte les mystérieuses\ncellules vertes qui\napparaissent à Borrius !
 0x1F87BB9: Merci d'être venu avec moi.\p…\pQuoi ?\pTu n'avais pas vraiment le\nchoix ?\pN'importe quoi.\pJe ne vois pas de quoi tu\nparles.\pPassons aux choses sérieuses.
-0x1F87C60: {COLOR}ÇRécemment, des fragments de\nZygarde apparaissent partout\là Borrius.\pMais on ne peut les voir qu'avec un\nSuper Cube équipé d'un module\lspécial.
+0x1F87C60: {COLOR}ÇRécemment, des fragments de\nZygarde apparaissent partout\là Borrius.\pMais on ne peut les voir qu'avec un\nCube V3 équipé d'un module\lspécial.
 0x1F87D1C: Zygarde est un Pokémon de Kalos\nqui apparaît quand l'écosystème est\len danger.\pPourquoi il apparaît ici maintenant\nreste un mystère.\pNous cherchons la réponse, mais il\nnous faut quelqu'un pour aller\lcollecter toutes les «cellules»\let «noyaux» de Zygarde.
 0x1F87E23: {COLOR}ÇPenses-tu pouvoir aider notre\nrecherche ?\pIl nous faut un Dresseur qui compte\nvoyager dans plusieurs endroits\lde Borrius.
 0x1F87EB8: {COLOR}ÇDommage, mais on ne peut pas te\nforcer, hélas.
-0x1F87EFB: Génial !\pMerci d'avoir accepté d'aider !\pPeux-tu me donner ton\nCube un instant…\p…\pVoilà !\pTon Super Cube a été mis à jour pour\nvoir et collecter les Cellules de\lZygarde qui couvrent Borrius Ouest\let Est.\pQuand tu en auras au moins {COLOR}É10{COLOR}Ë\npour cent, viens voir ma femme.\pBonne chance !
+0x1F87EFB: Génial !\pMerci d'avoir accepté d'aider !\pPeux-tu me donner ton\nCube un instant…\p…\pVoilà !\pTon Cube V3 a été mis à jour pour\nvoir et collecter les Cellules de\lZygarde qui couvrent Borrius Ouest\let Est.\pQuand tu en auras au moins {COLOR}É10{COLOR}Ë\npour cent, viens voir ma femme.\pBonne chance !
 0x1F88037: Zygfried
 0x1F88040: Un Dresseur !\pMerci d'être venu\nnous voir !\pJe m'appelle Zygfried.\pMa femme, Zygardia, et moi voulons\nparler de quelque chose d'important.
 0x1F880D3: Quand tu auras au moins {COLOR}É10{COLOR}Ë\npour cent des cellules,\lrends-toi voir ma femme.
@@ -23062,8 +23062,8 @@
 0x1FB0439: {COLOR}ÁElle est dans un état de rêve.\pC'est ce qui arrive quand vous\nregardez trop la télé.
 0x1FB048A: Merci de m'avoir aidée à aller\nmieux, Dresseur !\pJ'ai entendu dire que j'étais malade, mais mon Papa\nne veut pas me dire pourquoi.
 0x1FB04EC: Ici au Laboratoire de Recherche Onirique,\nnous étudions les rêves des Pokémon.
-0x1FB052C: Qu'avez-vous dit ?\pUne enfant à Bourg Polder est tombée\ndans le coma à cause de trop regarder\lla télévision ?\pAlors ça doit être pire que ce que je\ncraignais…\pJ'ai reçu des rapports de toute\nla région d'enfants\nincapables de détourner leur attention\lde cet appareil horrible.\pAfin d'aider cette enfant, je dois\navoir des données sur tous les enfants\nde Borrius enfermés dans cette\lfrénésie de “télévision”.\pDresseur !\pC'est à vous d'obtenir ces données\npour moi.\pD'après mes comptes, il y a {STR_VAR_1} enfants\nau total.\pMes scans indiquent qu'il y en a deux dans\ndes zones enneigées, un dans une ville sur la\lcôte, et un autre dans une ville sombre et\ltriste.\pVous en avez trouvé un, donc il en\nreste juste {COLOR}É{STR_VAR_2}{COLOR}Ë de plus.\pQuand vous en rencontrez un autre, scannez-le\navec votre Super Cube et\lenvoyez-moi les données.
-0x1FB07FE: Vous n'avez pas encore rassemblé de données\nsur {COLOR}É{STR_VAR_1}{COLOR}Ë des enfants enfermés dans une\l“frénésie de télévision”.\pMes scans indiquent qu'il y en a deux dans\ndes zones enneigées, un dans une ville sur la\lcôte, et un autre dans une ville sombre et\ltriste.\pQuand vous en rencontrez un, scannez-le\navec votre Super Cube et envoyez-moi\lles données.
+0x1FB052C: Qu'avez-vous dit ?\pUne enfant à Bourg Polder est tombée\ndans le coma à cause de trop regarder\lla télévision ?\pAlors ça doit être pire que ce que je\ncraignais…\pJ'ai reçu des rapports de toute\nla région d'enfants\nincapables de détourner leur attention\lde cet appareil horrible.\pAfin d'aider cette enfant, je dois\navoir des données sur tous les enfants\nde Borrius enfermés dans cette\lfrénésie de “télévision”.\pDresseur !\pC'est à vous d'obtenir ces données\npour moi.\pD'après mes comptes, il y a {STR_VAR_1} enfants\nau total.\pMes scans indiquent qu'il y en a deux dans\ndes zones enneigées, un dans une ville sur la\lcôte, et un autre dans une ville sombre et\ltriste.\pVous en avez trouvé un, donc il en\nreste juste {COLOR}É{STR_VAR_2}{COLOR}Ë de plus.\pQuand vous en rencontrez un autre, scannez-le\navec votre Cube V3 et\lenvoyez-moi les données.
+0x1FB07FE: Vous n'avez pas encore rassemblé de données\nsur {COLOR}É{STR_VAR_1}{COLOR}Ë des enfants enfermés dans une\l“frénésie de télévision”.\pMes scans indiquent qu'il y en a deux dans\ndes zones enneigées, un dans une ville sur la\lcôte, et un autre dans une ville sombre et\ltriste.\pQuand vous en rencontrez un, scannez-le\navec votre Cube V3 et envoyez-moi\lles données.
 0x1FB091C: Il semble que j'ai toutes les données dont j'ai\nbesoin pour guérir cette “frénésie de\ltélévision”.\pJe reviens momentanément.
 0x1FB0980: Merci d'avoir attendu.\pJ'ai visité chaque maison et guéri\nles enfants de leurs maladies.\pCependant, pendant le processus de\nguérison, un étrange Pokémon\la émergé de chacun de leurs corps.\pEn conséquence, ils ne comprennent\nplus le concept de\lregarder la télévision.\pJe crois que ces enfants pourront désormais\nmener des vies productives.
 0x1FB0AC4: Tous les enfants ont été guéris\nde la “frénésie de télévision”.\pVous devriez retourner à Bourg Polder pour\nréclamer votre récompense.
@@ -23424,7 +23424,7 @@
 0x1F053D0: <0xFC><0x01><0x02><0xFD><0x01> reçoit un Oeuf de\nla gentille vieille dame !
 0x1F0A83E: <0xFC><0x01><0x02>Galeking te repousse avec son\npuissant Hurlement !
 0x1F0B48A: <0xFC><0x01><0x02>La porte est scellée.
-0x1F0BE5E: <0xFC><0x01><0x02><0xFD><0x01> reçoit de Maman le module\nde combat du Super Cube !
+0x1F0BE5E: <0xFC><0x01><0x02><0xFD><0x01> reçoit de Maman le module\nde combat du Cube V3 !
 0x1F0D98F: <0xFC><0x01><0x02>Cresselia s'est envolée<0xB0>\pQuelque chose scintille là où\nse trouvait Cresselia<0xB0>
 0x1F0D9E7: <0xFC><0x01><0x02>Quelque chose scintille là où\nse trouvait Cresselia<0xB0>
 0x1F0E1D0: <0xFC><0x01><0x02>Oups !\nPas de Boîte Jetons !
