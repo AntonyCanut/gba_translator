@@ -61,7 +61,7 @@ DEFAULT_COMBINED = REPO_ROOT / "languages/fr/combined_fr.txt"
 TARGETS: dict[int, str] = {
     0x071FC80: "Cimistral",        # Blizzard City  (zone-name table)
     0x0B51EAC: "Port d'Antésia",   # Antisis Port   (zone-name table)
-    0x078D811: "Cratéria",         # Crater Town    (fly-banner cluster)
+    0x078D811: "Cratéris",         # Crater Town    (fly-banner cluster)
     0x078D851: "Cimistral",        # Blizzard City  (fly-banner cluster)
 }
 

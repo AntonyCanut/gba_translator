@@ -59,8 +59,8 @@ DEFAULT_COMBINED = REPO_ROOT / "languages/fr/combined_fr.txt"
 TARGETS: dict[int, str] = {
     0x1F72691: "Cimes Gelées",
     0x1F726C0: "Cimes Gelées, Cimistral",
-    0x1F726FC: "Cratéria",
-    0x1F72735: "Cratéria, Bourg-Tel",
+    0x1F726FC: "Cratéris",
+    0x1F72735: "Cratéris, Automnia",
     0x1F7276E: "Dresco",
     0x1F727A7: "Dresco",
     0x1F727D0: "Antésia, Naville",

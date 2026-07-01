@@ -62,18 +62,18 @@ class CriticalLabel:
 # absent from the trilingual CSV, so invisible to other guards.
 CRITICAL_LABELS: tuple[CriticalLabel, ...] = (
     CriticalLabel(0xB500A0, "Gurenbourg", "Gurenbourg", ("Bourg Gurun", "ourg Gurun", "Gurun Town")),
-    CriticalLabel(0x721304, "Gouffre Glacial", "Gouffre Glacial", ("Trou Glacé", "Icy Hole")),
+    CriticalLabel(0x721304, "Gouffre Gelé", "Gouffre Gelé", ("Gouffre Glacial", "Trou Glacé", "Icy Hole")),
     CriticalLabel(0x7214E8, "Île Scintillante", "Île Scintillante", ("Glimmer Island",)),
-    CriticalLabel(0x721968, "Épidimi", "Épidimi", ("Ville d'Epidimy", "Epidimy Town")),
+    CriticalLabel(0x721968, "Épidia", "Épidia", ("Épidimi", "Ville d'Epidimy", "Epidimy Town")),
     CriticalLabel(0xB50214, "Égouts d'Antésia", "Égouts d'Antésia", ("Égouts d'Antisis", "Antisis Sewers")),
-    CriticalLabel(0xB503CC, "Volcan Cendreux", "Volcan Cendreux", ("Cinder Volcano",)),
+    CriticalLabel(0xB503CC, "Volcan Cendré", "Volcan Cendré", ("Volcan Cendreux", "Cinder Volcano")),
     CriticalLabel(0xB514E4, "Daherapolis", "Daherapolis", ("Dehara", "Dehara City", "Ville de Dehara")),
     CriticalLabel(0xB52274, "Pension Pokémon", "Pension Pokémon", ("Pokemon Day Care", "Pokémon Day Care")),
-    CriticalLabel(0xB522A4, "Polder sur Rive", "Polder sur Rive", ("Bourg Polder", "Polder Town")),
-    CriticalLabel(0xB531D8, "Île Nouvelle Lune", "Île Nouvelle Lune", ("Île du Croissant", "Newmoon Island")),
-    CriticalLabel(0xB535C8, "Île Pleine Lune", "Île Pleine Lune", ("Île de la Lune", "Fullmoon Island")),
+    CriticalLabel(0xB522A4, "Polderive", "Polderive", ("Polder sur Rive", "Bourg Polder", "Polder Town")),
+    CriticalLabel(0xB531D8, "Île Nouvellune", "Île Nouvellune", ("Île Nouvelle Lune", "Île du Croissant", "Newmoon Island")),
+    CriticalLabel(0xB535C8, "Île Pleinelune", "Île Pleinelune", ("Île Pleine Lune", "Île de la Lune", "Fullmoon Island")),
     CriticalLabel(0xB537AC, "Rougebois", "Rougebois", ("Bois-Rouge", "Redwood Village", "Redwood village")),
-    CriticalLabel(0x720E74, "Rive-d'Automne", "Rive-d'Automne", ("Fallshore", "Ville de Fallshore", "Fallshore City")),
+    CriticalLabel(0x720E74, "Rivapolis", "Rivapolis", ("Rive-d'Automne", "Fallshore", "Ville de Fallshore", "Fallshore City")),
 )
 
 

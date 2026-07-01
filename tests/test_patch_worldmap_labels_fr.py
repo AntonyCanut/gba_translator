@@ -1,6 +1,6 @@
 """Tests for patch_worldmap_labels_fr.py.
 
-The World-Map labels at 0xB500A0 ("Gurenbourg") and 0xB535C8 ("Île Pleine Lune")
+The World-Map labels at 0xB500A0 ("Gurenbourg") and 0xB535C8 ("Île Pleinelune")
 must be written in place from combined_fr.txt, fitting within the English slot
 plus its trailing padding run, without clobbering the next pointer-table entry.
 """
@@ -39,7 +39,7 @@ def _build_source(labels: dict[int, str], size: int = 0xC00000) -> bytes:
 
 
 def _combined_lines() -> dict[int, str]:
-    return {0xB500A0: "Gurenbourg", 0xB535C8: "Île Pleine Lune"}
+    return {0xB500A0: "Gurenbourg", 0xB535C8: "Île Pleinelune"}
 
 
 class TestPatchWorldmapLabelsFR(unittest.TestCase):
@@ -59,7 +59,7 @@ class TestPatchWorldmapLabelsFR(unittest.TestCase):
         stats = apply(self.rom, self.combined, self.source)
         self.assertEqual(stats["written"], 2)
         self.assertEqual(self._decode(self.rom, 0xB500A0), "Gurenbourg")
-        self.assertEqual(self._decode(self.rom, 0xB535C8), "Île Pleine Lune")
+        self.assertEqual(self._decode(self.rom, 0xB535C8), "Île Pleinelune")
         self.assertEqual(verify(self.rom), [])
 
     def test_does_not_clobber_next_pointer(self) -> None:

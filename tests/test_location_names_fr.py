@@ -55,21 +55,21 @@ def _follow_ptr(rom: bytes, ptr_offset: int, limit: int = 400) -> str:
 # the regression introduced by c7c1ede.
 WORLD_MAP_LABELS = [
     (0xB500A0, "Gurenbourg",       "ourg Gurun (was off-by-1)"),
-    (0x721304, "Gouffre Glacial",        "Icy Hole"),
+    (0x721304, "Gouffre Gelé",        "Icy Hole"),
     (0x7214E8, "Île Scintillante",  "Glimmer Isle"),
-    (0x721968, "Épidimi",   "Epidimy Town"),
+    (0x721968, "Épidia",   "Epidimy Town"),
     (0xB50214, "Égouts d'Antésia",  "Antisis Sewers"),
-    (0xB5026C, "Pic Grondant",   "Thundercap Mt."),
-    (0xB503CC, "Volcan Cendreux",   "Cinder Volcano"),
+    (0xB5026C, "Mont Foudroyant",   "Thundercap Mt."),
+    (0xB503CC, "Volcan Cendré",   "Cinder Volcano"),
     (0xB514E4, "Daherapolis",            "Dehara City"),
     (0xB52274, "Pension Pokémon",   "Pokemon Day Care"),
-    (0xB522A4, "Polder sur Rive",      "Polder Town"),
-    (0xB531D8, "Île Nouvelle Lune",  "Newmoon Island"),
-    (0xB535C8, "Île Pleine Lune",    "Fullmoon Island"),
+    (0xB522A4, "Polderive",      "Polder Town"),
+    (0xB531D8, "Île Nouvellune",  "Newmoon Island"),
+    (0xB535C8, "Île Pleinelune",    "Fullmoon Island"),
     (0xB537AC, "Rougebois",         "Redwood Village"),
-    (0x720E74, "Rive-d'Automne",         "Fallshore City"),
+    (0x720E74, "Rivapolis",         "Fallshore City"),
     # Nouveaux noms traduits (follow-up 2026-06-17)
-    (0x3EEF2D, "Grotte Falaise",        "Rift Cave"),
+    (0x3EEF2D, "Grotte Faille",        "Rift Cave"),
     (0xB500F0, "Naville",          "Seaport City"),
     (0x3EEFEA, "Grotte de l'Être",     "Cave of Being"),
     # Renommage Dresco Town → Dresco (follow-up 2026-06-18)
@@ -103,8 +103,8 @@ class TestLocationNamesFR(unittest.TestCase):
         self._assert_label(0xB500A0, "Gurenbourg", "ourg Gurun")
 
     def test_trou_glace(self):
-        """0x721304: 'Gouffre Glacial' (was 'Icy Hole')."""
-        self._assert_label(0x721304, "Gouffre Glacial", "Icy Hole")
+        """0x721304: 'Gouffre Gelé' (was 'Icy Hole')."""
+        self._assert_label(0x721304, "Gouffre Gelé", "Icy Hole")
 
     def test_ile_scintillante(self):
         """0x7214E8: 'Île Scintillante' (was 'Glimmer Isle')."""
@@ -112,7 +112,7 @@ class TestLocationNamesFR(unittest.TestCase):
 
     def test_ville_epidimy(self):
         """0x721968: 'Épidimi' (was 'Epidimy Town')."""
-        self._assert_label(0x721968, "Épidimi", "Epidimy Town")
+        self._assert_label(0x721968, "Épidia", "Epidimy Town")
 
     def test_egouts_antisis(self):
         """0xB50214: 'Égouts d'Antésia' (was 'Antisis Sewers')."""
@@ -120,11 +120,11 @@ class TestLocationNamesFR(unittest.TestCase):
 
     def test_mont_foudroyant_worldmap(self):
         """0xB5026C: 'Pic Grondant' (was 'Thundercap Mt.', formerly 'Mont Foudre')."""
-        self._assert_label(0xB5026C, "Pic Grondant", "Thundercap Mt.")
+        self._assert_label(0xB5026C, "Mont Foudroyant", "Thundercap Mt.")
 
     def test_volcan_cendreux(self):
         """0xB503CC: 'Volcan Cendreux' (was 'Cinder Volcano')."""
-        self._assert_label(0xB503CC, "Volcan Cendreux", "Cinder Volcano")
+        self._assert_label(0xB503CC, "Volcan Cendré", "Cinder Volcano")
 
     def test_dehara(self):
         """0xB514E4: 'Dehara' (was 'Dehara City')."""
@@ -136,15 +136,15 @@ class TestLocationNamesFR(unittest.TestCase):
 
     def test_bourg_polder(self):
         """0xB522A4: 'Polder sur Rive' (was 'Polder Town')."""
-        self._assert_label(0xB522A4, "Polder sur Rive", "Polder Town")
+        self._assert_label(0xB522A4, "Polderive", "Polder Town")
 
     def test_ile_du_croissant(self):
         """0xB531D8: 'Île Nouvelle Lune' (was 'Newmoon Island')."""
-        self._assert_label(0xB531D8, "Île Nouvelle Lune", "Newmoon Island")
+        self._assert_label(0xB531D8, "Île Nouvellune", "Newmoon Island")
 
     def test_ile_de_la_lune(self):
         """0xB535C8: 'Île Pleine Lune' (was 'Fullmoon Island')."""
-        self._assert_label(0xB535C8, "Île Pleine Lune", "Fullmoon Island")
+        self._assert_label(0xB535C8, "Île Pleinelune", "Fullmoon Island")
 
     def test_bois_rouge(self):
         """0xB537AC: 'Rougebois' (was 'Redwood Village', formerly 'Village Redwood')."""
@@ -152,11 +152,11 @@ class TestLocationNamesFR(unittest.TestCase):
 
     def test_fallshore(self):
         """0x720E74: 'Fallshore' (was 'Ville de Fallshore' / 'Fallshore City')."""
-        self._assert_label(0x720E74, "Rive-d'Automne", "Fallshore City")
+        self._assert_label(0x720E74, "Rivapolis", "Fallshore City")
 
     def test_grotte_faille_worldmap(self):
         """0x3EEF2D: 'Grotte Falaise' (was 'Rift Cave')."""
-        self._assert_label(0x3EEF2D, "Grotte Falaise", "Rift Cave")
+        self._assert_label(0x3EEF2D, "Grotte Faille", "Rift Cave")
 
     def test_port_en_mer_worldmap(self):
         """0xB500F0: 'Naville' (was 'Seaport City', formerly 'Ville Portuaire')."""
@@ -349,7 +349,7 @@ class TestLocationNamesFR(unittest.TestCase):
     def test_champs_magnolia_zone_name(self):
         """ptr@0x3F1E24 must resolve to 'Champs de Magnolia' (was 'Magnolia Fields')."""
         text = _follow_ptr(self.rom, 0x3F1E24)
-        self.assertEqual(text.strip(), "Champs de Magnolia",
+        self.assertEqual(text.strip(), "Champs Magnolia",
                          f"Zone name via ptr@0x3F1E24: got {repr(text[:40])}")
 
     def test_zone_safari_zone_name(self):
@@ -361,13 +361,13 @@ class TestLocationNamesFR(unittest.TestCase):
     def test_foret_lugubre_zone_name(self):
         """ptr@0x3F1D44 must resolve to 'Bois Lugubres' (was 'Bois Lugubress' typo)."""
         text = _follow_ptr(self.rom, 0x3F1D44)
-        self.assertEqual(text.strip(), "Bois Lugubres",
+        self.assertEqual(text.strip(), "Boissombre",
                          f"Zone name via ptr@0x3F1D44: got {repr(text[:40])}")
 
     def test_bourg_cratere_fly_banner(self):
         """ptr@0x78D809 must resolve to 'Cratéria' (was 'Crater Town' fly banner)."""
         text = _follow_ptr(self.rom, 0x78D809)
-        self.assertEqual(text.strip(), "Cratéria",
+        self.assertEqual(text.strip(), "Cratéris",
                          f"Fly banner via ptr@0x78D809: got {repr(text[:40])}")
 
     def test_ville_blizzard_fly_banner(self):
