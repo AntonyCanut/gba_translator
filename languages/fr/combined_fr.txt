@@ -6747,7 +6747,7 @@
 0x7CE2E0: Je sais qu'il y a des Pokémon\ninsectes par ici !\pUn jour, j'ai vu un énorme {COLOR}Éswarm{COLOR}Ë\nd'entre eux voler partout !
 0x7CE3AC: Wah !\pMaintenant, ils ne sont plus aussi\nproches !
 0x7CE3D9: 9Merci encore de m'avoir aidé avant\n!\pMa famille et moi avons eu un\nexcellent festin de deux jours grâce\pIl est maintenant temps de préparer\nle festin de l'année prochaine !
-0x7CE471: Le Volcan de Cendres est dangereux.\pSi vous n'avez pas votre Pokémon\npour vous protéger, vous pourriez
+0x7CE471: Le Volcan Cendré est dangereux.\pSi vous n'avez pas votre Pokémon\npour vous protéger, vous pourriez
 0x7CE4CC: Peu importe…\pVous en avez assez.
 0x7CE4E9: Un jour, mes bébés utiliseront un\nretour puissant et vous frapperont\lpour ce que vous leur avez fait !
 0x7CE573: 9Eh bien, eh bien… Si ce n'est pas\n{PLAYER} !\pLe patron m'a dit de ne pas vous\nlaisser entrer dans la montagne\lne pouvez pas interférer avec nos\nplans.\pMême si je vous laissais entrer,\nvous seriez toast sans le pouvoir de\lEvolution.\pAlors tu ne vois pas ?\pTu devrais rester ici pour ton\npropre bien.
@@ -15000,7 +15000,7 @@
 0x1EE106D: {COLOR}ËÇa…{PAUSE} craint, {STR_VAR_3}.\pD'accord, tu m'as eu.\pTiens.\nJ'en ai déterré quelques-uns en rab.
 0x1EE10CA: Hein ? À quelle fréquence je vais\nvenir ici ?\pJ'en sais rien…\pJe me suis perdu la dernière fois…\nmais ce club privé… c'est assez\lloin…\pNon, vraiment, {STR_VAR_3}. Loin…{PAUSE} genre,\nloin des flics.
 0x1EE1185: madame
-0x1EE118A: Ah, {PLAYER}.\nJ'espère que la vie te sourit.\pNon, je ne suis pas ici en mission.\pJ'ai mes raisons…{PAUSE} personnelles.\pTu es devenu le nouveau\nChampion de Borrius,\ln'est-ce pas ?\pTu vois, mes responsabilités de\nChampion d'Arène et d'agent\lm'obligent à…{PAUSE} cacher\lma vraie puissance.\pMais maintenant, je vois peu de\nraisons de me priver, la paix\létant revenue.\pSi tu veux bien, veux-tu\nte mesurer\là moi ?\pJe sais que tu peux encore\nm'en vouloir pour mes\lactions au Volcan Cinder.\pSinon, vois-y une\noccasion de…{PAUSE} relâcher\lces frustrations accumulées.
+0x1EE118A: Ah, {PLAYER}.\nJ'espère que la vie te sourit.\pNon, je ne suis pas ici en mission.\pJ'ai mes raisons…{PAUSE} personnelles.\pTu es devenu le nouveau\nChampion de Borrius,\ln'est-ce pas ?\pTu vois, mes responsabilités de\nChampion d'Arène et d'agent\lm'obligent à…{PAUSE} cacher\lma vraie puissance.\pMais maintenant, je vois peu de\nraisons de me priver, la paix\létant revenue.\pSi tu veux bien, veux-tu\nte mesurer\là moi ?\pJe sais que tu peux encore\nm'en vouloir pour mes\lactions au Volcan Cendré.\pSinon, vois-y une\noccasion de…{PAUSE} relâcher\lces frustrations accumulées.
 0x1EE13FE: Quel dommage…\pSi tu changes d'avis, je suis ici\ntoute la journée.
 0x1EE144F: Excellent.\pAlors, je t'attendrai à la\nzone de combat.
 0x1EE1486: {COLOR}ËComme l'ombre suit la lumière,\nta défaite est proche !
@@ -20181,14 +20181,14 @@
 0x1F70B0C: Dresco\pL’archipel de la région de\nBorrius.
 0x1F70B3F: Arène Pokémon de Dresco\nChampion : Mirskle Le Maître\lPaisible des Fleurs
 0x1F70B84: Maison des\pDresseurs Combattez à volonté !
-0x1F70BB2: C’est une statue du Pokémon Feu\nLégendaire Sulfura. Il est\pécrit ici que Sulfura servait\nautrefois à renforcer un sceau sur\lune grande obscurité, mais qu’il\lréside désormais au Volcan Cendre.
+0x1F70BB2: C’est une statue du Pokémon Feu\nLégendaire Sulfura. Il est\pécrit ici que Sulfura servait\nautrefois à renforcer un sceau sur\lune grande obscurité, mais qu’il\lréside désormais au Volcan Cendré.
 0x1F70C64: Avant {B_BUTTON}, check les flics !\n
 0x1F70CAC: Route 3 «\nRoute\pdu Paradis» <0x79> Paradis des\nFleurs <0x7A> Dresco
 0x1F70CE4: Paradis des Fleurs\pUn havre pour les fleurs.
 0x1F70D0E: Route 4 «\nZone\pdu Volcan» <0x7B> Boissombre,\nVolcan Cendre, Route 5 <0x7C>\lDresco <0x7A> Route\l13
 0x1F70D64: Boissombre <0x7B> Volcan Cendre\n<0x7C> Dresco
 0x1F70D8E: <0x7C> Boissombre
-0x1F70D9B: Volcan de Cinder\nPassage
+0x1F70D9B: Volcan Cendré\nPassage
 0x1F70DB2: Route 5\n«\pVallée Humide» <0x79> Route 4,\nV. Cendre <0x7B> Cratère
 0x1F70E01: Route 5\n«\pVallée Humide» <0x79> Pension\nPokémon <0x7A> Cratéris\l<0x7C> Route 4
 0x1F70E41: <0x79> Pension Pokémon\n<0x7A> Cratéris\l<0x7C> Route 4
@@ -20245,8 +20245,8 @@
 0x1F718B5: Maison Combat Duo\pProfitez des combats à deux !
 0x1F718E3: Quelque chose est écrit sur le mur.\p«Salle de dev Unbound»\pPas de budget pour un panneau ?
 0x1F71945: Zone d’Entraînement Guerrier Ombre
-0x1F71962: Route 13\n«Chenal de Borrius»\p<0x79> Route 4, Volcan Cendre,\nBoissombre\l<0x7A> Route 14\l<0x7C> Daherapolis
-0x1F719C0: Route 13\n«Chenal de Borrius»\p<0x79> Route 4, Volcan Cendre,\nBoissombre\l<0x7A> Route 14
+0x1F71962: Route 13\n«Chenal de Borrius»\p<0x79> Route 4, Volcan Cendré,\nBoissombre\l<0x7A> Route 14\l<0x7C> Daherapolis
+0x1F719C0: Route 13\n«Chenal de Borrius»\p<0x79> Route 4, Volcan Cendré,\nBoissombre\l<0x7A> Route 14
 0x1F71A10: Route 14\n«Chenal de Borrius»\p<0x79> Route 13\n<0x7B> Route 6, Ruines du Néant\l<0x7C> Route 12
 0x1F71A5E: Route 14\n«Chenal de Borrius»\p<0x7B> Route 6\n<0x7C> Ruines du Néant, Route 12
 0x1F71AA1: Grand Désert\p<0x7B> Daherapolis\n<0x7C> Gurenbourg
@@ -22850,7 +22850,7 @@
 0x1FAA6B6: Ce Pokémon a été trouvé pendant la\njournée sur la plage après avoir\namené Lunala.
 0x1FAA700: Ce Pokémon a été trouvé la nuit sur\nla plage après\navoir amené Solgaleo.
 0x1FAA746: Ce Pokémon a été trouvé la nuit sous\nles Ruines du Néant.
-0x1FAA781: Ce Pokémon a été trouvé pendant la\njournée au-dessus du Volcan Cinder\naprès avoir remonté la cascade.
+0x1FAA781: Ce Pokémon a été trouvé pendant la\njournée au-dessus du Volcan Cendré\naprès avoir remonté la cascade.
 0x1FAA7DA: Ce Pokémon a été trouvé pendant la\njournée dans le canyon central.
 0x1FAA816: Ce Pokémon a été trouvé la nuit\naprès avoir utilisé Escalade du côté\nouest du 2ème étage.
 0x1FAA865: Ce Pokémon a été trouvé la nuit au\ncentre des météorites près de\nl'entrée de la Grotte Vallée.
@@ -23349,7 +23349,7 @@
 0x1F513EE: Oh, te revoilà !\pJ'ai fait monter mes Dragons de\nniveau depuis notre combat !\pEt grâce à mon entraînement\nintensif, ma lecture assidue de\lDragon Mensuel et une fortune\len objets de collection Dragon<0xB0>\pJe suis la plus grande experte\nen Dragons que tu verras jamais !\pEn garde ! Mes Dragons et moi\nbrûlons d'en découdre !\pGRAWR !
 0x1F5152F: Nooon<0xB0> cet abonnement était\nsans résiliation possible<0xB0> et\lje n'ai pas pu te battre<0xB0>\pJe vais m'acheter un survêtement\nBruyverne pour me consoler.\pEt non, tu n'en auras pas.\pLe titre de double Maître de\nBorrius te suffit bien,\lpas vrai ?\pNe perds pas contre les autres<0xB0>\navant que je te batte moi-même !
 0x1F51658: Ouahou !\nMême moi, j'ai perdu !\pEt te voilà prêt à défendre\nton titre de Maître !\pMoi, je file à la\nDragon-con.\pTu veux que je te rapporte\nquelque chose ?\pNon ? Tant pis pour toi.\nPlus de goodies pour moi !
-0x1F5175B: Hé, <0xFD><0x01> ! Je t'ai enfin\nrattrapé !\pC'est marrant, j'ai dû mettre mes\nBadges de côté, tout ça à cause\lde mon père<0xB0>\pMais maintenant qu'on s'est tout\ndit, j'ai vaincu le Conseil 4\lrien que pour te voir.\pAlors revenons à ce qui compte\nvraiment.\pMoi<0xB0><0xFC><0x08><0x20> devenir le nouveau Maître !\pJ'ai réuni la crème de la crème\ndans cette équipe<0xB0>\pAvec un Pokémon super rare trouvé\nau Volcan Cinder !\pPrêt, <0xFD><0x01> ?\nParce que tu vas y passer !
+0x1F5175B: Hé, <0xFD><0x01> ! Je t'ai enfin\nrattrapé !\pC'est marrant, j'ai dû mettre mes\nBadges de côté, tout ça à cause\lde mon père<0xB0>\pMais maintenant qu'on s'est tout\ndit, j'ai vaincu le Conseil 4\lrien que pour te voir.\pAlors revenons à ce qui compte\nvraiment.\pMoi<0xB0><0xFC><0x08><0x20> devenir le nouveau Maître !\pJ'ai réuni la crème de la crème\ndans cette équipe<0xB0>\pAvec un Pokémon super rare trouvé\nau Volcan Cendré !\pPrêt, <0xFD><0x01> ?\nParce que tu vas y passer !
 0x1F51924: <0xFD><0x01> !\pPas question de te laisser passer\nsans un nouveau combat contre moi !\pComment regarder Papa en face si\nje ne peux même pas battre un\lmalheureux Dresseur ?\pAllez ! Cette fois, ta place au\nsommet est pour moi !
 0x1F51A99: Attends un instant, <0xFD><0x01> !\pEs-tu surpris de me trouver\nici ?\pEh bien, j'ai cru entendre un cri\nfamilier m'appeler<0xB0>\pC'est à ce moment que j'ai\nrencontré Électhor.\pNon, pas celui du Mont Foudroyant<0xB0><0xFC><0x08><0x18>\ncelui qu'Aklove a utilisé pour\lla libération aux Ruines du Néant.\pJ'ignore encore pourquoi il est\nvenu, pourquoi il m'a choisi<0xB0>\pMais c'était un signe, je devais\nte retrouver et t'affronter\lune fois de plus !\pPour être honnête, te vaincre est\nle but de <0xFD><0x06>, avant tout<0xB0>\pMais je suis son père, je ne peux\npas laisser mes talents rouiller,\ln'est-ce pas ?\pAlors, aussi minces que soient mes\nchances, je veux tenter de\lte vaincre !
 0x1F51D12: Un instant, <0xFD><0x01>.\pJ'ai bien peur que <0xFD><0x06> et moi\nayons une rivalité familiale<0xB0>\pQui de nous deux te prendra ton\ntitre de Maître en premier, moi,\lou <0xFD><0x06> ?\pEt j'ai ma fierté de Dresseur.\pJe ne peux pas me permettre de\nperdre face à <0xFD><0x06> si vite.\pAlors je vais tout mettre en jeu\npour te faire mordre la poussière !
