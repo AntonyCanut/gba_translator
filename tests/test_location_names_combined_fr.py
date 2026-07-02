@@ -86,6 +86,19 @@ LOCATION_LABELS = [
     (0xB500F0, "Naville",      "Seaport City",           ["Seaport City", "Ville Portuaire"]),
     (0x3EEFEA, "Grotte de l'Être", "Cave of Being",          ["Cave of Being"]),
     (0x71CA60, "Dresco",           "Dresco Town",            ["Dresco Town"]),
+    # Icicle Cave zone-name pop-up. Was inconsistently rendered as the
+    # untranslated "Grotte Icicle" and the wrong "Grotte Givre" (Givre belongs
+    # to Frost Mountain = "Mont Givre"); canon is "Grotte Stalactite".
+    (0x3EEF4B, "Grotte Stalactite", "Icicle Cave",           ["Icicle", "Givre"]),
+]
+
+# Icicle Cave is referenced by these flowing-text / signpost offsets. They are
+# not bare labels (so no exact-match), but their live value must use the canon
+# "Grotte Stalactite" and never the untranslated "Grotte Icicle".
+ICICLE_CAVE_TEXT_OFFSETS = [
+    0x1F561CE,  # "Va à la Grotte Stalactite, apporte le Pokédex à ..."
+    0x1F57BCA,  # Raid-den location note (hidden section)
+    0x1F70ABD,  # "Grotte Stalactite\nPassage" signpost
 ]
 
 # Reverted forms from the c7c1ede regression that B-52 recovered; none of them
@@ -156,6 +169,19 @@ class TestLocationNamesCombinedFR:
         assert actual.strip() != reverted, (
             f"Regression: label 0x{offset:06X} reverted to {reverted!r} "
             "(the c7c1ede overwrite resurfaced)."
+        )
+
+    @pytest.mark.parametrize("offset", ICICLE_CAVE_TEXT_OFFSETS,
+                             ids=[f"{o:06X}" for o in ICICLE_CAVE_TEXT_OFFSETS])
+    def test_icicle_cave_text_uses_canon(self, combined, offset):
+        """Icicle Cave references must use "Grotte Stalactite", never "Grotte Icicle"."""
+        actual = combined.get(offset, "")
+        assert offset in combined, f"Offset 0x{offset:06X} missing from combined_fr.txt."
+        assert "Grotte Stalactite" in actual, (
+            f"0x{offset:06X}: expected the canon 'Grotte Stalactite', got {actual!r}."
+        )
+        assert "Grotte Icicle" not in actual, (
+            f"0x{offset:06X}: untranslated 'Grotte Icicle' resurfaced: {actual!r}."
         )
 
     def test_last_wins_semantics_for_fallshore(self, combined):
