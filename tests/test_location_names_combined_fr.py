@@ -90,6 +90,10 @@ LOCATION_LABELS = [
     # untranslated "Grotte Icicle" and the wrong "Grotte Givre" (Givre belongs
     # to Frost Mountain = "Mont Givre"); canon is "Grotte Stalactite".
     (0x3EEF4B, "Grotte Stalactite", "Icicle Cave",           ["Icicle", "Givre"]),
+    # Battle Frontier World-Map label. Was absent from combined_fr.txt entirely,
+    # so it rendered untranslated ("Battle Frontier") on the map; canon (used
+    # ~30x in-game dialogue) is "Zone de Combat".
+    (0xB535E4, "Zone de Combat",    "Battle Frontier",        ["Battle Frontier", "Frontier"]),
 ]
 
 # Icicle Cave is referenced by these flowing-text / signpost offsets. They are
