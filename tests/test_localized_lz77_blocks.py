@@ -14,9 +14,11 @@ FR_ROM = Path('output/roms/GenedRom-fr.gba')
 # now further patched by patch_status_badges_fr.py to "KO" — a FR-specific
 # override that differs from both EN and ES.  It is verified in
 # TestStatusBadgeKo below.
+# NOTE: 0xE9B4B8 (summary-screen HP-bar label, ES « PS ») is likewise further
+# patched by patch_hp_labels_fr.py to the French « PV » — verified in
+# tests/test_patch_hp_labels_fr.py.
 LOCALIZED_BLOCKS = [
     0xA9B5FC,
-    0xE9B4B8,
     0xE9B598,
     0xE9BA30,
 ]
