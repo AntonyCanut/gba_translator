@@ -34,8 +34,9 @@ class TestRealCombinedFr:
         assert report.ok, "regressed map labels:\n" + "\n".join(failures)
 
     def test_protected_label_count(self):
-        # 13 world-map labels (B-52) + 0x1F0F842 couleur ceinture/bottes (9ad0fee).
-        assert len(cti.CRITICAL_LABELS) == 14
+        # 13 world-map labels (B-52) + 0x1F0F842 couleur ceinture/bottes (9ad0fee)
+        # + 0x83008C/0x96CC1C réaction Méga-Cuff (dc84690f).
+        assert len(cti.CRITICAL_LABELS) == 16
 
     def test_main_returns_zero_on_real_file(self):
         assert cti.main(["--file", str(REAL_COMBINED)]) == 0
