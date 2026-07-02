@@ -28,6 +28,7 @@ REPAIR_LOCALIZED_LZ77_SCRIPT := scripts/repair_localized_lz77_blocks.py
 REPOINT_STALE_SCRIPT := scripts/repoint_stale_text_pointers.py
 PATCH_RITUAL_SCRIPT := scripts/patch_legendary_ritual_fr.py
 PATCH_FIXED_NAMES_SCRIPT := scripts/patch_fixed_table_names.py
+PATCH_ABILITY_NAMES_SCRIPT := scripts/patch_ability_names_fr.py
 PATCH_ITEM_NAMES_SCRIPT := scripts/patch_item_names_fr.py
 PATCH_TIME_FORMAT_SCRIPT := scripts/patch_time_format_fr.py
 PATCH_BATTLE_PREFIX_SCRIPT := scripts/patch_battle_prefix_fr.py
@@ -159,6 +160,7 @@ build-fr: $(ENGLISH_EXTRACT) $(SPANISH_EXTRACT) $(BUILD_SCRIPT)
 	@$(PYTHON) $(PATCH_GENDERED_BUFFERS_SCRIPT) --rom $(FR_BUILD)
 	@$(PYTHON) $(PATCH_FONT_FR_SCRIPT) --rom $(FR_BUILD)
 	@$(PYTHON) $(PATCH_FIXED_NAMES_SCRIPT) --rom $(FR_BUILD)
+	@$(PYTHON) $(PATCH_ABILITY_NAMES_SCRIPT) --rom $(FR_BUILD)
 	@$(PYTHON) $(PATCH_ITEM_NAMES_SCRIPT) --rom $(FR_BUILD)
 	@$(PYTHON) $(PATCH_TIME_FORMAT_SCRIPT) --rom $(FR_BUILD)
 	@$(PYTHON) $(PATCH_BATTLE_PREFIX_SCRIPT) --rom $(FR_BUILD)
