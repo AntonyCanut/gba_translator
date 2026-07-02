@@ -38,6 +38,7 @@ GIVE_CS_SLOT_BYTES = GIVE_CS_NEXT_STRING_OFF - GIVE_CS_STRING_OFF  # 484
 OBTAIN_MSG_OFF = 0x1A5DF1               # "{PLAYER} a obtenu le {ITEM} !"
 ITEM_TABLE_BASE = 0x876074
 ITEM_STRIDE = 44
+ITEM_NAME_BYTES = 14                    # name[14] cell at struct offset 0 (translated to FR)
 CS_ITEM_ID = 0x01B5
 ITEM_ENTRY_OFF = ITEM_TABLE_BASE + CS_ITEM_ID * ITEM_STRIDE
 
@@ -131,12 +132,22 @@ def check(user: bytes, en: bytes) -> list[str]:
             f"(script corruption -> object-gain crash)"
         )
 
-    # 2. Granted item 0x01B5 whole struct identical to EN.
-    if user[ITEM_ENTRY_OFF:ITEM_ENTRY_OFF + ITEM_STRIDE] != en[ITEM_ENTRY_OFF:ITEM_ENTRY_OFF + ITEM_STRIDE]:
+    # 2. Granted item 0x01B5 struct identical to EN — except the name cell
+    #    (first ITEM_NAME_BYTES bytes), which patch_item_names_fr legitimately
+    #    translates ("TM112" -> "CT112"). The name cell must still terminate
+    #    with 0xFF inside its slot or the bag/obtain box printer runs away.
+    if user[ITEM_ENTRY_OFF + ITEM_NAME_BYTES:ITEM_ENTRY_OFF + ITEM_STRIDE] != \
+            en[ITEM_ENTRY_OFF + ITEM_NAME_BYTES:ITEM_ENTRY_OFF + ITEM_STRIDE]:
         problems.append(
-            f"granted item 0x{CS_ITEM_ID:X} struct @0x{ITEM_ENTRY_OFF:X} diverges from English\n"
+            f"granted item 0x{CS_ITEM_ID:X} struct @0x{ITEM_ENTRY_OFF:X} diverges from English "
+            f"beyond the translated name cell\n"
             f"      yours: {user[ITEM_ENTRY_OFF:ITEM_ENTRY_OFF + ITEM_STRIDE].hex()}\n"
             f"      clean: {en[ITEM_ENTRY_OFF:ITEM_ENTRY_OFF + ITEM_STRIDE].hex()}"
+        )
+    if b"\xff" not in user[ITEM_ENTRY_OFF:ITEM_ENTRY_OFF + ITEM_NAME_BYTES]:
+        problems.append(
+            f"granted item 0x{CS_ITEM_ID:X} name cell @0x{ITEM_ENTRY_OFF:X} has NO 0xFF "
+            f"terminator within {ITEM_NAME_BYTES} bytes -> name printer runaway"
         )
 
     # 3. give-CS dialogue terminated and not overflowing its in-place slot.
