@@ -5482,7 +5482,7 @@
 0x7526CF: Tu as éteint ma flamme.
 0x7526ED: Si tu veux me combattre à\nnouveau, pars et reviens.
 0x7527A8: Tu as asséché mon eau.
-0x7527C2: Salut.\pAttends…\pSerais-tu le {STR_VAR_1} du\pdresseur légendaire d'Arceus,\n{COLOR}ÉAros{COLOR}Ë ?
+0x7527C2: Salut.\pAttends…\pSerais-tu l'enfant du\pdresseur légendaire d'Arceus,\n{COLOR}ÉAros{COLOR}Ë ?
 0x7530D9: Ma rage et ma force ne font\nqu'augmenter après cette défaite.
 0x753107: Salut {STR_VAR_1}…\pComment ça va ?\pTu veux humer un peu de Feuilles de\nMystherbe ?\pÇa fait du bien à l'âme. Ça\ndétend…
 0x7531DB: J'imagine que tu viens pour un\ncombat ?\pJe suis parfaitement d'humeur à te\nsatisfaire…
@@ -5798,7 +5798,7 @@
 0x77F3BF: Quoi ? Tu sais ce qui est arrivé à\n{COLOR}ÉAros{COLOR}Ë ?\pS'il te plaît ! Tu dois\nme le dire !\p…\pIl a été réduit en cendres…\pQuitter ce monde de cette façon est\nbien triste.
 0x77F452: C'est peut-être ironique, mais je\nveux te donner cet objet pour te\lremercier de m'avoir apporté un peu\lde paix.
 0x77F4C8: Si seulement quelqu'un pouvait me\ndire ce qui est arrivé à ton père…\pCela m'apporterait tellement de\nsérénité.
-0x77F52F: Bonjour, {STR_VAR_1} du légendaire\nAros.\pJ'espère que ton voyage va bien.
+0x77F52F: Bonjour, enfant du légendaire\nAros.\pJ'espère que ton voyage va bien.
 0x77F57F: fille
 0x77F662: Tu savais que si tu parles aux\narbitres d'Arène avant de battre le\lChampion, ils te donneront un\lcadeau ?\pAlors ? Tu le savais ?
 0x77FAD8: Ça m'a bien réchauffé !
@@ -5924,7 +5924,7 @@
 0x78903B: Officier 1 : {COLOR}ËHé, gamin !\pAvez-vous vu dans quelle direction\nle Champion d'Arène courait ?\pIl est recherché pour trafic de\nFeuilles étranges !
 0x7890AB: Voudriez-vous leur dire ?
 0x7890C8: Agent 1 : <0xFC><0x01><0x08>Visiblement, <0xFD><0x03> n'est\npas au courant, Frank…\pOn laisse filer ?
-0x78910F: Agent 2 : <0xFC><0x01><0x08>Laissons filer.\p<0xFD><0x04> est sans doute une victime\ndes mensonges de Mirskle.\pPauvre gamin…
+0x78910F: Agent 2 : <0xFC><0x01><0x08>Laissons filer.\pC'est sans doute une victime\ndes mensonges de Mirskle.\pPauvre gamin…
 0x789169: Officier 1 : {COLOR}ËEuh, ouais…\pVotre histoire est vérifiée. Vous\nêtes libre de partir.
 0x7891AB: Officier 1 : {COLOR}ËL'étang ? Merci !\nVous avez vraiment aidé\pdans la guerre contre la drogue !\nBon travail !
 0x78920B: Meeeeeec
@@ -6434,7 +6434,7 @@
 0x7BC810: Alors c'est réglé, allons-y.\n
 0x7BC82D: Merci d'avoir aidé à retrouver le\n\pvoleur de nourriture ! Comme promis,\nvoici ta petite chose.
 0x7BC886: Cette CT contient {COLOR}ÉHone\n\pClaws{COLOR}Ë. Si tu prévois\n\pd'affronter l'{COLOR}ÉArène de\nDresco{COLOR}Ë, ça t'aidera beaucoup. C'est\lplein de brouillard là-bas, on y\lvoit très mal…
-0x7BCA5F: Oh, je me souviens de toi !\pTu es ce {STR_VAR_1} qui nous a aidés\nà l'Arène de Dresco !\pPour cela, tu peux avoir ces cinq\nréanimations.
+0x7BCA5F: Oh, je me souviens de toi !\pC'est toi qui nous as aidés\nà l'Arène de Dresco !\pPour cela, tu peux avoir ces cinq\nréanimations.
 0x7BCAD5: Dites, voudriez-vous nous aider en\nassistant à nouveau la police ?
 0x7BCB14: Souhaitez-vous donner un coup de\nmain à la police locale ?
 0x7BCBFB: Ne sais-tu pas qu'il est impoli de\ncouper la réunion de quelqu'un\ld'autre ?
@@ -17926,10 +17926,10 @@
 0x1F2CBB6: Qu'est-ce que… ?\pComment es-tu entré ici ?
 0x1F2CBDA: Vite, scientifique !\nQu'est-ce que tu fais planté là ?\pAttrape cet intrus !
 0x1F2CC17: Assomme {STR_VAR_1} et enferme {STR_VAR_1}\ndans l'entrepôt !\pZeph va péter un plomb quand il\napprendra ça…
-0x1F2CC7E: {STR_VAR_3} K.O., Hoopa.
+0x1F2CC7E: L'intrus est K.O., Hoopa.
 0x1F2CC98: Arrête !\pNe t’ai-je pas dit maintes fois de\nrester hors de mon Cube Space\lsans autorisation ?\pJe sais que tu ne peux plus\nvoyager\lpar tes anneaux, mais ce n’est\lpas une raison pour me désobéir !
 0x1F2CD70: Et c'est toi qui as amené\ncet intrus ici ?
-0x1F2CDA7: Je ne sais pas ce que tu voulais\n{STR_VAR_1} faire, mais tu me gênes sans cesse\ldepuis que je t’ai trouvé à la plage\ll’an dernier !\pJe ne suis pas ton vrai gardien,\nmais je suis ton Dresseur désormais!\pEt comme Dresseur, je t’ordonne\nde cesser ces enfantillages…{PAUSE}\lMAINTENANT !
+0x1F2CDA7: Je ne sais pas ce que tu lui\nvoulais, mais tu me gênes sans cesse\ldepuis que je t’ai trouvé à la plage\ll’an dernier !\pJe ne suis pas ton vrai gardien,\nmais je suis ton Dresseur désormais!\pEt comme Dresseur, je t’ordonne\nde cesser ces enfantillages…<0xFC><0x08><0x18>\lMAINTENANT !
 0x1F2CEB3: Quel ennui…
 0x1F2CEC2: Attends…
 0x1F2CEC8: Maintenant que j'y pense,\nje peux faire avec…
@@ -22686,7 +22686,7 @@
 0x1FA6EF8: Aïe aïe aïe…
 0x1FA6F02: Espèce d'idiot ! Tu ne peux pas\putiliser ton Granbull comme ça !\nPousse-toi, et\plaisse-moi te montrer\ncomment vraiment utiliser Granbull !
 0x1FA6F6E: Je suppose que c'est moi l'idiot !
-0x1FA6F85: Gah ! Bande d'abrutis ! Je vous\pavais dit de NE PAS sous-estimer\n{STR_VAR_1} ! Mais qu'est-ce que\pvous avez fait ? Vous avez\nsous-estimé {STR_VAR_1} !\pSérieusement, de tous les voyous,\npourquoi je me retrouve avec les\pplus bêtes ? Je pourrais envoyer\nidiot après idiot contre ce gosse,\lmais je suis sûr que même mille ne\lferaient pas la différence ! Est-ce\pque ça veut dire que les Terreur\nGranbull sont condamnés à être des perdants pour toujours… ?
+0x1FA6F85: Gah ! Bande d'abrutis ! Je vous\pavais dit de NE PAS sous-estimer\nce môme ! Mais qu'est-ce que\pvous avez fait ? Vous l'avez\nsous-estimé !\pSérieusement, de tous les voyous,\npourquoi je me retrouve avec les\pplus bêtes ? Je pourrais envoyer\nidiot après idiot contre ce gosse,\lmais je suis sûr que même mille ne\lferaient pas la différence ! Est-ce\pque ça veut dire que les Terreur\nGranbull sont condamnés à être des perdants pour toujours… ?
 0x1FA70F7: Ça n'a pas à être\ncomme ça, Gruff.
 0x1FA711E: Et t'es qui toi ?
 0x1FA713B: Je m'appelle\pJames. J'étais le chef\ndu gang le plus dur et le plus\lcoriace du coin, les {PLAYER} Noirs\p! Mais ces Noacier Noirs nous ont\nfait la même chose qu'à vous. Ils\pnous ont virés d'Antésia ! Moi\net les {PLAYER} Noirs étions perdus\pjusqu'à ce que la Patronne nous\ntrouve. Elle nous\pa donné un nouveau\pbut. Nous sommes maintenant\nfièrement connus sous le nom\pd'Horizon Noir. Toi et tes gars\ndevriez nous rejoindre, Gruff. On a\passez de voyous maintenant pour\nabattre toute une armée ! Les\pNoacier Noirs n'ont plus aucune\nchance !
@@ -22717,12 +22717,12 @@
 0x1FA7BF6: Rebonjour, mon enfant. Je suis très\pbien installé, grâce à vos efforts.\nVeuillez accepter\pce cristal rare en\nguise de remerciement.
 0x1FA7C7D: Rebonjour, mon enfant. Vous êtes\ptrès gentil de venir rendre visite à\nce gentil vieil homme.
 0x1FA7CC8: Je possède de nombreuses résidences\nà Naville.\pMon Skitty et moi\nsommes connus ici comme le roi et la\lreine de l'immobilier !
-0x1FA7D3B: Qu'est-ce que c'est, jeune\p{STR_VAR_1} ? Vous cherchez un\nendroit pour loger un gentil vieux\pmonsieur ? Malheureusement, je ne\nsuis pas d'humeur à discuter\laffaires pour le\pmoment. Voyez-vous…\nma chère reine de l'immobilier s'est\penfuie ! Nous avons eu une horrible\ndispute, et elle est partie dans la\prue ! Oh… que vais-je faire… ? Je ne\npeux pas réfléchir sans elle !
+0x1FA7D3B: Qu'est-ce que c'est, jeune\ppersonne ? Vous cherchez un\nendroit pour loger un gentil vieux\pmonsieur ? Malheureusement, je ne\nsuis pas d'humeur à discuter\laffaires pour le\pmoment. Voyez-vous…\nma chère reine de l'immobilier s'est\penfuie ! Nous avons eu une horrible\ndispute, et elle est partie dans la\prue ! Oh… que vais-je faire… ? Je ne\npeux pas réfléchir sans elle !
 0x1FA7E86: Aha ! Une idée a fermement pris\nracine dans mon crâne ! Me\ppermettriez-vous de vous accompagner\npour tenter de localiser ma reine ?\pLa connaissant, il y a peu de\nchances qu'elle soit allée loin.
 0x1FA7F2F: Splendide ! Commençons nos\nrecherches. Elle\pdoit être quelque\npart à Naville. Elle est\ppetite et rose… vous ne pouvez pas\nla manquer !
 0x1FA7FA3: Eh bien, alors. Je n'ai plus\pd'affaires à\ndiscuter avec vous.\pHrmph.
 0x1FA7FE6: Ma reine doit être quelque part à\nNaville. Si vous voyez\pquelque chose de petit et rose… eh\nbien… c'est ma reine !
-0x1FA804E: Un travail bien fait, jeune\p{STR_VAR_1}. Maintenant, retournons\nà ma résidence pour que je puisse\lvous remettre une belle récompense.
+0x1FA804E: Un travail bien fait, jeune\ppersonne. Maintenant, retournons\nà ma résidence pour que je puisse\lvous remettre une belle récompense.
 0x1FA80C1: Ohhhh… Vous m'avez trouvé… Ces\nvoyous, non, ces\phooligans nous ont\nenlevés de nulle part ! Et\pmaintenant je\nn'ai aucune idée d'où\pnous sommes… Ma reine et moi avons\psi peur… Rentrons à la maison… Mais\nvraiment cette fois…
 0x1FA8182: S'il vous plaît, ramenez ma reine et\nmoi à la maison en sécurité…
 0x1FA81AB: Ah, oui. Je crois que vous avez\pmentionné plus tôt avoir besoin\nd'une maison pour un vieux monsieur\l? Dans ce cas, pour vous remercier,\pn'hésitez pas à lui faire savoir\nqu'il peut emménager à l'étage,\lgratuitement.
@@ -22752,7 +22752,7 @@
 0x1FA8B8F: Gah… Je savais\pque piquer ce Skitty\nétait une mauvaise idée.
 0x1FA8BBF: Bullo, espèce d'idiot ! Arrête de\nfaire l'imbécile ! Laisse mon équipe\ps'en occuper.
 0x1FA8C00: J'abandonne, gamin. Tu as encore\ngagné. Mais le gros lard a sûrement\pappris sa leçon pour avoir trop\nparlé. Et tant\pqu'être désavantagé a\nété difficile pour toi, tu as appris\laussi…
-0x1FA8CA1: Ah… Ma reine et moi sommes rentrés à\nla maison. Et cette fois, il ne\psemble pas y avoir de hooligan en\nvue ! Merci beaucoup, jeune\p{STR_VAR_1}. Veuillez me retrouver à\pl'intérieur pour discuter de votre\nrécompense.
+0x1FA8CA1: Ah… Ma reine et moi sommes rentrés à\nla maison. Et cette fois, il ne\psemble pas y avoir de hooligan en\nvue ! Merci beaucoup, jeune\ppersonne. Veuillez me retrouver à\pl'intérieur pour discuter de votre\nrécompense.
 0x1FA8D55: Swizer nous a appelés pour aider à\nt'apprendre une leçon. Ne crois pas\pque tu vas t'en tirer en t'en\nprenant à nous !
 0x1FA8DB7: Ce n'est pas fini !
 0x1FA8DD3: Swizer s'est préparé pour ça ! Tu ne\nseras pas plus malin que lui !
@@ -24334,7 +24334,7 @@
 0x74bcad: On va voir s'ils osent poser des\npièges quand tu es là, Kapoera !\pOn va dominer le tier <0xFC><0x01><0x06>OU Doubles<0xFC><0x01><0x08> !\pIls tomberont tous sous ta pointe\ncrânienne !
 0x74ff66: Qu'est-ce qui se passe ?\p…\pOh, attends…\pTu es le gamin qui vit un peu\nplus bas sur la route.\p<0xFD><0x01>, c'est ça ?\pTu sais ce qu'on fait ici ?
 0x75097e: Arthur : <0xFC><0x01><0x08>Bien, bien.\pQuant à toi, <0xFD><0x01>, je veux que\ntu ailles au <0xFC><0x01><0x06>Mont Foudroyant <0xFC><0x01><0x08>pour\lsauver <0xFC><0x01><0x06>Électhor<0xFC><0x01><0x08>.\pTu as fait tes preuves en défendant\nJax dans Volcan Cendré, et je\lpense que tu es à la hauteur.\pTu peux rejoindre <0xFC><0x01><0x06>Mont Foudroyant <0xFC><0x01><0x08>\npar l'autoroute au sud-est de la\lprochaine ville, <0xFC><0x01><0x06>Cratéris<0xFC><0x01><0x08>.\pSi tu ne te dépêches pas, la région\nde Borrius est condamnée.
-0x753107: Salut <0xFD><0x02>…\pComment ça va, mon pote ?\pTu veux renifler des Feuilles\nde Mystherbe ?\pC'est très bon pour l'âme.\nTout devient doux et tranquille…
+0x753107: Salut…\pComment ça va, mon pote ?\pTu veux renifler des Feuilles\nde Mystherbe ?\pC'est très bon pour l'âme.\nTout devient doux et tranquille…
 0x75318a: <0xFC><0x01><0x02>Vous reniflez des Feuilles de\nMystherbe.\pL'odeur répugnante vous assaille\nles narines.
 0x755204: Si 100 personnes comme moi se tenaient\nici, tu crois que le sol tiendrait ?
 0x75b918: Les gens qui vivent ici refusent de\nme laisser entrer, alors je suis\lobligé de rester là.
