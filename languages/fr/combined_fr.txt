@@ -12221,12 +12221,12 @@
 0xEB9291: Couronne Galanoa
 0xEB92A1: Augurite Noire
 0xEB92B0: Cherch’Objet
-0xEB92C0: Feuilles de Mystherbe
+0xEB92C0: Feuilles Mystherbe
 0xEB92CE: Charme Stabilité
 0xEB92DD: Pilule Talent
 0xEB92ED: Ticket Scintillant
 0xEB92FC: Lecteur Braille
-0xEB930E: Catalogue des Dresseurs
+0xEB930E: Guide Dresseurs
 0xED9E72: …biix
 0xEF0A0F: QUER
 0xEF76B3: i  :R  :S  :i   
@@ -16464,7 +16464,7 @@
 0x1F06AD9: Je suis le maître des Inversés !
 0x1F06AF1: C'est ton titre, maintenant.
 0x1F06B10: Pas de survivants
-0x1F06B1D: Pas de survivants. Utilise le\nCatalogue des Dresseurs : bats-les !
+0x1F06B1D: Pas de survivants. Utilise le\nGuide Dresseurs : bats-les !
 0x1F06B65: Bienvenue au QG des Missions !\pC'est ta première fois ici,\nnon ?\pAlors dis-moi, connais-tu les\n{COLOR}ÉMissions{COLOR}Ë ?
 0x1F06BD9: Bien sûr que oui !\nQui ne les connaît pas ?\pReviens me voir quand tu auras\naccompli au moins {COLOR}É5{COLOR}Ë Missions.
 0x1F06C38: Je vois…\pDans ce cas, laisse-moi\nt'en donner une explication.
@@ -16474,11 +16474,11 @@
 0x1F07015: En plus, {COLOR}É{STR_VAR_1}{COLOR}Ë commence à\nerrer dans Borrius !\pTu peux voir sa position\nsur ta {COLOR}ÉCarte{COLOR}Ë.
 0x1F07090: Je t'ai déjà tout donné !\nTu as dépassé mes attentes !\pLes Missions que tu feras\ncompteront juste en bonus.
 0x1F07111: Tu n'as plus de place dans\nton équipe pour ce Pokémon !
-0x1F0714F: Maintenant que tu as les pieds\ndans l'eau, je te donne ta Mission !\pUtilise {COLOR}ÉCatalogue des Dresseurs{COLOR}Ë et\nbats chaque Dresseur listé.\pCes Dresseurs veulent se battre,\ntu leur rendras service en\lles affrontant !
+0x1F0714F: Maintenant que tu as les pieds\ndans l'eau, je te donne ta Mission !\pUtilise {COLOR}ÉGuide Dresseurs{COLOR}Ë et\nbats chaque Dresseur listé.\pCes Dresseurs veulent se battre,\ntu leur rendras service en\lles affrontant !
 0x1F07244: On dirait que tu n'as laissé aucun\nsurvivant parmi les Dresseurs !\pPour ça, tu reçois…\p{STR_VAR_1} !
 0x1F0729E: J'ai le sentiment que si tu amènes\nun certain Pokémon avec ce\l{COLOR}É{STR_VAR_1}{COLOR}Ë dans un lieu où {COLOR}Éseuls les\lplus forts vont{COLOR}Ë, quelque chose de\lpuissant pourrait t'approcher…
 0x1F0734A: Une Pépite
-0x1F07353: Un Catalogue des Dresseurs
+0x1F07353: Un Guide Dresseurs
 0x1F07367: Un Pokémon rare
 0x1F07376: Une Latiosite
 0x1F07382: Une Latiasite
@@ -16785,7 +16785,7 @@
 0x1F0EF10: Francis
 0x1F0EF18: Fresia
 0x1F0EF76: New Game + a été activé.\pVérifie la Boîte «{COLOR}É{STR_VAR_1}{COLOR}Á» pour les\nPokémon transférés.\p{COLOR}ÊN'OUBLIE PAS DE SAUVEGARDER\nAVANT DE SAUVER !
-0x1F0F004: New Game + est une option spéciale\nqui permet de recommencer une partie\lavec des bonus spéciaux :\p1) Une équipe de 6 Pokémon\npeut être transférée dans la partie.\pCes 6 Pokémon viennent\nde l'équipe de la sauvegarde.\pLes Pokémon reviendront en forme\nde base et oublieront leurs attaques\lsauf les Cap. Œuf.\pLes objets tenus\nsont conservés, sauf les Z-Cristaux.\pDe plus, les stats\ncomme les EV et IV sont conservés.\p2) Si tu as obtenu\nces objets sur l'ancienne sauvegarde\lils seront transférés vers\lla nouvelle partie :\pScanner de Stats, Moto, DexNav,\nCherch'Objet, Baby Monitor, ADM,\lCatalogue Dresseurs, Charme Chroma,\lCharme Ovale, Charme Capture,\lPierre Magma, Carte Frontière,\lPorta-PC, Retireur de Temps,\laméliorations d'objet et BP gagné.\p3) La difficulté peut être\naugmentée ou réduite à tout moment\lsans pénalité.\p4) Certains puzzles de l'histoire\nrésolus dans l'ancienne sauvegarde\lresteront résolus.\p5) Si la Carte Frontière est\ntransférée, la Frontière de Combat\lsera accessible dès\ll'arrivée à Naville.\p6) Des PNJ pour\nmodifier IV, EV et natures seront\ldisponibles à Cratéris jusqu'à\lla fin du jeu (hors\lmode Sandbox).\pNote que certains peuvent\ndemander des BP, alors veille à\len gagner assez avant de lancer la\lnouvelle partie.\p7) Certains Pokémon\nlégendaires bloqués au post-game\lseront obtenables avant\lla fin du jeu.
+0x1F0F004: New Game + est une option spéciale\nqui permet de recommencer une partie\lavec des bonus spéciaux :\p1) Une équipe de 6 Pokémon\npeut être transférée dans la partie.\pCes 6 Pokémon viennent\nde l'équipe de la sauvegarde.\pLes Pokémon reviendront en forme\nde base et oublieront leurs attaques\lsauf les Cap. Œuf.\pLes objets tenus\nsont conservés, sauf les Z-Cristaux.\pDe plus, les stats\ncomme les EV et IV sont conservés.\p2) Si tu as obtenu\nces objets sur l'ancienne sauvegarde\lils seront transférés vers\lla nouvelle partie :\pScanner de Stats, Moto, DexNav,\nCherch'Objet, Baby Monitor, ADM,\lGuide Dresseurs, Charme Chroma,\lCharme Ovale, Charme Capture,\lPierre Magma, Carte Frontière,\lPorta-PC, Retireur de Temps,\laméliorations d'objet et BP gagné.\p3) La difficulté peut être\naugmentée ou réduite à tout moment\lsans pénalité.\p4) Certains puzzles de l'histoire\nrésolus dans l'ancienne sauvegarde\lresteront résolus.\p5) Si la Carte Frontière est\ntransférée, la Frontière de Combat\lsera accessible dès\ll'arrivée à Naville.\p6) Des PNJ pour\nmodifier IV, EV et natures seront\ldisponibles à Cratéris jusqu'à\lla fin du jeu (hors\lmode Sandbox).\pNote que certains peuvent\ndemander des BP, alors veille à\len gagner assez avant de lancer la\lnouvelle partie.\p7) Certains Pokémon\nlégendaires bloqués au post-game\lseront obtenables avant\lla fin du jeu.
 0x1F0F5A6: Bienvenue dans Pokémon Unbound !\n\nAvant de commencer à jouer,\nsache que ceci est un jeu de fans\nà but non lucratif.\n\nSi tu as payé pour ce jeu,\nréclame ton argent immédiatement !
 0x1F0F64D: Dans le monde qui s'ouvre à toi,\ntu vivras une grande aventure\ndont tu seras le héros.\n\nLe monde est vaste. Prends le temps\nde l'explorer, rien ne presse.
 0x1F0F6FA: Parle aux gens et examine tout\nsur ton passage : les villes, les\nroutes ou encore les grottes.\n\nLe monde et ses habitants sont\nvivants. En grandissant, tu les\nverras grandir avec toi.
@@ -24448,7 +24448,7 @@
 0x7c563a: Le <0xFD><0x03> que je t'ai échangé,\nest-ce qu'il t'a été utile ?
 0x1f01c63: Le <0xFD><0x03> que je t'ai échangé,\nest-ce qu'il t'a été utile ?
 0x7c5687: Hmmm ?\nCe <0xFC><0x01><0x06><0xFD><0x02> n'est pas de type\lGlace<0xFC><0x01><0x08>.\pPense à moi si tu en obtiens un.
-0x7c56ca: On vient de réaliser une grosse\nsaisie de drogue et d'arrêter enfin\lle criminel qui vendait des\l<0xFC><0x01><0x06>Feuilles de Mystherbe <0xFC><0x01><0x08>à Borrius !\pMaintenant, on danse ici pour\nfêter ça.
+0x7c56ca: On vient de réaliser une grosse\nsaisie de drogue et d'arrêter enfin\lle criminel qui vendait des\l<0xFC><0x01><0x06>Feuilles Mystherbe <0xFC><0x01><0x08>à Borrius !\pMaintenant, on danse ici pour\nfêter ça.
 0x7c5a32: <0xFC><0x01><0x08>Encore toi !\pQu'est-ce que tu fais ici ?
 0x7c6562: La petite fille semble avoir été\nemportée par le vent.
 0x7c6593: Ouiiin !\pCe gros coup de vent m'a emportée\njusqu'ici !\pLaisse-moi m'accrocher à toi pour\nne pas m'envoler encore !
