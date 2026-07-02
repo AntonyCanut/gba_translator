@@ -83,6 +83,23 @@ CRITICAL_LABELS: tuple[CriticalLabel, ...] = (
         "Choisis une couleur de\\nceinture et de bottes.",
         ("Choisis une couleur de bordure.", "Choose a trim colour."),
     ),
+    # Mega-Cuff reaction templates (Vega Mega Evolution sequence). Both are
+    # fixed-offset, in-place, 31-byte engine slots (no repoint) — the FR
+    # string must fit that budget or the injector silently drops it
+    # (too_long). commit dc84690f reverted 0x83008C to a 34-byte stale form
+    # and never restored 0x96CC1C at all, both fell back to English.
+    CriticalLabel(
+        0x83008C,
+        "Réaction Méga-Cuff 1",
+        "Le <0xFD><0x01> de <0xFD><0x00> réagit\\nau <0xFD><0x03> de <0xFD><0x02>!",
+        ("Le <0xFD><0x01> de <0xFD><0x00> réagit\\nà la <0xFD><0x03> de <0xFD><0x02> !",),
+    ),
+    CriticalLabel(
+        0x96CC1C,
+        "Réaction Méga-Cuff 2",
+        "Le <0xFD><0x16> de <0xFD><0x00> réagit\\nau <0xFD><0x01> de <0xFD><0x39>!",
+        (),
+    ),
 )
 
 
