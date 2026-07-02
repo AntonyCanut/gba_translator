@@ -48,7 +48,6 @@ PATCH_SUMMARY_LABELS_SCRIPT := scripts/patch_summary_labels_fr.py
 PATCH_CFRU_TYPE_NAMES_SCRIPT := scripts/patch_cfru_type_names_fr.py
 PATCH_STATUS_ABBREVS_SCRIPT := scripts/patch_status_abbrevs_fr.py
 PATCH_STATUS_BADGES_SCRIPT := scripts/patch_status_badges_fr.py
-PATCH_NATURE_NAMES_SCRIPT := scripts/patch_nature_names_fr.py
 PATCH_HP_LABELS_SCRIPT := scripts/patch_hp_labels_fr.py
 PATCH_TYPE_ICONS_SCRIPT := scripts/patch_type_icons_fr.py
 PATCH_SHOP_FR_SCRIPT := scripts/patch_shop_fr.py
@@ -229,7 +228,6 @@ build-fr: $(ENGLISH_EXTRACT) $(SPANISH_EXTRACT) $(BUILD_SCRIPT)
 	@$(PYTHON) $(PATCH_BATTLE_STRING_TEMPLATES_SCRIPT) --rom $(FR_BUILD) --source $(ENGLISH_ROM)
 	@$(PYTHON) $(PATCH_BATTLE_RECALL_STRINGS_SCRIPT) --rom $(FR_BUILD)
 	@$(PYTHON) $(PATCH_STATUS_BADGES_SCRIPT) --rom $(FR_BUILD)
-	@$(PYTHON) $(PATCH_NATURE_NAMES_SCRIPT) --rom $(FR_BUILD) --reference-rom $(SPANISH_ROM)
 	@$(PYTHON) $(PATCH_HP_LABELS_SCRIPT) --rom $(FR_BUILD)
 	@$(PYTHON) $(PATCH_TYPE_ICONS_SCRIPT) --rom $(FR_BUILD)
 	@$(PYTHON) $(PATCH_SHOP_FR_SCRIPT) --rom $(FR_BUILD)
