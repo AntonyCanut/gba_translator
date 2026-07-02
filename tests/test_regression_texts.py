@@ -183,6 +183,24 @@ class RegressionTextTests(unittest.TestCase):
         self.assertNotIn('Restaure 20', text)
         self.assertNotIn('blessures', text)
 
+    @unittest.skipUnless(FR_ROM.exists(), 'ROM missing')
+    def test_hoopa_dialogues_use_dresseur_and_bouteille_prison(self):
+        # Regression (Pattern C): 8fe7dddb0 had silently reverted the
+        # reformulation from 9ab2b549c, bringing back franglais "Prison
+        # Bottle" and "entraîneur" instead of the canon "Dresseur".
+        french_data = FR_ROM.read_bytes()
+
+        aklove_ritual = _read_pointer_text(french_data, 0x7D40BD)
+        self.assertIn('Dresseur', aklove_ritual)
+        self.assertNotIn('entraîneur', aklove_ritual)
+        self.assertNotIn('Prison Bottle', aklove_ritual)
+        self.assertIn('Bouteille', aklove_ritual)
+
+        cube_reveal = _read_pointer_text(french_data, 0x1E8C3CE)
+        self.assertIn('Dresseur', cube_reveal)
+        self.assertNotIn('Prison Bottle', cube_reveal)
+        self.assertIn('Bouteille Prison', cube_reveal)
+
     @unittest.skipUnless(EN_ROM.exists() and FR_ROM.exists(), 'ROMs missing')
     def test_inline_my_name_parents_translated(self):
         phrase = "I'm looking for my parents"

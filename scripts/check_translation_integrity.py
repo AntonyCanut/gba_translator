@@ -100,6 +100,25 @@ CRITICAL_LABELS: tuple[CriticalLabel, ...] = (
         "Le <0xFD><0x16> de <0xFD><0x00> réagit\\nau <0xFD><0x01> de <0xFD><0x39>!",
         (),
     ),
+    # Hoopa dialogues: 8fe7dddb0 (Pattern C, stale snapshot) had silently
+    # reverted the reformulation done 1h earlier by 9ab2b549c — franglais
+    # "Prison Bottle" and "entraîneur" instead of the canon "Dresseur".
+    CriticalLabel(
+        0x7D5083,
+        "Hoopa (Aklove, rituel)",
+        "{COLOR}ËHoopa, prépare-toi !\\pVotre véritable pouvoir est sur le\\npoint de sortir de la Bouteille\\nPrison !\\pEt en tant que votre Dresseur, je\\npeux parfaitement y parvenir !",
+        (
+            "{COLOR}ËHoopa, prépare-toi !\\pVotre véritable pouvoir est sur le\\npoint d'être libéré de la bouteille\\lde Prison !\\pEt en tant que votre entraîneur, je\\nsuis pleinement capable de le\\llibérer !",
+        ),
+    ),
+    CriticalLabel(
+        0x1F3A9F2,
+        "Hoopa (Cube, révélation)",
+        "Hoopa ! Le moment est venu !\\pTon véritable pouvoir va sortir de\\nla Bouteille Prison !\\pEt en tant que ton Dresseur, je\\npeux parfaitement le contrôler !",
+        (
+            "Hoopa ! Le moment est venu !\\pTon véritable pouvoir va être\\nlibéré de la Prison Bottle !\\pEt en tant que ton Dresseur, je\\nsuis tout à fait capable de le\\lcontrôler !",
+        ),
+    ),
 )
 
 
