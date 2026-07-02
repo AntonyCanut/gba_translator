@@ -119,6 +119,15 @@ CRITICAL_LABELS: tuple[CriticalLabel, ...] = (
             "Hoopa ! Le moment est venu !\\pTon véritable pouvoir va être\\nlibéré de la Prison Bottle !\\pEt en tant que ton Dresseur, je\\nsuis tout à fait capable de le\\lcontrôler !",
         ),
     ),
+    # Stat-change template reverted by 86ed70fd6 (14/06, "add French
+    # translations for Yes/No dialog options") over the cab10fa1c fix
+    # ("corrige le texte de combat des Pokémon sauvages") — F-41 audit.
+    CriticalLabel(
+        0xA4C200,
+        "Stat-change (générique)",
+        "<0xFD><0x00> de <0xFD><0x13>\\n<0xFD><0x01>",
+        ("{FD13} {FD00}\\n{FD01}",),
+    ),
 )
 
 
