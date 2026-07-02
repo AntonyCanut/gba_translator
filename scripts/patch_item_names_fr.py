@@ -293,6 +293,7 @@ ITEM_NAMES = {
     "Wave Incense": "Encens Vague",
     # Misc
     "Bottle Cap": "Capsule",
+    "Costume Box": "Boîte Costume",
     # Mails (Lettre X)
     "Orange Mail": "Lettre Orange",
     "Harbor Mail": "Lettre Port",
