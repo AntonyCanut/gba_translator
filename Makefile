@@ -46,6 +46,7 @@ PATCH_WORLDMAP_JUNCTION_FR_SCRIPT := scripts/patch_worldmap_junction_panels_fr.p
 PATCH_CUBE_TV_DIALOGUES_FR_SCRIPT := scripts/patch_cube_tv_dialogues_fr.py
 PATCH_SUMMARY_LABELS_SCRIPT := scripts/patch_summary_labels_fr.py
 PATCH_CFRU_TYPE_NAMES_SCRIPT := scripts/patch_cfru_type_names_fr.py
+PATCH_OPTIONS_FOOTER_SCRIPT := scripts/patch_options_footer_fr.py
 PATCH_STATUS_ABBREVS_SCRIPT := scripts/patch_status_abbrevs_fr.py
 PATCH_STATUS_BADGES_SCRIPT := scripts/patch_status_badges_fr.py
 PATCH_HP_LABELS_SCRIPT := scripts/patch_hp_labels_fr.py
@@ -224,6 +225,7 @@ build-fr: $(ENGLISH_EXTRACT) $(SPANISH_EXTRACT) $(BUILD_SCRIPT)
 		--combined languages/fr/combined_fr.txt \
 		--reference-rom $(SPANISH_ROM)
 	@$(PYTHON) $(PATCH_CFRU_TYPE_NAMES_SCRIPT) --rom $(FR_BUILD)
+	@$(PYTHON) $(PATCH_OPTIONS_FOOTER_SCRIPT) --rom $(FR_BUILD)
 	@$(PYTHON) $(PATCH_STATUS_ABBREVS_SCRIPT) --rom $(FR_BUILD)
 	@$(PYTHON) $(PATCH_BATTLE_STRING_TEMPLATES_SCRIPT) --rom $(FR_BUILD) --source $(ENGLISH_ROM)
 	@$(PYTHON) $(PATCH_BATTLE_RECALL_STRINGS_SCRIPT) --rom $(FR_BUILD)
