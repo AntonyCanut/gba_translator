@@ -1,7 +1,7 @@
 """Tests for scripts/check_translation_integrity.py — FR anti-regression guard.
 
 Verifies that the guard:
-- validates the real combined_fr.txt in the repo (all 13 map labels are French);
+- validates the real combined_fr.txt in the repo (all protected labels are French);
 - correctly applies the last-wins rule (last entry wins);
 - detects a regression to an English/stale form (bug c7c1ede);
 - detects an empty translation or a missing offset.
@@ -33,8 +33,9 @@ class TestRealCombinedFr:
         failures = [f"0x{r.label.offset:06X} {r.label.name}: {r.reason}" for r in report.failures]
         assert report.ok, "regressed map labels:\n" + "\n".join(failures)
 
-    def test_thirteen_labels_protected(self):
-        assert len(cti.CRITICAL_LABELS) == 13
+    def test_protected_label_count(self):
+        # 13 world-map labels (B-52) + 0x1F0F842 couleur ceinture/bottes (9ad0fee).
+        assert len(cti.CRITICAL_LABELS) == 14
 
     def test_main_returns_zero_on_real_file(self):
         assert cti.main(["--file", str(REAL_COMBINED)]) == 0
@@ -95,7 +96,7 @@ class TestRegressionDetection:
         report = cti.build_report(target)
         assert not report.ok
         absent = [r for r in report.failures if "absent" in r.reason]
-        assert len(absent) == 12  # 13 labels − 1 present
+        assert len(absent) == len(cti.CRITICAL_LABELS) - 1  # all labels − 1 present
 
     def test_main_returns_one_on_regression(self, tmp_path: Path):
         path = self._write_all_french(tmp_path / "bad.txt", {0x720E74: "Ville de Fallshore"})

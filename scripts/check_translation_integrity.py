@@ -74,6 +74,15 @@ CRITICAL_LABELS: tuple[CriticalLabel, ...] = (
     CriticalLabel(0xB535C8, "Île Pleinelune", "Île Pleinelune", ("Île Pleine Lune", "Île de la Lune", "Fullmoon Island")),
     CriticalLabel(0xB537AC, "Rougebois", "Rougebois", ("Bois-Rouge", "Redwood Village", "Redwood village")),
     CriticalLabel(0x720E74, "Rivapolis", "Rivapolis", ("Rive-d'Automne", "Fallshore", "Ville de Fallshore", "Fallshore City")),
+    # Entries already lost once to a stale-snapshot commit (see
+    # docs/20_TRANSLATION_PRESERVATION.md § « Pattern C ») — 9ad0fee had
+    # silently reverted 0x1F0F842 to the pre-419cdf8 wording.
+    CriticalLabel(
+        0x1F0F842,
+        "Couleur ceinture/bottes",
+        "Choisis une couleur de\\nceinture et de bottes.",
+        ("Choisis une couleur de bordure.", "Choose a trim colour."),
+    ),
 )
 
 

@@ -107,11 +107,13 @@ output/roms/GenedRom-fr.gba
 
 ## 4. La garde exécutable — `scripts/check_translation_integrity.py`
 
-Vérifie, **sur la valeur résolue last-wins**, que les 13 labels carte n'ont pas
-régressé vers une forme anglaise/périmée. C'est le filet qui aurait stoppé `c7c1ede`.
+Vérifie, **sur la valeur résolue last-wins**, que les entrées protégées (13 labels
+carte + toute entrée déjà perdue une fois, ex. `0x1F0F842` couleur ceinture/bottes)
+n'ont pas régressé vers une forme anglaise/périmée. C'est le filet qui aurait stoppé
+`c7c1ede` comme `9ad0fee`.
 
 ```bash
-# Doit afficher 13 [OK] et sortir avec le code 0
+# Doit afficher uniquement des [OK] et sortir avec le code 0
 python3 scripts/check_translation_integrity.py
 
 # Rapport machine (CI / hooks)
@@ -143,17 +145,30 @@ python3 scripts/check_translation_integrity.py --json
   au prochain build.
 - **Committer une ROM sans `make test-rom`** ni `check_translation_integrity.py` vert.
 - **`apply_combined_fr.py` sans `--extend`** ; **`09_csv_to_json_v2.py` sans argument CSV**.
+- **Committer `combined_*.txt` sans relire son diff.** Le diff du commit doit contenir
+  **uniquement** les offsets que vous vouliez toucher. Le moindre offset « en trop »
+  = votre copie de travail était périmée (Pattern C, §7) → abandonner, repartir de
+  `HEAD`, refaire l'édition.
 
 ### ✅ OBLIGATOIRE — workflow d'une correction de texte
 
 1. `git status` propre + identifier la **dernière** occurrence de l'offset
    (`grep -in "^0x0*<offset>:" combined_fr.txt | tail -1`).
+   **Relire le fichier au moment d'éditer** — jamais depuis un buffer lu plus tôt
+   dans la session : HEAD avance en continu (agents concurrents).
 2. Éditer **uniquement** cette dernière ligne (insertion chirurgicale).
-3. `python3 scripts/check_translation_integrity.py` → 13 OK, exit 0.
-4. Rejouer la chaîne complète : `apply_combined_fr.py --extend` → CSV → JSON → `make build-fr`.
-5. Vérifier les **octets décodés dans la ROM buildée** (pas le fichier) — une entrée
+3. `python3 scripts/check_translation_integrity.py` → tous OK, exit 0.
+4. **Committer `combined_fr.txt` immédiatement** (chemin précis, jamais `git add -A`),
+   **avant** tout build, puis vérifier le commit :
+   `git show HEAD -- languages/fr/combined_fr.txt` ne doit contenir **que** vos offsets.
+   Un offset étranger dans le diff = snapshot périmé → `git reset --soft HEAD~1`,
+   repartir de `HEAD`, refaire l'édition.
+5. Rejouer la chaîne complète : `apply_combined_fr.py --extend` → CSV → JSON → `make build-fr`.
+6. Vérifier les **octets décodés dans la ROM buildée** (pas le fichier) — une entrée
    peut être ignorée silencieusement (trad vide, texte trop long sans pointeur libre).
-6. `make test-rom` + `tests/test_location_names_fr.py` verts avant tout commit.
+7. `make test-rom` + `tests/test_location_names_fr.py` verts avant tout commit de ROM.
+8. Fix déjà perdu une fois ? L'ajouter à `CRITICAL_LABELS` dans
+   `scripts/check_translation_integrity.py` (forme perdue en `forbidden_forms`).
 
 ---
 
@@ -172,6 +187,27 @@ python3 scripts/check_translation_integrity.py --json
 si la working copy est périmée et le fichier réécrit en masse. La défense n'est pas
 « faire attention » : c'est **édition chirurgicale + garde sur la valeur résolue +
 test ROM**, à chaque fois.
+
+---
+
+## 7. Cas d'étude — Pattern C, le commit à snapshot périmé (`9ad0fee`, `dc84690f`)
+
+Variante de `c7c1ede` qui ne réécrit **pas** le fichier en masse : le commit a l'air
+chirurgical mais embarque une **copie de travail plus vieille que `HEAD`**.
+
+| | |
+|---|---|
+| **Mécanisme** | L'agent lit `combined_fr.txt`, travaille ~15-30 min, pendant ce temps des commits concurrents touchent le même fichier (ou l'orchestrateur fait avancer `HEAD` sous le checkout partagé **sans mettre à jour les fichiers**). Au commit, la version périmée du fichier gagne : chaque fix concurrent intermédiaire est silencieusement reverté. |
+| **`9ad0fee`** (2026-06-21, +14 min) | Commit « Yes→Oui » : a reverté `419cdf8` (couleur ceinture/bottes, `0x1F0F842`) **et** `84670be` (articles des messages de ramassage) — 5 offsets écrasés pour 1 offset annoncé. |
+| **`dc84690f`** (2026-06-22, +18 min) | Commit « cri Leveinard » : a reverté le template Méga-Cuff `0x83008C` (re-rallongé → too_long → droppé au build → **anglais en jeu**) et a **supprimé le fichier de test** `tests/test_battle_mega_reaction_fr.py` ajouté 13 min plus tôt. |
+| **Signature** | Le diff du commit contient des offsets (ou des suppressions de fichiers) sans rapport avec son message. `git show <sha> -- languages/fr/combined_fr.txt` le révèle en 5 secondes. |
+| **Pourquoi non détecté** | Les entrées revertées restaient du français plausible ; aucun test ne contrôlait leur valeur. Les hooks ne comparent pas le diff au *périmètre annoncé*. |
+| **Prévention** | Étapes 1 et 4 du workflow §5 : relire le fichier **au moment d'éditer**, committer **immédiatement**, puis relire le diff du commit — le moindre offset étranger = abandonner et refaire sur `HEAD` frais. Toute entrée déjà perdue une fois entre dans `CRITICAL_LABELS` (§4). |
+
+**Leçon.** Le danger n'est pas seulement la réécriture massive : c'est le **temps qui
+passe entre la lecture du fichier et le commit**. Sur un dépôt à agents concurrents,
+une copie lue il y a 20 minutes est déjà périmée. Éditer sur du frais, committer tout
+de suite, relire le diff du commit — les trois, à chaque fois.
 
 ---
 
