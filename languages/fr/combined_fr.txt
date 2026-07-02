@@ -24980,3 +24980,106 @@
 
 # --- Description d'objet Boîte Jetons (Étui à Jetons) ---
 0x3d8a14: Un étui pour ranger les Jetons du\nCasino. Peut contenir 9 999 Jetons.
+
+# --- Menu Options étendu (CFRU) jamais traduit — B-149 ---
+# Cluster 0x1F4DA6C-0x1F4E244 : General/Audio/Battle Options, valeurs et descriptions
+0x1f4da6c: Aucun
+0x1f4da71: CS rapides
+0x1f4da7b: Sauter cinématiques
+0x1f4da8a: Alertes sauvegarde
+0x1f4da97: Haut-parleurs
+0x1f4daa0: Mode bouton L
+0x1f4daae: Mode bouton R
+0x1f4dabc: Effets sonores
+0x1f4daca: Musique de fond
+0x1f4dadb: Musique vélo/surf
+0x1f4daeb: Thème extérieur
+0x1f4dafb: Thème sauvage
+0x1f4db06: Thème dresseur
+0x1f4db14: Effets de combat
+0x1f4db23: Difficulté combat
+0x1f4db35: Gain d'Exp.
+0x1f4db3f: Restriction objets
+0x1f4db51: Messages rapides
+0x1f4db5f: Icônes de type
+0x1f4db6a: Options générales
+0x1f4db7a: Options audio
+0x1f4db88: Options de combat
+0x1f4db9d: Valider
+0x1f4dba5: Clair
+0x1f4dbab: Sombre
+0x1f4dbb0: Course auto
+0x1f4dbb9: Objet enr. 2
+0x1f4dbc4: Scan DexNav
+0x1f4dbd0: Scan minier
+0x1f4dbdc: Voir équipe
+0x1f4dbe7: Voir objets
+0x1f4dbf2: Journal missions
+0x1f4dbfe: Menu debug
+0x1f4dc09: Difficulté énigmes
+0x1f4dc1b: Tri auto objets
+0x1f4dc2a: Par nom
+0x1f4dc32: Par type
+0x1f4dc3a: Par quantité
+0x1f4dc44: Semi-alterné
+0x1f4dc4f: Normal
+0x1f4dc57: Partage Exp.
+0x1f4dc62: Partage Exp. plafonné
+0x1f4dc74: 4 objets max
+0x1f4dc81: Aucun objet
+0x1f4dc8a: Dresseur adverse seul
+0x1f4dc9d: Fuite rapide
+0x1f4dcb2: Aperçu équipe
+0x1f4dcbf: Zone Frontière seul.
+0x1f4dccd: Toujours
+0x1f4dcd4: Jamais
+0x1f4dcda: Dernière Ball
+0x1f4dce9: Après 1 Ball
+0x1f4dcf6: Meilleure Ball
+0x1f4dd07: Oui
+0x1f4dd0a: Non
+0x1f4dd0e: Demander
+0x1f4dd15: Propos. surnom
+0x1f4dd24: Objet sauvage
+0x1f4dd33: Qualité audio
+0x1f4dd41: Basse (rapide)
+0x1f4dd4e: Moyenne (défaut)
+0x1f4dd5f: Haute (lente)
+0x1f4dd6d: Passe certaines cinématiques.
+0x1f4dd8b: Propose de sauver souvent.
+0x1f4ddaa: Utilise les CS plus vite sur le terrain.
+0x1f4ddd0: Fonctionnement général de {X}.
+0x1f4ddf1: Fonctionnement général de {X}.
+0x1f4de12: Difficulté des énigmes du monde.
+0x1f4de37: Trie le secteur Objets du Cube.
+0x1f4de5b: Style de cadre de certaines boîtes.
+0x1f4de82: Qualité de tout l'audio du jeu.
+0x1f4dea1: Quels haut-parleurs jouent l'audio.
+0x1f4debc: Chaque enceinte peut jouer un son différent.
+0x1f4dedf: Les deux enceintes jouent le même son.
+0x1f4df02: Joue les bruitages et cris.
+0x1f4df20: Joue la musique de fond.
+0x1f4df37: Joue un thème à vélo et en Surf.
+0x1f4df5c: Change la musique du monde.
+0x1f4df7e: Change la musique des combats sauvages.
+0x1f4df9f: Change la musique des combats dresseurs.
+0x1f4dfc3: Affiche les animations de combat.
+0x1f4dfdb: Change gratuitement après un K.O.
+0x1f4dff7: Pas de changement gratuit après K.O.
+0x1f4e012: Change gratuitement et sans nom après K.O.
+0x1f4e037: Difficulté de tous les combats.
+0x1f4e05e: Combinaison de touches pour fuir vite.
+0x1f4e086: Répartition de l'Exp. après K.O.
+0x1f4e0a4: Seul le Pokémon envoyé gagne de l'Exp.
+0x1f4e0c8: Tous les Pokémon de l'équipe gagnent de l'Exp.
+0x1f4e0eb: Partage d'Exp. avec plafond de niveau.
+0x1f4e10c: Règles d'usage des objets en combat dresseur.
+0x1f4e136: Propose de voir l'équipe adverse.
+0x1f4e156: Propose d'utiliser la dernière Ball.
+0x1f4e179: Messages de combat plus rapides.
+0x1f4e19f: Affiche les types lors des attaques.
+0x1f4e1c7: Propose un surnom au Pokémon capturé.
+0x1f4e1eb: Met l'objet du Pokémon capturé dans le Cube.
+0x1f4e214: Sauve les réglages choisis.
+0x1f4e230: Sauver\nAbandonner\nAnnuler
+0x1f4e244: {X}Choisir {Y}Changer {Z}Confirmer {COLOR}{W}{V}{U}Plus
