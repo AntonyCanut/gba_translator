@@ -28,3 +28,1878 @@
 0x183509: Du hast mich besiegt.
 0x1835A0: Ich kann es nicht glauben!
 0x18364C: Bitte starr mich nicht so an.
+
+# --- batch 1/12 (2000 FR entries, sorted ascending by offset) ---
+# Generated via parallel EN<-FR->DE translation, verified: full offset
+# coverage + control-token parity against languages/fr/combined_fr.txt.
+0x28780: {B_ATK_NAME_WITH_PREFIX} hat denselben Typ\nwie {B_DEF_NAME_WITH_PREFIX}!
+0x172482: Ich bin vielleicht klein, aber ich\nwill nicht, dass du mich schonst!
+0x1724BF: Oh, Mist.\nNichts hat geklappt.
+0x17251B: Oh!\nIch habe verloren!
+0x172FC3: Nur Trainer, die ihren\nWert im Kampf bewiesen haben, dürfen\lhier passieren.\p…\pDu bist nicht würdig.
+0x1737AF: {PLAYER} hat die VM01 vom KAPITÄN erhalten\n!
+0x1762D7: {PLAYER} hat ein LAPRAS von\neinem Mitarbeiter von SILPHE SARL erhalten!
+0x176FBD: {PLAYER} hat einen MEISTERBALL vom\nPRÄSIDENTEN erhalten!
+0x177364: Wer bist du?\nWas machst du hier?
+0x177391: Wow!
+0x177397: Eine Statue mit einem Schalter?\nDavon habe ich noch nie gehört.
+0x1773C6: Kennst du die Geheimnisse dieses\nHerrenhauses?
+0x177460: Ein geheimer Schalter!\pIhn betätigen?
+0x1774E3: Irgendwo gibt es einen Schalter,\nder einen Durchgang nach Maxima öffnet.
+0x1776D7: Ahu!
+0x1776DE: Ich komme sicher nirgendwohin, wenn ich\nhier einfach stehen bleibe.
+0x179396: Vorsicht vor Onix.\nSie sind selten.\pStarke Onix können\ndich zerquetschen!
+0x179FA0: Verschwinde!\nBöser Geist!
+0x179FBC: Puh!\nDer Geist ist weg!
+0x179FD3: Die anderen…\nSie müssen besessen gewesen sein.
+0x17A004: Ein Geist! Oh nein!\nKwaaah!
+0x17CC56: {STR_VAR_1} Min. {STR_VAR_2}.{STR_VAR_3} Sek.
+0x17D80D: Hallo!\nWie geht's?\pWarst du schon im Labor von\nProfessor Log?
+0x17D87F: Haus von {PLAYER}
+0x17D88A: Haus von {RIVAL}
+0x17FF1C: Kochst du nicht in diesen\nKleidern?
+0x17FF49: 9Ich kann nicht aufhören zu kaufen!\pEs gibt so viel Auswahl im\n{COLOR}ÉKaufhaus von Daherapolis{COLOR}Ç!
+0x180300: Mmm…\pEin Park mitten in einer\nWüstenstadt ist so erholsam.\pDaherapolis ist wirklich ein wunderbares\nOasenparadies!
+0x183387: {PLAYER} hat den TRANK in der\nGegenstände-Tasche verstaut.
+0x18351C: Ich bin stolz auf mein großes\nWissen über Insekten.
+0x183560: Hallo!\nIch liebe Shorts!\pSie sind so bequem und\neinfach zu tragen!
+0x1835B4: Benutzt du den PC im Pokémon-Center,\num deine Pokémon zu lagern?\pJede Box kann bis zu\n30 Pokémon fassen.
+0x183682: Du bist Trainer?\nDann legen wir gleich los!
+0x1836B3: Mit neuen Pokémon hätte ich\ngewonnen!
+0x1836D9: Wenn eine PC-Box voll ist,\nwechsle einfach die Box.
+0x18371B: Der Blick, den du mir zugeworfen hast…\nSo faszinierend!
+0x183746: Sei nett!
+0x18374F: Du kannst Kämpfe vermeiden, indem\ndu dem Blick der Trainer ausweichst.
+0x183786: Glaub nicht, dass du so leicht\nvorbeikommst.
+0x1837BD: Verloren!\nVerloren! Verloren!
+0x1837CF: Ich dachte, ich könnte alles fangen.
+0x183807: Ich werde gegen dich mit den\nPokémon kämpfen, die ich gerade gefangen habe.
+0x183837: Gebraten wie ein Braten!
+0x183849: Trainierte Pokémon sind stärker\nals wilde.
+0x18387A: Aah!\nDu hast mich getroffen?
+0x183891: Ist das alles?
+0x185402: Ja!\nHier beißt was an!
+0x18541B: Tsch!\nNur ein kleiner…
+0x185432: Warte!\nMeine Angel hat sich verhakt!
+0x18544E: Sei geduldig.\nAngeln ist eine Sache der Geduld.
+0x185475: Der ist mir entwischt!
+0x185488: Mit einer besseren Angel könnte\nich gute Pokémon fangen…
+0x1855E1: Der Angel-Reinfall gegen Sonnen-Pokémon!
+0x185606: Es beißt zu sehr!
+0x185616: Man wird gut in dem, was man\nliebt.\pDu hast mich bei Pokémon geschlagen,\naber beim Angeln schlägst du mich nicht.
+0x185682: Ich liebe das Angeln, täusch dich nicht.\pAber es wäre besser, wenn ich\nauch mehr Arbeit hätte.
+0x1856D0: Das ist nicht einfach…
+0x1856DF: Alles gut.\nVerlieren stört mich nicht mehr.
+0x185A37: Wow!\nDeine Orden sind so cool!
+0x185A56: Nicht genug!
+0x185A62: Du hast diese Orden von den\nArena-Leitern bekommen. Das weiß ich!
+0x18650B: Hmm…\pDas muss der Weg nach Daherapolis sein!\pDa bin ich mir sicher!
+0x186549: Ich kann nicht verloren sein…
+0x18655A: Eine schöne Trainerin wie ich,\nverirrt sich?\pUnmöglich!\pIch weiß genau, wo ich hingehe…
+0x18664F: Wenn ich pfeife, höre ich ein Echo.
+0x18667A: Autsch!\nDas ist tragisch!
+0x1866D1: Weißt du, wohin du gehst?
+0x186707: Du musst es wissen.
+0x18671A: Man sieht es von oben nicht, aber\nes gibt einen Durchgang, der unter\ldie Brücke führt!
+0x18678B: Es wird hier immer heißer…
+0x1867C1: Keine Hitze, keine Hilfe.
+0x1867DA: Je heißer es wird, desto stärker\nwerde ich!
+0x18680C: Meine Psycho-Kräfte sagen mir\nden Sieg voraus!
+0x186841: Ich… ich habe mich geirrt?
+0x18686F: Ich muss meine Psycho-Sinne\nnoch verfeinern.\pNächstes Mal werde ich mich\nnicht irren.
+0x1868B6: Ich möchte hier nicht in den\nOzean fallen.
+0x186936: Der Ozean auf hoher See ist wirklich\ntief!
+0x186968: Ich werde weiter angeln.
+0x18697C: Ich könnte schwören, dass gerade jemand\nin den Ozean gestoßen wurde…
+0x186A22: Schau sie dir an!
+0x186A40: Sind sie nicht cool?
+0x186A55: Ich liebe es, meine Pokémon zu zeigen!
+0x18768C: Kurukkoo!\nMagst du meinen Vogelschrei?
+0x1876B3: Ich musste dich einfach necken!
+0x1876C5: Ich fange am Wochenende Meeres-Pokémon,\nweil das Meer ganz in der Nähe ist.
+0x187884: Ich liebe Schwimmen!\nUnd du?
+0x1878A5: Bauchplatscher!
+0x1878B1: Ich schwimme besser als\nMeeres-Pokémon.
+0x1878DD: Was gibt es jenseits des Horizonts?
+0x1878F8: Gluck!
+0x1878FE: Ich sehe dort drüben die\nRuinen des Nichts!
+0x187925: Ich habe versucht, nach Pokémon zu\ntauchen, und es hat geklappt!
+0x187955: Hilfe!
+0x18795B: Du kannst nur dort tauchen, wo\ndas Meer dunkel ist.
+0x187985: Ich schaue aufs Meer, um die\nschlimmen Dinge zu vergessen, die passiert sind.
+0x1879C3: Ooh!\nTraumatisierend!
+0x1879D3: Ich schaue aufs Meer, um das\nUnglück zu vergessen, das passiert ist!
+0x187A11: Oh, ich liebe dein Reittier!\nKann ich es haben, wenn ich gewinne?
+0x187A44: Oh! Ich habe verloren!
+0x187A50: Es ist noch ein weiter Weg bis zu den\nRuinen des Nichts.\pIch will zurück nach Dresco.
+0x187A9E: Schwimmen ist top!\nSonnenbrand weniger!
+0x187AC1: Schockiert!
+0x187ACA: Mein Freund wollte bis zu den\nRuinen des Nichts schwimmen.
+0x187AFA: Hey, du!\nDiese Gewässer sind tückisch!
+0x187B25: Ooh!\nGefährlich!
+0x187B35: M-meine Beine! Krämpfe!\nGluck, gluck…
+0x187B5D: Ich bin hier mit meinen Freunden geschwommen…\nIch bin müde…
+0x187B85: Ich bin erschöpft…
+0x187B94: Wenn ich auf einem Pokémon\nüber das Meer reiten müsste, hätte ich gern ein Lapras.\pLapras ist so groß, ich wette,\nes würde mich auf dem Wasser trocken halten.
+0x187E40: Das Wasser ist hier seicht.\nViele Leute schwimmen hier.
+0x187E7B: Platsch!
+0x187E83: Ich würde gern mein Pokémon reiten.\nIch wette, du bist nicht müde.
+0x187FDB: Bewundere meine Muskeln!
+0x187FF7: Weichei!
+0x187FFE: Ich hätte meine Pokémon trainieren\nsollen, nicht mich!
+0x18802E: Warum reitest du ein Pokémon?\nKannst du nicht schwimmen?
+0x18805C: Autsch!\nTorpediert!
+0x18806D: Ein Pokémon zu reiten sieht\nnach so viel Spaß aus!
+0x1880F8: Mein Freund hat mir\ngroße Perlen geschenkt.
+0x188111: Perlen.
+0x188119: Oh nein!\nMeine Perlen waren da drin!
+0x188139: Werden meine Perlen in\nCoronillo wachsen?
+0x18851F: Ich nehme an einem Triathlon teil.
+0x188543: Puh…\nPuh… Puh…
+0x188555: Ich bin völlig erschöpft! Und mir\nbleiben noch das Radrennen und der Marathon!
+0x188ED9: Ich werde dich zermalmen!
+0x188EFA: Wow!\nZu stark!
+0x188F0A: Ich habe alles gegeben. Keine Reue!
+0x188F53: Ich habe mein Bestes gegeben,\nalso keine Reue!
+0x18901B: Ich liebe den Geruch des Meeres!
+0x18908C: Wuh!\nSo cool!
+0x18909E: Diese Luft ist herrlich!
+0x1890C0: Die Trainer aus der Gegend kommen\nhierher, um zu trainieren.
+0x1890E6: Du bist in Ordnung.
+0x1890F5: Jedes Pokémon hat eine Schwäche.\nSelbst die stärksten.\pDeshalb ist es besser, Pokémon\nverschiedener Typen zu trainieren.
+0x189165: Ich liebe es, hier zu sitzen und\nden Ozean zu betrachten.
+0x1891A6: Ich bin nicht sauer!
+0x1891B3: Es ist schön, oder?
+0x189247: Hallo!\nDu wirst verlieren!
+0x189261: Meine Verfassung ist nicht die\nbeste…
+0x189281: Ich wäre gerne so gut\nwie du.
+0x1892A9: Ich hab's gespürt…\nIch musste gegen dich kämpfen!
+0x1892D9: Ich wusste, dass ich auch verlieren würde!
+0x1892EF: Wenn dein Pokémon verwirrt ist,\nwechsle es aus.\pDas ist eine gute Taktik.
+0x189364: Ich bin nicht so eifersüchtig!
+0x1893EA: Du hast gut gearbeitet!
+0x189423: Wenn du einen Kampf willst,\nbekommst du einen Kampf!
+0x189459: Du hast mich erwischt, und zwar\nrichtig!
+0x18947E: Ich sollte aufhören, Trainer\nanzugreifen und ihnen die Schuld zu geben…
+0x18961F: Was für ein herrliches Wetter!\nPerfekt für einen Kampf!
+0x18964D: Aieeeeh!
+0x189657: Bespritz mir nicht das Gesicht!\nDu ruinierst noch mein Make-up.
+0x189E42: Der salzige Geschmack des Meeres…\nDas kitzelt mir das Herz.
+0x189E72: …Schnüff, schnüff…\nEtwas riecht schlecht…
+0x189E9E: Vielleicht ist dieser Gestank\nder Geruch deiner verschwitzten Pokémon…
+0x189F63: Mama hat gesagt, ich darf nicht\nohne meinen Schwimmreifen schwimmen.
+0x189F9A: Wääh!\nWääh!
+0x189FA8: Dieses Jahr werde ich endlich\nschwimmen lernen!
+0x189FDB: Juhu, juhu!\nPokémon!
+0x189FEE: Was passiert jetzt?
+0x18A000: Habe ich gerade gewonnen?\nOder verloren?
+0x18BA86: Mein Freund ist immer beschäftigt,\ndeshalb komme ich allein zum Schwimmen.
+0x18BAC0: Awww, ich wusste, dass das passieren würde!
+0x18BAE0: Wenn ich nicht bei meinem Freund\nsein kann, verbringe ich Zeit mit den\lPokémon, die er mir geschenkt hat.
+0x18C1ED: Ich habe deine Annäherung gespürt.
+0x18C205: Gib auf…
+0x18C20E: In deiner Zukunft spüre ich, dass du\nvielen Menschen begegnen wirst.\pIch glaube, ihr werdet durch eine\nseltsame Kraft miteinander verbunden sein.
+0x18CA2F: Ich schütze die Umwelt.\nIm Gegenzug beschützt mich die Natur!
+0x18CA6F: Wow! Du bist stark!\nWie wäre es, wenn du mich beschützt?
+0x18CA9C: Von den Sternen aus gesehen ist unsere\nWelt nur ein Wassertropfen.\pAber wir wollen diesen\nWassertropfen für alle schützen.
+0x18CB16: Die Schuhe, die du trägst, sind\nverdammt cool.
+0x18CB3E: Du bist echt gut, trotz deiner\nniedlichen Art.
+0x18CB6C: Hat deine Mama dir diese tollen\nLaufschuhe gekauft?\pSie muss dich lieben.
+0x18D3D1: <0xFD><0x01>!\nDu solltest dich etwas ausruhen.
+0x18D3F8: Ah, perfekt! Du und deine\nPokémon seid in Topform.\pPass jetzt gut auf dich auf!
+0x18D43D: 9Im Fernsehen läuft ein Film.\nVier Jungen laufen auf\lGleisen.\p…Das würde ich auch gerne machen.
+0x18D43E: Im Fernsehen läuft ein Film.\nVier Jungen laufen auf einer\lBahnstrecke.\p…Ich sollte auch losgehen.
+0x18D492: Im Fernsehen läuft ein Film.\nEin Mädchen mit Zöpfen läuft\lauf einer gepflasterten Straße.\p…Das würde ich auch gerne machen.
+0x18D4F9: Ups, falsche Seite…
+0x18D50B: {PLAYER} hat Wii gespielt.\p…Okay!\nEs ist Zeit zu gehen!
+0x18D53B: Das ist ein ausgehängter Hinweis…\pWenn du dich verirrt hast, bitte um Hilfe!\nSprich mit den Leuten!
+0x18EA44: 9Das ist das Pokémon von Prof. Log.
+0x18EA65: 9Drücke Start für das Menü!
+0x18EA84: Die Speichern-Option ist im\nMenü, nutze sie oft.
+0x18EAB6: Alle Typen haben Stärken und\nSchwächen gegenüber den anderen.
+0x18EAF4: Das ist ein neuer Computer.\pOoh…\nCool.
+0x18EBE5: 9Ich erforsche Pokémon als\nAssistent von Prof. Log.
+0x18ED80: 9Prof. Log hat viele Jahre damit\nverbracht, Pokémon-Werte zu erforschen.\pViele Trainer kommen zu ihm,\num sich zu informieren.
+0x1902BF: Danke!\nGrüß Prof. Log von mir!
+0x19032C: Der Typ ganz in Schwarz von\nvorhin war gruselig.\pWer war das?
+0x190365: Du solltest dir einen Vorrat an\n<0xFC><0x01><0x06>Tränken<0xFC><0x01><0x08> zulegen.\pMan weiß nie, wann man dringend\nHeilung braucht.
+0x190450: Pokémon-Center heilen deine\nmüden und erschöpften Pokémon.\pSie bringen alle Pokémon wieder in\nbeste Gesundheit.\pDie meisten sind kostenlos, also\nzögere nicht, deine Pokémon zu heilen.
+0x1904EE: Attacken gewinnen an Stärke,\nwenn sie zum Typ des\lAnwenders passen.\pDas nennt man den Stab-Bonus\nfür gleiche Typen, oder {COLOR}ÉSTAB{COLOR}Ë.
+0x19056C: Alle Pokémon haben {COLOR}ÉTypen{COLOR}Ë,\nwie Feuer oder Wasser.\pSie bestimmen, wie gut sie im\nVergleich zu anderen Pokémon abschneiden.\pTypen geben Attacken außerdem\neinen Stärkebonus, wenn sie\lden gleichen Typ wie der Anwender haben.\pDas nennt man den Stärkebonus für\ngleiche Typen, oder kurz {COLOR}ÉSTAB{COLOR}Ë.
+0x190687: Ich weiß wirklich nicht, was ich tun soll.\pAlle paar Tage kommt dieses\nfurchtbare Pokémon in mein\lHaus und stiehlt mein Essen.\pMit einem Pokédex wüsste ich, was\ndas ist und wie ich es aufhalten kann…
+0x19073F: Manche Gegenstände gibt es nur,\num verkauft zu werden.\pWenn du einen dieser Gegenstände\nbekommst, solltest du ihn sofort verkaufen.\pIch habe sogar gehört, dass Sammler\ndiese Gegenstände noch teurer kaufen\lwürden als in\lden Pokémon-Läden.
+0x191840: Mein Großvater hat den Meteoriten\nvor Jahren überlebt!\pEr ist so cool!
+0x192079: Der Arena-Leiter Mirskle\nnutzt Pokémon, die man im\l{COLOR}ÉBlumenparadies{COLOR}Ë findet.\pGute Eis-Pokémon in der\n{COLOR}ÉStalaktitenhöhle{COLOR}Ë zu fangen, kann\ldir wirklich einen Vorteil gegen\lihn verschaffen.
+0x1929C2: Das Alles-Weg-Spray wirkt auch auf\nschwache Pokémon.\pStelle dein stärkstes Pokémon an\ndie erste Stelle der Pokémon-Liste.\pWenn dein erstes Pokémon stark ist,\nist das Alles-Weg-Spray effektiver.
+0x192A79: Versuche, so viele Arenen wie\nmöglich zu besiegen.\pDie Pokémon-Läden verkaufen mehr\nGegenstände, wenn du mehr Orden hast.
+0x193465: Diese Stadt ist ziemlich ruhig.\pNur wenige Leute mögen es, sich in\neiner Stadt mitten im Wald aufzuhalten.
+0x193A4B: Yo, yo !\nIch bin der offizielle {COLOR}ÉNamensrichter{COLOR}Ë!\pMöchtest du, dass ich die Spitznamen\ndeiner Pokémon bewerte?
+0x193AA6: Welchen Pokémon-Spitznamen soll\nich mir ansehen?
+0x193AD2: {STR_VAR_1}, richtig ?\nDas ist ein cooler Name!\pAber soll ich ihm einen noch\ncooleren Namen geben?\pWas sagst du?
+0x193B36: Cool. Also, wie soll der neue\nSpitzname lauten?
+0x193B66: Fertig! Von nun an heißt dieses\nPokémon {STR_VAR_1}!\pDieser Name ist viel besser als\nvorher! Du bist mega cool!
+0x193BD4: Ja.\nKomm wieder.
+0x193BF0: Fertig! Von nun an heißt dieses\nPokémon {STR_VAR_1}!\pEs sieht aus wie vorher, aber\nwirkt zehnmal cooler!\pDu hast echt Glück!
+0x193C82: {STR_VAR_1}, richtig ?\nWas für ein mega cooler Name!\pKümmere dich gut um {STR_VAR_1}!
+0x193CC4: Wirklich?\nDas ist ein Ei!
+0x193EC1: Ich bin der Angel-Typ!\pIch liiiebe Angeln!\nIch kann einfach nicht davon lassen.\pSag mal, angelst du auch gerne?
+0x193F2A: Genial! Ich mag deinen Stil.\nIch glaube, wir können Freunde sein.\pNimm das und angle los, junger Freund!
+0x193F81: {PLAYER} hat eine Angelrute vom\nAngel-Typ erhalten.
+0x193FAF: Angeln ist eine Lebenskunst!\nEs ist wie die schönste Poesie.\pVon den Meeren bis zu den Flüssen,\nmach einen großen Fang, mein Freund.
+0x194028: Oh…\nDas ist so enttäuschend…
+0x194045: Hallo, <0xFD><0x01>!\pNa, beißt es?
+0x19406F: Oh nein!\pIch hatte ein schönes Geschenk\nfür dich, aber du hast keinen Platz mehr!
+0x194234: Die Lust, gegen jemanden zu\nkämpfen, den man schon besiegt hat…\pHast du das schon mal gespürt?\nIch bin sicher, ja.\pIch wollte auch immer wieder gegen\nmanche kämpfen.\pDeshalb verschenke ich diese Dinger.\nHier, nimm dir eins!
+0x19430F: Mit diesem Gerät findest du\nTrainer, die eine Revanche wollen.\pDu musst allerdings seinen Akku\naufladen, um es zu benutzen.
+0x194381: Wie benutzt man den VS-Sucher?\nGanz einfach.\pBenutze ihn, piep-piep-piep, und die\nTrainer in der Nähe merken es.\pWenn ein Trainer eine Revanche will,\nsagt er es dir sofort.\pLade seinen Akku auf und benutze ihn,\nwenn du auf einer Route bist.
+0x1949CB: Hallo!\nHast du ein {STR_VAR_1}?\pMöchtest du es gegen mein\n{STR_VAR_2} tauschen?
+0x1949FD: Schade.
+0x194A0D: …Das ist kein {STR_VAR_1}.\pWenn du eins bekommst, tausch es\nbitte mit mir!
+0x194A44: Danke!
+0x194A4F: Wie geht es meinem alten <0xFD><0x03>?\pMeinem <0xFD><0x02> geht es prächtig!
+0x195471: Viele Leute in Cimistral schätzen\nfeine Delikatessen.\pGebratene Pokémon zum Beispiel.
+0x1954DD: Hallo!\nWillkommen im Einkaufszentrum\lvon Daherapolis!\pDas Schild an der Wand zeigt\ndie Aufteilung des Geschäfts.
+0x195638: 2F: Trainer-Markt\pPremium-Gegenstände für Trainer!
+0x195BBA: Pokémon-Statuswerte-Booster gibt\nes nur hier zu kaufen.\pKP-Plus erhöht die Basis-KP eines\nPokémon.\pCalcium erhöht den Basis-Sp. Angriff\neines Pokémon.\pZink stärkt die Basis-Sp. Verteidigung\neines Pokémon.\pCarbos verbessert die Basis-\nInitiative.
+0x195CA0: Ich bin wegen Pokémon-Statuswerte-\nBoostern hier.\pProtein erhöht den Basis-Angriff.\pEisen erhöht die Basis-\nVerteidigung.
+0x1962BF: Gute Nacht zusammen.
+0x1962D7: Ich bin der Sprite-Grafiker!\nIch habe dich gezeichnet!
+0x1962FB: Ich bin der Grafiker!\pIch habe die tollen Artworks und\nden Logo erstellt!
+0x196356: Ich bin der Erschaffer des Spiels!\pDeinen Pokédex zu vervollständigen\nist schwer, aber gib nicht auf!\pWenn du fertig bist, komm zu mir!
+0x1963CD: Wow! Ausgezeichnet!\nDu hast deinen Pokédex vervollständigt!\lHerzlichen Glückwunsch!\l…
+0x1964A8: Unbound-Entwicklungsraum
+0x196591: {PLAYER} hat Evoli erhalten!
+0x196984: Willkommen im Casino von Daherapolis!\pBrauchst du Spielmünzen?\nMöchtest du welche kaufen?
+0x1969DC: Nein?\nKomm ein andermal spielen!
+0x1969FB: Oh, tut mir leid.\nDu hast keine Münzbox.
+0x196A26: Ups!\nDeine Münzbox ist voll.
+0x196A46: Du kannst diese Münzen nicht bezahlen.
+0x196A62: Danke.\nHier sind deine Münzen!
+0x196A82: Behalt das für dich.\pMan sagt, diese Automaten seien\ntruquiert.
+0x196AC7: Ich glaube, diese Automaten haben\nunterschiedliche Gewinnchancen.
+0x196AF3: Kleiner, willst du spielen?
+0x196B0D: <0xFD><0x01> erhält 10 Münzen\nvon dem Mann.
+0x196B30: Du brauchst meine Münzen nicht!
+0x196B49: Gewinne kommen und gehen.\nNichts ist garantiert.
+0x196B7B: Diese Spielautomaten…\nGewinnen oder Verlieren ist Glückssache.
+0x196CFE: Glücksspiel ist beängstigend!\nMan wird so schnell süchtig!
+0x196D2B: Hallo?\nWillst du Münzen?
+0x196D47: <0xFD><0x01> erhält 20 Münzen\nvon dem netten Herrn.
+0x196D6F: Du hast jede Menge Münzen!
+0x196D87: Mist! Ich brauche mehr Münzen\nfür das Pokémon, das ich will!
+0x196DB7: He, was denn? Du lenkst mich ab!\nHier, Münzen, und jetzt ab!
+0x196DF8: <0xFD><0x01> erhält 20 Münzen\nvon dem Mann.
+0x196E1B: Du hast doch schon jede Menge\neigene Münzen!
+0x196E40: Der Trick ist, die Walzen genau\nzu beobachten.
+0x196F0D: Eine Münzbox wird benötigt…
+0x196F26: Ups!\nKeine Münzbox!
+0x196F46: Ein Spielautomat!\nMöchtest du spielen?
+0x196F64: AUSSER BETRIEB\nEr ist kaputt.
+0x196F81: ESSENSPAUSE\nEr ist reserviert.
+0x196FA0: Vergessene Schlüssel!\nSie kommen zurück.
+0x19703E: Eine Münzbox wird benötigt…
+0x197057: Wir tauschen deine Münzen\ngegen Preise.
+0x19707A: Welchen Preis möchtest du?
+0x19709D: Also, möchtest du {STR_VAR_1}?
+0x1970B2: Okay, eine TM von {STR_VAR_2},\ndas möchtest du?
+0x1970D5: Tut mir leid, du brauchst mehr\nMünzen als das.
+0x19745D: Du solltest dafür Platz\nschaffen.
+0x197873: 9Arena von Daherapolis\nArenaleiter: Galavan\pGewinner:\n{RIVAL}
+0x1978AC: Pokémon-Arena von Daherapolis\nArenaleiter : Galavan\pSiegreiche Trainer :\n{RIVAL}, {PLAYER}
+0x1979C1: Pff…\pIch hab mein ganzes Geld im\nCasino verzockt!\pSieht so aus, als bräuchte ich\ndas nicht mehr!
+0x197A38: {PLAYER} hat eine Münzbox von\ndem Typen erhalten.
+0x197A5E: Schaff Platz dafür!
+0x197A72: Ich dachte immer, ich könnte\ngewinnen…
+0x1980BC: Ich bin sicher, ich habe gesehen,\nwie der Verkäufer die Kasse bestiehlt…
+0x198BBA: 9Eines Tages werde ich ein Ninja sein!\pMeine Eltern kämpfen mit Kraft,\naber ich werde heimlich sein!
+0x198C1F: Huah! Schieb die Felsen mit\nroher Kraft weg!\pNimm das!
+0x19918E: Ich bin der große Bruder des\nAngel-Gurus.\pIch liiiebe Angeln!\nIch kann einfach nicht davon lassen.\pSag mal, angelst du auch gerne?
+0x199207: Genial! Ich mag deinen Stil.\nIch glaube, wir können Freunde sein.\pNimm das und angle los, junger Freund!
+0x19925E: {PLAYER} hat eine Gute Angel vom\nBruder des Angel-Gurus erhalten.
+0x199296: Angeln ist eine Lebenskunst!\nEs ist wie die schönste Poesie.\pEine Alte Angel fängt nur\nKarpador, was?\pAber mit einer Guten Angel kannst\ndu viel bessere Pokémon fangen.
+0x199337: Oh…\nSo enttäuschend…
+0x199354: Hallo, {PLAYER}!\pBeißt es gut?
+0x19937E: Oh, nein!\pIch hatte ein Geschenk für dich,\naber du hast keinen Platz!
+0x1993B9: Äh, ja, ich bin der Attacken-\nVergesser.\pIch kann Pokémon Attacken\nvergessen lassen.\pMöchtest du, dass ich das mache?
+0x199421: Welches Pokémon soll eine\nAttacke vergessen?
+0x199445: Welche Attacke soll vergessen werden?
+0x199465: {STR_VAR_1} kennt nur eine\neinzige Attacke…
+0x199485: Hmm! {STR_VAR_2} von {STR_VAR_1}?\nSoll ich es das vergessen lassen?
+0x1994B1: Es hat perfekt geklappt!\p{STR_VAR_1} hat {STR_VAR_2}\nvollständig vergessen.
+0x1994EA: Komm wieder, wenn es weitere\nAttacken zu vergessen gibt.
+0x19951F: Was? Kein Ei sollte eine\nAttacke kennen.
+0x199BB3: Diese Wand sieht brüchig aus!\pMit <0xFD><0x03> <0xFD><0x02> die\nADM aufladen, um sie einzureißen?
+0x19A4F7: 9Diese Stadt hat schon immer\nAlbtraum-Probleme.\pWenn du dir einen Ort zum Leben\naussuchen müsstest, wäre es sicher\ldort besser, anderswohin zu gehen.
+0x19A5BD: 9Musst du den Berg wieder\nhinunter?\pMein Abra und ich bringen dich\ngerne nach unten.\pWas sagst du?\nMöchtest du teleportiert werden?
+0x19A650: Achtung, du wirst später Kraft\nbrauchen, um weiterzukommen.
+0x19A79F: 9Verkaufen die hier Angriff+?\pDas mag ich, das erhöht den\nAngriff im Kampf.
+0x19A7F1: Ein paar Gegenstände extra zu\nhaben, schadet nie. Man weiß ja nie.
+0x19B86A: Fast geschafft!
+0x19B8B9: Ich bin nicht zu jung für Mel!\nLass mich in Ruhe!
+0x19BA45: Falscher Weg!
+0x19BAB4: Mels Schönheit muss gekämmt\nwerden!
+0x19BB49: Sackgasse!
+0x19BB53: Diese Camperin hat gelogen, das\nist nicht der richtige Weg!
+0x19BBB3: Du liebst dieses Arena-Design,\nhein?\pEs ist so gut, ein Genie muss\nes sich ausgedacht haben!
+0x19BC57: Du bist fast bei Mel angekommen!\nNoch ein Stück!
+0x19BDFE: Pokémon-Arena von Rivapolis\nArenaleiterin : Mel\pSiegreiche Trainer :\n{RIVAL}
+0x19BE37: Pokémon-Arena von Rivapolis\nArenaleiterin : Mel\pSiegreiche Trainer :\n{RIVAL}, {PLAYER}
+0x19BF8F: Der Maxrepel verhindert, dass\nschwache Pokémon auftauchen.\pEr hält länger an als der Superrepel.
+0x19BFF1: Mit dem {COLOR}ÉFallorden{COLOR}Ç kannst\ndu {COLOR}ÉHyperbälle{COLOR}Ç kaufen!\pSie sind viel besser zum Fangen\nals Superbälle.
+0x19C0B4: Ich habe gehört, dass Leute auf der\n{COLOR}ÉRoute 9{COLOR}Ë Unfug treiben.
+0x19C0F7: Mit jedem Schritt werden deine\nPokémon dir mehr zugetan.\pWenn du ein Pokémon in der Pension\nhast, wird es auch stärker.
+0x19C177: Hast du das gehört?\pJemand hat das Problem mit den\nUnruhestiftern auf Route 9 gelöst!
+0x19E9E5: Hallo!\nIch bin ein Assistent von Prof. Log.\pWenn dein Pokédex {COLOR}É{STR_VAR_1}{COLOR}Ç\nSpezies enthält, muss ich dich belohnen.\lIch werde dir eine Belohnung geben.\pAlso, {PLAYER}, sag mir.\pHast du Daten zu\n{COLOR}É{STR_VAR_1}{COLOR}Ç Pokémon-Spezies?
+0x19EABE: zu mindestens {STR_VAR_1} Arten\nvon Pokémon?
+0x19EAE4: Super! Du hast {COLOR}É{STR_VAR_3}{COLOR}Ç\nSpezies gefangen!\pHerzlichen Glückwunsch!\nHier!
+0x19EB59: Manche Gegenstände am Boden sind versteckt.\nBenutze den {COLOR}ÉItemfinder{COLOR}Ç, um sie zu sehen.\pIn deiner Nähe.\nDas Gerät ist etwas eingeschränkt.\pEs kann dir nicht die genaue\nPosition zeigen.\pEs zeigt nur die Richtung des\nGegenstands an.\pNutze es zur Orientierung und such\ndann den Bereich von Hand ab.
+0x19EFE0: Ich bin der kleine Bruder des\nAngel-Gurus.\pIch liiiebe Angeln!\nIch kann einfach nicht davon lassen.\pSag mal, angelst du auch gerne?
+0x19F05B: Genial! Ich mag deinen Stil.\nIch glaube, wir können Freunde sein.\pNimm das und angle los, junger Freund!
+0x19F0B2: {PLAYER} hat eine Superangel vom\nBruder des Angel-Gurus erhalten.
+0x19F0EB: Angeln ist eine Lebenskunst!\nEs ist wie die schönste Poesie.\pVon den Meeren bis zu den Flüssen,\nmach einen großen Fang, mein Freund.\pJetzt habe ich eine Bitte.\pWenn du mit dieser Angel einen großen Karpador fängst,\nwill ich ihn sehen.\pIch liebe Angeln genauso sehr wie das Betrachten\nriesiger Karpador.
+0x19F1FA: Oh…\nSo enttäuschend…
+0x19F217: Hallo, {PLAYER}!\nHast du geangelt?\pProbier die Superangel in\nirgendeinem Gewässer aus.\pJe nach Ort findest du\nunterschiedliche Pokémon.\pUnd vergiss nicht, mir riesige\nKarpador zu bringen.
+0x19F2DB: Oh? {PLAYER}?\nSieh mal, ein Karpador!\pLass mich das sehen, schnell!
+0x19F31B: …Wow!\n<0xFD><0x03> Zoll!\pDu schätzt wirklich die feinen und\npoetischen Seiten des Angelns!\pDu musst das annehmen.\nIch bestehe darauf!
+0x19F395: Ich freue mich schon auf noch\ngrößere Rekorde von dir!
+0x19F3CB: Hä?\n{STR_VAR_2} Zoll?\pDas ist dieselbe Größe wie der,\nden ich vorher gesehen habe.
+0x19F40A: Hmm…\nDieser hier hat {STR_VAR_2} Zoll.\pEr kommt nicht an den\n{STR_VAR_3}-Zöller heran, den du gebracht hast.
+0x19F468: Äh… Das sieht nicht sehr nach\neinem Karpador aus.
+0x19F494: Oh, nein!\pIch hatte ein Geschenk für dich,\naber du hast keinen Platz.
+0x19F4CF: Der gigantischste Karpador, den\nich je gesehen habe…\p{STR_VAR_3} Zoll!
+0x19F50C: Das ist eine Art leere Tafel.\pSie hat Felder, um Rekorde\neinzutragen.
+0x1A1B8E: Eine zusätzliche Seite für die\nKARTE erhalten!
+0x1A231B: TRI-PASS erhalten!
+0x1A2328: TRI-PASS!
+0x1A2B88: Ich bin der Attackenmeister.\pIch kenne alle Attacken, die sie\nbeim Wachsen erlernen.\pIch bin außerdem ein Fan von Herzschuppen.\pBring mir eine.\pWenn du das tust, bringe ich einem\nPokémon eine Attacke bei.
+0x1A2C63: Oh! Das ist eine echte Herzschuppe!\nLass mich raten, du möchtest, dass\pich eine Attacke beibringe?\n
+0x1A2CC3: Welches Pokémon braucht Unterricht?
+0x1A2CE1: Welche Attacke soll ich beibringen?
+0x1A2CFC: Tut mir leid…\pSieht so aus, als hätte ich keine\nAttacke, die ich diesem Pokémon beibringen könnte.
+0x1A2D43: Also, ich brauche eine Herzschuppe.\nWas gibst du mir?
+0x1A2D85: {PLAYER} hat im Austausch eine\nHerzschuppe gegeben.
+0x1A2DE0: Wenn deine Pokémon etwas lernen\nsollen, brauche ich eine Herzschuppe.
+0x1A2E20: Hä? Ich kann einem Ei keine\nAttacke beibringen.
+0x1A505B: Kommt bald wieder vorbei!
+0x1A5075: {PLAYER} hat den PC eingeschaltet.
+0x1A508A: Welcher PC soll benutzt werden?
+0x1A50A7: PC von ??? benutzt.
+0x1A50BE: Lagerungssystem geöffnet.
+0x1A50DD: PC von {PLAYER} benutzt.
+0x1A50EF: PC von Ayla benutzt.
+0x1A5103: Willkommen im Pokémon-Kabelklub-\nTauschzentrum.
+0x1A5133: Willkommen im Pokémon-Kabelklub-\nKolosseum.
+0x1A5160: Willkommen bei der Kabelklub-\nZeitkapsel.
+0x1A5190: Kommt wieder vorbei!
+0x1A51A3: Willkommen!\pWir haben heute ein\nSonderangebot!
+0x1A51D0: {PLAYER}{KUN}, willkommen!\pWas kann ich für dich tun?
+0x1A51F6: {STR_VAR_2} erhalten!
+0x1A5207: Der Beutel ist voll…
+0x1A5218: {PLAYER} hat {STR_VAR_2} in der\n{STR_VAR_3} verstaut.
+0x1A5231: {FD01} findet {FD03}!
+0x1A5242: Schade!\nDer Beutel ist voll…
+0x1A525C: <0xFD><0x01> hat\n<0xFD><0x02> <0xFD><0x03> gefunden!
+0x1A526C: {PLAYER} hat die Münzen in der\nMünzbox verstaut.
+0x1A5294: Schade!\nDie Münzbox ist voll…
+0x1A52B4: Schade!\nEs gibt nichts, um sie zu verstauen…
+0x1A52DD: <0xFD><0x01> hat\n<0xFD><0x02> <0xFD><0x03>(s) gefunden!
+0x1A52F0: {STR_VAR_2} erhalten!
+0x1A5301: Schade! Es ist kein Platz mehr\nfür ein weiteres {STR_VAR_2}…
+0x1A532F: <0xFD><0x03> wurde zum PC\nübertragen.
+0x1A5375: Ein Gegenstand aus dem Cube V3\nkann Select für Schnellzugriff zugewiesen werden.
+0x1A5420: {PLAYER} hat den PC eingeschaltet.
+0x1A5446: Dem {STR_VAR_2}, das du erhalten\nhast, einen Spitznamen geben?
+0x1A5483: Willkommen im Pokémon-Center!\pMöchtest du, dass ich deine Pokémon\nwieder auf Vordermann bringe?
+0x1A54E1: In Ordnung! Ich nehme deine\nPokémon für einen Moment.
+0x1A5511: Pass auf dich auf!
+0x1A552B: Danke für deine Geduld!\nDeine Pokémon sind\nwieder völlig gesund!
+0x1A556E: Das Wasser ist dunkelblau…\nMöchtest du Surfer einsetzen?
+0x1A55A5: {STR_VAR_1} setzt Surfer ein!
+0x1A55B3: Die Strömung ist viel zu stark!\nSurfer kann hier nicht eingesetzt werden…
+0x1A561A: Es tut mir wirklich leid.\nDer Kabellose Pokémon-Klub wird\lgerade gewartet.
+0x1A5667: Er scheint gerade gewartet zu\nwerden…\n
+0x1A5690: {PLAYER} hat\n{STR_VAR_1} übergeben.
+0x1A56A7: Möchtest du diesem <0xFD><0x02>\neinen Spitznamen geben?
+0x1A5700: {PLAYER} hat ein {STR_VAR_2} tief\naus dem Boden ausgegraben.
+0x1A58A7: Mal sehen… Oh je! Du hast erst\n{COLOR}É{STR_VAR_3}{COLOR}Ç Spezies gefangen!\lDu brauchst\p{COLOR}É{STR_VAR_1}{COLOR}Ç.
+0x1A5909: …Oh. Ich verstehe. Wenn du\p{COLOR}É{STR_VAR_1}{COLOR}Ç Spezies hast,\nkomm wieder.
+0x1A594D: Oh! Ich sehe, du hast keinen\nPlatz für {STR_VAR_2}.
+0x1A597B: Ich suche das Pokémon\n{STR_VAR_1}!\pMöchtest du eins gegen mein\n{STR_VAR_2} tauschen?
+0x1A59B6: Awww!\nNa gut, dann eben nicht…
+0x1A59C6: Was?\nDas ist kein {STR_VAR_1}!
+0x1A59DA: Danke!
+0x1A59E7: Ist er nicht toll, mein altes {STR_VAR_2}?
+0x1A5AD5: 9Hallo!\nHast du ein {STR_VAR_1}?\pWillst du es gegen mein\n{STR_VAR_2} tauschen?
+0x1A5B08: Schade.
+0x1A5B18: …Das ist kein {STR_VAR_1}.\nWenn du eins bekommst, tausch es\pmit mir.
+0x1A5B4A: Danke, du bist ein wahrer Freund!
+0x1A5B60: Na, mein früheres {STR_VAR_2}?\nMeinem {STR_VAR_1} geht es super!
+0x1A5B88: Volltreffer!\nDie Magnetkarte hat die Tür geöffnet!
+0x1A5BC5: 9Verbindung zum PC von Prof. Log…\pVerbindung zum Bewertungssystem\ndes Pokédex…
+0x1A5C03: Möchtest du eine Bewertung von\ndeinem Pokédex?
+0x1A5C2E: Verbindung zum PC von Prof. Log getrennt.
+0x1A5C4D: Eine Stimme ertönt:\n«Lauf nicht weg!»
+0x1A5CDF: Die Tür ist offen…
+0x1A5CF1: {STR_VAR_2} wurde zum PC\nvon ??? übertragen.\pEs wurde in\nBox {STR_VAR_1} abgelegt.
+0x1A5D31: {STR_VAR_2} wurde zum PC\nvon Ayla übertragen.\pEs wurde in\nBox {STR_VAR_1} abgelegt.
+0x1A5D6E: Box {STR_VAR_3} im PC\nvon ??? war voll.\p{STR_VAR_2} wurde in\nBox {STR_VAR_1} übertragen.
+0x1A5DB1: Box {STR_VAR_3} im PC\nvon Ayla war voll.\p{STR_VAR_2} wurde in\nBox {STR_VAR_1} übertragen.
+0x1A5DF1: {PLAYER} hat\n{STR_VAR_1} erhalten!
+0x1A5E31: Kein Platz mehr für Pokémon!\pDie Pokémon-Boxen sind voll und\nkönnen nichts mehr aufnehmen!
+0x1A5E89: Zuerst solltest du deine Pokémon\nvollständig heilen.
+0x1A5EC0: Deine Pokémon sind jetzt\nwieder topfit!\pWenn ihre KP sinken, komm\nohne Zögern zu uns zurück.\pWenn du weit wegreist, kauf dir\nTränke im Pokémon-Shop\lbevor du aufbrichst.\pViel Glück, Trainer!
+0x1A5F9B: Deine Pokémon sind\nwieder topfit!\pViel Glück, Trainer!
+0x1A5FDF: {PLAYER}!\nWillkommen zu Hause.\pSieht aus, als hättest du einiges\nerlebt.\pDu solltest dich vielleicht ausruhen.\n
+0x1A6046: Ah, perfekt! Du und deine Pokémon\nseht viel besser aus.\pWenn die KP deiner Pokémon niedrig sind,\nheile sie in einem\p{COLOR}ÉPokémon-Center{COLOR}Ç!\nDas nächste von hier ist in\p{COLOR}ÉBélenbourg{COLOR}Ç.\nOder kauf\p{COLOR}ÉTränke{COLOR}Ç im\n{COLOR}ÉPoké-Markt{COLOR}Ç!\pEs ist immer gut, sich auf das\nSchlimmste vorzubereiten.\pMach mich stolz, Schatz!\pPass auf dich auf!
+0x1A6196: 9{PLAYER} hat keine kampffähigen\nPokémon mehr!\p{PLAYER} gerät in Panik und verliert ¥{STR_VAR_1}…\p…\p{PLAYER} wird ohnmächtig!
+0x1A6197: <0xFD><0x01> hat keine kampffähigen\nPokémon mehr!\p<0xFD><0x01> gerät in Panik, verliert ¥<0xFD><0x02>…\p…\p<0xFD><0x01> ist ohnmächtig geworden!
+0x1A61E5: {PLAYER} hat keine kampffähigen\nPokémon mehr!\p{PLAYER} wird ohnmächtig!
+0x1A6211: Hallo!\nKann ich dir helfen?
+0x1A622C: Hier ist ein Fragebogen.\nMöchtest du ihn ausfüllen?
+0x1A6265: Danke, dass du dir die Zeit genommen hast,\num unseren Fragebogen auszufüllen.\pDeine Antworten dienen uns\nkünftig als Referenz.
+0x1A62D3: Oh, hallo!\nKennst du diese Wörter?\pDas bedeutet, dass du das\nMYSTERIUMSGESCHENK kennst.\pAb jetzt solltest du\nMYSTERIUMSGESCHENKE erhalten!
+0x1A6359: Nachdem du gespeichert hast, kannst\ndu auf das MYSTERIUMSGESCHENK zugreifen.
+0x1A6393: Danke, dass du das\nMYSTERIUMSGESCHENK-System nutzt.
+0x1A63C4: {STR_VAR_1} ist weggeflogen!
+0x1A63E8: {PLAYER} hat {STR_VAR_2} gefunden!\nEs enthält {STR_VAR_1}.
+0x1A6447: 9Gyaoo!
+0x1A6448: Gyaoo!
+0x1A6CA2: 9Dein Pokédex-Fortschritt beträgt:\n{STR_VAR_1} Pokémon gesehen und\p{STR_VAR_2} Pokémon\nbesessen.\p{FONT_NORMAL}Meinung von Prof. Log:
+0x1A6D17: Du hast noch viel vor dir.\pDurchsuche jeden Grashalm auf der\nSuche nach Pokémon!
+0x1A6D6D: Sieht so aus, als wärst du auf\ndem richtigen Weg!\pIch habe einem meiner HELFER eine\nVM BLITZ gegeben. Geh sie holen!
+0x1A6DDF: Deinem Pokédex fehlt noch etwas\nan Umfang!\pVersuch, weitere Pokémon-Arten\nzu fangen!
+0x1A6E36: Gut, man sieht, dass du dich\nanstrengst!\pIch habe einem meiner HELFER einen\nITEMFINDER gegeben. Geh ihn holen!
+0x1A6EA4: Dein Pokédex macht gute Fortschritte!\nIch habe einem meiner HELFER eine RUNENMÜNZE\pgegeben. Geh sie holen!\n
+0x1A6F0B: Ah, du hast endlich 50\nArten überschritten!\pIch habe einem meiner HELFER einen\nEP-TEILER gegeben. Geh ihn holen!
+0x1A6F71: Hoho! Das wird ja ein ziemlich\nrespektabler Pokédex!
+0x1A6FAB: Sehr gut!\pIch glaube, du wirst noch mehr\nPokémon beim Angeln fangen!
+0x1A6FF1: Fantastisch! Lass mich raten…\nDu sammelst gerne, oder?
+0x1A7031: Beeindruckend!\nDas muss hart gewesen sein!
+0x1A7063: Du hast 100 Arten erreicht!\nIch kann es kaum glauben!
+0x1A70A5: Du hast sogar die Entwicklungen\nder Pokémon! Super!
+0x1A70D8: Ausgezeichnet! Tausche mit Freunden,\num noch mehr zu bekommen!
+0x1A7108: Außergewöhnlich!\nDu bist ein echter Profi geworden!
+0x1A7137: Ich habe nichts mehr zu sagen!\nDu bist jetzt der Pokémon-PROFESSOR!
+0x1A7175: Dein Pokédex ist vollständig!\nHerzlichen Glückwunsch!!
+0x1A71AA: Und dein Nationaler Pokédex zeigt:\p{STR_VAR_1} Pokémon gesehen und\n{STR_VAR_2} Pokémon besessen.
+0x1A71EE: Ich kann es kaum erwarten, dich den\nNationalen Pokédex vervollständigen zu sehen!
+0x1A722F: Endlich…\pDu hast den Pokédex endlich vervollständigt!\nDas ist großartig!\pDas ist wirklich eine Meisterleistung!\n
+0x1B1D7C: 9Das ist ein Pokémon-Drucker!\pEr kann deine Pokémon auf die\nRückseite deiner Trainerkarte drucken.\pDas kostet nur ¥50.\nMöchtest du es versuchen?
+0x1B1E07: Du hast nicht genug Geld.
+0x1B1E24: Wähle die Art des Drucks.
+0x1B1E42: Ein großes Lächeln fürs Foto!\nDrei… Zwei… Eins…\pBlitz!
+0x1B1E7D: Dein Pokémon-Ausdruck ist fertig!\nSchau auf deiner Trainerkarte nach.
+0x1BC310: 9Willkommen im Pokémon-Link-Club.\nWelchen Dienst möchtest du nutzen?\p\n
+0x1BC35E: Welchen Dienst möchtest du nutzen?\n
+0x1BC388: Tausche Pokémon mit einem anderen\nSpieler über ein GBA-Game-Link-Kabel.
+0x1BC3C7: Du kannst gegen einen anderen Trainer\nüber ein GBA-Game-Link-Kabel kämpfen.
+0x1BC409: Für einen Doppelkampf brauchst du\nmindestens zwei Pokémon.
+0x1BC442: Für einen Tausch musst du\nmindestens zwei Pokémon dabei haben.
+0x1BC47C: Ein Pokémon, das die Beere\n{STR_VAR_1} trägt, kann nicht getauscht werden.
+0x1BC4AC: Bitte warte.\n… Taste B: Abbrechen
+0x1BC4CE: Wenn alle bereit sind…\nTaste A: Bestätigen\lTaste B: Abbrechen
+0x1BC50D: Verbindung mit {STR_VAR_1} Spielern starten.\nTaste A: Bestätigen\lTaste B: Abbrechen
+0x1BC54C: Warte auf Verbindung…\n… Taste B: Abbrechen
+0x1BC590: Komm bitte herein.
+0x1BC59E: Ich bringe dich zu deinem\nRaum.
+0x1BC5C0: Jemand ist noch nicht bereit, sich zu verbinden.\pKomm wieder, wenn alle\nbereit sind.
+0x1BC615: Entschuldigung, Verbindungsfehler…\nSetze zurück und versuch es erneut.
+0x1BC64E: Es scheint, dass die Partner\nunterschiedliche Entscheidungen getroffen haben.
+0x1BC68A: Danke, dass du wiederkommst.
+0x1BC6A1: Die Anzahl der Teilnehmer ist\nfalsch.
+0x1BC6CA: Der Einzelkampf-Modus kann nicht\nvon {STR_VAR_1} Spielern gespielt werden.
+0x1BC700: Der Doppelkampf-Modus kann nicht\nvon {STR_VAR_1} Spielern gespielt werden.
+0x1BC736: Für diesen Kampfmodus werden\nvier Spieler benötigt.
+0x1BC76B: Bitte überprüft die Anzahl der\nSpieler und beginnt erneut.
+0x1BC7A1: Die Verbindung wird getrennt, wenn ihr\nden Raum verlasst. Einverstanden?
+0x1BC7E2: Verbindung wird beendet…\nWir bringen dich aus dem\lRaum zurück. Bitte warte.
+0x1BC827: Dieser Trainer ist zu beschäftigt,\num es zu bemerken…
+0x1BC84B: Ja! Ich konnte die Trainerkarte\nvon {STR_VAR_1} sehen!
+0x1BC874: Ja! Ich konnte die Trainerkarte\nvon {STR_VAR_1} sehen!\pDas ist eine {STR_VAR_2}-Karte!
+0x1BC8AD: Bitte setzt euch und beginnt\neuren Kampf.
+0x1BC8DA: Bitte setzt euch und beginnt\neuren Tausch.
+0x1BC918: Die Daten der Trainerkarte\nwerden überschrieben.
+0x1BC943: Bis bald wieder!
+0x1BC95C: Es tut mir leid.\pWir sind noch nicht bereit für\nTausche mit Trainern aus einer\landeren Region…
+0x1BC9C0: Der andere Trainer ist nicht bereit.
+0x1BC9E0: Du hast mindestens ein Pokémon,\ndas nicht mitgenommen werden kann.
+0x1BCA13: Der Funkadapter ist nicht\nrichtig angeschlossen.
+0x1BCA43: Die Teilnehmer werden gebeten,\nsich am Empfang zu melden.
+0x1BCA95: Hier kannst du deine Pokémon\nmit einem anderen Trainer tauschen.
+0x1BCACB: Du kannst hier gegen deine Freunde kämpfen.\n
+0x1BCAF2: Zwei bis fünf Trainer können\ngemeinsam BEERENPULVER herstellen.
+0x1BCB42: Bricht das gewählte MENÜ-Element ab.
+0x1BCB81: Um die Beerenmühle zu nutzen,\nbraucht ihr mindestens eine Beere.
+0x1BCBC3: Um den Unions-Raum zu betreten,\nbrauchst du mindestens zwei Pokémon.
+0x1BCC00: Kein Pokémon, das die Beere {STR_VAR_1}\nträgt, darf den Unions-Raum betreten.
+0x1BCC3A: Hier ist der Unions-Raum des\nPokémon-Funk-Clubs.\pLeider ist euer Funkadapter\nnicht richtig angeschlossen.\pBitte kommt später wieder.
+0x1BCCCA: Sieht so aus, als würde {STR_VAR_1}\ngerade spielen.\lLos geht's!
+0x1BD28D: Willkommen in der Direkt-Ecke des\nPokémon-Funk-Clubs.\pHier kannst du direkt mit deinen\nFreunden interagieren.\pWelchen Raum möchtest du betreten?\n
+0x1BD317: Möchtest du Pokémon tauschen?
+0x1BD338: Welchen Kampfmodus möchtest du\nspielen?
+0x1BD362: Möchtest du das\nBeerenmühlen-System nutzen?
+0x1BD390: Es gibt drei Kampfmodi.\pDer Einzelkampf ist für zwei\nTrainer mit mindestens einem Pokémon.\pJeder Trainer hat ein Pokémon\ngleichzeitig im Kampf.\pDer Doppelkampf ist für zwei\nTrainer mit mindestens zwei Pokémon.\pJeder Trainer schickt zwei\nPokémon in den Kampf.\pDer Mehrkampf ist für vier\nTrainer mit mindestens einem Pokémon.\pJeder Trainer hat ein Pokémon\ngleichzeitig im Kampf.
+0x1BD51B: Entscheidet, wer von euch beiden\nAnführer wird.\pDer andere muss dann\n«Gruppe beitreten» wählen.
+0x1BD582: Entscheidet, wer von euch vieren\nGruppenanführer wird.\pDie anderen müssen dann\n«Gruppe beitreten» wählen.
+0x1BD5F1: Entscheidet, wer Gruppenanführer wird.\nDie anderen müssen dann\p«Gruppe beitreten» wählen.\n
+0x1BD65B: Willkommen im Unions-Raum des\nPokémon-Funk-Clubs.\pHier kannst du direkt mit anderen\nTrainern interagieren, manchmal\lauch Fremden.\pMöchtest du den Raum betreten?
+0x1BD706: Die Trainer im Unions-Raum sind\ndie, die bereits in deiner Nähe sind.\l\pDort kannst du vieles tun,\nwie zum Beispiel Grüße austauschen.\pDu kannst zwei Pokémon bei\nNr. 30 für einen Eins-gegen-eins-Kampf anmelden.\pDu kannst an einem Chat mit\nzwei bis fünf teilnehmen.\pOder ein Pokémon zum\nTausch anmelden.\pMöchtest du den Raum betreten?
+0x1BD86A: Ich hoffe, ihr werdet eine schöne\nZeit im Unions-Raum verbringen.
+0x1BD898: Hallo!\nIch heiße Teala.\pDas ist dein erstes Mal hier.\nIch zeige dir, wie das\pkabellose Kommunikationssystem\nfunktioniert.\pZuerst muss ich dir dieses\nStockwerk unseres Pokémon-Centers zeigen.\pHier entlang, bitte.
+0x1BD966: Im oberen Stockwerk gibt es zwei\nRäume.\pZuerst der Raum links.\nDas ist der Unions-Raum.\pDu kannst dich mit Trainern\nin deiner Nähe verbinden, die sich\lim Unions-Raum befinden.\pMit ihnen kannst du reden,\nkämpfen und tauschen.\pDann ist der Raum rechts die\nDirekt-Ecke.\pHier kannst du Pokémon tauschen\noder mit deinen Freunden kämpfen.\pWenn der Funkadapter nicht\nverbunden ist, kannst du dich immer noch\lmit einem GBA-Game-Link-Kabel verbinden.\pIn diesem Fall musst du zur\nDirekt-Ecke gehen.\pGenieße das\nkabellose Kommunikationssystem.
+0x1BDB85: Hallo, {PLAYER}!\pIch bin's, Teala, die Gastgeberin des 1.\nStocks des Pokémon-Centers.\pWolltest du mich etwas über\ndie Verbindung fragen?
+0x1BDBF8: Lasst mich euch erklären, wie\nder Pokémon-Funk-Club funktioniert.\pHier, im obersten Stockwerk, gibt es\nzwei Räume.\pZuerst der Raum links.\nDas ist der Unions-Raum.\pIhr könnt euch mit Trainern\nin eurer Nähe verbinden, die sich\lebenfalls im Unions-Raum befinden.\pMit ihnen könnt ihr reden,\nkämpfen und tauschen.\pDann ist der Raum rechts\ndie Direkt-Ecke.\pDort könnt ihr Pokémon tauschen\noder mit euren Freunden kämpfen.\pManchmal findet ihr eure Freunde\nweder im Unions-Raum noch\lin der Direkt-Ecke.\pIn diesem Fall solltet ihr euch\neuren Freunden annähern.\pWenn der Funkadapter nicht\nverbunden ist, könnt ihr euch verbinden\lmit einem GBA-Game-Link-Kabel.\pIn diesem Fall müsst ihr\nzur Direkt-Ecke gehen.\pIch hoffe, ihr genießt das\nkabellose Kommunikationssystem.
+0x1BDEDF: Genieße das Funk-System.\n
+0x1BDF94: Dieser Baum sieht so aus, als\nkönnte man ihn fällen!\pMöchtet ihr Zerschneider einsetzen?
+0x1BDFD7: {FD02} setzt {FD03} ein!
+0x1BDFE3: Sieht so aus, als könnte dieser\nBaum gefällt werden!
+0x1BE09D: Dieser Felsen sieht brüchig aus.\nMöchtet ihr Steinhieb einsetzen?
+0x1BE0E2: Das ist ein rauer Felsen, aber ein\nPokémon kann ihn sicher zerschlagen.
+0x1BE1FA: {STR_VAR_1} setzt Stärke ein!\pDie Stärke von {STR_VAR_1} kann\nFelsen bewegen!
+0x1BE244: Das ist ein großer Felsen, aber\nein Pokémon kann ihn schieben.
+0x1BE284: Stärke kann Felsen\nbewegen.
+0x1BE30A: Eine Wasserwand stürzt mit\nlautem Getöse herab.
+0x1BE33F: Das ist ein großer Wasserfall.\nMöchtet ihr Wasserfall einsetzen?
+0x1BE378: {STR_VAR_1} setzt Wasserfall ein.
+0x1BE469: Das Meer ist hier tief.\nMöchtest du Taucher einsetzen?
+0x1BE49B: {FD02} setzt Taucher ein.
+0x1BE4A9: Ein Licht scheint von oben herab.\nVielleicht kann ein Pokémon wieder auftauchen.
+0x1BE4EF: Ein Licht scheint von oben herab.\nMöchtest du Taucher einsetzen?
+0x1BE52F: Da oben ist ein Hindernis.\nTaucher kann hier nicht eingesetzt werden.
+0x1BE56D: Sieht so aus, als wäre hier nichts…
+0x1BF017: Erzähl mir etwas über dich.\nWie sieht dein Profil aus?
+0x1BF053: Ein Profil besteht aus vier Wörtern\noder Sätzen.\pEs gibt jede Menge Wörter, um\ndein Profil zu erstellen.\pDie Wörter und Sätze sind in\nmehreren praktischen Gruppen sortiert.\pWähle zuerst eine Gruppe, dann ein\nWort oder einen Satz.\p…Es ist einfacher, als es klingt.\nWarum nicht mal ausprobieren?
+0x1BF166: Wie sieht dein Profil aus?
+0x1BF17B: Komm schon… Sei nicht so.\nDu kannst mir dein Profil sagen.
+0x1BF1B2: Oh, du hast deine Meinung geändert?\nDu bist wohl ziemlich launisch, was?
+0x1BF1E8: Hallo!\nWir sehen uns wieder!
+0x1BF1FB: Möchtest du dein Profil ändern?\n
+0x1BF222: Wie bist du jetzt so?\nDas würde ich wirklich gerne wissen.
+0x1BF252: Okay, du magst dein Profil\nso, wie es ist.\pDas finde ich auch.
+0x1BF28E: Hmhm…\pDein Profil sagt wirklich viel\nüber dich aus.\pJetzt, wo ich dich besser kenne,\nsind wir noch bessere Freunde!
+0x1BF30D: Oh, das habe ich schon mal gehört…\pMeine Cousine, weit weg von hier,\nhat das glaube ich oft gesagt.
+0x1BF36A: Erzähl mir das nächste Mal mehr\nüber dich!
+0x1BF5E3: Ah, du bist es!\pWir haben deine Pokémon gezüchtet und… was für eine\nÜberraschung!\pDeine Pokémon haben ein Ei bekommen!\pWir wissen nicht wie, aber deine\nPokémon haben es geschafft.\pDu willst es doch, oder?
+0x1BF69A: Ah, du bist es! Schön, dich zu sehen.\nDeinem {STR_VAR_1} geht es sehr gut.
+0x1BF6CF: Okay, ich behalte es.\nDanke!
+0x1BF6F0: Du hast keinen Platz… Komm wieder,\nwenn du Platz hast.
+0x1BF72A: {PLAYER} hat das Ei vom\nHort-Opa erhalten.
+0x1BF755: Kümmere dich gut darum.
+0x1BF789: Ah, du bist es! Deinem <0xFD><0x02> und\ndeinem <0xFD><0x03> geht es gut.
+0x1BF7B6: Ich werde es wirklich behalten.\nDas ist es, was du willst, oder?
+0x1BF7E4: Ich bin die Hort-Oma.\pWir können Pokémon für dich aufziehen.\pMöchtest du, dass wir eins aufziehen?
+0x1BF839: Welches Pokémon sollen wir\nfür dich aufziehen?
+0x1BF860: Okay, wir ziehen dein\n{STR_VAR_1} eine Weile auf.\pKomm später zurück, um es abzuholen.
+0x1BF89F: Wir können zwei deiner\nPokémon aufziehen.\pMöchtest du uns ein weiteres\nPokémon zum Aufziehen anvertrauen?
+0x1BF8F6: Mein Mann hat dich gesucht.
+0x1BF916: Oh, sehr gut.\nKomm wieder.
+0x1BF932: Du hast nicht genug Geld…
+0x1BF94F: Nimmst du das andere auch mit?\n
+0x1BF976: Okay.\nKomm wieder.
+0x1BF988: Ah, du bist es!\nSchön, dich zu sehen.\pDeinen Pokémon kann es nur\ngut gehen!
+0x1BF9CC: Dein {STR_VAR_1} hat {STR_VAR_2}\nStufen gewonnen.
+0x1BF9EF: Dein Team ist voll. Schaff Platz\nund komm dann wieder zu mir.
+0x1BFA3B: Wenn du dein {STR_VAR_1} abholen möchtest,\nkostet das ¥{STR_VAR_2}.
+0x1BFA67: Perfekt!\nHier ist dein Pokémon.
+0x1BFA85: {PLAYER} hat {STR_VAR_1} von der\nHort-Oma zurückgeholt.
+0x1BFAAD: Oh? Aber du hast nur ein\neinziges Pokémon.\pKomm ein anderes Mal wieder.
+0x1BFAE8: Möchtest du dein Pokémon zurückholen?
+0x1BFB09: Wenn du mir dieses Pokémon lässt,\nwomit willst du dann kämpfen?\pKomm ein anderes Mal wieder.
+0x1BFBE9: Möchtet ihr den SAFARI-PARK jetzt verlassen?
+0x1BFC1B: ANSAGE: Ding-Dong!\pDie Zeit ist abgelaufen!\pANSAGE: Dein SAFARI-SPIEL ist beendet!
+0x1BFC53: ANSAGE: Ding-Dong!\pDu hast keine SAFARI-BÄLLE mehr!\pANSAGE: Dein SAFARI-SPIEL ist beendet!
+0x1C0DB0: Es ist voller Pokémon-Bücher.\n
+0x1C0DF1: Eine Karte.
+0x1C0DFD: Wow!\nJede Menge Pokémon-Kram!
+0x1C0E19: Teller sind ordentlich\naufgereiht.
+0x1C0E40: Das riecht köstlich!\nHier hat jemand gekocht.
+0x1C0E73: Eine gut gebaute Kommode.\nSie kann jede Menge Sachen fassen.
+0x1C0EAC: Hier liegt ein Stapel Snacks.
+0x1C0ECB: Alles für deine Gegenstände!\nPokémon-Shop
+0x1C0EF7: Heile deine Pokémon!\nPokémon-Center
+0x1C0F19: INDIGO-PLATEAU\pDas ultimative Ziel aller Trainer!\nHauptquartier der Pokémon-LIGA
+0x1C0F59: INDIGO-PLATEAU\pDie höchste Instanz der Pokémon-Welt!\nHauptquartier der Pokémon-LIGA
+0x1C0F99: Das muss voller aller möglichen\nleckeren Sachen zum Essen sein.
+0x1C0FD8: Das ist eine Art Plan.\nEr ist voller Diagramme und Text.
+0x1C101B: Ein hübsches Pokémon-Bild.\nEs sieht fit aus.
+0x1C1060: Was für eine Maschine mag das wohl\nsein? Am besten nicht anfassen!
+0x1C109C: Ein Telefon.\nBesser nicht benutzen.
+0x1C10C1: Nur komplizierte Wörter und\nunverständliche Zahlen…
+0x1C10FC: Ein Plakat über jede Menge\nProdukte.
+0x1C1134: Oh, das riecht gut!\nDa knurrt einem der Magen!
+0x1C116E: Da drin…\n…\pHier ist nichts!
+0x1C1194: Eine Tasse mit einem Pokémon-\nSymbol.
+0x1C11BA: Das Fenster ist blitzblank geputzt.
+0x1C11DC: Durch das Fenster…\pDer Himmel ist von\nfantastischer Schönheit.
+0x1C1217: Lichter in verschiedenen\nFarben blinken.
+0x1C124B: Allerlei Werkzeuge sind ordentlich\naufgeräumt.
+0x1C1273: Irgendeine Maschine.\nSie macht Eindruck.
+0x1C12A7: Das neueste Videospiel!\nSieht spaßig aus!
+0x1C12D6: Hier gibt es deutliche Spuren\neines Einbruchs…
+0x1C1300: Im Fernsehen ist ein Pokémon!\nEs scheint Spaß zu haben.
+0x1C13D6: Kein Trainer in Reichweite für einen\nKampf… Der VS-Sucher wurde ausgeschaltet.\p{PAUSE_UNTIL_PRESS}
+0x1C1429: Keine Trainer bereit für einen Kampf.\nVersuch es später noch mal.\p{PAUSE_UNTIL_PRESS}
+0x1C27E6: 9Der Strandrand ist nicht so\nflach.
+0x1C55C9: Möchtest du das Spiel speichern?
+0x1C55EA: Es gibt bereits einen Spielstand.\nTrotzdem überschreiben?
+0x1C5625: SPEICHERN…\nNICHT AUSSCHALTEN.
+0x1C5647: {PLAYER} hat das Spiel gespeichert.
+0x1C566A: WARNUNG!\pEin anderes Spiel ist\nbereits gespeichert.\pWenn du jetzt speicherst, gehen\ndieses Abenteuer, seine Gegenstände\lund Pokémon verloren.\pBist du sicher, dass du speichern\nund die andere Datei überschreiben willst?
+0x1C574F: Neuer Name
+0x1C582D: Die Tasten werden in der\nReihenfolge ihrer Wichtigkeit erklärt.
+0x1C5875: Bewegt den Helden.\nDient auch zur Auswahl von Menüpunkten.
+0x1C58BA: Bestätigt eine Auswahl, untersucht,\nspricht und lässt Text ablaufen.
+0x1C58F9: Zum Verlassen, Abbrechen einer Auswahl\noder Beenden eines Modus.
+0x1C592B: Drücke diese Taste, um das\nMENÜ zu öffnen.
+0x1C594F: Ermöglicht es, Gegenstände zu verschieben\nund einen registrierten Gegenstand zu benutzen.
+0x1C5981: Wenn du Hilfe zum Spiel\noder zu den Aktionen brauchst,\ndrücke die Taste L oder R.
+0x1C59D5: Bist du ein Junge?\nOder ein Mädchen?
+0x1C59F7: Du bist ein Mädchen?
+0x1C5A04: In der Welt, die du betreten wirst,\nerlebst du ein großes Abenteuer, dessen\nHeld du bist.
+0x1C5A6B: Sprich mit den Leuten und untersuche alles,\nsei es in der Stadt, auf den\nRouten oder in Höhlen.\nSammle überall Infos und Hinweise.
+0x1C5AEB: Während deines Abenteuers wirst du\nviele Entscheidungen treffen.\n\nDenk daran, deine Taten können\ndie Welt um dich herum\nbeeinflussen und verändern.
+0x236632: Diese Brille schützt den\nTräger vor Wetterschäden\nund Pulvern.
+0x236C40: Zum Tragen durch ein Pokémon.\nEine Steintafel, die die Stärke\nvon Kampf-Attacken erhöht.
+0x236CA4: Zum Tragen durch ein Pokémon.\nEine Steintafel, die die Stärke\nvon Flug-Attacken erhöht.
+0x236D06: Zum Tragen durch ein Pokémon.\nEine Steintafel, die die Stärke\nvon Gift-Attacken erhöht.
+0x236D68: Zum Tragen durch ein Pokémon.\nEine Steintafel, die die Stärke\nvon Boden-Attacken erhöht.
+0x236DCA: Zum Tragen durch ein Pokémon.\nEine Steintafel, die die Stärke\nvon Gestein-Attacken erhöht.
+0x236E2A: Zum Tragen durch ein Pokémon.\nEine Steintafel, die die Stärke\nvon Käfer-Attacken erhöht.
+0x236E89: Zum Tragen durch ein Pokémon.\nEine Steintafel, die die Stärke\nvon Geister-Attacken erhöht.
+0x236EEA: Zum Tragen durch ein Pokémon.\nEine Steintafel, die die Stärke\nvon Stahl-Attacken erhöht.
+0x236F4B: Zum Tragen durch ein Pokémon.\nEine Steintafel, die die Stärke\nvon Feuer-Attacken erhöht.
+0x236FAB: Zum Tragen durch ein Pokémon.\nEine Steintafel, die die Stärke\nvon Wasser-Attacken erhöht.
+0x23700C: Zum Tragen durch ein Pokémon.\nEine Steintafel, die die Stärke\nvon Käfer-Attacken erhöht.
+0x23706B: Zum Tragen durch ein Pokémon.\nEine Steintafel, die die Stärke\nvon Elektro-Attacken erhöht.
+0x2370CF: Zum Tragen durch ein Pokémon.\nEine Steintafel, die die Stärke\nvon Psycho-Attacken erhöht.
+0x237132: Zum Tragen durch ein Pokémon.\nEine Steintafel, die die Stärke\nvon Eis-Attacken erhöht.
+0x237191: Zum Tragen durch ein Pokémon.\nEine Steintafel, die die Stärke\nvon Drachen-Attacken erhöht.
+0x2371F3: Zum Tragen durch ein Pokémon.\nEine Steintafel, die die Stärke\nvon Unlicht-Attacken erhöht.
+0x237253: Zum Tragen durch ein Pokémon.\nEine Steintafel, die die Stärke\nvon Feen-Attacken erhöht.
+0x2372E4: Sternenstaub
+0x2372ED: Sternenstück
+0x2372F8: Kometensplitter
+0x237304: Perle
+0x23730A: Große Perle
+0x237314: Perlenkette
+0x237321: Nugget
+0x237328: Großes Nugget
+0x23744E: Großpilz
+0x23745B: Duftpilz
+0x237469: Riesen-Malasada
+0x237476: Wirbel-Eis
+0x237483: Honig
+0x237489: Lavakeks
+0x237495: Überreste
+0x23749F: Glücksei
+0x2374A9: Glitzerkeks
+0x2374B9: Alter Kuchen
+0x2374C4: Wutbonbon
+0x2374D3: Extrabonbon
+0x2374DE: Yantreizh-Sand
+0x2374EC: Tiefensalz
+0x2374F7: Beerensaft
+0x237503: Brutalibré{CLEAR_TO}{FONT_SMALL}500 Mü.
+0x23751C: Evoli{CLEAR_TO}{FONT_SMALL} 1500 Münzen
+0x237534: Dratini{CLEAR_TO}{FONT_SMALL} 2800 Münzen
+0x23754E: Kliffklang{CLEAR_TO}{FONT_SMALL} 5000 Münzen
+0x237567: Porygon{CLEAR_TO}{FONT_SMALL} 9999 Münzen
+0x2375BD: Schildfossil
+0x2375C9: Bernstein
+0x2375D3: Wurzelfossil
+0x2375DF: Klauenfossil
+0x2375EB: Schädelfossil
+0x2375F8: Rüstungsfossil
+0x237605: Deckelfossil
+0x237612: Federfossil
+0x23761F: Kieferfossil
+0x23762A: Segelfossil
+0x238D20: Mikrowelle
+0x238D2F: Waschmaschine
+0x238D3F: Kühlschrank
+0x238D4C: Ventilator
+0x238D59: Rasenmäher
+0x238D63: Rückgängig
+0x238D6A: Abbrechen
+0x23E565: Trainer <0x53><0x54>
+0x23E57F: Agent
+0x23E58C: Kellner
+0x23E599: Kellnerin
+0x23E5A6: Journalist
+0x23E5B3: Radfahrer
+0x23E5C0: Idol
+0x23E5CD: TOPTRAINER
+0x23E5DA: Schwester
+0x23E5E7: Dame
+0x23E5F4: Poké-Kid
+0x23E601: Reicher Junge
+0x23E61B: Camper-Duo
+0x23E628: Skifahrer
+0x23E635: Gitarrist
+0x23E642: Pyromane
+0x23E64F: Schocker
+0x23E65C: Insektenforscher
+0x23E669: Offizier
+0x23E683: Reiches Mädchen
+0x23E690: Nachfolger
+0x23E69D: Schuljunge
+0x23E6B7: Pokéfan
+0x23E6C4: Experte
+0x23E6D1: Züchter
+0x23E6F8: Jogger
+0x23E705: Drachenmeister
+0x23E712: ORNITHOLOGE
+0x23E71F: Ninja-Junge
+0x23E72C: Mega-Experte
+0x23E739: Sonnenschirm-Dame
+0x23E753: PICKNICKERIN
+0x23E76D: Entwickler
+0x23E77A: Snowboarder
+0x23E787: Sammler
+0x23E794: Trainer <0x53><0x54>
+0x23E7C8: Schatten-Admin
+0x23E7D5: Ex-Schatten-Admin
+0x23E7E2: Scout
+0x23E7EF: BERGSTEIGER
+0x23E7FC: Junges Paar
+0x23E809: Experten-Duo
+0x23E816: Geschwister
+0x23E823: ADMIN AQUA
+0x23E830: ADMIN MAGMA
+0x23E83D: Junge
+0x23E84A: Scout
+0x23E857: Mädchen
+0x23E864: Seemann
+0x23E871: Camper
+0x23E87E: Picknicker
+0x23E88B: Pokéfan
+0x23E898: Nerd
+0x23E8A5: Bergsteiger
+0x23E8B2: Biker
+0x23E8BF: Einbrecher
+0x23E8CC: Arbeiter
+0x23E8D9: Angler
+0x23E8E6: Schwimmer♂
+0x23E8F3: Rüpel
+0x23E900: Zocker
+0x23E90D: Schöne
+0x23E91A: Schwimmerin♀
+0x23E927: Medium
+0x23E934: Rocker
+0x23E941: Jongleur
+0x23E94E: Bändiger
+0x23E95B: Vogelhüter
+0x23E968: Karateka
+0x23E975: Rivale
+0x23E982: Wissenschaftler
+0x23E98F: Boss
+0x23E99C: Champion
+0x23E9A9: Schatten
+0x23E9B6: Ass-Trainer
+0x23E9C3: Top Vier
+0x23E9D0: Gentleman
+0x23E9DD: Rivale
+0x23E9EA: Trainer <0x53><0x54>
+0x23E9F7: Geisterseher
+0x23EA04: Zwillinge
+0x23EA11: Promi-Duo
+0x23EA1E: JUNGES PAAR
+0x23EA2B: Kraft-Duo
+0x23EA38: SCHWESTER UND BRUDER
+0x23EA45: PROF. <0x53><0x54>
+0x23EA52: Spieler
+0x23EA5F: Kämpferin
+0x23EA6C: Badegast
+0x23EA79: Züchter <0x53><0x54>
+0x23EA86: Ranger <0x53><0x54>
+0x23EA93: Parfümdame
+0x23EAA0: Archäologe
+0x23EAAD: Dame
+0x23EABA: Maler
+0x24F1A7: KAMPF
+0x24F1AD: FLUG
+0x24F1AE: FLUG
+0x24F1B5: GIFT
+0x24F1BC: BODEN
+0x24F1C3: GESTEIN
+0x24F1CA: KÄFER
+0x24F1CE: GEIST
+0x24F1D1: GEIST
+0x24F1D7: STAHL
+0x24F1D8: STAHL
+0x24F1E3: FEUER
+0x24F1E6: FEUER
+0x24F1EB: WASSER
+0x24F1ED: WASSER
+0x24F1F3: PFLANZE
+0x24F1F4: PFLANZE
+0x24F1FA: ELEKTRO
+0x24F1FB: ELEKTRO
+0x24F202: PSYCHO
+0x24F209: EIS
+0x24F20D: DRACHE
+0x24F217: UNLICHT
+0x24F3C1: È  Keine besondere Fähigkeit.
+0x24F3D8: Hilft, wilde Pokémon\nabzuwehren.
+0x24F3F2: Lässt es im Kampf regnen.
+0x24F40A: Erhöht die Initiative allmählich.
+0x24F422: Blockiert Volltreffer.
+0x24F438: Verhindert Sofort-K.O.-Attacken.
+0x24F452: Verhindert Selbstzerstörung.
+0x24F46D: Verhindert Paralyse.
+0x24F481: Erhöhte Ausweichchance im\nSandsturm.
+0x24F49D: Paralysiert bei Berührung.
+0x24F4B3: Wandelt Elektro-Attacken in KP um.
+0x24F4CE: Wandelt Wasser-Attacken in KP um.
+0x24F4E5: Verhindert Anziehung.
+0x24F4FA: Hebt Wettereffekte auf.
+0x24F513: Erhöht die Genauigkeit.
+0x24F524: Verhindert Schlaf.
+0x24F534: Ändert den Typ je nach Attacke\ndes Gegners.
+0x24F550: Verhindert Vergiftung.
+0x24F564: Wird durch Feuer-Attacken gestärkt.
+0x24F57E: Hebt Zusatzeffekte auf.
+0x24F596: Verhindert Verwirrung.
+0x24F5AA: Verankert den Körper fest.
+0x24F5C3: Senkt den Angriff des Gegners.
+0x24F5DC: Hindert den Gegner am Fliehen.
+0x24F5F7: Verletzt bei Berührung.
+0x24F607: Nur sehr effektive Treffer.
+0x24F61F: Unempfindlich gegen Boden-Attacken.
+0x24F63A: Hinterlässt Sporen bei Berührung.
+0x24F654: Überträgt Statusprobleme.
+0x24F66F: Verhindert das Senken von Werten.
+0x24F68B: Heilt beim Pokémon-Wechsel.
+0x24F6A5: Zieht Elektro-Attacken an.
+0x24F6BD: Begünstigt Zusatzeffekte.
+0x24F6D5: Erhöht die Initiative bei Regen.
+0x24F6EB: Erhöht die Initiative bei Sonne.
+0x24F705: Erhöht Wildpokémon-Begegnungen.
+0x24F71F: Kopiert die Fähigkeit.
+0x24F737: Erhöht den Angriff.
+0x24F746: Vergiftet bei Berührung.
+0x24F75E: Verhindert Furcht.
+0x24F772: Verhindert Einfrieren.
+0x24F785: Verhindert Verbrennungen.
+0x24F795: Fängt Stahl-Pokémon.
+0x24F7AF: Vermeidet Schall-Attacken.
+0x24F7C9: KP-Erholung bei Regen.
+0x24F7E5: Löst einen Sandsturm aus.
+0x24F7FA: Verbraucht mehr AP.
+0x24F811: Schützt vor Hitze und Kälte.
+0x24F82B: Wacht schnell aus dem Schlaf auf.
+0x24F847: Verbrennt den Gegner bei Berührung.
+0x24F861: Erleichtert die Flucht.
+0x24F878: Verhindert das Senken der Genauigkeit.
+0x24F893: Verhindert das Senken des Angriffs.
+0x24F8AE: Kann Gegenstände aufsammeln.
+0x24F8C1: Handelt jede zweite Runde.
+0x24F8DD: Tauscht Genauigkeit gegen Stärke.
+0x24F8F8: Macht bei Berührung verliebt.
+0x24F90F: Stärke erhöht mit Minus.
+0x24F925: Stärke erhöht mit Plus.
+0x24F93A: Ändert sich je nach Wetter.
+0x24F954: Verhindert Diebstahl von Gegenständen.
+0x24F969: Heilt den Körper beim Häuten.
+0x24F985: Erhöht den Angriff bei Verletzung.
+0x24F99E: Erhöht die Verteidigung bei Verletzung.
+0x24F9B8: Entzug verletzt den Gegner.
+0x24F9D0: Verstärkt Pflanze bei Bedarf.
+0x24F9EC: Verstärkt Feuer bei Bedarf.
+0x24FA07: Verstärkt Wasser bei Bedarf.
+0x24FA23: Verstärkt Käfer bei Bedarf.
+0x24FA3D: Verhindert Rückstoßschaden.
+0x24FA55: Löst Sonnenschein im Kampf aus.
+0x24FA71: Verhindert Flucht.
+0x24FA83: Verhindert Schlaf.
+0x24FA93: Verhindert das Senken von Werten.
+0x24FAAF: Erhöht den Angriff.
+0x24FABE: Blockiert Volltreffer.
+0x24FAD4: Vermeidet Schall-Attacken.
+0x24FAEE: Hebt Wettereffekte auf.
+0x24FC48: GESTANK
+0x24FC54: NIESEL
+0x24FC62: TEMPOSCHUB
+0x24FC73: KRAFTPANZER
+0x24FC81: ROBUSTHEIT
+0x24FC88: FEUCHTIGKEIT
+0x24FC93: FLEXIBILITÄT
+0x24FCA2: SANDSCHLEIER
+0x24FCB2: STATIK
+0x24FCBC: VOLTABSORBER
+0x24FCCE: WASSERABSORBER
+0x24FCDC: GUTMÜTIG
+0x24FCE6: WOLKE SIEBEN
+0x24FCF4: FACETTENAUGE
+0x24FD03: INSOMNIA
+0x24FD0C: MASKERADE
+0x24FD1D: IMMUNITÄT
+0x24FD26: AUFLODERN
+0x24FD35: PUDERABWEHR
+0x24FD43: EIGENSINN
+0x24FD4E: SAUGNAPF
+0x24FD5E: BEDROHER
+0x24FD69: SCHATTENFESSEL
+0x24FD76: RAUHEIT
+0x24FD83: WUNDERWACHE
+0x24FD92: SCHWEBE
+0x24FD9B: SPORENWIRT
+0x24FDAC: SYNCHRO
+0x24FDB8: KLARKÖRPER
+0x24FDC4: NATURHEILUNG
+0x24FDD3: BLITZFÄNGER
+0x24FDE0: ANMUT
+0x24FDED: SCHWIMMTEMPO
+0x24FDF8: CHLOROPHYLL
+0x24FE06: ERHELLUNG
+0x24FE12: ABBILD
+0x24FE1A: KRAFTKOLOSS
+0x24FE2C: GIFTDORN
+0x24FE3B: KONZENTRATION
+0x24FE47: MAGMAPANZER
+0x24FE54: WASSERSCHLEIER
+0x24FE60: MAGNETFALLE
+0x24FE6E: SCHALLDÄMPFER
+0x24FE7A: REGENSCHALE
+0x24FE86: SANDSTURM
+0x24FE95: DRUCKAUSÜBUNG
+0x24FE9F: DICKES FETT
+0x24FEAD: FRÜHWECKER
+0x24FEBB: FLAMMKÖRPER
+0x24FEC8: FLUCHTREFLEX
+0x24FED3: ADLERAUGE
+0x24FEE0: SCHERENMACHT
+0x24FEF1: SCHATZSUCHE
+0x24FEF8: ABWESENHEIT
+0x24FF05: HEKTIK
+0x24FF12: HÜBSCHES LÄCHELN
+0x24FF23: PLUS
+0x24FF2A: MINUS
+0x24FF38: WETTER
+0x24FF48: KLEBER
+0x24FF58: HÄUTUNG
+0x24FF63: MUT
+0x24FF6B: WUNDERSCHUPPE
+0x24FF80: SICKERSAFT
+0x24FF8C: DÜNGER
+0x24FF96: GLUT
+0x24FFA0: STURZBACH
+0x24FFAF: SCHWARM
+0x24FFBA: KOPFNUSS
+0x24FFCB: DÜRRE
+0x24FFD6: SANDFALLE
+0x24FFE6: LEBENSGEIST
+0x24FFF5: RAUCHWAND
+0x250001: REINE KRAFT
+0x25000D: PANZERSCHALE
+0x25001B: KAKOFONIE
+0x250026: LUFTSCHLEUSE
+0x26D4E5: Fangen wir an!
+0x26D4F7: Das war ein toller Kampf! Meine\nPokémon hatten Spaß daran!
+0x26D524: Jetzt, wo der Eingang zur RBT-Autobahn nicht mehr versiegelt ist,\lkonnte ich endlich trainieren!\pSag mal, willst du gegen meine\nfrisch trainierten Pokémon kämpfen?
+0x26D5BF: Danke, dass du gegen mich gekämpft hast!
+0x26D5DC: Du willst über die Herausforderungsroute\ngehen?\pDann musst du zuerst an mir\nvorbei!
+0x26D733: Ach, okay. Falls du deine Meinung änderst,\nbist du jederzeit willkommen!
+0x270FA1: Ich habe versucht, die\nGroße Wüste östlich der Stadt zu durchqueren,\laber der Sandsturm war\nzu stark.\pDer Sand peitschte mir ins Gesicht\nund ich konnte nichts sehen.\pOhne Schutz ist es unmöglich,\nirgendwohin zu gelangen.\pWenn ich nur etwas finden\nkönnte…
+0x271C3E: Giftspitzen umgeben dein ganzes\nTeam!
+0x27795D: Tarnsteine schweben um\ndas gegnerische Team!
+0x277999: Ein Klebenetz wurde um\ndas gegnerische Team gelegt!
+0x2779D4: Die Tarnsteine durchbohren\n{UNKNOWN_STR}!
+0x2779F1: \n{UNKNOWN_STR} verfängt sich in einem\nKlebenetz!
+0x277A11: Die Stacheln um {B_ATK_NAME_WITH_PREFIX} sind\nverschwunden!
+0x277A12: Die Stacheln um <0xFD><0x0F>\nsind verschwunden!
+0x3D4F26: Ein Memory Ball von sehr hoher\nQualität mit einer besseren\nFangrate als ein Superball.
+0x3D4F78: Ein Ball von guter Qualität mit einer\nbesseren Fangrate als ein\ngewöhnlicher Pokéball.
+0x3D4FD0: Ein Ball, der geworfen wird, um ein\nwildes Pokémon zu fangen.\nKapselartige Bauweise.
+0x3D501A: Ein spezieller Ball, der nur im\nSafari-Park verwendet wird.\nMit Tarnmuster bedruckt.
+0x3D5077: Ein etwas besonderer Ball, der\nbei Wasser- und Käfer-Pokémon\nbesser wirkt.
+0x3D50CC: Ein etwas besonderer Ball, der\nbei Pokémon aus der Tiefsee\nbesser wirkt.
+0x3D511D: Ein etwas besonderer Ball, der\nbei schwachen Pokémon\nbesser wirkt.
+0x3D5165: Ein etwas besonderer Ball, der\nbei einem bereits gefangenen\nPokémon besser wirkt.
+0x3D51B4: Ein etwas besonderer Ball, der\nbesser wird, je länger der Kampf\nandauert.
+0x3D5216: Ein bequemer Ball, der ein wildes\nPokémon schnell freundlich stimmt.\n
+0x3D5263: Ein seltener Ball, der zum\nGedenken an ein Ereignis gemacht wurde.\n
+0x3D52B2: Medizin zum Sprühen.\nStellt 20 KP eines Pokémon wieder her.\n
+0x3D52FF: Medizin zum Sprühen.\nHeilt eine Vergiftung bei einem Pokémon.\n
+0x3D533D: Medizin zum Sprühen.\nHeilt eine Verbrennung bei einem Pokémon.
+0x3D5374: Medizin zum Sprühen.\nTaut ein eingefrorenes Pokémon auf.
+0x3D53A9: Medizin zum Sprühen.\nWeckt ein schlafendes Pokémon auf.
+0x3D53DF: Medizin zum Sprühen.\nHeilt eine Paralyse bei einem Pokémon.\n
+0x3D541B: Medizin, die alle KP wiederherstellt\nund jeden Status eines\nPokémon heilt.
+0x3D546F: Medizin zum Sprühen.\nStellt alle KP eines Pokémon wieder her.\n
+0x3D54B5: Medizin zum Sprühen.\nStellt 200 KP eines Pokémon wieder her.\n
+0x3D5503: Medizin zum Sprühen.\nStellt 50 KP eines Pokémon wieder her.\n
+0x3D5550: Medizin zum Sprühen.\nHeilt jeden Status eines Pokémon.\n
+0x3D5598: Medizin, die ein kampfunfähiges\nPokémon belebt und ihm die Hälfte\nseiner maximalen KP zurückgibt.
+0x3D55EC: Medizin, die ein kampfunfähiges\nPokémon belebt und ihm alle KP zurückgibt.
+0x3D562B: Mineralreiches Wasser.\nStellt 50 KP eines Pokémon wieder her.\n
+0x3D567E: Ein spritziges Getränk.\nStellt 60 KP eines Pokémon wieder her.\n
+0x3D56C2: Ein sehr süßes Getränk.\nStellt 80 KP eines Pokémon wieder her.\n
+0x3D5706: Sehr nahrhafte Milch.\nStellt 100 KP eines Pokémon wieder her.\n
+0x3D574F: Ein sehr bitteres Heilpulver.\nStellt 50 KP eines Pokémon wieder her.\n
+0x3D579E: Eine sehr bittere Wurzel.\nStellt 200 KP eines Pokémon wieder her.\n
+0x3D57E3: Ein sehr bitteres Heilpulver.\nHeilt jeden Status eines Pokémon.\n
+0x3D5833: Ein sehr bitteres Heilkraut.\nBelebt ein kampfunfähiges Pokémon\nund füllt seine KP komplett auf.
+0x3D5883: Stellt 10 AP für eine ausgewählte\nAttacke eines Pokémon wieder her.
+0x3D58BF: Stellt alle AP für eine Attacke\neines Pokémon wieder her.
+0x3D58F4: Stellt 10 AP für alle Attacken\neines Pokémon wieder her.
+0x3D5934: Stellt alle AP für alle Attacken\neines Pokémon wieder her.
+0x3D5968: Eine lokale Spezialität aus Lavandia.\nHeilt jeden Status eines Pokémon.\n
+0x3D59BB: Eine blaue Glasflöte.\nWeckt ein schlafendes Pokémon auf.
+0x3D59EF: Eine gelbe Glasflöte.\nHeilt die Verwirrung eines Pokémon.
+0x3D5A2D: Eine rote Glasflöte.\nHeilt die Anziehung eines Pokémon.
+0x3D5A6A: Eine schwarze Glasflöte.\nLässt wilde Pokémon auf höherem\nLevel erscheinen.
+0x3D5AB0: erscheinen.
+0x3D5AB8: Eine weiße Glasflöte.\nLässt wilde Pokémon auf niedrigerem\nLevel erscheinen.
+0x3D5AFD: erscheint.
+0x3D5B06: 100 % reiner Saft.\nStellt 20 KP eines Pokémon wieder her.\n
+0x3D5B49: Belebt alle kampfunfähigen Pokémon\nund stellt all ihre KP wieder her.
+0x3D5B7A: Reines Salz, das unter Wasser\ngewonnen wurde. Extrem salzig.
+0x3D5BC5: Eine hübsche Muschel, die man unter Wasser findet.\nBlau-weiß gestreift.
+0x3D5C1A: Ein kleiner roter Splitter.\nStammt wohl von einem alten Werkzeug.\n
+0x3D5C66: Ein kleiner blauer Splitter.\nStammt wohl von einem alten Werkzeug.\n
+0x3D5CB3: Ein kleiner gelber Splitter.\nStammt wohl von einem alten Werkzeug.\n
+0x3D5D02: Ein kleiner grüner Splitter.\nStammt wohl von einem alten Werkzeug.\n
+0x3D5D50: Ein nahrhaftes Getränk für Pokémon.\nErhöht die Basis-KP eines\nPokémon.
+0x3D5D96: Ein nahrhaftes Getränk für Pokémon.\nErhöht den Basis-Angriff eines\nPokémon.
+0x3D5DE5: Ein nahrhaftes Getränk für Pokémon.\nErhöht die Basis-Verteidigung eines\nPokémon.
+0x3D5E35: Ein nahrhaftes Getränk für Pokémon.\nErhöht die Basis-Initiative eines\nPokémon.
+0x3D5E83: Ein nahrhaftes Getränk für Pokémon.\nErhöht den Basis-Sp.-Angriff eines\nPokémon.
+0x3D5ED3: Ein energiegeladenes Bonbon.\nErhöht das Level eines Pokémon um\neine Stufe.
+0x3D5F20: Erhöht die maximalen AP einer\nausgewählten Attacke eines Pokémon leicht.
+0x3D5F63: Ein nahrhaftes Getränk für Pokémon.\nErhöht die Basis-Sp.-Verteidigung eines\nPokémon.
+0x3D5FB3: Erhöht die AP einer ausgewählten Attacke\neines Pokémon auf das Maximum.\n
+0x3D5FFA: Ein Gegenstand, der die Senkung von\nStatuswerten im Team für fünf\nRunden verhindert.
+0x3D604D: Erhöht die Trefferquote für\nVolltreffer im Kampf. Endet, wenn\ndas Pokémon ausgewechselt wird.
+0x3D60A8: Erhöht den Angriff im Kampf.\nEndet, wenn das Pokémon ausgewechselt wird.\n
+0x3D60FC: Erhöht die Verteidigung im Kampf.\nEndet, wenn das Pokémon ausgewechselt wird.\n
+0x3D6151: Erhöht die Initiative im Kampf.\nEndet, wenn das Pokémon ausgewechselt wird.\n
+0x3D61A4: Erhöht die Genauigkeit im Kampf.\nEndet, wenn das Pokémon ausgewechselt wird.\n
+0x3D61FA: Erhöht den Sp.-Angriff im Kampf.\nEndet, wenn das Pokémon ausgewechselt wird.\n
+0x3D624F: Eine hübsche Puppe.\nErmöglicht die Flucht aus jedem\nKampf gegen ein wildes Pokémon.
+0x3D6297: Ein verführerischer Gegenstand.\nErmöglicht die Flucht aus jedem\nKampf gegen ein wildes Pokémon.
+0x3D62DF: Verhindert, dass schwache Pokémon\nfür 200 Schritte auftauchen.
+0x3D6318: Verhindert, dass schwache Pokémon\nfür 250 Schritte auftauchen.
+0x3D6351: Ein langes, robustes Seil.\nBenutze es, um sofort aus einer\nHöhle oder einem Dungeon zu fliehen.
+0x3D639C: Verhindert, dass schwache Pokémon\nfür 100 Schritte auftauchen.
+0x3D63D5: Ein besonderer Stein, der manche\nArten entwickeln lässt.\nEr ist so rot wie die Sonne.
+0x3D642D: Ein besonderer Stein, der manche\nArten entwickeln lässt.\nEr ist schwarz wie die Nacht.
+0x3D648D: Ein besonderer Stein, der manche\nArten entwickeln lässt.\nEr ist orangefarben.
+0x3D64E2: Ein besonderer Stein, der manche\nArten entwickeln lässt.\nEr hat ein blitzförmiges Muster.
+0x3D653F: Ein besonderer Stein, der manche\nArten entwickeln lässt.\nEr ist von einem sehr hellen Blau.
+0x3D6598: Ein besonderer Stein, der manche\nArten entwickeln lässt.\nEr hat ein Blattmuster.
+0x3D65EE: Ein kleiner, seltener Pilz.\nBei manchen sehr begehrt.\n
+0x3D6633: Ein großer, seltener Pilz.\nBei manchen sehr gesucht.\n
+0x3D6677: Kleine silberne Perle.\nVerkauft sich für wenig.\n
+0x3D66D0: Große silberne Perle.\nVerkauft sich teuer.\n
+0x3D672C: Roter, seidiger Sand.\nVerkauft sich teuer.\n
+0x3D6778: Funkelnder roter Edelsteinsplitter.\nVerkauft sich teuer.\n
+0x3D67CE: Pepiten aus reinem Gold.\nVerkauft sich teuer.\n
+0x3D6825: Seltene, herzförmige Schuppe.\nSchimmert in Regenbogenfarben.\n
+0x3D6887: Brief mit niedlichem Zigzagoon-Motiv.\nZum Tragen für ein Pokémon.\n
+0x3D68D8: Brief mit niedlichem Sturmvogel-Motiv.\nZum Tragen für ein Pokémon.\n
+0x3D6927: Brief mit niedlichem Pikachu-Motiv.\nZum Tragen für ein Pokémon.\n
+0x3D6976: Brief mit niedlichem Magnetilo-Motiv.\nZum Tragen für ein Pokémon.\n
+0x3D69C7: Brief mit niedlichem Flunkifer-Motiv.\nZum Tragen für ein Pokémon.\n
+0x3D6A16: Brief mit niedlichem Wailmer-Motiv.\nZum Tragen für ein Pokémon.\n
+0x3D6A65: Brief zum Tragen für ein Pokémon.\nZeigt sein Motiv, wenn es ihn trägt.\n
+0x3D6AC0: Brief mit niedlichem Skelabra-Motiv.\nZum Tragen für ein Pokémon.\n
+0x3D6B0F: Brief mit niedlichem Blubella-Motiv.\nZum Tragen für ein Pokémon.\n
+0x3D6B60: Brief zum Tragen für ein Pokémon.\nZeigt sein Motiv, wenn es ihn trägt.\n
+0x3D6BBB: Brief mit einem edlen Motiv.\nZum Tragen für ein Pokémon.\n
+0x3D6C13: Brief mit Motiv von drei niedlichen\nPokémon.\nZum Tragen für ein Pokémon.
+0x3D6C6B: Wird getragen und heilt eine\nParalyse im Kampf.
+0x3D6CB0: Wird getragen und weckt im Kampf\nauf.\n
+0x3D6CEE: Wird getragen und heilt eine\nVergiftung im Kampf.\n
+0x3D6D30: Wird getragen und heilt eine\nVerbrennung im Kampf.
+0x3D6D72: Wird getragen und taut im Kampf\nauf.\n
+0x3D6DB4: Wird getragen und gibt im Kampf\n10 AP zurück.\n
+0x3D6DF8: Wird getragen und gibt im Kampf\n10 KP zurück.\n
+0x3D6E3C: Wird getragen und beendet eine\nVerwirrung im Kampf.
+0x3D6E81: Wird getragen und heilt jedes\nStatusproblem im Kampf.
+0x3D6EC8: Wird getragen und gibt im Kampf\n30 KP zurück.\n
+0x3D6F0C: Wird getragen, gibt KP zurück,\nkann aber verwirren.
+0x3D6F4C: Wird getragen, gibt KP zurück,\nkann aber verwirren.
+0x3D6F8C: Wird getragen, gibt KP zurück,\nkann aber verwirren.
+0x3D6FCC: Wird getragen, gibt KP zurück,\nkann aber verwirren.
+0x3D700C: Wird getragen, gibt KP zurück,\nkann aber verwirren.
+0x3D704C: Wird zu Pulver für Medizin\nzermahlen.
+0x3D708A: Wird zu Pulver für Medizin\nzermahlen.
+0x3D70C8: Wird zu Pulver für Medizin\nzermahlen.
+0x3D7106: Wird zu Pulver für Medizin\nzermahlen.
+0x3D7144: Wird zu Pulver für Medizin\nzermahlen.
+0x3D7182: Wird zu Pulver für Medizin\nzermahlen.
+0x3D71C0: Wird zu Pulver für Medizin\nzermahlen.
+0x3D71FE: Wird zu Pulver für Medizin\nzermahlen.
+0x3D723C: Wird zu Pulver für Medizin\nzermahlen.
+0x3D727A: Wird zu Pulver für Medizin\nzermahlen.
+0x3D72B8: Wird zu Pulver für Medizin\nzermahlen.
+0x3D72F6: Wird zu Pulver für Medizin\nzermahlen.
+0x3D7334: Wird zu Pulver für Medizin\nzermahlen.
+0x3D7372: Wird zu Pulver für Medizin\nzermahlen.
+0x3D73B0: Wird zu Pulver für Medizin\nzermahlen.
+0x3D73EE: Wird zu Pulver für Medizin\nzermahlen.
+0x3D742C: Wird zu Pulver für Medizin\nzermahlen.
+0x3D746A: Wird zu Pulver für Medizin\nzermahlen.
+0x3D74A8: Wird zu Pulver für Medizin\nzermahlen.
+0x3D74E6: Wird zu Pulver für Medizin\nzermahlen.
+0x3D7524: Wird getragen und erhöht den\nAngriff, wenn die KP niedrig\nsind.
+0x3D7562: Wird getragen und erhöht die\nVerteidigung, wenn die KP\nniedrig sind.
+0x3D75A1: Wird getragen und erhöht die\nInitiative, wenn die KP niedrig\nsind.
+0x3D75DE: Wird getragen und erhöht den\nSp. Angriff, wenn die KP niedrig\nsind.
+0x3D761D: Wird getragen und erhöht die\nSp. Verteidigung, wenn die KP\nniedrig sind.
+0x3D765C: Wird getragen und erhöht die\nVolltreffer-Rate, wenn die KP\nniedrig sind.
+0x3D76A1: Wird getragen und erhöht einen\nWert stark, wenn die KP niedrig\nsind.
+0x3D76E0: Wird zu Pulver für Medizin\nzermahlen.
+0x3D771E: Wird getragen und wirft einen\nfiesen Blick, der die Genauigkeit\ndes Gegners senkt.\n
+0x3D777C: Wird getragen und stellt im Kampf\nalle gesenkten Werte wieder her.\nEinmaliger Gebrauch.\n
+0x3D77DF: Wird getragen und fördert das\nWachstum, senkt aber die\nInitiative.\n
+0x3D783D: Wird es aktiviert, teilt es die\nKampf-EP mit dem ganzen Team.\n
+0x3D789F: Wird getragen, eine leichte Kralle,\ndie helfen kann, zuerst zu handeln.\n
+0x3D7900: Wird getragen, ein beruhigendes\nGlöckchen, das den Träger ruhig\nund freundlich stimmt.\n
+0x3D7969: Wird getragen und beendet\nVerliebtheit. Einmaliger Gebrauch.\n
+0x3D79C7: Wird getragen und verstärkt eine\nAttacke, die dann als einzige\nnutzbar ist.\n
+0x3D7A22: Wird getragen und kann den Gegner\nerschrecken, wenn Schaden\nzugefügt wird.\n
+0x3D7A76: Wird getragen, ein silbernes\nPulver, das Käfer-Attacken\nverstärkt.\n
+0x3D7AD6: Wird getragen und verdoppelt das\nPreisgeld, wenn der Träger\nkämpft.\n
+0x3D7B36: Wird getragen und vertreibt wilde\nPokémon, wenn der Träger an\nerster Stelle steht.\n
+0x3D7B93: Von Latios oder Latias getragene\nOrbe. Erhöht deren Sp. Angriff\nund Sp. Verteidigung.\n
+0x3D7BE5: Von Perlu getragen.\nSilberner Zahn, der den Sp.\nAngriff erhöht.\n
+0x3D7C45: Von Perlu getragen.\nRosa Schuppe, die die Sp.\nVerteidigung erhöht.\n
+0x3D7CA4: Wird getragen und ermöglicht die\nFlucht vor jedem wilden Pokémon.\n
+0x3D7D02: Wird getragen und verhindert,\ndass sich das Pokémon\nentwickelt.\n
+0x3D7D53: Wird getragen und kann einen\nTreffer mit 1 KP überstehen.\n
+0x3D7DB1: Wird getragen, ein Ei voller\nFreude, das im Kampf mehr EP\ngibt.\n
+0x3D7E17: Wird getragen, eine Linse, die\ndie Volltreffer-Rate des Trägers\nerhöht.\n
+0x3D7E7A: Wird getragen, eine Metallfolie,\ndie Stahl-Attacken verstärkt.\n
+0x3D7EDE: Wird getragen und lässt den\nTräger im Kampf nach und nach\nKP zurückgewinnen.\n
+0x3D7F37: Große, feste Schuppe.\nWird von einem Drachen getragen.\n
+0x3D7F79: Von Pikachu getragene Orbe, die\nseine Angriffswerte erhöht.\nElektrisierend.\n
+0x3D7FD5: Wird getragen, feiner Sand, der\nBoden-Attacken verstärkt.\n
+0x3D8036: Wird getragen, ein unzerbrechlicher\nStein, der Gesteins-Attacken\nverstärkt.\n
+0x3D8096: Wird getragen, ein Lebenssamen,\nder Pflanzen-Attacken verstärkt.\n
+0x3D80FA: Wird getragen, eine zwielichtige\nBrille, die Unlicht-Attacken\nverstärkt.\n
+0x3D8158: Wird getragen, ein Gürtel, der\nEntschlossenheit und\nKampf-Attacken verstärkt.
+0x3D81B3: Wird getragen, ein starker\nMagnet, der Elektro-Attacken\nverstärkt.\n
+0x3D8214: Wird getragen, ein Edelstein in\nTropfenform, der Wasser-Attacken\nverstärkt.\n
+0x3D8276: Wird getragen, ein scharfer\nSchnabel, der Flug-Attacken\nverstärkt.\n
+0x3D82D6: Wird getragen, ein Giftstachel,\nder Gift-Attacken verstärkt.\n
+0x3D833B: Wird getragen, ein Eisstück, das\nWärme blockiert und Eis-Attacken\nverstärkt.
+0x3D8397: Wird getragen, ein düsterer\nTalisman, der Geister-Attacken\nverstärkt.\n
+0x3D83EC: Wird getragen, ein psychischer\nLöffel, der Psycho-Attacken\nverstärkt.\n
+0x3D844E: Wird getragen, ein Brennstoff,\nder Feuer-Attacken verstärkt.\n
+0x3D84AC: Wird getragen, ein scharfer Zahn,\nder Drachen-Attacken verstärkt.\n
+0x3D850F: Wird getragen, ein luxuriöser\nSchal, der Normal-Attacken\nverstärkt.\n
+0x3D856E: Durchsichtiges Gerät voller\nDaten. Hergestellt von Devon AG.\n
+0x3D85BA: Wird getragen und gibt dem\nTräger beim Angriff KP zurück.\n
+0x3D8616: Wird getragen und verstärkt\nWasser-Attacken etwas.\n
+0x3D8669: Wird getragen, ein hinterlistiges\nAroma, das die Genauigkeit des\nGegners leicht senkt.\n
+0x3D86C0: Von Chaneira getragener\nHandschuh. Erhöht seine\nVolltreffer-Rate.\n
+0x3D8709: Von Ditto getragenes hartes\nPulver. Erhöht seine\nVerteidigung.\n
+0x3D8754: Von Tragosso oder Knogga\ngetragener harter Knochen.\nErhöht den Angriff.\n
+0x3D87AB: Von Porenta getragener Lauch.\nErhöht seine Volltreffer-Rate.\n
+0x3D8802: Wird getragen und erhöht die\nGelassenheit des Trägers bei\nWettbewerben.\n
+0x3D885F: Wird getragen und erhöht die\nSchönheit des Trägers bei\nWettbewerben.\n
+0x3D88BE: Wird getragen und erhöht den\nCharme des Trägers bei\nWettbewerben.\n
+0x3D891B: Wird getragen und erhöht die\nIntelligenz des Trägers bei\nWettbewerben.\n
+0x3D8979: Wird getragen und erhöht die\nRobustheit des Trägers bei\nWettbewerben.\n
+0x3D89D7: Faltrad, mindestens doppelt so\nschnell wie zu Fuß gehen.
+0x3D8A14: Ein Etui zum Aufbewahren von\nCasino-Münzen. Fasst bis zu\n9.999 Münzen.
+0x3D8A66: Itemfinder-Gerät. Gibt ein Signal\nab, wenn sich ein verstecktes\nItem in deiner Nähe befindet.
+0x3D8ACC: Alte, beschädigte Angel.\nZum Angeln überall einsetzbar.\n
+0x3D8B23: Gute Angel von guter Qualität.\nZum Angeln überall einsetzbar.\n
+0x3D8B7B: Superangel mit Hightech.\nZum Angeln überall einsetzbar.\n
+0x3D8BD4: Fahrschein für die Reise zwischen\nWest- und Ost-Borrius.\nMit einem Schiff bedruckt.
+0x3D8C2E: Ausweis für den Eintritt zu\nWettbewerben. Mit einer Schleife\nbedruckt.\n
+0x3D8C8A: Praktische Gießkanne.\nLässt Beeren in lockerer Erde\nwachsen.
+0x3D8CE2: Paket mit mechanischen Teilen,\nhergestellt von der DEVON\nCORPORATION.\n
+0x3D8D37: Sack, der beim Laufen durch\ndicke Vulkanasche diese\nautomatisch aufsammelt.
+0x3D8D85: Schlüssel für Neu-Mauville, das\nunter CELADOPOLIS erbaut wurde.\n
+0x3D8DCB: Faltrad für Tricks wie Sprünge\nund Wheelies.
+0x3D8E10: Ein Etui für <0x55><0x56><0x57><0x58><0x59>S, die mit\neinem BEEREN-MIXER hergestellt\nwerden. Gibt beim Schütteln\neins ab.
+0x3D8E68: Sehr wichtiger Brief für Stefan\nvom PRÄSIDENTEN von Devon.\n
+0x3D8EBD: Fahrkarte für die Fähre zu einer\nsüdlichen Insel. Mit einer Insel\nbedruckt.\n
+0x3D8F2A: Leuchtende rote Orbe.\nSoll uralte Macht enthalten.\n
+0x3D8F7F: Leuchtende blaue Orbe.\nSoll uralte Macht enthalten.\n
+0x3D8FD5: Gerät zur Suche nach Leben unter\nWasser.\nWirkt zu kompliziert in der\nBenutzung.
+0x3D9025: Schutzbrille.\nErmöglicht das Durchqueren von\nSandstürmen.
+0x3D9083: Fragment des Meteoriten, der vor\nlanger Zeit auf Cratéris fiel.\n          \n
+0x3D90D7: Schlüssel, der die elektrische\nBarriere von Team Shadow am\nMt. Fulguroc ausschaltet.
+0x3D9139: Schlüsselkarte, die Türen der\nEbene 2 in der Basis von Team\nShadow öffnet.\n
+0x3D919B: Schlüsselkarte, die Türen der\nEbene 3 in der Basis von Team\nShadow öffnet.\n
+0x3D91FD: Schlüsselkarte, die Türen der\nEbene 1 in der Basis von Team\nShadow öffnet.\n
+0x3D925F: Schlüssel, der den Laderaum des\nVERLASSENEN SCHIFFS öffnet. Alt\nund brüchig.\n
+0x3D92BF: Fossil eines uralten Meeres-\nPokémon. Sieht aus wie eine\nWurzel.\n
+0x3D931A: Fossil eines uralten Meeres-\nPokémon. Sieht aus wie eine\nKralle.\n
+0x3D936F: Visier, das unsichtbare Pokémon\nsichtbar macht. Hergestellt von\nSILPH AG.\n
+0x3D93C9: Extrem starke Attacke.\nWird der Anwender getroffen, bevor\ner handelt, schreckt er zurück.
+0x3D942C: Große, scharfe Krallen packen\nzu und treffen den Gegner mit\ngroßer Wucht.
+0x3D9473: Der Gegner wird mit einem Wasser-\nstrahl beschossen.\nKann das Ziel auch verwirren.
+0x3D94C1: Der Anwender beruhigt und\nkonzentriert seinen Geist, um\nseinen Sp. Angriff und seine\nSp. Verteidigung zu erhöhen.
+0x3D9518: Ein wildes Gebrüll, das den\nGegner aus dem Kampf vertreibt.\nBei wilden Pokémon beendet BRÜLLEN\nden Kampf.
+0x3D9576: Eine Attacke, die den Gegner\nschwer vergiftet. Der Giftschaden\nwird mit jeder Runde stärker.
+0x3D95C7: Beschwört fünf Runden lang einen\nHagelsturm, der allen Typen außer\nEis schadet.
+0x3D962B: Der Anwender spannt seine Muskeln\nan und baut Volumen auf, wodurch\nAngriff und Verteidigung steigen.
+0x3D9687: Der Anwender schießt Samen in\nSalven auf den Gegner ab. Es\ntreffen zwei bis fünf auf einmal.
+0x3D96E1: Eine variable Attacke, die Typ\nund Stärke je nach anwendendem\nPokémon ändert.
+0x3D9730: Das Wetter wird für fünf Runden\nsonnig, was Feuer-Attacken\nverstärkt.
+0x3D978D: Ein provozierter Gegner kann\nwütend werden. Er kann dann nur\nnoch Angriffsattacken einsetzen.
+0x3D97DE: Ein Eisstrahl wird auf den\nGegner abgefeuert. Kann das Ziel\neinfrieren.
+0x3D9823: Ein bösartiger Schnee- und\nWindangriff, der alle Gegner im\nKampf trifft. Kann einfrieren.
+0x3D987A: Brutale Attacke, die dem Gegner\nschweren Schaden zufügt, doch der\nAnwender muss sich danach\nausruhen.
+0x3D98DC: Eine Lichtwand entsteht für fünf\nRunden. Sie verringert Schaden\ndurch Sp.-Angriff-Attacken.
+0x3D9930: Der Anwender ist in dieser Runde\nvollständig geschützt. Kann bei\nwiederholter Nutzung fehlschlagen.
+0x3D9998: Ein starker Regen wird für fünf\nRunden beschworen, der\nWasser-Attacken in dieser Zeit\nverstärkt.
+0x3D99F2: Schlägt mit Tentakeln oder\nWurzeln zu, entzieht dem Ziel KP\nund heilt den Anwender.
+0x3D9A51: Schützt das Team fünf Runden\nlang mit einem Schild vor allen\nStatusproblemen.
+0x3D9A9F: Diese Attacke wird umso stärker,\nje weniger das Pokémon seinen\nTrainer mag.
+0x3D9AEF: Attacke über zwei Runden:\nZuerst wird Licht absorbiert,\ndann in der nächsten Runde\nzugeschlagen.
+0x3D9B58: Der Gegner wird mit einem festen\nStahlschwanz getroffen. Kann die\nVerteidigung des Ziels senken.
+0x3D9BB0: Eine gewaltige Elektroentladung\nwird auf den Gegner geschleudert.\nKann eine Paralyse verursachen.
+0x3D9BFE: Trifft den Gegner mit einem\ngewaltigen Blitzschlag. Kann eine\nParalyse verursachen.
+0x3D9C3F: Verursacht ein Beben, das alle\nPokémon im Kampf außer dem\nAnwender trifft.
+0x3D9C8C: Diese Attacke wird umso stärker,\nje mehr das Pokémon seinen\nTrainer mag.
+0x3D9CD9: Attacke über zwei Runden: Der\nAnwender gräbt sich unter die\nErde und schlägt dann zu. Kann\nauch aus Dungeons führen.
+0x3D9D3C: Starke Explosion psychischer\nEnergie, die den Gegner trifft.\nKann seine Sp. Verteidigung\nsenken.
+0x3D9D9C: Der Gegner wird von einer\ndunklen Masse angegriffen.\nKann seine Sp. Verteidigung\nsenken.
+0x3D9DED: Trifft den Gegner mit einer\nsteinharten Faust. Durchbricht\nREFLEKTOR und LICHTSCHILD.
+0x3D9E50: Der Anwender bewegt sich so\nschnell, dass er trügerische\nKopien erzeugt, die seine\nAusweichchance erhöhen.
+0x3D9EAC: Eine feste Barriere wird für\nfünf Runden errichtet. Sie\nverringert Schaden durch\nphysische Attacken.
+0x3D9F0F: Eine schnelle Elektroentladung\ntrifft den Gegner. Dieser Attacke\nkann nicht ausgewichen werden.
+0x3D9F60: Der Gegner wird von einer\nstarken Feuerexplosion versengt.\nKann beim Ziel eine Verbrennung\nverursachen.
+0x3D9FB4: Giftiger Schlamm wird mit großer\nWucht auf den Gegner geschleudert.\nKann das Ziel auch vergiften.
+0x3DA007: Beschwört einen fünf Runden\nlangen Sandsturm. Er schadet\nallen Typen außer Gestein, Boden\nund Stahl.
+0x3DA06B: Der Gegner wird mit einer\nintensiven Flamme versengt. Kann\nbeim Ziel eine Verbrennung\nverursachen.
+0x3DA0BE: Felsen werden auf den Gegner\ngeschleudert. Kann bei Treffer\nauch seine Initiative senken.
+0x3DA111: Eine extrem schnelle Attacke\ngegen ein Ziel. Ein Ausweichen\nist unmöglich.
+0x3DA159: Durch diese Attacke wütend\ngemacht, kann das Ziel dieselbe\nAttacke nicht zwei Runden in\nFolge einsetzen.
+0x3DA1B6: Eine Angriffsattacke, die sehr\nstark wird, wenn der Anwender\nvergiftet, verbrannt oder\nparalysiert ist.
+0x3DA20F: Attacke, die je nach Kampf-\ngelände einen zusätzlichen\nEffekt haben kann.
+0x3DA262: Attacke, die den Anwender für\nzwei Runden einschläfert, um\nseine KP wiederherzustellen und\njeden Status zu heilen.
+0x3DA2C4: Der Gegner des entgegengesetzten\nGeschlechts verliebt sich in den\nAnwender und kann nicht mehr\nangreifen.
+0x3DA31E: Eine Attacke, die dem Anwender\ndie Gelegenheit gibt, das Item\ndes Gegners zu stehlen.
+0x3DA369: Der Gegner wird mit stahlharten\nFlügeln getroffen. Kann auch die\nVerteidigung des Anwenders\nerhöhen.
+0x3DA3BD: Eine besondere Kraft wird auf\nden Gegner übertragen, sodass er\nAttacken mit dem Anwender\ntauscht.
+0x3DA416: Attacke, die die Effekte von\nStatus- oder Heilattacken des\nGegners stiehlt.
+0x3DA477: Maximale, wilde Attacke, senkt\naber den Sp. Angriff des\nAnwenders stark.
+0x3DA4DC: Greift den Gegner mit Klingen\noder Krallen an. Kann außerhalb\nvon Kämpfen auch Bäume oder\nGras zerschneiden.
+0x3DA545: Der Anwender fliegt in der\nersten Runde hoch und greift in\nder nächsten an. Kann auch zum\nFliegen in eine Stadt genutzt\nwerden.
+0x3DA5AB: Erzeugt eine riesige Welle, die\nauf den Gegner kracht, und\nermöglicht auch das Reisen über\nWasser.
+0x3DA608: Der Anwender baut große Kraft\nauf und schlägt dann zu. Kann\nauch große Felsen bewegen.
+0x3DA66D: Löst eine Lichtexplosion aus,\ndie die Genauigkeit des Gegners\nsenkt. Erhellt auch Höhlen.
+0x3DA6CD: Trifft den Gegner mit einer\nharten, zermalmenden Attacke.\nKann rissige Felsen zerbrechen.
+0x3DA71E: Eine starke Ramm-Attacke. Kann\nauch genutzt werden, um einen\nreißenden Wasserfall zu\nerklimmen.
+0x3DA76C: Attacke über zwei Runden: Der\nAnwender taucht in der ersten\nRunde ab und schlägt in der\nzweiten zu.
+0x3DA7D1: Paket für Prof. Log vom\nPokémon-Laden in Bélenbourg.  \n
+0x3DA81A: Flöte, die angeblich jedes\nPokémon sofort aufwecken kann.\nKlingt hübsch.
+0x3DA866: Paar schmutziger Socken, gefunden\nin der Kanalisation von Antésia.
+0x3DA8B4: Paket mit einem Pokédex für\ndeinen Rivalen.
+0x3DA907: Ring, der die Mega-Entwicklung\nermöglicht, wenn ein Mega-Stein\ngetragen wird.       \n
+0x3DA95A: Bernstein mit Genen eines\nuralten Pokémon. Rötlich gefärbt.\n
+0x3DA9BB: Schlüsselkarte Ebene 1 für Team\nShadow.
+0x3DAA0A: Fahrstuhlschlüssel für das\nVersteck von TEAM ROCKET. Mit\nROCKET-Logo versehen.\n
+0x3DAA64: Fossil eines uralten Meeres-\nPokémon. Sieht aus wie eine\nMuschel.\n
+0x3DAABD: Fossil eines uralten Meeres-\nPokémon. Sieht aus wie ein\nGehäuse.\n
+0x3DAB13: Brille, die unsichtbare Pokémon\nsichtbar macht. SILPH AG.\n
+0x3DAB59: Faltrad, schneller als\nLaufschuhe.\n
+0x3DAB9F: Praktische Karte, jederzeit\neinsehbar. Zeigt deine Position.\n
+0x3DABF7: Gerät zum Aufspüren kampf-\nbereiter Trainer. Der Akku lädt\nsich beim Laufen auf.
+0x3DAC51: Gerät, das gehörte Infos über\nBerühmtheiten speichert.\n
+0x3DACA5: Etui für TM und VM, verstaut im\nBereich Wichtige Items des\nWürfels.\n
+0x3DAD01: Beerenbeutel, verstaut im\nBereich Wichtige Items des\nWürfels.\n
+0x3DAD5C: Fernseher mit Tipps für\nangehende Trainer.\n
+0x3DADAE: Fährpass zwischen den Inseln 1, 2\nund 3. Mit drei Inseln bedruckt.\n
+0x3DAE08: Fährpass zwischen Carmin sur Mer\nund den SEVII-INSELN.\nMit einem Regenbogen bedruckt.
+0x3DAE68: Aromatischer Tee, von einer alten\nDame zubereitet. Stillt jeden Durst.\n
+0x3DAEB6: Ticket für NAVEL ROCK.\nLeuchtet in einem geheimnisvollen Licht.\n
+0x3DAF07: Ticket für BIRTH ISLAND.\nGlänzt wunderschön.\n
+0x3DAF52: Behälter für BEERENPULVER,\nhergestellt mit einem BEEREN-MIXER.
+0x3DAF8D: Prächtiger Edelstein mit rotem Glanz.\nSymbol der Leidenschaft.\n
+0x3DAFD6: Prächtiger Edelstein mit blauem Glanz.\nSymbol der Ehrlichkeit.\n
+0x3DF7E8: SCHATZ
+0x3E7F35: GESCHNAPPT
+0x3E7F3C: TAUSCH
+0x3E7F42: SAPHIR
+0x3E7F4B: ENTWICKELN
+0x3E7F52: ENZYKLOPÄDIE
+0x3E7F5F: WESEN
+0x3E7F66: CENTER
+0x3E7F71: LINK
+0x3E7F76: SP.-FÄHIGKEIT
+0x3E7F82: TRAINER
+0x3E7F8A: VERSION
+0x3E7F92: POKéNAV
+0x3E7F9A: Pokémon
+0x3E7FA6: Pokédex
+0x3E7FAE: RUBIN
+0x3E7FB3: LEVEL
+0x3E7FBD: GRÜN
+0x3E7FC7: FEUER
+0x3E7FCD: GOLD
+0x3E7FD2: BLATT
+0x3E7FD7: SILBER
+0x3E811D: DUFTNOTE
+0x3E8124: DICKES FELL
+0x3E812E: FEUCHTIGKEIT
+0x3E8138: NIESEL
+0x3E8140: SOG
+0x3E814B: RIVALITÄT
+0x3E8156: FELSENFEST
+0x3E8160: FARBWECHSEL
+0x3E8166: ALT. FARBE
+0x3E8171: GESTEIN
+0x3E8176: SCHÖN
+0x3E8180: SCHÖNHEIT
+0x3E8187: AIR LOCK
+0x3E8190: PSYCHO
+0x3E8198: HYPER CUTTER
+0x3E81A5: KAMPF
+0x3E81AE: FLUCHTVERHINDERUNG
+0x3E81B9: SCHLAU
+0x3E81BF: KLUGHEIT
+0x3E81C9: TEMPOSCHUB
+0x3E81D5: COOL
+0x3E81DA: GELASSENHEIT
+0x3E81E3: KAMPFPANZER
+0x3E81F0: NIEDLICH
+0x3E81F5: CHARME
+0x3E81FE: ROBUSTHEIT
+0x3E8205: SAUGNAPF
+0x3E8212: PFLANZE
+0x3E8218: VOLLPANZER
+0x3E8223: STURZBACH
+0x3E822B: GEIST
+0x3E8231: EIS
+0x3E8235: MUT
+0x3E823A: RAUHEIT
+0x3E8245: SCHALENPANZER
+0x3E8251: GUTER HEILER
+0x3E825E: FEUCHT
+0x3E8263: BODEN
+0x3E826A: AUFWÄRMEN
+0x3E8271: MAGNETFALLE
+0x3E827D: RAUCHSCHIRM
+0x3E8289: SYNCHRO
+0x3E8295: DÜNGER
+0x3E829E: BLITZSCHWIMMER
+0x3E82A9: SANDSTURM
+0x3E82B5: SANDSCHLEIER
+0x3E82BF: SICHERBLICK
+0x3E82C8: AUFMERKSAMKEIT
+0x3E82D4: STATIK
+0x3E82DB: Typ
+0x3E82E0: ROBUST
+0x3E82E6: ROBUSTHEIT
+0x3E82F0: HÄUTUNG
+0x3E82FA: FARBKRAFT
+0x3E8305: VOLTABSORBER
+0x3E8311: WASSERABSORBER
+0x3E831E: ELEKTRO
+0x3E8327: WETTER
+0x3E8330: SERENITÄT
+0x3E833D: GIFT
+0x3E8344: GIFTSTACHEL
+0x3E8351: DRACHE
+0x3E8358: KOPIE
+0x3E835E: GUTGLÄUBIGKEIT
+0x3E8368: TRANTÜTE
+0x3E836F: ANGSTHASE
+0x3E8378: KLEBEKÖRPER
+0x3E8384: NEBELSCHLEIER
+0x3E838F: NORMAL
+0x3E8396: STAHL
+0x3E839C: ERLEUCHTUNG
+0x3E83A7: FRÜHWECKER
+0x3E83B2: ÜBEREIFER
+0x3E83B9: LEUCHTEN
+0x3E83BF: FLUG
+0x3E83C6: DÜRRE
+0x3E83CE: BLITZFÄNGER
+0x3E83DB: FACETTENAUGE
+0x3E83E8: MYST. SCHUPPE
+0x3E83F5: WUNDERWACHE
+0x3E8402: INSOMNIA
+0x3E840B: SCHWEBE
+0x3E8414: PLUS
+0x3E8419: DRUCKAUSÜBUNG
+0x3E8422: SABBERTROPF
+0x3E842E: VERKLEIDUNG
+0x3E843B: SCHALLDÄMPFER
+0x3E8446: SPORENSCHUB
+0x3E8457: FEUER
+0x3E845C: FLAMMKÖRPER
+0x3E8467: MINUS
+0x3E846D: EIGENES TEMPO
+0x3E8477: MAGMAPANZER
+0x3E8483: WASSER
+0x3E8489: FEUERFÄNGER
+0x3E8494: KÄFER
+0x3E8498: SCHWARM
+0x3E849E: CHARMEBOLZEN
+0x3E84A9: IMMUNITÄT
+0x3E84B2: GROSSES FEUER
+0x3E84B8: MITNAHME
+0x3E84BF: MUSTER
+0x3E84C7: FACKEL
+0x3E84D2: LEBENSGEIST
+0x3E84DF: CHLOROPHYLL
+0x3E84EB: PURE KRAFT
+0x3E84F6: PUDERSCHILD
+0x3E8A32: ENTSCHEIDEN
+0x3E8A39: LASS MICH GEWINNEN
+0x3E8A44: GEWINNE
+0x3E8A51: WENN ICH GEWINNE
+0x3E8A5A: SOBALD ICH GEWINNE
+0x3E8A65: KANN NICHT GEWINNEN
+0x3E8A6F: KANN GEWINNEN
+0x3E8A77: NICHT GEWACHSEN
+0x3E8A80: GEIST
+0x3E8A87: ENTSCHLOSSEN
+0x3E8A8F: TRUMPF
+0x3E8A9A: NIMM DAS
+0x3E8AA4: LOS
+0x3E8AAC: Attacke
+0x3E8AB3: KAPITULATION
+0x3E8ABD: MUTIG
+0x3E8AC3: TALENT
+0x3E8ACA: STRATEGIE
+0x3E8AD3: SCHLAGEN
+0x3E8AD9: MATCH
+0x3E8ADF: SIEG
+0x3E8AE7: OFFENSIVE
+0x3E8AF1: SINN
+0x3E8AF7: VS
+0x3E8AFE: KÄMPFE
+0x3E8B05: KRAFT
+0x3E8B0B: HERAUSFORDERUNG
+0x3E8B15: STARK
+0x3E8B1C: ZU STARK
+0x3E8B27: SACHTE
+0x3E8B33: GENIE
+0x3E8B3A: LEGENDE
+0x3E8B41: FLUCHT
+0x3E8B4C: KAMPF
+0x3E8B53: RAUFEREI
+0x3E8B59: WIEDERBELEBEN
+0x3E8B65: PUNKTE
+0x3E8B6C: ERNSTHAFT
+0x3E8B74: AUFGABE
+0x3E8B7C: NIEDERLAGE
+0x3E8B81: WENN ICH VERLIERE
+0x3E8B8B: VERLOREN
+0x3E8B90: VERLIEREN
+0x3E8B95: WACHE
+0x3E8B9B: PARTNER
+0x3E8BA3: ABLEHNEN
+0x3E8BAA: AKZEPTIEREN
+0x3E8BB1: UNBESIEGBAR
+0x3E8BBC: ERHALTEN
+0x3E8BC5: EINFACH
+0x3E8BCA: SCHWACH
+0x3E8BCF: ZU SCHWACH
+0x3E8BD8: LEICHT
+0x3E8BE1: LEADER
+0x3E8BE8: REGEL
+0x3E8BED: Schlag
+0x3E8EEF: Ja
+0x3E8EF3: LOS GEHT'S
+0x3E8EFD: ICH KOMME
+0x3E8F09: TADA
+0x3E8F14: JA
+0x3E8F19: WILLKOMMEN
+0x3E8F24: HALLO
+0x3E8F2B: BRAVO
+0x3E8F34: Gib MIR
+0x3E8F3C: VERZEIHUNG
+0x3E8F42: ENTSCHULDIGE
+0x3E8F4C: VERZEIH
+0x3E8F54: HEY DU
+0x3E8F5F: GUTEN TAG
+0x3E8F65: LEBWOHL
+0x3E8F6E: DANKE
+0x3E8F78: ICH BIN DA
+0x3E8F85: VERZEIHUNG
+0x3E8F8C: ENTSCHULDIGE
+0x3E8F93: BIS SPÄTER
+0x3E8F9A: ENTSCHULDIGEN
+0x3E8FA4: ALSO
+0x3E8FAF: LOS
+0x3E8FB8: SCHÄTZEN
+0x3E8FC8: GEHT'S?
+0x3E8FDE: JA JA
+0x3E8FE9: TSCHÜSS
+0x3E8FF1: BIS SPÄTER
+0x3E8FFE: GERUCH
+0x3E9004: ICH HÖRE
+0x3E900E: HU-HA
+0x3E9016: JUHU
+0x3E901F: KOMM
+0x3E9029: VERLASS DICH AUF
+0x3E923B: DIR
+0x3E9245: DEIN
+0x3E924A: DU BIST
+0x3E9251: DU HAST
+0x3E9258: Mutter
+0x3E925F: GROSSVATER
+0x3E926B: ONKEL
+0x3E9271: VATER
+0x3E927C: ERWACHSENER
+0x3E9282: BRUDER
+0x3E928A: SCHWESTER
+0x3E9291: GROSSMUTTER
+0x3E929D: TANTE
+0x3E92A2: ELTERNTEIL
+0x3E92B0: TOCHTER
+0x3E92B5: BABY
+0x3E92BA: FAMILIE
+0x3E92CC: ORT
+0x3E92D2: PATENTOCHTER
+0x3E92E4: SIND NICHT
+0x3E92EB: GESCHWISTER
+0x3E92F8: KINDER
+0x3E930A: ICH
+0x3E9311: ICH WAR
+0x3E9317: MIR
+0x3E932E: JEMAND
+0x3E9336: DER WAR
+0x3E933E: WEM
+0x3E9346: DESSEN
+0x3E934C: DER IST
+0x3E9358: DAME
+0x3E935D: FREUND
+0x3E9364: VERBÜNDETER
+0x3E9369: PERSON
+0x3E9370: TYP
+0x3E9375: SIE
+0x3E937A: SIE WAREN
+0x3E9384: IHNEN
+0x3E938C: IHR
+0x3E9392: SIE SIND
+0x3E939A: SIE HABEN
+0x3E93A5: GEWESEN
+0x3E93AA: UNS
+0x3E93B4: WIR SIND
+0x3E93BA: RIVALE
+0x3E93C0: WIR HABEN
+0x3E93C6: FRAU
+0x3E93D0: SIE WAR
+0x3E93D8: IHR
+0x3E93DF: IHRE
+0x3E93E4: SIE IST
+0x3E93EB: SICHER
+0x3E978F: UPS
+0x3E9795: WAAH
+0x3E979B: HAHAHA
+0x3E97A5: NEIN
+0x3E97AA: ARF
+0x3E97B3: WAU
+0x3E97B9: GRRRAAAH!
+0x3E97C7: HIHI
+0x3E97CE: SEUFZ
+0x3E97D3: UNGLAUBLICH
+0x3E97E0: WEINE
+0x3E97E6: OKAY
+0x3E97F4: EHEHE
+0x3E97FA: OH OH OH
+0x3E9805: OH JA
+0x3E9811: UPS
+0x3E9816: SCHOCKIERT
+0x3E9822: GRAAAH
+0x3E9829: MUAHAHAHA
+0x3E983B: HEHE
+0x3E9848: HAHAHA
+0x3E984F: AUA
+0x3E9856: HIYAH
+0x3E985C: FUFUFU
+0x3E9867: PFF
+0x3E986D: HMPF
+0x3E9873: HEHEHE
+0x3E987E: HOHOHO
+0x3E9885: JA
+0x3E988C: OH JE
+0x3E9895: AARGH
+0x3E989B: MUFUFU
+0x3E98A6: OK ALLES KLAR
+0x3E98AD: OK
+0x3E98B2: LALALA
+0x3E98C1: WOW
+0x3E98C7: GWAH
+0x3E98CC: WAHAHAHA
+0x3E9BD3: NICHT SEHR
+0x3E9BDC: GEMEIN
+0x3E9BE9: EMPFEHLEN
+0x3E9BF3: DUMMKOPF
+0x3E9BFA: GENUG
+0x3E9C00: VON
+0x3E9C05: GEFÜHL
+0x3E9C11: JEDOCH
+0x3E9C19: FALL
+0x3E9C22: VERSAGEN
+0x3E9C2F: AUSREICHEND
+0x3E9C36: VIEL
+0x3E9C3C: EIN BISSCHEN
+0x3E9C45: ABSOLUT
+0x3E9C54: NUR
+0x3E9C59: UNGEFÄHR
+0x3E9C60: WAHRSCHEINLICH
+0x3E9C6C: SEHR
+0x3E9C71: EIN WENIG
+0x3E9C7C: WILD
+0x3E9C81: ES IST
+0x3E9C88: NUR
+0x3E9C8D: TROTZDEM
+0x3E9C96: MUSS SEIN
+0x3E9C9E: NATÜRLICH
+0x3E9CA8: IM MOMENT
+0x3E9CB1: VERSTANDEN
+0x3E9CBC: ICH SCHERZE
+0x3E9CC3: BEREIT
+0x3E9CC9: ETWAS
+0x3E9CD3: AUF EINE ART
+0x3E9CDB: OBWOHL
+0x3E9CE4: AUCH
+0x3E9CE9: PERFEKT
+0x3E9CF1: SOVIEL WIE
+0x3E9CFC: WIRKLICH
+0x3E9D03: TATSÄCHLICH
+0x3E9D09: ERNSTHAFT
+0x3E9D13: VOLLKOMMEN
+0x3E9D1B: BIS ZU
+0x3E9D21: ALS OB
+0x3E9D27: LAUNE
+0x3E9D2C: ZIEMLICH
+0x3E9D33: SCHRECKLICH
+0x3E9D3B: MODUS
+0x3E9D40: MEHR
+0x3E9D45: ZU SPÄT
+0x3E9D4E: ENDLICH
+0x3E9D5A: STATTDESSEN
+0x3E9D62: FANTASTISCH
+0x3EA041: WIRD DA SEIN
+0x3EA051: MAL
+0x3EA057: SICH FRAGEN
+0x3EA05E: IST DAS?
+0x3EA068: GIB MIR
+0x3EA06E: KÖNNTE
+0x3EA074: RISKIERT ZU
+0x3EA07E: HÄTTE
+0x3EA087: NICHT WAHR?
+0x3EA091: LOS
+0x3EA097: ANDERE
+0x3EA0A5: WAR
+0x3EA0AA: DIESE DA
+0x3EA0B0: IST NICHT
+0x3EA0B6: WIRD NICHT SEIN
+0x3EA0BC: KANN NICHT
+0x3EA0C6: TU NICHT
+0x3EA0CF: TUT
+0x3EA0D4: WER
+0x3EA0D9: WELCHER
+0x3EA0DF: WAR NICHT
+0x3EA0E6: WAREN NICHT
+0x3EA0EE: HABEN
+0x3EA0F3: HABEN NICHT
+0x3EA104: DORT DRÜBEN
+0x3EA111: VIELLEICHT
+0x3EA117: ÜBRIGENS
+0x3EA11D: FERTIG
+0x3EA13A: MIT
+0x3EA13F: BESSER
+0x3EA146: NIEMALS
+0x3EA14B: SEIT
+0x3EA154: GEHÖRT
+0x3EA16D: WIE
+0x3EA176: HAT NICHT
+0x3EA17D: TUT NICHT
+0x3EA185: OHNE
+0x3EA18D: NACH
+0x3EA193: VOR
+0x3EA19A: WÄHREND
+0x3EA1A0: ALS
+0x3EA1A5: EINMAL
+0x3EA1AA: IRGENDWO
+0x3EA4F5: SPIELEN
+0x3EA4FA: IN EILE
+0x3EA502: GEHT
+0x3EA507: BENOMMEN
+0x3EA50D: GLÜCKLICH
+0x3EA513: GLÜCK
+0x3EA51D: AUFREGEN
+0x3EA524: WICHTIG
+0x3EA52E: LUSTIG
+0x3EA538: HEIMKEHREN
+0x3EA540: ENTTÄUSCHT
+0x3EA54D: ENTTÄUSCHT
+0x3EA561: VERSUCHT
+0x3EA567: HÖRT
+0x3EA56D: DENKT
+0x3EA573: HÖREN
+0x3EA578: WILL
+0x3EA57E: MISSVERSTANDEN
+0x3EA587: MAG NICHT
+0x3EA58F: WÜTEND
+0x3EA595: WUT
+0x3EA59B: ERSCHRECKEND
+0x3EA5A1: EINSAM
+0x3EA5AA: ENTTÄUSCHEN
+0x3EA5B9: ERHÄLT
+0x3EA5BE: NIEMALS
+0x3EA5C4: VERFLIXT
+0x3EA5C9: NIEDERGESCHLAGEN
+0x3EA5D2: UNGLAUBLICH
+0x3EA5DD: MAG
+0x3EA5E3: MAG NICHT
+0x3EA5EC: LANGWEILIG
+0x3EA5F3: SICH SORGEN
+0x3EA5F8: SORGT SICH
+0x3EA5FE: ES GEHT
+0x3EA608: LIEBT
+0x3EA60E: KATASTROPHE
+0x3EA617: SCHÄTZEN
+0x3EA61D: SCHÄTZT
+0x3EA628: FEHLEND
+0x3EA634: HART
+0x3EA639: SCHRECKLICH
+0x3EA642: SOLLTE
+0x3EA649: NETT
+0x3EA64E: TRINKEN
+0x3EA654: ÜBERRASCHUNG
+0x3EA65D: ANGST
+0x3EA662: WOLLEN
+0x3EA667: WARTEN
+0x3EA66C: ZUFRIEDEN
+0x3EA67A: SELTEN
+0x3EA67F: NEGATIV
+0x3EA688: MACHT
+0x3EA68D: GEFAHR
+0x3EA694: BESIEGT
+0x3EA69D: SCHLÄGT
+0x3EA6A2: GENIAL
+0x3EA6A8: ROMANTISCH
+0x3EA6B1: FRAGE
+0x3EA6BA: VERSTEHEN
+0x3EA6C5: VERSTEHT
+0x3EAA14: EXISTIERT
+0x3EAA1B: ÜBERMASS
+0x3EAA22: GEBILLIGT
+0x3EAA2F: GUT
+0x3EAA34: WENIGER
+0x3EAA39: SCHWUNG
+0x3EAA42: IM GANGE
+0x3EAA48: SELTSAM
+0x3EAA4E: BESCHÄFTIGT
+0x3EAA53: ZUSAMMEN
+0x3EAA5C: VOLL
+0x3EAA61: ABWESEND
+0x3EAA68: SEIN
+0x3EAA6E: BRAUCHT
+0x3EAA73: KÖSTLICH
+0x3EAA79: BEGABT
+0x3EAA81: LAUT
+0x3EAA8B: VERSPÄTET
+0x3EAA90: SCHLIESSEN
+0x3EAA96: FÜGSAM
+0x3EAA9D: AMÜSANT
+0x3EAAA5: UNTERHALTSAM
+0x3EAAB2: PERFEKTION
+0x3EAABD: HÜBSCH
+0x3EAAC4: FIT
+0x3EAACC: AUSGEZEICHNET
+0x3EAAD6: VERKEHRT
+0x3EAAE2: KALT
+0x3EAAE7: ERFRISCHEND
+0x3EAAF2: UNVERMEIDLICH
+0x3EAAFE: VIEL
+0x3EAB03: ÜBERWÄLTIGEND
+0x3EAB10: FABELHAFT
+0x3EAB19: SONST
+0x3EAB1E: TEUER
+0x3EAB28: KORREKT
+0x3EAB30: UNMÖGLICH
+0x3EAB3B: KLEIN
+0x3EAB41: ANDERS
+0x3EAB4B: MÜDE
+0x3EAB51: TALENT
+0x3EAB5B: STÄNDIG
+0x3EAB64: ABWEGIG
+0x3EAB71: KEIN
+0x3EAB76: NICHTS
+0x3EAB7E: NATÜRLICH
+0x3EAB86: WIRD
+0x3EAB8E: LAUWARM
+0x3EAB97: SCHNELL
+0x3EABA0: FURCHTBAR
+0x3EABA6: ALLEIN
+0x3EABAC: GELANGWEILT
+0x3EABB2: GEHEIMNIS
+0x3EABB9: RÄTSEL
+0x3EABC1: FEHLT
+0x3EABC7: BESSER
+0x3EABCC: MIES
+0x3EABD2: FEHLER
+0x3EABDA: NETT
+0x3EABDF: GUT
+0x3EABE4: GESCHWÄCHT
+0x3EABED: EINFACH
+0x3EABF4: SCHEINT
+0x3EABFA: SCHLECHT
+0x3EAF42: NACHGEBEN
+0x3EAF4A: GEBEN
+0x3EAF4F: GIBT
+0x3EAF55: HAT GESPIELT
+0x3EAF5C: SPIELT
+0x3EAF62: HEBT AUF
+0x3EAF6A: LÄUFT
+0x3EAF72: LÄUFT
+0x3EAF78: SAGT
+0x3EAF7D: IST GEGANGEN
+0x3EAF82: HAT GESAGT
+0x3EAF87: WACH AUF
+0x3EAF8F: WACHT AUF
+0x3EAF98: ÄRGERT
+0x3EAF9F: LEHREN
+0x3EAFA5: LEHRT
+0x3EAFAD: BITTE
+0x3EAFB4: LERNEN
+0x3EAFBA: ÄNDERN
+0x3EAFC1: GESCHICHTE
+0x3EAFC7: VERTRAUEN
+0x3EAFCD: GROSSZÜGIG
+0x3EAFD4: HÖRT ZU
+0x3EAFDC: GEHÖR
+0x3EAFE4: TRAINIERT
+0x3EAFEB: WÄHLEN
+0x3EAFF2: KOMM
+0x3EAFF7: IST GEKOMMEN
+0x3EAFFC: SUCHEN
+0x3EB003: MACHEN
+0x3EB008: URSACHE
+0x3EB00E: WISSEN
+0x3EB013: WEISS
+0x3EB019: ABLEHNEN
+0x3EB020: RÄUMT AUF
+0x3EB027: PRAHLEN
+0x3EB02C: UNWISSEND
+0x3EB035: DENKT
+0x3EB03C: GLAUBEN
+0x3EB044: RUTSCHT
+0x3EB04A: ISST
+0x3EB053: BENUTZT
+0x3EB058: BENUTZEND
+0x3EB05E: KONNTE NICHT
+0x3EB067: FÄHIG
+0x3EB06F: VERSCHWINDEN
+0x3EB079: ERSCHEINEN
+0x3EB080: WERFEN
+0x3EB086: SICH SORGEN
+0x3EB08C: HAT GESCHLAFEN
+0x3EB092: SCHLAFEN
+0x3EB098: BEFREIEN
+0x3EB0A0: TRINKT
+0x3EB0A7: RENNT
+0x3EB0B0: ARBEITET
+0x3EB0B6: AM WERK
+0x3EB0BE: REDET
+0x3EB0C6: SPRICHT
+0x3EB0CB: FLIESSEN
+0x3EB0D0: KNALLT
