@@ -54,6 +54,14 @@ ABILITY_STRIDE = 17
 
 _LINE_RE = re.compile(r"^0x([0-9A-Fa-f]+):\s?(.*)$")
 
+# Prior FR names we are willing to overwrite when the target changed (so a
+# re-run over an already-built ROM self-heals instead of warning-and-skipping).
+# 0xA376FC: "Royal Roar" was first shipped as "Rugissement Royal" (17 chars),
+# which overflows the 17-byte cell; it is now "Hurlement Royal" (fits cleanly).
+_PRIOR_VARIANTS: dict[int, set] = {
+    0xA376FC: {"Rugissement Royal"},
+}
+
 
 def _parse_combined(path: Path) -> dict[int, str]:
     """Parse ``0x<offset>: text`` lines; last entry wins (case-insensitive)."""
@@ -128,7 +136,12 @@ def apply_to_rom(
         # de-accented variant of the French target (self-heals older builds
         # that transliterated e.g. "œ"→"OE"). Anything else is left untouched.
         en_text = en.get(offset)
-        if not (current == en_text or _fold(current) == _fold(fr_text)):
+        accepted = (
+            current == en_text
+            or _fold(current) == _fold(fr_text)
+            or current in _PRIOR_VARIANTS.get(offset, set())
+        )
+        if not accepted:
             warnings.append(
                 f"0x{offset:X}: cell holds {current!r} (EN={en_text!r}, "
                 f"FR={fr_text!r}) — unexpected, skip"
