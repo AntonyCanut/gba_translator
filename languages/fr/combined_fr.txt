@@ -6878,7 +6878,7 @@
 0x7D60AC: Nous avons commencé avec de bonnes\nintentions.\pCe n'est que quelque temps plus tard\nque les choses ont commencé à\lnous échapper.\pQuand est-ce que tout a mal tourné…
 0x7D612C: Il est temps, {PLAYER}.
 0x7D613B: MARLON. {PLAYER}.
-0x7D61AD: MARLON !\pADEPTE DE L'ART INTERDIT.\pLA RÉSURRECTION.\pLE PÉCHÉ.\pVOUS SEREZ RENVOYÉS DANS VOTRE\nMONDE, IMMORTELS JUSQU'À CE QUE LE\lMONDE SOIT PURIFIÉ.\pUN SEUL AUTRE A ENDURÉ CETTE\nPUNITION, ET À CE JOUR\lIL PARCOURT ENCORE LE MONDE,\lMILLE ANS PLUS TARD !\pCORRIGEZ VOS TORTS !\pLIBÉREZ CEUX DONT LES ÂMES ONT ÉTÉ\nPIÉGÉES DANS LE VOLCAN {COLOR}ÉCENDREUX{COLOR}Ë !\pAVANT QU'IL NE SOIT TROP TARD…\pCECI EST MON VERDICT !\pCOMMENCEZ !
+0x7D61AD: MARLON !\pADEPTE DE L'ART INTERDIT.\pLA RÉSURRECTION.\pLE PÉCHÉ.\pVOUS SEREZ RENVOYÉS DANS VOTRE\nMONDE, IMMORTELS JUSQU'À CE QUE LE\lMONDE SOIT PURIFIÉ.\pUN SEUL AUTRE A ENDURÉ CETTE\nPUNITION, ET À CE JOUR\lIL PARCOURT ENCORE LE MONDE,\lMILLE ANS PLUS TARD !\pCORRIGEZ VOS TORTS !\pLIBÉREZ CEUX DONT LES ÂMES ONT ÉTÉ\nPIÉGÉES DANS LE VOLCAN {COLOR}ÉCENDRÉ{COLOR}Ë !\pAVANT QU'IL NE SOIT TROP TARD…\pCECI EST MON VERDICT !\pCOMMENCEZ !
 0x7D632C: {PLAYER}!\pMORT PRÉMATURÉE.\pUNE MALÉDICTION SUR VOTRE ÂME.\pPOUR AROS, JE VOUS\nRENDS LA VIE !\pUNE CONDITION.\pRÉUSSIS À ARRÊTER LE TOURMENT SANS\nFIN DES ÂMES, OU JE TE\lRÉDUIRAI EN CENDRES.\pCECI EST MON VERDICT.\pDISPARAIS !
 0x7D65AC: Non…\pTu ne peux pas être…
 0x7D65BE: …{PLAYER}?\pMais…mais…mais tu es censé être mort\n!\pComment est-ce possible ?\pJe dois prévenir les autres !
@@ -20185,11 +20185,11 @@
 0x1F70C64: Avant {B_BUTTON}, check les flics !\n
 0x1F70CAC: Route 3 «\nRoute\pdu Paradis» <0x79> Paradis des\nFleurs <0x7A> Dresco
 0x1F70CE4: Paradis des Fleurs\pUn havre pour les fleurs.
-0x1F70D0E: Route 4 «\nZone\pdu Volcan» <0x7B> Boissombre,\nVolcan Cendre, Route 5 <0x7C>\lDresco <0x7A> Route\l13
-0x1F70D64: Boissombre <0x7B> Volcan Cendre\n<0x7C> Dresco
+0x1F70D0E: Route 4 «\nZone\pdu Volcan» <0x7B> Boissombre,\nVolcan Cendré, Route 5 <0x7C>\lDresco <0x7A> Route\l13
+0x1F70D64: Boissombre <0x7B> Volcan Cendré\n<0x7C> Dresco
 0x1F70D8E: <0x7C> Boissombre
 0x1F70D9B: Volcan Cendré\nPassage
-0x1F70DB2: Route 5\n«\pVallée Humide» <0x79> Route 4,\nV. Cendre <0x7B> Cratère
+0x1F70DB2: Route 5\n«\pVallée Humide» <0x79> Route 4,\nV. Cendré <0x7B> Cratère
 0x1F70E01: Route 5\n«\pVallée Humide» <0x79> Pension\nPokémon <0x7A> Cratéris\l<0x7C> Route 4
 0x1F70E41: <0x79> Pension Pokémon\n<0x7A> Cratéris\l<0x7C> Route 4
 0x1F70E6C: Pension Pokémon
@@ -23303,7 +23303,7 @@
 0x1F4953C: Arrrrgh !\pPourquoi tous ces gêneurs\nsurgissent-ils de partout !?\p<0xB0>\pSoit, ce n'est qu'une question de\ntemps avant votre défaite à tous.\pJe suis un homme patient<0xB0>\pJ'ai attendu ce jour un an durant,\nalors quelques instants de plus ?
 0x1F496B6: <0xFC><0x01><0x04>Je suis désolé<0xB0><0xFC><0x08><0x20> Marlon<0xB0><0xFC><0x08><0x30> <0xFD><0x06><0xB0><0xFC><0x08><0x30>\nC'est le seul moyen<0xB0>
 0x1F49B96: Ha ha<0xB0><0xFC><0x08><0x20> hahahahaha<0xB0>\pMalgré votre ingérence, il semble\nque j'aie triomphé !\pLa guerre vieille de 3000 ans<0xB0><0xFC><0x08><0x18>\na trouvé sa juste conclusion.\pLe grand roi n'aura plus à\nsouffrir pour l'éternité.\pQuand il saura que j'ai accompli\nce qu'il n'a pu faire, ses Pokémon\llui reviendront enfin<0xB0>
-0x1F49D19: C'est simple, en vérité.\pTon Hoopa avait envoyé Démolosse\ndans une caverne vide de Cinder\lVolcano, un lieu sans le moindre\ldanger pour lui.\pTu m'y as ensuite envoyé aussi.\nEnsemble, nous avons pu fuir.\pUne fois dehors, j'ai contacté Fey\net elle a chargé l'Agent Véga de\lme guider ici.\pIl semble qu'elle n'ait jamais voulu\nte laisser semer la destruction<0xB0>
+0x1F49D19: C'est simple, en vérité.\pTon Hoopa avait envoyé Démolosse\ndans une caverne vide du Volcan\lCendré, un lieu sans le moindre\ldanger pour lui.\pTu m'y as ensuite envoyé aussi.\nEnsemble, nous avons pu fuir.\pUne fois dehors, j'ai contacté Fey\net elle a chargé l'Agent Véga de\lme guider ici.\pIl semble qu'elle n'ait jamais voulu\nte laisser semer la destruction<0xB0>
 0x1F4A196: Ivory<0xB0><0xFC><0x08><0x20> je suis désolé<0xB0><0xFC><0x08><0x20> vraiment<0xB0><0xFC><0x08><0x20> je<0xB0><0xFC><0x08><0x20>\nj'aurais tellement voulu<0xB0>\pMais je n'ai eu qu'un bref instant\npour me glisser ici après que\l<0xFD><0x01> a scellé le pouvoir de Hoopa.\pEt à ce moment-là<0xB0><0xFC><0x08><0x18> je ne pouvais\npas risquer d'être repéré !\pJe suis vraiment désolé, Ivory.
 0x1F4A2E3: Ivory<0xB0><0xFC><0x08><0x20> tu ne saisis toujours pas.\pOui, nous avons perdu un enfant,\nmais nous en avons gagné deux.\pDepuis ma rencontre avec <0xFD><0x06><0xB0><0xFC><0x08><0x20> j'ai\ncompris ce que nous avons perdu\len les abandonnant il y a si\llongtemps.\pMais il n'est pas trop tard !\pNous pouvons recommencer<0xB0><0xFC><0x08><0x20> bâtir\nun nouveau lien avec eux !\pNous ne rattraperons jamais toutes\nces années perdues, mais nous\lpouvons au moins commencer.
 0x1F4A6FB: Écoute-moi bien, le vieux !\pJ'ai pas passé je sais pas combien\nde jours à te chercher juste pour\lêtre content de te retrouver !\pJe vais te montrer tout ce que tu\nas raté pendant toutes ces années !\pJe vais te montrer à quel point\nje suis devenu fort !
@@ -24328,7 +24328,7 @@
 0x1f9333c: Désolé, mais le Zone de Combat est\nen cours de rénovation.
 0x1f97681: La Puissance Cachée de <0xFC><0x01><0x06><0xFD><0x02><0xFC><0x01><0x04> est\nactuellement de type <0xFC><0x01><0x06><0xFD><0x04><0xFC><0x01><0x04>…\pChanger la Puissance Cachée de\n<0xFC><0x01><0x06><0xFD><0x02><0xFC><0x01><0x04> en type <0xFC><0x01><0x06><0xFD><0x03><0xFC><0x01><0x04>… ?
 0x1f9fff7: entre\ndes caisses du côté <0xFC><0x01><0x06>ouest<0xFC><0x01><0x08>\ldu port.\pSers-toi d'un de ces <0xFC><0x01><0x06>Cherch'Objets<0xFC><0x01><0x08>\nde luxe pour les trouver.\pAh, et la planque sera jamais\nbloquée par une barrière, alors\lcherche pas dans les coins qui\lpeuvent être bloqués.\pCapisce ?
-0x74503f: Cette statue représente Sulfura,\nle légendaire Pokémon oiseau de feu.\pIl vivrait quelque part dans Cinder\nVolcano, illuminant le ciel de ses\lflammes pendant la nuit.
+0x74503f: Cette statue représente Sulfura,\nle légendaire Pokémon oiseau de feu.\pIl vivrait quelque part dans le\nVolcan Cendré, illuminant le ciel de ses\lflammes pendant la nuit.
 0x745382: Il y a un endroit superbe au nord\nd'ici qui s'appelle Paradis Floral !\pIl y a des fleurs partout !
 0x745d52: Maintenant que l'entrée de l'Autoroute RBT n'est plus scellée, j'ai\lenfin pu m'entraîner !\pDis, ça te dirait d'affronter mes\nPokémon fraîchement entraînés ?
 0x746471: Le <0xFC><0x01><0x06>Mystherbe <0xFC><0x01><0x08>me monte\nparfois à la tête, je vois\ldes trucs pas réels.
