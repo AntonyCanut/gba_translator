@@ -5442,7 +5442,7 @@
 0x74C405: Comme tu peux le voir, la Tour de\nCombat est un super lieu.\pApparemment, il y a des lieux\nsimilaires partout à Borrius.
 0x74C4B9: Tu vois ce {COLOR}ÉPorygon{COLOR}Ç ?\pEn lui parlant, tu accèdes\ndirectement au Stockage Pokémon !\lPourquoi utiliser un PC quand un\pPokémon peut le faire pour toi\n?
 0x74C60C: Ou bien je plane déjà…
-0x74C623: Hein ? Je ne touche pas aux\nFeuilles de Mystherbe !
+0x74C623: Hein ? J'y touche pas !
 0x74C642: Je ne prends pas de drogues\n!
 0x74ECA9: Désolé, cette route est fermée\nactuellement.\pOn se prépare à une grosse\narrestation, personne ne doit\lfuir !
 0x74ED62: 9Avance, {PLAYER}.\pTu ne veux pas rater Jax contre les\nOmbres.
@@ -14989,14 +14989,14 @@
 0x1EE0B56: Frontière
 0x1EE0B5F: Continuer
 0x1EE0B68: Pas encore
-0x1EE0B70: Argh ! Les flics sont là !\pAttends…{PAUSE} non, c'est pas eux…\pAh ouais, t'es ce Dresseur…\pJe suis sorti prendre l'air…\n{PAUSE} et me voilà\lici…\pÇa devait être de sacrées Feuilles\nde Mystherbe, car je sais pas\lcomment rentrer, {STR_VAR_3}.\pHé…{PAUSE} j'ai entendu que t'es\nune vraie star maintenant.\pTu sais quoi.\pJ'ai envie de te faire plaisir…{PAUSE}\npour un autre combat.\pÇa te va ?\pParce que {STR_VAR_3}, franchement…\nautant le faire en attendant.
+0x1EE0B70: Argh ! Les flics sont là !\pAttends<0xB0><0xFC><0x08><0x18> non, c'est pas eux<0xB0>\pAh ouais, t'es ce Dresseur<0xB0>\pJe suis sorti prendre l'air<0xB0>\n<0xFC><0x08><0x18> et me voilà\lici<0xB0>\pÇa devait être du sacré\nMystherbe, car je sais pas\lcomment rentrer, <0xFD><0x04>.\pHé<0xB0><0xFC><0x08><0x18> j'ai entendu que t'es\nune star maintenant.\pTu sais quoi.\pJ'ai envie de te faire plaisir<0xB0><0xFC><0x08><0x18>\npour un autre combat.\pÇa te va ?\pParce que <0xFD><0x04>, sérieux<0xB0>\nautant le faire en attendant.
 0x1EE0D34: Tu casses mon trip, {STR_VAR_3}.\pIl faut que je trouve un moyen de\npartir d'ici pour demain…
 0x1EE0D75: Géniaaaal…{PAUSE} euh, c'était où le\nterrain, déjà…?\pAh oui, par là…
 0x1EE0DC0: {COLOR}ËJe ramène le pouvoir des fleurs !\nOn se lâche, {STR_VAR_3} !
 0x1EE0DFB: Wouah… c'est arrivé quand, ÇA…?
 0x1EE0E18: {COLOR}ËCes vibes…{PAUSE} {STR_VAR_3}…{PAUSE} elles sont…{PAUSE}\nplanantes, tu vois ?\pTu sais quoi ?\pT'es cool.\pPas assez cool pour un autre Badge…\pMais j'ai autre chose de\nvraiment stylé.\pTiens, prends ce beau\nCristal Z…
 0x1EE0EEE: {COLOR}Ë{COLOR}ÉGrassium Z{COLOR}Ë… Ça suralimente\nles attaques {COLOR}ÉPlante{COLOR}Ë…\pUne fois par combat,\nhélas.\pAlors vas-y, {STR_VAR_3}.\pRemplis le terrain de fleurs…\pEt libère la\n{COLOR}ÉPétalexplosion Éblouissante{COLOR}Ë !
-0x1EE0FCF: Oh, hé, {STR_VAR_3}…\pMême ces Feuilles de Mystherbe ne\nm'éclaircissent pas l'esprit…\pParce que {STR_VAR_3}, je n'arrive pas\nà digérer ma dernière défaite…\pLaisse-moi retenter ma chance.\nÇa te va ?
+0x1EE0FCF: Oh, hé, <0xFD><0x04><0xB0>\pMême le Mystherbe\nn'éclaircit pas l'esprit<0xB0>\pJ'ai du mal à digérer\nma défaite, <0xFD><0x04><0xB0>\pOn retente notre chance ?
 0x1EE106D: {COLOR}ËÇa…{PAUSE} craint, {STR_VAR_3}.\pD'accord, tu m'as eu.\pTiens.\nJ'en ai déterré quelques-uns en rab.
 0x1EE10CA: Hein ? À quelle fréquence je vais\nvenir ici ?\pJ'en sais rien…\pJe me suis perdu la dernière fois…\nmais ce club privé… c'est assez\lloin…\pNon, vraiment, {STR_VAR_3}. Loin…{PAUSE} genre,\nloin des flics.
 0x1EE1185: madame
@@ -24331,11 +24331,11 @@
 0x74503f: Cette statue représente Sulfura,\nle légendaire Pokémon oiseau de feu.\pIl vivrait quelque part dans Cinder\nVolcano, illuminant le ciel de ses\lflammes pendant la nuit.
 0x745382: Il y a un endroit superbe au nord\nd'ici qui s'appelle Paradis Floral !\pIl y a des fleurs partout !
 0x745d52: Maintenant que l'entrée de l'Autoroute RBT n'est plus scellée, j'ai\lenfin pu m'entraîner !\pDis, ça te dirait d'affronter mes\nPokémon fraîchement entraînés ?
-0x746471: Parfois, les <0xFC><0x01><0x06>Feuilles de Mystherbe <0xFC><0x01><0x08>me\nmontent à la tête et je vois des\lchoses qui n'existent pas.
+0x746471: Le <0xFC><0x01><0x06>Mystherbe <0xFC><0x01><0x08>me monte\nparfois à la tête, je vois\ldes trucs pas réels.
 0x74bcad: On va voir s'ils osent poser des\npièges quand tu es là, Kapoera !\pOn va dominer le tier <0xFC><0x01><0x06>OU Doubles<0xFC><0x01><0x08> !\pIls tomberont tous sous ta pointe\ncrânienne !
 0x74ff66: Qu'est-ce qui se passe ?\p…\pOh, attends…\pTu es le gamin qui vit un peu\nplus bas sur la route.\p<0xFD><0x01>, c'est ça ?\pTu sais ce qu'on fait ici ?
 0x75097e: Arthur : <0xFC><0x01><0x08>Bien, bien.\pQuant à toi, <0xFD><0x01>, je veux que\ntu ailles au <0xFC><0x01><0x06>Mont Foudroyant <0xFC><0x01><0x08>pour\lsauver <0xFC><0x01><0x06>Électhor<0xFC><0x01><0x08>.\pTu as fait tes preuves en défendant\nJax dans Volcan Cendré, et je\lpense que tu es à la hauteur.\pTu peux rejoindre <0xFC><0x01><0x06>Mont Foudroyant <0xFC><0x01><0x08>\npar l'autoroute au sud-est de la\lprochaine ville, <0xFC><0x01><0x06>Cratéris<0xFC><0x01><0x08>.\pSi tu ne te dépêches pas, la région\nde Borrius est condamnée.
-0x753107: Salut…\pComment ça va, mon pote ?\pTu veux renifler des Feuilles\nde Mystherbe ?\pC'est très bon pour l'âme.\nTout devient doux et tranquille…
+0x753107: Salut<0xB0>\pÇa va, mon pote ?\pTu veux renifler du\nMystherbe ?\pC'est bon pour l'âme.\nTout devient doux et calme<0xB0>
 0x75318a: <0xFC><0x01><0x02>Vous reniflez des Feuilles de\nMystherbe.\pL'odeur répugnante vous assaille\nles narines.
 0x755204: Si 100 personnes comme moi se tenaient\nici, tu crois que le sol tiendrait ?
 0x75b918: Les gens qui vivent ici refusent de\nme laisser entrer, alors je suis\lobligé de rester là.
