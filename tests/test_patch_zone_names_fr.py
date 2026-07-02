@@ -1,7 +1,7 @@
 """Tests for patch_zone_names_fr.py.
 
 Covers:
-  - Normal case: all 4 too-long zone names are relocated and repointed.
+  - Normal case: all too-long zone names are relocated and repointed.
   - Idempotency: running a second time leaves the ROM unchanged.
   - Verification catches a missed target.
   - Stats are correct.
@@ -70,6 +70,8 @@ def _en_bytes_for(offset: int) -> bytes:
         0x0B51EAC: b"\xbb\xe2\xe8\xdd\xe7\xdd\xe7\x00\xcaE\xe3\xe6\xe8",      # Antisis Port
         0x078D811: b"\xbd\xe6\xd5\xe8\xd9\xe6\x00\xce\xe3\xeb\xe2",           # Crater Town
         0x078D851: b"\xbc\xe0\xdd\xee\xee\xd5\xe6\xd8\x00\xbd\xdd\xe8\xed",  # Blizzard City
+        # Cinder Volcano West
+        0x078D7C8: b"\xbd\xdd\xe2\xd8\xd9\xe6\x00\xd0\xe3\xe0\xd7\xd5\xe2\xe3\x00\xd1\xd9\xe7\xe8",
     }
     return en_texts.get(offset, b"\xd9\xd2\xd5\xe1\xe4\xd0\xd9")  # fallback
 
@@ -87,6 +89,7 @@ class TestPatchZoneNamesFr(unittest.TestCase):
             0x0B51EAC: "Port d'Antésia",
             0x078D811: "Cratéris",
             0x078D851: "Cimistral",
+            0x078D7C8: "Volcan Cendré Ouest",
         }
 
     def _make_rom(self) -> bytearray:

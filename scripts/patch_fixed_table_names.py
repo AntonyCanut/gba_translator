@@ -68,17 +68,6 @@ NAME_FIXES = {
     # extraction, so it ships untouched in English. Official French name
     # is "Armurouillée" (Armure + rouillée).
     0xA37069: ("Weak Armor", "Armurouillée", 17),
-    # Oddish Leaves / Trainer Catalogue item names (B-132): zero-slack cells
-    # (stride == len(EN) + 1, no padding), packed back-to-back with
-    # neighbouring item names in the extended CFRU item-name pool. They
-    # *do* appear in translation_ready.json (category "location"), but that
-    # generic entry has no ``pointer_offsets`` so the reinserter never
-    # relocates it — any translation longer than the English original is
-    # silently dropped, and combined_fr.txt has repeatedly lost this fix to
-    # concurrent whole-file rewrites (Pattern C). Patched here byte-exact as
-    # a belt-and-suspenders class-3 fallback, immune to both failure modes.
-    0xEB92C0: ("Oddish Leaves", "Mystherbe", 14),
-    0xEB930E: ("Trainer Catalogue", "Guide Dresseurs", 18),
 }
 
 

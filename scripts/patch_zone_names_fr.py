@@ -23,6 +23,7 @@ ROM offset  English text        French text        EN bytes  FR bytes
 0x0B51EAC   Antisis Port        Port d'Antisis     12        14
 0x078D811   Crater Town         Bourg Cratère      11        13
 0x078D851   Blizzard City       Ville Blizzard     13        14
+0x078D7C8   Cinder Volcano West Volcan Cendré Oue. 19        19
 ==========  ==================  =================  ========  =======
 
 The patch is reference-driven (scans the whole ROM for live pointers to each
@@ -63,6 +64,7 @@ TARGETS: dict[int, str] = {
     0x0B51EAC: "Port d'Antésia",   # Antisis Port   (zone-name table)
     0x078D811: "Cratéris",         # Crater Town    (fly-banner cluster)
     0x078D851: "Cimistral",        # Blizzard City  (fly-banner cluster)
+    0x078D7C8: "Volcan Cendré Ouest",  # Cinder Volcano West (map-popup name)
 }
 
 _OFFSET_LINE = re.compile(r"^0x([0-9A-Fa-f]+):\s?(.*)$")

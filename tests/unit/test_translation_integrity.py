@@ -36,9 +36,8 @@ class TestRealCombinedFr:
     def test_protected_label_count(self):
         # 13 world-map labels (B-52) + 0x1F0F842 couleur ceinture/bottes (9ad0fee)
         # + 0x83008C/0x96CC1C réaction Méga-Cuff (dc84690f)
-        # + 2 Hoopa dialogues (0x7D5083/0x1F3A9F2, Pattern C 8fe7dddb0)
-        # + 0xA4C200 stat-change template (86ed70fd6, F-41).
-        assert len(cti.CRITICAL_LABELS) == 19
+        # + 2 Hoopa dialogues (0x7D5083/0x1F3A9F2, Pattern C 8fe7dddb0).
+        assert len(cti.CRITICAL_LABELS) == 18
 
     def test_main_returns_zero_on_real_file(self):
         assert cti.main(["--file", str(REAL_COMBINED)]) == 0

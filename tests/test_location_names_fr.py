@@ -24,12 +24,37 @@ from pathlib import Path
 
 import pytest
 
-from src.core.text_codec import TextDecoder
+from src.core.text_codec import TextDecoder, TextEncoder
 
 FR_ROM = Path("output/roms/GenedRom-fr.gba")
 
 # Pre-encoded byte sequences (CFRU charmap, no terminator)
 _THUNDERCAP_BYTES = bytes.fromhex("cedce9e2d8d9e6d7d5e4")  # "Thundercap"
+
+_ENC = TextEncoder()
+
+
+def _encode_no_term(s: str) -> bytes:
+    """Encode ``s`` with the CFRU charmap, dropping the trailing 0xFF."""
+    b = _ENC.encode_pokemon(s)
+    return b[:-1] if b and b[-1] == 0xFF else b
+
+
+def _string_containing(rom: bytes, anchor: str) -> str:
+    """Decode the full ROM string whose bytes contain ``anchor``.
+
+    Follows relocation transparently: whatever free-space address the
+    reinserter moved the string to, the anchor bytes are searched ROM-wide
+    and the enclosing 0xFF-terminated string is decoded.
+    """
+    ab = _encode_no_term(anchor)
+    i = rom.find(ab)
+    if i == -1:
+        return ""
+    start = rom.rfind(b"\xff", 0, i) + 1
+    end = rom.find(b"\xff", i)
+    end = end if end != -1 else i + 400
+    return TextDecoder.decode_pokemon(rom[start:end], preserve_unknown=True)
 
 
 def _read_at(rom: bytes, offset: int, limit: int = 200) -> str:
@@ -123,7 +148,7 @@ class TestLocationNamesFR(unittest.TestCase):
         self._assert_label(0xB5026C, "Mont Foudroyant", "Thundercap Mt.")
 
     def test_volcan_cendreux(self):
-        """0xB503CC: 'Volcan Cendreux' (was 'Cinder Volcano')."""
+        """0xB503CC: 'Volcan Cendré' (was 'Cinder Volcano', formerly v2 'Cendreux')."""
         self._assert_label(0xB503CC, "Volcan Cendré", "Cinder Volcano")
 
     def test_dehara(self):
@@ -444,6 +469,68 @@ class TestLocationNamesFR(unittest.TestCase):
         """0x1F5175B rival dialogue (was 'Volcan Cinder')."""
         text = _read_at(self.rom, 0x1F5175B, limit=1000)
         self.assertIn("Volcan Cendré", text)
+
+    # ── B-138 follow-up (2026-07-02): regressions the first pass missed ──────
+    #
+    # The first B-138 sweep grepped `Volcan [A-Za-zé ]*`, which REQUIRES a
+    # space after "Volcan". That pattern is blind to two living forms that
+    # actually render in-game:
+    #   • English word order "Cinder Volcano" ("Volcano" has no trailing space
+    #     to match, and "Cinder" comes first) — 0x1F49D19 (Hoopa dialogue),
+    #     0x74503F (Sulfura statue). Both relocated to free space.
+    #   • The stale v2 toponym "CENDREUX" (superseded by canon "CENDRÉ" in the
+    #     toponym v3 rename) — 0x7D61AD (Marlon's all-caps sentence speech),
+    #     wrapped in {COLOR} codes so no plain "Volcan " prefix precedes it.
+    # These tests follow the relocated strings by content, not by offset.
+
+    def test_hoopa_dialogue_cinder_volcano_now_french(self):
+        """Relocated Hoopa dialogue (was 0x1F49D19 English 'Cinder Volcano')."""
+        text = _string_containing(self.rom, "vide du Volcan")
+        self.assertTrue(text, "Hoopa dialogue anchor not found in ROM")
+        self.assertIn("Volcan", text)
+        self.assertIn("Cendré", text)
+        self.assertNotIn("Cinder", text)
+
+    def test_sulfura_statue_745_cinder_volcano_now_french(self):
+        """Relocated Sulfura statue (was 0x74503F English 'Cinder Volcano')."""
+        text = _string_containing(self.rom, "représente Sulfura,")
+        self.assertTrue(text, "Sulfura statue anchor not found in ROM")
+        self.assertIn("Volcan Cendré", text)
+        self.assertNotIn("Cinder", text)
+        self.assertNotIn("Volcano", text)
+
+    def test_marlon_speech_volcan_cendre_not_cendreux(self):
+        """0x7D61AD Marlon speech: stale v2 'CENDREUX' -> canon 'CENDRÉ'."""
+        text = _string_containing(self.rom, "DANS LE VOLCAN")
+        self.assertTrue(text, "Marlon speech anchor not found in ROM")
+        self.assertIn("CENDRÉ", text)
+        self.assertNotIn("CENDREUX", text)
+
+    def test_cinder_volcano_west_map_banner_now_french(self):
+        """Map-popup banner name (was 0x78D7C8 English 'Cinder Volcano West').
+
+        This is a map-name popup: a struct at 0x78D7BC holds an *embedded*
+        pointer (at 0x78D7C0) to the display name text at 0x78D7C8. The engine
+        renders the name through that embedded pointer, so verification must
+        follow ptr@0x78D7C0 rather than read the struct offset. patch_zone_names
+        relocates the FR text and repoints 0x78D7C0.
+        """
+        text = _follow_ptr(self.rom, 0x78D7C0)
+        self.assertEqual(
+            text.strip(),
+            "Volcan Cendré Ouest",
+            f"Map banner via ptr@0x78D7C0: got {repr(text[:40])}",
+        )
+
+    def test_no_stale_cendreux_byte_sequence_anywhere(self):
+        """The superseded v2 toponym 'Cendreux'/'CENDREUX' (in any case) must
+        not appear anywhere in the built ROM — it has no legitimate use."""
+        for phrase in ("Cendreux", "CENDREUX"):
+            self.assertEqual(
+                self.rom.count(_encode_no_term(phrase)),
+                0,
+                f"Stale toponym '{phrase}' still present in ROM",
+            )
 
 
 if __name__ == "__main__":
