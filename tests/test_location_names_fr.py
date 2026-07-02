@@ -388,6 +388,63 @@ class TestLocationNamesFR(unittest.TestCase):
             f"'Blizzard City' still reachable via zone-name ptr@0x3F1CBC: {repr(text[:60])}",
         )
 
+    # ── Volcan Cendré toponym variants (B-138, 2026-07-02) ─────────────────
+    #
+    # combined_fr.txt used to carry "Volcan Cinder" / "Volcan de Cinder" /
+    # "Volcan Cendre" (no accent) / "Volcan de Cendres" alongside the canon
+    # "Volcan Cendré" (guarded at 0xB503CC by test_volcan_cendreux). Two of
+    # these offsets are too long for their original slot and get relocated
+    # by the reinserter, so the *original* offset keeps holding stale
+    # English bytes forever — the live text must be read through the
+    # pointer site, not the original offset (see _follow_ptr usage below).
+
+    def test_dialogue_le_volcan_est_dangereux(self):
+        """Relocated dialogue (was 0x7CE471 'Le Volcan de Cendres est dangereux.')."""
+        text = _follow_ptr(self.rom, 0x007B4B24)
+        self.assertIn("Volcan Cendré", text, f"got {repr(text[:60])}")
+
+    def test_sulfura_statue_description(self):
+        """Relocated Pokédex/statue description (was 0x1F70BB2 'Volcan Cendre')."""
+        text = _follow_ptr(self.rom, 0x01E930DC)
+        self.assertIn("Volcan Cendré", text, f"got {repr(text[:80])}")
+
+    def test_champion_speech_volcan_cendre(self):
+        """0x1EE118A champion dialogue (was 'Volcan Cinder').
+
+        The source string carries a pre-existing hard line-break (<0xFA>)
+        between "Volcan" and "Cendré" — check both halves and the absence
+        of the English residue rather than the joined phrase.
+        """
+        text = _read_at(self.rom, 0x1EE118A, limit=1000)
+        self.assertIn("Volcan", text)
+        self.assertIn("Cendré", text)
+        self.assertNotIn("Cinder", text)
+
+    def test_volcan_passage_sign(self):
+        """0x1F70D9B sign 'Volcan Cendré\\nPassage' (was 'Volcan de Cinder')."""
+        text = _read_at(self.rom, 0x1F70D9B)
+        self.assertEqual(text.strip(), "Volcan Cendré\nPassage")
+
+    def test_route13_junction_panel_daherapolis(self):
+        """0x1F71962 junction panel (was 'Volcan Cendre')."""
+        text = _read_at(self.rom, 0x1F71962, limit=200)
+        self.assertIn("Volcan Cendré", text)
+
+    def test_route13_junction_panel_route14(self):
+        """0x1F719C0 junction panel (was 'Volcan Cendre')."""
+        text = _read_at(self.rom, 0x1F719C0, limit=200)
+        self.assertIn("Volcan Cendré", text)
+
+    def test_pokemon_found_above_volcan(self):
+        """Relocated catch-location blurb (was 0x1FAA781 'Volcan Cinder')."""
+        text = _follow_ptr(self.rom, 0x01EACFC8, limit=200)
+        self.assertIn("Volcan Cendré", text)
+
+    def test_rival_speech_volcan_cendre(self):
+        """0x1F5175B rival dialogue (was 'Volcan Cinder')."""
+        text = _read_at(self.rom, 0x1F5175B, limit=1000)
+        self.assertIn("Volcan Cendré", text)
+
 
 if __name__ == "__main__":
     unittest.main()
