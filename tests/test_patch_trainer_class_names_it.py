@@ -8,9 +8,10 @@ generic pipeline never touches them. This patch writes the Italian names from
 * fitting Italian text is written, terminated, and zero-padded *inside* the
   13-byte cell (never spilling into the neighbour);
 * text that overflows the fixed cell is left untouched (kept English), never
-  truncated;
-* against the real source ROM + combined_it.txt, a sample of common classes
-  decode to their expected Italian, while a known-overflow class stays English.
+  truncated (mechanism guard — synthetic over-long input);
+* against the real source ROM + combined_it.txt, every authored class now fits
+  the cell and decodes to Italian (the 32 formerly-overflowing names were
+  abbreviated to <=12 bytes in combined_it.txt, so nothing ships English).
 """
 
 from __future__ import annotations
@@ -133,19 +134,30 @@ class TestTrainerClassPatchAgainstSource(unittest.TestCase):
             self.assertEqual(_decode_cell(self.rom, offset), want,
                              f"class idx {idx} @ {offset:#x}")
 
-    def test_overflow_class_stays_english(self):
+    def test_formerly_overflow_classes_now_italian(self):
+        # These 32 classes used to overflow the 13-byte cell and shipped
+        # English; they were abbreviated to fit and must now decode Italian.
         before = _decode_cell(self.rom, TABLE_BASE + 6 * CELL_STRIDE)
+        self.assertEqual(before, "Interviewer")  # English before the patch
         patch(self.rom, self.combined)
-        after = _decode_cell(self.rom, TABLE_BASE + 6 * CELL_STRIDE)
-        # Interviewer's Italian overflows the cell → English preserved.
-        self.assertEqual(before, "Interviewer")
-        self.assertEqual(after, "Interviewer")
+        expected = {
+            6: "Intervist.",    # Interviewer
+            34: "Ornitologo",   # Bird Keeper
+            51: "MONTANARO",    # HIKER
+            55: "ADMIN IDRO",   # AQUA ADMIN
+            104: "Man. Rovine", # Ruin Maniac
+        }
+        for idx, want in expected.items():
+            offset = TABLE_BASE + idx * CELL_STRIDE
+            self.assertEqual(_decode_cell(self.rom, offset), want,
+                             f"class idx {idx} @ {offset:#x}")
 
     def test_reports_a_sane_split(self):
         stats = patch(self.rom, self.combined)
-        # Structural sanity: most classes are covered, some overflow.
-        self.assertGreaterEqual(stats["written"], 50)
-        self.assertGreater(stats["overflow"], 0)
+        # Every authored class now fits: zero overflow, all 99 written.
+        self.assertEqual(stats["overflow"], 0)
+        self.assertEqual(stats["written"], 99)
+        self.assertEqual(stats["missing"], 7)  # cells with no combined_it entry
         self.assertEqual(
             stats["written"] + stats["unchanged"]
             + stats["overflow"] + stats["missing"],
