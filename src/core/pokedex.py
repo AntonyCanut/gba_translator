@@ -47,12 +47,13 @@ TERMINATOR = 0xFF
 DEX_MAX_LINES = 3
 DEX_LINE_WIDTH = 232
 
-# A clean description is plain prose: printable Latin/French glyphs only,
-# no leftover ``<0xNN>`` control tokens, with at least one space.
+# A clean description is plain prose: printable Latin/French/German glyphs
+# only, no leftover ``<0xNN>`` control tokens, with at least one space.
 _ALLOWED = set(
     "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
     " .,!?:;'\"()/%+&-×º°ª¥♂♀"
     "àâçéèêëîïôœùûüÀÁÂÇÈÉÊËÎÏÔŒÙÚÛÑßíáóúñ"
+    "äöüÄÖÜ"
 )
 
 

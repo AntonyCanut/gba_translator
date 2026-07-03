@@ -72,8 +72,9 @@ status_abbrev:
 #   battle_recall_strings    German "komm/kommt zurück!" switch-out messages,
 #                            relocated via their external pointer table
 #
-# Richer passes (pokédex rewrap, mission boxes, move descriptions, …) will be
-# added here as German translations for those subsystems mature.
+# Further richer passes (mission boxes, move descriptions, ability/item
+# pointer-relocated names, …) will be added here as more German translation
+# content is ported from the French pipeline.
 patches:
   - gendered_buffers
   - font
@@ -99,6 +100,21 @@ patches:
   # scripts/patch_dexnav_headers_de.py.
   - dexnav_headers
   - version
+  # Fixed-width name/description tables carrying baked official German
+  # localisation content (Berries/items, natures, CFRU type names, Pokédex
+  # category table + ordering + metric units, summary-screen labels, options
+  # footer, shop strings, PC box messages). See scripts/patch_<name>_de.py.
+  - item_names
+  - nature_names
+  - cfru_type_names
+  - pokedex_categories
+  - pokedex_category_order
+  - pokedex_metrics
+  - pokedex_rewrap
+  - summary_labels
+  - options_footer
+  - shop
+  - pc_messages
   # Post-build audit: flag any translated cell not terminated before its
   # neighbour (fusion / freeze risk). Report-only, never fails the build.
   - collision_check

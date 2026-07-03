@@ -77,6 +77,23 @@ PATCH_BATTLE_STRING_TEMPLATES_FR_SCRIPT = REPO_ROOT / "scripts/patch_battle_stri
 PATCH_GENDERED_BUFFERS_FR_SCRIPT = REPO_ROOT / "scripts/patch_gendered_buffers_fr.py"
 PATCH_GIVECS_GIFT_ITEM_FR_SCRIPT = REPO_ROOT / "scripts/patch_givecs_gift_item_fr.py"
 
+# German-only post-build patches: fixed-width name/description tables whose
+# translated content is baked into the script (official German localisation),
+# not read from combined_de.txt — so, unlike the steps above, these have no
+# generic "run the FR script with --combined" delegation and are wired
+# directly to their scripts/patch_<name>_de.py implementation.
+PATCH_ITEM_NAMES_DE_SCRIPT = REPO_ROOT / "scripts/patch_item_names_de.py"
+PATCH_NATURE_NAMES_DE_SCRIPT = REPO_ROOT / "scripts/patch_nature_names_de.py"
+PATCH_CFRU_TYPE_NAMES_DE_SCRIPT = REPO_ROOT / "scripts/patch_cfru_type_names_de.py"
+PATCH_POKEDEX_DE_SCRIPT = REPO_ROOT / "scripts/patch_pokedex_de.py"
+PATCH_POKEDEX_CATEGORIES_DE_SCRIPT = REPO_ROOT / "scripts/patch_pokedex_categories_de.py"
+PATCH_POKEDEX_CATEGORY_ORDER_DE_SCRIPT = REPO_ROOT / "scripts/patch_pokedex_category_order_de.py"
+PATCH_POKEDEX_METRICS_DE_SCRIPT = REPO_ROOT / "scripts/patch_pokedex_metrics_de.py"
+PATCH_SUMMARY_LABELS_DE_SCRIPT = REPO_ROOT / "scripts/patch_summary_labels_de.py"
+PATCH_OPTIONS_FOOTER_DE_SCRIPT = REPO_ROOT / "scripts/patch_options_footer_de.py"
+PATCH_SHOP_DE_SCRIPT = REPO_ROOT / "scripts/patch_shop_de.py"
+PATCH_PC_MESSAGES_DE_SCRIPT = REPO_ROOT / "scripts/patch_pc_messages_de.py"
+
 # Post-build verification (language-agnostic): audit the finished ROM for
 # inter-cell text collisions — a translated string not terminated before the
 # next live cell fuses with / overwrites its neighbour and can freeze the game.
@@ -435,6 +452,67 @@ def apply_patches(config, out_rom: Path, translation_json: Path | None = None,
                 run([PYTHON, script, "--rom", out_rom])
             else:
                 print(f"⚠ skipping dexnav_headers: {script.name} not found")
+
+        # ── German-only fixed-table name/description patches ──────────────────
+        # These carry baked official German localisation content (not read
+        # from combined_de.txt), so — unlike the steps above — they are not
+        # parameterised per-language; they simply don't apply to other
+        # generic-build languages (e.g. Italian) until a patch_<name>_it.py
+        # is written and wired in separately.
+
+        elif step == "item_names":
+            run([PYTHON, PATCH_ITEM_NAMES_DE_SCRIPT, "--rom", out_rom])
+
+        elif step == "nature_names":
+            cmd = [PYTHON, PATCH_NATURE_NAMES_DE_SCRIPT, "--rom", out_rom]
+            if SPANISH_ROM.exists():
+                cmd += ["--reference-rom", SPANISH_ROM]
+            run(cmd)
+
+        elif step == "cfru_type_names":
+            run([PYTHON, PATCH_CFRU_TYPE_NAMES_DE_SCRIPT, "--rom", out_rom])
+
+        elif step == "pokedex_categories":
+            run([PYTHON, PATCH_POKEDEX_CATEGORIES_DE_SCRIPT, "--rom", out_rom])
+
+        elif step == "pokedex_category_order":
+            run([PYTHON, PATCH_POKEDEX_CATEGORY_ORDER_DE_SCRIPT, "--rom", out_rom])
+
+        elif step == "pokedex_metrics":
+            run([PYTHON, PATCH_POKEDEX_METRICS_DE_SCRIPT, "--rom", out_rom])
+
+        elif step == "pokedex_rewrap":
+            if translation_json is None:
+                print("⚠ skipping pokedex_rewrap: translation_json not available")
+            else:
+                cmd = [
+                    PYTHON, PATCH_POKEDEX_DE_SCRIPT,
+                    "--rom", out_rom,
+                    "--source", ENGLISH_ROM,
+                    "--translations", translation_json,
+                ]
+                if SPANISH_ROM.exists():
+                    cmd += ["--reference-rom", SPANISH_ROM]
+                run(cmd)
+
+        elif step == "summary_labels":
+            run([
+                PYTHON, PATCH_SUMMARY_LABELS_DE_SCRIPT,
+                "--rom", out_rom,
+                "--source", ENGLISH_ROM,
+            ])
+
+        elif step == "options_footer":
+            run([PYTHON, PATCH_OPTIONS_FOOTER_DE_SCRIPT, "--rom", out_rom])
+
+        elif step == "shop":
+            cmd = [PYTHON, PATCH_SHOP_DE_SCRIPT, "--rom", out_rom]
+            if SPANISH_ROM.exists():
+                cmd += ["--reference-rom", SPANISH_ROM]
+            run(cmd)
+
+        elif step == "pc_messages":
+            run([PYTHON, PATCH_PC_MESSAGES_DE_SCRIPT, "--rom", out_rom])
 
         elif step == "collision_check":
             # Report-only: trace live pointers in the finished ROM and flag any
