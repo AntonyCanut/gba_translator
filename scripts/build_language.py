@@ -55,6 +55,8 @@ REPOINT_STALE_SCRIPT = REPO_ROOT / "scripts/repoint_stale_text_pointers.py"
 PATCH_RITUAL_SCRIPT = REPO_ROOT / "languages/fr/patches/legendary_ritual.py"
 PATCH_VERSION_SCRIPT = REPO_ROOT / "languages/fr/patches/version.py"
 PATCH_INTRO_QUESTIONS_IT_SCRIPT = REPO_ROOT / "languages/it/patches/intro_questions.py"
+PATCH_TRAINER_CLASS_NAMES_IT_SCRIPT = REPO_ROOT / "scripts/patch_trainer_class_names_it.py"
+PATCH_LONG_DIALOGUES_IT_SCRIPT = REPO_ROOT / "scripts/patch_long_dialogues_it.py"
 
 # Text patches that can be parameterised with the language's combined file.
 PATCH_STATUS_ABBREVS_SCRIPT = REPO_ROOT / "languages/fr/patches/status_abbrevs.py"
@@ -388,6 +390,31 @@ def apply_patches(config, out_rom: Path, translation_json: Path | None = None,
 
         elif step == "intro_questions_it":
             run([PYTHON, PATCH_INTRO_QUESTIONS_IT_SCRIPT, "--rom", out_rom])
+
+        elif step == "trainer_class_names_it":
+            # gTrainerClassNames is a fixed-width table reached by index
+            # arithmetic (no pointers), so the generic pipeline skips it and
+            # every class ships English. This writes the Italian names from
+            # combined_it.txt in place, for the classes whose text fits the
+            # 13-byte cell (overflow classes are reported and left English).
+            run([
+                PYTHON, PATCH_TRAINER_CLASS_NAMES_IT_SCRIPT,
+                "--rom", out_rom,
+                "--combined", combined,
+                "--source", ENGLISH_ROM,
+            ])
+
+        elif step == "long_dialogues_it":
+            # A handful of dialogues exceed the extractor's 1000-byte cap and
+            # are dropped by the generic pipeline (New Game+, Battle Circus /
+            # Sands / Tower rules, champion congratulation). Relocate the full
+            # Italian text to free space and repoint the live pointer.
+            run([
+                PYTHON, PATCH_LONG_DIALOGUES_IT_SCRIPT,
+                "--rom", out_rom,
+                "--combined", combined,
+                "--source", ENGLISH_ROM,
+            ])
 
         elif step == "version":
             # Stamp the in-game NOT FOR SALE screen with this language's tag,
