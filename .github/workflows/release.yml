@@ -1,4 +1,4 @@
-name: Build & Release ROMs (FR + IT)
+name: Build & Release ROMs (FR + IT + DE)
 
 on:
   push:
@@ -7,7 +7,7 @@ on:
 
 jobs:
   release:
-    name: Build French + Italian ROMs & Release
+    name: Build French + Italian + German ROMs & Release
     runs-on: ubuntu-latest
     permissions:
       contents: write
@@ -60,11 +60,28 @@ jobs:
             --lang-code it \
             --build-number ${{ github.run_number }}
 
-      # ── Publish: FR always, IT when it built & verified ─────────────────────
+      # ── German (generic driver) — best-effort, same rationale as Italian ────
+      - name: Build German ROM
+        id: build_de
+        continue-on-error: true
+        run: make build-de BUILD_NUMBER=${{ github.run_number }}
+
+      - name: Verify DE version display
+        id: verify_de
+        if: steps.build_de.outcome == 'success'
+        continue-on-error: true
+        run: |
+          python3 scripts/verify_version_display.py \
+            --rom output/roms/GenedRom-de.gba \
+            --lang-code de \
+            --build-number ${{ github.run_number }}
+
+      # ── Publish: FR always, IT/DE when they built & verified ────────────────
       - name: Publish release
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           IT_OK: ${{ steps.build_it.outcome == 'success' && steps.verify_it.outcome == 'success' }}
+          DE_OK: ${{ steps.build_de.outcome == 'success' && steps.verify_de.outcome == 'success' }}
         run: |
           SHA=$(git rev-parse --short HEAD)
           MSG=$(git log -1 --pretty=%s)
@@ -81,6 +98,13 @@ jobs:
             NOTES="${NOTES}"$(printf '\n- 🇮🇹 build italienne indisponible pour ce build.')
           fi
 
+          if [ "${DE_OK}" = "true" ] && [ -f output/roms/GenedRom-de.gba ]; then
+            ASSETS+=( "output/roms/GenedRom-de.gba#pokemon_unbound_de.gba" )
+            NOTES="${NOTES}"$(printf '\n- 🇩🇪 `pokemon_unbound_de.gba` — DE.2.1.%s' "${RUN}")
+          else
+            NOTES="${NOTES}"$(printf '\n- 🇩🇪 build allemande indisponible pour ce build.')
+          fi
+
           # Suppress error if 'latest' release/tag doesn't exist yet
           gh release delete latest --yes --cleanup-tag 2>/dev/null || true
 
@@ -90,9 +114,15 @@ jobs:
             --prerelease \
             "${ASSETS[@]}"
 
-      # ── Surface an IT failure AFTER FR has shipped ──────────────────────────
+      # ── Surface an IT/DE failure AFTER FR has shipped ───────────────────────
       - name: Fail if Italian ROM was not delivered
         if: steps.build_it.outcome != 'success' || steps.verify_it.outcome != 'success'
         run: |
           echo "::error::Italian ROM build/verify failed — FR was still released, but IT was skipped."
+          exit 1
+
+      - name: Fail if German ROM was not delivered
+        if: steps.build_de.outcome != 'success' || steps.verify_de.outcome != 'success'
+        run: |
+          echo "::error::German ROM build/verify failed — FR was still released, but DE was skipped."
           exit 1
