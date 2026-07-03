@@ -14,7 +14,7 @@ ROM construite, décode chaque description et signale celles qui débordent.
 
 Le budget (5 lignes, 122 px) et la table sont partagés avec
 :mod:`src.core.moves`, qui re-wrappe/relocalise chaque description au build
-(``scripts/patch_move_descriptions_fr.py``). Le budget est calibré sur le
+(``languages/fr/patches/move_descriptions.py``). Le budget est calibré sur le
 *wrapping d'origine du jeu* : en décodant chaque description originale avec ses
 sauts de ligne codés en dur (``0xFE``), 99 % des lignes du moteur tiennent en
 <= 122 px (max propre ~124 px). Les budgets antérieurs (142 px puis 130 px,

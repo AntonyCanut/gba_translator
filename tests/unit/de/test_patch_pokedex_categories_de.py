@@ -1,4 +1,4 @@
-"""Tests for scripts/patch_pokedex_categories_de.py (mirrors the FR test suite)."""
+"""Tests for languages/de/patches/pokedex_categories.py (mirrors the FR test suite)."""
 
 from __future__ import annotations
 

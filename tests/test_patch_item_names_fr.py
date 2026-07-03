@@ -1,6 +1,6 @@
 import unittest
 
-from scripts.patch_item_names_fr import (
+from languages.fr.patches.item_names import (
     ALL_NAMES,
     BERRY_NAMES,
     ITEM_NAMES,

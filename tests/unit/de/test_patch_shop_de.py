@@ -1,4 +1,4 @@
-"""Regression guard for scripts/patch_shop_de.py.
+"""Regression guard for languages/de/patches/shop.py.
 
 Mirrors the two patches: "In Cube:" -> "Bestand:" in place (must be the exact
 same byte length as the English original — no relocation possible there),

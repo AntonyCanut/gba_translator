@@ -1,4 +1,4 @@
-"""Regression guard for scripts/patch_options_footer_fr.py.
+"""Regression guard for languages/fr/patches/options_footer.py.
 
 Ticket B-149: the entire CFRU-added Options menu (General/Audio/Battle Options)
 had never been translated. Most of it is fixed via combined_fr.txt, but the
@@ -14,7 +14,7 @@ from pathlib import Path
 from tempfile import TemporaryDirectory
 
 from src.text.charmap_data import CHAR_TO_BYTE
-from scripts.patch_options_footer_fr import (
+from languages.fr.patches.options_footer import (
     EN_ORIGINAL,
     OFFSET,
     SLOT_SIZE,
@@ -77,7 +77,7 @@ class TestPatchOptionsFooterFr(unittest.TestCase):
         self.assertEqual(n, 0)
 
     def test_every_fr_word_encodes(self):
-        from scripts.patch_options_footer_fr import FR_WORDS
+        from languages.fr.patches.options_footer import FR_WORDS
 
         for word in FR_WORDS:
             for ch in word:

@@ -1,4 +1,4 @@
-"""Tests for scripts/patch_pokedex_de.py and the German-glyph charset fix in
+"""Tests for languages/de/patches/pokedex.py and the German-glyph charset fix in
 src/core/pokedex.py (``_ALLOWED`` must accept ä ö ü Ä Ö Ü ß, or every German
 Pokédex description would be rejected by ``is_description``/rewritten as
 "not a description" and left English).

@@ -1,4 +1,4 @@
-"""Regression guard for scripts/patch_cfru_type_names_fr.py.
+"""Regression guard for languages/fr/patches/cfru_type_names.py.
 
 Covers the bug fixed for ticket « Corriger les traductions des types Pokémon » :
 the Ice type was abbreviated to « GEL », which is the *frozen status* word
@@ -14,7 +14,7 @@ import unittest
 from pathlib import Path
 from tempfile import TemporaryDirectory
 
-from scripts.patch_cfru_type_names_fr import (
+from languages.fr.patches.cfru_type_names import (
     CONDITION_PATCHES,
     MIGRATE_FROM,
     TYPE_PATCHES,

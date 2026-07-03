@@ -1,4 +1,4 @@
-"""Regression tests for scripts/patch_time_format_de.py.
+"""Regression tests for languages/de/patches/time_format.py.
 
 Run the real patch logic against a fresh copy of englishrom.gba (the
 patches are all verified-byte, offset/pointer-exact rewrites, so a pristine

@@ -1,4 +1,4 @@
-"""Regression guard for scripts/patch_nature_names_de.py.
+"""Regression guard for languages/de/patches/nature_names.py.
 
 The relocate+repoint mechanics are byte-identical to the French version
 (tests/test_nature_names_fr.py already exercises the live-pointer-table

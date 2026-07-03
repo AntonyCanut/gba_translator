@@ -1,4 +1,4 @@
-"""Regression guard for scripts/patch_pokedex_category_order_de.py.
+"""Regression guard for languages/de/patches/pokedex_category_order.py.
 
 The instruction swap is byte-identical to French (same ASM, same fixed
 "Pokémon" suffix — the brand name is unchanged across localisations); the

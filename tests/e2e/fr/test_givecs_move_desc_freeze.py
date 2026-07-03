@@ -18,7 +18,7 @@ comes → the CPU spins forever → the give-CS box freezes (the screen stops
 updating) and the player never gains the item. English never freezes because
 its description slots stay terminated.
 
-``scripts/patch_dup_move_descriptions_fr`` repoints **every** consumer of an
+``languages/fr/patches/dup_move_descriptions`` repoints **every** consumer of an
 overflowing French description to a freshly relocated, ``0xFF``-terminated copy
 of the authoritative ``combined_fr.txt`` text. This test re-derives the freeze
 invariant independently and asserts the built ROM satisfies it — no live

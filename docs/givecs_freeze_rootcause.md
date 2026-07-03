@@ -52,7 +52,7 @@ and was reverted.
 
 ## The fix
 
-`scripts/patch_dup_move_descriptions_fr.py` (run last in `make build-fr`) is
+`languages/fr/patches/dup_move_descriptions.py` (run last in `make build-fr`) is
 **reference-driven and strictly guarded** so no consumer is missed and no
 code/data is corrupted:
 

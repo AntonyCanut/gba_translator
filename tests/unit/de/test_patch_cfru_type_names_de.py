@@ -1,4 +1,4 @@
-"""Regression guard for scripts/patch_cfru_type_names_de.py.
+"""Regression guard for languages/de/patches/cfru_type_names.py.
 
 Mirrors tests/test_patch_cfru_type_names_fr.py: pins the type table at
 0x3FE890 to German abbreviations, checks every slot fits its EN-original byte

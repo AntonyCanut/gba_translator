@@ -1,4 +1,4 @@
-"""Regression guard for scripts/patch_pokedex_metrics_de.py.
+"""Regression guard for languages/de/patches/pokedex_metrics.py.
 
 The imperial->metric Thumb code patches are byte-identical to the French
 version (tests/test_patch_pokedex_metrics_fr.py already exercises that

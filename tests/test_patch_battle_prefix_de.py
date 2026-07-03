@@ -1,4 +1,4 @@
-"""Regression guard for scripts/patch_battle_prefix_de.py.
+"""Regression guard for languages/de/patches/battle_prefix.py.
 
 Unlike the FR version, the German patch is a report-only guard (no code cave,
 no byte mutation): German keeps the engine's natural prefix-before-name word
@@ -15,7 +15,7 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).parent.parent))
 
-from scripts.patch_battle_prefix_de import PREFIX_CELLS, apply_to_rom, check_cell
+from languages.de.patches.battle_prefix import PREFIX_CELLS, apply_to_rom, check_cell
 
 
 def _rom_with_valid_cells(size: int = 0xA500000) -> bytearray:

@@ -85,7 +85,7 @@ englishrom.gba
   → compare EN↔ES (src/extractors/)       → output/differences/*.json
   → translate (combined_fr.txt / CSV)
   → inject FR text (src/core/text_reinserter.py)
-  → post-build patches (scripts/patch_*.py)
+  → post-build patches (languages/<code>/patches/*.py)
   → output/roms/GenedRom-fr.gba
   → Playwright e2e verification
 ```

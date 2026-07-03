@@ -1,7 +1,7 @@
 import unittest
 from pathlib import Path
 
-from scripts.patch_font_fr import (
+from languages.fr.patches.font import (
     CP_A,
     CP_ACUTE_E,
     CP_E,

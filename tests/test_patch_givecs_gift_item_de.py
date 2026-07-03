@@ -1,4 +1,4 @@
-"""Regression guard for scripts/patch_givecs_gift_item_de.py."""
+"""Regression guard for languages/de/patches/givecs_gift_item.py."""
 
 from __future__ import annotations
 
@@ -8,7 +8,7 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).parent.parent))
 
-from scripts.patch_givecs_gift_item_de import (
+from languages.de.patches.givecs_gift_item import (
     ITEM_ENTRY_OFF,
     ITEM_STRIDE,
     NAME_PREFIX_LEN,

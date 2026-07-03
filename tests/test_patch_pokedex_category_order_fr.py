@@ -11,7 +11,7 @@ Two layers:
 import os
 import unittest
 
-from scripts.patch_pokedex_category_order_fr import PATCHES, apply_patches
+from languages.fr.patches.pokedex_category_order import PATCHES, apply_patches
 
 
 def _rom_with(offset: int, content: bytes, size: int = 0x100) -> bytearray:

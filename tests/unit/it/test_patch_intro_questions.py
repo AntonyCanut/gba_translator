@@ -1,4 +1,4 @@
-"""Tests for scripts/patch_intro_questions_it.py — the Italian intro-question patch.
+"""Tests for languages/it/patches/intro_questions.py — the Italian intro-question patch.
 
 Regression guard for the CI failure "Italian ROM build/verify failed — FR was
 still released, but IT was skipped." (ticket: Build KO it).

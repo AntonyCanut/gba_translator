@@ -18,7 +18,7 @@ import sys
 ROOT_DIR = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT_DIR))
 
-from scripts.patch_font_fr import lz77_decompress  # noqa: E402
+from languages.fr.patches.font import lz77_decompress  # noqa: E402
 
 
 def _iter_lz77_blocks(data: bytes, min_dec: int, max_dec: int) -> Iterable[Tuple[int, int, int]]:

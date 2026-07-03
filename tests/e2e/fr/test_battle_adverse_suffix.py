@@ -1,6 +1,6 @@
 """E2E: Verify battle-prefix patch applied to the FR ROM.
 
-The patch script (scripts/patch_battle_prefix_fr.py) transforms:
+The patch script (languages/fr/patches/battle_prefix.py) transforms:
   - Trainer foe: "L'adversaire X" → "X adverse"
   - Wild Pokémon: "sauvage X"     → "X sauvage"
 

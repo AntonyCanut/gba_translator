@@ -8,7 +8,7 @@ pointers — a class-2 table absent from the injection JSON and the Spanish
 extraction. The build's in-place ROM fallback only writes a French name when it
 is no LONGER than the English original, so every longer French name
 ("Ice Body" → "Corps Gel", and ~130 more) was silently dropped and shipped in
-English. ``scripts/patch_ability_names_fr.py`` (wired into ``make build-fr``)
+English. ``languages/fr/patches/ability_names.py`` (wired into ``make build-fr``)
 writes them straight from combined_fr.txt.
 
 These tests decode the bytes the render engine actually reads (stronger than a

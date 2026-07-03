@@ -8,7 +8,7 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).parent.parent))
 
-from scripts.patch_battle_recall_strings_de import (
+from languages.de.patches.battle_recall_strings import (
     DE_STRINGS,
     RECALL_PTRS,
     apply_to_rom,

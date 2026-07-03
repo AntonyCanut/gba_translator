@@ -27,7 +27,7 @@ from pathlib import Path
 ROOT_DIR = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT_DIR))
 
-from scripts.patch_hp_labels_fr import (  # noqa: E402
+from languages.fr.patches.hp_labels import (  # noqa: E402
     GREEN_OLD_VARIANTS,
     GREY_OLD_TILES,
     PARTY_OLD_TILES,

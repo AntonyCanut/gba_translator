@@ -34,7 +34,7 @@ GBA_BASE = 0x08000000
 # equal a string's GBA address. These windows live inside the legendary-ritual
 # cutscene scripts and read as 0x09F62908 ("I swam, of course!"); rewriting them
 # breaks the cutscene so the legendary battle never launches. See
-# scripts/patch_legendary_ritual_fr.py for the full diagnosis.
+# languages/fr/patches/legendary_ritual.py for the full diagnosis.
 #
 # These named offsets are kept as defense-in-depth, but the real guard is the
 # general `_is_setflag_chain` veto below: there are ~13 such windows across the

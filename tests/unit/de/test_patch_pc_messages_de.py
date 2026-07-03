@@ -1,4 +1,4 @@
-"""Regression guard for scripts/patch_pc_messages_de.py.
+"""Regression guard for languages/de/patches/pc_messages.py.
 
 The two PC-message slots are a fixed number of bytes with no relocation
 possible (see the module docstring): the raw English strings decode to 64

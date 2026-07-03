@@ -12,7 +12,7 @@ from pathlib import Path
 import sys
 sys.path.insert(0, str(Path(__file__).parent.parent))
 
-from scripts.patch_version_fr import (
+from languages.fr.patches.version import (
     _GBA_BASE,
     _NFS_TILESET_PTR_OFF,
     _VER_GRID_COLS,

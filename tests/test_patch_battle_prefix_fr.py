@@ -1,4 +1,4 @@
-"""Regression guard for scripts/patch_battle_prefix_fr.py.
+"""Regression guard for languages/fr/patches/battle_prefix.py.
 
 Critical property: the three single-byte prefix patches (0xA4C61A, 0xA4C636,
 0xA4C64C) must write 0xFF regardless of whether the byte currently present is
@@ -11,7 +11,7 @@ from __future__ import annotations
 
 import unittest
 
-from scripts.patch_battle_prefix_fr import PATCHES, apply_patches
+from languages.fr.patches.battle_prefix import PATCHES, apply_patches
 
 
 # Helpers

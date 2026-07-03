@@ -7,7 +7,7 @@ import pytest
 import sys
 sys.path.insert(0, str(Path(__file__).parent.parent))
 
-from scripts.patch_version_fr import (
+from languages.fr.patches.version import (
     _CHAR_PIXELS,
     _VER_FG,
     _VER_BG,

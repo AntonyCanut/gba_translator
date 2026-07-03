@@ -14,8 +14,8 @@ import pytest
 
 sys.path.insert(0, str(Path(__file__).parent.parent))
 
-from scripts.patch_font_fr import lz77_decompress
-from scripts.patch_hp_labels_fr import (
+from languages.fr.patches.font import lz77_decompress
+from languages.fr.patches.hp_labels import (
     GREEN_BLOCK,
     GREEN_OLD_VARIANTS,
     GREEN_PV_FILL,

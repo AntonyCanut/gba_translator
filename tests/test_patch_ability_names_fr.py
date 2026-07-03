@@ -1,4 +1,4 @@
-"""Unit tests for scripts/patch_ability_names_fr.py.
+"""Unit tests for languages/fr/patches/ability_names.py.
 
 Ability names live in a fixed-width 17-byte table (0xA36398..0xA376FC) with no
 pointers. The build's in-place ROM fallback only translates a name when the
@@ -11,7 +11,7 @@ import re
 import unittest
 from pathlib import Path
 
-from scripts.patch_ability_names_fr import (
+from languages.fr.patches.ability_names import (
     ABILITY_STRIDE,
     ABILITY_TABLE_LAST,
     ABILITY_TABLE_OFFSET,

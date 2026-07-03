@@ -15,7 +15,7 @@ REPO_ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(REPO_ROOT))
 sys.path.insert(0, str(REPO_ROOT / "scripts"))
 
-from scripts.patch_worldmap_labels_fr import (  # noqa: E402
+from languages.fr.patches.worldmap_labels import (  # noqa: E402
     TARGETS,
     _english_slot,
     apply,
@@ -92,7 +92,7 @@ class TestPatchWorldmapLabelsFR(unittest.TestCase):
         rom = bytearray(tight_source)
         combined = {0xB500A0: "Un nom beaucoup trop long pour ce slot"}
         # Build a TARGETS-only view by reusing the module's set via monkeypatch.
-        import scripts.patch_worldmap_labels_fr as mod
+        import languages.fr.patches.worldmap_labels as mod
         original = mod.TARGETS
         mod.TARGETS = {0xB500A0: "Un nom beaucoup trop long pour ce slot"}
         try:

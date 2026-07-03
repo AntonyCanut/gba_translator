@@ -20,8 +20,8 @@ import pytest
 
 sys.path.insert(0, str(Path(__file__).parent.parent))
 
-from scripts.patch_font_fr import lz77_compress, lz77_decompress
-from scripts.patch_dexnav_headers_de import (
+from languages.fr.patches.font import lz77_compress, lz77_decompress
+from languages.de.patches.dexnav_headers import (
     HEADERS,
     TILESET_DECOMP_LEN,
     TILESET_OFFSET,

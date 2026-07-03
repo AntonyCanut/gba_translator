@@ -20,7 +20,7 @@ REPO_ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(REPO_ROOT))
 sys.path.insert(0, str(REPO_ROOT / "scripts"))
 
-from scripts.patch_zone_names_fr import (  # noqa: E402
+from languages.fr.patches.zone_names import (  # noqa: E402
     TARGETS,
     apply,
     find_referrers,

@@ -1,4 +1,4 @@
-"""Regression tests for scripts/patch_trainer_card_date_de.py.
+"""Regression tests for languages/de/patches/trainer_card_date.py.
 
 The builder/redirect assembly is pure Thumb-encoding logic (checked via the
 length/structure assertions already baked into the module); these tests

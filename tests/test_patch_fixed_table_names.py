@@ -1,6 +1,6 @@
 import unittest
 
-from scripts.patch_fixed_table_names import (
+from languages.fr.patches.fixed_table_names import (
     NAME_FIXES,
     _TM_CT_TABLES,
     _ct_name,

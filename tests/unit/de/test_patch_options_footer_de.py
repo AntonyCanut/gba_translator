@@ -1,4 +1,4 @@
-"""Regression guard for scripts/patch_options_footer_de.py.
+"""Regression guard for languages/de/patches/options_footer.py.
 
 Mirrors tests/test_patch_options_footer_fr.py: the page-2 button legend at
 0x1F4E244 starts with a raw control byte (0xF8), so it never reached the

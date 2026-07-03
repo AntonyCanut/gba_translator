@@ -1,6 +1,6 @@
 import unittest
 
-from scripts.patch_time_format_fr import PATCHES, apply_patches, encode
+from languages.fr.patches.time_format import PATCHES, apply_patches, encode
 
 
 def _rom_with(offset: int, content: bytes, size: int = 0x100) -> bytearray:

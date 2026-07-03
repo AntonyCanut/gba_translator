@@ -1,4 +1,4 @@
-"""Regression guard for scripts/patch_item_names_de.py (mirrors the FR suite)."""
+"""Regression guard for languages/de/patches/item_names.py (mirrors the FR suite)."""
 
 from __future__ import annotations
 

@@ -1,4 +1,4 @@
-"""Regression guard for scripts/patch_battle_string_templates_de.py.
+"""Regression guard for languages/de/patches/battle_string_templates.py.
 
 Same language-neutral control-code cluster restore as the FR script — only
 the module under test differs.
@@ -13,7 +13,7 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).parent.parent))
 
-from scripts.patch_battle_string_templates_de import (
+from languages.de.patches.battle_string_templates import (
     CLUSTER_END,
     CLUSTER_START,
     STRINGID0_BODY_OFF,

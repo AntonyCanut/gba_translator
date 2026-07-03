@@ -1,4 +1,4 @@
-"""Unit tests for scripts/patch_font_de.py — German umlaut glyph synthesis.
+"""Unit tests for languages/de/patches/font.py — German umlaut glyph synthesis.
 
 These run against small synthetic font blocks and need neither a built ROM
 nor the DE build pipeline, unlike tests/e2e/de/test_accent_glyphs.py which

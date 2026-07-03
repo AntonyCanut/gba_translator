@@ -98,7 +98,7 @@ FRENCH_EXTENDED_TABLE: Dict[str, int] = {
 POKEMON_TABLE.update(FRENCH_EXTENDED_TABLE)
 
 # German umlauts — assigned to free slots 0x60-0x65 by commit 2c97f4e.
-# Glyphs are drawn by scripts/patch_font_de.py (DE build only).
+# Glyphs are drawn by languages/de/patches/font.py (DE build only).
 # These entries must live in POKEMON_TABLE so skip_aliases can reach them;
 # ENCODE_ALIASES used to fold them to ASCII before table lookup (dead code).
 GERMAN_UMLAUT_TABLE: Dict[str, int] = {

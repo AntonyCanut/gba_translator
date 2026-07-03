@@ -8,7 +8,7 @@ import sys
 sys.path.insert(0, str(Path(__file__).parent.parent))
 
 from src.core.text_codec import POKEMON_TABLE
-from scripts.patch_status_abbrevs_fr import (
+from languages.fr.patches.status_abbrevs import (
     GBA_BASE,
     PTR_TABLE_OFFSET,
     PTR_STRIDE,

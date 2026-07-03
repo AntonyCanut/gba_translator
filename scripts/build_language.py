@@ -45,50 +45,50 @@ EXTRACT_SCRIPT = REPO_ROOT / "src/extractors/pointer_text_extractor.py"
 BUILD_SCRIPT = REPO_ROOT / "src/translators/19_build_translated_rom_generic.py"
 CSV_TO_JSON_SCRIPT = REPO_ROOT / "src/translators/09_csv_to_json_v2.py"
 APPLY_COMBINED_SCRIPT = REPO_ROOT / "scripts/apply_combined_fr.py"
-_PATCH_FONT_FR = REPO_ROOT / "scripts/patch_font_fr.py"
+_PATCH_FONT_FR = REPO_ROOT / "languages/fr/patches/font.py"
 INLINE_SCRIPT = REPO_ROOT / "scripts/apply_inline_overrides_fr.py"
 
 # Anti-freeze / anti-corruption patches (language-agnostic mechanics).
 REPAIR_LZ77_SCRIPT = REPO_ROOT / "scripts/repair_stable_lz77_blocks.py"
 REPAIR_LOCALIZED_LZ77_SCRIPT = REPO_ROOT / "scripts/repair_localized_lz77_blocks.py"
 REPOINT_STALE_SCRIPT = REPO_ROOT / "scripts/repoint_stale_text_pointers.py"
-PATCH_RITUAL_SCRIPT = REPO_ROOT / "scripts/patch_legendary_ritual_fr.py"
-PATCH_VERSION_SCRIPT = REPO_ROOT / "scripts/patch_version_fr.py"
-PATCH_INTRO_QUESTIONS_IT_SCRIPT = REPO_ROOT / "scripts/patch_intro_questions_it.py"
+PATCH_RITUAL_SCRIPT = REPO_ROOT / "languages/fr/patches/legendary_ritual.py"
+PATCH_VERSION_SCRIPT = REPO_ROOT / "languages/fr/patches/version.py"
+PATCH_INTRO_QUESTIONS_IT_SCRIPT = REPO_ROOT / "languages/it/patches/intro_questions.py"
 
 # Text patches that can be parameterised with the language's combined file.
-PATCH_STATUS_ABBREVS_SCRIPT = REPO_ROOT / "scripts/patch_status_abbrevs_fr.py"
-PATCH_TM_ITEM_DESC_SCRIPT = REPO_ROOT / "scripts/patch_tm_item_descriptions_fr.py"
-PATCH_MOVE_DESC_SCRIPT = REPO_ROOT / "scripts/patch_move_descriptions_fr.py"
+PATCH_STATUS_ABBREVS_SCRIPT = REPO_ROOT / "languages/fr/patches/status_abbrevs.py"
+PATCH_TM_ITEM_DESC_SCRIPT = REPO_ROOT / "languages/fr/patches/tm_item_descriptions.py"
+PATCH_MOVE_DESC_SCRIPT = REPO_ROOT / "languages/fr/patches/move_descriptions.py"
 
 # Graphic (LZ77 tile) patches whose glyphs differ per language, so each ships a
 # dedicated per-language script (patch_status_badges_<code>.py). Unlike the text
 # status_abbrevs table, the in-battle status badges are drawn as tiles and must
 # be redrawn with the target language's letter shapes.
-PATCH_STATUS_BADGES_FR_SCRIPT = REPO_ROOT / "scripts/patch_status_badges_fr.py"
+PATCH_STATUS_BADGES_FR_SCRIPT = REPO_ROOT / "languages/fr/patches/status_badges.py"
 
 # Battle-text / control-code-timing / positional-gender-buffer patches. Each
 # ships a dedicated per-language script (patch_<name>_<code>.py) because the
 # phrasing and byte-budget constraints are language-structure specific; the FR
 # script is the fallback for languages that have not ported it yet.
-PATCH_BATTLE_PREFIX_FR_SCRIPT = REPO_ROOT / "scripts/patch_battle_prefix_fr.py"
-PATCH_BATTLE_RECALL_STRINGS_FR_SCRIPT = REPO_ROOT / "scripts/patch_battle_recall_strings_fr.py"
-PATCH_BATTLE_STRING_TEMPLATES_FR_SCRIPT = REPO_ROOT / "scripts/patch_battle_string_templates_fr.py"
-PATCH_GENDERED_BUFFERS_FR_SCRIPT = REPO_ROOT / "scripts/patch_gendered_buffers_fr.py"
-PATCH_GIVECS_GIFT_ITEM_FR_SCRIPT = REPO_ROOT / "scripts/patch_givecs_gift_item_fr.py"
+PATCH_BATTLE_PREFIX_FR_SCRIPT = REPO_ROOT / "languages/fr/patches/battle_prefix.py"
+PATCH_BATTLE_RECALL_STRINGS_FR_SCRIPT = REPO_ROOT / "languages/fr/patches/battle_recall_strings.py"
+PATCH_BATTLE_STRING_TEMPLATES_FR_SCRIPT = REPO_ROOT / "languages/fr/patches/battle_string_templates.py"
+PATCH_GENDERED_BUFFERS_FR_SCRIPT = REPO_ROOT / "languages/fr/patches/gendered_buffers.py"
+PATCH_GIVECS_GIFT_ITEM_FR_SCRIPT = REPO_ROOT / "languages/fr/patches/givecs_gift_item.py"
 
 # German-only post-build patches: fixed-width name/description tables whose
 # translated content is baked into the script (official German localisation),
 # not read from combined_de.txt — so, unlike the steps above, these have no
 # generic "run the FR script with --combined" delegation and are wired
-# directly to their scripts/patch_<name>_de.py implementation.
-PATCH_ITEM_NAMES_DE_SCRIPT = REPO_ROOT / "scripts/patch_item_names_de.py"
-PATCH_NATURE_NAMES_DE_SCRIPT = REPO_ROOT / "scripts/patch_nature_names_de.py"
-PATCH_CFRU_TYPE_NAMES_DE_SCRIPT = REPO_ROOT / "scripts/patch_cfru_type_names_de.py"
-PATCH_SUMMARY_LABELS_DE_SCRIPT = REPO_ROOT / "scripts/patch_summary_labels_de.py"
-PATCH_OPTIONS_FOOTER_DE_SCRIPT = REPO_ROOT / "scripts/patch_options_footer_de.py"
-PATCH_SHOP_DE_SCRIPT = REPO_ROOT / "scripts/patch_shop_de.py"
-PATCH_PC_MESSAGES_DE_SCRIPT = REPO_ROOT / "scripts/patch_pc_messages_de.py"
+# directly to their languages/de/patches/<name>.py implementation.
+PATCH_ITEM_NAMES_DE_SCRIPT = REPO_ROOT / "languages/de/patches/item_names.py"
+PATCH_NATURE_NAMES_DE_SCRIPT = REPO_ROOT / "languages/de/patches/nature_names.py"
+PATCH_CFRU_TYPE_NAMES_DE_SCRIPT = REPO_ROOT / "languages/de/patches/cfru_type_names.py"
+PATCH_SUMMARY_LABELS_DE_SCRIPT = REPO_ROOT / "languages/de/patches/summary_labels.py"
+PATCH_OPTIONS_FOOTER_DE_SCRIPT = REPO_ROOT / "languages/de/patches/options_footer.py"
+PATCH_SHOP_DE_SCRIPT = REPO_ROOT / "languages/de/patches/shop.py"
+PATCH_PC_MESSAGES_DE_SCRIPT = REPO_ROOT / "languages/de/patches/pc_messages.py"
 
 # Post-build verification (language-agnostic): audit the finished ROM for
 # inter-cell text collisions — a translated string not terminated before the
@@ -245,38 +245,38 @@ def build_rom(config, translation_json: Path) -> Path:
 
 def _font_script_for(code: str) -> Path:
     """Return the language-specific font patch script, falling back to the FR one."""
-    lang_script = REPO_ROOT / f"scripts/patch_font_{code}.py"
+    lang_script = REPO_ROOT / f"languages/{code}/patches/font.py"
     return lang_script if lang_script.exists() else _PATCH_FONT_FR
 
 
 def _status_badges_script_for(code: str) -> Path:
     """Return the language-specific status-badge tile patch, falling back to FR."""
-    lang_script = REPO_ROOT / f"scripts/patch_status_badges_{code}.py"
+    lang_script = REPO_ROOT / f"languages/{code}/patches/status_badges.py"
     return lang_script if lang_script.exists() else PATCH_STATUS_BADGES_FR_SCRIPT
 
 
 def _battle_prefix_script_for(code: str) -> Path:
-    lang_script = REPO_ROOT / f"scripts/patch_battle_prefix_{code}.py"
+    lang_script = REPO_ROOT / f"languages/{code}/patches/battle_prefix.py"
     return lang_script if lang_script.exists() else PATCH_BATTLE_PREFIX_FR_SCRIPT
 
 
 def _battle_recall_strings_script_for(code: str) -> Path:
-    lang_script = REPO_ROOT / f"scripts/patch_battle_recall_strings_{code}.py"
+    lang_script = REPO_ROOT / f"languages/{code}/patches/battle_recall_strings.py"
     return lang_script if lang_script.exists() else PATCH_BATTLE_RECALL_STRINGS_FR_SCRIPT
 
 
 def _battle_string_templates_script_for(code: str) -> Path:
-    lang_script = REPO_ROOT / f"scripts/patch_battle_string_templates_{code}.py"
+    lang_script = REPO_ROOT / f"languages/{code}/patches/battle_string_templates.py"
     return lang_script if lang_script.exists() else PATCH_BATTLE_STRING_TEMPLATES_FR_SCRIPT
 
 
 def _gendered_buffers_script_for(code: str) -> Path:
-    lang_script = REPO_ROOT / f"scripts/patch_gendered_buffers_{code}.py"
+    lang_script = REPO_ROOT / f"languages/{code}/patches/gendered_buffers.py"
     return lang_script if lang_script.exists() else PATCH_GENDERED_BUFFERS_FR_SCRIPT
 
 
 def _givecs_gift_item_script_for(code: str) -> Path:
-    lang_script = REPO_ROOT / f"scripts/patch_givecs_gift_item_{code}.py"
+    lang_script = REPO_ROOT / f"languages/{code}/patches/givecs_gift_item.py"
     return lang_script if lang_script.exists() else PATCH_GIVECS_GIFT_ITEM_FR_SCRIPT
 
 
@@ -443,10 +443,10 @@ def apply_patches(config, out_rom: Path, translation_json: Path | None = None,
 
         elif step == "type_icons":
             # Redraw the move-type badges (graphic tiles, not text) in this
-            # language via scripts/patch_type_icons_<code>.py. Each language ships
+            # language via languages/<code>/patches/type_icons.py. Each language ships
             # its own script because the badge names are baked pixels drawn with a
             # per-language glyph set (German adds K/D/W/Z, French adds none).
-            script = REPO_ROOT / f"scripts/patch_type_icons_{config.code}.py"
+            script = REPO_ROOT / f"languages/{config.code}/patches/type_icons.py"
             if script.exists():
                 run([PYTHON, script, "--rom", out_rom])
             else:
@@ -455,10 +455,10 @@ def apply_patches(config, out_rom: Path, translation_json: Path | None = None,
         elif step == "hp_labels":
             # Redraw the HP-label graphics (party menu + summary bar + summary
             # grey stat label — all 4bpp tiles inside LZ77 blocks, not text) with
-            # this language's abbreviation via scripts/patch_hp_labels_<code>.py.
+            # this language's abbreviation via languages/<code>/patches/hp_labels.py.
             # Each language ships its own script because the label is baked pixels
             # (German « KP », French « PV »).
-            script = REPO_ROOT / f"scripts/patch_hp_labels_{config.code}.py"
+            script = REPO_ROOT / f"languages/{config.code}/patches/hp_labels.py"
             if script.exists():
                 run([PYTHON, script, "--rom", out_rom])
             else:
@@ -491,7 +491,7 @@ def apply_patches(config, out_rom: Path, translation_json: Path | None = None,
             # Inline ASM/text patch for the in-game clock/date displays.
             # Only German has a dedicated script today; other generic
             # languages skip it until one is written for them.
-            script = REPO_ROOT / f"scripts/patch_time_format_{config.code}.py"
+            script = REPO_ROOT / f"languages/{config.code}/patches/time_format.py"
             if script.exists():
                 run([PYTHON, script, "--rom", out_rom])
             else:
@@ -499,7 +499,7 @@ def apply_patches(config, out_rom: Path, translation_json: Path | None = None,
 
         elif step == "trainer_card_date":
             # Free-space builder + veneer redirect for the Trainer Card date.
-            script = REPO_ROOT / f"scripts/patch_trainer_card_date_{config.code}.py"
+            script = REPO_ROOT / f"languages/{config.code}/patches/trainer_card_date.py"
             if script.exists():
                 run([PYTHON, script, "--rom", out_rom])
             else:
@@ -509,10 +509,10 @@ def apply_patches(config, out_rom: Path, translation_json: Path | None = None,
             # Redraw the 4 DexNav column-header graphics (SEARCH LEVEL / METHOD /
             # HIDDEN ABILITY / HELD ITEMS — baked 4bpp tiles inside a custom
             # Unbound LZ77 block, not text) with this language's labels via
-            # scripts/patch_dexnav_headers_<code>.py. Each language ships its own
+            # languages/<code>/patches/dexnav_headers.py. Each language ships its own
             # script because the labels are baked pixels drawn with a per-language
             # glyph set (German adds F/G/K, French adds none).
-            script = REPO_ROOT / f"scripts/patch_dexnav_headers_{config.code}.py"
+            script = REPO_ROOT / f"languages/{config.code}/patches/dexnav_headers.py"
             if script.exists():
                 run([PYTHON, script, "--rom", out_rom])
             else:
@@ -521,25 +521,25 @@ def apply_patches(config, out_rom: Path, translation_json: Path | None = None,
         # ── Pokédex patches, resolved per-language ─────────────────────────────
         # Each carries baked official localisation content (category words,
         # metric-system labels, rewrap data), so every language ships its own
-        # scripts/patch_<step>_<code>.py; a missing script just skips the step
+        # languages/<code>/patches/<step>.py; a missing script just skips the step
         # (e.g. a future language that hasn't authored this data yet).
 
         elif step == "pokedex_categories":
-            script = REPO_ROOT / f"scripts/patch_pokedex_categories_{config.code}.py"
+            script = REPO_ROOT / f"languages/{config.code}/patches/pokedex_categories.py"
             if script.exists():
                 run([PYTHON, script, "--rom", out_rom])
             else:
                 print(f"⚠ skipping pokedex_categories: {script.name} not found")
 
         elif step == "pokedex_category_order":
-            script = REPO_ROOT / f"scripts/patch_pokedex_category_order_{config.code}.py"
+            script = REPO_ROOT / f"languages/{config.code}/patches/pokedex_category_order.py"
             if script.exists():
                 run([PYTHON, script, "--rom", out_rom])
             else:
                 print(f"⚠ skipping pokedex_category_order: {script.name} not found")
 
         elif step == "pokedex_metrics":
-            script = REPO_ROOT / f"scripts/patch_pokedex_metrics_{config.code}.py"
+            script = REPO_ROOT / f"languages/{config.code}/patches/pokedex_metrics.py"
             if script.exists():
                 run([PYTHON, script, "--rom", out_rom])
             else:
@@ -549,7 +549,7 @@ def apply_patches(config, out_rom: Path, translation_json: Path | None = None,
             if translation_json is None:
                 print("⚠ skipping pokedex_rewrap: translation_json not available")
             else:
-                script = REPO_ROOT / f"scripts/patch_pokedex_{config.code}.py"
+                script = REPO_ROOT / f"languages/{config.code}/patches/pokedex.py"
                 if not script.exists():
                     print(f"⚠ skipping pokedex_rewrap: {script.name} not found")
                 else:

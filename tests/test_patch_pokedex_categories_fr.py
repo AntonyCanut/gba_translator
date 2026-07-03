@@ -8,7 +8,7 @@ from pathlib import Path
 
 import pytest
 
-from scripts.patch_pokedex_categories_fr import (
+from languages.fr.patches.pokedex_categories import (
     CELL_SIZE,
     CHAR_TO_BYTE,
     MAX_CHARS,

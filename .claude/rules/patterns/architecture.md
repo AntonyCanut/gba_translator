@@ -47,7 +47,7 @@ from src.core.text_codec import TextDecoder
 verify-roms → extract (EN+ES) → diff (offset map) → build-es → validate-es
 ```
 Build FR : `make build-fr` consomme le dernier `output/translation/*_translation_ready.json`
-puis enchaîne les patchs post-build `scripts/patch_*.py` / `repair_*.py` /
+puis enchaîne les patchs post-build `languages/<code>/patches/*.py` / `repair_*.py` /
 `repoint_stale_text_pointers.py`. Voir `scripts-pipeline.md`.
 
 ## Performance

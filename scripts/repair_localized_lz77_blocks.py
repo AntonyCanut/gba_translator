@@ -17,7 +17,7 @@ from typing import Iterable, List, Tuple
 ROOT_DIR = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT_DIR))
 
-from scripts.patch_font_fr import is_font_block, lz77_decompress  # noqa: E402
+from languages.fr.patches.font import is_font_block, lz77_decompress  # noqa: E402
 
 
 def _collect_pointer_offsets(rom: bytes) -> set[int]:

@@ -20,7 +20,7 @@ bord — c'est le « toujours trop large » constaté en jeu. On s'arrête donc 
 
 ## Correction automatique (build FR)
 
-`scripts/patch_move_descriptions_fr.py` corrige **toutes** les descriptions au
+`languages/fr/patches/move_descriptions.py` corrige **toutes** les descriptions au
 build, après la passe de repointage, comme `patch_pokedex_fr.py` pour le Pokédex :
 
 1. Pour chaque attaque il prend le texte FR de référence — le raccourci curé de
@@ -39,7 +39,7 @@ n'applique que les overrides relus à la main. La passe est branchée dans la ci
 
 ```bash
 # Appliquer la correction à une ROM déjà construite
-python3 scripts/patch_move_descriptions_fr.py \
+python3 languages/fr/patches/move_descriptions.py \
   --rom output/roms/GenedRom-fr.gba \
   --source input/roms/englishrom.gba \
   --translations output/translation/2026-06-15_translation_ready.json

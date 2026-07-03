@@ -16,7 +16,7 @@ Vampigraine, Suc Digestif, …). When the bag renders such a description,
 ``GetStringWidth`` scans for a ``0xFF`` that never comes → the CPU spins forever
 → frozen screen. English never freezes because its slots stay terminated.
 
-``scripts/patch_tm_item_descriptions_fr`` gives every CT/CS item its own
+``languages/fr/patches/tm_item_descriptions`` gives every CT/CS item its own
 relocated, ``0xFF``-terminated copy of the authoritative ``combined_fr.txt``
 text and repoints the entry at it. This test re-derives the invariant
 independently: no CT/CS item description may point into the fused region or run
@@ -34,7 +34,7 @@ from tests.e2e.conftest import FR_ROM_PATH
 
 ROM_BASE = 0x08000000
 
-# Item table layout (see scripts/patch_item_names_fr.py).
+# Item table layout (see languages/fr/patches/item_names.py).
 ITEM_TABLE_BASE = 0x876074
 ITEM_STRIDE = 44
 ITEM_NAME_LEN = 14

@@ -1,4 +1,4 @@
-"""Regression guard for scripts/patch_gendered_buffers_de.py.
+"""Regression guard for languages/de/patches/gendered_buffers.py.
 
 Every buffer is a fixed-size slot: the German word must encode to no more
 bytes (including the 0xFF terminator) than the English original occupied.
@@ -12,7 +12,7 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).parent.parent))
 
-from scripts.patch_gendered_buffers_de import GENDERED_BUFFERS, encode_text
+from languages.de.patches.gendered_buffers import GENDERED_BUFFERS, encode_text
 
 
 class TestGenderedBuffersDe(unittest.TestCase):

@@ -47,5 +47,8 @@ descriptions, species-name localisation and critical-string guards are FR-only.
 Porting those to DE and IT is tracked by the sibling tickets **F-84** (German) and
 **F-85** (Italian); ES/Indie remain uncovered and are natural follow-up tickets.
 
-> Post-build **patch scripts** (`scripts/patch_*_<code>.py`) are tracked separately
-> (see ticket **R-16**); this folder holds the translation *data*, not the code.
+> Post-build **patch scripts** now live alongside each language's data in
+> `languages/<code>/patches/<name>.py` (generic names, no `_<code>` suffix), so a
+> missing patch reads as a gap to fill for that language. They feed the byte-perfect
+> `make build-fr` recipe and the generic `scripts/build_language.py` driver; this
+> folder holds both the translation *data* and its per-language *patch code*.

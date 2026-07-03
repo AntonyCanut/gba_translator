@@ -16,8 +16,8 @@ import pytest
 
 sys.path.insert(0, str(Path(__file__).parent.parent))
 
-from scripts.patch_font_fr import lz77_decompress
-from scripts.patch_status_badges_de import (
+from languages.fr.patches.font import lz77_decompress
+from languages.de.patches.status_badges import (
     BADGE_BLOCKS,
     _LETTERS,
     _STATUS_PATCHES,

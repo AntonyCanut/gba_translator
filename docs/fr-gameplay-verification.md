@@ -65,7 +65,7 @@ Representative harvested French (all correct):
 - `src/text/charmap_data.py` confirms it: only `é è à â ç ù î` are mapped;
   `sync_charmap.py` reports `FR accents MISSING: ê ë û ü ï ô œ`, and
   `tests/unit/test_sync_charmap.py` already classifies them as `ALIAS_ACCENTS`.
-- `scripts/patch_font_fr.py` only synthesizes glyphs for `à` and `ç` — it never
+- `languages/fr/patches/font.py` only synthesizes glyphs for `à` and `ç` — it never
   builds circumflex/diaeresis glyphs.
 
 So the loss happens at **injection time**, not in the source and not in the

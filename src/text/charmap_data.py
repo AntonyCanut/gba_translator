@@ -62,7 +62,7 @@ CHAR_TO_BYTE: Dict[str, int] = {
     'â': 0x68,
     'í': 0x6F,
     # German umlauts — assigned to free slots 0x60-0x65.
-    # Glyphs are drawn by scripts/patch_font_de.py (DE build only).
+    # Glyphs are drawn by languages/de/patches/font.py (DE build only).
     'Ä': 0x60, 'Ö': 0x61, 'Ü': 0x62,
     'ä': 0x63, 'ö': 0x64, 'ü': 0x65,
 }

@@ -9,7 +9,7 @@ renderer).  It also checks the GBA header software-version byte (0xBC).
 
 Why only the NOT FOR SALE screen?  Pokémon Unbound's real title screen
 (PRESS START) shows **no** version number at all — the only in-game version
-string lives on the NOT FOR SALE screen.  See ``scripts/patch_version_fr.py``
+string lives on the NOT FOR SALE screen.  See ``languages/fr/patches/version.py``
 and ticket B-19 for the full diagnostic.  The old "title screen" pointers
 (0x1413AC / 0x1413B8) actually address the Game Corner slot machine, so this
 verifier also asserts they are *not* touched by the version patch — that
@@ -33,7 +33,7 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 
-from scripts.patch_version_fr import (  # noqa: E402
+from languages.fr.patches.version import (  # noqa: E402
     _CHAR_PIXELS,
     _GLYPH_H,
     _GLYPH_W,

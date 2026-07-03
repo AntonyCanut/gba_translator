@@ -29,7 +29,7 @@ import pytest
 PROJECT_ROOT = Path(__file__).resolve().parent.parent.parent.parent
 EN_ROM = PROJECT_ROOT / "input" / "roms" / "englishrom.gba"
 
-from scripts.patch_version_fr import (  # noqa: E402
+from languages.fr.patches.version import (  # noqa: E402
     patch_intro_version,
     patch_version,
     version_string,
@@ -147,7 +147,7 @@ class TestPipelineCli:
         build = 77
 
         patch = subprocess.run(
-            [sys.executable, "scripts/patch_version_fr.py",
+            [sys.executable, "languages/fr/patches/version.py",
              "--rom", str(rom), "--build-number", str(build)],
             cwd=PROJECT_ROOT, capture_output=True, text=True,
         )

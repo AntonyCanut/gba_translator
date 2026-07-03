@@ -2,7 +2,7 @@ import struct
 import unittest
 from pathlib import Path
 
-from scripts.patch_trainer_card_date_fr import (
+from languages.fr.patches.trainer_card_date import (
     BLOCK_FILE,
     BLOCK_LEN,
     BUILDER_FILE,

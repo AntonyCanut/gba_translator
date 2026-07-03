@@ -20,7 +20,7 @@ import pytest
 
 sys.path.insert(0, str(pathlib.Path(__file__).resolve().parents[3]))
 
-from scripts.patch_font_de import (  # noqa: E402
+from languages.de.patches.font import (  # noqa: E402
     CP_A_LC,
     CP_A_UC,
     CP_A_UMLAUT_LC,

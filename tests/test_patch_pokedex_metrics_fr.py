@@ -1,7 +1,7 @@
 import os
 import unittest
 
-from scripts.patch_pokedex_metrics_fr import (
+from languages.fr.patches.pokedex_metrics import (
     PATCHES,
     apply_patches,
     _HEIGHT_BLOCK_NEW,

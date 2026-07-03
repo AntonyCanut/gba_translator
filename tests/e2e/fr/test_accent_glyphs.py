@@ -13,7 +13,7 @@ block (identified by ``à`` having been patched), é/è now carry the clean e
 body instead of the malformed original.
 """
 
-from scripts.patch_font_fr import (
+from languages.fr.patches.font import (
     CP_ACUTE_E,
     CP_E,
     CP_GRAVE_A,

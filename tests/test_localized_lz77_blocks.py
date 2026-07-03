@@ -1,7 +1,7 @@
 import unittest
 from pathlib import Path
 
-from scripts.patch_font_fr import lz77_decompress
+from languages.fr.patches.font import lz77_decompress
 
 
 EN_ROM = Path('input/roms/englishrom.gba')
