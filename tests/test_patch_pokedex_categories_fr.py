@@ -20,7 +20,7 @@ from scripts.patch_pokedex_categories_fr import (
     load_mapping,
 )
 
-DATA_DIR = Path(__file__).parent.parent / 'data'
+DATA_DIR = Path(__file__).parent.parent / 'languages' / 'fr' / 'data'
 ROM_PATH = Path(__file__).parent.parent / 'output' / 'roms' / 'GenedRom-fr.gba'
 
 

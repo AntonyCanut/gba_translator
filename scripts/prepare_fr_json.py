@@ -128,7 +128,7 @@ def main() -> int:
     parser.add_argument(
         '--critical',
         type=Path,
-        default=Path('data/critical_strings_fr.txt'),
+        default=Path('languages/fr/data/critical_strings_fr.txt'),
         help='Critical-strings guard file; entries override combined_fr.txt',
     )
     parser.add_argument(

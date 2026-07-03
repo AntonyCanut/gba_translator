@@ -12,7 +12,7 @@ offset in the EN extraction — so apply_combined_fr.py --extend could never add
 
 Subsequent regression (B-54 follow-up): commit 33535eb overwrote the living block
 of combined_fr.txt and silently dropped the 0xa4a8e0 entry added by 6512547.
-Fix: data/critical_strings_fr.txt now pins the entry permanently.
+Fix: languages/fr/data/critical_strings_fr.txt now pins the entry permanently.
 """
 
 from __future__ import annotations
@@ -28,7 +28,10 @@ from src.core.text_codec import TextDecoder
 
 FR_ROM = Path("output/roms/GenedRom-fr.gba")
 COMBINED_FR = Path(__file__).resolve().parent.parent / "languages/fr/combined_fr.txt"
-CRITICAL_STRINGS = Path(__file__).resolve().parent.parent / "data" / "critical_strings_fr.txt"
+CRITICAL_STRINGS = (
+    Path(__file__).resolve().parent.parent
+    / "languages" / "fr" / "data" / "critical_strings_fr.txt"
+)
 
 
 def _follow_ptr(rom: bytes, ptr_slot: int, limit: int = 120) -> str:
@@ -90,7 +93,7 @@ class TestBattleSuperEffectiveFr(unittest.TestCase):
 
 
 class TestCriticalStringsGuard(unittest.TestCase):
-    """Verify that data/critical_strings_fr.txt entries are present in combined_fr.txt.
+    """Verify that languages/fr/data/critical_strings_fr.txt entries are present in combined_fr.txt.
 
     This test catches the regression where a future agent edits the living block
     of combined_fr.txt and accidentally drops a critical entry.
@@ -115,7 +118,7 @@ class TestCriticalStringsGuard(unittest.TestCase):
 
     def test_critical_strings_file_non_empty(self) -> None:
         self.assertGreater(len(self.critical), 0,
-                           "data/critical_strings_fr.txt has no entries")
+                           "languages/fr/data/critical_strings_fr.txt has no entries")
 
     def test_super_effective_on_name_in_combined(self) -> None:
         """0xa4a8e0 must be present in combined_fr.txt with raw-byte token."""
@@ -140,7 +143,7 @@ class TestCriticalStringsGuard(unittest.TestCase):
                       f"0x800880 missing raw token <0xFD><0x10>: {text!r}")
 
     def test_all_critical_entries_in_combined(self) -> None:
-        """Every entry in data/critical_strings_fr.txt must be in combined_fr.txt."""
+        """Every entry in languages/fr/data/critical_strings_fr.txt must be in combined_fr.txt."""
         missing = [hex(o) for o in self.critical if o not in self.combined]
         self.assertEqual(missing, [],
                          f"Critical offsets missing from combined_fr.txt: {missing}")

@@ -11,7 +11,7 @@ This post-build step fixes both, working directly on the built ROM so it
 is immune to the repair/repoint passes that run before it:
 
 1. For every Pokédex entry it takes the authoritative French text — the
-   curated short rewrite from ``data/pokedex_fr_overrides.json`` when the
+   curated short rewrite from ``languages/fr/data/pokedex_fr_overrides.json`` when the
    description is too verbose to fit three lines, otherwise the full
    translation from the translation JSON.
 2. It re-wraps that text to <= 3 lines within the window width and encodes
@@ -39,7 +39,10 @@ from src.core.text_codec import TextDecoder, TextEncoder
 from src.core.text_reinserter import FreeSpaceAllocator
 
 ROM_POINTER_BASE = 0x08000000
-DEFAULT_OVERRIDES = Path(__file__).resolve().parent.parent / "data" / "pokedex_fr_overrides.json"
+DEFAULT_OVERRIDES = (
+    Path(__file__).resolve().parent.parent
+    / "languages" / "fr" / "data" / "pokedex_fr_overrides.json"
+)
 
 
 def _deref(rom, offset: int):

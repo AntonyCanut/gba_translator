@@ -10,7 +10,7 @@ French because every species has an official French name
 This script walks ``combined_fr.txt`` (the live FR translation source)
 and, for every entry, replaces each English species name that appears as
 a whole word with its French equivalent, using the authoritative map in
-``data/pokemon_names_en_fr.json``.
+``languages/fr/data/pokemon_names_en_fr.json``.
 
 Matching is conservative on purpose:
 
@@ -65,7 +65,7 @@ from src.core.dialogue_linewrap import (  # noqa: E402
 )
 
 COMBINED = ROOT / "languages/fr/combined_fr.txt"
-NAME_MAP = ROOT / "data" / "pokemon_names_en_fr.json"
+NAME_MAP = ROOT / "languages" / "fr" / "data" / "pokemon_names_en_fr.json"
 REPORT = ROOT / "output" / "reports" / "pokemon_name_overflow_fr.md"
 
 # English species names that collide with ordinary French/English words or

@@ -24,7 +24,7 @@ bord — c'est le « toujours trop large » constaté en jeu. On s'arrête donc 
 build, après la passe de repointage, comme `patch_pokedex_fr.py` pour le Pokédex :
 
 1. Pour chaque attaque il prend le texte FR de référence — le raccourci curé de
-   `data/move_descriptions_fr_overrides.json` quand le texte est trop verbeux
+   `languages/fr/data/move_descriptions_fr_overrides.json` quand le texte est trop verbeux
    pour 5 lignes, sinon la traduction complète du JSON de build, sinon la
    description source.
 2. Il **re-wrappe** ce texte en ≤ 5 lignes dans la largeur de la fenêtre et
@@ -91,7 +91,7 @@ officiel Pokémon FR) partout dans les descriptions d'attaque et d'objets.
 ## Ajouter / corriger un raccourci
 
 Si une nouvelle description ne tient pas (le patch la signale en `ÉCHEC`),
-ajouter une entrée dans `data/move_descriptions_fr_overrides.json` :
+ajouter une entrée dans `languages/fr/data/move_descriptions_fr_overrides.json` :
 
 1. Clé = numéro d'attaque (index `gMoveDescriptionPointers`).
 2. Valeur = description FR concise **en prose** (le patch s'occupe des sauts de

@@ -12,7 +12,7 @@ Without this patch every category displays in English (e.g. ``Poison Pin
 Pokémon``, ``Licking Pokémon``).  With the patch they display in French
 (e.g. ``Aiguillon Pokémon``, ``Lécheur Pokémon``).
 
-The mapping is loaded from ``data/pokedex_categories_fr.json`` (654 EN→FR
+The mapping is loaded from ``languages/fr/data/pokedex_categories_fr.json`` (654 EN→FR
 pairs).  Entries not found in the mapping are left unchanged.  The patch is
 idempotent: running it twice produces the same ROM bytes.
 
@@ -146,7 +146,7 @@ def main(argv: list[str] | None = None) -> int:
         help='FR ROM to patch in place',
     )
     parser.add_argument(
-        '--data-dir', type=Path, default=Path('data'),
+        '--data-dir', type=Path, default=Path('languages/fr/data'),
         help='Directory containing pokedex_categories_fr.json',
     )
     parser.add_argument(

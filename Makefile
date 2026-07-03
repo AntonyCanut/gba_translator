@@ -127,7 +127,7 @@ prepare-fr: $(ENGLISH_EXTRACT) $(PREPARE_FR_SCRIPT)
 	@$(PYTHON) $(PREPARE_FR_SCRIPT) \
 		--combined languages/fr/combined_fr.txt \
 		--english $(ENGLISH_EXTRACT) \
-		--critical data/critical_strings_fr.txt \
+		--critical languages/fr/data/critical_strings_fr.txt \
 		--english-rom $(ENGLISH_ROM)
 
 build-es: $(OFFSET_MAP) $(BUILD_SCRIPT)

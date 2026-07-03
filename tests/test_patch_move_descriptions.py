@@ -13,6 +13,8 @@ from scripts import patch_move_descriptions_fr
 
 OVERRIDES = (
     Path(__file__).resolve().parent.parent
+    / "languages"
+    / "fr"
     / "data"
     / "move_descriptions_fr_overrides.json"
 )

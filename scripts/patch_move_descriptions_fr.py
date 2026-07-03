@@ -14,7 +14,7 @@ immune to the repair/repoint passes that run before it — exactly the
 lossless strategy of :mod:`scripts.patch_pokedex_fr` for the Pokédex window:
 
 1. For every move it takes the authoritative French text — the curated short
-   rewrite from ``data/move_descriptions_fr_overrides.json`` when the
+   rewrite from ``languages/fr/data/move_descriptions_fr_overrides.json`` when the
    description is too verbose to fit five lines, otherwise the full
    translation from the translation JSON, otherwise the source description.
 2. It re-wraps that text to <= 5 lines within the window width and encodes
@@ -44,7 +44,8 @@ from src.core.text_reinserter import FreeSpaceAllocator
 
 ROM_POINTER_BASE = 0x08000000
 DEFAULT_OVERRIDES = (
-    Path(__file__).resolve().parent.parent / "data" / "move_descriptions_fr_overrides.json"
+    Path(__file__).resolve().parent.parent
+    / "languages" / "fr" / "data" / "move_descriptions_fr_overrides.json"
 )
 
 

@@ -14,7 +14,10 @@ from src.core.pokedex import (
 )
 from src.core.text_codec import TextEncoder
 
-OVERRIDES = Path(__file__).resolve().parent.parent / "data" / "pokedex_fr_overrides.json"
+OVERRIDES = (
+    Path(__file__).resolve().parent.parent
+    / "languages" / "fr" / "data" / "pokedex_fr_overrides.json"
+)
 
 
 class WrapTests(unittest.TestCase):
