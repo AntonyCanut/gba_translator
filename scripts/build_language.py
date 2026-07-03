@@ -106,6 +106,14 @@ DIFF_DIR = REPO_ROOT / "output/differences"
 DIFF_REPORT = DIFF_DIR / "pointer_text_differences.json"
 PAIRS_REPORT = DIFF_DIR / "pointer_translation_pairs.json"
 OFFSET_MAP = DIFF_DIR / "pointer_offset_map.json"
+# Dedicated, language-neutral (EN/ES only, no --french) base CSV shared by
+# every generic-language build. Deliberately NOT named like the per-language
+# outputs (`{code}_trilingual_translation.csv`) so it can never be confused
+# with — or accidentally regenerated from — another language's leftover
+# translations (see build B-160: DE inherited stale French Pokédex text
+# because the old "pick whatever *_trilingual_translation.csv is newest"
+# logic could return FR's or IT's own output CSV).
+GENERIC_BASE_CSV = TRANSLATION_DIR / "generic_base_trilingual.csv"
 
 
 def run(cmd: list, *, cwd: Path = REPO_ROOT) -> None:
@@ -131,14 +139,16 @@ def ensure_extractions() -> None:
         run([PYTHON, EXTRACT_SCRIPT, SPANISH_ROM, "--output", SPANISH_EXTRACT, "--scan-all-pointers"])
 
 
-def _latest_base_csv() -> Path:
-    """Return the most recent trilingual CSV, generating it if necessary."""
-    candidates = sorted(
-        TRANSLATION_DIR.glob("*_trilingual_translation.csv"),
-        key=lambda p: p.stat().st_mtime,
-    )
-    if candidates:
-        return candidates[-1]
+def _generic_base_csv() -> Path:
+    """Return the language-neutral EN/ES trilingual CSV, generating it if necessary.
+
+    Every generic-language build (DE, IT, …) starts from this single,
+    dedicated file so a translation with no entry in its own
+    ``combined_<code>.txt`` keeps the English source text instead of
+    silently inheriting another language's leftover translation.
+    """
+    if GENERIC_BASE_CSV.exists():
+        return GENERIC_BASE_CSV
 
     # No trilingual CSV found — generate it automatically.
     if not DIFF_REPORT.exists():
@@ -159,15 +169,17 @@ def _latest_base_csv() -> Path:
 
     TRANSLATION_DIR.mkdir(parents=True, exist_ok=True)
     # Pass the EN extraction explicitly to avoid depending on *_diff_with_padding.json.
-    run([PYTHON, TRILINGUAL_SCRIPT, "--english", ENGLISH_EXTRACT])
+    # No --french: this base must stay language-neutral so it is safe to
+    # share across every generic-language build.
+    run([
+        PYTHON, TRILINGUAL_SCRIPT,
+        "--english", ENGLISH_EXTRACT,
+        "--output", GENERIC_BASE_CSV,
+    ])
 
-    candidates = sorted(
-        TRANSLATION_DIR.glob("*_trilingual_translation.csv"),
-        key=lambda p: p.stat().st_mtime,
-    )
-    if not candidates:
+    if not GENERIC_BASE_CSV.exists():
         raise SystemExit("Trilingual CSV generation failed: no output file produced.")
-    return candidates[-1]
+    return GENERIC_BASE_CSV
 
 
 def generate_translation_json(config) -> Path:
@@ -177,7 +189,7 @@ def generate_translation_json(config) -> Path:
         raise SystemExit(f"Combined translation file not found: {combined}")
 
     TRANSLATION_DIR.mkdir(parents=True, exist_ok=True)
-    base_csv = _latest_base_csv()
+    base_csv = _generic_base_csv()
     lang_csv = TRANSLATION_DIR / f"{config.code}_trilingual_translation.csv"
     out_json = config.translation_json_path(REPO_ROOT)
 

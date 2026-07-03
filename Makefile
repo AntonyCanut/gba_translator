@@ -302,7 +302,7 @@ validate-es: $(SPANISH_BUILD) $(VALIDATE_SCRIPT)
 		--include-spanish-only
 
 trilingual-csv:
-	@$(PYTHON) $(TRILINGUAL_SCRIPT)
+	@$(PYTHON) $(TRILINGUAL_SCRIPT) --auto-french-reference
 
 ## --------------- Test targets ---------------
 

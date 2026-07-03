@@ -8,7 +8,11 @@ The output stays compatible with 09_csv_to_json_v2.py (translation column).
 Defaults:
 - English base: latest output/differences/*_diff_with_padding.json
 - Spanish texts: output/extracted/extracted_texts/spanishrom_texts.json
-- French texts: optional, auto-detected in output/translation/
+- French texts: off by default. Pass --french explicitly, or
+  --auto-french-reference to auto-detect the latest output/translation/
+  *_translation_ready.json (manual translator convenience only — the
+  "latest" ready JSON may belong to another language, so automated
+  generic-language builds must never set this; see build_language.py).
 """
 
 import argparse
@@ -79,9 +83,17 @@ def _resolve_english_base(explicit: Optional[Path]) -> Optional[Path]:
     return None
 
 
-def _resolve_french(explicit: Optional[Path]) -> Optional[Path]:
+def _resolve_french(explicit: Optional[Path], auto: bool) -> Optional[Path]:
     if explicit:
         return explicit
+    if not auto:
+        # `output/translation/*_translation_ready.json` is shared by every
+        # language (FR/DE/IT/…), so auto-detecting "the latest one" used to
+        # leak whichever language finished building last into this generic
+        # EN/ES/? CSV — e.g. a German or Italian build silently inheriting
+        # French Pokédex text (B-160). Automated builds (build_language.py)
+        # must opt in explicitly with --auto-french-reference to get this.
+        return None
     translation_dir = Path('output/translation')
     latest_ready = _find_latest(translation_dir, '*_translation_ready.json')
     if latest_ready:
@@ -197,6 +209,17 @@ def main() -> int:
         help='Spanish extracted JSON'
     )
     parser.add_argument('--french', type=Path, help='Optional French translation JSON')
+    parser.add_argument(
+        '--auto-french-reference',
+        action='store_true',
+        help=(
+            'Auto-detect the latest *_translation_ready.json as the French '
+            'reference column when --french is not given. Intended for manual '
+            'translator convenience (`make trilingual-csv`) only — automated, '
+            'generic-language builds must NOT set this, since the "latest" '
+            'ready JSON on disk may belong to another language.'
+        ),
+    )
     parser.add_argument('--output', type=Path, help='Output CSV path')
 
     args = parser.parse_args()
@@ -206,7 +229,7 @@ def main() -> int:
         print('Error: English base JSON not found.')
         return 1
 
-    french_path = _resolve_french(args.french)
+    french_path = _resolve_french(args.french, args.auto_french_reference)
     output_path = args.output
     if output_path is None:
         date_str = datetime.now().strftime('%Y-%m-%d')
