@@ -12,7 +12,8 @@ These tests assert, without touching a 32 MB ROM, that:
 * the FR delegate actually accepts every flag the wrapper passes (``--help``);
 * ``build_language`` dispatches each declared IT ``lang.yaml`` step, and every
   step resolves to either a wrapper or a built-in handler branch;
-* the Italian description-override files exist and are empty JSON objects.
+* the move-descriptions override file exists and is an empty JSON object;
+* the pokedex override file exists and carries curated Italian entries (B-164).
 """
 
 from __future__ import annotations
@@ -108,10 +109,25 @@ def test_fr_delegate_accepts_every_flag(name, flags):
         assert flag in text, f"{fr_script.name} help is missing {flag}"
 
 
-def test_overrides_files_are_empty_json():
-    for name in ("move_descriptions_it_overrides.json", "pokedex_it_overrides.json"):
-        data = json.loads((ROOT / "languages" / "it" / "data" / name).read_text(encoding="utf-8"))
-        assert data == {}, name
+def test_move_descriptions_overrides_file_is_empty_json():
+    data = json.loads(
+        (ROOT / "languages" / "it" / "data" / "move_descriptions_it_overrides.json")
+        .read_text(encoding="utf-8")
+    )
+    assert data == {}
+
+
+def test_pokedex_overrides_file_has_curated_italian_entries():
+    # B-164: unlike move_descriptions, this file is deliberately populated —
+    # patch_pokedex_it's text_map (keyed by generic extraction offset) hits a
+    # live dex-struct pointer for only a handful of entries, so almost every
+    # description otherwise fell back to French leftover source text.
+    data = json.loads(
+        (ROOT / "languages" / "it" / "data" / "pokedex_it_overrides.json")
+        .read_text(encoding="utf-8")
+    )
+    assert len(data) > 800
+    assert all(isinstance(v, str) and v for v in data.values())
 
 
 # ── build_language dispatch integration ─────────────────────────────────────────
