@@ -342,6 +342,17 @@ def apply_patches(config, out_rom: Path, translation_json: Path | None = None,
                     "--translations", translation_json,
                 ])
 
+        elif step == "type_icons":
+            # Redraw the move-type badges (graphic tiles, not text) in this
+            # language via scripts/patch_type_icons_<code>.py. Each language ships
+            # its own script because the badge names are baked pixels drawn with a
+            # per-language glyph set (German adds K/D/W/Z, French adds none).
+            script = REPO_ROOT / f"scripts/patch_type_icons_{config.code}.py"
+            if script.exists():
+                run([PYTHON, script, "--rom", out_rom])
+            else:
+                print(f"⚠ skipping type_icons: {script.name} not found")
+
         elif step == "collision_check":
             # Report-only: trace live pointers in the finished ROM and flag any
             # cell whose string is not terminated before the next occupied

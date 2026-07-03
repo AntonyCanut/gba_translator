@@ -61,6 +61,9 @@ patches:
   - legendary_ritual
   - status_abbrevs
   - status_badges
+  # Redraw the move-type badges (graphic tiles) with German names
+  # (KAMPF/GIFT/DRACHE/…) via scripts/patch_type_icons_de.py.
+  - type_icons
   - version
   # Post-build audit: flag any translated cell not terminated before its
   # neighbour (fusion / freeze risk). Report-only, never fails the build.
