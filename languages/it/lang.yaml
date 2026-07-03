@@ -78,16 +78,47 @@ status_abbrev:
 #                           already full phrases ("Il Pokémon selvatico"), so no
 #                           code-cave word-order rewrite is applied here (see
 #                           patch_battle_prefix_it.py for the follow-up note).
+#
+# In-place patches ported from the French pipeline (F-85). Each has a thin
+# scripts/patch_<name>_it.py wrapper that delegates to the language-agnostic
+# patch_<name>_fr.py via src/i18n/fr_patch_delegate; build_language.py resolves
+# it ahead of the shared FR branches (_lang_patch_script) and invokes it with a
+# single --rom, the wrapper resolving its Italian data source internally:
+#   summary_labels          restore the Type/OT/Item summary-label tilemap +
+#                           localized tileset from the pristine EN ROM.
+#   battle_string_templates restore the {FD24} defeat-speech / switch-out
+#                           control-code cluster from the pristine EN ROM.
+#   givecs_gift_item        restore the give-CS 44-byte gift-item struct from EN.
+#   ability_names           write Italian ability names into the fixed 17-byte
+#                           table from combined_it.txt (over-long names skipped,
+#                           never corrupted).
+#   tm_item_descriptions    anti-freeze pass: terminate/relocate the MT/MN item
+#                           descriptions in place, sourced from combined_it.txt.
+#
+# NOT wired: the free-space-relocation ports (dup_move_descriptions,
+# meteorite_dialogue, mission_descriptions, move_descriptions, pokedex) — the
+# generic builder already consumes the ROM's free space, so those FR relocation
+# patches report FAILED (free space) and abort the build. Their patch_*_it.py
+# wrappers exist on disk but stay unwired (tracked as a follow-up); Pokédex
+# descriptions are instead handled in place by the `pokedex_rewrap` step below.
 patches:
   - font
   - inline
   - battle_prefix
   - repair_lz77
   - repair_localized_lz77
+  # ── Structural restores from the pristine EN/ES ROMs (language-agnostic) ──
+  - summary_labels          # Type/OT/Item label tilemap + localized tileset
   - repoint_stale
   - legendary_ritual
+  - givecs_gift_item        # guard the give-CS gift item 44-byte struct
+  - battle_string_templates # {FD24} defeat-speech / switch-out control cluster
   - intro_questions_it   # fix 3 character-creation questions that bypass pipeline
   - status_abbrevs
+  # ── Italian text written in place (no free-space relocation) ──────────────
+  - ability_names           # fixed 17-byte ability-name table ← combined_it
+  - tm_item_descriptions    # MT/MN item descriptions (anti-freeze, in place)
+  # ── Graphics (LZ77 tiles) + Pokédex tables ────────────────────────────────
   - status_badges
   - type_icons
   - hp_labels
