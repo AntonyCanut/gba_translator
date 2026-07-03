@@ -1,103 +1,346 @@
 # Pokémon Unbound — Multi-language ROM Translation Toolkit
 
-Translate Pokémon Unbound (CFRU/BPRE01) from English into several languages from
-one toolkit. The Spanish reproduction below is the original reverse-engineering
-foundation; on top of it the project now builds **French** (complete,
-byte-perfect), **Italian** and **German** (in progress).
+[![](https://dcbadge.limes.pink/api/server/https://discord.gg/ctFaR77WrR)](https://discord.gg/ctFaR77WrR)
 
-## Languages
+Open-source toolkit used to translate **Pokémon Unbound** from English into multiple languages.
 
-```bash
-make langs           # list languages declared in languages/
-make build-fr        # French — dedicated, byte-perfect recipe
-make build-it        # Italian — generic driver
-make build-de        # German — generic driver
-make build-all       # build FR + IT + DE
-make release-all     # build all three + package output/release/ (ROMs, zips, checksums)
+The project started from a Spanish reproduction / reverse-engineering pipeline and now provides a multi-language build system for French, Italian, German and experimental language targets.
+
+French is the reference translation: it is complete, byte-perfect, and built through a dedicated recipe to avoid regressions. Other languages are driven by the generic multi-language pipeline.
+
+## Community
+
+The Discord server is the main place to discuss the project, ask questions, report translation issues, share screenshots, and coordinate contributions.
+
+Join the community here:
+
+[Discord Community](https://discord.gg/ctFaR77WrR)
+
+You can use Discord for:
+
+- Reporting translation mistakes
+- Sharing screenshots of text or layout issues
+- Asking for help with the toolkit
+- Discussing translation decisions
+- Suggesting improvements
+- Coordinating contributions
+
+## Reporting bugs and issues
+
+You can report bugs in two ways:
+
+- Create a GitHub issue in this repository
+- Post directly in the Discord community
+
+### Translation issues
+
+For translation mistakes, typos, wrong wording, or text layout problems, a simple screenshot is usually enough.
+
+Please include the language concerned and, if possible, the in-game location or context where the text appears.
+
+### Blocking bugs
+
+For blocking issues such as freezes, soft locks, broken events, progression blockers, corrupted UI, or unexpected behavior, please provide:
+
+- A clear description of the problem
+- The steps required to reproduce it
+- A screenshot or short video if relevant
+- The `.sav` file from the affected location
+
+A save file is extremely useful because it makes the issue reproducible and reduces the time needed to fix it.
+
+## Contributing
+
+This repository is open source. Contributions are welcome through Pull Requests.
+
+You can contribute by:
+
+- Fixing translation mistakes
+- Improving existing translations
+- Adding missing translated strings
+- Testing ROM builds
+- Reporting regressions
+- Improving scripts, build tooling, or documentation
+- Adding support for new languages
+
+Every Pull Request is analyzed by an AI assistant to check its viability, detect potential implementation issues, and speed up the review process. Final decisions remain under human supervision.
+
+## AI-assisted development with Singularity
+
+Most of this project is developed with **Singularity**, an AI-assisted development environment created to improve productivity on complex software projects.
+
+Singularity helps with:
+
+- AI-assisted implementation workflows
+- Code review preparation
+- Repository context management
+- Task decomposition
+- Faster iteration on translation tooling
+- Safer refactoring of large codebases
+
+Learn more here:
+
+[Singularity](https://singularity.meteorfactory.dev/)
+
+Contributors can work with any workflow they prefer. Singularity is not required to contribute, but it is the main development environment used on this project.
+
+## Current language status
+
+| Language | Status | Build mode | Output |
+| --- | --- | --- | --- |
+| French | Complete | Dedicated | `GenedRom-fr.gba` |
+| Italian | In progress | Generic | `GenedRom-it.gba` |
+| German | In progress | Generic | `GenedRom-de.gba` |
+| Indie | Experimental | Generic | `GenedRom-indie.gba` |
+
+French must stay isolated from the generic driver. The dedicated French build exists to keep the validated ROM stable and byte-perfect.
+
+## Translation methods
+
+There are several ways to help translate the project, depending on how technical you want to be.
+
+### 1. Report translation issues on Discord
+
+This is the easiest contribution method.
+
+If you find a wrong translation, typo, missing accent, broken line break, or awkward wording, send a screenshot on Discord. This is usually enough for small text fixes.
+
+### 2. Edit an existing language file
+
+Translations are stored in language-specific files:
+
+```text
+languages/fr/combined_fr.txt
+languages/it/combined_it.txt
+languages/de/combined_de.txt
+languages/indie/combined_indie.txt
 ```
 
-Each language is declared by a small descriptor in `languages/<code>/lang.yaml`
-with its translations in `languages/<code>/combined_<code>.txt` (French keeps
-`combined_fr.txt` at the repo root). See **[docs/21_MULTILANGUE.md](docs/21_MULTILANGUE.md)**
-for the full guide, including how to add a new language.
+Each entry follows this format:
 
-> French is the reference translation and stays byte-perfect: it has its own
-> dedicated recipe and is never rerouted through the generic driver.
+```text
+<offset_hex>: <translated text>
+```
 
-## Quick start (Spanish reproduction foundation)
+Special control sequences are used by the game text engine:
 
-1. Drop ROMs here:
-   - `input/roms/englishrom.gba`
-   - `input/roms/spanishrom.gba`
-2. Run the pipeline:
-   ```bash
-   make pipeline
-   ```
-3. Check outputs:
-   - `output/roms/spanishrom_copy_build.gba`
-   - `output/reports/*_text_range_validation.json`
+| Sequence | Meaning |
+| --- | --- |
+| `\n` | Line break |
+| `\l` | Scroll marker |
+| `\p` | Clear / next text box marker |
 
-## Pipeline overview
+When editing translations, keep the offset unchanged and only modify the translated text after `: `.
 
-The canonical workflow uses pointer-based extraction and an offset map:
+### 3. Add or improve a language
 
-1. Verify ROMs against baseline metadata.
-2. Extract pointer-based texts from both ROMs.
-3. Diff texts and build an offset map.
-4. Build the Spanish ROM (copy raw bytes from reference).
-5. Validate text ranges byte-for-byte.
+Each language is declared in a descriptor:
 
-## Manual commands (no Makefile)
+```text
+languages/<code>/lang.yaml
+```
+
+The descriptor defines the language code, native name, build mode, translation file, output ROM name, version label, font glyphs, status abbreviations, and post-build patches.
+
+To add a new generic language:
 
 ```bash
-python3 scripts/verify_roms.py --baseline docs/roms_baseline.json
+mkdir languages/<code>
+cp languages/it/lang.yaml languages/<code>/lang.yaml
+touch languages/<code>/combined_<code>.txt
+make build-lang LANG_CODE=<code>
+python3 -m pytest tests/test_language_registry.py
+```
 
-python3 src/extractors/pointer_text_extractor.py \
-  input/roms/englishrom.gba \
-  --output output/extracted/extracted_texts/englishrom_texts.json
+### 4. Use AI-assisted translation carefully
 
-python3 src/extractors/pointer_text_extractor.py \
-  input/roms/spanishrom.gba \
-  --output output/extracted/extracted_texts/spanishrom_texts.json
+AI can help draft or review translations, but generated text should be checked manually before being merged.
 
-python3 src/analyzers/11_pointer_text_diff.py \
-  --english output/extracted/extracted_texts/englishrom_texts.json \
-  --spanish output/extracted/extracted_texts/spanishrom_texts.json \
-  --diff-out output/differences/pointer_text_differences.json \
-  --pairs-out output/differences/pointer_translation_pairs.json \
-  --map-out output/differences/pointer_offset_map.json
+The game has strict constraints around line length, control codes, context, gendered text, UI labels, and ROM-specific encoding. A translation that reads well outside the game can still break layout or gameplay if these constraints are ignored.
 
-python3 src/translators/19_build_translated_rom_generic.py \
-  --source input/roms/englishrom.gba \
-  --reference input/roms/spanishrom.gba \
-  --offset-map output/differences/pointer_offset_map.json \
-  --copy-reference-texts \
-  --copy-pointer-tables \
-  --copy-text-pointers \
-  --copy-inline-texts \
-  --language spanish \
-  --output output/roms/spanishrom_copy_build.gba
+## Requirements
 
-python3 src/validators/text_range_validator.py \
-  --output-rom output/roms/spanishrom_copy_build.gba \
-  --reference-rom input/roms/spanishrom.gba \
-  --offset-map output/differences/pointer_offset_map.json \
-  --reference-texts output/extracted/extracted_texts/spanishrom_texts.json
+- Python 3.11+
+- Make
+- Node.js and npm for emulator and Playwright-based tests
+- A legally obtained Pokémon Unbound-compatible English ROM
+- The Spanish reference ROM when running the Spanish reproduction pipeline
+
+Install project dependencies:
+
+```bash
+make install
+```
+
+Install Playwright browsers when running E2E tests:
+
+```bash
+make install-playwright
+```
+
+## ROM setup
+
+ROM files are not provided by this repository.
+
+Place your ROMs here:
+
+```text
+input/roms/englishrom.gba
+input/roms/spanishrom.gba
+```
+
+The English ROM is required for the translation builds. The Spanish ROM is required for the original reproduction pipeline and for validation / pointer-proof workflows.
+
+## Build commands
+
+List registered languages:
+
+```bash
+make langs
+```
+
+Build the French ROM:
+
+```bash
+make extract
+make prepare-fr
+make build-fr
+```
+
+Build generic languages:
+
+```bash
+make build-it
+make build-de
+make build-indie
+```
+
+Build any registered generic language:
+
+```bash
+make build-lang LANG_CODE=it
+```
+
+Build every language:
+
+```bash
+make build-all
+```
+
+Create release packages:
+
+```bash
+make release-all
+```
+
+Release packaging writes ROMs, ZIP files, checksums, and a manifest into:
+
+```text
+output/release/
+```
+
+## Spanish reproduction pipeline
+
+The historical foundation of the project is the Spanish reproduction pipeline.
+
+Run it with:
+
+```bash
+make pipeline
+```
+
+This workflow:
+
+1. Verifies ROM baseline metadata
+2. Extracts pointer-based texts from English and Spanish ROMs
+3. Diffs text ranges and builds an offset map
+4. Rebuilds a Spanish ROM from the reference data
+5. Validates text ranges byte-for-byte
+
+## Validation and tests
+
+Run the fast Python test suite:
+
+```bash
+make test
+```
+
+Run the standard Python test suite:
+
+```bash
+make test-python
+```
+
+Run ROM-specific tests:
+
+```bash
+make test-rom
+```
+
+Run Vitest checks for the emulator web tooling:
+
+```bash
+make test-vitest
+```
+
+Run Playwright E2E tests:
+
+```bash
+make test-playwright
+```
+
+Run the full available test suite:
+
+```bash
+make test-all
 ```
 
 ## Outputs
 
-- Pointer extraction: `output/extracted/extracted_texts/*_texts.json`
-- Diff + mapping: `output/differences/pointer_text_differences.json`, `output/differences/pointer_translation_pairs.json`, `output/differences/pointer_offset_map.json`
-- Built ROM: `output/roms/spanishrom_copy_build.gba`
-- Validation report: `output/reports/*_text_range_validation.json`
+Common generated outputs:
+
+```text
+output/extracted/extracted_texts/
+output/differences/
+output/translation/
+output/roms/
+output/reports/
+output/release/
+```
+
+The generated ROM files are written under:
+
+```text
+output/roms/
+```
+
+Release-ready files are written under:
+
+```text
+output/release/
+```
 
 ## Documentation
 
-- Pipeline details: `docs/00_README.md`
-- ROM sources and baseline: `docs/ROM_SOURCES.md`, `docs/roms_baseline.json`
-- Generic builder notes: `docs/ROM_BUILDING.md`
+Useful documentation entry points:
 
-## Legacy
+- [Multi-language builds](docs/21_MULTILANGUE.md)
+- [Pipeline details](docs/00_README.md)
+- [ROM sources and baseline](docs/ROM_SOURCES.md)
+- [Generic ROM builder notes](docs/ROM_BUILDING.md)
 
-Older translation pipeline scripts are kept for reference only under `scripts/legacy/` and the numbered docs. The Makefile and pipeline above are the supported entry points.
+## Legacy scripts
+
+Older translation pipeline scripts are kept for reference under:
+
+```text
+scripts/legacy/
+```
+
+The supported entry points are the Makefile targets and the current multi-language pipeline.
+
+## Legal note
+
+This repository does not provide ROM files.
+
+Pokémon is owned by Nintendo, Game Freak, and The Pokémon Company. Pokémon Unbound is a fan-made ROM hack. This project is an unofficial translation toolkit and is not affiliated with or endorsed by the original rights holders.
