@@ -16,7 +16,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent.parent.parent.parent
 sys.path.insert(0, str(ROOT / "scripts"))
 
-import patch_pokedex_category_order_de as mod  # noqa: E402
+from languages.de.patches import pokedex_category_order as mod  # noqa: E402
 
 PATCHES = mod.PATCHES
 apply_patches = mod.apply_patches

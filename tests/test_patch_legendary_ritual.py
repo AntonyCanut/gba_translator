@@ -17,7 +17,7 @@ octets mais n'ont pas l'opcode `setflag` (0x29) qui précède.
 
 import unittest
 
-from scripts import patch_legendary_ritual_fr as patch
+from languages.fr.patches import legendary_ritual as patch
 
 CANON = bytes([0x08, 0x29, 0xF6, 0x09])          # setflag 0x08E2 / setflag 0x09F6
 CORRUPT = (0x08C277E1).to_bytes(4, "little")     # -> "J'ai nagé, bien sûr !"

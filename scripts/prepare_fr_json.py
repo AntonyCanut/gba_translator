@@ -38,7 +38,7 @@ from src.core.text_converter import JSONToCSVConverter
 # verifies. Leaving the EN original in place lets that patch relocate them
 # verbatim. Kept in sync by importing the patch's canonical TARGETS.
 try:
-    from patch_worldmap_junction_panels_fr import TARGETS as _JUNCTION_TARGETS
+    from languages.fr.patches.worldmap_junction_panels import TARGETS as _JUNCTION_TARGETS
     DEDICATED_PATCH_OFFSETS = frozenset(_JUNCTION_TARGETS)
 except Exception:  # pragma: no cover - import fallback keeps the build resilient
     DEDICATED_PATCH_OFFSETS = frozenset({

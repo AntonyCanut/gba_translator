@@ -1,4 +1,4 @@
-"""Regression guard for scripts/patch_battle_prefix_it.py.
+"""Regression guard for languages/it/patches/battle_prefix.py.
 
 Like the German version, the Italian patch is a report-only guard (no code
 cave, no byte mutation): the Italian translations already written by the
@@ -16,7 +16,7 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).parent.parent.parent.parent))
 
-from scripts.patch_battle_prefix_it import PREFIX_CELLS, apply_to_rom, check_cell
+from languages.it.patches.battle_prefix import PREFIX_CELLS, apply_to_rom, check_cell
 
 
 def _rom_with_valid_cells(size: int = 0xA500000) -> bytearray:

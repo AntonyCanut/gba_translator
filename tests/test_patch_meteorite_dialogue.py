@@ -15,7 +15,7 @@ from pathlib import Path
 import pytest
 
 from src.core.text_codec import TextDecoder, TextEncoder
-from scripts import patch_meteorite_dialogue_fr as patch
+from languages.fr.patches import meteorite_dialogue as patch
 
 BASE = patch.ROM_POINTER_BASE
 

@@ -17,7 +17,7 @@ import pytest
 
 _SPEC = importlib.util.spec_from_file_location(
     "patch_type_icons_fr",
-    Path(__file__).resolve().parent.parent / "scripts" / "patch_type_icons_fr.py",
+    Path(__file__).resolve().parent.parent / "languages" / "fr" / "patches" / "type_icons.py",
 )
 mod = importlib.util.module_from_spec(_SPEC)
 _SPEC.loader.exec_module(mod)

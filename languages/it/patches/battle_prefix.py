@@ -32,7 +32,7 @@ elsewhere). This is report-only: it never mutates the ROM and never fails
 the build, matching the ``collision_check`` step's contract.
 
 Usage:
-    python3 scripts/patch_battle_prefix_it.py --rom output/roms/GenedRom-it.gba
+    python3 languages/it/patches/battle_prefix.py --rom output/roms/GenedRom-it.gba
 """
 
 from __future__ import annotations

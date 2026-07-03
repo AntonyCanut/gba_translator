@@ -17,7 +17,7 @@ pairs).  Entries not found in the mapping are left unchanged.  The patch is
 idempotent: running it twice produces the same ROM bytes.
 
 Usage (run by ``make build-it`` after the base injection):
-    python3 scripts/patch_pokedex_categories_it.py --rom output/roms/GenedRom-it.gba
+    python3 languages/it/patches/pokedex_categories.py --rom output/roms/GenedRom-it.gba
 """
 
 from __future__ import annotations

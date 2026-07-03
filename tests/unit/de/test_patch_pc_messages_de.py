@@ -20,7 +20,7 @@ ROOT = Path(__file__).resolve().parent.parent.parent.parent
 sys.path.insert(0, str(ROOT / "scripts"))
 sys.path.insert(0, str(ROOT))
 
-import patch_pc_messages_de as mod  # noqa: E402
+from languages.de.patches import pc_messages as mod  # noqa: E402
 
 
 class TestPcMessagesDe(unittest.TestCase):

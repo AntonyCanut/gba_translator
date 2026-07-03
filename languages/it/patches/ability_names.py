@@ -1,11 +1,11 @@
 #!/usr/bin/env python3
-"""Italian port of ``patch_meteorite_dialogue_fr`` — translates the long cutscene
-prose blocks (the "Borrius meteorite" monologue and siblings) the generic
-pipeline can never reach, sourcing the Italian text from
-``languages/it/combined_it.txt``.
+"""Italian port of ``patch_ability_names_fr`` — patches the fixed-width 17-byte
+ability-name table, sourcing the Italian names from ``languages/it/combined_it.txt``
+and validating each cell against ``languages/en/combined_en.txt``.
 
-Data-driven (``--source`` + ``--combined`` + ``--reference-rom``); this wrapper
-only re-points the French implementation at the Italian combined file.
+The French implementation is fully data-driven (``--combined`` / ``--combined-en``),
+so this wrapper only re-points it at the Italian data. See
+``src.i18n.fr_patch_delegate`` for the delegation mechanism.
 """
 
 from __future__ import annotations
@@ -14,21 +14,21 @@ import argparse
 import sys
 from pathlib import Path
 
-REPO_ROOT = Path(__file__).resolve().parents[1]
+REPO_ROOT = Path(__file__).resolve().parents[3]
 sys.path.insert(0, str(REPO_ROOT))
 
 from src.i18n.fr_patch_delegate import build_command, run  # noqa: E402
 
 IT_COMBINED = REPO_ROOT / "languages/it/combined_it.txt"
+EN_COMBINED = REPO_ROOT / "languages/en/combined_en.txt"
 
 
 def make_command(rom: Path) -> list[str]:
     return build_command(
-        "patch_meteorite_dialogue_fr.py",
+        "patch_ability_names_fr.py",
         rom,
-        source=True,
         combined=IT_COMBINED,
-        reference_rom=True,
+        combined_en=EN_COMBINED,
     )
 
 

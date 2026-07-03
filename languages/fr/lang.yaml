@@ -31,7 +31,7 @@ status_abbrev:
 
 # The full proven post-build patch sequence, in order. Executed by
 # `make build-fr`; listed here so every language can be compared against the
-# canonical French pipeline. Steps map to scripts/patch_*_fr.py.
+# canonical French pipeline. Steps map to languages/fr/patches/*.py.
 patches:
   - gendered_buffers
   - font

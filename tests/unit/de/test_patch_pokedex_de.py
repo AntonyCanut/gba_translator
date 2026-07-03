@@ -15,7 +15,7 @@ sys.path.insert(0, str(ROOT / "scripts"))
 
 from src.core import pokedex  # noqa: E402
 from src.core.text_codec import GERMAN_UMLAUT_CHARS, TextDecoder, TextEncoder  # noqa: E402
-import patch_pokedex_de as mod  # noqa: E402
+from languages.de.patches import pokedex as mod  # noqa: E402
 
 
 def _ptr(offset: int) -> bytes:

@@ -19,7 +19,7 @@ ROOT = Path(__file__).resolve().parent.parent.parent.parent
 sys.path.insert(0, str(ROOT / "scripts"))
 sys.path.insert(0, str(ROOT))
 
-import patch_time_format_de as mod  # noqa: E402
+from languages.de.patches import time_format as mod  # noqa: E402
 from src.text.charmap_data import CHAR_TO_BYTE  # noqa: E402
 
 BYTE_TO_CHAR = {v: k for k, v in CHAR_TO_BYTE.items()}

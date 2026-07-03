@@ -17,7 +17,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent.parent.parent.parent
 sys.path.insert(0, str(ROOT / "scripts"))
 
-import patch_font_de as mod  # noqa: E402
+from languages.de.patches import font as mod  # noqa: E402
 
 GLYPH_SIZE = mod.GLYPH_SIZE  # 32 bytes = 8x8 pixels at 4bpp
 

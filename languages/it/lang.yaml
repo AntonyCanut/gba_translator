@@ -50,7 +50,7 @@ status_abbrev:
 #   hp_labels               redraw the HP-label graphics (party menu + summary
 #                           bar + summary grey stat label — all LZ77 tiles, not
 #                           text) with the Italian « PS » (Punti Salute) via
-#                           scripts/patch_hp_labels_it.py. The summary bar
+#                           languages/it/patches/hp_labels.py. The summary bar
 #                           block already gets the Spanish « PS » art from
 #                           repair_localized_lz77, but the party-menu and
 #                           summary-grey blocks are EN==ES stable and still
@@ -80,7 +80,7 @@ status_abbrev:
 #                           patch_battle_prefix_it.py for the follow-up note).
 #
 # In-place patches ported from the French pipeline (F-85). Each has a thin
-# scripts/patch_<name>_it.py wrapper that delegates to the language-agnostic
+# languages/it/patches/<name>.py wrapper that delegates to the language-agnostic
 # patch_<name>_fr.py via src/i18n/fr_patch_delegate; build_language.py resolves
 # it ahead of the shared FR branches (_lang_patch_script) and invokes it with a
 # single --rom, the wrapper resolving its Italian data source internally:

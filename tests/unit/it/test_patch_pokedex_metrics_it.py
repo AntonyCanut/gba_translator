@@ -1,4 +1,4 @@
-"""Regression guard for scripts/patch_pokedex_metrics_it.py.
+"""Regression guard for languages/it/patches/pokedex_metrics.py.
 
 The imperial->metric Thumb code patches are byte-identical to the French/
 German versions (tests/test_patch_pokedex_metrics_fr.py already exercises
@@ -17,7 +17,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent.parent.parent.parent
 sys.path.insert(0, str(ROOT / "scripts"))
 
-import patch_pokedex_metrics_it as mod  # noqa: E402
+from languages.it.patches import pokedex_metrics as mod  # noqa: E402
 
 PATCHES = mod.PATCHES
 apply_patches = mod.apply_patches

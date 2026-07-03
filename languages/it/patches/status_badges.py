@@ -45,10 +45,10 @@ import argparse
 import sys
 from pathlib import Path
 
-ROOT_DIR = Path(__file__).resolve().parents[1]
+ROOT_DIR = Path(__file__).resolve().parents[3]
 sys.path.insert(0, str(ROOT_DIR))
 
-from scripts.patch_font_fr import lz77_compress, lz77_decompress  # noqa: E402
+from languages.fr.patches.font import lz77_compress, lz77_decompress  # noqa: E402
 
 # LZ77 blocks that contain the 8-slot status badge tile set (language-agnostic
 # offsets — same blocks the FR/DE patches touch).

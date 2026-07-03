@@ -18,7 +18,7 @@ from pathlib import Path
 import pytest
 
 from src.core.text_codec import TextDecoder, TextEncoder
-from scripts import patch_cube_tv_dialogues_fr as patch
+from languages.fr.patches import cube_tv_dialogues as patch
 
 BASE = patch.ROM_POINTER_BASE
 

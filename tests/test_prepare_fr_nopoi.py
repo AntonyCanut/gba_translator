@@ -269,7 +269,7 @@ class TestDedicatedPatchExclusion(unittest.TestCase):
         import importlib
         importlib.reload(module)
         sys.path.insert(0, str(ROOT / "scripts"))
-        from patch_worldmap_junction_panels_fr import TARGETS
+        from languages.fr.patches.worldmap_junction_panels import TARGETS
         self.assertEqual(
             set(module.DEDICATED_PATCH_OFFSETS), set(TARGETS),
             "DEDICATED_PATCH_OFFSETS must equal the junction patch TARGETS",

@@ -9,7 +9,7 @@ import pytest
 
 from src.core import moves
 from src.core.text_codec import TextDecoder, TextEncoder
-from scripts import patch_move_descriptions_fr
+from languages.fr.patches import move_descriptions as patch_move_descriptions_fr
 
 OVERRIDES = (
     Path(__file__).resolve().parent.parent

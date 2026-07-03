@@ -38,7 +38,7 @@ repair_localized_lz77 (so it wins over both) — see languages/it/lang.yaml.
 
 Usage::
 
-    python3 scripts/patch_hp_labels_it.py --rom output/roms/GenedRom-it.gba
+    python3 languages/it/patches/hp_labels.py --rom output/roms/GenedRom-it.gba
 """
 
 from __future__ import annotations
@@ -47,10 +47,10 @@ import argparse
 import sys
 from pathlib import Path
 
-ROOT_DIR = Path(__file__).resolve().parents[1]
+ROOT_DIR = Path(__file__).resolve().parents[3]
 sys.path.insert(0, str(ROOT_DIR))
 
-from scripts.patch_font_fr import lz77_compress, lz77_decompress  # noqa: E402
+from languages.fr.patches.font import lz77_compress, lz77_decompress  # noqa: E402
 
 TILE = 32  # bytes per 4bpp 8×8 tile
 

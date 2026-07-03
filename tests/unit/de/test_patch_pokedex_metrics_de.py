@@ -17,7 +17,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent.parent.parent.parent
 sys.path.insert(0, str(ROOT / "scripts"))
 
-import patch_pokedex_metrics_de as mod  # noqa: E402
+from languages.de.patches import pokedex_metrics as mod  # noqa: E402
 
 PATCHES = mod.PATCHES
 apply_patches = mod.apply_patches

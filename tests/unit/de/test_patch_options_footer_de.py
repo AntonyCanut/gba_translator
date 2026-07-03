@@ -17,7 +17,7 @@ sys.path.insert(0, str(ROOT / "scripts"))
 sys.path.insert(0, str(ROOT))
 
 from src.text.charmap_data import CHAR_TO_BYTE  # noqa: E402
-import patch_options_footer_de as mod  # noqa: E402
+from languages.de.patches import options_footer as mod  # noqa: E402
 
 EN_ORIGINAL = mod.EN_ORIGINAL
 OFFSET = mod.OFFSET

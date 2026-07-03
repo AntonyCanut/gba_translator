@@ -10,7 +10,7 @@ import pytest
 ROOT = Path(__file__).resolve().parent.parent.parent.parent
 sys.path.insert(0, str(ROOT / "scripts"))
 
-from patch_pokedex_categories_de import (  # noqa: E402
+from languages.de.patches.pokedex_categories import (  # noqa: E402
     CELL_SIZE,
     CHAR_TO_BYTE,
     MAX_CHARS,

@@ -147,7 +147,7 @@ def test_status_badges_dispatches_de_script():
     calls = _collected_calls(config, ["status_badges"])
     assert len(calls) == 1
     cmd = calls[0]
-    assert any(c.endswith("patch_status_badges_de.py") for c in cmd)
+    assert any(c.endswith("languages/de/patches/status_badges.py") for c in cmd)
     assert "--rom" in cmd
 
 
@@ -164,7 +164,7 @@ def test_dexnav_headers_dispatches_de_script():
     calls = _collected_calls(config, ["dexnav_headers"])
     assert len(calls) == 1
     cmd = calls[0]
-    assert any(c.endswith("patch_dexnav_headers_de.py") for c in cmd)
+    assert any(c.endswith("languages/de/patches/dexnav_headers.py") for c in cmd)
     assert "--rom" in cmd
 
 
@@ -181,7 +181,7 @@ def test_pokedex_categories_dispatches_per_language_script():
         calls = _collected_calls(config, ["pokedex_categories"])
         assert len(calls) == 1
         cmd = calls[0]
-        assert any(c.endswith(f"patch_pokedex_categories_{code}.py") for c in cmd)
+        assert any(c.endswith(f"languages/{code}/patches/pokedex_categories.py") for c in cmd)
         assert "--rom" in cmd
 
 
@@ -191,7 +191,7 @@ def test_pokedex_category_order_dispatches_per_language_script():
         calls = _collected_calls(config, ["pokedex_category_order"])
         assert len(calls) == 1
         cmd = calls[0]
-        assert any(c.endswith(f"patch_pokedex_category_order_{code}.py") for c in cmd)
+        assert any(c.endswith(f"languages/{code}/patches/pokedex_category_order.py") for c in cmd)
 
 
 def test_pokedex_metrics_dispatches_per_language_script():
@@ -200,7 +200,7 @@ def test_pokedex_metrics_dispatches_per_language_script():
         calls = _collected_calls(config, ["pokedex_metrics"])
         assert len(calls) == 1
         cmd = calls[0]
-        assert any(c.endswith(f"patch_pokedex_metrics_{code}.py") for c in cmd)
+        assert any(c.endswith(f"languages/{code}/patches/pokedex_metrics.py") for c in cmd)
 
 
 def test_pokedex_rewrap_dispatches_per_language_script():
@@ -210,7 +210,7 @@ def test_pokedex_rewrap_dispatches_per_language_script():
         calls = _collected_calls(config, ["pokedex_rewrap"], translation_json=fake_json)
         assert len(calls) == 1
         cmd = calls[0]
-        assert any(c.endswith(f"patch_pokedex_{code}.py") for c in cmd)
+        assert any(c.endswith(f"languages/{code}/patches/pokedex.py") for c in cmd)
         assert "--translations" in cmd
 
 

@@ -18,7 +18,7 @@ sys.path.insert(0, str(ROOT / "scripts"))
 sys.path.insert(0, str(ROOT))
 
 from src.text.charmap_data import CHAR_TO_BYTE  # noqa: E402
-import patch_cfru_type_names_de as mod  # noqa: E402
+from languages.de.patches import cfru_type_names as mod  # noqa: E402
 
 CONDITION_PATCHES = mod.CONDITION_PATCHES
 TYPE_PATCHES = mod.TYPE_PATCHES

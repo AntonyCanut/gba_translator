@@ -1,4 +1,4 @@
-"""Tests for scripts/patch_pokedex_it.py and the Italian-glyph charset fix in
+"""Tests for languages/it/patches/pokedex.py and the Italian-glyph charset fix in
 src/core/pokedex.py (``_ALLOWED`` must accept ì ò Ì Ò, or every Italian
 Pokédex description using a grave-accented vowel would be rejected by
 ``is_description``/rewritten as "not a description" and left English).
@@ -15,7 +15,7 @@ sys.path.insert(0, str(ROOT / "scripts"))
 
 from src.core import pokedex  # noqa: E402
 from src.core.text_codec import TextDecoder, TextEncoder  # noqa: E402
-import patch_pokedex_it as mod  # noqa: E402
+from languages.it.patches import pokedex as mod  # noqa: E402
 
 
 def _ptr(offset: int) -> bytes:

@@ -27,7 +27,7 @@ import pytest
 ROOT = Path(__file__).resolve().parent.parent.parent.parent
 sys.path.insert(0, str(ROOT / "scripts"))
 
-import patch_intro_questions_it as mod  # noqa: E402
+from languages.it.patches import intro_questions as mod  # noqa: E402
 
 # ── Small synthetic-ROM layout (all offsets well under the 32 KB ROM size) ──────
 ROM_SIZE = 0x8000

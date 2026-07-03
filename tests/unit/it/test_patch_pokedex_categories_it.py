@@ -1,4 +1,4 @@
-"""Tests for scripts/patch_pokedex_categories_it.py (mirrors the FR/DE test suites)."""
+"""Tests for languages/it/patches/pokedex_categories.py (mirrors the FR/DE test suites)."""
 
 from __future__ import annotations
 
@@ -11,7 +11,7 @@ import pytest
 ROOT = Path(__file__).resolve().parent.parent.parent.parent
 sys.path.insert(0, str(ROOT / "scripts"))
 
-from patch_pokedex_categories_it import (  # noqa: E402
+from languages.it.patches.pokedex_categories import (  # noqa: E402
     CELL_SIZE,
     CHAR_TO_BYTE,
     MAX_CHARS,

@@ -16,7 +16,7 @@ Italian accents split across two different mechanisms:
 
 from __future__ import annotations
 
-from scripts.patch_font_fr import (
+from languages.fr.patches.font import (
     CP_ACUTE_E,
     CP_E,
     CP_GRAVE_A,

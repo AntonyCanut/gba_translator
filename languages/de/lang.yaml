@@ -6,7 +6,7 @@
 # combined_fr.txt). Offsets not present there stay English.
 #
 # ä ö ü Ä Ö Ü are now in the charmap (slots 0x63-0x60) and have glyphs
-# drawn by scripts/patch_font_de.py, so the `font` step is active.
+# drawn by languages/de/patches/font.py, so the `font` step is active.
 code: de
 name: German
 native_name: Deutsch
@@ -97,20 +97,20 @@ patches:
   - battle_recall_strings
   - status_badges
   # Redraw the move-type badges (graphic tiles) with German names
-  # (KAMPF/GIFT/DRACHE/…) via scripts/patch_type_icons_de.py.
+  # (KAMPF/GIFT/DRACHE/…) via languages/de/patches/type_icons.py.
   - type_icons
   # Redraw the HP-label graphics (LZ77 tiles) with German « KP » (Kraftpunkte)
-  # via scripts/patch_hp_labels_de.py.
+  # via languages/de/patches/hp_labels.py.
   - hp_labels
   # Redraw the 4 DexNav column-header graphics (custom Unbound LZ77 tileset)
   # with German labels (SUCHLEVEL / METHODE / VERST. FAEH. / ITEMS) via
-  # scripts/patch_dexnav_headers_de.py.
+  # languages/de/patches/dexnav_headers.py.
   - dexnav_headers
   - version
   # Fixed-width name/description tables carrying baked official German
   # localisation content (Berries/items, natures, CFRU type names, Pokédex
   # category table + ordering + metric units, summary-screen labels, options
-  # footer, shop strings, PC box messages). See scripts/patch_<name>_de.py.
+  # footer, shop strings, PC box messages). See languages/de/patches/<name>.py.
   - item_names
   - nature_names
   - cfru_type_names

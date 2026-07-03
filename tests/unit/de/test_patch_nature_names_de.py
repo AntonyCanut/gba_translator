@@ -22,7 +22,7 @@ sys.path.insert(0, str(ROOT / "scripts"))
 sys.path.insert(0, str(ROOT))
 
 from src.core.text_codec import TextEncoder  # noqa: E402
-import patch_nature_names_de as mod  # noqa: E402
+from languages.de.patches import nature_names as mod  # noqa: E402
 
 TARGETS = mod.TARGETS
 ROM_POINTER_BASE = mod.ROM_POINTER_BASE

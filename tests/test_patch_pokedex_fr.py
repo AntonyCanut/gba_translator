@@ -2,7 +2,7 @@ import unittest
 
 from src.core import pokedex
 from src.core.text_codec import TextDecoder, TextEncoder
-from scripts import patch_pokedex_fr
+from languages.fr.patches import pokedex as patch_pokedex_fr
 
 
 def _encode(text):

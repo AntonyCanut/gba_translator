@@ -9,7 +9,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent.parent.parent.parent
 sys.path.insert(0, str(ROOT / "scripts"))
 
-import patch_item_names_de as mod  # noqa: E402
+from languages.de.patches import item_names as mod  # noqa: E402
 
 ALL_NAMES = mod.ALL_NAMES
 BERRY_NAMES = mod.BERRY_NAMES
@@ -89,7 +89,7 @@ class TestItemNameData(unittest.TestCase):
     def test_key_set_matches_fr_minus_documented_exclusions(self):
         import importlib.util
 
-        fr_path = ROOT / "scripts" / "patch_item_names_fr.py"
+        fr_path = ROOT / "languages" / "fr" / "patches" / "item_names.py"
         spec = importlib.util.spec_from_file_location("patch_item_names_fr", fr_path)
         fr = importlib.util.module_from_spec(spec)
         spec.loader.exec_module(fr)

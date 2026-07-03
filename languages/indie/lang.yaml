@@ -8,8 +8,8 @@
 # as the Indie build — the starting point for incremental translation.
 #
 # Indie reuses the French font (no language-specific patch_font_indie.py), so
-# the `font` step falls back to scripts/patch_font_fr.py and renders the same
-# accented glyph set. Add scripts/patch_font_indie.py later if Indie needs
+# the `font` step falls back to languages/fr/patches/font.py and renders the same
+# accented glyph set. Add languages/indie/patches/font.py later if Indie needs
 # glyphs the FR font does not cover.
 code: indie
 name: Indie

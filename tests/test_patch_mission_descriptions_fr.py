@@ -13,7 +13,7 @@ import struct
 import unittest
 
 from src.core.text_codec import TextDecoder, TextEncoder
-from scripts import patch_mission_descriptions_fr as patch
+from languages.fr.patches import mission_descriptions as patch
 
 BASE = patch.ROM_POINTER_BASE
 

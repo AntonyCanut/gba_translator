@@ -42,7 +42,7 @@ import struct
 import sys
 from pathlib import Path
 
-sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
+sys.path.insert(0, str(Path(__file__).resolve().parents[3]))
 
 from src.core import pokedex
 from src.core.text_codec import TextDecoder, TextEncoder
@@ -50,7 +50,7 @@ from src.core.text_reinserter import FreeSpaceAllocator
 
 ROM_POINTER_BASE = 0x08000000
 DEFAULT_OVERRIDES = (
-    Path(__file__).resolve().parent.parent
+    Path(__file__).resolve().parents[3]
     / "languages" / "it" / "data" / "pokedex_it_overrides.json"
 )
 

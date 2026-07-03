@@ -9,10 +9,10 @@ Italian), or they restore language-independent bytes from the English/Spanish
 source ROMs (control-code clusters, tilemaps, item structs, …).
 
 Rather than fork ~200 lines of proven French code per language, the Italian
-``scripts/patch_<name>_it.py`` wrappers are thin: they resolve the Italian data
-sources and re-invoke the shared ``patch_<name>_fr.py`` implementation through
-this helper. ``build_command`` is a pure function so tests can assert the exact
-argument list without touching a 32 MB ROM.
+``languages/it/patches/<name>.py`` wrappers are thin: they resolve the Italian
+data sources and re-invoke the shared ``languages/fr/patches/<name>.py``
+implementation through this helper. ``build_command`` is a pure function so
+tests can assert the exact argument list without touching a 32 MB ROM.
 """
 
 from __future__ import annotations
@@ -22,12 +22,30 @@ import sys
 from pathlib import Path
 
 REPO_ROOT = Path(__file__).resolve().parents[2]
-SCRIPTS_DIR = REPO_ROOT / "scripts"
+FR_PATCHES_DIR = REPO_ROOT / "languages/fr/patches"
 
 ENGLISH_ROM = REPO_ROOT / "input/roms/englishrom.gba"
 SPANISH_ROM = REPO_ROOT / "input/roms/spanishrom.gba"
 
 PYTHON = sys.executable or "python3"
+
+
+def _fr_script_path(fr_script: str) -> Path:
+    """Resolve a French post-build patch to its on-disk location.
+
+    Callers pass the historical ``patch_<name>_fr.py`` filename; the shared
+    implementation now lives at ``languages/fr/patches/<name>.py`` (the scripts
+    were relocated under ``languages/<code>/patches/``). Both a bare ``<name>``
+    and the legacy filename spelling are accepted.
+    """
+    name = fr_script
+    if name.startswith("patch_"):
+        name = name[len("patch_"):]
+    if name.endswith("_fr.py"):
+        name = name[: -len("_fr.py")]
+    elif name.endswith(".py"):
+        name = name[: -len(".py")]
+    return FR_PATCHES_DIR / f"{name}.py"
 
 
 def build_command(
@@ -54,7 +72,7 @@ def build_command(
       French curated overrides that would otherwise leak into another language)
     """
     py = python or PYTHON
-    cmd: list[str] = [py, str(SCRIPTS_DIR / fr_script), "--rom", str(rom)]
+    cmd: list[str] = [py, str(_fr_script_path(fr_script)), "--rom", str(rom)]
     if combined is not None:
         cmd += ["--combined", str(combined)]
     if combined_en is not None:

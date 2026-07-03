@@ -30,7 +30,7 @@ PTR_STRIDE = 8
 
 # (table index, expected Italian abbreviation) — see languages/it/lang.yaml's
 # status_abbrev map. Index order is the fixed game-engine order (see
-# scripts/patch_status_abbrevs_fr.py's _EN_STATUS).
+# languages/fr/patches/status_abbrevs.py's _EN_STATUS).
 SLEEP_INDEX = 0
 POISON_INDEX = 1
 PARALYSIS_INDEX = 2

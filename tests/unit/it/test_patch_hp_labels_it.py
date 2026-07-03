@@ -16,8 +16,8 @@ import pytest
 
 sys.path.insert(0, str(Path(__file__).parent.parent.parent.parent))
 
-from scripts.patch_font_fr import lz77_decompress
-from scripts.patch_hp_labels_it import (
+from languages.fr.patches.font import lz77_decompress
+from languages.it.patches.hp_labels import (
     GREEN_BLOCK,
     GREEN_OLD_VARIANTS,
     GREEN_PS_FILL,
@@ -74,7 +74,7 @@ class TestPsArtDefinitions(unittest.TestCase):
     def test_it_ps_differs_from_fr_pv(self):
         # The IT label must be distinct from the FR « PV » drawn from the
         # same source tiles — otherwise the port drew the wrong letters.
-        from scripts.patch_hp_labels_fr import (
+        from languages.fr.patches.hp_labels import (
             _draw_party_label as fr_party,
             _draw_green_label as fr_green,
             _draw_grey_label as fr_grey,

@@ -1,11 +1,11 @@
 #!/usr/bin/env python3
-"""Italian port of ``patch_mission_descriptions_fr`` — writes the bounty-mission
-descriptions exactly, in their 3-line layout, sourcing the Italian text from
+"""Italian port of ``patch_meteorite_dialogue_fr`` — translates the long cutscene
+prose blocks (the "Borrius meteorite" monologue and siblings) the generic
+pipeline can never reach, sourcing the Italian text from
 ``languages/it/combined_it.txt``.
 
 Data-driven (``--source`` + ``--combined`` + ``--reference-rom``); this wrapper
-only re-points the French implementation at the Italian combined file. Missions
-still missing an Italian entry in ``combined_it.txt`` stay English.
+only re-points the French implementation at the Italian combined file.
 """
 
 from __future__ import annotations
@@ -14,7 +14,7 @@ import argparse
 import sys
 from pathlib import Path
 
-REPO_ROOT = Path(__file__).resolve().parents[1]
+REPO_ROOT = Path(__file__).resolve().parents[3]
 sys.path.insert(0, str(REPO_ROOT))
 
 from src.i18n.fr_patch_delegate import build_command, run  # noqa: E402
@@ -24,7 +24,7 @@ IT_COMBINED = REPO_ROOT / "languages/it/combined_it.txt"
 
 def make_command(rom: Path) -> list[str]:
     return build_command(
-        "patch_mission_descriptions_fr.py",
+        "patch_meteorite_dialogue_fr.py",
         rom,
         source=True,
         combined=IT_COMBINED,

@@ -1,4 +1,4 @@
-"""Regression guard for scripts/patch_pokedex_category_order_it.py.
+"""Regression guard for languages/it/patches/pokedex_category_order.py.
 
 The instruction swap is byte-identical to French/German (same ASM, same
 fixed "Pokémon" suffix — the brand name is unchanged across localisations);
@@ -16,7 +16,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent.parent.parent.parent
 sys.path.insert(0, str(ROOT / "scripts"))
 
-import patch_pokedex_category_order_it as mod  # noqa: E402
+from languages.it.patches import pokedex_category_order as mod  # noqa: E402
 
 PATCHES = mod.PATCHES
 apply_patches = mod.apply_patches

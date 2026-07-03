@@ -18,8 +18,8 @@ import pytest
 ROOT = Path(__file__).resolve().parent.parent.parent.parent
 sys.path.insert(0, str(ROOT / "scripts"))
 
-import patch_time_format_de as time_mod  # noqa: E402
-import patch_trainer_card_date_de as mod  # noqa: E402
+from languages.de.patches import time_format as time_mod  # noqa: E402
+from languages.de.patches import trainer_card_date as mod  # noqa: E402
 
 ENGLISH_ROM = ROOT / "input" / "roms" / "englishrom.gba"
 

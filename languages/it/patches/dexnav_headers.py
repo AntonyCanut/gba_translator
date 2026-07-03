@@ -31,7 +31,7 @@ strategy the German port uses for "Versteckte Fähigkeit" -> "Verst. Fäh.".
 
 Usage::
 
-    python3 scripts/patch_dexnav_headers_it.py --rom output/roms/GenedRom-it.gba
+    python3 languages/it/patches/dexnav_headers.py --rom output/roms/GenedRom-it.gba
 """
 
 from __future__ import annotations
@@ -40,11 +40,11 @@ import argparse
 import sys
 from pathlib import Path
 
-ROOT_DIR = Path(__file__).resolve().parents[1]
+ROOT_DIR = Path(__file__).resolve().parents[3]
 sys.path.insert(0, str(ROOT_DIR))
 
-from scripts.patch_font_fr import lz77_compress, lz77_decompress  # noqa: E402
-from scripts.patch_dexnav_headers_de import (  # noqa: E402
+from languages.fr.patches.font import lz77_compress, lz77_decompress  # noqa: E402
+from languages.de.patches.dexnav_headers import (  # noqa: E402
     _FONT,
     _glyph_w,
     _stamp_text,

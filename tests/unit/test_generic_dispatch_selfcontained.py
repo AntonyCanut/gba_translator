@@ -1,7 +1,7 @@
 """Guard: every patch script reachable by the generic ``--rom``-only dispatch
 must be self-contained.
 
-``build_language.apply_patches`` resolves ``scripts/patch_<step>_<code>.py``
+``build_language.apply_patches`` resolves ``languages/<code>/patches/<step>.py``
 ahead of the shared French branches (see ``_lang_patch_script``) and invokes it
 with a single ``--rom`` argument. Any such script that declares another
 ``required=True`` argument (e.g. ``--source``) would abort the whole build with

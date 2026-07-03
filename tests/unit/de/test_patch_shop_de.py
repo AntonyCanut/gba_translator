@@ -19,7 +19,7 @@ ROOT = Path(__file__).resolve().parent.parent.parent.parent
 sys.path.insert(0, str(ROOT / "scripts"))
 sys.path.insert(0, str(ROOT))
 
-import patch_shop_de as mod  # noqa: E402
+from languages.de.patches import shop as mod  # noqa: E402
 
 
 def _build_rom() -> bytearray:

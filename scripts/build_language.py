@@ -283,25 +283,28 @@ def _givecs_gift_item_script_for(code: str) -> Path:
 def _lang_patch_script(step: str, code: str) -> Path | None:
     """Resolve a language-specific post-build patch script for ``step``.
 
-    A step declared in ``lang.yaml`` maps to a ``scripts/patch_<name>_<code>.py``
-    wrapper when one exists. Two spellings are accepted:
+    A step declared in ``lang.yaml`` maps to a
+    ``languages/<code>/patches/<name>.py`` wrapper when one exists. Two
+    spellings are accepted:
 
     * ``step`` is the bare patch name (e.g. ``ability_names``) → look for
-      ``scripts/patch_ability_names_<code>.py``.
+      ``languages/<code>/patches/ability_names.py``.
     * ``step`` already carries the language suffix (e.g. ``intro_questions_it``)
-      → look for ``scripts/patch_intro_questions_it.py``.
+      → look for ``languages/it/patches/intro_questions.py``.
 
     These thin wrappers take a single ``--rom`` argument and resolve their own
     Italian data sources internally, so the dispatch stays uniform. Returns
     ``None`` when no such script exists (the caller then falls back to the shared
     ``patch_*_fr.py`` branches below).
     """
-    bare = REPO_ROOT / f"scripts/patch_{step}_{code}.py"
+    bare = REPO_ROOT / f"languages/{code}/patches/{step}.py"
     if bare.exists():
         return bare
-    suffixed = REPO_ROOT / f"scripts/patch_{step}.py"
-    if suffixed.exists() and step.endswith(f"_{code}"):
-        return suffixed
+    if step.endswith(f"_{code}"):
+        trimmed = step[: -len(f"_{code}")]
+        suffixed = REPO_ROOT / f"languages/{code}/patches/{trimmed}.py"
+        if suffixed.exists():
+            return suffixed
     return None
 
 
@@ -319,11 +322,11 @@ def apply_patches(config, out_rom: Path, translation_json: Path | None = None,
     """
     combined = config.combined_path(REPO_ROOT)
     for step in config.patches:
-        # A language-specific wrapper (scripts/patch_<step>_<code>.py) takes
+        # A language-specific wrapper (languages/<code>/patches/<step>.py) takes
         # precedence over the shared French branches: it resolves its own Italian
         # data sources internally and only needs the target ROM. This is how the
         # ported Italian patches (ability_names, meteorite_dialogue, pokedex, …)
-        # are dispatched — see scripts/patch_*_it.py + src/i18n/fr_patch_delegate.
+        # are dispatched — see languages/it/patches/*.py + src/i18n/fr_patch_delegate.
         lang_script = _lang_patch_script(step, config.code)
         if lang_script is not None:
             run([PYTHON, lang_script, "--rom", out_rom])

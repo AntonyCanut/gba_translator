@@ -24,7 +24,7 @@ import argparse
 import sys
 from pathlib import Path
 
-sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
+sys.path.insert(0, str(Path(__file__).resolve().parents[3]))
 
 # Clean metres/decimal block written over the English feet/inch arithmetic at
 # 0x10592E (38 bytes). See patch_pokedex_metrics_fr.py module docstring, patch 3.
