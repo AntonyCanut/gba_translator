@@ -42,6 +42,7 @@ def _collected_calls(config, steps: List[str], translation_json=None,
     class _FakeConfig:
         code = config.code
         patches = steps
+        version_label = config.version_label
 
         def combined_path(self, root):
             return config.combined_path(root)
@@ -170,6 +171,63 @@ def test_dexnav_headers_dispatches_de_script():
 def test_dexnav_headers_in_de_descriptor():
     # The DE descriptor must request the graphical DexNav header patch.
     assert "dexnav_headers" in REGISTRY.get("de").patches
+
+
+# ─── pokedex_categories / pokedex_category_order / pokedex_metrics / pokedex_rewrap ──
+
+def test_pokedex_categories_dispatches_per_language_script():
+    for code in ("de", "it"):
+        config = REGISTRY.get(code)
+        calls = _collected_calls(config, ["pokedex_categories"])
+        assert len(calls) == 1
+        cmd = calls[0]
+        assert any(c.endswith(f"patch_pokedex_categories_{code}.py") for c in cmd)
+        assert "--rom" in cmd
+
+
+def test_pokedex_category_order_dispatches_per_language_script():
+    for code in ("de", "it"):
+        config = REGISTRY.get(code)
+        calls = _collected_calls(config, ["pokedex_category_order"])
+        assert len(calls) == 1
+        cmd = calls[0]
+        assert any(c.endswith(f"patch_pokedex_category_order_{code}.py") for c in cmd)
+
+
+def test_pokedex_metrics_dispatches_per_language_script():
+    for code in ("de", "it"):
+        config = REGISTRY.get(code)
+        calls = _collected_calls(config, ["pokedex_metrics"])
+        assert len(calls) == 1
+        cmd = calls[0]
+        assert any(c.endswith(f"patch_pokedex_metrics_{code}.py") for c in cmd)
+
+
+def test_pokedex_rewrap_dispatches_per_language_script():
+    fake_json = Path("/tmp/fake_translation_ready.json")
+    for code in ("de", "it"):
+        config = REGISTRY.get(code)
+        calls = _collected_calls(config, ["pokedex_rewrap"], translation_json=fake_json)
+        assert len(calls) == 1
+        cmd = calls[0]
+        assert any(c.endswith(f"patch_pokedex_{code}.py") for c in cmd)
+        assert "--translations" in cmd
+
+
+def test_pokedex_rewrap_skipped_without_json(capsys):
+    config = REGISTRY.get("it")
+    calls = _collected_calls(config, ["pokedex_rewrap"])
+    assert calls == []
+    assert "skipping" in capsys.readouterr().out
+
+
+def test_pokedex_steps_in_it_and_de_descriptors():
+    for step in (
+        "pokedex_categories", "pokedex_category_order",
+        "pokedex_metrics", "pokedex_rewrap",
+    ):
+        assert step in REGISTRY.get("de").patches
+        assert step in REGISTRY.get("it").patches
 
 
 # ─── version ─────────────────────────────────────────────────────────────────

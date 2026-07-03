@@ -85,10 +85,6 @@ PATCH_GIVECS_GIFT_ITEM_FR_SCRIPT = REPO_ROOT / "scripts/patch_givecs_gift_item_f
 PATCH_ITEM_NAMES_DE_SCRIPT = REPO_ROOT / "scripts/patch_item_names_de.py"
 PATCH_NATURE_NAMES_DE_SCRIPT = REPO_ROOT / "scripts/patch_nature_names_de.py"
 PATCH_CFRU_TYPE_NAMES_DE_SCRIPT = REPO_ROOT / "scripts/patch_cfru_type_names_de.py"
-PATCH_POKEDEX_DE_SCRIPT = REPO_ROOT / "scripts/patch_pokedex_de.py"
-PATCH_POKEDEX_CATEGORIES_DE_SCRIPT = REPO_ROOT / "scripts/patch_pokedex_categories_de.py"
-PATCH_POKEDEX_CATEGORY_ORDER_DE_SCRIPT = REPO_ROOT / "scripts/patch_pokedex_category_order_de.py"
-PATCH_POKEDEX_METRICS_DE_SCRIPT = REPO_ROOT / "scripts/patch_pokedex_metrics_de.py"
 PATCH_SUMMARY_LABELS_DE_SCRIPT = REPO_ROOT / "scripts/patch_summary_labels_de.py"
 PATCH_OPTIONS_FOOTER_DE_SCRIPT = REPO_ROOT / "scripts/patch_options_footer_de.py"
 PATCH_SHOP_DE_SCRIPT = REPO_ROOT / "scripts/patch_shop_de.py"
@@ -487,6 +483,51 @@ def apply_patches(config, out_rom: Path, translation_json: Path | None = None,
             else:
                 print(f"⚠ skipping dexnav_headers: {script.name} not found")
 
+        # ── Pokédex patches, resolved per-language ─────────────────────────────
+        # Each carries baked official localisation content (category words,
+        # metric-system labels, rewrap data), so every language ships its own
+        # scripts/patch_<step>_<code>.py; a missing script just skips the step
+        # (e.g. a future language that hasn't authored this data yet).
+
+        elif step == "pokedex_categories":
+            script = REPO_ROOT / f"scripts/patch_pokedex_categories_{config.code}.py"
+            if script.exists():
+                run([PYTHON, script, "--rom", out_rom])
+            else:
+                print(f"⚠ skipping pokedex_categories: {script.name} not found")
+
+        elif step == "pokedex_category_order":
+            script = REPO_ROOT / f"scripts/patch_pokedex_category_order_{config.code}.py"
+            if script.exists():
+                run([PYTHON, script, "--rom", out_rom])
+            else:
+                print(f"⚠ skipping pokedex_category_order: {script.name} not found")
+
+        elif step == "pokedex_metrics":
+            script = REPO_ROOT / f"scripts/patch_pokedex_metrics_{config.code}.py"
+            if script.exists():
+                run([PYTHON, script, "--rom", out_rom])
+            else:
+                print(f"⚠ skipping pokedex_metrics: {script.name} not found")
+
+        elif step == "pokedex_rewrap":
+            if translation_json is None:
+                print("⚠ skipping pokedex_rewrap: translation_json not available")
+            else:
+                script = REPO_ROOT / f"scripts/patch_pokedex_{config.code}.py"
+                if not script.exists():
+                    print(f"⚠ skipping pokedex_rewrap: {script.name} not found")
+                else:
+                    cmd = [
+                        PYTHON, script,
+                        "--rom", out_rom,
+                        "--source", ENGLISH_ROM,
+                        "--translations", translation_json,
+                    ]
+                    if SPANISH_ROM.exists():
+                        cmd += ["--reference-rom", SPANISH_ROM]
+                    run(cmd)
+
         # ── German-only fixed-table name/description patches ──────────────────
         # These carry baked official German localisation content (not read
         # from combined_de.txt), so — unlike the steps above — they are not
@@ -505,29 +546,6 @@ def apply_patches(config, out_rom: Path, translation_json: Path | None = None,
 
         elif step == "cfru_type_names":
             run([PYTHON, PATCH_CFRU_TYPE_NAMES_DE_SCRIPT, "--rom", out_rom])
-
-        elif step == "pokedex_categories":
-            run([PYTHON, PATCH_POKEDEX_CATEGORIES_DE_SCRIPT, "--rom", out_rom])
-
-        elif step == "pokedex_category_order":
-            run([PYTHON, PATCH_POKEDEX_CATEGORY_ORDER_DE_SCRIPT, "--rom", out_rom])
-
-        elif step == "pokedex_metrics":
-            run([PYTHON, PATCH_POKEDEX_METRICS_DE_SCRIPT, "--rom", out_rom])
-
-        elif step == "pokedex_rewrap":
-            if translation_json is None:
-                print("⚠ skipping pokedex_rewrap: translation_json not available")
-            else:
-                cmd = [
-                    PYTHON, PATCH_POKEDEX_DE_SCRIPT,
-                    "--rom", out_rom,
-                    "--source", ENGLISH_ROM,
-                    "--translations", translation_json,
-                ]
-                if SPANISH_ROM.exists():
-                    cmd += ["--reference-rom", SPANISH_ROM]
-                run(cmd)
 
         elif step == "summary_labels":
             run([

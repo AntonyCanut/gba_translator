@@ -42,6 +42,11 @@ status_abbrev:
 #
 # Language-aware (data already in status_abbrev above):
 #   status_abbrevs         write IT status abbreviations (SCT/CON/SON/…) into ROM
+#   status_badges           redraw the in-battle status badge tiles (LZ77, not
+#                           text) with SON/CON/SCT via patch_status_badges_it.py;
+#                           PSN/PAR are left untouched (already read correctly).
+#   type_icons              redraw the move-type pill badges (LZ77 tiles) with
+#                           Italian type names via patch_type_icons_it.py.
 #   hp_labels               redraw the HP-label graphics (party menu + summary
 #                           bar + summary grey stat label — all LZ77 tiles, not
 #                           text) with the Italian « PS » (Punti Salute) via
@@ -52,22 +57,46 @@ status_abbrev:
 #                           show English « HP » without this patch; it also
 #                           redraws the summary bar so all three share one
 #                           consistent font.
+#   dexnav_headers          redraw the 4 DexNav column headers (LZ77 tiles) with
+#                           LIVELLO RIC / METODO / AB. NASCOSTA / OGGETTI via
+#                           patch_dexnav_headers_it.py.
 #   version                stamp the NOT FOR SALE screen with IT.2.1.<build>
 #                          so the running build advertises it is the Italian one
+#   pokedex_categories      translate the species-category table ("<cat> Pokémon")
+#                           from languages/it/data/pokedex_categories_it.json.
+#   pokedex_category_order  swap category/"Pokémon" print order to the Italian
+#                           "Pokémon <cat>" form (language-agnostic ASM swap).
+#   pokedex_category_order  MUST run after pokedex_categories (reads the same table).
+#   pokedex_metrics         convert Pokédex height/weight to metric with Italian
+#                           "Al"/"Pe" (Altezza/Peso) labels.
+#   pokedex_rewrap          re-wrap Pokédex descriptions to the 3-line info window
+#                           (language-agnostic, works on whatever combined_it.txt
+#                           already translated).
 #
-# Richer passes (pokédex rewrap, mission boxes, move descriptions, …) will be
-# added here as Italian translations for those subsystems mature.
+# Guard-only (no ROM mutation, verifies the pipeline's own output):
+#   battle_prefix           Italian wild/foe prefix cells in combined_it.txt are
+#                           already full phrases ("Il Pokémon selvatico"), so no
+#                           code-cave word-order rewrite is applied here (see
+#                           patch_battle_prefix_it.py for the follow-up note).
 patches:
   - font
   - inline
+  - battle_prefix
   - repair_lz77
   - repair_localized_lz77
   - repoint_stale
   - legendary_ritual
   - intro_questions_it   # fix 3 character-creation questions that bypass pipeline
   - status_abbrevs
+  - status_badges
+  - type_icons
   - hp_labels
+  - dexnav_headers
   - version
+  - pokedex_categories
+  - pokedex_category_order
+  - pokedex_metrics
+  - pokedex_rewrap
   # Post-build audit: flag any translated cell not terminated before its
   # neighbour (fusion / freeze risk). Report-only, never fails the build.
   - collision_check
