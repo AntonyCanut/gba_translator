@@ -3658,3 +3658,1911 @@
 0x41DF99: SILBER
 0x41DFA0: GOLD
 0x41DFA5: {SE_SHOP}WEITER
+
+# --- batch 3/12 (1906 translated FR entries, 94 excluded: binary/graphical garbage, font/alphabet test strings, trainer/NPC proper names, coined place names; sorted ascending by offset) ---
+0x41EC12: Der andere Trainer hat diesen\nSTEMPEL bereits.
+0x41EC40: Der andere Trainer hat die\nVerbindung abgebrochen.
+0x41EC6A: Du kannst diesem Trainer kein\nGEHEIMGESCHENK schicken.
+0x41EC99: Wenn du die KARTE löschst, findet\ndas Ereignis nicht statt. OK?
+0x41ECD3: Diese INFO löschen?\n
+0x41ECF9: Geschenk nicht erhalten. OK zum\nLöschen?
+0x41ED2F: Daten werden gespeichert.\nBitte warten.
+0x41ED50: Speichern abgeschlossen.\nDrücke A.
+0x41ED7B: GEHEIMKARTE gelöscht.
+0x41ED9C: GEHEIMINFO gelöscht.
+0x41EDBD: GEHEIMGESCHENK
+0x41EDCA: {DPAD_UPDOWN}WAHL {SE_SHOP}OK {B_BUTTON}Verlassen
+0x41EDDD: GEHEIMKARTEN
+0x41EDEA: GEHEIMINFOS
+0x41EDF6: DRAHTLOSE VERBINDUNG
+0x41EE0D: FREUND
+0x41EE14: Verlassen
+0x41EE19: EMPFANGEN
+0x41EE21: SENDEN
+0x41EE26: Löschen
+0x41EE2B: ALLES LÖSCHEN{CLEAR_TO}ABBRECHEN{CLEAR_TO}3OK
+0x444C35: Kürzlich entdecktes Pokémon.\nWird derzeit erforscht.\nKeine genauen Infos bekannt.
+0x444CB2: Es trägt von Geburt an einen Samen\nauf dem Rücken.\nDer Samen wächst mit ihm.
+0x444D12: Wenn die Knospe auf seinem Rücken\nzu duften beginnt, ist das ein Zeichen,\ndass die große Blüte bald aufgeht.
+0x444D77: Wenn es seine Blütenblätter öffnet\nund Sonnenlicht einfängt,\nfüllt sich sein Körper mit Kraft.
+0x444DDF: Die Flamme an seinem Schwanz zeigt sein Leben.\nWird es schwächer,\nwird auch die Flamme kleiner.
+0x444E48: Von ungestümer Natur, sucht es\nständig nach Gegnern.\nEs beruhigt sich erst, wenn es gewinnt.
+0x444EAD: Wenn es Flammen speit, kann es\nfast alles zum Schmelzen bringen.\nSein Atem verursacht große Schmerzen.
+0x444F18: Die Schale härtet kurz nach der\nGeburt aus und bleibt widerstandsfähig.\nDrückt man sie, federt sie zurück.
+0x444F80: Von den Alten geschätzt, trägt es\neinen pelzigen Schwanz, ein Symbol\nfür langes Leben.
+0x444FE7: Die Raketenkanonen auf seinem Panzer\nfeuern Strahlen ab, die dickes\nStahl durchdringen können.
+0x44504A: Seine Saugnapffüße haften an\njeder beliebigen Oberfläche.\nEs klettert beharrlich, um zu fressen.
+0x4450AF: Es bereitet seine Entwicklung vor,\nindem es seine Schale härtet, um\nseinen weichen Körper zu schützen.
+0x44510F: Ein Puder auf seinen Flügeln erlaubt\nihm, auch bei stärkstem Regen\nHonig zu sammeln.
+0x445170: Sein Giftstachel ist stark.\nSein leuchtend gefärbter Körper warnt\nseine Feinde.
+0x4451D3: Selbst im Kokon bewegt es sich ein wenig.\nEs streckt seinen Stachel aus, wenn\nman es angreift.
+0x445234: Es besiegt seine Gegner mit\nseinen Giftstacheln.\nManchmal greift es im Schwarm an.
+0x445296: Häufig in Gras und Wäldern,\nist es zahm und jagt, indem es\nSand aufwirbelt.
+0x4452FD: Es überfliegt sein riesiges Revier.\nEs jagt seine Beute, bevor es sie\nmit scharfen Krallen erlegt.
+0x44535E: Wenn es aus voller Kraft mit den\nFlügeln schlägt, kann Tauboss einen\nWind erzeugen, der große Bäume biegt.
+0x4453C8: Wo es Nahrung findet, sammelt\nes unaufhörlich Vorräte\nzum Essen.
+0x445427: Seine Hinterbeine haben drei\nSchwimmhäute, mit denen es durch\nFlüsse schwimmen kann.
+0x445480: Es schlägt mit seinen kurzen Flügeln,\num Insekten aus hohem Gras\naufzuscheuchen. Es pickt sie mit dem Schnabel.
+0x4454EA: Es schießt in den Himmel und\nstürzt sich dann herab, um\nseine Beute zu schlagen.
+0x445551: Es löst seinen Kiefer aus, um\ngroße Beute im Ganzen zu verschlingen.\nDanach kann es sehr schwer werden.
+0x4455B6: Es bläht die Brust auf, um Angst\nzu machen, und stößt seltsame Laute\naus, wenn es Luft ausstößt.
+0x44561D: Es hat kleine elektrische Säcke auf\nbeiden Wangen. Fühlt es sich bedroht,\nentlädt es elektrische Schläge.
+0x445686: Wenn seine Elektrizität zunimmt,\nwerden seine Muskeln stimuliert und\nes wird aggressiver.
+0x4456EB: Es gräbt und lebt unter der Erde.\nFühlt es sich bedroht, rollt es sich\nzu einer Kugel zusammen, um sich zu schützen.
+0x44574C: Es greift mit seinen Rückenstacheln\nund scharfen Krallen an, während es\nsich auf den Gegner stürzt.
+0x4457B5: Das Gift seines Horns ist sehr\nstark. Schon ein kleiner\nKratzer kann tödlich sein.
+0x44581B: Von ruhiger und fürsorglicher Natur,\nwächst sein Horn nur langsam.\nEs kämpft lieber nicht.
+0x445875: Es verschließt den Nesteingang mit\nseinem schuppigen Körper, um seine\nJungen zu schützen.
+0x4458DB: Es beobachtet seine Umgebung, indem\nes die Ohren aus dem Gras streckt.\nEs schlägt bei der kleinsten Gefahr zu.
+0x44594A: Schnell erzürnt, sticht es mit\nseinem Horn zu, um ein starkes\nGift zu injizieren.
+0x4459B0: Im Kampf schwingt es seinen Schwanz.\nZuckt der Gegner zusammen, rammt es\nihn mit seinem robusten Körper.
+0x445A18: Sein Verhalten und sein Schrei\nmachen es beliebt.\nDoch dieses Pokémon bleibt selten.
+0x445A7B: Dank seines feinen Gehörs nimmt es\nGeräusche aus der Ferne wahr und\nversteckt sich an ruhigen Orten.
+0x445ADB: Als Jungtier hat es sechs Schwänze.\nBeim Heranwachsen\nwachsen neue nach.
+0x445B33: Jedem Schwanz soll den Legenden\nnach\neine einzigartige mystische Kraft innewohnen.
+0x445B94: Es fesselt mit seinen großen Augen\nund singt dann eine beruhigende\nMelodie, die einschläfert.
+0x445BFA: Sein sehr feines, weiches Fell\nverleiht ihm ein edles Erscheinungsbild.\n
+0x445C62: Es hat keine Augen. Es orientiert sich\nmit Ultraschallschreien, um im\nDunkeln zu fliegen.
+0x445CCB: Es kann mehr als 280 Gramm Blut\ntrinken. Trinkt es zu viel, wird es\nschwer und fliegt unbeholfen.
+0x445D35: Tagsüber bleibt es im Untergrund und\nmeidet die Sonne. Es wächst, indem\nes im Mondlicht badet.
+0x445DA1: Der Geruch des Nektars aus seinem\nMaul ist so widerlich, dass er noch\nauf 2 km die Nase reizt.
+0x445E08: Je größer seine Blütenblätter sind,\ndesto mehr giftigen Pollen\nenthalten sie.
+0x445E70: Die Pilze, Tochukaso genannt,\nkontrollieren das Insekt gegen\nseinen Willen.
+0x445ED7: Je größer der Pilz auf seinem Rücken\nwird, desto mehr starke Sporen\ngibt er in die Luft ab.
+0x445F43: Seine großen Augen dienen ihm als\nRadar. Bei hellem Licht kann man\ndarin Facetten erkennen.
+0x445FA1: Die Schuppen, die es verstreut, haben\ndie Kraft, einen Gegner völlig\nzu lähmen.
+0x44600A: Ein Pokémon, das unter der Erde lebt.\nAn Tunnel gewöhnt, meidet es das\nTageslicht.
+0x446079: Dieses Digda-Trio kann sich\nbis zu 100 km unter die Erde graben,\nin das Unbekannte hinein.
+0x4460E3: Sein Blick belebt sich beim Anblick\neines glänzenden Objekts. Es ist ein\nnachtaktives Pokémon.
+0x446144: Der Stein auf seiner Stirn glänzt\nprächtig. Sein Gang ist geschmeidig\nund majestätisch.
+0x4461A7: Seine verwirrenden und geheimnisvollen\nKräfte bereiten ihm ständige\nKopfschmerzen.
+0x446214: Seine Schwimmhäute und sein perfekt\nangepasster Körper machen es zu einem\naußergewöhnlichen Schwimmer.
+0x446274: Es unterscheidet nicht zwischen Freund\nund Feind und neigt dazu, wütend zu\nwerden, wenn man sich nähert.
+0x4462E6: Seine Wut endet erst, wenn niemand\nmehr da ist, den es schlagen kann.\nEs ist schwer, das mitzuerleben.
+0x44634C: Ein sehr treues Pokémon. Es bleibt\nreglos stehen, bis sein Trainer\nihm einen Befehl gibt.
+0x4463B2: Seine stolze Haltung und sein\nselbstbewusstes Auftreten haben schon\nlange die Herzen der Menschen erobert.
+0x446417: Seine Haut ist so dünn, dass man\nseine inneren Organe sieht. Es steht\nkaum auf seinen neuen Beinen.
+0x44647E: Wird es angegriffen, nutzt es\nseine Spirale, um seine Feinde\neinzuschläfern. So kann es fliehen.
+0x4464DC: Es hat gewaltige Muskeln. Es kann\nunermüdlich den gesamten\nPazifik durchqueren.
+0x446540: Der Einsatz seiner mentalen Kräfte\nermüdet es so sehr, dass es\n18 Stunden am Tag schläft.
+0x44659B: Seine Anwesenheit verursacht seltsame\nEreignisse, wie Uhren, die\nrückwärts laufen.
+0x4465F7: Seine Gehirnzellen vermehren sich\nbis zu seinem Tod. Deshalb\nerinnert es sich an alles.
+0x446664: Trotz seiner geringen Größe kann es\ndank seiner Kraft mehrere\nKleinstein gleichzeitig anheben.
+0x4466CA: Sein Gürtel dient dazu, seine\nEnergie zu bändigen. Ohne ihn wäre\nes unkontrollierbar.
+0x446732: Es schlägt mit seinen vier Armen\nin erstaunlicher Geschwindigkeit\neinen Schlag nach dem anderen.
+0x44679B: Es bevorzugt warmes, feuchtes\nKlima. Seine Ranken können eine\nBeute im Handumdrehen fangen.
+0x446803: Wenn es hungrig ist, verschlingt es\nalles, was sich bewegt, und tötet\nseine Beute dann mit Säure.
+0x446862: Jeder von diesem Pokémon verschlungene\nKörper wird stets zu\nBrei aufgelöst.
+0x4468C8: Fast vollständig aus Wasser bestehend,\nneigt sein Körper dazu, an Land\nauszutrocknen.
+0x446938: Seine 80 Tentakel erlauben ihm,\nseine Gegner in einem gefürchteten\nGiftnetz gefangen zu halten.
+0x4469A1: Es lebt in Ebenen oder Bergen.\nEs wird oft mit einem kleinen\nStein verwechselt.
+0x446A06: Es rast Bergpfade hinunter und\nüberwindet Hindernisse, indem es\nsie zertrümmert.
+0x446A6C: Kein Sprengstoff könnte seinen\nSteinpanzer beschädigen. Es häutet\nsich einmal im Jahr.
+0x446ADA: Bei der Geburt noch wacklig, werden\nseine Beine durch das Galoppieren\nschnell sicher und kräftig.
+0x446B42: Es liebt das Rennen. Es verfolgt\nalles, was schneller ist als es.\nEine Ehrensache.
+0x446BA0: Langsam und begriffsstutzig, genießt\nes das ruhige Leben, ohne sich um\ndie vergehende Zeit zu kümmern.
+0x446C02: Das Schalellos, das an seinem Schwanz\nhängt, mag, was es frisst, und will\nnicht loslassen.
+0x446C62: Seine Natur trotzt den Gesetzen der\nSchwerkraft. Es schwebt dank eines\nelektromagnetischen Feldes.
+0x446CC9: Gruppen erscheinen, wenn Sonnenflecken\ndie Sonne verdecken.\nSie stören den Fernsehempfang.
+0x446D2F: Es benutzt das Gemüse, das es hält,\nals wäre es ein\nSchwert.
+0x446D97: Seine beiden Gehirne scheinen\nihre Gefühle über eine\ntelepathische Verbindung auszutauschen.
+0x446DFF: Wenn sich einer der Köpfe von Dodu\nteilt, wird es zu einem Dodri, das\nmit 60 km/h laufen kann.
+0x446E63: Es fühlt sich an eisigen Orten wohl.\nEs schwimmt gerne in Wasser\nmit -10 °C.
+0x446EDD: Sein stromlinienförmiger Körper\ngleitet über das Wasser. Je kälter\ndas Wasser, desto wohler fühlt es sich.
+0x446F3F: Es entstand aus einem Schlammstrom,\nder Röntgenstrahlen des Mondes\nausgesetzt war. Es lebt im Müll.
+0x446FA8: Sein Körper sondert eine giftige\nFlüssigkeit ab, die Pflanzen und\nBäume bei Berührung sofort tötet.
+0x447014: Es schwimmt rückwärts mit hoher\nGeschwindigkeit, indem es seine Schale\nöffnet und wieder schließt.
+0x447077: Es verteidigt sich, indem es seine\nSchale schließt und Stacheln\nabschießt, die Angreifer abwehren.
+0x4470EA: Sein aus giftigem Gas bestehender\nKörper könnte jeden innerhalb von\nSekunden ersticken lassen.
+0x447152: Es versteckt sich gerne im Schatten\nund lässt seine Beute erschauern,\nindem es ihre Schulter berührt.
+0x4471B2: Begegnet euch ein besorgter Blick,\nder die Nacht durchdringt, ist es\nsicher ein Gengar.
+0x44721F: Es nimmt feste Bestandteile auf,\nwährend es den Boden durchgräbt,\nwas es widerstandsfähiger macht.
+0x447282: Seine große Nase erlaubt ihm, die\nTräume anderer zu lesen. Es liebt\nlustige Träume.
+0x4472EE: Der Anblick seines schwingenden\nPendels lässt einen in drei Sekunden\neinschlafen, selbst frisch erwacht.
+0x447353: Es gräbt seinen Bau an einem\nSandstrand. Seine Scheren wachsen\nnach, wenn sie abbrechen.
+0x4473B5: Seine Schere wird riesig. Hebt es\nsie zu schnell an, riskiert es,\ndas Gleichgewicht zu verlieren.
+0x44741E: Man sagt, es verkleidet sich als\nPoké Ball. Es zerstört sich selbst\nbei der kleinsten Reizung.
+0x447476: Es speichert elektrische Energie\nin seinem Körper, was es\ninstabil und explosiv macht.
+0x4474DA: Auch wenn es wie Eier aussieht,\ngehört dieses Pokémon zur Familie\nder Pflanzen.
+0x447547: Sein Schrei ist so laut, weil jeder\nseiner drei Köpfe sagt, was\ner denkt.
+0x4475A6: Es weint, wenn es an seine\nverstorbene Mutter denkt, und seine\nTränen hallen in seinem hohlen Schädel wider.
+0x447607: Es wirft seinen Knochen, um\nVaututrice zu erlegen. Man glaubt,\nes tut dies, um seine Mutter zu rächen.
+0x447676: Seine elastischen Beine dehnen sich\naus, was beim ersten Kampf\nimmer wieder überrascht.
+0x4476D4: Seine Fäuste zerteilen die Luft,\ndoch nach drei Minuten Dauerschlägen\nermüdet es.
+0x447734: Seine Zunge ist 2 m lang und\nbeweglicher als seine Beine. Ihre\nBerührung verursacht Lähmung.
+0x44779E: Es schwebt, indem es Gase speichert,\ndie leichter als Luft sind. Diese\nsind explosiv und zudem übelriechend.
+0x447800: Bläht sich einer der beiden Smogon\nauf, entleert sich der andere. Sie\nvermischen ständig ihre Gase.
+0x447867: Ein sturköpfiges Pokémon. Beginnt\nes zu stürmen, hält es erst an,\nwenn es einschläft.
+0x4478CC: Der aufrechte Gang hat seine\nVorderbeine befreit und es\nintelligenter, aber auch verträumter gemacht.
+0x44792F: Es soll Freude bringen. Dieses\nfürsorgliche Pokémon schenkt seine\nEier Verletzten.
+0x447992: Es versteckt sich hinter blauen\nRanken, die mit feinem Flaum bedeckt sind.\nEs ist kitzlig.
+0x4479F0: An sicheren Orten verlässt das\nJunge den Beutel, um unter dem\nSchutz der Erwachsenen zu spielen.
+0x447A5D: Fühlt sich dieses Pokémon bedroht,\nspuckt es zur Verteidigung\nspezielle Tinte oder Wasser.
+0x447AC3: Es kann rückwärts schwimmen, indem\nes seine kleinen Brustflossen\nbewegt.
+0x447B2C: Trotz seiner Eleganz beim Schwimmen\nsind seine Hornstöße\ngefürchtet.
+0x447B8A: Während der Paarungszeit kann man\nes in Flüssen und Seen\nschwimmen sehen.
+0x447BE6: Da es sich innerhalb eines halben\nTages regenerieren kann, fürchtet\nes keine Verletzung.
+0x447C43: Sein Herz leuchtet in den Farben\ndes Regenbogens. Man erzählt, es\nsei ein Edelstein.
+0x447CAD: Viele Wissenschaftler glauben, dass\nsich seine Hände entwickelt haben, um\nPantomime zu betreiben.
+0x447D09: Vom ständigen Durchtrennen fester\nGegenstände sind die Sicheln an\nseinen Armen extrem scharf.
+0x447D74: Es wiegt beim Gehen die Hüften\nund reißt die Menschen zu\nrasenden Tänzen mit.
+0x447DD6: Es lässt seine Arme kreisen, um\nseinen Schlägen Kraft zu verleihen.\nNutzt das aus, um zu flüchten!
+0x447E3C: Man findet dieses Pokémon in der Nähe\nvon Vulkankratern. Sein glühender\nKörper erreicht 1.200 °C.
+0x447EAF: Es greift wild mit seinen Hörnern\nan. Im Winter versteckt es sich\ntief in den Wäldern.
+0x447F11: Nachdem es sich mit seinen drei\nSchwänzen gepeitscht hat, um seine\nAggressivität zu steigern, stürmt es los.
+0x447F7A: Die Kraft dieser Kreatur hat im\nLaufe der Jahrhunderte stark\nnachgelassen.
+0x447FDA: Brutal und gefährlich, ist es dafür\nbekannt, in der Vergangenheit ganze\nStädte dem Erdboden gleichgemacht zu haben.
+0x448033: Es ist ein sanftes und\nintelligentes Pokémon. Es zieht über\ndas Meer und singt ein wunderschönes Lied.
+0x448099: Es hat die Fähigkeit, seine\nZellstruktur zu verändern, um die\nGestalt dessen anzunehmen, was es sieht.
+0x4480FC: Seine DNS ist instabil und besitzt\nzahlreiche Möglichkeiten\nder Entwicklung.
+0x44815B: Seine molekulare Zusammensetzung\nähnelt der von Wasser, wodurch es\nsich verflüssigen kann.
+0x4481CD: Jedes Haar an seinem Körper\nstellt sich auf, wenn es sich mit\nElektrizität auflädt.
+0x44822C: Sein Körper enthält eine entzündete\nDrüse. Seine Temperatur steigt\nvor dem Kampf auf 900 °C.
+0x4482A0: Dieses von Wissenschaftlern\nerschaffene Pokémon kann sich frei\nim Cyberspace bewegen.
+0x44830C: Ein Pokémon, das durch Wissenschaft\naus einem Fossil wiederbelebt wurde.\nEs bevölkerte einst die Meere.
+0x44836F: Man glaubt, dieses Pokémon sei\nausgestorben, weil seine spiralförmige\nSchale zu groß geworden war.
+0x4483DE: Dieses vom Aussterben bedrohte\nPokémon häutet sich alle drei Tage\nund stärkt so seinen Panzer weiter.
+0x448445: Man glaubt, dieses Pokémon kam\nauf die Erde, um der Entwicklung\nseiner Beute zu folgen.
+0x4484AA: Sein sägeförmiges Gebiss kann\nsogar die Haut von Stahl-Pokémon\nzermalmen.
+0x448511: Es kann alles essen, sogar\nverdorbene Nahrung. Es hat nie\nBauchschmerzen.
+0x448580: Der legendäre Vogel des Eises. Man\nsagt, er erscheint Menschen, die sich\nin den Gipfeln verirrt haben.
+0x4485E8: Legendärer Vogel des Blitzes.\nEr schießt aus den Wolken hervor und\nschleudert gewaltige Blitze.
+0x448643: Einer der legendären\nVogel-Pokémon. Man sagt, sein\nErscheinen kündigt den Frühling an.
+0x4486AC: Dieses Pokémon steckt voller\nVitalität. Es häutet sich und wächst\nsehr regelmäßig.
+0x44870B: Seine Kristallkugeln verleihen\ndie Macht, das\nWetter zu kontrollieren.
+0x44876F: Man erzählt, dieses Pokémon lebe\nirgendwo im Meer und könne fliegen.\nDoch das ist keineswegs sicher.
+0x4487D6: Es ist das Ergebnis zahlreicher\nfurchtbarer und ungesunder\ngenetischer Experimente.
+0x44883B: Seine DNS enthält die genetischen\nCodes aller Pokémon. Es kann\nzahlreiche Attacken einsetzen.
+0x44889E: Ein süßer Duft geht von dem Blatt\nauf seinem Kopf aus. Es ist sehr\nfreundlich und schläft gern in der Sonne.
+0x448907: Die Knospenkette an seinem Hals\nverströmt ein würziges Aroma, das\nneue Energie verleiht.
+0x448966: Sein Atem besitzt die erstaunliche\nFähigkeit, verwelkte Pflanzen und\nBlumen wiederzubeleben.
+0x4489C8: Dieses Pokémon ist sehr schüchtern.\nDie Flammen auf seinem Rücken werden\nstärker, wenn es sich erschreckt.
+0x448A2F: Vor jedem Kampf dreht es sich um\nund zeigt die Stärke\nseiner Flammen.
+0x448A91: Wenn es wütend ist, wird es so\nheiß, dass alles, was es berührt,\nsofort Feuer fängt.
+0x448AF5: Klein, aber kräftig, zögert es nicht,\nalles zu beißen, was in Reichweite\nseiner Zähne kommt.
+0x448B5A: Wenn es zubeißt, lässt es erst\nlos, wenn seine Fänge abbrechen.\nDiese wachsen danach nach.
+0x448BBE: Dieses tollpatschig wirkende\nPokémon kann blitzschnell angreifen,\num seine Beute zu beißen.
+0x448C25: Dieses sehr nervöse Pokémon stützt\nsich auf seinen Schwanz, um seine\nUmgebung zu beobachten.
+0x448C8E: Es baut ein Nest, das zu seinem\nsehr schlanken Körper passt und in\ndas nur es allein hineinpasst.
+0x448CFB: Es hat ein perfektes Timing. Es\nbleibt stets im Rhythmus, indem es\nseinen Kopf wiegt.
+0x448D65: Seine Augen können auch bei\nabsoluter Dunkelheit\nklar sehen.
+0x448DC1: Es ist schüchtern und bleibt in\nder Nähe seiner Artgenossen. Es hat\neinen sehr ausgeprägten Tastsinn.
+0x448E28: Es schöpft seine Kraft aus dem\nLicht der Sterne. Je mehr es gibt,\ndesto größer werden die Muster auf seinem Rücken.
+0x448E8D: Es webt ein Netz aus einem feinen,\naber stabilen Faden und wartet dann\nruhig auf seine Beute.
+0x448EF5: Es befestigt einen Faden an seiner\nBeute, bevor es sie freilässt. So\nfindet es sie und ihre Artgenossen wieder.
+0x448F5D: Seine vier Flügel erlauben ihm,\nheimlich zu fliegen, um sich seiner\nBeute zu nähern, ohne sie zu erschrecken.
+0x448FCB: Chinchu markieren die Grenzen\nihres Reviers, indem sie mit ihren\nFühlern blinken.
+0x449033: Das Licht von Lanturn taucht aus\nder Tiefe auf. Man nennt es den\n„Stern der Tiefe“.
+0x449098: Es beweist seinen Mut, indem es\nden elektrisierten Schwanz seiner\nArtgenossen berührt.
+0x449101: Man sagt, es erscheine oft dort,\nwo Meteoriten\neingeschlagen sind.
+0x44915A: Sein Körper ist sehr weich. Wenn\nes anfängt zu hüpfen, ist es\nunmöglich, es aufzuhalten.
+0x4491B4: Es ist ein Symbol des Glücks. Man sagt,\ndass seine Schale mit Freude\ngefüllt ist.
+0x449212: Es bereist die Welt, um\nFreude an gute Wesen zu\nverteilen.
+0x449277: Es sucht seine Nahrung meist am\nBoden, klettert aber manchmal auf\nBäume, um zu fressen.
+0x4492E2: Es kann bewegungslos meditieren,\nvom Sonnenaufgang bis zum\nSonnenuntergang.
+0x44934A: Seine dichte Wolle bläht sich auf,\nwenn es statische Elektrizität sammelt.\nBei Berührung kann es schocken.
+0x4493AF: Sein Schwanz leuchtet auf, wenn sich\nseine Wolle elektrisch auflädt. Es schleudert\nelektrisierte Wollfäden.
+0x44941B: Die Spitze seines Schwanzes leuchtet\nsehr hell. Früher nutzte man sie,\num Signale zu senden.
+0x449487: Am Ende der Regenzeit tanzt es\nim Freien, angelockt von\nder Wärme der Sonne.
+0x4494F8: Sein wasserabweisendes Fell sorgt\ndafür, dass es trocken bleibt, selbst\nwenn es im Wasser spielt.
+0x449557: Die Muster auf seinem Bauch\nerlauben es ihm, sich im Wasser\nzu tarnen.
+0x4495BA: Es ahmt einen Baum nach. Sein Körper\nbesteht in Wirklichkeit eher\naus Stein.
+0x449625: Es versammelt seinesgleichen, um sie\nzu befehligen. Mit seinem Ruf\nlenkt es Quapsel.
+0x449682: Sein Körper ist so leicht, dass es\nsich am Boden festhalten muss, um an\nwindigen Tagen nicht wegzufliegen.
+0x4496E5: Es breitet seine Blütenblätter aus,\num Sonnenlicht aufzunehmen. Es schwebt,\num der Sonne näher zu kommen.
+0x449746: Selbst bei sehr starkem Wind\nsteuert es sein Ziel, indem es\nseine Anhänge bewegt.
+0x4497B2: Sein Schwanz ist genauso geschickt\nwie seine Hände. Es lebt hoch oben\nin großen Bäumen.
+0x449817: Es lebt vom Tau auf den Blättern.\nMan sagt, es könne nichts\nanderes zu sich nehmen.
+0x449882: Wenn schöne Tage nahen, werden die\nBlütenblätter um seinen Kopf\nfarbenprächtiger.
+0x4498EA: Es sieht 360° weit, ohne den Kopf\ndrehen zu müssen. Es verpasst nie\neine Beute, selbst hinter sich.
+0x449955: Es taucht aus dem Wasser auf, wenn\ndie Luft kühler wird, um am Ufer\nauf die Jagd zu gehen.
+0x4499BE: Es ist sehr faul und wartet am\nGrund des Flusses, bis ihm eine\nBeute ins Maul fällt.
+0x449A28: Die gegabelte Spitze seines Schwanzes\nzittert, wenn es den nächsten Angriff\nseines Gegners voraussieht.
+0x449A8B: In Vollmondnächten oder wenn es\naufgeregt ist, beginnen die Ringe\nauf seiner Haut zu leuchten.
+0x449AED: Wenn es in Gefahr ist, versucht es,\nseine Verfolger auf den steilen\nBergpfaden abzuhängen.
+0x449B4F: Es ist sehr intelligent und weiß,\nselbst in stressigen Situationen\nruhig zu bleiben.
+0x449BAE: Es stößt nachts markerschütternde\nSchreie aus, um die\nLeute zu erschrecken.
+0x449C19: Sein flacher, dünner Körper klebt\nstets an Wänden. Man glaubt, seine\nForm habe eine Bedeutung.
+0x449C70: Es hasst Licht und Erschütterungen.\nWird es angegriffen, bläht es sich\nauf und schlägt heftig zurück.
+0x449CD5: Der Kopf an seinem Schwanz hält\nWache, während es schläft. Er\nbraucht keinen Schlaf.
+0x449D38: Es verstärkt seinen Panzer, indem\nes Baumrinde hinzufügt. Dadurch\nwird es schwerer.
+0x449D99: Es ist völlig an seinem Baum\nfestgewachsen. Es schleudert Stücke\nseines Panzers, um Feinde zu vertreiben.
+0x449E03: Es flüchtet, indem es sich rückwärts\nmit dem Schwanz in den Boden gräbt,\nsobald ein Feind es entdeckt.
+0x449E63: Es klammert sich oft an Klippen.\nHat es Beute entdeckt, gleitet es\nauf sie zu, um sie anzugreifen.
+0x449EC9: Seine kräftigen Kiefer können\nGestein zermalmen. Seine Augen\ndurchdringen das unterirdische Dunkel.
+0x449F2D: Es hat ein fröhliches Wesen. Viele\nFrauen mögen es wegen\nseiner Freundlichkeit.
+0x449F93: Es kann fast alle Pokémon\nvertreiben, indem es sein Maul\nweit aufreißt.
+0x449FF4: Um seine giftigen Stacheln\nabzuschießen, bläht es seinen\nKörper mit 10 l Wasser auf.
+0x44A05A: Die Augen an seinen Scheren\ndienen dazu, den Feind einzuschüchtern,\nbevor es zum Angriff übergeht.
+0x44A0C1: Es lagert Beeren unter seinem\nPanzer. Sie gären und ergeben\nköstliche Säfte.
+0x44A121: Seine gewaltige Kraft erlaubt es\nihm, mehr als das 100-fache seines\nGewichts zu heben und zu werfen.
+0x44A184: Dieses listige Pokémon arbeitet\nmanchmal im Team, um Eier zu\nstehlen, während eines ablenkt.
+0x44A1E6: Es legt sich vor dem Winter\nNahrungsvorräte in Verstecken\nan.
+0x44A24B: Obwohl es sehr kräftig gebaut ist,\nklettert es auf Bäume, um dort zu\nfressen und zu schlafen.
+0x44A2AE: Sein Körper besteht aus Magma.\nHört es auf, sich zu bewegen, kühlt\nes ab und wird hart.
+0x44A313: Seine sehr zerbrechliche Schale\nstößt regelmäßig Flammen aus, die in\nseinem Körper zirkulieren.
+0x44A37B: Riecht es einen verlockenden Duft,\nrennt es mit gesenktem Kopf los, um\ndessen Ursprung zu finden.
+0x44A3D5: Seine Augen sind von langem Fell\nverdeckt. Es sieht nichts und\nbewegt sich, indem es losstürmt.
+0x44A439: Es wächst ständig weiter. Die\nzarten Auswüchse auf seinem Kopf\nsind sehr begehrt.
+0x44A49B: Sein kraftvoller Wasserstrahl\nverfehlt sein Ziel nie, selbst auf\n100 m Entfernung.
+0x44A501: Es versteckt sich gern in Spalten\nund Wracks, von wo aus es mit\nTintenstrahlen angreift.
+0x44A569: Es verstaut Nahrung in seinem\neingerollten Schwanz. Oft schenkt es sie\nverirrten Bergwanderern.
+0x44A5D1: Es kann über 100 m weit über die\nWellen gleiten, wenn es im Meer\nAnlauf nimmt.
+0x44A63D: Sein Körper steckt in einer Rüstung,\nhart wie Stahl, doch es fliegt mit\nmehr als 300 km/h.
+0x44A6A9: Es ist intelligent genug, um im\nRudel zu jagen und sich durch\nabgestufte Rufe zu verständigen.
+0x44A706: Früher hielten die Menschen sein\nseltsames Heulen für den Ruf\ndes Sensenmanns.
+0x44A765: Jede seiner Bewegungen erzeugt\nWirbel. Es lebt in\nunterseeischen Höhlen.
+0x44A7C8: Es ist trotz seiner gedrungenen\nGestalt stark. Es trägt mühelos\neinen erwachsenen Menschen auf dem Rücken.
+0x44A82C: Es hat scharfe Stoßzähne und dicke\nHaut. Seine Angriffe können\nein Haus zerstören.
+0x44A891: Umfangreiche Forschung hat seine\nFähigkeiten erweitert. Es hat neue\nAttacken erlernt.
+0x44A8EF: Wer sein Geweih betrachtet, spürt\nein seltsames Gefühl, als würde ihn\ndessen Mitte anziehen.
+0x44A953: Die Farbe der Flüssigkeit, die aus\nseinem Schwanz fließt, ändert sich\nje nach seiner Stimmung.
+0x44A9B2: Es ist für seine Kampflust bekannt.\nEs verletzt sich stets, wenn es\ngrößere Gegner herausfordert.
+0x44AA17: Wenn dich sein Tritt-Tanz\nfasziniert, könntest du es\nnoch bereuen.
+0x44AA7A: Es kostet alles mit den Lippenspitzen.\nSie speichern, was es mag und\nwas nicht.
+0x44AAD6: Seine Hörner leuchten auf, wenn es\nseine Arme rotieren lässt, um\nElektrizität zu erzeugen.
+0x44AB31: Sein Blut ist heiß wie Magma, und\nseine Körpertemperatur kann\n600 °C erreichen.
+0x44AB90: Hat sie gerade Nachwuchs bekommen,\nist ihre Milch viel nahrhafter\nals sonst.
+0x44ABEA: Dieses Pokémon mit dem goldenen\nHerzen heilt kranke Pokémon. Es\nspürt den Kummer anderer.
+0x44AC55: Dieses furchterregende Pokémon\nspeichert Energie und rennt dann\nlos, während es mächtige Blitze schleudert.
+0x44ACB0: Man erzählt, dass jedes Mal, wenn\nes brüllt, irgendwo ein Vulkan\nausbricht.
+0x44AD15: Es durchstreift die weite Welt, um\nverschmutzte Gewässer zu reinigen.\nEs begleitet den Nordwind.
+0x44AD7D: Ein Pokémon, das sich von Erde\nernährt. Nachdem es einen Berg\nverschlungen hat, schläft es ein, um zu wachsen.
+0x44ADDE: Sein Körper ist hart wie\nunterirdischer Stein. Es schießt wie\neine Rakete davon, indem es Gas ausstößt.
+0x44AE42: Mit nur einer Hand hat es genug\nKraft, um die Erde erbeben zu\nlassen und einen Berg einstürzen zu lassen.
+0x44AEAB: Es schläft in einer Spalte der\nTiefsee. Sein Flügelschlag erzeugt\neinen 40 Tage währenden Sturm.
+0x44AF10: Seine Federn schillern in sieben\nFarben. Man sagt, sein Anblick\nbringe ewiges Glück.
+0x44AF77: Dieses Pokémon aus der Zukunft\nheilt Wunden und verleiht Pflanzen\nneue Kraft.
+0x44AFDF: Seine Fußsohlen sind mit feinen\nDornen bedeckt, mit denen es an\nWänden und Decken laufen kann.
+0x44B047: Es lebt im dichten Dschungel. Es\nspringt von Ast zu Ast, um sich\nseiner Beute zu nähern.
+0x44B0A6: Es durchstreift den Dschungel\nmit großer Wendigkeit und greift\nBeute mit den scharfen Blättern an seinen Armen an.
+0x44B109: Seine Umarmungen wärmen, da es\neinen Ofen in sich trägt. Es schleudert\nFeuerbälle mit 1000 °C.
+0x44B165: Dieser Meister des Tritts kann\n10 Tritte pro Sekunde austeilen.\nSeine schrillen Schreie schüchtern den Feind ein.
+0x44B1C6: Flammen schießen aus seinen\nHandgelenken, und seine Schläge\nverbrennen den Feind.
+0x44B233: Es analysiert Strömungen mit der\nFlosse auf seinem Kopf. Es ist\nstark genug, um Felsen zu heben.
+0x44B29F: Seine kräftigen Beine geben ihm\nauch im Schlamm guten Halt. Es\nschläft eingegraben im Dreck.
+0x44B30B: Ein einziger Schlag seiner\nmächtigen Arme reicht aus, um\nselbst die größten Felsen zu zermalmen.
+0x44B37A: Ein sturköpfiges Pokémon, das\nseine Beute verfolgt, bis sie\nerschöpft ist.
+0x44B3DB: Es jagt seine Beute im Rudel. Es\nwird niemals den Befehlen eines\nguten Trainers ungehorsam sein.
+0x44B452: Es läuft im Zickzack und ist\nunübertroffen darin, Gegenstände im\nGras oder unter der Erde zu finden.
+0x44B4B6: Es kann geradeaus mit über\n100 km/h laufen. Leider ist es\nnicht gut im Kurvenfahren.
+0x44B52E: Als beliebtes Ziel von Vogel-\nPokémon versucht es, sich mit\nseinen Giftstacheln zu schützen.
+0x44B5A0: Es wartet in seinem an Zweige\ngehefteten Seidenkokon auf seine\nEntwicklung und ernährt sich von Regenwasser.
+0x44B608: Trotz seines Erscheinungsbilds ist\nes sehr aggressiv und greift mit\nseinem Rüssel an, wenn man es stört.
+0x44B66F: Nachtragend, wie es ist, vergisst\nes keinen Angriff, den es im Kokon\nerlitten hat, und rächt sich nach seiner Entwicklung.
+0x44B6CF: Dieses nachtaktive Pokémon wird\nvon Stadtlichtern angezogen und\nliebt die Blätter der Bäume in der Stadt.
+0x44B740: Sein Blatt ist so groß und\nschwer geworden, dass es nur noch\nauf dem Wasser treibend leben kann.
+0x44B7A9: Es ist ein übler Spaßvogel. Entdeckt\nes einen Angler, zieht es an\ndessen Angelschnur, um ihn zu ärgern.
+0x44B810: Es bewegt seinen Körper im\nmitreißenden Takt, um seine\nKräfte zu vervielfachen.
+0x44B877: Es sieht aus wie eine Eichel, die\nan einem Ast hängt. Es liebt es,\nandere Pokémon zu erschrecken.
+0x44B8ED: Der Klang seiner Grasflöte\nverwirrt den Zuhörer. Es lebt tief\nim Wald.
+0x44B956: Dieses Pokémon ist der Hüter des\nWaldes. Es kann die Gedanken seiner\nFeinde lesen und danach handeln.
+0x44B9BE: Dieses tollkühne Pokémon fürchtet\nsich nicht davor, mächtige Feinde\nherauszufordern. Es fliegt auf der Suche nach warmem Klima.
+0x44BA32: Es kreist auf der Suche nach\nBeute. Sobald es sie entdeckt hat,\nstürzt es sich blitzschnell auf sie.
+0x44BAA2: Es gleitet dank seiner langen\nFlügel auf den Meereswinden. Zum\nAusruhen klappt es sie ein.
+0x44BB0A: Es taucht seinen großen Schnabel\nins Meer, um Wasser und zahlreiche\nBeute damit zu transportieren.
+0x44BB76: Wenn seine Fühler die positiven\nSchwingungen eines Pokémon oder\nMenschen empfangen, wird sein Körper warm.
+0x44BBE0: Spürt es die Freude seines\nTrainers, beginnt es zu tanzen,\nüberschäumend vor Energie.
+0x44BC40: Guardevoir kann die Zukunft\nvorhersehen. Seine Kraft wächst,\nwenn es seinen Trainer beschützt.
+0x44BCA7: Es scheint auf dem Wasser zu\ngleiten. Der Duft, den es von seinem\nKopf verströmt, lockt seine Beute an.
+0x44BD06: Seine vier Flügel erlauben es\ndiesem Pokémon, in alle Richtungen\nzu fliegen.
+0x44BD7D: Sein Kopf setzt giftige Sporen\nfrei. Es ist gefährlich, sie\neinzuatmen.
+0x44BDEB: Es schlägt mit voller Kraft auf\nFeinde ein, die von seinen\ngiftigen Sporen betäubt sind.
+0x44BE58: Schon der Anblick eines Parecool\nnimmt einem jede Lust an Bewegung,\nund man schläft ein.
+0x44BEC0: Wenn es sich nicht bewegt, staut\nsich Stress in ihm auf, und es wird\nsehr reizbar.
+0x44BF21: Das faulste Pokémon der Welt.\nEs liegt herum, um Kraft zu sparen\nund zurückzuschlagen.
+0x44BF9B: Es wächst unter der Erde heran\nund orientiert sich mit seinen\nFühlern, da seine Augen fast blind sind.
+0x44BFFA: Sein durchdringender Schrei\nverursacht garantiert Kopfschmerzen.\nEs ist so flink, dass man es leicht aus den Augen verliert.
+0x44C05E: Ein seltsames Pokémon, das man\nnach der Entwicklung eines Nincada\nin einem Poké Ball findet.
+0x44C0B3: Normalerweise murmelt es, aber es\nweint laut, wenn es Gefahr wittert. Es\nhört auf, wenn seine Ohrenschützer
+0x44C11D: Wenn es mit dem Fuß stampft und\nbrüllt, erzeugt es Schallwellen, die\nein Haus zerstören können.
+0x44C17E: Es erzeugt Töne durch seine\nÖffnungen. Seine Schreie sind über\nsechs Meilen weit zu hören.
+0x44C1F5: Es härtet sich ab, indem es\nständig gegen dicke Bäume schlägt.\nSo erhält es einen robusten Körper und einen furchtlosen Geist.
+0x44C25E: Es misst seine Kraft gern mit\ngroßen Pokémon. Mit seinen Armen\nkippt es sogar einen fahrenden Lastwagen um.
+0x44C2C2: Es rennt mit seinem Schwanz voran,\nder größer ist als sein Körper.\nEr dient ihm als Schwimmhilfe.
+0x44C333: Seine magnetische Nase zeigt\nstets nach Norden. Reisende schauen\nauf Tarinor, um sich zu orientieren.
+0x44C390: Sein Vertrauen zu gewinnen ist\nschwer, doch es bleibt beliebt für\nseine niedliche Art und Gesten.
+0x44C401: Der Liebling modebewusster\nTrainerinnen, es glänzt bei\nWettbewerben durch Stil und Fell.
+0x44C469: Es lebt in der Dunkelheit von\nHöhlen. Mit seinen Krallen gräbt\nes Edelsteine aus, um sich zu ernähren.
+0x44C4C8: Sein sanftes Auftreten wiegt den\nFeind in Sicherheit, dann beißt es\nmit seinen gewaltigen Kiefern zu.
+0x44C533: Es lebt normalerweise tief in\nden Bergen. Ist es hungrig, kann es\nGleise und Waggons fressen.
+0x44C596: Es liebt Eisenerz. Rudel\nstreiten sich um ihr Revier, indem\nsie mit ihren Stahlkörpern zusammenstoßen.
+0x44C5FD: Es beansprucht einen ganzen Berg\nfür sich. Je mehr Narben es hat,\ndesto mehr hat es gekämpft – nimm es also nicht auf die leichte Schulter.
+0x44C672: Es meditiert, um seine Energie\nzu steigern und in der Luft zu\nschweben. Es isst nur eine Beere pro Tag.
+0x44C6D7: Es weicht mit Tanzschritten aus\nund setzt im selben Moment einen\nverheerenden Schlag.
+0x44C741: Es speichert statische\nElektrizität in seinem Fell. Es gibt\nFunken ab, wenn ein Sturm
+0x44C7A6: Es entlädt Elektrizität über\nseine Mähne. Es erzeugt eine Gewitterwolke,\num Blitze herbeizurufen.
+0x44C80C: Es saugt Energie aus\nStrommasten und feuert seine Freunde\nmit Funkenpompons an.
+0x44C873: Es liebt es, seine Freunde\nanzufeuern. Verlieren sie, sprüht sein\nKörper immer mehr Funken.
+0x44C8D2: Es kommuniziert nachts, indem es\nsein Hinterteil leuchten lässt. Es\nliebt den süßen Duft von Illumise.
+0x44C932: Es leitet Volbeat an, um\nZeichen in den Nachthimmel zu\nzeichnen. Forscher untersuchen seine Muster.
+0x44C99C: Roselia, die mit reinem Wasser\ngetränkt werden, sollen bei der\nBlüte eine seltene Farbe zeigen.
+0x44CA03: Nichts entgeht seinem Magen.\nBeim Verdauen stößt es widerliche,\nbedrückende Gase aus.
+0x44CA6D: Es kann einen Reifen mit einem\nBiss verschlingen. Aus seinen\nPoren sondert es eine hochgiftige Flüssigkeit ab.
+0x44CAD6: Sie stürzen sich auf jeden\nEindringling. Ihre scharfen Zähne\nkönnen Schiffsrümpfe aufreißen.
+0x44CB33: Als tückischer Gangster der\nMeere ist seine Haut darauf\nausgelegt, den Wasserwiderstand zu minimieren.
+0x44CB9D: Bei schönem Wetter hüpft es wie\nein Ball am Strand und spielt. Aus\nseiner Nase schießt Wasser.
+0x44CC00: Größer als alle anderen Pokémon.\nEs taucht mit nur einem Atemzug\nbis zu fast 10 000 Fuß tief.
+0x44CC5E: Sein höckriger Rücken speichert\nglühendes Magma. Bei Regen kühlt\nes ab, und seine Bewegungen verlangsamen sich.
+0x44CCBB: Wird es wütend, spucken die\nHöcker auf seinem Rücken einen\nRegen aus Lava. Es lebt in Vulkankratern.
+0x44CD26: Es verbrennt Kohle in seinem\nPanzer, um Energie zu erzeugen. Bei\nGefahr spuckt es schwarzen Ruß aus.
+0x44CD8D: Es hüpft auf seinem Schwanz, um\nsein Herz schlagen zu lassen. Auf\ndem Kopf trägt es eine Perle von Muschas.
+0x44CDF5: Es kontrolliert den Feind mit\nseltsamen Tanzschritten. Die\nschwarzen Perlen auf seiner Stirn sind Edelsteine.
+0x44CE62: Kein Spinda hat dieselben\nFlecken. Es verwirrt den Feind mit\nseinen taumelnden Bewegungen.
+0x44CEC3: Es gräbt eine unausweichliche,\nkegelförmige Grube und wartet am\nGrund, bis eine Beute hineinstürzt.
+0x44CF27: Die Schallwellen, die durch das\nAneinanderreiben seiner Flügel\nentstehen, verursachen starke Kopfschmerzen.
+0x44CF84: Es versteckt sich, indem es mit\nseinen Flügeln Sand aufwirbelt. Rote\nSchuppen schützen seine Augen.
+0x44CFE5: Es bevorzugt raue Lebensräume\nwie Wüsten. Dank des in ihm\ngespeicherten Wassers überlebt es dreißig Tage.
+0x44D04D: Es ist nachts aktiv und jagt\nBeute, die von der Hitze der Wüste\nerschöpft ist.
+0x44D0A5: Aus einem seltsamen Grund landet\nes gerne sanft auf dem Kopf der\nLeute und spielt Hut.
+0x44D0FA: Es fliegt anmutig dahin. Sein\nmelodisches Summen vermittelt einem\nden Eindruck zu träumen.
+0x44D15B: Es ist seit Generationen der\nRivale von Seviper. Seine scharfen\nKrallen sind sein größter Trumpf.
+0x44D1D0: Durch ständiges Wetzen wird die\nKlinge an seinem Schwanz extrem\nscharf. Es ist der Rivale von Zangoose.
+0x44D238: Sein Wohlbefinden folgt dem\nMondzyklus. Bei Vollmond strotzt es\nvor Kraft.
+0x44D2A9: Tagsüber nimmt es Sonnenenergie\nauf. Ohne eine Miene zu verziehen,\nerspürt es, was sein Feind denkt.
+0x44D310: Es bedeckt seinen Körper mit\nzähem Schleim, um sich zu winden\nund zu entkommen, wenn es gepackt wird.
+0x44D368: Es beansprucht einen ganzen\nSumpf für sich. Nähert sich ein\nFeind, löst es durch sein Zappeln Erdstöße aus.
+0x44D3CD: Egal wie stark der Fluss\nverschmutzt ist, es passt sich an\nund gedeiht. Sein Überlebenswille ist stark.
+0x44D435: Kampflustig, wie es ist, kneift\nes jedes Pokémon, das sein Revier\nbetritt, und wirft es dann hinaus.
+0x44D4A8: Es bewegt sich, indem es sich auf\nseinem einzigen Fuß dreht. Manche\nBalbuto drehen sich sogar auf dem Kopf.
+0x44D519: Aus antiken Tonpuppen entstanden,\nnutzt es Telekinese, um zu\nschweben und sich fortzubewegen.
+0x44D586: Vor 100 Millionen Jahren\nausgestorben, wurde es dank moderner\nTechniken aus einem Fossil wiederbelebt
+0x44D5F4: Es lebt in warmen Meeren. Sein\nschwerer Körper verhindert, dass es\nbei stürmischem Wetter fortgetrieben wird.
+0x44D658: Uraltes Pokémon des Ozeans.\nSeine acht Beine wurden im Laufe\nder Zeit zu Flügeln.
+0x44D6B9: Seine riesigen, einziehbaren\nKrallen zerschneiden fast alles. Sein\nKörper ist mit robusten Platten bedeckt.
+0x44D725: Wegen seines schäbigen\nAussehens verspottet, wird es von\nForschern ignoriert. Es lebt in Teichen voller Unkraut.
+0x44D78E: Den Anblick eines Milotic und\nseiner Schönheit soll jede\nfeindselige Regung besänftigen.
+0x44D7F3: Es kann je nach Wetter seine\nForm ändern – bei Sonnenschein,\nRegen oder Schnee.
+0x44D85E: Es ändert seine Farbe, um sich\nseiner Umgebung anzupassen. Es\nändert sie auch, wenn es glücklich oder traurig ist.
+0x44D8C5: Es ernährt sich von Gefühlen\nwie Neid und Boshaftigkeit. Sein\naufgerichtetes Horn nimmt Emotionen wahr.
+0x44D92A: Eine Puppe, die aus Groll\ndarüber, weggeworfen worden zu\nsein, zum Pokémon wurde. Sie sucht das Kind, das sie verstieß.
+0x44D992: Es liebt das Weinen von\nKindern. Es lässt Frechdachse\naufschrecken, indem es durch Wände geht, um sie
+0x44D9F7: Sein Körper ist völlig hohl.\nÖffnet es den Mund, saugt es alles\nein, als wäre es ein schwarzes Loch.
+0x44DA61: Es lebt in tropischen\nDschungeln. Das Fruchtbündel an\nseinem Hals ist köstlich. Die Frucht wächst zweimal
+0x44DACF: Seine Rufe hallen in seinem\nhohlen Körper wider und erklingen\nals schöne Töne, um zu überraschen und zu vertreiben
+0x44DB35: Es erscheint, wenn es eine\nbevorstehende Katastrophe spürt. Man\nhielt es oft für einen Unglücksboten.
+0x44DB9F: Es bewegt sich im Rudel. Die\nEinzeltiere stoßen aneinander, um\nihre Willenskraft zu stärken.
+0x44DBFD: In den Schneeländern besagt\nmanche Überlieferung, dass ein Haus\ngedeihen wird, wenn ein Snurunt darin lebt.
+0x44DC58: Sein Körper aus Eis schmilzt\nnie. Es kann die Feuchtigkeit der\nLuft augenblicklich gefrieren lassen.
+0x44DCC3: Sie schwimmen schlecht und sind\nschneller, wenn sie rollen. Sind sie\nglücklich, klatschen sie mit ihren Flossen.
+0x44DD28: Es berührt alles mit seiner\nNase, um zu riechen und zu testen.\nEs spielt damit, Obalie auf seiner Nase zu drehen.
+0x44DD92: Es zerschlägt Eis mit seinen\ngroßen Stoßzähnen. Sein dicker Speck\nhält Kälte und Angriffe ab.
+0x44DDFB: Es erzeugt in seinem Leben nur\neine einzige Perle. Man sagt, sie\nverstärke psychische Kräfte.
+0x44DE55: Es lebt in der Tiefe des Meeres,\nohne Licht. Es lässt seinen kleinen\nFischschwanz leuchten, um Beute anzulocken.
+0x44DEC7: Sein Schwimmstil ist von\nvollendeter Eleganz. Mit seinem\nfeinen Mund frisst es Algen zwischen den Felsen.
+0x44DF35: Ein seltenes Pokémon, entdeckt\nin den Tiefen des Meeres. Es hat\nsich seit über 100 Millionen
+0x44DF9D: Während der Laichzeit\nversammeln sich unzählige Liebiskus\nan den Riffen und färben das Wasser rosa.
+0x44E000: Es hofft, dass ihm Flügel\nwachsen, um fliegen zu können. Es\nübt, indem es jeden Tag von Klippen springt.
+0x44E063: Sein gepanzerter Körper lässt\nAngriffe abprallen. Doch seine\nschwere Rüstung macht es langsam.
+0x44E0DB: Weil es so beharrlich vom\nFliegen träumte, veränderten sich\nseine Zellen, und ihm wuchsen Flügel.
+0x44E13E: Es kommuniziert über\nmagnetische Wellen. Alle Zellen\nseines Körpers sind magnetisch.
+0x44E199: Wenn zwei Terhal fusionieren, verbindet\nein magnetisches Nervensystem ihre\nGehirne.
+0x44E1F1: Es entstand aus der Verschmelzung mehrerer\nMetang. Seine vier Gehirne machen es\neinem Supercomputer ebenbürtig.
+0x44E25D: Vollständig aus Gestein, ohne erkennbares\nGehirn oder Herz. Selbst für moderne\nWissenschaftler ein Rätsel.
+0x44E2CC: Es soll Jahrtausende in einem Gletscher\ngeschlafen haben. Sein Körper schmilzt\nnicht einmal in Magma.
+0x44E334: Härter als jedes Metall. Es erhärtete\nunter dem Druck der Erde über\nJahrtausende hinweg.
+0x44E3A5: Ein Flaum bedeckt seinen Körper und\nbricht das Licht so, dass es\nunsichtbar wird.
+0x44E406: Sanftmütig, es mag keine Kämpfe.\nZieht es seine Beine ein, fliegt es\nschneller als ein Düsenflugzeug.
+0x44E477: Der Legende nach ließ es die Meere\ndurch Regen und Flutwellen anschwellen.\nEs kämpfte gegen Groudon.
+0x44E4DD: Es schlief im unterirdischen Magma,\nseit es vor langer Zeit erbittert\ngegen Kyogre gekämpft hatte.
+0x44E535: Es fliegt in der Ozonschicht.\nBis vor Kurzem hatte es\nniemand gesehen.
+0x44E594: Es soll jeden Wunsch erfüllen\nkönnen. Es ist nur sieben Tage\nin tausend Jahren wach.
+0x44E5F5: Dieses Deoxys nimmt die Angriffsform an.\nEs täuscht den Feind, indem es sein\nAussehen verändert.
+0x44E65D: Dieses Deoxys nimmt eine aggressive Form an.\nEs täuscht den Feind, indem es sein\nAussehen verändert.
+0x44E6C2: garantiert.
+0x44E6CC: Aussehen.
+0x44E6D7: Groll.
+0x44E6DF: sein Aussehen filtern.
+0x44E6F9: garantiert.
+0x44E703: sein Aussehen verändert.
+0x44E71C: Es lebte Millionen von Jahren in der\nOzonschicht. Seine fliegende Form\nerinnert an einen Meteor.
+0x44E785: Es soll jeden Wunsch erfüllen\nkönnen. Es ist nur sieben Tage\nin tausend Jahren wach.
+0x44E7E6: Dieses Deoxys nimmt eine aggressive Form an.\nEs täuscht den Feind, indem es sein\nAussehen verändert.
+0x454254: Ein kleiner Schreibtisch,\ngebaut in Form eines\nPoké Balls.
+0x454284: Ein großer Schreibtisch aus Stahl.\nStellen Sie Dekorationen\ndarauf.
+0x4542BC: Ein großer Schreibtisch aus Holz.\nStellen Sie Dekorationen\ndarauf.
+0x4542F3: Ein großer Schreibtisch aus\nBlättern. Stellen Sie Dekorationen\ndarauf.
+0x45432C: Ein riesiger Schreibtisch aus Glas. Er\nkann viele Dekorationen\naufnehmen.
+0x454362: Ein riesiger Schreibtisch aus Ziegeln.\nEr kann viele Dekorationen\naufnehmen.
+0x454398: Ein riesiger Schreibtisch aus Baumstämmen.\nStellen Sie viele Dekorationen\ndarauf.
+0x4543D1: Ein riesiger Schreibtisch aus Felsen.\nEr kann zahlreiche\nDekorationen aufnehmen.
+0x454404: Ein kleiner Stuhl für eine\nPerson.
+0x454420: Ein kleiner Stuhl,\ngebaut in Form eines Poké\nBalls.
+0x454451: Ein kleiner Stuhl aus\nStahl.
+0x45446E: Ein kleiner Stuhl aus\nGlas.
+0x45448B: Ein kleiner Stuhl aus\nBlättern.
+0x4544A9: Ein kleiner Stuhl aus\nHolz.
+0x4544C5: Ein kleiner Stuhl aus\nZiegeln.
+0x4544E2: Ein kleiner Stuhl aus\nBaumstämmen.
+0x4544FE: Ein kleiner Stuhl aus\nFels.
+0x45451A: Eine leuchtend rote\nTopfpflanze.
+0x454534: Eine tropische Blühpflanze im\nTopf.
+0x454559: Ein Topf mit hübschen Blumen\n.
+0x454570: Ein großer Topf mit\nvielen bunten\nBlumen.
+0x454598: Eine große Pflanze in Form\neines Regenschirms in einem großen\nTopf .
+0x4545C6: Eine beeindruckende große Pflanze in\neinem großen Topf.
+0x4545EE: Ein roter Ziegelstein. Die\nDekorationen können darauf\nplatziert werden.
+0x454625: Ein gelber Ziegelstein.\nStellen Sie ein paar Dekorationen\ndarauf.
+0x45465A: Ein blauer Ziegelstein.\nStellen Sie ein paar Dekorationen\ndarauf.
+0x45468D: Ein roter Ballon, gefüllt\nmit Wasser. Platzt, wenn man darauf\ntritt.
+0x4546C4: Ein blauer Ballon, gefüllt\nmit Wasser. Platzt, wenn man darauf\ntritt.
+0x4546FC: Ein gelber Ballon, gefüllt\nmit Wasser. Platzt, wenn man darauf\ntritt.
+0x454734: Ein großes rotes Zelt. Du\nkannst dich darin verstecken\n.
+0x45475E: Ein großes blaues Zelt. Du\nkannst dich darin verstecken\n.
+0x454789: Platzieren Sie es über einem Loch,\num auf die andere\nSeite zu gelangen.
+0x4547B7: Verwenden Sie es, um von der\nPlattform nach unten zu rutschen.
+0x4547DC: Ein kleiner Zaun, der den\nDurchgang blockiert.
+0x4547FF: Ein kleiner Zaun, der den\nDurchgang blockiert.
+0x454822: Ein alter, großer Reifen. Die\nDekorationen können darauf\nplatziert werden.
+0x454857: Ein großer Sockel mit\nStufen.
+0x454874: Eine große Schlammkugel.\nZerbröckelt, wenn man darauf\ntritt.
+0x4548A1: Eine seltsame Tür, durch die\nPersonen direkt\nhindurchgehen können.
+0x4548D2: Eine Verzierung aus\nSand. Zerbröckelt bei\nBerührung.
+0x454901: Verliehen für 50 aufeinanderfolgende\nSiege im Battle\nTOWER.
+0x454933: Verliehen für 100 aufeinanderfolgende\nSiege im Battle\nTOWER.
+0x454966: Eine Glasnachbildung einer\nberühmten Skulptur im KUNST-\nMUSEUM.
+0x45499F: Kleiner grauer\nSpielzeugfernseher.
+0x4549BE: Ein Spielzeugfernseher,\ngestaltet nach dem Vorbild eines\nKikugi.
+0x4549E9: Ein Spielzeugfernseher,\ngestaltet nach dem Vorbild eines\nPantimos.
+0x454A14: Ein seltsamer Teppich, der\nfunkelt, wenn man darauf\ntritt.
+0x454A3C: Ein raffinierter Teppich, der\nspringt, wenn man darauf\ntritt.
+0x454A6A: Ein raffinierter Teppich, der sich\ndreht, wenn man darauf\nsteigt.
+0x454A99: Ein Teppich, der einen tiefen\nC-Ton spielt, wenn man darauf\nsteigt.
+0x454AC8: Ein Teppich, der eine\nD-Note spielt, wenn man darauf\nsteigt.
+0x454AF3: Ein Teppich, der eine\nE-Note spielt, wenn man darauf\nsteigt.
+0x454B1F: Ein Teppich, der eine\nF-Note spielt, wenn man darauf\nsteigt.
+0x454B4B: Ein Teppich, der eine\nG-Note spielt, wenn man darauf\nsteigt.
+0x454B76: Ein Teppich, der eine\nA-Note spielt, wenn man darauf\ntritt.
+0x454BA2: Ein Teppich, der eine\nB-Note spielt, wenn man darauf\nsteigt.
+0x454BCD: Ein Teppich, der einen hohen\nC-Ton spielt, wenn man darauf\nsteigt.
+0x454BFD: Ein Teppich mit einem\nSurf-Motiv. Stellen Sie Gegenstände\ndarauf.
+0x454C31: Ein Teppich mit einem\nTHUNDER-Motiv. Stellen Sie Gegenstände\ndarauf.
+0x454C68: Ein Teppich mit einem\nFire BLAST-Motiv. Stellen Sie Gegenstände\ndarauf.
+0x454CA2: Ein Teppich mit einem\nPOWDER SNOW-Motiv. Stellen Sie Gegenstände\ndarauf.
+0x454CDB: Ein Teppich mit einem\nATTRACT-Motiv. Stellen Sie Gegenstände\ndarauf.
+0x454D13: Ein Teppich mit einem\nFISSURE-Motiv. Stellen Sie Gegenstände\ndarauf.
+0x454D4A: Ein Teppich mit einem\nSpikes-Motiv. Stellen Sie Gegenstände\ndarauf.
+0x454D80: Ein kleines Poster\nbedruckt mit Poké\nBalls.
+0x454DA8: Ein kleines Plakat mit einem\nGECKARBOR-Aufdruck.
+0x454DCD: Ein kleines Plakat mit einem\nFLEMMLI-Aufdruck.
+0x454DF2: Ein kleines Plakat mit einem\nHYDROPI-Aufdruck.
+0x454E16: Ein kleines Plakat mit einem\nAZURILL-Aufdruck.
+0x454E3C: Ein großes Plakat mit einem\nAufdruck von PIKACHU und\nPICHU.
+0x454E6B: Ein großes Plakat mit einem\nSEVIPER-Aufdruck.
+0x454E90: Ein großes Plakat mit einem\nRELIANTH-Aufdruck.
+0x454EB7: Ein großes Plakat mit einem\nWINGULL-Aufdruck.
+0x454EDC: Ein großes Plakat mit einem\nLIEBISKUS-Aufdruck.
+0x454F02: Eine PICHU-Puppe.\nStellen Sie sie auf einen Teppich oder\neinen Schreibtisch.
+0x454F2D: Eine PIKACHU-Puppe.\nStellen Sie sie auf einen Teppich oder einen\nSchreibtisch.
+0x454F5A: Eine MARILL-Puppe.\nStellen Sie sie auf einen Teppich oder\neinen Schreibtisch.
+0x454F86: Eine TOGEPI-Puppe.\nStellen Sie sie auf einen Teppich oder\neinen Schreibtisch.
+0x454FB2: Eine FEURIGEL-Puppe.\nStellen Sie sie auf einen Teppich oder einen\nSchreibtisch.
+0x454FE1: Eine ENDIVIE-Puppe.\nStellen Sie sie auf einen Teppich oder einen\nSchreibtisch.
+0x455010: Eine KARNIMANI-Puppe.\nStellen Sie sie auf einen Teppich oder einen\nSchreibtisch.
+0x45503E: Eine PUMMELUFF-Puppe.\nStellen Sie sie auf einen Teppich oder einen\nSchreibtisch.
+0x45506E: Eine MAUZI-Puppe.\nStellen Sie sie auf einen Teppich oder einen\nSchreibtisch.
+0x45509A: Eine PIEPI-Puppe.\nStellen Sie sie auf einen Teppich oder einen\nSchreibtisch.
+0x4550C8: Eine Ditto-Puppe.\nStellen Sie sie auf einen Teppich oder\neinen Schreibtisch.
+0x4550F3: Eine LIEBISKUS-Puppe.\nStellen Sie sie auf einen Teppich oder einen\nSchreibtisch.
+0x455121: Eine GECKARBOR-Puppe.\nStellen Sie sie auf einen Teppich oder\neinen Schreibtisch.
+0x45514E: Eine FLEMMLI-Puppe.\nStellen Sie sie auf einen Teppich oder einen\nSchreibtisch.
+0x45517B: Eine HYDROPI-Puppe.\nStellen Sie sie auf einen Teppich oder\neinen Schreibtisch.
+0x4551A7: Eine TRAUNFUGIL-Puppe.\nStellen Sie sie auf einen Teppich oder einen\nSchreibtisch.
+0x4551D4: Eine CHATOLL-Puppe.\nStellen Sie sie auf einen Teppich oder\neinen Schreibtisch.
+0x455200: Eine WAILMER-Puppe.\nStellen Sie sie auf einen Teppich oder einen\nSchreibtisch.
+0x45522C: Eine KECLEON-Puppe.\nStellen Sie sie auf einen Teppich oder einen\nSchreibtisch.
+0x455259: Eine AZURILL-Puppe.\nStellen Sie sie auf einen Teppich oder einen\nSchreibtisch.
+0x455287: Eine PANTIMOS-Puppe.\nStellen Sie sie auf einen Teppich oder\neinen Schreibtisch.
+0x4552B3: Eine WABLU-Puppe.\nStellen Sie sie auf einen Teppich oder\neinen Schreibtisch.
+0x4552DF: Eine SCHLUPPUCK-Puppe.\nStellen Sie sie auf einen Teppich oder einen\nSchreibtisch.
+0x45530B: Eine LOTAD-Puppe.\nStellen Sie sie auf einen Teppich oder einen\nSchreibtisch.
+0x455336: Eine KIKUGI-Puppe.\nStellen Sie sie auf einen Teppich oder einen\nSchreibtisch.
+0x455362: Ein PIKACHU-Kissen.\nStellen Sie es auf einen Teppich oder einen\nSchreibtisch.
+0x455392: Ein MARILL-Kissen.\nStellen Sie es auf einen Teppich oder\neinen Schreibtisch.
+0x4553C1: Ein LIEBISKUS-Kissen .\nStellen Sie es auf einen Teppich oder einen\nSchreibtisch.
+0x4553F2: Ein ZIGZAGOON-Kissen .\nStellen Sie es auf einen Teppich oder einen\nSchreibtisch.
+0x455424: Ein SPINDA-Kissen.\nStellen Sie es auf einen Teppich oder\neinen Schreibtisch.
+0x455453: Ein BANETTE-Kissen.\nStellen Sie es auf einen Teppich oder einen\nSchreibtisch.
+0x455483: Ein Ball-Kissen.\nStellen Sie es auf einen Teppich oder\neinen Schreibtisch.
+0x4554B0: Ein Kissen mit Gras-Motiv.\nStellen Sie es auf einen Teppich oder einen\nSchreibtisch.
+0x4554E3: Ein Kissen mit Feuer-Motiv .\nStellen Sie es auf einen Teppich oder einen\nSchreibtisch.
+0x455515: Ein Kissen mit Filigranmuster .\nStellen Sie es auf einen Teppich oder einen\nSchreibtisch.
+0x455548: Eine große Puppe. Stellen Sie sie\nauf einen Teppich oder auf einen\nSchreibtisch.
+0x455573: Eine große Puppe. Stellen Sie sie\nauf einen Teppich oder auf einen\nSchreibtisch.
+0x45559E: Eine große Puppe. Stellen Sie sie\nauf einen Teppich oder auf einen\nSchreibtisch.
+0x4555C9: Eine große Puppe. Stellen Sie sie\nauf einen Teppich oder auf einen\nSchreibtisch.
+0x4555F4: Eine große Puppe. Stellen Sie sie\nauf einen Teppich oder auf einen\nSchreibtisch.
+0x45561F: Eine große Puppe. Stellen Sie sie\nauf einen Teppich oder auf einen\nSchreibtisch.
+0x45564A: Eine große Puppe. Stellen Sie sie\nauf einen Teppich oder auf einen\nSchreibtisch.
+0x455675: Eine große Puppe. Stellen Sie sie\nauf einen Teppich oder auf einen\nSchreibtisch.
+0x4556A0: Eine große Puppe. Stellen Sie sie\nauf einen Teppich oder auf einen\nSchreibtisch.
+0x4556CB: Eine große Puppe. Stellen Sie sie\nauf einen Teppich oder auf einen\nSchreibtisch.
+0x4556F6: KLEINER SCHREIBTISCH
+0x4571B7: Beginnen Sie von vorne.
+0x4571B8: Beginne von vorne.
+0x4571DE: Die Suche nach WIRELESS COMMUNICATION\nSYSTEM wurde abgebrochen.
+0x4571E0: Die Suche per KABELLOSER\nKOMMUNIKATION wurde abgebrochen.
+0x457231: {STR_VAR_1}! Warten auf\nKommunikation eines anderen Spielers.
+0x457264: {STR_VAR_1} ! Warten auf die Verbindung!\nDrücke START, wenn alle bereit sind.
+0x4573C5: 2 Spieler\nerforderlich.
+0x4573D7: 3 Spieler\nerforderlich.
+0x4573F4: MODUS FÜR 2\nSPIELER
+0x457402: MODUS FÜR 3\nSPIELER
+0x457410: MODUS FÜR 4\nSPIELER
+0x45741E: MODUS FÜR 5\nSPIELER
+0x45749D: {STR_VAR_2} hat Sie kontaktiert für\n{STR_VAR_1}. Annehmen?
+0x4574A0: <0xFD><0x03> kontaktiert dich für\n<0xFD><0x02>. Annehmen ?
+0x4574C1: {STR_VAR_2} hat Sie kontaktiert.\nMöchten Sie {STR_VAR_1} teilen?
+0x4574C4: <0xFD><0x03> hat dich kontaktiert.\nMöchtest du <0xFD><0x02> teilen ?
+0x4574E9: {STR_VAR_2} hat Sie kontaktiert. Zu den\nMitgliedern hinzufügen?
+0x4574EC: <0xFD><0x03> hat dich kontaktiert.\nZu den Mitgliedern hinzufügen ?
+0x457512: {STR_VAR_1}!\nMitglieder OK ?
+0x457514: <0xFD><0x02> !\nOK für diese Mitglieder ?
+0x45752E: {STR_VAR_1} MODUS mit diesen\nMitgliedern abbrechen ?
+0x457530: Den MODUS <0xFD><0x02>\nmit diesen Mitgliedern abbrechen ?
+0x457553: «OK» gesendet an\n{STR_VAR_1}.
+0x45756C: Der andere Trainer scheint gerade\nnicht verfügbar zu sein…\p
+0x4575A3: Du kannst nicht mit einem zu weit\nentfernten Trainer übertragen.\p
+0x4575A4: Es ist nicht möglich, mit einem zu\nweit entfernten Trainer zu kommunizieren.\p
+0x4575DC: Der andere oder die anderen Trainer\nsind noch nicht bereit.\p
+0x457644: Ein Mitglied kann nicht länger\nverfügbar bleiben.\p
+0x4576AC: {STR_VAR_1} hat ein «OK» zurückgesendet!
+0x4576C2: {STR_VAR_1} hat deine\nAnmeldung als Mitglied akzeptiert.
+0x4576C4: <0xFD><0x02> hat deine Anmeldung\nals Mitglied akzeptiert.
+0x4576FF: {STR_VAR_1}!\nWarten auf weitere Mitglieder !
+0x45771C: Mitgliedschaft beenden ?
+0x457731: Du bist nicht mehr Mitglied.\p
+0x457734: Du bist nicht mehr Mitglied.\p
+0x4577BC: Die Verbindung per KABELLOSER\nKOMMUNIKATION wurde unterbrochen<0xB0>
+0x4577F8: Die Verbindung zu deinem Freund\nwurde unterbrochen<0xB0>
+0x457824: {STR_VAR_1} hat geantwortet: «Nein…»
+0x457860: Möchtest du den MODUS\n<0xFD><0x03> ?
+0x457879: Möchtest du den {STR_VAR_2}\nMODUS ?
+0x45787C: Möchtest du den MODUS\n<0xFD><0x03> ?
+0x4578BA: Warten auf die Antwort von\n{STR_VAR_1} bezüglich des Tauschs…
+0x4578BC: Warten auf die Antwort von <0xFD><0x02>\nzum Tausch<0xB0>
+0x457950: Verbindung mit <0xFD><0x02><0xFC><0x08><0x0F>.<0xFC><0x08><0x0F>.<0xFC><0x08><0x0F>.\n<0xFC><0x08><0x0F>.<0xFC><0x08><0x0F>.<0xFC><0x08><0x0F>.<0xFC><0x08><0x0F>.<0xFC><0x08><0x0F>.<0xFC><0x08><0x0F>.<0xFC><0x08><0x0F>.<0xFC><0x08><0x0F>.<0xFC><0x08><0x0F>.<0xFC><0x08><0x0F>.<0xFC><0x08><0x0F>.<0xFC><0x08><0x0F>.<0xFC><0x08><0x0F>.<0xFC><0x08><0x0F>.<0xFC><0x08><0x0F>.<0xFC><0x08><0x0F>.<0xFC><0x08><0x0F>.<0xFC><0x08><0x0F>.
+0x4579BC: Warte einen Moment<0xFC><0x08><0x0F>.<0xFC><0x08><0x0F>.<0xFC><0x08><0x0F>.<0xFC><0x08><0x0F>.<0xFC><0x08><0x0F>.<0xFC><0x08><0x0F>.\n<0xFC><0x08><0x0F>.<0xFC><0x08><0x0F>.<0xFC><0x08><0x0F>.<0xFC><0x08><0x0F>.<0xFC><0x08><0x0F>.<0xFC><0x08><0x0F>.<0xFC><0x08><0x0F>.<0xFC><0x08><0x0F>.<0xFC><0x08><0x0F>.<0xFC><0x08><0x0F>.<0xFC><0x08><0x0F>.<0xFC><0x08><0x0F>.<0xFC><0x08><0x0F>.<0xFC><0x08><0x0F>.<0xFC><0x08><0x0F>.<0xFC><0x08><0x0F>.<0xFC><0x08><0x0F>.<0xFC><0x08><0x0F>.
+0x457A70: Hallo! Möchten Sie etwas\nunternehmen?
+0x457A97: {STR_VAR_1}: Hallo, wir treffen uns wieder!\nWas möchtest du diesmal tun?
+0x457A98: <0xFD><0x02> : Ach, wir treffen uns wieder!\nWas möchtest du diesmal tun?
+0x457AD0: {STR_VAR_1}: Oh! {PLAYER}, hallo!\nMöchtest du etwas unternehmen?
+0x457B2A: Möchten Sie etwas unternehmen?
+0x457B2C: Möchtest du etwas unternehmen?
+0x457B4C: {STR_VAR_1} : Was möchten Sie jetzt\ntun?
+0x457BAF: {STR_VAR_1} hat dich kontaktiert.{PAUSE}
+0x457BB0: <0xFD><0x02> hat dich kontaktiert.<0xFC><0x08><0x3C>
+0x457C00: Warte auf Antwort von\n{STR_VAR_1}…
+0x457C47: Der andere Trainer hat dir seine\nTrainerkarte gezeigt.\pMöchtest du deine\nTrainerkarte zeigen?
+0x457C48: Der andere Trainer hat dir\nseine Trainerkarte gezeigt.\pMöchtest du deine\nTrainerkarte zeigen?
+0x457CA3: Der andere Trainer fordert dich zum\nKampf heraus.\pNimmst du die\nHerausforderung an?
+0x457CA4: Der andere Trainer fordert dich\nzum Kampf heraus.\pNimmst du die\nHerausforderung an?
+0x457CF6: Der andere Trainer lädt dich zum\nChatten ein.\pNimmst du die Einladung\nzum Chat an?
+0x457CF8: Der andere Trainer lädt dich\nzum Chatten ein.\pNimmst du die Einladung\nzum Chatten an?
+0x457D44: Man bietet dir an, dein\nregistriertes {DYNAMIC} Lv. {DYNAMIC} zu tauschen.\pGegen ein {DYNAMIC} Lv.\n{DYNAMIC}.\pNimmst du dieses\nTauschangebot an?
+0x457DB8: Man bietet dir an, dein registriertes Ei\nzu tauschen.\lNimmst du dieses Angebot an?
+0x457E0A: Der Chat wurde abgebrochen.\p
+0x457E0C: Das Gespräch wurde unterbrochen.\p
+0x457E28: Sie haben das Angebot abgelehnt.\p
+0x457E41: Sie haben das Angebot abgelehnt.\p
+0x457E44: Du hast das Angebot abgelehnt.\p
+0x457E5D: Der Chat ist beendet.\p
+0x457E60: Gespräch beendet.\p
+0x457EBD: {STR_VAR_1} : Hey, {PLAYER}!\nWir unterhalten uns gerade.\lMöchtest du dazukommen?
+0x457EC0: <0xFD><0x02> : Hey, <0xFD><0x01>!\nWir unterhalten uns gerade.\lMachst du mit?
+0x457EFD: Ach, hallo! Wir unterhalten uns\ngerade. Möchtest du dazukommen?
+0x457F00: Oh, hallo! Wir unterhalten uns hier.\nMöchtest du dich uns anschließen?
+0x457F3C: {STR_VAR_1} : Oh, hallo, {PLAYER}!\nWir unterhalten uns gerade.\lMöchtest du dazukommen?
+0x457FB4: Ein Kampf, hm? Na gut,\ngib mir nur etwas Zeit.
+0x457FE6: Du willst chatten, hm? Klar,\nwarte kurz.
+0x457FE8: Du willst chatten, hm?\nKlar, warte kurz.
+0x458019: Klar! Zur Begrüßung zeige ich dir\nmeine Trainerkarte.
+0x458053: Ein Kampf? Klar, aber ich\nbrauche einen Moment.
+0x458054: Ein Kampf? Klar, aber ich\nbrauche Zeit zur Vorbereitung.
+0x458087: Du willst chatten? In Ordnung,\nwarte einen Moment.
+0x458088: Du wolltest chatten?\nIn Ordnung, aber warte kurz.
+0x4580BE: Zur Vorstellung zeige ich dir\nmeine Trainerkarte.
+0x4580C0: Zur Vorstellung zeige ich dir\nmeine Trainerkarte.
+0x45812C: Danke fürs Warten!\nLass uns kämpfen!{PAUSE}
+0x458161: Na gut!\nLass uns chatten!{PAUSE}
+0x458164: Na gut!\nLass uns chatten!<0xFC><0x08><0x3C>
+0x45817E: Entschuldige die Wartezeit!\nLoslegen!{PAUSE}
+0x4581AD: Entschuldige die Wartezeit!\nLass uns chatten.{PAUSE}
+0x4581B0: Entschuldige die Wartezeit!\nLass uns chatten.<0xFC><0x08><0x3C>
+0x4581D6: Der Tausch beginnt.{PAUSE}
+0x4581D8: Der Tausch beginnt.<0xFC><0x08><0x3C>
+0x4581F6: Der Kampf beginnt.{PAUSE}
+0x4581F8: Der Kampf beginnt.<0xFC><0x08><0x3C>
+0x458217: Chat wird betreten…{PAUSE}
+0x458218: Chatzugriff<0xB0><0xFC><0x08><0x3C>
+0x4582C0: Es tut mir wirklich leid, aber meine\nPokémon fühlen sich nicht wohl…\pLass uns ein andermal kämpfen.\p
+0x458314: <0x60>À<0x45><0x08>FÀ<0x45><0x08>Hä? Meine Trainerkarte…\nWo ist sie nur hin?\lTut mir leid! Ich zeige sie dir später.\p
+0x458369: Oh? Wo habe ich nur meine\nTrainerkarte hingelegt?…\lTut mir leid! Ich zeige sie dir später.\p
+0x45836C: Oh? Wo habe ich nur meine\nTrainerkarte hingelegt?<0xB0>\lTut mir leid! Ein andermal!\p
+0x4583F8: Wenn du etwas mit mir\nunternehmen willst, sei nicht schüchtern.\p
+0x458479: Wenn du kämpfen willst, brauchst du\nzwei Pokémon unter\lLv. 30.\p
+0x45847C: Zum Kämpfen brauchst du\nzwei Pokémon unter\lLv. 30.\p
+0x4584C0: Für einen Kampf braucht man zwei\nPokémon unter Lv. 30.\p
+0x4584FB: Oh, in Ordnung.\nKomm wieder, wann du willst.\p
+0x4584FC: Oh, in Ordnung.\nKomm wieder, wann du willst!\p
+0x458527: Oh…\nKomm wieder vorbei, wann du willst.\p
+0x458528: Oh<0xB0>\nKomm vorbei, wann du willst.\p
+0x458596: Oh, tut mir leid.\nGerade zu viel zu tun.\lWir chatten ein andermal.\p
+0x458598: Oh, tut mir leid.\nIch habe gerade zu viel zu tun.\lLass uns ein andermal chatten.\p
+0x458617: Diese Attacke?\nGute Strategie!\p
+0x458618: Diese Fähigkeit, hm?\nGute Strategie!\p
+0x458643: Bravo!\nDas hat mir die Augen geöffnet!\p
+0x458644: Gut gemacht!\nIch bin sprachlos!\p
+0x458668: Oh! Wie kannst du dieses Pokémon\nin dieser Situation einsetzen?\p
+0x45869F: Dieses Pokémon… Es wurde super gut\naufgezogen!\p
+0x4586A0: Dieses Pokémon<0xB0>\nEs wurde sehr gut aufgezogen!\p
+0x4586CD: Genau! Das ist jetzt die\nrichtige Entscheidung!\p
+0x4586D0: Genau!\nDas ist die richtige Fähigkeit!\p
+0x4586F8: Genial! So kann man also\nkämpfen?\p
+0x458722: Dein Timing beim Pokémon-Wechsel\nist ausgezeichnet!\p
+0x458724: Du wechselst dein Pokémon\nim perfekten Moment!\p
+0x458799: Hör auf mit dem Unsinn! Mir tut\nder Bauch weh vor Lachen!\p
+0x45879C: Hör auf mit den Witzen!\nMir tut der Bauch weh vor Lachen!\p
+0x4587D7: Oh? So etwas\nist also passiert.\p
+0x4587D8: Oh?\nSo ist das also passiert.\p
+0x4587FB: Hmhm… Was? Das ist also,\nwas du sagst?\p
+0x4587FC: Hmhm<0xB0> Was?\nDas sagst du also?\p
+0x458828: Ach so?\nDas wusste ich nicht.\p
+0x45884C: Ahaha!\nWovon redest du?\p
+0x458868: Ja, genau! Das wollte ich\ndamit sagen.\p
+0x458896: Mit anderen Worten…\nJa! Genau das!\p
+0x458898: Anders gesagt<0xB0>\nJa! Genau das!\p
+0x458915: Ich hoffe, dich besser kennenzulernen!\p
+0x458918: Ich hoffe, dich besser kennenzulernen!\p
+0x45893A: Wir zeigen uns unsere Trainerkarten,\num uns kennenzulernen.\p
+0x45893C: Wir zeigen uns unsere Trainerkarten,\num uns kennenzulernen.\p
+0x45897B: Freut mich, dich zu treffen.\nBleib nicht fremd!\p
+0x45897C: Freut mich, dich kennenzulernen.\nKomm wieder, wann du willst!\p
+0x4589E3: Durch einen Tausch habe ich\ndieses lang ersehnte Pokémon bekommen.\p
+0x4589E4: Durch einen Tausch habe ich endlich\ndieses lang ersehnte Pokémon.\p
+0x458A22: Ich tausche Pokémon.\p
+0x458A24: Ich mache einen Pokémon-Tausch.\p
+0x458A44: Ich habe endlich das Pokémon, das ich\nwollte, durch einen Tausch bekommen!\p
+0x458A98: <0xFD><0x02> sieht sich das\nTAUSCHBRETT an.\p
+0x458AB7: Willkommen am TAUSCH-\nBRETT.\pDu kannst dein Pokémon eintragen\nund zum Tausch anbieten.\pMöchtest du eines deiner\nPokémon registrieren?
+0x458AB8: Willkommen am TAUSCHBRETT.\pDu kannst ein Pokémon eintragen\nund zum Tausch anbieten.\pMöchtest du eines von\ndeinen Pokémon eintragen?
+0x458B41: Dieses TAUSCHBRETT dient dazu, ein\nPokémon zum Tausch anzubieten.\pDu musst nur ein Pokémon zum\nTauschen registrieren.\pEin anderer Trainer kann im Gegenzug\nein Pokémon aus seinem Team anbieten.\pWir hoffen, dass du Pokémon einträgst\nund Tausche mit anderen\lTrainern machst.\pMöchtest du eines deiner\nPokémon registrieren?
+0x458B44: Dieses TAUSCHBRETT dient dazu,\nein Pokémon zum Tausch anzubieten.\pEs reicht, ein Pokémon\nfür den Tausch einzutragen.\pEin anderer Trainer kann\nein Pokémon aus seinem Team anbieten.\pWir hoffen, dass du deine Pokémon\nmit vielen\landeren Trainern tauschst.\pMöchtest du eines von\ndeinen Pokémon eintragen?
+0x458CD3: Wähle den Pokémon-Typ, den du\nim Tausch erhalten möchtest.\n
+0x458CD4: Wähle den Pokémon-Typ, den\ndu im Tausch erhalten möchtest.\n
+0x458D19: Welches Pokémon aus deinem Team\nwirst du zum Tausch anbieten?\p
+0x458D1C: Welches Pokémon aus deinem Team\nmöchtest du anbieten?\p
+0x458D52: Die Registrierung wurde abgebrochen.\p
+0x458D54: Registrierung abgebrochen.\p
+0x458D75: Die Registrierung ist abgeschlossen.\p
+0x458D78: Registrierung abgeschlossen.\p
+0x458D9A: Der Tausch wurde abgebrochen.\p
+0x458D9C: Der Tausch wurde abgebrochen.\p
+0x458DBA: Registrierung deines\n{STR_VAR_1} Lv. {STR_VAR_2} abbrechen?
+0x458DBC: Registrierung deines\n<0xFD><0x02> Lv. <0xFD><0x03> abbrechen?
+0x458DE7: Registrierung deines\nEis abbrechen?
+0x458DE8: Registrierung deines\nEis abbrechen?
+0x458E0D: Die Registrierung wurde abgebrochen.\p
+0x458E10: Die Registrierung wurde abgebrochen.\p
+0x458E6E: Möchtest du\n{STR_VAR_1} um einen Tausch bitten?
+0x458E70: Möchtest du <0xFD><0x02>\neinen Tausch anbieten?
+0x458ED0: Du hast kein Pokémon vom Typ\n{STR_VAR_2}, das {STR_VAR_1} möchte.\p
+0x458F01: Du hast kein Ei, das\n{STR_VAR_1} möchte.\p
+0x458F04: Du hast kein Ei, das\n<0xFD><0x02> interessiert.\p
+0x458F2A: {STR_VAR_1} kann gerade nicht\ngegen dein Pokémon tauschen.\p
+0x458F2C: <0xFD><0x02> kann dein Pokémon\ngerade nicht tauschen.\p
+0x458F5F: Das Pokémon von {STR_VAR_1}\nkann gerade nicht getauscht werden.\p
+0x458F60: Du kannst das Pokémon von\n<0xFD><0x02> jetzt nicht tauschen.\p
+0x458FBC: Eierhandel
+0x458FC6: {DPAD_UPDOWN}Wählen  {SE_SHOP}Beitreten  {B_BUTTON}Abbrechen
+0x458FE3: Bitte wähle einen Trainer.
+0x458FE4: Wähle einen Trainer.
+0x458FFD: Bitte wähle einen Trainer für\nden Einzelkampf.
+0x459000: Wähle einen Trainer für\nden Einzelkampf.
+0x45902D: Bitte wähle einen Trainer für\nden Doppelkampf.
+0x459030: Wähle einen Trainer für\nden Doppelkampf.
+0x45905D: Bitte wähle den Anführer für\nden Mehrfachkampf.
+0x459060: Wähle den Anführer für\nden Mehrfachkampf.
+0x45908D: Bitte wähle den Trainer, mit\ndem du tauschen möchtest.
+0x459090: Wähle den Trainer, mit\ndem du tauschst.
+0x4590B9: Bitte wähle den Trainer, der\nWunderkarten teilt.
+0x4590BC: Wähle den Trainer, der\nGeheimkarten teilt.
+0x4590F3: Bitte wähle den Trainer, der\nWunder-Infos teilt.
+0x4590F4: Wähle den Trainer, der\nGeheim-Infos teilt.
+0x45912A: Mini-Pokémon-Sprung!\nBitte wähle den Anführer.
+0x45912C: Spring, Mini-Pokémon!\nWähle den Anführer.
+0x45915E: Beerenstampfen! Bitte\nwähle den Anführer.
+0x459160: Beerenstampfen!\nWähle den Anführer.
+0x459187: Dodri-Beerenernte!\nBitte wähle den Anführer.
+0x459188: Dodri-Beerenernte!\nWähle den Anführer.
+0x459235: Warte auf Antwort von {STR_VAR_1}…
+0x459250: {STR_VAR_1} wurde eingeladen, dich als\nMitglied einzutragen. Bitte warten.
+0x45928C: Warte auf Antwort des drahtlosen\nKommunikationssystems.
+0x4592E8: Es scheint derzeit keine\ngeteilte Karte zu geben.
+0x459311: Derzeit keine\nInfo.
+0x459314: Derzeit keine geteilten\nNews.
+0x45934B: Chat
+0x459351: Grüße
+0x45935E: Verlassen
+0x459365: Verlassen
+0x45936D: Informationen
+0x459375: Name{CLEAR_TO}Gewünscht{CLEAR_TO}Angebot{CLEAR_TO}LLv.
+0x459394: Einzelkampf
+0x4593A2: Doppelkampf
+0x4593B2: Mehrfachkampf
+0x4593C1: Pokémon-Tausch
+0x4593D3: Chat
+0x4593D9: Karten
+0x4593E2: Wunderkarten
+0x4593F1: Wunder-Infos
+0x459400: Pokémon-Sprung
+0x45940D: Beerenstampfen
+0x45942A: Suche
+0x459449: Normale Karte.
+0x45944C: Eine normale Karte.
+0x459460: Das ist eine Bronzekarte!
+0x459474: Das ist eine Kupferkarte!
+0x459488: Das ist eine Silberkarte!
+0x45949C: Das ist eine Goldkarte!
+0x459541: {DYNAMIC} : Freut mich, dich kennengelernt zu haben!{PAUSE}
+0x459544: <0xF7><0x01> : Freut mich, dich gesehen zu haben!<0xFC><0x08><0x3C>
+0x459561: {DYNAMIC} : Freut mich, dich zu sehen!{PAUSE}
+0x459564: <0xF7><0x01> : Sehr erfreut!<0xFC><0x08><0x3C>
+0x4595B0: Kartenlesen abgebrochen.
+0x463DBC: Hart
+0x463DC2: Einsam
+0x463DC9: Mutig
+0x463DCF: Frech
+0x463DD7: Keck
+0x463DDF: Kühn
+0x463DE4: Sachte
+0x463DEB: Ruhig
+0x463DF3: Pfiffig
+0x463DFA: Nachlässig
+0x463DFE: Zaghaft
+0x463E04: Hastig
+0x463E0A: Ernst
+0x463E12: Froh
+0x463E18: Naiv
+0x463E1E: Sanftmütig
+0x463E25: Still
+0x463E2A: Ruhig
+0x463E30: Wirr
+0x463E38: Hitzig
+0x463E3D: Zaghaft
+0x463E42: Sanft
+0x463E49: Frei
+0x463E4F: Behutsam
+0x463E57: Skurril
+0x47B7AB: EŒ   GALLOPA
+0x47B85B: Eà   WONNEIRA
+0x47E277: EŒ   STARMIE
+0x47EDEB: EÔ   STARMIE
+0x47EE9B: ÉÔ   LAPRAS
+0x4814AB: EÊ SLEIMOK
+0x482874: Der Gegner wird mit einem\nharten Hieb angegriffen. Er hat eine hohe\nVolltrefferquote\n.
+0x4828BD: Der Gegner wird mehrmals\nvor und zurück geohrfeigt,\nzwei bis fünf\nMal.
+0x4828FF: Der Gegner wird mit einer\nSchlagserie getroffen, die\nzwei bis fünf Mal\ntrifft.
+0x482946: Der Gegner wird von einem\nSchlag getroffen, der mit\nmuskulöser Kraft\nausgeführt wird.
+0x482985: Viele Münzen werden auf\nden Gegner geschleudert.\nNach dem Kampf gibt es\nGeld dazu.
+0x4829C9: Der Gegner wird mit einer\nfeurigen Faust getroffen. Das\nkann beim Gegner eine\nVerbrennung verursachen.
+0x482A11: Der Gegner wird mit einer\neisigen Faust getroffen. Das\nkann den Gegner\neinfrieren.
+0x482A53: Der Gegner wird mit einer\nelektrisierten Faust getroffen . Das\nkann den Gegner\nparalysieren.
+0x482AA0: Harte, spitze und scharfe\nKrallen zerkratzen\nden Gegner.
+0x482ACD: Riesige, beeindruckende\nScheren packen und\nquetschen den Gegner.
+0x482B00: Ein bösartiger, reißender\nAngriff mit Scheren.\nDer Gegner wird bei einem\nTreffer kampfunfähig.
+0x482B46: Windklingen treffen den\nGegner in der 2. Runde. Die\nTrefferquote für Volltreffer ist\nhoch.
+0x482B94: Ein wilder Kampftanz.\nDas erhöht plötzlich den\nWert der\nAngriff-Statistik .
+0x482BD5: Ein einfacher Angriff. Er\nkann verwendet werden, um\ndünne Bäume und Gras\nzu fällen.
+0x482C16: Trifft den Gegner\nmit einer Windböe,\ndie von Flügeln\nerzeugt wird.
+0x482C4F: Der Gegner wird von großen,\nimposanten ausgebreiteten\nFlügeln getroffen.
+0x482C89: Der Gegner wird gezwungen,\nmit einem Verbündeten zu wechseln. In\nder Wildnis endet der\nKampf.
+0x482CD3: Attacke über 2 Runden, die\nin der 2. Runde trifft. Nutze sie,\num in jede beliebige\nStadt zu fliegen.
+0x482D1D: Ein langer Körper oder Tentakel\nwird benutzt, um den Gegner\nzwei bis fünf Runden lang\nzu fesseln.
+0x482D66: Der Gegner wird mit einem\nlangen Schwanz, Ranken\nusw. getroffen.
+0x482D96: Der Gegner wird mit dünnen\nRanken getroffen, die wie\nPeitschen aussehen. .
+0x482DC8: Der Gegner wird mit einem\ngroßen Fuß zertrampelt. Das\nkann ihn erschrecken lassen.
+0x482E08: Zwei Beine werden benutzt,\num schnell hintereinander\nzwei Tritte in derselben\nRunde auszuteilen.
+0x482E45: Der Gegner wird von einem\nTritt getroffen, der mit\nmuskulöser Kraft\nausgeführt wird.
+0x482E83: Der Anwender springt hoch\nund tritt dann zu. Trifft er\nnicht, verletzt sich der\nAnwender selbst.
+0x482ECC: Ein schneller Tritt\nwährend einer Rolle. Das\nkann ihn erschrecken lassen.
+0x482F0A: Viel Sand wird dem\nGegner ins Gesicht\ngeworfen, was seine Genauigkeit senkt\n.
+0x482F4C: Der Anwender streckt den\nKopf vor und rammt ihn. Das\nkann ihn erschrecken lassen.
+0x482F8F: Der Gegner wird mit einem\nsehr spitzen Horn\ngetroffen, um Schaden\nzuzufügen.
+0x482FD0: Der Gegner wird mehrmals\nmit einem Horn oder\nSchnabel getroffen, zwei bis fünf\nMal.
+0x483014: Das Horn dreht sich wie\nein Bohrer beim Aufprall.\nDer Gegner wird bei einem\nTreffer kampfunfähig.
+0x48305C: Ein physischer Angriff, bei\ndem der Anwender seinen\ngesamten Körper gegen\nden Gegner wirft.
+0x4830A2: Der Anwender lässt seinen\ngesamten Körper auf den Gegner fallen .\nDas kann den Gegner\nparalysieren.
+0x4830EB: Ein langer Körper oder Ranken\nwerden benutzt, um den Gegner\nzwei bis fünf Runden lang\neinzuwickeln.
+0x483130: Ein rücksichtsloser\nVollkörper-Angriff, der auch\nden Anwender ein wenig\nverletzt .
+0x483178: Der Anwender tobt zwei\nbis drei Runden lang,\nund wird danach\nverwirrt.
+0x4831BF: Ein rücksichtsloser Tackle,\nder das eigene Leben riskiert\nund auch dem Anwender ein\nwenig schadet .
+0x483203: Der Anwender wedelt\nsanft mit dem Schwanz,\nwas die Verteidigung des\nGegners senkt.
+0x483249: Der Gegner wird mit einem\ngiftigen Stachel gestochen.\nDas kann den Gegner\nvergiften.
+0x48328B: Der Gegner wird zweimal\nmit den Stacheln der\nVorderbeine gestochen . Das kann den\nGegner vergiften.
+0x4832D2: Spitze Nadeln werden\nauf den Gegner geschossen\nund treffen zwei bis fünf Mal\nhintereinander.
+0x483314: Der Gegner erhält einen\neinschüchternden Blick, der\nseinen Verteidigungs-\nWert senkt.
+0x483358: Der Anwender beißt mit\nbösartigen Fängen zu. Das\nkann ihn erschrecken lassen.
+0x483397: Er knurrt auf niedliche\nArt, um den Angriffswert\ndes Gegners zu\nsenken.
+0x4833DC: Der Gegner wird gezwungen,\nmit einem Verbündeten zu wechseln. In\nder Wildnis endet der\nKampf.
+0x483426: Ein beruhigendes Lied mit\nsanfter Stimme versetzt\nden Gegner in einen tiefen\nSchlaf.
+0x48346C: Der Anwender erzeugt\nseltsame Schallwellen.\nDas kann den Gegner\nverwirren .
+0x4834A8: Der Gegner wird von einer\nSchockwelle getroffen, die\nimmer 20- KP\nSchaden verursacht.
+0x4834ED: Für einige Runden\nhindert es den Gegner\ndaran, seine zuletzt\nbenutzte Attacke einzusetzen.
+0x483534: Der Gegner wird mit\nstarker Säure bespritzt, die\ndie Haut zersetzt und seine\nVerteidigung senken kann.
+0x483580: Der Gegner wird mit\nkleinen Flammen angegriffen.\nDer Gegner kann dabei eine\nVerbrennung erleiden.
+0x4835C2: Der Gegner wird mit\nintensiven Flammen verbrannt.\nDer Gegner kann dabei eine\nVerbrennung erleiden.
+0x483606: Die verbündete Gruppe wird\nvon einem Nebel geschützt, der\nSenkungen von Statuswerten\nverhindert .
+0x48364B: Der Gegner wird\nmit viel Wasser\ngetroffen, das mit Wucht\naus dem Mund gestoßen wird.
+0x483693: Eine große Menge Wasser\nwird mit hohem Druck\nauf den Gegner geschleudert\n.
+0x4836D6: Eine große Welle bricht\nüber dem Gegner zusammen. Kann\nauch benutzt werden, um\nWasser zu überqueren.
+0x48371F: Der Gegner wird mit einem\nEisstrahl getroffen. Er kann\nden Gegner komplett\neinfrieren.
+0x483760: Der Gegner wird mit einem\nSchneesturm attackiert. Er\nkann den Gegner komplett\neinfrieren.
+0x4837A1: Ein eigenartiger Strahl\nwird auf den Gegner\nabgefeuert. Er kann den\nGegner verwirren.
+0x4837E3: Ein Strahl aus Blasen\ntrifft den Gegner. Das kann\nden Initiative-Wert des\nGegners senken.
+0x48382A: Ein\nRegenbogenstrahl. Kann\nden Angriffswert des\nGegners senken.
+0x48386D: Ein sehr starker Angriff,\nnach dem sich der Anwender\nin der folgenden Runde\nausruhen muss.
+0x4838B3: Der Gegner wird\nmit einem spitzen\nSchnabel oder Horn\ngetroffen.
+0x4838EA: Ein Korkenzieher-\nAngriff, bei dem der spitze\nSchnabel wie ein\nBohrer wirkt.
+0x483927: Ein waghalsiger Wurf\ndes ganzen Körpers, der\nauch den Anwender ein\nwenig verletzt.
+0x48396E: Ein niedriger, stolpernder\nTritt, der bei schwereren\nGegnern mehr Schaden verursacht\n.
+0x4839AE: Eine Vergeltungsattacke,\ndie jeden physischen\nTreffer mit doppeltem\nSchaden kontert.
+0x4839F8: Ein von der Schwerkraft\nangetriebener Wurf, der\nSchaden in Höhe des Levels\ndes Anwenders verursacht.
+0x483A3A: Trifft den Gegner mit\nmaximaler Kraft. Kann\nauch benutzt werden, um\nFelsen zu bewegen.
+0x483A82: Ein Angriff, der die Hälfte\ndes verursachten Schadens\nabsorbiert, um die\nKP wiederherzustellen.
+0x483AC5: Ein starker Angriff, der\ndie Hälfte des verursachten\nSchadens absaugt, um die\nKP wiederherzustellen.
+0x483B0C: Ein Samen wird auf dem\nGegner gepflanzt, um jede\nRunde KP für den\nAnwender zu stehlen.
+0x483B57: Der Körper des Anwenders\nwird zum Wachsen gezwungen,\nwas den Wert der\nSp. Angriff-Statistik erhöht.
+0x483B94: Der Gegner wird mit einem\nscharfen Blatt getroffen. Er hat\neine hohe Volltrefferquote\n.
+0x483BDA: Eine Attacke über 2 Runden,\ndie den Gegner in der 2. Runde\nmit aufgesaugter Energie\nzur Explosion bringt.
+0x483C22: Eine Wolke aus giftigem\nStaub wird verteilt. Sie\nkann den Gegner vergiften\n.
+0x483C5D: Lähmender Staub wird\nwild verstreut.\nEr kann den Gegner\nparalysieren.
+0x483C9B: Einschläfernder Staub\nwird in großer Menge um\neinen Gegner herum\nverteilt.
+0x483CDB: Der Anwender greift zwei\nbis drei Runden lang mit\nBlütenblättern an und wird\ndanach verwirrt.
+0x483D24: Der Gegner wird mit\nSeilen aus dem Mund\ngefesselt, um seine\nInitiative zu senken.
+0x483D6B: Der Gegner wird von einer\nSchockwelle getroffen, die\nimmer 40- KP\nSchaden verursacht.
+0x483DB0: Der Gegner wird in einer\nintensiven Feuerspirale\ngefangen, die zwei bis fünf\nRunden lang wütet.
+0x483DFE: Ein elektrischer\nSchockangriff, der auch\nden Gegner\nparalysieren kann.
+0x483E3E: Ein starker elektrischer\nAngriff, der auch\nden Gegner\nparalysieren kann.
+0x483E80: Ein schwacher elektrischer\nSchock, der bei einem\nTreffer garantiert eine\nParalyse verursacht.
+0x483EC2: Ein brutaler Blitz-\nAngriff, der auch\nden Gegner\nparalysieren kann.
+0x483F03: Der Gegner wird mit\neinem Regen kleiner,\nleicht zu werfender\nSteine angegriffen.
+0x483F44: Ein Erdbeben, das alle\nPokémon im Kampf trifft,\nmit Ausnahme des\nAnwenders.
+0x483F89: Der Gegner fällt in\neinen Spalt. Der Gegner\nwird bei einem Treffer\nkampfunfähig.
+0x483FC7: Ein Angriff, der in der 2.\nRunde trifft. Kann auch\nbenutzt werden, um Verliese\nzu verlassen.
+0x48400F: Vergiftet den Gegner\nschwer. Der Schaden\nsteigt mit jeder\nRunde.
+0x484058: Ein schwacher\ntelekinetischer Angriff, der\nauch den Gegner\nverwirren kann.
+0x484098: Ein starker\ntelekinetischer Angriff. Das\nkann auch den Sp. Verteidigung-\nWert des Gegners senken.
+0x4840DF: Hypnotische Suggestion wird\ngenutzt, um den Gegner in\neinen tiefen Schlaf zu versetzen\n.
+0x484123: Der Anwender meditiert,\num seine Kraft zu wecken\nund seinen\nAngriffswert zu erhöhen .
+0x484165: Der Anwender entspannt\nund erleichtert seinen\nKörper, um seine\nInitiative stark zu erhöhen.
+0x4841A8: Ein schneller, fast\nunsichtbarer Angriff, der\ngarantiert zuerst\ntrifft.
+0x4841E9: Ein Angriff, der stärker\nwird, jedes Mal wenn der\nAnwender im Kampf\ngetroffen wird.
+0x48422E: Ermöglicht die Flucht vor\njedem wilden Pokémon. Teleportiert\nzum zuletzt besuchten\nPokémon-Center.
+0x484278: Ein Angriff mit einer\nFata Morgana, der Schaden\nin Höhe des Levels des\nAnwenders verursacht.
+0x4842C0: Der Anwender kopiert die\nletzte vom Gegner benutzte\nAttacke für den Rest\ndes Kampfes.
+0x48430A: Ein durchdringender Schrei\nwird ausgestoßen, um die\nVerteidigung des Gegners\nerheblich zu senken.
+0x484353: Erschafft illusorische\nKlone, um den Ausweich-\nWert des\nAnwenders zu erhöhen.
+0x484398: Selbstheilung, die bis zu\nder Hälfte der maximalen\nKP des\nAnwenders wiederherstellt.
+0x4843E5: Spannt alle\nKörpermuskeln an, um\nden Verteidigungswert\nzu erhöhen.
+0x48442E: Der Anwender komprimiert\nalle Zellen seines Körpers,\num seinen Ausweich-\nWert zu erhöhen.
+0x484476: Eine verdunkelnde Wolke\naus Rauch oder Tinte\nsenkt die Genauigkeit\ndes Gegners.
+0x4844B5: Der Gegner wird einem\nunheimlichen Strahl\nausgesetzt, der\nVerwirrung auslöst.
+0x4844F3: Der Anwender zieht seinen\nKörper in seine harte Schale\nzurück , wodurch sich sein\nVerteidigungswert erhöht .
+0x48453C: Kringelt sich zusammen,\num seine Schwachstellen\nzu verbergen und erhöht\nseine Verteidigung.
+0x484580: Der Anwender erschafft eine\nfeste Mauer, die seinen\nVerteidigungswert stark\nerhöht .
+0x4845C5: Eine Lichtmauer reduziert\nden Schaden von Spezial-\nAttacken für fünf\nRunden.
+0x484606: Entfernt alle\nStatusveränderungen bei\nallen am Kampf beteiligten Pokémon\n.
+0x484647: Eine Lichtmauer reduziert\nden Schaden von\nphysischen Attacken für\nfünf Runden.
+0x484689: Atmet tief ein und\nkonzentriert sich, um\nseine Volltreffer-\nQuote zu erhöhen.
+0x4846D3: Der Anwender erträgt\nAngriffe zwei Runden\nlang und kontert dann\ndoppelt.
+0x484715: Bewegt einen Finger und\nstimuliert das Gehirn, eine\nbeliebige Attacke\nzufällig einzusetzen.
+0x48475E: Kontert die letzte vom\nGegner benutzte Attacke\nmit derselben\nAttacke.
+0x4847A2: Der Anwender explodiert,\num schweren Schaden\nzuzufügen, wobei er sogar\nkampfunfähig wird.
+0x4847E8: Ein großes Ei wird mit\ngroßer Kraft auf den\nGegner geschleudert, um\nSchaden zuzufügen.
+0x48482D: Der Gegner wird mit einer\nlangen Zunge geleckt und\ngetroffen . Das kann\nauch paralysieren.
+0x484871: Der Gegner wird mit\nAbgasen angegriffen. Das\nkann den Gegner auch\nvergiften.
+0x4848B5: Giftiger Schlamm wird\nauf den Gegner geworfen. Er\nkann das Ziel\nvergiften.
+0x4848F2: Der Gegner wird mit einem in der\nHand gehaltenen Knochen geschlagen.\nDas kann ihn erschrecken lassen.
+0x48493B: Der Gegner wird von einer\nintensiven Flamme getroffen. Sie\nkann beim Ziel eine\nVerbrennung verursachen.
+0x484986: Ein starker Ansturm-Angriff\n. Kann auch benutzt werden,\num einen Wasserfall zu\nerklimmen.
+0x4849CA: Der Gegner wird zwei bis\nfünf Runden lang von der\nSchale des Anwenders\neingeklemmt und gepresst.
+0x484A15: Sternenförmige Strahlen\ntreffen alle Gegner\nund verfehlen\nniemals.
+0x484A57: Der Anwender erhöht\nseine Verteidigung in der 1. Runde\nund greift dann in der 2.\nRunde an.
+0x484AA2: Scharfe Stacheln werden\nauf den Gegner geschossen,\num zwei bis fünf Mal\nzu treffen.
+0x484AE1: Der Gegner wird mit\nlangen Tentakeln oder\nRanken angegriffen. Das kann\ndie Initiative senken.
+0x484B27: Vergisst etwas\nund erhöht den\nSp. Verteidigung-\nWert stark.
+0x484B5B: Der Anwender lenkt den\nGegner ab, indem er einen\nLöffel verbiegt. Das kann die\nGenauigkeit senken.
+0x484BA1: Heilt den Anwender\nbis zur Hälfte seiner\nmaximalen KP. Kann auch\neinen Verbündeten heilen.
+0x484BEB: Ein kräftiger springender\nKnietritt . Bei einem\nFehlschlag verletzt sich\nder Anwender.
+0x484C27: Der Anwender schüchtert\nden Gegner mit der\nZeichnung auf seinem Bauch\nein, um Paralyse auszulösen.
+0x484C75: Absorbiert die Hälfte des\nSchadens, den es einem\nschlafenden Gegner zufügt,\num die eigenen KP wiederherzustellen.
+0x484CBB: Der Gegner wird mit\neiner Wolke aus\ngiftigem Gas bespritzt, die\nihn vergiften kann.
+0x484D01: Runde Objekte werden\nauf den Gegner geworfen,\num zwei bis fünf Mal\nzu treffen.
+0x484D42: Ein Angriff, der die Hälfte\ndes verursachten Schadens\nabsorbiert, um die\nKP wiederherzustellen.
+0x484D85: Der Anwender zwingt dem\nGegner mit einer\nfurchteinflößenden Miene einen Kuss\nauf, der Schlaf auslöst.
+0x484DCD: Angriff in der 2. Runde\nmit hoher Volltreffer-\nQuote. Kann den Gegner\nzum Zurückschrecken bringen.
+0x484E18: Der Anwender verwandelt sich\nin eine Kopie des Gegners mit\ndemselben Satz an\nAttacken.
+0x484E60: Ein Strahl aus Blasen\ntrifft den Gegner. Das kann\nden Initiative-Wert des\nGegners senken.
+0x484EA4: Der Gegner wird mit einem\nrhythmischen Schlag\ngetroffen, der ihn\nverwirren kann.
+0x484EE5: Der Anwender verstreut\nBöen aus feinen\nSporen, die Schlaf\nauslösen.
+0x484F20: Ein greller Lichtblitz, der\ndie Genauigkeit des Gegners\nsenkt. Erhellt auch\nHöhlen.
+0x484F6A: Der Gegner wird von einer\nseltsamen, warmen Energiewelle\nmit wechselnder Stärke\ngetroffen.
+0x484FB5: Der Anwender platscht und\nspritzt umher, ohne\nirgendeine Wirkung zu erzielen.
+0x484FF8: Der Anwender verändert seine\nZellstruktur, um sich zu\nverflüssigen und seine\nVerteidigung stark zu erhöhen.
+0x48503F: Der Gegner wird mit einer\ngroßen Schere gehämmert. Die\nAttacke trifft mit hoher\nWahrscheinlichkeit kritisch.
+0x48508B: Der Anwender explodiert und\nfügt dabei gewaltigen Schaden\nzu, auch wenn er dabei\nselbst kampfunfähig wird.
+0x4850D4: Der Gegner wird mit scharfen\nKrallen oder Sicheln zwei\nbis fünf Mal\nattackiert.
+0x485114: Der Anwender wirft einen\nKnochen, der den Gegner\neinmal trifft und beim\nZurückfliegen erneut.
+0x48515E: Der Anwender schläft zwei\nRunden, um alle KP\nwiederherzustellen und\nStatusprobleme zu heilen.
+0x4851AD: Große Felsbrocken werden auf\nden Gegner geschleudert. Das\nkann ihn zum Zurückschrecken bringen.
+0x4851EF: Der Gegner wird mit scharfen\nZähnen angegriffen. Das kann\nihn zum Zurückschrecken bringen.
+0x485231: Der Anwender verringert seine\nPolygonzahl, um die Kanten\nzu schärfen und seinen\nAngriff zu erhöhen.
+0x485277: Der Anwender ändert seinen\nTyp, um dem Typ einer\nseiner eigenen Attacken zu\nentsprechen.
+0x4852B8: Ein gleichzeitiger Angriff\nmit 3 Strahlen, der den\nGegner lähmen, verbrennen\noder einfrieren kann.
+0x485301: Der Anwender greift mit\nscharfen Zähnen an und\nhalbiert die KP des\nGegners.
+0x48533C: Der Gegner wird mit Krallen\noder Ähnlichem zerschnitten.\nDie Attacke trifft mit\nhoher Wahrscheinlichkeit kritisch.
+0x485382: Der Anwender erschafft einen\nDouble, indem er ein\nViertel seiner maximalen KP\neinsetzt.
+0x4853BE: Eine Attacke, die nur\neingesetzt wird, wenn keine\nAP mehr übrig sind. Sie\nverletzt auch den Anwender.
+0x485405: Diese Attacke kopiert die\nletzte vom Gegner\neingesetzte Attacke und\nverschwindet danach.
+0x485446: Ein Angriff mit 3 Tritten,\nder mit jedem weiteren\nTreffer stärker\nwird.
+0x48548B: Eine Attacke, die dem Gegner\nsein Item stehlen kann,\nwenn der Anwender selbst\nkeines trägt.
+0x4854D6: Der Gegner wird mit klebrigem\nFaden gebunden, damit er\nweder fliehen noch\nausgewechselt werden kann.
+0x48551D: Der Anwender liest die\nAbsicht des Gegners, um\nsicherzustellen, dass die\nnächste Attacke trifft.
+0x485560: Ein schlafender Gegner erleidet\neinen Albtraum, der ihm\njede Runde Schaden\nzufügt.
+0x4855AA: Der Anwender rammt den Gegner\nmit einer Flammenladung.\nDas kann eine\nVerbrennung verursachen.
+0x4855E9: Eine Attacke, die nur\neinsetzbar ist, wenn der\nAnwender schläft. Kann den\nGegner zurückschrecken lassen.
+0x48562F: Wirkt bei Geister-Pokémon\nanders als bei allen\nanderen\nTypen.
+0x485679: Eine verzweifelte Attacke, die\nstärker wird, je weniger\nKP dem Anwender noch\nbleiben.
+0x4856C1: Der Anwender ändert seinen Typ,\num gegen die zuletzt\nerlittene Attacke resistent\nzu werden.
+0x48570C: Ein Luftwirbel wird auf den\nGegner geschleudert. Die\nAttacke trifft mit hoher\nWahrscheinlichkeit kritisch.
+0x485752: Watteartige Sporen haften\nsich an den Gegner und\nsenken seine Initiative\nstark.
+0x485798: Ein wilder Rundumschlag, der\nstärker wird, je weniger\nKP dem Anwender noch\nbleiben.
+0x4857DF: Ein Schlag, der dem Gegner\n2 bis 5 AP der zuletzt\neingesetzten Attacke\nabzieht.
+0x48581E: Der Gegner wird mit einer\nSchneeböe getroffen. Das\nkann ihn\neinfrieren.
+0x485857: Ermöglicht das Ausweichen\nvor allen Attacken. Kann\nfehlschlagen, wenn\nhintereinander eingesetzt.
+0x4858A1: Ein Schlag mit\nblitzschneller\nGeschwindigkeit. Trifft\ngarantiert zuerst.
+0x4858E2: Erschreckt den Gegner mit\neiner furchterregenden\nGrimasse, die seine\nInitiative stark senkt.
+0x485923: Der Anwender nähert sich dem\nGegner auf entwaffnende\nWeise und trifft danach\nohne Fehl.
+0x48596B: Der Anwender küsst den\nGegner mit süßer\nZärtlichkeit, die ihn\nverwirrt.
+0x4859AE: Maximiert den Angriff auf\nKosten der Hälfte der\nmaximalen KP des\nAnwenders.
+0x4859F2: Schmutziger Schlamm wird auf\nden Gegner geworfen. Er\nkann das Ziel\nvergiften.
+0x485A30: Schleudert Schlamm ins\nGesicht des Gegners. Fügt\nSchaden zu und senkt die\nGenauigkeit.
+0x485A7A: Spritzt Tinte in das\nGesicht oder die Augen\ndes Gegners, um die\nGenauigkeit zu senken.
+0x485AC1: Eine Stachelfalle wird rund\num das gegnerische Team\ngelegt, um ankommende\nGegner zu verletzen.
+0x485B0C: Eine elektrische Explosion\nwird wie ein Kanonenschuss\nabgefeuert, um Schaden\nzuzufügen und zu lähmen.
+0x485B55: Hebt jegliche Bemühungen des\nGegners auf, seine\nAusweichfähigkeit zu\nerhöhen.
+0x485B9C: Wird der Anwender kampfunfähig,\nwird auch der Gegner, der\nden entscheidenden Treffer\nlandet, kampfunfähig.
+0x485BDE: Jeder Kämpfer, der dies\nhört, wird nach drei\nRunden kampfunfähig, es\nsei denn er wird ausgewechselt.
+0x485C24: Ein eisiger Wind wird zum\nAngriff genutzt. Er senkt\nauch die\nInitiative.
+0x485C66: Ermöglicht das Ausweichen\nvor allen Attacken. Kann\nfehlschlagen, wenn\nhintereinander eingesetzt.
+0x485CB0: Der Anwender schlägt den\nGegner mit einem Knochen\nin der Hand zwei bis\nfünf Mal.
+0x485CF0: Fixiert den Gegner, damit\ndie nächste Attacke\nnicht\ndaneben geht.
+0x485D30: Der Anwender tobt zwei bis\ndrei Runden lang und\nwird danach\nverwirrt.
+0x485D77: Ein Sandsturm über 5\nRunden, der allen Typen\naußer Gestein, Boden und\nStahl schadet.
+0x485DC1: Ein brutaler Angriff, der die\nHälfte des verursachten\nSchadens absorbiert, um\ndie KP wiederherzustellen.
+0x485E09: Der Anwender übersteht jeden\nTreffer mit 1 KP Rest.\nKann fehlschlagen, wenn\nhintereinander eingesetzt.
+0x485E55: Bezaubert den Gegner mit\neiner niedlichen Pose und\nsenkt seinen Angriff\nstark.
+0x485EA0: Ein Rollangriff über 5\nRunden, der bei jedem\nTreffer stärker\nwird.
+0x485EE1: Eine zurückhaltende Attacke,\ndie dem Gegner immer\nmindestens 1 KP\nübrig lässt.
+0x485F24: Eine Attacke, die den Gegner\nverwirrt, aber auch\nseinen Angriff drastisch\nerhöht.
+0x485F6C: Heilt den Anwender um bis\nzu die Hälfte seiner\nmaximalen KP. Kann auch\neinen Verbündeten heilen.
+0x485FB6: Ein elektrisch geladener\nTackle, der den Gegner\nauch lähmen\nkann.
+0x485FF5: Eine Attacke, die mit jedem\naufeinanderfolgenden\nTreffer stärker\nwird.
+0x48602B: Schlägt mit stählernen\nFlügeln zu. Kann auch die\nVerteidigung des Anwenders\nerhöhen.
+0x486075: Der Gegner wird mit einem\nbösen Blick fixiert, der\nihn an der Flucht\nhindert.
+0x4860B7: Ist der Gegner vom anderen\nGeschlecht, verliebt er\nsich und greift nur\nselten an.
+0x486105: Während er schläft, setzt\nder Anwender zufällig eine\nseiner bekannten Attacken\nein.
+0x486145: Eine beruhigende Glocke\nertönt und heilt\nStatusprobleme bei allen\nVerbündeten.
+0x486187: Diese Attacke wird stärker,\nje mehr der Anwender\nseinen Trainer\nmag.
+0x4861D1: Der Gegner erhält ein\nfalsches Geschenk. Manchmal\nstellt es aber seine KP\nwieder her.
+0x48621B: Diese Attacke wird stärker,\nje weniger der Anwender\nseinen Trainer\nmag.
+0x486265: Schützt das Team fünf\nRunden lang vor\njeglichen\nStatusproblemen.
+0x4862AB: Der Anwender addiert seine KP\nzu denen des Gegners und\nteilt die Gesamt-KP\ndann gleichmäßig auf.
+0x4862F3: Ein mystischer und\nmächtiger Feuerangriff,\nder eine Verbrennung\nverursachen kann.
+0x486330: Eine Attacke, die den Boden\nerbeben lässt und alle\nstehenden Pokémon trifft.\nIhre Stärke variiert.
+0x486378: Der Gegner wird mit der\nvollen Kraft des Anwenders\ngetroffen. Das verwirrt\nihn, wenn es trifft.
+0x4863C7: Ein brutaler Rammangriff,\nausgeführt mit einem harten\nund beeindruckenden\nHorn.
+0x48640B: Der Gegner wird von einem\nunglaublichen Windstoß\ngetroffen, der auch\nlähmen kann.
+0x486455: Der Anwender verlässt das\nFeld und überträgt alle\nStatusveränderungen auf\nden neuen Kämpfer.
+0x48649F: Zwingt den Gegner, die\nzuletzt eingesetzte Attacke\nzwei bis sechs Runden\nlang zu wiederholen.
+0x4864E8: Eine offensive Attacke, die\nsehr effektiv gegen einen\nfliehenden Gegner\nist.
+0x486532: Eine Attacke, die den\nAnwender von Umklammerung,\nFesselung, Egelsamen und\nStacheln befreit.
+0x486579: Lockt den Gegner an und\nsenkt seine\nAusweichfähigkeit. Lockt\nauch wilde Pokémon an.
+0x4865BF: Ein Angriff mit einem\nstählernen Schweif. Kann\ndie Verteidigung des\nGegners senken.
+0x486606: Ein Angriff mit stählernen\nKrallen. Kann auch den\nAngriff des Anwenders\nerhöhen.
+0x486651: Lässt den Anwender nach dem\nGegner angreifen, kann\naber niemals\ndaneben gehen.
+0x486693: Stellt die KP des\nAnwenders wieder her.\nMenge abhängig vom\nWetter.
+0x4866DE: Stellt die KP des\nAnwenders wieder her.\nMenge abhängig vom\nWetter.
+0x486729: Stellt die KP des\nAnwenders wieder her.\nMenge abhängig vom\nWetter.
+0x486774: Eine einzigartige\nAttacke, deren Typ\nvom\nAnwender abhängt.
+0x4867B7: Trifft den Gegner\nzweimal. Hohe\nkritische\nTrefferquote.
+0x4867FB: Eine heftige Böe\nattackiert den Gegner.\nKann ihn zum Zurückschrecken bringen.
+0x48683A: Starker Regen\nhält fünf Runden\nan und\nverstärkt Wasser-Attacken.
+0x48687C: Die Sonne brennt\nfünf Runden und\nverstärkt\nFeuer-Attacken.
+0x4868B8: Zerbeißt den Gegner\nmit Zähnen. Kann\nseine Verteidigung\nsenken.
+0x4868FE: Ein Konter, der das\nDoppelte der erlittenen\nSpezial-Attacken\nzurückschleudert.
+0x486941: Hypnotisiert sich selbst,\num jede\nStatusveränderung des\nGegners zu kopieren.
+0x48698A: Ein blitzschneller\nAngriff, der vor\nallen anderen\nzuschlägt.
+0x4869CF: Uralte Kraft für\nden Angriff. Kann\nauch alle\nWerte erhöhen.
+0x486A1B: Eine Schattenkugel wird\ngeschleudert. Kann die\nSp. Verteidigung des\nGegners senken.
+0x486A62: Zwei Runden nach dem\nEinsatz trifft es\nden Gegner\npsychisch.
+0x486AA6: Eine Attacke, die die\nVerteidigung senkt. Zerbricht\nauch rissige\nFelsen.
+0x486AEF: Fängt den Gegner 2 bis\n5 Runden lang in einem\nschnellen, grausamen\nStrudel.
+0x486B36: Das ganze Team greift\nan. Je mehr\nVerbündete, desto\nstärker der Treffer.
+0x486B7E: Trifft zuerst und lässt\ndas Ziel zurückschrecken.\nNur in der 1. Runde\neinsetzbar.
+0x486BC7: Brüllt ununterbrochen 2\nbis 5 Runden lang und\nverhindert dabei\nSchlaf.
+0x486C10: Speichert Kraft für\nspäter. Bis zu\ndreimal\nmöglich.
+0x486C55: Setzt die gespeicherte\nKraft auf einen Schlag\nfrei, um\nanzugreifen.
+0x486C95: Absorbiert die gespeicherte\nEnergie, um die KP des\nAnwenders\nwiederherzustellen.
+0x486CD4: Ein brennender Atem trifft\nden Gegner. Kann eine\nVerbrennung\nverursachen.
+0x486D1C: Hagel über fünf Runden,\nder allen außer Eis-\nPokémon\nschadet.
+0x486D64: Versetzt den Gegner in\nWut und hindert ihn\ndaran, zweimal dieselbe\nAttacke zu nutzen.
+0x486DB1: Schmeichelei, die verwirrt,\naber die Sp. Angriff\ndes Gegners\nerhöht.
+0x486DF2: Eine blasse, unheimliche\nFlamme, die den\nGegner\nverbrennt.
+0x486E37: Der Anwender wird\nkampfunfähig, senkt aber\nstark den Angriff und\nSp. Angriff des Gegners.
+0x486E79: Eine verstärkte Attacke,\nwenn der Anwender\nverbrannt, vergiftet oder\ngelähmt ist.
+0x486EBE: Eine Attacke, die zuletzt\neingesetzt wird. Schlägt\nfehl, wenn der Anwender\nvorher getroffen wird.
+0x486F04: Doppelte Wirkung bei\neinem gelähmten Gegner,\nheilt ihn danach\naber davon.
+0x486F50: Zieht alle Aufmerksamkeit\nauf sich: Gegner zielen\nnur noch auf\nihn.
+0x486F96: Eine Attacke,\nderen Typ\nsich je\nnach Ort ändert.
+0x486FD4: Lädt Energie, um die\nnächste Elektro-Attacke\nzu\nverstärken.
+0x487014: Verhöhnt den Gegner und\nzwingt ihn, nur noch\noffensive Attacken\neinzusetzen.
+0x48705C: Erhöht die Stärke der\nAttacke eines\nVerbündeten im\nKampf.
+0x48709B: Täuscht den Gegner und\ntauscht dessen Item mit\ndem des\nAnwenders.
+0x4870DD: Ahmt den Gegner\nvollständig nach und\nkopiert seine\nFähigkeit.
+0x48711E: Verzögerte Heilung:\nstellt in der nächsten\nRunde die Hälfte der\nKP wieder her.
+0x487163: Setzt zufällig eine\nAttacke eines\nverbündeten Pokémon\nein.
+0x4871A1: Schlägt Wurzeln, um\njede Runde KP zu\nerhalten. Verhindert\nAuswechseln.
+0x4871E9: Eine starke Attacke, die\naber den Angriff und\ndie Verteidigung des\nAnwenders senkt.
+0x487234: Schleudert Egelsamen und\njede Attacke zurück, die\neinen Status oder\nMalus verursacht.
+0x487276: Recycelt ein verbrauchtes\nItem für eine\nzweite\nVerwendung.
+0x4872AA: Stärker, wenn das\nZiel den Anwender\nverletzt\nhat.
+0x4872F2: Eine Attacke, die Barrieren\nwie Lichtschild und\nReflektor\nzerstört.
+0x487338: Ein großes Gähnen, das\nden Gegner in der\nnächsten Runde\neinschläfert.
+0x487378: Schlägt das Item des\nGegners herunter, sodass\ner es nicht mehr\nverwenden kann.
+0x4873BE: Je niedriger die eigenen\nKP im Vergleich zum\nGegner, desto stärker\nder Treffer.
+0x4873FB: Je höher\ndie KP,\ndesto stärker\ndie Attacke.
+0x48743C: Psychische Kraft, um\nFähigkeiten mit dem\nGegner\nauszutauschen.
+0x48747F: Verhindert, dass der\nGegner eine Attacke\neinsetzt, die der\nAnwender auch kennt.
+0x4874C1: Eigenheilung, die\nVergiftung, Verbrennung\noder Lähmung\nheilt.
+0x48750D: Wird der Anwender\nkampfunfähig, verliert die\nAttacke, die ihn besiegt\nhat, alle AP.
+0x487558: Stiehlt die heilende oder\nstatusverändernde Wirkung\neiner gegnerischen\nAttacke.
+0x48759A: Variabler\nNebeneffekt\nje nach\nGelände.
+0x4875E5: Taucht in der 1.\nRunde ab und trifft\nin der\nnächsten Runde.
+0x487628: Eine Serie direkter\nSchläge, die zwei bis\nfünf Mal\ntrifft.
+0x48766B: Ändert den\nTyp des Anwenders\nje nach\nGelände.
+0x4876A7: Ein Blitz, der den\nSp. Angriff des\nAnwenders stark\nerhöht.
+0x4876E6: Ein Licht, das verletzt.\nKann auch die Sp.\nVerteidigung des Gegners\nsenken.
+0x48772D: Eine Böe aus Flaum\ntrifft den Gegner. Kann\nseinen Sp. Angriff\nsenken.
+0x487771: Flaum bedeckt den\nGegner und senkt\nseinen Angriff\nstark.
+0x4877BB: Ein wackliger\nTanz, der alle\nkämpfenden Pokémon\nverwirrt.
+0x4877F3: Ein Feuertritt mit\nhoher kritischer\nTrefferquote. Kann\nverbrennen.
+0x48783A: Schwächt Elektro-Attacken,\nsolange der Anwender im\nKampf\nbleibt.
+0x48787A: Ein Rollangriff über\nfünf Runden, der jede\nRunde an Stärke\ngewinnt.
+0x4878BC: Ein Angriff mit\nstacheligen Armen. Kann\ndas Ziel zurückschrecken lassen.
+0x4878F5: Faulenzt, um die\nHälfte der maximalen\nKP\nwiederherzustellen.
+0x487932: Ein\nohrenbetäubender\nSchrei, der\nSchaden zufügt.
+0x487976: Giftige\nZähne, die den\nGegner schwer\nvergiften können.
+0x4879BC: Ein Angriff mit scharfen\nKrallen. Kann die\nVerteidigung des Gegners\nsenken.
+0x487A07: Eine gewaltige Explosion.\nDer Anwender kann in\nder nächsten Runde\nnicht handeln.
+0x487A53: Eine Wasserkanone. Der\nAnwender muss sich in\nder nächsten Runde\nausruhen.
+0x487A9E: Ein schneller, harter\nSchlag. Kann auch den\nAngriff\nsteigern.
+0x487AEB: Ein überraschender\nSchrei, der den Gegner\nzurückschrecken lassen kann.
+0x487B2F: Eine Attacke, deren\nStärke und Typ vom\nWetter\nabhängen.
+0x487B71: Ein süßer Duft, der\nalle Statusprobleme des\nTeams\nheilt.
+0x487BBF: Weint gespielt und\nsenkt die Sp.\nVerteidigung des Gegners\nstark.
+0x487BFF: Ein scharfer\nWind mit\nhoher kritischer\nTrefferquote.
+0x487C46: Eine intensive Attacke,\ndie den Sp. Angriff\ndes Anwenders stark\nsenkt.
+0x487C8B: Hebt jeden Versuch auf,\ndie Ausweichfähigkeit des\nGegners zu\nerhöhen.
+0x487CD2: Felsbrocken werden\ngeschleudert. Senkt die\nInitiative bei\nTreffer.
+0x487D1D: Silberner Staub greift\nden Gegner an. Kann\ndie Werte\nerhöhen.
+0x487D68: Ein metallisches\nKreischen, das die Sp.\nVerteidigung stark\nsenkt.
+0x487DB0: Eine angenehme Melodie,\ndie in einen tiefen\nSchlaf\nversetzt.
+0x487DEF: Bringt den Gegner zum\nLachen und senkt seinen\nAngriff und seine\nVerteidigung.
+0x487E30: Absorbiert mystische Kraft,\num Verteidigung und Sp.\nVerteidigung zu\nerhöhen.
+0x487E72: Je höher\ndie KP,\ndesto stärker\ndie Attacke.
+0x487EB3: Ein Lichtstrahl\nder auch\nblind\nmachen
+0x487EF6: Ein\nunausweichlicher\nSchattenschlag.
+0x487F35: Seltsame Kraft, die\nden Gegner\nzurückschrecken lassen kann.
+0x487F76: Ein Aufwärtshaken, der\nmit Wucht in den\nHimmel\ngeschleudert wird.
+0x487FB4: Fängt den Gegner 2 bis\n5 Runden lang in einem\nschmerzhaften\nSandsturm.
+0x487FF9: Extreme Kälte, die bei\nTreffer sofort\nkampfunfähig\nmacht.
+0x488041: Ein Angriff mit\nschlammigem Wasser. Kann\ndie Genauigkeit des\nGegners senken.
+0x48808A: Schleudert Samen auf\nden Gegner. Zwei bis\nfünf auf\neinmal.
+0x4880D0: Ein ultraschneller\nAngriff auf ein Ziel.\nUnmöglich zu\nverfehlen.
+0x488111: Eiszapfen werden\ngeschleudert. Trifft zwei\nbis fünf\nMal.
+0x488153: Härtet seine\nOberfläche, um seine\nVerteidigung stark zu\nerhöhen.
+0x48819A: Blockiert den Weg mit\nden Armen, um die\nFlucht zu\nverhindern.
+0x4881E1: Heult, um den Kampfgeist\nzu stärken und den\nAngriff zu\nerhöhen.
+0x48821F: Riesige Krallen packen\nund zerfetzen schnell\nund\nkräftig.
+0x488266: Schlägt mit einem\nriesigen Ast zu. Ruht\nsich in der nächsten\nRunde aus.
+0x4882B4: Stärkt seinen Körper,\num Angriff und\nVerteidigung zu\nerhöhen.
+0x4882FB: Springt und landet\nin der 2. Runde.\nKann den Gegner\nlähmen.
+0x488341: Schleudert Schlamm und\nsenkt die Initiative\ndes\nGegners.
+0x488383: Ein Angriff mit hoher\nkritischer Trefferquote.\nKann auch\nvergiften.
+0x4883C9: Eine niedliche Attacke,\ndie auch das\ngetragene Item des\nGegners stiehlt.
+0x488408: Eine geschleuderte\nelektrische Ladung.\nVerletzt den Anwender\nleicht.
+0x48844B: Ein seltsames Blatt,\ndem man nicht\nausweichen\nkann.
+0x48848A: Schwächt Feuer-Attacken,\nsolange der Anwender im\nKampf\nbleibt.
+0x4884C5: Konzentriert seinen\nGeist, um Sp. Angriff\nund Sp. Verteidigung zu\nerhöhen.
+0x488507: Verwundet den Gegner mit\neinem scharfen\nBlatt. Hohe Trefferquote\nfür Volltreffer.
+0x48854F: Mystischer Tanz, der\nAngriff und Initiative\ndes Anwenders\nerhöht.
+0x488597: Schleudert zwei bis\nfünf harte Steine\nauf den Gegner, um\nihn zu treffen.
+0x4885D3: Schneller Stromstoß,\nder den Gegner\ntrifft.\nTrifft immer.
+0x488614: Attackiert mit einer\nWasserwelle. Kann den\nGegner auch\nverwirren.
+0x48865A: Attackiert den Gegner\nmit einem Lichtblitz in\nder 2. Runde nach\nEinsatz.
+0x4886A1: Starke Attacke, die\nden Sp.Angriff des\nAnwenders stark\nsenkt.
+0x488CA2: Die BEERE {STR_VAR_1} hat sich in\neine BEERE {STR_VAR_2} verwandelt.
+0x488CCE: Die BEERE {STR_VAR_1} wurde bereits\nerhalten.
+0x488CF6: Ein besonderes BAND wurde an die\nPokémon deines Teams verteilt.
+0x488D2A: Der Pokédex wurde mit dem\nNATIONALEN MODUS aktualisiert.
+0x488D60: Ein seltenes Wort wurde hinzugefügt.
+0x488D7C: {STR_VAR_1} wurde geschickt!
+0x488D8E: Dein Team ist voll. {STR_VAR_1}\nkonnte nicht geschickt werden.
+0x488DBD: Ein neuer Trainer ist in\nHOENN angekommen.
+0x488DFD: Diese Daten können in dieser\nVersion nicht verwendet werden.
+0x488FE3: Oh, dein Team scheint voll zu sein.\pKomm wieder, nachdem du ein\nPokémon im PC verstaut hast.
+0x4891B0: Danke, dass du das GESCHENK-\nSystem benutzt.\pEin Trainer ist für dich auf den\nSEVII-Inseln angekommen.\pViel Spaß beim Kampf gegen\ndiesen Besucher.\pDu kannst weitere Trainer mit\nanderen Passwörtern einladen.\pVersuch, weitere zu finden, die\nfunktionieren.
+0x489419: Danke, dass du das GESCHENK-\nSystem benutzt.\pGlückwunsch!\pDu hast nach drei Siegen\neinen Preis gewonnen!\pMöge das dich anspornen,\nweiter zu kämpfen!
+0x489583: Das scheint man im Hafen\nvon CARMIN SUR MER benutzen zu können.\pWarum nicht ausprobieren, um zu\nsehen, worum es geht?
+0x4895E8: Danke, dass du das GESCHENK-\nSystem benutzt.
+0x489615: Oh, tut mir leid, {PLAYER}. Der Bereich\nfür seltene Items im BEUTEL ist voll.\pVerstau etwas in deinem PC und\nkomm dann für dieses hier zurück.
+0x48975C: Es sieht so aus, als würde man das im\nHafen von CARMIN SUR MER benutzen.\pProbier es aus, um zu sehen,\nworum es sich handelt!
+0x4897C1: Danke, dass du das GESCHENK-\nSystem benutzt.
+0x4897EE: Oh, tut mir leid, {PLAYER}. Der Bereich\nfür seltene Items im BEUTEL ist voll.\pVerstau etwas in deinem PC und\nkomm dann für dieses hier zurück.
+0x719A3B: WECHSELN
+0x719A43: EINSETZEN
+0x719A4D: REPORT
+0x719A74: KAMPFATTACKEN
+0x719A83: Typ
+0x719AAD: KEINE
+0x71A242: Diese Region…
+0x71A250: Diese Region…
+0x71A25E: …beherbergt zahlreiche Pokémon\naus aller Welt.\p
+0x71A2A4: Diese Region…
+0x71A2B2: …beherbergt zahlreiche Pokémon\naus aller Welt.\p
+0x71A2F8: Hier werden Pokémon\nfür viele Dinge eingesetzt.\pIch…\pIch erforsche alle Aspekte der Werte\nund Fangraten von Pokémon.\p
+0x71A37E: Diese Region…
+0x71A38C: …beherbergt zahlreiche Pokémon\naus aller Welt.\p
+0x71A3D2: Hier werden Pokémon\nfür viele Dinge eingesetzt.\pIch…\pIch erforsche alle Aspekte der Werte\nund Fangraten von Pokémon.\p
+0x71A458: Diese Region…
+0x71A466: …beherbergt zahlreiche Pokémon\naus aller Welt.\p
+0x71A4AC: Hier werden Pokémon\nfür viele Dinge eingesetzt.\pIch…\pIch erforsche alle Aspekte der Werte\nund Fangraten von Pokémon.\p
+0x71A532: Diese Region…
+0x71A540: …beherbergt zahlreiche Pokémon\naus aller Welt.\p
+0x71A586: Hier werden Pokémon\nfür viele Dinge eingesetzt.\pIch…\pIch erforsche alle Aspekte der Werte\nund Fangraten von Pokémon.\p
+0x71A60C: Diese Region…
+0x71A61A: …beherbergt zahlreiche Pokémon\naus aller Welt.\p
+0x71A660: Hier werden Pokémon\nfür viele Dinge eingesetzt.\pIch…\pIch erforsche alle Aspekte der Werte\nund Fangraten von Pokémon.\p
+0x71A6E6: Diese Region…
+0x71A6F4: …beherbergt zahlreiche Pokémon\naus aller Welt.\p
+0x71A73A: Hier werden Pokémon\nfür viele Dinge eingesetzt.\pIch…\pIch erforsche alle Aspekte der Werte\nund Fangraten von Pokémon.\p
+0x71A7C0: Diese Region…
+0x71A7CE: …beherbergt zahlreiche Pokémon\naus aller Welt.\p
+0x71A814: Hier werden Pokémon\nfür viele Dinge eingesetzt.\pIch…\pIch erforsche alle Aspekte der Werte\nund Fangraten von Pokémon.\p
+0x71A8D7: Diese Region…
+0x71A8E5: …beherbergt zahlreiche Pokémon\naus aller Welt.\p
+0x71A92B: Hier werden Pokémon\nfür viele Dinge eingesetzt.\pIch…\pIch erforsche alle Aspekte der Werte\nund Fangraten von Pokémon.\p
+0x71C950: Verdoppelt die Initiative, wenn das Item aufgebraucht ist.
+0x71C973: îWerte: Effekte verdoppelt
+0x71C98C: Ignoriert veränderte Werte.
+0x71C9AC: Angriff + wenn ein Wert sinkt.
+0x71C9CA: blühend.
+0x71C9D4: Sp.Ang. + wenn ein Wert sinkt.
+0x71C9F3: s werden gesenkt.
+0x71CA04: Wird schwächer, wenn er zur Hälfte
+0x71CA30: Reduziert Angriff und Initiative\nvorübergehend um die Hälfte.
+0x71CA56: ampf.
+0x7204A8: Der Angriff steigt bei
+0x7204C4: vergiftetes Huhn.
+0x720ED4: weniger.
+0x720EDB: îSp.Ang. + wenn verbrannt.
+0x720EF7: eine Verbrennung.
+0x720F03: î Reduziert den Schaden um die Hälfte
+0x720F27: îErhöht den Ausweich-Status der Bewegung.
+0x720F41: Ich könnte danebenschießen.
+0x720F6D: ld : Karte
+0x721340: Elternteil und Kind greifen gemeinsam an
+0x7213FC: Ignoriert Fähigkeiten.
+0x72141A: f Fähigkeiten.
+0x7216AC: Kasino
+0x7218F0: Große Wüste
+0x721FAE: Sehen Sie… Ich wusste, dass ich nicht
+0x721FCC: Ich bin nicht zum Kämpfen gemacht.
+0x722059: Wenn nur eine Maschine\nPoké Bälle werfen würde…
+0x72209C: Ich werde diese Kunst des\nPoké-Ball-Werfens perfektionieren!
+0x722125: Puh! Sie und Ihre Pokémon\nsind großartig!
+0x722155: Ho ho… es ist feucht…\nwie eine Sauna…
+0x724962: Siehst du… Ich hätte fast verloren.
+0x724980: Nicht zum Kämpfen gemacht.
+0x724A0D: Wenn nur eine Maschine\nPoké Bälle für mich werfen könnte…
+0x724A50: Ich werde diese Kunst des\nPoké-Ball-Werfens perfektionieren!
+0x724AD9: Puh, super! Sie und Ihre Pokémon\nsind wunderbar!
+0x724B09: Ho ho… es ist auf jeden Fall feucht…\nwie eine Sauna…
+0x728430: Seltsamer Stein, der bestimmte\nPokémon-Arten entwickeln lässt. Er\nleuchtet in einem strahlenden Licht.
+0x740001: Forêt Obscure, Volcan Cendré,\nCratéris und Route 6
+0x740037: Bélenbourg, Grotte Stalactite,\nRoute 2 und Dresco
+0x740088: Hey, du!\pMeine Oma kocht sehr leckere kleine\nGerichte zum Abendessen!\pDu solltest eines Tages\nbleiben und probieren!
+0x74037D: <0x11>\nMarlon: <0xFC><0x01><0x08>Cacnea, Zerschneider!
+0x740753: Bist du meine Mama?
+0x74145B: Hallooo…\pKommst du, um die Arena herauszufordern?
+0x74159F: Oh, du bist es! Angehender Champion!\nIch hab dich gar nicht gesehen!\pWillkommen in der Arena von Cratéris!\pFang mit ein bisschen frischem\nWasser an.
+0x741625: Wie du siehst (oder auch nicht),\nist diese Arena auf den Typ\pausgerichtet. Um hier zu gewinnen,\nbrauchst du solides {COLOR}ÉKampf{COLOR}Ë,\l{COLOR}ÉFee{COLOR}Ë.\pViel Glück!
+0x7416E8: Gut gemacht!\pDu hast deinen Weg im\nDunkeln gefunden und Véga besiegt!\lNimm das als zusätzliche\nBelohnung.
+0x741765: Dieses Juwel kann eine\nUnlicht-Attacke im Kampf verstärken.\pMit ihm entfesselst du deine\ndunkle Wut!\pMwahahahaha!
+0x74190A: Ich bin Véga, Arena-Champion\nvon Cratéris.\pDie düstere Atmosphäre dieser Stadt\nhat es mir ermöglicht, all meine\ldunkle Energie an einem Ort zu bündeln.\pBist du bereit, ihm entgegenzutreten?
+0x7419B7: Gut gemacht.\pDu hast meinen Tag ein wenig\naufgehellt.
+0x741A37: <0xFC><0x01><0x02><0xFD><0x01> erhält den Unlicht-Orden\nvon Véga!
+0x741A77: Du kannst Pokémon und Items im\nPC dort in der Ecke aufbewahren.\pEs ist kostenlos für Trainer,\nzögere also nicht, es zu nutzen.
+0x741AF1: Route 15\p<0x7B> Route 2, Grotte Stalactite\n<0x7C> Viville
+0x744BBF: Hallo, Kleiner!\p-HUST- -HUST-\pWillkommen zu deiner ersten Arena-Herausforderung\n!\pFang mit einem kleinen\nGeschenk an.\p-HUST- -PFEIFEN-
+0x744C3D: Eine Art Pflanze mit seltsamen\nBlättern.
+0x744E2C: Östlich von hier, jenseits der\nWasser-Route 15, liegt Viville.\pDu wirst mehr als die VM Surfer\nbrauchen, um dorthin zu gelangen.\pEs sieht so aus, als würden Leute die\nStraße blockieren…
+0x744EF5: Hallo, reisender Trainer.\pWenn du vorhast, Mirskle herauszufordern,\nkönnte dir das helfen.
+0x744F54: Ich helfe gerne\nReisenden.\pDas ist mein Hobby.
+0x744FB3: Das Land hier ist in kleine\nFragmente zersplittert.\pWenn ich so darüber nachdenke, die\ngesamte Region Borrius ist in große\lInseln unterteilt!
+0x74503F: Diese Statue stellt Lavados dar,\nden legendären Feuervogel-Pokémon.\pEr soll irgendwo im\nVolcan Cendré leben und den Himmel\lnachts mit seinen Flammen erleuchten.
+0x7450DB: Schau, schau!\pIch sehe Daherapolis von hier aus!
+0x745108: Boissombre\p<0x7B> Volcan Cendré\n<0x7C> Dresco
+0x745132: <0x0F> P<0x56><0x7C><0x08><0x09><0x06><0x02>Wir haben gerade\neinen großen Fang verpasst,\lunsere Ziele sind uns wieder entwischt…\pDeshalb schmollen wir.
+0x7451D0: Tut mir leid, aber du kannst jetzt\nnicht hereinkommen.\pMein Großvater hält sein tägliches\nNickerchen und möchte nicht\lgestört werden.\pKomm später wieder, wenn er\nwach ist, falls du mit ihm reden willst.
+0x74528C: Hast du das Trainerhaus\nin Dresco schon besucht?\pEs ist das schwarz-blaue Gebäude im\nSüden der Stadt.
+0x745316: Das ist ein ziemlich neuer Eingang\nzur Autoroute RBT.\pWir bauen dort also noch\nimmer eine Brücke.
+0x745382: Im Norden von hier gibt es einen\nwunderschönen Ort namens Paradis Floral!\pÜberall gibt es Blumen!
+0x7453EE: Das ist eine Statue des\nlegendären Feuer-Pokémon Lavados.\pMan sagt, Lavados diente einst als\nHerold einer großen Dunkelheit, aber\lnun lebt er im\lVolcan Cendré.
+0x745518: Route 3\p<0x79> Paradis Floral\n<0x7A> Dresco
+0x745750: Wenn du deine Meinung änderst,\nsag mir Bescheid.
+0x745775: Hey Kleiner!\nHör zu.\pDie Straße vor dir ist voller\nTrainer, die kämpfen wollen.\pManche nennen sie sogar «\nKampf-Route».\pAber ich verstehe, wenn du nicht\ngegen sie kämpfen willst.\pDank meiner psychischen Kräfte kann ich\ndich kostenlos auf die andere Seite\lteleportieren!\pAlso, bist du dabei?
+0x745900: Pokémon-Arena von Dresco\nChampion: Mirskle\lDer abgedrehte Hippie!
+0x74593B: Arena-Champion von Dresco:\nMirskle\pSiegreiche Trainer:\n{RIVAL}
+0x745973: Pokémon-Arena Dresco\nChampion: Mirskle\pSieger: {RIVAL},\n{PLAYER}
+0x7459AF: Whooooa…
+0x7459B8: Atme tief ein…\pWas für ein wunderbarer Duft!
+0x7459E1: Oh nein…\pDu bist nicht meine Mama…
+0x745A54: 9Der Unlicht-Orden lässt alle\nPokémon bis Lvl. 30 gehorchen.\pSogar die, die durch Tausch erhalten wurden. Du kannst\nauch die {COLOR}ÉVM\pZerschneider{COLOR}Ë außerhalb von Kämpfen benutzen.\nZerschneider schneidet kleine Bäume, um\pWege zu öffnen. Außerdem möchte ich dir\nmeine Lieblings-\pTM\ngeben.
+0x745B6D: Entschuldigung, diese Funktion ist\nmomentan nicht verfügbar.
+0x745CCF: Wenn du deine Meinung änderst, komm\njederzeit wieder!
+0x745D0D: Dann fangen wir an!
+0x745D25: Toller Kampf! Meine Pokémon hatten\nviel Spaß!
+0x745D52: Jetzt, wo der Eingang zur Autoroute RBT nicht mehr versiegelt ist, konnte ich\lendlich trainieren!\pSag mal, hättest du Lust, gegen meine\nfrisch trainierten Pokémon anzutreten?
+0x745DED: Danke, dass du gegen mich gekämpft hast!
+0x746471: Der <0xFC><0x01><0x06>Myrapla <0xFC><0x01><0x08>steigt mir\nmanchmal zu Kopf, ich sehe\lDinge, die nicht real sind.
+0x7464C8: Weißt du, was ein {COLOR}ÉEdelstein {COLOR}Ëist?
+0x74660E: Schädel!
+0x74AB00: Die TM46 enthält\pPerfekt für hinterlistige\nTrainer.
+0x74AB43: Ein letzter Rat.\pBleib so viel wie möglich im\nLicht und meide die Schatten.\pWenn du diesen Rat befolgst, wird er\ndich nicht verlieren.\pIch verspreche es dir…
+0x74ABE7: Sieht aus, als hättest du bereits\nLangfinger…
+0x74B022: {COLOR}ËDeshalb wird Ivory dir\neinen kleinen Ansporn zum\lSchweigen geben.
+0x74B1B8: Anscheinend reichte es nicht, dir\nAngst einzujagen, um meinen Sieg zu sichern.
+0x74B1E7: Ich campe hier, um die Leute zu\nerschrecken, die vorbeikommen.
+0x74B293: Épidia\pEine malerische Stadt, umgeben von\nBergen.
+0x74B29E: Épidia\pEine malerische Stadt, umgeben von\nBergen.
+0x74B2DF: Rivapolis\pHauptstadt der Wasserfälle von Borrius.
+0x74B31C: Automnia\pEine Stadt, in der immer Herbst ist.
+0x74B381: Über eine Brücke im Regen laufen…\n\pDas ist berauschend!
+0x74B3BC: Da fühle ich mich weniger berauscht.
+0x74B3D9: Hoffentlich rutsche ich nicht von\ndieser Brücke.
+0x74B40A: Nicht bewegen!\pIch will diesen perfekten\nMoment malen.
+0x74B441: Ein Junge, der im\nRegen läuft…
+0x74B5F5: Es ist keine gute Idee, im\nRegen zu malen.\pAlles, was ich male, wird\nweggespült…
+0x74B7CB: Nun, äh…\nOkay.
+0x74B811: Ein Leben voller Spiel ist ein Leben ohne\nBedauern.
+0x74B83D: Kein Schmerz, kein Gewinn!
+0x74B84F: Ich trainiere jeden Tag, indem ich\nhier barfuß laufe.
+0x74B8DA: Meine Arbeit ist wichtig.
+0x74BB52: Du bist unglaublich.
+0x74BB69: Ich bin nur der Erste von\nvielen Trainern auf dieser
+0x74BB9B: Ich komme gerade erst aus der\nStalaktitenhöhle, aber ich habe noch
+0x74BBE2: Mist! Ein Zubat hat mich in\nder Höhle gebissen.
+0x74BC0A: Mein Freund hat viele niedliche Pokémon.\nIch bin so eifersüchtig!
+0x74BC3B: Kommst du aus der Stalaktitenhöhle?\nKann ich ein Quiekel haben?
+0x74BCAD: Wir werden sehen, ob sie es wagen, Fallen zu\nstellen, wenn du da bist, Kapoera!\pWir werden den Tier <0xFC><0x01><0x06>OU Doubles<0xFC><0x01><0x08> dominieren!\pSie werden alle unter deiner Kopf-\nspitze fallen!
+0x74BD59: Pokémon-Pension
+0x74BE3C: 9Wenn Pokémon genug\nErfahrung sammeln, können sie sich entwickeln\lund stärker werden.\pManche lernen sogar\nAttacken nach der Entwicklung.\pAber nicht alle können sich\neinfach durch Kämpfen entwickeln.\pManche benötigen Gegenstände wie\n{COLOR}ÉFeuersteine{COLOR}Ë oder
+0x74BF85: 9Ivory: {COLOR}ÇDas erwartet dich,\nwenn du auch nur irgendetwas verrätst
+0x74BF86: Ivory: <0xFC><0x01><0x04>Hier ist ein Vorgeschmack auf das,\nwas dich erwartet, wenn du dich verplapperst!
+0x74BFC6: Wenn ich mein ganzes Team gehabt hätte, hättest\ndu verloren!
+0x74BFF6: Zeph: {COLOR}ËOh, Ivory…\pWie konntet ihr, du und Marlon, mich\nverraten?\pIch dachte, ihr wärt stärker als\ndas…
+0x74C058: Ivory: {COLOR}ÇZeph, wir sind\pWir sollen so etwas eigentlich nicht\ntun…
+0x74C275: Die Bibliothek hat tolle Bücher\nüber fortgeschrittene Kampf-\ltechniken.\pIch studiere gerade\n{COLOR}ÉTerrains{COLOR}Ë und ihren\lEinfluss auf den Kampf.\pSchau vorbei, wenn du nach oben\nwillst.
+0x74C358: Haha!\pDiese {COLOR}ÉPare-Vestes{COLOR}Ë stehen dir\nsuper, Crocro!\pWenn wir das nächste Mal auf einen\n{COLOR}ÉFerrotopp{COLOR}Ë mit einem\ltreffen, wird er eine große Überraschung erleben!
+0x74C405: Wie du sehen kannst, ist der Kampfturm\nein toller Ort.\pAnscheinend gibt es ähnliche Orte\nüberall in Borrius.
+0x74C4B9: Siehst du dieses {COLOR}ÉPorygon{COLOR}Ç?\pWenn du mit ihm sprichst, hast du\ndirekten Zugriff auf die Pokémon-Box!\lWarum einen PC benutzen, wenn ein\pPokémon das für dich erledigen\nkann?
+0x74C60C: Oder ich schwebe schon…
+0x74C623: Häh? Ich fasse das nicht an!
+0x74C642: Ich nehme keine Drogen\n!
+0x74ECA9: Tut mir leid, diese Route ist\nmomentan gesperrt.\pWir bereiten eine große\nVerhaftung vor, niemand darf\lentkommen!
+0x74ED62: 9Geh weiter, {PLAYER}.\pDu willst Jax gegen die\nSchatten nicht verpassen.
+0x74EDC0: Ich werde die Geheimnisse des Volcan Cendré lüften!
+0x74F8A0: Ich sollte mehr Eis-Pokémon\nfangen, um zu meinem neuen zu passen
+0x74F960: TRAINER-TIPPS!\pHalte {COLOR}ÉB{COLOR}Á gedrückt, um\nzu rennen!\pDrücke {COLOR}ÉL{COLOR}Á, um\nden Auto-Lauf zu aktivieren!
+0x74FB43: Stopp!\pWas habe ich dir über das Reisen mit\nmeinem Raumwürfel gesagt?\pNur weil du nicht mit deinen\nRingen reisen kannst, heißt das nicht, dass du\lmeinen Würfel ohne\lErlaubnis benutzen darfst!
+0x74FBEF: Und du bist derjenige, der sie hierher\ngebracht hat?
+0x74FC26: Ich weiß nicht, was du von ihnen\nwolltest, aber du bist schon lange\leine Last. Ich bin vielleicht nicht dein\lwahrer „Vormund", aber ich bin jetzt dein\pTrainer! Und du wirst gehorchen\n!\pDiese beiden werden dich nicht vor\pmir retten!
+0x74FD13: Was für eine Plage…
+0x74FD41: Wo glaubst du, dass du hingehst,\nJunge?\pIch habe den strikten Befehl, dich\nhier eingesperrt zu halten.
+0x74FECD: Er ist bewusstlos.\pWas ist das?\pAuf seinem T-Shirt steht\netwas geschrieben.\pDas ist sein Name!\nEs ist…
+0x74FF2A: Ist sein Name {RIVAL}?
+0x74FF3B: {RIVAL}: {COLOR}Ë…\pHäh? Was ist los? Wo\nbin ich?
+0x74FF66: Was ist los?\p…\pOh, warte…\pDu bist der Junge, der ein Stück\nweiter unten an der Straße wohnt.\p<0xFD><0x01>, richtig?\pWeißt du, was wir hier machen?
+0x7501A0: Hier gibt es so viele Feuer-Pokémon\n!
+0x7501C5: Ich brenne vor Glück!
+0x7501E9: Ich sollte prüfen, ob ich\nFieber habe…
+0x7502A5: {COLOR}ÇVolcaropod!\pSetze Lavaglut ein!
+0x75034D: Jax: {COLOR}ËÉtouraptor, benutze
+0x750370: Jax: {COLOR}ËEure Schattenherrschaft\nendet hier und jetzt!\pIch werde nicht zulassen, dass ihr aus dem\nVolcan Cendré mit Lavados flieht!
+0x7503EA: Marlon: {COLOR}ËFRECHER JUNGSPUND!\pFür wen hältst du dich, die\nSchatten zu bedrohen!?\pUns wurde befohlen, Lady\nIvory zu helfen, also glaub bloß nicht eine\lSekunde, dass du uns aufhalten kannst!
+0x750498: Ivory: {COLOR}ÇGut gesagt, Marlon.
+0x7504B7: Ivory: {COLOR}ÇLavados ist versiegelt.\pIch kehre zum Hauptquartier zurück.\pKümmere dich um dieses Kind, das zusieht,\nbevor du dich mir anschließt.
+0x750537: e du dich mir anschließt.
+0x750546: Jax: {COLOR}ËOhh… Mein\nKopf…
+0x750560: {COLOR}ËAhh…\pDas hat wehgetan.\pLass uns zu meinem Großvater gehen und ihm\nsagen, was passiert ist.
+0x7505FA: {COLOR}ËWas… Wie konnte ich nur\nverlieren!?\pIch ziehe mich vorerst zurück, aber ich\nwerde es nicht vergessen!\pWir sehen uns bald wieder!\pDas garantiere ich dir…
+0x7507DD: Jax: {COLOR}ËVerstanden, Opa.\pIch gehe sofort.
+0x750814: Arthur: {COLOR}ËEigentlich, Jax, habe ich\nnoch eine Aufgabe für dich.\pSoweit ich weiß, haben die Schatten\nnicht das Objekt, das die\ldunkle Kraft versiegelt.\lEin Freund von mir auf der {COLOR}ÉRoute\psollte wissen, wo es sich befindet.\nGeh zu ihm und erkläre ihm die\pSituation.\pEr wird uns sicher helfen, es\nvor den Schatten zu finden.
+0x750967: Jax: {COLOR}ËAlles klar, Opa.
+0x75097E: Arthur: <0xFC><0x01><0x08>Gut, gut.\pWas dich betrifft, <0xFD><0x01>, ich möchte, dass\ndu zum <0xFC><0x01><0x06>Mont Foudroyant <0xFC><0x01><0x08>gehst, um\l<0xFC><0x01><0x06>Zapdos<0xFC><0x01><0x08> zu retten.\pDu hast dich bewiesen, indem du\nJax im Volcan Cendré verteidigt hast, und ich\lglaube, du bist dieser Aufgabe gewachsen.\pDu kannst den <0xFC><0x01><0x06>Mont Foudroyant <0xFC><0x01><0x08>\nüber die Autobahn südöstlich der\lnächsten Stadt erreichen, <0xFC><0x01><0x06>Cratéris<0xFC><0x01><0x08>.\pWenn du dich nicht beeilst, ist die Region\nBorrius verloren.
+0x750AF3: Log: {COLOR}ËIch kehre zu den\n{COLOR}ÉCimes Gelées{COLOR}Ë zurück,\pIch werde deiner Mutter sagen, wie es\nsteht.
+0x750B5E: Jax: {COLOR}ËMein Étouraptor ist\nnach dem Kampf noch ziemlich schwach,\lich kann dich zum Volcan Cendré bringen.\pWir haben nicht viel Zeit, also\nlass uns sofort aufbrechen.
+0x750C98: Die Meteoriten von Cratéris sind\nmit einer Art kosmischer Kraft\ldurchdrungen.\pMan sagt, wenn ein bestimmtes Pokémon\neinen davon berührt, passieren\lseltsame Dinge.
+0x750E32: Das ist ein mysteriöser Meteorit\nvon den Sternen.
+0x75100E: 9Es scheint einen versteckten Gang\nhinter der Bibliothek zu geben.\pMöchtest du ihm folgen?
+0x7526CF: Du hast meine Flamme gelöscht.
+0x7526ED: Wenn du wieder gegen mich kämpfen\nwillst, geh und komm zurück.
+0x7527A8: Du hast mein Wasser ausgetrocknet.
+0x7527C2: Hallo.\pWarte…\pBist du das Kind des\plegendären Arceus-Trainers,\n{COLOR}ÉAros{COLOR}Ë?
+0x7530D9: Meine Wut und meine Kraft nehmen\nnach dieser Niederlage nur noch zu.
+0x753107: Hallo…\pWie geht's, Kumpel?\pWillst du an\nMyrapla schnuppern?\pDas tut der Seele gut.\nAlles wird sanft und ruhig<0xB0>
+0x75318A: <0xFC><0x01><0x02>Du schnupperst an Myrapla-\nBlättern.\pDer widerliche Geruch dringt in\ndeine Nase.
+0x7531DB: Ich nehme an, du bist wegen eines\nKampfes hier?\pIch bin genau in der Stimmung, dir\ndas zu geben…
+0x75326D: Meine Käfer werden dich das\nnächste Mal besiegen!
+0x75350F: 9Mein Bruder hat sein Pokémon bekommen,\nindem er mit einem Poké Ball im\lBois Vivill gesprochen hat.\pJeder Trainer würde dort\nunterschiedliche Pokémon sehen.
+0x753675: Kommst du vom Berg herunter?\pDu findest es hier bestimmt\nheiß.
+0x7536BC: dir selbst ein praktisches Fahrrad!
+0x7536D4: Normalerweise, wenn die Straße\nfrei ist, kannst du zum praktischen\lLaden gehen!
+0x75372E: Ich liebe es, am Strand zu laufen!
+0x753752: Oh nein, du hast mich besiegt!
+0x753766: Egal wie oft ich verliere,\nich spiele danach immer weiter!
+0x7537A1: Am Strand zu angeln ist immer\nangenehm.
+0x7537CB: Schade…
+0x7537D6: Ich bin dort, wo ich sein möchte.
+0x754900: Du bist es!\nDer große <0xFD><0x02>, der mich gerettet hat!\pDu bist der Beste!
+0x754F11: Hast du die Leute gerochen?
+0x754F2C: Die Autoroute RBT führt von Cratéris nach\nAutomnia unter unseren Füßen.
+0x7551B9: Ich frage mich, wie viel Gewicht der\nBoden tragen kann.
+0x7551EA: Genug für einen guten Kampf!
+0x755204: Wenn 100 Leute wie ich hier\nstehen würden, glaubst du, der Boden würde halten?
+0x7552A8: Du hast mein Picknick ruiniert!
+0x7552BE: Wenn ich nur jemanden hätte, mit\ndem ich picknicken könnte…
+0x7553D0: Ich entspanne mich einfach hier.
+0x7553E8: Sogar Gauner wie ich brauchen\neine Pause.
+0x75548F: Dieser Typ hat gerade eins verloren…
+0x755532: 9Als diese seltsamen Schläger\nankamen, haben wir schnell unsere\lTüren verriegelt.\pSonst wären sie sicher\nwie du hereingekommen\l und hätten unsere\lSchätze für ihre Pläne genommen.
+0x755608: Dieser Typ glaubt, du bist ein großer\nFisch. Nein, du bist ein großer Fisch
+0x75565A: Was machen die Leute, wenn sie\naufs Klo müssen?\pUnd was, wenn es beißt, während ich\ndort bin? Ich kann nicht gehen…
+0x7556D9: Ich habe verloren, weil ich versuche,\nnicht aufs Klo zu müssen…
+0x75570E: Oh nein! Ich habe das Gefühl, dass ich\ngleich einen Großen an der Angel habe!
+0x7557B1: Mit Ehre gebe ich meine Niederlage zu!
+0x7557CC: Ich muss die Kunst der\nTarnung perfektionieren. Ich grüße dich.
+0x755897: Oh je. Nun, du machst schon\nEindruck!
+0x7558C3: Na gut, ich habe verloren. Ich kann\nmich wohl nicht mehr Experte nennen, was?
+0x755971: Ich komme nicht mehr mit!
+0x755982: Das wäre eine Herausforderung, wenn ich\ndein kräftiges Pokémon an Land ziehen würde!
+0x75B4BB: 9Sei vorsichtig in der Großen Wüste
+0x75B551: Wir stellen uns auf den Kopf!
+0x75B6F4: 9Vor langer Zeit gab es ein Piepi in der Nähe\nder Bibliothek.\pWo mag es wohl hingegangen sein?
+0x75B74B: Ich bin nicht dorthin gegangen.
+0x75B86B: Möchtest du die Tür öffnen?
+0x75B88C: Die Tür ist offen.
+0x75B8E5: Möchtest du die Tür öffnen?
+0x75B906: Die Tür ist offen.
+0x75B918: Die Leute, die hier leben, weigern sich,\nmich hereinzulassen, also muss ich\lhierbleiben.
+0x75B979: Man sagt, östlich der Stadt\nbefindet sich ein versteckter Wald, der ein\lsehr mächtiges Pokémon beherbergt.\pAber das ist wohl nur ein\nGerücht, also ignorieren die meisten\lLeute es.
+0x75BDE9: Ich habe es verdient, dich\nhinterhältig zu überrumpeln.
+0x75BE12: Versuch den anderen Weg.
+0x75BE5A: Eigentlich habe ich dich nicht.
+0x75BE75: Tut mir leid, Freund, aber das ist nicht\nder richtige Weg.
+0x75BEDC: Du bist noch ziemlich weit weg.
+0x75BEFE: Die Ventilatoren machen die Arena\nwirklich verwirrend.
+0x75BF90: Ich schwöre dir…\pDiese seltsamen Typen blockieren die\n{COLOR}ÉRoute 9{COLOR}Ë seit\lTagen…\pWas heckt ihr da aus?
+0x75C101: Scorvol! Komm zurück\n!
+0x75C112: {COLOR}ÇScorvol! Steinlawine\n!
+0x75C12E: {COLOR}ÇScorvol! Komm zurück\n!
+0x75C28A: Jax: {COLOR}ËSag mir, wie ich an der\nBarriere der Route 9 vorbeikomme!\pIch habe keine Zeit für euch,\nSchatten!
+0x75C365: Die Tür ist offen.
+0x75C3DF: Die Tür ist offen.
+0x75C454: Was? Du weißt es nicht\n?\pDann bist du also in der gleichen Lage\nwie ich…\pHast du irgendwo einen Ausgang\ngesehen?\p…\pEs gibt einen,\naber ein Mann in\pSchwarz blockiert ihn… Bring mich\ndorthin.\pIch werde versuchen, vorbeizukommen.
+0x75C52D: Bring mich zu diesem Typ in Schwarz.\pIch werde ihn bereuen lassen, dass er\nhier ist!
+0x75C577: Komm, {PLAYER}. Lass uns einen anderen\nAusgang finden.
+0x75C5A8: Wir müssen diese Pokémon finden! Sie\nkönnen uns als Ausweg dienen!
+0x75C5E2: Schnell, {PLAYER}, wähle ein\nPokémon.
+0x75C602: Lass uns unsere neuen Pokémon benutzen, um\nvon hier zu entkommen!
+0x75C632: <0xFD><0x06>: <0xFC><0x01><0x08>Hey!\pFür wen hältst du dich?\pDenkst du, du kannst uns hier einsperren\nund damit durchkommen?\pLass uns sofort durch,\noder du wirst es bereuen!
+0x75C6DE: Scherge: {COLOR}ËVerschwinde, Junge.\pStrikter Befehl, euch eingesperrt\nzu halten.
+0x75C726: {COLOR}ËDann verschwinde, es sei denn du\nwillst… leiden.
+0x75C74E: Scherge: <0xFC><0x01><0x08>Gute Wahl.\pBleib weg von dieser Tür, und du\nwirst es nicht bereuen.
+0x75C79D: {RIVAL}: {COLOR}ËSieht so aus, als würde er sich\nnicht bewegen, {PLAYER}.\pBesser wir finden einen anderen\nAusweg.
+0x75C811: Hast du das gehört, <0xFD><0x01>?\pEs sieht so aus, als wären Pokémon\nin diesem Käfig dort gefangen!\pLass uns das ansehen.
+0x75C975: Es sind viele Pokémon eingesperrt\nin dem Käfig…
+0x75C9A5: Die Käfigtür ist offen.\nDie Pokémon sind weg.
+0x75C9D6: Das Schloss sieht zerbrechlich aus.\nMöchtest du es aufbrechen?
+0x75CA0C: Das Schloss wurde aufgebrochen, und die Tür\ndes Käfigs ist jetzt offen.
+0x75CA45: {COLOR}ËDiese Pokémon scheinen\ndankbar zu sein und wollen sich uns anschließen!\pWenn jeder von uns eines nimmt, können wir\nden Wächter angreifen und fliehen!\pHier, nimm diesen Poké Ball,\nden ich aufgehoben habe.
+0x75CAF2: {PLAYER} erhält einen Poké Ball von\n{RIVAL}!
+0x75CB13: {COLOR}ËLos, wähle ein Pokémon.
+0x75CDE5: {STR_VAR_1} ist\ndem Team von {STR_VAR_2} beigetreten!
+0x75CDFF: {COLOR}ËDann nehme ich das da.
+0x75CE1C: {COLOR}ÁEnttäuscht ist {STR_VAR_1} gegangen.
+0x75CE3A: Jetzt, wo wir unsere Pokémon haben,\nlass uns zum Ausgang zurückgehen.\pWir bahnen uns einen Weg nach draußen!
+0x75CE9A: Leicht
+0x75CE9F: Mittel
+0x75CEA6: Schwer
+0x75D2F7: {RIVAL}: {COLOR}ËHehe… Du hast eigentlich\nkeine Wahl mehr.\pEntweder du lässt uns raus, oder du bekommst\nmeinen Zorn zu spüren.
+0x75D407: Hmm…\pIch brauche bessere Käfer.
+0x75D427: Ich suche seltene Käfer-\nPokémon.
+0x75D44B: Wer hätte gedacht, dass es noch\neine ganze andere Höhle in der Stalaktitenhöhle gibt?\pOhne diesen Sablaireau wäre dieser Ort\nvielleicht für immer\lverborgen geblieben.\pAber jetzt, wo er\nzugänglich ist, stell dir all die\lGeheimnisse vor, die er birgt!\pNimm zum Beispiel diese Tafel.\pSie muss mindestens tausend Jahre alt sein,\nwenn nicht älter.\pIch habe vor, alle\nGeheimnisse zu entdecken, die sie verbirgt.\pWenn du eines Tages zurückkommst, wird sich die Wahrheit\nvielleicht offenbaren…
+0x75D5FC: Wer hätte gedacht, dass es eine\nandere Höhle in der Stalaktiten-\phöhle gibt? Ohne diesen Sablaireau wäre\ndieser Ort\lverborgen geblieben.\pJetzt, wo wir hineingehen können,\nstell dir all die Geheimnisse vor, die\lsie enthält!\pNimm zum Beispiel diese Tafel.\pSie muss mindestens tausend Jahre alt sein,\nwenn nicht älter.\pIch habe vor, alle Geheimnisse\nzu entdecken, die sie birgt.\pKomm eines Tages zurück, die Wahrheit\nwird sich vielleicht offenbaren…
+0x75DA05: Ahh!\pDa ist er wieder!\pEr kommt, um mehr Essen zu stehlen!
+0x75DA3B: Er stiehlt mein Essen!
+0x75DA84: <0xFC><0x01><0x02>Mädchen: <0xFC><0x01><0x04>Wääh!\pPapa! Er hat mir wehgetan!
+0x75DAAF: <0xFC><0x01><0x02>Mann: <0xFC><0x01><0x08>Alles ist gut, mein Schatz…\pPapa wird nicht zulassen, dass dieses Pokémon\ndir noch einmal wehtut.
+0x75DB0A: Wenn du mir helfen kannst, mein von\ndiesem Pokémon gestohlenes Essen zurückzuholen, wäre\lich dir sehr dankbar!\pEs könnte sogar eine kleine\nBelohnung für dich geben…
+0x75DB9E: Ich bin dir sehr dankbar\nfür deine Hilfe! Ich werde Pokémon\ptrainieren, und wenn du Glück hast,\nkannst du vielleicht eines Tages\lgegen mich antreten.
+0x75DC27: Hey! Du bist es wieder! Danke\nfür deine Hilfe!\pHättest du Lust auf einen Kampf gegen meine\nPokémon?
+0x75DC8D: Okay!\pDu wirst sehen, wie stark mein Sablaireau\nist!
+0x75DCCC: Selbst meine seltenen Pokémon konnten\nnicht mithalten!
+0x75DD03: Danke für den Kampf!\pKomm jederzeit wieder, um erneut\nzu kämpfen.
+0x7629F6: Oh, danke!\pDanke, danke!
+0x762A86: Ich weiß, dass mein Baby von\neinem Mann in Grau entführt wurde. Das ist alles, was\pWenn ich nur wüsste, wohin es\ngegangen ist…
+0x762B0F: Ivory: <0xFC><0x01><0x04>Ruhe!\pWenn du glaubst, ein Überraschungsangriff\nwird mich dazu bringen, die\lBarriere zu entfernen, dann irrst du dich gewaltig!
+0x762B80: {COLOR}ÇSimsala! Werde ihn\nlos!
+0x762CD5: Oh nein, nein, nein…\pIch hoffe, ich finde jemanden, der mir\nhilft, bevor es zu
+0x762D1F: Du bist es wieder!\pDer Dieb, der mein Baby gestohlen hat, ist\nzurückgekommen und hat es mir zurückgegeben!\pIch kann wieder spielen! Danke, danke,\ndanke!\pNimm dieses {COLOR}ÉEi{COLOR}Ç,\ndas es gelegt hat! Das ist das Mindeste.
+0x762E63: Möchtest du auf Lapras steigen?
+0x762FB1: Das passiert, wenn man nicht\nzuhört.
+0x762FD6: Sei hier vorsichtig.\pÜberall ist offene\nLava.
+0x763050: Dieser Ort ist so heiß, dass man hier\nleicht Feuer entfachen kann.
+0x7630C8: Ich habe alle Brücken\nselbst entworfen.
+0x7630F0: Es ist meine Aufgabe, Brücken zu bauen,\ndie der Hitze standhalten können.
+0x763194: Nichts weniger hätte ich von einem\nTrainer deines Kalibers erwartet.
+0x7631CD: Ein talentierter Trainer wie du hat\nseinen Platz in diesem Vulkan.
+0x763266: Ich habe nicht genug trainiert, man
+0x76328A: Ich werde weiter trainieren.\pFür immer…
+0x7632FE: Deine Bewegungen flossen wie\nLava.
+0x76331B: Die Lava hier ist meine Inspiration.
+0x763409: Sie waren nicht so widerstandsfähig,\nwie ich dachte.
+0x763431: Ich bin hierhergekommen, um meine\nPokémon zu trainieren, da sie von Natur aus\lschwach gegen Feuer sind.
+0x7634D6: Du hast auch mein Herz zum Schmelzen gebracht.
+0x7634F8: Die Lava ist wunderschön, nicht wahr?
+0x763577: {COLOR}ÇMission erfüllt.\pWir ziehen uns zurück.
+0x7638E1: Étouraptor!
+0x7638F9: Oh…\pDu hast keinen Platz in deinem Team\nfür das Ei…
+0x76392F: Raptor!
+0x76445C: Möchtest du, dass ich auch deine\nanderen Eier aufbewahre?\pIch habe {COLOR}É{STR_VAR_1}{COLOR}Ë
+0x7644B7: Sehr gut, ich behalte sie alle. Danke\n!
+0x7644DE: Ich werde also deine Eier für\ndich aufbewahren.
+0x76450E: Möchtest du ein weiteres Ei?\pIch bewahre <0xFC><0x01><0x06><0xFD><0x02><0xFC><0x01><0x08> insgesamt auf.
+0x76454F: Während du reist, wachsen deine Pokémon\nmit dir…\pBleibt immer durch Freundschaft verbunden.\n-Pokémon-Pension
+0x7645AD: Manchmal, wenn sich ein männliches und\nein weibliches Pokémon sehr lieben,\llegen sie ein Ei!\pUnd das Paar der Pension ist so\nnett, <0xFC><0x01><0x06>100 <0xFC><0x01><0x08>davon für\ldich aufzubewahren!\pIch würde gerne Pokémon großziehen,\ndie so begabt sind wie sie.
+0x7647E0: Ich bin da, falls du mir später\nhelfen willst!
+0x76481B: Los geht's!
+0x76482E: Meine Kleinen werden schon\nstärker!
+0x76485D: Danke für den Kampf!\pIch kann es kaum erwarten, meine Kleinen\nwieder mit dir zu trainieren!
+0x7649D7: {PLAYER} eilt zum\nnächsten Heiler und beschützt\nerschöpfte und kampfunfähige Pokémon…\p
+0x764A3B: Kümmere dich um das Baby meines Babys!
+0x764D96: Du… du… du hast meinen Schatz besiegt!
+0x764DB4: Hast du schon mal davon gehört\pSie war es, die Bills PC\nnach Borrius gebracht hat!\pDank ihr können wir unsere\nPokémon aufbewahren!
+0x764E97: Pokémon-Arena von Cratéris\nArenaleiter: Véga\pSiegreiche Trainer: {RIVAL},\n{PLAYER}
+0x764ED5: Glaubst du, du hast das Zeug dazu,\ngegen Véga anzutreten?
+0x764F0A: Hmph. Du könntest tatsächlich dazu\nfähig sein.
+0x764F31: Mit deinem Können wirst du weit kommen.
+0x764F6F: Aeeee…
+0x764F78: Es ist vorbei.
+0x764FC7: Selbst Mythen sind nicht\nunbesiegbar.
+0x764FF4: Die Zeiten haben sich seit\nmeiner Ära sehr verändert.
+0x765072: Es scheint, dass meine Berechnungen\nfalsch waren.
+0x76509C: Ich sollte sie besser verfeinern für\nunseren nächsten Kampf.
+0x765196: Unter meinen Kämpfen sticht einer heraus.\nEr bleibt mir in Erinnerung.\pEs herrschte brütende Hitze und\nmein Gegner schickte seinen\lMotisma-Ventilator mit einem Ballon.\pBis dahin hielt ich durch,\ndoch als\l ich ihn sah, brach ich zusammen.\pIch wurde ohnmächtig und verlor.\pUnterschätze niemals einen\n{COLOR}ÉMotisma-Ventilator {COLOR}Ç\lmit\neinem
+0x7653BF: Das {STR_VAR_1} ist geflohen.
+0x7655A1: Jax : <0xFC><0x01><0x08>Ich habe keine Kontrolle mehr über meinen Körper!
+0x7655C2: {COLOR}ÇKomm zurück zu mir.
+0x7655D3: <0xFC><0x01><0x04>Jetzt, wo das geklärt ist, können wir genauso gut\nauf Route 9 zurückkehren.
+0x7656F1: Wenn du erneut gegen mich antreten willst, geh raus und\nkomm wieder.
+0x7657B9: Pumpen!
+0x7658C9: Sbire : {COLOR}ËHör auf zu träumen.\pDu wirst mich nicht dazu bringen, dich\ndurchzulassen.
+0x765921: {RIVAL} : {COLOR}Ë{PLAYER}, willst du\ndie Ehre haben?
+0x7659A8: Dieb: {COLOR}ËNa gut…\pUm ehrlich zu sein, dieser Vulpix gehört\nnicht wirklich mir…\pIch habe ihn mir… äh… ausgeliehen! Ja,\nfürs Training!\pIch war so einsam, dass ich dieser\nDame einen Gefallen tun wollte.\pIch wollte ihn gerade zurückbringen, als…
+0x765A91: {COLOR}ËWas war das!\pKönnte es sein… ?\pNein, unmöglich…
+0x765AC4: {COLOR}ËOh, das war nichts
+0x765AE5: {COLOR}ËAlso, wie ich schon sagte…
+0x765AFE: {COLOR}ËWaaah! Das Monster, das\nim Wald lebt!\p{COLOR}ÉDer Yeti-Krebs{COLOR}Ë!\pRennt um euer Leben!
+0x765B7E: Route 17\p<0x7B> Route 16\n<0x7C> Naville
+0x765BFF: Los!
+0x76CE9D: Mach dich bereit, durchgeschüttelt zu werden, Kleiner.\pIch habe gerade alle Schergen\nzum Damm zurückgerufen, wir kontrollieren jetzt\ldiese ganze Route!
+0x76CF22: Wow, Mann…\pIch bin vielleicht hoch am Himmel,\naber du bist auf einer ganz anderen\lEbene der Existenz!
+0x76D010: Gut, dann zurück zum\nAngeln.
+0x76D037: Ich werde eines Tages etwas Gutes\nfangen. Viel Spaß.
+0x76D073: ( l Siehst du den Typen da oben? Er\nangelt dort schon seit Tagen.
+0x76D0C7: Sieht so aus, als hätte ich verloren. Ich muss\nbesser angeln.
+0x76D100: Um ehrlich zu sein, bin ich auch\nschon seit Tagen hier.
+0x76D12B: Route 5 liegt am Fuß von Volcan Cendré.
+0x76D155: Sturz.
+0x76D29F: Murmel… Murmel…\p…warte auf das Signal…\pFlüster… Flüster…\p…Agent auf Wache…\pMurmel… Murmel…
+0x76D2F4: Crabominable : {COLOR}ÉCrah rah rah
+0x76D393: Na gut, schade.
+0x76D3AC: Die Luft ist schön, findest du nicht?
+0x76D3CC: {UNKNOWN_STR}\n.
+0x76D419: Die Legende meiner Unbesiegbarkeit\nendet mit dir!
+0x76D447: Eines Tages werde ich wirklich
+0x76D46A: Ehrlich gesagt bin ich nicht gut\nim Kämpfen.\pWenn ich an meine Zukunft denke,\nscheint es, als hätte ich keine\landere Wahl, als zu kämpfen!
+0x76D506: Siehst du… Ich wusste, dass ich nicht\ngewinnen konnte.
+0x76D524: Kämpfe sind nichts für mich.
+0x76F285: {COLOR}ËSchnell!\pFang es jetzt!
+0x770AF0: Wicht.
+0x770AF7: Verschwinde, Rotzlöffel.
+0x770CF9: Dieses Ökosystem muss in einem\nempfindlichen Gleichgewicht bleiben.
+0x770D2A: Ich schlendere gerne ruhig durch\ndiese Höhle.
+0x770D5C: Angenehm.
+0x770D67: Lass mich in Ruhe gehen.
+0x770D88: Im Moment darf niemand\nAutomnia betreten.\pAb mit dir, Kleiner!
+0x770F08: Hallo! Wenn du mich besiegst, heile\nich deine Pokémon kostenlos!
+0x770F6D: Wir heilen!
+0x770F7B: Wieder fit!
+0x771077: Technologie ist unglaublich!\pDu kannst GBA-ROMs auf deinem\nHandy und deinem Computer spielen!
+0x7710C7: Du hast nicht genug Platz in deinem\nTeam.
+0x7710F1: Du hast ein {STR_VAR_1} erhalten!
+0x77125E: Scherge: {COLOR}ËDieses Monster war\nfurchterregend! Wir mussten es wecken\pKampf.\n…\pGut… ich glaube, ich bin fertig\pmit dem Training dieses Vulpix… Es ist Zeit\nihn seinem\pBesit\nzer zurückzugeben.
+0x77133A: {COLOR}ÉAlice{COLOR}Ë, die\nArenaleiterin, benutzt gerne\lFlug-Pokémon.\pNicht das, was man für eine\nArena hier erwarten würde.
+0x771420: Wie geht es meinem ehemaligen Pokémon?
+0x77143D: Hallo.\pMöchtest du zufällig ein\nRiolu haben?\pIch habe es aus einem Ei ausgebrütet und\nweiß nicht, was ich damit anfangen soll.
+0x7714B3: Ihr erhaltet ein Riolu vom\nalten Mann!
+0x7714DC: Bitte kümmere dich um mein\nliebes Riolu.
+0x771501: Du musst es nicht nehmen…
+0x77151E: Wie geht's da unten?\pIch sage da unten, weil ich\nganz oben in den Wolken bin!
+0x7715A3: Oh, hallo, <0xFD><0x01>!\pDeine Mutter hat mir erzählt, dass du\nendlich die Stadt verlässt!\pDas sind großartige Neuigkeiten!\pDu wirst endlich in die\nFußstapfen deines Vaters treten und ein\lgroßer Pokémon-Trainer werden!\pWer weiß? Vielleicht befehligst du\neines Tages den großen Arceus, genau wie\ler es tat…\pDer Weg wird lang und schwer sein,\naber ich weiß, dass du es schaffen kannst\lund dass du es schaffen wirst!\pNimm diesen Gegenstand, um dir zu helfen auf\ndeiner Reise.\pEs ist ein seltener, wertvoller Stein, der\neine Attacke im\lKampf verstärken kann.\pSetz ihn weise ein.
+0x771797: Oh, hallo, {PLAYER}!\pWie läuft deine Reise?
+0x7717C1: Hmm…\pSieht so aus, als hättest du keinen Platz\nfür mein Geschenk.
+0x771A25: Stopp!\pWo willst du hin?\pWenn du bereit für die\nGrotte Stalactite bist, beweise es, indem du\ldas {COLOR}ÉPaket von Log{COLOR}Ë ausliefert.
+0x771D27: Nur ein Einzelgänger kann eine Niederlage\nso gut wegstecken.
+0x771D55: Ich {COLOR}Éverkette{COLOR}Ë mein Angeln\num Pokémon zu sehen
+0x771EC8: Mein Rattfratz ist immer der\nBeste.
+0x771EE7: Ich werde mein Rattfratz noch\nstärker machen!
+0x771F43: Meine Pokémon werden immer bleiben
+0x772093: 9Wenn Pokémon sich entwickeln, werden\nsie stärker.\pAber es gibt einen Vorteil darin, sie nicht\nsofort entwickeln zu lassen.\pEin Pokémon, das sich noch entwickeln kann,\nkann ein\lschwerer zu besiegendes Wesen sein.\pIch habe noch eins übrig,\nnimm es.
+0x77218A: Lass ein\n{COLOR}ÉÉvoluroc{COLOR}Ë von einem\lseine Verteidigung tragen.
+0x7721E8: Dort, wo der Wind eisig ist, sind meine Hände\nes auch.\pMöchtest du, dass ich {COLOR}ÉEisen\nfaust{COLOR}Ë einem deiner Pokémon beibringe?\pIch verlange {COLOR}É2\n{STR_VAR_1}{COLOR}Ë als Gegenleistung
+0x77229F: Verkäufer: <0xFC><0x01><0x08>Tut mir leid, mein Herr, ich\nkann das nicht tun.\pDieses Paket gehört bereits\njemandem.
+0x7722F2: Scherge: {COLOR}ËDu hast dich wohl verhört.
+0x772313: {COLOR}ËGib mir dieses Paket!\pIch werde nicht zweimal fragen.
+0x77233F: Verkäufer: <0xFC><0x01><0x08>Das kann ich wirklich nicht,\nmein Herr!\pAls treuer Angestellter des Poké\nMarts würde es meinen Prinzipien\lwidersprechen, Ihnen dieses Paket zu geben!
+0x7723BE: Scherge: {COLOR}ËIch verstehe.\pNun gut denn…
+0x7723DB: {COLOR}Ë{STR_VAR_1}!\pNimm dieses Paket!
+0x7723F5: Scherge: {COLOR}ËGute Arbeit, {STR_VAR_1}.
+0x77240E: Welches Pokémon hätte gerne\ngefrorene Hände mit <0xFC><0x01><0x06>Eisenfaust<0xFC><0x01><0x08>?
+0x772458: Meine Hände werden für\nimmer kalt bleiben.
+0x772485: Du hast nicht genug\n{COLOR}É{STR_VAR_1}{COLOR}Ë.\pIch kann meine gefrorenen Hände\nnicht kostenlos teilen…
+0x7724DC: Die TM, die ich dir gegeben habe, enthält\n<0xFC><0x01><0x06>Auroraschleier<0xFC><0x01><0x08>.\pIhr Effekt kombiniert die von\nSchutzschild und Lichtschild.\pEinziger Haken: Sie funktioniert nur\nbei Hagel.
+0x772549: …erhalten.\pDer einzige Haken ist, dass sie nur\nbei Hagel eingesetzt werden kann.
+0x77258B: Pech für dich.
+0x7726C1: Jax : {COLOR}Ë{PLAYER}!\pIch bin sofort hierher geflogen, als die Barriere\ngefallen ist.\pWas ist passiert?\p…\pDie Schatten sind wieder entkommen…
+0x772790: Pausenraum
+0x7727C5: Rivapolis beherbergt das <0xFC><0x01><0x06>Haus des\nUmkehrkampfs<0xFC><0x01><0x08> und das <0xFC><0x01><0x06>HQ der\lMissionen<0xFC><0x01><0x08>.\pIst das nicht toll?\nEs ist so cool, hier zu leben!
+0x772874: Verschwinde.
+0x77287D: Huah, Mit-Trainer!\pIch trainiere Körper und Geist, indem ich\ndiesen Baum intensiv anstarre!\pTrainiere du auch damit!
+0x7728F3: Eines Tages werde ich der\nkonzentrierteste Trainer sein.
+0x772920: Ich bin hierhergekommen, um die\nheimischen Pokémon zu erforschen.
+0x7729A2: Komm bald wieder!
+0x7729DC: Was? Ich schwänze nicht die\nSchule…
+0x772A28: Nur Loser gehen wirklich zur\nSchule…
+0x772A91: Hmm…\nWie bekomme ich dieses Item zurück?
+0x772AB7: Wow! Du hast es geschafft, dieses\nItem zu bekommen! Bravo!
+0x772AE4: Ich kann dir nie genug danken!\pMein Bruder ist klein, er kann nicht\nweit gekommen sein.\pIch wette, er ist gerade jetzt auf\n<0xFC><0x01><0x06>Route 8<0xFC><0x01><0x04>.\pUnd das Letzte, was ich gehört habe, war, dass er\nsein <0xFC><0x01><0x06>Lieblings-Pikachu-Kostüm<0xFC><0x01><0x04> trug.
+0x772BAB: Meine Eltern bringen mich um!
+0x772BCC: Mein Bruder hat mir alles über\nseine Rückkehr hierher erzählt!\pDu bist unglaublich!
+0x772C13: Diese TM ist meine Art, dir zu\ndanken! Sie enthält <0xFC><0x01><0x06>Vergeltung<0xFC><0x01><0x04>!\pDas ist eine Attacke, die stärker\nwird, wenn dein Pokémon dich liebt.\pDas ist die perfekte TM für jemanden,\nder so nett ist wie du!
+0x772CC6: Das ist die unglaubliche Person, die\nmeinen Bruder gerettet hat!\pNochmals danke!
+0x772E62: Schnief…\pDu bist kein Pokémon.\pIch dachte, ein Pokémon würde mich\nfressen.
+0x77310D: Kein Rennen hätte mich auf dich\nvorbereiten können!
+0x773142: Ich werde weiter rennen und den\nSchmerz ertragen.
+0x77317A: Eine sehr laute Folge einer Pokémon-\nMusicalshow aus Einall läuft auf dem Bildschirm.\pSie zu lange anzuschauen könnte dir\ndas Gehirn braten.
+0x773253: Meine Pflanzen-Typen haben mir nicht geholfen.
+0x773455: Perfekt!
+0x773466: Ich erschaffe gerade ein Meister-\nwerk.
+0x7734D0: Waren sie nicht unglaublich?
+0x7734E6: Ich liebe die Entwicklungen von Starter-Pokémon\naus anderen Regionen!
+0x77355B: Du dachtest doch nicht, dass du so\neinfach durchkommst, oder?
+0x773596: Gut, ich werde dir nicht mehr den\nWeg versperren.
+0x7735C5: Ich will nach Hause.\pIch bin vor meiner gemeinen Schwester geflohen, aber sie\nfehlt mir jetzt…
+0x773613: Bring mich zurück nach {COLOR}ÉCimistral{COLOR}Ë.\pIch folge dir dorthin.
+0x77365A: Siehst du diese Felsen an der Wand?\pMit einem Pokémon, das\n{COLOR}ÉKlettermax{COLOR}Ë kennt, kannst du
+0x773719: Na na na na na na na… Er hat verloren\n!
+0x77373A: Ich stelle mir gerne vor, dass ich für mehr\nbestimmt bin, als hier in\ldieser Höhle herumzustehen.
+0x7737C6: Noch ein bisschen weiter!
+0x7737DD: Diese Höhle ist ziemlich klein,\nnicht wahr?
+0x775B90: Scherge: {COLOR}ËIhr fangt wirklich an,\nmir auf die Nerven zu gehen!\pSepiatoc!\pZeig {STR_VAR_1}, dass wir nicht\nnach {COLOR}ÁDen
+0x775C06: Ich wusste, dass es eine schlechte\nIdee war, sie hier einzusperren…
+0x775C38: Das passiert, wenn du\ndie Schatten herausforderst!
+0x775C6A: {RIVAL} : {COLOR}ËNicht schlecht, {PLAYER}\n! Du hast es ihm gezeigt!\pIch übernehme jetzt.\pBenutz diesen Trank an deinen Pokémon,\num sie in der Zwischenzeit zu heilen.
+0x775CE2: <0xFD><0x06> : <0xFC><0x01><0x08>Was für eine Enttäuschung.\pIch dachte wirklich, du könntest\ndich um ihn kümmern.\pIch werde mich wohl selbst\ndarum kümmern müssen.\pBenutz diesen Trank an deinem\nPokémon, um es zu heilen.
+0x775D84: {COLOR}ËNa gut, dann. Ich werde es\nselbst machen.
+0x775DA6: Scherge: {COLOR}ËNein! Mein Sepiatoc!
+0x775DBE: {RIVAL} : {COLOR}Ë{STR_VAR_1}!\nStürm los und schlag zu!
+0x775DF7: Scherge: <0xFC><0x01><0x08>Na gut, na gut, ich gebe auf!\nIch lasse dich durch!\pBitte, verschone mich!\nTu mir nicht mehr weh! Bitte!
+0x775E6C: {COLOR}Ë{STR_VAR_1}! Komm zurück!
+0x775E7B: <0xFC><0x01><0x08>Ich gehe jetzt,\n<0xFD><0x01>.\pIch bin sicher, du wirst von hier\naus zurechtkommen.\pWenn du irgendein Problem hast,\nverlass dich auf deine Pokémon.
+0x775F18: {COLOR}ËOh, noch eine letzte Sache.\pSobald du zurückkommst, kämpfen wir.\nDu hast mich vorhin beeindruckt,\pund ich will sehen, wie ich mich\ngegen dich schlage.\lBis dahin, überanstreng dich\pnicht\nzu sehr.
+0x7760B6: Wahh!\pDieses Pokémon hat mir wehgetan!
+0x7760E3: Sandamer: <0xFC><0x01><0x06>Zerschneider!
+0x7760F8: Das Pokémon scheint in Richtung der\n{COLOR}ÉGrotte Stalactite zu gehen.
+0x776157: Hallo <0xFD><0x01>!\pWie geht es dir?\pIch habe gerade Essen gekocht\nfür meine Familie.
+0x776197: Das ist eine Statue des legendären\nEis-Pokémon Arktos.\pEs steht geschrieben, dass Arktos einst\nals Herold einer großen\lDunkelheit diente, aber dass er in der Nähe der\lCimes Gelées lebt.
+0x7763EB: Ich weiß, oder? Das Leben ist manchmal\nso stressig!
+0x776441: Route 13\p<0x79> Route 4, Volcan Cendré,\nBoissombre\l<0x7A> Route 14\l<0x7C> Daherapolis
+0x77650A: Du bist ein Pokémon-Trainer\n!
+0x776522: Was? Ich habe keine Pokémon mehr\n!
+0x77653D: Du wirst dich hier gut amüsieren.\pDieser Ort ist ein echtes Labyrinth.
+0x7765A0: Hmm? Was mache ich\n?
+0x7765B6: Entschuldigung! Ich war besessen\n!
+0x7765F5: Hey, warte! Warum die Eile?\nWarum rennst du?
+0x776623: Manchmal findet man Sachen\nauf dem Boden.\pIch suche nach verlorenen.\nHilfst du mir?
+0x776686: Puh… Ich bin heil und gesund aus der\nForêt Obscure herausgekommen.\lIch habe es sogar geschafft, dort ein paar\lgruselige Pokémon zu fangen!
+0x77680C: <0xFC><0x01><0x08>Schnief…\pIch kenne den Weg nach Hause\nvon hier aus.\pEs war toll, mit dir zu gehen!\nDu bist der Beste!
+0x776862: {COLOR}ËSchnief…\pIch glaube nicht, dass das der richtige\nWeg nach Hause ist…
+0x7768A4: <0xB1>Wer baut eine Stadt auf dem Gipfel\neines gefrorenen Berges?<0xB2> Das fragst du dich\lsicherlich.\pNun, vor etwa 20 Jahren haben sich\nOrnithologen versammelt und\lbeschlossen, dass sie einen Ort\lhoch oben wollten, um dort\lihre Pokémon zu trainieren.\pMit der Hilfe eines gewissen\n<0xFC><0x01><0x06>Aros<0xFC><0x01><0x08> und seines Arceus haben sie\ldiese Stadt in weniger als einem Jahr erbaut!\pEs erstaunt mich, was Menschen\nund Pokémon gemeinsam erreichen\lkönnen, wenn sie zusammenarbeiten.\pSag mal…\pDein Gesicht erinnert mich ein wenig an\nseines…
+0x776AF5: Ich habe auf dich gewartet…
+0x776B0E: Du nicht? Ich\nschon.
+0x7787F5: Entschuldige, Trainer, könntest du mir\nhelfend zur Seite stehen, bitte?\pEin großes Festmahl, und wir brauchen\nviel Honig für das Essen.\lIch habe schon sieben Töpfe gesammelt,\paber ich brauche mindestens drei\nmehr.\pMan sagt, man findet welchen bei\nwilden Apitrini, aber ich habe wenig\lChance, welche zu fangen.\pAlso, was sagst du?\pKannst du drei Apitrini fangen und\nmir ihren Honig geben, bitte?
+0x778982: Schade.\pIch werde dann wohl selbst weiter\nsuchen müssen.
+0x7789B9: Großartig!\nDanke, dass du mir hilfst!\pMan findet Apitrini überall in\nParadis Floral, aber sie\lerscheinen häufiger in den\l<0xFC><0x01><0x06>blauen Blumen<0xFC><0x01><0x04>.\pUnd vergiss nicht, ich brauche\nmindestens <0xFC><0x01><0x06>3 Honigtöpfe<0xFC><0x01><0x04>.
+0x778A80: Du hast sie! Vielen Dank!\nLass mich sie dir abnehmen.
+0x778AC2: Die Dame hat 3 Honigtöpfe genommen.
+0x778ADA: Für deine Hilfe, nimm diese TM als\nBelohnung. Ich bestehe darauf!
+0x778BAF: Ivory : {COLOR}ÇEs tut mir leid,\naber leider kann ich nicht\pDas ist zu wichtig für unsere Pläne.\pUnd außerdem werde ich mich nicht dazu herablassen,\njemandem wie dir\lzuzuhören.
+0x778C62: Jax : {COLOR}ËIch lasse dich nicht\ngehen, bevor dieses Pokémon\pMach dich bereit für einen Kampf!
+0x778CB6: Ivory : <0xFC><0x01><0x04>Nun gut, in diesem Fall.\pIch werde deiner kleinen\nBitte nachkommen.\pAber wisse, wenn du verlierst,\nwird mein Pokémon dich zu Asche verbrennen!\pLos! Incine…
+0x778D3F: Marlon : {COLOR}ËIvory! Warte!
+0x778D57: Marlon : <0xFC><0x01><0x08>Ivory!\pDu hast keine Zeit, jetzt gegen diesen\nTrainer anzutreten.\pWir haben einen engen Zeitplan\neinzuhalten.\pGeh, ich halte ihn auf, während\ndu entkommst.
+0x778DF2: Ivory : {COLOR}ÇLos geht's, Krieger
+0x778E1D: Jax : {COLOR}ËVerdammt…\pSie sind mit Lavados geflohen…
+0x778E4A: {COLOR}ËIbitak.\pSchneiden wir ihnen den Weg am Ausgang ab.
+0x778EB1: Oh…\pDu bist <0xFD><0x01>, richtig?\p<0xFD><0x06> hat mir von dir erzählt.\pNimm es nicht persönlich, aber\nvermeide es, dich ihm in den Weg\lzu stellen.\pEr hat keine Zeit für dich.
+0x778F41: bringt sie nach Hause.\pEr hat keine Zeit, sich um\neuch zu kümmern.
+0x778F75: ??? : {COLOR}Ç…eins mit dem Wind, eins\nmit den Flammen.\pEin entfesseltes Feuer.\pEine Welt in Flammen.\pSankren bolganone!\pHöre meinen Ruf!\pLavados!\pKomm zu mir!
+0x779001: Hallo! Kann ich dir\nhelfen?\p…\pBist du wegen des Pakets von Prof. Log\nhier?\pTut mir leid, es… äh… ist noch nicht\nangekommen.\pKönntest du später noch mal vorbeikommen?
+0x779090: 9{COLOR}ËOh, eine Sache.\pSobald ihr nach Hause kommt,\nkämpfen wir.\pIhr habt noch viel über\nKämpfen zu lernen, und ich kann euch\lein paar Tricks zeigen.\pBis dahin, überanstrengt euch\nnicht zu sehr.
+0x77915E: {COLOR}ËOh, noch etwas.\pSobald du zurückkommst, kämpfen wir. Du hast\nnoch viel zu lernen im\pKampf, und ich zeige dir gerne\nein paar Tricks.\lBis dahin, überanstreng dich nicht zu sehr.\p\n
+0x77922B: {COLOR}ËOh, noch etwas.\pSobald du zurückkommst, kämpfen wir. Du\nbist wie ein Fiffyen eingeknickt\pvorhin, aber diesmal drückst du dich\nnicht wieder!\pBis dahin, überanstreng dich\nnicht zu sehr.
+0x7795B8: {COLOR}ËHast du den alten Log\ngetroffen?\pEr ist ein Experte für Pokémon-Statistiken oder\nso etwas…\pIch habe ihn darüber informiert, was\npassiert ist.
+0x779637: Log: {COLOR}ËIch untersuche die Statistiken und Fangraten\nvon Pokémon.\pUnd mein Titel ist\nProfessor, nicht\palter Knacker!\pBei Arceus… Das habe ich dir schon zu oft\nwiederholt…\pJedenfalls habt ihr eine ziemliche\nTortur durchgemacht.\pIch bin erleichtert, dass ihr beide\nunversehrt seid.\pIhr habt es sogar geschafft, eure\neigenen Pokémon zu bekommen!\pIch hatte vor, eines an {RIVAL} zu geben\neines Tages, aber das muss ich nicht\lmehr tun!\pHo ho ho!
+0x7797CC: ho ho!
+0x7797D4: {RIVAL} : {COLOR}ËEines Tages?\pDu kümmerst dich seit 13 Jahren um\nmich, Alter!\pIch frage dich das schon seit Arceus weiß\nwie langer Zeit!\pEhrlich gesagt habe ich vor Jahren\naufgehört, daran zu glauben…
+0x77EFC1: Route 7\p<0x79> Mont Givre, Route 8\n<0x7A> Route 9\l<0x7C> Route 6
+0x77F01E: Route 8\p<0x79> Cimistral\n<0x7A> Mont Givre, Route 7
+0x77F05C: Route 9\p<0x79> Route 7, Mont Givre\n<0x7A> Automnia
+0x77F096: Route 9\p<0x79> Route 7, Mont Givre\n<0x7C> Automnia
+0x77F0C4: Route 10\p<0x7B> Automnia\n<0x79> Chenal Aubrun\l<0x7C> Rivapolis
+0x77F0D0: Route 10\p<0x7B> Automnia\n<0x79> Chenal Aubrun\l<0x7C> Rivapolis
+0x77F113: Route 10\p<0x7B> Automnia\n<0x7C> Rivapolis
+0x77F139: Cratéris\pEine Stadt, die auf Asche erbaut wurde.
+0x77F168: Cimes Gelées\pEine Inselstadt auf einem gefrorenen See.
+0x77F198: Mein Großvater kennt jede Menge\ninteressante Leute!\pDu solltest mit ihm reden!
+0x77F1E3: Du bist sein Kind!\pIch wusste, dass mich meine Augen\nnicht täuschten!\pDein Vater war, einfach gesagt,\nein außergewöhnlicher Mann.\pIch bin sicher, wenn du dich als\nsein Kind vorstellst, würden dir die Leute\lsofort sehr viel\lZuneigung entgegenbringen.\pNur wenige haben noch nie\nvon seinen Heldentaten gehört.\pWie schade, dass er verschwunden ist.\pWenn nur jemand wüsste, was\naus ihm geworden ist, könnte ich\lendlich einen Schlussstrich ziehen.
+0x77F375: Oh.\nIch hätte schwören können, du wärst…\pMeine Augen lassen wohl mit\ndem Alter nach.
+0x77F3BF: Was? Weißt du, was mit\n{COLOR}ÉAros{COLOR}Ë passiert ist?\pBitte! Du musst\nes mir sagen!\p…\pEr wurde zu Asche…\pDiese Welt auf diese Weise zu\nverlassen ist so traurig.
+0x77F452: Das mag etwas ironisch klingen,\naber ich möchte dir dieses Item\lschenken, als Dank dafür, dass ich\leinen Schlussstrich ziehen konnte.
+0x77F4C8: Wenn nur jemand mir sagen\nkönnte, was mit deinem Vater passiert ist…\pDas würde mir so viel\ninneren Frieden bringen.
+0x77F52F: Hallo, Kind des legendären\nAros.\pIch hoffe, deine Reise verläuft gut.
+0x77F57B: Sohn
+0x77F57F: Tochter
+0x77F662: Wusstest du, dass die\nArena-Schiedsrichter dir ein\lGeschenk geben, wenn du mit ihnen sprichst,\lbevor du den Champion besiegst?\pNa, wusstest du das schon?
+0x77FAD8: Das hat mich richtig aufgewärmt!
+0x77FAF1: Es ist immer wichtig, warm zu\nbleiben.
+0x77FB6C: Ich habe deine Stärke gespürt.
+0x77FB88: Geh trainieren und werde der\nbeste Trainer aller Zeiten.
+0x77FC48: Man hätte diesen Ort\nGrotte Faille nennen sollen.
+0x77FC7B: Dieser Ort erinnert mich an die Grotte Faille aus Johto.\pWarum Mont Foudroyant und nicht\nGrotte Faille? Ein Rätsel.
+0x77FD9C: Ich glaube, ich kann den\nHimmel berühren…
+0x77FDBD: Ich tue gern so, als könnte ich\nfliegen wie meine Vögel.\pAm Boden zu bleiben ist doof.
+0x77FE7C: Egal wie weit, ich habe trotzdem\nverloren!
+0x77FEA2: Ich esse jede Menge Karotten, um\nmeine Sicht zu verbessern.\pVielleicht wird meine Haut deshalb\nlangsam orange…
+0x77FF0F: Route 9, Stadt Automnia, Stadt\nRivapolis, Stadt Épidia
+0x77FFE5: Hehe…\pDu wirst immer stärker,\n{PLAYER}.\pWarte auf unser nächstes Treffen.\nIch werde stark genug sein, dich\pdie Niederlage spüren zu lassen! Jetzt\nentschuldige mich, ich habe\pWichtiges\nzu erledigen.
+0x78000F: furchterregend, <0xFD><0x01>.\pWarte noch ein wenig auf unser\nnächstes Treffen.\pBis dahin werde ich stark genug\nsein, um dich zu besiegen!\pDann entschuldige mich, ich habe\nWichtiges zu erledigen.
+0x7800BD: Log: {COLOR}ËKlar habe ich daran\ngedacht, {RIVAL}!\pEs gibt jede Menge Arbeit, für die\nich einfach zu alt bin, um sie allein zu machen!\pEs ist nur… nun ja… als deine\nEltern dich bei mir gelassen haben,\lhaben sie mich gebeten, auf dich\nachtzugeben,\lbis du 18 bist…
+0x780119: selbst erledigen!\pEs ist nur… nun ja… als deine\nEltern dich mir anvertraut haben,\lhabe ich versprochen, auf dich\lachtzugeben, bis du 18 bist…
+0x7801A4: {RIVAL}: {COLOR}ËIst mir egal, Log.\nGlaub, was du willst.
+0x7801D1: {COLOR}ËAch ja, fast vergessen.\pDraußen zeige ich dir, wie ein\nechter Trainer kämpft!
+0x780230: {COLOR}ËAch ja, fast vergessen.\pDraußen gebe ich dir ein paar\nKampftipps.
+0x78028C: {COLOR}ËAch ja, fast vergessen.\pJetzt, wo wir draußen sind, zeig\nmir, wie du kämpfst!\pDiesmal kein Kneifen wie ein\nFeurigel!
+0x780301: Nicht schlecht, {PLAYER}!
+0x78030E: Sieht so aus, als hättest du noch\neinen langen Weg vor dir, {PLAYER}!
+0x78033E: Log: {COLOR}ËDas war ein schöner\nKampf.\pSehr fesselnd, wenn ich das mal\nselbst sagen darf.
+0x7804F5: Viele nennen mich verrückt, aber ich\nbevorzuge "leidenschaftlich".
+0x780530: Warum ist eine schöne Trainerin wie\nich hier?
+0x78055D: Einfach, weil ich es kann.
+0x780576: Ich habe die Arena hier versucht,\naber ich habe nicht mal den Champion erreicht!\pEs war so dunkel, dass ich nicht\nsehen konnte, wohin ich ging.\pNicht mal Blitzlicht hat mir\ngeholfen, klarer zu sehen.\pSo dunkel war es.
+0x78069E: Scherge 1: {COLOR}ËDer Agent hat eine\nNachricht geschickt.\pDas Ziel ist in Bewegung.
+0x7806F6: Scherge 2: {COLOR}ËSehr gut.\pIn Position.
+0x7808DD: 9Épidia\pDie Stadt des Glücks und der Freude.
+0x7808DE: Épidia\pDie Stadt des Glücks und der Freude.
+0x7809B9: Meine Güte.
+0x7809C4: Hallo, junger Reisender. Deine\nPokémon sehen müde aus.\pLass mich sie für dich heilen.
+0x780A50: Ein Angriff, der\nfurchterregend wirkt.\nKann das Ziel auch\nzum Stolpern bringen.
+0x780A9E: Ein Angriff, der\ngegnerischen Schutz\ndurchschneidet.
+0x780ACD: Der Anwender\nverschwindet und schlägt\nin der nächsten Runde zu. Dies ignoriert\nSchutz.
+0x780B16: Ein heftiger Sturm\naus Blütenblättern\nerhebt sich und trifft alles, was\nihn umgibt.
+0x780B57: Das Ziel verliert seinen\nKampfeswillen.\nSenkt seinen\nAngriff.
+0x780B93: Eine Attacke, die die\nZeit verzerrt. Der Anwender\nmuss sich in der nächsten\nRunde ausruhen.
+0x780BD7: Eine Attacke, die\nden Raum ringsum\nzerreißt. Volltreffer\ngeschehen\nhäufiger.
+0x780C21: Ein Feuerstrudel wütet und\nfängt das Ziel für\nvier bis fünf\nRunden.
+0x780C69: Alle Feinde werden in eine\nWelt völliger\nDunkelheit gestürzt,\ndie sie einschläfert.
+0x780CB2: Eine Schockwelle wird auf\nden Gegner losgelassen. Dies kann\ndie Sp.\nDef. des Gegners senken.
+0x780CF7: Das Ziel wird\nmit elektrisch\ngeladenen Wangen\nangegriffen, die es\nlähmen.
+0x780D3F: Wenn ein Verbündeter in der\nvorherigen Runde besiegt wurde,\nsteigt der Schaden\ndieser Attacke.
+0x780D88: Eine Attacke, die\nden Typ ändert,\nje nach der Platte,\ndie der Anwender\nträgt.
+0x780E33: 9Eine Attacke, die\ndas Ziel einfrieren\nkann. Sie ist\nauch sehr\neffektiv gegen Wasser-Typen.
+0x780E8C: Eine seltsame Psychowelle greift\ndas Ziel an. Diese Attacke\nfügt\nphysischen Schaden zu.
+0x780ED6: Der Anwender greift\ndas Ziel mit\neinem Gesang an.
+0x780EFF: Der Anwender greift\nan, indem er das\nZiel mit seinem harten\nSchwanz trifft. Trifft\nzwei- bis fünfmal hintereinander.
+0x780F5D: Der Anwender greift an, indem er\nzwei Stahlzahnräder\nauf sein Ziel wirft.\nDiese Attacke trifft zweimal\nhintereinander.
+0x780FB9: Der Typ und die\nStärke dieser\nAttacke hängen von\nder getragenen Beere ab.
+0x781001: Eine Attacke, die unempfindlich\ngegenüber Statuswert-\nänderungen des\nZiels ist.
+0x781090: Dank eines\nHyperraum-Portals\ngreift der Anwender\ndas Ziel an.\nDurchdringt auch Schutz.
+0x7810E6: Das Ziel wird von\nvielen Armen\ngetroffen. Durchdringt\nSchutz und senkt\ndie Verteidigung des Anwenders.
+0x781144: Eine schnelle Drehung. Je\nlangsamer der\nAnwender ist, desto\ngrößer der Schaden.
+0x78117E: Es überflutet den Bereich um\nden Anwender mit einer\nriesigen Schlammwelle.\nDies kann auch\ngetroffene Personen vergiften.
+0x7811D9: Ein Geschoss wird\nauf den Gegner\ngeschleudert. Ein\nfliegendes Pokémon\nstürzt zu Boden.
+0x78122B: Das Ziel wird für\n4 bis 5 Runden\nbefallen. Das Ziel\nkann nicht fliehen.
+0x781278: 9Ein besonderer Stein, der\nbestimmte Pokémon-Arten entwickeln lässt.\nEr funkelt wie Augen.
+0x7812CF: Ein besonderer Stein, der\nbestimmte Pokémon-Arten entwickeln lässt.\nSein Schneeflockenmuster ist einzigartig.
+0x78133B: Ein seltenes Item, das\nbestimmte Pokémon-Arten entwickeln lässt.
+0x78137A: Eine Kiste voller einer enormen\nMenge Magma-Energie. Sie\nwird von einem bestimmten Pokémon geliebt.
+0x7813D4: Ein Gerät, das alle\nZiele aufzeichnet, die du erfüllen musst.
+0x781506: <0xFD><0x06>: <0xFC><0x01><0x08>Es ist allen egal,\nwas dir das angetan hat, Log.\pWas zählt, ist, dass unsere\nPokémon stark aussehen.
+0x781561: Hallo, {STR_VAR_1}. Darf ich\nIhr Pokémon für Sie heilen?
+0x78158D: Jax: {COLOR}ËHabt ihr gerade\nShadow Sneak benutzt?\pWisst ihr nichts über\nImmunität?\pStaraptor, benutz Aerial Ace!
+0x7815FC: Whoa, Mann…\pNehmt diesen sehr, sehr guten Orden\nals Beweis eures Sieges…
+0x781668: 9Deine Pokémon sind jetzt\nbesser, {STR_VAR_1}.
+0x781697: mein Herr
+0x78169B: Meine Dame
+0x7816A1: Wir Polizisten sind die Einzigen\nzwischen den Banden und der Zerstörung\ldes Hafens.
+0x781718: <0x7C> Hafen der Stadt\nAntésia
+0x7818B1: Gefällt dir meine Sandburg?\pIch habe sehr hart gearbeitet, um\nsie zu bauen!
+0x7818EE: Wahhhh!\pMeine Sandburg ist verschwunden!
+0x787BD5: Puh!\pDa seid ihr!\pWas haltet ihr von dieser Feuchtigkeit,\nTag für Tag!
+0x787C0E: Puh, super! Ihr und eure Pokémon\nseid großartig!
+0x787C3E: Ho ho… natürlich ist es feucht,\nwie eine Sauna…
+0x787C66: Ich bin gut in Strategie, aber\nschlechter im Werfen\lvon Pokébällen!
+0x787CBB: Wenn nur eine Maschine meine Pokébälle\nfür mich werfen würde…
+0x787CFE: Ich werde diese Kunst des\nPokéball-Werfens perfektionieren!
+0x787D9E: Argh, ich habe verloren… Ist meine\nMethode etwa nicht gut?
+0x787DD0: Wenn du stärker werden willst,\nwerde ich auch stärker.
+0x787E08: Ihr solltet besser keine schwachen\nPokémon schicken!\pEure Gegner sind meine Partner\nfürs Leben!
+0x787E5A: Danke, meine Freunde, für all eure\nharte Arbeit.
+0x787E87: Wie dem auch sei, mein Pokémon\nwird bis zum Ende bei mir bleiben!
+0x787EC4: In Ordnung! Auf in die Schlacht!
+0x787EE7: Ich kann kämpfen, aber\nmein Pokémon…
+0x787F07: Selbst wenn ich verliere, macht es\nmir trotzdem irgendwie Spaß.
+0x787F3F: Ich habe mich an diesen Schnee gewöhnt.\nJetzt singe ich beim Klettern.
+0x787F77: Es ist immer noch nicht leicht,\nauf diesem verschneiten Boden zu kämpfen…
+0x787FFD: Mir ging die Energie zum\nKämpfen aus!
+0x78801B: Wenn ihr rennt und rennt, werdet\nihr eins mit dem Wind.
+0x788050: Picknicks machen überall\nSpaß, genau wie Pokémon!
+0x788084: Ich habe verloren, der Boden ist zu\nverschneit!
+0x7880AC: Ich werde die Niederlage vergessen und\ndiese verschneite Wanderung genießen.
+0x7880E5: Ich bin geboren, aufgewachsen und lebe\nin den Bergen.\pIch bin ein Ass-Wanderer, sage ich euch.
+0x788132: Ich sag's dir, du bist stärker als\ndieser Ass-Wanderer!
+0x788163: Niemand kennt die Berge\nbesser als ich, das sage ich euch.
+0x788255: 9Wie viele Jahre habe ich schon\nhier verbracht…\pWenn ich nur verlieren könnte,\nwürde meine Reise enden…
+0x7882B8: Danke…\pDanke…\pJetzt kann meine Reise\nenden…
+0x7882F7: Ihr habt mich befreit…\pIch bin wirklich dankbar aus\ntiefstem Herzen…
+0x788429: Jetzt, wo der Eingang zur\nSES-Schnellstraße frei ist, können\pReisende sich den\nAufstieg sparen, wenn sie hier durchgehen!
+0x788537: 9{COLOR}ËTut mir leid deswegen.\pNimm das für deine Mühe.
+0x788538: <0xFC><0x01><0x08>Es tut mir wirklich leid.\pHier, nimm das für die Mühe.
+0x78856D: Schreiber: {COLOR}ËGeld…?
+0x78857F: {COLOR}ËGeht mir aus dem Weg!
+0x788595: {COLOR}ËWas?\pKommst du auch, um dieses\nPaket zu holen?\pNun, wenn du nicht dafür kämpfen\nwillst, dann geh aus dem Weg!
+0x788601: Kämpfen
+0x788607: Bewegen
+0x78860C: {COLOR}ËIch werde dich in deine\nSchranken weisen!
+0x788633: Nur weil ihr gewonnen habt,\nheißt das nicht, dass ich es aufgebe!
+0x788674: {COLOR}ËDachtet ihr wirklich, ich würde das\nPaket auch bei einer Niederlage abgeben?\pIch bin nicht so weit gekommen, um\nvor einem dummen Kind nachzugeben.\pJetzt, bewegt euch!
+0x788865: Marlon: <0xFC><0x01><0x08>Hast du das\nPaket vom Laden gut erhalten?
+0x78889B: Scherge: {COLOR}ËJa, das habe ich,\nmein Herr.
+0x7888B6: Marlon: {COLOR}ËWart ihr dabei\nunauffällig?
+0x7889A5: Scherge: {COLOR}ËDas war ich,\nmein Herr.\pIch habe versucht, nicht zu\nviel Lärm zu machen.\pIch habe das Paket sogar wie\nangewiesen bezahlt.
+0x788A14: Marlon: {COLOR}ËGute Arbeit.\pDas Letzte, was wir\nbrauchen, ist die Polizei im Nacken.\pWir sind zu nah am Ziel, um\njetzt gestoppt zu werden.
+0x788A96: Marlon: {COLOR}ËMeldet euch bei Zeph und\ninformiert ihn über meinen aktuellen Status.
+0x788AD6: Scherge: {COLOR}ËJa, mein Herr!
+0x788B02: Der Arenaleiter Mirskle bevorzugt\nPflanzen-Pokémon.\pWenn du mit einem Feuer- oder\nFlug-Pokémon vorbereitet kommst, solltest du\lihn ohne Probleme besiegen können!\p-HUST- -HUST-\pWisst auch, dass Mirskle es liebt,\nseine Arena von Zeit zu\lZeit einzunebeln, was\lden Kampf beeinflussen kann.\pWenn du "dichten Nebel"\nauftauchen siehst, weichst du Treffern\lbesser aus, wirst aber auch\lschwerer treffen können!\pViel Glück!
+0x788CAB: Ich bin beeindruckt!\pDu hast Mirskle besiegt, obwohl\ndeine Augen von "Nebel" vernebelt waren!\pNimm dies als zusätzlichen\nBeweis deines Sieges.
+0x788D2D: Das ist ein seltenes Juwel, das\neine Pflanzen-Attacke\lim Kampf verstärken kann!\pIch bin sicher, es wird dir nützlich sein,\nangehender Champion.
+0x788DA9: Häh?\pDu hast keinen Platz dafür.
+0x788DC8: <0xFC><0x01><0x02><0xFD><0x01> erhält den Blattorden\nvon Mirskle!
+0x788DF4: Nimm auch dieses coole Gras-TM…
+0x788E28: TM93\nvon Mirskle!\pEs enthielt Grasknoten.
+0x788E54: Falls du dich fragst, diese TM\nenthält\l{COLOR}ÉGrasknoten{COLOR}Ë.\pIch kannte mal einen Typen.\pEr ist ständig hingefallen. Er\nsagte, das sei genetisch bedingt.\pAber in Wahrheit…\pHabe ich ihm einfach ständig\nGrasknoten zugeworfen!\pZum Glück war er nicht zu\nschwer, sonst hätte es wehgetan.
+0x788F69: Oh, nein…\pDu hast schon Grasknoten…
+0x788F90: Oh, warte.\pSieht so aus, als würde ich nicht\nmehr gegen dich kämpfen.\pDu brauchst mehr als ein Pokémon,\nwenn du dich mir stellen willst…
+0x78900B: Alle verstecken sich!\pDie Bullen kommen zurück, um uns zu schnappen!
+0x78903B: Officer 1: {COLOR}ËHey, Kleiner!\pHabt ihr gesehen, in welche\nRichtung der Arenaleiter gerannt ist?\pEr wird wegen Handels mit\nseltsamen Blättern gesucht!
+0x7890AB: Würdet ihr es ihnen sagen?
+0x7890C8: Agent 1: <0xFC><0x01><0x08>Offensichtlich weiß\n<0xFD><0x03> nichts davon, Frank…\pLassen wir es durchgehen?
+0x78910F: Agent 2: <0xFC><0x01><0x08>Lassen wir es durchgehen.\pDas ist wohl ein Opfer\nvon Mirskles Lügen.\pArmer Kleiner…
+0x789169: Officer 1: {COLOR}ËÄh, ja…\pEure Geschichte wurde bestätigt. Ihr\nkönnt gehen.
+0x7891AB: Officer 1: {COLOR}ËDer Teich? Danke!\nIhr habt wirklich geholfen\pim Krieg gegen die Drogen!\nGute Arbeit!
+0x78920B: Maaaaann
+0x789224: ihn
+0x789228: er
+0x78922B: Er
+0x78922E: sie
+0x789232: sie
+0x789236: Sie
+0x78928E: Übrigens, wusstest du, dass die\nArena-Schiedsrichter dir auch ein\lGeschenk geben, wenn du mit ihnen\lsprichst, nachdem du den Champion besiegt hast?\pWusstest du das? Hein?
+0x78A736: Die Arenaleiterin {COLOR}ÉAlice{COLOR}Ç wohnt\nunten.\pSie ist oft weg, um sich um\ndie Arena zu kümmern, also lässt sie\lihren Kleinen allein zu Hause.\pIch würde meinen Sohn\nniemals allein zu Hause lassen.\pSein Geist ist zu zerbrechlich.\pEr erträgt es nicht, fern von\nseiner Mama zu sein!
+0x78A95E: Ahaha, junger Trainer!\pWürdest du mir bei einer\nweiteren Aufgabe helfen?
+0x78AAA8: aber er will nicht\nkommen, um es zu holen.
+0x78AB10: Wirklich?\nDie Belohnung lohnt sich, versprochen.
+0x78AB3C: Oh, danke!\pDer Geburtstag meines Enkels\nsteht bevor und ich möchte ihm einen\lKuchen backen, aber mir fehlen ein paar\lZutaten.\pIch brauche nur:\n{COLOR}É{STR_VAR_1}{COLOR}Ç\pWenn du sie mir so schnell wie\nmöglich bringen könntest, wäre ich\ldir sehr dankbar.
+0x78AC1D: Oh, danke nochmal!\pDer Hochzeitstag meines Sohnes\nsteht bevor, und ich möchte auch\lihm einen Kuchen backen.\pDieses Mal brauche ich:\n{COLOR}É{STR_VAR_1}{COLOR}Ç\pBring sie mir schnell, junger\nTrainer!
+0x78B721: Oh, danke nochmal!\pMein Ex-Mann hat mit einer\nanderen Frau neue Liebe gefunden, und ich\lmöchte ihm einen Kuchen ins\lGesicht drücken!\pDieses Mal brauche ich:\n{COLOR}É{STR_VAR_1}
+0x78B7AE: <0xFC><0x01><0x06><0xFD><0x02><0xFC><0x01><0x04>\pBring sie mir schnellstmöglich,\njunger Trainer!
+0x78B7EB: Ich brauche noch:\n<0xFC><0x01><0x06><0xFD><0x02><0xFC><0x01><0x04>\pBring sie mir, sobald du kannst,\nbitte.
+0x78B828: Ich brauche:\n<0xFC><0x01><0x06><0xFD><0x02>
+0x78B83C: Wenn ich ein Fahrrad hätte, wäre es\nviel einfacher zu klettern.\pAber wo findet man hier überhaupt\nein Fahrrad?
+0x78B89F: Log: {COLOR}ËNun ja… äh…\pSoweit ich sehen kann, haben eure\nPokémon gute Statuswerte…\pIch sehe Potenzial für sie,\neines Tages starke Pokémon zu werden.
+0x78B928: {RIVAL}: {COLOR}ËDanke, Log.\pDas ist das erste Nützliche, das du\nheute den ganzen Tag gesagt hast.\pUnd es wird auch das Letzte sein. Denn ich\nhaue hier ab.
+0x78B9A0: Log: <0xFC><0x01><0x08>Naja, er ist wirklich\nkein Ruhekissen, was?\pUnd jetzt, wo er weg ist, wer\nmacht jetzt meine Einkäufe?
+0x78BA08: {COLOR}ËAha! {PLAYER}, du siehst\nfähig aus,\pwürdest du gerne meine Einkäufe für\nmich erledigen?
+0x78BA4F: {COLOR}ËSeid ihr sicher?\pEs ist immer gut, mit dem\nPokémon-Professor zu reden!
+0x78BA9B: {COLOR}ËWas machst du da?\pIch habe dir gesagt, du sollst bei deiner\nMutter nachfragen!\p…\pSchau mich nicht so an.\pHat deine Mutter dir nie beigebracht,\nauf deine Älteren zu hören?\pGeh zu ihr!
+0x78BB9A: {COLOR}É{STR_VAR_1}{COLOR}Ç\pBitte bringt sie, sobald ihr\nkönnt.
+0x78BBC9: Hu hu hu, sieht so aus, als hättest du mir\nmeine Zutaten gebracht.\pTausend Dank.
+0x78BC10: Die alte Dame nahm:\n{COLOR}É{STR_VAR_1}
+0x78BC9A: Kein Zweifel, dass mein <0xFD><0x03>\ndiesen Kuchen lieben wird.\pHier, nimm das als Gegenleistung für\ndeine harte Arbeit, junger Trainer.
+0x78BCFF: Mein Regenschirm schützt mich immer,\nwenn es regnet!
+0x78BD31: Wusstet ihr, dass es einen Pokéball\ngibt, der ein Pokémon heilt?\pWenn ihr ein Pokémon fangt,\nwird all sein Schaden aufgehoben!\pHättet ihr nicht auch gerne einen?
+0x78BDCA: Nördlich von hier befindet sich der\nEingang zu einer unterirdischen Autobahn.\pDas einzige Problem ist, dass er\nvon dünnen Bäumen blockiert wird.\pIch würde nur gerne wissen, wie ich\nsie umgehen kann.
+0x78C0BF: Mel: {COLOR}ËIch muss mit dir\nreden.
+0x78C189: Waah! Jetzt! Gerade eben!\nIch wollte es gerade werfen!
+0x78C2A8: 9Route 12
+0x78C2C9: Ihr solltet mehr Respekt\nvor einem Angler haben…
+0x78C2FD: 9Route 12
+0x78C364: Hallo, Surfer! Wie wäre es mit\neinem Kampf auf See?
+0x78C40F: Da hast du mir bestimmt\neine Lektion erteilt.
+0x78C45C: Städtchen
+0x78C4B3: Vielleicht sollte ich auch\nzum Surfen wechseln…
+0x78C4F0: Ich habe das Gleichgewicht verloren!
+0x78C62D: Hallo, du da! Willst du nicht\nschwimmen gehen?
+0x78C6C2: Das ist {PLAYER}! Mein Pokémon, greif\nan!
+0x78C6EC: Mein Pokémon: besiegt!
+0x78C72C: Hey, angehender Champion! Ist schon\nlange her!\pNehmt ein frisches Wasser, um\neure Rückkehr zu feiern.
+0x78C889: Los.\pZögere nicht, mit den einsamen\nAnglern zu reden.\pAber komm nicht zu mir, um zu reden.
+0x78CE6A: Dieses Gebiet ist verboten für\nalle, die nicht Mitglieder der\lSchatten sind.\pDa du nicht zu uns gehörst,\nverschwinde, Kleiner!
+0x78CED7: Manchmal, wenn du mit den\nSandburgen am Strand redest,\lgreifen sie dich an!\pDas ist wirklich gruselig!
+0x78D2BA: {COLOR}ÇBitte zieht sie gut auf!
+0x78D31B: Route.
+0x78D322: Das Haus zu meiner Linken ist als\ndas Doppelkampf-Haus bekannt.\pDu kannst die Trainer darin\nso oft herausfordern, wie du willst.\pDas ist perfekt, um deine\nPokémon zu trainieren, wenn du\ldie Arena versuchen willst.
+0x78D43D: 9Marlon: {COLOR}ËGut, Schergen.\pUnser Ziel ist es, zum\n{COLOR}ÉVolcan Cendré {COLOR}Ë zu gehen und Ivory zu helfen,\ldas TRES-Exemplar zu bekommen.
+0x78D43E: Marlon: <0xFC><0x01><0x08>Gut, Schergen.\pUnser aktuelles Ziel ist es,\nzum <0xFC><0x01><0x06>Volcan Cendré <0xFC><0x01><0x08>zu gehen, um Ivory\lzu helfen, das Spezimen TRES zu bekommen.
