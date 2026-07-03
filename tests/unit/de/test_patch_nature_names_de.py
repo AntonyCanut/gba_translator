@@ -49,53 +49,74 @@ class TestNatureNameData(unittest.TestCase):
 
 
 class TestApplyAndVerify(unittest.TestCase):
-    def _build_rom(self, offset: int, en_text: str, referrer_offset: int) -> bytearray:
-        size = 0x10000
-        rom = bytearray(b"\xff" * size)
-        # A large enough free run (below the 0x230000 excluded range) for
-        # FreeSpaceAllocator to allocate the relocated German text into.
-        encoded_en = TextEncoder.encode(en_text, "pokemon")
-        rom[offset: offset + len(encoded_en)] = encoded_en
-        rom[referrer_offset: referrer_offset + 4] = struct.pack(
-            "<I", ROM_POINTER_BASE + offset
-        )
+    """Exercise the index/table-based apply()+verify() on a small synthetic ROM.
+
+    Two 25×4-byte pointer tables are placed at small offsets (the real
+    0x463E60 / 0x1FE65F4 wouldn't fit a synthetic ROM) and pre-seeded to point
+    at English strings — mimicking a fresh EN ROM. This mirrors what the DE
+    build actually needs: repointing must work off the table *index*, never a
+    referrer-search on the original offsets (the B-158 blocker).
+    """
+
+    TABLE_A = 0x40
+    TABLE_B = 0xE0
+    TABLES = (TABLE_A, TABLE_B)
+
+    def _build_rom(self, en_names: list[str]) -> bytearray:
+        rom = bytearray(b"\xff" * 0x10000)  # 0xFF == free space for the allocator
+        # Pack EN strings back-to-back well below the 0x230000 excluded range,
+        # then point both tables' entry i at the shared string, like the EN ROM.
+        cursor = 0x200
+        for i, name in enumerate(en_names):
+            encoded = TextEncoder.encode(name, "pokemon")
+            rom[cursor: cursor + len(encoded)] = encoded
+            ptr = struct.pack("<I", ROM_POINTER_BASE + cursor)
+            rom[self.TABLE_A + 4 * i: self.TABLE_A + 4 * i + 4] = ptr
+            rom[self.TABLE_B + 4 * i: self.TABLE_B + 4 * i + 4] = ptr
+            cursor += len(encoded)
         return rom
 
-    def test_apply_relocates_and_repoints(self):
-        offset, referrer = 0x100, 0x50
-        rom = self._build_rom(offset, "Hardy", referrer)
-        stats = mod.apply(rom, targets={offset: "Robust"})
-        self.assertEqual(stats["targets"], 1)
-        self.assertEqual(stats["repointed"], 1)
+    def test_apply_repoints_both_tables_by_index(self):
+        en = ["Hardy", "Lonely", "Brave"]
+        de = ["Robust", "Einsam", "Mutig"]
+        rom = self._build_rom(en)
+        stats = mod.apply(rom, names=de, tables=self.TABLES)
+        self.assertEqual(stats["relocated"], 3)
+        self.assertEqual(stats["repointed"], 6)  # 3 names × 2 tables
         self.assertEqual(stats["failed"], 0)
 
-        new_ptr = struct.unpack_from("<I", rom, referrer)[0]
-        self.assertNotEqual(new_ptr, ROM_POINTER_BASE + offset, "referrer still points at EN cell")
-        new_offset = new_ptr - ROM_POINTER_BASE
-        decoded_end = rom.find(b"\xff", new_offset)
-        self.assertEqual(bytes(rom[new_offset:decoded_end]), TextEncoder.encode("Robust", "pokemon")[:-1])
+        for i, name in enumerate(de):
+            pa = struct.unpack_from("<I", rom, self.TABLE_A + 4 * i)[0]
+            pb = struct.unpack_from("<I", rom, self.TABLE_B + 4 * i)[0]
+            self.assertEqual(pa, pb, "both tables must share the relocated string")
+            off = pa - ROM_POINTER_BASE
+            want = TextEncoder.encode(name, "pokemon")
+            self.assertEqual(bytes(rom[off: off + len(want)]), want)
 
-    def test_verify_reports_no_issues_after_apply(self):
-        offset, referrer = 0x100, 0x50
-        rom = self._build_rom(offset, "Hardy", referrer)
-        targets = {offset: "Robust"}
-        mod.apply(rom, targets=targets)
+    def test_verify_clean_after_apply(self):
+        en = ["Hardy", "Lonely", "Brave"]
+        de = ["Robust", "Einsam", "Mutig"]
+        rom = self._build_rom(en)
+        mod.apply(rom, names=de, tables=self.TABLES)
+        self.assertEqual(mod.verify(rom, names=de, tables=self.TABLES), [])
 
-        bad = []
-        needle = struct.pack("<I", ROM_POINTER_BASE + offset)
-        import re
-        for off, text in targets.items():
-            if [m.start() for m in re.finditer(re.escape(needle), rom)]:
-                bad.append((off, "still points to original"))
-        self.assertEqual(bad, [])
+    def test_verify_flags_unrepointed_entry(self):
+        # A table still aimed at the (shorter) English original must be flagged.
+        en = ["Hardy", "Lonely", "Brave"]
+        de = ["Robust", "Einsam", "Mutig"]
+        rom = self._build_rom(en)
+        bad = mod.verify(rom, names=de, tables=self.TABLES)
+        self.assertEqual(len(bad), 3, bad)
 
-    def test_skips_when_no_referrer_found(self):
-        offset = 0x100
-        rom = bytearray(b"\xff" * 0x10000)
-        rom[offset: offset + 6] = TextEncoder.encode("Hardy", "pokemon")
-        stats = mod.apply(rom, targets={offset: "Robust"})
-        self.assertEqual(stats["skipped"], 1)
-        self.assertEqual(stats["targets"], 0)
+    def test_apply_is_idempotent(self):
+        en = ["Hardy", "Lonely", "Brave"]
+        de = ["Robust", "Einsam", "Mutig"]
+        rom = self._build_rom(en)
+        mod.apply(rom, names=de, tables=self.TABLES)
+        stats = mod.apply(rom, names=de, tables=self.TABLES)
+        self.assertEqual(stats["relocated"], 0)
+        self.assertEqual(stats["skipped"], 3)
+        self.assertEqual(mod.verify(rom, names=de, tables=self.TABLES), [])
 
 
 if __name__ == "__main__":

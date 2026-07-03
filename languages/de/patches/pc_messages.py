@@ -37,12 +37,12 @@ PATCHES = [
     # offset: (english_original, german_translation, max_encoded_bytes)
     (0x1A5CF1,
      '{FD:03} was transferred to\nSomeone\'s PC.{PAGE}It was placed in \nBox "{FD:02}."',
-     '{FD:03} wurde aufs PC von\n??? verschoben.\pEs kam in Box\n{FD:02}.',
+     '{FD:03} wurde aufs PC von\n??? verschoben.\\pEs kam in Box\n{FD:02}.',
      64),
 
     (0x1A5D6E,
      'Box "{FD:04}" on\nSomeone\'s PC was full.{PAGE}{FD:03} was transferred to\nBox "{FD:02}."',
-     'Box {FD:04} auf dem PC\nvon ??? war voll.\p{FD:03} kam in Box\n{FD:02}.',
+     'Box {FD:04} auf dem PC\nvon ??? war voll.\\p{FD:03} kam in Box\n{FD:02}.',
      67),
 ]
 

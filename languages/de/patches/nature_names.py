@@ -4,14 +4,28 @@
 See ``patch_nature_names_fr.py`` for the full root-cause writeup: the 25
 nature names are packed back-to-back as ``0xFF``-terminated strings at
 ``0x463DBC``-``0x463E5D``, outside the main text region the generic pipeline
-extracts from. Each name has exactly two live pointer referrers (a 25x4-byte
-table at ``0x463E60`` used in code, and a second identical 25x4-byte table at
-``0x1FE65F4`` used by another screen).
+extracts from. Each name is referenced by exactly two live 25x4-byte pointer
+tables (one at ``0x463E60`` used in code, an identical one at ``0x1FE65F4``
+used by another screen); in the English ROM both tables' entry *i* point at
+the same shared string.
 
 This post-build patch relocates one ``0xFF``-terminated copy of each official
-German nature name into free space and repoints every live referrer to it, so
-word length is never budget-constrained by the (shorter) English original.
-Reference-driven and idempotent, exactly like the French version.
+German nature name into free space and repoints both tables to it, so word
+length is never budget-constrained by the (shorter) English original.
+
+Unlike the French dedicated build, the **generic** German driver
+(``build_language.py de``) has already relocated + repointed these tables by
+the time this patch runs: ``combined_de.txt`` carries hand-added nature entries
+that the generic reinserter applies first, so *no* table entry still points at
+the original ``0x463DBC..`` offsets. A referrer-search keyed on those original
+offsets therefore finds nothing and skips every name (the B-158 blocker).
+
+So this patch works **by table index** instead: for each nature index 0..24 it
+writes the official German name to fresh free space and rewrites entry *i* of
+both pointer tables to it — authoritative and independent of whatever the
+generic build left the pointers aimed at. Verification follows the live table
+pointer and compares the exact encoded bytes (no whole-ROM substring search,
+which gave false positives on common words and false negatives on umlauts).
 """
 
 from __future__ import annotations
@@ -30,8 +44,15 @@ from src.core.text_reinserter import FreeSpaceAllocator  # noqa: E402
 
 ROM_POINTER_BASE = 0x08000000
 
+# The two live 25×4-byte pointer tables that reference the nature-name strings.
+# Both are entered by in-game nature index (0 = Hardy .. 24 = Quirky); in the
+# English ROM entry *i* of each points at the same shared string.
+POINTER_TABLES: tuple[int, ...] = (0x463E60, 0x1FE65F4)
+NATURE_COUNT = 25
+
 # English ROM offset (first byte of the EN string) -> official German nature
-# name. Order matches the in-game nature index (0 = Hardy .. 24 = Quirky).
+# name. Order matches the in-game nature index (0 = Hardy .. 24 = Quirky); the
+# insertion order below IS the nature-index order the pointer tables use.
 TARGETS: dict[int, str] = {
     0x463DBC: "Robust",     # Hardy
     0x463DC2: "Einsam",     # Lonely
@@ -67,48 +88,87 @@ def find_referrers(rom: bytes, offset: int) -> list[int]:
     return [m.start() for m in re.finditer(re.escape(needle), rom)]
 
 
+def _table_pointer(rom: bytes, table: int, index: int) -> int:
+    """Live 32-bit pointer stored at entry ``index`` of ``table``."""
+    return struct.unpack_from("<I", rom, table + 4 * index)[0]
+
+
 def apply(
     rom: bytearray,
-    targets: dict[int, str] | None = None,
+    names: list[str] | None = None,
+    tables: tuple[int, ...] = POINTER_TABLES,
     reserved_rom: bytes | None = None,
 ) -> dict:
-    if targets is None:
-        targets = TARGETS
-    allocator = FreeSpaceAllocator(rom, reserved_rom=reserved_rom)
-    stats = {"targets": 0, "repointed": 0, "failed": 0, "skipped": 0}
+    """Repoint every nature-name pointer-table entry, by index, at a fresh copy
+    of the official German name.
 
-    for offset, text in targets.items():
-        referrers = find_referrers(rom, offset)
-        if not referrers:
+    The generic German build has already relocated + repointed these tables
+    (from ``combined_de.txt``), so we cannot key on the original English string
+    offsets. We instead walk each table by index and overwrite entry *i* of
+    every table with a pointer to a newly-allocated German string, mirroring the
+    English ROM's shared-string layout (both tables' entry *i* point at the same
+    copy). Idempotent: an entry already pointing at the correct German bytes is
+    left untouched.
+    """
+    if names is None:
+        names = list(TARGETS.values())
+    allocator = FreeSpaceAllocator(rom, reserved_rom=reserved_rom)
+    stats = {"relocated": 0, "repointed": 0, "failed": 0, "skipped": 0}
+
+    for index, text in enumerate(names):
+        encoded = TextEncoder.encode(text, "pokemon")
+
+        # Already correct (re-run on an already-patched ROM)? Leave it alone.
+        current = _table_pointer(rom, tables[0], index) - ROM_POINTER_BASE
+        if 0 <= current <= len(rom) - len(encoded) and (
+            rom[current : current + len(encoded)] == encoded
+        ):
             stats["skipped"] += 1
             continue
 
-        encoded = TextEncoder.encode(text, "pokemon")
         new_offset = allocator.allocate(len(encoded))
         if new_offset is None:
             stats["failed"] += 1
             continue
         rom[new_offset : new_offset + len(encoded)] = encoded
         pointer = struct.pack("<I", new_offset + ROM_POINTER_BASE)
-        for cell in referrers:
+        for table in tables:
+            cell = table + 4 * index
             rom[cell : cell + 4] = pointer
             stats["repointed"] += 1
-        stats["targets"] += 1
+        stats["relocated"] += 1
 
     return stats
 
 
-def verify(rom: bytes) -> list[tuple[int, str]]:
-    """Return targets whose live pointer(s) still reach the English original,
-    or whose relocated copy doesn't decode to the expected German text."""
+def verify(
+    rom: bytes,
+    names: list[str] | None = None,
+    tables: tuple[int, ...] = POINTER_TABLES,
+) -> list[tuple[int, str]]:
+    """Return problems, following each table's live pointer and comparing the
+    exact encoded bytes (no whole-ROM substring search — that gave false
+    positives on common words and false negatives on umlaut encodings)."""
+    if names is None:
+        names = list(TARGETS.values())
     bad: list[tuple[int, str]] = []
-    for offset, text in TARGETS.items():
-        if find_referrers(rom, offset):
-            bad.append((offset, "still points to original"))
+    for index, text in enumerate(names):
+        want = TextEncoder.encode(text, "pokemon")  # incl. 0xFF terminator
+        pointers = [_table_pointer(rom, table, index) for table in tables]
+        if len(set(pointers)) != 1:
+            bad.append(
+                (tables[1] + 4 * index, f"index {index}: pointer tables disagree")
+            )
             continue
-        encoded = TextEncoder.encode(text, "pokemon")[:-1]  # drop 0xFF
-        if encoded not in rom:
-            bad.append((offset, f"German text «{text}» not found in ROM"))
+        off = pointers[0] - ROM_POINTER_BASE
+        got = rom[off : off + len(want)]
+        if got != want:
+            bad.append(
+                (
+                    tables[0] + 4 * index,
+                    f"index {index}: «{text}» not correctly repointed",
+                )
+            )
     return bad
 
 
@@ -140,10 +200,10 @@ def main() -> int:
     rom_path.write_bytes(rom)
 
     print("✓ Nature names (DE) — relocation + repointing:")
-    print(f"   - Targets relocated:      {stats['targets']}")
+    print(f"   - Names relocated:        {stats['relocated']}")
     print(f"   - Pointers repointed:     {stats['repointed']}")
     if stats["skipped"]:
-        print(f"   - Already relocated (skip): {stats['skipped']}")
+        print(f"   - Already correct (skip): {stats['skipped']}")
     if stats["failed"]:
         print(f"   - FAILED (free space):    {stats['failed']}")
         return 1
