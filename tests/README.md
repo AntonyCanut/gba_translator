@@ -39,10 +39,27 @@ Les `conftest.py` restent au niveau de leur tier (`tests/conftest.py`,
 | Langue | unit | e2e | Statut |
 |--------|-----:|----:|--------|
 | fr     |    3 |  19 | ✅ couverte |
-| it     |    1 |   2 | 🟡 partielle |
+| it     |   10 |   5 | ✅ couverte |
 | de     |   13 |   2 | 🟡 e2e partielle |
 | es     |    0 |   3 | ✅ couverte (référence) |
 
+> `it` couvre désormais 10 tests de patchs dédiés en unit (intro_questions,
+> Pokédex catégories/ordre/métrique/rewrap, battle_prefix guard, dexnav_headers,
+> hp_labels, status_badges, type_icons) et 5 en e2e (intégrité de build
+> `test_build.py`, glyphes accentués à/è/é/ì/ò/ù `test_accent_glyphs.py`,
+> descriptions d'objets/attaques `test_item_descriptions.py`, abréviations de
+> statut en combat `test_battle_strings.py`, et une traversée mGBA du premier
+> combat `test_first_battle.py` — marks `slow`/`emulator`, skip proprement sans
+> mGBA). `GenedRom-it.gba` se construit localement (`make build-it`). Deux
+> lacunes de qualité de traduction pré-existantes ont été identifiées en
+> écrivant cette suite et sont trackées séparément (pas des trous de test) :
+> ~4 000 offsets de `combined_it.txt` n'atteignent pas `it_translation_ready.json`,
+> et ~18% des descriptions d'objets (plus au moins une description d'attaque)
+> affichent encore du résidu français hérité d'`input/roms/englishrom.gba`
+> lui-même — les nouveaux tests ciblent volontairement des entrées vérifiées
+> propres (Acqua Fresca, Pound/Tackle/Bite/Rock Throw, SON/SCT/PSN/PAR) plutôt
+> que d'encoder cet état connu-cassé comme "attendu".
+>
 > `de` dispose désormais de tests dédiés (13 tests de patchs en unit : font,
 > noms d'objets/natures, Pokédex, horloge, boutique… ; build ROM,
 > glyphes ä/ö/ü/Ä/Ö/Ü et abréviations de statut en e2e) mais reste en cours de

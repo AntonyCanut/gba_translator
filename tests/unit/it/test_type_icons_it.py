@@ -13,7 +13,7 @@ from pathlib import Path
 
 _SPEC = importlib.util.spec_from_file_location(
     "patch_type_icons_it",
-    Path(__file__).resolve().parent.parent / "scripts" / "patch_type_icons_it.py",
+    Path(__file__).resolve().parent.parent.parent.parent / "scripts" / "patch_type_icons_it.py",
 )
 mod = importlib.util.module_from_spec(_SPEC)
 _SPEC.loader.exec_module(mod)

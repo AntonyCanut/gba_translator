@@ -15,7 +15,7 @@ from pathlib import Path
 
 import pytest
 
-sys.path.insert(0, str(Path(__file__).parent.parent))
+sys.path.insert(0, str(Path(__file__).parent.parent.parent.parent))
 
 from scripts.patch_font_fr import lz77_decompress
 from scripts.patch_status_badges_it import (
@@ -31,7 +31,7 @@ from scripts.patch_status_badges_it import (
 )
 from src.i18n import load_registry
 
-BUILT_IT_ROM = Path(__file__).parent.parent / "output" / "roms" / "GenedRom-it.gba"
+BUILT_IT_ROM = Path(__file__).parent.parent.parent.parent / "output" / "roms" / "GenedRom-it.gba"
 
 # Engine slot order (fixed): PSN=0, PAR=1, SLP=2, FRZ=3, BRN=4, FNT=6.
 SLOT_BY_STATUS = {"sleep": 2, "freeze": 3, "burn": 4}

@@ -14,7 +14,7 @@ from pathlib import Path
 
 import pytest
 
-sys.path.insert(0, str(Path(__file__).parent.parent))
+sys.path.insert(0, str(Path(__file__).parent.parent.parent.parent))
 
 from scripts.patch_font_fr import lz77_decompress
 from scripts.patch_hp_labels_it import (
@@ -35,7 +35,7 @@ from scripts.patch_hp_labels_it import (
     _tiles_hex,
 )
 
-BUILT_IT_ROM = Path(__file__).parent.parent / "output" / "roms" / "GenedRom-it.gba"
+BUILT_IT_ROM = Path(__file__).parent.parent.parent.parent / "output" / "roms" / "GenedRom-it.gba"
 
 
 class TestPsArtDefinitions(unittest.TestCase):

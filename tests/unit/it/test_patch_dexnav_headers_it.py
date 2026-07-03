@@ -18,7 +18,7 @@ from pathlib import Path
 
 import pytest
 
-sys.path.insert(0, str(Path(__file__).parent.parent))
+sys.path.insert(0, str(Path(__file__).parent.parent.parent.parent))
 
 from scripts.patch_font_fr import lz77_compress, lz77_decompress
 from scripts.patch_dexnav_headers_it import (
@@ -31,8 +31,8 @@ from scripts.patch_dexnav_headers_it import (
     _tiles_hex,
 )
 
-ENGLISH_ROM = Path(__file__).parent.parent / "input" / "roms" / "englishrom.gba"
-BUILT_IT_ROM = Path(__file__).parent.parent / "output" / "roms" / "GenedRom-it.gba"
+ENGLISH_ROM = Path(__file__).parent.parent.parent.parent / "input" / "roms" / "englishrom.gba"
+BUILT_IT_ROM = Path(__file__).parent.parent.parent.parent / "output" / "roms" / "GenedRom-it.gba"
 
 
 class TestDexNavHeaderDefinitions(unittest.TestCase):
