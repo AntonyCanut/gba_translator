@@ -97,6 +97,17 @@ def test_reference_languages_have_no_output_rom(registry):
         assert cfg.output_rom_path(REPO_ROOT) is None
 
 
+def test_spanish_is_reference_with_font_glyphs(registry):
+    """ES has no build of its own (see tests/e2e/es/) — it is the community
+    translation ROM used as a reference by the pointer-based pipeline."""
+    es = registry.get("es")
+    assert es.is_reference
+    assert es.status == "reference"
+    assert es.build == "none"
+    assert es.combined == "languages/es/combined_es.txt"
+    assert set("áéíóúñ¡¿").issubset(set(es.font_glyphs))
+
+
 def test_combined_files_exist(registry):
     for cfg in registry:
         assert cfg.combined_path(REPO_ROOT).exists(), (

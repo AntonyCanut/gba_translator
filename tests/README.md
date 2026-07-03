@@ -24,6 +24,7 @@ tests/
     fr/                 # e2e spécifiques FR (contenu du jeu traduit en français)
     it/                 # e2e spécifiques IT
     de/                 # e2e spécifiques DE (glyphes ä/ö/ü, build, statuts)
+    es/                 # e2e spécifiques ES (référence spanishrom.gba, pas de build)
   e2e-playwright/       # specs Playwright (TS) — flux de jeu, non spécifiques langue
   benchmarks/           # perf (générique)
   stress/               # fuzzing / soak (générique)
@@ -40,15 +41,23 @@ Les `conftest.py` restent au niveau de leur tier (`tests/conftest.py`,
 | fr     |    3 |  17 | ✅ couverte |
 | it     |    1 |   2 | 🟡 partielle |
 | de     |    1 |   2 | 🟡 partielle |
-| es     |    0 |   0 | ❌ aucun test dédié |
+| es     |    0 |   3 | ✅ couverte (référence) |
 
 > `de` dispose désormais de tests dédiés (`patch_font_de` en unit ; build ROM,
 > glyphes ä/ö/ü/Ä/Ö/Ü et abréviations de statut en e2e) mais reste en cours de
 > traduction (`languages/de/combined_de.txt`, batches en cours) — la ROM
 > `GenedRom-de.gba` n'étant pas encore construite localement, les tests
 > dépendant de la ROM/du rapport de build sautent (skip) jusqu'au premier
-> `make build-de`. `es` dispose d'un build (`languages/es`) mais d'aucun test
-> dédié.
+> `make build-de`.
+>
+> `es` (comme `en`) est une langue **`build: none` / `status: reference`**
+> (voir `src/i18n/registry.py`) : `spanishrom.gba` est la ROM communautaire
+> utilisée comme référence par le pipeline pointeur, pas un artefact construit
+> par ce dépôt. Il n'y a donc ni ROM buildée ni script `patch_*_es.py`
+> dédié — `tests/unit/es/` n'a pas lieu d'être. `tests/e2e/es/` couvre à la
+> place : intégrité de `spanishrom.gba`, glyphes espagnols (ñ/¡/¿) à la
+> décodification, et alignement des offsets de `combined_es.txt` avec
+> `combined_fr.txt`.
 
 ## Ajouter des tests pour une nouvelle langue
 
