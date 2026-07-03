@@ -11,6 +11,7 @@ when a combined_fr translation exists.
 from __future__ import annotations
 
 import argparse
+import bisect
 import json
 import re
 import sys
@@ -403,6 +404,7 @@ def _apply_translation_at_offset(
     translation: str,
     reference_entry: dict,
     detector: PaddingDetector,
+    next_offset: Optional[int] = None,
 ) -> Tuple[bool, str]:
     encoding = reference_entry.get('encoding', 'pokemon')
     encoded = TextEncoder.encode(translation, encoding)
@@ -410,6 +412,19 @@ def _apply_translation_at_offset(
     reference_length = max(reference_entry.get('byte_length', 0) - 1, 0)
     padding = detector.detect_padding(offset, reference_length, extended_search=True)
     max_length = reference_length + padding
+
+    # Collision guard: in packed description tables the source strings sit back
+    # to back and the padding run after a terminator can spill straight into the
+    # next occupied cell, so ``detect_padding`` over-counts and a longer
+    # translation would overrun — writing past the terminator into a neighbour
+    # (fusion on screen / freeze from an unterminated CFRU string). When the
+    # caller knows the next occupied cell, never let the write's terminator land
+    # at or beyond it: the terminator (last encoded byte) must sit strictly
+    # before ``next_offset``, i.e. ``offset + encoded_len < next_offset``. An
+    # entry that cannot fit is left in English (safe) rather than corrupting its
+    # neighbour. See scripts/audit_translation_collisions.py.
+    if next_offset is not None:
+        max_length = min(max_length, next_offset - offset - 1)
 
     if encoded_len > max_length:
         return False, 'too_long'
@@ -446,6 +461,18 @@ def main() -> int:
         help='Translation JSON to skip pointer-based offsets',
     )
     parser.add_argument('--min-length', type=int, default=4, help='Min inline byte length (incl. 0xFF terminator); 4 = 3-char words like "Mom"')
+    parser.add_argument(
+        '--collision-guard',
+        action='store_true',
+        help=(
+            'Never let an in-place write overrun into the next occupied cell: '
+            'the terminator must land strictly before the next known cell start. '
+            'Prevents the inter-cell fusion / freeze collisions flagged by '
+            'scripts/audit_translation_collisions.py in the packed DE/IT '
+            'description tables. Off by default so the byte-perfect French '
+            'recipe is unchanged.'
+        ),
+    )
 
     args = parser.parse_args()
 
@@ -473,6 +500,23 @@ def main() -> int:
     source_reader.load()
     source_data = source_reader.rom_data
     detector = PaddingDetector(source_reader)
+
+    # Sorted union of every known cell start: combined entries plus the real
+    # extracted English/Spanish cells. Used by the collision guard as the tight
+    # "next occupied cell" boundary each in-place write must terminate before,
+    # so a translation can still spill into genuine padding but never into a
+    # neighbouring cell (combined or not).
+    cell_boundaries: List[int] = []
+    if args.collision_guard:
+        cell_boundaries = sorted(
+            set(combined_map) | set(english_map) | set(spanish_map)
+        )
+
+    def _next_cell(offset: int) -> Optional[int]:
+        if not args.collision_guard:
+            return None
+        idx = bisect.bisect_right(cell_boundaries, offset)
+        return cell_boundaries[idx] if idx < len(cell_boundaries) else None
 
     rom_data = bytearray(args.rom.read_bytes())
     categorizer = JSONToCSVConverter()
@@ -556,6 +600,7 @@ def main() -> int:
             translation,
             reference_entry,
             detector,
+            next_offset=_next_cell(offset),
         )
         if applied:
             applied_combined += 1
@@ -613,6 +658,7 @@ def main() -> int:
             translation,
             english_entry,
             detector,
+            next_offset=_next_cell(offset),
         )
         if applied:
             applied_templates += 1

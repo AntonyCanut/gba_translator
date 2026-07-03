@@ -184,6 +184,12 @@ def build_rom(config, translation_json: Path) -> Path:
         "--language", config.builder_language,
         "--allow-relocate",
         "--allow-fallback",
+        # Generic (DE/IT) builds inject verbose translations into packed
+        # description tables; the guard keeps every in-place write terminated
+        # before the next cell so nothing fuses into / overruns a neighbour
+        # (the collisions surfaced by the collision_check step). Too-long
+        # entries relocate to free space instead of overwriting the next cell.
+        "--collision-guard",
         "--output", out_rom,
     ]
     if SPANISH_ROM.exists():
@@ -222,6 +228,11 @@ def apply_patches(config, out_rom: Path, translation_json: Path | None = None,
                 "--source", ENGLISH_ROM,
                 "--combined", combined,
                 "--reference-texts", SPANISH_EXTRACT,
+                # Generic (DE/IT) builds inject verbose translations into the
+                # packed description tables; the guard keeps every in-place write
+                # terminated before the next cell so no string fuses into / over-
+                # runs a neighbour (the collisions audited by `collision_check`).
+                "--collision-guard",
             ])
 
         # ── Anti-freeze / anti-corruption mechanics (language-agnostic) ──────

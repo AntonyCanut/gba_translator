@@ -5,8 +5,9 @@ Text Reinserter - Réinsertion intelligente de textes dans ROM GBA
 Gère l'encodage et l'insertion de textes traduits avec support du padding.
 """
 
+import bisect
 import struct
-from typing import List, Dict, Optional
+from typing import List, Dict, Iterable, Optional
 from .rom_reader import ROMReader
 from .text_codec import TextEncoder
 from .fallback_translator import FallbackSynthesizer
@@ -170,6 +171,8 @@ class SmartReinserter:
         free_space_min: int = 16,
         pointer_proof_rom: Optional[bytes] = None,
         skip_encode_aliases: frozenset = frozenset(),
+        collision_guard: bool = False,
+        cell_boundaries: Optional[Iterable[int]] = None,
     ):
         """
         Initialise le réinserteur.
@@ -196,6 +199,19 @@ class SmartReinserter:
         self.fallback = FallbackSynthesizer() if allow_fallback else None
         self.free_space_min = free_space_min
         self.skip_encode_aliases = skip_encode_aliases
+        # Collision guard: never let an in-place write's terminator land at or
+        # beyond the next occupied cell. In the packed description tables the
+        # source strings sit back to back and the 0x00/0xFF run after a
+        # terminator spills into the next cell, so the padding heuristic
+        # over-counts and a longer translation overruns — fusing two strings on
+        # screen or, worst case, freezing on an unterminated CFRU string (see
+        # scripts/audit_translation_collisions.py). With the guard on, an entry
+        # that cannot fit before its neighbour falls through to the normal
+        # relocate / fallback path instead of overwriting the neighbour.
+        self.collision_guard = collision_guard
+        self._cell_boundaries = (
+            sorted(set(cell_boundaries)) if cell_boundaries else None
+        )
         # Pristine snapshot of the ROM as it was *before* any reinsertion, used
         # for original-length inference and padding detection. Reading the live
         # ``rom_data`` instead made those measurements depend on how many
@@ -233,6 +249,20 @@ class SmartReinserter:
             'failures': 0,
             'warnings': []
         }
+
+    def _next_cell_boundary(self, offset: int) -> Optional[int]:
+        """Smallest known cell start strictly greater than ``offset``.
+
+        Used by the collision guard as the hard wall an in-place write must
+        terminate before. ``None`` when the guard is off, no boundaries were
+        supplied, or ``offset`` is past the last known cell.
+        """
+        if not self.collision_guard or not self._cell_boundaries:
+            return None
+        idx = bisect.bisect_right(self._cell_boundaries, offset)
+        if idx >= len(self._cell_boundaries):
+            return None
+        return self._cell_boundaries[idx]
 
     def _infer_original_length(self, offset: int, encoding: str, max_length: int = 1000) -> int:
         # Measured against the pristine snapshot, never the live ROM, so the
@@ -541,6 +571,17 @@ class SmartReinserter:
                     max_length = original_length + padding_used + 1
                 else:
                     max_length = original_length + 1
+
+            # Collision guard: cap the in-place budget so the terminator (the
+            # last encoded byte) lands strictly before the next occupied cell,
+            # i.e. offset + encoded_len < next_offset. An over-counted padding
+            # run must never let this write spill into a neighbour; when the
+            # capped budget no longer fits, the block below relocates or falls
+            # back instead of overwriting the next cell.
+            next_boundary = self._next_cell_boundary(offset)
+            if next_boundary is not None:
+                cap = next_boundary - offset - 1
+                max_length = cap if max_length is None else min(max_length, cap)
 
             if max_length is not None and encoded_len > max_length:
                 # Lossless first: relocate the overflowing text elsewhere and

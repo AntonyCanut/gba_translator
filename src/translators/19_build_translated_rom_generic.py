@@ -93,6 +93,7 @@ class BuildConfig:
     allow_truncate: bool = False
     allow_relocate: bool = False
     allow_fallback: bool = False
+    collision_guard: bool = False
     pointer_proof_rom: Optional[Path] = None
     copy_reference_texts: bool = False
     copy_pointer_tables: bool = False
@@ -544,6 +545,25 @@ class TranslatedROMBuilder:
 
         print(f"✅ Texts {label}: {len(texts)}")
         return texts
+
+    def _cell_boundaries(self) -> Optional[set]:
+        """Every known cell start, used by the reinserter's collision guard.
+
+        Union of the real extracted English/reference cells and every
+        translation offset: the tight "next occupied cell" wall each in-place
+        write must terminate before. ``None`` when the guard is off so the
+        reinserter keeps its original behaviour (and the byte-perfect French
+        recipe, which never sets ``--collision-guard``, is unchanged).
+        """
+        if not self.config.collision_guard:
+            return None
+        boundaries: set = set()
+        if self.english_texts:
+            boundaries.update(self.english_texts.keys())
+        if self.reference_texts:
+            boundaries.update(self.reference_texts.keys())
+        boundaries.update(self.translations.keys())
+        return boundaries
 
     def _get_original_length(self, offset: int) -> Optional[int]:
         if not self.english_texts:
@@ -1221,6 +1241,8 @@ class TranslatedROMBuilder:
             allow_fallback=self.config.allow_fallback,
             pointer_proof_rom=self._pointer_proof_bytes(),
             skip_encode_aliases=self._skip_encode_aliases(),
+            collision_guard=self.config.collision_guard,
+            cell_boundaries=self._cell_boundaries(),
         )
 
         for i, translation in enumerate(translations, start=1):
@@ -1282,6 +1304,8 @@ class TranslatedROMBuilder:
             allow_fallback=self.config.allow_fallback,
             pointer_proof_rom=self._pointer_proof_bytes(),
             skip_encode_aliases=self._skip_encode_aliases(),
+            collision_guard=self.config.collision_guard,
+            cell_boundaries=self._cell_boundaries(),
         )
 
         for i, translation in enumerate(translations, start=1):
@@ -1345,6 +1369,8 @@ class TranslatedROMBuilder:
             allow_fallback=self.config.allow_fallback,
             pointer_proof_rom=self._pointer_proof_bytes(),
             skip_encode_aliases=self._skip_encode_aliases(),
+            collision_guard=self.config.collision_guard,
+            cell_boundaries=self._cell_boundaries(),
         )
 
         for i, translation in enumerate(translations, start=1):
@@ -1510,6 +1536,13 @@ Examples:
     parser.add_argument('--allow-fallback', action='store_true',
                        help='Synthesize a shorter in-place French variant for '
                             'too-long texts instead of leaving English behind')
+    parser.add_argument('--collision-guard', action='store_true',
+                       help='Never let an in-place write overrun into the next '
+                            'occupied cell (prevents the inter-cell fusion / '
+                            'freeze collisions audited by '
+                            'scripts/audit_translation_collisions.py). Used by '
+                            'the generic DE/IT builds; the byte-perfect French '
+                            'recipe leaves it off so its ROM is unchanged.')
     parser.add_argument('--pointer-proof-rom', type=Path,
                        help='Translated ROM of the same base (e.g. the Spanish '
                             'hack): pointer sites it rewrote are proven real '
@@ -1533,6 +1566,7 @@ Examples:
         allow_truncate=args.allow_truncate,
         allow_relocate=args.allow_relocate,
         allow_fallback=args.allow_fallback,
+        collision_guard=args.collision_guard,
         pointer_proof_rom=args.pointer_proof_rom,
         copy_reference_texts=args.copy_reference_texts,
         copy_pointer_tables=args.copy_pointer_tables,
