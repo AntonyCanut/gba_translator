@@ -15,6 +15,7 @@ diaeresis dots extracted from the matching ë/Ë reference pair in the ROM.
 from __future__ import annotations
 
 import argparse
+import bisect
 from collections import Counter
 from pathlib import Path
 from typing import Iterable, List, Optional, Tuple
@@ -60,24 +61,68 @@ class Lz77Block:
 
 
 class FreeSpaceAllocator:
+    """Allocate from ROM free regions: 0xFF runs with no live GBA pointer targets.
+
+    Unlike the old trailing-only allocator, this scans the whole ROM so it works
+    on generic-built ROMs (DE, IT) where the reinserter's relocations have eaten
+    the large trailing 0xFF region (the pre-existing "Not enough free space to
+    relocate font data" DE build failure). The scan is lazy — it only runs if
+    ``allocate()`` is actually called, so there is no overhead for ROMs where all
+    font blocks fit in-place. Mirrors scripts/patch_font_fr.py.
+    """
+
+    MIN_FREE_BLOCK = 256
+
     def __init__(self, rom: bytearray) -> None:
         self.rom = rom
-        self.start, self.end = self._find_trailing_ff()
-        self.cursor = (self.start + 3) & ~3
+        self._free: Optional[List[List[int]]] = None  # [[cursor, end], …]
 
-    def _find_trailing_ff(self) -> Tuple[int, int]:
-        idx = len(self.rom)
-        while idx > 0 and self.rom[idx - 1] == 0xFF:
-            idx -= 1
-        return idx, len(self.rom)
+    def _build_free(self) -> List[List[int]]:
+        data = bytes(self.rom)
+        n = len(data)
+        ROM_BASE = 0x08000000
+
+        # Collect every 4-byte-aligned GBA pointer target.
+        targets: List[int] = []
+        for i in range(0, n - 3, 4):
+            v = int.from_bytes(data[i : i + 4], "little")
+            if ROM_BASE <= v < ROM_BASE + n:
+                targets.append(v - ROM_BASE)
+        targets.sort()
+
+        # Find 0xFF runs of at least MIN_FREE_BLOCK bytes that contain no
+        # pointer target → guaranteed free space safe to overwrite.
+        regions: List[List[int]] = []
+        i = 0
+        while i < n:
+            if data[i] == 0xFF:
+                j = i
+                while j < n and data[j] == 0xFF:
+                    j += 1
+                if j - i >= self.MIN_FREE_BLOCK:
+                    idx = bisect.bisect_left(targets, i)
+                    if idx >= len(targets) or targets[idx] >= j:
+                        cursor = (i + 3) & ~3
+                        if cursor < j:
+                            regions.append([cursor, j])
+                i = j
+            else:
+                i += 1
+
+        # Largest regions first so the most common case (one allocation) is O(1).
+        regions.sort(key=lambda r: -(r[1] - r[0]))
+        return regions
 
     def allocate(self, size: int) -> int:
+        if self._free is None:
+            self._free = self._build_free()
         aligned = (size + 3) & ~3
-        if self.cursor + aligned > self.end:
-            raise RuntimeError("Not enough free space to relocate font data.")
-        offset = self.cursor
-        self.cursor += aligned
-        return offset
+        for region in self._free:
+            cursor, end = region
+            if cursor + aligned <= end:
+                region[0] = cursor + aligned
+                return cursor
+        raise RuntimeError("Not enough free space to relocate font data.")
 
 
 def lz77_decompress(data: bytes, offset: int) -> Optional[Tuple[bytes, int]]:

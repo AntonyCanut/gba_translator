@@ -237,6 +237,16 @@ def find_collisions(
         # build destroyed. Without a source ROM we cannot tell, so keep it.
         source_had_terminator = True
         if source_rom is not None:
+            # An empty source cell (its very first byte is already the
+            # terminator) never held text: the offset is unused / free space in
+            # the English ROM. The generic builder's relocator reuses free 0xFF
+            # runs, so a relocated — and properly terminated — string can
+            # legitimately span such a phantom offset. That is free-space reuse,
+            # not a destroyed cell boundary, so it is not a real collision.
+            # (A genuinely fused live cell has source text at ``offset`` and is
+            # still caught below.)
+            if offset < len(source_rom) and source_rom[offset] == TERMINATOR:
+                continue
             source_had_terminator = _terminator_index(source_rom, offset, span) != -1
             if not source_had_terminator:
                 continue

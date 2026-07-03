@@ -94,6 +94,7 @@ class BuildConfig:
     allow_relocate: bool = False
     allow_fallback: bool = False
     collision_guard: bool = False
+    extra_boundaries: Optional[Path] = None
     pointer_proof_rom: Optional[Path] = None
     copy_reference_texts: bool = False
     copy_pointer_tables: bool = False
@@ -563,6 +564,20 @@ class TranslatedROMBuilder:
         if self.reference_texts:
             boundaries.update(self.reference_texts.keys())
         boundaries.update(self.translations.keys())
+        # Also treat every combined_<code>.txt offset as a cell wall. The string
+        # scanner captured phantom offsets that sit inside padding and are never
+        # live-pointed, but the audit still counts them as the "next cell": a
+        # verbose translation of a real cell must not run past one, or it fuses
+        # with a scanned-but-dead neighbour. Including them makes such a cell
+        # relocate (its translation preserved) instead of overrunning.
+        extra = self.config.extra_boundaries
+        if extra and extra.exists():
+            offset_re = re.compile(r'^\s*0x([0-9A-Fa-f]+)\s*:')
+            with open(extra, encoding='utf-8') as handle:
+                for line in handle:
+                    m = offset_re.match(line)
+                    if m:
+                        boundaries.add(int(m.group(1), 16))
         return boundaries
 
     def _get_original_length(self, offset: int) -> Optional[int]:
@@ -1543,6 +1558,10 @@ Examples:
                             'scripts/audit_translation_collisions.py). Used by '
                             'the generic DE/IT builds; the byte-perfect French '
                             'recipe leaves it off so its ROM is unchanged.')
+    parser.add_argument('--extra-boundaries', type=Path,
+                       help='combined_<code>.txt whose offsets are added to the '
+                            'collision-guard cell walls, so a translation never '
+                            'overruns a scanned phantom cell the audit counts.')
     parser.add_argument('--pointer-proof-rom', type=Path,
                        help='Translated ROM of the same base (e.g. the Spanish '
                             'hack): pointer sites it rewrote are proven real '
@@ -1567,6 +1586,7 @@ Examples:
         allow_relocate=args.allow_relocate,
         allow_fallback=args.allow_fallback,
         collision_guard=args.collision_guard,
+        extra_boundaries=args.extra_boundaries,
         pointer_proof_rom=args.pointer_proof_rom,
         copy_reference_texts=args.copy_reference_texts,
         copy_pointer_tables=args.copy_pointer_tables,

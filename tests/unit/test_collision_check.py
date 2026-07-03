@@ -147,6 +147,24 @@ def test_source_terminator_gate_drops_fragment_false_positives():
     assert collisions[0].extra['source_had_terminator'] is True
 
 
+def test_empty_source_cell_is_free_space_not_a_collision():
+    # 0x100 is EMPTY in the source (its first byte is already the terminator):
+    # unused free space the generic builder's relocator may reuse. A built
+    # string that spans it is free-space reuse, not a destroyed cell boundary,
+    # so it must not be flagged — while a real (non-empty) overrunning cell at
+    # 0x140 still is.
+    source = _blank()
+    source[0x100] = 0xFF                    # empty source cell → free space
+    source[0x160] = 0xFF                    # real boundary in 0x140→0x180 gap
+    built = _blank()                        # build has no 0xFF anywhere
+    collisions = find_collisions(
+        bytes(built), [0x100, 0x140, 0x180], source_rom=bytes(source)
+    )
+    offsets = [c.offset for c in collisions]
+    assert 0x100 not in offsets            # empty source → skipped
+    assert 0x140 in offsets                # real cell overrun → still flagged
+
+
 def test_next_is_live_flags_real_neighbour_vs_fragment():
     en = _blank()
     en[0x200:0x204] = _ptr(0x100)          # 0x100 addressed (the overrunning cell)

@@ -190,6 +190,10 @@ def build_rom(config, translation_json: Path) -> Path:
         # (the collisions surfaced by the collision_check step). Too-long
         # entries relocate to free space instead of overwriting the next cell.
         "--collision-guard",
+        # The combined file's offsets (incl. scanned phantom cells that sit in
+        # padding) are the audit's cell walls; feed them in so a verbose
+        # translation relocates rather than overrunning one.
+        "--extra-boundaries", config.combined_path(REPO_ROOT),
         "--output", out_rom,
     ]
     if SPANISH_ROM.exists():
