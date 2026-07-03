@@ -58,3 +58,6 @@ patches:
   - legendary_ritual
   - status_abbrevs
   - version
+  # Post-build audit: flag any translated cell not terminated before its
+  # neighbour (fusion / freeze risk). Report-only, never fails the build.
+  - collision_check

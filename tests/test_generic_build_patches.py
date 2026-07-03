@@ -17,6 +17,7 @@ import pytest
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 
 from scripts.build_language import (
+    AUDIT_COLLISIONS_SCRIPT,
     ENGLISH_ROM,
     PATCH_RITUAL_SCRIPT,
     PATCH_STATUS_ABBREVS_SCRIPT,
@@ -156,6 +157,26 @@ def test_version_step_in_it_descriptor():
     # advertises itself as Italian.
     config = REGISTRY.get("it")
     assert "version" in config.patches
+
+
+# ─── collision_check ─────────────────────────────────────────────────────────
+
+def test_collision_check_dispatches_audit_report_only():
+    config = REGISTRY.get("de")
+    calls = _collected_calls(config, ["collision_check"])
+    assert len(calls) == 1
+    cmd = calls[0]
+    assert str(AUDIT_COLLISIONS_SCRIPT) in cmd
+    assert "--combined" in cmd
+    assert "--rom" in cmd
+    assert "--english" in cmd and str(ENGLISH_ROM) in cmd
+    # Report-only: the build step must never abort on a pre-existing collision.
+    assert "--fail-on-collision" not in cmd
+
+
+def test_collision_check_in_de_and_it_descriptors():
+    assert "collision_check" in REGISTRY.get("de").patches
+    assert "collision_check" in REGISTRY.get("it").patches
 
 
 # ─── unknown step warning ────────────────────────────────────────────────────

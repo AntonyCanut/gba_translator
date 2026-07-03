@@ -61,6 +61,11 @@ PATCH_STATUS_ABBREVS_SCRIPT = REPO_ROOT / "scripts/patch_status_abbrevs_fr.py"
 PATCH_TM_ITEM_DESC_SCRIPT = REPO_ROOT / "scripts/patch_tm_item_descriptions_fr.py"
 PATCH_MOVE_DESC_SCRIPT = REPO_ROOT / "scripts/patch_move_descriptions_fr.py"
 
+# Post-build verification (language-agnostic): audit the finished ROM for
+# inter-cell text collisions — a translated string not terminated before the
+# next live cell fuses with / overwrites its neighbour and can freeze the game.
+AUDIT_COLLISIONS_SCRIPT = REPO_ROOT / "scripts/audit_translation_collisions.py"
+
 # Diff + trilingual-CSV generation (needed when output/translation/ is empty).
 DIFF_SCRIPT = REPO_ROOT / "src/analyzers/11_pointer_text_diff.py"
 TRILINGUAL_SCRIPT = REPO_ROOT / "src/translators/28_export_trilingual_csv.py"
@@ -300,6 +305,19 @@ def apply_patches(config, out_rom: Path, translation_json: Path | None = None,
                     "--source", ENGLISH_ROM,
                     "--translations", translation_json,
                 ])
+
+        elif step == "collision_check":
+            # Report-only: trace live pointers in the finished ROM and flag any
+            # cell whose string is not terminated before the next occupied
+            # offset (fusion / freeze risk). Never fails the build so a
+            # pre-existing collision is surfaced, not hidden — the fix is to
+            # shorten/relocate the offending translation in combined_<code>.txt.
+            run([
+                PYTHON, AUDIT_COLLISIONS_SCRIPT,
+                "--combined", combined,
+                "--rom", out_rom,
+                "--english", ENGLISH_ROM,
+            ])
 
         else:
             print(f"⚠ skipping unknown/unsupported generic patch step: {step!r}")
