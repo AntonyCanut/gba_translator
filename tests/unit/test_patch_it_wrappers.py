@@ -137,10 +137,13 @@ def test_lang_patch_script_resolves_ported_wrappers():
 # pokedex_rewrap resolves its script as languages/it/patches/pokedex.py (a name
 # that does not match a "pokedex_rewrap" wrapper), so it is dispatched by the
 # elif branch with --source/--translations, not the generic --rom wrapper path.
+# trainer_class_names_it / long_dialogues_it are IT-specific (no FR delegate to
+# wrap), so they too are dispatched by dedicated elif branches, not a wrapper.
 _BUILTIN_STEPS = {
     "font", "inline", "repair_lz77", "repair_localized_lz77", "repoint_stale",
     "legendary_ritual", "intro_questions_it", "version", "status_abbrevs",
     "tm_item_descriptions", "move_descriptions", "pokedex_rewrap", "collision_check",
+    "trainer_class_names_it", "long_dialogues_it",
 }
 
 
