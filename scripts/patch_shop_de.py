@@ -106,6 +106,15 @@ def main() -> int:
                         help="Same-base ROM whose populated bytes must not be reused as free space")
     args = parser.parse_args()
 
+    # Under build_language.py's generic `patch_<step>_<code>.py --rom` dispatch no
+    # --reference-rom is passed; fall back to the Spanish ROM when present so the
+    # free-space guard still holds (matches the dedicated elif branch, which only
+    # adds --reference-rom when the Spanish ROM exists).
+    if args.reference_rom is None:
+        _default_ref = Path("input/roms/spanishrom.gba")
+        if _default_ref.exists():
+            args.reference_rom = _default_ref
+
     data = bytearray(args.rom.read_bytes())
     reserved = args.reference_rom.read_bytes() if args.reference_rom else None
     applied = apply_patches(data, reserved_rom=reserved)

@@ -122,6 +122,15 @@ def main() -> int:
     )
     args = parser.parse_args()
 
+    # Under build_language.py's generic `patch_<step>_<code>.py --rom` dispatch no
+    # --reference-rom is passed; fall back to the Spanish ROM when present so the
+    # free-space guard still holds (matches the dedicated elif branch, which only
+    # adds --reference-rom when the Spanish ROM exists).
+    if args.reference_rom is None:
+        _default_ref = Path("input/roms/spanishrom.gba")
+        if _default_ref.exists():
+            args.reference_rom = str(_default_ref)
+
     rom_path = Path(args.rom)
     rom = bytearray(rom_path.read_bytes())
     reserved = Path(args.reference_rom).read_bytes() if args.reference_rom else None

@@ -61,7 +61,12 @@ def apply_to_rom(rom: bytearray, en: bytes, dry_run: bool = False) -> int:
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--rom", required=True, type=Path)
-    parser.add_argument("--source", required=True, type=Path, help="pristine EN ROM")
+    # Default so build_language.py's generic `patch_<step>_<code>.py --rom`
+    # dispatch works without an explicit --source (matches the EN ROM the
+    # dedicated elif branch passes).
+    parser.add_argument("--source", type=Path,
+                        default=Path("input/roms/englishrom.gba"),
+                        help="pristine EN ROM")
     parser.add_argument("--dry-run", action="store_true")
     args = parser.parse_args()
 
