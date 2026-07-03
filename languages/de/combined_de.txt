@@ -7524,3 +7524,899 @@
 0x8CDC07: Jax : {COLOR}ËVerstanden, Opa. Ich gehe.\pIch werde sie aufhalten und\pLavados retten!
 0x8CDC55: Log : <0xFC><0x01><0x08>Gut, <0xFD><0x01>, ich denke,\nes ist Zeit für dich, nach Hause zu gehen.\pDu hast deine Mission erfüllt, und ich\nbin sicher, deine Mutter vermisst dich.
 0x8CDCD3: Arthur : {COLOR}ËWarte einen Moment, Log.\nIch bin sicher, dass {PLAYER}\pviel lernen könnte, wenn er sieht, wie Jax\nsich den Schatten stellt.\lIch denke, du solltest\p{STR_VAR_1} gehen lassen.
+# --- batch 5/12 (895 translated FR entries, 1105 excluded: 14 binary/graphical garbage + font-test-strings, 1079 no-pointer fixed-offset cells + 12 confirmed ROM-collision cells deferred (see follow-up ticket); sorted ascending by offset) ---
+0x8CDD6C: Tagebuch: {COLOR}ËHmm…\pDu hast vielleicht recht.\pWenn {STR_VAR_2} EP sammelt, wird {STR_VAR_1}\nsich um kompliziertere Aufgaben kümmern…
+0x8CDDD0: Nun, {PLAYER}, du solltest\nJax begleiten.\pIch sage deiner Mutter, dass du\neine Weile weg sein wirst.\pIch bin sicher, sie wird es verstehen.
+0x8CDE49: Begib dich zum {COLOR}ÉVolcan Cendré{COLOR}Ë und\nsieh zu, wie Jax {COLOR}ÉLavados{COLOR}Ë rettet.\pSo könntest du wertvolle\nErfahrung sammeln.
+0x8CDEBB: Die Zeit drängt,\n<0xFD><0x01>.\pDu musst dich beeilen, zum\n<0xFC><0x01><0x06>Mont Foudroyant<0xFC><0x01><0x08> zu gehen und\l<0xFC><0x01><0x06>Zapdos<0xFC><0x01><0x08> zu retten!\pWenn es auch gefangen wird, sind wir\nalle verloren…
+0x8CDF4B: Mit den drei Legendären Pokémon\nin der Hand sind die Schatten nur\lnoch wenige Augenblicke davon entfernt,\ldie dunkle Macht zu befreien.\pJax ist in {COLOR}ÉDaherapolis{COLOR}Ë,\nbereit, dich zu den {COLOR}ÉRuines du Néant{COLOR}Ë zu bringen\lund die Schatten davon abzuhalten,\lihren Plan zu vollenden.
+0x8CE03C: Also wurde die dunkle Macht\nbefreit…\pWenn wir sie nicht aufhalten, kann sie\ndie ganze Region zerstören!\pDu musst Jax finden und sie erneut\nversiegeln!
+0x8CE0C8: Du hast es geschafft!\pDu hast die Light of Ruin besiegt und\nuns gerettet!\pDu bist ein wahrer Wächter von Borrius!\pDein Vater wäre stolz.
+0x8CE141: Jetzt, wo wieder Frieden\nherrscht, warum forderst du nicht\ldie {COLOR}ÉPokémon-Liga{COLOR}Ë heraus?\pMit deinem Niveau könntest du\nleicht Champ werden.
+0x8CE1DF: Und, wie liefen deine Reisen, {PLAYER}?
+0x8CE1FC: Dame
+0x8CEA72: Du bist fast bereit.\nFür die Borrius-Region!\nAber zuerst…
+0x8CEAC2: Wähle deinen Charakter.
+0x8CEAD9: Wähle deinen Hautton.
+0x8CEAF0: Wähle deine Haarfarbe.
+0x8CEB09: Wähle die Farbe deiner Kleidung.
+0x8CEB24: Und zu guter Letzt, wie heißt du?\n
+0x8CEB4C: Du heißt {PLAYER}?
+0x8CEB5D: Heutzutage…
+0x8CF025: Aber natürlich!\nWer würde schon Nein sagen?\pAber…\pFalls du unüberlegt Ja gesagt hast,\nlass mich dir eine offizielle\lErklärung geben.
+0x8CF09D: Ich verstehe…\pDann lass mich es dir\nklar erklären.
+0x8CF0E4: Eine Mission ist ein Ziel,\ndas du zusätzlich erhältst, wenn du\leine Bitte um Hilfe annimmst.\pViele Leute können ihre\nProbleme nicht lösen und\lbrauchen Hilfe.\pWenn du eine Mission annimmst,\nwerden die Details\lautomatisch in deinem\pMissionstagebuch vermerkt.\nMissionen bringen oft\ltolle Belohnungen: Items, Geld\poder sogar neue Gebiete.\nWenn dich jemand um eine\pMission bittet, nimm sie sofort an.\nSelbst wenn du sie nicht sofort\lerledigen willst, kostet es nichts,\lsie in dein Tagebuch einzutragen.\pAllerdings brauchen hier\nmehrere Leute Hilfe.\lSchau dich um und überlege, ob du\pjemandem helfen möchtest!\nUnd komm zu mir, wenn du\pmindestens {COLOR}É5{COLOR}Ë Missionen erledigt hast.\n
+0x8CF3BD: Komm wieder, wenn du mindestens\n{COLOR}É{STR_VAR_1}{COLOR}Ë Missionen erledigt hast.
+0x8CF3FB: Sieht so aus, als hättest du\nmindestens {COLOR}É{STR_VAR_1}{COLOR}Ë Missionen erledigt!\pDafür bekommst du…\p{STR_VAR_2}!
+0x8CF44A: Ich habe dir alles gegeben!\nDu hast meine Erwartungen übertroffen!\pDie restlichen Missionen zählen\njust noch als Bonus.
+0x8CF4CB: Du erhältst ein {STR_VAR_1}!
+0x8CF4DE: Du hast keinen Platz mehr in deinem\nTeam oder in der Box für dieses Pokémon!
+0x8CF522: Ein Nugget
+0x8CF52B: Ein seltenes Pokémon
+0x8CF53A: Ein Latiosnit und ein Latiasnit
+0x8CF554: Das Perlmuttamulett
+0x8D072F: {RIVAL}: {COLOR}ËMann, du verlässt\nDaherapolis erst jetzt?\pDu bist echt lahm!\pWährend du getrödelt hast, habe\nich herausgefunden, wie man\ldie Ruines du Néant erreicht.\pAber als ich ankam, war es\nschon zu spät, um noch etwas\pzu tun.\nWas die Schatten auch immer\pvorhatten, sie hatten es schon getan.\nEs gab Kampfspuren\lund einen seltsamen Aschehaufen auf\pdem Boden.\nVielleicht für ein Ritual?\p…\p…\pWas!?\pDas ist ja irre!\pDu bist gestorben und wieder lebendig geworden!?
+0x8D0906: {RIVAL}: {COLOR}ËWas soll das…\pWer sollst du überhaupt sein?
+0x8D0933: Looker: <0xFC><0x01><0x08>…\p<0xFD><0x01>, du fragst dich sicher,\nwarum ich dir nicht durch das\lPortal mit Jax gefolgt bin.\pSiehst du, sobald dieses Portal\nauftauchte, wurde ich misstrauisch.\pAnders als Jax bin ich also\nvorsichtig einen Schritt zurückgewichen, wodurch\lich eure Spur verloren habe.\pDafür tut es mir leid.\pIch nahm an, ihr wärt zu den\nRuines du Néant teleportiert worden.\pAlso habe ich versucht, ebenfalls\ndorthin zu gelangen.\pDa ich jedoch kein\nPokémon habe, kam ich nicht hinein.\pSag mir, <0xFD><0x01>, was ist euch\nbeiden auf der anderen Seite\ldieses Portals widerfahren?\p…\p…\pIch verstehe…\pIn diesem Fall denke ich, es ist am\nbesten, nach <0xFC><0x01><0x06>Viville<0xFC><0x01><0x08>\lzu gehen und den Schatten zu helfen.\pWenn sie und die Light of Ruin\naufeinandertreffen, wird das die perfekte\lGelegenheit sein, einzugreifen und sie\lalle aufzuhalten.\pGeh und hilf den Schatten bei ihrer\nletzten Mission.\pSobald der Sieg errungen ist,\nerwarte ich dich draußen mit einem\lTeam von Polizisten, um diesem\lWahnsinn ein Ende zu setzen.
+0x8D0CA6: {RIVAL}: {COLOR}ËHey!\nIgnorier mich nicht!\pIch weiß nicht, wer du bist oder was\nhier los ist, aber wenn es um die\lSchatten geht, will ich\ldabei sein!
+0x8D0D33: Looker: <0xFC><0x01><0x08>Und wer bist du denn,\njunger Mann?
+0x8D0D5F: {RIVAL}: {COLOR}ËIch bin stinksauer!\pIch war ganz kurz davor, die\nSchatten zu erwischen und meine\lEltern zu finden, und schon wieder\lsind sie mir durch die Lappen gegangen!\pJetzt höre ich, dass sie nach\nViville gehen?\pDann gehe ich auch dahin! Um sie\nein für alle Mal aufzuhalten!
+0x8D0E55: Looker: {COLOR}ËWarte!\pIm Moment sind die Schatten unsere\nBauern, um ein noch\pgrößeres Problem zu lösen!\nHab noch etwas Geduld mit deiner Rache,\lbis die Sache vorbei ist, okay?
+0x8D0F02: <0xFD><0x06>: <0xFC><0x01><0x08>… Na gut.\pAber sobald dieses Problem gelöst ist,\nwird mich nichts davon abhalten, sie alle\lbis zum Letzten zu jagen!
+0x8D0F8A: {COLOR}ËDa das offiziell deine\n„Mission“ ist, werde ich in\l{COLOR}ÉViville{COLOR}Ë warten.\pUnd dir zuliebe werde ich sogar so tun,\nals wäre ich „nett“ zu den Schatten,\lbis wir fertig sind.\pSei nicht zu spät, {PLAYER}.
+0x8D1043: Looker: {COLOR}ËDieser Junge hat's wirklich\nin sich…\pIch wünsche dir viel Glück für deine\nMission, {PLAYER}.\pLooker, Ende.
+0x8D1726: Heute ist mein Tag.\nLass uns kämpfen!
+0x8D1757: Du bist wirklich ein Luftexperte.
+0x8D1777: Unser Luftkampf hat mein Herz\nmit Freude erfüllt.\pNimm diese Flügel als Zeichen\nmeiner Dankbarkeit!
+0x8D17DB: Unser Luftkampf hat mir so viel\nFreude bereitet!\pLass uns das morgen wiederholen.
+0x8D1826: Schade.\nDas ist wirklich bedauerlich.
+0x8D184B: Du hast kein Pokémon, gegen das ich\nbereit bin anzutreten.\pNur Pokémon vom Typ {COLOR}ÉFlug{COLOR}Ë oder mit\nder Fähigkeit {COLOR}ÉSchwebe{COLOR}Ë können\lgegen meine antreten.
+0x905690: {B_ATK_NAME_WITH_PREFIX} kehrte zu\n{B_PLAYER_NAME} zurück!
+0x9056B4: Die Verteidigung von {B_ATK_NAME_WITH_PREFIX}\nsteigt stark!
+0x905770: {B_ATK_NAME_WITH_PREFIX} kehrte zu\n{B_TRAINER1_NAME} zurück!
+0x905A30: Die Fähigkeit von {B_DEF_NAME_WITH_PREFIX}\nwurde neutralisiert!
+0x905A50: {B_DEF_NAME_WITH_PREFIX} erhält\n{B_DEF_ABILITY}!
+0x905C25: {B_DEF_NAME_WITH_PREFIX} wacht auf!
+0x905C40: Der Sp. Angriff von {B_ATK_NAME_WITH_PREFIX}\nsteigt stark!
+0x905E9A: {B_ATK_NAME_WITH_PREFIX} absorbiert Kraft!
+0x906470: Heilwunsch erfüllt sich für\n{B_SCR_ACTIVE_NAME_WITH_PREFIX}!
+0x9064A0: {B_SCR_ACTIVE_NAME_WITH_PREFIX} wird von\ngeheimnisvollem Mondlicht umhüllt!
+0x906520: {B_ATK_ABILITY} von {B_ATK_NAME_WITH_PREFIX}\nwird aktiviert!
+0x906540: Das {B_LAST_ITEM} von {B_DEF_NAME_WITH_PREFIX}\nwurde verbraucht!
+0x906619: {B_CURRENT_MOVE} schützt\ndas gegnerische Team vor Volltreffern!
+0x906740: {B_ATK_NAME_WITH_PREFIX} stahl und aß\ndas gegnerische {B_LAST_ITEM}!
+0x906810: Rückenwind weht hinter\ndeinem Team!
+0x9068A0: Rückenwind weht hinter\ndem gegnerischen Team!
+0x9068E0: Die Attacke {B_CURRENT_MOVE} schützte\ndein Team vor Volltreffern!
+0x906B90: {B_ATK_NAME_WITH_PREFIX} warf\nsein {B_LAST_ITEM}!
+0x906BF0: {B_ATK_NAME_WITH_PREFIX} schwebt dank\nElektromagnetismus!
+0x906C20: Doch {B_ATK_NAME_WITH_PREFIX} kann diese\nAttacke nicht einsetzen!
+0x906C40: Doch {B_ATK_NAME_WITH_PREFIX} kann sie in\ndiesem Zustand nicht einsetzen!
+0x906D20: {B_ATK_NAME_WITH_PREFIX} setzt sein\nAlarmsignal ein!
+0x906D70: Die Wettereffekte verschwinden.\n
+0x906DD0: {B_ATK_NAME_WITH_PREFIX} durchbricht die Form\nmit {B_ATK_ABILITY}!
+0x906E20: Doch {B_ATK_NAME_WITH_PREFIX} tut sich schwer,\nanzugreifen!
+0x906E70: {B_ATK_NAME_WITH_PREFIX} strahlt eine\nlodernde Aura aus!
+0x906F60: {B_ATK_NAME_WITH_PREFIX} strahlt eine\nFeen-Aura aus!
+0x906FB0: {B_ATK_NAME_WITH_PREFIX} kehrt alle\nanderen Auren um!
+0x906FE0: {B_ATK_NAME_WITH_PREFIX} bildet einen Schwarm!
+0x907000: {B_SCR_ACTIVE_NAME_WITH_PREFIX} strahlt eine\nexplosive Aura aus!
+0x907070: Ein elektrischer Strom durchzieht\ndas Schlachtfeld!
+0x907250: Die {B_DEF_ABILITY} von {B_DEF_NAME_WITH_PREFIX}\nerhöht seinen Angriff!
+0x907310: Die {B_DEF_ABILITY} von {B_DEF_NAME_WITH_PREFIX}\nerhöht seine Verteidigung!
+0x9073E0: Die {B_DEF_ABILITY} von {B_DEF_NAME_WITH_PREFIX}\nerhöht seine Verteidigung stark!
+0x9074D0: Die {B_DEF_ABILITY} von {B_DEF_NAME_WITH_PREFIX}\nerhöht seine Initiative!
+0x9075E0: Die {B_DEF_ABILITY} von {B_DEF_NAME_WITH_PREFIX}\nsenkt seine Verteidigung!
+0x907600: Die {B_DEF_ABILITY} von {B_DEF_NAME_WITH_PREFIX}\nerhöht seine Initiative stark!
+0x907730: Durchsuchung von {B_SCR_ACTIVE_NAME_WITH_PREFIX}\nfindet das {B_LAST_ITEM} von\l{B_DEF_NAME_WITH_PREFIX}!
+0x907860: Die Fähigkeit von {B_ATK_NAME_WITH_PREFIX}\nwird zu {B_DEF_ABILITY}!
+0x907BF0: Die Fähigkeit {B_DEF_ABILITY} von {B_DEF_NAME_WITH_PREFIX} lässt es sich\nzurückziehen!
+0x907C40: {B_ATK_NAME_WITH_PREFIX} döst ein!
+0x907DE5: Die Fähigkeit {B_DEF_ABILITY} von {B_DEF_NAME_WITH_PREFIX} maximiert seinen\nAngriff!
+0x9082A0: {B_DEF_NAME_WITH_PREFIX} erleidet Schaden\ndurch seine Fähigkeit {B_DEF_ABILITY}!
+0x9085A0: Die Statusveränderungen von\n{B_DEF_NAME_WITH_PREFIX} werden aufgehoben!
+0x9089E0: {B_ATK_NAME_WITH_PREFIX} versiegelt das\nSchlachtfeld!
+0x908A00: Alle geraten in eine\nfröhliche Stimmung!
+0x908CDB: Die {B_EFF_ABILITY} von {B_SCR_ACTIVE_NAME_WITH_PREFIX} erhöht\nseinen Sp. Angriff!
+0x908CF9: Die {B_EFF_ABILITY} von {B_SCR_ACTIVE_NAME_WITH_PREFIX} erhöht\nseinen Angriff!
+0x9092D0: Die {B_EFF_ABILITY} von {B_SCR_ACTIVE_NAME_WITH_PREFIX} erhöht\nseinen Angriff!
+0x9092F0: Die {B_EFF_ABILITY} von {B_SCR_ACTIVE_NAME_WITH_PREFIX} erhöht\nseine Verteidigung!
+0x909311: Die {B_EFF_ABILITY} von {B_SCR_ACTIVE_NAME_WITH_PREFIX} erhöht\nseine Initiative!
+0x909330: Die {B_EFF_ABILITY} von {B_SCR_ACTIVE_NAME_WITH_PREFIX} erhöht\nseinen Sp. Angriff!
+0x909351: Die {B_EFF_ABILITY} von {B_SCR_ACTIVE_NAME_WITH_PREFIX} erhöht\nseine Sp. Verteidigung!
+0x909372: Die {B_EFF_ABILITY} von {B_SCR_ACTIVE_NAME_WITH_PREFIX} erhöht\nseine Genauigkeit!
+0x909394: Die {B_EFF_ABILITY} von {B_SCR_ACTIVE_NAME_WITH_PREFIX} erhöht\nseinen Fluchtwert!
+0x9093B9: Die {B_EFF_ABILITY} von {B_SCR_ACTIVE_NAME_WITH_PREFIX} senkt\nseinen Angriff!
+0x9093D9: Die {B_EFF_ABILITY} von {B_SCR_ACTIVE_NAME_WITH_PREFIX} senkt\nseine Verteidigung!
+0x9093FA: Die {B_EFF_ABILITY} von {B_SCR_ACTIVE_NAME_WITH_PREFIX} senkt\nseine Initiative!
+0x909419: Die {B_EFF_ABILITY} von {B_SCR_ACTIVE_NAME_WITH_PREFIX} senkt\nseinen Sp. Angriff!
+0x90943A: Die {B_EFF_ABILITY} von {B_SCR_ACTIVE_NAME_WITH_PREFIX} senkt\nseine Sp. Verteidigung!
+0x90945B: Die {B_EFF_ABILITY} von {B_SCR_ACTIVE_NAME_WITH_PREFIX} senkt\nseine Genauigkeit!
+0x90947D: Die {B_EFF_ABILITY} von {B_SCR_ACTIVE_NAME_WITH_PREFIX} senkt\nseinen Fluchtwert!
+0x909AF0: {B_ATK_NAME_WITH_PREFIX} entfesselt einen\nHagelsturm!
+0x909BF0: Die Wirkung von Vorrat hat sich aufgelöst!\n
+0x90A718: Das Team von {B_DEF_NAME_WITH_PREFIX} wird\ndurch Süßen Schleier geschützt!
+0x90A740: {B_DEF_NAME_WITH_PREFIX} wird durch\n{B_DEF_ABILITY} geschützt!
+0x90A7A0: Das Team von {B_DEF_NAME_WITH_PREFIX} wird\ndurch Blütenschutz geschützt!
+0x90A9C0: Das Team von {B_DEF_NAME_WITH_PREFIX} wird\ndurch Aromaschutz geschützt!
+0x90B2A0: Stacheln verteilen sich um\ndein Team!
+0x90B780: {B_ATK_NAME_WITH_PREFIX}\ndurch das Grasfeld verstärkt!
+0x90C710: Die Initiative von {B_ATK_NAME_WITH_PREFIX} wird\ndurch {B_DEF_ABILITY} verringert!
+0x90C802: Der Sturmsog von {B_DEF_NAME_WITH_PREFIX}\nerhöht seinen Sp. Angriff!
+0x90C827: Der Blitzfänger von {B_DEF_NAME_WITH_PREFIX}\nerhöht seinen Sp. Angriff!
+0x90C850: Tarnsteine erscheinen um\ndein Team!
+0x90CAE0: Giftspitzen erscheinen um\ndas gegnerische Team!
+0x90CF46: Die Fähigkeit {B_SCR_ACTIVE_ABILITY} von\n{B_ATK_NAME_WITH_PREFIX} wird ausgelöst!
+0x90D120: Du spürst mehrere Anwesenheiten.\lDie <0xFD><0x19> von <0xFD><0x10>\nwird aktiviert!
+0x90D160: {B_DEF_NAME_WITH_PREFIX} nimmt seine\nPerfekte Form an!
+0x90D2C0: {B_ATK_ABILITY} von {B_ATK_NAME_WITH_PREFIX}\nwird deaktiviert!
+0x90D3F0: Ihr spürt Anwesenheiten.\l{B_ATK_NAME_WITH_PREFIX}\n{B_ATK_ABILITY} wird aktiviert!
+0x90D430: {B_ATK_NAME_WITH_PREFIX} nimmt seine\nPerfekte Form an!
+0x90D780: {B_DEF_NAME_WITH_PREFIX} steckt den Treffer\ndank {B_DEF_ABILITY} weg!
+0x90D930: {B_DEF_NAME_WITH_PREFIX} wird von seiner\nStatusveränderung geheilt.
+0x90D9B0: {B_ATK_NAME_WITH_PREFIX} wird flink!
+0x90DB70: {B_CURRENT_MOVE} schützt vor physischen\nund speziellen Attacken!
+0x90DD30: {B_ATK_NAME_WITH_PREFIX} konzentriert sich stark!
+0x90E100: {B_ATK_NAME_WITH_PREFIX} vertreibt den dichten Nebel mit\n{B_CURRENT_MOVE}!
+0x90E130: {B_ATK_NAME_WITH_PREFIX} fegt die Mauern\nvon {B_DEF_NAME_WITH_PREFIX} hinweg!
+0x90E400: Die Verbrennung von {B_DEF_NAME_WITH_PREFIX} wird\ngeheilt!
+0x90E940: {B_ATK_NAME_WITH_PREFIX} hat sich selbst verzehrt!
+0x90EA30: {B_ATK_NAME_WITH_PREFIX} stahl die Statusboosts\nvon {B_DEF_NAME_WITH_PREFIX}!
+0x90EAA0: {B_DEF_NAME_WITH_PREFIX} erhält das\n{B_LAST_ITEM} von {B_ATK_NAME_WITH_PREFIX}!
+0x90EF70: {B_ATK_NAME_WITH_PREFIX} überträgt seine\nStatusveränderung auf\l{B_DEF_NAME_WITH_PREFIX}!
+0x90F3A0: {B_SCR_ACTIVE_NAME_WITH_PREFIX} wird von\ngeheimnisvollem Mondlicht umhüllt!
+0x90F530: {B_ATK_NAME_WITH_PREFIX} kann {B_CURRENT_MOVE} wegen\nSchwerkraft nicht einsetzen!
+0x90F560: Die Schwerkraft verstärkt sich!
+0x90F580: {B_ATK_NAME_WITH_PREFIX} verzerrt Raum und Zeit!\n
+0x90F5A0: Erschafft eine seltsame Zone, in der\ngetragene Items ihre Wirkung verlieren!
+0x90F5F0: Erschafft eine seltsame Zone, in der\nVerteidigung und Sp. Verteidigung getauscht werden!
+0x90F640: {B_DEF_NAME_WITH_PREFIX} kann wegen der\nSchwerkraft nicht in der Luft bleiben!
+0x90F670: Ein Ionenregen ergießt sich über\ndas Feld!
+0x90F8F0: {B_ATK_NAME_WITH_PREFIX} vertauscht seinen Angriff\nund seine Verteidigung!
+0x90F920: {B_ATK_NAME_WITH_PREFIX} tauscht alle seine\nAngriffs- und Sp.-Angriffs-Boosts\lmit {B_DEF_NAME_WITH_PREFIX}!
+0x90F960: {B_ATK_NAME_WITH_PREFIX} tauscht alle seine\nVerteidigungs- und Sp.-Verteidigungs-Boosts\lmit {B_DEF_NAME_WITH_PREFIX}!
+0x90F9A0: {B_ATK_NAME_WITH_PREFIX} tauscht seine Initiative\nmit {B_DEF_NAME_WITH_PREFIX}!
+0x90F9C0: {B_ATK_NAME_WITH_PREFIX} tauscht seine\nStatusveränderungen mit\l{B_DEF_NAME_WITH_PREFIX}!
+0x90F9F0: {B_ATK_NAME_WITH_PREFIX} teilt seine Deckung\nmit dem Ziel!
+0x90FA20: {B_ATK_NAME_WITH_PREFIX} teilt seine Stärke\nmit dem Ziel!
+0x90FC0B: Ein Feuermeer umgibt\ndein Team!
+0x90FC30: Ein Feuermeer umgibt das\ngegnerische Team!
+0x90FC60: Ein Sumpf verschlingt dein Team!\n
+0x90FC80: Ein Sumpf verschlingt\ndas gegnerische Team!
+0x90FCB0: Ein Regenbogen erscheint auf der Seite\ndeines Teams!
+0x90FCF0: Ein Regenbogen erscheint auf der Seite\ndes gegnerischen Teams!
+0x90FD30: {B_ATK_NAME_WITH_PREFIX} wartet auf die Attacke\nvon {B_DEF_NAME_WITH_PREFIX}!
+0x90FD50: {B_ATK_NAME_WITH_PREFIX} setzt\n{B_CURRENT_MOVE} ein!\pDie beiden Attacken verschmelzen!\nEs ist eine kombinierte Attacke!
+0x9100B0: Heilwunsch erfüllt sich für\n{B_SCR_ACTIVE_NAME_WITH_PREFIX}!
+0x920000: Der Anwender entfesselt\nseine Kraft.\nSenkt eventuell auch\ndie Sp.Vert. des Ziels.
+0x920045: Das Ziel wird getroffen\nvon einem Schweif, der\nfegt wie eine\nWelle im Sturm.
+0x920090: Eine Aurakugel\nwird auf den\nGegner geschleudert. Trifft\nimmer.
+0x9200D3: Der Anwender legt\nseine Flügel an und\ngreift an. Verletzt\nauch den Anwender.
+0x92011E: Eine schädliche\nSchallwelle, die die\nSp.Vert. des\nGegners senken kann.
+0x920168: Ein harter Schlag,\nder immer\nzuerst\ntrifft.
+0x9201AE: Ein Stromschlag,\nder den Sp.Angr.\ndes Anwenders\nerhöhen kann.
+0x9201F9: Ein Kampf von Mann\nzu Mann. Senkt die\nVerteidigung des\nAnwenders.
+0x92023F: Eine furchterregende\nAura wird ausgesandt.\nKann auch den Gegner\nerschrecken.
+0x920285: Eine Luftklinge\nschneidet den Gegner.\nKann ihn auch\nerschrecken.
+0x9202CC: Eine Entladung\ntrifft alle\nPokémon. Kann\nlähmen.
+0x920320: Eine Schockwelle\nschießt aus dem weit\ngeöffneten Maul des\nAnwenders auf den Gegner.
+0x92036D: Ein harter Schlag, der\ndem Anwender die Hälfte\ndes Schadens als\nKP zurückgibt.
+0x9203B5: Der Boden unter dem\nGegner bricht aus.\nKann seine Sp.Vert.\nsenken.
+0x920407: Der Gegner wird von\nder Energie der Natur\ngetroffen. Kann seine\nSp.Vert. senken.
+0x920455: Eine Schockwelle\ntrifft den Gegner.\nKann ihn auch\nparalysieren.
+0x92049E: Gras bringt den\nGegner zu Fall.\nVerletzt schwere\nGegner stärker.
+0x9204E4: Müll wird auf\nden Gegner\ngeschleudert. Kann\nihn vergiften.
+0x920527: Der Anwender schlägt\nmit einer massiven Faust.\nSenkt die Initiative\ndes Anwenders.
+0x920569: Ein heftiger,\nunbedachter Angriff,\nder auch den\nAnwender verletzt.
+0x9205AE: Schleudert Eisblöcke,\ndie das Ziel\nimmer zuerst\ntreffen.
+0x9205EE: Schlägt den Gegner\nmit einem harten Kopf.\nKann ihn auch\nzum Zurückschrecken bringen.
+0x920637: Scharlachrote Flammen\ntreffen alle Pokémon\nim Kampf. Kann\nauch verbrennen.
+0x920683: Eine Stahlbombe\nklebt am Gegner.\nVerfehlt niemals.
+0x9206B9: Schlägt den Gegner\nmit Schlamm.\nKann auch seine\nGenauigkeit senken.
+0x9206FF: Denkt an\nböse Dinge.\nErhöht stark den\nSp. Angriff.
+0x920742: Zerschneidet den\nGegner sofort.\nHohe Volltreffer-\nquote.
+0x9207D6: Greift mit einem\nLichtstrahl an, der\nwie Juwelen\nfunkelt.
+0x92081A: Peitscht den Gegner\nheftig mit seinen\nRanken oder\nTentakeln.
+0x92085D: Zerschneidet den\nGegner mit Psycho-\nKlingen. Hohe\nVolltrefferquote.
+0x9208AC: Ein Angriff, der\nverwirren kann. Dient\nauch zum Erklettern\nvon Wänden.
+0x9208FA: Poliert seinen Körper.\nErhöht stark\nseine Initiative.
+0x920932: Schleudert einen\nriesigen Felsen. Der\nAnwender ruht sich\nin der nächsten Runde aus.
+0x92097D: Schießt einen Schauer\nharter Samen\nauf den Gegner.
+0x9209B2: Zerschneidet den\nGegner mit\nSchattenkrallen. Hohe\nVolltrefferquote.
+0x9209F9: Dehnt seinen\nSchatten aus, um\nanzugreifen. Trifft\nimmer zuerst.
+0x920A8C: Zerschneidet den\nGegner mit gekreuzten\nKrallen wie einer\nSchere.
+0x920AD3: Konzentriert sich\nund attackiert den\nGegner. Kann ihn\nauch zum Zurückschrecken bringen.
+0x920B18: Tauscht sein Item\nblitzschnell mit\ndem des\nGegners.
+0x920B61: Dreht sich selbst\nwie ein Bohrer.\nHohe Volltreffer-\nquote.
+0x920BFD: Fängt den Gegner in\neinem Elektronetz,\ndas auch seine\nInitiative senkt.
+0x920C49: Umgibt sich mit\nFlammen und greift an.\nErhöht auch\nseine Initiative.
+0x920C99: Bläst eisige Luft\nauf den Gegner.\nLandet immer\neinen Volltreffer.
+0x920CE3: Schlägt nach einer\nniedlichen Geste zu.\nKann den Gegner\nauch zum Zurückschrecken bringen.
+0x920D26: Wetzt seine Krallen,\num seinen Angriff\nund seine Genauigkeit\nzu erhöhen.
+0x920D65: Rollt sich zusammen,\num Angriff, Verteidigung\nund Genauigkeit\nzu erhöhen.
+0x920DA2: Ein heftiger Wind\nreißt den Gegner mit.\nKann ihn auch\nverwirren.
+0x920DE4: Stalaktiten fallen\nauf den Gegner.\nKann ihn auch zum\nZurückschrecken bringen.
+0x920E26: Greift den Gegner\nmit einer explosiven\nFlamme an.
+0x920E5F: Tanzt, um Sp. Angriff,\nSp. Verteidigung und\nInitiative zu erhöhen.\n
+0x920E9F: Scharfe Blätter\numkreisen den Gegner.\nKann auch seine\nGenauigkeit senken.
+0x920EE3: Motiviert sich, um\nseinen Angriff\nund seinen Sp.\nAngriff zu erhöhen.
+0x920F22: Greift die\nBeine des\nGegners an. Senkt\nseine Initiative.
+0x920F5D: Bellt bedrohlich\nund senkt den\nSp. Angriff\ndes Gegners.
+0x920F9B: Hält stand und\ngreift den Gegner an.\nSenkt dessen\nSp. Angriff.
+0x920FE3: Zerquetscht den\nGegner mit seinem\ngesamten Körper.\nKann ihn auch zum Zurückschrecken bringen.
+0x92102D: Schlägt den Gegner\nheftig. Landet\nimmer einen\nVolltreffer.
+0x921076: Besprüht mit einer\nspeziellen Säure.\nDoppelte Stärke, wenn\nder Gegner vergiftet ist.
+0x9210C6: Schlägt den Gegner\nmit einem giftigen\nArm. Kann ihn\nauch vergiften.
+0x921113: Spuckt eine\nalles auflösende\nFlüssigkeit. Senkt stark\ndie Sp. Verteidigung des Gegners.
+0x921162: Tanzt in Flammen\ngehüllt. Kann\nauch seinen\nSp. Angriff erhöhen.
+0x9211AD: Durchbohrt den\nGegner mit scharfen\nSteinen. Hohe\nVolltrefferquote.
+0x9211F8: Beißt den Gegner.\nKann ihn auch\nzum Zurückschrecken bringen\noder verbrennen.
+0x921246: Beißt den Gegner.\nKann ihn auch\nzum Zurückschrecken bringen\noder einfrieren.
+0x921294: Beißt den Gegner.\nKann ihn auch\nzum Zurückschrecken bringen\noder paralysieren.
+0x9212E5: Ein flammender\nAngriff, der\nverbrennen kann.\nVerletzt auch den Anwender leicht.
+0x921335: Intensives Feuer\numhüllt den Gegner\nund verbrennt ihn\nmit Sicherheit.
+0x92137B: Doppelter Schaden,\nwenn das Ziel\nunter einer Status-\nveränderung leidet.
+0x9213C5: Schlägt den Gegner\nzweimal brutal\nin einer\neinzigen Runde.
+0x921401: Der Gegner wird\nzweimal von einem\nSchwanz, Ranken\noder Ähnlichem getroffen.
+0x921445: Hüllt sich in\nweiche Baumwolle,\num seine Verteidigung\nstark zu erhöhen.
+0x92148E: Ein flinker Angriff.\nDoppelter Schaden,\nwenn der Anwender\nkein Item trägt.
+0x9214D5: Nach dem Angriff\nüberlässt der\nAnwender seinen\nPlatz einem verbündeten Pokémon.
+0x921516: Schleudert einen\nEnergieblitz, der\nSchaden anrichtet und\ndie Genauigkeit senkt.
+0x921557: Rammt den Gegner\nmit seinem harten\nKörper und verletzt\nsich dabei auch leicht.
+0x9215A1: Eine Heilwelle gibt\ndem Ziel bis zur\nHälfte seiner\nmax. KP zurück.
+0x9215EC: Schießt leuchtende\nEnergie. Kann auch\ndie Sp. Verteidigung\ndes Gegners senken.
+0x921633: Erhöht die offensiven\nWerte auf Kosten\nder Verteidigungs-\nwerte.
+0x92167B: Verteilt eine\nPulverwolke, die\nalle gegnerischen\nAngriffe auf sich zieht.
+0x9216C3: Der Körper wächst\nplötzlich, was\nAngriff und\nSp. Angriff erhöht.
+0x92170C: Fügt einem\nschlafenden Gegner\ndoppelten Schaden zu,\nweckt ihn aber auf.
+0x921756: Zerschneidet den\nGegner mit seinen\nSchalen. Kann seine\nVerteidigung senken.
+0x92179C: Beißt den Gegner\nund isst seine Beere,\nfalls er\neine trägt.
+0x9217DC: Pickt den Gegner\nund isst seine Beere,\nfalls er\neine trägt.
+0x92181E: Erlaubt es, zuerst\nzuzuschlagen, wenn\nder Gegner einen\nAngriff vorbereitet.
+0x92186C: Spritzt kochendes\nWasser auf den\nGegner. Kann\nauch verbrennen.
+0x9218A9: Sind die KP des\nGegners bei der\nHälfte oder weniger,\nwird der Schaden verdoppelt.
+0x9218EB: Der Anwender\nentfacht einen\nFeenwind und trifft\nden Gegner damit.
+0x921928: Ein niedlicher Blick,\nder den Angriff\ndes Gegners senkt.\nTrifft immer zuerst.
+0x921971: Der Anwender\nbehandelt den Gegner\ngrob. Kann auch\nseinen Angriff senken.
+0x9219B6: Greift den Gegner\nmit der Kraft des\nMondes an. Kann\nden Sp. Angriff senken.
+0x921A03: Ein sanfter Kuss, der\ndem Anwender die\nHälfte des verursachten\nSchadens als KP zurückgibt.
+0x921A4A: Verletzt gegnerische\nPokémon, indem\nein starker\nLichtblitz ausgesendet wird.
+0x921A8B: Stößt einen\nbezaubernden Schrei\naus, dem nicht\nausgewichen werden kann.
+0x921AC4: Felsen schweben\num das gegnerische\nTeam und verletzen\ndie, die eintreten.
+0x921B11: Der Anwender geht\nK.o., heilt aber\nseinen Nachfolger\nvollständig.
+0x921B55: Erzeugt Rückenwind,\nder die Initiative\ndes Teams für\n4 Runden erhöht.
+0x921BA2: Der Anwender sendet\neine furchtbare\nSchallwelle aus, die\nalles um ihn herum trifft.
+0x921BE7: Verbrennt den Gegner\nvollständig und macht\nseine getragene\nBeere unbrauchbar.
+0x921C2B: Pflanzt auf dem\nGegner einen Samen,\nder seine Fähigkeit\nzu Insomnia macht.
+0x921C70: Spuckt eine Säure,\ndie die Fähigkeit\ndes Gegners\nneutralisiert.
+0x921CAE: Erhöht den Angriff\nund den Sp. Angriff\naller Pflanzen-\nPokémon.
+0x921CF1: Erhöht die\nVerteidigung aller\nPflanzen-Pokémon\ndurch eine seltsame Kraft.
+0x921D3B: Sp. Angriff, Sp.\nVerteidigung und\nInitiative steigen\nin der 2. Runde.
+0x921D7E: Dreht seine\nZahnräder, um den\nAngriff und den\nSp. Angriff zu erhöhen.
+0x921DC0: Giftspitzen um das\ngegnerische Team\nverletzen die,\ndie eintreten.
+0x921E0C: Ein klebriges Netz\num das gegnerische\nTeam verlangsamt\ndie, die eintreten.
+0x921E9D: Drückt auf\nDruckpunkte, um\neinen seiner Werte\nstark zu erhöhen.
+0x921EE6: Schaden verdoppelt,\nwenn der Gegner\nin dieser Runde\nbereits Schaden erlitten hat.
+0x921F29: Je mehr Werte der\nGegner erhöht hat,\ndesto stärker\nist diese Attacke.
+0x921FBA: Ruft seine Handlanger,\num den Gegner\nzu verprügeln.\nHohe Volltreffer-\nquote.
+0x922013: Ruft seine Handlanger,\num seinen Körper\nzu schützen. Erhöht\nseine Verteidigung\nund Sp. Verteidigung.
+0x922074: Ruft seine Handlanger,\num sich zu heilen.\nGibt bis zur\nHälfte der max.\nKP zurück.
+0x9220D1: Ist der Gegner\nvom anderen Geschlecht,\nsinkt sein Sp.\nAngriff stark.\n
+0x92212D: Ein starker Wind\nfegt Hindernisse weg\nund senkt den\nFluchtwert des\nZiels.
+0x92218A: Attackiert die\nGegner mit\nzahllosen tief-\nblauen Licht-\nstrahlen.
+0x9221E4: Entfesselt die\nKraft der Erde als\nSteinklingen, um die\nGegner zu treffen.
+0x922241: Vertauscht mit\ndem Gegner die\nVeränderungen von\nVert. und Sp.Vert.\ndurch Psychokraft.
+0x92229C: Taucht das Ziel\nin überhitzten\nDampf.\nKann es auch\nverbrennen.
+0x9222EE: Kontert deutlich\nstärker gegen\nden Gegner, der\nzuletzt Schaden\nzugefügt hat.
+0x92234B: Unterbricht die\nPriorität, um die\nanvisierte Attacke\nzu stehlen und mit\nmehr Stärke einzusetzen.
+0x9223AA: Vertauscht mit\ndem Gegner die\nVeränderungen von\nAngriff und Sp.Ang.\ndurch Psychokraft.
+0x922407: Nutzt seine Psychokraft,\num seinen Angriff mit\nseiner Verteidigung zu\ntauschen.\n
+0x92245B: Überträgt durch\nPsychosuggestion\nseine eigenen\nStatusprobleme aufs Ziel.\n
+0x9224B8: Verdreht das Ziel\ngewaltsam. Je mehr\nKP es hat, desto\ngrößer ist die\nStärke.
+0x922512: Schützt vor Schaden\nund senkt bei\nBerührung den\nAngriff des Gegners\ndeutlich.
+0x922571: Verliert einen Teil\nseines Körpers, um\nleichter zu werden\nund seine Initiative\nstark zu steigern.
+0x9225CA: Entfesselt einen\nDiamantensturm, der\nden Gegnern schadet.\nKann auch die\nVerteidigung des Anwenders erhöhen.
+0x92262C: Eine gewaltige\nSchlammwelle\nüberflutet das Gebiet.\nKann die Opfer auch\nvergiften.
+0x922686: Rammt das Ziel.\nJe größer der\nGewichtsunterschied,\ndesto höher der\nSchaden.
+0x9226E1: Setzt alles aufs\nSpiel: fügt Schaden\nin Höhe der eigenen\nKP zu und bricht\ndanach erschöpft zusammen.
+0x922737: Eine seltsame Welle,\ndie Pokémon\ndesselben Typs in\nder Nähe verletzt.\n
+0x92278C: Schleudert eine\nElektrokugel. Der\nSchaden hängt von der\nInitiative von\nAnwender und Ziel ab.
+0x9227EA: Kehrt die Kraft\ndes Gegners gegen\nihn selbst. Die Stärke\nsteigt mit dessen\nAngriff.
+0x922844: Tanzt zu einem\nseltsamen Rhythmus\nund gibt dem Ziel\ndieselbe Fähigkeit\nwie der Anwender.
+0x9228A4: Setzt eine\ndunkle Böe gegen\ndas Ziel frei. Kann\nauch die Genauigkeit\ndes Gegners senken.
+0x9228FB: Greift das Ziel\nmit einem scharfen\nEcho an. Wird es\njede Runde genutzt,\nsteigt die Stärke.
+0x922950: Zapft die Energie\nder Erde an und\nfügt gegnerischen\nPokémon damit\nSchaden zu.
+0x961B50: Normal
+0x961B73: Gestein
+0x964160: Attackentyp: Fee
+0x964180: Pokémon-Typ: Fee
+0x9641A0: Wirkung geg. Attacken:\p   {CIRCLE_DOT}: Kam/Käf/Fee\p   {TRIANGLE}: Gei/Unl\p   {BIG_MULT_X}: Psy
+0x964210: Wirkung auf den Gegner:\p   {CIRCLE_DOT}: Nor/Ges/Sta/Eis/Unl\p   {TRIANGLE}: Flu/Gif/Käf/Psy\l       Fee\p   {BIG_MULT_X}: Gei
+0x9642A0: Wirkung geg. Attacken:\p   {CIRCLE_DOT}: Flu/Psy/Fee\p   {TRIANGLE}: Ges/Käf/Unl
+0x964300: Wirkung auf den Gegner:\p   {CIRCLE_DOT}: Pfl/Fee\p   {TRIANGLE}: Gif/Bod/Ges/Gei\p   {BIG_MULT_X}: Sta
+0x964370: Wirkung geg. Attacken:\p   {CIRCLE_DOT}: Bod/Psy\p   {TRIANGLE}: Kam/Gif/Käf/Pfl,\l       Fee
+0x9643E0: Wirkung auf den Gegner:\p   {CIRCLE_DOT}: Pfl/Psy/Unl\p   {TRIANGLE}: Kam/Flu/Gif/Gei,\l       Sta/Feu/Fee
+0x964460: Wirkung auf den Gegner:\p   {CIRCLE_DOT}: Ges/Eis/Fee\p   {TRIANGLE}: Sta/Feu/Was/Ele
+0x9644C0: Wirkung geg. Attacken:\p   {CIRCLE_DOT}: Bod/Ges/Was\p   {TRIANGLE}: Käf/Sta/Feu/Pfl,\l       Eis/Fee
+0x964540: Wirkung auf den Gegner:\p   {CIRCLE_DOT}: Dra\p   {TRIANGLE}: Sta\p   {BIG_MULT_X}: Fee
+0x964590: Wirkung geg. Attacken:\p   {CIRCLE_DOT}: Eis/Dra/Fee\p   {TRIANGLE}: Feu/Was/Pfl/Ele
+0x964600: Wirkung auf den Gegner:\p   {CIRCLE_DOT}: Kam/Dra/Unl\p   {TRIANGLE}: Gif/Sta/Feu
+0x964660: Wirkung geg. Attacken:\p   {CIRCLE_DOT}: Gif/Sta\p   {TRIANGLE}: Kam/Käf/Unl\p   {BIG_MULT_X}: Dra
+0x964A7E: Aufnahmetaste für\nweitere Infos!
+0x965B87: {B_DEF_NAME_WITH_PREFIX} erlitt Schaden!
+0x965B94: {B_DEF_NAME_WITH_PREFIX} wird gefoltert!
+0x965BA5: {B_SCR_ACTIVE_NAME_WITH_PREFIX} erntete\nein {B_LAST_ITEM}!
+0x965BBA: {B_SCR_ACTIVE_NAME_WITH_PREFIX} fand ein\n{B_LAST_ITEM}!
+0x965BCB: {B_SCR_ACTIVE_NAME_WITH_PREFIX} verliebte sich\nwegen {B_LAST_ITEM}!
+0x965BE8: Die Fähigkeit von {B_ATK_NAME_WITH_PREFIX}\nwird zu {B_DEF_ABILITY}!
+0x965C16: Die Illusion von {B_SCR_ACTIVE_NAME_WITH_PREFIX}\nlöst sich auf!
+0x965C2E: Hat keine Wirkung\nauf {B_DEF_NAME_WITH_PREFIX}…
+0x965C46: Die Verkleidung von\n{B_DEF_NAME_WITH_PREFIX} diente als Köder!
+0x965C69: Die Verkleidung von\n{B_DEF_NAME_WITH_PREFIX} wurde zerstört!
+0x966083: {B_ATK_NAME_WITH_PREFIX} kann {B_CURRENT_MOVE}\nwegen Schwerkraft nicht einsetzen!
+0x9660A7: {B_ATK_NAME_WITH_PREFIX} kann {B_CURRENT_MOVE}\nwegen Heilblockade nicht einsetzen!
+0x9660CD: {B_ATK_NAME_WITH_PREFIX} kann nach Kehlhieb\nkeine Sound-Attacken einsetzen!
+0x9660FD: Die Wasser-Attacke\nverdampft im Sonnenlicht!
+0x966135: Die Feuer-Attacke erlischt\nim Starkregen!
+0x966169: {B_DEF_NAME_WITH_PREFIX} erzeugt ein\nPsychofeld!
+0x966193: Die Flamme auf {B_ATK_NAME_WITH_PREFIX}\nexplodiert beim Kontakt mit dem Pulver!
+0x9661C9: {B_ATK_NAME_WITH_PREFIX} nimmt seine\nKlingen-Form an!
+0x9661ED: {B_ATK_NAME_WITH_PREFIX} nimmt seine\nSchild-Form an!
+0x966212: {B_ATK_NAME_WITH_PREFIX} bündelt\nseine Z-Kraft!
+0x966239: {B_ATK_NAME_WITH_PREFIX} entfesselt\nseine ultimative Z-Attacke!
+0x96625D: Die Illusion von {B_SCR_ACTIVE_NAME_WITH_PREFIX}\nlöst sich auf!
+0x966275: Doch das funktioniert in\nLuftkämpfen nur schlecht…
+0x9665B0: Die Aura von {B_SCR_ACTIVE_NAME_WITH_PREFIX}\nentflammt!
+0x9665CA: Urwandlung von\n{B_ATK_NAME_WITH_PREFIX}!\pEs kehrt zu seiner Urform zurück!
+0x966601: Ein elektrischer Strom durchzieht\ndas Schlachtfeld.
+0x966632: Gras bedeckt das Feld.
+0x966650: Nebel wirbelt über dem Feld.
+0x966674: Das Feld wird seltsam.
+0x96668E: {B_SCR_ACTIVE_NAME_WITH_PREFIX} erhitzt seinen Schnabel!\n
+0x9666AE: {B_SCR_ACTIVE_NAME_WITH_PREFIX} legt eine\nPyro-Falle!
+0x966B45: {B_ATK_NAME_WITH_PREFIX} erleidet Schaden durch\nStachelschild von {B_DEF_NAME_WITH_PREFIX}!
+0x966B67: {B_EFF_NAME_WITH_PREFIX} wird durch\nGiftspitzen vergiftet!
+0x966B8C: {B_EFF_NAME_WITH_PREFIX} wird durch\nGiftspitzen schwer vergiftet!
+0x966BB6: {B_EFF_NAME_WITH_PREFIX} wird durch\n{B_LAST_ITEM} schwer vergiftet!
+0x966BD7: {B_EFF_NAME_WITH_PREFIX} wird durch\nBlockhaus vergiftet!
+0x966BFE: {B_EFF_NAME_WITH_PREFIX} wird durch den\nSchnabel von {B_ATK_NAME_WITH_PREFIX} verbrannt!
+0x966C1A: {B_EFF_NAME_WITH_PREFIX} wird durch\n{B_LAST_ITEM} verbrannt!
+0x966C61: {B_ATK_NAME_WITH_PREFIX} opfert KP,\num seinen Angriff zu steigern!
+0x966C8B: {B_ATK_NAME_WITH_PREFIX} verliert etwas KP!\n
+0x966CA3: {B_ATK_NAME_WITH_PREFIX} stiehlt und frisst\ndas gegnerische {B_LAST_ITEM}!
+0x967539: Der Nebel ist dicht…
+0x96754C: Das Grasfeld stellt die\nGesundheit von {B_ATK_NAME_WITH_PREFIX} wieder her!
+0x967575: Aquaring stellt die\nGesundheit von {B_ATK_NAME_WITH_PREFIX} wieder her!
+0x967599: Der Elektromagnetismus von\n{B_ATK_NAME_WITH_PREFIX} lässt nach!
+0x9675B9: {B_ATK_NAME_WITH_PREFIX} wird von\nTelekinese befreit!
+0x9675DC: Die Heilblockade von {B_ATK_NAME_WITH_PREFIX}\nlässt nach!
+0x9675F6: Das Embargo von {B_ATK_NAME_WITH_PREFIX}\nendet!
+0x96760A: Die verzerrten Dimensionen werden\nwieder normal!
+0x967635: Die Wirkung von Wirbel ist vorbei!
+0x967655: Die Wirkung von Schlammbad ist vorbei!
+0x967673: Wunderraum endet, Vert./Sp. Vert.\nwerden wieder normal!
+0x9676C0: Magieraum endet, Items\nfunktionieren wieder!
+0x967701: Schwerkraft wird wieder normal!
+0x96771D: Das Feld wird wieder normal!
+0x967750: Du spürst Präsenzen!
+0x967770: {B_SCR_ACTIVE_NAME_WITH_PREFIX} nimmt seine\nvollkommene Form an!
+0x967797: {B_SCR_ACTIVE_NAME_WITH_PREFIX}: Seine Fähigkeit\n{B_SCR_ACTIVE_ABILITY} wird aktiviert!
+0x9677AA: {B_SCR_ACTIVE_NAME_WITH_PREFIX}: Seine Fähigkeit\n{B_SCR_ACTIVE_ABILITY} wird deaktiviert!
+0x9677BF: {B_SCR_ACTIVE_NAME_WITH_PREFIX} verwandelt sich!
+0x9678F0: <0xFD><0x13>\nwurde besiegt!\l
+0x96BE0C: Der Typ von {B_ATK_NAME_WITH_PREFIX}\nwird zu dem von {B_DEF_NAME_WITH_PREFIX}!
+0x96BE2F: {B_DEF_NAME_WITH_PREFIX} heilt sein\nProblem {UNKNOWN_STR}!
+0x96BE4F: {B_ATK_NAME_WITH_PREFIX} wird wendig!
+0x96BE61: {B_ATK_NAME_WITH_PREFIX} hüllt sich\nin eisiges Licht!
+0x96BE88: {B_ATK_NAME_WITH_PREFIX} hüllt sich\nin eisige Luft!
+0x96BEAB: {B_ATK_NAME_WITH_PREFIX} verschwindet\nsofort!
+0x96BEC2: {B_ATK_NAME_WITH_PREFIX} konzentriert sich\nintensiv!
+0x96BEDD: {B_ATK_NAME_WITH_PREFIX} verzehrt sich selbst!\n
+0x96BEF3: {B_ATK_NAME_WITH_PREFIX} kehrt\nzu {STRING} zurück!
+0x96BF07: {B_ATK_NAME_WITH_PREFIX} vertreibt den dichten\nNebel mit {B_CURRENT_MOVE}!
+0x96BF2A: {B_ATK_NAME_WITH_PREFIX} stiehlt\ndie Stat-Boosts von {B_DEF_NAME_WITH_PREFIX}!
+0x96BF45: Die Wirkung von Vorrat\nbei {B_ATK_NAME_WITH_PREFIX} lässt nach!
+0x96BF66: {B_DEF_NAME_WITH_PREFIX} erhält\n{B_LAST_ITEM} von {B_ATK_NAME_WITH_PREFIX}!
+0x96BF82: {B_ATK_NAME_WITH_PREFIX} umgibt sich mit\neinem Wasserschleier!
+0x96BFAD: Doch {B_ATK_NAME_WITH_PREFIX} kann diese\nAttacke nicht einsetzen!
+0x96BFC8: Doch {B_ATK_NAME_WITH_PREFIX} kann sie\nin diesem Zustand nicht einsetzen!
+0x96BFEF: {B_ATK_NAME_WITH_PREFIX} überträgt sein\nStatusproblem auf\l{B_DEF_NAME_WITH_PREFIX}!
+0x96C016: {B_ATK_NAME_WITH_PREFIX} absorbiert\nKraft!
+0x96C02D: {B_ATK_NAME_WITH_PREFIX} lädt sich voll auf\ndank seines Kraftsafts!
+0x96C05C: {B_ATK_NAME_WITH_PREFIX} vertauscht seinen\nAngriff und seine Verteidigung!
+0x96C080: {B_ATK_NAME_WITH_PREFIX} tauscht alle\nBoosts von Angriff und Sp. Angriff\laec {B_DEF_NAME_WITH_PREFIX}!
+0x96C0BB: {B_ATK_NAME_WITH_PREFIX} tauscht alle\nBoosts von Verteidigung und Sp. Verteidigung\laec {B_DEF_NAME_WITH_PREFIX}!
+0x96C0F7: {B_ATK_NAME_WITH_PREFIX} tauscht seine\nInitiative mit {B_DEF_NAME_WITH_PREFIX}!
+0x96C112: {B_ATK_NAME_WITH_PREFIX} tauscht seine\nStatusveränderungen\lmit {B_DEF_NAME_WITH_PREFIX}!
+0x96C134: {B_ATK_NAME_WITH_PREFIX} teilt seine\nKraft mit dem Ziel!
+0x96C159: {B_ATK_NAME_WITH_PREFIX} teilt seine\nAbwehr mit dem Ziel!
+0x96C17E: {B_ATK_NAME_WITH_PREFIX} wartet auf die Attacke\nvon {B_SCR_ACTIVE_NAME_WITH_PREFIX}!
+0x96C19B: {B_ATK_NAME_WITH_PREFIX} setzt\n{B_CURRENT_MOVE} ein!\pDie beiden Attacken verbinden sich!\nEs ist eine Kombi-Attacke!
+0x96C1D7: Ein Sumpf verschlingt\ndas Team von {STRING}=
+0x96C1F2: Ein Feuermeer verschlingt\ndas Team von {STRING}=
+0x96C213: Ein Regenbogen erscheint auf der Seite\ndes Teams von {STRING}= !
+0x96C244: {B_ATK_NAME_WITH_PREFIX} warf\nsein {B_LAST_ITEM}!
+0x96C255: Die Schutzwirkungen wurden\nauf der Zielseite aufgehoben!
+0x96C290: {B_DEF_NAME_WITH_PREFIX} kann sich\nnicht mehr heilen!
+0x96C2AF: {B_DEF_NAME_WITH_PREFIX} kann keine\nItems mehr benutzen!
+0x96C2CB: {B_DEF_NAME_WITH_PREFIX} ist mit\nPuder bedeckt!
+0x96C2E4: {B_DEF_NAME_WITH_PREFIX} wird in\ndie Luft geschleudert!
+0x96C300: {B_DEF_NAME_WITH_PREFIX} kann sich wegen\nHeilblockade nicht mehr heilen!
+0x96C331: Die Attacken von {B_DEF_NAME_WITH_PREFIX}\nwerden elektrisiert!
+0x96C353: Die Statusveränderungen von\n{B_DEF_NAME_WITH_PREFIX} wurden umgekehrt!
+0x96C375: {B_DEF_NAME_WITH_PREFIX}\nnahm das freundliche Angebot an!
+0x96C38D: Die Attacke von {B_DEF_NAME_WITH_PREFIX}\nwurde verzögert!
+0x96C3A6: {B_ATK_NAME_WITH_PREFIX} schwebt dank\ndes Elektromagnetismus!
+0x96C3CA: Die Flamme traf\n{B_SCR_ACTIVE_NAME_WITH_PREFIX}!
+0x96C9B2: Das {B_LAST_ITEM} von {B_DEF_NAME_WITH_PREFIX}\nwurde aktiviert!
+0x96C9C5: <0xFD><0x16> von <0xFD><0x10>\nverletzt <0xFD><0x0F>!
+0x96C9D6: {B_SCR_ACTIVE_NAME_WITH_PREFIX} erleidet Schaden\ndurch sein {B_LAST_ITEM}!
+0x96C9ED: {B_SCR_ACTIVE_NAME_WITH_PREFIX} verbessert die Genauigkeit\nseiner nächsten Attacke\lmit seinem {B_LAST_ITEM}!
+0x96CA24: Das {B_LAST_ITEM} hat sich an\n{B_ATK_NAME_WITH_PREFIX} geheftet!
+0x96CA42: {B_SCR_ACTIVE_NAME_WITH_PREFIX} wird dank\ndes {B_LAST_ITEM} ersetzt!
+0x96CA62: {B_SCR_ACTIVE_NAME_WITH_PREFIX} schwingt sein\n{B_LAST_ITEM} gegen {B_ATK_NAME_WITH_PREFIX}!
+0x96CA80: Doch {B_ATK_NAME_WITH_PREFIX} hat sich mit\nseinen Wurzeln verankert!
+0x96CAA7: Doch {B_ATK_NAME_WITH_PREFIX} verankert sich\nmit {B_ATK_ABILITY}!
+0x96CAE2: Das {B_LAST_ITEM} verstärkt\n{B_CURRENT_MOVE}!
+0x96CB07: Das {B_LAST_ITEM} von {B_SCR_ACTIVE_NAME_WITH_PREFIX}\nverringert die Stärke von {B_CURRENT_MOVE}!
+0x96CC1C: Das <0xFD><0x16> von <0xFD><0x00> reagiert\nauf das <0xFD><0x01> von <0xFD><0x39>!
+0x96CC3C: {B_SCR_ACTIVE_NAME_WITH_PREFIX} mega-entwickelt sich\nzu Mega-{STRING}<0x34>!
+0x96CC5A: Der Wunsch von {STRING}\nerreichte {UNKNOWN_STR}!
+0x96CC7C: Ein grelles Licht wird gleich aus\n{B_SCR_ACTIVE_NAME_WITH_PREFIX} strömen!
+0x96CCA6: {B_SCR_ACTIVE_NAME_WITH_PREFIX} findet seine wahre Kraft\ndank Ultra-Burst wieder!
+0x96CD83: Das {B_LAST_ITEM} verhindert\nden Einsatz von Statusattacken!\p
+0x96CDAD: {B_CURRENT_MOVE} kann nicht\nin Luftkämpfen eingesetzt werden!\p
+0x96CDD0: {B_CURRENT_MOVE} kann nicht mit\nSchwerkraft eingesetzt werden!\p
+0x96CDFE: {B_SCR_ACTIVE_NAME_WITH_PREFIX} kann nach Kehlhieb\nkeine Sound-Attacken einsetzen!\p
+0x96CE2F: {B_SCR_ACTIVE_NAME_WITH_PREFIX} kann {B_CURRENT_MOVE} wegen\nHeilblockade nicht mehr einsetzen!\p
+0x96D56E: Die Verbrennung von {B_DEF_NAME_WITH_PREFIX}\nwurde geheilt!
+0x96D584: Das Item von {B_DEF_NAME_WITH_PREFIX}\nkann nicht entfernt werden!
+0x96DB53: {B_ATK_NAME_WITH_PREFIX} wird von einem\nmystischen Mondschein umhüllt!
+0x96DB7C: Der Starkregen hört auf!
+0x96DB97: Die extreme Sonneneinstrahlung lässt nach!
+0x96DBBB: Der mysteriöse Luftstrom\nist verschwunden!
+0x96DCFD: {B_SCR_ACTIVE_NAME_WITH_PREFIX} steigert seinen\n{UNKNOWN_STR} {PLAYER}mit seiner Z-Kraft!
+0x96DD24: {B_SCR_ACTIVE_NAME_WITH_PREFIX} steigert seine\nWerte mit seiner Z-Kraft!
+0x96DD4C: {B_SCR_ACTIVE_NAME_WITH_PREFIX} erhöht seine Volltrefferquote\nmit seiner Z-Kraft!
+0x96DD81: {B_SCR_ACTIVE_NAME_WITH_PREFIX} stellt seine\nKP mit seiner Z-Kraft wieder her!
+0x96DDA7: {B_SCR_ACTIVE_NAME_WITH_PREFIX} wird die KP\ndes Nachfolgers durch Z-Kraft wiederherstellen!
+0x96DDDF: Die KP von {B_SCR_ACTIVE_NAME_WITH_PREFIX}\nwerden durch die Z-Kraft wiederhergestellt!
+0x9A436F: Wähle ein Pokémon.
+0xA34F61: Hält Anwender und Verbündete wach.
+0xA34F7E: Mehrfachtreffer schlagen 5-mal zu.
+0xA34F9E: Elek -> Init.
+0xA34FBC: Verringert Schaden bei vollen KP.
+0xA34FD7: Verstärkt schwache Attacken.
+0xA34FEC: Attacken treffen Geist-Pokémon.
+0xA3500A: Volltreffer häufiger.
+0xA35029: Verstärkt Volltreffer.
+0xA3503F: Heilt beim Pokémon-Wechsel.
+0xA35059: Statusattacken mit Priorität.
+0xA35071: Verstärkt gleichartige Attacken.
+0xA3508B: Verhindert Verteidigungssenkung.
+0xA350A7: Reflektiert Statusattacken.
+0xA350BE: Verstärkt Rückstoß-Attacken.
+0xA350D8: Bonus gegen Kraft.
+0xA350F8: Verstärkt Schlagattacken.
+0xA3510F: Erhöhte Stärke gegen gleiches Geschlecht.
+0xA3512E: Verstärkt im Sandsturm.
+0xA3514B: Bei Sonne, opfert KP.
+0xA3516C: Schützt vor Hitze.
+0xA3517D: Bevorzugt Regen statt Hitze.
+0xA35197: Verstärkt wenig effektive Treffer.
+0xA351BA: Verringert sehr effektive Treffer.
+0xA351D9: Durchdringt Schutzschilde und Nebel.
+0xA351FA: Stärke je nach gegn. Werten.
+0xA3521A: Stellt KP wieder her, wenn vergiftet.
+0xA35233: Gibt wenig KP im Hagel zurück.
+0xA3524F: Erhöht einen Wert, senkt einen.
+0xA3526F: Heilt Status im Regen.
+0xA3528E: Heilt den Status eines Verbündeten.
+0xA352AF: Erhöhtes Ausweichen im Hagel.
+0xA352C4: Erhöhtes Ausweichen bei Verwirrung.
+0xA352DD: Beschwört Hagel im Kampf.
+0xA352FC: Initiative steigt, wenn es weh tut.
+0xA35314: Angriff steigt bei Treffern durch Pflanze.
+0xA35333: Immun gegen Wetter und Pulver.
+0xA35351: Wird nur von Attacken getroffen.
+0xA3536A: Weicht Kugel- und Bombenattacken aus.
+0xA35386: Flugattacken erhalten Priorität.
+0xA353A3: K.O.s steigern den Angriff.
+0xA353BB: Fügt dem Gegner beim eigenen K.o. Schaden zu.
+0xA353D5: Deaktiviert eine Fähigkeit.
+0xA353EF: Senkt die Init. des getroffenen Pokémon.
+0xA3540E: Breitet sich bei Berührung aus.
+0xA35434: Erhöhte Init. im Sandsturm.
+0xA35451: Erhöht die Stärke, wenn zuletzt gehandelt wird.
+0xA3546B: Alle Attacken treffen sicher.
+0xA35488: Verstärkt Auren und Wellenattacken.
+0xA354A5: Verstärkt Attacken mit Berührung.
+0xA354C5: Verstärkt Biss-Attacken.
+0xA354DA: Erhöht die Genauigkeit des Anwenders und der Verbündeten.
+0xA354FA: Zieht Wasserattacken an, erhöht Sp. Angriff.
+0xA35518: Verstärkt Unlicht-Attacken.
+0xA35533: Verstärkt Fee-Attacken.
+0xA3554F: Kehrt Aura-Fähigkeiten um.
+0xA35568: Normal wird zu Eis.
+0xA35581: Normal wird zu Fee.
+0xA3559C: Normal wird zu Flug.
+0xA355B8: Alles wird zu Normal.
+0xA355D6: Verdoppelt Init. bei verlorenem Item.
+0xA355F5: Verdoppelt Statusveränderungen.
+0xA3560B: Ignoriert die Statuswerte des Gegners.
+0xA35627: Angriff steigt, wenn Statuswerte sinken.
+0xA35645: Sp. Angriff steigt, wenn Statuswerte sinken.
+0xA35664: Gibt bei halben KP auf.
+0xA35679: Braucht Zeit, um zu wirken.
+0xA35695: Angriff steigt bei Vergiftung.
+0xA356B1: Sp. Angriff steigt bei Verbrennung.
+0xA356CC: Teilt physischen Schaden auf.
+0xA356E4: Erhöhte Ausweichchance gegen Statusattacken.
+0xA356FD: Ändert den Typ je nach Attacke.
+0xA35719: Der zweite Treffer ist schwächer.
+0xA35738: Attacken ignorieren Fähigkeiten.
+0xA35750: Verwandelt sich bei halben KP.
+0xA3576A: Verwandelt sich nach einem K.O.
+0xA35781: K.O. erhöht den höchsten Statuswert.
+0xA3579F: Kann jeden Typ vergiften.
+0xA357B4: Übersteht einen Treffer ohne Schaden.
+0xA357D2: Wechselt das Pokémon bei halben KP.
+0xA357EE: Teilt Berührungsschaden auf. Schwach gegen Feuer.
+0xA35825: Verwandelt sich bei halben KP.
+0xA3583F: Ändert den Typ je nach Erinnerung.
+0xA3585D: Nimmt bei hohen KP die Schwarmform an.
+0xA35876: Reduziert Schaden bei vollen KP.
+0xA35891: Senkt Schilde unter 50 % KP.
+0xA358AF: Erhöht die Initiative bei Hagel.
+0xA358C5: K.O.s steigern den Sp. Angriff.
+0xA358DE: Getroffen zu werden erhöht die Verteidigung.
+0xA358FB: Verstärkt Stahl-Attacken.
+0xA35917: Gibt Heilattacken Priorität.
+0xA35938: Verstärkt Wasserattacken.\nVerhindert Verbrennungen.
+0xA3595A: Wasserattacken erhöhen die Verteidigung.
+0xA35979: Handelt oft als Letztes.
+0xA3598D: Ändert den Typ je nach Platte.
+0xA359AF: Erzeugt ein Elektrofeld.
+0xA359CC: Erzeugt ein Grasfeld.
+0xA359E6: Erzeugt ein Nebelfeld.
+0xA359FF: Erzeugt ein Psychofeld.
+0xA35A1A: Erhöht die Initiative\nauf einem Elektrofeld.
+0xA35A3C: Erhöht die Verteidigung\nauf einem Grasfeld.
+0xA35A5B: Maximaler Angriff nach einem Volltreffer.
+0xA35A7E: Erkennt sehr effektive Treffer.
+0xA35A9C: Warnt vor der stärksten Attacke.
+0xA35ABF: Enthüllt das Item des Gegners.
+0xA35ADC: Kehrt Statusveränderungen um.
+0xA35AF3: Hindert den Gegner daran, Beeren zu verzehren
+0xA35B16: Erhöht Initiative, senkt Verteidigung.
+0xA35B36: Verdoppelt das Gewicht.
+0xA35B46: Halbiert das Gewicht.
+0xA35B55: Erschrecken erhöht die Initiative.
+0xA35B6D: Verwandelt sich beim Kampfeintritt.
+0xA35B8E: Unlicht-Treffer erhöhen den Angriff.
+0xA35BAB: Furchteinflößende Typen erhöhen die Initiative.
+0xA35BC9: Volltreffer gegen vergiftete Gegner.
+0xA35BE8: Schützt vor mentalen Störungen.
+0xA35C0A: Schützt Pflanzen-Pokémon vor Statusveränderungen.
+0xA35C2C: Schützt bei Sonnenschein vor Statusveränderungen.
+0xA35C4D: Kann keine Items benutzen.
+0xA35C5E: Verstärkt das Team bei Sonnenschein.
+0xA35C79: Schadet schlafenden Gegnern.
+0xA35C8E: Stiehlt das Item des Gegners, wenn getroffen.
+0xA35CAA: Reduziert Schaden durch Attacken ohne Berührung.
+0xA35CC5: Kann bei Berührung vergiften.
+0xA35CE0: Kann nach einem Treffer das Item stehlen.
+0xA35D03: Ändert die Form beim Angreifen.
+0xA35D21: Beschwört starken Regen.
+0xA35D3C: Beschwört extreme Sonneneinstrahlung.
+0xA35D5E: Beschwört einen mysteriösen Luftstrom.
+0xA35D80: Erhöht den Sp. Angriff unter 50 % KP.
+0xA35D9B: Berührt den Gegner nie.
+0xA35DB0: Klangattacken werden zu Wasserattacken.
+0xA35DE6: Das K.o. schadet dem Gegner.
+0xA35E00: Blockiert Attacken mit Priorität.
+0xA35E17: Verzehrt Beeren früher.
+0xA35E2B: Sammelt nach dem Kampf Honig.
+0xA35E48: Reduziert Schaden an Verbündeten.
+0xA35E67: Kann verzehrte Beeren zurückgewinnen.
+0xA35E84: Schützt vor Attacken von Verbündeten.
+0xA35EA1: Betritt den Kampf verkleidet.
+0xA35EBA: Das Verzehren von Beeren stellt KP wieder her.
+0xA35ED6: Gibt das Item nach Gebrauch an den Verbündeten weiter
+0xA35EF4: Verdoppelt den Schaden an eingewechselten Pokémon.
+0xA35F14: Verhält sich, als würde es schlafen.
+0xA35F27: Kopiert Tanzattacken.
+0xA35F3B: Stärkt die Verbündeten.
+0xA35F4D: Übernimmt die Fähigkeit eines besiegten Verbündeten.
+0xA35F6F: Verstärkt sehr effektive Treffer.
+0xA35F8F: Normal-Attacken\nwerden zu Elektro-Attacken.
+0xA35FAD: Erhöht den Angriff beim Kampfeintritt.
+0xA35FC2: Erhöht die Verteidigung beim Kampfeintritt.
+0xA35FD8: Erhält den ersten misslungenen Poké Ball zurück.
+0xA35FF8: Senkt bei einem Treffer die Initiative aller
+0xA3601A: Gibt Statusabsenkungen zurück.
+0xA36037: Spuckt seine Beute aus,\nwenn es nach dem Schwimmen getroffen wird.
+0xA36057: Ignoriert die Umleitung von Attacken.
+0xA36071: Feuer- und Wasser-Treffer erhöhen die Initiative.
+0xA36092: Verstärkt Klangattacken\nund ist resistent gegen sie.
+0xA360AF: Entfacht einen Sandsturm, wenn getroffen.
+0xA360CD: Halbiert Spezialschaden.
+0xA360E4: Verdoppelt die Wirkung von Beeren.
+0xA360FB: Übersteht einen physischen Treffer.\nEntfacht erneut Hagel.
+0xA3611B: Verstärkt die Attacken der Verbündeten.
+0xA36131: Ändert den Typ je nach Terrain.
+0xA3614C: Schutzschirme werden beim Kampfeintritt entfernt.
+0xA3616A: Verstärkt Stahl-Attacken der Verbündeten.
+0xA3618B: Startet bei Berührung einen Countdown.
+0xA361AC: Tauscht bei Berührung die Fähigkeiten.
+0xA361C9: Erhöht den Angriff, aber nur für eine Attacke.
+0xA361EA: Alle Fähigkeiten werden aufgehoben.
+0xA36207: Schützt das Team vor Vergiftung.
+0xA36222: Ändert jede Runde die Form.
+0xA3623A: Berührungsattacken umgehen Schutzschild.
+0xA36258: Verstärkt Drachen-Attacken.
+0xA36275: Verstärkt Elektro-Attacken.
+0xA36294: K.O.s steigern den Sp. Angriff.
+0xA362AD: Sowohl Anspannung als auch Dunkles Wiehern.
+0xA362CA: Sowohl Anspannung als auch Helles Wiehern.
+0xA362EB: Handelt manchmal schneller.
+0xA36304: Hebt die veränderten\nStatuswerte des Verbündeten auf.
+0xA36320: Negiert Wasserattacken,\num den Sp. Angriff zu erhöhen.
+0xA36343: Pflanzen-Attacken\ntreffen zuerst.
+0xA3635F: Schwanzattacken\ntreffen zuerst.
+0xA36375: Stich-Attacken\nsind immer Volltreffer.
+0xA37498: Klimaschutz
+0xA374A9: Anspannung
+0xA374BA: Pulverrauch
+0xA374CB: Mentalkraft
+0xA374DC: Eisenstachel
+0xA374ED: Felskern
+0xA374FE: Turbobrand
+0xA3750F: Teravolt
+0xA37520: Helles Wiehern
+0xA37531: Libero
+0xA37542: Lockenkopf
+0xA37553: Reißaus
+0xA37564: Majestät
+0xA37575: Alchemistische Kraft
+0xA37586: Schraubflosse
+0xA37597: Neun Leben
+0xA375A8: Fokusband
+0xA375B9: Verdampfung
+0xA375CA: Feuriges Wiehern
+0xA375DB: Donnerndes Wiehern
+0xA375EC: Stolz
+0xA375FD: Vielauge
+0xA3760E: Täuschung
+0xA3761F: Honigpanzer
+0xA37630: Filzwolle
+0xA37641: Geistesband
+0xA37652: Grasspurt
+0xA37663: Gleitschwanz
+0xA37674: Bohrschnabel
+0xA37685: Wattewolke
+0xA37696: Gebrüll
+0xA376A7: Schallwellen
+0xA376B8: Eishaut
+0xA376C9: Puderschuppen
+0xA376DA: Krabbentaktik
+0xA376EB: Gesichtsschild
+0xA376FC: Königsschrei
+0xA37734: {B_SCR_ACTIVE_NAME_WITH_PREFIX}\nübt Druck aus!
+0xA37751: {B_SCR_ACTIVE_NAME_WITH_PREFIX}\ndurchbricht die Form!
+0xA37765: {B_SCR_ACTIVE_NAME_WITH_PREFIX}\nstrahlt eine explosive Aura aus!
+0xA37786: {B_SCR_ACTIVE_NAME_WITH_PREFIX}\nstrahlt eine feurige Aura aus!
+0xA377A6: {B_SCR_ACTIVE_NAME_WITH_PREFIX}\nkommt nicht in Schwung!
+0xA377BD: Team {STRING} ist zu\nnervös, um Beeren zu essen!
+0xA377E4: {B_SCR_ACTIVE_NAME_WITH_PREFIX}\nstrahlt eine dunkle Aura aus!
+0xA37801: {B_SCR_ACTIVE_NAME_WITH_PREFIX}\nstrahlt eine Feen-Aura aus!
+0xA3781F: {B_SCR_ACTIVE_NAME_WITH_PREFIX} kehrt alle anderen\nPokémon-Auren um!
+0xA37846: {B_SCR_ACTIVE_NAME_WITH_PREFIX} döst vor sich hin!
+0xA37856: {B_SCR_ACTIVE_NAME_WITH_PREFIX} zittert!
+0xA37864: Es hat {B_EFF_NAME_WITH_PREFIX}\nvorausgeahnt:\l{UNKNOWN_STR}!
+0xA3787F: {B_SCR_ACTIVE_NAME_WITH_PREFIX} hat {B_EFF_NAME_WITH_PREFIX}\ndurchsucht und sein\l{B_LAST_ITEM} gefunden!
+0xA3789F: Es hagelt.
+0xA378AE: Der Nebel ist dicht…
+0xA378BF: Ein heftiger Regen setzt ein!
+0xA378DB: Die Sonne brennt erbarmungslos vom Himmel!
+0xA37900: Starke, mysteriöse Winde\nschützen Flug-Pokémon!
+0xA3793C: Die mysteriösen Winde\nhaben die Attacke geschwächt!
+0xA3796D: Doch die gleißende Sonne\nlässt nicht nach!
+0xA379A7: Doch der heftige Regen\nfällt weiter!
+0xA379D3: Doch die mysteriösen Winde\nwehen weiter!
+0xA37A07: Doch der heftige Sandsturm\nhält weiter an!
+0xA37A34: {B_SCR_ACTIVE_NAME_WITH_PREFIX}\nreißt sich zusammen!
+0xA37A4D: Die Feuer-Attacken von {B_SCR_ACTIVE_NAME_WITH_PREFIX}\nwerden stärker!
+0xA37A75: {B_SCR_ACTIVE_NAME_WITH_PREFIX} wird von seinem\n{UNKNOWN_STR}-Problem geheilt!
+0xA37A95: {B_EFF_NAME_WITH_PREFIX} wird von seinem\n{UNKNOWN_STR}-Problem geheilt!
+0xA37AB5: {B_SCR_ACTIVE_NAME_WITH_PREFIX}\nschickt {B_CURRENT_MOVE} zurück!
+0xA37ACD: {B_SCR_ACTIVE_NAME_WITH_PREFIX}\nbildet einen Schwarm!
+0xA37AE1: {B_SCR_ACTIVE_NAME_WITH_PREFIX}\nverlässt die Schwarmformation!
+0xA37AF7: {B_LAST_ABILITY} erlaubt nur\n{B_CURRENT_MOVE}!\p
+0xA37B16: Tiefkühlkopf fängt den Treffer\nfür {B_DEF_NAME_WITH_PREFIX} ab!
+0xA37B37: Der Tiefkühlkopf von\n{B_DEF_NAME_WITH_PREFIX} zerbricht!
+0xA37B50: Alle Schutzwälle auf dem\nFeld werden aufgelöst!
+0xA37B78: Neutralisierungsgas erfüllt die Umgebung!
+0xA37B99: Die Wirkung von Neutralisierungsgas\nlässt nach!
+0xA37BC3: Die Statusveränderungen von {B_DEF_NAME_WITH_PREFIX}\nwerden aufgehoben!
+0xA37BE3: {B_ATK_NAME_WITH_PREFIX} wird verletzt!
+0xA37BF0: {B_SCR_ACTIVE_NAME_WITH_PREFIX} teilt sein {B_LAST_ITEM}\nmit {B_EFF_NAME_WITH_PREFIX}!
+0xA37C0A: Doch {B_DEF_NAME_WITH_PREFIX}\nhat die Attacke verdampft!
+0xA37C28: {B_SCR_ACTIVE_NAME_WITH_PREFIX}\nverdampft den Regen!
+0xA37C40: Doch {B_SCR_ACTIVE_NAME_WITH_PREFIX}\nverdampft den Regen!
+0xA37C5A: Keine Informationen zur Fähigkeit.
+0xA37C6F: Ein eisiger Schlag\ntrifft den Gegner.\nKann auch\nVereisung verursachen.
+0xA37CB9: Ein Eisstrahl\ntrifft den Gegner.\nKann auch\nVereisung verursachen.
+0xA37D02: Ein Schneesturm\ntrifft den Gegner.\nKann auch\nVereisung verursachen.
+0xA37DE4: Pulverschnee trifft\ndas gegnerische Team.\nKann eine\nVereisung verursachen.
+0xA37E7C: Der Anwender brüllt,\num das Team zu motivieren,\nund steigert dessen\nAngriff.
+0xA38019: Eine Attacke, die\nan Stärke gewinnt,\nwenn das Ziel den\nAnwender verletzt hat.
+0xA38139: Feuert eine Salve\nElektrizität ab, die den\nSpezial-Angriff des\nAnwenders erhöhen kann.
+0xA38215: Setzt eine schreckliche\nAura frei, die den\nGegner auch zum\nZurückweichen bringen kann.
+0xA382F2: Eine Schockwelle\ntrifft den Gegner,\nausgehend vom weit\ngeöffneten Maul des Anwenders.
+0xA3833E: Ein harter Schlag, der\ndie Hälfte des Schadens\nstiehlt, um\nKP wiederherzustellen.
+0xA383D5: Natürliche Energie\ntrifft den Gegner.\nKann auch seine\nSpezial-Verteidigung senken.
+0xA38422: Der Anwender entfesselt\nseine Kraft. Kann\nauch die gegnerische\nSpezial-Verteidigung senken.
+0xA38465: Eine Schockwelle\ntrifft den Gegner.\nKann ihn auch\nparalysieren.
+0xA384AD: Sehr starke Attacke,\ndie den Anwender zwingt,\nsich in der nächsten\nRunde auszuruhen.
+0xA384F3: Gras fängt den\nGegner und bringt\nihn zu Fall. Je\nschwerer er ist, desto mehr schadet es.
+0xA388F4: Eine Attacke, die den\nGegner verwirren kann.\nErmöglicht auch\ndas Erklimmen von Wänden.
+0xA38941: Poliert seinen Körper,\num seine Initiative\nstark zu steigern.
+0xA389C2: Heilung, die bis\nzur Hälfte der\nmaximalen KP\ndes Anwenders wiederherstellt.
+0xA38A43: Schattenkrallen\nzerfetzen den Gegner.\nHohe\nVolltrefferquote.
+0xA38B1A: Zerschneidet den Gegner\nmit gekreuzten\nKrallen, wie\neine Schere.
+0xA38C36: Zertrampelt alle\nPokémon im Kampf\nund senkt die\nInitiative der Getroffenen.
+0xA38CD2: Hüllt sich in Flammen,\num anzugreifen.\nErhöht auch\nseine Initiative.
+0xA38D21: Bläst eisige Luft\nauf den Gegner.\nLandet immer\neinen Volltreffer.
+0xA38EF2: Wacht auf,\num Angriff und\nSpezial-Angriff\nzu steigern.
+0xA3902F: Widersteht und\ngreift an, wobei\nes den gegnerischen\nSpezial-Angriff senkt.
+0xA39155: Der Anwender führt ein\nelektrisiertes Tackle aus. Dies fügt\nihm selbst etwas Schaden zu.\n
+0xA39307: Der Gegner wird von spitzen\nSteinen durchbohrt. Die Attacke hat\neine hohe Volltrefferquote.\n
+0xA39351: Handelt der Anwender nach dem\nZiel, wird die Stärke dieser\nAttacke verdoppelt.\n
+0xA3961D: Eine flinke Attacke, die doppelten\nSchaden verursacht, wenn der Anwender\nkein Item bei sich trägt.\n
+0xA39713: Der Gegner wird gezwungen, mit\neinem Verbündeten zu tauschen. In\nwilden Kämpfen endet der Kampf.\n
+0xA3987A: Leuchtende Energie,\ndie die gegnerische\nSpezial-Verteidigung\nsenken kann.
+0xA398FF: Der Anwender\npickt den Gegner\nund pflückt dessen Beere,\nfalls er eine trägt.
+0xA39BB9: Der Anwender\nentfacht einen\nFeenwind und trifft\nden Gegner damit.
+0xA39C3D: Der Anwender schikaniert den\nGegner. Dies kann\ndessen Angriff senken.\n
+0xA39D15: Der Anwender schadet den\ngegnerischen Pokémon, indem er\neinen starken Blitz aussendet.\n
+0xA39D8D: Schwebende Steine werden\num das gegnerische\nTeam gelegt, die\nankommende Gegner verletzen.
+0xA39F3A: Der Anwender versengt den Gegner\nvollständig und macht ein gehaltenes\nJuwel oder eine Beere unbrauchbar.\n
+0xA3A285: Ein Tackle mit verheerender\nWucht. Kann das Ziel\nzudem zurückschrecken lassen.\n
+0xA3A2D3: Alle Gegner werden in\neine Welt völliger Dunkelheit\nversetzt, die sie einschläfert.\n
+0xA3A4BE: Ein Feuerstrudel tobt und hält\ndas Ziel vier bis\nfünf Runden lang gefangen.\n
+0xA3A63C: Eine physische Attacke, bei der\nder Anwender den Gegner mit\nseinem ganzen Körper rammt.\n
+0xA3A6D6: Eine Attacke, die den\nGegner erfrieren lassen kann.\nSie ist zudem sehr\neffektiv gegen Wasser-Pokémon.\n
+0xA3A733: Eine seltsame Psychowelle greift\ndas Ziel an. Diese\nAttacke verursacht physischen Schaden.\n
+0xA3A77D: Der Anwender greift mit\neinem Lied an. Andere\nkönnen sich anschließen und\nnoch mehr Schaden verursachen.
+0xA3A7C2: Der Anwender greift an,\nindem er das Ziel\nmit seinem harten Schwanz\nschlägt. Trifft zwei- bis\nfünfmal in Folge.
+0xA3A87D: Typ und Basis-Stärke dieser\nAttacke werden von der\nBeere des Anwenders bestimmt.\n
+0xA3A99E: Eine Drehung mit hoher Geschwindigkeit. Je\nlangsamer der Anwender im Vergleich zum\nGegner ist, desto größer der Schaden.\n
+0xA3AA49: Der Anwender ruft seine\nUntergebenen, um den Gegner\nzu treffen. Die Attacke\nhat eine hohe Volltreffer-Chance.\n
+0xA3AC0C: Der Anwender greift die\ngegnerischen Pokémon mit\nunzähligen Lichtstrahlen an,\ndie tiefblau leuchten.\n
+0xA3AC63: Der Anwender greift die gegnerischen\nPokémon an, indem er die\nKraft der Erde in\nForm von Steinklingen manifestiert.\n
+0xA3AD19: Der Anwender taucht\ndas Ziel in\nüberhitzten Dampf. Dies\nkann das Ziel\nzudem verbrennen.
+0xA3AED7: Mithilfe seiner suggestiven\npsychischen Kraft überträgt\nder Anwender seine\nStatusprobleme auf\ndas Ziel.
+0xA3AF34: Der Anwender verdreht das\nZiel mit großer Kraft.\nJe mehr KP das\nZiel hat, desto\nstärker die Attacke.
+0xA3B090: Der Anwender entfesselt einen\nDiamantensturm, um den Gegnern\nzu schaden. Dies kann\nzudem die Verteidigung\ndes Anwenders erhöhen.
+0xA3B0F3: Das Gebiet um den\nAnwender wird von einer\ngigantischen Schlammwelle überflutet. Dies\nkann zudem Getroffene vergiften.\n
+0xA3B3B1: Der Anwender sammelt\ndie Energie des\nTerrains und schadet\ndem gegnerischen Pokémon\nmit dieser Kraft.
+0xA3B7D7: Der Anwender greift an, indem er\nden Gegner in eine schöne,\naber gnadenlose blaue Flamme hüllt.\nDies kann den Gegner verbrennen.\n
+0xA3B836: Eine zweirundige Attacke, die\nden Gegner mit elektrisch\ngeladenem Eis trifft. Dies\nkann den Gegner paralysieren.\n
+0xA3B94B: Der Anwender entfacht eine gewaltige\nFlamme. Er verursacht mehr Schaden,\nwenn er von einem\ngewaltigen Blitz beeinflusst wird.\n
+0xA3B9A7: Der Anwender schleudert einen\ngigantischen Blitz. Er verursacht\nmehr Schaden, wenn er\nvon einer gewaltigen\nFlamme beeinflusst wird.
+0xA3BA04: Wenn der Anwender ein\nZiel mit dieser\nAttacke besiegt, steigt\nsein Angriffswert erheblich.\n
+0xA3BABD: Ein Angriff im\nSturzflug vom Himmel.\nSenkt Verteidigung\nund Sp.-Verteidigung\ndes Anwenders.
+0xA3BB81: Alle Statusveränderungen des\nZiels kehren sich\num und werden\nins Gegenteil verkehrt.\n
+0xA3BBD9: Hat das Ziel in\ndieser Runde bereits\nseine Attacke eingesetzt,\nwird die Wirkung\nseiner Fähigkeit aufgehoben.
+0xA3BC34: Der Anwender greift das\nZiel mit ohrenbetäubenden\nGeschwätz-Schallwellen an. Dies\nverwirrt das Ziel.\n
+0xA3BE4D: Der Anwender hält sich beim\nAngriff zurück, sodass dem Ziel\nmindestens 1 KP verbleibt.\n
+0xA3BF4A: Diese Attacke trifft\nauch gegnerische Pokémon\nin der Luft.\nSie werden zu\nBoden geschleudert.
+0xA3BFA0: Der Anwender greift mit einer\nWelle an, die über den\nBoden kriecht. Getroffene können nicht\naus dem Kampf fliehen.\n
+0xA3C10A: Der Anwender rammt das Ziel\nmit hoher Geschwindigkeit. Diese\nAttacke hat immer Priorität.\n
+0xA3C2B9: Der Anwender schwingt\nseinen Körper heftig,\num allem in\nder Nähe\nSchaden zuzufügen.
+0xA3C46A: Der Anwender schlägt das\nZiel mit einer brennenden\nPeitsche. Dies senkt zudem\nden Verteidigungswert des Ziels.\n
+0xA3C4C7: Trotz seiner großen Stärke funktioniert\ndies nur in der ersten\nRunde, in der sich der\nAnwender im Kampf befindet.\n
+0xA3C51F: Setzt einen mächtigen\nStrahl frei. Der\nRückstoß senkt den\nSp.-Angriff des\nAnwenders stark.
+0xA3C57D: Der Anwender stellt bis zur\nHälfte der maximalen KP des\nZiels wieder her. Auf Grasfeld\nwerden mehr KP wiederhergestellt.\n
+0xA3C640: Der Anwender greift\ndas Ziel heftig\nmit seinem ganzen\nKörper an.
+0xA3C6BD: Der Anwender konzentriert sich\nintensiv. Die Attacke der\nnächsten Runde ist\nimmer ein Volltreffer.\n
+0xA3C71C: Der Anwender greift an, indem er\nBlätter auf das Ziel wirft.\n
+0xA3C80A: Der Anwender sendet einen finsteren\nStrahl aus. Dies kann\nbeim Ziel unabhängig von\ndessen Fähigkeit eingesetzt werden.\n
+0xA3CC31: Der Anwender durchbohrt das Ziel\nmit einem spitzen Horn.\nDiese Attacke verfehlt niemals.\n
+0xA3CD26: Der Anwender versteckt sich\nim Schatten des Ziels,\nstiehlt dessen Statuserhöhungen und\ngreift dann an.\n
+0xA3CDB0: Der Anwender greift an,\nindem er den Schatten\ndes Ziels am Boden\nfestnäht, um seine\nFlucht zu verhindern.
+0xA3CE06: Der Anwender richtet\ndie Scheinwerfer auf\ndas Ziel, sodass\nnur dieses\nangegriffen wird.
+0xA3CEFC: Der Anwender trifft das\nZiel mit meteorischer Kraft.\nDiese Attacke ignoriert die\nFähigkeit des Ziels.\n
+0xA3D013: Der Anwender schießt vergiftete\nFäden ab, um das\nZiel zu vergiften und\nseine Initiative zu senken.\n
+0xA3D5B0: Der Anwender hüllt\nsich in einen\nWasserschleier. Er stellt\njede Runde etwas\nKP wieder her.
+0xA3D601: Der Anwender erhöht\ndie Sp.-Verteidigung eines\nverbündeten Pokémon\nmithilfe eines\nmysteriösen Duftes.
+0xA3D6B0: Der Anwender überträgt\nsein gehaltenes Item\nauf das Ziel,\nwenn dieses kein\nItem trägt.
+0xA3D763: Der Anwender stürzt sich\nvom Himmel auf das\nZiel. Diese Attacke ist\nsowohl vom Typ Kampf\nals auch Flug.
+0xA3DADA: Der Anwender spiegelt den Typ\ndes Ziels wider und nimmt\ndadurch denselben Typ an.\n
+0xA3DB71: Der Anwender feuert\neine Wasserflut auf\ndas Ziel ab\nund ändert dessen\nTyp in Wasser.
+0xA3DEEE: Versiegelt das Feld\nund verhindert, dass\nalle Pokémon in der\nnächsten Runde\nfliehen können.
+0xA3E065: Der Anwender verlangsamt\ndas Ziel und lässt seine\nAttacke als Letztes wirken.
+0xA3E0A0: Der Einsatz von\nHappy Hour verdoppelt\nden Betrag des nach\ndem Kampf erhaltenen\nPreisgeldes.
+0xA3EB51: Der Anwender greift mit\nseinem dicken Lauch an.\nEr muss sich in der\nnächsten Runde ausruhen.
+0xA3F126: Der Anwender schlägt das\nZiel mit seinen Flügeln.\nDas Ziel wird zweimal\nhintereinander getroffen.
+0xA3F296: Der Anwender greift mit\npsychischer Kraft an. Das\nkann beim Ziel auch\nErfrierungen verursachen.
+0xA3F451: Eine erschreckende Menge\nkleiner Geister wird\nausgesandt, um die\ngegnerischen Pokémon anzugreifen.
+0xA3F499: Schleudert einen im\nSchneesturm verborgenen\nEisspeer auf\nden Gegner.
+0xA3F4EB: Ein Angriff, der den\nGegner vergiften, lähmen\noder einschläfern kann. Er hat\neine hohe kritische Trefferquote.
+0xA3F53A: Der Anwender schlägt den\nGegner mit psychischer\nEnergie. Das erhöht auch\ndie Verteidigung des Anwenders.
+0xA3F58D: Der Anwender tauscht\nseine offensiven und\ndefensiven Werte.
+0xA3F5BF: Der Gegner wird mit einer\nAxt getroffen, die Splitter\nhinterlässt. Sie hat eine\nhohe kritische Trefferquote.
+0xA3F612: Nachdem Schaden verursacht\nwurde, erhöht der Anwender\nseine höchsten Angriffs-\noder Verteidigungswerte.
+0xA3F666: Der Anwender rastet aus\nund spuckt zwei bis drei\nRunden lang wilde\nFlammen.
+0xA3F6A9: Der Anwender trifft das\nZiel und verletzt sich\ndabei leicht. Diese\nAttacke hat Priorität.
+0xA3F6FB: Der Anwender schleudert\nsein angesammeltes\nChlorophyll auf den Gegner.\nDas schadet auch dem Anwender.
+0xA3F74B: Der Anwender wirft\nriesige Eisbrocken auf den Gegner,\nwas ihn auch in Furcht versetzen kann.
+0xA3F796: Der Anwender tanzt, um\nden Sieg zu feiern.\nErhöht Angriff,\nVerteidigung und Initiative.
+0xA3F7E3: Zerquetscht den Gegner.\nSenkt die Verteidigung\nund Spezial-Verteidigung\ndes Anwenders.
+0xA3F832: Widerhaken, die vergiften\nkönnen, werden auf den\nGegner geschleudert. Ihre Stärke\nverdoppelt sich, wenn er vergiftet ist.
+0xA3F887: Zerfetzt den Gegner mit\nFlügeln aus Licht.\nPriorität, hohe\nkritische Trefferquote.
+0xA3F8DA: Der Anwender greift an\nund kann dem Gegner\nErfrierungen zufügen. Die\nStärke verdoppelt sich,\nwenn er bereits darunter leidet.
+0xA3F93F: Der Anwender macht seine\nHaut hart wie Stahl, um\nseine Verteidigung und\nInitiative zu erhöhen.
+0xA3F985: Der Gegner wird von Pfeilen\ngetroffen, die die kritische\nTrefferquote erhöhen und seine\nVerteidigung senken.
+0xA3F9D8: Unzählige Feuerbälle, die\nverbrennen können, treffen\nden Gegner. Die Stärke\nverdoppelt sich, wenn er brennt.
+0xA3FA2C: Der Gegner wird\naufgeschlitzt. Das hinterlässt\nSplitter. Er hat eine\nhohe kritische Trefferquote.
+0xA3FA78: Greift mit\neisigen Winden an.\nKann\nErfrierungen verursachen.
+0xA3FABF: Der Anwender greift wild\nmit Wind und Blitz an.\nDas kann eine\nParalyse verursachen.
+0xA3FB0C: Greift mit heftigen Winden\nund heißem Sand an. Das\nkönnte eine\nVerbrennung verursachen.
+0xA3FB54: Der Anwender greift mit\nLiebe und Hass an. Die\nEffekte hängen von der Form\ndes Anwenders ab.
+0xA3FBA0: Heilt seinen Status\nund stellt KP wieder her.\nErhöht außerdem\nden Fluchtwert.
+0xA3FBED: Heilt seinen Status\nund erhöht seinen\nSpezial-Angriff und seine\nSpezial-Verteidigung.
+0xA3FC31: Ermöglicht es dem Anwender,\nallen Attacken auszuweichen.\nKann misslingen, wenn es\nmehrmals hintereinander eingesetzt wird.
+0xA3FC7B: Dynamax-Attacke vom Typ Feuer.\nVerstärkt die Sonne\nfür fünf\nRunden.
+0xA3FCC2: Dynamax-Attacke vom Typ Käfer.\nSenkt den Spezial-Angriff\ndes gegnerischen\nZiels.
+0xA3FCFE: Dynamax-Attacke vom Typ Elektro.\nAktiviert das Elektro-\nFeld für\nfünf Runden.
+0xA3FD43: Dynamax-Attacke vom Typ Normal.\nSenkt die\nInitiative des\nZiels.
+0xA3FD80: Dynamax-Attacke vom Typ Kampf.\nErhöht den Angriff\nder\nVerbündeten.
+0xA3FDBE: Dynamax-Attacke vom Typ Geist.\nSenkt die\nVerteidigung des\nZiels.
+0xA3FDFC: Dynamax-Attacke vom Typ Eis.\nBeschwört Hagel\nfür fünf\nRunden.
+0xA3FE3A: Dynamax-Attacke vom Typ Gift.\nErhöht den Spezial-Angriff\nder\nVerbündeten.
+0xA3FE7C: Dynamax-Attacke vom Typ Wasser.\nBeschwört Regen\nfür fünf\nRunden.
+0xA3FEC0: Dynamax-Attacke vom Typ Flug.\nErhöht die Initiative\nder\nVerbündeten.
+0xA3FF00: Dynamax-Attacke vom Typ Fee.\nAktiviert das Nebel-\nFeld für\nfünf Runden.
+0xA3FF44: Dynamax-Attacke vom Typ Drache.\nSenkt den Angriff\ndes\nZiels.
+0xA3FF82: Dynamax-Attacke vom Typ Psycho.\nAktiviert das Psycho-\nFeld für\nfünf Runden.
+0xA3FFC5: Dynamax-Attacke vom Typ Gestein.\nBeschwört einen\nSandsturm für\nfünf Runden.
+0xA4000B: Dynamax-Attacke vom Typ Boden.\nErhöht die Spezial-\nVerteidigung der\nVerbündeten.
+0xA4004D: Dynamax-Attacke vom Typ Unlicht.\nSenkt die Spezial-\nVerteidigung des\nZiels.
+0xA4008A: Dynamax-Attacke vom Typ Pflanze.\nAktiviert das Gras-\nFeld für\nfünf Runden.
+0xA400CF: Dynamax-Attacke vom Typ Stahl.\nErhöht die Verteidigung\nder\nVerbündeten.
+0xA40110: Die Signatur-Attacke von\nG-Max Bisaflor. Sie fügt\nüber vier Runden\nSchaden zu.
+0xA40151: Die Signatur-Attacke von\nG-Max Glurak. Sie fügt\nüber vier Runden\nSchaden zu.
+0xA40193: Die Signatur-Attacke von\nG-Max Turtok. Sie fügt\nüber vier Runden\nSchaden zu.
+0xA401D5: Die Signatur-Attacke von\nG-Max Smettbo. Sie kann\nlähmen, einschläfern oder\nvergiften.
+0xA4021F: Die Signatur-Attacke von\nG-Max Pikachu. Sie\nlähmt das\nZiel.
+0xA40258: Die Signatur-Attacke von\nG-Max Mauzi. Sie verwirrt\nden Gegner und erzeugt\nGeld.
+0xA4029E: Die Signatur-Attacke von\nG-Max Machomei. Sie\nerhöht die Chance auf\nVolltreffer.
+0xA402E5: Die Signatur-Attacke von\nG-Max Gengar. Sie\nverhindert, dass der Gegner\nflieht.
+0xA40327: Die Signatur-Attacke von\nG-Max Kingler. Sie senkt\ndie Initiative des\nZiels stark.
+0xA4036D: Die Signatur-Attacke von\nG-Max Lapras. Sie\nverringert den Schaden für\nfünf Runden.
+0xA403AE: Die Signatur-Attacke von\nG-Max Evoli. Sie\nbezaubert das\nZiel.
+0xA403E6: Die Signatur-Attacke von\nG-Max Relaxo. Sie stellt\nverzehrte Beeren\nwieder her.
+0xA4042B: Die Signatur-Attacke von\nG-Max Deponitox. Sie\nvergiftet das\nZiel.
+0xA40463: Die Signatur-Attacke von\nG-Max Melmetal. Sie\nverhindert, dass der Gegner\nseine Attacken wiederholt.
+0xA404AE: Die Signatur-Attacke von\nG-Max Gortrom. Sie trifft\ntrotz der Fähigkeit\ndes Ziels.
+0xA404FF: Die Signatur-Attacke von\nG-Max Liberlo. Sie trifft\ntrotz der Fähigkeit\ndes Ziels.
+0xA40550: Die Signatur-Attacke von\nG-Max Intelleon. Sie trifft\ntrotz der Fähigkeit\ndes Ziels.
+0xA405A0: Die Signatur-Attacke von\nG-Max Krarmor. Sie hebt\ndie Effekte von\nWällen auf.
+0xA405EB: Die Signatur-Attacke von\nG-Max Maritellit. Sie\nverändert die Schwerkraft\nfür fünf Runden.
+0xA4062F: Die Signatur-Attacke von\nG-Max Kamalm. Sie\nverstreut Felsbrocken\nauf dem Feld.
+0xA40673: Die Signatur-Attacke von\nG-Max Montecarbo. Sie fügt\nüber vier Runden\nSchaden zu.
+0xA406B5: Die Signatur-Attacke von\nG-Max Drapfel. Sie senkt\nden Fluchtwert\ndes Gegners.
+0xA406F7: Die Signatur-Attacke von\nG-Max Schlapfel. Sie heilt\nden Status seiner\nVerbündeten.
+0xA4073B: Die Signatur-Attacke von\nG-Max Sanaconda. Sie fängt\nden Gegner für\nvier bis fünf Runden.
+0xA40787: Die Signatur-Attacke von\nG-Max Riffex. Sie\nlähmt oder vergiftet\ndie Gegner.
+0xA407CD: Die Signatur-Attacke von\nG-Max Infernopod. Sie fängt\nden Gegner für\nvier bis fünf Runden.
+0xA4081A: Die Signatur-Attacke von\nG-Max Silembrim. Sie\nverwirrt das\nZiel.
+0xA40854: Die Signatur-Attacke von\nG-Max Olangaar. Sie versetzt\nden Gegner in\nGähnen.
+0xA4089B: Die Signatur-Attacke von\nG-Max Pokusan. Sie heilt\ndie KP seiner\nVerbündeten.
+0xA408DB: Die Signatur-Attacke von\nG-Max Patinaraja. Sie\nverstreut Spikes\nauf dem Feld.
+0xA40923: Die Signatur-Attacke von\nG-Max Duraludon. Sie senkt\ndie AP der zuletzt\neingesetzten Attacke.
+0xA4096E: Die Signatur-Attacke von\nG-Max Wulaosu (Fokussierter Stil).\nSie umgeht\nDyna-Wall.
+0xA409BE: Die Signatur-Attacke von\nG-Max Wulaosu (Fließender Stil).\nSie umgeht\nDyna-Wall.
+0xA40FC0: Barriere
