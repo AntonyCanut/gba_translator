@@ -353,6 +353,18 @@ def apply_patches(config, out_rom: Path, translation_json: Path | None = None,
             else:
                 print(f"⚠ skipping type_icons: {script.name} not found")
 
+        elif step == "hp_labels":
+            # Redraw the HP-label graphics (party menu + summary bar + summary
+            # grey stat label — all 4bpp tiles inside LZ77 blocks, not text) with
+            # this language's abbreviation via scripts/patch_hp_labels_<code>.py.
+            # Each language ships its own script because the label is baked pixels
+            # (German « KP », French « PV »).
+            script = REPO_ROOT / f"scripts/patch_hp_labels_{config.code}.py"
+            if script.exists():
+                run([PYTHON, script, "--rom", out_rom])
+            else:
+                print(f"⚠ skipping hp_labels: {script.name} not found")
+
         elif step == "collision_check":
             # Report-only: trace live pointers in the finished ROM and flag any
             # cell whose string is not terminated before the next occupied

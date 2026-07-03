@@ -47,6 +47,9 @@ status_abbrev:
 #   status_badges          redraw the in-battle status badge tiles (LZ77 graphics)
 #                          with DE glyphs (GIF/SCH/GEF/VBR/KO) — the graphical
 #                          counterpart of the text status_abbrevs above
+#   hp_labels              redraw the HP-label graphics (party menu + summary bar
+#                          + summary grey stat label — all LZ77 tiles, not text)
+#                          with the German « KP » (Kraftpunkte)
 #   version                stamp the NOT FOR SALE screen with DE.2.0.<build>
 #                          so the running build advertises it is the German one
 #
@@ -64,6 +67,9 @@ patches:
   # Redraw the move-type badges (graphic tiles) with German names
   # (KAMPF/GIFT/DRACHE/…) via scripts/patch_type_icons_de.py.
   - type_icons
+  # Redraw the HP-label graphics (LZ77 tiles) with German « KP » (Kraftpunkte)
+  # via scripts/patch_hp_labels_de.py.
+  - hp_labels
   - version
   # Post-build audit: flag any translated cell not terminated before its
   # neighbour (fusion / freeze risk). Report-only, never fails the build.
