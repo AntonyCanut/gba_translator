@@ -101,10 +101,45 @@ status_abbrev:
 # patches report FAILED (free space) and abort the build. Their patch_*_it.py
 # wrappers exist on disk but stay unwired (tracked as a follow-up); Pokédex
 # descriptions are instead handled in place by the `pokedex_rewrap` step below.
+#
+# In-place hardcoded-text patches (group A, F-96): each authors Italian text
+# within a fixed byte/pixel budget (never relocated via the shared free-space
+# builder, except battle_recall_strings/shop which use their own small,
+# independent free-space search — see the module docstrings):
+#   gendered_buffers        figlia/uom/dama/donna/lei buffers (FD03 gender
+#                           variable, positional mapping); son/boy/girl left
+#                           English — no 3/4-letter Italian word fits the slot.
+#   cfru_type_names         packed type-name table + frozen-status word "gel",
+#                           abbreviated to fit the English-original slot width.
+#   item_names               official Italian Berry/item names for the inline
+#                           13-glyph name cells the pipeline never reaches.
+#   options_footer           Options-menu page-2 button legend (Scegli/Cambia/
+#                           OK/Extra), packed in-place against the next string.
+#   battle_recall_strings    trainer "come back!" messages -> torna!/tornate!,
+#                           relocated via a small dedicated free-space scan.
+#   time_format               12h->24h + DD/MM/YYYY templates, IT weekdays
+#                           (Dom/Lun/Mar/Mer/Gio/Ven/Sab) and 12 month
+#                           abbreviations (already in combined_it.txt at their
+#                           classic fixed offsets). The save-screen date
+#                           template is patched wherever the live 0x1EB6260
+#                           pointer resolves to (see the module docstring —
+#                           the IT pipeline's own translate pass can relocate
+#                           a copy of it before this script ever runs).
+#   trainer_card_date         Trainer Card date in Day Month Year order; reuses
+#                           the language-neutral FR/DE builder verbatim and
+#                           depends on time_format's month cells.
+#   shop                     "Buy"/"In Cube:" text; "Buy" is relocated via a
+#                           dynamic free-space allocator and degrades to a
+#                           warning (stays English) rather than aborting the
+#                           build when the generic builder has no free space
+#                           left by the time this step runs.
 patches:
   - font
+  - gendered_buffers
+  - time_format
   - inline
   - battle_prefix
+  - battle_recall_strings
   - repair_lz77
   - repair_localized_lz77
   # ── Structural restores from the pristine EN/ES ROMs (language-agnostic) ──
@@ -120,6 +155,10 @@ patches:
   # ── Italian text written in place (no free-space relocation) ──────────────
   - ability_names           # fixed 17-byte ability-name table ← combined_it
   - tm_item_descriptions    # MT/MN item descriptions (anti-freeze, in place)
+  - item_names
+  - cfru_type_names
+  - options_footer
+  - shop
   # ── Graphics (LZ77 tiles) + Pokédex tables ────────────────────────────────
   - status_badges
   - type_icons
@@ -130,6 +169,7 @@ patches:
   - pokedex_category_order
   - pokedex_metrics
   - pokedex_rewrap
+  - trainer_card_date
   # Post-build audit: flag any translated cell not terminated before its
   # neighbour (fusion / freeze risk). Report-only, never fails the build.
   - collision_check
