@@ -19,9 +19,11 @@ tests/
   unit/                 # tests unitaires génériques (codec, rom_reader, padding…)
     fr/                 # unitaires spécifiques FR
     it/                 # unitaires spécifiques IT
+    de/                 # unitaires spécifiques DE (patch_font_de)
   e2e/                  # e2e génériques (pipeline, intégrité, qualité, codec)
     fr/                 # e2e spécifiques FR (contenu du jeu traduit en français)
     it/                 # e2e spécifiques IT
+    de/                 # e2e spécifiques DE (glyphes ä/ö/ü, build, statuts)
   e2e-playwright/       # specs Playwright (TS) — flux de jeu, non spécifiques langue
   benchmarks/           # perf (générique)
   stress/               # fuzzing / soak (générique)
@@ -37,12 +39,16 @@ Les `conftest.py` restent au niveau de leur tier (`tests/conftest.py`,
 |--------|-----:|----:|--------|
 | fr     |    3 |  17 | ✅ couverte |
 | it     |    1 |   2 | 🟡 partielle |
-| de     |    0 |   0 | ❌ aucun test dédié |
+| de     |    1 |   2 | 🟡 partielle |
 | es     |    0 |   0 | ❌ aucun test dédié |
 
-> `de` et `es` disposent d'un build (`languages/de`, `languages/es`) mais
-> d'aucun test dédié. Des tickets de suivi ont été créés pour écrire les
-> patchs/tests de non-régression correspondants.
+> `de` dispose désormais de tests dédiés (`patch_font_de` en unit ; build ROM,
+> glyphes ä/ö/ü/Ä/Ö/Ü et abréviations de statut en e2e) mais reste en cours de
+> traduction (`languages/de/combined_de.txt`, batches en cours) — la ROM
+> `GenedRom-de.gba` n'étant pas encore construite localement, les tests
+> dépendant de la ROM/du rapport de build sautent (skip) jusqu'au premier
+> `make build-de`. `es` dispose d'un build (`languages/es`) mais d'aucun test
+> dédié.
 
 ## Ajouter des tests pour une nouvelle langue
 
