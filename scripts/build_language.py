@@ -67,6 +67,16 @@ PATCH_MOVE_DESC_SCRIPT = REPO_ROOT / "scripts/patch_move_descriptions_fr.py"
 # be redrawn with the target language's letter shapes.
 PATCH_STATUS_BADGES_FR_SCRIPT = REPO_ROOT / "scripts/patch_status_badges_fr.py"
 
+# Battle-text / control-code-timing / positional-gender-buffer patches. Each
+# ships a dedicated per-language script (patch_<name>_<code>.py) because the
+# phrasing and byte-budget constraints are language-structure specific; the FR
+# script is the fallback for languages that have not ported it yet.
+PATCH_BATTLE_PREFIX_FR_SCRIPT = REPO_ROOT / "scripts/patch_battle_prefix_fr.py"
+PATCH_BATTLE_RECALL_STRINGS_FR_SCRIPT = REPO_ROOT / "scripts/patch_battle_recall_strings_fr.py"
+PATCH_BATTLE_STRING_TEMPLATES_FR_SCRIPT = REPO_ROOT / "scripts/patch_battle_string_templates_fr.py"
+PATCH_GENDERED_BUFFERS_FR_SCRIPT = REPO_ROOT / "scripts/patch_gendered_buffers_fr.py"
+PATCH_GIVECS_GIFT_ITEM_FR_SCRIPT = REPO_ROOT / "scripts/patch_givecs_gift_item_fr.py"
+
 # Post-build verification (language-agnostic): audit the finished ROM for
 # inter-cell text collisions — a translated string not terminated before the
 # next live cell fuses with / overwrites its neighbour and can freeze the game.
@@ -220,6 +230,31 @@ def _status_badges_script_for(code: str) -> Path:
     return lang_script if lang_script.exists() else PATCH_STATUS_BADGES_FR_SCRIPT
 
 
+def _battle_prefix_script_for(code: str) -> Path:
+    lang_script = REPO_ROOT / f"scripts/patch_battle_prefix_{code}.py"
+    return lang_script if lang_script.exists() else PATCH_BATTLE_PREFIX_FR_SCRIPT
+
+
+def _battle_recall_strings_script_for(code: str) -> Path:
+    lang_script = REPO_ROOT / f"scripts/patch_battle_recall_strings_{code}.py"
+    return lang_script if lang_script.exists() else PATCH_BATTLE_RECALL_STRINGS_FR_SCRIPT
+
+
+def _battle_string_templates_script_for(code: str) -> Path:
+    lang_script = REPO_ROOT / f"scripts/patch_battle_string_templates_{code}.py"
+    return lang_script if lang_script.exists() else PATCH_BATTLE_STRING_TEMPLATES_FR_SCRIPT
+
+
+def _gendered_buffers_script_for(code: str) -> Path:
+    lang_script = REPO_ROOT / f"scripts/patch_gendered_buffers_{code}.py"
+    return lang_script if lang_script.exists() else PATCH_GENDERED_BUFFERS_FR_SCRIPT
+
+
+def _givecs_gift_item_script_for(code: str) -> Path:
+    lang_script = REPO_ROOT / f"scripts/patch_givecs_gift_item_{code}.py"
+    return lang_script if lang_script.exists() else PATCH_GIVECS_GIFT_ITEM_FR_SCRIPT
+
+
 def apply_patches(config, out_rom: Path, translation_json: Path | None = None,
                   build_number: int = 0) -> None:
     """Run every post-build patch step declared in the language descriptor.
@@ -364,6 +399,29 @@ def apply_patches(config, out_rom: Path, translation_json: Path | None = None,
                 run([PYTHON, script, "--rom", out_rom])
             else:
                 print(f"⚠ skipping hp_labels: {script.name} not found")
+
+        elif step == "battle_prefix":
+            run([PYTHON, _battle_prefix_script_for(config.code), "--rom", out_rom])
+
+        elif step == "battle_recall_strings":
+            run([PYTHON, _battle_recall_strings_script_for(config.code), "--rom", out_rom])
+
+        elif step == "battle_string_templates":
+            run([
+                PYTHON, _battle_string_templates_script_for(config.code),
+                "--rom", out_rom,
+                "--source", ENGLISH_ROM,
+            ])
+
+        elif step == "gendered_buffers":
+            run([PYTHON, _gendered_buffers_script_for(config.code), "--rom", out_rom])
+
+        elif step == "givecs_gift_item":
+            run([
+                PYTHON, _givecs_gift_item_script_for(config.code),
+                "--rom", out_rom,
+                "--source", ENGLISH_ROM,
+            ])
 
         elif step == "collision_check":
             # Report-only: trace live pointers in the finished ROM and flag any

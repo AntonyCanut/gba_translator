@@ -53,16 +53,37 @@ status_abbrev:
 #   version                stamp the NOT FOR SALE screen with DE.2.0.<build>
 #                          so the running build advertises it is the German one
 #
+# Battle-text / control-code-timing / positional-gender-buffer patches
+# (ported from the FR pipeline; see patch_<name>_de.py for German-specific
+# rationale — some, like battle_prefix, need no cave hack in German because
+# the language's natural word order already matches the engine's layout):
+#   gendered_buffers         fixed-size buffer strings (son/daughter/boy/girl/
+#                            man/lady/her) patched to German where they fit
+#   battle_prefix            report-only guard for the wild/foe name-prefix
+#                            cells (no reorder cave needed in German)
+#   givecs_gift_item         restore the give-CS gift-item struct from English
+#                            (except the localized name prefix) to prevent it
+#                            silently diverging if a translation overflows it
+#   battle_string_templates  restore the language-neutral defeat-speech /
+#                            switch-out control-code cluster from English
+#   battle_recall_strings    German "komm/kommt zurück!" switch-out messages,
+#                            relocated via their external pointer table
+#
 # Richer passes (pokédex rewrap, mission boxes, move descriptions, …) will be
 # added here as German translations for those subsystems mature.
 patches:
+  - gendered_buffers
   - font
   - inline
+  - battle_prefix
   - repair_lz77
   - repair_localized_lz77
   - repoint_stale
   - legendary_ritual
+  - givecs_gift_item
   - status_abbrevs
+  - battle_string_templates
+  - battle_recall_strings
   - status_badges
   # Redraw the move-type badges (graphic tiles) with German names
   # (KAMPF/GIFT/DRACHE/…) via scripts/patch_type_icons_de.py.
