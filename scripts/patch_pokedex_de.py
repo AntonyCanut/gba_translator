@@ -45,7 +45,7 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 
 from src.core import pokedex
-from src.core.text_codec import TextDecoder, TextEncoder
+from src.core.text_codec import GERMAN_UMLAUT_CHARS, TextDecoder, TextEncoder
 from src.core.text_reinserter import FreeSpaceAllocator
 
 ROM_POINTER_BASE = 0x08000000
@@ -128,7 +128,7 @@ def apply(
         if overflow:
             stats["overflow"] += 1
 
-        encoded = TextEncoder.encode_pokemon(wrapped)
+        encoded = TextEncoder.encode_pokemon(wrapped, skip_aliases=GERMAN_UMLAUT_CHARS)
 
         target = _deref(rom, entry.struct_offset)
         if target is None:

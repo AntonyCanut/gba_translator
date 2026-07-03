@@ -14,7 +14,7 @@ sys.path.insert(0, str(ROOT))
 sys.path.insert(0, str(ROOT / "scripts"))
 
 from src.core import pokedex  # noqa: E402
-from src.core.text_codec import TextDecoder, TextEncoder  # noqa: E402
+from src.core.text_codec import GERMAN_UMLAUT_CHARS, TextDecoder, TextEncoder  # noqa: E402
 import patch_pokedex_de as mod  # noqa: E402
 
 
@@ -96,10 +96,12 @@ class TestWidthOverflowIsTolerated:
         result = _decode(rom, new_offset)
         assert result.count("\n") + 1 <= pokedex.DEX_MAX_LINES
         # Wording preserved verbatim (only line breaks change). Compare against
-        # the codec round-trip so the EN-charmap unit encoder — which lacks the
-        # DE umlaut glyphs the font patch adds — does not confuse the check.
+        # the codec round-trip with skip_aliases=GERMAN_UMLAUT_CHARS, exactly
+        # like patch_pokedex_de.apply() encodes, so umlauts round-trip instead
+        # of being folded to their ASCII fallback.
         roundtrip = TextDecoder.decode_pokemon(
-            TextEncoder.encode_pokemon(dense), preserve_unknown=True
+            TextEncoder.encode_pokemon(dense, skip_aliases=GERMAN_UMLAUT_CHARS),
+            preserve_unknown=True,
         )
         assert result.replace("\n", " ") == roundtrip
 
