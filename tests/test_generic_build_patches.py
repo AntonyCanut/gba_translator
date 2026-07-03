@@ -138,6 +138,23 @@ def test_status_abbrevs_passes_lang_code_de():
     assert cmd[lang_idx + 1] == "de"
 
 
+# ─── status_badges ──────────────────────────────────────────────────────────
+
+def test_status_badges_dispatches_de_script():
+    # The graphical badge step must resolve to the DE-specific tile patch.
+    config = REGISTRY.get("de")
+    calls = _collected_calls(config, ["status_badges"])
+    assert len(calls) == 1
+    cmd = calls[0]
+    assert any(c.endswith("patch_status_badges_de.py") for c in cmd)
+    assert "--rom" in cmd
+
+
+def test_status_badges_in_de_descriptor():
+    # The DE descriptor must request the graphical status badge patch.
+    assert "status_badges" in REGISTRY.get("de").patches
+
+
 # ─── version ─────────────────────────────────────────────────────────────────
 
 def test_version_step_passes_lang_code_and_build_number():

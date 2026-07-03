@@ -44,6 +44,9 @@ status_abbrev:
 #
 # Language-aware (data already in status_abbrev above):
 #   status_abbrevs         write DE status abbreviations (GIF/VBR/GEF/SCH/…) into ROM
+#   status_badges          redraw the in-battle status badge tiles (LZ77 graphics)
+#                          with DE glyphs (GIF/SCH/GEF/VBR/KO) — the graphical
+#                          counterpart of the text status_abbrevs above
 #   version                stamp the NOT FOR SALE screen with DE.2.0.<build>
 #                          so the running build advertises it is the German one
 #
@@ -57,6 +60,7 @@ patches:
   - repoint_stale
   - legendary_ritual
   - status_abbrevs
+  - status_badges
   - version
   # Post-build audit: flag any translated cell not terminated before its
   # neighbour (fusion / freeze risk). Report-only, never fails the build.

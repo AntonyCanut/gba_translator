@@ -61,6 +61,12 @@ PATCH_STATUS_ABBREVS_SCRIPT = REPO_ROOT / "scripts/patch_status_abbrevs_fr.py"
 PATCH_TM_ITEM_DESC_SCRIPT = REPO_ROOT / "scripts/patch_tm_item_descriptions_fr.py"
 PATCH_MOVE_DESC_SCRIPT = REPO_ROOT / "scripts/patch_move_descriptions_fr.py"
 
+# Graphic (LZ77 tile) patches whose glyphs differ per language, so each ships a
+# dedicated per-language script (patch_status_badges_<code>.py). Unlike the text
+# status_abbrevs table, the in-battle status badges are drawn as tiles and must
+# be redrawn with the target language's letter shapes.
+PATCH_STATUS_BADGES_FR_SCRIPT = REPO_ROOT / "scripts/patch_status_badges_fr.py"
+
 # Post-build verification (language-agnostic): audit the finished ROM for
 # inter-cell text collisions — a translated string not terminated before the
 # next live cell fuses with / overwrites its neighbour and can freeze the game.
@@ -208,6 +214,12 @@ def _font_script_for(code: str) -> Path:
     return lang_script if lang_script.exists() else _PATCH_FONT_FR
 
 
+def _status_badges_script_for(code: str) -> Path:
+    """Return the language-specific status-badge tile patch, falling back to FR."""
+    lang_script = REPO_ROOT / f"scripts/patch_status_badges_{code}.py"
+    return lang_script if lang_script.exists() else PATCH_STATUS_BADGES_FR_SCRIPT
+
+
 def apply_patches(config, out_rom: Path, translation_json: Path | None = None,
                   build_number: int = 0) -> None:
     """Run every post-build patch step declared in the language descriptor.
@@ -298,6 +310,15 @@ def apply_patches(config, out_rom: Path, translation_json: Path | None = None,
                 PYTHON, PATCH_STATUS_ABBREVS_SCRIPT,
                 "--rom", out_rom,
                 "--lang-code", config.code,
+            ])
+
+        elif step == "status_badges":
+            # In-battle status badges are LZ77 tile graphics, so each language
+            # ships its own glyphs (patch_status_badges_<code>.py). The FR
+            # script is the fallback for languages that reuse the same badges.
+            run([
+                PYTHON, _status_badges_script_for(config.code),
+                "--rom", out_rom,
             ])
 
         elif step == "tm_item_descriptions":
