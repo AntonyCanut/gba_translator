@@ -123,6 +123,40 @@ class TestBuildUmlaut:
         assert umlaut_tile != base_tile
 
 
+class TestIsFontBlock:
+    """`is_font_block()` must accept real text fonts and reject uniform
+    placeholder blocks that merely pass the per-glyph density heuristic.
+
+    Regression: block 0x46D3A8 in the built DE ROM is a non-font block whose
+    every "glyph" is the same 00 10 tile (density 16). It slipped through the
+    old density-only check, so its identical A/O/U base letters made Ä/Ö/Ü
+    collapse to one glyph (tests/e2e/de/test_accent_glyphs.py::
+    test_umlaut_slots_are_distinct_from_each_other).
+    """
+
+    SAMPLE = [0xA1, 0xA2, 0xA3, 0xBB, 0xBC, 0xD5, 0xD7]
+
+    def test_diverse_in_range_glyphs_are_recognised_as_a_font(self):
+        # Each sampled glyph gets a distinct tile whose density sits in the
+        # accepted 5..60 band (a single painted row = density 8).
+        tiles = {cp: _solid_row_tile({i}) for i, cp in enumerate(self.SAMPLE)}
+        assert mod.is_font_block(_make_font_with_tiles(tiles))
+
+    def test_uniform_placeholder_block_is_rejected(self):
+        # Every glyph is the same 00 10 placeholder tile (density 16): passes
+        # the density band but has zero glyph diversity — must be rejected so
+        # the umlaut patcher never touches it.
+        placeholder = bytes.fromhex("0010" * (GLYPH_SIZE // 2))
+        assert 5 < mod.glyph_density(_make_font_with_tiles({0xBB: placeholder}), 0xBB) < 60
+        tiles = {cp: placeholder for cp in self.SAMPLE}
+        assert not mod.is_font_block(_make_font_with_tiles(tiles))
+
+    def test_too_few_in_range_glyphs_is_rejected(self):
+        # Only two glyphs are populated — below the 4-glyph density threshold.
+        tiles = {0xA1: _solid_row_tile({1}), 0xA2: _solid_row_tile({2})}
+        assert not mod.is_font_block(_make_font_with_tiles(tiles))
+
+
 class TestUmlautTargetCodepoints:
     """CP_*_UMLAUT_* must land on the free charmap slots reserved for German
     (0x60-0x65) — a regression here silently corrupts unrelated glyphs."""

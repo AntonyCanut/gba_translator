@@ -242,7 +242,17 @@ def glyph_density(font: bytes, codepoint: int) -> int:
 
 def is_font_block(font: bytes) -> bool:
     sample = [0xA1, 0xA2, 0xA3, 0xBB, 0xBC, 0xD5, 0xD7]
-    return sum(1 for cp in sample if 5 < glyph_density(font, cp) < 60) >= 4
+    in_range = [cp for cp in sample if 5 < glyph_density(font, cp) < 60]
+    if len(in_range) < 4:
+        return False
+    # A real text font has visually distinct glyph shapes. Some non-font
+    # LZ77 blocks are uniform placeholders where every "glyph" is the same
+    # tile (e.g. a repeating 00 10 pattern of density 16) — these slip past
+    # the density heuristic but must be rejected: their identical A/O/U base
+    # letters would make Ä/Ö/Ü (and ä/ö/ü) collapse to a single glyph, and
+    # they carry no Ë/ë diaeresis source to build real umlauts from anyway.
+    distinct = {bytes(font[cp * GLYPH_SIZE:(cp + 1) * GLYPH_SIZE]) for cp in in_range}
+    return len(distinct) >= 4
 
 
 def find_font_blocks(rom: bytes) -> List[Lz77Block]:
