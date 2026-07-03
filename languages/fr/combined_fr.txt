@@ -3211,7 +3211,7 @@
 0x416D4F: Courrier transféré de la\nBoîte Mail.{PAUSE_UNTIL_PRESS}
 0x416D78: {STR_VAR_1} est plein. Objet du\nPokémon non retiré.{PAUSE_UNTIL_PRESS}
 0x416DB3: {STR_VAR_1} a appris\n{STR_VAR_2} !
-0x416DC2: {STR_VAR_1} et {STR_VAR_2} ne sont pas compatibles.\n{STR_VAR_2}\pne peut pas être\napprise.{PAUSE_UNTIL_PRESS}
+0x416DC2: {STR_VAR_1} et {STR_VAR_2} ne sont pas compatibles.\p{STR_VAR_2} ne peut pas être\napprise.{PAUSE_UNTIL_PRESS}
 0x416DF7: {STR_VAR_1} veut apprendre la capacité {STR_VAR_2}.\n{STR_VAR_1} connaît déjà\pquatre capacités.\n\pOublier une capacité pour\napprendre {STR_VAR_2} ?
 0x416E6B: Arrêter d'enseigner\n{STR_VAR_2} ?
 0x416E84: {STR_VAR_1} n'a pas appris\n{STR_VAR_2}.{PAUSE_UNTIL_PRESS}

@@ -2900,7 +2900,7 @@
 0x416D4F: Mail aus der Mailbox\nübertragen.{PAUSE_UNTIL_PRESS}
 0x416D78: {STR_VAR_1} ist voll. Das Item des\nPokémon wurde nicht entfernt.{PAUSE_UNTIL_PRESS}
 0x416DB3: {STR_VAR_1} erlernte\n{STR_VAR_2}!
-0x416DC2: {STR_VAR_1} und {STR_VAR_2} passen nicht zusammen.\n{STR_VAR_2}\pkann nicht erlernt\nwerden.{PAUSE_UNTIL_PRESS}
+0x416DC2: {STR_VAR_1} und {STR_VAR_2} passen nicht zusammen.\p{STR_VAR_2} kann nicht erlernt\nwerden.{PAUSE_UNTIL_PRESS}
 0x416DF7: {STR_VAR_1} will die Attacke {STR_VAR_2} erlernen.\n{STR_VAR_1} kennt aber bereits\pvier Attacken.\n\pEine Attacke vergessen, um\n{STR_VAR_2} zu erlernen?
 0x416E6B: Das Erlernen von\n{STR_VAR_2} abbrechen?
 0x416E84: {STR_VAR_1} erlernte\n{STR_VAR_2} nicht.{PAUSE_UNTIL_PRESS}
