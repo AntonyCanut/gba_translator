@@ -345,15 +345,19 @@ def apply_patches(config, out_rom: Path, translation_json: Path | None = None,
 
         elif step == "version":
             # Stamp the in-game NOT FOR SALE screen with this language's tag,
-            # e.g. IT.2.1.<build> for Italian — so the running build advertises
-            # which language it is. patch_version_fr.py is language-agnostic via
-            # its --lang-code flag.
-            run([
+            # e.g. DE.2.1.<build> for German — so the running build advertises
+            # which language it is. The version cycle comes from this language's
+            # version_label descriptor (source of truth), passed explicitly so
+            # patch_version_fr.py stamps exactly what lang.yaml declares.
+            version_cmd = [
                 PYTHON, PATCH_VERSION_SCRIPT,
                 "--rom", out_rom,
                 "--lang-code", config.code,
                 "--build-number", str(build_number),
-            ])
+            ]
+            if config.version_label:
+                version_cmd += ["--version-label", config.version_label]
+            run(version_cmd)
 
         # ── Text patches parameterised from the language descriptor ──────────
 

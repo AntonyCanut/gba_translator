@@ -17,9 +17,9 @@ build: generic                    # dedicated (make build-fr) | generic (build_l
 combined: languages/de/combined_de.txt
 critical: languages/de/critical_strings_de.txt   # optional; created when needed
 output_rom: GenedRom-de.gba
-# Shown in-game on the NOT FOR SALE screen as DE.2.0.<build> (the trailing
+# Shown in-game on the NOT FOR SALE screen as DE.2.1.<build> (the trailing
 # component is the CI build number stamped by the `version` patch step).
-version_label: DE.2.0.0
+version_label: DE.2.1.0
 
 # Extra glyphs the font must render beyond plain ASCII.
 font_glyphs: "äöüßÄÖÜ"
@@ -53,7 +53,7 @@ status_abbrev:
 #   dexnav_headers         redraw the 4 DexNav column-header graphics (custom
 #                          Unbound LZ77 tileset, not text) with German labels
 #                          (SUCHLEVEL / METHODE / VERST. FAEH. / ITEMS)
-#   version                stamp the NOT FOR SALE screen with DE.2.0.<build>
+#   version                stamp the NOT FOR SALE screen with DE.2.1.<build>
 #                          so the running build advertises it is the German one
 #
 # Battle-text / control-code-timing / positional-gender-buffer patches

@@ -23,7 +23,7 @@ critical: languages/indie/critical_strings_indie.txt   # optional; created when 
 output_rom: GenedRom-indie.gba
 # Shown in-game on the NOT FOR SALE screen as INDIE.2.1.<build> (the trailing
 # component is the CI build number stamped by the `version` patch step).
-version_label: IN.2.0.0
+version_label: IN.2.1.0
 
 # Extra glyphs the font must render beyond plain ASCII. Indie seeds with the
 # full FR accented set so accented translations render out of the box.

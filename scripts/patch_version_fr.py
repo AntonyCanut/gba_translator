@@ -34,9 +34,16 @@ Usage::
 from __future__ import annotations
 
 import argparse
+import functools
 import struct
 import sys
 from pathlib import Path
+
+# Make ``src.i18n`` importable when this script is run directly so the version
+# label can be read from the language descriptor (languages/<code>/lang.yaml).
+_REPO_ROOT = Path(__file__).resolve().parent.parent
+if str(_REPO_ROOT) not in sys.path:
+    sys.path.insert(0, str(_REPO_ROOT))
 
 # ---------------------------------------------------------------------------
 # LZ77 (GBA BIOS format) — identical to the copies in patch_font_fr.py
@@ -225,15 +232,49 @@ _GLYPH_W = 4   # advance per character (glyphs are 4 px wide, no extra gap)
 _GLYPH_H = 5
 
 
-def version_string(build_number: int, lang_code: str = "fr") -> str:
+# Base-game version cycle (Pokémon Unbound v2.1.1.1) — used only as a fallback
+# when a language descriptor cannot be loaded.
+_DEFAULT_VERSION_CYCLE = "2.1"
+
+
+@functools.lru_cache(maxsize=None)
+def _descriptor_version_label(lang_code: str) -> str:
+    """Return the ``version_label`` declared in ``languages/<code>/lang.yaml``.
+
+    This descriptor field is the single source of truth for the version cycle
+    stamped on the NOT FOR SALE screen (e.g. ``DE.2.1.0``).  Returns ``""`` when
+    the descriptor cannot be loaded — an unknown code, or a caller running
+    without the ``languages/`` tree — so the caller can fall back gracefully.
+    """
+    try:
+        from src.i18n import load_registry
+        return load_registry().get(lang_code).version_label or ""
+    except Exception:  # noqa: BLE001 — any load failure just triggers the fallback
+        return ""
+
+
+def version_string(build_number: int, lang_code: str = "fr",
+                   version_label: str | None = None) -> str:
     """Return the version label rendered on the intro screen.
 
-    The label is ``<PREFIX>.2.1.<build_number>`` where ``PREFIX`` is the
-    upper-cased language code (``FR`` for French, ``IT`` for Italian, ``DE``
-    for German…).  This is what makes the NOT FOR SALE screen advertise which
-    language build is running.
+    The label is ``<PREFIX>.<MAJOR>.<MINOR>.<build_number>``.  ``PREFIX`` and
+    ``MAJOR.MINOR`` are read from the language's ``version_label`` in
+    ``languages/<code>/lang.yaml`` (e.g. ``DE.2.1.0`` → ``DE.2.1.<build>``), so
+    each language controls the version cycle it advertises on the NOT FOR SALE
+    screen instead of the format being hardcoded here.
+
+    When no descriptor is available the prefix falls back to the upper-cased
+    ``lang_code`` and the base-game cycle (``2.1``).  An explicit
+    ``version_label`` overrides the descriptor lookup.
     """
-    return f"{lang_code.upper()}.2.1.{build_number}"
+    if version_label is None:
+        version_label = _descriptor_version_label(lang_code)
+    parts = [p for p in version_label.split(".") if p != ""]
+    if len(parts) >= 3:
+        prefix = ".".join(parts[:3])
+    else:
+        prefix = f"{lang_code.upper()}.{_DEFAULT_VERSION_CYCLE}"
+    return f"{prefix}.{build_number}"
 
 
 def _render_version_band(text: str) -> list[list[int]]:
@@ -274,11 +315,14 @@ def _blit_band_to_tiles(tileset: bytearray, band: list[list[int]]) -> None:
                     tileset[base + py * 4 + (px >> 1)] = lo | (hi << 4)
 
 
-def patch_intro_version(data: bytearray, build_number: int, lang_code: str = "fr") -> bool:
-    """Replace 'v2.1.1.1' on the NOT FOR SALE screen with '<PREFIX>.2.1.<build>'.
+def patch_intro_version(data: bytearray, build_number: int, lang_code: str = "fr",
+                        version_label: str | None = None) -> bool:
+    """Replace 'v2.1.1.1' on the NOT FOR SALE screen with the language's tag.
 
-    ``lang_code`` selects the prefix glyphs (``fr`` → ``FR``, ``it`` → ``IT``…),
-    so each language build advertises itself on the intro screen.
+    The tag is derived from the language's ``version_label`` descriptor field
+    (``fr`` → ``FR.2.1.<build>``, ``de`` → ``DE.2.1.<build>``…), so each language
+    build advertises itself on the intro screen.  An explicit ``version_label``
+    overrides the descriptor lookup.
 
     Returns True if the ROM was modified.
     """
@@ -295,7 +339,9 @@ def patch_intro_version(data: bytearray, build_number: int, lang_code: str = "fr
             f"Intro tileset too small ({len(tileset)} bytes) for version band"
         )
 
-    band = _render_version_band(version_string(build_number, lang_code))
+    band = _render_version_band(
+        version_string(build_number, lang_code, version_label)
+    )
     _blit_band_to_tiles(tileset, band)
 
     compressed = _lz77_compress(bytes(tileset))
@@ -318,6 +364,10 @@ def main() -> int:
     parser.add_argument("--lang-code", default="fr",
                         help="Language code shown as the version prefix "
                              "(fr→FR, it→IT, de→DE). Default: fr")
+    parser.add_argument("--version-label", default=None,
+                        help="Override the version cycle (e.g. 'DE.2.1.0'). "
+                             "When omitted, it is read from the language's "
+                             "version_label in languages/<code>/lang.yaml.")
     args = parser.parse_args()
 
     if not args.rom.exists():
@@ -334,7 +384,9 @@ def main() -> int:
     header_changed = patch_version(data, args.build_number)
 
     try:
-        screen_changed = patch_intro_version(data, args.build_number, args.lang_code)
+        screen_changed = patch_intro_version(
+            data, args.build_number, args.lang_code, args.version_label
+        )
     except Exception as exc:  # noqa: BLE001 — surface a clear CI failure
         print(f"Intro version patch failed: {exc}", file=sys.stderr)
         return 1
@@ -352,7 +404,7 @@ def main() -> int:
     if screen_changed:
         print(
             "NOT FOR SALE screen: version display updated to "
-            f"'{version_string(args.build_number, args.lang_code)}'"
+            f"'{version_string(args.build_number, args.lang_code, args.version_label)}'"
         )
 
     return 0

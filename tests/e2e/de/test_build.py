@@ -303,8 +303,8 @@ class TestVersionDisplay:
     def test_not_for_sale_displays_de_prefix(self, de_rom_data):
         from scripts.verify_version_display import decode_version_string
         displayed = decode_version_string(de_rom_data)
-        assert displayed.startswith("DE.2.0."), (
-            f"NOT FOR SALE screen shows {displayed!r} instead of 'DE.2.0.<build>'. "
+        assert displayed.startswith("DE.2.1."), (
+            f"NOT FOR SALE screen shows {displayed!r} instead of 'DE.2.1.<build>'. "
             "The 'version' patch step may be missing from languages/de/lang.yaml."
         )
 
