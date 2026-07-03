@@ -50,7 +50,7 @@ import pathlib
 
 import pytest
 
-PROJECT_ROOT = pathlib.Path(__file__).resolve().parent.parent.parent
+PROJECT_ROOT = pathlib.Path(__file__).resolve().parent.parent.parent.parent
 EN_ROM_PATH = PROJECT_ROOT / "input" / "roms" / "englishrom.gba"
 FR_ROM_PATH = PROJECT_ROOT / "output" / "roms" / "GenedRom-fr.gba"
 
