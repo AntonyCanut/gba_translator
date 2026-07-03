@@ -444,6 +444,24 @@ def apply_patches(config, out_rom: Path, translation_json: Path | None = None,
                 "--source", ENGLISH_ROM,
             ])
 
+        elif step == "time_format":
+            # Inline ASM/text patch for the in-game clock/date displays.
+            # Only German has a dedicated script today; other generic
+            # languages skip it until one is written for them.
+            script = REPO_ROOT / f"scripts/patch_time_format_{config.code}.py"
+            if script.exists():
+                run([PYTHON, script, "--rom", out_rom])
+            else:
+                print(f"⚠ skipping time_format: no {script.name}")
+
+        elif step == "trainer_card_date":
+            # Free-space builder + veneer redirect for the Trainer Card date.
+            script = REPO_ROOT / f"scripts/patch_trainer_card_date_{config.code}.py"
+            if script.exists():
+                run([PYTHON, script, "--rom", out_rom])
+            else:
+                print(f"⚠ skipping trainer_card_date: no {script.name}")
+
         elif step == "dexnav_headers":
             # Redraw the 4 DexNav column-header graphics (SEARCH LEVEL / METHOD /
             # HIDDEN ABILITY / HELD ITEMS — baked 4bpp tiles inside a custom

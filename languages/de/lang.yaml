@@ -72,12 +72,19 @@ status_abbrev:
 #   battle_recall_strings    German "komm/kommt zurück!" switch-out messages,
 #                            relocated via their external pointer table
 #
+# Inline code patches (not text data, no combined-file entry possible):
+#   time_format             24h clock + DD.MM.YYYY save/date templates, DE weekday
+#                            (So./Mo./…) and month-abbreviation cells
+#   trainer_card_date       rebuilds the Trainer Card start date in Day Month Year
+#                            order via a free-space builder + veneer redirect
+#
 # Further richer passes (mission boxes, move descriptions, ability/item
 # pointer-relocated names, …) will be added here as more German translation
 # content is ported from the French pipeline.
 patches:
   - gendered_buffers
   - font
+  - time_format
   - inline
   - battle_prefix
   - repair_lz77
@@ -115,6 +122,7 @@ patches:
   - options_footer
   - shop
   - pc_messages
+  - trainer_card_date
   # Post-build audit: flag any translated cell not terminated before its
   # neighbour (fusion / freeze risk). Report-only, never fails the build.
   - collision_check
