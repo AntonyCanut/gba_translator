@@ -19,7 +19,7 @@ tests/
   unit/                 # tests unitaires génériques (codec, rom_reader, padding…)
     fr/                 # unitaires spécifiques FR
     it/                 # unitaires spécifiques IT
-    de/                 # unitaires spécifiques DE (patch_font_de)
+    de/                 # unitaires spécifiques DE (patchs dédiés : font, noms, Pokédex…)
   e2e/                  # e2e génériques (pipeline, intégrité, qualité, codec)
     fr/                 # e2e spécifiques FR (contenu du jeu traduit en français)
     it/                 # e2e spécifiques IT
@@ -38,12 +38,13 @@ Les `conftest.py` restent au niveau de leur tier (`tests/conftest.py`,
 
 | Langue | unit | e2e | Statut |
 |--------|-----:|----:|--------|
-| fr     |    3 |  17 | ✅ couverte |
+| fr     |    3 |  19 | ✅ couverte |
 | it     |    1 |   2 | 🟡 partielle |
-| de     |    1 |   2 | 🟡 partielle |
+| de     |   13 |   2 | 🟡 e2e partielle |
 | es     |    0 |   3 | ✅ couverte (référence) |
 
-> `de` dispose désormais de tests dédiés (`patch_font_de` en unit ; build ROM,
+> `de` dispose désormais de tests dédiés (13 tests de patchs en unit : font,
+> noms d'objets/natures, Pokédex, horloge, boutique… ; build ROM,
 > glyphes ä/ö/ü/Ä/Ö/Ü et abréviations de statut en e2e) mais reste en cours de
 > traduction (`languages/de/combined_de.txt`, batches en cours) — la ROM
 > `GenedRom-de.gba` n'étant pas encore construite localement, les tests
