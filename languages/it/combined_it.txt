@@ -15035,3 +15035,231 @@
 0xeb92fc: Lettore Braille
 0xeb930e: Catalogo Allenatori
 0xf8f4f7: ik<0xFC><0x77>
+
+# Item & TM/move descriptions inherited FRENCH from the base item table
+# (gItems @0x876074, desc ptr +0x14). The git-tracked englishrom.gba ships a
+# French item table, so these free-space cells were untranslated leftovers in
+# the generic build. Translated to the target language below (ticket: FR-leftover).
+0x7b3bea: Una Poké Ball piuttosto rara,
+creata per un evento
+particolare.
+0x7b3c6a: Da tenere. Aumenta la potenza
+delle mosse, ma chi lo tiene
+perde PS a ogni colpo.
+0x7b3ccd: Da tenere. Una strana sfera
+che avvelena gravemente chi
+la tiene durante la lotta.
+0x7b3d2b: Da tenere. Una strana sfera
+che scotta chi la tiene
+durante la lotta.
+0xb3f600: Il Ball più efficace in
+assoluto. Cattura sempre
+un Pokémon selvatico.
+0xb3f840: Un dispositivo a capsula per
+catturare i Pokémon selvatici.
+Basta lanciarlo come una palla.
+0xb3f9c0: Un Ball speciale che funziona
+meglio contro i Pokémon di
+tipo Acqua o Coleottero.
+0xb3fa80: Un Ball speciale che funziona
+meglio contro i Pokémon che
+vivono sott'acqua.
+0xb3fb40: Un Ball speciale che funziona
+meglio contro i Pokémon più
+deboli.
+0xb3fc00: Un Ball speciale che funziona
+meglio contro le specie di
+Pokémon già catturate.
+0xb3fcc0: Un comodo Ball che fa
+affezionare in fretta un
+Pokémon selvatico catturato.
+0xb3fd80: Una medicina spray.
+Cura un Pokémon avvelenato.
+0xb3fe40: Una medicina spray.
+Cura le scottature di un
+Pokémon.
+0xb3ff00: Una medicina spray.
+Scongela un Pokémon congelato.
+0xb3ff80: Una medicina spray.
+Sveglia un Pokémon
+addormentato.
+0xb40000: Una medicina spray.
+Cura un Pokémon dalla
+paralisi.
+0xb400c0: Una medicina che ripristina
+tutti i PS di un Pokémon e ne
+cura ogni problema di stato.
+0xb40180: Una medicina spray. Cura ogni
+problema di stato di un
+Pokémon.
+0xb40240: Una medicina che rianima un
+Pokémon esausto ripristinando
+tutti i suoi PS.
+0xb40300: Una polvere medicinale molto
+amara. Cura ogni problema di
+stato di un Pokémon.
+0xb403c0: Un'erba medicinale molto
+amara. Rianima un Pokémon
+esausto con tutti i PS.
+0xb40480: Ripristina tutti i PP di tutte
+le mosse di un Pokémon.
+0xb40500: La specialità della città di
+Vermilava. Cura ogni problema
+di stato di un Pokémon.
+0xb40980: Rianima tutti i Pokémon
+esausti ripristinando tutti i
+loro PS.
+0xb40a00: Sale puro proveniente dalle
+profondità della Grotta
+Abissi. I collezionisti lo
+pagano bene.
+0xb40c00: Da tenere. Ripristina un po'
+alla volta i PS dei Pokémon di
+tipo Veleno, ma danneggia gli
+altri tipi.
+0xb40cc0: Un Ball efficace per catturare
+i Pokémon di notte o in luoghi
+bui come le grotte.
+0xb40d80: Un Ball curativo che ripristina
+tutti i PS del Pokémon
+catturato e ne cura ogni
+problema di stato.
+0xb40e40: Una caramella piena di
+energia. Fa salire di un
+livello un Pokémon.
+0xb40f00: Un miele dall'aroma intenso
+che, usato nell'erba, in
+grotta o su alberi speciali,
+attira i Pokémon selvatici.
+0xb40fc0: Aumenta molto i colpi critici.
+Usabile una sola volta.
+L'effetto svanisce se il
+Pokémon si ritira.
+0xb41080: Bambola che attira i Pokémon.
+Permette di fuggire da una
+lotta contro un Pokémon
+selvatico.
+0xb41140: Oggetto che attira i Pokémon.
+Permette di fuggire da una
+lotta contro un Pokémon
+selvatico.
+0xb415c0: Una danza frenetica che
+esalta lo spirito
+combattivo. Aumenta
+di molto l'Attacco
+di chi la usa.
+0xb42680: Spaventa il Pokémon
+nemico e lo sostituisce
+con un altro. In natura
+pone fine alla lotta.
+0xb439c0: Una debole scarica
+elettrica colpisce il
+nemico. Se va a segno,
+lo paralizza.
+0xb43b40: Chi la usa provoca un
+terremoto che colpisce
+tutti i Pokémon
+vicini.
+0xb43f00: Una potente forza
+telecinetica colpisce
+il nemico. Può ridurne
+la Difesa Speciale.
+0xb45e80: Un lampo di luce che
+riduce la Precisione
+del nemico. Illumina
+anche le grotte.
+0xb48280: Fa infuriare il
+bersaglio e lo
+confonde, ma ne aumenta
+di molto l'Attacco.
+0xb499c0: Fa splendere il sole
+per 5 turni e potenzia
+le mosse di tipo
+Fuoco.
+0xb4a500: Evoca una grandinata
+che dura 5 turni. Non
+ferisce i Pokémon di
+tipo Ghiaccio.
+0xb4a5c0: Chi la usa irrita il
+nemico e gli impedisce
+di usare la stessa
+mossa due volte di
+fila.
+0xb4abc0: Provoca il nemico e lo
+costringe a usare solo
+mosse offensive per 3
+turni.
+0xb4b4c0: Chi la usa sfrutta i
+suoi poteri psichici
+per scambiare l'abilità
+con il bersaglio.
+0xb4d700: Chi la usa coglie di
+sorpresa il nemico e lo
+colpisce. Non fallisce
+mai.
+0xb4da00: Chi la usa tende i
+muscoli per gonfiarsi
+e aumenta Attacco e
+Difesa.
+0xb4e300: Chi la usa colpisce il
+nemico con un potente
+getto d'acqua. Può
+confonderlo.
+0xb4e540: Un attacco che assorbe
+il sangue del nemico.
+Metà del danno diventa
+PS per chi la usa.
+0xb95140: Chi la usa affila i
+suoi artigli. Aumenta
+l'Attacco e la
+Precisione.
+0xb96280: Un colpo rapido che
+mira ai piedi del
+nemico e ne riduce la
+Velocità.
+0xb9c7c0: Colpisce il nemico con
+un tentacolo o un
+braccio velenoso. Può
+anche avvelenarlo.
+0xbc1880: Il nemico è colpito da
+un getto d'acqua
+bollente. Può anche
+scottarlo.
+0xbc2200: Questo attacco è due
+volte più potente se il
+nemico ha meno della
+metà dei PS.
+0xb3f6c0: Un Ball ancora più efficace, con
+un tasso di riuscita superiore a
+quello della Mega Ball.
+0xb3f780: Un Ball molto efficace, con un
+tasso di riuscita superiore a
+quello della Poké Ball.
+0xb3f900: Un Ball speciale usato solo nel
+Parco Safari. È decorato con una
+fantasia mimetica.
+0xb405c0: Un giocattolo a forma di flauto
+di vetro blu. I collezionisti lo
+pagano bene.
+0xb40680: Un giocattolo a forma di flauto
+di vetro giallo. I collezionisti lo
+pagano bene.
+0xb40740: Un giocattolo a forma di flauto
+di vetro rosso. I collezionisti lo
+pagano bene.
+0xb40800: Un giocattolo a forma di flauto
+di vetro nero. I collezionisti lo
+pagano bene.
+0xb408c0: Un giocattolo a forma di flauto
+di vetro nero. I collezionisti lo
+pagano bene.
+0xb40ac0: Una bella conchiglia proveniente
+dalle profondità della Grotta
+Abissi. I collezionisti la pagano
+bene.
+0xb40b80: Un Ball speciale usato al Parco
+Amici.
+0xb496c0: Un attacco la cui
+potenza e il cui tipo
+dipendono dal Pokémon
+che lo usa.

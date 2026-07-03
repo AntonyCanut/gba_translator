@@ -13543,3 +13543,208 @@
 0x1EF1088: Ich suche jeden Tag mit meinem ADM\nnach Edelsteinen in diesem Raum.\pWenn ihr ein ADM habt, solltet ihr\nauch hier graben!\pDas ist der einzige Ort am Kristallgipfel,\nwo ihr das könnt!
 0x1EF1124: Ein violetter Ballon
 0x1EF1137: Ein kleines Mädchen wurde\nvon einem Baudrive entführt! Finde sie\nund bring sie zurück zu ihrer Mutter.
+
+# Item & TM/move descriptions inherited FRENCH from the base item table
+# (gItems @0x876074, desc ptr +0x14). The git-tracked englishrom.gba ships a
+# French item table, so these free-space cells were untranslated leftovers in
+# the generic build. Translated to the target language below (ticket: FR-leftover).
+0x7b3bea: Ein recht seltener Ball, der
+für ein besonderes Ereignis
+erschaffen wurde.
+0xb3f600: Der leistungsstärkste Ball.
+Fängt jedes wilde Pokémon
+ganz sicher.
+0xb3f840: Ein Gerät in Kapselform zum
+Fangen wilder Pokémon. Man
+wirft es wie einen Ball.
+0xb3f9c0: Ein Spezialball, der bei
+Wasser- und Käfer-Pokémon
+besonders gut wirkt.
+0xb3fa80: Ein Spezialball, der bei
+Pokémon unter Wasser
+besonders gut wirkt.
+0xb3fb40: Ein Spezialball, der bei
+schwächeren Pokémon
+besonders gut wirkt.
+0xb3fc00: Ein Spezialball, der bei schon
+gefangenen Pokémon-Arten
+besonders gut wirkt.
+0xb3fcc0: Ein Komfortball, mit dem ein
+gefangenes Pokémon schnell
+zutraulicher wird.
+0xb3fd80: Ein Medikament in Sprayform.
+Heilt ein vergiftetes Pokémon.
+0xb3fe40: Ein Medikament in Sprayform.
+Heilt die Verbrennung eines
+Pokémon.
+0xb3ff80: Ein Medikament in Sprayform.
+Weckt ein schlafendes Pokémon.
+0xb40000: Ein Medikament in Sprayform.
+Heilt ein Pokémon von
+Paralyse.
+0xb400c0: Ein Medikament, das alle KP
+eines Pokémon heilt und jedes
+Statusproblem beseitigt.
+0xb40180: Ein Medikament in Sprayform.
+Heilt alle Statusprobleme
+eines Pokémon.
+0xb40240: Ein Medikament, das ein
+kampfunfähiges Pokémon mit
+allen KP wiederbelebt.
+0xb40300: Ein sehr bitteres Heilpulver.
+Heilt alle Statusprobleme
+eines Pokémon.
+0xb403c0: Ein sehr bitteres Heilkraut.
+Belebt ein kampfunfähiges
+Pokémon mit allen KP wieder.
+0xb40480: Füllt alle AP aller Attacken
+eines Pokémon wieder auf.
+0xb40500: Die Spezialität der Stadt
+Vermilava. Heilt alle Status-
+probleme eines Pokémon.
+0xb40980: Belebt alle kampfunfähigen
+Pokémon wieder und füllt all
+ihre KP auf.
+0xb40a00: Reines Salz aus den Tiefen
+der Abgrundhöhle. Sammler
+zahlen gut dafür.
+0xb40c00: Ein Halte-Item. Heilt nach und
+nach die KP von Gift-Pokémon,
+schadet aber allen anderen
+Typen.
+0xb40cc0: Ein Ball, der nachts oder an
+dunklen Orten wie Höhlen
+gut fängt.
+0xb40d80: Ein Heilball, der alle KP des
+gefangenen Pokémon auffüllt
+und alle Statusprobleme heilt.
+0xb40e40: Ein Bonbon voller Energie.
+Es lässt ein Pokémon eine
+Stufe aufsteigen.
+0xb40f00: Ein Honig mit intensivem Duft,
+der im Gras, in Höhlen oder an
+besonderen Bäumen wilde
+Pokémon anlockt.
+0xb40fc0: Erhöht die Volltrefferquote
+stark. Nur einmal nutzbar. Der
+Effekt endet beim Auswechseln.
+0xb41080: Eine Puppe, die Pokémon
+anlockt. Ermöglicht die Flucht
+vor einem wilden Pokémon.
+0xb41140: Ein Gegenstand, der Pokémon
+anlockt. Ermöglicht die Flucht
+vor einem wilden Pokémon.
+0xb415c0: Ein wilder Tanz, der
+den Kampfgeist weckt.
+Erhöht den Angriff
+des Anwenders stark.
+0xb42680: Verscheucht das
+gegnerische Pokémon.
+In der Wildnis endet
+so der Kampf.
+0xb439c0: Ein schwacher Stoß
+trifft den Gegner.
+Bei Treffer wird er
+paralysiert.
+0xb43b40: Der Anwender löst ein
+Beben aus, das alle
+Pokémon in der Nähe
+trifft.
+0xb43f00: Eine starke geistige
+Kraft trifft den
+Gegner. Kann seine
+Spez.-Vert. senken.
+0xb45e80: Ein Lichtblitz, der die
+Genauigkeit des Gegners
+senkt. Erhellt auch
+Höhlen.
+0xb48280: Erzürnt das Ziel und
+verwirrt es, erhöht
+aber seinen Angriff
+stark.
+0xb499c0: Lässt die Sonne 5
+Runden scheinen und
+stärkt Feuer-
+Attacken.
+0xb4a500: Ruft 5 Runden lang
+Hagel herbei. Eis-
+Pokémon nehmen keinen
+Schaden.
+0xb4a5c0: Der Anwender reizt den
+Gegner, sodass er nicht
+zweimal dieselbe
+Attacke nutzen kann.
+0xb4abc0: Verhöhnt den Gegner.
+Zwingt ihn, 3 Runden
+nur Angriffe zu
+nutzen.
+0xb4b4c0: Der Anwender tauscht
+mit geistiger Kraft
+seine Fähigkeit mit
+der des Ziels.
+0xb4d700: Der Anwender überrascht
+den Gegner und trifft
+ihn. Dieser Angriff
+misslingt nie.
+0xb4da00: Der Anwender spannt
+seine Muskeln an und
+steigert Angriff und
+Verteidigung.
+0xb4e300: Der Anwender trifft den
+Gegner mit einem
+Wasserstoß. Kann ihn
+verwirren.
+0xb4e540: Ein Angriff, der dem
+Gegner Blut aussaugt.
+Die Hälfte des Schadens
+wird zu KP.
+0xb95140: Der Anwender schärft
+seine Krallen. Erhöht
+Angriff und
+Genauigkeit.
+0xb96280: Ein schneller Schlag
+auf die Beine des
+Gegners, der seine
+Initiative senkt.
+0xb9c7c0: Trifft den Gegner mit
+einem giftigen Arm oder
+Tentakel. Kann ihn
+vergiften.
+0xbc1880: Der Gegner wird von
+kochendem Wasser
+getroffen. Kann ihn
+verbrennen.
+0xbc2200: Dieser Angriff ist
+doppelt so stark, wenn
+der Gegner unter der
+Hälfte seiner KP ist.
+0xb3f6c0: Ein noch besserer Ball mit einer
+höheren Fangrate als der
+Superball.
+0xb3f900: Ein Spezialball, der nur in der
+Safari-Zone verwendet wird. Er
+trägt ein Tarnmuster.
+0xb405c0: Ein Spielzeug in Form einer
+blauen Glasflöte. Sammler zahlen
+gut dafür.
+0xb40680: Ein Spielzeug in Form einer
+gelben Glasflöte. Sammler zahlen
+gut dafür.
+0xb40740: Ein Spielzeug in Form einer
+roten Glasflöte. Sammler zahlen
+gut dafür.
+0xb40800: Ein Spielzeug in Form einer
+schwarzen Glasflöte. Sammler
+zahlen gut dafür.
+0xb408c0: Ein Spielzeug in Form einer
+schwarzen Glasflöte. Sammler
+zahlen gut dafür.
+0xb40ac0: Eine schöne Muschel aus den
+Tiefen der Abgrundhöhle. Sammler
+zahlen gut dafür.
+0xb40b80: Ein Spezialball, der im
+Freundschaftspark verwendet wird.
+0xb496c0: Ein Angriff, dessen
+Stärke und Typ vom
+Pokémon abhängen, das
+ihn einsetzt.
