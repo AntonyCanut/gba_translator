@@ -67,8 +67,12 @@ def normalize_lines(lines: List[str]) -> Tuple[List[str], int]:
         if OFFSET_RE.match(line):
             flush()
             pending = [line]
-        elif COMMENT_RE.match(line) and pending is None:
-            # Header / standalone comment outside any entry: keep verbatim.
+        elif COMMENT_RE.match(line):
+            # Standalone comment: flush any pending entry first (a comment
+            # line can never be a continuation of the previous entry's text,
+            # even when it immediately follows one with no blank-line flush
+            # of its own), then keep it verbatim.
+            flush()
             out.append(line)
         elif pending is not None:
             # Continuation of the current entry (blank lines included).

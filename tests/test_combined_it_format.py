@@ -134,6 +134,34 @@ def test_normalizer_is_idempotent_and_lossless():
     assert joined == 0, "combined_it.txt still contains multi-line entries"
 
 
+def test_normalizer_does_not_swallow_comment_after_entry():
+    """A standalone comment right after an entry (no blank-line flush) must not
+    be folded into that entry's text.
+
+    Regression: the first normalization pass treated a comment line as a
+    continuation whenever it followed an in-progress entry (``pending is not
+    None``), so a ``#``-prefixed documentation block sitting between two
+    entries got appended verbatim — as literal ``\\n#...`` text — onto the
+    *previous* entry instead of staying a standalone comment. That would have
+    injected the comment into the built ROM as part of the previous string.
+    """
+    norm = _load_module("scripts/normalize_combined_multiline.py")
+    lines = [
+        "0x1000: first entry",
+        "",
+        "# a standalone comment",
+        "# that documents the entries below",
+        "0x2000: second entry",
+    ]
+    out, _ = norm.normalize_lines(lines)
+    assert out == [
+        "0x1000: first entry",
+        "# a standalone comment",
+        "# that documents the entries below",
+        "0x2000: second entry",
+    ]
+
+
 # ── Control-token (colour / buffer / name) normalization ────────────────────
 
 # Bracket/brace control tokens from the Italian dump. The encoder has no glyph
