@@ -155,6 +155,23 @@ def test_status_badges_in_de_descriptor():
     assert "status_badges" in REGISTRY.get("de").patches
 
 
+# ─── dexnav_headers ──────────────────────────────────────────────────────────
+
+def test_dexnav_headers_dispatches_de_script():
+    # The DexNav header graphics step must resolve to the DE-specific tile patch.
+    config = REGISTRY.get("de")
+    calls = _collected_calls(config, ["dexnav_headers"])
+    assert len(calls) == 1
+    cmd = calls[0]
+    assert any(c.endswith("patch_dexnav_headers_de.py") for c in cmd)
+    assert "--rom" in cmd
+
+
+def test_dexnav_headers_in_de_descriptor():
+    # The DE descriptor must request the graphical DexNav header patch.
+    assert "dexnav_headers" in REGISTRY.get("de").patches
+
+
 # ─── version ─────────────────────────────────────────────────────────────────
 
 def test_version_step_passes_lang_code_and_build_number():

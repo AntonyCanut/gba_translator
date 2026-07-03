@@ -423,6 +423,19 @@ def apply_patches(config, out_rom: Path, translation_json: Path | None = None,
                 "--source", ENGLISH_ROM,
             ])
 
+        elif step == "dexnav_headers":
+            # Redraw the 4 DexNav column-header graphics (SEARCH LEVEL / METHOD /
+            # HIDDEN ABILITY / HELD ITEMS — baked 4bpp tiles inside a custom
+            # Unbound LZ77 block, not text) with this language's labels via
+            # scripts/patch_dexnav_headers_<code>.py. Each language ships its own
+            # script because the labels are baked pixels drawn with a per-language
+            # glyph set (German adds F/G/K, French adds none).
+            script = REPO_ROOT / f"scripts/patch_dexnav_headers_{config.code}.py"
+            if script.exists():
+                run([PYTHON, script, "--rom", out_rom])
+            else:
+                print(f"⚠ skipping dexnav_headers: {script.name} not found")
+
         elif step == "collision_check":
             # Report-only: trace live pointers in the finished ROM and flag any
             # cell whose string is not terminated before the next occupied

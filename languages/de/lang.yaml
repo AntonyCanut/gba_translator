@@ -50,6 +50,9 @@ status_abbrev:
 #   hp_labels              redraw the HP-label graphics (party menu + summary bar
 #                          + summary grey stat label — all LZ77 tiles, not text)
 #                          with the German « KP » (Kraftpunkte)
+#   dexnav_headers         redraw the 4 DexNav column-header graphics (custom
+#                          Unbound LZ77 tileset, not text) with German labels
+#                          (SUCHLEVEL / METHODE / VERST. FAEH. / ITEMS)
 #   version                stamp the NOT FOR SALE screen with DE.2.0.<build>
 #                          so the running build advertises it is the German one
 #
@@ -91,6 +94,10 @@ patches:
   # Redraw the HP-label graphics (LZ77 tiles) with German « KP » (Kraftpunkte)
   # via scripts/patch_hp_labels_de.py.
   - hp_labels
+  # Redraw the 4 DexNav column-header graphics (custom Unbound LZ77 tileset)
+  # with German labels (SUCHLEVEL / METHODE / VERST. FAEH. / ITEMS) via
+  # scripts/patch_dexnav_headers_de.py.
+  - dexnav_headers
   - version
   # Post-build audit: flag any translated cell not terminated before its
   # neighbour (fusion / freeze risk). Report-only, never fails the build.
