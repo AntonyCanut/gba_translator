@@ -60,7 +60,7 @@ def _decode(rom: bytes, offset: int, max_len: int = 256) -> str:
 @pytest.fixture(scope="module")
 def fr_rom_bytes():
     from pathlib import Path
-    rom_path = Path(__file__).resolve().parent.parent.parent / "output" / "roms" / "GenedRom-fr.gba"
+    rom_path = Path(__file__).resolve().parent.parent.parent.parent / "output" / "roms" / "GenedRom-fr.gba"
     if not rom_path.exists():
         pytest.skip("GenedRom-fr.gba not found")
     with open(rom_path, "rb") as f:

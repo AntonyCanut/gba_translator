@@ -21,7 +21,7 @@ import sys
 
 import pytest
 
-sys.path.insert(0, str(pathlib.Path(__file__).resolve().parents[2]))
+sys.path.insert(0, str(pathlib.Path(__file__).resolve().parents[3]))
 
 
 def _resolve_project_root() -> pathlib.Path:
@@ -38,7 +38,7 @@ def _resolve_project_root() -> pathlib.Path:
     env_root = os.environ.get("GBA_PROJECT_ROOT")
     if env_root:
         return pathlib.Path(env_root)
-    return pathlib.Path(__file__).resolve().parent.parent.parent
+    return pathlib.Path(__file__).resolve().parent.parent.parent.parent
 
 
 PROJECT_ROOT = _resolve_project_root()

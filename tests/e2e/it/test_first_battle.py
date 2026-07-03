@@ -48,7 +48,7 @@ def _project_root() -> pathlib.Path:
     env_root = os.environ.get("GBA_PROJECT_ROOT")
     if env_root:
         return pathlib.Path(env_root)
-    return _HERE.parent.parent.parent
+    return _HERE.parent.parent.parent.parent
 
 
 PROJECT_ROOT = _project_root()

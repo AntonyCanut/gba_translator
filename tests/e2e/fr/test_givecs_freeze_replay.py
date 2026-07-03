@@ -30,7 +30,7 @@ import subprocess
 
 import pytest
 
-PROJECT_ROOT = pathlib.Path(__file__).resolve().parent.parent.parent
+PROJECT_ROOT = pathlib.Path(__file__).resolve().parent.parent.parent.parent
 FR_ROM_PATH = PROJECT_ROOT / "output" / "roms" / "GenedRom-fr.gba"
 SAVESTATE_FIXTURE = PROJECT_ROOT / "tests" / "fixtures" / "saves" / "givecs_freeze.ss9"
 VERIFY_SCRIPT = PROJECT_ROOT / "scripts" / "verify_givecs_no_freeze.mts"

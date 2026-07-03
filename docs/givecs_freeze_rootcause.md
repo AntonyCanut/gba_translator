@@ -79,9 +79,9 @@ unknown-length blob, and they are not on any word-wrapped path.
   bug and the fix resolves it.
 - **`make build-fr`** runs the patch in the real pipeline: give-CS structs
   `0x083DEA80`/`0x0887AD30` resolve to a terminated copy of the Cut description.
-- **Deterministic CI guard** — `tests/e2e/test_givecs_move_desc_freeze.py`: no
+- **Deterministic CI guard** — `tests/e2e/fr/test_givecs_move_desc_freeze.py`: no
   *clustered* pointer (table / struct array) into the pool reaches an
   unterminated French description. Red on the buggy build (the 4 give-CS struct
   cells), green on the fixed build; English satisfies it as a sanity anchor.
-- **In-engine replay guard** — `tests/e2e/test_givecs_freeze_replay.py` drives
+- **In-engine replay guard** — `tests/e2e/fr/test_givecs_freeze_replay.py` drives
   the verifier headlessly and skips cleanly when mGBA is unavailable.

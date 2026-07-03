@@ -22,7 +22,7 @@ import pytest
 
 from src.core.text_codec import TextDecoder
 
-REPO = Path(__file__).resolve().parents[2]
+REPO = Path(__file__).resolve().parents[3]
 FR_ROM = REPO / "output" / "roms" / "GenedRom-fr.gba"
 COMBINED_FR = REPO / "languages" / "fr" / "combined_fr.txt"
 COMBINED_EN = REPO / "languages" / "en" / "combined_en.txt"

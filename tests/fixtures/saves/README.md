@@ -71,7 +71,7 @@ stores it**, then reports CLEAN vs DIVERGENT.
   or re-download the current patch.
 
 ### CI guards (deterministic, hold)
-* `tests/e2e/test_object_gain_sequence.py` — 42 assertions pinning the whole
+* `tests/e2e/fr/test_object_gain_sequence.py` — 42 assertions pinning the whole
   gift path (strings, giveitem bytecode, msgbox pointers incl. relocated, item
   struct) byte-identical to English. Verified red on each injected corruption.
 * `tests/e2e-playwright/specs/object-gain-forget-sequence.spec.ts` — reads the

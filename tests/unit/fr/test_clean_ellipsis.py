@@ -3,7 +3,7 @@ import pathlib
 import re
 from importlib.machinery import SourceFileLoader
 
-_SCRIPT = pathlib.Path(__file__).resolve().parents[2] / "scripts" / "clean_ellipsis_fr.py"
+_SCRIPT = pathlib.Path(__file__).resolve().parents[3] / "scripts" / "clean_ellipsis_fr.py"
 mod = SourceFileLoader("clean_ellipsis_fr", str(_SCRIPT)).load_module()
 
 

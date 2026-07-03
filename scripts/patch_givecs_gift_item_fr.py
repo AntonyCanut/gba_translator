@@ -25,7 +25,7 @@ renders the static item *name*, never this description).
 The relocated copy is itself well-formed (terminated, no dangling control
 code) so this is not a live freeze today, but it leaves the gift item's struct
 silently diverged from the documented/tested invariant
-(``tests/e2e/test_object_gain_sequence.py::test_give_cs_item_struct_matches_english``)
+(``tests/e2e/fr/test_object_gain_sequence.py::test_give_cs_item_struct_matches_english``)
 and one relocation slot away from repeating the original "pas de gain d'objet"
 freeze class if a future build pass relocates the same text less carefully.
 

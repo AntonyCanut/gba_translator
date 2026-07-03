@@ -26,7 +26,7 @@ from pathlib import Path
 
 import pytest
 
-PROJECT_ROOT = Path(__file__).resolve().parent.parent.parent
+PROJECT_ROOT = Path(__file__).resolve().parent.parent.parent.parent
 EN_ROM = PROJECT_ROOT / "input" / "roms" / "englishrom.gba"
 
 from scripts.patch_version_fr import (  # noqa: E402
