@@ -28,6 +28,16 @@ Cells that already hold the Italian name are skipped (idempotent), pointer
 cells never match a key, and item data after the 14-byte name field is never
 touched.
 
+Beyond the name cells, ``apply_item_desc_fixes`` covers the general
+(non-TM/MN) item *description* strings (Poké Ball catch-rate blurbs, Berry
+effects, sprays, potions …) that live in the fixed tables at 0x3D0000 /
+0x7B0000 / 0xEB0000, sourced from ``combined_it.txt`` and keyed by each item
+entry's ``+0x14`` description pointer. It is a data-driven safety net: it only
+rewrites descriptions the generic pipeline left byte-identical to English (so
+it never clobbers text the build already translated/relocated), writing short
+Italian in place and relocating longer text into free space. See that
+function's docstring for the full contract.
+
 Italian names are the official localised names, sourced from the PokéAPI
 item-name data (which mirrors the in-game text dumps) and cross-checked
 against Bulbapedia's "In other languages" tables for a sample of entries;
@@ -55,13 +65,22 @@ Usage:
 from __future__ import annotations
 
 import argparse
+import re
+import struct
 import sys
 from pathlib import Path
 
-sys.path.insert(0, str(Path(__file__).resolve().parents[3]))
+REPO_ROOT = Path(__file__).resolve().parents[3]
+sys.path.insert(0, str(REPO_ROOT))
 
 from src.text.charmap_data import BYTE_TO_CHAR, CHAR_TO_BYTE
 from src.core.text_codec import TextEncoder
+from src.core.text_reinserter import FreeSpaceAllocator
+
+# Authoritative Italian text + the pristine English ROM used to key the
+# general item-description pass (see apply_item_desc_fixes below).
+COMBINED_IT = REPO_ROOT / "languages/it/combined_it.txt"
+ENGLISH_ROM = REPO_ROOT / "input/roms/englishrom.gba"
 
 # CFRU item table (gItems). Each entry is 44 bytes: name[14] then item data
 # (id u16 at +14, price u16 at +16, …, description pointer at +0x14). Only the
@@ -481,31 +500,78 @@ def apply_item_name_fixes(data: bytearray, names: dict) -> int:
     return patched
 
 
-# ROM offset → corrected Italian description (kept empty: no genuinely
-# overflowing Italian item description has been identified yet). The function
-# below is kept for structural parity with the FR script so a future overflow
-# fix can be added the same way, without touching apply_item_name_fixes.
-ITEM_DESC_OVERRIDES: dict[int, str] = {}
-
 ROM_POINTER_BASE = 0x08000000
 DESC_PTR_OFFSET = 0x14  # within each 44-byte item entry
 
+# ROM offset → hand-authored Italian description, applied in place (the text
+# must be no longer than the English slot it overwrites). This dict stays empty
+# by default — the general item-description coverage is data-driven from
+# combined_it.txt (see apply_item_desc_fixes). Keep it as an escape hatch for a
+# one-off cell that needs manual wording, mirroring the French script.
+ITEM_DESC_OVERRIDES: dict[int, str] = {}
 
-def apply_item_desc_fixes(data: bytearray) -> int:
-    """Overwrite specific item description strings in-place.
+# The general (non-TM/MN) item-description tables. Poké Ball catch-rate blurbs,
+# Berry effects, sprays, potions and the rest of the ordinary-item descriptions
+# have their bytes here; the item entry's +0x14 pointer targets one of these
+# windows. TM/MN descriptions live in a different region (0xA30000–0xA50000) and
+# are handled by the dedicated tm_item_descriptions anti-freeze pass, so those
+# windows are intentionally excluded here to avoid double-patching.
+ITEM_DESC_REGIONS = (
+    (0x3D0000, 0x3E0000),
+    (0x7B0000, 0x7C0000),
+    (0xEB0000, 0xEC0000),
+)
 
-    Each key in ITEM_DESC_OVERRIDES is a raw ROM offset where the description
-    bytes live. The new text must be shorter than (or equal to) the original
-    so it always fits without relocation. The encoder appends 0xFF automatically.
-    Returns the number of overrides applied.
-    """
+_DESC_LINE_RE = re.compile(r"\s*0x([0-9a-fA-F]+)\s*:\s*(.*)")
+
+
+def _in_desc_region(ptr: int) -> bool:
+    return any(lo <= ptr < hi for lo, hi in ITEM_DESC_REGIONS)
+
+
+def load_combined(path: Path) -> dict[int, str]:
+    """offset -> authoritative Italian text (last entry wins, per repo rules)."""
+    mapping: dict[int, str] = {}
+    with path.open("r", encoding="utf-8", errors="replace") as handle:
+        for line in handle:
+            match = _DESC_LINE_RE.match(line.rstrip("\n"))
+            if match:
+                mapping[int(match.group(1), 16)] = match.group(2)
+    return mapping
+
+
+def _normalize_desc(text: str) -> str:
+    """Mirror the inline-override escape handling: only plain ``\\n`` line
+    breaks (and the rare ``\\l``/``\\p`` scroll codes) appear in these item
+    descriptions — convert them so the encoder emits the right control byte."""
+    return text.replace("\\n", "\n").replace("\\l", "<0xFA>").replace("\\p", "<0xFB>")
+
+
+def _deref(rom, offset: int):
+    if offset + 4 > len(rom):
+        return None
+    value = int.from_bytes(rom[offset:offset + 4], "little")
+    if ROM_POINTER_BASE <= value < ROM_POINTER_BASE + 0x02000000:
+        return value - ROM_POINTER_BASE
+    return None
+
+
+def _string_bytes(rom, offset: int):
+    """The bytes of the string at ``offset`` (excluding the 0xFF terminator)."""
+    end = rom.find(b"\xff", offset)
+    if end < 0:
+        return None
+    return bytes(rom[offset:end])
+
+
+def _apply_overrides(data: bytearray) -> int:
+    """Apply the hand-authored ITEM_DESC_OVERRIDES in place (never expands)."""
     patched = 0
     for rom_offset, italian_text in ITEM_DESC_OVERRIDES.items():
         encoded = TextEncoder.encode_pokemon(italian_text)
         if rom_offset + len(encoded) > len(data):
             print(f"  WARN: desc override at 0x{rom_offset:X} out of ROM range — skipped")
             continue
-        # Measure current length to ensure we don't expand the slot
         end = data.find(b"\xff", rom_offset)
         if end < 0 or len(encoded) > (end - rom_offset + 1):
             print(f"  WARN: desc override at 0x{rom_offset:X} would expand slot — skipped")
@@ -513,6 +579,118 @@ def apply_item_desc_fixes(data: bytearray) -> int:
         data[rom_offset:rom_offset + len(encoded)] = encoded
         patched += 1
     return patched
+
+
+def apply_item_desc_fixes(
+    data: bytearray,
+    combined: dict[int, str] | None = None,
+    source_rom: bytes | None = None,
+) -> int:
+    """Translate the general item descriptions from ``combined_it.txt``.
+
+    The ordinary-item description strings (Poké Ball catch blurbs, Berry
+    effects, sprays, potions …) sit in the fixed tables listed in
+    ITEM_DESC_REGIONS. They are keyed by the item entry's ``+0x14`` pointer.
+    Because ``combined_it.txt`` offsets are **English** ROM offsets, every item
+    is matched on the pointer it holds in the *pristine English* ROM
+    (``source_rom``); the translated text is then written at the item's **live**
+    pointer in the build (which the generic pipeline may already have
+    relocated).
+
+    Only descriptions the pipeline left byte-identical to English are touched —
+    a cell the pipeline already translated (or relocated) is skipped, so this
+    pass is a no-op safety net when the generic build already covers a bucket
+    and never clobbers good Italian text. Short enough Italian is written in
+    place; longer text is relocated into ROM free space and the item entry is
+    repointed. If free space is exhausted the entry is left English (a warning
+    is printed) rather than aborting the build. Idempotent.
+
+    ``combined`` / ``source_rom`` default to the on-disk Italian combined file
+    and the English ROM, so the build's ``--rom``-only invocation just works.
+    """
+    patched = _apply_overrides(data)
+
+    if combined is None:
+        combined = load_combined(COMBINED_IT) if COMBINED_IT.exists() else {}
+    if source_rom is None:
+        source_rom = ENGLISH_ROM.read_bytes() if ENGLISH_ROM.exists() else None
+    if not combined or source_rom is None:
+        return patched
+
+    allocator: FreeSpaceAllocator | None = None
+    relocated: dict[int, int] = {}  # english desc offset -> new live offset
+    stats = {"in_place": 0, "relocated": 0, "reused": 0, "no_space": 0}
+
+    i = 0
+    while True:
+        base = ITEM_TABLE_BASE + i * ITEM_STRIDE
+        if base + ITEM_STRIDE > len(data) or base + ITEM_STRIDE > len(source_rom):
+            break
+        i += 1
+
+        en_ptr = _deref(source_rom, base + DESC_PTR_OFFSET)
+        if en_ptr is None or not _in_desc_region(en_ptr):
+            continue
+        italian = combined.get(en_ptr)
+        if not italian:
+            continue
+
+        live_ptr = _deref(data, base + DESC_PTR_OFFSET)
+        if live_ptr is None:
+            continue
+
+        # Only rewrite a description the pipeline left byte-identical to English.
+        en_text = _string_bytes(source_rom, en_ptr)
+        live_text = _string_bytes(data, live_ptr)
+        if en_text is None or live_text is None or live_text != en_text:
+            continue
+
+        encoded = TextEncoder.encode_pokemon(_normalize_desc(italian))
+
+        # A description already relocated for a sibling item that shares this
+        # English pointer: just repoint, don't allocate a second copy.
+        if en_ptr in relocated:
+            data[base + DESC_PTR_OFFSET:base + DESC_PTR_OFFSET + 4] = struct.pack(
+                "<I", relocated[en_ptr] + ROM_POINTER_BASE
+            )
+            stats["reused"] += 1
+            continue
+
+        slot = len(en_text) + 1  # English bytes + its 0xFF terminator
+        if len(encoded) <= slot:
+            # Fits: overwrite in place (encoder already appended the 0xFF); wipe
+            # any English tail past the new terminator so no stale glyphs trail.
+            data[live_ptr:live_ptr + len(encoded)] = encoded
+            if len(encoded) < slot:
+                data[live_ptr + len(encoded):live_ptr + slot] = bytes(
+                    slot - len(encoded)
+                )
+            stats["in_place"] += 1
+            continue
+
+        if allocator is None:
+            allocator = FreeSpaceAllocator(data, reserved_rom=source_rom)
+        new_offset = allocator.allocate(len(encoded))
+        if new_offset is None:
+            stats["no_space"] += 1
+            continue
+        data[new_offset:new_offset + len(encoded)] = encoded
+        data[base + DESC_PTR_OFFSET:base + DESC_PTR_OFFSET + 4] = struct.pack(
+            "<I", new_offset + ROM_POINTER_BASE
+        )
+        relocated[en_ptr] = new_offset
+        stats["relocated"] += 1
+
+    total = stats["in_place"] + stats["relocated"] + stats["reused"]
+    if total or stats["no_space"]:
+        print(
+            "  general item descriptions ← combined_it.txt: "
+            f"{stats['in_place']} in place, {stats['relocated']} relocated, "
+            f"{stats['reused']} repointed"
+            + (f", {stats['no_space']} left English (no free space)"
+               if stats["no_space"] else "")
+        )
+    return patched + total
 
 
 def main() -> int:
@@ -527,7 +705,7 @@ def main() -> int:
         args.rom.write_bytes(data)
     print(f"Item name cells translated: {patched} (of {len(ALL_NAMES)} known)")
     if desc_patched:
-        print(f"Item description overrides applied: {desc_patched}")
+        print(f"Item description strings translated: {desc_patched}")
     return 0
 
 
