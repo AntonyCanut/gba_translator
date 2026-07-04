@@ -17,10 +17,14 @@ incenses, mails, fishing rods, fossils, HMs…
 
 This script rewrites those inline cells in place, byte-exact, with their
 official German (Germany) names. It is data-driven: each cell whose current
-name exactly matches an English key in ALL_NAMES is rewritten with the German
-value. Cells that already hold the German name are skipped (idempotent),
-pointer cells never match an English key, and item data after the 14-byte
-name field is never touched.
+name exactly matches a source-string key in ALL_NAMES is rewritten with the
+German value. That source string is English for almost every item, but the
+standard Poké Ball line is a special case: the Unbound base ROM ships those
+inline cells PRE-LOCALISED TO FRENCH, so their keys are the French source
+strings ("Hyper Ball", "Super Ball", …) mapped to the German name (see the
+"Standard Poké Ball line" block in ITEM_NAMES). Cells that already hold the
+German name are skipped (idempotent), pointer cells never match a key, and
+item data after the 14-byte name field is never touched.
 
 German names are the official localised names (verified against Bulbapedia
 "In other languages" tables / Pokéwiki); only names that fit the 13-glyph
@@ -360,6 +364,28 @@ ITEM_NAMES = {
     "Sport Ball": "Turnierball",
     "Beast Ball": "Ultraball",
     "Dream Ball": "Traumball",
+    # Standard Poké Ball line — see the IT patch for the full rationale: the
+    # Unbound base ROM ships these inline gItems cells (10-21/61-71 at
+    # 0x876074) PRE-LOCALISED TO FRENCH ("Hyper Ball"/"Super Ball"/…), never
+    # English, so the key is the *French* source string and the value is the
+    # official German name. FR needs no entry (already correct); DE remaps.
+    # Every value fits the 13-glyph cell.
+    "Hyper Ball": "Hyperball",      # Ultra Ball   (FR source "Hyper Ball")
+    "Super Ball": "Superball",      # Great Ball   (FR source "Super Ball")
+    "Master Ball": "Meisterball",   # Master Ball  (FR source "Master Ball")
+    "Poké Ball": "Pokéball",        # Poké Ball    (FR source "Poké Ball")
+    "Safari Ball": "Safariball",    # Safari Ball  (FR source "Safari Ball")
+    "Filet Ball": "Netzball",       # Net Ball     (FR source "Filet Ball")
+    "Scuba Ball": "Tauchball",      # Dive Ball    (FR source "Scuba Ball")
+    "Faiblo Ball": "Nestball",      # Nest Ball    (FR source "Faiblo Ball")
+    "Bis Ball": "Wiederball",       # Repeat Ball  (FR source "Bis Ball")
+    "Chrono Ball": "Timerball",     # Timer Ball   (FR source "Chrono Ball")
+    "Luxe Ball": "Luxusball",       # Luxury Ball  (FR source "Luxe Ball")
+    "Honor Ball": "Premierball",    # Premier Ball (FR source "Honor Ball")
+    "Mémoire Ball": "Jubelball",    # Cherish Ball (FR source "Mémoire Ball")
+    "Sombre Ball": "Finsterball",   # Dusk Ball    (FR source "Sombre Ball")
+    "Soin Ball": "Heilball",        # Heal Ball    (FR source "Soin Ball")
+    "Rapide Ball": "Flottball",     # Quick Ball   (FR source "Rapide Ball")
     # Flutes
     "Sun Flute": "Sonnenflöte",
     "Moon Flute": "Mondflöte",

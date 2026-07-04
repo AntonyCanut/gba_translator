@@ -97,10 +97,21 @@ class TestItemNameData(unittest.TestCase):
             "Exp. Share", "Soft Sand", "Room Service", "Bug Gem",
             "Bug Memory", "Bottle Cap", "Eon Ticket",
         }
+        # The standard Poké Ball line is keyed on its FRENCH source string: the
+        # Unbound base ROM ships those inline gItems cells pre-localised to
+        # French (see the item_names.py docstring). FR needs no entry — the
+        # source string already IS the correct French name — so IT/DE
+        # legitimately carry these 16 keys that FR does not.
+        standard_ball_keys = {
+            "Hyper Ball", "Super Ball", "Master Ball", "Poké Ball",
+            "Safari Ball", "Filet Ball", "Scuba Ball", "Faiblo Ball",
+            "Bis Ball", "Chrono Ball", "Luxe Ball", "Honor Ball",
+            "Mémoire Ball", "Sombre Ball", "Soin Ball", "Rapide Ball",
+        }
         missing = set(fr.ITEM_NAMES) - set(ITEM_NAMES)
         extra = set(ITEM_NAMES) - set(fr.ITEM_NAMES)
         self.assertEqual(missing, expected_exclusions)
-        self.assertEqual(extra, set())
+        self.assertEqual(extra, standard_ball_keys)
         self.assertEqual(set(fr.BERRY_NAMES), set(BERRY_NAMES))
 
 

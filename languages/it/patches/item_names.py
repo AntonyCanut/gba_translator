@@ -17,10 +17,16 @@ incenses, mails, fishing rods, fossils, HMs…
 
 This script rewrites those inline cells in place, byte-exact, with their
 official Italian (Italy) names. It is data-driven: each cell whose current
-name exactly matches an English key in ALL_NAMES is rewritten with the
-Italian value. Cells that already hold the Italian name are skipped
-(idempotent), pointer cells never match an English key, and item data after
-the 14-byte name field is never touched.
+name exactly matches a source-string key in ALL_NAMES is rewritten with the
+Italian value. That source string is English for almost every item, but the
+standard Poké Ball line (Poké/Great/Ultra/Master/Safari/Net/Dive/Nest/Repeat/
+Timer/Luxury/Premier/Dusk/Heal/Quick/Cherish Ball) is a special case: the
+Unbound base ROM ships those inline cells PRE-LOCALISED TO FRENCH, so their
+keys are the French source strings ("Hyper Ball", "Super Ball", …) mapped to
+the Italian name (see the "Standard Poké Ball line" block in ITEM_NAMES).
+Cells that already hold the Italian name are skipped (idempotent), pointer
+cells never match a key, and item data after the 14-byte name field is never
+touched.
 
 Italian names are the official localised names, sourced from the PokéAPI
 item-name data (which mirrors the in-game text dumps) and cross-checked
@@ -361,6 +367,30 @@ ITEM_NAMES = {
     'Sport Ball': 'Gara Ball',
     'Beast Ball': 'UC Ball',
     'Dream Ball': 'Dream Ball',
+    # Standard Poké Ball line. Unlike every entry above (English in the Unbound
+    # source, keyed on their English name), the base ROM ships these inline
+    # cells PRE-LOCALISED TO FRENCH — so the key is the *French* source string
+    # and the value is the official Italian (Italy) name. Confirmed in a built
+    # GenedRom-it.gba: gItems cells 10-21/61-71 (base 0x876074) decode as
+    # "Hyper Ball"/"Super Ball"/"Filet Ball"/… (French), never English. The FR
+    # build needs no entry here (the source strings already ARE the correct
+    # French names); IT/DE remap them. Every value fits the 13-glyph cell.
+    'Hyper Ball': 'Ultra Ball',     # Ultra Ball  (FR source "Hyper Ball")
+    'Super Ball': 'Mega Ball',      # Great Ball  (FR source "Super Ball")
+    'Master Ball': 'Master Ball',   # Master Ball (identical FR/IT)
+    'Poké Ball': 'Poké Ball',       # Poké Ball   (identical FR/IT)
+    'Safari Ball': 'Safari Ball',   # Safari Ball (identical FR/IT)
+    'Filet Ball': 'Rete Ball',      # Net Ball    (FR source "Filet Ball")
+    'Scuba Ball': 'Sub Ball',       # Dive Ball   (FR source "Scuba Ball")
+    'Faiblo Ball': 'Minor Ball',    # Nest Ball   (FR source "Faiblo Ball")
+    'Bis Ball': 'Bis Ball',         # Repeat Ball (identical FR/IT)
+    'Chrono Ball': 'Timer Ball',    # Timer Ball  (FR source "Chrono Ball")
+    'Luxe Ball': 'Chic Ball',       # Luxury Ball (FR source "Luxe Ball")
+    'Honor Ball': 'Premier Ball',   # Premier Ball(FR source "Honor Ball")
+    'Mémoire Ball': 'Pregio Ball',  # Cherish Ball(FR source "Mémoire Ball")
+    'Sombre Ball': 'Scuro Ball',    # Dusk Ball   (FR source "Sombre Ball")
+    'Soin Ball': 'Cura Ball',       # Heal Ball   (FR source "Soin Ball")
+    'Rapide Ball': 'Velox Ball',    # Quick Ball  (FR source "Rapide Ball")
     # Flutes
     'Sun Flute': 'Flauto solare',
     'Moon Flute': 'Flauto lunare',
