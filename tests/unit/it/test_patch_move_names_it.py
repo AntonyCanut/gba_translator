@@ -44,18 +44,21 @@ class TestCombinedItMoveNames(unittest.TestCase):
         ]
         self.assertEqual(missing, [], f"{len(missing)} move index(es) missing an Italian name")
 
-    def test_most_italian_move_names_fit_cell(self):
-        """Many official Italian move names are longer than French/English and
-        overflow the 13-byte cell (~262/894 today, e.g. "Attacco d'Ala" /
-        Wing Attack at 14 bytes) — apply_to_rom warns and skips those rather
-        than truncating/corrupting (see test_patch_move_names_fr.py), exactly
-        like the ~130 over-long ability names before B-131's shortening pass.
-        Shortening these is editorial follow-up work, not this guard's job;
-        it only asserts the split doesn't silently blow out further and that
-        the large majority of the roster is genuinely patchable today.
+    def test_all_italian_move_names_fit_cell(self):
+        """Every authored Italian move name must fit the real table's 13-byte
+        cell so it actually reaches the ROM.
+
+        Originally ~262/894 official Italian names overflowed the cell (e.g.
+        "Attacco d'Ala" / Wing Attack at 14 bytes, "Potenziamento psichico" at
+        23) and apply_to_rom warned-and-skipped them, leaving the baked-in
+        French name in place (see test_patch_move_names_fr.py). F-104 shortened
+        all of them editorially — the exact analogue of B-131's ability-name
+        shortening pass — so the whole roster is now patchable. This guard is
+        deliberately strict: a single overflowing name reintroduced by a future
+        combined_it.txt edit fails here rather than silently shipping French.
         """
         entries = _it_entries()
-        fits, overflow = 0, 0
+        fits, overflow, overflow_names = 0, 0, []
         for index in range(MOVE_COUNT):
             offset = LEGACY_TABLE_OFFSET + index * MOVE_STRIDE
             name = entries.get(offset)
@@ -66,8 +69,14 @@ class TestCombinedItMoveNames(unittest.TestCase):
                 fits += 1
             else:
                 overflow += 1
-        self.assertGreater(fits, 600, "fewer patchable move names than expected")
-        self.assertLess(overflow, 300, "more overflowing move names than expected — investigate regression")
+                overflow_names.append(f"index {index}: {name!r} ({len(encoded)} bytes)")
+        self.assertEqual(
+            overflow,
+            0,
+            f"{overflow} Italian move name(s) overflow the {MOVE_STRIDE}-byte "
+            f"cell and would ship French — shorten them:\n" + "\n".join(overflow_names),
+        )
+        self.assertGreater(fits, 800, "fewer patchable move names than expected")
 
     def test_known_canonical_mappings(self):
         entries = _it_entries()
