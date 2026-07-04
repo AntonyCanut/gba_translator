@@ -140,6 +140,18 @@ class TestPatchMonths(unittest.TestCase):
         with self.assertRaises(ValueError):
             mod.patch_months(self.data)
 
+    def test_july_fits_a_four_byte_live_slot(self):
+        # CI run #29 failed here after the generic DE pipeline relocated July
+        # to a 4-byte live slot. The patch must stay within that budget.
+        ptr_off = mod.MONTH_PTR_TABLE_FILE + 4 * (7 - 1)
+        relocated = 0x1000
+        self.data[ptr_off : ptr_off + 4] = struct.pack("<I", 0x08000000 + relocated)
+        self.data[relocated : relocated + 5] = mod.encode("Jul.") + b"\xff"
+
+        mod.patch_months(self.data)
+
+        self.assertEqual(_decode(_read_cstr(self.data, relocated)), "Juli")
+
 
 if __name__ == "__main__":
     unittest.main()

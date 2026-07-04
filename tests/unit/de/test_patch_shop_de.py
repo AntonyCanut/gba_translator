@@ -62,6 +62,19 @@ class TestShopDe(unittest.TestCase):
         with self.assertRaises(ValueError):
             mod.apply_patches(rom)
 
+    def test_default_allocation_does_not_require_spanish_reserved_space(self):
+        # The DE build runs this late, after the generic builder already used
+        # the Spanish pointer-proof ROM. Reserving every populated Spanish byte
+        # again can exhaust all free blocks; default patching must rely on the
+        # current DE ROM's free-space map instead.
+        reserved = b"\x00" * (mod._IN_CUBE_OFFSET + 4096)
+        with self.assertRaises(ValueError):
+            mod.apply_patches(_build_rom(), reserved_rom=reserved)
+
+        rom = _build_rom()
+        applied = mod.apply_patches(rom)
+        self.assertEqual(applied, 2)
+
 
 if __name__ == "__main__":
     unittest.main()

@@ -154,7 +154,9 @@ MONTH_DE = {
     3: "März ",
     4: "Apr.",
     5: "Mai ",
-    7: "Juli ",
+    # Keep July to the 4-byte abbreviation: the generic DE build can relocate
+    # this month to a live slot that is only four content bytes wide.
+    7: "Juli",
     8: "Aug.",
     9: "Sept.",
     10: "Okt. ",

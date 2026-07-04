@@ -118,6 +118,30 @@ class TestApplyAndVerify(unittest.TestCase):
         self.assertEqual(stats["skipped"], 3)
         self.assertEqual(mod.verify(rom, names=de, tables=self.TABLES), [])
 
+    def test_default_allocation_does_not_require_spanish_reserved_space(self):
+        # The full DE release build runs this patch late, after the generic
+        # reinserter has already honored the Spanish pointer-proof ROM. CI run
+        # #29 exposed that reserving Spanish-populated bytes again can exhaust
+        # all available blocks, even though the current DE ROM has safe room.
+        en = ["Hardy", "Lonely", "Brave"]
+        de = ["Robust", "Einsam", "Mutig"]
+        reserved = b"\x00" * 0x10000
+        rom_with_reservation = self._build_rom(en)
+        self.assertEqual(
+            mod.apply(
+                rom_with_reservation,
+                names=de,
+                tables=self.TABLES,
+                reserved_rom=reserved,
+            )["failed"],
+            3,
+        )
+
+        rom_without_reservation = self._build_rom(en)
+        stats = mod.apply(rom_without_reservation, names=de, tables=self.TABLES)
+        self.assertEqual(stats["failed"], 0)
+        self.assertEqual(mod.verify(rom_without_reservation, names=de, tables=self.TABLES), [])
+
 
 if __name__ == "__main__":
     unittest.main()
