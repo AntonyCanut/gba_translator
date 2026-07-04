@@ -92,6 +92,18 @@ status_abbrev:
 #   ability_names           write Italian ability names into the fixed 17-byte
 #                           table from combined_it.txt (over-long names skipped,
 #                           never corrupted).
+#   move_names              write Italian move names into the real fixed
+#                           13-byte move-name table (0x1B2980, 894 entries).
+#                           combined_it.txt's move-name text was authored
+#                           against a stale, non-live "legacy" offset
+#                           (0xA40A10) that actually sits inside the generic
+#                           builder's Pokédex free-space pool; this patch
+#                           remaps each entry by index to the real table
+#                           instead (see languages/fr/patches/move_names.py).
+#                           Every sampled build — including the pristine EN
+#                           reference ROM — ships this table pre-filled with
+#                           French names, so without this patch IT currently
+#                           shows French move names, not English.
 #   tm_item_descriptions    anti-freeze pass: terminate/relocate the MT/MN item
 #                           descriptions in place, sourced from combined_it.txt.
 #
@@ -154,6 +166,7 @@ patches:
   - status_abbrevs
   # ── Italian text written in place (no free-space relocation) ──────────────
   - ability_names           # fixed 17-byte ability-name table ← combined_it
+  - move_names              # real fixed 13-byte move-name table (0x1B2980)
   - tm_item_descriptions    # MT/MN item descriptions (anti-freeze, in place)
   - item_names
   - cfru_type_names

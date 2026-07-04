@@ -35,6 +35,7 @@ sys.path.insert(0, str(ROOT / "scripts"))  # build_language is imported by bare 
 # ``languages/fr/patches/<name>.py`` (same basename).
 WRAPPERS = {
     "ability_names": ["--combined", "--combined-en"],
+    "move_names": ["--combined"],
     "tm_item_descriptions": ["--combined"],
     "dup_move_descriptions": ["--combined"],
     "meteorite_dialogue": ["--source", "--combined"],
@@ -80,7 +81,7 @@ def test_wrapper_never_references_french_data(name):
 
 
 def test_combined_wrappers_point_at_italian_combined():
-    for name in ("ability_names", "tm_item_descriptions",
+    for name in ("ability_names", "move_names", "tm_item_descriptions",
                  "meteorite_dialogue", "mission_descriptions"):
         mod = _it_wrapper(name)
         cmd = " ".join(str(p) for p in mod.make_command(DUMMY_ROM))
