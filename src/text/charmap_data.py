@@ -61,10 +61,10 @@ CHAR_TO_BYTE: Dict[str, int] = {
     'ú': 0x27, 'û': 0x28, 'ñ': 0x29,
     'â': 0x68,
     'í': 0x6F,
-    # German umlauts — assigned to free slots 0x60-0x65.
+    # German umlauts — assigned to slots 0xF1-0xF6.
     # Glyphs are drawn by languages/de/patches/font.py (DE build only).
-    'Ä': 0x60, 'Ö': 0x61, 'Ü': 0x62,
-    'ä': 0x63, 'ö': 0x64, 'ü': 0x65,
+    'Ä': 0xF1, 'Ö': 0xF2, 'Ü': 0xF3,
+    'ä': 0xF4, 'ö': 0xF5, 'ü': 0xF6,
 }
 
 # byte -> char (reverse mapping, first char wins for duplicates)
