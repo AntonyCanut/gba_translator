@@ -50,6 +50,7 @@ PATCH_OPTIONS_FOOTER_SCRIPT := languages/fr/patches/options_footer.py
 PATCH_STATUS_ABBREVS_SCRIPT := languages/fr/patches/status_abbrevs.py
 PATCH_STATUS_BADGES_SCRIPT := languages/fr/patches/status_badges.py
 PATCH_HP_LABELS_SCRIPT := languages/fr/patches/hp_labels.py
+PATCH_POKEDEX_STAT_LABELS_FR_SCRIPT := languages/fr/patches/pokedex_stat_labels.py
 PATCH_TYPE_ICONS_SCRIPT := languages/fr/patches/type_icons.py
 PATCH_DEXNAV_HEADERS_SCRIPT := languages/fr/patches/dexnav_headers.py
 PATCH_SHOP_FR_SCRIPT := languages/fr/patches/shop.py
@@ -233,6 +234,7 @@ build-fr: $(ENGLISH_EXTRACT) $(SPANISH_EXTRACT) $(BUILD_SCRIPT)
 	@$(PYTHON) $(PATCH_BATTLE_RECALL_STRINGS_SCRIPT) --rom $(FR_BUILD)
 	@$(PYTHON) $(PATCH_STATUS_BADGES_SCRIPT) --rom $(FR_BUILD)
 	@$(PYTHON) $(PATCH_HP_LABELS_SCRIPT) --rom $(FR_BUILD)
+	@$(PYTHON) $(PATCH_POKEDEX_STAT_LABELS_FR_SCRIPT) --rom $(FR_BUILD)
 	@$(PYTHON) $(PATCH_TYPE_ICONS_SCRIPT) --rom $(FR_BUILD)
 	@$(PYTHON) $(PATCH_DEXNAV_HEADERS_SCRIPT) --rom $(FR_BUILD)
 	@$(PYTHON) $(PATCH_SHOP_FR_SCRIPT) --rom $(FR_BUILD)
