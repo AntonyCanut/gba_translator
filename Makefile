@@ -273,6 +273,7 @@ build-fr: $(FRENCH_EXTRACT) $(SPANISH_EXTRACT) $(BUILD_SCRIPT)
 		--source $(FRENCH_ROM) \
 		--combined languages/fr/combined_fr.txt
 	@$(PYTHON) $(PATCH_TRAINER_CARD_DATE_FR_SCRIPT) --rom $(FR_BUILD)
+	@$(PYTHON) scripts/insert_sprite.py --rom $(FR_BUILD) --lang fr --sprite selection --bmp languages/fr/sprites/selection.bmp
 	@echo "✓ FR ROM built — vérification des traductions de lieux..."
 	@$(PYTHON) -m pytest tests/test_location_names_fr.py -q --tb=short
 	@echo "✓ Vérification des noms de nature (pointeurs vivants)..."
