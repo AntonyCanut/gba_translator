@@ -87,9 +87,11 @@ status_abbrev:
 #   trainer_card_date       rebuilds the Trainer Card start date in Day Month Year
 #                            order via a free-space builder + veneer redirect
 #
-# Further richer passes (mission boxes, move descriptions, ability/item
-# pointer-relocated names, …) will be added here as more German translation
-# content is ported from the French pipeline.
+# Richer relocation passes: the bounty-mission boxes (mission_descriptions)
+# and World-Map junction panels (worldmap_junction_panels) are now wired at the
+# end of the list below. Move descriptions and the ability/item/move *name*
+# tables are still English-only and will be added here as that German content
+# is ported from the French pipeline.
 patches:
   - gendered_buffers
   - font
@@ -136,6 +138,17 @@ patches:
   - shop
   - pc_messages
   - trainer_card_date
+  # Pointer-relocated text passes the generic pipeline drops. Both run LAST
+  # (after `inline` and every other relocation) and are dispatched without a
+  # --reference-rom, so they harvest the ~29 KB EN-free/ES-populated pool that
+  # the main-text relocation pass deliberately avoids — the packed DE build has
+  # no EN∩ES-free space left, so excluding ES bytes here would abort the patch
+  # with 0/47 (the free-space blocker tracked in the F-83 split ticket). See
+  # languages/de/patches/mission_descriptions.py for the full rationale.
+  #   mission_descriptions   47 bounty-mission descriptions, verbatim 3-line box
+  #   worldmap_junction_panels  9 arrow-prefixed World-Map junction signs
+  - mission_descriptions
+  - worldmap_junction_panels
   # Post-build audit: flag any translated cell not terminated before its
   # neighbour (fusion / freeze risk). Report-only, never fails the build.
   - collision_check
