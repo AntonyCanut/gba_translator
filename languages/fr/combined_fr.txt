@@ -425,7 +425,7 @@
 0x1A5EC0: Tes Pokémon ont retrouvé toute leur\nforme.\pSi l’énergie ou les PV de tes\nPokémon sont bas, viens nous voir.\pSi tu pars loin sur le terrain,\nachète des Potions\lau Magasin.\pOn compte sur toi !
 0x1A5F9B: Tes Pokémon ont retrouvé toute leur\nforme.\pOn compte sur toi !
 0x1A5FDF: {PLAYER} !\nBienvenue à la maison.\pOn dirait que tu as vécu pas mal\nd’aventures.\pTu devrais peut-être te reposer.\n
-0x1A6046: Ah, parfait ! Toi et tes Pokémon\navez bien meilleure mine.\pSi les PV de tes Pokémon sont bas,\nsoigne-les dans un\p{COLOR}ÉCentre Pokémon{COLOR}Ç !\nLe plus proche d’ici est à\p{COLOR}ÉBélenbourg{COLOR}Ç.\nOu achète des\p{COLOR}ÉPotions{COLOR}Ç au\n{COLOR}ÉPoké Mart{COLOR}Ç !\pC’est toujours bien de se préparer\nau pire.\pRends-moi fier, chéri !\pPrends soin de toi !
+0x1A6046: Ah, parfait ! Toi et tes Pokémon\navez bien meilleure mine.\pSi les PV de tes Pokémon sont bas,\nsoigne-les dans un\p{COLOR}ÉCentre Pokémon{COLOR}Ç !\nLe plus proche d’ici est à\p{COLOR}ÉBélenbourg{COLOR}Ç.\nOu achète des\p{COLOR}ÉPotions{COLOR}Ç au\n{COLOR}ÉBoutique Pokémon{COLOR}Ç !\pC’est toujours bien de se préparer\nau pire.\pRends-moi fier, chéri !\pPrends soin de toi !
 0x1A6196: 9{PLAYER} n’a plus de Pokémon\nutilisables !\p{PLAYER} panique et perd ¥{STR_VAR_1}…\p…\p{PLAYER} s’évanouit !
 0x1A61E5: {PLAYER} n’a plus de Pokémon\nutilisables !\p{PLAYER} s’évanouit !
 0x1A6211: Salut !\nJe peux t’aider ?
@@ -6362,7 +6362,7 @@
 0x7BA378: Chenal Aubrun <0x79> Route\n\p6, Grotte Vallée <0x7A> Route\n10
 0x7BA408: Centrale\n
 0x7BA42C: Laboratoire des Rêves Nous étudions\n\pvos rêves.\n
-0x7BA4C4: ??? : {COLOR}ËMarlon, envoie\n\lquelqu'un prendre les provisions\n\phebdo au Poké Mart. Qu'il prenne\n\laussi un colis spécial qui arrive\n\paujourd'hui. C'est crucial pour\ncapturer le spécimen UNO.
+0x7BA4C4: ??? : {COLOR}ËMarlon, envoie\n\lquelqu'un prendre les provisions\n\phebdo au Boutique Pokémon. Qu'il prenne\n\laussi un colis spécial qui arrive\n\paujourd'hui. C'est crucial pour\ncapturer le spécimen UNO.
 0x7BA59F: Marlon : {COLOR}ËCompris.\n
 0x7BA5B2: 9{COLOR}ËSbire !\n
 0x7BA5BD: Sbire : {COLOR}ËOui, monsieur ?\n
@@ -7796,7 +7796,7 @@
 0x8CA8C3: Fonction {COLOR}ÉJournal\nde Quêtes{COLOR}Ç pour ton Cube !\pElle suit tout ce qu'on te demande !\nOh, et avant d'oublier, tu as laissé\pun composant clé de ton Cube V3\nsur le sol de ta chambre.\lÇa ne servait pas avant, mais comme\ptu as maintenant ton propre Pokémon,\ntu en auras besoin pour\lutiliser des objets\len combat.
 0x8CAA11: {COLOR}Á{PLAYER} reçoit le Module Combat du\nCube V3 de Maman !
 0x8CAA4A: Au cas où tu oublies,\nle Cube V3 sert de sac.\pMais les sacs de DalMart\nne gardent que 42 objets.\lLe Cube V3, {COLOR}ÉCube{COLOR}Ç,\la de la place infinie !\lIl numérise les objets.\pEn bref, rien à porter.\nC'est comme si tu ne portais\lrien de plus\lsur toi !\pSois prudent dehors, chéri !\pApporte le colis du Prof. Log !
-0x8CAF99: Va au {COLOR}ÉPoké Mart\nde Bélenbourg{COLOR}Ë, {PLAYER}.\pJ'en ai besoin, toi seul.
+0x8CAF99: Va à la {COLOR}ÉBoutique Pokémon\nde Bélenbourg{COLOR}Ë, {PLAYER}.\pJ'en ai besoin, toi seul.
 0x8CAFFD: Oh, {PLAYER} !\nTu as rapporté mon colis !
 0x8CB023: {PLAYER} livre le colis.
 0x8CB03C: Ah !\pUn envoi de mon ami Chen, dans la\nrégion de Kanto !\pVoyons voir…\pPoké Balls, Pokédex… et… hein ?\nOù sont les Master Balls ?\pAs-tu ouvert ce colis et pris\nquelque chose, {PLAYER} ?
@@ -15109,7 +15109,7 @@
 0x1EE5FF1: Comment va mon ancien Pokémon ?\pJ'espère que tu lui as fait\ndécouvrir ce merveilleux monde !
 0x1EE6082: Ne me dérangez pas, citoyen.\nJe suis en service.
 0x1EE60B2: Qu'est-ce qu'il y a, citoyen ?\nUn colis volé ?\pJe laisse les Rangers Pokémon\ns'en charger.\pJe suis en service.
-0x1EE6115: As-tu pris le temps de voir les\ninstallations locales ?\pLe {COLOR}ÉCentre Pokémon{COLOR}Ë soigne tes\nPokémon gratuitement.\pLe {COLOR}ÉPoké Mart{COLOR}Ë vend des objets\nutiles aux Dresseurs.\pDans la plupart des villes, ces deux\nbâtiments se distinguent par leurs\lcouleurs rouge et bleue.
+0x1EE6115: As-tu pris le temps de voir les\ninstallations locales ?\pLe {COLOR}ÉCentre Pokémon{COLOR}Ë soigne tes\nPokémon gratuitement.\pLe {COLOR}ÉBoutique Pokémon{COLOR}Ç vend des objets\nutiles aux Dresseurs.\pDans la plupart des villes, ces deux\nbâtiments se distinguent par leurs\lcouleurs rouge et bleue.
 0x1EE621D: Cette statue là-bas représente le\nPokémon légendaire Artikodin.\pElle a été construite de A à Z par\nmon père lui-même !\pD'ailleurs, sache qu'il parcourt\nBorrius en construisant\ldes statues comme celle-ci dans\lplein de villes !\pMon père est trop cool !\pMais pas autant que le\nclimat ici !\pAhahaha !
 0x1EE6359: Pousse-toi !\pJ'essaie de regarder la télé !
 0x1EE6398: Une télé ?\nC'est quoi ?\pMoi, je joue aux jeux vidéo sur le\ntéléphone de papa !
@@ -15132,7 +15132,7 @@
 0x1EE6BB1: D'accord, ton anniversaire est le\n{STR_VAR_1}/{STR_VAR_2}/{STR_VAR_3}.
 0x1EE6BD8: {COLOR}ÁEntre ta date avec {DPAD_ANY}.\nFormat AAAA/MM/JJ. {SE_SHOP} pour valider.
 0x1EE6C1D: Ton anniversaire est le\n{STR_VAR_1}/{STR_VAR_2}/{STR_VAR_3} ?
-0x1EE6C5C: Poké Mart
+0x1EE6C5C: Boutique Pokémon
 0x1EE6C66: Il est temps d'y aller !\pSi tu cours après cet homme, tu\npourras peut-être le rattraper !
 0x1EE6CC7: J'aime acheter plein de {COLOR}ÉAntigel{COLOR}Ç !\pMes Pokémon ne gèlent pas souvent,\nmais ça ne fait pas de mal\ld'avoir plus d'objets dans le Cube !
 0x1EE6D4F: Fais le plein de\n{COLOR}ÉPotions{COLOR}Ë.\pOn ne sait jamais quand on sera\ncoincé et devoir se soigner vite.
@@ -15278,7 +15278,7 @@
 0x1EEB3AE: Rien ne garantit que ce qu'il y a\ndans cet Œuf puisse évoluer.\pSans compter que les Œufs\nne peuvent pas tenir d'objet.
 0x1EEB420: Exact.\pTon {STR_VAR_1} peut encore\névoluer.\pAlors, comme promis…
 0x1EEB463: Fais tenir un {COLOR}ÉÉvoluroc{COLOR}Ë à un Pokémon\nqui peut encore évoluer en combat\lpour augmenter ses défenses.
-0x1EEB4C3: On dit que des gens très moches\nfont leurs achats au Poké Mart.\pJ'ai entendu qu'il existe un site\nqui les répertorie.
+0x1EEB4C3: On dit que des gens très moches\nfont leurs achats au Boutique Pokémon.\pJ'ai entendu qu'il existe un site\nqui les répertorie.
 0x1EEB532: Une Championne d'Arène de Sinnoh\nvient parfois ici en vacances.\pElle aime se battre, alors si tu la\ntrouves, prépare-toi\là un combat difficile !
 0x1EEB5C5: As-tu déjà entendu parler d'un\nPokémon nommé {COLOR}ÉÉvoli{COLOR}Ç ?\pC'est un Pokémon super mignon !\pJ'adorerais voir un Évoli\nun jour…
 0x1EEB63C: C'est un Évoli !\nC'est un Évoli !\pTu as un Évoli !\pTrop mignon !
@@ -15465,7 +15465,7 @@
 0x1EEF903: Tous les Pokémon ont\ndes {COLOR}ÉTalents{COLOR}Ë utilisables en combat.\pUn Talent peut aider ou\ngêner son porteur, selon le Talent.\pCertains\nTalents servent aussi hors combat.\pPar exemple,\nsi un Pokémon avec {COLOR}ÉTorche{COLOR}Ë est en\l{COLOR}Épremière place{COLOR}Ë, tu auras plus\lde chances de croiser des Pokémon\lde type {COLOR}ÉFeu{COLOR}Ë !
 0x1EEFA68: Il y a un passage caché derrière\nla bibliothèque.\pLe suivre ?
 0x1EEFAAB: {COLOR}ÉFriiie!
-0x1EEFACA: Certains\nobjets ne servent qu'à être vendus.\pSi tu en\ntrouves un, vends-le immédiatement.\pJ'ai même entendu\ndire que des maniaques les achètent\lencore plus cher\lque les Poké Marts.
+0x1EEFACA: Certains\nobjets ne servent qu'à être vendus.\pSi tu en\ntrouves un, vends-le immédiatement.\pJ'ai même entendu\ndire que des maniaques les achètent\lencore plus cher\lque les Boutiques Pokémon.
 0x1EEFBB4: J'ai essayé cette Arène, mais je\nn'ai même pas atteint le Champion !\pIl faisait si sombre que je ne\nsavais pas où j'allais.\pJe {COLOR}Éne pouvais même pas{COLOR}Ç\nutiliser\p{COLOR}ÉFlash{COLOR}Ç pour y voir mieux !\nJ'espère que cette CT te servira.
 0x1EEFC99: {COLOR}ÉFlash{COLOR}Ç éclaire les\ngrottes sombres.
 0x1EEFCC9: Yo ! Bonne affaire.\pÉchange ton {COLOR}É{STR_VAR_2}{COLOR}Ë\ncontre mon {COLOR}É{STR_VAR_1}{COLOR}Ë ?
@@ -16302,7 +16302,7 @@
 0x1F02F4F: Les talents {COLOR}ÉRegard\nVif{COLOR}Ë et {COLOR}ÉInfiltration{COLOR}Ë permettent\lde toucher en brouillard.\pJe ne pense pas que ça arrive\nailleurs qu'à Borrius !
 0x1F02FFA: Le {COLOR}ÉParadis Floral{COLOR}Ç est si beau !\pPartout, des fleurs de toutes\nles couleurs, et des Pokémon\lcachés dedans !\pJ'y ai attrapé mon {COLOR}ÉBombydou{COLOR}Ç, et\nj'ai utilisé {COLOR}ÉDoux Parfum{COLOR}Ç pour\lfaciliter mes attaques à l'Arène !
 0x1F030EE: Comme Repousses, certains talents\ncomme {COLOR}ÉPuanteur{COLOR}Ë éloignent\lles Pokémon sauvages.
-0x1F0314E: Essaie de battre un maximum\nd'Arènes Pokémon.\pLes Poké Marts vendront plus\nd'objets selon tes Badges.
+0x1F0314E: Essaie de battre un maximum\nd'Arènes Pokémon.\pLes Boutiques Pokémon vendront plus\nd'objets selon tes Badges.
 0x1F031C8: Épidia
 0x1F031D5: Épidia D
 0x1F031E4: Épidia N
@@ -17532,7 +17532,7 @@
 0x1F2319E: Tâche ardue ! Voir tous\nles Pokémon d'Ouest Borrius\net rapporter au Prof. Log.
 0x1F231F2: Comme on disait, faut tous les\nattraper ! Voyage, et\nattrape tous les Pokémon !
 0x1F23252: Tu devrais voir ta {COLOR}Émère{COLOR}Ë avant\nde prendre mon colis, {PLAYER}.\pElle doit être très inquiète\npour toi.
-0x1F232BA: Récupère mon colis au\n{COLOR}ÉPoké Mart de Bélenbourg{COLOR}Ë, {PLAYER}.\pJ'en ai besoin, et toi seul peux\nl'avoir.
+0x1F232BA: Récupère mon colis au\n{COLOR}ÉBoutique Pokémon de Bélenbourg{COLOR}Ë, {PLAYER}.\pJ'en ai besoin, et toi seul peux\nl'avoir.
 0x1F2331E: Oh, {PLAYER} !\nTu es revenu avec mon colis !
 0x1F23360: Voyons s'ils ont envoyé ce qu'ils\ndevaient.\pNouveau matériel de recherche…{PAUSE}î\nok.\pLa science Pokémon la plus récente…{PAUSE}î\nok.\p…{PAUSE}îHein ?\pOù sont les Master Balls ?\pAs-tu ouvert ce colis et pris\nquelque chose dedans, {PLAYER} ?\p…\pAh…{PAUSE} je vois.\pTu as récupéré mon colis chez\ndes voyous…\pEt ils ont dû prendre les\nMaster Balls…
 0x1F234A9: Quoi !?\pTu les as vus utiliser ça pour\ncapturer Artikodin ?\pHmm…\pSi j'ai raison, on pourrait être en\ngrave danger…
@@ -23837,7 +23837,7 @@
 0x1f027cd: C'est de la <0xFC><0x01><0x06>Brume des Rêves<0xFC><0x01><0x08>.\pFais-la inhaler à un Pokémon pour\ndébloquer son <0xFC><0x01><0x06>Talent Caché<0xFC><0x01><0x08>.\pMais fais bien attention à ne pas\nla respirer toi-même !
 0x1f02854: Te revoilà, <0xFD><0x01> !\pTu m'as donné <0xFC><0x01><0x06><0xFD><0x03> Mystherbe<0xFC><0x01><0x08> pour\nl'instant. Il m'en faut <0xFC><0x01><0x06><0xFD><0x02><0xFC><0x01><0x08> pour\lfaire une brume spéciale…\pTu veux m'en donner d'autres ?
 0x1f02ab1: Apporte-moi <0xFC><0x01><0x06><0xFD><0x02><0xFC><0x01><0x08> Mystherbe de plus et\nje te ferai une brume spéciale.
-0x1f0314e: Tu devrais battre autant d'Arènes\nPokémon que possible.\pPlus tu as de Badges, plus les\nPoké Marts te proposent d'objets.
+0x1f0314e: Tu devrais battre autant d'Arènes\nPokémon que possible.\pPlus tu as de Badges, plus les\nBoutiques Pokémon te proposent d'objets.
 0x1f03358: On dit que l'herbe est toujours\nplus verte ailleurs.\pC'est particulièrement vrai à\nÉpidia.\pRegarde un peu l'herbe ici !
 0x1f03531: Mont Foudroyant est accessible par\nce trou en bas des escaliers.\pC'est très dangereux, alors si tu\ny vas, prends plein de Rappels et\ld'Anti-Paras !
 0x1f0374b: Mont Foudroyant a deux entrées\ndifférentes : l'une à Épidia,\let l'autre à Antésia.\pCes entrées mènent au sommet où\nÉlecthor a élu domicile.\pMais je te déconseille d'utiliser\nl'entrée près d'Antésia.\pCet endroit est complètement\ndétraqué…
@@ -23846,7 +23846,7 @@
 0x1f0426e: Tu comptes explorer\nMont Foudroyant ?\pSi oui, tu vas avoir\nbesoin de ça !
 0x1f04509: Reviens me voir s'il y a d'autres\ncapacités à oublier.
 0x1f0453e: Si tu remplis un Pokédex, va faire\nun tour à <0xFC><0x01><0x06>Mont Foudroyant<0xFC><0x01><0x04> !\pToutes sortes de Pokémon de type\nElectrik rares y vivent.\pOn dit même que Électhor niche au\nsommet !
-0x1f04906: Ouaip, je viens de finir de livrer\nles marchandises à tous les\lPoké Marts.\pJe vais bientôt rentrer à Antésia pour la nuit.\pMais on dirait qu'il me reste\nquelques objets.\pEt si au lieu de les jeter,\nje te les donnais !
+0x1f04906: Ouaip, je viens de finir de livrer\nles marchandises à tous les\lBoutiques Pokémon.\pJe vais bientôt rentrer à Antésia pour la nuit.\pMais on dirait qu'il me reste\nquelques objets.\pEt si au lieu de les jeter,\nje te les donnais !
 0x1f04bf9: Tu ne me verras jamais dehors\nquand il pleut !\p…\pEn fait, la plupart des gens ici\nrentreraient sans doute s'abriter.
 0x1f05061: Mél, le Champion d'Arène, n'est pas\nlà en ce moment.\pIl est sans doute parti se changer\nles idées quelque part.
 0x1f050bb: Mél, le Champion d'Arène, n'est pas\nlà en ce moment.\pIl est sans doute parti se changer\nles idées près de la <0xFC><0x01><0x06>Autoroute RBT<0xFC><0x01><0x04>\là <0xFC><0x01><0x06>Automnia<0xFC><0x01><0x04>.
@@ -23887,7 +23887,7 @@
 0x1f0ca4b: Quand est-ce que papa rentre ?\nJe veux jouer avec papa !
 0x1f0caf5: Oh, bonjour, <0xFD><0x01> !\pTa mère m'a dit que tu quittais\nenfin la ville !\pC'est une excellente nouvelle !\pMaintenant, puis-je te demander un\nservice ?\pJe ne me sens pas très bien ces\nderniers temps, et j'espérais que\ltu pourrais m'acheter un\l<0xFC><0x01><0x06>Antidote<0xFC><0x01><0x08> à la Boutique Pokémon.
 0x1f0cd3a: Merveilleux, merveilleux.\pLa Boutique Pokémon la plus proche\nest à Bélenbourg, et ils devraient\lavoir plein d'Antidotes en stock !
-0x1f0ce14: Le Poké Mart le plus proche est à\nBélenbourg, et il devrait être\lbien fourni en <0xFC><0x01><0x06>Antidotes<0xFC><0x01><0x08> !
+0x1f0ce14: Le Boutique Pokémon le plus proche est à\nBélenbourg, et il devrait être\lbien fourni en <0xFC><0x01><0x06>Antidotes<0xFC><0x01><0x08> !
 0x1f0cece: Merveilleux, <0xFD><0x01>.\pJe vais te débarrasser de cet\nAntidote.
 0x1f0d340: Mais c'est notre voisin\nle Maître !\pComment vas-tu aujourd'hui,\n<0xFD><0x01> ?
 0x1f0d37f: On part à l'aventure,\n<0xFD><0x01> ?\pDans ce cas, laisse-moi te donner\nun petit conseil avant de partir !
@@ -25103,3 +25103,6 @@
 0x1f5605c: Actif
 0x1f56063: Inactif
 0x1f560a3: Terminées
+0x771127: As-tu visité les installations locales ?\pLe Centre Pokémon soigne tes
+Pokémon gratuitement.\pLa Boutique Pokémon fournit des
+objets utiles aux Dresseurs.
