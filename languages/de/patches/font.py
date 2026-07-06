@@ -3,10 +3,10 @@
 
 ß is already present in the charmap at 0x15 and has a glyph in the ROM's
 international font block; this script only handles the six umlaut characters
-assigned to free slots 0x60-0x65:
+assigned to slots 0xF1-0xF6:
 
-    0x60 = Ä   0x61 = Ö   0x62 = Ü
-    0x63 = ä   0x64 = ö   0x65 = ü
+    0xF1 = Ä   0xF2 = Ö   0xF3 = Ü
+    0xF4 = ä   0xF5 = ö   0xF6 = ü
 
 Each umlaut glyph is built by combining the base letter's pixels with the
 diaeresis dots extracted from the matching ë/Ë reference pair in the ROM.
@@ -38,12 +38,12 @@ CP_E_LC = 0xD9   # 'e'
 CP_E_LC_DIAR = 0x1D  # 'ë'  — source of lowercase diaeresis dots
 
 # Target codepoints for German umlauts (assigned in charmap_data.py)
-CP_A_UMLAUT_UC = 0x60  # 'Ä'
-CP_O_UMLAUT_UC = 0x61  # 'Ö'
-CP_U_UMLAUT_UC = 0x62  # 'Ü'
-CP_A_UMLAUT_LC = 0x63  # 'ä'
-CP_O_UMLAUT_LC = 0x64  # 'ö'
-CP_U_UMLAUT_LC = 0x65  # 'ü'
+CP_A_UMLAUT_UC = 0xF1  # 'Ä'
+CP_O_UMLAUT_UC = 0xF2  # 'Ö'
+CP_U_UMLAUT_UC = 0xF3  # 'Ü'
+CP_A_UMLAUT_LC = 0xF4  # 'ä'
+CP_O_UMLAUT_LC = 0xF5  # 'ö'
+CP_U_UMLAUT_LC = 0xF6  # 'ü'
 
 WIDTH_TABLE_OFFSETS = [
     0x1FB100,

@@ -10,7 +10,7 @@
 # name cells are now covered by the ability_names/mission_descriptions/
 # worldmap_junction_panels/fixed_table_names steps below — F-83).
 #
-# ä ö ü Ä Ö Ü are now in the charmap (slots 0x63-0x60) and have glyphs
+# ä ö ü Ä Ö Ü are now in the charmap (slots 0xF1-0xF6) and have glyphs
 # drawn by languages/de/patches/font.py, so the `font` step is active.
 code: de
 name: German

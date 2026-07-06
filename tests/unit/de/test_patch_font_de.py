@@ -45,7 +45,7 @@ class TestPixelTileRoundtrip:
         assert mod.pixels_to_tile(pixels) == tile
 
     def test_glyph_pixels_reads_correct_slot(self):
-        cp = 0x63  # CP_A_UMLAUT_LC
+        cp = 0xF4  # CP_A_UMLAUT_LC
         tile = _solid_row_tile({3, 4})
         font = _make_font_with_tiles({cp: tile})
         assert mod.glyph_pixels(font, cp) == mod.tile_to_pixels(tile)
@@ -158,12 +158,12 @@ class TestIsFontBlock:
 
 
 class TestUmlautTargetCodepoints:
-    """CP_*_UMLAUT_* must land on the free charmap slots reserved for German
-    (0x60-0x65) — a regression here silently corrupts unrelated glyphs."""
+    """CP_*_UMLAUT_* must land on the charmap slots reserved for German
+    (0xF1-0xF6) — a regression here silently corrupts unrelated glyphs."""
 
     def test_six_umlaut_slots_are_the_reserved_free_range(self):
         codepoints = {
             mod.CP_A_UMLAUT_UC, mod.CP_O_UMLAUT_UC, mod.CP_U_UMLAUT_UC,
             mod.CP_A_UMLAUT_LC, mod.CP_O_UMLAUT_LC, mod.CP_U_UMLAUT_LC,
         }
-        assert codepoints == {0x60, 0x61, 0x62, 0x63, 0x64, 0x65}
+        assert codepoints == {0xF1, 0xF2, 0xF3, 0xF4, 0xF5, 0xF6}
