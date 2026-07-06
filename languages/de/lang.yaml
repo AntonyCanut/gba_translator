@@ -11,7 +11,8 @@
 # worldmap_junction_panels/fixed_table_names steps below — F-83).
 #
 # ä ö ü Ä Ö Ü are now in the charmap (slots 0xF1-0xF6) and have glyphs
-# drawn by languages/de/patches/font.py, so the `font` step is active.
+# drawn by languages/de/patches/font.py. The `font` step must be scheduled
+# after repair_lz77/repair_localized_lz77 (B-211) — see the patches: list.
 code: de
 name: German
 native_name: Deutsch
@@ -39,7 +40,13 @@ status_abbrev:
   faint: KO
 
 # Post-build patches applied by scripts/build_language.py.
-# `font` runs patch_font_de.py which draws ä ö ü Ä Ö Ü glyphs.
+# `font` runs languages/de/patches/font.py which draws ä ö ü Ä Ö Ü glyphs.
+# It is scheduled with the other LZ77 graphic patches (status_badges,
+# type_icons, hp_labels, dexnav_headers), AFTER repair_lz77 / repair_
+# localized_lz77 below — those two treat any LZ77 block that is byte-
+# identical between EN and ES as "should never differ" and revert it to
+# English, which used to silently wipe the umlaut glyphs on every build
+# because the unpatched font block is EN=ES (B-211).
 #
 # Anti-freeze / anti-corruption (language-agnostic mechanics — always applied):
 #   repair_lz77            restore stable EN=ES LZ77 UI blocks corrupted by the builder
@@ -112,7 +119,6 @@ status_abbrev:
 # languages/de/patches/mission_descriptions.py for the full rationale.
 patches:
   - gendered_buffers
-  - font
   - time_format
   - inline
   - battle_prefix
@@ -125,6 +131,13 @@ patches:
   - battle_string_templates
   - battle_recall_strings
   - cry_label               # relocate+repoint "Cry"→"Schrei" (B-188, over-cap for the fixed cell)
+  # Redraw the ä/ö/ü/Ä/Ö/Ü glyphs (LZ77 font tiles). MUST run after
+  # repair_lz77/repair_localized_lz77 (B-211): those steps restore any LZ77
+  # block that is byte-identical between EN and ES back to the English
+  # reference, and the font blocks *are* EN=ES (neither has umlaut glyphs) —
+  # running `font` before them let every rebuild silently wipe the umlauts
+  # back to blank, even though the charmap encoding (0xF1-0xF6) stayed correct.
+  - font
   - status_badges
   # Redraw the move-type badges (graphic tiles) with German names
   # (KAMPF/GIFT/DRACHE/…) via languages/de/patches/type_icons.py.

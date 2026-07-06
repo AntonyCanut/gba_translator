@@ -79,6 +79,35 @@ def test_generic_languages_include_status_abbrevs_patch(registry, code):
     )
 
 
+@pytest.mark.parametrize("code", GENERIC_CODES)
+def test_font_patch_runs_after_lz77_repair_steps(registry, code):
+    """`font` must be scheduled after repair_lz77/repair_localized_lz77 (B-211).
+
+    Those two steps revert any LZ77 block that is byte-identical between the
+    English and Spanish ROMs back to the English reference — and an unpatched
+    font block IS byte-identical between EN and ES (neither has the target
+    language's extra glyphs). Scheduling `font` before them let every rebuild
+    silently wipe the just-drawn glyphs back to blank, even though the charmap
+    encoding stayed correct — this is exactly what happened to German ä ö ü.
+    The other LZ77 graphic patches (status_badges, type_icons, hp_labels,
+    dexnav_headers) already run after the repair steps; `font` must match.
+    """
+    cfg = registry.get(code)
+    if "font" not in cfg.patches:
+        pytest.skip(f"{code} has no font step declared")
+
+    font_index = cfg.patches.index("font")
+    for repair_step in ("repair_lz77", "repair_localized_lz77"):
+        if repair_step not in cfg.patches:
+            continue
+        repair_index = cfg.patches.index(repair_step)
+        assert font_index > repair_index, (
+            f"{code} descriptor runs `font` (index {font_index}) before "
+            f"`{repair_step}` (index {repair_index}) — the repair step will "
+            "revert the font patch's glyph changes on every rebuild"
+        )
+
+
 def test_every_buildable_language_has_required_metadata(registry):
     required_status = {"poison", "burn", "freeze", "paralysis", "sleep", "faint"}
     for cfg in registry.buildable():

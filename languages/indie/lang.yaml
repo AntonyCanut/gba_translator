@@ -56,11 +56,14 @@ status_abbrev:
 # Richer passes (pokédex rewrap, mission boxes, move descriptions, …) will be
 # added here as Indie translations for those subsystems mature.
 patches:
-  - font
   - inline
   - repair_lz77
   - repair_localized_lz77
   - repoint_stale
   - legendary_ritual
+  # `font` must run after repair_lz77/repair_localized_lz77 above (B-211):
+  # those steps revert any LZ77 block that is byte-identical between EN and
+  # ES back to English, and an unpatched font block is exactly that.
+  - font
   - status_abbrevs
   - version

@@ -149,7 +149,6 @@ status_abbrev:
 #                           build when the generic builder has no free space
 #                           left by the time this step runs.
 patches:
-  - font
   - gendered_buffers
   - time_format
   - inline
@@ -177,6 +176,10 @@ patches:
   - options_footer
   - shop
   # ── Graphics (LZ77 tiles) + Pokédex tables ────────────────────────────────
+  # `font` must run after repair_lz77/repair_localized_lz77 above (B-211):
+  # those steps revert any LZ77 block that is byte-identical between EN and
+  # ES back to English, and an unpatched font block is exactly that.
+  - font
   - status_badges
   - type_icons
   - hp_labels

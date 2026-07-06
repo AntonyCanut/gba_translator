@@ -9,6 +9,7 @@
     "test:e2e:boot": "playwright test --project=boot",
     "test:e2e:gameplay": "playwright test --project=gameplay",
     "test:e2e:translation": "playwright test --project=translation",
+    "test:e2e:german": "ROM_PATH=$(pwd)/output/roms/GenedRom-de.gba playwright test --project=german",
     "test:e2e:visual": "playwright test --project=visual-regression",
     "test:e2e:story-sequences": "playwright test -c tests/e2e-playwright/playwright.story-sequences.config.ts",
     "test:e2e:ui": "playwright test --ui",

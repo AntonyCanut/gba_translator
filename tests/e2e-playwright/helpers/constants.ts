@@ -97,3 +97,6 @@ export const KNOWN_ENGLISH_STRINGS = [
 export const FRENCH_ACCENTED_CHARS = [
   'é', 'è', 'ê', 'ë', 'à', 'â', 'ç', 'ù', 'û', 'ü', 'î', 'ï', 'ô', 'œ',
 ] as const;
+
+// German umlauts, charmap slots 0xF1-0xF6 (B-211) — see helpers/charmap.ts.
+export const GERMAN_UMLAUT_CHARS = ['Ä', 'Ö', 'Ü', 'ä', 'ö', 'ü'] as const;

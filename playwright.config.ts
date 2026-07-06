@@ -57,6 +57,13 @@ export default defineConfig({
       use: { browserName: 'chromium' },
     },
     {
+      // Run against the German ROM, e.g.:
+      //   ROM_PATH=output/roms/GenedRom-de.gba npx playwright test --project=german
+      name: 'german',
+      testMatch: 'german-translation.spec.ts',
+      use: { browserName: 'chromium' },
+    },
+    {
       name: 'visual-regression',
       testMatch: 'visual-regression.spec.ts',
       use: { browserName: 'chromium' },

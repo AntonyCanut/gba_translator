@@ -284,11 +284,19 @@ export async function setupInBattle(client: EmulatorClient): Promise<GameState> 
 }
 
 export async function setupDialogue(client: EmulatorClient): Promise<GameState> {
+  return setupDialogueWithText(client, SAMPLE_DIALOGUE_FR);
+}
+
+// Same mechanism as setupDialogue, parameterised so other languages (e.g. the
+// German umlaut e2e coverage in german-translation.spec.ts) can assert on a
+// known sample string instead of whatever intro line happens to be under
+// translation at the moment.
+export async function setupDialogueWithText(
+  client: EmulatorClient,
+  text: string,
+): Promise<GameState> {
   await bootToOverworld(client);
-  await client.writeMemory(
-    ADDRESSES.gStringVar4,
-    encodePokemonText(SAMPLE_DIALOGUE_FR),
-  );
+  await client.writeMemory(ADDRESSES.gStringVar4, encodePokemonText(text));
   return pokeFlagAndVerify(
     client,
     BRIDGE_TEXT_ACTIVE_ADDR,
