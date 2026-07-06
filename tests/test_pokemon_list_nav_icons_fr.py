@@ -1,11 +1,12 @@
 """Regression guard for the Pokédex "Liste Pokémon" nav bar (GitHub issue #9).
 
 At 0x415F51, the English source carries 3 button-icon control codes:
-`<0xF8><0x0A>Pick <0xF8> OK <0xF8>ÀCancel` (D-pad, A button, B button). The FR
-translation only had 2 placeholder tokens ({DPAD_UPDOWN}, {B_BUTTON}), missing
-{SE_SHOP} (the A-button/"OK" icon) entirely — so the "OK" prompt on the Pokémon
-List screen rendered without its button icon, the visual bug reported in the
-issue.
+`<0xF8><0x0A>Pick <0xF8> OK <0xF8>ÀCancel` (D-pad, A button, B button). Both
+the FR and DE translations only had 2 placeholder tokens ({DPAD_UPDOWN},
+{B_BUTTON}), missing {SE_SHOP} (the A-button/"OK" icon) entirely — so the
+"OK" prompt on the Pokémon List screen rendered without its button icon, the
+visual bug reported in the issue. Same offset, same shared base-ROM string
+table, same bug in both languages (see multilang-regression pattern).
 
 `_apply_control_placeholders` (src/translators/19_build_translated_rom_generic.py)
 resolves `{TOKEN}` placeholders positionally against the English control codes
@@ -20,6 +21,7 @@ from pathlib import Path
 
 OFFSET = 0x415F51
 COMBINED_FR = Path(__file__).resolve().parent.parent / "languages/fr/combined_fr.txt"
+COMBINED_DE = Path(__file__).resolve().parent.parent / "languages/de/combined_de.txt"
 
 
 def _last_entry(path: Path, offset: int) -> str:
@@ -35,9 +37,8 @@ def _last_entry(path: Path, offset: int) -> str:
     return entry
 
 
-def test_fr_pokemon_list_nav_has_all_three_button_icons():
-    text = _last_entry(COMBINED_FR, OFFSET)
-    assert "{DPAD_UPDOWN}" in text, f"missing D-pad icon before Choix: {text!r}"
+def _assert_has_all_three_button_icons(text: str) -> None:
+    assert "{DPAD_UPDOWN}" in text, f"missing D-pad icon: {text!r}"
     assert "{SE_SHOP}" in text, f"missing A-button/OK icon: {text!r}"
     assert "{B_BUTTON}" in text, f"missing B-button icon: {text!r}"
     i_dpad = text.index("{DPAD_UPDOWN}")
@@ -46,3 +47,11 @@ def test_fr_pokemon_list_nav_has_all_three_button_icons():
     assert i_dpad < i_ok < i_cancel, (
         f"button icons must precede Choix/OK/Annul in that order: {text!r}"
     )
+
+
+def test_fr_pokemon_list_nav_has_all_three_button_icons():
+    _assert_has_all_three_button_icons(_last_entry(COMBINED_FR, OFFSET))
+
+
+def test_de_pokemon_list_nav_has_all_three_button_icons():
+    _assert_has_all_three_button_icons(_last_entry(COMBINED_DE, OFFSET))
