@@ -359,7 +359,7 @@
 0x1A2E20: Hein ? Je ne peux enseigner aucune\ncapacité à un Œuf.
 0x1A505B: Revenez nous voir vite !
 0x1A5075: {PLAYER} allume le PC.
-0x1A508A: Accéder à quel PC ?
+0x1A508A: Quel PC doit être utilisé ?
 0x1A50A7: PC de ??? utilisé.
 0x1A50BE: Système de Stockage ouvert.
 0x1A50DD: PC de {PLAYER} utilisé.
@@ -465,7 +465,7 @@
 0x1BC310: 9Bienvenue au Club Link Pokémon.\nQuel service veux-tu utiliser ?\p\n
 0x1BC35E: Quel service veux-tu utiliser ?\n
 0x1BC388: Échange des Pokémon avec un autre\njoueur via un câble Game Link GBA.
-0x1BC3C7: Tu peux combattre un autre\nDresseur via un câble Link.
+0x1BC3C7: Tu peux combattre un autre Dresseur\nvia un câble Game Link GBA.
 0x1BC409: Pour un Combat Duo, il faut avoir\nau moins deux Pokémon.
 0x1BC442: Pour un échange, tu dois avoir au\nmoins deux Pokémon avec toi.
 0x1BC47C: Un Pokémon tenant la Baie\n{STR_VAR_1} ne peut pas être échangé.
@@ -3374,10 +3374,9 @@
 0x417B94: BADGE TERRE
 0x417B9F: PC de ???
 0x417BAC: PC Ayla
-0x417BB6: PC de {PLAYER}
 0x417BBE: Panthéon
 0x417BCB: Se déconnecter
-0x417BD3: PC du Prof. Log
+0x417BD3: PC Prof. Log
 0x417BE2: EVOLI
 0x417BE8: PYROLI
 0x417BF0: VOLTALI
@@ -3838,7 +3837,7 @@
 0x41B510: SALUT
 0x41B516: Pokémon
 0x41B51E: Échange
-0x41B524: Combat
+0x41B524: Attaque
 0x41B52B: ALLONS
 0x41B535: PARDON
 0x41B541: MERCI
@@ -5449,7 +5448,7 @@
 0x74ED62: 9Avance, {PLAYER}.\pTu ne veux pas rater Jax contre les\nOmbres.
 0x74EDC0: Je percerai les secrets du Volcan Cendré !
 0x74F8A0: Je devrais attraper plus de Pokémon\nGlace pour aller avec mon nouveau
-0x74F960: ASTUCES DE DRESSEURS !\pMaintiens {COLOR}ÉB{COLOR}Á pour\ncourir !\pAppuie sur {COLOR}ÉL{COLOR}Á pour\nactiver la course auto !
+0x74F960: ASTUCES DRESSEUR !\pMaintiens {COLOR}ÉB{COLOR}Á pour\ncourir !\pAppuie sur {COLOR}ÉL{COLOR}Á pour\nactiver la course auto !
 0x74FB43: Stop !\pQue t'ai-je dit sur le voyage dans\nmon Cube Espace ?\pCe n'est pas parce que tu ne peux\npas voyager par tes Anneaux que tu\lpeux utiliser mon Cube sans\lpermission !
 0x74FBEF: Et c'est toi qui les as amenés ici\n?
 0x74FC26: Je ne sais pas ce que tu voulais\nd'eux, mais tu es un boulet depuis\lJe ne suis peut-être pas ton vrai\l«tuteur», mais je suis ton\pdresseur maintenant ! Et tu obéiras\n!\pCes deux-là ne te sauveront pas de\pmoi !
@@ -5750,7 +5749,7 @@
 0x775E7B: {COLOR}ËJe file d'ici maintenant,\n{PLAYER}.\pJe suis sûr que tu peux te gérer\nseul à partir de maintenant.\pSi tu as des ennuis, utilise tes\nPokémon.
 0x775F18: {COLOR}ËOh, une dernière chose.\pDès que tu rentres, on va se battre.\nTu m'as impressionné tout à l'heure,\pet je veux voir comment je m'en sors\nface à toi.\lD'ici là, ne te fatigue\ppas\ntrop.
 0x7760B6: Wahh !\pCe Pokémon m'a fait mal !
-0x7760E3: Sablaireau: <0xFC><0x01><0x06>Tranche !
+0x7760E3: Sablaireau: <0xFC><0x01><0x06>Slash !
 0x7760F8: Le Pokémon semble aller vers la\n{COLOR}ÉGrotte Stalactite.
 0x776197: C'est une statue du Pokémon\nLégendaire de Glace, Artikodin.\pIl est écrit qu'Artikodin servait\njadis de héraut d'une grande\lobscurité, mais qu'il vit près des\lCimes Gelées.
 0x7763EB: Je sais, hein ? La vie est parfois\nsi stressante !
@@ -20333,50 +20332,50 @@
 0x1F72901: Sortie K : Antésia
 0x1F72916: Sortie L : Naville
 0x1F7292B: {COLOR}ÁAstuces du Dresseur !\pNe quitte pas ces panneaux avant de\nles avoir lus en entier !\pChacun contient des infos utiles\npour t’aider\ldans ton aventure.\pIgnorer ces panneaux pourrait te\ncoûter cher !
-0x1F72A11: {COLOR}ÁAstuces de Dresseurs !\pMaintiens {B_BUTTON} pour changer la\nvitesse de déplacement par défaut !\pAppuie sur {L_BUTTON} pour l’auto-run !
+0x1F72A11: {COLOR}ÁAstuces du Dresseur !\pMaintiens {B_BUTTON} pour changer la\nvitesse de déplacement par défaut !\pAppuie sur {L_BUTTON} pour l’auto-run !
 0x1F72A6D: {COLOR}ÁAstuces du Dresseur !\pOuvre le {COLOR}ÉMenu Options{COLOR}Á pour activer\nPrompts de save + CS Rapides !\pSi {COLOR}ÉPrompts de save{COLOR}Á sont actifs,\non te demandera si tu veux sauver\lavant ou après les moments clés !\pSi {COLOR}ÉCS Rapides{COLOR}Á sont actifs,\nles capacités terrain s’utilisent\lsans requérir de confirmation !\p{L_BUTTON}/{R_BUTTON} permettent aussi de\nfaire défiler les pages d’options !
-0x1F72BD8: Astuces de Dresseurs !\pLes Pokémon gagnent des Exp. en\ncombat.\pLes Exp. les rendent\nplus forts.\pTes Pokémon gagnent aussi des Exp.\nmême si tu attrapes un Pokémon\lsauvage !\pSi tes Pokémon montent trop de\nniveau, les autres Dresseurs\lgagneront aussi en puissance.\pPour éviter le sur-niveau et une\nmontée de difficulté,\lactive le cap\nde niveau dans le\l{COLOR}ÉMenu Options{COLOR}Á en mettant {COLOR}ÉGain Exp.{COLOR}Á\lsur {COLOR}ÉPartage Exp. Capé{COLOR}Á.\lUne option clé pour toi.
-0x1F72DD1: Astuces de Dresseurs !\pParle à cette Leveinard, tes\nPokémon seront pleinement\psoignés ! Si tu perds un combat,\ntu reviendras ici aussi !
-0x1F72E65: Astuces de Dresseurs !\pTout Pokémon ayant combattu\nreçoit les Exp. Avec\pl’{COLOR}ÉExp. Share{COLOR}Á activé dans le\n{COLOR}ÉMenu Options{COLOR}Á, les Pokémon non\lparticipatifs prennent aussi leur\lpart\ld’Exp.
-0x1F72F5A: Astuces de Dresseurs !\pEn sélectionnant une attaque en\ncombat, certains symboles\ppeuvent apparaître. Cela\ndépend de l’efficacité sur la\pcible. Une {COLOR}É<0x79>{COLOR}Á verte indique super\nefficace. Une\p{COLOR}È<0x7A>{COLOR}Á jaune indique peu efficace.\nUne\p{COLOR}Ê×{COLOR}Á rouge indique aucun effet.\nUn + indique le bonus de\pmême\ntype.
-0x1F730E7: Astuces de Dresseurs !\pL’option {COLOR}ÉRestriction d’Objets{COLOR}Á permet\nde choisir combien d’objets tu peux\lutiliser en combat !\pSi tu choisis {COLOR}ÉAucun Objet{COLOR}Á, aucun\nDresseur ne pourra en utiliser\lnon plus !\pAu minimum, {COLOR}É4 Objets Seulement{COLOR}Á doit\nêtre activé pour {COLOR}ÉExpert{COLOR}Á, {COLOR}ÉAucun Objet{COLOR}Á\ldevient obligatoire pour {COLOR}ÉInsane{COLOR}Á.\pEnvie d’un défi ? Choisis\n{COLOR}ÉObjets Adversaire Seulement{COLOR}Á\l: eux peuvent utiliser des\lobjets, pas toi !\pCe dernier choix marche pour toute\nla difficulté.
-0x1F732BD: Astuces de Dresseurs !\p{L_BUTTON} et {SELECT_BUTTON} permettent de\nchanger vite de Pokémon dans la\pliste ! {L_BUTTON} auto-sélectionne un\nPokémon à permuter, et {SELECT_BUTTON} met\lle Pokémon actuel en tête d’équipe !
-0x1F7336F: Astuces de Dresseurs !\pEn combat, tu peux consulter\nles attaques pour puissance et\lprécision. Appuie sur\p{L_BUTTON} avant de choisir une\nattaque !
-0x1F73401: Astuces de Dresseurs !\pParle à Lokhlass pour le\nsurfer en bas de la cascade !
+0x1F72BD8: Astuces du Dresseur !\pLes Pokémon gagnent des Exp. en\ncombat.\pLes Exp. les rendent\nplus forts.\pTes Pokémon gagnent aussi des Exp.\nmême si tu attrapes un Pokémon\lsauvage !\pSi tes Pokémon montent trop de\nniveau, les autres Dresseurs\lgagneront aussi en puissance.\pPour éviter le sur-niveau et une\nmontée de difficulté,\lactive le cap\nde niveau dans le\l{COLOR}ÉMenu Options{COLOR}Á en mettant {COLOR}ÉGain Exp.{COLOR}Á\lsur {COLOR}ÉPartage Exp. Capé{COLOR}Á.\lUne option clé pour toi.
+0x1F72DD1: Astuces du Dresseur !\pParle à cette Leveinard, tes\nPokémon seront pleinement\psoignés ! Si tu perds un combat,\ntu reviendras ici aussi !
+0x1F72E65: Astuces du Dresseur !\pTout Pokémon ayant combattu\nreçoit les Exp. Avec\pl’{COLOR}ÉExp. Share{COLOR}Á activé dans le\n{COLOR}ÉMenu Options{COLOR}Á, les Pokémon non\lparticipatifs prennent aussi leur\lpart\ld’Exp.
+0x1F72F5A: Astuces du Dresseur !\pEn sélectionnant une attaque en\ncombat, certains symboles\ppeuvent apparaître. Cela\ndépend de l’efficacité sur la\pcible. Une {COLOR}É<0x79>{COLOR}Á verte indique super\nefficace. Une\p{COLOR}È<0x7A>{COLOR}Á jaune indique peu efficace.\nUne\p{COLOR}Ê×{COLOR}Á rouge indique aucun effet.\nUn + indique le bonus de\pmême\ntype.
+0x1F730E7: Astuces du Dresseur !\pL’option {COLOR}ÉRestriction d’Objets{COLOR}Á permet\nde choisir combien d’objets tu peux\lutiliser en combat !\pSi tu choisis {COLOR}ÉAucun Objet{COLOR}Á, aucun\nDresseur ne pourra en utiliser\lnon plus !\pAu minimum, {COLOR}É4 Objets Seulement{COLOR}Á doit\nêtre activé pour {COLOR}ÉExpert{COLOR}Á, {COLOR}ÉAucun Objet{COLOR}Á\ldevient obligatoire pour {COLOR}ÉInsane{COLOR}Á.\pEnvie d’un défi ? Choisis\n{COLOR}ÉObjets Adversaire Seulement{COLOR}Á\l: eux peuvent utiliser des\lobjets, pas toi !\pCe dernier choix marche pour toute\nla difficulté.
+0x1F732BD: Astuces du Dresseur !\p{L_BUTTON} et {SELECT_BUTTON} permettent de\nchanger vite de Pokémon dans la\pliste ! {L_BUTTON} auto-sélectionne un\nPokémon à permuter, et {SELECT_BUTTON} met\lle Pokémon actuel en tête d’équipe !
+0x1F7336F: Astuces du Dresseur !\pEn combat, tu peux consulter\nles attaques pour puissance et\lprécision. Appuie sur\p{L_BUTTON} avant de choisir une\nattaque !
+0x1F73401: Astuces du Dresseur !\pParle à Lokhlass pour le\nsurfer en bas de la cascade !
 0x1F7343D: Astuces du Dresseur !\pLes objets à usage unique te\nsont rendus après les combats\limportants comme ceux\pdes Champions. Renforce ton équipe,\nprends l’avantage !
 0x1F734E9: Astuces du Dresseur !\pGarde l’œil sur les arbres avec une\nzone ombragée entre eux !\pIls signalent qu’un {COLOR}ÉAntre Caché{COLOR}Á\nse trouve là !\pCes zones spéciales sont apparues en\nmasse depuis la chute du\lmétéorite.\pInteragis avec ces arbres et prépare\ntoi à affronter un Pokémon coriace !\pEn plus, avec {COLOR}ÉCoupe{COLOR}Á, tu en\ntrouveras un sur cette route !\pObtiens le Badge Vision à l’Arène de\nCratéris, puis reviens\lice le voir !
-0x1F7369D: Astuces de Dresseurs !\pLa combinaison pour fuir vite\nles Pokémon sauvages se règle\ldans le {COLOR}ÉMenu Options{COLOR}Á ! Par\pdéfaut, tu fuis vite avec {R_BUTTON}\n!
-0x1F7374B: Astuces de Dresseurs !\pEn consultant les objets du Cube,\nappuie sur {START_BUTTON} pour les trier !\pL’option {COLOR}ÉTri Auto\nObjets{COLOR}Á dans le {COLOR}ÉMenu\lOptions{COLOR}Á trie le Cube\lautomatiquement à\pchaque ouverture ! {L_BUTTON} et {R_BUTTON} font\nfaire défiler le Cube plus vite !
-0x1F73858: Astuces de Dresseurs !\pDes Pokémon différents\napparaissent la nuit\pet le jour ! Reviens souvent\npour en attraper plus !
-0x1F738DD: Astuces de Dresseurs !\pMoins de Pokémon sauvages\napparaissent à moto.\pAssez âgé pour en conduire une,\nenfourche-la !
-0x1F73965: {COLOR}ÁAstuces de Dresseurs !\pLes Exp. gagnées après combat\ndépendent des niveaux.\pPokémon plus faible ? Il en reçoit\nplus.\pS’il\nest plus fort, il en reçoit moins.
-0x1F73A33: Astuces de Dresseurs !\pLes Pokémon Électrik sont\nimmunisés à la\pparalysie ! Les Pokémon Plante sont\nimmunisés aux poudres et spores !
+0x1F7369D: Astuces du Dresseur !\pLa combinaison pour fuir vite\nles Pokémon sauvages se règle\ldans le {COLOR}ÉMenu Options{COLOR}Á ! Par\pdéfaut, tu fuis vite avec {R_BUTTON}\n!
+0x1F7374B: Astuces du Dresseur !\pEn consultant les objets du Cube,\nappuie sur {START_BUTTON} pour les trier !\pL’option {COLOR}ÉTri Auto\nObjets{COLOR}Á dans le {COLOR}ÉMenu\lOptions{COLOR}Á trie le Cube\lautomatiquement à\pchaque ouverture ! {L_BUTTON} et {R_BUTTON} font\nfaire défiler le Cube plus vite !
+0x1F73858: Astuces du Dresseur !\pDes Pokémon différents\napparaissent la nuit\pet le jour ! Reviens souvent\npour en attraper plus !
+0x1F738DD: Astuces du Dresseur !\pMoins de Pokémon sauvages\napparaissent à moto.\pAssez âgé pour en conduire une,\nenfourche-la !
+0x1F73965: {COLOR}ÁAstuces du Dresseur !\pLes Exp. gagnées après combat\ndépendent des niveaux.\pPokémon plus faible ? Il en reçoit\nplus.\pS’il\nest plus fort, il en reçoit moins.
+0x1F73A33: Astuces du Dresseur !\pLes Pokémon Électrik sont\nimmunisés à la\pparalysie ! Les Pokémon Plante sont\nimmunisés aux poudres et spores !
 0x1F73AAD: Astuces du Dresseur !\pAppuyer sur {SELECT_BUTTON} permet\nd’utiliser un des six objets\penregistrés ! Pour enregistrer un\nobjet, sélectionne-le dans les\lObjets Importants puis choisis\p{COLOR}ÉEnregistrer{COLOR}Á. Le\nsecond objet enregistré est prêt\lrapidement avec {L_BUTTON} si l’option\l{COLOR}ÉMode Bouton L{COLOR}Á est sur {COLOR}ÉObjet Reg 2{COLOR}Á.
-0x1F73BDE: Astuces de Dresseurs !\pSaute sur les rochers pour\ntraverser l’eau !
-0x1F73C16: Astuces de Dresseurs !\pQuand tu captures un Pokémon, la\nPoké Ball peut parfois ne bouger\lqu’une fois. C’est\pune «capture critique» et plus tu\ncaptures de Pokémon, plus elle\la de chances d’arriver.
+0x1F73BDE: Astuces du Dresseur !\pSaute sur les rochers pour\ntraverser l’eau !
+0x1F73C16: Astuces du Dresseur !\pQuand tu captures un Pokémon, la\nPoké Ball peut parfois ne bouger\lqu’une fois. C’est\pune «capture critique» et plus tu\ncaptures de Pokémon, plus elle\la de chances d’arriver.
 0x1F73CD7: Astuces du Dresseur !\pNe change jamais la date de\nton appareil pour plus d’événements\pdu jour ! Sinon, ils peuvent\ntous cesser de marcher,\lmême si tu n’as pas triché plus\ld’une fois. Si tu l’as déjà\lfait, tout n’est pas\pperdu. Si tu peux attendre\nla date que tu as mise,\pattends. Sinon, parle à un homme\naux Cimes Gelées. Il peut\lremettre l’horloge une fois pour\lque les\pévénements\nquotidiens\lrefonctionnent.
-0x1F73EB0: Astuces de Dresseurs !\pUtilise Force pour pousser les\nblocs sur les plaques de pression !
+0x1F73EB0: Astuces du Dresseur !\pUtilise Force pour pousser les\nblocs sur les plaques de pression !
 0x1F73EFA: Astuces du Dresseur !\pSi tu vois un cœur dans le\nrésumé d’un Pokémon,\lcela veut dire que tu commences\là te lier avec lui !\pPlus le lien est fort, plus le cœur\nse remplit.\pUn Pokémon avec un cœur presque\nplein est prêt à évoluer s’il\lrequiert une évolution par {COLOR}Éamitié{COLOR}Á !
-0x1F74017: Astuces de Dresseurs !\pIl n’y a {COLOR}Épas de limite{COLOR}Á au nombre\nde {COLOR}ÉProtéine{COLOR}Á ou\l{COLOR}ÉCarbone{COLOR}Á que tu peux donner\p! Achète ces vitamines en gros au\n{COLOR}ÉGrand Magasin de Daherapolis{COLOR}Á !
-0x1F740D9: Astuces de Dresseurs !\pCertains Dresseurs ne te\ndéfient qu’après avoir battu tous\lles autres du coin.\pBats-les et tu auras une super\nrécompense\l!
-0x1F74189: Astuces de Dresseurs !\pLes taches sombres en mer\nindiquent qu’un Pokémon peut\pplonger ! Si tu as acheté un\n{COLOR}ÉADM{COLOR}Á au {COLOR}ÉChantier du Cap’taine\lDavy{COLOR}Á à la {COLOR}ÉNaville{COLOR}Á,\pappuie sur {SE_SHOP} sur la\ntache pour plonger. Sous\ll’eau, zone claire ?\n{B_BUTTON} pour remonter.
-0x1F742B7: Astuces de Dresseurs !\pCertains Pokémon ne viennent\nqu’à certains jours. Explore\pBorrius chaque jour pour les\ntrouver.
-0x1F74345: Astuces de Dresseurs !\pCertains objets cachés comme la\nnourriture ou les Éclats peuvent\lêtre retrouvés !\pPlus tu reviens dans ces lieux,\nplus tu as de chances de les\lvoir\lrevenir.
-0x1F7441F: Astuces de Dresseurs !\pSi ton Pokémon connaît\n{COLOR}ÉDoux Parfum{COLOR}Á, tu peux\ll’utiliser pour rencontrer deux\nPokémon\lsauvages si le ciel est clair !
-0x1F744AD: Astuces de Dresseurs !\pMaintiens {B_BUTTON} pour\psurfer plus vite ! Si {COLOR}ÉMode Bouton\nL{COLOR}Á est sur {COLOR}ÉAuto-Run{COLOR}Á, appuie\lsur {L_BUTTON} pour activer le Turbo Surf !
-0x1F7452D: Astuces de Dresseurs !\pAppuie sur {SELECT_BUTTON} en déplaçant\ndes Pokémon dans le PC pour activer\pla multi-sélection.\nGroupes déplacés avec {SE_SHOP} !
-0x1F745B7: Astuces de Dresseurs !\pBeaucoup de missions dans ton\nJournal ? Utilise\p{DPAD_LEFTRIGHT} pour faire défiler vite la\nliste ! Ou appuie\psur {START_BUTTON} pour la trier\nalphabétiquement !\pÉpingle aussi des missions avec\n{SELECT_BUTTON} !
-0x1F74692: Astuces de Dresseurs !\pPeu d’endroits pour se soigner\nune fois sur la Route\lVictoire ! Ne te\pfais pas surprendre !\pAchète des objets de soin !
+0x1F74017: Astuces du Dresseur !\pIl n’y a {COLOR}Épas de limite{COLOR}Á au nombre\nde {COLOR}ÉProtéine{COLOR}Á ou\l{COLOR}ÉCarbone{COLOR}Á que tu peux donner\p! Achète ces vitamines en gros au\n{COLOR}ÉGrand Magasin de Daherapolis{COLOR}Á !
+0x1F740D9: Astuces du Dresseur !\pCertains Dresseurs ne te\ndéfient qu’après avoir battu tous\lles autres du coin.\pBats-les et tu auras une super\nrécompense\l!
+0x1F74189: Astuces du Dresseur !\pLes taches sombres en mer\nindiquent qu’un Pokémon peut\pplonger ! Si tu as acheté un\n{COLOR}ÉADM{COLOR}Á au {COLOR}ÉChantier du Cap’taine\lDavy{COLOR}Á à la {COLOR}ÉNaville{COLOR}Á,\pappuie sur {SE_SHOP} sur la\ntache pour plonger. Sous\ll’eau, zone claire ?\n{B_BUTTON} pour remonter.
+0x1F742B7: Astuces du Dresseur !\pCertains Pokémon ne viennent\nqu’à certains jours. Explore\pBorrius chaque jour pour les\ntrouver.
+0x1F74345: Astuces du Dresseur !\pCertains objets cachés comme la\nnourriture ou les Éclats peuvent\lêtre retrouvés !\pPlus tu reviens dans ces lieux,\nplus tu as de chances de les\lvoir\lrevenir.
+0x1F7441F: Astuces du Dresseur !\pSi ton Pokémon connaît\n{COLOR}ÉDoux Parfum{COLOR}Á, tu peux\ll’utiliser pour rencontrer deux\nPokémon\lsauvages si le ciel est clair !
+0x1F744AD: Astuces du Dresseur !\pMaintiens {B_BUTTON} pour\psurfer plus vite ! Si {COLOR}ÉMode Bouton\nL{COLOR}Á est sur {COLOR}ÉAuto-Run{COLOR}Á, appuie\lsur {L_BUTTON} pour activer le Turbo Surf !
+0x1F7452D: Astuces du Dresseur !\pAppuie sur {SELECT_BUTTON} en déplaçant\ndes Pokémon dans le PC pour activer\pla multi-sélection.\nGroupes déplacés avec {SE_SHOP} !
+0x1F745B7: Astuces du Dresseur !\pBeaucoup de missions dans ton\nJournal ? Utilise\p{DPAD_LEFTRIGHT} pour faire défiler vite la\nliste ! Ou appuie\psur {START_BUTTON} pour la trier\nalphabétiquement !\pÉpingle aussi des missions avec\n{SELECT_BUTTON} !
+0x1F74692: Astuces du Dresseur !\pPeu d’endroits pour se soigner\nune fois sur la Route\lVictoire ! Ne te\pfais pas surprendre !\pAchète des objets de soin !
 0x1F7471C: {COLOR}ÁAstuces du Dresseur !\pMême en difficulté\n{COLOR}ÉVanilla{COLOR}Á, le\pConseil 4 se renforce comme toi\n! Prépare-toi à des combats corsés !
-0x1F747B8: Astuces de Dresseurs !\pAppuie sur {SE_SHOP} pour grimper !
-0x1F747E7: Astuces de Dresseurs !\p{SE_SHOP} sur l’arbre à gauche du panneau\npour entrer dans un Antre Caché !
-0x1F7483C: Astuces de Dresseurs !\pAppuie sur {START_BUTTON} en Combat Duo\npour voir les PV en chiffres !
-0x1F7488B: Astuces de Dresseurs !\pVoyager ensemble rend tes\nPokémon plus amicaux !\pIls peuvent même évoluer ainsi !\nEt si tu es entré au\p{COLOR}ÉPanthéon{COLOR}Á, ces\nPokémon gagnent aussi des {COLOR}ÉExp.\lbonus{COLOR}Á !
-0x1F7496C: Astuces de Dresseurs !\pAprès être entré au Panthéon,\ntu peux {COLOR}Édéfiler auto{COLOR}Á\len maintenant\p{R_BUTTON} ! Aussi en New Game+\net en Mode Sandbox.\pNe maintiens jamais {R_BUTTON}\nen lisant les panneaux Astuces !
-0x1F74A5D: Astuces de Dresseurs !\pAprès le grand Boum du Portail,\ndes Pokémon rares et puissants\lsont apparus à Borrius ! Si\ptu en mets K.O. ou fuis, il\nrevient si tu rentres\lau\lPanthéon.
-0x1F74B42: Astuces de Dresseurs !\pÉvite les Balls standards comme les\nHyper Balls quand tu veux\lcapturer des Pokémon puissants !\pPokémon très {COLOR}Élourd{COLOR}Á ? La\n{COLOR}ÉMasse Ball{COLOR}Á est\lidéale.\pCombat > {COLOR}É10 tours{COLOR}Á ?\nPense à la\l{COLOR}ÉChrono Ball{COLOR}Á.\pCombat court et l’adversaire a\nune Vitesse de base\lau-dessus de {COLOR}É100{COLOR}Á, pense à\lla {COLOR}ÉRapide Ball{COLOR}Á.\pCombat court et Pokémon lent,\nessaie de le capturer à\lla nuit avec une {COLOR}ÉSombre Ball{COLOR}Á.\l\pCes quatre Balls sont clés pour\ncapturer vite ces Pokémon !
-0x1F74DC8: Astuces de Dresseurs !\pGrâce aux progrès scientifiques,\ntu peux commencer une nouvelle\laventure en {COLOR}ÉMode Sandbox{COLOR}Á !\pIl n’y a pas de post-game, mais\ntu es libre de capturer et\ld’entraîner n’importe quel\lPokémon, et de modifier leurs\lstats facilement ! Les Pokémon ne\psont que des nombres, après\ntout !… Astuce\psponsorisée par Cube SARL.
-0x1F74F46: Astuces de Dresseurs !\pTu peux personnaliser les\nmusiques d’exploration et de\lcombat dans les {COLOR}ÉOptions\lAudio{COLOR}Á du {COLOR}ÉMenu Options{COLOR}Á ! Tu peux\pmême appuyer sur {START_BUTTON} pour\nremettre la musique par défaut !
+0x1F747B8: Astuces du Dresseur !\pAppuie sur {SE_SHOP} pour grimper !
+0x1F747E7: Astuces du Dresseur !\p{SE_SHOP} sur l’arbre à gauche du panneau\npour entrer dans un Antre Caché !
+0x1F7483C: Astuces du Dresseur !\pAppuie sur {START_BUTTON} en Combat Duo\npour voir les PV en chiffres !
+0x1F7488B: Astuces du Dresseur !\pVoyager ensemble rend tes\nPokémon plus amicaux !\pIls peuvent même évoluer ainsi !\nEt si tu es entré au\p{COLOR}ÉPanthéon{COLOR}Á, ces\nPokémon gagnent aussi des {COLOR}ÉExp.\lbonus{COLOR}Á !
+0x1F7496C: Astuces du Dresseur !\pAprès être entré au Panthéon,\ntu peux {COLOR}Édéfiler auto{COLOR}Á\len maintenant\p{R_BUTTON} ! Aussi en New Game+\net en Mode Sandbox.\pNe maintiens jamais {R_BUTTON}\nen lisant les panneaux Astuces !
+0x1F74A5D: Astuces du Dresseur !\pAprès le grand Boum du Portail,\ndes Pokémon rares et puissants\lsont apparus à Borrius ! Si\ptu en mets K.O. ou fuis, il\nrevient si tu rentres\lau\lPanthéon.
+0x1F74B42: Astuces du Dresseur !\pÉvite les Balls standards comme les\nHyper Balls quand tu veux\lcapturer des Pokémon puissants !\pPokémon très {COLOR}Élourd{COLOR}Á ? La\n{COLOR}ÉMasse Ball{COLOR}Á est\lidéale.\pCombat > {COLOR}É10 tours{COLOR}Á ?\nPense à la\l{COLOR}ÉChrono Ball{COLOR}Á.\pCombat court et l’adversaire a\nune Vitesse de base\lau-dessus de {COLOR}É100{COLOR}Á, pense à\lla {COLOR}ÉRapide Ball{COLOR}Á.\pCombat court et Pokémon lent,\nessaie de le capturer à\lla nuit avec une {COLOR}ÉSombre Ball{COLOR}Á.\l\pCes quatre Balls sont clés pour\ncapturer vite ces Pokémon !
+0x1F74DC8: Astuces du Dresseur !\pGrâce aux progrès scientifiques,\ntu peux commencer une nouvelle\laventure en {COLOR}ÉMode Sandbox{COLOR}Á !\pIl n’y a pas de post-game, mais\ntu es libre de capturer et\ld’entraîner n’importe quel\lPokémon, et de modifier leurs\lstats facilement ! Les Pokémon ne\psont que des nombres, après\ntout !… Astuce\psponsorisée par Cube SARL.
+0x1F74F46: Astuces du Dresseur !\pTu peux personnaliser les\nmusiques d’exploration et de\lcombat dans les {COLOR}ÉOptions\lAudio{COLOR}Á du {COLOR}ÉMenu Options{COLOR}Á ! Tu peux\pmême appuyer sur {START_BUTTON} pour\nremettre la musique par défaut !
 0x1F75028: Continuer
 0x1F75031: Quitter
 0x1F75036: Le chrono a cessé de marcher !\pProbable bug de ton émulateur.\nSi tu utilises mGBA,\pvérifie être en version\n{COLOR}É0.9.0{COLOR}Á ou plus.{PAUSE_UNTIL_PRESS}
@@ -22624,7 +22623,7 @@
 0x1FA5459: Il devrait être plein de trucs\ndélicieux… Mais il est vide\pmaintenant !
 0x1FA54AC: Le Pokémon va vers la {COLOR}ÉGrotte\nStalactite{COLOR}Á.
 0x1FA54E9: Regardez-moi ça…
-0x1FA5501: {COLOR}ÉTranche !
+0x1FA5501: {COLOR}ÉSlash !
 0x1FA550B: Aha ! Je t'ai coincé ! Après ce\pcombat, tu es trop faible pour\pt'échapper !\nMaintenant, rends la\pnourriture que tu as volée !
 0x1FA5571: Hein, qu'est-ce que c'est ? Tu\pvolais ma nourriture pour tes amis\net ta famille ?
 0x1FA55BF: Ce cri… Je l'ai\pdéjà entendu quelque\ppart… Ah ! Tu dois être l'un de ces\prares Sablaireau de type Glace qui\nvivent ici ! Les Pokémon Rangers\pont-ils arrêté de venir vous nourrir\n? Maintenant que j'y pense, je ne\ples ai pas vus dans le coin depuis\nun moment…
@@ -23828,7 +23827,7 @@
 0x1eff28a: Désolé, mais tu ne peux pas entrer\nici pour le moment.\pMon grand-père fait sa sieste\nquotidienne et ne veut pas qu'on\lle dérange.\pEssaie donc l'<0xFC><0x01><0x06>Arène de Dresco<0xFC><0x01><0x08>\nen attendant.\pIl y a pas mal de brouillard à\nl'intérieur, alors un Pokémon avec\lune capacité qui change la météo,\lcomme <0xFC><0x01><0x06>Tempête de Sable<0xFC><0x01><0x08> ou <0xFC><0x01><0x06>Anti-Brume<0xFC><0x01><0x08>,\lpourrait vraiment t'aider.\pMaintenant que j'y pense, un ami de\nmon grand-père cherchait récemment\là échanger un <0xFC><0x01><0x06>Couaneton<0xFC><0x01><0x08> qui connaît\lAnti-Brume…
 0x1eff4f6: Lequel de tes Pokémon évolue quand\nil s'attache à son Dresseur ?
 0x1eff539: Correct ! Ce Pokémon n'évolue\nqu'une fois attaché à toi !\pL'évolution prend généralement du\ntemps, mais si tu lui fais tenir\lceci, il s'attachera à toi bien\lplus vite !
-0x1eff7ac: Tu sais lire ?\nTout le monde ne sait pas.\pMoi non, et j'ai déjà redoublé le\nCP plusieurs fois.\pTu peux me montrer le pouvoir\nincroyable de la lecture ?\pLes panneaux Astuces de Dresseurs\nsont de bons exemples de mots.
+0x1eff7ac: Tu sais lire ?\nTout le monde ne sait pas.\pMoi non, et j'ai déjà redoublé le\nCP plusieurs fois.\pTu peux me montrer le pouvoir\nincroyable de la lecture ?\pLes panneaux Astuces de Dresseur\nsont de bons exemples de mots.
 0x1f00d23: Une Gemme est un objet tenu spécial\nqui renforce une seule attaque en\lcombat.\pChaque Gemme correspond à un Type\nprécis et ne renforce que les\lcapacités de ce Type.\pLes Gemmes disparaissent après\nusage, mais comme la plupart des\lobjets consommables, elles te sont\lrendues après les combats\limportants, comme ceux contre les\lChampions d'Arène.\pLa plupart des Champions de Borrius\nont au moins un Pokémon qui tient\lune Gemme, alors méfie-toi.\pSi ça t'inquiète, tu peux utiliser\nla capacité <0xFC><0x01><0x06>Calcination<0xFC><0x01><0x08> pour faire\lfondre leur Gemme avant qu'ils ne\lpuissent l'utiliser.
 0x1f012bd: Tu es son enfant !\pJe savais que mes yeux ne me\ntrompaient pas !\pTon père était, pour faire simple,\nun homme extraordinaire.\pJe suis sûr que si tu te présentais\naux gens comme son enfant,\lon te regarderait aussitôt avec\lbeaucoup d'affection.\pRares sont ceux qui n'ont jamais\nentendu parler de ses exploits.\pQuel dommage qu'il ait disparu.\pSi seulement quelqu'un savait ce\nqui lui est arrivé, je pourrais\lenfin tourner la page.
 0x1f01585: Je t'en prie, accepte cet objet\npour m'avoir permis de tourner\lla page.\pIl n'aidera peut-être pas ton père,\nmais il te sera utile si tu croises\lune de ces créatures que ton père\lt'a chargé de démanteler.
@@ -24273,14 +24272,14 @@
 0x1f71b2c: C'est une statue des Pokémon titans\nLégendaires.\pIl est écrit qu'aux temps anciens,\nles titans ont aidé Regigigas à\lunifier la région de Borrius.\pLeur demeure actuelle est\ninconnue.
 0x1f7252d: Route Victoire\pL'ultime épreuve avant la Ligue\nPokémon.
 0x1f725db: Bâtiment principal de Cube SARL.\pLà où la magie opère !\nVisites publiques disponibles !
-0x1f7292b: <0xFC><0x01><0x02>Astuces de Dresseurs !\pNe quitte pas ces panneaux avant de\nles avoir lus en entier !\pChacun d'eux contient des infos\nimportantes qui t'aideront durant\lton aventure.\pSauter le texte de ces panneaux\npourrait te coûter cher !
-0x1f72a6d: <0xFC><0x01><0x02>Astuces de Dresseurs !\pOuvre le menu <0xFC><0x01><0x06>Options<0xFC><0x01><0x02> pour activer\nRappel Sauvegarde et CS Rapides !\pSi <0xFC><0x01><0x06>Rappel Sauvegarde<0xFC><0x01><0x02> est activé, on\nte demandera si tu veux sauvegarder\lavant ou après les événements\limportants !\pSi <0xFC><0x01><0x06>CS Rapides<0xFC><0x01><0x02> est activé, les\ncapacités de terrain s'utilisent\lsans confirmation à chaque fois !\pDe plus, <0xF8><0x02> et <0xF8><0x03> servent à passer\nd'une page d'options à l'autre !
-0x1f7343d: Astuces de Dresseurs !\pLes objets à usage unique te sont\nrendus après les combats importants,\lcomme ceux contre les Champions.\pUtilise-les pour renforcer ton\néquipe et prendre l'avantage !
-0x1f734e9: Astuces de Dresseurs !\pRepère les arbres avec une zone\nd'ombre entre eux !\pCela indique qu'on peut y trouver\ndes <0xFC><0x01><0x06>Grottes Cachées<0xFC><0x01><0x02> !\pCes zones spéciales apparaissent en\nmasse depuis la chute de la\lmétéorite.\pInteragis avec les arbres et\nprépare-toi à affronter un Pokémon\lcoriace !\pEt d'ailleurs, avec <0xFC><0x01><0x06>Coupe<0xFC><0x01><0x02>, tu en\ntrouveras même une sur cette route !\pAlors gagne le Badge Vision à\nl'Arène de Cratéris, puis\lreviens ici pour la trouver !
-0x1f73aad: Astuces de Dresseurs !\pAppuie sur <0xF8><0x05> pour utiliser l'un\nde tes six objets enregistrés !\pPour enregistrer un objet,\nsélectionne-le dans la section\lObjets Rares de ton Cube, puis\lchoisis <0xFC><0x01><0x06>Enregistrer<0xFC><0x01><0x02>.\pLe deuxième objet enregistré peut\nêtre utilisé en appuyant sur <0xF8><0x02>\lquand l'option <0xFC><0x01><0x06>Mode Bouton L<0xFC><0x01><0x02> est\lréglée sur <0xFC><0x01><0x06>Objet Enr. 2<0xFC><0x01><0x02>.
-0x1f73cd7: Astuces de Dresseurs !\pNe change jamais la date de ton\nappareil pour accéder à plus\ld'événements quotidiens !\pSi tu le fais, tous les événements\nquotidiens risquent de ne plus\lfonctionner correctement, que tu\laies tenté ou non d'y accéder\lplus d'une fois.\pSi tu l'as déjà fait par accident,\ntout n'est pas perdu.\pSi tu peux attendre jusqu'à la date\nchoisie, c'est recommandé. Sinon,\lparle à un homme aux Cimes Gelées.\pUne seule fois, il peut remettre\nton horloge à l'heure pour que les\lévénements quotidiens fonctionnent\là nouveau.
-0x1f73efa: Astuces de Dresseurs !\pSi tu remarques un symbole de coeur\nen consultant le résumé de ton\lPokémon, c'est que vous avez\lcommencé à tisser des liens !\pPlus vous êtes proches, plus le\ncoeur se remplira.\pEt un Pokémon au coeur presque\nplein est prêt à évoluer s'il\lnécessite une <0xFC><0x01><0x06>évolution par Amitié<0xFC><0x01><0x02> !
-0x1f7471c: <0xFC><0x01><0x02>Astuces de Dresseurs !\pMême en difficulté <0xFC><0x01><0x06>Vanilla<0xFC><0x01><0x02>, le\nConseil 4 devient plus fort en même\ltemps que toi !\pNe te laisse pas surprendre et\nprépare-toi à des combats intenses !
+0x1f7292b: <0xFC><0x01><0x02>Astuces de Dresseur !\pNe quitte pas ces panneaux avant de\nles avoir lus en entier !\pChacun d'eux contient des infos\nimportantes qui t'aideront durant\lton aventure.\pSauter le texte de ces panneaux\npourrait te coûter cher !
+0x1f72a6d: <0xFC><0x01><0x02>Astuces de Dresseur !\pOuvre le menu <0xFC><0x01><0x06>Options<0xFC><0x01><0x02> pour activer\nRappel Sauvegarde et CS Rapides !\pSi <0xFC><0x01><0x06>Rappel Sauvegarde<0xFC><0x01><0x02> est activé, on\nte demandera si tu veux sauvegarder\lavant ou après les événements\limportants !\pSi <0xFC><0x01><0x06>CS Rapides<0xFC><0x01><0x02> est activé, les\ncapacités de terrain s'utilisent\lsans confirmation à chaque fois !\pDe plus, <0xF8><0x02> et <0xF8><0x03> servent à passer\nd'une page d'options à l'autre !
+0x1f7343d: Astuces de Dresseur !\pLes objets à usage unique te sont\nrendus après les combats importants,\lcomme ceux contre les Champions.\pUtilise-les pour renforcer ton\néquipe et prendre l'avantage !
+0x1f734e9: Astuces de Dresseur !\pRepère les arbres avec une zone\nd'ombre entre eux !\pCela indique qu'on peut y trouver\ndes <0xFC><0x01><0x06>Grottes Cachées<0xFC><0x01><0x02> !\pCes zones spéciales apparaissent en\nmasse depuis la chute de la\lmétéorite.\pInteragis avec les arbres et\nprépare-toi à affronter un Pokémon\lcoriace !\pEt d'ailleurs, avec <0xFC><0x01><0x06>Coupe<0xFC><0x01><0x02>, tu en\ntrouveras même une sur cette route !\pAlors gagne le Badge Vision à\nl'Arène de Cratéris, puis\lreviens ici pour la trouver !
+0x1f73aad: Astuces de Dresseur !\pAppuie sur <0xF8><0x05> pour utiliser l'un\nde tes six objets enregistrés !\pPour enregistrer un objet,\nsélectionne-le dans la section\lObjets Rares de ton Cube, puis\lchoisis <0xFC><0x01><0x06>Enregistrer<0xFC><0x01><0x02>.\pLe deuxième objet enregistré peut\nêtre utilisé en appuyant sur <0xF8><0x02>\lquand l'option <0xFC><0x01><0x06>Mode Bouton L<0xFC><0x01><0x02> est\lréglée sur <0xFC><0x01><0x06>Objet Enr. 2<0xFC><0x01><0x02>.
+0x1f73cd7: Astuces de Dresseur !\pNe change jamais la date de ton\nappareil pour accéder à plus\ld'événements quotidiens !\pSi tu le fais, tous les événements\nquotidiens risquent de ne plus\lfonctionner correctement, que tu\laies tenté ou non d'y accéder\lplus d'une fois.\pSi tu l'as déjà fait par accident,\ntout n'est pas perdu.\pSi tu peux attendre jusqu'à la date\nchoisie, c'est recommandé. Sinon,\lparle à un homme aux Cimes Gelées.\pUne seule fois, il peut remettre\nton horloge à l'heure pour que les\lévénements quotidiens fonctionnent\là nouveau.
+0x1f73efa: Astuces de Dresseur !\pSi tu remarques un symbole de coeur\nen consultant le résumé de ton\lPokémon, c'est que vous avez\lcommencé à tisser des liens !\pPlus vous êtes proches, plus le\ncoeur se remplira.\pEt un Pokémon au coeur presque\nplein est prêt à évoluer s'il\lnécessite une <0xFC><0x01><0x06>évolution par Amitié<0xFC><0x01><0x02> !
+0x1f7471c: <0xFC><0x01><0x02>Astuces de Dresseur !\pMême en difficulté <0xFC><0x01><0x06>Vanilla<0xFC><0x01><0x02>, le\nConseil 4 devient plus fort en même\ltemps que toi !\pNe te laisse pas surprendre et\nprépare-toi à des combats intenses !
 0x1f754a5: Alors, que dis-tu du Marine ?\nUn sacré morceau, pas vrai ?\pIl est si grand que tu as peut-être\ndu mal à trouver d'autres Dresseurs\là affronter !\pSi tu veux, je te file un indice\npour savoir où les trouver ?
 0x1f75618: Oh, bon… Je serai juste là si tu\nchanges d'avis.\pAmuse-toi bien à explorer le\nMarine !
 0x1f756cc: Certains passagers ont rejoint la\ncroisière en quête de compagnie…\pMais toi, tu es là pour les combats,\npas vrai ?\pAttention : ils vont te tenir la\njambe à la moindre occasion, et ils\lne s'arrêtent qu'au coup de sifflet !
@@ -25086,9 +25085,3 @@
 0x1f4e214: Sauve les réglages choisis.
 0x1f4e230: Sauver\nAbandonner\nAnnuler
 0x1f4e244: {X}Choisir {Y}Changer {Z}Confirmer {COLOR}{W}{V}{U}Plus
-0x1f4f15e: Expliquer la Connexion
-0x1f4f16e: Records Combat
-0x1f4f105: Vos Records de Combats en Lien ?\nBien sûr.
-0x1f4f12a: J'espère que vous profitez bien du Système de Communication Sans Fil.
-0x776047: Missions accomplies: {COLOR}É{STR_VAR_3}
-0x1fb008b: {COLOR}ÁMissions accomplies: {COLOR}É{STR_VAR_1}
