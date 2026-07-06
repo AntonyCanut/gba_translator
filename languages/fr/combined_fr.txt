@@ -2313,7 +2313,7 @@
 0x3FB283: un bonus
 0x3FB2B6: <0xFD><0x00> tente d'apprendre\n<0xFD><0x01>.\p
 0x3FB2D1: Mais {FD00} ne peut pas\napprendre plus de quatre capacités.\l
-0x3FB2FC: Supprimer une capacité pour\nfaire de la place à {FD01} ?
+0x3FB2FC: Remplacer une capacité\npar {FD01} ?
 0x3FB32E: {FC08}Arrêter d'apprendre\n{FD01} ?
 0x3FB343: {FD00} n'a pas appris\n{FD01}.\l
 0x3FB359: Utiliser le Pokémon suivant ?
@@ -4070,7 +4070,7 @@
 0x41E3E3: Enseigner quelle capacité à {STR_VAR_1} ?
 0x41E3FB: Enseigner {STR_VAR_2} ?
 0x41E405: {STR_VAR_1} a appris\n{STR_VAR_2}.
-0x41E414: {STR_VAR_1} veut apprendre\n{STR_VAR_2}.\pMais {STR_VAR_1} ne peut pas\navoir plus de quatre capacités.\pSupprimer une capacité pour\nfaire place à {STR_VAR_2} ?
+0x41E414: {STR_VAR_1} veut apprendre\n{STR_VAR_2}.\pMais {STR_VAR_1} ne peut pas\navoir plus de quatre capacités.\pRemplacer une capacité par\n{STR_VAR_2} ?
 0x41E481: Arrêter d'apprendre {STR_VAR_2} ?
 0x41E4E2: Abandonner l'enseignement d'une\nnouvelle capacité à {STR_VAR_1} ?
 0x41E50C: Oublier quelle capacité ?\p
