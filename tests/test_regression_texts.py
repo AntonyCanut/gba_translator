@@ -242,6 +242,23 @@ class RegressionTextTests(unittest.TestCase):
         self.assertIn('parents', french_text)
 
     @unittest.skipUnless(FR_ROM.exists(), 'ROM missing')
+    def test_floor_indicators_translated_fr(self):
+        # Issue #27 "Traduction étages": the small floor-indicator popup shown
+        # when changing floors in caves/buildings (1F, 2F, B1F...) rendered in
+        # English. Table at 0x41803A-0x41806C: 1F..11F then B1F..B4F.
+        french_data = FR_ROM.read_bytes()
+
+        expected = {
+            0x3F5B44: '-4', 0x3F5B48: '-3', 0x3F5B4C: '-2', 0x3F5B50: '-1',
+            0x3F5B54: 'RDC', 0x3F5B58: '1E', 0x3F5B5C: '2E', 0x3F5B60: '3E',
+            0x3F5B64: '4E', 0x3F5B68: '5E', 0x3F5B6C: '6E', 0x3F5B70: '7E',
+            0x3F5B74: '8E', 0x3F5B78: '9E', 0x3F5B7C: '10E',
+        }
+        for pointer_offset, expected_text in expected.items():
+            text = _read_pointer_text(french_data, pointer_offset)
+            self.assertEqual(text, expected_text, f'Floor label at pointer {pointer_offset:#x}')
+
+    @unittest.skipUnless(FR_ROM.exists(), 'ROM missing')
     def test_repel_descriptions_count_steps_not_stages(self):
         # Repel item descriptions count footsteps ("pas"), not stages ("étapes").
         # Regression for ticket P-37 "Description repousse": the Max Repel desc
