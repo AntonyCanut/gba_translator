@@ -51,6 +51,7 @@ PATCH_GIVECS_GIFT_ITEM_FR_SCRIPT := languages/fr/patches/givecs_gift_item.py
 PATCH_METEORITE_DIALOGUE_FR_SCRIPT := languages/fr/patches/meteorite_dialogue.py
 PATCH_WORLDMAP_JUNCTION_FR_SCRIPT := languages/fr/patches/worldmap_junction_panels.py
 PATCH_CUBE_TV_DIALOGUES_FR_SCRIPT := languages/fr/patches/cube_tv_dialogues.py
+PATCH_CUBE_SORT_MENU_SCRIPT := languages/fr/patches/cube_sort_menu.py
 PATCH_SUMMARY_LABELS_SCRIPT := languages/fr/patches/summary_labels.py
 PATCH_CFRU_TYPE_NAMES_SCRIPT := languages/fr/patches/cfru_type_names.py
 PATCH_OPTIONS_FOOTER_SCRIPT := languages/fr/patches/options_footer.py
@@ -65,6 +66,7 @@ PATCH_MISSION_DESC_FR_SCRIPT := languages/fr/patches/mission_descriptions.py
 PATCH_ZONE_NAMES_FR_SCRIPT := languages/fr/patches/zone_names.py
 PATCH_WORLDMAP_LABELS_FR_SCRIPT := languages/fr/patches/worldmap_labels.py
 PATCH_TRAINER_CARD_DATE_FR_SCRIPT := languages/fr/patches/trainer_card_date.py
+PATCH_TRAINER_CLASS_NAMES_FR_SCRIPT := languages/fr/patches/trainer_class_names.py
 PATCH_GENDERED_BUFFERS_SCRIPT := languages/fr/patches/gendered_buffers.py
 PATCH_BATTLE_STRING_TEMPLATES_SCRIPT := languages/fr/patches/battle_string_templates.py
 PATCH_BATTLE_RECALL_STRINGS_SCRIPT := languages/fr/patches/battle_recall_strings.py
@@ -181,6 +183,7 @@ build-fr: $(FRENCH_EXTRACT) $(SPANISH_EXTRACT) $(BUILD_SCRIPT)
 	@$(PYTHON) $(PATCH_FIXED_NAMES_SCRIPT) --rom $(FR_BUILD)
 	@$(PYTHON) $(PATCH_ABILITY_NAMES_SCRIPT) --rom $(FR_BUILD)
 	@$(PYTHON) $(PATCH_ITEM_NAMES_SCRIPT) --rom $(FR_BUILD)
+	@$(PYTHON) $(PATCH_TRAINER_CLASS_NAMES_FR_SCRIPT) --rom $(FR_BUILD) --combined languages/fr/combined_fr.txt
 	@$(PYTHON) $(PATCH_TIME_FORMAT_SCRIPT) --rom $(FR_BUILD)
 	@$(PYTHON) $(PATCH_BATTLE_PREFIX_SCRIPT) --rom $(FR_BUILD)
 	@$(PYTHON) $(INLINE_FR_SCRIPT) \
@@ -246,6 +249,7 @@ build-fr: $(FRENCH_EXTRACT) $(SPANISH_EXTRACT) $(BUILD_SCRIPT)
 	@$(PYTHON) $(PATCH_CFRU_TYPE_NAMES_SCRIPT) --rom $(FR_BUILD)
 	@$(PYTHON) $(PATCH_OPTIONS_FOOTER_SCRIPT) --rom $(FR_BUILD)
 	@$(PYTHON) $(PATCH_STATUS_ABBREVS_SCRIPT) --rom $(FR_BUILD)
+	@$(PYTHON) $(PATCH_CUBE_SORT_MENU_SCRIPT) --rom $(FR_BUILD)
 	@$(PYTHON) $(PATCH_BATTLE_STRING_TEMPLATES_SCRIPT) --rom $(FR_BUILD) --source $(FRENCH_ROM)
 	@$(PYTHON) $(PATCH_BATTLE_RECALL_STRINGS_SCRIPT) --rom $(FR_BUILD)
 	@$(PYTHON) $(PATCH_STATUS_BADGES_SCRIPT) --rom $(FR_BUILD)

@@ -255,6 +255,53 @@ class RegressionTextTests(unittest.TestCase):
             self.assertIn('pas', text, f'Repel desc at {offset:#x} should mention "pas"')
             self.assertNotIn('étape', text, f'Repel desc at {offset:#x} must not say "étape(s)"')
 
+    @unittest.skipUnless(FR_ROM.exists(), 'ROM missing')
+    def test_floor_indicators_translated_fr(self):
+        # Issue #27 "Traduction étages": the small floor-indicator popup shown
+        # when changing floors in caves/buildings (1F, 2F, B1F...) rendered in
+        # English. Table at 0x41803A-0x41806C: 1F..11F then B1F..B4F.
+        french_data = FR_ROM.read_bytes()
+
+        expected = {
+            0x3F5B44: '-4', 0x3F5B48: '-3', 0x3F5B4C: '-2', 0x3F5B50: '-1',
+            0x3F5B54: 'RDC', 0x3F5B58: '1E', 0x3F5B5C: '2E', 0x3F5B60: '3E',
+            0x3F5B64: '4E', 0x3F5B68: '5E', 0x3F5B6C: '6E', 0x3F5B70: '7E',
+            0x3F5B74: '8E', 0x3F5B78: '9E', 0x3F5B7C: '10E',
+        }
+        for pointer_offset, expected_text in expected.items():
+            text = _read_pointer_text(french_data, pointer_offset)
+            self.assertEqual(text, expected_text, f'Floor label at pointer {pointer_offset:#x}')
+
+    @unittest.skipUnless(FR_ROM.exists(), 'ROM missing')
+    def test_camper_chad_kelsey_line_translated(self):
+        # Issue #28 "Traduction dresseur Camper Chad": the double-battle
+        # partner refusal line ("Drat!\nKelsey took up my second slot!") shipped
+        # in English. Community-agreed FR text: "Zut !\nKelsey a pris ma place !"
+        french_data = FR_ROM.read_bytes()
+        for pointer_offset in (0x1E8728B, 0x1E872C6, 0x1E872F5, 0x1E87330):
+            text = _read_pointer_text(french_data, pointer_offset)
+            self.assertIn('Zut', text)
+            self.assertIn('Kelsey a pris ma place', text)
+            self.assertNotIn('Drat', text)
+            self.assertNotIn('second slot', text)
+
+    @unittest.skipUnless(FR_ROM.exists(), 'ROM missing')
+    def test_camper_trainer_class_translated_everywhere(self):
+        # Issue #28: every appearance of the trainer class "Camper" must read
+        # "Campeur" — the fixed-width class-name table cell and the two
+        # standalone dialogue/description mentions of the class noun.
+        french_data = FR_ROM.read_bytes()
+
+        CLASS_TABLE_OFFSET = 0x23E871
+        end = french_data.find(b'\xFF', CLASS_TABLE_OFFSET)
+        class_name = TextDecoder.decode_pokemon(french_data[CLASS_TABLE_OFFSET:end + 1], preserve_unknown=True)
+        self.assertEqual(class_name, 'Campeur')
+
+        for pointer_offset in (0xA6F680, 0x1E80654):
+            text = _read_pointer_text(french_data, pointer_offset)
+            self.assertIn('Campeur', text)
+            self.assertNotIn('Camper', text)
+
 
 if __name__ == '__main__':
     unittest.main()
