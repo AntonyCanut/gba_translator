@@ -9,8 +9,8 @@
 # STATUS: seed / work in progress. These entries prove the EN→DE pipeline
 # end to end; the bulk of the script still needs translating.
 #
-# ä ö ü Ä Ö Ü are now fully encodable (charmap slots 0x63-0x60, glyphs drawn
-# by scripts/patch_font_de.py). Use real umlauts below — no ae/oe/ue needed.
+# ä ö ü Ä Ö Ü are now fully encodable (charmap slots 0xF1-0xF6, glyphs drawn
+# by languages/de/patches/font.py). Use real umlauts below — no ae/oe/ue needed.
 # ß is at 0x15 and has a ROM glyph; use it directly.
 #
 # --- seed entries (verified against the English extraction) ---
