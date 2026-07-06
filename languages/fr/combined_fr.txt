@@ -2906,7 +2906,7 @@
 0xA4C689: Plus de Pokémon en état\nde combattre !\p
 0xA4C6B3: Panique ! Tu perds ¥{UNKNOWN_STR}…\p…\pTu es submergé par la défaite !{PAUSE_UNTIL_PRESS}\n
 0xA4C6FE: Tu n'as plus de Pokémon\nen état de se battre!\lTu as perdu face à\n{FD1C} {FD1D}!{FC09}
-0xA4C740: Tu paies ¥{UNKNOWN_STR} en récompense…\n…\pTu es submergé par la défaite !{PAUSE_UNTIL_PRESS}\p\n
+0xA4C740: Tu fais tomber {UNKNOWN_STR}¥ dans la panique…\n…\pTu es submergé par la défaite !{PAUSE_UNTIL_PRESS}\p\n
 0xA4C790: Tu es submergé par la défaite !{PAUSE_UNTIL_PRESS}\n
 0xA4C7B7: {FC05}{FC04}Combat{FC13}Cube\nPokémon{FC13}Fuite
 0xA4C7DA: {FC05}{FC04}Combat{FC13}{FC04}Cube\n{FC04}Pokémon{FC13}Fuite
@@ -3238,7 +3238,7 @@
 0x41718B: Ce n'est pas le type de Pokémon\nvoulu par l'autre Dresseur.
 0x4171C9: Ce n'est pas un œuf.
 0x4171DF: Choisis un Pokémon.
-0x4171F1: Dépl. où ?
+0x4171F1: Déplacer où ?
 0x417200: Enseigner à quel Pokémon ?
 0x417215: Utiliser sur quel Pokémon ?
 0x41722B: Donner à quel Pokémon ?
@@ -3305,7 +3305,7 @@
 0x41778A: Plus de place dans le SAC.\n
 0x4177AC: Retirer combien de\n{STR_VAR_1} ?
 0x4177D8: Lire
-0x4177DD: Dépl au sac
+0x4177DD: Déplacer vers le sac
 0x4177E9: Donner
 0x4177EE: Aucun Courrier ici. {PAUSE_UNTIL_PRESS}
 0x417806: Que faire du Courrier de\n{STR_VAR_1} ?
@@ -3501,7 +3501,7 @@
 0x41846F: Stocker
 0x418475: Retirer
 0x41847E: Échanger
-0x418484: Dépl
+0x418484: Déplacer
 0x418489: Placer
 0x41848F: Résumé
 0x418497: Relâcher
@@ -3534,8 +3534,8 @@
 0x41855B: Simple
 0x41856C: Retirer Pokémon
 0x41857D: Déposer Pokémon
-0x41858D: Dépl Pokémon
-0x41859A: Dépl. obj.
+0x41858D: Déplacer Pokémon
+0x41859A: Déplacer objets
 0x4185A5: À plus !
 0x4185AD: Tu peux retirer un Pokémon si tu\nen as dans une Boîte.
 0x4185E2: Dépose ton équipe dans n'importe\nquelle Boîte.
@@ -3585,7 +3585,7 @@
 0x418E52: Nom de la Boîte ?
 0x418E5C: : surnom ?
 0x418E69: Nom du Rival ?
-0x418E77: {DPAD_ANY}Dépl. {SE_SHOP}OK {B_BUTTON}Retour
+0x418E77: {DPAD_ANY}Déplacer {SE_SHOP}OK {B_BUTTON}Retour
 0x418E8D: {SE_SHOP}Guide
 0x418E95: {SE_SHOP}Annuler
 0x418E9E: {SE_SHOP}Annuler
@@ -11517,8 +11517,8 @@
 0xA4E1A1: Entrer une espèce
 0xA4E1B1: Acheté
 0xA4E1BB: Arrête de zoomer !
-0xA4E1F1: Dépl
-0xA4E1F6: Dépl. où ?
+0xA4E1F1: Déplacer
+0xA4E1F6: Déplacer où ?
 0xA4E205: Gravir les falaises rocheuses.
 0xA4E219: Dissiper le temps brumeux.
 0xA4E22F: Plonger sous l'eau.
@@ -25084,18 +25084,3 @@
 0x1f4e214: Sauve les réglages choisis.
 0x1f4e230: Sauver\nAbandonner\nAnnuler
 0x1f4e244: {X}Choisir {Y}Changer {Z}Confirmer {COLOR}{W}{V}{U}Plus
-0x41803a: RDC
-0x41803d: 1E
-0x418040: 2E
-0x418043: 3E
-0x418046: 4E
-0x418049: 5E
-0x41804c: 6E
-0x41804f: 7E
-0x418052: 8E
-0x418055: 9E
-0x418059: 10E
-0x41805d: -1
-0x418061: -2
-0x418065: -3
-0x418069: -4
