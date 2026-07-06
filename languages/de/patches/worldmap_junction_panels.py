@@ -11,7 +11,7 @@ Free-space rationale: identical to ``mission_descriptions.py`` in this
 directory — dispatched **without** ``--reference-rom`` (``reserved=None``) and
 scheduled at the end of the DE patch list, so it harvests the EN-free /
 ES-populated pool that the main-text relocation pass avoids. See that module's
-docstring for the full explanation (F-83).
+docstring for the full explanation.
 """
 
 from __future__ import annotations

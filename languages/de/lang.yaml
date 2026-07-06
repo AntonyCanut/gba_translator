@@ -5,8 +5,10 @@
 # Translations live in languages/de/combined_de.txt (same `<offset_hex>:
 # <text>` format as combined_fr.txt). Offsets not present there stay
 # English — this still includes proper names/credits, corrupted/garbage
-# cells, and move/ability name+description tables that need dedicated
-# table patches rather than the generic text pipeline (tracked by F-83).
+# cells, and the move name+description tables (no dedicated German patch yet;
+# the ability-name table, mission/world-map text and the one-off fixed-table
+# name cells are now covered by the ability_names/mission_descriptions/
+# worldmap_junction_panels/fixed_table_names steps below — F-83).
 #
 # ä ö ü Ä Ö Ü are now in the charmap (slots 0x63-0x60) and have glyphs
 # drawn by languages/de/patches/font.py, so the `font` step is active.
@@ -87,11 +89,27 @@ status_abbrev:
 #   trainer_card_date       rebuilds the Trainer Card start date in Day Month Year
 #                            order via a free-space builder + veneer redirect
 #
-# Richer relocation passes: the bounty-mission boxes (mission_descriptions)
-# and World-Map junction panels (worldmap_junction_panels) are now wired at the
-# end of the list below. Move descriptions and the ability/item/move *name*
-# tables are still English-only and will be added here as that German content
-# is ported from the French pipeline.
+# Richer passes ported from the French pipeline once combined_de.txt was
+# complete:
+#   mission_descriptions     47 bounty-mission descriptions, verbatim 3-line
+#                            box (languages/de/patches/mission_descriptions.py)
+#   worldmap_junction_panels 9 arrow-prefixed World-Map junction signs
+#                            (languages/de/patches/worldmap_junction_panels.py)
+#   ability_names            fixed-width 17-byte ability-name table, absent
+#                            from translation_ready.json/Spanish extraction ←
+#                            combined_de.txt (languages/de/patches/ability_names.py)
+#   fixed_table_names        one-off class-2 fixed cells unreachable by any
+#                            translation pass (Parcel/Package/Berry Pouch/Town
+#                            Map/Hard Stone/TM Case bag names + the Weak Armor
+#                            ability), German-specific NAME_FIXES dict (see
+#                            languages/de/patches/fixed_table_names.py)
+#
+# mission_descriptions and worldmap_junction_panels both relocate to free
+# space; the packed DE build has no EN∩ES-free space left after the main-text
+# pass, so they are dispatched without --reference-rom (reserved=None) and
+# scheduled at the very end of the list below, harvesting the EN-free/
+# ES-populated pool the main pass never touches. See
+# languages/de/patches/mission_descriptions.py for the full rationale.
 patches:
   - gendered_buffers
   - font
@@ -127,6 +145,7 @@ patches:
   # category table + ordering + metric units, summary-screen labels, options
   # footer, shop strings, PC box messages). See languages/de/patches/<name>.py.
   - item_names
+  - ability_names
   - nature_names
   - cfru_type_names
   - pokedex_categories
@@ -138,6 +157,7 @@ patches:
   - shop
   - pc_messages
   - trainer_card_date
+  - fixed_table_names
   # Pointer-relocated text passes the generic pipeline drops. Both run LAST
   # (after `inline` and every other relocation) and are dispatched without a
   # --reference-rom, so they harvest the ~29 KB EN-free/ES-populated pool that

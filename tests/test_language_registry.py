@@ -19,6 +19,9 @@ EXPECTED_REFERENCES = {"en", "es"}
 
 # Generic (non-dedicated) buildable languages driven by build_language.py.
 GENERIC_CODES = ["it", "de", "indie"]
+# Of those, the ones whose translation content is still being ported (DE
+# reached status: complete once all 12 combined_de.txt batches landed — F-70).
+GENERIC_IN_PROGRESS_CODES = ["it", "indie"]
 
 
 @pytest.fixture(scope="module")
@@ -45,11 +48,21 @@ def test_french_is_complete_and_dedicated(registry):
 
 
 @pytest.mark.parametrize("code", GENERIC_CODES)
-def test_new_languages_are_generic_and_in_progress(registry, code):
+def test_new_languages_are_generic(registry, code):
     cfg = registry.get(code)
     assert cfg.build == "generic"
-    assert cfg.status == "in_progress"
     assert not cfg.is_dedicated
+
+
+@pytest.mark.parametrize("code", GENERIC_IN_PROGRESS_CODES)
+def test_still_porting_languages_are_in_progress(registry, code):
+    cfg = registry.get(code)
+    assert cfg.status == "in_progress"
+
+
+def test_german_is_complete(registry):
+    cfg = registry.get("de")
+    assert cfg.status == "complete"
 
 
 MECHANICAL_PATCHES = {

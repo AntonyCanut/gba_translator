@@ -7,8 +7,8 @@ Data-driven (``--source`` + ``--combined``); this wrapper only re-points the
 French implementation at the German combined file. Missions still missing a
 German entry in ``combined_de.txt`` stay English.
 
-Free-space rationale (F-83 / the ticket that added this wrapper)
----------------------------------------------------------------
+Free-space rationale
+---------------------
 The relocation this patch performs used to abort with ``0/47 FAILED (free
 space)`` in the packed German build. That was **not** a shortage of free space
 in the ROM — it was the ``--reference-rom`` flag.
