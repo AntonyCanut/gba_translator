@@ -2778,7 +2778,7 @@
 0x3FE6E6: Qu'est-ce que {B_PLAYER_NAME}\nva lancer ?
 0x3FE6FA: Que va faire\nle vieil homme ?
 0x3FE714: {PAUSE}ŒAttente de liaison…
-0x3FE725: {FC05}{FC04}Combat{FC13}Sac\nPokémon{FC13}Fuite
+0x3FE725: {FC05}{FC04}Attaque{FC13}Sac\nPokémon{FC13}Fuite
 0x3FE747: {FC05}{FC04}Ball{FC13}Appât\nRocher{FC13}Fuite
 0x3FE766: PP
 0x3FE76A: Type/
@@ -2908,10 +2908,10 @@
 0xA4C6FE: Tu n'as plus de Pokémon\nen état de se battre!\lTu as perdu face à\n{FD1C} {FD1D}!{FC09}
 0xA4C740: Tu fais tomber {UNKNOWN_STR}¥ dans la panique…\n…\pTu es submergé par la défaite !{PAUSE_UNTIL_PRESS}\p\n
 0xA4C790: Tu es submergé par la défaite !{PAUSE_UNTIL_PRESS}\n
-0xA4C7B7: {FC05}{FC04}Combat{FC13}Cube\nPokémon{FC13}Fuite
-0xA4C7DA: {FC05}{FC04}Combat{FC13}{FC04}Cube\n{FC04}Pokémon{FC13}Fuite
-0xA4C807: {FC05}{FC04}Combat{FC13}Cube\nPokémon{FC13}Retour
-0xA4C82B: {FC05}{FC04}Combat{FC13}{FC04}Cube\n{FC04}Pokémon{FC13}Retour
+0xA4C7B7: {FC05}{FC04}Attaque{FC13}Cube\nPokémon{FC13}Fuite
+0xA4C7DA: {FC05}{FC04}Attaque{FC13}{FC04}Cube\n{FC04}Pokémon{FC13}Fuite
+0xA4C807: {FC05}{FC04}Attaque{FC13}Cube\nPokémon{FC13}Retour
+0xA4C82B: {FC05}{FC04}Attaque{FC13}{FC04}Cube\n{FC04}Pokémon{FC13}Retour
 0xA4C859: {FC05}{FC04}Capture{FC13}Fin
 0xA4C86D: {RIVAL} est faible !\nLance une Ball maintenant !
 0xA4C88B: {FD1C} {FD1D} Team
