@@ -63,6 +63,12 @@ NAME_FIXES = {
     # to fit the tight 10-byte cell (budget: stride 10 - 1 terminator = 9
     # glyphs, no padding — the next string starts immediately after).
     0x4162DE: ("Key Items", "Basis It.", 10),
+    # "Porta-PC" key item name (issue #40): same class-2 gap, absent from
+    # translation_ready.json and the Spanish extraction, ships in English.
+    # Tight 9-byte cell — another cell's data starts immediately after the
+    # terminator, no padding. Budget: stride 9 - 1 = 8 glyphs, same as the
+    # English original. "Mobil-PC" fits exactly.
+    0x87A140: ("Porta-PC", "Mobil-PC", 9),
 }
 
 

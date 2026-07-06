@@ -6,6 +6,8 @@ import sys
 import unittest
 from pathlib import Path
 
+from src.core.text_codec import GERMAN_UMLAUT_CHARS, TextDecoder, TextEncoder
+
 ROOT = Path(__file__).resolve().parent.parent.parent.parent
 sys.path.insert(0, str(ROOT / "scripts"))
 
@@ -14,9 +16,11 @@ from languages.de.patches import item_names as mod  # noqa: E402
 ALL_NAMES = mod.ALL_NAMES
 BERRY_NAMES = mod.BERRY_NAMES
 ITEM_NAMES = mod.ITEM_NAMES
+ITEM_DESC_OVERRIDES = mod.ITEM_DESC_OVERRIDES
 ITEM_STRIDE = mod.ITEM_STRIDE
 ITEM_TABLE_BASE = mod.ITEM_TABLE_BASE
 NAME_FIELD = mod.NAME_FIELD
+apply_item_desc_fixes = mod.apply_item_desc_fixes
 apply_item_name_fixes = mod.apply_item_name_fixes
 decode_name = mod.decode_name
 encode = mod.encode
@@ -146,6 +150,77 @@ class TestApplyItemNameFixes(unittest.TestCase):
             self.assertEqual(decode_name(data, off), ALL_NAMES[en], en)
             data_off = off + NAME_FIELD
             self.assertEqual(bytes(data[data_off : data_off + 2]), b"\xAB\x01", en)
+
+
+class TestItemDescOverrides(unittest.TestCase):
+    """Master Ball description (issue #40): the item's NAME cell already reads
+    "Meisterball", but its description pointer targets an untranslated,
+    class-2 base-ROM cell (absent from translation_ready.json and the
+    Spanish extraction), same rationale as fixed_table_names.py.
+    """
+
+    def _make_desc_rom(self, offset: int, text: str, slack: int = 0) -> bytearray:
+        raw = TextEncoder.encode_pokemon(text, skip_aliases=GERMAN_UMLAUT_CHARS)
+        data = bytearray(offset + len(raw) + slack)
+        data[offset : offset + len(raw)] = raw
+        return data
+
+    def test_master_ball_override_registered(self):
+        self.assertIn(0x3D4ECC, ITEM_DESC_OVERRIDES)
+
+    def test_every_override_is_encodable_with_german_umlauts_preserved(self):
+        for offset, text in ITEM_DESC_OVERRIDES.items():
+            encoded = TextEncoder.encode_pokemon(text, skip_aliases=GERMAN_UMLAUT_CHARS)
+            decoded = TextDecoder.decode(encoded, "pokemon")
+            self.assertEqual(decoded, text, hex(offset))
+
+    def test_patches_matching_offset(self):
+        original = (
+            "The best Ball with the ultimate\n"
+            "performance. It will catch any wild\n"
+            "Pokémon without fail."
+        )
+        data = self._make_desc_rom(0x3D4ECC, original)
+        patched = apply_item_desc_fixes(data)
+        self.assertEqual(patched, 1)
+        expected = TextEncoder.encode_pokemon(
+            ITEM_DESC_OVERRIDES[0x3D4ECC], skip_aliases=GERMAN_UMLAUT_CHARS
+        )
+        self.assertEqual(bytes(data[0x3D4ECC : 0x3D4ECC + len(expected)]), expected)
+
+    def test_replacement_fits_without_expanding_slot(self):
+        # The override must never be longer than the original English slot it
+        # replaces, so it always applies without relocation.
+        original = (
+            "The best Ball with the ultimate\n"
+            "performance. It will catch any wild\n"
+            "Pokémon without fail."
+        )
+        data = self._make_desc_rom(0x3D4ECC, original)
+        original_len = len(TextEncoder.encode_pokemon(original))
+        new_len = len(
+            TextEncoder.encode_pokemon(
+                ITEM_DESC_OVERRIDES[0x3D4ECC], skip_aliases=GERMAN_UMLAUT_CHARS
+            )
+        )
+        self.assertLessEqual(new_len, original_len)
+        apply_item_desc_fixes(data)  # must not raise / not skip
+
+    def test_idempotent(self):
+        original = (
+            "The best Ball with the ultimate\n"
+            "performance. It will catch any wild\n"
+            "Pokémon without fail."
+        )
+        data = self._make_desc_rom(0x3D4ECC, original)
+        apply_item_desc_fixes(data)
+        # Re-applying against already-patched bytes must still find room and
+        # rewrite the identical bytes (no exception, no growth).
+        self.assertEqual(apply_item_desc_fixes(data), 1)
+
+    def test_skips_when_slot_too_small(self):
+        data = self._make_desc_rom(0x3D4ECC, "Short.")
+        self.assertEqual(apply_item_desc_fixes(data), 0)
 
 
 if __name__ == "__main__":
