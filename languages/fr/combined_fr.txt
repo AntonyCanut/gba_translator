@@ -2439,7 +2439,7 @@
 0x3FB232: {FD25}
 0x3FB262: {FD2F}
 0x3FB284: a boosted
-0x3FB28E: <0xFD><0x00> monte au\nNv. <0xFD><0x01> !<0xFC><0x0A>\p
+0x3FB28E: <0xFD><0x00> monte au\nN. <0xFD><0x01> !<0xFC><0x0A>\p
 0x3FB2A4: <0xFD><0x00> apprend\n<0xFD><0x01> !<0xFC><0x0A>\p
 0x3FB31F: <0xFD><0x00> oublie\n<0xFD><0x01>.\p
 0x3FB40D: <0xFD><0x10>\nest K.O. !\p
@@ -4711,7 +4711,7 @@
 0x457C47: L'autre Dresseur t'a montré sa\nCarte Dresseur.\pVeux-tu montrer ta\nCarte Dresseur ?
 0x457CA3: L'autre Dresseur te défie en\ncombat.\pAcceptes-tu le défi\nde combat ?
 0x457CF6: L'autre Dresseur t'invite à\nchatter.\pAcceptes-tu l'invitation\nau chat ?
-0x457D44: On te propose d'échanger ton\n{DYNAMIC} niv. {DYNAMIC} enregistré.\pContre un {DYNAMIC} niv.\n{DYNAMIC}.\pAcceptes-tu cette offre\nd'échange ?
+0x457D44: On te propose d'échanger ton\n{DYNAMIC} N. {DYNAMIC} enregistré.\pContre un {DYNAMIC} N.\n{DYNAMIC}.\pAcceptes-tu cette offre\nd'échange ?
 0x457DB8: On te propose d'échanger ton Œuf\nenregistré.\lAcceptes-tu cette offre ?
 0x457E0A: Le chat a été abandonné.\p
 0x457E28: Vous avez décliné l'offre.\p
@@ -4769,7 +4769,7 @@
 0x458D52: L'inscription a été annulée.\p
 0x458D75: L'inscription est terminée.\p
 0x458D9A: L'échange a été annulé.\p
-0x458DBA: Annuler l'enregistrement de ton\n{STR_VAR_1} niv. {STR_VAR_2} ?
+0x458DBA: Annuler l'enregistrement de ton\n{STR_VAR_1} N. {STR_VAR_2} ?
 0x458DE7: Annuler l'enregistrement de ton\nŒuf ?
 0x458E0D: L'inscription a été annulée.\p
 0x458E6E: Veux-tu demander à\n{STR_VAR_1} de faire un échange ?
@@ -5396,7 +5396,7 @@
 0x7459AF: Whooooa…
 0x7459B8: Inspire à fond…\pQuel parfum merveilleux !
 0x7459E1: Oh non…\pTu n'es pas ma maman…
-0x745A54: 9Le Badge Ténèbres fait obéir tous\nles Pokémon jusqu'au Nv. 30.\pMême ceux reçus par échange. Tu peux\naussi utiliser la {COLOR}ÉCS\pCoupe{COLOR}Ë en dehors des combats.\nCoupe les petits arbres pour ouvrir\pdes passages. Je veux aussi te\ndonner ma CT\ppréf\nérée.
+0x745A54: 9Le Badge Ténèbres fait obéir tous\nles Pokémon jusqu'au N. 30.\pMême ceux reçus par échange. Tu peux\naussi utiliser la {COLOR}ÉCS\pCoupe{COLOR}Ë en dehors des combats.\nCoupe les petits arbres pour ouvrir\pdes passages. Je veux aussi te\ndonner ma CT\ppréf\nérée.
 0x745B6D: Désolé, cette fonction est\nindisponible pour le moment.
 0x745CCF: Si tu changes d'avis, reviens\nn'importe quand !
 0x745D0D: Commençons alors !
@@ -6010,7 +6010,7 @@
 0x78E7D3: Le {STR_VAR_1} s'est enfoui dans la\nneige.
 0x78EA3A: Incroyable !\pMême avec tout mon entraînement\nglacé ici, j'ai quand même perdu !
 0x78EA78: En preuve de ta victoire contre la\nChampionne de Cimistral,\lprends le {COLOR}ÉBadge\nAiles{COLOR}Ç.
-0x78EAFE: Avec le Badge Ailes, tu peux briser\nles rochers fendus avec grâce !\pEt tout Pokémon jusqu'au Nv. 50\nt'obéira toujours !\pPrends aussi cette CT !
+0x78EAFE: Avec le Badge Ailes, tu peux briser\nles rochers fendus avec grâce !\pEt tout Pokémon jusqu'au N. 50\nt'obéira toujours !\pPrends aussi cette CT !
 0x78EB95: La CT40 contient {COLOR}ÉAéropiqué{COLOR}Ç !\nCette capacité touche à coup sûr !
 0x78EBD5: Souviens-toi de ça !\pPeu importe le froid ou les éclairs,\nil y aura toujours des oiseaux très\lhaut dans le ciel !
 0x78EC48: mignon
@@ -6313,7 +6313,7 @@
 0x7B5A8C: Le {STR_VAR_1} a replongé dans\nl'étang.
 0x7B5BD8: Ta puissance dépasse même mon Poing\n\pMétéore ! Ce combat valait le coup !\n
 0x7B5C2F: Bon, je suppose que tu mérites de\n\pprendre le {COLOR}ÉBadge\nChute{COLOR}Ë. Tu l'as bien gagné.
-0x7B5CA4: Avec le Badge Chute, tout Pokémon\n\pjusqu'au Nv. 60 t'obéira. Il permet\n\paussi à tes Pokémon de pousser des\n\lrochers lourds avec\n\p{COLOR}ÉForce{COLOR}Ë. Franchement,\n\pje ne sais pas pourquoi les Pokémon\n\pcostauds ne peuvent pas déjà le\nfaire… Mais que veux-tu ? C'est\lcomme ça que va le monde.\pBref, prends cette CT, elle va\nbien avec ce badge.
+0x7B5CA4: Avec le Badge Chute, tout Pokémon\n\pjusqu'au N. 60 t'obéira. Il permet\n\paussi à tes Pokémon de pousser des\n\lrochers lourds avec\n\p{COLOR}ÉForce{COLOR}Ë. Franchement,\n\pje ne sais pas pourquoi les Pokémon\n\pcostauds ne peuvent pas déjà le\nfaire… Mais que veux-tu ? C'est\lcomme ça que va le monde.\pBref, prends cette CT, elle va\nbien avec ce badge.
 0x7B5DDC: La CT42 contient\n\p{COLOR}ÉFaçade{COLOR}Ë. Si ton\n\lPokémon a un statut, la puissance\n\pdouble. Encore plus fort que Poing\n\pMétéore ! Utilise-la et fais\nregretter aux ennemis de t'avoir
 0x7B5EA4: Maintenant que tu m'as battu, voilà\nqu'arrive une autre migraine…
 0x7B5EE6: Champion en devenir ! Comment vont\n\ples combats ? Bienvenue à l'Arène de\n\pRivapolis ! Prends de l'Eau Fraîche,\ntout droit des bassins de l'Arène.
@@ -7491,7 +7491,7 @@
 0x7FA65E: Alors, il te plaît ce joli nouveau\nPokémon, {PLAYER} ?
 0x7FA68E: Yo, {PLAYER}.\pJ'ai essayé d'envoyer le Pokémon\npour voir ce que c'était, mais il a\lrefusé d'obéir.\pJe pense que c'est parce qu'on l'a\nvolé.\pDonc voilà le plan.\pJe libère le Pokémon de sa Ball, tu\nle combats et tu le captures toi-\lmême.\pPrêt ?
 0x7FA7BF: Prends ces Ultra Balls pour t'aider\nà l'attraper.
-0x7FA7EC: Dépêche de te préparer.\pJe pense que c'est un Poison\nde Nv. 35.
+0x7FA7EC: Dépêche de te préparer.\pJe pense que c'est un Poison\nde N. 35.
 0x7FA834: Laisse, on dirait que tu n'en as\npas besoin.
 0x7FA85F: Le Pokémon arrive !
 0x7FA877: Parfait !\nTu l'as capturé !\pÇa apprendra à cette dame !\pSon Pokémon est maintenant aux mains\nd'un dresseur de premier ordre !
@@ -7573,7 +7573,7 @@
 0x7FDC0A: Ha ha ha ha !\pIls devraient t'appeler\nBig {PLAYER}!
 0x7FDC3D: Oh, mec, gamin…\nQuel combat…\pPrends le Badge Combat en preuve de\nta victoire à l'Arène d'Antésia !
 0x7FDC9B: {PLAYER} a reçu le Badge Combat de\nBig Mo !
-0x7FDCC4: Avec le Badge Combat, tous les\nPokémon jusqu'au Nv. 70 obéiront\là ta voix !\pTu peux aussi escalader les falaises\nrocailleuses avec Escalade !\pDis que ce n'est pas utile !\pPrends aussi cette CT !
+0x7FDCC4: Avec le Badge Combat, tous les\nPokémon jusqu'au N. 70 obéiront\là ta voix !\pTu peux aussi escalader les falaises\nrocailleuses avec Escalade !\pDis que ce n'est pas utile !\pPrends aussi cette CT !
 0x7FDD8C: {PLAYER} a reçu la CT60 de Big Mo !\n
 0x7FDDAA: La CT60 contient Vampipoing !\pElle inflige des dégâts et draine la\nvie de l'ennemi en même temps !
 0x7FDE03: Si tu veux ma CT, fais de la place\ndans ton sac !
@@ -16420,15 +16420,15 @@
 0x1F06137: Choisis un nombre de 1 à {STR_VAR_2}.
 0x1F06153: J'ai dit {COLOR}É{STR_VAR_2}{COLOR}Ç façons !\pCe nombre est trop grand.
 0x1F0618A: {STR_VAR_1} évoluera si…\p{EVIL_LEGENDARY}
-0x1F061A0: Il monte au niv. <0x34> {STR_VAR_2} !
-0x1F061B6: Il monte au niv. <0x34> {STR_VAR_2} quand\nson Attaque dépasse sa Défense !
-0x1F061F8: Il monte au niv. <0x34> {STR_VAR_2} quand\nson Attaque égale sa Défense !
-0x1F06231: Il monte au niv. <0x34> {STR_VAR_2} quand\nl'Attaque < la Défense !
-0x1F06270: Il monte au niv. <0x34> {STR_VAR_2} et il y a\nune Poké Ball libre dans le Cube !
-0x1F062B0: Il monte au niv. <0x34> {STR_VAR_2} et il est\nmâle !
-0x1F062D4: Il monte au niv. <0x34> {STR_VAR_2} et il est\nfemelle !
-0x1F062FA: Il monte au niv. <0x34> {STR_VAR_2} la nuit !
-0x1F06319: Il monte au niv. <0x34> {STR_VAR_2} le\njour !
+0x1F061A0: Il monte au N. <0x34> {STR_VAR_2} !
+0x1F061B6: Il monte au N. <0x34> {STR_VAR_2} quand\nson Attaque dépasse sa Défense !
+0x1F061F8: Il monte au N. <0x34> {STR_VAR_2} quand\nson Attaque égale sa Défense !
+0x1F06231: Il monte au N. <0x34> {STR_VAR_2} quand\nl'Attaque < la Défense !
+0x1F06270: Il monte au N. <0x34> {STR_VAR_2} et il y a\nune Poké Ball libre dans le Cube !
+0x1F062B0: Il monte au N. <0x34> {STR_VAR_2} et il est\nmâle !
+0x1F062D4: Il monte au N. <0x34> {STR_VAR_2} et il est\nfemelle !
+0x1F062FA: Il monte au N. <0x34> {STR_VAR_2} la nuit !
+0x1F06319: Il monte au N. <0x34> {STR_VAR_2} le\njour !
 0x1F0633E: Il évolue avec une forte\namitié !\pTu sauras qu'il est prêt\nquand un {COLOR}Écœur{COLOR}Ç apparaît sur sa\lfiche.
 0x1F063B9: Il évolue avec une forte\namitié en journée !\pTu sauras qu'il est prêt\nquand un {COLOR}Écœur{COLOR}Ç apparaît sur sa\lfiche.
 0x1F06443: Il évolue avec une forte\namitié la nuit !\pTu sauras qu'il est prêt\nquand un {COLOR}Écœur{COLOR}Ç apparaît sur sa\lfiche.
@@ -16437,18 +16437,18 @@
 0x1F06568: Il est échangé en tenant le\n{STR_VAR_2} !
 0x1F0658A: On utilise le {STR_VAR_2} dessus !
 0x1F065A0: Il évolue quand sa Beauté est\nau maximum !
-0x1F065CB: Il monte au niv. <0x34> {STR_VAR_2} s'il\npleut ou s'il y a du brouillard !
-0x1F0660E: Il monte au niv. <0x34> {STR_VAR_2} quand\nun type {STR_VAR_3} est dans l'équipe !
-0x1F06649: Il évolue au niv. {STR_VAR_2} !
+0x1F065CB: Il monte au N. <0x34> {STR_VAR_2} s'il\npleut ou s'il y a du brouillard !
+0x1F0660E: Il monte au N. <0x34> {STR_VAR_2} quand\nun type {STR_VAR_3} est dans l'équipe !
+0x1F06649: Il évolue au N. {STR_VAR_2} !
 0x1F0665D: Il évolue la nuit en tenant\nle {STR_VAR_2} !
 0x1F06689: Il évolue le jour en tenant\nle {STR_VAR_2} !
 0x1F066BB: Il évolue quand il connaît\n{STR_VAR_2} !
 0x1F066DA: Il évolue quand un {STR_VAR_2} est\ndans l'équipe !
-0x1F06702: Il monte au niv. <0x34> {STR_VAR_2} entre\n{STR_VAR_3} et {VERSION} !
+0x1F06702: Il monte au N. <0x34> {STR_VAR_2} entre\n{STR_VAR_3} et {VERSION} !
 0x1F0672A: Il place 3 coups critiques en un\nseul combat !
 0x1F06757: Il subit {STR_VAR_2} dégâts à\n{STR_VAR_3} !
 0x1F06771: On utilise le {STR_VAR_2} dessus en\nse tenant sur {STR_VAR_3} !
-0x1F0679C: Il monte au niv. <0x34> {STR_VAR_2}\nen tenant le {STR_VAR_3} !
+0x1F0679C: Il monte au N. <0x34> {STR_VAR_2}\nen tenant le {STR_VAR_3} !
 0x1F067C7: On utilise le {STR_VAR_2} dessus\nen tenant le {STR_VAR_3} !
 0x1F067F2: On utilise le {STR_VAR_2} dessus\nla nuit !
 0x1F06811: Il évolue quand il connaît\n{STR_VAR_2} et qu'il est mâle !
@@ -16502,19 +16502,19 @@
 0x1F07781: Ail-dorable !\pJ'ai vu de magnifiques ailes que\nje n'avais jamais vues !\pComme promis, je vais partager mes\nailes avec toi !
 0x1F077FA: Après toutes ces belles ailes,\nj'en ai pour la vie !
 0x1F0784D: Au revoir, Papilusion
-0x1F07861: Doux adieux ! Crée un lien\nfort avec un Papilusion\nen l'amenant au niv. 70.
+0x1F07861: Doux adieux ! Crée un lien\nfort avec un Papilusion\nen l'amenant au N. 70.
 0x1F078CB: Non…\pIl me faut un Dresseur expert\nqui a battu le Conseil 4 pour ma\ltâche.
 0x1F07929: Ah, le Champion de la région de\nBorrius !\pJ'ai justement une requête pour\nquelqu'un de ton niveau.\pTu veux l'entendre ?
-0x1F079B1: La tâche est simple : entraîne un\n{COLOR}ÉPapilusion{COLOR}Ë au niveau {COLOR}É70{COLOR}Ë et\lprésente-le-moi.\pIl peut être au-dessus du niv. 70,\nmais pas en dessous.\pUne fois fait, je te dirai la\nsuite de la tâche.
+0x1F079B1: La tâche est simple : entraîne un\n{COLOR}ÉPapilusion{COLOR}Ë au niveau {COLOR}É70{COLOR}Ë et\lprésente-le-moi.\pIl peut être au-dessus du N. 70,\nmais pas en dessous.\pUne fois fait, je te dirai la\nsuite de la tâche.
 0x1F07A82: Des Dresseurs comme toi, ça ne\ncourt pas les rues.
-0x1F07AB1: M'as-tu apporté un\n{COLOR}ÉPapilusion niv. 70{COLOR}Ë ?
+0x1F07AB1: M'as-tu apporté un\n{COLOR}ÉPapilusion N. 70{COLOR}Ë ?
 0x1F07AE2: Bien, c'est le Papilusion que je\ncherchais.\pMaintenant, {COLOR}Êlibère{COLOR}Ë-le dans la nature\npour qu'il trouve l'amour.
 0x1F07B70: Snif…\pN'est-ce pas magnifique ?\pCe Papilusion va trouver l'amour\net être heureux pour toujours…
 0x1F07BC4: Pour tes actions héroïques, je\nveux te donner mon Papilusion à la\lplace de celui que tu as relâché.
 0x1F07C20: Le Papilusion que je t'ai donné\npeut {COLOR}ÉGigamaxer{COLOR}Ë !\pC'est quoi ?\pEssaie-le en {COLOR}ÉRaid d'Antre\nCachée{COLOR}Ë et tu verras !
-0x1F07CAD: Je veux voir un Papilusion entraîné\nau moins au niv. 70.
-0x1F07D00: Ce n'est pas le Pokémon que je\ncherche.\pJe veux voir un Papilusion entraîné\nau moins au niv. 70.
-0x1F07D7B: Ce Papilusion est bien niv. 70\nou plus, mais pas par toi\ltoi-même !\pJe veux voir un Papilusion entraîné\nau moins au niv. 70.
+0x1F07CAD: Je veux voir un Papilusion entraîné\nau moins au N. 70.
+0x1F07D00: Ce n'est pas le Pokémon que je\ncherche.\pJe veux voir un Papilusion entraîné\nau moins au N. 70.
+0x1F07D7B: Ce Papilusion est bien N. 70\nou plus, mais pas par toi\ltoi-même !\pJe veux voir un Papilusion entraîné\nau moins au N. 70.
 0x1F07E1E: Mais…\pSi tu ne le relâches pas, comment\nPapilusion trouvera l'amour ?
 0x1F07E65: La Révolution communiste
 0x1F07E7E: Levez-vous au nom du\ncommunisme ! Soigne-toi\n{STR_VAR_1} fois aux Centres.
@@ -17081,7 +17081,7 @@
 0x1F15E32: Tu vois, je suis le genre de gars\nqui aime les fleurs.\pTu piges ?\pLa plus belle part de la nature,\n{STR_VAR_1}…\pTu vas planer rien qu'en les\nregardant ! On se lâche !
 0x1F15ECA: Wouah, mec…\pEh ben…\nCe combat, c'était autre chose…
 0x1F15EFF: C'est profond, {STR_VAR_1}.\pJ'sais pas si c'est le brouillard…\p…mais je l'ai vraiment senti, mec.\nCorps et âme.\pTiens. Prends ce super Badge,\npour battre Mirskle, Champion\ld'Arène des fleurs.
-0x1F15FD6: Voilà le {COLOR}ÉBadge Feuille{COLOR}Ë.\pCe p'tit truc utile fait que les\nPokémon échangés jusqu'au Nv. <0x34> 26\lécoutent tes superbes\lordres…\pOh, et prends aussi cette super, super CT…
+0x1F15FD6: Voilà le {COLOR}ÉBadge Feuille{COLOR}Ë.\pCe p'tit truc utile fait que les\nPokémon échangés jusqu'au N. <0x34> 26\lécoutent tes superbes\lordres…\pOh, et prends aussi cette super, super CT…
 0x1F16082: C'est une CT.\pElle apprend à tes Pokémon une\ncapacité encore et encore, à autant\lde super Pokémon que tu veux.\pAlors ne te gêne pas pour\nrépandre l'amour.\pPrêche, {STR_VAR_1} !\pBref… la capacité, c'est {COLOR}ÉNœud Herbe{COLOR}Ë.\pJ'ai connu un type un jour.\nIl se cassait toujours la figure.\pIl disait que c'était un\nproblème génétique.\pLa vérité… je lui faisais\nNœud Herbe sans arrêt !\pHeureusement qu'il était léger,\nsinon ça aurait VRAIMENT fait mal.
 0x1F16225: Oh, mince…\pTu as déjà Nœud Herbe…
 0x1F1624C: Oh, attends.\pOn dirait que je ne vais pas\nt'affronter, finalement.\pIl te faudra plus d'un Pokémon\nsi tu veux me défier…
@@ -17098,7 +17098,7 @@
 0x1F1653E: Oh, ne faites pas attention.\nJe parlais simplement tout seul.\pJe suis Véga, le Champion de l'Arène\nde Cratéris.\pQuand je suis arrivé ici, j'ai eu\ndu réconfort dans l'atmosphère\lsombre de cette ville.\pMes Pokémon et moi avons donc\naiguisé nos talents ici, jusqu'au\lsommet.\pAu fait, as-tu peur du\nnoir ?\pBeaucoup de gens, oui.\pSavoir exactement ce qui t'attend\ndonne du courage.\pMais trébucher à l'aveugle, sans\nsavoir quand l'ennemi frappera…\pLa peur détruit même les plus\ngrandes armées.\pVoyons si toi aussi, tu seras\nécrasé par l'atmosphère lourde\let ma puissance !
 0x1F1676C: Intéressant. Je pense que tu ferais\nun excellent agent.
 0x1F167A0: Remarquable. Tu as su utiliser\nles infos sur ton adversaire, moi\ly compris…\p…et rester ferme même\nsous la pression.\pPour ton esprit remarquable, le\n{COLOR}ÉBadge Vision{COLOR}Ë est à toi.
-0x1F1687D: Le Badge Vision fait obéir les\nPokémon échangés jusqu'au Nv. <0x34> 32\lque tu as reçus\lsans discuter.\pLa CS {COLOR}ÉCoupe{COLOR}Ë peut aussi\nêtre utilisée hors combat pour\lretirer les petits arbres du chemin.\pEt en gage de bonne volonté, je\npense que cette CT te sera utile\là toi.
+0x1F1687D: Le Badge Vision fait obéir les\nPokémon échangés jusqu'au N. <0x34> 32\lque tu as reçus\lsans discuter.\pLa CS {COLOR}ÉCoupe{COLOR}Ë peut aussi\nêtre utilisée hors combat pour\lretirer les petits arbres du chemin.\pEt en gage de bonne volonté, je\npense que cette CT te sera utile\là toi.
 0x1F16992: {COLOR}ÉLarcin{COLOR}Ë vole l'objet tenu par un\nPokémon adverse.\pDans mon métier, je trouve\navantageux d'utiliser les\lressources de l'adversaire.
 0x1F16A23: Un dernier conseil.\pÉvite les ombres et reste dans la\nlumière autant que possible.\pFais ça, et tu éviteras de tomber\nen ruine.\pJe te le promets…
 0x1F16ABA: {COLOR}ÁNOTE !\pPar manque de temps, les\nobjets suivants sont reçus ici.\pNormalement, Véga n'apparaîtrait\npas ici et vous les recevriez\lailleurs.
@@ -17113,7 +17113,7 @@
 0x1F17047: Eh bien, qui l'eût cru ?\pOn dirait que le vent souffle\nen ma faveur.\pEt toi ?\pVas-tu laisser la tempête t'emporter\nquand tu résistes…\p…ou sauras-tu la chevaucher et\nte l'approprier ?\pBon, assez bavardé.\nDécollons !
 0x1F1712D: Incroyable !\pJe pensais que les vents étaient\navec moi, et j'ai quand même perdu !
 0x1F17172: Ah… j'imagine que c'est comme ça.\nTant pis.\pFélicitations pour ta victoire,\nvraiment.\pTiens.\nLe {COLOR}ÉBadge Ailes{COLOR}Ç est à toi.
-0x1F1721D: Avec ce Badge, tu peux briser des\nrochers avec {COLOR}ÉÉclate-Roc{COLOR}Ç\lhors combat.\pEn plus, tous les Pokémon jusqu'au\nNv. <0x34> 36 obéiront à tes ordres.\pOh, et cette CT pourrait aussi\nêtre utile.
+0x1F1721D: Avec ce Badge, tu peux briser des\nrochers avec {COLOR}ÉÉclate-Roc{COLOR}Ç\lhors combat.\pEn plus, tous les Pokémon jusqu'au\nN. <0x34> 36 obéiront à tes ordres.\pOh, et cette CT pourrait aussi\nêtre utile.
 0x1F172DD: {COLOR}ÉAéropiqué{COLOR}Ç est une capacité\nqui touche à coup sûr.\pC'est utile quand tes capacités\nratent un peu trop\lsouvent !\pUtilise-la si tu n'as pas envie de\nrentrer dans le vent\len combat.\pBon, ton regard me dit que tu as\ndes choses à faire et où aller.\pJe ne te retiens pas.\nEn avant !
 0x1F17415: Au fait, as-tu déjà rencontré ma\nfille ?\pElle ne quitte pas vraiment Cimistral sauf si je l'emmène,\lcar le temps dehors est rude.\pC'est pour ça qu'elle embête tous\nceux qui passent chez nous pour voir\lleurs Pokémon.
 0x1F174F1: mignonne
@@ -17122,7 +17122,7 @@
 0x1F17516: Salut, partenaire.\nContent d'te revoir si vite.\pJ'espère que ma modeste demeure te\nplaît et tout.\pSinon, j'suis sûr qu'il y a\nautre chose par ici pour te\lrincer l'œil…\pJ'veux dire, t'as fait\ntout ce patelin et le suivant,\là chercher le p'tit vieux moi.\p…Je rigole, je rigole.\pCe regard me dit que tu te bats pas\npour t'amuser.\pÉcoute, j'suis pas là pour fouiner.\nC'est pas mes oignons.\pMais comme Champion d'Arène, je\npeux pas filer un Badge au premier\lcow-boy venu.\pAlors, on va régler ça.\pQue ce beau gars teste\nta trempe !
 0x1F17729: Bravo, partenaire.\pMais je pense toujours que si\non se battait pour le style,\lje gagnerais, sans souci.
 0x1F17796: Nom d'un chien… je pensais que le\nformat te ferait trébucher, mais tu\lm'as bien montré.\pOn dirait que le Badge est à toi.\pTiens.\nUn {COLOR}ÉBadge Chute{COLOR}Ë, offert par Mel.
-0x1F1785D: Avec le Badge Chute, tout Pokémon\njusqu'au Nv. <0x34> 45 t'obéira.\pIl permet aussi de déplacer de gros\nrochers avec {COLOR}ÉForce{COLOR}Ë.\pFranchement, je sais pas pourquoi\nles Pokémon costauds ne peuvent pas\lle faire déjà…\pMais bon, c'est un truc\nbizarre.\pBref, prends cette CT avec\nce Badge.
+0x1F1785D: Avec le Badge Chute, tout Pokémon\njusqu'au N. <0x34> 45 t'obéira.\pIl permet aussi de déplacer de gros\nrochers avec {COLOR}ÉForce{COLOR}Ë.\pFranchement, je sais pas pourquoi\nles Pokémon costauds ne peuvent pas\lle faire déjà…\pMais bon, c'est un truc\nbizarre.\pBref, prends cette CT avec\nce Badge.
 0x1F1798C: Avec {COLOR}ÉFaçade{COLOR}Ë, si ton Pokémon\na un problème de statut, ça devient\ldeux fois plus puissant !\pUtilise-la pour que tes ennemis\nregrettent de te donner un statut !\pBon, file maintenant.\pJ'espère que tu trouveras ce que\ntu cherches.
 0x1F17A71: Bonne chance, et rappelle-toi,\nje suis toujours là si tu veux\lquelque chose de beau à regarder !
 0x1F17ACA: Arène Pokémon de Daherapolis
@@ -17131,7 +17131,7 @@
 0x1F17D5B: …\pTu m'entends ?\pJ'ai dit : montre-moi avec deux\nde tes Pokémon à la fois !\pUn seul, ça suffit pas !
 0x1F17DCC: Gaaaaah !\nTa techno a surclassé la mienne !
 0x1F17DF1: Pfiou… tu m'as bien grillé !\pOn dirait que tes machines de guerre\nsont meilleures que les miennes.\pRien à redire !\nJe dois te remettre ce {COLOR}ÉBadge Zap{COLOR}Ë !
-0x1F17EB5: Le Badge Zap permet {COLOR}ÉSurf{COLOR}Ë\nsur l'eau et la lave !\pEt en plus, tout Pokémon\nt'obéira tant qu'il n'est pas\lau-dessus du Nv. <0x34> 52 !\pC'est électrisant, non ?\pMais attends, c'est pas fini !\nPrends aussi cette CT !
+0x1F17EB5: Le Badge Zap permet {COLOR}ÉSurf{COLOR}Ë\nsur l'eau et la lave !\pEt en plus, tout Pokémon\nt'obéira tant qu'il n'est pas\lau-dessus du N. <0x34> 52 !\pC'est électrisant, non ?\pMais attends, c'est pas fini !\nPrends aussi cette CT !
 0x1F17F82: Si t'es en difficulté, utilise\n{COLOR}ÉChange Éclair{COLOR}Ë pour t'en sortir !\pEt tu sais quoi ?\nOn remettra ça un de ces jours !\pSi tu veux discuter avec le vieux\nGalavan, traîne près des\lCentres Pokémon.\pJe reconstruirai mon 'mon de métal\npour la revanche !
 0x1F18085: Ne laisse rien se mettre sur ta\nroute, {PLAYER} !\pEt ne laisse aucun désavantage\nt'empêcher d'atteindre tes buts !
 0x1F180F7: Arène Pokémon de Antésia
@@ -17150,7 +17150,7 @@
 0x1F18924: Hein… regarde ça.\pT'as choisi un sacré bon moment\npour une averse.\pMais hé, rien ne va\nplomber l'ambiance de ce combat,\lhein ?\pAllez !\nNe coule pas trop vite, d'accord ?
 0x1F189CE: Sacré bon, ma belle !\pCe combat-là était parmi les\nmeilleurs que j'aie eus !
 0x1F18A19: Tu m'as sacrément emportée !\pJ'imagine que je dois te donner le\n{COLOR}ÉBadge Marais{COLOR}Ç maintenant !
-0x1F18A97: Le Badge Marais te permet de gérer\nles Pokémon échangés\ljusqu'au Nv. {LV} 61 !\pEt il donne même à tes Pokémon\nle pouvoir de grimper les {COLOR}Écascades{COLOR}Ç !\p…Attends, t'as rien de ce\ngenre ?\pEh bien, c'est un problème.\pTiens, j'en ai en rab, prends\ncelui-ci.
+0x1F18A97: Le Badge Marais te permet de gérer\nles Pokémon échangés\ljusqu'au N. {LV} 61 !\pEt il donne même à tes Pokémon\nle pouvoir de grimper les {COLOR}Écascades{COLOR}Ç !\p…Attends, t'as rien de ce\ngenre ?\pEh bien, c'est un problème.\pTiens, j'en ai en rab, prends\ncelui-ci.
 0x1F18B99: {COLOR}ÉCascade{COLOR}Ç sert pas qu'à monter\nles cascades, tu sais ?\pEn combat, ça peut faire hésiter\nton adversaire et l'empêcher\ld'attaquer !\pAu fait…\pJ'ai remarqué à quel point\nvous étiez impatients pendant\lle combat.\pJ'imagine que tu avais besoin de\ncette CS pour quelque chose, hein ?\pJe sais pas trop à quoi elle sert,\nmais j'espère que tu l'auras.\pJuste… ne sois pas trop imprudent,\nd'accord ?\pPromets-moi que ça ira.
 0x1F18D31: Y a plus rien à craindre,\nmaintenant !\pLes vagues vont plus te\nemporter !
 0x1F18D80: Arène Pokémon de Rougebois
@@ -20004,7 +20004,7 @@
 0x1F6C7EB: Tu dois {COLOR}É¥{STR_VAR_2}{COLOR}Ç\npour récupérer ce Pokémon.
 0x1F6C81D: Merci ! Voici ton\nPokémon.
 0x1F6C86C: Déjà de retour ?\pTon {COLOR}É{STR_VAR_1}{COLOR}Ç doit\nrester un peu plus avec moi.
-0x1F6C8B6: {COLOR}É{STR_VAR_1}{COLOR}Ç grandit.\pVoyons voir…\n+{COLOR}É{STR_VAR_2}{COLOR}Ç niv. !\pJe suis douée, pas vrai ?
+0x1F6C8B6: {COLOR}É{STR_VAR_1}{COLOR}Ç grandit.\pVoyons voir…\n+{COLOR}É{STR_VAR_2}{COLOR}Ç N. !\pJe suis douée, pas vrai ?
 0x1F6C91A: Pas de place pour reprendre\nle Pokémon.
 0x1F6C955: Désolé ! Tu n’as pas assez d’argent\n!
 0x1F6C97D: Reviens quand tu veux !
