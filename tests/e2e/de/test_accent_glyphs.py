@@ -1,9 +1,10 @@
 """E2E: ä/ö/ü/Ä/Ö/Ü render cleanly in the built DE ROM.
 
 Mirrors tests/e2e/fr/test_accent_glyphs.py. English source ROMs have no
-glyphs at all for the German umlauts — ``patch_font_de.py`` draws them into
-the free charmap slots 0x60-0x65 by combining each base letter (A/O/U, a/o/u)
-with the diaeresis dots extracted from the ROM's own Ë/ë reference pair.
+glyphs at all for the German umlauts — ``languages/de/patches/font.py`` draws
+them into the charmap slots 0xF1-0xF6 by combining each base letter
+(A/O/U, a/o/u) with the diaeresis dots extracted from the ROM's own Ë/ë
+reference pair.
 
 These tests decode the BUILT DE ROM and assert that every font block the
 patch actually touched carries the exact tile ``build_umlaut()`` would

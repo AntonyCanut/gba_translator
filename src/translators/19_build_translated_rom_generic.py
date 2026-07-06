@@ -202,7 +202,7 @@ class TranslatedROMBuilder:
         """Return the set of alias source-chars to bypass for this language.
 
         German (lang='german') has real umlaut glyphs at POKEMON_TABLE slots
-        0x60-0x65 — encoding must NOT fold ä/ö/ü/Ä/Ö/Ü to ASCII first.
+        0xF1-0xF6 — encoding must NOT fold ä/ö/ü/Ä/Ö/Ü to ASCII first.
         Every other language falls through to the default ASCII fallback.
         """
         if self.config.language == 'german':

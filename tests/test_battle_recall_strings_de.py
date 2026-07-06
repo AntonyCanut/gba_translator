@@ -77,6 +77,6 @@ def test_de_strings_start_with_fd1d():
 
 def test_de_strings_contain_zuruck():
     """Sanity: every DE string actually says "zurück" (come back)."""
-    zurueck = bytes([0xEE, 0xE9, 0xE6, 0x65, 0xD7, 0xDF])  # 'z','u','r','ü','c','k'
+    zurueck = bytes([0xEE, 0xE9, 0xE6, 0xF6, 0xD7, 0xDF])  # 'z','u','r','ü','c','k'
     for i, de in enumerate(DE_STRINGS):
         assert zurueck in de, f"DE_STRINGS[{i}] does not contain 'zurück'"

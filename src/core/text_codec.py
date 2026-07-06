@@ -97,13 +97,13 @@ FRENCH_EXTENDED_TABLE: Dict[str, int] = {
 
 POKEMON_TABLE.update(FRENCH_EXTENDED_TABLE)
 
-# German umlauts — assigned to free slots 0x60-0x65 by commit 2c97f4e.
-# Glyphs are drawn by languages/de/patches/font.py (DE build only).
+# German umlauts — assigned to slots 0xF1-0xF6 (matches src/text/charmap_data.py
+# and languages/de/patches/font.py, which draws the glyphs at 0xF1-0xF6).
 # These entries must live in POKEMON_TABLE so skip_aliases can reach them;
 # ENCODE_ALIASES used to fold them to ASCII before table lookup (dead code).
 GERMAN_UMLAUT_TABLE: Dict[str, int] = {
-    'Ä': 0x60, 'Ö': 0x61, 'Ü': 0x62,
-    'ä': 0x63, 'ö': 0x64, 'ü': 0x65,
+    'Ä': 0xF1, 'Ö': 0xF2, 'Ü': 0xF3,
+    'ä': 0xF4, 'ö': 0xF5, 'ü': 0xF6,
 }
 GERMAN_UMLAUT_CHARS: frozenset = frozenset(GERMAN_UMLAUT_TABLE)
 
@@ -118,7 +118,7 @@ SPANISH_ALIASES = {
 # Characters not present in the ROM font. Normalize to safe ASCII.
 # ä ö ü Ä Ö Ü are listed here as ASCII fallbacks for FR/IT/ES (no glyphs).
 # For DE, pass skip_aliases=GERMAN_UMLAUT_CHARS to encode_pokemon so they
-# bypass these aliases and reach their POKEMON_TABLE slots 0x60-0x65.
+# bypass these aliases and reach their POKEMON_TABLE slots 0xF1-0xF6.
 ENCODE_ALIASES = {
     'ä': 'a',
     'ö': 'o',

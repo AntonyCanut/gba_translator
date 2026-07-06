@@ -48,14 +48,15 @@ RECALL_PTRS = [
 
 # CFRU charmap subset needed to encode the German recall strings (raw bytes,
 # verified against the same lowercase/punctuation table used throughout the
-# project's charmap; ü is one of the umlaut slots patch_font_de.py draws).
+# project's charmap; ü is one of the umlaut slots languages/de/patches/font.py
+# draws, at 0xF1-0xF6).
 _CHARMAP = {
     ' ': 0x00, ',': 0xB8, ':': 0xF0, '!': 0xAB,
     'a': 0xD5, 'b': 0xD6, 'c': 0xD7, 'd': 0xD8, 'e': 0xD9, 'f': 0xDA,
     'g': 0xDB, 'h': 0xDC, 'i': 0xDD, 'j': 0xDE, 'k': 0xDF, 'l': 0xE0,
     'm': 0xE1, 'n': 0xE2, 'o': 0xE3, 'p': 0xE4, 'q': 0xE5, 'r': 0xE6,
     's': 0xE7, 't': 0xE8, 'u': 0xE9, 'v': 0xEA, 'w': 0xEB, 'x': 0xEC,
-    'y': 0xED, 'z': 0xEE, 'ü': 0x65,
+    'y': 0xED, 'z': 0xEE, 'ü': 0xF6,
 }
 _TERMINATOR = 0xFF
 _NEWLINE = 0xFE
