@@ -45,4 +45,21 @@ SPRITES: dict[str, SpriteDef] = {
         tiles_tall=13,
         compressed=False,
     ),
+    # START-menu icon-reorder hint bar (GitHub issue #43): the SELECT keycap +
+    # the word "Move" shown at the bottom of the custom START menu. It is NOT
+    # string-table text — it is a 15-tile LZ77 tile-strip (120x8) baked
+    # pixel-for-pixel into the ROM, referenced from the menu code at 0x0A0C210:
+    #   tiles 0-7  : window/frame border pieces
+    #   tiles 8-11 : the "SELECT" keycap
+    #   tiles 12-14: the word "Move"  (redraw these to "Dépl." by hand)
+    # Fill = palette index 15 (light), bevel/outline = 14 (dark), the bar's
+    # vertical gradient background = indices 1-4. Extract to a .bmp with
+    # extract_sprite.py, redraw "Move", re-inject with insert_sprite.py. An
+    # earlier attempt to redraw these tiles procedurally glitched the menu, so
+    # the hand-edited-BMP path is the supported way to translate this sprite.
+    "start_menu_move_hint": SpriteDef(
+        blocks=(0x0B1BBE0,),
+        tiles_wide=15,
+        tiles_tall=1,
+    ),
 }

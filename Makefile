@@ -61,7 +61,6 @@ PATCH_HP_LABELS_SCRIPT := languages/fr/patches/hp_labels.py
 PATCH_POKEDEX_STAT_LABELS_FR_SCRIPT := languages/fr/patches/pokedex_stat_labels.py
 PATCH_TYPE_ICONS_SCRIPT := languages/fr/patches/type_icons.py
 PATCH_DEXNAV_HEADERS_SCRIPT := languages/fr/patches/dexnav_headers.py
-PATCH_START_MENU_MOVE_HINT_SCRIPT := languages/fr/patches/start_menu_move_hint.py
 PATCH_SHOP_FR_SCRIPT := languages/fr/patches/shop.py
 PATCH_MISSION_DESC_FR_SCRIPT := languages/fr/patches/mission_descriptions.py
 PATCH_ZONE_NAMES_FR_SCRIPT := languages/fr/patches/zone_names.py
@@ -258,7 +257,6 @@ build-fr: $(FRENCH_EXTRACT) $(SPANISH_EXTRACT) $(BUILD_SCRIPT)
 	@$(PYTHON) $(PATCH_POKEDEX_STAT_LABELS_FR_SCRIPT) --rom $(FR_BUILD)
 	@$(PYTHON) $(PATCH_TYPE_ICONS_SCRIPT) --rom $(FR_BUILD)
 	@$(PYTHON) $(PATCH_DEXNAV_HEADERS_SCRIPT) --rom $(FR_BUILD)
-	@$(PYTHON) $(PATCH_START_MENU_MOVE_HINT_SCRIPT) --rom $(FR_BUILD)
 	@$(PYTHON) $(PATCH_SHOP_FR_SCRIPT) --rom $(FR_BUILD)
 	@$(PYTHON) $(PATCH_MISSION_DESC_FR_SCRIPT) \
 		--rom $(FR_BUILD) \
