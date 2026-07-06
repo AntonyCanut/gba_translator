@@ -49,10 +49,8 @@ NAME_FIXES = {
     # "Etui", which are not the game's established German term) — issue #39.
     0x3DEEAC: (" " * 12 + "TM Case", " " * 12 + "TM-Box", 26),
     0x87A084: (" " * 12 + "TM Case", " " * 12 + "TM-Box", 26),
-    # Roggenrola/Nodulithe ability "Weak Armor": fixed-width 17-byte cell, no
-    # pointer. Absent from translation_ready.json and the Spanish extraction,
-    # so it ships untouched in English. Official German name is "Sprödigkeit".
-    0xA37069: ("Weak Armor", "Sprödigkeit", 17),
+    # NOTE: "Weak Armor" ability name is now patched by ability_names.py from
+    # combined_de.txt (issue #51), so we don't patch it here to avoid conflicts.
     # "Key Items" pocket name shown on the Bag screen (issue #39). Present in
     # translation_ready.json (not a class-2 gap like the others above) but the
     # generic reinserter's write is silently lost every build — the identical
