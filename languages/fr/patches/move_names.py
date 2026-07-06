@@ -1,34 +1,33 @@
 #!/usr/bin/env python3
 """Patch move-name cells (fixed-width 13-byte table) after the build.
 
-The real, engine-read move-name table (``gMoveNames``-equivalent) lives at
-file offset **0x1B2980**, stride 13 bytes (``name + 0xFF + zero padding``),
-covering all 894 move slots (index 0 = "no move" placeholder "-", indices
-1..893 = the CFRU-expanded move roster — the same ``MOVE_COUNT`` as
-:mod:`src.core.moves`, which owns the *description* pointer table).
+The move-name table (``gMoveNames``-equivalent) is a fixed-width block, stride
+13 bytes (``name + 0xFF + zero padding``), covering all 894 move slots (index
+0 = "no move" placeholder "-", indices 1..893 = the CFRU-expanded move roster
+— the same ``MOVE_COUNT`` as :mod:`src.core.moves`, which owns the
+*description* pointer table). It is reached via index arithmetic from a base
+pointer that the engine loads from a fixed code site, **not** by chasing a
+per-entry pointer — so its live file offset depends on which base ROM the
+build ran against:
 
-This address was **not** where a translator-authored dataset expected it.
-``combined_it.txt`` (and, historically, whoever first captured this table)
-recorded move names at ``0xA40A10`` (stride 13, same 894 entries) — call it
-the *legacy offset*. That address is **not the live table**: it sits inside
-the generic builder's Pokédex-description free-space pool, and every build
-(the pristine ``englishrom.gba`` reference *and* the FR/IT/DE output ROMs
-alike) currently holds an unrelated, already-relocated Pokédex flavour-text
-fragment there (confirmed by direct byte inspection — see B-165-adjacent
-ticket "IT: move names + ability descriptions have zero patch coverage").
-Writing move names at the legacy address would silently corrupt that live
-Pokédex text; this patch never touches it.
+* On the **clean vanilla base** (``input/roms/englishrom.gba`` after R-17 — the
+  base every non-FR language now builds on) the live table sits at its stock
+  address **0xA40A10**, holding English names ("-", "Pound", "Karate Chop", …).
+* On the old **French-patched base** (now ``input/roms/patchedfrenchrom.gba``,
+  used only by ``build-fr``) the FR build had **relocated** the whole table to
+  free space at **0x1B2980** and repointed all 41 code references there; the
+  stock 0xA40A10 is left blank (0xFF). This is why an earlier revision of this
+  patch hard-coded 0x1B2980 as "the real table" — that was only ever true for
+  the contaminated base. On the clean base 0x1B2980 is unreferenced free space,
+  so writing there is a silent no-op (the bug this module now fixes).
 
-The real table at 0x1B2980 is, bafflingly, already filled with **French**
-names in every build sampled (the pristine reference ROM included), which
-is why FR needs no patch here (the content already matches) while IT and DE
-currently ship French move names instead of English or their own language —
-the actual highest-visibility symptom behind the "zero patch coverage"
-ticket, worse than the originally-reported "renders English".
-
-This patch maps each legacy-offset entry in ``--combined`` to its move index
-and writes the translated name at the *real* table cell, so it can reuse
-already-authored ``combined_it.txt`` text without re-translating anything.
+Every ``combined_<code>.txt`` records move names at **0xA40A10** (the stock /
+clean-base offset), used purely as a dict key here. Rather than trust either
+hard-coded address, :func:`resolve_live_base` reads the live table pointer
+straight from the ROM being patched (code site :data:`MOVE_NAME_PTR_SITE`),
+so the same code is correct on the clean base (→ 0xA40A10) and on the
+French-patched base (→ 0x1B2980) alike. Each combined entry is mapped by move
+index and written at the corresponding *live* table cell.
 """
 
 from __future__ import annotations
@@ -42,22 +41,56 @@ sys.path.insert(0, str(Path(__file__).resolve().parents[3]))
 
 from src.text.charmap_data import BYTE_TO_CHAR, CHAR_TO_BYTE
 
-# Real, live move-name table (see module docstring). Verified by direct ROM
-# inspection: decodes to the canonical Gen1+ move order ("-", "Écras'Face"
-# aka Pound-FR, "Poing Karaté" aka Karate Chop-FR, …) across every sampled
-# build, and its last non-placeholder entry lands exactly at index 893 —
-# matching src.core.moves.MOVE_COUNT (894, entry 0 = "no move").
-MOVE_NAME_TABLE = 0x1B2980
 MOVE_STRIDE = 13
 MOVE_COUNT = 894
 
-# Legacy offset scheme used by the translator-authored datasets (never the
-# live table — see module docstring). Every combined_<code>.txt move-name
-# entry was recorded here, at the same stride/count as the real table, so a
-# plain per-index remap recovers the intended text.
+# Stock / clean-base move-name table offset. Also the key scheme every
+# ``combined_<code>.txt`` records move names under (index 0 at this offset,
+# index i at +i*13). On the clean vanilla base this IS the live table.
 LEGACY_TABLE_OFFSET = 0xA40A10
 
+# Where the old French-patched build relocated the table (free space). Kept as
+# a named constant for tests and for the resolver's cross-check; on the clean
+# base this address is unreferenced 0xFF free space.
+RELOCATED_TABLE_OFFSET = 0x1B2980
+
+# Backwards-compatible alias. Historically this named "the live table"; it is
+# really only the French-patched-base relocation target (see module docstring).
+MOVE_NAME_TABLE = RELOCATED_TABLE_OFFSET
+
+# Fixed code site holding the 32-bit LE pointer the engine loads to reach the
+# move-name table (one of 41 identical references; this one is word-aligned and
+# well past the ROM header). Identical file offset on the clean base and the
+# French-patched base — only the *value* differs (clean → 0x08A40A10,
+# patched → 0x081B2980), so reading it recovers whichever table the engine
+# actually reads on THIS rom.
+MOVE_NAME_PTR_SITE = 0x000308A4
+ROM_POINTER_BASE = 0x08000000
+# Index-0 cell is the "no move" placeholder "-" (glyph 0xAE) followed by 0xFF;
+# used to sanity-check a resolved base before trusting it.
+PLACEHOLDER_BYTE = 0xAE
+
 _LINE_RE = re.compile(r"^0x([0-9A-Fa-f]+):\s?(.*)$")
+
+
+def resolve_live_base(data: bytes, fallback: int = LEGACY_TABLE_OFFSET) -> int:
+    """Return the live move-name table base offset for ``data``.
+
+    Reads the table pointer from :data:`MOVE_NAME_PTR_SITE` and validates that
+    the target begins with the ``"-"`` placeholder cell (0xAE, 0xFF). Falls
+    back to ``fallback`` (the stock/clean-base offset) if the pointer is
+    out of range or fails the placeholder check, so a corrupted or unexpected
+    ROM degrades to the vanilla address rather than writing somewhere unsafe.
+    """
+    if MOVE_NAME_PTR_SITE + 4 > len(data):
+        return fallback
+    ptr = int.from_bytes(data[MOVE_NAME_PTR_SITE : MOVE_NAME_PTR_SITE + 4], "little")
+    base = ptr - ROM_POINTER_BASE
+    if not (0 <= base <= len(data) - MOVE_STRIDE * MOVE_COUNT):
+        return fallback
+    if data[base] != PLACEHOLDER_BYTE or data[base + 1] != 0xFF:
+        return fallback
+    return base
 
 
 def _parse_combined(path: Path) -> dict[int, str]:
@@ -89,11 +122,18 @@ def apply_to_rom(
     translations: dict[int, str],
     *,
     legacy_base: int = LEGACY_TABLE_OFFSET,
-    live_base: int = MOVE_NAME_TABLE,
+    live_base: int | None = None,
     stride: int = MOVE_STRIDE,
     count: int = MOVE_COUNT,
 ) -> tuple[int, list[str]]:
-    """Patch move-name cells in place. Returns (patched_count, warnings)."""
+    """Patch move-name cells in place. Returns (patched_count, warnings).
+
+    ``live_base`` defaults to :func:`resolve_live_base` (the table address the
+    engine actually reads on ``data``); pass an explicit value to target a
+    specific offset (e.g. in unit tests).
+    """
+    if live_base is None:
+        live_base = resolve_live_base(data)
     patched = 0
     warnings: list[str] = []
 
@@ -133,7 +173,9 @@ def apply_to_rom(
 def apply_patches(rom_path: Path, combined: Path, dry_run: bool = False) -> int:
     translations = _parse_combined(combined)
     data = bytearray(rom_path.read_bytes())
-    patched, warnings = apply_to_rom(data, translations)
+    live_base = resolve_live_base(data)
+    print(f"patch_move_names: live table @ 0x{live_base:X}", file=sys.stderr)
+    patched, warnings = apply_to_rom(data, translations, live_base=live_base)
     for w in warnings:
         print(f"  WARN {w}", file=sys.stderr)
     if patched and not dry_run:
