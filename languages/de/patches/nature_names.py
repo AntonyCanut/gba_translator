@@ -54,31 +54,31 @@ NATURE_COUNT = 25
 # name. Order matches the in-game nature index (0 = Hardy .. 24 = Quirky); the
 # insertion order below IS the nature-index order the pointer tables use.
 TARGETS: dict[int, str] = {
-    0x463DBC: "Robust",     # Hardy
-    0x463DC2: "Einsam",     # Lonely
-    0x463DC9: "Mutig",      # Brave
-    0x463DCF: "Hart",       # Adamant
-    0x463DD7: "Frech",      # Naughty
-    0x463DDF: "Kühn",       # Bold
-    0x463DE4: "Sanftmut",   # Docile
-    0x463DEB: "Locker",     # Relaxed
-    0x463DF3: "Schelmisch", # Impish
-    0x463DFA: "Nachlässig", # Lax
-    0x463DFE: "Ängstlich",  # Timid
-    0x463E04: "Hastig",     # Hasty
-    0x463E0A: "Ernst",      # Serious
-    0x463E12: "Froh",       # Jolly
-    0x463E18: "Naiv",       # Naive
-    0x463E1E: "Bescheiden", # Modest
-    0x463E25: "Mild",       # Mild
-    0x463E2A: "Still",      # Quiet
-    0x463E30: "Schüchtern", # Bashful
-    0x463E38: "Hitzig",     # Rash
-    0x463E3D: "Ruhig",      # Calm
-    0x463E42: "Zart",       # Gentle
-    0x463E49: "Pfiffig",    # Sassy
-    0x463E4F: "Vorsichtig", # Careful
-    0x463E57: "Wunderlich", # Quirky
+    0x463DBC: "Robust",  # Hardy
+    0x463DC2: "Solo",    # Lonely
+    0x463DC9: "Mutig",   # Brave
+    0x463DCF: "Hart",    # Adamant
+    0x463DD7: "Frech",   # Naughty
+    0x463DDF: "Kühn",    # Bold
+    0x463DE4: "Sanft",   # Docile
+    0x463DEB: "Locker",  # Relaxed
+    0x463DF3: "Pfiffig", # Impish
+    0x463DFA: "Lasch",   # Lax
+    0x463DFE: "Scheu",   # Timid
+    0x463E04: "Hastig",  # Hasty
+    0x463E0A: "Ernst",   # Serious
+    0x463E12: "Froh",    # Jolly
+    0x463E18: "Naiv",    # Naive
+    0x463E1E: "Mäßig",   # Modest
+    0x463E25: "Mild",    # Mild
+    0x463E2A: "Ruhig",   # Quiet
+    0x463E30: "Zaghaft", # Bashful
+    0x463E38: "Hitzig",  # Rash
+    0x463E3D: "Still",   # Calm
+    0x463E42: "Zart",    # Gentle
+    0x463E49: "Forsch",  # Sassy
+    0x463E4F: "Sacht",   # Careful
+    0x463E57: "Kauzig",  # Quirky
 }
 
 

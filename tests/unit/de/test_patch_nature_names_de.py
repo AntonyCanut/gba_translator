@@ -38,10 +38,10 @@ class TestNatureNameData(unittest.TestCase):
 
     def test_known_canonical_mappings(self):
         by_offset = TARGETS
-        self.assertEqual(by_offset[0x463DBC], "Robust")   # Hardy
-        self.assertEqual(by_offset[0x463DFA], "Nachlässig")  # Lax
-        self.assertEqual(by_offset[0x463DFE], "Ängstlich")   # Timid
-        self.assertEqual(by_offset[0x463E57], "Wunderlich")  # Quirky
+        self.assertEqual(by_offset[0x463DBC], "Robust")  # Hardy
+        self.assertEqual(by_offset[0x463DFA], "Lasch")    # Lax
+        self.assertEqual(by_offset[0x463DFE], "Scheu")    # Timid
+        self.assertEqual(by_offset[0x463E57], "Kauzig")   # Quirky
 
     def test_names_are_unique(self):
         names = list(TARGETS.values())
