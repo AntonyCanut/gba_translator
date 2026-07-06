@@ -255,6 +255,8 @@ build-fr: $(ENGLISH_EXTRACT) $(SPANISH_EXTRACT) $(BUILD_SCRIPT)
 	@$(PYTHON) -m pytest tests/test_location_names_fr.py -q --tb=short
 	@echo "✓ Vérification des noms de nature (pointeurs vivants)..."
 	@$(PYTHON) -m pytest tests/test_nature_names_fr.py -q --tb=short
+	@echo "✓ Vérification de l'écran info rencontre (pointeurs vivants)..."
+	@$(PYTHON) -m pytest tests/test_encounter_info_fr.py -q --tb=short
 
 ## --------------- Multi-language builds ---------------
 # French keeps its dedicated byte-perfect recipe above (build-fr). Italian and
