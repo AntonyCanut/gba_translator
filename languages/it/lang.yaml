@@ -129,6 +129,12 @@ status_abbrev:
 #                           OK/Extra), packed in-place against the next string.
 #   battle_recall_strings    trainer "come back!" messages -> torna!/tornate!,
 #                           relocated via a small dedicated free-space scan.
+#   cry_label               Pokémon-list "Cry" menu entry -> "Grido" (B-188):
+#                           "Grido" (5 glyphs) overflows the fixed 3-glyph
+#                           cell, so this relocates the body to free space
+#                           and repoints its two known external pointers
+#                           (0x105FE4 / 0x1067B8) via languages/it/patches/
+#                           cry_label.py — same mechanism as battle_recall_strings.
 #   time_format               12h->24h + DD/MM/YYYY templates, IT weekdays
 #                           (Dom/Lun/Mar/Mer/Gio/Ven/Sab) and 12 month
 #                           abbreviations (already in combined_it.txt at their
@@ -152,6 +158,7 @@ patches:
   - inline
   - battle_prefix
   - battle_recall_strings
+  - cry_label               # relocate+repoint "Cry"→"Grido" (B-188, over-cap for the fixed cell)
   - repair_lz77
   - repair_localized_lz77
   # ── Structural restores from the pristine EN/ES ROMs (language-agnostic) ──

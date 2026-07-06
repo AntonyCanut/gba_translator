@@ -71,6 +71,12 @@ status_abbrev:
 #                            switch-out control-code cluster from English
 #   battle_recall_strings    German "komm/kommt zurück!" switch-out messages,
 #                            relocated via their external pointer table
+#   cry_label                Pokémon-list "Cry" menu entry -> "Schrei" (B-188):
+#                            "Schrei" (6 glyphs) overflows the fixed 3-glyph
+#                            cell, so this relocates the body to free space
+#                            and repoints its two known external pointers
+#                            (0x105FE4 / 0x1067B8) via languages/de/patches/
+#                            cry_label.py — same mechanism as battle_recall_strings.
 #
 # Inline code patches (not text data, no combined-file entry possible):
 #   time_format             24h clock + DD.MM.YYYY save/date templates, DE weekday
@@ -95,6 +101,7 @@ patches:
   - status_abbrevs
   - battle_string_templates
   - battle_recall_strings
+  - cry_label               # relocate+repoint "Cry"→"Schrei" (B-188, over-cap for the fixed cell)
   - status_badges
   # Redraw the move-type badges (graphic tiles) with German names
   # (KAMPF/GIFT/DRACHE/…) via languages/de/patches/type_icons.py.
