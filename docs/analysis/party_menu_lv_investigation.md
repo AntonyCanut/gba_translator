@@ -1,6 +1,21 @@
-# Party-menu « Lv » → « N. » — investigation (issue #48 / B-234)
+# Party-menu « Lv » → « N. » — investigation (issue #48 / B-234 / F-113)
 
-**Statut : source NON localisée.** Toutes les pistes statiques testables ont été
+**Statut : RÉSOLU (nature du « Lv » établie par trace d'exécution mGBA).**
+Le « Lv » de la liste d'équipe **n'est PAS du texte** rendu par une police : c'est
+un **graphique** cuit dans le template de la boîte Pokémon, exactement comme le
+label « PV » (déjà traité par `languages/fr/patches/hp_labels.py`). L'hypothèse
+« police FRLG non-compressée » de F-113 est **réfutée** ; la prémisse d'origine de
+B-234 (label graphique comme HP/PV) est **confirmée**. Voir la section
+« RÉSOLUTION » (bas du fichier) pour la preuve par watchpoint et le pipeline exact.
+
+> Note historique : la section immédiatement ci-dessous (« source NON localisée »)
+> date de la première passe B-234, avant que l'infra watchpoint mGBA n'existe.
+> Conservée pour la trace des pistes statiques éliminées ; conclusion corrigée par
+> la RÉSOLUTION.
+
+---
+
+**(historique) Statut : source NON localisée.** Toutes les pistes statiques testables ont été
 éliminées empiriquement (voir ci-dessous). La correction finale demande de
 localiser la police FRLG *non-compressée* utilisée par l'écran d'équipe, ce qui
 nécessite un trace d'exécution (watchpoint mGBA) ou la table `gFonts` désassemblée.
@@ -90,3 +105,62 @@ Une fois la police trouvée : vérifier si « Lv » y est un glyphe-ligature uni
 (⇒ éditer ce seul glyphe en « N. », correction propre couvrant tous les écrans) ou
 deux glyphes `L`+`v` (⇒ pas d'édition de police possible sans casser tout `L`/`v` ;
 il faudra alors intercepter/repointer la chaîne de niveau côté code).
+
+---
+
+# RÉSOLUTION (F-113) — le « Lv » est un GRAPHIQUE, pas une police
+
+Le trace d'exécution mGBA (piste 1 ci-dessus) a été implémenté et exécuté. Il
+tranche : **aucune police ne rend « Lv »**. Le niveau affiché « Lv10 » est en fait
+**un graphique « Lv » (template de la boîte) + un nombre « 10 » en texte**.
+
+## Infra ajoutée
+
+`emulator-web/src/lua/bridge.lua` gagne le support debugger de mGBA ≥ 0.11 :
+commandes `WATCHPOINT` (write/read/change, simple + range), `BREAKPOINT`,
+`CLEARBP`, `WATCHHITS`, `CLEARHITS`, `CAP`. Chaque hit capture tout le fichier de
+registres ARM (r0-r15, cpsr) + l'accès (addr/old/new/type). Côté client
+(`emulator-web/src/mgba-bridge.ts`) : `setWatchpoint/setRangeWatchpoint/`
+`setBreakpoint/clearBreakpoint/drainWatchHits/clearWatchHits/capabilities`.
+Sondes : `scripts/probe_party_lv_trace.mts` (read-watch des tables de largeur),
+`probe_party_vram_dump.mts`, `probe_party_lv_source.mts` (write-watch VRAM→EWRAM),
+`probe_party_lv_blit.mts` (breakpoint du blit de fenêtre).
+
+## Preuve
+
+1. **Trace read-watch sur les 11 tables de largeur de polices** (font.py
+   `WIDTH_TABLE_OFFSETS` + la famille « small » découverte par scan des literal
+   pools : glyph_base + 0x8000 = width_table, stride 0x40/glyphe). Pendant
+   l'ouverture START→Pokémon, chaque glyphe dessiné lit sa table de largeur. On
+   décode la séquence de glyphes par police (charmap) :
+   - `font@1FB100` → `Pokémon` (menu START) + horloge
+   - `font@207300` → `Choisis Pokémon ou Annuler.` (invite bas d'écran)
+   - **`font@1EEF00` → `Embrylex` `10` `♀` ` 30/` `/ 30` `Annuler`**
+   La police `1EEF00` rend donc **le nombre de niveau « 10 »**, les PV « 30/ 30 »,
+   le surnom et le bouton. **Aucune** police ne lit les codepoints `L`(0xC6)/
+   `v`(0xEA) : **« Lv » (et « PV ») ne sont dessinés par aucune police.**
+2. **Write-watch VRAM** sur les tuiles BG0 qui portent « Lv » (charbase 0, tuiles
+   0x8D/0x8E/0x9B/0x9C) : les pixels arrivent par copie depuis le tampon-fenêtre
+   EWRAM `0x2001c00`. Le fond dégradé de la boîte y est décompressé (SVC 0x11
+   LZ77) depuis `0x08B1BCE8` — ce bloc ne contient QUE le dégradé (motif de bandes
+   uniforme, pas de lettres). Le texte (« 10 »/« Embrylex »/…) est ensuite tracé
+   par-dessus par le plotter de fenêtre `0x08004c5e` (via `0x08004aa4`), et le
+   template de boîte est blit par `0x08004aa4` call #0 depuis une source ROM
+   (`r4=0x083D0070`). **« Lv » fait partie de ce template graphique, pas d'un
+   glyphe de police.**
+
+Conclusion : « Lv » se comporte **exactement** comme « PV » (label graphique cuit
+dans le template de boîte, cf. `hp_labels.py` qui a converti HP→PV dans le bloc
+`0x008001D0`). « PV » n'était pas dans `0x008001D0` avec des tuiles `L`/`v`
+séparables → « Lv » vit dans le template de boîte Unbound custom (blit `0x8004aa4`
+call #0, source ROM ≈ `0x083D0070`), et non dans une police.
+
+## Correction recommandée (nouveau ticket)
+
+Traiter « Lv »→« N. » **comme un graphique**, sur le modèle de `hp_labels.py` :
+localiser précisément les tuiles « L »+« v » dans le template de boîte Pokémon
+(blit `0x8004aa4` call #0 ; commencer par la source ROM `0x083D0070` et le bloc
+voisin de `0x008001D0`/`0x08B1BCE8`), les redessiner en « N. » (validation stricte
+des octets connus + recompression in-place), l'ajouter à la chaîne `build-fr`
+après `repair_*`, puis vérifier en jeu avec `probe_party_menu.mts`.
+**Ne PAS** chercher/éditer une police : la piste police est close.
