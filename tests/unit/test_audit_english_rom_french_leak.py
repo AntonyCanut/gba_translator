@@ -1,9 +1,11 @@
 """Unit tests for scripts/audit_english_rom_french_leak.py.
 
 Covers the French detector (precision on English text, recall on French),
-the region classifier, and the proximity clusterer. The final test is an
-integration guard: when the English source ROM is present it asserts the
-known baked-in French contamination regions are actually flagged.
+the region classifier, and the proximity clusterer. The final tests are
+integration guards: when the ROMs are present they assert the known
+baked-in French contamination regions are flagged on ``patchedfrenchrom.gba``
+(the base-fr build source) and absent from ``englishrom.gba`` (the clean
+base used by build-es/build-it/build-de since R-17 "Base Rom").
 """
 
 import importlib
@@ -19,6 +21,7 @@ sys.path.insert(0, str(ROOT / "scripts"))
 audit = importlib.import_module("audit_english_rom_french_leak")
 
 ENGLISH_ROM = ROOT / "input/roms/englishrom.gba"
+FRENCH_ROM = ROOT / "input/roms/patchedfrenchrom.gba"
 
 
 # ── french_signal: recall on real French ────────────────────────────────────
@@ -108,21 +111,38 @@ def test_cluster_hits_empty():
     assert audit.cluster_hits([]) == []
 
 
-# ── integration guard on the real ROM ───────────────────────────────────────
+# ── integration guard on the real ROMs ──────────────────────────────────────
 
 @pytest.mark.rom
-@pytest.mark.skipif(not ENGLISH_ROM.exists(), reason="englishrom.gba not available")
-def test_english_rom_ships_french_in_known_regions():
-    rom = ENGLISH_ROM.read_bytes()
+@pytest.mark.skipif(not FRENCH_ROM.exists(), reason="patchedfrenchrom.gba not available")
+def test_patched_french_rom_ships_french_in_known_regions():
+    rom = FRENCH_ROM.read_bytes()
     hits = list(audit.find_french_runs(rom))
     clusters = audit.cluster_hits(hits, min_hits=5)
     regions = {audit.classify_region(c[0][0]) for c in clusters}
 
     # The move-name and move-description tables and Pokédex flavour are the
-    # confirmed baked-in French leaks — they must be flagged.
+    # confirmed baked-in French leaks — they must be flagged. patchedfrenchrom.gba
+    # is the deliberately French-patched base build-fr sources from (R-17).
     assert any("move names" in r for r in regions), regions
     assert any("move descriptions" in r for r in regions), regions
     assert any("Pokedex flavour" in r for r in regions), regions
 
     # Sanity: the leak is substantial, not a stray handful of hits.
     assert sum(len(c) for c in clusters) > 1000
+
+
+@pytest.mark.rom
+@pytest.mark.skipif(not ENGLISH_ROM.exists(), reason="englishrom.gba not available")
+def test_english_rom_is_clean_of_known_french_regions():
+    # Regression guard for R-17 "Base Rom": englishrom.gba must be the clean
+    # vanilla base (build-es/build-it/build-de/build-lang) and must NOT ship
+    # the historical French contamination that patchedfrenchrom.gba carries.
+    rom = ENGLISH_ROM.read_bytes()
+    hits = list(audit.find_french_runs(rom))
+    clusters = audit.cluster_hits(hits, min_hits=5)
+    regions = {audit.classify_region(c[0][0]) for c in clusters}
+
+    assert "move names" not in regions, regions
+    assert "move descriptions" not in regions, regions
+    assert "Pokedex flavour" not in regions, regions

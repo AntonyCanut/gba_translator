@@ -104,19 +104,23 @@ class TestBuildFrPipeline(unittest.TestCase):
         self.assertTrue(MAKEFILE.exists(), "Makefile is missing")
 
     def test_build_fr_regenerates_extractions(self) -> None:
-        """EN/ES extractions must be prerequisites so they auto-regenerate.
+        """FR/ES extractions must be prerequisites so they auto-regenerate.
 
         This is the root-cause fix: when these JSONs were missing the inline
         override step aborted with a non-zero exit code.
+
+        FR builds from ``patchedfrenchrom.gba`` (FRENCH_ROM/FRENCH_EXTRACT),
+        not the clean ``englishrom.gba`` used by build-es/build-it/build-de —
+        see R-17 (Base Rom).
         """
-        english_extract = _expand("$(ENGLISH_EXTRACT)", self.variables)
+        french_extract = _expand("$(FRENCH_EXTRACT)", self.variables)
         spanish_extract = _expand("$(SPANISH_EXTRACT)", self.variables)
-        self.assertIn("englishrom_texts.json", english_extract)
+        self.assertIn("patchedfrenchrom_texts.json", french_extract)
         self.assertIn("spanishrom_texts.json", spanish_extract)
         self.assertIn(
-            english_extract,
+            french_extract,
             self.prereqs_expanded,
-            "build-fr must depend on the English extraction so it regenerates",
+            "build-fr must depend on the French-base extraction so it regenerates",
         )
         self.assertIn(
             spanish_extract,

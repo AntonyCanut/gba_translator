@@ -144,7 +144,9 @@ class PatchMoveDescriptionsTests(unittest.TestCase):
 
 
 FR_ROM = os.path.join("output", "roms", "GenedRom-fr.gba")
-SOURCE_ROM = os.path.join("input", "roms", "englishrom.gba")
+# build-fr sources from patchedfrenchrom.gba, not the clean englishrom.gba
+# used by build-es/build-it/build-de (R-17 "Base Rom").
+SOURCE_ROM = os.path.join("input", "roms", "patchedfrenchrom.gba")
 
 
 def _latest_translation():

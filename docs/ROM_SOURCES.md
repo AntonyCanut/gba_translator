@@ -1,8 +1,17 @@
 # ROM Sources and Baseline
 
-This project uses two ROMs as the only source of truth:
-- input/roms/englishrom.gba
-- input/roms/spanishrom.gba
+This project uses three ROMs as the only source of truth:
+- input/roms/englishrom.gba — clean vanilla Unbound base. Used by build-es, the
+  generic multi-language driver (build-it/build-de/build-indie/build-lang) and
+  all shared extraction/diff tooling.
+- input/roms/patchedfrenchrom.gba — the same ROM lineage but with official
+  French already baked into it (move/item/Pokédex tables etc. — see
+  docs/english-rom-french-leak-audit.md for the historical contamination
+  audit). build-fr is the ONLY consumer: combined_fr.txt and every dedicated
+  languages/fr/patches/*.py script were tuned against this exact byte layout,
+  so FR must never be rebuilt from the clean englishrom.gba.
+- input/roms/spanishrom.gba — community Spanish translation, used as a
+  reference/validation ROM (build-es, pointer-proof checks).
 
 Baseline metadata (size + sha256):
 - docs/roms_baseline.json

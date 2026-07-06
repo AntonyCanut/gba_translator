@@ -11,8 +11,15 @@ PYTHON ?= python3
 BUILD_NUMBER ?= 0
 
 ROM_DIR := input/roms
+# Clean vanilla base — used by build-es, the generic multi-language driver
+# (build-it/build-de/build-indie/build-lang) and all shared extraction/diff
+# tooling. NOT used for build-fr — see FRENCH_ROM below.
 ENGLISH_ROM := $(ROM_DIR)/englishrom.gba
 SPANISH_ROM := $(ROM_DIR)/spanishrom.gba
+# French-patched base (baked-in official French across move/item/Pokédex
+# tables). build-fr is the ONLY consumer — its combined_fr.txt and dedicated
+# patch scripts were tuned against this exact ROM's byte layout.
+FRENCH_ROM := $(ROM_DIR)/patchedfrenchrom.gba
 
 ROM_BASELINE := docs/roms_baseline.json
 VERIFY_SCRIPT := scripts/verify_roms.py
@@ -76,6 +83,7 @@ FR_TRANSLATION := $(shell ls -t $(OUTPUT_DIR)/translation/[0-9]*_translation_rea
 
 ENGLISH_EXTRACT := $(EXTRACT_DIR)/englishrom_texts.json
 SPANISH_EXTRACT := $(EXTRACT_DIR)/spanishrom_texts.json
+FRENCH_EXTRACT := $(EXTRACT_DIR)/patchedfrenchrom_texts.json
 DIFF_REPORT := $(DIFF_DIR)/pointer_text_differences.json
 PAIRS_REPORT := $(DIFF_DIR)/pointer_translation_pairs.json
 OFFSET_MAP := $(DIFF_DIR)/pointer_offset_map.json
@@ -83,7 +91,7 @@ SPANISH_BUILD := $(ROM_OUT_DIR)/GenedRom-es.gba
 
 .DEFAULT_GOAL := pipeline
 
-.PHONY: pipeline verify-roms extract extract-en extract-es diff build-es build-fr prepare-fr validate-es trilingual-csv \
+.PHONY: pipeline verify-roms extract extract-en extract-es extract-fr diff build-es build-fr prepare-fr validate-es trilingual-csv \
 	build-it build-de build-indie build-lang build-all release-all langs \
 	test test-python-fast test-python test-rom check-translations test-vitest test-playwright test-all \
 	sync-charmap sync-charmap-check install install-playwright lint tickets report \
@@ -110,6 +118,12 @@ $(SPANISH_EXTRACT): $(SPANISH_ROM) $(EXTRACT_SCRIPT)
 	@mkdir -p $(EXTRACT_DIR)
 	@$(PYTHON) $(EXTRACT_SCRIPT) $(SPANISH_ROM) --output $(SPANISH_EXTRACT) --scan-all-pointers
 
+extract-fr: $(FRENCH_EXTRACT)
+
+$(FRENCH_EXTRACT): $(FRENCH_ROM) $(EXTRACT_SCRIPT)
+	@mkdir -p $(EXTRACT_DIR)
+	@$(PYTHON) $(EXTRACT_SCRIPT) $(FRENCH_ROM) --output $(FRENCH_EXTRACT) --scan-all-pointers
+
 diff: $(DIFF_REPORT)
 	@echo "✓ Pointer diff + offset map generated."
 
@@ -122,14 +136,14 @@ $(DIFF_REPORT): $(ENGLISH_EXTRACT) $(SPANISH_EXTRACT) $(DIFF_SCRIPT)
 		--pairs-out $(PAIRS_REPORT) \
 		--map-out $(OFFSET_MAP)
 
-## prepare-fr: generate translation_ready.json from combined_fr.txt + EN extraction.
+## prepare-fr: generate translation_ready.json from combined_fr.txt + FR-base extraction.
 ## Required in CI where the trilingual CSV is not committed.  Run before build-fr.
-prepare-fr: $(ENGLISH_EXTRACT) $(PREPARE_FR_SCRIPT)
+prepare-fr: $(FRENCH_EXTRACT) $(PREPARE_FR_SCRIPT)
 	@$(PYTHON) $(PREPARE_FR_SCRIPT) \
 		--combined languages/fr/combined_fr.txt \
-		--english $(ENGLISH_EXTRACT) \
+		--english $(FRENCH_EXTRACT) \
 		--critical languages/fr/data/critical_strings_fr.txt \
-		--english-rom $(ENGLISH_ROM)
+		--english-rom $(FRENCH_ROM)
 
 build-es: $(OFFSET_MAP) $(BUILD_SCRIPT)
 	@if [ ! -f "$(SPANISH_ROM)" ]; then \
@@ -148,14 +162,14 @@ build-es: $(OFFSET_MAP) $(BUILD_SCRIPT)
 		--language spanish \
 		--output $(SPANISH_BUILD)
 
-build-fr: $(ENGLISH_EXTRACT) $(SPANISH_EXTRACT) $(BUILD_SCRIPT)
+build-fr: $(FRENCH_EXTRACT) $(SPANISH_EXTRACT) $(BUILD_SCRIPT)
 	@if [ -z "$(FR_TRANSLATION)" ]; then \
 		echo "No translation_ready.json found in output/translation/"; \
 		exit 1; \
 	fi
 	@mkdir -p $(ROM_OUT_DIR)
 	@$(PYTHON) $(BUILD_SCRIPT) \
-		--source $(ENGLISH_ROM) \
+		--source $(FRENCH_ROM) \
 		--translations $(FR_TRANSLATION) \
 		--language french \
 		--allow-relocate \
@@ -171,36 +185,38 @@ build-fr: $(ENGLISH_EXTRACT) $(SPANISH_EXTRACT) $(BUILD_SCRIPT)
 	@$(PYTHON) $(PATCH_BATTLE_PREFIX_SCRIPT) --rom $(FR_BUILD)
 	@$(PYTHON) $(INLINE_FR_SCRIPT) \
 		--rom $(FR_BUILD) \
-		--source $(ENGLISH_ROM) \
+		--source $(FRENCH_ROM) \
 		--combined languages/fr/combined_fr.txt \
 		--reference-texts $(SPANISH_EXTRACT) \
+		--english-texts $(FRENCH_EXTRACT) \
 		--translations $(FR_TRANSLATION)
 	@$(PYTHON) $(REPAIR_LZ77_SCRIPT) \
 		--target $(FR_BUILD) \
-		--english $(ENGLISH_ROM) \
+		--english $(FRENCH_ROM) \
 		--spanish $(SPANISH_ROM)
 	@$(PYTHON) $(REPAIR_LOCALIZED_LZ77_SCRIPT) \
 		--target $(FR_BUILD) \
-		--english $(ENGLISH_ROM) \
+		--english $(FRENCH_ROM) \
 		--spanish $(SPANISH_ROM) \
 		--require-pointer
-	@$(PYTHON) $(PATCH_SUMMARY_LABELS_SCRIPT) --rom $(FR_BUILD) --source $(ENGLISH_ROM)
+	@$(PYTHON) $(PATCH_SUMMARY_LABELS_SCRIPT) --rom $(FR_BUILD) --source $(FRENCH_ROM)
 	@$(PYTHON) $(REPOINT_STALE_SCRIPT) \
 		--target $(FR_BUILD) \
+		--english-texts $(FRENCH_EXTRACT) \
 		--translations $(FR_TRANSLATION) \
-		--source $(ENGLISH_ROM)
-	@$(PYTHON) $(PATCH_RITUAL_SCRIPT) --rom $(FR_BUILD) --source $(ENGLISH_ROM)
+		--source $(FRENCH_ROM)
+	@$(PYTHON) $(PATCH_RITUAL_SCRIPT) --rom $(FR_BUILD) --source $(FRENCH_ROM)
 	@$(PYTHON) $(PATCH_VERSION_SCRIPT) --rom $(FR_BUILD) --build-number $(BUILD_NUMBER)
 	@$(PYTHON) $(PATCH_POKEDEX_FR_SCRIPT) \
 		--rom $(FR_BUILD) \
-		--source $(ENGLISH_ROM) \
+		--source $(FRENCH_ROM) \
 		--translations $(FR_TRANSLATION)
 	@$(PYTHON) $(PATCH_POKEDEX_METRICS_FR_SCRIPT) --rom $(FR_BUILD)
 	@$(PYTHON) $(PATCH_POKEDEX_CATEGORIES_FR_SCRIPT) --rom $(FR_BUILD)
 	@$(PYTHON) $(PATCH_POKEDEX_CATEGORY_ORDER_FR_SCRIPT) --rom $(FR_BUILD)
 	@$(PYTHON) $(PATCH_MOVE_DESC_FR_SCRIPT) \
 		--rom $(FR_BUILD) \
-		--source $(ENGLISH_ROM) \
+		--source $(FRENCH_ROM) \
 		--translations $(FR_TRANSLATION)
 	@$(PYTHON) $(PATCH_DUP_MOVE_DESC_FR_SCRIPT) \
 		--rom $(FR_BUILD) \
@@ -211,26 +227,26 @@ build-fr: $(ENGLISH_EXTRACT) $(SPANISH_EXTRACT) $(BUILD_SCRIPT)
 		--reference-rom $(SPANISH_ROM)
 	@$(PYTHON) $(PATCH_GIVECS_GIFT_ITEM_FR_SCRIPT) \
 		--rom $(FR_BUILD) \
-		--source $(ENGLISH_ROM)
+		--source $(FRENCH_ROM)
 	@$(PYTHON) $(PATCH_METEORITE_DIALOGUE_FR_SCRIPT) \
 		--rom $(FR_BUILD) \
-		--source $(ENGLISH_ROM) \
+		--source $(FRENCH_ROM) \
 		--combined languages/fr/combined_fr.txt \
 		--reference-rom $(SPANISH_ROM)
 	@$(PYTHON) $(PATCH_WORLDMAP_JUNCTION_FR_SCRIPT) \
 		--rom $(FR_BUILD) \
-		--source $(ENGLISH_ROM) \
+		--source $(FRENCH_ROM) \
 		--combined languages/fr/combined_fr.txt \
 		--reference-rom $(SPANISH_ROM)
 	@$(PYTHON) $(PATCH_CUBE_TV_DIALOGUES_FR_SCRIPT) \
 		--rom $(FR_BUILD) \
-		--source $(ENGLISH_ROM) \
+		--source $(FRENCH_ROM) \
 		--combined languages/fr/combined_fr.txt \
 		--reference-rom $(SPANISH_ROM)
 	@$(PYTHON) $(PATCH_CFRU_TYPE_NAMES_SCRIPT) --rom $(FR_BUILD)
 	@$(PYTHON) $(PATCH_OPTIONS_FOOTER_SCRIPT) --rom $(FR_BUILD)
 	@$(PYTHON) $(PATCH_STATUS_ABBREVS_SCRIPT) --rom $(FR_BUILD)
-	@$(PYTHON) $(PATCH_BATTLE_STRING_TEMPLATES_SCRIPT) --rom $(FR_BUILD) --source $(ENGLISH_ROM)
+	@$(PYTHON) $(PATCH_BATTLE_STRING_TEMPLATES_SCRIPT) --rom $(FR_BUILD) --source $(FRENCH_ROM)
 	@$(PYTHON) $(PATCH_BATTLE_RECALL_STRINGS_SCRIPT) --rom $(FR_BUILD)
 	@$(PYTHON) $(PATCH_STATUS_BADGES_SCRIPT) --rom $(FR_BUILD)
 	@$(PYTHON) $(PATCH_HP_LABELS_SCRIPT) --rom $(FR_BUILD)
@@ -240,17 +256,17 @@ build-fr: $(ENGLISH_EXTRACT) $(SPANISH_EXTRACT) $(BUILD_SCRIPT)
 	@$(PYTHON) $(PATCH_SHOP_FR_SCRIPT) --rom $(FR_BUILD)
 	@$(PYTHON) $(PATCH_MISSION_DESC_FR_SCRIPT) \
 		--rom $(FR_BUILD) \
-		--source $(ENGLISH_ROM) \
+		--source $(FRENCH_ROM) \
 		--combined languages/fr/combined_fr.txt \
 		--reference-rom $(SPANISH_ROM)
 	@$(PYTHON) $(PATCH_ZONE_NAMES_FR_SCRIPT) \
 		--rom $(FR_BUILD) \
-		--source $(ENGLISH_ROM) \
+		--source $(FRENCH_ROM) \
 		--combined languages/fr/combined_fr.txt \
 		--reference-rom $(SPANISH_ROM)
 	@$(PYTHON) $(PATCH_WORLDMAP_LABELS_FR_SCRIPT) \
 		--rom $(FR_BUILD) \
-		--source $(ENGLISH_ROM) \
+		--source $(FRENCH_ROM) \
 		--combined languages/fr/combined_fr.txt
 	@$(PYTHON) $(PATCH_TRAINER_CARD_DATE_FR_SCRIPT) --rom $(FR_BUILD)
 	@echo "✓ FR ROM built — vérification des traductions de lieux..."

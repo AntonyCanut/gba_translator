@@ -1,15 +1,20 @@
 {
-  "generated_at": "2026-01-14T09:31:42Z",
+  "generated_at": "2026-07-06T00:00:00Z",
   "roms": {
     "englishrom": {
       "path": "input/roms/englishrom.gba",
       "size_bytes": 33554432,
-      "sha256": "01b23dd6f3d0df3e9a2657ee4f4b467bc2327fb5490d9816d5735bfe5c59ac53"
+      "sha256": "7aa25bbf568f7cfcf6ee1cf2e9e6ff637350b3d0705c2375cabb6baa7d9739f7"
     },
     "spanishrom": {
       "path": "input/roms/spanishrom.gba",
       "size_bytes": 33554432,
       "sha256": "a98a14adc231327db22baa7d7762b95abc0fe5bfe6fcc64e38a2c6b525429ff6"
+    },
+    "patchedfrenchrom": {
+      "path": "input/roms/patchedfrenchrom.gba",
+      "size_bytes": 33554432,
+      "sha256": "01b23dd6f3d0df3e9a2657ee4f4b467bc2327fb5490d9816d5735bfe5c59ac53"
     }
   }
 }

@@ -186,10 +186,17 @@ Place your ROMs here:
 
 ```text
 input/roms/englishrom.gba
+input/roms/patchedfrenchrom.gba
 input/roms/spanishrom.gba
 ```
 
-The English ROM is required for the translation builds. The Spanish ROM is required for the original reproduction pipeline and for validation / pointer-proof workflows.
+`englishrom.gba` must be a clean vanilla Unbound ROM — it is the base for
+`build-es`, the generic multi-language driver (`build-it`/`build-de`/
+`build-indie`/`build-lang`) and all shared extraction/diff tooling.
+`patchedfrenchrom.gba` is the ROM lineage with official French already baked
+into it; it is the base for `build-fr` only (see docs/ROM_SOURCES.md). The
+Spanish ROM is required for the original reproduction pipeline and for
+validation / pointer-proof workflows.
 
 ## Build commands
 
