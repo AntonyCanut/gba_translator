@@ -45,13 +45,24 @@ NAME_FIXES = {
     # Hard Stone hold item: same class-2 structure.
     0x3DD32C: (" " * 12 + "Hard Stone", " " * 12 + "Harter Stein", 26),
     0x878504: (" " * 12 + "Hard Stone", " " * 12 + "Harter Stein", 26),
-    # TM Case key item: same class-2 structure.
-    0x3DEEAC: (" " * 12 + "TM Case", " " * 12 + "TM-Hülle", 26),
-    0x87A084: (" " * 12 + "TM Case", " " * 12 + "TM-Hülle", 26),
+    # TM Case key item: same class-2 structure. "TM-Box" (not "TM-Hülle" /
+    # "Etui", which are not the game's established German term) — issue #39.
+    0x3DEEAC: (" " * 12 + "TM Case", " " * 12 + "TM-Box", 26),
+    0x87A084: (" " * 12 + "TM Case", " " * 12 + "TM-Box", 26),
     # Roggenrola/Nodulithe ability "Weak Armor": fixed-width 17-byte cell, no
     # pointer. Absent from translation_ready.json and the Spanish extraction,
     # so it ships untouched in English. Official German name is "Sprödigkeit".
     0xA37069: ("Weak Armor", "Sprödigkeit", 17),
+    # "Key Items" pocket name shown on the Bag screen (issue #39). Present in
+    # translation_ready.json (not a class-2 gap like the others above) but the
+    # generic reinserter's write is silently lost every build — the identical
+    # string at 0x417B17 (Cube screen) reaches the ROM fine, this one never
+    # does. Forced directly rather than traced further. "Basis It." is the
+    # reporter's own rename away from "Seltene Items" ("rare items" — wrong,
+    # inherited from the French mistranslation "Objets rares"), abbreviated
+    # to fit the tight 10-byte cell (budget: stride 10 - 1 terminator = 9
+    # glyphs, no padding — the next string starts immediately after).
+    0x4162DE: ("Key Items", "Basis It.", 10),
 }
 
 
