@@ -14,7 +14,7 @@ code: de
 name: German
 native_name: Deutsch
 builder_language: german          # value passed to the generic builder --language
-status: complete                  # complete | in_progress
+status: in_progress               # complete | in_progress
 build: generic                    # dedicated (make build-fr) | generic (build_language.py)
 
 combined: languages/de/combined_de.txt
@@ -109,6 +109,9 @@ patches:
   # Redraw the move-type badges (graphic tiles) with German names
   # (KAMPF/GIFT/DRACHE/…) via languages/de/patches/type_icons.py.
   - type_icons
+  # Patch level-up stat-change abbreviations (Spez. Angr. / Spez. Vert.)
+  # via languages/de/patches/levelup_stat_abbreviations.py.
+  - levelup_stat_abbreviations
   # Redraw the HP-label graphics (LZ77 tiles) with German « KP » (Kraftpunkte)
   # via languages/de/patches/hp_labels.py.
   - hp_labels
