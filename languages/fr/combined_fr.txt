@@ -208,7 +208,7 @@
 0x190687: Je ne sais vraiment pas quoi faire.\pTous les quelques jours, ce\nPokémon horrible entre dans ma\lmaison et vole ma nourriture.\pAvec un Pokédex, je saurais ce que\nc’est et comment l’arrêter…
 0x19073F: Certains objets existent seulement\npour être vendus.\pSi tu obtiens l’un de ces objets,\ntu devrais le vendre aussitôt.\pJ’ai même entendu dire que des\nmaniaques voudraient acheter ces\lobjets encore plus cher que dans\lles Boutiques Pokémon.
 0x191840: Mon grand-père a survécu au\nmétéorite il y a des années !\pIl est trop cool !
-0x192079: Le Champion d’Arène, Mirskle,\nutilise des Pokémon trouvables au\l{COLOR}ÉParadis Floral{COLOR}Ë.\pAttraper de bons Pokémon Glace dans\nla {COLOR}ÉGrotte Stalactite{COLOR}Ë peut\lvraiment te donner l’avantage sur\llui.
+0x192079: Le Champion d’Arène, Sylvain,\nutilise des Pokémon trouvables au\l{COLOR}ÉParadis Floral{COLOR}Ë.\pAttraper de bons Pokémon Glace dans\nla {COLOR}ÉGrotte Stalactite{COLOR}Ë peut\lvraiment te donner l’avantage sur\llui.
 0x1929C2: Le Repousse marche aussi sur les\nPokémon faibles.\pPlace ton Pokémon le plus fort à\nla gauche de la Liste Pokémon.\pSi ton premier Pokémon est fort,\nle Repousse est plus efficace.
 0x192A79: Essaie de battre le plus\nd’Arènes possible.\pLes Boutiques Pokémon vendront\nplus d’objets avec plus de Badges.
 0x193465: Cette ville est plutôt calme.\pPeu de gens aiment traîner dans\nune ville au milieu d’une forêt.
@@ -283,8 +283,8 @@
 0x1970B2: D’accord, une CT de {STR_VAR_2},\nc’est ça que tu veux ?
 0x1970D5: Désolé, il te faut plus de\njetons que ça.
 0x19745D: Tu devrais faire de la place\npour ça.
-0x197873: 9Arène de Daherapolis\nChampion: Galavan\pGagnants:\n{RIVAL}
-0x1978AC: Arène Pokémon de Daherapolis\nChampion : Galavan\pDresseurs vainqueurs :\n{RIVAL}, {PLAYER}
+0x197873: 9Arène de Daherapolis\nChampion: Galvane\pGagnants:\n{RIVAL}
+0x1978AC: Arène Pokémon de Daherapolis\nChampion : Galvane\pDresseurs vainqueurs :\n{RIVAL}, {PLAYER}
 0x1979C1: Pff…\pJ’ai cramé tout mon argent au\nCasino !\pOn dirait que je n’aurai plus\nbesoin de ça !
 0x197A38: {PLAYER} a reçu une Boîte Jetons\ndu gars.
 0x197A5E: Fais de la place pour ça !
@@ -313,15 +313,15 @@
 0x19A79F: 9Ils vendent bien des Attaque + ?\pJ’aime ça, ça hausse l’Attaque en\ncombat.
 0x19A7F1: Avoir des objets en rab ne fait\njamais de mal. On ne sait jamais.
 0x19B86A: Presque arrivé !
-0x19B8B9: Je suis pas trop jeune pour Mel !\nLaisse-moi tranquille !
+0x19B8B9: Je suis pas trop jeune pour Mél !\nLaisse-moi tranquille !
 0x19BA45: Mauvais chemin !
-0x19BAB4: Mel a besoin qu’on peigne sa\nbeauté !
+0x19BAB4: Mél a besoin qu’on peigne sa\nbeauté !
 0x19BB49: Impasse !
 0x19BB53: Cette campeuse a menti, ce n’est\npas le bon chemin !
 0x19BBB3: Tu adores ce design d’Arène, hein ?\pIl est si bon qu’un génie a dû\nl’inventer !
-0x19BC57: Tu es presque arrivé à Mel !\nEncore un peu !
-0x19BDFE: Arène Pokémon de Rivapolis\nChampion : Mel\pDresseurs vainqueurs :\n{RIVAL}
-0x19BE37: Arène Pokémon de Rivapolis\nChampion : Mel\pDresseurs vainqueurs :\n{RIVAL}, {PLAYER}
+0x19BC57: Tu es presque arrivé à Mél !\nEncore un peu !
+0x19BDFE: Arène Pokémon de Rivapolis\nChampion : Mél\pDresseurs vainqueurs :\n{RIVAL}
+0x19BE37: Arène Pokémon de Rivapolis\nChampion : Mél\pDresseurs vainqueurs :\n{RIVAL}, {PLAYER}
 0x19BF8F: Le Repousse Max empêche les Pokémon\nfaibles d'apparaître.\pIl dure plus longtemps que le Super\nRepousse.
 0x19BFF1: Avec le {COLOR}ÉBadge Chute{COLOR}Ç, tu peux\nacheter des {COLOR}ÉHyper Balls{COLOR}Ç !\pElles sont bien meilleures pour\ncapturer que des Super Balls.
 0x19C0B4: J’ai entendu que des gens font des\nbêtises sur la {COLOR}ÉRoute 9{COLOR}Ë.
@@ -5376,7 +5376,7 @@
 0x744C3D: Une sorte de plante aux feuilles\nétranges.
 0x744D32: Rivapolis
 0x744E2C: À l'est d'ici, au-delà de la Route\n15 aquatique, se trouve Viville.\pIl te faudra plus que la CS Surf\npour y arriver.\pOn dirait que des gens bloquent la\nroute…
-0x744EF5: Salut, dresseur itinérant.\pSi tu comptes défier Mirskle, ça\npourrait t'aider.
+0x744EF5: Salut, dresseur itinérant.\pSi tu comptes défier Sylvain, ça\npourrait t'aider.
 0x744F54: J'aime rendre service aux\nvoyageurs.\pC'est mon hobby.
 0x744FB3: La terre ici est morcelée en petits\nfragments.\pEn y pensant, toute la région de\nBorrius est divisée en grandes\lîles !
 0x74503F: Cette statue représente le Pokémon\nlégendaire de feu, Sulfura.\pIl vivrait quelque part dans le\nVolcan Cendré, illuminant le ciel\lde ses flammes la nuit.
@@ -5389,9 +5389,9 @@
 0x745518: Route 3\p<0x79> Paradis Floral\n<0x7A> Dresco
 0x745750: Si tu changes d'avis,\ndis-le-moi.
 0x745775: Hé gamin !\nÉcoute.\pLa route devant est remplie de\nDresseurs qui veulent se battre.\pCertains l'ont même surnommée «\nRoute Défi».\pMais je comprends si tu ne veux pas\nles affronter.\pGrâce à mes pouvoirs psy, je peux te\ntéléporter de l'autre côté\lgratis !\pAlors, tu es partant ?
-0x745900: Arène Pokémon de Dresco\nChampion : Mirskle\lLe hippie perché !
-0x74593B: Champion d'Arène de Dresco :\nMirskle\pEntraîneurs gagnants :\n{RIVAL}
-0x745973: Arène Pokémon Dresco\nChampion : Mirskle\pVainqueurs : {RIVAL},\n{PLAYER}
+0x745900: Arène Pokémon de Dresco\nChampion : Sylvain\lLe hippie perché !
+0x74593B: Champion d'Arène de Dresco :\nSylvain\pEntraîneurs gagnants :\n{RIVAL}
+0x745973: Arène Pokémon Dresco\nChampion : Sylvain\pVainqueurs : {RIVAL},\n{PLAYER}
 0x7459AF: Whooooa…
 0x7459B8: Inspire à fond…\pQuel parfum merveilleux !
 0x7459E1: Oh non…\pTu n'es pas ma maman…
@@ -5911,8 +5911,8 @@
 0x788A14: Marlon : {COLOR}ËBon travail.\pLa dernière chose dont nous avons\nbesoin, c'est la police sur le dos.\pNous sommes trop près de la fin pour\nêtre stoppés.
 0x788A96: Marlon : {COLOR}ËRapportez à Zeph et\ninformez-le de mon statut actuel.
 0x788AD6: Grunt : {COLOR}ËOui, monsieur !
-0x788B02: Le Champion d'Arène, Mirskle,\npréfère les Pokémon floraux.\pSi tu viens préparé avec un Pokémon\nde type Feu ou Vol, tu devrais\lpouvoir le battre sans souci !\p-KOF- -KOF-\pSache aussi que Mirskle aime\nenfumer son Arène de temps en\ltemps, ce qui peut influencer\lton combat.\pSi tu vois un "épais brouillard"\narriver, tu esquiveras mieux les\lcoups, mais tu auras aussi plus\lde mal à toucher !\pBonne chance !
-0x788CAB: Je suis impressionné !\pTu as battu Mirskle même avec\nles yeux embrumés de "brouillard" !\pPrends ceci comme preuve\nsupplémentaire de ta victoire.
+0x788B02: Le Champion d'Arène, Sylvain,\npréfère les Pokémon floraux.\pSi tu viens préparé avec un Pokémon\nde type Feu ou Vol, tu devrais\lpouvoir le battre sans souci !\p-KOF- -KOF-\pSache aussi que Sylvain aime\nenfumer son Arène de temps en\ltemps, ce qui peut influencer\lton combat.\pSi tu vois un "épais brouillard"\narriver, tu esquiveras mieux les\lcoups, mais tu auras aussi plus\lde mal à toucher !\pBonne chance !
+0x788CAB: Je suis impressionné !\pTu as battu Sylvain même avec\nles yeux embrumés de "brouillard" !\pPrends ceci comme preuve\nsupplémentaire de ta victoire.
 0x788D2D: C'est une gemme rare qui peut\nbooster une attaque Plante en\lcombat !\pJe suis sûr qu'elle t'aidera,\nfutur champion.
 0x788DA9: Hein.\pTu n'as pas de place pour ça.
 0x788DF4: Take this cool, grassy TM toooo…
@@ -5923,7 +5923,7 @@
 0x78903B: Officier 1 : {COLOR}ËHé, gamin !\pAvez-vous vu dans quelle direction\nle Champion d'Arène courait ?\pIl est recherché pour trafic de\nFeuilles étranges !
 0x7890AB: Voudriez-vous leur dire ?
 0x7890C8: Agent 1 : <0xFC><0x01><0x08>Visiblement, <0xFD><0x03> n'est\npas au courant, Frank…\pOn laisse filer ?
-0x78910F: Agent 2 : <0xFC><0x01><0x08>Laissons filer.\pC'est sans doute une victime\ndes mensonges de Mirskle.\pPauvre gamin…
+0x78910F: Agent 2 : <0xFC><0x01><0x08>Laissons filer.\pC'est sans doute une victime\ndes mensonges de Sylvain.\pPauvre gamin…
 0x789169: Officier 1 : {COLOR}ËEuh, ouais…\pVotre histoire est vérifiée. Vous\nêtes libre de partir.
 0x7891AB: Officier 1 : {COLOR}ËL'étang ? Merci !\nVous avez vraiment aidé\pdans la guerre contre la drogue !\nBon travail !
 0x78920B: Meeeeeec
@@ -5951,7 +5951,7 @@
 0x78BCFF: Mon parapluie me protège toujours\nquand il pleut !
 0x78BD31: Saviez-vous qu'il existe une Poké\nBall qui soigne un pokémon ?\pQuand vous capturez un Pokémon,\ntous ses dégâts sont annulés !\pN'auriez-vous pas aimé en avoir ?
 0x78BDCA: Au nord d'ici se trouve l'entrée\nd'une autoroute souterraine.\pLe seul problème est qu'elle est\nbloquée par des arbres maigres.\pJ'aimerais juste savoir comment les\ncontourner.
-0x78C0BF: Mel : {COLOR}ËJ'ai besoin de te\nparler.
+0x78C0BF: Mél : {COLOR}ËJ'ai besoin de te\nparler.
 0x78C189: Waah ! Maintenant! Tout à l’heure !\nJ’étais sur le point de le lancer !
 0x78C2A8: 9Itinéraire 12
 0x78C2C9: Vous devez avoir plus de respect\npour un pêcheur…
@@ -6021,7 +6021,7 @@
 0x78F5DA: Mon frère et son ami sont si\nmignons !\pIls se ressemblent presque !
 0x78F61D: Aïe !\nPris dans une toile électrique !
 0x78F7F2: Il y a des cascades très bruyantes\nà mon Arène, et ce\lfracas me fait mal à la tête.\pÇa me donne envie de juste\nlâcher un Poing Mégaton !
-0x78F87D: Oh, désolé !\nJ'ai oublié de me présenter !\pJe suis Mel, le Champion d'Arène de\n{COLOR}ÉRivapolis{COLOR}Ë.\pTu es un challenger ?\nAlors retrouve-moi à l'Arène.\pLà, je n'ai pas trop envie de\nrentrer, alors si tu ne me donnes\lpas un bon combat, je lâche mon\lPoing Mégaton !
+0x78F87D: Oh, désolé !\nJ'ai oublié de me présenter !\pJe suis Mél, le Champion d'Arène de\n{COLOR}ÉRivapolis{COLOR}Ë.\pTu es un challenger ?\nAlors retrouve-moi à l'Arène.\pLà, je n'ai pas trop envie de\nrentrer, alors si tu ne me donnes\lpas un bon combat, je lâche mon\lPoing Mégaton !
 0x78FA39: Tu m'as libéré !
 0x78FA4A: 9Une Gemme est un objet tenu rare\nqui booste une seule attaque en\lcombat, puis disparaît\lpour toujours.\pChaque Gemme correspond à un type\nprécis, et ne renforce que ce\ltype de capacité.\pChaque Champion d'Arène de Borrius\na au moins un Pokémon tenant une\lGemme, alors prudence.\pSi ça t'inquiète, tu peux utiliser\nla capacité {COLOR}ÉCalcination{COLOR}Ë pour\lfondre leur Gemme avant\lqu'ils puissent l'utiliser.
 0x78FBE3: Tu dois être un Dresseur chevronné.
@@ -6030,8 +6030,8 @@
 0x78FD42: Tu as bien fait de livrer le colis\nde Log.\pOh ?\pQu'est-ce que c'est ?\pJe vois que Log t'a confié tes\npropres Poké Balls.\pÀ mon époque, j'étais un sacré\nDresseur.\pJe peux t'apprendre deux ou trois\ntrucs pour capturer des Pokémon.
 0x78FE26: D'accord !\nC'est parti !
 0x78FE3B: Ouf…\pC'était bien trop juste\npour moi…
-0x7916C1: Laisse-moi te dire un secret.\pLe Champion d'Arène de Daherapolis,\nGalavan utilise des Électrik.\pIl essaie de surprendre ceux qui\nutilisent des Pokémon Eau.\pMais quand il n'est pas d'humeur,\nil baisse le pont entre la ville\let son Arène.\pAlors si tu veux l'affronter,\ntu devras patienter.
-0x7917E7: D'ici, on accède au Tombeau de\nBorrius.\pOn raconte que l'ancien roi, qui a\ninvoqué la force obscure jadis,\ly est enterré.\pMais tu ne pourras pas aller plus\nloin sans la permission de Galavan,\lalors n'essaie même pas.
+0x7916C1: Laisse-moi te dire un secret.\pLe Champion d'Arène de Daherapolis,\nGalvane utilise des Électrik.\pIl essaie de surprendre ceux qui\nutilisent des Pokémon Eau.\pMais quand il n'est pas d'humeur,\nil baisse le pont entre la ville\let son Arène.\pAlors si tu veux l'affronter,\ntu devras patienter.
+0x7917E7: D'ici, on accède au Tombeau de\nBorrius.\pOn raconte que l'ancien roi, qui a\ninvoqué la force obscure jadis,\ly est enterré.\pMais tu ne pourras pas aller plus\nloin sans la permission de Galvane,\lalors n'essaie même pas.
 0x7918D7: C'est mon travail de veiller à ce\nque cette ville reste un bel oasis\lau bord du désert.\pTous ces arbres ne sont pas\nnaturels ici.\pC'est moi qui les ai\nplantés !
 0x791982: Daherapolis est le parfait\nmélange entre tourisme et vie.\pTout ce quartier est conçu pour\nattirer les touristes, mais\lles gens peuvent toujours vivre\lici, au nord-est\lde la ville.
 0x791BBA: Tu as collecté {COLOR}É{STR_VAR_3} pour cent{COLOR}Á\nde cellules.
@@ -6042,7 +6042,7 @@
 0x7920A9: {COLOR}ÇTu es sûr de toi ?\pTon aide serait précieuse\npour nous.
 0x7920EA: {COLOR}ËParfait !\pMerci d'avoir accepté d'aider !\pPeux-tu me donner ton Cube une\nseconde…\p…\pVoilà !\pTon Cube a été mis à jour pour te\npermettre de voir et collecter les\lCellules de Zygarde.\pLes cellules sont disséminées dans\nBorrius Ouest et Borrius Est.\pDès que tu en as au moins 10\npour cent, viens me voir.\pMais pour l'instant, bonne chance !
 0x79223B: Autrefois, mon mari a parcouru le\nmonde à la recherche de\lPokémon rares.\pSi tu as le Pokémon qu'il cherche,\npeux-tu l'échanger\lavec lui ?
-0x7922D1: Mel s'entoure toujours de plein de\nfemmes différentes.\pIl doit se sentir terriblement\nseul…
+0x7922D1: Mél s'entoure toujours de plein de\nfemmes différentes.\pIl doit se sentir terriblement\nseul…
 0x792367: C'est un piège !
 0x792504: Quand tu as collecté au moins\n10 pour cent de cellules, reviens\lvoir mon mari.
 0x79255C: On dirait que tu as collecté au\nmoins 10 pour cent des cellules.\pBon travail !\pSi ce n'est pas déjà fait, parle\nà mon mari.
@@ -6092,7 +6092,7 @@
 0x7946D0: Antésia
 0x7963E9: Le Roitiflam Noir ne tombera pas\nsi facilement !
 0x796410: Le Roitiflam Noir !\nNe t'arrête jamais, pas de retour !
-0x796C75: Mel, le Champion, n'est pas là\npour l'instant.\pIl doit être parti se changer les\nidées.
+0x796C75: Mél, le Champion, n'est pas là\npour l'instant.\pIl doit être parti se changer les\nidées.
 0x796CCF: Pardon.\pIl est sorti faire je ne sais quoi,\nreviens plus tard.
 0x7A2565: Somnia
 0x7A281F: Les Pokémon qui se promènent dans\nce labo aident tous la recherche.\pCe sont des Pokémon spéciaux connus\npour manger les rêves.
@@ -6111,12 +6111,12 @@
 0x7A358F: là-bas.
 0x7A35FC: Salut ! Bienvenue à la Maison des\nCombats Inversés !\pN'hésite pas à affronter les\nDresseurs ici autant que tu\lveux.\pSi tu veux une explication des\nCombats Inversés, viens m'en\lparler.\pAmuse-toi bien !
 0x7A36CA: Un combat inversé fonctionne comme\nun combat normal.\pLa seule différence, ce sont les\nfaiblesses et résistances.\pEn combat inversé, elles\ns'inversent.\pAinsi, le type Eau devient faible\nau Feu, mais résiste au Plante.
-0x7A3BDD: L'Arène de Mel est un labyrinthe de\nbassins, nénuphars et cascades.\pCe serait facile de passer si tu\navais un Pokémon qui\lconnaît Surf et Cascade.\pMais je suis sûr que tu ne peux pas\nsurfer sans le {COLOR}ÉBadge Zap{COLOR}Ë.\pEt ce Badge vient après le Badge\nChute…
+0x7A3BDD: L'Arène de Mél est un labyrinthe de\nbassins, nénuphars et cascades.\pCe serait facile de passer si tu\navais un Pokémon qui\lconnaît Surf et Cascade.\pMais je suis sûr que tu ne peux pas\nsurfer sans le {COLOR}ÉBadge Zap{COLOR}Ë.\pEt ce Badge vient après le Badge\nChute…
 0x7A3CF0: {PLAYER} reçoit un Œuf !
 0x7A3D04: On dirait que tu n'as plus de\nplace dans ton équipe.\pJe te conseille de déposer un\nPokémon dans le PC.
 0x7A3D66: Oh, d'accord, je comprends.
 0x7A3D7E: L'Œuf appartient à un Pokémon\nspécial.\pBeaucoup le considèrent comme une\nFée.
-0x7A3DC5: Ce n'est pas mon affaire, mais Mel\nvient de rompre avec la\lChampionne de Cimistral.\pJ'espère qu'il va bien…\pJe crois qu'ils s'aimaient\nvraiment.\pSérieux !\nPas un amour bidon…
+0x7A3DC5: Ce n'est pas mon affaire, mais Mél\nvient de rompre avec la\lChampionne de Cimistral.\pJ'espère qu'il va bien…\pJe crois qu'ils s'aimaient\nvraiment.\pSérieux !\nPas un amour bidon…
 0x7A3F71: Quelque chose de grotesque est\nsynthétisé dans le tube.
 0x7A3FA7: Le tube est vide.
 0x7A3FD3: 9Personne d'Automnia n'a\nle droit de passer par ici.\pDégage, gamin !
@@ -6198,9 +6198,9 @@
 0x7AAECA: {COLOR}ËSplendide !\pÀ {COLOR}ÉBélenbourg{COLOR}Ë, au {COLOR}ÉMagasin Pokémon{COLOR}Ë,\nun colis m'attend.\pJ'ai besoin que tu le récupères.\pJe le ferais moi-même, mais comme\nje l'ai dit, je suis trop\lvieux pour voyager.\pJ'ai déjà prévenu le vendeur que je\nn'allais pas le prendre moi-même,\lmais il a insisté pour qu'il soit\lretiré à {COLOR}ÉBélenbourg{COLOR}Ë.\pCe ne devrait pas être difficile\npuisque tu as tes propres Pokémon.\pHo ho ho !\pSi tu as besoin de moi, je serai\nau labo.\pCe n'est pas loin, juste en bas de\nla route.\pMais avant d'aller où que ce soit,\ntu devrais passer voir ta mère.\pElle est sûrement très inquiète\npour toi.\pBonne chance, {PLAYER}.\nMes recherches dépendent de toi.
 0x7AB17D: {COLOR}ËCes derniers temps, les habitants\nd'Épidia se plaignent\lde ne pouvoir aller au Mont Foudroyant.\pUn type bizarre bloque l'entrée et\n\lprétend être là pour t'empêcher\n\ld'entrer.\pJe ne sais pas ce qui se passe, mais\nje ne supporte plus ces\lplaintes.\pComme c'est sûrement ton affaire,\nretrouve-moi à {COLOR}ÉÉpidia{COLOR}Ë\lpour régler ça.\pJe n'ai pas toute la journée, alors\nprends ceci pour y aller plus vite.
 0x7AB33C: {COLOR}ËNe me fais pas trop attendre,\n{PLAYER}.\pJe préfère régler ça\nau plus vite.
-0x7AB4FF: 9Galavan aime utiliser des Pokémon\n{COLOR}ÉÉlectrik{COLOR}Ë et {COLOR}ÉAcier{COLOR}Ë.\pUn Pokémon {COLOR}ÉSol{COLOR}Ë est un bon\nmoyen de le démolir.\pLes types {COLOR}ÉFeu{COLOR}Ë et {COLOR}ÉCombat{COLOR}Ë sont\nbons contre ses {COLOR}ÉAcier{COLOR}Ë.\pMais attention.\pUn courant électrique traverse\nl'arène.\pAinsi, toutes les capacités\n{COLOR}ÉÉlectrik{COLOR}Ë seront boostées.\pUn seul coup peut être\nravageur !\pBonne chance !
+0x7AB4FF: 9Galvane aime utiliser des Pokémon\n{COLOR}ÉÉlectrik{COLOR}Ë et {COLOR}ÉAcier{COLOR}Ë.\pUn Pokémon {COLOR}ÉSol{COLOR}Ë est un bon\nmoyen de le démolir.\pLes types {COLOR}ÉFeu{COLOR}Ë et {COLOR}ÉCombat{COLOR}Ë sont\nbons contre ses {COLOR}ÉAcier{COLOR}Ë.\pMais attention.\pUn courant électrique traverse\nl'arène.\pAinsi, toutes les capacités\n{COLOR}ÉÉlectrik{COLOR}Ë seront boostées.\pUn seul coup peut être\nravageur !\pBonne chance !
 0x7AB69D: là !
-0x7AB6A5: Bien joué !\pNon seulement tu as surmonté le\nChamp Électrifié, mais tu as aussi\ltenu bon face à la tempête de sable\lsurprise de Galavan !\pPrends ces deux Gemmes en plus,\npour saluer ton exploit.
+0x7AB6A5: Bien joué !\pNon seulement tu as surmonté le\nChamp Électrifié, mais tu as aussi\ltenu bon face à la tempête de sable\lsurprise de Galvane !\pPrends ces deux Gemmes en plus,\npour saluer ton exploit.
 0x7AB773: Mon Pokémon a évolué grâce à\nl'énergie de cette grotte !
 0x7AC5D1: Les Gemmes que je t'ai données\nrenforcent {COLOR}ÉÉlectrik{COLOR}Ë et {COLOR}ÉAcier{COLOR}Ë,\lrespectivement.\pTu peux électrocuter l'ennemi avec\nun Pokémon, puis un autre !
 0x7AC678: Champion en devenir !\pBienvenue dans les bas-fonds\ncriminels d'Antésia !\pPrends une Eau Fraîche tout droit\nde mon robinet.
@@ -6215,7 +6215,7 @@
 0x7B1D45: As-tu vu le Pokémon rare ?
 0x7B1D65: Hmm, je continue ?\nOu je rentre ?
 0x7B1D97: C'est dans ces moments que je me\ndemande quelle est la bonne voie.
-0x7B223D: 9Big Mo adore les Pokémon costauds,\nde type {COLOR}ÉCombat{COLOR}Ë.\pSi tu as un type {COLOR}ÉVol{COLOR}Ë, {COLOR}ÉPsy{COLOR}Ë, ou\n{COLOR}ÉFée{COLOR}Ë, tu gagneras facile !\pMais avant d'affronter Big Mo,\ntu devras réussir le {COLOR}ÉDéfi du Ring{COLOR}Ë de\ll'Arène de Antésia.\pEt pour ça, aucun type {COLOR}ÉVol{COLOR}Ë, {COLOR}ÉPsy{COLOR}Ë,\nou {COLOR}ÉFée{COLOR}Ë n'est autorisé.\pMais franchement, tant que tu\nn'utilises pas un Pokémon faible aux\lcapacités Combat, ça passera.\pBonne chance dans le ring !
+0x7B223D: 9Momo adore les Pokémon costauds,\nde type {COLOR}ÉCombat{COLOR}Ë.\pSi tu as un type {COLOR}ÉVol{COLOR}Ë, {COLOR}ÉPsy{COLOR}Ë, ou\n{COLOR}ÉFée{COLOR}Ë, tu gagneras facile !\pMais avant d'affronter Momo,\ntu devras réussir le {COLOR}ÉDéfi du Ring{COLOR}Ë de\ll'Arène de Antésia.\pEt pour ça, aucun type {COLOR}ÉVol{COLOR}Ë, {COLOR}ÉPsy{COLOR}Ë,\nou {COLOR}ÉFée{COLOR}Ë n'est autorisé.\pMais franchement, tant que tu\nn'utilises pas un Pokémon faible aux\lcapacités Combat, ça passera.\pBonne chance dans le ring !
 0x7B2A11: Ce type est sorti de nulle\npart…
 0x7B2A38: L'objet est scellé derrière la\nbarrière électrique.
 0x7B2ACE: J'ai entendu qu'un gamin traînait\nsur la route.
@@ -6247,7 +6247,7 @@
 0x7B3728: Tu ne trouveras pas Ivory en\ncourant partout !
 0x7B3822: Je suis brisé.
 0x7B3834: Je ferais mieux de prévenir Ivory !
-0x7B38CC: Ouah, ça fait longtemps que je n'ai\nvu personne battre Big Mo, ni même\lréussir le Défi du Ring !\pBien joué !\nTu as prouvé ta dureté !\pPrends cette Gemme pour aller\nencore plus loin !
+0x7B38CC: Ouah, ça fait longtemps que je n'ai\nvu personne battre Momo, ni même\lréussir le Défi du Ring !\pBien joué !\nTu as prouvé ta dureté !\pPrends cette Gemme pour aller\nencore plus loin !
 0x7B3979: La Gemme que je t'ai donnée booste\nune capacité de type Combat.\pSi tu l'utilises, tu paraîtras plus\ndur que tu ne l'es déjà !
 0x7B39FA: Je devrais peut-être retourner à Antésia.\pJe ne suis pas à la hauteur ici.
 0x7B3A3F: Je suis content d'avoir pris mon\n\péquipement en caoutchouc aujourd'hui\n! Ces Anchwatt n'arrêtent pas de me
@@ -6316,16 +6316,16 @@
 0x7B5DDC: La CT42 contient\n\p{COLOR}ÉFaçade{COLOR}Ë. Si ton\n\lPokémon a un statut, la puissance\n\pdouble. Encore plus fort que Poing\n\pMétéore ! Utilise-la et fais\nregretter aux ennemis de t'avoir
 0x7B5EA4: Maintenant que tu m'as battu, voilà\nqu'arrive une autre migraine…
 0x7B5EE6: Champion en devenir ! Comment vont\n\ples combats ? Bienvenue à l'Arène de\n\pRivapolis ! Prends de l'Eau Fraîche,\ntout droit des bassins de l'Arène.
-0x7B5F6E: Mel ? Oh, juste un gars normal\n\p! Le frapper, lui ou ses Pokémon,\n\lavec de puissants types\n\p{COLOR}ÉCombat{COLOR}Ë est un bon\n\pmoyen de le calmer. Si tu es prêt à\n\pte battre, glisse sur le toboggan à\ncôté de moi ! Assure-toi
-0x7B609A: Bravo ! Mel s'est fait amocher,\n\pnon ? Je parie qu'il aurait encore\n\pplus mangé si tu avais eu cette\nGemme.
+0x7B5F6E: Mél ? Oh, juste un gars normal\n\p! Le frapper, lui ou ses Pokémon,\n\lavec de puissants types\n\p{COLOR}ÉCombat{COLOR}Ë est un bon\n\pmoyen de le calmer. Si tu es prêt à\n\pte battre, glisse sur le toboggan à\ncôté de moi ! Assure-toi
+0x7B609A: Bravo ! Mél s'est fait amocher,\n\pnon ? Je parie qu'il aurait encore\n\pplus mangé si tu avais eu cette\nGemme.
 0x7B6105: Cette Gemme peut booster une seule\n\pcapacité Normal en combat. Les\n\lcapacités Normal ne sont super\n\lefficaces sur rien, mais avec elle,\non dirait que si !
 0x7B61BF: Fais le plein de\n\p{COLOR}ÉRappels{COLOR}Ç ! Ils\nsoignent un Pokémon K.O. à moitié de\lses PV !
 0x7B6216: Je dois encore étudier cette\n\pmontagne. Mes connaissances sont\nlimitées.
 0x7B625A: Quel combat amusant ! Tu m'as fait\n\pbouillonner pendant ma longue\nascension.
 0x7B629C: Attention en grimpant les parois,\nla chute peut être traîtresse.
-0x7B62E2: Tu savais ? Le Champion de Daherapolis,\n\pGalavan, s'entraîne ici\nrégulièrement.
+0x7B62E2: Tu savais ? Le Champion de Daherapolis,\n\pGalvane, s'entraîne ici\nrégulièrement.
 0x7B632C: Wow, tu es fort !\nTu t'entraînes ici aussi ?
-0x7B6357: Je dois m'entraîner encore pour\natteindre Galavan.
+0x7B6357: Je dois m'entraîner encore pour\natteindre Galvane.
 0x7B6564: La barrière électrique t'empêche de\npasser.
 0x7B659A: La barrière électrique a été\ndésactivée.
 0x7B6C81: Le chemin à travers cette montagne\n\pest épuisant, non ? Laisse-moi te\nsoigner pour que tu continues
@@ -6338,7 +6338,7 @@
 0x7B8A54: Somnia se trouve sur le\n\p"Plateau Foudre". Mais si tu\n\les venu voir les orages, pas\nbesoin d'aller plus loin.
 0x7B8B04: le véritable Mont Foudroyant.\n\l\n
 0x7B8B24: Ma famille possède le Manoir\n\pSomnia depuis des générations. En\n\lfait, mes ancêtres ont fondé\n\pSomnia ! Du coup, j'aime bien\n\pm'asseoir ici et regarder la ville\n\pde temps en temps. Ne fais pas comme\nmoi, gamin. Carpe diem, enfant !
-0x7B8D25: Yo, salut mon gars ! Ça roule ? Je\n\pm'appelle Galavan. Si tu ne l'avais\n\ppas deviné, je suis le Champion ici.\n\pJe suis sûr que tu as galéré sur le\n\psol électrisant, hein ? T'inquiète,\n\ltu ne combattras plus en position de\nfaiblesse.\p\n\l\n
+0x7B8D25: Yo, salut mon gars ! Ça roule ? Je\n\pm'appelle Galvane. Si tu ne l'avais\n\ppas deviné, je suis le Champion ici.\n\pJe suis sûr que tu as galéré sur le\n\psol électrisant, hein ? T'inquiète,\n\ltu ne combattras plus en position de\nfaiblesse.\p\n\l\n
 0x7B8E39: 9Depuis l'Antiquité, le mythique\n\lDarkrai hante cette ville. On dit\n\pque chaque nuit, à une heure, il\n\lvient hanter les rêves des foules.\n\pPrends garde, enfant ! Ne tombe pas\ndans le vide noir !
 0x7B8F1B: Cette salle… c'est si dur d'y\nnaviguer…
 0x7B8F4A: Cette salle explique pourquoi on a\nmis si longtemps à l'atteindre.
@@ -6462,7 +6462,7 @@
 0x7C0649: Je ne te parle pas. Tu es trop\nméchant.
 0x7C06F6: Je te donnerai peut-être quelque\nchose aussi demain.
 0x7C0A2A: Non. Vous ne vous battez pas comme\ntel.
-0x7C0B71: Mel, le Champion, n'est pas là.\n\pIl vide sa tête sur l'Autoroute RBT.
+0x7C0B71: Mél, le Champion, n'est pas là.\n\pIl vide sa tête sur l'Autoroute RBT.
 0x7C0C54: Un assistant de Log à Automnia te\n\loffrira un cadeau si tu as assez\n\lcapturé de Pokémon. J'espère qu'ils\n\pt'aideront à remplir ton Pokédex !\n
 0x7C0D3B: Certains Pokémon ici n'évoluent que\n\lavec une Pierre Eau .\n
 0x7C0D84: Nos forces seront vite dispersées.\n\pSi vous souhaitez donner un coup de\nmain, ce sera toujours apprécié.
@@ -6478,7 +6478,7 @@
 0x7C127E: Comment un enfant punk comme toi\na-t-il pu me battre ?
 0x7C13AF: 9Mon pouvoir caché me dit que tu\nveux ça !
 0x7C13E2: Dans Borrius, Pouvoir Caché a une\n\ppuissance fixe de 70. Quel que soit\nson type, il fera les mêmes dégâts !
-0x7C1464: Le Champion d'Arène Mel vit ici\nquand il n'est pas à l'Arène.\pJe m'occupe juste de sa maison pour\nlui.
+0x7C1464: Le Champion d'Arène Mél vit ici\nquand il n'est pas à l'Arène.\pJe m'occupe juste de sa maison pour\nlui.
 0x7C14C7: Tout est prêt !\nReste prudent dehors !
 0x7C151F: On dit que l'herbe est toujours\nplus verte ailleurs.\pC'est vrai à Épidia.\nRegarde l'herbe ici !
 0x7C159C: Il dort paisiblement sur le\nbanc.\pMieux vaut le laisser tranquille.
@@ -6503,19 +6503,19 @@
 0x7C1F31: J'ai hâte de résoudre d'autres\naffaires avec toi.\pD'ici là, reste prudent et\nvigilant.
 0x7C1FC8: Une puissance incroyable, avoir\nmis K.O. Oniglali comme ça.
 0x7C2067: 9Je viens ici chaque jour prier\nÉlecthor.\pÉlecthor m'a sauvé un jour, et je\nne le remercierai jamais assez.
-0x7C20C8: Mel aime les femmes comme moi !
+0x7C20C8: Mél aime les femmes comme moi !
 0x7C20E1: qui peut\nlui apporter la marchandise !
-0x7C20FD: Nous, les filles, on remonte le\nmoral de Mel.
+0x7C20FD: Nous, les filles, on remonte le\nmoral de Mél.
 0x7C212D: De toute évidence, tu n'aimes pas\nles femmes comme moi.
 0x7C2154: Désirs !
 0x7C215B: Je me demande si tu trouveras\nle chemin d'ici ?
 0x7C218C: bon chemin ?
-0x7C2197: Mel aime les femmes comme il aime\nsa nourriture…\pChaud !
+0x7C2197: Mél aime les femmes comme il aime\nsa nourriture…\pChaud !
 0x7C21CA: Je reste la plus jolie du groupe,\net c'est tout ce qui compte.
-0x7C220E: Mel s'entoure d'autant de belles\nfemmes que possible pour\latténuer le stress de la\lcascade assourdissante derrière lui.
-0x7C228A: Mel n'est clairement pas ici.
-0x7C22A3: Je ne suis pas une femme, mais je\nfais partie des combattants de Mel !
-0x7C22E5: Encore loin de Mel !
+0x7C220E: Mél s'entoure d'autant de belles\nfemmes que possible pour\latténuer le stress de la\lcascade assourdissante derrière lui.
+0x7C228A: Mél n'est clairement pas ici.
+0x7C22A3: Je ne suis pas une femme, mais je\nfais partie des combattants de Mél !
+0x7C22E5: Encore loin de Mél !
 0x7C2301: Au moins, j'ai perdu ton temps.
 0x7C231E: Il est temps de faire demi-tour.
 0x7C2333: Tu es plutôt fort, je suis\nimpressionnée !\pTu devrais changer de voie et\nrejoindre notre club.\p…\pQuoi… pas intéressé ?\pAlors prends ça, au moins !
@@ -6668,9 +6668,9 @@
 0x7C7DFA: Eh bien, sans cet enlèvement,\ntu aurais moins de mal\là rejoindre le Mont Foudroyant.\pTu vois, une partie du plafond\ns'est effondrée il y a peu et\la bloqué la route !\pEt sans la CS {COLOR}ÉÉclate-\nRoc{COLOR}Ë, tu vas galérer pour\lpasser.\pMais…\pJe parie que tu ne l'as pas, sinon\ntu ne me parlerais pas.\pÀ {COLOR}ÉCimistral{COLOR}Ë, un ami\npeut t'aider en\lte donnant Éclate-Roc.\pAlors prends cette CS pour le\nrejoindre.
 0x7C7FDA: Hooo la la !\pOn dirait que tu as vu\nmon ami.\pVa casser ces rochers et donne-leur\nune bonne raclée !
 0x7C804B: Utilise {COLOR}ÉCoupe{COLOR}Ë pour enlever cet\narbre qui bloque la {COLOR}ÉGrotte Vallée{COLOR}Ë.
-0x7C8093: Mel : {COLOR}ËDernier avertissement.\nDégage ou je te dégage.
+0x7C8093: Mél : {COLOR}ËDernier avertissement.\nDégage ou je te dégage.
 0x7C80C9: Sbire : {COLOR}ËJe refuse\nd'abandonner mon poste.\pJe dois empêcher {PLAYER} d'entrer au\nMont Foudroyant, à tout prix.
-0x7C8132: Mel : {COLOR}ËJe n'ai pas le temps pour ça\nmaintenant.\pMa tête résonne et j'ai une Arène\nà gérer.
+0x7C8132: Mél : {COLOR}ËJe n'ai pas le temps pour ça\nmaintenant.\pMa tête résonne et j'ai une Arène\nà gérer.
 0x7C818D: Sbire : {COLOR}ËArghhhhhhh…
 0x7C81A5: {COLOR}ËTu peux gérer la suite\n{PLAYER}.\pQuoi qu'ils fassent, ils ne veulent\nclairement pas que tu\linterfères.\pAlors vas-y.
 0x7C8238: Aaaah…\nMa tête…
@@ -6977,7 +6977,7 @@
 0x7DD0C7: Zeph : {COLOR}ËOù sont vos enfants ?
 0x7DD0ED: Ivory : {COLOR}ÇEuler Log garde nos enfants\naux Cimes Gelées\lpour cette visite.
 0x7DD149: Zeph : <0xFC><0x01><0x08>Un ami à moi, biologiste\nPokémon, vit aux Cimes Gelées aussi.\pIci on l'appelle le «Gardien de\nBorrius».\pIl a même réussi à capturer\nArceus !\pJe crois que sa femme vient tout\njuste d'avoir un bébé.\pJ'ai du mal à me souvenir de son\nprénom…\pAu fait, comment s'appellent vos\nenfants ?
-0x7DD2A4: Ivory : {COLOR}ÇIls s'appellent {RIVAL} et\nMelony.\pLes plus beaux enfants du\nmonde.
+0x7DD2A4: Ivory : {COLOR}ÇIls s'appellent {RIVAL} et\nMélony.\pLes plus beaux enfants du\nmonde.
 0x7DD2FF: Zeph : {COLOR}ËEt avec\nde si beaux noms…
 0x7DD330: {COLOR}ËVoudriez-vous m'aider pour quelque\nchose ?
 0x7DD361: Marlon : {COLOR}ËN'importe quoi, Zeph. On\nest là pour toi.
@@ -7040,7 +7040,7 @@
 0x7E6F9E: J'ai deux fois plus de cerveau.\pMa victoire est assurée !
 0x7E6FD4: Je n'ai plus de cerveau.
 0x7E700B: Les types en bas prétendent avoir\ncréé notre monde.\pMoi je pense que c'est du pur fumier\nde Tauros.
-0x7E7128: Champion d'Arène de\nDaherapolis : Galavan\pEntraîneurs gagnants : {RIVAL},\n{PLAYER}
+0x7E7128: Champion d'Arène de\nDaherapolis : Galvane\pEntraîneurs gagnants : {RIVAL},\n{PLAYER}
 0x7E74E0: Va, jeune homme !\pExplore le Grand Désert !
 0x7E7553: 9Mon père m'a mise en congé\ncar j'étais une mauvaise fille.\pMaintenant, je dois rester dans ce\ncoin pour toujours.
 0x7E75BB: Ma fille a voulu aller seule dans\nla Grotte Faille.\pElle a eu de la chance que quelqu'un\nl'arrête.\pSi elle était entrée…\pJe frémis en pensant à ce qui aurait\npu arriver !
@@ -7119,11 +7119,11 @@
 0x7EAA1B: Mon génie…
 0x7EAA26: Beaucoup de Pokémon ici profitent\ndu sol électrifié.\lDu terrain.\pÇa signifie que tu pars\ndésavantagé !
 0x7EAADB: C'est génial !
-0x7EAAE7: Galavan adore les Électrik, mais il\nne pouvait pas oublier l'Acier.
+0x7EAAE7: Galvane adore les Électrik, mais il\nne pouvait pas oublier l'Acier.
 0x7EAB7F: J'adore ça !
 0x7EAB8A: Je peux collectionner des Électrik\net même\lramasser des Aciers !\pJe les aime tous les deux !
 0x7EAC5C: Tu es prêt.
-0x7EAC6A: Si tu bats le maître ingénieur de\nl'Arène de Daherapolis, tu es prêt pour\lGalavan.
+0x7EAC6A: Si tu bats le maître ingénieur de\nl'Arène de Daherapolis, tu es prêt pour\lGalvane.
 0x7EAE2B: C'est une sorte d'ampoule.\pVeux-tu l'éteindre ?
 0x7EB227: ralyzed{COLOR}Ë.\pMême les types volant ou terrestre\nne sont pas en sécurité !
 0x7EB25E: ored à\lpleine santé.
@@ -7456,8 +7456,8 @@
 0x7F8248: {COLOR}Ë{PLAYER}! La Lumière du Néant?\p…\p{COLOR}ÉBorrius Est{COLOR}Ë?\pAlors je file à {COLOR}ÉNaville {COLOR}Ëavant le prochain\nbateau !
 0x7F885A: C'est un reportage :\pLe Granbull Terreur, le gang qui\nterrorisait les citoyens d'Antésia, a disparu !\lCela va-t-il inaugurer\pune ère de paix\net de prospérité maintenant\lque toute la criminalité\la été effacée ?\pLes citoyens sont encouragés à\nsortir et restaurer Antésia à son ancienne gloire.\pRendons Antésia grande à nouveau !
 0x7F89B6: Ces nazes pensent que Antésia est sûre maintenant que\lles Granbull Terreur sont partis !\pHaw haw !\pIls se trompent complètement !
-0x7F8BA7: Tu veux prouver que tu es costaud ?\nHein, fillette ?\pIl faut affronter Big Mo.\pC'est le plus grand, le plus dur d'Antésia.
-0x7F8C2B: Hmm…\pTu dois être plutôt solide si tu as\nbattu Big Mo.\pCe n'est pas facile.\pTiens, prends ça en félicitations.\n
+0x7F8BA7: Tu veux prouver que tu es costaud ?\nHein, fillette ?\pIl faut affronter Momo.\pC'est le plus grand, le plus dur d'Antésia.
+0x7F8C2B: Hmm…\pTu dois être plutôt solide si tu as\nbattu Momo.\pCe n'est pas facile.\pTiens, prends ça en félicitations.\n
 0x7F8CA4: Utilise ces Balls pour attraper\nencore plus de Pokémon costauds.
 0x7F8CD6: Tu n'en as pas besoin.
 0x7F8DFA: Alors donne-moi tes Pokémon.
@@ -7555,15 +7555,15 @@
 0x7FD4BE: Reste ici.
 0x7FD4C9: Je vais te sortir du ring avant\nque tu commences !
 0x7FD50F: Je viens tester ta force dans le\nring.\pHiyah !
-0x7FD545: Bats-moi et la route vers Big Mo\nest libre !\pSauf que je ne te laisserai pas\nfaire !
+0x7FD545: Bats-moi et la route vers Momo\nest libre !\pSauf que je ne te laisserai pas\nfaire !
 0x7FD59C: Oh non !
 0x7FD5A4: Ta force est admirable.
 0x7FD5C0: Hein ?\pComment un gosse comme toi survit au\nring ?
-0x7FD5EE: Tu as survécu au ring.\nBien joué.\pPasse cette porte pour voir Big Mo.\n
+0x7FD5EE: Tu as survécu au ring.\nBien joué.\pPasse cette porte pour voir Momo.\n
 0x7FD645: Les règles sont simples.\pTu choisis un Pokémon pour battre\ntrois dresseurs à la suite.\pChaque dresseur n'a aussi qu'un\nPokémon.\pMais pas de types {COLOR}ÉVol{COLOR}Ë, {COLOR}ÉPsy{COLOR}Ë ou\n{COLOR}ÉFée{COLOR}Ë !\pTu peux les utiliser contre Big\nMo, mais on ne les aime pas ici,\ldans le ring.
 0x7FD75B: Tu as trop de Pokémon !\nTu ne peux en utiliser qu'un !\pVa te débarrasser de quelques-\nuns si tu veux tenter le défi !
 0x7FD7CA: Pas de Pokémon de type {COLOR}É{STR_VAR_1}{COLOR}Ë dans le\nring !\pChange ton Pokémon si tu veux te\nbattre !
-0x7FD829: Tu as survécu au ring,\nmais tu as aussi battu Big Mo !\pJe suis rarement impressionné, mais\nlà oui.
+0x7FD829: Tu as survécu au ring,\nmais tu as aussi battu Momo !\pJe suis rarement impressionné, mais\nlà oui.
 0x7FD8A5: Vol
 0x7FD8AC: Psy
 0x7FD8B4: Fée
@@ -7571,14 +7571,14 @@
 0x7FDB88: Les Granbull Terreur, les \nNoirépine, ils sont tous sous moi !\pVoyons ce que tu vaux contre le\nparrain d'Antésia !
 0x7FDC0A: Ha ha ha ha !\pIls devraient t'appeler\nBig {PLAYER}!
 0x7FDC3D: Oh, mec, gamin…\nQuel combat…\pPrends le Badge Combat en preuve de\nta victoire à l'Arène d'Antésia !
-0x7FDC9B: {PLAYER} a reçu le Badge Combat de\nBig Mo !
+0x7FDC9B: {PLAYER} a reçu le Badge Combat de\nMomo !
 0x7FDCC4: Avec le Badge Combat, tous les\nPokémon jusqu'au N. 70 obéiront\là ta voix !\pTu peux aussi escalader les falaises\nrocailleuses avec Escalade !\pDis que ce n'est pas utile !\pPrends aussi cette CT !
-0x7FDD8C: {PLAYER} a reçu la CT60 de Big Mo !\n
+0x7FDD8C: {PLAYER} a reçu la CT60 de Momo !\n
 0x7FDDAA: La CT60 contient Vampipoing !\pElle inflige des dégâts et draine la\nvie de l'ennemi en même temps !
 0x7FDE03: Si tu veux ma CT, fais de la place\ndans ton sac !
 0x7FDE41: Si tu reviens à Antésia, {PLAYER},\nsache que j'ai un œil sur toi !\lHa ha ha ha !\pJ'ai un œil sur tout le monde ici !\pC'est mon job !\n
 0x7FDF17: Tu es le nouveau plus dur d'Antésia !
-0x7FDF99: Arène Pokémon d'Antésia\nChampion : Big Mo\pDresseurs vainqueurs :\n{RIVAL}, {PLAYER}
+0x7FDF99: Arène Pokémon d'Antésia\nChampion : Momo\pDresseurs vainqueurs :\n{RIVAL}, {PLAYER}
 0x800FD0: Mode Numérique : Borrius
 0x80DC10: {B_ATK_NAME_WITH_PREFIX} perd des PV !\n
 0x81E670: :iAAVAAA
@@ -9487,7 +9487,7 @@
 0xA403AE: La capacité signature de\nG-Max Évoli. Elle\ncharme la\ncible.
 0xA403E6: La capacité signature de\nG-Max Ronflex. Elle\nrestaure les Baies\nmangées.
 0xA4042B: La capacité signature de\nG-Max Miasmax. Elle\nempoisonne la\ncible.
-0xA40463: La capacité signature de\nG-Max Melmetal. Elle\nempêche l'ennemi de\nrépéter ses capacités.
+0xA40463: La capacité signature de\nG-Max Mélmetal. Elle\nempêche l'ennemi de\nrépéter ses capacités.
 0xA404AE: La capacité signature de G-Max\nGorythmic. Elle frappe\nmalgré la capacité de la\ncible.
 0xA404FF: La capacité signature de G-Max\nPyrobut. Elle frappe\nmalgré la capacité de la\ncible.
 0xA40550: La capacité signature de G-Max\nLézargus. Elle frappe\nmalgré la capacité de la\ncible.
@@ -10768,7 +10768,7 @@
 0xA45195: Arianna
 0xA4519D: Eliana
 0xA451A4: Peyton
-0xA451AB: Melanie
+0xA451AB: Mélanie
 0xA451B3: Gianna
 0xA451BA: Isabelle
 0xA451C3: Julia
@@ -10788,13 +10788,13 @@
 0xA45226: Thanasis
 0xA4522F: Lixdel
 0xA45236: Cynthia
-0xA4524B: Big Mo
-0xA45252: Galavan
+0xA4524B: Momo
+0xA45252: Galvane
 0xA4525A: Candice
 0xA45262: Giovanni
 0xA4526B: Milo
 0xA45270: Marlon
-0xA4527B: Tessy
+0xA4527B: Tessie
 0xA45281: Cathy
 0xA45287: Ginger
 0xA4528E: Abimbola
@@ -12639,7 +12639,7 @@
 0x1661E5F: Les terres visitées par Démétéros\ndonnent des récoltes abondantes. On\nl'a salué «Gardien des Champs».
 0x1661EC4: Il peut produire de l'air\nultrafroid. Son corps est gelé.
 0x1661EF6: Il parcourt le monde à la surface\ndes océans et des rivières.\nIl apparaît sur les fronts de mer.
-0x1661F5E: Des chansons célèbres s'inspirent\ndes mélodies de Meloetta.
+0x1661F5E: Des chansons célèbres s'inspirent\ndes mélodies de Méloetta.
 0x1661FA8: Cet ancien Pokémon bug a été\nmodifié par la Team Plasma. Ils\nont amélioré le canon sur le dos.
 0x1662003: Une coque de bois si épaisse\ncouvre sa tête et son dos qu'un\ncamion ne le dérangerait pas.
 0x166206D: Il compte sur sa carapace robuste\npour repousser les prédateurs, puis\ncontre-attaque avec ses piquants.
@@ -12776,7 +12776,7 @@
 0x1665174: Ils vivent\nen montagne sans trace d'humains.\nIl grandit en combattant les autres.
 0x16651D4: Il bondit\nsur sa proie en criant. Ses coups\nécailleux déchirent ses adversaires.
 0x1665232: Il se bat vaillamment avec ses\npoings couverts d'écailles d'acier.\nÉkaïser excelle en uppercuts.
-0x166529C: Ce gardien de Mele-Mele\ninvoque des nuages d'orage et\nstocke leurs éclairs dans son corps.
+0x166529C: Ce gardien de Méle-Méle\ninvoque des nuages d'orage et\nstocke leurs éclairs dans son corps.
 0x16652FE: Ce gardien d'Akala\nest cruel et naïf. Le parfum de\nses fleurs est sa source d'énergie.
 0x1665366: Le gardien d'Ula-Ula\nest paresseux. Il commande aux\nplantes d'immobiliser ses ennemis.
 0x16653C2: Le gardien de Poni\ncontrôle l'eau. Il peut créer une\neau pure qui efface toute impureté.
@@ -13678,7 +13678,7 @@
 0x166C78A: Démétéros
 0x166C795: Kyurem
 0x166C7A0: Keldeo
-0x166C7AB: Meloetta
+0x166C7AB: Méloetta
 0x166C7B6: Genesect
 0x166C7C1: Déflaisan
 0x166C7CC: Viskuse
@@ -13723,7 +13723,7 @@
 0x166C979: Haydaim
 0x166C984: Hippopotas
 0x166C98F: Hippodocus
-0x166C99A: Meloetta
+0x166C99A: Méloetta
 0x166C9A5: Genesect
 0x166C9B0: Genesect
 0x166C9BB: Genesect
@@ -14054,8 +14054,8 @@
 0x166D7F4: Necrozma
 0x166D7FF: Necrozma
 0x166D80A: Lougaroc
-0x166D815: Meltan
-0x166D820: Melmetal
+0x166D815: Méltan
+0x166D820: Mélmetal
 0x166D82B: Pikachu
 0x166D836: Pikachu
 0x166D841: Pikachu
@@ -14244,7 +14244,7 @@
 0x166E01E: Évoli
 0x166E029: Ronflex
 0x166E034: Miasmax
-0x166E03F: Melmetal
+0x166E03F: Mélmetal
 0x166E04A: Gorythmic
 0x166E055: Pyrobut
 0x166E060: Lézargus
@@ -14869,14 +14869,14 @@
 0x1EDD831: C'est presque…{PAUSE} trop calme.\pJe n'en peux plus !\pIl me faut…{PAUSE} une sorte\nde {COLOR}ÉOnde étrange{COLOR}Ë pour me secouer.
 0x1EDD8C2: Ton {STR_VAR_1} vient de\nme donner des frissons !\pSon Onde Étrange\nme rappelle l'époque où j'étais\lOrnithologue.\pLa puissance des Pokémon Électrik\nm'a poussé à changer le type\lde Pokémon que j'entraînais.\pComme je n'en ai plus besoin,\nje veux que tu l'aies.
 0x1EDD9D2: {COLOR}ÉAcrobatie{COLOR}Ë devient puissante\nsi ton Pokémon ne porte aucun\lobjet.\pCe n'est pas inquiétant,\nmais ça fera fuir les Pokémon Combat\lde terreur !
-0x1EDDA75: Antésia est la\nplus criminelle de Borrius.\pMais son existence\nattire ici la plupart des vauriens\lce qui réduit le crime\lailleurs.\pC'est la raison principale pour\nlaquelle la police n'a pas riposté\lquand elle a été expulsée.\pMais ils ne te le diront pas.\pPour que la ville reste ainsi,\nla police doit fermer les yeux\lsur ce qui n'est pas\ltrop grave.\pMais si tout dégénère ici,\nc'est là que\lBig Mo reprend le contrôle.
+0x1EDDA75: Antésia est la\nplus criminelle de Borrius.\pMais son existence\nattire ici la plupart des vauriens\lce qui réduit le crime\lailleurs.\pC'est la raison principale pour\nlaquelle la police n'a pas riposté\lquand elle a été expulsée.\pMais ils ne te le diront pas.\pPour que la ville reste ainsi,\nla police doit fermer les yeux\lsur ce qui n'est pas\ltrop grave.\pMais si tout dégénère ici,\nc'est là que\lMomo reprend le contrôle.
 0x1EDDCB0: J'étais un fier membre des Granbull\nTerreur, le gang qui dirigeait\lcet endroit.\pOn était au top\njusqu'à ce que les Noirépine\ldébarquent.\pIls nous ont pris par surprise\net ont attaqué notre base par les\légouts.\pMaintenant, je suis\nredevenu un anonyme, chez ma mère.\pComme je ne me bats plus,\nje ne peux pas faire grand-chose\lavec ça.
 0x1EDDE12: Ne laisse pas ce qui m'est arrivé\nt'arriver, gamin !\pReste loin des gangs, et reste à\nl'école !
 0x1EDDE6F: J'étais heureux que mon\nfils rejoigne les Granbull Terreur.\pOui, un gang\nn'est pas le meilleur métier, mais\lau moins il en avait une !\pMaintenant, c'est un gars perdu.\pQuand aura-t-il un vrai\nboulot et quittera-t-il la maison ?
 0x1EDDF5F: Ces losers croient qu'Antésia\nest sûre depuis que les Granbull\lTerreur sont partis !\pHa ha !\pIls ont tout faux !
-0x1EDDFDA: Mon copain est tellement fort\net dur !\pPersonne n'est comme lui\nici dans la ville !\pÀ part Big Mo, bien sûr.
-0x1EDE068: Tu veux prouver que t'es balèze ?\nHein, {STR_VAR_1} ?\pTu vas vouloir affronter Big Mo.\pC'est le plus grand et le plus dur\ntype de toute Antésia.
-0x1EDE0E9: Hmm…\pTu dois être coriace si tu as\nbattu Big Mo.\pC'est pas facile.\pTiens, prends ça pour te\nféliciter de ma part.
+0x1EDDFDA: Mon copain est tellement fort\net dur !\pPersonne n'est comme lui\nici dans la ville !\pÀ part Momo, bien sûr.
+0x1EDE068: Tu veux prouver que t'es balèze ?\nHein, {STR_VAR_1} ?\pTu vas vouloir affronter Momo.\pC'est le plus grand et le plus dur\ntype de toute Antésia.
+0x1EDE0E9: Hmm…\pTu dois être coriace si tu as\nbattu Momo.\pC'est pas facile.\pTiens, prends ça pour te\nféliciter de ma part.
 0x1EDE162: Utilise ces Balls pour attraper\nencore plus de Pokémon coriaces.
 0x1EDE194: mec
 0x1EDE199: miss
@@ -14926,7 +14926,7 @@
 0x1EDF1B5: Beaucoup de toxines s'accumulent\ndans les égouts.\pJe pense pouvoir les utiliser pour\nfaire des médicaments !\pDonc, je mène une expérience !\pSi ça marche, je pourrai peut-être\nutiliser le venin des Pokémon\lde type Poison pour créer divers\lmédicaments. Quelle joie !\pEh bien, eh bien…\pLe résultat de l'expérience\nd'aujourd'hui était…
 0x1EDF2CF: Waouh ! L'expérience du jour a\ntrès bien marché !\pTiens ! Accepte\nle {STR_VAR_1} que j'ai créé !
 0x1EDF320: Je continuerai à expérimenter\nchaque jour ! Il faut persévérer.\pReviens voir où ça en est !
-0x1EDF384: Big Mo m'a engagé pour nettoyer\nles égouts.
+0x1EDF384: Momo m'a engagé pour nettoyer\nles égouts.
 0x1EDF3AC: En fait, j'aime bien ça.
 0x1EDF3CA: J'adore nettoyer, donc j'ai\nl'impression de ne jamais bosser !
 0x1EDF40C: T'as pas vu de bestioles\ntraîner par ici, hein ?
@@ -14976,7 +14976,7 @@
 0x1EE04F0: Tu veux lancer le Défi Classique\nen mode {COLOR}É{STR_VAR_1}{COLOR}Ë ?
 0x1EE0539: Va sur le côté gauche du terrain\npour commencer.
 0x1EE0578: Avis à tous les Champions d'Arène !\pAvis à tous les Champions d'Arène !\pBesoin de vous au Battleground !
-0x1EE05CD: Ton premier combat sera contre\n{COLOR}ÉMirskle{COLOR}Ë, Champion d'Arène.\pCe sera un {COLOR}ÉCombat Duo{COLOR}Ë.\pPrends le temps de préparer\nton équipe pour le combat.\pQuand tu es prêt à combattre,\nfais un pas dans une direction.
+0x1EE05CD: Ton premier combat sera contre\n{COLOR}ÉSylvain{COLOR}Ë, Champion d'Arène.\pCe sera un {COLOR}ÉCombat Duo{COLOR}Ë.\pPrends le temps de préparer\nton équipe pour le combat.\pQuand tu es prêt à combattre,\nfais un pas dans une direction.
 0x1EE06AB: Ton prochain combat sera contre\n{COLOR}É{STR_VAR_1}{COLOR}Ë, Champion d'Arène.\pPrends le temps de préparer\nton équipe pour le combat.\pQuand tu es prêt à combattre,\nfais un pas dans une direction.
 0x1EE0761: Ton prochain combat sera contre\n{COLOR}É{STR_VAR_1}{COLOR}Ë, Champion d'Arène.\pCe sera un {COLOR}ÉCombat Duo{COLOR}Ë.\pPrends le temps de préparer\nton équipe pour le combat.\pQuand tu es prêt à combattre,\nfais un pas dans une direction.
 0x1EE0839: Prends le temps de préparer\nton équipe pour le combat.\pQuand tu es prêt à combattre,\nfais un pas dans une direction.
@@ -15021,33 +15021,33 @@
 0x1EE203B: {PLAYER} !\nAlors tu es là aussi…\pJ'ai eu envie de me battre encore,\nme revoilà pour un autre essai !\pJe m'en fiche du nombre de fois,\ndu nombre de chutes…\pIl me suffit d'un seul\ninstant.\pTu es d'accord, non ?
 0x1EE2113: {COLOR}ÇOh, zut.\pJe ne pense pas que cette série\ndéfaites soit une coïncidence\l… tiens.\pJ'ai quelque chose qui pourrait\nt'être utile pour le combat.
 0x1EE21BE: La vérité ?\pJe n'ai pas la patience pour ceux\nqui parlent de «destin» ou\lde bêtises du genre.\pCe que les gens appellent destin,\nj'appelle ça «chance calculée».\pMême avec 99 % de chances de perdre…\pSi ma vie était en jeu,\nje miserais sur ce 1 %.\pTu comprends, non ?
-0x1EE22C9: Eh bien, regarde qui voilà…\pSi c'est pas {PLAYER}.\pJ'imagine que tout ce bazar après\nle Mont Foudroyant a payé, hein ?\pDepuis… t'as quelque chose de\nchangé dans ta tête.\pNon, t'es pas devenu aussi beau\nque moi…\pPersonne n'est plus charmant que\nle vieux Mel.\pJe veux dire, t'es plus détendu.\pJe me souviens qu'à mon Arène, vous\nétiez tendus comme un lasso.\pD'ailleurs… maintenant qu'on est là…\nça te dit une revanche avec ce beau\lgaillard ?\pJe veux voir comment tu te bats\npour de vrai, sans distractions.\pAlors, qu'est-ce que t'en dis ?\nUne autre rodéo ?
+0x1EE22C9: Eh bien, regarde qui voilà…\pSi c'est pas {PLAYER}.\pJ'imagine que tout ce bazar après\nle Mont Foudroyant a payé, hein ?\pDepuis… t'as quelque chose de\nchangé dans ta tête.\pNon, t'es pas devenu aussi beau\nque moi…\pPersonne n'est plus charmant que\nle vieux Mél.\pJe veux dire, t'es plus détendu.\pJe me souviens qu'à mon Arène, vous\nétiez tendus comme un lasso.\pD'ailleurs… maintenant qu'on est là…\nça te dit une revanche avec ce beau\lgaillard ?\pJe veux voir comment tu te bats\npour de vrai, sans distractions.\pAlors, qu'est-ce que t'en dis ?\nUne autre rodéo ?
 0x1EE24C3: Ah… je bouge pas avant\ndemain.\pSi tu changes d'avis… je serai\njuste là.
 0x1EE2521: Voilà l'esprit. Je vais me rendre\ntranquillement à la zone de combat.
 0x1EE2567: {COLOR}ËAccroche-toi, partenaire !\nTu vas prendre cher !
 0x1EE25A8: J'ai le style, mais t'as clairement\nle talent !
 0x1EE25DE: {COLOR}ËAlors…{PAUSE} nouveau Champion\nde Borrius, hein…?\pEh ben, ça alors…\pLe combat que tu m'as montré était\nvraiment différent.\pC'était plus naturel, plus posé,\nsans mouvements inutiles.\pD'accord !\pQuelqu'un qui se bat comme ça\nmérite bien ce Cristal Z !
 0x1EE26E8: {COLOR}ÉNormalium Z{COLOR}Ë… basique, mais\nles attaques {COLOR}ÉNormal{COLOR}Ë deviennent\ldes {COLOR}ÉCapacités Z{COLOR}Ë à l'activation.\pUne seule fois par combat,\nsinon tu t'épuises.\pEn général, rien ne subit plus\nde dégâts des attaques Normal,\ld'où les combats inversés\lqui me plaisent.\p{COLOR}ÉTurbo-Charge Bulldozer{COLOR}Ë…\pOn l'oublie face aux autres\nCapacités Z, mais elle sert\ltoujours.
-0x1EE286D: Salut, {PLAYER}.\nTe revoilà ?\pJe me disais qu'en traînant\nassez, tu finirais par venir !\pÉcoute… j'ai envie… d'un autre\ncombat.\pEt j'allais te rendre service.\pAprès tout, tu peux pas rester\nloin du vieux Mel trop\llongtemps, pas vrai ?
+0x1EE286D: Salut, {PLAYER}.\nTe revoilà ?\pJe me disais qu'en traînant\nassez, tu finirais par venir !\pÉcoute… j'ai envie… d'un autre\ncombat.\pEt j'allais te rendre service.\pAprès tout, tu peux pas rester\nloin du vieux Mél trop\llongtemps, pas vrai ?
 0x1EE2954: {COLOR}ËPas mal, partenaire.\pParfois tu as pris ce Tauros\npar les cornes… d'autres fois\ltu l'as laissé filer.\pC'était un bon combat.\pTiens, un petit cadeau.
 0x1EE29F6: Récemment, je me suis demandé\nce que je ferais si je raccrochais\lmon chapeau, et quittais ce\lboulot de Champion d'Arène.\pPas comme si je gardais ce beau\nminois pour toujours, tu vois\lce que je veux dire ?\pC'est une pensée un peu sobre, mais\nj'ai connu une fille… qui disait\lque je ne peux pas tout garder.\pAlors… je vieillirai avec grâce,\net pas une minute plus tôt.
-0x1EE2B4F: Yo, ça roule, mec ?\pComment ça va ?\pHa ha ha ha !\nMe revoilà, baby !\pGalavan est là, plus fort et\nbrillant que jamais !\pJ'ai trempé les corps d'acier de mes\nPokémon, juste pour un match\lcontre toi !\pEt maintenant, tu regardes la\nversion la plus à jour\lde Galavan !\pAlors tu sais ce que je vais\ndemander, pas vrai ? Bien sûr !\pAffronte-moi ! Laisse-moi montrer\nma fierté du moment !\pEt moi, je verrai comment tu as\namélioré tes techniques\let astuces.\pDeux mordus de techno, en quête de\nprogrès.\pAlors, t'en dis quoi ?
-0x1EE2D68: Quoooooi ?\pAllez, laisse pas le vieux Galavan\nen plan, dis oui !
+0x1EE2B4F: Yo, ça roule, mec ?\pComment ça va ?\pHa ha ha ha !\nMe revoilà, baby !\pGalvane est là, plus fort et\nbrillant que jamais !\pJ'ai trempé les corps d'acier de mes\nPokémon, juste pour un match\lcontre toi !\pEt maintenant, tu regardes la\nversion la plus à jour\lde Galvane !\pAlors tu sais ce que je vais\ndemander, pas vrai ? Bien sûr !\pAffronte-moi ! Laisse-moi montrer\nma fierté du moment !\pEt moi, je verrai comment tu as\namélioré tes techniques\let astuces.\pDeux mordus de techno, en quête de\nprogrès.\pAlors, t'en dis quoi ?
+0x1EE2D68: Quoooooi ?\pAllez, laisse pas le vieux Galvane\nen plan, dis oui !
 0x1EE2DB1: Ah, quel champion !\pEt pour un champion, faisons un\n{COLOR}ÉCombat Duo{COLOR}Ë !\pAllez, file vers la zone de combat !
 0x1EE2E33: {COLOR}ËMes machines de guerre sont prêtes\nà foncer ! Wooooaaar !
 0x1EE2E74: Ha ha ha ha !… haaaaaaah…
-0x1EE2E8D: {COLOR}ËGaaaah !\pComment tu fais ça ?\nSérieux ?\pRetour à la planche à dessin\npour le vieux Galavan, et si vite\lencore…\pAu fait, pourquoi ne pas améliorer\nton propre jeu ?\pJ'ai deux Cristaux Z… je suis\nvraiment sympa,\lje te donne les deux !
+0x1EE2E8D: {COLOR}ËGaaaah !\pComment tu fais ça ?\nSérieux ?\pRetour à la planche à dessin\npour le vieux Galvane, et si vite\lencore…\pAu fait, pourquoi ne pas améliorer\nton propre jeu ?\pJ'ai deux Cristaux Z… je suis\nvraiment sympa,\lje te donne les deux !
 0x1EE2F9F: {COLOR}ÉSteelium Z{COLOR}Ë, {COLOR}ÉElectrium Z{COLOR}Ë… ces deux\ncristaux dopent les attaques {COLOR}ÉAcier{COLOR}Ë\let {COLOR}ÉÉlectrik{COLOR}Ë.\pDommage que tu ne puisses pas\nutiliser les deux en combat,\lla vie est pas toujours juste.\pHonnêtement, je ne sais pas\nlequel secoue le plus\lle terrain.\pÉcrase-les avec\n{COLOR}ÉVrille Maximum{COLOR}Ë…\pOu laisse-les grésiller\navec {COLOR}ÉFulguro-Lance Gigavolt{COLOR}Ë !\pIls sont géniaux !
 0x1EE3151: {PLAYER} ! Te revoilà !\nParfait timing !\pIl me reste quelques soucis\ndans mon jeu, mais y a qu'un\lseul moyen de vérifier !\pUn bon vieux test\nsur le terrain !\pJe vais t'aider à peaufiner\nton équipe aussi !\pAidons-nous l'un l'autre\nici !
-0x1EE3248: {COLOR}ËGaaaah ! Encore en panne !\pOn doit refaire ça un jour !\pTiens, prends ça comme une promesse,\ncar le vieux Galavan n'en a pas\lfini avec toi !
-0x1EE32DA: Il y a un stéréotype chez les\nDresseurs Électrik…\pApparemment, faut être bon avec les\nmachines pour bien les entraîner.\pMoi, le vieux Galavan n'aime pas les\nétiquettes, mais je comprends.\pT'as vu les dégâts qu'ils peuvent\nfaire à notre matos ?\pOn serait ruinés si on ne réparait\npas nous-mêmes ce qu'ils cassent !\pHa ha ha ha !
-0x1EE3416: Ha ha ha ha !\nRegarde qui débarque !\pSi c'est pas notre nouveau Champion,\n{PLAYER} !\pHah ! Si t'es là, j'imagine que tu\nas déjà marqué ton territoire\lici, hein ?\pLa dernière fois que j'ai perdu,\nj'ai dû partir et… m'affirmer\lailleurs, tu vois ?\pMais faut bien chercher la nouvelle\nbase de Big Mo, hein ?\pÀ moins que… tu veuilles affronter\nle boss, ici, maintenant ?\pCette fois, pour de vrai. Le lieu\nappartient au vainqueur.\pJe te préviens, je ne suis plus le\nmême !\pAlors ? Tu choisis quoi, morveux ?\nOu tu trembles déjà dans tes bottes\lou pas ?
+0x1EE3248: {COLOR}ËGaaaah ! Encore en panne !\pOn doit refaire ça un jour !\pTiens, prends ça comme une promesse,\ncar le vieux Galvane n'en a pas\lfini avec toi !
+0x1EE32DA: Il y a un stéréotype chez les\nDresseurs Électrik…\pApparemment, faut être bon avec les\nmachines pour bien les entraîner.\pMoi, le vieux Galvane n'aime pas les\nétiquettes, mais je comprends.\pT'as vu les dégâts qu'ils peuvent\nfaire à notre matos ?\pOn serait ruinés si on ne réparait\npas nous-mêmes ce qu'ils cassent !\pHa ha ha ha !
+0x1EE3416: Ha ha ha ha !\nRegarde qui débarque !\pSi c'est pas notre nouveau Champion,\n{PLAYER} !\pHah ! Si t'es là, j'imagine que tu\nas déjà marqué ton territoire\lici, hein ?\pLa dernière fois que j'ai perdu,\nj'ai dû partir et… m'affirmer\lailleurs, tu vois ?\pMais faut bien chercher la nouvelle\nbase de Momo, hein ?\pÀ moins que… tu veuilles affronter\nle boss, ici, maintenant ?\pCette fois, pour de vrai. Le lieu\nappartient au vainqueur.\pJe te préviens, je ne suis plus le\nmême !\pAlors ? Tu choisis quoi, morveux ?\nOu tu trembles déjà dans tes bottes\lou pas ?
 0x1EE3641: Grr… tu me regardes de haut, p'tit\nmorveux ?\pEh bien, je reste ici jusqu'à ce que\ntu me chasses, compris ?\p…ou jusqu'à demain.\nJ'ai des trucs à faire.
 0x1EE36D4: Heh… pauvre type.\pAllez, allons à la\nzone de combat.
 0x1EE3716: {COLOR}ËT'es piégé dans cette cage,\naucun moyen de fuir, morveux !
 0x1EE3760: Ha ha ha ha ! J'imagine que j'étais\npiégé dans la cage… avec toi !
-0x1EE379A: {COLOR}ËHa ! Même le boss ne peut rien\ncontre le Champion, hein ?\pMais ne crois pas que Big Mo reste\nà terre pour toujours !\pJ'ai juste besoin de voir un peu\ndu monde hors d'Antésia\lce qu'il offre !\pTiens. Prends ce Cristal Z.\pÇa te fera gagner… jusqu'à ce que\nje te batte moi-même !
-0x1EE38B9: {COLOR}ËVoilà le {COLOR}ÉFightinium Z{COLOR}Ë !\pLes attaques de type {COLOR}ÉCombat{COLOR}Ë sont\nboostées par ça !\pMais c'est épuisant.\pJe suis Big Mo, et même moi je ne\npeux le faire qu'une fois !\pMais, l'instant où j'exploite ce\nCristal Z…\pLe pauvre en face se prend un\n{COLOR}ÉCombo Hyper-Furie{COLOR}Ë !\pSans pitié !
+0x1EE379A: {COLOR}ËHa ! Même le boss ne peut rien\ncontre le Champion, hein ?\pMais ne crois pas que Momo reste\nà terre pour toujours !\pJ'ai juste besoin de voir un peu\ndu monde hors d'Antésia\lce qu'il offre !\pTiens. Prends ce Cristal Z.\pÇa te fera gagner… jusqu'à ce que\nje te batte moi-même !
+0x1EE38B9: {COLOR}ËVoilà le {COLOR}ÉFightinium Z{COLOR}Ë !\pLes attaques de type {COLOR}ÉCombat{COLOR}Ë sont\nboostées par ça !\pMais c'est épuisant.\pJe suis Momo, et même moi je ne\npeux le faire qu'une fois !\pMais, l'instant où j'exploite ce\nCristal Z…\pLe pauvre en face se prend un\n{COLOR}ÉCombo Hyper-Furie{COLOR}Ë !\pSans pitié !
 0x1EE39EE: Eh bien, regarde qui est là !\pJe reviens pour régler nos\ncomptes !\pEncore une chance de détrôner le\nChampion intouchable !\pAlors, tu es prêt à tout risquer\net affronter le boss ?
 0x1EE3AB6: {COLOR}ËTch… encore battu…\nincroyable…\pHa ha ha ha !\nFaut que je m'entraîne !\pTiens, un petit truc pour que tu ne\nperdes pas la main !
 0x1EE3B3F: Au fait… j'ai retapé mon Arène\nà Antésia, ces temps-ci.\pTe perdre m'a fait comprendre\nqu'il fallait laisser plus de\lpoissons dans l'étang.\pC'est pas grand-chose, juste un\nchallenge en plus…\pMais les visiteurs semblent\nadorer.\pMême s'ils ne m'aiment pas !\pHa ha ha ha !
@@ -15060,7 +15060,7 @@
 0x1EE409A: {COLOR}ÇUtilise ce {COLOR}ÉWaterium Z{COLOR}Ç, ça change\nune capacité {COLOR}ÉEau{COLOR}Ç en\lune {COLOR}ÉCapacité Z{COLOR}Ç !\pMais une seule fois par combat,\nalors fais en sorte que ça compte.\pComme {COLOR}ÉSuper Tourbillon Abyssal{COLOR}Ç…\pHeureuse que le marais ne\nsubisse pas ça !\pJe veux dire, il a déjà assez de\nproblèmes en ce moment…
 0x1EE41E4: Oh, {PLAYER} ! Parfait timing !\pLa dernière fois m'a laissé un petit\nnuage au-dessus de la tête.\pEt le seul moyen d'y voir clair…\nc'est une chance de rédemption !\pSi tu as du temps aujourd'hui,\nça te dit un autre combat ?
 0x1EE42C4: {COLOR}ÇAh, mince. Tu es bien meilleur que\nje ne pensais, ma belle.\pTiens, tu peux prendre ça.\pConsidère ça comme une promesse de\nte réaffronter !
-0x1EE4343: Je me demande comment va Mel.\pIl a toujours eu du mal à lâcher\nquoi que ce soit.\pCadeaux, passé, rancunes… il s'y\naccroche.\pÇa se voit pas si tu fais pas\ngaffe.\pJ'ai tenté de partir en bons termes,\nquand je suis allée à Polderive,\lje lui ai laissé l'Arène.\pS'il venait ici le même jour que\nmoi… je me demande ce qu'il dirait…\lou s'il dirait quelque chose.
+0x1EE4343: Je me demande comment va Mél.\pIl a toujours eu du mal à lâcher\nquoi que ce soit.\pCadeaux, passé, rancunes… il s'y\naccroche.\pÇa se voit pas si tu fais pas\ngaffe.\pJ'ai tenté de partir en bons termes,\nquand je suis allée à Polderive,\lje lui ai laissé l'Arène.\pS'il venait ici le même jour que\nmoi… je me demande ce qu'il dirait…\lou s'il dirait quelque chose.
 0x1EE44AC: Ooh hoo hoo… ça fait des années…\nDes années, dis-je, à ressentir\ll'envie de croiser un\lautre Dresseur, encore.\pBonjour à nouveau, et mes plus\nchaleureuses félicitations pour être\lChampion.\pEt, je suppose, mes plus sincères\nremerciements d'avoir débarrassé le\lmonde d'un terrible mal.\pJe me souviens du dernier combat,\nj'ai eu la chance de te croiser\lvers la fin de ta quête\lvers la Ligue Pokémon.\pTu étais comme un Papilusion,\ntout juste sorti, sans autre choix\lque d'attendre que ses ailes sèchent\let se raffermissent.\pMais maintenant, je veux voir ta\nforce à son apogée.\pQu'as-tu vécu ?\pQuel chemin as-tu parcouru en\nvivant ces moments ?\pJe désire un autre combat, afin\nd'en observer le résultat.\pVeux-tu satisfaire ce vieil homme ?
 0x1EE4798: Je vois… si tu changes d'avis,\nje serai là toute la journée.\pJe dirais bien que je ne rajeunis\npas en attendant, mais…
 0x1EE4804: Ah, tu as mes remerciements.\pAlors je me rends à la zone de\ncombat.
@@ -15072,21 +15072,21 @@
 0x1EE4CC1: {COLOR}ËAh… voir la force de la nouvelle\ngénération de Dresseurs\lme fait toujours sourire.\pTu réussis toujours à me faire,\net paraître, plus jeune.\pPour cela, je pense que tu\ndevrais avoir ceci.
 0x1EE4D83: Mon étrange état… pèse sur mon\ncorps.\pCes jours-ci, mes vieux os me font\nsouffrir, mais quand je combats,\ltoute ma fatigue disparaît.\pCela dérange certains\nquand je n'agis pas\lcomme je devrais.\pMais peu importe mon âge et mon\napparence, avec les\lPokémon, je resterai toujours\lun enfant dans l'âme.
 0x1EE4EB6: Arbitre
-0x1EE4EBE: Lors du combat contre le Champion\nd'Arène Mirskle, la salle sera\lpleine d'un {COLOR}ÉBrouillard{COLOR}Ë…
+0x1EE4EBE: Lors du combat contre le Champion\nd'Arène Sylvain, la salle sera\lpleine d'un {COLOR}ÉBrouillard{COLOR}Ë…
 0x1EE4F1D: Lors du combat contre le Champion\nd'Arène Véga, des {COLOR}Éémotions négatives{COLOR}Ë\lrempliront l'air !
 0x1EE4F74: Lors du combat contre le Champion\nAlice, un {COLOR}ÉVent Arrière{COLOR}Ë soufflera\lderrière tous les Pokémon Vol !
 0x1EE4FDC: Lors du combat contre le Champion\nAlice, un {COLOR}ÉVent Arrière{COLOR}Ë soufflera\lderrière tous les Pokémon Vol, et\lréduira les {COLOR}Éattaques super\lefficaces{COLOR}Ë contre eux !
-0x1EE5089: Lors du combat contre le Champion\nMel, toutes les {COLOR}Éaffinités de type{COLOR}Ë\lseront {COLOR}Éinversées{COLOR}Ë !
-0x1EE50E4: Lors du combat contre le Champion\nGalavan, les Pokémon {COLOR}ÉÉlectrik{COLOR}Ë\let {COLOR}ÉAcier{COLOR}Ë éviteront\lles capacités {COLOR}ÉSol{COLOR}Ë !
-0x1EE5164: Lors du combat contre le Champion\nGalavan, les Pokémon {COLOR}ÉÉlectrik{COLOR}Ë\let {COLOR}ÉAcier{COLOR}Ë éviteront\lles capacités {COLOR}ÉSol{COLOR}Ë, et\lprofiteront d'un {COLOR}ÉChamp Électrifié{COLOR}Ë !
-0x1EE521A: Lors du combat contre le Champion\nd'Arène Big Mo, les capacités {COLOR}ÉVol{COLOR}Ë\let {COLOR}ÉFée{COLOR}Ë sont inutilisables !
-0x1EE5281: Lors du combat contre le Champion\nd'Arène Big Mo, la Vitesse\ldépendra du poids du Pokémon !
-0x1EE52E3: Lors du combat contre la Championne\nd'Arène Tessy, il {COLOR}Épleuvra{COLOR}Ë\let les Pokémon prendront les {COLOR}Étypes{COLOR}Ë\lde leurs {COLOR}Édeux premières capacités{COLOR}Ë !
-0x1EE5371: Lors du combat contre la Championne\nd'Arène Tessy, une {COLOR}Épluie diluvienne{COLOR}Ë\ltombera, et les Pokémon prendront\lles {COLOR}Étypes{COLOR}Ë des {COLOR}É2 capacités{COLOR}Ë !
+0x1EE5089: Lors du combat contre le Champion\nMél, toutes les {COLOR}Éaffinités de type{COLOR}Ë\lseront {COLOR}Éinversées{COLOR}Ë !
+0x1EE50E4: Lors du combat contre le Champion\nGalvane, les Pokémon {COLOR}ÉÉlectrik{COLOR}Ë\let {COLOR}ÉAcier{COLOR}Ë éviteront\lles capacités {COLOR}ÉSol{COLOR}Ë !
+0x1EE5164: Lors du combat contre le Champion\nGalvane, les Pokémon {COLOR}ÉÉlectrik{COLOR}Ë\let {COLOR}ÉAcier{COLOR}Ë éviteront\lles capacités {COLOR}ÉSol{COLOR}Ë, et\lprofiteront d'un {COLOR}ÉChamp Électrifié{COLOR}Ë !
+0x1EE521A: Lors du combat contre le Champion\nd'Arène Momo, les capacités {COLOR}ÉVol{COLOR}Ë\let {COLOR}ÉFée{COLOR}Ë sont inutilisables !
+0x1EE5281: Lors du combat contre le Champion\nd'Arène Momo, la Vitesse\ldépendra du poids du Pokémon !
+0x1EE52E3: Lors du combat contre la Championne\nd'Arène Tessie, il {COLOR}Épleuvra{COLOR}Ë\let les Pokémon prendront les {COLOR}Étypes{COLOR}Ë\lde leurs {COLOR}Édeux premières capacités{COLOR}Ë !
+0x1EE5371: Lors du combat contre la Championne\nd'Arène Tessie, une {COLOR}Épluie diluvienne{COLOR}Ë\ltombera, et les Pokémon prendront\lles {COLOR}Étypes{COLOR}Ë des {COLOR}É2 capacités{COLOR}Ë !
 0x1EE5408: Lors du combat contre le Champion\nd'Arène Benjamin, les Pokémon\lrégresseront s'ils sont vaincus !
 0x1EE546B: {COLOR}ÇMaman m'amène ici pour la voir\n"défoncer des noobs" !\pEn tout cas, c'est ce qu'elle dit.
-0x1EE54CB: {COLOR}ÇDonnez-moi un M !\pDonnez-moi un E !\pDonnez-moi un L !\pQu'est-ce que ça fait ?\pMel, Mel, Mel !\pGoooooooooo, Mel !\p…Quoi ?\pJe suis la pom-pom girl de Mel.\pMon job, c'est de l'encourager,\net je m'en fiche si ça te gêne !
-0x1EE559F: {COLOR}ËTu crois vraiment pouvoir battre\nBig Mo ? Hein ?
+0x1EE54CB: {COLOR}ÇDonnez-moi un M !\pDonnez-moi un E !\pDonnez-moi un L !\pQu'est-ce que ça fait ?\pMél, Mél, Mél !\pGoooooooooo, Mél !\p…Quoi ?\pJe suis la pom-pom girl de Mél.\pMon job, c'est de l'encourager,\net je m'en fiche si ça te gêne !
+0x1EE559F: {COLOR}ËTu crois vraiment pouvoir battre\nMomo ? Hein ?
 0x1EE55D4: Donnez-moi un V
 0x1EE55DE: Bats les huit Champions\nd'Arène de Borrius dans\nle Défi Classique !
 0x1EE563C: Tu vois ce Pokémon juste à côté de\nmoi ?\pC'est le Pokémon Victoire Mythique,\n{COLOR}ÉVictini{COLOR}Ç.\pOn dit qu'il apporte la victoire aux\nDresseurs qui l'utilisent.\pMais en réalité, la victoire vient\nsi Victini choisit de partager\lson pouvoir avec son Dresseur.\pEt malheureusement pour moi, il ne\nsemble pas vouloir aider\lquelqu'un qui dépend trop de lui.\pPeut-être… s'il voyait un Dresseur\ncapable de gagner encore et encore,\lsans miracle…\pEn fait, maintenant que j'y pense,\ntu es le Champion, non ?\pLes Champions passent souvent\npar ce club…\pAlors je me suis dit : si tu pouvais\nles battre tous les huit à nouveau…\pPenses-tu pouvoir montrer {COLOR}ÉVictini{COLOR}Ç\nque tu es digne d'être son\lDresseur idéal ?
@@ -15360,7 +15360,7 @@
 0x1EECBB6: Deux chemins dans le marais :\nle chemin du bourbier\let celui du pont.
 0x1EECC0A: Le bourbier est plus rapide,\nmais plus de Pokémon sauvages.
 0x1EECC46: C'est le chemin du bourbier.\pTu peux le prendre pour aller\nau Pic Cristal.\pSi tu veux le pont,\nretourne en arrière.
-0x1EECCBE: Ce marais est surveillé par un\nPokémon de Tessy.
+0x1EECCBE: Ce marais est surveillé par un\nPokémon de Tessie.
 0x1EECCF4: Heureusement, je ne suis pas seul\nà surveiller ce marais.
 0x1EECD36: Les Rangers aident le\nprotecteur du marais par nos moyens.
 0x1EECD76: Ce marais est l'endroit idéal pour\npiéger des Dresseurs imprudents.
@@ -15922,9 +15922,9 @@
 0x1EFA236: Quand je fais des châteaux de sable\n{COLOR}Édimanche{COLOR}Ë et {COLOR}Émercredi{COLOR}Ë, ils s'animent\let m'attaquent !\pC'est vraiment flippant !
 0x1EFA2AE: Tu aimes mon château de sable ?\pJ'ai travaillé dur pour le faire !
 0x1EFA2EB: Ouinnn !\pMon château de sable a disparu !
-0x1EFA30B: Galavan baisse le pont de son\nArène quand il voyage.\pIl finira par revenir, il faut\njuste être patient.
-0x1EFA381: On dirait que Galavan a relevé le\npont de son Arène !\pC'est le moment d'y aller\net de le défier.
-0x1EFA3F4: On dirait que Galavan a relevé le\npont de son Arène !\pC'est le moment pour les Dresseurs\nambitieux de le défier.\pHeureusement, tu l'as déjà fait !
+0x1EFA30B: Galvane baisse le pont de son\nArène quand il voyage.\pIl finira par revenir, il faut\njuste être patient.
+0x1EFA381: On dirait que Galvane a relevé le\npont de son Arène !\pC'est le moment d'y aller\net de le défier.
+0x1EFA3F4: On dirait que Galvane a relevé le\npont de son Arène !\pC'est le moment pour les Dresseurs\nambitieux de le défier.\pHeureusement, tu l'as déjà fait !
 0x1EFA484: Ah mince…\pJ'ai tout perdu au\nCasino !\pOn dirait que je n'en aurai plus\nbesoin !
 0x1EFA4E5: J'ai toujours cru pouvoir gagner…
 0x1EFA503: Cet appartement appartient à un\nillustre homme d'affaires de\lNaville.\pIl est très demandé, tu ne pourras\nmalheureusement pas\lle louer.
@@ -16298,7 +16298,7 @@
 0x1F02CAD: 1 Maxi Champi
 0x1F02CBD: Tous les Maxi Champi
 0x1F02CD0: Quand les Pokémon gagnent assez\nd'Exp., ils peuvent évoluer\let gagner en puissance.\pCertains apprennent des attaques\njuste après l'évolution.\pMais tous les Pokémon n'évoluent\npas juste en se battant.\pCertains ont besoin d'objets\ncomme Pierre Feu ou Pierre Lien.
-0x1F02DD8: Le Champion Mirskle aime\nremplir son Arène de brume.\pEn général, ça rend les\nattaques moins précises.\pMais si tu amènes un Pokémon\navec {COLOR}ÉRegard Vif{COLOR}Ë ou\l{COLOR}ÉInfiltration{COLOR}Ë, ses attaques\lfrapperont sans souci.\pPicassaut/Hoothoot, Route 2,\nont Regard Vif, alors va\là-bas et\lattrape-en un.
+0x1F02DD8: Le Champion Sylvain aime\nremplir son Arène de brume.\pEn général, ça rend les\nattaques moins précises.\pMais si tu amènes un Pokémon\navec {COLOR}ÉRegard Vif{COLOR}Ë ou\l{COLOR}ÉInfiltration{COLOR}Ë, ses attaques\lfrapperont sans souci.\pPicassaut/Hoothoot, Route 2,\nont Regard Vif, alors va\là-bas et\lattrape-en un.
 0x1F02F4F: Les talents {COLOR}ÉRegard\nVif{COLOR}Ë et {COLOR}ÉInfiltration{COLOR}Ë permettent\lde toucher en brouillard.\pJe ne pense pas que ça arrive\nailleurs qu'à Borrius !
 0x1F02FFA: Le {COLOR}ÉParadis Floral{COLOR}Ç est si beau !\pPartout, des fleurs de toutes\nles couleurs, et des Pokémon\lcachés dedans !\pJ'y ai attrapé mon {COLOR}ÉBombydou{COLOR}Ç, et\nj'ai utilisé {COLOR}ÉDoux Parfum{COLOR}Ç pour\lfaciliter mes attaques à l'Arène !
 0x1F030EE: Comme Repousses, certains talents\ncomme {COLOR}ÉPuanteur{COLOR}Ë éloignent\lles Pokémon sauvages.
@@ -16369,17 +16369,17 @@
 0x1F04A5E: Quand je combats à la\n{COLOR}ÉMaison des Combats\lInversés{COLOR}Ë, je me fie aux flèches\ld'efficacité pour choisir l'attaque.\pC'est bien plus simple que de\nsavoir ce qui est fort contre quoi,\ltu vois ?
 0x1F04B37: J'ai entendu dire que sous\n{COLOR}ÉAutomnia{COLOR}Ç, cette petite ville\là l'ouest d'ici, se trouve un\lpassage souterrain vers la {COLOR}ÉRoute 9{COLOR}Ç.\pMais ça peut pas être vrai…\nAllons ! Qui croirait ça ?
 0x1F04BF9: Tu ne me verras jamais dehors quand\nil pleut !\p…\pEn fait, la plupart des gens ici\nrentrent chez eux.
-0x1F04C63: L'Arène de Mel est un labyrinthe\nde bassins, nénuphars et cascades.\pElle appartenait à la Championne\nEau, Tessy.\pQuand elle est repartie à\nBorrius Est, Mel a repris l'Arène.\pIl était trop occupé à sculpter\nson corps parfait pour refaire\ltoute l'Arène, alors il gère\lson Arène {COLOR}ÉNormal{COLOR}Ë dans un lieu\lplein d'eau.
-0x1F04DBA: Mel, le Champion, vient souvent\nici avec quelques-uns de ses\lamis proches.
-0x1F04E05: Apparemment, Mel a sa propre île\nprivée quelque part en mer !
+0x1F04C63: L'Arène de Mél est un labyrinthe\nde bassins, nénuphars et cascades.\pElle appartenait à la Championne\nEau, Tessie.\pQuand elle est repartie à\nBorrius Est, Mél a repris l'Arène.\pIl était trop occupé à sculpter\nson corps parfait pour refaire\ltoute l'Arène, alors il gère\lson Arène {COLOR}ÉNormal{COLOR}Ë dans un lieu\lplein d'eau.
+0x1F04DBA: Mél, le Champion, vient souvent\nici avec quelques-uns de ses\lamis proches.
+0x1F04E05: Apparemment, Mél a sa propre île\nprivée quelque part en mer !
 0x1F04E4C: Le {COLOR}ÉLait Meumeu{COLOR}Ç qu'ils vendent ici\nest si doux !\pJ'en achète douze d'un coup à\nchaque visite !
 0x1F04EAB: Mon parapluie me protège toujours\nquand il pleut !
 0x1F04EDD: Il y a plein d'objets utiles\npour les Dresseurs ici !\pMes préférés sont les Baies\nqu'ils vendent.\pElles réduisent les EV de\ndix points !
 0x1F04F72: Je déteste quand il pleut.\pJe ne vis pas ici, donc je ne peux\npas rentrer comme tout le monde…
 0x1F04FD3: Hmm…\pComment récupérer la CT dans\ncette Poké Ball jaune…
 0x1F05010: Waouh !\pJe t'ai vu glisser sur cette cascade\ncomme un ange et prendre la CT !\pBien joué !
-0x1F05061: Mel, le Champion, n'est pas là\npour le moment.\pIl doit vider sa tête\nquelque part.
-0x1F050BB: Mel, le Champion, n'est pas là\npour le moment.\pIl doit vider sa tête\nprès de l'{COLOR}ÉAutoroute RBT{COLOR}Ç à {COLOR}ÉAutomnia{COLOR}Ç.
+0x1F05061: Mél, le Champion, n'est pas là\npour le moment.\pIl doit vider sa tête\nquelque part.
+0x1F050BB: Mél, le Champion, n'est pas là\npour le moment.\pIl doit vider sa tête\nprès de l'{COLOR}ÉAutoroute RBT{COLOR}Ç à {COLOR}ÉAutomnia{COLOR}Ç.
 0x1F0513A: Ma puissance cachée me dit que\ntu veux ça !
 0x1F0516C: La {COLOR}ÉPuissance Cachée{COLOR}Ë est spéciale\net change de type selon\lle Pokémon qui l'utilise.
 0x1F051C7: Je peux te dire quel type de\nPuissance Cachée ton Pokémon\lapprendra !\pTu veux savoir ?
@@ -16392,9 +16392,9 @@
 0x1F05459: Comme tu veux…\pSi tu changes d'avis pour faire\néclore cet Œuf, je serai là.
 0x1F054B3: Oh ? Tu as trop de Pokémon.\nTu n'as pas de place pour cet Œuf…
 0x1F054EE: Un Œuf Pokémon étrange obtenu\nen cadeau.
-0x1F05515: Le Champion, Mel, vit ici\nquand il n'est pas à l'Arène ou\là regarder des arbres colorés.\pJe m'occupe de sa maison\npendant son absence.
-0x1F055AD: Mel sortait avec Tessy, l'ancienne\nChampionne de Rivapolis.\pIls ont rompu quand elle est partie\nà Polderive, Borrius Est, mais\lelle lui a laissé son Arène en\lcadeau d'adieu.\pJe pense que c'est pour ça qu'il\nn'a pas rénové l'Arène après son\ldépart.\pC'est la seule chose qu'il lui reste\nd'elle…
-0x1F056C9: Mel s'entoure toujours de\nplein de femmes différentes.\pIl doit se sentir\nterriblement seul…
+0x1F05515: Le Champion, Mél, vit ici\nquand il n'est pas à l'Arène ou\là regarder des arbres colorés.\pJe m'occupe de sa maison\npendant son absence.
+0x1F055AD: Mél sortait avec Tessie, l'ancienne\nChampionne de Rivapolis.\pIls ont rompu quand elle est partie\nà Polderive, Borrius Est, mais\lelle lui a laissé son Arène en\lcadeau d'adieu.\pJe pense que c'est pour ça qu'il\nn'a pas rénové l'Arène après son\ldépart.\pC'est la seule chose qu'il lui reste\nd'elle…
+0x1F056C9: Mél s'entoure toujours de\nplein de femmes différentes.\pIl doit se sentir\nterriblement seul…
 0x1F0572F: Il a échangé son {COLOR}ÉMagmar{COLOR}Ë tenant un\n{COLOR}ÉMagmariseur{COLOR}Ë, et il a évolué !
 0x1F05779: Il m'a échangé son {COLOR}ÉÉlektek{COLOR}Ë, alors\nj'ai utilisé un {COLOR}ÉÉlectriseur{COLOR}Ë comme\l{COLOR}ÉPierre Évo{COLOR}Ë, et il a évolué !
 0x1F057F0: Certains Pokémon n'évoluent\nque par échange.\pMais qui échange encore,\nhein ?\pCette mode est morte depuis des\nannées.\pMaintenant, tu peux les faire\névoluer avec une {COLOR}ÉPierre Lien{COLOR}Ë !\pRegarde !
@@ -16668,7 +16668,7 @@
 0x1F0C52E: {PLAYER} ! De passage ?\pDépêche-toi d'aller à la\n{COLOR}ÉLigue Pokémon{COLOR}Ë !\pPlus vite tu y vas, plus vite tu\npourras devenir le nouveau\lChampion !\pVa {COLOR}Éà l'est{COLOR}Ë depuis {COLOR}ÉGurenbourg{COLOR}Ë\nle long de la {COLOR}ÉRoute 18{COLOR}Ë pour y aller.
 0x1F0C615: {COLOR}ÁIl y a un Pokémon sur la table !\pMais tu n'as pas de place dans\nton équipe…
 0x1F0C663: {PLAYER}, content\nde te revoir.\pJe rattrape le temps perdu.\pBonne chance pour la suite !
-0x1F0C6C4: Melony
+0x1F0C6C4: Mélony
 0x1F0C6CB: Oh…\pTu es {PLAYER}, c'est ça ?\pJ'ai entendu parler de toi par\n{RIVAL}.\pIl m'a dit que tu\nl'avais aidé.\pMon frère respecte peu,\nmais il a l'air\lde te respecter.
 0x1F0C779: Tu cherches {RIVAL} ?\pIl est parti comprendre ce qui est\narrivé à nos parents.\pIls nous ont laissés enfants,\net on ne les a pas revus depuis.
 0x1F0C816: Ce type bizarre de tout à l'heure\nest rentré avec nous.\pJe me demande…\nEt s'il était vraiment notre père ?
@@ -17073,13 +17073,13 @@
 0x1F15B83: Oh là là…\nTu as l'air épuisé !\pTu n'as pas assez bu de\nliquide ?\pTiens, prends un peu du mien.
 0x1F15BED: Oh, bien, tu as bien meilleure\nmine maintenant.\pEssaie d'être plus prudent en\nvoyageant par cette chaleur !
 0x1F15C54: Arène Pokémon de Dresco
-0x1F15C64: Mirskle
+0x1F15C64: Sylvain
 0x1F15C6C: Hein ?\nOh…{PAUSE} salut, {STR_VAR_1}…\pÇa plane ?\pTes Pokémon veulent renifler un peu\neuh…{PAUSE} Encens Rose ?\pC'est super pour l'âme.\nÇa te rend zen, tout doux…
 0x1F15D42: Oh… c'est quoi ça ?\pOn dirait qu'Ortide veut\nrenifler aussi…
 0x1F15DC6: Oh, tu veux te battre ?\nDésolé.\pJe suis le Champion d'Arène, alors…\pJe crois que je suis d'humeur à\nte faire plaisir…
 0x1F15E32: Tu vois, je suis le genre de gars\nqui aime les fleurs.\pTu piges ?\pLa plus belle part de la nature,\n{STR_VAR_1}…\pTu vas planer rien qu'en les\nregardant ! On se lâche !
 0x1F15ECA: Wouah, mec…\pEh ben…\nCe combat, c'était autre chose…
-0x1F15EFF: C'est profond, {STR_VAR_1}.\pJ'sais pas si c'est le brouillard…\p…mais je l'ai vraiment senti, mec.\nCorps et âme.\pTiens. Prends ce super Badge,\npour battre Mirskle, Champion\ld'Arène des fleurs.
+0x1F15EFF: C'est profond, {STR_VAR_1}.\pJ'sais pas si c'est le brouillard…\p…mais je l'ai vraiment senti, mec.\nCorps et âme.\pTiens. Prends ce super Badge,\npour battre Sylvain, Champion\ld'Arène des fleurs.
 0x1F15FD6: Voilà le {COLOR}ÉBadge Feuille{COLOR}Ë.\pCe p'tit truc utile fait que les\nPokémon échangés jusqu'au N. <0x34> 26\lécoutent tes superbes\lordres…\pOh, et prends aussi cette super, super CT…
 0x1F16082: C'est une CT.\pElle apprend à tes Pokémon une\ncapacité encore et encore, à autant\lde super Pokémon que tu veux.\pAlors ne te gêne pas pour\nrépandre l'amour.\pPrêche, {STR_VAR_1} !\pBref… la capacité, c'est {COLOR}ÉNœud Herbe{COLOR}Ë.\pJ'ai connu un type un jour.\nIl se cassait toujours la figure.\pIl disait que c'était un\nproblème génétique.\pLa vérité… je lui faisais\nNœud Herbe sans arrêt !\pHeureusement qu'il était léger,\nsinon ça aurait VRAIMENT fait mal.
 0x1F16225: Oh, mince…\pTu as déjà Nœud Herbe…
@@ -17120,32 +17120,32 @@
 0x1F174FF: Arène Pokémon de Rivapolis
 0x1F17516: Salut, partenaire.\nContent d'te revoir si vite.\pJ'espère que ma modeste demeure te\nplaît et tout.\pSinon, j'suis sûr qu'il y a\nautre chose par ici pour te\lrincer l'œil…\pJ'veux dire, t'as fait\ntout ce patelin et le suivant,\là chercher le p'tit vieux moi.\p…Je rigole, je rigole.\pCe regard me dit que tu te bats pas\npour t'amuser.\pÉcoute, j'suis pas là pour fouiner.\nC'est pas mes oignons.\pMais comme Champion d'Arène, je\npeux pas filer un Badge au premier\lcow-boy venu.\pAlors, on va régler ça.\pQue ce beau gars teste\nta trempe !
 0x1F17729: Bravo, partenaire.\pMais je pense toujours que si\non se battait pour le style,\lje gagnerais, sans souci.
-0x1F17796: Nom d'un chien… je pensais que le\nformat te ferait trébucher, mais tu\lm'as bien montré.\pOn dirait que le Badge est à toi.\pTiens.\nUn {COLOR}ÉBadge Chute{COLOR}Ë, offert par Mel.
+0x1F17796: Nom d'un chien… je pensais que le\nformat te ferait trébucher, mais tu\lm'as bien montré.\pOn dirait que le Badge est à toi.\pTiens.\nUn {COLOR}ÉBadge Chute{COLOR}Ë, offert par Mél.
 0x1F1785D: Avec le Badge Chute, tout Pokémon\njusqu'au N. <0x34> 45 t'obéira.\pIl permet aussi de déplacer de gros\nrochers avec {COLOR}ÉForce{COLOR}Ë.\pFranchement, je sais pas pourquoi\nles Pokémon costauds ne peuvent pas\lle faire déjà…\pMais bon, c'est un truc\nbizarre.\pBref, prends cette CT avec\nce Badge.
 0x1F1798C: Avec {COLOR}ÉFaçade{COLOR}Ë, si ton Pokémon\na un problème de statut, ça devient\ldeux fois plus puissant !\pUtilise-la pour que tes ennemis\nregrettent de te donner un statut !\pBon, file maintenant.\pJ'espère que tu trouveras ce que\ntu cherches.
 0x1F17A71: Bonne chance, et rappelle-toi,\nje suis toujours là si tu veux\lquelque chose de beau à regarder !
 0x1F17ACA: Arène Pokémon de Daherapolis
-0x1F17ADA: Galavan
-0x1F17AE2: Yo, ça va, l'ami ?\nComment ça va ?\pMoi, c'est Galavan.\pJe suis Champion d'Arène, au cas où\nça se voit pas.\pAlors, t'as aimé mon Arène ?\pLe magnétisme et l'électricité sous\ntes pieds t'ont compliqué la vie ?\pHa ha ha ! C'est le but !\nL'invention naît de la nécessité !\pLes machines et la techno évoluent\nparce que l'ancien n'était\lpas assez bon !\pC'est ce que mon Arène veut\ntester !\pAlors comment vas-tu avancer quand\nla faiblesse évidente n'est plus\lutilisable ?\pJe veux que tu me montres\ncomment tu t'adaptes !\pEt montre-le moi avec deux\nde tes Pokémon à la fois !\pSinon, moi, Galavan, je te grille\njusqu'à ce que tu ne bouges plus !
+0x1F17ADA: Galvane
+0x1F17AE2: Yo, ça va, l'ami ?\nComment ça va ?\pMoi, c'est Galvane.\pJe suis Champion d'Arène, au cas où\nça se voit pas.\pAlors, t'as aimé mon Arène ?\pLe magnétisme et l'électricité sous\ntes pieds t'ont compliqué la vie ?\pHa ha ha ! C'est le but !\nL'invention naît de la nécessité !\pLes machines et la techno évoluent\nparce que l'ancien n'était\lpas assez bon !\pC'est ce que mon Arène veut\ntester !\pAlors comment vas-tu avancer quand\nla faiblesse évidente n'est plus\lutilisable ?\pJe veux que tu me montres\ncomment tu t'adaptes !\pEt montre-le moi avec deux\nde tes Pokémon à la fois !\pSinon, moi, Galvane, je te grille\njusqu'à ce que tu ne bouges plus !
 0x1F17D5B: …\pTu m'entends ?\pJ'ai dit : montre-moi avec deux\nde tes Pokémon à la fois !\pUn seul, ça suffit pas !
 0x1F17DCC: Gaaaaah !\nTa techno a surclassé la mienne !
 0x1F17DF1: Pfiou… tu m'as bien grillé !\pOn dirait que tes machines de guerre\nsont meilleures que les miennes.\pRien à redire !\nJe dois te remettre ce {COLOR}ÉBadge Zap{COLOR}Ë !
 0x1F17EB5: Le Badge Zap permet {COLOR}ÉSurf{COLOR}Ë\nsur l'eau et la lave !\pEt en plus, tout Pokémon\nt'obéira tant qu'il n'est pas\lau-dessus du N. <0x34> 52 !\pC'est électrisant, non ?\pMais attends, c'est pas fini !\nPrends aussi cette CT !
-0x1F17F82: Si t'es en difficulté, utilise\n{COLOR}ÉChange Éclair{COLOR}Ë pour t'en sortir !\pEt tu sais quoi ?\nOn remettra ça un de ces jours !\pSi tu veux discuter avec le vieux\nGalavan, traîne près des\lCentres Pokémon.\pJe reconstruirai mon 'mon de métal\npour la revanche !
+0x1F17F82: Si t'es en difficulté, utilise\n{COLOR}ÉChange Éclair{COLOR}Ë pour t'en sortir !\pEt tu sais quoi ?\nOn remettra ça un de ces jours !\pSi tu veux discuter avec le vieux\nGalvane, traîne près des\lCentres Pokémon.\pJe reconstruirai mon 'mon de métal\npour la revanche !
 0x1F18085: Ne laisse rien se mettre sur ta\nroute, {PLAYER} !\pEt ne laisse aucun désavantage\nt'empêcher d'atteindre tes buts !
 0x1F180F7: Arène Pokémon de Antésia
-0x1F18108: Big Mo
-0x1F1810F: Eh bien, regarde qui veut tuer\nson ennui !\pT'es le gamin que j'ai croisé sur\nla Route 16, non ?\p…\pAlors, tu t'appelles {PLAYER} !\pHa ! Alors je ferais mieux de\nme présenter correctement aussi !\pIci, tout le monde m'appelle\nBig Mo !\pEt je suis le seul à tenir\nles bas-fonds d'Antésia\lsous contrôle !\pTous les gangs sont sous mon talon,\ncompris ?\p{EVIL_LEGENDARY}\pOn n'arrive pas ici en\nétant une mauviette !\pAlors viens ! Voyons ce que tu peux\nfaire au parrain d'Antésia !
+0x1F18108: Momo
+0x1F1810F: Eh bien, regarde qui veut tuer\nson ennui !\pT'es le gamin que j'ai croisé sur\nla Route 16, non ?\p…\pAlors, tu t'appelles {PLAYER} !\pHa ! Alors je ferais mieux de\nme présenter correctement aussi !\pIci, tout le monde m'appelle\nMomo !\pEt je suis le seul à tenir\nles bas-fonds d'Antésia\lsous contrôle !\pTous les gangs sont sous mon talon,\ncompris ?\p{EVIL_LEGENDARY}\pOn n'arrive pas ici en\nétant une mauviette !\pAlors viens ! Voyons ce que tu peux\nfaire au parrain d'Antésia !
 0x1F182D8: Peu importe leur taille,\nils doivent lécher mes bottes !
 0x1F18318: Et ça vaut pour ta petite bande,\nles «{PLAYER} Noir».\pMignon de vouloir t'imposer.
 0x1F18372: Ha ha ha ha !\pIls devraient t'appeler\nBig {PLAYER} !
 0x1F183A5: Gah ! Tout ce temps à cogner des\npetits poissons m'a ramolli !\pMême avec toutes les règles en place\npour me laisser toutes les cartes…\pHa ha ha ha ! D'accord, tu m'as eu !\pMême si Antésia est un taudis, j'ai\nquand même un statut officiel de\lChampion d'Arène !\pEt un Champion d'Arène donne ça à\ntout vainqueur !
-0x1F184F8: Voilà le Badge Combat !\pPokémon échangés, Nv <0x34> 57 max\nsauront qui est le vrai boss !\pEt tu peux grimper ces falaises\navec la capacité\l{COLOR}ÉEscalade{COLOR}Ë !\pDis que c'est pas utile !\pOh ouais… je suppose que tu peux\nprendre ça.\pDis que c'est un cadeau de\nBig Mo.
+0x1F184F8: Voilà le Badge Combat !\pPokémon échangés, Nv <0x34> 57 max\nsauront qui est le vrai boss !\pEt tu peux grimper ces falaises\navec la capacité\l{COLOR}ÉEscalade{COLOR}Ë !\pDis que c'est pas utile !\pOh ouais… je suppose que tu peux\nprendre ça.\pDis que c'est un cadeau de\nMomo.
 0x1F1860B: {COLOR}ÉVampi-Poing{COLOR}Ë frappe et draine la\nsanté de ton adversaire !\pAlors, t'attends quoi ?\pDégage. T'es trop fort pour te\nperdre ici.\pY a bien plus gros poissons hors de\nces murs.\pSors et deviens le roi de\nl'étang, bon sang !\pHa ha ha ha !
 0x1F18710: Si tu reviens un jour à Antésia, {PLAYER}, sache que je te\lgarde à l'œil !\pHa ha ha ha !\pJ'ai un œil sur tout le monde ici !\nC'est mon boulot !
 0x1F18799: Arène Pokémon de Polderive
-0x1F187A9: Tessy
-0x1F187AF: Salut ! Alors t'as passé mon p'tit\ndéfi des vagues, hein ?\pMoi c'est Tessy.\pVivre dans ce marais nous a appris\nplein de choses…\p…Grandir et s'adapter, c'est surtout\ndeux d'entre elles.\pTous mes Pokémon peuvent\nchanger de type selon les\ldeux premières capacités connues !\pEt pendant qu'on se bat, tes\nPokémon feront pareil !\pMais tu le savais déjà, hein.
+0x1F187A9: Tessie
+0x1F187AF: Salut ! Alors t'as passé mon p'tit\ndéfi des vagues, hein ?\pMoi c'est Tessie.\pVivre dans ce marais nous a appris\nplein de choses…\p…Grandir et s'adapter, c'est surtout\ndeux d'entre elles.\pTous mes Pokémon peuvent\nchanger de type selon les\ldeux premières capacités connues !\pEt pendant qu'on se bat, tes\nPokémon feront pareil !\pMais tu le savais déjà, hein.
 0x1F18924: Hein… regarde ça.\pT'as choisi un sacré bon moment\npour une averse.\pMais hé, rien ne va\nplomber l'ambiance de ce combat,\lhein ?\pAllez !\nNe coule pas trop vite, d'accord ?
 0x1F189CE: Sacré bon, ma belle !\pCe combat-là était parmi les\nmeilleurs que j'aie eus !
 0x1F18A19: Tu m'as sacrément emportée !\pJ'imagine que je dois te donner le\n{COLOR}ÉBadge Marais{COLOR}Ç maintenant !
@@ -17208,32 +17208,32 @@
 0x1F19CA2: Où que tu ailles, n'aie jamais peur\nde foncer à toute vitesse !
 0x1F19CE9: As-tu remarqué ?\pLe quotient de beauté moyen de cette\nArène est bien supérieur à\lla moyenne nationale.
 0x1F19D56: Tu as gagné le combat, mais\nje te bats niveau beauté.
-0x1F19D9A: Il a été prouvé scientifiquement\nque regarder des gens attirants,\lplutôt que normaux, réduit le\lstress.\pC'est pour ça que Mel nous emploie.
+0x1F19D9A: Il a été prouvé scientifiquement\nque regarder des gens attirants,\lplutôt que normaux, réduit le\lstress.\pC'est pour ça que Mél nous emploie.
 0x1F19E2D: Avant, c'était une Arène Eau, mais\nretirer des milliers de litres\ld'eau coûtait trop cher, alors on\ll'a gardée !
 0x1F19E95: Je travaillais ici à l'époque, mais\npas grand-chose n'a changé.
 0x1F19ED4: J'aime l'esthétique de l'eau, c'est\nbien plus joli à regarder qu'un\lfond normal.\pJ'imagine qu'une Arène Normal serait\njuste un vide blanc.
-0x1F19F6D: Je suis la secrétaire de Mel.\pPour prendre rendez-vous avec lui,\ntu dois d'abord me\lbattre !
-0x1F19FD9: Je peux te caler un combat avant la\nretouche horaire de Mel.
-0x1F1A020: Mel est très occupé.\pIl faut du temps et des efforts\npour rester devant des cascades et\lattendre les Dresseurs.
+0x1F19F6D: Je suis la secrétaire de Mél.\pPour prendre rendez-vous avec lui,\ntu dois d'abord me\lbattre !
+0x1F19FD9: Je peux te caler un combat avant la\nretouche horaire de Mél.
+0x1F1A020: Mél est très occupé.\pIl faut du temps et des efforts\npour rester devant des cascades et\lattendre les Dresseurs.
 0x1F1A091: Ne cours pas après les cascades !
 0x1F1A0AE: Voilà ce qui arrive si tu poursuis\nles cascades !
 0x1F1A0DD: Tu as remarqué ?\pUn des Lokhlass est placé\ndifféremment des autres.
 0x1F1A129: Presque arrivé !
-0x1F1A137: Ha ha, je plaisante !\nMel est encore loin !
+0x1F1A137: Ha ha, je plaisante !\nMél est encore loin !
 0x1F1A16B: Tu peux monter sur le Lokhlass pour\nremonter jusqu'en haut.
 0x1F1A1A8: Les Pokémon Normal sont géniaux !\pCe sont des Pokémon normaux, mais\nun peu meilleurs.
 0x1F1A1FD: Même si tes Pokémon ont gagné, les\nmiens sont plus sûrs à élever.
 0x1F1A23D: Les Pokémon Normal sont sûrs\nde tous les Pokémon.\pDes Pokémon qui crachent du feu ou\nles éclairs par les joues peuvent\lêtre très dangereux.
 0x1F1A2D2: Avant de redescendre, laisse-moi\npeindre un combat élégant\lavec toi.
 0x1F1A320: Je n'ai pas eu le temps de peindre\nquoi que ce soit…
-0x1F1A34C: Mel est très fier de son\napparence.\pC'est pour ça qu'il m'emploie,\nmaquilleuse à plein temps.
+0x1F1A34C: Mél est très fier de son\napparence.\pC'est pour ça qu'il m'emploie,\nmaquilleuse à plein temps.
 0x1F1A3A9: Un Pokémon se cachait sous\nle nénuphar !\pLe Pokémon attaque !
 0x1F1A411: Le sol magnétisé ?\pC'est moi qui l'ai inventé !
 0x1F1A436: Mon génie…
 0x1F1A441: Beaucoup de Pokémon de cette Arène\nprofitent du sol magnétisé.\pDonc, tu es désavantagé !
 0x1F1A4A7: Tu aimes pas le typage mixte de\nl'Arène ?
 0x1F1A4D3: C'est génial !
-0x1F1A4DF: Galavan adore les types Électrik,\nil ne pouvait pas laisser les Acier.
+0x1F1A4DF: Galvane adore les types Électrik,\nil ne pouvait pas laisser les Acier.
 0x1F1A524: Tu as du mal avec le\nmagnétisme ?
 0x1F1A556: On dirait que non !
 0x1F1A561: Le sol magnétique soulève tous les\ntypes Électrik et Acier\lhors du sol !
@@ -17246,9 +17246,9 @@
 0x1F1A71E: Le sol ici est magnétisé.
 0x1F1A73C: C'est une façon de le surmonter.
 0x1F1A75B: Tant que le sol est magnétisé,\naucun type Électrik ou Acier ne\lsera touché par les Picots !
-0x1F1A7B6: Je suis ton dernier adversaire\navant Galavan.\pJ'espère que tu as un Anti-Para !
+0x1F1A7B6: Je suis ton dernier adversaire\navant Galvane.\pJ'espère que tu as un Anti-Para !
 0x1F1A80B: Tu es prêt.
-0x1F1A819: Si tu bats le maître ouvrier\nde l'Arène de Daherapolis, tu es prêt à\laffronter Galavan.
+0x1F1A819: Si tu bats le maître ouvrier\nde l'Arène de Daherapolis, tu es prêt à\laffronter Galvane.
 0x1F1A86C: Je sens l'électricité pulser\ndans mes veines !
 0x1F1A8A1: Pa… Ra… Ly… Sé…
 0x1F1A8B2: Je ne suis pas paralysé, mais tu\nm'as bien frappé !
@@ -17265,20 +17265,20 @@
 0x1F1AA99: Oh… non !
 0x1F1AAA2: Je suis venu tester ta force\ndans le ring.\pHiyah !
 0x1F1AAD8: Ta force est admirable.
-0x1F1AAF4: Bats-moi, et c'est tout droit vers\nBig Mo !\pDommage, je vais pas laisser\nça arriver !
+0x1F1AAF4: Bats-moi, et c'est tout droit vers\nMomo !\pDommage, je vais pas laisser\nça arriver !
 0x1F1AB4C: Hein ?\nComment un gamin survit au ring ?
-0x1F1AB71: Les règles sont simples.\pChoisis un Pokémon pour affronter\ntrois Dresseurs d'affilée.\pChaque Dresseur n'utilise aussi qu'\nun seul Pokémon.\pTout Pokémon est autorisé\ndans le ring, mais pas de capacités\l{COLOR}ÉVol{COLOR}Ë-, {COLOR}ÉPsy{COLOR}Ë- ou {COLOR}ÉFée{COLOR}Ë\len combat.\pPour les capacités qui changent\nde type en combat, on regarde\ljuste ce qu'elles deviennent.\pOn n'aime pas ces types dans\nle ring, et Big Mo ne te laissera\lpas utiliser la {COLOR}Écapacité la plus\lcourante de l'équipe{COLOR}Ë si tu arrives.\pSi certains types sont à égalité\ndans ton équipe, on bannira\ldans l'ordre : Vol, Psy,\lpuis Fée.\pSi tu as un Bazoucan et un\nAlakazam dans ton équipe, tu ne peux\lpas utiliser de capacités Vol\lcontre Big Mo, car Vol vient\lavant Psy.\pCompris ?\pNe te trompe pas !
-0x1F1AE89: Les règles sont simples.\pChoisis un Pokémon pour affronter\ntrois Dresseurs d'affilée.\pChaque Dresseur n'utilise aussi qu'\nun seul Pokémon.\pTout Pokémon est autorisé\ndans le ring, mais pas de capacités\l{COLOR}ÉVol{COLOR}Ë-, {COLOR}ÉPsy{COLOR}Ë- ou {COLOR}ÉFée{COLOR}Ë\len combat.\pPour les capacités qui changent\nde type en combat, on regarde\ljuste ce qu'elles deviennent.\pOn n'aime pas ces types dans\nl'Arène, mais Big Mo est sympa\let il te laissera les utiliser si tu\larrives jusqu'à lui.
-0x1F1B064: Les règles sont simples.\pChoisis un Pokémon pour affronter\ntrois Dresseurs d'affilée.\pChaque Dresseur n'utilise aussi qu'\nun seul Pokémon.\pTout Pokémon est autorisé\ndans le ring, mais pas de capacités\l{COLOR}ÉVol{COLOR}Ë-, {COLOR}ÉPsy{COLOR}Ë- ou {COLOR}ÉFée{COLOR}Ë\len combat.\pPour les capacités qui changent\nde type en combat, on regarde\ljuste ce qu'elles deviennent.\pOn n'aime pas ces types dans\nl'Arène, mais Big Mo est sympa,\let il ne te {COLOR}Éempêchera{COLOR}Ë d'utiliser\l{COLOR}ÉFée{COLOR}Ë que si tu arrives jusqu'à\llui.
+0x1F1AB71: Les règles sont simples.\pChoisis un Pokémon pour affronter\ntrois Dresseurs d'affilée.\pChaque Dresseur n'utilise aussi qu'\nun seul Pokémon.\pTout Pokémon est autorisé\ndans le ring, mais pas de capacités\l{COLOR}ÉVol{COLOR}Ë-, {COLOR}ÉPsy{COLOR}Ë- ou {COLOR}ÉFée{COLOR}Ë\len combat.\pPour les capacités qui changent\nde type en combat, on regarde\ljuste ce qu'elles deviennent.\pOn n'aime pas ces types dans\nle ring, et Momo ne te laissera\lpas utiliser la {COLOR}Écapacité la plus\lcourante de l'équipe{COLOR}Ë si tu arrives.\pSi certains types sont à égalité\ndans ton équipe, on bannira\ldans l'ordre : Vol, Psy,\lpuis Fée.\pSi tu as un Bazoucan et un\nAlakazam dans ton équipe, tu ne peux\lpas utiliser de capacités Vol\lcontre Momo, car Vol vient\lavant Psy.\pCompris ?\pNe te trompe pas !
+0x1F1AE89: Les règles sont simples.\pChoisis un Pokémon pour affronter\ntrois Dresseurs d'affilée.\pChaque Dresseur n'utilise aussi qu'\nun seul Pokémon.\pTout Pokémon est autorisé\ndans le ring, mais pas de capacités\l{COLOR}ÉVol{COLOR}Ë-, {COLOR}ÉPsy{COLOR}Ë- ou {COLOR}ÉFée{COLOR}Ë\len combat.\pPour les capacités qui changent\nde type en combat, on regarde\ljuste ce qu'elles deviennent.\pOn n'aime pas ces types dans\nl'Arène, mais Momo est sympa\let il te laissera les utiliser si tu\larrives jusqu'à lui.
+0x1F1B064: Les règles sont simples.\pChoisis un Pokémon pour affronter\ntrois Dresseurs d'affilée.\pChaque Dresseur n'utilise aussi qu'\nun seul Pokémon.\pTout Pokémon est autorisé\ndans le ring, mais pas de capacités\l{COLOR}ÉVol{COLOR}Ë-, {COLOR}ÉPsy{COLOR}Ë- ou {COLOR}ÉFée{COLOR}Ë\len combat.\pPour les capacités qui changent\nde type en combat, on regarde\ljuste ce qu'elles deviennent.\pOn n'aime pas ces types dans\nl'Arène, mais Momo est sympa,\let il ne te {COLOR}Éempêchera{COLOR}Ë d'utiliser\l{COLOR}ÉFée{COLOR}Ë que si tu arrives jusqu'à\llui.
 0x1F1B266: Tu crois que je veux garder tes\nPokémon pour toi ?\pVa déposer tes Pokémon au PC\njusqu'à ce qu'il n'en reste qu'un !
-0x1F1B2D5: Tu as survécu au ring.\nBien joué, gamin.\pPasse par cette porte si tu veux\naffronter Big Mo.
-0x1F1B32C: Tu as survécu au ring,\nmais tu as aussi battu Big Mo !\pJe suis pas facile à impressionner,\nmais tu as fait le boulot, gamin.
-0x1F1B3A8: Ici, c'est l'Arène d'Antésia !\pTu crois avoir ce qu'il faut pour\nsurvivre au ring et battre Big Mo ?
+0x1F1B2D5: Tu as survécu au ring.\nBien joué, gamin.\pPasse par cette porte si tu veux\naffronter Momo.
+0x1F1B32C: Tu as survécu au ring,\nmais tu as aussi battu Momo !\pJe suis pas facile à impressionner,\nmais tu as fait le boulot, gamin.
+0x1F1B3A8: Ici, c'est l'Arène d'Antésia !\pTu crois avoir ce qu'il faut pour\nsurvivre au ring et battre Momo ?
 0x1F1B408: Peu de challengers survivent au\nring comme toi.\pTu es spécial, gamin.
-0x1F1B45C: Big Mo a changé notre vieux Défi\ndu Ring en une sorte de\lcentre de combat chic.\pIl a même convaincu ces crétins de\nla Frontière de Combat d'envoyer\lun de leurs bouffons pour arbitrer !\pMais quoi qu'il fasse, il n'a\npas réussi à convaincre d'ajouter\lcomme centre de combat «officiel».\pAlors, comme tu n'as aucune\nrécompense en gagnant ici, si tu\larrives quand même à {COLOR}É100{COLOR}Ë victoires,\ltu auras une nouvelle étoile sur ta\lCarte Dresseur.\pC'est-y pas mignon ?
-0x1F1B62C: Tu crois vraiment pouvoir battre\nBig Mo sans capacités de type {COLOR}É{STR_VAR_1}{COLOR}Ë\l? Hein ?
-0x1F1B67A: Tu crois vraiment pouvoir battre\nBig Mo quand ta {COLOR}Évitesse{COLOR}Ë vaut\lton {COLOR}Époids{COLOR}Ë, et que tu {COLOR}Éne peux pas{COLOR}Ë\lutiliser de {COLOR}ÉTalents prioritaires{COLOR}Ë ?
-0x1F1B708: Tu crois vraiment pouvoir battre\nBig Mo quand ta {COLOR}Évitesse{COLOR}Ë vaut\lton {COLOR}Époids{COLOR}Ë, et que tu {COLOR}Éne peux pas{COLOR}Ë\lutiliser des {COLOR}ÉFée{COLOR}Ë ou des {COLOR}ÉTalents\lprioritaires{COLOR}Ë, hein ?
+0x1F1B45C: Momo a changé notre vieux Défi\ndu Ring en une sorte de\lcentre de combat chic.\pIl a même convaincu ces crétins de\nla Frontière de Combat d'envoyer\lun de leurs bouffons pour arbitrer !\pMais quoi qu'il fasse, il n'a\npas réussi à convaincre d'ajouter\lcomme centre de combat «officiel».\pAlors, comme tu n'as aucune\nrécompense en gagnant ici, si tu\larrives quand même à {COLOR}É100{COLOR}Ë victoires,\ltu auras une nouvelle étoile sur ta\lCarte Dresseur.\pC'est-y pas mignon ?
+0x1F1B62C: Tu crois vraiment pouvoir battre\nMomo sans capacités de type {COLOR}É{STR_VAR_1}{COLOR}Ë\l? Hein ?
+0x1F1B67A: Tu crois vraiment pouvoir battre\nMomo quand ta {COLOR}Évitesse{COLOR}Ë vaut\lton {COLOR}Époids{COLOR}Ë, et que tu {COLOR}Éne peux pas{COLOR}Ë\lutiliser de {COLOR}ÉTalents prioritaires{COLOR}Ë ?
+0x1F1B708: Tu crois vraiment pouvoir battre\nMomo quand ta {COLOR}Évitesse{COLOR}Ë vaut\lton {COLOR}Époids{COLOR}Ë, et que tu {COLOR}Éne peux pas{COLOR}Ë\lutiliser des {COLOR}ÉFée{COLOR}Ë ou des {COLOR}ÉTalents\lprioritaires{COLOR}Ë, hein ?
 0x1F1B7B5: Tu es le nouveau dur à cuire d'Antésia !
 0x1F1B7E4: Il n'y a pas de poissons dans ces\neaux troubles.\pPourquoi je pêche ici ?
 0x1F1B821: Si je pouvais pêcher, je\nm'en sortirais mieux contre eux.
@@ -17310,8 +17310,8 @@
 0x1F1BF57: Je vois…\nTu t'en souviens.
 0x1F1BF74: Utilise tes souvenirs.\nIls te guideront.
 0x1F1BF9C: Hé, gamin !\p-KOF- -TOUX-\pBienvenue à ton premier Défi\nd'Arène !\pLaisse-moi commencer avec un\npetit cadeau.\p-TOUX- -SOUFFLE-
-0x1F1C019: Le Champion d'Arène, Mirskle,\npréfère les Pokémon floraux.\pAvec un Pokémon {COLOR}ÉFeu{COLOR}Ë ou\nun Pokémon {COLOR}ÉVol{COLOR}Ë, tu devrais\lle battre sans souci !\p-TOUX- -TOUX-\pSache que Mirskle aime\nremplir son Arène de brouillard\lpar moments, et ça peut\lmodifier tes combats.\pÇa te permettra d'esquiver\nfacilement, mais tu auras\lplus de mal à les toucher !\pTa stratégie principale devrait\nêtre de retirer le Brouillard\ldu terrain, puis de le mettre sur\lton adversaire.\pTu sais, avec une capacité comme\n{COLOR}ÉTempête de Sable{COLOR}Ë ou {COLOR}ÉAnti-Brume{COLOR}Ë.\pBonne chance !\p-TOUX- -SOUFFLE-
-0x1F1C272: Je suis impressionné !\pTu as battu Mirskle même avec les\nyeux pleins de «brouillard» !\pPrends ceci comme preuve en plus de\nta victoire ici.
+0x1F1C019: Le Champion d'Arène, Sylvain,\npréfère les Pokémon floraux.\pAvec un Pokémon {COLOR}ÉFeu{COLOR}Ë ou\nun Pokémon {COLOR}ÉVol{COLOR}Ë, tu devrais\lle battre sans souci !\p-TOUX- -TOUX-\pSache que Sylvain aime\nremplir son Arène de brouillard\lpar moments, et ça peut\lmodifier tes combats.\pÇa te permettra d'esquiver\nfacilement, mais tu auras\lplus de mal à les toucher !\pTa stratégie principale devrait\nêtre de retirer le Brouillard\ldu terrain, puis de le mettre sur\lton adversaire.\pTu sais, avec une capacité comme\n{COLOR}ÉTempête de Sable{COLOR}Ë ou {COLOR}ÉAnti-Brume{COLOR}Ë.\pBonne chance !\p-TOUX- -SOUFFLE-
+0x1F1C272: Je suis impressionné !\pTu as battu Sylvain même avec les\nyeux pleins de «brouillard» !\pPrends ceci comme preuve en plus de\nta victoire ici.
 0x1F1C2F4: C'est une Gemme rare qui peut\nbooster une capacité {COLOR}ÉPlante{COLOR}Ë\len combat pour toi !\pJe suis sûr qu'elle t'aidera,\nchampion en devenir.
 0x1F1C376: Oh, c'est toi !\nChampion en devenir !\pJe ne t'avais pas vu !\pBienvenue à l'Arène Bourg-Cratère !\pCommençons avec un peu\nd'Eau Fraîche.
 0x1F1C3FC: Comme tu peux le voir ou non, cette\nArène tourne autour des {COLOR}ÉTénèbres{COLOR}Ë.\pPour gagner ici, un bon départ\nserait d'amener des types\l{COLOR}ÉCombat{COLOR}Ë, {COLOR}ÉInsecte{COLOR}Ë ou {COLOR}ÉFée{COLOR}Ë.\pAttention, à cause des nombreux\nDresseurs qui peinent dans cette\lArène, des {COLOR}Éondes négatives{COLOR}Ë partout\lpendant tes combats.\pCes émotions infligeront des dégâts\nà la fin de chaque tour.\pSeuls les types {COLOR}ÉTénèbres{COLOR}Ë, {COLOR}ÉPsy{COLOR}Ë,\n{COLOR}ÉSpectre{COLOR}Ë, et les Pokémon avec les\lTalents {COLOR}ÉGarde Magik{COLOR}Ë, {COLOR}ÉInconscient{COLOR}Ë, ou\l{COLOR}ÉBenêt{COLOR}Ë ne sont pas affectés.\pSi tu galères à cause des\némotions négatives, amener un\lPokémon non affecté pourrait\lvraiment t'aider.\pPour atteindre Véga, le Champion,\nc'est assez simple.\pParcours les couloirs peu éclairés,\net ne te fais pas repérer.\pSi tu te fais repérer, tu devras\naffronter des Dresseurs ou être\lrenvoyé au début\ldu couloir.\pChaque Dresseur battu éclairera\nla salle, donc je\lte conseille de tous les affronter.\pBonne chance !
@@ -17322,60 +17322,60 @@
 0x1F1CC0F: Même avec le vent contre toi,\ntu t'es battu courageusement et\ltriomphé !\pPrends ceci, en plus, pour\nta victoire.
 0x1F1CC88: La Gemme que je t'ai donnée peut\nbooster une capacité {COLOR}ÉVol{COLOR}Ë.\pAvec elle, tu peux porter un coup\nélégant, mais dévastateur !
 0x1F1CD12: Champion en devenir !\nComment vont les combats ?\pBienvenue à l'Arène de Rivapolis !\pPrends de l'Eau Fraîche, tout droit\ndes bassins de l'Arène.
-0x1F1CD9A: Mel ?\nEh bien, c'est un type {COLOR}ÉNormal{COLOR}Ë !\pSi c'était une Arène Normal,\nje dirais que les types Combat\lseraient un bon moyen de le\lmettre au tapis.\pMais ce n'est pas le cas.\pIci, tous les combats sont des\n{COLOR}ÉCombats Inversés{COLOR}Ë !\pAutrement dit, toutes les affinités\nde type seront inversées.\pAlors, peux-tu deviner quel type\nserait le mieux pour battre Mel ?\p…\pTu as raison ! Aucun !\pLes capacités {COLOR}ÉSpectre{COLOR}Ë sont super\nefficaces contre ses Normal,\lmais les capacités Normal seront\laussi efficaces sur les Spectres.\pLe mieux pour battre Mel est\nd'utiliser un Pokémon qui connaît\ldes capacités Spectre sans en être.\pSi tu veux t'entraîner à ce genre\nde combat, tu devrais aller\là la {COLOR}ÉMaison des Combats\lInversés{COLOR}Ë en ville.\pSi tu es prêt, prends le toboggan\njuste à côté de moi.\pTon but est d'utiliser le Lokhlass\npour revenir ici.\pMais fais le plein d'objets\navant.\pTu ne pourras pas revenir avant\nd'atteindre Mel.
-0x1F1D147: Bravo !\pMel a bien morflé,\nhein ?\pJe parie qu'il aurait pris pire\navec cette Gemme.
+0x1F1CD9A: Mél ?\nEh bien, c'est un type {COLOR}ÉNormal{COLOR}Ë !\pSi c'était une Arène Normal,\nje dirais que les types Combat\lseraient un bon moyen de le\lmettre au tapis.\pMais ce n'est pas le cas.\pIci, tous les combats sont des\n{COLOR}ÉCombats Inversés{COLOR}Ë !\pAutrement dit, toutes les affinités\nde type seront inversées.\pAlors, peux-tu deviner quel type\nserait le mieux pour battre Mél ?\p…\pTu as raison ! Aucun !\pLes capacités {COLOR}ÉSpectre{COLOR}Ë sont super\nefficaces contre ses Normal,\lmais les capacités Normal seront\laussi efficaces sur les Spectres.\pLe mieux pour battre Mél est\nd'utiliser un Pokémon qui connaît\ldes capacités Spectre sans en être.\pSi tu veux t'entraîner à ce genre\nde combat, tu devrais aller\là la {COLOR}ÉMaison des Combats\lInversés{COLOR}Ë en ville.\pSi tu es prêt, prends le toboggan\njuste à côté de moi.\pTon but est d'utiliser le Lokhlass\npour revenir ici.\pMais fais le plein d'objets\navant.\pTu ne pourras pas revenir avant\nd'atteindre Mél.
+0x1F1D147: Bravo !\pMél a bien morflé,\nhein ?\pJe parie qu'il aurait pris pire\navec cette Gemme.
 0x1F1D1B2: La Gemme que je t'ai donnée peut\nbooster une capacité {COLOR}ÉNormal{COLOR}Ë.\pLes capacités Normal ne sont\nsuper efficaces sur rien,\lmais avec cette Gemme, on dirait\lque si !
 0x1F1D272: Surpris de me voir ici, champion en\ndevenir ?\pContent que tu relèves le défi du\nmanoir !\pPrends de la meilleure eau fraîche\npuisée dans l'étang derrière.
 0x1F1D31A: Commençons par la Successeure\nMaxima.\pElle dirige ici, mais contrairement\naux Champions d'Arène, elle\ln'utilise aucun Pokémon spécifique.\pUne équipe équilibrée prête à tout\nte sera\lvraiment utile !\pPour l'atteindre, un interrupteur\nest caché dans une statue du\lmanoir.\pActionne-le et un nouveau passage\nmène à Maxima.\pBonne chance !
 0x1F1D49E: Remarquable, {PLAYER}, remarquable !\pEt même si ce n'est pas une Arène\nofficielle, prends cette Gemme !
 0x1F1D4F5: Cette Gemme rare peut booster une\ncapacité {COLOR}ÉFée{COLOR}Ë\len combat.\pLe type Fée est déjà très bon\nen attaque, et avec cette Gemme\lil devient encore plus fort !
 0x1F1D59F: Hé, champion en devenir !\nÇa fait longtemps !\pPrends une Eau Fraîche pour fêter\nton retour.
-0x1F1D5F9: Galavan aime utiliser des Pokémon\nde types {COLOR}ÉÉlectrik{COLOR}Ë et {COLOR}ÉAcier{COLOR}Ë.\pLes Pokémon Sol seraient parfaits\npour le démolir, mais ça\lne marchera pas ici.\pMalheureusement, le sol ici est\n{COLOR}Émagnétisé{COLOR}Ë.\pCela signifie que les {COLOR}ÉÉlectrik{COLOR}Ë et\nles {COLOR}ÉAcier{COLOR}Ë sont soulevés\ldu sol !\pTu ne pourras pas les toucher avec\ndes capacités Sol, alors il te\lfaut trouver une autre façon\lde faire de gros dégâts.\pPour l'énigme, il faut abaisser\nles barrières électriques et aller\ljusqu'à Galavan.\pBonne chance !
-0x1F1D819: Galavan aime utiliser des Pokémon\nde types {COLOR}ÉÉlectrik{COLOR}Ë et {COLOR}ÉAcier{COLOR}Ë.\pLes Pokémon Sol seraient parfaits\npour le démolir, mais ça\lne marchera pas ici.\pMalheureusement, le sol ici est\nà la fois magnétisé et électrifié.\pCela signifie que les {COLOR}ÉÉlectrik{COLOR}Ë et\nles {COLOR}ÉAcier{COLOR}Ë sont soulevés\ldu sol !\pTu ne pourras pas les toucher avec\ndes capacités Sol, alors il te\lfaut trouver une autre façon\lde faire de gros dégâts.\pDe plus, les capacités {COLOR}ÉÉlectrik{COLOR}Ë\nseront souvent renforcées.\pEt au cas où tu te demanderais,\nles Pokémon en l'air profitent\lquand même du Champ Électrifié\lmême en l'air.\pUn coup de l'une d'elles peut être\ndévastateur !\pPour l'énigme, il faut abaisser\nles barrières électriques et aller\ljusqu'à Galavan.\pBonne chance !
-0x1F1DB39: Bien joué !\pTu as surmonté le sol de cette\nArène et vaincu Galavan !\pPrends ces deux Gemmes en\nrécompense de ton exploit.
+0x1F1D5F9: Galvane aime utiliser des Pokémon\nde types {COLOR}ÉÉlectrik{COLOR}Ë et {COLOR}ÉAcier{COLOR}Ë.\pLes Pokémon Sol seraient parfaits\npour le démolir, mais ça\lne marchera pas ici.\pMalheureusement, le sol ici est\n{COLOR}Émagnétisé{COLOR}Ë.\pCela signifie que les {COLOR}ÉÉlectrik{COLOR}Ë et\nles {COLOR}ÉAcier{COLOR}Ë sont soulevés\ldu sol !\pTu ne pourras pas les toucher avec\ndes capacités Sol, alors il te\lfaut trouver une autre façon\lde faire de gros dégâts.\pPour l'énigme, il faut abaisser\nles barrières électriques et aller\ljusqu'à Galvane.\pBonne chance !
+0x1F1D819: Galvane aime utiliser des Pokémon\nde types {COLOR}ÉÉlectrik{COLOR}Ë et {COLOR}ÉAcier{COLOR}Ë.\pLes Pokémon Sol seraient parfaits\npour le démolir, mais ça\lne marchera pas ici.\pMalheureusement, le sol ici est\nà la fois magnétisé et électrifié.\pCela signifie que les {COLOR}ÉÉlectrik{COLOR}Ë et\nles {COLOR}ÉAcier{COLOR}Ë sont soulevés\ldu sol !\pTu ne pourras pas les toucher avec\ndes capacités Sol, alors il te\lfaut trouver une autre façon\lde faire de gros dégâts.\pDe plus, les capacités {COLOR}ÉÉlectrik{COLOR}Ë\nseront souvent renforcées.\pEt au cas où tu te demanderais,\nles Pokémon en l'air profitent\lquand même du Champ Électrifié\lmême en l'air.\pUn coup de l'une d'elles peut être\ndévastateur !\pPour l'énigme, il faut abaisser\nles barrières électriques et aller\ljusqu'à Galvane.\pBonne chance !
+0x1F1DB39: Bien joué !\pTu as surmonté le sol de cette\nArène et vaincu Galvane !\pPrends ces deux Gemmes en\nrécompense de ton exploit.
 0x1F1DBC9: Ces Gemmes peuvent booster des\ncapacités {COLOR}ÉÉlectrik{COLOR}Ë et {COLOR}ÉAcier{COLOR}Ë,\lrespectivement.\pTu peux électrocuter avec un\nPokémon, puis cogner avec un autre !
 0x1F1DC6C: Champion en devenir !\pBienvenue dans les bas-fonds\ncriminels d'Antésia !\pPrends une Eau Fraîche tout droit\nde mon robinet.
-0x1F1DCE5: En général, Big Mo adore les\nPokémon gros, lents et costauds,\lsouvent de type {COLOR}ÉCombat{COLOR}Ë.\pSi tu es un Dresseur moyen,\net que tu as un type {COLOR}ÉVol{COLOR}Ë, {COLOR}ÉPsy{COLOR}Ë, ou\l{COLOR}ÉFée{COLOR}Ë, tu gagneras facile !\pMais avant d'affronter Big Mo,\ntu dois réussir le {COLOR}ÉDéfi du Ring{COLOR}Ë\lde l'Arène.\pEt là, aucune capacité {COLOR}ÉVol{COLOR}Ë, {COLOR}ÉPsy{COLOR}Ë,\nni {COLOR}ÉFée{COLOR}Ë n'est autorisée.\pÇa peut sembler difficile, mais\nhonnêtement, si tu n'utilises pas\lun Pokémon faible aux capacités\lCombat, ça passera facilement\lpour toi.\pEt sache que selon ton niveau\nd'implication, il peut y avoir\ldes restrictions pour le combat\lcontre Big Mo.\p{COLOR}Éles gars derrière{COLOR}Ë te diront\nles détails du combat, alors\lne t'en fais pas.\pBonne chance dans le ring !
-0x1F1DFF7: Oh là là, ça fait longtemps que je\nn'ai vu personne réussir le Ring\let battre Big Mo !\pBien joué !\nTu as prouvé ta dureté !\pPrends cette Gemme pour l'améliorer\nencore plus !
+0x1F1DCE5: En général, Momo adore les\nPokémon gros, lents et costauds,\lsouvent de type {COLOR}ÉCombat{COLOR}Ë.\pSi tu es un Dresseur moyen,\net que tu as un type {COLOR}ÉVol{COLOR}Ë, {COLOR}ÉPsy{COLOR}Ë, ou\l{COLOR}ÉFée{COLOR}Ë, tu gagneras facile !\pMais avant d'affronter Momo,\ntu dois réussir le {COLOR}ÉDéfi du Ring{COLOR}Ë\lde l'Arène.\pEt là, aucune capacité {COLOR}ÉVol{COLOR}Ë, {COLOR}ÉPsy{COLOR}Ë,\nni {COLOR}ÉFée{COLOR}Ë n'est autorisée.\pÇa peut sembler difficile, mais\nhonnêtement, si tu n'utilises pas\lun Pokémon faible aux capacités\lCombat, ça passera facilement\lpour toi.\pEt sache que selon ton niveau\nd'implication, il peut y avoir\ldes restrictions pour le combat\lcontre Momo.\p{COLOR}Éles gars derrière{COLOR}Ë te diront\nles détails du combat, alors\lne t'en fais pas.\pBonne chance dans le ring !
+0x1F1DFF7: Oh là là, ça fait longtemps que je\nn'ai vu personne réussir le Ring\let battre Momo !\pBien joué !\nTu as prouvé ta dureté !\pPrends cette Gemme pour l'améliorer\nencore plus !
 0x1F1E0B1: La Gemme que je t'ai donnée peut\nbooster une capacité {COLOR}ÉCombat{COLOR}Ë.\pSi tu l'utilises, tu paraîtras plus\ncostaud qu'avant !
 0x1F1E138: Champion en devenir !\nÇa va ?\pBienvenue à Borrius Est !\pPrends une Eau Fraîche pour fêter\nton arrivée.
-0x1F1E1A5: Comme dans l'Arène de Mel, cette\nArène est centrée sur l'{COLOR}ÉEau{COLOR}Ë.\pMais contrairement à la sienne, les\nDresseurs utilisent des types {COLOR}ÉEau{COLOR}Ë !\pDes types {COLOR}ÉÉlectrik{COLOR}Ë\nou {COLOR}ÉPlante{COLOR}Ë te seront\ltrès utiles.\pMais fais attention.\pLes Dresseurs de cette Arène sont\ndes maîtres de l'adaptation.\pEn combat, tous les Pokémon\ndeviennent du {COLOR}Émême type{COLOR}Ë\lque leurs {COLOR}Édeux premières capacités{COLOR}Ë.\pPour atteindre Tessy, il te faut\nun Pokémon capable de Surf\lsur les vagues.\pMais attention, si tu restes trop\nlongtemps dans l'eau, tu seras\lrenvoyé à l'entrée !\pIl faut repérer et trouver le\nchemin le plus court vers la\lprochaine plateforme.\pEt sache que même si avancer\nsur la terre fait avancer le chrono,\ltu ne seras pas emporté si\ltu n'es pas dans l'eau.\pBonne chance !
-0x1F1E4C1: Bien joué !\pTu as peut-être été un peu\nmouillé, mais tu t'es vite adapté\let as surmonté l'amour de Tessy\lpour l'adaptation !\pPrends cette Gemme pour la prochaine\nfois, pour tremper tes adversaires !
+0x1F1E1A5: Comme dans l'Arène de Mél, cette\nArène est centrée sur l'{COLOR}ÉEau{COLOR}Ë.\pMais contrairement à la sienne, les\nDresseurs utilisent des types {COLOR}ÉEau{COLOR}Ë !\pDes types {COLOR}ÉÉlectrik{COLOR}Ë\nou {COLOR}ÉPlante{COLOR}Ë te seront\ltrès utiles.\pMais fais attention.\pLes Dresseurs de cette Arène sont\ndes maîtres de l'adaptation.\pEn combat, tous les Pokémon\ndeviennent du {COLOR}Émême type{COLOR}Ë\lque leurs {COLOR}Édeux premières capacités{COLOR}Ë.\pPour atteindre Tessie, il te faut\nun Pokémon capable de Surf\lsur les vagues.\pMais attention, si tu restes trop\nlongtemps dans l'eau, tu seras\lrenvoyé à l'entrée !\pIl faut repérer et trouver le\nchemin le plus court vers la\lprochaine plateforme.\pEt sache que même si avancer\nsur la terre fait avancer le chrono,\ltu ne seras pas emporté si\ltu n'es pas dans l'eau.\pBonne chance !
+0x1F1E4C1: Bien joué !\pTu as peut-être été un peu\nmouillé, mais tu t'es vite adapté\let as surmonté l'amour de Tessie\lpour l'adaptation !\pPrends cette Gemme pour la prochaine\nfois, pour tremper tes adversaires !
 0x1F1E572: La Gemme que je t'ai donnée peut\nbooster une capacité {COLOR}ÉEau{COLOR}Ë.\pAvec elle, tu peux tremper tes\nadversaires jusqu'aux os !
 0x1F1E5F2: Ça y est, champion en devenir !\pTon dernier Défi d'Arène !\pBravo d'être arrivé jusque-là !\pPrends une dernière Eau Fraîche\navant de commencer.
 0x1F1E688: Connais-tu l'étrange\naffaire de Benjamin Papilusion ?\pNé Papilusion, il a mis K.O.\nun Chenipan, et Benjamin a rajeuni\ltoute sa vie.\pEt dans l'esprit de Papilusion,\nnotre Champion Benjamin a conçu\lcette Arène.\pEt tu l'as deviné, ici les\nDresseurs utilisent des {COLOR}ÉInsecte{COLOR}Ë !\pDes types {COLOR}ÉRoche{COLOR}Ë, {COLOR}ÉVol{COLOR}Ë, ou\n{COLOR}ÉFeu{COLOR}Ë les remettront\là leur place.\pMais attention, ici quand un Pokémon\nest vaincu, il régresse\là un état antérieur.\pLes Pokémon ne tombent K.O. que\nquand ils ne peuvent plus régresser.\pÀ cause de cette règle unique,\nles Pokémon ne gagnent pas d'Exp.\ldans cette Arène.\pEt pour trouver Benjamin, écoute\nbien ceci.\pDans chaque salle du mur,\ndes boutons cachés dans les rochers.\pAppuie dessus dans le bon ordre,\net tu ouvriras un chemin vers\lBenjamin.\pEt quel est le bon ordre ?\pTout ce que je peux te dire,\nc'est de repenser à l'étrange\laffaire de Benjamin Papilusion…
 0x1F1EA32: Champion en devenir !\nTu l'as fait !\pTu as terminé les huit Arènes\nde Borrius !\pFélicitations !\pPour ton travail, prends cette\nultime Gemme.
 0x1F1EAC7: Cette Gemme boostera une\ncapacité {COLOR}ÉInsecte{COLOR}Ë en combat.\pEt maintenant que tu l'as, il ne te\nreste qu'à\ldéfier la Ligue Pokémon.\pJ'aimerais venir avec toi, mais\nmalheureusement, je suis coincé\ldans ces Arènes.\pBonne chance, champion en devenir !
-0x1F1EBCA: Arène Pokémon de Dresco\nChampion : Mirskle\pDresseurs vainqueurs :\nJax, {RIVAL}
-0x1F1EC07: Arène Pokémon de Dresco\nChampion : Mirskle\pDresseurs vainqueurs :\nJax, {RIVAL}, {PLAYER}
+0x1F1EBCA: Arène Pokémon de Dresco\nChampion : Sylvain\pDresseurs vainqueurs :\nJax, {RIVAL}
+0x1F1EC07: Arène Pokémon de Dresco\nChampion : Sylvain\pDresseurs vainqueurs :\nJax, {RIVAL}, {PLAYER}
 0x1F1EC48: Arène Pokémon de Cratéris\nChampion : Véga\pDresseurs vainqueurs :\nJax, {RIVAL}
 0x1F1EC82: Arène Pokémon de Cratéris\nChampion : Véga\pDresseurs vainqueurs :\nJax, {RIVAL}, {PLAYER}
 0x1F1ECC0: Arène Pokémon de Cimistral\nChampion : Alice\pDresseurs vainqueurs :\nJax, {RIVAL}
 0x1F1ECFD: Arène Pokémon de Cimistral\nChampion : Alice\pDresseurs vainqueurs :\nJax, {RIVAL}, {PLAYER}
-0x1F1ED3E: Arène Pokémon de Rivapolis\nChampion : Mel\pDresseurs vainqueurs :\nJax, {RIVAL}
-0x1F1ED7A: Arène Pokémon de Rivapolis\nChampion : Mel\pDresseurs vainqueurs :\nJax, {RIVAL}, {PLAYER}
+0x1F1ED3E: Arène Pokémon de Rivapolis\nChampion : Mél\pDresseurs vainqueurs :\nJax, {RIVAL}
+0x1F1ED7A: Arène Pokémon de Rivapolis\nChampion : Mél\pDresseurs vainqueurs :\nJax, {RIVAL}, {PLAYER}
 0x1F1EDBA: Manoir Somnia\nSuccesseure : Maxima\pDresseurs vainqueurs :\nJax
 0x1F1EDF3: Manoir Somnia\nSuccesseure : Maxima\pDresseurs vainqueurs :\nJax, {PLAYER}
 0x1F1EE30: Manoir Somnia\nSuccesseure : Maxima\pDresseurs vainqueurs :\nJax, {PLAYER}, {RIVAL}
-0x1F1EE71: Arène Pokémon de Daherapolis\nChampion : Galavan\pDresseurs vainqueurs :\nJax, {RIVAL}
-0x1F1EEAE: Arène Pokémon de Daherapolis\nChampion : Galavan\pDresseurs vainqueurs :\nJax, {RIVAL}, {PLAYER}
-0x1F1EEEF: Arène Pokémon de Antésia\nChampion : Big Mo\pDresseurs vainqueurs :\nJax, {RIVAL}
-0x1F1EF2C: Arène Pokémon de Antésia\nChampion : Big Mo\pDresseurs vainqueurs :\nJax, {RIVAL}, {PLAYER}
-0x1F1EF6D: Arène Pokémon de Polderive\nChampion : Tessy\pDresseurs vainqueurs :\nJax, {RIVAL}
-0x1F1EFA8: Arène Pokémon de Polderive\nChampion : Tessy\pDresseurs vainqueurs :\nJax, {RIVAL}, {PLAYER}
+0x1F1EE71: Arène Pokémon de Daherapolis\nChampion : Galvane\pDresseurs vainqueurs :\nJax, {RIVAL}
+0x1F1EEAE: Arène Pokémon de Daherapolis\nChampion : Galvane\pDresseurs vainqueurs :\nJax, {RIVAL}, {PLAYER}
+0x1F1EEEF: Arène Pokémon de Antésia\nChampion : Momo\pDresseurs vainqueurs :\nJax, {RIVAL}
+0x1F1EF2C: Arène Pokémon de Antésia\nChampion : Momo\pDresseurs vainqueurs :\nJax, {RIVAL}, {PLAYER}
+0x1F1EF6D: Arène Pokémon de Polderive\nChampion : Tessie\pDresseurs vainqueurs :\nJax, {RIVAL}
+0x1F1EFA8: Arène Pokémon de Polderive\nChampion : Tessie\pDresseurs vainqueurs :\nJax, {RIVAL}, {PLAYER}
 0x1F1EFE7: Arène Pokémon de Rougebois\nChampion : Benjamin\pDresseurs vainqueurs :\nJax
 0x1F1F022: Arène Pokémon de Rougebois\nChampion : Benjamin\pDresseurs vainqueurs :\nJax, {PLAYER}
 0x1F1F061: Arène Pokémon de Rougebois\nChampion : Benjamin\pDresseurs vainqueurs :\nJax, {PLAYER}, {RIVAL}
-0x1F1F0A4: T'as déjà rencontré Mirskle ?\pNe te rapproche pas trop, il est\nvraiment timbré !\pEt ce qu'il fait de son temps libre\nc'est pas pour les p'tits gars et\lles filles comme toi, hein ?\pHa ha ha !
+0x1F1F0A4: T'as déjà rencontré Sylvain ?\pNe te rapproche pas trop, il est\nvraiment timbré !\pEt ce qu'il fait de son temps libre\nc'est pas pour les p'tits gars et\lles filles comme toi, hein ?\pHa ha ha !
 0x1F1F157: C'est quoi le problème avec Véga\nau juste ?\pTu l'as déjà vu sourire ?\nParce que moi, jamais !\pFranchement, ça le tuerait pas de\nse détendre un peu, non ?\pHa ha ha !
 0x1F1F1FE: T'es allé voir Alice ?\pJe te le dis, elle est vraiment\nspéciale.\pQuand elle ne combat pas, elle bosse\nsur un truc pour faire voler les\lgens sans machines.\pÇa…{PAUSE} c'est un truc qui me\nparle !\pHa ha ha !
-0x1F1F2D0: Pour un Champion Normal,\nMel est tout sauf ça.\pIl se soucie toujours de son corps\net pas de ses Pokémon !\pQuel exemple ça donne aux jeunes\nDresseurs, hein ?\pHa ha ha !
-0x1F1F387: Bon, ce vieux Galavan, il est\nclairement le meilleur, sans doute…\pPourquoi ? Il est beau et fort,\net c'est un génie des machines !\pQuoi ?…{PAUSE}î allez, on peut bien\navoir ses préférés, non ?\pHa ha ha !
-0x1F1F455: T'as déjà vu Big Mo ?\nLe type est énorme, sérieux !\pIl est si énorme qu'un Coudlangue\nl'a pris pour sa maman !\pHa ha ha !
-0x1F1F4C3: Tu sais, cette Tessy est assez\njeune, mais ne te laisse pas avoir.\pC'est une femme qui n'a pas peur de\njouer aussi sale que Cootes !\pMais bon, tu as tout pour la battre\nà son propre jeu, non ?\pHa ha ha !
+0x1F1F2D0: Pour un Champion Normal,\nMél est tout sauf ça.\pIl se soucie toujours de son corps\net pas de ses Pokémon !\pQuel exemple ça donne aux jeunes\nDresseurs, hein ?\pHa ha ha !
+0x1F1F387: Bon, ce vieux Galvane, il est\nclairement le meilleur, sans doute…\pPourquoi ? Il est beau et fort,\net c'est un génie des machines !\pQuoi ?…{PAUSE}î allez, on peut bien\navoir ses préférés, non ?\pHa ha ha !
+0x1F1F455: T'as déjà vu Momo ?\nLe type est énorme, sérieux !\pIl est si énorme qu'un Coudlangue\nl'a pris pour sa maman !\pHa ha ha !
+0x1F1F4C3: Tu sais, cette Tessie est assez\njeune, mais ne te laisse pas avoir.\pC'est une femme qui n'a pas peur de\njouer aussi sale que Cootes !\pMais bon, tu as tout pour la battre\nà son propre jeu, non ?\pHa ha ha !
 0x1F1F58A: L'étrange affaire de Benjamin\nPapilusion…\pSi je pouvais rajeunir, ce serait\nplutôt cool.\pMais être trop petit pour atteindre\nles étagères serait plutôt\lagaçant, c'est sûr !\pHa ha ha !
 0x1F1F647: Tu y es presque, {PLAYER} !\pL'ascension finale vers la Ligue\nPokémon va commencer !\pEt te connaissant, je suis sûr que\ntu arriveras entier !\pJe ne peux pas en dire autant des\nDresseurs que tu croiseras en\lchemin, par contre…\pHa ha ha !
-0x1F1F728: {PLAYER}, tu es arrivé à la\nLigue Pokémon !\pAlors, tu veux les ragots de Galavan\nsur le Conseil 4, hein ?\pSi tu as le temps de papoter, c'est\ndu temps à mieux préparer l'assaut\lfinal, non ?\pT'inquiète pas !\pVieux Galavan est derrière toi, tout\nle long, alors fonce !\pHa ha ha !
+0x1F1F728: {PLAYER}, tu es arrivé à la\nLigue Pokémon !\pAlors, tu veux les ragots de Galvane\nsur le Conseil 4, hein ?\pSi tu as le temps de papoter, c'est\ndu temps à mieux préparer l'assaut\lfinal, non ?\pT'inquiète pas !\pVieux Galvane est derrière toi, tout\nle long, alors fonce !\pHa ha ha !
 0x1F1F850: Une grotte remplie de\nstalactites.\nDe nombreux Pokémon Glace\ny vivent.
 0x1F1F8AB: Suis-je aveugle ?
 0x1F1F8B7: Découvre les secrets\nderrière les tablettes\nde pierre mystérieuses !
@@ -17762,12 +17762,12 @@
 0x1F293D1: Hum… un {STR_VAR_1}\nne ressemblait pas à ça.\pEt je ne cherche rien\nd'autre…
 0x1F29440: Fantastique! Ça m'aide beaucoup!
 0x1F29464: Il fait chaud ici…\pComparé à Cimistral, mais ce\nn'est pas surprenant.\pC'est pour ça que je prends un café\nglacé dès que je peux.
-0x1F294FE: Bonjour, {PLAYER}!\pComme à Magnolia,\ntu ne tiens pas loin de Mel\lbien longtemps, hein?\pMaintenant que tu es là, j'ai\nune petite faveur à te demander.\pTu\naurais un {COLOR}É{STR_VAR_1}{COLOR}Ë dans l'équipe?\pJ'ai\nmon {COLOR}É{STR_VAR_2}{COLOR}Ë ici, si tu es intéressé.
+0x1F294FE: Bonjour, {PLAYER}!\pComme à Magnolia,\ntu ne tiens pas loin de Mél\lbien longtemps, hein?\pMaintenant que tu es là, j'ai\nune petite faveur à te demander.\pTu\naurais un {COLOR}É{STR_VAR_1}{COLOR}Ë dans l'équipe?\pJ'ai\nmon {COLOR}É{STR_VAR_2}{COLOR}Ë ici, si tu es intéressé.
 0x1F295FC: Pas vraiment ton genre?\nAh bon…
 0x1F29621: Partenaire, je ne suis pas encore\naveugle.\pCe n'est sûrement pas un\n{COLOR}É{STR_VAR_1}{COLOR}Ë.
 0x1F2968F: Yee-haw! C'est comme ça!
 0x1F296AE: Je suis pas du genre à aimer le\ncafé chic.\pJe préfère un truc plus fort,\nsi tu vois…
-0x1F2971B: Hey, comment ça va, {PLAYER}?\pBricoler, ça donne soif,\nalors je prends une petite pause.\pAu fait, tu ferais\npas une faveur au vieux Galavan…\pPasse-moi\nton {COLOR}É{STR_VAR_1}{COLOR}Ë, si tu en as un, hein?\pJe peux te\ndonner mon {COLOR}É{STR_VAR_2}{COLOR}Ë, ça vaut le coup, non ?
+0x1F2971B: Hey, comment ça va, {PLAYER}?\pBricoler, ça donne soif,\nalors je prends une petite pause.\pAu fait, tu ferais\npas une faveur au vieux Galvane…\pPasse-moi\nton {COLOR}É{STR_VAR_1}{COLOR}Ë, si tu en as un, hein?\pJe peux te\ndonner mon {COLOR}É{STR_VAR_2}{COLOR}Ë, ça vaut le coup, non ?
 0x1F29828: Gah! Pourquoi c'est si dur\nd'obtenir la dernière pièce ici?
 0x1F2986F: C'est pas un {COLOR}É{STR_VAR_1}{COLOR}Ë, qu'est-ce que\nje suis censé faire avec ça?\pRien d'autre ne ressemble à la\npièce finale qu'il me faut.
 0x1F298F4: Ah, tu me sauves la vie,\nsérieusement!
@@ -17777,7 +17777,7 @@
 0x1F29B09: Hein… tu te moques de moi,\nsale morveux!?\pÇa ne ressemble pas du tout à un\n{COLOR}É{STR_VAR_1}{COLOR}Ë!
 0x1F29B6B: Heh heh… profite de ce\n{COLOR}É{STR_VAR_2}{COLOR}Ë, ok?
 0x1F29B97: Ce truc est vraiment bon, ils ne\navaient pas menti…\pHa ! Si un pauvre type comme le\nGranbull Terreur essayait de taxer\lcet endroit…\pPerso… ils apprendraient à ne\njamais recommencer, s'ils savaient\lce qui est bon pour eux.
-0x1F29C75: Oh, bonjour, {PLAYER}!\pLe meilleur café de Borrius n'est\npas loin du marais, alors je me suis\ldit\nque je pouvais passer boire un coup.\pEt voir s'il y a des clients prêts\nà échanger avec la vieille Tessy…\lTu aurais un {COLOR}É{STR_VAR_1}{COLOR}Ç à échanger?\pVoyons…\nj'ai un {COLOR}É{STR_VAR_2}{COLOR}Ç, si tu ne\pvois\npas d'inconvénient à l'avoir.
+0x1F29C75: Oh, bonjour, {PLAYER}!\pLe meilleur café de Borrius n'est\npas loin du marais, alors je me suis\ldit\nque je pouvais passer boire un coup.\pEt voir s'il y a des clients prêts\nà échanger avec la vieille Tessie…\lTu aurais un {COLOR}É{STR_VAR_1}{COLOR}Ç à échanger?\pVoyons…\nj'ai un {COLOR}É{STR_VAR_2}{COLOR}Ç, si tu ne\pvois\npas d'inconvénient à l'avoir.
 0x1F29DA7: Non? Bon, c'est juste, c'est pas\ncomme si tu avais toujours le bon\lPokémon au bon moment.
 0x1F29E0E: Hum…{PAUSE} c'est gentil, mais ça\nreste pas un {COLOR}É{STR_VAR_1}{COLOR}Ç, chéri.
 0x1F29E53: Ouf… merci,\n{PLAYER}.
@@ -18238,7 +18238,7 @@
 0x1F35CA5: Exact. Tu sais ce qui est important\ndans la vie. Ça me plaît.
 0x1F35CDB: Partenaire, tu ignores ce que tu\nrates, alors.
 0x1F35D05: Cet endroit est parfait pour ma\nroutine.\pQuand je reviens à l'Arène, la brume\ndes cascades sublime mon corps\lbien sculpté.\pTu veux toucher ? Des pectoraux\nnaturels, juste ici.
-0x1F35DB2: Oh, désolé, moi c'est Mel, le\nChampion de la {COLOR}ÉRivapolis{COLOR}Ë.\pDésolé de ne pas avoir été là quand\ntu es passé, mais bon…{PAUSE} ma séance\ld'entraînement n'attend personne.\pÇa met la pression, mais les filles\nà l'Arène n'ont pas l'air de\ls'en plaindre…\pBref, j'en ai presque fini pour\naujourd'hui, donc si tu veux\lcombattre, j'ai du temps.\pÀ bientôt, partenaire.
+0x1F35DB2: Oh, désolé, moi c'est Mél, le\nChampion de la {COLOR}ÉRivapolis{COLOR}Ë.\pDésolé de ne pas avoir été là quand\ntu es passé, mais bon…{PAUSE} ma séance\ld'entraînement n'attend personne.\pÇa met la pression, mais les filles\nà l'Arène n'ont pas l'air de\ls'en plaindre…\pBref, j'en ai presque fini pour\naujourd'hui, donc si tu veux\lcombattre, j'ai du temps.\pÀ bientôt, partenaire.
 0x1F35EF7: Juste un petit mot avec toi avant\nque tu files.
 0x1F35F2D: Juste avant que tu arrives, j'ai\nentendu dire que des vauriens\lempêchaient les gens\lde {COLOR}ÉÉpidia{COLOR}Ë d'explorer le vieux\l{COLOR}ÉMont Foudroyant{COLOR}Ë.\pJe comptais remettre de l'ordre\nchez ces hors-la-loi.\pParce que j'ai la classe,\nje fais le bien, aussi.\pEt je le fais en restant classe !\pBref, l'un d'eux a dit qu'ils\ngardaient la montagne pour\lt'empêcher d'entrer.\pIl a même mentionné ton nom.\pJe ne sais pas vraiment dans quel\nbazar tu es embarqué,\lmais je vais t'aider.\pAlors prends ça et file à Épidia\nplus vite.
 0x1F36150: {COLOR}ËComme les autres CS, si tu as un\nPokémon qui peut l'apprendre,\lil peut l'utiliser.\pChoisis un Pokémon qui peut\nl'apprendre, et tant qu'il n'a pas\ldéjà quatre capacités CS,\lcet outil te mène\llà où tu es déjà allé.\pBref, ne me fais pas attendre trop\nlongtemps, partenaire.\pTu ne veux pas rater mon\ntravail impeccable !
@@ -18544,8 +18544,8 @@
 0x1F3FE2F: {COLOR}ÇEuler Log, un ami à nous, a accepté\nde les garder pour le moment. Ils\psont avec lui, aux Cimes Gelées.
 0x1F3FEA3: Cimes Gelées…{PAUSE}î un ami\nà moi y vit aussi.\pC'est mon ex-partenaire…{PAUSE} celui\nqui m'a aidé à fonder ma société.\pIci, on l'appelle le «Gardien de\nBorrius».\pIl s'est lié d'amitié avec un\nPokémon dit «mythique» !\pJe crois que sa femme a récemment\ndonné naissance à leur enfant…\pCependant, je ne me souviens plus\nde son nom…
 0x1F40014: Vos nouveaux jumeaux ?\nLeurs noms ?
-0x1F40045: {COLOR}ÇIls s'appellent {RIVAL} et Melony.\nCe sont les plus beaux enfants\pdu\nmonde.
-0x1F40099: Oui…{PAUSE} Ivory et moi sommes les\nparents de {RIVAL} et Melony.\p{RIVAL}…{PAUSE} arrivé ici, il nous\ncherche, non ?\pJ'ai regretté de les laisser, mais\naprès tant de temps\lloin d'eux, j'espérais qu'ils\npourraient voir leur grand\lfrère…\pAh…{PAUSE}î que j'ai été stupide…
+0x1F40045: {COLOR}ÇIls s'appellent {RIVAL} et Mélony.\nCe sont les plus beaux enfants\pdu\nmonde.
+0x1F40099: Oui…{PAUSE} Ivory et moi sommes les\nparents de {RIVAL} et Mélony.\p{RIVAL}…{PAUSE} arrivé ici, il nous\ncherche, non ?\pJ'ai regretté de les laisser, mais\naprès tant de temps\lloin d'eux, j'espérais qu'ils\npourraient voir leur grand\lfrère…\pAh…{PAUSE}î que j'ai été stupide…
 0x1F401B6: Peut-être devrais-je prendre la\nsuite… Quand j'ai appris que nous\pavions tous ressenti la douleur de\nperdre nos propres enfants, j'ai\lfait une offre. Nos connaissances\pscientifiques réunies…{PAUSE} unies sous\nun but commun… Je sentais qu'avec\lcette détermination, nous pourrions\paccomplir\nl'impossible.
 0x1F402C4: Bien sûr, Marlon et Ivory étaient\ntrès sceptiques, mais après bien des\lessais, je les ai convaincus.
 0x1F40320: Ils ont accepté de renvoyer leurs\nenfants chez eux à Hoenn puis de\lvenir vivre à Borrius sans eux. Sans\pdistraction, j'étais certain que\nnous réussirions.
@@ -18701,7 +18701,7 @@
 0x1F44D03: Aklove, ça suffit !
 0x1F44D1A: {RIVAL}, on voulait rentrer…\pVraiment…
 0x1F44D45: «Encore un jour.» C'est le\pmensonge qu'on se répétait, sans\ncesse. Mais après ma blessure…{PAUSE} je\psavais que la seule façon de la\njustifier, c'était de rentrer avec\lton frère. Il fallait continuer…{PAUSE}\ppour que notre famille soit entière\nà nouveau…
-0x1F44E27: C'est quoi cette logique stupide\n!? Mon frère est mort et enterré\p! Et moi ? Et Melony ? Les vies\nqu'on a dû vivre comptaient pour\pvous ? Et même toutes ces fois où\nj'étais si près… Vous n'avez même\pjamais tendu la main pour dire que\nvous alliez bien\p!\n
+0x1F44E27: C'est quoi cette logique stupide\n!? Mon frère est mort et enterré\p! Et moi ? Et Mélony ? Les vies\nqu'on a dû vivre comptaient pour\pvous ? Et même toutes ces fois où\nj'étais si près… Vous n'avez même\pjamais tendu la main pour dire que\nvous alliez bien\p!\n
 0x1F44F1D: ASSEZ ! Tes bavardages incessants\pcommencent à\nm'agacer.
 0x1F44F57: Hoopa, tu sais quoi faire du\ngarçon.
 0x1F44F84: Lui aussi, Hoopa.
@@ -18902,7 +18902,7 @@
 0x1F56482: Parle au Champion d'Arène de\nRivapolis à Automnia !
 0x1F564B6: Défie l'Arène de Rivapolis !
 0x1F564D8: Obtiens le pouvoir de la\nMéga-Évolution au Manoir Somnia !
-0x1F56516: Suis Mel à Épidia !
+0x1F56516: Suis Mél à Épidia !
 0x1F56532: Obtiens Force auprès d'un homme à\nÉpidia !
 0x1F5655B: File au Mont Foudroyant et sauve\nÉlecthor !
 0x1F5658E: Retrouve Jax à Épidia\npour discuter de la suite !
@@ -19428,10 +19428,10 @@
 0x1F602FC: Tu vois cet homme sur l'autre\nplage ?\pC'est mon rival !
 0x1F60330: On combattait ensemble sous le nom\ndu duo Le Cerveau et les Biceps.
 0x1F60374: Peut-être qu'un jour moi, les\nmuscles, je retrouverai mon ami\lle cerveau.
-0x1F603BC: Je me suis entraîné avec Tessy !\pElle m'a appris à grimper les\nCascades !
+0x1F603BC: Je me suis entraîné avec Tessie !\pElle m'a appris à grimper les\nCascades !
 0x1F603F9: C'était le bon temps…
-0x1F6040E: Tessy est la Championne Eau\nde l'est de Borrius.\pSi tu la bats, tes Pokémon\napprennent à gravir les cascades.
-0x1F60485: Tessy est la Championne Eau\nde l'est de Borrius.\pSi tu la bats, tes Pokémon\napprennent à gravir les cascades.\pMais ça, tu le savais déjà,\nn'est-ce pas ?
+0x1F6040E: Tessie est la Championne Eau\nde l'est de Borrius.\pSi tu la bats, tes Pokémon\napprennent à gravir les cascades.
+0x1F60485: Tessie est la Championne Eau\nde l'est de Borrius.\pSi tu la bats, tes Pokémon\napprennent à gravir les cascades.\pMais ça, tu le savais déjà,\nn'est-ce pas ?
 0x1F60523: Ça ne se voit pas, mais cet endroit\nest le meilleur de tout Borrius\lpour pêcher !
 0x1F6057A: Enfin, c'est ce que je me\ndis…
 0x1F605A2: Mes deux amis me prennent pour un\nfou d'attendre ici.\pMais qu'est-ce qu'ils en savent ?\pIls se regardent toute la journée\nau pied du Volcan Cendré…
@@ -19584,7 +19584,7 @@
 0x1F63792: {COLOR}ÉPrassss!
 0x1F6379E: Combattre aussi haut te rend-il…\nheureux ?
 0x1F637D0: Je passe peut-être trop de temps\ndans l'Arène de Dresco.
-0x1F6380F: Mirskle a beaucoup influencé ma\nfaçon de vivre.\pBeaucoup disent qu'il est une\nmauvaise influence pour les enfants,\lmais moi, je suis ravi !
+0x1F6380F: Sylvain a beaucoup influencé ma\nfaçon de vivre.\pBeaucoup disent qu'il est une\nmauvaise influence pour les enfants,\lmais moi, je suis ravi !
 0x1F63895: Je suis ici depuis des jours, mais\nje n'attrape rien de bien.
 0x1F638D7: Bon, retour à la pêche,\nje suppose.
 0x1F63900: Je finirai bien par attraper\nquelque chose de bien.\pAmuse-toi en attendant.
@@ -20179,7 +20179,7 @@
 0x1F70ABD: Grotte Stalactite\nPassage
 0x1F70AD1: Route 2 «\nVoie\pOcéane» <0x7B> Dresco\n<0x7C> Icicle, Route 15
 0x1F70B0C: Dresco\pL’archipel de la région de\nBorrius.
-0x1F70B3F: Arène Pokémon de Dresco\nChampion : Mirskle Le Maître\lPaisible des Fleurs
+0x1F70B3F: Arène Pokémon de Dresco\nChampion : Sylvain Le Maître\lPaisible des Fleurs
 0x1F70B84: Maison des\pDresseurs Combattez à volonté !
 0x1F70BB2: C’est une statue du Pokémon Feu\nLégendaire Sulfura. Il est\pécrit ici que Sulfura servait\nautrefois à renforcer un sceau sur\lune grande obscurité, mais qu’il\lréside désormais au Volcan Cendré.
 0x1F70C64: Avant {B_BUTTON}, check les flics !\n
@@ -20214,7 +20214,7 @@
 0x1F7128C: <0x79> Chenal Aubrun
 0x1F7129E: Chenal Aubrun <0x79> Route 6, Grotte\nVallée <0x7A> Route 10
 0x1F712D0: Rivapolis\pChutes d’eau de Borrius.
-0x1F71301: Arène Pokémon de Rivapolis\nChampion : Mel Grâce et\lprestance
+0x1F71301: Arène Pokémon de Rivapolis\nChampion : Mél Grâce et\lprestance
 0x1F7134A: Maison Combat Inversé\pAmusez-vous !
 0x1F71378: QG des Missions\pCherchez votre prochain boulot !
 0x1F7139B: Route 11 «\nGrottes\pdes Falaises» <0x7B> Rivapolis <0x7C> Bourg\lÉpidia <0x79> Bourg Somnia
@@ -20231,7 +20231,7 @@
 0x1F7165F: Étrange. La porte est\ndéverrouillée…
 0x1F71685: Route 12 «Escaliers\nOuest\pMont Foudroyant» <0x79> Daherapolis <0x7A> Bourg Somnia\l<0x7B> Route 14
 0x1F716CF: Daherapolis Une oasis au bord du désert.
-0x1F716FF: Arène Pokémon de Daherapolis\nChampion : Galavan Le cerveau\lderrière la machine de guerre
+0x1F716FF: Arène Pokémon de Daherapolis\nChampion : Galvane Le cerveau\lderrière la machine de guerre
 0x1F71749: Trouve tout ce qu’il te faut au\nGrand Magasin de Daherapolis !
 0x1F71777: 1F : Comptoir Service\n2F : Marché Dresseur\l3F : Objets d’Évolution\l4F : Rayon CT\l5F : Boîte Médicaments\l6F : Cadeaux Sages
 0x1F717E5: 2F : Marché Dresseur\pArticles top pour Dresseurs !
@@ -20265,7 +20265,7 @@
 0x1F71D04: Route 16 «Canyon\nAride» <0x79>\pGurenbourg\n<0x7A> Antésia <0x7C> Route 17
 0x1F71D44: Quelqu’un a tagué tout le\npanneau…
 0x1F71D6A: QG Noirépine\pReste à l’écart,\npour ton bien !
-0x1F71DA8: Arène Pokémon de Antésia\nChampion : Big Mo\pMaillon suprême de la chaîne !
+0x1F71DA8: Arène Pokémon de Antésia\nChampion : Momo\pMaillon suprême de la chaîne !
 0x1F71DF0: Entrepôt d'Antésia
 0x1F71E09: <0x7C> Port d'Antésia
 0x1F71E18: {COLOR}ÁC’est un reportage :\pLe Granbull Terrifiant, le gang\ncélèbre pour avoir fait d'Antésia\lune zone de crime,\la disparu !\pUne ère de paix et de prospérité\npour la ville ? Les habitants sont\pencouragés à sortir et à rendre à\nAntésia\lsa gloire d’antan.
@@ -20288,7 +20288,7 @@
 0x1F72235: Quartiers du Capitaine
 0x1F72248: Polderive\pLa ville située dans un\nmarécage.
 0x1F72275: Port de Polderive\pDépart vers Borrius Ouest !
-0x1F722A6: Arène Pokémon de Polderive\nChampionne : Tessy\lLa nana qui se salit !
+0x1F722A6: Arène Pokémon de Polderive\nChampionne : Tessie\lLa nana qui se salit !
 0x1F722EC: <0x7C> Parc Safari\pAttrape-les si tu peux !
 0x1F72310: Marais Fulica\p<0x79> Magnolia <0x7A>\lPolderive <0x7B> Pic Cristal
 0x1F72345: <0x7C> Pic Cristal
@@ -20454,7 +20454,7 @@
 0x1F779C2: Hein !? J’ai rien fait !\nJe transporte rien d’illégal !
 0x1F779FF: Peut-être que je n’aurais pas\ndû me battre… Ça n’a rien arrangé…
 0x1F77A3B: Tu n’auras pas cet Encens Rose…\nque je n’ai pas… Parce que\pje ne suis absolument pas un\ncontrebandier d'Antésia.\pNon, pas du tout.
-0x1F77ACF: Si cette vie de gangster échoue… Je\nne dirais pas non à\pdevenir le prochain Big Mo. Mais\npersonne ne fait\pmieux Big Mo que Big Mo\n!
+0x1F77ACF: Si cette vie de gangster échoue… Je\nne dirais pas non à\pdevenir le prochain Momo. Mais\npersonne ne fait\pmieux Momo que Momo\n!
 0x1F77B8E: {DPAD_LEFTRIGHT}Choisir {SE_SHOP}Nom {B_BUTTON}Fermer {L_BUTTON}{R_BUTTON}Page
 0x1F77BAD: {DPAD_LEFTRIGHT}Choisir {SE_SHOP}Éditer {B_BUTTON}Fermer {L_BUTTON}{R_BUTTON}Page
 0x1F77BCC: {DPAD_ANY}Choisir {SE_SHOP}Éditer {B_BUTTON}OK {L_BUTTON}{R_BUTTON}Nature
@@ -22291,7 +22291,7 @@
 0x1F9BF9F: Alors, t'es arrivé jusque-là,\n{PLAYER} ? Ha ha ha ha ! Tu\pdois être sacrément motivé,\nhein ? Ça me plaît, ça veut\pdire que t'es comme moi…\nT'es pas du genre à être\psatisfait avant d'avoir\nprouvé que tu es le roi ! Ça\lveut dire aussi que je dois\predoubler d'efforts, encore\nplus fort cette fois ! Alors,\pallez, {PLAYER} ! Le caïd va\pmettre fin à ta série de\ngloire, ici et maintenant !
 0x1F9C106: Eh bien, regarde qui vient de\nmettre {STR_VAR_3} devant\p{STR_VAR_3}. Ha ha ha ha !\nD'accord, marché conclu ! Je\pt'affronte en tête-à-tête, une\nfois de plus, avec mes\pmeilleurs Pokémon ! Crois pas\nque ça va se passer comme la\pdernière fois ! J'ai regardé\ntous tes combats, et je pense\lt'avoir complètement déchiffré.\pAlors si tu crois pouvoir\nbriser mes attentes aussi\pfacilement… Alors vas-y,\ndonne tout ! Que le caïd te jauge !
 0x1F9C2B9: Rah, zut ! J'ai choisi le\nmauvais Pokémon… Ou alors\pt'avais prévu le coup et tu\navais un plan de secours…\pTrès bien ! Je vais me mettre\nen retrait et te réaffronter\p! Garde cet esprit combatif,\net vise le sommet, {PLAYER} !\pQuand je saurai que t'as\n{COLOR}É99 victoires\pd'affilée{COLOR}Ë, eh bien…\nHa ha ha ha ! Tu verras bien.\pÀ plus tard… {PLAYER}.
-0x1F9C410: Rah ! J'arrive pas à croire\nque tu continues à me battre\p! Mais ne crois pas que la\nprochaine fois sera aussi\pfacile. T'as encore le temps\nde prendre la grosse tête et\lde te planter sur un menu\pfretin. Mais tant que tu\nrestes concentré… Cette\pgrosse série de 100\nvictoires que tu m'as\ppromise reste à ta portée !\pJe m'en vais. On se voit au\n100e combat, {PLAYER} ! Et\pla prochaine fois, Big Mo va\nsortir le grand jeu ! Je\pdois défendre mon titre de\ncaïd, après tout ! Ha ha ha ha !
+0x1F9C410: Rah ! J'arrive pas à croire\nque tu continues à me battre\p! Mais ne crois pas que la\nprochaine fois sera aussi\pfacile. T'as encore le temps\nde prendre la grosse tête et\lde te planter sur un menu\pfretin. Mais tant que tu\nrestes concentré… Cette\pgrosse série de 100\nvictoires que tu m'as\ppromise reste à ta portée !\pJe m'en vais. On se voit au\n100e combat, {PLAYER} ! Et\pla prochaine fois, Momo va\nsortir le grand jeu ! Je\pdois défendre mon titre de\ncaïd, après tout ! Ha ha ha ha !
 0x1F9C606: Héhé… pas mal, {PLAYER}. Je\ppensais pas que quelqu'un\nfinirait vraiment tout le\lRing Challenge, tu sais ?\pMais s'il y avait bien\nquelqu'un pour y arriver,\pc'était toi. Hé… si tu ne\nt'es pas lassé de battre ces\pfaibles… Pourquoi ne pas\nvoir jusqu'où tu peux pousser\pta série ? Au pire, ça\nrappellera à ces rigolos la\pdistance qui les sépare de\ntoi ! Ha ha ha ha ! Allez, à\pplus, {PLAYER} ! La prochaine\nfois qu'on se voit, je perds plus !
 0x1F9C7CE: Ha ha ha ha ! Incroyable, tu m'as\nencore battu !
 0x1F9C7FB: T'as été négligent, en pensant être\nle meilleur du monde, hein, gamin ?
@@ -22865,10 +22865,10 @@
 0x1FAAC73: Vous pouvez avoir\nces objets sur ma\ptable aussi. Je suis sûr que vous\nles trouverez très utiles.
 0x1FAACC8: On dirait que c'était hier que je\nvous ai envoyé dans le monde… Le\ptemps passe vite !
 0x1FAAD50: Protecteur du Marais
-0x1FAAD67: Les Terreur Granbull sèment\nla zizanie ! Aide Tessy\nà retrouver son Laggron.
-0x1FAADCC: {PLAYER}, viens ici, chéri. J'ai\nbesoin de ton aide pour un problème.\pTu vois, des voyous sèment la\nzizanie, juste ici dans le Marais Fulica. Et mon Laggron, qui est le\pprotecteur de ce marais, a disparu\ncomme un vegan à un barbecue !\lLaggron est censé maintenir\pl'équilibre délicat de cet\nécosystème unique, mais sans lui,\lrien ne calme ces voyous ! Je dois\larrêter leurs manigances et\pretrouver mon Laggron, pour que\nl'équilibre puisse être rétabli dans\lle marais. Mais, tu vois, je ne peux\ppas éliminer tous ces voyous toute\nseule. Alors, qu'est-ce que t'en\pdis, partant pour une aventure avec\nla vieille Tessy ?
+0x1FAAD67: Les Terreur Granbull sèment\nla zizanie ! Aide Tessie\nà retrouver son Laggron.
+0x1FAADCC: {PLAYER}, viens ici, chéri. J'ai\nbesoin de ton aide pour un problème.\pTu vois, des voyous sèment la\nzizanie, juste ici dans le Marais Fulica. Et mon Laggron, qui est le\pprotecteur de ce marais, a disparu\ncomme un vegan à un barbecue !\lLaggron est censé maintenir\pl'équilibre délicat de cet\nécosystème unique, mais sans lui,\lrien ne calme ces voyous ! Je dois\larrêter leurs manigances et\pretrouver mon Laggron, pour que\nl'équilibre puisse être rétabli dans\lle marais. Mais, tu vois, je ne peux\ppas éliminer tous ces voyous toute\nseule. Alors, qu'est-ce que t'en\pdis, partant pour une aventure avec\nla vieille Tessie ?
 0x1FAB020: Génial ! Je suis aussi heureuse\nqu'un Ronflex à l'heure du souper.\pAllons botter les\nfesses de quelques\pGranbull et sauver le marais ! Je\ngarderai tes Pokémon soignés aussi.
-0x1FAB0AE: {COLOR}ÁEn faisant équipe avec\nTessy, les {COLOR}É3\lpremiers{COLOR}Á Pokémon de votre équipe seront sélectionnés pour le combat.
+0x1FAB0AE: {COLOR}ÁEn faisant équipe avec\nTessie, les {COLOR}É3\lpremiers{COLOR}Á Pokémon de votre équipe seront sélectionnés pour le combat.
 0x1FAB112: Eh bien, bon sang\n! Mais je sais que\ptu es occupé.\nReviens me voir dès\pque tu peux. Je t'attendrai ici.
 0x1FAB180: Mon Laggron est le chef dans ce\nmarais, donc quand il est là, tous\lles autres Pokémon rentrent dans le\prang. Découvrons ce qui est arrivé\nau vieux Laggron !
 0x1FAB20F: Dépêche-toi, {PLAYER}, on doit\nretourner au Marais Fulica et\larrêter les Terreur Granbull.
@@ -23297,7 +23297,7 @@
 0x1F482ED: Ngh<0xB0><0xFC><0x08><0x18> <0xFD><0x01><0xB0><0xFC><0x08><0x18> prends<0xB0><0xFC><0x08><0x18> mes Pokémon<0xB0>\pJe ne peux plus me battre<0xB0><0xFC><0x08><0x18> mais<0xB0><0xFC><0x08><0x18>\nils te soutiendront<0xB0>
 0x1F484AE: <0xFC><0x01><0x04>Comme je le pensais<0xB0><0xFC><0x08><0x18> je ne pouvais\nque vous retarder.\pMais les préparatifs doivent être\npresque achevés à présent.\pIl ne me reste qu'à espérer que les\nsbires au-dessus vous retiendront\ljuste assez longtemps.\pAdieu<0xB0><0xFC><0x08><0x18> <0xFD><0x01>, <0xFD><0x06>.
 0x1F48854: Ha ha<0xB0><0xFC><0x08><0x18> merci, <0xFD><0x06>, même si\nc'était un peu facile.\pJe jure de tout faire pour me\nracheter, jusqu'à mon dernier jour.\pEt à propos de ta mère, elle m'a\nappris qu'Aklove est presque prêt\là activer l'Arme Ultime.\pHeureusement, nous ne sommes pas\ntrès loin du sommet.\pMais y monter, en revanche, est un\npeu moins simple<0xB0>
-0x1F48B25: Fais bien attention, <0xFD><0x06>.\pJ'attends ici avec Melony le temps\nque tu trouves un passage.\pOh, et donne l'objet qu'on t'a\ndemandé de trouver à l'entrepôt\là <0xFD><0x01>, tu veux bien ?\pIl devrait t'aider contre Aklove\ns'il tente quelque chose au sommet.
+0x1F48B25: Fais bien attention, <0xFD><0x06>.\pJ'attends ici avec Mélony le temps\nque tu trouves un passage.\pOh, et donne l'objet qu'on t'a\ndemandé de trouver à l'entrepôt\là <0xFD><0x01>, tu veux bien ?\pIl devrait t'aider contre Aklove\ns'il tente quelque chose au sommet.
 0x1F48ED0: <0xFC><0x01><0x04>Tous les préparatifs sont\nterminés, Aklove.\pLes Guerriers des Ombres ont été\nintégrés avec succès\ldans l'arme.\pAvec l'énergie absorbée de la\nmontagne, elle est chargée à bloc.\pVous pouvez procéder à l'activation\nquand vous le souhaitez.
 0x1F48FD2: Je n'arrive toujours pas à croire\nqu'il était là, sous nos yeux.\pLe cristal au sommet du mont<0xB0><0xFC><0x08><0x18>\nles insurgés de Borrius ont dû\ll'amener ici il y a 3000 ans\lgrâce au pouvoir de Hoopa.\pLes livres d'histoire n'ont jamais\nmentionné ce petit détail<0xB0>\pDire que j'ai perdu des heures\nentières à le chercher !\pMais peu importe, je peux enfin\nl'activer maintenant.
 0x1F4953C: Arrrrgh !\pPourquoi tous ces gêneurs\nsurgissent-ils de partout !?\p<0xB0>\pSoit, ce n'est qu'une question de\ntemps avant votre défaite à tous.\pJe suis un homme patient<0xB0>\pJ'ai attendu ce jour un an durant,\nalors quelques instants de plus ?
@@ -23394,10 +23394,10 @@
 0x75318A: <0xFC><0x01><0x02>Tu as reniflé des feuilles de\nMystherbe.\pL'odeur répugnante te monte\nau nez.
 0x75DA84: <0xFC><0x01><0x02>Fille : <0xFC><0x01><0x04>Ouiiin !\pPapa ! Il m'a fait mal !
 0x75DAAF: <0xFC><0x01><0x02>Homme : <0xFC><0x01><0x08>C'est bon ma puce…\pPapa ne laissera plus ce\nPokémon te faire de mal.
-0x788DC8: <0xFC><0x01><0x02><0xFD><0x01> reçoit le Badge Feuille\nde Mirskle !
+0x788DC8: <0xFC><0x01><0x02><0xFD><0x01> reçoit le Badge Feuille\nde Sylvain !
 0x78EAD3: <0xFC><0x01><0x02><0xFD><0x01> reçoit le Badge Ailes\nd'Alice !
-0x7B5C7C: <0xFC><0x01><0x02><0xFD><0x01> reçoit le Badge Automne\nde Mel !
-0x7C0506: <0xFC><0x01><0x02><0xFD><0x01> reçoit le Badge Éclair\nde Galavan !
+0x7B5C7C: <0xFC><0x01><0x02><0xFD><0x01> reçoit le Badge Automne\nde Mél !
+0x7C0506: <0xFC><0x01><0x02><0xFD><0x01> reçoit le Badge Éclair\nde Galvane !
 0x7C5A7F: <0xFC><0x01><0x04>N'attends aucune pitié de\n<0xFC><0x01><0x02>The Shadows<0xFC><0x01><0x04> !
 0x7D6147: <0xFC><0x01><0x02>Marlon : <0xFC><0x01><0x08>Arceus<0xB0>\pLe créateur de l'univers<0xB0>
 0x7D617A: <0xFC><0x01><0x02>Arceus : <0xFC><0x01><0x08><0xB0>OUI.\pVOICI L'HEURE DE TON JUGEMENT.
@@ -23441,14 +23441,14 @@
 0x1F109DA: Veux-tu activer le\n<0xFC><0x01><0x06>Mode Sandbox<0xFC><0x01><0x02> ?
 0x1F1516B: <0xFC><0x01><0x02><0xFD><0x01> reçoit un Oeuf du\nKinésiste !
 0x1F15D08: <0xFC><0x01><0x02><0xFD><0x02> renifle la\nplante étrange<0xB0>\pIl semble plus fort !
-0x1F15D7F: <0xFC><0x01><0x02>L'Ortide de Mirskle renifle la\nplante étrange<0xB0>\pIl semble plus fort !
-0x1F15FAA: <0xFC><0x01><0x02><0xFD><0x01> reçoit le Badge Feuille\nde Mirskle !
+0x1F15D7F: <0xFC><0x01><0x02>L'Ortide de Sylvain renifle la\nplante étrange<0xB0>\pIl semble plus fort !
+0x1F15FAA: <0xFC><0x01><0x02><0xFD><0x01> reçoit le Badge Feuille\nde Sylvain !
 0x1F16852: <0xFC><0x01><0x02><0xFD><0x01> reçoit le Badge Vision\nde Véga !
 0x1F171F2: <0xFC><0x01><0x02><0xFD><0x01> reçoit le Badge Ailes\nd'Alice !
-0x1F17835: <0xFC><0x01><0x02><0xFD><0x01> reçoit le Badge Automne\nde Mel !
-0x1F17E86: <0xFC><0x01><0x02><0xFD><0x01> reçoit le Badge Batterie\nde Galavan !
-0x1F184CD: <0xFC><0x01><0x02><0xFD><0x01> reçoit le Badge Anneau\nde Big Mo !
-0x1F18A6C: <0xFC><0x01><0x02><0xFD><0x01> reçoit le Badge Marais\nde Tessy !
+0x1F17835: <0xFC><0x01><0x02><0xFD><0x01> reçoit le Badge Automne\nde Mél !
+0x1F17E86: <0xFC><0x01><0x02><0xFD><0x01> reçoit le Badge Batterie\nde Galvane !
+0x1F184CD: <0xFC><0x01><0x02><0xFD><0x01> reçoit le Badge Anneau\nde Momo !
+0x1F18A6C: <0xFC><0x01><0x02><0xFD><0x01> reçoit le Badge Marais\nde Tessie !
 0x1F1919E: <0xFC><0x01><0x02><0xFD><0x01> reçoit le Badge Temps\nde Benjamin !
 0x1F1953F: <0xFC><0x01><0x02>C'est une sorte de plante aux\nfeuilles étranges.
 0x1F1A99A: C'est un genre d'ampoule.\pLa mettre sur <0xFC><0x01><0x06><0xFD><0x02><0xFC><0x01><0x02> ?
@@ -23511,7 +23511,7 @@
 0x1FA1B7C: <0xFC><0x01><0x02>Le savant est assommé.
 0x1FAA2EF: <0xFC><0x01><0x02>Le <0xFD><0x02> dort\nprofondément<0xB0>
 0x1FAAD21: <0xFC><0x01><0x02>C'est un objet rare appartenant\nau Prof. Log.
-0x1FAB000: <0xFC><0x01><0x02><0xFD><0x01> décide de suivre Tessy !
+0x1FAB000: <0xFC><0x01><0x02><0xFD><0x01> décide de suivre Tessie !
 0x1FAC792: <0xFC><0x01><0x02><0xFD><0x01> décide de suivre la\nfillette !
 0x1FACB13: <0xFC><0x01><0x02>Palkia distord l'espace autour\nde lui pour augmenter sa taille !
 0x1FADC75: <0xFC><0x01><0x02>L'Élekable semble vouloir te\nsuivre jusqu'à Épidia !\pL'y emmener ?
@@ -23681,7 +23681,7 @@
 0x1edf169: Jusqu'à ce que les doux arômes\nnous réunissent à nouveau, je te\ldis adieu.
 0x1edffbb: Dans le <0xFC><0x01><0x06>Classic Leaders Gauntlet<0xFC><0x01><0x08>,\ntu affronteras chaque Champion\ld'Arène, l'un après l'autre.\pMais même si les combats\ns'enchaînent, tu pourras\lsauvegarder et ajuster ton équipe\lentre chaque combat.\pQuant aux équipes des Champions,\nils utiliseront des Pokémon bien\lplus forts que lors de tes combats\ldans leurs Arènes.\pIls combattront aussi avec les\nmêmes effets de combat qu'à\ll'époque, alors garde ça en tête.\pSi tu parviens à battre un\nChampion et que tu as déjà reçu\lson Cristal Z, il te donnera son\lJoyau quotidien après le combat,\là moins qu'il ne te l'ait déjà\ldonné.\pSi tu parviens à tous les battre,\ntu gagneras des prix fantastiques !\pEt bien sûr, plus ta <0xFC><0x01><0x06>Difficulté\nde Combat<0xFC><0x01><0x08> est élevée, meilleurs\lseront les prix à gagner.
 0x1ee0539: Rends-toi du côté gauche du\nterrain pour commencer.
-0x1ee05cd: Ton premier combat sera contre le\nChampion d'Arène <0xFC><0x01><0x06>Mirskle<0xFC><0x01><0x08>.\pCe sera un <0xFC><0x01><0x06>Combat Duo<0xFC><0x01><0x08>.\pPrends le temps de préparer ton\néquipe pour le combat à venir.\pPour lancer le combat, fais un pas\ndans n'importe quelle direction.
+0x1ee05cd: Ton premier combat sera contre le\nChampion d'Arène <0xFC><0x01><0x06>Sylvain<0xFC><0x01><0x08>.\pCe sera un <0xFC><0x01><0x06>Combat Duo<0xFC><0x01><0x08>.\pPrends le temps de préparer ton\néquipe pour le combat à venir.\pPour lancer le combat, fais un pas\ndans n'importe quelle direction.
 0x1ee0d75: Géniaaaaal…<0xFC><0x08><0x18> euh, c'était où\nle terrain, déjà… ?\pAh oui, là-bas…
 0x1ee106d: <0xFC><0x01><0x08>C'est…<0xFC><0x08><0x18> vraiment dommage, <0xFD><0x04>.\pBon, d'accord, tu m'as eu.\pTiens.\nJ'en ai déniché quelques-uns en rab.
 0x1ee144f: Excellent.\pAlors, je t'attends à la zone\nde combat.
@@ -23689,13 +23689,13 @@
 0x1ee1d11: Oh, je vois… eh bien, je ne pars\nque demain.\pSi tu changes d'avis, je suis là.
 0x1ee1d63: Fantastique !\nJe t'attends à la zone de combat !\pNe traîne pas trop, hein !
 0x1ee2954: <0xFC><0x01><0x08>Pas mal, partenaire.\pParfois t'as pris le Tauros par\nles cornes… d'autres fois, tu l'as\llaissé aller où bon lui semble.\pC'était un chouette combat.\pTiens, un petit cadeau de ma part.
-0x1ee3248: <0xFC><0x01><0x08>Gaaaah ! Encore en panne !\pFaudra qu'on remette ça un de\nces jours !\pTiens, considère ça comme une\npromesse, parce que ce bon vieux\lGalavan en a pas fini avec toi !
+0x1ee3248: <0xFC><0x01><0x08>Gaaaah ! Encore en panne !\pFaudra qu'on remette ça un de\nces jours !\pTiens, considère ça comme une\npromesse, parce que ce bon vieux\lGalvane en a pas fini avec toi !
 0x1ee36d4: Héhé… pigeon.\pBon, allons régler ça à la zone\nde combat, sans plus attendre.
 0x1ee3ed9: Ah ouais, voilà ce que je voulais\nentendre ! Rendez-vous à la zone\lde combat !
 0x1ee3f9e: <0xFC><0x01><0x04>Je me suis encore fait submerger ?\nÇa alors, c'est le pompon !\pJ'aurais juré avoir assez\nd'entraînement pour te rattraper,\lmais faut croire que non.\pBon, c'est décidé !\nJe te laisse ça !\pConsidère ça comme un cadeau,\nparce que t'es vraiment incroyable,\lc'est mon Cristal Z préféré !
 0x1ee4fdc: Dans le combat contre la\nChampionne Alice, un <0xFC><0x01><0x06>Vent Arrière<0xFC><0x01><0x08>\lsoufflera derrière tous les Pokémon\lde type Vol, en plus d'<0xFC><0x01><0x06>affaiblir\lles attaques super efficaces<0xFC><0x01><0x08>\lcontre eux !
-0x1ee50e4: Dans le combat contre le Champion\nGalavan, les Pokémon de type\l<0xFC><0x01><0x06>Electrik<0xFC><0x01><0x08> et <0xFC><0x01><0x06>Acier<0xFC><0x01><0x08> éviteront les\lcapacités de type <0xFC><0x01><0x06>Sol<0xFC><0x01><0x08> !
-0x1ee5281: Lors du combat contre le Champion\nd'Arène, Big Mo, la vitesse d'un\lPokémon dépendra de son poids !
+0x1ee50e4: Dans le combat contre le Champion\nGalvane, les Pokémon de type\l<0xFC><0x01><0x06>Electrik<0xFC><0x01><0x08> et <0xFC><0x01><0x06>Acier<0xFC><0x01><0x08> éviteront les\lcapacités de type <0xFC><0x01><0x06>Sol<0xFC><0x01><0x08> !
+0x1ee5281: Lors du combat contre le Champion\nd'Arène, Momo, la vitesse d'un\lPokémon dépendra de son poids !
 0x1ee5408: Lors du combat contre le Champion\nd'Arène, Benjamin, les Pokémon\l<0xFC><0x01><0x06>dés-évolueront<0xFC><0x01><0x08> une fois vaincus !
 0x1ee546b: <0xFC><0x01><0x04>Maman m'emmène ici pour la regarder\n<0xB1>botter le derrière des noobs !<0xB2>\pEnfin, c'est ce qu'elle dit.
 0x1ee5c80: Oh, mais d'abord, tu devrais déposer\nun de tes Pokémon.
@@ -23786,8 +23786,8 @@
 0x1ef9bf7: C'est quoi, cet accoutrement ?\pTu ne pouvais pas choisir pire\ntenue à porter par ici !\pCe look d'agent secret va te faire\ngriller comme une saucisse !
 0x1efa09a: Hé ! C'est un Soda Cool que je sens\ndans ton Cube !\pTu veux bien le partager avec moi ?
 0x1efa10f: Mmm…<0xFC><0x08>î C'était.<0xFC><0x08><0x18> Trop.<0xFC><0x08><0x18> Bon !\pMerci mille fois, Dresseur !\nTiens, c'est pour toi.
-0x1efa30b: Galavan abaisse le pont de son\nArène quand il part en voyage.\pIl finira par revenir, il te faut\njuste être patient.
-0x1efa381: On dirait que Galavan a relevé le\npont de son Arène !\pC'est le moment idéal pour y aller\net le défier.
+0x1efa30b: Galvane abaisse le pont de son\nArène quand il part en voyage.\pIl finira par revenir, il te faut\njuste être patient.
+0x1efa381: On dirait que Galvane a relevé le\npont de son Arène !\pC'est le moment idéal pour y aller\net le défier.
 0x1efa484: Oh, mince…\pJ'ai claqué tout mon argent au\nCasino !\pOn dirait que je n'aurai plus\nbesoin de ça !
 0x1efa503: Cet appartement appartient à un\nillustre homme d'affaires de\lNaville.\pL'appartement est très demandé,\nje crains donc que tu ne puisses\lpas le louer pour toi.
 0x1efa64e: <0xFC><0x01><0x02>Le petit garçon a joué avec\n<0xFD><0x02>.
@@ -23848,13 +23848,13 @@
 0x1f0453e: Si tu remplis un Pokédex, va faire\nun tour à <0xFC><0x01><0x06>Mont Foudroyant<0xFC><0x01><0x04> !\pToutes sortes de Pokémon de type\nElectrik rares y vivent.\pOn dit même que Électhor niche au\nsommet !
 0x1f04906: Ouaip, je viens de finir de livrer\nles marchandises à tous les\lPoké Marts.\pJe vais bientôt rentrer à Antésia pour la nuit.\pMais on dirait qu'il me reste\nquelques objets.\pEt si au lieu de les jeter,\nje te les donnais !
 0x1f04bf9: Tu ne me verras jamais dehors\nquand il pleut !\p…\pEn fait, la plupart des gens ici\nrentreraient sans doute s'abriter.
-0x1f05061: Mel, le Champion d'Arène, n'est pas\nlà en ce moment.\pIl est sans doute parti se changer\nles idées quelque part.
-0x1f050bb: Mel, le Champion d'Arène, n'est pas\nlà en ce moment.\pIl est sans doute parti se changer\nles idées près de la <0xFC><0x01><0x06>Autoroute RBT<0xFC><0x01><0x04>\là <0xFC><0x01><0x06>Automnia<0xFC><0x01><0x04>.
+0x1f05061: Mél, le Champion d'Arène, n'est pas\nlà en ce moment.\pIl est sans doute parti se changer\nles idées quelque part.
+0x1f050bb: Mél, le Champion d'Arène, n'est pas\nlà en ce moment.\pIl est sans doute parti se changer\nles idées près de la <0xFC><0x01><0x06>Autoroute RBT<0xFC><0x01><0x04>\là <0xFC><0x01><0x06>Automnia<0xFC><0x01><0x04>.
 0x1f0521f: Si <0xFC><0x01><0x06><0xFD><0x02><0xFC><0x01><0x08> apprenait\nPuissance Cachée, cette capacité\lserait de type <0xFC><0x01><0x06><0xFD><0x03><0xFC><0x01><0x08> !
 0x1f052dc: Jeune Dresseur.\pJe porte cet Oeuf avec moi depuis\nqu'il a été pondu.\pMais je veux bien le confier à une\njeune personne en bonne santé.\pVeux-tu faire éclore cet <0xFC><0x01><0x06>Oeuf<0xFC><0x01><0x04> ?
 0x1f05393: Tiens.\nPrends-en bien soin.\pC'est un Oeuf très spécial.
 0x1f05459: Comme tu voudras, alors…\pSi tu changes d'avis et veux faire\néclore cet Oeuf, je serai ici.
-0x1f05515: Le Champion d'Arène, Mel, vit ici\nquand il n'est pas à l'Arène ou en\ltrain d'admirer des arbres aux\lcouleurs vives.\pMoi, je m'occupe juste de sa maison\nquand il n'est pas là.
+0x1f05515: Le Champion d'Arène, Mél, vit ici\nquand il n'est pas à l'Arène ou en\ltrain d'admirer des arbres aux\lcouleurs vives.\pMoi, je m'occupe juste de sa maison\nquand il n'est pas là.
 0x1f05779: Il m'a échangé son <0xFC><0x01><0x06>Élektek<0xFC><0x01><0x08>, alors\nj'ai utilisé un <0xFC><0x01><0x06>Electirizer<0xFC><0x01><0x08> comme une\l<0xFC><0x01><0x06>Evolution Stone<0xFC><0x01><0x08>, et il a évolué !
 0x1f057f0: Certains Pokémon ne peuvent\névoluer que lors d'un échange.\pMais qui échange encore de nos\njours, hein ?\pCette mode est passée depuis des\nannées.\pMaintenant, on peut faire évoluer\nces Pokémon avec une <0xFC><0x01><0x06>Link Stone<0xFC><0x01><0x08> !\pRegarde, tu vas voir !
 0x1f05b72: Si un Pokémon tient une <0xFC><0x01><0x06>Everstone<0xFC><0x01><0x08>,\nil n'évoluera pas !\pS'il en tient une pendant la\nreproduction, il transmettra sa\lnature !\pElles sont géniales, ces\nEverstones, non ?\pSi tu en veux d'autres, il paraît\nqu'il y en a tout un tas coincées\ldans les <0xFC><0x01><0x06>murs<0xFC><0x01><0x08> de l'<0xFC><0x01><0x06>Autoroute RBT<0xFC><0x01><0x08>.\pComment les récupérer, par contre ?\nAucune idée…
@@ -23933,15 +23933,15 @@
 0x1f15b83: Oh là là…\nTu as l'air sur le point de tomber !\pTu n'as pas assez bu,\nc'est ça ?\pTiens, prends un peu de ma boisson.
 0x1f1624c: Oh, attends.\pOn dirait que je vais pas me battre\ncontre toi, finalement.\pIl te faudra plus d'un Pokémon si\ntu veux te frotter à moi…
 0x1f17d5b: …\pTu m'as entendu ?\pJ'ai dit que je veux te voir te\nbattre avec deux Pokémon à la fois !\pUn seul, ça suffira pas !
-0x1f187af: Salut ! Alors comme ça, t'as passé\nmon petit défi des vagues ?\pMoi, c'est Tessy.\pVivre dans ce marais nous a appris\nplein de choses, à mes Pokémon\let à moi…\p…Grandir et s'adapter, surtout.\pTous mes Pokémon ont le pouvoir de\nchanger de type selon les deux\lpremières attaques qu'ils\lconnaissent !\pEt pendant notre combat, tes\nPokémon feront pareil !\pMais tu le savais déjà, j'en suis\nsûre.
-0x1f18a6c: <0xFC><0x01><0x02><0xFD><0x01> reçoit le Badge Marais\nde Tessy !
+0x1f187af: Salut ! Alors comme ça, t'as passé\nmon petit défi des vagues ?\pMoi, c'est Tessie.\pVivre dans ce marais nous a appris\nplein de choses, à mes Pokémon\let à moi…\p…Grandir et s'adapter, surtout.\pTous mes Pokémon ont le pouvoir de\nchanger de type selon les deux\lpremières attaques qu'ils\lconnaissent !\pEt pendant notre combat, tes\nPokémon feront pareil !\pMais tu le savais déjà, j'en suis\nsûre.
+0x1f18a6c: <0xFC><0x01><0x02><0xFD><0x01> reçoit le Badge Marais\nde Tessie !
 0x1f18a97: Le Badge Marais te permet de\ncontrôler les Pokémon échangés\ljusqu'au <0x34> 61 !\pEt il donne même à tes Pokémon le\npouvoir de remonter les <0xFC><0x01><0x06>cascades<0xFC><0x01><0x04> !\p…attends, t'as rien de\nce genre ?\pBah, c'est embêtant, ça.\pTiens, j'en ai en rab, alors prends\ndonc celle-là.
 0x1f18d31: Plus rien à craindre,\nmaintenant !\pLes vagues vont plus\nt'emporter !
 0x1f19940: Je ferais mieux d'affiner mes\ncalculs pour notre prochain combat.
 0x1f1a3a9: Un Pokémon se cachait sous le\nnénuphar !\pLe Pokémon attaque !
 0x1f1a3ee: <0xFC><0x01><0x02>Le <0xFD><0x02> replonge dans\nl'étang.
 0x1f1a441: Beaucoup des Pokémon de cette Arène\nprofitent du sol magnétisé.\pAutrement dit, tu pars avec un\nhandicap !
-0x1f1a819: Si tu peux battre le maître ouvrier\nde l'Arène de Daherapolis, tu es de\ltaille à affronter Galavan.
+0x1f1a819: Si tu peux battre le maître ouvrier\nde l'Arène de Daherapolis, tu es de\ltaille à affronter Galvane.
 0x1f1aa35: Tes Pokémon ont été soignés.
 0x1f1aa53: Je vais t'éjecter du ring avant\nmême que t'aies pu démarrer !
 0x1f1aaa2: Je suis venu tester ta force\nsur le ring.\pHiyaaa !
@@ -23949,10 +23949,10 @@
 0x1f1bc7e: La porte menant au Champion\nd'Arène est déjà déverrouillée.
 0x1f1bf9c: Salut, gamin !\p-KOF- -KOF-\pBienvenue dans ton premier défi\nd'Arène !\pLaisse-moi te donner un petit\ncadeau pour commencer.\p-KOF- -KHHH-
 0x1f1c3fc: Comme tu peux le voir, ou pas,\ncette Arène est dédiée au type\l<0xFC><0x01><0x06>Ténèbres<0xFC><0x01><0x08>.\pPour gagner ici, un bon point de\ndépart serait d'amener des types\l<0xFC><0x01><0x06>Combat<0xFC><0x01><0x08>, <0xFC><0x01><0x06>Insecte<0xFC><0x01><0x08> ou <0xFC><0x01><0x06>Fée<0xFC><0x01><0x08>.\pMais attention : à cause des\nnombreux Dresseurs qui peinent ici,\ldes <0xFC><0x01><0x06>émotions négatives<0xFC><0x01><0x08> rempliront\ll'air pendant tes combats.\pCes émotions infligent des dégâts\nà la fin de chaque tour.\pSeuls les types <0xFC><0x01><0x06>Ténèbres<0xFC><0x01><0x08>, <0xFC><0x01><0x06>Psy<0xFC><0x01><0x08> et\n<0xFC><0x01><0x06>Spectre<0xFC><0x01><0x08>, ainsi que les Pokémon avec\lles talents <0xFC><0x01><0x06>Magic Guard<0xFC><0x01><0x08>, <0xFC><0x01><0x06>Unaware<0xFC><0x01><0x08> ou\l<0xFC><0x01><0x06>Oblivious<0xFC><0x01><0x08>, n'y sont pas sensibles.\pSi les émotions négatives te posent\nproblème, amener un Pokémon qui n'y\lest pas sensible pourrait bien\lt'aider.\pMaintenant, atteindre Véga, qui\ndirige cette Arène, est assez\lsimple.\pTraverse les couloirs sombres sans\nte faire repérer.\pSi on te repère, tu devras soit\naffronter des Dresseurs, soit\lretourner au début du couloir.\pChaque Dresseur vaincu éclairera\nla pièce, alors je te conseille\lde tous les battre d'abord.\pBonne chance !
-0x1f1cd9a: Mel ?\nBah, c'est juste un gars <0xFC><0x01><0x06>normal<0xFC><0x01><0x08> !\pSi c'était une Arène de type Normal\nnormale, je dirais que des types\lCombat seraient parfaits pour le\lbattre.\pMais ce n'est pas le cas.\pDans cette Arène, tous les combats\nsont des <0xFC><0x01><0x06>Combats Inversés<0xFC><0x01><0x08> !\pAutrement dit, toutes les affinités\nde type sont inversées.\pAlors, devine quel type serait le\nmieux placé pour battre Mel ?\p…\pExact ! Il n'y en a pas !\pLes attaques <0xFC><0x01><0x06>Spectre<0xFC><0x01><0x08> seront super\nefficaces contre ses types Normal,\lmais les attaques Normal seront\laussi super efficaces sur le type\lSpectre.\pTa meilleure option contre Mel :\nun Pokémon qui connaît des attaques\lSpectre sans être de ce type\llui-même.\pSi tu veux t'entraîner à ce genre\nde combat, va voir l'<0xFC><0x01><0x06>Inverse Battle\lHouse<0xFC><0x01><0x08> en ville.\pPour commencer, descends le\ntoboggan à côté de moi.\pTon but est d'utiliser le Lokhlass\npour remonter jusqu'ici.\pMais fais d'abord le plein de\nprovisions.\pImpossible de revenir en arrière\navant d'avoir atteint Mel.
+0x1f1cd9a: Mél ?\nBah, c'est juste un gars <0xFC><0x01><0x06>normal<0xFC><0x01><0x08> !\pSi c'était une Arène de type Normal\nnormale, je dirais que des types\lCombat seraient parfaits pour le\lbattre.\pMais ce n'est pas le cas.\pDans cette Arène, tous les combats\nsont des <0xFC><0x01><0x06>Combats Inversés<0xFC><0x01><0x08> !\pAutrement dit, toutes les affinités\nde type sont inversées.\pAlors, devine quel type serait le\nmieux placé pour battre Mél ?\p…\pExact ! Il n'y en a pas !\pLes attaques <0xFC><0x01><0x06>Spectre<0xFC><0x01><0x08> seront super\nefficaces contre ses types Normal,\lmais les attaques Normal seront\laussi super efficaces sur le type\lSpectre.\pTa meilleure option contre Mél :\nun Pokémon qui connaît des attaques\lSpectre sans être de ce type\llui-même.\pSi tu veux t'entraîner à ce genre\nde combat, va voir l'<0xFC><0x01><0x06>Inverse Battle\lHouse<0xFC><0x01><0x08> en ville.\pPour commencer, descends le\ntoboggan à côté de moi.\pTon but est d'utiliser le Lokhlass\npour remonter jusqu'ici.\pMais fais d'abord le plein de\nprovisions.\pImpossible de revenir en arrière\navant d'avoir atteint Mél.
 0x1f1d4f5: Ce Joyau est un objet rare qui peut\nbooster une attaque de type <0xFC><0x01><0x06>Fée<0xFC><0x01><0x08>\len combat.\pLe type Fée est déjà l'un des\nmeilleurs en attaque, et avec ce\lJoyau, il devient encore plus fort !
-0x1f1d5f9: Galavan aime utiliser des Pokémon\nde type <0xFC><0x01><0x06>Electrik<0xFC><0x01><0x08> et <0xFC><0x01><0x06>Acier<0xFC><0x01><0x08>.\pJe dirais que les Pokémon de type\nSol sont parfaits contre lui, mais\lça ne marchera pas dans cette Arène.\pMalheureusement, le sol ici est\n<0xFC><0x01><0x06>magnétisé<0xFC><0x01><0x08>.\pDu coup, tous les Pokémon <0xFC><0x01><0x06>Electrik<0xFC><0x01><0x08>\net <0xFC><0x01><0x06>Acier<0xFC><0x01><0x08> flottent au-dessus du sol !\pImpossible de les toucher avec des\ncapacités de type Sol, il te faudra\ldonc trouver un autre moyen de leur\linfliger de gros dégâts.\pPour l'énigme, le but est d'abaisser\nles barrières électriques pour\latteindre Galavan.\pBonne chance !
-0x1f1dce5: Dans l'ensemble, Big Mo adore les\nPokémon grands, lents et costauds,\lsouvent de type <0xFC><0x01><0x06>Combat<0xFC><0x01><0x08>.\pSi tu es un Dresseur ordinaire avec\nun type <0xFC><0x01><0x06>Vol<0xFC><0x01><0x08>, <0xFC><0x01><0x06>Psy<0xFC><0x01><0x08> ou <0xFC><0x01><0x06>Fée<0xFC><0x01><0x08>,\ltu peux gagner sans problème !\pMais avant d'affronter Big Mo, tu\ndevras réussir le <0xFC><0x01><0x06>Défi du Ring<0xFC><0x01><0x08>\lde l'Arène.\pEt là, aucune capacité de type\n<0xFC><0x01><0x06>Vol<0xFC><0x01><0x08>, <0xFC><0x01><0x06>Psy<0xFC><0x01><0x08> ou <0xFC><0x01><0x06>Fée<0xFC><0x01><0x08> n'est\lautorisée.\pÇa peut sembler dur, mais\nfranchement, si tu n'utilises pas\lde Pokémon faible au type Combat,\lce sera un jeu d'enfant.\pEt sache que selon l'intensité que\ntu choisis, il peut aussi y avoir\ldes restrictions lors du combat\lcontre Big Mo.\pLes <0xFC><0x01><0x06>gars du fond<0xFC><0x01><0x08> t'expliqueront\nles règles du combat, alors pas\lbesoin de tout retenir.\pBonne chance sur le ring !
+0x1f1d5f9: Galvane aime utiliser des Pokémon\nde type <0xFC><0x01><0x06>Electrik<0xFC><0x01><0x08> et <0xFC><0x01><0x06>Acier<0xFC><0x01><0x08>.\pJe dirais que les Pokémon de type\nSol sont parfaits contre lui, mais\lça ne marchera pas dans cette Arène.\pMalheureusement, le sol ici est\n<0xFC><0x01><0x06>magnétisé<0xFC><0x01><0x08>.\pDu coup, tous les Pokémon <0xFC><0x01><0x06>Electrik<0xFC><0x01><0x08>\net <0xFC><0x01><0x06>Acier<0xFC><0x01><0x08> flottent au-dessus du sol !\pImpossible de les toucher avec des\ncapacités de type Sol, il te faudra\ldonc trouver un autre moyen de leur\linfliger de gros dégâts.\pPour l'énigme, le but est d'abaisser\nles barrières électriques pour\latteindre Galvane.\pBonne chance !
+0x1f1dce5: Dans l'ensemble, Momo adore les\nPokémon grands, lents et costauds,\lsouvent de type <0xFC><0x01><0x06>Combat<0xFC><0x01><0x08>.\pSi tu es un Dresseur ordinaire avec\nun type <0xFC><0x01><0x06>Vol<0xFC><0x01><0x08>, <0xFC><0x01><0x06>Psy<0xFC><0x01><0x08> ou <0xFC><0x01><0x06>Fée<0xFC><0x01><0x08>,\ltu peux gagner sans problème !\pMais avant d'affronter Momo, tu\ndevras réussir le <0xFC><0x01><0x06>Défi du Ring<0xFC><0x01><0x08>\lde l'Arène.\pEt là, aucune capacité de type\n<0xFC><0x01><0x06>Vol<0xFC><0x01><0x08>, <0xFC><0x01><0x06>Psy<0xFC><0x01><0x08> ou <0xFC><0x01><0x06>Fée<0xFC><0x01><0x08> n'est\lautorisée.\pÇa peut sembler dur, mais\nfranchement, si tu n'utilises pas\lde Pokémon faible au type Combat,\lce sera un jeu d'enfant.\pEt sache que selon l'intensité que\ntu choisis, il peut aussi y avoir\ldes restrictions lors du combat\lcontre Momo.\pLes <0xFC><0x01><0x06>gars du fond<0xFC><0x01><0x08> t'expliqueront\nles règles du combat, alors pas\lbesoin de tout retenir.\pBonne chance sur le ring !
 0x1f1fd7a: Avec <0xFC><0x01><0x06><0xFD><0x02><0xFC><0x01><0x08> en main, tu\npourras traduire le dialecte ancien,\lsi tu le souhaites.\pEn fait, tu aurais sans doute\nintérêt à découvrir ce que cachent\lces tablettes.\pUne fois l'énigme de chaque tablette\nde Borrius résolue, viens me voir et\lje récompenserai tes efforts.
 0x1f21532: On a plein de Glalitites ici, au\nSkiers Club.\pElles se collent toujours sous\nnos skis !
 0x1f21846: On dirait que tu m'as sorti du\npétrin !\pPour ça, tu as toute ma gratitude.
@@ -24156,10 +24156,10 @@
 0x1f49b96: Ha ha…<0xFC><0x08>î hahahahaha…\pMalgré ton ingérence, il semble\nque j'aie triomphé !\pLa guerre vieille de 3000 ans…<0xFC><0x08><0x18> a\nenfin connu sa juste conclusion.\pLe grand roi n'aura plus à souffrir\npour l'éternité.\pQuand il saura que j'ai accompli ce\nqu'il n'a pu faire, son Pokémon\llui reviendra enfin…
 0x1f49ebe: Argh, oublie-la !\pDis-moi juste, qu'as-tu fait !?
 0x1f49ef3: J'ai modifié les réglages de l'arme\navant de tirer, petit.\pJe lui ai rendu sa fonction\nd'origine.\pDonner la vie, pas la prendre.
-0x1f52e50: <0xFC><0x01><0x02>Meloetta te défie dans un concours\nde danse pour le droit de combattre !\pAcceptes-tu le défi ?
+0x1f52e50: <0xFC><0x01><0x02>Méloetta te défie dans un concours\nde danse pour le droit de combattre !\pAcceptes-tu le défi ?
 0x1f52eb4: <0xFC><0x01><0x02>Pendant le concours de danse, des\ntouches apparaîtront à l'écran.\pPour gagner, appuie sur toutes les\ntouches avant qu'elles disparaissent.
-0x1f52f37: <0xFC><0x01><0x02>Meloetta apprécie ta\nperformance.\pIl te reconnaît le droit de\nl'affronter !
-0x1f52f8e: <0xFC><0x01><0x02>Meloetta est déçu que tu n'aies pas\npu le vaincre en concours de danse.
+0x1f52f37: <0xFC><0x01><0x02>Méloetta apprécie ta\nperformance.\pIl te reconnaît le droit de\nl'affronter !
+0x1f52f8e: <0xFC><0x01><0x02>Méloetta est déçu que tu n'aies pas\npu le vaincre en concours de danse.
 0x1f52fda: <0xFD><0x02> s'est envolé au\nclair de lune.
 0x1f52ffc: Tu viens voir le célèbre spectacle\nde Cradopaud de Polderive ?
 0x1f53140: Bien ! Trouve le Cradopaud que je\nt'ai demandé de suivre !
@@ -24386,8 +24386,8 @@
 0x780119: faire moi-même !\pC'est que… eh bien… quand tes\nparents t'ont confié à moi,\lj'ai promis de veiller sur toi\ljusqu'à tes 18 ans…
 0x781506: <0xFD><0x06> : <0xFC><0x01><0x08>Tout le monde se fiche de\nce que ça t'a fait, Log.\pCe qui compte, c'est que nos\nPokémon aient l'air forts.
 0x788d2d: C'est une gemme rare qui peut\nrenforcer une capacité de type\lPlante en combat !\pJe suis sûr qu'elle te sera utile,\nchampion en herbe.
-0x788dc8: <0xFC><0x01><0x02><0xFD><0x01> obtient le Badge Feuille\nde Mirskle !
-0x1f15faa: <0xFC><0x01><0x02><0xFD><0x01> obtient le Badge Feuille\nde Mirskle !
+0x788dc8: <0xFC><0x01><0x02><0xFD><0x01> obtient le Badge Feuille\nde Sylvain !
+0x1f15faa: <0xFC><0x01><0x02><0xFD><0x01> obtient le Badge Feuille\nde Sylvain !
 0x78ab10: Vraiment ?\nLa récompense vaut le coup, promis.
 0x78b7ae: <0xFC><0x01><0x06><0xFD><0x02><0xFC><0x01><0x04>\pApporte-les-moi en toute hâte,\njeune Dresseur !
 0x78b7eb: Il me faut encore :\n<0xFC><0x01><0x06><0xFD><0x02><0xFC><0x01><0x04>\pApporte-les-moi dès que tu peux,\ns'il te plaît.
@@ -24438,7 +24438,7 @@
 0x7c1821: Je suis Lily, Présidente du Club\ndes Skieurs.\pJe te préviens, je ne suis pas\nfacile à battre !
 0x7c1915: Le <0xFD><0x02> a disparu dans les\nruines.
 0x7c1e8a: Merci pour toute ton aide,\n<0xFD><0x01>.\pJe vais prévenir mes collègues de\nNaville par radio pour qu'il\lne s'échappe pas par là.\pEnfin, voici une récompense pour un\ncitoyen modèle comme toi.
-0x7c220e: Mel s'entoure d'autant de jolies\nfemmes que possible pour soulager\lle stress de la cascade qui gronde\lderrière lui.
+0x7c220e: Mél s'entoure d'autant de jolies\nfemmes que possible pour soulager\lle stress de la cascade qui gronde\lderrière lui.
 0x7c23bd: Nous avons plein de Gemmes Glace\nici, au Skiers Club.\pElles collent toujours sous nos\nskis !
 0x7c241f: Je veille sur ce port depuis\nl'époque où la glorieuse Antésia\lCity se dressait fièrement…\pCe port est tout ce qu'il reste de\ncette ville…
 0x7c3348: Donne <0xFC><0x01><0x06><0xFD><0x02><0xFC><0x01><0x08> à un\nPokémon ayant un problème de statut.\pIl ira tout de suite mieux, comme\nça !
@@ -24526,8 +24526,8 @@
 0x1f5e90a: Je m'amuse à embêter les gens\navec mes Pokémon puants.\pIls sont parfaits pour effrayer\nles gens. Et en plus, ils mordent.
 0x7f8154: Looker : <0xFC><0x01><0x08>D'accord.\nJe m'occupe des billets.\pRetrouvez-moi là-bas tous les deux.
 0x7f8248: <0xFC><0x01><0x08><0xFD><0x01> !\pOù est la Light of Ruin ?\p…\p<0xFC><0x01><0x06>Borrius Est<0xFC><0x01><0x08> ?\pAlors je dois me dépêcher d'aller à\n<0xFC><0x01><0x06>Naville <0xFC><0x01><0x08>avant le départ du\lprochain bateau !
-0x7f8c2b: Hmm…\pTu dois être sacrément costaud si\ntu as battu Big Mo.\pC'est pas facile.\pTiens, prends ça en guise de\nfélicitations.
-0x1ede0e9: Hmm…\pTu dois être sacrément costaud si\ntu as battu Big Mo.\pC'est pas facile.\pTiens, prends ça en guise de\nfélicitations.
+0x7f8c2b: Hmm…\pTu dois être sacrément costaud si\ntu as battu Momo.\pC'est pas facile.\pTiens, prends ça en guise de\nfélicitations.
+0x1ede0e9: Hmm…\pTu dois être sacrément costaud si\ntu as battu Momo.\pC'est pas facile.\pTiens, prends ça en guise de\nfélicitations.
 0x7f8e80: J'espère bien te revoir, toi et\nton argent.
 0x7f96a5: Je suis descendu dans les égouts\npour les chercher, mais impossible\lde mettre la main dessus.\pTu dois te demander ce que mes\nchaussettes faisaient dans les\ltoilettes, au juste.\pMais c'est une autre histoire pour\nune autre fois.\pAlors je me disais que tu pourrais\npeut-être aller les chercher ?
 0x7f987d: Je t'en veux pas, <0xFD><0x01>.\nSans rancune.\pVa falloir que je vive sans ma\npaire de chaussettes préférée\ldésormais. Snif.
@@ -24542,7 +24542,7 @@
 0x7fcde1: Barbs : <0xFC><0x01><0x08>Voyons qui est le vrai\ncaïd d'Antésia !
 0x7fd049: <0xFC><0x01><0x08>On se recroisera peut-être un de\nces jours, gamin.\pJ'attends ce jour avec impatience.
 0x7fd7ca: Les Pokémon de type <0xFC><0x01><0x06><0xFD><0x02><0xFC><0x01><0x08> sont\ninterdits sur le ring !\pVa changer tes Pokémon si tu\nveux combattre !
-0x7fdc9b: <0xFD><0x01> reçoit le Badge Brawl\nde Big Mo !
+0x7fdc9b: <0xFD><0x01> reçoit le Badge Brawl\nde Momo !
 0x7fdcc4: Avec le Badge Brawl, tous les Pokémon\njusqu'au N. 70 reconnaîtront ta force\let t'obéiront !\pTu peux aussi gravir les parois\nrocheuses avec la capacité Escalade !\pDis-moi que c'est pas utile !\pPrends aussi cette CT !
 0x8aa332: <0xFD><0x03> réagit à la météorite…
 0x8aa355: Veux-tu rapprocher\nle Deoxys de ton équipe\pde la météorite ?
@@ -24655,7 +24655,7 @@
 0x7f5daf: La légende de Giratina est presque\noubliée de tous, sauf de\lquelques-uns…\pElle parlait d'un monde de l'autre\ncôté du nôtre. Ce monde-ci.\pPourquoi ce monde existe-t-il ?\nPourquoi Giratina est-il seul ici ?\pTant de choses restent\ninexpliquées…
 0x7f6e4c: Quelque chose d'invisible bloque\nle passage.
 0x7f72cb: Je sentais la présence d'un\nDresseur depuis un moment.\lC'était toi !
-0x7f8b25: Tu veux prouver que t'es un dur ?\nHein, gamin ?\pAlors va te frotter à Big Mo.\pC'est le type le plus grand et le\nplus costaud de tout Antésia.
+0x7f8b25: Tu veux prouver que t'es un dur ?\nHein, gamin ?\pAlors va te frotter à Momo.\pC'est le type le plus grand et le\nplus costaud de tout Antésia.
 0x8254bf: La paroi est très rocheuse…\nVoulez-vous utiliser <0xFD><0x03> ?
 0x88882a: Voulez-vous monter à\nl'échelle ?
 0x1be56d: On dirait qu'il n'y a rien ici…
@@ -24752,9 +24752,9 @@
 0x3D62DF: Empêche les Pokémon faibles\nd'apparaître pendant 200 pas.
 0x3D6318: Empêche les Pokémon faibles\nd'apparaître pendant 250 pas.
 0x3D639C: Empêche les Pokémon faibles\nd'apparaître pendant 100 pas.
-0x788e28: CT93\nde Mirskle !\pElle contenait Nœud Herbe.
+0x788e28: CT93\nde Sylvain !\pElle contenait Nœud Herbe.
 0x7ea1fb: CT98\ndu type !
-0x7fdd98: CT60\nde Big Mo !
+0x7fdd98: CT60\nde Momo !
 
 0xb500a0: Gurenbourg
 0x721304: Gouffre Gelé
