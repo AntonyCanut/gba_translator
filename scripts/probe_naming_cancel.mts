@@ -329,6 +329,62 @@ async function main(): Promise<void> {
       }
     }
     await client.saveState(4);
+  } else if (STAGE === 11) {
+    await client.advanceFrames(10);
+    await client.loadState(5);
+    await client.advanceFrames(30);
+    await client.pressKey('START', 4);
+    await client.advanceFrames(90);
+    console.error('[probe] careful re-walk of the flashback, watching for a Yes/No or starter-choice menu');
+    // Hypothesis: the previous blind mash(400) may have blown straight
+    // through a starter-Pokémon choice and/or a "give a nickname?" Yes/No
+    // prompt (mashing A on a menu just confirms whatever's highlighted —
+    // likely the default "No"), which would explain why the CANCEL button
+    // was never seen: we skipped the nickname keyboard entirely. Screenshot
+    // every single step here (400 frames of margin per step) instead of
+    // mashing blind, so any menu can be caught and answered deliberately.
+    let lastText = false;
+    for (let i = 0; i < 400; i++) {
+      const before = await client.getState();
+      await client.pressKey('A', 4);
+      await client.advanceFrames(40);
+      const after = await client.getState();
+      if (after.textActive && !lastText) {
+        console.error(`[probe] textActive turned ON at step ${i}`);
+        await checkpoint(client, `20-textstart-${String(i).padStart(3, '0')}`);
+      }
+      if (!after.textActive && lastText) {
+        console.error(`[probe] textActive turned OFF at step ${i}`);
+      }
+      lastText = Boolean(after.textActive);
+      if (i % 20 === 19) {
+        await checkpoint(client, `20-careful-${String(i).padStart(3, '0')}`);
+      }
+      if (after.mapNumber !== before.mapNumber) {
+        console.error(`[probe] MAP CHANGED at step ${i}: ${before.mapGroup}.${before.mapNumber} -> ${after.mapGroup}.${after.mapNumber}`);
+        await checkpoint(client, `20-mapchange-${String(i).padStart(3, '0')}`);
+        await client.saveState(0);
+      }
+    }
+    await client.saveState(6);
+  } else if (STAGE === 12) {
+    await client.advanceFrames(10);
+    await client.loadState(5);
+    await client.advanceFrames(30);
+    await client.pressKey('START', 4);
+    await client.advanceFrames(90);
+    console.error('[probe] replaying identical mash up to step 190 (same deterministic sequence as stage 11)');
+    for (let i = 0; i < 190; i++) {
+      await client.pressKey('A', 4);
+      await client.advanceFrames(40);
+    }
+    console.error('[probe] fine-grained single-press stepping through the map 4.1 bedroom window');
+    for (let i = 190; i < 215; i++) {
+      await client.pressKey('A', 4);
+      await client.advanceFrames(40);
+      await checkpoint(client, `21-fine-${String(i).padStart(3, '0')}`);
+    }
+    await client.saveState(7);
   } else if (STAGE === 10) {
     await client.advanceFrames(10);
     await client.loadState(1);
