@@ -66,6 +66,7 @@ PATCH_MISSION_DESC_FR_SCRIPT := languages/fr/patches/mission_descriptions.py
 PATCH_ZONE_NAMES_FR_SCRIPT := languages/fr/patches/zone_names.py
 PATCH_WORLDMAP_LABELS_FR_SCRIPT := languages/fr/patches/worldmap_labels.py
 PATCH_TRAINER_CARD_DATE_FR_SCRIPT := languages/fr/patches/trainer_card_date.py
+PATCH_MONEY_AMOUNT_ORDER_FR_SCRIPT := languages/fr/patches/money_amount_order.py
 PATCH_TRAINER_CLASS_NAMES_FR_SCRIPT := languages/fr/patches/trainer_class_names.py
 PATCH_GENDERED_BUFFERS_SCRIPT := languages/fr/patches/gendered_buffers.py
 PATCH_BATTLE_STRING_TEMPLATES_SCRIPT := languages/fr/patches/battle_string_templates.py
@@ -273,6 +274,7 @@ build-fr: $(FRENCH_EXTRACT) $(SPANISH_EXTRACT) $(BUILD_SCRIPT)
 		--source $(FRENCH_ROM) \
 		--combined languages/fr/combined_fr.txt
 	@$(PYTHON) $(PATCH_TRAINER_CARD_DATE_FR_SCRIPT) --rom $(FR_BUILD)
+	@$(PYTHON) $(PATCH_MONEY_AMOUNT_ORDER_FR_SCRIPT) --rom $(FR_BUILD)
 	@$(PYTHON) scripts/insert_sprite.py --rom $(FR_BUILD) --lang fr --sprite selection --bmp languages/fr/sprites/selection.bmp
 	@echo "✓ FR ROM built — vérification des traductions de lieux..."
 	@$(PYTHON) -m pytest tests/test_location_names_fr.py -q --tb=short
