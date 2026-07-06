@@ -21,6 +21,11 @@ Exécuter la suite demandée, analyser les échecs, rapporter une cause racine a
   échec, remonter les bytes réels / la structure en cause, pas seulement le message.
 - **Jamais** proposer de skip/xfail pour cacher un échec, ni de fix hardcodé sur un
   offset.
+- **Multilingue** : si le fix touche du code partagé (`src/core/`, `build_language.py`,
+  un script de patch réutilisé sans suffixe `_<code>`), ne pas se contenter d'un
+  sous-dossier `tests/unit/fr/` — lancer la suite complète (`make test-python`), qui
+  couvre déjà `tests/unit/{fr,it,de,en}` et `tests/e2e/{fr,it,de,es}`. Voir
+  `.claude/rules/patterns/multilang-regression.md`.
 - Pour les sondes mGBA : sessions courtes, savestates, **ne jamais sauvegarder en jeu**.
 
 ## Sortie

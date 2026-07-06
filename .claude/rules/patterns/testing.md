@@ -45,3 +45,14 @@ du profil rapide. Layout : `tests/unit/`, `tests/e2e/`, `tests/e2e-playwright/`,
   Vitest/Playwright concernées. Pour une sonde mGBA : sessions courtes + savestates,
   **ne jamais sauvegarder en jeu** (cela écrase la fixture `.sav` et casse les goldens
   Playwright).
+
+## Multilingue (FR/IT/DE/Indie) — ne jamais tester une seule langue
+
+`tests/unit/{fr,it,de,en}` et `tests/e2e/{fr,it,de,es}` sont tous sous `tests/` :
+`make test` / `make test-python` les couvrent déjà **tous**. Un fix qui touche du
+code partagé (`src/core/`, `scripts/build_language.py`, un script de patch réutilisé
+sans suffixe `_<code>`) et n'est validé que par `pytest tests/unit/fr/` (ou un seul
+fichier `*_fr.py`) n'est **pas** vérifié — lance la suite complète. Si le fix touche
+la génération de ROM, rebuild aussi IT/DE (`make build-it && make build-de`) : les
+tests unitaires utilisent des fixtures synthétiques, seul un rebuild réel détecte une
+régression de ROM complète. Détails et checklist : [`multilang-regression.md`](multilang-regression.md).

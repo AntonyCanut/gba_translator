@@ -14,6 +14,7 @@ Procédures réutilisables chargées par l'agent. **Ordre de découverte** :
 | Skill | Quand l'utiliser |
 |-------|------------------|
 | [`build-fr-rom`](build-fr-rom/SKILL.md) | Construire et valider la ROM FR de bout en bout |
+| [`multilang-regression-check`](multilang-regression-check/SKILL.md) | Avant de clore tout fix de bug/patch : vérifier l'impact sur FR/IT/DE/Indie, pas une seule langue |
 
 ## Skills de processus (superpowers, vendorés)
 

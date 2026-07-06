@@ -32,6 +32,9 @@ L'agent ne doit **jamais** recourir à ces pratiques dans ce dépôt.
 - ❌ Skip d'un test pour masquer un échec.
 - ❌ Fix hardcodé sur un offset spécifique (`if offset == 0x...`).
 - ❌ Accepter < 100 % de réussite.
+- ❌ Valider un fix touchant du code partagé (`src/core/`, `build_language.py`, script
+  de patch réutilisé) avec des tests scopés à une seule langue (`tests/unit/fr/` seul) —
+  voir [`multilang-regression.md`](multilang-regression.md).
 
 ## Traductions — combined_fr.txt et ROM FR
 

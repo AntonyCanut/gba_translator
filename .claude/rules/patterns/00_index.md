@@ -13,6 +13,7 @@ Codex, Ollama) DOIT coder comme le reste du projet en respectant ces fichiers.
 | [`scripts-pipeline.md`](scripts-pipeline.md) | Scripts numérotés `NN_*.py`, `scripts/`, argparse, Makefile |
 | [`text-encoding.md`](text-encoding.md) | Charmap Gen III, terminateurs, control codes, pointeurs |
 | [`testing.md`](testing.md) | pytest, markers, profils, 100 % de succès, Vitest/Playwright |
+| [`multilang-regression.md`](multilang-regression.md) | FR/IT/DE partagent le même code : ne jamais tester/valider un fix sur une seule langue |
 | [`tooling.md`](tooling.md) | ruff, hook pre-commit, `sync-charmap`, CI |
 | [`naming.md`](naming.md) | Nommage fichiers / classes / fonctions / constantes |
 | [`forbidden.md`](forbidden.md) | Patterns interdits |
