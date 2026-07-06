@@ -1,9 +1,12 @@
 # German language descriptor — Pokémon Unbound EN→DE
 #
-# WORK IN PROGRESS. German is built by the generic driver
-# `scripts/build_language.py de`. Translations live in
-# languages/de/combined_de.txt (same `<offset_hex>: <text>` format as
-# combined_fr.txt). Offsets not present there stay English.
+# All 12 translation batches (23,980 unique FR offsets) are now covered.
+# German is built by the generic driver `scripts/build_language.py de`.
+# Translations live in languages/de/combined_de.txt (same `<offset_hex>:
+# <text>` format as combined_fr.txt). Offsets not present there stay
+# English — this still includes proper names/credits, corrupted/garbage
+# cells, and move/ability name+description tables that need dedicated
+# table patches rather than the generic text pipeline (tracked by F-83).
 #
 # ä ö ü Ä Ö Ü are now in the charmap (slots 0x63-0x60) and have glyphs
 # drawn by languages/de/patches/font.py, so the `font` step is active.
@@ -11,7 +14,7 @@ code: de
 name: German
 native_name: Deutsch
 builder_language: german          # value passed to the generic builder --language
-status: in_progress               # complete | in_progress
+status: complete                  # complete | in_progress
 build: generic                    # dedicated (make build-fr) | generic (build_language.py)
 
 combined: languages/de/combined_de.txt
