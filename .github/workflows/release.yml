@@ -6,12 +6,27 @@ on:
   workflow_dispatch:
 
 jobs:
-  release:
-    name: Build French + Italian + German ROMs & Release
+  # Each language builds in its own parallel job instead of one long sequential
+  # job. FR is mandatory (no continue-on-error): if it fails, the "build" job
+  # fails and the release job below refuses to publish. IT/DE are best-effort
+  # so a transient problem in either never blocks the proven FR release.
+  build:
+    name: Build ${{ matrix.lang_label }} ROM
     runs-on: ubuntu-latest
-    permissions:
-      contents: write
-
+    continue-on-error: ${{ !matrix.mandatory }}
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - lang: fr
+            lang_label: French
+            mandatory: true
+          - lang: it
+            lang_label: Italian
+            mandatory: false
+          - lang: de
+            lang_label: German
+            mandatory: false
     steps:
       - name: Checkout
         uses: actions/checkout@v6
@@ -24,82 +39,76 @@ jobs:
       - name: Install dependencies
         run: pip install -e ".[dev]"
 
-      # ── French (dedicated byte-perfect recipe) — mandatory ──────────────────
-      # Generate the translation JSON from combined_fr.txt + EN extraction.
-      # The trilingual CSV is gitignored, so it must be regenerated in CI.
+      # French uses a dedicated byte-perfect recipe. The trilingual CSV is
+      # gitignored, so the translation JSON must be regenerated in CI.
       - name: Prepare French translation JSON
+        if: matrix.lang == 'fr'
         run: make prepare-fr
 
-      - name: Build French ROM
-        run: make build-fr BUILD_NUMBER=${{ github.run_number }}
+      - name: Build ${{ matrix.lang_label }} ROM
+        run: make build-${{ matrix.lang }} BUILD_NUMBER=${{ github.run_number }}
 
-      - name: Verify FR version display
-        # Regression guard (B-19 / T-21): the FR ROM must show
-        # FR.2.1.<run_number> on the NOT FOR SALE screen and stamp the header.
+      - name: Verify ${{ matrix.lang_label }} version display
+        # Regression guard (B-19 / T-21): each ROM must show
+        # <LANG>.2.1.<run_number> on the NOT FOR SALE screen and stamp the header.
         run: |
           python3 scripts/verify_version_display.py \
-            --rom output/roms/GenedRom-fr.gba \
-            --lang-code fr \
+            --rom output/roms/GenedRom-${{ matrix.lang }}.gba \
+            --lang-code ${{ matrix.lang }} \
             --build-number ${{ github.run_number }}
 
-      # ── Italian (generic driver) — best-effort so a transient IT problem ────
-      # never drops the proven FR release. A failure here is surfaced loudly at
-      # the end of the job, after FR has shipped.
-      - name: Build Italian ROM
-        id: build_it
-        continue-on-error: true
-        run: make build-it BUILD_NUMBER=${{ github.run_number }}
+      - name: Upload ${{ matrix.lang_label }} ROM artifact
+        if: success()
+        uses: actions/upload-artifact@v4
+        with:
+          name: rom-${{ matrix.lang }}
+          path: output/roms/GenedRom-${{ matrix.lang }}.gba
 
-      - name: Verify IT version display
-        id: verify_it
-        if: steps.build_it.outcome == 'success'
-        continue-on-error: true
-        run: |
-          python3 scripts/verify_version_display.py \
-            --rom output/roms/GenedRom-it.gba \
-            --lang-code it \
-            --build-number ${{ github.run_number }}
+  # Final join: wait for every language build, then assemble whatever landed.
+  release:
+    name: Publish release
+    needs: [build]
+    if: always()
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v6
 
-      # ── German (generic driver) — best-effort, same rationale as Italian ────
-      - name: Build German ROM
-        id: build_de
+      - name: Download ROM artifacts
+        uses: actions/download-artifact@v4
         continue-on-error: true
-        run: make build-de BUILD_NUMBER=${{ github.run_number }}
+        with:
+          pattern: rom-*
+          path: artifacts
 
-      - name: Verify DE version display
-        id: verify_de
-        if: steps.build_de.outcome == 'success'
-        continue-on-error: true
-        run: |
-          python3 scripts/verify_version_display.py \
-            --rom output/roms/GenedRom-de.gba \
-            --lang-code de \
-            --build-number ${{ github.run_number }}
-
-      # ── Publish: FR always, IT/DE when they built & verified ────────────────
       - name: Publish release
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          IT_OK: ${{ steps.build_it.outcome == 'success' && steps.verify_it.outcome == 'success' }}
-          DE_OK: ${{ steps.build_de.outcome == 'success' && steps.verify_de.outcome == 'success' }}
         run: |
           SHA=$(git rev-parse --short HEAD)
           MSG=$(git log -1 --pretty=%s)
           RUN=${{ github.run_number }}
 
-          ASSETS=( "output/roms/GenedRom-fr.gba#pokemon_unbound_fr.gba" )
+          if [ ! -f artifacts/rom-fr/GenedRom-fr.gba ]; then
+            echo "::error::French ROM artifact missing — FR build must succeed for a release to be published."
+            exit 1
+          fi
+
+          ASSETS=( "artifacts/rom-fr/GenedRom-fr.gba#pokemon_unbound_fr.gba" )
           NOTES=$(printf '**Commit :** `%s` — %s\n\nBuildé automatiquement depuis la branche `%s` (build #%s).\n\n- 🇫🇷 `pokemon_unbound_fr.gba` — FR.2.1.%s' \
             "${SHA}" "${MSG}" "${GITHUB_REF_NAME}" "${RUN}" "${RUN}")
 
-          if [ "${IT_OK}" = "true" ] && [ -f output/roms/GenedRom-it.gba ]; then
-            ASSETS+=( "output/roms/GenedRom-it.gba#pokemon_unbound_it.gba" )
+          if [ -f artifacts/rom-it/GenedRom-it.gba ]; then
+            ASSETS+=( "artifacts/rom-it/GenedRom-it.gba#pokemon_unbound_it.gba" )
             NOTES="${NOTES}"$(printf '\n- 🇮🇹 `pokemon_unbound_it.gba` — IT.2.1.%s' "${RUN}")
           else
             NOTES="${NOTES}"$(printf '\n- 🇮🇹 build italienne indisponible pour ce build.')
           fi
 
-          if [ "${DE_OK}" = "true" ] && [ -f output/roms/GenedRom-de.gba ]; then
-            ASSETS+=( "output/roms/GenedRom-de.gba#pokemon_unbound_de.gba" )
+          if [ -f artifacts/rom-de/GenedRom-de.gba ]; then
+            ASSETS+=( "artifacts/rom-de/GenedRom-de.gba#pokemon_unbound_de.gba" )
             NOTES="${NOTES}"$(printf '\n- 🇩🇪 `pokemon_unbound_de.gba` — DE.2.1.%s' "${RUN}")
           else
             NOTES="${NOTES}"$(printf '\n- 🇩🇪 build allemande indisponible pour ce build.')
@@ -116,13 +125,15 @@ jobs:
 
       # ── Surface an IT/DE failure AFTER FR has shipped ───────────────────────
       - name: Fail if Italian ROM was not delivered
-        if: steps.build_it.outcome != 'success' || steps.verify_it.outcome != 'success'
         run: |
-          echo "::error::Italian ROM build/verify failed — FR was still released, but IT was skipped."
-          exit 1
+          if [ ! -f artifacts/rom-it/GenedRom-it.gba ]; then
+            echo "::error::Italian ROM build/verify failed — FR was still released, but IT was skipped."
+            exit 1
+          fi
 
       - name: Fail if German ROM was not delivered
-        if: steps.build_de.outcome != 'success' || steps.verify_de.outcome != 'success'
         run: |
-          echo "::error::German ROM build/verify failed — FR was still released, but DE was skipped."
-          exit 1
+          if [ ! -f artifacts/rom-de/GenedRom-de.gba ]; then
+            echo "::error::German ROM build/verify failed — FR was still released, but DE was skipped."
+            exit 1
+          fi
