@@ -63,18 +63,30 @@ def grid_to_tiles(grid: Grid, tiles_wide: int, tiles_tall: int) -> bytes:
     return bytes(out)
 
 
-def extract_block(rom: bytes, offset: int, tiles_wide: int, tiles_tall: int
-                   ) -> Tuple[Grid, int, int]:
-    """Decompress the LZ77 block at *offset* and return its pixel grid.
+def extract_block(rom: bytes, offset: int, tiles_wide: int, tiles_tall: int,
+                   compressed: bool = True) -> Tuple[Grid, int, int]:
+    """Return the pixel grid for the sprite block at *offset*.
+
+    When *compressed* is true (the default) the block is an LZ77-compressed
+    blob (see ``insert_block``). Some small OBJ tilesets — e.g. the naming
+    keyboard's help panel — are instead stored as a flat run of raw 4bpp
+    tiles with no compression; pass ``compressed=False`` for those.
 
     Returns ``(grid, decompressed_len, compressed_len)``. Raises ``ValueError``
     if the block can't be decompressed or is smaller than the sprite needs.
     """
+    needed = tiles_wide * tiles_tall * TILE_BYTES
+    if not compressed:
+        if offset + needed > len(rom):
+            raise ValueError(f"0x{offset:08X}: raw block overflows ROM")
+        raw = rom[offset:offset + needed]
+        grid = tiles_to_grid(raw, tiles_wide, tiles_tall)
+        return grid, needed, needed
+
     result = lz77_decompress(rom, offset)
     if result is None:
         raise ValueError(f"0x{offset:08X}: failed to decompress LZ77 block")
     decompressed, comp_len = result
-    needed = tiles_wide * tiles_tall * TILE_BYTES
     if len(decompressed) < needed:
         raise ValueError(
             f"0x{offset:08X}: decompressed size {len(decompressed)} < needed {needed}"
@@ -84,17 +96,27 @@ def extract_block(rom: bytes, offset: int, tiles_wide: int, tiles_tall: int
 
 
 def insert_block(rom: bytearray, offset: int, grid: Grid,
-                  tiles_wide: int, tiles_tall: int) -> None:
-    """Re-encode *grid* into tiles, recompress, and write back at *offset*.
+                  tiles_wide: int, tiles_tall: int,
+                  compressed: bool = True) -> None:
+    """Re-encode *grid* into tiles and write it back at *offset*.
 
-    Raises ``ValueError`` if the block can't be decompressed, is too small,
-    or the recompressed result would overwrite non-padding bytes.
+    When *compressed* is true (the default), recompress with LZ77; raises
+    ``ValueError`` if the block can't be decompressed, is too small, or the
+    recompressed result would overwrite non-padding bytes. When false, the
+    tiles are written back raw (fixed size, no compression) — see
+    ``extract_block``.
     """
+    needed = tiles_wide * tiles_tall * TILE_BYTES
+    if not compressed:
+        if offset + needed > len(rom):
+            raise ValueError(f"0x{offset:08X}: raw block overflows ROM")
+        rom[offset:offset + needed] = grid_to_tiles(grid, tiles_wide, tiles_tall)
+        return
+
     result = lz77_decompress(rom, offset)
     if result is None:
         raise ValueError(f"0x{offset:08X}: failed to decompress LZ77 block")
     decompressed, comp_len = result
-    needed = tiles_wide * tiles_tall * TILE_BYTES
     if len(decompressed) < needed:
         raise ValueError(
             f"0x{offset:08X}: decompressed size {len(decompressed)} < needed {needed}"
@@ -102,15 +124,15 @@ def insert_block(rom: bytearray, offset: int, grid: Grid,
 
     tiles = bytearray(decompressed)
     tiles[:needed] = grid_to_tiles(grid, tiles_wide, tiles_tall)
-    compressed = lz77_compress(bytes(tiles))
+    compressed_out = lz77_compress(bytes(tiles))
 
-    if offset + len(compressed) > len(rom):
+    if offset + len(compressed_out) > len(rom):
         raise ValueError(f"0x{offset:08X}: recompressed block overflows ROM")
-    if len(compressed) > comp_len:
-        extra = rom[offset + comp_len:offset + len(compressed)]
+    if len(compressed_out) > comp_len:
+        extra = rom[offset + comp_len:offset + len(compressed_out)]
         if any(b not in (0x00, 0xFF) for b in extra):
             raise ValueError(
-                f"0x{offset:08X}: recompressed ({len(compressed)}) > original "
+                f"0x{offset:08X}: recompressed ({len(compressed_out)}) > original "
                 f"({comp_len}) and tail is non-padding"
             )
-    rom[offset:offset + len(compressed)] = compressed
+    rom[offset:offset + len(compressed_out)] = compressed_out

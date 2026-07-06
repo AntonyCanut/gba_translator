@@ -53,7 +53,9 @@ def main() -> int:
     offset = sprite.blocks[args.block_index]
 
     rom = args.rom.read_bytes()
-    grid, dec_len, comp_len = extract_block(rom, offset, sprite.tiles_wide, sprite.tiles_tall)
+    grid, dec_len, comp_len = extract_block(
+        rom, offset, sprite.tiles_wide, sprite.tiles_tall, compressed=sprite.compressed
+    )
     width = sprite.tiles_wide * 8
     height = sprite.tiles_tall * 8
     write_indexed_bmp(args.out, width, height, grid)

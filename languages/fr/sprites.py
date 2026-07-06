@@ -17,6 +17,11 @@ class SpriteDef:
     blocks: Tuple[int, ...]
     tiles_wide: int
     tiles_tall: int
+    # True (default): block is LZ77-compressed (magic byte 0x10), recompressed
+    # on insert. False: block is a flat run of raw/uncompressed 4bpp tiles at
+    # a fixed size — used for small OBJ tilesets the engine DMAs directly
+    # rather than decompressing (e.g. the naming-keyboard help panel).
+    compressed: bool = True
 
 
 SPRITES: dict[str, SpriteDef] = {
@@ -27,5 +32,17 @@ SPRITES: dict[str, SpriteDef] = {
         blocks=(0x0B1E11C, 0x0B1E280, 0x00E82EA0, 0x00E9BF48),
         tiles_wide=4,
         tiles_tall=8,
+    ),
+    # Player/rival naming keyboard's right-side help panel (ticket F-109):
+    # blank shift-state swatch + "SELECT (>", "BACK"/"B BUTTON"/"OK"/"START",
+    # then the 3 alternate shift-state labels ("UPPER"/"lower"/"others")
+    # DMA'd into that swatch at runtime. Stored as raw uncompressed OBJ
+    # tiles (not LZ77) — located via mGBA OAM/VRAM probing, see
+    # scripts/probe_naming_sprites.mts and scripts/probe_sync_label.mts.
+    "selection": SpriteDef(
+        blocks=(0x00E985D8,),
+        tiles_wide=5,
+        tiles_tall=13,
+        compressed=False,
     ),
 }

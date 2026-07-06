@@ -67,7 +67,8 @@ def main() -> int:
     for i in indices:
         offset = sprite.blocks[i]
         try:
-            insert_block(rom, offset, grid, sprite.tiles_wide, sprite.tiles_tall)
+            insert_block(rom, offset, grid, sprite.tiles_wide, sprite.tiles_tall,
+                         compressed=sprite.compressed)
         except ValueError as exc:
             print(f"  WARN {args.sprite}[{i}] @ 0x{offset:08X}: {exc} — skip", file=sys.stderr)
             continue

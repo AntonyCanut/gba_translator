@@ -89,3 +89,41 @@ def test_insert_block_rejects_overflow_of_non_padding_tail():
 
     with pytest.raises(ValueError):
         insert_block(rom, offset, noisy_grid, tiles_wide, tiles_tall)
+
+
+def test_extract_block_raw_reads_uncompressed_tiles():
+    tiles_wide, tiles_tall = 1, 1
+    tiles = bytes([0x55] * TILE_BYTES)
+    rom = bytearray(tiles) + b"\xff" * 16
+
+    grid, dec_len, comp_len = extract_block(
+        bytes(rom), 0, tiles_wide, tiles_tall, compressed=False
+    )
+    assert dec_len == comp_len == TILE_BYTES
+    assert all(px == 5 for row in grid for px in row)
+
+
+def test_insert_block_raw_round_trip_preserves_size():
+    tiles_wide, tiles_tall = 2, 2
+    n_tiles = tiles_wide * tiles_tall
+    original = bytes((t * 3 + i) & 0xFF for t in range(n_tiles) for i in range(TILE_BYTES))
+    tail = b"\xab" * 16
+    rom = bytearray(original) + bytearray(tail)
+
+    grid = tiles_to_grid(original, tiles_wide, tiles_tall)
+    new_grid = [[(px + 3) % 16 for px in row] for row in grid]
+
+    insert_block(rom, 0, new_grid, tiles_wide, tiles_tall, compressed=False)
+
+    needed = n_tiles * TILE_BYTES
+    round_tripped_grid = tiles_to_grid(bytes(rom[:needed]), tiles_wide, tiles_tall)
+    assert round_tripped_grid == new_grid
+    # Raw insert must never touch bytes past the fixed-size block.
+    assert bytes(rom[needed:]) == tail
+
+
+def test_extract_block_raw_rejects_overflow_of_rom():
+    tiles_wide, tiles_tall = 2, 1
+    rom = bytes([0x00] * TILE_BYTES)  # only 1 tile available, needs 2
+    with pytest.raises(ValueError):
+        extract_block(rom, 0, tiles_wide, tiles_tall, compressed=False)
