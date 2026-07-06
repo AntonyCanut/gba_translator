@@ -1,14 +1,23 @@
 """
 Build-independent guard: the "back to previous menu" help text (offset
 0x416244) must start with a SHORT first word, or withdrawing a Pokémon from
-the Day-Care hard-freezes the game.
+the Day-Care hard-crashes (soft-resets) the game.
 
 Bug (all language builds, not the EN source): choosing "Oui" to
 "Veux-tu reprendre ton Pokémon ?" opens the selection menu whose cursor-help
-box renders this description. With the original FR wording
-"Revenir au\\nmenu précédent." the box hangs the game (screen stops updating,
-GetString* loop) — reproduced in mGBA from the shipped .sav, absent on the
-untouched englishrom.gba.
+box renders this global description. With the original FR wording
+"Revenir au\\nmenu précédent." the wide leading word overflows the fixed-size
+cursor-help window, corrupts adjacent memory and CRASHES the game — mGBA
+terminates and the ROM soft-resets to the title (this is the "restart" the
+user reported; it is NOT a benign GetString render loop). Reproduced in mGBA
+from the shipped .sav, absent on the untouched englishrom.gba.
+
+Isolation proof: patching ONLY these bytes of an otherwise-clean, working FR
+build back to "Revenir au\\nmenu précédent." reintroduces the crash at the exact
+list-open frame; restoring "Va au menu\\nprécédent." makes the withdraw complete
+cleanly (both Pokémon returned, party full handled). So the crash is controlled
+entirely by this one string — it is a render-overflow reset, not a pointer
+clobber.
 
 Root cause, pinned by in-engine bisection: this particular help box only
 tolerates a very short *first word*. The pixel widths tell the story:
@@ -71,6 +80,7 @@ def test_daycare_menu_help_first_word_is_short():
     assert width <= MAX_FIRST_WORD_WIDTH, (
         f"0x{MENU_HELP_OFFSET:X} help text {entry!r} starts with {first_word!r} "
         f"({width} px > {MAX_FIRST_WORD_WIDTH} px) — a wide leading word here "
-        "hard-freezes the Day-Care withdraw menu. Use a short first word "
+        "overflows the cursor-help window and hard-crashes / soft-resets the "
+        "Day-Care withdraw menu. Use a short first word "
         '(e.g. "Va au menu\\nprécédent.").'
     )
