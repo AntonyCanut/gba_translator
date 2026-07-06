@@ -197,3 +197,22 @@ def test_rendered_order_is_verb_then_modifier():
     assert plus_two.index("augmente") < plus_two.index("beaucoup"), (
         f"verb must precede the adverb: {plus_two!r}"
     )
+
+
+def test_no_phantom_entry_after_rise_verb_buffer():
+    """Regression guard (issue #26): a leftover, unreferenced English fragment
+    ("ose!", a substring of the old "rose!" verb) once sat one byte past the
+    rise verb buffer at 0x3FCB4A. It has zero pointer referrers in the English
+    ROM — it is dead data that happens to be byte-adjacent to a live string —
+    but combined_fr.txt still carried an entry for it at 0x3FCB4B. Because
+    0x3FCB4A shrank to just "!" (see B-35 above), the injector wrote this
+    phantom entry directly after the "!" terminator, corrupting the in-game
+    message into "... augmente !ose !" instead of "... augmente !".
+
+    There must be no combined_fr.txt entry for this dead offset."""
+    entries = _last_entries()
+    assert 0x3FCB4B not in entries, (
+        "0x3FCB4B is a phantom, unreferenced offset one byte past the rise "
+        "verb buffer (0x3FCB4A) — it must not be translated/present, or it "
+        "corrupts the live '!' terminator into '!ose!' in-game."
+    )
