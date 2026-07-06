@@ -241,6 +241,15 @@ def build_rom(config, translation_json: Path) -> Path:
     ]
     if SPANISH_ROM.exists():
         cmd += ["--pointer-proof-rom", SPANISH_ROM]
+        # Keep reserving Spanish-populated bytes here (unlike the byte-perfect
+        # FR recipe's own reason to do so): `mission_descriptions`,
+        # `worldmap_junction_panels` and the other late lang.yaml patches run
+        # with no --reference-rom specifically so they can harvest this same
+        # ~29 KB EN-free/ES-populated pool once the main pass is done (see the
+        # `patches:` comment in languages/de/lang.yaml). Also excluding it here
+        # would let the main pass eat that pool first and starve every late
+        # patch that counts on it (observed: nature_names/mission_descriptions
+        # failing with 0 free blocks left).
     run(cmd)
     return out_rom
 

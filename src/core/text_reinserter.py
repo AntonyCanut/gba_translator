@@ -410,8 +410,19 @@ class SmartReinserter:
         value = struct.unpack('<I', word)[0]
         return 0x08000000 <= value < 0x08000000 + len(proof)
 
-    def _queue_relocation(self, encoded: bytes, pointer_offsets: List[int], offset: int) -> bool:
-        self._pending_relocations.append((encoded, pointer_offsets, offset))
+    def _queue_relocation(
+        self,
+        encoded: bytes,
+        pointer_offsets: List[int],
+        offset: int,
+        text: str = '',
+        encoding: str = 'pokemon',
+        max_length: Optional[int] = None,
+        allow_fallback: bool = False,
+    ) -> bool:
+        self._pending_relocations.append(
+            (encoded, pointer_offsets, offset, text, encoding, max_length, allow_fallback)
+        )
         return True
 
     def flush_relocations(self) -> None:
@@ -442,10 +453,53 @@ class SmartReinserter:
         # same content always yields byte-identical bytes. (item[0] is the
         # encoded string, item[2] the source offset, unique per entry.)
         pending.sort(key=lambda item: (len(item[0]), item[0], item[2]))
-        for encoded, pointer_offsets, offset in pending:
-            self._relocate_text(encoded, pointer_offsets, offset)
+        for encoded, pointer_offsets, offset, text, encoding, max_length, allow_fallback in pending:
+            self._relocate_text(
+                encoded, pointer_offsets, offset,
+                text=text, encoding=encoding, max_length=max_length,
+                allow_fallback=allow_fallback,
+            )
 
-    def _relocate_text(self, encoded: bytes, pointer_offsets: List[int], offset: int) -> bool:
+    def _fallback_in_place(
+        self, offset: int, text: str, encoding: str, max_length: Optional[int],
+    ) -> bool:
+        """Last resort when a queued relocation finds no free space: shrink the
+        translation to fit its *original* cell instead of leaving the English
+        text behind (the symptom in #54 — long dialogue silently reverts to
+        English once free space is exhausted). Mirrors the immediate fallback
+        path in :meth:`reinsert_text`, just triggered later, once relocation is
+        proven impossible instead of merely unattempted.
+        """
+        if not (self.fallback and text and max_length and max_length > 0):
+            return False
+        result = self.fallback.shrink_to_fit(text, encoding, max_length)
+        if not result.fits:
+            return False
+        encoded = TextEncoder.encode(result.text, encoding, skip_aliases=self.skip_encode_aliases)
+        for i, byte in enumerate(encoded):
+            self.rom_data[offset + i] = byte
+        self.stats['fallback_used'] += 1
+        self.stats['warnings'].append({
+            'offset': f"0x{offset:08X}",
+            'text': text,
+            'fallback_text': result.text,
+            'info': (
+                f"fallback_{result.strategy}_after_relocation_failed "
+                f"({result.original_bytes} -> {result.final_bytes} bytes)"
+            ),
+        })
+        return True
+
+    def _relocate_text(
+        self,
+        encoded: bytes,
+        pointer_offsets: List[int],
+        offset: int,
+        text: str = '',
+        encoding: str = 'pokemon',
+        max_length: Optional[int] = None,
+        allow_fallback: bool = False,
+    ) -> bool:
         if not self.free_space_allocator:
             return False
 
@@ -474,6 +528,14 @@ class SmartReinserter:
 
         new_offset = self.free_space_allocator.allocate(len(encoded))
         if new_offset is None:
+            # No free space anywhere for the full text — the pointer sites
+            # still aim at `offset` (never touched, since this string went
+            # straight to the relocation queue), so shrinking it to fit its
+            # own original cell is a safe last resort instead of leaving the
+            # untranslated English text on screen.
+            if allow_fallback and self._fallback_in_place(offset, text, encoding, max_length):
+                self.stats['success'] += 1
+                return True
             self.stats['relocation_failed'] += 1
             self.stats['warnings'].append({
                 'offset': f"0x{offset:08X}",
@@ -589,7 +651,11 @@ class SmartReinserter:
                 if self.allow_relocate and pointer_offsets:
                     safe_sites = self._plausible_pointer_sites(offset, pointer_offsets)
                     if safe_sites:
-                        return self._queue_relocation(encoded, safe_sites, offset)
+                        return self._queue_relocation(
+                            encoded, safe_sites, offset,
+                            text=text, encoding=encoding, max_length=max_length,
+                            allow_fallback=allow_fallback,
+                        )
 
                 # Synthesize a shorter French variant that fits in place rather
                 # than leaving the English string behind. Operates on `text`,
