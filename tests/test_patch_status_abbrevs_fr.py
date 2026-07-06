@@ -23,7 +23,7 @@ EN_ROM = Path(__file__).parent.parent / "input" / "roms" / "englishrom.gba"
 BUILT_FR_ROM = Path(__file__).parent.parent / "output" / "roms" / "GenedRom-fr.gba"
 
 # Expected FR target per table index (PAR at index 2 is intentionally absent).
-EXPECTED_FR = {0: "SOM", 1: "EMP", 3: "BRL", 4: "GEL"}
+EXPECTED_FR = {0: "SOM", 1: "POI", 3: "BRU", 4: "GEL"}
 
 
 def _build_synthetic_rom(strings_by_index):
@@ -77,15 +77,27 @@ class TestApplyToRom(unittest.TestCase):
     def test_self_heals_prior_dor(self):
         # An older build shipped "DOR" for sleep; re-running must converge to SOM.
         rom, _ = _build_synthetic_rom(
-            {0: "DOR", 1: "EMP", 2: "PAR", 3: "BRL", 4: "GEL"}
+            {0: "DOR", 1: "POI", 2: "PAR", 3: "BRU", 4: "GEL"}
         )
         changed = apply_to_rom(rom)
         self.assertEqual(changed, 1)
         self.assertEqual(_decode_index(rom, 0), "SOM")
 
-    def test_idempotent(self):
+    def test_self_heals_prior_emp_and_brl(self):
+        # An older build shipped "EMP"/"BRL"; re-running must converge to the
+        # F-108 targets "POI"/"BRU" (kept in sync with the status_badges.py
+        # graphic patch).
         rom, _ = _build_synthetic_rom(
             {0: "SOM", 1: "EMP", 2: "PAR", 3: "BRL", 4: "GEL"}
+        )
+        changed = apply_to_rom(rom)
+        self.assertEqual(changed, 2)
+        self.assertEqual(_decode_index(rom, 1), "POI")
+        self.assertEqual(_decode_index(rom, 3), "BRU")
+
+    def test_idempotent(self):
+        rom, _ = _build_synthetic_rom(
+            {0: "SOM", 1: "POI", 2: "PAR", 3: "BRU", 4: "GEL"}
         )
         self.assertEqual(apply_to_rom(rom), 0)
 

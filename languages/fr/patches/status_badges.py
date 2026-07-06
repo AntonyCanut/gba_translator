@@ -6,12 +6,15 @@ LZ77-compressed 4bpp tile sets.  Each 32-tile block encodes 8 badge slots
 of 4 tiles each:
   [left_border_tile][content_tile1][content_tile2][right_border_tile]
 
-Slot layout (verified by decoding block 0x0B1E11C of englishrom.gba):
-  slot 0 (pal4,  purple) : PSN  → EMP  (Empoisonné)
+Slot layout (verified by decoding block 0x0B1E11C of englishrom.gba, and
+cross-checked pixel-for-pixel against languages/fr/sprites/status_badges.bmp,
+the reference art attached to ticket F-108 — extractable/re-editable via
+scripts/extract_sprite.py --sprite status_badges):
+  slot 0 (pal4,  purple) : PSN  → POI  (Poison)
   slot 1 (pal6,  yellow) : PAR  → PAR  (unchanged)
   slot 2 (pal8,  blue)   : SLP  → SOM  (Sommeil)
   slot 3 (pal10, cyan)   : FRZ  → GEL  (Gelé)
-  slot 4 (pal12, red)    : BRN  → BRL  (Brûlure)
+  slot 4 (pal12, red)    : BRN  → BRU  (Brûlure)
   slot 5 (pal4)          : TOX? → unchanged (garbled / unused)
   slot 6 (pal14, gray)   : FNT  → KO   (fainted, 2-letter badge)
   slot 7                 : empty
@@ -80,16 +83,19 @@ _LETTERS: dict[str, list[list[bool]]] = {
     "O": [[_B,_L,_L,_B],[_L,_B,_B,_L],[_L,_B,_B,_L],[_L,_B,_B,_L],[_L,_B,_B,_L],[_B,_L,_L,_B]],
     # S extracted pixel-for-pixel from the English SLP badge (curved, not blocky)
     "S": [[_B,_L,_L,_B],[_L,_B,_B,_L],[_L,_L,_B,_B],[_B,_B,_L,_L],[_L,_B,_B,_L],[_B,_L,_L,_B]],
+    # I and U extracted pixel-for-pixel from the F-108 reference art (POI/BRU)
+    "I": [[_L,_L,_L,_B],[_B,_L,_B,_B],[_B,_L,_B,_B],[_B,_L,_B,_B],[_B,_L,_B,_B],[_L,_L,_L,_B]],
+    "U": [[_L,_B,_B,_L],[_L,_B,_B,_L],[_L,_B,_B,_L],[_L,_B,_B,_L],[_L,_B,_B,_L],[_B,_L,_L,_B]],
 }
 
 # ── Status slot patches ───────────────────────────────────────────────────────
 # (slot_index, fr_letter1, fr_letter2, fr_letter3)
 # Slot 1 (PAR→PAR) and slot 5 (garbled) are intentionally excluded.
 _STATUS_PATCHES: list[tuple[int, str, str, str]] = [
-    (0, "E", "M", "P"),   # PSN → EMP
+    (0, "P", "O", "I"),   # PSN → POI
     (2, "S", "O", "M"),   # SLP → SOM
     (3, "G", "E", "L"),   # FRZ → GEL
-    (4, "B", "R", "L"),   # BRN → BRL  (B and R unchanged; only N→L)
+    (4, "B", "R", "U"),   # BRN → BRU  (B and R unchanged; only N→U)
 ]
 
 # FNT→KO badge (2-letter, slot 6, bg=pal14)
@@ -223,7 +229,7 @@ def _patch_block(rom: bytearray, offset: int) -> bool:
     tiles = bytearray(decompressed)
     changes: list[str] = []
 
-    # ── 1. 3-letter status badges (PSN→EMP, SLP→SOM, FRZ→GEL, BRN→BRL) ──────
+    # ── 1. 3-letter status badges (PSN→POI, SLP→SOM, FRZ→GEL, BRN→BRU) ──────
     for slot, a, b_ltr, c in _STATUS_PATCHES:
         bg = _read_slot_bg(tiles, slot)
         t1, t2 = _make_3letter_tiles(

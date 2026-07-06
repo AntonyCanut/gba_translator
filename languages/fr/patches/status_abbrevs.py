@@ -7,9 +7,9 @@ padding). Following each live pointer lands on a 3-char, 0xFF-terminated string
 (packed at 0x41790C..0x41791C in the stock EN ROM):
 
   idx0 → SLP (Sleep)     → SOM (Sommeil)
-  idx1 → PSN (Poison)    → EMP (Empoisonné)
+  idx1 → PSN (Poison)    → POI (Poison)
   idx2 → PAR (Paralysis) → PAR (no change)
-  idx3 → BRN (Burn)      → BRL (Brûlure)
+  idx3 → BRN (Burn)      → BRU (Brûlure)
   idx4 → FRZ (Frozen)    → GEL (Gelé)
 
 Why this is a class-3 *post-build* patch and not a `combined_fr.txt` entry:
@@ -63,11 +63,11 @@ _EN_STATUS = {
 # Each entry: table index, EN original, FR target, and the set of *prior* FR
 # variants we are willing to overwrite (so a re-run self-heals an older build).
 STATUS_PATCHES = [
-    {"index": 0, "en": "SLP", "fr": "SOM", "prior": {"DOR"}},  # Sommeil
-    {"index": 1, "en": "PSN", "fr": "EMP", "prior": set()},    # Empoisonné
+    {"index": 0, "en": "SLP", "fr": "SOM", "prior": {"DOR"}},         # Sommeil
+    {"index": 1, "en": "PSN", "fr": "POI", "prior": {"EMP"}},         # Poison
     # index 2 = PAR, identical in FR → no entry
-    {"index": 3, "en": "BRN", "fr": "BRL", "prior": set()},    # Brûlure
-    {"index": 4, "en": "FRZ", "fr": "GEL", "prior": set()},    # Gelé
+    {"index": 3, "en": "BRN", "fr": "BRU", "prior": {"BRL"}},         # Brûlure
+    {"index": 4, "en": "FRZ", "fr": "GEL", "prior": set()},           # Gelé
 ]
 
 
