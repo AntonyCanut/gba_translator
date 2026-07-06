@@ -996,7 +996,7 @@
 0x250026: LUFTSCHLEUSE
 0x26D4E5: Fangen wir an!
 0x26D4F7: Das war ein toller Kampf! Meine\nPokémon hatten Spaß daran!
-0x26D524: Jetzt, wo der Eingang zur RBT-Autobahn nicht mehr versiegelt ist,\lkonnte ich endlich trainieren!\pSag mal, willst du gegen meine\nfrisch trainierten Pokémon kämpfen?
+0x26D524: Jetzt, wo der Eingang zum SES-Expressweg nicht mehr versiegelt ist,\lkonnte ich endlich trainieren!\pSag mal, willst du gegen meine\nfrisch trainierten Pokémon kämpfen?
 0x26D5BF: Danke, dass du gegen mich gekämpft hast!
 0x26D5DC: Du willst über die Herausforderungsroute\ngehen?\pDann musst du zuerst an mir\nvorbei!
 0x26D733: Ach, okay. Falls du deine Meinung änderst,\nbist du jederzeit willkommen!
@@ -4929,7 +4929,7 @@
 0x745132: <0x0F> P<0x56><0x7C><0x08><0x09><0x06><0x02>Wir haben gerade\neinen großen Fang verpasst,\lunsere Ziele sind uns wieder entwischt…\pDeshalb schmollen wir.
 0x7451D0: Tut mir leid, aber du kannst jetzt\nnicht hereinkommen.\pMein Großvater hält sein tägliches\nNickerchen und möchte nicht\lgestört werden.\pKomm später wieder, wenn er\nwach ist, falls du mit ihm reden willst.
 0x74528C: Hast du das Trainerhaus\nin Dresco schon besucht?\pEs ist das schwarz-blaue Gebäude im\nSüden der Stadt.
-0x745316: Das ist ein ziemlich neuer Eingang\nzur Autoroute RBT.\pWir bauen dort also noch\nimmer eine Brücke.
+0x745316: Das ist ein ziemlich neuer Eingang\nzum SES-Expressweg.\pWir bauen dort also noch\nimmer eine Brücke.
 0x745382: Im Norden von hier gibt es einen\nwunderschönen Ort namens Paradis Floral!\pÜberall gibt es Blumen!
 0x7453EE: Das ist eine Statue des\nlegendären Feuer-Pokémon Lavados.\pMan sagt, Lavados diente einst als\nHerold einer großen Dunkelheit, aber\lnun lebt er im\lVolcan Cendré.
 0x745518: Route 3\p<0x79> Paradis Floral\n<0x7A> Dresco
@@ -4946,7 +4946,7 @@
 0x745CCF: Wenn du deine Meinung änderst, komm\njederzeit wieder!
 0x745D0D: Dann fangen wir an!
 0x745D25: Toller Kampf! Meine Pokémon hatten\nviel Spaß!
-0x745D52: Jetzt, wo der Eingang zur Autoroute RBT nicht mehr versiegelt ist, konnte ich\lendlich trainieren!\pSag mal, hättest du Lust, gegen meine\nfrisch trainierten Pokémon anzutreten?
+0x745D52: Jetzt, wo der Eingang zum SES-Expressweg nicht mehr versiegelt ist, konnte ich\lendlich trainieren!\pSag mal, hättest du Lust, gegen meine\nfrisch trainierten Pokémon anzutreten?
 0x745DED: Danke, dass du gegen mich gekämpft hast!
 0x746471: Der <0xFC><0x01><0x06>Myrapla <0xFC><0x01><0x08>steigt mir\nmanchmal zu Kopf, ich sehe\lDinge, die nicht real sind.
 0x7464C8: Weißt du, was ein {COLOR}ÉEdelstein {COLOR}Ëist?
@@ -5050,7 +5050,7 @@
 0x7537D6: Ich bin dort, wo ich sein möchte.
 0x754900: Du bist es!\nDer große <0xFD><0x02>, der mich gerettet hat!\pDu bist der Beste!
 0x754F11: Hast du die Leute gerochen?
-0x754F2C: Die Autoroute RBT führt von Cratéris nach\nAutomnia unter unseren Füßen.
+0x754F2C: Der SES-Expressweg führt von Cratéris nach\nAutomnia unter unseren Füßen.
 0x7551B9: Ich frage mich, wie viel Gewicht der\nBoden tragen kann.
 0x7551EA: Genug für einen guten Kampf!
 0x755204: Wenn 100 Leute wie ich hier\nstehen würden, glaubst du, der Boden würde halten?
@@ -5790,9 +5790,9 @@
 0x7A96E6: Alle Pokémon haben {COLOR}ÉFähigkeiten{COLOR}Ë,\ndie im Kampf nützlich sind.\pFähigkeiten können ihrem Träger\nhelfen oder schaden, je nach\lFähigkeit.\pManche Fähigkeiten sind auch\naußerhalb von Kämpfen nützlich.\pBeherrsche sie, wenn du ein\nexzellenter Trainer werden willst.
 0x7A97DE: Die meisten Arenaleiter verlassen\nsich auf die {COLOR}ÉMega-Entwicklung{COLOR}Ç.\pSei vorsichtig und bereite dich\nvor, wenn du sie besiegen willst.\pWenn du nicht weißt, was eine\nMega-Entwicklung ist, stell dir\leinen gewaltigen Kraftschub vor.
 0x7A99C5: Danke, {PLAYER}.\nDas weiß ich wirklich zu schätzen.\pIch werde versuchen, von\n{COLOR}ÉAutomnia{COLOR}Ë aus einen Zugang zur\l{COLOR}ÉRoute 9{COLOR}Ë zu finden.\pDu solltest wahrscheinlich etwas\nÄhnliches versuchen.
-0x7A9A75: Vor dreißig Jahren raste ein\nMeteorit auf Borrius zu.\pDie Astronomen von Naville\nsagten voraus, dass er, wenn er\lnicht gestoppt würde, genau hier\lauf Ville Vallée fallen und\lalles Leben vernichten würde.\pIn aller Eile evakuierten wir die\nStadt.\pAls wir über die Autoroute RBT\nflohen, erfuhren wir die\lNachricht.\pDer Meteorit würde dann die halbe\nRegion zerstören!\pWären wir unter die Erde\ngeflohen, hätten wir eine große\lChance gehabt, verschüttet zu werden.\pDas Chaos regierte.\pAlles schien verloren… bis ER\nauftauchte.\p{COLOR}ÉAros{COLOR}Ë, die Legende.\pEr kam mit Arceus und benutzte ein\nkleines Pokémon, um alle\lsicher nach Borrius Est zu\lteleportieren.\pEr hatte vor, den Meteoriten\nfrontal anzugreifen und ihn zu zerschmettern.\pNachdem alle in Sicherheit\ngebracht waren, erzählt man sich,\lritt er auf einem Rayquaza und\lrammte den Meteoriten!\pEr zerbarst, und die meisten\nBruchstücke fielen auf\lVille Vallée.\pDie Stadt wurde zerstört, aber Aros\nhatte die Region gerettet.\pIch werde diese Tat, die er\nvollbracht hat, nie vergessen.
-0x7A9E8F: {COLOR}ÇDie Autoroute RBT ist\nzugefroren.\pAls Arenaleiterin dieser Stadt ist\nes meine Aufgabe, das zu regeln.\pSchau, wie ich mit Steinhieb\ndas Eis zerschlagen kann!
-0x7A9EA3: <0xFC><0x01><0x04>Seltsamerweise ist der Eingang\nder Autoroute RBT komplett\lzugefroren.\pAls Arenaleiter dieser Stadt ist es\nmeine Pflicht zu handeln.\pSchau: Mit der Attacke\nSteinhieb zerschlage ich dieses Eis!
+0x7A9A75: Vor dreißig Jahren raste ein\nMeteorit auf Borrius zu.\pDie Astronomen von Naville\nsagten voraus, dass er, wenn er\lnicht gestoppt würde, genau hier\lauf Ville Vallée fallen und\lalles Leben vernichten würde.\pIn aller Eile evakuierten wir die\nStadt.\pAls wir über den SES-Expressweg\nflohen, erfuhren wir die\lNachricht.\pDer Meteorit würde dann die halbe\nRegion zerstören!\pWären wir unter die Erde\ngeflohen, hätten wir eine große\lChance gehabt, verschüttet zu werden.\pDas Chaos regierte.\pAlles schien verloren… bis ER\nauftauchte.\p{COLOR}ÉAros{COLOR}Ë, die Legende.\pEr kam mit Arceus und benutzte ein\nkleines Pokémon, um alle\lsicher nach Borrius Est zu\lteleportieren.\pEr hatte vor, den Meteoriten\nfrontal anzugreifen und ihn zu zerschmettern.\pNachdem alle in Sicherheit\ngebracht waren, erzählt man sich,\lritt er auf einem Rayquaza und\lrammte den Meteoriten!\pEr zerbarst, und die meisten\nBruchstücke fielen auf\lVille Vallée.\pDie Stadt wurde zerstört, aber Aros\nhatte die Region gerettet.\pIch werde diese Tat, die er\nvollbracht hat, nie vergessen.
+0x7A9E8F: {COLOR}ÇDer SES-Expressweg ist\nzugefroren.\pAls Arenaleiterin dieser Stadt ist\nes meine Aufgabe, das zu regeln.\pSchau, wie ich mit Steinhieb\ndas Eis zerschlagen kann!
+0x7A9EA3: <0xFC><0x01><0x04>Seltsamerweise ist der Eingang\ndes SES-Expresswegs komplett\lzugefroren.\pAls Arenaleiter dieser Stadt ist es\nmeine Pflicht zu handeln.\pSchau: Mit der Attacke\nSteinhieb zerschlage ich dieses Eis!
 0x7A9F78: 9{COLOR}ÇStell dich vor einen rissigen\nFelsen und wähle ein Pokémon zum\lZerschlagen.\pIch hoffe, du hast die Grundlagen\nvon Steinhieb verstanden!\pIch muss zurück zur Arena, also\nbis zum nächsten Mal!
 0x7AA251: Ich mache nur Spaß, ich gehe\nnirgendwohin.
 0x7AA277: Ich werde für alle Ewigkeit hier\nstehen bleiben.
@@ -5861,7 +5861,7 @@
 0x7B3728: Du wirst Ivory nicht finden,\nwenn du überall herumrennst!
 0x7B3822: Ich bin gebrochen.
 0x7B3834: Ich sollte Ivory besser warnen!
-0x7B387A: <0xFC><0x01><0x04><0xFD><0x01>, ich habe vergessen, dir\netwas zu zeigen!\pKomm bitte mit mir zur\nAutoroute RBT.
+0x7B387A: <0xFC><0x01><0x04><0xFD><0x01>, ich habe vergessen, dir\netwas zu zeigen!\pKomm bitte mit mir zum\nSES-Expressweg.
 0x7B38CC: Wow, es ist lange her, dass jemand\nBig Mo besiegt hat, geschweige\ldenn die Ring-Herausforderung\lgeschafft hat!\pGut gemacht!\nDu hast deine Härte bewiesen!\pNimm diesen Edelstein, um noch\nweiterzukommen!
 0x7B3979: Der Edelstein, den ich dir gegeben\nhabe, kann eine Kampf-Attacke\lim Kampf verstärken.\pWenn du ihn benutzt, wirkst du\nnoch stärker, als du es bist!
 0x7B39FA: Ich sollte vielleicht nach Antésia\nzurückkehren.\pIch bin hier nicht auf der Höhe.
@@ -6086,7 +6086,7 @@
 0x7C0649: Ich rede nicht mit dir.\nDu bist zu gemein.
 0x7C06F6: Vielleicht gebe ich dir morgen\nauch etwas.
 0x7C0A2A: Nein. Ihr kämpft nicht wie\nsolche.
-0x7C0B71: Mel, der Arenaleiter, ist nicht da.\n\pEr macht seinen Kopf frei auf der Autoroute RBT.
+0x7C0B71: Mel, der Arenaleiter, ist nicht da.\n\pEr macht seinen Kopf frei auf dem SES-Expressweg.
 0x7C0C54: Ein Assistent von Log in Automnia\n\lschenkt dir etwas, wenn du genug\n\lPokémon gefangen hast. Ich hoffe,\n\psie helfen dir, deinen Pokédex zu vervollständigen!\n
 0x7C0D3B: Manche Pokémon hier entwickeln sich\n\lnur mit einem Wasserstein.\n
 0x7C0D84: Unsere Kräfte werden bald verstreut\n\psein. Wenn Sie uns helfen möchten,\nwird das immer geschätzt.
@@ -6723,7 +6723,7 @@
 0x7E8C86: Ein ganz gewöhnliches Lagerhaus.\pHier gibt es nichts zu sehen.
 0x7E8CC1: Viville\pDie Stadt voller Licht und\nWohlstand.
 0x7E8CF8: Die Tür ist verschlossen.
-0x7E8EF5: Danke!\pMein Bruder ist sicher auf der\nAutoroute RBT Nord.\pIch würde selbst gehen, aber ich\nbin zu schwach.\pMan sagt, diese Schwarzen Flambirex\nsind wirklich fies.
+0x7E8EF5: Danke!\pMein Bruder ist sicher auf dem\nSES-Expressweg Nord.\pIch würde selbst gehen, aber ich\nbin zu schwach.\pMan sagt, diese Schwarzen Flambirex\nsind wirklich fies.
 0x7E8FA1: Du hast danach gefragt.
 0x7E90AB: {COLOR}ËHey! Wer hat dir gesagt, dass du\nvorbeigehen darfst?\pDieser Ort gehört uns, den\nSchwarzen Flambirex!\pDas ist unsere Arena, Kleiner!\pVerschwinde! Geh heim zu deiner\nMama, kleiner Musterschüler!
 0x7E9160: {COLOR}ËHa! Na gut!\pRotzlöffel wie du mit so einer\nglänzenden Zukunft…\pGeh zurück zu deinen Eltern und\nsei brav.\pVergiss dein Fläschchen nicht!
@@ -7136,7 +7136,7 @@
 0x7F96A5: Ich bin in die Kanalisation\ngestiegen, um sie zu suchen, konnte\lsie aber nicht finden.\pDu fragst dich bestimmt, was meine\nSocken überhaupt in der Toilette\lzu suchen hatten.\pAber das ist eine andere Geschichte\nfür ein andermal.\pJedenfalls dachte ich mir, dass du\nsie vielleicht holen könntest ?
 0x7F97CA: Danke, Alter. Ich wusste, dass\nich mich auf dich verlassen kann.
 0x7F97F4: Danke, Süße. Ich wusste, dass\nich mich auf dich verlassen kann.
-0x7F981F: Steig in die Kanalisation und hol\nmeine Socken.\pDer Haupteingang ist in der Nähe\nder Autoroute RBT.
+0x7F981F: Steig in die Kanalisation und hol\nmeine Socken.\pDer Haupteingang ist in der Nähe\ndes SES-Expresswegs.
 0x7F987D: Ich bin dir nicht böse, <0xFD><0x01>.\nAlles gut.\pIch werde wohl ab jetzt ohne mein\nLieblingspaar Socken leben müssen.\lSchnief.
 0x7F98F6: Du hast sie gefunden ! Igitt, sie\nstinken !
 0x7F991F: <0xFC><0x01><0x02><0xFD><0x01> hat die schmutzigen\nSocken dem Schergen der <0xFD><0x01> Noir\lgegeben.
@@ -7474,7 +7474,7 @@
 0x8CB6F7: Oh!\pMein Gedächtnis lässt nach… ich habe\nnoch etwas für dich.\pWenn du {RIVAL} das nächste Mal\nsiehst, gib ihm diesen Pokédex.
 0x8CB773: Er ist ziemlich kühl zu mir, seit\nseine Eltern ihn mir als Kind\lanvertraut haben, aber er scheint gut\lmit dir auszukommen.\pIch bin sicher, mit dem Pokédex\nwürde er zustimmen zu helfen.
 0x8CB82C: Geh zu meinem Freund\nin {COLOR}ÉDresco{COLOR}Ë.\pIch zähle auf dich.
-0x8CB872: {PLAYER}, schnell zum\n{COLOR}ÉMont Foudroyant{COLOR}Ë!\pWenn die Schatten vor dir dort ankommen,\nist Borrius verloren!\pÜber die {COLOR}ÉAutoroute RBT{COLOR}Ë\nschnell nach {COLOR}ÉSüden{COLOR}Ë.
+0x8CB872: {PLAYER}, schnell zum\n{COLOR}ÉMont Foudroyant{COLOR}Ë!\pWenn die Schatten vor dir dort ankommen,\nist Borrius verloren!\pÜber den {COLOR}ÉSES-Expressweg{COLOR}Ë\nschnell nach {COLOR}ÉSüden{COLOR}Ë.
 0x8CB932: Mit Zapdos in ihrem Besitz\nmüssen die Schatten nur noch\ldie drei Vögel bei den {COLOR}ÉRuines du\lVide{COLOR}Ë vereinen, um die dunkle\pKraft freizusetzen.\nWenn es ihnen gelingt und sie das\pSiegel brechen…\nIch wage nicht, daran zu denken.\pBeeil dich, mit Jax dorthin zu gehen für\neinen letzten Versuch.\pDie Zukunft liegt in deinen Händen,\n{PLAYER}!
 0x8CBA7A: Jetzt, da die dunkle Kraft\nfreigesetzt ist, ist unser Ende nah.\pAber bis dahin können wir nur\neines tun: normal weiterleben.
 0x8CBAEC: {PLAYER}!\pDu hast Borrius gerettet!\nDu hast uns alle gerettet!\pDanke!\pDein Vater wäre stolz auf dich,\nHüter von Borrius.
@@ -10320,7 +10320,7 @@
 0xEB1BB5: Taschentuch eines Stammgasts\ndes Café Magnolia. Es riecht schwach\nnach einem Pokémon.
 0xEB1C11: Tretfahrrad, schneller als die\nLaufschuhe.\n
 0xEB1C5D: Seltene Blätter mit üblem Geruch.\nVon manchen sehr geschätzt.\n
-0xEB1CB6: Ersetzt die VMs. Gräbt unter\nWasser oder auf der RBT-Autobahn\n(mit {R_BUTTON}).
+0xEB1CB6: Ersetzt die VMs. Gräbt unter\nWasser oder auf dem KBT-Expressweg\n(mit {R_BUTTON}).
 0xEB1D1F: Erhöht die Chance auf einen\nkritischen Fang. Bewegt sich kaum.\n
 0xEB1D88: Feder, die wie der Mond schimmert. Man\nsagt, sie vertreibt Albträume.\n
 0xEB1DE2: Karte für den Zutritt zum Gasthaus\nvon Valon. Letztes Datum: vor 30\nJahren.
@@ -13186,8 +13186,8 @@
 0x1EE6DC4: Cimistral
 0x1EE6DD2: Cimistral T
 0x1EE6DE2: Cimistral N
-0x1EE6DF2: Pff…\pMeine armen Pokémon.\pSeit der Eingang zur\nRBT-Autobahn zugefroren ist,\lhaben sie keinen Platz mehr zum Trainieren.\pSag mal, hättest du Lust,\ngegen meine Pokémon anzutreten?
-0x1EE6E91: Jetzt, wo der Eingang zur\nRBT-Autobahn nicht mehr versiegelt ist,\lkonnte ich endlich\lmeine Pokémon trainieren!\pSag mal, willst du gegen meine\nfrisch trainierten Pokémon antreten?
+0x1EE6DF2: Pff…\pMeine armen Pokémon.\pSeit der Eingang zum\nKBT-Expressweg zugefroren ist,\lhaben sie keinen Platz mehr zum Trainieren.\pSag mal, hättest du Lust,\ngegen meine Pokémon anzutreten?
+0x1EE6E91: Jetzt, wo der Eingang zum\nKBT-Expressweg nicht mehr versiegelt ist,\lkonnte ich endlich\lmeine Pokémon trainieren!\pSag mal, willst du gegen meine\nfrisch trainierten Pokémon antreten?
 0x1EE6F37: Los geht's, sofort!
 0x1EE6F55: Was für ein toller Kampf!\nMeine Pokémon hatten richtig Spaß!
 0x1EE6F82: Danke, dass du gegen mich gekämpft hast!
@@ -13195,7 +13195,7 @@
 0x1EE6FD4: Viele Trainer aus Cimistral lieben Flug-Pokémon.\pSie sind stolz auf die Kälteresistenz\nihrer Vögel.\pNimm diesen Gegenstand, um dich\nwie sie zu fühlen.
 0x1EE7074: Der {COLOR}ÉScharfschnabel{COLOR}Ë erhöht die Stärke\nvon Attacken vom Typ {COLOR}ÉFlug{COLOR}Ë, wenn er getragen wird.
 0x1EE70C0: Hallo!\nWillkommen in Cimistral!\pDu siehst müde aus, einen Snack?
-0x1EE70FC: Es ist mein Job, müde Reisende\nzu empfangen, die den Weg\lnach Cimistral hochsteigen.\pDie RBT-Autobahn zu nehmen ist einfach,\naber der Aufstieg… ist hart.
+0x1EE70FC: Es ist mein Job, müde Reisende\nzu empfangen, die den Weg\lnach Cimistral hochsteigen.\pDer KBT-Expressweg zu nehmen ist einfach,\naber der Aufstieg… ist hart.
 0x1EE7188: Wenn wir zum Fliegen geboren wären
 0x1EE71A0: Kann der Mensch fliegen?\nKlau 20 schöne Federn\nvon Goélise oder Bekipan!
 0x1EE71F5: Ah, {PLAYER}!\pDanke, dass du vorbeikommst.\pHast du schon mal den Spruch gehört,\nden meine Großmutter so liebte?\p«Wenn Menschen fliegen sollten,\nhätten sie Flügel wie ein Scorplane\lund Federn wie ein Roucoups.»\pDen ersten Teil hab ich sicher\nschon, aber…\pFür den zweiten brauch ich noch\netwas Hilfe.\pWenn du also etwas Zeit hast,\nkönntest du einer\lguten Dame helfen?
@@ -13208,7 +13208,7 @@
 0x1EE7B08: Das macht nichts, <0xFD><0x02>.\pFalls du deine Meinung mal änderst,\nbin ich hier.
 0x1EE7B47: Ich muss zurück zur Arena,\npass auf dich auf, {STR_VAR_1}!
 0x1EE7B7B: Ohh…\nDu siehst erschöpft aus.\pBist du den ganzen Berg von\nCratéris hochgeklettert?\pDann bin ich sicher, unser\nEmpfangschef hat dir ein Geschenk gemacht!
-0x1EE7C01: Seit die Einfahrt zur RBT-Autobahn frei ist, können die Leute\pKräfte sparen, indem sie dort\ndurchfahren, statt zu Fuß zu laufen!
+0x1EE7C01: Seit die Einfahrt zum KBT-Expressweg frei ist, können die Leute\pKräfte sparen, indem sie dort\ndurchfahren, statt zu Fuß zu laufen!
 0x1EE7C8B: Der Typ Flug ist der einzige Typ,\nder nicht am Boden steht.\pWas ist eigentlich die {COLOR}É„Bodenhaftung“{COLOR}Ë?\pBodenständige Pokémon erleiden\nStacheln und profitieren von Effekten wie\lTerrains, unter anderem\lDingen.\pMehr erfährst du,\nwenn du kämpfst.
 0x1EE7D73: Der Typ Flug ist der einzige Typ,\nder nicht am Boden ist.\pSie profitieren nicht von Terrains,\naber sie erleiden auch keine\lStacheln.\pAber das wusstest du schon,\noder, Champion?
 0x1EE7E2A: Die Arena von Cimistral ist die\neinzige in West-Borrius mit einer\leinzigartigen Fassade.\pIhre Inneneinrichtung würde\nnicht in eine normale Arena passen.
@@ -13443,7 +13443,7 @@
 0x1EED30F: Gesperrt
 0x1EED316: Nächste Version
 0x1EED32E: Kraterstadt
-0x1EED358: Warst du schon mal auf\nder RBT-Autobahn?\pDas ist eine unterirdische Autobahn,\ndie West-Borrius umgeht!\p„RBT‟ steht für\nKönig Borrius der Dritte.\pEr war der König von Borrius, der\ndie Idee einer Autobahn\lfür die ganze Region hatte.
+0x1EED358: Warst du schon mal auf\ndem KBT-Expressweg?\pDas ist eine unterirdische Autobahn,\ndie West-Borrius umgeht!\p„KBT‟ steht für\nKönig Borrius der Dritte.\pEr war der König von Borrius, der\ndie Idee einer Autobahn\lfür die ganze Region hatte.
 0x1EED448: Die Meteoriten von Cratéris sind mit einer Art\lkosmischer Kraft aufgeladen.\pMan sagt, dass wenn ein bestimmtes\nPokémon mit einem in Kontakt kommt,\lseltsame Dinge geschehen werden.
 0x1EED4EB: Diese Höhle führt aus der Stadt hinaus\nzur Route 6.\pVon dort geht es geradeaus über die\nRoute 7, dann den Frostberg,\lund die Route 8 bis nach <0xFC><0x01><0x06>Cimistral<0xFC><0x01><0x08>.\pWenn du vorhast, da\nhinaufzuklettern, nimm viele\lPoké Bälle mit, um Pokémon zu fangen.\pAber nur wenige Leute kommen dort vorbei,\ndenn sie haben nicht den\l<0xFC><0x01><0x06>Weitsicht-Orden<0xFC><0x01><0x08>.\pOhne ihn ist es unmöglich, den\n<0xFC><0x01><0x06>Morschen Baum<0xFC><0x01><0x08> vor\ldem Eingang zu fällen.
 0x1EED690: Diese Höhle dort drüben führt\naus der Stadt hinaus zur Route 6.\pVon dort geht es\ngeradeaus über Route 7, den Frostberg\lund\nRoute 8 bis nach <0xFC><0x01><0x06>Cimistral<0xFC><0x01><0x08>.\pWenn du zu Fuß\ndort hinaufsteigst, nimm viele\lPoké Bälle mit.\pJetzt, wo der <0xFC><0x01><0x06>Dünne Baum<0xFC><0x01><0x08>\nder den Weg blockierte, gefällt wurde,\lwird sie viel öfter genutzt.
@@ -13455,14 +13455,14 @@
 0x1EEDA20: Oh, sieh sich einer diesen kleinen Schlaukopf an.
 0x1EEDA3F: Murmeln… murmeln…\p…auf das Signal warten…\pFlüstern… flüstern…\p…Wache in Position…\pMurmeln… murmeln…
 0x1EEDA96: Meister-Bergmann
-0x1EEDAA2: Durchbrich mit dem ADM die Tore der\nRBT-Autobahn und\nfang {STR_VAR_1} Strassie.
-0x1EEDB03: Gerüchte erzählen von\nseltenen Pokémon namens {COLOR}ÉStrassie{COLOR}Ë in\lder RBT-Autobahn.\pAber sie sagen,\ndass man sie nur\lhinter eingestürzten Toren findet,\ldie den Tunnel versperren.\pWenn wir doch nur\ndie Trümmer {COLOR}Éabbauen{COLOR}Ë könnten…
-0x1EEDC0B: Das ADM, das du hast, ist genau die Maschine,\ndie ich brauche!\pIch versuche, die eingestürzten\nTore der RBT-Autobahn zu zerstören, und du\lkannst mir helfen!\lBitte benutze dein\p{COLOR}ÉADM{COLOR}Ë und hilf mir!\n
-0x1EEDCFB: Fantastisch !\pMeine Aufgabe: die\n{COLOR}Éeingestürzten Tore{COLOR}Ë der\l{COLOR}ÉRBT-Autobahn{COLOR}Ë\lmit deinem {COLOR}ÉADM{COLOR}Ë zerstören und\l{COLOR}É3 Strassie{COLOR}Ë fangen.\pUm ein Tor zu sprengen, lade dein\nADM auf.\lLade es mit {COLOR}É3 Licht-\plehm{COLOR}Ë auf, damit es\nstark genug ist.\lLichtlehm findet man beim\pGraben in den Wänden der RBT-Autobahn.\pWenn das erledigt ist, komm zurück\nfür eine Belohnung.\l\p\n
+0x1EEDAA2: Durchbrich mit dem ADM die Tore des\nKBT-Expresswegs und\nfang {STR_VAR_1} Strassie.
+0x1EEDB03: Gerüchte erzählen von\nseltenen Pokémon namens {COLOR}ÉStrassie{COLOR}Ë in\ldem KBT-Expressweg.\pAber sie sagen,\ndass man sie nur\lhinter eingestürzten Toren findet,\ldie den Tunnel versperren.\pWenn wir doch nur\ndie Trümmer {COLOR}Éabbauen{COLOR}Ë könnten…
+0x1EEDC0B: Das ADM, das du hast, ist genau die Maschine,\ndie ich brauche!\pIch versuche, die eingestürzten\nTore des KBT-Expresswegs zu zerstören, und du\lkannst mir helfen!\lBitte benutze dein\p{COLOR}ÉADM{COLOR}Ë und hilf mir!\n
+0x1EEDCFB: Fantastisch !\pMeine Aufgabe: die\n{COLOR}Éeingestürzten Tore{COLOR}Ë des\l{COLOR}ÉKBT-Expresswegs{COLOR}Ë\lmit deinem {COLOR}ÉADM{COLOR}Ë zerstören und\l{COLOR}É3 Strassie{COLOR}Ë fangen.\pUm ein Tor zu sprengen, lade dein\nADM auf.\lLade es mit {COLOR}É3 Licht-\plehm{COLOR}Ë auf, damit es\nstark genug ist.\lLichtlehm findet man beim\pGraben in den Wänden des KBT-Expresswegs.\pWenn das erledigt ist, komm zurück\nfür eine Belohnung.\l\p\n
 0x1EEDF0B: Nicht besonders wunderbar.\pDu bist der einzige Trainer, den ich\nkenne, der ein ADM gekauft hat.\pOhne dich bin ich hier nutzlos.\n
-0x1EEDF8D: Zerstöre die\n{COLOR}Éeingestürzten Tore{COLOR}Ë der\l{COLOR}ÉRBT-Autobahn{COLOR}Ë\lmit deinem {COLOR}ÉADM{COLOR}Ë und\pfang noch mehr\n{COLOR}É{STR_VAR_1}\lStrassie{COLOR}Ë.\pUm ein Tor zu sprengen, lade\nzuerst dein ADM auf.\lLade es mit {COLOR}É3 Licht-\plehm{COLOR}Ë auf, damit es\pstark genug ist.\nLichtlehm findet man beim\lGraben in den Wänden der RBT-Autobahn.\pWenn das erledigt ist, komm zurück\nfür eine Belohnung.
+0x1EEDF8D: Zerstöre die\n{COLOR}Éeingestürzten Tore{COLOR}Ë des\l{COLOR}ÉKBT-Expresswegs{COLOR}Ë\lmit deinem {COLOR}ÉADM{COLOR}Ë und\pfang noch mehr\n{COLOR}É{STR_VAR_1}\lStrassie{COLOR}Ë.\pUm ein Tor zu sprengen, lade\nzuerst dein ADM auf.\lLade es mit {COLOR}É3 Licht-\plehm{COLOR}Ë auf, damit es\pstark genug ist.\nLichtlehm findet man beim\lGraben in den Wänden des KBT-Expresswegs.\pWenn das erledigt ist, komm zurück\nfür eine Belohnung.
 0x1EEE174: Du und dein ADM habt großartige\nArbeit geleistet!\pNimm dieses seltene Mega-Juwel an!\n
-0x1EEE1C7: Die wahre Belohnung liegt noch in\nder RBT-Autobahn.\pEs würde mich nicht überraschen, wenn\nbald ein bestimmtes Pokémon\lin einer dieser Höhlen auftauchen würde…
+0x1EEE1C7: Die wahre Belohnung liegt noch in\ndem KBT-Expressweg.\pEs würde mich nicht überraschen, wenn\nbald ein bestimmtes Pokémon\lin einer dieser Höhlen auftauchen würde…
 0x1EEE2AF: Das Berühren des Meteoriten hat\ndie Attribute eines bestimmten\lPokémon ausgeglichen.
 0x1EEE2F8: Das Berühren des Meteoriten hat\ndie offensiven Fähigkeiten eines\lbestimmten Pokémon gesteigert.
 0x1EEE34B: Das Berühren des Meteoriten hat\ndie defensiven Fähigkeiten eines\lbestimmten Pokémon gesteigert.
@@ -13488,7 +13488,7 @@
 0x1EEE8AA: schick
 0x1EEE8B0: gewellt
 0x1EEE8B7: hübsch
-0x1EEE8BE: Vor zwanzig Jahren raste ein großer\nMeteorit auf Borrius zu.\pDie Astronomen von Cube GmbH haben\nvorausgesagt, dass er auf\lTalstadt hier einschlagen und das Leben\lzerstören würde.\lWir haben die Stadt in aller\pEile evakuiert.\nWährend wir über die RBT-Autobahn flohen, kam eine\pNachricht herein: Der Meteorit\nwürde die halbe Region\lzerschmettern!\pUnter die Erde zu fliehen hätte bedeutet,\nlebendig begraben zu werden.\pDas Chaos regierte… bis\nER auftauchte.\l{COLOR}ÉAros{COLOR}Ë, die Legende.\pMit einem kleinen Pokémon hat er\palle sicher nach Ost-Borrius teleportiert.\pEr wollte den Meteoriten von\pvorn angreifen und ihn zerschlagen.\nNachdem er alle in Sicherheit\lgebracht hatte, ritt er wohl einen\pRayquaza und rammte den Meteoriten!\nEr zerbarst, und die meisten\pFragmente fielen auf Talstadt.\lDie Stadt wurde zerstört, aber Aros hat\ldie Region gerettet.\pIch werde seine heldenhafte Tat\nniemals vergessen.\l\p\n\p\n
+0x1EEE8BE: Vor zwanzig Jahren raste ein großer\nMeteorit auf Borrius zu.\pDie Astronomen von Cube GmbH haben\nvorausgesagt, dass er auf\lTalstadt hier einschlagen und das Leben\lzerstören würde.\lWir haben die Stadt in aller\pEile evakuiert.\nWährend wir über den KBT-Expressweg flohen, kam eine\pNachricht herein: Der Meteorit\nwürde die halbe Region\lzerschmettern!\pUnter die Erde zu fliehen hätte bedeutet,\nlebendig begraben zu werden.\pDas Chaos regierte… bis\nER auftauchte.\l{COLOR}ÉAros{COLOR}Ë, die Legende.\pMit einem kleinen Pokémon hat er\palle sicher nach Ost-Borrius teleportiert.\pEr wollte den Meteoriten von\pvorn angreifen und ihn zerschlagen.\nNachdem er alle in Sicherheit\lgebracht hatte, ritt er wohl einen\pRayquaza und rammte den Meteoriten!\nEr zerbarst, und die meisten\pFragmente fielen auf Talstadt.\lDie Stadt wurde zerstört, aber Aros hat\ldie Region gerettet.\pIch werde seine heldenhafte Tat\nniemals vergessen.\l\p\n\p\n
 0x1EEECCC: Nach dem Einschlag des Meteoriten, vor\nvielen Jahren, wurden zwei Pokémon\lauf der Erde entdeckt.\pEines von ihnen war sehr\nmächtig und konnte jeden\lHerzenswunsch erfüllen.\pAnfangs fanden die Bewohner\nund ich das wunderbar!\pWir konnten es benutzen\num unsere Stadt wieder aufzubauen!\pAber wir lernten schnell,\ndass all unsere Wünsche ihren Preis hatten.\pAus Angst vor einer noch schlimmeren\nKatastrophe wurde dieses Pokémon eingesperrt.\pAber jetzt, wo {STR_VAR_2} von Aros\nChampion geworden ist, denke ich, dass es\lrichtig ist, dir dieses Pokémon\lanzuvertrauen.\pMöchtest du diesem Pokémon\nein liebevolles Zuhause geben?
 0x1EEEF16: Ich verstehe…\pVielleicht kommt später\nein anderer Trainer.\pSchönen Tag noch.
 0x1EEEF5B: Warte bitte hier.
@@ -14419,7 +14419,7 @@ einem Verlies zu entkommen.
 0x1F00D02: Weißt du, was ein {COLOR}ÉJuwel{COLOR}Ë ist?
 0x1F00D23: Ein Juwel ist ein besonderes\nGetragenes Item, das eine einzige\lAttacke im Kampf verstärkt.\pJedes Juwel gehört zu einem\nbestimmten Typ und verstärkt nur\lAttacken dieses Typs.\pJuwelen verschwinden nach\nGebrauch, doch wie die meisten\lVerbrauchsitems werden sie dir\lnach wichtigen Kämpfen zurück-\lgegeben, etwa gegen die\lArenaleiter.\pDie meisten Arenaleiter von Borrius\nhaben mindestens ein Pokémon, das\lein Juwel trägt, sei also vorsichtig.\pWenn dich das beunruhigt, kannst du\ndie Attacke <0xFC><0x01><0x06>Verbrennen<0xFC><0x01><0x08> nutzen, um\lihr Juwel zu schmelzen, bevor sie\les einsetzen können.
 0x1F00F39: Du bist ein erfahrener Trainer.
-0x1F00F5D: Das ist ein recht neuer Zugang zur\nAutoroute RBT.\pDie Brücke dorthin ist noch im\nBau.
+0x1F00F5D: Das ist ein recht neuer Zugang zum\nKBT-Expressweg.\pDie Brücke dorthin ist noch im\nBau.
 0x1F00FC4: Westlich von Dresco liegt\nBoissombre.\pDort wimmelt es von Käfer- und\nGeist-Pokémon.\pDu solltest mal vorbeischauen, wenn\ndu kannst.
 0x1F01059: He, du!\pTrainer!\pWarte!
 0x1F01074: Ist das ein Cube V3 in deiner\nTasche?\p…\pJa!\pDu bist genau die Person, die ich\ngesucht habe!\pBitte komm mit mir.
@@ -14605,7 +14605,7 @@ einem Verlies zu entkommen.
 0x1F04FD3: Hmm…\pWie hole ich die TM aus\ndiesem gelben Poké Ball…
 0x1F05010: Wow!\pIch sah dich wie ein Engel diesen\nWasserfall hinabgleiten und die TM nehmen!\pGut gemacht!
 0x1F05061: Mel, der Arenaleiter, ist im\nMoment nicht da.\pVermutlich ist er irgendwohin, um\nden Kopf frei zu bekommen.
-0x1F050BB: Mel, der Arenaleiter, ist im\nMoment nicht da.\pVermutlich ist er unterwegs, um den\nKopf frei zu bekommen, in der Nähe der <0xFC><0x01><0x06>Autoroute RBT<0xFC><0x01><0x04>\lbei <0xFC><0x01><0x06>Automnia<0xFC><0x01><0x04>.
+0x1F050BB: Mel, der Arenaleiter, ist im\nMoment nicht da.\pVermutlich ist er unterwegs, um den\nKopf frei zu bekommen, in der Nähe des <0xFC><0x01><0x06>KBT-Expresswegs<0xFC><0x01><0x04>\lbei <0xFC><0x01><0x06>Automnia<0xFC><0x01><0x04>.
 0x1F0513A: Meine verborgene Kraft sagt mir,\ndass du das hier willst!
 0x1F0516C: Die {COLOR}ÉKraftreserve{COLOR}Ë ist besonders\nund ändert ihren Typ je nach\ldem Pokémon, das sie einsetzt.
 0x1F051C7: Ich kann dir sagen, welchen Typ\nKraftreserve dein Pokémon\lerlernen wird!\pWillst du es wissen?
@@ -14629,7 +14629,7 @@ einem Verlies zu entkommen.
 0x1F0591E: Hier sagen alle nur,\n"Entwicklung hier" und "Entwicklung\ldort".\pAber ich finde Entwicklung dumm!\pMeine Lieblingsmethode, um die\nEntwicklung zu verhindern, ist nicht,\lden <0xFC><0x01><0x06>B-Knopf<0xFC><0x01><0x08> zu drücken, wenn mein\lPokémon sich entwickeln will, sondern\lihm einen <0xFC><0x01><0x06>Ewigstein<0xFC><0x01><0x08> zu geben.\pSo vermeide ich die Entwicklung\nvollständig!\pUnd weißt du was?\pIch gebe dir einen, wenn du mir\nein Pokémon zeigst, das sich nie\lentwickelt hat und sich nicht entwickeln kann!\pHast du so ein Pokémon in\ndeinem Team?
 0x1F05AFD: Welches Pokémon ist es?
 0x1F05B12: Ja, dieses Pokémon hat sich nie\nentwickelt und kann sich nicht entwickeln.\pWie versprochen, nimm den {COLOR}ÉEwigstein{COLOR}Ë!
-0x1F05B72: Wenn ein Pokémon einen <0xFC><0x01><0x06>Ewigstein<0xFC><0x01><0x08> trägt,\nentwickelt es sich nicht!\pTrägt es einen während der\nZucht, vererbt es sein\lWesen!\pSie sind genial, diese\nEwigsteine, nicht wahr?\pWenn du mehr willst, es heißt,\nes stecken jede Menge davon\lin den <0xFC><0x01><0x06>Wänden<0xFC><0x01><0x08> der <0xFC><0x01><0x06>Autoroute RBT<0xFC><0x01><0x08>.\pWie man sie herausholt, aber?\nKeine Ahnung…
+0x1F05B72: Wenn ein Pokémon einen <0xFC><0x01><0x06>Ewigstein<0xFC><0x01><0x08> trägt,\nentwickelt es sich nicht!\pTrägt es einen während der\nZucht, vererbt es sein\lWesen!\pSie sind genial, diese\nEwigsteine, nicht wahr?\pWenn du mehr willst, es heißt,\nes stecken jede Menge davon\lin den <0xFC><0x01><0x06>Wänden<0xFC><0x01><0x08> des <0xFC><0x01><0x06>KBT-Expresswegs<0xFC><0x01><0x08>.\pWie man sie herausholt, aber?\nKeine Ahnung…
 0x1F05CAD: Ich bleibe im Haus der\nEntwicklung, falls du eins bringst.
 0x1F05CF2: Nein, ich suche kein Ei.\pIch suche ein Pokémon, das sich nie\nentwickelt hat und sich nicht\lentwickeln kann.
 0x1F05D58: Nein, das ist keines der Pokémon,\ndie ich suche.\pIch suche ein Pokémon, das sich nicht\nentwickelt hat und sich niemals\lentwickeln kann.
@@ -15253,10 +15253,10 @@ einem Verlies zu entkommen.
 0x1F14247: Knallhart
 0x1F1425C: Nichts ist härter als ein\nHartstein! Sammle 20\nfür einen Liebhaber.
 0x1F142BE: He, du.\nIch habe eine Bitte an dich.\pIch bin ein Liebhaber.\pEin Freund harter Dinge, wenn ich\nso sagen darf.\pAber anders als mein Kumpel\nwill ich dir nicht\lirgendwas abkaufen.\pIch will nur, dass du\n{COLOR}É{STR_VAR_1} Hartsteine{COLOR}Ë für mich sammelst.\pSchaffst du das?
-0x1F143CA: Yee haw!\pAus {COLOR}ÉHartsteine{COLOR}Ë können beim\nZerschlagen von Fels in der {COLOR}ÉGroßen Wüste{COLOR}Ë kommen.\pUnd wenn du die Wände des\n{COLOR}ÉRBT-Highways{COLOR}Ë durchgräbst,\lfindest du auch welche.
+0x1F143CA: Yee haw!\pAus {COLOR}ÉHartsteine{COLOR}Ë können beim\nZerschlagen von Fels in der {COLOR}ÉGroßen Wüste{COLOR}Ë kommen.\pUnd wenn du die Wände des\n{COLOR}ÉKBT-Expresswegs{COLOR}Ë durchgräbst,\lfindest du auch welche.
 0x1F1447F: Diese harten Gegenstände in deinem Würfel sind\ndie, die ich verlangt habe!\pKomm, lass sie mich dir abnehmen.
 0x1F144D9: Oh, du suchst nach einer Belohnung\noder so?\pDann hier, das ist für dich.
-0x1F14516: {COLOR}ÉHartsteine{COLOR}Ë können beim\nZerschlagen von Fels in der {COLOR}ÉGroßen Wüste{COLOR}Ë kommen.\pUnd wenn du die Wände des\n{COLOR}ÉRBT-Highways{COLOR}Ë durchgräbst,\lfindest du auch welche.\pMach eines von beiden und\nbring mir {COLOR}É{STR_VAR_1}{COLOR}Ë davon.
+0x1F14516: {COLOR}ÉHartsteine{COLOR}Ë können beim\nZerschlagen von Fels in der {COLOR}ÉGroßen Wüste{COLOR}Ë kommen.\pUnd wenn du die Wände des\n{COLOR}ÉKBT-Expresswegs{COLOR}Ë durchgräbst,\lfindest du auch welche.\pMach eines von beiden und\nbring mir {COLOR}É{STR_VAR_1}{COLOR}Ë davon.
 0x1F145FE: Ich sehe, du bist kein\nLiebhaber.
 0x1F14623: Sag, weißt du was?\pBring mir noch mehr harte Sachen!\pIch habe einen Berg an {COLOR}ÉEdelsteinen{COLOR}Ë\nam Hals, und es ist mir\lschnuppe!\pIch gebe sie dir im Tausch\nfür mehr Hartsteine.
 0x1F146F6: <0xFC><0x01><0x02><0xFD><0x01> übergibt\n<0xFD><0x03> ×<0xFD><0x02>.
@@ -15266,8 +15266,8 @@ einem Verlies zu entkommen.
 0x1F147BF: Also gibst du {COLOR}É{STR_VAR_1} Hartsteine{COLOR}Ë\ngegen einen {COLOR}É{STR_VAR_2}{COLOR}Ë?
 0x1F147F8: Yee haw!\pWillst du weitere\nEdelsteine tauschen?
 0x1F14825: Wenn du {COLOR}É{STR_VAR_1} Hartsteine{COLOR}Ë bekommst,\nkomm zum Tauschen wieder, okay?
-0x1F14870: {COLOR}ÉHartsteine{COLOR}Ë können beim\nZerschlagen von Fels in der {COLOR}ÉGroßen Wüste{COLOR}Ë kommen.\pUnd wenn du die Wände des\n{COLOR}ÉRBT-Highways{COLOR}Ë durchgräbst,\lfindest du auch welche.\pMach eines von beiden und\nbring mir {COLOR}É{STR_VAR_1}{COLOR}Ë davon.\pIch gebe dir einen Edelstein\nnach Wahl.
-0x1F14989: Du hast weniger als {COLOR}É{STR_VAR_1} Hartsteine{COLOR}Ë,\nmein Junge.\p{COLOR}ÉHartsteine{COLOR}Ë können beim\nZerschlagen von Fels in der {COLOR}ÉGroßen Wüste{COLOR}Ë kommen.\pUnd wenn du die Wände des\n{COLOR}ÉRBT-Highways{COLOR}Ë durchgräbst,\lfindest du auch welche.
+0x1F14870: {COLOR}ÉHartsteine{COLOR}Ë können beim\nZerschlagen von Fels in der {COLOR}ÉGroßen Wüste{COLOR}Ë kommen.\pUnd wenn du die Wände des\n{COLOR}ÉKBT-Expresswegs{COLOR}Ë durchgräbst,\lfindest du auch welche.\pMach eines von beiden und\nbring mir {COLOR}É{STR_VAR_1}{COLOR}Ë davon.\pIch gebe dir einen Edelstein\nach Wahl.
+0x1F14989: Du hast weniger als {COLOR}É{STR_VAR_1} Hartsteine{COLOR}Ë,\nmein Junge.\p{COLOR}ÉHartsteine{COLOR}Ë können beim\nZerschlagen von Fels in der {COLOR}ÉGroßen Wüste{COLOR}Ë kommen.\pUnd wenn du die Wände des\n{COLOR}ÉKBT-Expresswegs{COLOR}Ë durchgräbst,\lfindest du auch welche.
 0x1F14A62: Käfer-Juwel
 0x1F14A6A: Unlicht-Juwel
 0x1F14A73: Drachen-Juwel
@@ -15747,7 +15747,7 @@ einem Verlies zu entkommen.
 0x1F21C3C: Gegenstand in den Cube gelegt.
 0x1F21C55: Mail zurück in den Cube gelegt.
 0x1F21C78: Geldbörse
-0x1F21C7F: RBT-Autobahn
+0x1F21C7F: KBT-Expressweg
 0x1F21C8F: Nutze {COLOR}ÉZerschneider{COLOR}Ë, um diesen\nBaum zu entfernen, der die {COLOR}ÉTalhöhle{COLOR}Ë blockiert.\pGeh dann nach {COLOR}ÉCimistral{COLOR}Ë, um\n{COLOR}ÉZertrümmerer{COLOR}Ë von meinem Freund zu bekommen.\pViel Glück bei deiner Suche !
 0x1F21D41: Hoooo weeee !\pSieht aus, als hättest du meinen\nFreund getroffen.\pGeh zu diesen Felsen und\nzertrümmere sie !
 0x1F21DB2: Hoooo weeee !\pDu hast dir einen Durchgang\ngeöffnet.\pGeh weiter nach {COLOR}ÉOsten{COLOR}Ë, bis\ndu den {COLOR}ÉDonnerberg{COLOR}Ë erreichst
@@ -15768,8 +15768,8 @@ einem Verlies zu entkommen.
 0x1F22548: Dieser Abschnitt der Autobahn wurde\nwegen der Kriminalitätsrate\lin Antésia gesperrt.\pWenn du hier ohne Rückweg feststeckst,\nkann ich dich hinter die\lSperre teleportieren.\pMöchtest du das?
 0x1F2261A: Alles klar, los geht's!\pNucléos, Méios, Alakazam!
 0x1F22648: Sei vorsichtig in Antésia.
-0x1F22663: Arbeiter von Borrius, vereinigt euch!\pLasst uns uns organisieren, um\ngegen die Einstürze der Wände\lder RBT-Autobahn zu kämpfen!
-0x1F226D2: Wir haben es satt, dass Wasser\ndie RBT-Autobahn überflutet!\pWir streiken, bis wir die\nGarantie haben, dass sich das nicht\lwiederholt!
+0x1F22663: Arbeiter von Borrius, vereinigt euch!\pLasst uns uns organisieren, um\ngegen die Einstürze der Wände\ldes KBT-Expresswegs zu kämpfen!
+0x1F226D2: Wir haben es satt, dass Wasser\nden KBT-Expressweg überflutet!\pWir streiken, bis wir die\nGarantie haben, dass sich das nicht\lwiederholt!
 0x1F22752: Niemand kommt durch, solange unser\nProtest nicht beendet ist!
 0x1F2278D: Wenn Leute wie du nicht unter\nunserem Protest leiden,\lbringt er gar nichts!
 0x1F227E8: Stört dich das?\pUmso besser.\pDas bedeutet, dass unser Streik\nfunktioniert.
@@ -15820,7 +15820,7 @@ einem Verlies zu entkommen.
 0x1F23A8E: Oh!\pMein Gedächtnis lässt nach… Ich habe noch\netwas für dich.\pBitte, wenn du\n{RIVAL} siehst, gib ihm diesen Pokédex.
 0x1F23B0B: Er ist kühl zu mir, seit\ner angekommen ist, aber er scheint\lgut mit dir auszukommen.\pIch bin sicher, wenn du ihm den\nPokédex gibst, wird er helfen.
 0x1F23BAD: Geh zu meinem Freund in {COLOR}ÉDresco{COLOR}Ë, {PLAYER}.\pIch verlasse mich auf dich.
-0x1F23BF3: {PLAYER}, beeil dich und geh\nzum {COLOR}ÉMont Foudroyant{COLOR}Ë!\pWenn die Schatten vor dir ankommen,\nist Borrius verloren!\pIm Norden, nimm schnell die {COLOR}ÉRoute\nKBT{COLOR}Ë ganz nach Süden.
+0x1F23BF3: {PLAYER}, beeil dich und geh\nzum {COLOR}ÉMont Foudroyant{COLOR}Ë!\pWenn die Schatten vor dir ankommen,\nist Borrius verloren!\pIm Norden, nimm schnell den {COLOR}ÉKBT-Expressweg{COLOR}Ë ganz nach Süden.
 0x1F23CAE: Ho ho ho!\p{PLAYER}!\nIch habe die gute Nachricht gehört!\pZapdos ist wohlauf, wir können\nruhig schlafen.\pAber deine Aufgaben sind noch nicht\nvorbei!\pDu musst Arktos und\nLavados von den Schatten zurückholen.
 0x1F23D81: Die dunkle Macht ist entfesselt,\ndas Ende von Borrius\list nah.\p{PLAYER}!\pDu musst Jax finden und ihm helfen,\ndiese Macht noch einmal zu versiegeln!
 0x1F23E0D: <0xFD><0x01>!\pDu hast Borrius gerettet!\nDu hast uns alle gerettet!\pDanke!\pDein Vater wäre stolz auf dich,\nHüter von Borrius.\pLeider habe ich keine\nAufgabe mehr für dich.\pHast du schon daran gedacht, dich der\n<0xFC><0x01><0x06>Pokémon-Liga<0xFC><0x01><0x08> zu stellen?
@@ -15865,7 +15865,7 @@ einem Verlies zu entkommen.
 0x1F25647: Du hast alle Pokémon gefangen,\ndie im Pokédex aufgelistet sind!\pHo ho ho!\pDu bist wirklich ein großartiger\nTrainer!
 0x1F256AE: Komm bei Gelegenheit\nin mein Labor vorbei.\pIch habe eine Belohnung für deine\nharte Arbeit!
 0x1F256FC: Verlorener Tunnel
-0x1F25708: Ein dunkler, gewundener Tunnel, gefunden\nvon einem verirrten Bergsteiger.\nEr ist mit der RBT-Autobahn verbunden.
+0x1F25708: Ein dunkler, gewundener Tunnel, gefunden\nvon einem verirrten Bergsteiger.\nEr ist mit dem KBT-Expressweg verbunden.
 0x1F2576A: Wer wagt es, das Reich des\nMoleman zu betreten?\pHmm? Du bist es… der Bewohner\nder Oberfläche, Champion von Borrius…!\pJahrelang mussten meine Gefährten\nund ich uns unser Leben erkämpfen,\lindem wir diese Wände abbauten.\pUnd trotzdem kommst du und nimmst\nunsere Beute!?\pBah! Na gut, nimm das hier,\naber mehr bekommst du nicht!
 0x1F258C0: Wir graben jeden Tag, doch\nunsere Funde sind mager…\pHmph! Ich habe nicht die Absicht,\nheute mehr zu geben!\pWenn ich dich oft besänftigen muss,\nkomm morgen wieder, Oberflächenbewohner.
 0x1F2597E: Magnolienfelder
@@ -16125,7 +16125,7 @@ einem Verlies zu entkommen.
 0x1F2BC57: {COLOR}ËWelches Pokémon entsteht aus Temperaturen\nund Druck\ltief unter der Erde?
 0x1F2BCA2: {COLOR}ËWelche Farbe hatten ursprünglich\ndie Flügel eines schillernden Glurak?
 0x1F2BCDD: {COLOR}ËWelche Farbe haben die Brücken der\nRoute 8?
-0x1F2BD08: {COLOR}ËWofür steht das „T" in „RBT-Autobahn"?
+0x1F2BD08: {COLOR}ËWofür steht das „T" in „KBT-Expressweg"?
 0x1F2BD3C: {COLOR}ËWie heißen die berühmten Ruinen\nin West-Borrius?
 0x1F2BD80: {COLOR}ËWer sind die mysteriösen Kreaturen,\ndie unsere Welt bewohnen?
 0x1F2BDBC: {COLOR}ËWie heißt meine Tochter?
@@ -16459,8 +16459,8 @@ einem Verlies zu entkommen.
 0x1F33E17: Logs Worte hallen nach:\n{COLOR}ËVergewissere dich, dass es {RIVAL} gut geht!
 0x1F33E54: Zeph?\pJa, hier ist Ivory.\pEs ist mir gelungen, eine Barriere\nauf der Route 9 von Blizzard aus zu errichten.\p…\pVerstanden.\pIch komme sofort wieder runter.
 0x1F33EE0: Und falls\n{RIVAL} mir folgen sollte…
-0x1F33F05: <0xFD><0x01>, ich habe vergessen, dir\netwas zu zeigen!\pKomm bitte mit mir zur\nAutoroute RBT.
-0x1F33F55: Aus einem seltsamen Grund ist der Eingang\nder Autoroute RBT zugefroren.\pAls Arenaleiterin dieser\nStadt ist es meine Aufgabe, das zu regeln.\pSchau, wie ich\nSteinhieb einsetzen kann, um das Eis zu zerbrechen!
+0x1F33F05: <0xFD><0x01>, ich habe vergessen, dir\netwas zu zeigen!\pKomm bitte mit mir zum\nKBT-Expressweg.
+0x1F33F55: Aus einem seltsamen Grund ist der Eingang\ndes KBT-Expresswegs zugefroren.\pAls Arenaleiterin dieser\nStadt ist es meine Aufgabe, das zu regeln.\pSchau, wie ich\nSteinhieb einsetzen kann, um das Eis zu zerbrechen!
 0x1F34012: Skorgro! Setz\nSteinhieb ein!
 0x1F3402B: Skorgro!\nKomm zurück!
 0x1F3403C: Stell dich vor einen rissigen Felsen\nmit einem Pokémon, das\lSteinhieb erlernen kann, und du kannst ihn zerbrechen,\lindem du {SE_SHOP} drückst.\pUnd wenn du die {COLOR}ÉSchnellen VMs{COLOR}Ç aktiviert hast,\nspringt der Felsen sofort weg!\pMan wird dich nicht mal fragen, ob du\nihn zerbrechen willst!\pIch hoffe, du hast die Grundlagen\nder Steinhieb-Nutzung verstanden!\pIch muss zurück zur Arena, also\nbis zum nächsten Mal!
@@ -17314,7 +17314,7 @@ einem Verlies zu entkommen.
 0x1F54B5D: Diese TM wurde über dem\nGrab von Borrius mittels Klettern gefunden.
 0x1F54BA1: Diese TM wurde für\n«Schlechte Babysitterin» vergeben.
 0x1F54BD9: Diese TM wurde für\n«Retter der Insel» vergeben.
-0x1F54C11: Diese TM wurde über der\nRBT-Autobahn mittels Wasserfall gefunden.
+0x1F54C11: Diese TM wurde über dem\nKBT-Expressweg mittels Wasserfall gefunden.
 0x1F54C53: Diese TM wurde in der Mitte des\nSees gefunden.
 0x1F54C80: Diese TM wurde auf Ebene -3 gefunden,\nnachdem Zertrümmerer eingesetzt wurde.
 0x1F54CB1: Diese TM wurde für 3000\nMünzen gekauft.
@@ -17368,7 +17368,7 @@ einem Verlies zu entkommen.
 0x1F55732: Diese TM wurde im 2. Stock gefunden,\nnachdem du Kraxler eingesetzt hast.
 0x1F55762: Diese TM wurde in der Nähe von\nPilzen gefunden, die Paras verstecken, per Surfer.
 0x1F557A2: Diese TM wurde für 4000\nMünzen gekauft.
-0x1F557C8: Diese TM wurde nach\nKraxler über RBT gefunden.
+0x1F557C8: Diese TM wurde nach\nKraxler über dem KBT-Expressweg gefunden.
 0x1F5580B: Diese TM wurde auf dem\nMarkt gekauft.
 0x1F55835: Diese TM wurde im Labor für\nTraumforschung erhalten.
 0x1F55865: Diese TM wurde als Belohnung erhalten,\nweil du den Champ besiegt hast.
@@ -17431,12 +17431,12 @@ einem Verlies zu entkommen.
 0x1F56220: Sprich mit dem Freund von Prof. Log in Dresco!
 0x1F5624B: Eile zum Volcan Cendré und rette\nLavados!
 0x1F5627F: Fordere die Arena von Cratéris heraus!
-0x1F5629E: Benutze die Autoroute RBT, um in\nden Süden von Cratéris zu gelangen.
+0x1F5629E: Benutze den KBT-Expressweg, um in\nden Süden von Cratéris zu gelangen.
 0x1F562D1: Durchquere die Grotte Vallée und\nbegib dich nach Cimistral!
 0x1F56313: Besteige den Mont Givre und begib\ndich nach Cimistral!
 0x1F56353: Fordere die Arena von Blizzard heraus!
 0x1F56374: Erhalte Zertrümmerer vom Freund\ndes Zerschneider-Meisters in Cimistral!
-0x1F563B2: Reise über die Autoroute RBT nach Süden bis Rivapolis!
+0x1F563B2: Reise über den KBT-Expressweg nach Süden bis Rivapolis!
 0x1F563ED: Steige die Route 10 hinab bis nach Automnia!
 0x1F56417: Erkunde Automnia und finde\neinen Weg zur Route 9!
 0x1F5644A: Sei den Schatten voraus bis zum Haus\ndes Freundes von Arthur, Route 9!
@@ -17507,7 +17507,7 @@ einem Verlies zu entkommen.
 0x1F57777: Höhle gefunden in einem Hohlen Baum,\nnach Surfer in der Nähe des Eingangs der\nGrotte Faille.
 0x1F577D2: Höhle gefunden in einem Hohlen Baum,\nin der Nähe des geheimen Ausgangs des Anwesens\nim Erdgeschoss.
 0x1F57826: Höhle gefunden in einem Hohlen Baum,\nauf der Westseite der Route\nin der Nähe des Bergsteigers.
-0x1F5787F: Höhle gefunden in einem Hohlen Baum,\nnach Kraxler über der\nAutoroute RBT.
+0x1F5787F: Höhle gefunden in einem Hohlen Baum,\nnach Kraxler über dem\nKBT-Expressweg.
 0x1F578DB: Höhle gefunden über dem Grab\nvon Borrius nach\nKraxler.
 0x1F57925: Höhle gefunden in einem Hohlen Baum,\nnach Kraxler in der Nähe des Eingangs des\nBois Vivill.
 0x1F57988: Höhle gefunden in einem Hohlen Baum,\nnach Surfer nördlich des Ausgangs von Antésia.
@@ -17864,9 +17864,9 @@ einem Verlies zu entkommen.
 0x1F5E07E: Der salzige Geruch des Meeres…\nDas kitzelt mein Herz.
 0x1F5E0AE: …Schnüff, schnüff…\nEtwas riecht schlecht…
 0x1F5E0DA: Dieser Gestank, das ist vielleicht\nder Geruch deines verschwitzten Pokémon…
-0x1F5E110: Wir sind über der\nRBT-Autobahn!
+0x1F5E110: Wir sind über dem\nKBT-Expressweg!
 0x1F5E13D: Spürst du die Leute, die sich\ndarunter bewegen?
-0x1F5E166: Dieser Teil der RBT-Autobahn führt\nvon Cratéris nach Automnia.
+0x1F5E166: Dieser Teil des KBT-Expresswegs führt\nvon Cratéris nach Automnia.
 0x1F5E1AD: Ich frage mich, wie viel Gewicht\nder Boden tragen kann?
 0x1F5E1DE: Genug für einen guten Kampf!
 0x1F5E1F8: Wenn 100 Leute, so dick wie\nich, hier stehen würden, glaubst du,\lder Boden würde das Gewicht aushalten?
@@ -18464,7 +18464,7 @@ einem Verlies zu entkommen.
 0x1F696A0: Ich komme aus Antésia?\nAuf keinen Fall, José!\pVerwechsle mich nicht mit den Clowns\nvon dort.\pIch habe dort am Hafen gearbeitet,\naber die Zeiten waren hart, also\lbin ich hierhergekommen, um besser zu leben.\pUnd stell dir vor, die Luft ist reiner\nhier, und alle sind nett!\pAber ich sehe hier immer noch\neine Menge Machenschaften…\pDu solltest besser vorsichtig sein, wenn du\nweißt, was gut für dich ist…
 0x1F69810: Wir bauen alle Arten von Booten\nin der Werft von Kapitän Davy.\pBrauchst du ein schnelles Boot?\nKomm zu uns.\pBrauchst du einen fortschrittlichen\nunterirdischen Bohrmechanismus? Komm auch.\pWir machen alles.\pMan erzählt sich, dass der Kapitän\nan einem streng geheimen\lRaumschiff arbeitet…
 0x1F6990F: Seit Antésia seinen\nPassagierhafen geschlossen hat, brummt\ldieser Hafen!\pWir bringen Passagiere\nan verschiedene Orte in Borrius-Ost,\laber wir transportieren auch Fracht\lüberall in Borrius.\pDas ist ein toller Job!
-0x1F699F9: Hier sollte wirklich ein\noffizielles Schild für die Autoroute RBT stehen.\pDas Einzige, was hier steht,\nist auf diese Balken gekritzelt.
+0x1F699F9: Hier sollte wirklich ein\noffizielles Schild für den KBT-Expressweg stehen.\pDas Einzige, was hier steht,\nist auf diese Balken gekritzelt.
 0x1F69A86: Guten Tag, mein Lieber.\nMöchtest du exotische Beeren?
 0x1F69AB4: Es tut mir leid!\pIch werde mein Somniam nicht mehr mitbringen!\pVersprochen!\pBitte, lass mich rein!
 0x1F69B08: Wozu dienen exotische Beeren\neigentlich?\pMir fällt nur eine Sache ein:\n{COLOR}ÉNaturgabe{COLOR}Ç!\pProbier's aus, du wirst schon sehen!
@@ -18541,8 +18541,8 @@ einem Verlies zu entkommen.
 0x1F6BA44: Wow!\nDas sind {STR_VAR_2} Zoll!\pSo etwas habe ich noch nie gesehen!\nDu verdienst eine Belohnung!
 0x1F6BA94: Ich möchte eine Kürbisia sehen, die\nviel <0xFC><0x01><0x06>größer<0xFC><0x01><0x04> ist als diese.\pIch hoffe, eines Tages meinen Traum zu\nverwirklichen, die ultimative Kürbisia zu sehen.
 0x1F6BB1A: Häh? Dieses Maß von {STR_VAR_2}…\pDas ist nichts Neues.\nEs ist dasselbe wie zuvor.
-0x1F6BB64: Ich habe eine {COLOR}ÉADM{COLOR}Ë bei der {COLOR}ÉWerft\nvon Kapitän Davy{COLOR}Ë gekauft.\pEs war teuer, aber ich habe sie benutzt,\num die Wände der {COLOR}ÉAutoroute RBT{COLOR}Ë aufzubrechen, und das gefunden!
-0x1F6BC0D: Wenn du eine <0xFC><0x01><0x06>ADM<0xFC><0x01><0x08> von <0xFC><0x01><0x06>Captain Davy<0xFC><0x01><0x08> bekommst,\nkannst du die eingestürzten Türen\lder <0xFC><0x01><0x06>Autoroute RBT<0xFC><0x01><0x08> aufbrechen.\pManchmal findest du dahinter\nsogar seltene Pokémon.
+0x1F6BB64: Ich habe eine {COLOR}ÉADM{COLOR}Ë bei der {COLOR}ÉWerft\nvon Kapitän Davy{COLOR}Ë gekauft.\pEs war teuer, aber ich habe sie benutzt,\num die Wände des {COLOR}ÉKBT-Expresswegs{COLOR}Ë aufzubrechen, und das gefunden!
+0x1F6BC0D: Wenn du eine <0xFC><0x01><0x06>ADM<0xFC><0x01><0x08> von <0xFC><0x01><0x06>Captain Davy<0xFC><0x01><0x08> bekommst,\nkannst du die eingestürzten Türen\ldes <0xFC><0x01><0x06>KBT-Expresswegs<0xFC><0x01><0x08> aufbrechen.\pManchmal findest du dahinter\nsogar seltene Pokémon.
 0x1F6BCBB: Die Besitzer dieser Wohnungen\nsind selten leicht zu finden.\pAber hier sitzt der Besitzer\nim Erdgeschoss.\pEr wird dir vielleicht eine Wohnung\nvermieten, wenn du fragst.
 0x1F6BD78: Der Besitzer sitzt gerne\nunten.\pEr ist gut gelaunt, seit ein\nneuer Bewohner angekommen ist.
 0x1F6BDE4: {COLOR}ÁSein Gehirn scheint so\nweich wie Pudding zu sein.
@@ -18598,7 +18598,7 @@ einem Verlies zu entkommen.
 0x1F6CEDF: Arr! Ich\nbin\pKapitän Davy! Meine Jungs haben\neine Maschine\pzum Graben und Tauchen fertiggestellt. Ein Gegenstand,\nden du an dein Pokémon anbringst, um\ldie VMs zu ersetzen und dir\lLuft\lunter\pWasser zu geben! Interessiert? Das\nwird dich ¥{COLOR}É250000{COLOR}Ë kosten.
 0x1F6D01B: Und dazu passend, lass mich dir\nauch das hier geben.
 0x1F6D04D: Freut mich, mit dir Geschäfte gemacht zu haben.\pJetzt hör gut zu.
-0x1F6D080: Das <0xFC><0x01><0x06>ADM<0xFC><0x01><0x08> ersetzt nicht nur\ndie VMs, du kannst es auch benutzen,\lum nach Schätzen zu suchen!\pDie Wände der <0xFC><0x01><0x06>RBT-Autobahn<0xFC><0x01><0x08> und\ndes <0xFC><0x01><0x06>Meeresgrunds<0xFC><0x01><0x08> stecken voller\lSchätze, die nur auf dich warten!\pWenn du an einem dieser Orte bist,\nstelle deinen <0xFC><0x01><0x06>R-Button Mode<0xFC><0x01><0x08> auf <0xFC><0x01><0x06>Mining\lScan<0xFC><0x01><0x08> im <0xFC><0x01><0x06>menu Options<0xFC><0x01><0x08>, dann\ldrücke <0xF8><0x03>.\pWenn es Stellen zum Graben\nin deiner Nähe gibt, lässt das ADM sie\lleuchten!\pDrücke <0xF8>  in der Nähe eines dieser\nOrte, um zu graben.
+0x1F6D080: Das <0xFC><0x01><0x06>ADM<0xFC><0x01><0x08> ersetzt nicht nur\ndie VMs, du kannst es auch benutzen,\lum nach Schätzen zu suchen!\pDie Wände des <0xFC><0x01><0x06>KBT-Expresswegs<0xFC><0x01><0x08> und\ndes <0xFC><0x01><0x06>Meeresgrunds<0xFC><0x01><0x08> stecken voller\lSchätze, die nur auf dich warten!\pWenn du an einem dieser Orte bist,\nstelle deinen <0xFC><0x01><0x06>R-Button Mode<0xFC><0x01><0x08> auf <0xFC><0x01><0x06>Mining\lScan<0xFC><0x01><0x08> im <0xFC><0x01><0x06>menu Options<0xFC><0x01><0x08>, dann\ldrücke <0xF8><0x03>.\pWenn es Stellen zum Graben\nin deiner Nähe gibt, lässt das ADM sie\lleuchten!\pDrücke <0xF8>  in der Nähe eines dieser\nOrte, um zu graben.
 0x1F6D25F: Arr… Nicht in deinem Budget\n?
 0x1F6D280: Arr… Du hast nicht genug\nGeld.
 0x1F6D2A1: Sieht so aus, als könnte dieser Baum\ngefällt werden!\pMöchtest du das ADM benutzen?
@@ -18614,7 +18614,7 @@ einem Verlies zu entkommen.
 0x1F6D527: Siehst du dieses große,\pschwarze Schiff? Das ist der Prototyp eines\nBootes namens «Der Schatten\p». Es wurde entworfen, um den\nOzean lautlos mitten\lin der Nacht zu durchqueren.\pEin mysteriöser «Z»\nhat es finanziert.
 0x1F6D60A: Diese Schiffe gehören zur\nSeagallop-Hi-Speed-Serie. Sie sind\pvielleicht klein, aber sie können\nüber den Ozean schneller fahren als\njedes große Schiff!
 0x1F6D68F: Findest du es nicht nervig, dass du\nein Pokémon mitschleppen musst, um\lFelsen zu zerbrechen, ein anderes, um\lFelsen zu schieben, und noch ein anderes, um\lBäume zu fällen?\pGenau da kommt das <0xFC><0x01><0x06>ADM<0xFC><0x01><0x08> ins Spiel!\pEs tut nicht nur all das für\ndich, du kannst es sogar an\ldein Pokémon anbringen wie einen Jetpack, damit\les Fliegen einsetzen kann!\pDu kannst es sogar wie einen\nBohrer an deinem Pokémon befestigen, um\laus Höhlen zu entkommen!\pEines Tages wird es billig verkauft,\naber im Moment ist es beim Kauf\lnoch etwas teuer.
-0x1F6D883: Wenn du ein ADM hast, kannst du es benutzen\num\pnach Schätzen zu graben! Es gibt drei\nOrte zum Minen in Borrius:\ldie RBT-Autobahn, unter Wasser, oder in\leinem\pRaum des Kristallgipfels. Minen auf\nder RBT-Autobahn gibt eine gute\lAuswahl an Gegenständen, Minen unter Wasser\lgibt mehr Fossilien, und Minen am\lKristallgipfel gibt mehr\lEdelsteine.
+0x1F6D883: Wenn du ein ADM hast, kannst du es benutzen\num\pnach Schätzen zu graben! Es gibt drei\nOrte zum Minen in Borrius:\lder KBT-Expressweg, unter Wasser, oder in\leinem\pRaum des Kristallgipfels. Minen auf\ndem KBT-Expressweg gibt eine gute\lAuswahl an Gegenständen, Minen unter Wasser\lgibt mehr Fossilien, und Minen am\lKristallgipfel gibt mehr\lEdelsteine.
 0x1F6D9F8: Oh! Muscheln und Salz\nauf dem Grund\l\pdes Ozeans! Lass mich sie\nin einen seltenen Gegenstand für dich verwandeln.
 0x1F6DA73: <0xFC><0x01><0x02><0xFD><0x01> hat\n4 <0xFD><0x02>s und 4 <0xFD><0x03>s übergeben.
 0x1F6DA96: Jeden Tag erscheinen Muscheln und Salze\nauf dem Grund des Ozeans.\pBring mir {COLOR}É4{COLOR}Ë Muscheln\nund {COLOR}É4{COLOR}Ë Meersalze,\lich schmiede einen seltenen Gegenstand\lfür dich.
@@ -18770,7 +18770,7 @@ einem Verlies zu entkommen.
 0x1F70EDB: Trainer gesucht! Hilf dabei,\nPokémon zu trainieren!
 0x1F70F0E: Cratéris Eine\pStadt, erbaut aus Asche.
 0x1F70F31: Pokémon-Arena von Cratéris\nArenaleiter: Véga Der stets\lgegenwärtige Schatten
-0x1F70F70: Autoroute RBT\pUnterirdische Autobahn von Borrius.
+0x1F70F70: KBT-Expressweg\pUnterirdische Autobahn von Borrius.
 0x1F70F9D: Grotte Vallée
 0x1F70FA9: Route 6\n«Kartoffelweg»\p<0x79> Grotte Vallée\n<0x7A> Chenal Aubrun\l<0x7B> Route 7, Mont Givre\l<0x7C> Route 14
 0x1F71004: Route 7\n«Ende der Insel»\p<0x79> Mont Givre, Route 8\n<0x7A> Route 9\l<0x7C> Route 6
@@ -18857,7 +18857,7 @@ einem Verlies zu entkommen.
 0x1F72160: Schlachtfeld\pTritt gegen die Besten von Borrius an!
 0x1F7218E: Werft von Kapitän Davy\pHier baut man große Schiffe!
 0x1F721BA: Hafen von Naville\pAbfahrt nach Ost-Borrius!
-0x1F721EC: Auf den Stahlträgern sind Worte\ngekritzelt. Sie lauten:\p<0x79> Autoroute RBT
+0x1F721EC: Auf den Stahlträgern sind Worte\ngekritzelt. Sie lauten:\p<0x79> KBT-Expressweg
 0x1F72235: Kapitänsquartier
 0x1F72248: Polderive\pDie Stadt inmitten eines\nSumpfes.
 0x1F72275: Hafen von Polderive\pAbfahrt nach West-Borrius!
@@ -19070,7 +19070,7 @@ einem Verlies zu entkommen.
 0x1F78496: Ich arbeite in der Einrichtung,\ndie Traumlabor genannt wird.\pWir tun, was der Name sagt,\nwir erforschen Träume.\pMeine Aufgabe besteht darin, einen\nbesonderen Nebel\lvom Pokémon Traunmagil zu sammeln.\pLeider funktioniert das\nnicht gut.\pIm Moment konnte ich noch keine\nNebelkapsel bekommen.\pEine einzelne Kapsel ist mir nutzlos,\nnimm sie.
 0x1F78600: Der {COLOR}ÉTraumnebel{COLOR}Ë kann einem\nPokémon eine Versteckte Fähigkeit geben.\pMan kann diese Änderung nicht\nrückgängig machen.\pIch würde dir mehr geben, wenn ich könnte,\naber unser Traunmagil scheint nicht\lmehr viel davon zu produzieren.\pWenn du dein eigenes Traunmagil\nzum Kämpfen findest, kann es\lTraumnebel freisetzen, wenn du es besiegst.
 0x1F78733: Seit alten Zeiten spukt das\nmystische Pokémon Darkrai\lin dieser Stadt.\pWenn du genau hinschaust, kannst du sogar\ndie Geister der armen\lSeelen sehen, die von Darkrai heimgesucht werden.\pSei vorsichtig, Kind!\nFall nicht in die dunkle Leere!
-0x1F7880C: Somnia liegt isoliert in den\nBergen und hat keine\leigene Auffahrt zur {COLOR}ÉRBT-Autobahn{COLOR}Ç!\pWenn du den Berg hinunter willst,\nmusst du laufen oder den\lTeleporter bitten, dich dorthin zu schicken.
+0x1F7880C: Somnia liegt isoliert in den\nBergen und hat keine\leigene Auffahrt zum {COLOR}ÉKBT-Expressweg{COLOR}Ç!\pWenn du den Berg hinunter willst,\nmusst du laufen oder den\lTeleporter bitten, dich dorthin zu schicken.
 0x1F788D8: Entschuldigung, im Moment findet\ngerade eine große Reinigung\ldes Herrenhauses statt.\pWenn du gegen die Nachfolgerin\nantreten willst, komm später wieder.
 0x1F7896E: Meine Familie besitzt das Herrenhaus\nSomnia seit Generationen.\pTatsächlich haben meine Vorfahren\nSomnia\lselbst gegründet!\pDeshalb sitze ich gerne hier und\nschaue mir ab und zu die Stadt an.\pBleib nicht so sitzen wie ich,\njunger Mann.\pCarpe diem, Kind!\nNutze den Tag!
 0x1F78A89: <0xFC><0x01><0x02>Das kleine Mädchen ist verschwunden.\pWar sie wirklich da?
@@ -19468,7 +19468,7 @@ einem Verlies zu entkommen.
 0x1F821F4: Alles wurde geborgen!
 0x1F8220B: A{STR_VAR_2} {STR_VAR_1}\nwurde gefunden.
 0x1F8221D: A{STR_VAR_2} {STR_VAR_1}\nwurde gefunden.\pSchade! Dafür ist kein Platz\nim Würfel.
-0x1F82262: Der R-Tasten-Modus ist auf\nMinen-Analyse eingestellt.\pAuf der {COLOR}ÉAutoroute RBT{COLOR}Á, im\n{COLOR}ÉSeitenraum{COLOR}Á von {COLOR}ÉPic Cristal 1F{COLOR}Á, oder\l{COLOR}Éunter Wasser{COLOR}Á, drück {R_BUTTON}, um\nnach versteckten Objekten\lzu suchen.\pWenn ein Schimmer an der Wand erscheint,\ndrück {SE_SHOP}, um dort zu graben.{PAUSE_UNTIL_PRESS}
+0x1F82262: Der R-Tasten-Modus ist auf\nMinen-Analyse eingestellt.\pAuf dem {COLOR}ÉKBT-Expressweg{COLOR}Á, im\n{COLOR}ÉSeitenraum{COLOR}Á von {COLOR}ÉPic Cristal 1F{COLOR}Á, oder\l{COLOR}Éunter Wasser{COLOR}Á, drück {R_BUTTON}, um\nnach versteckten Objekten\lzu suchen.\pWenn ein Schimmer an der Wand erscheint,\ndrück {SE_SHOP}, um dort zu graben.{PAUSE_UNTIL_PRESS}
 0x1F82358: Unterirdischer Durchgang
 0x1F82369: Ein Tunnel, der Automnia mit\nRoute 9 verbindet.\nEnthusiasten haben dort eine\ntägliche Herausforderung eingerichtet.
 0x1F823C3: Wirst du der Nächste sein, der\nunsere tägliche Herausforderung wagt?\pErreiche das andere Ende des Tunnels\nin weniger als 15 Sekunden, um einen\lfantastischen Preis zu gewinnen!
@@ -19812,11 +19812,11 @@ einem Verlies zu entkommen.
 0x1F893F8: Zygarde-Zelle zwischen Felsen\nnahe der Brücke\nim 2. Stock.
 0x1F89441: Zygarde-Zelle bei Bäumen südlich\ndes Weges nach\nCimistral.
 0x1F89494: Zygarde-Zelle beim gefrorenen\nFluss auf der Ostseite\nder Route.
-0x1F894E3: Zygarde-Zelle neben einem Baum\nnahe dem Eingang der\nRBT-Autobahn.
+0x1F894E3: Zygarde-Zelle neben einem Baum\nnahe dem Eingang des\nKBT-Expresswegs.
 0x1F89535: Zygarde-Zelle im Nest von\nKrawell.
 0x1F8956D: Zygarde-Zelle in Bäumen\nnahe dem Wachposten.
 0x1F895B3: Zygarde-Zelle auf der Insel in der Mitte\ndes Sees.
-0x1F895F8: Zygarde-Zelle bei der Felswand\nwestlich des Eingangs\nder RBT-Autobahn.
+0x1F895F8: Zygarde-Zelle bei der Felswand\nwestlich des Eingangs\ndes KBT-Expresswegs.
 0x1F89656: Zygarde-Zelle mit Blick auf den Ozean\nim Südosten\nder Route.
 0x1F896AC: Zygarde-Zelle zwischen Wasserfällen\nmit Blick auf den Ozean in der Mitte\nder Route.
 0x1F89712: Zygarde-Zelle hinter einem Gitter\nnahe dem Wachposten.
@@ -19840,7 +19840,7 @@ einem Verlies zu entkommen.
 0x1F89BBB: Zygarde-Zelle auf einer Erdscholle\nnahe den Klippen.
 0x1F89BFE: Zygarde-Zelle am Ende des Weges,\nder mit Route 5 verbunden ist.
 0x1F89C43: Zygarde-Zelle auf der Insel in der Mitte\nder Route.
-0x1F89C89: Zygarde-Zelle auf dem Gipfel der\nRBT-Autobahn.
+0x1F89C89: Zygarde-Zelle auf dem Gipfel des\nKBT-Expresswegs.
 0x1F89CC3: Zygarde-Zelle am Grund des\nzentralen Canyons.
 0x1F89D03: Zygarde-Zelle zwischen Kakteen\nnahe dem Eingang des Grabmals\nvon Borrius.
 0x1F89D5C: Zygarde-Zelle unter dem Zwirrfinst\nim B2F.
@@ -20908,13 +20908,13 @@ einem Verlies zu entkommen.
 0x1F9D2C9: {COLOR}ËSchnief… Ich kenne den\pWeg nach Hause von\phier aus. Ich bin gerne mit dir\ngelaufen! Du bist der Beste!
 0x1F9D31F: Das bist du! Der großartige\nTrainer, der mich gerettet hat!\pDu bist der Beste!
 0x1F9D358: Schwarzer Flambirex
-0x1F9D369: Rette den Bruder eines Mannes\naus den Klauen von «Schwarzer\nFlambirex» in der Autoroute RBT.
+0x1F9D369: Rette den Bruder eines Mannes\naus den Klauen von «Schwarzer\nFlambirex» im KBT-Expressweg.
 0x1F9D3BF: Bruder
 0x1F9D3C7: James
 0x1F9D3CD: Boss von Schwarzer Flambirex
 0x1F9D3DF: Hallo, Trainer.…\pWas? Du willst, dass ich\pdir etwas Interessantes\nerzähle? Na\pgut… In letzter Zeit\phabe ich Ärger mit meinem\nBruder. Er hat sich bis über\pbeide Ohren mit einer\nGang eingelassen, die sich\l«Schwarzer Flambirex» nennt. Ich\pweiß nicht wirklich,\nworum es geht, aber\lich mache mir wirklich Sorgen\pum ihn. Ich habe seit\nTagen nicht mit ihm\lgesprochen, also habe ich\pAngst, dass ihm etwas\nzugestoßen ist.\p… Was? Du wärst\pbereit, das für mich nachzuprüfen?
 0x1F9D58E: Du bist derjenige, der\nbei mir vorbeigekommen ist, um zu fragen.
-0x1F9D5C0: Danke! Du findest meinen Bruder\pwahrscheinlich im\nNorden der Autoroute RBT.\pIch würde ja selbst gehen, aber\nich bin ein zu schwacher\pTrainer. Man sagt, die Leute von Schwarzer\nFlambirex sind verdammt fies.
+0x1F9D5C0: Danke! Du findest meinen Bruder\pwahrscheinlich im\nNorden des KBT-Expresswegs.\pIch würde ja selbst gehen, aber\nich bin ein zu schwacher\pTrainer. Man sagt, die Leute von Schwarzer\nFlambirex sind verdammt fies.
 0x1F9D66C: Wenn du meinen Bruder siehst,\nsag ihm, dass ich mir\limmer noch Sorgen um ihn mache.
 0x1F9D6C4: Was glaubst du eigentlich,\nwas du hier machst, Rotzlöffel?\pHier ist das ultimative Paradies\nvon Schwarzer Flambirex… Ein kleiner\pSchädling wie du hat hier\nnichts verloren… Glaubst du\pwirklich, du könntest mir,\ndem Boss von Schwarzer\lFlambirex, standhalten?
 0x1F9D799: Ist das alles, was du drauf hast?\pNö, dir bleibt noch eine\nOption: verschwinde! Das ist\punser Revier, Schwarzer\nFlambirex. Wir haben nirgendwo\phin zu gehen, und wir\nwollen niemanden, der uns stört.
