@@ -496,10 +496,10 @@
 0x1BC409: Für einen Doppelkampf brauchst du\nmindestens zwei Pokémon.
 0x1BC442: Für einen Tausch musst du\nmindestens zwei Pokémon dabei haben.
 0x1BC47C: Ein Pokémon, das die Beere\n{STR_VAR_1} trägt, kann nicht getauscht werden.
-0x1BC4AC: Bitte warte.\n… Taste B: Abbrechen
-0x1BC4CE: Wenn alle bereit sind…\nTaste A: Bestätigen\lTaste B: Abbrechen
-0x1BC50D: Verbindung mit {STR_VAR_1} Spielern starten.\nTaste A: Bestätigen\lTaste B: Abbrechen
-0x1BC54C: Warte auf Verbindung…\n… Taste B: Abbrechen
+0x1BC4AC: Bitte warte.\n… Taste B: Zurück
+0x1BC4CE: Wenn alle bereit sind…\nTaste A: Bestätigen\lTaste B: Zurück
+0x1BC50D: Verbindung mit {STR_VAR_1} Spielern starten.\nTaste A: Bestätigen\lTaste B: Zurück
+0x1BC54C: Warte auf Verbindung…\n… Taste B: Zurück
 0x1BC590: Komm bitte herein.
 0x1BC59E: Ich bringe dich zu deinem\nRaum.
 0x1BC5C0: Jemand ist noch nicht bereit, sich zu verbinden.\pKomm wieder, wenn alle\nbereit sind.
@@ -649,7 +649,7 @@
 0x1C582D: Die Tasten werden in der\nReihenfolge ihrer Wichtigkeit erklärt.
 0x1C5875: Bewegt den Helden.\nDient auch zur Auswahl von Menüpunkten.
 0x1C58BA: Bestätigt eine Auswahl, untersucht,\nspricht und lässt Text ablaufen.
-0x1C58F9: Zum Verlassen, Abbrechen einer Auswahl\noder Beenden eines Modus.
+0x1C58F9: Zum Verlassen, Zurück einer Auswahl\noder Beenden eines Modus.
 0x1C592B: Drücke diese Taste, um das\nMENÜ zu öffnen.
 0x1C594F: Ermöglicht es, Gegenstände zu verschieben\nund einen registrierten Gegenstand zu benutzen.
 0x1C5981: Wenn du Hilfe zum Spiel\noder zu den Aktionen brauchst,\ndrücke die Taste L oder R.
@@ -720,7 +720,7 @@
 0x238D4C: Ventilator
 0x238D59: Rasenmäher
 0x238D63: Rückgängig
-0x238D6A: Abbrechen
+0x238D6A: Zurück
 0x23E565: Trainer <0x53><0x54>
 0x23E57F: Agent
 0x23E58C: Kellner
@@ -2156,7 +2156,7 @@
 0x3ECA95: MEGA
 0x3ECA9A: K.O. MIT 1 SCHLAG!
 0x3ECAA4: SCHICKSAL
-0x3ECAAC: Abbrechen
+0x3ECAAC: Zurück
 0x3ECAB7: PLÄTTEN
 0x3ECABF: SCHERZEN
 0x3ECAC7: MIES
@@ -2793,7 +2793,7 @@
 0x4161A9: Speich.
 0x4161B2: Geben
 0x4161BC: Laufen
-0x4161C1: Abbrechen
+0x4161C1: Zurück
 0x4161C8: Beenden
 0x4161D4: Item
 0x4161D9: Mail
@@ -3193,7 +3193,7 @@
 0x418433: {DYNAMIC}  wird getragen.
 0x418443: Ging an {DYNAMIC} .
 0x418452: Mail kann nicht gelagert werden!
-0x418468: Abbrechen
+0x418468: Zurück
 0x41846F: Lagern
 0x418475: Entnehmen
 0x41847E: Tauschen
@@ -3567,7 +3567,7 @@
 0x41B7EE: Ich will Pokémon fangen.
 0x41B807: Erzähl mir von TMs.
 0x41B81B: Wie registriere ich ein Item?
-0x41B836: Abbrechen
+0x41B836: Zurück
 0x41B83D: Hallo, Trainer!\nHALLO, Trainer!\p…\pKommt schon, macht Lärm!\nHALLO, Trainer!\lIch bin der POKé-FAN!\p
 0x41B8BF: Der POKé-FAN erklärt dir, wie\ndu gegen Pokémon kämpfst!\l\pStell dir vor: Du läufst herum\nund ein wildes Pokémon erscheint!\pNutze deine Pokémon und ihre\nAttacken, um die gegnerischen KP\lauf null zu senken und zu siegen!\l\pIch zeige es dir\nin echt!\pAuf geht's!\nLos!\pBehalt die große\nPOKé-FAN-SHOW im Auge!
 0x41BA41: Na, konntest du folgen?\pAuch wenn die KP deines Pokémon\nauf null fallen und es nicht mehr\lkämpfen kann, keine Panik!\pBring es in ein Pokémon-Center\nund heile es!\pAlso, bis bald!\pDenk dran: Eine gute Tat pro Tag\nmacht für immer froh!
@@ -4374,7 +4374,7 @@
 0x458F5F: Das Pokémon von {STR_VAR_1}\nkann gerade nicht getauscht werden.\p
 0x458F60: Du kannst das Pokémon von\n<0xFD><0x02> jetzt nicht tauschen.\p
 0x458FBC: Eierhandel
-0x458FC6: {DPAD_UPDOWN}Wählen  {SE_SHOP}Beitreten  {B_BUTTON}Abbrechen
+0x458FC6: {DPAD_UPDOWN}Wählen  {SE_SHOP}Beitreten  {B_BUTTON}Zurück
 0x458FE3: Bitte wähle einen Trainer.
 0x458FE4: Wähle einen Trainer.
 0x458FFD: Bitte wähle einen Trainer für\nden Einzelkampf.
@@ -9139,7 +9139,7 @@
 0xA43AB3: Nicht verfügbar
 0xA43ABF: Speichern
 0xA43AC8: Analysieren
-0xA43ACD: Abbrechen
+0xA43ACD: Zurück
 0xA43AD4: <0xFD><0x02> ausgewählt.
 0xA43AE4: Du musst zuerst {STR_VAR_2}\nerhalten, bevor du {STR_VAR_1} suchst.{PAUSE_UNTIL_PRESS}
 0xA43B17: Nach diesem Pokémon kann noch\nnicht gesucht werden!{PAUSE_UNTIL_PRESS}
@@ -13437,8 +13437,8 @@
 0x1EED1D8: Dieses Outfit wurde noch nicht freigeschaltet.{PAUSE_UNTIL_PRESS}
 0x1EED1FD: {STR_VAR_2} Gewinne mehrere Kämpfe\nmit {STR_VAR_1}, um dieses Outfit freizuschalten.{PAUSE_UNTIL_PRESS}
 0x1EED247: {STR_VAR_1} muss {STR_VAR_2} Mal\nbesiegt werden, um dieses Outfit freizuschalten.{PAUSE_UNTIL_PRESS}
-0x1EED28A: Benutze {DPAD_LEFTRIGHT}, um ein\nOutfit zu wählen. Bestätige mit {SE_SHOP}. Abbrechen mit {B_BUTTON}.
-0x1EED2CE: Benutze {DPAD_LEFTRIGHT}, um den\nBesatz zu wählen. Bestätige mit {SE_SHOP}. Abbrechen mit {B_BUTTON}.
+0x1EED28A: Benutze {DPAD_LEFTRIGHT}, um ein\nOutfit zu wählen. Bestätige mit {SE_SHOP}. Zurück mit {B_BUTTON}.
+0x1EED2CE: Benutze {DPAD_LEFTRIGHT}, um den\nBesatz zu wählen. Bestätige mit {SE_SHOP}. Zurück mit {B_BUTTON}.
 0x1EED30F: Gesperrt
 0x1EED316: Nächste Version
 0x1EED32E: Kraterstadt
@@ -17249,7 +17249,7 @@ einem Verlies zu entkommen.
 0x1F4E1C7: Schlägt einen Spitznamen für das gefangene Pokémon vor.
 0x1F4E1EB: Legt das Item des gefangenen Pokémon in den Cube.
 0x1F4E214: Speichert die gewählten Einstellungen.
-0x1F4E230: Speichern\nAufgeben\nAbbrechen
+0x1F4E230: Speichern\nAufgeben\nZurück
 0x1F4E244: {X}Wählen {Y}Ändern {Z}Bestätigen {COLOR}{W}{V}{U}Mehr
 0x1F4E528: Willkommen im Pokémon-Center!\nSoll ich deine Pokémon heilen?
 0x1F4E599: Willkommen in unserem\nPokémon-Center!
@@ -19030,8 +19030,8 @@ einem Verlies zu entkommen.
 0x1F77B8E: {DPAD_LEFTRIGHT}Wählen {SE_SHOP}Name {B_BUTTON}Schließen {L_BUTTON}{R_BUTTON}Seite
 0x1F77BAD: {DPAD_LEFTRIGHT}Wählen {SE_SHOP}Bearbeiten {B_BUTTON}Schließen {L_BUTTON}{R_BUTTON}Seite
 0x1F77BCC: {DPAD_ANY}Wählen {SE_SHOP}Bearbeiten {B_BUTTON}OK {L_BUTTON}{R_BUTTON}Wesen
-0x1F77C17: {DPAD_ANY}Ändern {SE_SHOP}OK {B_BUTTON}Abbrechen
-0x1F77C2E: {DPAD_ANY}Ändern {SE_SHOP}OK {B_BUTTON}Abbrechen {L_BUTTON}Min {R_BUTTON}Max
+0x1F77C17: {DPAD_ANY}Ändern {SE_SHOP}OK {B_BUTTON}Zurück
+0x1F77C2E: {DPAD_ANY}Ändern {SE_SHOP}OK {B_BUTTON}Zurück {L_BUTTON}Min {R_BUTTON}Max
 0x1F77C51: {DPAD_LEFTRIGHT}Wählen {SE_SHOP}Prüfen {B_BUTTON}Schließen {L_BUTTON}{R_BUTTON}Seite
 0x1F77C71: {DPAD_LEFTRIGHT}Wählen {SE_SHOP}Erlernen {B_BUTTON}Schließen {L_BUTTON}{R_BUTTON}Seite
 0x1F77C91: Nur Pokémon aus diesem\nSpielstand können bearbeitet werden.{PAUSE_UNTIL_PRESS}
@@ -19415,7 +19415,7 @@ einem Verlies zu entkommen.
 0x1F80A6A: Leider fehlen dir {COLOR}É{STR_VAR_3} {STR_VAR_1}{COLOR}Ë\num deine Kraft-Items zu verbessern.\pVerdiene mehr Sterne\nund komm zurück!
 0x1F80AD5: Mit deinen Kraft-Items auf Maximalstufe\nwerden deine Pokémon zusätzliche\lFleißpunkte {COLOR}É{EVIL_LEGENDARY}{COLOR}Ë erhalten,\lwenn das Item getragen wird!\pSag mir, dass das nicht verrückt ist,\nVerrückter unter Verrückten!
 0x1F80B7B: {DPAD_ANY}Bewegen {SE_SHOP}Nehmen {B_BUTTON}Verlassen
-0x1F80B91: {DPAD_ANY}Bewegen {SE_SHOP}Ablegen {B_BUTTON}Abbrechen
+0x1F80B91: {DPAD_ANY}Bewegen {SE_SHOP}Ablegen {B_BUTTON}Zurück
 0x1F80BA8: {DPAD_ANY}Bewegen {SE_SHOP}Verschieben {B_BUTTON}Verlassen
 0x1F80BBE: Dieses Bild muss neu erstellt werden,\num fortzufahren!{PAUSE_UNTIL_PRESS}
 0x1F80BE9: Puzzle aufgeben?
