@@ -1978,7 +1978,7 @@
 0x1ee6b13: Okay, quindi il tuo compleanno è il\n<0xFD><0x02>/<0xFD><0x03>/<0xFD><0x04>. Questo\lsignifica che hai <0xFD><0x07> anni!
 0x1ee6b5a: Va bene, allora il tuo compleanno è\nil <0xFD><0x02>/<0xFD><0x03>/<0xFD><0x04>.\lQuesto significa che oggi compi <0xFD><0x07>\n\nanni! Buon compleanno!
 0x1ee6bb1: Va bene, quindi il tuo compleanno è\nil <0xFD><0x02>/<0xFD><0x03>/<0xFD><0x04>.
-0x1ee6bd8: <0xFC><0x01><0x02>Inserisci la tua data di nascita\ncon \btn0C. Il formato è AAAA/MM/GG. \btn00\lper confermare.
+0x1ee6bd8: <0xFC><0x01><0x02>Inserisci la tua data di nascita\ncon {DPAD_ANY}. Il formato è AAAA/MM/GG. {SE_SHOP}\lper confermare.
 0x1ee6c1d: Il tuo compleanno è il\n<0xFD><0x02>/<0xFD><0x03>/<0xFD><0x04>?
 0x1ee6c66: Adesso è ora di andare! Se insegui\nquell'uomo, potresti riuscire a\lraggiungerlo!
 0x1ee6cc7: Mi piace comprare un sacco di\n<0xFC><0x01><0x06>Antigelo<0xFC><0x01><0x04>! I miei Pokémon non si\lcongelano spesso, ma non fa mai\n\nmale avere oggetti extra nel mio\nCube!
@@ -2032,7 +2032,7 @@
 0x1ee82e1: Allenatore! Grazie per aver aiutato\nla mia mamma a prepararmi il cibo!\lEra buonissimoooo!
 0x1ee832f: La gente dice che a est della città\nc'è una foresta nascosta con un\lPokémon potente al suo interno. Ma\n\nprobabilmente è solo una voce,\nquindi la maggior parte della gente\ltende a ignorarla.
 0x1ee83cd: Nel bosco a est della città dorme\nun potente Pokémon. Non temere: non\lti causerà alcun danno. È\n\npericoloso solo se gli ti avvicini\ndi <0xFC><0x01><0x06>giovedì<0xFC><0x01><0x08>.
-0x1ee8477: Le persone che vivono qui non mi\nfanno entrare, quindi sono\lcostretto a stare qui fuori. Altri\n\npossono semplicemente premere \btn00\nvicino alla porta ed entrare. Ma\lnon io. La vita fa schifo.
+0x1ee8477: Le persone che vivono qui non mi\nfanno entrare, quindi sono\lcostretto a stare qui fuori. Altri\n\npossono semplicemente premere {SE_SHOP}\nvicino alla porta ed entrare. Ma\lnon io. La vita fa schifo.
 0x1ee8520: L'impulso di combattere con\nqualcuno con cui ti sei già\lscontrato\. Ti è mai venuto? Sono\n\nsicuro di sì. Anch'io volevo\naffrontare certe persone ancora e\lancora. Così, le ho distribuite.\n\nPer favore, prendine una!
 0x1ee85fb: Usa quel dispositivo e troverai\nAllenatori in cerca di una\lrivincita. Però devi caricarne la\n\nbatteria per usarlo.
 0x1ee866d: Come si usa il <0xFC><0x01><0x06>Cercasfide<0xFC><0x01><0x08>? È\nsemplicissimo. Usalo così,\lbip-bip-bip, e gli Allenatori\n\nintorno a te se ne accorgeranno. Se\nun Allenatore vuole una rivincita,\lte lo farà sapere subito. Carica la\n\nbatteria e usalo mentre sei su una\nstrada.
@@ -2895,7 +2895,7 @@
 0x1f05779: Ha scambiato con me il suo\n<0xFC><0x01><0x06>Electabuzz<0xFC><0x01><0x08>, così gli ho usato sopra\lun <0xFC><0x01><0x06>Elettritore<0xFC><0x01><0x08> come una <0xFC><0x01><0x06>Pietra\n\nEvolutiva<0xFC><0x01><0x08>, e si è evoluto!
 0x1f057f0: Ci sono alcuni Pokémon che possono\nevolversi solo durante uno scambio.\lMa chi fa ancora scambi, sai?\n\nQuella moda è finita anni fa. Ora\npuoi evolvere quei Pokémon usando\luna <0xFC><0x01><0x06>Pietralink<0xFC><0x01><0x08>! Guarda, ti faccio\n\nvedere!
 0x1f058bd: La <0xFC><0x01><0x06>Pietra Link<0xFC><0x01><0x08> può essere usata per\nfar evolvere alcuni Pokémon che\lnormalmente si evolvono solo\n\ntramite scambio.
-0x1f0591e: Tutti qua sono tipo, <0xB1>evoluzione\nquesto<0xB2> e <0xB1>evoluzione quello.<0xB2> Ma\lsecondo me l'evoluzione è stupida!\n\nIl mio metodo preferito per\nimpedire l'evoluzione non è premere\l\btn01 quando il mio Pokémon sta per\n\nevolversi, ma fargli tenere una\n<0xFC><0x01><0x06>Pietrastante<0xFC><0x01><0x08>. In questo modo posso\lsaltare del tutto la faccenda\n\ndell'evoluzione! E sai una cosa? Te\nne darò una se mi mostri un Pokémon\lche non si è mai evoluto e non può\n\nevolversi! Hai un Pokémon del\ngenere nella tua squadra?
+0x1f0591e: Tutti qua sono tipo, <0xB1>evoluzione\nquesto<0xB2> e <0xB1>evoluzione quello.<0xB2> Ma\lsecondo me l'evoluzione è stupida!\n\nIl mio metodo preferito per\nimpedire l'evoluzione non è premere\l{B_BUTTON} quando il mio Pokémon sta per\n\nevolversi, ma fargli tenere una\n<0xFC><0x01><0x06>Pietrastante<0xFC><0x01><0x08>. In questo modo posso\lsaltare del tutto la faccenda\n\ndell'evoluzione! E sai una cosa? Te\nne darò una se mi mostri un Pokémon\lche non si è mai evoluto e non può\n\nevolversi! Hai un Pokémon del\ngenere nella tua squadra?
 0x1f05afd: Quale Pokémon è?
 0x1f05b12: Sì, quel Pokémon non si è mai\nevoluto e non potrà mai evolversi.\lCome promesso, prendi una\n\n<0xFC><0x01><0x06>Pietrastante<0xFC><0x01><0x08>!
 0x1f05b72: Se un Pokémon tiene una\n<0xFC><0x01><0x06>Pietrastante<0xFC><0x01><0x08> non si evolve! Se un\lPokémon ne tiene una durante\n\nl'allevamento, trasmetterà la sua\nnatura! Le Pietrastanti non sono\lfantastiche? Se ne vuoi altre, ho\n\nsentito che ce n'è un sacco\nincastrate nelle <0xFC><0x01><0x06>pareti<0xFC><0x01><0x08> del <0xFC><0x01><0x06>KBT\lExpressway<0xFC><0x01><0x08>. Però come si faccia a\n\ntirarle fuori, non ne ho idea\.
@@ -3079,7 +3079,7 @@
 0x1f0bc67: Quella è una funzione di <0xFC><0x01><0x06>Registro\nMissioni<0xFC><0x01><0x04> per il tuo Super Cubo!\lTiene traccia di tutto ciò che ti\n\nviene chiesto di fare! Per usarla,\nbasta aprirla dal <0xFC><0x01><0x06>Menu Start<0xFC><0x01><0x04>. E ora\lche ne hai uno, perché non facciamo\n\nin modo che registri la richiesta\ndel Prof Log per te?
 0x1f0bd67: Ah, e prima che me ne dimentichi,\nhai lasciato un componente chiave\ldel tuo Super Cubo sul pavimento\n\ndella tua stanza. So che prima non\nera necessario, ma ora che hai il\ltuo Pokémon personale, ne avrai\n\nbisogno se vuoi usare quegli\noggetti che aumentano le\lstatistiche in lotta.
 0x1f0be5e: <0xFC><0x01><0x02><0xFD><0x01> ha ricevuto da Mamma il\ncomponente lotta del Super Cubo!
-0x1f0be99: Nel caso tu abbia dimenticato, il\nSuper Cube si comporta proprio come\luna borsa. Ma a differenza di\n\nquelle borse economiche del Poké\nMart che possono contenere solo 42\lstrumenti, il Super Cube, o come è\n\npiù comunemente conosciuto, <0xFC><0x01><0x06>Cube<0xFC><0x01><0x04>,\nha uno spazio infinito! Funziona\ldigitalizzando i dati dello\n\nstrumento inserito, quindi\nessenzialmente, è come se non\lstessi portando niente di extra! E\n\nnon solo, puoi anche ordinare\nautomaticamente il Cube premendo \btn04!\lNon è comodo? Certo, se pensi\n\nancora che il Cube sia un po'\ndisordinato anche dopo\ll'ordinamento, usa semplicemente \btn02\n\ne \btn03 per spostarti velocemente. Oh,\ne puoi persino usarlo per\lconservare questo regalo d'addio\n\nche ho preparato!
+0x1f0be99: Nel caso tu abbia dimenticato, il\nSuper Cube si comporta proprio come\luna borsa. Ma a differenza di\n\nquelle borse economiche del Poké\nMart che possono contenere solo 42\lstrumenti, il Super Cube, o come è\n\npiù comunemente conosciuto, <0xFC><0x01><0x06>Cube<0xFC><0x01><0x04>,\nha uno spazio infinito! Funziona\ldigitalizzando i dati dello\n\nstrumento inserito, quindi\nessenzialmente, è come se non\lstessi portando niente di extra! E\n\nnon solo, puoi anche ordinare\nautomaticamente il Cube premendo {START_BUTTON}!\lNon è comodo? Certo, se pensi\n\nancora che il Cube sia un po'\ndisordinato anche dopo\ll'ordinamento, usa semplicemente {L_BUTTON}\n\ne {R_BUTTON} per spostarti velocemente. Oh,\ne puoi persino usarlo per\lconservare questo regalo d'addio\n\nche ho preparato!
 0x1f0c11c: Quella è una <0xFC><0x01><0x06>Costume Box<0xFC><0x01><0x04>! Puoi\nusarla per cambiare vestiti in\lqualsiasi momento del tuo viaggio.\n\nL'ho riempita con colori diversi\ntra cui scegliere, ma se trovi\laltri outfit, assicurati di\n\nconservarli anche lì dentro. Stai\nal sicuro là fuori, tesoro! Porta a\lProf. Log il suo pacco!
 0x1f0c237: <0xFD><0x01>! Dovresti fare una breve\npausa.
 0x1f0c259: Buon compleanno, <0xFD><0x01>! Dovresti\nprenderti una breve pausa.
@@ -3484,8 +3484,8 @@
 0x1f1953f: <0xFC><0x01><0x02>È una specie di pianta con foglie\ndalla forma strana.
 0x1f195ce: Da dove viene tutta questa nebbia?\nUh\. Chi lo sa!
 0x1f1965f: Da dove viene la nebbia? Uh\. Non ne\nho idea!
-0x1f19700: Trovo che premere \btn02 per vedere i\ndettagli delle mosse dei miei\lPokémon mi aiuti a capire quali\n\nmosse andranno a segno in questa\nnebbia.
-0x1f197de: Trovo che premere \btn02 per vedere i\ndettagli delle mosse dei miei\lPokémon mi aiuti a capire quali\n\nmosse andranno a segno quando qui\nc'è la nebbia.
+0x1f19700: Trovo che premere {L_BUTTON} per vedere i\ndettagli delle mosse dei miei\lPokémon mi aiuti a capire quali\n\nmosse andranno a segno in questa\nnebbia.
+0x1f197de: Trovo che premere {L_BUTTON} per vedere i\ndettagli delle mosse dei miei\lPokémon mi aiuti a capire quali\n\nmosse andranno a segno quando qui\nc'è la nebbia.
 0x1f198b3: Con le tue capacità, andrai\nlontano!
 0x1f19940: Farei meglio a perfezionare i miei\ncalcoli per la prossima volta che\lci sfideremo.
 0x1f1998d: È finita.
@@ -3669,7 +3669,7 @@
 0x1f218f1: <0xFC><0x01><0x02>È una statua di un Pokémon. Sembra\nemanare potere\. <0xFD><0x01> ha letto\ll'iscrizione incisa\. \. \. Un corpo di\n\nroccia. Un corpo di ghiaccio. Un\ncorpo di acciaio. Quando si\lriuniranno i tre Pokémon, il re\n\napparirà.
 0x1f219b2: <0xFC><0x01><0x06>\.Zut zutt!
 0x1f219c0: <0xFC><0x01><0x02>Regigigas è crollato in polvere.
-0x1f21a41: Più oggetti nel Cubo possono essere\nassegnati a \btn05 per usarli\lfacilmente.
+0x1f21a41: Più oggetti nel Cubo possono essere\nassegnati a {SELECT_BUTTON} per usarli\lfacilmente.
 0x1f21b19: Cosa vorresti fare?
 0x1f21b34: I tuoi Pokémon sono stati riportati\nin perfetta salute.
 0x1f21b65: Deposito Pokémon
@@ -3765,17 +3765,17 @@
 0x1f2485b: Cos'è questo? Vuoi questo\ndispositivo per te?
 0x1f2488b: Certo che puoi avere questo\ndispositivo! Dopotutto, sei stato\lun grande aiuto per il Prof. Log!
 0x1f248e3: Lascia che tu sappia che il Prof.\nLog ed io abbiamo faticato giorno e\lnotte per creare questo\n\ndispositivo! Non posso mica\ndistribuirlo a chiunque, capisci!\lTuttavia\. Se riuscissi a soddisfare\n\nuna parte della richiesta del Prof.\nLog\. Diciamo\. registrare almeno\l<0xFC><0x01><0x06><0xFD><0x02><0xFC><0x01><0x08> specie diverse come\n\n<0xFC><0x01><0x06>catturate<0xFC><0x01><0x08> nel tuo Pokédex? Se\nriesci a farlo, ti lascerò avere\lquesto dispositivo.
-0x1f24a3c: Con lo <0xFC><0x01><0x06>Stat Scanner<0xFC><0x01><0x08>, puoi vedere le\nstatistiche nascoste dei tuoi\lPokémon ovunque nella regione! Puoi\n\nperfino vedere le mosse che può\nimparare premendo \btn02 o \btn03! Ah, e per\lcomodità, puoi anche aprirlo\n\nrapidamente dalla tua <0xFC><0x01><0x06>lista della\nsquadra<0xFC><0x01><0x08> premendo \btn03.
+0x1f24a3c: Con lo <0xFC><0x01><0x06>Stat Scanner<0xFC><0x01><0x08>, puoi vedere le\nstatistiche nascoste dei tuoi\lPokémon ovunque nella regione! Puoi\n\nperfino vedere le mosse che può\nimparare premendo {L_BUTTON} o {R_BUTTON}! Ah, e per\lcomodità, puoi anche aprirlo\n\nrapidamente dalla tua <0xFC><0x01><0x06>lista della\nsquadra<0xFC><0x01><0x08> premendo {R_BUTTON}.
 0x1f24b41: Il mio taccuino! L'hai trovato!\nAvevo annotato nel libro le varie\lpersone di Borrius che potevano\n\ninsegnare mosse ai tuoi Pokémon, ma\ndev'essermi sfuggito di mano. Ora\lche l'hai trovato, ridammi per un\n\nmomento il tuo Stat Scanner.
 0x1f24c1c: Il mio taccuino! L'hai trovato!\nAvevo annotato nel libro le varie\lpersone di Borrius che potevano\n\ninsegnare mosse ai tuoi Pokémon, ma\ndevo averlo smarrito. Ti prego,\laccetta questi come ringraziamento!
 0x1f24cd7: <0xFC><0x01><0x02><0xFD><0x01> ha consegnato il Notebook\ne lo Stat Scanner.
 0x1f24d0c: <0xFC><0x01><0x02><0xFD><0x01> ha consegnato il Taccuino.
 0x1f24d2c: Okay! Gli aggiornamenti sono tutti\ncompletati! Per favore, riprendi il\ltuo Scanner Statistiche.
 0x1f24d71: <0xFC><0x01><0x02><0xFD><0x01> ha ripreso lo Stat\nScanner.
-0x1f24d93: Con lo <0xFC><0x01><0x06>Stat Scanner<0xFC><0x01><0x08> potenziato, non\nsolo puoi visualizzare le\lstatistiche nascoste e le mosse del\n\ntuo Pokémon in qualsiasi punto\ndella regione, ma puoi anche\linsegnare al tuo Pokémon mosse che\n\naltrimenti richiederebbero di\nvisitare un determinato luogo o\lpersona! Basta premere \btn02 o \btn03 per\n\nvedere le mosse, e poi sceglierne\nuna da insegnare con \btn00. E\lovviamente, per comodità, puoi\n\nancora aprirlo rapidamente dal tuo\n<0xFC><0x01><0x06>elenco squadra<0xFC><0x01><0x08> con \btn03.
+0x1f24d93: Con lo <0xFC><0x01><0x06>Stat Scanner<0xFC><0x01><0x08> potenziato, non\nsolo puoi visualizzare le\lstatistiche nascoste e le mosse del\n\ntuo Pokémon in qualsiasi punto\ndella regione, ma puoi anche\linsegnare al tuo Pokémon mosse che\n\naltrimenti richiederebbero di\nvisitare un determinato luogo o\lpersona! Basta premere {L_BUTTON} o {R_BUTTON} per\n\nvedere le mosse, e poi sceglierne\nuna da insegnare con {SE_SHOP}. E\lovviamente, per comodità, puoi\n\nancora aprirlo rapidamente dal tuo\n<0xFC><0x01><0x06>elenco squadra<0xFC><0x01><0x08> con {R_BUTTON}.
 0x1f24f2c: <0xFD><0x01>, ho meravigliose notizie\nper te! Grazie all'aiuto di\.<0xFC><0x08><0x18> una\lcerta organizzazione, ho decifrato\n\nil codice per modificare le\nstatistiche dei Pokémon! Per\lfavore, consegnami il tuo Stat\n\nScanner per un momento.
 0x1f24fe7: <0xFC><0x01><0x02><0xFD><0x01> ha consegnato lo Scanner\ndelle statistiche.
-0x1f2500b: Con lo <0xFC><0x01><0x06>Stat Scanner<0xFC><0x01><0x08> completamente\npotenziato, puoi modificare\lpraticamente ogni aspetto dei tuoi\n\nPokémon! Ti basta premere \btn00 sul\nPokémon che vuoi modificare, e\lpotrai cambiare con facilità la sua\n\nAbilità, Natura, Sesso, Livello,\nEV, IV e persino la sua Introforza!\lE, naturalmente, dopo aver premuto\n\n\btn02 o \btn03, puoi ancora insegnare nuove\nmosse al tuo Pokémon.
+0x1f2500b: Con lo <0xFC><0x01><0x06>Stat Scanner<0xFC><0x01><0x08> completamente\npotenziato, puoi modificare\lpraticamente ogni aspetto dei tuoi\n\nPokémon! Ti basta premere {SE_SHOP} sul\nPokémon che vuoi modificare, e\lpotrai cambiare con facilità la sua\n\nAbilità, Natura, Sesso, Livello,\nEV, IV e persino la sua Introforza!\lE, naturalmente, dopo aver premuto\n\n{L_BUTTON} o {R_BUTTON}, puoi ancora insegnare nuove\nmosse al tuo Pokémon.
 0x1f25160: Torna pure quando vuoi per vedere\nle statistiche del tuo Pokémon.
 0x1f251c9: Ciao, <0xFD><0x01>! Lo sapevi che le\nstatistiche dei tuoi Pokémon\lpossono crescere in altri modi\n\noltre al semplice salire di\nlivello? Quando sconfiggi i Pokémon\lin lotta, la tua squadra guadagnerà\n\nstatistiche nascoste corrispondenti\nai Pokémon che hai sconfitto.\lQueste statistiche possono anche\n\nessere aumentate usando vitamine\ncome la Proteina. In effetti, il\lProf. Log e io abbiamo sviluppato\n\nun dispositivo in grado di\nvisualizzare queste statistiche\lnascoste, ma un Allenatore <0xFC><0x01><0x06>vanilla<0xFC><0x01><0x08>\n\ncome te non dovrebbe preoccuparsene\naffatto. Quindi esci pure e\ldivertiti a usare quello che\n\ncatturi!
 0x1f253a0: Il Prof. Log ha passato molti anni\na studiare le statistiche dei\lPokémon. È persino riuscito ad\n\naggiornare il Pokédex per\nvisualizzare le statistiche base di\logni Pokémon.
@@ -4265,7 +4265,7 @@
 0x1f33f55: Per qualche motivo, l'ingresso\ndella Superstrada KBT si è\lricoperto di ghiaccio. In quanto\n\nCapopalestra di questa città, è mio\ncompito occuparmene. Guarda come\lposso usare la mossa, Spaccaroccia,\n\nper rompere il ghiaccio!
 0x1f34012: Gliscor! Usa Spaccaroccia!
 0x1f3402b: Gliscor! Torna!
-0x1f3403c: Basta metterti davanti a una roccia\nincrinata con un Pokémon che possa\limparare Spaccaroccia, e potrai\n\nromperla premendo \btn00. E se hai\nattivate le <0xFC><0x01><0x06>MN rapide<0xFC><0x01><0x04>, la roccia si\lromperà all'istante! Non ti verrà\n\nnemmeno chiesto prima se vuoi\nromperla! Spero che ora tu abbia\lcapito le basi dell'uso di\n\nSpaccaroccia! Devo tornare alla\nPalestra, quindi ci vedremo\lun'altra volta!
+0x1f3403c: Basta metterti davanti a una roccia\nincrinata con un Pokémon che possa\limparare Spaccaroccia, e potrai\n\nromperla premendo {SE_SHOP}. E se hai\nattivate le <0xFC><0x01><0x06>MN rapide<0xFC><0x01><0x04>, la roccia si\lromperà all'istante! Non ti verrà\n\nnemmeno chiesto prima se vuoi\nromperla! Spero che ora tu abbia\lcapito le basi dell'uso di\n\nSpaccaroccia! Devo tornare alla\nPalestra, quindi ci vedremo\lun'altra volta!
 0x1f341a9: <0xFC><0x01><0x08>Staraptor! Usa Aeroassalto!
 0x1f341c7: <0xFC><0x01><0x08>Dimmi come superare la barriera\nsulla Percorso 9! Non ho tempo da\lperdere con voi Ombre!
 0x1f34226: <0xFC><0x01><0x04>E perché mai dovrei? Se pensi che\nun semplice attacco a sorpresa su\ldi me sia sufficiente a rimuoverlo,\n\nti sbagli di grosso. \.<0xFC><0x08><0x20>I tuoi stupidi\ntentativi di fare l'eroe sono\lsnervanti.
@@ -5117,8 +5117,8 @@
 0x1f4dd6d: Salta alcune scene della storia.
 0x1f4dd8b: Ricevi spesso richieste di salvataggio.
 0x1f4ddaa: Le MN possono essere usate più rapidamente nel mondo esterno.
-0x1f4ddd0: La funzione generale di \btn02.
-0x1f4ddf1: La funzione generale di \btn03.
+0x1f4ddd0: La funzione generale di {L_BUTTON}.
+0x1f4ddf1: La funzione generale di {R_BUTTON}.
 0x1f4de12: La difficoltà degli enigmi nel mondo esterno.
 0x1f4de37: Ordina automaticamente il settore Strumenti del Cubo.
 0x1f4de5b: Lo stile delle cornici di alcune finestre di testo.
@@ -5151,7 +5151,7 @@
 0x1f4e1eb: Metti nel Cubo lo strumento di un Pokémon catturato.
 0x1f4e214: Salva le impostazioni selezionate.
 0x1f4e230: Salva\nScarta\nAnnulla
-0x1f4e244: \btn0ASeleziona \btn0BCambia \btn00\btn01Conferma <0xFC><0x01><0x05><0xFC><0x03><0x04>\btn02\btn03Altro
+0x1f4e244: {DPAD_UPDOWN}Seleziona {DPAD_LEFTRIGHT}Cambia {SE_SHOP}{B_BUTTON}Conferma <0xFC><0x01><0x05><0xFC><0x03><0x04>{L_BUTTON}{R_BUTTON}Altro
 0x1f4e528: Benvenuto al nostro Centro Pokémon!\nVuoi che curi i tuoi Pokémon?
 0x1f4e568: Buon compleanno! Vuoi che curi i\ntuoi Pokémon?
 0x1f4e599: Benvenuto nel nostro Centro\nPokémon! Posso\.
@@ -5364,7 +5364,7 @@
 0x1f56d0a: Cosa dovrei spiegare?
 0x1f56d21: Poiché hai scoperto questa tana,\nlascerò quest'area a te. Buona\lfortuna per la tua lotta! Non vedo\n\nl'ora di fare squadra con te, prima\no poi!
 0x1f56dab: Questo buco che vedi qui è ciò che\nè conosciuto come una Tana del\lRaid. Potenti Pokémon abitano in\n\nqueste tane e, una volta al giorno,\npuoi lottare per avere la\lpossibilità di catturarne uno in\n\nogni tana presente a Borrius!\nQuesti Pokémon sono spaventosamente\lforti, quindi è una buona idea\n\nscegliere il partner giusto per\ncombattere al tuo fianco. Quando\linizi la lotta, noterai che il\n\nPokémon che stai affrontando sembra\nmolto grande. Questo è dovuto al\lfenomeno conosciuto come <0xFC><0x01><0x06>Dynamax<0xFC><0x01><0x04>.\n\nRimarrà così per tutta la lotta e\npotrà essere catturato solo dopo\lessere stato sconfitto e tornato\n\nalle dimensioni normali.
-0x1f56fd0: Il Dynamax è un fenomeno unico che\npuò essere usato solo in aree\lspeciali, come questa. Se hai\n\nimparato a padroneggiare il potere\ndella Megaevoluzione, potrai anche\ldynamaxizzare i tuoi Pokémon. Quasi\n\ntutti i Pokémon possono\ndynamaxizzare, ma se un Pokémon\ltiene un Megalite o un Cristallo Z,\n\nnon potrà farlo. Per dynamaxizzare\nun Pokémon, premi \btn04 quando vedi\lcomparire il simbolo rosso di\n\nDynamax. Se scegli di dynamaxizzare\nil tuo Pokémon, l'effetto durerà\lper tre turni. Durante questo\n\nperiodo, ogni mossa del tuo Pokémon\nsi potenzierà in varianti speciali\lnote come <0xFC><0x01><0x06>Mosse Max<0xFC><0x01><0x04>. Queste Mosse\n\nMax sono molto più potenti degli\nattacchi normali, quindi assicurati\ldi usarle al massimo mentre sei in\n\nmodalità Dynamax!
+0x1f56fd0: Il Dynamax è un fenomeno unico che\npuò essere usato solo in aree\lspeciali, come questa. Se hai\n\nimparato a padroneggiare il potere\ndella Megaevoluzione, potrai anche\ldynamaxizzare i tuoi Pokémon. Quasi\n\ntutti i Pokémon possono\ndynamaxizzare, ma se un Pokémon\ltiene un Megalite o un Cristallo Z,\n\nnon potrà farlo. Per dynamaxizzare\nun Pokémon, premi {START_BUTTON} quando vedi\lcomparire il simbolo rosso di\n\nDynamax. Se scegli di dynamaxizzare\nil tuo Pokémon, l'effetto durerà\lper tre turni. Durante questo\n\nperiodo, ogni mossa del tuo Pokémon\nsi potenzierà in varianti speciali\lnote come <0xFC><0x01><0x06>Mosse Max<0xFC><0x01><0x04>. Queste Mosse\n\nMax sono molto più potenti degli\nattacchi normali, quindi assicurati\ldi usarle al massimo mentre sei in\n\nmodalità Dynamax!
 0x1f57277: A volte, quando il Pokémon che stai\naffrontando è disperato, alzerà\ldegli scudi per difendersi. Questi\n\nscudi ridurranno notevolmente il\ndanno che puoi infliggere finché\lnon verranno distrutti. Qualsiasi\n\nattacco distruggerà almeno uno\nscudo, ma se usi una mossa come\l<0xFC><0x01><0x06>Breccia<0xFC><0x01><0x04>, puoi distruggere due scudi\n\nalla volta!
 0x1f573b2: Se hai Pokémon depositati nel Box\n<0xB1><0xFD><0x02><0xB2>, possono essere usati al\lposto dei Pokémon della tua\n\nsquadra. Ogni riga del box viene\nconsiderata come una squadra a sé,\lquindi potrai salvare fino a 5\n\nsquadre preimpostate diverse.
 0x1f5747a: Dynamax
@@ -5527,7 +5527,7 @@
 0x1f5c7a4: Questo posto mi ricorda le Cliff\nCaves della regione di Johto. Eh?\lAvrei potuto pensare a qualcosa di\n\ndiverso? Tipo cosa? Cliff Caves\nRemastered? Cliff Caves Ricetta\lOriginale?
 0x1f5c888: Mi piace fingere di poter volare\ncome i miei uccelli. Essere con i\lpiedi per terra fa schifo.
 0x1f5c933: Talonflame ha un'abilità nascosta\nchiamata <0xFC><0x01><0x06>Gale Wings<0xFC><0x01><0x08>. Può usare più\lvelocemente le mosse di tipo\n\nVolante!
-0x1f5c9a1: Sapevi che il tuo <0xFD><0x02> è in\ngrado di potenziare le mosse in\l<0xFC><0x01><0x06>Mosse Z<0xFC><0x01><0x08>? Sono mosse super potenti\n\nche possono essere usate solo una\nvolta per lotta! Basta equipaggiare\lil tuo Pokémon con una <0xFC><0x01><0x06>Cristallo Z<0xFC><0x01><0x08>\n\ncorrispondente al Tipo di una delle\nsue mosse, e premere \btn04 quando\lselezioni la mossa per scatenare un\n\nattacco devastante!
+0x1f5c9a1: Sapevi che il tuo <0xFD><0x02> è in\ngrado di potenziare le mosse in\l<0xFC><0x01><0x06>Mosse Z<0xFC><0x01><0x08>? Sono mosse super potenti\n\nche possono essere usate solo una\nvolta per lotta! Basta equipaggiare\lil tuo Pokémon con una <0xFC><0x01><0x06>Cristallo Z<0xFC><0x01><0x08>\n\ncorrispondente al Tipo di una delle\nsue mosse, e premere {START_BUTTON} quando\lselezioni la mossa per scatenare un\n\nattacco devastante!
 0x1f5cac4: C'è un Pokémon nella borsa! Lo\nprendi?
 0x1f5caeb: <0xFD><0x01> ha trovato un <0xFD><0x02>! Ha\nuna natura <0xFC><0x01><0x06><0xFD><0x03><0xFC><0x01><0x02>.
 0x1f5cb14: Non hai abbastanza spazio per\nquesto Pokémon.
@@ -5854,7 +5854,7 @@
 0x1f68177: <0xFC><0x01><0x02><0xFD><0x02> se l'è data a gambe\.
 0x1f68186: <0xFC><0x01><0x06>Susuiiiii!
 0x1f68219: È apparso un selvatico <0xFD><0x03>!
-0x1f6822d: Sfere rimaste: <0xFD><0x03> \btn0CSposta\n\btn00Sfera \btn04Bacca \btn01Fuggi
+0x1f6822d: Sfere rimaste: <0xFD><0x03> {DPAD_ANY}Sposta\n{SE_SHOP}Sfera {START_BUTTON}Bacca {B_BUTTON}Fuggi
 0x1f6825b: <0xFD><0x03> è stato catturato!
 0x1f68460: Benvenuto nella Zona Safari! Con\nsoli $500, puoi giocare al Safari\lGame. Vuoi giocare?
 0x1f684c1: Va bene. Torna ancora!
@@ -5862,7 +5862,7 @@
 0x1f684f3: Qui usiamo solo un tipo speciale di\nPoké Ball.
 0x1f68522: <0xFC><0x01><0x02><0xFD><0x01> ha ricevuto <0xFD><0x02>\nSafari Ball dall'addetto.
 0x1f68555: Sono disponibili diverse modalità\ndi difficoltà nella Zona Safari.\lQuale vuoi provare?
-0x1f685b6: Ti chiameremo tramite la PA quando\nfinirai le Safari Ball. Puoi anche\luscire quando vuoi premendo \btn01. Se\n\nin qualsiasi momento vuoi scappare\nsolo dal Pokémon attuale, ti\lcosterà qualche Safari Ball. Beh,\n\nti auguro buona fortuna!
+0x1f685b6: Ti chiameremo tramite la PA quando\nfinirai le Safari Ball. Puoi anche\luscire quando vuoi premendo {B_BUTTON}. Se\n\nin qualsiasi momento vuoi scappare\nsolo dal Pokémon attuale, ti\lcosterà qualche Safari Ball. Beh,\n\nti auguro buona fortuna!
 0x1f686b1: Hai preso la tua parte? Ripassa\npure!
 0x1f686dc: Mi scusi! I Box PC sono pieni.
 0x1f686ff: Spiacenti! Non hai abbastanza\nsoldi.
@@ -6022,7 +6022,7 @@
 0x1f6cedf: Ehilà! Mi chiamo Cappin Davy! I\nmiei ragazzi hanno finito di\llavorare su una macchina avanzata\n\nper scavare e immergersi. È un\noggetto speciale che puoi\lagganciare al tuo Pokémon per\n\nfargli usare qualsiasi mossa MN, e\npuò persino fornirti ossigeno se\lfai portare sott'acqua un Pokémon!\n\nTi interessa comprarla? Costa\n$<0xFC><0x01><0x06>250000<0xFC><0x01><0x08>.
 0x1f6d01b: E, già che ci sono, lascia che ti\ndia anche questo.
 0x1f6d04d: Piacere di far affari con te. Ora,\nascolta bene.
-0x1f6d080: Non solo puoi usare il <0xFC><0x01><0x06>ADM<0xFC><0x01><0x08> al posto\ndelle MN, ma puoi anche usarlo per\lestrarre tesori! Le pareti della\n\n<0xFC><0x01><0x06>KBT Expressway<0xFC><0x01><0x08> e del <0xFC><0x01><0x06>fondale marino<0xFC><0x01><0x08>\nsono piene di tesori che aspettano\lsolo che tu li scavi! Se ti trovi\n\nin uno di questi posti, imposta la\n<0xFC><0x01><0x06>Modalità Pulsante R<0xFC><0x01><0x08> su <0xFC><0x01><0x06>Scansione\lEstrazione<0xFC><0x01><0x08> nel <0xFC><0x01><0x06>Menu Opzioni<0xFC><0x01><0x08> e premi\n\n\btn03. Se ci sono punti intorno a te\ndove puoi scavare per tesori, l'ADM\lli illuminerà! Premi \btn00 vicino a uno\n\ndi questi punti per iniziare a\nscavare.
+0x1f6d080: Non solo puoi usare il <0xFC><0x01><0x06>ADM<0xFC><0x01><0x08> al posto\ndelle MN, ma puoi anche usarlo per\lestrarre tesori! Le pareti della\n\n<0xFC><0x01><0x06>KBT Expressway<0xFC><0x01><0x08> e del <0xFC><0x01><0x06>fondale marino<0xFC><0x01><0x08>\nsono piene di tesori che aspettano\lsolo che tu li scavi! Se ti trovi\n\nin uno di questi posti, imposta la\n<0xFC><0x01><0x06>Modalità Pulsante R<0xFC><0x01><0x08> su <0xFC><0x01><0x06>Scansione\lEstrazione<0xFC><0x01><0x08> nel <0xFC><0x01><0x06>Menu Opzioni<0xFC><0x01><0x08> e premi\n\n{R_BUTTON}. Se ci sono punti intorno a te\ndove puoi scavare per tesori, l'ADM\lli illuminerà! Premi {SE_SHOP} vicino a uno\n\ndi questi punti per iniziare a\nscavare.
 0x1f6d25f: Arr\. Non rientra nel tuo budget?
 0x1f6d280: Arr\. Non hai abbastanza soldi.
 0x1f6d2a1: Questo albero sembra che possa\nessere abbattuto! Vuoi usare l'ADM?
@@ -6148,7 +6148,7 @@
 0x1f70b3f: Capopalestra della Palestra Pokémon\ndi Dresco Town: Mirskle Il Maestro\lDisteso dei Fiori
 0x1f70b84: Casa Allenatori: combatti a\nvolontà!
 0x1f70bb2: È una statua del Pokémon\nleggendario di tipo Fuoco, Moltres.\lQui dice che Moltres venne usato\n\nuna volta per rafforzare un sigillo\nsu una grande oscurità, ma ora\lrisiede nel Vulcano Ceneri.
-0x1f70c64: Prima di premere \btn01 per entrare nel\nlaboratorio, assicurati che gli\lsbirri non siano in vista!
+0x1f70c64: Prima di premere {B_BUTTON} per entrare nel\nlaboratorio, assicurati che gli\lsbirri non siano in vista!
 0x1f70cac: Percorso 3 <0xB1>Paradiso Road<0xB2> <0x79>\nParadiso dei Fiori <0x7A> Città di\lDresco
 0x1f70ce4: Flower Paradise Un rifugio sicuro\nper i fiori.
 0x1f70d0e: Percorso 4 <0xB1>Volcano Zone<0xB2> <0x7B> Grim\nWoods, Cinder Volcano, Percorso 5 <0x7C>\lDresco Town <0x7A> Percorso 13
@@ -6295,25 +6295,25 @@
 0x1f72901: Uscita K: Antisis City
 0x1f72916: Uscita L: Seaport City
 0x1f7292b: <0xFC><0x01><0x02>Consigli per gli Allenatori! Non\nallontanarti da questi cartelli\lfinché non li hai letti per intero!\n\nOgnuno contiene informazioni\nimportanti che ti aiuteranno nella\ltua avventura. Saltare il testo su\n\nquesti cartelli probabilmente ti\ncosterà caro!
-0x1f72a11: <0xFC><0x01><0x02>Consigli per Allenatori! Tieni\npremuto \btn01 per cambiare la velocità\ldi movimento predefinita! Premi \btn02\n\nper attivare la corsa automatica!
-0x1f72a6d: <0xFC><0x01><0x02>Suggerimenti per l'Allenatore! Apri\nil menu <0xFC><0x01><0x06>Opzioni<0xFC><0x01><0x02> per abilitare i\lpromemoria di salvataggio e le MN\n\nrapide! Se <0xFC><0x01><0x06>i promemoria di\nsalvataggio<0xFC><0x01><0x02> sono attivi, ti verrà\lchiesto se desideri salvare prima o\n\ndopo gli eventi importanti! Se <0xFC><0x01><0x06>le\nMN rapide<0xFC><0x01><0x02> sono attive, le mosse sul\lcampo possono essere usate senza\n\nbisogno di conferma ogni volta!\nInoltre, \btn02 e \btn03 possono essere usati\lper scorrere tra le pagine delle\n\nopzioni!
+0x1f72a11: <0xFC><0x01><0x02>Consigli per Allenatori! Tieni\npremuto {B_BUTTON} per cambiare la velocità\ldi movimento predefinita! Premi {L_BUTTON}\n\nper attivare la corsa automatica!
+0x1f72a6d: <0xFC><0x01><0x02>Suggerimenti per l'Allenatore! Apri\nil menu <0xFC><0x01><0x06>Opzioni<0xFC><0x01><0x02> per abilitare i\lpromemoria di salvataggio e le MN\n\nrapide! Se <0xFC><0x01><0x06>i promemoria di\nsalvataggio<0xFC><0x01><0x02> sono attivi, ti verrà\lchiesto se desideri salvare prima o\n\ndopo gli eventi importanti! Se <0xFC><0x01><0x06>le\nMN rapide<0xFC><0x01><0x02> sono attive, le mosse sul\lcampo possono essere usate senza\n\nbisogno di conferma ogni volta!\nInoltre, {L_BUTTON} e {R_BUTTON} possono essere usati\lper scorrere tra le pagine delle\n\nopzioni!
 0x1f72bd8: Consigli dell'Allenatore! I Pokémon\npossono ottenere Punti ESP lottando\lcontro altri Pokémon. I Punti ESP\n\nli aiutano a diventare più forti. E\ni tuoi Pokémon riceveranno comunque\lPunti ESP anche se catturi un\n\nPokémon con cui stai lottando! Ma\ntieni presente che, se i tuoi\lPokémon salgono troppo di livello,\n\nanche gli altri Allenatori\ndiventeranno più forti. Per evitare\lche sorgano problemi dovuti a un\n\neccessivo aumento di livello, come\nuna maggiore difficoltà, è\lpossibile attivare un limite di\n\nlivello massimo dal <0xFC><0x01><0x06>Menu Opzioni<0xFC><0x01><0x02>\nimpostando <0xFC><0x01><0x06>Guadagno ESP<0xFC><0x01><0x02> su\l<0xFC><0x01><0x06>Condividi ESP con limite<0xFC><0x01><0x02>.
 0x1f72dd1: Consigli per Allenatori! Se parli\ncon questa Chansey, i tuoi Pokémon\lsaranno completamente curati! Ogni\n\nvolta che perdi una lotta, verrai\nriportato anche qui!
 0x1f72e65: Consigli per gli Allenatori!\nQualsiasi Pokémon che partecipa\lalla lotta riceve tutti i Punti\n\nEsperienza. Se la <0xFC><0x01><0x06>Condiv. Exp.<0xFC><0x01><0x02> è\nattiva nel menu <0xFC><0x01><0x06>Opzioni<0xFC><0x01><0x02>, qualsiasi\lPokémon che non ha partecipato\n\nriceverà comunque una parte dei\nPunti Esperienza guadagnati in\llotta.
 0x1f72f5a: Consigli per Allenatori! Quando\nselezioni un attacco in lotta,\lpotrebbero apparire alcuni simboli.\n\nQuesto si basa sull'efficacia della\nmossa contro il bersaglio. Un <0xFC><0x01><0x06><0x79><0xFC><0x01><0x02>\lverde indica che la mossa è\n\nsuperefficace. Un <0xFC><0x01><0x05><0x7A><0xFC><0x01><0x02> giallo indica\nche la mossa non è molto efficace.\lUn <0xFC><0x01><0x07>*<0xFC><0x01><0x02> rosso indica che la mossa non\n\nha alcun effetto sul bersaglio. E\nil simbolo \+ indica che la mossa ha\lil Bonus di Tipo.
 0x1f730e7: Consigli per gli Allenatori!\nL'opzione <0xFC><0x01><0x06>Restrizioni sugli\lStrumenti<0xFC><0x01><0x02> ti permette di scegliere\n\nquanti strumenti puoi usare in\nbattaglia! Se scegli <0xFC><0x01><0x06>Nessun\lStrumento<0xFC><0x01><0x02>, allora nessun Allenatore\n\npotrà usarne alcuno! Al minimo,\n<0xFC><0x01><0x06>Solo 4 Strumenti<0xFC><0x01><0x02> deve essere\limpostato per <0xFC><0x01><0x06>Esperto<0xFC><0x01><0x02>, e <0xFC><0x01><0x06>Nessun\n\nStrumento<0xFC><0x01><0x02> deve essere impostato per\n<0xFC><0x01><0x06>Pazzo<0xFC><0x01><0x02>. Se ti senti particolarmente\lambizioso, impostarlo su <0xFC><0x01><0x06>Solo\n\nAllenatore Avversario<0xFC><0x01><0x02> permetterà ai\ntuoi avversari di usare strumenti\lmentre impedirà a te! Quest'ultima\n\nscelta funziona per qualsiasi\ndifficoltà.
-0x1f732bd: Consigli per Allenatori! \btn02 e \btn05\npossono essere usati per cambiare\lrapidamente Pokémon nella Lista\n\nsquadra! \btn02 selezionerà\nautomaticamente un Pokémon da\lsostituire, mentre \btn05 renderà il\n\nPokémon attuale il primo della\nsquadra!
-0x1f7336f: Consigli per gli Allenatori! In\nlotta, puoi controllare le mosse\ldel tuo Pokémon per vedere dettagli\n\ncome potenza e precisione. Ti basta\npremere \btn02 prima di selezionare una\lmossa!
+0x1f732bd: Consigli per Allenatori! {L_BUTTON} e {SELECT_BUTTON}\npossono essere usati per cambiare\lrapidamente Pokémon nella Lista\n\nsquadra! {L_BUTTON} selezionerà\nautomaticamente un Pokémon da\lsostituire, mentre {SELECT_BUTTON} renderà il\n\nPokémon attuale il primo della\nsquadra!
+0x1f7336f: Consigli per gli Allenatori! In\nlotta, puoi controllare le mosse\ldel tuo Pokémon per vedere dettagli\n\ncome potenza e precisione. Ti basta\npremere {L_BUTTON} prima di selezionare una\lmossa!
 0x1f73401: Consigli per Allenatori! Parla con\nLapras per cavalcarla lungo la\lcascata!
 0x1f7343d: Consigli per Allenatori! Gli\noggetti monouso ti vengono\lrestituiti dopo le lotte\n\nimportanti, come quelle contro i\nCapipalestra. Usali per rafforzare\lla tua squadra e darti un\n\nvantaggio!
 0x1f734e9: Consigli per Allenatori! Tieni\nd'occhio gli alberi con un'area\lombreggiata tra di loro! Questi\n\nindicano che lì si possono trovare\n<0xFC><0x01><0x06>Grotte Segrete<0xFC><0x01><0x02>! Queste aree\lspeciali sono apparse in massa dopo\n\nla caduta del meteorite. Basta\ninteragire con gli alberi e\lpreparati ad affrontare un Pokémon\n\nostico! E infatti, se usi <0xFC><0x01><0x06>Taglio<0xFC><0x01><0x02>,\nne troverai uno anche su questo\lpercorso! Quindi ottieni la\n\nMedaglia Visione dalla Palestra di\nCrater Town, e poi torna qui per\ltrovarlo!
-0x1f7369d: Consigli Allenatore! La\ncombinazione di pulsanti per\lcorrere rapidamente dagli incontri\n\nselvatici può essere impostata dal\n<0xFC><0x01><0x06>Menu Opzioni<0xFC><0x01><0x02>! Per impostazione\lpredefinita, puoi correre\n\nrapidamente dagli incontri\nselvatici con \btn03!
-0x1f7374b: Consigli per gli Allenatori!\nPremendo \btn04 mentre visualizzi gli\loggetti nel Cubo puoi ordinarli!\n\nImpostando l'opzione <0xFC><0x01><0x06>Ordina oggetti\nautomaticamente<0xFC><0x01><0x02> nel <0xFC><0x01><0x06>Menu Opzioni<0xFC><0x01><0x02> il\lCubo verrà ordinato automaticamente\n\nogni volta che lo apri! Premendo \btn02\ne \btn03 puoi scorrere gli oggetti nel\lCubo più velocemente!
+0x1f7369d: Consigli Allenatore! La\ncombinazione di pulsanti per\lcorrere rapidamente dagli incontri\n\nselvatici può essere impostata dal\n<0xFC><0x01><0x06>Menu Opzioni<0xFC><0x01><0x02>! Per impostazione\lpredefinita, puoi correre\n\nrapidamente dagli incontri\nselvatici con {R_BUTTON}!
+0x1f7374b: Consigli per gli Allenatori!\nPremendo {START_BUTTON} mentre visualizzi gli\loggetti nel Cubo puoi ordinarli!\n\nImpostando l'opzione <0xFC><0x01><0x06>Ordina oggetti\nautomaticamente<0xFC><0x01><0x02> nel <0xFC><0x01><0x06>Menu Opzioni<0xFC><0x01><0x02> il\lCubo verrà ordinato automaticamente\n\nogni volta che lo apri! Premendo {L_BUTTON}\ne {R_BUTTON} puoi scorrere gli oggetti nel\lCubo più velocemente!
 0x1f73858: Consigli per gli Allenatori!\nPokémon diversi appaiono di notte\lrispetto al giorno! Visita gli\n\nstessi luoghi durante il giorno per\ncatturare più Pokémon!
 0x1f738dd: Consigli per Allenatori! I Pokémon\nselvatici hanno meno probabilità di\lapparire mentre cavalchi una\n\nmotocicletta. Se sei abbastanza\ngrande per guidarne una, è ora di\lsalire in sella!
 0x1f73965: <0xFC><0x01><0x02>Consigli Allenatore! Il numero di\nPunti Esperienza che ottieni dopo\luna lotta si basa sui livelli.\n\nQuando il tuo Pokémon è più debole\ndel suo avversario, ne ottiene di\lpiù. Ma se il tuo Pokémon è più\n\nforte, ne otterrà di meno.
 0x1f73a33: Consigli Allenatore! I Pokémon di\ntipo Elettro sono immuni alla\lparalisi! I Pokémon di tipo Erba\n\nnon subiscono le mosse polvere e\nspora!
-0x1f73aad: Consigli per Allenatori! Premendo \btn05\npotrai usare uno dei sei oggetti\lregistrati! Per registrare un\n\noggetto, selezionalo nella sezione\nStrumenti Chiave del tuo Cube,\lquindi scegli <0xFC><0x01><0x06>Register<0xFC><0x01><0x02>. L'oggetto\n\nregistrato al secondo posto può\nessere usato rapidamente premendo \btn02\lquando l'opzione <0xFC><0x01><0x06>L-Button Mode<0xFC><0x01><0x02> è\n\nimpostata su <0xFC><0x01><0x06>Reg Item 2<0xFC><0x01><0x02>.
+0x1f73aad: Consigli per Allenatori! Premendo {SELECT_BUTTON}\npotrai usare uno dei sei oggetti\lregistrati! Per registrare un\n\noggetto, selezionalo nella sezione\nStrumenti Chiave del tuo Cube,\lquindi scegli <0xFC><0x01><0x06>Register<0xFC><0x01><0x02>. L'oggetto\n\nregistrato al secondo posto può\nessere usato rapidamente premendo {L_BUTTON}\lquando l'opzione <0xFC><0x01><0x06>L-Button Mode<0xFC><0x01><0x02> è\n\nimpostata su <0xFC><0x01><0x06>Reg Item 2<0xFC><0x01><0x02>.
 0x1f73bde: Consigli per Allenatori! Salta\nsulle rocce per attraversare\ll'acqua!
 0x1f73c16: Consigli per Allenatori! Quando\ncatturi un Pokémon, a volte la Poké\lBall che lanci oscillerà solo una\n\nvolta. Questo si chiama <0xB1>cattura\ncritica<0xB2> e più Pokémon catturi, più\lè probabile che accada.
 0x1f73cd7: Consigli per Allenatori! Non\ncambiare mai la data sul tuo\ldispositivo per accedere a più\n\neventi giornalieri! Se lo fai,\ntutti gli eventi giornalieri\lpotrebbero smettere di funzionare\n\ncorrettamente, indipendentemente\ndal fatto che tu abbia tentato di\laccedervi più di una volta. Se lo\n\nhai già fatto accidentalmente, la\nsperanza non è perduta. Se puoi\laspettare fino alla data a cui hai\n\ncambiato, è consigliato aspettare,\naltrimenti parla con un uomo a\lFrozen Heights. Solo una volta, può\n\nresettare il tuo orologio per far\nsì che gli eventi giornalieri\lfunzionino di nuovo.
@@ -6321,24 +6321,24 @@
 0x1f73efa: Consigli per gli Allenatori! Se\nnoti un simbolo a forma di cuore\lmentre controlli la scheda\n\nriepilogativa del tuo Pokémon,\nsignifica che hai iniziato a\llegarti a lui! Più il legame è\n\nforte, più il cuore si riempirà. E\nun Pokémon con un cuore quasi pieno\lè pronto a evolversi se richiede\n\nun'evoluzione per l'<0xFC><0x01><0x06>amicizia<0xFC><0x01><0x02>!
 0x1f74017: Consigli per Allenatori! Non c'è\n<0xFC><0x01><0x06>alcun limite<0xFC><0x01><0x02> al numero di volte in\lcui puoi usare oggetti come\n\n<0xFC><0x01><0x06>Proteina<0xFC><0x01><0x02> e <0xFC><0x01><0x06>Carbos<0xFC><0x01><0x02> sui tuoi Pokémon!\nCompra queste vitamine in grandi\lquantità al <0xFC><0x01><0x06>Centro Commerciale di\n\nDehara<0xFC><0x01><0x02>!
 0x1f740d9: Consigli per gli Allenatori! Alcuni\nAllenatori potrebbero sfidarti solo\ldopo che avrai battuto tutti gli\n\naltri Allenatori della zona. Se\nriesci a sconfiggere questi\lAllenatori, sarai sicuro di\n\nottenere una grande ricompensa!
-0x1f74189: Suggerimenti Allenatore! Le zone\nscure nell'oceano indicano che un\lPokémon può andare sott'acqua! Se\n\nhai acquistato un <0xFC><0x01><0x06>ADM<0xFC><0x01><0x02> presso il\n<0xFC><0x01><0x06>Cantiere navale del Capitano Davy<0xFC><0x01><0x02> a\l<0xFC><0x01><0x06>Seaport City<0xFC><0x01><0x02>, premi \btn00 sopra la zona\n\nscura per immergerti. Una volta\nsott'acqua, se trovi un'area del\lterreno più chiara, premi \btn01 lì per\n\nriemergere.
+0x1f74189: Suggerimenti Allenatore! Le zone\nscure nell'oceano indicano che un\lPokémon può andare sott'acqua! Se\n\nhai acquistato un <0xFC><0x01><0x06>ADM<0xFC><0x01><0x02> presso il\n<0xFC><0x01><0x06>Cantiere navale del Capitano Davy<0xFC><0x01><0x02> a\l<0xFC><0x01><0x06>Seaport City<0xFC><0x01><0x02>, premi {SE_SHOP} sopra la zona\n\nscura per immergerti. Una volta\nsott'acqua, se trovi un'area del\lterreno più chiara, premi {B_BUTTON} lì per\n\nriemergere.
 0x1f742b7: Consigli per Allenatori! Alcuni\nPokémon possono visitare un'area\lsolo in certi giorni della\n\nsettimana. Assicurati di esplorare\nBorrius ogni giorno per trovare\lPokémon come questi.
 0x1f74345: Consigli per Allenatori! Alcuni\ntipi di Strumenti nascosti come gli\loggetti da mangiare e i Frammenti\n\nsi possono trovare più di una\nvolta! Più spesso visiti le aree\lcon Strumenti nascosti come questi,\n\nmaggiore è la probabilità di\nritrovare di nuovo gli Strumenti\lnascosti.
 0x1f7441f: Consigli per gli Allenatori! Se il\ntuo Pokémon conosce la mossa\l<0xFC><0x01><0x06>Profumino<0xFC><0x01><0x02>, puoi usarla per\n\nincontrare due Pokémon selvatici\nalla volta se il tempo è sereno!
-0x1f744ad: Consigli per gli Allenatori! Tieni\npremuto \btn01 per surfare più\lvelocemente! E quando la <0xFC><0x01><0x06>Modalità\n\nPulsante L<0xFC><0x01><0x02> è impostata su\n<0xFC><0x01><0x06>Auto-Corsa<0xFC><0x01><0x02>, premi \btn02 per\lattivare/disattivare Turbo Surf!
-0x1f7452d: Trucchi per Allenatori! Premi \btn05\nquando sposti Pokémon nel PC per\lattivare la selezione multipla.\n\nCosì puoi spostare più Pokémon\ninsieme tenendo premuto \btn00!
-0x1f745b7: Consigli per gli Allenatori! Hai un\nsacco di richieste registrate nel\ltuo Diario Missioni? Usa \btn0B per\n\nscorrere rapidamente l'elenco!\nOppure prova a premere \btn04 per\lordinarlo alfabeticamente! Puoi\n\npersino premere \btn05 per fissare le\nMissioni in cima all'elenco!
+0x1f744ad: Consigli per gli Allenatori! Tieni\npremuto {B_BUTTON} per surfare più\lvelocemente! E quando la <0xFC><0x01><0x06>Modalità\n\nPulsante L<0xFC><0x01><0x02> è impostata su\n<0xFC><0x01><0x06>Auto-Corsa<0xFC><0x01><0x02>, premi {L_BUTTON} per\lattivare/disattivare Turbo Surf!
+0x1f7452d: Trucchi per Allenatori! Premi {SELECT_BUTTON}\nquando sposti Pokémon nel PC per\lattivare la selezione multipla.\n\nCosì puoi spostare più Pokémon\ninsieme tenendo premuto {SE_SHOP}!
+0x1f745b7: Consigli per gli Allenatori! Hai un\nsacco di richieste registrate nel\ltuo Diario Missioni? Usa {DPAD_LEFTRIGHT} per\n\nscorrere rapidamente l'elenco!\nOppure prova a premere {START_BUTTON} per\lordinarlo alfabeticamente! Puoi\n\npersino premere {SELECT_BUTTON} per fissare le\nMissioni in cima all'elenco!
 0x1f74692: Consigli Allenatore! Una volta\niniziata la salita lungo il\lPercorso Vittoria, ci sono pochi\n\nposti in cui curarsi! Non farti\ncogliere impreparato! Compra\lstrumenti curativi!
 0x1f7471c: <0xFC><0x01><0x02>Suggerimento Allenatori! Anche alla\ndifficoltà <0xFC><0x01><0x06>Vanilla<0xFC><0x01><0x02>, il Superquattro\ldiventa più forte man mano che\n\navanzi! Non farti cogliere di\nsorpresa e preparati a\lcombattimenti intensi!
-0x1f747b8: Consigli Allenatore! Premi \btn00 per\nsalire sulla scala!
-0x1f747e7: Consigli per Allenatori! Premi \btn00\nsull'albero a sinistra del cartello\lper entrare in una Grotta Nascosta!
-0x1f7483c: Suggerimenti per Allenatori! Premi\n\btn04 in una Lotta in Doppio per\lvisualizzare i PS del tuo Pokémon\n\nin cifre!
+0x1f747b8: Consigli Allenatore! Premi {SE_SHOP} per\nsalire sulla scala!
+0x1f747e7: Consigli per Allenatori! Premi {SE_SHOP}\nsull'albero a sinistra del cartello\lper entrare in una Grotta Nascosta!
+0x1f7483c: Suggerimenti per Allenatori! Premi\n{START_BUTTON} in una Lotta in Doppio per\lvisualizzare i PS del tuo Pokémon\n\nin cifre!
 0x1f7488b: Consigli per Allenatori! Viaggiare\ninsieme rende i tuoi Pokémon più\laffezionati! I Pokémon possono\n\npersino evolversi quando diventano\nabbastanza amichevoli! E se sei\lentrato nella <0xFC><0x01><0x06>Hall of Fame<0xFC><0x01><0x02>, questi\n\nPokémon possono anche ottenere\n<0xFC><0x01><0x06>Punti Esperienza extra<0xFC><0x01><0x02>!
-0x1f7496c: Suggerimenti per Allenatori! Una\nvolta entrato nella Hall of Fame,\lsblocchi la possibilità di <0xFC><0x01><0x06>far\n\nscorrere automaticamente il testo<0xFC><0x01><0x02>\ntenendo premuto \btn03! Questa funzione\lsi estende anche a New Game\+ e alla\n\nModalità Sandbox. Ma per favore,\nnon tenere mai premuto \btn03 quando\lleggi i cartelli dei Suggerimenti\n\nper Allenatori!
+0x1f7496c: Suggerimenti per Allenatori! Una\nvolta entrato nella Hall of Fame,\lsblocchi la possibilità di <0xFC><0x01><0x06>far\n\nscorrere automaticamente il testo<0xFC><0x01><0x02>\ntenendo premuto {R_BUTTON}! Questa funzione\lsi estende anche a New Game\+ e alla\n\nModalità Sandbox. Ma per favore,\nnon tenere mai premuto {R_BUTTON} quando\lleggi i cartelli dei Suggerimenti\n\nper Allenatori!
 0x1f74a5d: Consigli per gli Allenatori! Dopo\nil grande Boom dei Portali, molti\lPokémon rari e potenti hanno\n\niniziato ad apparire a Borrius! Se\nper sbaglio li sconfiggi o scappi\linvece di catturarli, torneranno se\n\nrientri nella Sala d'Onore.
 0x1f74b42: Consigli per Allenatori! Evita di\nusare Ball comuni come le Ultra\lBall quando cerchi di catturare\n\nPokémon potenti! Se affronti un\nPokémon molto <0xFC><0x01><0x06>pesante<0xFC><0x01><0x02>, la <0xFC><0x01><0x06>Peso Ball<0xFC><0x01><0x02>\lsarà la Ball ideale. Altrimenti, se\n\nla lotta si è protratta per oltre\n<0xFC><0x01><0x06>10 turni<0xFC><0x01><0x02>, considera di usare una\l<0xFC><0x01><0x06>Timer Ball<0xFC><0x01><0x02>. Se la lotta è stata\n\nbreve, ma il Pokémon avversario ha\nuna <0xFC><0x01><0x06>Velocità base<0xFC><0x01><0x02> superiore a <0xFC><0x01><0x06>100<0xFC><0x01><0x02>,\lallora considera di usare una <0xFC><0x01><0x06>Rapid\n\nBall<0xFC><0x01><0x02>. Ma se la lotta è stata breve\ne il Pokémon avversario è lento,\lallora prova a catturare il Pokémon\n\ndi <0xFC><0x01><0x06>notte<0xFC><0x01><0x02> usando una <0xFC><0x01><0x06>Scuro Ball<0xFC><0x01><0x02>.\nQueste quattro Ball saranno\lfondamentali per catturare\n\nvelocemente i Pokémon potenti!
 0x1f74dc8: Consigli per Allenatori! Grazie ai\nprogressi della scienza moderna,\lpuoi iniziare una nuovissima\n\navventura in <0xFC><0x01><0x06>Modalità Sandbox<0xFC><0x01><0x02>!\nAnche se non ci saranno contenuti\ldel dopogioco, avrai la libertà di\n\ncatturare e allenare tutti i\nPokémon che vuoi, oltre a poter\lmodificare facilmente tutte le loro\n\nstatistiche! I Pokémon non sono\naltro che numeri, dopotutto! \.\lQuesto consiglio è sponsorizzato da\n\nCube Corp.
-0x1f74f46: Consigli Allenatore! Puoi\npersonalizzare le tracce musicali\lche vengono riprodotte durante\n\nl'esplorazione e in battaglia dalla\npagina <0xFC><0x01><0x06>Opzioni audio<0xFC><0x01><0x02> nel <0xFC><0x01><0x06>Menu\lOpzioni<0xFC><0x01><0x02>! Puoi perfino premere \btn04 per\n\nripristinare rapidamente la musica\nalla traccia predefinita!
+0x1f74f46: Consigli Allenatore! Puoi\npersonalizzare le tracce musicali\lche vengono riprodotte durante\n\nl'esplorazione e in battaglia dalla\npagina <0xFC><0x01><0x06>Opzioni audio<0xFC><0x01><0x02> nel <0xFC><0x01><0x06>Menu\lOpzioni<0xFC><0x01><0x02>! Puoi perfino premere {START_BUTTON} per\n\nripristinare rapidamente la musica\nalla traccia predefinita!
 0x1f750da: Benvenuto a bordo della S.S.\nMarine. Il numero di Allenatori a\lbordo della S.S. Marine oggi è\n\n<0xFC><0x01><0x06><0xFD><0x02><0xFC><0x01><0x08>. Ti piacerebbe girare il\ntuo Cube mentre sei a bordo per\lvincere premi cinque volte più\n\ngrandi?
 0x1f7519c: Capito, terremo la tua Cube mentre\nsei a bordo.
 0x1f751d8: Prego, divertiti.
@@ -6450,8 +6450,8 @@
 0x1f7aee7: Che meraviglia\.<0xFC><0x08><0x18> davvero, hai\ndimostrato di poter essere degno di\lfiducia nell'usare questo potere,\n\ncon responsabilità e senza\nsconsideratezza. Ti conferisco,\lallora, la tua personale\n\nPietrachiave. Ma prima di farlo\.<0xFC><0x08><0x18>\nvorrei che scegliessi un supporto\ladatto per essa. Fu fu fu\.<0xFC><0x08><0x18> non\n\npreoccuparti. Sono funzionalmente\nidentiche. Semplicemente\.<0xFC><0x08><0x18> scegli\lquella che ti si addice di più.
 0x1f7b046: Semplicemente\.<0xFC><0x08><0x18> scegli quello che fa\nper te.
 0x1f7b073: Vorresti <0xFC><0x01><0x06><0xFD><0x02><0xFC><0x01><0x04>?
-0x1f7b090: Capisco. Sì, penso che tu porti\nmolto bene quel <0xFD><0x02>. Ad ogni\lmodo, ora hai il potere di far\n\n<0xFC><0x01><0x06>Megaevolvere<0xFC><0x01><0x04> i tuoi Pokémon.\nAffinché un Pokémon sia in grado di\lmegaevolversi in lotta, deve tenere\n\nil suo <0xFC><0x01><0x06>Mega-cerchio<0xFC><0x01><0x04> unico. Dovresti\nvedere se quel Pokémon può\lmegaevolversi dal <0xFC><0x01><0x06>Simbolo Mega<0xFC><0x01><0x04> nel\n\nmenu di lotta. Se appare, premi \btn04\nprima di selezionare il tuo\lprossimo attacco. Il tuo Pokémon si\n\nmegaevolverà e diventerà più\npotente. Tieni a mente, tuttavia,\lche puoi megaevolvere un Pokémon\n\nsolo <0xFC><0x01><0x06>una volta<0xFC><0x01><0x04> per lotta, e\nl'effetto svanisce se la lotta\lfinisce o se il Pokémon megaevoluto\n\nva KO. Ora, prendi quel potere\.<0xFC><0x08><0x18> e\nusalo per il bene dell'umanità.\lConto su di te per cambiare il\n\nmondo\.<0xFC><0x08><0x18> e avere un vero impatto\.
-0x1f7b371: Affinché un Pokémon sia in grado di\nmegaevolversi in lotta, deve tenere\lil suo <0xFC><0x01><0x06>Mega-cerchio<0xFC><0x01><0x04> unico. Dovresti\n\nvedere se quel Pokémon può\nmegaevolversi dal <0xFC><0x01><0x06>Simbolo Mega<0xFC><0x01><0x04> nel\lmenu di lotta. Se appare, premi \btn04\n\nprima di selezionare il tuo\nprossimo attacco. Il tuo Pokémon si\lmegaevolverà e diventerà più\n\npotente. Tieni a mente, tuttavia,\nche puoi megaevolvere un Pokémon\lsolo <0xFC><0x01><0x06>una volta<0xFC><0x01><0x04> per lotta, e\n\nl'effetto svanisce se la lotta\nfinisce o se il Pokémon megaevoluto\lva KO. Ora, prendi quel potere\.<0xFC><0x08><0x18> e\n\nusalo per il bene dell'umanità.\nConto su di te per cambiare il\lmondo\.<0xFC><0x08><0x18> e avere un vero impatto\.
+0x1f7b090: Capisco. Sì, penso che tu porti\nmolto bene quel <0xFD><0x02>. Ad ogni\lmodo, ora hai il potere di far\n\n<0xFC><0x01><0x06>Megaevolvere<0xFC><0x01><0x04> i tuoi Pokémon.\nAffinché un Pokémon sia in grado di\lmegaevolversi in lotta, deve tenere\n\nil suo <0xFC><0x01><0x06>Mega-cerchio<0xFC><0x01><0x04> unico. Dovresti\nvedere se quel Pokémon può\lmegaevolversi dal <0xFC><0x01><0x06>Simbolo Mega<0xFC><0x01><0x04> nel\n\nmenu di lotta. Se appare, premi {START_BUTTON}\nprima di selezionare il tuo\lprossimo attacco. Il tuo Pokémon si\n\nmegaevolverà e diventerà più\npotente. Tieni a mente, tuttavia,\lche puoi megaevolvere un Pokémon\n\nsolo <0xFC><0x01><0x06>una volta<0xFC><0x01><0x04> per lotta, e\nl'effetto svanisce se la lotta\lfinisce o se il Pokémon megaevoluto\n\nva KO. Ora, prendi quel potere\.<0xFC><0x08><0x18> e\nusalo per il bene dell'umanità.\lConto su di te per cambiare il\n\nmondo\.<0xFC><0x08><0x18> e avere un vero impatto\.
+0x1f7b371: Affinché un Pokémon sia in grado di\nmegaevolversi in lotta, deve tenere\lil suo <0xFC><0x01><0x06>Mega-cerchio<0xFC><0x01><0x04> unico. Dovresti\n\nvedere se quel Pokémon può\nmegaevolversi dal <0xFC><0x01><0x06>Simbolo Mega<0xFC><0x01><0x04> nel\lmenu di lotta. Se appare, premi {START_BUTTON}\n\nprima di selezionare il tuo\nprossimo attacco. Il tuo Pokémon si\lmegaevolverà e diventerà più\n\npotente. Tieni a mente, tuttavia,\nche puoi megaevolvere un Pokémon\lsolo <0xFC><0x01><0x06>una volta<0xFC><0x01><0x04> per lotta, e\n\nl'effetto svanisce se la lotta\nfinisce o se il Pokémon megaevoluto\lva KO. Ora, prendi quel potere\.<0xFC><0x08><0x18> e\n\nusalo per il bene dell'umanità.\nConto su di te per cambiare il\lmondo\.<0xFC><0x08><0x18> e avere un vero impatto\.
 0x1f7b5d4: Ah, sì. Certo. Stava quasi per\nsfuggirmi di mente. Prendi questa\lMegapietra, la stessa che uso io -\n\nper il Pokémon Altaria.
 0x1f7b647: Megacerchio
 0x1f7b651: Megabracciale
@@ -6669,7 +6669,7 @@
 0x1f81ed3: Ott.
 0x1f81ed9: Nov.
 0x1f81edf: Dic.
-0x1f82262: La modalità del pulsante R è stata impostata su Scansione Estrazione. Mentre ti trovi nella <0xFC><0x01><0x06>KBT Expressway<0xFC><0x01><0x02>, nella <0xFC><0x01><0x06>stanza laterale<0xFC><0x01><0x02> al <0xFC><0x01><0x06>Crystal Peak 1F<0xFC><0x01><0x02>, o <0xFC><0x01><0x06>sott'acqua<0xFC><0x01><0x02>, premi \btn03 per eseguire una scansione alla ricerca di oggetti nascosti. Quando un bagliore appare sulla parete, premi \btn00 per estrarre lì.<0xFC><0x09>
+0x1f82262: La modalità del pulsante R è stata impostata su Scansione Estrazione. Mentre ti trovi nella <0xFC><0x01><0x06>KBT Expressway<0xFC><0x01><0x02>, nella <0xFC><0x01><0x06>stanza laterale<0xFC><0x01><0x02> al <0xFC><0x01><0x06>Crystal Peak 1F<0xFC><0x01><0x02>, o <0xFC><0x01><0x06>sott'acqua<0xFC><0x01><0x02>, premi {R_BUTTON} per eseguire una scansione alla ricerca di oggetti nascosti. Quando un bagliore appare sulla parete, premi {SE_SHOP} per estrarre lì.<0xFC><0x09>
 0x1f823c3: Sarai il nuovo arrivato nella\nnostra sfida giornaliera? Raggiungi\ll'altra estremità del tunnel in\n\nmeno di 15 secondi per vincere un\npremio fantastico!
 0x1f8244f: Tornato per un altro tentativo\ndella nostra sfida quotidiana?
 0x1f82480: Non ce la fai, eh?
@@ -6942,10 +6942,10 @@
 0x1f8d35a: Affronterai l'avversario n.\n<0xFC><0x01><0x06><0xFD><0x02><0xFC><0x01><0x08>. Sei pronto?
 0x1f8d393: Affronterai l'avversario n.\n<0xFC><0x01><0x06><0xFD><0x02><0xFC><0x01><0x04>. Sei pronto?
 0x1f8d3cc: Vuoi continuare con un'altra lotta\ncon Metronomo?
-0x1f8d406: Il tuo avversario userà questi\nPokémon. \btn00 Scegli nuovo apripista \btn01\lApripista <0xFD><0x02>
-0x1f8d44f: Il tuo avversario userà questi\nPokémon. \btn00 Scegli nuove aperture \btn01\lApri con <0xFD><0x02> e <0xFD><0x03>
-0x1f8d49e: Il Cervello della Frontiera userà\nquesti Pokémon. \btn00 Scegli nuovo\lcapofila \btn01 Capofila <0xFD><0x02>
-0x1f8d4ec: Il Cervello della Frontiera userà\nquesti Pokémon. \btn00 Scegli nuovi\lapripista \btn01 Apripista <0xFD><0x02> e\n\n<0xFD><0x03>
+0x1f8d406: Il tuo avversario userà questi\nPokémon. {SE_SHOP} Scegli nuovo apripista {B_BUTTON}\lApripista <0xFD><0x02>
+0x1f8d44f: Il tuo avversario userà questi\nPokémon. {SE_SHOP} Scegli nuove aperture {B_BUTTON}\lApri con <0xFD><0x02> e <0xFD><0x03>
+0x1f8d49e: Il Cervello della Frontiera userà\nquesti Pokémon. {SE_SHOP} Scegli nuovo\lcapofila {B_BUTTON} Capofila <0xFD><0x02>
+0x1f8d4ec: Il Cervello della Frontiera userà\nquesti Pokémon. {SE_SHOP} Scegli nuovi\lapripista {B_BUTTON} Apripista <0xFD><0x02> e\n\n<0xFD><0x03>
 0x1f8d540: Congratulazioni per la tua striscia\ndi vittorie, sfidante! Il <0xFD><0x02>\lha fatto sapere che <0xFD><0x03> è\n\nrimasto colpito da te. <0xFD><0x04>\nvede la tua abilità, e <0xFD><0x03>\lvorrebbe sfidarti a una lotta! Sei\n\npronto a sfidare il <0xFD><0x02>?
 0x1f8d608: <0xFD><0x01> ha ricevuto <0xFC><0x01><0x06><0xFD><0x02><0xFC><0x01><0x02> BP!
 0x1f8d621: Palmer
@@ -7195,9 +7195,9 @@
 0x1f943f1: <0xFC><0x06><0x00>Singoli: 3v3, Doppi: 4v4
 0x1f9440f: <0xFC><0x06><0x00>6v6
 0x1f949fc: Di quale argomento vuoi saperne di\npiù?
-0x1f94a27: <0xFC><0x01><0x06>La Megaevoluzione<0xFC><0x01><0x02> è un'evoluzione\ntemporanea che può essere attivata\lin battaglia se un Pokémon tiene\n\nuna <0xFC><0x01><0x06>Megapietra<0xFC><0x01><0x02> della sua specie.\nPer attivare la Megaevoluzione,\lpremi \btn04 mentre selezioni una mossa\n\nda usare. Solo un Pokémon per\nsquadra può megaevolversi e, dopo\lla fine della lotta, i Pokémon\n\nmegaevoluti tornano alla loro forma\noriginale.
-0x1f94b70: Una <0xFC><0x01><0x06>Mossa Z<0xFC><0x01><0x02> è un tipo speciale di\nmossa in cui il desiderio di un\lAllenatore e quello del suo Pokémon\n\nsi uniscono per scatenare un\nattacco molto potente una volta per\llotta. Se una di queste mosse è\n\ndisponibile, può essere attivata\npremendo \btn04 e poi \btn00 mentre si\lseleziona un attacco da usare.\n\nAffinché un Pokémon possa usare una\nMossa Z, deve tenere un oggetto\lspeciale chiamato <0xFC><0x01><0x06>Cristallo Z<0xFC><0x01><0x02>. La\n\nmaggior parte dei Cristalli Z\ncorrisponde a un certo tipo di\lmossa, ma alcuni sono specifici di\n\nuna specie.
-0x1f94d38: <0xFC><0x01><0x06>Dynamax<0xFC><0x01><0x02> è una trasformazione\ntemporanea in cui un Pokémon\ldistorce lo spazio per cambiare le\n\nproprie dimensioni. Quando un\nPokémon usa il Dynamax, per tre\lturni i suoi PS aumentano e tutte\n\nle sue mosse vengono potenziate in\nspeciali <0xFC><0x01><0x06>Maxmosse<0xFC><0x01><0x02>. Ogni Maxmossa ha\lun effetto unico che varia in base\n\nal tipo della mossa originale. Se\nun Pokémon possiede il Fattore\lGigantamax, può Gigantamaxarsi. Si\n\ntratta di un tipo speciale di\nDynamax che porta a un aspetto\ldiverso rispetto alla forma\n\nregolare, oltre a essere più\ngrande. Ogni Pokémon Gigantamax ha\luna Maxmossa esclusiva nota come\n\nMossa G-Max. Per attivare il\nDynamax, premi \btn04 mentre selezioni\lun attacco da usare.
+0x1f94a27: <0xFC><0x01><0x06>La Megaevoluzione<0xFC><0x01><0x02> è un'evoluzione\ntemporanea che può essere attivata\lin battaglia se un Pokémon tiene\n\nuna <0xFC><0x01><0x06>Megapietra<0xFC><0x01><0x02> della sua specie.\nPer attivare la Megaevoluzione,\lpremi {START_BUTTON} mentre selezioni una mossa\n\nda usare. Solo un Pokémon per\nsquadra può megaevolversi e, dopo\lla fine della lotta, i Pokémon\n\nmegaevoluti tornano alla loro forma\noriginale.
+0x1f94b70: Una <0xFC><0x01><0x06>Mossa Z<0xFC><0x01><0x02> è un tipo speciale di\nmossa in cui il desiderio di un\lAllenatore e quello del suo Pokémon\n\nsi uniscono per scatenare un\nattacco molto potente una volta per\llotta. Se una di queste mosse è\n\ndisponibile, può essere attivata\npremendo {START_BUTTON} e poi {SE_SHOP} mentre si\lseleziona un attacco da usare.\n\nAffinché un Pokémon possa usare una\nMossa Z, deve tenere un oggetto\lspeciale chiamato <0xFC><0x01><0x06>Cristallo Z<0xFC><0x01><0x02>. La\n\nmaggior parte dei Cristalli Z\ncorrisponde a un certo tipo di\lmossa, ma alcuni sono specifici di\n\nuna specie.
+0x1f94d38: <0xFC><0x01><0x06>Dynamax<0xFC><0x01><0x02> è una trasformazione\ntemporanea in cui un Pokémon\ldistorce lo spazio per cambiare le\n\nproprie dimensioni. Quando un\nPokémon usa il Dynamax, per tre\lturni i suoi PS aumentano e tutte\n\nle sue mosse vengono potenziate in\nspeciali <0xFC><0x01><0x06>Maxmosse<0xFC><0x01><0x02>. Ogni Maxmossa ha\lun effetto unico che varia in base\n\nal tipo della mossa originale. Se\nun Pokémon possiede il Fattore\lGigantamax, può Gigantamaxarsi. Si\n\ntratta di un tipo speciale di\nDynamax che porta a un aspetto\ldiverso rispetto alla forma\n\nregolare, oltre a essere più\ngrande. Ogni Pokémon Gigantamax ha\luna Maxmossa esclusiva nota come\n\nMossa G-Max. Per attivare il\nDynamax, premi {START_BUTTON} mentre selezioni\lun attacco da usare.
 0x1f94fb5: Quando si seleziona una mossa in\nbattaglia, possono apparire alcuni\lsimboli. Ciò dipende dall'efficacia\n\ndella mossa contro il bersaglio. Un\n<0xFC><0x01><0x06><0x79><0xFC><0x01><0x02> verde indica che la mossa è\lsuperefficace. Un <0xFC><0x01><0x05><0x7A><0xFC><0x01><0x02> giallo indica\n\nche la mossa non è molto efficace.\nUn <0xFC><0x01><0x07>*<0xFC><0x01><0x02> rosso indica che la mossa non\lha effetto sul bersaglio. E un\n\nsimbolo \+ indica che la mossa ha il\nbonus di stesso tipo.
 0x1f95134: Megaevoluzione
 0x1f95143: Mosse Z
@@ -7471,7 +7471,7 @@
 0x1f9dd50: Ma James, non puoi lasciarmi qui\ntutta sola!
 0x1f9dd7e: Avevo pensato di fare anche di te\nuno di noi, ma non posso avere\lqualcuno così debole nella mia\n\nsquadra! Invece, ho deciso di far\nentrare <0xFD><0x01> nelle nostre fila.
 0x1f9de0c: Benvenuto nel Black <0xFD><0x01>,\nragazzino! Tutti i membri devono\lavere una Bici, quindi prendi\n\nquesta.
-0x1f9de57: Quella è una potente Moto di tutti\ni membri del Nero <0xFD><0x01>! Puoi\lpremere \btn02 per attivare il turbo,\n\noppure puoi andare piano e\npedalare. Vieni a trovarci se passi\lmai da Antisis City. Ti\n\naccoglieremo a braccia aperte.
+0x1f9de57: Quella è una potente Moto di tutti\ni membri del Nero <0xFD><0x01>! Puoi\lpremere {L_BUTTON} per attivare il turbo,\n\noppure puoi andare piano e\npedalare. Vieni a trovarci se passi\lmai da Antisis City. Ti\n\naccoglieremo a braccia aperte.
 0x1f9df34: Benvenuto nel Black <0xFD><0x01>,\nragazzino! Vieni a trovarci se\lpassi mai da Antisis City. Ti\n\naccoglieremo a braccia aperte.
 0x1f9dfa1: Mi dispiace che tu sia rimasto\ncoinvolto in tutto questo. Potrei\laverti mentito quando ti ho detto\n\nche non avevo notizie da mio\nfratello. In realtà, sapevo che era\lil capo dei Black Emboar. Pensavo\n\nsolo che non avresti voluto aiutare\nse avessi saputo che ti saresti\lscontrato con il loro capo. Ma ora\n\nlui se n'è andato per sempre, e io\nsono rimasto tutto solo\. Mi sento\lcosì imbarazzato per questo\.\n\nComunque, grazie per avermi\naiutato. Per il tuo tempo, prendi\lquesta MT.
 0x1f9e13d: Ehi! Sì, tu, marmocchio laggiù!\nVieni qui!
@@ -7975,7 +7975,7 @@
 0x1fad6aa: Eh, eh, eh, urk\. Sono deluso che il\nmio esperimento non abbia retto.\lTuttavia\. C'è sempre un piano di\n\ncontingenza! Eh, eh, eh, ah, ah!
 0x1fad737: Electivire! È tempo del secondo\nround! Lo senti? Ho riempito l'aria\lcon il potere che ho canalizzato!\n\nIl potere delle Grotte Nascoste!\nUsalo per attaccare questo\lAllenatore!
 0x1fad7dd: <0xFC><0x01><0x02>Hai bisogno di una spiegazione del\nfenomeno Dynamax?
-0x1fad816: <0xFC><0x01><0x02>Dynamax è un fenomeno unico che un\nPokémon può sperimentare solo in\laree speciali, come le Grotte\n\nNascoste. Quasi tutti i Pokémon\npossono usare Dynamax, ma se un\lPokémon tiene una Megapietra o un\n\nCristallo Z, non sarà in grado di\nfarlo. Per usare Dynamax su un\lPokémon, premi \btn04 quando vedi\n\napparire il simbolo rosso di\nDynamax. Se scegli di far usare\lDynamax al tuo Pokémon, l'effetto\n\ndurerà per tre turni. Durante\nquesto periodo, ogni mossa del tuo\lPokémon verrà potenziata in\n\nvarianti speciali note come <0xFC><0x01><0x06>Mosse\nMax<0xFC><0x01><0x02>. Queste Mosse Max sono molto\lpiù potenti degli attacchi normali.
+0x1fad816: <0xFC><0x01><0x02>Dynamax è un fenomeno unico che un\nPokémon può sperimentare solo in\laree speciali, come le Grotte\n\nNascoste. Quasi tutti i Pokémon\npossono usare Dynamax, ma se un\lPokémon tiene una Megapietra o un\n\nCristallo Z, non sarà in grado di\nfarlo. Per usare Dynamax su un\lPokémon, premi {START_BUTTON} quando vedi\n\napparire il simbolo rosso di\nDynamax. Se scegli di far usare\lDynamax al tuo Pokémon, l'effetto\n\ndurerà per tre turni. Durante\nquesto periodo, ogni mossa del tuo\lPokémon verrà potenziata in\n\nvarianti speciali note come <0xFC><0x01><0x06>Mosse\nMax<0xFC><0x01><0x02>. Queste Mosse Max sono molto\lpiù potenti degli attacchi normali.
 0x1fada37: Eh, eh, urk\. Sembra che questo sia\nun esperimento fallito. Forse la\lmia formula non era potente quanto\n\npensavo\. Tuttavia\. È ora del mio\npiano di riserva finale!\lElectivire! Fatti da parte!
 0x1fadaec: Ti attaccherò usando i miei\nprimissimi soggetti di prova!
 0x1fadb4f: Ahi\. La Società delle Scienze sarà\nestremamente delusa quando verrà a\lsapere dei miei tentativi falliti.\n\nTuttavia\. sono comunque riuscito a\nsfruttare il potere delle Grotte\lNascoste, quindi non è stata una\n\nperdita completa\. Addio, per ora,\nAllenatore. Un giorno, in futuro,\lti mostrerò il vero potere della\n\nscienza!
@@ -9402,14 +9402,18 @@
 0x418706: Crea un messaggio di sei frasi.
 0x418cd9: I dati di salvataggio sono danneggiati o la batteria del gioco è esaurita. Il gioco può essere giocato, ma i progressi non possono essere salvati. <0xB1>Per favore premi il tasto A.<0xB2>
 0x418e09: Salvataggio completato. <0xB1>Premi il pulsante A.<0xB2>
-0x418e77: \btn0CSposta \btn00OK \btn01Indietro
-0x418e8d: \btn00Guida
-0x418e95: \btn00Annulla
-0x418e9e: \btn00Annulla
-0x418ea7: \btn00Cambia
-0x418eb0: \btn00OK
-0x418eb5: \btn0CSposta
-0x418ebc: \btn0AScegli
+0x418e47: Il tuo nome?
+0x418e52: Nome Box?
+0x418e5c: : soprannome?
+0x418e69: Nome del rivale?
+0x418e77: {DPAD_ANY}Sposta {SE_SHOP}OK {B_BUTTON}Indietro
+0x418e8d: {SE_SHOP}Guida
+0x418e95: {SE_SHOP}Annulla
+0x418e9e: {SE_SHOP}Annulla
+0x418ea7: {SE_SHOP}Cambia
+0x418eb0: {SE_SHOP}OK
+0x418eb5: {DPAD_ANY}Sposta
+0x418ebc: {DPAD_UPDOWN}Scegli
 0x419782: \?00 di natura. Ottenuto tramite\nscambio.
 0x41979d: \?00 di natura. Ottenuto tramite\nscambio.
 0x4197b8: \?00Natura \?00. Incontrato in un incontro\nfatidico quando era al livello\n[LV] \?01.
@@ -9498,10 +9502,10 @@
 0x41df92: RAME
 0x41df99: ARGENTO
 0x41dfa0: ORO
-0x41dfa5: \btn00SUCCESSIVO
-0x41dfac: \btn0APRENDI \btn00OK \btn01FINE
-0x41dfbe: \btn00\btn01Annulla
-0x41dfc9: \btn0APRENDI \btn00OK \btn01Annulla
+0x41dfa5: {SE_SHOP}SUCCESSIVO
+0x41dfac: {DPAD_UPDOWN}PRENDI {SE_SHOP}OK {B_BUTTON}FINE
+0x41dfbe: {SE_SHOP}{B_BUTTON}Annulla
+0x41dfc9: {DPAD_UPDOWN}PRENDI {SE_SHOP}OK {B_BUTTON}Annulla
 0x41dfde: Pokémon
 0x41dfe6: Allenatore
 0x41dfee: STATO
@@ -14815,7 +14819,7 @@
 0xa4c8bd: <0xFD><0x20>Squadra di <0xFD><0x20> Squadra di <0xFD><0x21>
 0xa4c8d2: Il resto della tua squadra ha\nottenuto Punti Esperienza grazie al\nCondividi Esp.!
 0xa4c915: assideramento
-0xa4d61c: Un secondo oggetto nel Cubo può\nessere assegnato a \btn02 per usarlo\lfacilmente.
+0xa4d61c: Un secondo oggetto nel Cubo può\nessere assegnato a {L_BUTTON} per usarlo\lfacilmente.
 0xa4d65c: La corsa automatica è stata\n<0xFC><0x01><0x06>attivata<0xFC><0x01><0x02>.
 0xa4d67d: La corsa automatica è stata\n<0xFC><0x01><0x06>disattivata<0xFC><0x01><0x02>.
 0xa4d69f: Il turbo boost è stato <0xFC><0x01><0x06>attivato<0xFC><0x01><0x02>.
@@ -14894,8 +14898,8 @@
 0xa4e4e4: Cubo V3
 0xa4e4ec: Salva
 0xa4e4f6: Impostazioni di gioco
-0xa4e504: Esci \btn09
-0xa4e50d: Esci \btn08
+0xa4e504: Esci {DPAD_RIGHT}
+0xa4e50d: Esci {DPAD_LEFT}
 0xa4ead4: Normale
 0xa4eadb: Lotta
 0xa4eae2: Volante
