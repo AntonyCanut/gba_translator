@@ -1,17 +1,26 @@
 # Party-menu « Lv » → « N. » — investigation (issue #48 / B-234 / F-113)
 
-**Statut : RÉSOLU (nature du « Lv » établie par trace d'exécution mGBA).**
-Le « Lv » de la liste d'équipe **n'est PAS du texte** rendu par une police : c'est
-un **graphique** cuit dans le template de la boîte Pokémon, exactement comme le
-label « PV » (déjà traité par `languages/fr/patches/hp_labels.py`). L'hypothèse
-« police FRLG non-compressée » de F-113 est **réfutée** ; la prémisse d'origine de
-B-234 (label graphique comme HP/PV) est **confirmée**. Voir la section
-« RÉSOLUTION » (bas du fichier) pour la preuve par watchpoint et le pipeline exact.
+**Statut : CORRIGÉ EN JEU.** Le « Lv » de la liste d'équipe / résumé est un
+**glyphe-ligature unique** de la police FRLG « narrow » non-compressée (codepoint
+0x05, pixels ROM à `0x1ECFA0` ; copie identique à `0x1EB580` = glyphe 0x34 {LV}).
+Il est dessiné DIRECTEMENT par le code du niveau (blit de glyphe fixe, **sans**
+lecture de table de largeur) — c'est pourquoi un trace read-watch des tables de
+largeur ne le voit jamais. Le fix édite ce glyphe → « N. » (couvre tous les
+écrans) : `languages/fr/patches/party_lv_label.py`, câblé dans `build-fr` après
+`repair_*`. Vérifié en jeu : la liste d'équipe affiche **« N.10 »**.
+
+> ⚠️ **DEUX RENVERSEMENTS successifs — lire dans l'ordre :**
+> 1. B-234 : « Lv » supposé graphique LZ77 (comme HP/PV). Piste statique épuisée.
+> 2. F-113 (section « RÉSOLUTION » plus bas) : trace watchpoint des *tables de
+>    largeur* → « aucune police ne lit L/v » → **conclut à tort « graphique de
+>    template »**. FAUX : le glyphe est blit sans mesure de largeur, donc invisible
+>    à ce trace précis.
+> 3. **CORRECTION FINALE (section en bas)** : read-watch des *données de glyphes*
+>    (pas des largeurs) + blanchiment ciblé → c'est bien un glyphe-ligature de
+>    police (0x05 @ 0x1ECFA0). Fix appliqué. **C'est la conclusion qui fait foi.**
 
 > Note historique : la section immédiatement ci-dessous (« source NON localisée »)
 > date de la première passe B-234, avant que l'infra watchpoint mGBA n'existe.
-> Conservée pour la trace des pistes statiques éliminées ; conclusion corrigée par
-> la RÉSOLUTION.
 
 ---
 
@@ -164,3 +173,53 @@ voisin de `0x008001D0`/`0x08B1BCE8`), les redessiner en « N. » (validation str
 des octets connus + recompression in-place), l'ajouter à la chaîne `build-fr`
 après `repair_*`, puis vérifier en jeu avec `probe_party_menu.mts`.
 **Ne PAS** chercher/éditer une police : la piste police est close.
+
+---
+
+# CORRECTION FINALE — « Lv » EST un glyphe-ligature de police (fix appliqué)
+
+La « RÉSOLUTION » F-113 ci-dessus s'est trompée : elle n'a watché que les **tables
+de largeur**, or le « Lv » est blit **sans** mesure de largeur, donc invisible à
+ce trace. En watchant les **données de glyphes** et en blanchissant la zone, la
+vraie nature apparaît.
+
+## Preuve (falsifiable, en jeu)
+
+Blanchir les 32 octets à `0x1ECFA0` (copie ROM du glyphe) → « Lv » **disparaît**
+de la liste d'équipe, tandis que le nombre « 10 », le nom, « PV » (bloc LZ77
+`0x008001D0`) et « Annuler » **survivent**. Donc « Lv » = ces 32 octets = un
+glyphe-ligature de la police narrow, pas un graphique de template. Le blit de ce
+glyphe (`DecompressGlyph` @ `0x8006490`, base `0x1EAF00`, table extra
+`0x1ECF00`) ne passe pas par `GetGlyphWidth`, d'où l'angle mort du trace F-113.
+
+Le motif 32 octets est stocké **deux fois**, identiques :
+  * `0x1ECFA0` — glyphe 0x05 (table extra-symbole ; liste d'équipe + résumé F9 05).
+  * `0x1EB580` — glyphe 0x34 ({LV}) de la table principale (code de contrôle texte).
+
+## Format du glyphe (rétro-ingénierie — `font.py` ne le décode pas)
+
+Le glyphe est stocké 32 octets dans un format FRLG **non-linéaire** que le
+décodeur de tuile linéaire de `font.py` ne sait pas lire (il rend du pseudo-bruit).
+Voir le docstring de `languages/fr/patches/party_lv_label.py` pour la
+correspondance octet→pixel exacte utilisée par l'encodeur du fix.
+
+## Fix appliqué
+
+`languages/fr/patches/party_lv_label.py` réécrit le glyphe « Lv » (`0x1ECFA0`) en
+« N. » en **réutilisant le vrai glyphe « N » de la ROM** (codepoint 0xC8) + un
+point blanc dans la colonne droite libre — ainsi la lettre conserve l'anticrénelage
+natif de la police et le niveau se lit **« N.10 »**. Strict (byte-match) et
+idempotent. Câblé dans `build-fr` juste après `hp_labels`. Vérifié en jeu.
+
+> Note : cette correction a été apportée **de façon concurrente** par un ticket
+> frère (fix `party_lv_label.py` mergé sur `unbound` pendant que F-113 tournait).
+> J'ai cédé à cette version canonique (réutilisation du vrai glyphe « N », plus
+> propre que redessiner « N. » à la main). Copie secondaire du glyphe repérée
+> à `0x1EB580` (glyphe 0x34 {LV} de la table principale) : non patchée par la
+> version canonique — à vérifier si un texte FR utilise le code {LV} brut.
+
+Outils de diagnostic réutilisables laissés en place (commit `feat(debug)…`) :
+l'infra watchpoint (`bridge.lua` + `mgba-bridge.ts`) et les sondes
+`probe_party_lv_*.mts` / `probe_party_vram_dump.mts` — c'est le read-watch des
+données de glyphes (et non des largeurs) via cette infra qui a permis d'identifier
+correctement le glyphe-ligature.
