@@ -2439,7 +2439,7 @@
 0x3FB232: {FD25}
 0x3FB262: {FD2F}
 0x3FB284: a boosted
-0x3FB28E: <0xFD><0x00> monte au\nN. <0xFD><0x01> !<0xFC><0x0A>\p
+0x3FB28E: <0xFD><0x00> monte au\nN.<0xFD><0x01> !<0xFC><0x0A>\p
 0x3FB2A4: <0xFD><0x00> apprend\n<0xFD><0x01> !<0xFC><0x0A>\p
 0x3FB31F: <0xFD><0x00> oublie\n<0xFD><0x01>.\p
 0x3FB40D: <0xFD><0x10>\nest K.O. !\p
@@ -3225,7 +3225,7 @@
 0x416FC7: PP restaurés.{PAUSE_UNTIL_PRESS}
 0x416FED: {STR_VAR_1} est en pleine forme. {PAUSE_UNTIL_PRESS}
 0x417002: PP de {STR_VAR_1} augmentés. {PAUSE_UNTIL_PRESS}
-0x417017: {STR_VAR_1} monte au\nN. {STR_VAR_2}.
+0x417017: {STR_VAR_1} monte au\nN.{STR_VAR_2}.
 0x417032: Stat de base {STR_VAR_2} de {STR_VAR_1} augmentée.\n{PAUSE_UNTIL_PRESS}
 0x417052: {STR_VAR_1} n'est plus confus.\n{PAUSE_UNTIL_PRESS}
 0x417075: {STR_VAR_1} n'est plus amoureux.\n{PAUSE_UNTIL_PRESS}
@@ -4710,7 +4710,7 @@
 0x457C47: L'autre Dresseur t'a montré sa\nCarte Dresseur.\pVeux-tu montrer ta\nCarte Dresseur ?
 0x457CA3: L'autre Dresseur te défie en\ncombat.\pAcceptes-tu le défi\nde combat ?
 0x457CF6: L'autre Dresseur t'invite à\nchatter.\pAcceptes-tu l'invitation\nau chat ?
-0x457D44: On te propose d'échanger ton\n{DYNAMIC} N. {DYNAMIC} enregistré.\pContre un {DYNAMIC} N.\n{DYNAMIC}.\pAcceptes-tu cette offre\nd'échange ?
+0x457D44: On te propose d'échanger ton\n{DYNAMIC} N.{DYNAMIC} enregistré.\pContre un {DYNAMIC} N.\n{DYNAMIC}.\pAcceptes-tu cette offre\nd'échange ?
 0x457DB8: On te propose d'échanger ton Œuf\nenregistré.\lAcceptes-tu cette offre ?
 0x457E0A: Le chat a été abandonné.\p
 0x457E28: Vous avez décliné l'offre.\p
@@ -4768,7 +4768,7 @@
 0x458D52: L'inscription a été annulée.\p
 0x458D75: L'inscription est terminée.\p
 0x458D9A: L'échange a été annulé.\p
-0x458DBA: Annuler l'enregistrement de ton\n{STR_VAR_1} N. {STR_VAR_2} ?
+0x458DBA: Annuler l'enregistrement de ton\n{STR_VAR_1} N.{STR_VAR_2} ?
 0x458DE7: Annuler l'enregistrement de ton\nŒuf ?
 0x458E0D: L'inscription a été annulée.\p
 0x458E6E: Veux-tu demander à\n{STR_VAR_1} de faire un échange ?
@@ -16419,15 +16419,15 @@
 0x1F06137: Choisis un nombre de 1 à {STR_VAR_2}.
 0x1F06153: J'ai dit {COLOR}É{STR_VAR_2}{COLOR}Ç façons !\pCe nombre est trop grand.
 0x1F0618A: {STR_VAR_1} évoluera si…\p{EVIL_LEGENDARY}
-0x1F061A0: Il monte au N. {STR_VAR_2} !
-0x1F061B6: Il monte au N. {STR_VAR_2} quand\nson Attaque dépasse sa Défense !
-0x1F061F8: Il monte au N. {STR_VAR_2} quand\nson Attaque égale sa Défense !
-0x1F06231: Il monte au N. {STR_VAR_2} quand\nl'Attaque < la Défense !
-0x1F06270: Il monte au N. {STR_VAR_2} et il y a\nune Poké Ball libre dans le Cube !
-0x1F062B0: Il monte au N. {STR_VAR_2} et il est\nmâle !
-0x1F062D4: Il monte au N. {STR_VAR_2} et il est\nfemelle !
-0x1F062FA: Il monte au N. {STR_VAR_2} la nuit !
-0x1F06319: Il monte au N. {STR_VAR_2} le\njour !
+0x1F061A0: Il monte au N.{STR_VAR_2} !
+0x1F061B6: Il monte au N.{STR_VAR_2} quand\nson Attaque dépasse sa Défense !
+0x1F061F8: Il monte au N.{STR_VAR_2} quand\nson Attaque égale sa Défense !
+0x1F06231: Il monte au N.{STR_VAR_2} quand\nl'Attaque < la Défense !
+0x1F06270: Il monte au N.{STR_VAR_2} et il y a\nune Poké Ball libre dans le Cube !
+0x1F062B0: Il monte au N.{STR_VAR_2} et il est\nmâle !
+0x1F062D4: Il monte au N.{STR_VAR_2} et il est\nfemelle !
+0x1F062FA: Il monte au N.{STR_VAR_2} la nuit !
+0x1F06319: Il monte au N.{STR_VAR_2} le\njour !
 0x1F0633E: Il évolue avec une forte\namitié !\pTu sauras qu'il est prêt\nquand un {COLOR}Écœur{COLOR}Ç apparaît sur sa\lfiche.
 0x1F063B9: Il évolue avec une forte\namitié en journée !\pTu sauras qu'il est prêt\nquand un {COLOR}Écœur{COLOR}Ç apparaît sur sa\lfiche.
 0x1F06443: Il évolue avec une forte\namitié la nuit !\pTu sauras qu'il est prêt\nquand un {COLOR}Écœur{COLOR}Ç apparaît sur sa\lfiche.
@@ -16436,18 +16436,18 @@
 0x1F06568: Il est échangé en tenant le\n{STR_VAR_2} !
 0x1F0658A: On utilise le {STR_VAR_2} dessus !
 0x1F065A0: Il évolue quand sa Beauté est\nau maximum !
-0x1F065CB: Il monte au N. {STR_VAR_2} s'il\npleut ou s'il y a du brouillard !
-0x1F0660E: Il monte au N. {STR_VAR_2} quand\nun type {STR_VAR_3} est dans l'équipe !
-0x1F06649: Il évolue au N. {STR_VAR_2} !
+0x1F065CB: Il monte au N.{STR_VAR_2} s'il\npleut ou s'il y a du brouillard !
+0x1F0660E: Il monte au N.{STR_VAR_2} quand\nun type {STR_VAR_3} est dans l'équipe !
+0x1F06649: Il évolue au N.{STR_VAR_2} !
 0x1F0665D: Il évolue la nuit en tenant\nle {STR_VAR_2} !
 0x1F06689: Il évolue le jour en tenant\nle {STR_VAR_2} !
 0x1F066BB: Il évolue quand il connaît\n{STR_VAR_2} !
 0x1F066DA: Il évolue quand un {STR_VAR_2} est\ndans l'équipe !
-0x1F06702: Il monte au N. {STR_VAR_2} entre\n{STR_VAR_3} et {VERSION} !
+0x1F06702: Il monte au N.{STR_VAR_2} entre\n{STR_VAR_3} et {VERSION} !
 0x1F0672A: Il place 3 coups critiques en un\nseul combat !
 0x1F06757: Il subit {STR_VAR_2} dégâts à\n{STR_VAR_3} !
 0x1F06771: On utilise le {STR_VAR_2} dessus en\nse tenant sur {STR_VAR_3} !
-0x1F0679C: Il monte au N. {STR_VAR_2}\nen tenant le {STR_VAR_3} !
+0x1F0679C: Il monte au N.{STR_VAR_2}\nen tenant le {STR_VAR_3} !
 0x1F067C7: On utilise le {STR_VAR_2} dessus\nen tenant le {STR_VAR_3} !
 0x1F067F2: On utilise le {STR_VAR_2} dessus\nla nuit !
 0x1F06811: Il évolue quand il connaît\n{STR_VAR_2} et qu'il est mâle !
@@ -16568,7 +16568,7 @@
 0x1F09699: Et en plus, laisse-moi les rendre\nencore plus chanceux !
 0x1F096D7: {COLOR}ÁLe niveau des OEufs Chance est passé\nà {STR_VAR_2} !\pLes Pokémon gagneront maintenant {COLOR}É{EVIL_LEGENDARY}{COLOR}Á×\nles Points Exp. en le tenant.
 0x1F0974F: Si tu veux, j'améliore encore\ntes Œufs Chance.\pMais il me faudra plus que des\nPoints Exp. pour les améliorer.\pApporte-moi {COLOR}É{STR_VAR_3} {STR_VAR_1}{COLOR}Ç et je\naméliorerai encore tes Œufs Chance.\pJe…{PAUSE} je viens de réaliser que j'ai\nbesoin de nourriture, après tout.
-0x1F09838: Bonjour, tu es là pour améliorer\ntes {COLOR}ÉOEufs Chance{COLOR}Ç ?\pJ'ai besoin de {COLOR}É{STR_VAR_3} {STR_VAR_1}{COLOR}Ç pour\nporter leur chance à {COLOR}ÉN. {STR_VAR_2}{COLOR}Ç.
+0x1F09838: Bonjour, tu es là pour améliorer\ntes {COLOR}ÉOEufs Chance{COLOR}Ç ?\pJ'ai besoin de {COLOR}É{STR_VAR_3} {STR_VAR_1}{COLOR}Ç pour\nporter leur chance à {COLOR}ÉN.{STR_VAR_2}{COLOR}Ç.
 0x1F098B9: Non ? Alors tu aurais une pièce\navant de partir ?
 0x1F098EF: Je crains que tu n'aies pas assez\n{COLOR}É{STR_VAR_1}{COLOR}Ç.\pPas assez pour me nourrir\ncette semaine…
 0x1F0994C: Avec un bonus de {COLOR}É{EVIL_LEGENDARY}{COLOR}Ç× de Points Exp.,\nje ne peux plus rien faire\lpour tes Œufs Chance.\pComment vais-je me nourrir, moi ?
@@ -19115,7 +19115,7 @@
 0x1F5B530: Si tu veux me voir à l'œuvre,\npasse me voir.
 0x1F5B576: F Itinéraire 10
 0x1F5B581: Houah, Dresseur !\pJ'entraîne corps et âme en fixant\ncet arbre avec intensité !\pPrends ça pour t'entraîner aussi !
-0x1F5B5F8: Houah, Dresseur !\pJe peux {COLOR}Éaméliorer{COLOR}Ë le {COLOR}ÉBrac. Macho{COLOR}Ë\npour l'entraînement efficace !\pPour l'instant, il est N. {STR_VAR_3},\nmais le passer {COLOR}ÉN. {STR_VAR_2}{COLOR}Ë en\léchange de {COLOR}É{STR_VAR_2} {STR_VAR_1}s{COLOR}Ë !
+0x1F5B5F8: Houah, Dresseur !\pJe peux {COLOR}Éaméliorer{COLOR}Ë le {COLOR}ÉBrac. Macho{COLOR}Ë\npour l'entraînement efficace !\pPour l'instant, il est N.{STR_VAR_3},\nmais le passer {COLOR}ÉN.{STR_VAR_2}{COLOR}Ë en\léchange de {COLOR}É{STR_VAR_2} {STR_VAR_1}s{COLOR}Ë !
 0x1F5B6BE: Tant pis, contente-toi d'un produit\ninférieur !
 0x1F5B6E4: Tu n'as pas assez de {STR_VAR_1}s pour\nque j'améliore ton Brac. Macho !
 0x1F5B723: {COLOR}ÁLe niveau du Brac. Macho est passé\nà {STR_VAR_2} !\pLes Pokémon gagneront désormais {COLOR}É{STR_VAR_2}×{COLOR}Á\nles Points d'Effort gagnés.
@@ -20835,7 +20835,7 @@
 0x1F8068B: Je me suis entraîné comme un fou,\net mes Pokémon encore plus !
 0x1F806C6: Ouais, ouais !\nMême si j'ai perdu, je suis motivé !
 0x1F806F5: Pour un fou comme toi, ton\nentraînement a porté ses fruits !\pEt la folie née de la soif de\npuissance doit être récompensée !\pDresseur !\pTu as des {COLOR}ÉObjets Pouvoir{COLOR}Ë ?\pIls n'en ont pas l'air, mais mes\nbras servent à forger et frapper !\pAlors, laisse-moi améliorer tous tes\nObjets Pouvoir pour renforcer\lencore plus vite tes Pokémon !\pIl me faut juste des étoiles, {COLOR}É{STR_VAR_1}s{COLOR}Ë\npour être précis !\pTu peux obtenir un {STR_VAR_1} par\njour en brisant le {COLOR}ÉRocher de Défi{COLOR}Ë.\pCe rocher imposant, juste ici.\pPrends un Pokémon de type {COLOR}ÉCombat{COLOR}Ë et\nfraye-toi un chemin !
-0x1F8091F: Salutations, fou parmi les fous !\pSi tu veux, paie-moi {COLOR}É{STR_VAR_3} {STR_VAR_1}{COLOR}Ë\net j'améliorerai tous tes\l{COLOR}ÉObjets Pouvoir{COLOR}Ë en {COLOR}ÉN. {STR_VAR_2}{COLOR}Ë !
+0x1F8091F: Salutations, fou parmi les fous !\pSi tu veux, paie-moi {COLOR}É{STR_VAR_3} {STR_VAR_1}{COLOR}Ë\net j'améliorerai tous tes\l{COLOR}ÉObjets Pouvoir{COLOR}Ë en {COLOR}ÉN.{STR_VAR_2}{COLOR}Ë !
 0x1F809B9: {COLOR}ÁLe niveau des Objets Pouvoir a\naugmenté à {STR_VAR_2} !\pLes Pokémon gagnent désormais des\nPoints d'Effort {COLOR}É{EVIL_LEGENDARY}{COLOR}Á quand tenu.
 0x1F80A3A: Rassemble les étoiles de Borrius\net reviens !
 0x1F80A6A: Hélas, il te manque {COLOR}É{STR_VAR_3} {STR_VAR_1}{COLOR}Ë\npour améliorer tes Objets Pouvoir.\pGagne plus d'étoiles\net reviens !
@@ -23140,7 +23140,7 @@
 0x458CD4: Choisis le type de Pokémon que\ntu souhaites recevoir en échange.\n
 0x458D1C: Quel Pokémon de ton équipe\nveux-tu proposer ?\p
 0x458D9C: L'échange a été annulé.\p
-0x458DBC: Annuler l'inscription de ton\n<0xFD><0x02> N. <0xFD><0x03> ?
+0x458DBC: Annuler l'inscription de ton\n<0xFD><0x02> N.<0xFD><0x03> ?
 0x458DE8: Annuler l'inscription de\nton Oeuf ?
 0x458E10: L'inscription a été annulée.\p
 0x458E70: Veux-tu proposer un échange\nà <0xFD><0x02> ?
