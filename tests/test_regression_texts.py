@@ -286,6 +286,23 @@ class RegressionTextTests(unittest.TestCase):
             self.assertNotIn('second slot', text)
 
     @unittest.skipUnless(FR_ROM.exists(), 'ROM missing')
+    def test_item_pickup_message_uses_present_tense(self):
+        # Issue #64 "Formulation objet ramassé": the pickup message read
+        # "{PLAYER} a rangé {OBJET} dans la Zone Objets." (passé composé).
+        # Official games use the present tense: "{PLAYER} range {OBJET}...".
+        french_data = FR_ROM.read_bytes()
+
+        # Generic item pickup template ("... range OBJET dans la POCHE.").
+        item_text = _read_pointer_text(french_data, 0x001A6752)
+        self.assertIn('range', item_text)
+        self.assertNotIn('a rangé', item_text)
+
+        # Coin Case pickup template ("... range les Jetons dans la Boîte Jetons.").
+        coins_text = _read_pointer_text(french_data, 0x001A690C)
+        self.assertIn('range les Jetons', coins_text)
+        self.assertNotIn('a rangé', coins_text)
+
+    @unittest.skipUnless(FR_ROM.exists(), 'ROM missing')
     def test_camper_trainer_class_translated_everywhere(self):
         # Issue #28: every appearance of the trainer class "Camper" must read
         # "Campeur" — the fixed-width class-name table cell and the two
