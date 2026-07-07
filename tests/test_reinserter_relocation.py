@@ -88,6 +88,72 @@ class ReinserterRelocationTests(unittest.TestCase):
         self.assertGreaterEqual(alloc, 0x3000)
 
 
+class PostBuildHarvesterPoolTests(unittest.TestCase):
+    """The blanket ``reserved_rom`` carve does double duty: besides protecting
+    the inline-overrides mirror writes, it *preserves* the pool of bytes that
+    are free (0xFF) in the target but populated in the reference (Spanish) ROM.
+    Post-build relocation patches that run with ``reserved_rom=None`` —
+    ``languages/de/patches/mission_descriptions.py`` (harvests 47 bounty
+    descriptions), ``worldmap_junction_panels.py``, the Italian
+    ``patch_long_dialogues_it.py`` — deliberately harvest exactly that pool.
+
+    Regression: commit 0d89a68 (#54) let the main relocation pass consume that
+    pool (it reserved only the inline-write spans instead of the whole Spanish
+    footprint), so those post-build patches found no free space, exited 1, and
+    broke ``make build-de`` / ``build-it`` in CI. The invariant below fails if
+    the main pass is ever allowed to eat the reference-populated pool again.
+    """
+
+    # A clean 32 KB free run below the excluded graphics/upper-ROM ranges.
+    RUN_START = 0x600000
+    RUN_LEN = 0x8000
+    # The slice that is 0xFF here but text in the reference ROM (the pool the
+    # post-build harvesters need). 8 KB, centred in the run.
+    RES_START = 0x604000
+    RES_END = 0x606000
+
+    def _rom_and_reference(self):
+        size = self.RUN_START + self.RUN_LEN + 0x1000
+        rom = bytearray([0xAB] * size)
+        rom[self.RUN_START:self.RUN_START + self.RUN_LEN] = b'\xff' * self.RUN_LEN
+        reference = bytearray(rom)
+        reference[self.RES_START:self.RES_END] = b'\xD5' * (self.RES_END - self.RES_START)
+        return rom, bytes(reference)
+
+    def test_blanket_carve_preserves_harvester_pool(self):
+        from src.core.text_reinserter import FreeSpaceAllocator
+
+        rom, reference = self._rom_and_reference()
+
+        # Main relocation pass: blanket carve. Drain everything it is allowed to.
+        main = FreeSpaceAllocator(rom, reserved_rom=reference, min_block=1024)
+        while True:
+            off = main.allocate(0x200)
+            if off is None:
+                break
+            # No allocation may land inside the reference-populated pool.
+            self.assertFalse(
+                self.RES_START <= off < self.RES_END,
+                f"main pass allocated into the reserved pool at 0x{off:X}",
+            )
+            rom[off:off + 0x200] = b'\xAA' * 0x200
+
+        # The reference-populated pool is untouched — still one clean 0xFF run.
+        self.assertEqual(
+            bytes(rom[self.RES_START:self.RES_END]),
+            b'\xff' * (self.RES_END - self.RES_START),
+        )
+
+        # A post-build harvester (reserved_rom=None) still finds free space to
+        # relocate into — the pool the main pass left untouched. Under #54 the
+        # main pass would have consumed it and this allocation would fail.
+        harvester = FreeSpaceAllocator(rom, reserved_rom=None, min_block=1024)
+        self.assertIsNotNone(
+            harvester.allocate(self.RES_END - self.RES_START - 2 * FreeSpaceAllocator.RUN_MARGIN),
+            "harvester found no free space after the main relocation pass",
+        )
+
+
 class PlausiblePointerSiteTests(unittest.TestCase):
     """The site filter must accept every real script shape seen in Unbound
     and keep rejecting Thumb-code false positives (writing those crashed
