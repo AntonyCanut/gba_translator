@@ -319,6 +319,22 @@ class RegressionTextTests(unittest.TestCase):
             self.assertIn('Campeur', text)
             self.assertNotIn('Camper', text)
 
+    @unittest.skipUnless(FR_ROM.exists(), 'ROM missing')
+    def test_options_exit_choice_box_has_three_choices(self):
+        # Issue #70 "Boite de choix sortie options": the FR translation had
+        # collapsed the 3-entry multichoice list (EN "Save\nDiscard\nCancel",
+        # offset 0x1F4E230) into a single run-on sentence, so the list only
+        # ever showed one truncated, overlapping choice instead of three.
+        french_data = FR_ROM.read_bytes()
+
+        text = _read_pointer_text(french_data, 0x1EBD77C)
+        self.assertEqual(text.count('\n'), 2, f'Expected 3 choices, got: {text!r}')
+        choices = text.split('\n')
+        self.assertEqual(len(choices), 3)
+        for choice in choices:
+            self.assertTrue(choice, 'Choice entries must not be empty')
+        self.assertNotIn('abandonner ?', text)
+
 
 if __name__ == '__main__':
     unittest.main()
