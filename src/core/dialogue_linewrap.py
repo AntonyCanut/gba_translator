@@ -98,6 +98,10 @@ _STRUCT_RE = re.compile(r'<0xF[ABab]>')
 _BLANK_RUN_SPLIT = re.compile(r'(\n{2,})')
 _SCROLL = '<0xFA>'
 _PAGE = '<0xFB>'
+# Directional-arrow glyphs (0x79 ↑, 0x7A ↓, 0x7B ←, 0x7C →). A line that
+# opens on one of them is a list entry — junction signposts lay out one
+# destination per line ("<0x7B> Tehl Town" / "<0x79> Auburn Waterway").
+_ARROW_LINE_RE = re.compile(r'^\s*<0x7[9ABCabc]>')
 
 # Characters that close a sentence (the screen may legitimately clear
 # after them). French detached punctuation and closing quotes/brackets
@@ -397,6 +401,17 @@ def rewrap_segment(segment: str, max_width: int = DEFAULT_MAX_LINE_WIDTH) -> str
     return '\n'.join(lines)
 
 
+def is_list_layout(page: str) -> bool:
+    """True when ``page`` lays out a list: a line opening on an arrow glyph.
+
+    Junction signposts put one destination per line, arrow first. Re-flowing
+    such a page would weld destinations together and strand arrows mid-line,
+    so its line structure must be kept verbatim — only the break *types* may
+    be normalised so stacked ``\\n`` can never overdraw the box.
+    """
+    return any(_ARROW_LINE_RE.match(line) for line in _BREAK_RE.split(page))
+
+
 _BREAK_RUN_RE = re.compile(r'(?:(?:<0xF[ABab]>|\n)[ \t]*){2,}')
 
 
@@ -594,6 +609,10 @@ def rewrap(text: str, max_width: int = DEFAULT_MAX_LINE_WIDTH) -> str:
     out: List[str] = []
     for page in _PAGE_SPLIT.split(text):
         if _PAGE_SPLIT.fullmatch(page):
+            out.append(page)
+        elif is_list_layout(page):
+            # One entry per line, arrow first (signposts): never re-flow;
+            # normalize_breaks below still fixes the break types.
             out.append(page)
         elif not _has_wide_buffer(page):
             out.append(rewrap_segment(_SCROLL_RE.sub('\n', page), max_width))
