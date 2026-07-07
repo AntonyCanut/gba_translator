@@ -165,7 +165,10 @@ patches:
   - battle_string_templates # {FD24} defeat-speech / switch-out control cluster
   - intro_questions_it   # fix 3 character-creation questions that bypass pipeline
   - trainer_class_names_it  # inject IT gTrainerClassNames cells (no-pointer table)
-  - long_dialogues_it       # relocate/repoint dialogues over the extractor cap
+  - long_dialogues_it       # relocate/repoint dialogues over the extractor cap;
+                            # degrades to a warning (dialogue stays English)
+                            # rather than aborting the build when the generic
+                            # injector has left no free space to relocate into.
   - status_abbrevs
   # ── Italian text written in place (no free-space relocation) ──────────────
   - ability_names           # fixed 17-byte ability-name table ← combined_it

@@ -179,7 +179,21 @@ def main(argv: list[str] | None = None) -> int:
         f"{stats['relocated']} relocated, {stats['already']} already correct, "
         f"{stats['no_referrer']} without live pointer, {stats['failed']} failed"
     )
-    return 1 if stats["failed"] else 0
+    if stats["failed"]:
+        # Free-space exhaustion is a SOFT degradation, never a build breaker.
+        # This step runs mid-pipeline (build_language.py invokes every step
+        # with check=True), so a non-zero exit here aborts every later patch
+        # — status_badges, hp_labels, dexnav_headers, … — and ships an
+        # incomplete ROM. The generic IT builder can consume nearly all of
+        # the ROM's free space, so a handful of these very long dialogues may
+        # find no room; when that happens they stay English, exactly like the
+        # `shop` / `cry_label` relocation steps (see their module docstrings).
+        # We warn loudly but return 0 so the rest of the pipeline still runs.
+        print(
+            f"  WARN: {stats['failed']} long dialogue(s) left English — no free "
+            "space to relocate them; the rest of the build continues."
+        )
+    return 0
 
 
 if __name__ == "__main__":
