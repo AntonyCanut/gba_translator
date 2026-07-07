@@ -170,6 +170,33 @@ class TestWeakArmorCell(unittest.TestCase):
         self.assertEqual(data[self.OFFSET + len(raw)], 0xFF)
 
 
+class TestDrescoGymLeaderNameCells(unittest.TestCase):
+    """Dresco Gym Leader "Mirskle" was renamed to "Sylvain" in every
+    dialogue string (combined_fr.txt 0x1F15C64 etc.), but the raw trainer-data
+    table read by the VS/battle-launch screen has six separate name cells the
+    dialogue translation pipeline never reaches (issue #62).
+    """
+
+    OFFSETS = (0x23EBBC, 0x23F60C, 0x23F634, 0x245B24, 0x245B4C, 0x245B74)
+
+    def test_cells_registered(self):
+        for offset in self.OFFSETS:
+            self.assertIn(offset, NAME_FIXES, hex(offset))
+            old, new, stride = NAME_FIXES[offset]
+            self.assertEqual(old, "Mirskle", hex(offset))
+            self.assertEqual(new, "Sylvain", hex(offset))
+            self.assertEqual(stride, 8, hex(offset))
+
+    def test_cells_patch_in_place(self):
+        for offset in self.OFFSETS:
+            old, new, stride = NAME_FIXES[offset]
+            data = _make_cell_rom(offset, old, stride)
+            self.assertEqual(apply_name_fixes(data, {offset: (old, new, stride)}), 1)
+            raw = encode(new)
+            self.assertEqual(bytes(data[offset : offset + len(raw)]), raw)
+            self.assertEqual(data[offset + len(raw)], 0xFF)
+
+
 class TestTmToCtCells(unittest.TestCase):
     """TM item name cells (class 2, absent from the injection pipeline) must be
     renamed to CT in all three item tables: FireRed original (TM01–TM50),

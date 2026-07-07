@@ -68,6 +68,18 @@ NAME_FIXES = {
     # extraction, so it ships untouched in English. Official French name
     # is "Armurouillée" (Armure + rouillée).
     0xA37069: ("Weak Armor", "Armurouillée", 17),
+    # Dresco Gym Leader's trainer struct name field: "Mirskle" was renamed
+    # to "Sylvain" throughout dialogue (see combined_fr.txt 0x1F15C64 etc.),
+    # but the raw trainer-data table (read directly by the VS/battle-launch
+    # screen, not by the dialogue text pipeline) has six separate name
+    # cells that translation never reaches. Same byte length as "Mirskle"
+    # (7 glyphs), so the cell is just the name + terminator, stride 8.
+    0x23EBBC: ("Mirskle", "Sylvain", 8),
+    0x23F60C: ("Mirskle", "Sylvain", 8),
+    0x23F634: ("Mirskle", "Sylvain", 8),
+    0x245B24: ("Mirskle", "Sylvain", 8),
+    0x245B4C: ("Mirskle", "Sylvain", 8),
+    0x245B74: ("Mirskle", "Sylvain", 8),
 }
 
 
