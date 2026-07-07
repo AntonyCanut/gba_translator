@@ -354,11 +354,17 @@ def rewrap_segment(segment: str, max_width: int = DEFAULT_MAX_LINE_WIDTH) -> str
     the box edge as possible, which also yields the fewest lines — a
     short dialogue whose words fit on a single line is merged onto one
     line, and a break never happens while space remains on the current
-    line. Single-line segments are returned unchanged.
+    line. A segment carrying no source break is wrapped too when it
+    overflows the box on its own — a hand-edited correction can arrive as
+    one unbroken line with no ``\n`` at all, which must not ship as a
+    single overflowing line; only segments that already fit are left
+    unchanged.
     """
     line_count = segment.count('\n') + 1
     if line_count < 2:
-        return segment
+        if line_width(segment) <= max_width:
+            return segment
+        line_count = 1
 
     words = _split_words(segment)
     if len(words) <= line_count:
@@ -577,9 +583,11 @@ def rewrap(text: str, max_width: int = DEFAULT_MAX_LINE_WIDTH) -> str:
     words must not be pulled across its boundary — except apostrophe-
     elided pronoun buffers (qu'<0xFD>…), whose width is bounded and which
     therefore flow greedily like plain words. Word order and wording are
-    preserved; texts without any break are returned untouched.
+    preserved; texts without any break are returned untouched, unless
+    they overflow the box on their own (a single unbroken correction),
+    in which case they still need wrapping.
     """
-    if not _BREAK_RE.search(text):
+    if not _BREAK_RE.search(text) and line_width(text) <= max_width:
         return text
     text = demote_midsentence_pages(text)
     text = collapse_empty_breaks(text)

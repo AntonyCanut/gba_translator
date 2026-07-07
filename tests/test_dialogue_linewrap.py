@@ -10,6 +10,7 @@ from src.core.dialogue_linewrap import (
     normalize_breaks,
     rewrap,
     rewrap_multiline,
+    rewrap_segment,
 )
 
 
@@ -246,6 +247,55 @@ INTRO_EN = (
 )
 
 CREDITS_EN = '\n\n Skeli\n Lich-Lord-F\n Criminon\n\n'
+
+
+class ZeroBreakOverflowTests(unittest.TestCase):
+    """A hand-edited correction can arrive with no source ``\n`` at all;
+    it must still be wrapped when it overflows the box on its own.
+    Regression for the German in-game bug where a long, unbroken
+    correction rendered as one overflowing line that visually overlapped
+    the next page's text and continue arrow."""
+
+    def test_rewrap_segment_wraps_single_line_overflow(self):
+        segment = (
+            "Die Macht von Borrius wurde vor sehr langer Zeit versiegelt "
+            "und niemand hat sie seither je wieder gesehen."
+        )
+        result = rewrap_segment(segment)
+        self.assertIn('\n', result)
+        for width in line_widths(result):
+            self.assertLessEqual(width, DEFAULT_MAX_LINE_WIDTH)
+        self.assertEqual(result.replace('\n', ' ').split(), segment.split())
+
+    def test_page_with_zero_breaks_no_longer_overflows_into_next_page(self):
+        # A <0xFB>-delimited page whose own text has no \n/scroll must
+        # still get wrapped, otherwise it overflows onto the box's
+        # second line where the next page's text/continue arrow is
+        # drawn -- the visual overlap reported in-game.
+        text = (
+            "Ausgezeichnet. Die Macht von Borrius wurde vor langer Zeit "
+            "versiegelt.<0xFB>Man sagt, dass die drei Pokémon wieder "
+            "vereint werden."
+        )
+        result = rewrap(text)
+        self.assertIn('<0xFB>', result)
+        first_page = result.split('<0xFB>')[0]
+        for width in line_widths(first_page):
+            self.assertLessEqual(width, DEFAULT_MAX_LINE_WIDTH)
+        flat = result.replace('\n', ' ').replace('<0xFA>', ' ').replace('<0xFB>', ' ')
+        flat_src = text.replace('<0xFB>', ' ')
+        self.assertEqual(flat.split(), flat_src.split())
+
+    def test_short_single_line_still_untouched(self):
+        self.assertEqual(rewrap('Salut !'), 'Salut !')
+
+    def test_idempotent(self):
+        text = (
+            "Die Macht von Borrius wurde vor sehr langer Zeit versiegelt "
+            "und niemand hat sie seither je wieder gesehen."
+        )
+        once = rewrap(text)
+        self.assertEqual(rewrap(once), once)
 
 
 class MultilineLayoutTests(unittest.TestCase):
