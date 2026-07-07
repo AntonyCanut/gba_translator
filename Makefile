@@ -278,6 +278,7 @@ build-fr: $(FRENCH_EXTRACT) $(SPANISH_EXTRACT) $(BUILD_SCRIPT)
 		--combined languages/fr/combined_fr.txt
 	@$(PYTHON) $(PATCH_TRAINER_CARD_DATE_FR_SCRIPT) --rom $(FR_BUILD)
 	@$(PYTHON) $(PATCH_MONEY_AMOUNT_ORDER_FR_SCRIPT) --rom $(FR_BUILD)
+	@$(PYTHON) scripts/patch_evolution_message_fr.py $(FR_BUILD)
 	@$(PYTHON) scripts/insert_sprite.py --rom $(FR_BUILD) --lang fr --sprite selection --bmp languages/fr/sprites/selection.bmp
 	@$(PYTHON) $(PATCH_SUMMARY_LV_LABELS_SCRIPT) --rom $(FR_BUILD)
 	@echo "✓ FR ROM built — vérification des traductions de lieux..."
