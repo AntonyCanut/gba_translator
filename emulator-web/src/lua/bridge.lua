@@ -17,6 +17,18 @@
 --   LOADSTATE|<slot_or_path>      Load state from slot (0-9) or file path
 --   PING                         Health check
 --
+-- Debugger commands (mGBA >= 0.11 scripting watchpoint/breakpoint API):
+--   CAP                          Report available debugger capabilities
+--   WATCHPOINT|<addr>|<type>            Set watchpoint (type: W=write R=read C=change)
+--   WATCHPOINT|<min>|<max>|<type>       Set range watchpoint ([min,max) exclusive end)
+--   BREAKPOINT|<addr>                   Set an execution breakpoint
+--   CLEARBP|<id>                        Clear watchpoint/breakpoint by returned id
+--   WATCHHITS[|<max>]                   Drain up to <max> (default 200) captured hits
+--   CLEARHITS                           Discard the hit buffer without draining
+-- On every watchpoint/breakpoint hit the full ARM register file (r0-r15,cpsr)
+-- is captured alongside the access (addr/old/new/accessType). WATCHHITS returns
+-- records joined by "@@" and appends |more=<remaining> so the client can page.
+--
 -- Responses:
 --   OK|<data>                    Success with optional data
 --   ERR|<message>                Error
@@ -40,6 +52,16 @@ local pending_key = nil       -- {key=N, frames_left=N}
 local pending_frames = nil    -- {count=N, callback=string}
 local recv_buffer = ""
 local peak_frame = 0
+
+-- Debugger state (watchpoints / breakpoints)
+local watch_hits = {}            -- ring of captured hit records (strings)
+local WATCH_HIT_CAP = 4000       -- hard cap so a runaway watch cannot OOM
+local watch_ids = {}             -- id -> {kind="wp"|"bp", label=...} for CLEARBP
+-- ARM register names captured on every hit (r15 = PC at the access, r14 = LR).
+local REG_NAMES = {
+    "r0", "r1", "r2", "r3", "r4", "r5", "r6", "r7",
+    "r8", "r9", "r10", "r11", "r12", "r13", "r14", "r15", "cpsr",
+}
 
 -- ============================================================================
 -- Helpers
@@ -471,6 +493,153 @@ local function handle_loadstate(args)
 end
 
 -- ============================================================================
+-- Debugger: watchpoints / breakpoints (mGBA >= 0.11 scripting API)
+-- ============================================================================
+
+-- Resolve a watchpoint type letter (W/R/C) to the emulator's enum value.
+-- Prefer the exported constants table (C.WATCHPOINT_TYPE.*); fall back to the
+-- fixed enum from mgba/debugger/debugger.h (WRITE=1, READ=2, WRITE_CHANGE=5).
+local function resolve_wp_type(letter)
+    letter = (letter or "W"):upper()
+    local names = { W = "WRITE", R = "READ", C = "WRITE_CHANGE" }
+    local nums  = { W = 1, R = 2, C = 5 }
+    local name = names[letter]
+    if not name then return nil end
+    -- luacheck: globals C
+    if C and C.WATCHPOINT_TYPE and C.WATCHPOINT_TYPE[name] ~= nil then
+        return C.WATCHPOINT_TYPE[name]
+    end
+    return nums[letter]
+end
+
+local function capture_registers()
+    local parts = {}
+    for _, n in ipairs(REG_NAMES) do
+        local ok, v = pcall(function() return emu:readRegister(n) end)
+        parts[#parts + 1] = n .. "=" .. string.format("%08X", (ok and v) or 0)
+    end
+    return table.concat(parts, ",")
+end
+
+-- Build a hit-capture callback. Buffers a single-line record per hit; never
+-- touches the socket (fires mid-frame on the CPU thread).
+local function make_hit_cb(kind, label)
+    return function(info)
+        if #watch_hits >= WATCH_HIT_CAP then return end
+        local addr = tonumber(info and info.address) or 0
+        local acc  = tonumber(info and info.accessType) or 0
+        local oldv = tonumber(info and info.oldValue) or 0
+        local newv = tonumber(info and info.newValue) or 0
+        local width = tonumber(info and info.width) or 0
+        local frame = 0
+        pcall(function() frame = emu:currentFrame() end)
+        watch_hits[#watch_hits + 1] = string.format(
+            "kind=%s,label=%s,f=%d,addr=%08X,width=%d,acc=%d,old=%08X,new=%08X,%s",
+            kind, label, frame, addr, width, acc, oldv, newv, capture_registers())
+    end
+end
+
+local function debugger_available()
+    return emu ~= nil and type(emu.setWatchpoint) == "function"
+        and type(emu.setBreakpoint) == "function"
+end
+
+local function handle_cap()
+    local wp = (emu and type(emu.setWatchpoint) == "function") and 1 or 0
+    local bp = (emu and type(emu.setBreakpoint) == "function") and 1 or 0
+    local rwp = (emu and type(emu.setRangeWatchpoint) == "function") and 1 or 0
+    local rr = (emu and type(emu.readRegister) == "function") and 1 or 0
+    return string.format("OK|setWatchpoint=%d|setRangeWatchpoint=%d|setBreakpoint=%d|readRegister=%d",
+        wp, rwp, bp, rr)
+end
+
+local function handle_watchpoint(args)
+    if not debugger_available() then
+        return "ERR|Watchpoints unsupported by this mGBA build (need >= 0.11 scripting)"
+    end
+    -- args: "addr|type"  OR  "min|max|type"
+    local a, b, c = args:match("^([^|]+)|([^|]+)|([^|]+)$")
+    local id, err
+    if a then
+        local mn = parse_hex(a)
+        local mx = parse_hex(b)
+        local t = resolve_wp_type(c)
+        if not mn or not mx or not t then return "ERR|WATCHPOINT bad range/type" end
+        if not emu.setRangeWatchpoint then return "ERR|setRangeWatchpoint unsupported" end
+        local label = string.format("%08X-%08X:%s", mn, mx, c:upper())
+        local cb = make_hit_cb("wp", label)
+        local ok, res = pcall(function() return emu:setRangeWatchpoint(cb, mn, mx, t) end)
+        if not ok then return "ERR|setRangeWatchpoint failed: " .. tostring(res) end
+        id = res
+    else
+        local addr_str, type_str = args:match("^([^|]+)|([^|]+)$")
+        if not addr_str then
+            addr_str, type_str = args, "W"
+        end
+        local addr = parse_hex(addr_str)
+        local t = resolve_wp_type(type_str)
+        if not addr or not t then return "ERR|WATCHPOINT bad addr/type" end
+        local label = string.format("%08X:%s", addr, type_str:upper())
+        local cb = make_hit_cb("wp", label)
+        local ok, res = pcall(function() return emu:setWatchpoint(cb, addr, t) end)
+        if not ok then return "ERR|setWatchpoint failed: " .. tostring(res) end
+        id = res
+    end
+    if id == nil then return "ERR|setWatchpoint returned nil id" end
+    watch_ids[id] = { kind = "wp" }
+    return "OK|id=" .. tostring(id)
+end
+
+local function handle_breakpoint(args)
+    if not debugger_available() then
+        return "ERR|Breakpoints unsupported by this mGBA build (need >= 0.11 scripting)"
+    end
+    local addr = parse_hex(args)
+    if not addr then return "ERR|BREAKPOINT requires addr" end
+    local label = string.format("bp@%08X", addr)
+    local cb = make_hit_cb("bp", label)
+    local ok, res = pcall(function() return emu:setBreakpoint(cb, addr) end)
+    if not ok then return "ERR|setBreakpoint failed: " .. tostring(res) end
+    if res == nil then return "ERR|setBreakpoint returned nil id" end
+    watch_ids[res] = { kind = "bp" }
+    return "OK|id=" .. tostring(res)
+end
+
+local function handle_clearbp(args)
+    if not emu or type(emu.clearBreakpoint) ~= "function" then
+        return "ERR|clearBreakpoint unsupported"
+    end
+    local id = tonumber(args)
+    if id == nil then return "ERR|CLEARBP requires numeric id" end
+    local ok, err = pcall(function() emu:clearBreakpoint(id) end)
+    if not ok then return "ERR|clearBreakpoint failed: " .. tostring(err) end
+    watch_ids[id] = nil
+    return "OK|cleared=" .. id
+end
+
+local function handle_watchhits(args)
+    local max = tonumber(args) or 200
+    if max <= 0 then max = 200 end
+    local n = math.min(max, #watch_hits)
+    if n == 0 then
+        return "OK||more=0"
+    end
+    local out = {}
+    for i = 1, n do out[i] = watch_hits[i] end
+    -- Drop the drained prefix.
+    local rest = {}
+    for i = n + 1, #watch_hits do rest[#rest + 1] = watch_hits[i] end
+    watch_hits = rest
+    return "OK|" .. table.concat(out, "@@") .. "|more=" .. #watch_hits
+end
+
+local function handle_clearhits()
+    local n = #watch_hits
+    watch_hits = {}
+    return "OK|dropped=" .. n
+end
+
+-- ============================================================================
 -- Command dispatcher
 -- ============================================================================
 
@@ -490,6 +659,12 @@ local HANDLERS = {
     SAVESTATE = handle_savestate,
     LOADSTATE = handle_loadstate,
     PING = handle_ping,
+    CAP = handle_cap,
+    WATCHPOINT = handle_watchpoint,
+    BREAKPOINT = handle_breakpoint,
+    CLEARBP = handle_clearbp,
+    WATCHHITS = handle_watchhits,
+    CLEARHITS = handle_clearhits,
 }
 
 local function process_command(line)

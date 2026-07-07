@@ -19,6 +19,55 @@ const KEY_MAP: Record<string, number> = {
   R: 8, L: 9,
 };
 
+/** Watchpoint type: Write, Read, or write-that-Changes the value. */
+export type WatchType = 'W' | 'R' | 'C';
+
+/**
+ * A captured debugger hit: the ARM register file at the moment the watched
+ * address was accessed (r15 = PC of the access, r14 = LR of the caller), plus
+ * the access metadata. Register values are unsigned 32-bit numbers.
+ */
+export interface WatchHit {
+  kind: 'wp' | 'bp';
+  label: string;
+  frame: number;
+  addr: number;
+  width: number;
+  acc: number;
+  old: number;
+  new: number;
+  regs: Record<string, number>;
+}
+
+function hex(n: number): string {
+  return (n >>> 0).toString(16).toUpperCase();
+}
+
+/** Parse one "k=v,k=v,..." hit record emitted by bridge.lua. */
+function parseWatchHit(rec: string): WatchHit {
+  const fields: Record<string, string> = {};
+  const regs: Record<string, number> = {};
+  for (const kv of rec.split(',')) {
+    const eq = kv.indexOf('=');
+    if (eq < 0) continue;
+    const k = kv.slice(0, eq);
+    const v = kv.slice(eq + 1);
+    if (/^(r\d+|cpsr)$/.test(k)) regs[k] = parseInt(v, 16);
+    else fields[k] = v;
+  }
+  return {
+    kind: (fields.kind as 'wp' | 'bp') ?? 'wp',
+    label: fields.label ?? '',
+    frame: parseInt(fields.f ?? '0', 10),
+    addr: parseInt(fields.addr ?? '0', 16),
+    width: parseInt(fields.width ?? '0', 10),
+    acc: parseInt(fields.acc ?? '0', 10),
+    old: parseInt(fields.old ?? '0', 16),
+    new: parseInt(fields.new ?? '0', 16),
+    regs,
+  };
+}
+
 function findMgba(): string {
   // Explicit override wins. Needed because the bundled mGBA.app (0.10.x) has no
   // `--script` CLI flag, so the bridge falls back to fragile AppleScript GUI
@@ -523,6 +572,80 @@ export class MgbaBridgeClient {
     if (!parsed.ok) {
       throw new Error(`LOADSTATE failed: ${parsed.data}`);
     }
+  }
+
+  // --- Debugger: watchpoints / breakpoints (mGBA >= 0.11) --------------------
+
+  /** Report which debugger scripting bindings this mGBA build exposes. */
+  async capabilities(): Promise<Record<string, boolean>> {
+    const resp = await this.sendCommand('CAP');
+    const parsed = this.parseResponse(resp);
+    if (!parsed.ok) throw new Error(`CAP failed: ${parsed.data}`);
+    const caps: Record<string, boolean> = {};
+    for (const part of parsed.data.split('|')) {
+      const eq = part.indexOf('=');
+      if (eq >= 0) caps[part.slice(0, eq)] = part.slice(eq + 1) === '1';
+    }
+    return caps;
+  }
+
+  /** Set a watchpoint; returns the id used to clear it. type: 'W'|'R'|'C'. */
+  async setWatchpoint(address: number, type: WatchType = 'W'): Promise<number> {
+    const resp = await this.sendCommand(`WATCHPOINT|${hex(address)}|${type}`);
+    return this.parseIdResponse(resp, 'WATCHPOINT');
+  }
+
+  /** Set a range watchpoint over [min, max) (end exclusive). type: 'W'|'R'|'C'. */
+  async setRangeWatchpoint(min: number, max: number, type: WatchType = 'W'): Promise<number> {
+    const resp = await this.sendCommand(`WATCHPOINT|${hex(min)}|${hex(max)}|${type}`);
+    return this.parseIdResponse(resp, 'WATCHPOINT');
+  }
+
+  /** Set an execution breakpoint at a ROM/RAM address; returns its id. */
+  async setBreakpoint(address: number): Promise<number> {
+    const resp = await this.sendCommand(`BREAKPOINT|${hex(address)}`);
+    return this.parseIdResponse(resp, 'BREAKPOINT');
+  }
+
+  async clearBreakpoint(id: number): Promise<void> {
+    const resp = await this.sendCommand(`CLEARBP|${id}`);
+    const parsed = this.parseResponse(resp);
+    if (!parsed.ok) throw new Error(`CLEARBP failed: ${parsed.data}`);
+  }
+
+  private parseIdResponse(resp: string, cmd: string): number {
+    const parsed = this.parseResponse(resp);
+    if (!parsed.ok) throw new Error(`${cmd} failed: ${parsed.data}`);
+    const m = parsed.data.match(/id=(-?\d+)/);
+    if (!m) throw new Error(`${cmd} returned no id: ${parsed.data}`);
+    return parseInt(m[1], 10);
+  }
+
+  /** Drain all captured watchpoint/breakpoint hits (pages until buffer empty). */
+  async drainWatchHits(pageSize = 200): Promise<WatchHit[]> {
+    const hits: WatchHit[] = [];
+    for (;;) {
+      const resp = await this.sendCommand(`WATCHHITS|${pageSize}`);
+      const parsed = this.parseResponse(resp);
+      if (!parsed.ok) throw new Error(`WATCHHITS failed: ${parsed.data}`);
+      // Response body: "<rec>@@<rec>...|more=<n>"  (rec list may be empty)
+      const moreIdx = parsed.data.lastIndexOf('|more=');
+      const body = moreIdx >= 0 ? parsed.data.slice(0, moreIdx) : parsed.data;
+      const more = moreIdx >= 0 ? parseInt(parsed.data.slice(moreIdx + 6), 10) : 0;
+      if (body.length > 0) {
+        for (const rec of body.split('@@')) {
+          if (rec) hits.push(parseWatchHit(rec));
+        }
+      }
+      if (!more || Number.isNaN(more)) break;
+    }
+    return hits;
+  }
+
+  async clearWatchHits(): Promise<void> {
+    const resp = await this.sendCommand('CLEARHITS');
+    const parsed = this.parseResponse(resp);
+    if (!parsed.ok) throw new Error(`CLEARHITS failed: ${parsed.data}`);
   }
 
   async stop(): Promise<void> {
