@@ -77,12 +77,30 @@ class TestPatchHeader(unittest.TestCase):
 
 
 class TestPatchMemos(unittest.TestCase):
-    def test_rewrites_lv_before_dynamic_level(self):
+    def test_rewrites_lv_before_dynamic_level_and_moves_space_to_end(self):
+        # F9 05 00 F7 01 AD FF = Lv-icon + space + level-ctrl(param 1) + « . » + terminator
         rom = bytearray(0x100)
         rom[0xB2] = 0x96
-        rom[0x40:0x44] = LV_SYMBOL + b"\x00\xf7"  # F9 05 00 F7
+        rom[0x40:0x47] = LV_SYMBOL + b"\x00\xf7\x01\xad\xff"
         self.assertEqual(_patch_memos(rom), 1)
-        self.assertEqual(bytes(rom[0x40:0x42]), ND_TEXT)
+        # issue #66: no space right after « N. » — it moved past the level
+        # number and trailing period, to just before the terminator.
+        self.assertEqual(bytes(rom[0x40:0x47]), ND_TEXT + b"\xf7\x01\xad\x00\xff")
+
+    def test_idempotent_on_already_fixed_memo(self):
+        rom = bytearray(0x100)
+        rom[0xB2] = 0x96
+        rom[0x40:0x47] = ND_TEXT + b"\xf7\x01\xad\x00\xff"
+        self.assertEqual(_patch_memos(rom), 0)
+        self.assertEqual(bytes(rom[0x40:0x47]), ND_TEXT + b"\xf7\x01\xad\x00\xff")
+
+    def test_fixes_legacy_nd_text_with_leading_space(self):
+        # a ROM already carrying the old B-508 fix (icon->N. but space untouched)
+        rom = bytearray(0x100)
+        rom[0xB2] = 0x96
+        rom[0x40:0x47] = ND_TEXT + b"\x00\xf7\x01\xad\xff"
+        self.assertEqual(_patch_memos(rom), 1)
+        self.assertEqual(bytes(rom[0x40:0x47]), ND_TEXT + b"\xf7\x01\xad\x00\xff")
 
 
 @pytest.mark.rom

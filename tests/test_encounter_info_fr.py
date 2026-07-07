@@ -20,6 +20,14 @@ the text « N. » (``C8 AD``, same length), so the memo now reads « au N. 10. �
 The expected live bytes below therefore carry ``c8ad00f7`` (« N. » + space +
 level) where they used to carry ``f90500f7`` (icon + space + level).
 
+Follow-up (issue #66): that literal space between « N. » and the level
+number rendered as « N. 10 » instead of « N.10 », shifting the digits right.
+``summary_lv_labels.py`` now rotates the space byte past the level-control
+code and trailing period to the very end of the string (still same length,
+no repointing), so the expected bytes carry ``c8adf701ad00ff`` (« N. » +
+level + « . » + trailing invisible space + terminator) instead of
+``c8ad00f701adff``.
+
 Why this asserts raw bytes via the LIVE pointer, not decoded text at the
 static offset
 ---------------------------------------------------------------------------
@@ -53,18 +61,18 @@ POINTER_BASE = 0x08000000
 EXPECTED_BYTES = {
     0x419782: "c8d5e8e9e6d900f700adfed0ddd5001bd7dcd5e2dbd9adff",
     0x41979D: "c8d5e8e9e6d900f700adfed0ddd5001bd7dcd5e2dbd9adff",
-    0x4197B8: "c8d5e8e9e6d900f700adfeccd9e2d7e3e2e8e6d900dad5e8ddd8dde5e9d900d5e9fec8ad00f701adff",
-    0x4197ED: "c8d5e8e9e6d900f700adfeccd9e2d7e3e2e8e6d900dad5e8ddd8dde5e9d900d5e9fec8ad00f701adff",
-    0x419822: "c8d5e8e9e6d900f700adfeccd9e2d7e3e2e8e61b001600f702b800d5e900c8ad00f701adff",
-    0x419841: "c8d5e8e9e6d900f700adfeccd9e2d7e3e2e8e61b001600f702b800d5e900c8ad00f701adff",
-    0x419860: "c8d5e8e9e6d900f700adfebbe4e4d5e6d9e1e1d9e2e800e6d9e2d7e3e2e8e61b001600f702b8fed5e900c8ad00f701adff",
-    0x41988A: "c8d5e8e9e6d900f700adfebbe4e4d5e6d9e1e1d9e2e800e6d9e2d7e3e2e8e61b001600f702b8fed5e900c8ad00f701adff",
-    0x4198B4: "c8d5e8e9e6d900f700adfe06d7e0e3e700f000f702fe1600c8ad00f701adff",
-    0x4198D5: "c8d5e8e9e6d900f700adfe06d7e0e3e700f000f702fe1600c8ad00f701adff",
-    0x41992F: "c8d5e8e9e6d900f700adfeccd9e2d7e3e2e8e6d900dad5e8ddd8dde5e9d9005c1bd7e0e3e700f0fef70200d5e900c8ad00f7015dadff",
-    0x41996D: "c8d5e8e9e6d900f700adfeccd9e2d7e3e2e8e6d900dad5e8ddd8dde5e9d9005c1bd7e0e3e700f0fef70200d5e900c8ad00f7015dadff",
-    0x4199AB: "c8d5e8e9e6d900f700ad00bbe4e4d5e6d9e1e1d9e2e8fee6d9e2d7e3e2e8e6d900dad5e8ddd8dde5e9d9005c1bd7e0e3e700f0fef70200d5e900c8ad00f7015dadff",
-    0x4199F4: "c8d5e8e9e6d900f700ad00bbe4e4d5e6d9e1e1d9e2e8fee6d9e2d7e3e2e8e6d900dad5e8ddd8dde5e9d9005c1bd7e0e3e700f0fef70200d5e900c8ad00f7015dadff",
+    0x4197B8: "c8d5e8e9e6d900f700adfeccd9e2d7e3e2e8e6d900dad5e8ddd8dde5e9d900d5e9fec8adf701ad00ff",
+    0x4197ED: "c8d5e8e9e6d900f700adfeccd9e2d7e3e2e8e6d900dad5e8ddd8dde5e9d900d5e9fec8adf701ad00ff",
+    0x419822: "c8d5e8e9e6d900f700adfeccd9e2d7e3e2e8e61b001600f702b800d5e900c8adf701ad00ff",
+    0x419841: "c8d5e8e9e6d900f700adfeccd9e2d7e3e2e8e61b001600f702b800d5e900c8adf701ad00ff",
+    0x419860: "c8d5e8e9e6d900f700adfebbe4e4d5e6d9e1e1d9e2e800e6d9e2d7e3e2e8e61b001600f702b8fed5e900c8adf701ad00ff",
+    0x41988A: "c8d5e8e9e6d900f700adfebbe4e4d5e6d9e1e1d9e2e800e6d9e2d7e3e2e8e61b001600f702b8fed5e900c8adf701ad00ff",
+    0x4198B4: "c8d5e8e9e6d900f700adfe06d7e0e3e700f000f702fe1600c8adf701ad00ff",
+    0x4198D5: "c8d5e8e9e6d900f700adfe06d7e0e3e700f000f702fe1600c8adf701ad00ff",
+    0x41992F: "c8d5e8e9e6d900f700adfeccd9e2d7e3e2e8e6d900dad5e8ddd8dde5e9d9005c1bd7e0e3e700f0fef70200d5e900c8adf7015dad00ff",
+    0x41996D: "c8d5e8e9e6d900f700adfeccd9e2d7e3e2e8e6d900dad5e8ddd8dde5e9d9005c1bd7e0e3e700f0fef70200d5e900c8adf7015dad00ff",
+    0x4199AB: "c8d5e8e9e6d900f700ad00bbe4e4d5e6d9e1e1d9e2e8fee6d9e2d7e3e2e8e6d900dad5e8ddd8dde5e9d9005c1bd7e0e3e700f0fef70200d5e900c8adf7015dad00ff",
+    0x4199F4: "c8d5e8e9e6d900f700ad00bbe4e4d5e6d9e1e1d9e2e8fee6d9e2d7e3e2e8e6d900dad5e8ddd8dde5e9d9005c1bd7e0e3e700f0fef70200d5e900c8adf7015dad00ff",
 }
 
 # "N." (0xc8 0xad) glued directly in front of the <0xF9> level-icon code —
