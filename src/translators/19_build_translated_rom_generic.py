@@ -64,6 +64,15 @@ from src.core.text_codec import TextDecoder, GERMAN_UMLAUT_CHARS
 from src.core.text_reinserter import SmartReinserter
 from src.extractors.pointer_text_extractor import PointerTextExtractor
 
+# Scroll (<0xFA>) and page (<0xFB>) codes only ever appear in scrolling
+# message-box prose, so their presence in the English source is structural
+# proof the entry is dialogue-box text — no matter what the content-based
+# category heuristic guessed ("description", "system", "other"). Those
+# entries need the same re-wrap as category=dialogue ones, or a longer
+# translated line inherits the English break positions, overflows the box
+# edge and gets clipped mid-word.
+MSGBOX_STRUCT_RE = re.compile(r'<0xF[ABab]>')
+
 
 def _strip_accents(ch: str) -> str:
     return unicodedata.normalize('NFD', ch)[:1]
@@ -633,7 +642,9 @@ class TranslatedROMBuilder:
                 # unless the English source has them too (credits layout).
                 if not has_empty_break_run(english_text or ''):
                     translation_text = collapse_empty_breaks(translation_text)
-                if item.get('category') == 'dialogue':
+                if item.get('category') == 'dialogue' or MSGBOX_STRUCT_RE.search(
+                    english_text or ''
+                ):
                     if is_multiline_layout(english_text or ''):
                         # Fullscreen layout (intro, cinematics, letters):
                         # keep pure \n breaks, never scroll codes.
