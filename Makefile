@@ -53,6 +53,7 @@ PATCH_WORLDMAP_JUNCTION_FR_SCRIPT := languages/fr/patches/worldmap_junction_pane
 PATCH_CUBE_TV_DIALOGUES_FR_SCRIPT := languages/fr/patches/cube_tv_dialogues.py
 PATCH_CUBE_SORT_MENU_SCRIPT := languages/fr/patches/cube_sort_menu.py
 PATCH_SUMMARY_LABELS_SCRIPT := languages/fr/patches/summary_labels.py
+PATCH_SUMMARY_LV_LABELS_SCRIPT := languages/fr/patches/summary_lv_labels.py
 PATCH_CFRU_TYPE_NAMES_SCRIPT := languages/fr/patches/cfru_type_names.py
 PATCH_OPTIONS_FOOTER_SCRIPT := languages/fr/patches/options_footer.py
 PATCH_STATUS_ABBREVS_SCRIPT := languages/fr/patches/status_abbrevs.py
@@ -276,6 +277,7 @@ build-fr: $(FRENCH_EXTRACT) $(SPANISH_EXTRACT) $(BUILD_SCRIPT)
 	@$(PYTHON) $(PATCH_TRAINER_CARD_DATE_FR_SCRIPT) --rom $(FR_BUILD)
 	@$(PYTHON) $(PATCH_MONEY_AMOUNT_ORDER_FR_SCRIPT) --rom $(FR_BUILD)
 	@$(PYTHON) scripts/insert_sprite.py --rom $(FR_BUILD) --lang fr --sprite selection --bmp languages/fr/sprites/selection.bmp
+	@$(PYTHON) $(PATCH_SUMMARY_LV_LABELS_SCRIPT) --rom $(FR_BUILD)
 	@echo "✓ FR ROM built — vérification des traductions de lieux..."
 	@$(PYTHON) -m pytest tests/test_location_names_fr.py -q --tb=short
 	@echo "✓ Vérification des noms de nature (pointeurs vivants)..."

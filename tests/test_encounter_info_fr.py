@@ -13,6 +13,13 @@ renders the level indicator on its own). The fix in
 ``languages/fr/combined_fr.txt`` removes the stray space, adds the missing
 verb, and drops the redundant "N. " so the icon is the only level marker.
 
+Follow-up (B-508 « Lv » → « N. »): the level marker is a single item, but it
+was the FRLG extra-symbol icon ``<0xF9><0x05>`` which draws the English « Lv ».
+``languages/fr/patches/summary_lv_labels.py`` rewrites that icon in place to
+the text « N. » (``C8 AD``, same length), so the memo now reads « au N. 10. ».
+The expected live bytes below therefore carry ``c8ad00f7`` (« N. » + space +
+level) where they used to carry ``f90500f7`` (icon + space + level).
+
 Why this asserts raw bytes via the LIVE pointer, not decoded text at the
 static offset
 ---------------------------------------------------------------------------
@@ -46,18 +53,18 @@ POINTER_BASE = 0x08000000
 EXPECTED_BYTES = {
     0x419782: "c8d5e8e9e6d900f700adfed0ddd5001bd7dcd5e2dbd9adff",
     0x41979D: "c8d5e8e9e6d900f700adfed0ddd5001bd7dcd5e2dbd9adff",
-    0x4197B8: "c8d5e8e9e6d900f700adfeccd9e2d7e3e2e8e6d900dad5e8ddd8dde5e9d900d5e9fef90500f701adff",
-    0x4197ED: "c8d5e8e9e6d900f700adfeccd9e2d7e3e2e8e6d900dad5e8ddd8dde5e9d900d5e9fef90500f701adff",
-    0x419822: "c8d5e8e9e6d900f700adfeccd9e2d7e3e2e8e61b001600f702b800d5e900f90500f701adff",
-    0x419841: "c8d5e8e9e6d900f700adfeccd9e2d7e3e2e8e61b001600f702b800d5e900f90500f701adff",
-    0x419860: "c8d5e8e9e6d900f700adfebbe4e4d5e6d9e1e1d9e2e800e6d9e2d7e3e2e8e61b001600f702b8fed5e900f90500f701adff",
-    0x41988A: "c8d5e8e9e6d900f700adfebbe4e4d5e6d9e1e1d9e2e800e6d9e2d7e3e2e8e61b001600f702b8fed5e900f90500f701adff",
-    0x4198B4: "c8d5e8e9e6d900f700adfe06d7e0e3e700f000f702fe1600f90500f701adff",
-    0x4198D5: "c8d5e8e9e6d900f700adfe06d7e0e3e700f000f702fe1600f90500f701adff",
-    0x41992F: "c8d5e8e9e6d900f700adfeccd9e2d7e3e2e8e6d900dad5e8ddd8dde5e9d9005c1bd7e0e3e700f0fef70200d5e900f90500f7015dadff",
-    0x41996D: "c8d5e8e9e6d900f700adfeccd9e2d7e3e2e8e6d900dad5e8ddd8dde5e9d9005c1bd7e0e3e700f0fef70200d5e900f90500f7015dadff",
-    0x4199AB: "c8d5e8e9e6d900f700ad00bbe4e4d5e6d9e1e1d9e2e8fee6d9e2d7e3e2e8e6d900dad5e8ddd8dde5e9d9005c1bd7e0e3e700f0fef70200d5e900f90500f7015dadff",
-    0x4199F4: "c8d5e8e9e6d900f700ad00bbe4e4d5e6d9e1e1d9e2e8fee6d9e2d7e3e2e8e6d900dad5e8ddd8dde5e9d9005c1bd7e0e3e700f0fef70200d5e900f90500f7015dadff",
+    0x4197B8: "c8d5e8e9e6d900f700adfeccd9e2d7e3e2e8e6d900dad5e8ddd8dde5e9d900d5e9fec8ad00f701adff",
+    0x4197ED: "c8d5e8e9e6d900f700adfeccd9e2d7e3e2e8e6d900dad5e8ddd8dde5e9d900d5e9fec8ad00f701adff",
+    0x419822: "c8d5e8e9e6d900f700adfeccd9e2d7e3e2e8e61b001600f702b800d5e900c8ad00f701adff",
+    0x419841: "c8d5e8e9e6d900f700adfeccd9e2d7e3e2e8e61b001600f702b800d5e900c8ad00f701adff",
+    0x419860: "c8d5e8e9e6d900f700adfebbe4e4d5e6d9e1e1d9e2e800e6d9e2d7e3e2e8e61b001600f702b8fed5e900c8ad00f701adff",
+    0x41988A: "c8d5e8e9e6d900f700adfebbe4e4d5e6d9e1e1d9e2e800e6d9e2d7e3e2e8e61b001600f702b8fed5e900c8ad00f701adff",
+    0x4198B4: "c8d5e8e9e6d900f700adfe06d7e0e3e700f000f702fe1600c8ad00f701adff",
+    0x4198D5: "c8d5e8e9e6d900f700adfe06d7e0e3e700f000f702fe1600c8ad00f701adff",
+    0x41992F: "c8d5e8e9e6d900f700adfeccd9e2d7e3e2e8e6d900dad5e8ddd8dde5e9d9005c1bd7e0e3e700f0fef70200d5e900c8ad00f7015dadff",
+    0x41996D: "c8d5e8e9e6d900f700adfeccd9e2d7e3e2e8e6d900dad5e8ddd8dde5e9d9005c1bd7e0e3e700f0fef70200d5e900c8ad00f7015dadff",
+    0x4199AB: "c8d5e8e9e6d900f700ad00bbe4e4d5e6d9e1e1d9e2e8fee6d9e2d7e3e2e8e6d900dad5e8ddd8dde5e9d9005c1bd7e0e3e700f0fef70200d5e900c8ad00f7015dadff",
+    0x4199F4: "c8d5e8e9e6d900f700ad00bbe4e4d5e6d9e1e1d9e2e8fee6d9e2d7e3e2e8e6d900dad5e8ddd8dde5e9d9005c1bd7e0e3e700f0fef70200d5e900c8ad00f7015dadff",
 }
 
 # "N." (0xc8 0xad) glued directly in front of the <0xF9> level-icon code —
