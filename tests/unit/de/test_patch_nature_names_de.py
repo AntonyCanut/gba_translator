@@ -21,7 +21,7 @@ ROOT = Path(__file__).resolve().parent.parent.parent.parent
 sys.path.insert(0, str(ROOT / "scripts"))
 sys.path.insert(0, str(ROOT))
 
-from src.core.text_codec import TextEncoder  # noqa: E402
+from src.core.text_codec import GERMAN_UMLAUT_CHARS, TextEncoder  # noqa: E402
 from languages.de.patches import nature_names as mod  # noqa: E402
 
 TARGETS = mod.TARGETS
@@ -46,6 +46,13 @@ class TestNatureNameData(unittest.TestCase):
     def test_names_are_unique(self):
         names = list(TARGETS.values())
         self.assertEqual(len(names), len(set(names)), names)
+
+    def test_names_with_umlauts_are_present(self):
+        # Issue #53 follow-up: "Kühn" (Bold) and "Mäßig" (Modest) must keep
+        # their umlaut, not the ASCII-folded "Kuhn"/"Maßig".
+        names = list(TARGETS.values())
+        self.assertIn("Kühn", names)
+        self.assertIn("Mäßig", names)
 
 
 class TestApplyAndVerify(unittest.TestCase):
@@ -116,6 +123,28 @@ class TestApplyAndVerify(unittest.TestCase):
         stats = mod.apply(rom, names=de, tables=self.TABLES)
         self.assertEqual(stats["relocated"], 0)
         self.assertEqual(stats["skipped"], 3)
+        self.assertEqual(mod.verify(rom, names=de, tables=self.TABLES), [])
+
+    def test_apply_preserves_umlauts_in_official_names(self):
+        # Issue #53 follow-up: TextEncoder.encode(text, "pokemon") without
+        # skip_aliases=GERMAN_UMLAUT_CHARS folds ü/ä/ö to ASCII (u/a/o) via
+        # ENCODE_ALIASES before the umlaut glyph slots (0xF1-0xF6) are ever
+        # reached, so "Kühn" was relocated into the ROM as "Kuhn" — matching
+        # the in-game screenshot report. apply() must use the umlaut-aware
+        # encoding, same as languages/de/patches/item_names.py and
+        # pokedex.py.
+        en = ["Bold", "Modest"]
+        de = ["Kühn", "Mäßig"]
+        rom = self._build_rom(en)
+        mod.apply(rom, names=de, tables=self.TABLES)
+
+        for i, name in enumerate(de):
+            pa = struct.unpack_from("<I", rom, self.TABLE_A + 4 * i)[0]
+            off = pa - ROM_POINTER_BASE
+            want = TextEncoder.encode(name, "pokemon", skip_aliases=GERMAN_UMLAUT_CHARS)
+            got = bytes(rom[off: off + len(want)])
+            self.assertEqual(got, want, f"{name!r} lost its umlaut glyph: {got.hex()}")
+
         self.assertEqual(mod.verify(rom, names=de, tables=self.TABLES), [])
 
     def test_default_allocation_does_not_require_spanish_reserved_space(self):

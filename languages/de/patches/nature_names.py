@@ -39,7 +39,7 @@ from pathlib import Path
 REPO_ROOT = Path(__file__).resolve().parents[3]
 sys.path.insert(0, str(REPO_ROOT))
 
-from src.core.text_codec import TextEncoder  # noqa: E402
+from src.core.text_codec import GERMAN_UMLAUT_CHARS, TextEncoder  # noqa: E402
 from src.core.text_reinserter import FreeSpaceAllocator  # noqa: E402
 
 ROM_POINTER_BASE = 0x08000000
@@ -116,7 +116,7 @@ def apply(
     stats = {"relocated": 0, "repointed": 0, "failed": 0, "skipped": 0}
 
     for index, text in enumerate(names):
-        encoded = TextEncoder.encode(text, "pokemon")
+        encoded = TextEncoder.encode(text, "pokemon", skip_aliases=GERMAN_UMLAUT_CHARS)
 
         # Already correct (re-run on an already-patched ROM)? Leave it alone.
         current = _table_pointer(rom, tables[0], index) - ROM_POINTER_BASE
@@ -153,7 +153,9 @@ def verify(
         names = list(TARGETS.values())
     bad: list[tuple[int, str]] = []
     for index, text in enumerate(names):
-        want = TextEncoder.encode(text, "pokemon")  # incl. 0xFF terminator
+        # incl. 0xFF terminator; skip_aliases keeps ü/ä/ö on their glyph slots
+        # (0xF1-0xF6) instead of the ASCII-fallback aliases other languages use.
+        want = TextEncoder.encode(text, "pokemon", skip_aliases=GERMAN_UMLAUT_CHARS)
         pointers = [_table_pointer(rom, table, index) for table in tables]
         if len(set(pointers)) != 1:
             bad.append(
