@@ -1,13 +1,15 @@
 #!/usr/bin/env python3
-"""Convert the summary-screen level prefix « Lv » to the French « N. ».
+"""Convert the « Lv » level prefix to the French « N. » (Résumé + party list).
 
-The **Résumé / Infos Pokémon** screen (team list → A → Infos) shows « Lv » in
-two places, and both are the FRLG *extra-symbol* glyph #5 — the two raw bytes
-``<0xF9><0x05>`` (``EMOJI`` prefix + symbol index 5), NOT a pointed CFRU string
-(that was the Panthéon string ``0x4160F4``, fixed in B-236) and NOT the party
-ligature glyph (codepoint 0x05 @ ``0x1ECFA0``, fix F-114). Both were ruled out
-empirically with in-engine before/after captures; patching either has no effect
-on the Résumé.
+The **Résumé / Infos Pokémon** screen (team list → A → Infos) AND the **party
+list** itself (START → Pokémon, e.g. « Lv10 ») show « Lv » as the FRLG
+*extra-symbol* glyph #5 — the two raw bytes ``<0xF9><0x05>`` (``EMOJI`` prefix +
+symbol index 5), NOT a pointed ASCII CFRU string spelled « Lv » (that was the
+Panthéon string ``0x4160F4``, fixed in B-236) and NOT the party ligature glyph
+(codepoint 0x05 @ ``0x1ECFA0``, fix F-113 — proven inert: it is patched to « N. »
+in the build yet the party list still read « Lv » until this string fix landed).
+All were ruled out empirically with in-engine before/after captures + mGBA
+watchpoints.
 
 Two mechanisms use the ``<0xF9><0x05>`` "Lv" symbol here:
 
@@ -76,24 +78,38 @@ def _has_live_pointer(rom: bytes, str_off: int) -> bool:
 
 
 def _patch_header(rom: bytearray) -> int:
-    """Rewrite the standalone gText_Lv « Lv » string(s) to « N. ».
+    """Rewrite every standalone ``gText_Lv`` « Lv » string to « N. ».
 
-    Targets isolated ``FF F9 05 FF`` sequences (a 2-byte string bounded by
-    terminators) that have at least one live pointer — i.e. gText_Lv at
-    0x416223. Returns the number of strings patched.
+    Targets each isolated ``F9 05 FF`` sequence (the two-byte « Lv » extra-symbol
+    followed by a terminator) that has at least one word-aligned live pointer to
+    its start — i.e. a pointed ``gText_Lv`` copy. There are two such copies in the
+    ROM and the leading byte differs, so we match on the pointed-string *start*
+    rather than requiring a preceding ``FF``:
+
+    * ``0x416223`` (four pointers) — the **Résumé / Panthéon** header « Lv10 ».
+    * ``0x26051C`` (three pointers) — the **party-list** level prefix « Lv10 »
+      (START → Pokémon). This copy is preceded by ``0x08`` (not ``FF``), so the
+      old ``FF F9 05 FF`` filter skipped it, which is why the party list kept
+      showing « Lv ». Proven with mGBA watchpoints: the party level code reads
+      this string and blits extra-symbol #5's graphic; rewriting the string to
+      « N. » makes it read « N.10 » (verified in-engine). Note: the separate
+      ``party_lv_label.py`` glyph edit at ``0x1ECFA0`` does *not* affect the party
+      list — that glyph is not the one the party level code reads.
+
+    Returns the number of strings patched. Idempotent: copies already showing
+    « N. » (``C8 AD FF``) are reported and skipped.
     """
     patched = 0
     # Isolated « Lv » string already converted → « N. »?
-    for j in _find_all(bytes(rom), bytes([0xFF]) + ND_TEXT + bytes([0xFF])):
-        if _has_live_pointer(bytes(rom), j + 1):
-            print(f"  header gText_Lv (0x{j + 1:07X}): already « N. » — no change")
-    for j in _find_all(bytes(rom), bytes([0xFF]) + LV_SYMBOL + bytes([0xFF])):
-        str_off = j + 1
-        if not _has_live_pointer(bytes(rom), str_off):
-            continue  # dead copy — leave it
-        rom[str_off:str_off + 2] = ND_TEXT
+    for j in _find_all(bytes(rom), ND_TEXT + bytes([0xFF])):
+        if _has_live_pointer(bytes(rom), j):
+            print(f"  header gText_Lv (0x{j:07X}): already « N. » — no change")
+    for j in _find_all(bytes(rom), LV_SYMBOL + bytes([0xFF])):
+        if not _has_live_pointer(bytes(rom), j):
+            continue  # dead copy / coincidental code bytes — leave it
+        rom[j:j + 2] = ND_TEXT
         patched += 1
-        print(f"  header gText_Lv (0x{str_off:07X}): « Lv » → « N. »")
+        print(f"  header gText_Lv (0x{j:07X}): « Lv » → « N. »")
     return patched
 
 
