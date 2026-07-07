@@ -1,5 +1,5 @@
 """
-Build-independent unit tests guarding eleven dialogue lines against the
+Build-independent unit tests guarding twelve dialogue lines against the
 re-introduction of a player-gender pronoun buffer (him/her, he/she, He/She).
 
 Context (ticket "Suppression genre")
@@ -11,9 +11,11 @@ le/il/Il/la/elle/Elle.
 
 In French the buffer is unrenderable in most positions the English scripts
 use it in — the user reported "Elle K.O., Hoopa." (0x1F2CC7E) and "Je ne
-sais pas ce que tu voulais elle faire," (0x1F2CDA7). The fix removes the
-buffer from each line and rephrases gender-neutrally ("L'intrus",
-neutral dative "lui", "C'est toi", "ce môme", "jeune personne", …).
+sais pas ce que tu voulais elle faire," (0x1F2CDA7), and later "Protège mon
+enfant si un jour elle est en danger." (0x1F1194E, issue #56 — same
+genderless-Hoopa farewell scene). The fix removes the buffer from each line
+and rephrases gender-neutrally ("L'intrus", neutral dative "lui", "C'est
+toi", "ce môme", "jeune personne", "en cas de danger", …).
 
 Positional-mapping traps encoded here
 -------------------------------------
@@ -85,6 +87,9 @@ NEUTRAL_OFFSETS = {
     0x1FA7D3B: (("jeune\\ppersonne",), 0),
     0x1FA804E: (("jeune\\ppersonne",), 0),
     0x1FA8CA1: (("jeune\\ppersonne",), 0),
+    # Hoopa farewell scene (issue #56): "Protect my <VAR3> if <VAR2> is
+    # ever in danger" — VAR2 wrongly rendered "elle" for genderless Hoopa.
+    0x1F1194E: (("Protège mon enfant en cas de",), 0),
 }
 
 
