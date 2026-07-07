@@ -60,3 +60,22 @@ free-space nécessaire.
 Le fix couvre le Résumé et, par cohérence, **tous** les préfixes de niveau
 « Lv » du build FR (gText_Lv partagé + mémos). Les builds IT/DE conservent
 l'icône « Lv » anglaise (même mécanisme `<0xF9><0x05>`) — à porter si besoin.
+
+## Suite (issue #66) : espace visible « N. 10 » → « N.10 »
+
+Le mémo gardait un octet espace littéral (`0x00`) entre l'icône/texte « N. »
+et le code de niveau dynamique (`c8 ad 00 f7 01 … ad ff`), ce qui rendait
+« au N. 10. » avec un espace visible décalant les chiffres vers la droite
+(et pouvant tronquer un niveau à 3 chiffres en fin de ligne). Le header
+(`gText_Lv` isolé, `F9 05 FF`) n'a lui jamais eu cet espace — seul le mémo
+est concerné.
+
+Correctif : `_patch_memos` (même script) fait pivoter cet octet espace vers
+la toute fin de la chaîne (juste avant le `0xFF` terminateur) au lieu de le
+laisser juste après « N. » — même longueur, aucun repointage. Le mémo lit
+maintenant « au N.10. » (espace de fin invisible, sans effet visuel).
+Idempotent : gère aussi bien les sites encore anglais (`F9 05 00 F7`) que les
+sites déjà passés à « N. » par l'ancien correctif (`C8 AD 00 F7`, sans quoi
+un ROM partiellement construit garderait l'espace). Vérifié sur
+`output/roms/GenedRom-fr.gba` : 19 sites mémo corrigés, header inchangé
+(déjà « N.10 » sans espace).
