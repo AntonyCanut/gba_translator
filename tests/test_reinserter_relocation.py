@@ -87,6 +87,57 @@ class ReinserterRelocationTests(unittest.TestCase):
         alloc = allocator.allocate(64)
         self.assertGreaterEqual(alloc, 0x3000)
 
+    def test_reserved_ranges_carve_out_of_a_block(self):
+        """A precise reserved span (the exact bytes the inline-overrides pass
+        writes in place) must be split out of the free block so a relocation can
+        never land there — the generic-build alternative to reserving the whole
+        proof ROM."""
+        from src.core.text_reinserter import FreeSpaceAllocator
+
+        rom = bytearray([0xAB] * 0x1000)
+        rom += b'\xff' * 0x4000           # 16KB free run at 0x1000
+        rom += bytearray([0xAB] * 0x1000)
+
+        # Reserve a 0x400-byte inline-write span in the middle of the run.
+        reserved = 0x2000
+        allocator = FreeSpaceAllocator(
+            bytearray(rom),
+            reserved_ranges=[(reserved, reserved + 0x400)],
+        )
+
+        # The run splits into two blocks, one on each side of the reserved span.
+        self.assertEqual(len(allocator.blocks), 2)
+        for start, length in allocator.blocks:
+            # No block may overlap the reserved [0x2000, 0x2400) span.
+            self.assertFalse(start < reserved + 0x400 and start + length > reserved)
+
+        # Every allocation avoids the reserved bytes.
+        for _ in range(20):
+            alloc = allocator.allocate(64)
+            if alloc is None:
+                break
+            self.assertFalse(reserved <= alloc < reserved + 0x400)
+
+    def test_reserved_ranges_smaller_than_min_block_are_dropped(self):
+        """When a reserved span slices a run into a sub-min-block remainder,
+        that remainder is discarded rather than handed out."""
+        from src.core.text_reinserter import FreeSpaceAllocator
+
+        rom = bytearray([0xAB] * 0x1000)
+        rom += b'\xff' * 0x2000           # 8KB free run at 0x1000
+        rom += bytearray([0xAB] * 0x1000)
+
+        # Reserve a span near the end so the trailing piece is below min_block.
+        allocator = FreeSpaceAllocator(
+            bytearray(rom),
+            min_block=1024,
+            reserved_ranges=[(0x2C00, 0x2D00)],
+        )
+        # Only the large leading piece survives; the sub-1KB tail is dropped.
+        self.assertEqual(len(allocator.blocks), 1)
+        start, length = allocator.blocks[0]
+        self.assertLessEqual(start + length, 0x2C00)
+
 
 class PlausiblePointerSiteTests(unittest.TestCase):
     """The site filter must accept every real script shape seen in Unbound

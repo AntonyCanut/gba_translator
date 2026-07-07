@@ -96,6 +96,7 @@ class BuildConfig:
     collision_guard: bool = False
     extra_boundaries: Optional[Path] = None
     pointer_proof_rom: Optional[Path] = None
+    reserve_ranges: Optional[Path] = None
     copy_reference_texts: bool = False
     copy_pointer_tables: bool = False
     copy_text_pointers: bool = False
@@ -120,7 +121,10 @@ class BuildConfig:
 
         if self.pointer_proof_rom and not self.pointer_proof_rom.exists():
             return False, f"Pointer-proof ROM not found: {self.pointer_proof_rom}"
-        
+
+        if self.reserve_ranges and not self.reserve_ranges.exists():
+            return False, f"Reserve-ranges file not found: {self.reserve_ranges}"
+
         if not self.reference_rom and not self.translations_json:
             return False, "Must provide either reference ROM or translations JSON"
         
@@ -190,6 +194,7 @@ class TranslatedROMBuilder:
         self.offset_map_stats = {}
         self.reinserter_reports = {}
         self._pointer_proof_data = None
+        self._reserve_ranges = None
 
     def _pointer_proof_bytes(self):
         if self.config.pointer_proof_rom is None:
@@ -197,6 +202,29 @@ class TranslatedROMBuilder:
         if self._pointer_proof_data is None:
             self._pointer_proof_data = self.config.pointer_proof_rom.read_bytes()
         return self._pointer_proof_data
+
+    def _reserved_ranges(self):
+        """Precise relocation-reservation spans, or ``None`` for the blanket
+        proof-ROM carve.
+
+        The file (produced by the inline pass's ``--dump-write-ranges``) is a
+        JSON list of ``[offset, byte_length]`` — the exact spans the downstream
+        inline-overrides pass writes in place. Reserving only these frees the
+        rest of the proof ROM's footprint for relocations (see the reasoning on
+        ``FreeSpaceAllocator.reserved_ranges``). Returned as ``(start, end)``
+        tuples for the allocator.
+        """
+        if self.config.reserve_ranges is None:
+            return None
+        if self._reserve_ranges is None:
+            import json as _json
+            raw = _json.loads(self.config.reserve_ranges.read_text(encoding='utf-8'))
+            self._reserve_ranges = [
+                (int(off), int(off) + int(length))
+                for off, length in raw
+                if int(length) > 0
+            ]
+        return self._reserve_ranges
 
     def _skip_encode_aliases(self) -> frozenset:
         """Return the set of alias source-chars to bypass for this language.
@@ -1258,6 +1286,7 @@ class TranslatedROMBuilder:
             skip_encode_aliases=self._skip_encode_aliases(),
             collision_guard=self.config.collision_guard,
             cell_boundaries=self._cell_boundaries(),
+            reserved_ranges=self._reserved_ranges(),
         )
 
         for i, translation in enumerate(translations, start=1):
@@ -1321,6 +1350,7 @@ class TranslatedROMBuilder:
             skip_encode_aliases=self._skip_encode_aliases(),
             collision_guard=self.config.collision_guard,
             cell_boundaries=self._cell_boundaries(),
+            reserved_ranges=self._reserved_ranges(),
         )
 
         for i, translation in enumerate(translations, start=1):
@@ -1386,6 +1416,7 @@ class TranslatedROMBuilder:
             skip_encode_aliases=self._skip_encode_aliases(),
             collision_guard=self.config.collision_guard,
             cell_boundaries=self._cell_boundaries(),
+            reserved_ranges=self._reserved_ranges(),
         )
 
         for i, translation in enumerate(translations, start=1):
@@ -1443,6 +1474,7 @@ class TranslatedROMBuilder:
             'allow_relocate': self.config.allow_relocate,
             'allow_fallback': self.config.allow_fallback,
             'pointer_proof_rom': str(self.config.pointer_proof_rom) if self.config.pointer_proof_rom else None,
+            'reserve_ranges': str(self.config.reserve_ranges) if self.config.reserve_ranges else None,
             'copy_reference_texts': self.config.copy_reference_texts,
             'copy_pointer_tables': self.config.copy_pointer_tables,
             'copy_text_pointers': self.config.copy_text_pointers,
@@ -1566,6 +1598,15 @@ Examples:
                        help='Translated ROM of the same base (e.g. the Spanish '
                             'hack): pointer sites it rewrote are proven real '
                             'and accepted for relocation')
+    parser.add_argument('--reserve-ranges', type=Path,
+                       help='JSON list of [offset, byte_length] spans the '
+                            'downstream inline-overrides pass writes in place '
+                            '(from apply_inline_overrides_fr.py --dump-write-'
+                            'ranges). When given, only these spans are kept out '
+                            'of the relocation free-space pool instead of the '
+                            'whole --pointer-proof-rom footprint, freeing ~34 KB '
+                            'of pool for generic (DE/IT) builds. --pointer-proof-'
+                            'rom is still used for pointer-site validation.')
     parser.add_argument('--copy-reference-texts', action='store_true',
                        help='Copy all reference text bytes at their offsets')
     parser.add_argument('--copy-pointer-tables', action='store_true',
@@ -1588,6 +1629,7 @@ Examples:
         collision_guard=args.collision_guard,
         extra_boundaries=args.extra_boundaries,
         pointer_proof_rom=args.pointer_proof_rom,
+        reserve_ranges=args.reserve_ranges,
         copy_reference_texts=args.copy_reference_texts,
         copy_pointer_tables=args.copy_pointer_tables,
         copy_text_pointers=args.copy_text_pointers,

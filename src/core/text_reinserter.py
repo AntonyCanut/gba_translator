@@ -51,6 +51,7 @@ class FreeSpaceAllocator:
         padding_bytes: Optional[List[int]] = None,
         start_offset: int = 0x100,
         reserved_rom: Optional[bytes] = None,
+        reserved_ranges: Optional[List[tuple]] = None,
     ):
         """``reserved_rom``: same-base ROM (e.g. the Spanish translation)
         whose own relocated text claims runs that are still 0xFF here. The
@@ -59,12 +60,27 @@ class FreeSpaceAllocator:
         must never be allocated — relocating a string there had it clobbered
         by the mirror write (the Shadow Base door showed a move description
         tail, "nche l'ennemi.").
+
+        ``reserved_ranges``: explicit ``(start, end)`` byte spans to keep free
+        of relocations, as a *precise* alternative to ``reserved_rom``. The
+        blanket ``reserved_rom`` carve is correct but heavily over-reserves:
+        it protects **every** byte the reference ROM populated, whereas only
+        the handful of offsets the downstream inline-overrides pass actually
+        writes can ever clobber a relocated string. Those very bytes are
+        proven-safe relocation targets (the reference translation itself
+        relocated text into them and shipped a working ROM), so reserving only
+        the real inline-write spans frees ~34 KB of pool for the German build
+        (see scripts/build_language.py's --reserve-ranges / the inline pass's
+        --dump-write-ranges). ``reserved_rom`` and ``reserved_ranges`` are
+        mutually exclusive in practice: FR keeps the blanket ROM carve
+        (byte-identical), generic builds pass precise ranges instead.
         """
         self.rom_data = rom_data
         self.min_block = max(self.MIN_FREE_RUN, min_block)
         self.padding_bytes = set(padding_bytes or [0xFF])
         self.start_offset = max(0, start_offset)
         self.reserved_rom = reserved_rom
+        self.reserved_ranges = reserved_ranges
         self.blocks = self._scan_blocks()
         self.index = 0
 
@@ -122,7 +138,61 @@ class FreeSpaceAllocator:
                         blocks.append([s + self.RUN_MARGIN, length])
             else:
                 i += 1
+
+        # Precise reservation carve. Done once against the finished (few-hundred)
+        # block list rather than per-0xFF-run, so a large range list (thousands
+        # of inline-write spans) stays cheap instead of O(runs × ranges).
+        if self.reserved_ranges:
+            blocks = self._carve_ranges(blocks)
         return blocks
+
+    def _carve_ranges(self, blocks: List[List[int]]) -> List[List[int]]:
+        """Remove the ``reserved_ranges`` spans from ``blocks``.
+
+        Splits any block that overlaps a reserved span and drops leftover
+        pieces smaller than ``min_block``. Ranges are sorted once and matched to
+        each block with a binary search, keeping the whole pass roughly
+        ``O((blocks + ranges) log ranges)``.
+        """
+        ranges = sorted(
+            (lo, hi) for lo, hi in self.reserved_ranges if hi > lo
+        )
+        if not ranges:
+            return blocks
+        starts = [lo for lo, _ in ranges]
+        result: List[List[int]] = []
+        for start, length in blocks:
+            segments = [(start, start + length)]
+            # Only ranges whose start is < block end can overlap; scan from the
+            # first such range until ranges move past the block end.
+            idx = bisect.bisect_left(starts, start)
+            # A range starting before the block may still overlap it.
+            while idx > 0 and ranges[idx - 1][1] > start:
+                idx -= 1
+            carved: List[tuple] = []
+            for s, e in segments:
+                pieces = [(s, e)]
+                j = idx
+                while j < len(ranges) and ranges[j][0] < e:
+                    lo, hi = ranges[j]
+                    j += 1
+                    if hi <= s or lo >= e:
+                        continue
+                    next_pieces = []
+                    for ps, pe in pieces:
+                        if hi <= ps or lo >= pe:
+                            next_pieces.append((ps, pe))
+                            continue
+                        if ps < lo:
+                            next_pieces.append((ps, lo))
+                        if pe > hi:
+                            next_pieces.append((hi, pe))
+                    pieces = next_pieces
+                carved.extend(pieces)
+            for s, e in carved:
+                if e - s >= self.min_block:
+                    result.append([s, e - s])
+        return result
 
     def allocate(self, size: int) -> Optional[int]:
         if size <= 0:
@@ -173,6 +243,7 @@ class SmartReinserter:
         skip_encode_aliases: frozenset = frozenset(),
         collision_guard: bool = False,
         cell_boundaries: Optional[Iterable[int]] = None,
+        reserved_ranges: Optional[List[tuple]] = None,
     ):
         """
         Initialise le réinserteur.
@@ -196,6 +267,11 @@ class SmartReinserter:
         self.allow_relocate = allow_relocate
         self.allow_fallback = allow_fallback
         self.pointer_proof_rom = pointer_proof_rom
+        # Precise relocation reservation (generic builds). When set, the
+        # free-space allocator carves exactly these (start, end) spans instead
+        # of the whole ``pointer_proof_rom`` — see FreeSpaceAllocator's
+        # ``reserved_ranges``. FR leaves it None and keeps the blanket carve.
+        self.reserved_ranges = reserved_ranges
         self.fallback = FallbackSynthesizer() if allow_fallback else None
         self.free_space_min = free_space_min
         self.skip_encode_aliases = skip_encode_aliases
@@ -419,11 +495,22 @@ class SmartReinserter:
         if not self._pending_relocations:
             return
         if self.free_space_allocator is None:
-            self.free_space_allocator = FreeSpaceAllocator(
-                self.rom_data,
-                min_block=self.free_space_min,
-                reserved_rom=self.pointer_proof_rom,
-            )
+            # Precise ranges take precedence over the blanket proof-ROM carve:
+            # generic builds reserve only the real inline-write spans and free
+            # the rest of the pool; FR passes no ranges and keeps the blanket
+            # carve (byte-identical).
+            if self.reserved_ranges is not None:
+                self.free_space_allocator = FreeSpaceAllocator(
+                    self.rom_data,
+                    min_block=self.free_space_min,
+                    reserved_ranges=self.reserved_ranges,
+                )
+            else:
+                self.free_space_allocator = FreeSpaceAllocator(
+                    self.rom_data,
+                    min_block=self.free_space_min,
+                    reserved_rom=self.pointer_proof_rom,
+                )
         pending, self._pending_relocations = self._pending_relocations, []
         # Place the shortest strings first. Free space is a hard budget (the
         # Italian build's relocation demand exceeds the total free space), so
