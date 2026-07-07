@@ -217,40 +217,6 @@ def generate_translation_json(config) -> Path:
     return out_json
 
 
-def _dump_inline_reserve_ranges(config) -> Path | None:
-    """Pre-compute the exact byte spans the downstream ``inline`` pass writes.
-
-    The generic build reserves those spans (and only those) from the relocation
-    free-space pool instead of the whole Spanish ROM footprint. Blanket-reserving
-    Spanish wastes ~34 KB of pool — but Spanish's own relocated text sits in that
-    pool and is proven-safe to overwrite; only the handful of offsets the inline
-    pass rewrites in place can clobber a relocated string, so those are all that
-    must be kept free. The inline write spans depend only on the translations and
-    extractions (not on the ROM being patched), so a dry run on the English ROM
-    yields the same spans the real ``inline`` step will write later.
-
-    Returns ``None`` when the language has no ``inline`` step (nothing writes at
-    fixed Spanish-aligned offsets, so the whole pool is free) or when the Spanish
-    extraction is missing.
-    """
-    if "inline" not in getattr(config, "patches", []):
-        return None
-    if not SPANISH_EXTRACT.exists():
-        return None
-    ranges_path = TRANSLATION_DIR / f"{config.code}_inline_reserve_ranges.json"
-    ranges_path.parent.mkdir(parents=True, exist_ok=True)
-    run([
-        PYTHON, INLINE_SCRIPT,
-        "--rom", ENGLISH_ROM,           # read-only in dump mode; never written
-        "--source", ENGLISH_ROM,
-        "--combined", config.combined_path(REPO_ROOT),
-        "--reference-texts", SPANISH_EXTRACT,
-        "--collision-guard",
-        "--dump-write-ranges", ranges_path,
-    ])
-    return ranges_path
-
-
 def build_rom(config, translation_json: Path) -> Path:
     out_rom = config.output_rom_path(REPO_ROOT)
     out_rom.parent.mkdir(parents=True, exist_ok=True)
@@ -275,13 +241,6 @@ def build_rom(config, translation_json: Path) -> Path:
     ]
     if SPANISH_ROM.exists():
         cmd += ["--pointer-proof-rom", SPANISH_ROM]
-    # Precise relocation reservation: keep only the real inline-write spans out
-    # of the free-space pool (frees ~34 KB, letting more over-long dialogue
-    # relocate instead of falling back to English). Falls back to the blanket
-    # Spanish carve when there is no inline step / no Spanish extraction.
-    reserve_ranges = _dump_inline_reserve_ranges(config)
-    if reserve_ranges is not None:
-        cmd += ["--reserve-ranges", reserve_ranges]
     run(cmd)
     return out_rom
 

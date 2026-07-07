@@ -405,7 +405,6 @@ def _apply_translation_at_offset(
     reference_entry: dict,
     detector: PaddingDetector,
     next_offset: Optional[int] = None,
-    write_log: Optional[List[Tuple[int, int]]] = None,
 ) -> Tuple[bool, str]:
     encoding = reference_entry.get('encoding', 'pokemon')
     encoded = TextEncoder.encode(translation, encoding)
@@ -433,12 +432,6 @@ def _apply_translation_at_offset(
     if end > len(rom_data):
         return False, 'missing'
 
-    # ``write_log`` records the exact byte span this pass writes so a build can
-    # reserve those ranges from the relocation free-space pool (only the inline
-    # pass writes at these fixed source-aligned offsets, so reserving anything
-    # else is wasteful — see scripts/build_language.py's --reserve-ranges).
-    if write_log is not None:
-        write_log.append((offset, len(encoded)))
     rom_data[offset:end] = encoded
     return True, 'applied'
 
@@ -468,18 +461,6 @@ def main() -> int:
         help='Translation JSON to skip pointer-based offsets',
     )
     parser.add_argument('--min-length', type=int, default=4, help='Min inline byte length (incl. 0xFF terminator); 4 = 3-char words like "Mom"')
-    parser.add_argument(
-        '--dump-write-ranges',
-        type=Path,
-        help=(
-            'Dry run: compute every (offset, byte_length) this pass would write '
-            'and dump them as JSON to this path WITHOUT modifying --rom. The '
-            'written spans depend only on the translations/extractions (not on '
-            'the target ROM contents), so a build can compute them ahead of time '
-            'and reserve exactly those ranges from the relocation free-space '
-            'pool instead of the whole reference ROM.'
-        ),
-    )
     parser.add_argument(
         '--collision-guard',
         action='store_true',
@@ -538,9 +519,6 @@ def main() -> int:
         return cell_boundaries[idx] if idx < len(cell_boundaries) else None
 
     rom_data = bytearray(args.rom.read_bytes())
-    # Every span this pass writes, recorded as (offset, byte_length). Only used
-    # to reserve those spans from the relocation pool (see --dump-write-ranges).
-    write_log: List[Tuple[int, int]] = []
     categorizer = JSONToCSVConverter()
     applied_combined = 0
     applied_templates = 0
@@ -623,7 +601,6 @@ def main() -> int:
             reference_entry,
             detector,
             next_offset=_next_cell(offset),
-            write_log=write_log,
         )
         if applied:
             applied_combined += 1
@@ -682,7 +659,6 @@ def main() -> int:
             english_entry,
             detector,
             next_offset=_next_cell(offset),
-            write_log=write_log,
         )
         if applied:
             applied_templates += 1
@@ -690,16 +666,6 @@ def main() -> int:
             skipped_too_long += 1
         elif reason == 'missing':
             skipped_missing += 1
-
-    if args.dump_write_ranges is not None:
-        # Dry run: emit the write spans and leave --rom untouched.
-        args.dump_write_ranges.parent.mkdir(parents=True, exist_ok=True)
-        args.dump_write_ranges.write_text(
-            json.dumps([[off, length] for off, length in write_log]),
-            encoding='utf-8',
-        )
-        print(f'Dumped {len(write_log)} inline write ranges to {args.dump_write_ranges}')
-        return 0
 
     args.rom.write_bytes(rom_data)
 
