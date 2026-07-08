@@ -11488,7 +11488,12 @@
 0xA4DFDA: Le mur est légèrement bombé.\nCreuser dedans ?
 0xA4E00D: {STR_VAR_1} {STR_VAR_3},\nça fera ¥{STR_VAR_2}. D'accord ?
 0xA4E02C: Tu possèdes déjà cette CT.{PAUSE_UNTIL_PRESS}
-0xA4E047: Comment trier les objets de\ncette poche ?
+# 0xA4E047 (Cube "Sort this pocket's items how?" prompt, issue #25/#76): do
+# NOT add an entry here. This in-place cell has no live pointer; when a
+# translation here fits the EN byte budget, 19_build_translated_rom_generic.py
+# --allow-fallback synthesizes a single-line variant that drops the \n and
+# corrupts the on-screen wrap. Leave the offset absent so the pipeline never
+# touches it; languages/fr/patches/cube_sort_menu.py owns this string.
 0xA4E065: Type
 0xA4E06A: Nom
 0xA4E06F: Plus

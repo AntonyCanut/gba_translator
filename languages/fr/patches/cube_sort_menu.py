@@ -40,7 +40,7 @@ def _encode(text: str) -> bytes:
 _ENTRIES: dict[int, tuple[bytes, bytes, int]] = {
     0xA4E047: (
         bytes.fromhex("cde3e6e800e8dcdde700e4e3d7dfd9e8b4e7fedde8d9e1e700dce3ebacff"),
-        _encode("Comment trier") + NEWLINE + _encode("cette poche ?"),
+        _encode("Comment trier ces") + NEWLINE + _encode("objets ?"),
         30,
     ),
     0xA4E07A: (
