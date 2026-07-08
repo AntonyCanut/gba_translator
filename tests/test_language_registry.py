@@ -40,7 +40,14 @@ def test_french_is_complete_and_dedicated(registry):
     assert fr.output_rom == "GenedRom-fr.gba"
     # FR must keep its full proven post-build patch sequence documented.
     assert len(fr.patches) >= 25
-    for step in ("font", "inline", "pokedex", "status_abbrevs", "mission_descriptions"):
+    for step in (
+        "font",
+        "inline",
+        "pokedex",
+        "status_abbrevs",
+        "mission_descriptions",
+        "money_amount_order",
+    ):
         assert step in fr.patches, f"FR descriptor lost patch step {step!r}"
 
 
