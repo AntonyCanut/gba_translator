@@ -46,10 +46,12 @@ sys.path.insert(0, str(ROOT_DIR))
 from languages.fr.patches.font import lz77_compress, lz77_decompress  # noqa: E402
 from languages.de.patches.dexnav_headers import (  # noqa: E402
     _FONT,
+    _clear_ghost_tail,
     _glyph_w,
     _stamp_text,
     _text_width,
     _tiles_hex,
+    GHOST_TILES,
     TILE,
     TILESET_OFFSET,
     TILESET_DECOMP_LEN,
@@ -125,6 +127,7 @@ def apply_patches(rom_path: Path) -> int:
             print(f"  dexnav header @tile {first_tile}: not the known English art — skip")
             continue
         _stamp_text(tiles, first_tile, ntiles, italian)
+        _clear_ghost_tail(tiles, GHOST_TILES[first_tile])
         patched += 1
         print(f"  dexnav header @tile {first_tile}: -> {italian!r}")
 

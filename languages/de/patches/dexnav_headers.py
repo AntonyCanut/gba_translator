@@ -39,6 +39,19 @@ dedicated tile indices (not shared with any other header). Only rows 2-7 of
 each tile hold letter pixels; rows 0-1 are a decorative top divider/highlight
 that differs per tile and MUST be preserved untouched.
 
+The English source labels are two words tall for 3 of the 4 headers ("SEARCH"
+over "LEVEL", "HIDDEN" over "ABILITY", "HELD" over "ITEMS" — only "METHOD" is
+a single word). Their letter pixels spill 1-2px into rows 0-1 of the tile-map
+row directly *below* the header's own tile run (map rows 7/10/13/16 for the
+tiles patched at map rows 6/9/12/15). ``_stamp_text`` only clears the
+header's own tiles, so that spillover — an original-English letter tail —
+survives untouched and renders as a light ghost duplicate under the shorter
+translated single-line label (issue #90). ``_clear_ghost_tail`` removes it:
+it only touches rows 0-1 of the tiles listed in ``GHOST_TILES`` and only
+pixels that don't continue into row 2 of the same tile, so genuine
+background art there (e.g. a rounded-corner decoration on tile 49, which
+uses the same fill colour across all 8 rows) is left alone.
+
 Because the tileset is immediately followed by the tilemap with zero gap
 (0x00B14FA0 + compressed 1176 bytes == 0x00B15438 exactly), there is no
 padding tolerance: the recompressed tileset must not exceed its original
@@ -142,6 +155,17 @@ HEADERS = [
     ),
 ]
 
+# Tile-map row directly below each header (see module docstring): still
+# holds the tail of the original two-line English label and must have its
+# leftover letter pixels cleared once the header above it is translated.
+# Keyed by the header's own ``first_tile``.
+GHOST_TILES: dict[int, range] = {
+    32: range(42, 50),
+    53: range(65, 70),
+    92: range(104, 112),
+    112: range(119, 125),
+}
+
 
 def _stamp_text(tiles: bytearray, first_tile: int, ntiles: int, text: str) -> None:
     """Clear the letter band (rows 2-7) of ``ntiles`` dedicated tiles to the
@@ -177,6 +201,29 @@ def _stamp_text(tiles: bytearray, first_tile: int, ntiles: int, text: str) -> No
                     if bit == "1":
                         px_set(x + gx, row, FILL)
         x += w + 1
+
+
+def _clear_ghost_tail(tiles: bytearray, tile_ids) -> None:
+    """Erase leftover English letter-tail pixels from rows 0-1 of ``tile_ids``
+    (see ``GHOST_TILES``). A pixel is only cleared when it does NOT continue
+    into row 2 of the same tile, which keeps unrelated background art (e.g.
+    a rounded-corner shape spanning all 8 rows) intact."""
+
+    def px_get(tile: int, row: int, col: int) -> int:
+        off = tile * TILE + row * 4 + col // 2
+        b = tiles[off]
+        return b & 0xF if col % 2 == 0 else b >> 4
+
+    def px_set(tile: int, row: int, col: int, val: int) -> None:
+        off = tile * TILE + row * 4 + col // 2
+        b = tiles[off]
+        tiles[off] = (b & 0xF0) | val if col % 2 == 0 else (b & 0x0F) | (val << 4)
+
+    for tile in tile_ids:
+        for row in (0, 1):
+            for col in range(8):
+                if px_get(tile, row, col) == FILL and px_get(tile, 2, col) == BG:
+                    px_set(tile, row, col, BG)
 
 
 def _tiles_hex(tiles: bytearray, first_tile: int, ntiles: int) -> str:
@@ -224,6 +271,7 @@ def apply_patches(rom_path: Path) -> int:
             print(f"  dexnav header @tile {first_tile}: not the known English art — skip")
             continue
         _stamp_text(tiles, first_tile, ntiles, german)
+        _clear_ghost_tail(tiles, GHOST_TILES[first_tile])
         patched += 1
         print(f"  dexnav header @tile {first_tile}: -> {german!r}")
 

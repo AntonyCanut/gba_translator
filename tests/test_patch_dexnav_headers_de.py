@@ -22,14 +22,38 @@ sys.path.insert(0, str(Path(__file__).parent.parent))
 
 from languages.fr.patches.font import lz77_compress, lz77_decompress
 from languages.de.patches.dexnav_headers import (
+    BG,
+    FILL,
+    GHOST_TILES,
     HEADERS,
+    TILE,
     TILESET_DECOMP_LEN,
     TILESET_OFFSET,
     _FONT,
+    _clear_ghost_tail,
     _stamp_text,
     _text_width,
     _tiles_hex,
 )
+
+
+def _isolated_ghost_pixels(tiles, tile_ids):
+    """Pixels in rows 0-1 of ``tile_ids`` that are letter-fill colour but do
+    NOT continue into row 2 (i.e. leftover English letter tails, not part of
+    a legitimate decorative shape spanning the full tile height)."""
+    found = []
+    for tile in tile_ids:
+        for row in (0, 1):
+            for col in range(8):
+                off = tile * TILE + row * 4 + col // 2
+                b = tiles[off]
+                v = b & 0xF if col % 2 == 0 else b >> 4
+                off2 = tile * TILE + 2 * 4 + col // 2
+                b2 = tiles[off2]
+                v2 = b2 & 0xF if col % 2 == 0 else b2 >> 4
+                if v == FILL and v2 == BG:
+                    found.append((tile, row, col))
+    return found
 
 ENGLISH_ROM = Path(__file__).parent.parent / "input" / "roms" / "englishrom.gba"
 BUILT_DE_ROM = Path(__file__).parent.parent / "output" / "roms" / "GenedRom-de.gba"
@@ -109,6 +133,30 @@ class TestPatchAgainstEnglishArt(unittest.TestCase):
                 f"tile {first_tile}: still shows the original English art",
             )
 
+    def test_english_art_has_known_ghost_tail(self):
+        # Documents the bug fixed here (issue #90): the English source art's
+        # two-word headers ("SEARCH"/"LEVEL", "HIDDEN"/"ABILITY",
+        # "HELD"/"ITEMS") spill letter pixels into the tile-map row below —
+        # GHOST_TILES — which _stamp_text alone never touches.
+        tiles = bytearray(self.tiles_data)
+        all_ghost_tiles = [t for ids in GHOST_TILES.values() for t in ids]
+        self.assertTrue(
+            _isolated_ghost_pixels(tiles, all_ghost_tiles),
+            "expected the untouched English art to still show a letter-tail "
+            "ghost below the headers — GHOST_TILES may be out of date",
+        )
+
+    def test_ghost_tail_cleared_after_patch(self):
+        tiles = bytearray(self.tiles_data)
+        for _row, first_tile, ntiles, german, _known_good in HEADERS:
+            _stamp_text(tiles, first_tile, ntiles, german)
+            _clear_ghost_tail(tiles, GHOST_TILES[first_tile])
+            leftover = _isolated_ghost_pixels(tiles, GHOST_TILES[first_tile])
+            self.assertFalse(
+                leftover,
+                f"tile {first_tile}: ghost pixels remain below {german!r}: {leftover}",
+            )
+
 
 @pytest.mark.rom
 class TestBuiltDeRomShowsGermanHeaders(unittest.TestCase):
@@ -143,6 +191,17 @@ class TestBuiltDeRomShowsGermanHeaders(unittest.TestCase):
                 actual_hex, expected_hex,
                 f"tile {first_tile}: does not render {german!r}",
             )
+
+    def test_no_ghost_text_below_headers(self):
+        # Regression test for issue #90: the shipped ROM must not show a
+        # leftover English letter-tail ghost under the shortened German labels.
+        tiles = bytearray(self.tiles_data)
+        all_ghost_tiles = [t for ids in GHOST_TILES.values() for t in ids]
+        leftover = _isolated_ghost_pixels(tiles, all_ghost_tiles)
+        self.assertFalse(
+            leftover,
+            f"built DE ROM still shows ghost pixels below DexNav headers: {leftover}",
+        )
 
 
 if __name__ == "__main__":
