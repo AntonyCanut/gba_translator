@@ -57,6 +57,7 @@ PATCH_VERSION_SCRIPT = REPO_ROOT / "languages/fr/patches/version.py"
 PATCH_INTRO_QUESTIONS_IT_SCRIPT = REPO_ROOT / "languages/it/patches/intro_questions.py"
 PATCH_TRAINER_CLASS_NAMES_IT_SCRIPT = REPO_ROOT / "scripts/patch_trainer_class_names_it.py"
 PATCH_LONG_DIALOGUES_IT_SCRIPT = REPO_ROOT / "scripts/patch_long_dialogues_it.py"
+CHECK_TRANSLATION_INTEGRITY_SCRIPT = REPO_ROOT / "scripts/check_translation_integrity.py"
 
 # Text patches that can be parameterised with the language's combined file.
 PATCH_STATUS_ABBREVS_SCRIPT = REPO_ROOT / "languages/fr/patches/status_abbrevs.py"
@@ -118,6 +119,11 @@ def run(cmd: list, *, cwd: Path = REPO_ROOT) -> None:
     printable = " ".join(str(part) for part in cmd)
     print(f"\n$ {printable}")
     subprocess.run([str(part) for part in cmd], cwd=str(cwd), check=True)
+
+
+def check_translation_integrity(code: str) -> None:
+    """Block generic builds when protected combined entries drift."""
+    run([PYTHON, CHECK_TRANSLATION_INTEGRITY_SCRIPT, "--lang", code])
 
 
 def _load_module(path: Path):
@@ -672,6 +678,7 @@ def main() -> int:
     print(f"🌍 GENERIC MULTI-LANGUAGE BUILD — {config.name} ({config.code})")
     print("=" * 70)
 
+    check_translation_integrity(config.code)
     ensure_extractions()
     translation_json = generate_translation_json(config)
     out_rom = build_rom(config, translation_json)

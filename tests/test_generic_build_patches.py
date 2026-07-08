@@ -18,6 +18,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 
 from scripts.build_language import (
     AUDIT_COLLISIONS_SCRIPT,
+    CHECK_TRANSLATION_INTEGRITY_SCRIPT,
     ENGLISH_ROM,
     PATCH_RITUAL_SCRIPT,
     PATCH_STATUS_ABBREVS_SCRIPT,
@@ -29,10 +30,23 @@ from scripts.build_language import (
     REPOINT_STALE_SCRIPT,
     SPANISH_ROM,
     apply_patches,
+    check_translation_integrity,
 )
 from src.i18n import load_registry
 
 REGISTRY = load_registry()
+
+
+def test_generic_build_integrity_guard_dispatches_for_language():
+    calls_made = []
+
+    def fake_run(cmd, *, cwd=None):
+        calls_made.append([str(p) for p in cmd])
+
+    with mock_patch("scripts.build_language.run", side_effect=fake_run):
+        check_translation_integrity("de")
+
+    assert calls_made == [[PYTHON, str(CHECK_TRANSLATION_INTEGRITY_SCRIPT), "--lang", "de"]]
 
 
 def _collected_calls(config, steps: List[str], translation_json=None,
