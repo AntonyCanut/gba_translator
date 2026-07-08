@@ -97,6 +97,18 @@ def test_repair_localized_lz77_passes_require_pointer():
     assert "--require-pointer" in cmd
 
 
+# ─── inline ────────────────────────────────────────────────────────────────
+
+def test_inline_pass_preserves_german_umlauts():
+    config = REGISTRY.get("de")
+    calls = _collected_calls(config, ["inline"])
+    assert len(calls) == 1
+    cmd = calls[0]
+    assert any(str(c).endswith("scripts/apply_inline_overrides_fr.py") for c in cmd)
+    assert "--collision-guard" in cmd
+    assert "--preserve-german-umlauts" in cmd
+
+
 # ─── repoint_stale ──────────────────────────────────────────────────────────
 
 def test_repoint_stale_skipped_without_json(capsys):

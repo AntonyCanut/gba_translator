@@ -344,6 +344,9 @@ def apply_patches(config, out_rom: Path, translation_json: Path | None = None,
             run([PYTHON, _font_script_for(config.code), "--rom", out_rom])
 
         elif step == "inline":
+            extra = []
+            if config.code == "de":
+                extra.append("--preserve-german-umlauts")
             run([
                 PYTHON, INLINE_SCRIPT,
                 "--rom", out_rom,
@@ -355,6 +358,7 @@ def apply_patches(config, out_rom: Path, translation_json: Path | None = None,
                 # terminated before the next cell so no string fuses into / over-
                 # runs a neighbour (the collisions audited by `collision_check`).
                 "--collision-guard",
+                *extra,
             ])
 
         # ── Anti-freeze / anti-corruption mechanics (language-agnostic) ──────

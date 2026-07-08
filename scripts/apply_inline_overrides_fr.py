@@ -31,7 +31,7 @@ from src.core.dialogue_linewrap import (
 from src.core.fixed_tables import in_fixed_table
 from src.core.padding_detector import PaddingDetector
 from src.core.rom_reader import ROMReader
-from src.core.text_codec import TextDecoder, TextEncoder
+from src.core.text_codec import GERMAN_UMLAUT_CHARS, TextDecoder, TextEncoder
 from src.core.text_converter import JSONToCSVConverter
 
 
@@ -405,9 +405,14 @@ def _apply_translation_at_offset(
     reference_entry: dict,
     detector: PaddingDetector,
     next_offset: Optional[int] = None,
+    skip_encode_aliases: frozenset = frozenset(),
 ) -> Tuple[bool, str]:
     encoding = reference_entry.get('encoding', 'pokemon')
-    encoded = TextEncoder.encode(translation, encoding)
+    encoded = TextEncoder.encode(
+        translation,
+        encoding,
+        skip_aliases=skip_encode_aliases,
+    )
     encoded_len = max(len(encoded) - 1, 0)
     reference_length = max(reference_entry.get('byte_length', 0) - 1, 0)
     padding = detector.detect_padding(offset, reference_length, extended_search=True)
@@ -473,6 +478,14 @@ def main() -> int:
             'recipe is unchanged.'
         ),
     )
+    parser.add_argument(
+        '--preserve-german-umlauts',
+        action='store_true',
+        help=(
+            'Preserve German ä/ö/ü/Ä/Ö/Ü during Pokemon encoding instead of '
+            'folding them to ASCII. This is required for DE inline overrides.'
+        ),
+    )
 
     args = parser.parse_args()
 
@@ -500,6 +513,7 @@ def main() -> int:
     source_reader.load()
     source_data = source_reader.rom_data
     detector = PaddingDetector(source_reader)
+    skip_encode_aliases = GERMAN_UMLAUT_CHARS if args.preserve_german_umlauts else frozenset()
 
     # Sorted union of every known cell start: combined entries plus the real
     # extracted English/Spanish cells. Used by the collision guard as the tight
@@ -601,6 +615,7 @@ def main() -> int:
             reference_entry,
             detector,
             next_offset=_next_cell(offset),
+            skip_encode_aliases=skip_encode_aliases,
         )
         if applied:
             applied_combined += 1
@@ -659,6 +674,7 @@ def main() -> int:
             english_entry,
             detector,
             next_offset=_next_cell(offset),
+            skip_encode_aliases=skip_encode_aliases,
         )
         if applied:
             applied_templates += 1
