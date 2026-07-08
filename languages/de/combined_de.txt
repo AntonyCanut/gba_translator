@@ -2483,11 +2483,14 @@
 0x3FCB0C: {B_ATK_NAME_WITH_PREFIX} ist starr vor Angst!
 0x3FCB26: Geist: Raus… Raus…
 0x3FCB41: stark<0x00>
-0x3FCB5F: <0xFD><0x00> von <0xFD><0x0F>\nsteigt <0xFD><0x01>
-0x3FCB6A: <0xFD><0x00> von <0xFD><0x10>\nsteigt <0xFD><0x01>
+0x3FCB4A: gestiegen!
+0x3FCB50: stark<0x00>
+0x3FCB59: gesunken!
+0x3FCB5F: <0xFD><0x00> von <0xFD><0x0F>\nist <0xFD><0x01>
+0x3FCB6A: <0xFD><0x00> von <0xFD><0x10>\nist <0xFD><0x01>
 0x3FCB75: Mit {B_LAST_ITEM}, der {UNKNOWN_STR} von {B_SCR_ACTIVE_NAME_WITH_PREFIX}\n{PLAYER}
-0x3FCB8F: <0xFD><0x00> von <0xFD><0x0F>\nsinkt <0xFD><0x01>
-0x3FCB9A: <0xFD><0x00> von <0xFD><0x10>\nsinkt <0xFD><0x01>
+0x3FCB8F: <0xFD><0x00> von <0xFD><0x0F>\nist <0xFD><0x01>
+0x3FCB9A: <0xFD><0x00> von <0xFD><0x10>\nist <0xFD><0x01>
 0x3FCBA5: Werte von {B_ATK_NAME_WITH_PREFIX}\nüber dem Maximum!
 0x3FCBC5: Werte von {B_DEF_NAME_WITH_PREFIX}\nunter dem Minimum!
 0x3FCBE4: Volltreffer!
@@ -2571,7 +2574,7 @@
 0x3FD383: {B_LINK_OPPONENT1_NAME}\nmöchte kämpfen!
 0x3FD397: {B_LINK_OPPONENT1_NAME} und {B_LINK_OPPONENT2_NAME}\nmöchten kämpfen!
 0x3FD3B1: <0xFD><0x1C> <0xFD><0x1D> setzt\n<0xFD><0x06> ein!<0xFC><0x08><0x3C>
-0x3FD3C7: {FD1C} {FD1D} setzt\n{FD06} und {FD08} ein!{FC08}
+0x3FD3C7: <0xFD><0x1C> <0xFD><0x1D> setzt\n<0xFD><0x06> und <0xFD><0x08> ein!<0xFC><0x08>
 0x3FD3E4: <0xFD><0x1C> <0xFD><0x1D> setzt\n<0xFD><0x00> ein!
 0x3FD3F7: {B_LINK_OPPONENT1_NAME} setzt\n{RIVAL} ein!
 0x3FD407: {B_LINK_OPPONENT1_NAME} setzt\n{RIVAL} und {EVIL_TEAM} ein!
@@ -7281,7 +7284,7 @@
 0x8781F9: Wahlband
 0x879E88: Bogen
 0x87A0EC: Hyper-Tele
-0x883590: drastisch
+0x883590: drastisch<0x00>
 0x8835A0: stark
 0x8835B0: {STR_VAR_1} hat die Vergiftung\nüberlebt. Das Gift ist verschwunden!\p
 0x8854B0: Du wirst herausgefordert von\n{FD1C} {FD1D}!\p
@@ -7573,12 +7576,12 @@
 0x8D1826: Schade.\nDas ist wirklich bedauerlich.
 0x8D184B: Du hast kein Pokémon, gegen das ich\nbereit bin anzutreten.\pNur Pokémon vom Typ {COLOR}ÉFlug{COLOR}Ë oder mit\nder Fähigkeit {COLOR}ÉSchwebe{COLOR}Ë können\lgegen meine antreten.
 0x905690: {B_ATK_NAME_WITH_PREFIX} kehrte zu\n{B_PLAYER_NAME} zurück!
-0x9056B4: Die Verteidigung von {B_ATK_NAME_WITH_PREFIX}\nsteigt stark!
+0x9056B4: Die Verteidigung von {B_ATK_NAME_WITH_PREFIX}\nist drastisch gestiegen!
 0x905770: {B_ATK_NAME_WITH_PREFIX} kehrte zu\n{B_TRAINER1_NAME} zurück!
 0x905A30: Die Fähigkeit von {B_DEF_NAME_WITH_PREFIX}\nwurde neutralisiert!
 0x905A50: {B_DEF_NAME_WITH_PREFIX} erhält\n{B_DEF_ABILITY}!
 0x905C25: {B_DEF_NAME_WITH_PREFIX} wacht auf!
-0x905C40: Der Sp. Angriff von {B_ATK_NAME_WITH_PREFIX}\nsteigt stark!
+0x905C40: Der Sp. Angriff von {B_ATK_NAME_WITH_PREFIX}\nist drastisch gestiegen!
 0x905E9A: {B_ATK_NAME_WITH_PREFIX} absorbiert Kraft!
 0x906470: Heilwunsch erfüllt sich für\n{B_SCR_ACTIVE_NAME_WITH_PREFIX}!
 0x9064A0: {B_SCR_ACTIVE_NAME_WITH_PREFIX} wird von\ngeheimnisvollem Mondlicht umhüllt!
@@ -9954,7 +9957,7 @@
 0xA4C5EC: Verwirrung
 0xA4C5F6: mental
 0xA4C5FD: Verhöhner
-0xA4C603: drastisch
+0xA4C603: drastisch<0x00>
 0xA4C610: stark
 0xA4C61A: Der Gegner
 0xA4C628: gegnerisch
