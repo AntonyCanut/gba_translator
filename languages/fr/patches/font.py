@@ -294,13 +294,15 @@ def acute_accent_positions(font: bytes) -> List[Tuple[int, int, int]]:
     letter body.  This is the proven-good source used to rebuild ``à``, ``é``
     and ``è`` (the standalone é/è glyphs in the international font are drawn too
     high and crush the letter body, so we never copy them verbatim).
+
+    Exclude edge pixels (x=0, x=7) to avoid rendering artifacts on small text.
     """
     base = glyph_pixels(font, CP_A)
     acute = glyph_pixels(font, CP_ACUTE_A)
     return [
         (x, y, acute[y * 8 + x])
         for y in range(2)
-        for x in range(8)
+        for x in range(1, 7)  # Exclude edge pixels (x=0, x=7) to prevent phantom pixels
         if acute[y * 8 + x] != 0 and acute[y * 8 + x] != base[y * 8 + x]
     ]
 
