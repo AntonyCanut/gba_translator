@@ -37,6 +37,9 @@ SPECIES_COUNT = 1293  # index 0 = Bulbasaur .. index 1292 = Urshifu (last slot)
 # every ``combined_<code>.txt`` and identical to the live table location on
 # every base ROM this repo builds against.
 SPECIES_TABLE_OFFSET = 0x166A997
+# Backwards-compatible alias for sibling language tests/patches added before
+# this module settled on the more explicit constant name.
+TABLE_OFFSET = SPECIES_TABLE_OFFSET
 
 _LINE_RE = re.compile(r"^0x([0-9A-Fa-f]+):\s?(.*)$")
 
