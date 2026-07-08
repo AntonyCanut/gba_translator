@@ -17299,6 +17299,10 @@ einem Verlies zu entkommen.
 0x1F526D4: Wieder da, <0xFD><0x01>?\nNaja, ich auch.\pIch verliere zwar immer wieder,\naber ich kann einfach nicht anders!\pJeder Kampf zeigt mir, wie groß\ndie Lücke ist, die ich noch schließen muss,\lum dich einzuholen!\pSchauen wir, welches Kraftniveau\nich übertreffen muss, <0xFD><0x01>!
 0x1F527B5: Noch ein langer Weg, bevor ich mich\nbesser als du nennen kann,\lhm, <0xFD><0x01>?\pIch hätte es ahnen sollen, der Meister\nvon Borrius würde nicht so\lleicht verlieren, oder?\pIch werde mich neu sammeln, ebenso\nwie meine Bindung zu meinen Pokémon.\pUnd beim nächsten Mal werde ich\ndir diese Krone entreißen!
 0x1F52A74: Polderive
+0x1F52A9C: Willkommen in Ost-Borrius!\pPolderive ist ganz anders als\nalles in West-Borrius, findest\ldu nicht?\pIch wette, die Leute aus\nWest-Borrius würden niemals\lfreiwillig in einem Sumpf leben.
+0x1F52B3C: Du denkst vielleicht, der\nmatschige Boden macht das\lLeben hier schwer, aber da\ltäuschst du dich!\pDer Schlamm ist eigentlich sehr\ngut für die Haut.
+0x1F52BB6: Tessys Pokémon sehen nicht immer\nwie <0xFC><0x01><0x06>Wasser<0xFC><0x01><0x04>-Pokémon aus, aber ich\lgarantiere dir, die meisten sind\les, wenn du gegen sie kämpfst!
+0x1F52C2D: Tessy ist so schlau!\pSie hat einen Weg gefunden, den\nTyp ihrer Pokémon an deren\lAttacken anzupassen!\pIch wette, das hat sie im\n<0xFC><0x01><0x06>Battle Circus<0xFC><0x01><0x04> gelernt.
 0x1F52E50: <0xFC><0x01><0x02>Meloetta fordert dich zu einem\nTanzwettbewerb um das Recht auf einen Kampf heraus!\pNimmst du die Herausforderung an?
 0x1F52EB4: <0xFC><0x01><0x02>Während des Tanzwettbewerbs\nerscheinen Tasten auf dem Bildschirm.\pUm zu gewinnen, drücke alle Tasten,\nbevor sie verschwinden.
 0x1F52F37: <0xFC><0x01><0x02>Meloetta gefällt deine\nVorführung.\pEs gewährt dir das Recht,\nes herauszufordern!
@@ -17313,6 +17317,18 @@ einem Verlies zu entkommen.
 0x1F53B2E: Ein fantastischer Trainer!\pLass mich dir einen kleinen\nTipp geben.\pWenn während eines Trainerkampfes\ndie Items deiner Pokémon gestohlen\lwerden, keine Panik.\pSie werden dir nach dem Kampf\nunversehrt zurückgegeben.\p<0xB0>Aber Items zum einmaligen Gebrauch\nscheinen zu verschwinden.
 0x1F53D0A: Nur der schlechteste Angestellte\nwürde dir vom Kauf eines\lbestimmten Artikels abraten.\pWie zum Beispiel diese Frau, die\ndie Regale auffüllt.\pSie hat überhaupt kein Gespür fürs Geschäft.\pIch hingegen sage dir\nFolgendes.\pKauf so viel <0xFC><0x01><0x06>Hyper-Abwehrspray<0xFC><0x01><0x08> wie du kannst!\pDas ist das beste Abwehrspray im\nPreis-Leistungs-Verhältnis!
 0x1F53E2C: Ein Trainertipp:\nKauf keine Hyperbälle.\pSie sind ihr Geld nicht wert.\pBevorzuge lieber spezielle Pokébälle\nwie den <0xFC><0x01><0x06>Blitzball<0xFC><0x01><0x04>\loder den <0xFC><0x01><0x06>Netzball<0xFC><0x01><0x04>.\pSie kosten weniger und\nfangen oft besser.\pHier gibt es leider keine, aber\nviele andere Läden in\lBorrius verkaufen sie.
+0x1F53FCB: Ich bin so dankbar, dass du den\nweiten Weg hierher gemacht hast!\pBist du ein Trainer?\pOh, du hast einen Pokédex!\nWie wunderbar!\pIch frage mich, ob du mir wohl\neinen Gefallen tun könntest.
+0x1F5405D: Oh, Trainer. Ich freue mich so,\ndass du den weiten Weg hierher\lgemacht hast!\pIch frage mich, ob du mir heute\nauch einen Gefallen tun könntest.
+0x1F540CF: Ich bin gerührt, dass du hierher\ngekommen bist, doch du bist so\lunfreundlich.
+0x1F5410C: Um es klar zu sagen, ich möchte\nein Pokémon sehen, das <0xFC><0x01><0x06><0xFD><0x02><0xFC><0x01><0x04>\lbeherrscht.\pDanke.
+0x1F54157: Meine Güte. Dein <0xFD><0x03> kann\n<0xFD><0x02> einsetzen!\pDu hast dir die Mühe gemacht, es\ndeinem Pokémon beizubringen?\pDas ist so rührend!\pDas ist ein kleines Zeichen\nmeiner Wertschätzung.\pBitte zögere nicht, es\nanzunehmen.
+0x1F5421C: Ich frage mich, wie <0xFD><0x02>\naussieht, wenn es wirklich\leingesetzt wird.\pIch bin sicher, du setzt es\ngeschickt ein!
+0x1F54276: Alle richtigen Attacken
+0x1F542BD: Ich gebe dir etwas Tolles, wenn\ndu viele <0xFC><0x01><0x06>TMs<0xFC><0x01><0x04> gesammelt hast!\pGlaubst du, du kannst sie alle\nfinden?
+0x1F54324: Es gibt insgesamt\n<0xFC><0x01><0x06><0xFD><0x02><0xFC><0x01><0x04> TMs, und man findet\lsie überall in Borrius.\pZum Beispiel schenken manche\nnetten Leute TMs.\pAlso sei nicht schüchtern!\nSprich mit allen!
+0x1F543BF: Diese TMs finden sich nicht\nvon alleine!
+0x1F543EF: Es gibt noch mehr TMs!\pInsgesamt noch <0xFC><0x01><0x06><0xFD><0x04><0xFC><0x01><0x04>!\pWenn du sie alle sammelst,\ngebe ich dir ein tolles Geschenk!
+0x1F5454C: Oh! Du bist ein TM-Meister!\pDanke, dass du mir so viele\nTMs gezeigt hast.\pNutze viele verschiedene\nAttacken und entfessle die Kraft\ldeiner Pokémon!
 0x1F54459: Wow! Gute Arbeit!\nWas für eine bemerkenswerte Technik!\pIch wusste nicht, dass all diese\nAttacken TMs waren!\pDank dir habe ich den wahren\nReichtum der TMs verstanden.\pDu bist ein TM-Meister!\pDanke!\nIch war begeistert, sie zu sehen!\pNimm das hier zur Belohnung\nals Geschenk an!
 0x1F54B5D: Diese TM wurde über dem\nGrab von Borrius mittels Klettern gefunden.
 0x1F54BA1: Diese TM wurde für\n«Schlechte Babysitterin» vergeben.
