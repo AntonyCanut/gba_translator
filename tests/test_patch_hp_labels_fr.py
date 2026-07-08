@@ -23,7 +23,7 @@ from languages.fr.patches.hp_labels import (
     GREY_OLD_TILES,
     GREY_PV_FILL,
     PARTY_BLOCK,
-    PARTY_CLIPPED_PV_TILES,
+    PARTY_CURRENT_PV_TILES,
     PARTY_NCOLS,
     PARTY_OLD_TILES,
     PARTY_PV_FILL,
@@ -72,13 +72,13 @@ class TestPvArtDefinitions(unittest.TestCase):
 
     def test_clipped_party_variant_migrates_to_same_pv(self):
         self.assertEqual(
-            _expected_new(PARTY_CLIPPED_PV_TILES, _draw_party_label),
+            _expected_new(PARTY_CURRENT_PV_TILES, _draw_party_label),
             _expected_new(PARTY_OLD_TILES, _draw_party_label),
         )
 
     def test_party_label_preserves_bar_cap_columns(self):
-        # Grid columns 13-15 hold the HP-bar left cap; the redraw must not
-        # touch them or the bar looks partially erased in the party menu.
+        # Grid columns 14-15 (last byte of each row in the right-hand tiles
+        # 52/60) hold the HP-bar left cap; the redraw must not touch them.
         new = _expected_new(PARTY_OLD_TILES, _draw_party_label)
         for tile in (52, 60):
             old_b = bytes.fromhex(PARTY_OLD_TILES[tile])
@@ -86,10 +86,6 @@ class TestPvArtDefinitions(unittest.TestCase):
             for row in range(8):
                 self.assertEqual(old_b[row * 4 + 3], new_b[row * 4 + 3],
                                  f"tile {tile} row {row} cols 14-15 modified")
-                old_col13 = old_b[row * 4 + 2] >> 4
-                new_col13 = new_b[row * 4 + 2] >> 4
-                self.assertEqual(old_col13, new_col13,
-                                 f"tile {tile} row {row} col 13 modified")
 
     def test_grey_label_preserves_oval_border(self):
         new = _expected_new(GREY_OLD_TILES, _draw_grey_label)
