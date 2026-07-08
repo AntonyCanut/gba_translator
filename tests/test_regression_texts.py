@@ -335,6 +335,39 @@ class RegressionTextTests(unittest.TestCase):
             self.assertTrue(choice, 'Choice entries must not be empty')
         self.assertNotIn('abandonner ?', text)
 
+    @unittest.skipUnless(FR_ROM.exists(), 'ROM missing')
+    def test_battle_style_options_translated(self):
+        # Issue #73 "Mode de combat - menu Options": the battle-style cycle
+        # ("Shift"/"Set" at 0x419E2C/0x419E32) had "Changer" for Shift (renamed
+        # to "Choix") and left "Set" fully untranslated. "Set" only fits its
+        # cell via pointer relocation (its in-place budget is the 3-byte EN
+        # length "Set", too tight for "Défini").
+        french_data = FR_ROM.read_bytes()
+
+        SHIFT_OFFSET = 0x419E2C
+        end = french_data.find(b'\xFF', SHIFT_OFFSET)
+        shift_text = TextDecoder.decode_pokemon(french_data[SHIFT_OFFSET:end + 1], preserve_unknown=True)
+        self.assertEqual(shift_text, 'Choix')
+
+        set_text = _read_pointer_text(french_data, 0x003CC348)
+        self.assertEqual(set_text, 'Défini')
+        self.assertNotEqual(set_text, 'Set')
+
+    @unittest.skipUnless(FR_ROM.exists(), 'ROM missing')
+    def test_semi_shift_description_translated(self):
+        # Issue #73: the Semi-Shift battle-style description (0x1F4E012, EN
+        # "Get nameless free switch after a KO.") read as a confusing run-on
+        # sentence ("Change gratuitement et sans nom après K.O.") that the
+        # reporter could not parse. Rewritten to fit the fixed 36-byte cell
+        # budget while staying legible.
+        french_data = FR_ROM.read_bytes()
+
+        DESC_OFFSET = 0x1F4E012
+        end = french_data.find(b'\xFF', DESC_OFFSET)
+        desc_text = TextDecoder.decode_pokemon(french_data[DESC_OFFSET:end + 1], preserve_unknown=True)
+        self.assertEqual(desc_text, 'Change gratuit après K.O. sans nom.')
+        self.assertNotIn('nameless', desc_text)
+
 
 if __name__ == '__main__':
     unittest.main()
