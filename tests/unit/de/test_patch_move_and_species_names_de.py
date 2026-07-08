@@ -1,13 +1,4 @@
-"""Tests for the German move-name and species-name fixed-table wrappers
-(issue #81: "Pokemon Namen und Attacken Namen sind alle auf Englisch").
-
-``languages/de/patches/move_names.py`` and ``species_names.py`` are thin
-wrappers that delegate to the language-agnostic ``languages/fr/patches/
-<name>.py`` implementation via ``src.i18n.fr_patch_delegate``, re-pointed at
-``languages/de/combined_de.txt``. These assert, without touching a 32 MB ROM,
-that each wrapper targets the correct FR script and German data, and that
-both steps are wired into the German build descriptor.
-"""
+"""Tests for the German move/species fixed-table patches (issue #81)."""
 
 from __future__ import annotations
 
@@ -21,30 +12,46 @@ sys.path.insert(0, str(ROOT))
 
 from languages.de.patches import move_names as de_move_names  # noqa: E402
 from languages.de.patches import species_names as de_species_names  # noqa: E402
-
-DUMMY_ROM = Path("/tmp/dummy-de-rom.gba")
-
-
-def test_move_names_wrapper_targets_fr_script_and_german_data():
-    cmd = [str(part) for part in de_move_names.make_command(DUMMY_ROM)]
-
-    assert any(arg.endswith("languages/fr/patches/move_names.py") for arg in cmd), cmd
-    assert "--rom" in cmd and str(DUMMY_ROM) in cmd
-    joined = " ".join(cmd)
-    assert "languages/de/combined_de.txt" in joined
-    assert "combined_fr.txt" not in joined
-    assert "combined_it.txt" not in joined
+from languages.fr.patches import move_names as base_move_names  # noqa: E402
+from languages.fr.patches import species_names as base_species_names  # noqa: E402
 
 
-def test_species_names_wrapper_targets_fr_script_and_german_data():
-    cmd = [str(part) for part in de_species_names.make_command(DUMMY_ROM)]
+def test_move_names_loads_fallback_for_missing_early_moves():
+    translations = de_move_names.load_translations()
 
-    assert any(arg.endswith("languages/fr/patches/species_names.py") for arg in cmd), cmd
-    assert "--rom" in cmd and str(DUMMY_ROM) in cmd
-    joined = " ".join(cmd)
-    assert "languages/de/combined_de.txt" in joined
-    assert "combined_fr.txt" not in joined
-    assert "combined_it.txt" not in joined
+    pound = base_move_names.LEGACY_TABLE_OFFSET + 1 * base_move_names.MOVE_STRIDE
+    karate_chop = base_move_names.LEGACY_TABLE_OFFSET + 2 * base_move_names.MOVE_STRIDE
+    brick_break = base_move_names.LEGACY_TABLE_OFFSET + 280 * base_move_names.MOVE_STRIDE
+
+    assert translations[pound] == "Klaps"
+    assert translations[karate_chop] == "Karateschl"
+    assert translations[brick_break] == "Ziegelbruch"
+    assert de_move_names._fits_cell(translations[brick_break])
+
+
+def test_species_names_uses_fallback_when_combined_entry_is_too_long():
+    translations = de_species_names.load_translations()
+
+    bad_egg = (
+        base_species_names.SPECIES_TABLE_OFFSET
+        + 411 * base_species_names.SPECIES_STRIDE
+    )
+    yungoos = (
+        base_species_names.SPECIES_TABLE_OFFSET
+        + 951 * base_species_names.SPECIES_STRIDE
+    )
+
+    assert translations[bad_egg] == "Schl. Ei"
+    assert translations[yungoos] == "Manguspekt"
+    assert de_species_names._fits_cell(translations[bad_egg])
+    assert de_species_names._fits_cell(translations[yungoos])
+
+
+def test_fallback_tables_are_cell_width_safe():
+    for name in de_move_names._load_fallback().values():
+        assert de_move_names._fits_cell(name), name
+    for name in de_species_names._load_fallback().values():
+        assert de_species_names._fits_cell(name), name
 
 
 def test_de_descriptor_wires_both_steps():
