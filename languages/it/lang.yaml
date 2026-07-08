@@ -172,6 +172,7 @@ patches:
   - status_abbrevs
   # ── Italian text written in place (no free-space relocation) ──────────────
   - ability_names           # fixed 17-byte ability-name table ← combined_it
+  - species_names           # fixed 11-byte species-name table (1293 entries @ 0x166A997)
   - move_names              # fixed 13-byte move-name table (live base resolved from ROM ptr)
   - tm_item_descriptions    # MT/MN item descriptions (anti-freeze, in place)
   - item_names
