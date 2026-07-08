@@ -1,5 +1,37 @@
 # Save fixtures
 
+## Missing: `pre-multi-battle-daherapolis.srm` (issue #75 follow-up)
+
+No fixture exists yet for a genuine BATTLE_TYPE_MULTI fight (player + AI
+partner vs two trainers at once), needed to test whether Unbound's "ENEMY
+TEAM"/"YOUR TEAM" graphic (GitHub issue #75) renders in place of CFRU's
+dynamic `gText_TeamPreviewMultiText` two-trainer-name overlay. Unbound's only
+Multi Battles live in Daherapolis' postgame facilities — Tour de Combat
+("Salle Multi", `combined_fr.txt` offsets `0x1F8F690`-`0x1F9419A`) and Cirque
+de Combat (`0x1F8A917`-`0x1F8ADD8`) — both requiring the player to talk to the
+facility guide, then pick/link a partner in a "Salon de Combat" before the
+fight starts. This is reached only after substantial story progress; no
+existing save/savestate in this repo is anywhere close (all are early/mid-game
+— see below), and this codebase has no debug menu, warp tool, or safe
+save/flag editor (the only `writeMemory()` cheat, an HP-pin auto-win in
+`scripts/repro_give_cs.mts`, is documented below as unsafe and must not be
+repurposed to fake progress flags).
+
+**To unblock**: obtain a save/savestate positioned right before entering the
+Salle Multi (partner already chosen), drop it in here as
+`pre-multi-battle-daherapolis.srm`, then run
+`scripts/probe_enemy_team_multi_battle.mts`. The probe is now runnable-on-arrival:
+its only truly fixture-specific step — the button path from where the save
+drops the player up to the first Multi Battle turn — is supplied at runtime as
+DATA, not code, via either `$MULTI_WALK` or a `pre-multi-battle-daherapolis.walk.txt`
+sidecar next to the save (syntax: `KEY [repeat] [holdFrames] [advanceFrames]`
+per line, `#` comments, `;`/newline separators — see the probe's file header).
+If the save is already parked on the first Multi Battle turn, no walk data is
+needed. Everything else (Team Preview option setup, L-before-A overlay sweep,
+VRAM/palette dump) is proven working by `probe_enemy_team_preview.mts`. See
+memory `unbound-enemy-team-not-cfru-teampreview.md` for the full investigation
+history.
+
 ## `post-zeph-pre-cs.srm`
 
 Battery save supplied with the ticket **"Problème pas de gain d'objet"**
