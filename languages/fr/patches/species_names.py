@@ -1,14 +1,22 @@
 #!/usr/bin/env python3
 """Patch species-name cells (fixed-width 11-byte table) after the build.
 
-The species-name table (``gSpeciesNames``) is a fixed-width block, stride
-11 bytes (``name + 0xFF + zero padding``), covering all 1293 species slots
-(index 0 = "???" placeholder, indices 1..1292 = the CFRU-expanded species roster).
-It is located at a fixed offset (not dynamically resolved like move names).
+The species-name table (``gSpeciesNames``-equivalent) is a fixed-width block,
+stride 11 bytes (``name + 0xFF + zero padding``), starting at file offset
+**0x166A997** (index 0 = "Bulbasaur", National Dex #1) and running through
+index **1292** (the last Unbound-expanded species slot, "Urshifu"; the byte
+right after the table stops decoding as text). Unlike the move-name table,
+this table is never relocated by any build pipeline in this repo — the clean
+vanilla base and every generic (DE/IT) build alike hold it at the same file
+offset — so no live-pointer resolution is needed; the offset used to key
+``combined_<code>.txt`` entries IS the live table location.
 
-Every ``combined_<code>.txt`` records species names at **0x166A997** (the stock
-offset), used as a dict key. Each combined entry is mapped by species index
-and written at the corresponding table cell.
+It carries no per-entry pointer and is absent from the injection JSON / Spanish
+extraction (same "class-2 fixed table" category as the move-name and
+ability-name tables), so the generic translation pipeline never reaches it and
+every species name ships in English unless a dedicated patch writes this table
+directly — see ``languages/fr/patches/move_names.py`` and ``ability_names.py``
+for the sibling fixed-table patches this mirrors.
 """
 
 from __future__ import annotations
@@ -23,12 +31,12 @@ sys.path.insert(0, str(Path(__file__).resolve().parents[3]))
 from src.text.charmap_data import BYTE_TO_CHAR, CHAR_TO_BYTE
 
 SPECIES_STRIDE = 11
-SPECIES_COUNT = 1293
+SPECIES_COUNT = 1293  # index 0 = Bulbasaur .. index 1292 = Urshifu (last slot)
 
-# Fixed offset of the species-name table. Also the key scheme every
-# ``combined_<code>.txt`` records species names under (index 0 at this offset,
-# index i at +i*11).
-TABLE_OFFSET = 0x166A997
+# Species-name table offset (see module docstring). Identical key scheme to
+# every ``combined_<code>.txt`` and identical to the live table location on
+# every base ROM this repo builds against.
+SPECIES_TABLE_OFFSET = 0x166A997
 
 _LINE_RE = re.compile(r"^0x([0-9A-Fa-f]+):\s?(.*)$")
 
@@ -61,7 +69,7 @@ def apply_to_rom(
     data: bytearray,
     translations: dict[int, str],
     *,
-    table_base: int = TABLE_OFFSET,
+    base: int = SPECIES_TABLE_OFFSET,
     stride: int = SPECIES_STRIDE,
     count: int = SPECIES_COUNT,
 ) -> tuple[int, list[str]]:
@@ -70,7 +78,7 @@ def apply_to_rom(
     warnings: list[str] = []
 
     for index in range(count):
-        offset = table_base + index * stride
+        offset = base + index * stride
         text = translations.get(offset)
         if text is None:
             continue  # no authored translation for this species index
@@ -104,7 +112,6 @@ def apply_to_rom(
 def apply_patches(rom_path: Path, combined: Path, dry_run: bool = False) -> int:
     translations = _parse_combined(combined)
     data = bytearray(rom_path.read_bytes())
-    print(f"patch_species_names: table @ 0x{TABLE_OFFSET:X}", file=sys.stderr)
     patched, warnings = apply_to_rom(data, translations)
     for w in warnings:
         print(f"  WARN {w}", file=sys.stderr)

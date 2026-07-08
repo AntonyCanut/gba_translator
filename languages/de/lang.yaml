@@ -5,10 +5,11 @@
 # Translations live in languages/de/combined_de.txt (same `<offset_hex>:
 # <text>` format as combined_fr.txt). Offsets not present there stay
 # English — this still includes proper names/credits, corrupted/garbage
-# cells, and the move name+description tables (no dedicated German patch yet;
-# the ability-name table, mission/world-map text and the one-off fixed-table
-# name cells are now covered by the ability_names/mission_descriptions/
-# worldmap_junction_panels/fixed_table_names steps below — F-83).
+# cells, and the move description table (no dedicated German patch yet;
+# the species-name table, move-name table, ability-name table, mission/
+# world-map text and the one-off fixed-table name cells are now covered by
+# the species_names/move_names/ability_names/mission_descriptions/
+# worldmap_junction_panels/fixed_table_names steps below — F-83, #81).
 #
 # ä ö ü Ä Ö Ü are now in the charmap (slots 0xF1-0xF6) and have glyphs
 # drawn by languages/de/patches/font.py. The `font` step must be scheduled
@@ -105,6 +106,14 @@ status_abbrev:
 #   ability_names            fixed-width 17-byte ability-name table, absent
 #                            from translation_ready.json/Spanish extraction ←
 #                            combined_de.txt (languages/de/patches/ability_names.py)
+#   move_names               fixed-width 13-byte, 894-entry move-name table
+#                            (live base resolved from the ROM's own pointer),
+#                            ← combined_de.txt (languages/de/patches/move_names.py,
+#                            delegates to languages/fr/patches/move_names.py — #81)
+#   species_names            fixed-width 11-byte, 1293-entry species-name
+#                            table @ 0x166A997 ← combined_de.txt
+#                            (languages/de/patches/species_names.py, delegates to
+#                            languages/fr/patches/species_names.py — #81)
 #   fixed_table_names        one-off class-2 fixed cells unreachable by any
 #                            translation pass (Parcel/Package/Berry Pouch/Town
 #                            Map/Hard Stone/TM Case bag names + the Weak Armor
@@ -159,6 +168,8 @@ patches:
   # footer, shop strings, PC box messages). See languages/de/patches/<name>.py.
   - item_names
   - ability_names
+  - move_names       # fixed 13-byte move-name table (live base resolved from ROM ptr) — #81
+  - species_names    # fixed 11-byte species-name table @ 0x166A997 — #81
   - nature_names
   - cfru_type_names
   - pokedex_categories
