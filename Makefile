@@ -167,7 +167,7 @@ build-es: $(OFFSET_MAP) $(BUILD_SCRIPT)
 		--language spanish \
 		--output $(SPANISH_BUILD)
 
-build-fr: $(FRENCH_EXTRACT) $(SPANISH_EXTRACT) $(BUILD_SCRIPT)
+build-fr: check-translations-fr $(FRENCH_EXTRACT) $(SPANISH_EXTRACT) $(BUILD_SCRIPT)
 	@if [ -z "$(FR_TRANSLATION)" ]; then \
 		echo "No translation_ready.json found in output/translation/"; \
 		exit 1; \
@@ -292,13 +292,13 @@ build-fr: $(FRENCH_EXTRACT) $(SPANISH_EXTRACT) $(BUILD_SCRIPT)
 # French keeps its dedicated byte-perfect recipe above (build-fr). Italian and
 # German are driven generically from their languages/<code>/ descriptors.
 
-build-it:
+build-it: check-translations-it
 	@$(PYTHON) scripts/build_language.py it --build-number $(BUILD_NUMBER)
 
-build-de:
+build-de: check-translations-de
 	@$(PYTHON) scripts/build_language.py de --build-number $(BUILD_NUMBER)
 
-build-indie:
+build-indie: check-translations-indie
 	@$(PYTHON) scripts/build_language.py indie --build-number $(BUILD_NUMBER)
 
 # Build any registered generic language: make build-lang LANG_CODE=it
@@ -350,9 +350,13 @@ test-python:
 test-rom:
 	@$(PYTHON) -m pytest tests/ -m rom -v
 
-# Garde anti-régression des traductions FR (labels carte) — voir docs/20_TRANSLATION_PRESERVATION.md
+# Garde anti-régression des traductions (toutes langues) — source de vérité :
+# languages/<lang>/protected_entries.yaml. Voir docs/20_TRANSLATION_PRESERVATION.md §7.
 check-translations:
 	@$(PYTHON) scripts/check_translation_integrity.py
+
+check-translations-%:
+	@$(PYTHON) scripts/check_translation_integrity.py --lang $*
 
 test-vitest:
 	@cd emulator-web && npx vitest run

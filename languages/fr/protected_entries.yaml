@@ -1,0 +1,159 @@
+# Entrées protégées FR — SOURCE DE VÉRITÉ des corrections validées (issues/tickets).
+#
+# scripts/check_translation_integrity.py vérifie que combined_fr.txt (règle
+# last-wins, comme la chaîne de build) résout chaque offset EXACTEMENT à
+# `expected` (ou qu'il reste ABSENT si `absent: true`). Toute divergence fait
+# échouer le pre-commit (make test-python-fast) ET make build-fr.
+#
+# - Correction volontaire d'une entrée protégée → mettre à jour `expected` ici
+#   DANS LE MÊME COMMIT que combined_fr.txt.
+# - Fix perdu (snapshot périmé, Pattern C) → python3 scripts/check_translation_integrity.py --fix
+# - Toute entrée déjà perdue une fois par un commit périmé DOIT être ajoutée ici.
+#
+# Voir docs/20_TRANSLATION_PRESERVATION.md §7.
+entries:
+- offset: '0xB500A0'
+  name: Gurenbourg
+  issue: B-52
+  expected: Gurenbourg
+  forbidden:
+  - Bourg Gurun
+  - ourg Gurun
+  - Gurun Town
+- offset: '0x721304'
+  name: Gouffre Gelé
+  issue: B-52
+  expected: Gouffre Gelé
+  forbidden:
+  - Gouffre Glacial
+  - Trou Glacé
+  - Icy Hole
+- offset: '0x7214E8'
+  name: Île Scintillante
+  issue: B-52
+  expected: Île Scintillante
+  forbidden:
+  - Glimmer Island
+- offset: '0x721968'
+  name: Épidia
+  issue: B-52
+  expected: Épidia
+  forbidden:
+  - Épidimi
+  - Ville d'Epidimy
+  - Epidimy Town
+- offset: '0xB50214'
+  name: Égouts d'Antésia
+  issue: B-52
+  expected: Égouts d'Antésia
+  forbidden:
+  - Égouts d'Antisis
+  - Antisis Sewers
+- offset: '0xB503CC'
+  name: Volcan Cendré
+  issue: B-52
+  expected: Volcan Cendré
+  forbidden:
+  - Volcan Cendreux
+  - Cinder Volcano
+- offset: '0xB514E4'
+  name: Daherapolis
+  issue: B-52
+  expected: Daherapolis
+  forbidden:
+  - Dehara
+  - Dehara City
+  - Ville de Dehara
+- offset: '0xB52274'
+  name: Pension Pokémon
+  issue: B-52
+  expected: Pension Pokémon
+  forbidden:
+  - Pokemon Day Care
+  - Pokémon Day Care
+- offset: '0xB522A4'
+  name: Polderive
+  issue: B-52
+  expected: Polderive
+  forbidden:
+  - Polder sur Rive
+  - Bourg Polder
+  - Polder Town
+- offset: '0xB531D8'
+  name: Île Nouvellune
+  issue: B-52
+  expected: Île Nouvellune
+  forbidden:
+  - Île Nouvelle Lune
+  - Île du Croissant
+  - Newmoon Island
+- offset: '0xB535C8'
+  name: Île Pleinelune
+  issue: B-52
+  expected: Île Pleinelune
+  forbidden:
+  - Île Pleine Lune
+  - Île de la Lune
+  - Fullmoon Island
+- offset: '0xB537AC'
+  name: Rougebois
+  issue: B-52
+  expected: Rougebois
+  forbidden:
+  - Bois-Rouge
+  - Redwood Village
+  - Redwood village
+- offset: '0x720E74'
+  name: Rivapolis
+  issue: B-52
+  expected: Rivapolis
+  forbidden:
+  - Rive-d'Automne
+  - Fallshore
+  - Ville de Fallshore
+  - Fallshore City
+- offset: '0x1F0F842'
+  name: Couleur ceinture/bottes
+  issue: 9ad0fee
+  expected: Choisis une couleur de\nceinture et de bottes.
+  forbidden:
+  - Choisis une couleur de bordure.
+  - Choose a trim colour.
+- offset: '0x83008C'
+  name: Réaction Méga-Cuff 1 (31 octets max)
+  issue: dc84690f
+  expected: Le <0xFD><0x01> de <0xFD><0x00> réagit\nau <0xFD><0x03> de <0xFD><0x02>!
+  forbidden:
+  - Le <0xFD><0x01> de <0xFD><0x00> réagit\nà la <0xFD><0x03> de <0xFD><0x02> !
+- offset: '0x96CC1C'
+  name: Réaction Méga-Cuff 2 (31 octets max)
+  issue: dc84690f
+  expected: Le <0xFD><0x16> de <0xFD><0x00> réagit\nau <0xFD><0x01> de <0xFD><0x39>!
+- offset: '0x7D5083'
+  name: Hoopa (Aklove, rituel)
+  issue: 8fe7dddb0
+  expected: '{COLOR}ËHoopa, prépare-toi !\pVotre véritable pouvoir est sur le\npoint de sortir de la Bouteille\nPrison !\pEt en tant que votre Dresseur, je\npeux parfaitement y parvenir !'
+- offset: '0x1F3A9F2'
+  name: Hoopa (Cube, révélation)
+  issue: 8fe7dddb0
+  expected: Hoopa ! Le moment est venu !\pTon véritable pouvoir va sortir de\nla Bouteille Prison !\pEt en tant que ton Dresseur, je\npeux parfaitement le contrôler !
+- offset: '0x417396'
+  name: 'Menu équipe: Sortir, pas Annuler'
+  issue: '#67'
+  expected: Choisis Pokémon ou Sortir.
+  forbidden:
+  - Choisis Pokémon ou Annuler.
+- offset: '0xA4E047'
+  name: Prompt tri Cube — doit rester ABSENT (patch dédié)
+  issue: '#76'
+  absent: true
+- offset: '0x1F00FC4'
+  name: 'PNJ Dresco: Boissombre au masculin'
+  issue: '#78'
+  expected: À l'ouest de Dresco se trouve\nBoissombre.\pIl regorge de Pokémon Insecte\net Spectre.\pTu devrais y faire un tour quand tu\nle pourras.
+  forbidden:
+  - À l'ouest de Dresco se trouve\nBoissombre.\pElle regorge de Pokémon Insecte\net Spectre.\pTu devrais y faire un tour quand tu\nle pourras.
+- offset: '0x1F01867'
+  name: 'Quête sauvegardes: texte court'
+  issue: 398e386
+  expected: Sauve des vies en sauvegardant manuellement 100 fois.

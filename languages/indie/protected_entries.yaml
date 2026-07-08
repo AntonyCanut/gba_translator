@@ -1,0 +1,25 @@
+# Entrées protégées INDIE — SOURCE DE VÉRITÉ des corrections validées (issues/tickets).
+#
+# scripts/check_translation_integrity.py vérifie que combined_indie.txt (règle
+# last-wins, comme la chaîne de build) résout chaque offset EXACTEMENT à
+# `expected` (ou qu'il reste ABSENT si `absent: true`). Toute divergence fait
+# échouer le pre-commit (make test-python-fast) ET make build-indie.
+#
+# - Correction volontaire d'une entrée protégée → mettre à jour `expected` ici
+#   DANS LE MÊME COMMIT que combined_indie.txt.
+# - Fix perdu (snapshot périmé, Pattern C) → python3 scripts/check_translation_integrity.py --fix --lang indie
+# - Toute entrée déjà perdue une fois par un commit périmé DOIT être ajoutée ici.
+#
+# Format d'une entrée :
+#   - offset: "0x123456"
+#     name: "Description courte"
+#     issue: "#NN"                       # optionnel
+#     expected: 'Texte exact attendu'    # quoting simple : \n reste littéral
+#     forbidden: ['Forme périmée']       # optionnel, message d'erreur plus clair
+#   # ou, pour un offset qui doit rester absent du fichier :
+#   - offset: "0x123456"
+#     name: "..."
+#     absent: true
+#
+# Voir docs/20_TRANSLATION_PRESERVATION.md §7.
+entries: []
