@@ -88,7 +88,7 @@ PARTY_ROWS: list[tuple[int, int, int]] = [
     (51, 52, 5), (51, 52, 6), (51, 52, 7),
     (59, 60, 0), (59, 60, 1), (59, 60, 2),
 ]
-PARTY_NCOLS = 14           # cols 14-15 = HP-bar left cap, must stay untouched
+PARTY_NCOLS = 13           # cols 13-15 = HP-bar left cap, must stay untouched
 PARTY_BG, PARTY_OUT, PARTY_FILL = 0x6, 0xE, 0xF
 
 # New « PV » (bold, 4 fill rows — same geometry as the EN « HP »)
@@ -96,8 +96,8 @@ PARTY_PV_FILL: set[tuple[int, int]] = (
     # P: cols 2-6
     {(1, c) for c in range(2, 7)} | {(2, 2), (2, 3), (2, 5), (2, 6)}
     | {(3, c) for c in range(2, 7)} | {(4, 2), (4, 3)}
-    # V: cols 8-12
-    | {(1, 8), (1, 9), (1, 11), (1, 12)} | {(2, 8), (2, 9), (2, 11), (2, 12)}
+    # V: cols 8-11; keep cols 13-15 for the HP-bar left cap.
+    | {(1, 8), (1, 9), (1, 10), (1, 11)} | {(2, 8), (2, 9), (2, 10), (2, 11)}
     | {(3, 9), (3, 10), (3, 11)} | {(4, 10)}
 )
 
@@ -108,6 +108,16 @@ PARTY_OLD_TILES: dict[int, str] = {
     52: "6666666666666666666666666666666666666666eeee6e66ffffefe6fffeefe6",
     59: "e6ffffefe6fffeef66eee66e6666666666666666666666666666666666666666",
     60: "ffffefe6ffee6e66ee6666666666666666666666666666666666666666666666",
+}
+
+# Previous FR « PV » art from this patch before the HP-bar cap was widened.
+# Treat it as an input variant so already-built ROMs are migrated to the
+# non-truncated bar instead of being skipped as "unknown".
+PARTY_CLIPPED_PV_TILES: dict[int, str] = {
+    51: "666666666666666666666666666666666666666666eeee6ee6ffffefe6fffeef",
+    52: "6666666666666666666666666666666666666666eee66e66fffeefe6fffeefe6",
+    59: "e6ffffefe6ffee6e66ee66666666666666666666666666666666666666666666",
+    60: "feff6ee6e6ef6666666e66666666666666666666666666666666666666666666",
 }
 
 # ── 2. Summary green bar label sprite (block 0x00E9B4B8) ────────────────────
@@ -186,6 +196,22 @@ def _draw_party_label(tiles: bytearray) -> None:
             else:
                 continue                  # box border / background: keep
             _px_set(tiles, tile, row, col, val)
+    _restore_party_bar_cap(tiles)
+
+
+def _restore_party_bar_cap(tiles: bytearray) -> None:
+    """Restore the HP-bar cap pixels that sit directly after the label."""
+    original = {
+        t: bytes.fromhex(h) for t, h in PARTY_OLD_TILES.items()
+    }
+    for tile in (52, 60):
+        for row in range(8):
+            old_byte2 = original[tile][row * 4 + 2]
+            old_byte3 = original[tile][row * 4 + 3]
+            off2 = tile * TILE + row * 4 + 2
+            off3 = tile * TILE + row * 4 + 3
+            tiles[off2] = (tiles[off2] & 0x0F) | (old_byte2 & 0xF0)
+            tiles[off3] = old_byte3
 
 
 def _draw_green_label(tiles: bytearray) -> None:
@@ -304,7 +330,10 @@ def apply_patches(rom_path: Path) -> int:
     patched = 0
     patched += _patch_label(
         rom, PARTY_BLOCK, PARTY_OLD_TILES.keys(),
-        {"EN « HP »": PARTY_OLD_TILES}, _draw_party_label,
+        {
+            "EN « HP »": PARTY_OLD_TILES,
+            "FR « PV » rognant": PARTY_CLIPPED_PV_TILES,
+        }, _draw_party_label,
         "party-menu label (0x008001D0)",
     )
     patched += _patch_label(
