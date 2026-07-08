@@ -35,6 +35,7 @@ sys.path.insert(0, str(ROOT / "scripts"))  # build_language is imported by bare 
 # ``languages/fr/patches/<name>.py`` (same basename).
 WRAPPERS = {
     "ability_names": ["--combined", "--combined-en"],
+    "species_names": ["--combined"],
     "move_names": ["--combined"],
     "tm_item_descriptions": ["--combined"],
     "dup_move_descriptions": ["--combined"],
@@ -81,7 +82,7 @@ def test_wrapper_never_references_french_data(name):
 
 
 def test_combined_wrappers_point_at_italian_combined():
-    for name in ("ability_names", "move_names", "tm_item_descriptions",
+    for name in ("ability_names", "species_names", "move_names", "tm_item_descriptions",
                  "meteorite_dialogue", "mission_descriptions"):
         mod = _it_wrapper(name)
         cmd = " ".join(str(p) for p in mod.make_command(DUMMY_ROM))
@@ -139,7 +140,7 @@ def _load_build_language():
 
 def test_lang_patch_script_resolves_ported_wrappers():
     bl = _load_build_language()
-    for step in ("ability_names", "meteorite_dialogue", "summary_labels", "tm_item_descriptions"):
+    for step in ("ability_names", "species_names", "meteorite_dialogue", "summary_labels", "tm_item_descriptions"):
         script = bl._lang_patch_script(step, "it")
         assert script is not None and script.name == f"{step}.py", step
         assert script.parent == ROOT / "languages" / "it" / "patches", step
