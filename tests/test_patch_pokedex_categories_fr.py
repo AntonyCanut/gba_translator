@@ -208,6 +208,7 @@ class TestMapping:
         assert m['Mouse'] == 'Souris'
         assert m['Poison Pin'] == 'Aiguillon'
         assert m['Licking'] == 'Lécheur'
+        assert m['Fresh Snow'] == 'NeigeFraîch'
         assert m['Seed'] == 'Graine'
         assert m['Lizard'] == 'Lézard'
         assert m['Flame'] == 'Flamme'
@@ -270,6 +271,12 @@ class TestROMIntegration:
         data = bytearray(ROM_PATH.read_bytes())
         idx = self._find_category_idx(data, 'Lécheur')
         assert idx is not None, "'Lécheur' not found in ROM"
+
+    def test_neigefraich_category_present(self):
+        """'NeigeFraîch' (FR Fresh Snow) should be in the built ROM."""
+        data = bytearray(ROM_PATH.read_bytes())
+        idx = self._find_category_idx(data, 'NeigeFraîch')
+        assert idx is not None, "'NeigeFraîch' not found in ROM"
 
     def test_idempotent_on_real_rom(self):
         mapping = load_mapping(DATA_DIR)
