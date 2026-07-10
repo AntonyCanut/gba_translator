@@ -19,6 +19,7 @@ from languages.fr.patches.party_lv_label import (
     LV_GLYPH_OFFSET,
     NEW_ND_GLYPH,
     OLD_LV_GLYPH,
+    OLD_ND_GLYPH_NOSHADOW,
     apply_patch,
 )
 
@@ -50,6 +51,21 @@ class TestGlyphDefinitions(unittest.TestCase):
             old_val = (OLD_LV_GLYPH[byte] & 0xF) if nib % 2 == 0 else (OLD_LV_GLYPH[byte] >> 4)
             self.assertNotEqual(old_val, 5, f"nibble {nib} was already ink in « Lv »")
 
+    def test_period_dot_has_drop_shadow(self):
+        # Issue #104: the period dot must cast the font's grey drop-shadow
+        # (value 8) directly below it — nibble 48 (local col 3, row 12). The
+        # earlier shadow-less « N. » left this transparent (value 0).
+        nib = 48
+        byte = nib // 2
+        val = (NEW_ND_GLYPH[byte] & 0xF) if nib % 2 == 0 else (NEW_ND_GLYPH[byte] >> 4)
+        self.assertEqual(val, 8, "period dot must have a grey drop-shadow (value 8)")
+        old = (OLD_ND_GLYPH_NOSHADOW[byte] & 0xF) if nib % 2 == 0 else (OLD_ND_GLYPH_NOSHADOW[byte] >> 4)
+        self.assertEqual(old, 0, "shadow-less « N. » had no drop-shadow pixel there")
+
+    def test_noshadow_differs_only_by_shadow_pixel(self):
+        diffs = [i for i in range(GLYPH_SIZE) if NEW_ND_GLYPH[i] != OLD_ND_GLYPH_NOSHADOW[i]]
+        self.assertEqual(diffs, [24], "shadow fix must touch only the drop-shadow byte")
+
 
 class TestApplyPatch(unittest.TestCase):
     def test_patches_lv_to_nd(self):
@@ -65,6 +81,16 @@ class TestApplyPatch(unittest.TestCase):
         p = Path("/tmp/_lvtest2.gba")
         p.write_bytes(rom)
         self.assertEqual(apply_patch(p), 0)
+        self.assertEqual(p.read_bytes()[LV_GLYPH_OFFSET:LV_GLYPH_OFFSET + GLYPH_SIZE],
+                         NEW_ND_GLYPH)
+
+    def test_repatches_shadowless_nd_to_shadowed(self):
+        # An already-built ROM carrying the old shadow-less « N. » must converge
+        # to the shadowed glyph without a full rebuild (issue #104).
+        rom = _fake_rom(OLD_ND_GLYPH_NOSHADOW)
+        p = Path("/tmp/_lvtest_noshadow.gba")
+        p.write_bytes(rom)
+        self.assertEqual(apply_patch(p), 1)
         self.assertEqual(p.read_bytes()[LV_GLYPH_OFFSET:LV_GLYPH_OFFSET + GLYPH_SIZE],
                          NEW_ND_GLYPH)
 
