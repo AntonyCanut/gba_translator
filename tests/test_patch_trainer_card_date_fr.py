@@ -3,6 +3,12 @@ import unittest
 from pathlib import Path
 
 from languages.fr.patches.trainer_card_date import (
+    BIRTHDAY_FIRST_COMPONENT_FILE,
+    BIRTHDAY_FIRST_COMPONENT_NEW,
+    BIRTHDAY_FIRST_COMPONENT_OLD,
+    BIRTHDAY_LAST_COMPONENT_FILE,
+    BIRTHDAY_LAST_COMPONENT_NEW,
+    BIRTHDAY_LAST_COMPONENT_OLD,
     BLOCK_FILE,
     BLOCK_LEN,
     BUILDER_FILE,
@@ -42,6 +48,11 @@ class TestApplySynthetic(unittest.TestCase):
         )
         # free space for the builder
         data[BUILDER_FILE:BUILDER_FILE + 0x60] = b"\xff" * 0x60
+        # original birthday assembly loads (year, month, day)
+        data[BIRTHDAY_FIRST_COMPONENT_FILE:
+             BIRTHDAY_FIRST_COMPONENT_FILE + 2] = BIRTHDAY_FIRST_COMPONENT_OLD
+        data[BIRTHDAY_LAST_COMPONENT_FILE:
+             BIRTHDAY_LAST_COMPONENT_FILE + 2] = BIRTHDAY_LAST_COMPONENT_OLD
         # a month pointer table pointing at cells, one with a trailing space
         cell_a = 0x1FE6D00
         cell_b = 0x1FE6D10
@@ -68,6 +79,17 @@ class TestApplySynthetic(unittest.TestCase):
         self.assertEqual(data[cell_a + 4], 0xFF)
         # dot cell untouched
         self.assertEqual(data[cell_b + 4], 0xAD)
+        # birthday components now render day/month/year
+        self.assertEqual(
+            bytes(data[BIRTHDAY_FIRST_COMPONENT_FILE:
+                       BIRTHDAY_FIRST_COMPONENT_FILE + 2]),
+            BIRTHDAY_FIRST_COMPONENT_NEW,
+        )
+        self.assertEqual(
+            bytes(data[BIRTHDAY_LAST_COMPONENT_FILE:
+                       BIRTHDAY_LAST_COMPONENT_FILE + 2]),
+            BIRTHDAY_LAST_COMPONENT_NEW,
+        )
         # idempotent
         self.assertEqual(apply(data), 0)
 
@@ -82,6 +104,15 @@ class TestApplySynthetic(unittest.TestCase):
 class TestBuiltRom(unittest.TestCase):
     def test_committed_rom_has_french_date_builder(self):
         data = ROM.read_bytes()
+        # Birthday is assembled as day/month/year, not the English Y/M/D.
+        self.assertEqual(
+            data[BIRTHDAY_FIRST_COMPONENT_FILE:BIRTHDAY_FIRST_COMPONENT_FILE + 2],
+            BIRTHDAY_FIRST_COMPONENT_NEW,
+        )
+        self.assertEqual(
+            data[BIRTHDAY_LAST_COMPONENT_FILE:BIRTHDAY_LAST_COMPONENT_FILE + 2],
+            BIRTHDAY_LAST_COMPONENT_NEW,
+        )
         # the inline block must have been redirected (starts ldr r7,[pc,#0xfc])
         self.assertEqual(data[BLOCK_FILE:BLOCK_FILE + 2], b"\x3f\x4f")
         # builder present in free space

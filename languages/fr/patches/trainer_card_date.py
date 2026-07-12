@@ -31,6 +31,11 @@ This post-build step therefore:
 
 Result on screen: "Début de l'aventure : 19 Janv. 2026".
 
+The card's birthday is built separately as three numeric buffers.  Its
+original order is ``year / month / day``; the two loads below reorder those
+same buffers to ``day / month / year`` without changing their formatting or
+the card layout.
+
 Every write verifies the bytes it expects and is idempotent.
 
 Usage:
@@ -61,6 +66,23 @@ VENEER_BX_R3 = 0x09ED920C         # bx r3 veneer (register-indirect call)
 DEST_POOL_FILE = 0x1ED8E74        # existing pool word holding 0x02021D18
 
 MONTH_PTR_TABLE_FILE = 0x1FE6BFC  # 12 live month-name pointers (month 1..12)
+
+# Birthday date builder.  The original sequence is year/month/day:
+#
+#   StringCopy(dest, 0x02021CD0)  # year
+#   StringAppend(dest, "/")
+#   StringAppend(dest, 0x02021CF0)  # month
+#   StringAppend(dest, "/")
+#   StringAppend(dest, 0x02021D04)  # day
+#
+# Point the first load at the existing day literal and make the last load read
+# the already-stashed year pointer.  Result: day/month/year (JJ/MM/AAAA).
+BIRTHDAY_FIRST_COMPONENT_FILE = 0x1ED8BD0
+BIRTHDAY_LAST_COMPONENT_FILE = 0x1ED8BF0
+BIRTHDAY_FIRST_COMPONENT_OLD = b"\x08\x99"  # ldr r1,[sp,#0x20] (year)
+BIRTHDAY_FIRST_COMPONENT_NEW = b"\xb5\x49"  # ldr r1,[pc,#0x2d4] (day literal)
+BIRTHDAY_LAST_COMPONENT_OLD = b"\xad\x49"   # ldr r1,[pc,#0x2b4] (day literal)
+BIRTHDAY_LAST_COMPONENT_NEW = b"\x08\x99"   # ldr r1,[sp,#0x20] (year)
 
 
 # ---- tiny Thumb encoders ---------------------------------------------------
@@ -215,6 +237,27 @@ def apply(data: bytearray) -> int:
         if end > 0 and data[end - 1] == 0x00:   # trailing SPACE byte
             data[end - 1] = 0xFF                 # move terminator back one
             changed += 1
+
+    # 4) birthday: YYYY/MM/DD -> DD/MM/YYYY.  The date components have
+    # already been rendered into buffers, so only their two endpoint loads
+    # need to change; the slash and month instructions remain untouched.
+    for offset, old, new in (
+        (BIRTHDAY_FIRST_COMPONENT_FILE,
+         BIRTHDAY_FIRST_COMPONENT_OLD,
+         BIRTHDAY_FIRST_COMPONENT_NEW),
+        (BIRTHDAY_LAST_COMPONENT_FILE,
+         BIRTHDAY_LAST_COMPONENT_OLD,
+         BIRTHDAY_LAST_COMPONENT_NEW),
+    ):
+        current = bytes(data[offset:offset + len(new)])
+        if current == new:
+            continue
+        if current != old:
+            raise ValueError(
+                f"birthday load 0x{offset:X} unexpected: {current.hex()}"
+            )
+        data[offset:offset + len(new)] = new
+        changed += 1
     return changed
 
 
