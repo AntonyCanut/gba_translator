@@ -70,7 +70,7 @@ python3 scripts/spellcheck_combined_fr.py # spellcheck translation file
 
 ## Non-obvious gotchas
 
-1. **combined_fr.txt duplicates**: last entry wins — add at bottom, never use `csv.writer`
+1. **Fichiers `combined_<langue>.txt` (toutes langues)** : sources manuelles et cumulatives, y compris le `combined_fr.txt` historique à la racine. **Ne jamais les régénérer, réécrire entièrement, trier, normaliser ou reformater**, ni les reconstruire depuis une ROM, un CSV, un JSON ou un script. Corriger uniquement l'entrée visée, en préservant ordre, doublons, encodage et fins de ligne ; si la dernière occurrence gagne, modifier cette dernière occurrence. Avant le commit, le diff doit se limiter aux offsets attendus, sans suppression, déplacement ou changement indirect. Une régénération ne peut avoir lieu que si le ticket la demande explicitement avec une procédure de préservation et vérification. Pour la FR, les doublons sont résolus par dernière occurrence : ajouter dans le bloc bas et ne jamais utiliser `csv.writer`.
 2. **Charmap sync**: after editing `text_codec.py`, run `make sync-charmap`
 3. **Fixed tables**: `src/core/fixed_tables.py` — never relocate these addresses
 4. **LZ77 repair**: always run after build; `make build-fr` does this automatically

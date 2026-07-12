@@ -198,7 +198,7 @@ pytest --cov=src tests/
 
 ## Non-obvious rules
 
-1. **combined_fr.txt**: ~957 duplicate offsets — last entry wins. Add entries at the bottom (lowercase block). Never use `csv.writer` (corrupts CRLF fields).
+1. **Fichiers `combined_<langue>.txt` (toutes langues)** : sources manuelles et cumulatives, y compris le `combined_fr.txt` historique à la racine. **Ne jamais les régénérer, réécrire entièrement, trier, normaliser ou reformater**, ni les reconstruire depuis une ROM, un CSV, un JSON ou un script. Toute correction est une édition chirurgicale de l'entrée visée : préserver l'ordre, les doublons, l'encodage et les fins de ligne ; lorsque la dernière occurrence gagne, modifier cette dernière occurrence. Avant le commit, vérifier que le diff ne contient que les offsets attendus, sans suppression, déplacement ou changement indirect. Une régénération ne peut avoir lieu que si le ticket la demande explicitement avec une procédure de préservation et vérification. Pour la FR : ~957 doublons, dernière entrée gagnante ; ajouter dans le bloc bas en minuscules. Ne jamais utiliser `csv.writer` (corrompt les champs CRLF).
 2. **Charmap sync**: After editing `text_codec.py`, run `make sync-charmap`.
 3. **Fixed tables**: `src/core/fixed_tables.py` lists addresses that must never be relocated — relocation silently corrupts in-game lookups.
 4. **LZ77**: Always run repair scripts after build-fr. `make build-fr` does this automatically.

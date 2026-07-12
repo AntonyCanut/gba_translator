@@ -184,6 +184,24 @@ Languages are declared in a registry: `languages/<code>/lang.yaml`, loaded by
 
 Full guide: `docs/21_MULTILANGUE.md`. Tests: `tests/test_language_registry.py`.
 
+## Règle impérative — fichiers `combined_<langue>.txt` (tous agents, toutes langues)
+
+> Les fichiers `combined_<langue>.txt` sont des sources de traduction manuelles et
+> cumulatives. Cette règle s'applique au `combined_fr.txt` historique à la racine
+> comme à **tous** les fichiers `languages/*/combined_*.txt`, quelle que soit la langue.
+
+- **Interdiction absolue de régénérer, réécrire entièrement, trier, normaliser ou
+  reformater** un fichier `combined`. Ne pas le reconstruire depuis une ROM, un CSV,
+  un JSON ou un script, et ne pas lancer de remplacement global (`sed`, regex, script
+  de masse) dessus.
+- Toute correction doit être une **édition chirurgicale** de l'entrée visée : conserver
+  l'ordre, les doublons, l'encodage et les fins de ligne existantes. Quand les doublons
+  sont résolus par dernière occurrence, localiser et modifier cette dernière occurrence.
+- Avant le commit, contrôler le diff : il ne doit contenir que les offsets explicitement
+  concernés, sans suppression, déplacement ni modification indirecte d'autres entrées.
+- Une régénération n'est acceptable que si le ticket la demande explicitement et fournit
+  une procédure de préservation et de vérification des entrées existantes.
+
 ## Domain Glossary
 
 | Term | Meaning |
