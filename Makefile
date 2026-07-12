@@ -280,6 +280,7 @@ build-fr: check-translations-fr $(FRENCH_EXTRACT) $(SPANISH_EXTRACT) $(BUILD_SCR
 	@$(PYTHON) $(PATCH_MONEY_AMOUNT_ORDER_FR_SCRIPT) --rom $(FR_BUILD)
 	@$(PYTHON) scripts/patch_evolution_message_fr.py $(FR_BUILD)
 	@$(PYTHON) scripts/insert_sprite.py --rom $(FR_BUILD) --lang fr --sprite selection --bmp languages/fr/sprites/selection.bmp
+	@$(PYTHON) scripts/insert_sprite.py --rom $(FR_BUILD) --lang fr --sprite start_menu_move_hint --bmp languages/fr/sprites/start_menu_move_hint.bmp
 	@$(PYTHON) $(PATCH_SUMMARY_LV_LABELS_SCRIPT) --rom $(FR_BUILD)
 	@echo "✓ FR ROM built — vérification des traductions de lieux..."
 	@$(PYTHON) -m pytest tests/test_location_names_fr.py -q --tb=short
