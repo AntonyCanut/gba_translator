@@ -717,3 +717,7 @@ entries:
   expected: Active
   forbidden:
   - Actives
+- offset: '0x1F030EE'
+  name: 'Dresco shop NPC: Repousses dialogue'
+  issue: '#112'
+  expected: Comme les Repousses, certains talents\ncomme {COLOR}ÉPuanteur{COLOR}Ë éloignent\lles Pokémon sauvages.
