@@ -25136,6 +25136,7 @@ objets utiles aux Dresseurs.
 0x1f65e5c: Route 8
 0x419e2c: Choix
 0x419e32: Défini
+
 # Ticket B-305 : maison Dresco, 2 PNJ non traduits (dons de CT + remerciement visite).
 # combined_fr.txt n'avait jamais réabsorbé ces offsets après une régression (Pattern C) ;
 # DE/IT avaient déjà les traductions complètes, servi de référence pour la page manquante.
