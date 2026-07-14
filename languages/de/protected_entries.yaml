@@ -57,3 +57,9 @@ entries:
   name: 'PNJ Safari Zone : changement et Wesen Pokémon'
   issue: B-308
   expected: 'Wir können unverändert leben,\nweil wir uns immer verändern.\pIch meine, auch Pokémon entwickeln sich,\naber ihre Wesen bleiben gleich.\pZumindest sollte es so sein...'
+- offset: '0x1f47022'
+  name: 'Arthur: Kanto-Flashback'
+  issue: F-119
+  expected: 'Bereiter könnte ich nicht sein!\pDa werden Erinnerungen wach!'
+  forbidden:
+  - This sure brings me back!
