@@ -29,3 +29,9 @@ entries:
   expected: 'Per essere una palude, <0xFC><0x01><0x06>Cootes<0xFC><0x01><0x08>\nsorprendentemente non ospita molti\lPokémon di tipo Coleottero.'
   forbidden:
   - Cootes Bog
+- offset: '0x1f478ee'
+  name: 'Rivale : battuta post-lotta Krookodile'
+  issue: B-302
+  expected: 'Cavolo<0xB0> di cosa mi preoccupavo?\nCerto che sei pronto!'
+  forbidden:
+  - Man… what was I even worried about?

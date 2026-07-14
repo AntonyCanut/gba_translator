@@ -69,3 +69,9 @@ entries:
   expected: 'Alles klar!\nJetzt leg ich los!'
   forbidden:
   - Okay!\nI'm going to get all fired up!
+- offset: '0x1f478ee'
+  name: 'Rivale : réplique post-combat Carohacrok'
+  issue: B-302
+  expected: 'Mann<0xB0> warum habe ich mir überhaupt Sorgen gemacht?\nNatürlich bist du bereit!'
+  forbidden:
+  - Man… what was I even worried about?
