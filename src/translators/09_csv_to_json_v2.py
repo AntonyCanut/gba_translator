@@ -62,6 +62,8 @@ class TranslationValidator:
             raise FileNotFoundError("output/translation/ not found")
 
         csv_files = list(translation_dir.glob('*_translation_*.csv'))
+        if not csv_files:
+            csv_files = list(translation_dir.glob('*translation*.csv'))
 
         if not csv_files:
             raise FileNotFoundError("No CSV files found in output/translation/")
