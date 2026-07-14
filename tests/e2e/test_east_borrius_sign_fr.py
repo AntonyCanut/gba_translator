@@ -9,8 +9,12 @@ from __future__ import annotations
 
 import struct
 
+import pytest
+
 from src.core.text_codec import TextDecoder
 
+
+pytestmark = pytest.mark.rom
 
 SOURCE_TEXT_OFFSET = 0x1F52A9C
 POINTER_BASE = 0x08000000
@@ -18,12 +22,11 @@ POINTER_END = 0x0A000000
 POKEMON_TERMINATOR = 0xFF
 EXPECTED_FRENCH_TEXT = (
     "Bienvenue à Borrius Est !<0xFB>"
-    "Polderive est bien différente\n"
-    "de Borrius Ouest, tu ne trouves<0xFA>"
-    "pas ?<0xFB>"
-    "Je doute que les gens de<0xFA>"
-    "Borrius Ouest veuillent vivre<0xFA>"
-    "dans un marais."
+    "Polderive est bien différente de\n"
+    "Borrius Ouest, tu ne trouves pas ?<0xFB>"
+    "Je doute que les gens de Borrius\n"
+    "Ouest veuillent vivre dans un<0xFA>"
+    "marais."
 )
 
 
