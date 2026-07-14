@@ -75,3 +75,13 @@ entries:
   expected: 'Mann<0xB0> warum habe ich mir überhaupt Sorgen gemacht?\nNatürlich bist du bereit!'
   forbidden:
   - Man… what was I even worried about?
+- offset: '0x1F479B7'
+  name: 'Ace : ascension rapide du Pic Cristal'
+  expected: 'Lass uns so schnell wie möglich\nden Gipfel erreichen.\pUnterwegs heile ich deine Pokémon.'
+  forbidden:
+  - Let's make our way to the top as quick as possible.
+- offset: '0x1F47A62'
+  name: 'Mécanique équipe avec Ace'
+  expected: '<0xFC><0x01><0x02>Solange du mit <0xFD><0x06> im Team bist,\nwerden die <0xFC><0x01><0x06>ersten 3<0xFC><0x01><0x02> kampffähigen Pokémon\laus deinem Team für den Kampf gewählt.\p<0xFD><0x06> kann außerdem Surfer und\nKraxler einsetzen.'
+  forbidden:
+  - While teamed up with Ace, the first 3 viable Pokémon in your party will be selected for battle.
