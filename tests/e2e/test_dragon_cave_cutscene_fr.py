@@ -11,7 +11,8 @@ from src.core.text_codec import TextDecoder
 
 GBA_BASE = 0x08000000
 
-# (speaker, live pointer site, original EN string offset, expected FR, forbidden EN)
+# (speaker, live pointer site, original string offset, expected FR, forbidden EN)
+# A short FR string may overwrite its original slot; longer strings are relocated.
 CUTSCENE_LINES = (
     (
         "Ace",
@@ -94,12 +95,9 @@ def test_dragon_cave_cutscene_is_french(
     target, decoded = _decode_pointer_target(rom, pointer_site)
     visible = _visible_text(decoded)
 
-    assert target != english_offset, (
-        f"{speaker}: pointer @0x{pointer_site:07X} still targets the EN source "
-        f"0x{english_offset:07X}"
-    )
     assert expected_french in visible, (
         f"{speaker}: expected {expected_french!r} via pointer @0x{pointer_site:07X}, "
+        f"live target 0x{target:07X} (original slot 0x{english_offset:07X}), "
         f"got {visible!r}"
     )
     assert forbidden_english not in visible, (
