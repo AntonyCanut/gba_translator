@@ -163,6 +163,15 @@ def apply_patches(data: bytearray, patches=PATCHES) -> int:
         current = bytes(data[offset : offset + len(old)])
         if current == new:
             continue  # already patched
+        # The generic text builder may normalize the leading format byte of
+        # this template to the string terminator while leaving the remainder
+        # untouched.  It is still the same pre-patch cell; restore the full
+        # French template instead of making an otherwise reproducible build
+        # fail on an unexpected one-byte shift.
+        if offset == 0x1F11DAC and current == b"\xff" + old[1:]:
+            data[offset : offset + len(new)] = new
+            applied += 1
+            continue
         if current != old:
             raise ValueError(
                 f"0x{offset:X}: unexpected bytes {current.hex(' ')} "

@@ -57,7 +57,7 @@ TARGETS: dict[int, str] = {
     0x463DEB: "Relax",     # Relaxed
     0x463DF3: "Malin",     # Impish
     0x463DFA: "Lâche",     # Lax
-    0x463DFE: "Craintif",  # Timid
+    0x463DFE: "Timide",    # Timid
     0x463E04: "Pressé",    # Hasty
     0x463E0A: "Sérieux",   # Serious
     0x463E12: "Jovial",    # Jolly

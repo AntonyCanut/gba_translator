@@ -209,3 +209,381 @@ entries:
   expected: Ce drôle de type essaie sans arrêt\nde me convaincre qu'il est mon père.\pÇa n'a pas plu à <0xFD><0x06>,\nmais il l'a quand même cru.\pMoi, je ne marche pas !\pPourquoi mon père apparaîtrait-il\ncomme ça après seize ans ?
   forbidden:
   - This weird guy keeps trying to convince me he's my dad
+
+# Ticket B-319 — cluster final du Pic Cristal (couverture représentative par scène).
+- offset: '0x1F47A62'
+  name: 'Mécanique équipe avec Ace'
+  issue: B-319
+  expected: '<0xFC><0x01><0x02>En faisant équipe avec <0xFD><0x06>, les\n<0xFC><0x01><0x06>3 premiers<0xFC><0x01><0x02> Pokémon valides de ton\n équipe seront choisis pour le combat.<0xB0><0xFD><0x06> peut aussi utiliser Surf et\nEscalade.'
+- offset: '0x1F47B23'
+  name: 'Réplique Ace — variante sommet'
+  issue: B-319
+  expected: 'Essayons d''atteindre le sommet\naussi vite que possible.<0xB0>Ces types de la Light of Ruin ne\nfont pas le poids face à nous deux !'
+- offset: '0x1F49748'
+  name: 'Combat final — pouvoir de Hoopa'
+  issue: B-319
+  expected: '<0xFC><0x01><0x02>Hoopa a invoqué un pouvoir mystérieux\net a grandi !'
+- offset: '0x1F4A66B'
+  name: 'Épilogue — Marlon et Zeph'
+  issue: B-319
+  expected: 'Bien sûr, Zeph.<0xB0>Je le ramènerai chez moi jusqu''à ta\nlibération.'
+- offset: '0x1F4BCD8'
+  name: 'Écran de victoire — tenue'
+  issue: B-319
+  expected: 'De plus, une nouvelle tenue a été\najoutée à la Boîte à Costumes !'
+- offset: '0x1F4CFB3'
+  name: 'Retour de Marlon'
+  issue: B-319
+  expected: 'Marlon ! Toi aussi, tu es là ?'
+- offset: '0x1F7E03C'
+  name: 'Alias pointeur Mont Foudroyant'
+  issue: B-319
+  expected: 'Mont Foudroyant'
+- offset: '0x1F47022'
+  name: 'Cluster Pic Cristal — 0x1F47022'
+  issue: B-319
+  expected: 'Je suis prêt comme jamais !<0xB0>Ça me rappelle tant de souvenirs !'
+- offset: '0x1F47056'
+  name: 'Cluster Pic Cristal — 0x1F47056'
+  issue: B-319
+  expected: 'Étouraptor ! Emmène-nous à <0xFC><0x01><0x06>Port-Lagune<0xFC><0x01><0x08> !'
+- offset: '0x1F47080'
+  name: 'Cluster Pic Cristal — 0x1F47080'
+  issue: B-319
+  expected: 'Employé'
+- offset: '0x1F47086'
+  name: 'Cluster Pic Cristal — 0x1F47086'
+  issue: B-319
+  expected: 'Comment ça, le bateau ne part pas ?<0xB0>Nous devons rejoindre Polderive\nau plus vite !<0xB0>Le destin de Borrius en dépend !'
+- offset: '0x1F4725D'
+  name: 'Cluster Pic Cristal — 0x1F4725D'
+  issue: B-319
+  expected: 'Si ça nous y mène rapidement,\nallons-y.'
+- offset: '0x1F4728D'
+  name: 'Cluster Pic Cristal — 0x1F4728D'
+  issue: B-319
+  expected: 'Tu as compris, <0xFD><0x01> ?<0xB0>Retrouve-nous au bateau sur les quais,\nau <0xFC><0x01><0x06>nord<0xFC><0x01><0x08> d''ici.<0xB0>Nous partirons devant et monterons à bord\nsans toi, pour ne pas perdre de temps.<0xB0>Ah, oui : prends ce billet pour pouvoir\nmonter toi aussi.'
+- offset: '0x1F4739D'
+  name: 'Cluster Pic Cristal — 0x1F4739D'
+  issue: B-319
+  expected: 'Papi Arthur, nous devons aller au\nPic Cristal.<0xB0>Ce qui se prépare au-dessus de la\nmontagne n''est pas un simple orage.<0xB0>Ils doivent préparer l''Arme Suprême\npour détruire Borrius !'
+- offset: '0x1F4792A'
+  name: 'Cluster Pic Cristal — 0x1F4792A'
+  issue: B-319
+  expected: 'Tu es peut-être prêt à escalader la\nmontagne, mais pas moi, je crois.<0xB0>Laisse-moi prendre rapidement d''autres\nPokémon dans le PC.'
+- offset: '0x1F479A4'
+  name: 'Cluster Pic Cristal — 0x1F479A4'
+  issue: B-319
+  expected: 'Voilà, je suis de retour.'
+- offset: '0x1F479B7'
+  name: 'Cluster Pic Cristal — 0x1F479B7'
+  issue: B-319
+  expected: 'Essayons d''atteindre le sommet\naussi vite que possible.<0xB0>Je soignerai tes Pokémon\npendant la montée.'
+- offset: '0x1F47A18'
+  name: 'Cluster Pic Cristal — 0x1F47A18'
+  issue: B-319
+  expected: 'Tu es prêt à continuer à monter la\nmontagne, <0xFD><0x01> ?'
+- offset: '0x1F47A45'
+  name: 'Cluster Pic Cristal — 0x1F47A45'
+  issue: B-319
+  expected: '<0xFC><0x01><0x02><0xFD><0x01> a décidé de partir avec\n<0xFD><0x06> !'
+- offset: '0x1F47AFB'
+  name: 'Cluster Pic Cristal — 0x1F47AFB'
+  issue: B-319
+  expected: 'Dépêche-toi, <0xFD><0x01>.\nNous n''avons pas de temps à perdre !'
+- offset: '0x1F47D2C'
+  name: 'Cluster Pic Cristal — 0x1F47D2C'
+  issue: B-319
+  expected: 'On dirait que c''est le sommet de la\nmontagne, <0xFD><0x01> !<0xB0>Encore un petit effort et nous pourrons\narrêter Aklove !'
+- offset: '0x1F47D84'
+  name: 'Cluster Pic Cristal — 0x1F47D84'
+  issue: B-319
+  expected: 'Où vas-tu, <0xFD><0x01> ?<0xB0>Tu dois retourner en ville chercher des\nprovisions ou quelque chose ?'
+- offset: '0x1F47DDC'
+  name: 'Cluster Pic Cristal — 0x1F47DDC'
+  issue: B-319
+  expected: 'Reviens vite, <0xFD><0x01>.\nNous n''avons pas de temps à perdre !'
+- offset: '0x1F47EBF'
+  name: 'Cluster Pic Cristal — 0x1F47EBF'
+  issue: B-319
+  expected: 'Et voilà ! Comme si ça allait\nnous arrêter !'
+- offset: '0x1F47EEE'
+  name: 'Cluster Pic Cristal — 0x1F47EEE'
+  issue: B-319
+  expected: 'Toi ! Tu es encore là !?<0xB0>Pourquoi ? Pourquoi faire tout ça ?<0xB0>Ça ne sert à rien d''aider ce sbire\nd''Aklove !'
+- offset: '0x1F4820E'
+  name: 'Cluster Pic Cristal — 0x1F4820E'
+  issue: B-319
+  expected: '<0xFC><0x01><0x04>Alakazam ! Immobilise-le !'
+- offset: '0x1F48340'
+  name: 'Cluster Pic Cristal — 0x1F48340'
+  issue: B-319
+  expected: '<0xFC><0x01><0x02><0xFD><0x06> te prête son\nToucannon, Aquali et Mammochon pour\nton combat contre Ivory !<0xB0>Quand le combat commencera, ils\nrejoindront automatiquement ton équipe.'
+- offset: '0x1F483D7'
+  name: 'Cluster Pic Cristal — 0x1F483D7'
+  issue: B-319
+  expected: '<0xFC><0x01><0x04>Donc, tu comptes suivre ce chemin\nquoi qu''il arrive…<0xB0>Très bien, alors… Je dois seulement te\nretenir assez longtemps…<0xB0>Tant qu''Aklove n''aura pas fini, tu ne\npasseras pas !'
+- offset: '0x1F48591'
+  name: 'Cluster Pic Cristal — 0x1F48591'
+  issue: B-319
+  expected: 'D''accord, je vais bien.<0xB0>Continuons et finissons-en\nune bonne fois pour toutes !'
+- offset: '0x1F486AA'
+  name: 'Cluster Pic Cristal — 0x1F486AA'
+  issue: B-319
+  expected: '<0xFD><0x02> ! Utilise <0xFD><0x03> !\nAide-le à sortir de là !'
+- offset: '0x1F489D3'
+  name: 'Cluster Pic Cristal — 0x1F489D3'
+  issue: B-319
+  expected: 'Ces sbires sont justement le problème…<0xB0>Je ne sais pas comment, mais chaque fois\nqu''ils me fixaient…<0xB0>mon corps se figeait et ils me renvoyaient\ndans ma cellule.<0xB0>À moins que tu ne puisses les dépasser\ndiscrètement…'
+- offset: '0x1F48A96'
+  name: 'Cluster Pic Cristal — 0x1F48A96'
+  issue: B-319
+  expected: 'Et nous trouverons ce « moyen ».<0xB0><0xFD><0x01> et moi sommes arrivés jusqu''ici\npar nos propres moyens, non ?<0xB0>Même si nous ne pouvons pas nous battre\npour passer, nous trouverons une solution !'
+- offset: '0x1F48C0B'
+  name: 'Cluster Pic Cristal — 0x1F48C0B'
+  issue: B-319
+  expected: 'Tiens, <0xFD><0x01>.\nTu en auras besoin.'
+- offset: '0x1F48C27'
+  name: 'Cluster Pic Cristal — 0x1F48C27'
+  issue: B-319
+  expected: 'Apparemment, c''est la seule chose qui\npeut à nouveau sceller la force obscure,\nalors ne la laisse pas tomber.<0xB0>Allons-y, <0xFD><0x01> !'
+- offset: '0x1F48C92'
+  name: 'Cluster Pic Cristal — 0x1F48C92'
+  issue: B-319
+  expected: 'Si tu trouves quelque chose pour\nmasquer la vue de ce sbire,<0xB0>il ne te remarquera peut-être pas\nsi tu essaies de te faufiler.'
+- offset: '0x1F48DCE'
+  name: 'Cluster Pic Cristal — 0x1F48DCE'
+  issue: B-319
+  expected: 'Ce type étrange a couru au sommet\npour rejoindre le combat.<0xB0>J''espère vraiment que nous nous en\nsortirons tous les deux…'
+- offset: '0x1F48E35'
+  name: 'Cluster Pic Cristal — 0x1F48E35'
+  issue: B-319
+  expected: '<0xFC><0x01><0x00>Psst<0xFC><0x01><0x01>…<0xFC><0x01><0x00> Vous deux ! Venez ici !'
+- offset: '0x1F48FBD'
+  name: 'Cluster Pic Cristal — 0x1F48FBD'
+  issue: B-319
+  expected: 'L''Arme Suprême…'
+- offset: '0x1F49131'
+  name: 'Cluster Pic Cristal — 0x1F49131'
+  issue: B-319
+  expected: 'Tous les systèmes sont activés.<0xB0>Et en appuyant sur ce bouton…'
+- offset: '0x1F49172'
+  name: 'Cluster Pic Cristal — 0x1F49172'
+  issue: B-319
+  expected: 'Tritosor, maintenant ! Utilise\nTelluriforce !'
+- offset: '0x1F491D9'
+  name: 'Cluster Pic Cristal — 0x1F491D9'
+  issue: B-319
+  expected: 'Oui. Le monde où tu m''as envoyé\nn''était apparemment pas aussi mortel\nque tu l''espérais !'
+- offset: '0x1F4921C'
+  name: 'Cluster Pic Cristal — 0x1F4921C'
+  issue: B-319
+  expected: 'Hoopa ! Pokémon inutile !<0xB0>Tu n''as même pas réussi à te débarrasser\nde lui correctement !?'
+- offset: '0x1F49264'
+  name: 'Cluster Pic Cristal — 0x1F49264'
+  issue: B-319
+  expected: 'Attends…<0xB0>Si tu n''étais pas présent lors de l''attaque\nde notre base, il est clair que tu n''as pas\npu t''échapper seul…<0xB0>Alors rien ne m''empêche de te renvoyer\nd''où tu viens !'
+- offset: '0x1F49319'
+  name: 'Cluster Pic Cristal — 0x1F49319'
+  issue: B-319
+  expected: 'Hoopa ! Débarrasse-moi de lui !'
+- offset: '0x1F493C2'
+  name: 'Cluster Pic Cristal — 0x1F493C2'
+  issue: B-319
+  expected: '<0xFD><0x01> ! C''est le moment !'
+- offset: '0x1F493D9'
+  name: 'Cluster Pic Cristal — 0x1F493D9'
+  issue: B-319
+  expected: 'Gah…<0xFC><0x08><0x20> J''aurais dû m''en douter.<0xB0>Alors c''est toi qui as aidé à son évasion !'
+- offset: '0x1F4941B'
+  name: 'Cluster Pic Cristal — 0x1F4941B'
+  issue: B-319
+  expected: 'Très bien ! Hoopa ! Occupe-toi de\n<0xFD><0x01> ! Je me charge de cette\nautre peste.'
+- offset: '0x1F49459'
+  name: 'Cluster Pic Cristal — 0x1F49459'
+  issue: B-319
+  expected: 'Quant à toi, Ivory, active l''Arme à ma\nplace !'
+- offset: '0x1F4948D'
+  name: 'Cluster Pic Cristal — 0x1F4948D'
+  issue: B-319
+  expected: 'Ça ne se passera pas comme ça !\nTu n''iras nulle part, Ivory !'
+- offset: '0x1F494C1'
+  name: 'Cluster Pic Cristal — 0x1F494C1'
+  issue: B-319
+  expected: 'Tu as peut-être eu le dessus sur moi\nla dernière fois, mais cette fois, je vais\nte remettre à ta place !<0xB0>Je vais t''arrêter et tous nous sauver !'
+- offset: '0x1F4971E'
+  name: 'Cluster Pic Cristal — 0x1F4971E'
+  issue: B-319
+  expected: '<0xFC><0x01><0x02>Rayquaza s''est envolé !'
+- offset: '0x1F49735'
+  name: 'Cluster Pic Cristal — 0x1F49735'
+  issue: B-319
+  expected: '<0xFC><0x01><0x06>Hoo…<0xFC><0x08><0x20> Hooooo !'
+- offset: '0x1F49785'
+  name: 'Cluster Pic Cristal — 0x1F49785'
+  issue: B-319
+  expected: '<0xFC><0x01><0x06>Hoo…'
+- offset: '0x1F4978D'
+  name: 'Cluster Pic Cristal — 0x1F4978D'
+  issue: B-319
+  expected: 'Vite, <0xFD><0x01> !\nScelle son pouvoir pendant qu''il est\naffaibli !'
+- offset: '0x1F497BC'
+  name: 'Cluster Pic Cristal — 0x1F497BC'
+  issue: B-319
+  expected: '<0xFC><0x01><0x06>Hoo…<0xFC><0x08><0x20> pa ?'
+- offset: '0x1F4983D'
+  name: 'Cluster Pic Cristal — 0x1F4983D'
+  issue: B-319
+  expected: 'Disparais, Hoopa !\nSors de ma vue !<0xB0>Ton pouvoir étant scellé, je vais devoir…'
+- offset: '0x1F498BD'
+  name: 'Cluster Pic Cristal — 0x1F498BD'
+  issue: B-319
+  expected: 'Lâche-moi, brute mal élevée !'
+- offset: '0x1F49935'
+  name: 'Cluster Pic Cristal — 0x1F49935'
+  issue: B-319
+  expected: 'Hors de mon chemin !<0xB0>L''Arme doit être activée, quel qu''en soit\nle prix !<0xB0>Mais si tu refuses de t''écarter et de me\nlaisser passer, avec ou sans Hoopa, je te\nmettrai à genoux !'
+- offset: '0x1F499E8'
+  name: 'Cluster Pic Cristal — 0x1F499E8'
+  issue: B-319
+  expected: 'À partir d''ici, c''est toi qui t''en occupes,\nd''accord ?'
+- offset: '0x1F49A05'
+  name: 'Cluster Pic Cristal — 0x1F49A05'
+  issue: B-319
+  expected: '<0xFD><0x01> ! Tu ne pensais quand même pas que\nje te laisserais gérer ça seul, si ?<0xB0>Nous avons combattu côte à côte jusqu''ici,\nalors achevons-le ensemble !'
+- offset: '0x1F49AE9'
+  name: 'Cluster Pic Cristal — 0x1F49AE9'
+  issue: B-319
+  expected: 'C''est fini, Aklove.\nIl est temps de te rendre.'
+- offset: '0x1F49B63'
+  name: 'Cluster Pic Cristal — 0x1F49B63'
+  issue: B-319
+  expected: 'Ce n''est pas possible…'
+- offset: '0x1F49CC1'
+  name: 'Cluster Pic Cristal — 0x1F49CC1'
+  issue: B-319
+  expected: 'Non…<0xFC><0x08><0x20> ce n''est pas possible…<0xB0>La couleur du canon…<0xB0>Elle est complètement fausse !'
+- offset: '0x1F49D01'
+  name: 'Cluster Pic Cristal — 0x1F49D01'
+  issue: B-319
+  expected: 'Quoi…<0xB0>Comment es-tu arrivé ici !?'
+- offset: '0x1F49E7A'
+  name: 'Cluster Pic Cristal — 0x1F49E7A'
+  issue: B-319
+  expected: 'Cette garce perfide !<0xB0>J''aurais dû savoir qu''on ne pouvait pas\nlui faire confiance…'
+- offset: '0x1F49F6D'
+  name: 'Cluster Pic Cristal — 0x1F49F6D'
+  issue: B-319
+  expected: 'Toi…<0xFC><0x08><0x20> Espèce d''imbécile !<0xB0>Nous n''avons extrait assez d''énergie des\nGuerriers de l''Ombre que pour un seul tir\navant qu''ils ne se désagrègent tous !'
+- offset: '0x1F49FF3'
+  name: 'Cluster Pic Cristal — 0x1F49FF3'
+  issue: B-319
+  expected: '<0xFC><0x01><0x04>Mais…<0xFC><0x08><0x20> tu avais promis d''utiliser l''Arme\npour me rendre mon fils disparu !<0xB0>Tu comptais me trahir depuis le début ?'
+- offset: '0x1F4A06E'
+  name: 'Cluster Pic Cristal — 0x1F4A06E'
+  issue: B-319
+  expected: 'Bien sûr !<0xB0>Je n''avais jamais eu l''intention de t''aider !<0xB0>Si tout s''était déroulé comme prévu,\nje t''aurais laissé servir de bouc émissaire\net je serais parti en volant !<0xB0>Comme ça !'
+- offset: '0x1F4A10F'
+  name: 'Cluster Pic Cristal — 0x1F4A10F'
+  issue: B-319
+  expected: 'Étouraptor ! À sa poursuite !\nAllons-y !'
+- offset: '0x1F4A12F'
+  name: 'Cluster Pic Cristal — 0x1F4A12F'
+  issue: B-319
+  expected: '<0xFC><0x01><0x04>Zeph…<0xFC><0x08><0x20> les restes de mon fils…<0xFC><0x08><0x20> Je les\navais avec moi…<0xB0>Pourquoi ne les as-tu pas…<0xFC><0x08><0x20> pourquoi ne\nes-tu pas venu les chercher !?'
+- offset: '0x1F4A288'
+  name: 'Cluster Pic Cristal — 0x1F4A288'
+  issue: B-319
+  expected: '<0xFC><0x01><0x04>Marlon…<0xFC><0x08><0x20> <0xFD><0x06>…<0xFC><0x08><0x20> Tout ce que j''ai\ntoujours voulu…<0xFC><0x08><0x20> c''était…<0xFC><0x08><0x20> c''était tout pour\nlui…<0xFC><0x08><0x20> toujours pour lui…'
+- offset: '0x1F4A44C'
+  name: 'Cluster Pic Cristal — 0x1F4A44C'
+  issue: B-319
+  expected: '<0xFC><0x01><0x04>Je…<0xFC><0x08><0x20> J''ai besoin de temps pour réfléchir,\nseule. Ne viens pas me chercher.'
+- offset: '0x1F4A4A1'
+  name: 'Cluster Pic Cristal — 0x1F4A4A1'
+  issue: B-319
+  expected: 'Zeph, Marlon, vous êtes en état\nd''arrestation.<0xB0>Je ne devrais pas avoir à détailler\nvos crimes.<0xB0>Vous savez parfaitement tous les deux\nce que vous avez fait.'
+- offset: '0x1F4A51E'
+  name: 'Cluster Pic Cristal — 0x1F4A51E'
+  issue: B-319
+  expected: 'S''il te plaît, Arthur.<0xB0>Emmène-moi, mais laisse Marlon\ntranquille.<0xB0>Il a assez souffert dans toute cette\nhistoire…'
+- offset: '0x1F4A574'
+  name: 'Cluster Pic Cristal — 0x1F4A574'
+  issue: B-319
+  expected: 'Hmm…<0xB0>Tu as joué un rôle essentiel dans\nl''épuisement de la source d''énergie\nde l''Arme Suprême…<0xB0>Je pense que nous pouvons trouver un\narrangement.<0xB0>Marlon est libre de partir, pour l''instant.<0xB0>Quant à toi, viens avec nous, s''il te plaît.\nNous avons beaucoup à nous dire.'
+- offset: '0x1F4A639'
+  name: 'Cluster Pic Cristal — 0x1F4A639'
+  issue: B-319
+  expected: 'Marlon, s''il te plaît, veille sur mon fils\npendant mon absence.'
+- offset: '0x1F4A7E3'
+  name: 'Cluster Pic Cristal — 0x1F4A7E3'
+  issue: B-319
+  expected: '<0xFD><0x06>, je sais déjà que tu es fort…'
+- offset: '0x1F4A805'
+  name: 'Cluster Pic Cristal — 0x1F4A805'
+  issue: B-319
+  expected: 'Non, non, non. Tu ne comprends pas,\nvieux.<0xB0>Me voir combattre est une chose, mais\ntu ne l''as pas vraiment vécu.'
+- offset: '0x1F4A996'
+  name: 'Cluster Pic Cristal — 0x1F4A996'
+  issue: B-319
+  expected: 'Finissons-en, vieux !<0xB0>Je gardais celle-ci spécialement pour toi !'
+- offset: '0x1F4A9D7'
+  name: 'Cluster Pic Cristal — 0x1F4A9D7'
+  issue: B-319
+  expected: 'Vraiment…<0xFC><0x08><0x20> mais j''ai encore mon\norgueil de Dresseur, <0xFD><0x06>.<0xB0>J''ai peur de ne pas te laisser gagner\naussi facilement !'
+- offset: '0x1F4ABC8'
+  name: 'Cluster Pic Cristal — 0x1F4ABC8'
+  issue: B-319
+  expected: '<0xFD><0x06>, allons chercher Melony et\nrentrons à Cimes Gelées.<0xB0>Je veux apprendre à vous connaître tous les\ndeux.'
+- offset: '0x1F4AC1C'
+  name: 'Cluster Pic Cristal — 0x1F4AC1C'
+  issue: B-319
+  expected: 'Et si…<0xFC><0x08><0x20> tu la connaissais déjà ?'
+- offset: '0x1F4AC3D'
+  name: 'Cluster Pic Cristal — 0x1F4AC3D'
+  issue: B-319
+  expected: 'Ivory…<0xFC><0x08><0x20> a besoin de rester seule un moment.<0xB0>Elle a tant sacrifié pour rien, au bout du\ncompte.<0xB0>Je pense qu''elle doit assimiler tout ça.<0xB0>Quand elle sera prête, nous pourrons\ntoujours la retrouver.'
+- offset: '0x1F4B2D7'
+  name: 'Cluster Pic Cristal — 0x1F4B2D7'
+  issue: B-319
+  expected: 'Halte !'
+- offset: '0x1F4B586'
+  name: 'Cluster Pic Cristal — 0x1F4B586'
+  issue: B-319
+  expected: 'Maintenant, il n''y a plus que toi et moi.<0xB0>Tu es prêt ?\nAllons-y !'
+- offset: '0x1F4BC44'
+  name: 'Cluster Pic Cristal — 0x1F4BC44'
+  issue: B-319
+  expected: 'Félicitations pour avoir terminé la\ncampagne principale de Pokémon Unbound !<0xB0>Pour récompenser cet exploit, toutes les\ndifficultés de combat sont désormais\ndéverrouillées !'
+- offset: '0x1F4BD16'
+  name: 'Cluster Pic Cristal — 0x1F4BD16'
+  issue: B-319
+  expected: 'Maintenant que tu es devenu Champion,\nil te reste beaucoup à faire, alors ne pars\npas tout de suite !<0xB0>Continue de profiter de Pokémon Unbound,\net merci d''avoir joué !'
+- offset: '0x1F4C712'
+  name: 'Cluster Pic Cristal — 0x1F4C712'
+  issue: B-319
+  expected: 'Et sur ce, je m''en vais !<0xB0>Dis bonjour à ta mère de ma part,\nveux-tu, <0xFD><0x01> ?'
+- offset: '0x1F4C75E'
+  name: 'Cluster Pic Cristal — 0x1F4C75E'
+  issue: B-319
+  expected: 'Alors, te voilà…<0xB0>Ha ha ha ha… Tu n''avais pas vraiment\nle choix, de toute façon…'
+- offset: '0x1F4CDE8'
+  name: 'Cluster Pic Cristal — 0x1F4CDE8'
+  issue: B-319
+  expected: 'C''est pitoyable.'
+- offset: '0x1F4CDFC'
+  name: 'Cluster Pic Cristal — 0x1F4CDFC'
+  issue: B-319
+  expected: 'Qu-qu''est-ce que tu as dit !?'
+- offset: '0x1F4CF57'
+  name: 'Cluster Pic Cristal — 0x1F4CF57'
+  issue: B-319
+  expected: 'Nngh…'
+- offset: '0x1F4CF5D'
+  name: 'Cluster Pic Cristal — 0x1F4CF5D'
+  issue: B-319
+  expected: 'Hmm ? Quels sont ces bruits qui\nmontent d''en bas ?'
+- offset: '0x1F4CF8B'
+  name: 'Cluster Pic Cristal — 0x1F4CF8B'
+  issue: B-319
+  expected: 'Alors c''est ici que tu l''as emmené,\nAklove !'
