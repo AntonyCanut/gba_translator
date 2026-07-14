@@ -55,8 +55,10 @@ SPRITES: dict[str, SpriteDef] = {
     # Fill = palette index 15 (light), bevel/outline = 14 (dark), the bar's
     # vertical gradient background = indices 1-4. Extract to a .bmp with
     # extract_sprite.py, redraw "Move", re-inject with insert_sprite.py. An
-    # earlier attempt to redraw these tiles procedurally glitched the menu, so
-    # the hand-edited-BMP path is the supported way to translate this sprite.
+    # The block is decompressed directly into VRAM: its LZ77 stream must avoid
+    # odd-distance overlapping references.  The generic sprite inserter uses
+    # VRAM-safe compression for that reason; a normal Python-valid LZ77 stream
+    # otherwise corrupts every tile after the first unsupported reference.
     "start_menu_move_hint": SpriteDef(
         blocks=(0x0B1BBE0,),
         tiles_wide=15,

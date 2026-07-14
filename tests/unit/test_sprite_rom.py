@@ -24,6 +24,31 @@ def _make_rom_with_block(tiles: bytes, pad_after: int = 16) -> tuple:
     return rom, 0, len(compressed)
 
 
+def _lz77_back_references(data: bytes, offset: int = 0) -> list[tuple[int, int]]:
+    """Return the ``(length, distance)`` pairs encoded in an LZ77 block."""
+    size = data[offset + 1] | (data[offset + 2] << 8) | (data[offset + 3] << 16)
+    src = offset + 4
+    produced = 0
+    references = []
+    while produced < size:
+        flags = data[src]
+        src += 1
+        for bit in range(8):
+            if produced >= size:
+                break
+            if flags & (0x80 >> bit):
+                first, second = data[src:src + 2]
+                src += 2
+                length = (first >> 4) + 3
+                distance = (((first & 0x0F) << 8) | second) + 1
+                references.append((length, distance))
+                produced += length
+            else:
+                src += 1
+                produced += 1
+    return references
+
+
 def test_tiles_to_grid_and_back_round_trip():
     tiles_wide, tiles_tall = 2, 3
     n_tiles = tiles_wide * tiles_tall
@@ -74,6 +99,20 @@ def test_insert_block_round_trip():
     needed = tiles_wide * tiles_tall * TILE_BYTES
     round_tripped_grid = tiles_to_grid(decompressed[:needed], tiles_wide, tiles_tall)
     assert round_tripped_grid == new_grid
+
+
+def test_insert_block_avoids_odd_overlapping_vram_references():
+    """Les flux destinés à la VRAM ne doivent pas chevaucher à distance impaire."""
+    tiles_wide, tiles_tall = 1, 1
+    tiles = bytes([0x00] * TILE_BYTES)
+    rom, offset, _ = _make_rom_with_block(tiles, pad_after=64)
+    repeated_grid = [[1] * 8 for _ in range(8)]
+
+    insert_block(rom, offset, repeated_grid, tiles_wide, tiles_tall)
+
+    references = _lz77_back_references(bytes(rom), offset)
+    assert references
+    assert all(length <= distance or distance % 2 == 0 for length, distance in references)
 
 
 def test_insert_block_rejects_overflow_of_non_padding_tail():

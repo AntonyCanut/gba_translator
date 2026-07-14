@@ -124,7 +124,7 @@ def insert_block(rom: bytearray, offset: int, grid: Grid,
 
     tiles = bytearray(decompressed)
     tiles[:needed] = grid_to_tiles(grid, tiles_wide, tiles_tall)
-    compressed_out = lz77_compress(bytes(tiles))
+    compressed_out = lz77_compress(bytes(tiles), vram_safe=True)
 
     if offset + len(compressed_out) > len(rom):
         raise ValueError(f"0x{offset:08X}: recompressed block overflows ROM")

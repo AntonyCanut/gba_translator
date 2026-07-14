@@ -140,7 +140,9 @@ def lz77_decompress(data: bytes, offset: int) -> Optional[Tuple[bytes, int]]:
     return bytes(out), src - offset
 
 
-def _lz77_best_match(data: bytes, pos: int, size: int) -> tuple:
+def _lz77_best_match(
+    data: bytes, pos: int, size: int, *, vram_safe: bool = False
+) -> tuple[int, int]:
     """Find the longest back-reference at ``pos`` with overlapping-match support.
 
     Scans right-to-left (smallest displacement first) so ties resolve to the
@@ -156,20 +158,28 @@ def _lz77_best_match(data: bytes, pos: int, size: int) -> tuple:
         length = 0
         while length < max_len and data[w + length] == data[pos + length]:
             length += 1
+        displacement = pos - w
+        if vram_safe and displacement % 2 and length > displacement:
+            # LZ77UnCompVram buffers output by halfwords.  An odd-distance
+            # back-reference cannot overlap bytes that have not yet been
+            # committed to VRAM, even though the WRAM/Python decoder accepts it.
+            length = displacement
         if length > best_len:
             best_len = length
-            best_disp = pos - w
+            best_disp = displacement
             if best_len == max_len:
                 break
     return best_len, best_disp
 
 
-def lz77_compress(data: bytes) -> bytes:
+def lz77_compress(data: bytes, *, vram_safe: bool = False) -> bytes:
     """LZ77-compress *data* for GBA (header byte 0x10).
 
     Uses proper byte-by-byte overlapping match detection and one-step lazy
     evaluation (skip a short match at ``pos`` when ``pos+1`` offers a longer
-    one) to approach GBA-tool compression quality.
+    one) to approach GBA-tool compression quality.  Set ``vram_safe`` for
+    streams consumed by ``LZ77UnCompVram``; this excludes odd-distance
+    overlapping references that its halfword output buffer cannot decode.
     """
     size = len(data)
     out = bytearray()
@@ -182,13 +192,15 @@ def lz77_compress(data: bytes) -> bytes:
         flags = 0
         bit_i = 0
         while bit_i < 8 and pos < size:
-            len0, disp0 = _lz77_best_match(data, pos, size)
+            len0, disp0 = _lz77_best_match(data, pos, size, vram_safe=vram_safe)
             if len0 >= 3:
                 # Lazy: if pos+1 yields a strictly longer match, emit a literal
                 # at pos and let the next iteration use the better match.
                 len1 = 0
                 if pos + 1 < size:
-                    len1, _ = _lz77_best_match(data, pos + 1, size)
+                    len1, _ = _lz77_best_match(
+                        data, pos + 1, size, vram_safe=vram_safe
+                    )
                 if len1 > len0:
                     out.append(data[pos])
                     pos += 1
@@ -357,7 +369,6 @@ def build_grave_e(font: bytes) -> bytes:
 
 def build_cedilla(font: bytes, fallback_mask: List[Tuple[int, int]]) -> bytes:
     base = glyph_pixels(font, CP_C)
-    cedilla = glyph_pixels(font, CP_C_CEDILLA)
 
     local_mask = extract_cedilla_mask(font)
     use_mask = local_mask if len(local_mask) >= max(2, len(fallback_mask) // 2) else fallback_mask
