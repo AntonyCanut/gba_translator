@@ -22,4 +22,10 @@
 #     absent: true
 #
 # Voir docs/20_TRANSLATION_PRESERVATION.md §7.
-entries: []
+entries:
+- offset: '0x1F53F7C'
+  name: 'PNJ Centre Pokémon (chambre): Fulica-Sumpf wenige Käfer-Pokémon'
+  issue: B-303
+  expected: Für einen Sumpf hat der <0xFC><0x01><0x06>Fulica-Sumpf<0xFC><0x01><0x08>\nüberraschenderweise nicht viele\lKäfer-Pokémon.
+  forbidden:
+  - Cootes Bog
