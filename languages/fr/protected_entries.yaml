@@ -643,3 +643,47 @@ entries:
   expected: Pour un marais, le <0xFC><0x01><0x06>Marais Fulica<0xFC><0x01><0x08>\nn'a étonnamment pas beaucoup de\lPokémon de type Insecte.
   forbidden:
   - Cootes Bog
+- offset: '0x1F83EFB'
+  name: 'Dresseur : Pokémon apprivoisé'
+  issue: 'Problème de traduction 2'
+  expected: Si je savais ce que je dresse,\non n'aurait pas perdu.
+- offset: '0x1F84012'
+  name: 'Dresseur : Pokémon Caverne'
+  issue: 'Problème de traduction 2'
+  expected: Non !\nMon Pokémon Caverne !
+- offset: '0x1F842B1'
+  name: 'Dresseur : Aflamanoir et Fermite'
+  issue: 'Problème de traduction 2'
+  expected: Cousin !\pTon Aflamanoir tente encore de\nmanger mon Fermite !
+- offset: '0x1F4AA46'
+  name: 'Aklove : aucune information nouvelle'
+  issue: 'Problème de traduction 2'
+  expected: Bien sûr, ça ne m'a rien appris\nque je ne sache déjà.
+- offset: '0x1F49A85'
+  name: 'Aklove : refuse la défaite'
+  issue: 'Problème de traduction 2'
+  expected: Non ! Je refuse d'admettre\nma défaite !
+- offset: '0x1F4B6D9'
+  name: 'Prof. Log : nouveau Champion'
+  issue: 'Problème de traduction 2'
+  expected: On dirait que le Prof. Log a choisi\nun adversaire à sa hauteur, finalement !<0xB0>Mais sans rire, félicitations !<0xB0>Tu es désormais le nouveau Champion\nde Borrius !
+- offset: '0x1F51177'
+  name: 'Dresseuse : meilleur type Pokémon'
+  issue: 'Problème de traduction 2'
+  expected: Quoi !? Mais j'avais le meilleur\ntype de Pokémon du monde !<0xB0>Bon, d'accord.\nC'était plutôt impressionnant.<0xB0>On dirait que mes dragons et moi\ndevons encore progresser.
+- offset: '0x1F50576'
+  name: 'Dresseur : poignée de main'
+  issue: 'Problème de traduction 2'
+  expected: Beau travail. Je te serrerais bien la\nmain, mais je ne peux pas vraiment\nbouger…<0xB0>Et je crois que ça arracherait\nla mienne.
+- offset: '0x1F50BA2'
+  name: 'Dresseuse : combat avec Brice'
+  issue: 'Problème de traduction 2'
+  expected: C'était vraiment super, <0xFD><0x01> !\nJe me suis tellement amusée !
+- offset: '0x1F4FF74'
+  name: 'Moltres : Conseil 4'
+  issue: 'Problème de traduction 2'
+  expected: Je ne peux pas échapper aux griffes de\nce soi-disant « Conseil 4 » pour l'instant.<0xB0>Mais le moment venu… hmpf.\nTrès bien.<0xB0>Mesure-toi aux autres.\nJusqu'à notre prochaine rencontre…
+- offset: '0x1F4F57B'
+  name: 'Conseil 4 : combat en duo'
+  issue: 'Problème de traduction 2'
+  expected: Certains membres du Conseil 4\naiment les combats en duo.<0xB0>Si tu n'as pas la CT pour\n<0xFC><0x01><0x06>Abri<0xFC><0x01><0x04>, c'est le moment de\nl'acheter au marché de\n<0xFC><0x01><0x06><0xFD><0x01><0xFC><0x01><0x04>.

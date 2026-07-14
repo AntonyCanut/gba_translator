@@ -47,6 +47,21 @@ entries:
 class TestRealRepo:
     """The guard must pass on the live combined files in the repo."""
 
+    def test_photographed_french_dialogues_are_all_protected(self):
+        """Every dialogue reported by the translation-photo ticket has a guard."""
+        fr = [target for target in cti.discover_languages() if target[0] == "fr"]
+        assert fr
+        entries = cti.load_manifest(fr[0][2])
+        protected_offsets = {entry.offset for entry in entries}
+        photographed_offsets = {
+            0x1F83EFB, 0x1F84012, 0x1F842B1, 0x1F4AA46, 0x1F4A4A1,
+            0x1F4A12F, 0x1F49E7A, 0x1F49A85, 0x1F49935, 0x1F4978D,
+            0x1F4948D, 0x1F49459, 0x1F4921C, 0x1F49172, 0x1F49131,
+            0x1F48FBD, 0x1F48E35, 0x1F4C712, 0x1F4BC44, 0x1F4B6D9,
+            0x1F51177, 0x1F50576, 0x1F50BA2, 0x1F4FF74, 0x1F4F57B,
+        }
+        assert photographed_offsets <= protected_offsets
+
     def test_every_language_with_manifest_passes(self):
         targets = cti.discover_languages()
         assert targets, "no protected_entries.yaml manifest found under languages/"
