@@ -49,3 +49,11 @@ entries:
   expected: Für einen Sumpf hat der <0xFC><0x01><0x06>Fulica-Sumpf<0xFC><0x01><0x08>\nüberraschenderweise nicht viele\lKäfer-Pokémon.
   forbidden:
   - Cootes Bog
+- offset: '0x1f53c21'
+  name: 'PNJ Safari Zone : partenaire capturé'
+  issue: B-308
+  expected: 'Ich habe meinen geliebten Partner\nin der <0xFC><0x01><0x06>Safari-Zone<0xFC><0x01><0x08> gefangen.\pSie liegt gleich <0xFC><0x01><0x06>östlich<0xFC><0x01><0x08> der Stadt.'
+- offset: '0x1f53c7d'
+  name: 'PNJ Safari Zone : changement et Wesen Pokémon'
+  issue: B-308
+  expected: 'Wir können unverändert leben,\nweil wir uns immer verändern.\pIch meine, auch Pokémon entwickeln sich,\naber ihre Wesen bleiben gleich.\pZumindest sollte es so sein...'
