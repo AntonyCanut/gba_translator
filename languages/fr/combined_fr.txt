@@ -25142,3 +25142,6 @@ objets utiles aux Dresseurs.
 # DE/IT avaient déjà les traductions complètes, servi de référence pour la page manquante.
 0x1f542bd: Je te donnerai quelque chose de\ngénial si tu as plein de <0xFC><0x01><0x06>CT<0xFC><0x01><0x04> !\pTu crois pouvoir les trouver ?
 0x1f53fcb: Je suis reconnaissant que tu sois\nvenu jusqu'ici !\pTu es un Dresseur ?\pOhh, tu as un Pokédex !\pC'est\nmerveilleux !\pJe me demande si tu pourrais me\nrendre un service.
+# Ticket B-307 (split from F-119) : PNJ "Tessy" (arène Eau) devant un Centre Pokémon,
+# réplique non traduite. Pointeur vivant unique à 0x1e7f65f.
+0x1f52bb6: Les Pokémon de Tessy ne\nressemblent pas tous à des Pokémon\lde type <0xFC><0x01><0x06>Eau<0xFC><0x01><0x04>, mais je vous\lgarantis que la plupart le seront\lquand vous les affronterez !
