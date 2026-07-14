@@ -22,4 +22,10 @@
 #     absent: true
 #
 # Voir docs/20_TRANSLATION_PRESERVATION.md §7.
-entries: []
+entries:
+- offset: '0x1f53f7c'
+  name: 'PNJ Centro Pokémon: Cootes con pochi Pokémon Coleottero'
+  issue: B-303
+  expected: 'Per essere una palude, <0xFC><0x01><0x06>Cootes<0xFC><0x01><0x08>\nsorprendentemente non ospita molti\lPokémon di tipo Coleottero.'
+  forbidden:
+  - Cootes Bog
