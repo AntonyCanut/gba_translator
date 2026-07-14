@@ -23,6 +23,26 @@
 #
 # Voir docs/20_TRANSLATION_PRESERVATION.md §7.
 entries:
+- offset: '0x1f47086'
+  name: 'Jax: Fähre nach Polderive außer Betrieb'
+  expected: Was soll das heißen, das Schiff fährt nicht?\pWir müssen so schnell wie möglich nach Polderive!\pDas Schicksal von Borrius hängt davon ab!
+  forbidden:
+  - What do you mean, the ship's not running?
+- offset: '0x1f4725d'
+  name: 'Brice: schnelle Überfahrt'
+  expected: Wenn wir damit schnell hinkommen, machen wir das.
+  forbidden:
+  - If that'll get us there quickly, let's do that.
+- offset: '0x1f4728d'
+  name: 'Jax: Treffpunkt an den Docks und Fahrkarte'
+  expected: Hast du das verstanden, <0xFD><0x01>?\pTriff uns am Boot an den Docks nördlich von hier.\pWir gehen schon vor und gehen ohne dich an Bord, damit es keine Verzögerung gibt.\pAch ja - nimm diese Fahrkarte, damit du auch aufs Boot kommst.
+  forbidden:
+  - Meet us at the boat on the docks north of here.
+- offset: '0x1f53396'
+  name: 'PNJ Fähre: Fahrplan der S.S. Marine'
+  expected: Wenn sie in Betrieb ist, fährt die S.S. Marine sonntags und mittwochs nach West-Borrius.
+  forbidden:
+  - When it's working, the S.S. Marine sets sail to West Borrius on Sundays and Wednesdays.
 - offset: '0x1F53F7C'
   name: 'PNJ Centre Pokémon (chambre): Fulica-Sumpf wenige Käfer-Pokémon'
   issue: B-303
