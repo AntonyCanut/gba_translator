@@ -599,3 +599,9 @@ entries:
   expected: 'Sers-t''en avec soin, de la ball !\nHé hé, tu l''as ?'
   forbidden:
   - 'Sers-t''en en bonne santé !\nHé hé, tu l''as compris ?'
+- offset: '0x1F52A9C'
+  name: 'Panneau d’entrée de Borrius Est'
+  issue: B-306
+  expected: 'Bienvenue à Borrius Est !\pPolderive est bien différente\nde Borrius Ouest, tu ne trouves\lpas ?\pJe doute que les gens de\lBorrius Ouest veuillent vivre\ldans un marais.'
+  forbidden:
+  - 'Welcome to East Borrius!'
