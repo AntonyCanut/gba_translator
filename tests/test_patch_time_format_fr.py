@@ -10,6 +10,15 @@ def _rom_with(offset: int, content: bytes, size: int = 0x100) -> bytearray:
 
 
 class TestApplyPatches(unittest.TestCase):
+    MOM_POINTER_OLD = b"\x1f\xba\xf0\x09"
+    MOM_POINTER_NEW = b"\xbc\x4e\x28\x08"
+
+    def assert_mom_pointer_is_repointed(self, pointer_offset: int) -> None:
+        patch = next((p for p in PATCHES if p[0] == pointer_offset), None)
+        self.assertIsNotNone(patch, f"missing pointer patch at 0x{pointer_offset:X}")
+        self.assertEqual(patch[1], self.MOM_POINTER_OLD)
+        self.assertEqual(patch[2], self.MOM_POINTER_NEW)
+
     def test_applies_and_is_idempotent(self):
         patches = [(0x10, b"\x04\xd9", b"\x04\xe0")]
         data = _rom_with(0x10, b"\x04\xd9")
@@ -85,34 +94,49 @@ class TestApplyPatches(unittest.TestCase):
             self.assertEqual(patch[2], new_ptr)
 
 
-    def test_mom_maman_repoint(self):
+    def test_mom_label_is_written_as_maman(self):
         # String patch: 6 bytes of free space → "Maman\xFF"
         str_patch = next(p for p in PATCHES if p[0] == 0x284EBC)
         self.assertEqual(str_patch[1], b"\xff" * 6)
         self.assertEqual(str_patch[2], encode("Maman") + b"\xff")
-        # Every speaker-label pointer: old address 0x09F0BA1F → new 0x08284EBC
-        old_ptr = b"\x1f\xba\xf0\x09"
-        new_ptr = b"\xbc\x4e\x28\x08"
-        ptr_offsets = [
-            0x1E6E411,
-            0x1E6E432,
-            0x1E6E44B,
-            0x1E6E47A,
-            0x1E6E4B1,
-            0x1E6E4D6,
-            0x1E6E4F8,
-            0x1E6E523,
-            0x1E6E544,
-            0x1E6E568,
-            0x1E8D6ED,
-            0x1E8D70F,
-        ]
-        for poff in ptr_offsets:
-            with self.subTest(pointer_offset=f"0x{poff:X}"):
-                patch = next((p for p in PATCHES if p[0] == poff), None)
-                self.assertIsNotNone(patch, f"missing pointer patch at 0x{poff:X}")
-                self.assertEqual(patch[1], old_ptr)
-                self.assertEqual(patch[2], new_ptr)
+
+    # Each speaker text has its own regression test so a missing pointer is
+    # reported as an independent failure instead of being hidden in one loop.
+    def test_mom_text_1_is_repointed_to_maman(self):
+        self.assert_mom_pointer_is_repointed(0x1E6E411)
+
+    def test_mom_text_2_is_repointed_to_maman(self):
+        self.assert_mom_pointer_is_repointed(0x1E6E432)
+
+    def test_mom_text_3_is_repointed_to_maman(self):
+        self.assert_mom_pointer_is_repointed(0x1E6E44B)
+
+    def test_mom_text_4_is_repointed_to_maman(self):
+        self.assert_mom_pointer_is_repointed(0x1E6E47A)
+
+    def test_mom_text_5_is_repointed_to_maman(self):
+        self.assert_mom_pointer_is_repointed(0x1E6E4B1)
+
+    def test_mom_text_6_is_repointed_to_maman(self):
+        self.assert_mom_pointer_is_repointed(0x1E6E4D6)
+
+    def test_mom_text_7_is_repointed_to_maman(self):
+        self.assert_mom_pointer_is_repointed(0x1E6E4F8)
+
+    def test_mom_text_8_is_repointed_to_maman(self):
+        self.assert_mom_pointer_is_repointed(0x1E6E523)
+
+    def test_mom_text_9_is_repointed_to_maman(self):
+        self.assert_mom_pointer_is_repointed(0x1E6E544)
+
+    def test_mom_text_10_is_repointed_to_maman(self):
+        self.assert_mom_pointer_is_repointed(0x1E6E568)
+
+    def test_mom_text_11_is_repointed_to_maman(self):
+        self.assert_mom_pointer_is_repointed(0x1E8D6ED)
+
+    def test_mom_text_12_is_repointed_to_maman(self):
+        self.assert_mom_pointer_is_repointed(0x1E8D70F)
 
 
 if __name__ == "__main__":
