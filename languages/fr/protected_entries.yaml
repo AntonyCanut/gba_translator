@@ -157,3 +157,15 @@ entries:
   name: 'Quête sauvegardes: texte court'
   issue: 398e386
   expected: Sauve des vies en sauvegardant manuellement 100 fois.
+- offset: '0x1F542BD'
+  name: 'Maison Dresco: PNJ don de CT'
+  issue: B-305
+  expected: Je te donnerai quelque chose de\ngénial si tu as plein de <0xFC><0x01><0x06>CT<0xFC><0x01><0x04> !\pTu crois pouvoir les trouver ?
+  forbidden:
+  - I'll give you something great when\nyou collect a lot of <0xFC><0x01><0x06>TMs<0xFC><0x01><0x04>!\pDo you think you can find them all?
+- offset: '0x1F53FCB'
+  name: 'Maison Dresco: PNJ remerciement visite'
+  issue: B-305
+  expected: Je suis reconnaissant que tu sois\nvenu jusqu'ici !\pTu es un Dresseur ?\pOhh, tu as un Pokédex !\pC'est\nmerveilleux !\pJe me demande si tu pourrais me\nrendre un service.
+  forbidden:
+  - I am grateful that you came all\nthis way!\pAre you a Trainer?\pOoh, you have a Pokédex!\nIt's so marvelous!\pI wonder if you'd please do me a\nfavour.

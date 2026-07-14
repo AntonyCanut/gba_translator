@@ -25136,3 +25136,9 @@ objets utiles aux Dresseurs.
 0x1f65e5c: Route 8
 0x419e2c: Choix
 0x419e32: Défini
+
+# Ticket B-305 : maison Dresco, 2 PNJ non traduits (dons de CT + remerciement visite).
+# combined_fr.txt n'avait jamais réabsorbé ces offsets après une régression (Pattern C) ;
+# DE/IT avaient déjà les traductions complètes, servi de référence pour la page manquante.
+0x1f542bd: Je te donnerai quelque chose de\ngénial si tu as plein de <0xFC><0x01><0x06>CT<0xFC><0x01><0x04> !\pTu crois pouvoir les trouver ?
+0x1f53fcb: Je suis reconnaissant que tu sois\nvenu jusqu'ici !\pTu es un Dresseur ?\pOhh, tu as un Pokédex !\pC'est\nmerveilleux !\pJe me demande si tu pourrais me\nrendre un service.
