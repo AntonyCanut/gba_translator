@@ -173,3 +173,39 @@ entries:
   name: 'PNJ Tessy (arène Eau) devant Centre Pokémon'
   issue: 'B-307'
   expected: 'Les Pokémon de Tessy ne\nressemblent pas tous à des Pokémon\lde type <0xFC><0x01><0x06>Eau<0xFC><0x01><0x04>, mais je vous\lgarantis que la plupart le seront\lquand vous les affronterez !'
+- offset: '0x1F47E06'
+  name: 'Grotte dragons: Ace face aux Pokémon'
+  issue: A-04
+  expected: Quoi ? Ces Pokémon…\pCe type, Aklove, a dû demander à\nHoopa de tendre ce piège pour nous\lralentir !\pMais on ne peut pas s'arrêter\nmaintenant !\pAllez, <0xFD><0x01> ! Balayons-les et\ngagnons le sommet !
+  forbidden:
+  - Wha-? These Pokémon
+- offset: '0x1F481B4'
+  name: 'Grotte dragons: réponse d’Ivory'
+  issue: A-04
+  expected: <0xFC><0x01><0x04>Si ça ne tenait qu'à moi, nous ne\ndétruirions rien, <0xFD><0x06>.\pMais c'est le seul moyen…
+  forbidden:
+  - If it were up to me
+- offset: '0x1F485D8'
+  name: 'Grotte dragons: ordre de Marlon à Crocorible'
+  issue: A-04
+  expected: Allez, Crocorible…\pSoulève ce rocher et pousse-le\nsur le côté.
+  forbidden:
+  - Just pick up that boulder
+- offset: '0x1F48785'
+  name: 'Grotte dragons: regrets de Marlon'
+  issue: A-04
+  expected: Je ne pourrai jamais assez\nm'excuser pour ça, <0xFD><0x06>…\pEt je ne m'attends pas à ce que tu\nnous pardonnes un jour…
+  forbidden:
+  - I don't expect you to ever forgive us
+- offset: '0x1F4868B'
+  name: 'Grotte dragons: retour d’Ace'
+  issue: A-04
+  expected: Hé ! Je t'avais dit que je\nreviendrais !
+  forbidden:
+  - I told you I'd come back
+- offset: '0x1F48D07'
+  name: 'Grotte dragons: Mélony parle de son père'
+  issue: A-04
+  expected: Ce drôle de type essaie sans arrêt\nde me convaincre qu'il est mon père.\pÇa n'a pas plu à <0xFD><0x06>,\nmais il l'a quand même cru.\pMoi, je ne marche pas !\pPourquoi mon père apparaîtrait-il\ncomme ça après seize ans ?
+  forbidden:
+  - This weird guy keeps trying to convince me he's my dad
