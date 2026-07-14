@@ -587,3 +587,9 @@ entries:
   name: 'Cluster Pic Cristal — 0x1F4CF8B'
   issue: B-319
   expected: 'Alors c''est ici que tu l''as emmené,\nAklove !'
+- offset: '0x1EE6D4F'
+  name: 'PNJ Potions : conseil de soin'
+  issue: Trad soin
+  expected: Fais le plein de\n{COLOR}ÉPotions{COLOR}Ë.\pOn sait jamais quand on devra se\nsoigner rapidement.
+  forbidden:
+  - On ne sait jamais quand on sera\ncoincé et devoir se soigner vite.
