@@ -213,8 +213,8 @@ entries:
 # Ticket B-319 — cluster final du Pic Cristal (couverture représentative par scène).
 - offset: '0x1F47A62'
   name: 'Mécanique équipe avec Ace'
-  issue: B-319
-  expected: '<0xFC><0x01><0x02>En faisant équipe avec <0xFD><0x06>, les\n<0xFC><0x01><0x06>3 premiers<0xFC><0x01><0x02> Pokémon valides de ton\n équipe seront choisis pour le combat.<0xB0><0xFD><0x06> peut aussi utiliser Surf et\nEscalade.'
+  issue: B-301
+  expected: '<0xFC><0x01><0x02>En faisant équipe avec <0xFD><0x06>, les\n<0xFC><0x01><0x06>3 premiers<0xFC><0x01><0x02> Pokémon valides de ton\léquipe seront choisis pour le combat.\p<0xFD><0x06> peut aussi utiliser Surf et\nEscalade.'
 - offset: '0x1F47B23'
   name: 'Réplique Ace — variante sommet'
   issue: B-319
@@ -264,9 +264,9 @@ entries:
   issue: B-319
   expected: 'Voilà, je suis de retour.'
 - offset: '0x1F479B7'
-  name: 'Cluster Pic Cristal — 0x1F479B7'
-  issue: B-319
-  expected: 'Allons en haut aussi vite que\npossible.<0xB0>Je garderai tes Pokémon en forme\nen chemin.'
+  name: 'Réplique Ace — montée au sommet'
+  issue: B-301
+  expected: 'Gagnons le sommet au plus\nvite.\pJe soignerai tes Pokémon\nen chemin.'
 - offset: '0x1F47A18'
   name: 'Cluster Pic Cristal — 0x1F47A18'
   issue: B-319

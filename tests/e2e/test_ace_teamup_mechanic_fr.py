@@ -13,8 +13,13 @@ from src.core.text_codec import TextDecoder
 
 
 SAMPLES = {
-    # Ace's ascent, including the original parent-ticket mechanic.
+    # Ace's ascent: the two strings reported by this ticket.
+    0x1F479B7: (
+        "Gagnons le sommet au plus vite.",
+        "Let's make our way to the top as",
+    ),
     0x1F47A62: ("En faisant équipe avec", "While teamed up with"),
+    # Alternate ascent dialogue covered by the parent Crystal Peak ticket.
     0x1F47B23: ("Ces types", "Those Light of Ruin guys"),
     # Aklove/Hoopa final battle.
     0x1F49748: ("Hoopa a invoqué", "Hoopa summoned a mysterious power"),
