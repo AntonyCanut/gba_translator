@@ -57,7 +57,7 @@ import re
 import sys
 from dataclasses import dataclass, field
 from pathlib import Path
-from typing import Dict, List, Optional, Tuple
+from typing import Any, Dict, List, Optional, Tuple
 
 import yaml
 
@@ -116,7 +116,12 @@ class IntegrityReport:
 def load_manifest(path: Path) -> Tuple[ProtectedEntry, ...]:
     """Load and validate a protected_entries.yaml manifest."""
 
-    data = yaml.safe_load(path.read_text(encoding="utf-8")) or {}
+    return parse_manifest(yaml.safe_load(path.read_text(encoding="utf-8")) or {}, path)
+
+
+def parse_manifest(data: Any, path: Path) -> Tuple[ProtectedEntry, ...]:
+    """Validate protected-entry data already loaded from YAML."""
+
     raw_entries = data.get("entries") or []
     entries: List[ProtectedEntry] = []
     for idx, raw in enumerate(raw_entries):

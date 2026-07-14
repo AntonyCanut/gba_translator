@@ -37,10 +37,24 @@ du profil rapide. Layout : `tests/unit/`, `tests/e2e/`, `tests/e2e-playwright/`,
   avec la ROM espagnole de référence), implémenter un fix **générique**, puis re-tester
   100 % du corpus.
 
+## Traductions ajoutées : couverture unitaire obligatoire
+
+Chaque ligne non vide ajoutée à `languages/<lang>/combined_<lang>.txt` doit avoir
+dans **le même commit** une entrée dans `languages/<lang>/protected_entries.yaml`.
+Cette entrée fixe l'offset et la valeur exactement résolue par la règle
+**dernière occurrence gagnante** ; `tests/unit/test_translation_integrity.py` la
+vérifie pour toutes les langues. Le garde `scripts/check_staged_translation_tests.py`
+refuse le commit si cette couverture manque ou si la valeur du manifeste ne correspond
+pas à la valeur live. Il ne remplace pas un test métier dédié lorsqu'un formatage, une
+taille de cellule ou un comportement de ROM est en jeu : dans ce cas, ajouter aussi le
+test ciblé approprié.
+
 ## Avant de conclure
 
-- Le hook `pre-commit` lance déjà les tests rapides sur les `.py` stagés. Ne le
-  contourne **jamais** (voir `git-workflow.md`).
+- Le hook `pre-commit` versionné dans `.githooks/` (installer via `make hooks` ou
+  `make install`) contrôle les traductions ajoutées, puis lance `make test-python-fast`
+  et les tests Vitest. S'il échoue, le commit n'a pas lieu : corriger tous les tests,
+  re-stager, puis recommitter. Ne le contourne **jamais** (voir `git-workflow.md`).
 - Pour une feature touchant l'émulateur ou l'affichage en jeu, lance aussi les specs
   Vitest/Playwright concernées. Pour une sonde mGBA : sessions courtes + savestates,
   **ne jamais sauvegarder en jeu** (cela écrase la fixture `.sav` et casse les goldens

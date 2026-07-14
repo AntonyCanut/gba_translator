@@ -199,6 +199,7 @@ pytest --cov=src tests/
 ## Non-obvious rules
 
 1. **Fichiers `combined_<langue>.txt` (toutes langues)** : sources manuelles et cumulatives, y compris le `combined_fr.txt` historique à la racine. **Ne jamais les régénérer, réécrire entièrement, trier, normaliser ou reformater**, ni les reconstruire depuis une ROM, un CSV, un JSON ou un script. Toute correction est une édition chirurgicale de l'entrée visée : préserver l'ordre, les doublons, l'encodage et les fins de ligne ; lorsque la dernière occurrence gagne, modifier cette dernière occurrence. Avant le commit, vérifier que le diff ne contient que les offsets attendus, sans suppression, déplacement ou changement indirect. Une régénération ne peut avoir lieu que si le ticket la demande explicitement avec une procédure de préservation et vérification. Pour la FR : ~957 doublons, dernière entrée gagnante ; ajouter dans le bloc bas en minuscules. Ne jamais utiliser `csv.writer` (corrompt les champs CRLF).
+1bis. **Nouvelle traduction = test unitaire obligatoire** : toute ligne non vide ajoutée à `languages/<langue>/combined_<langue>.txt` doit avoir, dans le même commit, une entrée exacte (offset et valeur résolue « dernière occurrence gagnante ») dans `languages/<langue>/protected_entries.yaml`. Le test générique `tests/unit/test_translation_integrity.py` en fait un test de régression unitaire ; ne jamais ajouter une traduction sans cette couverture. Le hook contrôle l'index Git avant le commit.
 2. **Charmap sync**: After editing `text_codec.py`, run `make sync-charmap`.
 3. **Fixed tables**: `src/core/fixed_tables.py` lists addresses that must never be relocated — relocation silently corrupts in-game lookups.
 4. **LZ77**: Always run repair scripts after build-fr. `make build-fr` does this automatically.
@@ -249,8 +250,7 @@ pytest --cov=src tests/
 
 ### Outillage
 - Linter **ruff** (config par défaut) ; pas de formateur imposé. `ruff check` doit passer.
-- Hook `pre-commit` (`.git/hooks/pre-commit`) : `py_compile` + `ruff` + pytest rapide sur
-  les `.py` stagés. **Ne jamais le contourner** (`--no-verify`, `HUSKY=0`… interdits).
+- Hook `pre-commit` versionné (`.githooks/pre-commit`, activé par `make hooks`/`make install`) : contrôle la couverture des nouvelles traductions, puis exécute tous les tests unitaires Python rapides et Vitest. Un seul échec bloque le commit : corriger, re-stager et recommitter ; **ne jamais le contourner** (`--no-verify`, `HUSKY=0`… interdits).
 
 ### Tests
 - `make test` (rapide) / `make test-python` (standard) / `make test-vitest` /

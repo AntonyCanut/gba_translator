@@ -375,7 +375,11 @@ sync-charmap:
 sync-charmap-check:
 	@$(PYTHON) scripts/sync_charmap.py --check
 
-install:
+hooks:
+	@git config core.hooksPath .githooks
+	@echo "✓ Hooks Git activés depuis .githooks/."
+
+install: hooks
 	@pip install -e ".[dev]" && npm install && cd emulator-web && npm install
 
 install-playwright:
@@ -428,6 +432,7 @@ help:
 	@echo "    make test-all        - test-python-fast + test-vitest + test-playwright"
 	@echo ""
 	@echo "  Outillage:"
+	@echo "    make hooks              - Active le hook pré-commit versionné"
 	@echo "    make sync-charmap       - Sync charmap Python -> TypeScript"
 	@echo "    make sync-charmap-check - Verify charmap sync (dry-run)"
 	@echo "    make install            - Install Python + Node dependencies"

@@ -19,7 +19,9 @@ RÈGLES NON NÉGOCIABLES (détail : .claude/project-rules.md et .claude/rules/pa
 - Encodage GEN III (pas ASCII) : terminateur 0xFF, newline 0xFE, control codes
   FC/FD/F8/F9/F7 multi-octets, pointeurs 32-bit LE base 0x08000000. Toute modif de
   charmap -> `make sync-charmap` + `make sync-charmap-check`.
-- Linter ruff (config défaut). Hook pre-commit (py_compile + ruff + pytest rapide) :
+- Hook pre-commit versionné (`.githooks/pre-commit`, activé avec `make hooks`) : exige
+  une entrée de test exacte dans `protected_entries.yaml` pour toute traduction ajoutée,
+  puis exécute les tests unitaires Python et Vitest. À l'échec, corriger tous les tests ;
   NE JAMAIS le contourner (--no-verify, HUSKY=0 interdits).
 - Tests : `make test` (rapide), markers benchmark/stress/slow/emulator/rom. 100 % de
   réussite OBLIGATOIRE : pas de skip, pas de fix hardcodé sur un offset ; cause racine +

@@ -1,0 +1,25 @@
+#!/bin/sh
+# Bloque tout commit tant que les tests unitaires et les nouvelles traductions ne passent pas.
+set -u
+
+ROOT=$(git rev-parse --show-toplevel) || exit 1
+cd "$ROOT" || exit 1
+
+fail_commit() {
+    echo "" >&2
+    echo "❌ Commit bloqué : tous les tests unitaires doivent passer." >&2
+    echo "Corrigez les échecs, stagez les corrections, puis recommittez." >&2
+    echo "Ne forcez et ne contournez jamais ce hook (--no-verify, HUSKY=0, etc.)." >&2
+    exit 1
+}
+
+echo "→ Vérification de la couverture unitaire des nouvelles traductions…"
+python3 scripts/check_staged_translation_tests.py || fail_commit
+
+echo "→ Exécution des tests unitaires Python…"
+make test-python-fast || fail_commit
+
+echo "→ Exécution des tests unitaires Vitest…"
+npm --prefix emulator-web test || fail_commit
+
+echo "✓ Tous les tests unitaires passent : commit autorisé."

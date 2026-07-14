@@ -199,6 +199,12 @@ Full guide: `docs/21_MULTILANGUE.md`. Tests: `tests/test_language_registry.py`.
   sont résolus par dernière occurrence, localiser et modifier cette dernière occurrence.
 - Avant le commit, contrôler le diff : il ne doit contenir que les offsets explicitement
   concernés, sans suppression, déplacement ni modification indirecte d'autres entrées.
+- **Toute nouvelle traduction doit avoir son test unitaire dans le même commit** : pour
+  chaque ligne non vide ajoutée à `languages/<lang>/combined_<lang>.txt`, ajouter ou
+  mettre à jour l'entrée exacte (offset et valeur live, dernière occurrence gagnante)
+  de `languages/<lang>/protected_entries.yaml`. Le test partagé
+  `tests/unit/test_translation_integrity.py` contrôle ces valeurs ; le hook pré-commit
+  refuse toute traduction ajoutée sans cette couverture.
 - Une régénération n'est acceptable que si le ticket la demande explicitement et fournit
   une procédure de préservation et de vérification des entrées existantes.
 
