@@ -631,3 +631,9 @@ entries:
   expected: D'accord ! Je vais\nm'enflammer !
   forbidden:
   - Okay!\nI'm going to get all fired up!
+- offset: '0x1F478EE'
+  name: 'Victoire du rival — Carohacrok'
+  issue: B-302
+  expected: 'Mince… pourquoi je m''en faisais ?\nBien sûr que tu es prêt !'
+  forbidden:
+  - 'Man… what was I even worried about?\nOf course you''re ready!'
