@@ -593,3 +593,9 @@ entries:
   expected: Fais le plein de\n{COLOR}ÉPotions{COLOR}Ë.\pOn sait jamais quand on devra se\nsoigner rapidement.
   forbidden:
   - On ne sait jamais quand on sera\ncoincé et devoir se soigner vite.
+- offset: '0x1EE6521'
+  name: 'Don de Poké Balls : jeu de mots sur « ball »'
+  issue: 'Humour non traduit'
+  expected: 'Sers-t''en avec soin, de la ball !\nHé hé, tu l''as ?'
+  forbidden:
+  - 'Sers-t''en en bonne santé !\nHé hé, tu l''as compris ?'
