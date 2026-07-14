@@ -637,3 +637,9 @@ entries:
   expected: 'Mince… pourquoi je m''en faisais ?\nBien sûr que tu es prêt !'
   forbidden:
   - 'Man… what was I even worried about?\nOf course you''re ready!'
+- offset: '0x1F53F7C'
+  name: 'PNJ Centre Pokémon (chambre): Marais Fulica peu de type Insecte'
+  issue: F-119
+  expected: Pour un marais, le <0xFC><0x01><0x06>Marais Fulica<0xFC><0x01><0x08>\nn'a étonnamment pas beaucoup de\lPokémon de type Insecte.
+  forbidden:
+  - Cootes Bog
