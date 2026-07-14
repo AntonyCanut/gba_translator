@@ -63,3 +63,9 @@ entries:
   expected: 'Bereiter könnte ich nicht sein!\pDa werden Erinnerungen wach!'
   forbidden:
   - This sure brings me back!
+- offset: '0x1f53032'
+  name: 'PNJ devant le Mart : prêt à se donner à fond'
+  issue: B-313
+  expected: 'Alles klar!\nJetzt leg ich los!'
+  forbidden:
+  - Okay!\nI'm going to get all fired up!
