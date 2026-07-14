@@ -251,18 +251,6 @@ entries:
   name: 'Cluster Pic Cristal — 0x1F47080'
   issue: B-319
   expected: 'Employé'
-- offset: '0x1F47086'
-  name: 'Cluster Pic Cristal — 0x1F47086'
-  issue: B-319
-  expected: 'Comment ça, le bateau ne part pas ?<0xB0>Nous devons rejoindre Polderive\nau plus vite !<0xB0>Le destin de Borrius en dépend !'
-- offset: '0x1F4725D'
-  name: 'Cluster Pic Cristal — 0x1F4725D'
-  issue: B-319
-  expected: 'Si ça nous y mène rapidement,\nallons-y.'
-- offset: '0x1F4728D'
-  name: 'Cluster Pic Cristal — 0x1F4728D'
-  issue: B-319
-  expected: 'Tu as compris, <0xFD><0x01> ?<0xB0>Retrouve-nous au bateau sur les quais,\nau <0xFC><0x01><0x06>nord<0xFC><0x01><0x08> d''ici.<0xB0>Nous partirons devant et monterons à bord\nsans toi, pour ne pas perdre de temps.<0xB0>Ah, oui : prends ce billet pour pouvoir\nmonter toi aussi.'
 - offset: '0x1F4739D'
   name: 'Cluster Pic Cristal — 0x1F4739D'
   issue: B-319
@@ -613,3 +601,27 @@ entries:
   name: 'Safari Zone: PNJ "we can live unchanged"'
   issue: B-308
   expected: Nous pouvons rester les mêmes,\ncar nous ne cessons de changer.\pEnfin, les Pokémon évoluent aussi,\nmais leur Nature reste la même.\pDu moins, c'est censé être le cas…
+- offset: '0x1F47086'
+  name: 'Ferry S.S. Marine: Jax, bateau à l''arrêt (répliques 1-3)'
+  issue: B-306
+  expected: Comment ça, le bateau ne\nfonctionne pas ?\pIl faut qu'on aille à Polderive\nAU PLUS VITE !\pLe sort de Borrius en dépend !
+  forbidden:
+  - What do you mean, the ship's not\nrunning?\pWe need to get to Polder Town\nASAP!\pThe fate of Borrius depends on it!
+- offset: '0x1F4725D'
+  name: 'Ferry S.S. Marine: réponse de Brice (réplique 4)'
+  issue: B-306
+  expected: Si ça nous permet d'y aller vite,\nfaisons ça.
+  forbidden:
+  - If that'll get us there quickly,\nlet's do that.
+- offset: '0x1F4728D'
+  name: 'Ferry S.S. Marine: Jax donne rendez-vous à Brice (répliques 5-7 + ticket)'
+  issue: B-306
+  expected: T'as bien compris, {FD01} ?\pRetrouve-nous sur le bateau, sur les\nquais au nord d'ici.\pOn y va sans t'attendre, comme ça\nil n'y aura pas de retard.\pAh oui, tiens, prends ce ticket pour\npouvoir monter à bord toi aussi.
+  forbidden:
+  - You got that, {FD01}?\pMeet us at the boat on the docks\nnorth of here.\pWe'll go on ahead and board without\nyou, so there's no delay.\pOh, right - take this ticket so you\ncan get on the boat, too.
+- offset: '0x1F53396'
+  name: 'Ferry S.S. Marine: horaires vers Borrius Ouest (réplique 8)'
+  issue: B-306
+  expected: Quand il fonctionne, le Marine part\nvers Borrius Ouest le\ldimanche et le mercredi.
+  forbidden:
+  - When it's working, the S.S. Marine\nsets sail to West Borrius on\nSundays and Wednesdays.

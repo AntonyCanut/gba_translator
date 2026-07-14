@@ -25251,3 +25251,13 @@ objets utiles aux Dresseurs.
 # --- Safari Zone : 2 répliques PNJ non traduites (B-308) ---
 0x1f53c21: J'ai attrapé mon précieux\npartenaire dans la <0xFC><0x01><0x06>Zone Safari<0xFC><0x01><0x08>.\pC'est juste à l'<0xFC><0x01><0x06>est<0xFC><0x01><0x08> de la ville.
 0x1f53c7d: Nous pouvons rester les mêmes,\ncar nous ne cessons de changer.\pEnfin, les Pokémon évoluent aussi,\nmais leur Nature reste la même.\pDu moins, c'est censé être le cas…
+# Ticket B-306 (split from F-119): cutscène ferry S.S. Marine, PNJ Jax (+ Brice).
+# Répliques 1-3 : Jax s'étonne que le bateau soit à l'arrêt (3 pages).
+0x1f47086: Comment ça, le bateau ne\nfonctionne pas ?\pIl faut qu'on aille à Polderive\nAU PLUS VITE !\pLe sort de Borrius en dépend !
+# Réplique 4 : réponse de Brice.
+0x1f4725d: Si ça nous permet d'y aller vite,\nfaisons ça.
+# Répliques 5-7 (+ bonus ticket) : Jax s'assure que Brice a compris, lui donne
+# rendez-vous sur le quai, part devant, puis lui tend le ticket S.S.
+0x1f4728d: T'as bien compris, {FD01} ?\pRetrouve-nous sur le bateau, sur les\nquais au nord d'ici.\pOn y va sans t'attendre, comme ça\nil n'y aura pas de retard.\pAh oui, tiens, prends ce ticket pour\npouvoir monter à bord toi aussi.
+# Réplique 8 : PNJ distinct près d'un lit, indique les jours de départ du Marine.
+0x1f53396: Quand il fonctionne, le Marine part\nvers Borrius Ouest le\ldimanche et le mercredi.
