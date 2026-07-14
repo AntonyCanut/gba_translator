@@ -625,3 +625,9 @@ entries:
   expected: Quand il fonctionne, le Marine part\nvers Borrius Ouest le\ldimanche et le mercredi.
   forbidden:
   - When it's working, the S.S. Marine\nsets sail to West Borrius on\nSundays and Wednesdays.
+- offset: '0x1F53032'
+  name: 'PNJ dresseur troupe Cradopaud devant le Mart'
+  issue: B-304
+  expected: D'accord ! Je vais\nm'enflammer !
+  forbidden:
+  - Okay!\nI'm going to get all fired up!

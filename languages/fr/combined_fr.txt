@@ -25136,7 +25136,6 @@ objets utiles aux Dresseurs.
 0x1f65e5c: Route 8
 0x419e2c: Choix
 0x419e32: Défini
-
 # Ticket B-305 : maison Dresco, 2 PNJ non traduits (dons de CT + remerciement visite).
 # combined_fr.txt n'avait jamais réabsorbé ces offsets après une régression (Pattern C) ;
 # DE/IT avaient déjà les traductions complètes, servi de référence pour la page manquante.
@@ -25261,3 +25260,6 @@ objets utiles aux Dresseurs.
 0x1f4728d: T'as bien compris, {FD01} ?\pRetrouve-nous sur le bateau, sur les\nquais au nord d'ici.\pOn y va sans t'attendre, comme ça\nil n'y aura pas de retard.\pAh oui, tiens, prends ce ticket pour\npouvoir monter à bord toi aussi.
 # Réplique 8 : PNJ distinct près d'un lit, indique les jours de départ du Marine.
 0x1f53396: Quand il fonctionne, le Marine part\nvers Borrius Ouest le\ldimanche et le mercredi.
+# Ticket B-304 : PNJ dresseur devant le Mart (troupe Cradopaud), réplique non traduite dans
+# combined_fr.txt bien que déjà présente en base ; formalisée ici pour la protéger des régénérations.
+0x1f53032: D'accord ! Je vais\nm'enflammer !
