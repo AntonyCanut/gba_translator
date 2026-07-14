@@ -90,15 +90,29 @@ class TestApplyPatches(unittest.TestCase):
         str_patch = next(p for p in PATCHES if p[0] == 0x284EBC)
         self.assertEqual(str_patch[1], b"\xff" * 6)
         self.assertEqual(str_patch[2], encode("Maman") + b"\xff")
-        # Five pointer patches: old address 0x09F0BA1F → new 0x08284EBC
+        # Every speaker-label pointer: old address 0x09F0BA1F → new 0x08284EBC
         old_ptr = b"\x1f\xba\xf0\x09"
         new_ptr = b"\xbc\x4e\x28\x08"
-        ptr_offsets = [0x1E6E411, 0x1E6E432, 0x1E6E44B, 0x1E6E47A, 0x1E6E4B1]
+        ptr_offsets = [
+            0x1E6E411,
+            0x1E6E432,
+            0x1E6E44B,
+            0x1E6E47A,
+            0x1E6E4B1,
+            0x1E6E4D6,
+            0x1E6E4F8,
+            0x1E6E523,
+            0x1E6E544,
+            0x1E6E568,
+            0x1E8D6ED,
+            0x1E8D70F,
+        ]
         for poff in ptr_offsets:
-            patch = next((p for p in PATCHES if p[0] == poff), None)
-            self.assertIsNotNone(patch, f"missing pointer patch at 0x{poff:X}")
-            self.assertEqual(patch[1], old_ptr)
-            self.assertEqual(patch[2], new_ptr)
+            with self.subTest(pointer_offset=f"0x{poff:X}"):
+                patch = next((p for p in PATCHES if p[0] == poff), None)
+                self.assertIsNotNone(patch, f"missing pointer patch at 0x{poff:X}")
+                self.assertEqual(patch[1], old_ptr)
+                self.assertEqual(patch[2], new_ptr)
 
 
 if __name__ == "__main__":
