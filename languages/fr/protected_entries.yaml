@@ -699,3 +699,15 @@ entries:
   expected: Esquive + vs cap. statut.
   forbidden:
   - Esquive accrue vs cap. statut.
+- offset: '0x1F1F8B7'
+  name: 'Mission Tablettes de Pierre'
+  issue: '#115'
+  expected: Découvre les secrets derrière les tablettes de pierre !
+  forbidden:
+  - Découvre les secrets\nderrière les tablettes\nde pierre mystérieuses !
+- offset: '0x1F87B73'
+  name: 'Mission Cellules Vertes'
+  issue: '#115'
+  expected: Collecte les cellules vertes disséminées à Borrius !
+  forbidden:
+  - Collecte les mystérieuses\ncellules vertes disséminées à\nBorrius !
