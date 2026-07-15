@@ -98,7 +98,7 @@ SPANISH_BUILD := $(ROM_OUT_DIR)/GenedRom-es.gba
 
 .PHONY: pipeline verify-roms extract extract-en extract-es extract-fr diff build-es build-fr prepare-fr validate-es trilingual-csv \
 	build-it build-de build-indie build-lang build-all release-all langs \
-	test test-python-fast test-python test-rom check-translations test-vitest test-playwright test-all \
+	test test-python-fast test-python test-rom test-fr-rebuild check-translations test-vitest test-playwright test-all \
 	sync-charmap sync-charmap-check install install-playwright lint tickets report \
 	clean help
 
@@ -349,8 +349,16 @@ test-python-fast:
 test-python:
 	@$(PYTHON) -m pytest tests/ -m "not emulator and not stress and not benchmark and not rom" -v
 
-test-rom:
+test-rom: test-fr-rebuild
 	@$(PYTHON) -m pytest tests/ -m rom -v
+
+test-fr-rebuild:
+	@$(PYTHON) -m pytest -q --tb=short \
+		tests/e2e/test_ace_teamup_mechanic_fr.py \
+		tests/e2e/test_dragon_cave_cutscene_fr.py \
+		tests/e2e/test_east_borrius_sign_fr.py \
+		tests/e2e/test_rival_battle_victory_line_fr.py \
+		tests/e2e/es/test_extraction_coverage.py
 
 # Garde anti-régression des traductions (toutes langues) — source de vérité :
 # languages/<lang>/protected_entries.yaml. Voir docs/20_TRANSLATION_PRESERVATION.md §7.
@@ -428,6 +436,7 @@ help:
 	@echo "    make test-python-fast - pytest rapide (unit, sans benchmarks/stress/e2e/emulator)"
 	@echo "    make test-python     - pytest standard (sans emulator/stress/benchmark)"
 	@echo "    make test-rom        - Vérification des traductions dans la ROM buildée (pytest -m rom)"
+	@echo "    make test-fr-rebuild - Régressions FR/ES après reconstruction de ROM"
 	@echo "    make test-vitest     - Vitest (emulator-web)"
 	@echo "    make test-playwright - Playwright E2E"
 	@echo "    make test-all        - test-python-fast + test-vitest + test-playwright"
