@@ -711,3 +711,9 @@ entries:
   expected: Collecte les cellules vertes disséminées à Borrius !
   forbidden:
   - Collecte les mystérieuses\ncellules vertes disséminées à\nBorrius !
+- offset: '0x1F5605C'
+  name: 'Menu Missions : onglet Active'
+  issue: '#116'
+  expected: Active
+  forbidden:
+  - Actives
