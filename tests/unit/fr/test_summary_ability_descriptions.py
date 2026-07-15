@@ -32,3 +32,5 @@ def test_summary_ability_descriptions_fit_one_line():
     assert entries[0x24F3D8] == "Repousse les Pokémon sauvages."
     assert entries[0x24F481] == "Esquive + sous tempêtesable."
     assert entries[0x24F534] == "Change de type selon cap."
+    assert entries[0xA3510F] == "Puissance + contre même sexe."
+    assert entries[0xA356E4] == "Esquive + vs cap. statut."
