@@ -687,3 +687,15 @@ entries:
   name: 'Conseil 4 : combat en duo'
   issue: 'Problème de traduction 2'
   expected: Certains membres du Conseil 4\naiment les combats en duo.<0xB0>Si tu n'as pas la CT pour\n<0xFC><0x01><0x06>Abri<0xFC><0x01><0x04>, c'est le moment de\nl'acheter au marché de\n<0xFC><0x01><0x06><0xFD><0x01><0xFC><0x01><0x04>.
+- offset: '0xA3510F'
+  name: 'Talent Rivalité (description)'
+  issue: '113'
+  expected: Puissance + contre même sexe.
+  forbidden:
+  - Puissance accrue contre même sexe.
+- offset: '0xA356E4'
+  name: 'Talent description (Esquive)'
+  issue: '113'
+  expected: Esquive + vs cap. statut.
+  forbidden:
+  - Esquive accrue vs cap. statut.
