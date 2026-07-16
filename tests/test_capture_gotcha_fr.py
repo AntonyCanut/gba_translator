@@ -23,6 +23,8 @@ import struct
 import unittest
 from pathlib import Path
 
+import pytest
+
 from src.core.text_codec import TextDecoder
 
 FR_ROM = Path("output/roms/GenedRom-fr.gba")
@@ -41,6 +43,7 @@ def _decode_via_slot(rom: bytes, slot: int, limit: int = 80) -> str:
     return TextDecoder.decode_pokemon(raw, preserve_unknown=True)
 
 
+@pytest.mark.rom
 class TestCaptureGotchaFr(unittest.TestCase):
     """The capture message must read "Et hop !" in the built FR ROM."""
 
