@@ -27,6 +27,8 @@ import importlib
 
 import pytest
 
+pytestmark = pytest.mark.rom
+
 from src.core.text_codec import TextDecoder
 
 # Authoritative control-code parsing, shared with the ROM builder so this

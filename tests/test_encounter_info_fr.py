@@ -52,6 +52,8 @@ from pathlib import Path
 
 import pytest
 
+pytestmark = pytest.mark.rom
+
 FR_ROM = Path("output/roms/GenedRom-fr.gba")
 ENGLISH_TEXTS = Path("output/extracted/extracted_texts/englishrom_texts.json")
 

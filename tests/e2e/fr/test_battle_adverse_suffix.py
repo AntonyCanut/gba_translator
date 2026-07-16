@@ -21,6 +21,7 @@ import struct
 
 import pytest
 
+pytestmark = pytest.mark.rom
 
 ROM_PATH = "output/roms/GenedRom-fr.gba"
 pytestmark = pytest.mark.rom

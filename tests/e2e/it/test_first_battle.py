@@ -34,6 +34,8 @@ import subprocess
 
 import pytest
 
+pytestmark = pytest.mark.rom
+
 _HERE = pathlib.Path(__file__).resolve()
 
 

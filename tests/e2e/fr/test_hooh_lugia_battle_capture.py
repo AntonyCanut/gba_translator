@@ -40,6 +40,8 @@ import struct
 
 import pytest
 
+pytestmark = pytest.mark.rom
+
 from src.text.charmap_data import BYTE_TO_CHAR
 
 # ---------------------------------------------------------------------------

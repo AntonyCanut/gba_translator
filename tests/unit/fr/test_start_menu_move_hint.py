@@ -1,5 +1,9 @@
 """Régressions du libellé français de déplacement du menu START (#107)."""
 
+import pytest
+
+pytestmark = pytest.mark.rom
+
 from pathlib import Path
 
 import pytest

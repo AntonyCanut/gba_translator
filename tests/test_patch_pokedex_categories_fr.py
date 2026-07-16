@@ -8,6 +8,8 @@ from pathlib import Path
 
 import pytest
 
+pytestmark = pytest.mark.rom
+
 from languages.fr.patches.pokedex_categories import (
     CELL_SIZE,
     CHAR_TO_BYTE,

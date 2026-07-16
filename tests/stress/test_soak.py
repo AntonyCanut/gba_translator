@@ -21,6 +21,8 @@ from dataclasses import dataclass
 
 import pytest
 
+pytestmark = pytest.mark.rom
+
 from tests.stress.conftest import MGBA_AVAILABLE, ROM_AVAILABLE
 
 PROJECT_ROOT = pathlib.Path(__file__).resolve().parent.parent.parent

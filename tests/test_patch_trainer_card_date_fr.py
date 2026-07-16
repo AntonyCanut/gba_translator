@@ -1,3 +1,7 @@
+import pytest
+
+pytestmark = pytest.mark.rom
+
 import struct
 import unittest
 from pathlib import Path

@@ -19,6 +19,10 @@ not be used for verification.
 
 from __future__ import annotations
 
+import pytest
+
+pytestmark = pytest.mark.rom
+
 import struct
 import unittest
 from pathlib import Path

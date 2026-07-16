@@ -39,6 +39,8 @@ import subprocess
 
 import pytest
 
+pytestmark = pytest.mark.rom
+
 PROJECT_ROOT = pathlib.Path(__file__).resolve().parent.parent.parent
 VERIFY_SCRIPT = PROJECT_ROOT / "scripts" / "verify_daycare_no_freeze.mts"
 SAVE_FIXTURE = PROJECT_ROOT / "tests" / "fixtures" / "saves" / "daycare_withdraw.sav"

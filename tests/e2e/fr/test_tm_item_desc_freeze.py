@@ -29,6 +29,8 @@ import struct
 
 import pytest
 
+pytestmark = pytest.mark.rom
+
 from src.core.text_codec import TextDecoder
 from tests.e2e.conftest import FR_ROM_PATH
 

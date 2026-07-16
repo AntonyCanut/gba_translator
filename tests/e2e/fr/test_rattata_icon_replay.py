@@ -26,6 +26,8 @@ import subprocess
 
 import pytest
 
+pytestmark = pytest.mark.rom
+
 PROJECT_ROOT = pathlib.Path(__file__).resolve().parent.parent.parent.parent
 FR_ROM = PROJECT_ROOT / "output" / "roms" / "GenedRom-fr.gba"
 SOURCE_ROM = PROJECT_ROOT / "input" / "roms" / "patchedfrenchrom.gba"

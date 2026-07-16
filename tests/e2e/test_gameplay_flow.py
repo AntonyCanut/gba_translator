@@ -15,6 +15,8 @@ import pathlib
 
 import pytest
 
+pytestmark = pytest.mark.rom
+
 from src.cooker.checkpoint import (
     ALL_SCENARIOS,
     EXTENDED_SCENARIOS,

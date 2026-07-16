@@ -21,6 +21,8 @@ from pathlib import Path
 
 import pytest
 
+pytestmark = pytest.mark.rom
+
 from src.core.text_codec import TextDecoder
 
 EN_ROM = Path("input/roms/englishrom.gba")

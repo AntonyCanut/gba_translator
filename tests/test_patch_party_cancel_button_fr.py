@@ -13,6 +13,8 @@ from pathlib import Path
 
 import pytest
 
+pytestmark = pytest.mark.rom
+
 sys.path.insert(0, str(Path(__file__).parent.parent))
 
 from languages.fr.patches.party_cancel_button import (

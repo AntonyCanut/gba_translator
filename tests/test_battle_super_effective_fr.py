@@ -24,6 +24,8 @@ from pathlib import Path
 
 import pytest
 
+pytestmark = pytest.mark.rom
+
 from src.core.text_codec import TextDecoder
 
 FR_ROM = Path("output/roms/GenedRom-fr.gba")
