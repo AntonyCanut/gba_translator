@@ -128,6 +128,50 @@ class TestBuildFrPipeline(unittest.TestCase):
             "build-fr must depend on the Spanish extraction so it regenerates",
         )
 
+    def test_build_fr_generates_missing_translation_json(self) -> None:
+        """A fresh worktree must prepare its generated FR JSON automatically."""
+        self.assertIn(
+            "ensure-fr-translation",
+            self.prereqs.split(),
+            "build-fr must prepare a missing translation_ready.json",
+        )
+
+    def test_french_translation_path_is_late_bound(self) -> None:
+        """The path must be discovered after ``ensure-fr-translation`` runs.
+
+        A simply-expanded ``:=`` assignment is evaluated while Make parses the
+        file.  On a fresh checkout that permanently records an empty path even
+        when the prerequisite subsequently creates the JSON.
+        """
+        assignment = re.search(r"^FR_TRANSLATION\s*(:?=)", self.text, re.MULTILINE)
+        self.assertIsNotNone(assignment, "FR_TRANSLATION assignment is missing")
+        self.assertEqual(
+            assignment.group(1),
+            "=",
+            "FR_TRANSLATION must be recursively expanded after preparation",
+        )
+
+    def test_translation_preparation_waits_for_french_extraction(self) -> None:
+        """Parallel builds must not launch two writers for the same extraction."""
+        prereqs, recipe = _extract_target_block(self.text, "ensure-fr-translation")
+        prereqs_expanded = _expand(prereqs, self.variables)
+        french_extract = _expand("$(FRENCH_EXTRACT)", self.variables)
+        self.assertIn(
+            french_extract,
+            prereqs_expanded,
+            "ensure-fr-translation must wait for the French extraction",
+        )
+        self.assertIn(
+            "len(d.get('translations', []))",
+            recipe,
+            "ensure-fr-translation must reject an empty generated JSON",
+        )
+        self.assertEqual(
+            recipe.count("$(MAKE) prepare-fr"),
+            2,
+            "missing and empty translation JSONs must both run prepare-fr",
+        )
+
     def test_build_fr_runs_inline_override(self) -> None:
         self.assertIn(
             INLINE_OVERRIDE_SCRIPT,

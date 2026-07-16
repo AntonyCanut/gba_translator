@@ -86,7 +86,10 @@ FR_BUILD := $(ROM_OUT_DIR)/GenedRom-fr.gba
 # Only date-prefixed JSONs are French. The generic multi-language driver writes
 # <code>_translation_ready.json (e.g. it_/de_), which must NEVER be picked here —
 # otherwise build-fr would inject another language and the FR ROM would change.
-FR_TRANSLATION := $(shell ls -t $(OUTPUT_DIR)/translation/[0-9]*_translation_ready.json 2>/dev/null | head -n 1)
+# Recursively-expanded (=, not :=): must be re-evaluated after ensure-fr-translation
+# runs prepare-fr, otherwise a fresh checkout with no output/translation/ yet would
+# freeze this to empty at parse time, before prepare-fr had a chance to create it.
+FR_TRANSLATION = $(shell ls -t $(OUTPUT_DIR)/translation/[0-9]*_translation_ready.json 2>/dev/null | head -n 1)
 
 ENGLISH_EXTRACT := $(EXTRACT_DIR)/englishrom_texts.json
 SPANISH_EXTRACT := $(EXTRACT_DIR)/spanishrom_texts.json
@@ -98,7 +101,7 @@ SPANISH_BUILD := $(ROM_OUT_DIR)/GenedRom-es.gba
 
 .DEFAULT_GOAL := pipeline
 
-.PHONY: pipeline verify-roms extract extract-en extract-es extract-fr diff build-es build-fr prepare-fr validate-es trilingual-csv \
+.PHONY: pipeline verify-roms extract extract-en extract-es extract-fr diff build-es build-fr prepare-fr ensure-fr-translation validate-es trilingual-csv \
 	build-it build-de build-indie build-lang build-all release-all langs \
 	test test-python-fast test-python test-rom test-fr-rebuild check-translations test-vitest test-playwright test-all \
 	sync-charmap sync-charmap-check install install-playwright lint tickets report \
@@ -169,7 +172,24 @@ build-es: $(OFFSET_MAP) $(BUILD_SCRIPT)
 		--language spanish \
 		--output $(SPANISH_BUILD)
 
-build-fr: check-translations-fr $(FRENCH_EXTRACT) $(SPANISH_EXTRACT) $(BUILD_SCRIPT)
+## ensure-fr-translation: auto-run prepare-fr when no translation_ready.json
+## exists yet, or the latest one is empty (0 translations), so `make build-fr`
+## is self-sufficient on a fresh checkout or CI worktree instead of failing
+## with "No translations provided". Never overwrites a translation_ready.json
+## already produced by the trilingual CSV route as long as it has entries.
+## prepare-fr is a lower-fidelity CI bypass (see its own header comment) —
+## for a release build, generate the curated CSV first (apply_combined_fr.py
+## --extend -> 09_csv_to_json_v2.py) so this fallback never triggers.
+ensure-fr-translation: $(FRENCH_EXTRACT)
+	@if [ -z "$(FR_TRANSLATION)" ]; then \
+		echo "No translation_ready.json found — falling back to 'make prepare-fr' (CI bypass, see docs/20_TRANSLATION_PRESERVATION.md)..."; \
+		$(MAKE) prepare-fr; \
+	elif [ "$$($(PYTHON) -c "import json; d=json.load(open('$(FR_TRANSLATION)')); print(len(d.get('translations', [])))")" = "0" ]; then \
+		echo "$(FR_TRANSLATION) has 0 translations — falling back to 'make prepare-fr' (CI bypass, see docs/20_TRANSLATION_PRESERVATION.md)..."; \
+		$(MAKE) prepare-fr; \
+	fi
+
+build-fr: check-translations-fr ensure-fr-translation $(FRENCH_EXTRACT) $(SPANISH_EXTRACT) $(BUILD_SCRIPT)
 	@if [ -z "$(FR_TRANSLATION)" ]; then \
 		echo "No translation_ready.json found in output/translation/"; \
 		exit 1; \
