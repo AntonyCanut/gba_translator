@@ -96,6 +96,7 @@ def _live_bytes_for(rom: bytes, pointer_offsets) -> set:
     return blobs
 
 
+@pytest.mark.rom
 @pytest.mark.skipif(not FR_ROM.exists(), reason="FR ROM not built")
 @pytest.mark.skipif(not ENGLISH_TEXTS.exists(), reason="English extraction not built")
 class TestEncounterInfoFr(unittest.TestCase):
