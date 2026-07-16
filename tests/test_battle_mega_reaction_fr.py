@@ -50,6 +50,7 @@ def fr_rom() -> bytes:
     return FR_ROM.read_bytes()
 
 
+@pytest.mark.rom
 class TestBattleMegaReactionFr(unittest.TestCase):
     """Verify both Mega-Cuff reaction templates are translated in the FR ROM."""
 
