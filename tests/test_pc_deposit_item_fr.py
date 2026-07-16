@@ -25,6 +25,7 @@ def _read_terminated_string(rom: bytes, pointer_offset: int) -> bytes:
 
 
 @pytest.mark.parametrize("pointer_offset", DEPOSIT_ITEM_POINTER_OFFSETS)
+@pytest.mark.rom
 def test_pc_deposit_item_label_keeps_its_initial_d(pointer_offset: int) -> None:
     """Chaque menu PC doit afficher le libellé complet et isolé."""
     rom = FR_ROM.read_bytes()
