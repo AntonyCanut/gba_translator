@@ -2,6 +2,8 @@
 
 from pathlib import Path
 
+import pytest
+
 from languages.fr.sprites import SPRITES
 from src.graphics.sprite_bmp import read_indexed_bmp
 from src.graphics.sprite_rom import extract_block
@@ -45,6 +47,7 @@ def test_start_menu_move_hint_is_inserted_by_french_build() -> None:
     assert expected_command in makefile
 
 
+@pytest.mark.rom
 def test_built_french_rom_contains_depl_pixels() -> None:
     """La ROM française livrée doit contenir le même dessin que l’asset."""
     sprite = SPRITES["start_menu_move_hint"]
