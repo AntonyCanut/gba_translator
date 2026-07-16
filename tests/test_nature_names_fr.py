@@ -94,6 +94,7 @@ def _follow_slot(rom: bytes, table_base: int, index: int) -> str:
     return _read_at(rom, ptr - POINTER_BASE)
 
 
+@pytest.mark.rom
 @pytest.mark.skipif(not FR_ROM.exists(), reason="FR ROM not built")
 class TestNatureNamesFr(unittest.TestCase):
     @classmethod
