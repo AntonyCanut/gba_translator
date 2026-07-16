@@ -60,6 +60,8 @@ PATCH_STATUS_ABBREVS_SCRIPT := languages/fr/patches/status_abbrevs.py
 PATCH_STATUS_BADGES_SCRIPT := languages/fr/patches/status_badges.py
 PATCH_HP_LABELS_SCRIPT := languages/fr/patches/hp_labels.py
 PATCH_PARTY_LV_LABEL_SCRIPT := languages/fr/patches/party_lv_label.py
+PATCH_MON_ICON_REPAIR_SCRIPT := languages/fr/patches/mon_icon_repair.py
+PATCH_PARTY_CANCEL_BUTTON_SCRIPT := languages/fr/patches/party_cancel_button.py
 PATCH_POKEDEX_STAT_LABELS_FR_SCRIPT := languages/fr/patches/pokedex_stat_labels.py
 PATCH_TYPE_ICONS_SCRIPT := languages/fr/patches/type_icons.py
 PATCH_DEXNAV_HEADERS_SCRIPT := languages/fr/patches/dexnav_headers.py
@@ -283,6 +285,8 @@ build-fr: check-translations-fr $(FRENCH_EXTRACT) $(SPANISH_EXTRACT) $(BUILD_SCR
 	@$(PYTHON) scripts/insert_sprite.py --rom $(FR_BUILD) --lang fr --sprite selection --bmp languages/fr/sprites/selection.bmp
 	@$(PYTHON) scripts/insert_sprite.py --rom $(FR_BUILD) --lang fr --sprite start_menu_move_hint --bmp languages/fr/sprites/start_menu_move_hint.bmp
 	@$(PYTHON) $(PATCH_SUMMARY_LV_LABELS_SCRIPT) --rom $(FR_BUILD)
+	@$(PYTHON) $(PATCH_MON_ICON_REPAIR_SCRIPT) --rom $(FR_BUILD) --source $(FRENCH_ROM)
+	@$(PYTHON) $(PATCH_PARTY_CANCEL_BUTTON_SCRIPT) --rom $(FR_BUILD)
 	@echo "✓ FR ROM built — vérification des traductions de lieux..."
 	@$(PYTHON) -m pytest tests/test_location_names_fr.py -q --tb=short
 	@echo "✓ Vérification des noms de nature (pointeurs vivants)..."
