@@ -22,4 +22,13 @@ make test-python-fast || fail_commit
 echo "→ Exécution des tests unitaires Vitest…"
 npm --prefix emulator-web test || fail_commit
 
-echo "✓ Tous les tests unitaires passent : commit autorisé."
+echo "→ Build ROM français (make build-fr)…"
+make build-fr || fail_commit
+
+echo "→ Build ROM italien (make build-it)…"
+make build-it || fail_commit
+
+echo "→ Build ROM allemand (make build-de)…"
+make build-de || fail_commit
+
+echo "✓ Tous les tests unitaires passent et les 3 ROMs (fr/it/de) buildent : commit autorisé."
