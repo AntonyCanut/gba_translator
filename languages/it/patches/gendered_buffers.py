@@ -53,9 +53,12 @@ GENDERED_BUFFERS = [
     (0x01FA17C8, bytes.fromhex('ebe3e1d5e2ff'), 'donna'),  # woman -> donna
     (0x01FA17CE, bytes.fromhex('d1e3e1d5e2ff'), 'Donna'),  # Woman -> Donna
 
-    # her pronoun buffer (object pronoun loaded by bufferstring before dialogue).
+    # Object-pronoun buffers loaded by bufferstring before dialogue.
+    # him (3 bytes) -> lui (3 bytes, fits in the 4-byte slot)
     # her (3 bytes) -> lei (3 bytes, fits in 4-byte slot)
+    (0x789224, bytes.fromhex('dcdde1ff'), 'lui'),   # him -> lui
     (0x78922E, bytes.fromhex('dcd9e6ff'), 'lei'),   # her -> lei
+    (0x1FA764E, bytes.fromhex('dcdde1ff'), 'lui'),  # him -> lui (second set)
     (0x1FA7652, bytes.fromhex('dcd9e6ff'), 'lei'),   # her -> lei (second set)
 ]
 
