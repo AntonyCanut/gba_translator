@@ -63,6 +63,7 @@ def _parse_combined(path: Path) -> dict[int, str]:
     return entries
 
 
+@pytest.mark.rom
 class TestBattleSuperEffectiveFr(unittest.TestCase):
     """Verify that all 'super effective' battle strings are translated in the FR ROM."""
 
