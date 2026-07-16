@@ -22,7 +22,9 @@ Pipeline for a generic language:
 from __future__ import annotations
 
 import argparse
+import csv
 import importlib.util
+import re
 import subprocess
 import sys
 from pathlib import Path
@@ -143,6 +145,29 @@ def ensure_extractions() -> None:
         run([PYTHON, EXTRACT_SCRIPT, SPANISH_ROM, "--output", SPANISH_EXTRACT, "--scan-all-pointers"])
 
 
+def _english_text_count() -> int | None:
+    """Cheaply read ``text_count`` from the extraction JSON header.
+
+    The field sits in the first few lines of the file, well before the
+    (potentially 200+ MB) ``texts`` array, so a small partial read avoids
+    parsing the whole extraction just to sanity-check a cache.
+    """
+    if not ENGLISH_EXTRACT.exists():
+        return None
+    with open(ENGLISH_EXTRACT, "r", encoding="utf-8") as f:
+        header = f.read(4096)
+    match = re.search(r'"text_count":\s*(\d+)', header)
+    return int(match.group(1)) if match else None
+
+
+def _csv_row_count(path: Path) -> int:
+    """Count data rows, not physical lines: encoded Pokémon text can embed raw
+    newline bytes inside a quoted field, so a naive line count overcounts.
+    """
+    with open(path, "r", encoding="utf-8-sig", newline="") as f:
+        return sum(1 for _ in csv.reader(f)) - 1  # minus header
+
+
 def _generic_base_csv() -> Path:
     """Return the language-neutral EN/ES trilingual CSV, generating it if necessary.
 
@@ -152,7 +177,15 @@ def _generic_base_csv() -> Path:
     silently inheriting another language's leftover translation.
     """
     if GENERIC_BASE_CSV.exists():
-        return GENERIC_BASE_CSV
+        expected = _english_text_count()
+        actual = _csv_row_count(GENERIC_BASE_CSV)
+        if expected is None or actual == expected:
+            return GENERIC_BASE_CSV
+        print(
+            f"⚠ {GENERIC_BASE_CSV.name} is stale ({actual} rows vs {expected} "
+            "texts in the current English extraction) — regenerating."
+        )
+        GENERIC_BASE_CSV.unlink()
 
     # No trilingual CSV found — generate it automatically.
     if not DIFF_REPORT.exists():
