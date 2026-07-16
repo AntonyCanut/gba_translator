@@ -50,6 +50,7 @@ def _live_offset(en_rom: bytes, fr_rom: bytes, en_offset: int) -> int:
     return fr_value - BASE
 
 
+@pytest.mark.rom
 class TestMoveForgetTadaaFr(unittest.TestCase):
     """Every copy of the move-forget template must say TADAA, not Pouf/Poof."""
 
