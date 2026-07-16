@@ -1,6 +1,8 @@
 import unittest
 from pathlib import Path
 
+import pytest
+
 from languages.fr.patches.font import lz77_decompress
 
 
@@ -36,6 +38,7 @@ _KO_TILES_PER_BADGE = 4
 _KO_ROW1 = [0xE, 0x2, 0xE, 0xE, 0x2, 0xE, 0xE, 0x2]
 
 
+@pytest.mark.rom
 class TestLocalizedLz77Blocks(unittest.TestCase):
     @unittest.skipUnless(EN_ROM.exists() and ES_ROM.exists() and FR_ROM.exists(), 'ROMs missing')
     def test_localized_blocks_match_spanish(self) -> None:
