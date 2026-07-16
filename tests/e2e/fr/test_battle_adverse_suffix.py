@@ -23,6 +23,7 @@ import pytest
 
 
 ROM_PATH = "output/roms/GenedRom-fr.gba"
+pytestmark = pytest.mark.rom
 
 # Cave header: first 16 bytes (PUSH through first STRB in copy_loop)
 #   PUSH {r2, r4, r5}  = 0xB434
