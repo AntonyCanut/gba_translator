@@ -2,6 +2,8 @@ import struct
 import unittest
 from pathlib import Path
 
+import pytest
+
 from languages.fr.patches.trainer_card_date import (
     BIRTHDAY_FIRST_COMPONENT_FILE,
     BIRTHDAY_FIRST_COMPONENT_NEW,
@@ -100,6 +102,7 @@ class TestApplySynthetic(unittest.TestCase):
             apply(data)
 
 
+@pytest.mark.rom
 @unittest.skipUnless(ROM.exists(), "built FR ROM not present")
 class TestBuiltRom(unittest.TestCase):
     def test_committed_rom_has_french_date_builder(self):
