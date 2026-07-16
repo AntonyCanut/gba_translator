@@ -1,6 +1,8 @@
 import unittest
 from pathlib import Path
 
+import pytest
+
 from languages.fr.patches.money_amount_order import (
     ENGLISH_ORDER,
     FRENCH_ORDER,
@@ -38,6 +40,7 @@ class TestApplySynthetic(unittest.TestCase):
             apply(data)
 
 
+@pytest.mark.rom
 @unittest.skipUnless(ROM.exists(), "built FR ROM not present")
 class TestBuiltRom(unittest.TestCase):
     def test_committed_rom_has_amount_before_symbol(self):
