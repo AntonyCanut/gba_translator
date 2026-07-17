@@ -68,6 +68,7 @@ PATCH_TYPE_ICONS_SCRIPT := languages/fr/patches/type_icons.py
 PATCH_DEXNAV_HEADERS_SCRIPT := languages/fr/patches/dexnav_headers.py
 PATCH_SHOP_FR_SCRIPT := languages/fr/patches/shop.py
 PATCH_MISSION_DESC_FR_SCRIPT := languages/fr/patches/mission_descriptions.py
+PATCH_MISSION_TAB_LABELS_FR_SCRIPT := languages/fr/patches/mission_tab_labels.py
 PATCH_ZONE_NAMES_FR_SCRIPT := languages/fr/patches/zone_names.py
 PATCH_WORLDMAP_LABELS_FR_SCRIPT := languages/fr/patches/worldmap_labels.py
 PATCH_TRAINER_CARD_DATE_FR_SCRIPT := languages/fr/patches/trainer_card_date.py
@@ -290,6 +291,7 @@ build-fr: check-translations-fr ensure-fr-translation $(FRENCH_EXTRACT) $(SPANIS
 		--source $(FRENCH_ROM) \
 		--combined languages/fr/combined_fr.txt \
 		--reference-rom $(SPANISH_ROM)
+	@$(PYTHON) $(PATCH_MISSION_TAB_LABELS_FR_SCRIPT) --rom $(FR_BUILD)
 	@$(PYTHON) $(PATCH_ZONE_NAMES_FR_SCRIPT) \
 		--rom $(FR_BUILD) \
 		--source $(FRENCH_ROM) \
