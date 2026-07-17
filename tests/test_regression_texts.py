@@ -255,11 +255,22 @@ class RegressionTextTests(unittest.TestCase):
             self.assertIn('pas', text, f'Repel desc at {offset:#x} should mention "pas"')
             self.assertNotIn('étape', text, f'Repel desc at {offset:#x} must not say "étape(s)"')
 
+    # EN string offset -> expected French floor label (issue #27 / #100).
+    # The 15-entry table at 0x41803A-0x418069 (1F..11F then B1F..B4F) is
+    # served through *six* duplicate pointer tables. Every French label is
+    # longer than its English original, so the build relocates the strings
+    # and repoints all six tables; a stale/non-deterministic rebuild used to
+    # drop them back to English ("1F") or merge two labels ("RDC1E").
+    _FLOOR_LABELS = {
+        0x41803A: 'RDC', 0x41803D: '1E', 0x418040: '2E', 0x418043: '3E',
+        0x418046: '4E', 0x418049: '5E', 0x41804C: '6E', 0x41804F: '7E',
+        0x418052: '8E', 0x418055: '9E', 0x418059: '10E',
+        0x41805D: '-1', 0x418061: '-2', 0x418065: '-3', 0x418069: '-4',
+    }
+
     @unittest.skipUnless(FR_ROM.exists(), 'ROM missing')
     def test_floor_indicators_translated_fr(self):
-        # Issue #27 "Traduction étages": the small floor-indicator popup shown
-        # when changing floors in caves/buildings (1F, 2F, B1F...) rendered in
-        # English. Table at 0x41803A-0x41806C: 1F..11F then B1F..B4F.
+        # Fast smoke check on the primary ascending pointer table (0x3F5B44).
         french_data = FR_ROM.read_bytes()
 
         expected = {
@@ -271,6 +282,36 @@ class RegressionTextTests(unittest.TestCase):
         for pointer_offset, expected_text in expected.items():
             text = _read_pointer_text(french_data, pointer_offset)
             self.assertEqual(text, expected_text, f'Floor label at pointer {pointer_offset:#x}')
+
+    @unittest.skipUnless(FR_ROM.exists() and EN_ROM.exists(), 'ROM missing')
+    def test_floor_indicators_translated_all_pointer_tables(self):
+        # Issue #100 regression: the floor popup regressed to English in a
+        # shipped build. The single-table check above missed it because the
+        # floor strings are reached by SIX duplicate pointer tables — a build
+        # could repoint one while dropping another. This walks every pointer in
+        # the EN ROM that targets the floor table and asserts the FR ROM's
+        # matching pointer resolves to the exact French label (no English
+        # residue like "1F", no merged label like "RDC1E").
+        english_data = EN_ROM.read_bytes()
+        french_data = FR_ROM.read_bytes()
+
+        floor_offsets = set(self._FLOOR_LABELS)
+        slots = []
+        for slot in range(0, len(english_data) - 4, 2):
+            ptr = struct.unpack_from('<I', english_data, slot)[0]
+            if ptr >= 0x08000000 and (ptr - 0x08000000) in floor_offsets:
+                slots.append((slot, self._FLOOR_LABELS[ptr - 0x08000000]))
+
+        # Sanity: the six duplicate tables reference all 15 labels many times.
+        self.assertGreaterEqual(len(slots), 15 * 2, 'Floor pointer tables not found in EN ROM')
+
+        for slot, expected_text in slots:
+            text = _read_pointer_text(french_data, slot)
+            self.assertEqual(
+                text, expected_text,
+                f'Floor label via EN pointer {slot:#x} should be {expected_text!r}, '
+                f'got {text!r} (English residue or merged label = build regression).',
+            )
 
     @unittest.skipUnless(FR_ROM.exists(), 'ROM missing')
     def test_camper_chad_kelsey_line_translated(self):
