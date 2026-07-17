@@ -15,6 +15,7 @@
 **Fichiers :**
 
 - Créer : `tests/e2e-playwright/specs/party-hp-bar-fr.spec.ts`
+- Créer : `tests/e2e-playwright/helpers/party-hp-bar-probe.ts`
 - Créer : `tests/e2e-playwright/playwright.party-hp-bar.config.ts`
 - Créer : `tests/fixtures/saves/party_hp_bar_fr.sav`
 - Modifier : `package.json`
