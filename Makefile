@@ -301,7 +301,6 @@ build-fr: check-translations-fr ensure-fr-translation $(FRENCH_EXTRACT) $(SPANIS
 	@$(PYTHON) $(PATCH_TRAINER_CARD_DATE_FR_SCRIPT) --rom $(FR_BUILD)
 	@$(PYTHON) $(PATCH_MONEY_AMOUNT_ORDER_FR_SCRIPT) --rom $(FR_BUILD)
 	@$(PYTHON) languages/fr/patches/nature_names.py --rom $(FR_BUILD) --reference-rom $(SPANISH_ROM)
-	@$(PYTHON) scripts/patch_evolution_message_fr.py $(FR_BUILD)
 	@$(PYTHON) scripts/insert_sprite.py --rom $(FR_BUILD) --lang fr --sprite selection --bmp languages/fr/sprites/selection.bmp
 	@$(PYTHON) scripts/insert_sprite.py --rom $(FR_BUILD) --lang fr --sprite start_menu_move_hint --bmp languages/fr/sprites/start_menu_move_hint.bmp
 	@$(PYTHON) $(PATCH_SUMMARY_LV_LABELS_SCRIPT) --rom $(FR_BUILD)
