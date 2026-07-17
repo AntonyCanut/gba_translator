@@ -143,6 +143,13 @@ entries:
   expected: Choisis Pokémon ou Sortir.
   forbidden:
   - Choisis Pokémon ou Annuler.
+- offset: '0xA4E1F1'
+  name: 'Carte mondiale: action Déplacer abrégée'
+  issue: '#111'
+  expected: Dépl.
+  forbidden:
+  - Dépl
+  - Déplacer
 - offset: '0xA4E047'
   name: Prompt tri Cube — doit rester ABSENT (patch dédié)
   issue: '#76'
