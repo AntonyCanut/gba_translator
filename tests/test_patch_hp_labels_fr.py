@@ -1,9 +1,10 @@
 """Regression tests for the FR HP-label graphics patch (HP/PS → PV).
 
-Three label graphics show the hit-point abbreviation: the party-menu green
-label, the summary-screen green bar-label sprite, and the summary-screen grey
-stat label. All are 4bpp tiles inside LZ77 blocks — never handled by the text
-pipeline. The built FR ROM must render « PV » in all three.
+Four label graphics show the hit-point abbreviation: the party-menu green
+label, the summary-screen green bar-label sprite, the summary-screen grey
+stat label, and the in-battle healthbox label (GitHub issue #125). All are
+4bpp tiles inside LZ77 blocks — never handled by the text pipeline. The built
+FR ROM must render « PV » in all four.
 """
 
 import sys
@@ -16,6 +17,11 @@ sys.path.insert(0, str(Path(__file__).parent.parent))
 
 from languages.fr.patches.font import lz77_decompress
 from languages.fr.patches.hp_labels import (
+    BATTLE_BLOCKS,
+    BATTLE_H_TILE_HEX,
+    BATTLE_P_FILL,
+    BATTLE_P_TILE_HEX,
+    BATTLE_V_FILL,
     GREEN_BLOCK,
     GREEN_OLD_VARIANTS,
     GREEN_PV_FILL,
@@ -27,6 +33,7 @@ from languages.fr.patches.hp_labels import (
     PARTY_NCOLS,
     PARTY_OLD_TILES,
     PARTY_PV_FILL,
+    _make_draw_battle_label,
     _draw_green_label,
     _draw_grey_label,
     _draw_party_label,
@@ -99,6 +106,46 @@ class TestPvArtDefinitions(unittest.TestCase):
                         self.assertEqual(nib_old, nib_new,
                                          f"tile {tile} byte {i} border modified")
 
+    def test_battle_fill_stays_inside_letter_boxes(self):
+        for r, c in BATTLE_P_FILL:
+            self.assertTrue(3 <= r <= 6 and 2 <= c <= 6,
+                            f"P fill ({r},{c}) outside H-tile letter box")
+        for r, c in BATTLE_V_FILL:
+            self.assertTrue(3 <= r <= 6 and 0 <= c <= 4,
+                            f"V fill ({r},{c}) outside P-tile letter box")
+
+    def test_battle_new_art_differs_from_old(self):
+        for off, h_tile, p_tile in BATTLE_BLOCKS:
+            old = {h_tile: BATTLE_H_TILE_HEX[off], p_tile: BATTLE_P_TILE_HEX}
+            draw = _make_draw_battle_label(h_tile, p_tile)
+            self.assertNotEqual(_expected_new(old, draw), old,
+                                f"block 0x{off:08X} art unchanged")
+
+    def test_battle_redraw_preserves_pill_border_rows(self):
+        # Rows 0-2 and 7 (pill top/bottom border + transparent margin) must be
+        # left byte-exact — only the letter rows 3-6 change.
+        for off, h_tile, p_tile in BATTLE_BLOCKS:
+            old = {h_tile: BATTLE_H_TILE_HEX[off], p_tile: BATTLE_P_TILE_HEX}
+            new = _expected_new(old, _make_draw_battle_label(h_tile, p_tile))
+            for tile in (h_tile, p_tile):
+                ob = bytes.fromhex(old[tile])
+                nb = bytes.fromhex(new[tile])
+                for row in (0, 1, 2, 7):
+                    self.assertEqual(ob[row * 4:row * 4 + 4],
+                                     nb[row * 4:row * 4 + 4],
+                                     f"tile {tile} border row {row} modified")
+
+    def test_battle_p_tile_preserves_right_cap(self):
+        # The « P » letter tile keeps its right-hand pill cap (col 7) untouched.
+        for off, h_tile, p_tile in BATTLE_BLOCKS:
+            old = {h_tile: BATTLE_H_TILE_HEX[off], p_tile: BATTLE_P_TILE_HEX}
+            new = _expected_new(old, _make_draw_battle_label(h_tile, p_tile))
+            ob = bytes.fromhex(old[p_tile])
+            nb = bytes.fromhex(new[p_tile])
+            for row in range(8):
+                self.assertEqual(ob[row * 4 + 3] >> 4, nb[row * 4 + 3] >> 4,
+                                 f"P-tile row {row} col 7 cap modified")
+
 
 @pytest.mark.rom
 class TestBuiltFrRomShowsPv(unittest.TestCase):
@@ -127,6 +174,12 @@ class TestBuiltFrRomShowsPv(unittest.TestCase):
 
     def test_summary_grey_label_is_pv(self):
         self._assert_block_is_pv(GREY_BLOCK, GREY_OLD_TILES, _draw_grey_label)
+
+    def test_battle_healthbox_labels_are_pv(self):
+        for off, h_tile, p_tile in BATTLE_BLOCKS:
+            old = {h_tile: BATTLE_H_TILE_HEX[off], p_tile: BATTLE_P_TILE_HEX}
+            self._assert_block_is_pv(
+                off, old, _make_draw_battle_label(h_tile, p_tile))
 
 
 if __name__ == "__main__":

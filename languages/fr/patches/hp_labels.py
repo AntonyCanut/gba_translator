@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Patch every HP/PS label graphic to the official French « PV ».
 
-Three label graphics show the hit-point abbreviation in-game; none of them is
+Four label graphics show the hit-point abbreviation in-game; none of them is
 text (they are 4bpp tiles inside LZ77 blocks), so the translation pipeline
 never touches them:
 
@@ -21,7 +21,13 @@ never touches them:
    Thin « HP » letters (color 1) inside a grey oval (color 7) — redrawn as
    thin « PV » letters, oval untouched.
 
-All three patches are strict: the current label tiles must byte-match a known
+4. In-battle healthbox label (sprite) — LZ77 blocks 0x00EEF0AC / 0x00EEF380 /
+   0x00EEF688 (the three healthbox sheets). White « HP » (color 1) on a dark
+   pill (color 7) left of the green HP bar; ES doesn't localize it. Two tiles
+   per sheet (« H » then « P ») redrawn to « P » then « V » — pill borders,
+   caps and bar tiles left byte-exact.
+
+All four patches are strict: the current label tiles must byte-match a known
 variant (EN « HP » / ES « PS ») or the already-patched « PV »; anything else
 is reported and skipped rather than corrupted. Recompression is in-place with
 the same padding-tail tolerance used by patch_status_badges_fr.
@@ -175,6 +181,53 @@ GREY_OLD_TILES: dict[int, str] = {
     117: "17777777177777a777a7aaaaaaaaaaaa99999999aaaaaaaaaaaaaaaaaaaaaaaa",
 }
 
+# ── 4. Battle healthbox HP label (LZ77 0x00EEF0AC/0x00EEF380/0x00EEF688) ─────
+# The in-battle healthbox draws a white « HP » on a dark pill just left of the
+# green HP bar (GitHub issue #125). It is an OBJ (sprite) graphic — untouched by
+# every translation pass and *not* localized in the Spanish ROM (ES keeps « HP »
+# / has no matching LZ77 block), so the FR build still shows « HP ». Three
+# healthbox variants carry it (0xEEF0AC = 128-tile doubles sheet, 0xEEF380 /
+# 0xEEF688 = 64-tile singles sheets); in each the label is two 8×8 tiles — an
+# « H » tile then a « P » tile — only their tile index shifts.
+#   letter colour = 1 (white), pill interior = 7.
+# Each ``(block, h_tile, p_tile)``:
+BATTLE_BLOCKS: list[tuple[int, int, int]] = [
+    (0x00EEF0AC, 20, 21),
+    (0x00EEF380, 19, 20),
+    (0x00EEF688, 19, 20),
+]
+BATTLE_LETTER, BATTLE_PILL = 0x1, 0x7
+
+# New « P » in the first (H) letter tile — letter occupies cols 2-6, rows 3-6.
+BATTLE_P_FILL: set[tuple[int, int]] = {
+    (3, 2), (3, 3), (3, 4), (3, 5), (3, 6),
+    (4, 2), (4, 3), (4, 6),
+    (5, 2), (5, 3), (5, 4), (5, 5), (5, 6),
+    (6, 2), (6, 3),
+}
+BATTLE_P_BOX = [(r, c) for r in range(3, 7) for c in range(2, 7)]
+
+# New « V » in the second (P) letter tile — letter occupies cols 0-4, rows 3-6.
+BATTLE_V_FILL: set[tuple[int, int]] = {
+    (3, 0), (3, 1), (3, 3), (3, 4),
+    (4, 0), (4, 1), (4, 3), (4, 4),
+    (5, 1), (5, 2), (5, 3),
+    (6, 2),
+}
+BATTLE_V_BOX = [(r, c) for r in range(3, 7) for c in range(0, 5)]
+
+# Known EN letter tiles (strict validation input state). The « P » tile is
+# byte-identical in all three blocks; the « H » tile only differs in its
+# left-cap shading column (col 0), so 0xEEF0AC has its own variant.
+BATTLE_P_TILE_HEX = (
+    "2222222222222222777777771111711711177117111171171177771777777777"
+)
+BATTLE_H_TILE_HEX: dict[int, str] = {
+    0x00EEF0AC: "2222222222222222777777777411177173111771731111717811177177777777",
+    0x00EEF380: "2222222222222222727777777211177172111771721111717211177172777777",
+    0x00EEF688: "2222222222222222727777777211177172111771721111717211177172777777",
+}
+
 
 # ---------------------------------------------------------------------------
 # Drawing
@@ -230,6 +283,26 @@ def _draw_grey_label(tiles: bytearray) -> None:
         tl, tr, row = GREY_ROWS[gr]
         tile = tl if gc < 8 else tr
         _px_set(tiles, tile, row, gc % 8, GREY_LETTER)
+
+
+def _make_draw_battle_label(h_tile: int, p_tile: int):
+    """Return a draw(tiles) that repaints « HP » → « PV » at *h_tile*/*p_tile*.
+
+    Only the two letter cells are touched (pill borders, caps and green-bar
+    tiles are left byte-exact): the « H » tile becomes « P », the « P » tile
+    becomes « V ». Every cell inside a letter box is set to the letter colour
+    or the pill interior, so the redraw is fully deterministic and idempotent.
+    """
+
+    def draw(tiles: bytearray) -> None:
+        for r, c in BATTLE_P_BOX:
+            val = BATTLE_LETTER if (r, c) in BATTLE_P_FILL else BATTLE_PILL
+            _px_set(tiles, h_tile, r, c, val)
+        for r, c in BATTLE_V_BOX:
+            val = BATTLE_LETTER if (r, c) in BATTLE_V_FILL else BATTLE_PILL
+            _px_set(tiles, p_tile, r, c, val)
+
+    return draw
 
 
 # ---------------------------------------------------------------------------
@@ -331,6 +404,14 @@ def apply_patches(rom_path: Path) -> int:
         {"EN « HP »": GREY_OLD_TILES}, _draw_grey_label,
         "summary grey label (0x00E9A460)",
     )
+    for off, h_tile, p_tile in BATTLE_BLOCKS:
+        patched += _patch_label(
+            rom, off, (h_tile, p_tile),
+            {"EN « HP »": {h_tile: BATTLE_H_TILE_HEX[off],
+                           p_tile: BATTLE_P_TILE_HEX}},
+            _make_draw_battle_label(h_tile, p_tile),
+            f"battle healthbox label (0x{off:08X})",
+        )
 
     if patched:
         rom_path.write_bytes(rom)
