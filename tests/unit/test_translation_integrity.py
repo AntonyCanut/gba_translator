@@ -93,6 +93,21 @@ class TestRealRepo:
         assert 0xA4E047 in by_offset
         assert by_offset[0xA4E047].absent
 
+    def test_issue_80_zygarde_percent_is_protected(self):
+        # 0x791BBA ("1 pour cent" -> "1%") was fixed once (1a3ab5e) then
+        # silently reverted 90s later by an unrelated commit (071c6813,
+        # Boîte CT description) that carried a stale snapshot of this line
+        # (Pattern C, docs/20_TRANSLATION_PRESERVATION.md §7). It must stay
+        # guarded so any future stale-snapshot commit is caught pre-commit.
+        fr = [t for t in cti.discover_languages() if t[0] == "fr"]
+        assert fr
+        entries = cti.load_manifest(fr[0][2])
+        by_offset = {entry.offset: entry for entry in entries}
+        assert 0x791BBA in by_offset
+        entry = by_offset[0x791BBA]
+        assert entry.expected == "Tu as collecté {COLOR}É{STR_VAR_3}%{COLOR}Á\\nde cellules."
+        assert "Tu as collecté {COLOR}É{STR_VAR_3} pour cent{COLOR}Á\\nde cellules." in entry.forbidden
+
     def test_main_returns_zero_on_real_repo(self):
         assert cti.main([]) == 0
 

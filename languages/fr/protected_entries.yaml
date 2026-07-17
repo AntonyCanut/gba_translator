@@ -735,3 +735,9 @@ entries:
   expected: Panneau Conseils Dresseurs lu\nsur le chemin juste à l'extérieur\nde la sortie ouest de Boissombre.
   forbidden:
   - Panneau Conseils Dresseurs lu\nsur le chemin juste à l'extérieur\nsortie ouest de Boissombre.
+- offset: '0x791BBA'
+  name: 'Ramassage Cellule de Zygarde: pourcentage'
+  issue: '#80'
+  expected: Tu as collecté {COLOR}É{STR_VAR_3}%{COLOR}Á\nde cellules.
+  forbidden:
+  - Tu as collecté {COLOR}É{STR_VAR_3} pour cent{COLOR}Á\nde cellules.
