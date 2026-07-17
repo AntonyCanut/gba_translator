@@ -15,12 +15,13 @@
 **Fichiers :**
 
 - Créer : `tests/e2e-playwright/specs/party-hp-bar-fr.spec.ts`
+- Créer : `tests/e2e-playwright/playwright.party-hp-bar.config.ts`
 - Créer : `tests/fixtures/saves/party_hp_bar_fr.sav`
-- Modifier : `playwright.config.ts`
+- Modifier : `package.json`
 
-- [ ] Écrire le scénario qui prépare une copie temporaire ROM/save, charge la partie, ouvre Pokémon et capture l’écran.
-- [ ] Ajouter une assertion de snapshot nommée `party-hp-bar-fr.png` et une assertion du hash de la save.
-- [ ] Exécuter `npx playwright test --project=party-hp-bar-fr` et constater l’échec attendu pour golden absent.
+- [x] Écrire le scénario qui prépare une copie temporaire ROM/save, charge la partie, ouvre Pokémon et capture l’écran.
+- [x] Ajouter une assertion de snapshot nommée `party-hp-bar-fr.png` et une assertion du hash de la save.
+- [x] Exécuter `npm run test:e2e:party-hp-bar` et constater l’échec attendu pour golden absent.
 
 ### Tâche 2 : Valider le rendu corrigé
 
@@ -28,9 +29,9 @@
 
 - Créer : `tests/e2e-playwright/snapshots/specs/party-hp-bar-fr.spec.ts-snapshots/party-hp-bar-fr.png`
 
-- [ ] Exécuter `npx playwright test --project=party-hp-bar-fr --update-snapshots` pour produire le golden depuis la ROM corrigée.
-- [ ] Inspecter visuellement le golden : « PV » lisible et cap gauche de barre intact.
-- [ ] Réexécuter le test sans mise à jour et obtenir 100 % de réussite.
+- [x] Exécuter le test sans golden pour produire la capture de référence depuis la ROM corrigée.
+- [x] Inspecter visuellement le golden : « PV » lisible et cap gauche de barre intact.
+- [x] Réexécuter le test sans mise à jour et obtenir 100 % de réussite.
 
 ### Tâche 3 : Vérification finale
 
@@ -38,7 +39,7 @@
 
 - Relire tous les fichiers précédents.
 
-- [ ] Exécuter le contrôle TypeScript `npx tsc --noEmit`.
-- [ ] Exécuter les tests unitaires FR liés au patch graphique.
-- [ ] Vérifier le diff, l’absence d’artefacts temporaires et l’intégrité SHA-256 de la fixture.
+- [x] Exécuter le contrôle TypeScript `npx tsc --noEmit`.
+- [x] Exécuter les tests unitaires FR liés au patch graphique.
+- [x] Vérifier le diff, l’absence d’artefacts temporaires et l’intégrité SHA-256 de la fixture.
 - [ ] Commiter avec `test(e2e): vérifier la barre de vie avec une sauvegarde`.
