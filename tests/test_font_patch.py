@@ -153,6 +153,31 @@ class TestAccentedEGlyphs(unittest.TestCase):
             )
         self.assertTrue(checked, 'no à-patched font block found to verify é/è')
 
+    def test_acute_accent_survives_dense_letter_top(self) -> None:
+        """Regression for issue #97: the solid Pokédex/battle-HUD font draws a
+        dense ``e`` top (values 14-15) exactly where the acute stroke sits. A
+        plain max-merge kept the letter body and dropped the accent's leftmost
+        pixel. The rebuilt ``é`` accent row (row 0) must now reproduce ``á``'s
+        accent row wherever ``á`` differs from the bare ``a`` — no swallowed
+        pixels — for every patched font block."""
+        checked = 0
+        for block in find_font_blocks(EN_ROM.read_bytes()):
+            font = block.decompressed
+            if font[CP_GRAVE_A * 32:(CP_GRAVE_A + 1) * 32] != build_grave_a(font):
+                continue  # duplicate blocks restored to English downstream
+            a = glyph_pixels(font, CP_A)
+            acute_a = glyph_pixels(font, 0x17)  # á
+            rebuilt = tile_to_pixels(build_acute_e(font))
+            for i in range(16):  # rows 0-1 = accent zone
+                if acute_a[i] != 0 and acute_a[i] != a[i]:
+                    self.assertEqual(
+                        rebuilt[i], acute_a[i],
+                        f'accent pixel {i} swallowed by dense letter top '
+                        f'in block @0x{block.offset:06X}',
+                    )
+            checked += 1
+        self.assertTrue(checked, 'no à-patched font block found to verify')
+
     def test_width_tables_alias_e_accents_to_e(self) -> None:
         rom = bytearray(EN_ROM.read_bytes())
         apply_patches(rom)

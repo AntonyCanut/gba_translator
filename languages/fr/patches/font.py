@@ -307,14 +307,16 @@ def acute_accent_positions(font: bytes) -> List[Tuple[int, int, int]]:
     and ``è`` (the standalone é/è glyphs in the international font are drawn too
     high and crush the letter body, so we never copy them verbatim).
 
-    Exclude edge pixels (x=0, x=7) to avoid rendering artifacts on small text.
+    The full glyph width is scanned (x=0..7): the compact fonts pack the accent
+    stroke across the whole tile, so clipping edge columns would silently drop
+    real accent pixels.
     """
     base = glyph_pixels(font, CP_A)
     acute = glyph_pixels(font, CP_ACUTE_A)
     return [
         (x, y, acute[y * 8 + x])
         for y in range(2)
-        for x in range(1, 7)  # Exclude edge pixels (x=0, x=7) to prevent phantom pixels
+        for x in range(8)
         if acute[y * 8 + x] != 0 and acute[y * 8 + x] != base[y * 8 + x]
     ]
 
@@ -327,16 +329,28 @@ def grave_shift(positions: List[Tuple[int, int, int]]) -> int:
 
 
 def overlay_accent(
-    base: List[int], positions: List[Tuple[int, int, int]], shift: int = 0
+    base: List[int],
+    positions: List[Tuple[int, int, int]],
+    shift: int = 0,
+    overwrite: bool = False,
 ) -> List[int]:
     """Overlay accent ``positions`` onto a copy of ``base`` (shifted left by
-    ``shift``), keeping the darker pixel where they overlap."""
+    ``shift``).
+
+    By default the darker pixel wins where they overlap (``max``), which suits
+    the grave accent whose shifted stroke never lands on a dense letter top.
+    With ``overwrite=True`` the accent value is written unconditionally: the
+    solid Pokédex/battle-HUD font draws a dense ``e`` top (values 14-15) right
+    where the acute stroke sits, so a plain ``max`` merge keeps the letter body
+    and silently swallows the accent's leftmost pixel — the "un pixel manquant"
+    reported for small acute accents (issue #97). Writing the accent through
+    makes ``é`` reproduce the proven-good ``á`` accent stroke verbatim."""
     out = base[:]
     for x, y, val in positions:
         nx = x - shift
         if 0 <= nx < 8:
             idx = y * 8 + nx
-            if val > out[idx]:
+            if overwrite or val > out[idx]:
                 out[idx] = val
     return out
 
@@ -350,12 +364,16 @@ def build_grave_a(font: bytes) -> bytes:
 
 
 def build_acute_e(font: bytes) -> bytes:
-    """Rebuild ``é`` from the clean ``e`` body plus the compact acute accent."""
+    """Rebuild ``é`` from the clean ``e`` body plus the compact acute accent.
+
+    ``overwrite=True`` forces the accent through the dense ``e`` top of the
+    solid Pokédex/battle-HUD font so the acute stroke keeps all its pixels
+    (issue #97)."""
     base = glyph_pixels(font, CP_E)
     positions = acute_accent_positions(font)
     if not positions:
         return pixels_to_tile(base)
-    return pixels_to_tile(overlay_accent(base, positions))
+    return pixels_to_tile(overlay_accent(base, positions, overwrite=True))
 
 
 def build_grave_e(font: bytes) -> bytes:
