@@ -721,3 +721,9 @@ entries:
   name: 'Dresco shop NPC: Repousses dialogue'
   issue: '#112'
   expected: Comme les Repousses, certains talents\ncomme {COLOR}ÉPuanteur{COLOR}Ë éloignent\lles Pokémon sauvages.
+- offset: '0x23E9F7'
+  name: 'Trainer class: Médium'
+  issue: '#117'
+  expected: Médium
+  forbidden:
+  - Spirite
