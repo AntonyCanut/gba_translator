@@ -1,16 +1,3 @@
-# Entrées protégées FR — SOURCE DE VÉRITÉ des corrections validées (issues/tickets).
-#
-# scripts/check_translation_integrity.py vérifie que combined_fr.txt (règle
-# last-wins, comme la chaîne de build) résout chaque offset EXACTEMENT à
-# `expected` (ou qu'il reste ABSENT si `absent: true`). Toute divergence fait
-# échouer le pre-commit (make test-python-fast) ET make build-fr.
-#
-# - Correction volontaire d'une entrée protégée → mettre à jour `expected` ici
-#   DANS LE MÊME COMMIT que combined_fr.txt.
-# - Fix perdu (snapshot périmé, Pattern C) → python3 scripts/check_translation_integrity.py --fix
-# - Toute entrée déjà perdue une fois par un commit périmé DOIT être ajoutée ici.
-#
-# Voir docs/20_TRANSLATION_PRESERVATION.md §7.
 entries:
 - offset: '0x1F4E230'
   name: Couleurs du choix de sortie du menu Options
@@ -151,11 +138,14 @@ entries:
 - offset: '0x7D5083'
   name: Hoopa (Aklove, rituel)
   issue: 8fe7dddb0
-  expected: '{COLOR}ËHoopa, prépare-toi !\pVotre véritable pouvoir est sur le\npoint de sortir de la Bouteille\nPrison !\pEt en tant que votre Dresseur, je\npeux parfaitement y parvenir !'
+  expected: '{COLOR}ËHoopa, prépare-toi !\pVotre véritable pouvoir est sur le\npoint
+    de sortir de la Bouteille\nPrison !\pEt en tant que votre Dresseur, je\npeux parfaitement
+    y parvenir !'
 - offset: '0x1F3A9F2'
   name: Hoopa (Cube, révélation)
   issue: 8fe7dddb0
-  expected: Hoopa ! Le moment est venu !\pTon véritable pouvoir va sortir de\nla Bouteille Prison !\pEt en tant que ton Dresseur, je\npeux parfaitement le contrôler !
+  expected: Hoopa ! Le moment est venu !\pTon véritable pouvoir va sortir de\nla Bouteille
+    Prison !\pEt en tant que ton Dresseur, je\npeux parfaitement le contrôler !
 - offset: '0x417396'
   name: 'Menu équipe: Sortir, pas Annuler'
   issue: '#67'
@@ -225,9 +215,11 @@ entries:
 - offset: '0x1F00FC4'
   name: 'PNJ Dresco: Boissombre au masculin'
   issue: '#78'
-  expected: À l'ouest de Dresco se trouve\nBoissombre.\pIl regorge de Pokémon Insecte\net Spectre.\pTu devrais y faire un tour quand tu\nle pourras.
+  expected: À l'ouest de Dresco se trouve\nBoissombre.\pIl regorge de Pokémon Insecte\net
+    Spectre.\pTu devrais y faire un tour quand tu\nle pourras.
   forbidden:
-  - À l'ouest de Dresco se trouve\nBoissombre.\pElle regorge de Pokémon Insecte\net Spectre.\pTu devrais y faire un tour quand tu\nle pourras.
+  - À l'ouest de Dresco se trouve\nBoissombre.\pElle regorge de Pokémon Insecte\net
+    Spectre.\pTu devrais y faire un tour quand tu\nle pourras.
 - offset: '0x1F01867'
   name: 'Quête sauvegardes: texte court'
   issue: 398e386
@@ -235,29 +227,38 @@ entries:
 - offset: '0x1F542BD'
   name: 'Maison Dresco: PNJ don de CT'
   issue: B-305
-  expected: Je te donnerai quelque chose de\ngénial si tu as plein de <0xFC><0x01><0x06>CT<0xFC><0x01><0x04> !\pTu crois pouvoir les trouver ?
+  expected: Je te donnerai quelque chose de\ngénial si tu as plein de <0xFC><0x01><0x06>CT<0xFC><0x01><0x04>
+    !\pTu crois pouvoir les trouver ?
   forbidden:
-  - I'll give you something great when\nyou collect a lot of <0xFC><0x01><0x06>TMs<0xFC><0x01><0x04>!\pDo you think you can find them all?
+  - I'll give you something great when\nyou collect a lot of <0xFC><0x01><0x06>TMs<0xFC><0x01><0x04>!\pDo
+    you think you can find them all?
 - offset: '0x1F53FCB'
   name: 'Maison Dresco: PNJ remerciement visite'
   issue: B-305
-  expected: Je suis reconnaissant que tu sois\nvenu jusqu'ici !\pTu es un Dresseur ?\pOhh, tu as un Pokédex !\pC'est\nmerveilleux !\pJe me demande si tu pourrais me\nrendre un service.
+  expected: Je suis reconnaissant que tu sois\nvenu jusqu'ici !\pTu es un Dresseur
+    ?\pOhh, tu as un Pokédex !\pC'est\nmerveilleux !\pJe me demande si tu pourrais
+    me\nrendre un service.
   forbidden:
-  - I am grateful that you came all\nthis way!\pAre you a Trainer?\pOoh, you have a Pokédex!\nIt's so marvelous!\pI wonder if you'd please do me a\nfavour.
+  - I am grateful that you came all\nthis way!\pAre you a Trainer?\pOoh, you have
+    a Pokédex!\nIt's so marvelous!\pI wonder if you'd please do me a\nfavour.
 - offset: '0x1F52BB6'
-  name: 'PNJ Tessy (arène Eau) devant Centre Pokémon'
-  issue: 'B-307'
-  expected: 'Les Pokémon de Tessy ne\nressemblent pas tous à des Pokémon\lde type <0xFC><0x01><0x06>Eau<0xFC><0x01><0x04>, mais je vous\lgarantis que la plupart le seront\lquand vous les affronterez !'
+  name: PNJ Tessy (arène Eau) devant Centre Pokémon
+  issue: B-307
+  expected: Les Pokémon de Tessy ne\nressemblent pas tous à des Pokémon\lde type <0xFC><0x01><0x06>Eau<0xFC><0x01><0x04>,
+    mais je vous\lgarantis que la plupart le seront\lquand vous les affronterez !
 - offset: '0x1F47E06'
   name: 'Grotte dragons: Ace face aux Pokémon'
   issue: A-04
-  expected: Quoi ? Ces Pokémon…\pCe type, Aklove, a dû demander à\nHoopa de tendre ce piège pour nous\lralentir !\pMais on ne peut pas s'arrêter\nmaintenant !\pAllez, <0xFD><0x01> ! Balayons-les et\ngagnons le sommet !
+  expected: Quoi ? Ces Pokémon…\pCe type, Aklove, a dû demander à\nHoopa de tendre
+    ce piège pour nous\lralentir !\pMais on ne peut pas s'arrêter\nmaintenant !\pAllez,
+    <0xFD><0x01> ! Balayons-les et\ngagnons le sommet !
   forbidden:
   - Wha-? These Pokémon
 - offset: '0x1F481B4'
   name: 'Grotte dragons: réponse d’Ivory'
   issue: A-04
-  expected: <0xFC><0x01><0x04>Si ça ne tenait qu'à moi, nous ne\ndétruirions rien, <0xFD><0x06>.\pMais c'est le seul moyen…
+  expected: <0xFC><0x01><0x04>Si ça ne tenait qu'à moi, nous ne\ndétruirions rien,
+    <0xFD><0x06>.\pMais c'est le seul moyen…
   forbidden:
   - If it were up to me
 - offset: '0x1F485D8'
@@ -269,7 +270,8 @@ entries:
 - offset: '0x1F48785'
   name: 'Grotte dragons: regrets de Marlon'
   issue: A-04
-  expected: Je ne pourrai jamais assez\nm'excuser pour ça, <0xFD><0x06>…\pEt je ne m'attends pas à ce que tu\nnous pardonnes un jour…
+  expected: Je ne pourrai jamais assez\nm'excuser pour ça, <0xFD><0x06>…\pEt je ne
+    m'attends pas à ce que tu\nnous pardonnes un jour…
   forbidden:
   - I don't expect you to ever forgive us
 - offset: '0x1F4868B'
@@ -281,407 +283,480 @@ entries:
 - offset: '0x1F48D07'
   name: 'Grotte dragons: Mélony parle de son père'
   issue: A-04
-  expected: Ce drôle de type essaie sans arrêt\nde me convaincre qu'il est mon père.\pÇa n'a pas plu à <0xFD><0x06>,\nmais il l'a quand même cru.\pMoi, je ne marche pas !\pPourquoi mon père apparaîtrait-il\ncomme ça après seize ans ?
+  expected: Ce drôle de type essaie sans arrêt\nde me convaincre qu'il est mon père.\pÇa
+    n'a pas plu à <0xFD><0x06>,\nmais il l'a quand même cru.\pMoi, je ne marche pas
+    !\pPourquoi mon père apparaîtrait-il\ncomme ça après seize ans ?
   forbidden:
   - This weird guy keeps trying to convince me he's my dad
-
-# Ticket B-319 — cluster final du Pic Cristal (couverture représentative par scène).
 - offset: '0x1F47A62'
-  name: 'Mécanique équipe avec Ace'
+  name: Mécanique équipe avec Ace
   issue: B-301
-  expected: '<0xFC><0x01><0x02>En faisant équipe avec <0xFD><0x06>, les\n<0xFC><0x01><0x06>3 premiers<0xFC><0x01><0x02> Pokémon valides de ton\léquipe seront choisis pour le combat.\p<0xFD><0x06> peut aussi utiliser Surf et\nEscalade.'
+  expected: <0xFC><0x01><0x02>En faisant équipe avec <0xFD><0x06>, les\n<0xFC><0x01><0x06>3
+    premiers<0xFC><0x01><0x02> Pokémon valides de ton\léquipe seront choisis pour
+    le combat.\p<0xFD><0x06> peut aussi utiliser Surf et\nEscalade.
 - offset: '0x1F47B23'
-  name: 'Réplique Ace — variante sommet'
+  name: Réplique Ace — variante sommet
   issue: B-319
-  expected: 'Essayons d''atteindre le sommet\naussi vite que possible.<0xB0>Ces types de la Light of Ruin ne\nfont pas le poids face à nous deux !'
+  expected: Essayons d'atteindre le sommet\naussi vite que possible.<0xB0>Ces types
+    de la Light of Ruin ne\nfont pas le poids face à nous deux !
 - offset: '0x1F49748'
-  name: 'Combat final — pouvoir de Hoopa'
+  name: Combat final — pouvoir de Hoopa
   issue: B-319
-  expected: '<0xFC><0x01><0x02>Hoopa a invoqué un pouvoir mystérieux\net a grandi !'
+  expected: <0xFC><0x01><0x02>Hoopa a invoqué un pouvoir mystérieux\net a grandi !
 - offset: '0x1F4A66B'
-  name: 'Épilogue — Marlon et Zeph'
+  name: Épilogue — Marlon et Zeph
   issue: B-319
-  expected: 'Bien sûr, Zeph.<0xB0>Je le ramènerai chez moi jusqu''à ta\nlibération.'
+  expected: Bien sûr, Zeph.<0xB0>Je le ramènerai chez moi jusqu'à ta\nlibération.
 - offset: '0x1F4BCD8'
-  name: 'Écran de victoire — tenue'
+  name: Écran de victoire — tenue
   issue: B-319
-  expected: 'De plus, une nouvelle tenue a été\najoutée à la Boîte à Costumes !'
+  expected: De plus, une nouvelle tenue a été\najoutée à la Boîte à Costumes !
 - offset: '0x1F4CFB3'
-  name: 'Retour de Marlon'
+  name: Retour de Marlon
   issue: B-319
-  expected: 'Marlon ! Toi aussi, tu es là ?'
+  expected: Marlon ! Toi aussi, tu es là ?
 - offset: '0x1F7E03C'
-  name: 'Alias pointeur Mont Foudroyant'
+  name: Alias pointeur Mont Foudroyant
   issue: B-319
-  expected: 'Mont Foudroyant'
+  expected: Mont Foudroyant
 - offset: '0x1F47022'
-  name: 'Cluster Pic Cristal — 0x1F47022'
+  name: Cluster Pic Cristal — 0x1F47022
   issue: B-319
-  expected: 'Je suis prêt comme jamais !<0xB0>Ça me rappelle tant de souvenirs !'
+  expected: Je suis prêt comme jamais !<0xB0>Ça me rappelle tant de souvenirs !
 - offset: '0x1F47056'
-  name: 'Cluster Pic Cristal — 0x1F47056'
+  name: Cluster Pic Cristal — 0x1F47056
   issue: B-319
-  expected: 'Étouraptor ! Emmène-nous à <0xFC><0x01><0x06>Port-Lagune<0xFC><0x01><0x08> !'
+  expected: Étouraptor ! Emmène-nous à <0xFC><0x01><0x06>Port-Lagune<0xFC><0x01><0x08>
+    !
 - offset: '0x1F47080'
-  name: 'Cluster Pic Cristal — 0x1F47080'
+  name: Cluster Pic Cristal — 0x1F47080
   issue: B-319
-  expected: 'Employé'
+  expected: Employé
 - offset: '0x1F4739D'
-  name: 'Cluster Pic Cristal — 0x1F4739D'
+  name: Cluster Pic Cristal — 0x1F4739D
   issue: B-319
-  expected: 'Papi Arthur, nous devons aller au\nPic Cristal.<0xB0>Ce qui se prépare au-dessus de la\nmontagne n''est pas un simple orage.<0xB0>Ils doivent préparer l''Arme Suprême\npour détruire Borrius !'
+  expected: Papi Arthur, nous devons aller au\nPic Cristal.<0xB0>Ce qui se prépare
+    au-dessus de la\nmontagne n'est pas un simple orage.<0xB0>Ils doivent préparer
+    l'Arme Suprême\npour détruire Borrius !
 - offset: '0x1F4792A'
-  name: 'Cluster Pic Cristal — 0x1F4792A'
+  name: Cluster Pic Cristal — 0x1F4792A
   issue: B-319
-  expected: 'Tu es peut-être prêt à escalader la\nmontagne, mais pas moi, je crois.<0xB0>Laisse-moi prendre rapidement d''autres\nPokémon dans le PC.'
+  expected: Tu es peut-être prêt à escalader la\nmontagne, mais pas moi, je crois.<0xB0>Laisse-moi
+    prendre rapidement d'autres\nPokémon dans le PC.
 - offset: '0x1F479A4'
-  name: 'Cluster Pic Cristal — 0x1F479A4'
+  name: Cluster Pic Cristal — 0x1F479A4
   issue: B-319
-  expected: 'Voilà, je suis de retour.'
+  expected: Voilà, je suis de retour.
 - offset: '0x1F479B7'
-  name: 'Réplique Ace — montée au sommet'
+  name: Réplique Ace — montée au sommet
   issue: B-301
-  expected: 'Gagnons le sommet au plus\nvite.\pJe soignerai tes Pokémon\nen chemin.'
+  expected: Gagnons le sommet au plus\nvite.\pJe soignerai tes Pokémon\nen chemin.
 - offset: '0x1F47A18'
-  name: 'Cluster Pic Cristal — 0x1F47A18'
+  name: Cluster Pic Cristal — 0x1F47A18
   issue: B-319
-  expected: 'Tu es prêt à continuer à monter la\nmontagne, <0xFD><0x01> ?'
+  expected: Tu es prêt à continuer à monter la\nmontagne, <0xFD><0x01> ?
 - offset: '0x1F47A45'
-  name: 'Cluster Pic Cristal — 0x1F47A45'
+  name: Cluster Pic Cristal — 0x1F47A45
   issue: B-319
-  expected: '<0xFC><0x01><0x02><0xFD><0x01> a décidé de partir avec\n<0xFD><0x06> !'
+  expected: <0xFC><0x01><0x02><0xFD><0x01> a décidé de partir avec\n<0xFD><0x06> !
 - offset: '0x1F47AFB'
-  name: 'Cluster Pic Cristal — 0x1F47AFB'
+  name: Cluster Pic Cristal — 0x1F47AFB
   issue: B-319
-  expected: 'Dépêche-toi, <0xFD><0x01>.\nNous n''avons pas de temps à perdre !'
+  expected: Dépêche-toi, <0xFD><0x01>.\nNous n'avons pas de temps à perdre !
 - offset: '0x1F47D2C'
-  name: 'Cluster Pic Cristal — 0x1F47D2C'
+  name: Cluster Pic Cristal — 0x1F47D2C
   issue: B-319
-  expected: 'On dirait que c''est le sommet de la\nmontagne, <0xFD><0x01> !<0xB0>Encore un petit effort et nous pourrons\narrêter Aklove !'
+  expected: On dirait que c'est le sommet de la\nmontagne, <0xFD><0x01> !<0xB0>Encore
+    un petit effort et nous pourrons\narrêter Aklove !
 - offset: '0x1F47D84'
-  name: 'Cluster Pic Cristal — 0x1F47D84'
+  name: Cluster Pic Cristal — 0x1F47D84
   issue: B-319
-  expected: 'Où vas-tu, <0xFD><0x01> ?<0xB0>Tu dois retourner en ville chercher des\nprovisions ou quelque chose ?'
+  expected: Où vas-tu, <0xFD><0x01> ?<0xB0>Tu dois retourner en ville chercher des\nprovisions
+    ou quelque chose ?
 - offset: '0x1F47DDC'
-  name: 'Cluster Pic Cristal — 0x1F47DDC'
+  name: Cluster Pic Cristal — 0x1F47DDC
   issue: B-319
-  expected: 'Reviens vite, <0xFD><0x01>.\nNous n''avons pas de temps à perdre !'
+  expected: Reviens vite, <0xFD><0x01>.\nNous n'avons pas de temps à perdre !
 - offset: '0x1F47EBF'
-  name: 'Cluster Pic Cristal — 0x1F47EBF'
+  name: Cluster Pic Cristal — 0x1F47EBF
   issue: B-319
-  expected: 'Et voilà ! Comme si ça allait\nnous arrêter !'
+  expected: Et voilà ! Comme si ça allait\nnous arrêter !
 - offset: '0x1F47EEE'
-  name: 'Cluster Pic Cristal — 0x1F47EEE'
+  name: Cluster Pic Cristal — 0x1F47EEE
   issue: B-319
-  expected: 'Toi ! Tu es encore là !?<0xB0>Pourquoi ? Pourquoi faire tout ça ?<0xB0>Ça ne sert à rien d''aider ce sbire\nd''Aklove !'
+  expected: Toi ! Tu es encore là !?<0xB0>Pourquoi ? Pourquoi faire tout ça ?<0xB0>Ça
+    ne sert à rien d'aider ce sbire\nd'Aklove !
 - offset: '0x1F4820E'
-  name: 'Cluster Pic Cristal — 0x1F4820E'
+  name: Cluster Pic Cristal — 0x1F4820E
   issue: B-319
-  expected: '<0xFC><0x01><0x04>Alakazam ! Immobilise-le !'
+  expected: <0xFC><0x01><0x04>Alakazam ! Immobilise-le !
 - offset: '0x1F48340'
-  name: 'Cluster Pic Cristal — 0x1F48340'
+  name: Cluster Pic Cristal — 0x1F48340
   issue: B-319
-  expected: '<0xFC><0x01><0x02><0xFD><0x06> te prête son\nToucannon, Aquali et Mammochon pour\nton combat contre Ivory !<0xB0>Quand le combat commencera, ils\nrejoindront automatiquement ton équipe.'
+  expected: <0xFC><0x01><0x02><0xFD><0x06> te prête son\nToucannon, Aquali et Mammochon
+    pour\nton combat contre Ivory !<0xB0>Quand le combat commencera, ils\nrejoindront
+    automatiquement ton équipe.
 - offset: '0x1F483D7'
-  name: 'Cluster Pic Cristal — 0x1F483D7'
+  name: Cluster Pic Cristal — 0x1F483D7
   issue: B-319
-  expected: '<0xFC><0x01><0x04>Donc, tu comptes suivre ce chemin\nquoi qu''il arrive…<0xB0>Très bien, alors… Je dois seulement te\nretenir assez longtemps…<0xB0>Tant qu''Aklove n''aura pas fini, tu ne\npasseras pas !'
+  expected: <0xFC><0x01><0x04>Donc, tu comptes suivre ce chemin\nquoi qu'il arrive…<0xB0>Très
+    bien, alors… Je dois seulement te\nretenir assez longtemps…<0xB0>Tant qu'Aklove
+    n'aura pas fini, tu ne\npasseras pas !
 - offset: '0x1F48591'
-  name: 'Cluster Pic Cristal — 0x1F48591'
+  name: Cluster Pic Cristal — 0x1F48591
   issue: B-319
-  expected: 'D''accord, je vais bien.<0xB0>Continuons et finissons-en\nune bonne fois pour toutes !'
+  expected: D'accord, je vais bien.<0xB0>Continuons et finissons-en\nune bonne fois
+    pour toutes !
 - offset: '0x1F486AA'
-  name: 'Cluster Pic Cristal — 0x1F486AA'
+  name: Cluster Pic Cristal — 0x1F486AA
   issue: B-319
-  expected: '<0xFD><0x02> ! Utilise <0xFD><0x03> !\nAide-le à sortir de là !'
+  expected: <0xFD><0x02> ! Utilise <0xFD><0x03> !\nAide-le à sortir de là !
 - offset: '0x1F489D3'
-  name: 'Cluster Pic Cristal — 0x1F489D3'
+  name: Cluster Pic Cristal — 0x1F489D3
   issue: B-319
-  expected: 'Ces sbires sont justement le problème…<0xB0>Je ne sais pas comment, mais chaque fois\nqu''ils me fixaient…<0xB0>mon corps se figeait et ils me renvoyaient\ndans ma cellule.<0xB0>À moins que tu ne puisses les dépasser\ndiscrètement…'
+  expected: Ces sbires sont justement le problème…<0xB0>Je ne sais pas comment, mais
+    chaque fois\nqu'ils me fixaient…<0xB0>mon corps se figeait et ils me renvoyaient\ndans
+    ma cellule.<0xB0>À moins que tu ne puisses les dépasser\ndiscrètement…
 - offset: '0x1F48A96'
-  name: 'Cluster Pic Cristal — 0x1F48A96'
+  name: Cluster Pic Cristal — 0x1F48A96
   issue: B-319
-  expected: 'Et nous trouverons ce « moyen ».<0xB0><0xFD><0x01> et moi sommes arrivés jusqu''ici\npar nos propres moyens, non ?<0xB0>Même si nous ne pouvons pas nous battre\npour passer, nous trouverons une solution !'
+  expected: Et nous trouverons ce « moyen ».<0xB0><0xFD><0x01> et moi sommes arrivés
+    jusqu'ici\npar nos propres moyens, non ?<0xB0>Même si nous ne pouvons pas nous
+    battre\npour passer, nous trouverons une solution !
 - offset: '0x1F48C0B'
-  name: 'Cluster Pic Cristal — 0x1F48C0B'
+  name: Cluster Pic Cristal — 0x1F48C0B
   issue: B-319
-  expected: 'Tiens, <0xFD><0x01>.\nTu en auras besoin.'
+  expected: Tiens, <0xFD><0x01>.\nTu en auras besoin.
 - offset: '0x1F48C27'
-  name: 'Cluster Pic Cristal — 0x1F48C27'
+  name: Cluster Pic Cristal — 0x1F48C27
   issue: B-319
-  expected: 'Apparemment, c''est la seule chose qui\npeut à nouveau sceller la force obscure,\nalors ne la laisse pas tomber.<0xB0>Allons-y, <0xFD><0x01> !'
+  expected: Apparemment, c'est la seule chose qui\npeut à nouveau sceller la force
+    obscure,\nalors ne la laisse pas tomber.<0xB0>Allons-y, <0xFD><0x01> !
 - offset: '0x1F48C92'
-  name: 'Cluster Pic Cristal — 0x1F48C92'
+  name: Cluster Pic Cristal — 0x1F48C92
   issue: B-319
-  expected: 'Si tu trouves quelque chose pour\nmasquer la vue de ce sbire,<0xB0>il ne te remarquera peut-être pas\nsi tu essaies de te faufiler.'
+  expected: Si tu trouves quelque chose pour\nmasquer la vue de ce sbire,<0xB0>il
+    ne te remarquera peut-être pas\nsi tu essaies de te faufiler.
 - offset: '0x1F48DCE'
-  name: 'Cluster Pic Cristal — 0x1F48DCE'
+  name: Cluster Pic Cristal — 0x1F48DCE
   issue: B-319
-  expected: 'Ce type étrange a couru au sommet\npour rejoindre le combat.<0xB0>J''espère vraiment que nous nous en\nsortirons tous les deux…'
+  expected: Ce type étrange a couru au sommet\npour rejoindre le combat.<0xB0>J'espère
+    vraiment que nous nous en\nsortirons tous les deux…
 - offset: '0x1F48E35'
-  name: 'Cluster Pic Cristal — 0x1F48E35'
+  name: Cluster Pic Cristal — 0x1F48E35
   issue: B-319
-  expected: '<0xFC><0x01><0x00>Psst<0xFC><0x01><0x01>…<0xFC><0x01><0x00> Vous deux ! Venez ici !'
+  expected: <0xFC><0x01><0x00>Psst<0xFC><0x01><0x01>…<0xFC><0x01><0x00> Vous deux
+    ! Venez ici !
 - offset: '0x1F48FBD'
-  name: 'Cluster Pic Cristal — 0x1F48FBD'
+  name: Cluster Pic Cristal — 0x1F48FBD
   issue: B-319
-  expected: 'L''Arme Suprême…'
+  expected: L'Arme Suprême…
 - offset: '0x1F49131'
-  name: 'Cluster Pic Cristal — 0x1F49131'
+  name: Cluster Pic Cristal — 0x1F49131
   issue: B-319
-  expected: 'Tous les systèmes sont activés.<0xB0>Et en appuyant sur ce bouton…'
+  expected: Tous les systèmes sont activés.<0xB0>Et en appuyant sur ce bouton…
 - offset: '0x1F49172'
-  name: 'Cluster Pic Cristal — 0x1F49172'
+  name: Cluster Pic Cristal — 0x1F49172
   issue: B-319
-  expected: 'Tritosor, maintenant ! Utilise\nTelluriforce !'
+  expected: Tritosor, maintenant ! Utilise\nTelluriforce !
 - offset: '0x1F491D9'
-  name: 'Cluster Pic Cristal — 0x1F491D9'
+  name: Cluster Pic Cristal — 0x1F491D9
   issue: B-319
-  expected: 'Oui. Le monde où tu m''as envoyé\nn''était apparemment pas aussi mortel\nque tu l''espérais !'
+  expected: Oui. Le monde où tu m'as envoyé\nn'était apparemment pas aussi mortel\nque
+    tu l'espérais !
 - offset: '0x1F4921C'
-  name: 'Cluster Pic Cristal — 0x1F4921C'
+  name: Cluster Pic Cristal — 0x1F4921C
   issue: B-319
-  expected: 'Hoopa ! Pokémon inutile !<0xB0>Tu n''as même pas réussi à te débarrasser\nde lui correctement !?'
+  expected: Hoopa ! Pokémon inutile !<0xB0>Tu n'as même pas réussi à te débarrasser\nde
+    lui correctement !?
 - offset: '0x1F49264'
-  name: 'Cluster Pic Cristal — 0x1F49264'
+  name: Cluster Pic Cristal — 0x1F49264
   issue: B-319
-  expected: 'Attends…<0xB0>Si tu n''étais pas présent lors de l''attaque\nde notre base, il est clair que tu n''as pas\npu t''échapper seul…<0xB0>Alors rien ne m''empêche de te renvoyer\nd''où tu viens !'
+  expected: Attends…<0xB0>Si tu n'étais pas présent lors de l'attaque\nde notre base,
+    il est clair que tu n'as pas\npu t'échapper seul…<0xB0>Alors rien ne m'empêche
+    de te renvoyer\nd'où tu viens !
 - offset: '0x1F49319'
-  name: 'Cluster Pic Cristal — 0x1F49319'
+  name: Cluster Pic Cristal — 0x1F49319
   issue: B-319
-  expected: 'Hoopa ! Débarrasse-moi de lui !'
+  expected: Hoopa ! Débarrasse-moi de lui !
 - offset: '0x1F493C2'
-  name: 'Cluster Pic Cristal — 0x1F493C2'
+  name: Cluster Pic Cristal — 0x1F493C2
   issue: B-319
-  expected: '<0xFD><0x01> ! C''est le moment !'
+  expected: <0xFD><0x01> ! C'est le moment !
 - offset: '0x1F493D9'
-  name: 'Cluster Pic Cristal — 0x1F493D9'
+  name: Cluster Pic Cristal — 0x1F493D9
   issue: B-319
-  expected: 'Gah…<0xFC><0x08><0x20> J''aurais dû m''en douter.<0xB0>Alors c''est toi qui as aidé à son évasion !'
+  expected: Gah…<0xFC><0x08><0x20> J'aurais dû m'en douter.<0xB0>Alors c'est toi qui
+    as aidé à son évasion !
 - offset: '0x1F4941B'
-  name: 'Cluster Pic Cristal — 0x1F4941B'
+  name: Cluster Pic Cristal — 0x1F4941B
   issue: B-319
-  expected: 'Très bien ! Hoopa ! Occupe-toi de\n<0xFD><0x01> ! Je me charge de cette\nautre peste.'
+  expected: Très bien ! Hoopa ! Occupe-toi de\n<0xFD><0x01> ! Je me charge de cette\nautre
+    peste.
 - offset: '0x1F49459'
-  name: 'Cluster Pic Cristal — 0x1F49459'
+  name: Cluster Pic Cristal — 0x1F49459
   issue: B-319
-  expected: 'Quant à toi, Ivory, active l''Arme à ma\nplace !'
+  expected: Quant à toi, Ivory, active l'Arme à ma\nplace !
 - offset: '0x1F4948D'
-  name: 'Cluster Pic Cristal — 0x1F4948D'
+  name: Cluster Pic Cristal — 0x1F4948D
   issue: B-319
-  expected: 'Ça ne se passera pas comme ça !\nTu n''iras nulle part, Ivory !'
+  expected: Ça ne se passera pas comme ça !\nTu n'iras nulle part, Ivory !
 - offset: '0x1F494C1'
-  name: 'Cluster Pic Cristal — 0x1F494C1'
+  name: Cluster Pic Cristal — 0x1F494C1
   issue: B-319
-  expected: 'Tu as peut-être eu le dessus sur moi\nla dernière fois, mais cette fois, je vais\nte remettre à ta place !<0xB0>Je vais t''arrêter et tous nous sauver !'
+  expected: Tu as peut-être eu le dessus sur moi\nla dernière fois, mais cette fois,
+    je vais\nte remettre à ta place !<0xB0>Je vais t'arrêter et tous nous sauver !
 - offset: '0x1F4971E'
-  name: 'Cluster Pic Cristal — 0x1F4971E'
+  name: Cluster Pic Cristal — 0x1F4971E
   issue: B-319
-  expected: '<0xFC><0x01><0x02>Rayquaza s''est envolé !'
+  expected: <0xFC><0x01><0x02>Rayquaza s'est envolé !
 - offset: '0x1F49735'
-  name: 'Cluster Pic Cristal — 0x1F49735'
+  name: Cluster Pic Cristal — 0x1F49735
   issue: B-319
-  expected: '<0xFC><0x01><0x06>Hoo…<0xFC><0x08><0x20> Hooooo !'
+  expected: <0xFC><0x01><0x06>Hoo…<0xFC><0x08><0x20> Hooooo !
 - offset: '0x1F49785'
-  name: 'Cluster Pic Cristal — 0x1F49785'
+  name: Cluster Pic Cristal — 0x1F49785
   issue: B-319
-  expected: '<0xFC><0x01><0x06>Hoo…'
+  expected: <0xFC><0x01><0x06>Hoo…
 - offset: '0x1F4978D'
-  name: 'Cluster Pic Cristal — 0x1F4978D'
+  name: Cluster Pic Cristal — 0x1F4978D
   issue: B-319
-  expected: 'Vite, <0xFD><0x01> !\nScelle son pouvoir pendant qu''il est\naffaibli !'
+  expected: Vite, <0xFD><0x01> !\nScelle son pouvoir pendant qu'il est\naffaibli !
 - offset: '0x1F497BC'
-  name: 'Cluster Pic Cristal — 0x1F497BC'
+  name: Cluster Pic Cristal — 0x1F497BC
   issue: B-319
-  expected: '<0xFC><0x01><0x06>Hoo…<0xFC><0x08><0x20> pa ?'
+  expected: <0xFC><0x01><0x06>Hoo…<0xFC><0x08><0x20> pa ?
 - offset: '0x1F4983D'
-  name: 'Cluster Pic Cristal — 0x1F4983D'
+  name: Cluster Pic Cristal — 0x1F4983D
   issue: B-319
-  expected: 'Disparais, Hoopa !\nSors de ma vue !<0xB0>Ton pouvoir étant scellé, je vais devoir…'
+  expected: Disparais, Hoopa !\nSors de ma vue !<0xB0>Ton pouvoir étant scellé, je
+    vais devoir…
 - offset: '0x1F498BD'
-  name: 'Cluster Pic Cristal — 0x1F498BD'
+  name: Cluster Pic Cristal — 0x1F498BD
   issue: B-319
-  expected: 'Lâche-moi, brute mal élevée !'
+  expected: Lâche-moi, brute mal élevée !
 - offset: '0x1F49935'
-  name: 'Cluster Pic Cristal — 0x1F49935'
+  name: Cluster Pic Cristal — 0x1F49935
   issue: B-319
-  expected: 'Hors de mon chemin !<0xB0>L''Arme doit être activée, quel qu''en soit\nle prix !<0xB0>Mais si tu refuses de t''écarter et de me\nlaisser passer, avec ou sans Hoopa, je te\nmettrai à genoux !'
+  expected: Hors de mon chemin !<0xB0>L'Arme doit être activée, quel qu'en soit\nle
+    prix !<0xB0>Mais si tu refuses de t'écarter et de me\nlaisser passer, avec ou
+    sans Hoopa, je te\nmettrai à genoux !
 - offset: '0x1F499E8'
-  name: 'Cluster Pic Cristal — 0x1F499E8'
+  name: Cluster Pic Cristal — 0x1F499E8
   issue: B-319
-  expected: 'À partir d''ici, c''est toi qui t''en occupes,\nd''accord ?'
+  expected: À partir d'ici, c'est toi qui t'en occupes,\nd'accord ?
 - offset: '0x1F49A05'
-  name: 'Cluster Pic Cristal — 0x1F49A05'
+  name: Cluster Pic Cristal — 0x1F49A05
   issue: B-319
-  expected: '<0xFD><0x01> ! Tu ne pensais quand même pas que\nje te laisserais gérer ça seul, si ?<0xB0>Nous avons combattu côte à côte jusqu''ici,\nalors achevons-le ensemble !'
+  expected: <0xFD><0x01> ! Tu ne pensais quand même pas que\nje te laisserais gérer
+    ça seul, si ?<0xB0>Nous avons combattu côte à côte jusqu'ici,\nalors achevons-le
+    ensemble !
 - offset: '0x1F49AE9'
-  name: 'Cluster Pic Cristal — 0x1F49AE9'
+  name: Cluster Pic Cristal — 0x1F49AE9
   issue: B-319
-  expected: 'C''est fini, Aklove.\nIl est temps de te rendre.'
+  expected: C'est fini, Aklove.\nIl est temps de te rendre.
 - offset: '0x1F49B63'
-  name: 'Cluster Pic Cristal — 0x1F49B63'
+  name: Cluster Pic Cristal — 0x1F49B63
   issue: B-319
-  expected: 'Ce n''est pas possible…'
+  expected: Ce n'est pas possible…
 - offset: '0x1F49CC1'
-  name: 'Cluster Pic Cristal — 0x1F49CC1'
+  name: Cluster Pic Cristal — 0x1F49CC1
   issue: B-319
-  expected: 'Non…<0xFC><0x08><0x20> ce n''est pas possible…<0xB0>La couleur du canon…<0xB0>Elle est complètement fausse !'
+  expected: Non…<0xFC><0x08><0x20> ce n'est pas possible…<0xB0>La couleur du canon…<0xB0>Elle
+    est complètement fausse !
 - offset: '0x1F49D01'
-  name: 'Cluster Pic Cristal — 0x1F49D01'
+  name: Cluster Pic Cristal — 0x1F49D01
   issue: B-319
-  expected: 'Quoi…<0xB0>Comment es-tu arrivé ici !?'
+  expected: Quoi…<0xB0>Comment es-tu arrivé ici !?
 - offset: '0x1F49E7A'
-  name: 'Cluster Pic Cristal — 0x1F49E7A'
+  name: Cluster Pic Cristal — 0x1F49E7A
   issue: B-319
-  expected: 'Cette garce perfide !<0xB0>J''aurais dû savoir qu''on ne pouvait pas\nlui faire confiance…'
+  expected: Cette garce perfide !<0xB0>J'aurais dû savoir qu'on ne pouvait pas\nlui
+    faire confiance…
 - offset: '0x1F49F6D'
-  name: 'Cluster Pic Cristal — 0x1F49F6D'
+  name: Cluster Pic Cristal — 0x1F49F6D
   issue: B-319
-  expected: 'Toi…<0xFC><0x08><0x20> Espèce d''imbécile !<0xB0>Nous n''avons extrait assez d''énergie des\nGuerriers de l''Ombre que pour un seul tir\navant qu''ils ne se désagrègent tous !'
+  expected: Toi…<0xFC><0x08><0x20> Espèce d'imbécile !<0xB0>Nous n'avons extrait assez
+    d'énergie des\nGuerriers de l'Ombre que pour un seul tir\navant qu'ils ne se désagrègent
+    tous !
 - offset: '0x1F49FF3'
-  name: 'Cluster Pic Cristal — 0x1F49FF3'
+  name: Cluster Pic Cristal — 0x1F49FF3
   issue: B-319
-  expected: '<0xFC><0x01><0x04>Mais…<0xFC><0x08><0x20> tu avais promis d''utiliser l''Arme\npour me rendre mon fils disparu !<0xB0>Tu comptais me trahir depuis le début ?'
+  expected: <0xFC><0x01><0x04>Mais…<0xFC><0x08><0x20> tu avais promis d'utiliser l'Arme\npour
+    me rendre mon fils disparu !<0xB0>Tu comptais me trahir depuis le début ?
 - offset: '0x1F4A06E'
-  name: 'Cluster Pic Cristal — 0x1F4A06E'
+  name: Cluster Pic Cristal — 0x1F4A06E
   issue: B-319
-  expected: 'Bien sûr !<0xB0>Je n''avais jamais eu l''intention de t''aider !<0xB0>Si tout s''était déroulé comme prévu,\nje t''aurais laissé servir de bouc émissaire\net je serais parti en volant !<0xB0>Comme ça !'
+  expected: Bien sûr !<0xB0>Je n'avais jamais eu l'intention de t'aider !<0xB0>Si
+    tout s'était déroulé comme prévu,\nje t'aurais laissé servir de bouc émissaire\net
+    je serais parti en volant !<0xB0>Comme ça !
 - offset: '0x1F4A10F'
-  name: 'Cluster Pic Cristal — 0x1F4A10F'
+  name: Cluster Pic Cristal — 0x1F4A10F
   issue: B-319
-  expected: 'Étouraptor ! À sa poursuite !\nAllons-y !'
+  expected: Étouraptor ! À sa poursuite !\nAllons-y !
 - offset: '0x1F4A12F'
-  name: 'Cluster Pic Cristal — 0x1F4A12F'
+  name: Cluster Pic Cristal — 0x1F4A12F
   issue: B-319
-  expected: '<0xFC><0x01><0x04>Zeph…<0xFC><0x08><0x20> les restes de mon fils…<0xFC><0x08><0x20> Je les\navais avec moi…<0xB0>Pourquoi ne les as-tu pas…<0xFC><0x08><0x20> pourquoi ne\nes-tu pas venu les chercher !?'
+  expected: <0xFC><0x01><0x04>Zeph…<0xFC><0x08><0x20> les restes de mon fils…<0xFC><0x08><0x20>
+    Je les\navais avec moi…<0xB0>Pourquoi ne les as-tu pas…<0xFC><0x08><0x20> pourquoi
+    ne\nes-tu pas venu les chercher !?
 - offset: '0x1F4A288'
-  name: 'Cluster Pic Cristal — 0x1F4A288'
+  name: Cluster Pic Cristal — 0x1F4A288
   issue: B-319
-  expected: '<0xFC><0x01><0x04>Marlon…<0xFC><0x08><0x20> <0xFD><0x06>…<0xFC><0x08><0x20> Tout ce que j''ai\ntoujours voulu…<0xFC><0x08><0x20> c''était…<0xFC><0x08><0x20> c''était tout pour\nlui…<0xFC><0x08><0x20> toujours pour lui…'
+  expected: <0xFC><0x01><0x04>Marlon…<0xFC><0x08><0x20> <0xFD><0x06>…<0xFC><0x08><0x20>
+    Tout ce que j'ai\ntoujours voulu…<0xFC><0x08><0x20> c'était…<0xFC><0x08><0x20>
+    c'était tout pour\nlui…<0xFC><0x08><0x20> toujours pour lui…
 - offset: '0x1F4A44C'
-  name: 'Cluster Pic Cristal — 0x1F4A44C'
+  name: Cluster Pic Cristal — 0x1F4A44C
   issue: B-319
-  expected: '<0xFC><0x01><0x04>Je…<0xFC><0x08><0x20> J''ai besoin de temps pour réfléchir,\nseule. Ne viens pas me chercher.'
+  expected: <0xFC><0x01><0x04>Je…<0xFC><0x08><0x20> J'ai besoin de temps pour réfléchir,\nseule.
+    Ne viens pas me chercher.
 - offset: '0x1F4A4A1'
-  name: 'Cluster Pic Cristal — 0x1F4A4A1'
+  name: Cluster Pic Cristal — 0x1F4A4A1
   issue: B-319
-  expected: 'Zeph, Marlon, vous êtes en état\nd''arrestation.<0xB0>Je ne devrais pas avoir à détailler\nvos crimes.<0xB0>Vous savez parfaitement tous les deux\nce que vous avez fait.'
+  expected: Zeph, Marlon, vous êtes en état\nd'arrestation.<0xB0>Je ne devrais pas
+    avoir à détailler\nvos crimes.<0xB0>Vous savez parfaitement tous les deux\nce
+    que vous avez fait.
 - offset: '0x1F4A51E'
-  name: 'Cluster Pic Cristal — 0x1F4A51E'
+  name: Cluster Pic Cristal — 0x1F4A51E
   issue: B-319
-  expected: 'S''il te plaît, Arthur.<0xB0>Emmène-moi, mais laisse Marlon\ntranquille.<0xB0>Il a assez souffert dans toute cette\nhistoire…'
+  expected: S'il te plaît, Arthur.<0xB0>Emmène-moi, mais laisse Marlon\ntranquille.<0xB0>Il
+    a assez souffert dans toute cette\nhistoire…
 - offset: '0x1F4A574'
-  name: 'Cluster Pic Cristal — 0x1F4A574'
+  name: Cluster Pic Cristal — 0x1F4A574
   issue: B-319
-  expected: 'Hmm…<0xB0>Tu as joué un rôle essentiel dans\nl''épuisement de la source d''énergie\nde l''Arme Suprême…<0xB0>Je pense que nous pouvons trouver un\narrangement.<0xB0>Marlon est libre de partir, pour l''instant.<0xB0>Quant à toi, viens avec nous, s''il te plaît.\nNous avons beaucoup à nous dire.'
+  expected: Hmm…<0xB0>Tu as joué un rôle essentiel dans\nl'épuisement de la source
+    d'énergie\nde l'Arme Suprême…<0xB0>Je pense que nous pouvons trouver un\narrangement.<0xB0>Marlon
+    est libre de partir, pour l'instant.<0xB0>Quant à toi, viens avec nous, s'il te
+    plaît.\nNous avons beaucoup à nous dire.
 - offset: '0x1F4A639'
-  name: 'Cluster Pic Cristal — 0x1F4A639'
+  name: Cluster Pic Cristal — 0x1F4A639
   issue: B-319
-  expected: 'Marlon, s''il te plaît, veille sur mon fils\npendant mon absence.'
+  expected: Marlon, s'il te plaît, veille sur mon fils\npendant mon absence.
 - offset: '0x1F4A7E3'
-  name: 'Cluster Pic Cristal — 0x1F4A7E3'
+  name: Cluster Pic Cristal — 0x1F4A7E3
   issue: B-319
-  expected: '<0xFD><0x06>, je sais déjà que tu es fort…'
+  expected: <0xFD><0x06>, je sais déjà que tu es fort…
 - offset: '0x1F4A805'
-  name: 'Cluster Pic Cristal — 0x1F4A805'
+  name: Cluster Pic Cristal — 0x1F4A805
   issue: B-319
-  expected: 'Non, non, non. Tu ne comprends pas,\nvieux.<0xB0>Me voir combattre est une chose, mais\ntu ne l''as pas vraiment vécu.'
+  expected: Non, non, non. Tu ne comprends pas,\nvieux.<0xB0>Me voir combattre est
+    une chose, mais\ntu ne l'as pas vraiment vécu.
 - offset: '0x1F4A996'
-  name: 'Cluster Pic Cristal — 0x1F4A996'
+  name: Cluster Pic Cristal — 0x1F4A996
   issue: B-319
-  expected: 'Finissons-en, vieux !<0xB0>Je gardais celle-ci spécialement pour toi !'
+  expected: Finissons-en, vieux !<0xB0>Je gardais celle-ci spécialement pour toi !
 - offset: '0x1F4A9D7'
-  name: 'Cluster Pic Cristal — 0x1F4A9D7'
+  name: Cluster Pic Cristal — 0x1F4A9D7
   issue: B-319
-  expected: 'Vraiment…<0xFC><0x08><0x20> mais j''ai encore mon\norgueil de Dresseur, <0xFD><0x06>.<0xB0>J''ai peur de ne pas te laisser gagner\naussi facilement !'
+  expected: Vraiment…<0xFC><0x08><0x20> mais j'ai encore mon\norgueil de Dresseur,
+    <0xFD><0x06>.<0xB0>J'ai peur de ne pas te laisser gagner\naussi facilement !
 - offset: '0x1F4ABC8'
-  name: 'Cluster Pic Cristal — 0x1F4ABC8'
+  name: Cluster Pic Cristal — 0x1F4ABC8
   issue: B-319
-  expected: '<0xFD><0x06>, allons chercher Melony et\nrentrons à Cimes Gelées.<0xB0>Je veux apprendre à vous connaître tous les\ndeux.'
+  expected: <0xFD><0x06>, allons chercher Melony et\nrentrons à Cimes Gelées.<0xB0>Je
+    veux apprendre à vous connaître tous les\ndeux.
 - offset: '0x1F4AC1C'
-  name: 'Cluster Pic Cristal — 0x1F4AC1C'
+  name: Cluster Pic Cristal — 0x1F4AC1C
   issue: B-319
-  expected: 'Et si…<0xFC><0x08><0x20> tu la connaissais déjà ?'
+  expected: Et si…<0xFC><0x08><0x20> tu la connaissais déjà ?
 - offset: '0x1F4AC3D'
-  name: 'Cluster Pic Cristal — 0x1F4AC3D'
+  name: Cluster Pic Cristal — 0x1F4AC3D
   issue: B-319
-  expected: 'Ivory…<0xFC><0x08><0x20> a besoin de rester seule un moment.<0xB0>Elle a tant sacrifié pour rien, au bout du\ncompte.<0xB0>Je pense qu''elle doit assimiler tout ça.<0xB0>Quand elle sera prête, nous pourrons\ntoujours la retrouver.'
+  expected: Ivory…<0xFC><0x08><0x20> a besoin de rester seule un moment.<0xB0>Elle
+    a tant sacrifié pour rien, au bout du\ncompte.<0xB0>Je pense qu'elle doit assimiler
+    tout ça.<0xB0>Quand elle sera prête, nous pourrons\ntoujours la retrouver.
 - offset: '0x1F4B2D7'
-  name: 'Cluster Pic Cristal — 0x1F4B2D7'
+  name: Cluster Pic Cristal — 0x1F4B2D7
   issue: B-319
-  expected: 'Halte !'
+  expected: Halte !
 - offset: '0x1F4B586'
-  name: 'Cluster Pic Cristal — 0x1F4B586'
+  name: Cluster Pic Cristal — 0x1F4B586
   issue: B-319
-  expected: 'Maintenant, il n''y a plus que toi et moi.<0xB0>Tu es prêt ?\nAllons-y !'
+  expected: Maintenant, il n'y a plus que toi et moi.<0xB0>Tu es prêt ?\nAllons-y
+    !
 - offset: '0x1F4BC44'
-  name: 'Cluster Pic Cristal — 0x1F4BC44'
+  name: Cluster Pic Cristal — 0x1F4BC44
   issue: B-319
-  expected: 'Félicitations pour avoir terminé la\ncampagne principale de Pokémon Unbound !<0xB0>Pour récompenser cet exploit, toutes les\ndifficultés de combat sont désormais\ndéverrouillées !'
+  expected: Félicitations pour avoir terminé la\ncampagne principale de Pokémon Unbound
+    !<0xB0>Pour récompenser cet exploit, toutes les\ndifficultés de combat sont désormais\ndéverrouillées
+    !
 - offset: '0x1F4BD16'
-  name: 'Cluster Pic Cristal — 0x1F4BD16'
+  name: Cluster Pic Cristal — 0x1F4BD16
   issue: B-319
-  expected: 'Maintenant que tu es devenu Champion,\nil te reste beaucoup à faire, alors ne pars\npas tout de suite !<0xB0>Continue de profiter de Pokémon Unbound,\net merci d''avoir joué !'
+  expected: Maintenant que tu es devenu Champion,\nil te reste beaucoup à faire, alors
+    ne pars\npas tout de suite !<0xB0>Continue de profiter de Pokémon Unbound,\net
+    merci d'avoir joué !
 - offset: '0x1F4C712'
-  name: 'Cluster Pic Cristal — 0x1F4C712'
+  name: Cluster Pic Cristal — 0x1F4C712
   issue: B-319
-  expected: 'Et sur ce, je m''en vais !<0xB0>Dis bonjour à ta mère de ma part,\nveux-tu, <0xFD><0x01> ?'
+  expected: Et sur ce, je m'en vais !<0xB0>Dis bonjour à ta mère de ma part,\nveux-tu,
+    <0xFD><0x01> ?
 - offset: '0x1F4C75E'
-  name: 'Cluster Pic Cristal — 0x1F4C75E'
+  name: Cluster Pic Cristal — 0x1F4C75E
   issue: B-319
-  expected: 'Alors, te voilà…<0xB0>Ha ha ha ha… Tu n''avais pas vraiment\nle choix, de toute façon…'
+  expected: Alors, te voilà…<0xB0>Ha ha ha ha… Tu n'avais pas vraiment\nle choix,
+    de toute façon…
 - offset: '0x1F4CDE8'
-  name: 'Cluster Pic Cristal — 0x1F4CDE8'
+  name: Cluster Pic Cristal — 0x1F4CDE8
   issue: B-319
-  expected: 'C''est pitoyable.'
+  expected: C'est pitoyable.
 - offset: '0x1F4CDFC'
-  name: 'Cluster Pic Cristal — 0x1F4CDFC'
+  name: Cluster Pic Cristal — 0x1F4CDFC
   issue: B-319
-  expected: 'Qu-qu''est-ce que tu as dit !?'
+  expected: Qu-qu'est-ce que tu as dit !?
 - offset: '0x1F4CF57'
-  name: 'Cluster Pic Cristal — 0x1F4CF57'
+  name: Cluster Pic Cristal — 0x1F4CF57
   issue: B-319
-  expected: 'Nngh…'
+  expected: Nngh…
 - offset: '0x1F4CF5D'
-  name: 'Cluster Pic Cristal — 0x1F4CF5D'
+  name: Cluster Pic Cristal — 0x1F4CF5D
   issue: B-319
-  expected: 'Hmm ? Quels sont ces bruits qui\nmontent d''en bas ?'
+  expected: Hmm ? Quels sont ces bruits qui\nmontent d'en bas ?
 - offset: '0x1F4CF8B'
-  name: 'Cluster Pic Cristal — 0x1F4CF8B'
+  name: Cluster Pic Cristal — 0x1F4CF8B
   issue: B-319
-  expected: 'Alors c''est ici que tu l''as emmené,\nAklove !'
+  expected: Alors c'est ici que tu l'as emmené,\nAklove !
 - offset: '0x1EE6D4F'
   name: 'PNJ Potions : conseil de soin'
   issue: Trad soin
-  expected: Fais le plein de\n{COLOR}ÉPotions{COLOR}Ë.\pOn sait jamais quand on devra se\nsoigner rapidement.
+  expected: Fais le plein de\n{COLOR}ÉPotions{COLOR}Ë.\pOn sait jamais quand on devra
+    se\nsoigner rapidement.
   forbidden:
   - On ne sait jamais quand on sera\ncoincé et devoir se soigner vite.
 - offset: '0x1EE6521'
   name: 'Don de Poké Balls : jeu de mots sur « ball »'
-  issue: 'Humour non traduit'
-  expected: 'Sers-t''en avec soin, de la ball !\nHé hé, tu l''as ?'
+  issue: Humour non traduit
+  expected: Sers-t'en avec soin, de la ball !\nHé hé, tu l'as ?
   forbidden:
-  - 'Sers-t''en en bonne santé !\nHé hé, tu l''as compris ?'
+  - Sers-t'en en bonne santé !\nHé hé, tu l'as compris ?
 - offset: '0x1F52A9C'
-  name: 'Panneau d’entrée de Borrius Est'
+  name: Panneau d’entrée de Borrius Est
   issue: B-306
-  expected: 'Bienvenue à Borrius Est !\pPolderive est bien différente\nde Borrius Ouest, tu ne trouves\lpas ?\pJe doute que les gens de\lBorrius Ouest veuillent vivre\ldans un marais.'
+  expected: Bienvenue à Borrius Est !\pPolderive est bien différente\nde Borrius Ouest,
+    tu ne trouves\lpas ?\pJe doute que les gens de\lBorrius Ouest veuillent vivre\ldans
+    un marais.
   forbidden:
-  - 'Welcome to East Borrius!'
+  - Welcome to East Borrius!
 - offset: '0x1F53C21'
   name: 'Safari Zone: PNJ "precious partner"'
   issue: B-308
-  expected: J'ai attrapé mon précieux\npartenaire dans la <0xFC><0x01><0x06>Zone Safari<0xFC><0x01><0x08>.\pC'est juste à l'<0xFC><0x01><0x06>est<0xFC><0x01><0x08> de la ville.
+  expected: J'ai attrapé mon précieux\npartenaire dans la <0xFC><0x01><0x06>Zone Safari<0xFC><0x01><0x08>.\pC'est
+    juste à l'<0xFC><0x01><0x06>est<0xFC><0x01><0x08> de la ville.
 - offset: '0x1F53C7D'
   name: 'Safari Zone: PNJ "we can live unchanged"'
   issue: B-308
-  expected: Nous pouvons rester les mêmes,\ncar nous ne cessons de changer.\pEnfin, les Pokémon évoluent aussi,\nmais leur Nature reste la même.\pDu moins, c'est censé être le cas…
+  expected: Nous pouvons rester les mêmes,\ncar nous ne cessons de changer.\pEnfin,
+    les Pokémon évoluent aussi,\nmais leur Nature reste la même.\pDu moins, c'est
+    censé être le cas…
 - offset: '0x1F47086'
   name: 'Ferry S.S. Marine: Jax, bateau à l''arrêt (répliques 1-3)'
   issue: B-306
-  expected: Comment ça, le bateau ne\nfonctionne pas ?\pIl faut qu'on aille à Polderive\nAU PLUS VITE !\pLe sort de Borrius en dépend !
+  expected: Comment ça, le bateau ne\nfonctionne pas ?\pIl faut qu'on aille à Polderive\nAU
+    PLUS VITE !\pLe sort de Borrius en dépend !
   forbidden:
-  - What do you mean, the ship's not\nrunning?\pWe need to get to Polder Town\nASAP!\pThe fate of Borrius depends on it!
+  - What do you mean, the ship's not\nrunning?\pWe need to get to Polder Town\nASAP!\pThe
+    fate of Borrius depends on it!
 - offset: '0x1F4725D'
   name: 'Ferry S.S. Marine: réponse de Brice (réplique 4)'
   issue: B-306
@@ -691,98 +766,114 @@ entries:
 - offset: '0x1F4728D'
   name: 'Ferry S.S. Marine: Jax donne rendez-vous à Brice (répliques 5-7 + ticket)'
   issue: B-306
-  expected: T'as bien compris, {FD01} ?\pRetrouve-nous sur le bateau, sur les\nquais au nord d'ici.\pOn y va sans t'attendre, comme ça\nil n'y aura pas de retard.\pAh oui, tiens, prends ce ticket pour\npouvoir monter à bord toi aussi.
+  expected: T'as bien compris, {FD01} ?\pRetrouve-nous sur le bateau, sur les\nquais
+    au nord d'ici.\pOn y va sans t'attendre, comme ça\nil n'y aura pas de retard.\pAh
+    oui, tiens, prends ce ticket pour\npouvoir monter à bord toi aussi.
   forbidden:
-  - You got that, {FD01}?\pMeet us at the boat on the docks\nnorth of here.\pWe'll go on ahead and board without\nyou, so there's no delay.\pOh, right - take this ticket so you\ncan get on the boat, too.
+  - You got that, {FD01}?\pMeet us at the boat on the docks\nnorth of here.\pWe'll
+    go on ahead and board without\nyou, so there's no delay.\pOh, right - take this
+    ticket so you\ncan get on the boat, too.
 - offset: '0x1F53396'
   name: 'Ferry S.S. Marine: horaires vers Borrius Ouest (réplique 8)'
   issue: B-306
-  expected: Quand il fonctionne, le Marine part\nvers Borrius Ouest le\ldimanche et le mercredi.
+  expected: Quand il fonctionne, le Marine part\nvers Borrius Ouest le\ldimanche et
+    le mercredi.
   forbidden:
-  - When it's working, the S.S. Marine\nsets sail to West Borrius on\nSundays and Wednesdays.
+  - When it's working, the S.S. Marine\nsets sail to West Borrius on\nSundays and
+    Wednesdays.
 - offset: '0x1F53032'
-  name: 'PNJ dresseur troupe Cradopaud devant le Mart'
+  name: PNJ dresseur troupe Cradopaud devant le Mart
   issue: B-304
   expected: D'accord ! Je vais\nm'enflammer !
   forbidden:
   - Okay!\nI'm going to get all fired up!
 - offset: '0x1F478EE'
-  name: 'Victoire du rival — Carohacrok'
+  name: Victoire du rival — Carohacrok
   issue: B-302
-  expected: 'Mince… pourquoi je m''en faisais ?\nBien sûr que tu es prêt !'
+  expected: Mince… pourquoi je m'en faisais ?\nBien sûr que tu es prêt !
   forbidden:
-  - 'Man… what was I even worried about?\nOf course you''re ready!'
+  - Man… what was I even worried about?\nOf course you're ready!
 - offset: '0x1F53F7C'
   name: 'PNJ Centre Pokémon (chambre): Marais Fulica peu de type Insecte'
   issue: F-119
-  expected: Pour un marais, le <0xFC><0x01><0x06>Marais Fulica<0xFC><0x01><0x08>\nn'a étonnamment pas beaucoup de\lPokémon de type Insecte.
+  expected: Pour un marais, le <0xFC><0x01><0x06>Marais Fulica<0xFC><0x01><0x08>\nn'a
+    étonnamment pas beaucoup de\lPokémon de type Insecte.
   forbidden:
   - Cootes Bog
 - offset: '0x1F83EFB'
   name: 'Dresseur : Pokémon apprivoisé'
-  issue: 'Problème de traduction 2'
+  issue: Problème de traduction 2
   expected: Si je savais ce que je dresse,\non n'aurait pas perdu.
 - offset: '0x1F84012'
   name: 'Dresseur : Pokémon Caverne'
-  issue: 'Problème de traduction 2'
+  issue: Problème de traduction 2
   expected: Non !\nMon Pokémon Caverne !
 - offset: '0x1F842B1'
   name: 'Dresseur : Aflamanoir et Fermite'
-  issue: 'Problème de traduction 2'
+  issue: Problème de traduction 2
   expected: Cousin !\pTon Aflamanoir tente encore de\nmanger mon Fermite !
 - offset: '0x1F4AA46'
   name: 'Aklove : aucune information nouvelle'
-  issue: 'Problème de traduction 2'
+  issue: Problème de traduction 2
   expected: Bien sûr, ça ne m'a rien appris\nque je ne sache déjà.
 - offset: '0x1F49A85'
   name: 'Aklove : refuse la défaite'
-  issue: 'Problème de traduction 2'
+  issue: Problème de traduction 2
   expected: Non ! Je refuse d'admettre\nma défaite !
 - offset: '0x1F4B6D9'
   name: 'Prof. Log : nouveau Champion'
-  issue: 'Problème de traduction 2'
-  expected: On dirait que le Prof. Log a choisi\nun adversaire à sa hauteur, finalement !<0xB0>Mais sans rire, félicitations !<0xB0>Tu es désormais le nouveau Champion\nde Borrius !
+  issue: Problème de traduction 2
+  expected: On dirait que le Prof. Log a choisi\nun adversaire à sa hauteur, finalement
+    !<0xB0>Mais sans rire, félicitations !<0xB0>Tu es désormais le nouveau Champion\nde
+    Borrius !
 - offset: '0x1F51177'
   name: 'Dresseuse : meilleur type Pokémon'
-  issue: 'Problème de traduction 2'
-  expected: Quoi !? Mais j'avais le meilleur\ntype de Pokémon du monde !<0xB0>Bon, d'accord.\nC'était plutôt impressionnant.<0xB0>On dirait que mes dragons et moi\ndevons encore progresser.
+  issue: Problème de traduction 2
+  expected: Quoi !? Mais j'avais le meilleur\ntype de Pokémon du monde !<0xB0>Bon,
+    d'accord.\nC'était plutôt impressionnant.<0xB0>On dirait que mes dragons et moi\ndevons
+    encore progresser.
 - offset: '0x1F50576'
   name: 'Dresseur : poignée de main'
-  issue: 'Problème de traduction 2'
-  expected: Beau travail. Je te serrerais bien la\nmain, mais je ne peux pas vraiment\nbouger…<0xB0>Et je crois que ça arracherait\nla mienne.
+  issue: Problème de traduction 2
+  expected: Beau travail. Je te serrerais bien la\nmain, mais je ne peux pas vraiment\nbouger…<0xB0>Et
+    je crois que ça arracherait\nla mienne.
 - offset: '0x1F50BA2'
   name: 'Dresseuse : combat avec Brice'
-  issue: 'Problème de traduction 2'
+  issue: Problème de traduction 2
   expected: C'était vraiment super, <0xFD><0x01> !\nJe me suis tellement amusée !
 - offset: '0x1F4FF74'
   name: 'Moltres : Conseil 4'
-  issue: 'Problème de traduction 2'
-  expected: Je ne peux pas échapper aux griffes de\nce soi-disant « Conseil 4 » pour l'instant.<0xB0>Mais le moment venu… hmpf.\nTrès bien.<0xB0>Mesure-toi aux autres.\nJusqu'à notre prochaine rencontre…
+  issue: Problème de traduction 2
+  expected: Je ne peux pas échapper aux griffes de\nce soi-disant « Conseil 4 » pour
+    l'instant.<0xB0>Mais le moment venu… hmpf.\nTrès bien.<0xB0>Mesure-toi aux autres.\nJusqu'à
+    notre prochaine rencontre…
 - offset: '0x1F4F57B'
   name: 'Conseil 4 : combat en duo'
-  issue: 'Problème de traduction 2'
-  expected: Certains membres du Conseil 4\naiment les combats en duo.<0xB0>Si tu n'as pas la CT pour\n<0xFC><0x01><0x06>Abri<0xFC><0x01><0x04>, c'est le moment de\nl'acheter au marché de\n<0xFC><0x01><0x06><0xFD><0x01><0xFC><0x01><0x04>.
+  issue: Problème de traduction 2
+  expected: Certains membres du Conseil 4\naiment les combats en duo.<0xB0>Si tu n'as
+    pas la CT pour\n<0xFC><0x01><0x06>Abri<0xFC><0x01><0x04>, c'est le moment de\nl'acheter
+    au marché de\n<0xFC><0x01><0x06><0xFD><0x01><0xFC><0x01><0x04>.
 - offset: '0xA3510F'
-  name: 'Talent Rivalité (description)'
+  name: Talent Rivalité (description)
   issue: '113'
   expected: Puissance + contre même sexe.
   forbidden:
   - Puissance accrue contre même sexe.
 - offset: '0xA356E4'
-  name: 'Talent description (Esquive)'
+  name: Talent description (Esquive)
   issue: '113'
   expected: Esquive + vs cap. statut.
   forbidden:
   - Esquive accrue vs cap. statut.
 - offset: '0x1F1F8B7'
-  name: 'Mission Tablettes de Pierre'
+  name: Mission Tablettes de Pierre
   issue: '#115'
   expected: Découvre les secrets derrière\nles tablettes de pierre !
   forbidden:
   - Découvre les secrets\nderrière les tablettes\nde pierre mystérieuses !
   - Découvre les secrets derrière les tablettes de pierre !
 - offset: '0x1F87B73'
-  name: 'Mission Cellules Vertes'
+  name: Mission Cellules Vertes
   issue: '#115'
   expected: Collecte les cellules vertes\ndisséminées à Borrius !
   forbidden:
@@ -832,6 +923,71 @@ entries:
   forbidden:
   - Dame Parfum
   - Aroma Lady
+- offset: '0x1f7292b'
+  name: Trainer Tips Sign
+  issue: '#120'
+  expected: <0xFC><0x01><0x02>Astuces de Dresseurs !\pNe quitte pas ces panneaux avant
+    de\nles avoir lus en entier !\pChacun d'eux contient des infos\nimportantes qui
+    t'aideront durant\lton aventure.\pSauter le texte de ces panneaux\npourrait te
+    coûter cher !
+- offset: '0x1f72a6d'
+  name: Trainer Tips Sign
+  issue: '#120'
+  expected: <0xFC><0x01><0x02>Astuces de Dresseurs !\pOuvre le menu <0xFC><0x01><0x06>Options<0xFC><0x01><0x02>
+    pour activer\nRappel Sauvegarde et CS Rapides !\pSi <0xFC><0x01><0x06>Rappel Sauvegarde<0xFC><0x01><0x02>
+    est activé, on\nte demandera si tu veux sauvegarder\lavant ou après les événements\limportants
+    !\pSi <0xFC><0x01><0x06>CS Rapides<0xFC><0x01><0x02> est activé, les\ncapacités
+    de terrain s'utilisent\lsans confirmation à chaque fois !\pDe plus, <0xF8><0x02>
+    et <0xF8><0x03> servent à passer\nd'une page d'options à l'autre !
+- offset: '0x1f7343d'
+  name: Trainer Tips Sign
+  issue: '#120'
+  expected: Astuces de Dresseurs !\pLes objets à usage unique te sont\nrendus après
+    les combats importants,\lcomme ceux contre les Champions.\pUtilise-les pour renforcer
+    ton\néquipe et prendre l'avantage !
+- offset: '0x1f734e9'
+  name: Trainer Tips Sign
+  issue: '#120'
+  expected: Astuces de Dresseurs !\pRepère les arbres avec une zone\nd'ombre entre
+    eux !\pCela indique qu'on peut y trouver\ndes <0xFC><0x01><0x06>Grottes Cachées<0xFC><0x01><0x02>
+    !\pCes zones spéciales apparaissent en\nmasse depuis la chute de la\lmétéorite.\pInteragis
+    avec les arbres et\nprépare-toi à affronter un Pokémon\lcoriace !\pEt d'ailleurs,
+    avec <0xFC><0x01><0x06>Coupe<0xFC><0x01><0x02>, tu en\ntrouveras même une sur
+    cette route !\pAlors gagne le Badge Vision à\nl'Arène de Cratéris, puis\lreviens
+    ici pour la trouver !
+- offset: '0x1f73aad'
+  name: Trainer Tips Sign
+  issue: '#120'
+  expected: Astuces de Dresseurs !\pAppuie sur <0xF8><0x05> pour utiliser l'un\nde
+    tes six objets enregistrés !\pPour enregistrer un objet,\nsélectionne-le dans
+    la section\lObjets Rares de ton Cube, puis\lchoisis <0xFC><0x01><0x06>Enregistrer<0xFC><0x01><0x02>.\pLe
+    deuxième objet enregistré peut\nêtre utilisé en appuyant sur <0xF8><0x02>\lquand
+    l'option <0xFC><0x01><0x06>Mode Bouton L<0xFC><0x01><0x02> est\lréglée sur <0xFC><0x01><0x06>Objet
+    Enr. 2<0xFC><0x01><0x02>.
+- offset: '0x1f73cd7'
+  name: Trainer Tips Sign
+  issue: '#120'
+  expected: Astuces de Dresseurs !\pNe change jamais la date de ton\nappareil pour
+    accéder à plus\ld'événements quotidiens !\pSi tu le fais, tous les événements\nquotidiens
+    risquent de ne plus\lfonctionner correctement, que tu\laies tenté ou non d'y accéder\lplus
+    d'une fois.\pSi tu l'as déjà fait par accident,\ntout n'est pas perdu.\pSi tu
+    peux attendre jusqu'à la date\nchoisie, c'est recommandé. Sinon,\lparle à un homme
+    aux Cimes Gelées.\pUne seule fois, il peut remettre\nton horloge à l'heure pour
+    que les\lévénements quotidiens fonctionnent\là nouveau.
+- offset: '0x1f73efa'
+  name: Trainer Tips Sign
+  issue: '#120'
+  expected: Astuces de Dresseurs !\pSi tu remarques un symbole de coeur\nen consultant
+    le résumé de ton\lPokémon, c'est que vous avez\lcommencé à tisser des liens !\pPlus
+    vous êtes proches, plus le\ncoeur se remplira.\pEt un Pokémon au coeur presque\nplein
+    est prêt à évoluer s'il\lnécessite une <0xFC><0x01><0x06>évolution par Amitié<0xFC><0x01><0x02>
+    !
+- offset: '0x1f7471c'
+  name: Trainer Tips Sign
+  issue: '#120'
+  expected: <0xFC><0x01><0x02>Astuces de Dresseurs !\pMême en difficulté <0xFC><0x01><0x06>Vanilla<0xFC><0x01><0x02>,
+    le\nConseil 4 devient plus fort en même\ltemps que toi !\pNe te laisse pas surprendre
+    et\nprépare-toi à des combats intenses !
 - offset: '0x1A6196'
   name: 'Défaite : montant dynamique'
   issue: '#105'
@@ -1707,3 +1863,69 @@ entries:
   expected: Ces CT ne vont pas se\ntrouver toutes seules !
   forbidden:
   - Those TMs aren't going to just
+=======
+- offset: '0x1f7292b'
+  name: Trainer Tips Sign
+  issue: '#120'
+  expected: <0xFC><0x01><0x02>Astuces de Dresseurs !\pNe quitte pas ces panneaux avant
+    de\nles avoir lus en entier !\pChacun d'eux contient des infos\nimportantes qui
+    t'aideront durant\lton aventure.\pSauter le texte de ces panneaux\npourrait te
+    coûter cher !
+- offset: '0x1f72a6d'
+  name: Trainer Tips Sign
+  issue: '#120'
+  expected: <0xFC><0x01><0x02>Astuces de Dresseurs !\pOuvre le menu <0xFC><0x01><0x06>Options<0xFC><0x01><0x02>
+    pour activer\nRappel Sauvegarde et CS Rapides !\pSi <0xFC><0x01><0x06>Rappel Sauvegarde<0xFC><0x01><0x02>
+    est activé, on\nte demandera si tu veux sauvegarder\lavant ou après les événements\limportants
+    !\pSi <0xFC><0x01><0x06>CS Rapides<0xFC><0x01><0x02> est activé, les\ncapacités
+    de terrain s'utilisent\lsans confirmation à chaque fois !\pDe plus, <0xF8><0x02>
+    et <0xF8><0x03> servent à passer\nd'une page d'options à l'autre !
+- offset: '0x1f7343d'
+  name: Trainer Tips Sign
+  issue: '#120'
+  expected: Astuces de Dresseurs !\pLes objets à usage unique te sont\nrendus après
+    les combats importants,\lcomme ceux contre les Champions.\pUtilise-les pour renforcer
+    ton\néquipe et prendre l'avantage !
+- offset: '0x1f734e9'
+  name: Trainer Tips Sign
+  issue: '#120'
+  expected: Astuces de Dresseurs !\pRepère les arbres avec une zone\nd'ombre entre
+    eux !\pCela indique qu'on peut y trouver\ndes <0xFC><0x01><0x06>Grottes Cachées<0xFC><0x01><0x02>
+    !\pCes zones spéciales apparaissent en\nmasse depuis la chute de la\lmétéorite.\pInteragis
+    avec les arbres et\nprépare-toi à affronter un Pokémon\lcoriace !\pEt d'ailleurs,
+    avec <0xFC><0x01><0x06>Coupe<0xFC><0x01><0x02>, tu en\ntrouveras même une sur
+    cette route !\pAlors gagne le Badge Vision à\nl'Arène de Cratéris, puis\lreviens
+    ici pour la trouver !
+- offset: '0x1f73aad'
+  name: Trainer Tips Sign
+  issue: '#120'
+  expected: Astuces de Dresseurs !\pAppuie sur <0xF8><0x05> pour utiliser l'un\nde
+    tes six objets enregistrés !\pPour enregistrer un objet,\nsélectionne-le dans
+    la section\lObjets Rares de ton Cube, puis\lchoisis <0xFC><0x01><0x06>Enregistrer<0xFC><0x01><0x02>.\pLe
+    deuxième objet enregistré peut\nêtre utilisé en appuyant sur <0xF8><0x02>\lquand
+    l'option <0xFC><0x01><0x06>Mode Bouton L<0xFC><0x01><0x02> est\lréglée sur <0xFC><0x01><0x06>Objet
+    Enr. 2<0xFC><0x01><0x02>.
+- offset: '0x1f73cd7'
+  name: Trainer Tips Sign
+  issue: '#120'
+  expected: Astuces de Dresseurs !\pNe change jamais la date de ton\nappareil pour
+    accéder à plus\ld'événements quotidiens !\pSi tu le fais, tous les événements\nquotidiens
+    risquent de ne plus\lfonctionner correctement, que tu\laies tenté ou non d'y accéder\lplus
+    d'une fois.\pSi tu l'as déjà fait par accident,\ntout n'est pas perdu.\pSi tu
+    peux attendre jusqu'à la date\nchoisie, c'est recommandé. Sinon,\lparle à un homme
+    aux Cimes Gelées.\pUne seule fois, il peut remettre\nton horloge à l'heure pour
+    que les\lévénements quotidiens fonctionnent\là nouveau.
+- offset: '0x1f73efa'
+  name: Trainer Tips Sign
+  issue: '#120'
+  expected: Astuces de Dresseurs !\pSi tu remarques un symbole de coeur\nen consultant
+    le résumé de ton\lPokémon, c'est que vous avez\lcommencé à tisser des liens !\pPlus
+    vous êtes proches, plus le\ncoeur se remplira.\pEt un Pokémon au coeur presque\nplein
+    est prêt à évoluer s'il\lnécessite une <0xFC><0x01><0x06>évolution par Amitié<0xFC><0x01><0x02>
+    !
+- offset: '0x1f7471c'
+  name: Trainer Tips Sign
+  issue: '#120'
+  expected: <0xFC><0x01><0x02>Astuces de Dresseurs !\pMême en difficulté <0xFC><0x01><0x06>Vanilla<0xFC><0x01><0x02>,
+    le\nConseil 4 devient plus fort en même\ltemps que toi !\pNe te laisse pas surprendre
+    et\nprépare-toi à des combats intenses !
