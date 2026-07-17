@@ -739,9 +739,10 @@ entries:
 - offset: '0x1EFFD93'
   name: 'Panneau Boissombre'
   issue: '#119'
-  expected: Panneau Conseils Dresseurs lu\nsur le chemin juste à l'extérieur\nde la sortie ouest de Boissombre.
+  expected: Panneau Conseils Dresseurs lu\nsur le chemin juste à la sortie\nouest de Boissombre.
   forbidden:
-  - Panneau Conseils Dresseurs lu\nsur le chemin juste à l'extérieur\nsortie ouest de Boissombre.
+  - This Trainer Tips sign was read\non the path just outside the\nwestern Grim Woods exit.
+  - Panneau Conseils Dresseurs lu\nsur le chemin juste à l'extérieur\nde la sortie ouest de Boissombre.
 - offset: '0x791BBA'
   name: 'Ramassage Cellule de Zygarde: pourcentage'
   issue: '#80'
