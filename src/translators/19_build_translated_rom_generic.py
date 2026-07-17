@@ -232,6 +232,57 @@ class TranslatedROMBuilder:
         0x08: 1, 0x0B: 2, 0x0C: 1, 0x0D: 1, 0x0E: 1, 0x10: 2,
         0x11: 1, 0x12: 1, 0x13: 1, 0x14: 1, 0x19: 1,
     }
+    # Named "<0xFD><0xNN>" script/battle variables (docs/17_TEXT_VARIABLES.md)
+    # carry one fixed code each. Resolving a placeholder by this name instead
+    # of by its position in the translation lets a translation legitimately
+    # reorder two variables (French "{B_ATK_ABILITY} de
+    # {B_ATK_NAME_WITH_PREFIX}" vs English "{B_ATK_NAME_WITH_PREFIX}'s
+    # {B_ATK_ABILITY}") without handing the wrong control code to the wrong
+    # placeholder — the old FIFO queue always matched a translation's first
+    # "{...}" to the English source's first control code, regardless of name.
+    FD_VARIABLE_CODES = {
+        'PLAYER': 0x01,
+        'STR_VAR_1': 0x02,
+        'STR_VAR_2': 0x03,
+        'STR_VAR_3': 0x04,
+        'KUN': 0x05,
+        'RIVAL': 0x06,
+        'VERSION': 0x07,
+        'EVIL_TEAM': 0x08,
+        'GOOD_TEAM': 0x09,
+        'EVIL_LEADER': 0x0A,
+        'GOOD_LEADER': 0x0B,
+        'EVIL_LEGENDARY': 0x0C,
+        'B_ATK_NAME_WITH_PREFIX': 0x0F,
+        'B_DEF_NAME_WITH_PREFIX': 0x10,
+        'B_EFF_NAME_WITH_PREFIX': 0x11,
+        'B_ACTIVE_NAME_WITH_PREFIX': 0x12,
+        'B_SCR_ACTIVE_NAME_WITH_PREFIX': 0x13,
+        'B_CURRENT_MOVE': 0x14,
+        'B_LAST_ITEM': 0x16,
+        'B_ATK_ABILITY': 0x18,
+        'B_DEF_ABILITY': 0x19,
+        'B_SCR_ACTIVE_ABILITY': 0x1A,
+        'B_TRAINER1_CLASS': 0x1C,
+        'B_TRAINER1_NAME': 0x1D,
+        'B_LINK_PARTNER_NAME': 0x1F,
+        'B_LINK_OPPONENT1_NAME': 0x20,
+        'B_LINK_OPPONENT2_NAME': 0x21,
+        'B_TRAINER2_LOSE_TEXT': 0x2E,
+        'B_TRAINER2_WIN_TEXT': 0x2F,
+    }
+
+    @classmethod
+    def _pop_named_sequence(
+        cls, sequences: List[List[int]], name: str
+    ) -> Optional[List[int]]:
+        code = cls.FD_VARIABLE_CODES.get(name)
+        if code is None:
+            return None
+        for idx, seq in enumerate(sequences):
+            if seq[0] == 0xFD and len(seq) > 1 and seq[1] == code:
+                return sequences.pop(idx)
+        return None
 
     @classmethod
     def _scan_control_tokens(cls, text: str) -> List[Tuple[int, int, int]]:
@@ -389,7 +440,9 @@ class TranslatedROMBuilder:
                         i = end + 1
                         continue
                     if sequences:
-                        seq = sequences.pop(0)
+                        seq = cls._pop_named_sequence(sequences, token[1:-1])
+                        if seq is None:
+                            seq = sequences.pop(0)
                         result.append(cls._format_sequence(seq))
                         i = end + 1
                         if seq[0] in cls.ARG_CONSUME_PREFIXES and len(seq) > 1:

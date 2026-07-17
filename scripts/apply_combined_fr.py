@@ -32,6 +32,45 @@ from src.core.text_converter import JSONToCSVConverter
 LINE_RE = re.compile(r'^\s*0x([0-9A-Fa-f]+)\s*:\s*(.*)$')
 PLACEHOLDER_RE = re.compile(r'\{[^}]+\}')
 CONTROL_TOKEN_RE = re.compile(r'<0xFD><0x[0-9A-Fa-f]{2}>')
+CONTROL_TOKEN_CODE_RE = re.compile(r'<0xFD><0x([0-9A-Fa-f]{2})>')
+# Named "<0xFD><0xNN>" script/battle variables (docs/17_TEXT_VARIABLES.md)
+# carry one fixed code each. Mirrors the same table in
+# src/translators/19_build_translated_rom_generic.py — resolving a
+# placeholder by name instead of by its position in the translation lets a
+# translation legitimately reorder two variables (e.g. French swapping
+# "{ability} de {name}" versus English "{name}'s {ability}") without handing
+# the wrong control code to the wrong placeholder.
+FD_VARIABLE_CODES = {
+    'PLAYER': 0x01,
+    'STR_VAR_1': 0x02,
+    'STR_VAR_2': 0x03,
+    'STR_VAR_3': 0x04,
+    'KUN': 0x05,
+    'RIVAL': 0x06,
+    'VERSION': 0x07,
+    'EVIL_TEAM': 0x08,
+    'GOOD_TEAM': 0x09,
+    'EVIL_LEADER': 0x0A,
+    'GOOD_LEADER': 0x0B,
+    'EVIL_LEGENDARY': 0x0C,
+    'B_ATK_NAME_WITH_PREFIX': 0x0F,
+    'B_DEF_NAME_WITH_PREFIX': 0x10,
+    'B_EFF_NAME_WITH_PREFIX': 0x11,
+    'B_ACTIVE_NAME_WITH_PREFIX': 0x12,
+    'B_SCR_ACTIVE_NAME_WITH_PREFIX': 0x13,
+    'B_CURRENT_MOVE': 0x14,
+    'B_LAST_ITEM': 0x16,
+    'B_ATK_ABILITY': 0x18,
+    'B_DEF_ABILITY': 0x19,
+    'B_SCR_ACTIVE_ABILITY': 0x1A,
+    'B_TRAINER1_CLASS': 0x1C,
+    'B_TRAINER1_NAME': 0x1D,
+    'B_LINK_PARTNER_NAME': 0x1F,
+    'B_LINK_OPPONENT1_NAME': 0x20,
+    'B_LINK_OPPONENT2_NAME': 0x21,
+    'B_TRAINER2_LOSE_TEXT': 0x2E,
+    'B_TRAINER2_WIN_TEXT': 0x2F,
+}
 TYPO_FIXES = {
     '’': "'",
     '“': '"',
@@ -70,8 +109,26 @@ def _apply_placeholder_mapping(text: str, reference: str) -> str:
     tokens = CONTROL_TOKEN_RE.findall(reference)
     if not tokens or len(tokens) != len(placeholders):
         return text
+    remaining = list(tokens)
+    unresolved: List[str] = []
     result = text
-    for placeholder, token in zip(placeholders, tokens):
+    for placeholder in placeholders:
+        code = FD_VARIABLE_CODES.get(placeholder[1:-1])
+        token = None
+        if code is not None:
+            for idx, candidate in enumerate(remaining):
+                match = CONTROL_TOKEN_CODE_RE.match(candidate)
+                if match and int(match.group(1), 16) == code:
+                    token = remaining.pop(idx)
+                    break
+        if token is None:
+            unresolved.append(placeholder)
+            continue
+        result = result.replace(placeholder, token, 1)
+    for placeholder in unresolved:
+        if not remaining:
+            break
+        token = remaining.pop(0)
         result = result.replace(placeholder, token, 1)
     return result
 

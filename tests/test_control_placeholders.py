@@ -112,6 +112,22 @@ class ControlPlaceholderTests(unittest.TestCase):
             expected,
         )
 
+    def test_reordered_named_placeholders_resolve_by_name(self):
+        # Regression (issue #123): English says "<name>'s\n<ability>
+        # activated!" but French reorders it to "<ability> de <name>
+        # s'active !". The old FIFO queue handed the first control code
+        # found in English (the name) to the first "{...}" placeholder
+        # found in French (the ability), swapping them — the ability
+        # banner rendered with the untranslated "'s" glued after the
+        # Pokemon name and the wrong variable in each slot.
+        english = "<0xFD><0x0F>'s <0xFD><0x18>\nactivated!"
+        translation = "{B_ATK_ABILITY} de\n{B_ATK_NAME_WITH_PREFIX} s'active !"
+        expected = "<0xFD><0x18> de\n<0xFD><0x0F> s'active !"
+        self.assertEqual(
+            TranslatedROMBuilder._apply_control_placeholders(translation, english),
+            expected,
+        )
+
     def test_color_macro_resolved_from_raw_bytes_no_pointer(self):
         # Regression: for no-pointer offsets, decode_pokemon(preserve_unknown=True)
         # has no notion of FC 01 NN as a 3-byte control sequence — it decodes the
