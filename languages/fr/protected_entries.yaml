@@ -749,3 +749,10 @@ entries:
   expected: Tu as collecté {COLOR}É{STR_VAR_3}%{COLOR}Á\nde cellules.
   forbidden:
   - Tu as collecté {COLOR}É{STR_VAR_3} pour cent{COLOR}Á\nde cellules.
+- offset: '0x23EA93'
+  name: 'Trainer class (Volcan Cendré): Aromathérapeute'
+  issue: '#122'
+  expected: Aromathérapeute
+  forbidden:
+  - Dame Parfum
+  - Aroma Lady
