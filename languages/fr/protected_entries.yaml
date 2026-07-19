@@ -720,6 +720,13 @@ entries:
   forbidden:
   - Collecte les mystérieuses\ncellules vertes disséminées à\nBorrius !
   - Collecte les cellules vertes disséminées à Borrius !
+- offset: '0x1F63D8E'
+  name: 'Mission Jour des jambes'
+  issue: '#127'
+  expected: C'est le jour des jambes !\nFais 150 000 pas et\nmuscle tes mollets.
+  forbidden:
+  - C'est le jour des jambes !\nMarche {STR_VAR_1} pas pour\nmuscler tes mollets.
+  - It's leg day! Walk {STR_VAR_1} steps to\nwork out those calves.
 - offset: '0x1F5605C'
   name: 'Menu Missions : onglet Active'
   issue: '#116'
