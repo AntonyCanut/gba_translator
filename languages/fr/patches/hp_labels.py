@@ -21,11 +21,12 @@ never touches them:
    Thin « HP » letters (color 1) inside a grey oval (color 7) — redrawn as
    thin « PV » letters, oval untouched.
 
-4. In-battle healthbox label (sprite) — LZ77 blocks 0x00EEF0AC / 0x00EEF380 /
-   0x00EEF688 (the three healthbox sheets). White « HP » (color 1) on a dark
-   pill (color 7) left of the green HP bar; ES doesn't localize it. Two tiles
-   per sheet (« H » then « P ») redrawn to « P » then « V » — pill borders,
-   caps and bar tiles left byte-exact.
+4. In-battle healthbox label (sprite) — LZ77 blocks 0x00D1F604 / 0x00EEF0AC /
+   0x00EEF380 / 0x00EEF688 (the four healthbox sheets). White « HP » (color 1)
+   on a dark pill (color 7) left of the green HP bar; ES doesn't localize it.
+   Two tiles per sheet (« H » then « P ») redrawn to « P » then « V » — pill
+   borders, caps and bar tiles left byte-exact. (0xD1F604 is a palette-slot
+   variant the first #125 fix missed, hence the residual « HP » in 2.1.68.)
 
 All four patches are strict: the current label tiles must byte-match a known
 variant (EN « HP » / ES « PS ») or the already-patched « PV »; anything else
@@ -181,17 +182,21 @@ GREY_OLD_TILES: dict[int, str] = {
     117: "17777777177777a777a7aaaaaaaaaaaa99999999aaaaaaaaaaaaaaaaaaaaaaaa",
 }
 
-# ── 4. Battle healthbox HP label (LZ77 0x00EEF0AC/0x00EEF380/0x00EEF688) ─────
+# ── 4. Battle healthbox HP label (LZ77 0xD1F604/0xEEF0AC/0xEEF380/0xEEF688) ───
 # The in-battle healthbox draws a white « HP » on a dark pill just left of the
 # green HP bar (GitHub issue #125). It is an OBJ (sprite) graphic — untouched by
 # every translation pass and *not* localized in the Spanish ROM (ES keeps « HP »
-# / has no matching LZ77 block), so the FR build still shows « HP ». Three
-# healthbox variants carry it (0xEEF0AC = 128-tile doubles sheet, 0xEEF380 /
-# 0xEEF688 = 64-tile singles sheets); in each the label is two 8×8 tiles — an
-# « H » tile then a « P » tile — only their tile index shifts.
+# / has no matching LZ77 block), so the FR build still shows « HP ». Four
+# healthbox variants carry it (0xEEF0AC = 128-tile doubles sheet, 0xD1F604 /
+# 0xEEF380 / 0xEEF688 = 64-tile singles sheets); in each the label is two 8×8
+# tiles — an « H » tile then a « P » tile — only their tile index shifts.
 #   letter colour = 1 (white), pill interior = 7.
+# 0xD1F604 is a palette-slot variant (top-border colour 3 instead of 2); the
+# original #125 fix only shipped the three 0xEE… sheets, so this fourth sheet
+# (used by one healthbox layout) kept showing « HP » in-game.
 # Each ``(block, h_tile, p_tile)``:
 BATTLE_BLOCKS: list[tuple[int, int, int]] = [
+    (0x00D1F604, 19, 20),
     (0x00EEF0AC, 20, 21),
     (0x00EEF380, 19, 20),
     (0x00EEF688, 19, 20),
@@ -216,13 +221,18 @@ BATTLE_V_FILL: set[tuple[int, int]] = {
 }
 BATTLE_V_BOX = [(r, c) for r in range(3, 7) for c in range(0, 5)]
 
-# Known EN letter tiles (strict validation input state). The « P » tile is
-# byte-identical in all three blocks; the « H » tile only differs in its
-# left-cap shading column (col 0), so 0xEEF0AC has its own variant.
-BATTLE_P_TILE_HEX = (
-    "2222222222222222777777771111711711177117111171171177771777777777"
-)
+# Known EN letter tiles (strict validation input state). The « P » tile body is
+# identical across the sheets; only the top-border colour and the « H » tile's
+# left-cap shading column differ per palette slot (0xEEF0AC and 0xD1F604 each
+# have their own variant), so both tiles are keyed by block.
+BATTLE_P_TILE_HEX: dict[int, str] = {
+    0x00D1F604: "3333333333333333777777771111711711177117111171171177771777777777",
+    0x00EEF0AC: "2222222222222222777777771111711711177117111171171177771777777777",
+    0x00EEF380: "2222222222222222777777771111711711177117111171171177771777777777",
+    0x00EEF688: "2222222222222222777777771111711711177117111171171177771777777777",
+}
 BATTLE_H_TILE_HEX: dict[int, str] = {
+    0x00D1F604: "3333333333333333737777777311177173111771731111717311177173777777",
     0x00EEF0AC: "2222222222222222777777777411177173111771731111717811177177777777",
     0x00EEF380: "2222222222222222727777777211177172111771721111717211177172777777",
     0x00EEF688: "2222222222222222727777777211177172111771721111717211177172777777",
@@ -408,7 +418,7 @@ def apply_patches(rom_path: Path) -> int:
         patched += _patch_label(
             rom, off, (h_tile, p_tile),
             {"EN « HP »": {h_tile: BATTLE_H_TILE_HEX[off],
-                           p_tile: BATTLE_P_TILE_HEX}},
+                           p_tile: BATTLE_P_TILE_HEX[off]}},
             _make_draw_battle_label(h_tile, p_tile),
             f"battle healthbox label (0x{off:08X})",
         )

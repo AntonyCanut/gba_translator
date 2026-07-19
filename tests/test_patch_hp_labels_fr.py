@@ -4,7 +4,8 @@ Four label graphics show the hit-point abbreviation: the party-menu green
 label, the summary-screen green bar-label sprite, the summary-screen grey
 stat label, and the in-battle healthbox label (GitHub issue #125). All are
 4bpp tiles inside LZ77 blocks — never handled by the text pipeline. The built
-FR ROM must render « PV » in all four.
+FR ROM must render « PV » in every block — including the four battle healthbox
+sheets (0xD1F604 / 0xEEF0AC / 0xEEF380 / 0xEEF688).
 """
 
 import sys
@@ -116,7 +117,7 @@ class TestPvArtDefinitions(unittest.TestCase):
 
     def test_battle_new_art_differs_from_old(self):
         for off, h_tile, p_tile in BATTLE_BLOCKS:
-            old = {h_tile: BATTLE_H_TILE_HEX[off], p_tile: BATTLE_P_TILE_HEX}
+            old = {h_tile: BATTLE_H_TILE_HEX[off], p_tile: BATTLE_P_TILE_HEX[off]}
             draw = _make_draw_battle_label(h_tile, p_tile)
             self.assertNotEqual(_expected_new(old, draw), old,
                                 f"block 0x{off:08X} art unchanged")
@@ -125,7 +126,7 @@ class TestPvArtDefinitions(unittest.TestCase):
         # Rows 0-2 and 7 (pill top/bottom border + transparent margin) must be
         # left byte-exact — only the letter rows 3-6 change.
         for off, h_tile, p_tile in BATTLE_BLOCKS:
-            old = {h_tile: BATTLE_H_TILE_HEX[off], p_tile: BATTLE_P_TILE_HEX}
+            old = {h_tile: BATTLE_H_TILE_HEX[off], p_tile: BATTLE_P_TILE_HEX[off]}
             new = _expected_new(old, _make_draw_battle_label(h_tile, p_tile))
             for tile in (h_tile, p_tile):
                 ob = bytes.fromhex(old[tile])
@@ -138,7 +139,7 @@ class TestPvArtDefinitions(unittest.TestCase):
     def test_battle_p_tile_preserves_right_cap(self):
         # The « P » letter tile keeps its right-hand pill cap (col 7) untouched.
         for off, h_tile, p_tile in BATTLE_BLOCKS:
-            old = {h_tile: BATTLE_H_TILE_HEX[off], p_tile: BATTLE_P_TILE_HEX}
+            old = {h_tile: BATTLE_H_TILE_HEX[off], p_tile: BATTLE_P_TILE_HEX[off]}
             new = _expected_new(old, _make_draw_battle_label(h_tile, p_tile))
             ob = bytes.fromhex(old[p_tile])
             nb = bytes.fromhex(new[p_tile])
@@ -177,7 +178,7 @@ class TestBuiltFrRomShowsPv(unittest.TestCase):
 
     def test_battle_healthbox_labels_are_pv(self):
         for off, h_tile, p_tile in BATTLE_BLOCKS:
-            old = {h_tile: BATTLE_H_TILE_HEX[off], p_tile: BATTLE_P_TILE_HEX}
+            old = {h_tile: BATTLE_H_TILE_HEX[off], p_tile: BATTLE_P_TILE_HEX[off]}
             self._assert_block_is_pv(
                 off, old, _make_draw_battle_label(h_tile, p_tile))
 
