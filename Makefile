@@ -103,7 +103,7 @@ SPANISH_BUILD := $(ROM_OUT_DIR)/GenedRom-es.gba
 
 .DEFAULT_GOAL := pipeline
 
-.PHONY: pipeline verify-roms extract extract-en extract-es extract-fr diff build-es build-fr prepare-fr ensure-fr-translation validate-es trilingual-csv \
+.PHONY: pipeline verify-roms extract extract-en extract-es extract-fr diff build-es build-fr verify-fr-determinism prepare-fr ensure-fr-translation validate-es trilingual-csv \
 	build-it build-de build-indie build-lang build-all release-all langs \
 	test test-python-fast test-python test-rom test-fr-rebuild check-translations test-vitest test-playwright test-all \
 	sync-charmap sync-charmap-check install install-playwright lint tickets report \
@@ -317,6 +317,22 @@ build-fr: check-translations-fr ensure-fr-translation $(FRENCH_EXTRACT) $(SPANIS
 	@echo "✓ Vérification de l'écran info rencontre (pointeurs vivants)..."
 	@$(PYTHON) -m pytest tests/test_encounter_info_fr.py -q --tb=short
 
+## Rebuild the dedicated FR ROM twice from the same inputs and compare every
+## byte.  The temporary first artifact is deliberately outside output/ so no
+## generated file can influence the second invocation or pollute the worktree.
+verify-fr-determinism:
+	@tmp_rom="$$(mktemp -t GenedRom-fr.XXXXXX)"; \
+	trap 'rm -f "$$tmp_rom"' EXIT; \
+	$(MAKE) --no-print-directory build-fr; \
+	cp "$(FR_BUILD)" "$$tmp_rom"; \
+	$(MAKE) --no-print-directory build-fr; \
+	if ! cmp -s "$$tmp_rom" "$(FR_BUILD)"; then \
+		echo "FR build is non-deterministic: differing byte offsets (first 20):"; \
+		cmp -l "$$tmp_rom" "$(FR_BUILD)" | head -n 20; \
+		exit 1; \
+	fi; \
+	echo "✓ FR build is byte-identical across consecutive rebuilds."
+
 ## --------------- Multi-language builds ---------------
 # French keeps its dedicated byte-perfect recipe above (build-fr). Italian and
 # German are driven generically from their languages/<code>/ descriptors.
@@ -376,7 +392,7 @@ test-python-fast:
 test-python:
 	@$(PYTHON) -m pytest tests/ -m "not emulator and not stress and not benchmark and not rom" -v
 
-test-rom: test-fr-rebuild
+test-rom: verify-fr-determinism test-fr-rebuild
 	@$(PYTHON) -m pytest tests/ -m rom -v
 
 test-fr-rebuild:

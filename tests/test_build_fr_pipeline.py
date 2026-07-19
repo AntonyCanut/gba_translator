@@ -38,6 +38,7 @@ MAKEFILE = ROOT / "Makefile"
 INLINE_OVERRIDE_SCRIPT = "apply_inline_overrides_fr.py"
 REPAIR_STABLE_SCRIPT = "repair_stable_lz77_blocks.py"
 REPAIR_LOCALIZED_SCRIPT = "repair_localized_lz77_blocks.py"
+DETERMINISM_TARGET = "verify-fr-determinism"
 
 _ASSIGN_RE = re.compile(r"^([A-Za-z_][A-Za-z0-9_]*)\s*:?=\s*(.*)$")
 _VAR_RE = re.compile(r"\$\(([A-Za-z_][A-Za-z0-9_]*)\)")
@@ -216,6 +217,23 @@ class TestBuildFrPipeline(unittest.TestCase):
                 (ROOT / "scripts" / name).exists(),
                 f"scripts/{name} is missing",
             )
+
+    def test_rom_suite_checks_consecutive_fr_builds_are_identical(self) -> None:
+        """A no-change FR rebuild must never produce a binary-only diff."""
+        rom_prereqs, _ = _extract_target_block(self.text, "test-rom")
+        self.assertIn(
+            DETERMINISM_TARGET,
+            rom_prereqs.split(),
+            "test-rom must compare two consecutive build-fr artifacts",
+        )
+
+        _, recipe = _extract_target_block(self.text, DETERMINISM_TARGET)
+        self.assertEqual(
+            recipe.count("$(MAKE) --no-print-directory build-fr"),
+            2,
+            "determinism guard must run two independent build-fr invocations",
+        )
+        self.assertIn('cmp -s "$$tmp_rom" "$(FR_BUILD)"', recipe)
 
 
 class TestInlineOverrideMinLength(unittest.TestCase):
