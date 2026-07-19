@@ -12,11 +12,11 @@ The World-Map sign cluster (``0x1F70xxx``–``0x1F72xxx``) is split in two shape
 * **Junction panels** start *directly* with a direction arrow byte
   (``0x79``–``0x7C``) — e.g. ``<0x79> Frozen Heights\\n<0x7A> Crater Town\\l
   <0x7B> Blizzard City``. The extractor treats the leading arrow as a 1-byte
-  string (``original_length == 1``, ``real_max_length == 3``), so the French
-  text is far too long to write in place and there is no usable extraction
-  entry to relocate from. Every delivery path therefore drops it and the built
-  ROM keeps the English junction sign (this is the literal panel the user
-  reported: *Frozen Heights / Crater Town / Blizzard City*).
+  ASCII string (``original_length == 1``, ``real_max_length == 3``), so the
+  French text is far too long to write in place and there is no usable
+  extraction entry to relocate from. Depending on the delivery path, the built
+  ROM therefore keeps the English sign or relocates ASCII bytes that the game
+  renders as garbage through its Pokémon character table.
 
 The correct French translations already live in ``combined_fr.txt`` at the same
 offsets (arrows kept at line start). This post-build patch closes the gap the
@@ -57,6 +57,11 @@ DEFAULT_COMBINED = REPO_ROOT / "languages/fr/combined_fr.txt"
 # strings → undeliverable by the generic pipeline). original English offset ->
 # a short, contiguous French fragment used to prove the relocation landed.
 TARGETS: dict[int, str] = {
+    # Route 5: the generic builder relocated this entry as ASCII because the
+    # leading up-arrow byte (0x79) was extracted as the literal string "y".
+    # The verification fragment stays language-neutral because the Italian and
+    # German wrappers reuse this patch with their own combined translation.
+    0x1F70E41: "Pokémon",
     0x1F72691: "Cimes Gelées",
     0x1F726C0: "Cimes Gelées, Cimistral",
     0x1F726FC: "Cratéris",

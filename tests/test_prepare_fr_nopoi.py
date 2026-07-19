@@ -230,21 +230,22 @@ class TestDedicatedPatchExclusion(unittest.TestCase):
     """Offsets owned by dedicated post-build patches must never reach the JSON.
 
     The arrow-prefixed World-Map junction panels appear in the EN extraction as
-    1-byte strings, so prepare_fr_json used to emit them as too_long entries that
-    the generic builder relocated + re-wrapped — clobbering the byte-exact layout
-    that patch_worldmap_junction_panels_fr.py guarantees and breaking its verify.
+    1-byte ASCII strings, so prepare_fr_json used to emit them as too_long
+    entries that the generic builder relocated as ASCII — producing unreadable
+    text when the game decoded those bytes with its Pokémon character table.
     """
 
     # A real junction offset owned by patch_worldmap_junction_panels_fr.
-    JUNCTION_OFFSET = 0x1F726C0
+    # Panneau directionnel de la Route 5 signalé dans l'issue #128.
+    JUNCTION_OFFSET = 0x1F70E41
 
     def _en_json_with_arrow(self) -> dict:
-        # Extractor sees the leading arrow byte (0x79) as a 1-byte string.
+        # Extractor sees the leading arrow byte (0x79) as ASCII ``y``.
         return _en_extraction([
             {"offset": 0x10, "byte_length": 5, "length": 5,
              "encoding": "pokemon", "decoded_text": "Hello", "text": "Hello"},
             {"offset": self.JUNCTION_OFFSET, "byte_length": 2, "length": 2,
-             "encoding": "pokemon", "decoded_text": "", "text": ""},
+             "encoding": "ascii", "decoded_text": "y", "text": "y"},
         ])
 
     def test_junction_offset_excluded_even_with_en_entry(self) -> None:

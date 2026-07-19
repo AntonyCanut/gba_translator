@@ -71,6 +71,13 @@ entries:
   forbidden:
   - Pokemon Day Care
   - Pokémon Day Care
+- offset: '0x1F70E41'
+  name: Panneau directionnel Route 5
+  issue: '#128'
+  expected: <0x79> Pension Pokémon\n<0x7A> Cratéris\l<0x7C> Route 4
+  forbidden:
+  - Pokémon Day Care
+  - Crater Town
 - offset: '0xB522A4'
   name: Polderive
   issue: B-52
