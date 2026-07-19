@@ -437,11 +437,24 @@ def apply_item_name_fixes(data: bytearray, names: dict) -> int:
 # ROM offset → corrected French description (3 lines max to fit the bag window).
 # "Muscle " (item #83) ships a 4-line description that overflows the display;
 # the shorter version below fits without cutting any meaning.
+# Poké Ball (item #13) and Sombre Ball/Dusk Ball (item #69) ship 4-line
+# descriptions too — issue #126 (bag window only ever draws the first 3
+# lines, so the 4th line, and part of the 3rd, is silently clipped).
 ITEM_DESC_OVERRIDES: dict[int, str] = {
     0xB40FC0: (
         "Monte fortement le taux de\n"
         "critiques. Usage unique. Annulé\n"
         "si le Pokémon se retire."
+    ),
+    0xB3F840: (
+        "Un objet pareil à une capsule,\n"
+        "qui capture les Pokémon\n"
+        "sauvages en le lançant sur eux."
+    ),
+    0xB40CC0: (
+        "Une Poké Ball efficace pour\n"
+        "attraper les Pokémon de nuit\n"
+        "ou dans les endroits sombres."
     ),
 }
 
