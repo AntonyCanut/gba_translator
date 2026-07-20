@@ -822,3 +822,21 @@ entries:
   name: 'Pension : retrait dynamique'
   issue: '#105'
   expected: Tu dois {COLOR}É{STR_VAR_2}¥{COLOR}Ç\npour récupérer ce Pokémon.
+- offset: '0x1F4F105'
+  name: 'Zadia : records de combats'
+  issue: '#102'
+  expected: 'Tes records de combats?\nLes voici.'
+  forbidden:
+  - 'Your Link Battle records?\nCertainly.'
+- offset: '0x1F4F15E'
+  name: 'Zadia : option Infos Connexion'
+  issue: '#102'
+  expected: Infos Connexion
+  forbidden:
+  - Explain Linking
+- offset: '0x1F4F16E'
+  name: 'Zadia : option Records Combat'
+  issue: '#102'
+  expected: Records Combat
+  forbidden:
+  - Battle Records

@@ -11,9 +11,16 @@ back the older Teala wording or the shortened Wireless System farewell.
 from __future__ import annotations
 
 import re
+import struct
 from pathlib import Path
 
+import pytest
+
+from src.core.text_codec import TextDecoder
+
 COMBINED_FR = Path(__file__).resolve().parents[3] / "languages/fr/combined_fr.txt"
+BUILT_ROM = Path(__file__).resolve().parents[3] / "output/roms/GenedRom-fr.gba"
+GBA_ROM_BASE = 0x08000000
 
 _LINE_RE = re.compile(r"^(0x[0-9a-fA-F]+): (.*)$")
 
@@ -29,6 +36,15 @@ EXPECTED = {
         "\\pAs-tu besoin d'aide pour la\\nconnexion Sans Fil?"
     ),
     0x1BDEDF: "Profite bien du Système de\\nCommunication Sans Fil.\\n",
+    0x1F4F105: "Tes records de combats?\\nLes voici.",
+    0x1F4F15E: "Infos Connexion",
+    0x1F4F16E: "Records Combat",
+}
+
+POINTED_EXPECTED = {
+    0x1E7DB9B: "Infos Connexion",
+    0x1E7DBA9: "Records Combat",
+    0x1E7DBF2: "Tes records de combats? Les voici.",
 }
 
 
@@ -52,3 +68,18 @@ def test_pokecenter_teala_dialogue_is_persisted():
 
     assert "Teala" not in data[0x1BDB85]
     assert "Zadia" in data[0x1BDB85]
+
+
+def _read_pointed_text(rom: bytes, pointer_offset: int) -> str:
+    pointer = struct.unpack_from("<I", rom, pointer_offset)[0]
+    target = pointer - GBA_ROM_BASE
+    end = rom.index(b"\xFF", target)
+    return TextDecoder.decode_pokemon(rom[target:end + 1], preserve_unknown=True)
+
+
+@pytest.mark.rom
+def test_pokecenter_teala_menu_and_records_are_translated_in_built_rom():
+    rom = BUILT_ROM.read_bytes()
+
+    for pointer_offset, expected in POINTED_EXPECTED.items():
+        assert _read_pointed_text(rom, pointer_offset) == expected
