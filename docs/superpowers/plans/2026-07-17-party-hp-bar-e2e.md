@@ -44,3 +44,17 @@
 - [x] Exécuter les tests unitaires FR liés au patch graphique.
 - [x] Vérifier le diff, l’absence d’artefacts temporaires et l’intégrité SHA-256 de la fixture.
 - [ ] Commiter avec `test(e2e): vérifier la barre de vie avec une sauvegarde`.
+
+### Tâche 4 : Retrouver l’écran par exploration des menus
+
+**Fichiers :**
+
+- Modifier : `tests/e2e-playwright/specs/party-hp-bar-fr.spec.ts`
+- Modifier : `tests/e2e-playwright/helpers/party-hp-bar-probe.ts`
+
+- [ ] Ajouter au scénario l’attente d’un compteur d’entrées visitées supérieur à un.
+- [ ] Exécuter `npm run test:e2e:party-hp-bar` et constater l’échec attendu avec le probe fixe.
+- [ ] Faire parcourir au probe les entrées du menu principal jusqu’à correspondance exacte avec le golden.
+- [ ] Réexécuter le scénario et obtenir 100 % de réussite sans mettre à jour le golden.
+- [ ] Exécuter `npx tsc -p tsconfig.playwright.json --noEmit`.
+- [ ] Relire le diff et vérifier l’absence d’artefacts temporaires.
