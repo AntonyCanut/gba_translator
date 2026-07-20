@@ -119,3 +119,15 @@ def test_reported_missions_are_complete():
     assert "Traquez" in food and _visual_line_count(food) <= MAX_LINES
     pikachu = data[0x1F9CE03]
     assert "Route 8" in pikachu and _visual_line_count(pikachu) <= MAX_LINES
+
+
+def test_leg_day_goal_is_complete_and_unambiguous():
+    """Issue #127 keeps the step target on its own complete visual line."""
+    data = _load_last_wins()
+    leg_day = data[0x1F63D8E]
+    assert leg_day == (
+        "Jour des jambes !\\n"
+        "Objectif : 150 000 pas.\\n"
+        "Muscle tes mollets !"
+    )
+    assert _visual_line_count(leg_day) == MAX_LINES
