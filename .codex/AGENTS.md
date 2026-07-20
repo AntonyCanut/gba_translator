@@ -16,4 +16,6 @@ See `/AGENTS.md` at the repo root for the full Codex AI memory.
 - Main build engine: `src/translators/19_build_translated_rom_generic.py`
 - Charmap: `src/core/text_codec.py` (POKEMON_TABLE)
 - Master translation: `combined_fr.txt` (last entry wins on duplicates)
-- Project rules: `.claude/project-rules.md`
+- Project rules: `.agents/skills/work-on-gba-translator/references/claude/project-rules.md`
+- Project memory: `.agents/skills/work-on-gba-translator/references/claude/memory/MEMORY.md`
+- Unbound experience index: `.agents/skills/work-on-gba-translator/references/experience/MEMORY.md`

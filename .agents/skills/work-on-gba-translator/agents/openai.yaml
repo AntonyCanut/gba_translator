@@ -1,0 +1,4 @@
+interface:
+  display_name: "Contexte gba_translator"
+  short_description: "Règles et mémoire durable du projet"
+  default_prompt: "Use $work-on-gba-translator to apply the project rules and relevant durable memory."

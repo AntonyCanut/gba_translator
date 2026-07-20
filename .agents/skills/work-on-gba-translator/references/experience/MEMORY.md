@@ -1,0 +1,150 @@
+# Memory index
+
+- [Barre de vie combat « HP »→« PV » = 4 blocs LZ77 healthbox (#125)](unbound-battle-healthbox-hp-label-blocks.md) — sprite OBJ 0xD1F604/0xEEF0AC/0xEEF380/0xEEF688, non localisé ES; hp_labels.py; B-523: 0xD1F604 manqué, scanner par FORME pas octets exacts
+- [Trainer class Collecteur→Chineur, pas Collectionneur (#121)](unbound-trainer-class-collecteur-chineur-width-fix.md) — cellule fixe 13o dépassée, silencieux; toujours re-décoder la ROM
+- [Talent Benêt: braces positionnelles pas par nom (#124)](unbound-battle-placeholder-positional-vs-named-fd-codes.md) — renommer {UNKNOWN_STR}/{B_SCR_*} ne change rien; #123 fixe FD_VARIABLE_CODES connus; sinon `<0xFD><0xNN>` brut
+- [Accent aigu avalé par haut dense police pleine (#97)](unbound-acute-accent-swallowed-dense-font-97.md) — overlay_accent max avale l'accent; overwrite pour l'aigu; range(1,7)=no-op; patch chirurgical pas build complet
+- [Deadlock rebase ROM binaire (dispatch dupliqué) → merge=ours driver](singularity-binary-rom-rebase-deadlock-merge-ours-driver.md) — commit dangling rejoué, conflit binaire ROM; driver ours dans common git dir
+- [make build-fr réutilise JSON du jour périmé (#80)](unbound-make-build-fr-reuses-stale-same-day-json.md) — ensure-fr-translation ne régénère que si absent/vide, vérifier octets ROM
+- [Onglets menu Missions: suffixe « Missions » runtime (#114)](unbound-mission-tab-missions-suffix.md) — catégories OK, suffixe partagé 0x1F56040 ajouté au runtime; vider=patch class-3
+- [Panneau illisible = trad FR too_long droppée (#119)](unbound-trainer-tips-sign-too-long-dropped.md) — cluster Trainer Tips inline, l'anglais reste affiché, raccourcir au budget 86o
+- [Script patch dédié réintroduit offset fantôme (#118)](unbound-dedicated-patch-script-reintroduces-phantom-offset.md) — "QQuoi ?" survivait au fix combined_fr.txt seul
+- [Talents FR pointer-based, "accrue"→"+" (#95/#113)](unbound-ability-description-accrue-plus-convention.md) — table pointeurs 0x96DE04, pas offset original
+- [protected_entries.yaml requis nouvelle trad (#116)](unbound-protected-entries-mandatory-new-translation.md) — hook bloque offset sans manifest
+- [Worktree gba_translator: emulator-web/node_modules absent (B-303)](unbound-worktree-emulator-web-node-modules-gap.md) — vitest KO, ln -s manuel
+- [FR build CSV symlink write-back hazard (#109)](unbound-fr-build-csv-symlink-writeback-hazard.md) — CSV écrit par apply_combined_fr.py; copier, jamais symlink
+- [Level-up box N. dot shadow (#104) + icône corrompue = BUILD FR, corrigé (B-293)](unbound-levelup-box-nd-dot-shadow-and-engine-icon.md) — glyph 0x05@0x1ECFB8; mon-icon frame-1 rotation d'octet réparée via mon_icon_repair.py; repro=écrire exp dans gPlayerParty DÉCHIFFRÉ; bouton « Annuler »→« Sortir » repoint littéral 0x1211E8
+- [DE DexNav header ghost-pixel fix (#90)](unbound-dexnav-header-ghost-tail-fix.md) — headers 2-lignes spillent tail; GHOST_TILES fix
+- [DE Polderive NPCs anglais = batch manquant (#91)](unbound-de-polderive-untranslated-batch-gap.md) — cluster 16 strings absent combined_de.txt
+- [DE species/move-name tables jamais wired (#81)](unbound-de-species-and-move-names-fixed-table-gap.md) — trads déjà écrites jamais patchées; IT→B-273
+- [Cube sort --allow-fallback strip \n (#76)](unbound-cube-sort-fallback-strips-newline.md) — entrée in-budget réactive corruption class-3
+- [Mode combat Shift/Set cellules repointables (#73)](unbound-battle-style-menu-pointer-relocation.md) — suivre pointeur vivant pas offset ROM
+- [Boîte choix sortie: 3 choix fusionnés (#70)](unbound-multichoice-merged-into-sentence.md) — comparer même offset entre langues
+- [Rewrap boîte = gate 0xFA/0xFB pas category](unbound-msgbox-rewrap-structural-gate.md) — 'description' mal classé débordait
+- [DE umlaut ENCODE_ALIASES strip (#53)](unbound-de-umlaut-encode-alias-strip.md) — besoin skip_aliases=GERMAN_UMLAUT_CHARS
+- [DE dialogue zero-break overflow](unbound-dialogue-linewrap-zero-break-overflow.md) — rewrap() bail sur 0-\n, générique tous langs
+- [Espace mémo "N. 14"→"N.14" rotation octet (#66)](unbound-level-marker-memo-space-rotation-fix.md) — jamais supprimer en place
+- [Message ramassage objet présent+overflow (#64)](unbound-item-pickup-present-tense-fixed-silent-overflow.md) — "a rangé"→"range" fix fallback EN
+- [DE/IT relocation over-reserved (#54) REVERTED](unbound-generic-build-blanket-spanish-reservation-overreserves.md) — carve Spanish requis, pas --reserve-ranges
+- [Charmap 0x34 'Lv' ligature fix (#63)](unbound-charmap-0x34-lv-ligature-fix.md) — codepoint normal pas glyphe hardcodé
+- [Hoopa farewell 'elle' pronoun fix (#56)](unbound-hoopa-farewell-pronoun-fix-issue56.md) — même bug que scène entrepôt
+- [Trainer VS-screen name = raw table (#62)](unbound-trainer-vs-screen-name-raw-table.md) — cellules brutes 0x23EB00-0x245C00
+- [Dresco Trainer House NPC dialogue (#61)](unbound-dresco-trainer-house-npc-dialogue-fix.md) — reword conforme sens EN
+- [Menu Options combat table fixe (#60)](unbound-battle-options-fixed-width-descriptions.md) — dépassement=fallback EN silencieux
+- [Résumé Lv→N. icône extra-symbole (B-508)](unbound-summary-lv-extra-symbol-f905.md) — patch réécrit F9 05→C8 AD
+- [Party Lv→N. vrai fix gText_Lv@0x26051C (#48/B-234)](unbound-party-lv-is-graphic-not-font.md) — glyphe 0x1ECFA0 inerte
+- [Mur invisible Dresco↔Route3](unbound-route3-dresco-connection-clobbered-by-overread-text.md) — over-read 0x721340→0x72134C
+- [Menu Missions labels faux négatif (#46)](unbound-mission-menu-labels-live-pointer-false-negative.md) — offset périmé relogé, prepare-fr
+- [DE KBT/SES Expressway conflation (#55)](unbound-kbt-ses-expressway-de-conflation.md) — 2 autoroutes fusionnées, croiser EN
+- [Décodage naïf control code fabrique lettre fantôme](unbound-naive-decode-control-code-artifact.md) — utiliser parse_control_code
+- [POKEDOLLAR position template partagé (#47)](unbound-money-amount-order-shared-template.md) — swap sans repointage 0x41697A
+- [START-menu "Move" hint = graphique LZ77 (#43)](unbound-start-menu-move-hint-baked-lz77-graphic.md) — 0xB1BBE0 tuiles pas texte
+- [repair_stable_lz77_blocks revertait polices FR (#42)](unbound-repair-stable-lz77-font-revert.md) — EN==ES rend bloc "stable"
+- [DE nature names 12/25 inventées (#41)](unbound-de-nature-names-official-values-fix.md) — TARGETS dict fixé
+- [Cancel = texte normal pas sprite (F-108→111)](unbound-cancel-button-was-text-not-sprite.md) — trad présente, jamais rebuild
+- [DE PC Box menu overflow+verbes (#38)](unbound-de-pc-box-menu-overflow-and-verbs.md) — 2e ligne>192px indép verbe
+- [Fix commité mais ROM jamais rebuild (#37)](unbound-combined-fr-fixed-but-rom-never-rebuilt.md) — vérifier combined_fr.txt d'abord
+- [Porte forcée ambiguë repaire Ombre (#36)](unbound-door-forced-shut-ambiguity-fix.md) — garder "porte" pas "paroi"
+- [Umlauts DE invisibles malgré encodage (B-211)](unbound-de-font-patch-order-lz77-repair-revert.md) — font patché avant repair_lz77
+- [Message hors-jeu KO officiel (#35)](unbound-whiteout-message-official-phrasing.md) — combined_fr.txt→languages/fr/
+- [Panneau Maison Dresseurs Dresco split (#31)](unbound-dresco-trainer-house-signboard-pagebreak-split.md) — décoder EN même offset
+- ["Déplacer"→"Dépl." 9 offsets (#29/B-366)](unbound-deplacer-depl-abbreviation-menu-budgets.md) — "Dépl."(5o) sur cellule "Move"(4o) CORROMPT; fix=repoint free-space 0x15FBC90 via pc_move_labels.py, pas mot tronqué
+- [Menu tri Cube jamais atteint ROM (#25)](unbound-cube-sort-menu-no-pointer-silent-drop.md) — vérifier pointeur avant blâmer
+- [Étages non traduits table 0x41803A (#27)](unbound-floor-indicator-table-0x41803a.md) — prepare-fr pas CSV
+- [Buffer verbe stat corrompu entrée fantôme (#26)](unbound-phantom-tail-overlap-verb-buffer-corruption.md) — 0x3FCB4B suffixe mort
+- [Menu choix PC non traduit, patch mort (#18)](unbound-pc-selection-menu-fix-and-dead-patch-script.md) — table compacte relogeable
+- [PC échange câble Link débordait (#19)](unbound-pc-trade-link-cable-overflow.md) — dialogue_linewrap rewrap()
+- [Freeze Day-Care "reprendre Pokémon"](unbound-daycare-withdraw-menu-help-first-word-freeze.md) — B-187, pas règle largeur, fix tous langs
+- [R-17 englishrom.gba scindé base/patched](unbound-r17-base-rom-split-clean-vs-patched-french.md) — FRENCH_ROM/EXTRACT Makefile B-189
+- [Conflit rebase ROM FR binaire](unbound-rom-rebase-conflict-rebuild-resolution.md) — rebuild depuis combined_fr.txt mergé
+- [Pipeline générique IT/DE ne propage pointer_offsets](unbound-generic-pipeline-missing-pointer-offsets-relocation.md) — build "success" mais octet inchangé B-188
+- [Ability descriptions pointer table @0x96DE04](unbound-ability-description-pointer-table.md) — pas 0xA37D00, 293 ptrs
+- [englishrom.gba contaminé français (audit)](unbound-englishrom-french-contaminated-base.md) — moves/items/dex/species FR
+- [Move-name table réelle 0x1B2980](unbound-move-names-real-table-vs-legacy-offset.md) — offset ticket mort, vérifier byte-search
+- [Poké Balls standard = cellules FR base ROM](unbound-source-rom-french-ball-cells.md) — IT/DE key sur string FR
+- [normalize_combined_multiline.py avalait commentaire (B-165)](unbound-normalize-multiline-comment-swallow-bug.md) — vérifier live-pointer
+- [IT trainer-class+dialogues over-cap](unbound-it-trainer-class-and-overcap-dialogue-patches.md) — 67/106 fit, 32 overflow→F-100
+- [IT trainer-class fixed-cell+dispatch](unbound-it-trainer-class-fixed-cell-and-builtin-dispatch.md) — nouveaux steps IT y rejoindre
+- [Réutiliser artefacts main-checkout worktree](unbound-worktree-generic-build-artifact-reuse.md) — symlink extracted+differences
+- [DE pokedex_rewrap overflow largeur (B-159)](unbound-de-pokedex-rewrap-width-overflow.md) — tolérer overflow ≤3l
+- [Nature names DE patch table-driven](unbound-de-nature-names-table-driven-patch.md) — repoint 2 tables+skip_aliases
+- [Port IT graphics group-B+hp_labels](unbound-it-group-b-graphics-port.md) — hp_labels non porté F-97
+- [Port DE status_badges LZ77](unbound-de-status-badges-port.md) — patch_status_badges_de.py P-86
+- [Generic build free-space bloque relocation IT/DE](unbound-generic-build-freespace-blocks-relocation-patches.md) — move/pokedex/mission FAILED
+- [Audit collisions inter-cellules DE/IT/FR](unbound-collision-audit-tool.md) — DE=90/IT=771, fix B-154
+- [Batches DE fenêtre fixe pas --skip-existing](unbound-de-batch-fixed-window-not-skip-existing.md) — valider parité tokens
+- [Worktree périmé = faux "prérequis manquant"](singularity-stale-worktree-false-missing-prereq.md) — vérifier base VIVE pas HEAD worktree
+- [Merge parent orphelin par ticket enfant concurrent](singularity-parent-merge-orphaned-by-child-ticket.md) — "accepted"≠mergé
+- [Trainer Card date = builder ASM inline](unbound-trainer-card-date-builder.md) — trampoline+veneer
+- [DexNav labels vs headers texte/graphique (F-71)](unbound-dexnav-labels-mixed-text-graphics.md) — headers=asset custom
+- [Garde-robe espace tête+budget bouton](unbound-costume-box-menu-leading-space-and-budget.md) — budget mesuré ROM pas JSON
+- [HUD "Déplacer" tronqué+faux positif brace](unbound-move-status-header-budget-and-token-false-alarm.md) — {DPAD_ANY} résolu par 19_build
+- [Audit Volcan Cendré angles morts grep (B-138)](unbound-volcan-cendre-audit-blindspots.md) — auditer pointeur vivant
+- [orchestration_complete rejoue erreur périmée (zombie)](singularity-zombie-run-stale-complete.md) — vérifier statut avant complete
+- [Audit F-41 stat-change Pattern C, 1 régressé](unbound-a4c200-stat-change-pattern-c-fix.md) — autres faux positifs
+- [Labels HP/PS→PV = 3 blocs LZ77](unbound-hp-pv-label-graphics-blocks.md) — dump VRAM mGBA+recherche forme
+- [Pattern C = commit snapshot périmé reverte fixes](unbound-pattern-c-stale-snapshot-commit.md) — relire à l'édition+CRITICAL_LABELS
+- [Noms talents/objets tables fixes injoignables](unbound-ability-names-fixed-table.md) — post-build depuis combined_fr
+- [Nom objet déborde "a rangé …"](unbound-item-name-putaway-message-width.md) — 2 contraintes largeur
+- [Stat-change combat verbe baké pas pure-buffer](unbound-stat-change-baked-verb-b35-not-pure-buffer.md) — piège test périmé
+- [e2e worktree root resolution — fixé](unbound-e2e-worktree-root-resolution-fixed.md) — default=worktree courant
+- [Tracer pointeur vivant, pas offset original](unbound-trace-live-pointer-not-original-offset.md) — offset too_long déjà migré
+- [Message "link was lost" cellule 0x4577BC](unbound-link-lost-live-offset-4577bc.md) — offset mort déborde chaîne vivante
+- [e2e gate ROM committée, build non-déterministe](unbound-e2e-tests-gate-committed-rom.md) — CI ignore e2e, dérive ~0,2%
+- [Build FR/IT déterministe = relocalisation ordre-indép.](unbound-build-determinism-relocation-order.md) — flush sort total
+- [Weak Armor→Armurouillée](unbound-weak-armor-nodulithe-fix.md) — cellule fixe absente table, NAME_FIXES
+- [é/è rendaient mal, glyphes malformés](unbound-e-accent-glyph-malformed.md) — reconstruire depuis base+accent
+- [prepare-fr bypass CSV](unbound-prepare-fr-bypasses-csv-step.md) — régénère JSON direct depuis combined_fr.txt
+- [Entrées no-pointer in-place: budget en_len](unbound-nopointer-inplace-budget.md) — trad ≤ octets EN sinon skip
+- [IT relocation déborde free-space → packing](unbound-it-relocation-packing-fix.md) — best-fit+dedup 27,3%→5,3%
+- [IT couleurs = jetons crochets non convertis](unbound-it-bracket-control-tokens.md) — normalize_control_tokens B-91/92
+- [Patch relocate-repoint = cellule VIVANTE](unbound-patch-repoint-via-live-cell-not-original-offset.md) — pas offset EN d'origine
+- [build-it/de KO en CI = pyyaml absent](unbound-ci-missing-pyyaml-dep.md) — continue-on-error masque
+- [prepare_fr_json clobbe patches dédiés](unbound-prepare-fr-json-clobbers-dedicated-patches.md) — fix DEDICATED_PATCH_OFFSETS
+- [Patch font→cascade free-space casse missions (F-50)](unbound-font-patch-freespace-cascade.md) — vérifier cmp -s pas tests verts
+- [Missions = boîte 3 lignes non défilante](unbound-bounty-mission-3line-box.md) — ≤172px/ligne verbatim
+- [Battle end/defeat strings tokens+pause](unbound-battle-defeat-speech-mike-campeur.md) — STRINGID/FD24/FC09 timed
+- [Pauses "…" = octet brut 0xB0 (1o)](unbound-ellipsis-pause-b0-glyph.md) — `…` réel→3o déborde
+- [Guillemets « » = ellipse — résolu](unbound-guillemets-render-as-ellipsis.md) — `«`→0xB1 `»`→0xB2
+- [Audit flèche début-ligne+panneaux jonction](unbound-arrow-line-start-audit.md) — règle EN-ancrée
+- [Statut Sommeil = SOM pas DOR](unbound-status-abbrev-sommeil.md) — texte≠badge LZ77 combat
+- [Texte Méga-Cuff (Vega) anglais](unbound-mega-cuff-reaction-strings.md) — trimmer 31o exact
+- [Tokens brace écrits littéralement relocalisation](unbound-brace-control-token-relocation-literal.md) — forme brute `<0xFC><0x09>`
+- [2e cluster Centre Pokémon (Borrius)](unbound-borrius-second-pokecenter-cluster.md) — scan octets, absent combined_fr
+- [Pronoms genrés (il/elle, fils/fille)](unbound-gender-pronoun-variable-removal.md) — FD03 inrendable, mapping positionnel
+- [Ho-Oh→Lugia rituel = régression build](unbound-hooh-lugia-ritual-repointer-corruption.md) — repoint_stale clobbe setflag
+- [Reroll save state: RNG gelé aux menus](unbound-savestate-rng-menu-freeze.md) — rerouler overworld en idlant
+- [Gang "Black Emboar"→"Roitiflam Noir"](unbound-gang-name-roitiflam-noir.md) — Noir postposé, cellule classe garde EN
+- [Dialogues longs >1000o muets](unbound-long-dialogue-extractor-cap.md) — cap max_text_length, patch dédié
+- [Panneaux Hall of Fame anglais](unbound-hall-of-fame-boards-english.md) — famille patch_fixed_table_names
+- [Freeze CT/CS desc objets TM débordées](unbound-tm-item-desc-freeze.md) — GetStringWidth boucle
+- [Table zone-name ≠ labels carte du monde](unbound-zone-name-table-vs-worldmap-labels.md) — traduire label ne corrige pas popup
+- [Build long worktree: reset --hard efface edits](singularity-build-resets-worktree.md) — commiter AVANT build-*
+- [Worktree Singularity: commiter tôt+récupération](singularity-worktree-commit-early.md) — checkpoint_wip.sh/recover_lost_work.sh
+- [Complete rebondit "uncommitted" fantôme](singularity-stale-attempt-phantom-merge-failure.md) — vérifier statut, s'arrêter
+- [Noms de types = graphique pas texte](unbound-type-icons-are-graphics.md) — badges=tuiles
+- [Skill translating-unbound](translating-unbound-skill.md) — workflow traduire+appliquer+vérifier
+- [Skill diagnosing-unbound-freezes](diagnosing-unbound-freezes-skill.md) — anti-freeze hash écran, jamais position/PC
+- [Le build FR vit dans gba_translator](unbound-fr-build-lives-in-gba-translator.md) — corriger là-bas pas Test/Unbound
+- [Build multi-langue FR/IT/DE (registry)](unbound-multilang-build-registry.md) — lang.yaml+build_language.py
+- [Ajouter langue (Indie) au registry](unbound-add-indie-language.md) — déclaratif lang.yaml+combined+Makefile
+- [Règles textes plein écran Unbound](unbound-special-text-rules.md) — \n purs+lignes vides, jamais règle 2-lignes
+- [Pièges sondes mGBA Unbound](unbound-mgba-probe-quirks.md) — Aaaaaaa=mash, coupures=flakiness
+- [Pièges pipeline tokens gba_translator](gba-translator-token-pipeline-pitfalls.md) — FA/FB hors file; {LV}=0x34
+- [Offsets dupliqués combined_fr: dernière gagne](combined-fr-duplicate-offsets-last-wins.md) — ~957 doublons, fin de fichier vivant
+- [Date/heure = code Thumb patché post-build](unbound-datetime-code-patches.md) — sonde mGBA: jamais sauvegarder en jeu
+- [CSV trilingue = CRLF+LF dans champs](gba-translator-trilingual-csv-crlf.md) — insertion chirurgicale, jamais csv.writer
+- [CSV offset normalization 8-char hex](unbound-csv-offset-normalization.md) — 2 formats=2 entrées, normaliser avant
+- [Freeze don CS Coupe](unbound-give-cs-object-gain-crash.md) — desc déborde, GetStringWidth boucle
+- [Texte combat NAME_WITH_PREFIX](unbound-battle-name-with-prefix.md) — préfixe "sauvage" collé moteur
+- [Affichage version Unbound](unbound-version-display-location.md) — visible NOT FOR SALE tuiles 0xE1-0xEC
+- [Noms de lieux FR canon v3](unbound-fr-toponym-canon.md) — sync 4 layers+rebuild, gardes homonymes
+- [Cellules de noms injoignables](unbound-pipeline-unreachable-name-cells.md) — slots centrés absents json+ES
+- [Descriptions d'attaque Unbound](unbound-move-descriptions.md) — fenêtre 5 lignes/122px, re-wrap+relocate
+- [Flags harness mGBA invalides](unbound-mgba-harness-flags-invalid.md) — seuls map/pos fiables
+- [Labels page Infos Pokémon](unbound-summary-screen-labels.md) — TYPE/OT/ITEM=word-images
+- [Descriptions d'objets Unbound](unbound-item-descriptions.md) — table 0x876074 stride 44
+- [Combat textes effets stat-change](unbound-battle-stat-change-effect-text.md) — piège brace vs octet brut
+- [Guillemets serrés «mot» (préférence user)](unbound-tight-quotes-no-inner-space.md) — pas d'espace intérieure
+- [MAJ traductions italiennes JSON→combined_it](unbound-italian-json-update-workflow.md) — convertit+filtre+smart diff
+- [Deux agents live sur même ticket/worktree](singularity-duplicate-dispatch-same-ticket-race.md) — céder au process le plus avancé

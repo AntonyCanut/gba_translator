@@ -1,0 +1,16 @@
+---
+name: combined-fr-duplicate-offsets-last-wins
+description: combined_fr.txt a ~957 offsets dupliqués — la DERNIÈRE entrée du fichier gagne ; le bloc minuscule de fin de fichier (c9b0d4b) écrase les anciennes entrées majuscules
+metadata:
+  node_type: memory
+  type: project
+  originSessionId: 54b66bad-8c24-438d-b434-db04c763f7b9
+---
+
+Dans `gba_translator/combined_fr.txt` (voir [[unbound-fr-build-lives-in-gba-translator]]), ~957 offsets existent en double : anciennes entrées en hexa MAJUSCULE (début/milieu de fichier) et bloc du 11 juin 2026 (commit c9b0d4b, « strings resurfaced by the pointer fix ») en hexa minuscule aux lignes ~23 592-24 670. `apply_combined_fr.py` et `apply_inline_overrides_fr.py` parsent ligne par ligne avec `mapping[offset] = text` → **la dernière entrée gagne** (le bloc minuscule est donc la version vivante).
+
+**Why:** En juin 2026 (T-61), des fautes signalées par le correcteur orthographique étaient dans des entrées MORTES (déjà corrigées dans la version vivante), et inversement le bloc resurgi avait réintroduit des toponymes anglais (Moltres, Polder Town, Icicle Cave, Great Desert…) par-dessus des traductions correctes — corrigés vers les formes établies.
+
+**Autre classe de perte (juin 2026, ticket « travail perdu ») :** un commit qui régénère/réordonne combined_fr.txt peut SUPPRIMER par effet de bord des entrées FR propres. c7c1ede (« correct And to Et ») a effacé 36 lignes région/labels ; 108c0d7 a restauré les 14 labels World Map mais a manqué la fiche région Pokénav Fallshore (0x74B2DF) → le pointeur vivant 0x74B2D7 rendait l'anglais « Fallshore City\pThe waterfall capital of Borrius. » en jeu. Réparée en réinsérant `0x74b2df: Fallshore\pLa capitale des cascades de Borrius.` (48 o ≤ slot EN 49 o, écrit sur place, 0 relocalisation) + garde `tests/test_region_info_fr.py`. **Outil réutilisable créé : `scripts/detect_lost_translations.py`** — parcourt l'historique git de combined_fr.txt et signale les entrées FR propres supprimées et jamais réinsérées (filtre le mojibake ; exit≠0 pour gate CI ; `--commits N` / `--all`). Vérifier toujours par DÉCODAGE de la ROM (relocalisation laisse l'anglais à l'offset d'origine ; suivre le pointeur ou chercher les octets encodés).
+
+**How to apply:** Avant de corriger une ligne de combined_fr.txt, identifier la DERNIÈRE entrée pour cet offset (case-insensitive) et n'éditer que celle-là. Outils T-61 : `scripts/spellcheck_combined_fr.py` (dictionnaire FR pyspellchecker, whitelist en option) pour les passes orthographiques ; `scripts/patch_fixed_table_names.py` (branché dans build-fr) pour les coquilles des tables de noms protégées (attaques/espèces, déjà FR dans la ROM source, intouchables par les passes texte — cas « Aéropique »→« Aéropiqué » cellule 0x1B3A5C). Formes dominantes établies : Autoroute KBT (pas Voie Express SES), Mont Givre (Frost Mountain), Ville Blizzard, Ville d'Epidimy, Bourg Dresco/Polder/Cratère/Bellin/Magnolia/Gurun/Redwood/Vivill, Ville de Tehl/Dehara/Fallshore, Tarmiganville, Grotte Stalactite, Grand Désert, Volcan Cendreux, Hauteurs Gelées, Mont Thundercap, Sulfura/Électhor/Artikodin. Le test Playwright `reporter-smoke.spec.ts` échoue VOLONTAIREMENT sauf si `SKIP_FAILURE_TEST=1` (ou CI).

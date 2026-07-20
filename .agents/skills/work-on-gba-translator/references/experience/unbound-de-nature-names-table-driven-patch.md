@@ -1,0 +1,16 @@
+---
+name: unbound-de-nature-names-table-driven-patch
+description: DE generic build repoints nature tables → offset-driven patch skips & verify fails; fix = drive the two live tables by index
+metadata:
+  node_type: memory
+  type: project
+  originSessionId: d88d82e0-00a7-4ccb-9cff-62407334914f
+---
+
+`patch_nature_names_de.py` verification failure blocked all of `make build-de` (B-158/F-90 child).
+
+**Root cause:** the 25 nature names are read only via two pointer tables — `gNatureNamePointers` @0x463E60 and a CFRU dup @0x1FE65F4. The DE nature entries are ALSO in `languages/de/combined_de.txt`, so the **generic** build (`build_language.py` → `19_build…generic.py --allow-relocate`) relocates them and repoints BOTH tables on its own. The old offset-driven patch keyed off `find_referrers(0x463DBC…)` (the original EN offsets) — after the generic build no pointer to those survives → it skips every nature → verify fails ("German text not found"). FR doesn't hit this because `make build-fr` is a dedicated byte-perfect recipe (in-place, keeps original pointers), not the generic driver.
+
+**Fix (re-landed as commit b9bff19, F-84):** a prior run's index-based fix (memory once cited "b733d8d") was NEVER actually committed — it was lost when that run hit session/connection limits, so the branch still carried the broken offset-based `find_referrers` version and `make build-de` still aborted. Re-implemented: rewrite the patch to address the two tables **by index** (`POINTER_TABLES = (0x463E60, 0x1FE65F4)`), not by EN offset — relocate each official DE name into free space, write the pointer into both table slots regardless of what's there (one shared string per index, mirroring EN). Idempotent (skip index whose table[0] slot already decodes to the target bytes). `apply(rom, names=, tables=, reserved_rom=)` / `verify(rom, names=, tables=)` take injectable `tables=` for unit tests. **No `skip_aliases` needed:** verify follows the live table pointer and compares exact `TextEncoder.encode` bytes (encoder-to-encoder), so umlauts match by construction — the old whole-ROM substring search was what gave false positives (common words) + false negatives (umlaut aliasing). Result: 18 relocated + 7 already-correct = all 25 verified, build exit 0. Guard: `tests/unit/de/test_patch_nature_names_de.py` (8 tests: index repoint of both tables, verify clean/flag, idempotency). NOTE the decoder still renders `Kühn`→`Kuhn` (no DE-umlaut reverse map) but the font patch draws the glyphs in-game.
+
+**Next blocker (also cleared):** after nature_names the build hit `patch_pokedex_de.py` aborting on 169 entries. NOT free-space exhaustion — they never reach the allocator: they are untranslated **French-leftover** dex descriptions that wrap to ≤3 lines but overrun the 232px width (up to 299px). `rewrap()` always emits ≤3 lines, so this is cosmetic. Fix = downgrade width overflow to a tracked `overflow` warning (best-effort write), hard-`failed` only on a structural no-pointer case. A concurrent ticket merged the same fix (`64fbfb4`); `make build-de` now completes exit 0 (777 rewrapped / 60 reloc / 169 overflow / 0 failed). Residual French→German dex content = **B-161**. See [[unbound-nature-names-live-pointer-already-fr]], [[unbound-it-relocation-packing-fix]], [[unbound-multilang-build-registry]], [[unbound-pokedex-entries]].

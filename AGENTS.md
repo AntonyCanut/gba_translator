@@ -14,6 +14,15 @@
 
 ## Rules
 
+### Chargement des règles et mémoires
+
+- Codex doit utiliser la compétence auto-découverte
+  `.agents/skills/work-on-gba-translator/SKILL.md` pour toute tâche dans ce dépôt.
+- Avant de modifier, tester ou déboguer, lire les règles ciblées et les mémoires pertinentes
+  indiquées par cette compétence ; ne pas charger l'ensemble des archives sans nécessité.
+- Les mémoires sont des retours d'expérience à vérifier contre le code et le `Makefile`
+  actuels, pas une autorité supérieure au ticket ou au présent `AGENTS.md`.
+
 ### Architecture
 
 - **DRY**: shared Python logic lives in `src/core/`. Never copy functions between scripts.
@@ -73,10 +82,13 @@
 
 ## Skills
 
-Reusable agent procedures located in `.codex/skills/`. Invoke by reading the relevant SKILL.md.
+Codex auto-découvre les compétences natives dans `.agents/skills/`. Les anciennes procédures
+du projet restent dans `.codex/skills/` et doivent être ouvertes explicitement si elles sont
+utiles.
 
 | Skill | File | When to Use |
 |---|---|---|
+| `work-on-gba-translator` | `.agents/skills/work-on-gba-translator/SKILL.md` | Toute tâche : charger les règles et mémoires pertinentes |
 | `test-driven-development` | `.codex/skills/test-driven-development/SKILL.md` | Before writing any implementation code |
 | `systematic-debugging` | `.codex/skills/systematic-debugging/SKILL.md` | On any bug, test failure, or unexpected behavior |
 | `brainstorming` | `.codex/skills/brainstorming/SKILL.md` | Before new features or architectural changes |
@@ -223,8 +235,10 @@ pytest --cov=src tests/
 
 ## Conventions
 
-> Source de vérité détaillée : `.claude/project-rules.md` et
-> `.claude/rules/patterns/`. Codex DOIT s'y conformer — résumé ci-dessous.
+> Copie Codex de la source de vérité détaillée :
+> `.agents/skills/work-on-gba-translator/references/claude/project-rules.md` et
+> `.agents/skills/work-on-gba-translator/references/claude/rules/patterns/`.
+> Codex DOIT charger les fichiers pertinents via la compétence — résumé ci-dessous.
 
 ### Structure
 - `input/roms/` = **lecture seule** (`englishrom.gba`, `spanishrom.gba`), jamais modifiée.
@@ -271,9 +285,11 @@ pytest --cov=src tests/
 - **Multitâche** : isolation par worktree `.singularity-worktrees/<task-id>/`, verrou
   `.singularity-session.lock`, ports émulateur non partagés. Sérialiser les tâches qui
   buildent une ROM ou lancent l'émulateur ; paralléliser librement la lecture/analyse.
-  Détail : `.claude/rules/multitasking.md`.
+  Détail : `.agents/skills/work-on-gba-translator/references/claude/rules/multitasking.md`.
 - **Hooks de cycle de vie** : voir `.codex/config.toml` (`[hooks]`) — garde-fous
   pré-commande (bloque contournement de hook / merge / écriture ROM source) et lint ruff
   post-édition, scripts dans `.codex/hooks/`.
-- **Skills réutilisables** : `.codex/skills/` (procédures projet) ; ordre de découverte
-  plugins → projet → rédaction fraîche. Voir `.codex/skills/README.md`.
+- **Compétence de contexte auto-découverte** :
+  `.agents/skills/work-on-gba-translator/` (règles + mémoires Claude migrées).
+- **Procédures historiques** : `.codex/skills/`, à lire explicitement si nécessaire.
+  Voir `.codex/skills/README.md`.
