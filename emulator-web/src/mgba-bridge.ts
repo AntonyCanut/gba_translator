@@ -113,6 +113,45 @@ function mgbaSupportsScript(mgbaPath: string): boolean {
   }
 }
 
+/**
+ * Construit la commande mGBA avec des chemins d'écriture explicites.
+ *
+ * mGBA affiche une boîte modale lorsqu'une ROM se trouve dans le dossier
+ * temporaire du système et qu'un de ces chemins est implicite. Les tests e2e
+ * y placent volontairement des copies de ROM et leurs fixtures ; déclarer le
+ * dossier de la ROM conserve cette co-localisation sans bloquer l'automatisation.
+ *
+ * @param mgbaPath Chemin de l'exécutable mGBA.
+ * @param luaPath Chemin du pont Lua à charger.
+ * @param romPath Chemin absolu de la ROM.
+ * @param useScriptFlag Indique si mGBA accepte l'option `--script`.
+ * @returns Commande et arguments à transmettre à `spawn`.
+ */
+export function buildMgbaCommand(
+  mgbaPath: string,
+  luaPath: string,
+  romPath: string,
+  useScriptFlag: boolean,
+): string[] {
+  const command = [mgbaPath];
+  if (useScriptFlag) {
+    command.push('--script', luaPath);
+  }
+
+  const dataPath = path.dirname(romPath);
+  command.push(
+    '-C', 'audioSync=0',
+    '-C', 'videoSync=0',
+    '-C', 'mute=1',
+    '-C', `savegamePath=${dataPath}`,
+    '-C', `savestatePath=${dataPath}`,
+    '-C', `screenshotPath=${dataPath}`,
+    '-C', `cheatsPath=${dataPath}`,
+    romPath,
+  );
+  return command;
+}
+
 export class MgbaBridgeClient {
   private process: ChildProcess | null = null;
   private socket: net.Socket | null = null;
@@ -146,20 +185,11 @@ export class MgbaBridgeClient {
 
     const useScriptFlag = mgbaSupportsScript(mgbaPath);
 
-    const cmd = [mgbaPath];
-    if (useScriptFlag) {
-      cmd.push('--script', luaPath);
-    }
     // NOTE: do NOT pass `-C fpsTarget=0`. On mGBA-qt 0.11 macOS it freezes the
     // emulator after frame 1 (no further frame callbacks fire), so the bridge
     // never advances. Native 60 fps is fine — `FRAMES|N` already runs frames
     // synchronously via the Lua callback.
-    cmd.push(
-      '-C', 'audioSync=0',
-      '-C', 'videoSync=0',
-      '-C', 'mute=1',
-      rom,
-    );
+    const cmd = buildMgbaCommand(mgbaPath, luaPath, rom, useScriptFlag);
 
     console.log(`[mgba] Launching: ${cmd.join(' ')}`);
     // detached:false (default) so the child is in the parent's process group and
