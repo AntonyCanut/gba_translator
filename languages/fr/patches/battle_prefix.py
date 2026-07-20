@@ -1,6 +1,9 @@
 #!/usr/bin/env python3
-"""Patch battle-name display: trainer foe "L'adversaire X" → "X adverse",
-wild Pokémon "sauvage X" → "X sauvage".
+"""Patch French battle-name display and ability-popup grammar.
+
+Transforms trainer foe "L'adversaire X" → "X adverse", wild Pokémon
+"sauvage X" → "X sauvage", and the ability popup's English ``X's``
+possessive into the bare Pokémon name ``X``.
 
 Root-cause fix: the old approach checked [r2]==0xFF inside the cave, but the
 handler's own pixel_width guard already ensures [r2]!=0xFF at every BL site
@@ -219,6 +222,14 @@ PATCHES: list[tuple[int, bytes, bytes]] = [
 
     # ── Empty the no-space form "L'adversaire" at 0xA4C64C ──────────────────
     (0xA4C64C, bytes([0xC6]), bytes([0xFF])),
+
+    # Ability popup: terminate the name instead of appending English "'s".
+    # Replace ``MOVS r2, #0xB4 ; STRB r2, [r3]`` with ``MOVS r2, r3 ;
+    # B 0x9A8F58``. The destination block writes 0xFF through r2, so the
+    # popup keeps the bare name and skips both the apostrophe and optional s.
+    (0x9A8F44,
+     bytes([0xB4, 0x22, 0x1A, 0x70]),
+     bytes([0x1A, 0x1C, 0x07, 0xE0])),
 
     # ── Code cave A — wild battles (" sauvage" suffix) ───────────────────────
     (0x1D89C, b"\xff" * 108, _CAVE_A),

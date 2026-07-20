@@ -14,6 +14,11 @@ import unittest
 from languages.fr.patches.battle_prefix import PATCHES, apply_patches
 
 
+ABILITY_POPUP_POSSESSIVE_OFFSET = 0x9A8F44
+ABILITY_POPUP_ENGLISH_POSSESSIVE = bytes([0xB4, 0x22, 0x1A, 0x70])
+ABILITY_POPUP_FRENCH_NAME_ONLY = bytes([0x1A, 0x1C, 0x07, 0xE0])
+
+
 # Helpers
 def _rom_with_patches(overrides: dict[int, int] | None = None) -> bytearray:
     """Return a minimal bytearray seeded with the expected 'old' bytes from each
@@ -47,6 +52,27 @@ class TestApplyPatchesNormalCase(unittest.TestCase):
             if len(old) == 1 and new == bytes([0xFF]):
                 self.assertEqual(data[offset], 0xFF,
                                  f"0x{offset:X} should be 0xFF after patch")
+
+    def test_ability_popup_terminates_name_before_english_possessive(self):
+        data = _rom_with_patches()
+
+        apply_patches(data)
+
+        self.assertEqual(
+            data[
+                ABILITY_POPUP_POSSESSIVE_OFFSET:
+                ABILITY_POPUP_POSSESSIVE_OFFSET + len(ABILITY_POPUP_FRENCH_NAME_ONLY)
+            ],
+            ABILITY_POPUP_FRENCH_NAME_ONLY,
+        )
+        self.assertIn(
+            (
+                ABILITY_POPUP_POSSESSIVE_OFFSET,
+                ABILITY_POPUP_ENGLISH_POSSESSIVE,
+                ABILITY_POPUP_FRENCH_NAME_ONLY,
+            ),
+            PATCHES,
+        )
 
 
 class TestApplyPatchesLenientPrefix(unittest.TestCase):
