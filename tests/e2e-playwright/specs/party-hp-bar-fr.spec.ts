@@ -1,7 +1,6 @@
 import crypto from 'crypto';
 import { execFile } from 'child_process';
 import fs from 'fs';
-import os from 'os';
 import path from 'path';
 import { promisify } from 'util';
 import { fileURLToPath } from 'url';
@@ -21,6 +20,15 @@ const SAVE_FIXTURE = path.join(
 const USER_SAVE_SHA256 = '86b7d3daafa4bff101e294bd5b8c736a6004db321398e397ff1c9599127a79ac';
 const TSX_PATH = path.join(PROJECT_ROOT, 'emulator-web', 'node_modules', '.bin', 'tsx');
 const PROBE_PATH = path.join(PROJECT_ROOT, 'tests', 'e2e-playwright', 'helpers', 'party-hp-bar-probe.ts');
+const EXPECTED_SCREEN_PATH = path.join(
+  PROJECT_ROOT,
+  'tests',
+  'e2e-playwright',
+  'snapshots',
+  'specs',
+  'party-hp-bar-fr.spec.ts-snapshots',
+  'party-hp-bar-fr.png',
+);
 const execFileAsync = promisify(execFile);
 
 function sha256(filePath: string): string {
@@ -35,7 +43,7 @@ test.describe('Barre de vie du menu Pokémon — sauvegarde issue #84', () => {
       USER_SAVE_SHA256,
     );
 
-    const sandbox = fs.mkdtempSync(path.join(os.tmpdir(), 'party-hp-bar-fr-'));
+    const sandbox = fs.mkdtempSync(path.join(PROJECT_ROOT, 'output', 'party-hp-bar-fr-'));
     const isolatedRom = path.join(sandbox, 'GenedRom-fr.gba');
     const isolatedSave = path.join(sandbox, 'GenedRom-fr.sav');
     const screenshotPath = path.join(sandbox, 'party-hp-bar-fr.png');
@@ -48,6 +56,7 @@ test.describe('Barre de vie du menu Pokémon — sauvegarde issue #84', () => {
         PROBE_PATH,
         isolatedRom,
         screenshotPath,
+        EXPECTED_SCREEN_PATH,
       ], {
         cwd: PROJECT_ROOT,
         env: process.env,
@@ -57,9 +66,14 @@ test.describe('Barre de vie du menu Pokémon — sauvegarde issue #84', () => {
       const state = JSON.parse(stdout.trim().split('\n').at(-1) ?? '{}') as {
         playerX?: number;
         playerY?: number;
+        searchedMenuEntries?: number;
       };
       expect(state.playerX, 'la save doit charger la position du joueur').toBeGreaterThan(0);
       expect(state.playerY, 'la save doit charger la position du joueur').toBeGreaterThan(0);
+      expect(
+        state.searchedMenuEntries,
+        'le probe doit retrouver l’écran en inspectant plusieurs entrées du menu',
+      ).toBeGreaterThan(1);
       screenshot = fs.readFileSync(screenshotPath);
     } finally {
       fs.rmSync(sandbox, { recursive: true, force: true });

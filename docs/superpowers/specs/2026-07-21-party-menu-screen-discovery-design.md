@@ -19,11 +19,12 @@ demande de retrouver ce même écran en parcourant les menus.
 
 ## Conception retenue
 
-Après le chargement de la partie, le probe ouvre le menu principal. Pour chaque entrée,
-dans une limite explicite, il appuie sur `A`, attend le rendu, capture un PNG et compare
-ses octets à ceux du golden. Une correspondance copie la capture vers le chemin final et
-retourne le nombre d’entrées visitées. Après une non-correspondance, `B` revient au menu,
-puis `DOWN` avance vers l’entrée suivante.
+Après le chargement de la partie, le probe ouvre le menu principal et crée une save-state
+temporaire. Pour chaque entrée, dans une limite explicite, il restaure cet état, déplace le
+curseur, appuie sur `A`, attend le rendu, décode le PNG et compare ses pixels à ceux du
+golden. Une correspondance copie la capture vers le chemin final et retourne le nombre
+d’entrées visitées. La restauration rend la recherche indépendante de la façon dont chaque
+sous-menu gère le bouton de retour.
 
 Le test Playwright fournit le chemin du golden au probe et exige qu’au moins deux
 entrées aient été visitées. Il conserve ensuite l’assertion `toMatchSnapshot` avec zéro
@@ -35,6 +36,7 @@ jamais de sauvegarde en jeu.
 
 - Le golden absent ou illisible fait échouer immédiatement le probe.
 - L’exploration est limitée à huit entrées afin d’éviter toute boucle infinie.
+- La save-state temporaire est distincte de la sauvegarde batterie versionnée.
 - Si aucun écran ne correspond, le probe lève une erreur explicite avec le nombre
   d’entrées inspectées.
 - Les trois tentatives existantes autour du pont mGBA restent inchangées.

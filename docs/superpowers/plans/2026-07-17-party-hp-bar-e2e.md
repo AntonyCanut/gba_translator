@@ -52,9 +52,9 @@
 - Modifier : `tests/e2e-playwright/specs/party-hp-bar-fr.spec.ts`
 - Modifier : `tests/e2e-playwright/helpers/party-hp-bar-probe.ts`
 
-- [ ] Ajouter au scénario l’attente d’un compteur d’entrées visitées supérieur à un.
-- [ ] Exécuter `npm run test:e2e:party-hp-bar` et constater l’échec attendu avec le probe fixe.
-- [ ] Faire parcourir au probe les entrées du menu principal jusqu’à correspondance exacte avec le golden.
-- [ ] Réexécuter le scénario et obtenir 100 % de réussite sans mettre à jour le golden.
-- [ ] Exécuter `npx tsc -p tsconfig.playwright.json --noEmit`.
-- [ ] Relire le diff et vérifier l’absence d’artefacts temporaires.
+- [x] Ajouter au scénario l’attente d’un compteur d’entrées visitées supérieur à un.
+- [x] Exécuter `npm run test:e2e:party-hp-bar` et constater l’échec attendu avec le probe fixe.
+- [x] Faire parcourir au probe les entrées du menu principal jusqu’à correspondance exacte avec le golden.
+- [x] Réexécuter le scénario et obtenir 100 % de réussite sans mettre à jour le golden.
+- [x] Exécuter `npx tsc -p tsconfig.playwright.json --noEmit`.
+- [x] Relire le diff et vérifier l’absence d’artefacts temporaires.
