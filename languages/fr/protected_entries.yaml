@@ -150,13 +150,23 @@ entries:
   expected: Choisis Pokémon ou Sortir.
   forbidden:
   - Choisis Pokémon ou Annuler.
+# Cellule « Move » de 4 octets : « Dépl. » (5o) déborde en place et corrompt la
+# chaîne voisine (« Dépl.Dépl. où ? », issue #29). combined_fr.txt garde le
+# fallback sûr « Dépl » ; le point est ajouté au rendu par le repoint
+# languages/fr/patches/pc_move_labels.py.
 - offset: '0xA4E1F1'
-  name: 'Carte mondiale: action Déplacer abrégée'
-  issue: '#111'
-  expected: Dépl.
+  name: 'Carte mondiale: action Déplacer abrégée (rendu « Dépl. » via repoint pc_move_labels.py)'
+  issue: '#111, #29'
+  expected: Dépl
   forbidden:
-  - Dépl
   - Déplacer
+- offset: '0x4177DD'
+  name: 'Courrier PC: « Move To Bag » → « Vers le sac » (in-place, pc_move_labels.py)'
+  issue: '#29'
+  expected: Vers le sac
+  forbidden:
+  - Move To Bag
+  - Dépl au sac
 - offset: '0xA4E047'
   name: Prompt tri Cube — doit rester ABSENT (patch dédié)
   issue: '#76'
