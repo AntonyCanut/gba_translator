@@ -770,3 +770,55 @@ entries:
   forbidden:
   - Dame Parfum
   - Aroma Lady
+- offset: '0x1A6196'
+  name: 'Défaite : montant dynamique'
+  issue: '#105'
+  expected: 9{PLAYER} n’a plus de Pokémon\nutilisables !\p{PLAYER} panique et perd {STR_VAR_1}¥…\p…\p{PLAYER} s’évanouit !
+- offset: '0x1BFA3B'
+  name: 'Pension : montant dynamique'
+  issue: '#105'
+  expected: Si tu veux récupérer ton {STR_VAR_1},\nça coûtera {STR_VAR_2}¥.
+- offset: '0x41678E'
+  name: 'Boutique : total dynamique'
+  issue: '#105'
+  expected: '{STR_VAR_1}, et tu en veux {STR_VAR_2}. Cela fera\n{STR_VAR_3}¥. OK ?'
+- offset: '0x416936'
+  name: 'Boutique : prix de reprise'
+  issue: '#105'
+  expected: 'Je peux payer {STR_VAR_3}¥.\nÇa te va ?'
+- offset: '0x416959'
+  name: 'Boutique : vente confirmée'
+  issue: '#105'
+  expected: Tu as remis {STR_VAR_1}(s)\npour {STR_VAR_3}¥.
+- offset: '0x7E842C'
+  name: 'Minerais : offre dynamique'
+  issue: '#105'
+  expected: 'Oh, j''adore les minerais !\pCe {COLOR}É{STR_VAR_3}{COLOR}Ë me secoue ! Me le vends-tu pour\n{COLOR}É{STR_VAR_2}¥{COLOR}Ë ?'
+- offset: '0x7EBF53'
+  name: 'Ingrédient : offre dynamique'
+  issue: '#105'
+  expected: Oh, ça sent si bon ! Votre {COLOR}É{STR_VAR_3} {COLOR}Ë est un\ningrédient très rare en effet!\pVoudriez-vous prendre\n{COLOR}É{STR_VAR_2}¥ {COLOR}Ëpour\pcela ?
+- offset: '0x893A1F'
+  name: 'Achat : total dynamique'
+  issue: '#105'
+  expected: '{STR_VAR_1},\nCela fera {STR_VAR_2}¥. D''accord ?'
+- offset: '0xA4E00D'
+  name: 'CT : total dynamique'
+  issue: '#105'
+  expected: '{STR_VAR_1} {STR_VAR_3},\nça fera {STR_VAR_2}¥. D''accord ?'
+- offset: '0x1F2050C'
+  name: 'Mode Insane : prix dynamique'
+  issue: '#105'
+  expected: Ce Leveinard demande {COLOR}É{STR_VAR_1}¥{COLOR}Á pour soigner\nles Dresseurs en mode Insane.
+- offset: '0x1F278E7'
+  name: 'Couafarel : prix dynamique'
+  issue: '#105'
+  expected: Oui, je suis la styliste star\nde Couafarel, Furfrité.\pPour {COLOR}É{STR_VAR_1}¥{COLOR}Ç, je donne à ton\nCouafarel un style unique.\pAs-tu le {COLOR}ÉCouafarel{COLOR}Ç que tu\nveux que je coiffe?
+- offset: '0x1F2C555'
+  name: 'Café Magnolia : prix dynamique'
+  issue: '#105'
+  expected: Ça fera {STR_VAR_2}¥.
+- offset: '0x1F6C7EB'
+  name: 'Pension : retrait dynamique'
+  issue: '#105'
+  expected: Tu dois {COLOR}É{STR_VAR_2}¥{COLOR}Ç\npour récupérer ce Pokémon.

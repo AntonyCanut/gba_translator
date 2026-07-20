@@ -426,7 +426,7 @@
 0x1A5F9B: Tes Pokémon ont retrouvé toute leur\nforme.\pOn compte sur toi !
 0x1A5FDF: {PLAYER} !\nBienvenue à la maison.\pOn dirait que tu as vécu pas mal\nd’aventures.\pTu devrais peut-être te reposer.\n
 0x1A6046: Ah, parfait ! Toi et tes Pokémon\navez bien meilleure mine.\pSi les PV de tes Pokémon sont bas,\nsoigne-les dans un\p{COLOR}ÉCentre Pokémon{COLOR}Ç !\nLe plus proche d’ici est à\p{COLOR}ÉBélenbourg{COLOR}Ç.\nOu achète des\p{COLOR}ÉPotions{COLOR}Ç au\n{COLOR}ÉBoutique Pokémon{COLOR}Ç !\pC’est toujours bien de se préparer\nau pire.\pRends-moi fier, chéri !\pPrends soin de toi !
-0x1A6196: 9{PLAYER} n’a plus de Pokémon\nutilisables !\p{PLAYER} panique et perd ¥{STR_VAR_1}…\p…\p{PLAYER} s’évanouit !
+0x1A6196: 9{PLAYER} n’a plus de Pokémon\nutilisables !\p{PLAYER} panique et perd {STR_VAR_1}¥…\p…\p{PLAYER} s’évanouit !
 0x1A61E5: {PLAYER} n’a plus de Pokémon\nutilisables !\p{PLAYER} s’évanouit !
 0x1A6211: Salut !\nJe peux t’aider ?
 0x1A622C: Il y a un questionnaire.\nVeux-tu le remplir ?
@@ -568,7 +568,7 @@
 0x1BF988: Ah, c’est toi !\nContent de te voir.\pTes Pokémon ne peuvent qu’aller\nbien !
 0x1BF9CC: Ton {STR_VAR_1} a gagné {STR_VAR_2}\nniveaux.
 0x1BF9EF: Ton équipe est pleine. Fais de la\nplace puis reviens me voir.
-0x1BFA3B: Si tu veux récupérer ton {STR_VAR_1},\nça coûtera ¥{STR_VAR_2}.
+0x1BFA3B: Si tu veux récupérer ton {STR_VAR_1},\nça coûtera {STR_VAR_2}¥.
 0x1BFA67: Parfait !\nVoilà ton Pokémon.
 0x1BFA85: {PLAYER} a repris {STR_VAR_1} à la\nMémé Pension.
 0x1BFAAD: Oh ? Mais tu n’as qu’un seul\nPokémon.\pReviens une autre fois.
@@ -3162,15 +3162,15 @@
 0x416741: À plus !
 0x416757: Quitter les achats.
 0x416766: {STR_VAR_1}? Bien sûr.\nCombien en veux-tu ?
-0x41678E: {STR_VAR_1}, et tu en veux {STR_VAR_2}. Cela fera\n¥{STR_VAR_3}. OK ?
+0x41678E: {STR_VAR_1}, et tu en veux {STR_VAR_2}. Cela fera\n{STR_VAR_3}¥. OK ?
 0x4167E7: Voilà !\nMerci !
 0x416842: Tu n'as pas assez d'argent. {PAUSE_UNTIL_PRESS}
 0x416861: Plus de place pour cet\nobjet.{PAUSE_UNTIL_PRESS}
 0x41689E: Puis-je faire autre chose ?
 0x4168F1: {STR_VAR_1}? Oh, non. Je ne peux pas\nacheter ça.{PAUSE_UNTIL_PRESS}
 0x416911: {STR_VAR_1}?\nCombien veux-tu vendre ?
-0x416936: Je peux payer ¥{STR_VAR_3}.\nÇa te va ?
-0x416959: Tu as remis {STR_VAR_1}(s)\npour ¥{STR_VAR_3}.
+0x416936: Je peux payer {STR_VAR_3}¥.\nÇa te va ?
+0x416959: Tu as remis {STR_VAR_1}(s)\npour {STR_VAR_3}¥.
 0x41697E: Changer
 0x416984: Envoyer
 0x41698D: Ordre
@@ -7051,7 +7051,7 @@
 0x7E7F5D: Alors ? Tu m'as trouvé\nun {COLOR}ÉOs Rare {COLOR}Ë ?\pOn dirait bien.\pSi tu veux le vendre, je te l'achète\n{COLOR}É¥10000{COLOR}Ë.
 0x7E801A: Si tu trouves d'autres Os Rares,\nvient me voir.\pJe te paierai bien.
 0x7E8066: Hé, viens me voir si tu trouves un\nOs Rare, d'accord ?\pJe te paierai bien.
-0x7E842C: Oh, j'adore les minerais !\pCe {COLOR}É{STR_VAR_3}{COLOR}Ë me secoue ! Me le vends-tu pour\n{COLOR}É¥{STR_VAR_2}{COLOR}Ë ?
+0x7E842C: Oh, j'adore les minerais !\pCe {COLOR}É{STR_VAR_3}{COLOR}Ë me secoue ! Me le vends-tu pour\n{COLOR}É{STR_VAR_2}¥{COLOR}Ë ?
 0x7E84B6: Marché conclu ! J'ai obtenu un\nminerai à adorer !
 0x7E84E8: Hmm. Tu n'as pas de {COLOR}É{STR_VAR_3}s{COLOR}Ë. Reviens plus\ntard.
 0x7E8526: Hmm. Mon noyau ne change pas.\nJ'espère me le procurer un jour.
@@ -7128,7 +7128,7 @@
 0x7EB584: 9Oh, qui es-tu ?\p…\p{PLAYER} ?\pTu cherches {RIVAL}, je suppose ? Il\nest passé ici demander comment\paller aux Ruines du Néant. Je lui ai\ndit comme je te dis.\pLa seule voie que je connais est de\nprendre un bateau ou de surfer par\pla Route 14. Désolé si ça n'aide pas\nbeaucoup.\l\p\n
 0x7EB6B3: As-tu déjà entendu parler du\nprofesseur Log ?\pC'est un vieil ami de recherche.\pOn étudiait ensemble l'histoire de\nBorrius.\pJusqu'au jour où nous avons trouvé\nquelque chose qu'on\ln'aurait pas dû voir…\pDepuis, il étudie les stats et taux\nde capture des Pokémon,\ltandis que je profite de\nma retraite.
 0x7EB7D2: 1F : Comptoir de service\n2F : Marché des entraîneurs\l3F : Objets d'évolution\l4F : Coin de CT\l5F : Boîte à médicaments\l6F : Cadeaux de sage
-0x7EBF53: Oh, ça sent si bon ! Votre {COLOR}É{STR_VAR_3} {COLOR}Ë est un\ningrédient très rare en effet!\pVoudriez-vous prendre\n{COLOR}É¥{STR_VAR_2} {COLOR}Ëpour\pcela ?
+0x7EBF53: Oh, ça sent si bon ! Votre {COLOR}É{STR_VAR_3} {COLOR}Ë est un\ningrédient très rare en effet!\pVoudriez-vous prendre\n{COLOR}É{STR_VAR_2}¥ {COLOR}Ëpour\pcela ?
 0x7EBFC3: Merci! Merci !\pAvec cela, je peux créer un superbe\nmenu !\pMes clients vont adorer !
 0x7EC017: Hmm… Il ne semble pas que vous ayez\ndes\p{COLOR}É{STR_VAR_3}s{COLOR}Ë. Si vous\ntrouvez un ingrédient\pgastronomique pour moi,\nfaites-le-moi savoir !
 0x7EC087: Aww… Eh bien, ce n'est pas grave.\pSi vous trouvez un ingrédient\nspécial, dites-le-moi !
@@ -7629,7 +7629,7 @@
 0x8883C8: SRR VRi  i             {LV}
 0x88884E: Tu ne peux pas atteindre l'échelle \nd'ici.
 0x88B8BC: LRx R
-0x893A1F: {STR_VAR_1},\nCela fera ¥{STR_VAR_2}. D'accord ?
+0x893A1F: {STR_VAR_1},\nCela fera {STR_VAR_2}¥. D'accord ?
 0x8A0B40: L'attaque de type Feu s'est\néteinte sous la forte pluie !
 0x8A0C4C: {B_ATK_NAME_WITH_PREFIX} est blessé\npar {B_LAST_ITEM} !
 0x8A0D00: {B_ATK_NAME_WITH_PREFIX} restaure quelques PV grâce à son\n{B_LAST_ITEM} !
@@ -11484,7 +11484,7 @@
 0xA4DF5C: C'est un arbre de belle taille.\nVeux-tu utiliser Coud'Boule ?
 0xA4DF9A: Un arbre imposant semble\nparfait pour un Coud'Boule !
 0xA4DFDA: Le mur est légèrement bombé.\nCreuser dedans ?
-0xA4E00D: {STR_VAR_1} {STR_VAR_3},\nça fera ¥{STR_VAR_2}. D'accord ?
+0xA4E00D: {STR_VAR_1} {STR_VAR_3},\nça fera {STR_VAR_2}¥. D'accord ?
 0xA4E02C: Tu possèdes déjà cette CT.{PAUSE_UNTIL_PRESS}
 # 0xA4E047 (Cube "Sort this pocket's items how?" prompt, issue #25/#76): do
 # NOT add an entry here. This in-place cell has no live pointer; when a
@@ -17399,7 +17399,7 @@
 0x1F2044A: Cette tablette a été trouvée au B1F\ndans la chambre de magma accessible\ndepuis l'échelle ouest du 1F.
 0x1F204A1: Cette tablette a été trouvée après\navoir utilisé Escalade pour accéder\naux Ruines du Néant via Plongée.
 0x1F20501: {COLOR}ÉLevei!
-0x1F2050C: Ce Leveinard demande {COLOR}É¥{STR_VAR_1}{COLOR}Á pour soigner\nles Dresseurs en mode Insane.
+0x1F2050C: Ce Leveinard demande {COLOR}É{STR_VAR_1}¥{COLOR}Á pour soigner\nles Dresseurs en mode Insane.
 0x1F20544: Si tu es assez fou pour tenter\nInsane, alors tu dois être assez\lfou pour acheter des objets de soin,\lou prêt à payer le prix de\l6 Guérisons, 5 Rappels et\l6 Max Élixirs à chaque fois que\ltu as besoin de te soigner.\pTu n'aimes pas ça ?\pJoue à une difficulté plus basse.\pCe mode de jeu n'est pas fait pour\nceux qui veulent la voie\lfacile.\pTu es prévenu.
 0x1F2069F: Tu n'as pas assez d'argent.
 0x1F206C0: {PLAYER} !\nQuel hasard de te voir ici !\pJe pensais que tu faisais une\ndes «corvées» de Log, ou un truc.\p…\pAh, c'est le cas. Typique.\pQuel radin.\nIl ne fait rien lui-même.
@@ -17691,7 +17691,7 @@
 0x1F2782F: Ce Prismillon a été\ntrouvé près de la maison à l'est.
 0x1F27862: Mon Pokémon est trop génial!\nRegarde un peu!
 0x1F2788F: Il était cool, mon Pokémon, non?\pTu peux le voir autant que tu veux\ndans ton Pokédex!
-0x1F278E7: Oui, je suis la styliste star\nde Couafarel, Furfrité.\pPour {COLOR}É¥{STR_VAR_1}{COLOR}Ç, je donne à ton\nCouafarel un style unique.\pAs-tu le {COLOR}ÉCouafarel{COLOR}Ç que tu\nveux que je coiffe?
+0x1F278E7: Oui, je suis la styliste star\nde Couafarel, Furfrité.\pPour {COLOR}É{STR_VAR_1}¥{COLOR}Ç, je donne à ton\nCouafarel un style unique.\pAs-tu le {COLOR}ÉCouafarel{COLOR}Ç que tu\nveux que je coiffe?
 0x1F27997: Parmi ces styles, lequel\nveux-tu ?
 0x1F279C5: Ton Couafarel est magnifique!\pTu as de la chance d'avoir un\nCouafarel pareil.
 0x1F27A21: Non, non, mes services ne sont pas\nnécessaires.
@@ -17886,7 +17886,7 @@
 0x1F2C45F: Désolé, mais je ne peux pas mixer\nla {STR_VAR_1}.\pChoisis une Baie différente.
 0x1F2C4F1: Pour quel Pokémon est la boisson ?
 0x1F2C516: Donc, tu veux ce breuvage\npour {COLOR}É{STR_VAR_1}{COLOR}Ç, c'est bien ça ?
-0x1F2C555: Ça fera ¥{STR_VAR_2}.
+0x1F2C555: Ça fera {STR_VAR_2}¥.
 0x1F2C565: Merci de patienter le temps de\nmixer tes Baies.
 0x1F2C58D: C'est prêt !\nVoilà la commande !
 0x1F2C5A1: {COLOR}Á{STR_VAR_2} a bu le mélange de\nBaies avec plaisir.
@@ -19996,7 +19996,7 @@
 0x1F6C732: Reviens plus tard pour voir comment\nton Pokémon a grandi !
 0x1F6C771: Désolé ! Je ne peux pas prendre un\nPokémon si tu n’en as qu’un !
 0x1F6C7B2: Si tu me laisses ce Pokémon, avec\nquoi te battras-tu ?
-0x1F6C7EB: Tu dois {COLOR}É¥{STR_VAR_2}{COLOR}Ç\npour récupérer ce Pokémon.
+0x1F6C7EB: Tu dois {COLOR}É{STR_VAR_2}¥{COLOR}Ç\npour récupérer ce Pokémon.
 0x1F6C81D: Merci ! Voici ton\nPokémon.
 0x1F6C86C: Déjà de retour ?\pTon {COLOR}É{STR_VAR_1}{COLOR}Ç doit\nrester un peu plus avec moi.
 0x1F6C8B6: {COLOR}É{STR_VAR_1}{COLOR}Ç grandit.\pVoyons voir…\n+{COLOR}É{STR_VAR_2}{COLOR}Ç N. !\pJe suis douée, pas vrai ?
