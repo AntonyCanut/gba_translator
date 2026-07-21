@@ -310,15 +310,28 @@ def acute_accent_positions(font: bytes) -> List[Tuple[int, int, int]]:
     The full glyph width is scanned (x=0..7): the compact fonts pack the accent
     stroke across the whole tile, so clipping edge columns would silently drop
     real accent pixels.
+
+    The accent value is normalised to the stroke's brightest pixel so the whole
+    mark is drawn in a single colour. The international ``á`` anti-aliases its
+    accent with a couple of dim edge pixels (palette index ~3-4). On the solid
+    high-contrast Pokédex/battle-HUD font (ink = index 15) those dim pixels
+    render as a visibly grey speck beside the white stroke — the "un pixel
+    n'est pas de la bonne couleur" reported for small acute accents (issue #97).
+    Normalising only affects that one font: every other block already stores a
+    single-value accent, so the max leaves it byte-identical.
     """
     base = glyph_pixels(font, CP_A)
     acute = glyph_pixels(font, CP_ACUTE_A)
-    return [
+    positions = [
         (x, y, acute[y * 8 + x])
         for y in range(2)
         for x in range(8)
         if acute[y * 8 + x] != 0 and acute[y * 8 + x] != base[y * 8 + x]
     ]
+    if not positions:
+        return positions
+    brightest = max(value for _, _, value in positions)
+    return [(x, y, brightest) for x, y, _ in positions]
 
 
 def grave_shift(positions: List[Tuple[int, int, int]]) -> int:
@@ -332,25 +345,20 @@ def overlay_accent(
     base: List[int],
     positions: List[Tuple[int, int, int]],
     shift: int = 0,
-    overwrite: bool = False,
 ) -> List[int]:
     """Overlay accent ``positions`` onto a copy of ``base`` (shifted left by
     ``shift``).
 
-    By default the darker pixel wins where they overlap (``max``), which suits
-    the grave accent whose shifted stroke never lands on a dense letter top.
-    With ``overwrite=True`` the accent value is written unconditionally: the
-    solid Pokédex/battle-HUD font draws a dense ``e`` top (values 14-15) right
-    where the acute stroke sits, so a plain ``max`` merge keeps the letter body
-    and silently swallows the accent's leftmost pixel — the "un pixel manquant"
-    reported for small acute accents (issue #97). Writing the accent through
-    makes ``é`` reproduce the proven-good ``á`` accent stroke verbatim."""
+    The brighter pixel wins where they overlap (``max``). The accent is already
+    normalised to a single bright value (see :func:`acute_accent_positions`), so
+    ``max`` keeps the stroke crisp even over the dense letter top of the solid
+    Pokédex/battle-HUD font while never darkening the letter body."""
     out = base[:]
     for x, y, val in positions:
         nx = x - shift
         if 0 <= nx < 8:
             idx = y * 8 + nx
-            if overwrite or val > out[idx]:
+            if val > out[idx]:
                 out[idx] = val
     return out
 
@@ -366,14 +374,14 @@ def build_grave_a(font: bytes) -> bytes:
 def build_acute_e(font: bytes) -> bytes:
     """Rebuild ``é`` from the clean ``e`` body plus the compact acute accent.
 
-    ``overwrite=True`` forces the accent through the dense ``e`` top of the
-    solid Pokédex/battle-HUD font so the acute stroke keeps all its pixels
-    (issue #97)."""
+    The accent is normalised to a single bright value (issue #97), so a plain
+    ``max`` merge keeps every acute pixel crisp over the dense ``e`` top of the
+    solid Pokédex/battle-HUD font instead of leaving a dim grey speck."""
     base = glyph_pixels(font, CP_E)
     positions = acute_accent_positions(font)
     if not positions:
         return pixels_to_tile(base)
-    return pixels_to_tile(overlay_accent(base, positions, overwrite=True))
+    return pixels_to_tile(overlay_accent(base, positions))
 
 
 def build_grave_e(font: bytes) -> bytes:
