@@ -23,8 +23,8 @@ GBA_BASE = 0x08000000
 
 ITEM_ANTIGEL = 0x19    # Ice Heal
 ITEM_REPOUSSE = 0x5F   # Repousse (100 steps)
-ITEM_SUP_REPOUSSE = 0x5C  # Sup. Repousse (250 steps)
-ITEM_MAX_REPOUSSE = 0x5D  # Max Repousse (200 steps)
+ITEM_SUP_REPOUSSE = 0x5C  # Superepousse (200 steps)
+ITEM_MAX_REPOUSSE = 0x5D  # Max Repousse (250 steps)
 
 
 def _follow_desc_ptr(rom: bytes, item_id: int) -> Optional[int]:
@@ -87,10 +87,22 @@ class TestItemDescriptions:
         )
 
     def test_repousse_dit_pas_pas_etapes(self, fr_rom_bytes):
-        for item_id, name in [
-            (ITEM_REPOUSSE, "Repousse"),
-            (ITEM_SUP_REPOUSSE, "Sup. Repousse"),
-            (ITEM_MAX_REPOUSSE, "Max Repousse"),
+        for item_id, name, expected in [
+            (
+                ITEM_REPOUSSE,
+                "Repousse",
+                "Repousse les Pokémon sauvages\nfaibles durant 100 pas.",
+            ),
+            (
+                ITEM_SUP_REPOUSSE,
+                "Superepousse",
+                "Repousse les Pokémon sauvages\nfaibles durant 200 pas.",
+            ),
+            (
+                ITEM_MAX_REPOUSSE,
+                "Max Repousse",
+                "Repousse les Pokémon sauvages\nfaibles durant 250 pas.",
+            ),
         ]:
             # Cherche d'abord via pointeur CFRU, puis à l'offset legacy
             offset = _follow_desc_ptr(fr_rom_bytes, item_id)
@@ -101,10 +113,13 @@ class TestItemDescriptions:
                 # Fallback: certains items CFRU pointent vers l'offset legacy
                 legacy_offsets = {
                     ITEM_REPOUSSE: 0x3D639C,
-                    ITEM_SUP_REPOUSSE: 0x3D6318,
-                    ITEM_MAX_REPOUSSE: 0x3D62DF,
+                    ITEM_SUP_REPOUSSE: 0x3D62DF,
+                    ITEM_MAX_REPOUSSE: 0x3D6318,
                 }
                 text = _decode(fr_rom_bytes, legacy_offsets[item_id])
+            assert text == expected, (
+                f"{name}: description inattendue : {text!r}"
+            )
             assert "étapes" not in text.lower(), (
                 f"{name}: description contient encore 'étapes' : {text!r}"
             )
