@@ -150,6 +150,12 @@ entries:
   expected: Choisis Pokémon ou Sortir.
   forbidden:
   - Choisis Pokémon ou Annuler.
+- offset: '0x41859A'
+  name: 'PC: libellé « Dépl. objet » non tronqué'
+  issue: '#134'
+  expected: Dépl. objet
+  forbidden:
+  - Dépl. obj.
 # Cellule « Move » de 4 octets : « Dépl. » (5o) déborde en place et corrompt la
 # chaîne voisine (« Dépl.Dépl. où ? », issue #29). combined_fr.txt garde le
 # fallback sûr « Dépl » ; le point est ajouté au rendu par le repoint
