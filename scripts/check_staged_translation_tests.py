@@ -120,14 +120,17 @@ def validate_added_translations(
 
 
 def _git_output(args: Sequence[str]) -> str:
-    """Return Git output or raise a concise exception suitable for a pre-commit hook."""
+    """Return Git output or raise a concise exception suitable for a pre-commit hook.
 
-    result = subprocess.run(
-        ["git", *args], check=False, capture_output=True, text=True, encoding="utf-8"
-    )
+    Decoded leniently: a staged BINARY file (savestate fixture, ROM…) makes the
+    diff contain raw non-UTF-8 bytes; those lines are irrelevant to the parser
+    and must not crash the hook.
+    """
+
+    result = subprocess.run(["git", *args], check=False, capture_output=True)
     if result.returncode:
-        raise RuntimeError(result.stderr.strip() or "git command failed")
-    return result.stdout
+        raise RuntimeError(result.stderr.decode("utf-8", "replace").strip() or "git command failed")
+    return result.stdout.decode("utf-8", "replace")
 
 
 def _staged_files(langs: Iterable[str]) -> Dict[str, str]:

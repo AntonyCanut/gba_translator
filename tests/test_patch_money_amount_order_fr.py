@@ -15,6 +15,11 @@ from languages.fr.patches.money_amount_order import (
     apply,
     apply_inline_money_orders,
 )
+from src.text.charmap_data import CHAR_TO_BYTE
+
+
+def _enc(text: str) -> bytes:
+    return bytes(CHAR_TO_BYTE[c] for c in text)
 
 ROM = Path("output/roms/GenedRom-fr.gba")
 COMBINED = Path("languages/fr/combined_fr.txt")
@@ -85,6 +90,41 @@ class TestApplySynthetic(unittest.TestCase):
             bytes([0xFC, 0x01, 0x06, 0xFD, 0x03, 0xB7, 0xFC, 0x01, 0x08]),
         )
         self.assertEqual(apply_inline_money_orders(data), 0)
+
+    def test_inline_guard_accepts_french_sentence(self):
+        # A money pattern inside a real French string is rewritten.
+        data = _synthetic()
+        text = _enc("Ça fera ") + bytes([0xB7, 0xFD, 0x02]) + _enc(".")
+        start = 8
+        data[start:start + len(text)] = text
+        self.assertEqual(apply_inline_money_orders(data), 1)
+        swapped = _enc("Ça fera ") + bytes([0xFD, 0x02, 0xB7]) + _enc(".")
+        self.assertEqual(bytes(data[start:start + len(swapped)]), swapped)
+
+    def test_inline_guard_rejects_thumb_code(self):
+        # 0xB7/0xFD halves of Thumb BL pairs must NOT be reordered — a blind
+        # rewrite here rebooted the game after every wild capture (ticket
+        # « Capture reset game »). Real bytes around 0x104C58 in the ROM.
+        code = bytes.fromhex(
+            "01200021221cfff7b7fd02b010bc01bc00470000f0b54f46"
+        )
+        data = _synthetic()
+        start = 64
+        data[start:start + len(code)] = code
+        self.assertEqual(apply_inline_money_orders(data), 0)
+        self.assertEqual(bytes(data[start:start + len(code)]), code)
+
+    def test_inline_guard_rejects_compressed_data(self):
+        # Random-looking compressed graphics containing the byte pattern must
+        # be left byte-identical (real bytes around 0x52D32F in the ROM).
+        blob = bytes.fromhex(
+            "06591122165bc6eab7fd02492e57ed0c9f6494c73c76b816"
+        )
+        data = _synthetic()
+        start = 64
+        data[start:start + len(blob)] = blob
+        self.assertEqual(apply_inline_money_orders(data), 0)
+        self.assertEqual(bytes(data[start:start + len(blob)]), blob)
 
     def test_money_dialogues_place_the_symbol_after_the_variable(self):
         entries = _combined_entries()
