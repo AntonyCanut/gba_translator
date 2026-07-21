@@ -877,3 +877,9 @@ entries:
   - Snivy
   - Tepig
   - Oshawott
+- offset: '0x1F63C25'
+  name: 'Route 5 : confirmation du starter d’Unys'
+  issue: '#133'
+  expected: Tu aimerais {STR_VAR_1}{COLOR}Ç ?
+  forbidden:
+  - You'd like {STR_VAR_1}{COLOR}Ç?
