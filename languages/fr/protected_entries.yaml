@@ -883,3 +883,21 @@ entries:
   expected: Tu aimerais {STR_VAR_1}{COLOR}Ç ?
   forbidden:
   - You'd like {STR_VAR_1}{COLOR}Ç?
+- offset: '0x3D62DF'
+  name: 'Description Superepousse (200 pas)'
+  issue: '#136'
+  expected: Repousse les Pokémon sauvages\nfaibles durant 200 pas.
+  forbidden:
+  - Empêche les Pokémon faibles\nd'apparaître pendant 200 pas.
+- offset: '0x3D6318'
+  name: 'Description Max Repousse (250 pas)'
+  issue: '#136'
+  expected: Repousse les Pokémon sauvages\nfaibles durant 250 pas.
+  forbidden:
+  - Empêche les Pokémon faibles\nd'apparaître pendant 250 pas.
+- offset: '0x3D639C'
+  name: 'Description Repousse (100 pas)'
+  issue: '#136'
+  expected: Repousse les Pokémon sauvages\nfaibles durant 100 pas.
+  forbidden:
+  - Empêche les Pokémon faibles\nd'apparaître pendant 100 pas.
