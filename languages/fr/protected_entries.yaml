@@ -908,3 +908,12 @@ entries:
   forbidden:
   - Une Carte.
   - Une carte.
+- offset: '0x1F1C3FC'
+  name: 'Arène de Cratéris : talents immunisés'
+  issue: '#137'
+  expected: >-
+    Comme tu peux le voir, ou pas,\ncette Arène est dédiée au type\l<0xFC><0x01><0x06>Ténèbres<0xFC><0x01><0x08>.\pPour gagner ici, un bon point de\ndépart serait d'amener des types\l<0xFC><0x01><0x06>Combat<0xFC><0x01><0x08>, <0xFC><0x01><0x06>Insecte<0xFC><0x01><0x08> ou <0xFC><0x01><0x06>Fée<0xFC><0x01><0x08>.\pMais attention : à cause des\nnombreux Dresseurs qui peinent ici,\ldes <0xFC><0x01><0x06>émotions négatives<0xFC><0x01><0x08> rempliront\ll'air pendant tes combats.\pCes émotions infligent des dégâts\nà la fin de chaque tour.\pSeuls les types <0xFC><0x01><0x06>Ténèbres<0xFC><0x01><0x08>, <0xFC><0x01><0x06>Psy<0xFC><0x01><0x08> et\n<0xFC><0x01><0x06>Spectre<0xFC><0x01><0x08>, ainsi que les Pokémon avec\lles talents <0xFC><0x01><0x06>Garde Magik<0xFC><0x01><0x08>, <0xFC><0x01><0x06>Inconscient<0xFC><0x01><0x08> ou\l<0xFC><0x01><0x06>Benêt<0xFC><0x01><0x08>, n'y sont pas sensibles.\pSi les émotions négatives te posent\nproblème, amener un Pokémon qui n'y\lest pas sensible pourrait bien\lt'aider.\pMaintenant, atteindre Véga, qui\ndirige cette Arène, est assez\lsimple.\pTraverse les couloirs sombres sans\nte faire repérer.\pSi on te repère, tu devras soit\naffronter des Dresseurs, soit\lretourner au début du couloir.\pChaque Dresseur vaincu éclairera\nla pièce, alors je te conseille\lde tous les battre d'abord.\pBonne chance !
+  forbidden:
+  - Magic Guard
+  - Unaware
+  - Oblivious
