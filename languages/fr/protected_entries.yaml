@@ -857,3 +857,23 @@ entries:
   expected: Records Combat
   forbidden:
   - Battle Records
+- offset: '0x1F63D68'
+  name: 'Route 5 : option Vipélierre'
+  issue: '#132'
+  expected: '{COLOR}ÉVipélierre'
+  forbidden:
+  - Snivy
+- offset: '0x1F63D71'
+  name: 'Route 5 : option Gruikui'
+  issue: '#132'
+  expected: '{COLOR}ÊGruikui'
+  forbidden:
+  - Tepig
+- offset: '0x7E6816'
+  name: 'Route 5 : confirmation des starters d’Unys'
+  issue: '#132'
+  expected: 'Tu as reçu un {COLOR}ÉVipélierre{COLOR}Á, un {COLOR}ÇGruikui{COLOR}Á et\nun {COLOR}ËMoustillon {COLOR}Áde la part de la dame !'
+  forbidden:
+  - Snivy
+  - Tepig
+  - Oshawott
