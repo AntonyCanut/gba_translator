@@ -20,6 +20,18 @@ WORLD_MAP_CANCEL_POINTERS = (0xC06FC, 0xC1B28, 0xC50C0)
 WORLD_MAP_CANCEL_TEXT = "{SE_SHOP}Annul."
 WORLD_MAP_CANCEL_BYTES = bytes.fromhex("f800bbe2e2e9e0adff")
 
+# Bandeaux de déplacement affichés en haut de la carte mondiale.
+WORLD_MAP_HINT_OFFSET = 0x418E77
+WORLD_MAP_MOVE_OFFSET = 0x418EB5
+WORLD_MAP_HINT_POINTER = 0x9FB64
+WORLD_MAP_MOVE_POINTERS = (0xC05D8, 0xC12E0, 0xC283C, 0xC4FE8)
+WORLD_MAP_HINT_TEXT = "{DPAD_ANY}Dépl. {SE_SHOP}OK {B_BUTTON}Annul."
+WORLD_MAP_MOVE_TEXT = "{DPAD_ANY}Dépl."
+WORLD_MAP_HINT_BYTES = bytes.fromhex(
+    "f80cbe1be4e0ad00f800c9c500f801bbe2e2e9e0adff"
+)
+WORLD_MAP_MOVE_BYTES = bytes.fromhex("f80cbe1be4e0adff")
+
 # Ces deux références appartiennent au menu Équipe, pas à la carte mondiale.
 PARTY_CANCEL_POINTERS = (0xA6CA2C, 0xA6CA64)
 ANNULER_BYTES = bytes.fromhex("bbe2e2e9e0d9e6ff")
@@ -46,10 +58,12 @@ def _read_pointed_bytes(rom: bytes, pointer_offset: int) -> bytes:
     return rom[text_offset:terminator + 1]
 
 
-def test_world_map_cancel_sources_are_abbreviated() -> None:
-    """Les deux chaînes source de la carte doivent demander « Annul. »."""
+def test_world_map_sources_use_complete_short_labels() -> None:
+    """Les sources doivent contenir les formes courtes, point compris."""
     mapping = _load_last_wins(COMBINED_FR)
 
+    assert mapping[WORLD_MAP_HINT_OFFSET] == WORLD_MAP_HINT_TEXT
+    assert mapping[WORLD_MAP_MOVE_OFFSET] == WORLD_MAP_MOVE_TEXT
     assert {
         offset: mapping.get(offset)
         for offset in WORLD_MAP_CANCEL_OFFSETS
@@ -78,4 +92,19 @@ def test_party_cancel_entries_keep_full_shared_label() -> None:
     assert all(
         _read_pointed_bytes(rom, pointer) == ANNULER_BYTES
         for pointer in PARTY_CANCEL_POINTERS
+    )
+
+
+@pytest.mark.rom
+def test_world_map_move_hints_have_no_trailing_residue() -> None:
+    """Le bandeau ne doit plus garder le « r » final de l'ancien « Retour »."""
+    rom = BUILT_ROM.read_bytes()
+
+    assert (
+        _read_pointed_bytes(rom, WORLD_MAP_HINT_POINTER)
+        == WORLD_MAP_HINT_BYTES
+    )
+    assert all(
+        _read_pointed_bytes(rom, pointer) == WORLD_MAP_MOVE_BYTES
+        for pointer in WORLD_MAP_MOVE_POINTERS
     )

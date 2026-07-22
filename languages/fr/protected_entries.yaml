@@ -185,6 +185,20 @@ entries:
   forbidden:
   - Move To Bag
   - Dépl au sac
+- offset: '0x418E77'
+  name: 'Carte mondiale: bandeau Dépl. / Annul.'
+  issue: '#111'
+  expected: '{DPAD_ANY}Dépl. {SE_SHOP}OK {B_BUTTON}Annul.'
+  forbidden:
+  - '{DPAD_ANY}Dépl. {SE_SHOP}OK {B_BUTTON}Retour'
+  - '{DPAD_ANY}Déplacer {SE_SHOP}OK {B_BUTTON}Retour'
+- offset: '0x418EB5'
+  name: 'Carte mondiale: Déplacer abrégé avec point'
+  issue: '#111'
+  expected: '{DPAD_ANY}Dépl.'
+  forbidden:
+  - '{DPAD_ANY}Dépl'
+  - '{DPAD_ANY}Déplacer'
 - offset: '0xA4E047'
   name: Prompt tri Cube — doit rester ABSENT (patch dédié)
   issue: '#76'
