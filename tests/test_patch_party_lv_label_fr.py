@@ -9,6 +9,11 @@ Issue #138: the dot's drop-shadow must stay within nibble rows 4-11 (the same
 vertical extent the plain « N » already uses) so it renders correctly in BOTH
 the party list and the in-battle level-up notification box — a row-12 shadow
 (the #104 fix) overflows that box's clipped glyph area.
+
+Issue #138 follow-up: each nibble packs two independent 2-bit palette picks (one
+per pixel of its 2-pixel-wide cell). The shadow nibble must use value 0xA (grey
+for both pixels), not 0x8 (grey for the left pixel only, transparent for the
+right one) — the latter rendered as a half-strength/incomplete shadow.
 """
 
 import sys
@@ -24,6 +29,7 @@ from languages.fr.patches.party_lv_label import (
     LV_GLYPH_OFFSET,
     NEW_ND_GLYPH,
     OLD_LV_GLYPH,
+    OLD_ND_GLYPH_HALF_SHADOW,
     OLD_ND_GLYPH_NOSHADOW,
     OLD_ND_GLYPH_ROW12_OVERFLOW,
     apply_patch,
@@ -57,27 +63,28 @@ class TestGlyphDefinitions(unittest.TestCase):
             old_val = (OLD_LV_GLYPH[byte] & 0xF) if nib % 2 == 0 else (OLD_LV_GLYPH[byte] >> 4)
             self.assertNotEqual(old_val, 5, f"nibble {nib} was already ink in « Lv »")
 
-    def test_period_dot_has_drop_shadow(self):
-        # Issue #138: the period dot must cast the font's grey drop-shadow
-        # (value 8) immediately below it — nibble 44 (local col 3, row 11),
-        # the dot's own former 3rd row, so it never leaves rows 4-11 (the
-        # extent the plain « N » already uses in every UI context). The
-        # earlier shadow-less « N. » left this white (value 5), not shadowed.
+    def test_period_dot_has_full_drop_shadow(self):
+        # Issue #138 follow-up: the period dot must cast a FULL grey drop-shadow
+        # (value 0xA = both sub-pixels grey) immediately below it — nibble 44
+        # (local col 3, row 11) — not value 0x8 (left sub-pixel grey, right
+        # sub-pixel transparent), which rendered as an incomplete half-shadow.
         nib = 44
         byte = nib // 2
         val = (NEW_ND_GLYPH[byte] & 0xF) if nib % 2 == 0 else (NEW_ND_GLYPH[byte] >> 4)
-        self.assertEqual(val, 8, "period dot must have a grey drop-shadow (value 8)")
+        self.assertEqual(val, 0xA, "period dot must have a full grey drop-shadow (value 0xA)")
         old = (OLD_ND_GLYPH_NOSHADOW[byte] & 0xF) if nib % 2 == 0 else (OLD_ND_GLYPH_NOSHADOW[byte] >> 4)
         self.assertEqual(old, 5, "shadow-less « N. » had white ink (not shadow) there")
+        half = (OLD_ND_GLYPH_HALF_SHADOW[byte] & 0xF) if nib % 2 == 0 else (OLD_ND_GLYPH_HALF_SHADOW[byte] >> 4)
+        self.assertEqual(half, 8, "the #138 fix had only a half shadow (value 8) there")
 
     def test_no_ink_below_row_11(self):
         # Issue #138: nothing beyond nibble row 11 (nibble index >= 48) may
-        # carry white(5) or shadow(8) ink — that row overflows the in-battle
+        # carry white(5) or shadow(8/0xA) ink — that row overflows the in-battle
         # level-up box's clipped glyph area and bleeds onto its border strip.
         for nib in range(48, 64):
             byte = nib // 2
             val = (NEW_ND_GLYPH[byte] & 0xF) if nib % 2 == 0 else (NEW_ND_GLYPH[byte] >> 4)
-            self.assertNotIn(val, (5, 8), f"nibble {nib} (row {nib // 4}) must not carry ink/shadow")
+            self.assertNotIn(val, (5, 8, 0xA), f"nibble {nib} (row {nib // 4}) must not carry ink/shadow")
 
     def test_noshadow_differs_only_by_shadow_pixel(self):
         diffs = [i for i in range(GLYPH_SIZE) if NEW_ND_GLYPH[i] != OLD_ND_GLYPH_NOSHADOW[i]]
@@ -89,6 +96,12 @@ class TestGlyphDefinitions(unittest.TestCase):
             sorted(diffs), [22, 24],
             "fix must only move the shadow from byte 24 (row 12) to byte 22 (row 11)",
         )
+
+    def test_half_shadow_glyph_differs_only_by_shadow_completeness(self):
+        # Issue #138 follow-up: this fix must only complete the row-11 shadow
+        # (0x8 -> 0xA in byte 22), not touch anything else already fixed by #138.
+        diffs = [i for i in range(GLYPH_SIZE) if NEW_ND_GLYPH[i] != OLD_ND_GLYPH_HALF_SHADOW[i]]
+        self.assertEqual(diffs, [22], "fix must only touch the byte holding row 11's shadow nibble")
 
 
 class TestApplyPatch(unittest.TestCase):
@@ -123,6 +136,16 @@ class TestApplyPatch(unittest.TestCase):
         # converge to the in-bounds glyph without a full rebuild (issue #138).
         rom = _fake_rom(OLD_ND_GLYPH_ROW12_OVERFLOW)
         p = Path("/tmp/_lvtest_row12overflow.gba")
+        p.write_bytes(rom)
+        self.assertEqual(apply_patch(p), 1)
+        self.assertEqual(p.read_bytes()[LV_GLYPH_OFFSET:LV_GLYPH_OFFSET + GLYPH_SIZE],
+                         NEW_ND_GLYPH)
+
+    def test_repatches_half_shadow_nd_to_full_shadow(self):
+        # An already-built ROM carrying #138's half-shadow « N. » must converge
+        # to the full-shadow glyph without a full rebuild (issue #138 follow-up).
+        rom = _fake_rom(OLD_ND_GLYPH_HALF_SHADOW)
+        p = Path("/tmp/_lvtest_halfshadow.gba")
         p.write_bytes(rom)
         self.assertEqual(apply_patch(p), 1)
         self.assertEqual(p.read_bytes()[LV_GLYPH_OFFSET:LV_GLYPH_OFFSET + GLYPH_SIZE],
