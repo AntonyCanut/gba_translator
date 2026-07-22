@@ -883,6 +883,18 @@ entries:
   expected: Records Combat
   forbidden:
   - Battle Records
+- offset: '0x1F4ED3F'
+  name: 'Zadia : présentation active'
+  issue: '#102'
+  expected: "Bonjour, {PLAYER}!\\pJe suis Zadia, ton guide du premier\\nétage.\\pAs-tu besoin d'aide pour la\\nconnexion Sans Fil?"
+  forbidden:
+  - "Hello, {PLAYER}!\\pIt's me, Teala, the Pokémon\\nCentre 2F attendant.\\pIs there something you needed to\\nask me about linking?"
+- offset: '0x1F4F12A'
+  name: 'Zadia : fin active du système sans fil'
+  issue: '#102'
+  expected: 'Profite bien du Système de\nCommunication Sans Fil.'
+  forbidden:
+  - 'I hope you enjoy the Wireless\nCommunication System.'
 - offset: '0x1F63D68'
   name: 'Route 5 : option Vipélierre'
   issue: '#132'

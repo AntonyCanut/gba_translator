@@ -36,14 +36,24 @@ EXPECTED = {
         "\\pAs-tu besoin d'aide pour la\\nconnexion Sans Fil?"
     ),
     0x1BDEDF: "Profite bien du Système de\\nCommunication Sans Fil.\\n",
+    0x1F4ED3F: (
+        "Bonjour, {PLAYER}!\\pJe suis Zadia, ton guide du premier\\nétage."
+        "\\pAs-tu besoin d'aide pour la\\nconnexion Sans Fil?"
+    ),
     0x1F4F105: "Tes records de combats?\\nLes voici.",
+    0x1F4F12A: "Profite bien du Système de\\nCommunication Sans Fil.",
     0x1F4F15E: "Infos Connexion",
     0x1F4F16E: "Records Combat",
 }
 
 POINTED_EXPECTED = {
+    0x1E7DB8F: (
+        "Bonjour, <0xFD>À!<0xFB>Je suis Zadia, ton guide du\\npremier étage."
+        "<0xFB>As-tu besoin d'aide pour la\\nconnexion Sans Fil?"
+    ),
     0x1E7DB9B: "Infos Connexion",
     0x1E7DBA9: "Records Combat",
+    0x1E7DBE0: "Profite bien du Système de\\nCommunication Sans Fil.",
     0x1E7DBF2: "Tes records de combats? Les voici.",
 }
 
