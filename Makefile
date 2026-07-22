@@ -64,6 +64,7 @@ PATCH_MON_ICON_REPAIR_SCRIPT := languages/fr/patches/mon_icon_repair.py
 PATCH_PARTY_CANCEL_BUTTON_SCRIPT := languages/fr/patches/party_cancel_button.py
 PATCH_PC_MOVE_LABELS_SCRIPT := languages/fr/patches/pc_move_labels.py
 PATCH_WORLD_MAP_ACTION_LABELS_SCRIPT := languages/fr/patches/world_map_action_labels.py
+PATCH_FLOOR_INDICATORS_FR_SCRIPT := languages/fr/patches/floor_indicators.py
 PATCH_POKEDEX_STAT_LABELS_FR_SCRIPT := languages/fr/patches/pokedex_stat_labels.py
 PATCH_TYPE_ICONS_SCRIPT := languages/fr/patches/type_icons.py
 PATCH_DEXNAV_HEADERS_SCRIPT := languages/fr/patches/dexnav_headers.py
@@ -313,6 +314,7 @@ build-fr: check-translations-fr ensure-fr-translation $(FRENCH_EXTRACT) $(SPANIS
 	@$(PYTHON) $(PATCH_PARTY_CANCEL_BUTTON_SCRIPT) --rom $(FR_BUILD)
 	@$(PYTHON) $(PATCH_PC_MOVE_LABELS_SCRIPT) --rom $(FR_BUILD)
 	@$(PYTHON) $(PATCH_WORLD_MAP_ACTION_LABELS_SCRIPT) --rom $(FR_BUILD)
+	@$(PYTHON) $(PATCH_FLOOR_INDICATORS_FR_SCRIPT) --rom $(FR_BUILD) --source $(ENGLISH_ROM)
 	@echo "✓ FR ROM built — vérification des traductions de lieux..."
 	@$(PYTHON) -m pytest tests/test_location_names_fr.py -q --tb=short
 	@echo "✓ Vérification des noms de nature (pointeurs vivants)..."
