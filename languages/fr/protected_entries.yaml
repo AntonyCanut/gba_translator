@@ -970,3 +970,21 @@ entries:
   forbidden:
   - '{STR_VAR_1}'
   - chez toi, elle
+- offset: '0x1A508A'
+  name: 'Menu PC : question de sélection'
+  issue: '#18'
+  expected: Accéder à quel PC ?
+  forbidden:
+  - Quel PC doit être utilisé ?
+- offset: '0x417BB6'
+  name: 'Menu PC : PC du joueur'
+  issue: '#18'
+  expected: 'PC de {PLAYER}'
+  forbidden:
+  - "{PLAYER}'s PC"
+- offset: '0x417BD3'
+  name: 'Menu PC : PC du Prof. Log'
+  issue: '#18'
+  expected: PC du Prof. Log
+  forbidden:
+  - PC Prof. Log
