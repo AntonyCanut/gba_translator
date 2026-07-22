@@ -62,7 +62,6 @@ PATCH_HP_LABELS_SCRIPT := languages/fr/patches/hp_labels.py
 PATCH_PARTY_LV_LABEL_SCRIPT := languages/fr/patches/party_lv_label.py
 PATCH_MON_ICON_REPAIR_SCRIPT := languages/fr/patches/mon_icon_repair.py
 PATCH_PARTY_CANCEL_BUTTON_SCRIPT := languages/fr/patches/party_cancel_button.py
-PATCH_WORLD_MAP_ACTION_LABELS_SCRIPT := languages/fr/patches/world_map_action_labels.py
 PATCH_PC_MOVE_LABELS_SCRIPT := languages/fr/patches/pc_move_labels.py
 PATCH_POKEDEX_STAT_LABELS_FR_SCRIPT := languages/fr/patches/pokedex_stat_labels.py
 PATCH_TYPE_ICONS_SCRIPT := languages/fr/patches/type_icons.py
@@ -310,7 +309,6 @@ build-fr: check-translations-fr ensure-fr-translation $(FRENCH_EXTRACT) $(SPANIS
 	@$(PYTHON) $(PATCH_SUMMARY_LV_LABELS_SCRIPT) --rom $(FR_BUILD)
 	@$(PYTHON) $(PATCH_MON_ICON_REPAIR_SCRIPT) --rom $(FR_BUILD) --source $(FRENCH_ROM)
 	@$(PYTHON) $(PATCH_PARTY_CANCEL_BUTTON_SCRIPT) --rom $(FR_BUILD)
-	@$(PYTHON) $(PATCH_WORLD_MAP_ACTION_LABELS_SCRIPT) --rom $(FR_BUILD)
 	@$(PYTHON) $(PATCH_PC_MOVE_LABELS_SCRIPT) --rom $(FR_BUILD)
 	@echo "✓ FR ROM built — vérification des traductions de lieux..."
 	@$(PYTHON) -m pytest tests/test_location_names_fr.py -q --tb=short

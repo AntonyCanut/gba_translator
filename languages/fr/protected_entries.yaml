@@ -156,6 +156,18 @@ entries:
   expected: Dépl. objet
   forbidden:
   - Dépl. obj.
+- offset: '0x418E95'
+  name: 'Carte mondiale: action Annuler abrégée (variante principale)'
+  issue: '#111, #131'
+  expected: '{SE_SHOP}Annul.'
+  forbidden:
+  - '{SE_SHOP}Annuler'
+- offset: '0x418E9E'
+  name: 'Carte mondiale: action Annuler abrégée (variante secondaire)'
+  issue: '#111, #131'
+  expected: '{SE_SHOP}Annul.'
+  forbidden:
+  - '{SE_SHOP}Annuler'
 # Cellule « Move » de 4 octets : « Dépl. » (5o) déborde en place et corrompt la
 # chaîne voisine (« Dépl.Dépl. où ? », issue #29). combined_fr.txt garde le
 # fallback sûr « Dépl » ; le point est ajouté au rendu par le repoint
