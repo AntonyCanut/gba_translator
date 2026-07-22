@@ -87,3 +87,22 @@ class TestAccentedEGlyphsInBuiltRom:
                 "é and è resolved to identical glyphs in a patched block"
             )
         assert checked, "no accent-bearing render block found to compare é/è"
+
+
+class TestEngineSmallFontAccentsInBuiltRom:
+    """Issue #97 (B-462): the raw engine FONT_SMALL table (0x1EAF00) draws the
+    battle-healthbox nickname and other small text. Phantom 'translations'
+    extracted from its glyph bytes used to move the acute/grave accent ink one
+    column right on re-encoding (ü→u, 0xF6→0xE9). The built ROM must carry the
+    original connected accents on every span the phantom entries covered."""
+
+    def test_font_glyph_spans_carry_original_bytes(self, fr_rom_path):
+        from languages.fr.patches.font import FONT_GLYPH_RESTORES
+
+        rom = fr_rom_path.read_bytes()
+        for offset, original in FONT_GLYPH_RESTORES:
+            assert rom[offset:offset + len(original)] == original, (
+                f"engine font span at 0x{offset:06X} does not carry the "
+                "original glyph bytes — the phantom font 'translations' are "
+                "back (issue #97 regression)"
+            )

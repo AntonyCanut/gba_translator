@@ -30,6 +30,50 @@ WIDTH_TABLE_OFFSETS = [
     0x227930,
 ]
 
+# --- Engine text-printer fonts (raw 2bpp tables, issue #97) ------------------
+#
+# The battle-healthbox nickname, and the other "petit texte" surfaces of issue
+# #97, are NOT drawn from the LZ77 glyph blocks patched below: the text printer
+# dispatch at 0x08005B76 routes each fontId to a handler (font 0 at 0x08006448)
+# whose literal pool points at UNCOMPRESSED glyph tables — FONT_SMALL Latin at
+# 0x1EAF00, and further tables up to 0x22FD30 for fonts 1/2/4/5. Proven
+# in-engine with an mGBA write-watchpoint trace on the healthbox compose
+# buffer (B-462). Format: 32 bytes per FONT_SMALL codepoint, 8x16 in two 8x8
+# 2bpp tiles; each row a little-endian u16 (high byte = left 4 pixels, 2-bit
+# pairs MSB-first); pair values 0=unused column, 1=ink, 2=shadow, 3=opaque bg.
+#
+# Root cause of the "accent aigu" reports: the text extractor misread runs of
+# those glyph bytes as strings — e.g. é's accent rows c0 f6 c0 db c0 ff decode
+# to "FüFgF" (0xC0='F', 0xF6='ü', 0xFF=end) — and the injector wrote them back
+# re-encoded. 'ü' has no slot in the FR charmap and folds to 'u' (0xE9), so
+# 0xF6 became 0xE9: the accent's ink pixel moved one column right, leaving the
+# disconnected two-dot mark users kept reporting on à/á/è/é (and ò/ó/ù/ú),
+# plus stray rows in glyphs 0x00/0x01 and shifted rows in the font-2/4 tables.
+#
+# FONT_GLYPH_RESTORES puts back the original (EN==ES) bytes over every span
+# the phantom entries covered. The companion guard in
+# src/translators/19_build_translated_rom_generic.py stops the injector from
+# ever writing inside FONT_TABLE_REGION again.
+FONT_TABLE_REGION = (0x1EAF00, 0x230000)
+FONT_GLYPH_RESTORES = [
+    (0x1EAF1A, bytes.fromhex("0000000000000000c0dbc0f6c0ff")),
+    (0x1EAF3A, bytes.fromhex("0000000000000000c0f6c0dbc0ff")),
+    (0x1EB1C6, bytes.fromhex("c0dbc0f6c0ff")),  # à accent rows
+    (0x1EB1E6, bytes.fromhex("c0f6c0dbc0ff")),  # á accent rows
+    (0x1EB246, bytes.fromhex("c0dbc0f6c0ff")),  # è accent rows
+    (0x1EB266, bytes.fromhex("c0f6c0dbc0ff")),  # é accent rows
+    (0x1EB346, bytes.fromhex("c0dbc0f6c0ff")),  # ò accent rows
+    (0x1EB366, bytes.fromhex("c0f6c0dbc0ff")),  # ó accent rows
+    (0x1EB3C6, bytes.fromhex("c0dbc0f6c0ff")),  # ù accent rows
+    (0x1EB3E6, bytes.fromhex("c0f6c0dbc0ff")),  # ú accent rows
+    (0x208B85, bytes.fromhex("d6bfe9bffeff")),
+    (0x2094E4, bytes.fromhex("affdbffe000000000000000000c000c000c000c00000000000000000ff")),
+    (0x209D0A, bytes.fromhex("b6d9b6d9b6d900c000c000c000c000c000c000c000c0ff")),
+    (0x209DEB, bytes.fromhex("db5bd5a6da00000000000000000000000000000000b6eadaff")),
+    (0x2197FC, bytes.fromhex("affdbffa000000000000000000c000c000c000c00000000000000000ff")),
+    (0x21A0E1, bytes.fromhex("db5bd9a6d6f6ea00000000000000000000000000000000ff")),
+]
+
 
 class Lz77Block:
     def __init__(self, offset: int, compressed_len: int, decompressed: bytes) -> None:
@@ -431,6 +475,22 @@ def patch_width_tables(rom: bytearray) -> int:
     return patched
 
 
+def repair_engine_font_glyphs(rom: bytearray) -> int:
+    """Restore the original bytes of every engine-font span the phantom
+    "translations" overwrote (see FONT_GLYPH_RESTORES above).
+
+    Unconditional and idempotent: the only legitimate content of those glyph
+    spans is the stock data — no FR/IT/DE patch draws there (the DE umlauts
+    live at codepoints 0xF1-0xF6, outside every span). Returns the number of
+    spans whose bytes actually changed."""
+    repaired = 0
+    for offset, original in FONT_GLYPH_RESTORES:
+        if rom[offset:offset + len(original)] != original:
+            rom[offset:offset + len(original)] = original
+            repaired += 1
+    return repaired
+
+
 def repoint_pointers(rom: bytearray, old_offset: int, new_offset: int) -> int:
     old_ptr = (0x08000000 + old_offset).to_bytes(4, "little")
     new_ptr = (0x08000000 + new_offset).to_bytes(4, "little")
@@ -501,6 +561,7 @@ def apply_patches(rom: bytearray) -> Tuple[int, int, int]:
         patched_fonts += 1
 
     patched_tables = patch_width_tables(rom)
+    repair_engine_font_glyphs(rom)
     return patched_fonts, patched_tables, relocated_fonts
 
 

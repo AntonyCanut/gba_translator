@@ -29,6 +29,14 @@ FIXED_TABLE_RANGES = (
     (0x1A35800, 0x1A3ABB0, 'species info / Pokédex category'),
     # 1295 species-name cells of 11 bytes; already French in the source.
     (0x166A981, 0x166E126, 'species names'),
+    # Engine text-printer fonts (FONT_SMALL at 0x1EAF00 through font 5's
+    # width table at 0x22FD30): raw 2bpp glyph data, not text. The extractor
+    # misreads glyph-byte runs as strings — é's accent rows c0 f6 c0 db c0 ff
+    # decode to "FüFgF" — and writing them back re-encoded folds 'ü' (0xF6)
+    # to 'u' (0xE9), moving accent pixels one column right. That was the real
+    # root cause of issue #97 ("accents sur petit texte"). No translatable
+    # text lives in this region (verified over the full extraction).
+    (0x1EAF00, 0x230000, 'engine text-printer font tables'),
 )
 
 

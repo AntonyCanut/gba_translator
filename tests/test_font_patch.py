@@ -198,3 +198,73 @@ class TestAccentedEGlyphs(unittest.TestCase):
             self.assertEqual(rom[offset + CP_ACUTE_E], e_width, 'é width != e width')
             self.assertEqual(rom[offset + CP_GRAVE_E], e_width, 'è width != e width')
         self.assertTrue(checked, 'no width table with a live e width found')
+
+
+class TestEngineFontGlyphRepair(unittest.TestCase):
+    """Issue #97 root cause: phantom 'translations' extracted from the raw
+    engine font tables (glyph bytes decoded as strings like "FüFgF") were
+    re-encoded on injection, folding 'ü' (0xF6) to 'u' (0xE9) and moving the
+    acute/grave accent ink one column right in FONT_SMALL and fonts 2/4."""
+
+    def test_restore_spans_live_inside_the_protected_font_region(self) -> None:
+        from languages.fr.patches.font import FONT_GLYPH_RESTORES, FONT_TABLE_REGION
+        lo, hi = FONT_TABLE_REGION
+        for offset, original in FONT_GLYPH_RESTORES:
+            self.assertTrue(lo <= offset and offset + len(original) <= hi)
+
+    def test_restore_spans_are_covered_by_fixed_table_guard(self) -> None:
+        """The injector-side guard must cover every span the repair fixes,
+        otherwise a future rebuild re-corrupts what the repair restored."""
+        from languages.fr.patches.font import FONT_GLYPH_RESTORES
+        from src.core.fixed_tables import in_fixed_table
+        for offset, original in FONT_GLYPH_RESTORES:
+            self.assertTrue(in_fixed_table(offset))
+            self.assertTrue(in_fixed_table(offset + len(original) - 1))
+
+    @unittest.skipUnless(EN_ROM.exists(), 'English ROM missing')
+    def test_source_rom_already_carries_the_original_bytes(self) -> None:
+        """The restore table IS the EN/ES source content — repairing the
+        source ROM must be a no-op."""
+        from languages.fr.patches.font import FONT_GLYPH_RESTORES, repair_engine_font_glyphs
+        rom = bytearray(EN_ROM.read_bytes())
+        self.assertEqual(repair_engine_font_glyphs(rom), 0)
+        for offset, original in FONT_GLYPH_RESTORES:
+            self.assertEqual(bytes(rom[offset:offset + len(original)]), original)
+
+    @unittest.skipUnless(EN_ROM.exists(), 'English ROM missing')
+    def test_repair_restores_damaged_accent_rows(self) -> None:
+        from languages.fr.patches.font import FONT_GLYPH_RESTORES, repair_engine_font_glyphs
+        rom = bytearray(EN_ROM.read_bytes())
+        # Reproduce the historical damage: ü(0xF6) re-encoded as u(0xE9) in
+        # the é accent rows of FONT_SMALL.
+        e_acute_span = 0x1EB266
+        damaged = bytes.fromhex('c0e9c0dbc0ff')
+        rom[e_acute_span:e_acute_span + 6] = damaged
+        self.assertEqual(repair_engine_font_glyphs(rom), 1)
+        expected = dict(FONT_GLYPH_RESTORES)[e_acute_span]
+        self.assertEqual(bytes(rom[e_acute_span:e_acute_span + 6]), expected)
+        # Idempotent: second run repairs nothing.
+        self.assertEqual(repair_engine_font_glyphs(rom), 0)
+
+    @unittest.skipUnless(EN_ROM.exists(), 'English ROM missing')
+    def test_small_font_acute_accent_is_a_connected_diagonal(self) -> None:
+        """Semantic lock: in FONT_SMALL (2bpp, u16 rows, high byte = left 4
+        pixels, MSB-first pairs) the é accent ink pixels of rows 3-4 must be
+        diagonally adjacent — the disconnected two-dot mark is issue #97."""
+        rom = bytearray(EN_ROM.read_bytes())
+        from languages.fr.patches.font import repair_engine_font_glyphs
+        repair_engine_font_glyphs(rom)
+        base = 0x1EAF00
+        for cp in (0x17, 0x1B):  # á, é
+            off = base + cp * 32
+            ink_cols = {}
+            for row in (3, 4):
+                hi = rom[off + row * 2 + 1]
+                for i in range(4):
+                    if (hi >> (2 * (3 - i))) & 3 == 1:
+                        ink_cols[row] = i
+            self.assertEqual(len(ink_cols), 2, f'acute glyph 0x{cp:02X} must ink rows 3 and 4')
+            self.assertEqual(
+                ink_cols[3] - ink_cols[4], 1,
+                f'acute accent of glyph 0x{cp:02X} is not a connected diagonal',
+            )
