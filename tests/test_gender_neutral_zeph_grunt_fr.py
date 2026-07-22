@@ -1,5 +1,5 @@
 """
-Build-independent unit tests guarding four dialogue lines against the
+Build-independent unit tests guarding seven dialogue lines against the
 re-introduction of a player-gender pronoun buffer (him/her, he/she).
 
 Context (ticket "Dialogue Genre")
@@ -66,8 +66,11 @@ def _load_last_wins() -> dict[int, str]:
 
 # offset -> substrings the gender-free rework must keep.
 NEUTRAL_OFFSETS = {
+    0x1F3253B: ("Dis-moi, quel est", "ton nom ?"),
+    0x1F32861: ("l'effrayer", "gagner un simple combat"),
     0x1F329AE: ("en finir avec toi",),          # Zeph: was "...avec {STR_VAR_1}" -> "le"
     0x1F3296E: ("te battre", "<0xFC><0x01><0x04>"),  # Ivory: was "battre {STR_VAR_1}"
+    0x1F32A8E: ("J'aime bien ça chez toi.",),
     0x1F45482: ("rejoindre son ami !", "{PLAYER}"),  # drop redundant possessive buffer
     0x1FA6E9F: ("te frapper", "tu vas pleurer"),     # Grunt: was "frapper {STR_VAR_1}..."
 }

@@ -955,3 +955,18 @@ entries:
   - Magic Guard
   - Unaware
   - Oblivious
+- offset: '0x1F32861'
+  name: 'Cratéris : reproche de Zeph à Ivory'
+  issue: '#141'
+  expected: Oh, Ivory…\pComment sommes-nous censés\nl'effrayer si tu n'arrives pas à\lgagner un simple combat ?
+  forbidden:
+  - '{STR_VAR_1}'
+  - effrayer elle
+  - battre elle
+- offset: '0x1F32A8E'
+  name: 'Cratéris : compliment de Zeph au joueur'
+  issue: '#141'
+  expected: Je dois te reconnaître ça. Tu es\nplus fort que je ne le pensais.\pJ'aime bien ça chez toi.\pCette force, je la voulais aussi\npour mon fils…
+  forbidden:
+  - '{STR_VAR_1}'
+  - chez toi, elle
