@@ -8,6 +8,8 @@ from pathlib import Path
 
 import pytest
 
+from src.text.charmap_data import CHAR_TO_BYTE
+
 
 ROOT = Path(__file__).resolve().parents[3]
 BUILT_ROM = ROOT / "output/roms/GenedRom-fr.gba"
@@ -25,10 +27,11 @@ WORLD_MAP_HINT_OFFSET = 0x418E77
 WORLD_MAP_MOVE_OFFSET = 0x418EB5
 WORLD_MAP_HINT_POINTER = 0x9FB64
 WORLD_MAP_MOVE_POINTERS = (0xC05D8, 0xC12E0, 0xC283C, 0xC4FE8)
-WORLD_MAP_HINT_TEXT = "{DPAD_ANY}Dépl. {SE_SHOP}OK {B_BUTTON}Annul."
+WORLD_MAP_HINT_TEXT = "{DPAD_ANY}Dépl. {SE_SHOP}OK {B_BUTTON}Annul"
 WORLD_MAP_MOVE_TEXT = "{DPAD_ANY}Dépl."
+WORLD_MAP_HINT_CANCEL_SLOT_SIZE = 5
 WORLD_MAP_HINT_BYTES = bytes.fromhex(
-    "f80cbe1be4e0ad00f800c9c500f801bbe2e2e9e0adff"
+    "f80cbe1be4e0ad00f800c9c500f801bbe2e2e9e0ff"
 )
 WORLD_MAP_MOVE_BYTES = bytes.fromhex("f80cbe1be4e0adff")
 
@@ -73,6 +76,15 @@ def test_world_map_sources_use_complete_short_labels() -> None:
     }
 
 
+def test_world_map_hint_cancel_fits_its_five_glyph_slot() -> None:
+    """Le libellé B du bandeau ne doit pas déborder dans la carte."""
+    mapping = _load_last_wins(COMBINED_FR)
+    cancel_label = mapping[WORLD_MAP_HINT_OFFSET].rsplit("{B_BUTTON}", 1)[1]
+    encoded_label = bytes(CHAR_TO_BYTE[character] for character in cancel_label)
+
+    assert len(encoded_label) <= WORLD_MAP_HINT_CANCEL_SLOT_SIZE
+
+
 @pytest.mark.rom
 def test_world_map_cancel_pointers_render_short_label() -> None:
     """Toutes les variantes de la carte doivent afficher « Annul. »."""
@@ -97,7 +109,7 @@ def test_party_cancel_entries_keep_full_shared_label() -> None:
 
 @pytest.mark.rom
 def test_world_map_move_hints_have_no_trailing_residue() -> None:
-    """Le bandeau ne doit plus garder le « r » final de l'ancien « Retour »."""
+    """Le bandeau ne doit garder ni le « r » ni le point final hors cellule."""
     rom = BUILT_ROM.read_bytes()
 
     assert (
