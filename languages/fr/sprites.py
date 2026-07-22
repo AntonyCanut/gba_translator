@@ -64,4 +64,13 @@ SPRITES: dict[str, SpriteDef] = {
         tiles_wide=15,
         tiles_tall=1,
     ),
+    # Cube pocket footer (GitHub issue #140): compressed BG tiles loaded at
+    # charblock 3.  The first 52 tiles form a 13x4 editable sheet containing
+    # the baked ``START Sort`` hint; the final 10 tiles in the same LZ77 block
+    # are intentionally preserved by ``insert_block``.
+    "cube_sort_hint": SpriteDef(
+        blocks=(0x00EF1B68,),
+        tiles_wide=13,
+        tiles_tall=4,
+    ),
 }

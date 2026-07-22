@@ -306,6 +306,7 @@ build-fr: check-translations-fr ensure-fr-translation $(FRENCH_EXTRACT) $(SPANIS
 	@$(PYTHON) languages/fr/patches/nature_names.py --rom $(FR_BUILD) --reference-rom $(SPANISH_ROM)
 	@$(PYTHON) scripts/insert_sprite.py --rom $(FR_BUILD) --lang fr --sprite selection --bmp languages/fr/sprites/selection.bmp
 	@$(PYTHON) scripts/insert_sprite.py --rom $(FR_BUILD) --lang fr --sprite start_menu_move_hint --bmp languages/fr/sprites/start_menu_move_hint.bmp
+	@$(PYTHON) scripts/insert_sprite.py --rom $(FR_BUILD) --lang fr --sprite cube_sort_hint --bmp languages/fr/sprites/cube_sort_hint.bmp
 	@$(PYTHON) $(PATCH_SUMMARY_LV_LABELS_SCRIPT) --rom $(FR_BUILD)
 	@$(PYTHON) $(PATCH_MON_ICON_REPAIR_SCRIPT) --rom $(FR_BUILD) --source $(FRENCH_ROM)
 	@$(PYTHON) $(PATCH_PARTY_CANCEL_BUTTON_SCRIPT) --rom $(FR_BUILD)
