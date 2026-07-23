@@ -177,10 +177,10 @@ build-es: $(OFFSET_MAP) $(BUILD_SCRIPT)
 		--output $(SPANISH_BUILD)
 
 ## ensure-fr-translation: auto-run prepare-fr when no translation_ready.json
-## exists yet, or the latest one is empty (0 translations), so `make build-fr`
-## is self-sufficient on a fresh checkout or CI worktree instead of failing
-## with "No translations provided". Never overwrites a translation_ready.json
-## already produced by the trilingual CSV route as long as it has entries.
+## exists yet, when the latest one is empty (0 translations), or when it predates
+## combined_fr.txt. This keeps `make build-fr` from silently rebuilding with stale
+## menu/dialogue text after a source correction while preserving a newer JSON
+## produced by the trilingual CSV route.
 ## prepare-fr is a lower-fidelity CI bypass (see its own header comment) —
 ## for a release build, generate the curated CSV first (apply_combined_fr.py
 ## --extend -> 09_csv_to_json_v2.py) so this fallback never triggers.
@@ -190,6 +190,9 @@ ensure-fr-translation: $(FRENCH_EXTRACT)
 		$(MAKE) prepare-fr; \
 	elif [ "$$($(PYTHON) -c "import json; d=json.load(open('$(FR_TRANSLATION)')); print(len(d.get('translations', [])))")" = "0" ]; then \
 		echo "$(FR_TRANSLATION) has 0 translations — falling back to 'make prepare-fr' (CI bypass, see docs/20_TRANSLATION_PRESERVATION.md)..."; \
+		$(MAKE) prepare-fr; \
+	elif [ languages/fr/combined_fr.txt -nt "$(FR_TRANSLATION)" ]; then \
+		echo "$(FR_TRANSLATION) predates combined_fr.txt — refreshing it with 'make prepare-fr'..."; \
 		$(MAKE) prepare-fr; \
 	fi
 

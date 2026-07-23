@@ -169,8 +169,22 @@ class TestBuildFrPipeline(unittest.TestCase):
         )
         self.assertEqual(
             recipe.count("$(MAKE) prepare-fr"),
-            2,
-            "missing and empty translation JSONs must both run prepare-fr",
+            3,
+            "missing, empty and stale translation JSONs must all run prepare-fr",
+        )
+
+    def test_translation_preparation_rebuilds_stale_json(self) -> None:
+        """Un JSON antérieur à la source FR ne doit jamais alimenter le build."""
+        _, recipe = _extract_target_block(self.text, "ensure-fr-translation")
+        self.assertIn(
+            'languages/fr/combined_fr.txt -nt "$(FR_TRANSLATION)"',
+            recipe,
+            "ensure-fr-translation must refresh a JSON older than combined_fr.txt",
+        )
+        self.assertEqual(
+            recipe.count("$(MAKE) prepare-fr"),
+            3,
+            "missing, empty and stale translation JSONs must all run prepare-fr",
         )
 
     def test_build_fr_runs_inline_override(self) -> None:
