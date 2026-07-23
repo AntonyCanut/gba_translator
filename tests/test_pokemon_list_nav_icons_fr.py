@@ -17,12 +17,21 @@ exactly — an extra or missing token misaligns every icon after it.
 from __future__ import annotations
 
 import re
+import struct
 from pathlib import Path
+
+import pytest
 
 OFFSET = 0x415F51
 COMBINED_FR = Path(__file__).resolve().parent.parent / "languages/fr/combined_fr.txt"
 COMBINED_DE = Path(__file__).resolve().parent.parent / "languages/de/combined_de.txt"
+BUILT_ROM = Path(__file__).resolve().parent.parent / "output/roms/GenedRom-fr.gba"
 EXPECTED_FR_NAV = "{DPAD_UPDOWN}Choix {SE_SHOP}OK {B_BUTTON}Annul."
+EXPECTED_FR_NAV_BYTES = bytes.fromhex(
+    "f80abddce3ddec00f800c9c500f801bbe2e2e9e0adff"
+)
+FR_NAV_POINTERS = (0x103234, 0x103514, 0x1423A8)
+ROM_BASE = 0x08000000
 
 
 def _last_entry(path: Path, offset: int) -> str:
@@ -50,6 +59,12 @@ def _assert_has_all_three_button_icons(text: str) -> None:
     )
 
 
+def _read_pointed_bytes(rom: bytes, pointer_offset: int) -> bytes:
+    target = struct.unpack_from("<I", rom, pointer_offset)[0] - ROM_BASE
+    assert 0 <= target < len(rom)
+    return rom[target:rom.index(0xFF, target) + 1]
+
+
 def test_fr_pokemon_list_nav_has_all_three_button_icons():
     _assert_has_all_three_button_icons(_last_entry(COMBINED_FR, OFFSET))
 
@@ -60,3 +75,13 @@ def test_fr_pokemon_list_nav_uses_punctuated_cancel_abbreviation():
 
 def test_de_pokemon_list_nav_has_all_three_button_icons():
     _assert_has_all_three_button_icons(_last_entry(COMBINED_DE, OFFSET))
+
+
+@pytest.mark.rom
+def test_fr_pokemon_list_live_pointers_render_punctuated_cancel():
+    rom = BUILT_ROM.read_bytes()
+
+    assert all(
+        _read_pointed_bytes(rom, pointer) == EXPECTED_FR_NAV_BYTES
+        for pointer in FR_NAV_POINTERS
+    )
