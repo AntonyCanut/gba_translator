@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Stabilise le bandeau d'action de la carte mondiale (#111 / #131).
+"""Stabilise les libellés d'action de la carte mondiale (#111 / #131).
 
 Le bandeau de déplacement est chargé par le littéral ``0x9FB64``. La source
 FR courte existe à ``0x418E77``, mais le build générique peut conserver une
@@ -7,10 +7,14 @@ ancienne cellule terminée par « Annul. » ou laisser le littéral pointer vers
 une relocalisation périmée. Le correctif source seul ne survit donc pas à tous
 les rebuilds.
 
-Ce patch post-build réécrit la cellule canonique, qui tient dans son emplacement
-original, puis repointe inconditionnellement le seul littéral du bandeau vers
-elle. Il est déterministe, idempotent et ne touche pas les autres libellés
-« Annul. » de la carte ni le « Annuler » partagé du menu Équipe.
+Les actions d'annulation ont le même problème : l'injection relocalise leurs
+trois pointeurs vers la chaîne générique « Annuler » et laisse les deux cellules
+anglaises d'origine intactes. La forme « Annul. » occupe exactement la largeur
+de « Cancel » ; elle peut donc être restaurée en place sans allocation.
+
+Ce patch post-build réécrit les trois cellules canoniques, puis restaure leurs
+quatre pointeurs. Il est déterministe, idempotent et ne touche ni le
+« Annuler » partagé du menu Équipe ni sa relocalisation.
 """
 
 from __future__ import annotations
@@ -30,9 +34,18 @@ WORLD_MAP_HINT_BYTES = bytes.fromhex(
     "f80cbe1be4e0ad00f800c9c500f801bbe2e2e9e0ff"
 )
 
+# {SE_SHOP}Annul. + terminateur CFRU, même largeur que {SE_SHOP}Cancel.
+WORLD_MAP_CANCEL_BYTES = bytes.fromhex("f800bbe2e2e9e0adff")
+WORLD_MAP_CANCEL_OFFSETS = (0x418E95, 0x418E9E)
+WORLD_MAP_CANCEL_POINTER_TARGETS = (
+    (0xC06FC, 0x418E95),
+    (0xC1B28, 0x418E9E),
+    (0xC50C0, 0x418E95),
+)
+
 
 def apply(rom: bytearray) -> int:
-    """Restaure la cellule courte et son pointeur vivant.
+    """Restaure les cellules courtes et leurs pointeurs vivants.
 
     Returns:
         Nombre d'éléments modifiés (cellule et/ou pointeur).
@@ -40,6 +53,14 @@ def apply(rom: bytearray) -> int:
     minimum_size = max(
         WORLD_MAP_HINT_POINTER + 4,
         WORLD_MAP_HINT_OFFSET + len(WORLD_MAP_HINT_BYTES),
+        *(
+            offset + len(WORLD_MAP_CANCEL_BYTES)
+            for offset in WORLD_MAP_CANCEL_OFFSETS
+        ),
+        *(
+            pointer + 4
+            for pointer, _target in WORLD_MAP_CANCEL_POINTER_TARGETS
+        ),
     )
     if len(rom) < minimum_size:
         raise ValueError(
@@ -59,6 +80,18 @@ def apply(rom: bytearray) -> int:
             "<I", rom, WORLD_MAP_HINT_POINTER, WORLD_MAP_HINT_CPU_ADDR
         )
         patched += 1
+
+    for offset in WORLD_MAP_CANCEL_OFFSETS:
+        end = offset + len(WORLD_MAP_CANCEL_BYTES)
+        if bytes(rom[offset:end]) != WORLD_MAP_CANCEL_BYTES:
+            rom[offset:end] = WORLD_MAP_CANCEL_BYTES
+            patched += 1
+
+    for pointer, target in WORLD_MAP_CANCEL_POINTER_TARGETS:
+        target_cpu_addr = ROM_BASE + target
+        if struct.unpack_from("<I", rom, pointer)[0] != target_cpu_addr:
+            struct.pack_into("<I", rom, pointer, target_cpu_addr)
+            patched += 1
 
     return patched
 

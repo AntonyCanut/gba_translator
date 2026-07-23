@@ -22,6 +22,14 @@ WORLD_MAP_CANCEL_OFFSETS = (0x418E95, 0x418E9E)
 WORLD_MAP_CANCEL_POINTERS = (0xC06FC, 0xC1B28, 0xC50C0)
 WORLD_MAP_CANCEL_TEXT = "{SE_SHOP}Annul."
 WORLD_MAP_CANCEL_BYTES = bytes.fromhex("f800bbe2e2e9e0adff")
+WORLD_MAP_CANCEL_ORIGINAL_BYTES = bytes.fromhex("f800bdbae2bdd9e0ff")
+WORLD_MAP_CANCEL_FULL_BYTES = bytes.fromhex("f800bbe2e2e9e0d9e6ff")
+WORLD_MAP_CANCEL_FULL_OFFSET = 0x418F20
+WORLD_MAP_CANCEL_TARGETS = {
+    0xC06FC: 0x418E95,
+    0xC1B28: 0x418E9E,
+    0xC50C0: 0x418E95,
+}
 
 # Bandeaux de déplacement affichés en haut de la carte mondiale.
 WORLD_MAP_HINT_OFFSET = 0x418E77
@@ -66,7 +74,11 @@ def _read_pointed_bytes(rom: bytes, pointer_offset: int) -> bytes:
     return rom[text_offset:terminator + 1]
 
 
-def _fake_rom(*, pointed_offset: int = WORLD_MAP_HINT_OFFSET) -> bytearray:
+def _fake_rom(
+    *,
+    pointed_offset: int = WORLD_MAP_HINT_OFFSET,
+    rebuilt_cancel_labels: bool = False,
+) -> bytearray:
     """Construit une ROM minimale avec le résidu livré par le rebuild Cube."""
     rom = bytearray(b"\xff" * FAKE_ROM_SIZE)
     rom[WORLD_MAP_HINT_OFFSET:WORLD_MAP_HINT_OFFSET + len(
@@ -75,6 +87,29 @@ def _fake_rom(*, pointed_offset: int = WORLD_MAP_HINT_OFFSET) -> bytearray:
     struct.pack_into(
         "<I", rom, WORLD_MAP_HINT_POINTER, ROM_BASE + pointed_offset
     )
+    for offset in WORLD_MAP_CANCEL_OFFSETS:
+        rom[offset:offset + len(WORLD_MAP_CANCEL_BYTES)] = (
+            WORLD_MAP_CANCEL_BYTES
+        )
+    for pointer, target in WORLD_MAP_CANCEL_TARGETS.items():
+        struct.pack_into("<I", rom, pointer, ROM_BASE + target)
+
+    if rebuilt_cancel_labels:
+        for offset in WORLD_MAP_CANCEL_OFFSETS:
+            rom[offset:offset + len(WORLD_MAP_CANCEL_ORIGINAL_BYTES)] = (
+                WORLD_MAP_CANCEL_ORIGINAL_BYTES
+            )
+        rom[
+            WORLD_MAP_CANCEL_FULL_OFFSET:
+            WORLD_MAP_CANCEL_FULL_OFFSET + len(WORLD_MAP_CANCEL_FULL_BYTES)
+        ] = WORLD_MAP_CANCEL_FULL_BYTES
+        for pointer in WORLD_MAP_CANCEL_POINTERS:
+            struct.pack_into(
+                "<I",
+                rom,
+                pointer,
+                ROM_BASE + WORLD_MAP_CANCEL_FULL_OFFSET,
+            )
     return rom
 
 
@@ -99,6 +134,40 @@ def test_hint_patch_is_idempotent() -> None:
 
     assert apply(rom) == 0
     assert bytes(rom) == after_first_apply
+
+
+def test_cancel_patch_restores_original_cells_and_pointer_table() -> None:
+    """Le rebuild ne doit pas rediriger la carte vers « Annuler »."""
+    rom = _fake_rom(rebuilt_cancel_labels=True)
+    full_label_before = bytes(
+        rom[
+            WORLD_MAP_CANCEL_FULL_OFFSET:
+            WORLD_MAP_CANCEL_FULL_OFFSET + len(WORLD_MAP_CANCEL_FULL_BYTES)
+        ]
+    )
+
+    assert (
+        len(WORLD_MAP_CANCEL_BYTES)
+        == len(WORLD_MAP_CANCEL_ORIGINAL_BYTES)
+        == 9
+    )
+    assert apply(rom) == 6
+    assert all(
+        bytes(rom[offset:offset + len(WORLD_MAP_CANCEL_BYTES)])
+        == WORLD_MAP_CANCEL_BYTES
+        for offset in WORLD_MAP_CANCEL_OFFSETS
+    )
+    assert {
+        pointer: struct.unpack_from("<I", rom, pointer)[0] - ROM_BASE
+        for pointer in WORLD_MAP_CANCEL_POINTERS
+    } == WORLD_MAP_CANCEL_TARGETS
+    assert bytes(
+        rom[
+            WORLD_MAP_CANCEL_FULL_OFFSET:
+            WORLD_MAP_CANCEL_FULL_OFFSET + len(WORLD_MAP_CANCEL_FULL_BYTES)
+        ]
+    ) == full_label_before
+    assert apply(rom) == 0
 
 
 def test_world_map_sources_use_complete_short_labels() -> None:

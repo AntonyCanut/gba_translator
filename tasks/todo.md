@@ -88,3 +88,24 @@
   1 501 tests Python rapides passent (`1 500 passed`, `1 skipped`).
 - La tentative 2 du run #81 est verte : builds FR/IT/DE, trois artefacts et
   publication de la release réussis.
+
+# Carte mondiale — libellé court « Annul. » après rebuild
+
+- [x] Comparer les pointeurs vivants de la ROM commitée et du rebuild régressé.
+- [x] Ajouter un test rouge reproduisant le repoint vers « Annuler ».
+- [x] Restaurer les deux cellules courtes et les trois vrais pointeurs carte.
+- [x] Reconstruire la ROM FR et vérifier les octets pointés.
+- [x] Exécuter les tests ciblés et la validation rapide pertinente.
+- [x] Relire le diff, committer et documenter les résultats.
+
+## Revue
+
+- Le rebuild régressé envoyait `0xC06FC`, `0xC1B28` et `0xC50C0` vers une
+  relocalisation de la chaîne générique « Annuler ». Le patch post-build
+  restaure désormais les cibles carte `0x418E95`, `0x418E9E`, `0x418E95`.
+- Les deux cellules reçoivent `{SE_SHOP}Annul.` sur exactement 9 octets,
+  terminateur compris, soit la largeur de `{SE_SHOP}Cancel`.
+- La chaîne générique « Annuler » et les pointeurs du menu Équipe restent
+  inchangés ; une seconde application du patch est sans effet.
+- Vérifications : 1 512 tests Python rapides et 68 tests Vitest réussis,
+  builds FR/IT/DE réussis, puis 3 assertions ROM ciblées réussies.
