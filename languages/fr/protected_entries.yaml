@@ -156,6 +156,12 @@ entries:
   expected: Dépl. objet
   forbidden:
   - Dépl. obj.
+- offset: '0x415F51'
+  name: 'Liste Pokédex: action Annuler abrégée avec point'
+  issue: '#142'
+  expected: '{DPAD_UPDOWN}Choix {SE_SHOP}OK {B_BUTTON}Annul.'
+  forbidden:
+  - '{DPAD_UPDOWN}Choix {SE_SHOP}OK {B_BUTTON}Annul'
 - offset: '0x418E95'
   name: 'Carte mondiale: action Annuler abrégée (variante principale)'
   issue: '#111, #131'

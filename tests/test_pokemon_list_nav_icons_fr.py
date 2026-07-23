@@ -22,6 +22,7 @@ from pathlib import Path
 OFFSET = 0x415F51
 COMBINED_FR = Path(__file__).resolve().parent.parent / "languages/fr/combined_fr.txt"
 COMBINED_DE = Path(__file__).resolve().parent.parent / "languages/de/combined_de.txt"
+EXPECTED_FR_NAV = "{DPAD_UPDOWN}Choix {SE_SHOP}OK {B_BUTTON}Annul."
 
 
 def _last_entry(path: Path, offset: int) -> str:
@@ -51,6 +52,10 @@ def _assert_has_all_three_button_icons(text: str) -> None:
 
 def test_fr_pokemon_list_nav_has_all_three_button_icons():
     _assert_has_all_three_button_icons(_last_entry(COMBINED_FR, OFFSET))
+
+
+def test_fr_pokemon_list_nav_uses_punctuated_cancel_abbreviation():
+    assert _last_entry(COMBINED_FR, OFFSET) == EXPECTED_FR_NAV
 
 
 def test_de_pokemon_list_nav_has_all_three_button_icons():
