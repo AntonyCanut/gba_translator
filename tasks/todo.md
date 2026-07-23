@@ -1,3 +1,25 @@
+# Sonde mGBA — premier combat italien
+
+- [x] Reproduire l’échec sur la carte 4.10 et figer la cause racine.
+- [x] Ajouter un garde rouge sur la fixture et la route déterministe.
+- [x] Remplacer l’exploration cyclique par un trajet reproductible.
+- [x] Versionner une savestate courte à l’entrée du premier combat.
+- [x] Rejouer le combat jusqu’à la victoire avec détection texte/hash écran.
+- [x] Exécuter les validations ciblées et rapides, relire puis committer.
+
+## Revue
+
+- La marche cyclique ne rejoignait pas le déclencheur derrière le labyrinthe
+  de la map 4.10. La fixture versionnée démarre désormais au garde avec un
+  starter valide ; sa route déclarative de 60 pressions A est bornée et vérifie
+  d’abord la map `(4,10)` et la position `(21,22)`.
+- La sonde garde les deux oracles fiables : texte CFRU décodé pour reconnaître
+  le combat et la victoire, hash MD5 des captures pour les freezes. Les textes
+  propres à ce combat (« Mi arrendo », « Gible! Torna! ») empêchent de prendre
+  l’overworld post-victoire pour un freeze.
+- Vérifications : garde TDD 2/2, E2E IT 2/2 en 10,88 s, typecheck ciblé,
+  1 518 tests Python réussis (1 skip préexistant) et 68 tests Vitest réussis.
+
 # B-552 — Fix mail move-to-bag label mapping
 
 - [x] Trace the rebuilt ROM mismatch to the dedicated patch preimage guard.

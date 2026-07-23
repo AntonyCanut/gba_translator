@@ -1,12 +1,8 @@
 /**
  * probe_it_battle.mts — verify the Italian ROM can reach and win its first battle.
  *
- * Two execution paths:
- *   1. Fixture savestate exists (tests/fixtures/saves/it_first_battle.ss7):
- *      copy it to the ROM slot, load state, go straight to the battle phase.
- *   2. No fixture: boot from title, auto-play through the Unbound intro/prologue
- *      (confirmed working by F-56), mash into the first scripted battle, then
- *      save the state as a fixture for future runs.
+ * Loads the versioned pre-battle fixture, checks its expected map/position,
+ * then follows a short declarative input route into the scripted battle.
  *
  * Battle detection: text buffers (Italian keywords) — the inBattle flag at
  * 0x030022C8 is unreliable in Unbound (per project notes).
@@ -32,6 +28,9 @@ const FIXTURE_SLOT = 7;
 const FIXTURE_FILE = path.join(
   PROJECT_ROOT, 'tests', 'fixtures', 'saves', 'it_first_battle.ss7',
 );
+const ROUTE_FILE = path.join(
+  PROJECT_ROOT, 'tests', 'fixtures', 'routes', 'it_first_battle.json',
+);
 const ROM_SLOT_PATH = ROM.replace(/\.gba$/, `.ss${FIXTURE_SLOT}`);
 const OUT = '/tmp/it-battle';
 
@@ -46,7 +45,7 @@ const ADDR = {
 // challenge text appears, not only once the Fight/Bag/Run menu renders.
 const BATTLE_RE = /Lotta|Fuggi|Borsa|selvagg|usa |è apparso|appare|nemic|Punti Ferita|P\.F\.|in fuga|guadagna|Punti Esp|vuole combattere|ti sfida|manda in campo|scende in campo|ti ha sfidato/i;
 // Italian victory indicators.
-const VICTORY_RE = /guadagna|Punti Esp|livell|è cresciut|sconfitt|messo K\.?O|svenuto|in fuga|ha vinto|vinto!/i;
+const VICTORY_RE = /guadagna|Punti Esp|livell|è cresciut|sconfitt|messo K\.?O|svenuto|in fuga|ha vinto|vinto!|mi arrendo|lascerò passare|Gible! Torna!/i;
 // English tokens that must not appear in Italian text.
 const ENGLISH_RE = /\b(FIGHT|RUN|BAG|fainted|appeared|used|wild|Fight|the foe|POKE BALL|CONTINUE|NEW GAME|Options?)\b/;
 
@@ -86,6 +85,70 @@ async function shot(c: MgbaBridgeClient, name: string): Promise<void> {
   try { await c.screenshot(path.join(OUT, name)); } catch { /* */ }
 }
 
+interface RouteStep {
+  key: string;
+  repeat: number;
+  holdFrames: number;
+  frames: number;
+}
+
+interface BattleRoute {
+  start: {
+    map: [number, number];
+    position: [number, number];
+  };
+  steps: RouteStep[];
+}
+
+function loadRoute(): BattleRoute {
+  return JSON.parse(fs.readFileSync(ROUTE_FILE, 'utf8')) as BattleRoute;
+}
+
+async function followRoute(
+  c: MgbaBridgeClient,
+  route: BattleRoute,
+): Promise<{ battleDetected: boolean; frozen: boolean }> {
+  const state = await c.getState() as {
+    mapGroup?: number;
+    mapNumber?: number;
+    playerX?: number;
+    playerY?: number;
+  };
+  const actual = [state.mapGroup, state.mapNumber, state.playerX, state.playerY];
+  const expected = [...route.start.map, ...route.start.position];
+  if (actual.some((value, index) => value !== expected[index])) {
+    console.error(`[probe] Fixture position mismatch: expected=${expected.join(',')} actual=${actual.join(',')}`);
+    return { battleDetected: false, frozen: false };
+  }
+
+  let lastHash = '';
+  let same = 0;
+  let iteration = 0;
+  for (const step of route.steps) {
+    for (let repeat = 0; repeat < step.repeat; repeat++) {
+      await c.pressKey(step.key, step.holdFrames);
+      await c.advanceFrames(step.frames);
+
+      const text = await harvestText(c, 'route');
+      if (BATTLE_RE.test(text)) {
+        console.error(`[probe] First battle detected at route step ${iteration}`);
+        return { battleDetected: true, frozen: false };
+      }
+
+      const screenshot = path.join(OUT, `route-${String(iteration).padStart(3, '0')}.png`);
+      await c.screenshot(screenshot);
+      const hash = md5(screenshot);
+      if (hash && hash === lastHash) same++; else { same = 0; lastHash = hash; }
+      if (same >= 30) {
+        console.error(`[probe] FREEZE on fixture route at step ${iteration}`);
+        return { battleDetected: false, frozen: true };
+      }
+      iteration++;
+    }
+  }
+  return { battleDetected: false, frozen: false };
+}
+
 async function main(): Promise<void> {
   fs.rmSync(OUT, { recursive: true, force: true });
   fs.mkdirSync(OUT, { recursive: true });
@@ -98,149 +161,31 @@ async function main(): Promise<void> {
   const c = new MgbaBridgeClient();
   await c.startMgba(ROM);
 
-  let startedFromFixture = false;
-
-  // ---- Fast path: pre-baked fixture savestate ----
-  if (fs.existsSync(FIXTURE_FILE)) {
-    console.error('[probe] Fixture found — loading savestate slot ' + FIXTURE_SLOT);
-    fs.copyFileSync(FIXTURE_FILE, ROM_SLOT_PATH);
-    await c.advanceFrames(120);
-    try {
-      await c.loadState(FIXTURE_SLOT);
-      await c.advanceFrames(120);
-      startedFromFixture = true;
-      console.error('[probe] Fixture loaded — skipping intro');
-    } catch (e) {
-      console.error('[probe] loadState failed:', String(e), '— falling back to boot');
-    }
+  if (!fs.existsSync(FIXTURE_FILE) || !fs.existsSync(ROUTE_FILE)) {
+    console.error('[probe] Versioned fixture or route missing');
+    return finish(c, false, false, false);
   }
 
-  // ---- Slow path: boot from title through the Unbound intro ----
-  if (!startedFromFixture) {
-    console.error('[probe] No fixture — booting from title through Unbound intro...');
+  console.error('[probe] Loading versioned savestate slot ' + FIXTURE_SLOT);
+  fs.copyFileSync(FIXTURE_FILE, ROM_SLOT_PATH);
+  await c.advanceFrames(120);
+  await c.loadState(FIXTURE_SLOT);
+  await c.advanceFrames(120);
 
-    await c.advanceFrames(600);   // wait for title logo animation
-    await shot(c, '00-title.png');
-
-    // START to open menu, A to confirm → starts new game (no battery save in IT).
-    await c.pressKey('START', 4); await c.advanceFrames(120);
-    await c.pressKey('A', 4);    await c.advanceFrames(120);
-
-    let lastHash = '', same = 0;
-    // 700 iterations × 40 frames. The Italian build's opening narrative (the
-    // Hoopa "Spazio Cubo" cutscene ahead of the regular professor intro) runs
-    // well past the 220-iteration budget previously used here — confirmed by
-    // observing harvested dialogue text still mid-cutscene at the old budget's
-    // boundary. Pure A-mashing (no directional presses) avoids accidentally
-    // toggling a Yes/No confirmation prompt mid-cutscene.
-    for (let i = 0; i < 700; i++) {
-      await c.pressKey('A', 4);
-      // Naming keyboard (BPRE): START confirms the selected name in early steps.
-      if (i < 25 && i % 4 === 3) await c.pressKey('START', 4);
-      await c.advanceFrames(40);
-
-      const txt = await harvestText(c, 'intro');
-      if (BATTLE_RE.test(txt)) {
-        console.error('[probe] Battle detected during intro phase!');
-        break;
-      }
-
-      if (i % 15 === 0) {
-        const p = path.join(OUT, `intro-${String(i).padStart(3, '0')}.png`);
-        await c.screenshot(p);
-        const h = md5(p);
-        if (h && h === lastHash) same++; else { same = 0; lastHash = h; }
-        if (same >= 28) {
-          console.error(`[probe] FREEZE during intro at i=${i}`);
-          await shot(c, 'freeze-intro.png');
-          return finish(c, false, false, true);
-        }
-      }
-    }
-    await shot(c, '01-post-intro.png');
-    const st = await c.getState() as { mapGroup?: number; mapNumber?: number };
-    console.error(`[probe] post-intro: map=${st.mapGroup}.${st.mapNumber}`);
-  }
-
-  // ---- Phase 2: drive into the first scripted battle ----
-  // Unbound's first battle is scripted (not a wild encounter), triggered by
-  // actually walking into the trainer's sightline — pure A-mashing in place
-  // never moves the player far enough to reach it. Walk a real direction,
-  // talking (A) along the way to clear any dialogue/event script that blocks
-  // movement, and turn to the next direction once the player position stops
-  // changing (blocked by scenery/an NPC), mirroring the proven traversal
-  // logic in probe_it_playthrough.mts.
-  const dirs = ['DOWN', 'RIGHT', 'UP', 'LEFT'] as const;
-  let battleDetected = false;
-  let lastHash2 = '', same2 = 0;
-  let fixtureSaved = false;
-  let dirIdx = 0;
-
-  const playerPos = async (): Promise<string> => {
-    try {
-      const s = await c.getState() as { playerX?: number; playerY?: number };
-      return `${s.playerX},${s.playerY}`;
-    } catch { return ''; }
-  };
-  let prevPos = await playerPos();
-
-  // 1800 outer iterations (×6 substeps). Verified against the real IT ROM:
-  // the previous 480-iteration budget got the player walking and picking up
-  // an overworld item but ran out before reaching the trainer's sightline —
-  // wall-clock cost is cheap (mGBA runs far faster than real-time headless),
-  // so the budget is sized generously rather than precisely.
-  for (let i = 0; i < 1800 && !battleDetected; i++) {
-    const dir = dirs[dirIdx % dirs.length];
-    for (let s = 0; s < 6 && !battleDetected; s++) {
-      await c.pressKey(dir, 8); await c.advanceFrames(14);
-      await c.pressKey('A', 4); await c.advanceFrames(18);
-
-      const txt = await harvestText(c, 'explore');
-      if (BATTLE_RE.test(txt)) {
-        battleDetected = true;
-        console.error(`[probe] First battle detected at explore i=${i}.${s}`);
-        break;
-      }
-    }
-
-    const pos = await playerPos();
-    if (pos === prevPos) dirIdx++; // blocked → turn to the next direction
-    prevPos = pos;
-
-    if (i % 10 === 0) {
-      const p = path.join(OUT, `explore-${String(i).padStart(3, '0')}.png`);
-      await c.screenshot(p);
-      const h = md5(p);
-      if (h && h === lastHash2) same2++; else { same2 = 0; lastHash2 = h; }
-      if (same2 >= 32) {
-        console.error(`[probe] FREEZE in explore at i=${i}`);
-        await shot(c, 'freeze-explore.png');
-        return finish(c, false, false, true);
-      }
-    }
+  // ---- Phase 2: follow the recorded short route into the battle ----
+  const routeResult = await followRoute(c, loadRoute());
+  const battleDetected = routeResult.battleDetected;
+  if (routeResult.frozen) {
+    await shot(c, 'freeze-route.png');
+    return finish(c, false, false, true);
   }
 
   await shot(c, '02-battle-entry.png');
-  console.error(`[probe] battleDetected=${battleDetected} startedFromFixture=${startedFromFixture}`);
+  console.error(`[probe] battleDetected=${battleDetected}`);
 
   if (!battleDetected) {
     console.error('[probe] Could not reach first battle within iteration budget');
     return finish(c, false, false, false);
-  }
-
-  // Save fixture on first successful generation.
-  if (!startedFromFixture && !fixtureSaved) {
-    try {
-      await c.saveState(FIXTURE_SLOT);
-      await new Promise<void>((r) => setTimeout(r, 600));
-      if (fs.existsSync(ROM_SLOT_PATH)) {
-        fs.copyFileSync(ROM_SLOT_PATH, FIXTURE_FILE);
-        console.error(`[probe] Fixture saved → ${FIXTURE_FILE}`);
-        fixtureSaved = true;
-      }
-    } catch (e) {
-      console.error('[probe] Fixture save failed (non-fatal):', String(e));
-    }
   }
 
   // ---- Phase 3: fight and win ----

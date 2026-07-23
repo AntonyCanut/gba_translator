@@ -1,0 +1,14 @@
+{
+  "start": {
+    "map": [4, 10],
+    "position": [21, 22]
+  },
+  "steps": [
+    {
+      "key": "A",
+      "repeat": 60,
+      "holdFrames": 4,
+      "frames": 40
+    }
+  ]
+}
