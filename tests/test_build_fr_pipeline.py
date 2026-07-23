@@ -263,10 +263,16 @@ class TestBuildFrPipeline(unittest.TestCase):
 
     def test_build_fr_runs_all_parent_regressions(self) -> None:
         """Le build doit échouer si l'une des cinq régressions P-548 revient."""
+        invocation = f"$(MAKE) --no-print-directory {PARENT_REGRESSION_TARGET}"
         self.assertIn(
-            f"$(MAKE) --no-print-directory {PARENT_REGRESSION_TARGET}",
+            invocation,
             self.recipe,
             "build-fr must run the integrated P-548 regression target",
+        )
+        self.assertEqual(
+            self.recipe.count(invocation),
+            1,
+            "build-fr must run the integrated P-548 regressions exactly once",
         )
 
         _, regression_recipe = _extract_target_block(

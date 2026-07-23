@@ -134,13 +134,24 @@
 
 # P-548 — Validation intégrée des cinq régressions `build-fr`
 
-- [ ] Régénérer les traductions FR depuis la source canonique.
-- [ ] Reconstruire deux fois la ROM et confirmer son déterminisme.
-- [ ] Exécuter ensemble les cinq régressions du ticket parent.
-- [ ] Vérifier les octets/pointeurs vivants des quatre zones fonctionnelles.
-- [ ] Exécuter la validation ROM complète et les gardes rapides pertinentes.
-- [ ] Intégrer la ROM reconstruite, relire le diff et revalider après rebase.
+- [x] Régénérer les traductions FR depuis la source canonique.
+- [x] Reconstruire deux fois la ROM et confirmer son déterminisme.
+- [x] Exécuter ensemble les cinq régressions du ticket parent.
+- [x] Vérifier les octets/pointeurs vivants des quatre zones fonctionnelles.
+- [x] Exécuter la validation ROM complète et les gardes rapides pertinentes.
+- [x] Intégrer la ROM reconstruite, relire le diff et revalider après rebase.
 
 ## Revue
 
-- En attente de la validation intégrée.
+- `build-fr` exécute désormais `test-fr-build-regressions`, qui regroupe les
+  cinq sélecteurs exacts de P-548 et bloque le build si l'un d'eux revient.
+- Le rebuild produit le même SHA-256 `5aa088192ec9ab30…` que la ROM déjà
+  versionnée ; deux reconstructions consécutives sont byte-identiques.
+- Le hook a validé 1 517 tests Python (1 ignoré), 68 tests Vitest et les builds
+  FR/IT/DE sans collision. La suite ROM statique a validé 497 tests
+  supplémentaires (34 scénarios optionnels ignorés).
+- `make test-rom` a confirmé 505 tests et toutes les gardes FR, mais a aussi
+  exposé une sonde mGBA italienne indépendante qui ne trouve pas le premier
+  combat sur la map 4.10 malgré l'absence de freeze et de texte anglais ; son
+  traitement est isolé dans le ticket T-554.
+- Rebase final sur `unbound` sans avancement concurrent ; arbre relu propre.
