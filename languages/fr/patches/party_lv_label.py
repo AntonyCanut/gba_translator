@@ -65,11 +65,28 @@ square while the shadow next to it looked hollow. Fix: use value ``0xA``
 (``1010`` — palette 2 for both pixels) so the shadow fills solid grey across
 its full width, matching the dot's own width instead of only half of it.
 
+Issue #138 second follow-up (reporter's third screenshot, comparing to a
+reference render): even with the row-11 shadow completed above, the dot's own
+white ink (nibble 36/40, 2 pixels wide) is one pixel *narrower* than the full
+grey shadow beneath it (nibble 44, now 2 pixels wide) plus the glyph's
+pre-existing antialiasing column immediately to the dot's right (nibble
+37/41, value ``8`` = grey+transparent — part of the real « N » letter's own
+right-edge antialiasing, present in every row 4-11, not something either
+shadow fix touched). The reporter's own words: only pixels are missing *to the
+right of the two white pixels*. Fix: nibble 37/41's left sub-pixel (the one
+touching the dot) goes from grey (``2``) to white (``1``) — value ``8``
+(``1000``) → ``4`` (``0100``) — turning that column white so the dot is 3
+pixels wide, matching the width the row-11 shadow (and that same
+antialiasing column, itself unchanged) already occupies. The nibble's other
+(far) sub-pixel stays transparent, and row 11 is untouched — no risk of
+reintroducing a row-12 overflow.
+
 The patch is strict: the 32 bytes at ``0x1ECFA0`` must byte-match the known « Lv »
 ligature, the shadow-less « N. » (#104 before-fix), the row-12-overflow « N. »
 (#104 after-fix / #138 before-fix), the in-bounds-but-half-shadow « N. » (#138
-fix / this issue's before-fix), or the already-patched full-shadow « N. »;
-anything else is reported and skipped rather than corrupted.
+fix), the full-shadow-but-narrow-dot « N. » (#138 second follow-up
+before-fix), or the already-patched wide-dot « N. »; anything else is
+reported and skipped rather than corrupted.
 
 Runs in the ``build-fr`` chain AFTER repair_stable/repair_localized (like
 ``hp_labels.py``) — see the Makefile.
@@ -100,9 +117,12 @@ OLD_LV_GLYPH = bytes.fromhex(
 # 0xA (both sub-pixels = palette 2/grey), not 0x8 (left sub-pixel grey, right
 # sub-pixel transparent — a half-strength shadow, issue #138 follow-up) — so
 # shadow + dot stay within rows 4-11 and the shadow is as solid/full-width as
-# the dot's own white ink, in every UI context that reads this glyph.
+# the dot's own white ink, in every UI context that reads this glyph. The dot
+# itself is also widened by one pixel (nibble 37/41's left sub-pixel, byte 18/20
+# high nibble: 0x8 → 0x4) so its white ink matches the shadow's own width
+# instead of looking one pixel narrower (issue #138 second follow-up).
 NEW_ND_GLYPH = bytes.fromhex(
-    "0000c0ffc0ffc0ff806d80598059806580658569856d8aaec0ff000000000000"
+    "0000c0ffc0ffc0ff806d80598059806580654569456d8aaec0ff000000000000"
 )
 
 # Issue #138's own fix: shadow value 0x8 (nibble 44) — only the left of its two
@@ -110,9 +130,20 @@ NEW_ND_GLYPH = bytes.fromhex(
 # thin/incomplete sliver instead of a full grey square (reported as "manque des
 # pixels gris" on the same issue after it was first closed). Accept it as a
 # re-patchable state so an already-built ROM converges without a full rebuild —
-# it differs from NEW_ND_GLYPH only in byte 22 (0x88 vs 0x8A).
+# it differs from NEW_ND_GLYPH in byte 22 (0x88 vs 0x8A) and, since it predates
+# the second follow-up's dot-widening, in bytes 18/20 too (0x85 vs 0x45).
 OLD_ND_GLYPH_HALF_SHADOW = bytes.fromhex(
     "0000c0ffc0ffc0ff806d80598059806580658569856d88aec0ff000000000000"
+)
+
+# Issue #138 second follow-up's before-fix state: the row-11 shadow is already
+# full-width (0xA), but the dot's own white ink (nibble 36/40) is only 2 pixels
+# wide — one pixel narrower than that shadow and than the glyph's own
+# antialiasing column beside it. Accept it as a re-patchable state so an
+# already-built ROM converges without a full rebuild — it differs from
+# NEW_ND_GLYPH only in bytes 18/20 (0x85 vs 0x45).
+OLD_ND_GLYPH_NARROW_DOT = bytes.fromhex(
+    "0000c0ffc0ffc0ff806d80598059806580658569856d8aaec0ff000000000000"
 )
 
 # Previous « N. » glyph shipped without the dot's drop-shadow (issue #104). Accept
@@ -140,7 +171,7 @@ def apply_patch(rom_path: Path) -> int:
     current = bytes(rom[LV_GLYPH_OFFSET:LV_GLYPH_OFFSET + GLYPH_SIZE])
 
     if current == NEW_ND_GLYPH:
-        print("  party level label (0x1ECFA0): already « N. » (full shadow) — no change")
+        print("  party level label (0x1ECFA0): already « N. » (full shadow, wide dot) — no change")
         return 0
 
     known_old = (
@@ -148,12 +179,14 @@ def apply_patch(rom_path: Path) -> int:
         OLD_ND_GLYPH_NOSHADOW,
         OLD_ND_GLYPH_ROW12_OVERFLOW,
         OLD_ND_GLYPH_HALF_SHADOW,
+        OLD_ND_GLYPH_NARROW_DOT,
     )
     if current not in known_old:
         print(
             f"  WARN party level label: glyph at 0x{LV_GLYPH_OFFSET:07X} matches "
             f"neither « Lv », the shadow-less « N. », the row-12-overflow « N. », "
-            f"the half-shadow « N. », nor the already-patched full-shadow « N. » — skip\n"
+            f"the half-shadow « N. », the narrow-dot « N. », nor the already-patched "
+            f"full-shadow wide-dot « N. » — skip\n"
             f"       got {current.hex()}",
             file=sys.stderr,
         )
@@ -165,11 +198,13 @@ def apply_patch(rom_path: Path) -> int:
         was = "« N. » (no shadow)"
     elif current == OLD_ND_GLYPH_ROW12_OVERFLOW:
         was = "« N. » (shadow overflowing box border, issue #138)"
-    else:
+    elif current == OLD_ND_GLYPH_HALF_SHADOW:
         was = "« N. » (half shadow, issue #138 follow-up)"
+    else:
+        was = "« N. » (full shadow, narrow dot, issue #138 second follow-up)"
     rom[LV_GLYPH_OFFSET:LV_GLYPH_OFFSET + GLYPH_SIZE] = NEW_ND_GLYPH
     rom_path.write_bytes(rom)
-    print(f"  party level label (0x1ECFA0): {was} → « N. » (full shadow)")
+    print(f"  party level label (0x1ECFA0): {was} → « N. » (full shadow, wide dot)")
     return 1
 
 

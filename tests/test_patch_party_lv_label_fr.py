@@ -14,6 +14,11 @@ Issue #138 follow-up: each nibble packs two independent 2-bit palette picks (one
 per pixel of its 2-pixel-wide cell). The shadow nibble must use value 0xA (grey
 for both pixels), not 0x8 (grey for the left pixel only, transparent for the
 right one) — the latter rendered as a half-strength/incomplete shadow.
+
+Issue #138 second follow-up: with the shadow completed, the dot's own white ink
+was still one pixel narrower than that shadow (and than the glyph's own
+antialiasing column beside it) — nibble 37/41 must have its dot-facing sub-pixel
+white (value 4: white+transparent), not grey (value 8: grey+transparent).
 """
 
 import sys
@@ -30,6 +35,7 @@ from languages.fr.patches.party_lv_label import (
     NEW_ND_GLYPH,
     OLD_LV_GLYPH,
     OLD_ND_GLYPH_HALF_SHADOW,
+    OLD_ND_GLYPH_NARROW_DOT,
     OLD_ND_GLYPH_NOSHADOW,
     OLD_ND_GLYPH_ROW12_OVERFLOW,
     apply_patch,
@@ -77,6 +83,19 @@ class TestGlyphDefinitions(unittest.TestCase):
         half = (OLD_ND_GLYPH_HALF_SHADOW[byte] & 0xF) if nib % 2 == 0 else (OLD_ND_GLYPH_HALF_SHADOW[byte] >> 4)
         self.assertEqual(half, 8, "the #138 fix had only a half shadow (value 8) there")
 
+    def test_period_dot_widened_to_match_shadow(self):
+        # Issue #138 second follow-up: the dot's own white ink must be as wide
+        # as its shadow — nibble 37/41's dot-facing sub-pixel (the high nibble
+        # of byte 18/20) must be white (value 4: white+transparent), not grey
+        # (value 8: grey+transparent, which read as part of the shadow instead
+        # of the dot and left the dot looking one pixel narrower).
+        for nib in (37, 41):
+            byte = nib // 2
+            val = (NEW_ND_GLYPH[byte] & 0xF) if nib % 2 == 0 else (NEW_ND_GLYPH[byte] >> 4)
+            self.assertEqual(val, 4, f"nibble {nib} should be white+transparent (4) to widen the dot")
+            narrow = (OLD_ND_GLYPH_NARROW_DOT[byte] & 0xF) if nib % 2 == 0 else (OLD_ND_GLYPH_NARROW_DOT[byte] >> 4)
+            self.assertEqual(narrow, 8, f"nibble {nib} was grey+transparent (8) before this fix")
+
     def test_no_ink_below_row_11(self):
         # Issue #138: nothing beyond nibble row 11 (nibble index >= 48) may
         # carry white(5) or shadow(8/0xA) ink — that row overflows the in-battle
@@ -86,22 +105,32 @@ class TestGlyphDefinitions(unittest.TestCase):
             val = (NEW_ND_GLYPH[byte] & 0xF) if nib % 2 == 0 else (NEW_ND_GLYPH[byte] >> 4)
             self.assertNotIn(val, (5, 8, 0xA), f"nibble {nib} (row {nib // 4}) must not carry ink/shadow")
 
-    def test_noshadow_differs_only_by_shadow_pixel(self):
+    def test_noshadow_differs_only_by_shadow_pixel_and_dot_width(self):
         diffs = [i for i in range(GLYPH_SIZE) if NEW_ND_GLYPH[i] != OLD_ND_GLYPH_NOSHADOW[i]]
-        self.assertEqual(diffs, [22], "shadow fix must touch only the byte holding row 11's nibble")
-
-    def test_row12_overflow_glyph_differs_only_by_shadow_relocation(self):
-        diffs = [i for i in range(GLYPH_SIZE) if NEW_ND_GLYPH[i] != OLD_ND_GLYPH_ROW12_OVERFLOW[i]]
         self.assertEqual(
-            sorted(diffs), [22, 24],
-            "fix must only move the shadow from byte 24 (row 12) to byte 22 (row 11)",
+            diffs, [18, 20, 22],
+            "must only touch the dot-widening bytes (18/20) and the shadow byte (22)",
         )
 
-    def test_half_shadow_glyph_differs_only_by_shadow_completeness(self):
-        # Issue #138 follow-up: this fix must only complete the row-11 shadow
-        # (0x8 -> 0xA in byte 22), not touch anything else already fixed by #138.
+    def test_row12_overflow_glyph_differs_only_by_shadow_relocation_and_dot_width(self):
+        diffs = [i for i in range(GLYPH_SIZE) if NEW_ND_GLYPH[i] != OLD_ND_GLYPH_ROW12_OVERFLOW[i]]
+        self.assertEqual(
+            sorted(diffs), [18, 20, 22, 24],
+            "fix must only widen the dot (18/20) and move the shadow from byte 24 (row 12) to byte 22 (row 11)",
+        )
+
+    def test_half_shadow_glyph_differs_only_by_shadow_completeness_and_dot_width(self):
+        # Issue #138 follow-up + second follow-up: this fix must only complete
+        # the row-11 shadow (0x8 -> 0xA in byte 22) and widen the dot (18/20),
+        # not touch anything else already fixed by #138.
         diffs = [i for i in range(GLYPH_SIZE) if NEW_ND_GLYPH[i] != OLD_ND_GLYPH_HALF_SHADOW[i]]
-        self.assertEqual(diffs, [22], "fix must only touch the byte holding row 11's shadow nibble")
+        self.assertEqual(diffs, [18, 20, 22], "fix must only touch the dot-width and shadow bytes")
+
+    def test_narrow_dot_glyph_differs_only_by_dot_width(self):
+        # Issue #138 second follow-up: this fix must only widen the dot
+        # (bytes 18/20), the shadow (byte 22) was already correct.
+        diffs = [i for i in range(GLYPH_SIZE) if NEW_ND_GLYPH[i] != OLD_ND_GLYPH_NARROW_DOT[i]]
+        self.assertEqual(diffs, [18, 20], "fix must only touch the bytes holding the dot's width")
 
 
 class TestApplyPatch(unittest.TestCase):
@@ -146,6 +175,17 @@ class TestApplyPatch(unittest.TestCase):
         # to the full-shadow glyph without a full rebuild (issue #138 follow-up).
         rom = _fake_rom(OLD_ND_GLYPH_HALF_SHADOW)
         p = Path("/tmp/_lvtest_halfshadow.gba")
+        p.write_bytes(rom)
+        self.assertEqual(apply_patch(p), 1)
+        self.assertEqual(p.read_bytes()[LV_GLYPH_OFFSET:LV_GLYPH_OFFSET + GLYPH_SIZE],
+                         NEW_ND_GLYPH)
+
+    def test_repatches_narrow_dot_nd_to_wide_dot(self):
+        # An already-built ROM carrying the full-shadow-but-narrow-dot « N. »
+        # must converge to the wide-dot glyph without a full rebuild (issue
+        # #138 second follow-up).
+        rom = _fake_rom(OLD_ND_GLYPH_NARROW_DOT)
+        p = Path("/tmp/_lvtest_narrowdot.gba")
         p.write_bytes(rom)
         self.assertEqual(apply_patch(p), 1)
         self.assertEqual(p.read_bytes()[LV_GLYPH_OFFSET:LV_GLYPH_OFFSET + GLYPH_SIZE],
