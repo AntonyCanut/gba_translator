@@ -1,24 +1,20 @@
-# Régression #111/#131 — résidu « Annul. » sur la carte mondiale
+# Hook Git — test unitaire obligatoire pour les traductions
 
-- [x] Reproduire le test ROM et relever les octets/pointeurs vivants.
-- [x] Tracer l’historique #111/#131 et confirmer la suppression du patch post-build.
-- [x] Ajouter des tests unitaires synthétiques pour le vrai littéral `0x9FB64`.
-- [x] Créer un patch post-build idempotent qui restaure la cellule `0x418E77` et son pointeur.
-- [x] Enchaîner le patch dans `make build-fr` après les autres libellés de menu.
-- [x] Exécuter les tests ciblés, le rebuild déterministe et les validations du dépôt.
-- [x] Contrôler le diff et committer la ROM reconstruite.
+- [x] Inspecter le hook pré-commit et le garde des traductions déjà présents.
+- [x] Ajouter des scénarios unitaires rouges pour l’absence et la présence d’un test.
+- [x] Détecter les tests unitaires ajoutés ou modifiés dans l’index Git.
+- [x] Rendre le message de blocage impératif et explicite pour un agent IA.
+- [x] Exécuter les tests ciblés puis la suite rapide complète.
+- [x] Relire le diff, documenter les résultats et committer.
 
 ## Revue
 
-- Cause : #131 a retiré l’ancien patch `world_map_action_labels.py`; le rebuild
-  pouvait donc conserver `Annul.` à `0x418E77` malgré la source `Annul` protégée.
-- Le nouveau patch réécrit la cellule canonique et force le seul littéral vivant
-  `0x9FB64` à la viser après chaque `make build-fr`.
-- La ROM finale contient `0x9FB64 → 0x418E77` et la chaîne se termine par
-  `bbe2e2e9e0ff`, sans l’octet `ad` du point résiduel.
-- Vérifications : 7 tests carte-monde, 1 476 tests Python rapides, 68 tests
-  Vitest, builds FR/IT/DE, deux rebuilds FR octet-identiques et 487 tests ROM
-  hors émulateur réussis (34 ignorés).
-- Le probe mGBA italien non lié n’a pas atteint son premier combat sur la map
-  4.10 ; il n’a détecté ni gel ni résidu anglais. Les gardes déterministes de ce
-  ticket sont toutes vertes.
+- Tout commit non vide est maintenant refusé s’il n’ajoute ou ne modifie aucun
+  test unitaire Python, Vitest ou manifeste `protected_entries.yaml`.
+- Une suppression de test ou un test E2E ne satisfait pas le garde.
+- Le contrôle lit exclusivement l’index Git ; une simulation réelle retourne
+  1 sans test et 0 dès que le test unitaire est ajouté à l’index.
+- Le message de blocage interpelle explicitement l’agent IA et interdit
+  `--no-verify` ainsi que la désactivation du hook.
+- Vérifications : 15 tests ciblés, 1 496 tests Python rapides, syntaxe shell et
+  contrôle du diff réussis ; le hook complet est exécuté au commit.

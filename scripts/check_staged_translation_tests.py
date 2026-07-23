@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Require a unit-test manifest entry for every staged combined translation."""
+"""Enforce staged unit-test changes and exact guards for new translations."""
 
 from __future__ import annotations
 
@@ -16,6 +16,15 @@ import check_translation_integrity as integrity
 
 
 COMBINED_PATH_RE = re.compile(r"^languages/([^/]+)/combined_([^/]+)\.txt$")
+PYTHON_UNIT_TEST_RE = re.compile(r"^tests/(?:unit/.*/|unit/|)test_[^/]+\.py$")
+VITEST_UNIT_TEST_RE = re.compile(r"^emulator-web/tests/(?:.*/)?[^/]+\.test\.ts$")
+PROTECTED_ENTRIES_RE = re.compile(r"^languages/[^/]+/protected_entries\.yaml$")
+MISSING_UNIT_TEST_MESSAGE = """\
+🚨🚨🚨 COMMIT INTERDIT — TEST UNITAIRE OBLIGATOIRE 🚨🚨🚨
+
+AGENT IA : ARRÊTEZ LE COMMIT. Vous devez ajouter ou modifier un test unitaire
+qui protège votre changement, l’ajouter à l’index avec le code, puis exécuter les tests.
+Ne contournez JAMAIS ce contrôle avec --no-verify ou en désactivant le hook."""
 
 
 @dataclass(frozen=True)
@@ -34,6 +43,42 @@ def _language_for_path(path: str) -> Optional[str]:
     if match and match.group(1) == match.group(2):
         return match.group(1)
     return None
+
+
+def parse_name_status(output: str) -> List[Tuple[str, str]]:
+    """Parse ``git diff --name-status`` and retain each destination path."""
+
+    changes: List[Tuple[str, str]] = []
+    for line in output.splitlines():
+        fields = line.split("\t")
+        if len(fields) < 2:
+            continue
+        changes.append((fields[0], fields[-1]))
+    return changes
+
+
+def _is_unit_test_path(path: str) -> bool:
+    """Return whether *path* is an executable or data-driven unit test."""
+
+    return bool(
+        PYTHON_UNIT_TEST_RE.fullmatch(path)
+        or VITEST_UNIT_TEST_RE.fullmatch(path)
+        or PROTECTED_ENTRIES_RE.fullmatch(path)
+    )
+
+
+def validate_unit_test_change(changes: Iterable[Tuple[str, str]]) -> List[str]:
+    """Require every non-empty commit to add or modify a unit test."""
+
+    staged_changes = list(changes)
+    if not staged_changes:
+        return []
+    if any(
+        status[0] in {"A", "M", "R", "C"} and _is_unit_test_path(path)
+        for status, path in staged_changes
+    ):
+        return []
+    return ["aucun test unitaire ajouté ou modifié dans l'index Git"]
 
 
 def parse_added_translations(diff: str) -> List[AddedTranslation]:
@@ -147,9 +192,18 @@ def _staged_files(langs: Iterable[str]) -> Dict[str, str]:
 
 
 def main() -> int:
-    """Validate staged translation additions and print actionable failures."""
+    """Validate staged unit-test coverage and print actionable failures."""
 
     try:
+        staged_changes = parse_name_status(
+            _git_output(["diff", "--cached", "--name-status", "--no-ext-diff"])
+        )
+        unit_test_failures = validate_unit_test_change(staged_changes)
+        if unit_test_failures:
+            print(MISSING_UNIT_TEST_MESSAGE, file=sys.stderr)
+            for failure in unit_test_failures:
+                print(f"  - {failure}", file=sys.stderr)
+            return 1
         additions = parse_added_translations(_git_output(["diff", "--cached", "--unified=0", "--no-ext-diff"]))
         if not additions:
             return 0

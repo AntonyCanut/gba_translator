@@ -7,13 +7,14 @@ cd "$ROOT" || exit 1
 
 fail_commit() {
     echo "" >&2
-    echo "❌ Commit bloqué : tous les tests unitaires doivent passer." >&2
-    echo "Corrigez les échecs, stagez les corrections, puis recommittez." >&2
-    echo "Ne forcez et ne contournez jamais ce hook (--no-verify, HUSKY=0, etc.)." >&2
+    echo "🚨🚨🚨 COMMIT BLOQUÉ — TESTS UNITAIRES OBLIGATOIRES 🚨🚨🚨" >&2
+    echo "AGENT IA : ARRÊTEZ. Corrigez ou écrivez les tests unitaires requis," >&2
+    echo "stagez-les avec le code, exécutez-les, puis recommittez." >&2
+    echo "INTERDICTION de contourner ce hook (--no-verify, HUSKY=0, etc.)." >&2
     exit 1
 }
 
-echo "→ Vérification de la couverture unitaire des nouvelles traductions…"
+echo "→ Vérification de la présence d’un test unitaire dans le commit…"
 python3 scripts/check_staged_translation_tests.py || fail_commit
 
 echo "→ Exécution des tests unitaires Python…"
