@@ -23,6 +23,7 @@ from languages.fr.patches.pc_move_labels import (
     MAIL_MOVE_TO_BAG_EN,
     MAIL_MOVE_TO_BAG_FR,
     MAIL_MOVE_TO_BAG_OFFSET,
+    MAIL_MOVE_TO_BAG_PREIMAGES,
     ROM_BASE,
     _RELOCATIONS,
     _enc,
@@ -59,6 +60,10 @@ class TestConstants(unittest.TestCase):
         # « Vers le sac » must be no longer than the English « Move To Bag » cell.
         self.assertEqual(len(MAIL_MOVE_TO_BAG_FR), len(MAIL_MOVE_TO_BAG_EN))
 
+    def test_all_mail_preimages_match_fixed_cell_width(self):
+        for preimage in MAIL_MOVE_TO_BAG_PREIMAGES:
+            self.assertEqual(len(preimage), len(MAIL_MOVE_TO_BAG_FR))
+
     def test_freespace_base_is_addressable_rom(self):
         self.assertLess(FREESPACE_BASE, ROM_SIZE)
 
@@ -89,6 +94,15 @@ class TestApply(unittest.TestCase):
     def test_mail_move_to_bag(self):
         rom = _fake_rom()
         apply(rom)
+        self.assertEqual(_decode_at(rom, MAIL_MOVE_TO_BAG_OFFSET), "Vers le sac")
+
+    def test_normalizes_generic_abbreviated_mail_label(self):
+        rom = _fake_rom()
+        legacy_fr = _enc("Dépl au sac")
+        rom[MAIL_MOVE_TO_BAG_OFFSET:MAIL_MOVE_TO_BAG_OFFSET + len(legacy_fr)] = legacy_fr
+
+        apply(rom)
+
         self.assertEqual(_decode_at(rom, MAIL_MOVE_TO_BAG_OFFSET), "Vers le sac")
 
     def test_idempotent(self):

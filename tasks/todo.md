@@ -1,3 +1,28 @@
+# B-552 — Fix mail move-to-bag label mapping
+
+- [x] Trace the rebuilt ROM mismatch to the dedicated patch preimage guard.
+- [x] Add a regression for the generic « Dépl au sac » build output.
+- [x] Normalize supported source/build preimages to « Vers le sac ».
+- [x] Run focused tests, the fast suite, and decoded-ROM verification.
+- [x] Review the diff and commit the focused generation-path fix.
+
+## Review
+
+- Root cause: the generic build could leave the older 11-byte « Dépl au sac »
+  preimage, while `pc_move_labels.py` accepted only the English bytes and
+  skipped the canonical in-place rewrite.
+- The dedicated patch now accepts only the two known upstream preimages
+  (English and the legacy French abbreviation) and normalizes both to
+  « Vers le sac »; its existing unknown-byte safety guard and idempotence stay
+  intact.
+- Verification: 15 focused patch tests passed; the guarded commit passed
+  1,511 Python tests (1 skipped), 68 Vitest tests, and full FR/IT/DE builds.
+  The rebuilt FR ROM test passed and bytes at `0x4177DD` decoded exactly to
+  « Vers le sac ».
+- The rebuilt ROM artifact was restored after verification because the parent
+  ticket still tracks four unrelated rebuild regressions; this slice does not
+  ship those changes.
+
 # Issue #143 — icônes de statut FR
 
 - [x] Lire l’issue et confirmer l’absence de commentaires.

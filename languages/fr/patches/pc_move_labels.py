@@ -21,9 +21,10 @@ on every menu, with no overflow.
 
 Same PC menu family, one bonus fix: the stored-mail submenu option « Move To
 Bag » at 0x4177DD is a *walked* string (no pointer references it — the menu
-reads it by walking terminators from « Lire »), so it never reached the
-translation pipeline and still showed English. Its slot is exactly « Move To
-Bag » = 11 bytes, so « Vers le sac » (11 bytes) is written in place.
+reads it by walking terminators from « Lire »). Depending on the translation
+input used by the generic build, this cell can still contain English or the
+older abbreviation « Dépl au sac ». Its slot is exactly 11 bytes, so the
+dedicated patch normalizes either preimage to « Vers le sac » in place.
 
 Relocation target
 -----------------
@@ -94,8 +95,10 @@ _RELOCATIONS = [
 
 # In-place, pointer-less walked string in the stored-mail submenu.
 MAIL_MOVE_TO_BAG_OFFSET = 0x4177DD
-MAIL_MOVE_TO_BAG_EN = _enc("Move To Bag")     # 11 bytes (CFRU-encoded)
-MAIL_MOVE_TO_BAG_FR = _enc("Vers le sac")     # 11 bytes, exact fit
+MAIL_MOVE_TO_BAG_EN = _enc("Move To Bag")          # 11 bytes (CFRU-encoded)
+MAIL_MOVE_TO_BAG_LEGACY_FR = _enc("Dépl au sac")   # 11-byte generic abbreviation
+MAIL_MOVE_TO_BAG_FR = _enc("Vers le sac")          # 11 bytes, exact fit
+MAIL_MOVE_TO_BAG_PREIMAGES = (MAIL_MOVE_TO_BAG_EN, MAIL_MOVE_TO_BAG_LEGACY_FR)
 
 
 def apply(rom: bytearray) -> int:
@@ -152,9 +155,9 @@ def apply(rom: bytearray) -> int:
     cur = bytes(rom[off:off + len(MAIL_MOVE_TO_BAG_EN)])
     if cur == MAIL_MOVE_TO_BAG_FR:
         pass  # already applied
-    elif cur != MAIL_MOVE_TO_BAG_EN:
+    elif cur not in MAIL_MOVE_TO_BAG_PREIMAGES:
         print(
-            f"  WARN mail « Move To Bag » 0x{off:07X}: expected English original, "
+            f"  WARN mail « Move To Bag » 0x{off:07X}: expected a supported preimage, "
             f"found {cur.hex()} — skip",
             file=sys.stderr,
         )
