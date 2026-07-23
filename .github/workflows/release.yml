@@ -58,11 +58,27 @@ jobs:
             --build-number ${{ github.run_number }}
 
       - name: Upload ${{ matrix.lang_label }} ROM artifact
+        id: upload_rom
         if: success()
+        continue-on-error: true
         uses: actions/upload-artifact@v4
         with:
           name: rom-${{ matrix.lang }}
           path: output/roms/GenedRom-${{ matrix.lang }}.gba
+          if-no-files-found: error
+
+      # Artifact storage can occasionally reject finalization after all bytes
+      # have uploaded (run #81 returned HTTP 403). Retry once and overwrite any
+      # partial artifact left by the first attempt.
+      - name: Retry ${{ matrix.lang_label }} ROM artifact upload
+        id: retry_upload_rom
+        if: steps.upload_rom.outcome == 'failure'
+        uses: actions/upload-artifact@v4
+        with:
+          name: rom-${{ matrix.lang }}
+          path: output/roms/GenedRom-${{ matrix.lang }}.gba
+          if-no-files-found: error
+          overwrite: true
 
   # Final join: wait for every language build, then assemble whatever landed.
   release:

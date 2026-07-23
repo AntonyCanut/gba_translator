@@ -40,3 +40,26 @@
 - Le build FR est byte-identique sur deux reconstructions consécutives.
 - Vérifications : 4 tests ciblés, 1 498 tests Python rapides, 68 tests Vitest,
   puis 497 tests ROM/E2E réussis (37 scénarios optionnels ignorés).
+
+# Pipeline de release — reprise d’upload d’artefact
+
+- [x] Lire les journaux du run #81 et isoler la cause racine.
+- [x] Vérifier l’historique autour de `e064865d`.
+- [x] Écrire un test de régression pour l’échec transitoire d’upload.
+- [x] Ajouter une seconde tentative sûre dans `release.yml`.
+- [x] Brancher le garde ciblé dans le hook pré-commit.
+- [x] Exécuter les validations, relire le diff et committer.
+- [x] Relancer la pipeline et confirmer son résultat.
+
+## Revue
+
+- Le build et la vérification FR du run #81 étaient réussis ; seul
+  `FinalizeArtifact` a reçu un `403 Forbidden`, après l’envoi complet des octets.
+- `e064865d` ne modifie pas la CI. La dépendance à l’artefact sans reprise vient
+  de la parallélisation introduite par `94acdd8a`.
+- Le premier upload est toléré uniquement pour déclencher une seconde tentative
+  non tolérée, avec `overwrite: true` pour nettoyer un éventuel artefact partiel.
+- Le test ciblé, la syntaxe YAML/shell, `actionlint`, `git diff --check` et les
+  1 501 tests Python rapides passent (`1 500 passed`, `1 skipped`).
+- La tentative 2 du run #81 est verte : builds FR/IT/DE, trois artefacts et
+  publication de la release réussis.
