@@ -131,3 +131,16 @@
   inchangés ; une seconde application du patch est sans effet.
 - Vérifications : 1 512 tests Python rapides et 68 tests Vitest réussis,
   builds FR/IT/DE réussis, puis 3 assertions ROM ciblées réussies.
+
+# P-548 — Validation intégrée des cinq régressions `build-fr`
+
+- [ ] Régénérer les traductions FR depuis la source canonique.
+- [ ] Reconstruire deux fois la ROM et confirmer son déterminisme.
+- [ ] Exécuter ensemble les cinq régressions du ticket parent.
+- [ ] Vérifier les octets/pointeurs vivants des quatre zones fonctionnelles.
+- [ ] Exécuter la validation ROM complète et les gardes rapides pertinentes.
+- [ ] Intégrer la ROM reconstruite, relire le diff et revalider après rebase.
+
+## Revue
+
+- En attente de la validation intégrée.

@@ -39,6 +39,18 @@ INLINE_OVERRIDE_SCRIPT = "apply_inline_overrides_fr.py"
 REPAIR_STABLE_SCRIPT = "repair_stable_lz77_blocks.py"
 REPAIR_LOCALIZED_SCRIPT = "repair_localized_lz77_blocks.py"
 DETERMINISM_TARGET = "verify-fr-determinism"
+PARENT_REGRESSION_TARGET = "test-fr-build-regressions"
+PARENT_REGRESSION_SELECTORS = (
+    "tests/e2e/fr/test_item_descriptions.py"
+    "::TestItemDescriptions::test_repousse_dit_pas_pas_etapes",
+    "tests/e2e/fr/test_pc_selection_menu.py"
+    "::TestPcSelectionMenuFrench::test_which_pc_question_is_french",
+    "tests/e2e/fr/test_pc_selection_menu.py"
+    "::TestPcSelectionMenuFrench::test_prof_log_pc_entry_has_du",
+    "tests/test_patch_pc_move_labels_fr.py::TestBuiltRom::test_mail_move_to_bag",
+    "tests/unit/fr/test_world_map_action_labels.py"
+    "::test_world_map_cancel_pointers_render_short_label",
+)
 
 _ASSIGN_RE = re.compile(r"^([A-Za-z_][A-Za-z0-9_]*)\s*:?=\s*(.*)$")
 _VAR_RE = re.compile(r"\$\(([A-Za-z_][A-Za-z0-9_]*)\)")
@@ -248,6 +260,25 @@ class TestBuildFrPipeline(unittest.TestCase):
             "determinism guard must run two independent build-fr invocations",
         )
         self.assertIn('cmp -s "$$tmp_rom" "$(FR_BUILD)"', recipe)
+
+    def test_build_fr_runs_all_parent_regressions(self) -> None:
+        """Le build doit échouer si l'une des cinq régressions P-548 revient."""
+        self.assertIn(
+            f"$(MAKE) --no-print-directory {PARENT_REGRESSION_TARGET}",
+            self.recipe,
+            "build-fr must run the integrated P-548 regression target",
+        )
+
+        _, regression_recipe = _extract_target_block(
+            self.text,
+            PARENT_REGRESSION_TARGET,
+        )
+        for selector in PARENT_REGRESSION_SELECTORS:
+            self.assertIn(
+                selector,
+                regression_recipe.replace("\\\n", ""),
+                f"{PARENT_REGRESSION_TARGET} must include {selector}",
+            )
 
 
 class TestInlineOverrideMinLength(unittest.TestCase):

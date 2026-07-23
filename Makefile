@@ -324,6 +324,7 @@ build-fr: check-translations-fr ensure-fr-translation $(FRENCH_EXTRACT) $(SPANIS
 	@$(PYTHON) -m pytest tests/test_nature_names_fr.py -q --tb=short
 	@echo "✓ Vérification de l'écran info rencontre (pointeurs vivants)..."
 	@$(PYTHON) -m pytest tests/test_encounter_info_fr.py -q --tb=short
+	@$(MAKE) --no-print-directory test-fr-build-regressions
 
 ## Rebuild the dedicated FR ROM twice from the same inputs and compare every
 ## byte.  The temporary first artifact is deliberately outside output/ so no
@@ -410,6 +411,14 @@ test-fr-rebuild:
 		tests/e2e/test_east_borrius_sign_fr.py \
 		tests/e2e/test_rival_battle_victory_line_fr.py \
 		tests/e2e/es/test_extraction_coverage.py
+
+test-fr-build-regressions:
+	@$(PYTHON) -m pytest -q --tb=short \
+		tests/e2e/fr/test_item_descriptions.py::TestItemDescriptions::test_repousse_dit_pas_pas_etapes \
+		tests/e2e/fr/test_pc_selection_menu.py::TestPcSelectionMenuFrench::test_which_pc_question_is_french \
+		tests/e2e/fr/test_pc_selection_menu.py::TestPcSelectionMenuFrench::test_prof_log_pc_entry_has_du \
+		tests/test_patch_pc_move_labels_fr.py::TestBuiltRom::test_mail_move_to_bag \
+		tests/unit/fr/test_world_map_action_labels.py::test_world_map_cancel_pointers_render_short_label
 
 # Garde anti-régression des traductions (toutes langues) — source de vérité :
 # languages/<lang>/protected_entries.yaml. Voir docs/20_TRANSLATION_PRESERVATION.md §7.
