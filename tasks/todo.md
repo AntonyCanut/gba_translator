@@ -1,20 +1,22 @@
-# Hook Git — test unitaire obligatoire pour les traductions
+# Issue #143 — icônes de statut FR
 
-- [x] Inspecter le hook pré-commit et le garde des traductions déjà présents.
-- [x] Ajouter des scénarios unitaires rouges pour l’absence et la présence d’un test.
-- [x] Détecter les tests unitaires ajoutés ou modifiés dans l’index Git.
-- [x] Rendre le message de blocage impératif et explicite pour un agent IA.
-- [x] Exécuter les tests ciblés puis la suite rapide complète.
-- [x] Relire le diff, documenter les résultats et committer.
+- [x] Lire l’issue et confirmer l’absence de commentaires.
+- [x] Identifier les quatre blocs LZ77 utilisés en combat et dans l’équipe.
+- [x] Ajouter l’extraction/réinjection en PNG indexé sans perdre les indices palette.
+- [x] Fournir l’asset PNG rééditable des badges FR.
+- [x] Tester le round-trip PNG et tous les badges dans les quatre blocs ROM.
+- [x] Reconstruire la ROM FR et vérifier les pixels décodés.
+- [ ] Relire le diff, committer et clôturer l’issue GitHub.
 
 ## Revue
 
-- Tout commit non vide est maintenant refusé s’il n’ajoute ou ne modifie aucun
-  test unitaire Python, Vitest ou manifeste `protected_entries.yaml`.
-- Une suppression de test ou un test E2E ne satisfait pas le garde.
-- Le contrôle lit exclusivement l’index Git ; une simulation réelle retourne
-  1 sans test et 0 dès que le test unitaire est ajouté à l’index.
-- Le message de blocage interpelle explicitement l’agent IA et interdit
-  `--no-verify` ainsi que la désactivation du hook.
-- Vérifications : 15 tests ciblés, 1 496 tests Python rapides, syntaxe shell et
-  contrôle du diff réussis ; le hook complet est exécuté au commit.
+- La couture de bordure venait d’un indice palette `9` forcé dans les tuiles
+  centrales, alors que deux copies utilisent l’indice `1`. Le patch lit
+  désormais l’indice de la tuile de fermeture propre à chaque bloc.
+- `extract_sprite.py --all-blocks` produit quatre PNG indexés numérotés ;
+  `insert_sprite.py --all-blocks` les réinjecte séparément pour conserver les
+  palettes de combat et du menu.
+- Le registre autorise le LZ77 compact uniquement pour ces badges : le flux
+  VRAM-safe dépassait de trois octets et rendait la réinjection impossible.
+- Vérifications : build FR complet réussi, 25 tests ciblés, round-trip PNG
+  réel 4/4 blocs, puis 1 508 tests Python rapides réussis (1 ignoré).

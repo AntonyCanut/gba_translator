@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""4bpp indexed BMP <-> GBA tile pixel-grid conversion (ticket F-108).
+"""4bpp indexed BMP <-> GBA tile pixel-grid conversion.
 
 UI sprites (buttons, status badges, …) are stored in the ROM as 4bpp
 (16-color) tiles inside LZ77-compressed blocks. The palette index (0-15) *is*
@@ -10,7 +10,8 @@ GIMP, Usenti, …) can be used to redraw a sprite by hand.
 
 The BMP's own embedded palette is cosmetic only — it exists so the image
 looks reasonable while editing — and is never read back on insert. Only the
-pixel indices round-trip.
+pixel indices round-trip. New exports should generally use the equivalent PNG
+codec in ``sprite_png.py``; BMP remains supported for existing assets.
 """
 
 from __future__ import annotations

@@ -97,14 +97,16 @@ def extract_block(rom: bytes, offset: int, tiles_wide: int, tiles_tall: int,
 
 def insert_block(rom: bytearray, offset: int, grid: Grid,
                   tiles_wide: int, tiles_tall: int,
-                  compressed: bool = True) -> None:
+                  compressed: bool = True,
+                  vram_safe: bool = True) -> None:
     """Re-encode *grid* into tiles and write it back at *offset*.
 
     When *compressed* is true (the default), recompress with LZ77; raises
     ``ValueError`` if the block can't be decompressed, is too small, or the
-    recompressed result would overwrite non-padding bytes. When false, the
-    tiles are written back raw (fixed size, no compression) — see
-    ``extract_block``.
+    recompressed result would overwrite non-padding bytes. ``vram_safe`` keeps
+    the conservative direct-to-VRAM stream by default; fixed slots known to
+    accept normal LZ77 can disable it for a smaller stream. When *compressed*
+    is false, the tiles are written back raw — see ``extract_block``.
     """
     needed = tiles_wide * tiles_tall * TILE_BYTES
     if not compressed:
@@ -124,7 +126,7 @@ def insert_block(rom: bytearray, offset: int, grid: Grid,
 
     tiles = bytearray(decompressed)
     tiles[:needed] = grid_to_tiles(grid, tiles_wide, tiles_tall)
-    compressed_out = lz77_compress(bytes(tiles), vram_safe=True)
+    compressed_out = lz77_compress(bytes(tiles), vram_safe=vram_safe)
 
     if offset + len(compressed_out) > len(rom):
         raise ValueError(f"0x{offset:08X}: recompressed block overflows ROM")

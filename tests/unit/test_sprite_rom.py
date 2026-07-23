@@ -115,6 +115,24 @@ def test_insert_block_avoids_odd_overlapping_vram_references():
     assert all(length <= distance or distance % 2 == 0 for length, distance in references)
 
 
+def test_insert_block_supports_compact_non_vram_stream_for_fixed_slot():
+    """Les badges tiennent dans leur slot avec le compresseur standard."""
+    tiles = bytes([0x00] * TILE_BYTES)
+    compressed = lz77_compress(tiles)
+    rom = bytearray(compressed) + bytearray(b"\xab" * 16)
+    blank_grid = [[0] * 8 for _ in range(8)]
+
+    # Le mode VRAM-safe grandit d'un octet et toucherait les données voisines.
+    with pytest.raises(ValueError, match="tail is non-padding"):
+        insert_block(bytearray(rom), 0, blank_grid, 1, 1)
+
+    compact_rom = bytearray(rom)
+    insert_block(compact_rom, 0, blank_grid, 1, 1, vram_safe=False)
+    result = lz77_decompress(bytes(compact_rom), 0)
+    assert result is not None
+    assert result[0] == tiles
+
+
 def test_insert_block_rejects_overflow_of_non_padding_tail():
     # A block with non-padding bytes right after it that recompresses to
     # something larger must be rejected rather than overwrite live data.

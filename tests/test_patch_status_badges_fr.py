@@ -1,9 +1,8 @@
 """Regression tests for the FR status-badge graphics patch.
 
-Focus: the Sleep badge must render the official French abbreviation « SOM »
-(Sommeil), not the older « DOR ». Verified at the pixel level by decompressing
-the built ROM's badge block and comparing slot 2's content tiles to the tiles
-the patch generates for S-O-M.
+The four LZ77 copies feed the battle and party/summary screens.  Every copy is
+checked at pixel level so one UI cannot silently retain English or misaligned
+letters while another looks correct.
 """
 
 import sys
@@ -23,11 +22,24 @@ from languages.fr.patches.status_badges import (
     _TILES_PER_BADGE,
     _CONTENT1_IDX,
     _CONTENT2_IDX,
+    _FNT_SLOT,
     _make_3letter_tiles,
+    _make_ko_tiles,
     _read_slot_bg,
+    _read_slot_border,
 )
+from languages.fr.sprites import SPRITES
+from src.graphics.sprite_image import read_indexed_image
+from src.graphics.sprite_rom import extract_block
 
 BUILT_FR_ROM = Path(__file__).parent.parent / "output" / "roms" / "GenedRom-fr.gba"
+EDITABLE_PNG = (
+    Path(__file__).parent.parent
+    / "languages"
+    / "fr"
+    / "sprites"
+    / "status_badges.png"
+)
 
 SLEEP_SLOT = 2
 
@@ -48,10 +60,13 @@ class TestBadgePatchTable(unittest.TestCase):
         for row in _LETTERS["S"]:
             self.assertEqual(len(row), 4)                # 4 pixel columns
 
+    def test_sprite_reinsertion_uses_compact_lz77_stream(self):
+        self.assertFalse(SPRITES["status_badges"].vram_safe)
+
 
 @pytest.mark.rom
 class TestBuiltFrBadge(unittest.TestCase):
-    """The shipped FR ROM's sleep badge must contain the S-O-M tiles."""
+    """Toutes les copies ROM doivent contenir les mêmes libellés FR fiables."""
 
     @classmethod
     def setUpClass(cls):
@@ -59,21 +74,78 @@ class TestBuiltFrBadge(unittest.TestCase):
             pytest.skip("GenedRom-fr.gba not built")
         cls.rom = bytearray(BUILT_FR_ROM.read_bytes())
 
-    def test_sleep_badge_renders_som(self):
-        result = lz77_decompress(self.rom, BADGE_BLOCKS[0])
-        self.assertIsNotNone(result)
-        tiles = bytearray(result[0])
+    def test_all_french_badges_render_in_every_ui_block(self):
+        for block in BADGE_BLOCKS:
+            with self.subTest(block=f"0x{block:08X}"):
+                result = lz77_decompress(self.rom, block)
+                self.assertIsNotNone(result)
+                tiles = bytearray(result[0])
 
-        bg = _read_slot_bg(tiles, SLEEP_SLOT)
-        expected_t1, expected_t2 = _make_3letter_tiles(
-            _LETTERS["S"], _LETTERS["O"], _LETTERS["M"], bg
+                for slot, a, b, c in _STATUS_PATCHES:
+                    bg = _read_slot_bg(tiles, slot)
+                    border = _read_slot_border(tiles, slot)
+                    expected = _make_3letter_tiles(
+                        _LETTERS[a], _LETTERS[b], _LETTERS[c], bg, border
+                    )
+                    base = slot * _TILES_PER_BADGE * _TILE_BYTES
+                    c1 = base + _CONTENT1_IDX * _TILE_BYTES
+                    c2 = base + _CONTENT2_IDX * _TILE_BYTES
+                    actual = (
+                        bytes(tiles[c1 : c1 + _TILE_BYTES]),
+                        bytes(tiles[c2 : c2 + _TILE_BYTES]),
+                    )
+                    self.assertEqual(actual, expected, f"slot {slot}: {a}{b}{c}")
+
+                ko_expected = _make_ko_tiles(_read_slot_border(tiles, _FNT_SLOT))
+                ko_base = _FNT_SLOT * _TILES_PER_BADGE * _TILE_BYTES
+                ko_c1 = ko_base + _CONTENT1_IDX * _TILE_BYTES
+                ko_c2 = ko_base + _CONTENT2_IDX * _TILE_BYTES
+                self.assertEqual(
+                    (
+                        bytes(tiles[ko_c1 : ko_c1 + _TILE_BYTES]),
+                        bytes(tiles[ko_c2 : ko_c2 + _TILE_BYTES]),
+                    ),
+                    ko_expected,
+                )
+
+    def test_content_tiles_use_each_blocks_own_border_colour(self):
+        """Évite les pixels de couture dus à un indice 9 forcé sur les blocs 1."""
+        patched_slots = [slot for slot, *_ in _STATUS_PATCHES] + [_FNT_SLOT]
+        for block in BADGE_BLOCKS:
+            result = lz77_decompress(self.rom, block)
+            self.assertIsNotNone(result)
+            tiles = result[0]
+            for slot in patched_slots:
+                base = slot * _TILES_PER_BADGE * _TILE_BYTES
+                right_cap = base + 3 * _TILE_BYTES
+                border = tiles[right_cap] & 0xF
+                for content_idx in (_CONTENT1_IDX, _CONTENT2_IDX):
+                    content = base + content_idx * _TILE_BYTES
+                    top = tiles[content : content + 4]
+                    bottom = tiles[content + 28 : content + 32]
+                    expected = bytes([border | (border << 4)]) * 4
+                    self.assertEqual(
+                        top,
+                        expected,
+                        f"0x{block:08X} slot {slot} top border",
+                    )
+                    self.assertEqual(
+                        bottom,
+                        expected,
+                        f"0x{block:08X} slot {slot} bottom border",
+                    )
+
+    def test_editable_png_matches_primary_rom_block(self):
+        self.assertTrue(EDITABLE_PNG.exists())
+        png_width, png_height, png_grid = read_indexed_image(EDITABLE_PNG)
+        rom_grid, _, _ = extract_block(
+            bytes(self.rom),
+            BADGE_BLOCKS[0],
+            tiles_wide=4,
+            tiles_tall=8,
         )
-
-        base = SLEEP_SLOT * _TILES_PER_BADGE * _TILE_BYTES
-        c1 = base + _CONTENT1_IDX * _TILE_BYTES
-        c2 = base + _CONTENT2_IDX * _TILE_BYTES
-        self.assertEqual(bytes(tiles[c1 : c1 + _TILE_BYTES]), expected_t1)
-        self.assertEqual(bytes(tiles[c2 : c2 + _TILE_BYTES]), expected_t2)
+        self.assertEqual((png_width, png_height), (32, 64))
+        self.assertEqual(png_grid, rom_grid)
 
 
 if __name__ == "__main__":

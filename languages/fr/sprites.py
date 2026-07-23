@@ -1,9 +1,10 @@
-"""Registry of named UI sprites for the extract/insert BMP tool (ticket F-108).
+"""Registry of named UI sprites for the indexed PNG/BMP extract/insert tool.
 
-A sprite may live at several byte-identical LZ77 block offsets in the ROM
-(the CFRU engine keeps duplicate copies of some UI tile sheets for different
-screens/palettes) — ``extract_sprite.py``/``insert_sprite.py`` target one
-block at a time via ``--block-index``, or every block when it is omitted.
+A sprite may live at several LZ77 block offsets in the ROM (the CFRU engine
+keeps copies of some UI tile sheets for different screens/palettes).
+``extract_sprite.py --all-blocks`` creates one indexed image per copy and
+``insert_sprite.py --all-blocks`` consumes those same numbered files, so the
+palette indices of one screen cannot corrupt another.
 """
 
 from __future__ import annotations
@@ -22,16 +23,22 @@ class SpriteDef:
     # a fixed size — used for small OBJ tilesets the engine DMAs directly
     # rather than decompressing (e.g. the naming-keyboard help panel).
     compressed: bool = True
+    # True for streams decompressed directly to VRAM. Status badges use the
+    # compact standard stream accepted by their existing patch; VRAM-safe
+    # output is three bytes larger and does not fit their fixed ROM slots.
+    vram_safe: bool = True
 
 
 SPRITES: dict[str, SpriteDef] = {
     # 8 status-condition badges (POI/PAR/SOM/GEL/BRU/…/KO), 4 tiles wide x 1
     # tile tall each, stacked into one 32x64 sheet. Same offsets as
-    # languages/fr/patches/status_badges.py's BADGE_BLOCKS.
+    # languages/fr/patches/status_badges.py's BADGE_BLOCKS. The editable PNG
+    # reference is languages/fr/sprites/status_badges.png.
     "status_badges": SpriteDef(
         blocks=(0x0B1E11C, 0x0B1E280, 0x00E82EA0, 0x00E9BF48),
         tiles_wide=4,
         tiles_tall=8,
+        vram_safe=False,
     ),
     # Player/rival naming keyboard's right-side help panel (ticket F-109):
     # blank shift-state swatch + "SELECT (>", "BACK"/"B BUTTON"/"OK"/"START",

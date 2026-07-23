@@ -7,8 +7,8 @@ of 4 tiles each:
   [left_border_tile][content_tile1][content_tile2][right_border_tile]
 
 Slot layout (verified by decoding block 0x0B1E11C of englishrom.gba, and
-cross-checked pixel-for-pixel against languages/fr/sprites/status_badges.bmp,
-the reference art attached to ticket F-108 — extractable/re-editable via
+cross-checked pixel-for-pixel against languages/fr/sprites/status_badges.png,
+the editable reference art for GitHub issue #143 — extractable/re-editable via
 scripts/extract_sprite.py --sprite status_badges):
   slot 0 (pal4,  purple) : PSN  → POI  (Poison)
   slot 1 (pal6,  yellow) : PAR  → PAR  (unchanged)
@@ -19,8 +19,8 @@ scripts/extract_sprite.py --sprite status_badges):
   slot 6 (pal14, gray)   : FNT  → KO   (fainted, 2-letter badge)
   slot 7                 : empty
 
-Badge tile anatomy (8×8 px each, border color = palette idx 9):
-  - Row 0 / Row 7: all palette-9 border pixels
+Badge tile anatomy (8×8 px each, border color = palette idx 9 or 1):
+  - Row 0 / Row 7: border pixels matching the block's right cap tile
   - Rows 1–6: letter pixels (color 2 = white) on bg color (varies by slot)
 
 3-letter badge layout in the 16-px letter area (tiles 1+2 side by side):
@@ -63,7 +63,7 @@ _CONTENT1_IDX = 1         # offset within badge: content tile 1
 _CONTENT2_IDX = 2         # offset within badge: content tile 2
 
 _LET = 0x2   # white letter   (palette 2)
-_BRD = 0x9   # border color   (palette 9)
+_BRD = 0x9   # default border colour (some UI blocks use palette index 1)
 
 # ── Letter pixel art (6 rows × 4 columns, True = letter pixel) ──────────────
 _L = True
@@ -127,8 +127,8 @@ def _encode_row(pixels: list[int]) -> bytes:
     return bytes([pixels[i] | (pixels[i + 1] << 4) for i in range(0, 8, 2)])
 
 
-def _border_row() -> bytes:
-    return _encode_row([_BRD] * 8)
+def _border_row(border: int = _BRD) -> bytes:
+    return _encode_row([border] * 8)
 
 
 def _make_3letter_tiles(
@@ -136,6 +136,7 @@ def _make_3letter_tiles(
     l2: list[list[bool]],
     l3: list[list[bool]],
     bg: int,
+    border: int = _BRD,
 ) -> tuple[bytes, bytes]:
     """Build (content1, content2) tiles for a 3-letter status badge.
 
@@ -147,8 +148,8 @@ def _make_3letter_tiles(
 
     t1 = bytearray()
     t2 = bytearray()
-    t1.extend(_border_row())
-    t2.extend(_border_row())
+    t1.extend(_border_row(border))
+    t2.extend(_border_row(border))
 
     for r in range(6):
         row1 = [
@@ -167,19 +168,19 @@ def _make_3letter_tiles(
         ]
         t2.extend(_encode_row(row2))
 
-    t1.extend(_border_row())
-    t2.extend(_border_row())
+    t1.extend(_border_row(border))
+    t2.extend(_border_row(border))
     assert len(t1) == _TILE_BYTES
     assert len(t2) == _TILE_BYTES
     return bytes(t1), bytes(t2)
 
 
-def _make_ko_tiles() -> tuple[bytes, bytes]:
+def _make_ko_tiles(border: int = _BRD) -> tuple[bytes, bytes]:
     """Return (content_tile1, content_tile2) bytes for the KO badge (2-letter)."""
     t1 = bytearray()
     t2 = bytearray()
-    t1.extend(_border_row())
-    t2.extend(_border_row())
+    t1.extend(_border_row(border))
+    t2.extend(_border_row(border))
 
     bg = _FNT_BG
     for r in range(6):
@@ -197,8 +198,8 @@ def _make_ko_tiles() -> tuple[bytes, bytes]:
                 bg, bg, bg, bg, bg, bg]
         t2.extend(_encode_row(row2))
 
-    t1.extend(_border_row())
-    t2.extend(_border_row())
+    t1.extend(_border_row(border))
+    t2.extend(_border_row(border))
     assert len(t1) == _TILE_BYTES
     assert len(t2) == _TILE_BYTES
     return bytes(t1), bytes(t2)
@@ -209,6 +210,15 @@ def _read_slot_bg(tiles: bytearray, slot: int) -> int:
     c1_off = slot * _TILES_PER_BADGE * _TILE_BYTES + _CONTENT1_IDX * _TILE_BYTES
     # Row 1 starts at byte 4 (after 4-byte border row). Byte 4 low nibble = col0 = margin = bg.
     return tiles[c1_off + 4] & 0xF
+
+
+def _read_slot_border(tiles: bytearray, slot: int) -> int:
+    """Read the palette index from the unmodified right-cap border tile."""
+    right_cap = (
+        slot * _TILES_PER_BADGE * _TILE_BYTES
+        + 3 * _TILE_BYTES
+    )
+    return tiles[right_cap] & 0xF
 
 
 def _patch_block(rom: bytearray, offset: int) -> bool:
@@ -232,8 +242,9 @@ def _patch_block(rom: bytearray, offset: int) -> bool:
     # ── 1. 3-letter status badges (PSN→POI, SLP→SOM, FRZ→GEL, BRN→BRU) ──────
     for slot, a, b_ltr, c in _STATUS_PATCHES:
         bg = _read_slot_bg(tiles, slot)
+        border = _read_slot_border(tiles, slot)
         t1, t2 = _make_3letter_tiles(
-            _LETTERS[a], _LETTERS[b_ltr], _LETTERS[c], bg
+            _LETTERS[a], _LETTERS[b_ltr], _LETTERS[c], bg, border
         )
         base = slot * _TILES_PER_BADGE * _TILE_BYTES
         c1_off = base + _CONTENT1_IDX * _TILE_BYTES
@@ -243,7 +254,8 @@ def _patch_block(rom: bytearray, offset: int) -> bool:
         changes.append(f"slot{slot}→{a}{b_ltr}{c}")
 
     # ── 2. Fainted badge FNT/DEB → KO (2-letter, slot 6) ─────────────────────
-    ko_t1, ko_t2 = _make_ko_tiles()
+    ko_border = _read_slot_border(tiles, _FNT_SLOT)
+    ko_t1, ko_t2 = _make_ko_tiles(ko_border)
     base6 = _FNT_SLOT * _TILES_PER_BADGE * _TILE_BYTES
     c1_off6 = base6 + _CONTENT1_IDX * _TILE_BYTES
     c2_off6 = base6 + _CONTENT2_IDX * _TILE_BYTES
