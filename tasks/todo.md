@@ -1,16 +1,13 @@
-# Issue #140 — « Sort » du Cube → « Tri »
+# Régression #111/#131 — résidu « Annul. » sur la carte mondiale
 
-- [x] Lire l’issue, ses commentaires, les règles du dépôt et la compétence de traduction.
-- [x] Localiser le bloc graphique réellement affiché à côté de `START` dans le Cube (`0x00EF1B68`).
-- [x] Ajouter un test de régression qui échoue tant que le bloc FR n’affiche pas `Tri`.
-- [x] Ajouter l’asset FR et l’intégrer au pipeline `build-fr`.
-- [x] Exécuter les tests ciblés, reconstruire la ROM et vérifier les octets du bloc actif.
-- [x] Contrôler le diff et committer le correctif avec ses tests.
+- [x] Reproduire le test ROM et relever les octets/pointeurs vivants.
+- [x] Tracer l’historique #111/#131 et confirmer la suppression du patch post-build.
+- [x] Ajouter des tests unitaires synthétiques pour le vrai littéral `0x9FB64`.
+- [x] Créer un patch post-build idempotent qui restaure la cellule `0x418E77` et son pointeur.
+- [x] Enchaîner le patch dans `make build-fr` après les autres libellés de menu.
+- [ ] Exécuter les tests ciblés, le rebuild déterministe et les validations du dépôt.
+- [ ] Contrôler le diff, committer et rebaser sur `unbound`.
 
 ## Revue
 
-- Le libellé est un bloc graphique LZ77 à `0x00EF1B68`, chargé dans le BG1 du Cube.
-- `languages/fr/sprites/cube_sort_hint.bmp` remplace uniquement `Sort` par `Tri` ; les dix tuiles finales du bloc restent intactes.
-- Le pipeline `build-fr` réinjecte désormais cet asset après les autres réparations graphiques.
-- Validation : 30 tests ciblés, 1 471 tests Python, 68 tests Vitest, builds FR/IT/DE, puis `make test-rom` (492 réussis, 37 ignorés).
-- Preuve finale : l’asset réextrait de `GenedRom-fr.gba` est identique au BMP source et le replay mGBA affiche `START Tri`.
+À compléter après les vérifications finales.

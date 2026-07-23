@@ -38,6 +38,7 @@ restructure.sh
 # ROM save files and debug artifacts
 output/roms/*.sav
 output/roms/*.sav.*
+output/roms/*.bak
 output/roms/FRtest*
 data/saves/
 input/roms/*.ss[0-9]

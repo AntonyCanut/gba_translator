@@ -8,6 +8,7 @@ from pathlib import Path
 
 import pytest
 
+from languages.fr.patches.world_map_action_labels import apply
 from src.text.charmap_data import CHAR_TO_BYTE
 
 
@@ -33,11 +34,15 @@ WORLD_MAP_HINT_CANCEL_SLOT_SIZE = 5
 WORLD_MAP_HINT_BYTES = bytes.fromhex(
     "f80cbe1be4e0ad00f800c9c500f801bbe2e2e9e0ff"
 )
+WORLD_MAP_HINT_WITH_RESIDUE_BYTES = bytes.fromhex(
+    "f80cbe1be4e0ad00f800c9c500f801bbe2e2e9e0adff"
+)
 WORLD_MAP_MOVE_BYTES = bytes.fromhex("f80cbe1be4e0adff")
 
 # Ces deux références appartiennent au menu Équipe, pas à la carte mondiale.
 PARTY_CANCEL_POINTERS = (0xA6CA2C, 0xA6CA64)
 ANNULER_BYTES = bytes.fromhex("bbe2e2e9e0d9e6ff")
+FAKE_ROM_SIZE = WORLD_MAP_HINT_OFFSET + 0x100
 
 _LINE_RE = re.compile(r"^\s*0x([0-9a-fA-F]+)\s*:\s*(.*)$")
 
@@ -61,8 +66,43 @@ def _read_pointed_bytes(rom: bytes, pointer_offset: int) -> bytes:
     return rom[text_offset:terminator + 1]
 
 
+def _fake_rom(*, pointed_offset: int = WORLD_MAP_HINT_OFFSET) -> bytearray:
+    """Construit une ROM minimale avec le résidu livré par le rebuild Cube."""
+    rom = bytearray(b"\xff" * FAKE_ROM_SIZE)
+    rom[WORLD_MAP_HINT_OFFSET:WORLD_MAP_HINT_OFFSET + len(
+        WORLD_MAP_HINT_WITH_RESIDUE_BYTES
+    )] = WORLD_MAP_HINT_WITH_RESIDUE_BYTES
+    struct.pack_into(
+        "<I", rom, WORLD_MAP_HINT_POINTER, ROM_BASE + pointed_offset
+    )
+    return rom
+
+
+def test_hint_patch_restores_canonical_cell_and_live_pointer() -> None:
+    """Le patch doit réparer à la fois le point résiduel et le repoint perdu."""
+    relocated_offset = WORLD_MAP_HINT_OFFSET + 0x80
+    rom = _fake_rom(pointed_offset=relocated_offset)
+    tail_start = WORLD_MAP_HINT_OFFSET + 0x20
+    untouched_tail = bytes(rom[tail_start:tail_start + 8])
+
+    assert apply(rom) == 2
+    assert _read_pointed_bytes(rom, WORLD_MAP_HINT_POINTER) == WORLD_MAP_HINT_BYTES
+    assert bytes(rom[tail_start:tail_start + 8]) == untouched_tail
+
+
+def test_hint_patch_is_idempotent() -> None:
+    """Deux applications successives doivent produire exactement la même ROM."""
+    rom = _fake_rom()
+
+    assert apply(rom) == 1
+    after_first_apply = bytes(rom)
+
+    assert apply(rom) == 0
+    assert bytes(rom) == after_first_apply
+
+
 def test_world_map_sources_use_complete_short_labels() -> None:
-    """Les sources doivent contenir les formes courtes, point compris."""
+    """Les sources doivent contenir les formes courtes attendues."""
     mapping = _load_last_wins(COMBINED_FR)
 
     assert mapping[WORLD_MAP_HINT_OFFSET] == WORLD_MAP_HINT_TEXT
