@@ -17,11 +17,16 @@ The reason is that Unbound spells floors in several unrelated places:
     item hints, the department-store directory — which kept writing ``B1F`` /
     ``3F`` inside otherwise French sentences.
 
+…and, the fourth reopening's answer, **no string at all**: the place-name
+banner (``Grotte de la Vallée 2F``) builds its floor suffix in code, character
+by character, from ``gMapHeader.floorNum``. Sweeping the ROM for a reachable
+English label can never find it — ``'B'`` and ``'F'`` are Thumb immediates.
+
 Unit tests pin each of those individually. This suite takes the player's point
 of view instead: it sweeps the whole built artifact and fails if *any* live
 pointer resolves to an English floor label, or if any reachable French text
-still spells one out. That is the check none of the earlier rounds performed,
-and it is what keeps the issue from being reopened a fourth time.
+still spells one out, and it **executes** the banner routine on the shipped
+bytes to read back the suffix the player will actually see.
 
 Needs the built ROM (``output/roms/GenedRom-fr.gba``); marked ``rom``.
 """
@@ -219,3 +224,104 @@ def test_french_floor_labels_are_actually_reachable(rom: bytes):
         assert any(
             struct.pack("<I", GBA_BASE + cell) in rom for cell in cells
         ), f"French floor label {label!r} is present but unreachable"
+
+
+# --- The banner suffix, executed rather than pattern-matched ----------------
+
+# ``AppendFloorNumberString(u8 *dest, s8 floorNum)`` — the routine the banner
+# calls right after writing the (already French) place name.
+APPEND_FLOOR_NUMBER = 0x0809847C
+
+try:  # the emulator is optional, exactly like in the Pokédex-metrics guards
+    import unicorn  # noqa: F401
+
+    _UNICORN = True
+except Exception:  # pragma: no cover - depends on the local environment
+    _UNICORN = False
+
+
+def _run_append_floor(rom: bytes, floor: int) -> str:
+    """Execute the shipped routine for *floor* and decode what it appended.
+
+    Runs the real bytes with the real ``StringAppend`` /
+    ``ConvertIntToDecimalStringN`` behind them, so the assertion is about what
+    the player sees, not about what the patch script believes it wrote.
+    """
+    from unicorn import UC_ARCH_ARM, UC_MODE_THUMB, Uc
+    from unicorn.arm_const import UC_ARM_REG_LR, UC_ARM_REG_R0, UC_ARM_REG_R1, UC_ARM_REG_SP
+
+    uc = Uc(UC_ARCH_ARM, UC_MODE_THUMB)
+    uc.mem_map(0x08000000, (len(rom) + 0xFFF) & ~0xFFF)
+    uc.mem_write(0x08000000, rom)
+    uc.mem_map(0x02000000, 0x40000)  # EWRAM: the banner's name buffer
+    uc.mem_map(0x03000000, 0x8000)  # IWRAM: stack
+    dest, done = 0x02000100, 0x03007F00
+    uc.mem_write(dest, b"\xFF" * 64)
+    uc.reg_write(UC_ARM_REG_SP, done - 0x100)
+    uc.reg_write(UC_ARM_REG_LR, done | 1)
+    uc.reg_write(UC_ARM_REG_R0, dest)
+    uc.reg_write(UC_ARM_REG_R1, floor & 0xFF)
+    uc.emu_start(APPEND_FLOOR_NUMBER | 1, done, count=20000)
+
+    written = bytes(uc.mem_read(dest, 64))
+    return TextDecoder.decode_pokemon(written[: written.index(0xFF)])
+
+
+@pytest.mark.skipif(not _UNICORN, reason="unicorn engine not installed")
+@pytest.mark.parametrize(
+    "floor,expected",
+    [
+        (0, ""),  # ground-level maps append nothing
+        (1, " RDC"),  # 1F
+        (2, " 1E"),  # 2F  <- the exact suffix of the reporter's screenshot
+        (3, " 2E"),  # 3F
+        (11, " 10E"),  # 11F
+        (-1, " -1"),  # B1F
+        (-4, " -4"),  # B4F
+        (0x7F, " TOIT"),  # ROOFTOP
+    ],
+)
+def test_banner_appends_the_french_floor(rom: bytes, floor: int, expected: str):
+    assert _run_append_floor(rom, floor) == expected
+
+
+# ``GetMapName(dest, mapsec, fill)``; the table index is ``mapsec - 0x58``.
+GET_MAP_NAME = 0x080C4D78
+MAPSEC_BASE = 0x58
+MAPSEC_VALLEY_CAVE = 43 + MAPSEC_BASE
+
+
+def _run_banner(rom: bytes, mapsec: int, floor: int) -> str:
+    """Build the whole banner line the way the engine does: name, then floor."""
+    from unicorn import UC_ARCH_ARM, UC_MODE_THUMB, Uc
+    from unicorn.arm_const import UC_ARM_REG_LR, UC_ARM_REG_R0, UC_ARM_REG_R1, UC_ARM_REG_R2, UC_ARM_REG_SP
+
+    uc = Uc(UC_ARCH_ARM, UC_MODE_THUMB)
+    uc.mem_map(0x08000000, (len(rom) + 0xFFF) & ~0xFFF)
+    uc.mem_write(0x08000000, rom)
+    uc.mem_map(0x02000000, 0x40000)
+    uc.mem_map(0x03000000, 0x8000)
+    dest, done = 0x02000100, 0x03007F00
+    uc.mem_write(dest, b"\xFF" * 64)
+    uc.reg_write(UC_ARM_REG_SP, done - 0x100)
+    uc.reg_write(UC_ARM_REG_LR, done | 1)
+    uc.reg_write(UC_ARM_REG_R0, dest)
+    uc.reg_write(UC_ARM_REG_R1, mapsec)
+    uc.reg_write(UC_ARM_REG_R2, 0)  # no padding
+    uc.emu_start(GET_MAP_NAME | 1, done, count=200000)
+
+    uc.reg_write(UC_ARM_REG_R0, uc.reg_read(UC_ARM_REG_R0))  # name end
+    uc.reg_write(UC_ARM_REG_R1, floor & 0xFF)
+    uc.reg_write(UC_ARM_REG_LR, done | 1)
+    uc.emu_start(APPEND_FLOOR_NUMBER | 1, done, count=20000)
+
+    written = bytes(uc.mem_read(dest, 64))
+    return TextDecoder.decode_pokemon(written[: written.index(0xFF)])
+
+
+@pytest.mark.skipif(not _UNICORN, reason="unicorn engine not installed")
+def test_the_reporters_screenshot_now_reads_french(rom: bytes):
+    """The literal line from the last #100 screenshot: ``Grotte de la Vallée 2F``."""
+    assert _run_banner(rom, MAPSEC_VALLEY_CAVE, 2) == "Grotte de la Vallée 1E"
+    assert _run_banner(rom, MAPSEC_VALLEY_CAVE, 1) == "Grotte de la Vallée RDC"
+    assert _run_banner(rom, MAPSEC_VALLEY_CAVE, -1) == "Grotte de la Vallée -1"

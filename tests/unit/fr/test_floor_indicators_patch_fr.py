@@ -58,11 +58,16 @@ def _build_synthetic_rom() -> bytearray:
     # pinned slots, so the fixture has to mirror the real base-ROM layout.
     for slot, (en_cell, _label) in fi.EXTRA_SLOTS.items():
         struct.pack_into("<I", rom, slot, ROM_BASE + en_cell)
+    # The place-name banner spells its floor in code; the fixture carries the
+    # real English routine so the fingerprint guard sees what it expects.
+    rom[fi.POPUP_FLOOR_FUNC:fi.POPUP_FLOOR_FUNC_END] = fi.ORIGINAL_POPUP_FLOOR_CODE
     return rom
 
 
 TOTAL_TABLE_SLOTS = len(POINTER_TABLE_OFFSETS) * len(fi.FR_LABELS)  # 3 x 15
 TOTAL_SLOTS = TOTAL_TABLE_SLOTS + len(fi.EXTRA_SLOTS)
+# `apply` also counts the rewritten place-name banner routine as one change.
+TOTAL_CHANGES = TOTAL_SLOTS + 1
 
 
 def _all_slots_correct(rom: bytes, source: bytes) -> bool:
@@ -90,8 +95,8 @@ def test_apply_repoints_every_slot_to_french():
     source = bytes(rom)
     patched = fi.apply(rom, source)
 
-    # 3 tables x 15 cells + every pinned place-bound slot, all repointed.
-    assert patched == TOTAL_SLOTS
+    # 3 tables x 15 cells + every pinned place-bound slot + the banner routine.
+    assert patched == TOTAL_CHANGES
     assert _all_slots_correct(rom, source)
     # No slot may still resolve to an English residue ("1F", "B1F"…).
     resolved = [
@@ -107,7 +112,7 @@ def test_apply_repoints_every_slot_to_french():
 def test_apply_is_idempotent():
     rom = _build_synthetic_rom()
     source = bytes(rom)
-    assert fi.apply(rom, source) == TOTAL_SLOTS
+    assert fi.apply(rom, source) == TOTAL_CHANGES
     assert fi.apply(rom, source) == 0  # nothing left to change
 
 
@@ -204,6 +209,47 @@ def test_aborts_when_base_layout_missing_floor_pointers():
     rom[fi.FLOOR_STR_OFFSET:fi.FLOOR_STR_OFFSET + 0x100] = b"\xFF" * 0x100
     with pytest.raises(SystemExit):
         fi.apply(rom, bytes(rom))  # no pointer tables -> abort loudly
+
+
+# --- Place-name banner: the floor spelled by code, not by a string cell ------
+
+
+def test_banner_routine_fits_the_english_footprint_exactly():
+    """The rewrite must not spill into the function that follows at 0x0984D8."""
+    code = fi._build_popup_floor_code(0x09FFFF00)
+    assert len(code) == fi.POPUP_FLOOR_FUNC_SIZE == len(fi.ORIGINAL_POPUP_FLOOR_CODE)
+
+
+def test_banner_routine_points_at_the_reserved_rdc_label():
+    """`RDC` must be read from the reserved region, never from a fresh copy."""
+    rom = _build_synthetic_rom()
+    source = bytes(rom)
+    fi.apply(rom, source)
+
+    pool = fi.POPUP_FLOOR_FUNC + fi.POPUP_FLOOR_FUNC_SIZE - 8
+    rdc_addr, rooftop_addr = struct.unpack_from("<II", rom, pool)
+    assert rdc_addr == ROM_BASE + fi.FLOOR_STR_OFFSET  # first reserved label
+    assert _decode_at(rom, rdc_addr) == "RDC"
+    assert rooftop_addr == fi.ROOFTOP_STRING
+
+
+def test_banner_routine_is_rewritten_and_stays_rewritten():
+    rom = _build_synthetic_rom()
+    source = bytes(rom)
+    fi.apply(rom, source)
+    patched = bytes(rom[fi.POPUP_FLOOR_FUNC:fi.POPUP_FLOOR_FUNC_END])
+    assert patched != fi.ORIGINAL_POPUP_FLOOR_CODE
+    fi.apply(rom, source)  # idempotent
+    assert bytes(rom[fi.POPUP_FLOOR_FUNC:fi.POPUP_FLOOR_FUNC_END]) == patched
+
+
+def test_aborts_when_the_banner_routine_moved():
+    """Overwriting 92 bytes of code is only safe if they still are that code."""
+    rom = _build_synthetic_rom()
+    source = bytearray(rom)
+    source[fi.POPUP_FLOOR_FUNC] ^= 0xFF
+    with pytest.raises(SystemExit):
+        fi.apply(rom, bytes(source))
 
 
 # --- End-to-end wiring against the real built ROM (skipped if absent) --------
