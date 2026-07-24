@@ -18,6 +18,20 @@
 - Vérifications du hook : 1 525 tests Python réussis (1 ignoré préexistant),
   68 tests Vitest réussis, puis builds FR/IT/DE et audits de collisions réussis.
 
+# B-543 — Reprise du bandeau « (START) Tri »
+
+- [x] Relire le dernier commentaire de l’issue et récupérer le BMP de référence fourni.
+- [x] Comparer sa grille indexée au sprite actuellement injecté.
+- [x] Remplacer le BMP, régénérer le PNG éditable à indices identiques et adapter les gardes.
+- [ ] Committer les sources avant reconstruction de la ROM.
+- [ ] Reconstruire la ROM FR et réextraire le bloc LZ77 vivant.
+- [ ] Exécuter les validations ciblées et rapides, rebaser puis revalider.
+- [ ] Publier le bilan sur l’issue GitHub et clôturer le suivi.
+
+## Revue
+
+- À compléter après validation.
+
 # Sonde mGBA — premier combat italien
 
 - [x] Reproduire l’échec sur la carte 4.10 et figer la cause racine.

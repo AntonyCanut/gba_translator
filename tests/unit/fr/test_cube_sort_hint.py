@@ -12,18 +12,27 @@ ROOT = Path(__file__).resolve().parents[3]
 ASSET = ROOT / "languages/fr/sprites/cube_sort_hint.bmp"
 EDITABLE_ASSET = ROOT / "languages/fr/sprites/cube_sort_hint.png"
 
-# Masque blanc (index de palette 3) attendu dans la zone du libellé.
-# Le gris d'ombrage est volontairement ignoré : ce masque suffit à empêcher
-# le retour du mot anglais « Sort » tout en figeant la lecture « Tri ».
-TRI_WHITE_ROWS = (
-    "...#####........#.",
-    ".....#............",
-    ".....#....###...#.",
-    ".....#....#..#..#.",
-    ".....#....#.....#.",
-    ".....#....#.....#.",
-    ".....#....#.....#.",
-    "..................",
+# Grilles indexées fournies par l'auteur de l'issue pour obtenir un bandeau
+# « (START) Tri » net une fois les tuiles remises en place par le jeu.
+TRI_ROWS = (
+    "133333A11111113A1111",
+    "1AA3AAA1111111AA1111",
+    "1113A111333A113A1111",
+    "1113A1113AA3A13A1111",
+    "1113A1113A1AA13A1111",
+    "1113A1113A11113A1111",
+    "1113A1113A11113A1111",
+    "111AA111AA1111AA1111",
+)
+START_KEYCAP_ROWS = (
+    "211333333333333333333331",
+    "2133AA3AAA3AAA3AAA3AAA33",
+    "2133A333A33A3A3A3A33A333",
+    "2133AA33A33AAA3AA333A333",
+    "21333A33A33A3A3A3A33A333",
+    "2133AA33A33A3A3A3A33A333",
+    "21A33333333333333333333A",
+    "211AAAAAAAAAAAAAAAAAAAA1",
 )
 
 
@@ -99,15 +108,19 @@ def test_cube_sort_hint_asset_draws_tri() -> None:
     assert (width, height) == (104, 32)
 
     actual = tuple(
-        "".join("#" if pixel == 3 else "." for pixel in row[:18])
+        "".join(f"{pixel:X}" for pixel in row[:20])
         for row in grid[12:20]
     )
-    assert actual == TRI_WHITE_ROWS
+    assert actual == TRI_ROWS
 
 
-def test_cube_sort_hint_leaves_two_pixels_after_start_keycap() -> None:
+def test_cube_sort_hint_preserves_complete_start_keycap() -> None:
     _, _, grid = read_indexed_bmp(ASSET)
-    assert all(pixel == 1 for row in grid[12:20] for pixel in row[:2])
+    actual = tuple(
+        "".join(f"{pixel:X}" for pixel in row[80:104])
+        for row in grid[4:12]
+    )
+    assert actual == START_KEYCAP_ROWS
 
 
 def test_cube_sort_hint_editable_png_matches_build_asset() -> None:
