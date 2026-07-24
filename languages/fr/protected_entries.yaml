@@ -995,3 +995,495 @@ entries:
   expected: PC du Prof. Log
   forbidden:
   - PC Prof. Log
+- offset: '0x195638'
+  name: 'Étage traduit — 1E: Marché du Dresseur'
+  issue: '#100'
+  expected: '1E: Marché du Dresseur\pObjets premium pour Dresseurs !'
+  forbidden:
+  - '2F: Marché du Dresseur\pObjets premium pour Dresseurs !'
+- offset: '0x7C326E'
+  name: 'Étage traduit — 4E : Boîte de Médicaments'
+  issue: '#100'
+  expected: '4E : Boîte de Médicaments'
+  forbidden:
+  - '5F : Boîte de Médicaments'
+- offset: '0x7E94EA'
+  name: 'Étage traduit — 3E : Coin des CT'
+  issue: '#100'
+  expected: '3E : Coin des CT'
+  forbidden:
+  - '4F : Coin des CT'
+- offset: '0x7EB7D2'
+  name: 'Étage traduit — RDC : Comptoir de service'
+  issue: '#100'
+  expected: 'RDC : Comptoir de service\n1E : Marché des entraîneurs\l2E : Objets d''évolution\l3E : Coin de CT\l4E : Boîte à médicaments\l5E : Cadeaux de sage'
+  forbidden:
+  - '1F : Comptoir de service\n2F : Marché des entraîneurs\l3F : Objets d''évolution\l4F : Coin de CT\l5F : Boîte à médicaments\l6F : Cadeaux de sage'
+- offset: '0x7EC0DB'
+  name: 'Étage traduit — 2E : Objets d''évolution'
+  issue: '#100'
+  expected: '2E : Objets d''évolution'
+  forbidden:
+  - '3F : Objets d''évolution'
+- offset: '0x1EF1910'
+  name: Étage traduit — Cette émeraude a été
+  issue: '#100'
+  expected: Cette émeraude a été\ntrouvée au -1 sous un cristal bleu.
+  forbidden:
+  - Cette émeraude a été\ntrouvée en B1F sous un cristal bleu.
+- offset: '0x1EF1946'
+  name: Étage traduit — Cette émeraude
+  issue: '#100'
+  expected: Cette émeraude\na été trouvée dans la grande pièce\ndu RDC, sous un cristal rouge.
+  forbidden:
+  - Cette émeraude\na été trouvée dans la grande pièce\ndu 1er étage, sous un cristal rouge.
+- offset: '0x1EF198C'
+  name: Étage traduit — Cette émeraude
+  issue: '#100'
+  expected: Cette émeraude\na été trouvée dans la grande pièce\ndu RDC, sous un cristal jaune.
+  forbidden:
+  - Cette émeraude\na été trouvée dans la grande pièce\ndu 1er étage, sous un cristal jaune.
+- offset: '0x1EF19D5'
+  name: Étage traduit — Cette émeraude
+  issue: '#100'
+  expected: Cette émeraude\na été trouvée dans la grande pièce\ndu RDC, sous un cristal bleu.
+  forbidden:
+  - Cette émeraude\na été trouvée dans la grande pièce\ndu 1er étage, sous un cristal bleu.
+- offset: '0x1EF1A1C'
+  name: Étage traduit — Émeraude trouvée pièce gauche
+  issue: '#100'
+  expected: Émeraude trouvée pièce gauche\nau RDC, sous un cristal bleu.
+  forbidden:
+  - Émeraude trouvée pièce\ngauche au 1F, sous un cristal bleu.
+- offset: '0x1EF1A62'
+  name: Étage traduit — Cette émeraude
+  issue: '#100'
+  expected: Cette émeraude\na été trouvée dans la petite\npièce au -1, sous un cristal jaune.
+  forbidden:
+  - Cette émeraude\na été trouvée dans la petite\npièce au B1F, sous un cristal jaune.
+- offset: '0x1EF1AAC'
+  name: Étage traduit — Émeraude trouvée pièce droite
+  issue: '#100'
+  expected: Émeraude trouvée pièce droite\nau RDC, sous un cristal bleu.
+  forbidden:
+  - Émeraude trouvée pièce\ndroite au 1F, sous un cristal bleu.
+- offset: '0x1EF1AF3'
+  name: Étage traduit — Émeraude trouvée pièce droite
+  issue: '#100'
+  expected: Émeraude trouvée pièce droite\nau RDC, sous un cristal rouge.
+  forbidden:
+  - Émeraude trouvée pièce\ndroite au 1F, sous un cristal rouge.
+- offset: '0x1EF6F6C'
+  name: Étage traduit — Cette personne était au -1 au
+  issue: '#100'
+  expected: Cette personne était au -1 au\nbout d'une impasse du côté est\ndu tunnel.
+  forbidden:
+  - Cette personne était au B1F au\nbout d'une impasse du côté est\ndu tunnel.
+- offset: '0x1EFFC00'
+  name: Étage traduit — Panneau Conseils Dresseurs lu
+  issue: '#100'
+  expected: Panneau Conseils Dresseurs lu\nau 2E près de l'eau.
+  forbidden:
+  - Panneau Conseils Dresseurs lu\nau 3F près de l'eau.
+- offset: '0x1EFFC34'
+  name: Étage traduit — Panneau Conseils Dresseurs lu
+  issue: '#100'
+  expected: Panneau Conseils Dresseurs lu\nau 2E près du Leveinard.
+  forbidden:
+  - Panneau Conseils Dresseurs lu\nau 3F près du Leveinard.
+- offset: '0x1EFFC6A'
+  name: Étage traduit — Panneau Conseils Dresseurs lu
+  issue: '#100'
+  expected: Panneau Conseils Dresseurs lu\nau 1E près de la dernière échelle\ndescendante.
+  forbidden:
+  - Panneau Conseils Dresseurs lu\nau 2F près de la dernière échelle\ndescendante.
+- offset: '0x1EFFE3E'
+  name: Étage traduit — Panneau Conseils Dresseurs lu
+  issue: '#100'
+  expected: Panneau Conseils Dresseurs lu\nau 3E entre l'Aromathérapeute et\nl'Ouvrier.
+  forbidden:
+  - Panneau Conseils Dresseurs lu\nau 4F entre l'Aromathérapeute et\nl'Ouvrier.
+- offset: '0x1F001B7'
+  name: Étage traduit — Panneau Conseils Dresseurs lu
+  issue: '#100'
+  expected: Panneau Conseils Dresseurs lu\nau 2E dans la salle\ndes dalles d'eau.
+  forbidden:
+  - Panneau Conseils Dresseurs lu\nau 3F dans la salle\ndes dalles d'eau.
+- offset: '0x1F006A4'
+  name: Étage traduit — Panneau Conseils Dresseurs lu dans
+  issue: '#100'
+  expected: Panneau Conseils Dresseurs lu dans\nla grande salle au RDC près du lac.
+  forbidden:
+  - Panneau Conseils Dresseurs lu dans\nla grande salle au 1F près du lac.
+- offset: '0x1F153C2'
+  name: Étage traduit — Objet trouvé derrière un pilier
+  issue: '#100'
+  expected: Objet trouvé derrière un pilier\nau RDC.
+  forbidden:
+  - Objet trouvé derrière un pilier\nau 1F.
+- offset: '0x1F153ED'
+  name: Étage traduit — Objet trouvé entre deux Noctunoir
+  issue: '#100'
+  expected: Objet trouvé entre deux Noctunoir\ndu haut, au -4.
+  forbidden:
+  - Objet trouvé entre deux Noctunoir\ndu haut, au B4F.
+- offset: '0x1F15426'
+  name: Étage traduit — Objet trouvé près de l'échelle
+  issue: '#100'
+  expected: Objet trouvé près de l'échelle\nvers le bas au -3.
+  forbidden:
+  - Objet trouvé près de l'échelle\nvers le bas au B3F.
+- offset: '0x1F1545A'
+  name: Étage traduit — Objet trouvé près de l'échelle
+  issue: '#100'
+  expected: Objet trouvé près de l'échelle\nen haut du -2.
+  forbidden:
+  - Objet trouvé près de l'échelle\nen haut du B2F.
+- offset: '0x1F15495'
+  name: Étage traduit — Objet trouvé près du pilier
+  issue: '#100'
+  expected: Objet trouvé près du pilier\nen bas du -2.
+  forbidden:
+  - Objet trouvé près du pilier\nen bas du B2F.
+- offset: '0x1F154D2'
+  name: Étage traduit — Objet trouvé à droite
+  issue: '#100'
+  expected: Objet trouvé à droite\ndu pilier en haut à gauche, -1.
+  forbidden:
+  - Objet trouvé à droite\ndu pilier en haut à gauche, B1F.
+- offset: '0x1F15516'
+  name: Étage traduit — Objet trouvé au-dessus
+  issue: '#100'
+  expected: Objet trouvé au-dessus\ndu pilier en haut à gauche, -1.
+  forbidden:
+  - Objet trouvé au-dessus\ndu pilier en haut à gauche, B1F.
+- offset: '0x1F15552'
+  name: Étage traduit — Cet objet a été trouvé sous le
+  issue: '#100'
+  expected: Cet objet a été trouvé sous le\npilier en haut à droite au -1.
+  forbidden:
+  - Cet objet a été trouvé sous le\npilier en haut à droite au B1F.
+- offset: '0x1F1558F'
+  name: Étage traduit — Cet objet a été trouvé sous le
+  issue: '#100'
+  expected: Cet objet a été trouvé sous le\npilier en bas à gauche au -1.
+  forbidden:
+  - Cet objet a été trouvé sous le\npilier en bas à gauche au B1F.
+- offset: '0x1F15608'
+  name: Étage traduit — Cet objet a été trouvé à droite du
+  issue: '#100'
+  expected: Cet objet a été trouvé à droite du\npilier en bas à droite au -1.
+  forbidden:
+  - Cet objet a été trouvé à droite du\npilier en bas à droite au B1F.
+- offset: '0x1F20247'
+  name: Étage traduit — Cette tablette a été trouvée au 1E
+  issue: '#100'
+  expected: Cette tablette a été trouvée au 1E\naprès avoir sauté sur des rochers\nprès du mur le plus haut.
+  forbidden:
+  - Cette tablette a été trouvée au 2F\naprès avoir sauté sur des rochers\nprès du mur le plus haut.
+- offset: '0x1F202AE'
+  name: Étage traduit — Cette tablette a été trouvée au -1
+  issue: '#100'
+  expected: Cette tablette a été trouvée au -1\nprès de l'échelle vers la Route 6,\net sous la cascade.
+  forbidden:
+  - Cette tablette a été trouvée au B1F\nprès de l'échelle vers la Route 6,\net sous la cascade.
+- offset: '0x1F2030A'
+  name: Étage traduit — Cette tablette a été trouvée au RDC
+  issue: '#100'
+  expected: Cette tablette a été trouvée au RDC\naprès avoir utilisé Escalade dans la\npartie nord-ouest de la caverne.
+  forbidden:
+  - Cette tablette a été trouvée au 1F\naprès avoir utilisé Escalade dans la\npartie nord-ouest de la caverne.
+- offset: '0x1F20368'
+  name: Étage traduit — Tablette trouvée dans la
+  issue: '#100'
+  expected: Tablette trouvée dans la\nsection du 2E avec la barrière\nélectrique.
+  forbidden:
+  - Tablette trouvée dans la\nsection du 3F avec la barrière\nélectrique.
+- offset: '0x1F203AE'
+  name: Étage traduit — Cette tablette a été trouvée au -3
+  issue: '#100'
+  expected: Cette tablette a été trouvée au -3\nprès de l'entrée des ruines.
+  forbidden:
+  - Cette tablette a été trouvée au B3F\nprès de l'entrée des ruines.
+- offset: '0x1F203EB'
+  name: Étage traduit — Tablette trouvée dans la grande
+  issue: '#100'
+  expected: Tablette trouvée dans la grande\nsalle du RDC après avoir caché\nles cristaux rouge, jaune et bleu.
+  forbidden:
+  - Tablette trouvée dans la grande\nsalle du 1F après avoir caché\nles cristaux rouge, jaune et bleu.
+- offset: '0x1F2044A'
+  name: Étage traduit — Cette tablette a été trouvée au -1
+  issue: '#100'
+  expected: Cette tablette a été trouvée au -1\ndans la chambre de magma accessible\ndepuis l'échelle ouest du RDC.
+  forbidden:
+  - Cette tablette a été trouvée au B1F\ndans la chambre de magma accessible\ndepuis l'échelle ouest du 1F.
+- offset: '0x1F55530'
+  name: Étage traduit — Cette CT a été trouvée au 1E
+  issue: '#100'
+  expected: Cette CT a été trouvée au 1E\naprès avoir pris une autre échelle.
+  forbidden:
+  - Cette CT a été trouvée au 1er étage\naprès avoir pris une autre échelle.
+- offset: '0x1F71777'
+  name: 'Étage traduit — RDC : Comptoir Service'
+  issue: '#100'
+  expected: 'RDC : Comptoir Service\n1E : Marché Dresseur\l2E : Objets d’Évolution\l3E : Rayon CT\l4E : Boîte Médicaments\l5E : Cadeaux Sages'
+  forbidden:
+  - '1F : Comptoir Service\n2F : Marché Dresseur\l3F : Objets d’Évolution\l4F : Rayon CT\l5F : Boîte Médicaments\l6F : Cadeaux Sages'
+- offset: '0x1F717E5'
+  name: 'Étage traduit — 1E : Marché Dresseur'
+  issue: '#100'
+  expected: '1E : Marché Dresseur\pArticles top pour Dresseurs !'
+  forbidden:
+  - '2F : Marché Dresseur\pArticles top pour Dresseurs !'
+- offset: '0x1F71818'
+  name: 'Étage traduit — RDC : Comptoir Service'
+  issue: '#100'
+  expected: 'RDC : Comptoir Service'
+  forbidden:
+  - '1F : Comptoir Service'
+- offset: '0x1F7182C'
+  name: 'Étage traduit — 1E : Marché Dresseur'
+  issue: '#100'
+  expected: '1E : Marché Dresseur'
+  forbidden:
+  - '2F : Marché Dresseur'
+- offset: '0x1F71841'
+  name: 'Étage traduit — 2E : Zone Évolution'
+  issue: '#100'
+  expected: '2E : Zone Évolution'
+  forbidden:
+  - '3F : Zone Évolution'
+- offset: '0x1F71854'
+  name: 'Étage traduit — 3E : Rayon CT'
+  issue: '#100'
+  expected: '3E : Rayon CT'
+  forbidden:
+  - '4F : Rayon CT'
+- offset: '0x1F71862'
+  name: 'Étage traduit — 4E : Boîte Médicaments'
+  issue: '#100'
+  expected: '4E : Boîte Médicaments'
+  forbidden:
+  - '5F : Boîte Médicaments'
+- offset: '0x1F71873'
+  name: 'Étage traduit — 5E : Cadeaux Sages'
+  issue: '#100'
+  expected: '5E : Cadeaux Sages'
+  forbidden:
+  - '6F : Cadeaux Sages'
+- offset: '0x1F7E1EC'
+  name: Étage traduit — Un garçon s'est perdu au Mont Foudroya
+  issue: '#100'
+  expected: Un garçon s'est perdu au Mont Foudroyant 3E ! Rejoins-le\net guide-le vers la sortie.
+  forbidden:
+  - Un garçon s'est perdu au Mont Foudroyant 4F ! Rejoins-le\net guide-le vers la sortie.
+- offset: '0x1F82262'
+  name: Étage traduit — Le mode du bouton R est réglé
+  issue: '#100'
+  expected: Le mode du bouton R est réglé\nsur Analyse Minage.\pDans l'{COLOR}ÉAutoroute RBT{COLOR}Á, la\n{COLOR}Ésalle latérale{COLOR}Á du {COLOR}ÉPic Cristal RDC{COLOR}Á, ou\l{COLOR}Ésous l'eau{COLOR}Á, appuie sur {R_BUTTON} pour\nscanner\lles objets cachés.\pQuand une lueur apparaît sur le mur,\nappuie sur {SE_SHOP} pour miner là.{PAUSE_UNTIL_PRESS}
+  forbidden:
+  - Le mode du bouton R est réglé\nsur Analyse Minage.\pDans l'{COLOR}ÉAutoroute RBT{COLOR}Á, la\n{COLOR}Ésalle latérale{COLOR}Á du {COLOR}ÉPic Cristal 1F{COLOR}Á, ou\l{COLOR}Ésous l'eau{COLOR}Á, appuie sur {R_BUTTON} pour\nscanner\lles objets cachés.\pQuand une lueur apparaît sur le mur,\nappuie sur {SE_SHOP} pour miner là.{PAUSE_UNTIL_PRESS}
+- offset: '0x1F88DBB'
+  name: Étage traduit — Cellule Zygarde au -1 de la grotte
+  issue: '#100'
+  expected: Cellule Zygarde au -1 de la grotte\nsous Bellin après avoir fait\nEscalade.
+  forbidden:
+  - Cellule Zygarde au B1F de la grotte\nsous Bellin après avoir fait\nEscalade.
+- offset: '0x1F88E14'
+  name: Étage traduit — Cellule Zygarde près du Karatéka
+  issue: '#100'
+  expected: Cellule Zygarde près du Karatéka\nau -1.
+  forbidden:
+  - Cellule Zygarde près du Karatéka\nau B1F.
+- offset: '0x1F88E4C'
+  name: Étage traduit — Cellule Zygarde près de l'échelle
+  issue: '#100'
+  expected: Cellule Zygarde près de l'échelle\naprès Surf au -2.
+  forbidden:
+  - Cellule Zygarde près de l'échelle\naprès Surf au B2F.
+- offset: '0x1F890AB'
+  name: Étage traduit — Cellule Zygarde près de la chute
+  issue: '#100'
+  expected: Cellule Zygarde près de la chute\nde lave au RDC.
+  forbidden:
+  - Cellule Zygarde près de la chute\nde lave au 1er étage.
+- offset: '0x1F899F2'
+  name: Étage traduit — Cellule Zygarde à côté d'une statue
+  issue: '#100'
+  expected: Cellule Zygarde à côté d'une statue\nau -1.
+  forbidden:
+  - Cellule Zygarde à côté d'une statue\nau B1F.
+- offset: '0x1F89AA4'
+  name: Étage traduit — Cellule Zygarde dans le labyrinthe
+  issue: '#100'
+  expected: Cellule Zygarde dans le labyrinthe\nsans fin au -1.
+  forbidden:
+  - Cellule Zygarde dans le labyrinthe\nsans fin au B1F.
+- offset: '0x1F89AE1'
+  name: Étage traduit — Cellule Zygarde dehors près de
+  issue: '#100'
+  expected: Cellule Zygarde dehors près de\nl'entrée ouest du -1.
+  forbidden:
+  - Cellule Zygarde dehors près de\nl'entrée ouest du B1F.
+- offset: '0x1F89B24'
+  name: Étage traduit — Cellule Zygarde près de la tablette
+  issue: '#100'
+  expected: Cellule Zygarde près de la tablette\nau -3.
+  forbidden:
+  - Cellule Zygarde près de la tablette\nau B3F.
+- offset: '0x1F89B58'
+  name: Étage traduit — Cellule Zygarde à côté d'une table
+  issue: '#100'
+  expected: Cellule Zygarde à côté d'une table\nau -1.
+  forbidden:
+  - Cellule Zygarde à côté d'une table\nau B1F.
+- offset: '0x1F89B8C'
+  name: Étage traduit — Cellule Zygarde dans le labo
+  issue: '#100'
+  expected: Cellule Zygarde dans le labo\nau -2.
+  forbidden:
+  - Cellule Zygarde dans le labo\nau B2F.
+- offset: '0x1F89D5C'
+  name: Étage traduit — Cellule Zygarde sous le Noctunoir
+  issue: '#100'
+  expected: Cellule Zygarde sous le Noctunoir\nau -2.
+  forbidden:
+  - Cellule Zygarde sous le Noctunoir\nau B2F.
+- offset: '0x1F89E80'
+  name: Étage traduit — Cellule Zygarde dans le Réseau
+  issue: '#100'
+  expected: Cellule Zygarde dans le Réseau\nÉlectrique au -2.
+  forbidden:
+  - Cellule Zygarde dans le Réseau\nÉlectrique au B2F.
+- offset: '0x1F89EB6'
+  name: Étage traduit — Cellule Zygarde entre des caisses
+  issue: '#100'
+  expected: Cellule Zygarde entre des caisses\nau -3.
+  forbidden:
+  - Cellule Zygarde entre des caisses\nau B3F.
+- offset: '0x1F8A400'
+  name: Étage traduit — Cellule Zygarde trouvée au 1E.
+  issue: '#100'
+  expected: Cellule Zygarde trouvée au 1E.
+  forbidden:
+  - Cellule Zygarde trouvée au 2F.
+- offset: '0x1EF7018'
+  name: Étage traduit — Cette personne était au 2E,
+  issue: '#100'
+  expected: Cette personne était au 2E,\naccessible avec Escalade sur\nla partie ouest du 1E.
+  forbidden:
+  - Cette personne était au 3e étage,\naccessible avec Escalade sur\nla partie ouest du 2e.
+- offset: '0x1F54DF9'
+  name: Étage traduit — Cette CT a été trouvée au 2E
+  issue: '#100'
+  expected: Cette CT a été trouvée au 2E\naprès avoir utilisé Escalade.
+  forbidden:
+  - Cette CT a été trouvée au 3e étage\naprès avoir utilisé Escalade.
+- offset: '0x1F55140'
+  name: Étage traduit — Cette CT a été achetée au 3E.
+  issue: '#100'
+  expected: Cette CT a été achetée au 3E.
+  forbidden:
+  - Cette CT a été achetée au 4e étage.
+- offset: '0x1F55376'
+  name: Étage traduit — Cette CT a été achetée au 3E.
+  issue: '#100'
+  expected: Cette CT a été achetée au 3E.
+  forbidden:
+  - Cette CT a été achetée au 4e étage.
+- offset: '0x1F55453'
+  name: Étage traduit — Cette CT a été achetée au 3E.
+  issue: '#100'
+  expected: Cette CT a été achetée au 3E.
+  forbidden:
+  - Cette CT a été achetée au 4e étage.
+- offset: '0x1F55732'
+  name: Étage traduit — Cette CT a été trouvée au 1E
+  issue: '#100'
+  expected: Cette CT a été trouvée au 1E\naprès avoir utilisé Escalade.
+  forbidden:
+  - Cette CT a été trouvée au 2e étage\naprès avoir utilisé Escalade.
+- offset: '0x1F55969'
+  name: Étage traduit — Cette CT a été trouvée au 1E
+  issue: '#100'
+  expected: Cette CT a été trouvée au 1E\naprès avoir utilisé Escalade.
+  forbidden:
+  - Cette CT a été trouvée au 2e étage\naprès avoir utilisé Escalade.
+- offset: '0x1F559D8'
+  name: Étage traduit — Cette CT a été trouvée au 1E
+  issue: '#100'
+  expected: Cette CT a été trouvée au 1E\naprès avoir erré un moment.
+  forbidden:
+  - Cette CT a été trouvée au 2e étage\naprès avoir erré un moment.
+- offset: '0x1F55A14'
+  name: Étage traduit — Cette CT a été trouvée au 2E
+  issue: '#100'
+  expected: Cette CT a été trouvée au 2E\nprès de la Karatéka.
+  forbidden:
+  - Cette CT a été trouvée au 3e étage\nprès de la Karatéka.
+- offset: '0x1F57C7F'
+  name: Étage traduit — Antre trouvée au 1E
+  issue: '#100'
+  expected: Antre trouvée au 1E\nderrière la tablette Braille.
+  forbidden:
+  - Antre trouvée au 2e étage\nderrière la tablette Braille.
+- offset: '0x1F57D7E'
+  name: Étage traduit — Antre trouvée au 2E
+  issue: '#100'
+  expected: Antre trouvée au 2E\nderrière la tablette Braille.
+  forbidden:
+  - Antre trouvée au 3e étage\nderrière la tablette Braille.
+- offset: '0x1F890E1'
+  name: Étage traduit — Cellule Zygarde à l'extrémité nord
+  issue: '#100'
+  expected: Cellule Zygarde à l'extrémité nord\ndu pont ouest au 2E.
+  forbidden:
+  - Cellule Zygarde à l'extrémité nord\ndu pont ouest au 3e étage.
+- offset: '0x1F893C4'
+  name: Étage traduit — Cellule Zygarde près d'une échelle
+  issue: '#100'
+  expected: Cellule Zygarde près d'une échelle\nau 1E.
+  forbidden:
+  - Cellule Zygarde près d'une échelle\nau 2e étage.
+- offset: '0x1F893F8'
+  name: Étage traduit — Cellule Zygarde entre des rochers
+  issue: '#100'
+  expected: Cellule Zygarde entre des rochers\nprès du pont\nau 1E.
+  forbidden:
+  - Cellule Zygarde entre des rochers\nprès du pont\nau 2e étage.
+- offset: '0x1F8995F'
+  name: Étage traduit — Cellule Zygarde au 1E
+  issue: '#100'
+  expected: Cellule Zygarde au 1E\nprès de la pente boueuse sud.
+  forbidden:
+  - Cellule Zygarde au 2e étage\nprès de la pente boueuse sud.
+- offset: '0x1F8A46A'
+  name: Étage traduit — Cellule Zygarde au coin sud-ouest
+  issue: '#100'
+  expected: Cellule Zygarde au coin sud-ouest\ndu 2E.
+  forbidden:
+  - Cellule Zygarde au coin sud-ouest\ndu 3e étage.
+- offset: '0x1FAA48C'
+  name: Étage traduit — Ce Pokémon a été trouvé pendant la
+  issue: '#100'
+  expected: Ce Pokémon a été trouvé pendant la\njournée au 2E.
+  forbidden:
+  - Ce Pokémon a été trouvé pendant la\njournée au 3ème étage.
+- offset: '0x1FAA4B9'
+  name: Étage traduit — Ce Pokémon a été trouvé la nuit au
+  issue: '#100'
+  expected: Ce Pokémon a été trouvé la nuit au\n2E.
+  forbidden:
+  - Ce Pokémon a été trouvé la nuit au\n3ème étage.
+- offset: '0x1FAA549'
+  name: Étage traduit — Ce Pokémon a été trouvé la nuit dans
+  issue: '#100'
+  expected: Ce Pokémon a été trouvé la nuit dans\nla petite salle sous la grande salle\nau RDC.
+  forbidden:
+  - Ce Pokémon a été trouvé la nuit dans\nla petite salle sous la grande salle\nau rez-de-chaussée.
+- offset: '0x1FAA816'
+  name: Étage traduit — Ce Pokémon a été trouvé la nuit
+  issue: '#100'
+  expected: Ce Pokémon a été trouvé la nuit\naprès avoir utilisé Escalade du côté\nouest du 1E.
+  forbidden:
+  - Ce Pokémon a été trouvé la nuit\naprès avoir utilisé Escalade du côté\nouest du 2ème étage.

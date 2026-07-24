@@ -26,6 +26,24 @@ padding **fixe et réservée** en fin de ROM et repointe **tous** les emplacemen
 vers cette copie. Le pop-up ne dépend donc plus du tout de la relocalisation
 générique — la sortie est identique à chaque build. Comme c'est du code commité,
 il survit aussi aux réécritures de ``combined_fr.txt`` et du JSON (classe 3).
+
+Étages rattachés à un lieu (relance #100)
+-----------------------------------------
+La table ``0x41803A`` n'est **pas** la seule source d'étages affichée au joueur.
+D'autres libellés vivent dans leurs propres cellules, toujours accolés à un lieu,
+et étaient restés en anglais :
+
+* menus d'ascenseur (``multichoice`` FireRed et scripts de carte) :
+  ``0x417AB0`` (``1F``-``5F``), ``0x7D8F91`` (``F1``/``B1F``-``B3F``),
+  ``0x7ECDAD`` (``F5``-``F1``), ``0x1F6F5FB`` (``1F``/``B1F``-``B3F``) ;
+* liste des émeraudes du Cube (``0x1E5BB44``) : chaque entrée affiche l'étage
+  ``0x1EF1906``/``0x1EF190A``/``0x1EF190D`` à côté de la description du lieu.
+
+Ces cellules sont trop courtes pour accueillir ``RDC`` et n'ont qu'un unique
+référent chacune : plutôt que de les relocaliser une deuxième fois, on **réutilise
+les libellés FR déjà écrits dans la région réservée** et on repointe les
+emplacements listés dans ``EXTRA_SLOTS`` (adresses figées, vérifiées contre la
+ROM de base — le build échoue bruyamment si la disposition change).
 """
 
 from __future__ import annotations
@@ -68,6 +86,50 @@ FR_LABELS = {
 # before the tail).
 FLOOR_STR_OFFSET = 0x1FFFF00
 
+# Floor labels shown next to a place but served by their own cells (see the
+# module docstring). Pointer slot -> (EN cell it points at in the base ROM,
+# French label to reuse from the reserved region).
+#
+# The slots are pinned instead of scanned: a byte-pattern scan also matches
+# coincidental 4-byte runs inside sample/graphics data (e.g. 0xB21C48 happens to
+# read as a pointer to the "B2F" cell), and repointing one of those would corrupt
+# unrelated data.
+EXTRA_SLOTS: dict[int, tuple[int, str]] = {
+    # Multichoice "elevator" list (5 floors, descending) @0x3DFFE8-0x3E0008.
+    0x3DFFE8: (0x417ABC, "4E"),   # 5F
+    0x3DFFF0: (0x417AB9, "3E"),   # 4F
+    0x3DFFF8: (0x417AB6, "2E"),   # 3F
+    0x3E0000: (0x417AB3, "1E"),   # 2F
+    0x3E0008: (0x417AB0, "RDC"),  # 1F
+    # Map-script elevator (F1/B1F..B3F) @0x7D8E18-0x7D8E42.
+    0x7D8E18: (0x7D8F91, "RDC"),  # F1
+    0x7D8E26: (0x7D8F94, "-1"),   # B1F
+    0x7D8E34: (0x7D8F98, "-2"),   # B2F
+    0x7D8E42: (0x7D8F9C, "-3"),   # B3F
+    # Map-script elevator (F5..F1) @0x16C180-0x16C1B8.
+    0x16C180: (0x7ECDAD, "4E"),   # F5
+    0x16C18E: (0x7ECDB0, "3E"),   # F4
+    0x16C19C: (0x7ECDB3, "2E"),   # F3
+    0x16C1AA: (0x7ECDB6, "1E"),   # F2
+    0x16C1B8: (0x7ECDB9, "RDC"),  # F1
+    # Cube emerald list @0x1E5BB44: one floor label per location description.
+    0x1E5BB54: (0x1EF1906, "-1"),   # B1F
+    0x1E5BB64: (0x1EF1906, "-1"),   # B1F
+    0x1E5BB74: (0x1EF190A, "RDC"),  # 1F
+    0x1E5BB84: (0x1EF190A, "RDC"),  # 1F
+    0x1E5BB94: (0x1EF190A, "RDC"),  # 1F
+    0x1E5BBA4: (0x1EF190A, "RDC"),  # 1F
+    0x1E5BBB4: (0x1EF190A, "RDC"),  # 1F
+    0x1E5BBC4: (0x1EF190A, "RDC"),  # 1F
+    0x1E5BBD4: (0x1EF190D, "1E"),   # 2F
+    0x1E5BBE4: (0x1EF190D, "1E"),   # 2F
+    # Map-script elevator (1F/B1F..B3F) @0x1E912BA-0x1E912E4.
+    0x1E912BA: (0x1F6F5FB, "RDC"),  # 1F
+    0x1E912C8: (0x1F6F5FE, "-1"),   # B1F
+    0x1E912D6: (0x1F6F602, "-2"),   # B2F
+    0x1E912E4: (0x1F6F606, "-3"),   # B3F
+}
+
 DEFAULT_SOURCE = Path("input/roms/englishrom.gba")
 
 
@@ -98,6 +160,26 @@ def _find_slots(source: bytes) -> dict[int, list[int]]:
     return slots
 
 
+def _extra_targets(source: bytes, label_addr: dict[str, int]) -> dict[int, int]:
+    """Resolve ``EXTRA_SLOTS`` to ``slot -> French label address``.
+
+    Every pinned slot must still hold, *in the base ROM*, the pointer to the
+    English cell it was recorded against. A mismatch means the ROM layout moved
+    and repointing would corrupt unrelated bytes, so we abort the build instead.
+    """
+    targets: dict[int, int] = {}
+    for slot, (en_cell, label) in EXTRA_SLOTS.items():
+        actual = struct.unpack_from("<I", source, slot)[0]
+        if actual != ROM_BASE + en_cell:
+            raise SystemExit(
+                f"patch_floor_indicators_fr: slot 0x{slot:X} holds 0x{actual:08X} "
+                f"instead of 0x{ROM_BASE + en_cell:08X} in the base ROM — layout "
+                "changed, aborting."
+            )
+        targets[slot] = label_addr[label]
+    return targets
+
+
 def apply(rom: bytearray, source: bytes) -> int:
     """Write the 15 FR floor labels to reserved padding and repoint every slot.
 
@@ -123,19 +205,30 @@ def apply(rom: bytearray, source: bytes) -> int:
 
     # Deterministic layout: labels laid out in table order from FLOOR_STR_OFFSET.
     dest_addr: dict[int, int] = {}
+    label_addr: dict[str, int] = {}
     block = bytearray()
     cursor = FLOOR_STR_OFFSET
     for en_off in FR_LABELS:  # dict preserves insertion (table) order
         encoded = _encode(FR_LABELS[en_off])
         dest_addr[en_off] = ROM_BASE + cursor
+        label_addr[FR_LABELS[en_off]] = ROM_BASE + cursor
         block += encoded
         cursor += len(encoded)
 
+    extra_targets = _extra_targets(source, label_addr)
+
     # Idempotency: already fully applied?
-    already = rom[FLOOR_STR_OFFSET:FLOOR_STR_OFFSET + len(block)] == block and all(
-        struct.unpack_from("<I", rom, slot)[0] == dest_addr[en_off]
-        for en_off, slist in slots.items()
-        for slot in slist
+    already = (
+        rom[FLOOR_STR_OFFSET:FLOOR_STR_OFFSET + len(block)] == block
+        and all(
+            struct.unpack_from("<I", rom, slot)[0] == dest_addr[en_off]
+            for en_off, slist in slots.items()
+            for slot in slist
+        )
+        and all(
+            struct.unpack_from("<I", rom, slot)[0] == addr
+            for slot, addr in extra_targets.items()
+        )
     )
     if already:
         return 0
@@ -161,11 +254,18 @@ def apply(rom: bytearray, source: bytes) -> int:
                 struct.pack_into("<I", rom, slot, dest_addr[en_off])
                 patched += 1
 
+    extra_patched = 0
+    for slot, addr in extra_targets.items():
+        if struct.unpack_from("<I", rom, slot)[0] != addr:
+            struct.pack_into("<I", rom, slot, addr)
+            extra_patched += 1
+
     print(
         f"  floor indicators: 15 labels @0x{FLOOR_STR_OFFSET:07X}, "
-        f"{patched}/{total_slots} pointer(s) repointed"
+        f"{patched}/{total_slots} pointer(s) repointed, "
+        f"{extra_patched}/{len(extra_targets)} place-bound label(s) repointed"
     )
-    return patched
+    return patched + extra_patched
 
 
 def main() -> int:

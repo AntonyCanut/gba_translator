@@ -76,6 +76,31 @@ def test_floor_indicators_persisted_in_combined_fr():
         )
 
 
+def test_no_english_floor_token_survives_in_french_text():
+    """Floors are also written *inside* place descriptions — none may stay English.
+
+    The reporter's last #100 screenshot showed a floor glued to a location name;
+    the same English tokens were still spelled out in the Cube collection texts
+    (Zygarde cells, tablets, emeralds), the Trainer-Tips signs, the item-location
+    hints and the department-store directory. They must all follow the same
+    convention as the pop-up: ``1F -> RDC``, ``nF -> (n-1)E``, ``BnF -> -n``.
+    """
+    mapping = _load_last_wins(COMBINED_FR)
+    # `\n`, `\l`, `\p` are literal two-character escapes in combined_fr.txt: the
+    # trailing letter must not be mistaken for a word character before a token.
+    escapes = re.compile(r"\\[nlp]")
+    token = re.compile(r"(?<![A-Za-z0-9])(?:B[1-4]F|(?:[1-9]|1[01])F)(?![A-Za-z0-9])")
+
+    offenders = {
+        offset: text
+        for offset, text in mapping.items()
+        if offset not in EXPECTED_FLOORS and token.search(escapes.sub(" ", text))
+    }
+    assert not offenders, "English floor tokens left in French text: " + ", ".join(
+        f"{offset:#x} ({text[:60]!r})" for offset, text in sorted(offenders.items())
+    )
+
+
 def test_floor_labels_have_no_stray_terminator_or_whitespace():
     """Guard against the "RDC1E" merge class of corruption at the source.
 

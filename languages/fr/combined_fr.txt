@@ -238,7 +238,7 @@
 0x194A4F: Alors, mon ancien {STR_VAR_2} ?\pMon {STR_VAR_1} va super bien !
 0x195471: Beaucoup de gens à Cimistral\napprécient les délices raffinés.\pLes Pokémon rôtis, par exemple.
 0x1954DD: Bonjour !\nBienvenue au Magasin de Daherapolis !\pLe panneau au mur décrit\nl’organisation du magasin.
-0x195638: 2F: Marché du Dresseur\pObjets premium pour Dresseurs !
+0x195638: 1E: Marché du Dresseur\pObjets premium pour Dresseurs !
 0x195BBA: Les boosts de stats Pokémon\nne s’achètent qu’ici.\pPV Plus augmente les PV de base\nd’un Pokémon.\pCalcium augmente l’Att. Spé de base\nd’un Pokémon.\pZinc renforce la Déf. Spé de base\nd’un Pokémon.\pCarbone améliore la Vitesse de\nbase.
 0x195CA0: Je viens pour des boosts de stats\nPokémon.\pProtéine augmente l’Attaque de\nbase.\pLe Fer augmente la Défense de\nbase.
 0x1962BF: Bonne nuit tout le monde.
@@ -6536,7 +6536,7 @@
 0x7C3187: Vite !\pPrenez une {COLOR}ÉGlace Volute{COLOR}Ë avant\nqu'elle fonde !
 0x7C31B9: La ville des lumières et des\nbiscuits…\pVoici un souvenir d'Illumis,\nla {COLOR}ÉGalette Illumis{COLOR}Ë.
 0x7C3228: 9Le fait que tu m'aies affronté\nprouve que tu vas dans le bon sens.
-0x7C326E: 5F : Boîte de Médicaments
+0x7C326E: 4E : Boîte de Médicaments
 0x7C327F: Goûte à la Méga-Évolution\navec ce {COLOR}ÉSable de\lYantreizh{COLOR}Ë !
 0x7C32CD: Tu as déjà goûté une {COLOR}ÉMalasada Maxi{COLOR}Ë\navant ?\pJ'ai entendu dire que c'est très bon\npour le cœur.\pGoûte donc, tout droit\nd'Alola !
 0x7C3348: Donne le {COLOR}É{STR_VAR_1}{COLOR}Ë à un\nPokémon avec un statut.\pIl ira mieux, tout\nsimplement !
@@ -7081,7 +7081,7 @@
 0x7E934E: Tu crois faire quoi,\nmorveux ?\pIci, c'est le paradis des Roitiflam\nNoir…\pUn parasite comme toi n'a rien à\nfaire ici…\pNe me dis pas que tu penses pouvoir\ntenir tête au chef des\lRoitiflam Noir ?
 0x7E9423: C'est tout ?\pNon, il te reste une option :\nva-t'en !\pIci, c'est le repaire des Roitiflam\nNoir.\pOn n'a nulle part où aller et on ne\nveut personne sur notre\lchemin.
 0x7E94CB: Le sol ici est électrifié.
-0x7E94EA: 4F : Coin des CT
+0x7E94EA: 3E : Coin des CT
 0x7E9529: Gwa ha ha ha ! Apporte-toi !\nTu as du cran, gamin !\pJe vais te montrer ce que le gars\nqui tient les Roitiflam Noir\lpeut vraiment faire !
 0x7E95B2: Gwa ha ha ha !
 0x7E95C0: Tu n'es pas si mauvais, gamin…\nje t'aime bien.\pÉcoute ça…\pDésormais, notre équipe s'appellera\nles {PLAYER} Noir !\pOn adopte ton nom dur et\nféroce !\pUn nom plus sauvage pour une équipe\nplus sauvage !\pLes {PLAYER} Noir !\nGwa ha ha ha ! Génial !
@@ -7128,12 +7128,12 @@
 0x7EB25E: ored à\lpleine santé.
 0x7EB584: 9Oh, qui es-tu ?\p…\p{PLAYER} ?\pTu cherches {RIVAL}, je suppose ? Il\nest passé ici demander comment\paller aux Ruines du Néant. Je lui ai\ndit comme je te dis.\pLa seule voie que je connais est de\nprendre un bateau ou de surfer par\pla Route 14. Désolé si ça n'aide pas\nbeaucoup.\l\p\n
 0x7EB6B3: As-tu déjà entendu parler du\nprofesseur Log ?\pC'est un vieil ami de recherche.\pOn étudiait ensemble l'histoire de\nBorrius.\pJusqu'au jour où nous avons trouvé\nquelque chose qu'on\ln'aurait pas dû voir…\pDepuis, il étudie les stats et taux\nde capture des Pokémon,\ltandis que je profite de\nma retraite.
-0x7EB7D2: 1F : Comptoir de service\n2F : Marché des entraîneurs\l3F : Objets d'évolution\l4F : Coin de CT\l5F : Boîte à médicaments\l6F : Cadeaux de sage
+0x7EB7D2: RDC : Comptoir de service\n1E : Marché des entraîneurs\l2E : Objets d'évolution\l3E : Coin de CT\l4E : Boîte à médicaments\l5E : Cadeaux de sage
 0x7EBF53: Oh, ça sent si bon ! Votre {COLOR}É{STR_VAR_3} {COLOR}Ë est un\ningrédient très rare en effet!\pVoudriez-vous prendre\n{COLOR}É{STR_VAR_2}¥ {COLOR}Ëpour\pcela ?
 0x7EBFC3: Merci! Merci !\pAvec cela, je peux créer un superbe\nmenu !\pMes clients vont adorer !
 0x7EC017: Hmm… Il ne semble pas que vous ayez\ndes\p{COLOR}É{STR_VAR_3}s{COLOR}Ë. Si vous\ntrouvez un ingrédient\pgastronomique pour moi,\nfaites-le-moi savoir !
 0x7EC087: Aww… Eh bien, ce n'est pas grave.\pSi vous trouvez un ingrédient\nspécial, dites-le-moi !
-0x7EC0DB: 3F : Objets d'évolution
+0x7EC0DB: 2E : Objets d'évolution
 0x7EC0EF: J'adore le magasin Daherapolis Dep.!\n\pJe fais du shopping ici depuis\nson ouverture !
 0x7EC14C: Soupir…\pMa femme insiste pour venir ici\ndepuis l'ouverture du magasin.\pOh !\pÇa doit être le signe qu'elle vient\nd'acheter avec ma carte.\pEncore dix ans de vie\nenvolés…
 0x7EC209: On m'a dit que des dresseurs en\nhauts étages veulent te battre.\pFais le plein d'objets utiles\nauprès des\lvendeurs de cet étage.
@@ -15571,14 +15571,14 @@
 0x1EF17BF: Heeyo !\pT'as pas toutes les émeraudes !\pT'en as que {COLOR}É{STR_VAR_2}{COLOR}Ë émeraude{VERSION} !\pLe reste est encore sur fiya !\pAhhhhhhhhhhhhhhhhhhh !\pApporte-moi les {COLOR}É{STR_VAR_1}{COLOR}Ë émeraudes !
 0x1EF1878: Regardez-moi ! Regardez-moi !\pMes émeraudes sont sur fiya !\pAhhhhhhhhhhhhhhhhhh !\pTellement chaud !
 0x1EF18C3: L'émeraude a été absorbée par le\nCube !
-0x1EF1910: Cette émeraude a été\ntrouvée en B1F sous un cristal bleu.
-0x1EF1946: Cette émeraude\na été trouvée dans la grande pièce\ndu 1er étage, sous un cristal rouge.
-0x1EF198C: Cette émeraude\na été trouvée dans la grande pièce\ndu 1er étage, sous un cristal jaune.
-0x1EF19D5: Cette émeraude\na été trouvée dans la grande pièce\ndu 1er étage, sous un cristal bleu.
-0x1EF1A1C: Émeraude trouvée pièce\ngauche au 1F, sous un cristal bleu.
-0x1EF1A62: Cette émeraude\na été trouvée dans la petite\npièce au B1F, sous un cristal jaune.
-0x1EF1AAC: Émeraude trouvée pièce\ndroite au 1F, sous un cristal bleu.
-0x1EF1AF3: Émeraude trouvée pièce\ndroite au 1F, sous un cristal rouge.
+0x1EF1910: Cette émeraude a été\ntrouvée au -1 sous un cristal bleu.
+0x1EF1946: Cette émeraude\na été trouvée dans la grande pièce\ndu RDC, sous un cristal rouge.
+0x1EF198C: Cette émeraude\na été trouvée dans la grande pièce\ndu RDC, sous un cristal jaune.
+0x1EF19D5: Cette émeraude\na été trouvée dans la grande pièce\ndu RDC, sous un cristal bleu.
+0x1EF1A1C: Émeraude trouvée pièce gauche\nau RDC, sous un cristal bleu.
+0x1EF1A62: Cette émeraude\na été trouvée dans la petite\npièce au -1, sous un cristal jaune.
+0x1EF1AAC: Émeraude trouvée pièce droite\nau RDC, sous un cristal bleu.
+0x1EF1AF3: Émeraude trouvée pièce droite\nau RDC, sous un cristal rouge.
 0x1EF1B39: Cette émeraude a été\ntrouvée dans la pièce au sommet de\nla falaise, sous un cristal rouge.
 0x1EF1B8F: L'Orbe de Jade de {PLAYER} a\nsoudainement commencé à briller !
 0x1EF1BC8: {COLOR}Á{STR_VAR_1} s'est envolé !
@@ -15785,9 +15785,9 @@
 0x1EF6EA6: Cette personne se cachait derrière\nune plante dans le Magasin.
 0x1EF6EDF: Cette personne était au rez-de-\nchaussée de la première maison\nprès du Centre Pokémon.
 0x1EF6F3B: Cette personne était au pied\ndes escaliers.
-0x1EF6F6C: Cette personne était au B1F au\nbout d'une impasse du côté est\ndu tunnel.
+0x1EF6F6C: Cette personne était au -1 au\nbout d'une impasse du côté est\ndu tunnel.
 0x1EF6FCD: Cette personne était dans la maison\nprès de l'entrée du Mont Foudroyant.
-0x1EF7018: Cette personne était au 3e étage,\naccessible avec Escalade sur\nla partie ouest du 2e.
+0x1EF7018: Cette personne était au 2E,\naccessible avec Escalade sur\nla partie ouest du 1E.
 0x1EF7070: Cette personne était en cuisine\ndu Manoir Somnia, au 2e.
 0x1EF70AB: Cette personne était devant les\nétagères du Labo de Recherche\nsur les Rêves.
 0x1EF70F8: Cette personne était au rez-de-\nchaussée de la maison en haut à\ngauche du groupe de quatre.
@@ -16152,15 +16152,15 @@
 0x1EFFB46: Panneau Conseils Dresseurs lu\nprès de ta maison.
 0x1EFFB79: Panneau Conseils Dresseurs lu\nprès de Bélenbourg sur la route\nde montagne rapide.
 0x1EFFBC5: Panneau Conseils Dresseurs lu\nprès du chemin qui entre en ville.
-0x1EFFC00: Panneau Conseils Dresseurs lu\nau 3F près de l'eau.
-0x1EFFC34: Panneau Conseils Dresseurs lu\nau 3F près du Leveinard.
-0x1EFFC6A: Panneau Conseils Dresseurs lu\nau 2F près de la dernière échelle\ndescendante.
+0x1EFFC00: Panneau Conseils Dresseurs lu\nau 2E près de l'eau.
+0x1EFFC34: Panneau Conseils Dresseurs lu\nau 2E près du Leveinard.
+0x1EFFC6A: Panneau Conseils Dresseurs lu\nau 1E près de la dernière échelle\ndescendante.
 0x1EFFCAF: Panneau Conseils Dresseurs lu\njuste au sud de l'entrée de la\nGrotte Stalactite.
 0x1EFFCFB: Panneau Conseils Dresseurs lu\navant le pont en entrant en ville\ndepuis la Route 2.
 0x1EFFD49: Panneau Conseils Dresseurs lu\nsur la plage nord près du\nParadis Floral.
 0x1EFFD93: Panneau Conseils Dresseurs lu\nsur le chemin juste à la sortie\nouest de Boissombre.
 0x1EFFDE9: Panneau Conseils Dresseurs lu\naprès avoir quitté la sortie ouest\nsupérieure du Volcan Cendré.
-0x1EFFE3E: Panneau Conseils Dresseurs lu\nau 4F entre l'Aromathérapeute et\nl'Ouvrier.
+0x1EFFE3E: Panneau Conseils Dresseurs lu\nau 3E entre l'Aromathérapeute et\nl'Ouvrier.
 0x1EFFE87: Panneau Conseils Dresseurs lu\ndans les herbes près de la flaque\nau centre de la route.
 0x1EFFEE5: Panneau Conseils Dresseurs lu près\ndes herbes de Cratéris.
 0x1EFFF29: Panneau Conseils Dresseurs lu\njuste à l'est du pont venant\nde la Grotte Vallée.
@@ -16172,7 +16172,7 @@
 0x1F000EE: Panneau Conseils Dresseurs lu\nprès des rochers sauteurs à l'est.
 0x1F0012C: Panneau Conseils Dresseurs lu\ndans les herbes près du haut de\nla falaise.
 0x1F00179: Panneau Conseils Dresseurs lu\nprès de la statue d'Électhor.
-0x1F001B7: Panneau Conseils Dresseurs lu\nau 3F dans la salle\ndes dalles d'eau.
+0x1F001B7: Panneau Conseils Dresseurs lu\nau 2E dans la salle\ndes dalles d'eau.
 0x1F00200: Panneau Conseils Dresseurs lu\naprès le second escalier\nvenant de Somnia.
 0x1F0025E: Panneau Conseils Dresseurs lu sur\nle chemin vers la ville, au sud du\nCentre Pokémon.
 0x1F002B1: Panneau Conseils Dresseurs lu\nsur le petit îlot trouvé en allant\nvers le sud vers la Route 14.
@@ -16187,7 +16187,7 @@
 0x1F005AE: Panneau Conseils Dresseurs lu\nsur le chemin menant à l'entrée de\nla Ligue.
 0x1F005F8: Panneau Conseils Dresseurs lu\nprès de la première échelle, près de\nPolderive.
 0x1F00642: Panneau Conseils Dresseurs lu\nprès d'arbres sur le chemin\ninondé menant au Pic Cristal.
-0x1F006A4: Panneau Conseils Dresseurs lu dans\nla grande salle au 1F près du lac.
+0x1F006A4: Panneau Conseils Dresseurs lu dans\nla grande salle au RDC près du lac.
 0x1F006EB: Panneau Conseils Dresseurs lu\nau milieu de quelques arbres sur le\ncôté ouest de la route.
 0x1F0073F: Panneau Conseils Dresseurs lu\nprès de la sortie vers Rougebois.
 0x1F0077F: Panneau Conseils Dresseurs lu par\nle Gamin et l'Aromathérapeute au\nmilieu de la forêt.
@@ -17051,17 +17051,17 @@
 0x1F151F0: Je sens qu'il reste encore\nun trésor caché dans le tombeau.\pJe ne sais pas combien il en reste,\nmais utilise le {COLOR}ÉCherch'Objet{COLOR}Ë\lpour tout trouver.
 0x1F1529A: Je le sens… tu as trouvé tous\nles trésors du tombeau !\pMais avant de te récompenser,\ntu dois faire de la place\ldans ton équipe.
 0x1F15329: Cet Œuf devait être caché dans\nle tombeau depuis des siècles !\pSi tu n'avais pas découvert la\nchambre funéraire, il n'aurait\ljamais trouvé de Dresseur pour lui.
-0x1F153C2: Objet trouvé derrière un pilier\nau 1F.
-0x1F153ED: Objet trouvé entre deux Noctunoir\ndu haut, au B4F.
-0x1F15426: Objet trouvé près de l'échelle\nvers le bas au B3F.
-0x1F1545A: Objet trouvé près de l'échelle\nen haut du B2F.
-0x1F15495: Objet trouvé près du pilier\nen bas du B2F.
-0x1F154D2: Objet trouvé à droite\ndu pilier en haut à gauche, B1F.
-0x1F15516: Objet trouvé au-dessus\ndu pilier en haut à gauche, B1F.
-0x1F15552: Cet objet a été trouvé sous le\npilier en haut à droite au B1F.
-0x1F1558F: Cet objet a été trouvé sous le\npilier en bas à gauche au B1F.
+0x1F153C2: Objet trouvé derrière un pilier\nau RDC.
+0x1F153ED: Objet trouvé entre deux Noctunoir\ndu haut, au -4.
+0x1F15426: Objet trouvé près de l'échelle\nvers le bas au -3.
+0x1F1545A: Objet trouvé près de l'échelle\nen haut du -2.
+0x1F15495: Objet trouvé près du pilier\nen bas du -2.
+0x1F154D2: Objet trouvé à droite\ndu pilier en haut à gauche, -1.
+0x1F15516: Objet trouvé au-dessus\ndu pilier en haut à gauche, -1.
+0x1F15552: Cet objet a été trouvé sous le\npilier en haut à droite au -1.
+0x1F1558F: Cet objet a été trouvé sous le\npilier en bas à gauche au -1.
 0x1F155CD: Cet objet a été trouvé derrière un\npilier de la chambre funéraire.
-0x1F15608: Cet objet a été trouvé à droite du\npilier en bas à droite au B1F.
+0x1F15608: Cet objet a été trouvé à droite du\npilier en bas à droite au -1.
 0x1F15650: Chuuut !\pTu les entends ?\nLes esprits prisonniers ?\pLeurs voix viennent de\nton Cube !\pTu dois les libérer !
 0x1F156BD: {COLOR}ÁSpiritomb est retourné dans la\nClé de Voûte.
 0x1F156F0: Tu ne dois pas effrayer les\nesprits prisonniers !\pTu dois les libérer en les\ncapturant.
@@ -17391,13 +17391,13 @@
 0x1F1FF3C: Tu l'as fait !\pTu as percé les secrets derrière\nchacune des anciennes tablettes de\lBorrius !\pMême moi, le plus grand esprit de\nla Société d'Archéologie, je n'ai\lpas réussi.\pJe dois l'avouer… je t'ai peut-être\nmal jugé au début.\pMais j'ai compris qu'il y a\nbien plus en chacun qu'il n'y\lparaît au premier regard.\pTu as mes excuses et, encore une\nfois, merci.
 0x1F200CB: Je suis sûr que tu as vu les antres\nanciens derrière chaque tablette,\ln'est-ce pas ?\pUne fois un antre vidé pour la\njournée, lance un {COLOR}ÉMorceau\lVœu{COLOR}Ë dedans.\pCela fera apparaître un nouveau\nPokémon.\pSur ce, je te salue, Dresseur,\net te dis adieu.\pÀ bientôt !
 0x1F201E9: Tablette trouvée dans la section\ncachée de la Grotte Stalactite\ndécouverte durant «Le Voleur».
-0x1F20247: Cette tablette a été trouvée au 2F\naprès avoir sauté sur des rochers\nprès du mur le plus haut.
-0x1F202AE: Cette tablette a été trouvée au B1F\nprès de l'échelle vers la Route 6,\net sous la cascade.
-0x1F2030A: Cette tablette a été trouvée au 1F\naprès avoir utilisé Escalade dans la\npartie nord-ouest de la caverne.
-0x1F20368: Tablette trouvée dans la\nsection du 3F avec la barrière\nélectrique.
-0x1F203AE: Cette tablette a été trouvée au B3F\nprès de l'entrée des ruines.
-0x1F203EB: Tablette trouvée dans la grande\nsalle du 1F après avoir caché\nles cristaux rouge, jaune et bleu.
-0x1F2044A: Cette tablette a été trouvée au B1F\ndans la chambre de magma accessible\ndepuis l'échelle ouest du 1F.
+0x1F20247: Cette tablette a été trouvée au 1E\naprès avoir sauté sur des rochers\nprès du mur le plus haut.
+0x1F202AE: Cette tablette a été trouvée au -1\nprès de l'échelle vers la Route 6,\net sous la cascade.
+0x1F2030A: Cette tablette a été trouvée au RDC\naprès avoir utilisé Escalade dans la\npartie nord-ouest de la caverne.
+0x1F20368: Tablette trouvée dans la\nsection du 2E avec la barrière\nélectrique.
+0x1F203AE: Cette tablette a été trouvée au -3\nprès de l'entrée des ruines.
+0x1F203EB: Tablette trouvée dans la grande\nsalle du RDC après avoir caché\nles cristaux rouge, jaune et bleu.
+0x1F2044A: Cette tablette a été trouvée au -1\ndans la chambre de magma accessible\ndepuis l'échelle ouest du RDC.
 0x1F204A1: Cette tablette a été trouvée après\navoir utilisé Escalade pour accéder\naux Ruines du Néant via Plongée.
 0x1F20501: {COLOR}ÉLevei!
 0x1F2050C: Ce Leveinard demande {COLOR}É{STR_VAR_1}¥{COLOR}Á pour soigner\nles Dresseurs en mode Insane.
@@ -18784,7 +18784,7 @@
 0x1F54D28: Cette CT a été trouvée après avoir\ntraversé la lave.
 0x1F54D59: Cette CT a été trouvée salle sud,\navec Cascade.
 0x1F54D94: Cette CT a été reçue d'un clown\naprès avoir cassé tous les rochers\nde la partie ouest du désert.
-0x1F54DF9: Cette CT a été trouvée au 3e étage\naprès avoir utilisé Escalade.
+0x1F54DF9: Cette CT a été trouvée au 2E\naprès avoir utilisé Escalade.
 0x1F54E29: Cette CT a été trouvée achetée au\nMagasin.
 0x1F54E54: Cette CT a été reçue en récompense\npour avoir battu le Champion.
 0x1F54E93: Cette CT a été trouvée au -2\nderrière une porte verrouillée.
@@ -18798,7 +18798,7 @@
 0x1F55075: Cette CT a été reçue en récompense\npour avoir battu le Champion.
 0x1F550B4: Cette CT a été trouvée au RDC dans\nla salle de gauche après avoir caché\nles cristaux bleus et rouges.
 0x1F55101: Cette CT a été trouvée sur un sol\nrocheux via Escalade.
-0x1F55140: Cette CT a été achetée au 4e étage.
+0x1F55140: Cette CT a été achetée au 3E.
 0x1F5515D: Cette CT a été achetée au\nmarché.
 0x1F55187: Cette CT a été trouvée près d'une\nclôture au-dessus du Campeur.
 0x1F551BB: Cette CT a été trouvée achetée au\nMagasin.
@@ -18810,15 +18810,15 @@
 0x1F552F2: Cette CT a été achetée pour 4000\nPièces.
 0x1F55318: Cette CT a été récompensée pour\navoir terminé «Récolte de Miel».
 0x1F5534B: Cette CT a été trouvée achetée au\nMagasin.
-0x1F55376: Cette CT a été achetée au 4e étage.
+0x1F55376: Cette CT a été achetée au 3E.
 0x1F55393: Cette CT a été trouvée sur les\nfalaises via Escalade.
 0x1F553CB: Cette CT a été trouvée après avoir\nutilisé Coupe à l'extérieur de la\nsortie ouest de Boissombre.
 0x1F55412: Cette CT trouvée dans la salle\nnord. Recycle toujours !
-0x1F55453: Cette CT a été achetée au 4e étage.
+0x1F55453: Cette CT a été achetée au 3E.
 0x1F55470: Cette CT a été trouvée au -1 après\navoir glissé sur la glace et utilisé\nÉclate-Roc.
 0x1F554BC: Cette CT a été reçue en cadeau au\nMagasin.
 0x1F554E8: Cette CT a été trouvée au RDC dans\nla salle de droite après avoir caché\nles cristaux jaunes.
-0x1F55530: Cette CT a été trouvée au 1er étage\naprès avoir pris une autre échelle.
+0x1F55530: Cette CT a été trouvée au 1E\naprès avoir pris une autre échelle.
 0x1F5556C: Cette CT a été récompensée pour\navoir terminé «L'Enfant Égaré».
 0x1F555A2: Cette CT a été trouvée après Surf\njusqu'au sol rocheux, via Escalade.
 0x1F555E8: Cette CT a été achetée pour 4000\nPièces.
@@ -18826,7 +18826,7 @@
 0x1F5566E: Cette CT trouvée sous une cime\nd'arbre après Surf dans le passage\ncaché est.
 0x1F556C5: Cette CT a été trouvée achetée au\nMagasin.
 0x1F556F0: Cette CT a été trouvée au RDC après\nEscalade près de l'entrée.
-0x1F55732: Cette CT a été trouvée au 2e étage\naprès avoir utilisé Escalade.
+0x1F55732: Cette CT a été trouvée au 1E\naprès avoir utilisé Escalade.
 0x1F55762: Cette CT a été trouvée près de\nchampignons cachant Paras, via Surf.
 0x1F557A2: Cette CT a été achetée pour 4000\nPièces.
 0x1F557C8: Cette CT a été trouvée après\nEscalade au-dessus de RBT.
@@ -18837,10 +18837,10 @@
 0x1F558CA: Cette CT a été trouvée achetée au\nMagasin.
 0x1F558F5: Cette CT a été trouvée dans la zone\nforestière après Surf et Coupe.
 0x1F5593A: Cette CT a été achetée pour 32 PB à\nla boutique.
-0x1F55969: Cette CT a été trouvée au 2e étage\naprès avoir utilisé Escalade.
+0x1F55969: Cette CT a été trouvée au 1E\naprès avoir utilisé Escalade.
 0x1F55999: Cette CT a été reçue en récompense\npour avoir battu le Champion.
-0x1F559D8: Cette CT a été trouvée au 2e étage\naprès avoir erré un moment.
-0x1F55A14: Cette CT a été trouvée au 3e étage\nprès de la Karatéka.
+0x1F559D8: Cette CT a été trouvée au 1E\naprès avoir erré un moment.
+0x1F55A14: Cette CT a été trouvée au 2E\nprès de la Karatéka.
 0x1F55A42: Cette CT a été trouvée près de\nl'océan entre deux corniches après\navoir combattu le Trio Solaire.
 0x1F55A93: Cette CT a été trouvée achetée au\nMagasin.
 0x1F55ABE: Cette CT a été trouvée après avoir\nutilisé Escalade.
@@ -18979,11 +18979,11 @@
 0x1F57BAA: Antre trouvée au -1.
 0x1F57BCA: Antre trouvée dans section cachée\nde la Grotte Stalactite derrière la\ntablette Braille.
 0x1F57C22: Antre trouvée près de sortie ouest\naprès avoir posé le rocher sur une\nplaque de pression.
-0x1F57C7F: Antre trouvée au 2e étage\nderrière la tablette Braille.
+0x1F57C7F: Antre trouvée au 1E\nderrière la tablette Braille.
 0x1F57CB8: Antre trouvée dans une petite salle\naprès avoir brisé une entrée\neffondrée.
 0x1F57D0C: Antre trouvée au RDC\nderrière la tablette Braille.
 0x1F57D45: Antre trouvée au RDC\nderrière la tablette Braille.
-0x1F57D7E: Antre trouvée au 3e étage\nderrière la tablette Braille.
+0x1F57D7E: Antre trouvée au 2E\nderrière la tablette Braille.
 0x1F57DB7: Antre trouvée au -3\nderrière la tablette Braille.
 0x1F57DF1: Antre trouvée dans la grande salle\ndu RDC derrière la\ntablette Braille.
 0x1F57E3C: Antre trouvée dans la salle de lave\nau -1 derrière la\ntablette Braille.
@@ -20232,14 +20232,14 @@
 0x1F716CF: Daherapolis Une oasis au bord du désert.
 0x1F716FF: Arène Pokémon de Daherapolis\nChampion : Galvane Le cerveau\lderrière la machine de guerre
 0x1F71749: Trouve tout ce qu’il te faut au\nGrand Magasin de Daherapolis !
-0x1F71777: 1F : Comptoir Service\n2F : Marché Dresseur\l3F : Objets d’Évolution\l4F : Rayon CT\l5F : Boîte Médicaments\l6F : Cadeaux Sages
-0x1F717E5: 2F : Marché Dresseur\pArticles top pour Dresseurs !
-0x1F71818: 1F : Comptoir Service
-0x1F7182C: 2F : Marché Dresseur
-0x1F71841: 3F : Zone Évolution
-0x1F71854: 4F : Rayon CT
-0x1F71862: 5F : Boîte Médicaments
-0x1F71873: 6F : Cadeaux Sages
+0x1F71777: RDC : Comptoir Service\n1E : Marché Dresseur\l2E : Objets d’Évolution\l3E : Rayon CT\l4E : Boîte Médicaments\l5E : Cadeaux Sages
+0x1F717E5: 1E : Marché Dresseur\pArticles top pour Dresseurs !
+0x1F71818: RDC : Comptoir Service
+0x1F7182C: 1E : Marché Dresseur
+0x1F71841: 2E : Zone Évolution
+0x1F71854: 3E : Rayon CT
+0x1F71862: 4E : Boîte Médicaments
+0x1F71873: 5E : Cadeaux Sages
 0x1F71885: Salle de Jeu Nuage\pLe terrain des adultes !
 0x1F718B5: Maison Combat Duo\pProfitez des combats à deux !
 0x1F718E3: Quelque chose est écrit sur le mur.\p«Salle de dev Unbound»\pPas de budget pour un panneau ?
@@ -20701,7 +20701,7 @@
 0x1F7E199: Je pourrais te donner\nquelque chose demain aussi.
 0x1F7E1D7: L’enfant égaré
 0x1F7E1E7: Milo
-0x1F7E1EC: Un garçon s'est perdu au Mont Foudroyant 4F ! Rejoins-le\net guide-le vers la sortie.
+0x1F7E1EC: Un garçon s'est perdu au Mont Foudroyant 3E ! Rejoins-le\net guide-le vers la sortie.
 0x1F7E24D: Je suis Milo…\pJe capturais des Pokémon et je me\nsuis perdu…\pJ’ai si peur…\pS’il te plaît !\nAmène-moi à la sortie !
 0x1F7E2B7: Oh…\nJ’ai si peur…
 0x1F7E2E9: Je garderai tes Pokémon en forme\ntout le temps !
@@ -20927,7 +20927,7 @@
 0x1F821F4: Tout a été extrait !
 0x1F8220B: A{STR_VAR_2} {STR_VAR_1}\na été trouvé.
 0x1F8221D: A{STR_VAR_2} {STR_VAR_1}\na été trouvé.\pDommage ! Il n'y a pas de place\npour ça dans le Cube.
-0x1F82262: Le mode du bouton R est réglé\nsur Analyse Minage.\pDans l'{COLOR}ÉAutoroute RBT{COLOR}Á, la\n{COLOR}Ésalle latérale{COLOR}Á du {COLOR}ÉPic Cristal 1F{COLOR}Á, ou\l{COLOR}Ésous l'eau{COLOR}Á, appuie sur {R_BUTTON} pour\nscanner\lles objets cachés.\pQuand une lueur apparaît sur le mur,\nappuie sur {SE_SHOP} pour miner là.{PAUSE_UNTIL_PRESS}
+0x1F82262: Le mode du bouton R est réglé\nsur Analyse Minage.\pDans l'{COLOR}ÉAutoroute RBT{COLOR}Á, la\n{COLOR}Ésalle latérale{COLOR}Á du {COLOR}ÉPic Cristal RDC{COLOR}Á, ou\l{COLOR}Ésous l'eau{COLOR}Á, appuie sur {R_BUTTON} pour\nscanner\lles objets cachés.\pQuand une lueur apparaît sur le mur,\nappuie sur {SE_SHOP} pour miner là.{PAUSE_UNTIL_PRESS}
 0x1F82358: Passage Souterrain
 0x1F82369: Un tunnel reliant Automnia à\nla Route 9.\nDes passionnés y ont installé un\ndéfi quotidien.
 0x1F823C3: Seras-tu le prochain à tenter\nnotre défi quotidien ?\pAtteins l'autre bout du tunnel\nen moins de 15 secondes pour gagner\lun prix fantastique !
@@ -21244,9 +21244,9 @@
 0x1F88CF6: Cellule Zygarde derrière la maison\ndu vieux couple.
 0x1F88D31: Cellule Zygarde juste au sud\nde la glace sur la route.
 0x1F88D74: Cellule Zygarde à l'est de la ville\nprès de la clôture.
-0x1F88DBB: Cellule Zygarde au B1F de la grotte\nsous Bellin après avoir fait\nEscalade.
-0x1F88E14: Cellule Zygarde près du Karatéka\nau B1F.
-0x1F88E4C: Cellule Zygarde près de l'échelle\naprès Surf au B2F.
+0x1F88DBB: Cellule Zygarde au -1 de la grotte\nsous Bellin après avoir fait\nEscalade.
+0x1F88E14: Cellule Zygarde près du Karatéka\nau -1.
+0x1F88E4C: Cellule Zygarde près de l'échelle\naprès Surf au -2.
 0x1F88E8E: Cellule Zygarde sur la plage après\nla Grotte Glace.
 0x1F88ED2: Cellule Zygarde sur un îlot sableux\natteignable en Surf à l'est de\nDresco.
 0x1F88F2A: Cellule Zygarde près de l'eau au S.\nde la maison d'Arthur.
@@ -21255,8 +21255,8 @@
 0x1F88FEC: Cellule Zygarde sur une bûche\nflottant sur l'eau.
 0x1F89028: Cellule Zygarde au sud-ouest du\npont où attend le Lokhlass du\nhaut.
 0x1F8907A: Cellule Zygarde au-dessus\nde la cascade.
-0x1F890AB: Cellule Zygarde près de la chute\nde lave au 1er étage.
-0x1F890E1: Cellule Zygarde à l'extrémité nord\ndu pont ouest au 3e étage.
+0x1F890AB: Cellule Zygarde près de la chute\nde lave au RDC.
+0x1F890E1: Cellule Zygarde à l'extrémité nord\ndu pont ouest au 2E.
 0x1F89128: Cellule Zygarde dans l'entrepôt\ndes Ombres.
 0x1F89166: Cellule Zygarde à l'ouest de la\nroute, près du chemin vers la\nPension.
 0x1F891C7: Cellule Zygarde derrière le\nlampadaire au nord-ouest\nde la ville.
@@ -21265,8 +21265,8 @@
 0x1F892C5: Cellule Zygarde sur un rocher\nau milieu de l'océan.
 0x1F89308: Cellule Zygarde derrière une grille\nà petite ouverture près du\nposte de la Route 9.
 0x1F89362: Cellule Zygarde après Escalade\npour monter la butte au centre\nde la route.
-0x1F893C4: Cellule Zygarde près d'une échelle\nau 2e étage.
-0x1F893F8: Cellule Zygarde entre des rochers\nprès du pont\nau 2e étage.
+0x1F893C4: Cellule Zygarde près d'une échelle\nau 1E.
+0x1F893F8: Cellule Zygarde entre des rochers\nprès du pont\nau 1E.
 0x1F89441: Cellule Zygarde près d'arbres sud\ndu chemin menant à\nCimistral.
 0x1F89494: Cellule Zygarde près de la rivière\ngelée sur le côté est\nde la route.
 0x1F894E3: Cellule Zygarde à côté d'un arbre\nprès de l'entrée de\nl'Autoroute RBT.
@@ -21284,28 +21284,28 @@
 0x1F8987A: Cellule Zygarde sur les falaises\naprès avoir grimpé le mur\nd'Escalade près de l'Expert.
 0x1F898D7: Cellule Zygarde près de la sortie\nvers l'Expert sur la\nRoute 11.
 0x1F89928: Cellule Zygarde derrière le\nCentre Pokémon.
-0x1F8995F: Cellule Zygarde au 2e étage\nprès de la pente boueuse sud.
+0x1F8995F: Cellule Zygarde au 1E\nprès de la pente boueuse sud.
 0x1F899A3: Cellule Zygarde après la sortie\ncachée du Manoir\nSomnia.
-0x1F899F2: Cellule Zygarde à côté d'une statue\nau B1F.
+0x1F899F2: Cellule Zygarde à côté d'une statue\nau -1.
 0x1F89A27: Cellule Zygarde au-dessus d'une\ncorniche près du poste de garde.
 0x1F89A6E: Cellule Zygarde près de l'étang\nsud-ouest.
-0x1F89AA4: Cellule Zygarde dans le labyrinthe\nsans fin au B1F.
-0x1F89AE1: Cellule Zygarde dehors près de\nl'entrée ouest du B1F.
-0x1F89B24: Cellule Zygarde près de la tablette\nau B3F.
-0x1F89B58: Cellule Zygarde à côté d'une table\nau B1F.
-0x1F89B8C: Cellule Zygarde dans le labo\nau B2F.
+0x1F89AA4: Cellule Zygarde dans le labyrinthe\nsans fin au -1.
+0x1F89AE1: Cellule Zygarde dehors près de\nl'entrée ouest du -1.
+0x1F89B24: Cellule Zygarde près de la tablette\nau -3.
+0x1F89B58: Cellule Zygarde à côté d'une table\nau -1.
+0x1F89B8C: Cellule Zygarde dans le labo\nau -2.
 0x1F89BBB: Cellule Zygarde sur parcelle de\nterre près des falaises.
 0x1F89BFE: Cellule Zygarde au bout du chemin\nrelié à la Route 5.
 0x1F89C43: Cellule Zygarde sur l'île au centre\nde la route.
 0x1F89C89: Cellule Zygarde au sommet de\nl'Autoroute RBT.
 0x1F89CC3: Cellule Zygarde au fond du canyon\ncentral.
 0x1F89D03: Cellule Zygarde entre des cactus\nprès de l'entrée du Tombeau\nde Borrius.
-0x1F89D5C: Cellule Zygarde sous le Noctunoir\nau B2F.
+0x1F89D5C: Cellule Zygarde sous le Noctunoir\nau -2.
 0x1F89D93: Cellule Zygarde derrière la statue\ndu titan Pokémon\nlégendaire.
 0x1F89DE1: Cellule Zygarde près d'arbres au\nsud-ouest\nde la forêt.
 0x1F89E35: Cellule Zygarde sur la falaise\nprès de la maison la plus\nau nord-est.
-0x1F89E80: Cellule Zygarde dans le Réseau\nÉlectrique au B2F.
-0x1F89EB6: Cellule Zygarde entre des caisses\nau B3F.
+0x1F89E80: Cellule Zygarde dans le Réseau\nÉlectrique au -2.
+0x1F89EB6: Cellule Zygarde entre des caisses\nau -3.
 0x1F89EEE: Cellule Zygarde près du panneau\nAstuces Dresseur.
 0x1F89F26: Cellule Zygarde sur le pont\nau nord du\ncanyon.
 0x1F89F73: Cellule Zygarde en descendant\ndes rochers près de Cité\nAntésia.
@@ -21324,9 +21324,9 @@
 0x1F8A33B: Cellule Zygarde sur la plage près\ndu Karatéka.
 0x1F8A379: Cellule Zygarde sur la plage au\nsud-est de la cascade.
 0x1F8A3BE: Cellule Zygarde à l'est de l'entrée\nde la Route Victoire.
-0x1F8A400: Cellule Zygarde trouvée au 2F.
+0x1F8A400: Cellule Zygarde trouvée au 1E.
 0x1F8A423: Cellule Zygarde dans le labyrinthe\nde haies près de l'entrée du 3e.
-0x1F8A46A: Cellule Zygarde au coin sud-ouest\ndu 3e étage.
+0x1F8A46A: Cellule Zygarde au coin sud-ouest\ndu 2E.
 0x1F8A4A8: Cellule Zygarde en haut du premier\nescalier de l'ascension\nenneigée.
 0x1F8A4F4: Cellule Zygarde dans la salle du\nChampion, en bas à gauche\nde la grande Poké Ball.
 0x1F8A557: Cellule Zygarde sous un arbre\nà l'extrémité sud-ouest de la\nville.
@@ -22837,11 +22837,11 @@
 0x1FAA38D: Ce Pokémon a été trouvé errant\nautour de Borrius après avoir\ninteragi avec son portail.
 0x1FAA3DE: Ce Pokémon a été trouvé dans la\nsalle sous le dernier étage après\navoir amené Entei et Raikou.
 0x1FAA438: Ce Pokémon a été trouvé dans la\ngrande salle après avoir amené\nEntei, Raikou et Suicune.
-0x1FAA48C: Ce Pokémon a été trouvé pendant la\njournée au 3ème étage.
-0x1FAA4B9: Ce Pokémon a été trouvé la nuit au\n3ème étage.
+0x1FAA48C: Ce Pokémon a été trouvé pendant la\njournée au 2E.
+0x1FAA4B9: Ce Pokémon a été trouvé la nuit au\n2E.
 0x1FAA4E0: Ce Pokémon a été trouvé dans le\nCentre de Commandement.
 0x1FAA50E: Ce Pokémon a été trouvé pendant la\njournée près des arbres du centre.
-0x1FAA549: Ce Pokémon a été trouvé la nuit dans\nla petite salle sous la grande salle\nau rez-de-chaussée.
+0x1FAA549: Ce Pokémon a été trouvé la nuit dans\nla petite salle sous la grande salle\nau RDC.
 0x1FAA599: Ce Pokémon a été trouvé après avoir\nutilisé Escalade du côté est de la\nroute.
 0x1FAA5E6: Ce Pokémon a été trouvé après avoir\nutilisé Escalade du côté ouest de la\nroute.
 0x1FAA633: Ce Pokémon a été trouvé sur une île\nau milieu du lac.
@@ -22851,7 +22851,7 @@
 0x1FAA746: Ce Pokémon a été trouvé la nuit sous\nles Ruines du Néant.
 0x1FAA781: Ce Pokémon a été trouvé pendant la\njournée au-dessus du Volcan Cendré\naprès avoir remonté la cascade.
 0x1FAA7DA: Ce Pokémon a été trouvé pendant la\njournée dans le canyon central.
-0x1FAA816: Ce Pokémon a été trouvé la nuit\naprès avoir utilisé Escalade du côté\nouest du 2ème étage.
+0x1FAA816: Ce Pokémon a été trouvé la nuit\naprès avoir utilisé Escalade du côté\nouest du 1E.
 0x1FAA865: Ce Pokémon a été trouvé la nuit au\ncentre des météorites près de\nl'entrée de la Grotte Vallée.
 0x1FAA8C5: Ce Pokémon a été trouvé pendant la\njournée sur un tronc dans l'étang nord-ouest.
 0x1FAA90B: Ce Pokémon a été trouvé la nuit dans\nla zone sud sur l'eau.

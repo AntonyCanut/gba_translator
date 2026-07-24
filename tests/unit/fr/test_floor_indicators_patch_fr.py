@@ -54,7 +54,15 @@ def _build_synthetic_rom() -> bytearray:
     for table in POINTER_TABLE_OFFSETS:
         for i, en_off in enumerate(fi.FR_LABELS):
             struct.pack_into("<I", rom, table + i * 4, ROM_BASE + en_off)
+    # The place-bound floor labels (elevator menus, Cube emerald list) live at
+    # pinned slots, so the fixture has to mirror the real base-ROM layout.
+    for slot, (en_cell, _label) in fi.EXTRA_SLOTS.items():
+        struct.pack_into("<I", rom, slot, ROM_BASE + en_cell)
     return rom
+
+
+TOTAL_TABLE_SLOTS = len(POINTER_TABLE_OFFSETS) * len(fi.FR_LABELS)  # 3 x 15
+TOTAL_SLOTS = TOTAL_TABLE_SLOTS + len(fi.EXTRA_SLOTS)
 
 
 def _all_slots_correct(rom: bytes, source: bytes) -> bool:
@@ -63,6 +71,10 @@ def _all_slots_correct(rom: bytes, source: bytes) -> bool:
             ptr = struct.unpack_from("<I", rom, slot)[0]
             if _decode_at(rom, ptr) != fi.FR_LABELS[en_off]:
                 return False
+    for slot, (_en_cell, label) in fi.EXTRA_SLOTS.items():
+        ptr = struct.unpack_from("<I", rom, slot)[0]
+        if _decode_at(rom, ptr) != label:
+            return False
     return True
 
 
@@ -78,19 +90,24 @@ def test_apply_repoints_every_slot_to_french():
     source = bytes(rom)
     patched = fi.apply(rom, source)
 
-    # 3 tables x 15 cells = 45 pointer slots, all repointed on a fresh ROM.
-    assert patched == 45
+    # 3 tables x 15 cells + every pinned place-bound slot, all repointed.
+    assert patched == TOTAL_SLOTS
     assert _all_slots_correct(rom, source)
     # No slot may still resolve to an English residue ("1F", "B1F"…).
-    for en_off, slots in fi._find_slots(source).items():
-        for slot in slots:
-            assert not _decode_at(rom, struct.unpack_from("<I", rom, slot)[0]).endswith("F")
+    resolved = [
+        struct.unpack_from("<I", rom, slot)[0]
+        for slots in fi._find_slots(source).values()
+        for slot in slots
+    ]
+    resolved += [struct.unpack_from("<I", rom, slot)[0] for slot in fi.EXTRA_SLOTS]
+    for ptr in resolved:
+        assert not _decode_at(rom, ptr).endswith("F")
 
 
 def test_apply_is_idempotent():
     rom = _build_synthetic_rom()
     source = bytes(rom)
-    assert fi.apply(rom, source) == 45
+    assert fi.apply(rom, source) == TOTAL_SLOTS
     assert fi.apply(rom, source) == 0  # nothing left to change
 
 
@@ -117,6 +134,59 @@ def test_repairs_merged_rdc1e_corruption():
 
     fi.apply(rom, source)
     assert _all_slots_correct(rom, source)
+
+
+def test_place_bound_labels_are_repointed_to_french():
+    """Elevator menus and the Cube emerald list show floors next to a place.
+
+    They are served by their own cells (not the 0x41803A table), which is why
+    #100 kept reporting untranslated floors after the pop-up itself was fixed.
+    """
+    rom = _build_synthetic_rom()
+    source = bytes(rom)
+    fi.apply(rom, source)
+
+    for slot, (_en_cell, label) in fi.EXTRA_SLOTS.items():
+        ptr = struct.unpack_from("<I", rom, slot)[0]
+        assert _decode_at(rom, ptr) == label, f"slot {slot:#x} still English"
+
+    # Every French label reused here must come from the reserved region, so the
+    # patch never allocates a second copy that a rebuild could reshuffle.
+    end = fi.FLOOR_STR_OFFSET + 0x100
+    for slot in fi.EXTRA_SLOTS:
+        ptr = struct.unpack_from("<I", rom, slot)[0] - ROM_BASE
+        assert fi.FLOOR_STR_OFFSET <= ptr < end
+
+
+def test_extra_slots_only_reference_known_floor_labels():
+    """A typo in EXTRA_SLOTS must not silently invent an unreserved label."""
+    assert set(label for _cell, label in fi.EXTRA_SLOTS.values()) <= set(
+        fi.FR_LABELS.values()
+    )
+
+
+def test_aborts_when_a_pinned_slot_moved():
+    rom = _build_synthetic_rom()
+    source = bytearray(rom)
+    moved = next(iter(fi.EXTRA_SLOTS))
+    struct.pack_into("<I", source, moved, ROM_BASE + 0x123456)
+    with pytest.raises(SystemExit):
+        fi.apply(rom, bytes(source))
+
+
+def test_lookalike_pointer_in_sample_data_is_left_alone():
+    """0xB21C48 reads as a pointer to the "B2F" cell but is graphics/sample data.
+
+    Repointing it would corrupt unrelated bytes, so the patch must work from the
+    pinned slot list rather than from a byte-pattern scan.
+    """
+    assert 0xB21C48 not in fi.EXTRA_SLOTS
+    rom = _build_synthetic_rom()
+    source = bytearray(rom)
+    struct.pack_into("<I", source, 0xB21C48, ROM_BASE + 0x1F6F602)
+    rom[0xB21C48:0xB21C4C] = source[0xB21C48:0xB21C4C]
+    fi.apply(rom, bytes(source))
+    assert struct.unpack_from("<I", rom, 0xB21C48)[0] == ROM_BASE + 0x1F6F602
 
 
 def test_occupation_guard_refuses_live_data():
@@ -156,3 +226,21 @@ def test_built_fr_rom_has_all_floors_translated():
             assert _decode_at(rom, ptr) == fi.FR_LABELS[en_off], (
                 f"slot {slot:#x} not translated in built ROM"
             )
+
+
+@pytest.mark.rom
+@pytest.mark.skipif(
+    not (FR_ROM.exists() and EN_ROM.exists()), reason="built ROMs not present"
+)
+def test_built_fr_rom_has_place_bound_floors_translated():
+    """Elevator menus and the Cube emerald list must be French in the artifact."""
+    source = EN_ROM.read_bytes()
+    rom = FR_ROM.read_bytes()
+    for slot, (en_cell, label) in fi.EXTRA_SLOTS.items():
+        assert struct.unpack_from("<I", source, slot)[0] == ROM_BASE + en_cell, (
+            f"base ROM layout moved at slot {slot:#x}"
+        )
+        ptr = struct.unpack_from("<I", rom, slot)[0]
+        assert _decode_at(rom, ptr) == label, (
+            f"slot {slot:#x} still shows an English floor in the built ROM"
+        )
