@@ -1487,3 +1487,27 @@ entries:
   expected: Ce Pokémon a été trouvé la nuit\naprès avoir utilisé Escalade du côté\nouest du 1E.
   forbidden:
   - Ce Pokémon a été trouvé la nuit\naprès avoir utilisé Escalade du côté\nouest du 2ème étage.
+- offset: '0x7E5BF8'
+  name: Chenal Aubrun masculin — direction sud
+  issue: '#146'
+  expected: Si tu vas au nord, tu arrives\nsur la Route 6, une route herbeuse.\pAu sud, tu vas vers le Chenal Aubrun.
+  forbidden:
+  - la Chenal Aubrun
+- offset: '0x1F273CB'
+  name: Chenal Aubrun masculin — habitat de Prismillon
+  issue: '#146'
+  expected: Ce Prismillon\na été trouvé près de la rivière\nmenant au Chenal Aubrun.
+  forbidden:
+  - à la Chenal Aubrun
+- offset: '0x1F5B996'
+  name: Chenal Aubrun masculin — défi des Dresseurs
+  issue: '#146'
+  expected: Si tu peux battre tous les Dresseurs\nd'ici et du Chenal Aubrun,\lj'aimerais voir ta fureur aussi.
+  forbidden:
+  - de la Chenal Aubrun
+- offset: '0x1F651CB'
+  name: Chenal Aubrun masculin — bâtiment au sud de la Route 5
+  issue: '#146'
+  expected: Aller au sud mène au Chenal Aubrun, une route qui relie les\lRoutes 6 et 10.\pIl te faudra {COLOR}ÉSurf{COLOR}Ç pour\ny aller.
+  forbidden:
+  - à la Chenal Aubrun

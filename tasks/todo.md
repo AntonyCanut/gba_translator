@@ -1,3 +1,15 @@
+# Issue #146 — accords masculins du Chenal Aubrun
+
+- [x] Lire l’issue, ses commentaires et recenser les occurrences actives.
+- [x] Ajouter une garde systématique et protéger les quatre dialogues concernés.
+- [x] Corriger uniquement les dernières valeurs actives dans la source FR.
+- [ ] Régénérer la traduction, reconstruire la ROM et décoder les textes vivants.
+- [ ] Exécuter les validations, relire le diff, committer et clôturer l’issue.
+
+## Revue
+
+- À compléter après les validations.
+
 # Sonde mGBA — premier combat italien
 
 - [x] Reproduire l’échec sur la carte 4.10 et figer la cause racine.

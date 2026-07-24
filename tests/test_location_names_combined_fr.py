@@ -188,6 +188,26 @@ class TestLocationNamesCombinedFR:
             f"0x{offset:06X}: untranslated 'Grotte Icicle' resurfaced: {actual!r}."
         )
 
+    def test_chenal_aubrun_is_systematically_masculine(self, combined):
+        """Toutes les mentions du Chenal Aubrun emploient un article masculin."""
+        references = {
+            offset: text
+            for offset, text in combined.items()
+            if "Chenal Aubrun" in text
+        }
+        assert references, "Aucune mention du Chenal Aubrun dans combined_fr.txt."
+
+        feminine_forms = ("la Chenal Aubrun", "de la Chenal Aubrun", "à la Chenal Aubrun")
+        violations = [
+            f"0x{offset:06X}: {text}"
+            for offset, text in references.items()
+            if any(form in text for form in feminine_forms)
+        ]
+        assert not violations, (
+            "Le toponyme masculin « Chenal Aubrun » conserve un accord féminin :\n"
+            + "\n".join(violations)
+        )
+
     def test_last_wins_semantics_for_fallshore(self, combined):
         """0x720E74 is duplicated; the loader must keep the *last* entry ('Fallshore').
 
