@@ -3,12 +3,20 @@
 - [x] Lire l’issue, ses commentaires et recenser les occurrences actives.
 - [x] Ajouter une garde systématique et protéger les quatre dialogues concernés.
 - [x] Corriger uniquement les dernières valeurs actives dans la source FR.
-- [ ] Régénérer la traduction, reconstruire la ROM et décoder les textes vivants.
-- [ ] Exécuter les validations, relire le diff, committer et clôturer l’issue.
+- [x] Régénérer la traduction, reconstruire la ROM et décoder les textes vivants.
+- [x] Exécuter les validations, relire le diff, committer et clôturer l’issue.
 
 ## Revue
 
-- À compléter après les validations.
+- Les 18 offsets actifs mentionnant le Chenal Aubrun ont été audités : 14
+  étaient déjà neutres ou masculins et les 4 accords féminins ont été corrigés.
+- La garde source balaie toutes les valeurs actives selon la règle
+  « dernière occurrence gagnante » ; les 4 dialogues sont aussi protégés
+  individuellement dans le manifeste FR.
+- La ROM reconstruite décode les quatre formes attendues : « le Chenal
+  Aubrun », « au Chenal Aubrun » (deux occurrences) et « du Chenal Aubrun ».
+- Vérifications du hook : 1 525 tests Python réussis (1 ignoré préexistant),
+  68 tests Vitest réussis, puis builds FR/IT/DE et audits de collisions réussis.
 
 # Sonde mGBA — premier combat italien
 

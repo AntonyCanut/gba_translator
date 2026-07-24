@@ -18,6 +18,7 @@ Run standalone:   pytest tests/test_location_names_fr.py -v
 Run via Makefile: make test-rom
 """
 
+import re
 import struct
 import unittest
 from pathlib import Path
@@ -100,6 +101,13 @@ WORLD_MAP_LABELS = [
     # Renommage Dresco Town → Dresco (follow-up 2026-06-18)
     (0x71CA60, "Dresco",               "Dresco Town"),
 ]
+
+CHENAL_AUBRUN_REFERENCES = {
+    0x7E5BF8: "le Chenal Aubrun",
+    0x1F273CB: "au Chenal Aubrun",
+    0x1F5B996: "du Chenal Aubrun",
+    0x1F651CB: "au Chenal Aubrun",
+}
 
 
 @pytest.mark.rom
@@ -412,6 +420,16 @@ class TestLocationNamesFR(unittest.TestCase):
             text,
             f"'Blizzard City' still reachable via zone-name ptr@0x3F1CBC: {repr(text[:60])}",
         )
+
+    def test_chenal_aubrun_references_are_masculine(self):
+        """Les quatre dialogues corrigés atteignent la ROM avec l’accord masculin."""
+        feminine_forms = ("la Chenal Aubrun", "de la Chenal Aubrun", "à la Chenal Aubrun")
+        for offset, expected in CHENAL_AUBRUN_REFERENCES.items():
+            text = _read_at(self.rom, offset, limit=300)
+            normalized = re.sub(r"(?:<0x[0-9A-F]{2}>|\s)+", " ", text).strip()
+            self.assertIn(expected, normalized, f"0x{offset:07X}: {text!r}")
+            for forbidden in feminine_forms:
+                self.assertNotIn(forbidden, normalized, f"0x{offset:07X}: {text!r}")
 
     # ── Volcan Cendré toponym variants (B-138, 2026-07-02) ─────────────────
     #
