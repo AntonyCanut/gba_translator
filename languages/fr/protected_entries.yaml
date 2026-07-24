@@ -12,6 +12,12 @@
 #
 # Voir docs/20_TRANSLATION_PRESERVATION.md §7.
 entries:
+- offset: '0x1F4E230'
+  name: Couleurs du choix de sortie du menu Options
+  issue: '#144'
+  expected: '<0xFC><0x01><0x06>Sauver\n<0xFC><0x01><0x04>Ignorer\n<0xFC><0x01><0x02>Annuler'
+  forbidden:
+  - Sauver\nIgnorer\nAnnuler
 - offset: '0xB500A0'
   name: Gurenbourg
   issue: B-52

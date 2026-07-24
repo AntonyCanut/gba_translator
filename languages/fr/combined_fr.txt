@@ -25082,7 +25082,7 @@
 0x1f4e1c7: Propose un surnom au Pokémon capturé.
 0x1f4e1eb: Envoie l'objet de PKMN capturé au Cube.
 0x1f4e214: Sauve les réglages choisis.
-0x1f4e230: Sauver\nIgnorer\nAnnuler
+0x1f4e230: <0xFC><0x01><0x06>Sauver\n<0xFC><0x01><0x04>Ignorer\n<0xFC><0x01><0x02>Annuler
 0x1f4e244: {X}Choisir {Y}Changer {Z}Confirmer {COLOR}{W}{V}{U}Plus
 0x41803a: RDC
 0x41803d: 1E

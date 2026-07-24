@@ -377,6 +377,23 @@ class RegressionTextTests(unittest.TestCase):
         self.assertNotIn('abandonner ?', text)
 
     @unittest.skipUnless(FR_ROM.exists(), 'ROM missing')
+    def test_options_exit_choice_box_uses_semantic_colors(self):
+        # Issue #144: Save must be green, Discard red, and Cancel must restore
+        # the normal black text colour instead of inheriting red.
+        french_data = FR_ROM.read_bytes()
+        pointer_offset = 0x1EBD77C
+        target = struct.unpack_from('<I', french_data, pointer_offset)[0] - 0x08000000
+        end = french_data.index(b'\xFF', target)
+        raw = french_data[target:end + 1]
+
+        expected = (
+            b'\xFC\x01\x06' + TextEncoder.encode_pokemon('Sauver')[:-1]
+            + b'\xFE\xFC\x01\x04' + TextEncoder.encode_pokemon('Ignorer')[:-1]
+            + b'\xFE\xFC\x01\x02' + TextEncoder.encode_pokemon('Annuler')
+        )
+        self.assertEqual(raw, expected)
+
+    @unittest.skipUnless(FR_ROM.exists(), 'ROM missing')
     def test_battle_style_options_translated(self):
         # Issue #73 "Mode de combat - menu Options": the battle-style cycle
         # ("Shift"/"Set" at 0x419E2C/0x419E32) had "Changer" for Shift (renamed

@@ -196,3 +196,27 @@
   combat sur la map 4.10 malgré l'absence de freeze et de texte anglais ; son
   traitement est isolé dans le ticket T-554.
 - Rebase final sur `unbound` sans avancement concurrent ; arbre relu propre.
+
+# Issue #144 — Couleurs du choix de sortie du menu Options
+
+- [x] Ajouter un test rouge exigeant vert, rouge puis noir sur les trois choix.
+- [x] Corriger chirurgicalement l'entrée FR active `0x1F4E230`.
+- [x] Protéger la valeur contre les réécritures de `combined_fr.txt`.
+- [x] Régénérer la chaîne FR et vérifier les octets du pointeur vivant.
+- [x] Exécuter les validations ROM et rapides pertinentes.
+- [x] Relire le diff, committer et documenter les résultats.
+
+## Revue
+
+- L'entrée active `0x1F4E230` préfixe désormais « Sauver » par
+  `FC 01 06` (vert), « Ignorer » par `FC 01 04` (rouge) et « Annuler » par
+  `FC 01 02` (noir), ce qui empêche aussi la dernière couleur de déborder.
+- Le manifeste protégé rejette explicitement l'ancienne version sans couleur.
+  Le test de régression lit le pointeur vivant `0x1EBD77C` et exige les octets
+  exacts des trois choix dans la ROM construite.
+- `make prepare-fr && make build-fr` a produit 21 595 traductions et une ROM
+  byte-identique sur deux reconstructions consécutives.
+- Le hook a validé 1 524 tests Python (1 ignoré), 68 tests Vitest et les builds
+  FR/IT/DE. La suite ROM a validé 507 tests et 39 scénarios optionnels ont été
+  ignorés ; l'unique sonde mGBA IT perturbée par un autre `pytest` a ensuite
+  réussi isolément en 7,14 s.
