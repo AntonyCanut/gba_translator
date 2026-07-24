@@ -4,8 +4,11 @@ import struct
 import zlib
 from pathlib import Path
 
+import pytest
+
 from languages.fr.sprites import SPRITES
 from src.graphics.sprite_bmp import read_indexed_bmp
+from src.graphics.sprite_rom import extract_block
 
 
 ROOT = Path(__file__).resolve().parents[3]
@@ -136,3 +139,18 @@ def test_french_build_inserts_cube_sort_hint() -> None:
         "scripts/insert_sprite.py --rom $(FR_BUILD) --lang fr "
         "--sprite cube_sort_hint --bmp languages/fr/sprites/cube_sort_hint.bmp"
     ) in makefile
+
+
+@pytest.mark.rom
+def test_versioned_french_rom_contains_cube_sort_hint() -> None:
+    sprite = SPRITES["cube_sort_hint"]
+    _, _, expected = read_indexed_bmp(ASSET)
+    rom = (ROOT / "output/roms/GenedRom-fr.gba").read_bytes()
+    actual, _, _ = extract_block(
+        rom,
+        sprite.blocks[0],
+        sprite.tiles_wide,
+        sprite.tiles_tall,
+        compressed=sprite.compressed,
+    )
+    assert actual == expected

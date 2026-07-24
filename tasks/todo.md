@@ -23,14 +23,21 @@
 - [x] Relire le dernier commentaire de l’issue et récupérer le BMP de référence fourni.
 - [x] Comparer sa grille indexée au sprite actuellement injecté.
 - [x] Remplacer le BMP, régénérer le PNG éditable à indices identiques et adapter les gardes.
-- [ ] Committer les sources avant reconstruction de la ROM.
-- [ ] Reconstruire la ROM FR et réextraire le bloc LZ77 vivant.
+- [x] Committer les sources avant reconstruction de la ROM.
+- [x] Reconstruire la ROM FR et réextraire le bloc LZ77 vivant.
 - [ ] Exécuter les validations ciblées et rapides, rebaser puis revalider.
 - [ ] Publier le bilan sur l’issue GitHub et clôturer le suivi.
 
 ## Revue
 
-- À compléter après validation.
+- Le BMP est octet pour octet celui joint au dernier commentaire de l’issue ;
+  il redessine ensemble le contour complet de START et le libellé « Tri ».
+- Le PNG indexé 4 bits a été régénéré depuis cette grille et lui correspond
+  intégralement.
+- La réextraction de `GenedRom-fr.gba` à `0x00EF1B68` reproduit les 104×32
+  pixels du BMP source.
+- Vérifications avant rebase : 5 tests ciblés, 1 524 tests Python réussis
+  (1 ignoré), 68 tests Vitest et builds FR/IT/DE réussis.
 
 # Sonde mGBA — premier combat italien
 
