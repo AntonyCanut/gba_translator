@@ -1,11 +1,11 @@
 """Regression tests for the IT HP-label graphics patch (HP/PS → PS).
 
 Sibling of tests/test_patch_hp_labels_de.py — same three LZ77 label blocks, but
-Italian draws « PS » (Punti Salute). All three labels (party-menu green
-label, summary-screen green bar-label sprite, summary-screen grey stat
-label) are 4bpp tiles inside LZ77 blocks — never handled by the text
-pipeline. The built IT ROM must render « PS » in all three, redrawn with a
-consistent font even where the source block already held the Spanish « PS ».
+Italian draws « PS » (Punti Salute). All three labels (party-menu green label,
+summary-screen HP-bar sheet, summary-screen grey stat label) are 4bpp tiles
+inside LZ77 blocks — never handled by the text pipeline. The built IT ROM must
+render « PS » while keeping the English five-row bar body and both end caps
+(GitHub issue #84).
 """
 
 import sys
@@ -16,6 +16,7 @@ import pytest
 
 sys.path.insert(0, str(Path(__file__).parent.parent.parent.parent))
 
+from languages.fr.patches import hp_labels as fr_hp_labels
 from languages.fr.patches.font import lz77_decompress
 from languages.it.patches.hp_labels import (
     GREEN_BLOCK,
@@ -36,6 +37,28 @@ from languages.it.patches.hp_labels import (
 )
 
 BUILT_IT_ROM = Path(__file__).parent.parent.parent.parent / "output" / "roms" / "GenedRom-it.gba"
+ENGLISH_ROM = Path(__file__).parent.parent.parent.parent / "input" / "roms" / "englishrom.gba"
+
+EXPECTED_EN_GREEN_TILES: dict[int, str] = {
+    0: "00000000ffffffff333333333333333333333333ffffffff0000000000000000",
+    1: "00000000ffffffff323333333133333331333333ffffffff0000000000000000",
+    2: "00000000ffffffff223333331133333311333333ffffffff0000000000000000",
+    3: "00000000ffffffff223233331131333311313333ffffffff0000000000000000",
+    4: "00000000ffffffff222233331111333311113333ffffffff0000000000000000",
+    5: "00000000ffffffff222232331111313311113133ffffffff0000000000000000",
+    6: "00000000ffffffff222222331111113311111133ffffffff0000000000000000",
+    7: "00000000ffffffff222222321111113111111131ffffffff0000000000000000",
+    8: "00000000ffffffff222222221111111111111111ffffffff0000000000000000",
+    9: "00fff00ff0444ff4f04444f4f04444f4f0444ff400fff00f0000000000000000",
+    10: "ffff0f004444f400444ff4f04444f4f044ff0ff0ff0000000000000000000000",
+    11: "00000000000000000f0000000f0000000f000000000000000000000000000000",
+}
+
+
+def _non_english_green_sheet() -> dict[int, str]:
+    sheet = {tile: "aa" * 32 for tile in range(12)}
+    sheet.update(GREEN_OLD_VARIANTS["ES « PS »"])
+    return sheet
 
 
 class TestPsArtDefinitions(unittest.TestCase):
@@ -45,10 +68,10 @@ class TestPsArtDefinitions(unittest.TestCase):
             # outline needs one free column on each side of the fill
             self.assertTrue(1 <= c < PARTY_NCOLS - 1, f"col {c} would clip outline")
 
-    def test_green_fill_stays_inside_sprite(self):
+    def test_green_fill_uses_english_four_row_geometry(self):
+        self.assertEqual(sorted({r for r, _ in GREEN_PS_FILL}), [1, 2, 3, 4])
         for r, c in GREEN_PS_FILL:
-            self.assertTrue(1 <= r <= 5, f"row {r} outside 5-row letters")
-            self.assertTrue(1 <= c <= 14, f"col {c} would clip outline")
+            self.assertTrue(1 <= c <= 12, f"col {c} would clip the bar cap")
 
     def test_grey_fill_stays_inside_oval(self):
         for r, c in GREY_PS_FILL:
@@ -74,18 +97,15 @@ class TestPsArtDefinitions(unittest.TestCase):
     def test_it_ps_differs_from_fr_pv(self):
         # The IT label must be distinct from the FR « PV » drawn from the
         # same source tiles — otherwise the port drew the wrong letters.
-        from languages.fr.patches.hp_labels import (
-            _draw_party_label as fr_party,
-            _draw_green_label as fr_green,
-            _draw_grey_label as fr_grey,
-        )
         self.assertNotEqual(_expected_new(PARTY_OLD_TILES, _draw_party_label),
-                            _expected_new(PARTY_OLD_TILES, fr_party))
+                            _expected_new(PARTY_OLD_TILES,
+                                          fr_hp_labels._draw_party_label))
         self.assertNotEqual(_expected_new(GREY_OLD_TILES, _draw_grey_label),
-                            _expected_new(GREY_OLD_TILES, fr_grey))
+                            _expected_new(GREY_OLD_TILES,
+                                          fr_hp_labels._draw_grey_label))
         es = GREEN_OLD_VARIANTS["ES « PS »"]
         self.assertNotEqual(_expected_new(es, _draw_green_label),
-                            _expected_new(es, fr_green))
+                            _expected_new(es, fr_hp_labels._draw_green_label))
 
     def test_green_variants_converge_to_same_ps(self):
         # Whether the source block held EN « HP » or ES « PS », the result is
@@ -94,6 +114,17 @@ class TestPsArtDefinitions(unittest.TestCase):
             _expected_new(v, _draw_green_label) for v in GREEN_OLD_VARIANTS.values()
         ]
         self.assertEqual(results[0], results[1])
+
+    def test_green_sheet_restores_english_body_and_caps(self):
+        new = _expected_new(_non_english_green_sheet(), _draw_green_label)
+        for tile in list(range(9)) + [11]:
+            self.assertEqual(new[tile], EXPECTED_EN_GREEN_TILES[tile],
+                             f"tile {tile} is not the English bar art")
+        old_b = bytes.fromhex(EXPECTED_EN_GREEN_TILES[10])
+        new_b = bytes.fromhex(new[10])
+        for row in range(8):
+            self.assertEqual(old_b[row * 4 + 3] >> 4, new_b[row * 4 + 3] >> 4,
+                             f"tile 10 row {row} left cap modified")
 
     def test_party_label_preserves_bar_cap_columns(self):
         # Grid columns 14-15 (last byte of each row in the right-hand tiles
@@ -160,6 +191,23 @@ class TestBuiltItRomShowsPs(unittest.TestCase):
     def test_summary_bar_label_is_ps(self):
         self._assert_block_is_ps(GREEN_BLOCK, GREEN_OLD_VARIANTS["ES « PS »"],
                                  _draw_green_label)
+
+    def test_summary_bar_sheet_matches_english_body_and_caps(self):
+        if not ENGLISH_ROM.exists():
+            self.skipTest("englishrom.gba not available")
+        english = lz77_decompress(bytearray(ENGLISH_ROM.read_bytes()), GREEN_BLOCK)
+        italian = lz77_decompress(self.rom, GREEN_BLOCK)
+        self.assertIsNotNone(english)
+        self.assertIsNotNone(italian)
+        en_tiles, it_tiles = bytes(english[0]), bytes(italian[0])
+        for tile in list(range(9)) + [11]:
+            self.assertEqual(it_tiles[tile * 32:(tile + 1) * 32],
+                             en_tiles[tile * 32:(tile + 1) * 32],
+                             f"tile {tile} diverges from the English bar art")
+        for row in range(8):
+            off = 10 * 32 + row * 4 + 3
+            self.assertEqual(it_tiles[off] >> 4, en_tiles[off] >> 4,
+                             f"tile 10 row {row} left cap diverges from English")
 
     def test_summary_grey_label_is_ps(self):
         self._assert_block_is_ps(GREY_BLOCK, GREY_OLD_TILES, _draw_grey_label)

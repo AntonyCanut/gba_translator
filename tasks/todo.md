@@ -220,3 +220,16 @@
   FR/IT/DE. La suite ROM a validé 507 tests et 39 scénarios optionnels ont été
   ignorés ; l'unique sonde mGBA IT perturbée par un autre `pytest` a ensuite
   réussi isolément en 7,14 s.
+
+# B-557 — Caps de la barre de vie du résumé DE/IT
+
+- [x] Lire la spec FR #84 et confirmer la cause racine commune.
+- [x] Formaliser le port minimal et la stratégie de preuve ROM.
+- [ ] Ajouter les gardes rouges DE/IT sur le corps et les deux caps.
+- [ ] Restaurer la planche anglaise puis repeindre « KP » / « PS » sur 4 rangées.
+- [ ] Reconstruire les ROMs DE/IT et comparer le bloc LZ77 décodé à l’anglais.
+- [ ] Exécuter les validations, relire, committer et intégrer sans push.
+
+## Revue
+
+- À compléter après les vérifications fraîches.

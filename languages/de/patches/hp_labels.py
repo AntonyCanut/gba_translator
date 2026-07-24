@@ -13,11 +13,12 @@ pipeline never touches them:
    outline=0xE, fill=0xF). Columns 14-15 hold the HP-bar left cap and the
    surrounding tiles hold the box border — only the label area is redrawn.
 
-2. Summary-screen bar label (sprite) — LZ77 block 0x00E9B4B8, tiles 9-10.
-   The EN ROM has « HP », the ES ROM « PS »; ``repair_localized_lz77_blocks``
-   copies the Spanish tiles into the generic (DE) build, so before this patch
-   the summary shows « PS ». Redrawn as « KP » (bold 5-row letters, bg=0,
-   outline=0xF, fill=0x4).
+2. Summary-screen HP-bar sheet (sprite) — LZ77 block 0x00E9B4B8, 12 tiles.
+   Tiles 0-8 are the bar body, tiles 9-10 the label plus its left cap, and
+   tile 11 its right cap. ``repair_localized_lz77_blocks`` copies the Spanish
+   sheet into the generic (DE) build; that sheet has a 7-row body and no caps.
+   The patch restores the English sheet wholesale, then redraws only « KP »
+   inside the 6×14 letter box, leaving the cap columns untouched.
 
 3. Summary-screen grey stat label — LZ77 block 0x00E9A460 (the word-image
    tileset also holding ATTACK/DEFENSE/…), tiles 100/101 + 116/117.
@@ -46,7 +47,7 @@ from pathlib import Path
 ROOT_DIR = Path(__file__).resolve().parents[3]
 sys.path.insert(0, str(ROOT_DIR))
 
-from languages.fr.patches.font import lz77_compress, lz77_decompress  # noqa: E402
+from languages.fr.patches.font import lz77_compress, lz77_decompress
 
 TILE = 32  # bytes per 4bpp 8×8 tile
 
@@ -115,33 +116,66 @@ PARTY_OLD_TILES: dict[int, str] = {
     60: "ffffefe6ffee6e66ee6666666666666666666666666666666666666666666666",
 }
 
-# ── 2. Summary green bar label sprite (block 0x00E9B4B8) ────────────────────
+# ── 2. Summary HP-bar sheet (block 0x00E9B4B8) ──────────────────────────────
 GREEN_BLOCK = 0x00E9B4B8
 GREEN_TILES = (9, 10)
+GREEN_TILE_COUNT = 12
 GREEN_BG, GREEN_OUT, GREEN_FILL = 0x0, 0xF, 0x4
+GREEN_SLOT_LEN = 192
+GREEN_NROWS, GREEN_NCOLS = 6, 14
 
-# New « KP » (bold, 5 fill rows — same geometry/height as the ES « PS »)
+# New « KP » (bold, 4 fill rows — same geometry/height as the EN « HP »).
 GREEN_KP_FILL: set[tuple[int, int]] = (
-    # K: stem cols 3-4, arm cols 5-7
-    {(1, 3), (1, 4), (1, 6), (1, 7)}
-    | {(2, 3), (2, 4), (2, 5), (2, 6)}
-    | {(3, 3), (3, 4), (3, 5)}
-    | {(4, 3), (4, 4), (4, 5), (4, 6)}
-    | {(5, 3), (5, 4), (5, 6), (5, 7)}
-    # P: cols 9-13
-    | {(1, c) for c in range(9, 14)} | {(2, 9), (2, 10), (2, 12), (2, 13)}
-    | {(3, c) for c in range(9, 14)} | {(4, 9), (4, 10)} | {(5, 9), (5, 10)}
+    # K: stem cols 2-3, arm cols 4-6
+    {(1, 2), (1, 3), (1, 5), (1, 6)}
+    | {(2, 2), (2, 3), (2, 4), (2, 5)}
+    | {(3, 2), (3, 3), (3, 4), (3, 5)}
+    | {(4, 2), (4, 3), (4, 5), (4, 6)}
+    # P: cols 8-12
+    | {(1, c) for c in range(8, 13)} | {(2, 8), (2, 9), (2, 11), (2, 12)}
+    | {(3, c) for c in range(8, 13)} | {(4, 8), (4, 9)}
 )
 
+GREEN_EN_TILES: dict[int, str] = {
+    0: "00000000ffffffff333333333333333333333333ffffffff0000000000000000",
+    1: "00000000ffffffff323333333133333331333333ffffffff0000000000000000",
+    2: "00000000ffffffff223333331133333311333333ffffffff0000000000000000",
+    3: "00000000ffffffff223233331131333311313333ffffffff0000000000000000",
+    4: "00000000ffffffff222233331111333311113333ffffffff0000000000000000",
+    5: "00000000ffffffff222232331111313311113133ffffffff0000000000000000",
+    6: "00000000ffffffff222222331111113311111133ffffffff0000000000000000",
+    7: "00000000ffffffff222222321111113111111131ffffffff0000000000000000",
+    8: "00000000ffffffff222222221111111111111111ffffffff0000000000000000",
+    9: "00fff00ff0444ff4f04444f4f04444f4f0444ff400fff00f0000000000000000",
+    10: "ffff0f004444f400444ff4f04444f4f044ff0ff0ff0000000000000000000000",
+    11: "00000000000000000f0000000f0000000f000000000000000000000000000000",
+}
+
+GREEN_ES_TILES: dict[int, str] = {
+    0: "ffffffffffffffff333333333333333333333333ffffffffffffffff00000000",
+    1: "ffffffffffffffff323333333133333331333333ffffffffffffffff00000000",
+    2: "ffffffffffffffff223333331133333311333333ffffffffffffffff00000000",
+    3: "ffffffffffffffff223233331131333311313333ffffffffffffffff00000000",
+    4: "ffffffffffffffff222233331111333311113333ffffffffffffffff00000000",
+    5: "ffffffffffffffff222232331111313311113133ffffffffffffffff00000000",
+    6: "ffffffffffffffff222222331111113311111133ffffffffffffffff00000000",
+    7: "ffffffffffffffff222222321111113111111131ffffffffffffffff00000000",
+    8: "ffffffffffffffff222222221111111111111111ffffffffffffffff00000000",
+    9: "00fffffff04f4444f04ff444f04f4444f04ff4fff04ff4ff00ffffff00000000",
+    10: "ffffff0f4f4444ff4ff4ffff4f4444ffffff44ff4f4444ffffffff0f00000000",
+    11: "0000000000000000000000000000000000000000000000000000000000000000",
+}
+
+GREEN_ES_KP_TILES: dict[int, str] = {
+    **GREEN_ES_TILES,
+    9: "00f00fff004ff444004f44f4004f440f004f44f4004ff44400f00fff00000000",
+    10: "f0ffff004f44440f4ff4440f4f44440f4ff4ff004ff40000f00f000000000000",
+}
+
 GREEN_OLD_VARIANTS: dict[str, dict[int, str]] = {
-    "ES « PS »": {
-        9: "00fffffff04f4444f04ff444f04f4444f04ff4fff04ff4ff00ffffff00000000",
-        10: "ffffff0f4f4444ff4ff4ffff4f4444ffffff44ff4f4444ffffffff0f00000000",
-    },
-    "EN « HP »": {
-        9: "00fff00ff0444ff4f04444f4f04444f4f0444ff400fff00f0000000000000000",
-        10: "ffff0f004444f400444ff4f04444f4f044ff0ff0ff0000000000000000000000",
-    },
+    "EN « HP »": GREEN_EN_TILES,
+    "ES « PS »": GREEN_ES_TILES,
+    "DE « KP » sans caps": GREEN_ES_KP_TILES,
 }
 
 # ── 3. Summary grey stat label (block 0x00E9A460) ───────────────────────────
@@ -198,19 +232,19 @@ def _draw_party_label(tiles: bytearray) -> None:
 
 
 def _draw_green_label(tiles: bytearray) -> None:
+    for tile, hexdata in GREEN_EN_TILES.items():
+        tiles[tile * TILE:(tile + 1) * TILE] = bytes.fromhex(hexdata)
+
     fill = GREEN_KP_FILL
-    outline = _outline(fill, 8, 16)
-    for tile in GREEN_TILES:
-        start = tile * TILE
-        tiles[start:start + TILE] = b"\x00" * TILE
-    for gr in range(8):
-        for gc in range(16):
+    outline = _outline(fill, GREEN_NROWS, GREEN_NCOLS)
+    for gr in range(GREEN_NROWS):
+        for gc in range(GREEN_NCOLS):
             if (gr, gc) in fill:
                 val = GREEN_FILL
             elif (gr, gc) in outline:
                 val = GREEN_OUT
             else:
-                continue
+                val = GREEN_BG
             tile = GREEN_TILES[0] if gc < 8 else GREEN_TILES[1]
             _px_set(tiles, tile, gr, gc % 8, val)
 
@@ -249,11 +283,22 @@ def _expected_new(old_tiles: dict[int, str], draw) -> dict[int, str]:
 
 
 def _recompress_in_place(rom: bytearray, offset: int, tiles: bytearray,
-                         orig_comp_len: int, label: str) -> bool:
+                         orig_comp_len: int, label: str,
+                         slot_len: int | None = None) -> bool:
     compressed = lz77_compress(bytes(tiles))
     if offset + len(compressed) > len(rom):
         print(f"  WARN {label}: recompressed block overflows ROM — skip", file=sys.stderr)
         return False
+    if slot_len is not None:
+        if len(compressed) > slot_len:
+            print(
+                f"  WARN {label}: recompressed ({len(compressed)}) exceeds the "
+                f"{slot_len}-byte slot — skip",
+                file=sys.stderr,
+            )
+            return False
+        rom[offset:offset + len(compressed)] = compressed
+        return True
     if len(compressed) > orig_comp_len:
         extra = rom[offset + orig_comp_len:offset + len(compressed)]
         if any(b not in (0x00, 0xFF) for b in extra):
@@ -268,7 +313,7 @@ def _recompress_in_place(rom: bytearray, offset: int, tiles: bytearray,
 
 
 def _patch_label(rom: bytearray, offset: int, tile_indices, old_variants,
-                 draw, label: str) -> bool:
+                 draw, label: str, slot_len: int | None = None) -> bool:
     result = lz77_decompress(rom, offset)
     if result is None:
         print(f"  WARN {label}: cannot decompress block 0x{offset:08X} — skip",
@@ -299,7 +344,7 @@ def _patch_label(rom: bytearray, offset: int, tile_indices, old_variants,
         return False
 
     draw(tiles)
-    if not _recompress_in_place(rom, offset, tiles, comp_len, label):
+    if not _recompress_in_place(rom, offset, tiles, comp_len, label, slot_len):
         return False
     print(f"  {label}: {matched_variant[0]} → « KP »")
     return True
@@ -317,9 +362,10 @@ def apply_patches(rom_path: Path) -> int:
         "party-menu label (0x008001D0)",
     )
     patched += _patch_label(
-        rom, GREEN_BLOCK, GREEN_OLD_VARIANTS["ES « PS »"].keys(),
+        rom, GREEN_BLOCK, range(GREEN_TILE_COUNT),
         GREEN_OLD_VARIANTS, _draw_green_label,
-        "summary bar label (0x00E9B4B8)",
+        "summary HP-bar sheet (0x00E9B4B8)",
+        slot_len=GREEN_SLOT_LEN,
     )
     patched += _patch_label(
         rom, GREY_BLOCK, GREY_OLD_TILES.keys(),
