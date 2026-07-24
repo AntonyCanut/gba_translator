@@ -1,5 +1,6 @@
 """Garde du bandeau graphique « START Tri » du Cube (issue #140)."""
 
+import hashlib
 import struct
 import zlib
 from pathlib import Path
@@ -14,6 +15,7 @@ from src.graphics.sprite_rom import extract_block
 ROOT = Path(__file__).resolve().parents[3]
 ASSET = ROOT / "languages/fr/sprites/cube_sort_hint.bmp"
 EDITABLE_ASSET = ROOT / "languages/fr/sprites/cube_sort_hint.png"
+REFERENCE_GRID_SHA256 = "4fcabbbdf18d035b7c1fb5f428298a71fd247c7fad899947e62f9ee76b72b0a5"
 
 # Grilles indexées fournies par l'auteur de l'issue pour obtenir un bandeau
 # « (START) Tri » net une fois les tuiles remises en place par le jeu.
@@ -104,6 +106,14 @@ def test_cube_sort_hint_registry_targets_live_lz77_block() -> None:
     assert sprite.blocks == (0x00EF1B68,)
     assert (sprite.tiles_wide, sprite.tiles_tall) == (13, 4)
     assert sprite.compressed
+
+
+def test_cube_sort_hint_matches_issue_reference_grid() -> None:
+    _, _, grid = read_indexed_bmp(ASSET)
+    digest = hashlib.sha256(
+        bytes(pixel for row in grid for pixel in row)
+    ).hexdigest()
+    assert digest == REFERENCE_GRID_SHA256
 
 
 def test_cube_sort_hint_asset_draws_tri() -> None:

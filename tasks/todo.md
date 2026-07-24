@@ -25,8 +25,8 @@
 - [x] Remplacer le BMP, régénérer le PNG éditable à indices identiques et adapter les gardes.
 - [x] Committer les sources avant reconstruction de la ROM.
 - [x] Reconstruire la ROM FR et réextraire le bloc LZ77 vivant.
-- [ ] Exécuter les validations ciblées et rapides, rebaser puis revalider.
-- [ ] Publier le bilan sur l’issue GitHub et clôturer le suivi.
+- [x] Exécuter les validations ciblées et rapides, rebaser puis revalider.
+- [x] Publier le bilan sur l’issue GitHub et clôturer le suivi.
 
 ## Revue
 
