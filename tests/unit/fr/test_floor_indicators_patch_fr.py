@@ -278,6 +278,35 @@ def test_built_fr_rom_has_all_floors_translated():
 @pytest.mark.skipif(
     not (FR_ROM.exists() and EN_ROM.exists()), reason="built ROMs not present"
 )
+def test_built_fr_rom_banner_routine_is_not_the_english_one():
+    """Guard the *artifact*, not just the patch script — that is how it was lost.
+
+    The banner rewrite already shipped once and came back English: the commit
+    carrying it lost a binary rebase on the ROM and was dropped, so the patch
+    script and its own tests went with it. Every other banner test here runs on
+    a synthetic ROM and would still pass in that state — they prove the script
+    works, not that the shipped ROM ran it.
+
+    This one reads the delivered bytes at ``0x09847C``. It is wired into
+    ``make test-fr-build-regressions``, so a FR build that loses the patch fails
+    the build (and therefore the pre-commit hook) instead of shipping quietly.
+    """
+    rom = FR_ROM.read_bytes()
+    shipped = rom[fi.POPUP_FLOOR_FUNC : fi.POPUP_FLOOR_FUNC_END]
+
+    assert shipped != fi.ORIGINAL_POPUP_FLOOR_CODE, (
+        "the built FR ROM still carries the stock English AppendFloorNumberString: "
+        "the place-name banner will read « Grotte de la Vallée 2F » (issue #100)"
+    )
+    assert shipped == fi._build_popup_floor_code(
+        ROM_BASE + fi.FLOOR_STR_OFFSET
+    ), "the banner routine in the built FR ROM is not the one this patch emits"
+
+
+@pytest.mark.rom
+@pytest.mark.skipif(
+    not (FR_ROM.exists() and EN_ROM.exists()), reason="built ROMs not present"
+)
 def test_built_fr_rom_has_place_bound_floors_translated():
     """Elevator menus and the Cube emerald list must be French in the artifact."""
     source = EN_ROM.read_bytes()

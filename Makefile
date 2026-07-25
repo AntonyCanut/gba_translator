@@ -418,7 +418,8 @@ test-fr-build-regressions:
 		tests/e2e/fr/test_pc_selection_menu.py::TestPcSelectionMenuFrench::test_which_pc_question_is_french \
 		tests/e2e/fr/test_pc_selection_menu.py::TestPcSelectionMenuFrench::test_prof_log_pc_entry_has_du \
 		tests/test_patch_pc_move_labels_fr.py::TestBuiltRom::test_mail_move_to_bag \
-		tests/unit/fr/test_world_map_action_labels.py::test_world_map_cancel_pointers_render_short_label
+		tests/unit/fr/test_world_map_action_labels.py::test_world_map_cancel_pointers_render_short_label \
+		tests/unit/fr/test_floor_indicators_patch_fr.py::test_built_fr_rom_banner_routine_is_not_the_english_one
 
 # Garde anti-régression des traductions (toutes langues) — source de vérité :
 # languages/<lang>/protected_entries.yaml. Voir docs/20_TRANSLATION_PRESERVATION.md §7.
