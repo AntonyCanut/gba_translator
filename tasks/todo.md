@@ -268,3 +268,26 @@
   suppression ou modification rend la garde ROM rouge.
 - Vérifications ciblées : 9 tests unitaires du scanner, 2 tests source du
   cluster CT et 2 tests ROM (inventaire + quatre traductions via pointeurs).
+
+# Issue #147 — Intitulé de quête du Mont Givre
+
+- [x] Lire l’issue et confirmer l’absence de commentaires antérieurs.
+- [x] Localiser la dernière entrée active de l’intitulé.
+- [x] Ajouter une garde rouge protégeant la formulation demandée.
+- [x] Corriger chirurgicalement la source FR.
+- [x] Régénérer la chaîne FR et reconstruire la ROM jouable.
+- [x] Vérifier le texte décodé dans la ROM construite.
+- [x] Exécuter les validations, relire, committer et clôturer l’issue.
+
+## Revue
+
+- L’entrée active `0x1F56313` emploie désormais « Gravis le Mont Givre » ;
+  le manifeste FR protège cette formulation et interdit le retour de « Monte ».
+- La ROM reconstruite décode exactement « Gravis le Mont Givre et dirige-toi
+  vers Cimistral ! » à `0x1F56313`, avec terminateur `0xFF`, et ne contient
+  plus l’ancienne chaîne encodée.
+- Le cycle TDD a produit l’échec attendu sur l’ancienne formulation, puis
+  24 tests ciblés réussis. Le hook a validé 1 547 tests Python (1 ignoré),
+  68 tests Vitest et les builds FR/IT/DE ; `make test-rom` a ensuite validé
+  le rebuild déterministe, 12 gardes de reconstruction et 531 tests ROM
+  (35 scénarios optionnels ignorés).

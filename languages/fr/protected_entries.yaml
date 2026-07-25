@@ -18,6 +18,12 @@ entries:
   expected: '<0xFC><0x01><0x06>Sauver\n<0xFC><0x01><0x04>Ignorer\n<0xFC><0x01><0x02>Annuler'
   forbidden:
   - Sauver\nIgnorer\nAnnuler
+- offset: '0x1F56313'
+  name: 'Intitulé quête: gravir le Mont Givre'
+  issue: '#147'
+  expected: Gravis le Mont Givre et dirige-toi\nvers Cimistral !
+  forbidden:
+  - Monte le Mont Givre et dirige-toi\nvers Cimistral !
 - offset: '0xB500A0'
   name: Gurenbourg
   issue: B-52
