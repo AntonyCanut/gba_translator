@@ -246,3 +246,18 @@
   preuve demandée est assurée par les comparaisons unitaires et ROM réelles.
 - L’issue #84 reste ouverte jusqu’à une release publique contenant le correctif
   FR `1a533b3e` et ce port DE/IT, conformément à son dernier commentaire.
+
+# B-558 — Audit des chaînes anglaises encore vivantes en FR
+
+- [ ] Ajouter les tests rouges du scanner sur ROM synthétique.
+- [ ] Implémenter l’audit extraction EN → sites plausibles → cibles FR vivantes.
+- [ ] Ajouter le rapport CLI et le manifeste explicite des exceptions volontaires.
+- [ ] Ajouter la garde `rom` qui refuse toute chaîne anglaise livrée non classée.
+- [ ] Traduire les quatre entrées du cluster CT et protéger leur valeur active.
+- [ ] Vérifier la largeur et les trois pointeurs du titre « Toutes les bonnes CT ».
+- [ ] Reconstruire la ROM FR et trier toutes les détections résiduelles.
+- [ ] Exécuter les validations ciblées, rapides et ROM, puis relire le diff.
+
+## Revue
+
+- À compléter après les vérifications finales.
