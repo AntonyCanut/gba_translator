@@ -93,6 +93,13 @@ class TestItemNameData(unittest.TestCase):
         self.assertEqual(ITEM_NAMES["HM01"], "CS01")
         self.assertEqual(ITEM_NAMES["Sup. Repouss"], "Superepousse")
 
+    def test_superepousse_fits_the_fixed_name_cell(self):
+        # The complete name must fit without overwriting the item data that
+        # starts immediately after the 14-byte CFRU name field.
+        encoded_size = len(encode("Superepousse")) + 1
+        self.assertEqual(encoded_size, 13)
+        self.assertLessEqual(encoded_size, NAME_FIELD)
+
     def test_no_oversized_official_names_slipped_in(self):
         # Guard the documented boundary: names known to need a pointer
         # relocation must NOT be present as byte-exact entries.
