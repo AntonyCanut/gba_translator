@@ -249,15 +249,22 @@
 
 # B-558 — Audit des chaînes anglaises encore vivantes en FR
 
-- [ ] Ajouter les tests rouges du scanner sur ROM synthétique.
-- [ ] Implémenter l’audit extraction EN → sites plausibles → cibles FR vivantes.
-- [ ] Ajouter le rapport CLI et le manifeste explicite des exceptions volontaires.
-- [ ] Ajouter la garde `rom` qui refuse toute chaîne anglaise livrée non classée.
-- [ ] Traduire les quatre entrées du cluster CT et protéger leur valeur active.
-- [ ] Vérifier la largeur et les trois pointeurs du titre « Toutes les bonnes CT ».
-- [ ] Reconstruire la ROM FR et trier toutes les détections résiduelles.
-- [ ] Exécuter les validations ciblées, rapides et ROM, puis relire le diff.
+- [x] Ajouter les tests rouges du scanner sur ROM synthétique.
+- [x] Implémenter l’audit extraction EN → sites plausibles → cibles FR vivantes.
+- [x] Ajouter le rapport CLI et le manifeste explicite des exceptions volontaires.
+- [x] Ajouter la garde `rom` qui refuse toute chaîne anglaise livrée non classée.
+- [x] Traduire les quatre entrées du cluster CT et protéger leur valeur active.
+- [x] Vérifier la largeur et les trois pointeurs du titre « Toutes les bonnes CT ».
+- [x] Reconstruire la ROM FR et trier toutes les détections résiduelles.
+- [x] Exécuter les validations ciblées, rapides et ROM, puis relire le diff.
 
 ## Revue
 
-- À compléter après les vérifications finales.
+- Le titre « Toutes les bonnes CT » mesure 113 px pour une limite conservatrice
+  de 176 px ; ses trois pointeurs vivants convergent vers la même chaîne FR.
+- Le balayage CFRU classe 218 chaînes exactes : 131 livrées encore à traduire,
+  60 anglaises volontaires et 27 reliquats sans preuve de livraison espagnole.
+- Chaque revue est liée à l'offset source et au SHA-256 du texte : ajout,
+  suppression ou modification rend la garde ROM rouge.
+- Vérifications ciblées : 9 tests unitaires du scanner, 2 tests source du
+  cluster CT et 2 tests ROM (inventaire + quatre traductions via pointeurs).

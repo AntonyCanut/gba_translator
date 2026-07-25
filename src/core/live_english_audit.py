@@ -2,13 +2,37 @@
 
 from __future__ import annotations
 
+import re
 import struct
 from dataclasses import dataclass
 from typing import Iterable, Literal, Mapping, Sequence
 
 from .collision_check import ROM_BASE, live_target, plausible_sites
 
-ExceptionCategory = Literal["intentional", "base-unused"]
+ExceptionCategory = Literal["delivered", "intentional", "base-unused"]
+
+_CONTROL_TOKEN = re.compile(r"<0x[0-9A-Fa-f]{2}>")
+_ASCII_WORD = re.compile(r"[A-Za-z]+(?:'[A-Za-z]+)?")
+_ENGLISH_CUES = frozenset(
+    """
+    a an the this that these those i me my we our us you your he his him she
+    her they their them it its is are was were be been being have has had do
+    does did can could would should will not no yes and or but if then than to
+    of in on at from for with without into out up down here there where when
+    what who why how all any some more most less very just still only also
+    again today tomorrow yesterday please thank thanks sorry hello good great
+    bad want need like know find found give gave get got take took make made
+    come came go went going look see saw tell told time day night pokemon
+    trainer battle move moves tm tms box mission quest route city house shop
+    save game return select press active none effectiveness completed handed
+    ran disappeared ready right total ever everyone everything nothing
+    something
+    """.split()
+)
+_ENGLISH_SINGLE_WORDS = frozenset(
+    {"active", "none", "show", "champion", "standard", "effectiveness",
+     "why", "tms", "tm", "on", "is", "was"}
+)
 
 
 @dataclass(frozen=True)
@@ -175,6 +199,42 @@ def find_live_english(
     )
 
 
+def _looks_entirely_english(finding: LiveEnglishFinding) -> bool:
+    """Écarte les noms propres et le bruit binaire sans masquer les titres courts.
+
+    La preuve espagnole permet de retenir un titre sans mot-outil anglais
+    (``bright orange cheeks``). Sans cette preuve, au moins un marqueur lexical
+    anglais est exigé. Le ratio de lettres ASCII rejette les faux textes issus
+    de données graphiques ou de code décodées avec la charmap.
+    """
+    cleaned = _CONTROL_TOKEN.sub(" ", finding.english_text)
+    words = _ASCII_WORD.findall(cleaned.lower())
+    ascii_letters = sum(len(word.replace("'", "")) for word in words)
+    all_letters = sum(character.isalpha() for character in cleaned)
+    if not words or ascii_letters / max(1, all_letters) < 0.68:
+        return False
+    if len(words) == 1:
+        return words[0] in _ENGLISH_SINGLE_WORDS
+    return finding.spanish_translated or any(
+        word in _ENGLISH_CUES for word in words
+    )
+
+
+def filter_english_findings(
+    findings: Sequence[LiveEnglishFinding],
+    *,
+    source_region: tuple[int, int],
+) -> list[LiveEnglishFinding]:
+    """Ne garde que les textes anglais linguistiques du bloc CFRU demandé."""
+    start, end = source_region
+    return [
+        finding
+        for finding in findings
+        if start <= finding.source_offset < end
+        and _looks_entirely_english(finding)
+    ]
+
+
 def classify_findings(
     findings: Sequence[LiveEnglishFinding],
     exceptions: Sequence[EnglishException],
@@ -195,10 +255,12 @@ def classify_findings(
             (finding.source_offset, finding.english_text)
         )
         if exception is None:
-            (delivered if finding.spanish_translated else unclassified).append(finding)
+            unclassified.append(finding)
             continue
         matched.add(exception)
-        if exception.category == "intentional":
+        if exception.category == "delivered":
+            delivered.append(finding)
+        elif exception.category == "intentional":
             intentional.append(finding)
         elif exception.category == "base-unused":
             base_unused.append(finding)

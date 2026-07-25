@@ -141,11 +141,86 @@ def test_classification_separates_delivered_and_explicit_exceptions():
         english_text=first.english_text,
         reason="Donnée FireRed inutilisée.",
     )
+    delivered_review = audit.EnglishException(
+        source_offset=0x210,
+        category="delivered",
+        english_text=delivered.english_text,
+        reason="Dialogue réellement livré, à traduire dans un ticket dédié.",
+    )
 
-    result = audit.classify_findings([first, delivered], [base_exception])
+    result = audit.classify_findings(
+        [first, delivered],
+        [base_exception, delivered_review],
+    )
 
     assert result.base_unused == (first,)
     assert result.delivered == (delivered,)
     assert result.intentional == ()
     assert result.unclassified == ()
     assert result.stale_exceptions == ()
+
+
+def test_classification_does_not_silently_accept_spanish_proof():
+    audit = _module()
+    finding = audit.LiveEnglishFinding(
+        source_offset=0x1F01000,
+        target_offset=0x1F01000,
+        pointer_sites=(0x44,),
+        english_text="This shipped sentence is English.",
+        spanish_translated=True,
+    )
+
+    result = audit.classify_findings([finding], [])
+
+    assert result.delivered == ()
+    assert result.unclassified == (finding,)
+
+
+def test_linguistic_filter_keeps_sentences_and_rejects_binary_noise():
+    audit = _module()
+    sentence = audit.LiveEnglishFinding(
+        source_offset=0x1F01000,
+        target_offset=0x1F01000,
+        pointer_sites=(0x44,),
+        english_text="Those TMs aren't going to find themselves!",
+        spanish_translated=False,
+    )
+    binary_noise = audit.LiveEnglishFinding(
+        source_offset=0x1F02000,
+        target_offset=0x1F02000,
+        pointer_sites=(0x48,),
+        english_text="ŒîÀ <0x31> ûÉWÀîË<0x70> random <0x88> data",
+        spanish_translated=True,
+    )
+
+    filtered = audit.filter_english_findings(
+        [sentence, binary_noise],
+        source_region=(0x1F00000, 0x1FB0000),
+    )
+
+    assert filtered == [sentence]
+
+
+def test_linguistic_filter_uses_spanish_proof_for_short_english_titles():
+    audit = _module()
+    title = audit.LiveEnglishFinding(
+        source_offset=0x1F01000,
+        target_offset=0x1F01000,
+        pointer_sites=(0x44,),
+        english_text="bright orange cheeks",
+        spanish_translated=True,
+    )
+    proper_name = audit.LiveEnglishFinding(
+        source_offset=0x1F02000,
+        target_offset=0x1F02000,
+        pointer_sites=(0x48,),
+        english_text="Meloetta",
+        spanish_translated=True,
+    )
+
+    filtered = audit.filter_english_findings(
+        [title, proper_name],
+        source_region=(0x1F00000, 0x1FB0000),
+    )
+
+    assert filtered == [title]
