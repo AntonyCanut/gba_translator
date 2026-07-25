@@ -12,7 +12,7 @@
     "test:e2e:german": "ROM_PATH=$(pwd)/output/roms/GenedRom-de.gba playwright test --project=german",
     "test:e2e:visual": "playwright test --project=visual-regression",
     "test:e2e:story-sequences": "playwright test -c tests/e2e-playwright/playwright.story-sequences.config.ts",
-    "test:e2e:party-hp-bar": "playwright test -c tests/e2e-playwright/playwright.party-hp-bar.config.ts",
+    "test:e2e:hp-bar": "playwright test -c tests/e2e-playwright/playwright.hp-bar.config.ts",
     "test:e2e:ui": "playwright test --ui",
     "test:e2e:report": "python3 scripts/run_playwright_tests.py",
     "test:e2e:update-snapshots": "playwright test --project=visual-regression --update-snapshots",

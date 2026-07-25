@@ -11,10 +11,17 @@ never touches them:
    outline=0xE, fill=0xF). Columns 14-15 hold the HP-bar left cap and the
    surrounding tiles hold the box border — only the label area is redrawn.
 
-2. Summary-screen bar label (sprite) — LZ77 block 0x00E9B4B8, tiles 9-10.
-   The EN ROM has « HP », the ES ROM « PS »; ``repair_localized_lz77_blocks``
-   copies the Spanish tiles into the FR build, so the FR summary shows « PS ».
-   Redrawn as « PV » (bold 5-row letters, bg=0, outline=0xF, fill=0x4).
+2. Summary-screen HP-bar sheet (sprite) — LZ77 block 0x00E9B4B8, 12 tiles.
+   Tiles 0-8 are the bar body (one per fill level), tiles 9-10 the « HP »
+   label *plus the bar's left cap* (tile 10 column 7, rows 2-4) and tile 11
+   the bar's right cap (column 0, rows 2-4). ``repair_localized_lz77_blocks``
+   copies the whole Spanish sheet into the FR build, and the Spanish sheet
+   has a 7-row bar body with **no cap tiles at all** — which is why the FR
+   « Capacités » page showed a bar truncated at both ends (GitHub issue #84).
+   The patch therefore restores the *English* sheet wholesale and only
+   redraws the label letters as « PV » (bg=0, outline=0xF, fill=0x4) inside
+   the 6×14 box the EN « HP » occupies, leaving columns 14-15 — the left cap
+   — byte-exact.
 
 3. Summary-screen grey stat label — LZ77 block 0x00E9A460 (the word-image
    tileset also holding ATTACK/DEFENSE/…), tiles 100/101 + 116/117.
@@ -135,31 +142,81 @@ PARTY_CURRENT_PV_TILES: dict[int, str] = {
     60: "feffeee6e6ef6666666e66666666666666666666666666666666666666666666",
 }
 
-# ── 2. Summary green bar label sprite (block 0x00E9B4B8) ────────────────────
+# ── 2. Summary HP-bar sheet (block 0x00E9B4B8) ──────────────────────────────
 GREEN_BLOCK = 0x00E9B4B8
-GREEN_TILES = (9, 10)
+GREEN_TILES = (9, 10)              # the two label tiles inside the sheet
+GREEN_TILE_COUNT = 12              # whole sheet: body 0-8, label 9-10, cap 11
 GREEN_BG, GREEN_OUT, GREEN_FILL = 0x0, 0xF, 0x4
 
-# New « PV » (bold, 5 fill rows — same geometry as the ES « PS »)
+# The sheet lives in a 192-byte slot: 0x08E9B578 (= block + 192) is the next
+# pointed-to address in the ROM, and nothing points inside the stream itself.
+# The Spanish stream copied by repair_localized_lz77_blocks is 168 bytes, so
+# the recompressed English sheet (~150) always fits even though it is longer
+# than whatever stream currently sits there.
+GREEN_SLOT_LEN = 192
+
+# The label box: 6 rows × 14 columns, exactly what the EN « HP » occupies.
+# Column 14 is the gap and column 15 the HP-bar left cap — never drawn on.
+GREEN_NROWS, GREEN_NCOLS = 6, 14
+
+# New « PV » (bold, 4 fill rows — same geometry as the EN « HP »)
 GREEN_PV_FILL: set[tuple[int, int]] = (
-    # P: cols 3-7
-    {(1, c) for c in range(3, 8)} | {(2, 3), (2, 4), (2, 6), (2, 7)}
-    | {(3, c) for c in range(3, 8)} | {(4, 3), (4, 4)} | {(5, 3), (5, 4)}
-    # V: cols 9-13
-    | {(1, 9), (1, 10), (1, 12), (1, 13)} | {(2, 9), (2, 10), (2, 12), (2, 13)}
-    | {(3, 9), (3, 10), (3, 12), (3, 13)} | {(4, 10), (4, 11), (4, 12)}
-    | {(5, 11)}
+    # P: cols 2-6
+    {(1, c) for c in range(2, 7)} | {(2, 2), (2, 3), (2, 5), (2, 6)}
+    | {(3, c) for c in range(2, 7)} | {(4, 2), (4, 3)}
+    # V: cols 8-12
+    | {(1, 8), (1, 9), (1, 11), (1, 12)} | {(2, 8), (2, 9), (2, 11), (2, 12)}
+    | {(3, 9), (3, 10), (3, 11)} | {(4, 10)}
 )
 
+# The English sheet — the reference art the FR build must ship. Tiles 0-8 are
+# the 5-row bar body, tile 10 column 7 the bar's left cap and tile 11 column 0
+# its right cap.
+GREEN_EN_TILES: dict[int, str] = {
+    0: "00000000ffffffff333333333333333333333333ffffffff0000000000000000",
+    1: "00000000ffffffff323333333133333331333333ffffffff0000000000000000",
+    2: "00000000ffffffff223333331133333311333333ffffffff0000000000000000",
+    3: "00000000ffffffff223233331131333311313333ffffffff0000000000000000",
+    4: "00000000ffffffff222233331111333311113333ffffffff0000000000000000",
+    5: "00000000ffffffff222232331111313311113133ffffffff0000000000000000",
+    6: "00000000ffffffff222222331111113311111133ffffffff0000000000000000",
+    7: "00000000ffffffff222222321111113111111131ffffffff0000000000000000",
+    8: "00000000ffffffff222222221111111111111111ffffffff0000000000000000",
+    9: "00fff00ff0444ff4f04444f4f04444f4f0444ff400fff00f0000000000000000",
+    10: "ffff0f004444f400444ff4f04444f4f044ff0ff0ff0000000000000000000000",
+    11: "00000000000000000f0000000f0000000f000000000000000000000000000000",
+}
+
+# The Spanish sheet copied in by repair_localized_lz77_blocks: 7-row bar body
+# (rows 0 and 6 filled) and an empty tile 11 — both bar caps are missing.
+GREEN_ES_TILES: dict[int, str] = {
+    0: "ffffffffffffffff333333333333333333333333ffffffffffffffff00000000",
+    1: "ffffffffffffffff323333333133333331333333ffffffffffffffff00000000",
+    2: "ffffffffffffffff223333331133333311333333ffffffffffffffff00000000",
+    3: "ffffffffffffffff223233331131333311313333ffffffffffffffff00000000",
+    4: "ffffffffffffffff222233331111333311113333ffffffffffffffff00000000",
+    5: "ffffffffffffffff222232331111313311113133ffffffffffffffff00000000",
+    6: "ffffffffffffffff222222331111113311111133ffffffffffffffff00000000",
+    7: "ffffffffffffffff222222321111113111111131ffffffffffffffff00000000",
+    8: "ffffffffffffffff222222221111111111111111ffffffffffffffff00000000",
+    9: "00fffffff04f4444f04ff444f04f4444f04ff4fff04ff4ff00ffffff00000000",
+    10: "ffffff0f4f4444ff4ff4ffff4f4444ffffff44ff4f4444ffffffff0f00000000",
+    11: "0000000000000000000000000000000000000000000000000000000000000000",
+}
+
+# State of every FR ROM built before issue #84 was fixed: the Spanish sheet
+# with a « PV » drawn on the Spanish 7-row geometry. Accepted as an input
+# variant so an already-built ROM migrates instead of being skipped.
+GREEN_ES_PV_TILES: dict[int, str] = {
+    **GREEN_ES_TILES,
+    9: "00f0ffff004f4444004ff444004f4444004ff4ff004ff40000f00f0000000000",
+    10: "f00fff004ff4440f4ff4440f4ff4440ff044f400004f0f0000f0000000000000",
+}
+
 GREEN_OLD_VARIANTS: dict[str, dict[int, str]] = {
-    "ES « PS »": {
-        9: "00fffffff04f4444f04ff444f04f4444f04ff4fff04ff4ff00ffffff00000000",
-        10: "ffffff0f4f4444ff4ff4ffff4f4444ffffff44ff4f4444ffffffff0f00000000",
-    },
-    "EN « HP »": {
-        9: "00fff00ff0444ff4f04444f4f04444f4f0444ff400fff00f0000000000000000",
-        10: "ffff0f004444f400444ff4f04444f4f044ff0ff0ff0000000000000000000000",
-    },
+    "EN « HP »": GREEN_EN_TILES,
+    "ES « PS »": GREEN_ES_TILES,
+    "FR « PV » sans caps": GREEN_ES_PV_TILES,
 }
 
 # ── 3. Summary grey stat label (block 0x00E9A460) ───────────────────────────
@@ -301,19 +358,26 @@ def _draw_party_label(tiles: bytearray) -> None:
 
 
 def _draw_green_label(tiles: bytearray) -> None:
+    """Rebuild the summary HP-bar sheet: English art + a French « PV » label.
+
+    The sheet is restored from the English reference first, so the bar body
+    and both end caps are byte-exact even when the Spanish sheet was copied
+    in beforehand. Only the 6×14 label box is then repainted; columns 14-15
+    of the box carry the bar's left cap and are never written.
+    """
+    for tile, hexdata in GREEN_EN_TILES.items():
+        tiles[tile * TILE:(tile + 1) * TILE] = bytes.fromhex(hexdata)
+
     fill = GREEN_PV_FILL
-    outline = _outline(fill, 8, 16)
-    for tile in GREEN_TILES:
-        start = tile * TILE
-        tiles[start:start + TILE] = b"\x00" * TILE
-    for gr in range(8):
-        for gc in range(16):
+    outline = _outline(fill, GREEN_NROWS, GREEN_NCOLS)
+    for gr in range(GREEN_NROWS):
+        for gc in range(GREEN_NCOLS):
             if (gr, gc) in fill:
                 val = GREEN_FILL
             elif (gr, gc) in outline:
                 val = GREEN_OUT
             else:
-                continue
+                val = GREEN_BG
             tile = GREEN_TILES[0] if gc < 8 else GREEN_TILES[1]
             _px_set(tiles, tile, gr, gc % 8, val)
 
@@ -449,11 +513,24 @@ def _expected_new(old_tiles: dict[int, str], draw) -> dict[int, str]:
 
 
 def _recompress_in_place(rom: bytearray, offset: int, tiles: bytearray,
-                         orig_comp_len: int, label: str) -> bool:
+                         orig_comp_len: int, label: str,
+                         slot_len: int | None = None) -> bool:
     compressed = lz77_compress(bytes(tiles))
     if offset + len(compressed) > len(rom):
         print(f"  WARN {label}: recompressed block overflows ROM — skip", file=sys.stderr)
         return False
+    if slot_len is not None:
+        # The block owns a known slot (nothing is pointed to inside it), so a
+        # stream longer than the current one is safe as long as it still fits.
+        if len(compressed) > slot_len:
+            print(
+                f"  WARN {label}: recompressed ({len(compressed)}) exceeds the "
+                f"{slot_len}-byte slot — skip",
+                file=sys.stderr,
+            )
+            return False
+        rom[offset:offset + len(compressed)] = compressed
+        return True
     if len(compressed) > orig_comp_len:
         extra = rom[offset + orig_comp_len:offset + len(compressed)]
         if any(b not in (0x00, 0xFF) for b in extra):
@@ -468,7 +545,7 @@ def _recompress_in_place(rom: bytearray, offset: int, tiles: bytearray,
 
 
 def _patch_label(rom: bytearray, offset: int, tile_indices, old_variants,
-                 draw, label: str) -> bool:
+                 draw, label: str, slot_len: int | None = None) -> bool:
     result = lz77_decompress(rom, offset)
     if result is None:
         print(f"  WARN {label}: cannot decompress block 0x{offset:08X} — skip",
@@ -499,7 +576,7 @@ def _patch_label(rom: bytearray, offset: int, tile_indices, old_variants,
         return False
 
     draw(tiles)
-    if not _recompress_in_place(rom, offset, tiles, comp_len, label):
+    if not _recompress_in_place(rom, offset, tiles, comp_len, label, slot_len):
         return False
     print(f"  {label}: {matched_variant[0]} → « PV »")
     return True
@@ -520,9 +597,10 @@ def apply_patches(rom_path: Path) -> int:
         "party-menu label (0x008001D0)",
     )
     patched += _patch_label(
-        rom, GREEN_BLOCK, GREEN_OLD_VARIANTS["ES « PS »"].keys(),
+        rom, GREEN_BLOCK, range(GREEN_TILE_COUNT),
         GREEN_OLD_VARIANTS, _draw_green_label,
-        "summary bar label (0x00E9B4B8)",
+        "summary HP-bar sheet (0x00E9B4B8)",
+        slot_len=GREEN_SLOT_LEN,
     )
     patched += _patch_label(
         rom, GREY_BLOCK, GREY_OLD_TILES.keys(),

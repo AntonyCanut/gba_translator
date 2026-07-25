@@ -1,11 +1,15 @@
 """Regression tests for the FR HP-label graphics patch (HP/PS → PV).
 
 Four label graphics show the hit-point abbreviation: the party-menu green
-label, the summary-screen green bar-label sprite, the summary-screen grey
-stat label, and the in-battle healthbox label (GitHub issue #125). All are
-4bpp tiles inside LZ77 blocks — never handled by the text pipeline. The built
-FR ROM must render « PV » in every block — including the four battle healthbox
+label, the summary-screen HP-bar sheet, the summary-screen grey stat label,
+and the in-battle healthbox label (GitHub issue #125). All are 4bpp tiles
+inside LZ77 blocks — never handled by the text pipeline. The built FR ROM
+must render « PV » in every block — including the four battle healthbox
 sheets (0xD1F604 / 0xEEF0AC / 0xEEF380 / 0xEEF688).
+
+The summary-screen sheet also carries the HP bar itself: restoring the
+English body and both end caps is what fixes the bar truncated at both ends
+reported in GitHub issue #84.
 """
 
 import sys
@@ -16,7 +20,7 @@ import pytest
 
 sys.path.insert(0, str(Path(__file__).parent.parent))
 
-from languages.fr.patches.font import lz77_decompress
+from languages.fr.patches.font import lz77_compress, lz77_decompress
 from languages.fr.patches.hp_labels import (
     BATTLE_BLOCKS,
     BATTLE_H_TILE_HEX,
@@ -24,8 +28,12 @@ from languages.fr.patches.hp_labels import (
     BATTLE_P_TILE_HEX,
     BATTLE_V_FILL,
     GREEN_BLOCK,
+    GREEN_EN_TILES,
+    GREEN_NCOLS,
+    GREEN_NROWS,
     GREEN_OLD_VARIANTS,
     GREEN_PV_FILL,
+    GREEN_SLOT_LEN,
     GREY_BLOCK,
     GREY_OLD_TILES,
     GREY_PV_FILL,
@@ -55,6 +63,7 @@ from languages.fr.patches.hp_labels import (
 )
 
 BUILT_FR_ROM = Path(__file__).parent.parent / "output" / "roms" / "GenedRom-fr.gba"
+ENGLISH_ROM = Path(__file__).parent.parent / "input" / "roms" / "englishrom.gba"
 
 
 class TestPvArtDefinitions(unittest.TestCase):
@@ -64,10 +73,12 @@ class TestPvArtDefinitions(unittest.TestCase):
             # outline needs one free column on each side of the fill
             self.assertTrue(1 <= c < PARTY_NCOLS - 1, f"col {c} would clip outline")
 
-    def test_green_fill_stays_inside_sprite(self):
+    def test_green_fill_stays_inside_label_box(self):
         for r, c in GREEN_PV_FILL:
-            self.assertTrue(1 <= r <= 5, f"row {r} outside 5-row letters")
-            self.assertTrue(1 <= c <= 14, f"col {c} would clip outline")
+            self.assertTrue(1 <= r <= GREEN_NROWS - 2, f"row {r} would clip outline")
+            # cols 14-15 carry the HP-bar left cap, so the outline must stop
+            # one column earlier than the box edge
+            self.assertTrue(1 <= c <= GREEN_NCOLS - 2, f"col {c} would clip the bar cap")
 
     def test_grey_fill_stays_inside_oval(self):
         for r, c in GREY_PV_FILL:
@@ -82,13 +93,39 @@ class TestPvArtDefinitions(unittest.TestCase):
         for variant in GREEN_OLD_VARIANTS.values():
             self.assertNotEqual(_expected_new(variant, _draw_green_label), variant)
 
-    def test_green_variants_converge_to_same_pv(self):
-        # Whether the source block held EN « HP » or ES « PS », the result is
-        # the same « PV » sprite (the draw rebuilds the tiles from scratch).
+    def test_green_variants_converge_to_same_sheet(self):
+        # Whether the block held EN « HP », ES « PS » or the pre-#84 French
+        # « PV » drawn on the capless Spanish sheet, the result is the same:
+        # the draw rebuilds the whole sheet from the English reference.
         results = [
             _expected_new(v, _draw_green_label) for v in GREEN_OLD_VARIANTS.values()
         ]
-        self.assertEqual(results[0], results[1])
+        for other in results[1:]:
+            self.assertEqual(results[0], other)
+
+    def test_green_sheet_keeps_english_bar_and_caps(self):
+        # GitHub issue #84: the Spanish sheet copied in by
+        # repair_localized_lz77_blocks has a 7-row bar body and an empty
+        # tile 11, so the bar looked truncated at both ends. Everything but
+        # the label letters must come back byte-exact from the English art.
+        new = _expected_new(GREEN_OLD_VARIANTS["ES « PS »"], _draw_green_label)
+        for tile in list(range(9)) + [11]:
+            self.assertEqual(new[tile], GREEN_EN_TILES[tile],
+                             f"tile {tile} is not the English bar art")
+        # tile 10 column 7 (rows 2-4) is the bar's left cap, inside the label
+        # tile — the redraw must leave those pixels alone.
+        old_b = bytes.fromhex(GREEN_EN_TILES[10])
+        new_b = bytes.fromhex(new[10])
+        for row in range(8):
+            self.assertEqual(old_b[row * 4 + 3] >> 4, new_b[row * 4 + 3] >> 4,
+                             f"tile 10 row {row} col 7 (left cap) modified")
+
+    def test_green_sheet_fits_its_slot(self):
+        new = _expected_new(GREEN_OLD_VARIANTS["EN « HP »"], _draw_green_label)
+        sheet = bytearray(len(GREEN_EN_TILES) * 32)
+        for tile, hexdata in new.items():
+            sheet[tile * 32:(tile + 1) * 32] = bytes.fromhex(hexdata)
+        self.assertLessEqual(len(lz77_compress(bytes(sheet))), GREEN_SLOT_LEN)
 
     def test_clipped_party_variant_migrates_to_same_pv(self):
         self.assertEqual(
@@ -234,6 +271,26 @@ class TestBuiltFrRomShowsPv(unittest.TestCase):
     def test_summary_bar_label_is_pv(self):
         self._assert_block_is_pv(GREEN_BLOCK, GREEN_OLD_VARIANTS["ES « PS »"],
                                  _draw_green_label)
+
+    def test_summary_bar_sheet_matches_english_outside_the_label(self):
+        # GitHub issue #84 in the shipped ROM: every tile but the two label
+        # tiles must be the English bar art, caps included.
+        if not ENGLISH_ROM.exists():
+            self.skipTest("englishrom.gba not available")
+        english = lz77_decompress(bytearray(ENGLISH_ROM.read_bytes()), GREEN_BLOCK)
+        french = lz77_decompress(self.rom, GREEN_BLOCK)
+        self.assertIsNotNone(english)
+        self.assertIsNotNone(french)
+        en_tiles, fr_tiles = bytes(english[0]), bytes(french[0])
+        self.assertEqual(len(fr_tiles), len(en_tiles))
+        for tile in list(range(9)) + [11]:
+            self.assertEqual(fr_tiles[tile * 32:(tile + 1) * 32],
+                             en_tiles[tile * 32:(tile + 1) * 32],
+                             f"tile {tile} diverges from the English bar art")
+        for row in range(8):
+            off = 10 * 32 + row * 4 + 3
+            self.assertEqual(fr_tiles[off] >> 4, en_tiles[off] >> 4,
+                             f"tile 10 row {row} left cap diverges from English")
 
     def test_summary_grey_label_is_pv(self):
         self._assert_block_is_pv(GREY_BLOCK, GREY_OLD_TILES, _draw_grey_label)
