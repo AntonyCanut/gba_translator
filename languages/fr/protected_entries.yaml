@@ -1677,3 +1677,27 @@ entries:
   expected: Cette CT a été trouvée près du\nsommet via Escalade.
   forbidden:
   - This TM was
+- offset: '0x1F540CF'
+  name: Maison des CT — visite peu aimable
+  issue: '#100'
+  expected: Ta visite me touche,\nmais tu es si peu aimable.
+  forbidden:
+  - I'm touched that you came here
+- offset: '0x1F54276'
+  name: Maison des CT — titre de mission
+  issue: '#100'
+  expected: Toutes les bonnes CT
+  forbidden:
+  - All the Right Moves
+- offset: '0x1F5428A'
+  name: Maison des CT — collection des 120 CT
+  issue: '#100'
+  expected: Il y a 120 CT en tout.\nPeux-tu toutes les trouver ?
+  forbidden:
+  - There are 120 TMs in total.
+- offset: '0x1F543BF'
+  name: Maison des CT — encouragement
+  issue: '#100'
+  expected: Ces CT ne vont pas se\ntrouver toutes seules !
+  forbidden:
+  - Those TMs aren't going to just
