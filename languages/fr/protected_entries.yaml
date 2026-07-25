@@ -1517,3 +1517,163 @@ entries:
   expected: Aller au sud mène au Chenal Aubrun, une route qui relie les\lRoutes 6 et 10.\pIl te faudra {COLOR}ÉSurf{COLOR}Ç pour\ny aller.
   forbidden:
   - à la Chenal Aubrun
+# Issue #100 — descriptions CT laissées en anglais (bloc 0x1F545CC-0x1F54B25).
+- offset: '0x1F545CC'
+  name: Descriptions CT — labyrinthe de haies
+  issue: '#100'
+  expected: Cette CT a été trouvée dans le\nlabyrinthe de haies extérieur.
+  forbidden:
+  - This TM was
+- offset: '0x1F545F9'
+  name: Descriptions CT — falaises enneigées
+  issue: '#100'
+  expected: Cette CT a été trouvée sur les\nfalaises enneigées via Escalade.
+  forbidden:
+  - This TM was
+- offset: '0x1F54637'
+  name: Étage traduit — pont bleu (B1F → -1)
+  issue: '#100'
+  expected: Cette CT a été trouvée au -1 après\navoir traversé le pont bleu.
+  forbidden:
+  - au B1F
+  - This TM was
+- offset: '0x1F54670'
+  name: Descriptions CT — marché (1)
+  issue: '#100'
+  expected: Cette CT a été achetée au\nmarché.
+  forbidden:
+  - This TM was
+- offset: '0x1F5469A'
+  name: Étage traduit — grande salle (1F → RDC)
+  issue: '#100'
+  expected: Cette CT a été trouvée dans la\ngrande salle du RDC, via Surf.
+  forbidden:
+  - au 1F
+  - sur 1F
+  - This TM was
+- offset: '0x1F546D6'
+  name: Descriptions CT — est du marais
+  issue: '#100'
+  expected: Cette CT a été trouvée à l'est du\nmarais, via Surf.
+  forbidden:
+  - This TM was
+- offset: '0x1F54716'
+  name: Descriptions CT — clown libéré
+  issue: '#100'
+  expected: Cette CT a été reçue d'un clown\naprès l'avoir aidé à s'échapper.
+  forbidden:
+  - This TM was
+- offset: '0x1F54752'
+  name: Descriptions CT — marché (2)
+  issue: '#100'
+  expected: Cette CT a été achetée au\nmarché.
+  forbidden:
+  - This TM was
+- offset: '0x1F5477C'
+  name: Descriptions CT — est de la route via Coupe
+  issue: '#100'
+  expected: Cette CT a été trouvée à l'est de\nla route, via Coupe.
+  forbidden:
+  - This TM was
+- offset: '0x1F547BD'
+  name: Descriptions CT — expert en Puissance Cachée
+  issue: '#100'
+  expected: Cette CT a été reçue de l'expert en\nPuissance Cachée, chez lui.
+  forbidden:
+  - This TM was
+- offset: '0x1F547F9'
+  name: Descriptions CT — clown, Solaroc ou Solgaleo
+  issue: '#100'
+  expected: Cette CT a été reçue d'un clown\naprès lui avoir montré Solaroc ou\nSolgaleo.
+  forbidden:
+  - This TM was
+- offset: '0x1F54842'
+  name: Descriptions CT — derrière le Magasin
+  issue: '#100'
+  expected: Cette CT a été trouvée cachée\nderrière le Magasin.
+  forbidden:
+  - This TM was
+- offset: '0x1F5486C'
+  name: Étage traduit — Topdresseurs (4F → 3E)
+  issue: '#100'
+  expected: Cette CT a été trouvée au 3E après\navoir battu deux Topdresseurs.
+  forbidden:
+  - au 4F
+  - 3ème étage
+  - This TM was
+- offset: '0x1F548AC'
+  name: Étage traduit — rocher dans un trou (B1F → -1)
+  issue: '#100'
+  expected: Cette CT a été trouvée au -1 après\navoir poussé un rocher dans un trou.
+  forbidden:
+  - au B1F
+  - This TM was
+- offset: '0x1F548EA'
+  name: Étage traduit — achat au 3E (4F → 3E)
+  issue: '#100'
+  expected: Cette CT a été achetée au 3E.
+  forbidden:
+  - au 4F
+  - This TM was
+- offset: '0x1F54907'
+  name: Descriptions CT — 2000 Pièces
+  issue: '#100'
+  expected: Cette CT a été achetée pour 2000\nPièces.
+  forbidden:
+  - This TM was
+- offset: '0x1F5492D'
+  name: Descriptions CT — marché (3)
+  issue: '#100'
+  expected: Cette CT a été achetée au\nmarché.
+  forbidden:
+  - This TM was
+- offset: '0x1F54957'
+  name: Descriptions CT — clown caché
+  issue: '#100'
+  expected: Cette CT a été reçue d'un clown\naprès l'avoir trouvé caché.
+  forbidden:
+  - This TM was
+- offset: '0x1F54993'
+  name: Descriptions CT — sortie vers Cube SARL.
+  issue: '#100'
+  expected: Cette CT a été trouvée via Coupe\nprès de la sortie vers Cube SARL.
+  forbidden:
+  - This TM was
+- offset: '0x1F549D1'
+  name: Descriptions CT — 16 PB à la boutique
+  issue: '#100'
+  expected: Cette CT a été achetée pour 16 PB à\nla boutique.
+  forbidden:
+  - This TM was
+- offset: '0x1F54A00'
+  name: Étage traduit — sol fissuré (B1F → -1)
+  issue: '#100'
+  expected: Cette CT a été trouvée au -1 après\navoir traversé l'agaçant sol\nfissuré.
+  forbidden:
+  - au B1F
+  - This TM was
+- offset: '0x1F54A51'
+  name: Descriptions CT — sous une cime d'arbre
+  issue: '#100'
+  expected: Cette CT a été trouvée sous une cime\nd'arbre, au sud du côté est de\nla route.
+  forbidden:
+  - This TM was
+- offset: '0x1F54AAC'
+  name: Descriptions CT — remonté avec l'AMD
+  issue: '#100'
+  expected: Cette CT a été trouvée après être\nremonté avec l'AMD.
+  forbidden:
+  - This TM was
+- offset: '0x1F54ADE'
+  name: Étage traduit — entrée d'Épidia (1F → RDC)
+  issue: '#100'
+  expected: Cette CT a été trouvée au RDC près\nde l'entrée d'Épidia, via Surf.
+  forbidden:
+  - au 1F
+  - This TM was
+- offset: '0x1F54B25'
+  name: Descriptions CT — près du sommet via Escalade
+  issue: '#100'
+  expected: Cette CT a été trouvée près du\nsommet via Escalade.
+  forbidden:
+  - This TM was

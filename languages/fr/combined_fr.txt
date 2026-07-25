@@ -25285,3 +25285,31 @@ objets utiles aux Dresseurs.
 0x1a508a: Accéder à quel PC ?
 0x417bb6: PC de {PLAYER}
 0x417bd3: PC du Prof. Log
+
+# Issue #100 : descriptions « This TM was found… » restées anglaises
+# (bloc 0x1F545CC-0x1F54B25) — étages à la convention RDC/1E/-1.
+0x1F545CC: Cette CT a été trouvée dans le\nlabyrinthe de haies extérieur.
+0x1F545F9: Cette CT a été trouvée sur les\nfalaises enneigées via Escalade.
+0x1F54637: Cette CT a été trouvée au -1 après\navoir traversé le pont bleu.
+0x1F54670: Cette CT a été achetée au\nmarché.
+0x1F5469A: Cette CT a été trouvée dans la\ngrande salle du RDC, via Surf.
+0x1F546D6: Cette CT a été trouvée à l'est du\nmarais, via Surf.
+0x1F54716: Cette CT a été reçue d'un clown\naprès l'avoir aidé à s'échapper.
+0x1F54752: Cette CT a été achetée au\nmarché.
+0x1F5477C: Cette CT a été trouvée à l'est de\nla route, via Coupe.
+0x1F547BD: Cette CT a été reçue de l'expert en\nPuissance Cachée, chez lui.
+0x1F547F9: Cette CT a été reçue d'un clown\naprès lui avoir montré Solaroc ou\nSolgaleo.
+0x1F54842: Cette CT a été trouvée cachée\nderrière le Magasin.
+0x1F5486C: Cette CT a été trouvée au 3E après\navoir battu deux Topdresseurs.
+0x1F548AC: Cette CT a été trouvée au -1 après\navoir poussé un rocher dans un trou.
+0x1F548EA: Cette CT a été achetée au 3E.
+0x1F54907: Cette CT a été achetée pour 2000\nPièces.
+0x1F5492D: Cette CT a été achetée au\nmarché.
+0x1F54957: Cette CT a été reçue d'un clown\naprès l'avoir trouvé caché.
+0x1F54993: Cette CT a été trouvée via Coupe\nprès de la sortie vers Cube SARL.
+0x1F549D1: Cette CT a été achetée pour 16 PB à\nla boutique.
+0x1F54A00: Cette CT a été trouvée au -1 après\navoir traversé l'agaçant sol\nfissuré.
+0x1F54A51: Cette CT a été trouvée sous une cime\nd'arbre, au sud du côté est de\nla route.
+0x1F54AAC: Cette CT a été trouvée après être\nremonté avec l'AMD.
+0x1F54ADE: Cette CT a été trouvée au RDC près\nde l'entrée d'Épidia, via Surf.
+0x1F54B25: Cette CT a été trouvée près du\nsommet via Escalade.

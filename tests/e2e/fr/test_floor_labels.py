@@ -158,6 +158,59 @@ def test_no_reachable_french_sentence_spells_an_english_floor(rom: bytes):
     )
 
 
+def test_no_reachable_sentence_at_all_spells_an_english_floor(rom: bytes):
+    """Same sweep as above, but blind to the language of the sentence.
+
+    The French-only filter above has a hole the reporter kept falling into: a
+    sentence that is *still entirely English* carries no accent and no French
+    function word, so it was skipped — which is exactly how the 25 TM-location
+    descriptions (``This TM was found on B1F after crossing the blue bridge.``)
+    survived three rounds of #100 while sitting one pointer away from the
+    player. A shipped screen has no business spelling ``B1F`` in any language,
+    so this variant drops the filter entirely.
+    """
+    offenders = {}
+    for label in ("B1F", "B2F", "B3F", "B4F", "1F", "2F", "3F", "4F", "5F", "6F"):
+        needle = TextEncoder.encode_pokemon(label).rstrip(b"\xFF")
+        for match in re.finditer(re.escape(needle), rom):
+            hit = match.start()
+            start = hit
+            while start > 0 and rom[start - 1] != 0xFF and hit - start < 400:
+                start -= 1
+            text = _decode_at(rom, start)
+            # Undecodable bytes are graphics/sample data, not player-visible text.
+            if "<0x" in text or len(text) < 12 or " " not in text:
+                continue
+            if _PROSE_TOKEN.search(text) and _pointer_slots(rom, start):
+                offenders[start] = text
+
+    assert not offenders, "reachable text still spelling an English floor: " + "; ".join(
+        f"{offset:#x} {text[:60]!r}" for offset, text in sorted(offenders.items())[:10]
+    )
+
+
+def test_the_tm_location_descriptions_are_all_french(rom: bytes):
+    """The TM case tells you *where* each TM was found — a place, hence a floor.
+
+    Half of that block was still English (``This TM was found on 4F after…``)
+    with its French siblings right next to it, so the case showed a mix of both
+    languages. Only reachability counts: relocating a longer French text leaves
+    the English original stranded at the old offset with no pointer left.
+    """
+    stranded = []
+    needle = TextEncoder.encode_pokemon("This TM was ").rstrip(b"\xFF")
+    for match in re.finditer(re.escape(needle), rom):
+        start = match.start()
+        if start and rom[start - 1] != 0xFF:
+            continue
+        if _pointer_slots(rom, start):
+            stranded.append((start, _decode_at(rom, start)))
+
+    assert not stranded, "English TM-location description still reachable: " + "; ".join(
+        f"{offset:#x} {text[:60]!r}" for offset, text in stranded[:10]
+    )
+
+
 def test_french_floor_labels_are_actually_reachable(rom: bytes):
     """Positive control: the French labels are wired, not merely present."""
     for label in ("RDC", "1E", "-1"):
