@@ -20,6 +20,7 @@ from languages.de.patches.hp_labels import (
     GREEN_BLOCK,
     GREEN_KP_FILL,
     GREEN_OLD_VARIANTS,
+    GREEN_SLOT_LEN,
     GREY_BLOCK,
     GREY_KP_FILL,
     GREY_OLD_TILES,
@@ -34,7 +35,7 @@ from languages.de.patches.hp_labels import (
     _tiles_hex,
 )
 from languages.fr.patches import hp_labels as fr_hp_labels
-from languages.fr.patches.font import lz77_decompress
+from languages.fr.patches.font import lz77_compress, lz77_decompress
 
 BUILT_DE_ROM = Path(__file__).parent.parent / "output" / "roms" / "GenedRom-de.gba"
 ENGLISH_ROM = Path(__file__).parent.parent / "input" / "roms" / "englishrom.gba"
@@ -117,6 +118,11 @@ class TestKpArtDefinitions(unittest.TestCase):
         for row in range(8):
             self.assertEqual(old_b[row * 4 + 3] >> 4, new_b[row * 4 + 3] >> 4,
                              f"tile 10 row {row} left cap modified")
+
+    def test_green_sheet_fits_reserved_lz77_slot(self):
+        new = _expected_new(_non_english_green_sheet(), _draw_green_label)
+        sheet = b"".join(bytes.fromhex(new[tile]) for tile in range(12))
+        self.assertLessEqual(len(lz77_compress(sheet)), GREEN_SLOT_LEN)
 
     def test_party_label_preserves_bar_cap_columns(self):
         # Grid columns 14-15 (last byte of each row in the right-hand tiles

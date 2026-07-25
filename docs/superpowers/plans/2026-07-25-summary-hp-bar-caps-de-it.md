@@ -40,11 +40,11 @@ génériques `make build-de` et `make build-it`.
 - Produit : gardes sur la géométrie quatre rangées, les tuiles 0–8 et 11, le
   cap gauche de la tuile 10 et la parité de la ROM DE face à la ROM anglaise.
 
-- [ ] Ajouter les assertions littérales sur les rangées de remplissage et la
+- [x] Ajouter les assertions littérales sur les rangées de remplissage et la
   boîte 6×14.
-- [ ] Comparer les tuiles du corps et le cap droit à l’art anglais.
-- [ ] Comparer la demi-octet de la colonne 7 de la tuile 10 à l’art anglais.
-- [ ] Lancer `python3 -m pytest tests/test_patch_hp_labels_de.py -q` et
+- [x] Comparer les tuiles du corps et le cap droit à l’art anglais.
+- [x] Comparer la demi-octet de la colonne 7 de la tuile 10 à l’art anglais.
+- [x] Lancer `python3 -m pytest tests/test_patch_hp_labels_de.py -q` et
   constater l’échec causé par l’ancien art espagnol.
 
 ### Tâche 2 : Port DE minimal
@@ -58,11 +58,11 @@ génériques `make build-de` et `make build-it`.
 - Consomme : une planche connue EN/ES/KP sans caps.
 - Produit : une planche anglaise complète avec « KP » dans la boîte 6×14.
 
-- [ ] Définir la planche anglaise/espagnole complète, le créneau de 192 octets
+- [x] Définir la planche anglaise/espagnole complète, le créneau de 192 octets
   et la géométrie quatre rangées de « KP ».
-- [ ] Restaurer la planche anglaise avant d’appliquer remplissage et contour.
-- [ ] Valider les 12 tuiles et transmettre `slot_len=192` à la recompression.
-- [ ] Relancer le test DE et obtenir 100 % de réussite.
+- [x] Restaurer la planche anglaise avant d’appliquer remplissage et contour.
+- [x] Valider les 12 tuiles et transmettre `slot_len=192` à la recompression.
+- [x] Relancer le test DE et obtenir 100 % de réussite.
 
 ### Tâche 3 : Gardes unitaires et port IT
 
@@ -76,10 +76,10 @@ génériques `make build-de` et `make build-it`.
 - Consomme : la même géométrie de planche que DE.
 - Produit : une planche anglaise complète avec « PS » dans la boîte 6×14.
 
-- [ ] Ajouter les gardes IT équivalentes et observer leur échec.
-- [ ] Redessiner « PS » sur quatre rangées, sans écrire les colonnes 14–15.
-- [ ] Restaurer les 12 tuiles anglaises et utiliser le créneau de 192 octets.
-- [ ] Relancer les deux fichiers de tests ciblés et obtenir 100 % de réussite.
+- [x] Ajouter les gardes IT équivalentes et observer leur échec.
+- [x] Redessiner « PS » sur quatre rangées, sans écrire les colonnes 14–15.
+- [x] Restaurer les 12 tuiles anglaises et utiliser le créneau de 192 octets.
+- [x] Relancer les deux fichiers de tests ciblés et obtenir 100 % de réussite.
 
 ### Tâche 4 : Builds et preuve ROM
 
@@ -94,10 +94,10 @@ génériques `make build-de` et `make build-it`.
 - Produit : ROMs DE/IT dont le bloc décodé possède le corps et les deux caps
   anglais, avec les seuls pixels de lettres localisés.
 
-- [ ] Exécuter le détecteur de tests/processus puis les validations ciblées,
+- [x] Exécuter le détecteur de tests/processus puis les validations ciblées,
   `make test-python-fast` et `ruff check` sur les fichiers modifiés.
-- [ ] Exécuter `make build-de` puis `make build-it`, sans parallélisme.
-- [ ] Décompresser `0x00E9B4B8` dans EN/DE/IT et comparer tuiles 0–8, tuile 11
+- [x] Exécuter `make build-de` puis `make build-it`, sans parallélisme.
+- [x] Décompresser `0x00E9B4B8` dans EN/DE/IT et comparer tuiles 0–8, tuile 11
   et colonne 7 de la tuile 10.
-- [ ] Relire le diff, compléter `tasks/todo.md`, committer les chemins précis,
+- [x] Relire le diff, compléter `tasks/todo.md`, committer les chemins précis,
   rebaser via l’orchestrateur et revalider si la base a avancé.

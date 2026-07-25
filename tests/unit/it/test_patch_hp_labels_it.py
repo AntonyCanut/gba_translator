@@ -17,11 +17,12 @@ import pytest
 sys.path.insert(0, str(Path(__file__).parent.parent.parent.parent))
 
 from languages.fr.patches import hp_labels as fr_hp_labels
-from languages.fr.patches.font import lz77_decompress
+from languages.fr.patches.font import lz77_compress, lz77_decompress
 from languages.it.patches.hp_labels import (
     GREEN_BLOCK,
     GREEN_OLD_VARIANTS,
     GREEN_PS_FILL,
+    GREEN_SLOT_LEN,
     GREY_BLOCK,
     GREY_OLD_TILES,
     GREY_PS_FILL,
@@ -125,6 +126,11 @@ class TestPsArtDefinitions(unittest.TestCase):
         for row in range(8):
             self.assertEqual(old_b[row * 4 + 3] >> 4, new_b[row * 4 + 3] >> 4,
                              f"tile 10 row {row} left cap modified")
+
+    def test_green_sheet_fits_reserved_lz77_slot(self):
+        new = _expected_new(_non_english_green_sheet(), _draw_green_label)
+        sheet = b"".join(bytes.fromhex(new[tile]) for tile in range(12))
+        self.assertLessEqual(len(lz77_compress(sheet)), GREEN_SLOT_LEN)
 
     def test_party_label_preserves_bar_cap_columns(self):
         # Grid columns 14-15 (last byte of each row in the right-hand tiles

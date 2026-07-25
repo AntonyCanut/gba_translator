@@ -225,11 +225,24 @@
 
 - [x] Lire la spec FR #84 et confirmer la cause racine commune.
 - [x] Formaliser le port minimal et la stratégie de preuve ROM.
-- [ ] Ajouter les gardes rouges DE/IT sur le corps et les deux caps.
-- [ ] Restaurer la planche anglaise puis repeindre « KP » / « PS » sur 4 rangées.
-- [ ] Reconstruire les ROMs DE/IT et comparer le bloc LZ77 décodé à l’anglais.
-- [ ] Exécuter les validations, relire, committer et intégrer sans push.
+- [x] Ajouter les gardes rouges DE/IT sur le corps et les deux caps.
+- [x] Restaurer la planche anglaise puis repeindre « KP » / « PS » sur 4 rangées.
+- [x] Reconstruire les ROMs DE/IT et comparer le bloc LZ77 décodé à l’anglais.
+- [x] Exécuter les validations, relire, committer et intégrer sans push.
 
 ## Revue
 
-- À compléter après les vérifications fraîches.
+- Les patches DE/IT restaurent les 12 tuiles anglaises avant de repeindre
+  uniquement « KP » / « PS » dans la boîte 6×14 ; les deux glyphes ont quatre
+  rangées de remplissage et leur contour est produit par `_outline`.
+- Les ROMs reconstruites décodent chacune 384 octets à `0x00E9B4B8`. Les
+  tuiles 0–8 et 11 sont identiques à EN, comme la colonne 7 de la tuile 10 ;
+  seuls les pixels des lettres diffèrent. Les flux occupent 149 octets (DE) et
+  146 octets (IT) dans le créneau de 192 octets.
+- Le cycle TDD a produit 4 échecs attendus avant correction, puis 24 tests
+  ciblés et 8 tests ROM réussis. Le hook a validé 1 528 tests Python
+  (1 ignoré), 68 tests Vitest et les builds FR/IT/DE sans collision.
+- Aucun E2E DE/IT n’a été ajouté : seule une sauvegarde FR est disponible. La
+  preuve demandée est assurée par les comparaisons unitaires et ROM réelles.
+- L’issue #84 reste ouverte jusqu’à une release publique contenant le correctif
+  FR `1a533b3e` et ce port DE/IT, conformément à son dernier commentaire.
