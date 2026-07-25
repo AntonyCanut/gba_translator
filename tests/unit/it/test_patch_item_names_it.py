@@ -93,9 +93,11 @@ class TestItemNameData(unittest.TestCase):
         fr = importlib.util.module_from_spec(spec)
         spec.loader.exec_module(fr)
 
+        # "Sup. Repouss" is injected only by the FR pipeline; the IT source
+        # cell still contains "Super Repel".
         expected_exclusions = {
             "Exp. Share", "Soft Sand", "Room Service", "Bug Gem",
-            "Bug Memory", "Bottle Cap", "Eon Ticket",
+            "Bug Memory", "Bottle Cap", "Eon Ticket", "Sup. Repouss",
         }
         # The standard Poké Ball line is keyed on its FRENCH source string: the
         # Unbound base ROM ships those inline gItems cells pre-localised to

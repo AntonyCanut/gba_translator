@@ -91,6 +91,7 @@ class TestItemNameData(unittest.TestCase):
         self.assertEqual(ITEM_NAMES["Zap Memory"], "ROM Élektrik")
         self.assertEqual(ITEM_NAMES["Eviolite"], "Évoluroc")
         self.assertEqual(ITEM_NAMES["HM01"], "CS01")
+        self.assertEqual(ITEM_NAMES["Sup. Repouss"], "Superepousse")
 
     def test_no_oversized_official_names_slipped_in(self):
         # Guard the documented boundary: names known to need a pointer

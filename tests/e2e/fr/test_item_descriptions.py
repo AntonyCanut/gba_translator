@@ -19,6 +19,7 @@ from src.text.charmap_data import BYTE_TO_CHAR
 ITEMS_TABLE = 0x876074
 ITEM_STRIDE = 44
 DESC_PTR_OFFSET = 0x14
+NAME_FIELD = 14
 GBA_BASE = 0x08000000
 
 ITEM_ANTIGEL = 0x19    # Ice Heal
@@ -34,6 +35,11 @@ def _follow_desc_ptr(rom: bytes, item_id: int) -> Optional[int]:
     if ptr < GBA_BASE:
         return None
     return ptr - GBA_BASE
+
+
+def _decode_item_name(rom: bytes, item_id: int) -> str:
+    item_offset = ITEMS_TABLE + item_id * ITEM_STRIDE
+    return _decode(rom, item_offset, max_len=NAME_FIELD)
 
 
 def _decode(rom: bytes, offset: int, max_len: int = 256) -> str:
@@ -71,6 +77,9 @@ def fr_rom_bytes():
 
 class TestItemDescriptions:
     """Vérifier les descriptions d'objets corrigées directement via les pointeurs ROM."""
+
+    def test_superepousse_porte_son_nom_complet(self, fr_rom_bytes):
+        assert _decode_item_name(fr_rom_bytes, ITEM_SUP_REPOUSSE) == "Superepousse"
 
     def test_antigel_decrit_le_degel(self, fr_rom_bytes):
         offset = _follow_desc_ptr(fr_rom_bytes, ITEM_ANTIGEL)

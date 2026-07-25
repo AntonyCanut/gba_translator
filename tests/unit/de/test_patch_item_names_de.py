@@ -109,9 +109,15 @@ class TestItemNameData(unittest.TestCase):
             "Bis Ball", "Chrono Ball", "Luxe Ball", "Honor Ball",
             "Mémoire Ball", "Sombre Ball", "Soin Ball", "Rapide Ball",
         }
+        # This abbreviated source value is injected only by the FR pipeline;
+        # the DE source cell still contains "Super Repel".
+        fr_only_source_keys = {"Sup. Repouss"}
         missing = set(fr.ITEM_NAMES) - set(ITEM_NAMES)
         extra = set(ITEM_NAMES) - set(fr.ITEM_NAMES)
-        self.assertEqual(missing, {"Room Service", "Bottle Cap", "Purp Nectar"})
+        self.assertEqual(
+            missing,
+            {"Room Service", "Bottle Cap", "Purp Nectar"} | fr_only_source_keys,
+        )
         self.assertEqual(extra, standard_ball_keys)
         self.assertEqual(set(fr.BERRY_NAMES), set(BERRY_NAMES))
 

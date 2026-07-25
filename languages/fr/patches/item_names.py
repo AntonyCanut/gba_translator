@@ -136,6 +136,8 @@ BERRY_NAMES = {
 # re-validates fit before writing). Names whose official FR form is longer than
 # 13 glyphs are intentionally excluded (see module docstring).
 ITEM_NAMES = {
+    # Canonicalize the abbreviated French name injected by the text pipeline.
+    "Sup. Repouss": "Superepousse",
     # Evolution & special stones
     "Sun Stone": "Pierre Soleil",
     "Moon Stone": "Pierre Lune",
