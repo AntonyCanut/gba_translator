@@ -10,12 +10,11 @@ palette indices of one screen cannot corrupt another.
 from __future__ import annotations
 
 from dataclasses import dataclass
-from typing import Tuple
 
 
 @dataclass(frozen=True)
 class SpriteDef:
-    blocks: Tuple[int, ...]
+    blocks: tuple[int, ...]
     tiles_wide: int
     tiles_tall: int
     # True (default): block is LZ77-compressed (magic byte 0x10), recompressed
@@ -27,6 +26,15 @@ class SpriteDef:
     # compact standard stream accepted by their existing patch; VRAM-safe
     # output is three bytes larger and does not fit their fixed ROM slots.
     vram_safe: bool = True
+    # Optional LZ77 tilemap paired one-for-one with ``blocks``. When present,
+    # extraction reconstructs the mapped screen and insertion reverses that
+    # composition instead of exposing a scrambled linear tilesheet.
+    tilemaps: tuple[int, ...] = ()
+
+    def __post_init__(self) -> None:
+        """Valide l'appariement des planches et tilemaps."""
+        if self.tilemaps and len(self.tilemaps) != len(self.blocks):
+            raise ValueError("SpriteDef requires one tilemap per block")
 
 
 SPRITES: dict[str, SpriteDef] = {
@@ -79,5 +87,21 @@ SPRITES: dict[str, SpriteDef] = {
         blocks=(0x00EF1B68,),
         tiles_wide=13,
         tiles_tall=4,
+    ),
+    # Trainer Card front and back (GitHub issue #148): the headings
+    # "TRAINER CARD" and "LEAGUE BADGES" are baked into separate LZ77
+    # tilesheets. Their 32x20 tilemaps rebuild a directly editable full-screen
+    # PNG while the mapped inserter preserves shared/flipped source tiles.
+    "trainer_card_front": SpriteDef(
+        blocks=(0x01FDA2BC,),
+        tilemaps=(0x01FDA820,),
+        tiles_wide=32,
+        tiles_tall=20,
+    ),
+    "trainer_card_back": SpriteDef(
+        blocks=(0x01FDAA4C,),
+        tilemaps=(0x01FDB2AC,),
+        tiles_wide=32,
+        tiles_tall=20,
     ),
 }

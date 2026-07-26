@@ -11,8 +11,10 @@ from languages.fr.patches.font import lz77_compress, lz77_decompress
 from src.graphics.sprite_rom import (
     TILE_BYTES,
     extract_block,
+    extract_mapped_block,
     grid_to_tiles,
     insert_block,
+    insert_mapped_block,
     tiles_to_grid,
 )
 
@@ -22,6 +24,23 @@ def _make_rom_with_block(tiles: bytes, pad_after: int = 16) -> tuple:
     compressed = lz77_compress(tiles)
     rom = bytearray(compressed) + b"\xff" * pad_after
     return rom, 0, len(compressed)
+
+
+def _make_rom_with_tilemap(
+    tiles: bytes,
+    entries: list[int],
+) -> tuple[bytearray, int, int]:
+    """Construit une ROM synthétique avec une planche et sa tilemap LZ77."""
+    tiles_block = lz77_compress(tiles)
+    tilemap_block = lz77_compress(
+        b"".join(entry.to_bytes(2, "little") for entry in entries)
+    )
+    tilemap_offset = len(tiles_block) + 64
+    rom = bytearray(tiles_block)
+    rom.extend(b"\xff" * (tilemap_offset - len(rom)))
+    rom.extend(tilemap_block)
+    rom.extend(b"\xff" * 64)
+    return rom, 0, tilemap_offset
 
 
 def _lz77_back_references(data: bytes, offset: int = 0) -> list[tuple[int, int]]:
@@ -69,7 +88,7 @@ def test_extract_block_decodes_known_tiles():
     tiles = bytes([0x55] * TILE_BYTES)
     rom, offset, _ = _make_rom_with_block(tiles)
 
-    grid, dec_len, comp_len = extract_block(bytes(rom), offset, tiles_wide, tiles_tall)
+    grid, dec_len, _ = extract_block(bytes(rom), offset, tiles_wide, tiles_tall)
     assert dec_len == TILE_BYTES
     assert all(px == 5 for row in grid for px in row)
 
@@ -85,7 +104,7 @@ def test_insert_block_round_trip():
     tiles_wide, tiles_tall = 2, 2
     n_tiles = tiles_wide * tiles_tall
     original = bytes((t * 3 + i) & 0xFF for t in range(n_tiles) for i in range(TILE_BYTES))
-    rom, offset, comp_len = _make_rom_with_block(original, pad_after=64)
+    rom, offset, _ = _make_rom_with_block(original, pad_after=64)
 
     grid = tiles_to_grid(original, tiles_wide, tiles_tall)
     # Flip every pixel to a different, deterministic index.
@@ -184,3 +203,77 @@ def test_extract_block_raw_rejects_overflow_of_rom():
     rom = bytes([0x00] * TILE_BYTES)  # only 1 tile available, needs 2
     with pytest.raises(ValueError):
         extract_block(rom, 0, tiles_wide, tiles_tall, compressed=False)
+
+
+def test_extract_mapped_block_applies_tilemap_flips():
+    tile_0 = [[1] * 8 for _ in range(8)]
+    tile_1 = [[(x + 2 * y) % 16 for x in range(8)] for y in range(8)]
+    tile_2 = [[(3 * x + y) % 16 for x in range(8)] for y in range(8)]
+    tiles = (
+        grid_to_tiles(tile_0, 1, 1)
+        + grid_to_tiles(tile_1, 1, 1)
+        + grid_to_tiles(tile_2, 1, 1)
+    )
+    rom, tiles_offset, tilemap_offset = _make_rom_with_tilemap(
+        tiles,
+        [0, 1 | 0x0400, 2 | 0x0800, 1 | 0x0C00],
+    )
+
+    grid, dec_len, _ = extract_mapped_block(
+        bytes(rom),
+        tiles_offset,
+        tilemap_offset,
+        tiles_wide=2,
+        tiles_tall=2,
+    )
+
+    assert dec_len == len(tiles)
+    assert grid[0][0] == tile_0[0][0]
+    assert grid[0][8] == tile_1[0][7]
+    assert grid[8][0] == tile_2[7][0]
+    assert grid[8][8] == tile_1[7][7]
+
+
+def test_insert_mapped_block_round_trip_preserves_tiles():
+    tile_0 = [[(x + y) % 16 for x in range(8)] for y in range(8)]
+    tile_1 = [[(2 * x + y) % 16 for x in range(8)] for y in range(8)]
+    tiles = grid_to_tiles(tile_0, 1, 1) + grid_to_tiles(tile_1, 1, 1)
+    rom, tiles_offset, tilemap_offset = _make_rom_with_tilemap(
+        tiles,
+        [0, 1 | 0x0400],
+    )
+    grid, _, _ = extract_mapped_block(
+        bytes(rom), tiles_offset, tilemap_offset, tiles_wide=2, tiles_tall=1
+    )
+
+    insert_mapped_block(
+        rom,
+        tiles_offset,
+        tilemap_offset,
+        grid,
+        tiles_wide=2,
+        tiles_tall=1,
+    )
+
+    result = lz77_decompress(bytes(rom), tiles_offset)
+    assert result is not None
+    assert result[0] == tiles
+
+
+def test_insert_mapped_block_rejects_conflicting_shared_tile_edits():
+    tiles = grid_to_tiles([[5] * 8 for _ in range(8)], 1, 1)
+    rom, tiles_offset, tilemap_offset = _make_rom_with_tilemap(tiles, [0, 0])
+    grid, _, _ = extract_mapped_block(
+        bytes(rom), tiles_offset, tilemap_offset, tiles_wide=2, tiles_tall=1
+    )
+    grid[0][8] = 7
+
+    with pytest.raises(ValueError, match="shared tile 0"):
+        insert_mapped_block(
+            rom,
+            tiles_offset,
+            tilemap_offset,
+            grid,
+            tiles_wide=2,
+            tiles_tall=1,
+        )

@@ -18,6 +18,10 @@ Usage::
     # Or export every palette-specific copy as status_badges-0.png, ...:
     python3 scripts/extract_sprite.py --rom ROM --lang fr \\
         --sprite status_badges --all-blocks -o status_badges.png
+
+    # Rebuild a mapped 256x160 Trainer Card screen:
+    python3 scripts/extract_sprite.py --rom input/roms/englishrom.gba \\
+        --lang fr --sprite trainer_card_front -o trainer_card_front.png
 """
 
 from __future__ import annotations
@@ -31,7 +35,7 @@ ROOT_DIR = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT_DIR))
 
 from src.graphics.sprite_image import variant_path, write_indexed_image  # noqa: E402
-from src.graphics.sprite_rom import extract_block  # noqa: E402
+from src.graphics.sprite_rom import extract_block, extract_mapped_block  # noqa: E402
 
 
 def main() -> int:
@@ -68,10 +72,20 @@ def main() -> int:
     height = sprite.tiles_tall * 8
     for index in indices:
         offset = sprite.blocks[index]
-        grid, dec_len, comp_len = extract_block(
-            rom, offset, sprite.tiles_wide, sprite.tiles_tall,
-            compressed=sprite.compressed,
-        )
+        if sprite.tilemaps:
+            grid, dec_len, comp_len = extract_mapped_block(
+                rom,
+                offset,
+                sprite.tilemaps[index],
+                sprite.tiles_wide,
+                sprite.tiles_tall,
+                compressed=sprite.compressed,
+            )
+        else:
+            grid, dec_len, comp_len = extract_block(
+                rom, offset, sprite.tiles_wide, sprite.tiles_tall,
+                compressed=sprite.compressed,
+            )
         out = variant_path(args.out, index) if args.all_blocks else args.out
         try:
             write_indexed_image(out, width, height, grid)
@@ -81,6 +95,11 @@ def main() -> int:
             f"{args.sprite}[{index}] @ 0x{offset:08X}: "
             f"{width}x{height} -> {out} "
             f"(decompressed {dec_len}B, compressed {comp_len}B)"
+            + (
+                f", tilemap 0x{sprite.tilemaps[index]:08X}"
+                if sprite.tilemaps
+                else ""
+            )
         )
     return 0
 

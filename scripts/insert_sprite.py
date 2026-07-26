@@ -16,6 +16,11 @@ Usage::
     python3 scripts/insert_sprite.py --rom output/roms/GenedRom-fr.gba \\
         --lang fr --sprite status_badges --block-index 0 \\
         --image languages/fr/sprites/status_badges.png
+
+    # Reinsert an edited mapped Trainer Card screen into a ROM copy:
+    python3 scripts/insert_sprite.py --rom output/roms/GenedRom-fr.gba \\
+        --lang fr --sprite trainer_card_front \\
+        --image languages/fr/sprites/trainer_card_front.png
 """
 
 from __future__ import annotations
@@ -29,7 +34,7 @@ ROOT_DIR = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT_DIR))
 
 from src.graphics.sprite_image import read_indexed_image, variant_path  # noqa: E402
-from src.graphics.sprite_rom import insert_block  # noqa: E402
+from src.graphics.sprite_rom import insert_block, insert_mapped_block  # noqa: E402
 
 
 def main() -> int:
@@ -94,8 +99,27 @@ def main() -> int:
                 f"{image}: expected {width}x{height}, got {image_w}x{image_h}"
             )
         try:
-            insert_block(rom, offset, grid, sprite.tiles_wide, sprite.tiles_tall,
-                         compressed=sprite.compressed, vram_safe=sprite.vram_safe)
+            if sprite.tilemaps:
+                insert_mapped_block(
+                    rom,
+                    offset,
+                    sprite.tilemaps[i],
+                    grid,
+                    sprite.tiles_wide,
+                    sprite.tiles_tall,
+                    compressed=sprite.compressed,
+                    vram_safe=sprite.vram_safe,
+                )
+            else:
+                insert_block(
+                    rom,
+                    offset,
+                    grid,
+                    sprite.tiles_wide,
+                    sprite.tiles_tall,
+                    compressed=sprite.compressed,
+                    vram_safe=sprite.vram_safe,
+                )
         except ValueError as exc:
             print(f"  WARN {args.sprite}[{i}] @ 0x{offset:08X}: {exc} — skip", file=sys.stderr)
             continue

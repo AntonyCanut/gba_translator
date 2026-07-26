@@ -18,6 +18,34 @@
   ce qui évite les fusions de cellules à longueur limite lors d’un build release.
 - La chaîne release complète et ses régressions ROM sont vertes.
 
+# Issue #148 — graphismes de la carte de Dresseur
+
+- [x] Lire l’issue, son commentaire et identifier les ressources graphiques vivantes.
+- [x] Formaliser une extraction tilemap → PNG réversible et sûre.
+- [x] Ajouter les tests rouges de composition, round-trip et conflit de tuile partagée.
+- [x] Étendre le registre et les CLI d’extraction/réinjection.
+- [x] Extraire les PNG éditables du recto et du verso.
+- [x] Prouver le round-trip sur une copie de ROM et exécuter les validations.
+- [ ] Relire, committer, intégrer localement et clôturer l’issue.
+
+## Revue
+
+- Le code de la carte charge deux paires planche/tilemap :
+  `0x01FDA2BC`/`0x01FDA820` au recto et
+  `0x01FDAA4C`/`0x01FDB2AC` au verso.
+- `extract_sprite.py` reconstruit maintenant les écrans mappés en PNG indexés
+  4 bpp de 256 × 160 ; `insert_sprite.py` annule les flips de tilemap et refuse
+  une édition incohérente de deux occurrences d’une même tuile.
+- Les assets `trainer_card_front.png` et `trainer_card_back.png` montrent
+  lisiblement « TRAINER CARD » et « LEAGUE BADGES » et ne sont volontairement
+  pas encore branchés dans `build-fr`, puisqu’ils restent à redessiner.
+- Le round-trip sur une copie de `englishrom.gba` restitue exactement les
+  4 416 et 6 688 octets des deux planches décompressées ; les deux tilemaps
+  restent inchangées.
+- Vérifications : 34 tests sprites ciblés, puis 1 557 tests Python rapides
+  réussis (1 scénario optionnel préexistant ignoré), compilation Python,
+  lint ciblé et `git diff --check`.
+
 # Issue #146 — accords masculins du Chenal Aubrun
 
 - [x] Lire l’issue, ses commentaires et recenser les occurrences actives.
