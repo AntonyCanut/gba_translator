@@ -331,10 +331,14 @@ class CSVToJSONConverter:
                 offset = int(offset_str, 16)
 
                 # Créer entry
+                # Extraction CSV lengths include the trailing terminator,
+                # whereas TextEntry.length is the content budget used by the
+                # reinserter (which adds the terminator itself).
+                original_length = max(int(row['original_length']) - 1, 0)
                 entry = TextEntry(
                     offset=offset,
                     text=row['original_text'],
-                    length=int(row['original_length']),
+                    length=original_length,
                     encoding=row['encoding'],
                     padding_available=int(row['padding_available']),
                     category=row.get('category', 'unknown'),

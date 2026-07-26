@@ -1,3 +1,23 @@
+# Issue #149 — « Max. PV » → « PV Max. »
+
+- [x] Lire l’issue, ses commentaires et identifier la chaîne active.
+- [x] Ajouter une garde rouge sur la valeur attendue.
+- [x] Corriger uniquement la dernière valeur active à l’offset `0x3FE7C7`.
+- [x] Reconstruire la ROM FR et décoder la chaîne réellement utilisée.
+- [x] Exécuter les validations, relire le diff, committer et clôturer l’issue.
+
+## Revue
+
+- L’entrée active `0x3FE7C7` porte désormais les codes CFRU explicites pour
+  afficher « PV » en police normale puis « Max. » en petite police.
+- Le pointeur vivant `0x3FE7F4` cible `0x3FE7C7`; les 11 octets lus sont
+  `CA D0 00 FC 06 00 C7 D5 EC AD FF`, terminateur compris.
+- Le contrôle initial de police normale, redondant, a été retiré : la chaîne
+  tient dans sa cellule et la cellule « Attaque » voisine reste intacte.
+- Le convertisseur CSV réserve désormais l’octet de terminaison dans son budget,
+  ce qui évite les fusions de cellules à longueur limite lors d’un build release.
+- La chaîne release complète et ses régressions ROM sont vertes.
+
 # Issue #146 — accords masculins du Chenal Aubrun
 
 - [x] Lire l’issue, ses commentaires et recenser les occurrences actives.

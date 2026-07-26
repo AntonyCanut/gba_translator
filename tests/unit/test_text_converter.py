@@ -219,6 +219,28 @@ class TestCSVToJSONConverter(unittest.TestCase):
         self.assertEqual(conv.entries[0].translation, "Bonjour")
         csv_path.unlink(missing_ok=True)
 
+    def test_original_length_reserves_the_csv_terminator(self):
+        rows = [
+            {
+                "offset": "0x00417BD3",
+                "original_text": "Prof. Log's PC",
+                "original_length": "15",
+                "padding_available": "0",
+                "real_max_length": "15",
+                "encoding": "pokemon",
+                "category": "location",
+                "translation": "PC du Prof. Log",
+                "notes": "",
+            },
+        ]
+        csv_path = self._make_csv(rows)
+        conv = CSVToJSONConverter()
+        conv.allow_too_long = True
+        conv.load_from_csv(csv_path)
+        self.assertEqual(conv.entries[0].length, 14)
+        self.assertTrue(conv.entries[0].too_long)
+        csv_path.unlink(missing_ok=True)
+
     def test_save_to_json(self):
         conv = CSVToJSONConverter()
         conv.entries = [

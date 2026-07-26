@@ -2,7 +2,7 @@ entries:
 - offset: '0x3FE7C7'
   name: 'Montée de niveau : PV Max.'
   issue: '#149'
-  expected: <0xFC><0x06><0x02>PV <0xFC><0x06><0x00>Max.
+  expected: PV <0xFC><0x06><0x00>Max.
   forbidden:
   - '{FONT_SMALL}Max{FONT_NORMAL} PV'
 - offset: '0x1F4E230'
