@@ -27,7 +27,10 @@ from __future__ import annotations
 
 import argparse
 import importlib
+import os
+import shutil
 import sys
+import tempfile
 from pathlib import Path
 
 ROOT_DIR = Path(__file__).resolve().parents[1]
@@ -35,6 +38,42 @@ sys.path.insert(0, str(ROOT_DIR))
 
 from src.graphics.sprite_image import read_indexed_image, variant_path  # noqa: E402
 from src.graphics.sprite_rom import insert_block, insert_mapped_block  # noqa: E402
+
+
+def _validate_writable_rom(rom_path: Path) -> None:
+    """Refuse to patch the immutable source-ROM directory."""
+    source_roms = (ROOT_DIR / "input" / "roms").resolve()
+    try:
+        rom_path.resolve().relative_to(source_roms)
+    except ValueError:
+        return
+    raise ValueError(
+        f"Refusing to overwrite source ROM {rom_path}; "
+        "copy it outside input/roms first"
+    )
+
+
+def _write_rom_safely(rom_path: Path, data: bytes) -> None:
+    """Back up the current ROM, then atomically replace it with *data*."""
+    _validate_writable_rom(rom_path)
+    shutil.copy2(rom_path, Path(f"{rom_path}.bak"))
+    temporary = None
+    try:
+        with tempfile.NamedTemporaryFile(
+            dir=rom_path.parent,
+            prefix=f".{rom_path.name}.",
+            suffix=".tmp",
+            delete=False,
+        ) as output:
+            temporary = Path(output.name)
+            output.write(data)
+            output.flush()
+            os.fsync(output.fileno())
+        os.replace(temporary, rom_path)
+        temporary = None
+    finally:
+        if temporary is not None:
+            temporary.unlink(missing_ok=True)
 
 
 def main() -> int:
@@ -60,6 +99,10 @@ def main() -> int:
         help="patch every block from <image-stem>-<index>.<ext>",
     )
     args = parser.parse_args()
+    try:
+        _validate_writable_rom(args.rom)
+    except ValueError as exc:
+        raise SystemExit(str(exc)) from exc
 
     registry = importlib.import_module(f"languages.{args.lang}.sprites").SPRITES
     if args.sprite not in registry:
@@ -127,7 +170,7 @@ def main() -> int:
         patched += 1
 
     if patched:
-        args.rom.write_bytes(rom)
+        _write_rom_safely(args.rom, bytes(rom))
     print(f"insert_sprite: {patched}/{len(indices)} block(s) patched")
     return 0 if patched else 1
 
