@@ -32,7 +32,8 @@ import pytest
 pytestmark = pytest.mark.rom
 
 from src.core.text_codec import TextDecoder
-from tests.e2e.conftest import FR_ROM_PATH
+from languages.fr.patches import tm_item_descriptions as patch
+from tests.e2e.conftest import ES_ROM_PATH, FR_ROM_PATH
 
 ROM_BASE = 0x08000000
 
@@ -126,3 +127,17 @@ def test_ct108_description_is_complete(fr_rom):
         "l'Att. Spé\n"
         "ennemie."
     )
+
+
+def test_machine_description_patch_is_idempotent_on_built_rom(fr_rom):
+    """La ROM livrée ne doit réserver aucun nouvel espace à la seconde passe."""
+    rebuilt = bytearray(fr_rom)
+    stats = patch.apply(
+        rebuilt,
+        patch.load_combined(patch.DEFAULT_COMBINED),
+        reserved_rom=ES_ROM_PATH.read_bytes(),
+    )
+
+    assert stats["relocated"] == 0
+    assert stats["skipped_protected"] == 1
+    assert rebuilt == fr_rom

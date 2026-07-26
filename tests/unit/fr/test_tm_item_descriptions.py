@@ -12,6 +12,8 @@ FREE_RUN_START = 0x600000
 FREE_RUN_SIZE = 0x4000
 CT108_INDEX = 0x1B1
 CT108_DESCRIPTION_OFFSET = 0xA38FF2
+CT112_INDEX = 0x1B5
+CT112_DESCRIPTION_OFFSET = 0xA3A77D
 CT108_DESCRIPTION = (
     "Aboie menaçant.\n"
     "Baisse aussi\n"
@@ -59,3 +61,29 @@ def test_short_terminated_fragment_is_relocated_to_canonical_text() -> None:
     assert live_offset != CT108_DESCRIPTION_OFFSET
     assert FREE_RUN_START <= live_offset < FREE_RUN_START + FREE_RUN_SIZE
     assert live_text == CT108_DESCRIPTION
+
+
+def test_protected_gift_item_is_left_for_its_struct_guard() -> None:
+    # CT112 est un objet cadeau dont le pointeur doit rester identique à
+    # l'anglais. Sa description partagée n'est jamais rendue par ce chemin.
+    rom = bytearray(b"\x00" * ROM_SIZE)
+    rom[FREE_RUN_START:FREE_RUN_START + FREE_RUN_SIZE] = b"\xff" * FREE_RUN_SIZE
+    fragment = TextEncoder.encode_pokemon("Texte voisin débordé")
+    rom[CT112_DESCRIPTION_OFFSET:CT112_DESCRIPTION_OFFSET + len(fragment)] = fragment
+    _put_item(rom, CT112_INDEX, "CT112", CT112_DESCRIPTION_OFFSET)
+
+    stats = mod.apply(
+        rom,
+        {CT112_DESCRIPTION_OFFSET: "Canonique mais non utilisé"},
+    )
+
+    base = mod.ITEM_TABLE_BASE + CT112_INDEX * mod.ITEM_STRIDE
+    live_pointer = struct.unpack_from("<I", rom, base + mod.DESC_PTR_OFFSET)[0]
+    assert stats["machines"] == 1
+    assert stats["relocated"] == 0
+    assert stats["skipped_protected"] == 1
+    assert stats["failed"] == 0
+    assert live_pointer == CT112_DESCRIPTION_OFFSET + mod.ROM_POINTER_BASE
+    assert rom[FREE_RUN_START:FREE_RUN_START + FREE_RUN_SIZE] == (
+        b"\xff" * FREE_RUN_SIZE
+    )

@@ -62,9 +62,12 @@
 - Les descriptions CT/CS de la zone fusionnée ne restent désormais en place
   que si leurs octets égalent exactement la source FR canonique ; tout fragment
   ou débordement est relocalisé sans traitement spécial pour CT108.
+- La revue indépendante a aussi protégé l’objet cadeau CT112 : son pointeur
+  spécial reste sous le garde de structure existant, et une seconde application
+  du patch ne relocalise rien et laisse la ROM strictement byte-identique.
 - La ROM reconstruite pointe CT108 vers `0x1FF385A` et décode exactement
   « Aboie menaçant.\nBaisse aussi\nl’Att. Spé\nennemie. », suivi de `0xFF`.
-- Vérifications : 4 gardes ciblées réussies ; hook de commit avec 1 550 tests
+- Vérifications : 6 gardes ciblées réussies ; hook de commit avec 1 551 tests
   Python réussis (1 ignoré), 68 tests Vitest et builds FR/IT/DE réussis ;
   suite ROM avec 531 réussites et 36 scénarios ignorés. L’unique échec initial,
   la sonde mGBA du premier combat italien, a réussi seule au second passage et

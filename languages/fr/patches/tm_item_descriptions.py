@@ -23,8 +23,10 @@ it. A description is healthy only when its complete encoded bytes match that
 source: a short terminated fragment can otherwise look valid after a neighbour
 overwrites its beginning (CT108 in FR 2.1.85). The encoder always appends the
 ``0xFF`` terminator, so a relocated description can never run into its
-neighbour again. The pass is idempotent: once an item points outside the fused
-region it is left alone.
+neighbour again. The protected gift item CT112 is excluded because its
+description pointer deliberately remains byte-identical to English under its
+dedicated struct guard. The pass is idempotent: once an item points outside the
+fused region it is left alone.
 """
 
 from __future__ import annotations
@@ -39,6 +41,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parents[3]))
 
 from src.core.text_codec import TextDecoder, TextEncoder
 from src.core.text_reinserter import FreeSpaceAllocator
+from languages.fr.patches.givecs_gift_item import GIVE_CS_ITEM_ID
 
 ROM_POINTER_BASE = 0x08000000
 
@@ -102,11 +105,13 @@ def apply(rom: bytearray, combined: dict, reserved_rom: bytes | None = None) -> 
     """Relocate every CT/CS description out of the fused region (rom mutated)."""
     allocator = FreeSpaceAllocator(rom, reserved_rom=reserved_rom)
     stats = {"machines": 0, "relocated": 0, "skipped_outside": 0,
-             "in_place_ok": 0, "missing_text": 0, "failed": 0}
+             "skipped_protected": 0, "in_place_ok": 0,
+             "missing_text": 0, "failed": 0}
 
     i = 0
     while True:
-        base = ITEM_TABLE_BASE + i * ITEM_STRIDE
+        item_id = i
+        base = ITEM_TABLE_BASE + item_id * ITEM_STRIDE
         if base + ITEM_STRIDE > len(rom):
             break
         i += 1
@@ -115,6 +120,14 @@ def apply(rom: bytearray, combined: dict, reserved_rom: bytes | None = None) -> 
         if not name.startswith(MACHINE_PREFIXES):
             continue
         stats["machines"] += 1
+
+        # This gift-only CT-shaped object has its complete struct restored by
+        # givecs_gift_item.py. Its description pointer intentionally stays
+        # English; relocating its shared move text would only allocate an
+        # orphan that the following struct guard immediately disconnects.
+        if item_id == GIVE_CS_ITEM_ID:
+            stats["skipped_protected"] += 1
+            continue
 
         ptr = _deref(rom, base + DESC_PTR_OFFSET)
         if ptr is None or not (FUSED_REGION[0] <= ptr < FUSED_REGION[1]):
@@ -170,6 +183,8 @@ def main() -> int:
     print(f"   - Relocated:          {stats['relocated']}")
     print(f"   - Healthy (in place): {stats['in_place_ok']}")
     print(f"   - Outside fused zone: {stats['skipped_outside']}")
+    if stats["skipped_protected"]:
+        print(f"   - Protected gift:    {stats['skipped_protected']}")
     if stats["missing_text"]:
         print(f"   - Missing text:       {stats['missing_text']}")
     if stats["failed"]:
