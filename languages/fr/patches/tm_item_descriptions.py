@@ -16,12 +16,15 @@ Suc Digestif, …). When the bag renders such a description, ``GetStringWidth``
 scans for a ``0xFF`` that never comes → **infinite loop → frozen screen**
 (reported as the "Volcan Cendre" freeze when picking up CT94 to the left).
 
-This post-build step gives every CT/CS item its own self-contained, terminated
-copy of the authoritative French description (from ``combined_fr.txt``), placed
-in ROM free space, and repoints the item entry at it. The encoder always appends
-the ``0xFF`` terminator, so a relocated description can never run into its
-neighbour again. It runs after the move-description patches and is idempotent:
-once an item points outside the fused region it is left alone.
+This post-build step gives every broken CT/CS item its own self-contained,
+terminated copy of the authoritative French description (from
+``combined_fr.txt``), placed in ROM free space, and repoints the item entry at
+it. A description is healthy only when its complete encoded bytes match that
+source: a short terminated fragment can otherwise look valid after a neighbour
+overwrites its beginning (CT108 in FR 2.1.85). The encoder always appends the
+``0xFF`` terminator, so a relocated description can never run into its
+neighbour again. The pass is idempotent: once an item points outside the fused
+region it is left alone.
 """
 
 from __future__ import annotations
@@ -50,15 +53,6 @@ DESC_PTR_OFFSET = 0x14
 # the pass idempotent (a relocated description points into free space, well
 # outside this range, and is skipped on the next run).
 FUSED_REGION = (0xA30000, 0xA50000)
-
-# A description that reaches its 0xFF within this many bytes is self-contained
-# and renders fine — leave it in place. The longest authoritative French TM/HM
-# description encodes to 107 bytes, and the fused/over-long runs that freeze the
-# bag all reach 133+ bytes (or never terminate), so this budget cleanly tells
-# the two apart. Relocating only the broken descriptions keeps every healthy
-# entry byte-identical to English (notably the give-CS gift item 0x1B5, whose
-# obtain box renders the static name, not this description).
-OVERFLOW_BUDGET = 120
 
 # Technical/Hidden machine items render their move description in the bag and
 # are the only consumers of the fused region; guard by name so no ordinary item
@@ -127,19 +121,20 @@ def apply(rom: bytearray, combined: dict, reserved_rom: bytes | None = None) -> 
             stats["skipped_outside"] += 1
             continue
 
-        # Only the over-long / unterminated (fused) descriptions freeze the bag.
-        # A short, properly terminated description renders fine and is left
-        # byte-identical to English — never relocate a healthy entry.
-        if rom.find(b"\xff", ptr, ptr + OVERFLOW_BUDGET + 1) >= 0:
-            stats["in_place_ok"] += 1
-            continue
-
         text = combined.get(ptr)
         if not text:
             stats["missing_text"] += 1
             continue
 
         encoded = TextEncoder.encode_pokemon(_normalize(text))
+        # A terminateur proche ne prouve pas que le début de la chaîne est
+        # intact : CT108 conservait un fragment court d'une voisine. Seule
+        # l'égalité complète avec la source canonique permet de garder le
+        # pointeur en place.
+        if rom[ptr:ptr + len(encoded)] == encoded:
+            stats["in_place_ok"] += 1
+            continue
+
         new_offset = allocator.allocate(len(encoded))
         if new_offset is None:
             stats["failed"] += 1

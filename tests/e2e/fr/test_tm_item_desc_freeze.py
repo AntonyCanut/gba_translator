@@ -109,3 +109,20 @@ def test_every_tm_description_is_terminated(fr_rom):
         f"{len(offenders)} TM/HM description(s) are unterminated/fused -> bag "
         f"word-wrap freeze: {offenders[:8]}"
     )
+
+
+def test_ct108_description_is_complete(fr_rom):
+    """CT108 ne doit jamais pointer au milieu de la description de Balayette."""
+    descriptions = {
+        name: TextDecoder.decode_pokemon(
+            fr_rom[ptr:fr_rom.index(b"\xff", ptr)]
+        )
+        for _, _, name, ptr in _machine_items(fr_rom)
+    }
+
+    assert descriptions["CT108"] == (
+        "Aboie menaçant.\n"
+        "Baisse aussi\n"
+        "l'Att. Spé\n"
+        "ennemie."
+    )

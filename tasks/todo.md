@@ -46,6 +46,19 @@
   réussis (1 scénario optionnel préexistant ignoré), compilation Python,
   lint ciblé et `git diff --check`.
 
+# Issue #150 — description CT108
+
+- [x] Lire l’issue, sa capture et décoder le pointeur vivant de la CT108.
+- [x] Identifier la cause racine dans le garde des descriptions CT/CS.
+- [x] Ajouter un test rouge pour un fragment court mais terminé.
+- [x] Corriger génériquement la comparaison au texte FR canonique.
+- [ ] Reconstruire la ROM et décoder la description vivante de CT108.
+- [ ] Exécuter les validations, relire, committer et clôturer l’issue.
+
+## Revue
+
+- À compléter après la vérification finale.
+
 # Issue #146 — accords masculins du Chenal Aubrun
 
 - [x] Lire l’issue, ses commentaires et recenser les occurrences actives.
