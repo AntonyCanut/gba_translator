@@ -57,5 +57,5 @@ def test_short_terminated_fragment_is_relocated_to_canonical_text() -> None:
     live_offset, live_text = _decode_live_description(rom, CT108_INDEX)
     assert stats["relocated"] == 1
     assert live_offset != CT108_DESCRIPTION_OFFSET
+    assert FREE_RUN_START <= live_offset < FREE_RUN_START + FREE_RUN_SIZE
     assert live_text == CT108_DESCRIPTION
-

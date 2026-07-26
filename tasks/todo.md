@@ -52,12 +52,23 @@
 - [x] Identifier la cause racine dans le garde des descriptions CT/CS.
 - [x] Ajouter un test rouge pour un fragment court mais terminé.
 - [x] Corriger génériquement la comparaison au texte FR canonique.
-- [ ] Reconstruire la ROM et décoder la description vivante de CT108.
-- [ ] Exécuter les validations, relire, committer et clôturer l’issue.
+- [x] Reconstruire la ROM et décoder la description vivante de CT108.
+- [x] Exécuter les validations, relire, committer et clôturer l’issue.
 
 ## Revue
 
-- À compléter après la vérification finale.
+- Le garde prenait tout terminateur proche pour preuve d’une chaîne saine :
+  CT108 conservait donc un fragment court terminé provenant de sa voisine.
+- Les descriptions CT/CS de la zone fusionnée ne restent désormais en place
+  que si leurs octets égalent exactement la source FR canonique ; tout fragment
+  ou débordement est relocalisé sans traitement spécial pour CT108.
+- La ROM reconstruite pointe CT108 vers `0x1FF385A` et décode exactement
+  « Aboie menaçant.\nBaisse aussi\nl’Att. Spé\nennemie. », suivi de `0xFF`.
+- Vérifications : 4 gardes ciblées réussies ; hook de commit avec 1 550 tests
+  Python réussis (1 ignoré), 68 tests Vitest et builds FR/IT/DE réussis ;
+  suite ROM avec 531 réussites et 36 scénarios ignorés. L’unique échec initial,
+  la sonde mGBA du premier combat italien, a réussi seule au second passage et
+  ne touche ni le patch ni la ROM FR.
 
 # Issue #146 — accords masculins du Chenal Aubrun
 
