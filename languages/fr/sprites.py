@@ -30,6 +30,10 @@ class SpriteDef:
     # extraction reconstructs the mapped screen and insertion reverses that
     # composition instead of exposing a scrambled linear tilesheet.
     tilemaps: tuple[int, ...] = ()
+    # Optional ROM offset of the sheet's 16-colour BGR555 palette. Only the
+    # palette *indices* are re-injected, but embedding the real colours makes
+    # the extracted image legible in an editor instead of a debug-coloured mess.
+    palette: int | None = None
 
     def __post_init__(self) -> None:
         """Valide l'appariement des planches et tilemaps."""
@@ -103,5 +107,31 @@ SPRITES: dict[str, SpriteDef] = {
         tilemaps=(0x01FDB2AC,),
         tiles_wide=32,
         tiles_tall=20,
+    ),
+    # Word-image tileset of the Pokémon summary screen (GitHub issue #145):
+    # 512 tiles, 16 wide, holding every baked label of the « Infos » and
+    # « Capacités » pages — No / NAME / TYPE / OT / IDNo / ITEM on the left,
+    # ATTACK / DEFENSE / SP.ATK / SP.DEF / SPEED / EXP. in the stat column,
+    # plus the grey HP oval (already « PV », see languages/fr/patches/
+    # hp_labels.py). None of it is text, so no translation pass reaches it.
+    #
+    # The four French stat labels are redrawn programmatically by
+    # languages/fr/patches/summary_stat_labels.py, which runs in build-fr. This
+    # entry exists so the sheet can be exported for hand-retouching:
+    #
+    #   python3 scripts/extract_sprite.py --rom output/roms/GenedRom-fr.gba \
+    #       --lang fr --sprite summary_stat_labels \
+    #       -o languages/fr/sprites/summary_stat_labels.png
+    #
+    # Edit the PNG keeping its 16-colour indexed palette (1 = letters,
+    # 7 = capsule, 0xA = panel background), then re-inject with
+    # scripts/insert_sprite.py. Note that insert_sprite rewrites the WHOLE
+    # sheet, so it overrides the two label patches — wire it into build-fr
+    # (after hp_labels) only once the hand-drawn art is the source of truth.
+    "summary_stat_labels": SpriteDef(
+        blocks=(0x00E9A460,),
+        tiles_wide=16,
+        tiles_tall=32,
+        palette=0x00E9B310,
     ),
 }

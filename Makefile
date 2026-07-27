@@ -54,6 +54,7 @@ PATCH_CUBE_TV_DIALOGUES_FR_SCRIPT := languages/fr/patches/cube_tv_dialogues.py
 PATCH_CUBE_SORT_MENU_SCRIPT := languages/fr/patches/cube_sort_menu.py
 PATCH_SUMMARY_LABELS_SCRIPT := languages/fr/patches/summary_labels.py
 PATCH_SUMMARY_LV_LABELS_SCRIPT := languages/fr/patches/summary_lv_labels.py
+PATCH_SUMMARY_STAT_LABELS_SCRIPT := languages/fr/patches/summary_stat_labels.py
 PATCH_CFRU_TYPE_NAMES_SCRIPT := languages/fr/patches/cfru_type_names.py
 PATCH_OPTIONS_FOOTER_SCRIPT := languages/fr/patches/options_footer.py
 PATCH_STATUS_ABBREVS_SCRIPT := languages/fr/patches/status_abbrevs.py
@@ -286,6 +287,7 @@ build-fr: check-translations-fr ensure-fr-translation $(FRENCH_EXTRACT) $(SPANIS
 	@$(PYTHON) $(PATCH_BATTLE_RECALL_STRINGS_SCRIPT) --rom $(FR_BUILD)
 	@$(PYTHON) $(PATCH_STATUS_BADGES_SCRIPT) --rom $(FR_BUILD)
 	@$(PYTHON) $(PATCH_HP_LABELS_SCRIPT) --rom $(FR_BUILD)
+	@$(PYTHON) $(PATCH_SUMMARY_STAT_LABELS_SCRIPT) --rom $(FR_BUILD)
 	@$(PYTHON) $(PATCH_PARTY_LV_LABEL_SCRIPT) --rom $(FR_BUILD)
 	@$(PYTHON) $(PATCH_POKEDEX_STAT_LABELS_FR_SCRIPT) --rom $(FR_BUILD)
 	@$(PYTHON) $(PATCH_TYPE_ICONS_SCRIPT) --rom $(FR_BUILD)

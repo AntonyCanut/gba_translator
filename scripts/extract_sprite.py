@@ -34,8 +34,16 @@ from pathlib import Path
 ROOT_DIR = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT_DIR))
 
-from src.graphics.sprite_image import variant_path, write_indexed_image  # noqa: E402
-from src.graphics.sprite_rom import extract_block, extract_mapped_block  # noqa: E402
+from src.graphics.sprite_image import (  # noqa: E402
+    DEFAULT_PALETTE,
+    variant_path,
+    write_indexed_image,
+)
+from src.graphics.sprite_rom import (  # noqa: E402
+    extract_block,
+    extract_mapped_block,
+    read_gba_palette,
+)
 
 
 def main() -> int:
@@ -70,6 +78,11 @@ def main() -> int:
     rom = args.rom.read_bytes()
     width = sprite.tiles_wide * 8
     height = sprite.tiles_tall * 8
+    palette = (
+        read_gba_palette(rom, sprite.palette)
+        if sprite.palette is not None
+        else DEFAULT_PALETTE
+    )
     for index in indices:
         offset = sprite.blocks[index]
         if sprite.tilemaps:
@@ -88,7 +101,7 @@ def main() -> int:
             )
         out = variant_path(args.out, index) if args.all_blocks else args.out
         try:
-            write_indexed_image(out, width, height, grid)
+            write_indexed_image(out, width, height, grid, palette)
         except ValueError as exc:
             raise SystemExit(str(exc)) from exc
         print(

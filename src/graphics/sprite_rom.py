@@ -32,6 +32,29 @@ TILEMAP_HFLIP = 0x0400
 TILEMAP_VFLIP = 0x0800
 
 Grid = list[list[int]]
+Palette = list[tuple[int, int, int]]
+
+PALETTE_COLOURS = 16
+
+
+def read_gba_palette(rom: bytes, offset: int) -> Palette:
+    """Lit une palette GBA de 16 couleurs BGR555 et la rend en RGB 8 bits.
+
+    Sert d'aperçu fidèle dans les images indexées extraites : sans elle, un
+    éditeur ouvre la planche avec la palette de debug et les images-mots sont
+    illisibles. Seuls les *indices* comptent pour la réinjection.
+    """
+    if offset + 2 * PALETTE_COLOURS > len(rom):
+        raise ValueError(f"palette 0x{offset:08X} hors de la ROM")
+    palette: Palette = []
+    for index in range(PALETTE_COLOURS):
+        raw = rom[offset + 2 * index] | (rom[offset + 2 * index + 1] << 8)
+        palette.append((
+            (raw & 0x1F) * 255 // 31,
+            ((raw >> 5) & 0x1F) * 255 // 31,
+            ((raw >> 10) & 0x1F) * 255 // 31,
+        ))
+    return palette
 
 
 def tiles_to_grid(tiles: bytes, tiles_wide: int, tiles_tall: int) -> Grid:
