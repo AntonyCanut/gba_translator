@@ -24,6 +24,7 @@ export default defineConfig({
   ],
 
   use: {
+    headless: true,
     screenshot: 'only-on-failure',
   },
 });

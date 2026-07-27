@@ -401,7 +401,9 @@ class TestE2eHarnessStaysWired(unittest.TestCase):
 
     def test_config_targets_the_spec(self) -> None:
         self.assertTrue(self.CONFIG.exists(), "config Playwright absente")
-        self.assertIn("specs/hp-bar.spec.ts", self.CONFIG.read_text(encoding="utf-8"))
+        config = self.CONFIG.read_text(encoding="utf-8")
+        self.assertIn("specs/hp-bar.spec.ts", config)
+        self.assertIn("headless: true", config, "le scénario doit rester headless")
         self.assertTrue(self.SPEC.exists(), "scénario e2e absent")
 
     def test_spec_still_runs_the_negative_control(self) -> None:

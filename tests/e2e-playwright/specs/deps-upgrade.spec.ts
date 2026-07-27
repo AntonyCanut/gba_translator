@@ -11,7 +11,21 @@
  */
 
 import { test, expect } from '@playwright/test';
+import fs from 'fs';
+import path from 'path';
+import { pathToFileURL } from 'url';
 import { WebSocket } from 'ws';
+
+const PROJECT_ROOT = path.resolve(import.meta.dirname, '../../..');
+const PLAYWRIGHT_CONFIG_DIRS = [
+  PROJECT_ROOT,
+  path.join(PROJECT_ROOT, 'tests', 'e2e-playwright'),
+];
+const PLAYWRIGHT_CONFIGS = PLAYWRIGHT_CONFIG_DIRS.flatMap((directory) => (
+  fs.readdirSync(directory)
+    .filter((fileName) => /^playwright.*\.config\.ts$/.test(fileName))
+    .map((fileName) => path.join(directory, fileName))
+)).sort();
 
 // ── TypeScript 6.0: verify that `Buffer` and `process` globals are still
 //    reachable (Node.js @types included) and that strict mode is enforced. ──────
@@ -107,4 +121,23 @@ test.describe('deps-upgrade non-regression', () => {
     // The import of `ws` at the top of this file exercises that path.
     expect(true).toBe(true);
   });
+});
+
+test.describe('configuration Playwright headless', () => {
+  for (const configPath of PLAYWRIGHT_CONFIGS) {
+    const relativePath = path.relative(PROJECT_ROOT, configPath);
+
+    test(`${relativePath} impose le mode headless`, async () => {
+      // Arrange
+      const configModule = await import(pathToFileURL(configPath).href) as {
+        default: { use?: { headless?: boolean } };
+      };
+
+      // Act
+      const headless = configModule.default.use?.headless;
+
+      // Assert
+      expect(headless).toBe(true);
+    });
+  }
 });
