@@ -408,7 +408,7 @@ class RegressionTextTests(unittest.TestCase):
             + b'\xFC\x01\x02' + TextEncoder.encode_pokemon(' ou ')[:-1]
             + b'\xFC\x01\x04' + TextEncoder.encode_pokemon('ignorer')[:-1]
             + b'\xFC\x01\x02'
-            + TextEncoder.encode_pokemon(' les options sélectionnées ?')
+            + TextEncoder.encode_pokemon(' les options\nsélectionnées ?')
         )
         self.assertEqual(raw, expected)
 

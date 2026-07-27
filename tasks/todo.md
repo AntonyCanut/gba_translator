@@ -464,9 +464,19 @@
 - [x] Ajouter une régression rouge sur le pointeur vivant `0x1EBD064`.
 - [x] Colorer uniquement « Sauver » en vert et « ignorer » en rouge.
 - [x] Protéger la nouvelle valeur contre les réécritures.
-- [ ] Reconstruire la ROM FR et vérifier les octets pointés.
-- [ ] Exécuter les validations post-build et intégrer le commit.
+- [x] Reconstruire la ROM FR et vérifier les octets pointés.
+- [x] Exécuter les validations post-build et intégrer le commit.
 
 ## Revue
 
-- À compléter après la reconstruction et les validations finales.
+- La phrase d’aide est une chaîne distincte de la liste des trois choix :
+  l’entrée `0x1F4E4E2` est désormais verte sur « Sauver », rouge sur
+  « ignorer » et restaure le noir autour de chaque mot.
+- Le build relocalise la chaîne à `0x185D26` et repointe le consommateur vivant
+  `0x1EBD064`. Le test compare les octets CFRU exacts, y compris le saut de
+  ligne avant « sélectionnées » déjà visible sur la capture.
+- Le cycle TDD a reproduit l’absence de couleurs avant le changement, puis les
+  28 tests ciblés ont réussi. Le hook a validé 1 608 tests Python
+  (1 ignoré), 68 tests Vitest et les builds FR/IT/DE.
+- `make test-rom` a confirmé deux rebuilds FR byte-identiques, 12 gardes de
+  reconstruction et 554 tests ROM réussis (35 scénarios optionnels ignorés).
