@@ -114,6 +114,28 @@
 - Vérifications avant rebase : 5 tests ciblés, 1 524 tests Python réussis
   (1 ignoré), 68 tests Vitest et builds FR/IT/DE réussis.
 
+## Reprise — ombre corrigée du bouton START
+
+- [x] Récupérer le dernier BMP joint à l’issue et comparer sa grille à l’asset versionné.
+- [x] Mettre à jour les gardes de référence et observer leur échec sur l’ancien BMP.
+- [x] Remplacer le BMP à l’identique et régénérer le PNG indexé 4 bits.
+- [x] Valider les pixels de l’asset et la parité PNG/BMP.
+- [x] Reconstruire la ROM FR et réextraire le bloc LZ77 vivant.
+- [x] Exécuter les validations finales et documenter le résultat.
+
+### Revue
+
+- Le BMP versionné est octet pour octet le dernier fichier joint à l’issue
+  (`SHA-256 3055f7b76ba0c890…`) ; sa grille diffère de la référence précédente
+  sur 80 pixels, dont l’ombre complète du bouton START.
+- Le PNG éditable est un fichier indexé 4 bits dont les 104×32 indices
+  correspondent exactement au BMP.
+- Le bloc LZ77 réextrait de la ROM FR reconstruite à `0x00EF1B68` correspond
+  pixel par pixel à la nouvelle grille.
+- Vérifications : cycles RED observés sur les gardes de référence, 8 tests
+  Cube réussis, 1 527 tests Python réussis (1 ignoré), 68 tests Vitest et
+  builds FR/IT/DE réussis.
+
 # Sonde mGBA — premier combat italien
 
 - [x] Reproduire l’échec sur la carte 4.10 et figer la cause racine.

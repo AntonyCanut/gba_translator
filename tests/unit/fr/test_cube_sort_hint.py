@@ -15,7 +15,8 @@ from src.graphics.sprite_rom import extract_block
 ROOT = Path(__file__).resolve().parents[3]
 ASSET = ROOT / "languages/fr/sprites/cube_sort_hint.bmp"
 EDITABLE_ASSET = ROOT / "languages/fr/sprites/cube_sort_hint.png"
-REFERENCE_GRID_SHA256 = "4fcabbbdf18d035b7c1fb5f428298a71fd247c7fad899947e62f9ee76b72b0a5"
+REFERENCE_BMP_SHA256 = "3055f7b76ba0c890d05b5cde932d7f656b9cc29a69e83ba4196e0ed612448b65"
+REFERENCE_GRID_SHA256 = "4d2bb1ae2793e44b3ded19f82ffdb79fb6c2b3d549bbd6dde685111109149d0f"
 
 # Grilles indexées fournies par l'auteur de l'issue pour obtenir un bandeau
 # « (START) Tri » net une fois les tuiles remises en place par le jeu.
@@ -30,14 +31,14 @@ TRI_ROWS = (
     "111AA111AA1111AA1111",
 )
 START_KEYCAP_ROWS = (
-    "211333333333333333333331",
-    "2133AA3AAA3AAA3AAA3AAA33",
-    "2133A333A33A3A3A3A33A333",
-    "2133AA33A33AAA3AA333A333",
-    "21333A33A33A3A3A3A33A333",
-    "2133AA33A33A3A3A3A33A333",
-    "21A33333333333333333333A",
-    "211AAAAAAAAAAAAAAAAAAAA1",
+    "2133333333333333333333A1",
+    "233AA3AAA3AAA3AAA3AAA33A",
+    "233A333A33A3A3A3A33A333A",
+    "233AA33A33AAA3AA333A333A",
+    "2333A33A33A3A3A3A33A333A",
+    "233AA33A33A3A3A3A33A333A",
+    "2A33333333333333333333AA",
+    "21AAAAAAAAAAAAAAAAAAAAA1",
 )
 
 
@@ -106,6 +107,10 @@ def test_cube_sort_hint_registry_targets_live_lz77_block() -> None:
     assert sprite.blocks == (0x00EF1B68,)
     assert (sprite.tiles_wide, sprite.tiles_tall) == (13, 4)
     assert sprite.compressed
+
+
+def test_cube_sort_hint_bmp_matches_latest_issue_attachment() -> None:
+    assert hashlib.sha256(ASSET.read_bytes()).hexdigest() == REFERENCE_BMP_SHA256
 
 
 def test_cube_sort_hint_matches_issue_reference_grid() -> None:
