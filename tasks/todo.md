@@ -15,11 +15,24 @@
 
 - [x] Lire le commentaire de réouverture et reproduire l’ancien libellé.
 - [x] Tracer le pointeur réellement consommé par l’écran de montée de niveau.
-- [ ] Ajouter une régression rouge sur `0x459B48` et protéger `0x41B2A9`.
-- [ ] Corriger chirurgicalement la dernière entrée active de `0x41B2A9`.
-- [ ] Reconstruire la ROM FR avec la chaîne release canonique.
-- [ ] Vérifier les octets, le rendu mGBA et les tests ciblés puis complets.
-- [ ] Relire le diff, committer, rebaser et publier le résultat sur l’issue.
+- [x] Ajouter une régression rouge sur `0x459B48` et protéger `0x41B2A9`.
+- [x] Corriger chirurgicalement la dernière entrée active de `0x41B2A9`.
+- [x] Reconstruire la ROM FR avec la chaîne release canonique.
+- [x] Vérifier les octets, le rendu mGBA et les tests ciblés puis complets.
+- [x] Relire le diff et préparer l’intégration locale du correctif.
+
+## Revue de la réouverture
+
+- La première résolution avait corrigé une table secondaire
+  (`0x3FE7F4 → 0x3FE7C7`), pas celle lue par la fenêtre de montée de niveau.
+- Les deux sites du code de montée de niveau (`0x11E930` et `0x11EA40`)
+  chargent la table `0x459B48`, dont le premier pointeur cible `0x41B2A9`.
+- La chaîne release actuelle (`make prepare-fr && make build-fr`) produit
+  `CA D0 00 FC 06 00 C7 D5 EC AD FF`, soit « PV Max. » avec « Max. » en
+  petite police, au pointeur vivant.
+- Une sonde mGBA déterministe avec la sauvegarde Rattata a atteint le niveau 16
+  et affiché visuellement « PV Max. » dans le panneau des statistiques.
+- Le garde source, les tests ROM ciblés et la chaîne de build FR sont verts.
 
 # Issue #149 — « Max. PV » → « PV Max. »
 
