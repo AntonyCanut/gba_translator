@@ -1,6 +1,12 @@
 entries:
+- offset: '0x41B2A9'
+  name: 'Montée de niveau : pointeur vivant PV Max.'
+  issue: '#149-follow-up'
+  expected: PV <0xFC><0x06><0x00>Max.
+  forbidden:
+  - '{FONT_SMALL}MAX.{FONT_NORMAL} PV'
 - offset: '0x3FE7C7'
-  name: 'Montée de niveau : PV Max.'
+  name: 'Table secondaire : PV Max.'
   issue: '#149'
   expected: PV <0xFC><0x06><0x00>Max.
   forbidden:

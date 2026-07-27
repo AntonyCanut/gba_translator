@@ -424,6 +424,7 @@ test-fr-build-regressions:
 		tests/e2e/fr/test_item_descriptions.py::TestItemDescriptions::test_repousse_dit_pas_pas_etapes \
 		tests/e2e/fr/test_pc_selection_menu.py::TestPcSelectionMenuFrench::test_which_pc_question_is_french \
 		tests/e2e/fr/test_pc_selection_menu.py::TestPcSelectionMenuFrench::test_prof_log_pc_entry_has_du \
+		tests/test_levelup_stat_labels_fr.py::test_levelup_live_max_hp_pointer_renders_pv_max \
 		tests/test_patch_pc_move_labels_fr.py::TestBuiltRom::test_mail_move_to_bag \
 		tests/unit/fr/test_world_map_action_labels.py::test_world_map_cancel_pointers_render_short_label \
 		tests/unit/fr/test_floor_indicators_patch_fr.py::test_built_fr_rom_banner_routine_is_not_the_english_one \

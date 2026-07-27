@@ -1,3 +1,26 @@
+# Issue #149 — réouverture : corriger le vrai libellé de montée de niveau
+
+## Diagnostic et conception
+
+- Le correctif initial visait `0x3FE7C7`, référencé par `0x3FE7F4`.
+- La table réellement lue par la fenêtre de montée de niveau commence à
+  `0x459B48`; son premier pointeur cible `0x41B2A9`.
+- `0x41B2A9` contient encore
+  `{FONT_SMALL}MAX.{FONT_NORMAL} PV` dans la source et dans la ROM distante.
+- La correction minimale consiste à modifier la dernière entrée active de
+  `0x41B2A9`, à la protéger, puis à vérifier le pointeur vivant dans la ROM
+  reconstruite. Le correctif initial reste intact pour son autre consommateur.
+
+## Plan de reprise
+
+- [x] Lire le commentaire de réouverture et reproduire l’ancien libellé.
+- [x] Tracer le pointeur réellement consommé par l’écran de montée de niveau.
+- [ ] Ajouter une régression rouge sur `0x459B48` et protéger `0x41B2A9`.
+- [ ] Corriger chirurgicalement la dernière entrée active de `0x41B2A9`.
+- [ ] Reconstruire la ROM FR avec la chaîne release canonique.
+- [ ] Vérifier les octets, le rendu mGBA et les tests ciblés puis complets.
+- [ ] Relire le diff, committer, rebaser et publier le résultat sur l’issue.
+
 # Issue #149 — « Max. PV » → « PV Max. »
 
 - [x] Lire l’issue, ses commentaires et identifier la chaîne active.
