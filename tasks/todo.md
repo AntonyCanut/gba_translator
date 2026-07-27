@@ -457,3 +457,16 @@
 - Le replay de capture est intrinsèquement instable dans cet environnement :
   il a produit à la fois OK et RESET sur la ROM finale, et RESET trois fois sur
   la ROM témoin byte-identique hors titre. Aucun octet de code n'est modifié.
+
+# Issue #144 — Suivi des couleurs dans l’aide du menu Options
+
+- [x] Lire le commentaire de suivi et identifier la seconde chaîne `0x1F4E4E2`.
+- [x] Ajouter une régression rouge sur le pointeur vivant `0x1EBD064`.
+- [x] Colorer uniquement « Sauver » en vert et « ignorer » en rouge.
+- [x] Protéger la nouvelle valeur contre les réécritures.
+- [ ] Reconstruire la ROM FR et vérifier les octets pointés.
+- [ ] Exécuter les validations post-build et intégrer le commit.
+
+## Revue
+
+- À compléter après la reconstruction et les validations finales.

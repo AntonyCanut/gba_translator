@@ -394,6 +394,25 @@ class RegressionTextTests(unittest.TestCase):
         self.assertEqual(raw, expected)
 
     @unittest.skipUnless(FR_ROM.exists(), 'ROM missing')
+    def test_options_exit_help_text_uses_semantic_colors(self):
+        # Issue #144 follow-up: the explanatory text below the choices uses a
+        # distinct string and must colour only "Sauver" and "Ignorer".
+        french_data = FR_ROM.read_bytes()
+        pointer_offset = 0x1EBD064
+        target = struct.unpack_from('<I', french_data, pointer_offset)[0] - 0x08000000
+        end = french_data.index(b'\xFF', target)
+        raw = french_data[target:end + 1]
+
+        expected = (
+            b'\xFC\x01\x06' + TextEncoder.encode_pokemon('Sauver')[:-1]
+            + b'\xFC\x01\x02' + TextEncoder.encode_pokemon(' ou ')[:-1]
+            + b'\xFC\x01\x04' + TextEncoder.encode_pokemon('ignorer')[:-1]
+            + b'\xFC\x01\x02'
+            + TextEncoder.encode_pokemon(' les options sélectionnées ?')
+        )
+        self.assertEqual(raw, expected)
+
+    @unittest.skipUnless(FR_ROM.exists(), 'ROM missing')
     def test_battle_style_options_translated(self):
         # Issue #73 "Mode de combat - menu Options": the battle-style cycle
         # ("Shift"/"Set" at 0x419E2C/0x419E32) had "Changer" for Shift (renamed
