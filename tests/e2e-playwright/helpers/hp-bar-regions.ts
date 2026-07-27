@@ -17,15 +17,23 @@ export const FULL_SCREEN_REGION: Region = {
 };
 
 /**
- * Left-hand stat label column of the « Pokémon Skills » page (ATTACK, DEFENSE,
- * SP.ATK, SP.DEF, SPEED, EXP.). Those are word-image tiles that the translation
- * pipeline leaves untouched, so they are byte-identical in every language —
- * which makes them a language-independent way to recognise the page.
+ * The two stat labels of the « Pokémon Skills » page that stay byte-identical
+ * in every build, used together as a language-independent way to recognise the
+ * page. They are deliberately disjoint from {@link HP_BAR_REGION}: the screen
+ * is identified by pixels that the fix under test cannot influence.
  *
- * It is deliberately disjoint from {@link HP_BAR_REGION}: the screen is
- * identified by pixels that the fix under test cannot influence.
+ * The label column is six 12-pixel bands stacked from y 40 — ATTACK, DEFENSE,
+ * SP.ATK, SP.DEF, SPEED, EXP. All six are word-image tiles that the *text*
+ * pipeline leaves untouched, so the whole column used to be a single anchor.
+ * GitHub issue #145 ended that: `languages/fr/patches/summary_stat_labels.py`
+ * now redraws four of them in French (ATTAQUE, ATT SPE., DEF SPE., VITESSE).
+ * Only DEFENSE — transparent in French — and EXP. are still shared, so the
+ * anchor is those two bands and nothing else.
  */
-export const STAT_LABELS_REGION: Region = { x: 0, y: 40, width: 56, height: 72 };
+export const PAGE_ANCHOR_REGIONS: Region[] = [
+  { x: 0, y: 52, width: 56, height: 12 },   // DEFENSE
+  { x: 0, y: 100, width: 56, height: 12 },  // EXP.
+];
 
 /**
  * Screen coordinates of the bar, for the record: the label sprite covers
@@ -102,6 +110,19 @@ export function readRegionReference(filePath: string, region: Region): Buffer {
   return Buffer.from(png.data);
 }
 
+/**
+ * Decode a multi-band reference — the bands of {@link PAGE_ANCHOR_REGIONS}
+ * stacked top to bottom in one image, in the order they are declared.
+ */
+export function readAnchorReference(filePath: string, regions: Region[]): Buffer {
+  const width = regions[0].width;
+  const height = regions.reduce((total, region) => total + region.height, 0);
+  if (regions.some((region) => region.width !== width)) {
+    throw new Error('anchor bands must all share the same width');
+  }
+  return readRegionReference(filePath, { x: 0, y: 0, width, height });
+}
+
 export function cropRegion(png: PNG, region: Region): Buffer {
   const out = Buffer.alloc(region.width * region.height * 4);
   for (let row = 0; row < region.height; row++) {
@@ -113,6 +134,16 @@ export function cropRegion(png: PNG, region: Region): Buffer {
 
 export function regionsMatch(a: PNG, b: PNG, region: Region): boolean {
   return cropRegion(a, region).equals(cropRegion(b, region));
+}
+
+/** Crop several bands and stack them, in declaration order, into one buffer. */
+export function cropRegions(png: PNG, regions: Region[]): Buffer {
+  return Buffer.concat(regions.map((region) => cropRegion(png, region)));
+}
+
+/** True when *a* and *b* agree on every band of *regions*. */
+export function regionsMatchAll(a: PNG, b: PNG, regions: Region[]): boolean {
+  return cropRegions(a, regions).equals(cropRegions(b, regions));
 }
 
 /** Number of pixels that differ inside *region* — used in failure messages. */

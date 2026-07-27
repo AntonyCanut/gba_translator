@@ -28,10 +28,10 @@ import path from 'path';
 import { MgbaBridgeClient } from '../../../emulator-web/src/mgba-bridge.js';
 import { PNG } from 'pngjs';
 import {
-  STAT_LABELS_REGION,
+  PAGE_ANCHOR_REGIONS,
   partyScreenshotPath,
-  cropRegion,
-  readRegionReference,
+  cropRegions,
+  readAnchorReference,
   readScreen,
   screenDiffRatio,
 } from './hp-bar-regions.js';
@@ -112,7 +112,7 @@ async function findSkillsPage(
   screenshotPath: string,
   anchorPath: string,
 ): Promise<number> {
-  const anchor = readRegionReference(anchorPath, STAT_LABELS_REGION);
+  const anchor = readAnchorReference(anchorPath, PAGE_ANCHOR_REGIONS);
   const scratchPath = `${screenshotPath}.settle.png`;
   await client.saveState(1);
 
@@ -139,7 +139,7 @@ async function findSkillsPage(
 
     const candidatePath = `${screenshotPath}.menu-${index}.png`;
     await client.screenshot(candidatePath);
-    const candidate = cropRegion(readScreen(candidatePath), STAT_LABELS_REGION);
+    const candidate = cropRegions(readScreen(candidatePath), PAGE_ANCHOR_REGIONS);
 
     if (candidate.equals(anchor)) {
       fs.renameSync(candidatePath, screenshotPath);

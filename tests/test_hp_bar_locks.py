@@ -386,8 +386,11 @@ class TestE2eHarnessStaysWired(unittest.TestCase):
               / "hp-bar.spec.ts-snapshots" / "summary-stat-labels-anchor.png")
     SAVE = ROOT / "tests" / "fixtures" / "saves" / "party_hp_bar_fr.sav"
     SAVE_SHA256 = "86b7d3daafa4bff101e294bd5b8c736a6004db321398e397ff1c9599127a79ac"
-    # STAT_LABELS_REGION dans tests/e2e-playwright/helpers/hp-bar-regions.ts.
-    ANCHOR_SIZE = (56, 72)
+    # PAGE_ANCHOR_REGIONS dans tests/e2e-playwright/helpers/hp-bar-regions.ts :
+    # deux bandes de 56x12 empilées (DEFENSE et EXP.), les seuls libellés de
+    # stats restés identiques dans tous les builds depuis que l'issue #145 a
+    # traduit ATTACK / SP.ATK / SP.DEF / SPEED en français.
+    ANCHOR_SIZE = (56, 24)
 
     def test_npm_script_runs_the_hp_bar_config(self) -> None:
         import json

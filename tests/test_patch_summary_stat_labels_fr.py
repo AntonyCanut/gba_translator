@@ -122,6 +122,53 @@ class TestCapsuleGeometry(unittest.TestCase):
         self.assertTrue(with_space and without_space)
 
 
+class TestE2eAnchorAvoidsTranslatedLabels(unittest.TestCase):
+    """Le scénario e2e barre-de-vie repère la page « Capacités » par ses libellés.
+
+    Il compare la capture traduite à la capture anglaise sur ces bandes : tout
+    libellé qu'on traduit doit donc en sortir, sinon le scénario échoue en
+    prétendant que la ROM n'est pas sur la bonne page. Ce test relie les deux
+    fichiers pour que la prochaine traduction de libellé le remarque tout de
+    suite plutôt qu'en CI Playwright.
+    """
+
+    REGIONS_TS = (Path(__file__).parent.parent / "tests" / "e2e-playwright"
+                  / "helpers" / "hp-bar-regions.ts")
+    # Les gélules vivent 14 px plus bas dans la feuille que sur l'écran.
+    SHEET_TO_SCREEN = 14
+
+    def _anchor_bands(self) -> list[tuple[int, int]]:
+        import re
+
+        source = self.REGIONS_TS.read_text(encoding="utf-8")
+        block = re.search(
+            r"PAGE_ANCHOR_REGIONS: Region\[\] = \[(.*?)\];", source, re.S,
+        )
+        self.assertIsNotNone(block, "PAGE_ANCHOR_REGIONS introuvable")
+        bands = [
+            (int(y), int(height))
+            for y, height in re.findall(r"y:\s*(\d+).*?height:\s*(\d+)", block.group(1))
+        ]
+        self.assertTrue(bands, "aucune bande d'ancrage lue")
+        return bands
+
+    def test_no_anchor_band_covers_a_translated_label(self):
+        translated = {y0 - self.SHEET_TO_SCREEN for y0, _, _ in LABELS}
+        for y, height in self._anchor_bands():
+            with self.subTest(band=y):
+                covered = set(range(y, y + height))
+                self.assertFalse(
+                    covered & {label for label in translated
+                               if label in range(y, y + height)},
+                    f"la bande d'ancrage y={y} recouvre un libellé traduit",
+                )
+
+    def test_anchor_bands_land_on_untranslated_labels(self):
+        """Les bandes tombent bien sur DEFENSE (y=66) et EXP. (y=114)."""
+        sheet_rows = {y + self.SHEET_TO_SCREEN for y, _ in self._anchor_bands()}
+        self.assertEqual(sheet_rows, {66, 114})
+
+
 @pytest.mark.rom
 class TestModelMatchesEnglishSheet(unittest.TestCase):
     """La fonte + le modèle de gélule reproduisent la feuille anglaise au pixel."""

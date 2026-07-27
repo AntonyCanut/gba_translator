@@ -42,13 +42,13 @@ import { test, expect } from '@playwright/test';
 import {
   HP_BAR_REGION,
   HP_LABEL_REGION,
+  PAGE_ANCHOR_REGIONS,
   PARTY_HP_BAR_REGIONS,
-  STAT_LABELS_REGION,
   describeRegion,
   distinctColours,
   readScreen,
   regionDiffCount,
-  regionsMatch,
+  regionsMatchAll,
   partyScreenshotPath,
 } from '../helpers/hp-bar-regions.js';
 
@@ -208,11 +208,12 @@ test.describe('Barres de vie — issue #84', () => {
       test.setTimeout(400_000);
       const translated = await captureOnce(build.code);
 
-      // The Skills page was located by the stat-label column, so it must be
-      // identical in both runs — that is what proves both ROMs are on the same
-      // page before anything is asserted about the bar.
+      // The Skills page was located by the DEFENSE and EXP. labels, the only
+      // two that stay identical in every build, so they must match in both
+      // runs — that is what proves both ROMs are on the same page before
+      // anything is asserted about the bar.
       expect(
-        regionsMatch(translated.skills, english.skills, STAT_LABELS_REGION),
+        regionsMatchAll(translated.skills, english.skills, PAGE_ANCHOR_REGIONS),
         `la ROM ${build.label} doit être sur la page Capacités`,
       ).toBe(true);
       expect(
@@ -281,7 +282,7 @@ test.describe('Barres de vie — issue #84', () => {
 
       // The recognition anchor must survive the damage: only the bars change.
       expect(
-        regionsMatch(regressed.skills, english.skills, STAT_LABELS_REGION),
+        regionsMatchAll(regressed.skills, english.skills, PAGE_ANCHOR_REGIONS),
         `la ROM ${build.label} régressée doit atteindre la même page`,
       ).toBe(true);
       expect(
