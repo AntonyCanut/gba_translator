@@ -46,6 +46,9 @@ def test_food_thief_title_is_french_at_every_live_pointer() -> None:
     assert sites == [0x1EAA360, 0x1EAA591, 0x1EAABA4]
     for site in sites:
         (target,) = struct.unpack_from("<I", french, site)
+        assert target - GBA_BASE == TITLE_OFFSET, (
+            f"le site 0x{site:X} ne doit pas être repointé"
+        )
         assert _decode_at(french, target - GBA_BASE) == EXPECTED_TITLE, (
             f"pointeur 0x{site:X} → 0x{target - GBA_BASE:X}"
         )

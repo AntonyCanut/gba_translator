@@ -409,3 +409,26 @@
   cas français pointé sur `englishrom.gba` → le contrôle de libellé échoue.
 - Aucune modification du correctif lui-même : ce ticket n'ajoute que des tests,
   la documentation de conception et le suivi.
+
+# Issue #151 — Titre de mission « The Food Thief »
+
+- [x] Lire l’issue et confirmer la formulation « Voleur de vivres ».
+- [x] Identifier l’offset réellement visé par les trois pointeurs du moteur.
+- [x] Ajouter et exécuter la garde ROM rouge.
+- [x] Ajouter l’entrée active `0x1fa4e10`.
+- [x] Régénérer la chaîne FR et reconstruire la ROM jouable.
+- [x] Vérifier les trois motifs, le diff binaire et les validations.
+- [x] Relire le diff et préparer le commit de résolution.
+
+## Revue
+
+- Le titre actif est désormais « Voleur de vivres » à `0x1FA4E10`.
+- Le JSON générique et le passe inline ignorent cet offset ; le patch
+  `mission_titles.py` l'écrit en place avant de restaurer la description
+  voisine via `mission_descriptions.py`.
+- La ROM finale ne diffère de la ROM témoin que sur les 15 octets du titre.
+  Les 18 tests ciblés, 1 574 gardes rapides et 530 tests ROM hors émulateur
+  passent ; le rebuild est byte-identique et les trois motifs restent inchangés.
+- Le replay de capture est intrinsèquement instable dans cet environnement :
+  il a produit à la fois OK et RESET sur la ROM finale, et RESET trois fois sur
+  la ROM témoin byte-identique hors titre. Aucun octet de code n'est modifié.

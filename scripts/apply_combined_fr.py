@@ -27,6 +27,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 from src.core.padding_detector import PaddingDetector
 from src.core.rom_reader import ROMReader
 from src.core.text_converter import JSONToCSVConverter
+from languages.fr.dedicated_patch_offsets import GENERIC_TRANSLATION_OFFSETS
 
 
 LINE_RE = re.compile(r'^\s*0x([0-9A-Fa-f]+)\s*:\s*(.*)$')
@@ -180,6 +181,35 @@ def _load_csv(path: Path) -> Tuple[List[dict], List[str]]:
         return rows, reader.fieldnames
 
 
+def _dedicated_offsets_for_combined(path: Path) -> frozenset[int]:
+    """Les exclusions post-build sont propres à la source française."""
+    if path.parent.name.lower() == "fr":
+        return GENERIC_TRANSLATION_OFFSETS
+    return frozenset()
+
+
+def _exclude_dedicated_offsets(
+    combined_map: Dict[int, str],
+    rows: List[dict],
+    dedicated_offsets: frozenset[int] = GENERIC_TRANSLATION_OFFSETS,
+) -> int:
+    """Retirer les offsets post-build et effacer toute valeur CSV obsolète."""
+    excluded = 0
+    for offset in dedicated_offsets:
+        if offset in combined_map:
+            del combined_map[offset]
+            excluded += 1
+
+    for row in rows:
+        try:
+            offset = _parse_offset(row.get("offset", ""))
+        except (TypeError, ValueError):
+            continue
+        if offset in dedicated_offsets:
+            row["translation"] = ""
+    return excluded
+
+
 def _write_csv(path: Path, rows: List[dict], fieldnames: List[str]) -> None:
     with path.open('w', encoding='utf-8-sig', newline='') as handle:
         writer = csv.DictWriter(handle, fieldnames=fieldnames)
@@ -277,6 +307,11 @@ def main() -> int:
         combined_map.update(critical_map)
         print(f'Critical strings applied: {len(critical_map)} (from {args.critical})')
     rows, fieldnames = _load_csv(args.csv)
+    excluded_dedicated = _exclude_dedicated_offsets(
+        combined_map,
+        rows,
+        _dedicated_offsets_for_combined(args.combined),
+    )
 
     if 'offset' not in fieldnames or 'translation' not in fieldnames:
         print('Error: CSV must include offset and translation columns.')
@@ -363,6 +398,8 @@ def main() -> int:
     _write_csv(output_path, rows, fieldnames)
 
     print(f'Combined entries: {len(combined_map)} (skipped lines: {skipped})')
+    if excluded_dedicated:
+        print(f'Dedicated post-build offsets excluded: {excluded_dedicated}')
     print(f'CSV rows matched: {matched} (updated: {updated})')
     if args.extend:
         print(f'CSV rows added: {added}')

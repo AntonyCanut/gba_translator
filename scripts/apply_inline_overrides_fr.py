@@ -33,6 +33,7 @@ from src.core.padding_detector import PaddingDetector
 from src.core.rom_reader import ROMReader
 from src.core.text_codec import GERMAN_UMLAUT_CHARS, TextDecoder, TextEncoder
 from src.core.text_converter import JSONToCSVConverter
+from languages.fr.dedicated_patch_offsets import INLINE_OVERRIDE_OFFSETS
 
 
 LINE_RE = re.compile(r'^\s*0x([0-9A-Fa-f]+)\s*:\s*(.*)$')
@@ -43,6 +44,7 @@ DYNAMIC_GROUP_RE = re.compile(
     r'(?:<0xFD><0x[0-9A-Fa-f]{2}>)(?:\s+<0xFD><0x[0-9A-Fa-f]{2}>)*'
 )
 GROUP_PLACEHOLDER = '<<VAR>>'
+DEDICATED_PATCH_OFFSETS = INLINE_OVERRIDE_OFFSETS
 
 TYPO_FIXES = {
     '\u2019': "'",
@@ -108,6 +110,13 @@ def _load_combined(path: Path) -> Tuple[Dict[int, str], int]:
             text = _normalize_text(match.group(2))
             mapping[offset] = text
     return mapping, skipped
+
+
+def _dedicated_offsets_for_combined(path: Path) -> frozenset[int]:
+    """Le titre dédié n'est exclu que du pipeline français."""
+    if path.parent.name.lower() == "fr":
+        return INLINE_OVERRIDE_OFFSETS
+    return frozenset()
 
 
 def _load_translation_offsets(path: Optional[Path]) -> set[int]:
@@ -500,6 +509,7 @@ def main() -> int:
         return 1
 
     translated_offsets = _load_translation_offsets(args.translations)
+    dedicated_offsets = _dedicated_offsets_for_combined(args.combined)
     translation_items = _load_translation_items(args.translations)
     template_map = _build_template_map(translation_items)
     spanish_map = _load_extracted_map(args.reference_texts)
@@ -544,6 +554,8 @@ def main() -> int:
     skipped_fixed_table = 0
 
     for offset, translation in combined_map.items():
+        if offset in dedicated_offsets:
+            continue
         if in_fixed_table(offset):
             # Fixed-stride name tables are already French in the source
             # ROM; rewriting them breaks cell alignment and terminators.

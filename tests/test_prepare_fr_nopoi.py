@@ -238,6 +238,7 @@ class TestDedicatedPatchExclusion(unittest.TestCase):
     # A real junction offset owned by patch_worldmap_junction_panels_fr.
     # Panneau directionnel de la Route 5 signalé dans l'issue #128.
     JUNCTION_OFFSET = 0x1F70E41
+    MISSION_TITLE_OFFSET = 0x1FA4E10
 
     def _en_json_with_arrow(self) -> dict:
         # Extractor sees the leading arrow byte (0x79) as ASCII ``y``.
@@ -264,16 +265,36 @@ class TestDedicatedPatchExclusion(unittest.TestCase):
         )
         self.assertIn(0x10, offsets, "unrelated entries must still be produced")
 
+    def test_mission_title_excluded_even_with_en_entry(self) -> None:
+        """Le titre vivant est réservé au patch qui ne décale pas les relocalisations."""
+        en_json = _en_extraction([
+            {"offset": 0x10, "byte_length": 5, "length": 5,
+             "encoding": "pokemon", "decoded_text": "Hello", "text": "Hello"},
+            {"offset": self.MISSION_TITLE_OFFSET, "byte_length": 15, "length": 15,
+             "encoding": "pokemon", "decoded_text": "The Food Thief",
+             "text": "The Food Thief"},
+        ])
+        combined = [
+            f"0x{self.MISSION_TITLE_OFFSET:08X}: Voleur de vivres",
+            "0x00000010: Bonjour",
+        ]
+        result = _run_prepare(combined, en_json, _build_fake_rom({}))
+        offsets = {t["offset"] for t in result["translations"]}
+        self.assertNotIn(self.MISSION_TITLE_OFFSET, offsets)
+        self.assertIn(0x10, offsets)
+
     def test_exclusion_set_matches_patch_targets(self) -> None:
-        """The exclusion set must stay in sync with the junction patch's TARGETS."""
+        """The exclusion set must stay in sync with every dedicated patch."""
         import scripts.prepare_fr_json as module
         import importlib
         importlib.reload(module)
         sys.path.insert(0, str(ROOT / "scripts"))
-        from languages.fr.patches.worldmap_junction_panels import TARGETS
+        from languages.fr.patches.mission_titles import TARGETS as MISSION_TITLE_TARGETS
+        from languages.fr.patches.worldmap_junction_panels import TARGETS as JUNCTION_TARGETS
         self.assertEqual(
-            set(module.DEDICATED_PATCH_OFFSETS), set(TARGETS),
-            "DEDICATED_PATCH_OFFSETS must equal the junction patch TARGETS",
+            set(module.DEDICATED_PATCH_OFFSETS),
+            set(JUNCTION_TARGETS) | set(MISSION_TITLE_TARGETS),
+            "DEDICATED_PATCH_OFFSETS must equal all dedicated patch targets",
         )
 
 

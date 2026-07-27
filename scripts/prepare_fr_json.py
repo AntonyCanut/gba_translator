@@ -28,6 +28,9 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))  # scripts/ for sibling
 
 from src.core.text_codec import TextDecoder, TextEncoder
 from src.core.text_converter import JSONToCSVConverter
+from languages.fr.dedicated_patch_offsets import (
+    GENERIC_TRANSLATION_OFFSETS as DEDICATED_PATCH_OFFSETS,
+)
 
 # Offsets owned by dedicated, byte-exact post-build patches that the generic
 # builder must NOT touch. The arrow-prefixed World-Map junction panels are seen
@@ -35,16 +38,7 @@ from src.core.text_converter import JSONToCSVConverter
 # here with original_length==1 and a much longer FR → too_long → the generic
 # relocator moves *and* reflows them, destroying the arrow-at-line-start layout
 # and the contiguous fragments that patch_worldmap_junction_panels_fr.py
-# verifies. Leaving the EN original in place lets that patch relocate them
-# verbatim. Kept in sync by importing the patch's canonical TARGETS.
-try:
-    from languages.fr.patches.worldmap_junction_panels import TARGETS as _JUNCTION_TARGETS
-    DEDICATED_PATCH_OFFSETS = frozenset(_JUNCTION_TARGETS)
-except Exception:  # pragma: no cover - import fallback keeps the build resilient
-    DEDICATED_PATCH_OFFSETS = frozenset({
-        0x1F72353, 0x1F72691, 0x1F726C0, 0x1F726FC, 0x1F7276E,
-        0x1F727A7, 0x1F727D0, 0x1F72808, 0x1F72735,
-    })
+# verifies. Leaving the EN original in place lets each dedicated patch own it.
 
 # Identical to apply_combined_fr.py so both scripts treat the source file the same way
 LINE_RE = re.compile(r'^\s*0x([0-9A-Fa-f]+)\s*:\s*(.*)$')
