@@ -15,30 +15,30 @@ from src.graphics.sprite_rom import extract_block
 ROOT = Path(__file__).resolve().parents[3]
 ASSET = ROOT / "languages/fr/sprites/cube_sort_hint.bmp"
 EDITABLE_ASSET = ROOT / "languages/fr/sprites/cube_sort_hint.png"
-REFERENCE_BMP_SHA256 = "3055f7b76ba0c890d05b5cde932d7f656b9cc29a69e83ba4196e0ed612448b65"
-REFERENCE_GRID_SHA256 = "4d2bb1ae2793e44b3ded19f82ffdb79fb6c2b3d549bbd6dde685111109149d0f"
+REFERENCE_BMP_SHA256 = "7697b037c547ec796c2bd84ceea9049514e49ee41651e6b7e178bfce54f4535e"
+REFERENCE_GRID_SHA256 = "75a8d2c51c6927635f41250be739c315364adf5408923b9d6839126d5ae3d14a"
 
 # Grilles indexées fournies par l'auteur de l'issue pour obtenir un bandeau
 # « (START) Tri » net une fois les tuiles remises en place par le jeu.
 TRI_ROWS = (
-    "133333A11111113A1111",
-    "1AA3AAA1111111AA1111",
-    "1113A111333A113A1111",
-    "1113A1113AA3A13A1111",
-    "1113A1113A1AA13A1111",
-    "1113A1113A11113A1111",
-    "1113A1113A11113A1111",
-    "111AA111AA1111AA1111",
+    "133333A111113A111111",
+    "1AA3AAA11111AA111111",
+    "1113A113A33A3A111111",
+    "1113A1133AAA3A111111",
+    "1113A113AA113A111111",
+    "1113A113A1113A111111",
+    "1113A113A1113A111111",
+    "111AA11AA111AA111111",
 )
 START_KEYCAP_ROWS = (
-    "2133333333333333333333A1",
-    "233AA3AAA3AAA3AAA3AAA33A",
-    "233A333A33A3A3A3A33A333A",
-    "233AA33A33AAA3AA333A333A",
-    "2333A33A33A3A3A3A33A333A",
-    "233AA33A33A3A3A3A33A333A",
-    "2A33333333333333333333AA",
-    "21AAAAAAAAAAAAAAAAAAAAA1",
+    "211111113333333333333333",
+    "211111133AA3AAA3AAA3AAA3",
+    "211111133A333A33A3A3A3A3",
+    "211111133AA33A33AAA3AA33",
+    "2111111333A33A33A3A3A3A3",
+    "211111133AA33A33A3A3A3A3",
+    "2111111A3333333333333333",
+    "21111111AAAAAAAAAAAAAAAA",
 )
 
 
@@ -126,13 +126,13 @@ def test_cube_sort_hint_asset_draws_tri() -> None:
     assert (width, height) == (104, 32)
 
     actual = tuple(
-        "".join(f"{pixel:X}" for pixel in row[:20])
+        "".join(f"{pixel:X}" for pixel in row[6:26])
         for row in grid[12:20]
     )
     assert actual == TRI_ROWS
 
 
-def test_cube_sort_hint_preserves_complete_start_keycap() -> None:
+def test_cube_sort_hint_preserves_centered_start_keycap() -> None:
     _, _, grid = read_indexed_bmp(ASSET)
     actual = tuple(
         "".join(f"{pixel:X}" for pixel in row[80:104])

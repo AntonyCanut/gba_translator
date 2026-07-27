@@ -136,6 +136,31 @@
   Cube réussis, 1 527 tests Python réussis (1 ignoré), 68 tests Vitest et
   builds FR/IT/DE réussis.
 
+## Reprise — version définitive centrée
+
+- [x] Relire tous les commentaires et identifier le dernier BMP non intégré.
+- [x] Télécharger la référence centrée et comparer ses pixels à l’asset versionné.
+- [x] Mettre à jour les gardes puis confirmer leur échec sur l’ancien BMP.
+- [x] Remplacer le BMP et régénérer le PNG indexé éditable.
+- [x] Reconstruire la ROM FR et comparer le bloc LZ77 vivant à la référence.
+- [x] Exécuter les validations élargies et relire les changements.
+- [x] Publier le bilan GitHub et conserver l’issue clôturée en `completed`.
+
+### Revue
+
+- Le BMP versionné correspond octet pour octet au dernier fichier joint,
+  centré dans sa case (`SHA-256 7697b037c547ec79…`) ; 213 pixels diffèrent
+  de la version précédente.
+- Le PNG compagnon est régénéré en indexé 4 bits et sa grille 104×32 est
+  strictement identique au BMP.
+- Le bloc LZ77 vivant `0x00EF1B68` de la ROM FR reconstruite se décompresse
+  en la grille attendue (`SHA-256 75a8d2c51c692763…`).
+- Cycle RED : 4 échecs attendus sur l’ancien asset ; cycle GREEN : 8 gardes
+  Cube réussies, y compris la décompression de la ROM.
+- Hook du commit source : 1 566 tests Python réussis (1 ignoré), 68 tests
+  Vitest réussis et builds FR/IT/DE réussis. `make test-rom` : 533 tests
+  réussis et 36 scénarios optionnels ignorés.
+
 # Sonde mGBA — premier combat italien
 
 - [x] Reproduire l’échec sur la carte 4.10 et figer la cause racine.
