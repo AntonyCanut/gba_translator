@@ -1873,3 +1873,9 @@ entries:
   expected: Ces CT ne vont pas se\ntrouver toutes seules !
   forbidden:
   - Those TMs aren't going to just
+- offset: '0x1FA4E10'
+  name: Mission — Voleur de vivres
+  issue: '#151'
+  expected: Voleur de vivres
+  forbidden:
+  - The Food Thief
