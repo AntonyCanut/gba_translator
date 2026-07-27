@@ -117,3 +117,35 @@ se charge dans chacune — y compris dans la ROM anglaise de référence.
 Les ROMs DE et IT sont des artefacts de build non versionnés : le scénario
 échoue avec un message explicite (« lancer `make build-de` ») plutôt que de
 sauter silencieusement le cas.
+
+## Verrouillage — ce qui empêche le défaut de revenir
+
+La correction elle-même tient en quelques dizaines de pixels ; ce qui la
+protège, ce sont les endroits où une modification anodine la déferait. Chacun
+a désormais son verrou dans `tests/test_hp_bar_locks.py`, et chaque verrou a
+été éprouvé en cassant volontairement ce qu'il garde.
+
+| Ce qui peut défaire le correctif | Verrou |
+| --- | --- |
+| `hp_labels` repasse avant `repair_localized_lz77` (Makefile ou `lang.yaml`) | ordre d'étapes comparé dans la recette `build-fr` et dans les listes `patches:` DE/IT |
+| L'art anglais de référence est corrigé dans une seule langue | les trois `GREEN_EN_TILES` doivent rester identiques |
+| Un tracé de libellé mord sur le cap | colonnes 14-15 du menu Pokémon et colonne 7 de la tuile 10 comparées avant/après tracé, dans les trois langues |
+| La planche recompressée dépasse son créneau (patch ignoré en silence) | taille LZ77 vérifiée par langue |
+| Une ROM livrée n'est plus celle qu'on croit | tuiles 0-8, 11 et cap gauche comparées à `englishrom.gba` dans les trois ROMs |
+| `regress_summary_hp_bar.py` cesse d'abîmer quoi que ce soit | ROM synthétique : le script doit vider le cap droit, effacer le cap du menu, ne rien toucher d'autre, et le patch doit savoir réparer |
+| Le scénario e2e est débranché (commande npm, config, ancre, sauvegarde) | commande, config, ancre 56×72 et SHA-256 de la sauvegarde contrôlés au tier rapide |
+
+Deux angles morts du scénario e2e sont aussi refermés :
+
+- une capture qui n'aurait jamais atteint la page serait noire, et deux zones
+  noires sont pixel-identiques — chaque barre doit donc porter plusieurs
+  couleurs distinctes avant qu'une comparaison de parité ne compte ;
+- les lettres du libellé sont volontairement exclues des zones comparées, donc
+  une ROM embarquant la planche anglaise entière (barre correcte, libellé
+  « HP ») passerait tout le reste : la zone du libellé doit différer de la
+  capture anglaise. Vérifié en pointant le cas français sur `englishrom.gba` —
+  le test échoue bien.
+
+Chaque build n'est piloté qu'une fois dans mGBA ; ses quatre cas partagent la
+même capture, donc les nouveaux contrôles ne coûtent aucune exécution
+supplémentaire.

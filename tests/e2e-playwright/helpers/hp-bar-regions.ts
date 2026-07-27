@@ -43,6 +43,17 @@ export const STAT_LABELS_REGION: Region = { x: 0, y: 40, width: 56, height: 72 }
 export const HP_BAR_REGION: Region = { x: 81, y: 29, width: 51, height: 7 };
 
 /**
+ * The « HP » / « PV » / « KP » / « PS » letters left of the same bar, stopping
+ * one pixel before the bar's left cap at x 81.
+ *
+ * The parity assertions deliberately exclude these letters, which leaves a
+ * hole: a build that shipped the *English* sheet wholesale — bar intact, label
+ * untranslated — would satisfy every parity check. Requiring this region to
+ * differ from the English capture closes it.
+ */
+export const HP_LABEL_REGION: Region = { x: 66, y: 29, width: 15, height: 7 };
+
+/**
  * The six HP bars of the party menu, one per slot (left column then right,
  * top to bottom). Same rule: caps included, « HP » / « PV » letters excluded.
  *
@@ -115,6 +126,24 @@ export function regionDiffCount(a: PNG, b: PNG, region: Region): number {
     }
   }
   return diff;
+}
+
+/**
+ * How many distinct colours *region* holds.
+ *
+ * A pixel-parity test between two captures passes trivially when both are
+ * blank — a black screen equals a black screen. Counting colours proves the
+ * probe really captured a drawn bar before any parity claim is made.
+ */
+export function distinctColours(png: PNG, region: Region): number {
+  const colours = new Set<number>();
+  for (let row = 0; row < region.height; row++) {
+    for (let col = 0; col < region.width; col++) {
+      const at = ((region.y + row) * png.width + region.x + col) * 4;
+      colours.add(png.data.readUInt32BE(at));
+    }
+  }
+  return colours.size;
 }
 
 /** Fraction of the framebuffer that changed between two captures. */

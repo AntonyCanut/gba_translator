@@ -16,6 +16,19 @@
  * For each, a second test damages a throwaway copy (Spanish sheet back on the
  * summary, bar cap blanked on the party menu) and requires the assertions to
  * fail; without it the parity tests could pass by construction.
+ *
+ * Two more holes are closed here, because pixel parity alone cannot see them:
+ *
+ * * a capture that never reached the page would be blank, and a blank region
+ *   equals a blank region — so each bar must hold several distinct colours
+ *   before any parity claim counts;
+ * * the label letters are excluded from the parity regions (they legitimately
+ *   differ per language), so a build shipping the English sheet wholesale —
+ *   correct bar, untranslated « HP » — would pass everything. The label region
+ *   must therefore differ from the English capture.
+ *
+ * Every build is driven through mGBA exactly once; all its assertions share
+ * that capture.
  */
 
 import crypto from 'crypto';
@@ -28,9 +41,11 @@ import { PNG } from 'pngjs';
 import { test, expect } from '@playwright/test';
 import {
   HP_BAR_REGION,
+  HP_LABEL_REGION,
   PARTY_HP_BAR_REGIONS,
   STAT_LABELS_REGION,
   describeRegion,
+  distinctColours,
   readScreen,
   regionDiffCount,
   regionsMatch,
@@ -126,6 +141,28 @@ async function captureHpBars(sourceRom: string, label: string,
   }
 }
 
+/**
+ * Piloter mGBA jusqu'à la page Capacités coûte plusieurs minutes par ROM, donc
+ * chaque build n'est capturé qu'une fois : les cas qui suivent lisent tous la
+ * même paire de framebuffers. Le describe est `serial`, donc l'ordre et le
+ * partage d'état sont garantis.
+ */
+const captures = new Map<string, Capture>();
+
+async function captureOnce(code: string): Promise<Capture> {
+  const cached = captures.get(code);
+  if (cached) {
+    return cached;
+  }
+  const capture = await captureHpBars(romFor(code), code);
+  captures.set(code, capture);
+  return capture;
+}
+
+/** Nombre minimal de couleurs attendu dans une barre réellement dessinée. */
+const MIN_BAR_COLOURS = 3;
+const MIN_PARTY_BAR_COLOURS = 2;
+
 test.describe('Barres de vie — issue #84', () => {
   test.describe.configure({ mode: 'serial' });
 
@@ -149,10 +186,27 @@ test.describe('Barres de vie — issue #84', () => {
       .toBe(USER_SAVE_SHA256);
   });
 
+  test('la capture anglaise de référence montre de vraies barres', () => {
+    // Deux écrans noirs sont pixel-identiques : sans ce garde-fou, toutes les
+    // comparaisons de parité pourraient passer sur des captures vides.
+    expect(
+      distinctColours(english.skills, HP_BAR_REGION),
+      `la barre du résumé anglaise doit être dessinée :\n`
+      + describeRegion(english.skills, HP_BAR_REGION),
+    ).toBeGreaterThanOrEqual(MIN_BAR_COLOURS);
+    PARTY_HP_BAR_REGIONS.forEach((region, slot) => {
+      expect(
+        distinctColours(english.party, region),
+        `la barre anglaise de l'emplacement ${slot + 1} doit être dessinée :\n`
+        + describeRegion(english.party, region),
+      ).toBeGreaterThanOrEqual(MIN_PARTY_BAR_COLOURS);
+    });
+  });
+
   for (const build of BUILDS) {
     test(`les barres de vie ${build.label} sont identiques aux barres anglaises`, async () => {
       test.setTimeout(400_000);
-      const translated = await captureHpBars(romFor(build.code), build.code);
+      const translated = await captureOnce(build.code);
 
       // The Skills page was located by the stat-label column, so it must be
       // identical in both runs — that is what proves both ROMs are on the same
@@ -180,6 +234,44 @@ test.describe('Barres de vie — issue #84', () => {
           + `${build.code.toUpperCase()}:\n${describeRegion(translated.party, region)}\n`
           + `EN:\n${describeRegion(english.party, region)}`,
         ).toBe(0);
+      });
+    });
+
+    test(`le libellé de la barre ${build.label} est bien traduit`, async () => {
+      test.setTimeout(400_000);
+      const translated = await captureOnce(build.code);
+
+      // Les lettres sont volontairement hors des comparaisons de parité : une
+      // ROM qui embarquerait la planche anglaise entière — barre intacte mais
+      // libellé « HP » — passerait tous les autres contrôles.
+      expect(
+        regionDiffCount(translated.skills, english.skills, HP_LABEL_REGION),
+        `le libellé ${build.label} est resté « HP » :\n`
+        + `${build.code.toUpperCase()}:\n${describeRegion(translated.skills, HP_LABEL_REGION)}`,
+      ).toBeGreaterThan(0);
+
+      // …et le repeindre ne doit jamais déborder sur la barre elle-même.
+      expect(
+        regionDiffCount(translated.skills, english.skills, HP_BAR_REGION),
+        'le tracé du libellé a mordu sur la barre',
+      ).toBe(0);
+    });
+
+    test(`les barres capturées sur la ROM ${build.label} sont bien dessinées`, async () => {
+      test.setTimeout(400_000);
+      const translated = await captureOnce(build.code);
+
+      expect(
+        distinctColours(translated.skills, HP_BAR_REGION),
+        `barre du résumé ${build.label} vide ou uniforme :\n`
+        + describeRegion(translated.skills, HP_BAR_REGION),
+      ).toBeGreaterThanOrEqual(MIN_BAR_COLOURS);
+      PARTY_HP_BAR_REGIONS.forEach((region, slot) => {
+        expect(
+          distinctColours(translated.party, region),
+          `barre ${build.label} de l'emplacement ${slot + 1} vide ou uniforme :\n`
+          + describeRegion(translated.party, region),
+        ).toBeGreaterThanOrEqual(MIN_PARTY_BAR_COLOURS);
       });
     });
 

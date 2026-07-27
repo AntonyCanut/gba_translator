@@ -388,3 +388,24 @@
   68 tests Vitest et les builds FR/IT/DE ; `make test-rom` a ensuite validé
   le rebuild déterministe, 12 gardes de reconstruction et 531 tests ROM
   (35 scénarios optionnels ignorés).
+
+# B-446 — Verrouillage de la barre de vie (#84)
+
+- [x] Verrouiller l'ordre des étapes de build (FR Makefile, DE/IT `lang.yaml`).
+- [x] Verrouiller les invariants d'art partagés par les trois langues.
+- [x] Verrouiller le contrôle négatif sur une ROM synthétique.
+- [x] Comparer les trois ROMs livrées à `englishrom.gba` (barre + caps du menu).
+- [x] Verrouiller le branchement du scénario e2e (commande, config, ancre, save).
+- [x] Fermer les deux angles morts e2e : captures vides et libellé non traduit.
+- [x] Éprouver chaque verrou en cassant volontairement ce qu'il garde.
+
+## Revue
+
+- 25 verrous Python (`tests/test_hp_bar_locks.py`) et 13 cas e2e ; les captures
+  mGBA sont mutualisées par build, donc les 7 nouveaux cas e2e ne coûtent
+  aucune exécution d'émulateur supplémentaire.
+- Mutations vérifiées : ordre DE inversé → échec ; restauration de la planche
+  anglaise retirée → échec ; ROM régressée → les 4 contrôles ROM échouent ;
+  cas français pointé sur `englishrom.gba` → le contrôle de libellé échoue.
+- Aucune modification du correctif lui-même : ce ticket n'ajoute que des tests,
+  la documentation de conception et le suivi.
