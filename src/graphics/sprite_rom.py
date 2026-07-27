@@ -30,6 +30,7 @@ TILE_PX = 8
 TILEMAP_INDEX_MASK = 0x03FF
 TILEMAP_HFLIP = 0x0400
 TILEMAP_VFLIP = 0x0800
+TILEMAP_FLIP_MASK = TILEMAP_HFLIP | TILEMAP_VFLIP
 
 Grid = list[list[int]]
 Palette = list[tuple[int, int, int]]
@@ -305,9 +306,9 @@ def insert_mapped_block(
 ) -> None:
     """Réinjecte un écran mappé dans sa planche de tuiles.
 
-    Les occurrences répétées d'une même tuile doivent produire les mêmes
-    pixels une fois les flips annulés. Une édition contradictoire est rejetée
-    avant toute écriture.
+    Les tuiles visuellement équivalentes sont dédupliquées en utilisant les
+    flips de la tilemap. Une édition qui exige plus de tuiles distinctes que
+    la planche existante est rejetée avant toute écriture.
 
     Args:
         rom: Tampon ROM modifiable.
@@ -348,7 +349,8 @@ def insert_mapped_block(
         tiles = bytearray(rom[tiles_offset:tiles_offset + needed])
         comp_len = needed
 
-    replacements: dict[int, bytes] = {}
+    desired_tiles: dict[bytes, list[int]] = {}
+    variants_by_cell: list[tuple[bytes, bytes, bytes, bytes]] = []
     for cell, entry in enumerate(entries):
         tile_y, tile_x = divmod(cell, tiles_wide)
         rendered = [
@@ -356,28 +358,142 @@ def insert_mapped_block(
             for row in range(TILE_PX)
             for column in range(TILE_PX)
         ]
-        source_pixels = _flip_tile_pixels(
-            rendered,
-            bool(entry & TILEMAP_HFLIP),
-            bool(entry & TILEMAP_VFLIP),
-        )
-        tile_index = entry & TILEMAP_INDEX_MASK
-        replacement = pixels_to_tile(source_pixels)
-        previous = replacements.get(tile_index)
-        if previous is not None and previous != replacement:
-            raise ValueError(
-                f"shared tile {tile_index} has conflicting mapped edits"
+        variants = tuple(
+            pixels_to_tile(_flip_tile_pixels(rendered, horizontal, vertical))
+            for horizontal, vertical in (
+                (False, False),
+                (True, False),
+                (False, True),
+                (True, True),
             )
-        replacements[tile_index] = replacement
+        )
+        canonical = min(variants)
+        variants_by_cell.append(variants)
+        desired_tiles.setdefault(canonical, []).append(cell)
 
-    for tile_index, replacement in replacements.items():
+    tile_count = len(tiles) // TILE_BYTES
+    if len(desired_tiles) > tile_count:
+        conflicting_index = next(
+            (
+                tile_index
+                for tile_index in {
+                    entry & TILEMAP_INDEX_MASK for entry in entries
+                }
+                if len(
+                    {
+                        min(variants_by_cell[cell])
+                        for cell, entry in enumerate(entries)
+                        if entry & TILEMAP_INDEX_MASK == tile_index
+                    }
+                )
+                > 1
+            ),
+            entries[0] & TILEMAP_INDEX_MASK,
+        )
+        raise ValueError(
+            f"shared tile {conflicting_index} has conflicting mapped edits "
+            f"and no spare tile"
+        )
+
+    candidates = {
+        canonical: sorted(
+            {
+                entries[cell] & TILEMAP_INDEX_MASK
+                for cell in cells
+            }
+        )
+        for canonical, cells in desired_tiles.items()
+    }
+    assignments: dict[bytes, int] = {}
+    assigned_groups: dict[int, bytes] = {}
+
+    def assign_existing_index(canonical: bytes, seen: set[int]) -> bool:
+        """Associe un groupe à un de ses indices actuels si possible."""
+        for tile_index in candidates[canonical]:
+            if tile_index in seen:
+                continue
+            seen.add(tile_index)
+            previous = assigned_groups.get(tile_index)
+            if previous is None or assign_existing_index(previous, seen):
+                assigned_groups[tile_index] = canonical
+                assignments[canonical] = tile_index
+                return True
+        return False
+
+    ordered_groups = sorted(
+        desired_tiles,
+        key=lambda canonical: (
+            len(candidates[canonical]),
+            desired_tiles[canonical][0],
+        ),
+    )
+    for canonical in ordered_groups:
+        assign_existing_index(canonical, set())
+
+    used_indices = set(assigned_groups)
+    free_indices = iter(index for index in range(tile_count) if index not in used_indices)
+    for canonical in ordered_groups:
+        if canonical not in assignments:
+            assignments[canonical] = next(free_indices)
+
+    remapped_entries = entries[:]
+    for canonical, cells in desired_tiles.items():
+        tile_index = assignments[canonical]
+        preferred_cell = next(
+            (
+                cell
+                for cell in cells
+                if entries[cell] & TILEMAP_INDEX_MASK == tile_index
+            ),
+            cells[0],
+        )
+        preferred_flip = (
+            (1 if entries[preferred_cell] & TILEMAP_HFLIP else 0)
+            | (2 if entries[preferred_cell] & TILEMAP_VFLIP else 0)
+        )
+        stored_tile = variants_by_cell[preferred_cell][preferred_flip]
         start = tile_index * TILE_BYTES
-        tiles[start:start + TILE_BYTES] = replacement
+        tiles[start:start + TILE_BYTES] = stored_tile
+        for cell in cells:
+            flip_index = (
+                preferred_flip
+                if cell == preferred_cell
+                else variants_by_cell[cell].index(stored_tile)
+            )
+            horizontal = bool(flip_index & 0x01)
+            vertical = bool(flip_index & 0x02)
+            preserved = entries[cell] & ~(TILEMAP_INDEX_MASK | TILEMAP_FLIP_MASK)
+            remapped_entries[cell] = (
+                preserved
+                | tile_index
+                | (TILEMAP_HFLIP if horizontal else 0)
+                | (TILEMAP_VFLIP if vertical else 0)
+            )
+
+    tilemap_result = lz77_decompress(rom, tilemap_offset)
+    if tilemap_result is None:
+        raise ValueError(f"0x{tilemap_offset:08X}: failed to decompress LZ77 tilemap")
+    tilemap_payload, tilemap_comp_len = tilemap_result
+    remapped_tilemap = bytearray(tilemap_payload)
+    for cell, entry in enumerate(remapped_entries):
+        start = cell * 2
+        remapped_tilemap[start:start + 2] = entry.to_bytes(2, "little")
+
+    staged = bytearray(rom)
     _write_block_payload(
-        rom,
+        staged,
         tiles_offset,
         bytes(tiles),
         comp_len,
         compressed=compressed,
         vram_safe=vram_safe,
     )
+    _write_block_payload(
+        staged,
+        tilemap_offset,
+        bytes(remapped_tilemap),
+        tilemap_comp_len,
+        compressed=True,
+        vram_safe=vram_safe,
+    )
+    rom[:] = staged

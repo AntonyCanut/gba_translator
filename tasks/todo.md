@@ -26,7 +26,17 @@
 - [x] Étendre le registre et les CLI d’extraction/réinjection.
 - [x] Extraire les PNG éditables du recto et du verso.
 - [x] Prouver le round-trip sur une copie de ROM et exécuter les validations.
-- [ ] Relire, committer, intégrer localement et clôturer l’issue.
+- [x] Relire, committer, intégrer localement et clôturer l’issue.
+
+## Suivi — intégrer le verso fourni
+
+- [x] Récupérer `trainer_card_back.bmp` dans le commentaire de réouverture.
+- [x] Reproduire et localiser le conflit des tuiles partagées.
+- [x] Ajouter les gardes rouges pour la traduction et la réinjection remappée.
+- [x] Intégrer uniquement le dessin « BADGES DE LIGUE » dans l’asset versionné.
+- [x] Brancher le verso sur `make build-fr`.
+- [ ] Reconstruire la ROM FR et comparer l’écran mappé aux pixels attendus.
+- [ ] Exécuter les validations, relire, committer et intégrer sans push.
 
 ## Revue
 

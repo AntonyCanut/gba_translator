@@ -260,6 +260,37 @@ def test_insert_mapped_block_round_trip_preserves_tiles():
     assert result[0] == tiles
 
 
+def test_insert_mapped_block_remaps_flip_equivalent_shared_tile_edit():
+    """Une édition partageable par flip doit réutiliser la planche existante."""
+    tile_0 = [[(x + 2 * y) % 16 for x in range(8)] for y in range(8)]
+    tile_1 = [[(3 * x + y + 1) % 16 for x in range(8)] for y in range(8)]
+    tiles = grid_to_tiles(tile_0, 1, 1) + grid_to_tiles(tile_1, 1, 1)
+    rom, tiles_offset, tilemap_offset = _make_rom_with_tilemap(
+        tiles,
+        [0, 0, 1],
+    )
+    grid, _, _ = extract_mapped_block(
+        bytes(rom), tiles_offset, tilemap_offset, tiles_wide=3, tiles_tall=1
+    )
+    expected = [row[:] for row in grid]
+    for row in range(8):
+        expected[row][8:16] = list(reversed(tile_1[row]))
+
+    insert_mapped_block(
+        rom,
+        tiles_offset,
+        tilemap_offset,
+        expected,
+        tiles_wide=3,
+        tiles_tall=1,
+    )
+
+    actual, _, _ = extract_mapped_block(
+        bytes(rom), tiles_offset, tilemap_offset, tiles_wide=3, tiles_tall=1
+    )
+    assert actual == expected
+
+
 def test_insert_mapped_block_rejects_conflicting_shared_tile_edits():
     tiles = grid_to_tiles([[5] * 8 for _ in range(8)], 1, 1)
     rom, tiles_offset, tilemap_offset = _make_rom_with_tilemap(tiles, [0, 0])
