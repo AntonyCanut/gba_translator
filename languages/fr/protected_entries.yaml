@@ -894,11 +894,15 @@ entries:
   - C'est le jour des jambes !\nMarche {STR_VAR_1} pas pour\nmuscler tes mollets.
   - It's leg day! Walk {STR_VAR_1} steps to\nwork out those calves.
 - offset: '0x1F5605C'
-  name: 'Menu Missions : onglet Active'
-  issue: '#116'
-  expected: Active
+  name: 'Menu Missions : onglet Actives'
+  # #116 l'avait raccourci en « Active » parce que le moteur collait alors le
+  # suffixe partagé « Missions » (« ActivesMissions » débordait). #114 a vidé ce
+  # suffixe : l'onglet n'affiche plus que la catégorie, « Actives » (7 car.) tient
+  # donc largement — « Inactives » (9 car.) s'affiche déjà sans souci.
+  issue: '#46'
+  expected: Actives
   forbidden:
-  - Actives
+  - Active
 - offset: '0x1F030EE'
   name: 'Dresco shop NPC: Repousses dialogue'
   issue: '#112'
