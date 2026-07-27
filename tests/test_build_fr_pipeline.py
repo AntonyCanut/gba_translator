@@ -50,6 +50,10 @@ PARENT_REGRESSION_SELECTORS = (
     "tests/test_patch_pc_move_labels_fr.py::TestBuiltRom::test_mail_move_to_bag",
     "tests/unit/fr/test_world_map_action_labels.py"
     "::test_world_map_cancel_pointers_render_short_label",
+    # #46 : les onglets du menu Missions sont marqués « rom », donc exclus de
+    # make test-python-fast (et du hook pré-commit) — seul ce gate de build les
+    # exécute, sur la ROM réellement livrée.
+    "tests/e2e/fr/test_mission_tab_labels.py",
 )
 
 _ASSIGN_RE = re.compile(r"^([A-Za-z_][A-Za-z0-9_]*)\s*:?=\s*(.*)$")
