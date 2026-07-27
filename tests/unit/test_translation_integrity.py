@@ -117,6 +117,20 @@ class TestRealRepo:
         assert entry.expected == "Tu as collecté {COLOR}É{STR_VAR_3}%{COLOR}Á\\nde cellules."
         assert "Tu as collecté {COLOR}É{STR_VAR_3} pour cent{COLOR}Á\\nde cellules." in entry.forbidden
 
+    def test_issue_46_mission_active_tab_stays_plural(self):
+        # 0x1F5605C a fait l'aller-retour deux fois : #46 l'avait mis au féminin
+        # pluriel, #116 l'a raccourci en « Active » à cause du suffixe partagé
+        # « Missions » collé par le moteur, puis #114 a vidé ce suffixe sans
+        # restaurer le pluriel. Le garde doit maintenant interdire le singulier.
+        fr = [t for t in cti.discover_languages() if t[0] == "fr"]
+        assert fr
+        entries = cti.load_manifest(fr[0][2])
+        by_offset = {entry.offset: entry for entry in entries}
+        assert 0x1F5605C in by_offset
+        entry = by_offset[0x1F5605C]
+        assert entry.expected == "Actives"
+        assert "Active" in entry.forbidden
+
     def test_main_returns_zero_on_real_repo(self):
         assert cti.main([]) == 0
 
