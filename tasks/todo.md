@@ -35,8 +35,8 @@
 - [x] Ajouter les gardes rouges pour la traduction et la réinjection remappée.
 - [x] Intégrer uniquement le dessin « BADGES DE LIGUE » dans l’asset versionné.
 - [x] Brancher le verso sur `make build-fr`.
-- [ ] Reconstruire la ROM FR et comparer l’écran mappé aux pixels attendus.
-- [ ] Exécuter les validations, relire, committer et intégrer sans push.
+- [x] Reconstruire la ROM FR et comparer l’écran mappé aux pixels attendus.
+- [x] Exécuter les validations, relire, committer et intégrer sans push.
 
 ## Revue
 
@@ -55,6 +55,16 @@
 - Vérifications : 34 tests sprites ciblés, puis 1 557 tests Python rapides
   réussis (1 scénario optionnel préexistant ignoré), compilation Python,
   lint ciblé et `git diff --check`.
+- Le BMP joint au commentaire a été récupéré et contrôlé comme image indexée
+  4 bpp de 256 × 160 ; seule sa zone « BADGES DE LIGUE » a été importée afin
+  de préserver les pixels décoratifs que la contribution modifiait aussi.
+- La réinjection déduplique désormais les tuiles équivalentes par flips et
+  remappe deux cellules de la tilemap ; la planche conserve ses 6 688 octets.
+  Le rendu extrait de la ROM construite correspond pixel pour pixel au PNG.
+- Le hook a validé 1 563 tests Python (1 ignoré), 68 tests Vitest et les builds
+  FR/IT/DE sans collision. `make test-rom` a confirmé le rebuild déterministe,
+  12 gardes de reconstruction et 533 tests ROM ; 35 scénarios optionnels ont
+  été ignorés.
 
 # Issue #150 — description CT108
 

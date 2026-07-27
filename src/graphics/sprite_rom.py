@@ -383,7 +383,7 @@ def insert_mapped_block(
                     {
                         min(variants_by_cell[cell])
                         for cell, entry in enumerate(entries)
-                        if entry & TILEMAP_INDEX_MASK == tile_index
+                        if (entry & TILEMAP_INDEX_MASK) == tile_index
                     }
                 )
                 > 1
@@ -431,7 +431,9 @@ def insert_mapped_block(
         assign_existing_index(canonical, set())
 
     used_indices = set(assigned_groups)
-    free_indices = iter(index for index in range(tile_count) if index not in used_indices)
+    free_indices = iter(
+        index for index in range(tile_count) if index not in used_indices
+    )
     for canonical in ordered_groups:
         if canonical not in assignments:
             assignments[canonical] = next(free_indices)
@@ -443,7 +445,7 @@ def insert_mapped_block(
             (
                 cell
                 for cell in cells
-                if entries[cell] & TILEMAP_INDEX_MASK == tile_index
+                if (entries[cell] & TILEMAP_INDEX_MASK) == tile_index
             ),
             cells[0],
         )

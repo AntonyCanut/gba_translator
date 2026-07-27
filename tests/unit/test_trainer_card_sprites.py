@@ -104,7 +104,7 @@ def test_built_french_rom_contains_trainer_card_back_asset() -> None:
     sprite = SPRITES["trainer_card_back"]
     _, _, expected = read_indexed_image(BACK_ASSET)
 
-    actual, _, _ = extract_mapped_block(
+    actual, decompressed_len, _ = extract_mapped_block(
         BUILT_ROM.read_bytes(),
         sprite.blocks[0],
         sprite.tilemaps[0],
@@ -113,4 +113,5 @@ def test_built_french_rom_contains_trainer_card_back_asset() -> None:
         compressed=sprite.compressed,
     )
 
+    assert decompressed_len == 6_688
     assert actual == expected
