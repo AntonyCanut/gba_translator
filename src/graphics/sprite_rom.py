@@ -211,6 +211,7 @@ def extract_block(
     tiles_tall: int,
     compressed: bool = True,
     bits_per_pixel: int = 4,
+    start_tile: int = 0,
 ) -> tuple[Grid, int, int]:
     """Return the pixel grid for the sprite block at *offset*.
 
@@ -219,27 +220,35 @@ def extract_block(
     keyboard's help panel — are instead stored as a flat run of raw 4bpp
     tiles with no compression; pass ``compressed=False`` for those.
 
+    ``start_tile`` sélectionne une fenêtre contiguë à l’intérieur du bloc sans
+    exposer ni réécrire les tuiles qui la précèdent.
+
     Returns ``(grid, decompressed_len, compressed_len)``. Raises ``ValueError``
     if the block can't be decompressed or is smaller than the sprite needs.
     """
-    needed = tiles_wide * tiles_tall * _tile_bytes(bits_per_pixel)
+    if start_tile < 0:
+        raise ValueError("start_tile must be non-negative")
+    tile_bytes = _tile_bytes(bits_per_pixel)
+    needed = tiles_wide * tiles_tall * tile_bytes
+    start = start_tile * tile_bytes
+    end = start + needed
     if not compressed:
-        if offset + needed > len(rom):
+        if offset + end > len(rom):
             raise ValueError(f"0x{offset:08X}: raw block overflows ROM")
-        raw = rom[offset:offset + needed]
+        raw = rom[offset + start:offset + end]
         grid = tiles_to_grid(raw, tiles_wide, tiles_tall, bits_per_pixel)
-        return grid, needed, needed
+        return grid, end, end
 
     result = lz77_decompress(rom, offset)
     if result is None:
         raise ValueError(f"0x{offset:08X}: failed to decompress LZ77 block")
     decompressed, comp_len = result
-    if len(decompressed) < needed:
+    if len(decompressed) < end:
         raise ValueError(
-            f"0x{offset:08X}: decompressed size {len(decompressed)} < needed {needed}"
+            f"0x{offset:08X}: decompressed size {len(decompressed)} < needed {end}"
         )
     grid = tiles_to_grid(
-        decompressed[:needed], tiles_wide, tiles_tall, bits_per_pixel
+        decompressed[start:end], tiles_wide, tiles_tall, bits_per_pixel
     )
     return grid, len(decompressed), comp_len
 
@@ -310,11 +319,17 @@ def extract_mapped_block(
     return grid, len(tiles), comp_len
 
 
-def insert_block(rom: bytearray, offset: int, grid: Grid,
-                  tiles_wide: int, tiles_tall: int,
-                  compressed: bool = True,
-                  vram_safe: bool = True,
-                  bits_per_pixel: int = 4) -> None:
+def insert_block(
+    rom: bytearray,
+    offset: int,
+    grid: Grid,
+    tiles_wide: int,
+    tiles_tall: int,
+    compressed: bool = True,
+    vram_safe: bool = True,
+    bits_per_pixel: int = 4,
+    start_tile: int = 0,
+) -> None:
     """Re-encode *grid* into tiles and write it back at *offset*.
 
     When *compressed* is true (the default), recompress with LZ77; raises
@@ -323,12 +338,18 @@ def insert_block(rom: bytearray, offset: int, grid: Grid,
     the conservative direct-to-VRAM stream by default; fixed slots known to
     accept normal LZ77 can disable it for a smaller stream. When *compressed*
     is false, the tiles are written back raw — see ``extract_block``.
+    ``start_tile`` limite l’écriture à une fenêtre contiguë du bloc.
     """
-    needed = tiles_wide * tiles_tall * _tile_bytes(bits_per_pixel)
+    if start_tile < 0:
+        raise ValueError("start_tile must be non-negative")
+    tile_bytes = _tile_bytes(bits_per_pixel)
+    needed = tiles_wide * tiles_tall * tile_bytes
+    start = start_tile * tile_bytes
+    end = start + needed
     if not compressed:
-        if offset + needed > len(rom):
+        if offset + end > len(rom):
             raise ValueError(f"0x{offset:08X}: raw block overflows ROM")
-        rom[offset:offset + needed] = grid_to_tiles(
+        rom[offset + start:offset + end] = grid_to_tiles(
             grid, tiles_wide, tiles_tall, bits_per_pixel
         )
         return
@@ -337,13 +358,13 @@ def insert_block(rom: bytearray, offset: int, grid: Grid,
     if result is None:
         raise ValueError(f"0x{offset:08X}: failed to decompress LZ77 block")
     decompressed, comp_len = result
-    if len(decompressed) < needed:
+    if len(decompressed) < end:
         raise ValueError(
-            f"0x{offset:08X}: decompressed size {len(decompressed)} < needed {needed}"
+            f"0x{offset:08X}: decompressed size {len(decompressed)} < needed {end}"
         )
 
     tiles = bytearray(decompressed)
-    tiles[:needed] = grid_to_tiles(
+    tiles[start:end] = grid_to_tiles(
         grid, tiles_wide, tiles_tall, bits_per_pixel
     )
     _write_block_payload(

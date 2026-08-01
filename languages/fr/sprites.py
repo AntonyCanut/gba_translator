@@ -36,6 +36,10 @@ class SpriteDef:
     # palette *indices* are re-injected, but embedding the real colours makes
     # the extracted image legible in an editor instead of a debug-coloured mess.
     palette: int | None = None
+    # Optional first tile for a partial view into each block. Empty means tile
+    # zero for every block. This keeps small editable labels independent from
+    # the rest of a large shared tileset.
+    start_tiles: tuple[int, ...] = ()
 
     def __post_init__(self) -> None:
         """Valide l'appariement des planches et tilemaps."""
@@ -43,6 +47,8 @@ class SpriteDef:
             raise ValueError("SpriteDef bits_per_pixel must be 4 or 8")
         if self.tilemaps and len(self.tilemaps) != len(self.blocks):
             raise ValueError("SpriteDef requires one tilemap per block")
+        if self.start_tiles and len(self.start_tiles) != len(self.blocks):
+            raise ValueError("SpriteDef requires one start tile per block")
 
 
 SPRITES: dict[str, SpriteDef] = {
@@ -117,6 +123,16 @@ SPRITES: dict[str, SpriteDef] = {
         blocks=(0x00EF1B68,),
         tiles_wide=13,
         tiles_tall=4,
+    ),
+    # Exterior Pokémon Mart sign (GitHub issue #152): the four-letter word
+    # occupies tiles 413-414 of the live Unbound primary overworld tileset.
+    # Only this 16x8 window is exposed, preserving the other 638 tiles.
+    "pokemon_mart_sign": SpriteDef(
+        blocks=(0x00CF91A0,),
+        start_tiles=(413,),
+        tiles_wide=2,
+        tiles_tall=1,
+        palette=0x00EA1BC8,
     ),
     # Trainer Card front and back (GitHub issue #148): the headings
     # "TRAINER CARD" and "LEAGUE BADGES" are baked into separate LZ77

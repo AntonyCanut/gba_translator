@@ -110,6 +110,23 @@ def test_extract_block_decodes_known_tiles():
     assert all(px == 5 for row in grid for px in row)
 
 
+def test_extract_block_selects_tiles_after_start_offset():
+    """Une fenêtre partielle doit ignorer les tuiles qui la précèdent."""
+    tiles = b"".join(bytes([index * 0x11]) * TILE_BYTES for index in (1, 2, 3))
+    rom, offset, _ = _make_rom_with_block(tiles)
+
+    grid, dec_len, _ = extract_block(
+        bytes(rom),
+        offset,
+        tiles_wide=1,
+        tiles_tall=1,
+        start_tile=1,
+    )
+
+    assert dec_len == 3 * TILE_BYTES
+    assert all(pixel == 2 for row in grid for pixel in row)
+
+
 def test_extract_block_rejects_undersized_block():
     tiles = bytes([0x00] * TILE_BYTES)  # only 1 tile available
     rom, offset, _ = _make_rom_with_block(tiles)
@@ -135,6 +152,27 @@ def test_insert_block_round_trip():
     needed = tiles_wide * tiles_tall * TILE_BYTES
     round_tripped_grid = tiles_to_grid(decompressed[:needed], tiles_wide, tiles_tall)
     assert round_tripped_grid == new_grid
+
+
+def test_insert_block_replaces_only_selected_tile_window():
+    """La réinjection partielle doit préserver les tuiles voisines."""
+    original = b"".join(bytes([index * 0x11]) * TILE_BYTES for index in (1, 2, 3))
+    rom, offset, _ = _make_rom_with_block(original, pad_after=64)
+    replacement = [[4] * 8 for _ in range(8)]
+
+    insert_block(
+        rom,
+        offset,
+        replacement,
+        tiles_wide=1,
+        tiles_tall=1,
+        start_tile=1,
+    )
+
+    result = lz77_decompress(bytes(rom), offset)
+    assert result is not None
+    expected = original[:TILE_BYTES] + bytes([0x44]) * TILE_BYTES + original[2 * TILE_BYTES:]
+    assert result[0] == expected
 
 
 def test_insert_block_avoids_odd_overlapping_vram_references():

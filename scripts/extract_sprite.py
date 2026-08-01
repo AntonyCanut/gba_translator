@@ -103,10 +103,16 @@ def main() -> int:
                 bits_per_pixel=sprite.bits_per_pixel,
             )
         else:
+            start_tile = (
+                sprite.start_tiles[index]
+                if sprite.start_tiles
+                else 0
+            )
             grid, dec_len, comp_len = extract_block(
                 rom, offset, sprite.tiles_wide, sprite.tiles_tall,
                 compressed=sprite.compressed,
                 bits_per_pixel=sprite.bits_per_pixel,
+                start_tile=start_tile,
             )
         out = variant_path(args.out, index) if args.all_blocks else args.out
         try:

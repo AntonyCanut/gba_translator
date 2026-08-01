@@ -55,6 +55,21 @@
 - La revue finale ne relève aucun écart critique, important ou mineur, et
   l’issue GitHub #153 est clôturée avec l’état `COMPLETED`.
 
+# Issue #152 — enseigne Boutique Pokémon « SHOP »
+
+- [x] Lire l’issue et confirmer que « MART » est un graphisme de tileset.
+- [x] Localiser le bloc LZ77 vivant et les tuiles exactes de l’enseigne.
+- [x] Formaliser l’extraction partielle et la réinjection sûre.
+- [ ] Ajouter les tests rouges sur la fenêtre de tuiles, l’asset et le build.
+- [ ] Étendre le pipeline sprite et extraire le PNG éditable.
+- [ ] Redessiner « MART » en « SHOP » et brancher le bloc vivant au build FR.
+- [ ] Reconstruire la ROM et comparer les tuiles décompressées à l’asset.
+- [ ] Exécuter les validations, relire, committer et clôturer l’issue.
+
+## Revue
+
+- En cours.
+
 # Issue #149 — réouverture : corriger le vrai libellé de montée de niveau
 
 ## Diagnostic et conception
