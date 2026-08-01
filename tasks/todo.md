@@ -21,6 +21,28 @@
   39 tests graphiques ciblés, 1 615 tests Python rapides réussis avec un skip
   préexistant, `uvx ruff check` et `git diff --check` sans diagnostic.
 
+# Issue #153 — Majuscule à « Précision » en combat
+
+## Diagnostic et conception
+
+- Le message de variation de statistique compose le nom depuis la table pointée
+  à `0x3FD5E8`; dans la ROM FR actuelle, ce pointeur cible `0x904E37` et décode
+  « précision ».
+- La source active est l’entrée unique `0x3FD5B8` de
+  `languages/fr/combined_fr.txt`.
+- La correction minimale conserve le mécanisme existant et remplace uniquement
+  cette valeur par « Précision », de même longueur encodée.
+
+## Plan validé
+
+- [x] Ajouter une régression rouge sur la casse du nom de statistique.
+- [x] Corriger chirurgicalement l’entrée active et la protéger dans le manifeste.
+- [x] Exécuter la garde ciblée puis committer les sources avant le build.
+- [ ] Régénérer la traduction et reconstruire la ROM française.
+- [ ] Suivre le pointeur vivant et décoder « Précision » dans la ROM produite.
+- [ ] Exécuter les validations pertinentes, relire le diff et intégrer localement.
+- [ ] Commenter puis clôturer l’issue GitHub avec l’état `completed`.
+
 # Issue #149 — réouverture : corriger le vrai libellé de montée de niveau
 
 ## Diagnostic et conception

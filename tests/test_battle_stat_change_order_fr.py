@@ -53,6 +53,7 @@ ATK_TEMPLATES = (0x3FCB5F, 0x3FCB8F)
 DEF_TEMPLATES = (0x3FCB6A, 0x3FCB9A)
 MODIFIERS = (0x3FCB41, 0x3FCB50)
 VERB_BUFFERS = (0x3FCB4A, 0x3FCB59)
+ACCURACY_STAT_NAME = 0x3FD5B8
 
 
 def _last_entries() -> dict[int, str]:
@@ -86,6 +87,13 @@ def test_templates_use_control_byte_not_brace_syntax():
         text = entries[off]
         assert "{FD" not in text, f"{off:#x} uses brace syntax (encodes as garbage): {text!r}"
         assert "<0xFD>" in text, f"{off:#x} missing control-byte tokens: {text!r}"
+
+
+def test_accuracy_stat_name_starts_with_uppercase():
+    """Le nom injecté dans le message de combat doit être « Précision »."""
+    entries = _last_entries()
+
+    assert entries[ACCURACY_STAT_NAME] == "Précision"
 
 
 def test_stat_precedes_name_in_source():
