@@ -42,9 +42,12 @@ from __future__ import annotations
 import re
 from pathlib import Path
 
-from src.core.text_codec import TextEncoder
+import pytest
+
+from src.core.text_codec import TextDecoder, TextEncoder
 
 COMBINED = Path(__file__).resolve().parent.parent / "languages/fr/combined_fr.txt"
+FR_ROM = Path(__file__).resolve().parent.parent / "output/roms/GenedRom-fr.gba"
 
 # rise-direction templates / fall-direction templates
 RISE_TEMPLATES = (0x3FCB5F, 0x3FCB6A)
@@ -54,6 +57,8 @@ DEF_TEMPLATES = (0x3FCB6A, 0x3FCB9A)
 MODIFIERS = (0x3FCB41, 0x3FCB50)
 VERB_BUFFERS = (0x3FCB4A, 0x3FCB59)
 ACCURACY_STAT_NAME = 0x3FD5B8
+ACCURACY_POINTER_SITE = 0x3FD5E8
+GBA_ROM_BASE = 0x08000000
 
 
 def _last_entries() -> dict[int, str]:
@@ -94,6 +99,17 @@ def test_accuracy_stat_name_starts_with_uppercase():
     entries = _last_entries()
 
     assert entries[ACCURACY_STAT_NAME] == "Précision"
+
+
+@pytest.mark.rom
+def test_built_rom_accuracy_pointer_renders_uppercase():
+    """Le pointeur consommé en combat doit résoudre « Précision » dans la ROM."""
+    rom = FR_ROM.read_bytes()
+    pointer = int.from_bytes(rom[ACCURACY_POINTER_SITE : ACCURACY_POINTER_SITE + 4], "little")
+    target = pointer - GBA_ROM_BASE
+    end = rom.index(0xFF, target) + 1
+
+    assert TextDecoder.decode_pokemon(rom[target:end]) == "Précision"
 
 
 def test_stat_precedes_name_in_source():

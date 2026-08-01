@@ -38,10 +38,22 @@
 - [x] Ajouter une régression rouge sur la casse du nom de statistique.
 - [x] Corriger chirurgicalement l’entrée active et la protéger dans le manifeste.
 - [x] Exécuter la garde ciblée puis committer les sources avant le build.
-- [ ] Régénérer la traduction et reconstruire la ROM française.
-- [ ] Suivre le pointeur vivant et décoder « Précision » dans la ROM produite.
-- [ ] Exécuter les validations pertinentes, relire le diff et intégrer localement.
-- [ ] Commenter puis clôturer l’issue GitHub avec l’état `completed`.
+- [x] Régénérer la traduction et reconstruire la ROM française.
+- [x] Suivre le pointeur vivant et décoder « Précision » dans la ROM produite.
+- [x] Exécuter les validations pertinentes, relire le diff et intégrer localement.
+- [x] Commenter puis clôturer l’issue GitHub avec l’état `completed`.
+
+## Revue
+
+- L’entrée active `0x3FD5B8` contient désormais « Précision » et le manifeste
+  d’intégrité interdit explicitement le retour à la casse minuscule.
+- Après reconstruction, le pointeur vivant `0x3FD5E8` cible `0x904D33` et la
+  séquence `CA E6 1B D7 DD E7 DD E3 E2 FF` se décode exactement en
+  « Précision », terminateur compris.
+- Deux builds FR successifs sont byte-identiques ; les tests ciblés, les gardes
+  de reconstruction et `make test-rom` sont verts (557 réussis, 35 ignorés).
+- La revue finale ne relève aucun écart critique, important ou mineur, et
+  l’issue GitHub #153 est clôturée avec l’état `COMPLETED`.
 
 # Issue #149 — réouverture : corriger le vrai libellé de montée de niveau
 
