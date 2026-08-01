@@ -1,9 +1,9 @@
-"""PNG indexé <-> grille de pixels 4 bpp pour les sprites GBA.
+"""PNG indexé <-> grille de pixels 4/8 bpp pour les sprites GBA.
 
-Les indices de palette 0 à 15 sont les données utiles : les couleurs RGB de
-la palette embarquée ne servent qu'à la prévisualisation. L'écriture produit
-un PNG indexé 4 bpp standard. La lecture accepte aussi le PNG indexé 8 bpp
-souvent généré par les éditeurs graphiques après une retouche.
+Les indices de palette sont les données utiles : les couleurs RGB de la
+palette embarquée ne servent qu'à la prévisualisation. L'écriture produit un
+PNG indexé 4 bpp (16 couleurs) ou 8 bpp (256 couleurs). La lecture accepte les
+deux profondeurs, y compris après une retouche dans un éditeur graphique.
 """
 
 from __future__ import annotations
@@ -31,13 +31,13 @@ def _chunk(kind: bytes, payload: bytes) -> bytes:
     )
 
 
-def _validate_grid(width: int, height: int, grid: Grid) -> None:
+def _validate_grid(width: int, height: int, grid: Grid, max_index: int) -> None:
     if width <= 0 or height <= 0:
         raise ValueError("width and height must be positive")
     if len(grid) != height or any(len(row) != width for row in grid):
         raise ValueError(f"grid must be {height}x{width}")
-    if any(not 0 <= pixel <= 15 for row in grid for pixel in row):
-        raise ValueError("pixel indices must be in the 0..15 range")
+    if any(not 0 <= pixel <= max_index for row in grid for pixel in row):
+        raise ValueError(f"pixel indices must be in the 0..{max_index} range")
 
 
 def write_indexed_png(
@@ -47,20 +47,24 @@ def write_indexed_png(
     grid: Grid,
     palette: Palette = DEFAULT_PALETTE,
 ) -> None:
-    """Écrit *grid* dans un PNG indexé 4 bpp à palette de 16 couleurs."""
-    if len(palette) != 16:
-        raise ValueError("palette must have exactly 16 entries")
-    _validate_grid(width, height, grid)
+    """Écrit *grid* dans un PNG indexé 4 ou 8 bpp."""
+    if len(palette) not in (16, 256):
+        raise ValueError("palette must have exactly 16 or 256 entries")
+    bit_depth = 4 if len(palette) == 16 else 8
+    _validate_grid(width, height, grid, len(palette) - 1)
 
     rows = bytearray()
     for row in grid:
         rows.append(0)  # filtre PNG « None »
-        for x in range(0, width, 2):
-            left = row[x]
-            right = row[x + 1] if x + 1 < width else 0
-            rows.append((left << 4) | right)
+        if bit_depth == 4:
+            for x in range(0, width, 2):
+                left = row[x]
+                right = row[x + 1] if x + 1 < width else 0
+                rows.append((left << 4) | right)
+        else:
+            rows.extend(row)
 
-    ihdr = struct.pack(">IIBBBBB", width, height, 4, 3, 0, 0, 0)
+    ihdr = struct.pack(">IIBBBBB", width, height, bit_depth, 3, 0, 0, 0)
     plte = b"".join(bytes(rgb) for rgb in palette)
     path.write_bytes(
         _SIGNATURE
@@ -177,6 +181,9 @@ def read_indexed_png(path: Path) -> tuple[int, int, Grid]:
         raise ValueError(f"{path}: unsupported PNG encoding")
     if len(palette) < 3 or len(palette) % 3:
         raise ValueError(f"{path}: invalid PNG palette")
+    palette_colours = len(palette) // 3
+    if palette_colours > 256:
+        raise ValueError(f"{path}: indexed PNG palette exceeds 256 colours")
 
     row_bytes = (width * bit_depth + 7) // 8
     try:
@@ -194,7 +201,7 @@ def read_indexed_png(path: Path) -> tuple[int, int, Grid]:
             ]
         else:
             row = list(packed[:width])
-        if any(pixel > 15 for pixel in row):
-            raise ValueError(f"{path}: palette indices above 15 cannot fit GBA 4bpp")
+        if any(pixel >= palette_colours for pixel in row):
+            raise ValueError(f"{path}: pixel index exceeds the PNG palette")
         grid.append(row)
     return width, height, grid

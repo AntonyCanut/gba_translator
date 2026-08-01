@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Insert a 4bpp indexed .png/.bmp into a named UI sprite's ROM location(s).
+"""Insert an indexed .png/.bmp into a named UI sprite's ROM location(s).
 
 Single-block sprites need no selector. For a sprite with palette-specific
 copies, pass ``--block-index`` for one image or ``--all-blocks`` to consume
@@ -152,6 +152,7 @@ def main() -> int:
                     sprite.tiles_tall,
                     compressed=sprite.compressed,
                     vram_safe=sprite.vram_safe,
+                    bits_per_pixel=sprite.bits_per_pixel,
                 )
             else:
                 insert_block(
@@ -162,6 +163,7 @@ def main() -> int:
                     sprite.tiles_tall,
                     compressed=sprite.compressed,
                     vram_safe=sprite.vram_safe,
+                    bits_per_pixel=sprite.bits_per_pixel,
                 )
         except ValueError as exc:
             print(f"  WARN {args.sprite}[{i}] @ 0x{offset:08X}: {exc} — skip", file=sys.stderr)

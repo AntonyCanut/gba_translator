@@ -3,8 +3,8 @@
 block (ticket F-108).
 
 This is the ROM-facing half of the sprite pipeline: it converts between a
-flat run of 4bpp 8x8 tiles (as stored inside an LZ77 block) and the pixel
-grid consumed by ``sprite_bmp``. Recompression follows the same
+flat run of 4/8bpp 8x8 tiles (as stored inside an LZ77 block) and the pixel
+grid consumed by ``sprite_image``. Recompression follows the same
 padding-tolerant overflow rule already used by ``status_badges.py`` /
 ``hp_labels.py``: a recompressed block may grow past the original compressed
 length as long as the extra bytes it would overwrite are 0x00/0xFF padding.
@@ -26,6 +26,7 @@ from languages.fr.patches.font import (  # noqa: E402
 )
 
 TILE_BYTES = 32  # bytes per 4bpp 8x8 tile
+TILE_BYTES_8BPP = 64
 TILE_PX = 8
 TILEMAP_INDEX_MASK = 0x03FF
 TILEMAP_HFLIP = 0x0400
@@ -38,17 +39,51 @@ Palette = list[tuple[int, int, int]]
 PALETTE_COLOURS = 16
 
 
-def read_gba_palette(rom: bytes, offset: int) -> Palette:
-    """Lit une palette GBA de 16 couleurs BGR555 et la rend en RGB 8 bits.
+def _tile_bytes(bits_per_pixel: int) -> int:
+    """Retourne la taille d’une tuile GBA pour la profondeur demandée."""
+    if bits_per_pixel == 4:
+        return TILE_BYTES
+    if bits_per_pixel == 8:
+        return TILE_BYTES_8BPP
+    raise ValueError("bits_per_pixel must be 4 or 8")
+
+
+def _tile_to_pixels(tile: bytes, bits_per_pixel: int) -> list[int]:
+    """Décode une tuile GBA 4 ou 8 bpp en 64 indices de palette."""
+    if bits_per_pixel == 4:
+        return tile_to_pixels(tile)
+    _tile_bytes(bits_per_pixel)
+    return list(tile)
+
+
+def _pixels_to_tile(pixels: list[int], bits_per_pixel: int) -> bytes:
+    """Encode 64 indices de palette en tuile GBA 4 ou 8 bpp."""
+    max_index = (1 << bits_per_pixel) - 1
+    if any(not 0 <= pixel <= max_index for pixel in pixels):
+        raise ValueError(f"pixel indices must be in the 0..{max_index} range")
+    if bits_per_pixel == 4:
+        return pixels_to_tile(pixels)
+    _tile_bytes(bits_per_pixel)
+    return bytes(pixels)
+
+
+def read_gba_palette(
+    rom: bytes,
+    offset: int,
+    colours: int = PALETTE_COLOURS,
+) -> Palette:
+    """Lit une palette GBA BGR555 et la rend en RGB 8 bits.
 
     Sert d'aperçu fidèle dans les images indexées extraites : sans elle, un
     éditeur ouvre la planche avec la palette de debug et les images-mots sont
     illisibles. Seuls les *indices* comptent pour la réinjection.
     """
-    if offset + 2 * PALETTE_COLOURS > len(rom):
+    if colours not in (16, 256):
+        raise ValueError("palette colours must be 16 or 256")
+    if offset + 2 * colours > len(rom):
         raise ValueError(f"palette 0x{offset:08X} hors de la ROM")
     palette: Palette = []
-    for index in range(PALETTE_COLOURS):
+    for index in range(colours):
         raw = rom[offset + 2 * index] | (rom[offset + 2 * index + 1] << 8)
         palette.append((
             (raw & 0x1F) * 255 // 31,
@@ -58,17 +93,23 @@ def read_gba_palette(rom: bytes, offset: int) -> Palette:
     return palette
 
 
-def tiles_to_grid(tiles: bytes, tiles_wide: int, tiles_tall: int) -> Grid:
+def tiles_to_grid(
+    tiles: bytes,
+    tiles_wide: int,
+    tiles_tall: int,
+    bits_per_pixel: int = 4,
+) -> Grid:
     """Arrange a flat run of tiles (row-major, ``tiles_wide`` per row) into a
     single pixel grid of size ``tiles_tall*8`` rows x ``tiles_wide*8`` cols."""
     width = tiles_wide * TILE_PX
     height = tiles_tall * TILE_PX
+    tile_bytes = _tile_bytes(bits_per_pixel)
     grid: Grid = [[0] * width for _ in range(height)]
     for ty in range(tiles_tall):
         for tx in range(tiles_wide):
             idx = ty * tiles_wide + tx
-            tile_bytes = tiles[idx * TILE_BYTES:(idx + 1) * TILE_BYTES]
-            pixels = tile_to_pixels(tile_bytes)
+            tile = tiles[idx * tile_bytes:(idx + 1) * tile_bytes]
+            pixels = _tile_to_pixels(tile, bits_per_pixel)
             for r in range(TILE_PX):
                 row = grid[ty * TILE_PX + r]
                 base = r * TILE_PX
@@ -76,7 +117,12 @@ def tiles_to_grid(tiles: bytes, tiles_wide: int, tiles_tall: int) -> Grid:
     return grid
 
 
-def grid_to_tiles(grid: Grid, tiles_wide: int, tiles_tall: int) -> bytes:
+def grid_to_tiles(
+    grid: Grid,
+    tiles_wide: int,
+    tiles_tall: int,
+    bits_per_pixel: int = 4,
+) -> bytes:
     """Inverse of ``tiles_to_grid``."""
     out = bytearray()
     for ty in range(tiles_tall):
@@ -85,7 +131,7 @@ def grid_to_tiles(grid: Grid, tiles_wide: int, tiles_tall: int) -> bytes:
             for r in range(TILE_PX):
                 row = grid[ty * TILE_PX + r]
                 pixels.extend(row[tx * TILE_PX:tx * TILE_PX + TILE_PX])
-            out.extend(pixels_to_tile(pixels))
+            out.extend(_pixels_to_tile(pixels, bits_per_pixel))
     return bytes(out)
 
 
@@ -158,8 +204,14 @@ def _write_block_payload(
     rom[offset:offset + len(compressed_out)] = compressed_out
 
 
-def extract_block(rom: bytes, offset: int, tiles_wide: int, tiles_tall: int,
-                   compressed: bool = True) -> tuple[Grid, int, int]:
+def extract_block(
+    rom: bytes,
+    offset: int,
+    tiles_wide: int,
+    tiles_tall: int,
+    compressed: bool = True,
+    bits_per_pixel: int = 4,
+) -> tuple[Grid, int, int]:
     """Return the pixel grid for the sprite block at *offset*.
 
     When *compressed* is true (the default) the block is an LZ77-compressed
@@ -170,12 +222,12 @@ def extract_block(rom: bytes, offset: int, tiles_wide: int, tiles_tall: int,
     Returns ``(grid, decompressed_len, compressed_len)``. Raises ``ValueError``
     if the block can't be decompressed or is smaller than the sprite needs.
     """
-    needed = tiles_wide * tiles_tall * TILE_BYTES
+    needed = tiles_wide * tiles_tall * _tile_bytes(bits_per_pixel)
     if not compressed:
         if offset + needed > len(rom):
             raise ValueError(f"0x{offset:08X}: raw block overflows ROM")
         raw = rom[offset:offset + needed]
-        grid = tiles_to_grid(raw, tiles_wide, tiles_tall)
+        grid = tiles_to_grid(raw, tiles_wide, tiles_tall, bits_per_pixel)
         return grid, needed, needed
 
     result = lz77_decompress(rom, offset)
@@ -186,7 +238,9 @@ def extract_block(rom: bytes, offset: int, tiles_wide: int, tiles_tall: int,
         raise ValueError(
             f"0x{offset:08X}: decompressed size {len(decompressed)} < needed {needed}"
         )
-    grid = tiles_to_grid(decompressed[:needed], tiles_wide, tiles_tall)
+    grid = tiles_to_grid(
+        decompressed[:needed], tiles_wide, tiles_tall, bits_per_pixel
+    )
     return grid, len(decompressed), comp_len
 
 
@@ -198,6 +252,7 @@ def extract_mapped_block(
     tiles_tall: int,
     *,
     compressed: bool = True,
+    bits_per_pixel: int = 4,
 ) -> tuple[Grid, int, int]:
     """Reconstruit un écran de tuiles depuis une planche et sa tilemap.
 
@@ -215,7 +270,10 @@ def extract_mapped_block(
     """
     tilemap = _decompress_tilemap(rom, tilemap_offset, tiles_wide, tiles_tall)
     entries = _tilemap_entries(tilemap)
-    needed = (max(entry & TILEMAP_INDEX_MASK for entry in entries) + 1) * TILE_BYTES
+    tile_bytes = _tile_bytes(bits_per_pixel)
+    needed = (
+        max(entry & TILEMAP_INDEX_MASK for entry in entries) + 1
+    ) * tile_bytes
     if compressed:
         result = lz77_decompress(rom, tiles_offset)
         if result is None:
@@ -237,9 +295,9 @@ def extract_mapped_block(
     ]
     for cell, entry in enumerate(entries):
         tile_index = entry & TILEMAP_INDEX_MASK
-        tile = tiles[tile_index * TILE_BYTES:(tile_index + 1) * TILE_BYTES]
+        tile = tiles[tile_index * tile_bytes:(tile_index + 1) * tile_bytes]
         pixels = _flip_tile_pixels(
-            tile_to_pixels(tile),
+            _tile_to_pixels(tile, bits_per_pixel),
             bool(entry & TILEMAP_HFLIP),
             bool(entry & TILEMAP_VFLIP),
         )
@@ -255,7 +313,8 @@ def extract_mapped_block(
 def insert_block(rom: bytearray, offset: int, grid: Grid,
                   tiles_wide: int, tiles_tall: int,
                   compressed: bool = True,
-                  vram_safe: bool = True) -> None:
+                  vram_safe: bool = True,
+                  bits_per_pixel: int = 4) -> None:
     """Re-encode *grid* into tiles and write it back at *offset*.
 
     When *compressed* is true (the default), recompress with LZ77; raises
@@ -265,11 +324,13 @@ def insert_block(rom: bytearray, offset: int, grid: Grid,
     accept normal LZ77 can disable it for a smaller stream. When *compressed*
     is false, the tiles are written back raw — see ``extract_block``.
     """
-    needed = tiles_wide * tiles_tall * TILE_BYTES
+    needed = tiles_wide * tiles_tall * _tile_bytes(bits_per_pixel)
     if not compressed:
         if offset + needed > len(rom):
             raise ValueError(f"0x{offset:08X}: raw block overflows ROM")
-        rom[offset:offset + needed] = grid_to_tiles(grid, tiles_wide, tiles_tall)
+        rom[offset:offset + needed] = grid_to_tiles(
+            grid, tiles_wide, tiles_tall, bits_per_pixel
+        )
         return
 
     result = lz77_decompress(rom, offset)
@@ -282,7 +343,9 @@ def insert_block(rom: bytearray, offset: int, grid: Grid,
         )
 
     tiles = bytearray(decompressed)
-    tiles[:needed] = grid_to_tiles(grid, tiles_wide, tiles_tall)
+    tiles[:needed] = grid_to_tiles(
+        grid, tiles_wide, tiles_tall, bits_per_pixel
+    )
     _write_block_payload(
         rom,
         offset,
@@ -303,6 +366,7 @@ def insert_mapped_block(
     *,
     compressed: bool = True,
     vram_safe: bool = True,
+    bits_per_pixel: int = 4,
 ) -> None:
     """Réinjecte un écran mappé dans sa planche de tuiles.
 
@@ -331,7 +395,10 @@ def insert_mapped_block(
 
     tilemap = _decompress_tilemap(rom, tilemap_offset, tiles_wide, tiles_tall)
     entries = _tilemap_entries(tilemap)
-    needed = (max(entry & TILEMAP_INDEX_MASK for entry in entries) + 1) * TILE_BYTES
+    tile_bytes = _tile_bytes(bits_per_pixel)
+    needed = (
+        max(entry & TILEMAP_INDEX_MASK for entry in entries) + 1
+    ) * tile_bytes
     if compressed:
         result = lz77_decompress(rom, tiles_offset)
         if result is None:
@@ -359,7 +426,10 @@ def insert_mapped_block(
             for column in range(TILE_PX)
         ]
         variants = tuple(
-            pixels_to_tile(_flip_tile_pixels(rendered, horizontal, vertical))
+            _pixels_to_tile(
+                _flip_tile_pixels(rendered, horizontal, vertical),
+                bits_per_pixel,
+            )
             for horizontal, vertical in (
                 (False, False),
                 (True, False),
@@ -371,7 +441,7 @@ def insert_mapped_block(
         variants_by_cell.append(variants)
         desired_tiles.setdefault(canonical, []).append(cell)
 
-    tile_count = len(tiles) // TILE_BYTES
+    tile_count = len(tiles) // tile_bytes
     if len(desired_tiles) > tile_count:
         conflicting_index = next(
             (
@@ -454,8 +524,8 @@ def insert_mapped_block(
             | (2 if entries[preferred_cell] & TILEMAP_VFLIP else 0)
         )
         stored_tile = variants_by_cell[preferred_cell][preferred_flip]
-        start = tile_index * TILE_BYTES
-        tiles[start:start + TILE_BYTES] = stored_tile
+        start = tile_index * tile_bytes
+        tiles[start:start + tile_bytes] = stored_tile
         for cell in cells:
             flip_index = (
                 preferred_flip

@@ -593,3 +593,25 @@
   (1 ignoré), 68 tests Vitest et les builds FR/IT/DE.
 - `make test-rom` a confirmé deux rebuilds FR byte-identiques, 12 gardes de
   reconstruction et 554 tests ROM réussis (35 scénarios optionnels ignorés).
+# Issue #155 — graphisme éditable de l’écran titre
+
+- [x] Étendre le pipeline PNG et tuiles GBA au 8 bpp par cycles TDD.
+- [x] Enregistrer la planche, la tilemap et la palette de l’écran titre.
+- [x] Extraire `title_screen.png` et prouver son round-trip sur une copie de ROM.
+- [x] Exécuter les validations ciblées et élargies.
+- [x] Préparer le bilan GitHub et la clôture de l’issue en `completed`.
+
+## Revue
+
+- « PRESS START » est un graphisme BG1 8 bpp, pas une chaîne CFRU. Le registre
+  expose désormais la planche `0x01FD4854`, la tilemap `0x01FD6514` et la
+  palette 256 couleurs `0x01FD699C` sous le nom `title_screen`.
+- `languages/fr/sprites/title_screen.png` est un écran indexé éditable de
+  256 × 160. « APPUYEZ SUR START » tient dans la zone visible ; l’asset anglais
+  reste volontairement hors de `build-fr` jusqu’à validation du nouveau dessin.
+- Le pipeline PNG/tuiles accepte maintenant le 4 et le 8 bpp sans changer les
+  appels historiques. Les BMP restent strictement 4 bpp et rejettent les
+  indices qui auraient auparavant été tronqués silencieusement.
+- Le round-trip réel compare les tuiles et la tilemap décompressées, la palette
+  et les octets hors flux. Les validations finales comptent 1 619 tests Python
+  réussis (1 ignoré), 2 415 tests collectés et 68 tests Vitest réussis.

@@ -17,8 +17,10 @@ class SpriteDef:
     blocks: tuple[int, ...]
     tiles_wide: int
     tiles_tall: int
+    # Profondeur des indices de palette stockés dans chaque tuile GBA.
+    bits_per_pixel: int = 4
     # True (default): block is LZ77-compressed (magic byte 0x10), recompressed
-    # on insert. False: block is a flat run of raw/uncompressed 4bpp tiles at
+    # on insert. False: block is a flat run of raw/uncompressed 4/8bpp tiles at
     # a fixed size — used for small OBJ tilesets the engine DMAs directly
     # rather than decompressing (e.g. the naming-keyboard help panel).
     compressed: bool = True
@@ -30,13 +32,15 @@ class SpriteDef:
     # extraction reconstructs the mapped screen and insertion reverses that
     # composition instead of exposing a scrambled linear tilesheet.
     tilemaps: tuple[int, ...] = ()
-    # Optional ROM offset of the sheet's 16-colour BGR555 palette. Only the
+    # Optional ROM offset of the sheet's 16/256-colour BGR555 palette. Only the
     # palette *indices* are re-injected, but embedding the real colours makes
     # the extracted image legible in an editor instead of a debug-coloured mess.
     palette: int | None = None
 
     def __post_init__(self) -> None:
         """Valide l'appariement des planches et tilemaps."""
+        if self.bits_per_pixel not in (4, 8):
+            raise ValueError("SpriteDef bits_per_pixel must be 4 or 8")
         if self.tilemaps and len(self.tilemaps) != len(self.blocks):
             raise ValueError("SpriteDef requires one tilemap per block")
 
@@ -129,6 +133,18 @@ SPRITES: dict[str, SpriteDef] = {
         tilemaps=(0x01FDB2AC,),
         tiles_wide=32,
         tiles_tall=20,
+    ),
+    # Écran titre Unbound (GitHub issue #155) : BG1 8 bpp complet. La planche,
+    # la tilemap et la palette reconstruisent un PNG 256 × 160 où le dessin
+    # « PRESS START » peut être retouché directement. L’asset anglais n’est pas
+    # injecté par build-fr tant qu’un dessin français n’a pas été validé.
+    "title_screen": SpriteDef(
+        blocks=(0x01FD4854,),
+        tilemaps=(0x01FD6514,),
+        tiles_wide=32,
+        tiles_tall=20,
+        bits_per_pixel=8,
+        palette=0x01FD699C,
     ),
     # Word-image tileset of the Pokémon summary screen (GitHub issue #145):
     # 512 tiles, 16 wide, holding every baked label of the « Infos » and

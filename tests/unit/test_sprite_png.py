@@ -58,6 +58,20 @@ def test_png_round_trip_preserves_palette_indices(tmp_path):
     assert read_indexed_png(out) == (width, height, grid)
 
 
+def test_png_round_trip_preserves_8bpp_palette_indices(tmp_path):
+    # Arrange
+    palette = [(index, index, index) for index in range(256)]
+    grid = [[0x00, 0x10, 0x80, 0xF3]]
+    out = tmp_path / "title-screen.png"
+
+    # Act
+    write_indexed_png(out, 4, 1, grid, palette)
+
+    # Assert
+    assert out.read_bytes()[24] == 8
+    assert read_indexed_png(out) == (4, 1, grid)
+
+
 def test_png_is_indexed_4bpp_with_sixteen_color_palette(tmp_path):
     out = tmp_path / "sprite.png"
     write_indexed_png(out, 8, 8, [[0] * 8 for _ in range(8)])
@@ -95,6 +109,16 @@ def test_image_dispatch_rejects_unsupported_format(tmp_path):
             8,
             8,
             [[0] * 8 for _ in range(8)],
+        )
+
+
+def test_bmp_dispatch_rejects_8bpp_palette_indices(tmp_path):
+    with pytest.raises(ValueError, match=r"0\.\.15"):
+        write_indexed_image(
+            tmp_path / "title-screen.bmp",
+            2,
+            1,
+            [[0x00, 0xF3]],
         )
 
 

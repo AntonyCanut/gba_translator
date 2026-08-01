@@ -1,0 +1,143 @@
+# Graphisme éditable de l’écran titre — plan d’implémentation
+
+> **Pour les workers agentiques :** SOUS-COMPÉTENCE REQUISE : utiliser
+> `superpowers:executing-plans`. Les étapes suivent des cases à cocher et le
+> cycle TDD rouge/vert.
+
+**But :** exporter et réinjecter l’écran titre 8 bpp sous forme de PNG indexé
+256 couleurs afin de rendre « PRESS START » modifiable.
+
+**Architecture :** le pipeline existant devient paramétrable en profondeur de
+palette, sans changer le comportement 4 bpp. Le registre FR décrit la planche,
+la tilemap et la palette de l’écran titre ; les CLI transmettent cette
+profondeur au cœur graphique.
+
+**Stack :** Python 3.11, pytest, PNG indexé, tuiles GBA 4/8 bpp, LZ77.
+
+## Contraintes globales
+
+- Ne jamais modifier `input/roms/*.gba`.
+- Ne pas ajouter de dépendance.
+- Préserver les octets voisins et les données hors écran.
+- Ne pas brancher l’asset anglais dans `make build-fr`.
+- Conserver le comportement existant de tous les sprites 4 bpp.
+
+---
+
+### Tâche 1 : PNG indexé 256 couleurs
+
+**Fichiers :**
+
+- Modifier : `tests/unit/test_sprite_png.py`
+- Modifier : `src/graphics/sprite_png.py`
+- Modifier : `src/graphics/sprite_bmp.py`
+
+**Interfaces :**
+
+- `write_indexed_png(..., palette: Palette)` choisit 4 ou 8 bits selon la palette.
+- `read_indexed_png(...)` accepte des indices 0..255 pour une palette 256 couleurs.
+- `write_indexed_image(...)` refuse BMP si la grille ou la palette exige 8 bpp.
+
+- [x] Ajouter un test avec une palette littérale de 256 couleurs et une grille
+  contenant `0xF3`, puis exiger un IHDR 8 bpp et un round-trip exact :
+
+```python
+palette = [(i, i, i) for i in range(256)]
+grid = [[0x00, 0x10, 0x80, 0xF3]]
+write_indexed_png(out, 4, 1, grid, palette)
+assert out.read_bytes()[24] == 8
+assert read_indexed_png(out) == (4, 1, grid)
+```
+
+- [x] Lancer `python3 -m pytest tests/unit/test_sprite_png.py -q` et constater
+  l’échec attendu sur la limite de 16 couleurs/indices.
+- [x] Généraliser la validation, le paquetage des scanlines et le contrôle de
+  palette au 4/8 bpp, sans changer le PNG 4 bpp historique.
+- [x] Relancer le test ciblé jusqu’à réussite complète.
+
+### Tâche 2 : tuiles GBA mappées 8 bpp
+
+**Fichiers :**
+
+- Modifier : `tests/unit/test_sprite_rom.py`
+- Modifier : `src/graphics/sprite_rom.py`
+
+**Interfaces :**
+
+- Ajouter `bits_per_pixel: int = 4` à `tiles_to_grid`, `grid_to_tiles`,
+  `extract_block`, `insert_block`, `extract_mapped_block` et
+  `insert_mapped_block`.
+- Ajouter `colours: int = 16` à `read_gba_palette`.
+
+- [x] Ajouter un round-trip synthétique de deux tuiles 8 bpp et une tilemap
+  avec flip horizontal :
+
+```python
+tiles = bytes((x + 17 * y) % 256 for tile in range(2) for y in range(8) for x in range(8))
+grid = tiles_to_grid(tiles, 2, 1, bits_per_pixel=8)
+assert grid_to_tiles(grid, 2, 1, bits_per_pixel=8) == tiles
+```
+
+- [x] Lancer `python3 -m pytest tests/unit/test_sprite_rom.py -q` et constater
+  l’échec dû au nouvel argument absent.
+- [x] Implémenter les tuiles de 64 octets en 8 bpp, les bornes de pixels et la
+  taille de palette, en conservant 32 octets/16 couleurs par défaut.
+- [x] Relancer le fichier ciblé jusqu’à réussite complète.
+
+### Tâche 3 : registre, CLI et asset écran titre
+
+**Fichiers :**
+
+- Modifier : `languages/fr/sprites.py`
+- Modifier : `scripts/extract_sprite.py`
+- Modifier : `scripts/insert_sprite.py`
+- Créer : `tests/unit/test_title_screen_sprite.py`
+- Créer : `languages/fr/sprites/title_screen.png`
+
+**Interfaces :**
+
+- `SpriteDef.bits_per_pixel: int = 4`, validé dans `__post_init__`.
+- `title_screen`: planche `0x01FD4854`, tilemap `0x01FD6514`, palette
+  `0x01FD699C`, écran 32 × 20, 8 bpp.
+
+- [x] Ajouter un test exigeant l’entrée exacte du registre, puis le lancer pour
+  observer l’échec dû à l’entrée absente.
+- [x] Ajouter `bits_per_pixel` au registre et transmettre sa valeur dans les
+  deux CLI ainsi qu’à `read_gba_palette(..., colours=256)`.
+- [x] Ajouter les gardes d’asset suivantes et constater leur échec tant que le
+  PNG n’existe pas :
+
+```python
+width, height, grid = read_indexed_image(ASSET)
+assert (width, height) == (256, 160)
+assert max(pixel for row in grid for pixel in row) > 15
+assert any(grid[y][x] for y in range(144, 153) for x in range(64, 176))
+```
+
+- [x] Extraire le PNG avec :
+
+```bash
+python3 scripts/extract_sprite.py --rom input/roms/englishrom.gba \
+  --lang fr --sprite title_screen \
+  -o languages/fr/sprites/title_screen.png
+```
+
+- [x] Réinjecter le PNG dans une copie sous `output/` et comparer la planche
+  LZ77 décompressée avant/après, octet pour octet.
+- [x] Relancer tous les tests sprites ciblés.
+
+### Tâche 4 : validation et intégration locale
+
+**Fichiers :** tous les fichiers ci-dessus et `tasks/todo.md`.
+
+- [x] Exécuter le détecteur de processus de test.
+- [x] Lancer les tests sprites/PNG ciblés, puis `make test`.
+- [x] Lancer la collecte canonique `make lint` et `git diff --check`.
+- [x] Relire la spécification, le plan, le diff et la preuve de round-trip.
+- [x] Documenter les résultats dans la revue de `tasks/todo.md`.
+- [ ] Stager uniquement les chemins du ticket, committer au format conventionnel
+  et vérifier `git show --stat HEAD` ainsi que `git status --porcelain`.
+- [ ] Attendre la file d’intégration, rebaser via l’orchestrateur et revalider si
+  la branche de base a avancé.
+- [ ] Publier le bilan GitHub, clôturer l’issue #155 en `completed`, puis terminer
+  l’orchestration.

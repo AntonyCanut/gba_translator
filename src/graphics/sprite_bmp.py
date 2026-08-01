@@ -49,6 +49,8 @@ def write_indexed_bmp(path: Path, width: int, height: int, grid: Grid,
         raise ValueError("palette must have exactly 16 entries")
     if len(grid) != height or any(len(row) != width for row in grid):
         raise ValueError(f"grid must be {height}x{width}")
+    if any(pixel < 0 or pixel > 15 for row in grid for pixel in row):
+        raise ValueError("BMP pixel indices must be in 0..15")
 
     row_bytes = (width + 1) // 2
     stride = (row_bytes + 3) & ~3
@@ -71,7 +73,7 @@ def write_indexed_bmp(path: Path, width: int, height: int, grid: Grid,
         src_row = grid[height - 1 - y]  # BMP stores rows bottom-up
         base = y * stride
         for x in range(width):
-            val = src_row[x] & 0xF
+            val = src_row[x]
             byte_off = base + x // 2
             if x % 2 == 0:
                 body[byte_off] |= val << 4  # BMP: high nibble = left pixel

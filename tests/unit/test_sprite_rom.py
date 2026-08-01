@@ -82,6 +82,23 @@ def test_tiles_to_grid_and_back_round_trip():
     assert rebuilt == tiles
 
 
+def test_tiles_to_grid_8bpp_round_trip():
+    # Arrange
+    tiles = bytes(
+        (tile * 97 + x + 17 * y) % 256
+        for tile in range(2)
+        for y in range(8)
+        for x in range(8)
+    )
+
+    # Act
+    grid = tiles_to_grid(tiles, 2, 1, bits_per_pixel=8)
+    rebuilt = grid_to_tiles(grid, 2, 1, bits_per_pixel=8)
+
+    # Assert
+    assert rebuilt == tiles
+
+
 def test_extract_block_decodes_known_tiles():
     tiles_wide, tiles_tall = 1, 1
     # A single tile, all pixel index 5 (nibble 0x55 repeated).
@@ -234,6 +251,36 @@ def test_extract_mapped_block_applies_tilemap_flips():
     assert grid[8][8] == tile_1[7][7]
 
 
+def test_extract_mapped_block_8bpp_applies_tilemap_flip():
+    # Arrange
+    tile_0 = [[(x + 17 * y) % 256 for x in range(8)] for y in range(8)]
+    tile_1 = [[(200 + 3 * x + y) % 256 for x in range(8)] for y in range(8)]
+    tiles = (
+        grid_to_tiles(tile_0, 1, 1, bits_per_pixel=8)
+        + grid_to_tiles(tile_1, 1, 1, bits_per_pixel=8)
+    )
+    rom, tiles_offset, tilemap_offset = _make_rom_with_tilemap(
+        tiles,
+        [0, 1 | 0x0400],
+    )
+
+    # Act
+    grid, dec_len, _ = extract_mapped_block(
+        bytes(rom),
+        tiles_offset,
+        tilemap_offset,
+        tiles_wide=2,
+        tiles_tall=1,
+        bits_per_pixel=8,
+    )
+
+    # Assert
+    assert dec_len == len(tiles)
+    assert grid[0][0] == tile_0[0][0]
+    assert grid[0][8] == tile_1[0][7]
+    assert max(pixel for row in grid for pixel in row) > 15
+
+
 def test_insert_mapped_block_round_trip_preserves_tiles():
     tile_0 = [[(x + y) % 16 for x in range(8)] for y in range(8)]
     tile_1 = [[(2 * x + y) % 16 for x in range(8)] for y in range(8)]
@@ -255,6 +302,44 @@ def test_insert_mapped_block_round_trip_preserves_tiles():
         tiles_tall=1,
     )
 
+    result = lz77_decompress(bytes(rom), tiles_offset)
+    assert result is not None
+    assert result[0] == tiles
+
+
+def test_insert_mapped_block_8bpp_round_trip_preserves_tiles():
+    # Arrange
+    tile_0 = [[(x + 17 * y) % 256 for x in range(8)] for y in range(8)]
+    tile_1 = [[(200 + 3 * x + y) % 256 for x in range(8)] for y in range(8)]
+    tiles = (
+        grid_to_tiles(tile_0, 1, 1, bits_per_pixel=8)
+        + grid_to_tiles(tile_1, 1, 1, bits_per_pixel=8)
+    )
+    rom, tiles_offset, tilemap_offset = _make_rom_with_tilemap(
+        tiles,
+        [0, 1 | 0x0400],
+    )
+    grid, _, _ = extract_mapped_block(
+        bytes(rom),
+        tiles_offset,
+        tilemap_offset,
+        tiles_wide=2,
+        tiles_tall=1,
+        bits_per_pixel=8,
+    )
+
+    # Act
+    insert_mapped_block(
+        rom,
+        tiles_offset,
+        tilemap_offset,
+        grid,
+        tiles_wide=2,
+        tiles_tall=1,
+        bits_per_pixel=8,
+    )
+
+    # Assert
     result = lz77_decompress(bytes(rom), tiles_offset)
     assert result is not None
     assert result[0] == tiles

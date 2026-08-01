@@ -78,11 +78,18 @@ def main() -> int:
     rom = args.rom.read_bytes()
     width = sprite.tiles_wide * 8
     height = sprite.tiles_tall * 8
-    palette = (
-        read_gba_palette(rom, sprite.palette)
-        if sprite.palette is not None
-        else DEFAULT_PALETTE
-    )
+    if sprite.palette is not None:
+        palette = read_gba_palette(
+            rom,
+            sprite.palette,
+            colours=1 << sprite.bits_per_pixel,
+        )
+    elif sprite.bits_per_pixel == 4:
+        palette = DEFAULT_PALETTE
+    else:
+        raise SystemExit(
+            f"{args.sprite!r}: an 8bpp sprite requires a 256-colour palette"
+        )
     for index in indices:
         offset = sprite.blocks[index]
         if sprite.tilemaps:
@@ -93,11 +100,13 @@ def main() -> int:
                 sprite.tiles_wide,
                 sprite.tiles_tall,
                 compressed=sprite.compressed,
+                bits_per_pixel=sprite.bits_per_pixel,
             )
         else:
             grid, dec_len, comp_len = extract_block(
                 rom, offset, sprite.tiles_wide, sprite.tiles_tall,
                 compressed=sprite.compressed,
+                bits_per_pixel=sprite.bits_per_pixel,
             )
         out = variant_path(args.out, index) if args.all_blocks else args.out
         try:
