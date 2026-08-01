@@ -52,6 +52,28 @@ SPRITES: dict[str, SpriteDef] = {
         tiles_tall=8,
         vram_safe=False,
     ),
+    # Type badges (issue #156): separate raw 16-tile-wide sheets for the
+    # summary screen and the battle move menu. Their useful heights differ,
+    # as does the CFRU Fairy badge's tile offset. Keeping each complete useful
+    # rectangle preserves the tiles shared by neighbouring 32x24 badges.
+    #
+    #   for name in type_icons_summary type_icons_battle; do
+    #       python3 scripts/extract_sprite.py \
+    #           --rom output/roms/GenedRom-fr.gba --lang fr \
+    #           --sprite "$name" -o "languages/fr/sprites/$name.png"
+    #   done
+    "type_icons_summary": SpriteDef(
+        blocks=(0x00B1EC64,),
+        tiles_wide=16,
+        tiles_tall=19,
+        compressed=False,
+    ),
+    "type_icons_battle": SpriteDef(
+        blocks=(0x00961A00,),
+        tiles_wide=16,
+        tiles_tall=13,
+        compressed=False,
+    ),
     # Player/rival naming keyboard's right-side help panel (ticket F-109):
     # blank shift-state swatch + "SELECT (>", "BACK"/"B BUTTON"/"OK"/"START",
     # then the 3 alternate shift-state labels ("UPPER"/"lower"/"others")

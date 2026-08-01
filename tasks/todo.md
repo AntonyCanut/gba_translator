@@ -1,3 +1,26 @@
+# Issue #156 — extraire les icônes de types
+
+- [x] Lire l’issue et cartographier les deux planches graphiques vivantes.
+- [x] Choisir l’export réversible des planches complètes pour préserver les tuiles partagées.
+- [x] Ajouter une garde rouge sur le registre et les assets attendus.
+- [x] Déclarer les planches brutes dans le registre graphique FR.
+- [x] Extraire les deux PNG indexés depuis la ROM FR construite.
+- [x] Prouver le round-trip, exécuter les validations et relire le diff.
+- [x] Préparer le commit, l’intégration locale et le bilan de clôture.
+
+## Revue
+
+- Deux sprites bruts distincts évitent d’écraser les tuiles hors périmètre :
+  résumé `0x00B1EC64` sur 16 × 19 tuiles, combat `0x00961A00` sur 16 × 13.
+- Les PNG versionnés font 128 × 152 et 128 × 104 pixels, restent indexés sur
+  16 couleurs et exposent séparément les indices 15 (lettres) et 14 (ombres).
+- Les deux assets ont été réinjectés via le CLI générique dans des ROM
+  synthétiques ; les grilles relues correspondent pixel pour pixel et les
+  sauvegardes `.bak` sont créées.
+- Cycle TDD observé : absence du registre, puis absence des PNG. Vérifications :
+  39 tests graphiques ciblés, 1 615 tests Python rapides réussis avec un skip
+  préexistant, `uvx ruff check` et `git diff --check` sans diagnostic.
+
 # Issue #149 — réouverture : corriger le vrai libellé de montée de niveau
 
 ## Diagnostic et conception
