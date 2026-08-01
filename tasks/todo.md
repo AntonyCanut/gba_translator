@@ -80,7 +80,7 @@
   ROMs FR, IT et DE. Les tests unitaires, Vitest et les contrôles ROM du crochet
   de commit sont verts.
 - La vérification ciblée après build retrouve exactement l’asset « SHOP » dans
-  `output/roms/GenedRom-fr.gba` : 20 tests passent.
+  `output/roms/GenedRom-fr.gba` : 22 tests passent.
 
 # Issue #149 — réouverture : corriger le vrai libellé de montée de niveau
 

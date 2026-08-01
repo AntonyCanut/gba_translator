@@ -7,7 +7,7 @@ from pathlib import Path
 
 import pytest
 
-from languages.fr.sprites import SPRITES
+from languages.fr.sprites import SPRITES, SpriteDef
 from src.graphics.sprite_image import read_indexed_image
 from src.graphics.sprite_rom import extract_block
 
@@ -31,6 +31,16 @@ def test_pokemon_mart_sign_registry_targets_live_tileset() -> None:
     assert sprite.max_compressed_sizes == (11_604,)
     assert sprite.palette == 0x00EA1BC8
     assert (sprite.tiles_wide, sprite.tiles_tall) == (2, 1)
+
+
+def test_sprite_registry_pairs_each_block_with_its_slot_capacity() -> None:
+    with pytest.raises(ValueError, match="one compressed size per block"):
+        SpriteDef(
+            blocks=(0x100, 0x200),
+            tiles_wide=1,
+            tiles_tall=1,
+            max_compressed_sizes=(32,),
+        )
 
 
 def test_pokemon_mart_sign_asset_spells_shop() -> None:
