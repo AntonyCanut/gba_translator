@@ -175,6 +175,35 @@ def test_insert_block_replaces_only_selected_tile_window():
     assert result[0] == expected
 
 
+def test_insert_block_keeps_explicit_slot_capacity_across_reinsertions():
+    """Une écriture courte ne doit pas réduire le slot physique connu."""
+    original = bytes(range(TILE_BYTES))
+    rom, offset, original_len = _make_rom_with_block(original, pad_after=64)
+    compact_grid = [[0] * 8 for _ in range(8)]
+    original_grid = tiles_to_grid(original, tiles_wide=1, tiles_tall=1)
+
+    insert_block(
+        rom,
+        offset,
+        compact_grid,
+        tiles_wide=1,
+        tiles_tall=1,
+        max_compressed_size=original_len,
+    )
+    insert_block(
+        rom,
+        offset,
+        original_grid,
+        tiles_wide=1,
+        tiles_tall=1,
+        max_compressed_size=original_len,
+    )
+
+    result = lz77_decompress(bytes(rom), offset)
+    assert result is not None
+    assert result[0] == original
+
+
 def test_insert_block_avoids_odd_overlapping_vram_references():
     """Les flux destinés à la VRAM ne doivent pas chevaucher à distance impaire."""
     tiles_wide, tiles_tall = 1, 1

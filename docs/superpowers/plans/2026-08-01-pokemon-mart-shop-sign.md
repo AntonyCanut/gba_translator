@@ -78,8 +78,8 @@ tileset, et le build réinjecte le PNG 16 × 8 après les réparations.
 
 **Interfaces :**
 
-- Deux appels `insert_sprite.py`, avec `--block-index 0` puis `1`, consomment
-  l’asset `languages/fr/sprites/pokemon_mart_sign.png` après les réparations.
+- Un appel `insert_sprite.py` consomme l’asset
+  `languages/fr/sprites/pokemon_mart_sign.png` après les réparations.
 
 - [ ] Ajouter une garde qui vérifie la commande dans `make -n build-fr`
   et constater l’échec initial.

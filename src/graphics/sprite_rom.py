@@ -185,6 +185,7 @@ def _write_block_payload(
     original_len: int,
     compressed: bool,
     vram_safe: bool,
+    max_compressed_size: int | None = None,
 ) -> None:
     """Écrit un payload de planche en protégeant les données ROM voisines."""
     if not compressed:
@@ -194,7 +195,18 @@ def _write_block_payload(
     compressed_out = lz77_compress(payload, vram_safe=vram_safe)
     if offset + len(compressed_out) > len(rom):
         raise ValueError(f"0x{offset:08X}: recompressed block overflows ROM")
-    if len(compressed_out) > original_len:
+    if max_compressed_size is not None:
+        if max_compressed_size < original_len:
+            raise ValueError(
+                f"0x{offset:08X}: configured slot ({max_compressed_size}) < "
+                f"stored block ({original_len})"
+            )
+        if len(compressed_out) > max_compressed_size:
+            raise ValueError(
+                f"0x{offset:08X}: recompressed ({len(compressed_out)}) > slot "
+                f"capacity ({max_compressed_size})"
+            )
+    elif len(compressed_out) > original_len:
         extra = rom[offset + original_len:offset + len(compressed_out)]
         if any(byte not in (0x00, 0xFF) for byte in extra):
             raise ValueError(
@@ -329,6 +341,7 @@ def insert_block(
     vram_safe: bool = True,
     bits_per_pixel: int = 4,
     start_tile: int = 0,
+    max_compressed_size: int | None = None,
 ) -> None:
     """Re-encode *grid* into tiles and write it back at *offset*.
 
@@ -339,6 +352,8 @@ def insert_block(
     accept normal LZ77 can disable it for a smaller stream. When *compressed*
     is false, the tiles are written back raw — see ``extract_block``.
     ``start_tile`` limite l’écriture à une fenêtre contiguë du bloc.
+    ``max_compressed_size`` conserve la capacité physique connue d’un slot
+    entre plusieurs éditions, même après une première compression plus courte.
     """
     if start_tile < 0:
         raise ValueError("start_tile must be non-negative")
@@ -374,6 +389,7 @@ def insert_block(
         comp_len,
         compressed=True,
         vram_safe=vram_safe,
+        max_compressed_size=max_compressed_size,
     )
 
 

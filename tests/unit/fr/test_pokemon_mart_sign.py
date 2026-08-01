@@ -28,6 +28,7 @@ def test_pokemon_mart_sign_registry_targets_live_tileset() -> None:
 
     assert sprite.blocks == (0x00CF91A0,)
     assert sprite.start_tiles == (413,)
+    assert sprite.max_compressed_sizes == (11_604,)
     assert sprite.palette == 0x00EA1BC8
     assert (sprite.tiles_wide, sprite.tiles_tall) == (2, 1)
 

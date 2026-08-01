@@ -40,6 +40,9 @@ class SpriteDef:
     # zero for every block. This keeps small editable labels independent from
     # the rest of a large shared tileset.
     start_tiles: tuple[int, ...] = ()
+    # Optional physical capacities for compressed slots. Declaring them keeps
+    # repeated edits safe when an earlier re-compression made a stream shorter.
+    max_compressed_sizes: tuple[int, ...] = ()
 
     def __post_init__(self) -> None:
         """Valide l'appariement des planches et tilemaps."""
@@ -49,6 +52,11 @@ class SpriteDef:
             raise ValueError("SpriteDef requires one tilemap per block")
         if self.start_tiles and len(self.start_tiles) != len(self.blocks):
             raise ValueError("SpriteDef requires one start tile per block")
+        if (
+            self.max_compressed_sizes
+            and len(self.max_compressed_sizes) != len(self.blocks)
+        ):
+            raise ValueError("SpriteDef requires one compressed size per block")
 
 
 SPRITES: dict[str, SpriteDef] = {
@@ -130,6 +138,7 @@ SPRITES: dict[str, SpriteDef] = {
     "pokemon_mart_sign": SpriteDef(
         blocks=(0x00CF91A0,),
         start_tiles=(413,),
+        max_compressed_sizes=(11_604,),
         tiles_wide=2,
         tiles_tall=1,
         palette=0x00EA1BC8,

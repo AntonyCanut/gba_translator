@@ -160,6 +160,11 @@ def main() -> int:
                     if sprite.start_tiles
                     else 0
                 )
+                max_compressed_size = (
+                    sprite.max_compressed_sizes[i]
+                    if sprite.max_compressed_sizes
+                    else None
+                )
                 insert_block(
                     rom,
                     offset,
@@ -170,6 +175,7 @@ def main() -> int:
                     vram_safe=sprite.vram_safe,
                     bits_per_pixel=sprite.bits_per_pixel,
                     start_tile=start_tile,
+                    max_compressed_size=max_compressed_size,
                 )
         except ValueError as exc:
             print(f"  WARN {args.sprite}[{i}] @ 0x{offset:08X}: {exc} — skip", file=sys.stderr)
