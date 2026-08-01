@@ -66,7 +66,7 @@ def test_built_french_rom_contains_shop_sign() -> None:
     sprite = SPRITES["pokemon_mart_sign"]
     _, _, expected = read_indexed_image(ASSET)
 
-    actual, decompressed_len, _ = extract_block(
+    actual, decompressed_len, compressed_len = extract_block(
         BUILT_ROM.read_bytes(),
         sprite.blocks[0],
         sprite.tiles_wide,
@@ -76,4 +76,5 @@ def test_built_french_rom_contains_shop_sign() -> None:
     )
 
     assert decompressed_len == 20_480
+    assert compressed_len <= 11_604
     assert actual == expected

@@ -60,15 +60,27 @@
 - [x] Lire l’issue et confirmer que « MART » est un graphisme de tileset.
 - [x] Localiser le bloc LZ77 vivant et les tuiles exactes de l’enseigne.
 - [x] Formaliser l’extraction partielle et la réinjection sûre.
-- [ ] Ajouter les tests rouges sur la fenêtre de tuiles, l’asset et le build.
-- [ ] Étendre le pipeline sprite et extraire le PNG éditable.
-- [ ] Redessiner « MART » en « SHOP » et brancher le bloc vivant au build FR.
-- [ ] Reconstruire la ROM et comparer les tuiles décompressées à l’asset.
-- [ ] Exécuter les validations, relire, committer et clôturer l’issue.
+- [x] Ajouter les tests rouges sur la fenêtre de tuiles, l’asset et le build.
+- [x] Étendre le pipeline sprite et extraire le PNG éditable.
+- [x] Redessiner « MART » en « SHOP » et brancher le bloc vivant au build FR.
+- [x] Reconstruire la ROM et comparer les tuiles décompressées à l’asset.
+- [x] Exécuter les validations, relire, committer et clôturer l’issue.
 
 ## Revue
 
-- En cours.
+- L’enseigne vivante occupe les tuiles 413–414 du bloc LZ77 `0x00CF91A0`,
+  référencé par le descripteur de tileset `0x002D4A94`; la palette utilisée est
+  la banque à `0x00EA1BC8`.
+- Le PNG indexé 4 bpp de 16×8 pixels conserve le cadre et la palette existants,
+  mais son masque de lettres forme désormais explicitement « SHOP ».
+- La réinjection ne remplace que les 64 octets des deux tuiles ciblées. Le bloc
+  recompressé tient dans son emplacement d’origine (11 520 octets contre
+  11 604) et les tuiles voisines restent inchangées.
+- Le build release a inséré `pokemon_mart_sign`, puis construit avec succès les
+  ROMs FR, IT et DE. Les tests unitaires, Vitest et les contrôles ROM du crochet
+  de commit sont verts.
+- La vérification ciblée après build retrouve exactement l’asset « SHOP » dans
+  `output/roms/GenedRom-fr.gba` : 20 tests passent.
 
 # Issue #149 — réouverture : corriger le vrai libellé de montée de niveau
 
