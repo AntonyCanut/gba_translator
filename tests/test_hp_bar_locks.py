@@ -386,11 +386,8 @@ class TestE2eHarnessStaysWired(unittest.TestCase):
               / "hp-bar.spec.ts-snapshots" / "summary-stat-labels-anchor.png")
     SAVE = ROOT / "tests" / "fixtures" / "saves" / "party_hp_bar_fr.sav"
     SAVE_SHA256 = "86b7d3daafa4bff101e294bd5b8c736a6004db321398e397ff1c9599127a79ac"
-    # PAGE_ANCHOR_REGIONS dans tests/e2e-playwright/helpers/hp-bar-regions.ts :
-    # deux bandes de 56x12 empilées (DEFENSE et EXP.), les seuls libellés de
-    # stats restés identiques dans tous les builds depuis que l'issue #145 a
-    # traduit ATTACK / SP.ATK / SP.DEF / SPEED en français.
-    ANCHOR_SIZE = (56, 24)
+    REGIONS = (ROOT / "tests" / "e2e-playwright" / "helpers"
+               / "hp-bar-regions.ts")
 
     def test_npm_script_runs_the_hp_bar_config(self) -> None:
         import json
@@ -419,14 +416,41 @@ class TestE2eHarnessStaysWired(unittest.TestCase):
             "build traduit",
         )
 
+    def _anchor_regions(self) -> list[tuple[int, int]]:
+        """Les bandes déclarées dans hp-bar-regions.ts, en (largeur, hauteur)."""
+        import re
+
+        source = self.REGIONS.read_text(encoding="utf-8")
+        constants = dict(re.findall(r"export const (\w+) = (\d+);", source))
+        block = re.search(
+            r"PAGE_ANCHOR_REGIONS: Region\[\] = \[(.*?)\];", source, re.S,
+        )
+        self.assertIsNotNone(block, "PAGE_ANCHOR_REGIONS introuvable")
+        bands = [
+            (int(constants.get(width, width)), int(constants.get(height, height)))
+            for width, height in re.findall(
+                r"width:\s*(\w+),\s*height:\s*(\w+)", block.group(1))
+        ]
+        self.assertTrue(bands, "aucune bande d'ancrage lue")
+        return bands
+
     def test_recognition_anchor_matches_the_stat_label_region(self) -> None:
+        """L'ancre PNG doit être l'empilement exact des bandes déclarées.
+
+        La sonde compare les bandes découpées dans la capture à cette image :
+        une taille qui dérive de PAGE_ANCHOR_REGIONS fait échouer la
+        reconnaissance de la page, pas l'assertion qu'elle porte.
+        """
         self.assertTrue(self.ANCHOR.exists(), "ancre de reconnaissance absente")
         header = self.ANCHOR.read_bytes()[:24]
         self.assertEqual(header[:8], b"\x89PNG\r\n\x1a\n", "ancre non PNG")
         width = int.from_bytes(header[16:20], "big")
         height = int.from_bytes(header[20:24], "big")
-        self.assertEqual((width, height), self.ANCHOR_SIZE,
-                         "l'ancre ne couvre plus la colonne de libellés de stats")
+        bands = self._anchor_regions()
+        self.assertEqual({band_width for band_width, _ in bands}, {width},
+                         "les bandes n'ont pas toutes la largeur de l'ancre")
+        self.assertEqual(height, sum(band_height for _, band_height in bands),
+                         "l'ancre ne couvre plus exactement les bandes déclarées")
 
     def test_reporter_save_fixture_is_unchanged(self) -> None:
         import hashlib

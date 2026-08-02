@@ -134,39 +134,55 @@ class TestE2eAnchorAvoidsTranslatedLabels(unittest.TestCase):
 
     REGIONS_TS = (Path(__file__).parent.parent / "tests" / "e2e-playwright"
                   / "helpers" / "hp-bar-regions.ts")
-    # Les gélules vivent 14 px plus bas dans la feuille que sur l'écran.
-    SHEET_TO_SCREEN = 14
+    # Les gélules vivent 16 px plus bas dans la feuille que sur l'écran :
+    # ATTAQUE en y=54 dans la planche s'affiche en y=38 à l'écran.
+    SHEET_TO_SCREEN = 16
 
     def _anchor_bands(self) -> list[tuple[int, int]]:
         import re
 
         source = self.REGIONS_TS.read_text(encoding="utf-8")
+        constants = dict(re.findall(r"export const (\w+) = (\d+);", source))
         block = re.search(
             r"PAGE_ANCHOR_REGIONS: Region\[\] = \[(.*?)\];", source, re.S,
         )
         self.assertIsNotNone(block, "PAGE_ANCHOR_REGIONS introuvable")
         bands = [
-            (int(y), int(height))
-            for y, height in re.findall(r"y:\s*(\d+).*?height:\s*(\d+)", block.group(1))
+            (int(y), int(constants.get(height, height)))
+            for y, height in re.findall(r"y:\s*(\d+).*?height:\s*(\w+)",
+                                        block.group(1))
         ]
         self.assertTrue(bands, "aucune bande d'ancrage lue")
         return bands
 
     def test_no_anchor_band_covers_a_translated_label(self):
-        translated = {y0 - self.SHEET_TO_SCREEN for y0, _, _ in LABELS}
+        """Aucune bande ne doit mordre sur une gélule traduite, bords compris.
+
+        Les rangées haute et basse d'une gélule épousent son mot : déborder
+        d'un seul pixel sur la voisine suffit à ce que la sonde ne reconnaisse
+        plus la page. C'est ce qui est arrivé avec des bandes de 12 px.
+        """
+        translated = {row
+                      for y0, _, _ in LABELS
+                      for row in range(y0 - self.SHEET_TO_SCREEN,
+                                       y0 - self.SHEET_TO_SCREEN + PILL_HEIGHT)}
         for y, height in self._anchor_bands():
             with self.subTest(band=y):
-                covered = set(range(y, y + height))
+                overlap = sorted(set(range(y, y + height)) & translated)
                 self.assertFalse(
-                    covered & {label for label in translated
-                               if label in range(y, y + height)},
-                    f"la bande d'ancrage y={y} recouvre un libellé traduit",
+                    overlap,
+                    f"la bande d'ancrage y={y} recouvre les lignes {overlap} "
+                    "d'un libellé traduit",
                 )
 
     def test_anchor_bands_land_on_untranslated_labels(self):
-        """Les bandes tombent bien sur DEFENSE (y=66) et EXP. (y=114)."""
-        sheet_rows = {y + self.SHEET_TO_SCREEN for y, _ in self._anchor_bands()}
-        self.assertEqual(sheet_rows, {66, 114})
+        """Les bandes couvrent exactement DEFENSE (y=66) et EXP. (y=114)."""
+        bands = self._anchor_bands()
+        self.assertEqual({y + self.SHEET_TO_SCREEN for y, _ in bands}, {66, 114})
+        for y, height in bands:
+            with self.subTest(band=y):
+                self.assertEqual(height, PILL_HEIGHT,
+                                 "une bande doit faire la hauteur d'une gélule")
 
 
 @pytest.mark.rom

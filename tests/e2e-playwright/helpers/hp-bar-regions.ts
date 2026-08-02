@@ -22,17 +22,23 @@ export const FULL_SCREEN_REGION: Region = {
  * page. They are deliberately disjoint from {@link HP_BAR_REGION}: the screen
  * is identified by pixels that the fix under test cannot influence.
  *
- * The label column is six 12-pixel bands stacked from y 40 — ATTACK, DEFENSE,
- * SP.ATK, SP.DEF, SPEED, EXP. All six are word-image tiles that the *text*
- * pipeline leaves untouched, so the whole column used to be a single anchor.
- * GitHub issue #145 ended that: `languages/fr/patches/summary_stat_labels.py`
- * now redraws four of them in French (ATTAQUE, ATT SPE., DEF SPE., VITESSE).
- * Only DEFENSE — transparent in French — and EXP. are still shared, so the
- * anchor is those two bands and nothing else.
+ * The label column is six capsules on a 12-pixel pitch from y 38 — ATTACK,
+ * DEFENSE, SP.ATK, SP.DEF, SPEED, EXP. All six are word-image tiles that the
+ * *text* pipeline leaves untouched, so the whole column used to be a single
+ * anchor. GitHub issue #145 ended that: `languages/fr/patches/
+ * summary_stat_labels.py` now redraws four of them in French (ATTAQUE,
+ * ATT SPE., DEF SPE., VITESSE) and the hand-drawn sheet keeps them. Only
+ * DEFENSE — transparent in French — and EXP. are still shared.
+ *
+ * Each band is exactly the 9 rows of its capsule, nothing more: a capsule's
+ * top and bottom rows hug its word, so a band one row too tall reaches into
+ * the neighbouring French capsule and the page stops being recognised.
  */
+export const STAT_CAPSULE_HEIGHT = 9;
+
 export const PAGE_ANCHOR_REGIONS: Region[] = [
-  { x: 0, y: 52, width: 56, height: 12 },   // DEFENSE
-  { x: 0, y: 100, width: 56, height: 12 },  // EXP.
+  { x: 0, y: 50, width: 56, height: STAT_CAPSULE_HEIGHT },  // DEFENSE
+  { x: 0, y: 98, width: 56, height: STAT_CAPSULE_HEIGHT },  // EXP.
 ];
 
 /**
