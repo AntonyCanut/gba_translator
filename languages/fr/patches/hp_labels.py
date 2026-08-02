@@ -230,7 +230,7 @@ GREY_BLOCK = 0x00E9A460
 GREY_ROWS: list[tuple[int, int, int]] = (
     [(100, 101, r) for r in range(8)] + [(116, 117, r) for r in range(8)]
 )
-GREY_LETTER, GREY_OVAL = 0x1, 0x7
+GREY_LETTER, GREY_OVAL, GREY_PANEL = 0x1, 0x7, 0xA
 GREY_ERASE_ROWS = range(3, 10)      # letter rows inside the oval
 GREY_ERASE_COLS = range(3, 14)
 
@@ -243,6 +243,21 @@ GREY_PV_FILL: set[tuple[int, int]] = (
     | {(r, 9) for r in range(3, 8)} | {(r, 12) for r in range(3, 8)}
     | {(8, 10), (8, 11), (9, 10), (9, 11)}
 )
+
+# Like the stat capsules of languages/fr/patches/summary_stat_labels.py, the
+# oval's top and bottom rows hug the word instead of being a fixed shape. « PV »
+# is not « HP »: its V reaches one column further right on row 2 and its tip
+# drops to rows 8-9, so the bottom edge moves out from under the P's bowl and
+# out to under the V. Six pixels, taken from the hand-drawn reference sheet
+# languages/fr/sprites/summary_stat_labels.png so both stay in step.
+GREY_OVAL_RESHAPE: dict[tuple[int, int], int] = {
+    (2, 13): GREY_OVAL,
+    (10, 6): GREY_PANEL,
+    (10, 7): GREY_PANEL,
+    (10, 8): GREY_PANEL,
+    (10, 11): GREY_OVAL,
+    (10, 12): GREY_OVAL,
+}
 
 GREY_OLD_TILES: dict[int, str] = {
     100: "99999999aaaaaaaaaa7a7777aa7a71177a777117777771177777111177777117",
@@ -427,6 +442,11 @@ def _draw_grey_label(tiles: bytearray) -> None:
         tl, tr, row = GREY_ROWS[gr]
         tile = tl if gc < 8 else tr
         _px_set(tiles, tile, row, gc % 8, GREY_LETTER)
+    # then re-cut the oval's hugging rows around « PV »
+    for (gr, gc), val in GREY_OVAL_RESHAPE.items():
+        tl, tr, row = GREY_ROWS[gr]
+        tile = tl if gc < 8 else tr
+        _px_set(tiles, tile, row, gc % 8, val)
 
 
 def _make_draw_battle_label(h_tile: int, p_tile: int):

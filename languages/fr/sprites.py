@@ -192,24 +192,24 @@ SPRITES: dict[str, SpriteDef] = {
     ),
     # Word-image tileset of the Pokémon summary screen (GitHub issue #145):
     # 512 tiles, 16 wide, holding every baked label of the « Infos » and
-    # « Capacités » pages — No / NAME / TYPE / OT / IDNo / ITEM on the left,
-    # ATTACK / DEFENSE / SP.ATK / SP.DEF / SPEED / EXP. in the stat column,
-    # plus the grey HP oval (already « PV », see languages/fr/patches/
-    # hp_labels.py). None of it is text, so no translation pass reaches it.
+    # « Capacités » pages — N° / NOM / TYPE / DO / N°ID / OBJET on the left,
+    # ATTAQUE / DEFENSE / ATT SPE. / DEF SPE. / VITESSE / EXP. in the stat
+    # column, POUV. / PRECISION on the move panel, plus the grey « PV » oval.
+    # None of it is text, so no translation pass reaches it.
     #
-    # The four French stat labels are redrawn programmatically by
-    # languages/fr/patches/summary_stat_labels.py, which runs in build-fr. This
-    # entry exists so the sheet can be exported for hand-retouching:
+    # ** languages/fr/sprites/summary_stat_labels.png is the source of truth **
+    # for the whole block. build-fr inserts it after hp_labels.py and
+    # summary_stat_labels.py, which redraw the « PV » oval and the four stat
+    # capsules programmatically; the drawing carries their output too, so it
+    # wins without losing anything. tests/test_summary_sheet_fr.py locks that
+    # agreement — if you edit one side only, it fails.
+    #
+    # To retouch: export the sheet, edit the PNG keeping its 16-colour indexed
+    # palette (1 = letters, 7 = capsule, 0xA = panel background), and commit it.
     #
     #   python3 scripts/extract_sprite.py --rom output/roms/GenedRom-fr.gba \
     #       --lang fr --sprite summary_stat_labels \
     #       -o languages/fr/sprites/summary_stat_labels.png
-    #
-    # Edit the PNG keeping its 16-colour indexed palette (1 = letters,
-    # 7 = capsule, 0xA = panel background), then re-inject with
-    # scripts/insert_sprite.py. Note that insert_sprite rewrites the WHOLE
-    # sheet, so it overrides the two label patches — wire it into build-fr
-    # (after hp_labels) only once the hand-drawn art is the source of truth.
     "summary_stat_labels": SpriteDef(
         blocks=(0x00E9A460,),
         tiles_wide=16,

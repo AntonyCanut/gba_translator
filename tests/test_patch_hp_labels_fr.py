@@ -37,7 +37,11 @@ from languages.fr.patches.hp_labels import (
     GREEN_SLOT_LEN,
     GREY_BLOCK,
     GREY_OLD_TILES,
+    GREY_OVAL,
+    GREY_OVAL_RESHAPE,
+    GREY_PANEL,
     GREY_PV_FILL,
+    GREY_ROWS,
     HPEL_P_FILL,
     HPEL_V_FILL,
     HPEL_LABEL_TILES,
@@ -158,17 +162,40 @@ class TestPvArtDefinitions(unittest.TestCase):
                 self.assertEqual(old_b[row * 4 + 3], new_b[row * 4 + 3],
                                  f"tile {tile} row {row} cols 14-15 modified")
 
+    @staticmethod
+    def _grey_cell(gr: int, gc: int) -> tuple[int, int, bool]:
+        """Locate grid cell (*gr*, *gc*) as (tile, byte index, high nibble?)."""
+        left, right, row = GREY_ROWS[gr]
+        return (left if gc < 8 else right, row * 4 + (gc % 8) // 2, gc % 2 == 1)
+
     def test_grey_label_preserves_oval_border(self):
+        # The oval's top and bottom rows hug the word (GREY_OVAL_RESHAPE), so
+        # « PV » does move a few background pixels that « HP » owned. Every
+        # *other* background pixel, and every grid line, must survive untouched.
+        allowed = {self._grey_cell(gr, gc) for gr, gc in GREY_OVAL_RESHAPE}
         new = _expected_new(GREY_OLD_TILES, _draw_grey_label)
         for tile in GREY_OLD_TILES:
             old_b = bytes.fromhex(GREY_OLD_TILES[tile])
             new_b = bytes.fromhex(new[tile])
             for i, (ob, nb) in enumerate(zip(old_b, new_b)):
-                for nib_old, nib_new in (((ob & 0xF), (nb & 0xF)),
-                                         ((ob >> 4), (nb >> 4))):
-                    if nib_old in (0x9, 0xA):  # grid line / dark bg
+                for high, (nib_old, nib_new) in enumerate((((ob & 0xF), (nb & 0xF)),
+                                                           ((ob >> 4), (nb >> 4)))):
+                    if nib_old == 0x9:  # grid line: never movable
+                        self.assertEqual(nib_old, nib_new,
+                                         f"tile {tile} byte {i} grid line modified")
+                    elif nib_old == 0xA and (tile, i, bool(high)) not in allowed:
                         self.assertEqual(nib_old, nib_new,
                                          f"tile {tile} byte {i} border modified")
+
+    def test_grey_oval_reshape_only_swaps_oval_and_background(self):
+        """Le remodelage ne peut ni effacer une lettre ni inventer une couleur."""
+        for (gr, gc), value in GREY_OVAL_RESHAPE.items():
+            with self.subTest(cell=(gr, gc)):
+                self.assertIn(value, (GREY_OVAL, GREY_PANEL))
+                self.assertNotIn((gr, gc), GREY_PV_FILL)
+                # Rows 2 and 10 are the oval's hugging edges, just outside the
+                # letter rows (3-9) the erase pass owns.
+                self.assertIn(gr, (2, 10), f"row {gr} is not a hugging edge")
 
     def test_battle_fill_stays_inside_letter_boxes(self):
         for r, c in BATTLE_P_FILL:
