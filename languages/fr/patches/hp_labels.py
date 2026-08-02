@@ -35,12 +35,17 @@ never touches them:
    — pill borders, caps and bar tiles left byte-exact. (0xD1F604 is a palette-slot
    variant the first #125 fix missed, hence the residual « HP » in 2.1.68.)
 
-5. In-battle OPPONENT healthbox label — an UNCOMPRESSED healthbox-element gfx
-   (window 0x00D11800-0x00D12800), two-tone letters (color 1/8) on a pill. The
-   enemy singles box draws its « HP » from here, not from the four LZ77 sheets,
-   so it stayed « HP » in a real battle even after fixes 1-4. Found by letter
-   shape and redrawn « H »+« P » → « P »+« V ». Verified in-engine via
-   scripts/probe_battle_healthbox_fr.mts + scripts/verify_battle_healthbox_fr.py.
+5. In-battle healthbox label — UNCOMPRESSED healthbox-element tiles (window
+   0x00D11800-0x00D12800), two-tone letters (color 1/8) on a pill. The enemy
+   singles box draws its « HP » from here, not from the four LZ77 sheets, so it
+   stayed « HP » in a real battle even after fixes 1-4. The table stores the
+   label FOUR times (0xD11BC4 « H » pill 3, 0xD11BE4 « H » pill 7, 0xD11C04
+   « P », 0xD123E4 « P » copy): the box is drawn from one copy but the
+   status-icon redraw re-copies another, so converting only the adjacent pair
+   left « HP » showing as soon as the Pokémon was poisoned/burned. Every label
+   tile is now found by letter shape and redrawn on its own — « H »→« P »,
+   « P »→« V ». Verified in-engine via scripts/probe_battle_healthbox_fr.mts +
+   scripts/verify_battle_healthbox_fr.py.
 
 Patches 1-4 are strict: the current label tiles must byte-match a known
 variant (EN « HP » / ES « PS ») or the already-patched « PV »; anything else
@@ -303,22 +308,36 @@ BATTLE_H_TILE_HEX: dict[int, str] = {
 }
 
 
-# ── 5. In-battle OPPONENT healthbox HP label (UNCOMPRESSED element gfx) ───────
-# The four sheets above are the player/ally + doubles healthboxes. The OPPONENT
-# singles box draws its « HP » from a *separate, uncompressed* healthbox-element
-# graphic stored raw in the ROM (gHealthboxElementsGfx-style) — byte-identical
-# in EN and FR, so no LZ77 repair or earlier pass ever touched it. That is why a
-# real wild/trainer battle STILL showed « HP » on the enemy box after 2.1.68
-# (proven in-engine: scripts/probe_battle_healthbox_fr.mts +
-# scripts/verify_battle_healthbox_fr.py). The label is two adjacent 8×8 tiles,
-# an « H » then a « P », with TWO-TONE letters (colour 1 on rows 3-4, colour 8 on
-# rows 5-6) over a pill (colour 7) and a transparent margin (colour 0); a
-# palette-slot sibling uses pill colour 3.
+# ── 5. In-battle healthbox HP label (UNCOMPRESSED element tile table) ────────
+# The four sheets above are the player/ally + doubles healthbox *frames*. The
+# battle engine also owns a flat table of loose 8×8 healthbox elements stored
+# RAW (uncompressed) in the ROM — ``sHealthboxElementsGfxTable``-style, base
+# 0x00D11BC4, the only address the battle-interface code references. It is
+# byte-identical in EN and FR, so no LZ77 repair or earlier pass ever touched
+# it. That table holds FOUR « HP » label tiles:
 #
-# The pair is located by LETTER SHAPE inside a bounded window (same "scan by
-# shape, not exact bytes" lesson as 0xD1F604) and redrawn « H »→« P », « P »→« V ».
-HPEL_REGION = (0x00D11800, 0x00D12800)   # ROM window holding the element sheet
+#   0x00D11BC4  « H », pill colour 3   (table tile 0)
+#   0x00D11BE4  « H », pill colour 7   (table tile 1)
+#   0x00D11C04  « P », pill colour 7   (table tile 2)
+#   0x00D123E4  « P », pill colour 7   (table tile 65 — byte-identical copy)
+#
+# The healthbox is drawn from tiles 1+2, which is why patching only that pair
+# fixed the enemy box in a plain battle. But ``UpdateStatusIconInHealthbox``
+# re-copies the label from the OTHER copies when a status condition (poison,
+# burn…) is put on the battler — so the box flipped back to « HP » the moment
+# the Pokémon was statused (GitHub issue #125, 3rd report). Spanish confirms
+# the split: ES localizes 0xD11BE4/0xD11C04 to « PS » and leaves the other two
+# alone, so the ES build has the same status-only bug.
+#
+# Letters are TWO-TONE (colour 1 on rows 3-4, colour 8 on rows 5-6) over a pill
+# whose colour differs per palette slot (3 or 7), with a transparent margin.
+# Tiles are located by LETTER SHAPE inside a bounded window (same "scan by
+# shape, not exact bytes" lesson as 0xD1F604) and each one is redrawn on its
+# own — every « H » becomes « P », every « P » becomes « V » — so whichever
+# combination the engine loads reads « PV ».
+HPEL_REGION = (0x00D11800, 0x00D12800)   # ROM window holding the element table
 HPEL_UP, HPEL_LO, HPEL_PILL = 0x1, 0x8, 0x7   # letter upper/lower rows, pill fill
+HPEL_MARGIN = 0x0                             # transparent rows above the pill
 
 # Recognition masks — letter-coloured columns per row 3-6 of the CURRENT art.
 HPEL_H_SHAPE = {3: {2, 3, 5, 6}, 4: {2, 3, 5, 6}, 5: {2, 3, 4, 5, 6}, 6: {2, 3, 5, 6}}
@@ -326,12 +345,25 @@ HPEL_P_SHAPE = {3: {0, 1, 2, 3, 4}, 4: {0, 1, 3, 4}, 5: {0, 1, 2, 3, 4}, 6: {0, 
 # Redraw masks — « P » in the H tile (cols 2-6) and « V » in the P tile (cols 0-4).
 HPEL_P_FILL = {3: {2, 3, 4, 5, 6}, 4: {2, 3, 5, 6}, 5: {2, 3, 4, 5, 6}, 6: {2, 3}}
 HPEL_V_FILL = {3: {0, 1, 3, 4}, 4: {0, 1, 3, 4}, 5: {1, 2, 3}, 6: {2}}
+HPEL_H_COLS = range(2, 7)   # letter box of an « H »/« P » tile
+HPEL_P_COLS = range(0, 5)   # letter box of a « P »/« V » tile
 
-# The confirmed opponent « HP » pair (0x00D11BE4 « H », 0x00D11C04 « P »), byte-
-# identical in EN and FR. Kept as fixed strings so the tests / in-engine verifier
-# have a self-contained source of truth (no englishrom.gba dependency in CI).
+# The confirmed label tiles, byte-identical in EN and FR. Kept as fixed strings
+# so the tests / in-engine verifier have a self-contained source of truth (no
+# englishrom.gba dependency in CI).
 HPEL_OLD_H_HEX = "0000000000000000707777777011177170111771708888787088877870777777"
 HPEL_OLD_P_HEX = "0000000000000000777777771111711711177117888878178877771777777777"
+# Palette-slot sibling of the « H » tile (pill colour 3) — the copy the status
+# redraw uses. Never localized, in any language.
+HPEL_OLD_H_ALT_HEX = "0000000000000000303333333011133130111331308888383088833830333333"
+
+# Every « HP » label tile of the table, with the art it holds in the base ROM.
+HPEL_LABEL_TILES: dict[int, str] = {
+    0x00D11BC4: HPEL_OLD_H_ALT_HEX,
+    0x00D11BE4: HPEL_OLD_H_HEX,
+    0x00D11C04: HPEL_OLD_P_HEX,
+    0x00D123E4: HPEL_OLD_P_HEX,
+}
 
 
 # ---------------------------------------------------------------------------
@@ -444,53 +476,84 @@ def _hpel_plate(tile: bytes) -> int:
     return _px_get(bytearray(tile), 0, 2, 7)
 
 
+def _hpel_is_label(tile: bytes) -> bool:
+    """Structural gate: transparent top margin + a uniform pill border.
+
+    Every healthbox label tile has two fully transparent rows above the pill
+    and a pill border (rows 2 and 7) made only of the plate colour and the
+    transparent margin. Requiring that shape before looking at letters keeps
+    the 4-byte-stride scan from mistaking bar/status art for a label.
+    """
+    buf = bytearray(tile)
+    if any(_px_get(buf, 0, r, c) != HPEL_MARGIN for r in (0, 1) for c in range(8)):
+        return False
+    plate = _hpel_plate(tile)
+    return all(_px_get(buf, 0, r, c) in (plate, HPEL_MARGIN)
+               for r in (2, 7) for c in range(8))
+
+
 def _hpel_redraw(tile: bytes, fill: dict[int, set[int]], glyph_cols) -> bytes:
     """Repaint rows 3-6 of *tile* with a two-tone letter (upper=1, lower=8) on
-    the pill, leaving the pill/margin/separator columns byte-exact."""
+    the pill, leaving the pill/margin/separator columns byte-exact.
+
+    The pill colour is read from the tile itself, so a palette-slot sibling
+    (pill colour 3 instead of 7) keeps its own colours.
+    """
     buf = bytearray(tile)
+    plate = _hpel_plate(tile)
     for r in (3, 4, 5, 6):
         letter = HPEL_UP if r in (3, 4) else HPEL_LO
         for c in glyph_cols:
-            _px_set(buf, 0, r, c, letter if c in fill[r] else HPEL_PILL)
+            _px_set(buf, 0, r, c, letter if c in fill[r] else plate)
     return bytes(buf)
+
+
+def hpel_convert_tile(tile: bytes) -> bytes | None:
+    """« H » → « P », « P » → « V »; ``None`` if *tile* is not a label tile."""
+    if not _hpel_is_label(tile):
+        return None
+    if _hpel_is_h(tile):
+        return _hpel_redraw(tile, HPEL_P_FILL, HPEL_H_COLS)
+    if _hpel_is_p(tile):
+        return _hpel_redraw(tile, HPEL_V_FILL, HPEL_P_COLS)
+    return None
 
 
 def hpel_convert_pair(h_tile: bytes, p_tile: bytes) -> tuple[bytes, bytes]:
     """« H »,« P » → « P »,« V » (used by the patch and by the tests)."""
     return (
-        _hpel_redraw(h_tile, HPEL_P_FILL, range(2, 7)),
-        _hpel_redraw(p_tile, HPEL_V_FILL, range(0, 5)),
+        _hpel_redraw(h_tile, HPEL_P_FILL, HPEL_H_COLS),
+        _hpel_redraw(p_tile, HPEL_V_FILL, HPEL_P_COLS),
     )
 
 
 def _patch_hp_element(rom: bytearray) -> int:
-    """Redraw every uncompressed opponent-healthbox « HP » pair to « PV ».
+    """Redraw every uncompressed healthbox « HP » label tile to « PV ».
 
-    Scans the element window for an « H » tile immediately followed by a « P »
-    tile (by letter shape, any pill/palette slot) and rewrites the pair. Both
-    the search and the redraw are idempotent: once converted the tiles read
-    « P »/« V » and no longer match the « H »+« P » pattern.
+    Scans the element window by letter SHAPE and converts each label tile on
+    its own — an « H » becomes « P », a « P » becomes « V » — instead of only
+    converting adjacent « H »+« P » pairs. The table stores the label twice
+    (tiles 0/1/2 and a copy at tile 65) and the status-icon redraw picks the
+    copy the first fix left untouched, so pair-matching missed it and the box
+    reverted to « HP » as soon as the Pokémon was poisoned/burned.
+
+    Both the search and the redraw are idempotent: a converted tile draws
+    « P »/« V » in different columns and no longer matches either shape.
     """
     lo, hi = HPEL_REGION
     patched = 0
     off = lo
-    while off + 2 * TILE <= hi:
-        h_tile = bytes(rom[off:off + TILE])
-        p_tile = bytes(rom[off + TILE:off + 2 * TILE])
-        # A real « HP » label is an « H » tile immediately followed by a « P »
-        # tile sharing the SAME pill palette. Requiring matching plates ignores
-        # the lone palette-slot « H » sibling and keeps the pass idempotent (a
-        # converted « P » never re-pairs with that mismatched-plate « H »).
-        if (_hpel_is_h(h_tile) and _hpel_is_p(p_tile)
-                and _hpel_plate(h_tile) == _hpel_plate(p_tile)):
-            new_h, new_p = hpel_convert_pair(h_tile, p_tile)
-            rom[off:off + TILE] = new_h
-            rom[off + TILE:off + 2 * TILE] = new_p
-            print(f"  opponent healthbox HP element (0x{off:08X}) → « PV »")
+    while off + TILE <= hi:
+        converted = hpel_convert_tile(bytes(rom[off:off + TILE]))
+        if converted is not None:
+            letter = "« H » → « P »" if _hpel_is_h(bytes(rom[off:off + TILE])) \
+                else "« P » → « V »"
+            rom[off:off + TILE] = converted
+            print(f"  healthbox HP element (0x{off:08X}) {letter}")
             patched += 1
-            off += 2 * TILE
+            off += TILE
             continue
-        off += 4  # tiles in this sheet are 4-byte (not 32-byte) aligned
+        off += 4  # tiles in this table are 4-byte (not 32-byte) aligned
     return patched
 
 

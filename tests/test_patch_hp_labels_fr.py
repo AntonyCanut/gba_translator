@@ -12,6 +12,7 @@ English body and both end caps is what fixes the bar truncated at both ends
 reported in GitHub issue #84.
 """
 
+import re
 import sys
 import unittest
 from pathlib import Path
@@ -39,6 +40,8 @@ from languages.fr.patches.hp_labels import (
     GREY_PV_FILL,
     HPEL_P_FILL,
     HPEL_V_FILL,
+    HPEL_LABEL_TILES,
+    HPEL_OLD_H_ALT_HEX,
     HPEL_OLD_H_HEX,
     HPEL_OLD_P_HEX,
     HPEL_REGION,
@@ -49,6 +52,7 @@ from languages.fr.patches.hp_labels import (
     PARTY_OLD_TILES,
     PARTY_PV_FILL,
     _hpel_is_h,
+    _hpel_is_label,
     _hpel_is_p,
     _hpel_plate,
     _hpel_rows,
@@ -60,10 +64,20 @@ from languages.fr.patches.hp_labels import (
     _expected_new,
     _tiles_hex,
     hpel_convert_pair,
+    hpel_convert_tile,
 )
 
 BUILT_FR_ROM = Path(__file__).parent.parent / "output" / "roms" / "GenedRom-fr.gba"
 ENGLISH_ROM = Path(__file__).parent.parent / "input" / "roms" / "englishrom.gba"
+
+
+def _tile_from_pixels(rows: list[str]) -> bytes:
+    """Build a 4bpp tile from 8 rows of 8 pixel nibbles (leftmost pixel first)."""
+    out = bytearray()
+    for row in rows:
+        for c in range(0, 8, 2):
+            out.append(int(row[c], 16) | (int(row[c + 1], 16) << 4))
+    return bytes(out)
 
 
 class TestPvArtDefinitions(unittest.TestCase):
@@ -198,7 +212,12 @@ class TestPvArtDefinitions(unittest.TestCase):
 
 
 class TestOpponentHpElement(unittest.TestCase):
-    """The uncompressed opponent-healthbox « HP » element (issue #125 reopen)."""
+    """The uncompressed healthbox « HP » element tiles (issue #125 reopens).
+
+    The element table holds the label four times; the box is drawn from one
+    copy but ``UpdateStatusIconInHealthbox`` re-copies another, so a statused
+    Pokémon showed « HP » again until every copy was converted.
+    """
 
     def setUp(self):
         self.old_h = bytes.fromhex(HPEL_OLD_H_HEX)
@@ -208,6 +227,49 @@ class TestOpponentHpElement(unittest.TestCase):
     def test_recognizes_known_hp_pair(self):
         self.assertTrue(_hpel_is_h(self.old_h), "opponent « H » tile not recognised")
         self.assertTrue(_hpel_is_p(self.old_p), "opponent « P » tile not recognised")
+
+    def test_every_known_label_tile_converts(self):
+        # All four copies — including the pill-colour-3 sibling and the second
+        # « P » — must be recognised and converted, not just the adjacent pair.
+        self.assertEqual(len(HPEL_LABEL_TILES), 4)
+        for off, old_hex in HPEL_LABEL_TILES.items():
+            old = bytes.fromhex(old_hex)
+            self.assertTrue(_hpel_is_label(old),
+                            f"0x{off:08X} not recognised as a label tile")
+            new = hpel_convert_tile(old)
+            self.assertIsNotNone(new, f"0x{off:08X} not converted")
+            self.assertNotEqual(new, old, f"0x{off:08X} art unchanged")
+            self.assertFalse(_hpel_is_h(new), f"0x{off:08X} still reads « H »")
+            self.assertIsNone(hpel_convert_tile(new),
+                              f"0x{off:08X} would be converted twice")
+
+    def test_alt_palette_h_keeps_its_own_pill_colour(self):
+        # The sibling's pill is colour 3, not 7 — the redraw must not paint
+        # colour-7 pixels into it.
+        old = bytes.fromhex(HPEL_OLD_H_ALT_HEX)
+        new = hpel_convert_tile(old)
+        self.assertEqual(_hpel_plate(old), 0x3)
+        self.assertEqual(_hpel_plate(new), 0x3)
+        self.assertEqual(_hpel_rows(new), HPEL_P_FILL,
+                         "sibling tile does not draw « P »")
+        for row in (0, 1, 2, 7):
+            self.assertEqual(old[row * 4:row * 4 + 4], new[row * 4:row * 4 + 4],
+                             f"sibling row {row} margin/border modified")
+
+    def test_bar_and_status_art_is_not_mistaken_for_a_label(self):
+        # Neighbouring element tiles (HP-bar gradient, status abbreviations)
+        # must fail the structural gate so the 4-byte-stride scan can't eat them.
+        bar = _tile_from_pixels([
+            "00000000", "00000000", "77777777", "11111111",
+            "b6666666", "a5555555", "11111111", "77777777",
+        ])
+        status = _tile_from_pixels([
+            "77777777", "7c111ccc", "7c1cc1c1", "7c1cc1c1",
+            "7c111ccc", "7c1cccc1", "7c1ccccc", "77777777",
+        ])
+        for name, tile in (("HP bar", bar), ("status abbrev", status)):
+            self.assertIsNone(hpel_convert_tile(tile),
+                              f"{name} tile mistaken for an HP label")
 
     def test_convert_yields_p_then_v(self):
         # H tile → « P » at cols 2-6; P tile → « V » at cols 0-4. Crucially
@@ -234,17 +296,22 @@ class TestOpponentHpElement(unittest.TestCase):
             self.assertEqual(self.old_p[row * 4 + 3] >> 4, self.new_p[row * 4 + 3] >> 4,
                              f"V-tile row {row} col 7 separator modified")
 
-    def test_patch_is_idempotent(self):
+    def test_patch_converts_every_copy_and_is_idempotent(self):
         lo, hi = HPEL_REGION
         rom = bytearray(hi + TILE)
-        rom[0x00D11BE4:0x00D11BE4 + TILE] = self.old_h
-        rom[0x00D11C04:0x00D11C04 + TILE] = self.old_p
-        self.assertEqual(_patch_hp_element(rom), 1, "first pass should convert 1 pair")
+        for off, old_hex in HPEL_LABEL_TILES.items():
+            rom[off:off + TILE] = bytes.fromhex(old_hex)
+        self.assertEqual(_patch_hp_element(rom), len(HPEL_LABEL_TILES),
+                         "first pass must convert every label tile")
         after_first = bytes(rom)
         self.assertEqual(_patch_hp_element(rom), 0, "second pass should be a no-op")
         self.assertEqual(bytes(rom), after_first, "second pass changed bytes")
         self.assertEqual(rom[0x00D11BE4:0x00D11BE4 + TILE], self.new_h)
         self.assertEqual(rom[0x00D11C04:0x00D11C04 + TILE], self.new_p)
+        for off, old_hex in HPEL_LABEL_TILES.items():
+            self.assertEqual(bytes(rom[off:off + TILE]),
+                             hpel_convert_tile(bytes.fromhex(old_hex)),
+                             f"0x{off:08X} not converted by the patch pass")
 
 
 @pytest.mark.rom
@@ -302,23 +369,43 @@ class TestBuiltFrRomShowsPv(unittest.TestCase):
                 off, old, _make_draw_battle_label(h_tile, p_tile))
 
     def test_opponent_healthbox_element_is_pv(self):
-        # The uncompressed opponent « HP » pair must be « PV » in the shipped ROM,
-        # and NO « H » tile may survive anywhere in the element window.
+        # Every uncompressed « HP » label tile must be « PV » in the shipped ROM
+        # — the pair the box is drawn from AND the copies the status-icon redraw
+        # loads (GitHub issue #125: « HP » came back under poison/burn).
         new_h, new_p = hpel_convert_pair(
             bytes.fromhex(HPEL_OLD_H_HEX), bytes.fromhex(HPEL_OLD_P_HEX))
         self.assertEqual(bytes(self.rom[0x00D11BE4:0x00D11BE4 + TILE]), new_h,
                          "opponent « H »→« P » tile not applied in ROM")
         self.assertEqual(bytes(self.rom[0x00D11C04:0x00D11C04 + TILE]), new_p,
                          "opponent « P »→« V » tile not applied in ROM")
-        # No unconverted « HP » label pair (an « H » immediately followed by a
-        # matching-plate « P ») may survive in the element window.
+        for off, old_hex in HPEL_LABEL_TILES.items():
+            self.assertEqual(bytes(self.rom[off:off + TILE]),
+                             hpel_convert_tile(bytes.fromhex(old_hex)),
+                             f"healthbox label 0x{off:08X} is not « PV » in the ROM")
+        # No unconverted label tile — « H » OR « P » — may survive in the
+        # element window, whatever its palette slot or neighbours.
         lo, hi = HPEL_REGION
-        for off in range(lo, hi - 2 * TILE, 4):
-            h = bytes(self.rom[off:off + TILE])
-            p = bytes(self.rom[off + TILE:off + 2 * TILE])
-            self.assertFalse(
-                _hpel_is_h(h) and _hpel_is_p(p) and _hpel_plate(h) == _hpel_plate(p),
-                f"residual « HP » healthbox label pair at 0x{off:08X}")
+        for off in range(lo, hi - TILE, 4):
+            tile = bytes(self.rom[off:off + TILE])
+            self.assertIsNone(hpel_convert_tile(tile),
+                              f"residual « HP » healthbox label tile at 0x{off:08X}")
+
+    def test_no_hp_label_tile_survives_anywhere_in_the_rom(self):
+        # The definitive guard: sweep the WHOLE ROM by letter shape, not just
+        # the element window. Byte-exact searches are what kept missing copies
+        # of this label (0xD1F604, then 0xD11BC4/0xD123E4).
+        # Every label tile starts with two fully transparent rows followed by a
+        # non-zero pill row, so that prefix narrows the sweep cheaply.
+        residual = []
+        for match in re.finditer(rb"(?=\x00{8}[^\x00])", bytes(self.rom)):
+            off = match.start()
+            if off % 4:
+                continue
+            if hpel_convert_tile(bytes(self.rom[off:off + TILE])) is not None:
+                residual.append(off)
+        self.assertEqual(residual, [],
+                         "residual « HP » label tiles at "
+                         + ", ".join(f"0x{o:08X}" for o in residual))
 
 
 if __name__ == "__main__":

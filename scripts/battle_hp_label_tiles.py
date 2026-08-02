@@ -36,11 +36,11 @@ from languages.fr.patches.hp_labels import (  # noqa: E402
     BATTLE_BLOCKS,
     BATTLE_H_TILE_HEX,
     BATTLE_P_TILE_HEX,
-    HPEL_OLD_H_HEX,
-    HPEL_OLD_P_HEX,
+    HPEL_LABEL_TILES,
     _expected_new,
+    _hpel_is_h,
     _make_draw_battle_label,
-    hpel_convert_pair,
+    hpel_convert_tile,
 )
 
 
@@ -57,14 +57,20 @@ def label_tiles() -> dict[str, list[str]]:
         pv_p.append(new[h_tile].lower())      # new « P »  (PV's first letter)
         pv_v.append(new[p_tile].lower())      # new « V »  (unique to PV)
 
-    # Opponent healthbox (uncompressed element): old « H » must vanish, new « V »
-    # must appear. This is the tile the 2.1.68 build still rendered as « HP ».
-    new_h, new_p = hpel_convert_pair(
-        bytes.fromhex(HPEL_OLD_H_HEX), bytes.fromhex(HPEL_OLD_P_HEX))
-    hp_h.append(HPEL_OLD_H_HEX.lower())       # opponent old « H »  (unique to HP)
-    hp_p.append(HPEL_OLD_P_HEX.lower())       # opponent old « P »
-    pv_p.append(new_h.hex().lower())          # opponent new « P »
-    pv_v.append(new_p.hex().lower())          # opponent new « V »  (unique to PV)
+    # Uncompressed healthbox element table: EVERY « HP » label tile (including
+    # the palette-slot sibling and the second « P » copy the status redraw
+    # loads) must vanish, and its converted « P »/« V » must appear. These are
+    # the tiles a statused Pokémon still rendered as « HP ».
+    for old_hex in dict.fromkeys(HPEL_LABEL_TILES.values()):
+        old = bytes.fromhex(old_hex)
+        new = hpel_convert_tile(old)
+        assert new is not None, f"{old_hex} is not a recognised label tile"
+        if _hpel_is_h(old):
+            hp_h.append(old_hex.lower())      # old « H »  (unique to HP)
+            pv_p.append(new.hex().lower())    # new « P »
+        else:
+            hp_p.append(old_hex.lower())      # old « P »  (HP's second letter)
+            pv_v.append(new.hex().lower())    # new « V »  (unique to PV)
 
     detect = sorted(set(hp_h + hp_p + pv_p + pv_v))
     return {"hp_h": hp_h, "hp_p": hp_p, "pv_p": pv_p, "pv_v": pv_v, "detect": detect}
