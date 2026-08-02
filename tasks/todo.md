@@ -386,7 +386,7 @@
 - [x] Fournir l’asset PNG rééditable des badges FR.
 - [x] Tester le round-trip PNG et tous les badges dans les quatre blocs ROM.
 - [x] Reconstruire la ROM FR et vérifier les pixels décodés.
-- [ ] Relire le diff, committer et clôturer l’issue GitHub.
+- [x] Relire le diff, committer et clôturer l’issue GitHub.
 
 ## Suivi du 28 juillet — BMP fourni par l’utilisateur
 
@@ -395,8 +395,8 @@
 - [x] Choisir un asset canonique unique avec adaptation de bordure par bloc.
 - [x] Ajouter un test rouge sur l’empreinte visuelle fournie.
 - [x] Remplacer la génération de glyphes par l’injection fidèle du BMP.
-- [ ] Reconstruire et valider les quatre blocs combat/menu.
-- [ ] Relire, committer, commenter et refermer l’issue.
+- [x] Reconstruire et valider les quatre blocs combat/menu.
+- [x] Relire, committer, commenter et refermer l’issue.
 
 ## Revue
 
@@ -410,6 +410,11 @@
   VRAM-safe dépassait de trois octets et rendait la réinjection impossible.
 - Vérifications : build FR complet réussi, 25 tests ciblés, round-trip PNG
   réel 4/4 blocs, puis 1 508 tests Python rapides réussis (1 ignoré).
+- Suivi BMP : le fichier fourni est injecté pixel pour pixel, y compris le
+  badge `PKRS`; les quatre blocs ont l’empreinte normalisée
+  `9ab29c8b025c697e…76ae8d41` malgré leurs bordures palette `9`/`1`.
+- Validation du suivi : 30 tests ciblés réussis, `make test-rom` avec 500 tests
+  réussis, hook avec 1 508 tests Python et 68 tests Vitest, builds FR/IT/DE.
 
 # Issue #142 — « Annul » → « Annul. » dans la liste Pokédex
 

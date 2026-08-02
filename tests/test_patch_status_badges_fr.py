@@ -9,11 +9,8 @@ import pytest
 
 sys.path.insert(0, str(Path(__file__).parent.parent))
 
-from languages.fr.patches.font import lz77_decompress
 from languages.fr.patches.status_badges import (
     BADGE_BLOCKS,
-    _TILE_BYTES,
-    _TILES_PER_BADGE,
     apply_patches,
 )
 from languages.fr.sprites import SPRITES
@@ -58,38 +55,22 @@ class TestBadgeAsset(unittest.TestCase):
 
 @pytest.mark.rom
 class TestBuiltFrBadge(unittest.TestCase):
-    """Toutes les copies ROM doivent conserver leur propre indice de bordure."""
+    """Toutes les copies ROM doivent reproduire le BMP fourni."""
 
     @classmethod
     def setUpClass(cls):
         if not BUILT_FR_ROM.exists():
             pytest.skip("GenedRom-fr.gba not built")
-        cls.rom = bytearray(BUILT_FR_ROM.read_bytes())
+        cls.rom = BUILT_FR_ROM.read_bytes()
 
-    def test_content_tiles_use_each_blocks_own_border_colour(self):
+    def test_built_rom_matches_user_pixels_in_every_ui_block(self):
         for block in BADGE_BLOCKS:
-            result = lz77_decompress(self.rom, block)
-            self.assertIsNotNone(result)
-            tiles = result[0]
-            for slot in range(7):
-                base = slot * _TILES_PER_BADGE * _TILE_BYTES
-                right_cap = base + 3 * _TILE_BYTES
-                border = tiles[right_cap] & 0xF
-                for content_idx in (1, 2):
-                    content = base + content_idx * _TILE_BYTES
-                    top = tiles[content : content + 4]
-                    bottom = tiles[content + 28 : content + 32]
-                    expected = bytes([border | (border << 4)]) * 4
-                    self.assertEqual(
-                        top,
-                        expected,
-                        f"0x{block:08X} slot {slot} top border",
-                    )
-                    self.assertEqual(
-                        bottom,
-                        expected,
-                        f"0x{block:08X} slot {slot} bottom border",
-                    )
+            grid, _, _ = extract_block(self.rom, block, tiles_wide=4, tiles_tall=8)
+            self.assertEqual(
+                _normalized_badge_pixel_hash(grid),
+                USER_BADGE_PIXEL_SHA256,
+                f"0x{block:08X}",
+            )
 
 
 @pytest.mark.rom

@@ -51,7 +51,7 @@ Résultat attendu : échec sur l’empreinte de la planche, car l’ancien gén�
 
 Copier byte pour byte le BMP fourni vers `languages/fr/sprites/status_badges.bmp`. Remplacer les tables de glyphes et le rendu par un chargement validé de l’asset, une conversion en tuiles et un remappage limité aux pixels de bordure de chaque slot.
 
-- [ ] **Étape 4 : vérifier le passage au vert ciblé**
+- [x] **Étape 4 : vérifier le passage au vert ciblé**
 
 Exécuter :
 
@@ -61,7 +61,7 @@ python3 -m pytest tests/test_patch_status_badges_fr.py tests/unit/test_sprite_bm
 
 Résultat attendu : tous les tests réussissent, y compris les quatre empreintes de blocs.
 
-- [ ] **Étape 5 : committer les sources avant le build**
+- [x] **Étape 5 : committer les sources avant le build**
 
 Après la vérification ciblée, committer l’asset, le patch, le test et la
 documentation avec des chemins explicites et le message :
@@ -72,7 +72,7 @@ git commit -m "fix(fr): injecter le BMP des icônes de statut (#143)"
 
 Relire immédiatement le périmètre avec `git show --stat --oneline HEAD`.
 
-- [ ] **Étape 6 : reconstruire et vérifier la ROM**
+- [x] **Étape 6 : reconstruire et vérifier la ROM**
 
 Exécuter :
 
@@ -83,6 +83,6 @@ make test-rom
 
 Puis extraire les quatre blocs et confirmer leur empreinte normalisée ainsi que leur égalité de formes. Committer séparément la ROM avec `build(rom): appliquer le BMP des icônes de statut (#143)`.
 
-- [ ] **Étape 7 : lancer les gardes globales**
+- [x] **Étape 7 : lancer les gardes globales**
 
 Après `detect_test_processes`, exécuter `make test` et `make test-vitest`, contrôler `git diff --check` et relire les deux commits. Ne poursuivre que si leur périmètre est exact.
