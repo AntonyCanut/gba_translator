@@ -388,6 +388,16 @@
 - [x] Reconstruire la ROM FR et vérifier les pixels décodés.
 - [ ] Relire le diff, committer et clôturer l’issue GitHub.
 
+## Suivi du 28 juillet — BMP fourni par l’utilisateur
+
+- [x] Lire le nouveau commentaire et récupérer le BMP 4 bpp joint.
+- [x] Comparer ses pixels à l’asset et aux quatre blocs actuels.
+- [x] Choisir un asset canonique unique avec adaptation de bordure par bloc.
+- [x] Ajouter un test rouge sur l’empreinte visuelle fournie.
+- [x] Remplacer la génération de glyphes par l’injection fidèle du BMP.
+- [ ] Reconstruire et valider les quatre blocs combat/menu.
+- [ ] Relire, committer, commenter et refermer l’issue.
+
 ## Revue
 
 - La couture de bordure venait d’un indice palette `9` forcé dans les tuiles

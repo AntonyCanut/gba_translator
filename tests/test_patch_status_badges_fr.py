@@ -1,10 +1,6 @@
-"""Regression tests for the FR status-badge graphics patch.
+"""Régressions du patch graphique des badges de statut FR."""
 
-The four LZ77 copies feed the battle and party/summary screens.  Every copy is
-checked at pixel level so one UI cannot silently retain English or misaligned
-letters while another looks correct.
-"""
-
+import hashlib
 import sys
 import unittest
 from pathlib import Path
@@ -16,57 +12,53 @@ sys.path.insert(0, str(Path(__file__).parent.parent))
 from languages.fr.patches.font import lz77_decompress
 from languages.fr.patches.status_badges import (
     BADGE_BLOCKS,
-    _LETTERS,
-    _STATUS_PATCHES,
     _TILE_BYTES,
     _TILES_PER_BADGE,
-    _CONTENT1_IDX,
-    _CONTENT2_IDX,
-    _FNT_SLOT,
-    _make_3letter_tiles,
-    _make_ko_tiles,
-    _read_slot_bg,
-    _read_slot_border,
+    apply_patches,
 )
 from languages.fr.sprites import SPRITES
 from src.graphics.sprite_image import read_indexed_image
 from src.graphics.sprite_rom import extract_block
 
-BUILT_FR_ROM = Path(__file__).parent.parent / "output" / "roms" / "GenedRom-fr.gba"
-EDITABLE_PNG = (
-    Path(__file__).parent.parent
-    / "languages"
-    / "fr"
-    / "sprites"
-    / "status_badges.png"
+ROOT = Path(__file__).parent.parent
+BUILT_FR_ROM = ROOT / "output/roms/GenedRom-fr.gba"
+SPRITE_DIR = ROOT / "languages/fr/sprites"
+EDITABLE_BMP = SPRITE_DIR / "status_badges.bmp"
+EDITABLE_PNG = SPRITE_DIR / "status_badges.png"
+USER_BADGE_PIXEL_SHA256 = (
+    "9ab29c8b025c697e84b864c64ed4f082f290b049bd7a047b1d2e146076ae8d41"
 )
 
-SLEEP_SLOT = 2
+
+def _normalized_badge_pixel_hash(grid: list[list[int]]) -> str:
+    """Normalise les indices de bordure propres aux copies avant empreinte."""
+    normalized = [row.copy() for row in grid]
+    for slot in range(7):
+        first_row = slot * 8
+        border = normalized[first_row][24]
+        for y in range(first_row, first_row + 8):
+            normalized[y] = [9 if pixel == border else pixel for pixel in normalized[y]]
+    pixels = bytes(pixel for row in normalized for pixel in row)
+    return hashlib.sha256(pixels).hexdigest()
 
 
-class TestBadgePatchTable(unittest.TestCase):
-    def test_sleep_slot_is_som(self):
-        sleep = next(p for p in _STATUS_PATCHES if p[0] == SLEEP_SLOT)
-        self.assertEqual(sleep, (SLEEP_SLOT, "S", "O", "M"))
-
-    def test_no_dor_anywhere(self):
-        # The old "DOR" rendering must not linger in the patch table.
-        for slot, a, b, c in _STATUS_PATCHES:
-            self.assertNotEqual((a, b, c), ("D", "O", "R"))
-
-    def test_s_glyph_defined(self):
-        self.assertIn("S", _LETTERS)
-        self.assertEqual(len(_LETTERS["S"]), 6)          # 6 pixel rows
-        for row in _LETTERS["S"]:
-            self.assertEqual(len(row), 4)                # 4 pixel columns
-
+class TestBadgeAsset(unittest.TestCase):
     def test_sprite_reinsertion_uses_compact_lz77_stream(self):
         self.assertFalse(SPRITES["status_badges"].vram_safe)
+
+    def test_bmp_and_png_match_the_user_supplied_pixels(self):
+        bmp_width, bmp_height, bmp_grid = read_indexed_image(EDITABLE_BMP)
+        png_width, png_height, png_grid = read_indexed_image(EDITABLE_PNG)
+
+        self.assertEqual((bmp_width, bmp_height), (32, 64))
+        self.assertEqual((png_width, png_height), (32, 64))
+        self.assertEqual(png_grid, bmp_grid)
+        self.assertEqual(_normalized_badge_pixel_hash(bmp_grid), USER_BADGE_PIXEL_SHA256)
 
 
 @pytest.mark.rom
 class TestBuiltFrBadge(unittest.TestCase):
-    """Toutes les copies ROM doivent contenir les mêmes libellés FR fiables."""
+    """Toutes les copies ROM doivent conserver leur propre indice de bordure."""
 
     @classmethod
     def setUpClass(cls):
@@ -74,52 +66,16 @@ class TestBuiltFrBadge(unittest.TestCase):
             pytest.skip("GenedRom-fr.gba not built")
         cls.rom = bytearray(BUILT_FR_ROM.read_bytes())
 
-    def test_all_french_badges_render_in_every_ui_block(self):
-        for block in BADGE_BLOCKS:
-            with self.subTest(block=f"0x{block:08X}"):
-                result = lz77_decompress(self.rom, block)
-                self.assertIsNotNone(result)
-                tiles = bytearray(result[0])
-
-                for slot, a, b, c in _STATUS_PATCHES:
-                    bg = _read_slot_bg(tiles, slot)
-                    border = _read_slot_border(tiles, slot)
-                    expected = _make_3letter_tiles(
-                        _LETTERS[a], _LETTERS[b], _LETTERS[c], bg, border
-                    )
-                    base = slot * _TILES_PER_BADGE * _TILE_BYTES
-                    c1 = base + _CONTENT1_IDX * _TILE_BYTES
-                    c2 = base + _CONTENT2_IDX * _TILE_BYTES
-                    actual = (
-                        bytes(tiles[c1 : c1 + _TILE_BYTES]),
-                        bytes(tiles[c2 : c2 + _TILE_BYTES]),
-                    )
-                    self.assertEqual(actual, expected, f"slot {slot}: {a}{b}{c}")
-
-                ko_expected = _make_ko_tiles(_read_slot_border(tiles, _FNT_SLOT))
-                ko_base = _FNT_SLOT * _TILES_PER_BADGE * _TILE_BYTES
-                ko_c1 = ko_base + _CONTENT1_IDX * _TILE_BYTES
-                ko_c2 = ko_base + _CONTENT2_IDX * _TILE_BYTES
-                self.assertEqual(
-                    (
-                        bytes(tiles[ko_c1 : ko_c1 + _TILE_BYTES]),
-                        bytes(tiles[ko_c2 : ko_c2 + _TILE_BYTES]),
-                    ),
-                    ko_expected,
-                )
-
     def test_content_tiles_use_each_blocks_own_border_colour(self):
-        """Évite les pixels de couture dus à un indice 9 forcé sur les blocs 1."""
-        patched_slots = [slot for slot, *_ in _STATUS_PATCHES] + [_FNT_SLOT]
         for block in BADGE_BLOCKS:
             result = lz77_decompress(self.rom, block)
             self.assertIsNotNone(result)
             tiles = result[0]
-            for slot in patched_slots:
+            for slot in range(7):
                 base = slot * _TILES_PER_BADGE * _TILE_BYTES
                 right_cap = base + 3 * _TILE_BYTES
                 border = tiles[right_cap] & 0xF
-                for content_idx in (_CONTENT1_IDX, _CONTENT2_IDX):
+                for content_idx in (1, 2):
                     content = base + content_idx * _TILE_BYTES
                     top = tiles[content : content + 4]
                     bottom = tiles[content + 28 : content + 32]
@@ -135,17 +91,22 @@ class TestBuiltFrBadge(unittest.TestCase):
                         f"0x{block:08X} slot {slot} bottom border",
                     )
 
-    def test_editable_png_matches_primary_rom_block(self):
-        self.assertTrue(EDITABLE_PNG.exists())
-        png_width, png_height, png_grid = read_indexed_image(EDITABLE_PNG)
-        rom_grid, _, _ = extract_block(
-            bytes(self.rom),
-            BADGE_BLOCKS[0],
-            tiles_wide=4,
-            tiles_tall=8,
-        )
-        self.assertEqual((png_width, png_height), (32, 64))
-        self.assertEqual(png_grid, rom_grid)
+
+@pytest.mark.rom
+def test_user_bmp_is_applied_identically_to_every_ui_block(tmp_path: Path):
+    """Le patch doit reproduire le dessin fourni dans combat et menus Pokémon."""
+    if not BUILT_FR_ROM.exists():
+        pytest.skip("GenedRom-fr.gba not built")
+    rom_path = tmp_path / "status-badges.gba"
+    rom_path.write_bytes(BUILT_FR_ROM.read_bytes())
+
+    patched = apply_patches(rom_path)
+
+    assert patched == len(BADGE_BLOCKS)
+    rom = rom_path.read_bytes()
+    for block in BADGE_BLOCKS:
+        grid, _, _ = extract_block(rom, block, tiles_wide=4, tiles_tall=8)
+        assert _normalized_badge_pixel_hash(grid) == USER_BADGE_PIXEL_SHA256
 
 
 if __name__ == "__main__":

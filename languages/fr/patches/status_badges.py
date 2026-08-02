@@ -6,31 +6,20 @@ LZ77-compressed 4bpp tile sets.  Each 32-tile block encodes 8 badge slots
 of 4 tiles each:
   [left_border_tile][content_tile1][content_tile2][right_border_tile]
 
-Slot layout (verified by decoding block 0x0B1E11C of englishrom.gba, and
-cross-checked pixel-for-pixel against languages/fr/sprites/status_badges.png,
-the editable reference art for GitHub issue #143 — extractable/re-editable via
-scripts/extract_sprite.py --sprite status_badges):
+Slot layout (verified by decoding block 0x0B1E11C of englishrom.gba, then
+replaced pixel-for-pixel from languages/fr/sprites/status_badges.bmp, the
+editable reference art supplied in the follow-up to GitHub issue #143):
   slot 0 (pal4,  purple) : PSN  → POI  (Poison)
   slot 1 (pal6,  yellow) : PAR  → PAR  (unchanged)
   slot 2 (pal8,  blue)   : SLP  → SOM  (Sommeil)
   slot 3 (pal10, cyan)   : FRZ  → GEL  (Gelé)
   slot 4 (pal12, red)    : BRN  → BRU  (Brûlure)
-  slot 5 (pal4)          : TOX? → unchanged (garbled / unused)
+  slot 5 (pal4)          : PKRS (Pokérus)
   slot 6 (pal14, gray)   : FNT  → KO   (fainted, 2-letter badge)
   slot 7                 : empty
 
-Badge tile anatomy (8×8 px each, border color = palette idx 9 or 1):
-  - Row 0 / Row 7: border pixels matching the block's right cap tile
-  - Rows 1–6: letter pixels (color 2 = white) on bg color (varies by slot)
-
-3-letter badge layout in the 16-px letter area (tiles 1+2 side by side):
-  col  : 0   1  2  3  4   5   6  7  8  9  10  11  12  13  14  15
-  role : m  L1 L1 L1 L1  sep L2 L2 L2 L2  sep L3  L3  L3  L3   m
-where m = margin, sep = separator, L1/L2/L3 = letter pixels (4px wide each).
-
-2-letter badge layout (KO only):
-  col  : 0   1  2  3  4   5   6  7  8  9  10-15
-  role : m   K  K  K  K  sep  O  O  O  O   m...
+The BMP uses border palette index 9. Two target blocks use index 1 instead;
+only those border pixels are remapped so every screen keeps its own palette.
 
 This script MUST run AFTER repair_stable_lz77_blocks.py and
 repair_localized_lz77_blocks.py so that block 0x0B1E11C is restored to the
@@ -42,12 +31,15 @@ from __future__ import annotations
 
 import argparse
 import sys
+from functools import lru_cache
 from pathlib import Path
 
 ROOT_DIR = Path(__file__).resolve().parents[3]
 sys.path.insert(0, str(ROOT_DIR))
 
 from languages.fr.patches.font import lz77_compress, lz77_decompress  # noqa: E402
+from src.graphics.sprite_image import read_indexed_image  # noqa: E402
+from src.graphics.sprite_rom import grid_to_tiles  # noqa: E402
 
 # LZ77 blocks that contain the 8-slot status badge tile set.
 BADGE_BLOCKS: list[int] = [
@@ -57,161 +49,14 @@ BADGE_BLOCKS: list[int] = [
     0x00E9BF48,  # secondary badge set
 ]
 
+BADGE_ASSET = ROOT_DIR / "languages/fr/sprites/status_badges.bmp"
+_BADGE_WIDTH = 32
+_BADGE_HEIGHT = 64
+_CANONICAL_BORDER = 0x9
+_SOURCE_ROM = ROOT_DIR / "input/roms/englishrom.gba"
+
 _TILE_BYTES = 32          # bytes per 4bpp 8×8 tile
 _TILES_PER_BADGE = 4      # left_border + content1 + content2 + right_border
-_CONTENT1_IDX = 1         # offset within badge: content tile 1
-_CONTENT2_IDX = 2         # offset within badge: content tile 2
-
-_LET = 0x2   # white letter   (palette 2)
-_BRD = 0x9   # default border colour (some UI blocks use palette index 1)
-
-# ── Letter pixel art (6 rows × 4 columns, True = letter pixel) ──────────────
-_L = True
-_B = False
-
-_LETTERS: dict[str, list[list[bool]]] = {
-    # Letters confirmed from englishrom.gba block 0x0B1E11C pixel-art decoding
-    "B": [[_L,_L,_L,_B],[_L,_B,_B,_L],[_L,_L,_L,_B],[_L,_B,_B,_L],[_L,_B,_B,_L],[_L,_L,_L,_B]],
-    "L": [[_L,_B,_B,_B],[_L,_B,_B,_B],[_L,_B,_B,_B],[_L,_B,_B,_B],[_L,_B,_B,_B],[_L,_L,_L,_L]],
-    "P": [[_L,_L,_L,_B],[_L,_B,_B,_L],[_L,_B,_B,_L],[_L,_L,_L,_B],[_L,_B,_B,_B],[_L,_B,_B,_B]],
-    "R": [[_L,_L,_L,_B],[_L,_B,_B,_L],[_L,_B,_B,_L],[_L,_L,_L,_B],[_L,_B,_B,_L],[_L,_B,_B,_L]],
-    # New FR letters designed for 4px-wide, 6-row-tall badge cells
-    "D": [[_L,_L,_L,_B],[_L,_B,_B,_L],[_L,_B,_B,_L],[_L,_B,_B,_L],[_L,_B,_B,_L],[_L,_L,_L,_B]],
-    "E": [[_L,_L,_L,_L],[_L,_B,_B,_B],[_L,_L,_L,_B],[_L,_B,_B,_B],[_L,_B,_B,_B],[_L,_L,_L,_L]],
-    "G": [[_B,_L,_L,_B],[_L,_B,_B,_B],[_L,_B,_B,_B],[_L,_B,_L,_L],[_L,_B,_B,_L],[_B,_L,_L,_B]],
-    "M": [[_L,_B,_B,_L],[_L,_L,_B,_B],[_L,_B,_L,_B],[_L,_B,_B,_L],[_L,_B,_B,_L],[_L,_B,_B,_L]],
-    "O": [[_B,_L,_L,_B],[_L,_B,_B,_L],[_L,_B,_B,_L],[_L,_B,_B,_L],[_L,_B,_B,_L],[_B,_L,_L,_B]],
-    # S extracted pixel-for-pixel from the English SLP badge (curved, not blocky)
-    "S": [[_B,_L,_L,_B],[_L,_B,_B,_L],[_L,_L,_B,_B],[_B,_B,_L,_L],[_L,_B,_B,_L],[_B,_L,_L,_B]],
-    # I and U extracted pixel-for-pixel from the F-108 reference art (POI/BRU)
-    "I": [[_L,_L,_L,_B],[_B,_L,_B,_B],[_B,_L,_B,_B],[_B,_L,_B,_B],[_B,_L,_B,_B],[_L,_L,_L,_B]],
-    "U": [[_L,_B,_B,_L],[_L,_B,_B,_L],[_L,_B,_B,_L],[_L,_B,_B,_L],[_L,_B,_B,_L],[_B,_L,_L,_B]],
-}
-
-# ── Status slot patches ───────────────────────────────────────────────────────
-# (slot_index, fr_letter1, fr_letter2, fr_letter3)
-# Slot 1 (PAR→PAR) and slot 5 (garbled) are intentionally excluded.
-_STATUS_PATCHES: list[tuple[int, str, str, str]] = [
-    (0, "P", "O", "I"),   # PSN → POI
-    (2, "S", "O", "M"),   # SLP → SOM
-    (3, "G", "E", "L"),   # FRZ → GEL
-    (4, "B", "R", "U"),   # BRN → BRU  (B and R unchanged; only N→U)
-]
-
-# FNT→KO badge (2-letter, slot 6, bg=pal14)
-_FNT_SLOT = 6
-_FNT_BG = 0xE   # gray background
-
-_K: list[list[bool]] = [
-    [_L,_B,_B,_L],
-    [_L,_B,_L,_B],
-    [_L,_L,_B,_B],
-    [_L,_B,_L,_B],
-    [_L,_B,_B,_L],
-    [_L,_B,_B,_L],
-]
-
-_O_LETTER: list[list[bool]] = [
-    [_B,_L,_L,_B],
-    [_L,_B,_B,_L],
-    [_L,_B,_B,_L],
-    [_L,_B,_B,_L],
-    [_L,_B,_B,_L],
-    [_B,_L,_L,_B],
-]
-
-
-def _encode_row(pixels: list[int]) -> bytes:
-    """Pack 8 palette-index values into 4 bytes (4bpp little-endian nibbles)."""
-    assert len(pixels) == 8
-    return bytes([pixels[i] | (pixels[i + 1] << 4) for i in range(0, 8, 2)])
-
-
-def _border_row(border: int = _BRD) -> bytes:
-    return _encode_row([border] * 8)
-
-
-def _make_3letter_tiles(
-    l1: list[list[bool]],
-    l2: list[list[bool]],
-    l3: list[list[bool]],
-    bg: int,
-    border: int = _BRD,
-) -> tuple[bytes, bytes]:
-    """Build (content1, content2) tiles for a 3-letter status badge.
-
-    Layout: col0=margin, cols1-4=L1, col5=sep, cols6-9=L2, col10=sep,
-            cols11-14=L3, col15=margin
-    """
-    def p(is_letter: bool) -> int:
-        return _LET if is_letter else bg
-
-    t1 = bytearray()
-    t2 = bytearray()
-    t1.extend(_border_row(border))
-    t2.extend(_border_row(border))
-
-    for r in range(6):
-        row1 = [
-            bg,
-            p(l1[r][0]), p(l1[r][1]), p(l1[r][2]), p(l1[r][3]),
-            bg,
-            p(l2[r][0]), p(l2[r][1]),
-        ]
-        t1.extend(_encode_row(row1))
-
-        row2 = [
-            p(l2[r][2]), p(l2[r][3]),
-            bg,
-            p(l3[r][0]), p(l3[r][1]), p(l3[r][2]), p(l3[r][3]),
-            bg,
-        ]
-        t2.extend(_encode_row(row2))
-
-    t1.extend(_border_row(border))
-    t2.extend(_border_row(border))
-    assert len(t1) == _TILE_BYTES
-    assert len(t2) == _TILE_BYTES
-    return bytes(t1), bytes(t2)
-
-
-def _make_ko_tiles(border: int = _BRD) -> tuple[bytes, bytes]:
-    """Return (content_tile1, content_tile2) bytes for the KO badge (2-letter)."""
-    t1 = bytearray()
-    t2 = bytearray()
-    t1.extend(_border_row(border))
-    t2.extend(_border_row(border))
-
-    bg = _FNT_BG
-    for r in range(6):
-        k = _K[r]
-        o = _O_LETTER[r]
-
-        # Tile 1: col0=margin, cols1-4=K, col5=sep, cols6-7=O[0:2]
-        row1 = [bg, _LET if k[0] else bg, _LET if k[1] else bg,
-                _LET if k[2] else bg, _LET if k[3] else bg,
-                bg, _LET if o[0] else bg, _LET if o[1] else bg]
-        t1.extend(_encode_row(row1))
-
-        # Tile 2: cols0-1=O[2:4], cols2-7=right margin
-        row2 = [_LET if o[2] else bg, _LET if o[3] else bg,
-                bg, bg, bg, bg, bg, bg]
-        t2.extend(_encode_row(row2))
-
-    t1.extend(_border_row(border))
-    t2.extend(_border_row(border))
-    assert len(t1) == _TILE_BYTES
-    assert len(t2) == _TILE_BYTES
-    return bytes(t1), bytes(t2)
-
-
-def _read_slot_bg(tiles: bytearray, slot: int) -> int:
-    """Read background palette index from slot's content tile margin pixel."""
-    c1_off = slot * _TILES_PER_BADGE * _TILE_BYTES + _CONTENT1_IDX * _TILE_BYTES
-    # Row 1 starts at byte 4 (after 4-byte border row). Byte 4 low nibble = col0 = margin = bg.
-    return tiles[c1_off + 4] & 0xF
-
-
 def _read_slot_border(tiles: bytearray, slot: int) -> int:
     """Read the palette index from the unmodified right-cap border tile."""
     right_cap = (
@@ -221,7 +66,56 @@ def _read_slot_border(tiles: bytearray, slot: int) -> int:
     return tiles[right_cap] & 0xF
 
 
-def _patch_block(rom: bytearray, offset: int) -> bool:
+def _load_badge_grid() -> list[list[int]]:
+    """Charge et valide la planche BMP canonique fournie pour l’issue #143."""
+    width, height, grid = read_indexed_image(BADGE_ASSET)
+    if (width, height) != (_BADGE_WIDTH, _BADGE_HEIGHT):
+        raise ValueError(
+            f"{BADGE_ASSET}: expected {_BADGE_WIDTH}x{_BADGE_HEIGHT}, "
+            f"got {width}x{height}"
+        )
+    return grid
+
+
+def _adapt_border_indices(
+    grid: list[list[int]],
+    target_tiles: bytearray,
+) -> list[list[int]]:
+    """Adapte la bordure canonique aux indices propres au bloc cible."""
+    adapted = [row.copy() for row in grid]
+    for slot in range(7):
+        target_border = _read_slot_border(target_tiles, slot)
+        if target_border == _CANONICAL_BORDER:
+            continue
+        first_row = slot * 8
+        for y in range(first_row, first_row + 8):
+            adapted[y] = [
+                target_border if pixel == _CANONICAL_BORDER else pixel
+                for pixel in adapted[y]
+            ]
+    return adapted
+
+
+@lru_cache(maxsize=len(BADGE_BLOCKS))
+def _reference_capacity(offset: int) -> int:
+    """Retourne la longueur du flux source qui définit l’emplacement réservé."""
+    if not _SOURCE_ROM.exists():
+        return 0
+    result = lz77_decompress(_source_rom_bytes(), offset)
+    return result[1] if result is not None else 0
+
+
+@lru_cache(maxsize=1)
+def _source_rom_bytes() -> bytes:
+    """Charge une seule fois la ROM source utilisée comme référence de capacité."""
+    return _SOURCE_ROM.read_bytes()
+
+
+def _patch_block(
+    rom: bytearray,
+    offset: int,
+    badge_grid: list[list[int]],
+) -> bool:
     """Decompress block at `offset`, apply all FR status patches, recompress."""
     result = lz77_decompress(rom, offset)
     if result is None:
@@ -237,31 +131,8 @@ def _patch_block(rom: bytearray, offset: int) -> bool:
         return False
 
     tiles = bytearray(decompressed)
-    changes: list[str] = []
-
-    # ── 1. 3-letter status badges (PSN→POI, SLP→SOM, FRZ→GEL, BRN→BRU) ──────
-    for slot, a, b_ltr, c in _STATUS_PATCHES:
-        bg = _read_slot_bg(tiles, slot)
-        border = _read_slot_border(tiles, slot)
-        t1, t2 = _make_3letter_tiles(
-            _LETTERS[a], _LETTERS[b_ltr], _LETTERS[c], bg, border
-        )
-        base = slot * _TILES_PER_BADGE * _TILE_BYTES
-        c1_off = base + _CONTENT1_IDX * _TILE_BYTES
-        c2_off = base + _CONTENT2_IDX * _TILE_BYTES
-        tiles[c1_off : c1_off + _TILE_BYTES] = t1
-        tiles[c2_off : c2_off + _TILE_BYTES] = t2
-        changes.append(f"slot{slot}→{a}{b_ltr}{c}")
-
-    # ── 2. Fainted badge FNT/DEB → KO (2-letter, slot 6) ─────────────────────
-    ko_border = _read_slot_border(tiles, _FNT_SLOT)
-    ko_t1, ko_t2 = _make_ko_tiles(ko_border)
-    base6 = _FNT_SLOT * _TILES_PER_BADGE * _TILE_BYTES
-    c1_off6 = base6 + _CONTENT1_IDX * _TILE_BYTES
-    c2_off6 = base6 + _CONTENT2_IDX * _TILE_BYTES
-    tiles[c1_off6 : c1_off6 + _TILE_BYTES] = ko_t1
-    tiles[c2_off6 : c2_off6 + _TILE_BYTES] = ko_t2
-    changes.append("slot6→KO")
+    adapted_grid = _adapt_border_indices(badge_grid, tiles)
+    tiles[: 32 * _TILE_BYTES] = grid_to_tiles(adapted_grid, 4, 8)
 
     compressed = lz77_compress(bytes(tiles))
     if offset + len(compressed) > len(rom):
@@ -271,23 +142,25 @@ def _patch_block(rom: bytearray, offset: int) -> bool:
         )
         return False
 
-    if len(compressed) > comp_len:
-        extra = rom[offset + comp_len : offset + len(compressed)]
+    capacity = max(comp_len, _reference_capacity(offset))
+    if len(compressed) > capacity:
+        extra = rom[offset + capacity : offset + len(compressed)]
         if any(b not in (0x00, 0xFF) for b in extra):
             print(
                 f"  WARN 0x{offset:08X}: recompressed ({len(compressed)}) > original "
-                f"({comp_len}) and tail is non-padding — skip",
+                f"capacity ({capacity}) and tail is non-padding — skip",
                 file=sys.stderr,
             )
             return False
 
     rom[offset : offset + len(compressed)] = compressed
-    print(f"  0x{offset:08X}  {', '.join(changes)}")
+    print(f"  0x{offset:08X}  planche BMP injectée")
     return True
 
 
 def apply_patches(rom_path: Path, dry_run: bool = False) -> int:
     rom = bytearray(rom_path.read_bytes())
+    badge_grid = _load_badge_grid()
     patched = 0
 
     for block_off in BADGE_BLOCKS:
@@ -301,7 +174,7 @@ def apply_patches(rom_path: Path, dry_run: bool = False) -> int:
             if ok:
                 patched += 1
             continue
-        ok = _patch_block(rom, block_off)
+        ok = _patch_block(rom, block_off, badge_grid)
         if ok:
             patched += 1
 

@@ -70,8 +70,9 @@ class SpriteDef:
 SPRITES: dict[str, SpriteDef] = {
     # 8 status-condition badges (POI/PAR/SOM/GEL/BRU/…/KO), 4 tiles wide x 1
     # tile tall each, stacked into one 32x64 sheet. Same offsets as
-    # languages/fr/patches/status_badges.py's BADGE_BLOCKS. The editable PNG
-    # reference is languages/fr/sprites/status_badges.png.
+    # languages/fr/patches/status_badges.py's BADGE_BLOCKS. The canonical
+    # editable reference is languages/fr/sprites/status_badges.bmp; the PNG
+    # is a synchronized preview for editors that prefer that format.
     "status_badges": SpriteDef(
         blocks=(0x0B1E11C, 0x0B1E280, 0x00E82EA0, 0x00E9BF48),
         tiles_wide=4,
