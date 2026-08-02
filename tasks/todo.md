@@ -186,6 +186,24 @@
   12 gardes de reconstruction et 533 tests ROM ; 35 scénarios optionnels ont
   été ignorés.
 
+## Reprise — respecter les pixels décoratifs fournis
+
+- [x] Relire le nouveau commentaire et confirmer le périmètre graphique complet.
+- [x] Comparer le BMP d’origine à l’asset injecté et localiser les pixels omis.
+- [x] Ajouter une garde rouge sur la fidélité de l’intégralité du rendu.
+- [x] Versionner le BMP original et régénérer le PNG depuis sa grille 4 bpp.
+- [ ] Committer les sources avant de reconstruire la ROM FR.
+- [ ] Réextraire le verso depuis la ROM et comparer tous les pixels au BMP.
+- [ ] Exécuter les validations élargies, rebaser et publier le bilan GitHub.
+
+### Revue
+
+- Le PNG précédent différait du BMP sur 122 pixels, tous situés dans l’ornement
+  à droite du titre (`x=105..121`, `y=4..16`) qui avait été conservé à tort.
+- La référence attendue est désormais le BMP complet fourni dans l’issue, texte
+  et ornements compris ; son SHA-256 est
+  `fdce7fafb925b87c339f58e26d6ca3e713669bf1197d62a1b4930e10842a8eb4`.
+
 # Issue #150 — description CT108
 
 - [x] Lire l’issue, sa capture et décoder le pointeur vivant de la CT108.

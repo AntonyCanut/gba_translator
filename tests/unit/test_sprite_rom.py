@@ -29,13 +29,15 @@ def _make_rom_with_block(tiles: bytes, pad_after: int = 16) -> tuple:
 def _make_rom_with_tilemap(
     tiles: bytes,
     entries: list[int],
+    *,
+    tiles_padding: int = 64,
 ) -> tuple[bytearray, int, int]:
     """Construit une ROM synthétique avec une planche et sa tilemap LZ77."""
     tiles_block = lz77_compress(tiles)
     tilemap_block = lz77_compress(
         b"".join(entry.to_bytes(2, "little") for entry in entries)
     )
-    tilemap_offset = len(tiles_block) + 64
+    tilemap_offset = len(tiles_block) + tiles_padding
     rom = bytearray(tiles_block)
     rom.extend(b"\xff" * (tilemap_offset - len(rom)))
     rom.extend(tilemap_block)
@@ -443,15 +445,84 @@ def test_insert_mapped_block_remaps_flip_equivalent_shared_tile_edit():
     assert actual == expected
 
 
-def test_insert_mapped_block_rejects_conflicting_shared_tile_edits():
+def test_insert_mapped_block_extends_compressed_tiles_when_padding_allows():
+    """Une planche LZ77 peut gagner une tuile si le bloc recompressé tient."""
     tiles = grid_to_tiles([[5] * 8 for _ in range(8)], 1, 1)
     rom, tiles_offset, tilemap_offset = _make_rom_with_tilemap(tiles, [0, 0])
+    expected, _, _ = extract_mapped_block(
+        bytes(rom), tiles_offset, tilemap_offset, tiles_wide=2, tiles_tall=1
+    )
+    expected[0][8] = 7
+
+    insert_mapped_block(
+        rom,
+        tiles_offset,
+        tilemap_offset,
+        expected,
+        tiles_wide=2,
+        tiles_tall=1,
+    )
+
+    actual, decompressed_len, _ = extract_mapped_block(
+        bytes(rom), tiles_offset, tilemap_offset, tiles_wide=2, tiles_tall=1
+    )
+    assert decompressed_len == 2 * TILE_BYTES
+    assert actual == expected
+
+
+def test_insert_mapped_block_relocates_tilemap_through_known_pointer():
+    """Une tilemap trop grande est déplacée via son pointeur vérifié."""
+    tiles = grid_to_tiles([[5] * 8 for _ in range(8)], 1, 1)
+    rom, tiles_offset, tilemap_offset = _make_rom_with_tilemap(tiles, [0, 0])
+    tilemap_result = lz77_decompress(bytes(rom), tilemap_offset)
+    assert tilemap_result is not None
+    _, tilemap_compressed_len = tilemap_result
+    pointer_offset = tilemap_offset + tilemap_compressed_len + 8
+    rom[pointer_offset - 8:pointer_offset] = b"\xAA" * 8
+    rom[pointer_offset:pointer_offset + 4] = (
+        0x08000000 + tilemap_offset
+    ).to_bytes(4, "little")
+    rom[pointer_offset + 4:] = b"\xAA" * 16 + b"\xFF" * 512
+    expected, _, _ = extract_mapped_block(
+        bytes(rom), tiles_offset, tilemap_offset, tiles_wide=2, tiles_tall=1
+    )
+    expected[0][8] = 7
+
+    insert_mapped_block(
+        rom,
+        tiles_offset,
+        tilemap_offset,
+        expected,
+        tiles_wide=2,
+        tiles_tall=1,
+        tilemap_pointer_offsets=(pointer_offset,),
+    )
+
+    relocated_offset = (
+        int.from_bytes(rom[pointer_offset:pointer_offset + 4], "little")
+        - 0x08000000
+    )
+    actual, _, _ = extract_mapped_block(
+        bytes(rom), tiles_offset, relocated_offset, tiles_wide=2, tiles_tall=1
+    )
+    assert relocated_offset > pointer_offset
+    assert actual == expected
+
+
+def test_insert_mapped_block_rejects_growth_into_adjacent_data():
+    tiles = grid_to_tiles([[5] * 8 for _ in range(8)], 1, 1)
+    rom, tiles_offset, tilemap_offset = _make_rom_with_tilemap(
+        tiles,
+        [0, 0],
+        tiles_padding=0,
+    )
     grid, _, _ = extract_mapped_block(
         bytes(rom), tiles_offset, tilemap_offset, tiles_wide=2, tiles_tall=1
     )
     grid[0][8] = 7
+    original = bytes(rom)
 
-    with pytest.raises(ValueError, match="shared tile 0"):
+    with pytest.raises(ValueError, match="tail is non-padding"):
         insert_mapped_block(
             rom,
             tiles_offset,
@@ -460,3 +531,5 @@ def test_insert_mapped_block_rejects_conflicting_shared_tile_edits():
             tiles_wide=2,
             tiles_tall=1,
         )
+
+    assert bytes(rom) == original

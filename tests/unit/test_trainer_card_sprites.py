@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 
+import hashlib
 import subprocess
 from pathlib import Path
 
@@ -13,7 +14,10 @@ from src.graphics.sprite_rom import extract_mapped_block
 
 ROOT = Path(__file__).resolve().parents[2]
 BACK_ASSET = ROOT / "languages" / "fr" / "sprites" / "trainer_card_back.png"
+BACK_REFERENCE = ROOT / "languages" / "fr" / "sprites" / "trainer_card_back.bmp"
 BUILT_ROM = ROOT / "output" / "roms" / "GenedRom-fr.gba"
+BACK_REFERENCE_SHA256 = "fdce7fafb925b87c339f58e26d6ca3e713669bf1197d62a1b4930e10842a8eb4"
+BACK_GRID_SHA256 = "a429790465cf2bd715136a955d85f7ee52b251c99d5310ee78c95a33c2403435"
 BADGES_DE_LIGUE_ROWS = (
     "999994449999449999944499994499999449999444499999449999944449944449944999944994499499999",
     "994499499449949944994994499499444499444444499449949944444449944449949944994994499499444",
@@ -56,6 +60,10 @@ def test_trainer_card_registry_pairs_tiles_and_tilemaps(
     assert (sprite.tiles_wide, sprite.tiles_tall) == (32, 20)
 
 
+def test_trainer_card_back_declares_verified_tilemap_pointer() -> None:
+    assert SPRITES["trainer_card_back"].tilemap_pointers == ((0x01ED8AB8,),)
+
+
 @pytest.mark.parametrize(
     "name",
     ["trainer_card_front", "trainer_card_back"],
@@ -81,6 +89,22 @@ def test_trainer_card_back_uses_contributed_french_heading() -> None:
     assert actual == BADGES_DE_LIGUE_ROWS
 
 
+def test_trainer_card_back_keeps_complete_contributed_render() -> None:
+    """Le PNG doit inclure le texte et les ornements déplacés du BMP fourni."""
+    assert BACK_REFERENCE.exists(), "le BMP original doit rester versionné"
+    assert hashlib.sha256(BACK_REFERENCE.read_bytes()).hexdigest() == (
+        BACK_REFERENCE_SHA256
+    )
+
+    bmp_width, bmp_height, bmp_grid = read_indexed_image(BACK_REFERENCE)
+    png_width, png_height, png_grid = read_indexed_image(BACK_ASSET)
+    grid_bytes = bytes(pixel for row in png_grid for pixel in row)
+
+    assert (png_width, png_height) == (bmp_width, bmp_height)
+    assert hashlib.sha256(grid_bytes).hexdigest() == BACK_GRID_SHA256
+    assert png_grid == bmp_grid
+
+
 def test_french_build_inserts_trainer_card_back() -> None:
     """La recette FR doit exécuter la réinjection du verso traduit."""
     result = subprocess.run(
@@ -102,16 +126,26 @@ def test_french_build_inserts_trainer_card_back() -> None:
 def test_built_french_rom_contains_trainer_card_back_asset() -> None:
     """Le rendu mappé de la ROM doit être identique à l’asset versionné."""
     sprite = SPRITES["trainer_card_back"]
+    rom = BUILT_ROM.read_bytes()
     _, _, expected = read_indexed_image(BACK_ASSET)
+    tilemap_pointer_offset = sprite.tilemap_pointers[0][0]
+    tilemap_offset = (
+        int.from_bytes(
+            rom[tilemap_pointer_offset:tilemap_pointer_offset + 4],
+            "little",
+        )
+        - 0x08000000
+    )
 
     actual, decompressed_len, _ = extract_mapped_block(
-        BUILT_ROM.read_bytes(),
+        rom,
         sprite.blocks[0],
-        sprite.tilemaps[0],
+        tilemap_offset,
         sprite.tiles_wide,
         sprite.tiles_tall,
         compressed=sprite.compressed,
     )
 
-    assert decompressed_len == 6_688
+    assert tilemap_offset != sprite.tilemaps[0]
+    assert decompressed_len == 6_752
     assert actual == expected

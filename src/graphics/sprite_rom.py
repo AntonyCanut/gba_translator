@@ -19,6 +19,7 @@ ROOT_DIR = Path(__file__).resolve().parents[2]
 sys.path.insert(0, str(ROOT_DIR))
 
 from languages.fr.patches.font import (  # noqa: E402
+    FreeSpaceAllocator,
     lz77_compress,
     lz77_decompress,
     pixels_to_tile,
@@ -32,11 +33,16 @@ TILEMAP_INDEX_MASK = 0x03FF
 TILEMAP_HFLIP = 0x0400
 TILEMAP_VFLIP = 0x0800
 TILEMAP_FLIP_MASK = TILEMAP_HFLIP | TILEMAP_VFLIP
+GBA_ROM_BASE = 0x08000000
 
 Grid = list[list[int]]
 Palette = list[tuple[int, int, int]]
 
 PALETTE_COLOURS = 16
+
+
+class BlockCapacityError(ValueError):
+    """Indique qu’un bloc recompressé ne tient plus dans son emplacement."""
 
 
 def _tile_bytes(bits_per_pixel: int) -> int:
@@ -194,7 +200,9 @@ def _write_block_payload(
 
     compressed_out = lz77_compress(payload, vram_safe=vram_safe)
     if offset + len(compressed_out) > len(rom):
-        raise ValueError(f"0x{offset:08X}: recompressed block overflows ROM")
+        raise BlockCapacityError(
+            f"0x{offset:08X}: recompressed block overflows ROM"
+        )
     if max_compressed_size is not None:
         if max_compressed_size < original_len:
             raise ValueError(
@@ -202,18 +210,49 @@ def _write_block_payload(
                 f"stored block ({original_len})"
             )
         if len(compressed_out) > max_compressed_size:
-            raise ValueError(
+            raise BlockCapacityError(
                 f"0x{offset:08X}: recompressed ({len(compressed_out)}) > slot "
                 f"capacity ({max_compressed_size})"
             )
     elif len(compressed_out) > original_len:
         extra = rom[offset + original_len:offset + len(compressed_out)]
         if any(byte not in (0x00, 0xFF) for byte in extra):
-            raise ValueError(
+            raise BlockCapacityError(
                 f"0x{offset:08X}: recompressed ({len(compressed_out)}) > original "
                 f"({original_len}) and tail is non-padding"
             )
     rom[offset:offset + len(compressed_out)] = compressed_out
+
+
+def _relocate_compressed_payload(
+    rom: bytearray,
+    payload: bytes,
+    pointer_offsets: tuple[int, ...],
+    expected_offset: int,
+    *,
+    vram_safe: bool,
+) -> None:
+    """Relocalise un bloc LZ77 et met à jour ses pointeurs connus."""
+    expected_pointer = (GBA_ROM_BASE + expected_offset).to_bytes(4, "little")
+    for pointer_offset in pointer_offsets:
+        if not 0 <= pointer_offset <= len(rom) - 4:
+            raise ValueError(f"pointer offset 0x{pointer_offset:08X} outside ROM")
+        if rom[pointer_offset:pointer_offset + 4] != expected_pointer:
+            actual = int.from_bytes(
+                rom[pointer_offset:pointer_offset + 4],
+                "little",
+            )
+            raise ValueError(
+                f"pointer at 0x{pointer_offset:08X} is 0x{actual:08X}, "
+                f"expected 0x{GBA_ROM_BASE + expected_offset:08X}"
+            )
+
+    compressed_out = lz77_compress(payload, vram_safe=vram_safe)
+    relocated_offset = FreeSpaceAllocator(rom).allocate(len(compressed_out))
+    rom[relocated_offset:relocated_offset + len(compressed_out)] = compressed_out
+    relocated_pointer = (GBA_ROM_BASE + relocated_offset).to_bytes(4, "little")
+    for pointer_offset in pointer_offsets:
+        rom[pointer_offset:pointer_offset + 4] = relocated_pointer
 
 
 def extract_block(
@@ -404,12 +443,13 @@ def insert_mapped_block(
     compressed: bool = True,
     vram_safe: bool = True,
     bits_per_pixel: int = 4,
+    tilemap_pointer_offsets: tuple[int, ...] = (),
 ) -> None:
     """Réinjecte un écran mappé dans sa planche de tuiles.
 
     Les tuiles visuellement équivalentes sont dédupliquées en utilisant les
-    flips de la tilemap. Une édition qui exige plus de tuiles distinctes que
-    la planche existante est rejetée avant toute écriture.
+    flips de la tilemap. Une planche compressée peut gagner des tuiles si le
+    bloc recompressé tient dans son emplacement sans écraser de données.
 
     Args:
         rom: Tampon ROM modifiable.
@@ -420,6 +460,8 @@ def insert_mapped_block(
         tiles_tall: Hauteur de l'écran en tuiles.
         compressed: Indique si la planche est compressée en LZ77.
         vram_safe: Utilise le compresseur compatible VRAM.
+        tilemap_pointer_offsets: Pointeurs connus à repointer si la tilemap
+            recompressée doit être relocalisée.
     """
     expected_width = tiles_wide * TILE_PX
     expected_height = tiles_tall * TILE_PX
@@ -480,27 +522,13 @@ def insert_mapped_block(
 
     tile_count = len(tiles) // tile_bytes
     if len(desired_tiles) > tile_count:
-        conflicting_index = next(
-            (
-                tile_index
-                for tile_index in {
-                    entry & TILEMAP_INDEX_MASK for entry in entries
-                }
-                if len(
-                    {
-                        min(variants_by_cell[cell])
-                        for cell, entry in enumerate(entries)
-                        if (entry & TILEMAP_INDEX_MASK) == tile_index
-                    }
-                )
-                > 1
-            ),
-            entries[0] & TILEMAP_INDEX_MASK,
-        )
-        raise ValueError(
-            f"shared tile {conflicting_index} has conflicting mapped edits "
-            f"and no spare tile"
-        )
+        if not compressed or len(tiles) % tile_bytes:
+            raise ValueError("conflicting mapped edits require extra tiles")
+        if len(desired_tiles) > TILEMAP_INDEX_MASK + 1:
+            raise ValueError("mapped edit exceeds the 10-bit tile index range")
+        missing_tiles = len(desired_tiles) - tile_count
+        tiles.extend(b"\x00" * (missing_tiles * tile_bytes))
+        tile_count += missing_tiles
 
     candidates = {
         canonical: sorted(
@@ -597,12 +625,23 @@ def insert_mapped_block(
         compressed=compressed,
         vram_safe=vram_safe,
     )
-    _write_block_payload(
-        staged,
-        tilemap_offset,
-        bytes(remapped_tilemap),
-        tilemap_comp_len,
-        compressed=True,
-        vram_safe=vram_safe,
-    )
+    try:
+        _write_block_payload(
+            staged,
+            tilemap_offset,
+            bytes(remapped_tilemap),
+            tilemap_comp_len,
+            compressed=True,
+            vram_safe=vram_safe,
+        )
+    except BlockCapacityError:
+        if not tilemap_pointer_offsets:
+            raise
+        _relocate_compressed_payload(
+            staged,
+            bytes(remapped_tilemap),
+            tilemap_pointer_offsets,
+            tilemap_offset,
+            vram_safe=vram_safe,
+        )
     rom[:] = staged
