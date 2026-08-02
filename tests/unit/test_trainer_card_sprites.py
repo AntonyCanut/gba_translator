@@ -137,7 +137,7 @@ def test_built_french_rom_contains_trainer_card_back_asset() -> None:
         - 0x08000000
     )
 
-    actual, decompressed_len, _ = extract_mapped_block(
+    actual, decompressed_len, compressed_len = extract_mapped_block(
         rom,
         sprite.blocks[0],
         tilemap_offset,
@@ -148,4 +148,5 @@ def test_built_french_rom_contains_trainer_card_back_asset() -> None:
 
     assert tilemap_offset != sprite.tilemaps[0]
     assert decompressed_len == 6_752
+    assert compressed_len == 2_107
     assert actual == expected

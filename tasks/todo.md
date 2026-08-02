@@ -192,9 +192,9 @@
 - [x] Comparer le BMP d’origine à l’asset injecté et localiser les pixels omis.
 - [x] Ajouter une garde rouge sur la fidélité de l’intégralité du rendu.
 - [x] Versionner le BMP original et régénérer le PNG depuis sa grille 4 bpp.
-- [ ] Committer les sources avant de reconstruire la ROM FR.
-- [ ] Réextraire le verso depuis la ROM et comparer tous les pixels au BMP.
-- [ ] Exécuter les validations élargies, rebaser et publier le bilan GitHub.
+- [x] Committer les sources avant de reconstruire la ROM FR.
+- [x] Réextraire le verso depuis la ROM et comparer tous les pixels au BMP.
+- [x] Exécuter les validations élargies, rebaser et publier le bilan GitHub.
 
 ### Revue
 
@@ -203,6 +203,18 @@
 - La référence attendue est désormais le BMP complet fourni dans l’issue, texte
   et ornements compris ; son SHA-256 est
   `fdce7fafb925b87c339f58e26d6ca3e713669bf1197d62a1b4930e10842a8eb4`.
+- Le rendu requiert 211 tuiles canoniques contre 209 auparavant : la planche
+  passe à 6 752 octets décompressés et reste dans son emplacement compressé
+  (2 107 octets). La tilemap, devenue trop grande pour sa cellule adjacente,
+  est relocalisée via son unique pointeur déclaré `0x01ED8AB8`, sans balayage
+  aveugle de la ROM.
+- Dans la ROM reconstruite, ce pointeur cible `0x002FE490` et la grille extraite
+  a le SHA-256 `a429790465cf2bd715136a955d85f7ee52b251c99d5310ee78c95a33c2403435` :
+  elle est pixel pour pixel identique au BMP complet.
+- Le hook du commit source a validé 1 615 tests Python (1 ignoré), 68 tests
+  Vitest, les builds FR/IT/DE et les trois audits de collisions à zéro.
+  `make test-rom` a ensuite confirmé le rebuild FR déterministe, 12 gardes de
+  reconstruction et 547 tests ROM ; 43 scénarios optionnels ont été ignorés.
 
 # Issue #150 — description CT108
 
