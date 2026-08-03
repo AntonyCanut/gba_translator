@@ -943,14 +943,12 @@ suit les deux consommateurs de `Power` et les quatre pointeurs de catégorie/pr�
 - Le patch post-build laisse `0x1EBFFC8` pointer vers la copie relocalisée
   « Actives » et repointe uniquement `0x1FB40B8` vers la cellule source
   `0x1F5605C`, qui décode « Active ».
-- Les tests synthétiques du patch passent 7/7, dont la sauvegarde `.bak` exacte ;
-  les tests ciblés patch/intégrité passent 33/33 et les 13 gardes de régression
-  du build FR passent.
+- Les tests du patch passent 8/8, dont la sauvegarde `.bak` exacte et la lecture
+  de la ROM versionnée ; les tests ciblés patch/intégrité passent 34/34 et les
+  13 gardes de régression du build FR passent.
 - La suite rapide exécutée par le hook passe 1 642 tests Python (1 skip), puis les
   68 tests Vitest ; les builds FR, IT et DE réussissent sans collision.
-- `make test-rom` confirme deux builds FR byte-identiques et 557 tests réussis.
-  Quatre replays mGBA intermittents et sans rapport avec les Missions ont échoué
-  dans la passe groupée ; tous les scénarios concernés repassent isolément
-  (5 réussites, 2 skips).
+- `make test-rom` confirme deux builds FR byte-identiques et sort à zéro :
+  565 tests réussis, 35 scénarios optionnels ignorés et 1 846 exclus par le profil.
 - Le mot français « Active », identique à sa source anglaise, est désormais classé
   explicitement dans l’audit des chaînes anglaises vivantes.

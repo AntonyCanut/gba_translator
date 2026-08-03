@@ -19,6 +19,8 @@ import tempfile
 import unittest
 from pathlib import Path
 
+import pytest
+
 from languages.fr.patches.mission_tab_labels import (
     GBA_BASE,
     SUFFIX_PTR_OFFSET,
@@ -32,6 +34,7 @@ ACTIVE_INLINE_OFFSET = 0x1F5605C
 ACTIVE_RELOCATED_OFFSET = 0x1F57000
 ACTIVE_TAB_POINTER = 0x1EBFFC8
 ACTIVE_STATUS_POINTER = 0x1FB40B8
+BUILT_ROM = Path(__file__).resolve().parents[1] / "output/roms/GenedRom-fr.gba"
 
 
 def _encode(text: str) -> bytes:
@@ -142,6 +145,14 @@ class TestPatchMissionTabLabelsFr(unittest.TestCase):
             self.assertEqual(changes, 1)
             self.assertEqual(Path(f"{rom_path}.bak").read_bytes(), original)
             self.assertNotEqual(rom_path.read_bytes(), original)
+
+    @pytest.mark.rom
+    def test_versioned_rom_keeps_each_active_label_in_its_context(self):
+        self.assertTrue(BUILT_ROM.exists(), f"missing built ROM: {BUILT_ROM}")
+        rom = bytearray(BUILT_ROM.read_bytes())
+
+        self.assertEqual(_decode_pointer(rom, ACTIVE_TAB_POINTER), "Actives")
+        self.assertEqual(_decode_pointer(rom, ACTIVE_STATUS_POINTER), "Active")
 
 
 if __name__ == "__main__":
