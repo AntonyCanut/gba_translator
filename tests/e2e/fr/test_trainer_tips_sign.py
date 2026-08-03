@@ -58,4 +58,4 @@ def test_trainer_tips_sign_uses_requested_wording_and_wrap(
     assert _display_text(french) == EXPECTED_DISPLAY_TEXT
 
     _, before_second_l, _ = french.split("<0xF8>Á")
-    assert before_second_l.endswith("<0xFA>"), french
+    assert before_second_l.endswith("<0xFB>"), french
