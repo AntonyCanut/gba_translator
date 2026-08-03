@@ -148,12 +148,13 @@ SPRITES: dict[str, SpriteDef] = {
         tiles_tall=4,
     ),
     # Exterior Pokémon Mart sign (GitHub issue #152): the four-letter word
-    # occupies tiles 413-414 of the live Unbound primary overworld tileset.
-    # Only this 16x8 window is exposed, preserving the other 638 tiles.
+    # has three active tileset copies.  Two use tiles 225-226 and the primary
+    # overworld tileset uses 413-414.  Only those 16x8 windows are exposed, so
+    # every neighbouring tile keeps its original indices and palette style.
     "pokemon_mart_sign": SpriteDef(
-        blocks=(0x00CF91A0,),
-        start_tiles=(413,),
-        max_compressed_sizes=(11_604,),
+        blocks=(0x007559B8, 0x00B89D5C, 0x00CF91A0),
+        start_tiles=(225, 225, 413),
+        max_compressed_sizes=(10_452, 10_531, 11_604),
         tiles_wide=2,
         tiles_tall=1,
         palette=0x00EA1BC8,

@@ -115,6 +115,7 @@
   de commit sont verts.
 - La vérification ciblée après build retrouve exactement l’asset « SHOP » dans
   `output/roms/GenedRom-fr.gba` : 22 tests passent.
+
 ## Réouverture — intégrer les retouches fournies
 
 - [x] Lire le nouveau commentaire et télécharger les deux BMP joints.
@@ -147,6 +148,36 @@ dernier et atteignent effectivement la ROM livrée.
   puis la relance complète ont réussi sans changement de code.
 - Relecture indépendante : aucun constat critique, important ou mineur; les
   644 octets modifiés de la ROM sont tous contenus dans les deux planches.
+
+## Suivi — intégrer le BMP officiel et couvrir les copies restantes
+
+- [x] Lire le nouveau commentaire et récupérer le BMP fourni.
+- [x] Comparer sa grille au PNG versionné et reproduire les deux « MART » restants.
+- [x] Identifier la cause racine : deux blocs actifs n’étaient pas enregistrés.
+- [x] Ajouter les gardes rouges des trois copies et de la référence utilisateur.
+- [x] Intégrer le BMP exact et la variante adaptée aux anciens cadres.
+- [x] Brancher les trois insertions après les réparations LZ77.
+- [x] Reconstruire la ROM et comparer les trois fenêtres décompressées.
+- [x] Exécuter les validations graphiques et multilingues.
+- [x] Relire, committer et intégrer localement sans push.
+
+### Revue du suivi
+
+- La cause du faux positif initial était une couverture incomplète :
+  `0x00CF91A0` affichait bien SHOP, mais `0x007559B8` et `0x00B89D5C`
+  conservaient encore les 64 octets de MART aux tuiles 225–226.
+- Le BMP fourni est versionné octet pour octet
+  (`SHA-256 93407be53e035fbeb…`) et sa grille indexée est aussi conservée dans
+  le PNG éditable. La variante des deux anciens tilesets reprend le même
+  masque SHOP avec leur cadre et leur dégradé natifs.
+- La sonde d’insertion a recompressé les trois blocs à 10 333, 10 410 et
+  11 522 octets, sous leurs capacités respectives, sans modifier aucune
+  tuile voisine.
+- La ROM FR reconstruite contient les trois grilles attendues. Le crochet a
+  validé 1 633 tests Python (1 ignoré), 68 tests Vitest et les builds FR, IT
+  et DE avec zéro collision ; 45 gardes graphiques ciblées et le lint sont
+  également verts.
+
 # Issue #149 — réouverture : corriger le vrai libellé de montée de niveau
 
 ## Diagnostic et conception
