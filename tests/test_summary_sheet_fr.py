@@ -1,7 +1,7 @@
 """La planche dessinée à la main est la source de vérité du bloc 0x00E9A460 (#145).
 
 L'auteur de l'issue a redessiné les libellés de la page « Infos Pokémon »
-(N° / NOM / DO / N°ID / OBJET) et ceux du panneau d'attaque (POUV. / PRECISION)
+(N° / NOM / DO / N°ID / OBJET) et ceux du panneau d'attaque (POUVOIR / PRECIS.)
 directement dans la planche extraite. ``make build-fr`` réinjecte désormais
 ``languages/fr/sprites/summary_stat_labels.png`` **après** ``hp_labels.py`` et
 ``summary_stat_labels.py``, qui redessinent par programme l'ovale « PV » et les
@@ -56,7 +56,7 @@ INFO_LABEL_SLOTS: tuple[tuple[str, int, bool], ...] = (
 )
 INFO_LABEL_X = range(0, 32)
 
-# Le panneau d'attaque (POWER → POUV., ACCURACY → PRECISION) occupe la dernière
+# Le panneau d'attaque (POWER → POUVOIR, ACCURACY → PRECIS.) occupe la dernière
 # colonne de tuiles de la planche.
 MOVE_PANEL_X = range(96, 128)
 MOVE_PANEL_Y = range(56, 112)

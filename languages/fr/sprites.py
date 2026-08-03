@@ -194,7 +194,7 @@ SPRITES: dict[str, SpriteDef] = {
     # 512 tiles, 16 wide, holding every baked label of the « Infos » and
     # « Capacités » pages — N° / NOM / TYPE / DO / N°ID / OBJET on the left,
     # ATTAQUE / DEFENSE / ATT SPE. / DEF SPE. / VITESSE / EXP. in the stat
-    # column, POUV. / PRECISION on the move panel, plus the grey « PV » oval.
+    # column, POUVOIR / PRECIS. on the move panel, plus the grey « PV » oval.
     # None of it is text, so no translation pass reaches it.
     #
     # ** languages/fr/sprites/summary_stat_labels.png is the source of truth **
