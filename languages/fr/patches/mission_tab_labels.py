@@ -183,9 +183,11 @@ def apply_to_rom(rom: bytearray, dry_run: bool = False) -> int:
 
 
 def apply_patches(rom_path: Path, dry_run: bool = False) -> int:
-    rom = bytearray(rom_path.read_bytes())
+    original = rom_path.read_bytes()
+    rom = bytearray(original)
     changes = apply_to_rom(rom, dry_run=dry_run)
     if not dry_run and changes:
+        Path(f"{rom_path}.bak").write_bytes(original)
         rom_path.write_bytes(rom)
     return changes
 

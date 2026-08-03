@@ -15,11 +15,14 @@ pointers after the generic translation pass had repointed both to ``Actives``.
 from __future__ import annotations
 
 import struct
+import tempfile
 import unittest
+from pathlib import Path
 
 from languages.fr.patches.mission_tab_labels import (
     GBA_BASE,
     SUFFIX_PTR_OFFSET,
+    apply_patches,
     apply_to_rom,
 )
 from src.core.text_codec import POKEMON_TABLE
@@ -111,10 +114,34 @@ class TestPatchMissionTabLabelsFr(unittest.TestCase):
         self.assertEqual(n, 0, "must not touch an unexpected string")
 
     def test_dry_run_reports_but_does_not_write(self):
-        rom = _seed_rom("Missions")
+        rom = _seed_rom("Missions", shared_active=True)
+        original_status_pointer = bytes(
+            rom[ACTIVE_STATUS_POINTER : ACTIVE_STATUS_POINTER + 4]
+        )
+
         n = apply_to_rom(rom, dry_run=True)
+
         self.assertEqual(n, 1)
         self.assertNotEqual(rom[STR_OFFSET], 0xFF, "dry-run must not mutate")
+        self.assertEqual(
+            bytes(rom[ACTIVE_STATUS_POINTER : ACTIVE_STATUS_POINTER + 4]),
+            original_status_pointer,
+            "dry-run must not repoint the mission status",
+        )
+
+    def test_file_patch_keeps_an_exact_backup(self):
+        rom = _seed_rom("Missions", shared_active=True)
+        original = bytes(rom)
+
+        with tempfile.TemporaryDirectory() as tmp_dir:
+            rom_path = Path(tmp_dir) / "missions.gba"
+            rom_path.write_bytes(original)
+
+            changes = apply_patches(rom_path)
+
+            self.assertEqual(changes, 1)
+            self.assertEqual(Path(f"{rom_path}.bak").read_bytes(), original)
+            self.assertNotEqual(rom_path.read_bytes(), original)
 
 
 if __name__ == "__main__":

@@ -914,7 +914,7 @@ suit les deux consommateurs de `Power` et les quatre pointeurs de catégorie/pr�
   originale de sept octets contient déjà exactement « Active » avec son terminateur.
 - La solution minimale étend le patch post-build Missions : l’onglet conserve la
   cible relocalisée « Actives », tandis que le seul pointeur de statut est ramené vers
-  la cellule originale, réécrite défensivement en « Active ». Le suffixe partagé reste
+  la cellule originale, validée défensivement comme « Active ». Le suffixe partagé reste
   vide comme aujourd’hui.
 
 ## Plan validé
@@ -924,9 +924,9 @@ suit les deux consommateurs de `Power` et les quatre pointeurs de catégorie/pr�
 - [x] Ajouter un test synthétique rouge qui exige la séparation des deux pointeurs.
 - [x] Étendre `languages/fr/patches/mission_tab_labels.py` avec la séparation minimale,
   bornée et idempotente.
-- [ ] Valider les tests ciblés, puis committer les sources avant tout build ROM.
-- [ ] Reconstruire la ROM FR et décoder les deux pointeurs vivants dans l’artefact.
-- [ ] Exécuter les gardes de build et la suite rapide, relire le diff et rebaser.
+- [x] Valider les tests ciblés, puis committer les sources avant tout build ROM.
+- [x] Reconstruire la ROM FR et décoder les deux pointeurs vivants dans l’artefact.
+- [x] Exécuter les gardes de build et la suite rapide, relire le diff et rebaser.
 - [ ] Publier le résultat sur l’issue #46 et la clôturer en `completed`.
 
 ## Auto-revue de la conception
@@ -937,3 +937,20 @@ suit les deux consommateurs de `Power` et les quatre pointeurs de catégorie/pr�
   `0x1EBFFC8`, « Active » pour `0x1FB40B8`.
 - La mutation réaliste « repointer de nouveau les deux sites vers Actives » est captée
   par le garde ROM et par le test unitaire du patch.
+
+## Revue de réalisation
+
+- Le patch post-build laisse `0x1EBFFC8` pointer vers la copie relocalisée
+  « Actives » et repointe uniquement `0x1FB40B8` vers la cellule source
+  `0x1F5605C`, qui décode « Active ».
+- Les tests synthétiques du patch passent 7/7, dont la sauvegarde `.bak` exacte ;
+  les tests ciblés patch/intégrité passent 33/33 et les 13 gardes de régression
+  du build FR passent.
+- La suite rapide exécutée par le hook passe 1 642 tests Python (1 skip), puis les
+  68 tests Vitest ; les builds FR, IT et DE réussissent sans collision.
+- `make test-rom` confirme deux builds FR byte-identiques et 557 tests réussis.
+  Quatre replays mGBA intermittents et sans rapport avec les Missions ont échoué
+  dans la passe groupée ; tous les scénarios concernés repassent isolément
+  (5 réussites, 2 skips).
+- Le mot français « Active », identique à sa source anglaise, est désormais classé
+  explicitement dans l’audit des chaînes anglaises vivantes.
