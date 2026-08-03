@@ -292,6 +292,8 @@ build-fr: check-translations-fr ensure-fr-translation $(FRENCH_EXTRACT) $(SPANIS
 	@$(PYTHON) $(PATCH_PARTY_LV_LABEL_SCRIPT) --rom $(FR_BUILD)
 	@$(PYTHON) $(PATCH_POKEDEX_STAT_LABELS_FR_SCRIPT) --rom $(FR_BUILD)
 	@$(PYTHON) $(PATCH_TYPE_ICONS_SCRIPT) --rom $(FR_BUILD)
+	@$(PYTHON) scripts/insert_sprite.py --rom $(FR_BUILD) --lang fr --sprite type_icons_summary --image languages/fr/sprites/type_icons_summary.png
+	@$(PYTHON) scripts/insert_sprite.py --rom $(FR_BUILD) --lang fr --sprite type_icons_battle --image languages/fr/sprites/type_icons_battle.png
 	@$(PYTHON) $(PATCH_DEXNAV_HEADERS_SCRIPT) --rom $(FR_BUILD)
 	@$(PYTHON) $(PATCH_SHOP_FR_SCRIPT) --rom $(FR_BUILD)
 	@$(PYTHON) $(PATCH_MISSION_TITLES_FR_SCRIPT) \

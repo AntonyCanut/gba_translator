@@ -13,6 +13,7 @@ from src.graphics.sprite_rom import extract_block
 
 ROOT = Path(__file__).resolve().parents[2]
 SPRITES_DIR = ROOT / "languages" / "fr" / "sprites"
+BUILT_ROM = ROOT / "output" / "roms" / "GenedRom-fr.gba"
 
 
 def test_type_icons_registry_exposes_both_raw_sheets() -> None:
@@ -96,3 +97,39 @@ def test_type_icon_asset_reinserts_its_sheet(tmp_path: Path, name: str) -> None:
     )
     assert actual == expected
     assert Path(f"{rom_path}.bak").read_bytes() == bytes(len(rom))
+
+
+def test_french_build_inserts_both_type_icon_assets() -> None:
+    """La recette FR doit consommer les deux planches retouchées."""
+    result = subprocess.run(
+        ["make", "-n", "build-fr"],
+        cwd=ROOT,
+        check=True,
+        capture_output=True,
+        text=True,
+    )
+
+    for name in ("type_icons_summary", "type_icons_battle"):
+        assert (
+            "scripts/insert_sprite.py --rom output/roms/GenedRom-fr.gba "
+            f"--lang fr --sprite {name} "
+            f"--image languages/fr/sprites/{name}.png"
+        ) in result.stdout
+
+
+@pytest.mark.rom
+@pytest.mark.parametrize("name", ["type_icons_summary", "type_icons_battle"])
+def test_built_french_rom_contains_type_icon_asset(name: str) -> None:
+    """Chaque bloc livré doit être identique à son PNG versionné."""
+    sprite = SPRITES[name]
+    expected = read_indexed_image(SPRITES_DIR / f"{name}.png")[2]
+
+    actual, _, _ = extract_block(
+        BUILT_ROM.read_bytes(),
+        sprite.blocks[0],
+        sprite.tiles_wide,
+        sprite.tiles_tall,
+        compressed=False,
+    )
+
+    assert actual == expected

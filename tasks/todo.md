@@ -115,7 +115,38 @@
   de commit sont verts.
 - La vérification ciblée après build retrouve exactement l’asset « SHOP » dans
   `output/roms/GenedRom-fr.gba` : 22 tests passent.
+## Réouverture — intégrer les retouches fournies
 
+- [x] Lire le nouveau commentaire et télécharger les deux BMP joints.
+- [x] Vérifier dimensions, profondeur 4 bpp, indices et différences avec les PNG exportés.
+- [x] Ajouter une garde rouge prouvant que `build-fr` consomme les deux assets.
+- [x] Remplacer les PNG par une conversion indexée fidèle des BMP fournis.
+- [x] Injecter les deux planches dans la recette FR après le patch procédural existant.
+- [x] Reconstruire la ROM et comparer ses deux grilles aux assets versionnés.
+- [x] Exécuter les validations, relire le diff et intégrer le correctif localement.
+
+### Conception retenue
+
+Les deux BMP du commentaire deviennent, après conversion sans perte d’indices,
+les PNG canoniques déjà exposés par le registre. La recette `build-fr` les
+réinjecte après `type_icons.py` : ce dernier conserve sa couverture unitaire et
+son rôle de repli, tandis que les retouches manuelles approuvées gagnent en
+dernier et atteignent effectivement la ROM livrée.
+
+## Revue de la réouverture
+
+- Les BMP 4 bpp fournis conservent les dimensions, la palette et les indices
+  0–15 des assets : `128×152` pour le résumé et `128×104` pour le combat.
+- La planche de résumé traduit aussi `POWER`, `ACCURACY` et `EFFECT` en
+  `POUVOIR`, `PRECIS.` et `EFFET`; les deux planches corrigent les ombres.
+- `build-fr` applique les PNG après le rendu procédural, puis les deux gardes
+  ROM comparent chaque indice extrait aux fichiers versionnés.
+- Vérifications : 42 tests graphiques ciblés, 1 616 tests Python rapides
+  (1 ignoré), build FR déterministe et 554 tests ROM (40 ignorés). Le premier
+  passage ROM a rencontré un scénario italien intermittent; son rerun ciblé
+  puis la relance complète ont réussi sans changement de code.
+- Relecture indépendante : aucun constat critique, important ou mineur; les
+  644 octets modifiés de la ROM sont tous contenus dans les deux planches.
 # Issue #149 — réouverture : corriger le vrai libellé de montée de niveau
 
 ## Diagnostic et conception

@@ -112,3 +112,46 @@ Expected: 100 % de réussite.
 
 Run: `ruff check languages/fr/sprites.py tests/unit/test_type_icons_editable_assets.py`
 Expected: aucun diagnostic.
+
+### Task 3: Intégrer les retouches fournies dans le build FR
+
+**Files:**
+- Modify: `languages/fr/sprites/type_icons_summary.png`
+- Modify: `languages/fr/sprites/type_icons_battle.png`
+- Modify: `tests/unit/test_type_icons_editable_assets.py`
+- Modify: `Makefile`
+- Modify: `tasks/todo.md`
+
+**Interfaces:**
+- Consumes: les deux BMP 4 bpp joints au commentaire GitHub #156.
+- Produces: une ROM FR dont les deux blocs bruts correspondent pixel par pixel
+  aux PNG versionnés.
+
+- [x] **Step 1: Ajouter les gardes rouges du build**
+
+Ajouter un test rapide exécutant `make -n build-fr` et exigeant les deux appels
+à `scripts/insert_sprite.py`, puis un test `rom` qui extrait les deux blocs de
+`output/roms/GenedRom-fr.gba` et les compare aux assets.
+
+Run: `python3 -m pytest tests/unit/test_type_icons_editable_assets.py -q`
+Expected: échec car la recette ne contient encore aucune insertion des icônes.
+
+- [x] **Step 2: Convertir les BMP sans perte**
+
+Lire chaque BMP avec `read_indexed_image`, écrire son PNG avec
+`write_indexed_image`, puis relire les deux formats et exiger l’égalité des
+dimensions et de chaque indice 0–15.
+
+- [x] **Step 3: Câbler les deux insertions**
+
+Ajouter les commandes `type_icons_summary` et `type_icons_battle` juste après
+`$(PATCH_TYPE_ICONS_SCRIPT)` dans `build-fr`, afin que les retouches manuelles
+prennent la priorité sur le rendu procédural.
+
+- [x] **Step 4: Vérifier le passage au vert et la ROM**
+
+Run: `python3 -m pytest tests/unit/test_type_icons_editable_assets.py -q`
+Expected: réussite des tests rapides.
+
+Run: `make build-fr && python3 -m pytest tests/unit/test_type_icons_editable_assets.py -q -m rom`
+Expected: les deux grilles extraites de la ROM correspondent aux PNG.

@@ -40,3 +40,22 @@ Des tests vérifieront les offsets, le format brut et les dimensions du registre
 la présence des deux PNG indexés, puis leur réinjection sur des ROM synthétiques.
 La suite graphique
 ciblée, la suite Python rapide et le lint couvriront les régressions.
+
+## Suivi du 3 août 2026 — retouches contribuées
+
+Le nouveau commentaire fournit deux BMP 4 bpp aux dimensions exactes des
+planches exportées. Le build doit désormais consommer ces retouches, et pas
+seulement rendre les planches éditables.
+
+Trois approches ont été évaluées : reproduire les retouches dans le générateur
+de glyphes, appliquer uniquement une liste de pixels différentiels, ou
+réinjecter les planches complètes. La troisième est retenue : elle conserve
+exactement le travail graphique fourni, réutilise le codec éprouvé et protège
+les tuiles partagées déjà incluses dans les rectangles. Les BMP sont convertis
+en PNG indexés pour garder les chemins canoniques existants, avec une égalité
+pixel par pixel vérifiée avant versionnement.
+
+`build-fr` exécute les deux insertions immédiatement après le patch procédural
+`type_icons.py`. Cet ordre maintient le générateur comme garde de repli, puis
+donne la priorité aux retouches manuelles. Un test rapide contrôle le câblage de
+la recette ; un test ROM compare les grilles 4 bpp construites aux deux assets.
