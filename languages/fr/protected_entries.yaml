@@ -1,4 +1,10 @@
 entries:
+- offset: '0x3FD5C1'
+  name: Nom de statistique Esquive en combat
+  issue: '#157'
+  expected: Esquive
+  forbidden:
+  - esquive
 - offset: '0x3FD5B8'
   name: Nom de statistique Précision en combat
   issue: '#153'

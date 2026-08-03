@@ -58,6 +58,8 @@ MODIFIERS = (0x3FCB41, 0x3FCB50)
 VERB_BUFFERS = (0x3FCB4A, 0x3FCB59)
 ACCURACY_STAT_NAME = 0x3FD5B8
 ACCURACY_POINTER_SITE = 0x3FD5E8
+EVASION_STAT_NAME = 0x3FD5C1
+EVASION_POINTER_SITE = 0x3FD5EC
 GBA_ROM_BASE = 0x08000000
 
 
@@ -101,6 +103,13 @@ def test_accuracy_stat_name_starts_with_uppercase():
     assert entries[ACCURACY_STAT_NAME] == "Précision"
 
 
+def test_evasion_stat_name_starts_with_uppercase():
+    """Le nom injecté dans le message de combat doit être « Esquive »."""
+    entries = _last_entries()
+
+    assert entries[EVASION_STAT_NAME] == "Esquive"
+
+
 @pytest.mark.rom
 def test_built_rom_accuracy_pointer_renders_uppercase():
     """Le pointeur consommé en combat doit résoudre « Précision » dans la ROM."""
@@ -110,6 +119,17 @@ def test_built_rom_accuracy_pointer_renders_uppercase():
     end = rom.index(0xFF, target) + 1
 
     assert TextDecoder.decode_pokemon(rom[target:end]) == "Précision"
+
+
+@pytest.mark.rom
+def test_built_rom_evasion_pointer_renders_uppercase():
+    """Le pointeur consommé en combat doit résoudre « Esquive » dans la ROM."""
+    rom = FR_ROM.read_bytes()
+    pointer = int.from_bytes(rom[EVASION_POINTER_SITE : EVASION_POINTER_SITE + 4], "little")
+    target = pointer - GBA_ROM_BASE
+    end = rom.index(0xFF, target) + 1
+
+    assert TextDecoder.decode_pokemon(rom[target:end]) == "Esquive"
 
 
 def test_stat_precedes_name_in_source():

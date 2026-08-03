@@ -687,3 +687,17 @@
 - Le round-trip réel compare les tuiles et la tilemap décompressées, la palette
   et les octets hors flux. Les validations finales comptent 1 619 tests Python
   réussis (1 ignoré), 2 415 tests collectés et 68 tests Vitest réussis.
+
+# Issue #157 — Majuscule à Esquive
+
+- [x] Ajouter les gardes source et ROM pour le nom de statistique `Esquive`.
+- [x] Constater l’échec des gardes sur la valeur actuelle `esquive`.
+- [x] Corriger chirurgicalement la dernière entrée `0x3FD5C1`.
+- [x] Protéger la valeur attendue dans `protected_entries.yaml`.
+- [ ] Reconstruire la ROM FR et vérifier le pointeur vivant `0x3FD5EC`.
+- [ ] Exécuter les validations ciblées et globales.
+- [ ] Relire et committer uniquement les fichiers de l’issue.
+
+## Revue
+
+- À compléter après la vérification finale.
