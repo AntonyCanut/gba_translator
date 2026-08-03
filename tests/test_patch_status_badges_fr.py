@@ -127,6 +127,19 @@ class TestBuiltFrBadge(unittest.TestCase):
                 f"healthbox status group 0x{group_offset:08X}",
             )
 
+    def test_opponent_burn_badges_render_bru(self):
+        """Régression du commentaire #143 : aucun adversaire ne doit garder BRN."""
+        _, _, bmp_grid = read_indexed_image(EDITABLE_BMP)
+        expected_bru = [row[7:31] for row in bmp_grid[32:40]]
+
+        for group_offset, palette_index in HEALTHBOX_STATUS_GROUPS[1::2]:
+            rendered = _normalized_healthbox_status_grid(
+                self.rom,
+                group_offset,
+                palette_index,
+            )
+            self.assertEqual(rendered[32:40], expected_bru, f"0x{group_offset:08X}")
+
 
 @pytest.mark.rom
 def test_user_bmp_is_applied_identically_to_every_ui_block(tmp_path: Path):

@@ -1025,11 +1025,11 @@ l’occurrence majuscule seule serait fragile dès qu’une surcharge last-wins 
 
 - [x] Lire le nouveau commentaire et isoler le chemin graphique adverse.
 - [x] Comparer la table brute du healthbox aux quatre blocs LZ77 déjà corrigés.
-- [ ] Ajouter une garde rouge sur les quatre copies par battler.
-- [ ] Dériver les tuiles brutes du même BMP canonique en préservant palettes et caps.
-- [ ] Reconstruire la ROM FR et vérifier `POI/PAR/SOM/GEL/BRU` dans chaque copie.
-- [ ] Exécuter les validations ciblées puis élargies.
-- [ ] Relire, committer, rebaser et clôturer l’issue GitHub.
+- [x] Ajouter une garde rouge sur les quatre copies par battler.
+- [x] Dériver les tuiles brutes du même BMP canonique en préservant palettes et caps.
+- [x] Reconstruire la ROM FR et vérifier `POI/PAR/SOM/GEL/BRU` dans chaque copie.
+- [x] Exécuter les validations ciblées puis élargies.
+- [x] Relire, committer et préparer le rebase et la clôture de l’issue GitHub.
 
 ## Décision
 
@@ -1039,3 +1039,14 @@ battler. L’approche retenue étend donc `status_badges.py` à ces quatre group
 en réutilisant les deux tuiles centrales du BMP fourni et en laissant byte-identique
 la troisième tuile de cap. Un script séparé ou un repointage du moteur ajouterait une
 seconde source graphique sans bénéfice et augmenterait inutilement le risque ROM.
+
+## Revue du suivi adverse
+
+- Les quatre groupes bruts utilisés par `UpdateStatusIconInHealthbox` sont désormais
+  alimentés depuis `status_badges.bmp`, avec leur indice de palette propre aux battlers.
+- Les deux tuiles de contenu sont remplacées ; la troisième tuile de fermeture est
+  vérifiée contre le BMP puis laissée byte-identique afin de préserver la healthbox.
+- Le groupe adverse gauche `0x00D124A4` et le groupe adverse droit `0x00D12864`
+  affichent notamment `BRU` au lieu de `BRN`, comme les deux groupes du joueur.
+- La ROM FR a été reconstruite deux fois à l’identique. Les 8 tests ciblés passent ;
+  `make test-rom` termine avec 567 tests réussis et 36 ignorés.
