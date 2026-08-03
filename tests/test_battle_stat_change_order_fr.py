@@ -129,6 +129,8 @@ def test_built_rom_evasion_pointer_renders_uppercase():
     target = pointer - GBA_ROM_BASE
     end = rom.index(0xFF, target) + 1
 
+    assert target == EVASION_STAT_NAME
+    assert rom[target:end] == TextEncoder.encode("Esquive", "pokemon")
     assert TextDecoder.decode_pokemon(rom[target:end]) == "Esquive"
 
 

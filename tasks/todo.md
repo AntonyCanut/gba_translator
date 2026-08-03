@@ -694,10 +694,18 @@
 - [x] Constater l’échec des gardes sur la valeur actuelle `esquive`.
 - [x] Corriger chirurgicalement la dernière entrée `0x3FD5C1`.
 - [x] Protéger la valeur attendue dans `protected_entries.yaml`.
-- [ ] Reconstruire la ROM FR et vérifier le pointeur vivant `0x3FD5EC`.
-- [ ] Exécuter les validations ciblées et globales.
-- [ ] Relire et committer uniquement les fichiers de l’issue.
+- [x] Reconstruire la ROM FR et vérifier le pointeur vivant `0x3FD5EC`.
+- [x] Exécuter les validations ciblées et globales.
+- [x] Relire et committer uniquement les fichiers de l’issue.
 
 ## Revue
 
-- À compléter après la vérification finale.
+- La source active `0x3FD5C1` contient désormais `Esquive` et le manifeste
+  interdit explicitement le retour de `esquive` pour l’issue #157.
+- Le pointeur de combat `0x3FD5EC` résout `0x3FD5C1` et décode `Esquive` dans
+  `output/roms/GenedRom-fr.gba`.
+- Le cycle rouge a échoué sur les deux anciennes valeurs minuscules ; après le
+  rebuild, les 12 tests ciblés passent et la garde d’intégrité FR est verte.
+- Le hook complet a validé 1 637 tests Python (1 ignoré), 68 tests Vitest et les
+  builds FR/IT/DE. Le diff ROM final est limité à l’octet de casse attendu :
+  `0x3FD5C1`, `0xD9` (`e`) vers `0xBF` (`E`).
