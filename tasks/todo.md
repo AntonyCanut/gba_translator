@@ -969,6 +969,18 @@ l’occurrence majuscule seule serait fragile dès qu’une surcharge last-wins 
 - [x] Ajouter les gardes source et ROM pour le titre, la formulation et le saut avant L.
 - [x] Exécuter les gardes en rouge sur la traduction actuelle.
 - [x] Ajouter chirurgicalement la traduction vivante et sa protection anti-régression.
-- [ ] Régénérer le CSV et le JSON, puis reconstruire la ROM FR.
-- [ ] Vérifier le texte décodé au pointeur vivant et exécuter les validations élargies.
-- [ ] Relire le diff, committer, intégrer et clôturer l’issue GitHub.
+- [x] Régénérer le CSV et le JSON, puis reconstruire la ROM FR.
+- [x] Vérifier le texte décodé au pointeur vivant et exécuter les validations élargies.
+- [x] Relire le diff, committer, intégrer et clôturer l’issue GitHub.
+
+## Revue
+
+- La dernière occurrence active `0x1F732BD` porte « Astuces de Dresseurs »,
+  supprime « vite » et place un saut de page `\\p` juste avant le second bouton L.
+- Le pointeur du panneau `0x1E9368B` atteint bien cette traduction dans la ROM
+  reconstruite ; le test décode les contrôles CFRU et vérifie le texte affiché complet.
+- Le test ciblé et la garde des manifestes réussissent (2 tests), puis `make test-rom`
+  valide 567 tests ROM, avec 36 scénarios optionnels ignorés. Deux reconstructions FR
+  consécutives sont byte-identiques.
+- Le hook de commit valide en plus 1 648 tests Python, 68 tests Vitest et les builds
+  complets FR, IT et DE.

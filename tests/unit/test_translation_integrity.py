@@ -102,6 +102,16 @@ class TestRealRepo:
         assert entry.expected == "Envoyer un autre Pokémon ?"
         assert "Utiliser le Pokémon suivant ?" in entry.forbidden
 
+    def test_issue_162_trainer_tips_sign_is_protected(self):
+        fr = [t for t in cti.discover_languages() if t[0] == "fr"]
+        assert fr
+        entries = cti.load_manifest(fr[0][2])
+        by_offset = {entry.offset: entry for entry in entries}
+        entry = by_offset[0x1F732BD]
+        assert entry.expected.startswith("Astuces de Dresseurs !\\p")
+        assert "changer vite de Pokémon" not in entry.expected
+        assert "liste !\\p{L_BUTTON} auto-sélectionne" in entry.expected
+
     def test_cube_sort_prompt_stays_absent(self):
         # Issue #76: an in-budget entry at 0xA4E047 re-enables the
         # --allow-fallback corruption; the offset must be flagged absent.
