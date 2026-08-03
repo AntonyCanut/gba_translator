@@ -1001,7 +1001,22 @@ l’occurrence majuscule seule serait fragile dès qu’une surcharge last-wins 
 
 - [x] Ajouter une régression rouge sur le patch et la ROM construite.
 - [x] Corriger chirurgicalement l’entrée active et la protéger dans le manifeste.
-- [ ] Committer les sources avant de reconstruire la ROM FR.
-- [ ] Décoder les trois cellules Nageur/Nageuse dans la ROM livrée.
-- [ ] Exécuter les validations ciblées et globales, puis relire le diff.
+- [x] Committer les sources avant de reconstruire la ROM FR.
+- [x] Décoder les trois cellules Nageur/Nageuse dans la ROM livrée.
+- [x] Exécuter les validations ciblées et globales, puis relire le diff.
 - [ ] Intégrer localement, commenter et clôturer l’issue GitHub.
+
+## Revue
+
+- La ROM construite décode `Nageur♂` à `0x23E8E6`, `Nageuse♀` à
+  `0x23E91A` et `Nageur` à `0x23EA6C`, chacune terminée par `0xFF`.
+- La source active est protégée contre le retour de « Baigneur » et le test
+  couvre à la fois le patch synthétique et les octets réellement livrés.
+- La double reconstruction FR est identique octet pour octet ; les 12 tests de
+  reconstruction et 564 tests ROM passent. Le seul échec global est le probe
+  italien préexistant qui n’atteint pas son premier combat (`froze: false`) ;
+  tous les contrôles FR passent.
+- La classe `Tuber` restant une cellule partagée par sept dresseurs, une
+  différenciation par prénom ou sprite demanderait de modifier les classes des
+  données dresseur et leurs effets de gameplay ; elle est volontairement hors
+  de cette correction textuelle sûre.

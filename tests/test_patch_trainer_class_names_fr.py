@@ -51,4 +51,5 @@ def test_built_rom_contains_all_swimmer_class_labels() -> None:
     rom = FR_ROM.read_bytes()
 
     for offset, expected in EXPECTED_CLASSES.items():
+        assert 0xFF in rom[offset : offset + CELL_STRIDE]
         assert _decode_cell(rom, offset) == expected
