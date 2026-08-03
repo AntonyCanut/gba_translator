@@ -949,6 +949,7 @@ suit les deux consommateurs de `Power` et les quatre pointeurs de catégorie/pr�
 - La suite rapide exécutée par le hook passe 1 642 tests Python (1 skip), puis les
   68 tests Vitest ; les builds FR, IT et DE réussissent sans collision.
 - `make test-rom` confirme deux builds FR byte-identiques et sort à zéro :
-  565 tests réussis, 35 scénarios optionnels ignorés et 1 846 exclus par le profil.
+  566 tests réussis, 38 scénarios optionnels ignorés et 1 854 exclus par le profil
+  après rebase sur la dernière tête de `unbound`.
 - Le mot français « Active », identique à sa source anglaise, est désormais classé
   explicitement dans l’audit des chaînes anglaises vivantes.

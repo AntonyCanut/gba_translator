@@ -153,6 +153,10 @@ class TestPatchMissionTabLabelsFr(unittest.TestCase):
 
         self.assertEqual(_decode_pointer(rom, ACTIVE_TAB_POINTER), "Actives")
         self.assertEqual(_decode_pointer(rom, ACTIVE_STATUS_POINTER), "Active")
+        self.assertNotEqual(
+            struct.unpack_from("<I", rom, ACTIVE_TAB_POINTER)[0],
+            struct.unpack_from("<I", rom, ACTIVE_STATUS_POINTER)[0],
+        )
 
 
 if __name__ == "__main__":
