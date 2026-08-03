@@ -5,7 +5,7 @@ from pathlib import Path
 import pytest
 
 from scripts.check_translation_integrity import load_last_wins
-from src.core.text_codec import TextDecoder
+from src.core.text_codec import TextDecoder, TextEncoder
 
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -18,6 +18,7 @@ EXPECTED_SOURCE = (
     "<0xFC><0x05><0x05><0xFC><0x04><0x0D><0x0E><0x0F>Déplacer\\noù ?"
 )
 EXPECTED_RENDERED = "Déplacer\noù ?"
+PREVIOUS_RENDERED = "Envoyer\nqui ?"
 
 
 def test_active_translation_asks_where_to_move_the_move() -> None:
@@ -25,6 +26,13 @@ def test_active_translation_asks_where_to_move_the_move() -> None:
     translations, _ = load_last_wins(COMBINED_FR)
 
     assert translations[PROMPT_OFFSET] == EXPECTED_SOURCE
+
+
+def test_replacement_preserves_the_encoded_cell_length() -> None:
+    """Le prompt peut rester en place sans écraser la cellule suivante."""
+    assert len(TextEncoder.encode_pokemon(EXPECTED_RENDERED)) == len(
+        TextEncoder.encode_pokemon(PREVIOUS_RENDERED)
+    )
 
 
 @pytest.mark.rom

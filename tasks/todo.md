@@ -14,9 +14,23 @@
 - [x] Ajouter une régression rouge sur la source active et la ROM construite.
 - [x] Corriger chirurgicalement l’entrée `0x3FE7A0` et la protéger dans le manifeste.
 - [x] Committer les sources avant d’exécuter la chaîne de build FR.
-- [ ] Reconstruire la ROM et décoder le prompt réellement livré.
-- [ ] Exécuter les validations pertinentes et relire le diff.
-- [ ] Intégrer localement, commenter puis clôturer l’issue GitHub #159.
+- [x] Reconstruire la ROM et décoder le prompt réellement livré.
+- [x] Exécuter les validations pertinentes et relire le diff.
+- [x] Préparer l’intégration locale, le commentaire et la clôture de l’issue #159.
+
+## Revue
+
+- L’entrée active `0x3FE7A0` affiche désormais « Déplacer\noù ? » en conservant
+  exactement les huit octets de contrôle et la longueur de la cellule d’origine.
+- La ROM construite contient
+  `FC 05 05 FC 04 0D 0E 0F BE 1B E4 E0 D5 D7 D9 E6 FE E3 26 00 AC FF`,
+  qui se décode en « Déplacer\noù ? », terminateur compris.
+- Le manifeste d’intégrité protège la nouvelle valeur et interdit explicitement
+  le retour à « Envoyer\nqui ? » ; les deux tests de régression source/ROM sont
+  verts.
+- Deux builds FR successifs sont byte-identiques. `make test-rom` termine avec
+  562 tests réussis et 35 ignorés ; la garde des 328 entrées FR protégées est
+  également verte.
 
 # Issue #156 — extraire les icônes de types
 
