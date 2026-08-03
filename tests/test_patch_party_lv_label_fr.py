@@ -37,6 +37,17 @@ the dot's ink already occupies its last two columns, flush against the right
 edge, so there is no column *inside this glyph* to the dot's right. This
 reverts nibble 37/41/45's right sub-pixel back to transparent (0xA -> 0x8),
 removing the confirmed-wrong placement.
+
+Issue #138 fifth follow-up (reporter's own pixel-grid mockup): rather than
+touch a neighbouring codepoint, the dot's own ink shifts one physical pixel
+left — nibble 36/40's right sub-pixel turns from white to grey (its former
+rightmost ink pixel becomes a shadow pixel) while nibble 37/41's right
+sub-pixel turns from transparent to white (extending the ink left by one
+pixel). Row 11 (the shadow row) gains a matching grey right sub-pixel at
+nibble 45, so the shadow wraps the dot's new position on both its right and
+its bottom. Nibble 37/41/45's left sub-pixel (the real « N »'s own
+antialiasing column) and nibble 44 (the already-full shadow below the dot)
+are untouched.
 """
 
 import sys
@@ -57,6 +68,7 @@ from languages.fr.patches.party_lv_label import (
     OLD_ND_GLYPH_MISWIDENED_DOT,
     OLD_ND_GLYPH_NOSHADOW,
     OLD_ND_GLYPH_ROW12_OVERFLOW,
+    OLD_ND_GLYPH_SHADOW_BELOW_ONLY,
     apply_patch,
 )
 
@@ -78,15 +90,22 @@ class TestGlyphDefinitions(unittest.TestCase):
     def test_new_differs_from_old(self):
         self.assertNotEqual(NEW_ND_GLYPH, OLD_LV_GLYPH)
 
-    def test_period_dot_added_to_empty_right_column(self):
-        # The « N. » glyph is the real « N » with a white dot (value 5) in the
-        # right column, at nibbles 36/40 (local col 3, rows 9-10).
+    def test_period_dot_spans_nibble_36_left_and_nibble_37_right_subpixels(self):
+        # Issue #138 fifth follow-up: the dot's white ink is one physical pixel
+        # left of where it used to be. Nibble 36/40 (local col 3) now carries
+        # white only on its LEFT sub-pixel (value 6 = white+grey, not the old
+        # solid 5 = white+white) and nibble 37/41 (local col 2) now carries
+        # white on its RIGHT sub-pixel (value 9 = grey+white, not the old 8 =
+        # grey+transparent) — together the two white sub-pixels are still
+        # exactly 2 pixels wide, just shifted one pixel left.
         for nib in (36, 40):
             byte = nib // 2
             val = (NEW_ND_GLYPH[byte] & 0xF) if nib % 2 == 0 else (NEW_ND_GLYPH[byte] >> 4)
-            self.assertEqual(val, 5, f"nibble {nib} should be white(5) for the period")
-            old_val = (OLD_LV_GLYPH[byte] & 0xF) if nib % 2 == 0 else (OLD_LV_GLYPH[byte] >> 4)
-            self.assertNotEqual(old_val, 5, f"nibble {nib} was already ink in « Lv »")
+            self.assertEqual(val, 6, f"nibble {nib} should be white+grey (6)")
+        for nib in (37, 41):
+            byte = nib // 2
+            val = (NEW_ND_GLYPH[byte] & 0xF) if nib % 2 == 0 else (NEW_ND_GLYPH[byte] >> 4)
+            self.assertEqual(val, 9, f"nibble {nib} should be grey+white (9)")
 
     def test_period_dot_has_full_drop_shadow(self):
         # Issue #138 follow-up: the period dot must cast a FULL grey drop-shadow
@@ -103,32 +122,40 @@ class TestGlyphDefinitions(unittest.TestCase):
         self.assertEqual(half, 8, "the #138 fix had only a half shadow (value 8) there")
 
     def test_n_antialiasing_column_left_subpixel_stays_grey_not_widened_white(self):
-        # Issue #138 third follow-up: nibble 37/41 (local col 2) is the real
+        # Issue #138 third follow-up: nibble 37/41/45 (local col 2) is the real
         # « N » letter's own antialiasing column, immediately left of the dot
-        # (col 3) — not part of the dot. Its left sub-pixel must be grey (not
-        # white — the second follow-up's mistake, which broke the column's
-        # continuity and was reported as "the bottom of the N is wrong").
-        for nib in (37, 41):
-            byte = nib // 2
-            val = (NEW_ND_GLYPH[byte] & 0xF) if nib % 2 == 0 else (NEW_ND_GLYPH[byte] >> 4)
-            self.assertEqual(val, 8, f"nibble {nib} should be grey+transparent (8)")
-            miswidened = (OLD_ND_GLYPH_MISWIDENED_DOT[byte] & 0xF) if nib % 2 == 0 else (OLD_ND_GLYPH_MISWIDENED_DOT[byte] >> 4)
-            self.assertEqual(miswidened, 4, f"nibble {nib} was wrongly white+transparent (4) before this fix")
-
-    def test_n_antialiasing_column_right_subpixel_stays_transparent_not_shaded(self):
-        # Issue #138 fourth follow-up ("the grey pixels are on the wrong
-        # side"): the antialiasing column (local col 2, immediately *left* of
-        # the dot) must keep its right sub-pixel transparent at rows 9-11
-        # (nibbles 37/41/45), same as every other row of that column. The
-        # third follow-up shaded it (0xA) meaning to add shading to the dot's
-        # *right*, but this column sits to the dot's left, so that shaded the
-        # wrong side — reverted here.
+        # (col 3) — not part of the dot. Its LEFT sub-pixel (high 2 bits) must
+        # stay grey (not white — the second follow-up's mistake, which broke
+        # the column's continuity and was reported as "the bottom of the N is
+        # wrong") in every row of the column, including the fifth follow-up's
+        # revised rows 9-10 (now 9 = grey+white, not 4 = white+transparent).
         for nib in (37, 41, 45):
             byte = nib // 2
             val = (NEW_ND_GLYPH[byte] & 0xF) if nib % 2 == 0 else (NEW_ND_GLYPH[byte] >> 4)
-            self.assertEqual(val, 8, f"nibble {nib} should be grey+transparent (8), not grey+grey")
-            wrong_side = (OLD_ND_GLYPH_ANTIALIAS_WRONG_SIDE[byte] & 0xF) if nib % 2 == 0 else (OLD_ND_GLYPH_ANTIALIAS_WRONG_SIDE[byte] >> 4)
-            self.assertEqual(wrong_side, 0xA, f"nibble {nib} was wrongly shaded grey+grey (0xA) before this fix")
+            left_subpixel = (val >> 2) & 3
+            self.assertEqual(left_subpixel, 2, f"nibble {nib}'s left sub-pixel should stay grey")
+            miswidened = (OLD_ND_GLYPH_MISWIDENED_DOT[byte] & 0xF) if nib % 2 == 0 else (OLD_ND_GLYPH_MISWIDENED_DOT[byte] >> 4)
+            if nib in (37, 41):
+                self.assertEqual(miswidened, 4, f"nibble {nib} was wrongly white+transparent (4) before this fix")
+
+    def test_n_antialiasing_column_right_subpixel_now_shaded_to_match_shifted_dot(self):
+        # Issue #138 fifth follow-up (reporter's own pixel-grid mockup): with
+        # the dot shifted one pixel left, nibble 37/41's right sub-pixel
+        # becomes the dot's own new ink (white, not transparent) and nibble
+        # 45's right sub-pixel becomes shadow (grey, not transparent) so the
+        # shadow row lines up under the dot's new position. This supersedes
+        # the fourth follow-up, which kept all three transparent because the
+        # dot was still flush against the tile's right edge back then.
+        for nib in (37, 41):
+            byte = nib // 2
+            val = (NEW_ND_GLYPH[byte] & 0xF) if nib % 2 == 0 else (NEW_ND_GLYPH[byte] >> 4)
+            self.assertEqual(val & 3, 1, f"nibble {nib}'s right sub-pixel should now be white (dot ink)")
+        nib = 45
+        byte = nib // 2
+        val = (NEW_ND_GLYPH[byte] & 0xF) if nib % 2 == 0 else (NEW_ND_GLYPH[byte] >> 4)
+        self.assertEqual(val & 3, 2, "nibble 45's right sub-pixel should now be grey (shadow)")
+        wrong_side = (OLD_ND_GLYPH_ANTIALIAS_WRONG_SIDE[byte] & 0xF) if nib % 2 == 0 else (OLD_ND_GLYPH_ANTIALIAS_WRONG_SIDE[byte] >> 4)
+        self.assertEqual(wrong_side, 0xA, "nibble 45 was already grey+grey (0xA) in the wrong-side glyph too")
 
     def test_no_ink_below_row_11(self):
         # Issue #138: nothing beyond nibble row 11 (nibble index >= 48) may
@@ -139,36 +166,49 @@ class TestGlyphDefinitions(unittest.TestCase):
             val = (NEW_ND_GLYPH[byte] & 0xF) if nib % 2 == 0 else (NEW_ND_GLYPH[byte] >> 4)
             self.assertNotIn(val, (5, 8, 0xA), f"nibble {nib} (row {nib // 4}) must not carry ink/shadow")
 
-    def test_noshadow_differs_only_by_shadow_byte(self):
+    def test_noshadow_differs_only_by_dot_shadow_and_column_bytes(self):
+        # These bytes (18/20/22) now also carry the fifth follow-up's dot
+        # shift, on top of the original shadow-completion diff.
         diffs = [i for i in range(GLYPH_SIZE) if NEW_ND_GLYPH[i] != OLD_ND_GLYPH_NOSHADOW[i]]
-        self.assertEqual(diffs, [22], "must only touch the shadow byte (22)")
+        self.assertEqual(diffs, [18, 20, 22], "must only touch the dot/shadow/column bytes")
 
-    def test_row12_overflow_glyph_differs_only_by_shadow_relocation(self):
+    def test_row12_overflow_glyph_differs_only_by_dot_shadow_and_relocation(self):
         diffs = [i for i in range(GLYPH_SIZE) if NEW_ND_GLYPH[i] != OLD_ND_GLYPH_ROW12_OVERFLOW[i]]
         self.assertEqual(
-            sorted(diffs), [22, 24],
-            "fix must only move the shadow from byte 24 (row 12) to byte 22 (row 11)",
+            sorted(diffs), [18, 20, 22, 24],
+            "fix must only touch the dot/shadow/column bytes and move the shadow from byte 24 (row 12)",
         )
 
-    def test_half_shadow_glyph_differs_only_by_shadow_completeness(self):
-        # Issue #138 follow-up: this fix must only complete the row-11 shadow
-        # (0x8 -> 0xA in byte 22), not touch anything else.
+    def test_half_shadow_glyph_differs_only_by_dot_shadow_and_column_bytes(self):
+        # Issue #138 follow-up: originally this fix only completed the row-11
+        # shadow (byte 22); the fifth follow-up's dot shift now also touches
+        # bytes 18/20 on top of that.
         diffs = [i for i in range(GLYPH_SIZE) if NEW_ND_GLYPH[i] != OLD_ND_GLYPH_HALF_SHADOW[i]]
-        self.assertEqual(diffs, [22], "fix must only touch the shadow byte")
+        self.assertEqual(diffs, [18, 20, 22], "fix must only touch the dot/shadow/column bytes")
 
-    def test_miswidened_dot_glyph_differs_only_by_antialiasing_column_left_subpixel(self):
-        # Issue #138 second follow-up: re-patching the mistakenly-widened
-        # glyph must only revert the antialiasing column's left sub-pixel
-        # (bytes 18/20), not touch the dot's own ink or shadow.
+    def test_miswidened_dot_glyph_differs_by_antialiasing_column_and_shadow_bytes(self):
+        # Issue #138 second follow-up: originally re-patching this glyph only
+        # reverted the antialiasing column's left sub-pixel (bytes 18/20); the
+        # fifth follow-up's dot shift now also touches byte 22 (the shadow row).
         diffs = [i for i in range(GLYPH_SIZE) if NEW_ND_GLYPH[i] != OLD_ND_GLYPH_MISWIDENED_DOT[i]]
-        self.assertEqual(diffs, [18, 20], "fix must only touch the antialiasing-column left-subpixel bytes")
+        self.assertEqual(diffs, [18, 20, 22], "fix must only touch the antialiasing-column and shadow bytes")
 
-    def test_antialias_wrong_side_glyph_differs_only_by_column_shading(self):
+    def test_antialias_wrong_side_glyph_differs_only_by_column_bytes(self):
         # Issue #138 fourth follow-up: re-patching the wrongly-shaded glyph
-        # must only revert the antialiasing column's right sub-pixel (bytes
-        # 18/20/22), not touch the dot's own ink or shadow.
+        # must only revert the antialiasing column's bytes (18/20) — byte 22
+        # already matches NEW_ND_GLYPH since both glyphs have a full row-11
+        # shadow (0xAA).
         diffs = [i for i in range(GLYPH_SIZE) if NEW_ND_GLYPH[i] != OLD_ND_GLYPH_ANTIALIAS_WRONG_SIDE[i]]
-        self.assertEqual(diffs, [18, 20, 22], "fix must only touch the antialiasing-column bytes")
+        self.assertEqual(diffs, [18, 20], "fix must only touch the antialiasing-column bytes")
+
+    def test_shadow_below_only_glyph_differs_only_by_dot_shift_and_column_bytes(self):
+        # Issue #138 fourth follow-up's own fix, now superseded by the fifth:
+        # re-patching the flush-right dot (shadow below only, no shadow to its
+        # right) must only touch the dot/antialiasing-column/shadow bytes
+        # (18/20/22) to shift the dot one pixel left and add the right-side
+        # shadow.
+        diffs = [i for i in range(GLYPH_SIZE) if NEW_ND_GLYPH[i] != OLD_ND_GLYPH_SHADOW_BELOW_ONLY[i]]
+        self.assertEqual(diffs, [18, 20, 22], "fix must only touch the dot/shadow/column bytes")
 
 
 class TestApplyPatch(unittest.TestCase):
@@ -236,6 +276,18 @@ class TestApplyPatch(unittest.TestCase):
         # fourth follow-up).
         rom = _fake_rom(OLD_ND_GLYPH_ANTIALIAS_WRONG_SIDE)
         p = Path("/tmp/_lvtest_wrongside.gba")
+        p.write_bytes(rom)
+        self.assertEqual(apply_patch(p), 1)
+        self.assertEqual(p.read_bytes()[LV_GLYPH_OFFSET:LV_GLYPH_OFFSET + GLYPH_SIZE],
+                         NEW_ND_GLYPH)
+
+    def test_repatches_shadow_below_only_to_diagonal_shadow(self):
+        # An already-built ROM carrying the #138 fourth follow-up's fix (dot
+        # flush against the tile's right edge, shadow below only) must
+        # converge to the shifted-dot glyph with a diagonal (right + below)
+        # shadow without a full rebuild (issue #138 fifth follow-up).
+        rom = _fake_rom(OLD_ND_GLYPH_SHADOW_BELOW_ONLY)
+        p = Path("/tmp/_lvtest_shadowbelowonly.gba")
         p.write_bytes(rom)
         self.assertEqual(apply_patch(p), 1)
         self.assertEqual(p.read_bytes()[LV_GLYPH_OFFSET:LV_GLYPH_OFFSET + GLYPH_SIZE],

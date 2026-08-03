@@ -38,7 +38,9 @@ one white/grey pixel with one transparent pixel.
 
 The new « N. » glyph is the ROM's real « N » glyph (codepoint 0xC8) with a white
 period dot added in the otherwise-empty right column, so the letter keeps the
-font's native antialiasing and the level reads « N.10 ».
+font's native antialiasing and the level reads « N.10 ». The dot's exact
+column and shadow placement within that right column were revised several
+times below as the reporter's screenshots pinned down the remaining glitches.
 
 The dot's drop-shadow was first placed at row 12 (issue #104 fix, commit
 5708ee03) — directly below a 3-row (rows 9-11) dot. That renders fine in the
@@ -103,12 +105,30 @@ removes the confirmed-wrong left-side placement; see the GitHub issue for
 the pixel-grid raised with the reporter to pin down exactly what a
 right-side accent would need to touch.
 
+Issue #138 fifth follow-up (reporter's own pixel-grid mockup): rather than
+edit a neighbouring codepoint, shift the dot's own ink one physical pixel to
+the *left* — from physical columns 6-7 to 5-6 — which frees column 7 (still
+inside this glyph) for a genuine drop-shadow to the dot's right, in addition
+to the existing shadow below it. Concretely, in rows 9-10: nibble 37/41's
+right sub-pixel (local col 2, previously transparent) becomes white (ink,
+extending the dot one pixel left) and nibble 36/40's right sub-pixel (local
+col 3, previously white) becomes grey (shadow, since the dot no longer
+reaches the tile's last physical column). Row 11 (the shadow row) gains the
+matching right sub-pixel of nibble 45 (local col 2, previously transparent)
+turned grey too, so the shadow forms an unbroken L-shape hugging the dot's
+new position on both its right and its bottom — the same diagonal
+drop-shadow style as the font's own antialiasing elsewhere. Nibble 37/41/45's
+*left* sub-pixel (the real « N » antialiasing column) and nibble 44 (the
+already-full shadow below the dot) are untouched by this change.
+
 The patch is strict: the 32 bytes at ``0x1ECFA0`` must byte-match the known « Lv »
 ligature, the shadow-less « N. » (#104 before-fix), the row-12-overflow « N. »
 (#104 after-fix / #138 before-fix), the in-bounds-but-half-shadow « N. » (#138
 fix), the mis-widened-dot « N. » (#138 second follow-up), the
-wrong-side-shaded « N. » (#138 third follow-up), or the already-patched
-« N. »; anything else is reported and skipped rather than corrupted.
+wrong-side-shaded « N. » (#138 third follow-up), the dot-flush-right « N. »
+with no room for a right-side shadow (#138 fourth follow-up), or the
+already-patched « N. »; anything else is reported and skipped rather than
+corrupted.
 
 Runs in the ``build-fr`` chain AFTER repair_stable/repair_localized (like
 ``hp_labels.py``) — see the Makefile.
@@ -133,20 +153,35 @@ OLD_LV_GLYPH = bytes.fromhex(
     "0000ffffffffffffff6fff6fff6f666f666f666f9a56ebaaffff000000000000"
 )
 
-# New « N. » glyph: the real « N » glyph (cp 0xC8) + a white period dot in the
-# empty right column (nibbles 36/40 = local col 3, rows 9-10), value 5 = white,
-# with its 3rd row (row 11, nibble 44) turned into the grey drop-shadow — value
-# 0xA (both sub-pixels = palette 2/grey), not 0x8 (left sub-pixel grey, right
-# sub-pixel transparent — a half-strength shadow, issue #138 follow-up) — so
-# shadow + dot stay within rows 4-11 and the shadow is as solid/full-width as
-# the dot's own white ink, in every UI context that reads this glyph. The real
-# « N » letter's own antialiasing column (nibbles 37/41/45, local col 2, rows
-# 9-11 — immediately left of the dot) keeps its left sub-pixel grey (0x8) and
-# its right sub-pixel transparent, same as every other row of that column —
-# issue #138 third follow-up made that right sub-pixel grey too (0xA), meaning
-# to add shading beside the dot, but that sub-pixel sits to the dot's *left*,
-# not its right (issue #138 fourth follow-up), so it's reverted here.
+# New « N. » glyph: the real « N » glyph (cp 0xC8) + a white period dot at
+# nibbles 36/40 (local col 3, rows 9-10) whose ink is now split across TWO
+# physical columns per row — value 6 (white left / grey right), not the
+# earlier 5 (white/white) — so the dot sits one physical pixel further left
+# and its former rightmost pixel becomes a shadow pixel instead (issue #138
+# fifth follow-up). Nibble 37/41 (local col 2, immediately left of the dot)
+# gains a white right sub-pixel — value 9 (grey left / white right), not the
+# earlier 8 — extending the dot's ink into that column to make room for the
+# new shadow column at the dot's own former position. Row 11 (the shadow row)
+# keeps its full shadow at nibble 44 (value 0xA, unchanged) and gains a grey
+# right sub-pixel at nibble 45 (local col 2) — value 0xA, not 0x8 — so the
+# shadow forms an unbroken L-shape hugging the dot's new position on both its
+# right and its bottom, instead of only below it. Nibble 37/41/45's left
+# sub-pixel (the real « N » letter's own antialiasing column) stays grey,
+# untouched by this change, same as every row of that column.
 NEW_ND_GLYPH = bytes.fromhex(
+    "0000c0ffc0ffc0ff806d80598059806580659669966daaaec0ff000000000000"
+)
+
+# Issue #138 fourth follow-up's own fix, now superseded: the dot's ink stayed
+# flush against the tile's last two physical columns (local col 3, value 5 =
+# white/white), leaving no physical pixel column *inside this glyph* to its
+# right for a shadow — only a shadow below it (nibble 44). The reporter's own
+# pixel-grid mockup (fifth follow-up) instead shifts the dot one pixel left to
+# free that column for a right-side shadow too. Accept the flush-right glyph
+# as a re-patchable state so an already-built ROM converges without a full
+# rebuild — it differs from NEW_ND_GLYPH in bytes 18/20/22
+# (0x85/0x85/0x8A vs 0x96/0x96/0xAA).
+OLD_ND_GLYPH_SHADOW_BELOW_ONLY = bytes.fromhex(
     "0000c0ffc0ffc0ff806d80598059806580658569856d8aaec0ff000000000000"
 )
 
@@ -155,7 +190,8 @@ NEW_ND_GLYPH = bytes.fromhex(
 # thin/incomplete sliver instead of a full grey square (reported as "manque des
 # pixels gris" on the same issue after it was first closed). Accept it as a
 # re-patchable state so an already-built ROM converges without a full rebuild —
-# it differs from NEW_ND_GLYPH only in byte 22 (0x88 vs 0x8A).
+# it differs from NEW_ND_GLYPH in bytes 18/20/22 (0x85/0x85/0x88 vs
+# 0x96/0x96/0xAA).
 OLD_ND_GLYPH_HALF_SHADOW = bytes.fromhex(
     "0000c0ffc0ffc0ff806d80598059806580658569856d88aec0ff000000000000"
 )
@@ -165,15 +201,16 @@ OLD_ND_GLYPH_HALF_SHADOW = bytes.fromhex(
 # 0xA) meaning to shade the dot's right, but that column sits to the dot's
 # *left* (issue #138 fourth follow-up: "the grey pixels are on the wrong
 # side"). Accept it as a re-patchable state so an already-built ROM converges
-# without a full rebuild — it differs from NEW_ND_GLYPH in bytes 18/20/22
-# (0xA5/0xA5/0xAA vs 0x85/0x85/0x8A).
+# without a full rebuild — it differs from NEW_ND_GLYPH in bytes 18/20
+# (0xA5/0xA5 vs 0x96/0x96); byte 22's shadow value (0xAA) already matches.
 OLD_ND_GLYPH_ANTIALIAS_WRONG_SIDE = bytes.fromhex(
     "0000c0ffc0ffc0ff806d8059805980658065a569a56daaaec0ff000000000000"
 )
 
 # Previous « N. » glyph shipped without the dot's drop-shadow (issue #104). Accept
 # it as a re-patchable state so an already-built ROM converges without a full
-# rebuild — it differs from NEW_ND_GLYPH only in byte 22 (0x85 vs 0x8A).
+# rebuild — it differs from NEW_ND_GLYPH in bytes 18/20/22 (0x85/0x85/0x85 vs
+# 0x96/0x96/0xAA).
 OLD_ND_GLYPH_NOSHADOW = bytes.fromhex(
     "0000c0ffc0ffc0ff806d80598059806580658569856d85aec0ff000000000000"
 )
@@ -182,8 +219,8 @@ OLD_ND_GLYPH_NOSHADOW = bytes.fromhex(
 # low nibble, 0xC0 → 0xC8). Renders correctly in the party list but the row-12
 # shadow overflows the in-battle level-up box's border strip (issue #138). Accept
 # it as a re-patchable state so already-built ROMs converge without a full
-# rebuild — it differs from NEW_ND_GLYPH in byte 22 (0x85 vs 0x8A) and byte 24
-# (0xC8 vs 0xC0).
+# rebuild — it differs from NEW_ND_GLYPH in bytes 18/20/22 (0x85/0x85/0x85 vs
+# 0x96/0x96/0xAA) and byte 24 (0xC8 vs 0xC0).
 OLD_ND_GLYPH_ROW12_OVERFLOW = bytes.fromhex(
     "0000c0ffc0ffc0ff806d80598059806580658569856d85aec8ff000000000000"
 )
@@ -196,7 +233,8 @@ OLD_ND_GLYPH_ROW12_OVERFLOW = bytes.fromhex(
 # instead of widening anything (issue #138 third follow-up: "the grey pixels you
 # turned white were fine; now the bottom of the N is wrong"). Accept it as a
 # re-patchable state so an already-built ROM converges without a full rebuild —
-# it differs from NEW_ND_GLYPH only in bytes 18/20 (0x45 vs 0x85).
+# it differs from NEW_ND_GLYPH in bytes 18/20/22 (0x45/0x45/0x8A vs
+# 0x96/0x96/0xAA).
 OLD_ND_GLYPH_MISWIDENED_DOT = bytes.fromhex(
     "0000c0ffc0ffc0ff806d80598059806580654569456d8aaec0ff000000000000"
 )
@@ -210,7 +248,7 @@ def apply_patch(rom_path: Path) -> int:
     current = bytes(rom[LV_GLYPH_OFFSET:LV_GLYPH_OFFSET + GLYPH_SIZE])
 
     if current == NEW_ND_GLYPH:
-        print("  party level label (0x1ECFA0): already « N. » (full shadow, antialiasing column on the dot's left) — no change")
+        print("  party level label (0x1ECFA0): already « N. » (dot shifted left, shadow on its right and below) — no change")
         return 0
 
     known_old = (
@@ -220,13 +258,14 @@ def apply_patch(rom_path: Path) -> int:
         OLD_ND_GLYPH_HALF_SHADOW,
         OLD_ND_GLYPH_MISWIDENED_DOT,
         OLD_ND_GLYPH_ANTIALIAS_WRONG_SIDE,
+        OLD_ND_GLYPH_SHADOW_BELOW_ONLY,
     )
     if current not in known_old:
         print(
             f"  WARN party level label: glyph at 0x{LV_GLYPH_OFFSET:07X} matches "
             f"neither « Lv », the shadow-less « N. », the row-12-overflow « N. », "
             f"the half-shadow « N. », the mis-widened-dot « N. », the wrong-side-shaded "
-            f"« N. », nor the already-patched « N. » — skip\n"
+            f"« N. », the shadow-below-only « N. », nor the already-patched « N. » — skip\n"
             f"       got {current.hex()}",
             file=sys.stderr,
         )
@@ -242,11 +281,13 @@ def apply_patch(rom_path: Path) -> int:
         was = "« N. » (half shadow, issue #138 follow-up)"
     elif current == OLD_ND_GLYPH_MISWIDENED_DOT:
         was = "« N. » (antialiasing column mis-widened white, issue #138 third follow-up)"
-    else:
+    elif current == OLD_ND_GLYPH_ANTIALIAS_WRONG_SIDE:
         was = "« N. » (antialiasing column shaded on the dot's wrong side, issue #138 fourth follow-up)"
+    else:
+        was = "« N. » (dot flush right, shadow below only, issue #138 fourth follow-up fix)"
     rom[LV_GLYPH_OFFSET:LV_GLYPH_OFFSET + GLYPH_SIZE] = NEW_ND_GLYPH
     rom_path.write_bytes(rom)
-    print(f"  party level label (0x1ECFA0): {was} → « N. » (full shadow, antialiasing column on the dot's left)")
+    print(f"  party level label (0x1ECFA0): {was} → « N. » (dot shifted left, shadow on its right and below)")
     return 1
 
 
