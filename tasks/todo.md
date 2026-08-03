@@ -744,6 +744,22 @@ suit les deux consommateurs de `Power` et les quatre pointeurs de catégorie/pr�
 - [x] Tracer l’offset source jusqu’au pointeur vivant du combat.
 - [x] Ajouter et exécuter les gardes source et ROM rouges.
 - [x] Corriger chirurgicalement la source FR.
-- [ ] Régénérer la chaîne FR et reconstruire la ROM jouable.
-- [ ] Vérifier le texte décodé au pointeur vivant.
-- [ ] Exécuter les validations, relire, committer et clôturer l’issue.
+- [x] Régénérer la chaîne FR et reconstruire la ROM jouable.
+- [x] Vérifier le texte décodé au pointeur vivant.
+- [x] Exécuter les validations, relire, committer et clôturer l’issue.
+
+## Revue
+
+- La source active `0x3FB359` affiche désormais « Envoyer un autre Pokémon ? »
+  et interdit explicitement l’ancienne formulation dans le manifeste protégé.
+- Le pointeur de combat `0x3FE450` vise `0x1937C0` dans la ROM construite ; la
+  chaîne décodée est exacte, terminée par `0xFF`, et l’ancienne forme encodée
+  n’est plus présente.
+- Le pipeline CSV `--extend` a produit 19 383 traductions sans erreur ; le build
+  en a remplacé 18 665 sans aucun échec et deux rebuilds sont byte-identiques.
+- Le test ROM complet compte 560 réussites et 35 scénarios optionnels ignorés.
+  Son unique échec est le replay de capture mGBA déjà documenté comme instable
+  dans l’issue #151 ; rejoué isolément sur cette même ROM, il réussit.
+- La validation a aussi révélé l’ancien offset erroné `0x1F58E33` de Rougebois.
+  Il est aligné sur son pointeur vivant `0x1F58E34` et protégé pour éviter que
+  le pipeline CSV ne réintroduise « Redwood Village ».

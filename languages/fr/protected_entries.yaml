@@ -145,6 +145,14 @@ entries:
   - Bois-Rouge
   - Redwood Village
   - Redwood village
+- offset: '0x1F58E34'
+  name: Rougebois (pointeur vivant)
+  issue: B-52
+  expected: Rougebois
+  forbidden:
+  - Bois-Rouge
+  - Redwood Village
+  - Redwood village
 - offset: '0x720E74'
   name: Rivapolis
   issue: B-52
