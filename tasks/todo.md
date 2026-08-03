@@ -737,3 +737,13 @@ suit les deux consommateurs de `Power` et les quatre pointeurs de catégorie/pr�
 - Le cycle TDD a échoué sur les cinq anciennes valeurs, puis réussi sur la source et la
   ROM reconstruite. Le hook a validé 1 637 tests Python (1 ignoré), 68 tests Vitest et les
   builds complets FR/IT/DE ; les 2 gardes ciblées, dont le suivi ROM, réussissent.
+
+# Issue #160 — Envoyer un autre Pokémon ?
+
+- [x] Lire l’issue et localiser la dernière entrée active.
+- [x] Tracer l’offset source jusqu’au pointeur vivant du combat.
+- [x] Ajouter et exécuter les gardes source et ROM rouges.
+- [x] Corriger chirurgicalement la source FR.
+- [ ] Régénérer la chaîne FR et reconstruire la ROM jouable.
+- [ ] Vérifier le texte décodé au pointeur vivant.
+- [ ] Exécuter les validations, relire, committer et clôturer l’issue.

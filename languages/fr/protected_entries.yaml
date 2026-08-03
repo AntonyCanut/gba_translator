@@ -5,6 +5,12 @@ entries:
   expected: Esquive
   forbidden:
   - esquive
+- offset: '0x3FB359'
+  name: Question de remplacement du Pokémon mis K.O.
+  issue: '#160'
+  expected: Envoyer un autre Pokémon ?
+  forbidden:
+  - Utiliser le Pokémon suivant ?
 - offset: '0x3FD5B8'
   name: Nom de statistique Précision en combat
   issue: '#153'

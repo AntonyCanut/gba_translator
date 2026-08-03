@@ -93,6 +93,15 @@ class TestRealRepo:
         assert entry.expected == "Gravis le Mont Givre et dirige-toi\\nvers Cimistral !"
         assert "Monte le Mont Givre et dirige-toi\\nvers Cimistral !" in entry.forbidden
 
+    def test_issue_160_next_pokemon_prompt_is_protected(self):
+        fr = [t for t in cti.discover_languages() if t[0] == "fr"]
+        assert fr
+        entries = cti.load_manifest(fr[0][2])
+        by_offset = {entry.offset: entry for entry in entries}
+        entry = by_offset[0x3FB359]
+        assert entry.expected == "Envoyer un autre Pokémon ?"
+        assert "Utiliser le Pokémon suivant ?" in entry.forbidden
+
     def test_cube_sort_prompt_stays_absent(self):
         # Issue #76: an in-budget entry at 0xA4E047 re-enables the
         # --allow-fallback corruption; the offset must be flagged absent.
