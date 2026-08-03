@@ -8,6 +8,7 @@ from pathlib import Path
 
 import pytest
 
+from languages.fr.patches.font import lz77_decompress
 from languages.fr.sprites import SPRITES, SpriteDef
 from src.graphics.sprite_image import read_indexed_image
 from src.graphics.sprite_rom import extract_mapped_block
@@ -199,16 +200,28 @@ def test_built_french_rom_contains_trainer_card_front_asset() -> None:
         - 0x08000000
     )
 
-    actual, _, _ = extract_mapped_block(
-        rom,
-        tiles_offset,
-        tilemap_offset,
-        sprite.tiles_wide,
-        sprite.tiles_tall,
-        compressed=sprite.compressed,
+    tile_result = lz77_decompress(rom, tiles_offset)
+    assert tile_result is not None
+    tiles, tiles_compressed_len = tile_result
+    tilemap_result = lz77_decompress(rom, tilemap_offset)
+    assert tilemap_result is not None
+    _, tilemap_compressed_len = tilemap_result
+    actual, tiles_decompressed_len, extracted_tiles_compressed_len = (
+        extract_mapped_block(
+            rom,
+            tiles_offset,
+            tilemap_offset,
+            sprite.tiles_wide,
+            sprite.tiles_tall,
+            compressed=sprite.compressed,
+        )
     )
 
     assert tiles_offset != sprite.blocks[0]
+    assert tilemap_offset == sprite.tilemaps[0]
+    assert len(tiles) == tiles_decompressed_len == 4_512
+    assert tiles_compressed_len == extracted_tiles_compressed_len == 1_402
+    assert tilemap_compressed_len == 521
     assert actual == expected
 
 

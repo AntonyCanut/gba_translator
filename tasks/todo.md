@@ -283,13 +283,13 @@ dernier et atteignent effectivement la ROM livrée.
 
 ## Reprise — intégrer le recto fourni
 
-- [ ] Versionner le nouveau `trainer_card_front.bmp` comme référence complète.
-- [ ] Ajouter les gardes rouges sur sa grille, la recette FR et la relocalisation.
-- [ ] Relocaliser atomiquement la planche via le pointeur vérifié `0x01ED8AA4`.
-- [ ] Régénérer le PNG depuis la grille 4 bpp exacte et l’insérer dans `build-fr`.
-- [ ] Reconstruire la ROM FR et comparer le rendu vivant pixel par pixel au BMP.
-- [ ] Exécuter les validations élargies, relire, committer et intégrer sans push.
-- [ ] Publier le bilan sur l’issue #148 et la conserver clôturée en `completed`.
+- [x] Versionner le nouveau `trainer_card_front.bmp` comme référence complète.
+- [x] Ajouter les gardes rouges sur sa grille, la recette FR et la relocalisation.
+- [x] Relocaliser atomiquement la planche via le pointeur vérifié `0x01ED8AA4`.
+- [x] Régénérer le PNG depuis la grille 4 bpp exacte et l’insérer dans `build-fr`.
+- [x] Reconstruire la ROM FR et comparer le rendu vivant pixel par pixel au BMP.
+- [x] Exécuter les validations élargies, relire, committer et intégrer sans push.
+- [x] Publier le bilan sur l’issue #148 et la conserver clôturée en `completed`.
 
 ### Conception retenue
 
@@ -302,6 +302,24 @@ dernier et atteignent effectivement la ROM livrée.
   pointeur connu `0x01ED8AA8` si sa recompression devait aussi déborder.
 - La preuve finale suit les pointeurs vivants de la ROM reconstruite puis compare
   la grille 256 × 160 complète au BMP, pas seulement le libellé français.
+
+### Revue
+
+- Le BMP fourni est versionné sans altération (SHA-256
+  `64afede2c86875bbba38fbb0dce0c632b3ee1d8a668a8458e17984603173f47c`) ;
+  sa grille diffère de l’ancien recto sur 868 pixels.
+- La planche vivante contient 141 tuiles, soit 4 512 octets décompressés et
+  1 402 octets compressés. Elle est relocalisée à `0x002FE490` par le seul
+  pointeur validé `0x01ED8AA4` ; la tilemap reste à `0x01FDA820` et occupe
+  521 octets compressés.
+- L’extraction suit ces deux pointeurs et retrouve exactement le BMP complet ;
+  l’empreinte de la grille est
+  `3b019d70cf28bfbb51a2d83e862e1272cade731e4889be604f06f0ebea9cd8d1`.
+  La tilemap relocalisée du verso reste indépendante à `0x002BC87C`.
+- Le hook de commit a validé 1 643 tests Python (1 scénario ignoré), 68 tests
+  Vitest, les builds FR/IT/DE et trois audits de collisions à zéro.
+  `make test-rom` a confirmé le rebuild FR byte-identique, 12 gardes de
+  reconstruction, 559 tests ROM réussis et 39 scénarios optionnels ignorés.
 
 # Issue #150 — description CT108
 
