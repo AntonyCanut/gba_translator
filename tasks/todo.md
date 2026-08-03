@@ -709,3 +709,21 @@
 - Le hook complet a validé 1 637 tests Python (1 ignoré), 68 tests Vitest et les
   builds FR/IT/DE. Le diff ROM final est limité à l’octet de casse attendu :
   `0x3FD5C1`, `0xD9` (`e`) vers `0xBF` (`E`).
+
+# Issue #158 — Statistiques d’une capacité en combat
+
+- [x] Lire l’issue et tracer les cinq chaînes jusqu’aux pointeurs consommés.
+- [x] Comparer correction directe, patch post-build et surcharge last-wins ; retenir la
+  surcharge last-wins, mécanisme natif le plus petit et entièrement repointable.
+- [x] Ajouter et exécuter la garde rouge sur les libellés source et ROM.
+- [x] Ajouter les cinq traductions actives et leurs protections anti-régression.
+- [ ] Régénérer la traduction, reconstruire la ROM et suivre les six pointeurs vivants.
+- [ ] Exécuter les validations ciblées puis élargies.
+- [ ] Relire le diff, committer et clôturer l’issue GitHub.
+
+## Décision
+
+Les cinq valeurs sont des chaînes CFRU pointées. Elles doivent rester dans le pipeline de
+traduction : une surcharge en fin de `combined_fr.txt` laisse le moteur relocaliser les
+formes plus longues (`Précis. :`) sans introduire de patch binaire spécifique. Le test ROM
+suit les deux consommateurs de `Power` et les quatre pointeurs de catégorie/précision.

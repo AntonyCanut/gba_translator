@@ -1903,3 +1903,36 @@ entries:
   expected: Voleur de vivres
   forbidden:
   - The Food Thief
+- offset: '0xA4CAF9'
+  name: Fiche capacité — libellé de pouvoir
+  issue: '#158'
+  expected: 'Pouvoir :'
+  forbidden:
+  - 'Puissance :'
+  - 'Power:'
+- offset: '0xA4CB06'
+  name: Fiche capacité — libellé de précision
+  issue: '#158'
+  expected: 'Précis. :'
+  forbidden:
+  - 'Acc:'
+- offset: '0xA4CB0C'
+  name: Fiche capacité — précision sans échec
+  issue: '#158'
+  expected: '-'
+  forbidden:
+  - Sans échec
+  - No Miss
+- offset: '0xA4CB14'
+  name: Fiche capacité — catégorie physique
+  issue: '#158'
+  expected: Physique
+  forbidden:
+  - Contact
+- offset: '0xA4CB1C'
+  name: Fiche capacité — catégorie spéciale
+  issue: '#158'
+  expected: Spécial
+  forbidden:
+  - Sans contact
+  - No Contact
