@@ -717,9 +717,9 @@
   surcharge last-wins, mécanisme natif le plus petit et entièrement repointable.
 - [x] Ajouter et exécuter la garde rouge sur les libellés source et ROM.
 - [x] Ajouter les cinq traductions actives et leurs protections anti-régression.
-- [ ] Régénérer la traduction, reconstruire la ROM et suivre les six pointeurs vivants.
-- [ ] Exécuter les validations ciblées puis élargies.
-- [ ] Relire le diff, committer et clôturer l’issue GitHub.
+- [x] Régénérer la traduction, reconstruire la ROM et suivre les six pointeurs vivants.
+- [x] Exécuter les validations ciblées puis élargies.
+- [x] Relire le diff, committer et clôturer l’issue GitHub.
 
 ## Décision
 
@@ -727,3 +727,13 @@ Les cinq valeurs sont des chaînes CFRU pointées. Elles doivent rester dans le 
 traduction : une surcharge en fin de `combined_fr.txt` laisse le moteur relocaliser les
 formes plus longues (`Précis. :`) sans introduire de patch binaire spécifique. Le test ROM
 suit les deux consommateurs de `Power` et les quatre pointeurs de catégorie/précision.
+
+## Revue
+
+- Les deux pointeurs de puissance convergent vers « Pouvoir : » ; les quatre autres
+  rendent respectivement « Précis. : », « - », « Physique » et « Spécial ».
+- Le build a relocalisé les deux libellés allongés à `0x904D32` et `0x904D46`, puis a
+  repointé leurs consommateurs sans modifier les adresses de code.
+- Le cycle TDD a échoué sur les cinq anciennes valeurs, puis réussi sur la source et la
+  ROM reconstruite. Le hook a validé 1 637 tests Python (1 ignoré), 68 tests Vitest et les
+  builds complets FR/IT/DE ; les 2 gardes ciblées, dont le suivi ROM, réussissent.

@@ -45,6 +45,7 @@ def _last_entries() -> dict[int, str]:
 def _decode_pointer(rom: bytes, pointer_site: int) -> str:
     pointer = int.from_bytes(rom[pointer_site : pointer_site + 4], "little")
     target = pointer - GBA_ROM_BASE
+    assert 0 <= target < len(rom), f"pointeur hors ROM à {pointer_site:#x}: {pointer:#x}"
     end = rom.index(0xFF, target) + 1
     return TextDecoder.decode_pokemon(rom[target:end])
 
