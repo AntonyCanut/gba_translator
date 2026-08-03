@@ -957,6 +957,12 @@ entries:
   expected: Médium
   forbidden:
   - Spirite
+- offset: '0x23EA6C'
+  name: 'Classe de dresseur nageur'
+  issue: '#161'
+  expected: Nageur
+  forbidden:
+  - Baigneur
 - offset: '0x1EFFD93'
   name: 'Panneau Boissombre'
   issue: '#119'

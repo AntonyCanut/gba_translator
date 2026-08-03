@@ -984,3 +984,24 @@ l’occurrence majuscule seule serait fragile dès qu’une surcharge last-wins 
   consécutives sont byte-identiques.
 - Le hook de commit valide en plus 1 648 tests Python, 68 tests Vitest et les builds
   complets FR, IT et DE.
+
+# Issue #161 — Dresseurs Nageur/nageuse
+
+## Diagnostic et conception
+
+- Les classes adultes `Swimmer♂` et `Swimmer♀` disposent déjà de deux cellules
+  distinctes traduites par « Nageur♂ » et « Nageuse♀ ».
+- La classe `Tuber` utilise une seule cellule fixe de 13 octets pour sept
+  dresseurs, dont Lola ; changer leurs identifiants de classe modifierait aussi
+  des paramètres de combat tels que les gains.
+- La correction minimale et sans effet de bord remplace donc « Baigneur » par
+  « Nageur » dans la cellule partagée `0x23EA6C`.
+
+## Plan validé
+
+- [x] Ajouter une régression rouge sur le patch et la ROM construite.
+- [x] Corriger chirurgicalement l’entrée active et la protéger dans le manifeste.
+- [ ] Committer les sources avant de reconstruire la ROM FR.
+- [ ] Décoder les trois cellules Nageur/Nageuse dans la ROM livrée.
+- [ ] Exécuter les validations ciblées et globales, puis relire le diff.
+- [ ] Intégrer localement, commenter et clôturer l’issue GitHub.
