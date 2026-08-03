@@ -1,3 +1,23 @@
+# Issue #159 — « Envoyer qui ? » → « Déplacer où ? »
+
+## Diagnostic et conception
+
+- Le prompt de réorganisation des capacités vient de l’entrée active
+  `0x3FE7A0`, dont la source anglaise est « Switch which? ».
+- La traduction actuelle « Envoyer\nqui ? » décrit un changement de Pokémon et
+  ne correspond pas à l’action de déplacer une capacité.
+- « Déplacer\noù ? » conserve les codes de contrôle, le saut de ligne et la
+  longueur encodée de la cellule ; aucun repoint ni patch dédié n’est requis.
+
+## Plan validé
+
+- [x] Ajouter une régression rouge sur la source active et la ROM construite.
+- [x] Corriger chirurgicalement l’entrée `0x3FE7A0` et la protéger dans le manifeste.
+- [x] Committer les sources avant d’exécuter la chaîne de build FR.
+- [ ] Reconstruire la ROM et décoder le prompt réellement livré.
+- [ ] Exécuter les validations pertinentes et relire le diff.
+- [ ] Intégrer localement, commenter puis clôturer l’issue GitHub #159.
+
 # Issue #156 — extraire les icônes de types
 
 - [x] Lire l’issue et cartographier les deux planches graphiques vivantes.

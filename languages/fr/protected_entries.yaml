@@ -11,6 +11,12 @@ entries:
   expected: Envoyer un autre Pokémon ?
   forbidden:
   - Utiliser le Pokémon suivant ?
+- offset: '0x3FE7A0'
+  name: 'Combat : prompt de déplacement d’une capacité'
+  issue: '#159'
+  expected: <0xFC><0x05><0x05><0xFC><0x04><0x0D><0x0E><0x0F>Déplacer\noù ?
+  forbidden:
+  - <0xFC><0x05><0x05><0xFC><0x04><0x0D><0x0E><0x0F>Envoyer\nqui ?
 - offset: '0x3FD5B8'
   name: Nom de statistique Précision en combat
   issue: '#153'
