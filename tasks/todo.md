@@ -1020,3 +1020,22 @@ l’occurrence majuscule seule serait fragile dès qu’une surcharge last-wins 
   différenciation par prénom ou sprite demanderait de modifier les classes des
   données dresseur et leurs effets de gameplay ; elle est volontairement hors
   de cette correction textuelle sûre.
+
+# Issue #143 — Suivi du badge adverse `BRN`
+
+- [x] Lire le nouveau commentaire et isoler le chemin graphique adverse.
+- [x] Comparer la table brute du healthbox aux quatre blocs LZ77 déjà corrigés.
+- [ ] Ajouter une garde rouge sur les quatre copies par battler.
+- [ ] Dériver les tuiles brutes du même BMP canonique en préservant palettes et caps.
+- [ ] Reconstruire la ROM FR et vérifier `POI/PAR/SOM/GEL/BRU` dans chaque copie.
+- [ ] Exécuter les validations ciblées puis élargies.
+- [ ] Relire, committer, rebaser et clôturer l’issue GitHub.
+
+## Décision
+
+Le moteur n’utilise pas un cinquième bloc LZ77 pour le statut adverse :
+`UpdateStatusIconInHealthbox` indexe une table brute de trois tuiles par statut et par
+battler. L’approche retenue étend donc `status_badges.py` à ces quatre groupes bruts,
+en réutilisant les deux tuiles centrales du BMP fourni et en laissant byte-identique
+la troisième tuile de cap. Un script séparé ou un repointage du moteur ajouterait une
+seconde source graphique sans bénéfice et augmenterait inutilement le risque ROM.

@@ -25,6 +25,11 @@ This script MUST run AFTER repair_stable_lz77_blocks.py and
 repair_localized_lz77_blocks.py so that block 0x0B1E11C is restored to the
 English FNT tiles (stable block) and block 0x0B1E280 to the Spanish DEB tiles
 (localized block) before we overwrite with French badges.
+
+The in-battle healthboxes also load a separate, uncompressed table of three
+tiles per status and battler. Its four groups are derived from the same BMP:
+the engine-specific palette indices are remapped and the third cap tile is
+required to remain byte-identical.
 """
 
 from __future__ import annotations
@@ -49,6 +54,16 @@ BADGE_BLOCKS: list[int] = [
     0x00E9BF48,  # secondary badge set
 ]
 
+# Raw ``gBattleInterface_Gfx`` status groups. FireRed indexes them at tiles
+# 21/71/86/101 for battlers 0/1/2/3; each group stores five statuses as
+# [content1][content2][right cap]. Battlers 1 and 3 are the opponent boxes.
+HEALTHBOX_STATUS_GROUPS: list[tuple[int, int]] = [
+    (0x00D11E64, 0xC),
+    (0x00D124A4, 0xD),
+    (0x00D12684, 0xE),
+    (0x00D12864, 0xF),
+]
+
 BADGE_ASSET = ROOT_DIR / "languages/fr/sprites/status_badges.bmp"
 _BADGE_WIDTH = 32
 _BADGE_HEIGHT = 64
@@ -57,6 +72,13 @@ _SOURCE_ROM = ROOT_DIR / "input/roms/englishrom.gba"
 
 _TILE_BYTES = 32          # bytes per 4bpp 8×8 tile
 _TILES_PER_BADGE = 4      # left_border + content1 + content2 + right_border
+_HEALTHBOX_STATUS_COUNT = 5
+_HEALTHBOX_TILES_PER_STATUS = 3
+_HEALTHBOX_BORDER = 0x7
+_HEALTHBOX_LETTER = 0x1
+_HEALTHBOX_BLANK = 0x2
+
+
 def _read_slot_border(tiles: bytearray, slot: int) -> int:
     """Read the palette index from the unmodified right-cap border tile."""
     right_cap = (
@@ -96,6 +118,36 @@ def _adapt_border_indices(
     return adapted
 
 
+def _healthbox_status_payload(
+    badge_grid: list[list[int]],
+    palette_index: int,
+) -> bytes:
+    """Convertit les cinq badges du BMP au format brut des healthboxes."""
+    healthbox_grid: list[list[int]] = []
+    for slot in range(_HEALTHBOX_STATUS_COUNT):
+        canonical_fill = 4 + slot * 2
+        mapping = {
+            0x0: _HEALTHBOX_BLANK,
+            0x2: _HEALTHBOX_LETTER,
+            _CANONICAL_BORDER: _HEALTHBOX_BORDER,
+            canonical_fill: palette_index,
+        }
+        for row in badge_grid[slot * 8:(slot + 1) * 8]:
+            cropped = row[7:31]
+            unexpected = set(cropped) - mapping.keys()
+            if unexpected:
+                raise ValueError(
+                    f"status badge slot {slot}: unexpected palette indices "
+                    f"{sorted(unexpected)}"
+                )
+            healthbox_grid.append([mapping[pixel] for pixel in cropped])
+    return grid_to_tiles(
+        healthbox_grid,
+        _HEALTHBOX_TILES_PER_STATUS,
+        _HEALTHBOX_STATUS_COUNT,
+    )
+
+
 @lru_cache(maxsize=len(BADGE_BLOCKS))
 def _reference_capacity(offset: int) -> int:
     """Retourne la longueur du flux source qui définit l’emplacement réservé."""
@@ -109,6 +161,57 @@ def _reference_capacity(offset: int) -> int:
 def _source_rom_bytes() -> bytes:
     """Charge une seule fois la ROM source utilisée comme référence de capacité."""
     return _SOURCE_ROM.read_bytes()
+
+
+def _patch_healthbox_status_group(
+    rom: bytearray,
+    offset: int,
+    palette_index: int,
+    badge_grid: list[list[int]],
+    dry_run: bool = False,
+) -> bool:
+    """Injecte les badges bruts après validation stricte de chaque copie."""
+    target = _healthbox_status_payload(badge_grid, palette_index)
+    group_size = len(target)
+    if offset + group_size > len(rom):
+        print(
+            f"  WARN 0x{offset:08X}: raw healthbox group overflows ROM",
+            file=sys.stderr,
+        )
+        return False
+
+    source = b""
+    if _SOURCE_ROM.exists():
+        source = _source_rom_bytes()[offset:offset + group_size]
+
+    for slot in range(_HEALTHBOX_STATUS_COUNT):
+        start = slot * _HEALTHBOX_TILES_PER_STATUS * _TILE_BYTES
+        content_end = start + 2 * _TILE_BYTES
+        end = start + _HEALTHBOX_TILES_PER_STATUS * _TILE_BYTES
+        current_content = bytes(rom[offset + start:offset + content_end])
+        target_content = target[start:content_end]
+        source_content = source[start:content_end]
+        if current_content not in (source_content, target_content):
+            print(
+                f"  WARN 0x{offset:08X}: slot {slot} content is neither EN nor FR — skip",
+                file=sys.stderr,
+            )
+            return False
+        if bytes(rom[offset + content_end:offset + end]) != target[content_end:end]:
+            print(
+                f"  WARN 0x{offset:08X}: slot {slot} cap differs from BMP — skip",
+                file=sys.stderr,
+            )
+            return False
+
+    if not dry_run:
+        for slot in range(_HEALTHBOX_STATUS_COUNT):
+            start = slot * _HEALTHBOX_TILES_PER_STATUS * _TILE_BYTES
+            content_end = start + 2 * _TILE_BYTES
+            rom[offset + start:offset + content_end] = target[start:content_end]
+    suffix = " (dry-run)" if dry_run else ""
+    print(f"  0x{offset:08X}  badges healthbox injectés{suffix}")
+    return True
 
 
 def _patch_block(
@@ -175,6 +278,17 @@ def apply_patches(rom_path: Path, dry_run: bool = False) -> int:
                 patched += 1
             continue
         ok = _patch_block(rom, block_off, badge_grid)
+        if ok:
+            patched += 1
+
+    for group_off, palette_index in HEALTHBOX_STATUS_GROUPS:
+        ok = _patch_healthbox_status_group(
+            rom,
+            group_off,
+            palette_index,
+            badge_grid,
+            dry_run=dry_run,
+        )
         if ok:
             patched += 1
 
