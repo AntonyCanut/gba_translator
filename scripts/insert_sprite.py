@@ -153,6 +153,11 @@ def main() -> int:
                     compressed=sprite.compressed,
                     vram_safe=sprite.vram_safe,
                     bits_per_pixel=sprite.bits_per_pixel,
+                    tiles_pointer_offsets=(
+                        sprite.block_pointers[i]
+                        if sprite.block_pointers
+                        else ()
+                    ),
                     tilemap_pointer_offsets=(
                         sprite.tilemap_pointers[i]
                         if sprite.tilemap_pointers

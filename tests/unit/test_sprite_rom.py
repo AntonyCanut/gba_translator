@@ -509,6 +509,50 @@ def test_insert_mapped_block_relocates_tilemap_through_known_pointer():
     assert actual == expected
 
 
+def test_insert_mapped_block_relocates_tiles_through_known_pointer():
+    """Une planche trop grande est déplacée via son pointeur vérifié."""
+    tiles = grid_to_tiles([[5] * 8 for _ in range(8)], 1, 1)
+    rom, tiles_offset, tilemap_offset = _make_rom_with_tilemap(
+        tiles,
+        [0, 0],
+        tiles_padding=0,
+    )
+    tilemap_result = lz77_decompress(bytes(rom), tilemap_offset)
+    assert tilemap_result is not None
+    _, tilemap_compressed_len = tilemap_result
+    pointer_offset = tilemap_offset + tilemap_compressed_len + 8
+    rom[pointer_offset - 8:pointer_offset] = b"\xAA" * 8
+    rom[tilemap_offset + tilemap_compressed_len] = 0xFF
+    rom[pointer_offset:pointer_offset + 4] = (
+        0x08000000 + tiles_offset
+    ).to_bytes(4, "little")
+    rom[pointer_offset + 4:] = b"\xAA" * 16 + b"\xFF" * 512
+    expected, _, _ = extract_mapped_block(
+        bytes(rom), tiles_offset, tilemap_offset, tiles_wide=2, tiles_tall=1
+    )
+    expected[0][8] = 7
+
+    insert_mapped_block(
+        rom,
+        tiles_offset,
+        tilemap_offset,
+        expected,
+        tiles_wide=2,
+        tiles_tall=1,
+        tiles_pointer_offsets=(pointer_offset,),
+    )
+
+    relocated_offset = (
+        int.from_bytes(rom[pointer_offset:pointer_offset + 4], "little")
+        - 0x08000000
+    )
+    actual, _, _ = extract_mapped_block(
+        bytes(rom), relocated_offset, tilemap_offset, tiles_wide=2, tiles_tall=1
+    )
+    assert relocated_offset > pointer_offset
+    assert actual == expected
+
+
 def test_insert_mapped_block_rejects_growth_into_adjacent_data():
     tiles = grid_to_tiles([[5] * 8 for _ in range(8)], 1, 1)
     rom, tiles_offset, tilemap_offset = _make_rom_with_tilemap(

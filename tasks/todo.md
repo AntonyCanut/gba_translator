@@ -281,6 +281,28 @@ dernier et atteignent effectivement la ROM livrée.
   `make test-rom` a ensuite confirmé le rebuild FR déterministe, 12 gardes de
   reconstruction et 547 tests ROM ; 43 scénarios optionnels ont été ignorés.
 
+## Reprise — intégrer le recto fourni
+
+- [ ] Versionner le nouveau `trainer_card_front.bmp` comme référence complète.
+- [ ] Ajouter les gardes rouges sur sa grille, la recette FR et la relocalisation.
+- [ ] Relocaliser atomiquement la planche via le pointeur vérifié `0x01ED8AA4`.
+- [ ] Régénérer le PNG depuis la grille 4 bpp exacte et l’insérer dans `build-fr`.
+- [ ] Reconstruire la ROM FR et comparer le rendu vivant pixel par pixel au BMP.
+- [ ] Exécuter les validations élargies, relire, committer et intégrer sans push.
+- [ ] Publier le bilan sur l’issue #148 et la conserver clôturée en `completed`.
+
+### Conception retenue
+
+- Le BMP complet est la source de vérité ; aucun recadrage ni redessin procédural.
+- La planche recompressée mesure 1 402 octets contre un slot vivant de 1 378 :
+  tenter de modifier le compresseur ou de raccourcir le dessin serait fragile.
+- La réinjection étend donc le mécanisme générique de relocalisation sûre déjà
+  utilisé par les tilemaps, avec écriture atomique et uniquement le pointeur
+  moteur exact `0x01ED8AA4`. La tilemap reste gérée indépendamment par son
+  pointeur connu `0x01ED8AA8` si sa recompression devait aussi déborder.
+- La preuve finale suit les pointeurs vivants de la ROM reconstruite puis compare
+  la grille 256 × 160 complète au BMP, pas seulement le libellé français.
+
 # Issue #150 — description CT108
 
 - [x] Lire l’issue, sa capture et décoder le pointeur vivant de la CT108.

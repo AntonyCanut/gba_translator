@@ -443,6 +443,7 @@ def insert_mapped_block(
     compressed: bool = True,
     vram_safe: bool = True,
     bits_per_pixel: int = 4,
+    tiles_pointer_offsets: tuple[int, ...] = (),
     tilemap_pointer_offsets: tuple[int, ...] = (),
 ) -> None:
     """Réinjecte un écran mappé dans sa planche de tuiles.
@@ -460,6 +461,8 @@ def insert_mapped_block(
         tiles_tall: Hauteur de l'écran en tuiles.
         compressed: Indique si la planche est compressée en LZ77.
         vram_safe: Utilise le compresseur compatible VRAM.
+        tiles_pointer_offsets: Pointeurs connus à repointer si la planche
+            recompressée doit être relocalisée.
         tilemap_pointer_offsets: Pointeurs connus à repointer si la tilemap
             recompressée doit être relocalisée.
     """
@@ -617,14 +620,25 @@ def insert_mapped_block(
         remapped_tilemap[start:start + 2] = entry.to_bytes(2, "little")
 
     staged = bytearray(rom)
-    _write_block_payload(
-        staged,
-        tiles_offset,
-        bytes(tiles),
-        comp_len,
-        compressed=compressed,
-        vram_safe=vram_safe,
-    )
+    try:
+        _write_block_payload(
+            staged,
+            tiles_offset,
+            bytes(tiles),
+            comp_len,
+            compressed=compressed,
+            vram_safe=vram_safe,
+        )
+    except BlockCapacityError:
+        if not tiles_pointer_offsets:
+            raise
+        _relocate_compressed_payload(
+            staged,
+            bytes(tiles),
+            tiles_pointer_offsets,
+            tiles_offset,
+            vram_safe=vram_safe,
+        )
     try:
         _write_block_payload(
             staged,

@@ -32,6 +32,10 @@ class SpriteDef:
     # extraction reconstructs the mapped screen and insertion reverses that
     # composition instead of exposing a scrambled linear tilesheet.
     tilemaps: tuple[int, ...] = ()
+    # Pointeurs ROM connus vers chaque planche, appariés à ``blocks``. Ils
+    # permettent une relocalisation sûre si une recompression ne tient plus
+    # dans le bloc d’origine.
+    block_pointers: tuple[tuple[int, ...], ...] = ()
     # Pointeurs ROM connus vers chaque tilemap, appariés à ``blocks``. Ils
     # permettent une relocalisation sûre si une édition ne tient plus dans le
     # bloc LZ77 d’origine ; aucun scan aveugle de pointeurs n’est effectué.
@@ -54,6 +58,8 @@ class SpriteDef:
             raise ValueError("SpriteDef bits_per_pixel must be 4 or 8")
         if self.tilemaps and len(self.tilemaps) != len(self.blocks):
             raise ValueError("SpriteDef requires one tilemap per block")
+        if self.block_pointers and len(self.block_pointers) != len(self.blocks):
+            raise ValueError("SpriteDef requires pointer sets for every block")
         if self.tilemap_pointers and len(self.tilemap_pointers) != len(self.blocks):
             raise ValueError("SpriteDef requires pointer sets for every block")
         if self.tilemap_pointers and not self.tilemaps:
@@ -159,6 +165,8 @@ SPRITES: dict[str, SpriteDef] = {
     "trainer_card_front": SpriteDef(
         blocks=(0x01FDA2BC,),
         tilemaps=(0x01FDA820,),
+        block_pointers=((0x01ED8AA4,),),
+        tilemap_pointers=((0x01ED8AA8,),),
         tiles_wide=32,
         tiles_tall=20,
     ),
