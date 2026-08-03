@@ -899,3 +899,41 @@ suit les deux consommateurs de `Power` et les quatre pointeurs de catégorie/pr�
 - La validation a aussi révélé l’ancien offset erroné `0x1F58E33` de Rougebois.
   Il est aligné sur son pointeur vivant `0x1F58E34` et protégé pour éviter que
   le pipeline CSV ne réintroduise « Redwood Village ».
+
+# Issue #46 — distinguer « Active » et « Actives » dans le menu Missions
+
+## Diagnostic et conception
+
+- La chaîne source `0x1F5605C` est consommée par deux pointeurs distincts après le
+  build : `0x1EBFFC8` pour l’onglet blanc en haut à gauche et `0x1FB40B8` pour le
+  statut bleu affiché au bout de chaque ligne de mission.
+- Le correctif précédent a relocalisé « Actives » puis repointé les deux sites vers
+  cette même copie, ce qui a rendu le statut individuel incorrectement pluriel.
+- Remettre `combined_fr.txt` à « Active » corrigerait le statut mais ferait régresser
+  l’onglet. Allouer une seconde chaîne en espace libre est inutile : la cellule
+  originale de sept octets contient déjà exactement « Active » avec son terminateur.
+- La solution minimale étend le patch post-build Missions : l’onglet conserve la
+  cible relocalisée « Actives », tandis que le seul pointeur de statut est ramené vers
+  la cellule originale, réécrite défensivement en « Active ». Le suffixe partagé reste
+  vide comme aujourd’hui.
+
+## Plan validé
+
+- [x] Distinguer dans le garde ROM le pointeur d’onglet pluriel et le pointeur de
+  statut singulier, puis constater l’échec sur la ROM actuelle.
+- [x] Ajouter un test synthétique rouge qui exige la séparation des deux pointeurs.
+- [x] Étendre `languages/fr/patches/mission_tab_labels.py` avec la séparation minimale,
+  bornée et idempotente.
+- [ ] Valider les tests ciblés, puis committer les sources avant tout build ROM.
+- [ ] Reconstruire la ROM FR et décoder les deux pointeurs vivants dans l’artefact.
+- [ ] Exécuter les gardes de build et la suite rapide, relire le diff et rebaser.
+- [ ] Publier le résultat sur l’issue #46 et la clôturer en `completed`.
+
+## Auto-revue de la conception
+
+- Le périmètre reste limité au menu Missions et ne modifie ni le pipeline partagé ni
+  les autres langues.
+- Chaque contexte possède une attente observable indépendante : « Actives » pour
+  `0x1EBFFC8`, « Active » pour `0x1FB40B8`.
+- La mutation réaliste « repointer de nouveau les deux sites vers Actives » est captée
+  par le garde ROM et par le test unitaire du patch.

@@ -1,11 +1,12 @@
-"""E2E : les onglets du menu Missions restent au féminin pluriel (#46).
+"""E2E : les libellés du menu Missions gardent le bon nombre (#46).
 
 Le libellé « Actives » a déjà fait l'aller-retour deux fois : #116 l'avait
 raccourci en « Active » parce que le moteur collait alors le suffixe partagé
 « Missions » (« ActivesMissions » débordait), puis #114 a vidé ce suffixe sans
-restaurer le pluriel. Ce garde décode les octets réellement lus par le moteur —
-via **tous** les sites de pointeurs vivants, pas l'offset d'origine, qui garde
-les octets anglais périmés quand la chaîne a été relogée en espace libre.
+restaurer le pluriel. La chaîne anglaise ``Active`` a toutefois deux usages :
+l'onglet blanc doit rester « Actives », tandis que le statut bleu d'une mission
+doit rester « Active ». Ce garde décode les octets réellement lus par le moteur,
+pas l'offset d'origine, qui garde les octets anglais périmés après relocalisation.
 """
 
 import struct
@@ -22,10 +23,13 @@ GBA_BASE = 0x08000000
 # Offset d'origine de chaque libellé → texte attendu en jeu.
 TAB_LABELS = {
     0x1F5609F: "Toutes",
-    0x1F5605C: "Actives",
     0x1F56063: "Inactives",
     0x1F560A3: "Terminées",
 }
+
+# La chaîne source « Active » a deux consommateurs grammaticalement distincts.
+ACTIVE_TAB_POINTER = 0x1EBFFC8
+ACTIVE_STATUS_POINTER = 0x1FB40B8
 
 # Suffixe partagé collé à chaque catégorie par le moteur : doit rester vide (#114).
 SUFFIX_OFFSET = 0x1F56040
@@ -67,7 +71,7 @@ def fr_rom_data() -> bytes:
 
 @pytest.mark.rom
 class TestMissionTabLabelsFrench:
-    """Les quatre onglets du menu Missions et leur suffixe partagé."""
+    """Les onglets, le statut individuel et le suffixe partagé."""
 
     @pytest.mark.parametrize(
         ("original_offset", "expected"), sorted(TAB_LABELS.items())
@@ -86,6 +90,25 @@ class TestMissionTabLabelsFrench:
             assert _decode_at(fr_rom_data, target - GBA_BASE) == expected, (
                 f"pointeur 0x{site:X} → 0x{target - GBA_BASE:X}"
             )
+
+    @pytest.mark.parametrize(
+        ("pointer_site", "expected"),
+        (
+            (ACTIVE_TAB_POINTER, "Actives"),
+            (ACTIVE_STATUS_POINTER, "Active"),
+        ),
+    )
+    def test_active_tab_is_plural_but_each_mission_status_is_singular(
+        self,
+        fr_rom_data: bytes,
+        pointer_site: int,
+        expected: str,
+    ) -> None:
+        """L'onglet blanc et le statut bleu ne partagent plus la même cible."""
+        (target,) = struct.unpack_from("<I", fr_rom_data, pointer_site)
+        assert _decode_at(fr_rom_data, target - GBA_BASE) == expected, (
+            f"pointeur 0x{pointer_site:X} → 0x{target - GBA_BASE:X}"
+        )
 
     def test_shared_missions_suffix_stays_blank(self, fr_rom_data: bytes) -> None:
         """Sans ce vidage, les onglets réafficheraient « ActivesMissions » (#114)."""

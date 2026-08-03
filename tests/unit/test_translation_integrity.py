@@ -130,7 +130,8 @@ class TestRealRepo:
         # 0x1F5605C a fait l'aller-retour deux fois : #46 l'avait mis au féminin
         # pluriel, #116 l'a raccourci en « Active » à cause du suffixe partagé
         # « Missions » collé par le moteur, puis #114 a vidé ce suffixe sans
-        # restaurer le pluriel. Le garde doit maintenant interdire le singulier.
+        # restaurer le pluriel. Le garde source de l'onglet doit interdire le
+        # singulier ; le statut individuel « Active » est séparé post-build.
         fr = [t for t in cti.discover_languages() if t[0] == "fr"]
         assert fr
         entries = cti.load_manifest(fr[0][2])
