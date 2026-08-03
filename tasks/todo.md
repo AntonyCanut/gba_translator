@@ -953,3 +953,22 @@ suit les deux consommateurs de `Power` et les quatre pointeurs de catégorie/pr�
   après rebase sur la dernière tête de `unbound`.
 - Le mot français « Active », identique à sa source anglaise, est désormais classé
   explicitement dans l’audit des chaînes anglaises vivantes.
+# Issue #162 — Panneau Astuces de Dresseurs
+
+## Décision
+
+L’offset pointé `0x1F732BD` utilise le pipeline de traduction standard et ne possède
+qu’une ancienne occurrence majuscule. La correction minimale consiste à ajouter une
+occurrence vivante dans le bloc hexadécimal minuscule, puis à laisser le rewrap et la
+relocalisation existants produire la ROM. Un patch post-build serait redondant ; modifier
+l’occurrence majuscule seule serait fragile dès qu’une surcharge last-wins apparaît.
+
+## Plan TDD
+
+- [x] Lire l’issue, ses commentaires et les captures, puis tracer le pointeur `0x1E9368B`.
+- [x] Ajouter les gardes source et ROM pour le titre, la formulation et le saut avant L.
+- [x] Exécuter les gardes en rouge sur la traduction actuelle.
+- [x] Ajouter chirurgicalement la traduction vivante et sa protection anti-régression.
+- [ ] Régénérer le CSV et le JSON, puis reconstruire la ROM FR.
+- [ ] Vérifier le texte décodé au pointeur vivant et exécuter les validations élargies.
+- [ ] Relire le diff, committer, intégrer et clôturer l’issue GitHub.

@@ -1956,3 +1956,10 @@ entries:
   forbidden:
   - Sans contact
   - No Contact
+- offset: '0x1F732BD'
+  name: Panneau — Astuces de Dresseurs
+  issue: '#162'
+  expected: Astuces de Dresseurs !\p{L_BUTTON} et {SELECT_BUTTON} permettent de changer de Pokémon dans la liste !\l{L_BUTTON} auto-sélectionne un Pokémon à permuter, et {SELECT_BUTTON} met le Pokémon actuel en tête d’équipe !
+  forbidden:
+  - Astuces du Dresseur !
+  - changer vite de Pokémon
