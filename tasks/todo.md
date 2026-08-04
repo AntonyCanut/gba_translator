@@ -64,6 +64,26 @@
   avec 583 succès et 36 skips. Deux builds FR consécutifs sont identiques.
 - La ROM livrée est byte-identique à un build propre après rebase.
 
+# Issue #169 — « Aucun courrier ici » → « Pas de lettre ici. »
+
+## Diagnostic et conception
+
+- La chaîne pointée active est l’entrée unique `0x4177EE` de
+  `languages/fr/combined_fr.txt` ; elle conserve le contrôle
+  `{PAUSE_UNTIL_PRESS}` présent dans la source.
+- La correction minimale remplace uniquement le libellé par
+  « Pas de lettre ici. », protège sa valeur exacte et laisse le pipeline
+  reloger la chaîne si nécessaire.
+
+## Plan validé
+
+- [x] Ajouter une garde de régression rouge sur l’entrée active.
+- [x] Corriger chirurgicalement l’entrée et committer les sources avant le build.
+- [ ] Régénérer la traduction et reconstruire la ROM française.
+- [ ] Suivre le pointeur vivant et décoder la phrase réellement livrée.
+- [ ] Exécuter les validations pertinentes, relire le diff et intégrer localement.
+- [ ] Commenter puis clôturer l’issue GitHub #169 avec l’état `completed`.
+
 # Issue #167 — libellés des options du PC
 
 ## Diagnostic et conception

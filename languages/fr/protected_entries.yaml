@@ -5,6 +5,13 @@ entries:
   expected: Déposer
   forbidden:
   - Stocker
+- offset: '0x4177EE'
+  name: 'PC : absence de lettre dans le stockage d’objets'
+  issue: '#169'
+  expected: Pas de lettre ici. {PAUSE_UNTIL_PRESS}
+  forbidden:
+  - Aucun Courrier ici. {PAUSE_UNTIL_PRESS}
+  - Aucun courrier ici. {PAUSE_UNTIL_PRESS}
 - offset: '0x3FD5C1'
   name: Nom de statistique Esquive en combat
   issue: '#157'
