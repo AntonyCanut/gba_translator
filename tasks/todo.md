@@ -947,22 +947,23 @@ suit les deux consommateurs de `Power` et les quatre pointeurs de catégorie/pr�
 - [x] Faire échouer les gardes avec la cartographie observée : statut bleu
   `0x1EBFFC8` → « Active », onglet blanc `0x1FB40B8` → « Actives ».
 - [x] Corriger le patch post-build sans modifier les chaînes de traduction.
-- [ ] Reconstruire la ROM, décoder les deux pointeurs et lancer `make test-rom`.
+- [x] Reconstruire la ROM, décoder les deux pointeurs et lancer `make test-rom`.
 - [ ] Rebaser, revalider et publier le résultat sur l'issue #46.
 
 ## Diagnostic et conception
 
-- La chaîne source `0x1F5605C` est consommée par deux pointeurs distincts après le
-  build : `0x1EBFFC8` pour l’onglet blanc en haut à gauche et `0x1FB40B8` pour le
-  statut bleu affiché au bout de chaque ligne de mission.
-- Le correctif précédent a relocalisé « Actives » puis repointé les deux sites vers
-  cette même copie, ce qui a rendu le statut individuel incorrectement pluriel.
-- Remettre `combined_fr.txt` à « Active » corrigerait le statut mais ferait régresser
-  l’onglet. Allouer une seconde chaîne en espace libre est inutile : la cellule
-  originale de sept octets contient déjà exactement « Active » avec son terminateur.
-- La solution minimale étend le patch post-build Missions : l’onglet conserve la
-  cible relocalisée « Actives », tandis que le seul pointeur de statut est ramené vers
-  la cellule originale, validée défensivement comme « Active ». Le suffixe partagé reste
+- La nouvelle capture identifie les deux pointeurs distincts après le build :
+  `0x1EBFFC8` alimente le statut bleu affiché au bout de chaque ligne de mission,
+  tandis que `0x1FB40B8` alimente l’onglet blanc en haut à gauche.
+- Le correctif précédent avait attribué ces contextes à l’envers : il laissait
+  `0x1EBFFC8` sur « Actives » et ramenait `0x1FB40B8` vers « Active », reproduisant
+  exactement l’inversion visible sur la capture.
+- Modifier `combined_fr.txt` ferait partager de nouveau une seule forme aux deux
+  contextes. Allouer une seconde chaîne est inutile : la cellule originale de sept
+  octets contient déjà exactement « Active » avec son terminateur.
+- La solution minimale corrige la cartographie du patch post-build Missions : l’onglet
+  `0x1FB40B8` conserve la cible relocalisée « Actives », tandis que le statut
+  `0x1EBFFC8` revient vers la cellule originale « Active ». Le suffixe partagé reste
   vide comme aujourd’hui.
 
 ## Plan validé
@@ -981,24 +982,28 @@ suit les deux consommateurs de `Power` et les quatre pointeurs de catégorie/pr�
 
 - Le périmètre reste limité au menu Missions et ne modifie ni le pipeline partagé ni
   les autres langues.
-- Chaque contexte possède une attente observable indépendante : « Actives » pour
-  `0x1EBFFC8`, « Active » pour `0x1FB40B8`.
+- Chaque contexte possède une attente observable indépendante : « Active » pour
+  `0x1EBFFC8`, « Actives » pour `0x1FB40B8`.
 - La mutation réaliste « repointer de nouveau les deux sites vers Actives » est captée
   par le garde ROM et par le test unitaire du patch.
 
 ## Revue de réalisation
 
-- Le patch post-build laisse `0x1EBFFC8` pointer vers la copie relocalisée
-  « Actives » et repointe uniquement `0x1FB40B8` vers la cellule source
+- Le patch post-build laisse `0x1FB40B8` pointer vers la copie relocalisée
+  « Actives » et repointe uniquement `0x1EBFFC8` vers la cellule source
   `0x1F5605C`, qui décode « Active ».
-- Les tests du patch passent 8/8, dont la sauvegarde `.bak` exacte et la lecture
-  de la ROM versionnée ; les tests ciblés patch/intégrité passent 34/34 et les
-  13 gardes de régression du build FR passent.
-- La suite rapide exécutée par le hook passe 1 642 tests Python (1 skip), puis les
+- Les tests synthétiques du patch passent 7/7 et les gardes ciblés sur la ROM
+  construite passent 14/14, dont la sauvegarde `.bak` exacte, l’idempotence et la
+  séparation explicite des deux contextes.
+- La suite rapide exécutée par le hook passe 1 666 tests Python (1 skip), puis les
   68 tests Vitest ; les builds FR, IT et DE réussissent sans collision.
-- `make test-rom` confirme deux builds FR byte-identiques et sort à zéro :
-  566 tests réussis, 38 scénarios optionnels ignorés et 1 854 exclus par le profil
-  après rebase sur la dernière tête de `unbound`.
+- La première exécution de `make test-rom` a validé 575 tests et ignoré 38 scénarios
+  optionnels ; son seul échec, le replay du premier combat italien, n’a signalé ni
+  gel ni texte anglais et a réussi immédiatement en isolation. Une exécution finale
+  sans contention est conservée comme preuve avant livraison.
+- La ROM reconstruite résout `0x1EBFFC8` vers `0x1F5605C` (« Active ») et
+  `0x1FB40B8` vers `0xE58DAA` (« Actives ») ; son SHA-256 est
+  `91294fc265ea62d6722f95fb5688353971ce4fc4ecc158dec7f64ce1c1ea80f6`.
 - Le mot français « Active », identique à sa source anglaise, est désormais classé
   explicitement dans l’audit des chaînes anglaises vivantes.
 # Issue #162 — Panneau Astuces de Dresseurs

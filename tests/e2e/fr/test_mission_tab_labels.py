@@ -28,7 +28,7 @@ TAB_LABELS = {
 }
 
 # La chaîne source « Active » a deux consommateurs grammaticalement distincts.
-# La capture utilisateur du 03/08/2026 associe le premier site aux statuts
+# La nouvelle capture utilisateur associe le premier site aux statuts
 # bleus des lignes et le second à l'onglet blanc en haut à gauche.
 ACTIVE_STATUS_POINTER = 0x1EBFFC8
 ACTIVE_TAB_POINTER = 0x1FB40B8

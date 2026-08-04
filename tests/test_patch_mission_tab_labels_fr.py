@@ -32,7 +32,7 @@ from src.core.text_codec import POKEMON_TABLE
 STR_OFFSET = 0x1F56040  # where the suffix lives in the real ROM layout
 ACTIVE_INLINE_OFFSET = 0x1F5605C
 ACTIVE_RELOCATED_OFFSET = 0x1F57000
-# La capture utilisateur du 03/08/2026 tranche les contextes visuels : le
+# La nouvelle capture utilisateur tranche les contextes visuels : le
 # premier site alimente les statuts bleus des lignes, le second l'onglet blanc.
 ACTIVE_STATUS_POINTER = 0x1EBFFC8
 ACTIVE_TAB_POINTER = 0x1FB40B8
@@ -85,6 +85,14 @@ class TestPatchMissionTabLabelsFr(unittest.TestCase):
         self.assertEqual(changes, 1)
         self.assertEqual(_decode_pointer(rom, ACTIVE_TAB_POINTER), "Actives")
         self.assertEqual(_decode_pointer(rom, ACTIVE_STATUS_POINTER), "Active")
+        self.assertEqual(
+            struct.unpack_from("<I", rom, ACTIVE_TAB_POINTER)[0],
+            GBA_BASE + ACTIVE_RELOCATED_OFFSET,
+        )
+        self.assertEqual(
+            struct.unpack_from("<I", rom, ACTIVE_STATUS_POINTER)[0],
+            GBA_BASE + ACTIVE_INLINE_OFFSET,
+        )
         self.assertNotEqual(
             struct.unpack_from("<I", rom, ACTIVE_TAB_POINTER)[0],
             struct.unpack_from("<I", rom, ACTIVE_STATUS_POINTER)[0],
