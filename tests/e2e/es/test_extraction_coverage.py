@@ -16,6 +16,7 @@ stale ref).
 MAX_MISSING_FROM_ES = 300
 MAX_EXTRA_IN_ES = 25
 MIN_ES_ENTRIES = 20000
+DEFAULT_PC_BOX_PREFIX_OFFSET = 0x4186CD
 
 
 class TestExtractionCoverage:
@@ -24,6 +25,9 @@ class TestExtractionCoverage:
             f"combined_es.txt only has {len(es_combined_entries)} entries — "
             f"expected at least {MIN_ES_ENTRIES}"
         )
+
+    def test_es_covers_default_pc_box_prefix(self, es_combined_entries):
+        assert es_combined_entries[DEFAULT_PC_BOX_PREFIX_OFFSET] == "Box"
 
     def test_es_coverage_close_to_fr_offsets(
         self, es_combined_entries, fr_combined_entries

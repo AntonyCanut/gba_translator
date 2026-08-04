@@ -33,6 +33,8 @@
   573 tests réussis, 36 ignorés et 1 858 désélectionnés.
 - Le hook du commit source valide en plus 1 655 tests Python, 68 tests Vitest et
   les trois builds complets FR, IT et DE.
+- Après rebase sur l'ajout concurrent du préfixe « Boîte », la référence ES a
+  reçu son offset source « Box » ; les tests des deux tickets PC passent ensemble.
 
 # Issue #159 — « Envoyer qui ? » → « Déplacer où ? »
 

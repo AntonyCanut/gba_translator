@@ -1,0 +1,7 @@
+# Entrées de référence ES protégées contre la dérive de couverture.
+
+entries:
+- offset: '0x4186CD'
+  name: PC — préfixe source des noms de boîtes par défaut
+  issue: '#164'
+  expected: Box
