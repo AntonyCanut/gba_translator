@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 
+import hashlib
 import shutil
 import subprocess
 from pathlib import Path
@@ -11,6 +12,7 @@ import pytest
 from languages.fr.sprites import SPRITES
 from languages.fr.patches.font import lz77_decompress
 from src.graphics.sprite_image import read_indexed_image
+from src.graphics.sprite_rom import extract_mapped_block
 
 ROOT = Path(__file__).resolve().parents[2]
 ASSET = ROOT / "languages" / "fr" / "sprites" / "title_screen.png"
@@ -80,7 +82,43 @@ def test_versioned_title_screen_asset_keeps_a_visible_prompt() -> None:
     prompt = [pixel for row in grid[144:153] for pixel in row[64:176]]
 
     # Assert: protège la zone sans figer le texte anglais pixel par pixel.
+    assert {163, 164} <= set(prompt)
     assert sum(pixel in {163, 164} for pixel in prompt) >= 100
+
+
+def test_versioned_title_screen_asset_contains_pressez_start_artwork() -> None:
+    # Arrange
+    _, _, grid = read_indexed_image(ASSET)
+
+    # Act: empreinte des seuls pixels retouchés dans le BMP fourni.
+    prompt = bytes(
+        grid[y][x]
+        for y in range(149, 154)
+        for x in range(80, 161)
+    )
+
+    # Assert
+    assert hashlib.sha256(prompt).hexdigest() == (
+        "3c291170c102a82a0e0e8985abd3e1c383923e226149cda90ae5d0d46ded3d2a"
+    )
+
+
+def test_build_fr_injects_versioned_title_screen_asset() -> None:
+    # Act
+    result = subprocess.run(
+        ["make", "-n", "build-fr"],
+        cwd=ROOT,
+        check=True,
+        capture_output=True,
+        text=True,
+    )
+
+    # Assert
+    assert (
+        "scripts/insert_sprite.py --rom output/roms/GenedRom-fr.gba "
+        "--lang fr --sprite title_screen "
+        "--image languages/fr/sprites/title_screen.png"
+    ) in result.stdout
 
 
 @pytest.mark.rom
@@ -116,14 +154,27 @@ def test_insert_cli_round_trips_8bpp_title_screen(tmp_path: Path) -> None:
     actual_rom = output_rom.read_bytes()
     actual_tiles = lz77_decompress(actual_rom, TILES_OFFSET)
     actual_tilemap = lz77_decompress(actual_rom, TILEMAP_OFFSET)
+    expected_width, expected_height, expected_grid = read_indexed_image(ASSET)
+    actual_grid, _, _ = extract_mapped_block(
+        actual_rom,
+        TILES_OFFSET,
+        TILEMAP_OFFSET,
+        tiles_wide=expected_width // 8,
+        tiles_tall=expected_height // 8,
+        bits_per_pixel=8,
+    )
 
     # Assert
     assert actual_tiles is not None
     assert actual_tilemap is not None
-    assert actual_tiles[0] == source_tiles[0]
-    assert actual_tilemap[0] == source_tilemap[0]
+    assert len(actual_tiles[0]) == len(source_tiles[0])
+    assert actual_grid == expected_grid
     assert actual_rom[PALETTE_OFFSET : PALETTE_OFFSET + 512] == source_rom[
         PALETTE_OFFSET : PALETTE_OFFSET + 512
     ]
     assert actual_rom[:TILES_OFFSET] == source_rom[:TILES_OFFSET]
+    tiles_end = TILES_OFFSET + max(source_tiles[1], actual_tiles[1])
+    tilemap_end = TILEMAP_OFFSET + max(source_tilemap[1], actual_tilemap[1])
+    assert actual_rom[tiles_end:TILEMAP_OFFSET] == source_rom[tiles_end:TILEMAP_OFFSET]
+    assert actual_rom[tilemap_end:PALETTE_OFFSET] == source_rom[tilemap_end:PALETTE_OFFSET]
     assert actual_rom[PALETTE_OFFSET:] == source_rom[PALETTE_OFFSET:]

@@ -87,3 +87,26 @@ le réinjecte dans une copie temporaire, puis exige l’égalité des tuiles et 
 tilemap décompressées, de la palette et des octets hors des deux flux LZ77. Les
 tests vérifient aussi les dimensions 256 × 160, la présence d’indices supérieurs
 à 15 et la zone non vide du prompt.
+
+## Suivi du 4 août 2026 — dessin français et clignotement
+
+Le BMP 8 bpp fourni dans le commentaire de réouverture devient la référence du
+dessin « PRESSEZ START ». Sa palette de 256 couleurs est strictement identique
+à celle du PNG extrait et ses 197 pixels modifiés sont tous contenus dans la
+zone du prompt (`x=80..160`, `y=149..153`). Il est converti mécaniquement vers
+le PNG indexé déjà pris en charge, sans réordonner la palette ni modifier les
+indices hors de cette zone.
+
+`make build-fr` réinjecte désormais ce PNG après les autres assets manuels. Le
+clignotement reste inchangé : le build ne touche ni au code de l’écran titre ni
+à sa palette, et les pixels du nouveau libellé réutilisent les mêmes indices
+animés 163/164 que le dessin anglais. La validation compare la grille extraite
+de la ROM construite au PNG source et vérifie que les données de palette sont
+restées identiques à la ROM anglaise.
+
+Le BMP fourni ajoute deux pixels dans une cellule qui partage la tuile de fond
+99 avec le reste de l’écran. Les 459 tuiles historiques sont toutes distinctes
+et la tilemap recompressée avec une tuile supplémentaire dépasse son slot ROM.
+La version intégrée ramène donc uniquement ces deux pixels de bord à l’index de
+fond 31. Le dessin reste lisible, la planche et la tilemap gardent leur taille
+historique, et les gardes de conflit du pipeline ne sont pas assouplies.

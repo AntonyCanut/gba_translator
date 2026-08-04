@@ -180,8 +180,8 @@ SPRITES: dict[str, SpriteDef] = {
     ),
     # Écran titre Unbound (GitHub issue #155) : BG1 8 bpp complet. La planche,
     # la tilemap et la palette reconstruisent un PNG 256 × 160 où le dessin
-    # « PRESS START » peut être retouché directement. L’asset anglais n’est pas
-    # injecté par build-fr tant qu’un dessin français n’a pas été validé.
+    # « PRESSEZ START » est le dessin français validé et injecté par build-fr.
+    # Il conserve les indices 163/164 qu’anime l’écran titre.
     "title_screen": SpriteDef(
         blocks=(0x01FD4854,),
         tilemaps=(0x01FD6514,),

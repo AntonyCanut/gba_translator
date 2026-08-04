@@ -141,3 +141,35 @@ python3 scripts/extract_sprite.py --rom input/roms/englishrom.gba \
   la branche de base a avancé.
 - [ ] Publier le bilan GitHub, clôturer l’issue #155 en `completed`, puis terminer
   l’orchestration.
+
+### Tâche 5 : intégrer le dessin français fourni lors de la réouverture
+
+**Fichiers :**
+
+- Modifier : `tests/unit/test_title_screen_sprite.py`
+- Modifier : `languages/fr/sprites/title_screen.png`
+- Modifier : `languages/fr/sprites.py`
+- Modifier : `Makefile`
+- Modifier : `tasks/todo.md`
+
+**Interfaces :**
+
+- `languages/fr/sprites/title_screen.png` conserve 256 × 160 pixels, une palette
+  indexée de 256 couleurs et les indices animés 163/164.
+- `make build-fr` appelle `scripts/insert_sprite.py --sprite title_screen` sur
+  `$(FR_BUILD)` après les autres assets manuels.
+
+- [x] Ajouter une garde qui identifie la grille « PRESSEZ START » et le câblage
+  exact de `build-fr`.
+- [x] Lancer la garde et constater qu’elle échoue sur le dessin anglais et
+  l’étape de build absente.
+- [x] Convertir le BMP fourni vers le PNG indexé sans changer sa palette ni ses
+  indices, puis ajouter l’appel minimal dans le `Makefile`.
+- [x] Ramener à l’index de fond les deux pixels qui débordent dans la tuile 99,
+  afin de conserver la planche et la tilemap historiques.
+- [x] Réinjecter le PNG dans une copie de ROM, réextraire l’écran et comparer
+  la grille ainsi que la palette.
+- [ ] Reconstruire la ROM FR, vérifier le clignotement sur plusieurs frames et
+  exécuter les validations ciblées puis complètes.
+- [ ] Relire le diff, committer, intégrer localement et publier le bilan sur
+  l’issue sans push.

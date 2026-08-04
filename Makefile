@@ -326,6 +326,7 @@ build-fr: check-translations-fr ensure-fr-translation $(FRENCH_EXTRACT) $(SPANIS
 	@$(PYTHON) scripts/insert_sprite.py --rom $(FR_BUILD) --lang fr --sprite trainer_card_front --image languages/fr/sprites/trainer_card_front.png
 	@$(PYTHON) scripts/insert_sprite.py --rom $(FR_BUILD) --lang fr --sprite trainer_card_back --image languages/fr/sprites/trainer_card_back.png
 	@$(PYTHON) scripts/insert_sprite.py --rom $(FR_BUILD) --lang fr --sprite summary_stat_labels --image languages/fr/sprites/summary_stat_labels.png
+	@$(PYTHON) scripts/insert_sprite.py --rom $(FR_BUILD) --lang fr --sprite title_screen --image languages/fr/sprites/title_screen.png
 	@$(PYTHON) $(PATCH_SUMMARY_LV_LABELS_SCRIPT) --rom $(FR_BUILD)
 	@$(PYTHON) $(PATCH_MON_ICON_REPAIR_SCRIPT) --rom $(FR_BUILD) --source $(FRENCH_ROM)
 	@$(PYTHON) $(PATCH_PARTY_CANCEL_BUTTON_SCRIPT) --rom $(FR_BUILD)

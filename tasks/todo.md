@@ -1197,3 +1197,34 @@ seconde source graphique sans bénéfice et augmenterait inutilement le risque R
   FR est identique octet pour octet.
 - Le diff binaire de la ROM contient seulement neuf octets modifiés dans la
   cellule fixe de 13 octets ciblée.
+
+## Suivi — intégrer « PRESSEZ START » et préserver le clignotement
+
+- [x] Lire les nouveaux commentaires et récupérer le BMP 8 bpp fourni.
+- [x] Comparer sa palette et ses pixels au PNG anglais versionné.
+- [x] Ajouter les gardes rouges du dessin français et de son intégration au build.
+- [x] Convertir fidèlement le BMP en PNG indexé et brancher `title_screen` dans `build-fr`.
+- [x] Reconstruire la ROM et vérifier les pixels, la palette et le clignotement.
+- [x] Exécuter les validations, relire, committer et intégrer localement sans push.
+
+### Diagnostic
+
+- Le BMP et le PNG anglais ont la même palette de 256 couleurs.
+- Les 197 pixels différents sont limités à `x=80..160`, `y=149..153` : seul le
+  libellé devient « PRESSEZ START ».
+- Le dessin français conserve les indices 163/164 du prompt anglais ; le code
+  et la palette qui pilotent l’animation ne nécessitent aucune modification.
+- La dernière lettre déborde de deux pixels dans la tuile de fond 99, partagée
+  ailleurs ; ces deux pixels sont ramenés à l’index de fond pour préserver les
+  tailles LZ77 et les gardes de conflit existantes.
+
+### Revue du suivi
+
+- Le PNG extrait de `GenedRom-fr.gba` est byte-identique à l’asset versionné
+  (SHA-256 `61e783278689a00278933c6acfeea0e8ce2c391705df70e21eca525892951eda`).
+- Douze captures mGBA espacées de dix images donnent deux empreintes alternées
+  pour la zone du prompt (`d59f23e1b2e7de65` et `b694f91426c93632`) :
+  « PRESSEZ START » passe bien de l’état sombre à l’état lumineux.
+- Les 24 tests graphiques ciblés passent. Le hook a validé 1 626 tests Python
+  (1 ignoré), 68 tests Vitest, puis les builds et contrôles FR/IT/DE ; la
+  relecture ne relève aucun problème bloquant, important ou mineur.
