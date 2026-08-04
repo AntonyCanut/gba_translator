@@ -14,13 +14,21 @@
 - [x] Ajouter une garde rouge sur le libellé, la couleur et les trois lignes.
 - [x] Corriger chirurgicalement l'entrée et son manifeste de protection.
 - [x] Committer la source avant la chaîne de build FR.
-- [ ] Reconstruire puis décoder la chaîne réellement injectée dans la ROM.
-- [ ] Exécuter les validations, relire le diff et intégrer localement.
-- [ ] Commenter et clôturer l'issue GitHub #172 avec l'état `completed`.
+- [x] Reconstruire puis décoder la chaîne réellement injectée dans la ROM.
+- [x] Exécuter les validations, relire le diff et préparer l'intégration locale.
+- [x] Préparer le commentaire et la clôture de l'issue GitHub #172.
 
 ## Revue
 
-- À compléter après les vérifications.
+- La dernière réplique est désormais « À la Route 2, Picassaut et Hoothoot ont
+  Regard Vif. Attrape-les tous. », avec une coupure avant « Attrape-les tous. ».
+- La ROM reconstruite décode cette entrée entre `0x1F02DD8` et `0x1F02EF7`,
+  terminée par `0xFF`, et encadre « Regard Vif » par `FC 01 06` / `FC 01 08`.
+- Les trois lignes mesurent 147, 135 et 94 px, sous la limite de 192 px.
+- Les 31 tests ciblés passent, tout comme les 1 675 tests Python et 68 tests
+  Vitest du hook ; les builds FR/IT/DE réussissent et `make test-rom` termine
+  avec 583 succès et 36 skips. Deux builds FR consécutifs sont identiques.
+- La ROM livrée est byte-identique à un build propre après rebase.
 
 # Issue #167 — libellés des options du PC
 

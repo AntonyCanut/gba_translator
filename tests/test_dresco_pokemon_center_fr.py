@@ -6,19 +6,28 @@ import importlib
 import re
 from pathlib import Path
 
+import pytest
+
 from src.core.dialogue_linewrap import DEFAULT_MAX_LINE_WIDTH, line_width
+from src.core.text_codec import TextDecoder
 
 
 ROOT = Path(__file__).resolve().parent.parent
 COMBINED_FR = ROOT / "languages/fr/combined_fr.txt"
 COMBINED_EN = ROOT / "languages/en/combined_en.txt"
 EN_ROM = ROOT / "input/roms/englishrom.gba"
+FR_ROM = ROOT / "output/roms/GenedRom-fr.gba"
 OFFSET = 0x1F02DD8
 LINE_RE = re.compile(r"^0x([0-9A-Fa-f]+):\s?(.*)$")
 EXPECTED_PARAGRAPH = (
     r"\pÀ la Route 2, Picassaut et\n"
     r"Hoothoot ont {COLOR}ÉRegard Vif{COLOR}Ë.\l"
     r"Attrape-les tous."
+)
+EXPECTED_ROM_TAIL = (
+    "À la Route 2, Picassaut et\n"
+    "Hoothoot ont <0xFC>ÀÉRegard Vif<0xFC>ÀË.<0xFA>"
+    "Attrape-les tous."
 )
 
 
@@ -62,3 +71,15 @@ def test_dresco_advice_lines_fit_the_dialogue_box() -> None:
         "Attrape-les tous.",
     )
     assert all(line_width(line) <= DEFAULT_MAX_LINE_WIDTH for line in visible_lines)
+
+
+@pytest.mark.rom
+def test_built_rom_contains_the_final_dresco_advice() -> None:
+    rom = FR_ROM.read_bytes()
+    end = rom.index(0xFF, OFFSET)
+    raw = rom[OFFSET:end]
+    decoded = TextDecoder.decode_pokemon(raw + b"\xff", preserve_unknown=True)
+
+    assert decoded.endswith(EXPECTED_ROM_TAIL)
+    assert b"\xfc\x01\x06" in raw
+    assert b"\xfc\x01\x08" in raw
