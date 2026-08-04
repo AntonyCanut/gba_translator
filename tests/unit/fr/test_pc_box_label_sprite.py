@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 
+import subprocess
 from pathlib import Path
 
 from languages.fr.sprites import SPRITES
@@ -43,3 +44,16 @@ def test_pc_box_labels_asset_preserves_english_rom_palette_indices() -> None:
     )
 
     assert asset_grid == source_grid
+
+
+def test_french_build_does_not_insert_untranslated_pc_box_labels() -> None:
+    """L'asset anglais éditable ne doit pas entrer dans la ROM française."""
+    result = subprocess.run(
+        ["make", "-n", "build-fr"],
+        cwd=ROOT,
+        check=True,
+        capture_output=True,
+        text=True,
+    )
+
+    assert "pc_box_labels" not in result.stdout

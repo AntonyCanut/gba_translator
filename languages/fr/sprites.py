@@ -216,9 +216,9 @@ SPRITES: dict[str, SpriteDef] = {
         tiles_tall=32,
         palette=0x00E9B310,
     ),
-    # Libellés graphiques des boîtes PC (issue #163) : "BOX", "WALLPAPER"
-    # et les noms de boîtes ne sont pas des chaînes CFRU. Cette fenêtre de 144
-    # tuiles, avec sa palette propre, est extraite telle quelle pour une
+    # Libellés graphiques des boîtes PC (issue #163) : "PKMN DATA", "PARTY
+    # POKéMON" et "CLOSE BOX" ne sont pas des chaînes CFRU. Cette fenêtre de
+    # 144 tuiles, avec sa palette propre, est extraite telle quelle pour une
     # retouche manuelle ; elle n'est pas injectée automatiquement par build-fr.
     "pc_box_labels": SpriteDef(
         blocks=(0x00E9C438,),
