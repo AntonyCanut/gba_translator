@@ -32,8 +32,10 @@ from src.core.text_codec import POKEMON_TABLE
 STR_OFFSET = 0x1F56040  # where the suffix lives in the real ROM layout
 ACTIVE_INLINE_OFFSET = 0x1F5605C
 ACTIVE_RELOCATED_OFFSET = 0x1F57000
-ACTIVE_TAB_POINTER = 0x1EBFFC8
-ACTIVE_STATUS_POINTER = 0x1FB40B8
+# La capture utilisateur du 03/08/2026 tranche les contextes visuels : le
+# premier site alimente les statuts bleus des lignes, le second l'onglet blanc.
+ACTIVE_STATUS_POINTER = 0x1EBFFC8
+ACTIVE_TAB_POINTER = 0x1FB40B8
 BUILT_ROM = Path(__file__).resolve().parents[1] / "output/roms/GenedRom-fr.gba"
 
 

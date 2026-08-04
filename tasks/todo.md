@@ -940,6 +940,16 @@ suit les deux consommateurs de `Power` et les quatre pointeurs de catégorie/pr�
 
 # Issue #46 — distinguer « Active » et « Actives » dans le menu Missions
 
+## Réouverture du 4 août 2026
+
+- [x] Relire le nouveau commentaire et sa capture : le correctif précédent a
+  inversé les deux contextes visuels.
+- [x] Faire échouer les gardes avec la cartographie observée : statut bleu
+  `0x1EBFFC8` → « Active », onglet blanc `0x1FB40B8` → « Actives ».
+- [x] Corriger le patch post-build sans modifier les chaînes de traduction.
+- [ ] Reconstruire la ROM, décoder les deux pointeurs et lancer `make test-rom`.
+- [ ] Rebaser, revalider et publier le résultat sur l'issue #46.
+
 ## Diagnostic et conception
 
 - La chaîne source `0x1F5605C` est consommée par deux pointeurs distincts après le

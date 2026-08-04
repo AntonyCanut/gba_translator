@@ -28,8 +28,10 @@ TAB_LABELS = {
 }
 
 # La chaîne source « Active » a deux consommateurs grammaticalement distincts.
-ACTIVE_TAB_POINTER = 0x1EBFFC8
-ACTIVE_STATUS_POINTER = 0x1FB40B8
+# La capture utilisateur du 03/08/2026 associe le premier site aux statuts
+# bleus des lignes et le second à l'onglet blanc en haut à gauche.
+ACTIVE_STATUS_POINTER = 0x1EBFFC8
+ACTIVE_TAB_POINTER = 0x1FB40B8
 
 # Suffixe partagé collé à chaque catégorie par le moteur : doit rester vide (#114).
 SUFFIX_OFFSET = 0x1F56040

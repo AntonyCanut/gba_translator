@@ -63,10 +63,12 @@ GBA_BASE = 0x08000000
 SUFFIX_PTR_OFFSET = 0x1EBE988
 
 # The two consumers of stock ``Active`` are grammatically distinct in French.
-# The tab keeps the translated plural target; the row status returns to the
-# original seven-byte cell (six letters + 0xFF terminator), which fits exactly.
-ACTIVE_TAB_PTR_OFFSET = 0x1EBFFC8
-ACTIVE_STATUS_PTR_OFFSET = 0x1FB40B8
+# The user capture identifies 0x1EBFFC8 as the blue row status and 0x1FB40B8 as
+# the white filter tab. The tab keeps the translated plural target; the row
+# status returns to the original seven-byte cell (six letters + 0xFF
+# terminator), which fits exactly.
+ACTIVE_STATUS_PTR_OFFSET = 0x1EBFFC8
+ACTIVE_TAB_PTR_OFFSET = 0x1FB40B8
 ACTIVE_INLINE_OFFSET = 0x1F5605C
 
 # Strings we are willing to blank (EN original + FR build variant). Matching
