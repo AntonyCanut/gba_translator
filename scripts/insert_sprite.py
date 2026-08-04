@@ -186,6 +186,11 @@ def main() -> int:
                     bits_per_pixel=sprite.bits_per_pixel,
                     start_tile=start_tile,
                     max_compressed_size=max_compressed_size,
+                    pointer_offsets=(
+                        sprite.block_pointers[i]
+                        if sprite.block_pointers
+                        else ()
+                    ),
                 )
         except ValueError as exc:
             print(f"  WARN {args.sprite}[{i}] @ 0x{offset:08X}: {exc} — skip", file=sys.stderr)

@@ -11,6 +11,9 @@ graphiques anglais des boîtes PC.
 **Architecture:** ajouter une entrée au registre de sprites existant pour la
 planche LZ77 commune, puis produire l’asset au moyen du CLI existant. Les tests
 comparent les pixels indexés aux tuiles de la ROM et prouvent le round-trip.
+Le CLI transmet les pointeurs déclarés au chemin générique des blocs non
+mappés : si une édition ne tient plus en place, elle est relocalisée uniquement
+via ces pointeurs connus, sans scan de la ROM.
 
 **Tech Stack:** Python 3.11, pytest, PNG indexé 4 bpp, tuiles GBA 4 bpp, LZ77.
 
@@ -59,8 +62,9 @@ comparent les pixels indexés aux tuiles de la ROM et prouvent le round-trip.
 
   Run: `python3 -m pytest tests/unit/fr/test_pc_box_label_sprite.py tests/unit/test_sprite_rom.py tests/unit/test_sprite_png.py -q`
 
-  Expected: PASS, puis réinjection dans une copie temporaire et comparaison
-  byte-identique des 4 608 octets décompressés.
+  Expected: PASS. Le test marqué `rom` réinjecte réellement le PNG avec le CLI
+  dans une copie temporaire de `englishrom.gba`, compare byte-identique les
+  4 608 octets décompressés et contrôle le backup `.bak`.
 
 - [x] **Step 5: valider et committer**
 

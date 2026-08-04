@@ -1090,6 +1090,9 @@ seconde source graphique sans bénéfice et augmenterait inutilement le risque R
 - [x] Ajouter les gardes rouges du registre et de l’asset.
 - [x] Enregistrer la planche et extraire le PNG depuis la ROM anglaise.
 - [x] Prouver le round-trip et exécuter les validations élargies.
+- [x] Propager les pointeurs connus au chemin générique des blocs non mappés.
+- [x] Automatiser le round-trip CLI sur une copie de la ROM et vérifier le backup.
+- [x] Marquer `rom` uniquement les tests qui lisent `englishrom.gba`.
 - [ ] Relire, committer, intégrer et clôturer l’issue GitHub.
 
 ## Revue
@@ -1098,3 +1101,9 @@ seconde source graphique sans bénéfice et augmenterait inutilement le risque R
   vérifié `0x0008F034`, palette `0x003CE5DC` et grille 16 × 9 tuiles.
 - Le PNG indexé extrait de `englishrom.gba` mesure 128 × 72 ; ses indices sont
   identiques aux 4 608 octets décompressés de la planche source.
+- Si le flux recompressé dépasse son slot, `insert_block` réutilise la
+  relocalisation commune et ne repointe que `block_pointers`; sans pointeur
+  déclaré, le refus de débordement reste inchangé.
+- Le round-trip est désormais un test subprocess du CLI : copie temporaire de
+  la ROM anglaise, réinjection du PNG, égalité des 4 608 octets et backup
+  byte-identique. Les gardes registre/asset/build restent dans le profil rapide.

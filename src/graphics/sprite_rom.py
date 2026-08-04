@@ -381,6 +381,7 @@ def insert_block(
     bits_per_pixel: int = 4,
     start_tile: int = 0,
     max_compressed_size: int | None = None,
+    pointer_offsets: tuple[int, ...] = (),
 ) -> None:
     """Re-encode *grid* into tiles and write it back at *offset*.
 
@@ -393,6 +394,8 @@ def insert_block(
     ``start_tile`` limite l’écriture à une fenêtre contiguë du bloc.
     ``max_compressed_size`` conserve la capacité physique connue d’un slot
     entre plusieurs éditions, même après une première compression plus courte.
+    ``pointer_offsets`` autorise une relocalisation sûre du flux LZ77 trop grand
+    en mettant à jour uniquement les pointeurs explicitement connus.
     """
     if start_tile < 0:
         raise ValueError("start_tile must be non-negative")
@@ -421,15 +424,27 @@ def insert_block(
     tiles[start:end] = grid_to_tiles(
         grid, tiles_wide, tiles_tall, bits_per_pixel
     )
-    _write_block_payload(
-        rom,
-        offset,
-        bytes(tiles),
-        comp_len,
-        compressed=True,
-        vram_safe=vram_safe,
-        max_compressed_size=max_compressed_size,
-    )
+    payload = bytes(tiles)
+    try:
+        _write_block_payload(
+            rom,
+            offset,
+            payload,
+            comp_len,
+            compressed=True,
+            vram_safe=vram_safe,
+            max_compressed_size=max_compressed_size,
+        )
+    except BlockCapacityError:
+        if not pointer_offsets:
+            raise
+        _relocate_compressed_payload(
+            rom,
+            payload,
+            pointer_offsets,
+            offset,
+            vram_safe=vram_safe,
+        )
 
 
 def insert_mapped_block(

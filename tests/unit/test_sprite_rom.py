@@ -253,6 +253,38 @@ def test_insert_block_rejects_overflow_of_non_padding_tail():
         insert_block(rom, offset, noisy_grid, tiles_wide, tiles_tall)
 
 
+def test_insert_block_relocates_overflow_through_known_pointer():
+    """Un bloc trop grand est déplacé uniquement via son pointeur vérifié."""
+    # Arrange
+    tiles = bytes([0x00] * TILE_BYTES)
+    compressed = lz77_compress(tiles)
+    pointer_offset = len(compressed) + 64
+    rom = bytearray(compressed) + bytearray(b"\xAA" * 64)
+    rom[pointer_offset:pointer_offset + 4] = (0x08000000).to_bytes(4, "little")
+    rom.extend(b"\xAA" * 64 + b"\xFF" * 512)
+    noisy_grid = [[(x * 13 + y * 7) % 16 for x in range(8)] for y in range(8)]
+
+    # Act
+    insert_block(
+        rom,
+        0,
+        noisy_grid,
+        tiles_wide=1,
+        tiles_tall=1,
+        pointer_offsets=(pointer_offset,),
+    )
+
+    # Assert
+    relocated_offset = (
+        int.from_bytes(rom[pointer_offset:pointer_offset + 4], "little")
+        - 0x08000000
+    )
+    result = lz77_decompress(bytes(rom), relocated_offset)
+    assert relocated_offset > pointer_offset
+    assert result is not None
+    assert result[0] == grid_to_tiles(noisy_grid, 1, 1)
+
+
 def test_extract_block_raw_reads_uncompressed_tiles():
     tiles_wide, tiles_tall = 1, 1
     tiles = bytes([0x55] * TILE_BYTES)
