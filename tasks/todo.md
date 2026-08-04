@@ -14,9 +14,23 @@
 - [x] Ajouter la garde rouge pour la valeur exacte demandée.
 - [x] Corriger chirurgicalement l’entrée active `0x4185AD`.
 - [x] Committer les sources avant d’exécuter la chaîne de build FR.
-- [ ] Reconstruire la ROM et décoder le texte réellement livré.
-- [ ] Exécuter les validations pertinentes, relire le diff et intégrer localement.
-- [ ] Commenter puis clôturer l’issue GitHub #170 avec l’état `completed`.
+- [x] Reconstruire la ROM et décoder le texte réellement livré.
+- [x] Exécuter les validations pertinentes, relire le diff et intégrer localement.
+- [x] Commenter puis clôturer l’issue GitHub #170 avec l’état `completed`.
+
+## Revue
+
+- La source active `0x4185AD` livre désormais « Intégrer dans l'équipe des
+  Pokémon pris des boîtes. » et le manifeste interdit explicitement l'ancien
+  libellé.
+- Dans la ROM FR reconstruite, le pointeur vivant `0x3CDA34` cible toujours
+  `0x4185AD` et décode « Intégrer dans l'équipe des Pokémon\npris des boîtes. »
+  sur deux lignes, avec un terminateur `0xFF` à `0x4185E0`.
+- La validation ciblée post-rebase passe 31 tests ; le hook valide 1 672 tests
+  Python, 68 tests Vitest et les builds complets FR, IT et DE.
+- Deux builds FR consécutifs sont byte-identiques. Après rebase sur les issues
+  #171 et #172, `make test-rom` valide 584 tests et en ignore 37, sans échec ;
+  les probes mGBA IT et DE auparavant instables passent également.
 
 # Issue #172 — Centre Pokémon de Dresco
 
