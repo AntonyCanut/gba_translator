@@ -1217,6 +1217,12 @@ entries:
   expected: 'PC de {PLAYER}'
   forbidden:
   - "{PLAYER}'s PC"
+- offset: '0x417BCB'
+  name: 'Menu PC : déconnexion'
+  issue: '#165'
+  expected: Déconnexion
+  forbidden:
+  - Se déconnecter
 - offset: '0x417BD3'
   name: 'Menu PC : PC du Prof. Log'
   issue: '#18'

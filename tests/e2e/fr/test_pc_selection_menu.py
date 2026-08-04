@@ -46,7 +46,7 @@ def fr_rom_data() -> bytes:
 
 @pytest.mark.rom
 class TestPcSelectionMenuFrench:
-    """Vérifie les trois textes signalés dans l'issue #18."""
+    """Vérifie les libellés français du menu de sélection du PC."""
 
     def test_which_pc_question_is_french(self, fr_rom_data: bytes) -> None:
         assert _decode_at(fr_rom_data, 0x1A508A) == "Accéder à quel PC ?"
@@ -56,6 +56,12 @@ class TestPcSelectionMenuFrench:
     ) -> None:
         target = _resolve_live_pointer(source_rom_data, fr_rom_data, 0x417BB6)
         assert _decode_at(fr_rom_data, target) == "PC de <0xFD>À"
+
+    def test_log_off_entry_uses_official_french_wording(
+        self, source_rom_data: bytes, fr_rom_data: bytes
+    ) -> None:
+        target = _resolve_live_pointer(source_rom_data, fr_rom_data, 0x417BCB)
+        assert _decode_at(fr_rom_data, target) == "Déconnexion"
 
     def test_prof_log_pc_entry_has_du(
         self, source_rom_data: bytes, fr_rom_data: bytes
