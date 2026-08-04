@@ -228,6 +228,12 @@ entries:
   expected: Salut !
   forbidden:
   - À plus !
+- offset: '0x4185AD'
+  name: 'PC: description de l’action « Retirer Pokémon »'
+  issue: '#170'
+  expected: Intégrer dans l'équipe des Pokémon pris des boîtes.
+  forbidden:
+  - Tu peux retirer un Pokémon si tu\nen as dans une Boîte.
 - offset: '0x4184A9'
   name: 'PC: action de sélection des boîtes'
   issue: '#166'

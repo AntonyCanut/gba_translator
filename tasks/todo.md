@@ -1,3 +1,23 @@
+# Issue #170 — description « Retirer Pokémon » du PC
+
+## Diagnostic et conception
+
+- La description affichée vient de l’entrée pointée active `0x4185AD` dans
+  `languages/fr/combined_fr.txt` ; elle relève du pipeline de traduction.
+- Le ticket fournit le libellé cible exact : « Intégrer dans l'équipe des
+  Pokémon pris des boîtes. ».
+- La correction minimale modifie cette seule valeur, la protège dans le
+  manifeste d’intégrité, puis vérifie le pointeur vivant de la ROM reconstruite.
+
+## Plan validé
+
+- [x] Ajouter la garde rouge pour la valeur exacte demandée.
+- [x] Corriger chirurgicalement l’entrée active `0x4185AD`.
+- [x] Committer les sources avant d’exécuter la chaîne de build FR.
+- [ ] Reconstruire la ROM et décoder le texte réellement livré.
+- [ ] Exécuter les validations pertinentes, relire le diff et intégrer localement.
+- [ ] Commenter puis clôturer l’issue GitHub #170 avec l’état `completed`.
+
 # Issue #172 — Centre Pokémon de Dresco
 
 ## Diagnostic et conception
