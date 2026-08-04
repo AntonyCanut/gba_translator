@@ -80,6 +80,7 @@ def test_built_rom_contains_the_final_dresco_advice() -> None:
     raw = rom[OFFSET:end]
     decoded = TextDecoder.decode_pokemon(raw + b"\xff", preserve_unknown=True)
 
+    assert end == 0x1F02EF7
     assert decoded.endswith(EXPECTED_ROM_TAIL)
     assert b"\xfc\x01\x06" in raw
     assert b"\xfc\x01\x08" in raw
