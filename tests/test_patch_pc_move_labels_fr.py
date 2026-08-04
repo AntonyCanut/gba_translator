@@ -54,6 +54,10 @@ PC_MAIN_MENU_POINTERS = {
     0x3CDA40: "Salut !",
 }
 
+EMPTY_MAIL_MESSAGE_OFFSET = 0x4177EE
+EMPTY_MAIL_MESSAGE_POINTERS = (0xEB938, 0xEB9B0)
+EMPTY_MAIL_MESSAGE_FR = "Pas de lettre ici."
+
 
 def _fake_rom() -> bytearray:
     rom = bytearray(b"\xff" * ROM_SIZE)
@@ -255,6 +259,20 @@ class TestBuiltRom(unittest.TestCase):
         self.assertEqual(
             TextDecoder.decode_pokemon(raw[:end], preserve_unknown=True), "Vers le sac"
         )
+
+    def test_empty_mail_message_uses_requested_wording_and_wait_control(self):
+        expected = _enc(f"{EMPTY_MAIL_MESSAGE_FR} ") + b"\xfc\x09\xff"
+
+        for loc in EMPTY_MAIL_MESSAGE_POINTERS:
+            ptr = struct.unpack_from("<I", self.rom, loc)[0]
+            self.assertEqual(ptr, ROM_BASE | EMPTY_MAIL_MESSAGE_OFFSET)
+            actual = self.rom[
+                EMPTY_MAIL_MESSAGE_OFFSET:EMPTY_MAIL_MESSAGE_OFFSET + len(expected)
+            ]
+            self.assertEqual(actual, expected, f"ptr@0x{loc:X}")
+
+        visible = TextDecoder.decode_pokemon(expected[:-3], preserve_unknown=True)
+        self.assertEqual(visible.rstrip(), EMPTY_MAIL_MESSAGE_FR)
 
     def test_no_residual_corruption(self):
         # The corrupt « Dépl.Dépl. où ? » must be gone everywhere it was read.

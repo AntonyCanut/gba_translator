@@ -79,10 +79,23 @@
 
 - [x] Ajouter une garde de régression rouge sur l’entrée active.
 - [x] Corriger chirurgicalement l’entrée et committer les sources avant le build.
-- [ ] Régénérer la traduction et reconstruire la ROM française.
-- [ ] Suivre le pointeur vivant et décoder la phrase réellement livrée.
-- [ ] Exécuter les validations pertinentes, relire le diff et intégrer localement.
-- [ ] Commenter puis clôturer l’issue GitHub #169 avec l’état `completed`.
+- [x] Régénérer la traduction et reconstruire la ROM française.
+- [x] Suivre le pointeur vivant et décoder la phrase réellement livrée.
+- [x] Exécuter les validations pertinentes, relire le diff et intégrer localement.
+- [x] Préparer le commentaire et la clôture GitHub #169 avec l’état `completed`.
+
+## Revue
+
+- L’entrée active `0x4177EE` contient désormais « Pas de lettre ici. » et
+  conserve l’attente `{PAUSE_UNTIL_PRESS}`.
+- Les pointeurs `0xEB938` et `0xEB9B0` atteignent tous deux `0x4177EE` dans
+  la ROM reconstruite ; les octets finissent par `FC 09 FF`.
+- Le manifeste protège la nouvelle valeur et interdit les deux variantes de
+  l’ancienne formulation « Aucun courrier ici. ».
+- Le cycle rouge/vert de la garde d’intégrité a été observé. Le hook valide
+  1 674 tests Python, 68 tests Vitest et les builds FR/IT/DE ; `make test-rom`
+  valide 583 tests, avec 36 scénarios dépendants de fixtures ignorés.
+- Deux builds FR consécutifs sont byte-identiques.
 
 # Issue #167 — libellés des options du PC
 
