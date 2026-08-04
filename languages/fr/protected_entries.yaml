@@ -1996,3 +1996,9 @@ entries:
   forbidden:
   - Astuces du Dresseur !
   - changer vite de Pokémon
+- offset: '0x1F02DD8'
+  name: Centre Pokémon de Dresco — conseil Regard Vif
+  issue: '#172'
+  expected: Le Champion Sylvain aime\nremplir son Arène de brume.\pEn général, ça rend les\nattaques moins précises.\pMais si tu amènes un Pokémon\navec {COLOR}ÉRegard Vif{COLOR}Ë ou\l{COLOR}ÉInfiltration{COLOR}Ë, ses attaques\lfrapperont sans souci.\pÀ la Route 2, Picassaut et\nHoothoot ont {COLOR}ÉRegard Vif{COLOR}Ë.\lAttrape-les tous.
+  forbidden:
+  - Picassaut/Hoothoot, Route 2,

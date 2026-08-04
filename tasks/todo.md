@@ -1,3 +1,27 @@
+# Issue #172 — Centre Pokémon de Dresco
+
+## Diagnostic et conception
+
+- Le dialogue est l'entrée active unique `0x1F02DD8` de
+  `languages/fr/combined_fr.txt`.
+- Le dernier paragraphe perd les couleurs sémantiques de la source EN et emploie
+  une formulation imprécise ; le reste de la longue entrée est déjà correct.
+- La correction minimale remplace seulement ce paragraphe, réutilise la paire
+  verte `FC 01 06` / `FC 01 08` et fixe trois lignes sous 192 px.
+
+## Plan validé
+
+- [x] Ajouter une garde rouge sur le libellé, la couleur et les trois lignes.
+- [x] Corriger chirurgicalement l'entrée et son manifeste de protection.
+- [x] Committer la source avant la chaîne de build FR.
+- [ ] Reconstruire puis décoder la chaîne réellement injectée dans la ROM.
+- [ ] Exécuter les validations, relire le diff et intégrer localement.
+- [ ] Commenter et clôturer l'issue GitHub #172 avec l'état `completed`.
+
+## Revue
+
+- À compléter après les vérifications.
+
 # Issue #167 — libellés des options du PC
 
 ## Diagnostic et conception
