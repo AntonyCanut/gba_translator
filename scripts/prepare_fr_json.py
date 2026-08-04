@@ -29,6 +29,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))  # scripts/ for sibling
 from src.core.text_codec import TextDecoder, TextEncoder
 from src.core.text_converter import JSONToCSVConverter
 from languages.fr.dedicated_patch_offsets import (
+    GENERIC_PLACEHOLDER_TRANSLATIONS,
     GENERIC_TRANSLATION_OFFSETS as DEDICATED_PATCH_OFFSETS,
 )
 
@@ -171,7 +172,10 @@ def main() -> int:
             # place so the generic relocator does not re-wrap it.
             excluded_dedicated += 1
             continue
-        fr_text = fr_map[offset]
+        # A few post-build-owned strings keep their historical generic value
+        # solely to preserve the allocator's order and footprint. The source
+        # remains the requested French; the dedicated patch writes that value.
+        fr_text = GENERIC_PLACEHOLDER_TRANSLATIONS.get(offset, fr_map[offset])
         en_entry = en_map.get(offset)
         if not en_entry:
             missing_en += 1

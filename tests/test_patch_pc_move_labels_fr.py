@@ -19,16 +19,23 @@ import pytest
 sys.path.insert(0, str(Path(__file__).parent.parent))
 
 from languages.fr.patches.pc_move_labels import (
+    DEFAULT_BOX_PREFIX_EN_OFFSET,
+    DEFAULT_BOX_PREFIX_FR,
+    DEFAULT_BOX_PREFIX_POINTER,
+    DEFAULT_BOX_PREFIX_SLOT,
     FREESPACE_BASE,
     MAIL_MOVE_TO_BAG_EN,
     MAIL_MOVE_TO_BAG_FR,
     MAIL_MOVE_TO_BAG_OFFSET,
     MAIL_MOVE_TO_BAG_PREIMAGES,
+    MAIN_MENU_RELOCATIONS,
     ROM_BASE,
     _RELOCATIONS,
     _enc,
     apply,
 )
+from languages.fr.dedicated_patch_offsets import GENERIC_PLACEHOLDER_TRANSLATIONS
+from scripts import apply_combined_fr
 from src.core.text_codec import TextDecoder
 
 BUILT_FR_ROM = Path(__file__).parent.parent / "output" / "roms" / "GenedRom-fr.gba"
@@ -55,9 +62,14 @@ def _fake_rom() -> bytearray:
     for entry in _RELOCATIONS:
         for loc, orig in entry["orig"].items():
             struct.pack_into("<I", rom, loc, ROM_BASE | orig)
+    for entry in MAIN_MENU_RELOCATIONS:
+        struct.pack_into("<I", rom, entry["pointer"], ROM_BASE | entry["orig"])
     # Seed the walked mail string with its English original.
     rom[MAIL_MOVE_TO_BAG_OFFSET:MAIL_MOVE_TO_BAG_OFFSET + len(MAIL_MOVE_TO_BAG_EN)] = (
         MAIL_MOVE_TO_BAG_EN
+    )
+    struct.pack_into(
+        "<I", rom, DEFAULT_BOX_PREFIX_POINTER, ROM_BASE | DEFAULT_BOX_PREFIX_EN_OFFSET
     )
     return rom
 
@@ -87,6 +99,18 @@ class TestConstants(unittest.TestCase):
         for offset, expected in PC_MAIN_MENU_LABELS.items():
             self.assertEqual(mapping[offset], expected, f"offset 0x{offset:X}")
 
+    def test_release_csv_keeps_historical_allocator_footprint(self):
+        combined = dict(PC_MAIN_MENU_LABELS)
+        apply_combined_fr._exclude_dedicated_offsets(combined, [])
+        self.assertEqual(combined, GENERIC_PLACEHOLDER_TRANSLATIONS)
+
+    def test_allocator_placeholders_never_apply_to_other_languages(self):
+        combined = dict(PC_MAIN_MENU_LABELS)
+        apply_combined_fr._exclude_dedicated_offsets(
+            combined, [], dedicated_offsets=frozenset()
+        )
+        self.assertEqual(combined, PC_MAIN_MENU_LABELS)
+
     def test_mail_replacement_fits_in_place(self):
         # « Vers le sac » must be no longer than the English « Move To Bag » cell.
         self.assertEqual(len(MAIL_MOVE_TO_BAG_FR), len(MAIL_MOVE_TO_BAG_EN))
@@ -103,8 +127,8 @@ class TestApply(unittest.TestCase):
     def test_all_pointers_render_depl_with_period(self):
         rom = _fake_rom()
         n = apply(rom)
-        # 7 pointer rewrites + 1 in-place mail string.
-        self.assertEqual(n, 8)
+        # 7 compact + 3 main + 1 box pointer + 1 in-place mail string.
+        self.assertEqual(n, 12)
         for entry in _RELOCATIONS:
             expected = entry["prefix"] + _enc(entry["text"])
             for loc in entry["pointers"]:
@@ -127,6 +151,38 @@ class TestApply(unittest.TestCase):
         apply(rom)
         self.assertEqual(_decode_at(rom, MAIL_MOVE_TO_BAG_OFFSET), "Vers le sac")
 
+    def test_default_box_prefix_is_relocated_without_generic_injector(self):
+        rom = _fake_rom()
+        apply(rom)
+
+        ptr = struct.unpack_from("<I", rom, DEFAULT_BOX_PREFIX_POINTER)[0]
+        self.assertEqual(ptr, ROM_BASE | DEFAULT_BOX_PREFIX_SLOT)
+        self.assertEqual(_decode_at(rom, DEFAULT_BOX_PREFIX_SLOT), DEFAULT_BOX_PREFIX_FR)
+
+    def test_main_menu_labels_are_relocated_without_generic_injector(self):
+        rom = _fake_rom()
+        apply(rom)
+
+        for entry in MAIN_MENU_RELOCATIONS:
+            ptr = struct.unpack_from("<I", rom, entry["pointer"])[0]
+            self.assertEqual(ptr, ROM_BASE | entry["slot"])
+            self.assertEqual(_decode_at(rom, entry["slot"]), entry["text"])
+
+    def test_main_menu_accepts_allocator_stable_legacy_payload(self):
+        rom = _fake_rom()
+        entry = MAIN_MENU_RELOCATIONS[0]
+        legacy_slot = 0x100000
+        legacy_blob = _enc(entry["legacy"]) + b"\xff"
+        rom[legacy_slot:legacy_slot + len(legacy_blob)] = legacy_blob
+        struct.pack_into("<I", rom, entry["pointer"], ROM_BASE | legacy_slot)
+
+        apply(rom)
+
+        self.assertEqual(
+            struct.unpack_from("<I", rom, entry["pointer"])[0],
+            ROM_BASE | entry["slot"],
+        )
+
     def test_normalizes_generic_abbreviated_mail_label(self):
         rom = _fake_rom()
         legacy_fr = _enc("Dépl au sac")
@@ -138,7 +194,7 @@ class TestApply(unittest.TestCase):
 
     def test_idempotent(self):
         rom = _fake_rom()
-        self.assertEqual(apply(rom), 8)
+        self.assertEqual(apply(rom), 12)
         self.assertEqual(apply(rom), 0)
 
     def test_skips_unexpected_pointer(self):

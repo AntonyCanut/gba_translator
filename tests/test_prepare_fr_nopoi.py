@@ -240,6 +240,39 @@ class TestDedicatedPatchExclusion(unittest.TestCase):
     JUNCTION_OFFSET = 0x1F70E41
     MISSION_TITLE_OFFSET = 0x1FA4E10
 
+    def test_pc_labels_keep_allocator_stable_placeholders(self) -> None:
+        """La source reste canonique, mais le JSON conserve l'empreinte historique."""
+        requested = {
+            0x41858D: "Déplacer Pokémon",
+            0x41859A: "Déplacer objet",
+            0x4185A5: "Salut !",
+        }
+        legacy = {
+            0x41858D: "Dépl Pokémon",
+            0x41859A: "Dépl. objet",
+            0x4185A5: "À plus !",
+        }
+        en_json = _en_extraction([
+            {
+                "offset": offset,
+                "byte_length": 32,
+                "length": 32,
+                "encoding": "pokemon",
+                "decoded_text": "placeholder",
+                "text": "placeholder",
+            }
+            for offset in requested
+        ])
+        result = _run_prepare(
+            [f"0x{offset:X}: {text}" for offset, text in requested.items()],
+            en_json,
+            _build_fake_rom({}),
+        )
+        translations = {
+            entry["offset"]: entry["translation"] for entry in result["translations"]
+        }
+        self.assertEqual(translations, legacy)
+
     def _en_json_with_arrow(self) -> dict:
         # Extractor sees the leading arrow byte (0x79) as ASCII ``y``.
         return _en_extraction([
@@ -290,10 +323,12 @@ class TestDedicatedPatchExclusion(unittest.TestCase):
         importlib.reload(module)
         sys.path.insert(0, str(ROOT / "scripts"))
         from languages.fr.patches.mission_titles import TARGETS as MISSION_TITLE_TARGETS
+        from languages.fr.patches.pc_move_labels import DEDICATED_SOURCE_OFFSETS as PC_LABEL_TARGETS
         from languages.fr.patches.worldmap_junction_panels import TARGETS as JUNCTION_TARGETS
+        from languages.fr.dedicated_patch_offsets import GENERIC_PLACEHOLDER_TRANSLATIONS
         self.assertEqual(
-            set(module.DEDICATED_PATCH_OFFSETS),
-            set(JUNCTION_TARGETS) | set(MISSION_TITLE_TARGETS),
+            set(module.DEDICATED_PATCH_OFFSETS) | set(GENERIC_PLACEHOLDER_TRANSLATIONS),
+            set(JUNCTION_TARGETS) | set(MISSION_TITLE_TARGETS) | set(PC_LABEL_TARGETS),
             "DEDICATED_PATCH_OFFSETS must equal all dedicated patch targets",
         )
 

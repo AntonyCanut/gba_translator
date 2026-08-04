@@ -26,16 +26,20 @@ input used by the generic build, this cell can still contain English or the
 older abbreviation « Dépl au sac ». Its slot is exactly 11 bytes, so the
 dedicated patch normalizes either preimage to « Vers le sac » in place.
 
-Relocation target
------------------
-0x15FBC90 is a large baseline-free 0xFF block (present in the source ROM and
-never touched by the injector or any other post-build patch), so a fixed slot
-here is deterministic and collision-free. Same technique as
-``party_cancel_button.py`` (which parks « Sortir » in tail padding).
+Relocation targets
+------------------
+The 0x15FBC90 block contains stable gaps after the generic allocator has run.
+Every dedicated slot is checked for 0xFF before writing, which makes the patch
+deterministic and collision-safe. Same technique as ``party_cancel_button.py``
+(which parks « Sortir » in tail padding).
 
 The main PC options at 0x41858D and 0x41859A are ordinary relocatable strings.
 Issue #167 restores their full labels through ``combined_fr.txt``; this patch
-must not override them with the older abbreviations.
+must not override them with the older abbreviations.  The default box-name
+prefix is different: adding its previously absent 0x4186CD offset to the
+generic injector changes the allocation order of hundreds of later strings,
+which invalidates live scripted flows.  It is therefore relocated here to one
+fixed slot and only its single consumer is repointed.
 
 Self-contained, idempotent and self-healing; runs in the ``build-fr`` post-build
 chain.
@@ -60,9 +64,98 @@ DPAD_ICON = b"\xf8\x0c"  # button-icon control code that prefixes « ◄►Move 
 # neither the injector nor any other patch writes to.
 FREESPACE_BASE = 0x15FBC90
 
+# ``ClearPokemonStorageSystem`` copies this literal then appends 1..25.  Keep
+# the relocation outside the generic allocator so adding « Boîte » does not
+# move unrelated strings in the built ROM.
+DEFAULT_BOX_PREFIX_POINTER = 0x8C850
+DEFAULT_BOX_PREFIX_EN_OFFSET = 0x4186CD
+DEFAULT_BOX_PREFIX_SLOT = 0x15FBCB0
+DEFAULT_BOX_PREFIX_FR = "Boîte"
+
+MAIN_MENU_RELOCATIONS = (
+    {
+        "pointer": 0x3CDA20,
+        "orig": 0x41858D,
+        "slot": 0x15FBCD0,
+        "text": "Déplacer Pokémon",
+        "legacy": "Dépl Pokémon",
+    },
+    {
+        "pointer": 0x3CDA28,
+        "orig": 0x41859A,
+        "slot": 0x15FBCF0,
+        "text": "Déplacer objet",
+        "legacy": "Dépl. objet",
+    },
+    {
+        "pointer": 0x3CDA40,
+        "orig": 0x4185A5,
+        "slot": 0x15FBD10,
+        "text": "Salut !",
+        "legacy": "À plus !",
+    },
+)
+
+# Kept in sync with ``languages/fr/dedicated_patch_offsets.py`` by tests.
+DEDICATED_SOURCE_OFFSETS = frozenset(
+    {DEFAULT_BOX_PREFIX_EN_OFFSET} | {entry["orig"] for entry in MAIN_MENU_RELOCATIONS}
+)
+
 
 def _enc(text: str) -> bytes:
     return bytes(CHAR_TO_BYTE[c] for c in text)
+
+
+def _relocate_literal(
+    rom: bytearray,
+    *,
+    pointer: int,
+    orig: int,
+    slot: int,
+    text: str,
+    label: str,
+    legacy: str = "",
+) -> int:
+    """Relocate one literal without perturbing the generic string allocator."""
+    blob = _enc(text) + bytes([TERM])
+    new_addr = ROM_BASE | slot
+    current_pointer = struct.unpack_from("<I", rom, pointer)[0]
+
+    if current_pointer == new_addr:
+        if bytes(rom[slot:slot + len(blob)]) != blob:
+            print(
+                f"  ERROR {label} points at an unexpected payload — skip",
+                file=sys.stderr,
+            )
+        return 0
+    points_to_legacy = False
+    if legacy and ROM_BASE <= current_pointer < ROM_BASE + len(rom):
+        legacy_blob = _enc(legacy) + bytes([TERM])
+        current_offset = current_pointer - ROM_BASE
+        points_to_legacy = (
+            bytes(rom[current_offset:current_offset + len(legacy_blob)]) == legacy_blob
+        )
+
+    if current_pointer != ROM_BASE | orig and not points_to_legacy:
+        print(
+            f"  WARN {label}: pointer 0x{pointer:07X} -> 0x{current_pointer:08X} — skip",
+            file=sys.stderr,
+        )
+        return 0
+
+    current_slot = bytes(rom[slot:slot + len(blob)])
+    if current_slot != blob and any(byte != TERM for byte in current_slot):
+        print(
+            f"  ERROR {label} slot 0x{slot:07X} is not free "
+            f"({current_slot.hex()}) — skip",
+            file=sys.stderr,
+        )
+        return 0
+
+    rom[slot:slot + len(blob)] = blob
+    struct.pack_into("<I", rom, pointer, new_addr)
+    print(f"  0x{slot:07X}  {label} → {text}")
+    return 1
 
 
 # Relocation entries: each relocated string + the pointer sites that must target
@@ -145,6 +238,28 @@ def apply(rom: bytearray) -> int:
                 struct.pack_into("<I", rom, loc, new_addr)
                 patched += 1
         print(f"  0x{slot:07X}  {entry['label']}")
+
+    # --- stable relocations for full main-menu labels ----------------------
+    for entry in MAIN_MENU_RELOCATIONS:
+        patched += _relocate_literal(
+            rom,
+            pointer=entry["pointer"],
+            orig=entry["orig"],
+            slot=entry["slot"],
+            text=entry["text"],
+            label="main PC option",
+            legacy=entry["legacy"],
+        )
+
+    # --- default names Box1..Box25 -----------------------------------------
+    patched += _relocate_literal(
+        rom,
+        pointer=DEFAULT_BOX_PREFIX_POINTER,
+        orig=DEFAULT_BOX_PREFIX_EN_OFFSET,
+        slot=DEFAULT_BOX_PREFIX_SLOT,
+        text=DEFAULT_BOX_PREFIX_FR,
+        label="default Box1…Box25 prefix",
+    )
 
     # --- in-place walked mail string ---------------------------------------
     off = MAIL_MOVE_TO_BAG_OFFSET

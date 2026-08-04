@@ -27,7 +27,10 @@ sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 from src.core.padding_detector import PaddingDetector
 from src.core.rom_reader import ROMReader
 from src.core.text_converter import JSONToCSVConverter
-from languages.fr.dedicated_patch_offsets import GENERIC_TRANSLATION_OFFSETS
+from languages.fr.dedicated_patch_offsets import (
+    GENERIC_PLACEHOLDER_TRANSLATIONS,
+    GENERIC_TRANSLATION_OFFSETS,
+)
 
 
 LINE_RE = re.compile(r'^\s*0x([0-9A-Fa-f]+)\s*:\s*(.*)$')
@@ -195,6 +198,11 @@ def _exclude_dedicated_offsets(
 ) -> int:
     """Retirer les offsets post-build et effacer toute valeur CSV obsolète."""
     excluded = 0
+    if dedicated_offsets:
+        for offset, placeholder in GENERIC_PLACEHOLDER_TRANSLATIONS.items():
+            if offset in combined_map:
+                combined_map[offset] = placeholder
+
     for offset in dedicated_offsets:
         if offset in combined_map:
             del combined_map[offset]

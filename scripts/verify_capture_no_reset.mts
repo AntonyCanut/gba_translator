@@ -17,11 +17,18 @@
  * caught mon to gPlayerParty (0x02024284, 100-byte slots, personality != 0 for
  * an occupied slot). A reboot re-loads the battery save, whose party does NOT
  * contain the caught mon (the probe never saves in-game). So:
- *   - occupied slots == start+1 at the end  → OK (no reset)
- *   - sequence ran but party never grew     → RESET (the reboot dropped it)
- * The screen is only used for `reached` (the flow left the initial battle menu).
+ *   - occupied slots == start+1 at the end          → OK
+ *   - party grew, then returned to its initial size → RESET
+ *   - party never grew                              → NOT_REACHED
  *
- * Output: one JSON line {rom, verdict, reached, reset, partyBefore, partyAfter}.
+ * The third state matters when a committed savestate drifts from a rebuilt
+ * ROM: menu inputs can still change the screen without ever throwing the ball.
+ * Without observing the caught Pokémon at least once, an unchanged final party
+ * cannot prove a reboot; treating it as RESET produced false positives after
+ * harmless string relocation changed the savestate's ROM layout.
+ *
+ * Output: one JSON line
+ * {rom, verdict, reached, reset, partyBefore, partyAfter, maxParty}.
  * Usage: MGBA_PATH=... emulator-web/node_modules/.bin/tsx \
  *          scripts/verify_capture_no_reset.mts <rom.gba>
  */
@@ -61,6 +68,7 @@ async function main() {
   let reset = false;
   let partyBefore = -1;
   let partyAfter = -1;
+  let maxParty = -1;
   let tag = '';
   try {
     await c.startMgba(rom);
@@ -68,6 +76,7 @@ async function main() {
     await c.loadState(0);
     await c.advanceFrames(30);
     partyBefore = await occupiedSlots(c);
+    maxParty = partyBefore;
 
     await c.screenshot(path.join(TMP, 'menu.png'));
     const menuHash = md5(path.join(TMP, 'menu.png'));
@@ -83,12 +92,14 @@ async function main() {
       await c.advanceFrames(frames);
     }
     await c.advanceFrames(360);            // capture animation
+    maxParty = Math.max(maxParty, await occupiedSlots(c));
 
     // Exp gain / level-up / Pokédex page / nickname prompt (declined with B).
     const followSeq = 'AAAABAABAABAAABAAABAAA'.split('');
     for (let i = 0; i < followSeq.length; i++) {
       await c.pressKey(followSeq[i], 4);
       await c.advanceFrames(60);
+      maxParty = Math.max(maxParty, await occupiedSlots(c));
       if (!reached) {
         await c.screenshot(path.join(TMP, 'p.png'));
         if (md5(path.join(TMP, 'p.png')) !== menuHash) reached = true;
@@ -96,19 +107,29 @@ async function main() {
     }
     await c.advanceFrames(120);
     partyAfter = await occupiedSlots(c);
+    maxParty = Math.max(maxParty, partyAfter);
 
     if (partyBefore < 1 || partyBefore >= PARTY_SLOTS) {
       tag += ' badPartyBefore';
-    } else if (partyAfter !== partyBefore + 1) {
-      reset = true;                        // the reboot re-loaded the save
+    } else if (maxParty <= partyBefore) {
+      tag += ' captureNotObserved';
+    } else if (partyAfter < maxParty) {
+      reset = true;
     }
   } catch (e) {
     tag += ' EXC=' + String((e as Error).message || e).slice(0, 80);
     // A hang/crash mid-sequence after the flow started is the bug too.
     if (reached) reset = true;
   }
-  const verdict = !reached || partyBefore < 1 ? 'NOT_REACHED' : reset ? 'RESET' : 'OK';
-  console.log(JSON.stringify({ rom: path.basename(ROM), verdict, reached, reset, partyBefore, partyAfter, tag }));
+  const verdict = reset
+    ? 'RESET'
+    : !reached || partyBefore < 1 || maxParty <= partyBefore
+      ? 'NOT_REACHED'
+      : 'OK';
+  console.log(JSON.stringify({
+    rom: path.basename(ROM), verdict, reached, reset,
+    partyBefore, partyAfter, maxParty, tag,
+  }));
   try { await c.stop(); } catch { /* ignore */ }
   try { fs.rmSync(TMP, { recursive: true, force: true }); } catch { /* ignore */ }
   process.exit(verdict === 'RESET' ? 1 : 0);

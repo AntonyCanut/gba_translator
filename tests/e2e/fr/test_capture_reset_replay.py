@@ -13,9 +13,10 @@ This test drives the real flow in mGBA via
 (``tests/fixtures/saves/capture_reset.ss0`` — mid-battle, a Poké Ball ready in
 the bag), throws the ball and plays through the exp/Pokédex/nickname sequence.
 The verdict signal is the PARTY: a successful capture appends the caught mon to
-``gPlayerParty``, while a reboot re-loads the battery save and the party stays
-unchanged. It skips cleanly when mGBA, tsx, the ROM or the fixtures are
-missing, so it is a no-op in headless CI.
+``gPlayerParty``. If that slot is observed and later disappears, the replay has
+proven a reset; if it never appears, the run is inconclusive savestate/ROM
+drift. It skips cleanly when mGBA, tsx, the ROM or the fixtures are missing, so
+it is a no-op in headless CI.
 """
 
 from __future__ import annotations
