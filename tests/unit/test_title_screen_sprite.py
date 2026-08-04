@@ -9,8 +9,8 @@ from pathlib import Path
 
 import pytest
 
-from languages.fr.sprites import SPRITES
 from languages.fr.patches.font import lz77_decompress
+from languages.fr.sprites import SPRITES
 from src.graphics.sprite_image import read_indexed_image
 from src.graphics.sprite_rom import extract_mapped_block
 

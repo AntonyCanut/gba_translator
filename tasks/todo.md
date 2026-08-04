@@ -1003,7 +1003,7 @@ suit les deux consommateurs de `Power` et les quatre pointeurs de catégorie/pr�
   sans contention est conservée comme preuve avant livraison.
 - La ROM reconstruite résout `0x1EBFFC8` vers `0x1F5605C` (« Active ») et
   `0x1FB40B8` vers `0xE58DAA` (« Actives ») ; son SHA-256 est
-  `91294fc265ea62d6722f95fb5688353971ce4fc4ecc158dec7f64ce1c1ea80f6`.
+  `4364276e526961f7c4a8edbb08c8cfed29d2c424a77253f629611d7f02ffba16`.
 - Le mot français « Active », identique à sa source anglaise, est désormais classé
   explicitement dans l’audit des chaînes anglaises vivantes.
 # Issue #162 — Panneau Astuces de Dresseurs
