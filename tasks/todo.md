@@ -1145,3 +1145,34 @@ seconde source graphique sans bénéfice et augmenterait inutilement le risque R
 - Le round-trip est désormais un test subprocess du CLI : copie temporaire de
   la ROM anglaise, réinjection du PNG, égalité des 4 608 octets et backup
   byte-identique. Les gardes registre/asset/build restent dans le profil rapide.
+# Issue #143 — suivi : tous les statuts alliés et adverses en combat
+
+## Diagnostic et plan
+
+- Le commentaire demande d’appliquer la correction à tous les statuts affichables en
+  combat, pour les battlers alliés comme adverses.
+- `UpdateStatusIconInHealthbox` sélectionne cinq groupes graphiques dans l’ordre
+  `POI`, `PAR`, `SOM`, `GEL`, `BRU`; les battlers 0/2 sont alliés et 1/3 adverses.
+- Le patch livré au suivi précédent écrit déjà ces cinq statuts dans les quatre groupes
+  bruts. Le risque restant est une preuve trop agrégée, qui ne nomme pas explicitement
+  chaque couple statut/camp.
+
+- [x] Exécuter la garde ROM actuelle et confirmer les 20 combinaisons.
+- [x] Ajouter une régression explicite par statut et par camp si la couverture manque.
+- [x] Reconstruire la ROM FR par la chaîne canonique et vérifier les octets consommés.
+- [x] Exécuter les validations ciblées puis la validation ROM requise.
+- [x] Relire le diff, intégrer localement et répondre sur l’issue #143 sans push.
+
+## Revue
+
+- La garde existante compare déjà les cinq badges de chaque groupe brut au BMP canonique;
+  aucune combinaison n’était absente et aucun nouveau patch de production n’est requis.
+- Une vérification nominative indépendante confirme `POI`, `PAR`, `SOM`, `GEL` et `BRU`
+  pour les battlers alliés 0/2 et adverses 1/3, soit 20 rendus sur 20.
+- `make build-fr` réinjecte les quatre groupes healthbox et reproduit exactement la ROM
+  versionnée : SHA-256 avant/après
+  `183d95ad6ce204c3d28e87fede4f3d7d302814d35dfb03128c6783e6d396864e`.
+- Les statuts empoisonné et gravement empoisonné partagent le même badge `POI` dans le
+  moteur; `KO` et `PKRS` ne sont pas des statuts affichés par la healthbox de combat.
+- `python3 -m pytest tests/test_patch_status_badges_fr.py -q` réussit ses 7 tests;
+  `make test-rom` réussit 572 tests et en ignore 36 après deux rebuilds byte-identiques.

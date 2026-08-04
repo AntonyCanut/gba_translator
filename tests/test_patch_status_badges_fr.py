@@ -32,6 +32,13 @@ HEALTHBOX_STATUS_GROUPS = (
     (0x00D12684, 0xE),  # battler 2
     (0x00D12864, 0xF),  # battler 3 (adversaire droit)
 )
+HEALTHBOX_BATTLER_NAMES = (
+    "allié gauche",
+    "adversaire gauche",
+    "allié droit",
+    "adversaire droit",
+)
+HEALTHBOX_STATUS_NAMES = ("POI", "PAR", "SOM", "GEL", "BRU")
 RAW_TILES_PER_STATUS = 3
 TILE_BYTES_4BPP = 32
 
@@ -112,20 +119,23 @@ class TestBuiltFrBadge(unittest.TestCase):
             )
 
     def test_battle_healthbox_statuses_match_user_pixels_for_every_battler(self):
-        """Les deux adversaires doivent charger POI/PAR/SOM/GEL/BRU, pas BRN."""
+        """Chaque allié et adversaire doit charger les cinq statuts FR."""
         _, _, bmp_grid = read_indexed_image(EDITABLE_BMP)
-        expected = [row[7:31] for row in bmp_grid[:40]]
 
-        for group_offset, palette_index in HEALTHBOX_STATUS_GROUPS:
-            self.assertEqual(
-                _normalized_healthbox_status_grid(
-                    self.rom,
-                    group_offset,
-                    palette_index,
-                ),
-                expected,
-                f"healthbox status group 0x{group_offset:08X}",
+        for battler_name, (group_offset, palette_index) in zip(
+            HEALTHBOX_BATTLER_NAMES,
+            HEALTHBOX_STATUS_GROUPS,
+        ):
+            rendered = _normalized_healthbox_status_grid(
+                self.rom,
+                group_offset,
+                palette_index,
             )
+            for slot, status_name in enumerate(HEALTHBOX_STATUS_NAMES):
+                start = slot * 8
+                expected = [row[7:31] for row in bmp_grid[start:start + 8]]
+                with self.subTest(battler=battler_name, status=status_name):
+                    self.assertEqual(rendered[start:start + 8], expected)
 
     def test_opponent_burn_badges_render_bru(self):
         """Régression du commentaire #143 : aucun adversaire ne doit garder BRN."""
