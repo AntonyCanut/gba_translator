@@ -978,11 +978,12 @@ entries:
   forbidden:
   - Spirite
 - offset: '0x23EA6C'
-  name: 'Classe de dresseur nageur'
+  name: 'Classe de dresseur flotteur'
   issue: '#161'
-  expected: Nageur
+  expected: Flotteur
   forbidden:
   - Baigneur
+  - Nageur
 - offset: '0x1EFFD93'
   name: 'Panneau Boissombre'
   issue: '#119'

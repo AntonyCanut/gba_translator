@@ -1,4 +1,4 @@
-"""Régression des classes de dresseurs nageurs françaises (issue #161)."""
+"""Régression des classes de dresseurs aquatiques françaises (issue #161)."""
 
 from __future__ import annotations
 
@@ -25,7 +25,7 @@ TUBER_OFFSET = 0x23EA6C
 EXPECTED_CLASSES = {
     SWIMMER_MALE_OFFSET: "Nageur♂",
     SWIMMER_FEMALE_OFFSET: "Nageuse♀",
-    TUBER_OFFSET: "Nageur",
+    TUBER_OFFSET: "Flotteur",
 }
 
 
@@ -35,7 +35,7 @@ def _decode_cell(rom: bytes | bytearray, offset: int) -> str:
 
 
 def test_patch_writes_all_swimmer_class_labels_in_french() -> None:
-    """Le patch doit remplacer l’ancienne classe « Baigneur » par « Nageur »."""
+    """Le patch doit traduire la classe Tuber par le terme exact « Flotteur »."""
     rom = bytearray(TABLE_BASE + CLASS_COUNT * CELL_STRIDE)
     combined = _load_combined(COMBINED_FR)
 

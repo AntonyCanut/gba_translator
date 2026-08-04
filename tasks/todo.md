@@ -1176,3 +1176,24 @@ seconde source graphique sans bénéfice et augmenterait inutilement le risque R
   moteur; `KO` et `PKRS` ne sont pas des statuts affichés par la healthbox de combat.
 - `python3 -m pytest tests/test_patch_status_badges_fr.py -q` réussit ses 7 tests;
   `make test-rom` réussit 572 tests et en ignore 36 après deux rebuilds byte-identiques.
+
+## Réouverture — terme exact « Flotteur »
+
+- [x] Faire échouer la régression avec `Flotteur` attendu pour `Tuber`.
+- [x] Remplacer l’entrée active et la garde protégée par `Flotteur`.
+- [x] Reconstruire la ROM FR et décoder la cellule `0x23EA6C`.
+- [x] Exécuter les validations ciblées et globales.
+- [x] Committer l’artefact et préparer le bilan GitHub pour intégration.
+
+## Revue de la réouverture
+
+- Le test RED a échoué sur `Nageur != Flotteur`, puis les deux tests ciblés
+  sont passés après la correction et la reconstruction.
+- La ROM décode `Flotteur` à `0x23EA6C` et contient le terminateur `0xFF` ;
+  `Nageur♂` et `Nageuse♀` restent inchangés dans leurs cellules distinctes.
+- Le manifeste protège désormais contre les deux anciennes valeurs erronées,
+  `Baigneur` et `Nageur`.
+- `make test-rom` valide 571 tests et en ignore 35 ; la double reconstruction
+  FR est identique octet pour octet.
+- Le diff binaire de la ROM contient seulement neuf octets modifiés dans la
+  cellule fixe de 13 octets ciblée.
