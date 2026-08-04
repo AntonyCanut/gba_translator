@@ -1081,3 +1081,20 @@ seconde source graphique sans bénéfice et augmenterait inutilement le risque R
 - `make test-rom` valide 572 tests et en ignore 36. Son unique échec est le probe
   mGBA italien du premier combat, sans gel ni anglais détecté ; ce test hors périmètre
   passe deux fois de suite lorsqu’il est rejoué isolément.
+
+# Issue #163 — extraire les dessins des boîtes PC
+
+- [x] Lire l’issue et confirmer que les trois libellés sont des tuiles graphiques.
+- [x] Localiser la planche LZ77, son pointeur et sa palette de prévisualisation.
+- [x] Formaliser l’extraction unique, éditable et non injectée dans le build FR.
+- [x] Ajouter les gardes rouges du registre et de l’asset.
+- [x] Enregistrer la planche et extraire le PNG depuis la ROM anglaise.
+- [x] Prouver le round-trip et exécuter les validations élargies.
+- [ ] Relire, committer, intégrer et clôturer l’issue GitHub.
+
+## Revue
+
+- Le registre expose `pc_box_labels` : bloc LZ77 `0x00E9C438`, pointeur
+  vérifié `0x0008F034`, palette `0x003CE5DC` et grille 16 × 9 tuiles.
+- Le PNG indexé extrait de `englishrom.gba` mesure 128 × 72 ; ses indices sont
+  identiques aux 4 608 octets décompressés de la planche source.
