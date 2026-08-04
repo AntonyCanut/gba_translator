@@ -502,10 +502,12 @@ def insert_mapped_block(
             raise ValueError(f"0x{tiles_offset:08X}: failed to decompress LZ77 block")
         decompressed, comp_len = result
         if len(decompressed) < needed:
-            raise ValueError(
-                f"0x{tiles_offset:08X}: decompressed size "
-                f"{len(decompressed)} < needed {needed}"
-            )
+            if not tiles_pointer_offsets or len(decompressed) % tile_bytes:
+                raise ValueError(
+                    f"0x{tiles_offset:08X}: decompressed size "
+                    f"{len(decompressed)} < needed {needed}"
+                )
+            decompressed += b"\x00" * (needed - len(decompressed))
         tiles = bytearray(decompressed)
     else:
         if tiles_offset + needed > len(rom):
