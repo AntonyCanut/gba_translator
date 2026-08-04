@@ -1342,3 +1342,18 @@ seconde source graphique sans bénéfice et augmenterait inutilement le risque R
 - Les 24 tests graphiques ciblés passent. Le hook a validé 1 626 tests Python
   (1 ignoré), 68 tests Vitest, puis les builds et contrôles FR/IT/DE ; la
   relecture ne relève aucun problème bloquant, important ou mineur.
+
+# Issue #168 — « Annuler » → « Sortir » dans le stockage d’objets du PC
+
+## Diagnostic et plan
+
+- [x] Lire l’issue et tracer la chaîne affichée jusqu’à sa référence ROM active.
+- [x] Ajouter une garde rouge ciblant l’entrée du sous-menu Stockage d’objets.
+- [x] Repointer uniquement cette entrée vers la chaîne dédiée « Sortir ».
+- [ ] Reconstruire la ROM FR et décoder le libellé depuis son pointeur actif.
+- [ ] Exécuter les validations, relire, committer et intégrer sans push.
+
+La table `sMenuActions_ItemPc` utilise le libellé partagé `gText_Cancel` à
+`0x402218`. Le patch existant du menu Équipe possède déjà une chaîne « Sortir »
+dédiée ; l’étendre à ce seul pointeur évite de renommer les véritables actions
+d’annulation dans le reste du jeu.

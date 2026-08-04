@@ -1,26 +1,22 @@
 #!/usr/bin/env python3
-"""Rename the party-menu bottom button « Annuler » → « Sortir » (issue #104 follow-up).
+"""Rename menu exit actions « Annuler » → « Sortir » (issues #104 and #168).
 
-The Pokémon party list shows a persistent bottom-right button that closes the menu.
-Unbound draws it from the generic ``gText_Cancel`` string ("Annuler" in FR), which is
-*shared* with the Bag, Shop, PC and every other « Annuler » in the game — so the fix
-must NOT edit that shared string (it would rename every Cancel to "Sortir"). Instead
-we retarget only the party menu's own code literal.
+The Pokémon party list and the Player PC's Item Storage submenu both expose exit actions.
+Unbound draws them from the generic ``gText_Cancel`` string ("Annuler" in FR), which is
+shared with every real cancellation action — so the fix must NOT edit that shared string.
+Instead, retarget only the two menu pointers that semantically mean "Exit".
 
 Isolation (verified in mGBA)
 ----------------------------
-The party-menu draw code loads its Cancel-string pointer from a **single code literal**
-at ROM ``0x1211E8``. In the built FR ROM it points at the relocated shared "Annuler"
-string (``0x08E58DB2``). Repointing *only* this literal changes the party bottom button
-to "Sortir" and nothing else — every other « Annuler » keeps its shared string
-(binary-search-confirmed: of the 18 sites that reference ``gText_Cancel``, only
-``0x1211E8`` drives this button).
+The party-menu draw code uses the literal at ROM ``0x1211E8``. The Player PC action table
+uses the entry at ``0x402218``. Repointing only these sites changes both exit actions to
+"Sortir" while every other « Annuler » keeps the shared string.
 
 Fix
 ---
 Write a dedicated "Sortir" string into the ROM's unused ``0xFF`` tail padding and repoint
-the literal at ``0x1211E8`` to it. Self-contained (no coupling to any other translated
-string), idempotent and self-healing. Runs in the ``build-fr`` post-build chain.
+the two sites to it. Self-contained, idempotent and self-healing. Runs in the ``build-fr``
+post-build chain.
 """
 
 from __future__ import annotations
@@ -32,6 +28,11 @@ from pathlib import Path
 
 # Code literal (in the Unbound party-menu draw routine) holding the Cancel pointer.
 PARTY_CANCEL_PTR = 0x1211E8
+
+# gFameCheckerText_Cancel entry in sMenuActions_ItemPc (Player PC Item Storage).
+PLAYER_PC_CANCEL_PTR = 0x402218
+
+EXIT_POINTERS = (PARTY_CANCEL_PTR, PLAYER_PC_CANCEL_PTR)
 
 # CFRU-encoded strings (+ 0xFF terminator). "Annuler" is the shared gText_Cancel the
 # literal points at before patching; "Sortir" is the dedicated replacement.
@@ -46,35 +47,45 @@ ROM_BASE = 0x08000000
 
 
 def apply(rom: bytearray) -> int:
-    cur = struct.unpack_from("<I", rom, PARTY_CANCEL_PTR)[0]
+    current = {
+        pointer_site: struct.unpack_from("<I", rom, pointer_site)[0]
+        for pointer_site in EXIT_POINTERS
+    }
+    slot = bytes(rom[SORTIR_STR_OFFSET:SORTIR_STR_OFFSET + len(SORTIR_BYTES)])
 
-    # Idempotent: already repointed to our own "Sortir" string.
-    if (cur == SORTIR_CPU_ADDR
-            and rom[SORTIR_STR_OFFSET:SORTIR_STR_OFFSET + len(SORTIR_BYTES)] == SORTIR_BYTES):
+    # Idempotent: every exit action already points to our own "Sortir" string.
+    if all(pointer == SORTIR_CPU_ADDR for pointer in current.values()) and slot == SORTIR_BYTES:
         return 0
 
-    # Safety: the literal must currently point at the shared "Annuler" string.
-    if not (ROM_BASE <= cur < 0x0A000000):
-        print(f"  WARN party cancel: literal 0x{PARTY_CANCEL_PTR:07X} -> 0x{cur:08X} "
-              f"is not a ROM pointer — skip", file=sys.stderr)
-        return 0
-    tgt = cur - ROM_BASE
-    if bytes(rom[tgt:tgt + len(ANNULER_BYTES)]) != ANNULER_BYTES:
-        print(f"  WARN party cancel: literal 0x{PARTY_CANCEL_PTR:07X} does not point at "
-              f"« Annuler » (got {bytes(rom[tgt:tgt+8]).hex()}) — skip", file=sys.stderr)
-        return 0
+    # Safety: each site must already target our string or the shared "Annuler" string.
+    for pointer_site, pointer in current.items():
+        if pointer == SORTIR_CPU_ADDR and slot == SORTIR_BYTES:
+            continue
+        if not (ROM_BASE <= pointer < 0x0A000000):
+            print(f"  WARN menu exit: pointer 0x{pointer_site:07X} -> 0x{pointer:08X} "
+                  f"is not a ROM pointer — skip", file=sys.stderr)
+            return 0
+        target = pointer - ROM_BASE
+        actual = bytes(rom[target:target + len(ANNULER_BYTES)])
+        if actual != ANNULER_BYTES:
+            print(f"  WARN menu exit: pointer 0x{pointer_site:07X} does not target "
+                  f"« Annuler » (got {actual.hex()}) — skip", file=sys.stderr)
+            return 0
 
     # The target slot must be free (0xFF padding) or already hold our string.
-    slot = bytes(rom[SORTIR_STR_OFFSET:SORTIR_STR_OFFSET + len(SORTIR_BYTES)])
     if slot != SORTIR_BYTES and any(b != 0xFF for b in slot):
-        print(f"  WARN party cancel: tail slot 0x{SORTIR_STR_OFFSET:07X} is not free "
+        print(f"  WARN menu exit: tail slot 0x{SORTIR_STR_OFFSET:07X} is not free "
               f"(got {slot.hex()}) — skip", file=sys.stderr)
         return 0
 
     rom[SORTIR_STR_OFFSET:SORTIR_STR_OFFSET + len(SORTIR_BYTES)] = SORTIR_BYTES
-    struct.pack_into("<I", rom, PARTY_CANCEL_PTR, SORTIR_CPU_ADDR)
-    print(f"  party cancel button (literal 0x{PARTY_CANCEL_PTR:07X}): « Annuler » → « Sortir »")
-    return 1
+    changed = 0
+    for pointer_site, pointer in current.items():
+        if pointer != SORTIR_CPU_ADDR:
+            struct.pack_into("<I", rom, pointer_site, SORTIR_CPU_ADDR)
+            print(f"  menu exit (pointer 0x{pointer_site:07X}): « Annuler » → « Sortir »")
+            changed += 1
+    return changed
 
 
 def main() -> int:
@@ -90,7 +101,7 @@ def main() -> int:
     n = apply(rom)
     if n:
         args.rom.write_bytes(rom)
-    print(f"patch_party_cancel_button_fr: {n} button renamed")
+    print(f"patch_party_cancel_button_fr: {n} exit label(s) renamed")
     return 0
 
 

@@ -20,6 +20,7 @@ sys.path.insert(0, str(Path(__file__).parent.parent))
 from languages.fr.patches.party_cancel_button import (
     ANNULER_BYTES,
     PARTY_CANCEL_PTR,
+    PLAYER_PC_CANCEL_PTR,
     SORTIR_BYTES,
     SORTIR_CPU_ADDR,
     SORTIR_STR_OFFSET,
@@ -29,14 +30,13 @@ from languages.fr.patches.party_cancel_button import (
 BUILT_FR_ROM = Path(__file__).parent.parent / "output" / "roms" / "GenedRom-fr.gba"
 ROM_SIZE = 0x2000000
 ANNULER_AT = 0xE58DB2  # where the shared "Annuler" string lives in the built ROM
-
-
 def _fake_rom() -> bytearray:
     rom = bytearray(ROM_SIZE)
     rom[0xB2] = 0x96
-    # shared "Annuler" string + the party literal pointing at it
+    # shared "Annuler" string + the two menu pointers targeting it
     rom[ANNULER_AT:ANNULER_AT + len(ANNULER_BYTES)] = ANNULER_BYTES
     struct.pack_into("<I", rom, PARTY_CANCEL_PTR, 0x08000000 + ANNULER_AT)
+    struct.pack_into("<I", rom, PLAYER_PC_CANCEL_PTR, 0x08000000 + ANNULER_AT)
     # free 0xFF tail padding for the "Sortir" string
     rom[SORTIR_STR_OFFSET:SORTIR_STR_OFFSET + 16] = b"\xff" * 16
     return rom
@@ -53,11 +53,16 @@ class TestByteConstants(unittest.TestCase):
 
 
 class TestApply(unittest.TestCase):
-    def test_repoints_literal_and_writes_sortir(self):
+    def test_repoints_menu_pointers_and_writes_sortir(self):
         rom = _fake_rom()
-        self.assertEqual(apply(rom), 1)
-        ptr = struct.unpack_from("<I", rom, PARTY_CANCEL_PTR)[0]
-        self.assertEqual(ptr, SORTIR_CPU_ADDR)
+        self.assertEqual(apply(rom), 2)
+        self.assertEqual(
+            {
+                struct.unpack_from("<I", rom, PARTY_CANCEL_PTR)[0],
+                struct.unpack_from("<I", rom, PLAYER_PC_CANCEL_PTR)[0],
+            },
+            {SORTIR_CPU_ADDR},
+        )
         self.assertEqual(
             bytes(rom[SORTIR_STR_OFFSET:SORTIR_STR_OFFSET + len(SORTIR_BYTES)]),
             SORTIR_BYTES,
@@ -72,7 +77,7 @@ class TestApply(unittest.TestCase):
 
     def test_idempotent(self):
         rom = _fake_rom()
-        self.assertEqual(apply(rom), 1)
+        self.assertEqual(apply(rom), 2)
         self.assertEqual(apply(rom), 0)  # already « Sortir » — no-op
 
     def test_skips_unexpected_target(self):
@@ -94,15 +99,16 @@ class TestApply(unittest.TestCase):
 
 @pytest.mark.skipif(not BUILT_FR_ROM.exists(), reason="built FR ROM not present")
 class TestBuiltRom(unittest.TestCase):
-    def test_party_button_points_at_sortir(self):
+    def test_exit_buttons_point_at_sortir(self):
         rom = BUILT_FR_ROM.read_bytes()
-        ptr = struct.unpack_from("<I", rom, PARTY_CANCEL_PTR)[0]
-        self.assertTrue(0x08000000 <= ptr < 0x0A000000, f"bad ptr 0x{ptr:08X}")
-        off = ptr - 0x08000000
-        self.assertEqual(
-            rom[off:off + len(SORTIR_BYTES)], SORTIR_BYTES,
-            "party menu bottom button must render « Sortir »",
-        )
+        for pointer_site in (PARTY_CANCEL_PTR, PLAYER_PC_CANCEL_PTR):
+            ptr = struct.unpack_from("<I", rom, pointer_site)[0]
+            self.assertTrue(0x08000000 <= ptr < 0x0A000000, f"bad ptr 0x{ptr:08X}")
+            off = ptr - 0x08000000
+            self.assertEqual(
+                rom[off:off + len(SORTIR_BYTES)], SORTIR_BYTES,
+                f"menu pointer 0x{pointer_site:X} must render « Sortir »",
+            )
 
 
 if __name__ == "__main__":
