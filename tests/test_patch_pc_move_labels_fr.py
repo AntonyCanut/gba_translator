@@ -32,7 +32,20 @@ from languages.fr.patches.pc_move_labels import (
 from src.core.text_codec import TextDecoder
 
 BUILT_FR_ROM = Path(__file__).parent.parent / "output" / "roms" / "GenedRom-fr.gba"
+COMBINED_FR = Path(__file__).parent.parent / "languages" / "fr" / "combined_fr.txt"
 ROM_SIZE = 0x2000000
+
+PC_MAIN_MENU_LABELS = {
+    0x41858D: "Déplacer Pokémon",
+    0x41859A: "Déplacer objet",
+    0x4185A5: "Salut !",
+}
+
+PC_MAIN_MENU_POINTERS = {
+    0x3CDA20: "Déplacer Pokémon",
+    0x3CDA28: "Déplacer objet",
+    0x3CDA40: "Salut !",
+}
 
 
 def _fake_rom() -> bytearray:
@@ -55,7 +68,25 @@ def _decode_at(rom: bytes, off: int) -> str:
     return TextDecoder.decode_pokemon(raw[: end if end >= 0 else 64], preserve_unknown=True)
 
 
+def _load_last_wins() -> dict[int, str]:
+    mapping = {}
+    with COMBINED_FR.open("r", encoding="utf-8", newline="") as stream:
+        for raw in stream:
+            line = raw.rstrip("\r\n")
+            if not line.startswith("0x"):
+                continue
+            offset, separator, text = line.partition(":")
+            if separator:
+                mapping[int(offset, 16)] = text.removeprefix(" ")
+    return mapping
+
+
 class TestConstants(unittest.TestCase):
+    def test_pc_main_menu_source_uses_full_requested_labels(self):
+        mapping = _load_last_wins()
+        for offset, expected in PC_MAIN_MENU_LABELS.items():
+            self.assertEqual(mapping[offset], expected, f"offset 0x{offset:X}")
+
     def test_mail_replacement_fits_in_place(self):
         # « Vers le sac » must be no longer than the English « Move To Bag » cell.
         self.assertEqual(len(MAIL_MOVE_TO_BAG_FR), len(MAIL_MOVE_TO_BAG_EN))
@@ -72,8 +103,8 @@ class TestApply(unittest.TestCase):
     def test_all_pointers_render_depl_with_period(self):
         rom = _fake_rom()
         n = apply(rom)
-        # 8 pointer rewrites + 1 in-place mail string.
-        self.assertEqual(n, 9)
+        # 7 pointer rewrites + 1 in-place mail string.
+        self.assertEqual(n, 8)
         for entry in _RELOCATIONS:
             expected = entry["prefix"] + _enc(entry["text"])
             for loc in entry["pointers"]:
@@ -107,7 +138,7 @@ class TestApply(unittest.TestCase):
 
     def test_idempotent(self):
         rom = _fake_rom()
-        self.assertEqual(apply(rom), 9)
+        self.assertEqual(apply(rom), 8)
         self.assertEqual(apply(rom), 0)
 
     def test_skips_unexpected_pointer(self):
@@ -146,8 +177,21 @@ class TestBuiltRom(unittest.TestCase):
         for loc in (0xC05D8, 0xC12E0, 0xC283C, 0xC4FE8):
             self.assertEqual(self._follow(loc), "<0xF8>ÏDépl.", f"ptr@0x{loc:X}")
 
-    def test_box_main_menu(self):
-        self.assertEqual(self._follow(0x3CDA20), "Dépl. Pokémon")
+    def _assert_main_menu_label(self, loc: int):
+        expected = PC_MAIN_MENU_POINTERS[loc]
+        ptr = struct.unpack_from("<I", self.rom, loc)[0]
+        off = ptr - ROM_BASE
+        encoded = _enc(expected)
+        self.assertEqual(self._follow(loc), expected, f"ptr@0x{loc:X}")
+        self.assertEqual(self.rom[off:off + len(encoded)], encoded)
+        self.assertEqual(self.rom[off + len(encoded)], 0xFF)
+
+    def test_box_main_menu_label_and_terminator(self):
+        self._assert_main_menu_label(0x3CDA20)
+
+    def test_item_and_exit_main_menu_labels_and_terminators(self):
+        for loc in (0x3CDA28, 0x3CDA40):
+            self._assert_main_menu_label(loc)
 
     def test_mail_move_to_bag(self):
         raw = self.rom[MAIL_MOVE_TO_BAG_OFFSET:MAIL_MOVE_TO_BAG_OFFSET + 12]

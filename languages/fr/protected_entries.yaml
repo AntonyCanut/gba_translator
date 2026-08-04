@@ -202,12 +202,26 @@ entries:
   expected: Choisis Pokémon ou Sortir.
   forbidden:
   - Choisis Pokémon ou Annuler.
+- offset: '0x41858D'
+  name: 'PC: libellé complet « Déplacer Pokémon »'
+  issue: '#167'
+  expected: Déplacer Pokémon
+  forbidden:
+  - Dépl Pokémon
+  - Dépl. Pokémon
 - offset: '0x41859A'
-  name: 'PC: libellé « Dépl. objet » non tronqué'
-  issue: '#134'
-  expected: Dépl. objet
+  name: 'PC: libellé complet « Déplacer objet »'
+  issue: '#134, #167'
+  expected: Déplacer objet
   forbidden:
   - Dépl. obj.
+  - Dépl. objet
+- offset: '0x4185A5'
+  name: 'PC: option de sortie « Salut ! »'
+  issue: '#167'
+  expected: Salut !
+  forbidden:
+  - À plus !
 - offset: '0x4184A9'
   name: 'PC: action de sélection des boîtes'
   issue: '#166'

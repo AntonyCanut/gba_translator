@@ -1,3 +1,39 @@
+# Issue #167 — libellés des options du PC
+
+## Diagnostic et conception
+
+- Les trois options sont des chaînes pointées par la table du menu PC :
+  `0x3CDA20`, `0x3CDA28` et `0x3CDA40`.
+- Les traductions actives viennent de `0x41858D`, `0x41859A` et `0x4185A5` ;
+  l'injection sait les reloger lorsqu'elles dépassent leur cellule anglaise.
+- Le patch post-build `pc_move_labels.py` réintroduit toutefois explicitement
+  « Dépl. Pokémon » après l'injection. Cette entrée dédiée doit disparaître afin
+  que la source FR canonique livre « Déplacer Pokémon ».
+
+## Plan validé
+
+- [x] Ajouter les gardes rouges source/ROM pour les trois libellés exacts.
+- [x] Corriger chirurgicalement les trois entrées et leur manifeste de protection.
+- [x] Retirer l'override abrégé du patch PC sans toucher aux autres menus compacts.
+- [x] Committer les sources avant d'exécuter la chaîne de build FR.
+- [x] Reconstruire la ROM et décoder les trois pointeurs réellement livrés.
+- [x] Exécuter les validations pertinentes, relire le diff et intégrer localement.
+- [x] Commenter puis clôturer l'issue GitHub #167 avec l'état `completed`.
+
+## Revue
+
+- La source active livre désormais « Déplacer Pokémon », « Déplacer objet » et
+  « Salut ! » ; les anciennes formes sont interdites par le manifeste FR.
+- Les pointeurs `0x3CDA20`, `0x3CDA28` et `0x3CDA40` décodent ces trois libellés
+  dans la ROM reconstruite. Le premier et le deuxième sont relogés respectivement
+  à `0x1A3C31` et `0x16B89A`, tandis que le troisième reste à `0x4185A5`.
+- Le patch post-build conserve ses huit corrections destinées aux menus compacts,
+  mais ne remplace plus le libellé principal par l'abréviation « Dépl. Pokémon ».
+- Deux builds FR consécutifs sont byte-identiques ; `make test-rom` termine avec
+  573 tests réussis, 36 ignorés et 1 858 désélectionnés.
+- Le hook du commit source valide en plus 1 655 tests Python, 68 tests Vitest et
+  les trois builds complets FR, IT et DE.
+
 # Issue #159 — « Envoyer qui ? » → « Déplacer où ? »
 
 ## Diagnostic et conception

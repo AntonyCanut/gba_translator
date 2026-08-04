@@ -4,9 +4,9 @@
 Context
 -------
 Issue #29 asked to abbreviate the French « Déplacer » (which overflowed the row
-after the D-pad icon) to « Dépl. » across the PC/Box menus. Most cells have room
-and are handled through ``combined_fr.txt`` (e.g. 0x41859A « Dépl. obj. »,
-0x4171F1 « Dépl. où ? », the footer 0x418E77). A handful of labels, however, are
+after the D-pad icon) to « Dépl. » across the compact PC/Box menus. Most cells
+are handled through ``combined_fr.txt`` (e.g. 0x4171F1 « Dépl. où ? », the
+footer 0x418E77). A handful of labels, however, are
 drawn from **hard 4-byte cells** whose English source is exactly « Move » (4
 bytes + terminator): 0x418484, 0x418EB5 (« ◄►Move ») and 0xA4E1F1. Into a 5-byte
 slot « Dépl. » (5 content bytes + terminator = 6) does not fit, so the inject
@@ -32,6 +32,10 @@ Relocation target
 never touched by the injector or any other post-build patch), so a fixed slot
 here is deterministic and collision-free. Same technique as
 ``party_cancel_button.py`` (which parks « Sortir » in tail padding).
+
+The main PC options at 0x41858D and 0x41859A are ordinary relocatable strings.
+Issue #167 restores their full labels through ``combined_fr.txt``; this patch
+must not override them with the older abbreviations.
 
 Self-contained, idempotent and self-healing; runs in the ``build-fr`` post-build
 chain.
@@ -68,7 +72,6 @@ def _enc(text: str) -> bytes:
 #   0x418484 « Move »        → « Dépl. »          (2 pointers: box option list)
 #   0xA4E1F1 « Move »        → « Dépl. »          (1 pointer: secondary move menu)
 #   0x418EB5 « ◄►Move »      → « ◄►Dépl. »        (4 pointers: HUD move hint)
-#   0x41858D « Move Pkmn »   → « Dépl. Pokémon »  (1 pointer: box main menu)
 _RELOCATIONS = [
     {
         "label": "Move (box option / secondary menu) -> Dépl.",
@@ -83,13 +86,6 @@ _RELOCATIONS = [
         "text": "Dépl.",
         "pointers": [0xC05D8, 0xC12E0, 0xC283C, 0xC4FE8],
         "orig": {0xC05D8: 0x418EB5, 0xC12E0: 0x418EB5, 0xC283C: 0x418EB5, 0xC4FE8: 0x418EB5},
-    },
-    {
-        "label": "Move Pokémon (box main menu) -> Dépl. Pokémon",
-        "prefix": b"",
-        "text": "Dépl. Pokémon",
-        "pointers": [0x3CDA20],
-        "orig": {0x3CDA20: 0x41858D},
     },
 ]
 
