@@ -216,10 +216,8 @@ SPRITES: dict[str, SpriteDef] = {
         tiles_tall=32,
         palette=0x00E9B310,
     ),
-    # Libellés graphiques des boîtes PC (issue #163) : "PKMN DATA", "PARTY
-    # POKéMON" et "CLOSE BOX" ne sont pas des chaînes CFRU. Cette fenêtre de
-    # 144 tuiles, avec sa palette propre, est extraite telle quelle pour une
-    # retouche manuelle ; elle n'est pas injectée automatiquement par build-fr.
+    # Libellés graphiques des boîtes PC (issue #163) : la planche française de
+    # 144 tuiles est réinjectée par build-fr via son unique pointeur connu.
     "pc_box_labels": SpriteDef(
         blocks=(0x00E9C438,),
         block_pointers=((0x0008F034,),),

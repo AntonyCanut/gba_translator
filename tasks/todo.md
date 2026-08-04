@@ -1367,3 +1367,39 @@ d’annulation dans le reste du jeu.
   `0x402218` (`0x08E58DB2` → `0x09FFFF80`).
 - La garde ciblée réussit ses 8 tests. Le hook a validé 1 674 tests Python
   (1 ignoré), 68 tests Vitest, puis les builds FR, IT et DE.
+
+# Issue #163 — suivi : injecter le dessin français des boîtes PC
+
+## Diagnostic et conception
+
+- Le BMP fourni est une image indexée 4 bpp de 128 × 72 pixels.
+- Ses 16 couleurs correspondent indice par indice à la palette ROM
+  `0x003CE5DC`; aucune remap de palette n’est nécessaire.
+- Le PNG canonique existant sera remplacé par une conversion sans perte, puis
+  réinjecté dans `build-fr` via le descripteur et le pointeur déjà vérifiés.
+
+## Plan validé
+
+- [x] Lire le nouveau commentaire et télécharger le BMP joint.
+- [x] Vérifier dimensions, profondeur, palette et différences d’indices.
+- [x] Ajouter les gardes rouges de l’asset et du câblage `build-fr`.
+- [x] Convertir le BMP vers le PNG canonique sans perte d’indices.
+- [x] Activer l’insertion de `pc_box_labels` dans la recette FR.
+- [x] Reconstruire la ROM et comparer la planche pointée au PNG.
+- [x] Exécuter les validations, relire, committer et intégrer sans push.
+- [x] Commenter puis clôturer l’issue GitHub avec l’état `completed`.
+
+## Revue
+
+- Le BMP fourni a été converti en PNG 4 bpp sans remapper ses indices ; son
+  empreinte de grille est
+  `3e8856cdfc9e605b732905e923ec42f950462a6156bef0a971db10b3dea28c9d`.
+- `build-fr` réinjecte la planche via `SPRITES["pc_box_labels"]`. Le bloc reste
+  à `0x00E9C438`, se décompresse en 4 608 octets et correspond pixel par pixel
+  à l’asset versionné.
+- Le cycle rouge a détecté l’ancien PNG et le câblage absent. Après build, une
+  garde ROM obsolète qui exigeait encore les octets anglais a été corrigée pour
+  comparer le résultat du CLI au dessin français et vérifier leur différence.
+- Le hook de commit a validé 1 660 tests Python (1 ignoré), 68 tests Vitest et
+  les builds FR, IT et DE. Les 43 tests graphiques ciblés, dont les gardes ROM,
+  réussissent ; les 1 602 octets de diff ROM sont tous dans le bloc LZ77 visé.

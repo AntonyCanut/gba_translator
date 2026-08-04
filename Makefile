@@ -289,6 +289,7 @@ build-fr: check-translations-fr ensure-fr-translation $(FRENCH_EXTRACT) $(SPANIS
 	@$(PYTHON) $(PATCH_STATUS_BADGES_SCRIPT) --rom $(FR_BUILD)
 	@$(PYTHON) $(PATCH_HP_LABELS_SCRIPT) --rom $(FR_BUILD)
 	@$(PYTHON) $(PATCH_SUMMARY_STAT_LABELS_SCRIPT) --rom $(FR_BUILD)
+	@$(PYTHON) scripts/insert_sprite.py --rom $(FR_BUILD) --lang fr --sprite pc_box_labels --image languages/fr/sprites/pc_box_labels.png
 	@$(PYTHON) $(PATCH_PARTY_LV_LABEL_SCRIPT) --rom $(FR_BUILD)
 	@$(PYTHON) $(PATCH_POKEDEX_STAT_LABELS_FR_SCRIPT) --rom $(FR_BUILD)
 	@$(PYTHON) $(PATCH_TYPE_ICONS_SCRIPT) --rom $(FR_BUILD)

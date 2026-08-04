@@ -41,3 +41,22 @@ décompressés et vérifie un round-trip exact.
 L’image n’est pas ajoutée à `make build-fr` tant qu’un dessin français n’a pas
 été fourni. Une future réinjection pourra relocaliser le bloc au moyen du pointeur
 connu si le flux recompressé dépasse son emplacement d’origine.
+
+## Suivi du 4 août 2026 — dessin français contribué
+
+Le nouveau commentaire fournit un BMP indexé 4 bpp de 128 × 72 pixels. Sa
+palette de 16 couleurs est strictement identique à la palette ROM
+`0x003CE5DC`, et ses indices traduisent les quatre zones visibles en
+« DONNÉES », « ÉQUIPE PKMN », « ANNULER » et « FERMER BOÎTE ».
+
+Trois intégrations ont été comparées : conserver le BMP comme second asset,
+reproduire les retouches dans un patch procédural, ou convertir sans perte le
+BMP vers le PNG canonique déjà exposé. La troisième est retenue. Elle évite
+deux sources graphiques concurrentes, préserve exactement les 9 216 indices
+fournis et réutilise la commande générique d’insertion déjà protégée par les
+tests de relocalisation.
+
+`build-fr` réinjecte donc `pc_box_labels.png` après les patchs graphiques
+procéduraux. Un test rapide fixe l’empreinte de la grille contribuée et le
+câblage de la recette ; un test ROM suit le pointeur vivant et compare la
+planche décompressée aux pixels du PNG versionné.
