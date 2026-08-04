@@ -208,6 +208,12 @@ entries:
   expected: Dépl. objet
   forbidden:
   - Dépl. obj.
+- offset: '0x4184A9'
+  name: 'PC: action de sélection des boîtes'
+  issue: '#166'
+  expected: Boîtes
+  forbidden:
+  - Aller
 - offset: '0x415F51'
   name: 'Liste Pokédex: action Annuler abrégée avec point'
   issue: '#142'

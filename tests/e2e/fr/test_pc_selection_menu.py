@@ -68,3 +68,10 @@ class TestPcSelectionMenuFrench:
     ) -> None:
         target = _resolve_live_pointer(source_rom_data, fr_rom_data, 0x417BD3)
         assert _decode_at(fr_rom_data, target) == "PC du Prof. Log"
+
+    def test_box_action_uses_boxes_label(
+        self, source_rom_data: bytes, fr_rom_data: bytes
+    ) -> None:
+        """Le menu d'une boîte propose « Boîtes », pas le verbe « Aller » (#166)."""
+        target = _resolve_live_pointer(source_rom_data, fr_rom_data, 0x4184A9)
+        assert _decode_at(fr_rom_data, target) == "Boîtes"

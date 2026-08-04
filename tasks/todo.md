@@ -1050,3 +1050,34 @@ seconde source graphique sans bénéfice et augmenterait inutilement le risque R
   affichent notamment `BRU` au lieu de `BRN`, comme les deux groupes du joueur.
 - La ROM FR a été reconstruite deux fois à l’identique. Les 8 tests ciblés passent ;
   `make test-rom` termine avec 567 tests réussis et 36 ignorés.
+
+# Issue #166 — PC : sélection des boîtes
+
+## Diagnostic et conception
+
+- L’anglais vivant à `0x4184A9` est « Jump » ; sa traduction actuelle « Aller »
+  conserve le verbe mais ne nomme pas correctement l’action du menu.
+- Cette chaîne compacte possède un pointeur source et reste relogeable par le pipeline
+  standard. La correction minimale consiste donc à modifier l’entrée FR active en
+  « Boîtes », sans patch binaire dédié ni changement partagé aux autres langues.
+
+## Plan TDD
+
+- [x] Lire l’issue et confirmer l’offset, la source anglaise et la valeur FR actuelle.
+- [x] Ajouter les gardes source et ROM, puis observer leur échec attendu.
+- [x] Corriger chirurgicalement la dernière occurrence active.
+- [x] Committer les sources avant le build, puis reconstruire la ROM FR.
+- [x] Suivre le pointeur vivant et décoder « Boîtes » dans la ROM construite.
+- [x] Exécuter les validations ciblées et globales, relire le diff et intégrer.
+
+## Revue
+
+- Le slot vivant `0x3D3560` pointe vers `0xD10E23`, où les octets
+  `BC E3 20 E8 D9 E7 FF` se décodent exactement en « Boîtes ».
+- Le test TDD a d’abord échoué sur « Aller », puis les 4 tests du menu PC et les
+  27 tests de la garde d’intégrité passent après la correction.
+- Le hook de commit passe avec 1 654 tests Python, 68 tests Vitest et les builds
+  FR/IT/DE sans collision ; deux reconstructions FR sont identiques octet pour octet.
+- `make test-rom` valide 572 tests et en ignore 36. Son unique échec est le probe
+  mGBA italien du premier combat, sans gel ni anglais détecté ; ce test hors périmètre
+  passe deux fois de suite lorsqu’il est rejoué isolément.
