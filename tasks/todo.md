@@ -1350,10 +1350,20 @@ seconde source graphique sans bénéfice et augmenterait inutilement le risque R
 - [x] Lire l’issue et tracer la chaîne affichée jusqu’à sa référence ROM active.
 - [x] Ajouter une garde rouge ciblant l’entrée du sous-menu Stockage d’objets.
 - [x] Repointer uniquement cette entrée vers la chaîne dédiée « Sortir ».
-- [ ] Reconstruire la ROM FR et décoder le libellé depuis son pointeur actif.
-- [ ] Exécuter les validations, relire, committer et intégrer sans push.
+- [x] Reconstruire la ROM FR et décoder le libellé depuis son pointeur actif.
+- [x] Exécuter les validations, relire, committer et intégrer sans push.
 
 La table `sMenuActions_ItemPc` utilise le libellé partagé `gText_Cancel` à
 `0x402218`. Le patch existant du menu Équipe possède déjà une chaîne « Sortir »
 dédiée ; l’étendre à ce seul pointeur évite de renommer les véritables actions
 d’annulation dans le reste du jeu.
+
+## Revue
+
+- Le pointeur `0x402218` du stockage d’objets et le littéral `0x1211E8` du menu
+  Équipe ciblent tous deux `0x09FFFF80`, décodé en « Sortir » avec terminateur
+  `0xFF` ; la chaîne partagée `gText_Cancel` décode toujours « Annuler ».
+- Le diff du ROM livré contient exactement quatre octets, ceux du pointeur PC
+  `0x402218` (`0x08E58DB2` → `0x09FFFF80`).
+- La garde ciblée réussit ses 8 tests. Le hook a validé 1 674 tests Python
+  (1 ignoré), 68 tests Vitest, puis les builds FR, IT et DE.

@@ -30,6 +30,8 @@ from languages.fr.patches.party_cancel_button import (
 BUILT_FR_ROM = Path(__file__).parent.parent / "output" / "roms" / "GenedRom-fr.gba"
 ROM_SIZE = 0x2000000
 ANNULER_AT = 0xE58DB2  # where the shared "Annuler" string lives in the built ROM
+
+
 def _fake_rom() -> bytearray:
     rom = bytearray(ROM_SIZE)
     rom[0xB2] = 0x96
