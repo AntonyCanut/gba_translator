@@ -1975,3 +1975,9 @@ entries:
   forbidden:
   - Astuces du Dresseur !
   - changer vite de Pokémon
+- offset: '0x4186CD'
+  name: PC — préfixe des noms de boîtes par défaut
+  issue: '#164'
+  expected: Boîte
+  forbidden:
+  - Box
