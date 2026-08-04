@@ -1,4 +1,10 @@
 entries:
+- offset: '0x41846F'
+  name: Action de dépôt d’un Pokémon dans le PC
+  issue: '#171'
+  expected: Déposer
+  forbidden:
+  - Stocker
 - offset: '0x3FD5C1'
   name: Nom de statistique Esquive en combat
   issue: '#157'
