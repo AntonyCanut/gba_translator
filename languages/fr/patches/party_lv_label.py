@@ -23,6 +23,14 @@ Editing this single ligature glyph to « N. » is the clean fix: it covers **eve
 screen that shows the level prefix (party list, and any other reader of glyph
 0x05), exactly as F-113's own decision tree prescribed for the ligature case.
 
+Issue #175: the battle healthbox composes this ligature and up to three digits
+inside a 24 px window. The original width-table value (8 px) would leave a
+one-pixel gap, while the literal ``C8 AD`` replacement is 10 px and clips the
+last digit's shadow. This patch therefore sets codepoint 0x05's measured width
+to 9 px: ``5 * (3 - digits) + 9 + 5 * digits`` is exactly 24 px for levels 1,
+19 and 100. The party list blits the ligature directly and is unaffected by
+the width-table adjustment.
+
 Glyph format (reverse-engineered by write/observe on mGBA)
 ----------------------------------------------------------
 Each glyph is 32 bytes = 64 nibbles. ``DecompressGlyphTile`` maps nibble ``n`` to
@@ -147,6 +155,9 @@ from pathlib import Path
 # ROM offset of the « Lv » ligature glyph (codepoint 0x05 of the party font).
 LV_GLYPH_OFFSET = 0x1ECFA0
 GLYPH_SIZE = 32
+LV_WIDTH_OFFSET = 0x1EF005
+OLD_LV_WIDTH = 8
+NEW_ND_WIDTH = 9
 
 # Known-good current bytes: the original « Lv » ligature glyph.
 OLD_LV_GLYPH = bytes.fromhex(
@@ -247,10 +258,6 @@ def apply_patch(rom_path: Path) -> int:
 
     current = bytes(rom[LV_GLYPH_OFFSET:LV_GLYPH_OFFSET + GLYPH_SIZE])
 
-    if current == NEW_ND_GLYPH:
-        print("  party level label (0x1ECFA0): already « N. » (dot shifted left, shadow on its right and below) — no change")
-        return 0
-
     known_old = (
         OLD_LV_GLYPH,
         OLD_ND_GLYPH_NOSHADOW,
@@ -260,7 +267,10 @@ def apply_patch(rom_path: Path) -> int:
         OLD_ND_GLYPH_ANTIALIAS_WRONG_SIDE,
         OLD_ND_GLYPH_SHADOW_BELOW_ONLY,
     )
-    if current not in known_old:
+    patched = 0
+    if current == NEW_ND_GLYPH:
+        print("  party level label (0x1ECFA0): already « N. » (dot shifted left, shadow on its right and below) — no glyph change")
+    elif current not in known_old:
         print(
             f"  WARN party level label: glyph at 0x{LV_GLYPH_OFFSET:07X} matches "
             f"neither « Lv », the shadow-less « N. », the row-12-overflow « N. », "
@@ -271,7 +281,7 @@ def apply_patch(rom_path: Path) -> int:
         )
         return 0
 
-    if current == OLD_LV_GLYPH:
+    elif current == OLD_LV_GLYPH:
         was = "« Lv »"
     elif current == OLD_ND_GLYPH_NOSHADOW:
         was = "« N. » (no shadow)"
@@ -283,12 +293,27 @@ def apply_patch(rom_path: Path) -> int:
         was = "« N. » (antialiasing column mis-widened white, issue #138 third follow-up)"
     elif current == OLD_ND_GLYPH_ANTIALIAS_WRONG_SIDE:
         was = "« N. » (antialiasing column shaded on the dot's wrong side, issue #138 fourth follow-up)"
-    else:
+    elif current != NEW_ND_GLYPH:
         was = "« N. » (dot flush right, shadow below only, issue #138 fourth follow-up fix)"
-    rom[LV_GLYPH_OFFSET:LV_GLYPH_OFFSET + GLYPH_SIZE] = NEW_ND_GLYPH
-    rom_path.write_bytes(rom)
-    print(f"  party level label (0x1ECFA0): {was} → « N. » (dot shifted left, shadow on its right and below)")
-    return 1
+    if current != NEW_ND_GLYPH:
+        rom[LV_GLYPH_OFFSET:LV_GLYPH_OFFSET + GLYPH_SIZE] = NEW_ND_GLYPH
+        patched += 1
+        print(f"  party level label (0x1ECFA0): {was} → « N. » (dot shifted left, shadow on its right and below)")
+
+    width = rom[LV_WIDTH_OFFSET]
+    if width == OLD_LV_WIDTH:
+        rom[LV_WIDTH_OFFSET] = NEW_ND_WIDTH
+        patched += 1
+        print("  party/battle level label width (0x1EF005): 8 px → 9 px")
+    elif width != NEW_ND_WIDTH:
+        raise ValueError(
+            f"0x{LV_WIDTH_OFFSET:X}: unexpected glyph width {width} "
+            f"(wanted {OLD_LV_WIDTH} or {NEW_ND_WIDTH})"
+        )
+
+    if patched:
+        rom_path.write_bytes(rom)
+    return patched
 
 
 def main() -> None:
@@ -299,7 +324,7 @@ def main() -> None:
     if not args.rom.exists():
         raise SystemExit(f"ROM not found: {args.rom}")
     n = apply_patch(args.rom)
-    print(f"patch_party_lv_label_fr: {n} glyph patched")
+    print(f"patch_party_lv_label_fr: {n} glyph/width change(s)")
 
 
 if __name__ == "__main__":

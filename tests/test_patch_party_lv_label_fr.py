@@ -61,8 +61,11 @@ sys.path.insert(0, str(Path(__file__).parent.parent))
 from languages.fr.patches.party_lv_label import (
     GLYPH_SIZE,
     LV_GLYPH_OFFSET,
+    LV_WIDTH_OFFSET,
     NEW_ND_GLYPH,
+    NEW_ND_WIDTH,
     OLD_LV_GLYPH,
+    OLD_LV_WIDTH,
     OLD_ND_GLYPH_ANTIALIAS_WRONG_SIDE,
     OLD_ND_GLYPH_HALF_SHADOW,
     OLD_ND_GLYPH_MISWIDENED_DOT,
@@ -75,10 +78,11 @@ from languages.fr.patches.party_lv_label import (
 BUILT_FR_ROM = Path(__file__).parent.parent / "output" / "roms" / "GenedRom-fr.gba"
 
 
-def _fake_rom(glyph: bytes) -> bytearray:
-    rom = bytearray(0x1ECFA0 + GLYPH_SIZE + 16)
+def _fake_rom(glyph: bytes, width: int = NEW_ND_WIDTH) -> bytearray:
+    rom = bytearray(max(LV_GLYPH_OFFSET + GLYPH_SIZE, LV_WIDTH_OFFSET + 1) + 16)
     rom[0xB2] = 0x96  # GBA validity byte checked by the patch
     rom[LV_GLYPH_OFFSET:LV_GLYPH_OFFSET + GLYPH_SIZE] = glyph
+    rom[LV_WIDTH_OFFSET] = width
     return rom
 
 
@@ -89,6 +93,14 @@ class TestGlyphDefinitions(unittest.TestCase):
 
     def test_new_differs_from_old(self):
         self.assertNotEqual(NEW_ND_GLYPH, OLD_LV_GLYPH)
+
+    def test_compact_label_fills_battle_window_exactly(self):
+        digit_width = 5
+        for digit_count in (1, 2, 3):
+            with self.subTest(digit_count=digit_count):
+                x_position = digit_width * (3 - digit_count)
+                rendered_width = NEW_ND_WIDTH + digit_width * digit_count
+                self.assertEqual(x_position + rendered_width, 24)
 
     def test_period_dot_spans_nibble_36_left_and_nibble_37_right_subpixels(self):
         # Issue #138 fifth follow-up: the dot's white ink is one physical pixel
@@ -228,6 +240,22 @@ class TestApplyPatch(unittest.TestCase):
         self.assertEqual(p.read_bytes()[LV_GLYPH_OFFSET:LV_GLYPH_OFFSET + GLYPH_SIZE],
                          NEW_ND_GLYPH)
 
+    def test_widens_compact_label_for_the_battle_healthbox(self):
+        rom = _fake_rom(NEW_ND_GLYPH, width=OLD_LV_WIDTH)
+        p = Path("/tmp/_lvtest_width.gba")
+        p.write_bytes(rom)
+
+        self.assertEqual(apply_patch(p), 1)
+        self.assertEqual(p.read_bytes()[LV_WIDTH_OFFSET], NEW_ND_WIDTH)
+
+    def test_rejects_an_unknown_compact_label_width(self):
+        rom = _fake_rom(NEW_ND_GLYPH, width=7)
+        p = Path("/tmp/_lvtest_bad_width.gba")
+        p.write_bytes(rom)
+
+        with self.assertRaisesRegex(ValueError, "unexpected glyph width"):
+            apply_patch(p)
+
     def test_repatches_shadowless_nd_to_shadowed(self):
         # An already-built ROM carrying the old shadow-less « N. » must converge
         # to the shadowed glyph without a full rebuild (issue #104).
@@ -312,6 +340,16 @@ class TestBuiltFrRomShowsNd(unittest.TestCase):
         rom = BUILT_FR_ROM.read_bytes()
         self.assertEqual(rom[LV_GLYPH_OFFSET:LV_GLYPH_OFFSET + GLYPH_SIZE], NEW_ND_GLYPH,
                          "built FR ROM does not render « N. » in the party menu")
+
+    def test_built_rom_measures_compact_nd_as_nine_pixels(self):
+        if not BUILT_FR_ROM.exists():
+            pytest.skip("GenedRom-fr.gba not built")
+        rom = BUILT_FR_ROM.read_bytes()
+        self.assertEqual(
+            rom[LV_WIDTH_OFFSET],
+            NEW_ND_WIDTH,
+            "built FR ROM still clips the last battle-level digit shadow",
+        )
 
 
 if __name__ == "__main__":

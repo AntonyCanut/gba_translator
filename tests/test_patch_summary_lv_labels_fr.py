@@ -1,10 +1,9 @@
-"""Regression tests for the FR « Lv » → « N. » string patch (summary + party).
+"""Regression tests for the FR « Lv » → « N. » string patch.
 
-The « Lv » level prefix on the Résumé header AND the party list is the FRLG
-extra-symbol #5 (bytes ``F9 05``) inside isolated pointed ``gText_Lv`` strings.
-``_patch_header`` must rewrite every such pointed ``F9 05 FF`` string — including
-the party copy at 0x26051C, which is preceded by ``0x08`` (not ``FF``) and was
-skipped by the original ``FF F9 05 FF`` filter (leaving the party list « Lv »).
+The Résumé header uses literal « N. », while the ``gText_Lv`` copy shared by
+the party list and battle healthbox must remain the compact extra-symbol #5
+(``F9 05``). Its translated 9 px glyph is the only form that fits the battle
+window without clipping the final digit's shadow (issue #175).
 """
 
 import sys
@@ -16,6 +15,7 @@ import pytest
 sys.path.insert(0, str(Path(__file__).parent.parent))
 
 from languages.fr.patches.summary_lv_labels import (
+    COMPACT_LV_STRING_OFFSET,
     LV_SYMBOL,
     ND_TEXT,
     _patch_header,
@@ -75,6 +75,26 @@ class TestPatchHeader(unittest.TestCase):
         self.assertEqual(_patch_header(rom), 0)
         self.assertEqual(bytes(rom[off:off + 2]), LV_SYMBOL)
 
+    def test_restores_compact_shared_party_battle_copy(self):
+        rom = bytearray(COMPACT_LV_STRING_OFFSET + 3)
+        rom[0xB2] = 0x96
+        rom[COMPACT_LV_STRING_OFFSET:COMPACT_LV_STRING_OFFSET + 3] = ND_TEXT + b"\xff"
+
+        self.assertEqual(_patch_header(rom), 1)
+        self.assertEqual(
+            bytes(rom[COMPACT_LV_STRING_OFFSET:COMPACT_LV_STRING_OFFSET + 3]),
+            LV_SYMBOL + b"\xff",
+        )
+        self.assertEqual(_patch_header(rom), 0)
+
+    def test_rejects_unknown_shared_party_battle_copy(self):
+        rom = bytearray(COMPACT_LV_STRING_OFFSET + 3)
+        rom[0xB2] = 0x96
+        rom[COMPACT_LV_STRING_OFFSET:COMPACT_LV_STRING_OFFSET + 3] = b"\x00\x00\xff"
+
+        with self.assertRaisesRegex(ValueError, "unexpected shared gText_Lv"):
+            _patch_header(rom)
+
 
 class TestPatchMemos(unittest.TestCase):
     def test_rewrites_lv_before_dynamic_level_and_moves_space_to_end(self):
@@ -105,15 +125,16 @@ class TestPatchMemos(unittest.TestCase):
 
 @pytest.mark.rom
 class TestBuiltFrRomPartyString(unittest.TestCase):
-    """The shipped FR ROM must carry « N. » (C8 AD) at the party gText_Lv copy."""
+    """The shipped FR ROM must use the compact translated glyph in battle."""
 
-    def test_party_lv_string_is_nd(self):
+    def test_party_battle_lv_string_is_compact(self):
         if not BUILT_FR_ROM.exists():
             pytest.skip("GenedRom-fr.gba not built")
         rom = BUILT_FR_ROM.read_bytes()
         self.assertEqual(
-            rom[0x26051C:0x26051F], ND_TEXT + b"\xff",
-            "built FR ROM still shows « Lv » in the party list (0x26051C not patched)",
+            rom[COMPACT_LV_STRING_OFFSET:COMPACT_LV_STRING_OFFSET + 3],
+            LV_SYMBOL + b"\xff",
+            "built FR ROM does not use the compact party/battle level glyph",
         )
 
 

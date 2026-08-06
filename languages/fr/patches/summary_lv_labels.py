@@ -1,15 +1,15 @@
 #!/usr/bin/env python3
-"""Convert the « Lv » level prefix to the French « N. » (Résumé + party list).
+"""Convert the « Lv » level prefix to the French « N. » where it fits.
 
 The **Résumé / Infos Pokémon** screen (team list → A → Infos) AND the **party
 list** itself (START → Pokémon, e.g. « Lv10 ») show « Lv » as the FRLG
 *extra-symbol* glyph #5 — the two raw bytes ``<0xF9><0x05>`` (``EMOJI`` prefix +
 symbol index 5), NOT a pointed ASCII CFRU string spelled « Lv » (that was the
-Panthéon string ``0x4160F4``, fixed in B-236) and NOT the party ligature glyph
-(codepoint 0x05 @ ``0x1ECFA0``, fix F-113 — proven inert: it is patched to « N. »
-in the build yet the party list still read « Lv » until this string fix landed).
-All were ruled out empirically with in-engine before/after captures + mGBA
-watchpoints.
+Panthéon string ``0x4160F4``, fixed in B-236). The symbol resolves to the party
+ligature glyph (codepoint 0x05 @ ``0x1ECFA0``), translated into « N. » by
+``party_lv_label.py``. Earlier builds replaced the shared party/battle string
+with literal ``C8 AD`` instead, bypassing that compact glyph and causing the
+one-pixel overflow fixed by issue #175.
 
 Two mechanisms use the ``<0xF9><0x05>`` "Lv" symbol here:
 
@@ -17,6 +17,11 @@ Two mechanisms use the ``<0xF9><0x05>`` "Lv" symbol here:
    from the standalone string ``gText_Lv`` — the isolated three bytes
    ``F9 05 FF`` at ``0x416223`` (four live pointers). Replacing its two symbol
    bytes with the text « N. » (``C8 AD``) turns the header into « N.10 ».
+   The second copy at ``0x26051C`` is deliberately kept as the compact
+   extra-symbol: it is shared by the party list and the three-tile battle
+   healthbox. Its glyph is translated by ``party_lv_label.py`` and widened to
+   9 px, which makes « N. » + level occupy exactly 24 px without clipping the
+   last digit's shadow (issue #175).
 
 2. **Memo « … au Lv10. »** (bottom box). The met-location templates
    (``Rencontré à …, au {LV_2} {LEVEL}.`` and its egg/fateful-encounter
@@ -33,11 +38,10 @@ Two mechanisms use the ``<0xF9><0x05>`` "Lv" symbol here:
    right after « N. » shifted the level digits right, e.g. « N. 14 » instead
    of « N.14 »).
 
-Both edits are strict and length-preserving (``F9 05`` → ``C8 AD``, plus a
-same-length rotation for the memo's space byte), so no pointer or free-space
-bookkeeping is needed. The patch is idempotent: sites already showing « N. »
-with no leading space are skipped, and unexpected bytes are reported and left
-untouched rather than corrupted.
+All edits are length-preserving: summary/memo sites use ``F9 05`` → ``C8 AD``,
+the shared party/battle copy is restored with ``C8 AD`` → ``F9 05``, and the
+memo's space byte is rotated in place. No pointer or free-space bookkeeping is
+needed. The fixed shared copy is byte-strict, and the patch is idempotent.
 
 Verified in mGBA (savestate slot 2 → Résumé): header « Lv10 » → « N.10 » and
 memo « au Lv 10. » → « au N.10. », with the level number preserved.
@@ -60,6 +64,7 @@ GBA_BASE = 0x08000000
 # FRLG extra-symbol #5 = « Lv »  →  the ASCII/CFRU bytes for « N. ».
 LV_SYMBOL = bytes([0xF9, 0x05])   # EMOJI prefix + symbol index 5
 ND_TEXT = bytes([0xC8, 0xAD])     # 'N' + '.'  (CFRU charmap)
+COMPACT_LV_STRING_OFFSET = 0x26051C
 
 
 def _find_all(rom: bytes, pat: bytes) -> list[int]:
@@ -83,7 +88,7 @@ def _has_live_pointer(rom: bytes, str_off: int) -> bool:
 
 
 def _patch_header(rom: bytearray) -> int:
-    """Rewrite every standalone ``gText_Lv`` « Lv » string to « N. ».
+    """Rewrite standalone ``gText_Lv`` strings, preserving the compact copy.
 
     Targets each isolated ``F9 05 FF`` sequence (the two-byte « Lv » extra-symbol
     followed by a terminator) that has at least one word-aligned live pointer to
@@ -92,24 +97,40 @@ def _patch_header(rom: bytearray) -> int:
     rather than requiring a preceding ``FF``:
 
     * ``0x416223`` (four pointers) — the **Résumé / Panthéon** header « Lv10 ».
-    * ``0x26051C`` (three pointers) — the **party-list** level prefix « Lv10 »
-      (START → Pokémon). This copy is preceded by ``0x08`` (not ``FF``), so the
-      old ``FF F9 05 FF`` filter skipped it, which is why the party list kept
-      showing « Lv ». Proven with mGBA watchpoints: the party level code reads
-      this string and blits extra-symbol #5's graphic; rewriting the string to
-      « N. » makes it read « N.10 » (verified in-engine). Note: the separate
-      ``party_lv_label.py`` glyph edit at ``0x1ECFA0`` does *not* affect the party
-      list — that glyph is not the one the party level code reads.
+    * ``0x26051C`` (three pointers) — shared by the **party list** and battle
+      healthbox. It stays ``F9 05 FF`` so both screens use the translated
+      9 px ligature from ``party_lv_label.py``. Literal ``C8 AD`` is 10 px and
+      overflows the healthbox's 24 px text window (issue #175).
 
-    Returns the number of strings patched. Idempotent: copies already showing
-    « N. » (``C8 AD FF``) are reported and skipped.
+    Returns the number of strings patched. Idempotent: the summary copy remains
+    literal « N. » and the shared party/battle copy remains the compact glyph.
     """
     patched = 0
+    # This live copy feeds both the party list and UpdateLvlInHealthbox. Two
+    # literal glyphs are 10 px wide and overflow the battle window by one px;
+    # retain the 9 px translated ligature instead (issue #175).
+    if len(rom) >= COMPACT_LV_STRING_OFFSET + 3:
+        current = bytes(rom[COMPACT_LV_STRING_OFFSET:COMPACT_LV_STRING_OFFSET + 3])
+        if current == ND_TEXT + b"\xff":
+            rom[COMPACT_LV_STRING_OFFSET:COMPACT_LV_STRING_OFFSET + 2] = LV_SYMBOL
+            patched += 1
+            print("  shared party/battle gText_Lv (0x26051C): literal « N. » → compact glyph")
+        elif current == LV_SYMBOL + b"\xff":
+            print("  shared party/battle gText_Lv (0x26051C): compact glyph already active")
+        else:
+            raise ValueError(
+                f"0x{COMPACT_LV_STRING_OFFSET:X}: unexpected shared gText_Lv "
+                f"bytes {current.hex(' ')}"
+            )
     # Isolated « Lv » string already converted → « N. »?
     for j in _find_all(bytes(rom), ND_TEXT + bytes([0xFF])):
+        if j == COMPACT_LV_STRING_OFFSET:
+            continue
         if _has_live_pointer(bytes(rom), j):
             print(f"  header gText_Lv (0x{j:07X}): already « N. » — no change")
     for j in _find_all(bytes(rom), LV_SYMBOL + bytes([0xFF])):
+        if j == COMPACT_LV_STRING_OFFSET:
+            continue
         if not _has_live_pointer(bytes(rom), j):
             continue  # dead copy / coincidental code bytes — leave it
         rom[j:j + 2] = ND_TEXT
