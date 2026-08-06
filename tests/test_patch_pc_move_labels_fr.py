@@ -36,7 +36,7 @@ from languages.fr.patches.pc_move_labels import (
 )
 from languages.fr.dedicated_patch_offsets import GENERIC_PLACEHOLDER_TRANSLATIONS
 from scripts import apply_combined_fr
-from src.core.text_codec import TextDecoder
+from src.core.text_codec import TextDecoder, TextEncoder
 
 BUILT_FR_ROM = Path(__file__).parent.parent / "output" / "roms" / "GenedRom-fr.gba"
 COMBINED_FR = Path(__file__).parent.parent / "languages" / "fr" / "combined_fr.txt"
@@ -269,6 +269,17 @@ class TestBuiltRom(unittest.TestCase):
                 PC_SELECTION_STATUS_DECODED,
                 f"ptr@0x{loc:X}",
             )
+
+    def test_selection_status_keeps_dynamic_control_and_terminator(self):
+        expected = b"\xf7\x00" + TextEncoder.encode_pokemon(" sélectionné.")
+
+        for loc in PC_SELECTION_STATUS_POINTERS:
+            ptr = struct.unpack_from("<I", self.rom, loc)[0]
+            self.assertEqual(ptr, ROM_BASE | PC_SELECTION_STATUS_OFFSET)
+        actual = self.rom[
+            PC_SELECTION_STATUS_OFFSET:PC_SELECTION_STATUS_OFFSET + len(expected)
+        ]
+        self.assertEqual(actual, expected)
 
     def test_hud_hint(self):
         for loc in (0xC05D8, 0xC12E0, 0xC283C, 0xC4FE8):

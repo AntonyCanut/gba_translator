@@ -1452,11 +1452,22 @@ d’annulation dans le reste du jeu.
 - [x] Ajouter les gardes rouges source, patch et ROM pour les deux libellés.
 - [x] Séparer les relocalisations du menu PC et corriger chirurgicalement
   l’entrée `0x41825C` ainsi que son manifeste de protection.
-- [ ] Committer les sources avant d’exécuter la chaîne de build FR.
-- [ ] Reconstruire la ROM et décoder les pointeurs réellement livrés.
-- [ ] Exécuter les validations pertinentes, relire le diff et intégrer localement.
-- [ ] Commenter puis clôturer l’issue GitHub #173 avec l’état `completed`.
+- [x] Committer les sources avant d’exécuter la chaîne de build FR.
+- [x] Reconstruire la ROM et décoder les pointeurs réellement livrés.
+- [x] Exécuter les validations pertinentes, relire le diff et intégrer localement.
+- [x] Commenter puis clôturer l’issue GitHub #173 avec l’état `completed`.
 
 ## Revue
 
-- En attente de l’implémentation et des preuves de validation.
+- La ROM FR encode « Déplacer » à `0x15FBC90`; les pointeurs `0x3D3548` et
+  `0x9A41C4` y aboutissent. Le menu secondaire `0xA6CAAC` pointe séparément
+  vers « Dépl. » à `0x15FBC99`.
+- Les quatre consommateurs de la phrase de sélection pointent toujours vers
+  `0x41825C`, décodé en `{DYNAMIC} sélectionné.` dans la ROM reconstruite.
+- Le cycle TDD est passé de 4 échecs attendus à 28 tests ciblés réussis. Le
+  hook de commit a validé 1 682 tests Python (1 ignoré), 68 tests Vitest et les
+  builds FR, IT et DE.
+- `make test-rom` a confirmé deux builds FR octet pour octet identiques, puis
+  586 tests ROM réussis et 38 ignorés. Son unique échec initial, un replay
+  émulateur italien n’ayant pas détecté le premier combat sans constater de
+  gel, a réussi immédiatement lors de sa relance isolée.
