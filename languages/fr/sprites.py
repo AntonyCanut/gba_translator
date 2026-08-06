@@ -185,6 +185,8 @@ SPRITES: dict[str, SpriteDef] = {
     "title_screen": SpriteDef(
         blocks=(0x01FD4854,),
         tilemaps=(0x01FD6514,),
+        block_pointers=((0x01ED7C7C, 0x01ED7EC0),),
+        tilemap_pointers=((0x01ED7C84, 0x01ED7EC8),),
         tiles_wide=32,
         tiles_tall=20,
         bits_per_pixel=8,

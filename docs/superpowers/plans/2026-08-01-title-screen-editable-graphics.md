@@ -173,3 +173,40 @@ python3 scripts/extract_sprite.py --rom input/roms/englishrom.gba \
   exécuter les validations ciblées puis complètes.
 - [ ] Relire le diff, committer, intégrer localement et publier le bilan sur
   l’issue sans push.
+
+### Tâche 6 : restituer les deux pixels du dernier « T »
+
+**Fichiers :**
+
+- Modifier : `tests/unit/test_title_screen_sprite.py`
+- Modifier : `languages/fr/sprites.py`
+- Modifier : `languages/fr/sprites/title_screen.png`
+- Modifier : `docs/superpowers/specs/2026-08-01-title-screen-editable-graphics-design.md`
+- Modifier : `tasks/todo.md`
+
+**Interfaces :**
+
+- `SpriteDef.block_pointers` référence `0x01ED7C7C` et `0x01ED7EC0` pour la
+  planche du titre.
+- `SpriteDef.tilemap_pointers` référence `0x01ED7C84` et `0x01ED7EC8` pour sa
+  tilemap.
+- Après insertion, les pointeurs de planche restent à `0x01FD4854`, ceux de la
+  tilemap ciblent un même nouveau flux et la grille réextraite contient
+  l’indice 164 aux pixels `(160,152)` et `(160,153)`.
+
+- [x] Modifier le test d’asset pour exiger l’empreinte du BMP complet et les
+  deux valeurs littérales `grid[152][160] == grid[153][160] == 164`.
+- [x] Modifier le test ROM pour lire les offsets relocalisés depuis les quatre
+  pointeurs, puis comparer la grille réextraite à l’asset complet.
+- [x] Lancer `python3 -m pytest tests/unit/test_title_screen_sprite.py -q` et
+  constater l’échec attendu sur les deux pixels encore à 31.
+- [x] Déclarer les deux ensembles de pointeurs dans `title_screen`, puis
+  convertir le BMP fourni en PNG indexé en conservant exactement la palette et
+  les 40 960 indices.
+- [x] Relancer le test ciblé avec marqueur ROM et exiger 100 % de réussite.
+- [ ] Exécuter `make build-fr`, suivre les pointeurs dans
+  `output/roms/GenedRom-fr.gba` et comparer la grille finale à l’asset.
+- [ ] Vérifier le clignotement mGBA sans sauvegarde en jeu, puis lancer les
+  tests graphiques ciblés, la suite rapide complète et le lint.
+- [ ] Relire le diff, committer les chemins exacts, rebaser via
+  l’orchestrateur, republier le résultat sur l’issue #155 et terminer sans push.

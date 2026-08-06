@@ -96,6 +96,30 @@
   1 674 tests Python, 68 tests Vitest et les builds FR/IT/DE ; `make test-rom`
   valide 583 tests, avec 36 scénarios dépendants de fixtures ignorés.
 - Deux builds FR consécutifs sont byte-identiques.
+# Issue #155 — suivi : restaurer le dernier « T » de « PRESSEZ START »
+
+## Diagnostic et conception
+
+- Le PNG intégré diffère du BMP fourni uniquement aux pixels `(160,152)` et
+  `(160,153)`, où l’indice animé 164 a été remplacé par le fond 31.
+- Cette cellule utilise la tuile 99, partagée par 94 cellules ; la modifier en
+  place corromprait 93 zones de fond.
+- La cellule reçoit une 460e tuile dédiée ; la planche grandit de 64 octets
+  décompressés mais se compacte à 7 319 octets, sous son slot de 7 360 octets.
+- La tilemap remappée occupe 1 161 octets compressés dans un slot de 1 160.
+- La planche et la tilemap ont chacune deux pointeurs ROM vérifiés. La solution
+  sûre garde la planche en place et relocalise uniquement la tilemap via ses
+  deux références connues.
+
+## Plan de reprise
+
+- [x] Ajouter la régression rouge sur le BMP complet et les flux repointés.
+- [x] Déclarer les pointeurs connus et restaurer les deux pixels dans le PNG.
+- [x] Prouver le round-trip pixel par pixel depuis une ROM réelle.
+- [ ] Reconstruire la ROM FR et vérifier les pointeurs, la palette et le rendu.
+- [ ] Revalider le clignotement dans mGBA sans sauvegarde en jeu.
+- [ ] Exécuter les tests ciblés puis complets, relire et committer.
+- [ ] Rebaser localement, commenter l’issue #155 et terminer sans push.
 
 # Issue #167 — libellés des options du PC
 

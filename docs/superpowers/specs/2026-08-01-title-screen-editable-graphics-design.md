@@ -110,3 +110,28 @@ et la tilemap recompressée avec une tuile supplémentaire dépasse son slot ROM
 La version intégrée ramène donc uniquement ces deux pixels de bord à l’index de
 fond 31. Le dessin reste lisible, la planche et la tilemap gardent leur taille
 historique, et les gardes de conflit du pipeline ne sont pas assouplies.
+
+## Suivi du 6 août 2026 — restituer les deux pixels du dernier « T »
+
+Le nouveau commentaire confirme que la suppression des pixels `(160,152)` et
+`(160,153)` est visible et ne respecte pas le BMP de référence. Modifier la
+tuile 99 en place est exclu : elle est utilisée par 94 cellules et ajouterait
+les deux pixels aux 93 cellules de fond qui ne font pas partie du dernier « T ».
+Conserver l’asset tronqué est également exclu puisque le dessin fourni est la
+référence fonctionnelle demandée.
+
+La planche `0x01FD4854` possède deux pointeurs vérifiés à `0x01ED7C7C` et
+`0x01ED7EC0`; la tilemap `0x01FD6514` en possède deux à `0x01ED7C84` et
+`0x01ED7EC8`. La cellule du dernier « T » reçoit une 460e tuile dédiée. Malgré
+ses 64 octets décompressés supplémentaires, la planche se recompresse mieux
+(7 319 octets contre 7 360) et tient dans son slot. La tilemap remappée, en
+revanche, se recompresse sur 1 161 octets contre 1 160 disponibles et doit être
+relocalisée via ses deux pointeurs connus. Aucun scan aveugle de pointeurs ni
+écrasement de données adjacentes n’est nécessaire.
+
+La validation suit les pointeurs après insertion, réextrait la grille depuis
+la planche en place et la tilemap relocalisée, puis exige l’égalité pixel par
+pixel avec le BMP, notamment les deux indices animés 164 restaurés. Elle
+contrôle aussi que les deux pointeurs de planche restent inchangés, que les deux
+pointeurs de tilemap ciblent le même nouveau flux, que la palette reste
+inchangée et que l’écran conserve ses deux états de clignotement dans mGBA.

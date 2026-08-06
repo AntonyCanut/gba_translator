@@ -20,6 +20,9 @@ INPUT_ROM = ROOT / "input" / "roms" / "englishrom.gba"
 TILES_OFFSET = 0x01FD4854
 TILEMAP_OFFSET = 0x01FD6514
 PALETTE_OFFSET = 0x01FD699C
+TILES_POINTER_OFFSETS = (0x01ED7C7C, 0x01ED7EC0)
+TILEMAP_POINTER_OFFSETS = (0x01ED7C84, 0x01ED7EC8)
+GBA_ROM_BASE = 0x08000000
 
 
 def test_title_screen_registry_describes_live_8bpp_screen() -> None:
@@ -32,6 +35,8 @@ def test_title_screen_registry_describes_live_8bpp_screen() -> None:
     assert sprite.palette == 0x01FD699C
     assert (sprite.tiles_wide, sprite.tiles_tall) == (32, 20)
     assert sprite.bits_per_pixel == 8
+    assert sprite.block_pointers == (TILES_POINTER_OFFSETS,)
+    assert sprite.tilemap_pointers == (TILEMAP_POINTER_OFFSETS,)
 
 
 @pytest.mark.rom
@@ -98,8 +103,10 @@ def test_versioned_title_screen_asset_contains_pressez_start_artwork() -> None:
     )
 
     # Assert
+    assert grid[152][160] == 164
+    assert grid[153][160] == 164
     assert hashlib.sha256(prompt).hexdigest() == (
-        "3c291170c102a82a0e0e8985abd3e1c383923e226149cda90ae5d0d46ded3d2a"
+        "b4603667ffb9d2b91fd64b7e8beae0e83229dd8be2139e947159c742c61f91fc"
     )
 
 
@@ -152,13 +159,25 @@ def test_insert_cli_round_trips_8bpp_title_screen(tmp_path: Path) -> None:
         text=True,
     )
     actual_rom = output_rom.read_bytes()
-    actual_tiles = lz77_decompress(actual_rom, TILES_OFFSET)
-    actual_tilemap = lz77_decompress(actual_rom, TILEMAP_OFFSET)
+    relocated_tiles_offsets = {
+        int.from_bytes(actual_rom[offset:offset + 4], "little") - GBA_ROM_BASE
+        for offset in TILES_POINTER_OFFSETS
+    }
+    relocated_tilemap_offsets = {
+        int.from_bytes(actual_rom[offset:offset + 4], "little") - GBA_ROM_BASE
+        for offset in TILEMAP_POINTER_OFFSETS
+    }
+    assert len(relocated_tiles_offsets) == 1
+    assert len(relocated_tilemap_offsets) == 1
+    relocated_tiles_offset = relocated_tiles_offsets.pop()
+    relocated_tilemap_offset = relocated_tilemap_offsets.pop()
+    actual_tiles = lz77_decompress(actual_rom, relocated_tiles_offset)
+    actual_tilemap = lz77_decompress(actual_rom, relocated_tilemap_offset)
     expected_width, expected_height, expected_grid = read_indexed_image(ASSET)
     actual_grid, _, _ = extract_mapped_block(
         actual_rom,
-        TILES_OFFSET,
-        TILEMAP_OFFSET,
+        relocated_tiles_offset,
+        relocated_tilemap_offset,
         tiles_wide=expected_width // 8,
         tiles_tall=expected_height // 8,
         bits_per_pixel=8,
@@ -167,14 +186,34 @@ def test_insert_cli_round_trips_8bpp_title_screen(tmp_path: Path) -> None:
     # Assert
     assert actual_tiles is not None
     assert actual_tilemap is not None
-    assert len(actual_tiles[0]) == len(source_tiles[0])
+    assert relocated_tiles_offset == TILES_OFFSET
+    assert relocated_tilemap_offset != TILEMAP_OFFSET
+    assert len(actual_tiles[0]) == len(source_tiles[0]) + 64
     assert actual_grid == expected_grid
+    assert actual_grid[152][160] == 164
+    assert actual_grid[153][160] == 164
+    assert actual_rom[TILEMAP_OFFSET:PALETTE_OFFSET] == source_rom[
+        TILEMAP_OFFSET:PALETTE_OFFSET
+    ]
     assert actual_rom[PALETTE_OFFSET : PALETTE_OFFSET + 512] == source_rom[
         PALETTE_OFFSET : PALETTE_OFFSET + 512
     ]
-    assert actual_rom[:TILES_OFFSET] == source_rom[:TILES_OFFSET]
-    tiles_end = TILES_OFFSET + max(source_tiles[1], actual_tiles[1])
-    tilemap_end = TILEMAP_OFFSET + max(source_tilemap[1], actual_tilemap[1])
-    assert actual_rom[tiles_end:TILEMAP_OFFSET] == source_rom[tiles_end:TILEMAP_OFFSET]
-    assert actual_rom[tilemap_end:PALETTE_OFFSET] == source_rom[tilemap_end:PALETTE_OFFSET]
-    assert actual_rom[PALETTE_OFFSET:] == source_rom[PALETTE_OFFSET:]
+
+    allowed_changes = set()
+    for pointer_offset in TILEMAP_POINTER_OFFSETS:
+        allowed_changes.update(range(pointer_offset, pointer_offset + 4))
+    allowed_changes.update(
+        range(
+            TILES_OFFSET,
+            TILES_OFFSET + max(source_tiles[1], actual_tiles[1]),
+        )
+    )
+    allowed_changes.update(
+        range(relocated_tilemap_offset, relocated_tilemap_offset + actual_tilemap[1])
+    )
+    changed_offsets = {
+        offset
+        for offset, (before, after) in enumerate(zip(source_rom, actual_rom))
+        if before != after
+    }
+    assert changed_offsets <= allowed_changes
