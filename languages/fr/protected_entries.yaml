@@ -1,4 +1,10 @@
 entries:
+- offset: '0x1F62FCC'
+  name: Réplique de lancement du combat herbu au nord de Dresco
+  issue: '#174'
+  expected: C'est l'heure d'un combat verdoyant\nsur le gazon !
+  forbidden:
+  - C'est l'heure d'un combat herbu sur\nune île herbeuse !
 - offset: '0x41846F'
   name: Action de dépôt d’un Pokémon dans le PC
   issue: '#171'

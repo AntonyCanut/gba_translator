@@ -1403,3 +1403,32 @@ d’annulation dans le reste du jeu.
 - Le hook de commit a validé 1 660 tests Python (1 ignoré), 68 tests Vitest et
   les builds FR, IT et DE. Les 43 tests graphiques ciblés, dont les gardes ROM,
   réussissent ; les 1 602 octets de diff ROM sont tous dans le bloc LZ77 visé.
+
+# Issue #174 — « combat herbu » → « combat verdoyant »
+
+## Diagnostic et conception
+
+- La réplique active est l’entrée pointer-based `0x1F62FCC` de
+  `languages/fr/combined_fr.txt`; aucune occurrence plus tardive ne l’écrase.
+- L’option retenue est une correction chirurgicale de cette entrée, accompagnée
+  de sa garde dans `protected_entries.yaml`. Un patch ROM dédié ou une édition
+  directe de l’artefact seraient inutiles et non durables.
+
+## Plan validé
+
+- [x] Prouver que la valeur cible est absente avant la correction.
+- [x] Remplacer la dernière entrée active et ajouter sa garde de régression.
+- [x] Régénérer le JSON FR puis reconstruire la ROM complète.
+- [x] Suivre le pointeur vivant et décoder la nouvelle réplique dans la ROM.
+- [ ] Exécuter les validations, relire, committer et intégrer sans push.
+- [ ] Commenter puis clôturer l’issue GitHub avec l’état `completed`.
+
+## Revue
+
+- Le JSON FR généré contient l’entrée `0x1F62FCC` avec la nouvelle formulation
+  et le build ne signale aucun échec d’injection.
+- Les pointeurs `0x1E876E0` et `0x1E876B9` visent tous deux `0x1A9D64` dans
+  `GenedRom-fr.gba`; la chaîne se décode en « C'est l'heure d'un combat
+  verdoyant\nsur le gazon ! » et se termine par `0xFF`.
+- La garde ciblée réussit ses 27 tests. Le hook a validé 1 679 tests Python
+  (1 ignoré), 68 tests Vitest, puis les builds FR, IT et DE.
