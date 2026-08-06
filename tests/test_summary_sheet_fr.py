@@ -61,6 +61,18 @@ INFO_LABEL_X = range(0, 32)
 MOVE_PANEL_X = range(96, 128)
 MOVE_PANEL_Y = range(56, 112)
 
+# Tuiles que la tilemap du panneau de détail d'attaque pose DEUX fois : une fois
+# dans le libellé, une fois comme remplissage vide à droite de celui-ci. Relevé
+# dans la VRAM sous mGBA (BG1, screenbase 0x6000) : la tuile 124 est le début du
+# libellé « POUVOIR » en colonne 16 *et* le fond de la colonne 22.
+#
+# Elle est vide dans la planche anglaise, d'où sa réutilisation comme fond. Un
+# seul pixel dessiné dedans réapparaît donc en doublon 48 px plus à droite —
+# c'est le « groupe de pixels près de POUVOIR » signalé sur l'issue #145. Le
+# libellé français doit donc rester à droite de x = 136 sur ses deux premières
+# rangées, ce que ce test verrouille en exigeant la tuile anglaise à l'octet.
+FILLER_TILES = (124,)
+
 
 def _tiles(rom_path: Path) -> bytearray:
     result = lz77_decompress(bytearray(rom_path.read_bytes()), BLOCK)
@@ -167,6 +179,18 @@ class TestReferenceSheetTranslatesTheInfoPage(unittest.TestCase):
     def test_move_panel_labels_differ_from_english(self):
         self.assertGreater(self._differs(MOVE_PANEL_X, MOVE_PANEL_Y), 0,
                            "POWER / ACCURACY sont restés en anglais")
+
+    def test_filler_tiles_stay_byte_identical_to_english(self):
+        """Une tuile posée deux fois par la tilemap ne peut rien porter."""
+        for tile in FILLER_TILES:
+            with self.subTest(tile=tile):
+                self.assertEqual(
+                    self.reference[tile * 32:(tile + 1) * 32],
+                    self.english[tile * 32:(tile + 1) * 32],
+                    f"tuile {tile} : la tilemap du panneau d'attaque la réutilise "
+                    "comme fond vide — tout pixel dessiné dedans réapparaît en "
+                    "doublon à droite du libellé (issue #145)",
+                )
 
 
 @pytest.mark.rom
