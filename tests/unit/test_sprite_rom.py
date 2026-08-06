@@ -9,12 +9,14 @@ sys.path.insert(0, str(Path(__file__).parent.parent.parent))
 
 from languages.fr.patches.font import lz77_compress, lz77_decompress
 from src.graphics.sprite_rom import (
+    GBA_ROM_BASE,
     TILE_BYTES,
     extract_block,
     extract_mapped_block,
     grid_to_tiles,
     insert_block,
     insert_mapped_block,
+    resolve_live_offset,
     tiles_to_grid,
 )
 
@@ -68,6 +70,36 @@ def _lz77_back_references(data: bytes, offset: int = 0) -> list[tuple[int, int]]
                 src += 1
                 produced += 1
     return references
+
+
+def test_resolve_live_offset_uses_registry_without_known_pointers():
+    assert resolve_live_offset(b"", 0x1234) == 0x1234
+
+
+def test_resolve_live_offset_follows_converging_known_pointers():
+    rom = bytearray(64)
+    pointer = (GBA_ROM_BASE + 32).to_bytes(4, "little")
+    rom[4:8] = pointer
+    rom[12:16] = pointer
+
+    assert resolve_live_offset(bytes(rom), 24, (4, 12)) == 32
+
+
+def test_resolve_live_offset_rejects_disagreeing_known_pointers():
+    rom = bytearray(64)
+    rom[4:8] = (GBA_ROM_BASE + 24).to_bytes(4, "little")
+    rom[12:16] = (GBA_ROM_BASE + 32).to_bytes(4, "little")
+
+    with pytest.raises(ValueError, match="disagree"):
+        resolve_live_offset(bytes(rom), 24, (4, 12))
+
+
+def test_resolve_live_offset_rejects_pointer_outside_rom():
+    rom = bytearray(64)
+    rom[4:8] = (GBA_ROM_BASE + len(rom)).to_bytes(4, "little")
+
+    with pytest.raises(ValueError, match="outside ROM"):
+        resolve_live_offset(bytes(rom), 24, (4,))
 
 
 def test_tiles_to_grid_and_back_round_trip():

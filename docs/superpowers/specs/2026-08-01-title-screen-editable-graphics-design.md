@@ -135,3 +135,11 @@ pixel avec le BMP, notamment les deux indices animés 164 restaurés. Elle
 contrôle aussi que les deux pointeurs de planche restent inchangés, que les deux
 pointeurs de tilemap ciblent le même nouveau flux, que la palette reste
 inchangée et que l’écran conserve ses deux états de clignotement dans mGBA.
+
+La relocalisation doit rester transparente dans les deux sens :
+`extract_sprite.py` résout donc aussi les emplacements vivants depuis les
+ensembles de pointeurs déclarés. Tous les pointeurs d’un bloc doivent viser une
+adresse ROM valide et converger, faute de quoi l’extraction échoue sans scan
+heuristique. La garde de référence hache les dimensions, les 40 960 indices et
+les 768 composantes RGB de la palette ; elle couvre ainsi tout le BMP logique,
+pas seulement le rectangle du prompt.

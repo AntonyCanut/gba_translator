@@ -116,10 +116,27 @@
 - [x] Ajouter la régression rouge sur le BMP complet et les flux repointés.
 - [x] Déclarer les pointeurs connus et restaurer les deux pixels dans le PNG.
 - [x] Prouver le round-trip pixel par pixel depuis une ROM réelle.
-- [ ] Reconstruire la ROM FR et vérifier les pointeurs, la palette et le rendu.
-- [ ] Revalider le clignotement dans mGBA sans sauvegarde en jeu.
-- [ ] Exécuter les tests ciblés puis complets, relire et committer.
+- [x] Reconstruire la ROM FR et vérifier les pointeurs, la palette et le rendu.
+- [x] Revalider le clignotement dans mGBA sans sauvegarde en jeu.
+- [x] Exécuter les tests ciblés puis complets, relire et committer.
 - [ ] Rebaser localement, commenter l’issue #155 et terminer sans push.
+
+## Revue du suivi
+
+- Le PNG versionné correspond au BMP du commentaire sur ses 40 960 indices et
+  ses 256 couleurs ; les pixels `(160,152)` et `(160,153)` valent désormais
+  tous deux 164.
+- La planche gagne une tuile dédiée sans bouger (`0x01FD4854`). La tilemap est
+  relocalisée et ses deux pointeurs convergent vers le même flux ; l’extracteur
+  suit désormais ces pointeurs connus et réexporte la grille complète exacte.
+- La palette à `0x01FD699C` et tous les octets hors planche, pointeurs et nouveau
+  flux tilemap restent inchangés. Deux builds FR successifs sont byte-identiques.
+- Une sonde mGBA sur 360 frames confirme que les deux pixels restaurés passent
+  par au moins deux couleurs et continuent donc de clignoter ensemble.
+- Vérifications : 35 tests sprite ciblés, `make test-rom` avec 583 réussites et
+  36 skips, plus le hook source avec 1 674 tests Python, 68 tests Vitest et les
+  builds FR/IT/DE. La première revue indépendante a trouvé deux lacunes
+  (extraction post-relocalisation et empreinte partielle), toutes deux corrigées.
 
 # Issue #167 — libellés des options du PC
 

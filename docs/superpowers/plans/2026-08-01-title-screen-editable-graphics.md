@@ -179,8 +179,11 @@ python3 scripts/extract_sprite.py --rom input/roms/englishrom.gba \
 **Fichiers :**
 
 - Modifier : `tests/unit/test_title_screen_sprite.py`
+- Modifier : `tests/unit/test_sprite_rom.py`
 - Modifier : `languages/fr/sprites.py`
 - Modifier : `languages/fr/sprites/title_screen.png`
+- Modifier : `scripts/extract_sprite.py`
+- Modifier : `src/graphics/sprite_rom.py`
 - Modifier : `docs/superpowers/specs/2026-08-01-title-screen-editable-graphics-design.md`
 - Modifier : `tasks/todo.md`
 
@@ -193,6 +196,8 @@ python3 scripts/extract_sprite.py --rom input/roms/englishrom.gba \
 - Après insertion, les pointeurs de planche restent à `0x01FD4854`, ceux de la
   tilemap ciblent un même nouveau flux et la grille réextraite contient
   l’indice 164 aux pixels `(160,152)` et `(160,153)`.
+- `resolve_live_offset` exige que tous les pointeurs connus convergent vers une
+  adresse ROM valide ; l’extracteur suit ainsi les blocs relocalisés sans scan.
 
 - [x] Modifier le test d’asset pour exiger l’empreinte du BMP complet et les
   deux valeurs littérales `grid[152][160] == grid[153][160] == 164`.
@@ -204,9 +209,11 @@ python3 scripts/extract_sprite.py --rom input/roms/englishrom.gba \
   convertir le BMP fourni en PNG indexé en conservant exactement la palette et
   les 40 960 indices.
 - [x] Relancer le test ciblé avec marqueur ROM et exiger 100 % de réussite.
-- [ ] Exécuter `make build-fr`, suivre les pointeurs dans
+- [x] Exécuter `make build-fr`, suivre les pointeurs dans
   `output/roms/GenedRom-fr.gba` et comparer la grille finale à l’asset.
-- [ ] Vérifier le clignotement mGBA sans sauvegarde en jeu, puis lancer les
+- [x] Vérifier le clignotement mGBA sans sauvegarde en jeu, puis lancer les
   tests graphiques ciblés, la suite rapide complète et le lint.
+- [x] Corriger après revue l’extraction sur ROM relocalisée et remplacer
+  l’empreinte partielle par les 40 960 indices plus la palette complète.
 - [ ] Relire le diff, committer les chemins exacts, rebaser via
   l’orchestrateur, republier le résultat sur l’issue #155 et terminer sans push.

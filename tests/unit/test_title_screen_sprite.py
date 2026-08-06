@@ -4,6 +4,7 @@ from __future__ import annotations
 
 import hashlib
 import shutil
+import struct
 import subprocess
 from pathlib import Path
 
@@ -23,6 +24,20 @@ PALETTE_OFFSET = 0x01FD699C
 TILES_POINTER_OFFSETS = (0x01ED7C7C, 0x01ED7EC0)
 TILEMAP_POINTER_OFFSETS = (0x01ED7C84, 0x01ED7EC8)
 GBA_ROM_BASE = 0x08000000
+
+
+def _indexed_png_palette(path: Path) -> bytes:
+    """Retourne la palette PLTE brute d'un PNG indexé."""
+    data = path.read_bytes()
+    cursor = 8
+    while cursor + 12 <= len(data):
+        length = struct.unpack(">I", data[cursor : cursor + 4])[0]
+        kind = data[cursor + 4 : cursor + 8]
+        payload = data[cursor + 8 : cursor + 8 + length]
+        if kind == b"PLTE":
+            return payload
+        cursor += 12 + length
+    raise AssertionError(f"{path}: palette PLTE absente")
 
 
 def test_title_screen_registry_describes_live_8bpp_screen() -> None:
@@ -91,22 +106,22 @@ def test_versioned_title_screen_asset_keeps_a_visible_prompt() -> None:
     assert sum(pixel in {163, 164} for pixel in prompt) >= 100
 
 
-def test_versioned_title_screen_asset_contains_pressez_start_artwork() -> None:
+def test_versioned_title_screen_asset_matches_complete_reference() -> None:
     # Arrange
-    _, _, grid = read_indexed_image(ASSET)
+    width, height, grid = read_indexed_image(ASSET)
 
-    # Act: empreinte des seuls pixels retouchés dans le BMP fourni.
-    prompt = bytes(
-        grid[y][x]
-        for y in range(149, 154)
-        for x in range(80, 161)
+    # Act: empreinte logique des 40 960 indices et des 256 couleurs du BMP.
+    payload = (
+        struct.pack(">II", width, height)
+        + bytes(pixel for row in grid for pixel in row)
+        + _indexed_png_palette(ASSET)
     )
 
     # Assert
     assert grid[152][160] == 164
     assert grid[153][160] == 164
-    assert hashlib.sha256(prompt).hexdigest() == (
-        "b4603667ffb9d2b91fd64b7e8beae0e83229dd8be2139e947159c742c61f91fc"
+    assert hashlib.sha256(payload).hexdigest() == (
+        "be5e1ccf865dc5363cca493f5e0043a4437c482d9bf6983b8e8a06ffc3f885f5"
     )
 
 
@@ -182,6 +197,28 @@ def test_insert_cli_round_trips_8bpp_title_screen(tmp_path: Path) -> None:
         tiles_tall=expected_height // 8,
         bits_per_pixel=8,
     )
+    extracted_image = tmp_path / "title-screen-reextracted.png"
+    subprocess.run(
+        [
+            "python3",
+            "scripts/extract_sprite.py",
+            "--rom",
+            str(output_rom),
+            "--lang",
+            "fr",
+            "--sprite",
+            "title_screen",
+            "-o",
+            str(extracted_image),
+        ],
+        cwd=ROOT,
+        check=True,
+        capture_output=True,
+        text=True,
+    )
+    extracted_width, extracted_height, extracted_grid = read_indexed_image(
+        extracted_image
+    )
 
     # Assert
     assert actual_tiles is not None
@@ -190,6 +227,9 @@ def test_insert_cli_round_trips_8bpp_title_screen(tmp_path: Path) -> None:
     assert relocated_tilemap_offset != TILEMAP_OFFSET
     assert len(actual_tiles[0]) == len(source_tiles[0]) + 64
     assert actual_grid == expected_grid
+    assert (extracted_width, extracted_height) == (expected_width, expected_height)
+    assert extracted_grid == expected_grid
+    assert _indexed_png_palette(extracted_image) == _indexed_png_palette(ASSET)
     assert actual_grid[152][160] == 164
     assert actual_grid[153][160] == 164
     assert actual_rom[TILEMAP_OFFSET:PALETTE_OFFSET] == source_rom[

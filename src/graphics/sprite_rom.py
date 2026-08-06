@@ -99,6 +99,45 @@ def read_gba_palette(
     return palette
 
 
+def resolve_live_offset(
+    rom: bytes,
+    expected_offset: int,
+    pointer_offsets: tuple[int, ...] = (),
+) -> int:
+    """Résout l'emplacement vivant d'un bloc depuis ses pointeurs connus.
+
+    Sans pointeur déclaré, l'offset de registre reste la source. Avec des
+    pointeurs, chacun doit être dans la ROM, viser une adresse ROM valide et
+    converger vers le même bloc. Cette validation stricte permet à
+    l'extracteur de suivre une relocalisation sans scan heuristique.
+    """
+    if not pointer_offsets:
+        return expected_offset
+
+    targets: set[int] = set()
+    for pointer_offset in pointer_offsets:
+        if not 0 <= pointer_offset <= len(rom) - 4:
+            raise ValueError(f"pointer offset 0x{pointer_offset:08X} outside ROM")
+        pointer = int.from_bytes(
+            rom[pointer_offset : pointer_offset + 4],
+            "little",
+        )
+        target = pointer - GBA_ROM_BASE
+        if not GBA_ROM_BASE <= pointer < GBA_ROM_BASE + len(rom):
+            raise ValueError(
+                f"pointer at 0x{pointer_offset:08X} is outside ROM: "
+                f"0x{pointer:08X}"
+            )
+        targets.add(target)
+
+    if len(targets) != 1:
+        formatted = ", ".join(f"0x{target:08X}" for target in sorted(targets))
+        raise ValueError(
+            f"known pointers for 0x{expected_offset:08X} disagree: {formatted}"
+        )
+    return targets.pop()
+
+
 def tiles_to_grid(
     tiles: bytes,
     tiles_wide: int,

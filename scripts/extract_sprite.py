@@ -43,6 +43,7 @@ from src.graphics.sprite_rom import (  # noqa: E402
     extract_block,
     extract_mapped_block,
     read_gba_palette,
+    resolve_live_offset,
 )
 
 
@@ -91,12 +92,25 @@ def main() -> int:
             f"{args.sprite!r}: an 8bpp sprite requires a 256-colour palette"
         )
     for index in indices:
-        offset = sprite.blocks[index]
+        offset = resolve_live_offset(
+            rom,
+            sprite.blocks[index],
+            sprite.block_pointers[index] if sprite.block_pointers else (),
+        )
         if sprite.tilemaps:
+            tilemap_offset = resolve_live_offset(
+                rom,
+                sprite.tilemaps[index],
+                (
+                    sprite.tilemap_pointers[index]
+                    if sprite.tilemap_pointers
+                    else ()
+                ),
+            )
             grid, dec_len, comp_len = extract_mapped_block(
                 rom,
                 offset,
-                sprite.tilemaps[index],
+                tilemap_offset,
                 sprite.tiles_wide,
                 sprite.tiles_tall,
                 compressed=sprite.compressed,
@@ -124,7 +138,7 @@ def main() -> int:
             f"{width}x{height} -> {out} "
             f"(decompressed {dec_len}B, compressed {comp_len}B)"
             + (
-                f", tilemap 0x{sprite.tilemaps[index]:08X}"
+                f", tilemap 0x{tilemap_offset:08X}"
                 if sprite.tilemaps
                 else ""
             )
