@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Make every PC/Box « Move » menu label read « Dépl. » (GitHub issue #29).
+"""Render each PC/Box « Move » label for its available space (issues #29/#173).
 
 Context
 -------
@@ -15,9 +15,10 @@ rendering the corrupt « Dépl.Dépl. où ? » the reporter photographed. Writin
 « Dépl » (no period) fits but reads like a truncated word.
 
 These cells are referenced by ordinary 32-bit pointers, so the clean fix is to
-relocate: write properly terminated « Dépl. » strings into free ROM space and
-repoint every pointer at them. That delivers the period the reporter asked for,
-on every menu, with no overflow.
+relocate: write properly terminated strings into free ROM space and repoint each
+consumer according to its context. The Pokémon-selection option has enough room
+for « Déplacer » (issue #173); the secondary menu and HUD hint stay compact as
+« Dépl. » (issue #29), with no overflow.
 
 Same PC menu family, one bonus fix: the stored-mail submenu option « Move To
 Bag » at 0x4177DD is a *walked* string (no pointer references it — the menu
@@ -162,16 +163,23 @@ def _relocate_literal(
 # it. ``orig`` is the original cell offset (its pointers currently hold
 # ROM_BASE|orig); ``prefix`` is raw control-code bytes kept ahead of the text.
 #
-#   0x418484 « Move »        → « Dépl. »          (2 pointers: box option list)
+#   0x418484 « Move »        → « Déplacer »       (2 pointers: box option list)
 #   0xA4E1F1 « Move »        → « Dépl. »          (1 pointer: secondary move menu)
 #   0x418EB5 « ◄►Move »      → « ◄►Dépl. »        (4 pointers: HUD move hint)
 _RELOCATIONS = [
     {
-        "label": "Move (box option / secondary menu) -> Dépl.",
+        "label": "Move (box option list) -> Déplacer",
+        "prefix": b"",
+        "text": "Déplacer",
+        "pointers": [0x3D3548, 0x9A41C4],
+        "orig": {0x3D3548: 0x418484, 0x9A41C4: 0x418484},
+    },
+    {
+        "label": "Move (secondary menu) -> Dépl.",
         "prefix": b"",
         "text": "Dépl.",
-        "pointers": [0x3D3548, 0x9A41C4, 0xA6CAAC],
-        "orig": {0x3D3548: 0x418484, 0x9A41C4: 0x418484, 0xA6CAAC: 0xA4E1F1},
+        "pointers": [0xA6CAAC],
+        "orig": {0xA6CAAC: 0xA4E1F1},
     },
     {
         "label": "◄►Move (HUD hint) -> ◄►Dépl.",

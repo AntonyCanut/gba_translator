@@ -1432,3 +1432,31 @@ d’annulation dans le reste du jeu.
   verdoyant\nsur le gazon ! » et se termine par `0xFF`.
 - La garde ciblée réussit ses 27 tests. Le hook a validé 1 679 tests Python
   (1 ignoré), 68 tests Vitest, puis les builds FR, IT et DE.
+
+# Issue #173 — texte PC
+
+## Diagnostic et conception
+
+- Le menu contextuel montré dans l’issue lit `Move` via les pointeurs
+  `0x3D3548` et `0x9A41C4`. Le patch de l’issue #29 les regroupe actuellement
+  avec le menu secondaire compact `0xA6CAAC` et traduit les trois par
+  « Dépl. ».
+- La correction minimale sépare ces contextes : les deux options de sélection
+  deviennent « Déplacer », tandis que le menu secondaire et les aides compactes
+  conservent « Dépl. ».
+- La phrase sous le menu vient de l’entrée active unique `0x41825C` ; sa valeur
+  devient `{DYNAMIC} sélectionné.` afin d’obtenir « Nodulithe sélectionné. ».
+
+## Plan validé
+
+- [x] Ajouter les gardes rouges source, patch et ROM pour les deux libellés.
+- [x] Séparer les relocalisations du menu PC et corriger chirurgicalement
+  l’entrée `0x41825C` ainsi que son manifeste de protection.
+- [ ] Committer les sources avant d’exécuter la chaîne de build FR.
+- [ ] Reconstruire la ROM et décoder les pointeurs réellement livrés.
+- [ ] Exécuter les validations pertinentes, relire le diff et intégrer localement.
+- [ ] Commenter puis clôturer l’issue GitHub #173 avec l’état `completed`.
+
+## Revue
+
+- En attente de l’implémentation et des preuves de validation.

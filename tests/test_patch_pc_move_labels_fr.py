@@ -1,12 +1,12 @@
-"""Regression tests for the FR PC/Box « Move » → « Dépl. » label patch (issue #29).
+"""Regression tests for context-sensitive FR PC/Box « Move » labels.
 
 The tight 4-byte « Move » cells (0x418484, 0x418EB5, 0xA4E1F1) cannot hold the
 5-byte « Dépl. » in place — the inject pass overflowed 0xA4E1F1 into the next
 string, producing the corrupt « Dépl.Dépl. où ? » the reporter photographed. The
 patch relocates every such string to a baseline-free 0xFF block and repoints all
-their pointers, so each menu renders a properly terminated « Dépl. » (with the
-period). The pointer-less mail submenu « Move To Bag » is fixed in place to
-« Vers le sac ».
+their pointers. The selection menu renders « Déplacer » (issue #173), while the
+compact secondary menu and HUD keep a terminated « Dépl. » (issue #29). The
+pointer-less mail submenu « Move To Bag » is fixed in place to « Vers le sac ».
 """
 
 import struct
@@ -54,6 +54,13 @@ PC_MAIN_MENU_POINTERS = {
     0x3CDA40: "Salut !",
 }
 
+PC_BOX_SELECTION_POINTERS = (0x3D3548, 0x9A41C4)
+PC_SECONDARY_MOVE_POINTER = 0xA6CAAC
+PC_SELECTION_STATUS_OFFSET = 0x41825C
+PC_SELECTION_STATUS_POINTERS = (0x3CEAA8, 0x3CEB40, 0x9A427C, 0x9A4314)
+PC_SELECTION_STATUS_SOURCE = "{DYNAMIC} sélectionné."
+PC_SELECTION_STATUS_DECODED = "<0xF7>  sélectionné."
+
 EMPTY_MAIL_MESSAGE_OFFSET = 0x4177EE
 EMPTY_MAIL_MESSAGE_POINTERS = (0xEB938, 0xEB9B0)
 EMPTY_MAIL_MESSAGE_FR = "Pas de lettre ici."
@@ -98,6 +105,10 @@ def _load_last_wins() -> dict[int, str]:
 
 
 class TestConstants(unittest.TestCase):
+    def test_pc_selection_status_source_uses_requested_wording(self):
+        mapping = _load_last_wins()
+        self.assertEqual(mapping[PC_SELECTION_STATUS_OFFSET], PC_SELECTION_STATUS_SOURCE)
+
     def test_pc_main_menu_source_uses_full_requested_labels(self):
         mapping = _load_last_wins()
         for offset, expected in PC_MAIN_MENU_LABELS.items():
@@ -128,10 +139,10 @@ class TestConstants(unittest.TestCase):
 
 
 class TestApply(unittest.TestCase):
-    def test_all_pointers_render_depl_with_period(self):
+    def test_all_pointers_render_configured_label(self):
         rom = _fake_rom()
         n = apply(rom)
-        # 7 compact + 3 main + 1 box pointer + 1 in-place mail string.
+        # 7 contextual + 3 main + 1 box pointer + 1 in-place mail string.
         self.assertEqual(n, 12)
         for entry in _RELOCATIONS:
             expected = entry["prefix"] + _enc(entry["text"])
@@ -148,6 +159,21 @@ class TestApply(unittest.TestCase):
         rom = _fake_rom()
         apply(rom)
         ptr = struct.unpack_from("<I", rom, 0xA6CAAC)[0]
+        self.assertEqual(_decode_at(rom, ptr - ROM_BASE), "Dépl.")
+
+    def test_box_selection_uses_full_move_label(self):
+        rom = _fake_rom()
+        apply(rom)
+
+        for loc in PC_BOX_SELECTION_POINTERS:
+            ptr = struct.unpack_from("<I", rom, loc)[0]
+            self.assertEqual(_decode_at(rom, ptr - ROM_BASE), "Déplacer")
+
+    def test_secondary_move_menu_keeps_compact_label(self):
+        rom = _fake_rom()
+        apply(rom)
+
+        ptr = struct.unpack_from("<I", rom, PC_SECONDARY_MOVE_POINTER)[0]
         self.assertEqual(_decode_at(rom, ptr - ROM_BASE), "Dépl.")
 
     def test_mail_move_to_bag(self):
@@ -229,9 +255,20 @@ class TestBuiltRom(unittest.TestCase):
         self.assertTrue(0x08000000 <= ptr < 0x0A000000, f"bad ptr 0x{ptr:08X}")
         return _decode_at(self.rom, ptr - 0x08000000)
 
-    def test_box_option_and_secondary_menu(self):
-        for loc in (0x3D3548, 0x9A41C4, 0xA6CAAC):
-            self.assertEqual(self._follow(loc), "Dépl.", f"ptr@0x{loc:X}")
+    def test_box_selection_uses_full_move_label(self):
+        for loc in PC_BOX_SELECTION_POINTERS:
+            self.assertEqual(self._follow(loc), "Déplacer", f"ptr@0x{loc:X}")
+
+    def test_secondary_move_menu_keeps_compact_label(self):
+        self.assertEqual(self._follow(PC_SECONDARY_MOVE_POINTER), "Dépl.")
+
+    def test_selection_status_uses_requested_wording(self):
+        for loc in PC_SELECTION_STATUS_POINTERS:
+            self.assertEqual(
+                self._follow(loc),
+                PC_SELECTION_STATUS_DECODED,
+                f"ptr@0x{loc:X}",
+            )
 
     def test_hud_hint(self):
         for loc in (0xC05D8, 0xC12E0, 0xC283C, 0xC4FE8):

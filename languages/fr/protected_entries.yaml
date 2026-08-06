@@ -221,6 +221,12 @@ entries:
   expected: Choisis Pokémon ou Sortir.
   forbidden:
   - Choisis Pokémon ou Annuler.
+- offset: '0x41825C'
+  name: 'PC: confirmation du Pokémon sélectionné'
+  issue: '#173'
+  expected: '{DYNAMIC} sélectionné.'
+  forbidden:
+  - '{DYNAMIC}  est choisi.'
 - offset: '0x41858D'
   name: 'PC: libellé complet « Déplacer Pokémon »'
   issue: '#167'
