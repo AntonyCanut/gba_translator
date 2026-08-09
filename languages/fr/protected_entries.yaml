@@ -2057,3 +2057,9 @@ entries:
   expected: Durée jeu
   forbidden:
   - Temps
+- offset: '0x418E5C'
+  name: Écran de surnom — préfixe français
+  issue: '#179'
+  expected: Surnom de<0x00>
+  forbidden:
+  - ': surnom ?'

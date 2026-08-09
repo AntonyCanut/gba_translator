@@ -39,6 +39,7 @@ PATCH_ABILITY_NAMES_SCRIPT := languages/fr/patches/ability_names.py
 PATCH_ITEM_NAMES_SCRIPT := languages/fr/patches/item_names.py
 PATCH_TIME_FORMAT_SCRIPT := languages/fr/patches/time_format.py
 PATCH_BATTLE_PREFIX_SCRIPT := languages/fr/patches/battle_prefix.py
+PATCH_NICKNAME_PROMPT_SCRIPT := languages/fr/patches/nickname_prompt.py
 PATCH_VERSION_SCRIPT := languages/fr/patches/version.py
 PATCH_POKEDEX_FR_SCRIPT := languages/fr/patches/pokedex.py
 PATCH_POKEDEX_METRICS_FR_SCRIPT := languages/fr/patches/pokedex_metrics.py
@@ -242,6 +243,7 @@ build-fr: check-translations-fr ensure-fr-translation $(FRENCH_EXTRACT) $(SPANIS
 		--english-texts $(FRENCH_EXTRACT) \
 		--translations $(FR_TRANSLATION) \
 		--source $(FRENCH_ROM)
+	@$(PYTHON) $(PATCH_NICKNAME_PROMPT_SCRIPT) --rom $(FR_BUILD)
 	@$(PYTHON) $(PATCH_RITUAL_SCRIPT) --rom $(FR_BUILD) --source $(FRENCH_ROM)
 	@$(PYTHON) $(PATCH_VERSION_SCRIPT) --rom $(FR_BUILD) --build-number $(BUILD_NUMBER)
 	@$(PYTHON) $(PATCH_POKEDEX_FR_SCRIPT) \

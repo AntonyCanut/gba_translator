@@ -1583,3 +1583,22 @@ d’annulation dans le reste du jeu.
   réussis et 35 ignorés.
 - Le hook du commit source a validé 1 691 tests Python (1 ignoré), 68 tests
   Vitest, puis les builds FR, IT et DE.
+
+# Issue #179 — « Surnom de Wattouat ? »
+
+## Diagnostic et conception
+
+- L’entrée active `0x418E5C` est un suffixe ; la routine native copie toujours
+  le nom d’espèce avant ce texte, d’où « Wattouat : surnom ? ».
+- La traduction seule ne peut pas inverser les deux segments. La correction
+  minimale localisée réordonne la composition dans le seul build FR.
+- Le titre cible mesure 115 px pour Wattouat, sous les 128 px de la fenêtre.
+
+## Plan validé
+
+- [x] Ajouter une garde rouge qui exécute la routine Thumb et inspecte le tampon.
+- [x] Protéger puis corriger chirurgicalement l’entrée active `0x418E5C`.
+- [ ] Brancher le patch post-build FR et committer les sources avant le build.
+- [ ] Reconstruire la ROM et décoder le titre effectivement rendu.
+- [ ] Exécuter les validations, relire le diff et intégrer localement.
+- [ ] Commenter puis clôturer l’issue GitHub #179 avec l’état `completed`.
