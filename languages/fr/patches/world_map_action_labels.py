@@ -1,11 +1,11 @@
 #!/usr/bin/env python3
-"""Stabilise les libellés d'action de la carte mondiale (#111 / #131).
+"""Stabilise les libellés d'action partagés (#111 / #131 / #178).
 
 Le bandeau de déplacement est chargé par le littéral ``0x9FB64``. La source
 FR courte existe à ``0x418E77``, mais le build générique peut conserver une
-ancienne cellule terminée par « Annul. » ou laisser le littéral pointer vers
-une relocalisation périmée. Le correctif source seul ne survit donc pas à tous
-les rebuilds.
+ancienne cellule sans le point final ou laisser le littéral pointer vers une
+relocalisation périmée. Le correctif source seul ne survit donc pas à tous les
+rebuilds.
 
 Les actions d'annulation ont le même problème : l'injection relocalise leurs
 trois pointeurs vers la chaîne générique « Annuler » et laisse les deux cellules
@@ -29,9 +29,9 @@ WORLD_MAP_HINT_POINTER = 0x9FB64
 WORLD_MAP_HINT_OFFSET = 0x418E77
 WORLD_MAP_HINT_CPU_ADDR = ROM_BASE + WORLD_MAP_HINT_OFFSET
 
-# {DPAD_ANY}Dépl. {SE_SHOP}OK {B_BUTTON}Annul + terminateur CFRU.
+# {DPAD_ANY}Dépl. {SE_SHOP}OK {B_BUTTON}Annul. + terminateur CFRU.
 WORLD_MAP_HINT_BYTES = bytes.fromhex(
-    "f80cbe1be4e0ad00f800c9c500f801bbe2e2e9e0ff"
+    "f80cbe1be4e0ad00f800c9c500f801bbe2e2e9e0adff"
 )
 
 # {SE_SHOP}Annul. + terminateur CFRU, même largeur que {SE_SHOP}Cancel.

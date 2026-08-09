@@ -295,11 +295,11 @@ entries:
   - Move To Bag
   - Dépl au sac
 - offset: '0x418E77'
-  name: 'Carte mondiale: bandeau Dépl. / Annul limité à 5 glyphes'
-  issue: '#111'
-  expected: '{DPAD_ANY}Dépl. {SE_SHOP}OK {B_BUTTON}Annul'
+  name: 'Surnom/carte: bandeau Dépl. / Annul. ponctué'
+  issue: '#111, #178'
+  expected: '{DPAD_ANY}Dépl. {SE_SHOP}OK {B_BUTTON}Annul.'
   forbidden:
-  - '{DPAD_ANY}Dépl. {SE_SHOP}OK {B_BUTTON}Annul.'
+  - '{DPAD_ANY}Dépl. {SE_SHOP}OK {B_BUTTON}Annul'
   - '{DPAD_ANY}Dépl. {SE_SHOP}OK {B_BUTTON}Retour'
   - '{DPAD_ANY}Déplacer {SE_SHOP}OK {B_BUTTON}Retour'
 - offset: '0x418EB5'
