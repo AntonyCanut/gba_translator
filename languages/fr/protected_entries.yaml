@@ -1,4 +1,16 @@
 entries:
+- offset: '0x3FD7A2'
+  name: Message de capture principal au présent
+  issue: '#177'
+  expected: 'Et hop !\n{FD3A} est capturé !{FC0A}{FC0B}\l'
+  forbidden:
+  - a été capturé
+- offset: '0x3FD7C0'
+  name: Variante du message de capture au présent
+  issue: '#177'
+  expected: 'Et hop !\n{FD3A} est capturé !{FC0A}{FC0B}{FC08}'
+  forbidden:
+  - a été capturé
 - offset: '0x1F62FCC'
   name: Réplique de lancement du combat herbu au nord de Dresco
   issue: '#174'

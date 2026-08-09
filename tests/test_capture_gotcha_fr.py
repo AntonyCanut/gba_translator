@@ -77,15 +77,20 @@ class TestCaptureGotchaFr(unittest.TestCase):
                     f"slot {hex(slot)}: old FR wording remains: {text!r}",
                 )
 
-    def test_battle_variants_keep_buffer_and_space_before_bang(self) -> None:
-        """Both battle variants keep the {FD3A} name buffer and French spacing."""
+    def test_battle_variants_use_official_present_tense(self) -> None:
+        """Both variants use "est capturé", matching the official FR wording."""
         for slot in (0x3FE338, 0x3FE33C):
             with self.subTest(slot=hex(slot)):
                 text = _decode_via_slot(self.rom, slot)
                 self.assertIn(
-                    "capturé !",
+                    "est capturé !",
                     text,
-                    f"slot {hex(slot)}: missing space before '!': {text!r}",
+                    f"slot {hex(slot)}: expected official FR wording: {text!r}",
+                )
+                self.assertNotIn(
+                    "a été capturé !",
+                    text,
+                    f"slot {hex(slot)}: old past-tense wording remains: {text!r}",
                 )
                 target = struct.unpack_from("<I", self.rom, slot)[0] - GBA_BASE
                 raw = self.rom[target : self.rom.find(b"\xff", target, target + 80)]

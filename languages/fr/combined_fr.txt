@@ -25332,3 +25332,7 @@ objets utiles aux Dresseurs.
 
 # Issue #162 : panneau Astuces de Dresseurs.
 0x1f732bd: Astuces de Dresseurs !\p{L_BUTTON} et {SELECT_BUTTON} permettent de changer de Pokémon dans la liste !\p{L_BUTTON} auto-sélectionne un Pokémon à permuter, et {SELECT_BUTTON} met le Pokémon actuel en tête d’équipe !
+
+# Issue #177 : formulation officielle du message de capture.
+0x3fd7a2: Et hop !\n{FD3A} est capturé !{FC0A}{FC0B}\l
+0x3fd7c0: Et hop !\n{FD3A} est capturé !{FC0A}{FC0B}{FC08}
