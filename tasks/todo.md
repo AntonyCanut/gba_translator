@@ -1601,7 +1601,7 @@ d’annulation dans le reste du jeu.
 - [x] Brancher le patch post-build FR et committer les sources avant le build.
 - [x] Reconstruire la ROM et décoder le titre effectivement rendu.
 - [x] Exécuter les validations, relire le diff et intégrer localement.
-- [ ] Commenter puis clôturer l’issue GitHub #179 avec l’état `completed`.
+- [x] Commenter puis clôturer l’issue GitHub #179 avec l’état `completed`.
 
 ## Revue
 

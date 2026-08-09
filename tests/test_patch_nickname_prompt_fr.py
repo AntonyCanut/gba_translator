@@ -175,6 +175,7 @@ def test_issue_179_built_rom_renders_wattouat_title() -> None:
     wattouat_bytes = data[wattouat_offset:wattouat_offset + 11]
     wattouat = TextDecoder.decode_pokemon(wattouat_bytes)
 
+    assert title_bytes == TextEncoder.encode_pokemon("Surnom de ")
     assert title == "Surnom de "
     assert wattouat == "Wattouat"
     assert _emulate_title(routine, title, wattouat) == "Surnom de Wattouat ?"
