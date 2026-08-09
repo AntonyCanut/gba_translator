@@ -1512,7 +1512,6 @@ d’annulation dans le reste du jeu.
   586 tests ROM réussis et 38 ignorés. Son unique échec initial, un replay
   émulateur italien n’ayant pas détecté le premier combat sans constater de
   gel, a réussi immédiatement lors de sa relance isolée.
-
 # Issue #180 — « Anc. Sav. » → « Précéd. »
 
 ## Diagnostic et conception
@@ -1551,3 +1550,23 @@ d’annulation dans le reste du jeu.
   ainsi que l’octet de remplissage `0xFF` avant la région date/heure.
 - Le diff reste limité à la traduction, sa garde, son test, cette revue et la
   ROM FR reconstruite. Aucun push distant n’est effectué.
+
+# Issue #176 — « Temps » → « Durée jeu » sur la carte Dresseur
+
+## Diagnostic et conception
+
+- Le libellé de la carte Dresseur vient de l’entrée `0x416190`, référencée par
+  les pointeurs ROM `0x6FE80` et `0x1EB6220`.
+- L’autre entrée « Temps » à `0x41B6DC` appartient à un écran distinct et doit
+  rester inchangée.
+- La correction minimale ajoute une dernière entrée active pour `0x416190`, la
+  protège dans le manifeste d’intégrité et vérifie les pointeurs de la ROM FR.
+
+## Plan validé
+
+- [ ] Ajouter la régression rouge sur les deux pointeurs de la carte Dresseur.
+- [ ] Corriger chirurgicalement l’entrée active et son manifeste de protection.
+- [ ] Committer les sources avant d’exécuter la chaîne de build FR.
+- [ ] Reconstruire la ROM et décoder le libellé réellement livré.
+- [ ] Exécuter les validations pertinentes, relire le diff et intégrer localement.
+- [ ] Commenter puis clôturer l’issue GitHub #176 avec l’état `completed`.
