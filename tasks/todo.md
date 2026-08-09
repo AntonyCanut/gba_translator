@@ -1564,9 +1564,22 @@ d’annulation dans le reste du jeu.
 
 ## Plan validé
 
-- [ ] Ajouter la régression rouge sur les deux pointeurs de la carte Dresseur.
-- [ ] Corriger chirurgicalement l’entrée active et son manifeste de protection.
-- [ ] Committer les sources avant d’exécuter la chaîne de build FR.
-- [ ] Reconstruire la ROM et décoder le libellé réellement livré.
-- [ ] Exécuter les validations pertinentes, relire le diff et intégrer localement.
-- [ ] Commenter puis clôturer l’issue GitHub #176 avec l’état `completed`.
+- [x] Ajouter la régression rouge sur les deux pointeurs de la carte Dresseur.
+- [x] Corriger chirurgicalement l’entrée active et son manifeste de protection.
+- [x] Committer les sources avant d’exécuter la chaîne de build FR.
+- [x] Reconstruire la ROM et décoder le libellé réellement livré.
+- [x] Exécuter les validations pertinentes, relire le diff et intégrer localement.
+- [x] Commenter puis clôturer l’issue GitHub #176 avec l’état `completed`.
+
+## Revue
+
+- Le cycle TDD a d’abord reproduit l’erreur (« Temps » au lieu de « Durée
+  jeu »), puis les deux tests ciblés ont réussi après reconstruction.
+- Les pointeurs `0x6FE80` et `0x1EB6220` visent `0x904C24`, où la ROM encode
+  « Durée jeu » (`BE E9 E6 1B D9 00 DE D9 E9 FF`). Le pointeur indépendant
+  `0xCF34` continue de décoder « Temps ».
+- Le contrôle d’intégrité protège désormais 349 entrées FR. `make test-rom` a
+  confirmé deux builds FR octet pour octet identiques, puis 595 tests ROM
+  réussis et 35 ignorés.
+- Le hook du commit source a validé 1 691 tests Python (1 ignoré), 68 tests
+  Vitest, puis les builds FR, IT et DE.
