@@ -96,11 +96,13 @@ class TestRealRepo:
     def test_issue_180_previous_save_label_is_protected(self):
         fr = [t for t in cti.discover_languages() if t[0] == "fr"]
         assert fr
+        mapping, _ = cti.load_last_wins(fr[0][1])
         entries = cti.load_manifest(fr[0][2])
         by_offset = {entry.offset: entry for entry in entries}
         entry = by_offset[0x1F11DA3]
         assert entry.expected == "Précéd."
         assert "Anc. Sav." in entry.forbidden
+        assert mapping[0x1F11DA3] == entry.expected
 
     def test_issue_160_next_pokemon_prompt_is_protected(self):
         fr = [t for t in cti.discover_languages() if t[0] == "fr"]

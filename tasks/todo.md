@@ -1532,11 +1532,22 @@ d’annulation dans le reste du jeu.
 
 - [x] Ajouter la garde de régression et constater son échec sur « Anc. Sav. ».
 - [x] Remplacer uniquement la dernière entrée active `0x1F11DA3` par « Précéd. ».
-- [ ] Vérifier la garde, committer les sources avant le build et relire le diff.
-- [ ] Régénérer les données FR, reconstruire la ROM et décoder le slot livré.
-- [ ] Exécuter les validations, compléter la revue et intégrer sans push.
+- [x] Vérifier la garde, committer les sources avant le build et relire le diff.
+- [x] Régénérer les données FR, reconstruire la ROM et décoder le slot livré.
+- [x] Exécuter les validations, compléter la revue et intégrer sans push.
 - [ ] Commenter puis clôturer l’issue GitHub avec l’état `completed`.
 
 ## Revue
 
-- À compléter après les preuves source, tests et ROM.
+- TDD rouge : la nouvelle garde a signalé la régression vers « Anc. Sav. » à
+  `0x1F11DA3`; TDD vert : les 28 tests d’intégrité passent et la garde globale
+  résout désormais l’entrée vers « Précéd. ».
+- Le hook de commit a validé 1 692 tests Python (1 ignoré), 68 tests Vitest et
+  les builds complets FR/IT/DE.
+- `make test-rom` a confirmé deux builds FR identiques octet par octet, puis
+  591 tests ROM réussis et 37 ignorés.
+- Dans `output/roms/GenedRom-fr.gba`, le slot `0x1F11DA3..0x1F11DAB` vaut
+  `cae61bd71bd8adffff`, se décode en « Précéd. » et conserve le terminateur
+  ainsi que l’octet de remplissage `0xFF` avant la région date/heure.
+- Le diff reste limité à la traduction, sa garde, son test, cette revue et la
+  ROM FR reconstruite. Aucun push distant n’est effectué.
