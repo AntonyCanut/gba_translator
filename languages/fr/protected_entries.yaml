@@ -11,6 +11,12 @@ entries:
   expected: 'Et hop !\n{FD3A} est capturé !{FC0A}{FC0B}{FC08}'
   forbidden:
   - a été capturé
+- offset: '0x1F11DA3'
+  name: Libellé de la sauvegarde précédente
+  issue: '#180'
+  expected: Précéd.
+  forbidden:
+  - Anc. Sav.
 - offset: '0x1F62FCC'
   name: Réplique de lancement du combat herbu au nord de Dresco
   issue: '#174'

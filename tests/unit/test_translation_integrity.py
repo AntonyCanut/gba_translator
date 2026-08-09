@@ -93,6 +93,15 @@ class TestRealRepo:
         assert entry.expected == "Gravis le Mont Givre et dirige-toi\\nvers Cimistral !"
         assert "Monte le Mont Givre et dirige-toi\\nvers Cimistral !" in entry.forbidden
 
+    def test_issue_180_previous_save_label_is_protected(self):
+        fr = [t for t in cti.discover_languages() if t[0] == "fr"]
+        assert fr
+        entries = cti.load_manifest(fr[0][2])
+        by_offset = {entry.offset: entry for entry in entries}
+        entry = by_offset[0x1F11DA3]
+        assert entry.expected == "Précéd."
+        assert "Anc. Sav." in entry.forbidden
+
     def test_issue_160_next_pokemon_prompt_is_protected(self):
         fr = [t for t in cti.discover_languages() if t[0] == "fr"]
         assert fr

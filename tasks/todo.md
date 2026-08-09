@@ -1512,3 +1512,31 @@ d’annulation dans le reste du jeu.
   586 tests ROM réussis et 38 ignorés. Son unique échec initial, un replay
   émulateur italien n’ayant pas détecté le premier combat sans constater de
   gel, a réussi immédiatement lors de sa relance isolée.
+
+# Issue #180 — « Anc. Sav. » → « Précéd. »
+
+## Diagnostic et conception
+
+- L’écran de sauvegarde lit l’entrée FR active unique `0x1F11DA3`, équivalente
+  à l’anglais « Old Save » et immédiatement suivie de la région date/heure
+  gérée par `languages/fr/patches/time_format.py`.
+- La correction retenue remplace chirurgicalement la source par « Précéd. » et
+  la protège dans `languages/fr/protected_entries.yaml`. Elle tient dans le
+  slot anglais de huit glyphes et ne nécessite ni relocalisation ni patch
+  binaire dédié.
+- Les alternatives écartées sont un patch post-build, qui dupliquerait la
+  source de vérité, et une modification du patch date/heure, qui toucherait une
+  région voisine sans être responsable du libellé.
+
+## Plan validé
+
+- [x] Ajouter la garde de régression et constater son échec sur « Anc. Sav. ».
+- [x] Remplacer uniquement la dernière entrée active `0x1F11DA3` par « Précéd. ».
+- [ ] Vérifier la garde, committer les sources avant le build et relire le diff.
+- [ ] Régénérer les données FR, reconstruire la ROM et décoder le slot livré.
+- [ ] Exécuter les validations, compléter la revue et intégrer sans push.
+- [ ] Commenter puis clôturer l’issue GitHub avec l’état `completed`.
+
+## Revue
+
+- À compléter après les preuves source, tests et ROM.
