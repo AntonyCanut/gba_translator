@@ -1598,7 +1598,17 @@ d’annulation dans le reste du jeu.
 
 - [x] Ajouter une garde rouge qui exécute la routine Thumb et inspecte le tampon.
 - [x] Protéger puis corriger chirurgicalement l’entrée active `0x418E5C`.
-- [ ] Brancher le patch post-build FR et committer les sources avant le build.
-- [ ] Reconstruire la ROM et décoder le titre effectivement rendu.
-- [ ] Exécuter les validations, relire le diff et intégrer localement.
+- [x] Brancher le patch post-build FR et committer les sources avant le build.
+- [x] Reconstruire la ROM et décoder le titre effectivement rendu.
+- [x] Exécuter les validations, relire le diff et intégrer localement.
 - [ ] Commenter puis clôturer l’issue GitHub #179 avec l’état `completed`.
+
+## Revue
+
+- Le préfixe vivant de la ROM se décode en `Surnom de ` et l’espèce 179 en
+  `Wattouat`; les octets Thumb versionnés produisent `Surnom de Wattouat ?`
+  sous Unicorn.
+- Le build FR est byte-identique sur deux reconstructions consécutives.
+- Le hook source a validé 1 693 tests Python (1 ignoré), 68 tests Vitest et les
+  builds FR/IT/DE. `make test-rom` a ensuite validé 593 tests (36 ignorés),
+  dont la nouvelle garde ROM de l’issue #179.

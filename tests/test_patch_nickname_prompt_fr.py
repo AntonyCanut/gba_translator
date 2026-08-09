@@ -8,6 +8,7 @@ doit exécuter les vrais octets Thumb qui composent au contraire
 from __future__ import annotations
 
 import importlib.util
+import struct
 from pathlib import Path
 
 import pytest
@@ -18,6 +19,7 @@ from src.core.text_codec import TextDecoder, TextEncoder
 ROOT = Path(__file__).resolve().parents[1]
 COMBINED = ROOT / "languages/fr/combined_fr.txt"
 PATCH_MODULE = ROOT / "languages/fr/patches/nickname_prompt.py"
+BUILT_ROM = ROOT / "output/roms/GenedRom-fr.gba"
 
 ROUTINE_FILE = 0x9F4F0
 ROUTINE_GBA = 0x08000000 + ROUTINE_FILE
@@ -156,3 +158,23 @@ def test_issue_179_patch_is_declared_and_idempotent() -> None:
     assert module.apply_patches(data) == 1
     assert data[ROUTINE_FILE:ROUTINE_FILE + ROUTINE_SIZE] == module.PATCHED_ROUTINE
     assert module.apply_patches(data) == 0
+
+
+@pytest.mark.rom
+def test_issue_179_built_rom_renders_wattouat_title() -> None:
+    data = BUILT_ROM.read_bytes()
+    routine = data[ROUTINE_FILE:ROUTINE_FILE + ROUTINE_SIZE]
+    assert routine == _load_routine()
+
+    title_pointer = struct.unpack_from("<I", data, 0x3E247C)[0]
+    title_offset = title_pointer - 0x08000000
+    title_bytes = data[title_offset:data.index(b"\xff", title_offset) + 1]
+    title = TextDecoder.decode_pokemon(title_bytes)
+
+    wattouat_offset = (SPECIES_NAMES - 0x08000000) + 11 * 179
+    wattouat_bytes = data[wattouat_offset:wattouat_offset + 11]
+    wattouat = TextDecoder.decode_pokemon(wattouat_bytes)
+
+    assert title == "Surnom de "
+    assert wattouat == "Wattouat"
+    assert _emulate_title(routine, title, wattouat) == "Surnom de Wattouat ?"
