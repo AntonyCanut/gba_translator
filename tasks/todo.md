@@ -1661,10 +1661,22 @@ d’annulation dans le reste du jeu.
 - [x] Ajouter une garde rouge sur les deux abréviations finales.
 - [x] Importer les gélules du BMP `#30913654` en conservant palette et indices.
 - [x] Resynchroniser le générateur et la documentation de la planche.
-- [ ] Reconstruire la ROM et comparer planche, générateur et bloc LZ77.
-- [ ] Exécuter les validations ciblées et globales.
-- [ ] Commiter, rebaser, commenter et clôturer l'issue GitHub #145.
+- [x] Reconstruire la ROM et comparer planche, générateur et bloc LZ77.
+- [x] Exécuter les validations ciblées et globales.
+- [x] Préparer les commits et le bilan d'intégration de l'issue GitHub #145.
 
 ## Revue
 
-- En cours.
+- Les gélules affichent désormais « ATQ. SPE. » et « DEF. SPE. » ; le nouveau
+  `Q` descend d'un pixel dans le bord bas, conformément au BMP `#30913654`.
+- Le BMP complet réintroduisait la tuile 124 non vide et donc les quatre pixels
+  fantômes près de « POUVOIR ». Seules les trois gélules concernées ont été
+  importées ; tout le reste reste pixel-identique à la planche corrigée du
+  commentaire précédent.
+- La ROM reconstruite correspond pixel pour pixel au PNG et la sonde mGBA
+  montre les deux nouveaux libellés sur la page « Capacités », sans résidu sur
+  le panneau « POUVOIR ».
+- Le cycle TDD rouge/vert est observé. Les 31 gardes ciblées passent ; le hook
+  valide 1 680 tests Python, 68 tests Vitest et les builds FR/IT/DE ; Playwright
+  `hp-bar` passe 13/13 ; `make test-rom` confirme deux builds FR identiques et
+  termine avec 588 succès et 36 skips.

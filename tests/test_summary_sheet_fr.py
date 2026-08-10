@@ -210,6 +210,14 @@ class TestBuiltFrRomMatchesTheReferenceSheet(unittest.TestCase):
                          "la ROM et languages/fr/sprites/summary_stat_labels.png "
                          "ont divergé : relancer make build-fr")
 
+    def test_rom_carries_the_final_special_stat_abbreviations(self):
+        result = lz77_decompress(self.rom, BLOCK)
+        self.assertIsNotNone(result)
+        tiles = bytearray(result[0])
+        labels = {french: read_label(tiles, y0) for y0, _, french in LABELS}
+        self.assertEqual(labels["ATQ. SPE."], label_pixels("ATQ. SPE."))
+        self.assertEqual(labels["DEF. SPE."], label_pixels("DEF. SPE."))
+
     def test_recompressed_block_still_fits_its_slot(self):
         result = lz77_decompress(self.rom, BLOCK)
         self.assertIsNotNone(result)
