@@ -64,10 +64,16 @@ def _sheet(rom_path: Path) -> bytearray:
 
 
 class TestGlyphs(unittest.TestCase):
-    def test_every_glyph_has_seven_rows_of_equal_width(self):
+    def test_special_stat_labels_use_the_final_abbreviations(self):
+        translations = {english: french for _, english, french in LABELS}
+        self.assertEqual(translations["SP.ATK"], "ATQ. SPE.")
+        self.assertEqual(translations["SP.DEF"], "DEF. SPE.")
+
+    def test_every_glyph_has_base_rows_and_equal_width(self):
         for char, glyph in GLYPHS.items():
             with self.subTest(char=char):
-                self.assertEqual(len(glyph), GLYPH_ROWS)
+                expected_rows = GLYPH_ROWS + 1 if char == "Q" else GLYPH_ROWS
+                self.assertEqual(len(glyph), expected_rows)
                 self.assertEqual(len({len(row) for row in glyph}), 1)
 
     def test_every_glyph_uses_only_hash_and_dot(self):
@@ -86,14 +92,15 @@ class TestGlyphs(unittest.TestCase):
         """« U » et « Q », absents de l'anglais, restent cohérents avec « O »."""
         self.assertEqual(GLYPHS["U"][:5], GLYPHS["O"][1:6])
         self.assertEqual(GLYPHS["Q"][:5], GLYPHS["O"][:5])
+        self.assertEqual(GLYPHS["Q"][-1], "...#")
 
 
 class TestCapsuleGeometry(unittest.TestCase):
-    def test_letters_stay_on_rows_one_to_seven(self):
+    def test_letters_stay_inside_the_nine_row_capsule(self):
         for _, _, french in LABELS:
             with self.subTest(label=french):
                 rows = {row for _, row in letter_mask(french)}
-                self.assertTrue(rows <= set(range(1, PILL_HEIGHT - 1)))
+                self.assertTrue(rows <= set(range(1, PILL_HEIGHT)))
 
     def test_every_french_label_fits_the_sheet(self):
         for _, _, french in LABELS:

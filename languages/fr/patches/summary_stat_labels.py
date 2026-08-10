@@ -15,8 +15,8 @@ libellé      y (haut)     traitement
 ===========  ===========  ==============================
 ATTACK       54           → ``ATTAQUE``
 DEFENSE      66           inchangé (transparent en FR)
-SP.ATK       78           → ``ATT SPE.``
-SP.DEF       90           → ``DEF SPE.``
+SP.ATK       78           → ``ATQ. SPE.``
+SP.DEF       90           → ``DEF. SPE.``
 SPEED        102          → ``VITESSE``
 EXP.         114          inchangé
 ===========  ===========  ==============================
@@ -51,7 +51,9 @@ pour la laisser tranquille.
 
 Police
 ------
-Les lettres sont une fonte pixel maison de 7 rangées, trait 1 px.
+Les lettres sont une fonte pixel maison de 7 rangées, trait 1 px. Le ``Q``
+redessiné par l'auteur possède seul une huitième rangée de descente dans le
+bord bas de la gélule.
 :data:`GLYPHS` reprend au pixel près les glyphes déjà présents dans la feuille
 (ATTACK / DEFENSE / SP.ATK / SPEED / EXP. / NAME / TYPE / OT / IDNo / ITEM /
 PV) ; seuls ``Q`` et ``U``, absents de tout libellé anglais, ont été dessinés
@@ -107,9 +109,12 @@ LETTER = 0x1       # couleur des lettres
 PILL = 0x7         # intérieur de la gélule
 
 PILL_X0, PILL_X1 = 50, 92     # emprise horizontale maximale de la gélule
-PILL_HEIGHT = 9               # rangées de la gélule, lettres sur 1..7
+PILL_HEIGHT = 9               # lettres sur 1..7, descente du Q sur 8
 GLYPH_ROWS = 7
-LABEL_CENTER = 71             # axe de centrage des libellés
+LABEL_CENTER = 71             # axe de centrage par défaut des libellés
+LABEL_CENTER_OVERRIDES = {
+    "DEF. SPE.": 72,          # position exacte de la planche définitive
+}
 
 # Corps fixe de la gélule, par rangée (les rangées 0 et 8 épousent le mot).
 PILL_BODY: dict[int, tuple[int, int]] = {
@@ -126,8 +131,8 @@ PILL_BODY: dict[int, tuple[int, int]] = {
 # transparent en français, le second n'est pas un libellé de statistique.
 LABELS: tuple[tuple[int, str, str], ...] = (
     (54, "ATTACK", "ATTAQUE"),
-    (78, "SP.ATK", "ATT SPE."),
-    (90, "SP.DEF", "DEF SPE."),
+    (78, "SP.ATK", "ATQ. SPE."),
+    (90, "SP.DEF", "DEF. SPE."),
     (102, "SPEED", "VITESSE"),
 )
 
@@ -157,11 +162,11 @@ GLYPHS: dict[str, tuple[str, ...]] = {
     ".": ("..", "..", "..", "..", "..", "##", "##"),
     # Glyphes absents de la feuille anglaise, dessinés dans le même style.
     "U": ("#..#", "#..#", "#..#", "#..#", "#..#", "#..#", ".##."),
-    "Q": (".##.", "#..#", "#..#", "#..#", "#..#", ".##.", "..##"),
+    "Q": (".##.", "#..#", "#..#", "#..#", "#..#", "#.##", ".##.", "...#"),
 }
 
 LETTER_GAP = 1     # colonnes vides entre deux glyphes
-SPACE_WIDTH = 2    # largeur de l'espace (soit 4 px de séparation avec les gaps)
+SPACE_WIDTH = 0    # les deux gaps voisins suffisent à séparer les mots
 
 
 # ---------------------------------------------------------------------------
@@ -216,7 +221,8 @@ def letter_mask(word: str) -> set[tuple[int, int]]:
     étant ses bords hauts et bas.
     """
     pixels, width = render_word(word)
-    start = LABEL_CENTER - width // 2
+    center = LABEL_CENTER_OVERRIDES.get(word, LABEL_CENTER)
+    start = center - width // 2
     return {(start + dx, dy + 1) for dx, dy in pixels}
 
 
@@ -231,7 +237,9 @@ def capsule_mask(letters: set[tuple[int, int]]) -> dict[int, set[int]]:
     capsule = {dy: set(range(x0, x1 + 1)) for dy, (x0, x1) in PILL_BODY.items()}
     capsule[0] = _dilate(rows.get(1, set()))
     capsule[1] = _dilate(rows.get(1, set()) | rows.get(2, set()))
-    capsule[8] = _dilate(rows.get(7, set()))
+    # Le Q définitif descend sur la rangée 8 : son pixel doit lui aussi être
+    # entouré par le bord bas de la gélule.
+    capsule[8] = _dilate(rows.get(7, set()) | rows.get(8, set()))
     return capsule
 
 

@@ -1643,3 +1643,28 @@ d’annulation dans le reste du jeu.
   tests Python (1 ignoré), 68 tests Vitest et les builds FR/IT/DE.
 - `make test-rom` a confirmé deux builds FR identiques octet par octet, puis
   596 tests ROM réussis et 36 ignorés.
+# Issue #145 — abréviations finales des statistiques spéciales
+
+## Diagnostic et conception
+
+- Le commentaire du 10 août fournit une planche définitive qui remplace
+  « ATT SPE. » par « ATQ. SPE. » et « DEF SPE. » par « DEF. SPE. ».
+- La planche PNG est la source de vérité du bloc LZ77 `0x00E9A460`, mais le
+  générateur `summary_stat_labels.py` doit produire exactement les mêmes
+  gélules pour préserver l'idempotence et les gardes croisées.
+- La correction minimale importe le BMP sans redessiner son contenu, met à jour
+  les trois gélules contenant le nouveau `Q` et les deux abréviations, conserve
+  le panneau `POUVOIR` déjà corrigé, reconstruit la ROM et relit le bloc livré.
+
+## Plan validé
+
+- [x] Ajouter une garde rouge sur les deux abréviations finales.
+- [x] Importer les gélules du BMP `#30913654` en conservant palette et indices.
+- [x] Resynchroniser le générateur et la documentation de la planche.
+- [ ] Reconstruire la ROM et comparer planche, générateur et bloc LZ77.
+- [ ] Exécuter les validations ciblées et globales.
+- [ ] Commiter, rebaser, commenter et clôturer l'issue GitHub #145.
+
+## Revue
+
+- En cours.

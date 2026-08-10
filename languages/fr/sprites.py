@@ -195,7 +195,7 @@ SPRITES: dict[str, SpriteDef] = {
     # Word-image tileset of the Pokémon summary screen (GitHub issue #145):
     # 512 tiles, 16 wide, holding every baked label of the « Infos » and
     # « Capacités » pages — N° / NOM / TYPE / DO / N°ID / OBJET on the left,
-    # ATTAQUE / DEFENSE / ATT SPE. / DEF SPE. / VITESSE / EXP. in the stat
+    # ATTAQUE / DEFENSE / ATQ. SPE. / DEF. SPE. / VITESSE / EXP. in the stat
     # column, POUVOIR / PRECIS. on the move panel, plus the grey « PV » oval.
     # None of it is text, so no translation pass reaches it.
     #
