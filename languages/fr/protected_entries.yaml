@@ -2052,6 +2052,12 @@ entries:
   forbidden:
   - Picassaut/Hoothoot, Route 2,
 - offset: '0x416190'
+  name: Écran de sauvegarde — temps de jeu
+  issue: '#176'
+  expected: Temps
+  forbidden:
+  - Durée jeu
+- offset: '0x41B6DC'
   name: Carte Dresseur — durée de jeu
   issue: '#176'
   expected: Durée jeu

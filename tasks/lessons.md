@@ -19,3 +19,13 @@
   `protected_entries.yaml`.
 - La preuve finale reste le décodage de la cellule de classe dans la ROM
   reconstruite, avec son terminateur `0xFF`.
+
+## Issue #176 — identifier l'écran avant de nommer ses pointeurs
+
+- Deux chaînes identiques ne peuvent pas être attribuées à leur écran par leur seul texte
+  ou par leur proximité avec du code supposé : il faut provoquer une modification isolée
+  ou rejouer l'écran concerné.
+- Les pointeurs `0x6FE80` et `0x1EB6220` alimentent l'écran de sauvegarde depuis
+  `0x416190`; le pointeur `0xCF34` alimente la carte Dresseur depuis `0x41B6DC`.
+- Une garde ROM doit nommer et vérifier le consommateur observé. Un décodage correct au
+  mauvais pointeur protège précisément la régression inverse.

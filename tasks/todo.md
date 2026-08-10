@@ -1612,3 +1612,34 @@ d’annulation dans le reste du jeu.
 - Le hook source a validé 1 693 tests Python (1 ignoré), 68 tests Vitest et les
   builds FR/IT/DE. `make test-rom` a ensuite validé 593 tests (36 ignorés),
   dont la nouvelle garde ROM de l’issue #179.
+
+## Suivi de réouverture
+
+### Diagnostic corrigé
+
+- Les captures de la build livrée prouvent que les contextes avaient été inversés :
+  `0x6FE80` et `0x1EB6220` alimentent l'écran de sauvegarde, tandis que `0xCF34`
+  alimente la carte Dresseur.
+- L'entrée `0x416190` doit donc rester « Temps » pour la sauvegarde et l'entrée
+  `0x41B6DC` doit devenir « Durée jeu » pour la carte Dresseur.
+
+### Plan de correction
+
+- [x] Corriger la garde ROM et constater les trois échecs sur la build actuelle.
+- [x] Permuter chirurgicalement les deux valeurs actives et leurs protections.
+- [x] Committer les sources avant le build, puis reconstruire la ROM FR.
+- [x] Décoder les trois pointeurs réellement livrés et exécuter les validations.
+- [ ] Relire, intégrer localement et mettre à jour l'issue GitHub sans push.
+
+### Revue de la correction
+
+- Le cycle TDD a produit exactement trois échecs avant correction, puis les trois
+  gardes ciblées ont réussi après reconstruction.
+- Dans la ROM FR, `0x6FE80` et `0x1EB6220` pointent vers `0xD10D7D`, qui se
+  décode en « Temps » (`CE D9 E1 E4 E7 FF`) pour l'écran de sauvegarde.
+- Le pointeur `0xCF34` de la carte Dresseur vise `0x904C1A`, qui se décode en
+  « Durée jeu » (`BE E9 E6 1B D9 00 DE D9 E9 FF`).
+- L'intégrité protège désormais 354 entrées FR. Le hook source a validé 1 694
+  tests Python (1 ignoré), 68 tests Vitest et les builds FR/IT/DE.
+- `make test-rom` a confirmé deux builds FR identiques octet par octet, puis
+  596 tests ROM réussis et 36 ignorés.
