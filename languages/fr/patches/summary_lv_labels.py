@@ -19,9 +19,9 @@ Two mechanisms use the ``<0xF9><0x05>`` "Lv" symbol here:
    bytes with the text « N. » (``C8 AD``) turns the header into « N.10 ».
    The second copy at ``0x26051C`` is deliberately kept as the compact
    extra-symbol: it is shared by the party list and the three-tile battle
-   healthbox. Its glyph is translated by ``party_lv_label.py`` and widened to
-   9 px, which makes « N. » + level occupy exactly 24 px without clipping the
-   last digit's shadow (issue #175).
+   healthbox. Its glyph is translated by ``party_lv_label.py`` and retains its
+   physical 8 px advance, which prevents both the clipped final shadow from
+   issue #175 and the unpainted cyan column from issue #182.
 
 2. **Memo « … au Lv10. »** (bottom box). The met-location templates
    (``Rencontré à …, au {LV_2} {LEVEL}.`` and its egg/fateful-encounter
@@ -99,8 +99,9 @@ def _patch_header(rom: bytearray) -> int:
     * ``0x416223`` (four pointers) — the **Résumé / Panthéon** header « Lv10 ».
     * ``0x26051C`` (three pointers) — shared by the **party list** and battle
       healthbox. It stays ``F9 05 FF`` so both screens use the translated
-      9 px ligature from ``party_lv_label.py``. Literal ``C8 AD`` is 10 px and
-      overflows the healthbox's 24 px text window (issue #175).
+      8 px ligature from ``party_lv_label.py``. Literal ``C8 AD`` is 10 px and
+      overflows the healthbox's 24 px text window (issue #175), while a fake
+      9 px advance exposes an unpainted column before the number (issue #182).
 
     Returns the number of strings patched. Idempotent: the summary copy remains
     literal « N. » and the shared party/battle copy remains the compact glyph.
@@ -108,7 +109,7 @@ def _patch_header(rom: bytearray) -> int:
     patched = 0
     # This live copy feeds both the party list and UpdateLvlInHealthbox. Two
     # literal glyphs are 10 px wide and overflow the battle window by one px;
-    # retain the 9 px translated ligature instead (issue #175).
+    # retain the translated 8 px ligature instead (issues #175 and #182).
     if len(rom) >= COMPACT_LV_STRING_OFFSET + 3:
         current = bytes(rom[COMPACT_LV_STRING_OFFSET:COMPACT_LV_STRING_OFFSET + 3])
         if current == ND_TEXT + b"\xff":

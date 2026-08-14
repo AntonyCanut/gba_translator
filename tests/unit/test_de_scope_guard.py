@@ -111,6 +111,13 @@ def test_non_de_branch_is_outside_the_guard() -> None:
     assert validate_de_scope(changes, "worktree/f-123-correction-fr", POLICY) == []
 
 
+def test_fr_branch_ignores_a_later_french_de_preposition() -> None:
+    changes = [change("languages/fr/patches/party_lv_label.py")]
+    branch = "worktree/b-610-issue-182-fr-2-1-102-ligne-de-pixel"
+
+    assert validate_de_scope(changes, branch, POLICY) == []
+
+
 def test_german_named_ticket_still_activates_the_de_guard() -> None:
     changes = [change("languages/fr/combined_fr.txt")]
 

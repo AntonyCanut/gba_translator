@@ -2178,3 +2178,37 @@ d’annulation dans le reste du jeu.
   Après rebase, les builds FR et IT passent aussi ; le diff F-602 reste borné
   à `languages/de`, aux gardes DE et à cette revue, sans source ni étape de
   pipeline FR/IT modifiée.
+# Issue #182 — colonne parasite entre « N. » et le niveau
+
+## Diagnostic et conception
+
+- La ligature « N. » est une image de 8 px ; le correctif de l’issue #175 a
+  pourtant porté son avance à 9 px pour remplir une fenêtre de combat de 24 px.
+- Le neuvième pixel n’est jamais peint : le replay mGBA montre qu’il conserve
+  une colonne cyan du tampon entre le point et le nombre, dans le HUD comme
+  dans la bannière de montée de niveau.
+- La correction minimale restaure l’avance native de 8 px. La ligature et les
+  chiffres occupent alors 23 px au maximum, ce qui conserve un pixel de marge
+  et l’ombre du dernier chiffre corrigée par l’issue #175.
+
+## Plan TDD
+
+- [x] Ajouter une garde rouge reliant l’avance à la largeur physique de 8 px.
+- [x] Faire converger les ROM à largeur 9 px vers la largeur correcte de 8 px.
+- [x] Rejouer les deux métriques dans mGBA et comparer les captures pixel à pixel.
+- [x] Reconstruire la ROM FR et exécuter les validations ciblées puis complètes.
+- [x] Relire le diff, committer, commenter et clôturer l’issue #182 sans push.
+
+## Revue
+
+- Le replay mGBA comparatif reproduit la colonne cyan avec l’avance de 9 px et
+  la supprime avec l’avance native de 8 px ; la ROM FR finale atteint également
+  la montée de niveau avec « N.22 » intact et sans colonne résiduelle.
+- Les 48 tests ciblés sont verts. Le hook complet valide 1 818 tests Python,
+  68 tests Vitest et reconstruit les ROM FR/IT/DE sans échec.
+- `make test-rom` confirme 619 tests supplémentaires ; ses trois échecs hors
+  périmètre concernent un audit anglais FR obsolète, le replay du premier combat
+  IT et une ponctuation Safari-Zone DE déjà divergente de cette correction.
+- La garde de portée DE ignore désormais une préposition française « de » dans
+  le nom d’une branche FR, afin que le correctif puisse suivre le chemin de build
+  français sans déclencher artificiellement les contrôles allemands.

@@ -48,6 +48,12 @@ nibble 45, so the shadow wraps the dot's new position on both its right and
 its bottom. Nibble 37/41/45's left sub-pixel (the real « N »'s own
 antialiasing column) and nibble 44 (the already-full shadow below the dot)
 are untouched.
+
+Issue #182: the ligature bitmap is physically 8 px wide. Advancing it by 9 px
+left an unpainted cyan column between « N. » and the dynamic level number in
+both battle contexts. The patch restores the native 8 px advance, leaving the
+24 px healthbox one trailing margin pixel while preserving the final digit's
+shadow.
 """
 
 import sys
@@ -59,13 +65,13 @@ import pytest
 sys.path.insert(0, str(Path(__file__).parent.parent))
 
 from languages.fr.patches.party_lv_label import (
+    BUGGY_ND_WIDTH,
     GLYPH_SIZE,
     LV_GLYPH_OFFSET,
     LV_WIDTH_OFFSET,
     NEW_ND_GLYPH,
     NEW_ND_WIDTH,
     OLD_LV_GLYPH,
-    OLD_LV_WIDTH,
     OLD_ND_GLYPH_ANTIALIAS_WRONG_SIDE,
     OLD_ND_GLYPH_HALF_SHADOW,
     OLD_ND_GLYPH_MISWIDENED_DOT,
@@ -94,13 +100,21 @@ class TestGlyphDefinitions(unittest.TestCase):
     def test_new_differs_from_old(self):
         self.assertNotEqual(NEW_ND_GLYPH, OLD_LV_GLYPH)
 
-    def test_compact_label_fills_battle_window_exactly(self):
+    def test_compact_label_advance_matches_its_eight_pixel_bitmap(self):
+        # Keep the renderer metric tied to the physical pixels the glyph paints.
+        glyph_height = 16
+        pixels_per_byte = 4
+        bitmap_width = GLYPH_SIZE * pixels_per_byte // glyph_height
+
+        self.assertEqual(NEW_ND_WIDTH, bitmap_width)
+
+    def test_compact_label_keeps_the_last_digit_inside_battle_window(self):
         digit_width = 5
         for digit_count in (1, 2, 3):
             with self.subTest(digit_count=digit_count):
                 x_position = digit_width * (3 - digit_count)
                 rendered_width = NEW_ND_WIDTH + digit_width * digit_count
-                self.assertEqual(x_position + rendered_width, 24)
+                self.assertLess(x_position + rendered_width, 24)
 
     def test_period_dot_spans_nibble_36_left_and_nibble_37_right_subpixels(self):
         # Issue #138 fifth follow-up: the dot's white ink is one physical pixel
@@ -240,13 +254,13 @@ class TestApplyPatch(unittest.TestCase):
         self.assertEqual(p.read_bytes()[LV_GLYPH_OFFSET:LV_GLYPH_OFFSET + GLYPH_SIZE],
                          NEW_ND_GLYPH)
 
-    def test_widens_compact_label_for_the_battle_healthbox(self):
-        rom = _fake_rom(NEW_ND_GLYPH, width=OLD_LV_WIDTH)
+    def test_restores_eight_pixel_advance_to_remove_the_ghost_column(self):
+        rom = _fake_rom(NEW_ND_GLYPH, width=BUGGY_ND_WIDTH)
         p = Path("/tmp/_lvtest_width.gba")
         p.write_bytes(rom)
 
         self.assertEqual(apply_patch(p), 1)
-        self.assertEqual(p.read_bytes()[LV_WIDTH_OFFSET], NEW_ND_WIDTH)
+        self.assertEqual(p.read_bytes()[LV_WIDTH_OFFSET], 8)
 
     def test_rejects_an_unknown_compact_label_width(self):
         rom = _fake_rom(NEW_ND_GLYPH, width=7)
@@ -341,14 +355,17 @@ class TestBuiltFrRomShowsNd(unittest.TestCase):
         self.assertEqual(rom[LV_GLYPH_OFFSET:LV_GLYPH_OFFSET + GLYPH_SIZE], NEW_ND_GLYPH,
                          "built FR ROM does not render « N. » in the party menu")
 
-    def test_built_rom_measures_compact_nd_as_nine_pixels(self):
+    def test_built_rom_advances_compact_nd_by_its_bitmap_width(self):
         if not BUILT_FR_ROM.exists():
             pytest.skip("GenedRom-fr.gba not built")
         rom = BUILT_FR_ROM.read_bytes()
+        glyph_height = 16
+        pixels_per_byte = 4
+        bitmap_width = GLYPH_SIZE * pixels_per_byte // glyph_height
         self.assertEqual(
             rom[LV_WIDTH_OFFSET],
-            NEW_ND_WIDTH,
-            "built FR ROM still clips the last battle-level digit shadow",
+            bitmap_width,
+            "built FR ROM leaves an unpainted column after the compact N. glyph",
         )
 
 

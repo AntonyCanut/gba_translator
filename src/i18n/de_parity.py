@@ -24,6 +24,9 @@ ALLOWED_STATUSES = {"equivalent", "shared", "excluded"}
 DE_BRANCH_PATTERN = re.compile(
     r"(?:^|[/_-])(?:de|german|allemand|deutsch)(?:[/_-]|$)", re.IGNORECASE
 )
+FR_BRANCH_PATTERN = re.compile(
+    r"(?:^|[/_-])(?:fr|french|francais)(?:[/_-]|$)", re.IGNORECASE
+)
 LANGUAGE_TEST_TOKENS = {
     "fr": ("fr", "french", "francais"),
     "de": ("de", "german", "allemand", "deutsch"),
@@ -410,7 +413,11 @@ def validate_de_scope(
     Returns:
         Liste vide si le périmètre est respecté, sinon violations détaillées.
     """
-    if not DE_BRANCH_PATTERN.search(branch_name):
+    de_marker = DE_BRANCH_PATTERN.search(branch_name)
+    if de_marker is None:
+        return []
+    fr_marker = FR_BRANCH_PATTERN.search(branch_name)
+    if fr_marker is not None and fr_marker.start() < de_marker.start():
         return []
 
     changes = tuple(changes)

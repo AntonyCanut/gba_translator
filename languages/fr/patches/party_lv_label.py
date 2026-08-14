@@ -24,12 +24,15 @@ screen that shows the level prefix (party list, and any other reader of glyph
 0x05), exactly as F-113's own decision tree prescribed for the ligature case.
 
 Issue #175: the battle healthbox composes this ligature and up to three digits
-inside a 24 px window. The original width-table value (8 px) would leave a
-one-pixel gap, while the literal ``C8 AD`` replacement is 10 px and clips the
-last digit's shadow. This patch therefore sets codepoint 0x05's measured width
-to 9 px: ``5 * (3 - digits) + 9 + 5 * digits`` is exactly 24 px for levels 1,
-19 and 100. The party list blits the ligature directly and is unaffected by
-the width-table adjustment.
+inside a 24 px window. The literal ``C8 AD`` replacement is 10 px and clips the
+last digit's shadow, while the compact 8 px glyph occupies at most 23 px with
+the digits and preserves that shadow.
+
+Issue #182: an earlier workaround advanced the compact glyph by 9 px to fill
+the window exactly. The bitmap still paints only 8 px, so the extra advance
+exposed one stale cyan column between « N. » and the level number in both the
+battle healthbox and the level-up banner. The measured width must match the
+physical 8 px bitmap; the remaining pixel is harmless trailing margin.
 
 Glyph format (reverse-engineered by write/observe on mGBA)
 ----------------------------------------------------------
@@ -156,8 +159,8 @@ from pathlib import Path
 LV_GLYPH_OFFSET = 0x1ECFA0
 GLYPH_SIZE = 32
 LV_WIDTH_OFFSET = 0x1EF005
-OLD_LV_WIDTH = 8
-NEW_ND_WIDTH = 9
+BUGGY_ND_WIDTH = 9
+NEW_ND_WIDTH = 8
 
 # Known-good current bytes: the original « Lv » ligature glyph.
 OLD_LV_GLYPH = bytes.fromhex(
@@ -301,14 +304,14 @@ def apply_patch(rom_path: Path) -> int:
         print(f"  party level label (0x1ECFA0): {was} → « N. » (dot shifted left, shadow on its right and below)")
 
     width = rom[LV_WIDTH_OFFSET]
-    if width == OLD_LV_WIDTH:
+    if width == BUGGY_ND_WIDTH:
         rom[LV_WIDTH_OFFSET] = NEW_ND_WIDTH
         patched += 1
-        print("  party/battle level label width (0x1EF005): 8 px → 9 px")
+        print("  party/battle level label width (0x1EF005): 9 px → 8 px")
     elif width != NEW_ND_WIDTH:
         raise ValueError(
             f"0x{LV_WIDTH_OFFSET:X}: unexpected glyph width {width} "
-            f"(wanted {OLD_LV_WIDTH} or {NEW_ND_WIDTH})"
+            f"(wanted {BUGGY_ND_WIDTH} or {NEW_ND_WIDTH})"
         )
 
     if patched:
