@@ -92,6 +92,21 @@ def test_manifest_registers_official_terminology_guards() -> None:
     } <= de_tests
 
 
+def test_manifest_preserves_english_toponym_guards_landed_in_parallel() -> None:
+    """Les étapes et preuves de B-598 restent inventoriées après rebase."""
+    manifest = DeParityManifest.load(MANIFEST_PATH)
+    de_steps = {entry.source for entry in manifest.de_only_build_steps}
+    de_tests = {entry.source for entry in manifest.de_only_rom_tests}
+
+    assert {"worldmap_route_panels", "zone_names"} <= de_steps
+    assert {
+        "tests/e2e/de/test_english_toponyms.py",
+        "tests/unit/de/test_audit_english_toponyms_de.py",
+        "tests/unit/de/test_english_toponyms_de.py",
+        "tests/unit/de/test_patch_worldmap_route_panels_de.py",
+    } <= de_tests
+
+
 def test_every_required_gap_has_a_supported_classification() -> None:
     """Une catégorie libre masquerait le type de travail restant à porter."""
     manifest = DeParityManifest.load(MANIFEST_PATH)

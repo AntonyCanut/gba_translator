@@ -107,6 +107,8 @@ de_only_build_steps:
   - {source: trainer_card_date, classification: asm_patch, status: excluded, reason: Déjà couvert directement par la recette DE.}
   - {source: world_map_action_labels, classification: fixed_table, status: excluded, reason: Actions de carte couvertes directement par la recette DE.}
   - {source: worldmap_labels, classification: pointer_text, status: excluded, reason: Noms propres de carte restaurés directement par la recette DE.}
+  - {source: worldmap_route_panels, classification: pointer_text, status: excluded, reason: Panneaux routiers canoniques EN couverts directement par la recette DE.}
+  - {source: zone_names, classification: pointer_text, status: excluded, reason: Noms de zones canoniques EN couverts directement par la recette DE.}
 
 patches:
   - {source: languages/fr/patches/ability_names.py, classification: fixed_table, status: equivalent, target: languages/de/patches/ability_names.py}
@@ -412,6 +414,7 @@ de_only_rom_tests:
   sources:
     - tests/e2e-playwright/german-translation.spec.ts
     - tests/e2e/de/test_build.py
+    - tests/e2e/de/test_english_toponyms.py
     - tests/e2e/de/test_official_terminology.py
     - tests/e2e/de/test_species_names_de.py
     - tests/e2e/de/test_pokedex.py
@@ -423,6 +426,8 @@ de_only_rom_tests:
     - tests/test_patch_givecs_gift_item_de.py
     - tests/test_pc_menu_descriptions_de.py
     - tests/unit/de/test_audit_species_names_de.py
+    - tests/unit/de/test_audit_english_toponyms_de.py
+    - tests/unit/de/test_english_toponyms_de.py
     - tests/unit/de/test_f601_content_batches_de.py
     - tests/unit/de/test_patch_cry_label_de.py
     - tests/unit/de/test_patch_fixed_table_names_de.py
@@ -431,6 +436,7 @@ de_only_rom_tests:
     - tests/unit/de/test_patch_nature_names_de.py
     - tests/unit/de/test_patch_pc_messages_de.py
     - tests/unit/de/test_patch_shop_de.py
+    - tests/unit/de/test_patch_worldmap_route_panels_de.py
     - tests/unit/de/test_pokecenter_upper_floor_de.py
     - tests/unit/de/test_interface_labels_de.py
     - tests/unit/de/test_menu_graphics_assets.py
