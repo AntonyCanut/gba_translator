@@ -28,6 +28,7 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[3]))
 
+from languages.de.terminology import section as terminology_section  # noqa: E402
 from src.text.charmap_data import BYTE_TO_CHAR, CHAR_TO_BYTE
 
 REV = CHAR_TO_BYTE
@@ -58,6 +59,19 @@ TYPE_PATCHES: list[tuple[int, str, str]] = [
     (0x3FE96A, "DRAGON",   "DRA"),
     (0x3FE978, "DARK",     "UNL"),
 ]
+
+OFFICIAL_TYPES = terminology_section("types")
+_TYPE_BY_ENGLISH = {
+    "FIGHTING": "Fighting", "FLYING": "Flying", "POISON": "Poison",
+    "GROUND": "Ground", "ROCK": "Rock", "BUG": "Bug", "GHOST": "Ghost",
+    "STEEL": "Steel", "FIRE": "Fire", "WATER": "Water", "GRASS": "Grass",
+    "ELECTRIC": "Electric", "PSYCHIC": "Psychic", "ICE": "Ice",
+    "DRAGON": "Dragon", "DARK": "Dark",
+}
+for _offset, _english, _display in TYPE_PATCHES:
+    _official = OFFICIAL_TYPES[_TYPE_BY_ENGLISH[_english]]
+    if _display != _official[:3].upper():
+        raise ValueError(f"German CFRU type stem {_display!r} diverges from {_official!r}")
 
 # Frozen-status condition word: "ice" -> "gef" (Gefroren) at 0x3FE846 (3 chars,
 # exact fit). This is a generic condition NOUN used inline in body text

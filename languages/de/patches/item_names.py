@@ -413,6 +413,12 @@ ITEM_NAMES = {
     "Muscle ": "Muskel+",
 }
 
+from languages.de.terminology import section as terminology_section  # noqa: E402
+
+# Les corrections auditées viennent directement du glossaire figé.
+OFFICIAL_ITEM_CORRECTIONS = terminology_section("item_corrections")
+ITEM_NAMES.update(OFFICIAL_ITEM_CORRECTIONS)
+
 # Every inline item-name cell we translate, keyed by the in-ROM English string.
 ALL_NAMES = {**BERRY_NAMES, **ITEM_NAMES}
 

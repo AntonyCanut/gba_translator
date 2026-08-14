@@ -1888,6 +1888,10 @@ d’annulation dans le reste du jeu.
   cellules contraintes. Les 894 attaques sont désormais alignées par index
   CFRU ; le fallback numérique qui pouvait remplacer `Feuerpeitsche` par
   `Feenschloss` a été supprimé.
+- Après revue indépendante, les patchs chargent directement le glossaire et
+  bloquent toute divergence des talents, objets, natures, types, statuts,
+  statistiques et cellules système auditées. Les 894 noms EN sont aussi
+  comparés à la table CFRU vivante, pas seulement au JSON qui écrit la ROM.
 - Les tables d'objets, talents, natures, types et états emploient les formes DE
   officielles. Les badges redessinables affichent les noms complets, tandis que
   les cellules moteur utilisent des racines de trois lettres documentées.

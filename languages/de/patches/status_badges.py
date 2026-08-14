@@ -47,7 +47,10 @@ from pathlib import Path
 ROOT_DIR = Path(__file__).resolve().parents[3]
 sys.path.insert(0, str(ROOT_DIR))
 
+from languages.de.terminology import section as terminology_section  # noqa: E402
 from languages.fr.patches.font import lz77_compress, lz77_decompress  # noqa: E402
+
+OFFICIAL_STATUSES = terminology_section("statuses")
 
 # LZ77 blocks that contain the 8-slot status badge tile set (language-agnostic
 # offsets — same blocks the FR patch touches).
@@ -92,15 +95,16 @@ _LETTERS: dict[str, list[list[bool]]] = {
 # (slot_index, de_letter1, de_letter2, de_letter3)
 # Slot 1 (PAR→PAR) and slot 5 (garbled) are intentionally excluded.
 _STATUS_PATCHES: list[tuple[int, str, str, str]] = [
-    (0, "G", "I", "F"),   # PSN → GIF  (Gift)
-    (2, "S", "C", "H"),   # SLP → SCH  (Schlaf)
-    (3, "G", "E", "F"),   # FRZ → GEF  (Gefroren)
-    (4, "V", "B", "R"),   # BRN → VBR  (Verbrennung)
+    (0, *OFFICIAL_STATUSES["poison"]["badge"]),
+    (2, *OFFICIAL_STATUSES["sleep"]["badge"]),
+    (3, *OFFICIAL_STATUSES["freeze"]["badge"]),
+    (4, *OFFICIAL_STATUSES["burn"]["badge"]),
 ]
 
 # FNT→KO badge (2-letter, slot 6, bg=pal14). Identical to the FR « K.O. » badge.
 _FNT_SLOT = 6
 _FNT_BG = 0xE   # gray background
+assert OFFICIAL_STATUSES["faint"]["badge"] == "KO"
 
 _K: list[list[bool]] = [
     [_L,_B,_B,_L],

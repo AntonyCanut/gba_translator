@@ -24,12 +24,19 @@ sources:
 constrained_cells:
   fallback_languages: []
   rule: >-
-    Employer le nom officiel s'il tient. Sinon conserver l'entrée CFRU,
-    tronquer à max_glyphs-1 glyphes et ajouter un point. Ne jamais remplacer
-    par l'entrée de même index d'une autre nomenclature ni par du français.
+    Employer le nom officiel s'il tient. Sinon employer un display_override
+    versionné lorsqu'il existe; à défaut, conserver l'entrée CFRU, tronquer à
+    max_glyphs-1 glyphes et ajouter un point. Ne jamais remplacer par l'entrée
+    de même index d'une autre nomenclature ni par du français.
   move_names: {cell_bytes: 13, max_glyphs: 12}
   item_names: {cell_bytes: 14, max_glyphs: 13}
   ability_names: {cell_bytes: 17, max_glyphs: 16}
+  display_overrides:
+    Focus Band: Fokusband
+    Sharp Beak: Spitz.Schnab.
+    Shell Bell: Muschelglocke
+    Member Card: Mitgl.Karte
+    Letter: Brief an Troy
   cfru_type_names:
     max_glyphs: 3
     display: {Fighting: KAM, Flying: FLU, Poison: GIF, Ground: BOD, Rock: GES, Bug: KÄF, Ghost: GEI, Steel: STA, Fire: FEU, Water: WAS, Grass: PFL, Electric: ELE, Psychic: PSY, Ice: EIS, Dragon: DRA, Dark: UNL}
@@ -110,6 +117,14 @@ stats:
   accuracy: Genauigkeit
   evasion: Fluchtwert
 
+stat_display:
+  Attack: ANGRIFF
+  Defense: VERT.
+  Special Attack: SP.-ANG.
+  Special Defense: SP.-VERT.
+  Speed: INIT.
+  Experience: EP.
+
 system_terms:
   move: Attacke
   ability: Fähigkeit
@@ -120,6 +135,14 @@ system_terms:
   trainer: Trainer
   party: Team
   bag: Beutel
+
+# Cellules système exactes auditées à chaque invocation du patch talents.
+system_cells:
+  '0xA4ED82': {english: Ability, german: Fähigkeit}
+  '0x4161D4': {english: Item, german: Item}
+  '0xA4E065': {english: Type, german: Typ}
+  '0x3EB5D4': {english: Party, german: TEAM}
+  '0x3E7F82': {english: Trainer, german: TRAINER}
 
 ability_corrections:
   Own Tempo: Tempomacher

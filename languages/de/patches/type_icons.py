@@ -15,7 +15,7 @@ Both are patched so every type display is German.
 
 German differs from French in three extra ways:
   * German type names differ from the English art for almost every type, so the
-    German set also redraws POISON→GIFT, DRAGON→DRACHE and ELECTR→ELEKTR — three
+    German set also redraws POISON→GIFT, DRAGON→DRACHE and ELECTR→ELEKTRO — three
     badges the French port left untouched because their French names coincided
     with the English art.  NORMAL is identical in German and is left alone.
   * German needs K, D, W, Z and Ä glyphs absent from the English badge font.
@@ -32,6 +32,10 @@ from __future__ import annotations
 import argparse
 import sys
 from pathlib import Path
+
+sys.path.insert(0, str(Path(__file__).resolve().parents[3]))
+
+from languages.de.terminology import section as terminology_section  # noqa: E402
 
 # The two byte-identical copies of the type-icon sheet (tile 0 of each).
 BASES = [0xB1EC64, 0x961A00]
@@ -73,6 +77,19 @@ DE_NAME = {
     "Psychic": "PSYCHO", "Ice": "EIS", "Dragon": "DRACHE", "Dark": "UNLICHT",
     "Fairy": "FEE",
 }
+
+OFFICIAL_TYPES = terminology_section("types")
+_ICON_TO_TYPE = {
+    "Fight": "Fighting", "Flying": "Flying", "Poison": "Poison",
+    "Ground": "Ground", "Rock": "Rock", "Bug": "Bug", "Ghost": "Ghost",
+    "Steel": "Steel", "Fire": "Fire", "Water": "Water", "Grass": "Grass",
+    "Electric": "Electric", "Psychic": "Psychic", "Ice": "Ice",
+    "Dragon": "Dragon", "Dark": "Dark", "Fairy": "Fairy",
+}
+for _icon, _display in DE_NAME.items():
+    _official = OFFICIAL_TYPES[_ICON_TO_TYPE[_icon]].upper()
+    if _display != _official:
+        raise ValueError(f"German type icon {_display!r} diverges from {_official!r}")
 
 _FILL = 15      # white letter fill (palette index)
 _SHADOW = 14    # drop-shadow (palette index)

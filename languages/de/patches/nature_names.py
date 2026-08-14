@@ -39,6 +39,7 @@ from pathlib import Path
 REPO_ROOT = Path(__file__).resolve().parents[3]
 sys.path.insert(0, str(REPO_ROOT))
 
+from languages.de.terminology import section as terminology_section  # noqa: E402
 from src.core.text_codec import GERMAN_UMLAUT_CHARS, TextEncoder  # noqa: E402
 from src.core.text_reinserter import FreeSpaceAllocator  # noqa: E402
 
@@ -80,6 +81,10 @@ TARGETS: dict[int, str] = {
     0x463E4F: "Sacht",   # Careful
     0x463E57: "Kauzig",  # Quirky
 }
+
+OFFICIAL_NATURES = terminology_section("natures")
+if list(TARGETS.values()) != list(OFFICIAL_NATURES.values()):
+    raise ValueError("German nature table diverges from official_terminology.yaml")
 
 
 def find_referrers(rom: bytes, offset: int) -> list[int]:

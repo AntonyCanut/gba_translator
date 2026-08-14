@@ -26,13 +26,16 @@ def roms() -> tuple[bytes, bytes]:
 
 
 def test_all_move_cells_decode_to_the_cfru_aligned_glossary(roms) -> None:
-    _english, german = roms
+    english, german = roms
     base = move_table.resolve_live_base(german)
+    entries = move_names.load_official_entries()
 
     for table_offset, expected in move_names.load_translations().items():
         index = (
             table_offset - move_table.LEGACY_TABLE_OFFSET
         ) // move_table.MOVE_STRIDE
+        english_offset = move_table.LEGACY_TABLE_OFFSET + index * move_table.MOVE_STRIDE
+        assert move_table._decode_cell(english, english_offset) == entries[index]["english"]
         offset = base + index * move_table.MOVE_STRIDE
         assert move_table._decode_cell(german, offset) == expected, index
 
@@ -49,6 +52,7 @@ def test_corrected_ability_cells_decode_to_official_names(roms) -> None:
         "Symbiosis": "Nutznießer",
         "Vital Spirit": "Munterkeit",
     }
+    found = set()
     for offset in range(
         ability_table.ABILITY_TABLE_OFFSET,
         ability_table.ABILITY_TABLE_LAST + 1,
@@ -57,6 +61,8 @@ def test_corrected_ability_cells_decode_to_official_names(roms) -> None:
         source = ability_table._decode_cell(english, offset)
         if source in expected_by_english:
             assert ability_table._decode_cell(german, offset) == expected_by_english[source]
+            found.add(source)
+    assert found == set(expected_by_english)
 
 
 def test_corrected_item_cells_decode_to_official_or_constrained_names(roms) -> None:

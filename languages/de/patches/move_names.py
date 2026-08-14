@@ -24,12 +24,19 @@ DE_COMBINED = REPO_ROOT / "languages/de/combined_de.txt"
 DE_OFFICIAL = REPO_ROOT / "languages/de/data/move_names_de_official.json"
 
 
+def load_official_entries(path: Path = DE_OFFICIAL) -> dict[int, dict[str, str]]:
+    """Charge le glossaire indexé par l'ordre réel de la table CFRU."""
+    return {
+        int(move_index): entry
+        for move_index, entry in json.loads(path.read_text(encoding="utf-8")).items()
+    }
+
+
 def _load_official(path: Path = DE_OFFICIAL) -> dict[int, str]:
-    raw = json.loads(path.read_text(encoding="utf-8"))
     return {
         base_patch.LEGACY_TABLE_OFFSET + int(move_id) * base_patch.MOVE_STRIDE:
         entry["official"]
-        for move_id, entry in raw.items()
+        for move_id, entry in load_official_entries(path).items()
     }
 
 

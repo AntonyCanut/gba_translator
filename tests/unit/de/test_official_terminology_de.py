@@ -7,7 +7,16 @@ from pathlib import Path
 
 import yaml
 
-from languages.de.patches import item_names, move_names, nature_names
+from languages.de.patches import (
+    ability_names,
+    cfru_type_names,
+    item_names,
+    move_names,
+    nature_names,
+    status_badges,
+    summary_stat_labels,
+    type_icons,
+)
 from languages.fr.patches import ability_names as ability_table
 from languages.fr.patches import move_names as move_table
 
@@ -121,3 +130,15 @@ def test_constraint_policy_forbids_language_fallbacks() -> None:
     assert policy["move_names"]["max_glyphs"] == 12
     assert policy["item_names"]["max_glyphs"] == 13
     assert policy["ability_names"]["max_glyphs"] == 16
+    assert policy["display_overrides"] == _glossary()["item_corrections"]
+
+
+def test_runtime_tables_are_derived_from_the_frozen_glossary() -> None:
+    glossary = _glossary()
+    assert nature_names.OFFICIAL_NATURES == glossary["natures"]
+    assert cfru_type_names.OFFICIAL_TYPES == glossary["types"]
+    assert type_icons.OFFICIAL_TYPES == glossary["types"]
+    assert status_badges.OFFICIAL_STATUSES == glossary["statuses"]
+    assert summary_stat_labels.OFFICIAL_STATS == glossary["stats"]
+    assert summary_stat_labels.STAT_DISPLAY == glossary["stat_display"]
+    ability_names.validate_glossary()

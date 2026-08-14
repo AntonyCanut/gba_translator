@@ -17,8 +17,12 @@ from pathlib import Path
 ROOT_DIR = Path(__file__).resolve().parents[3]
 sys.path.insert(0, str(ROOT_DIR))
 
+from languages.de.terminology import section as terminology_section  # noqa: E402
 from languages.fr.patches.font import lz77_compress, lz77_decompress
 from languages.fr.patches.summary_stat_labels import GLYPHS as BASE_GLYPHS
+
+OFFICIAL_STATS = terminology_section("stats")
+STAT_DISPLAY = terminology_section("stat_display")
 
 TILE = 32
 SHEET_WIDE = 16
@@ -48,12 +52,12 @@ PILL_BODY: dict[int, tuple[int, int]] = {
 # Formes officielles allemandes, raccourcies uniquement lorsque la capsule de
 # 43 px l'exige. « Initiative » devient la forme historique « INIT. ».
 LABELS: tuple[tuple[int, str, str], ...] = (
-    (54, "ATTACK", "ANGRIFF"),
-    (66, "DEFENSE", "VERT."),
-    (78, "SP.ATK", "SP.-ANG."),
-    (90, "SP.DEF", "SP.-VERT."),
-    (102, "SPEED", "INIT."),
-    (114, "EXP.", "EP."),
+    (54, "ATTACK", STAT_DISPLAY["Attack"]),
+    (66, "DEFENSE", STAT_DISPLAY["Defense"]),
+    (78, "SP.ATK", STAT_DISPLAY["Special Attack"]),
+    (90, "SP.DEF", STAT_DISPLAY["Special Defense"]),
+    (102, "SPEED", STAT_DISPLAY["Speed"]),
+    (114, "EXP.", STAT_DISPLAY["Experience"]),
 )
 
 GLYPHS: dict[str, tuple[str, ...]] = {
