@@ -36,7 +36,7 @@ def _image_for(name: str, block_index: int) -> Path:
 
 def test_german_registry_exposes_every_requested_menu_asset() -> None:
     """Une omission du registre doit rendre l'asset impossible à injecter."""
-    assert set(SPRITES) == set(EXPECTED_ASSETS)
+    assert set(EXPECTED_ASSETS) <= set(SPRITES)
     assert {patch.sprite for patch in PATCHES} == set(EXPECTED_ASSETS)
     assert len([patch for patch in PATCHES if patch.sprite == "pokemon_mart_sign"]) == 3
 

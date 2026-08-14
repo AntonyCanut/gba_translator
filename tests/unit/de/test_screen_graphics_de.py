@@ -9,11 +9,10 @@ from pathlib import Path
 import pytest
 
 from languages.de.patches import screen_graphics
-from languages.de.tools import build_screen_assets as asset_builder
 from languages.de.sprites import SPRITES
+from languages.de.tools import build_screen_assets as asset_builder
 from src.graphics.sprite_image import read_indexed_image
-from src.graphics.sprite_rom import extract_mapped_block
-from src.graphics.sprite_rom import resolve_live_offset
+from src.graphics.sprite_rom import extract_mapped_block, resolve_live_offset
 
 ROOT = Path(__file__).resolve().parents[3]
 INPUT_ROM = ROOT / "input/roms/englishrom.gba"
@@ -51,7 +50,7 @@ def test_german_registry_describes_exact_live_resources() -> None:
     assert title.bits_per_pixel == 8
     assert {
         (sprite.tiles_wide, sprite.tiles_tall)
-        for sprite in SPRITES.values()
+        for sprite in (front, back, title)
     } == {(32, 20)}
 
 

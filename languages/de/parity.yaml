@@ -95,6 +95,7 @@ de_only_build_steps:
   - {source: dexnav_headers, classification: lz77_graphic, status: excluded, reason: Déjà couvert directement par la recette DE.}
   - {source: givecs_gift_item, classification: format_control, status: excluded, reason: Déjà couvert directement par la recette DE.}
   - {source: hp_labels, classification: lz77_graphic, status: excluded, reason: Déjà couvert directement par la recette DE.}
+  - {source: menu_sprites, classification: lz77_graphic, status: excluded, reason: Assets menus et monde couverts directement par la recette DE.}
   - {source: move_names, classification: fixed_table, status: excluded, reason: Déjà couvert directement par la recette DE.}
   - {source: nature_names, classification: fixed_table, status: excluded, reason: Déjà couvert directement par la recette DE.}
   - {source: options_footer, classification: fixed_table, status: excluded, reason: Déjà couvert directement par la recette DE.}
@@ -103,6 +104,8 @@ de_only_build_steps:
   - {source: species_names, classification: fixed_table, status: excluded, reason: Déjà couvert directement par la recette DE.}
   - {source: summary_stat_labels, classification: lz77_graphic, status: excluded, reason: Libellés graphiques du résumé déjà couverts directement par la recette DE.}
   - {source: trainer_card_date, classification: asm_patch, status: excluded, reason: Déjà couvert directement par la recette DE.}
+  - {source: world_map_action_labels, classification: fixed_table, status: excluded, reason: Actions de carte couvertes directement par la recette DE.}
+  - {source: worldmap_labels, classification: pointer_text, status: excluded, reason: Noms propres de carte restaurés directement par la recette DE.}
 
 patches:
   - {source: languages/fr/patches/ability_names.py, classification: fixed_table, status: equivalent, target: languages/de/patches/ability_names.py}
@@ -213,53 +216,23 @@ patches:
     reason: Les classes de Dresseurs DE restent au ticket tables fixes.
   - {source: languages/fr/patches/type_icons.py, classification: lz77_graphic, status: equivalent, target: languages/de/patches/type_icons.py}
   - {source: languages/fr/patches/version.py, classification: fixed_table, status: shared, target: languages/fr/patches/version.py}
-  - source: languages/fr/patches/world_map_action_labels.py
-    classification: fixed_table
-    status: excluded
-    reason: Les actions de carte DE restent au ticket carte du monde.
+  - {source: languages/fr/patches/world_map_action_labels.py, classification: fixed_table, status: equivalent, target: languages/de/patches/world_map_action_labels.py}
   - {source: languages/fr/patches/worldmap_junction_panels.py, classification: pointer_text, status: equivalent, target: languages/de/patches/worldmap_junction_panels.py}
-  - source: languages/fr/patches/worldmap_labels.py
-    classification: pointer_text
-    status: excluded
-    reason: Les libellés cartographiques DE restent au ticket carte du monde.
+  - {source: languages/fr/patches/worldmap_labels.py, classification: pointer_text, status: equivalent, target: languages/de/patches/worldmap_labels.py}
   - source: languages/fr/patches/zone_names.py
     classification: pointer_text
     status: excluded
     reason: Les noms de zones DE doivent préserver les toponymes EN dans le ticket dédié.
 
 assets:
-  - source: languages/fr/sprites/cube_sort_hint.bmp
-    classification: lz77_graphic
-    status: excluded
-    reason: Asset DE à extraire et traduire dans le ticket graphismes Cube.
-  - source: languages/fr/sprites/cube_sort_hint.png
-    classification: lz77_graphic
-    status: excluded
-    reason: Asset DE à extraire et traduire dans le ticket graphismes Cube.
-  - source: languages/fr/sprites/pc_box_labels.png
-    classification: lz77_graphic
-    status: excluded
-    reason: Planche PC DE à produire dans le ticket graphismes PC.
-  - source: languages/fr/sprites/pokemon_mart_sign.bmp
-    classification: lz77_graphic
-    status: excluded
-    reason: Enseigne Boutique Pokémon DE à produire dans le ticket graphismes monde.
-  - source: languages/fr/sprites/pokemon_mart_sign.png
-    classification: lz77_graphic
-    status: excluded
-    reason: Enseigne Boutique Pokémon DE à produire dans le ticket graphismes monde.
-  - source: languages/fr/sprites/pokemon_mart_sign_classic.png
-    classification: lz77_graphic
-    status: excluded
-    reason: Variante d'enseigne DE à produire dans le ticket graphismes monde.
-  - source: languages/fr/sprites/selection.bmp
-    classification: lz77_graphic
-    status: excluded
-    reason: Asset technique sans texte localisable, la ROM DE conserve la source EN.
-  - source: languages/fr/sprites/start_menu_move_hint.bmp
-    classification: lz77_graphic
-    status: excluded
-    reason: Indication Move DE à produire dans le ticket graphismes menu START.
+  - {source: languages/fr/sprites/cube_sort_hint.bmp, classification: lz77_graphic, status: equivalent, target: languages/de/sprites/cube_sort_hint.png}
+  - {source: languages/fr/sprites/cube_sort_hint.png, classification: lz77_graphic, status: equivalent, target: languages/de/sprites/cube_sort_hint.png}
+  - {source: languages/fr/sprites/pc_box_labels.png, classification: lz77_graphic, status: equivalent, target: languages/de/sprites/pc_box_labels.png}
+  - {source: languages/fr/sprites/pokemon_mart_sign.bmp, classification: lz77_graphic, status: equivalent, target: languages/de/sprites/pokemon_mart_sign-2.png}
+  - {source: languages/fr/sprites/pokemon_mart_sign.png, classification: lz77_graphic, status: equivalent, target: languages/de/sprites/pokemon_mart_sign-2.png}
+  - {source: languages/fr/sprites/pokemon_mart_sign_classic.png, classification: lz77_graphic, status: equivalent, target: languages/de/sprites/pokemon_mart_sign-0.png}
+  - {source: languages/fr/sprites/selection.bmp, classification: lz77_graphic, status: equivalent, target: languages/de/sprites/selection.png}
+  - {source: languages/fr/sprites/start_menu_move_hint.bmp, classification: lz77_graphic, status: equivalent, target: languages/de/sprites/start_menu_move_hint.png}
   - {source: languages/fr/sprites/status_badges.bmp, classification: lz77_graphic, status: equivalent, target: languages/de/patches/status_badges.py}
   - {source: languages/fr/sprites/status_badges.png, classification: lz77_graphic, status: equivalent, target: languages/de/patches/status_badges.py}
   - source: languages/fr/sprites/summary_stat_labels.png
@@ -298,6 +271,8 @@ rom_tests:
   - {source: tests/test_patch_status_badges_fr.py, classification: rom_test, status: equivalent, target: tests/test_patch_status_badges_de.py}
   - {source: tests/test_type_icons_fr.py, classification: rom_test, status: equivalent, target: tests/test_type_icons_de.py}
   - {source: tests/test_patch_time_format_fr.py, classification: rom_test, status: equivalent, target: tests/unit/de/test_patch_time_format_de.py}
+  - {source: tests/test_patch_worldmap_labels_fr.py, classification: rom_test, status: equivalent, target: tests/unit/de/test_world_map_graphics.py}
+  - {source: tests/unit/fr/test_world_map_action_labels.py, classification: rom_test, status: equivalent, target: tests/unit/de/test_world_map_graphics.py}
   - {source: tests/test_patch_trainer_card_date_fr.py, classification: rom_test, status: equivalent, target: tests/unit/de/test_patch_trainer_card_date_de.py}
   - {source: tests/e2e/test_ace_teamup_mechanic_fr.py, classification: rom_test, status: equivalent, target: tests/e2e/test_ace_teamup_mechanic_de.py}
   - {source: tests/test_battle_stat_change_order_fr.py, classification: rom_test, status: equivalent, target: tests/test_battle_stat_change_order_de.py}
@@ -399,7 +374,6 @@ rom_test_exclusions:
     - tests/test_patch_summary_stat_labels_fr.py
     - tests/test_patch_trainer_class_names_fr.py
     - tests/test_patch_version_fr.py
-    - tests/test_patch_worldmap_labels_fr.py
     - tests/test_patch_zone_names_fr.py
     - tests/test_pc_deposit_item_fr.py
     - tests/test_pc_item_from_menu_descriptions_fr.py
@@ -430,7 +404,6 @@ rom_test_exclusions:
     - tests/unit/fr/test_tm_house_cluster_fr.py
     - tests/unit/fr/test_tm_item_descriptions.py
     - tests/unit/fr/test_trainer_card_play_time_label.py
-    - tests/unit/fr/test_world_map_action_labels.py
     - tests/unit/test_audit_english_rom_french_leak.py
 
 # Tests présents uniquement côté DE, pour ne pas recréer une preuve déjà en
@@ -456,6 +429,7 @@ de_only_rom_tests:
     - tests/unit/de/test_patch_shop_de.py
     - tests/unit/de/test_pokecenter_upper_floor_de.py
     - tests/unit/de/test_interface_labels_de.py
+    - tests/unit/de/test_menu_graphics_assets.py
     - tests/unit/de/test_screen_graphics_de.py
     - tests/unit/de/test_summary_stat_labels_de.py
     - tests/unit/test_de_parity.py
