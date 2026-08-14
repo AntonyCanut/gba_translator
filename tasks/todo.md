@@ -2018,7 +2018,7 @@ d’annulation dans le reste du jeu.
 
 - [x] Ajouter les tests rouges de dispatch et libellés statistiques.
 - [x] Porter les six libellés statistiques allemands et les câbler au build.
-- [ ] Compléter les descriptions et ramener chaque ligne à 232 px maximum.
+- [x] Compléter les descriptions et ramener chaque ligne à 232 px maximum.
 - [ ] Construire puis décoder la ROM DE : catégories, métriques et descriptions.
 - [ ] Vérifier les 1 293 noms d'espèces via le correctif dédié B-597 intégré.
 - [ ] Prouver les non-régressions FR/IT, committer et intégrer localement.

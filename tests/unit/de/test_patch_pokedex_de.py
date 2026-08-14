@@ -6,6 +6,7 @@ Pokédex description would be rejected by ``is_description``/rewritten as
 
 from __future__ import annotations
 
+import json
 import sys
 from pathlib import Path
 
@@ -16,6 +17,13 @@ sys.path.insert(0, str(ROOT / "scripts"))
 from src.core import pokedex  # noqa: E402
 from src.core.text_codec import GERMAN_UMLAUT_CHARS, TextDecoder, TextEncoder  # noqa: E402
 from languages.de.patches import pokedex as mod  # noqa: E402
+from languages.fr.patches.species_names import _parse_combined  # noqa: E402
+
+EN_ROM = ROOT / "input/roms/englishrom.gba"
+DE_COMBINED = ROOT / "languages/de/combined_de.txt"
+DE_OVERRIDES = ROOT / "languages/de/data/pokedex_de_overrides.json"
+FR_COMBINED = ROOT / "languages/fr/combined_fr.txt"
+FR_OVERRIDES = ROOT / "languages/fr/data/pokedex_fr_overrides.json"
 
 
 def _ptr(offset: int) -> bytes:
@@ -50,6 +58,47 @@ class TestApplyIsGenericDelegate:
         assert callable(mod.load_text_map)
         assert mod.DEFAULT_OVERRIDES.name == "pokedex_de_overrides.json"
         assert "de" in str(mod.DEFAULT_OVERRIDES)
+
+
+class TestGermanDescriptionCorpus:
+    @staticmethod
+    def _normalize(text: str) -> str:
+        return text.replace(r"\n", "\n").replace(r"\l", "\n").replace(r"\p", "\n")
+
+    def test_every_live_source_entry_has_distinct_fitting_german_text(self):
+        source = EN_ROM.read_bytes()
+        entries = list(pokedex.iter_entries(source))
+        combined = _parse_combined(DE_COMBINED)
+        overrides = {
+            int(offset): text
+            for offset, text in json.loads(DE_OVERRIDES.read_text(encoding="utf-8")).items()
+        }
+        french = _parse_combined(FR_COMBINED)
+        french_overrides = {
+            int(offset): text
+            for offset, text in json.loads(FR_OVERRIDES.read_text(encoding="utf-8")).items()
+        }
+
+        assert len(entries) == 896
+        failures = []
+        for entry in entries:
+            text = overrides.get(entry.text_offset, combined.get(entry.text_offset))
+            if text is None:
+                failures.append(f"#{entry.index}: traduction DE absente")
+                continue
+            text = self._normalize(text)
+            if not pokedex.is_description(text):
+                failures.append(f"#{entry.index}: texte DE invalide {text!r}")
+                continue
+            if not pokedex.fits(pokedex.rewrap(text)):
+                failures.append(f"#{entry.index}: dépasse 3 lignes × 232 px")
+            if text.replace("\n", " ") == entry.text.replace("\n", " "):
+                failures.append(f"#{entry.index}: fallback anglais")
+            fr_text = french_overrides.get(entry.text_offset, french.get(entry.text_offset))
+            if fr_text is not None and text == self._normalize(fr_text):
+                failures.append(f"#{entry.index}: fallback français")
+
+        assert failures == []
 
 
 class TestWidthOverflowIsTolerated:
