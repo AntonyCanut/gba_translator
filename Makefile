@@ -401,6 +401,7 @@ audit-de:
 	@$(PYTHON) scripts/audit_english_toponyms_de.py
 	@$(PYTHON) languages/de/tools/audit_species_names.py
 	@$(PYTHON) -m pytest tests/e2e/de -m rom -v
+	@$(PYTHON) scripts/certify_de_release.py
 
 ## Rebuilds consécutifs des deux langues déjà certifiées. Cette porte détecte
 ## une dérive partagée du pipeline sans modifier les sources FR/IT.
@@ -419,11 +420,13 @@ verify-fr-it-nonregression:
 
 test-playwright-de:
 	@npm run test:e2e:german
+	@npm run test:e2e:hp-bar
 
 certify-de:
 	@$(MAKE) --no-print-directory check-de-parity
 	@$(MAKE) --no-print-directory verify-de-determinism
 	@$(MAKE) --no-print-directory audit-de
+	@$(MAKE) --no-print-directory test-python
 	@$(MAKE) --no-print-directory test-vitest
 	@$(MAKE) --no-print-directory test-playwright-de
 	@$(MAKE) --no-print-directory verify-fr-it-nonregression

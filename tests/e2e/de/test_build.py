@@ -55,7 +55,7 @@ PROJECT_ROOT = _resolve_project_root()
 DE_ROM_PATH = PROJECT_ROOT / "output" / "roms" / "GenedRom-de.gba"
 EN_ROM_PATH = PROJECT_ROOT / "input" / "roms" / "englishrom.gba"
 DE_JSON_PATH = PROJECT_ROOT / "output" / "translation" / "de_translation_ready.json"
-DE_REPORT_GLOB = "output/reports/*_derom_build_report.json"
+DE_REPORT_GLOB = "output/reports/*_gerom_build_report.json"
 DE_COMBINED_PATH = PROJECT_ROOT / "languages" / "de" / "combined_de.txt"
 
 GBA_ROM_SIZE = 0x2000000
@@ -155,8 +155,7 @@ class TestBuildStats:
         stats = de_build_report.get("statistics", {})
         relocated = stats.get("relocated", 0)
         relocation_failed = stats.get("relocation_failed", 0)
-        if relocated + relocation_failed == 0:
-            pytest.skip("No relocations attempted")
+        assert relocated + relocation_failed > 0, "No relocations were reported"
         fail_rate = relocation_failed / (relocated + relocation_failed) * 100
         assert fail_rate < 20.0, (
             f"Relocation failure rate too high: {fail_rate:.1f}% "

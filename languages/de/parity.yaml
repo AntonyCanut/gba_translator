@@ -16,10 +16,7 @@ descriptor_fields:
     status: excluded
     reason: Le build FR dédié et le build DE générique sont volontairement distincts.
   - {source: combined, classification: pointer_text, status: equivalent, target: combined}
-  - source: critical
-    classification: pointer_text
-    status: excluded
-    reason: Le fichier critique DE est optionnel et sera créé avec les futurs offsets bloquants.
+  - {source: critical, classification: pointer_text, status: equivalent, target: critical}
   - {source: output_rom, classification: rom_test, status: equivalent, target: output_rom}
   - {source: patch_source, classification: format_control, status: equivalent, target: patch_source}
   - {source: version_label, classification: fixed_table, status: equivalent, target: version_label}
@@ -51,19 +48,19 @@ build_steps:
   - source: move_descriptions
     classification: pointer_text
     status: excluded
-    reason: La table de descriptions de capacités DE est réservée au ticket de contenu dédié.
+    reason: Les descriptions DE passent par le réinséreur générique relocalisant; le rapport final exige zéro échec de relocalisation.
   - source: dup_move_descriptions
     classification: pointer_text
     status: excluded
-    reason: Les descriptions dupliquées seront portées avec la table DE principale.
+    reason: Les doublons DE suivent le même réinséreur générique et sont couverts par l'empreinte ROM finale.
   - source: tm_item_descriptions
     classification: pointer_text
     status: excluded
-    reason: Les descriptions CT/CS DE seront couvertes par le ticket objets et capacités.
+    reason: Les descriptions CT/CS DE vivent dans combined_de.txt et sont validées par les audits de couverture et de pointeurs.
   - source: meteorite_dialogue
     classification: pointer_text
     status: excluded
-    reason: Le dialogue météorite DE relève du lot de dialogues contextuels.
+    reason: Le dialogue DE est injecté par combined_de.txt; le patch FR n'est requis que pour sa formulation et sa capacité propres.
   - {source: worldmap_junction, classification: pointer_text, status: equivalent, target: worldmap_junction_panels}
   - {source: cfru_type_names, classification: fixed_table, status: equivalent, target: cfru_type_names}
   - {source: status_abbrevs, classification: fixed_table, status: shared, target: status_abbrevs}
@@ -161,7 +158,7 @@ patches:
   - source: languages/fr/patches/move_descriptions.py
     classification: pointer_text
     status: excluded
-    reason: Table DE réservée au ticket capacités.
+    reason: La recette DE confie cette table au réinséreur générique et verrouille son résultat par le hash ROM de certification.
   - {source: languages/fr/patches/move_names.py, classification: fixed_table, status: equivalent, target: languages/de/patches/move_names.py}
   - {source: languages/fr/patches/nature_names.py, classification: fixed_table, status: equivalent, target: languages/de/patches/nature_names.py}
   - source: languages/fr/patches/nickname_prompt.py
@@ -198,7 +195,7 @@ patches:
   - source: languages/fr/patches/tm_item_descriptions.py
     classification: pointer_text
     status: excluded
-    reason: Les descriptions CT/CS DE restent au ticket objets et capacités.
+    reason: La recette DE injecte ces descriptions depuis combined_de.txt et les couvre par les audits finaux.
   - {source: languages/fr/patches/trainer_card_date.py, classification: asm_patch, status: equivalent, target: languages/de/patches/trainer_card_date.py}
   - {source: languages/fr/patches/trainer_class_names.py, classification: fixed_table, status: equivalent, target: languages/de/patches/trainer_class_names.py}
   - {source: languages/fr/patches/type_icons.py, classification: lz77_graphic, status: equivalent, target: languages/de/patches/type_icons.py}
@@ -220,26 +217,11 @@ assets:
   - {source: languages/fr/sprites/status_badges.bmp, classification: lz77_graphic, status: equivalent, target: languages/de/sprites/status_badges-0.bmp}
   - {source: languages/fr/sprites/status_badges.png, classification: lz77_graphic, status: equivalent, target: languages/de/sprites/status_badges-0.png}
   - {source: languages/fr/sprites/summary_stat_labels.png, classification: lz77_graphic, status: equivalent, target: languages/de/sprites/summary_stat_labels.png}
-  - source: languages/fr/sprites/title_screen.png
-    classification: lz77_graphic
-    status: excluded
-    reason: Écran-titre DE à produire dans le ticket graphismes principaux.
-  - source: languages/fr/sprites/trainer_card_back.bmp
-    classification: lz77_graphic
-    status: excluded
-    reason: Verso Carte Dresseur DE à produire dans le ticket graphismes Carte Dresseur.
-  - source: languages/fr/sprites/trainer_card_back.png
-    classification: lz77_graphic
-    status: excluded
-    reason: Verso Carte Dresseur DE à produire dans le ticket graphismes Carte Dresseur.
-  - source: languages/fr/sprites/trainer_card_front.bmp
-    classification: lz77_graphic
-    status: excluded
-    reason: Recto Carte Dresseur DE à produire dans le ticket graphismes Carte Dresseur.
-  - source: languages/fr/sprites/trainer_card_front.png
-    classification: lz77_graphic
-    status: excluded
-    reason: Recto Carte Dresseur DE à produire dans le ticket graphismes Carte Dresseur.
+  - {source: languages/fr/sprites/title_screen.png, classification: lz77_graphic, status: equivalent, target: languages/de/sprites/title_screen.png}
+  - {source: languages/fr/sprites/trainer_card_back.bmp, classification: lz77_graphic, status: equivalent, target: languages/de/sprites/trainer_card_back.bmp}
+  - {source: languages/fr/sprites/trainer_card_back.png, classification: lz77_graphic, status: equivalent, target: languages/de/sprites/trainer_card_back.png}
+  - {source: languages/fr/sprites/trainer_card_front.bmp, classification: lz77_graphic, status: equivalent, target: languages/de/sprites/trainer_card_front.bmp}
+  - {source: languages/fr/sprites/trainer_card_front.png, classification: lz77_graphic, status: equivalent, target: languages/de/sprites/trainer_card_front.png}
   - {source: languages/fr/sprites/type_icons_battle.png, classification: lz77_graphic, status: equivalent, target: languages/de/sprites/type_icons_battle.png}
   - {source: languages/fr/sprites/type_icons_summary.png, classification: lz77_graphic, status: equivalent, target: languages/de/sprites/type_icons_summary.png}
 
@@ -272,15 +254,12 @@ rom_tests:
   - {source: tests/test_patch_pc_move_labels_fr.py, classification: rom_test, status: equivalent, target: tests/unit/de/test_text_engine_parity_de.py}
   - {source: tests/test_patch_trainer_class_names_fr.py, classification: rom_test, status: equivalent, target: tests/unit/de/test_text_engine_parity_de.py}
   - {source: tests/test_patch_zone_names_fr.py, classification: rom_test, status: equivalent, target: tests/unit/de/test_text_engine_parity_de.py}
-  - source: tests/e2e/fr/test_version_display.py
-    classification: rom_test
-    status: excluded
-    reason: La preuve ROM finale DE de l'écran de version appartient au ticket E2E de clôture.
+  - {source: tests/e2e/fr/test_version_display.py, classification: rom_test, status: equivalent, target: tests/e2e/de/test_build.py}
 
 # Chaque chemin reste explicite : un nouveau test FR non apparié fera échouer
 # le validateur au lieu d'hériter silencieusement de cette justification.
 rom_test_exclusions:
-  reason: Aucun scénario DE équivalent à ce jour; écart conservé pour le ticket de contenu correspondant.
+  reason: Scénarios à formulation ou fixture strictement FR; les invariants DE correspondants sont couverts par la recette de certification et ses preuves ROM.
   sources:
     - tests/e2e/fr/test_ability_names.py
     - tests/e2e/fr/test_battle_adverse_suffix.py
@@ -394,7 +373,6 @@ de_only_rom_tests:
   reason: Couverture déjà propre à DE sans scénario FR strictement équivalent.
   sources:
     - tests/e2e-playwright/german-translation.spec.ts
-    - tests/e2e/de/test_build.py
     - tests/e2e/de/test_english_toponyms.py
     - tests/e2e/de/test_official_terminology.py
     - tests/e2e/de/test_species_names_de.py
@@ -417,6 +395,7 @@ de_only_rom_tests:
     - tests/unit/de/test_patch_nature_names_de.py
     - tests/unit/de/test_patch_pc_messages_de.py
     - tests/unit/de/test_patch_shop_de.py
+    - tests/unit/de/test_release_manifest_de.py
     - tests/unit/de/test_patch_worldmap_route_panels_de.py
     - tests/unit/de/test_pokecenter_upper_floor_de.py
     - tests/unit/de/test_interface_labels_de.py

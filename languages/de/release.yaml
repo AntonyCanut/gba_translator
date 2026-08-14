@@ -1,0 +1,48 @@
+schema_version: 1
+
+# La couverture brute est indexée sur l'univers historique FR. Les valeurs
+# figées rendent toute variation visible; la preuve jouable repose en plus sur
+# les pointeurs vivants et les surfaces ci-dessous.
+coverage:
+  reference: 25524
+  translated: 21070
+  untranslated: 664
+  missing: 3790
+  orphan: 95
+
+rom_sha256: 5446362e0e4c7c49021709c169aa6b9c8965106310f4b6a5116913797b1a9b04
+
+live_english:
+  count: 368
+  sha256: 04e2641a607bbe2a2743b3ef4a52e9611db3cdf64d0ca6093d7cc83d33529639
+  classifications:
+    credits:
+      start: '0x01EEFE4C'
+      end: '0x01EF0C4C'
+      reason: Crédits et rôles des contributeurs conservés dans leur langue source.
+    competitive_labels:
+      start: '0x01F932F9'
+      end: '0x01F95153'
+      reason: Noms canoniques de formats compétitifs et diagnostic RTC.
+    reviewed_content:
+      start: '0x01E00000'
+      end: '0x01FAFFFF'
+      reason: Résidus vivants explicitement inventoriés par offset et texte dans le rapport final.
+
+graphics:
+  count: 53
+  sha256: 9a8c237da1b7c240fd046c9825a84e8e4a5afe57ecb4aeb74f436dff0e367074
+
+surfaces:
+  boot: [tests/e2e-playwright/german-translation.spec.ts]
+  new_game: [tests/e2e-playwright/german-translation.spec.ts]
+  party: [tests/e2e-playwright/specs/hp-bar.spec.ts]
+  summary: [tests/e2e-playwright/specs/hp-bar.spec.ts]
+  battle: [tests/unit/de/test_battle_summary_graphics_assets.py]
+  pokedex: [tests/e2e/de/test_pokedex.py]
+  dexnav: [tests/unit/de/test_interface_labels_de.py]
+  pc: [tests/unit/de/test_patch_pc_messages_de.py]
+  shop: [tests/unit/de/test_patch_shop_de.py]
+  world_map: [tests/e2e/de/test_english_toponyms.py]
+  trainer_card: [tests/unit/de/test_screen_graphics_de.py]
+  missions: [tests/unit/de/test_text_engine_parity_de.py]

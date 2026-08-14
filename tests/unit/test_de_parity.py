@@ -90,6 +90,26 @@ def test_manifest_preserves_de_graphics_coverage_landed_in_parallel() -> None:
     } <= de_tests
 
 
+def test_manifest_has_no_temporary_ticket_exclusions() -> None:
+    """La matrice finale ne doit plus promettre un lot de contenu ultérieur."""
+    manifest = DeParityManifest.load(MANIFEST_PATH)
+    reasons = "\n".join(
+        entry.reason
+        for section in (
+            manifest.descriptor_fields,
+            manifest.build_steps,
+            manifest.assets,
+            manifest.rom_tests,
+        )
+        for entry in section
+    ).lower()
+
+    assert "ticket de contenu dédié" not in reasons
+    assert "seront portées" not in reasons
+    assert "ticket objets et capacités" not in reasons
+    assert "lot de dialogues contextuels" not in reasons
+
+
 def test_manifest_registers_official_terminology_guards() -> None:
     """Les preuves source et ROM de F-599 restent inventoriées après rebase."""
     manifest = DeParityManifest.load(MANIFEST_PATH)
@@ -143,11 +163,18 @@ def test_every_required_gap_has_a_supported_classification() -> None:
 def test_exclusion_without_justification_is_rejected() -> None:
     """Une exclusion vide ne doit pas contourner la garde de parité."""
     manifest = DeParityManifest.load(MANIFEST_PATH)
-    excluded = next(entry for entry in manifest.assets if entry.status == "excluded")
+    excluded = next(
+        entry
+        for section in (manifest.build_steps, manifest.patches, manifest.rom_tests)
+        for entry in section
+        if entry.status == "excluded"
+    )
     invalid = replace(excluded, reason="")
-    entries = tuple(invalid if entry is excluded else entry for entry in manifest.assets)
+    entries = tuple(
+        invalid if entry is excluded else entry for entry in manifest.build_steps
+    )
 
-    failures = replace(manifest, assets=entries).validate(ROOT)
+    failures = replace(manifest, build_steps=entries).validate(ROOT)
 
     assert any("exclusion sans justification" in failure for failure in failures)
 
