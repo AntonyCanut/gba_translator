@@ -372,6 +372,63 @@ build-it: check-translations-it
 build-de: check-translations-de
 	@$(PYTHON) scripts/build_language.py de --build-number $(BUILD_NUMBER)
 
+## Certifie que deux constructions DE repartant de la même source produisent
+## exactement les mêmes octets. Le premier artefact vit hors de output/ afin
+## qu'aucun résidu généré ne puisse influencer la seconde invocation.
+verify-de-determinism:
+	@tmp_rom="$$(mktemp -t GenedRom-de.XXXXXX)"; \
+	trap 'rm -f "$$tmp_rom"' EXIT; \
+	$(MAKE) --no-print-directory build-de BUILD_NUMBER=0; \
+	cp "output/roms/GenedRom-de.gba" "$$tmp_rom"; \
+	$(MAKE) --no-print-directory build-de BUILD_NUMBER=0; \
+	if ! cmp -s "$$tmp_rom" "output/roms/GenedRom-de.gba"; then \
+		echo "DE build is non-deterministic: differing byte offsets (first 20):"; \
+		cmp -l "$$tmp_rom" "output/roms/GenedRom-de.gba" | head -n 20; \
+		exit 1; \
+	fi; \
+	echo "✓ DE build is byte-identical across consecutive rebuilds."
+
+## Audits ROM de la release allemande. La couverture reste exportée pour la
+## revue humaine ; toutes les gardes de sûreté et de contenu échouent dur.
+audit-de:
+	@$(PYTHON) scripts/audit_translation_coverage.py --languages de
+	@$(PYTHON) scripts/audit_translation_collisions.py \
+		--combined languages/de/combined_de.txt \
+		--rom output/roms/GenedRom-de.gba \
+		--english input/roms/englishrom.gba \
+		--json output/reports/de_collision_audit.json \
+		--fail-on-collision
+	@$(PYTHON) scripts/audit_english_toponyms_de.py
+	@$(PYTHON) languages/de/tools/audit_species_names.py
+	@$(PYTHON) -m pytest tests/e2e/de -m rom -v
+
+## Rebuilds consécutifs des deux langues déjà certifiées. Cette porte détecte
+## une dérive partagée du pipeline sans modifier les sources FR/IT.
+verify-fr-it-nonregression:
+	@tmp_dir="$$(mktemp -d -t GenedRom-fr-it.XXXXXX)"; \
+	trap 'rm -rf "$$tmp_dir"' EXIT; \
+	$(MAKE) --no-print-directory build-fr BUILD_NUMBER=0; \
+	$(MAKE) --no-print-directory build-it BUILD_NUMBER=0; \
+	cp "output/roms/GenedRom-fr.gba" "$$tmp_dir/GenedRom-fr.gba"; \
+	cp "output/roms/GenedRom-it.gba" "$$tmp_dir/GenedRom-it.gba"; \
+	$(MAKE) --no-print-directory build-fr BUILD_NUMBER=0; \
+	$(MAKE) --no-print-directory build-it BUILD_NUMBER=0; \
+	cmp -s "$$tmp_dir/GenedRom-fr.gba" "output/roms/GenedRom-fr.gba"; \
+	cmp -s "$$tmp_dir/GenedRom-it.gba" "output/roms/GenedRom-it.gba"; \
+	echo "✓ FR and IT builds are byte-identical across consecutive rebuilds."
+
+test-playwright-de:
+	@npm run test:e2e:german
+
+certify-de:
+	@$(MAKE) --no-print-directory check-de-parity
+	@$(MAKE) --no-print-directory verify-de-determinism
+	@$(MAKE) --no-print-directory audit-de
+	@$(MAKE) --no-print-directory test-vitest
+	@$(MAKE) --no-print-directory test-playwright-de
+	@$(MAKE) --no-print-directory verify-fr-it-nonregression
+	@echo "✓ German release certification passed."
+
 audit-toponyms-de:
 	@$(PYTHON) scripts/audit_english_toponyms_de.py
 

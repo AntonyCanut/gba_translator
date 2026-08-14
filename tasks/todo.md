@@ -2212,3 +2212,36 @@ d’annulation dans le reste du jeu.
 - La garde de portée DE ignore désormais une préposition française « de » dans
   le nom d’une branche FR, afin que le correctif puisse suivre le chemin de build
   français sans déclencher artificiellement les contrôles allemands.
+
+# DE — Fermer la recette de build et la validation E2E
+
+## Conception
+
+- Une cible de certification DE unique orchestre la parité, les audits ROM,
+  deux builds byte-identiques, les scénarios Playwright et la non-régression
+  FR/IT. Chaque preuve reste aussi exécutable isolément pour le diagnostic.
+- Les audits lisent la ROM construite et ses pointeurs vivants : couverture,
+  collisions, terminateurs, pointeurs, résidus FR/EN, noms d'espèces,
+  toponymes, terminologie officielle et graphismes.
+- Les parcours Playwright sont déterministes, sans sauvegarde en jeu, et
+  couvrent démarrage, nouvelle partie, équipe, résumé, combat, Pokédex,
+  DexNav, PC, boutique, carte, Carte Dresseur et missions. Les captures DE
+  sont comparées à des ancres dédiées et leurs empreintes figurent au rapport.
+- `languages/de/lang.yaml` ne passe à `complete` que si la certification
+  complète réussit ; les résidus anglais admis sont versionnés avec leur
+  justification et aucun écart de parité obsolète ne reste masqué.
+
+## Plan TDD
+
+- [ ] Écrire les gardes rouges de la recette de certification et des audits.
+- [ ] Ajouter la cible déterministe DE et le rapport de preuves reproductible.
+- [ ] Écrire les scénarios Playwright DE rouges et leurs ancres graphiques.
+- [ ] Implémenter les parcours courts mGBA et la comparaison des captures.
+- [ ] Corriger les écarts ROM révélés sans toucher aux sources FR/IT.
+- [ ] Passer le manifeste DE à `complete` après toutes les portes vertes.
+- [ ] Rebuilder FR/IT/DE, vérifier les hashes, suites Python/Vitest/E2E et gel.
+- [ ] Relire, documenter les résidus acceptés, committer et intégrer sans push.
+
+## Revue
+
+- À compléter avec les commandes, hashes ROM et captures réellement vérifiés.
