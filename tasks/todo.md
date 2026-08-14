@@ -1875,13 +1875,26 @@ d’annulation dans le reste du jeu.
 
 ## Plan validé
 
-- [ ] Ajouter les gardes rouges du glossaire et des substitutions dangereuses.
-- [ ] Figer les sources et les termes canoniques DE dans `languages/de/data/`.
-- [ ] Aligner attaques, talents, objets, natures et types sur ce glossaire.
-- [ ] Construire la ROM DE et décoder les tables réellement lues par le moteur.
-- [ ] Prouver que les artefacts FR/IT restent octet-identiques.
-- [ ] Exécuter les suites source, relire le diff, committer et intégrer localement.
+- [x] Ajouter les gardes rouges du glossaire et des substitutions dangereuses.
+- [x] Figer les sources et les termes canoniques DE dans `languages/de/data/`.
+- [x] Aligner attaques, talents, objets, natures et types sur ce glossaire.
+- [x] Construire la ROM DE et décoder les tables réellement lues par le moteur.
+- [x] Prouver que les artefacts FR/IT restent octet-identiques.
+- [x] Exécuter les suites source, relire le diff, committer et intégrer localement.
 
 ## Revue
 
-- À compléter après les vérifications finales.
+- Le glossaire figé documente ses sources, sa révision et la règle stable des
+  cellules contraintes. Les 894 attaques sont désormais alignées par index
+  CFRU ; le fallback numérique qui pouvait remplacer `Feuerpeitsche` par
+  `Feenschloss` a été supprimé.
+- Les tables d'objets, talents, natures, types et états emploient les formes DE
+  officielles. Les badges redessinables affichent les noms complets, tandis que
+  les cellules moteur utilisent des racines de trois lettres documentées.
+- Les umlauts restent encodés via `GERMAN_UMLAUT_CHARS`; les noms d'espèces et
+  de lieux ne sont pas modifiés par ce lot.
+- Le hook valide 1 726 tests Python (1 ignoré), les tests Vitest et les builds
+  FR/IT/DE. Les 68 tests ciblés source + décodage ROM passent après le build.
+- Un second `make build-de` conserve exactement les SHA-256 FR
+  `3ed46e26…fc10` et IT `6df94bf6…b42c`; le build DE ne réécrit donc aucun de
+  ces deux artefacts.

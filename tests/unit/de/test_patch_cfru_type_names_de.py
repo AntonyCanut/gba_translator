@@ -94,6 +94,12 @@ class TestCfruTypeNamesDe(unittest.TestCase):
         n2, _ = _apply_on(patched)
         self.assertEqual(n2, 0)
 
+    def test_replaces_condition_pretranslated_by_generic_pipeline(self):
+        condition_offset, _english, expected = CONDITION_PATCHES[0]
+        n, patched = _apply_on(_seed_rom({condition_offset: "Eis"}))
+        self.assertEqual(n, len(TYPE_PATCHES) + 1)
+        self.assertEqual(_read_until(patched, condition_offset, 0xFF), expected)
+
     def test_skips_unexpected_current_value(self):
         rom = _seed_rom({ICE_OFFSET: "XYZ"})  # neither EN nor DE
         _n, patched = _apply_on(rom)

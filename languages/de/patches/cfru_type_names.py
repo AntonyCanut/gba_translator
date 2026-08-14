@@ -67,6 +67,13 @@ CONDITION_PATCHES: list[tuple[int, str, str]] = [
     (0x3FE846, "ice", "gef"),
 ]
 
+# The generic translation pass runs before this fixed-table patch and may
+# already have localized the condition cell.  Accept that known source state;
+# all other unexpected values remain protected by the skip guard below.
+SOURCE_ALIASES: dict[int, frozenset[str]] = {
+    0x3FE846: frozenset({"Eis"}),
+}
+
 
 def _read_until(rom: bytearray, offset: int, terminator: int) -> str:
     """Decode bytes at offset until terminator byte."""
@@ -94,7 +101,7 @@ def apply_patches(rom_path: Path, dry_run: bool = False) -> int:
             current = _read_until(rom, offset, term_byte)
             if current == de_text:
                 continue  # already done
-            if current != en_expected:
+            if current != en_expected and current not in SOURCE_ALIASES.get(offset, ()):
                 print(
                     f"  WARN 0x{offset:07X}: expected «{en_expected}» got «{current}» — skip",
                     file=sys.stderr,
