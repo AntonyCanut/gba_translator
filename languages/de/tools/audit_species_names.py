@@ -9,6 +9,7 @@ pointer, so relocated dialogue is audited rather than dead source bytes.
 from __future__ import annotations
 
 import argparse
+import bisect
 import json
 import re
 import sys
@@ -29,7 +30,7 @@ from src.core.collision_check import (  # noqa: E402
     live_target,
     plausible_sites,
 )
-from src.core.text_codec import TextDecoder  # noqa: E402
+from src.core.text_codec import TextDecoder, TextEncoder  # noqa: E402
 
 DE_COMBINED = REPO_ROOT / "languages/de/combined_de.txt"
 FR_NAME_MAP = REPO_ROOT / "languages/fr/data/pokemon_names_en_fr.json"
@@ -107,6 +108,15 @@ def find_french_species_names(
     if pattern is None:
         return []
     canonical = {name.casefold(): (name, english) for name, english in aliases.items()}
+    return _find_french_species_names(text, pattern, canonical)
+
+
+def _find_french_species_names(
+    text: str,
+    pattern: re.Pattern[str],
+    canonical: Mapping[str, tuple[str, str]],
+) -> list[tuple[str, str]]:
+    """Match aliases using precompiled data for full-ROM audit performance."""
     found: list[tuple[str, str]] = []
     for match in pattern.finditer(text):
         if not _has_species_boundaries(text, match.start(), match.end()):
@@ -135,8 +145,6 @@ def audit_combined(
 ) -> list[CombinedLeak]:
     leaks: list[CombinedLeak] = []
     for offset, text in load_combined_entries(combined).items():
-        if SPECIES_TABLE_OFFSET <= offset < SPECIES_TABLE_END:
-            continue
         for french, english in find_french_species_names(text, aliases):
             leaks.append(CombinedLeak(offset, french, english, text))
     return leaks
@@ -151,17 +159,45 @@ def _decode_at(rom: bytes, offset: int, limit: int = 4096) -> str:
     return TextDecoder.decode_pokemon(rom[offset:end], preserve_unknown=True)
 
 
+def _candidate_alias_positions(
+    target: bytes,
+    aliases: Mapping[str, str],
+) -> list[int]:
+    """Locate encoded aliases once before decoding only pointed-to strings."""
+    signatures: set[bytes] = set()
+    for name in aliases:
+        for variant in (name, name.lower(), name.upper()):
+            try:
+                encoded = TextEncoder.encode_pokemon(variant)
+            except (KeyError, ValueError):
+                continue
+            if encoded:
+                signatures.add(encoded)
+    if not signatures:
+        return []
+    pattern = re.compile(
+        b"|".join(re.escape(value) for value in sorted(signatures, key=len, reverse=True))
+    )
+    return [match.start() for match in pattern.finditer(target)]
+
+
 def audit_live_pointer_texts(
     english: bytes,
     target: bytes,
-    source_offsets: Iterable[int],
+    source_offsets: Iterable[int] | None,
     aliases: Mapping[str, str],
 ) -> list[RomLeak]:
-    """Follow every plausible EN pointer site in the target and inspect text."""
+    """Follow plausible EN pointer sites in the target and inspect live text.
+
+    ``source_offsets=None`` scans the full English pointer index.  A restricted
+    iterable remains useful to keep focused unit tests fast, but the production
+    ROM audit deliberately uses the exhaustive mode so dedicated patches and
+    strings absent from ``combined_de.txt`` cannot escape it.
+    """
     en_index = build_pointer_index(english)
-    leaks: list[RomLeak] = []
-    seen: set[tuple[int, int, int, str]] = set()
-    for source_offset in sorted(set(source_offsets)):
+    offsets = en_index if source_offsets is None else set(source_offsets)
+    live_sites: dict[int, list[tuple[int, int]]] = {}
+    for source_offset in sorted(offsets):
         sites = plausible_sites(
             english,
             source_offset,
@@ -169,24 +205,51 @@ def audit_live_pointer_texts(
         )
         for site in sites:
             target_offset = live_target(target, site)
-            if target_offset is None:
+            if target_offset is not None:
+                live_sites.setdefault(target_offset, []).append((source_offset, site))
+
+    starts = sorted(live_sites)
+    leaks: list[RomLeak] = []
+    seen: set[tuple[int, int, int, str]] = set()
+    decoded_targets: dict[int, str] = {}
+    audited_targets: set[int] = set()
+    for candidate in _candidate_alias_positions(target, aliases):
+        index = bisect.bisect_right(starts, candidate)
+        for start_index in range(index - 1, -1, -1):
+            target_offset = starts[start_index]
+            if candidate - target_offset >= 4096:
+                break
+            terminator = target.find(
+                b"\xff",
+                target_offset,
+                min(len(target), target_offset + 4096),
+            )
+            if terminator != -1 and candidate >= terminator:
                 continue
-            text = _decode_at(target, target_offset)
-            for french, canonical in find_french_species_names(text, aliases):
-                key = (source_offset, site, target_offset, french)
-                if key in seen:
-                    continue
-                seen.add(key)
-                leaks.append(
-                    RomLeak(
-                        source_offset,
-                        site,
-                        target_offset,
-                        french,
-                        canonical,
-                        text,
+            if target_offset in audited_targets:
+                continue
+            audited_targets.add(target_offset)
+            text = decoded_targets.get(target_offset)
+            if text is None:
+                text = _decode_at(target, target_offset)
+                decoded_targets[target_offset] = text
+            matches = find_french_species_names(text, aliases)
+            for source_offset, site in live_sites[target_offset]:
+                for french, canonical in matches:
+                    key = (source_offset, site, target_offset, french)
+                    if key in seen:
+                        continue
+                    seen.add(key)
+                    leaks.append(
+                        RomLeak(
+                            source_offset,
+                            site,
+                            target_offset,
+                            french,
+                            canonical,
+                            text,
+                        )
                     )
-                )
     return leaks
 
 
@@ -204,11 +267,10 @@ def audit_rom(
         and target[SPECIES_TABLE_OFFSET:SPECIES_TABLE_END]
         == english[SPECIES_TABLE_OFFSET:SPECIES_TABLE_END]
     )
-    source_offsets = load_combined_entries(combined)
     rom_leaks = audit_live_pointer_texts(
         english,
         target,
-        source_offsets,
+        None,
         aliases or load_french_aliases(),
     )
     return table_matches, rom_leaks

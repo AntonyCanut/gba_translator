@@ -1979,8 +1979,10 @@ d’annulation dans le reste du jeu.
   le test E2E contrôle aussi chacune des 1 293 cellules.
 - L'audit couvre tous les noms français localisés, y compris les sept également
   officiels en allemand (`Kapoera`, `Cosmovum`, etc.), tout en ignorant les
-  variables dynamiques. Les 221 entrées DE corrigées sont protégées par le
+  variables dynamiques. Les 229 entrées DE corrigées, dont les huit cellules
+  localisées encore présentes dans la table source, sont protégées par le
   manifeste d'intégrité.
 - Sur `GenedRom-de.gba`, l'audit trouve zéro fuite dans les sources vivantes et
-  zéro fuite via les pointeurs ROM. Les 2 preuves E2E et les 29 régressions
+  zéro fuite via l'ensemble des pointeurs texte plausibles de la ROM, y compris
+  les cibles absentes de `combined_de.txt`. Les 2 preuves E2E et les régressions
   ciblées DE/FR/IT passent ; aucun fichier de langue FR ou IT n'est modifié.

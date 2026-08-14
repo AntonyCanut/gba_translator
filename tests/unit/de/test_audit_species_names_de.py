@@ -11,6 +11,7 @@ from languages.de.tools.audit_species_names import (
     find_french_species_names,
     load_french_aliases,
 )
+from languages.fr.patches.species_names import SPECIES_TABLE_OFFSET
 from src.core.text_codec import TextEncoder
 
 ROOT = Path(__file__).resolve().parents[3]
@@ -59,6 +60,20 @@ def test_combined_audit_obeys_last_entry_wins(tmp_path: Path):
     ]
 
 
+def test_combined_audit_includes_fixed_species_table(tmp_path: Path):
+    combined = tmp_path / "combined_de.txt"
+    combined.write_text(
+        f"0x{SPECIES_TABLE_OFFSET:X}: Kapoera\n",
+        encoding="utf-8",
+    )
+
+    leaks = audit_combined(combined, {"Kapoera": "Hitmontop"})
+
+    assert [(leak.offset, leak.french, leak.english) for leak in leaks] == [
+        (SPECIES_TABLE_OFFSET, "Kapoera", "Hitmontop")
+    ]
+
+
 def test_rom_audit_follows_relocated_live_pointer():
     source_offset = 0x100
     relocated_offset = 0x200
@@ -86,6 +101,33 @@ def test_rom_audit_follows_relocated_live_pointer():
     assert leaks[0].pointer_site == pointer_site
     assert leaks[0].target_offset == relocated_offset
     assert leaks[0].french == "Dracaufeu"
+
+
+def test_rom_audit_scans_live_pointer_absent_from_combined_offsets():
+    source_offset = 0x100
+    relocated_offset = 0x200
+    pointer_site = 0x20
+    english = bytearray(b"\x00" * 0x300)
+    target = bytearray(b"\x00" * 0x300)
+    struct.pack_into("<I", english, pointer_site, 0x08000000 + source_offset)
+    struct.pack_into("<I", target, pointer_site, 0x08000000 + relocated_offset)
+    english[source_offset : source_offset + 10] = (
+        TextEncoder.encode_pokemon("Hitmontop") + b"\xff"
+    )
+    target[relocated_offset : relocated_offset + 8] = (
+        TextEncoder.encode_pokemon("Kapoera") + b"\xff"
+    )
+
+    leaks = audit_live_pointer_texts(
+        bytes(english),
+        bytes(target),
+        None,
+        {"Kapoera": "Hitmontop"},
+    )
+
+    assert [(leak.source_offset, leak.pointer_site, leak.french) for leak in leaks] == [
+        (source_offset, pointer_site, "Kapoera")
+    ]
 
 
 def test_live_german_source_contains_no_french_species_names():

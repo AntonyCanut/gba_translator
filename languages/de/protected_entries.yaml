@@ -1506,3 +1506,51 @@ entries:
   expected: 'Indem es Licht absorbiert,\nwächst Cosmoem immer weiter.\nSeine goldene Schale ist sehr widerstandsfähig.'
   forbidden:
   - 'Indem es Licht absorbiert,\nwächst Cosmovum immer weiter.\nSeine goldene Schale ist sehr widerstandsfähig.'
+- offset: '0x166ae1a'
+  name: 'B-597 : cellule d’espèce EN canonique'
+  issue: B-597
+  expected: Hitmonlee
+  forbidden:
+  - Kicklee
+- offset: '0x166b3bb'
+  name: 'B-597 : cellule d’espèce EN canonique'
+  issue: B-597
+  expected: Hitmontop
+  forbidden:
+  - Kapoera
+- offset: '0x166bb35'
+  name: 'B-597 : cellule d’espèce EN canonique'
+  issue: B-597
+  expected: Chimecho
+  forbidden:
+  - Éoko
+- offset: '0x166c748'
+  name: 'B-597 : cellule d’espèce EN canonique'
+  issue: B-597
+  expected: Terrakion
+  forbidden:
+  - Terrakium
+- offset: '0x166c753'
+  name: 'B-597 : cellule d’espèce EN canonique'
+  issue: B-597
+  expected: Virizion
+  forbidden:
+  - Viridium
+- offset: '0x166d324'
+  name: 'B-597 : cellule d’espèce EN canonique'
+  issue: B-597
+  expected: Dewpider
+  forbidden:
+  - Araqua
+- offset: '0x166d4d1'
+  name: 'B-597 : cellule d’espèce EN canonique'
+  issue: B-597
+  expected: Cosmoem
+  forbidden:
+  - Cosmovum
+- offset: '0x166d529'
+  name: 'B-597 : cellule d’espèce EN canonique'
+  issue: B-597
+  expected: Kartana
+  forbidden:
+  - Katagami
