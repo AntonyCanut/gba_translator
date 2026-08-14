@@ -41,3 +41,5 @@ def test_graphic_baseline_is_content_addressed() -> None:
 
     assert manifest.graphics_count >= 50
     assert len(manifest.graphics_sha256) == 64
+    assert manifest.captures_count == 1
+    assert len(manifest.captures_sha256) == 64

@@ -46,6 +46,8 @@ class DeReleaseManifest:
     live_english_rules: tuple[ResidueRule, ...]
     graphics_count: int
     graphics_sha256: str
+    captures_count: int
+    captures_sha256: str
     rom_sha256: str
     surfaces: dict[str, tuple[str, ...]]
 
@@ -56,6 +58,7 @@ class DeReleaseManifest:
             raise ValueError(f"{path}: schema_version doit valoir 1")
         live = payload.get("live_english") or {}
         graphics = payload.get("graphics") or {}
+        captures = payload.get("captures") or {}
         rules = tuple(
             ResidueRule(
                 name=name,
@@ -75,6 +78,8 @@ class DeReleaseManifest:
             live_english_rules=rules,
             graphics_count=int(graphics.get("count", 0)),
             graphics_sha256=str(graphics.get("sha256", "")),
+            captures_count=int(captures.get("count", 0)),
+            captures_sha256=str(captures.get("sha256", "")),
             rom_sha256=str(payload.get("rom_sha256", "")),
             surfaces={
                 str(name): tuple(str(item) for item in evidence)

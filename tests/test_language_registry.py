@@ -18,6 +18,7 @@ EXPECTED_REFERENCES = {"en", "es"}
 
 # Generic (non-dedicated) buildable languages driven by build_language.py.
 GENERIC_CODES = ["it", "de", "indie"]
+IN_PROGRESS_GENERIC_CODES = ["it", "indie"]
 
 
 @pytest.fixture(scope="module")
@@ -50,12 +51,20 @@ def test_french_is_complete_and_dedicated(registry):
         assert step in fr.patches, f"FR descriptor lost patch step {step!r}"
 
 
-@pytest.mark.parametrize("code", GENERIC_CODES)
+@pytest.mark.parametrize("code", IN_PROGRESS_GENERIC_CODES)
 def test_new_languages_are_generic_and_in_progress(registry, code):
     cfg = registry.get(code)
     assert cfg.build == "generic"
     assert cfg.status == "in_progress"
     assert not cfg.is_dedicated
+
+
+def test_german_is_complete_and_generic(registry):
+    de = registry.get("de")
+    assert de.status == "complete"
+    assert de.is_complete
+    assert de.build == "generic"
+    assert not de.is_dedicated
 
 
 MECHANICAL_PATCHES = {

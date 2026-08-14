@@ -2233,15 +2233,32 @@ d’annulation dans le reste du jeu.
 
 ## Plan TDD
 
-- [ ] Écrire les gardes rouges de la recette de certification et des audits.
-- [ ] Ajouter la cible déterministe DE et le rapport de preuves reproductible.
-- [ ] Écrire les scénarios Playwright DE rouges et leurs ancres graphiques.
-- [ ] Implémenter les parcours courts mGBA et la comparaison des captures.
-- [ ] Corriger les écarts ROM révélés sans toucher aux sources FR/IT.
-- [ ] Passer le manifeste DE à `complete` après toutes les portes vertes.
-- [ ] Rebuilder FR/IT/DE, vérifier les hashes, suites Python/Vitest/E2E et gel.
-- [ ] Relire, documenter les résidus acceptés, committer et intégrer sans push.
+- [x] Écrire les gardes rouges de la recette de certification et des audits.
+- [x] Ajouter la cible déterministe DE et le rapport de preuves reproductible.
+- [x] Écrire les scénarios Playwright DE rouges et leurs ancres graphiques.
+- [x] Implémenter les parcours courts mGBA et la comparaison des captures.
+- [x] Corriger les écarts ROM révélés sans toucher aux sources FR/IT.
+- [x] Passer le manifeste DE à `complete` après toutes les portes vertes.
+- [x] Rebuilder FR/IT/DE, vérifier les hashes, suites Python/Vitest/E2E et gel.
+- [x] Relire, documenter les résidus acceptés, committer et intégrer sans push.
 
 ## Revue
 
-- À compléter avec les commandes, hashes ROM et captures réellement vérifiés.
+- `make verify-de-determinism` reproduit exactement la ROM DE, SHA-256
+  `5446362e0e4c7c49021709c169aa6b9c8965106310f4b6a5116913797b1a9b04`.
+- `make audit-de` passe : 35 tests ROM DE, 0 collision, 0 fuite de nom
+  d'espèce FR, 1 293 cellules d'espèces identiques à EN et 896 descriptions
+  Pokédex allemandes exactes. Le rapport classe 368 résidus anglais vivants
+  avec une empreinte sensible à chaque offset et texte.
+- Les 16 scénarios Playwright DE passent sans ignoré, couvrant les douze
+  surfaces demandées. La capture titre versionnée porte le SHA-256
+  `0b3b62194f0cc74fdd6d27b9a038562f8af2661ed0ca645e489b3083141687bb`.
+  Les 13 scénarios de captures équipe/résumé passent aussi pour EN/FR/DE/IT et
+  prouvent `KP` en DE sans tronquer les barres.
+- La suite Python finale passe (2 003 tests, les trois skips historiques sont
+  hors DE), ainsi que les 68 tests Vitest. La matrice FR→DE ne conserve plus
+  de promesse de ticket ultérieur et `languages/de/lang.yaml` vaut `complete`.
+- Le rapport machine et Markdown est généré sous
+  `output/reports/de_release_certification.{json,md}`; il contient le hash ROM,
+  les 53 hashes d'assets graphiques, la capture et la liste exhaustive des
+  résidus acceptés. Aucun push distant n'a été effectué.

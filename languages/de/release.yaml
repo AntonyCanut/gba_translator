@@ -33,8 +33,14 @@ graphics:
   count: 53
   sha256: 9a8c237da1b7c240fd046c9825a84e8e4a5afe57ecb4aeb74f436dff0e367074
 
+captures:
+  count: 1
+  sha256: cefc2f47379867f798806e2bf658198df70d1cf03f3769206515933d26846d39
+
 surfaces:
-  boot: [tests/e2e-playwright/german-translation.spec.ts]
+  boot:
+    - tests/e2e-playwright/german-translation.spec.ts
+    - tests/e2e-playwright/snapshots/german-translation.spec.ts-snapshots/de-title.png
   new_game: [tests/e2e-playwright/german-translation.spec.ts]
   party: [tests/e2e-playwright/specs/hp-bar.spec.ts]
   summary: [tests/e2e-playwright/specs/hp-bar.spec.ts]

@@ -101,6 +101,16 @@ def run(manifest_path: Path, report_dir: Path) -> tuple[dict, list[str]]:
     if len(graphic_rows) != manifest.graphics_count or graphic_digest != manifest.graphics_sha256:
         failures.append("baseline des graphismes DE modifiée")
 
+    capture_paths = sorted(
+        (ROOT / "tests/e2e-playwright/snapshots/german-translation.spec.ts-snapshots").glob("*.png")
+    )
+    capture_rows = [
+        (path.relative_to(ROOT).as_posix(), _sha256(path)) for path in capture_paths
+    ]
+    capture_digest = _digest(capture_rows)
+    if len(capture_rows) != manifest.captures_count or capture_digest != manifest.captures_sha256:
+        failures.append("baseline des captures Playwright DE modifiée")
+
     rom_digest = _sha256(rom)
     if rom_digest != manifest.rom_sha256:
         failures.append(f"empreinte ROM DE inattendue: {rom_digest}")
@@ -125,6 +135,7 @@ def run(manifest_path: Path, report_dir: Path) -> tuple[dict, list[str]]:
             "entries": residue_rows,
         },
         "graphics": {"count": len(graphic_rows), "sha256": graphic_digest, "assets": graphic_rows},
+        "captures": {"count": len(capture_rows), "sha256": capture_digest, "files": capture_rows},
         "surfaces": manifest.surfaces,
         "failures": failures,
     }
@@ -141,6 +152,7 @@ def run(manifest_path: Path, report_dir: Path) -> tuple[dict, list[str]]:
         f"Résidus anglais revus : {len(findings)} (`{residue_digest}`)",
         f"Collisions : {collision.get('collision_count')}",
         f"Assets graphiques : {len(graphic_rows)} (`{graphic_digest}`)",
+        f"Captures Playwright : {len(capture_rows)} (`{capture_digest}`)",
         "",
         "Le JSON voisin liste chaque résidu, sa classification et chaque hash d'asset.",
     ]

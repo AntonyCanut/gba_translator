@@ -1,7 +1,8 @@
 # German language descriptor — Pokémon Unbound EN→DE
 # Glossaire officiel figé : languages/de/data/official_terminology.yaml.
 #
-# All 12 translation batches (23,980 unique FR offsets) are now covered.
+# All 12 translation batches are covered and the final release recipe is
+# certified by languages/de/release.yaml.
 # German is built by the generic driver `scripts/build_language.py de`.
 # Translations live in languages/de/combined_de.txt (same `<offset_hex>:
 # <text>` format as combined_fr.txt). Offsets not present there stay
@@ -19,7 +20,7 @@ code: de
 name: German
 native_name: Deutsch
 builder_language: german          # value passed to the generic builder --language
-status: in_progress               # complete | in_progress
+status: complete                  # complete | in_progress
 build: generic                    # dedicated (make build-fr) | generic (build_language.py)
 
 combined: languages/de/combined_de.txt
