@@ -74,3 +74,12 @@ def test_de_certification_keeps_fr_and_it_in_the_gate() -> None:
     assert "test-vitest" in commands
     assert "test-playwright-de" in commands
     assert "verify-fr-it-nonregression" in commands
+
+
+def test_de_certification_rebuilds_fr_it_before_shared_playwright() -> None:
+    """Les captures multilingues ne doivent jamais lire des ROM FR/IT périmées."""
+    commands = _dry_run("certify-de")
+
+    hp_bar_test = commands.index("npm run test:e2e:hp-bar")
+    assert commands.index("scripts/build_language.py it") < hp_bar_test
+    assert commands.index("languages/fr/patches/hp_labels.py") < hp_bar_test

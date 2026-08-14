@@ -428,8 +428,8 @@ certify-de:
 	@$(MAKE) --no-print-directory audit-de
 	@$(MAKE) --no-print-directory test-python
 	@$(MAKE) --no-print-directory test-vitest
-	@$(MAKE) --no-print-directory test-playwright-de
 	@$(MAKE) --no-print-directory verify-fr-it-nonregression
+	@$(MAKE) --no-print-directory test-playwright-de
 	@echo "✓ German release certification passed."
 
 audit-toponyms-de:

@@ -2262,3 +2262,25 @@ d’annulation dans le reste du jeu.
   `output/reports/de_release_certification.{json,md}`; il contient le hash ROM,
   les 53 hashes d'assets graphiques, la capture et la liste exhaustive des
   résidus acceptés. Aucun push distant n'a été effectué.
+
+## Suivi de reprise — artefacts FR/IT périmés avant Playwright
+
+- [x] Reproduire l'échec avec une ROM IT antérieure aux correctifs graphiques.
+- [x] Identifier l'ordre fautif dans `certify-de` sans attribuer l'échec au build DE.
+- [x] Ajouter une garde rouge sur la reconstruction FR/IT avant les captures partagées.
+- [x] Corriger minimalement l'ordre de la recette et observer la garde verte.
+- [x] Relancer la certification complète, relire le diff et committer sans push.
+
+### Revue du suivi
+
+- La reprise a d'abord reproduit l'écart réel : la ROM IT périmée différait de
+  l'ancre anglaise sur 102 pixels dans la barre PV du résumé.
+- `certify-de` exécute désormais `verify-fr-it-nonregression` avant
+  `test-playwright-de`, afin que les 13 captures partagées lisent toujours des
+  ROM FR/IT fraîchement reconstruites.
+- La garde de recette a été observée rouge avant la correction puis verte ; la
+  revue indépendante ne relève aucun défaut critique, important ou mineur.
+- La certification complète repasse : build DE byte-identique
+  (`5446362e0e4c7c49021709c169aa6b9c8965106310f4b6a5116913797b1a9b04`),
+  35 tests ROM DE, 16 scénarios Playwright DE et 13 scénarios PV partagés.
+  Le correctif reste intégré localement, sans push distant.
