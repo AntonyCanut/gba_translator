@@ -109,7 +109,7 @@ SPANISH_BUILD := $(ROM_OUT_DIR)/GenedRom-es.gba
 .DEFAULT_GOAL := pipeline
 
 .PHONY: pipeline verify-roms extract extract-en extract-es extract-fr diff build-es build-fr verify-fr-determinism prepare-fr ensure-fr-translation validate-es trilingual-csv \
-	build-it build-de build-indie build-lang build-all release-all langs \
+	build-it build-de build-indie build-lang build-all release-all langs audit-toponyms-de \
 	test test-python-fast test-python test-rom test-fr-rebuild check-translations check-de-parity check-de-scope test-vitest test-playwright test-all \
 	sync-charmap sync-charmap-check install install-playwright lint tickets report \
 	clean help
@@ -369,6 +369,9 @@ build-it: check-translations-it
 
 build-de: check-translations-de
 	@$(PYTHON) scripts/build_language.py de --build-number $(BUILD_NUMBER)
+
+audit-toponyms-de:
+	@$(PYTHON) scripts/audit_english_toponyms_de.py
 
 build-indie: check-translations-indie
 	@$(PYTHON) scripts/build_language.py indie --build-number $(BUILD_NUMBER)

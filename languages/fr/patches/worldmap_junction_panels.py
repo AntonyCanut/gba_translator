@@ -139,16 +139,28 @@ def apply(
     return stats
 
 
-def verify(rom: bytes) -> list[tuple[int, str]]:
-    """Return targets whose live pointer still reaches the English original."""
+def verify(
+    rom: bytes,
+    combined: dict[int, str],
+    source_rom: bytes | None = None,
+) -> list[tuple[int, str]]:
+    """Verify targets against the selected language's combined values."""
     bad: list[tuple[int, str]] = []
-    for offset, prefix in TARGETS.items():
+    for offset in TARGETS:
         if find_referrers(rom, offset):
             bad.append((offset, "still points to original"))
             continue
-        encoded_prefix = TextEncoder.encode(prefix, "pokemon")[:-1]  # drop 0xFF
-        if encoded_prefix not in rom:
-            bad.append((offset, "French fragment not found in ROM"))
+        text = combined.get(offset)
+        if not text:
+            bad.append((offset, "missing combined value"))
+            continue
+        encoded = (
+            encode_relocated(text, source_rom, offset)
+            if source_rom is not None
+            else TextEncoder.encode(_normalize_text(text), "pokemon")
+        )
+        if encoded not in rom:
+            bad.append((offset, "encoded combined value not found in ROM"))
     return bad
 
 
@@ -179,7 +191,7 @@ def main() -> int:
     reserved = Path(args.reference_rom).read_bytes() if args.reference_rom else None
 
     stats = apply(rom, combined, source_rom, reserved_rom=reserved)
-    remaining = verify(rom)
+    remaining = verify(rom, combined, source_rom)
     rom_path.write_bytes(rom)
 
     print("✓ World-Map junction panels — relocation + repointing:")

@@ -111,12 +111,17 @@ def apply(rom: bytearray, combined: dict[int, str], source_rom: bytes) -> dict:
     return stats
 
 
-def verify(rom: bytes) -> list[tuple[int, str]]:
-    """Return targets whose in-place bytes do not decode to the expected French."""
+def verify(rom: bytes, combined: dict[int, str]) -> list[tuple[int, str]]:
+    """Return targets that do not decode to their language-specific source."""
     from src.core.text_codec import TextDecoder
 
     bad: list[tuple[int, str]] = []
-    for offset, expected in TARGETS.items():
+    for offset in TARGETS:
+        expected = combined.get(offset)
+        if not expected:
+            bad.append((offset, "missing combined value"))
+            continue
+        expected = _normalize_text(expected)
         end = rom.find(b"\xff", offset)
         raw = rom[offset : end + 1] if end != -1 else rom[offset : offset + 40]
         got = TextDecoder.decode_pokemon(raw, preserve_unknown=True).strip()
@@ -146,7 +151,7 @@ def main() -> int:
     combined = load_combined(Path(args.combined))
 
     stats = apply(rom, combined, source_rom)
-    remaining = verify(rom)
+    remaining = verify(rom, combined)
     rom_path.write_bytes(rom)
 
     print("✓ World-Map labels — in-place rewrite:")

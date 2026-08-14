@@ -1986,3 +1986,19 @@ d’annulation dans le reste du jeu.
   zéro fuite via l'ensemble des pointeurs texte plausibles de la ROM, y compris
   les cibles absentes de `combined_de.txt`. Les 2 preuves E2E et les régressions
   ciblées DE/FR/IT passent ; aucun fichier de langue FR ou IT n'est modifié.
+
+# DE — noms de lieux anglais
+
+- [x] Établir et tester le canon EN depuis la ROM source.
+- [x] Corriger chirurgicalement les entrées live de `combined_de.txt`.
+- [x] Câbler les couches DE : zones, carte, jonctions et panneaux routiers.
+- [x] Ajouter l’audit par pointeurs vivants, terminateurs, contrôles et flèches.
+- [x] Reconstruire les ROM FR/IT/DE et vérifier l’absence de contenu FR/IT modifié.
+- [x] Committer et préparer l’intégration linéaire locale sans push.
+
+## Revue DE toponymes
+
+- Le catalogue canonique est dérivé des surfaces EN et ne remplace un alias que si le même consommateur EN contient le toponyme attendu.
+- Les panneaux routiers reprennent exactement les contrôles de ligne et glyphes-flèches EN ; 23 cibles sont relocalisées et repointées.
+- L’audit ROM vérifie les pointeurs vivants, les noms canoniques, l’absence d’alias FR/DE, les terminateurs et la position des flèches.
+- Les tests Python/Vitest, les trois builds FR/IT/DE, l’audit de collisions et le test E2E DE sont verts. Aucun contenu FR/IT n’est modifié.

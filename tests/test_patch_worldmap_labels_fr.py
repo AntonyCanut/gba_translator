@@ -60,7 +60,18 @@ class TestPatchWorldmapLabelsFR(unittest.TestCase):
         self.assertEqual(stats["written"], 2)
         self.assertEqual(self._decode(self.rom, 0xB500A0), "Gurenbourg")
         self.assertEqual(self._decode(self.rom, 0xB535C8), "Île Pleinelune")
-        self.assertEqual(verify(self.rom), [])
+        self.assertEqual(verify(self.rom, self.combined), [])
+
+    def test_verify_uses_the_language_specific_combined_values(self) -> None:
+        # Arrange: the same patch implementation is reused by DE, whose
+        # toponym policy deliberately keeps the original English names.
+        combined = {0xB500A0: "Gurun Town", 0xB535C8: "Fullmoon Island"}
+
+        # Act
+        apply(self.rom, combined, self.source)
+
+        # Assert: verification follows delivered data, never FR constants.
+        self.assertEqual(verify(self.rom, combined), [])
 
     def test_does_not_clobber_next_pointer(self) -> None:
         # The pointer that follows the longer label (Fullmoon Island) must survive.
@@ -80,7 +91,7 @@ class TestPatchWorldmapLabelsFR(unittest.TestCase):
 
     def test_verify_catches_english_left_in_place(self) -> None:
         # No write performed: verify must report both targets as wrong.
-        bad = verify(bytes(self.source))
+        bad = verify(bytes(self.source), self.combined)
         self.assertEqual(len(bad), 2)
 
     def test_too_long_is_skipped_not_overflowed(self) -> None:

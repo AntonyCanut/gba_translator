@@ -1,0 +1,253 @@
+toponyms:
+  - canonical: Antisis City Port
+    anchors: []
+    aliases: ['Hafen der Stadt\nAntésia', Hafen von Antisis City, "Port de la ville d'Antésia"]
+  - canonical: Antisis City
+    anchors: [0x1EDCD8C, 0xB50330]
+    aliases: [Antésia]
+  - canonical: Antisis Port
+    anchors: [0x1EDCDB7, 0xB51EAC]
+    aliases: [Hafen von Antésia, Port d'Antésia]
+  - canonical: Blizzard City
+    anchors: [0x1EE6DC4]
+    aliases: [Cimistral, Ville Blizzard]
+  - canonical: Fallshore City
+    anchors: [0x1F04760]
+    aliases: [Rivapolis, Rive-d'Automne]
+  - canonical: Epidimy Town
+    anchors: [0x1F031C8]
+    aliases: [Épidia, Épidimi]
+  - canonical: Tehl Town
+    anchors: [0x71CA70]
+    aliases: [Automnia, Bourg-Tel]
+  - canonical: Dehara City
+    anchors: [0xB514E4, 0x1EF9640]
+    aliases: [Daherapolis]
+  - canonical: Bellin Town
+    anchors: [0x3EED08, 0x1EE5D9C]
+    aliases: [Bélenbourg, Bellinbourg]
+  - canonical: Crater Town
+    anchors: [0x3EED22]
+    aliases: [Cratéris, Cratéria, Bourg Cratère]
+  - canonical: Frozen Heights
+    anchors: [0x1F0B428]
+    aliases: [Frostgipfel, Cimes Gelées, Hauteurs Gelées]
+  - canonical: Tarmigan Town
+    anchors: [0x3EED67]
+    aliases: [Somnia, Tarmiganville]
+  - canonical: Gurun Town
+    anchors: [0xB500A0]
+    aliases: [Gurenbourg, Bourg Gurun]
+  - canonical: Dresco Town
+    anchors: [0x1EFF254]
+    aliases: [Dresco]
+  - canonical: Seaport City
+    anchors: [0xB500F0]
+    aliases: [Naville, Ville Portuaire]
+  - canonical: Polder Town
+    anchors: [0xB522A4, 0x1F52A74]
+    aliases: [Polderive, Polder sur Rive, Bourg Polder]
+  - canonical: Vivill Town
+    anchors: [0xB50100, 0x78E7BA]
+    aliases: [Viville]
+  - canonical: Magnolia Town
+    anchors: [0xB50228]
+    aliases: [Magnolia]
+  - canonical: Redwood Village
+    anchors: [0xB537AC]
+    aliases: [Rotholz, Rougebois]
+  - canonical: Magnolia Fields
+    anchors: [0xB53814]
+    aliases: [Magnolienfelder, Magnolia-Felder, Champs Magnolia, Champs de Magnolia]
+  - canonical: Magnolia Cafe
+    anchors: [0x1F723DE]
+    aliases: [Café Magnolia, Magnolia-Café]
+  - canonical: Redwood Forest
+    anchors: [0xB53528]
+    aliases: [Karmesinwald, Forêt Carmin, Forêt de Rougebois]
+  - canonical: Vivill Woods
+    anchors: [0x3EEF3D]
+    aliases: [Vivill-Wald, Bois Vivill, Bois de Vivillis]
+  - canonical: Battle Frontier
+    anchors: [0xB535E4]
+    aliases: [Kampfzone, Kampfgrenze, Zone de Combat]
+  - canonical: Battle Tower
+    anchors: [0x3EF144]
+    aliases: [Kampfturm, Tour de Combat]
+  - canonical: Battle Sands
+    anchors: []
+    aliases: [Kampfsand, Sables de Combat]
+  - canonical: Battle Mine
+    anchors: [0x3EF133]
+    aliases: [Kampfmine, Mine de Combat]
+  - canonical: Battle Circus
+    anchors: [0xB50244, 0x1F8A8B4]
+    aliases: [Kampfzirkus, Cirque de Combat]
+  - canonical: Thundercap Mt.
+    anchors: [0xB5026C]
+    aliases: [Donnerberg, Mont Foudroyant, Pic Grondant]
+  - canonical: Icy Hole
+    anchors: [0x1F21738]
+    aliases: [Gefrorener Abgrund, Gouffre Gelé, Gouffre Glacial, Trou Glacé]
+  - canonical: Rift Cave
+    anchors: [0x3EEF2D]
+    aliases: [Spalthöhle, Grotte Faille, Grotte Falaise]
+  - canonical: Icicle Cave
+    anchors: [0x3EEF4B]
+    aliases: [Stalaktithöhle, Grotte Stalactite, Grotte Glaçon]
+  - canonical: Valley Cave
+    anchors: [0x183482, 0x3EEEC1]
+    aliases: [Talhöhle, Grotte Vallée, Grotte Vallon, Grotte de la Vallée]
+  - canonical: Cave of Being
+    anchors: [0x3EEFEA, 0x1EEB8C0]
+    aliases: [Höhle der Wesen, Höhle des Wesens, Grotte de l'Être]
+  - canonical: Cinder Volcano
+    anchors: [0x1EEB940, 0xB503CC]
+    aliases: [Aschenvulkan, Aschevulkan, Volcan Cendré, Volcan Cendreux]
+  - canonical: Cootes Bog
+    anchors: [0xB50020]
+    aliases: [Fulica-Sumpf, Marais Fulica, Marais Cootes]
+  - canonical: Grim Woods
+    anchors: [0x3EEE7C]
+    aliases: [Boissombre, Bois Lugubres, Forêt Lugubre]
+  - canonical: Fullmoon Island
+    anchors: [0xB535C8]
+    aliases: [Vollmondinsel, Vollmond-Insel, Île Pleinelune, Île Pleine Lune]
+  - canonical: Newmoon Island
+    anchors: [0xB531D8]
+    aliases: [Neumondinsel, Île Nouvellune, Île Nouvelle Lune]
+  - canonical: Glimmer Isle
+    anchors: [0x7214E8]
+    aliases: [Funkelinsel, Île Scintillante]
+  - canonical: Flower Paradise
+    anchors: [0xB53514]
+    aliases: [Blumenparadies, Paradis Floral]
+  - canonical: Frozen Forest
+    anchors: [0xB50010]
+    aliases: [Gefrorener Wald, Forêt Gelée]
+  - canonical: Frost Mountain
+    anchors: [0x1F7108E]
+    aliases: [Frostberg, Mont Givre]
+  - canonical: Crystal Peak
+    anchors: [0x721464]
+    aliases: [Kristallgipfel, Pic Cristal]
+  - canonical: Auburn Waterway
+    anchors: [0x721690]
+    aliases: [Auburn-Wasserweg, Chenal Aubrun, Chenal Cuivré]
+  - canonical: Great Desert
+    anchors: [0x7218F0]
+    aliases: [Große Wüste, Grand Désert]
+  - canonical: Underground Pass
+    anchors: [0x3EEE9F, 0x1F82358]
+    aliases: [Untergrundpfad, Unterirdischer Durchgang, Passage Souterrain]
+  - canonical: Ruins of Void
+    anchors: [0xB6FB10]
+    aliases: [Ruinen des Nichts, Ruines du Néant]
+  - canonical: Lost Tunnel
+    anchors: [0x1F256FC]
+    aliases: [Verlorener Tunnel, Tunnel Perdu]
+  - canonical: Victory Road
+    anchors: [0x3EEED0]
+    aliases: [Siegesstraße, Route Victoire]
+  - canonical: Tomb of Borrius
+    anchors: [0xB51BF0]
+    aliases: [Grabmal von Borrius, Tombeau de Borrius]
+  - canonical: Distortion World
+    anchors: [0xB503A0]
+    aliases: [Verzerrte Welt, Monde Distorsion]
+  - canonical: Shadow Base
+    anchors: [0xB5018C, 0x1F6F194, 0x78D764]
+    aliases: [Schattenbasis, Base Ombre]
+  - canonical: KBT Expressway
+    anchors: [0x721438]
+    aliases: [KBT-Expressweg, KBT-Autobahn, Autoroute RBT]
+  - canonical: SES Expressway
+    anchors: [0x7B4882]
+    aliases: [SES-Expressweg, SES-Autobahn, Autoroute RBT]
+  - canonical: Wet Valley
+    anchors: []
+    aliases: [Feuchtes Tal]
+  - canonical: Potato Path
+    anchors: []
+    aliases: [Kartoffelweg]
+  - canonical: Island's End
+    anchors: []
+    aliases: [Ende der Insel]
+  - canonical: Frost Mountain Peak
+    anchors: []
+    aliases: [Gipfel des Frost Mountain]
+  - canonical: Autl Woods
+    anchors: []
+    aliases: [Bois Autl]
+  - canonical: Autumn River
+    anchors: []
+    aliases: [Herbstfluss]
+  - canonical: The Cliff Caves
+    anchors: []
+    aliases: [Klippenhöhlen]
+  - canonical: West Thundercap Steps
+    anchors: []
+    aliases: [Westtreppe]
+  - canonical: The Borrius Channel
+    anchors: []
+    aliases: [Borrius-Kanal]
+  - canonical: Northsea Stretch
+    anchors: []
+    aliases: [Northsea-Band]
+  - canonical: Barren Canyon
+    anchors: []
+    aliases: [Trockener Canyon]
+  - canonical: Eastern Bluffs
+    anchors: []
+    aliases: [Ostklippen]
+  - canonical: Victory Ascent
+    anchors: []
+    aliases: [Aufstieg zum Sieg]
+  - canonical: Tarmigan Mansion
+    anchors: [0xB504D0]
+    aliases: [Somnia-Anwesen, Tarmigan-Anwesen, Manoir Somnia]
+  - canonical: Vivill Warehouse
+    anchors: [0xB50350]
+    aliases: [Vivill-Lagerhaus, Dépôt de Viville, Entrepôt de Viville]
+  - canonical: Cube Corp.
+    anchors: [0x3EEF94]
+    aliases: [Cube GmbH, Cube SARL, Cube Sarl.]
+  - canonical: Game Corner
+    anchors: [0x7216AC]
+    aliases: [Kasino, Casino]
+  - canonical: Dehara Game Corner
+    anchors: []
+    aliases: [Casino von Daherapolis, Kasino von Daherapolis]
+  - canonical: ROCKET GAME CORNER
+    anchors: [0x41B1C7]
+    aliases: [ROCKET-CASINO]
+  - canonical: Dehara Dept.
+    anchors: [0x3EF22E]
+    aliases: [Daherapolis-Laden]
+  - canonical: Pokémon Day Care
+    anchors: [0x74BD59]
+    aliases: [Pokémon-Pension, Pension Pokémon]
+  - canonical: Trainer House
+    anchors: [0x1EFF27C]
+    aliases: [Trainerhaus, Maison Dresseurs]
+  - canonical: Pokémon Center
+    anchors: [0x1C0F0A]
+    aliases: [Pokémon-Center, Centre Pokémon]
+  - canonical: Poké Mart
+    anchors: [0x1EE6C5C]
+    aliases: [Poké-Markt, Poké Markt]
+  - canonical: Safari Zone
+    anchors: [0xB522D4]
+    aliases: [Safari-Zone, Zone Safari]
+  - canonical: Pokémon League
+    anchors: [0x3EEF12]
+    aliases: [Pokémon-Liga, Ligue Pokémon]
+  - canonical: Pokémon LEAGUE GATE
+    anchors: [0x41B0B9]
+    aliases: [POKÉMON-LIGA-TOR]
+  - canonical: Pokémon LEAGUE HQ
+    anchors: []
+    aliases: [Hauptquartier der Pokémon-LIGA]
+  - canonical: INDIGO PLATEAU
+    anchors: [0x3EED77]
+    aliases: [INDIGO-PLATEAU, PLATEAU INDIGO]

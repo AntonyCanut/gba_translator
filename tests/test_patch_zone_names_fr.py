@@ -127,16 +127,33 @@ class TestPatchZoneNamesFr(unittest.TestCase):
         combined = self._make_combined()
         apply(rom, combined, bytes(rom))
 
-        failures = verify(bytes(rom))
+        failures = verify(bytes(rom), combined)
         self.assertEqual(failures, [],
                          f"verify() must report no failures after patch: {failures}")
 
     def test_verify_catches_unpatched(self):
         rom = self._make_rom()
         # Do NOT apply — targets still have live pointers to English text.
-        failures = verify(bytes(rom))
+        failures = verify(bytes(rom), self._make_combined())
         self.assertEqual(len(failures), len(TARGETS),
                          "verify() must report every un-patched target")
+
+    def test_verify_uses_the_language_specific_combined_values(self):
+        # Arrange: exact EN names are the intended output for the DE build.
+        combined = {
+            0x071FC80: "Blizzard City",
+            0x0B51EAC: "Antisis Port",
+            0x078D811: "Crater Town",
+            0x078D851: "Blizzard City",
+            0x078D7C8: "Cinder Volcano West",
+        }
+        rom = self._make_rom()
+
+        # Act
+        apply(rom, combined, bytes(rom))
+
+        # Assert
+        self.assertEqual(verify(bytes(rom), combined), [])
 
     def test_stats_no_source(self):
         rom = self._make_rom()

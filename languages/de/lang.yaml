@@ -206,6 +206,7 @@ patches:
   - world_map_action_labels
   - mission_descriptions
   - worldmap_junction_panels
+  - zone_names
   # Restore all 1,293 fixed species-name cells from the canonical EN ROM after
   # every writing patch.  No German/FR name list participates in this copy.
   - species_names
