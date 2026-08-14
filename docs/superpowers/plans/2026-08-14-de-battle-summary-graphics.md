@@ -64,8 +64,12 @@
 - Consumes: `make build-de`, tests ROM pixel/tuile, probes mGBA existantes.
 - Produces: ROM DE reconstruite et preuves reproductibles.
 
-- [ ] Construire DE puis comparer chaque fenêtre extraite aux assets versionnés.
-- [ ] Vérifier l’idempotence du patch et l’absence de pixels anglais/français connus.
-- [ ] Exécuter les tests ciblés, la suite Python/Vitest et les scénarios mGBA disponibles.
-- [ ] Vérifier que les ROM FR/IT et leurs assets restent inchangés.
-- [ ] Relire le diff, consigner les preuves, committer et intégrer sans push.
+- [x] Construire DE puis comparer chaque fenêtre extraite aux assets versionnés.
+- [x] Vérifier l'idempotence du patch et l'absence de pixels anglais/français connus.
+- [x] Exécuter les tests ciblés, la suite Python/Vitest et les scénarios mGBA disponibles.
+- [x] Vérifier que les ROM FR/IT et leurs assets restent inchangés.
+- [x] Relire le diff, consigner les preuves, committer et intégrer sans push.
+
+La revue indépendante a étendu le périmètre de validation aux quatre groupes
+bruts `gBattleInterface_Gfx` et aux word-images Info/détail d'attaque. Ces
+surfaces sont désormais incluses dans les mêmes sources raster et gardes ROM.

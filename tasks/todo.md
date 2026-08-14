@@ -2059,6 +2059,33 @@ d’annulation dans le reste du jeu.
 - [x] Ajouter les tests rouges du registre, des copies et de l'ordre post-LZ77.
 - [x] Extraire les PNG/BMP indexés éditables depuis la ROM DE corrigée.
 - [x] Ajouter la réinjection déterministe de toutes les fenêtres de tuiles.
-- [ ] Construire la ROM et comparer automatiquement pixels et tuiles.
-- [ ] Exécuter les captures mGBA ciblées et les non-régressions FR/IT.
-- [ ] Relire, committer, rebaser et intégrer localement sans push.
+- [x] Construire la ROM et comparer automatiquement pixels et tuiles.
+- [x] Exécuter les captures mGBA ciblées et les non-régressions FR/IT.
+- [x] Relire, committer, rebaser et intégrer localement sans push.
+
+## Revue
+
+- Les 20 fenêtres de tuiles sont versionnées en PNG et BMP indexés : huit
+  copies de badges de statut (dont quatre groupes bruts de healthbox), deux
+  planches de types distinctes, neuf variantes KP, la planche complète du
+  résumé et le marqueur officiel « Lv ».
+- Le patch final valide toutes les dimensions avant écriture, suit les
+  pointeurs vivants, respecte les modes brut/LZ77 et réinjecte les rasters
+  après les réparations et les générateurs. Une seconde application conserve
+  exactement les mêmes octets.
+- La ROM DE finale correspond pixel par pixel aux sources versionnées pour les
+  20 copies. Une revue indépendante a détecté puis fait verrouiller les quatre
+  groupes de statuts combat et les résidus `TYPE`/`POWER`/`ACCURACY`. Les 85
+  tests graphiques élargis et les 13 scénarios Playwright passent désormais.
+- Les captures mGBA sont conservées dans `output/proofs/de-battle-summary/` et
+  `output/proofs/de-battle-healthbox/`. Le dump OBJ du combat contient K et P,
+  et aucune des cinq variantes de tuile H anglaise.
+- Le hook de commit valide la suite Python, les 68 tests Vitest et les builds
+  FR/IT/DE. Un second `make build-de` reproduit le même SHA-256 DE et laisse
+  inchangés les hashes FR/IT : DE
+  `da26b599e895b405dd20c3e3b8d338230dfffdfc1e11e388991dadcbd533cc6b`,
+  FR `3ed46e26a1c4346743322bae7ebb86bc9c2f679890fcbdfd866ce01fb6d8fc10`
+  et IT
+  `092505980b071a2ea9424c8167f187acf6aa9f11f0e7d1725072937683ac320c`.
+- La revue indépendante finale ne relève aucun problème Critical, Important ou
+  Minor après vérification des rasters, de la ROM et des captures runtime.

@@ -87,6 +87,12 @@ SPRITES.update(
             tiles_tall=1,
             compressed=False,
         ),
+        "battle_status_badges": SpriteDef(
+            blocks=(0x00D11E64, 0x00D124A4, 0x00D12684, 0x00D12864),
+            tiles_wide=3,
+            tiles_tall=5,
+            compressed=False,
+        ),
         # Le marqueur officiel allemand reste la ligature originale « Lv ».
         # Cette tuile de police brute est partagée par l'équipe, le résumé et
         # les healthboxes ; la versionner empêche une fuite du glyphe FR « N. ».

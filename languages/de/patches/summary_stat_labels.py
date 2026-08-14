@@ -1,11 +1,13 @@
 #!/usr/bin/env python3
-"""Traduit les six images-mots de statistiques du résumé Pokémon en allemand.
+"""Traduit les images-mots des pages Info, Capacités et Attaques en allemand.
 
 La feuille LZ77 à ``0x00E9A460`` contient des mots dessinés en pixels plutôt
 que des chaînes CFRU. Le patch reproduit d'abord chaque capsule anglaise au
 pixel près, puis la remplace par une forme allemande qui tient dans ses 43 px.
-Il s'exécute après :mod:`languages.de.patches.hp_labels` et ne touche jamais à
-la zone ``KP`` voisine (x=32..47, y=48..63).
+Il couvre les six statistiques, NR./TYP/ID-NR. et les capsules STÄRKE et
+GENAUIG. recomposées par le tilemap. Il s'exécute après
+:mod:`languages.de.patches.hp_labels` et ne touche jamais à la zone ``KP``
+voisine (x=32..47, y=48..63).
 """
 
 from __future__ import annotations
@@ -17,12 +19,18 @@ from pathlib import Path
 ROOT_DIR = Path(__file__).resolve().parents[3]
 sys.path.insert(0, str(ROOT_DIR))
 
-from languages.de.terminology import section as terminology_section  # noqa: E402
-from languages.fr.patches.font import lz77_compress, lz77_decompress
+from languages.de.terminology import section as terminology_section
+from languages.fr.patches.font import (
+    lz77_compress,
+    lz77_decompress,
+    pixels_to_tile,
+    tile_to_pixels,
+)
 from languages.fr.patches.summary_stat_labels import GLYPHS as BASE_GLYPHS
 
 OFFICIAL_STATS = terminology_section("stats")
 STAT_DISPLAY = terminology_section("stat_display")
+SUMMARY_WORD_IMAGES = terminology_section("summary_word_images")
 
 TILE = 32
 SHEET_WIDE = 16
@@ -65,7 +73,33 @@ GLYPHS: dict[str, tuple[str, ...]] = {
     "G": (".##.", "#..#", "#...", "#.##", "#..#", "#..#", ".###"),
     "R": ("###.", "#..#", "#..#", "###.", "#.#.", "#..#", "#..#"),
     "-": ("...", "...", "...", "###", "...", "...", "..."),
+    "Ä": ("#..#", ".##.", "#..#", "#..#", "####", "#..#", "#..#"),
 }
+
+# Images-mots de la page Info. NAME, OT et ITEM sont déjà identiques en DE ;
+# les trois autres doivent être redessinées dans leur créneau de 32 px.
+INFO_LABELS: tuple[tuple[int, str, str], ...] = (
+    (56, "NO", SUMMARY_WORD_IMAGES["number"]),
+    (80, "TYPE", SUMMARY_WORD_IMAGES["type"]),
+    (104, "IDNO", SUMMARY_WORD_IMAGES["id_number"]),
+)
+
+# Le tilemap du panneau de détail recompose ses deux capsules à partir de
+# tuiles non contiguës. Cette carte a été relevée dans BG1 screenbase 0x6000
+# sous mGBA ; la tuile 124 est volontairement dupliquée comme remplissage.
+MOVE_PANEL_TILEMAP: tuple[tuple[int | None, ...], ...] = (
+    (124, 125, 126, 127, 172, 173, 124),
+    (140, 141, 142, 143, 188, 189, None),
+    (158, 159, 204, 205, 190, 191, None),
+    (174, 175, 220, 221, 206, 207, None),
+)
+MOVE_LABELS: tuple[tuple[int, str, str], ...] = (
+    (6, "POWER", SUMMARY_WORD_IMAGES["power"]),
+    (18, "ACCURACY", SUMMARY_WORD_IMAGES["accuracy"]),
+)
+COMPACT_BACKGROUND = BACKGROUND
+COMPACT_CENTER = 24
+COMPACT_X0, COMPACT_X1 = 0, 47
 
 
 def _offset(x: int, y: int) -> int:
@@ -158,6 +192,121 @@ def fits(word: str) -> bool:
     )
 
 
+def compact_label_pixels(
+    word: str,
+    *,
+    center: int,
+    x0: int,
+    x1: int,
+) -> dict[tuple[int, int], int]:
+    """Compose une capsule arrondie de 9 px autour d'un mot contraint."""
+    pixels, width = render_word(word)
+    start = center - width // 2
+    letters = {(start + x, y + 1) for x, y in pixels}
+    left = start - 2
+    right = start + width + 1
+    if left < x0 or right > x1:
+        raise ValueError(f"« {word} » dépasse la fenêtre {x0}..{x1}")
+    pill = {
+        0: set(range(left + 2, right - 1)),
+        1: set(range(left + 1, right)),
+        2: set(range(left, right + 1)),
+        3: set(range(left, right + 1)),
+        4: set(range(left, right + 1)),
+        5: set(range(left, right + 1)),
+        6: set(range(left, right + 1)),
+        7: set(range(left + 1, right)),
+        8: set(range(left + 2, right - 1)),
+    }
+    return {
+        (x, y): LETTER if (x, y) in letters else PILL if x in pill[y] else COMPACT_BACKGROUND
+        for y in range(9)
+        for x in range(x0, x1 + 1)
+    }
+
+
+def _read_compact_label(
+    tiles: bytes,
+    y0: int,
+    *,
+    x0: int,
+    x1: int,
+) -> dict[tuple[int, int], int]:
+    return {
+        (x, y): px_get(tiles, x, y0 + y)
+        for y in range(9)
+        for x in range(x0, x1 + 1)
+    }
+
+
+def _move_panel_grid(tiles: bytes) -> list[list[int]]:
+    grid = [[COMPACT_BACKGROUND] * 56 for _ in range(32)]
+    for tile_y, row in enumerate(MOVE_PANEL_TILEMAP):
+        for tile_x, index in enumerate(row):
+            if index is None:
+                continue
+            pixels = tile_to_pixels(tiles[index * TILE : (index + 1) * TILE])
+            for y in range(8):
+                grid[tile_y * 8 + y][tile_x * 8 : tile_x * 8 + 8] = pixels[y * 8 : y * 8 + 8]
+    return grid
+
+
+def _write_move_panel_grid(tiles: bytearray, grid: list[list[int]]) -> None:
+    written: dict[int, bytes] = {}
+    for tile_y, row in enumerate(MOVE_PANEL_TILEMAP):
+        for tile_x, index in enumerate(row):
+            if index is None:
+                continue
+            pixels = [
+                grid[tile_y * 8 + y][tile_x * 8 + x]
+                for y in range(8)
+                for x in range(8)
+            ]
+            encoded = pixels_to_tile(pixels)
+            if index in written and written[index] != encoded:
+                raise ValueError(f"tuile répétée {index} incohérente dans le panneau")
+            written[index] = encoded
+    for index, encoded in written.items():
+        tiles[index * TILE : (index + 1) * TILE] = encoded
+
+
+def patch_word_images(tiles: bytearray) -> tuple[int, list[str]]:
+    """Traduit les labels Info et les capsules Puissance/Précision."""
+    patched = 0
+    messages: list[str] = []
+    for slot_y, english, german in INFO_LABELS:
+        y0 = slot_y + 2
+        target = compact_label_pixels(german, center=16, x0=0, x1=31)
+        if _read_compact_label(tiles, y0, x0=0, x1=31) == target:
+            continue
+        for (x, y), value in target.items():
+            px_set(tiles, x, y0 + y, value)
+        patched += 1
+        messages.append(f"  « {english} » → « {german} » (Info)")
+
+    panel = _move_panel_grid(tiles)
+    for y0, english, german in MOVE_LABELS:
+        target = compact_label_pixels(
+            german,
+            center=COMPACT_CENTER,
+            x0=COMPACT_X0,
+            x1=COMPACT_X1,
+        )
+        current = {
+            (x, y): panel[y0 + y][x]
+            for y in range(9)
+            for x in range(COMPACT_X0, COMPACT_X1 + 1)
+        }
+        if current == target:
+            continue
+        for (x, y), value in target.items():
+            panel[y0 + y][x] = value
+        patched += 1
+        messages.append(f"  « {english} » → « {german} » (attaque)")
+    _write_move_panel_grid(tiles, panel)
+    return patched, messages
+
+
 def patch_sheet(tiles: bytearray) -> tuple[int, list[str]]:
     """Traduit la feuille en mémoire, sans altérer une capsule inconnue."""
     patched = 0
@@ -192,6 +341,9 @@ def apply_patches(rom_path: Path) -> int:
         return 0
     tiles = bytearray(result[0])
     patched, messages = patch_sheet(tiles)
+    word_patched, word_messages = patch_word_images(tiles)
+    patched += word_patched
+    messages.extend(word_messages)
     for message in messages:
         print(message, file=sys.stderr if "WARN" in message else sys.stdout)
     if not patched:

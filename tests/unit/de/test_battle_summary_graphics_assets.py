@@ -27,6 +27,7 @@ SOURCE_ROM = ROOT / "input" / "roms" / "englishrom.gba"
 
 EXPECTED_SPRITES = {
     "status_badges": (32, 64, 4),
+    "battle_status_badges": (24, 40, 4),
     "type_icons_summary": (128, 152, 1),
     "type_icons_battle": (128, 104, 1),
     "party_kp_label": (64, 80, 1),
@@ -67,6 +68,28 @@ def test_divergent_type_copies_have_distinct_complete_sheets() -> None:
     battle = read_indexed_image(ASSET_DIR / "type_icons_battle.png")
     assert summary[:2] != battle[:2]
     assert summary[2][:104] != battle[2]
+
+
+def test_summary_word_images_replace_every_language_dependent_english_label() -> None:
+    if not SOURCE_ROM.exists():
+        pytest.skip("englishrom.gba absente")
+    english, _decompressed, _compressed = extract_block(
+        SOURCE_ROM.read_bytes(), 0x00E9A460, 16, 32
+    )
+    german = read_indexed_image(ASSET_DIR / "summary_stat_labels.png")[2]
+
+    def changed(xs: range, ys: range) -> int:
+        return sum(
+            german[y][x] != english[y][x]
+            for y in ys
+            for x in xs
+        )
+
+    for english_label, y0 in (("No", 56), ("TYPE", 80), ("IDNo", 104)):
+        assert changed(range(32), range(y0, y0 + 12)) > 0, english_label
+    for shared_label, y0 in (("NAME", 68), ("OT", 92), ("ITEM", 116)):
+        assert changed(range(32), range(y0, y0 + 12)) == 0, shared_label
+    assert changed(range(96, 128), range(56, 112)) > 0, "POWER / ACCURACY"
 
 
 def test_patch_covers_every_declared_copy_once() -> None:
@@ -123,10 +146,10 @@ def test_versioned_assets_match_the_deterministic_generators(tmp_path: Path) -> 
     generated = tmp_path / "generated-de-graphics.gba"
     shutil.copy2(SOURCE_ROM, generated)
 
-    assert status_badges.apply_patches(generated) == 4
+    assert status_badges.apply_patches(generated) == 8
     assert type_icons.apply_patches(generated) == 34
     assert hp_labels.apply_patches(generated) == 9
-    assert summary_stat_labels.apply_patches(generated) == 6
+    assert summary_stat_labels.apply_patches(generated) == 11
 
     _assert_rom_matches_assets(generated.read_bytes())
 
@@ -138,9 +161,9 @@ def test_raster_reinjection_is_byte_idempotent(tmp_path: Path) -> None:
     target = tmp_path / "de-assets.gba"
     shutil.copy2(SOURCE_ROM, target)
 
-    assert apply_to_rom(target) == 16
+    assert apply_to_rom(target) == 20
     first = target.read_bytes()
-    assert apply_to_rom(target) == 16
+    assert apply_to_rom(target) == 20
 
     assert target.read_bytes() == first
     _assert_rom_matches_assets(first)

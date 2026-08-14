@@ -26,6 +26,7 @@ SPRITE_NAMES = (
     "summary_stat_labels",
     "battle_kp_labels",
     "battle_kp_elements",
+    "battle_status_badges",
     "level_marker",
 )
 

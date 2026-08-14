@@ -32,6 +32,9 @@ Badge tile anatomy (8×8 px each, border color = palette idx 9):
   role : m  L1 L1 L1 L1  sep L2 L2 L2 L2  sep L3  L3  L3  L3   m
 where m = margin, sep = separator, L1/L2/L3 = letter pixels (4px wide each).
 
+The four raw ``gBattleInterface_Gfx`` groups used by live healthboxes are
+derived from the same German sheet with their battler-specific palette index.
+
 This script MUST run AFTER repair_stable_lz77_blocks.py and
 repair_localized_lz77_blocks.py so that block 0x0B1E11C is restored to the
 English FNT tiles (stable block) and block 0x0B1E280 to the Spanish DEB tiles
@@ -47,8 +50,13 @@ from pathlib import Path
 ROOT_DIR = Path(__file__).resolve().parents[3]
 sys.path.insert(0, str(ROOT_DIR))
 
-from languages.de.terminology import section as terminology_section  # noqa: E402
-from languages.fr.patches.font import lz77_compress, lz77_decompress  # noqa: E402
+from languages.de.terminology import section as terminology_section
+from languages.fr.patches.font import lz77_compress, lz77_decompress
+from languages.fr.patches.status_badges import (
+    HEALTHBOX_STATUS_GROUPS,
+    _patch_healthbox_status_group,
+)
+from src.graphics.sprite_rom import tiles_to_grid
 
 OFFICIAL_STATUSES = terminology_section("statuses")
 
@@ -230,30 +238,11 @@ def _patch_block(rom: bytearray, offset: int) -> bool:
         )
         return False
 
-    tiles = bytearray(decompressed)
-    changes: list[str] = []
-
-    # ── 1. 3-letter status badges (PSN→GIF, SLP→SCH, FRZ→GEF, BRN→VBR) ───────
-    for slot, a, b_ltr, c in _STATUS_PATCHES:
-        bg = _read_slot_bg(tiles, slot)
-        t1, t2 = _make_3letter_tiles(
-            _LETTERS[a], _LETTERS[b_ltr], _LETTERS[c], bg
-        )
-        base = slot * _TILES_PER_BADGE * _TILE_BYTES
-        c1_off = base + _CONTENT1_IDX * _TILE_BYTES
-        c2_off = base + _CONTENT2_IDX * _TILE_BYTES
-        tiles[c1_off : c1_off + _TILE_BYTES] = t1
-        tiles[c2_off : c2_off + _TILE_BYTES] = t2
-        changes.append(f"slot{slot}→{a}{b_ltr}{c}")
-
-    # ── 2. Fainted badge FNT/DEB → KO (2-letter, slot 6) ─────────────────────
-    ko_t1, ko_t2 = _make_ko_tiles()
-    base6 = _FNT_SLOT * _TILES_PER_BADGE * _TILE_BYTES
-    c1_off6 = base6 + _CONTENT1_IDX * _TILE_BYTES
-    c2_off6 = base6 + _CONTENT2_IDX * _TILE_BYTES
-    tiles[c1_off6 : c1_off6 + _TILE_BYTES] = ko_t1
-    tiles[c2_off6 : c2_off6 + _TILE_BYTES] = ko_t2
-    changes.append("slot6→KO")
+    tiles = _patched_tiles(decompressed)
+    changes = [
+        *(f"slot{slot}→{a}{b_ltr}{c}" for slot, a, b_ltr, c in _STATUS_PATCHES),
+        "slot6→KO",
+    ]
 
     compressed = lz77_compress(bytes(tiles))
     if offset + len(compressed) > len(rom):
@@ -278,6 +267,32 @@ def _patch_block(rom: bytearray, offset: int) -> bool:
     return True
 
 
+def _patched_tiles(decompressed: bytes) -> bytearray:
+    """Retourne la planche de badges DE, indépendamment de sa destination."""
+    tiles = bytearray(decompressed)
+
+    # ── 1. 3-letter status badges (PSN→GIF, SLP→SCH, FRZ→GEF, BRN→VBR) ───────
+    for slot, a, b_ltr, c in _STATUS_PATCHES:
+        bg = _read_slot_bg(tiles, slot)
+        t1, t2 = _make_3letter_tiles(
+            _LETTERS[a], _LETTERS[b_ltr], _LETTERS[c], bg
+        )
+        base = slot * _TILES_PER_BADGE * _TILE_BYTES
+        c1_off = base + _CONTENT1_IDX * _TILE_BYTES
+        c2_off = base + _CONTENT2_IDX * _TILE_BYTES
+        tiles[c1_off : c1_off + _TILE_BYTES] = t1
+        tiles[c2_off : c2_off + _TILE_BYTES] = t2
+
+    # ── 2. Fainted badge FNT/DEB → KO (2-letter, slot 6) ─────────────────────
+    ko_t1, ko_t2 = _make_ko_tiles()
+    base6 = _FNT_SLOT * _TILES_PER_BADGE * _TILE_BYTES
+    c1_off6 = base6 + _CONTENT1_IDX * _TILE_BYTES
+    c2_off6 = base6 + _CONTENT2_IDX * _TILE_BYTES
+    tiles[c1_off6 : c1_off6 + _TILE_BYTES] = ko_t1
+    tiles[c2_off6 : c2_off6 + _TILE_BYTES] = ko_t2
+    return tiles
+
+
 def apply_patches(rom_path: Path, dry_run: bool = False) -> int:
     rom = bytearray(rom_path.read_bytes())
     patched = 0
@@ -295,6 +310,24 @@ def apply_patches(rom_path: Path, dry_run: bool = False) -> int:
             continue
         ok = _patch_block(rom, block_off)
         if ok:
+            patched += 1
+
+    reference = lz77_decompress(rom, BADGE_BLOCKS[0])
+    if reference is None:
+        raise ValueError("impossible de construire les badges healthbox DE")
+    badge_grid = tiles_to_grid(
+        bytes(_patched_tiles(reference[0])[: 32 * _TILE_BYTES]),
+        4,
+        8,
+    )
+    for group_off, palette_index in HEALTHBOX_STATUS_GROUPS:
+        if _patch_healthbox_status_group(
+            rom,
+            group_off,
+            palette_index,
+            badge_grid,
+            dry_run=dry_run,
+        ):
             patched += 1
 
     if not dry_run and patched:

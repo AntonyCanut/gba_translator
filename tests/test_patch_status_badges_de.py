@@ -25,11 +25,15 @@ from languages.de.patches.status_badges import (
     _TILE_BYTES,
     _TILES_PER_BADGE,
     BADGE_BLOCKS,
+    HEALTHBOX_STATUS_GROUPS,
     _make_3letter_tiles,
     _make_ko_tiles,
+    _patched_tiles,
     _read_slot_bg,
 )
 from languages.fr.patches.font import lz77_decompress
+from languages.fr.patches.status_badges import _healthbox_status_payload
+from src.graphics.sprite_rom import tiles_to_grid
 from src.i18n import load_registry
 
 BUILT_DE_ROM = Path(__file__).parent.parent / "output" / "roms" / "GenedRom-de.gba"
@@ -115,6 +119,22 @@ class TestBuiltDeBadge(unittest.TestCase):
                     self.assertEqual(
                         bytes(tiles[start : start + _TILE_BYTES]), expected_tile
                     )
+
+    def test_raw_battle_healthbox_groups_render_the_same_de_badges(self):
+        result = lz77_decompress(self.rom, BADGE_BLOCKS[0])
+        self.assertIsNotNone(result)
+        grid = tiles_to_grid(
+            bytes(_patched_tiles(result[0])[: 32 * _TILE_BYTES]),
+            4,
+            8,
+        )
+        for offset, palette_index in HEALTHBOX_STATUS_GROUPS:
+            with self.subTest(offset=f"0x{offset:X}"):
+                expected = _healthbox_status_payload(grid, palette_index)
+                self.assertEqual(
+                    bytes(self.rom[offset : offset + len(expected)]),
+                    expected,
+                )
 
 
 if __name__ == "__main__":

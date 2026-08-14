@@ -125,6 +125,14 @@ stat_display:
   Speed: INIT.
   Experience: EP.
 
+# Formes d'affichage contraintes des images-mots du résumé (32–48 px).
+summary_word_images:
+  number: NR.
+  type: TYP
+  id_number: ID-NR.
+  power: STÄRKE
+  accuracy: GENAUIG.
+
 system_terms:
   move: Attacke
   ability: Fähigkeit

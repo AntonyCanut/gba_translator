@@ -8,12 +8,15 @@ import pytest
 
 from languages.de.patches.summary_stat_labels import (
     BLOCK,
+    INFO_LABELS,
     LABELS,
+    MOVE_LABELS,
     SLOT_LEN,
     apply_patches,
     fits,
     label_pixels,
     patch_sheet,
+    patch_word_images,
     px_get,
     read_label,
 )
@@ -77,6 +80,17 @@ def test_patch_translates_all_labels_and_preserves_the_kp_area() -> None:
 
 
 @pytest.mark.rom
+def test_patch_translates_info_and_move_word_images_idempotently() -> None:
+    if not ENGLISH_ROM.exists():
+        pytest.skip("englishrom.gba absent")
+    tiles = _sheet(ENGLISH_ROM)
+    assert patch_word_images(tiles)[0] == len(INFO_LABELS) + len(MOVE_LABELS)
+    first = bytes(tiles)
+    assert patch_word_images(tiles)[0] == 0
+    assert bytes(tiles) == first
+
+
+@pytest.mark.rom
 def test_built_de_rom_contains_every_german_capsule() -> None:
     if not BUILT_DE_ROM.exists():
         pytest.skip("GenedRom-de.gba non construite")
@@ -93,7 +107,7 @@ def test_apply_patches_is_idempotent_on_a_rom_copy(tmp_path: Path) -> None:
         pytest.skip("englishrom.gba absent")
     copy = tmp_path / "de.gba"
     copy.write_bytes(ENGLISH_ROM.read_bytes())
-    assert apply_patches(copy) == len(LABELS)
+    assert apply_patches(copy) == len(LABELS) + len(INFO_LABELS) + len(MOVE_LABELS)
     first = copy.read_bytes()
     assert apply_patches(copy) == 0
     assert copy.read_bytes() == first
