@@ -413,6 +413,7 @@ de_only_rom_tests:
   sources:
     - tests/e2e-playwright/german-translation.spec.ts
     - tests/e2e/de/test_build.py
+    - tests/e2e/de/test_official_terminology.py
     - tests/e2e/test_rival_battle_victory_line_de_it.py
     - tests/e2e/test_safari_zone_npc_dialogue_de.py
     - tests/test_egg_strings_de.py
@@ -430,6 +431,7 @@ de_only_rom_tests:
     - tests/unit/de/test_pokecenter_upper_floor_de.py
     - tests/unit/de/test_interface_labels_de.py
     - tests/unit/de/test_menu_graphics_assets.py
+    - tests/unit/de/test_official_terminology_de.py
     - tests/unit/de/test_screen_graphics_de.py
     - tests/unit/de/test_summary_stat_labels_de.py
     - tests/unit/test_de_parity.py
