@@ -1844,9 +1844,18 @@ d’annulation dans le reste du jeu.
 - [x] Câbler un patch DE idempotent après les réparations LZ77.
 - [x] Porter les labels/actions carte sans traduire les noms propres.
 - [x] Documenter la parité FR/DE, y compris DexNav et jonctions.
-- [ ] Construire la ROM DE et vérifier les assets, la suite et FR/IT inchangées.
-- [ ] Relire, committer, rebaser et intégrer localement sans push.
+- [x] Construire la ROM DE et vérifier les assets, la suite et FR/IT inchangées.
+- [x] Relire, committer, rebaser et intégrer localement sans push.
 
 ## Revue
 
-- À compléter après vérification.
+- Les cinq familles graphiques demandées sont désormais versionnées en PNG
+  indexés DE et injectées en sept copies après les deux réparations LZ77.
+- Deux applications successives du patch produisent une ROM byte-identique ;
+  chaque extraction depuis `GenedRom-de.gba` correspond pixel pour pixel au PNG.
+- Les actions de carte utilisent « Bew. », « Zurück » et les contrôles CFRU
+  attendus ; les noms propres `Gurun Town` et `Fullmoon Island` restent originaux.
+- Les dix panneaux de jonction sont relogés et repointés depuis `combined_de.txt` ;
+  DexNav conserve son nettoyage des tuiles fantômes et son budget LZ77 strict.
+- Le hook valide 1 715 tests Python, 68 tests Vitest et les builds FR/IT/DE ;
+  les audits de collisions IT/DE ne trouvent aucune collision.

@@ -8,11 +8,21 @@ from pathlib import Path
 import pytest
 
 from languages.de.patches import world_map_action_labels, worldmap_labels
+from languages.fr.patches.worldmap_junction_panels import (
+    TARGETS as JUNCTION_TARGETS,
+)
+from languages.fr.patches.worldmap_junction_panels import (
+    encode_relocated,
+    find_referrers,
+    load_combined,
+)
 from src.core.text_codec import TextDecoder, TextEncoder
 from src.i18n import load_registry
 
 ROOT = Path(__file__).resolve().parents[3]
 BUILT_ROM = ROOT / "output/roms/GenedRom-de.gba"
+SOURCE_ROM = ROOT / "input/roms/englishrom.gba"
+COMBINED_DE = ROOT / "languages/de/combined_de.txt"
 
 
 def _decode_at(rom: bytes, offset: int) -> str:
@@ -94,3 +104,19 @@ def test_built_german_rom_contains_original_map_names_and_german_actions() -> No
         world_map_action_labels.WORLD_MAP_HINT_OFFSET:
         world_map_action_labels.WORLD_MAP_HINT_OFFSET + len(hint)
     ] == hint
+
+
+@pytest.mark.rom
+def test_built_german_rom_contains_all_ten_localized_junction_panels() -> None:
+    """Les dix panneaux doivent être relogés, pointés et encodés depuis DE."""
+    if not BUILT_ROM.exists():
+        pytest.skip("ROM DE non construite")
+    rom = BUILT_ROM.read_bytes()
+    source = SOURCE_ROM.read_bytes()
+    combined = load_combined(COMBINED_DE)
+
+    assert set(JUNCTION_TARGETS) <= set(combined)
+    for offset in JUNCTION_TARGETS:
+        assert not find_referrers(rom, offset), f"0x{offset:X} pointe encore l'anglais"
+        expected = encode_relocated(combined[offset], source, offset)
+        assert expected in rom, f"panneau DE 0x{offset:X} absent de la ROM"
