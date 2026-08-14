@@ -2019,10 +2019,26 @@ d’annulation dans le reste du jeu.
 - [x] Ajouter les tests rouges de dispatch et libellés statistiques.
 - [x] Porter les six libellés statistiques allemands et les câbler au build.
 - [x] Compléter les descriptions et ramener chaque ligne à 232 px maximum.
-- [ ] Construire puis décoder la ROM DE : catégories, métriques et descriptions.
-- [ ] Vérifier les 1 293 noms d'espèces via le correctif dédié B-597 intégré.
-- [ ] Prouver les non-régressions FR/IT, committer et intégrer localement.
+- [x] Construire puis décoder la ROM DE : catégories, métriques et descriptions.
+- [x] Vérifier les 1 293 noms d'espèces via le correctif dédié B-597 intégré.
+- [x] Prouver les non-régressions FR/IT, committer et intégrer localement.
 
 ## Revue
 
-- En attente des preuves finales.
+- Les 896 descriptions vivantes décodent exactement la source allemande
+  autoritative, disposent toutes d'un terminateur et tiennent dans trois lignes
+  de 232 px ; la plus large mesure exactement 232 px. Les offsets absents du
+  JSON sont désormais repris depuis `combined_de.txt`, ce qui supprime les
+  fallbacks anglais silencieux.
+- Les 906 catégories valides, les deux bornes non décodables, les quatre patches
+  d'ordre, les douze cellules statistiques et la navigation « Wahl/Ende » sont
+  vérifiés directement dans la ROM. Aucun texte français n'est accepté par
+  l'audit exhaustif.
+- Les routines Thumb réelles rendent `0.1m`, `0.7m`, `1.7m`, `14.5m`, `20.5m`
+  et `0.1`, `6.9`, `90.5`, `398.0`, `460.0` kg à partir des valeurs stockées
+  représentatives ; il ne s'agit pas d'un simple changement d'étiquette.
+- Le correctif B-597 intégré restaure les 1 293 cellules d'espèces depuis la
+  ROM EN et impose l'empreinte SHA-256
+  `4ec67ea87c3799a3d34aad3d9a0271d26fa278112353c714ca0f3f2bd2e375d9`.
+- Le test E2E Pokédex, les 85 tests ciblés et le hook complet sont verts ; le
+  hook reconstruit FR, IT et DE sans modification de source FR/IT.

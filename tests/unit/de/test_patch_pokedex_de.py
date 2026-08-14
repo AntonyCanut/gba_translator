@@ -58,6 +58,7 @@ class TestApplyIsGenericDelegate:
         assert callable(mod.load_text_map)
         assert mod.DEFAULT_OVERRIDES.name == "pokedex_de_overrides.json"
         assert "de" in str(mod.DEFAULT_OVERRIDES)
+        assert mod.DEFAULT_COMBINED == DE_COMBINED
 
     def test_combined_fills_offsets_missing_from_translation_json(self, tmp_path):
         translations = tmp_path / "ready.json"
