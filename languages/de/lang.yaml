@@ -157,6 +157,9 @@ patches:
   # Redraw the HP-label graphics (LZ77 tiles) with German « KP » (Kraftpunkte)
   # via languages/de/patches/hp_labels.py.
   - hp_labels
+  # Redraw all six summary-screen stat word-images with bounded official DE
+  # labels. Runs after hp_labels because both patches share LZ77 block E9A460.
+  - summary_stat_labels
   # Redraw the 4 DexNav column-header graphics (custom Unbound LZ77 tileset)
   # with German labels (SUCHLEVEL / METHODE / VERST. FAEH. / ITEMS) via
   # languages/de/patches/dexnav_headers.py.

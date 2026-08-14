@@ -16,18 +16,20 @@ import pytest
 
 sys.path.insert(0, str(Path(__file__).parent.parent))
 
-from languages.fr.patches.font import lz77_decompress
 from languages.de.patches.status_badges import (
-    BADGE_BLOCKS,
+    _CONTENT1_IDX,
+    _CONTENT2_IDX,
+    _FNT_SLOT,
     _LETTERS,
     _STATUS_PATCHES,
     _TILE_BYTES,
     _TILES_PER_BADGE,
-    _CONTENT1_IDX,
-    _CONTENT2_IDX,
+    BADGE_BLOCKS,
     _make_3letter_tiles,
+    _make_ko_tiles,
     _read_slot_bg,
 )
+from languages.fr.patches.font import lz77_decompress
 from src.i18n import load_registry
 
 BUILT_DE_ROM = Path(__file__).parent.parent / "output" / "roms" / "GenedRom-de.gba"
@@ -40,10 +42,10 @@ class TestBadgePatchTable(unittest.TestCase):
     def test_slot_mapping_matches_official_de_abbrevs(self):
         # The badge tiles must spell exactly the official DE abbreviations.
         expected = {
-            0: ("G", "I", "F"),   # PSN → GIF
-            2: ("S", "C", "H"),   # SLP → SCH
-            3: ("G", "E", "F"),   # FRZ → GEF
-            4: ("V", "B", "R"),   # BRN → VBR
+            0: ("G", "I", "F"),  # PSN → GIF
+            2: ("S", "C", "H"),  # SLP → SCH
+            3: ("G", "E", "F"),  # FRZ → GEF
+            4: ("V", "B", "R"),  # BRN → VBR
         }
         got = {slot: (a, b, c) for slot, a, b, c in _STATUS_PATCHES}
         self.assertEqual(got, expected)
@@ -63,9 +65,9 @@ class TestBadgePatchTable(unittest.TestCase):
         used = {ltr for _, *letters in _STATUS_PATCHES for ltr in letters}
         for ltr in used:
             self.assertIn(ltr, _LETTERS)
-            self.assertEqual(len(_LETTERS[ltr]), 6)      # 6 pixel rows
+            self.assertEqual(len(_LETTERS[ltr]), 6)  # 6 pixel rows
             for row in _LETTERS[ltr]:
-                self.assertEqual(len(row), 4)            # 4 pixel columns
+                self.assertEqual(len(row), 4)  # 4 pixel columns
 
 
 @pytest.mark.rom
@@ -78,27 +80,41 @@ class TestBuiltDeBadge(unittest.TestCase):
             pytest.skip("GenedRom-de.gba not built")
         cls.rom = bytearray(BUILT_DE_ROM.read_bytes())
 
-    def test_status_badges_render_de_abbrevs(self):
-        result = lz77_decompress(self.rom, BADGE_BLOCKS[0])
-        self.assertIsNotNone(result)
-        tiles = bytearray(result[0])
+    def test_status_badges_render_de_abbrevs_in_every_block(self):
+        for block in BADGE_BLOCKS:
+            with self.subTest(block=f"0x{block:X}"):
+                result = lz77_decompress(self.rom, block)
+                self.assertIsNotNone(result)
+                tiles = bytearray(result[0])
+                for slot, a, b, c in _STATUS_PATCHES:
+                    bg = _read_slot_bg(tiles, slot)
+                    expected = _make_3letter_tiles(
+                        _LETTERS[a], _LETTERS[b], _LETTERS[c], bg
+                    )
+                    base = slot * _TILES_PER_BADGE * _TILE_BYTES
+                    for index, expected_tile in zip(
+                        (_CONTENT1_IDX, _CONTENT2_IDX), expected
+                    ):
+                        start = base + index * _TILE_BYTES
+                        self.assertEqual(
+                            bytes(tiles[start : start + _TILE_BYTES]), expected_tile
+                        )
 
-        for slot, a, b, c in _STATUS_PATCHES:
-            bg = _read_slot_bg(tiles, slot)
-            expected_t1, expected_t2 = _make_3letter_tiles(
-                _LETTERS[a], _LETTERS[b], _LETTERS[c], bg
-            )
-            base = slot * _TILES_PER_BADGE * _TILE_BYTES
-            c1 = base + _CONTENT1_IDX * _TILE_BYTES
-            c2 = base + _CONTENT2_IDX * _TILE_BYTES
-            self.assertEqual(
-                bytes(tiles[c1 : c1 + _TILE_BYTES]), expected_t1,
-                f"slot {slot} content1 != {a}{b}{c}",
-            )
-            self.assertEqual(
-                bytes(tiles[c2 : c2 + _TILE_BYTES]), expected_t2,
-                f"slot {slot} content2 != {a}{b}{c}",
-            )
+    def test_ko_badge_renders_in_every_block(self):
+        expected = _make_ko_tiles()
+        for block in BADGE_BLOCKS:
+            with self.subTest(block=f"0x{block:X}"):
+                result = lz77_decompress(self.rom, block)
+                self.assertIsNotNone(result)
+                tiles = bytearray(result[0])
+                base = _FNT_SLOT * _TILES_PER_BADGE * _TILE_BYTES
+                for index, expected_tile in zip(
+                    (_CONTENT1_IDX, _CONTENT2_IDX), expected
+                ):
+                    start = base + index * _TILE_BYTES
+                    self.assertEqual(
+                        bytes(tiles[start : start + _TILE_BYTES]), expected_tile
+                    )
 
 
 if __name__ == "__main__":

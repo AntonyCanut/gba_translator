@@ -1754,20 +1754,21 @@ d’annulation dans le reste du jeu.
 
 ## Diagnostic et conception
 
-- Le pipeline DE possède déjà les patchs séparés pour les trois word-images/LZ77
-  « KP », les badges de statut, les statistiques de montée de niveau, le résumé,
-  DexNav, le PC, la boutique et les options.
+- Le pipeline DE possède déjà les patchs séparés pour trois word-images/LZ77
+  « KP », les badges de statut, les statistiques de montée de niveau, DexNav,
+  le PC, la boutique et les options.
 - Le patch DE `hp_labels.py` ne couvre toutefois pas les quatre feuilles de
   healthbox utilisées en combat, contrairement au correctif FR de référence.
-- La correction minimale porte le même mécanisme strict/idempotent vers DE,
-  dessine « KP » dans ces feuilles et ajoute un audit négatif des surfaces DE
-  ciblées, sans modifier les sources FR/IT.
+- Les six libellés du résumé sont encore des images-mots anglaises dans le bloc
+  partagé `0xE9A460`; la correction minimale les redessine avec des formes DE
+  bornées, après `hp_labels`, sans modifier les sources FR/IT.
 
 ## Plan validé
 
 - [x] Inventorier les supports CFRU, tables fixes, word-images et blocs LZ77.
 - [x] Ajouter les gardes rouges healthbox et résidus HP/PS/PV.
 - [x] Étendre chirurgicalement le patch graphique DE aux quatre healthbox.
+- [x] Traduire les six images-mots du résumé et protéger les badges/statistiques.
 - [ ] Reconstruire la ROM DE et vérifier les octets/tuiles réellement livrés.
 - [ ] Exécuter les validations, relire le diff, committer et intégrer localement.
 
