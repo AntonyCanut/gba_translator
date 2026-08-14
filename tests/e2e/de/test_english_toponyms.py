@@ -28,4 +28,3 @@ def test_live_de_surfaces_use_terminated_english_toponyms_and_safe_arrows() -> N
     )
 
     assert violations == []
-

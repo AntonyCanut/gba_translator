@@ -49,6 +49,7 @@ def test_catalog_contains_exact_short_spellings_used_by_english_surfaces() -> No
     # Assert
     assert records["Cliff Cave"].anchors == (0x3EF193,)
     assert records["Frontier"].anchors == (0x1EE0B56,)
+    assert records["Frontier"].strict_presence is False
     assert records["PokéCenter"].anchors == (0x41854A,)
     assert records["Hidden Grotto"].anchors == (0xB531A0,)
     assert "Thundercap Mountain" in records

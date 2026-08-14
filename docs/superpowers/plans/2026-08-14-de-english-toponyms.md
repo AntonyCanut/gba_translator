@@ -88,4 +88,3 @@
 - [ ] Run translation integrity, focused ROM audit, full Python suite, and DE build verification.
 - [ ] Confirm no FR/IT content diff and review every changed DE offset.
 - [ ] Commit with `fix(de): restore English place names` and verify the worktree is clean.
-
