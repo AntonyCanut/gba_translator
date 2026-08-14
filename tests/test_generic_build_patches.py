@@ -182,6 +182,17 @@ def test_status_badges_in_de_descriptor():
     assert "status_badges" in REGISTRY.get("de").patches
 
 
+def test_battle_summary_sprites_dispatches_de_script():
+    config = REGISTRY.get("de")
+    calls = _collected_calls(config, ["battle_summary_sprites"])
+    assert len(calls) == 1
+    assert any(
+        part.endswith("languages/de/patches/battle_summary_sprites.py")
+        for part in calls[0]
+    )
+    assert "--rom" in calls[0]
+
+
 # ─── dexnav_headers ──────────────────────────────────────────────────────────
 
 def test_dexnav_headers_dispatches_de_script():

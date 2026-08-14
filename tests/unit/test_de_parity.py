@@ -73,8 +73,9 @@ def test_manifest_preserves_de_graphics_coverage_landed_in_parallel() -> None:
     de_steps = {entry.source for entry in manifest.de_only_build_steps}
     de_tests = {entry.source for entry in manifest.de_only_rom_tests}
 
-    assert {"screen_graphics", "summary_stat_labels"} <= de_steps
+    assert {"battle_summary_sprites", "screen_graphics", "summary_stat_labels"} <= de_steps
     assert {
+        "tests/unit/de/test_battle_summary_graphics_assets.py",
         "tests/unit/de/test_interface_labels_de.py",
         "tests/unit/de/test_screen_graphics_de.py",
         "tests/unit/de/test_summary_stat_labels_de.py",

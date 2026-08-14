@@ -13,6 +13,13 @@ _MENU_SPRITES = (
     "start_menu_move_hint",
 )
 
+_BATTLE_SUMMARY_REFERENCE_SPRITES = (
+    "status_badges",
+    "type_icons_summary",
+    "type_icons_battle",
+    "summary_stat_labels",
+)
+
 SPRITES: dict[str, SpriteDef] = {
     "trainer_card_front": SpriteDef(
         blocks=(0x01FDA2BC,),
@@ -45,3 +52,49 @@ SPRITES: dict[str, SpriteDef] = {
 # sont identiques entre langues. Seules les images dans languages/de/sprites
 # sont spécifiques à l'allemand.
 SPRITES.update({name: REFERENCE_SPRITES[name] for name in _MENU_SPRITES})
+SPRITES.update(
+    {name: REFERENCE_SPRITES[name] for name in _BATTLE_SUMMARY_REFERENCE_SPRITES}
+)
+
+# Fenêtres graphiques absentes du registre FR : les générateurs DE existants
+# les redessinent à ces offsets exacts. Le patch raster final les réinjecte
+# depuis les PNG versionnés, après les réparations LZ77 et ces générateurs.
+SPRITES.update(
+    {
+        "party_kp_label": SpriteDef(
+            blocks=(0x008001D0,),
+            tiles_wide=8,
+            tiles_tall=10,
+            vram_safe=False,
+        ),
+        "summary_kp_bar": SpriteDef(
+            blocks=(0x00E9B4B8,),
+            tiles_wide=12,
+            tiles_tall=1,
+            vram_safe=False,
+            max_compressed_sizes=(192,),
+        ),
+        "battle_kp_labels": SpriteDef(
+            blocks=(0x00D1F604, 0x00EEF0AC, 0x00EEF380, 0x00EEF688),
+            tiles_wide=2,
+            tiles_tall=1,
+            vram_safe=False,
+            start_tiles=(19, 20, 19, 19),
+        ),
+        "battle_kp_elements": SpriteDef(
+            blocks=(0x00D11BC4, 0x00D11BE4),
+            tiles_wide=1,
+            tiles_tall=1,
+            compressed=False,
+        ),
+        # Le marqueur officiel allemand reste la ligature originale « Lv ».
+        # Cette tuile de police brute est partagée par l'équipe, le résumé et
+        # les healthboxes ; la versionner empêche une fuite du glyphe FR « N. ».
+        "level_marker": SpriteDef(
+            blocks=(0x001ECFA0,),
+            tiles_wide=1,
+            tiles_tall=1,
+            compressed=False,
+        ),
+    }
+)

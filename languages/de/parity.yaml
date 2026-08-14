@@ -90,6 +90,7 @@ build_steps:
 # inventorier ici évite qu'un ticket ultérieur les recrée sous un second nom.
 de_only_build_steps:
   - {source: ability_names, classification: fixed_table, status: excluded, reason: Déjà couvert directement par la recette DE.}
+  - {source: battle_summary_sprites, classification: lz77_graphic, status: excluded, reason: Sources raster finales combat et résumé propres à la recette DE.}
   - {source: collision_check, classification: format_control, status: excluded, reason: Contrôle de sûreté propre à la recette DE.}
   - {source: cry_label, classification: fixed_table, status: excluded, reason: Déjà couvert directement par la recette DE.}
   - {source: dexnav_headers, classification: lz77_graphic, status: excluded, reason: Déjà couvert directement par la recette DE.}
@@ -180,7 +181,7 @@ patches:
   - source: languages/fr/patches/party_lv_label.py
     classification: fixed_table
     status: excluded
-    reason: Le marqueur de niveau DE reste au ticket d'interface équipe.
+    reason: Le marqueur officiel DE reste « Lv » et sa tuile originale est verrouillée par l'asset level_marker.
   - {source: languages/fr/patches/pc_messages.py, classification: fixed_table, status: equivalent, target: languages/de/patches/pc_messages.py}
   - source: languages/fr/patches/pc_move_labels.py
     classification: pointer_text
@@ -199,11 +200,8 @@ patches:
   - source: languages/fr/patches/summary_lv_labels.py
     classification: fixed_table
     status: excluded
-    reason: Les marqueurs de niveau DE restent au ticket résumé.
-  - source: languages/fr/patches/summary_stat_labels.py
-    classification: lz77_graphic
-    status: excluded
-    reason: La planche des statistiques DE reste au ticket graphismes.
+    reason: Le résumé DE conserve l'abréviation officielle « Lv » verrouillée par l'asset level_marker.
+  - {source: languages/fr/patches/summary_stat_labels.py, classification: lz77_graphic, status: equivalent, target: languages/de/patches/summary_stat_labels.py}
   - {source: languages/fr/patches/time_format.py, classification: asm_patch, status: equivalent, target: languages/de/patches/time_format.py}
   - source: languages/fr/patches/tm_item_descriptions.py
     classification: pointer_text
@@ -233,12 +231,9 @@ assets:
   - {source: languages/fr/sprites/pokemon_mart_sign_classic.png, classification: lz77_graphic, status: equivalent, target: languages/de/sprites/pokemon_mart_sign-0.png}
   - {source: languages/fr/sprites/selection.bmp, classification: lz77_graphic, status: equivalent, target: languages/de/sprites/selection.png}
   - {source: languages/fr/sprites/start_menu_move_hint.bmp, classification: lz77_graphic, status: equivalent, target: languages/de/sprites/start_menu_move_hint.png}
-  - {source: languages/fr/sprites/status_badges.bmp, classification: lz77_graphic, status: equivalent, target: languages/de/patches/status_badges.py}
-  - {source: languages/fr/sprites/status_badges.png, classification: lz77_graphic, status: equivalent, target: languages/de/patches/status_badges.py}
-  - source: languages/fr/sprites/summary_stat_labels.png
-    classification: lz77_graphic
-    status: excluded
-    reason: Planche des statistiques DE à produire dans le ticket graphismes résumé.
+  - {source: languages/fr/sprites/status_badges.bmp, classification: lz77_graphic, status: equivalent, target: languages/de/sprites/status_badges-0.bmp}
+  - {source: languages/fr/sprites/status_badges.png, classification: lz77_graphic, status: equivalent, target: languages/de/sprites/status_badges-0.png}
+  - {source: languages/fr/sprites/summary_stat_labels.png, classification: lz77_graphic, status: equivalent, target: languages/de/sprites/summary_stat_labels.png}
   - source: languages/fr/sprites/title_screen.png
     classification: lz77_graphic
     status: excluded
@@ -259,8 +254,8 @@ assets:
     classification: lz77_graphic
     status: excluded
     reason: Recto Carte Dresseur DE à produire dans le ticket graphismes Carte Dresseur.
-  - {source: languages/fr/sprites/type_icons_battle.png, classification: lz77_graphic, status: equivalent, target: languages/de/patches/type_icons.py}
-  - {source: languages/fr/sprites/type_icons_summary.png, classification: lz77_graphic, status: equivalent, target: languages/de/patches/type_icons.py}
+  - {source: languages/fr/sprites/type_icons_battle.png, classification: lz77_graphic, status: equivalent, target: languages/de/sprites/type_icons_battle.png}
+  - {source: languages/fr/sprites/type_icons_summary.png, classification: lz77_graphic, status: equivalent, target: languages/de/sprites/type_icons_summary.png}
 
 rom_tests:
   - {source: tests/e2e/fr/test_accent_glyphs.py, classification: rom_test, status: equivalent, target: tests/e2e/de/test_accent_glyphs.py}
@@ -440,6 +435,7 @@ de_only_rom_tests:
     - tests/unit/de/test_pokecenter_upper_floor_de.py
     - tests/unit/de/test_interface_labels_de.py
     - tests/unit/de/test_menu_graphics_assets.py
+    - tests/unit/de/test_battle_summary_graphics_assets.py
     - tests/unit/de/test_official_terminology_de.py
     - tests/unit/de/test_screen_graphics_de.py
     - tests/unit/de/test_summary_stat_labels_de.py

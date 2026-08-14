@@ -537,6 +537,16 @@ def apply_patches(config, out_rom: Path, translation_json: Path | None = None,
             else:
                 print(f"⚠ skipping hp_labels: {script.name} not found")
 
+        elif step == "battle_summary_sprites":
+            script = (
+                REPO_ROOT
+                / f"languages/{config.code}/patches/battle_summary_sprites.py"
+            )
+            if script.exists():
+                run([PYTHON, script, "--rom", out_rom])
+            else:
+                print(f"⚠ skipping battle_summary_sprites: {script.name} not found")
+
         elif step == "battle_prefix":
             run([PYTHON, _battle_prefix_script_for(config.code), "--rom", out_rom])
 

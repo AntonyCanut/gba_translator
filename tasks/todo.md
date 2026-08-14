@@ -2042,3 +2042,23 @@ d’annulation dans le reste du jeu.
   `4ec67ea87c3799a3d34aad3d9a0271d26fa278112353c714ca0f3f2bd2e375d9`.
 - Le test E2E Pokédex, les 85 tests ciblés et le hook complet sont verts ; le
   hook reconstruit FR, IT et DE sans modification de source FR/IT.
+# F-604 — Assets graphiques DE combat et résumé
+
+## Diagnostic et conception
+
+- Les générateurs DE couvrent déjà les types, statuts, KP et statistiques,
+  mais leurs résultats ne sont pas versionnés comme sources raster éditables.
+- Les deux planches de types divergent (notamment la tuile Fée) et les quatre
+  copies des badges/statuts et healthboxes doivent être vérifiées séparément.
+- Un patch final piloté par le registre réinjectera les PNG après les réparations
+  LZ77 et après les générateurs, afin que le build reproduise exactement les
+  assets validés sans toucher aux autres langues.
+
+## Plan validé
+
+- [x] Ajouter les tests rouges du registre, des copies et de l'ordre post-LZ77.
+- [x] Extraire les PNG/BMP indexés éditables depuis la ROM DE corrigée.
+- [x] Ajouter la réinjection déterministe de toutes les fenêtres de tuiles.
+- [ ] Construire la ROM et comparer automatiquement pixels et tuiles.
+- [ ] Exécuter les captures mGBA ciblées et les non-régressions FR/IT.
+- [ ] Relire, committer, rebaser et intégrer localement sans push.
