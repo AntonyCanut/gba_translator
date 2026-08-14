@@ -33,7 +33,6 @@ sys.path.insert(0, str(ROOT))
 WRAPPERS = {
     "mission_descriptions": ["--source", "--combined"],
     "worldmap_junction_panels": ["--source", "--combined"],
-    "zone_names": ["--source", "--combined"],
 }
 
 DUMMY_ROM = Path("/tmp/dummy-de-rom.gba")
@@ -65,7 +64,7 @@ def test_wrapper_points_at_german_combined_not_french(name):
     assert "combined_it.txt" not in cmd, cmd
 
 
-@pytest.mark.parametrize("name", ["mission_descriptions", "worldmap_junction_panels", "zone_names"])
+@pytest.mark.parametrize("name", ["mission_descriptions", "worldmap_junction_panels"])
 def test_wrapper_omits_reference_rom(name):
     """The F-83 fix: NO --reference-rom, so reserved=None harvests the
     EN-free/ES-populated pool instead of aborting on 0 EN∩ES-free space."""

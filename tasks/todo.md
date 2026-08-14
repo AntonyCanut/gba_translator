@@ -337,7 +337,7 @@ dernier et atteignent effectivement la ROM livrée.
 - [x] Brancher les trois insertions après les réparations LZ77.
 - [x] Reconstruire la ROM et comparer les trois fenêtres décompressées.
 - [x] Exécuter les validations graphiques et multilingues.
-- [x] Relire, committer et intégrer localement sans push.
+- [x] Relire et préparer l'intégration locale sans push.
 
 ### Revue du suivi
 
@@ -2092,3 +2092,43 @@ d’annulation dans le reste du jeu.
 - Après rebase sur B-597/F-603, le build DE reste vert et produit le SHA-256
   `aaacc3e3e62434aa955c2613b258440699aae19ed5e847bca91139c7753b914f` ;
   l'évolution est due aux changements DE intégrés sur la branche de base.
+# F-602 — Parité des patchs texte et moteur DE
+
+## Diagnostic et conception
+
+- Les mécanismes natifs conviennent déjà à l'allemand pour le prompt de surnom,
+  la monnaie, le bouton retour et les marqueurs `Lv`; ils doivent rester inchangés.
+- Les titres/onglets Missions, statistiques Pokédex, libellé courrier PC,
+  classes de Dresseurs et cellules de zones présentent encore un écart ROM réel.
+- Les indicateurs d'étage natifs `1F`/`B1F` restent compacts et corrects en DE ;
+  le moteur `RDC`/`nE`/`-n` de la FR est donc une exclusion linguistique légitime.
+- Les noms de lieux sont restaurés depuis la ROM EN ; aucun toponyme FR n'entre
+  dans les données ou modules DE.
+
+## Plan validé
+
+- [x] Ajouter les gardes rouges ROM, idempotence, dispatch et parité.
+- [x] Porter les patchs DE utiles avec préimages binaires strictes.
+- [x] Câbler les étapes dans `languages/de/lang.yaml` et le dispatch générique.
+- [x] Documenter précisément les ports et exclusions dans la matrice de parité.
+- [x] Vérifier build DE déterministe et empreintes FR/IT inchangées.
+- [x] Relire, committer et intégrer localement sans push.
+
+## Revue
+
+- Six étapes DE dédiées couvrent désormais le titre et l'onglet Missions, le
+  libellé courrier PC, les statistiques Pokédex, les classes de Dresseurs et
+  les noms de zones. Tous les patchs refusent une préimage inconnue, créent une
+  sauvegarde avant écriture et sont idempotents.
+- Les zones repointent explicitement vers les cellules anglaises originales :
+  `Blizzard City`, `Antisis Port`, `Crater Town` et `Cinder Volcano West`.
+- La matrice justifie les exclusions `floor_indicators`, `nickname_prompt`,
+  `money_amount_order`, `party_cancel_button`, `party_lv_label` et
+  `summary_lv_labels`; les deux patchs de carte DE déjà présents restent actifs.
+- Les gardes ciblées et la preuve sur ROM construite passent avec 20 tests
+  (134 avec dispatch/parité), puis 1 778 tests Python et 68 tests Vitest passent
+  via le hook. Les builds FR, IT et DE aboutissent sans collision.
+- Deux builds DE `BUILD_NUMBER=0` produisent le même SHA-256
+  `82df99d07cc4aea450211795b24626e4e9b7e8d3377ebefcefdc9bb61dd78989`.
+  La ROM FR reconstruite est octet-identique à l'artefact livré ; un build IT
+  avant/après F-602 est aussi octet-identique (`6df94bf6…bb42c`).

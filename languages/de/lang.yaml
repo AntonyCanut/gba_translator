@@ -190,12 +190,15 @@ patches:
   - pokedex_metrics
   - pokedex_stat_labels
   - pokedex_rewrap
+  - pokedex_stat_labels  # KP/Ang/Ver/Init/SpA/SpV, deux tables pointées
   - summary_labels
   - options_footer
   - shop
   - pc_messages
+  - pc_move_labels       # cellule no-pointer « Move To Bag » → « Zum Beutel »
   - trainer_card_date
   - fixed_table_names
+  - trainer_class_names  # table fixe 13 octets, préimages EN strictes
   # Pointer-relocated text passes the generic pipeline drops. Both run LAST
   # (after `inline` and every other relocation) and are dispatched without a
   # --reference-rom, so they harvest the ~29 KB EN-free/ES-populated pool that
@@ -208,7 +211,10 @@ patches:
   # Cellules fixes de la carte : conserver les noms propres EN et stabiliser
   # les actions DE après toutes les relocalisations.
   - worldmap_labels
+  - zone_names           # restaure les cinq noms de zones originaux EN
   - world_map_action_labels
+  - mission_tab_labels   # supprime le suffixe runtime « Missionen »
+  - mission_titles       # « The Food Thief » → « Der Essensdieb » in-place
   - mission_descriptions
   - worldmap_junction_panels
   - worldmap_route_panels
