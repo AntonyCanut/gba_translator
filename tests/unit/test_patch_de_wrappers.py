@@ -114,6 +114,7 @@ def test_de_descriptor_wires_wrapper_at_end(name):
     assert set(patches[patches.index(name) + 1:]) <= {
         "mission_descriptions",
         "worldmap_junction_panels",
+        "worldmap_route_panels",
         "zone_names",
         "species_names",
         "collision_check",

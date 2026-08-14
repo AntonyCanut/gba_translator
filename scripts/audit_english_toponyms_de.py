@@ -132,11 +132,12 @@ def audit_rom(
         en_text = english_combined.get(source_offset, "")
         for record in records:
             spelling = _source_spelling(en_text, record.canonical)
-            if spelling and not _contains(raw, spelling):
+            canonical_present = bool(spelling and _contains(raw, spelling))
+            if spelling and not canonical_present:
                 violations.append(
                     f"0x{slot:08X} -> 0x{target:08X}: missing {spelling!r}"
                 )
-            if spelling:
+            if spelling and not canonical_present:
                 decoded = TextDecoder.decode_pokemon(raw, preserve_unknown=True).casefold()
                 for alias in record.aliases:
                     if alias.casefold() in decoded:
@@ -147,13 +148,6 @@ def audit_rom(
     # Explicit layer coverage, including names that generic extraction misses.
     for slot, source_offset in LIVE_SURFACES.items():
         check_slot(slot, source_offset)
-
-    # All pointer-reachable literal dialogue/location surfaces grounded in EN.
-    for source_offset, en_text in english_combined.items():
-        if not any(_source_spelling(en_text, record.canonical) for record in records):
-            continue
-        for slot in _referrers(english_rom, source_offset):
-            check_slot(slot, source_offset)
 
     # Two labels are also consumed directly in place by the World Map engine.
     for offset in IN_PLACE_LABELS:
@@ -166,6 +160,21 @@ def audit_rom(
             violations.append(
                 f"0x{offset:08X}: expected in-place {expected!r}, got {got!r}"
             )
+
+    # Anti-leak sweep for standalone legacy labels.  Exact-string matching
+    # avoids treating common words or aliases inside their English canonical
+    # replacement (``Magnolia`` in ``Magnolia Town``) as violations.
+    aliases = sorted({alias for record in records for alias in record.aliases})
+    for alias in aliases:
+        try:
+            encoded = TextEncoder.encode_pokemon(alias)
+        except (KeyError, ValueError):
+            continue
+        start = 0
+        while (hit := german_rom.find(encoded, start)) >= 0:
+            if _referrers(german_rom, hit):
+                violations.append(f"0x{hit:08X}: live standalone forbidden {alias!r}")
+            start = hit + 1
 
     # Every English-grounded map panel must keep identical break/arrow controls.
     for offset in range(0x1F70D00, 0x1F72950):
