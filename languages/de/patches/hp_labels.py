@@ -3,8 +3,8 @@
 
 Sibling of ``patch_hp_labels_fr.py`` — identical LZ77 block layout and
 verification machinery, different letters (French draws « PV », German draws
-« KP »). Three label graphics show the hit-point abbreviation in-game; none of
-them is text (they are 4bpp tiles inside LZ77 blocks), so the translation
+« KP »). The interface uses three shared label sheets, four battle-healthbox
+sheets and one raw healthbox-element table. None is text, so the translation
 pipeline never touches them:
 
 1. Party-menu label (CFRU custom party screen) — LZ77 block 0x008001D0.
@@ -25,7 +25,11 @@ pipeline never touches them:
    Thin « HP » letters (color 1) inside a grey oval (color 7) — redrawn as
    thin « KP » letters, oval untouched.
 
-All three patches are strict: the current label tiles must byte-match a known
+4. Battle healthboxes — four LZ77 sheets plus the raw element table used when
+   a status badge refreshes the box. Every « H » tile is redrawn as « K »;
+   the existing « P » tile and all pill/bar pixels remain byte-exact.
+
+All compressed patches are strict: the current label tiles must byte-match a known
 variant (EN « HP » / ES « PS ») or the already-patched « KP »; anything else
 is reported and skipped rather than corrupted. Recompression is in-place with
 the same padding-tail tolerance used by patch_status_badges_de.
@@ -207,6 +211,60 @@ GREY_OLD_TILES: dict[int, str] = {
     117: "17777777177777a777a7aaaaaaaaaaaa99999999aaaaaaaaaaaaaaaaaaaaaaaa",
 }
 
+# ── 4. Battle healthbox label (four LZ77 sheets) ───────────────────────────
+BATTLE_BLOCKS: list[tuple[int, int, int]] = [
+    (0x00D1F604, 19, 20),
+    (0x00EEF0AC, 20, 21),
+    (0x00EEF380, 19, 20),
+    (0x00EEF688, 19, 20),
+]
+BATTLE_LETTER, BATTLE_PILL = 0x1, 0x7
+BATTLE_K_FILL: set[tuple[int, int]] = {
+    (3, 2), (3, 3), (3, 5), (3, 6),
+    (4, 2), (4, 3), (4, 4), (4, 5),
+    (5, 2), (5, 3), (5, 4), (5, 5),
+    (6, 2), (6, 3), (6, 5), (6, 6),
+}
+BATTLE_K_BOX = [(row, col) for row in range(3, 7) for col in range(2, 7)]
+
+BATTLE_P_TILE_HEX: dict[int, str] = {
+    0x00D1F604: "3333333333333333777777771111711711177117111171171177771777777777",
+    0x00EEF0AC: "2222222222222222777777771111711711177117111171171177771777777777",
+    0x00EEF380: "2222222222222222777777771111711711177117111171171177771777777777",
+    0x00EEF688: "2222222222222222777777771111711711177117111171171177771777777777",
+}
+BATTLE_H_TILE_HEX: dict[int, str] = {
+    0x00D1F604: "3333333333333333737777777311177173111771731111717311177173777777",
+    0x00EEF0AC: "2222222222222222777777777411177173111771731111717811177177777777",
+    0x00EEF380: "2222222222222222727777777211177172111771721111717211177172777777",
+    0x00EEF688: "2222222222222222727777777211177172111771721111717211177172777777",
+}
+
+# Raw healthbox element table. The normal and status-refresh paths select two
+# differently coloured « H » copies; both must become « K ». The « P » copies
+# are already the official German second letter and remain untouched.
+HPEL_REGION = (0x00D11800, 0x00D12800)
+HPEL_UP, HPEL_LO, HPEL_MARGIN = 0x1, 0x8, 0x0
+HPEL_H_SHAPE = {
+    3: {2, 3, 5, 6},
+    4: {2, 3, 5, 6},
+    5: {2, 3, 4, 5, 6},
+    6: {2, 3, 5, 6},
+}
+HPEL_K_FILL = {
+    3: {2, 3, 5, 6},
+    4: {2, 3, 4, 5},
+    5: {2, 3, 4, 5},
+    6: {2, 3, 5, 6},
+}
+HPEL_H_COLS = range(2, 7)
+HPEL_OLD_H_HEX = "0000000000000000707777777011177170111771708888787088877870777777"
+HPEL_OLD_H_ALT_HEX = "0000000000000000303333333011133130111331308888383088833830333333"
+HPEL_H_LABEL_TILES: dict[int, str] = {
+    0x00D11BC4: HPEL_OLD_H_ALT_HEX,
+    0x00D11BE4: HPEL_OLD_H_HEX,
+}
+
 
 # ---------------------------------------------------------------------------
 # Drawing
@@ -262,6 +320,86 @@ def _draw_grey_label(tiles: bytearray) -> None:
         tl, tr, row = GREY_ROWS[gr]
         tile = tl if gc < 8 else tr
         _px_set(tiles, tile, row, gc % 8, GREY_LETTER)
+
+
+def _make_draw_battle_label(h_tile: int, p_tile: int):
+    """Return a draw callback that converts a healthbox « HP » to « KP »."""
+
+    def draw(tiles: bytearray) -> None:
+        for row, col in BATTLE_K_BOX:
+            value = BATTLE_LETTER if (row, col) in BATTLE_K_FILL else BATTLE_PILL
+            _px_set(tiles, h_tile, row, col, value)
+        # The second tile already spells the official German « P ». Reading it
+        # documents that this callback deliberately preserves the entire tile.
+        assert p_tile < len(tiles) // TILE
+
+    return draw
+
+
+def _hpel_rows(tile: bytes) -> dict[int, set[int]]:
+    """Return two-tone letter columns for rows 3–6 of a raw 4bpp tile."""
+    buf = bytearray(tile)
+    return {
+        row: {
+            col
+            for col in range(8)
+            if _px_get(buf, 0, row, col) in (HPEL_UP, HPEL_LO)
+        }
+        for row in (3, 4, 5, 6)
+    }
+
+
+def _hpel_is_h(tile: bytes) -> bool:
+    return _hpel_rows(tile) == HPEL_H_SHAPE
+
+
+def _hpel_plate(tile: bytes) -> int:
+    return _px_get(bytearray(tile), 0, 2, 7)
+
+
+def _hpel_is_label(tile: bytes) -> bool:
+    """Reject tiles that lack the healthbox label margin and pill border."""
+    buf = bytearray(tile)
+    if any(
+        _px_get(buf, 0, row, col) != HPEL_MARGIN
+        for row in (0, 1)
+        for col in range(8)
+    ):
+        return False
+    plate = _hpel_plate(tile)
+    return all(
+        _px_get(buf, 0, row, col) in (plate, HPEL_MARGIN)
+        for row in (2, 7)
+        for col in range(8)
+    )
+
+
+def _hpel_redraw_k(tile: bytes) -> bytes:
+    buf = bytearray(tile)
+    plate = _hpel_plate(tile)
+    for row in (3, 4, 5, 6):
+        letter = HPEL_UP if row in (3, 4) else HPEL_LO
+        for col in HPEL_H_COLS:
+            value = letter if col in HPEL_K_FILL[row] else plate
+            _px_set(buf, 0, row, col, value)
+    return bytes(buf)
+
+
+def _patch_hp_element(rom: bytearray) -> int:
+    """Convert every raw healthbox « H » element to « K » by letter shape."""
+    lo, hi = HPEL_REGION
+    patched = 0
+    offset = lo
+    while offset + TILE <= hi:
+        current = bytes(rom[offset : offset + TILE])
+        if _hpel_is_label(current) and _hpel_is_h(current):
+            rom[offset : offset + TILE] = _hpel_redraw_k(current)
+            print(f"  healthbox HP element (0x{offset:08X}) « H » → « K »")
+            patched += 1
+            offset += TILE
+            continue
+        offset += 4
+    return patched
 
 
 # ---------------------------------------------------------------------------
@@ -372,6 +510,21 @@ def apply_patches(rom_path: Path) -> int:
         {"EN « HP »": GREY_OLD_TILES}, _draw_grey_label,
         "summary grey label (0x00E9A460)",
     )
+    for off, h_tile, p_tile in BATTLE_BLOCKS:
+        patched += _patch_label(
+            rom,
+            off,
+            (h_tile, p_tile),
+            {
+                "EN « HP »": {
+                    h_tile: BATTLE_H_TILE_HEX[off],
+                    p_tile: BATTLE_P_TILE_HEX[off],
+                }
+            },
+            _make_draw_battle_label(h_tile, p_tile),
+            f"battle healthbox label (0x{off:08X})",
+        )
+    patched += _patch_hp_element(rom)
 
     if patched:
         rom_path.write_bytes(rom)

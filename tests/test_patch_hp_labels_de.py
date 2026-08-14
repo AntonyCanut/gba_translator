@@ -17,6 +17,10 @@ import pytest
 sys.path.insert(0, str(Path(__file__).parent.parent))
 
 from languages.de.patches.hp_labels import (
+    BATTLE_BLOCKS,
+    BATTLE_H_TILE_HEX,
+    BATTLE_K_FILL,
+    BATTLE_P_TILE_HEX,
     GREEN_BLOCK,
     GREEN_KP_FILL,
     GREEN_OLD_VARIANTS,
@@ -24,6 +28,11 @@ from languages.de.patches.hp_labels import (
     GREY_BLOCK,
     GREY_KP_FILL,
     GREY_OLD_TILES,
+    HPEL_H_LABEL_TILES,
+    HPEL_K_FILL,
+    HPEL_OLD_H_ALT_HEX,
+    HPEL_OLD_H_HEX,
+    HPEL_REGION,
     PARTY_BLOCK,
     PARTY_KP_FILL,
     PARTY_NCOLS,
@@ -32,6 +41,10 @@ from languages.de.patches.hp_labels import (
     _draw_grey_label,
     _draw_party_label,
     _expected_new,
+    _hpel_is_h,
+    _hpel_rows,
+    _make_draw_battle_label,
+    _patch_hp_element,
     _tiles_hex,
 )
 from languages.fr.patches import hp_labels as fr_hp_labels
@@ -147,6 +160,55 @@ class TestKpArtDefinitions(unittest.TestCase):
                         self.assertEqual(nib_old, nib_new,
                                          f"tile {tile} byte {i} border modified")
 
+    def test_battle_healthbox_redraws_h_to_k_and_preserves_p(self):
+        for off, h_tile, p_tile in BATTLE_BLOCKS:
+            old = {h_tile: BATTLE_H_TILE_HEX[off], p_tile: BATTLE_P_TILE_HEX[off]}
+            new = _expected_new(old, _make_draw_battle_label(h_tile, p_tile))
+            self.assertNotEqual(new[h_tile], old[h_tile], f"0x{off:08X}: H unchanged")
+            self.assertEqual(new[p_tile], old[p_tile], f"0x{off:08X}: P changed")
+            for row in (0, 1, 2, 7):
+                before = bytes.fromhex(old[h_tile])[row * 4 : row * 4 + 4]
+                after = bytes.fromhex(new[h_tile])[row * 4 : row * 4 + 4]
+                self.assertEqual(before, after, f"0x{off:08X}: border row {row} changed")
+
+    def test_battle_k_fill_stays_inside_first_letter_cell(self):
+        for row, col in BATTLE_K_FILL:
+            self.assertTrue(3 <= row <= 6 and 2 <= col <= 6)
+
+
+class TestRawHealthboxElements(unittest.TestCase):
+    def test_every_h_copy_becomes_k_and_patch_is_idempotent(self):
+        _lo, hi = HPEL_REGION
+        rom = bytearray(hi + 32)
+        for off, old_hex in HPEL_H_LABEL_TILES.items():
+            rom[off : off + 32] = bytes.fromhex(old_hex)
+
+        self.assertEqual(_patch_hp_element(rom), len(HPEL_H_LABEL_TILES))
+        after_first = bytes(rom)
+        self.assertEqual(_patch_hp_element(rom), 0)
+        self.assertEqual(bytes(rom), after_first)
+
+        for off in HPEL_H_LABEL_TILES:
+            tile = bytes(rom[off : off + 32])
+            self.assertFalse(_hpel_is_h(tile), f"0x{off:08X}: residual H")
+            self.assertEqual(_hpel_rows(tile), HPEL_K_FILL)
+
+    def test_alt_palette_keeps_its_pill_and_border(self):
+        rom = bytearray(HPEL_REGION[1] + 32)
+        off = min(HPEL_H_LABEL_TILES)
+        old = bytes.fromhex(HPEL_OLD_H_ALT_HEX)
+        rom[off : off + 32] = old
+
+        self.assertEqual(_patch_hp_element(rom), 1)
+        new = bytes(rom[off : off + 32])
+        for row in (0, 1, 2, 7):
+            self.assertEqual(old[row * 4 : row * 4 + 4], new[row * 4 : row * 4 + 4])
+        self.assertEqual(_hpel_rows(new), HPEL_K_FILL)
+
+    def test_known_h_variants_are_recognized(self):
+        self.assertTrue(_hpel_is_h(bytes.fromhex(HPEL_OLD_H_HEX)))
+        self.assertTrue(_hpel_is_h(bytes.fromhex(HPEL_OLD_H_ALT_HEX)))
+
 
 @pytest.mark.rom
 class TestBuiltDeRomShowsKp(unittest.TestCase):
@@ -192,6 +254,26 @@ class TestBuiltDeRomShowsKp(unittest.TestCase):
 
     def test_summary_grey_label_is_kp(self):
         self._assert_block_is_kp(GREY_BLOCK, GREY_OLD_TILES, _draw_grey_label)
+
+    def test_battle_healthbox_labels_are_kp(self):
+        for off, h_tile, p_tile in BATTLE_BLOCKS:
+            old = {h_tile: BATTLE_H_TILE_HEX[off], p_tile: BATTLE_P_TILE_HEX[off]}
+            self._assert_block_is_kp(
+                off, old, _make_draw_battle_label(h_tile, p_tile)
+            )
+
+    def test_raw_healthbox_has_no_h_label_copy(self):
+        lo, hi = HPEL_REGION
+        residual = []
+        for off in range(lo, hi - 32, 4):
+            if _hpel_is_h(bytes(self.rom[off : off + 32])):
+                residual.append(off)
+        self.assertEqual(
+            residual,
+            [],
+            "residual « HP » healthbox H tiles at "
+            + ", ".join(f"0x{off:08X}" for off in residual),
+        )
 
 
 if __name__ == "__main__":

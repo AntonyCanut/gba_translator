@@ -1749,3 +1749,28 @@ d’annulation dans le reste du jeu.
   `588d2694f9ca6d16cf0ed8de1ed775d4117bb2680c8ee59c236ee591043b8033`.
 - Les 17 tests ciblés passent. Aucun fichier sous `languages/fr`,
   `languages/it` ni aucune ROM FR/IT n'est modifié par ce ticket.
+
+# F-600 — libellés de combat et d’interface DE
+
+## Diagnostic et conception
+
+- Le pipeline DE possède déjà les patchs séparés pour les trois word-images/LZ77
+  « KP », les badges de statut, les statistiques de montée de niveau, le résumé,
+  DexNav, le PC, la boutique et les options.
+- Le patch DE `hp_labels.py` ne couvre toutefois pas les quatre feuilles de
+  healthbox utilisées en combat, contrairement au correctif FR de référence.
+- La correction minimale porte le même mécanisme strict/idempotent vers DE,
+  dessine « KP » dans ces feuilles et ajoute un audit négatif des surfaces DE
+  ciblées, sans modifier les sources FR/IT.
+
+## Plan validé
+
+- [x] Inventorier les supports CFRU, tables fixes, word-images et blocs LZ77.
+- [x] Ajouter les gardes rouges healthbox et résidus HP/PS/PV.
+- [x] Étendre chirurgicalement le patch graphique DE aux quatre healthbox.
+- [ ] Reconstruire la ROM DE et vérifier les octets/tuiles réellement livrés.
+- [ ] Exécuter les validations, relire le diff, committer et intégrer localement.
+
+## Revue
+
+- À compléter après les vérifications finales.
