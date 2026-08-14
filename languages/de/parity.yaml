@@ -421,6 +421,7 @@ de_only_rom_tests:
     - tests/test_patch_gendered_buffers_de.py
     - tests/test_patch_givecs_gift_item_de.py
     - tests/test_pc_menu_descriptions_de.py
+    - tests/unit/de/test_f601_content_batches_de.py
     - tests/unit/de/test_patch_cry_label_de.py
     - tests/unit/de/test_patch_fixed_table_names_de.py
     - tests/unit/de/test_patch_font_de.py

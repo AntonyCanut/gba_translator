@@ -125,3 +125,57 @@ entries:
   issue: F-599
   expected: Munterkeit
   forbidden: [Anspannung]
+- {offset: '0x1ee7ebb', name: 'Flugziel Crater Town', issue: F-601, expected: '<0xFC><0x01><0x02>Nach Crater Town fliegen?'}
+- {offset: '0x1ee7ed2', name: 'Flugziel Blizzard City', issue: F-601, expected: '<0xFC><0x01><0x02>Nach Blizzard City fliegen?'}
+- {offset: '0x1f4f15e', name: 'Menü Verbindungsinfo', issue: F-601, expected: 'Verbindungsinfo'}
+- {offset: '0x1f4f16e', name: 'Menü Kampfrekorde', issue: F-601, expected: 'Kampfrekorde'}
+- {offset: '0x1f4f19f', name: 'Menü Ruhmeshalle', issue: F-601, expected: 'Ruhmeshalle'}
+- {offset: '0x1f68047', name: 'Rückkehr nach Dehara City', issue: F-601, expected: '<0xFC><0x01><0x02>Nach <0xFC><0x01><0x06>Dehara City<0xFC><0x01><0x02> zurückkehren?'}
+- {offset: '0x1f53057', name: 'Croagunk versammeln', issue: F-601, expected: 'Alle Croagunk bereit!\nKommt zusammen!'}
+- {offset: '0x1f53080', name: 'Croagunk auswählen', issue: F-601, expected: 'Das Croagunk, dem ihr heute\nfolgen sollt, ist...'}
+- {offset: '0x1f530b3', name: 'Croagunk-Merkmal', issue: F-601, expected: 'Dieses Croagunk hier mit dem\n<0xFD><0x03>!<0xFB>Es trägt ein <0xFD><0x02>!\nAuf die Plätze, fertig, los!'}
+- {offset: '0x1f531e9', name: 'Croagunk falsche Antwort', issue: F-601, expected: '<0xFC><0x01><0x04>Du liegst...\n...<0xFA>ungeheuer falsch!<0xFB>Tut mir leid...'}
+- {offset: '0x1f5321b', name: 'Croagunk-Finale', issue: F-601, expected: '<0xFC><0x01><0x04>Damit endet unsere große\nCroagunk-Show!<0xFB>Vielen Dank an euch alle!'}
+- {offset: '0x1f53268', name: 'Croagunk Absage', issue: F-601, expected: 'Wie schade...\nAber sie ist garantiert großartig.'}
+- {offset: '0x1f53298', name: 'Croagunk Wiederholung', issue: F-601, expected: 'Willst du die Croagunk noch\neinmal sehen?<0xFB>Die Vorbereitung dauert eine\nWeile, komm also morgen<0xFA>wieder!'}
+- {offset: '0x1f53440', name: 'Mission Durchschnittsangler', issue: F-601, expected: 'Durchschnittsangler'}
+- {offset: '0x1f5344f', name: 'Mission Großer Angler', issue: F-601, expected: 'Großer Angler'}
+- {offset: '0x1f5345e', name: 'Mission Angelmeister', issue: F-601, expected: 'Angelmeister'}
+- {offset: '0x1f5346c', name: 'Angelmission erste Stufe', issue: F-601, expected: 'Hol deine Angel heraus und\nleg los! Fange <0xFD><0x02> Pokémon.'}
+- {offset: '0x1f534ad', name: 'Angelmission zweite Stufe', issue: F-601, expected: 'Wirf den Köder aus und locke\ndie Fische an! Fange <0xFD><0x02> Pokémon.'}
+- {offset: '0x1f534f4', name: 'Angelmission dritte Stufe', issue: F-601, expected: 'Stell dich fest hin und schau\nnach vorn. Fange <0xFD><0x02> Pokémon.'}
+- {offset: '0x1f5378e', name: 'Angelmission Folgeauftrag', issue: F-601, expected: 'Nach deiner tollen Leistung habe ich\nnun eine neue Aufgabe für dich.<0xFB>Wirb weiter für die Angeln der\nCube Corp., indem du Pokémon<0xFA>mindestens <0xFC><0x01><0x06><0xFD><0x02><0xFC><0x01><0x08>-mal angelst.'}
+- {offset: '0x1f53912', name: 'Angelmission Belohnung', issue: F-601, expected: 'Großartig, Trainer!<0xFB>Die Cube Corp. meldet mir,\ndass du ihre Marke insgesamt<0xFA><0xFC><0x01><0x06><0xFD><0x03><0xFC><0x01><0x08>-mal beworben hast!<0xFB>Hier ist deine Belohnung!'}
+- {offset: '0x1f53999', name: 'Angelmission Beförderung', issue: F-601, expected: 'Dank deiner Angelerfolge wurde ich\nbefördert!<0xFB>Jetzt bin ich Assistent des\nRegionalleiters der Angelabteilung<0xFA>der Cube Corp.!<0xFB>Bald leite ich\nden Laden selbst!'}
+- {offset: '0x1f53a46', name: 'Angelmission Fortschritt', issue: F-601, expected: 'Meine Quellen bei der Cube Corp.\nsagen, du hast bisher nur <0xFC><0x01><0x06><0xFD><0x03><0xFC><0x01><0x08><0xFA>Pokémon geangelt.<0xFB>Für die Belohnung musst du mindestens\n<0xFC><0x01><0x06><0xFD><0x02><0xFC><0x01><0x08> fangen.'}
+- {offset: '0x1f53adb', name: 'Angelmission Team voll', issue: F-601, expected: 'Zumindest würde ich dir gern eines\ngeben, aber dein Team hat dafür<0xFA>keinen Platz.'}
+- {offset: '0x1f5428a', name: 'Mission 120 TMs', issue: F-601, expected: 'Insgesamt gibt es 120 TMs.\nKannst du sie alle finden?'}
+- {offset: '0x1f545cc', name: 'TM-Fundort Heckenlabyrinth', issue: F-601, expected: 'Diese TM wurde im äußeren\nHeckenlabyrinth gefunden.'}
+- {offset: '0x1f545f9', name: 'TM-Fundort Schneeklippen', issue: F-601, expected: 'Diese TM lag an den Schneeklippen\nund war nur mit Kraxler erreichbar.'}
+- {offset: '0x1f54637', name: 'TM-Fundort blaue Brücke', issue: F-601, expected: 'Diese TM wurde im UG1 nach\nÜberqueren der blauen Brücke gefunden.'}
+- {offset: '0x1f54670', name: 'TM-Kauf Marktplatz 1', issue: F-601, expected: 'Diese TM wurde auf dem\nMarktplatz gekauft.'}
+- {offset: '0x1f5469a', name: 'TM-Fundort großer Raum', issue: F-601, expected: 'Diese TM wurde im großen Raum\nim EG nach Surfer gefunden.'}
+- {offset: '0x1f546d6', name: 'TM-Fundort Sumpf', issue: F-601, expected: 'Diese TM wurde östlich im Sumpf\nnach Surfer gefunden.'}
+- {offset: '0x1f54716', name: 'TM vom befreiten Clown', issue: F-601, expected: 'Ein Clown gab dir diese TM,\nnachdem du ihm bei der Flucht halfst.'}
+- {offset: '0x1f54752', name: 'TM-Kauf Marktplatz 2', issue: F-601, expected: 'Diese TM wurde auf dem\nMarktplatz gekauft.'}
+- {offset: '0x1f5477c', name: 'TM-Fundort östliche Route', issue: F-601, expected: 'Diese TM wurde östlich der Route\nnach Einsatz von Zerschneider gefunden.'}
+- {offset: '0x1f547bd', name: 'TM Kraftreserve', issue: F-601, expected: 'Der Mann für Kraftreserve gab dir\ndiese TM in seinem Haus.'}
+- {offset: '0x1f547f9', name: 'TM Solrock oder Solgaleo', issue: F-601, expected: 'Ein Clown gab dir diese TM,\nnachdem du ihm Solrock oder\nSolgaleo gezeigt hast.'}
+- {offset: '0x1f54842', name: 'TM hinter Poké Mart', issue: F-601, expected: 'Diese TM war hinter\ndem Poké Mart versteckt.'}
+- {offset: '0x1f5486c', name: 'TM nach Ass-Trainer', issue: F-601, expected: 'Diese TM wurde im 4F nach\ndem Sieg über zwei Ass-Trainer gefunden.'}
+- {offset: '0x1f548ac', name: 'TM nach Felsenrätsel', issue: F-601, expected: 'Diese TM wurde im UG1 nach\ndem Schieben eines Felsens ins Loch gefunden.'}
+- {offset: '0x1f548ea', name: 'TM-Kauf 4F', issue: F-601, expected: 'Diese TM wurde im 4F gekauft.'}
+- {offset: '0x1f54907', name: 'TM-Kauf 2000 Münzen', issue: F-601, expected: 'Diese TM wurde für\n2000 Münzen gekauft.'}
+- {offset: '0x1f5492d', name: 'TM-Kauf Marktplatz 3', issue: F-601, expected: 'Diese TM wurde auf dem\nMarktplatz gekauft.'}
+- {offset: '0x1f54957', name: 'TM vom versteckten Clown', issue: F-601, expected: 'Ein Clown gab dir diese TM,\nnachdem du ihn im Versteck fandest.'}
+- {offset: '0x1f54993', name: 'TM nahe Cube Corp.', issue: F-601, expected: 'Diese TM wurde mit Zerschneider\nnahe dem Ausgang zur Cube Corp. gefunden.'}
+- {offset: '0x1f549d1', name: 'TM-Kauf 16 GP', issue: F-601, expected: 'Diese TM wurde für 16 GP\nim Laden gekauft.'}
+- {offset: '0x1f54a00', name: 'TM-Fundort rissiger Boden', issue: F-601, expected: 'Diese TM wurde im UG1 nach\ndem mühsamen Überqueren des\nrissigen Bodens gefunden.'}
+- {offset: '0x1f54a51', name: 'TM-Fundort Baumkrone', issue: F-601, expected: 'Diese TM wurde unter einer\nBaumkrone im südlichen Teil der\nöstlichen Routenhälfte gefunden.'}
+- {offset: '0x1f54aac', name: 'TM-Fundort ADM', issue: F-601, expected: 'Diese TM wurde nach dem Auftauchen\nmit dem ADM gefunden.'}
+- {offset: '0x1f54ade', name: 'TM-Fundort Epidimy Town', issue: F-601, expected: 'Diese TM wurde im EG nahe dem\nEingang von Epidimy Town mit\nSurfer gefunden.'}
+- {offset: '0x1f54b25', name: 'TM-Fundort Gipfel', issue: F-601, expected: 'Diese TM wurde nahe dem Gipfel\nmit Kraxler gefunden.'}
+- {offset: '0x1f9703a', name: 'EV-Erhöhung Frage', issue: F-601, expected: 'Huah!<0xFB>Bei <0xFC><0x01><0x06><0xFD><0x02><0xFC><0x01><0x08> kann ich den <0xFC><0x01><0x06><0xFD><0x03><0xFC><0x01><0x08>-Wert\num <0xFC><0x01><0x06><0xFD><0x04><0xFC><0x01><0x08> Punkte erhöhen!<0xFB>Soll ich das tun?'}
+- {offset: '0x1f970d7', name: 'EV-Erhöhung Bestätigung', issue: F-601, expected: 'Huah!<0xFB>Ich habe bei <0xFC><0x01><0x06><0xFD><0x02><0xFC><0x01><0x08> den <0xFC><0x01><0x06><0xFD><0x03><0xFC><0x01><0x08>-Wert\nauf <0xFC><0x01><0x06><0xFD><0x04><0xFC><0x01><0x08> FP erhöht!<0xFB>Gern geschehen!'}
+- {offset: '0x1f9712f', name: 'EV-Senkung Bestätigung', issue: F-601, expected: 'Huah!<0xFB>Ich habe bei <0xFC><0x01><0x06><0xFD><0x02><0xFC><0x01><0x08> den <0xFC><0x01><0x06><0xFD><0x03><0xFC><0x01><0x08>-Wert\nauf <0xFC><0x01><0x06>null<0xFC><0x01><0x08> FP gesenkt!<0xFB>Gern geschehen!'}
+- {offset: '0x1fa64dc', name: 'Mission Nicht gesehene Herde', issue: F-601, expected: 'Nicht gesehene Herde'}
