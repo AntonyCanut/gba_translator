@@ -64,10 +64,11 @@ make build-all       # FR + IT + DE + Indie
 make release-all     # build every registered language + package output/release/
 ```
 
-`release-all` writes, per language, the full `.gba`, a `.zip`, and global
-`SHA256SUMS.txt` + `RELEASE_MANIFEST.json` to `output/release/`. A full ROM is
-shipped (not an IPS patch) because Unbound is 32 MB and its translated text
-lives above `0x1000000`, beyond the 24-bit IPS offset field.
+`release-all` writes one verified `.bps` per language plus global
+`SHA256SUMS.txt` and `RELEASE_MANIFEST.json` to `output/release/`. BPS is used
+instead of IPS because Unbound is 32 MB and translated data lives above
+`0xFFFFFF`, beyond the 24-bit IPS offset field. The full ROM remains a local,
+temporary build output and is never a release asset.
 
 ## The generic pipeline (`scripts/build_language.py`)
 

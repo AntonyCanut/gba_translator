@@ -6,13 +6,12 @@ These run without any ROM or emulator — they validate the declarative
 
 from __future__ import annotations
 
-from pathlib import Path
-
 import pytest
 import yaml
 
 from src.i18n import LanguageRegistry, RegistryError, load_registry
-from src.i18n.registry import REPO_ROOT, _validate, load_registry as _load
+from src.i18n.registry import REPO_ROOT, _validate
+from src.i18n.registry import load_registry as _load
 
 EXPECTED_BUILDABLE = {"fr", "it", "de", "indie"}
 EXPECTED_REFERENCES = {"en", "es"}
@@ -120,6 +119,12 @@ def test_every_buildable_language_has_required_metadata(registry):
     for cfg in registry.buildable():
         assert cfg.builder_language, f"{cfg.code} missing builder_language"
         assert cfg.output_rom.endswith(".gba"), f"{cfg.code} bad output_rom"
+        assert cfg.patch_source.endswith(".gba"), f"{cfg.code} bad patch_source"
+        assert cfg.patch_source_path(REPO_ROOT) == (
+            REPO_ROOT / cfg.patch_source
+        ).resolve(), (
+            f"{cfg.code} patch source path is not resolved from the repository"
+        )
         assert cfg.version_label, f"{cfg.code} missing version_label"
         assert required_status.issubset(set(cfg.status_abbrev)), (
             f"{cfg.code} status_abbrev missing keys"
@@ -156,6 +161,12 @@ def test_output_rom_names_are_unique(registry):
     assert len(roms) == len(set(roms)), "duplicate output ROM names in registry"
 
 
+def test_patch_sources_match_the_real_build_lineages(registry):
+    """Toutes les releases doivent s'appliquer à la même ROM anglaise propre."""
+    for code in ["fr", *GENERIC_CODES]:
+        assert registry.get(code).patch_source == "input/roms/englishrom.gba"
+
+
 def test_buildable_orders_french_first(registry):
     order = [cfg.code for cfg in registry.buildable()]
     assert order[0] == "fr"
@@ -187,7 +198,8 @@ def test_validate_rejects_code_folder_mismatch(tmp_path):
     bad.parent.mkdir(parents=True)
     bad.write_text(
         "code: yy\nname: Y\nbuilder_language: y\nstatus: in_progress\n"
-        "build: generic\ncombined: c.txt\noutput_rom: GenedRom-yy.gba\n",
+        "build: generic\ncombined: c.txt\noutput_rom: GenedRom-yy.gba\n"
+        "patch_source: input/roms/englishrom.gba\n",
         encoding="utf-8",
     )
     with pytest.raises(RegistryError):
@@ -197,3 +209,17 @@ def test_validate_rejects_code_folder_mismatch(tmp_path):
 def test_load_registry_empty_dir_raises(tmp_path):
     with pytest.raises(RegistryError):
         _load(tmp_path)
+
+
+def test_validate_rejects_buildable_language_without_patch_source(tmp_path):
+    """Une release ne doit pas deviner la ROM de base d'une langue."""
+    bad = tmp_path / "xx" / "lang.yaml"
+    bad.parent.mkdir(parents=True)
+    bad.write_text(
+        "code: xx\nname: X\nbuilder_language: x\nstatus: in_progress\n"
+        "build: generic\ncombined: c.txt\noutput_rom: GenedRom-xx.gba\n",
+        encoding="utf-8",
+    )
+
+    with pytest.raises(RegistryError, match="patch_source"):
+        _validate(yaml.safe_load(bad.read_text()), bad)

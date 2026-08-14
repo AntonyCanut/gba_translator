@@ -57,6 +57,14 @@ def test_manifest_accounts_for_de_only_build_steps_and_tests() -> None:
     assert any("test propre à DE absent de la matrice" in failure for failure in test_failures)
 
 
+def test_de_only_rom_tests_are_unique_after_parallel_rebases() -> None:
+    """Deux tickets parallèles ne doivent pas dupliquer la même preuve DE."""
+    manifest = DeParityManifest.load(MANIFEST_PATH)
+    sources = [entry.source for entry in manifest.de_only_rom_tests]
+
+    assert len(sources) == len(set(sources))
+
+
 def test_manifest_includes_non_python_and_long_language_test_names() -> None:
     """Playwright et les alias `german`/`french` appartiennent aussi à l'inventaire."""
     manifest = DeParityManifest.load(MANIFEST_PATH)

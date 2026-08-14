@@ -36,6 +36,8 @@ CLEANUP_PLAN.md
 restructure.sh
 
 # ROM save files and debug artifacts
+input/roms/*.gba
+output/roms/*.gba
 output/roms/*.sav
 output/roms/*.sav.*
 output/roms/*.bak

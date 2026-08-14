@@ -86,7 +86,7 @@ Contributors can work with any workflow they prefer. Singularity is not required
 
 ## Current language status
 
-| Language | Status | Build mode | Output |
+| Language | Status | Build mode | Local build output |
 | --- | --- | --- | --- |
 | French | Complete | Dedicated | `GenedRom-fr.gba` |
 | Italian | In progress | Generic | `GenedRom-it.gba` |
@@ -94,6 +94,19 @@ Contributors can work with any workflow they prefer. Singularity is not required
 | Indie | Experimental | Generic | `GenedRom-indie.gba` |
 
 French must stay isolated from the generic driver. The dedicated French build exists to keep the validated ROM stable and byte-perfect.
+
+## Released patches
+
+GitHub releases contain BPS patches only. Download
+`pokemon_unbound_<language>.bps`, verify the SHA-256 of the required private
+source ROM in the release notes, then apply the patch with a BPS-compatible
+patcher. Keep the source ROM unchanged and save the generated ROM under a new
+name.
+
+Every build remains available under `v2.1.<build>`. The `latest` release is a
+rolling alias replaced by the newest build. Both releases also include the
+global `RELEASE_MANIFEST.json` and `SHA256SUMS.txt`; publication starts only
+after the FR, IT, DE and Indie artifacts have all been verified.
 
 ## Translation methods
 
@@ -190,6 +203,11 @@ input/roms/patchedfrenchrom.gba
 input/roms/spanishrom.gba
 ```
 
+These files are local, ignored by Git, and never included in CI artifacts or
+releases. In GitHub Actions they are downloaded from the private secrets
+`UNBOUND_ENGLISH_ROM_URL`, `UNBOUND_PATCHED_FRENCH_ROM_URL`, and
+`UNBOUND_SPANISH_ROM_URL`, then verified against `docs/roms_baseline.json`.
+
 `englishrom.gba` must be a clean vanilla Unbound ROM — it is the base for
 `build-es`, the generic multi-language driver (`build-it`/`build-de`/
 `build-indie`/`build-lang`) and all shared extraction/diff tooling.
@@ -234,17 +252,22 @@ Build every language:
 make build-all
 ```
 
-Create release packages:
+Create redistributable BPS patches:
 
 ```bash
 make release-all
 ```
 
-Release packaging writes ROMs, ZIP files, checksums, and a manifest into:
+Release packaging writes BPS patches, checksums, and a manifest into:
 
 ```text
 output/release/
 ```
+
+No ROM is published. Each BPS must be applied to the exact private source ROM
+listed in `RELEASE_MANIFEST.json`; the patch verifies the source CRC before
+producing the translated ROM. The GitHub workflow keeps every
+`v2.1.<build>` release and replaces the rolling `latest` release.
 
 ## Spanish reproduction pipeline
 
@@ -315,13 +338,13 @@ output/reports/
 output/release/
 ```
 
-The generated ROM files are written under:
+The generated ROM files are temporary local build outputs under:
 
 ```text
 output/roms/
 ```
 
-Release-ready files are written under:
+Release-ready BPS files are written under:
 
 ```text
 output/release/

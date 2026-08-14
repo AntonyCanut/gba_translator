@@ -1,4 +1,4 @@
-name: Build & Release ROMs (FR + IT + DE)
+name: Build & Release BPS patches (FR + IT + DE + Indie)
 
 on:
   push:
@@ -6,12 +6,8 @@ on:
   workflow_dispatch:
 
 jobs:
-  # Each language builds in its own parallel job instead of one long sequential
-  # job. FR is mandatory (no continue-on-error): if it fails, the "build" job
-  # fails and the release job below refuses to publish. IT/DE are best-effort
-  # so a transient problem in either never blocks the proven FR release.
   build:
-    name: Build ${{ matrix.lang_label }} ROM
+    name: Build ${{ matrix.lang_label }} patch
     runs-on: ubuntu-latest
     continue-on-error: ${{ !matrix.mandatory }}
     strategy:
@@ -27,6 +23,9 @@ jobs:
           - lang: de
             lang_label: German
             mandatory: false
+          - lang: indie
+            lang_label: Indie
+            mandatory: false
     steps:
       - name: Checkout
         uses: actions/checkout@v6
@@ -39,50 +38,69 @@ jobs:
       - name: Install dependencies
         run: pip install -e ".[dev]"
 
-      # French uses a dedicated byte-perfect recipe. The trilingual CSV is
-      # gitignored, so the translation JSON must be regenerated in CI.
+      - name: Download and verify private ROM inputs
+        env:
+          UNBOUND_ENGLISH_ROM_URL: ${{ secrets.UNBOUND_ENGLISH_ROM_URL }}
+          UNBOUND_PATCHED_FRENCH_ROM_URL: ${{ secrets.UNBOUND_PATCHED_FRENCH_ROM_URL }}
+          UNBOUND_SPANISH_ROM_URL: ${{ secrets.UNBOUND_SPANISH_ROM_URL }}
+        run: |
+          test -n "${UNBOUND_ENGLISH_ROM_URL}" || { echo "::error::UNBOUND_ENGLISH_ROM_URL is missing"; exit 1; }
+          test -n "${UNBOUND_PATCHED_FRENCH_ROM_URL}" || { echo "::error::UNBOUND_PATCHED_FRENCH_ROM_URL is missing"; exit 1; }
+          test -n "${UNBOUND_SPANISH_ROM_URL}" || { echo "::error::UNBOUND_SPANISH_ROM_URL is missing"; exit 1; }
+          mkdir -p input/roms
+          curl --fail --location --retry 3 --silent --show-error \
+            "${UNBOUND_ENGLISH_ROM_URL}" --output input/roms/englishrom.gba
+          curl --fail --location --retry 3 --silent --show-error \
+            "${UNBOUND_PATCHED_FRENCH_ROM_URL}" --output input/roms/patchedfrenchrom.gba
+          curl --fail --location --retry 3 --silent --show-error \
+            "${UNBOUND_SPANISH_ROM_URL}" --output input/roms/spanishrom.gba
+          make verify-roms
+
       - name: Prepare French translation JSON
         if: matrix.lang == 'fr'
         run: make prepare-fr
 
-      - name: Build ${{ matrix.lang_label }} ROM
+      - name: Build ${{ matrix.lang_label }} ROM locally
         run: make build-${{ matrix.lang }} BUILD_NUMBER=${{ github.run_number }}
 
       - name: Verify ${{ matrix.lang_label }} version display
-        # Regression guard (B-19 / T-21): each ROM must show
-        # <LANG>.2.1.<run_number> on the NOT FOR SALE screen and stamp the header.
         run: |
           python3 scripts/verify_version_display.py \
             --rom output/roms/GenedRom-${{ matrix.lang }}.gba \
             --lang-code ${{ matrix.lang }} \
             --build-number ${{ github.run_number }}
 
-      - name: Upload ${{ matrix.lang_label }} ROM artifact
-        id: upload_rom
-        if: success()
+      - name: Create verified BPS and remove generated ROM
+        run: |
+          python3 scripts/package_release.py \
+            ${{ matrix.lang }} --build-number ${{ github.run_number }}
+          rm -f output/roms/GenedRom-${{ matrix.lang }}.gba
+
+      - name: Upload ${{ matrix.lang_label }} patch artifact
+        id: upload_patch
         continue-on-error: true
         uses: actions/upload-artifact@v4
         with:
-          name: rom-${{ matrix.lang }}
-          path: output/roms/GenedRom-${{ matrix.lang }}.gba
+          name: patch-${{ matrix.lang }}
+          path: |
+            output/release/pokemon_unbound_${{ matrix.lang }}.bps
+            output/release/RELEASE_MANIFEST.json
           if-no-files-found: error
 
-      # Artifact storage can occasionally reject finalization after all bytes
-      # have uploaded (run #81 returned HTTP 403). Retry once and overwrite any
-      # partial artifact left by the first attempt.
-      - name: Retry ${{ matrix.lang_label }} ROM artifact upload
-        id: retry_upload_rom
-        if: steps.upload_rom.outcome == 'failure'
+      - name: Retry ${{ matrix.lang_label }} patch artifact upload
+        id: retry_upload_patch
+        if: steps.upload_patch.outcome == 'failure'
         uses: actions/upload-artifact@v4
         with:
-          name: rom-${{ matrix.lang }}
-          path: output/roms/GenedRom-${{ matrix.lang }}.gba
+          name: patch-${{ matrix.lang }}
+          path: |
+            output/release/pokemon_unbound_${{ matrix.lang }}.bps
+            output/release/RELEASE_MANIFEST.json
           if-no-files-found: error
           overwrite: true
 
-  # Final join: wait for every language build, then assemble whatever landed.
   release:
-    name: Publish release
+    name: Publish persistent and latest releases
     needs: [build]
     if: always()
     runs-on: ubuntu-latest
@@ -92,64 +110,96 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v6
 
-      - name: Download ROM artifacts
+      - name: Download BPS artifacts
         uses: actions/download-artifact@v4
         continue-on-error: true
         with:
-          pattern: rom-*
+          pattern: patch-*
           path: artifacts
 
-      - name: Publish release
+      - name: Assemble verified release metadata
+        run: |
+          python3 scripts/assemble_patch_release.py artifacts \
+            --output artifacts/release \
+            --build-number ${{ github.run_number }} \
+            --required fr it de indie
+
+      - name: Publish versioned release and replace latest
+        id: publish_releases
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          VERSION_TAG: v2.1.${{ github.run_number }}
+          LATEST_TAG: latest
         run: |
           SHA=$(git rev-parse --short HEAD)
           MSG=$(git log -1 --pretty=%s)
           RUN=${{ github.run_number }}
 
-          if [ ! -f artifacts/rom-fr/GenedRom-fr.gba ]; then
-            echo "::error::French ROM artifact missing — FR build must succeed for a release to be published."
+          if [ ! -f artifacts/release/pokemon_unbound_fr.bps ]; then
+            echo "::error::French BPS artifact missing — FR must succeed."
             exit 1
           fi
 
-          ASSETS=( "artifacts/rom-fr/GenedRom-fr.gba#pokemon_unbound_fr.gba" )
-          NOTES=$(printf '**Commit :** `%s` — %s\n\nBuildé automatiquement depuis la branche `%s` (build #%s).\n\n- 🇫🇷 `pokemon_unbound_fr.gba` — FR.2.1.%s' \
-            "${SHA}" "${MSG}" "${GITHUB_REF_NAME}" "${RUN}" "${RUN}")
+          ASSETS=(
+            "artifacts/release/pokemon_unbound_fr.bps"
+            "artifacts/release/RELEASE_MANIFEST.json"
+            "artifacts/release/SHA256SUMS.txt"
+          )
+          # shellcheck disable=SC2016
+          NOTES=$(printf '**Commit :** `%s` — %s\n\nBuild automatique depuis `%s` (build #%s). Tous les BPS utilisent la ROM anglaise propre SHA-256 `7aa25bbf568f7cfcf6ee1cf2e9e6ff637350b3d0705c2375cabb6baa7d9739f7`.\n\n- 🇫🇷 `pokemon_unbound_fr.bps`' \
+            "${SHA}" "${MSG}" "${GITHUB_REF_NAME}" "${RUN}")
 
-          if [ -f artifacts/rom-it/GenedRom-it.gba ]; then
-            ASSETS+=( "artifacts/rom-it/GenedRom-it.gba#pokemon_unbound_it.gba" )
-            NOTES="${NOTES}"$(printf '\n- 🇮🇹 `pokemon_unbound_it.gba` — IT.2.1.%s' "${RUN}")
+          if [ -f artifacts/release/pokemon_unbound_it.bps ]; then
+            ASSETS+=( "artifacts/release/pokemon_unbound_it.bps" )
+            # shellcheck disable=SC2016
+            NOTES="${NOTES}"$(printf '\n- 🇮🇹 `pokemon_unbound_it.bps`')
           else
-            NOTES="${NOTES}"$(printf '\n- 🇮🇹 build italienne indisponible pour ce build.')
+            NOTES="${NOTES}"$(printf '\n- 🇮🇹 patch indisponible pour ce build.')
           fi
 
-          if [ -f artifacts/rom-de/GenedRom-de.gba ]; then
-            ASSETS+=( "artifacts/rom-de/GenedRom-de.gba#pokemon_unbound_de.gba" )
-            NOTES="${NOTES}"$(printf '\n- 🇩🇪 `pokemon_unbound_de.gba` — DE.2.1.%s' "${RUN}")
+          if [ -f artifacts/release/pokemon_unbound_de.bps ]; then
+            ASSETS+=( "artifacts/release/pokemon_unbound_de.bps" )
+            # shellcheck disable=SC2016
+            NOTES="${NOTES}"$(printf '\n- 🇩🇪 `pokemon_unbound_de.bps`')
           else
-            NOTES="${NOTES}"$(printf '\n- 🇩🇪 build allemande indisponible pour ce build.')
+            NOTES="${NOTES}"$(printf '\n- 🇩🇪 patch indisponible pour ce build.')
           fi
 
-          # Suppress error if 'latest' release/tag doesn't exist yet
-          gh release delete latest --yes --cleanup-tag 2>/dev/null || true
-
-          gh release create latest \
-            --title "Unbound 2.1.${RUN}" \
-            --notes "${NOTES}" \
-            --prerelease \
-            "${ASSETS[@]}"
-
-      # ── Surface an IT/DE failure AFTER FR has shipped ───────────────────────
-      - name: Fail if Italian ROM was not delivered
-        run: |
-          if [ ! -f artifacts/rom-it/GenedRom-it.gba ]; then
-            echo "::error::Italian ROM build/verify failed — FR was still released, but IT was skipped."
-            exit 1
+          if [ -f artifacts/release/pokemon_unbound_indie.bps ]; then
+            ASSETS+=( "artifacts/release/pokemon_unbound_indie.bps" )
+            # shellcheck disable=SC2016
+            NOTES="${NOTES}"$(printf '\n- Indie: `pokemon_unbound_indie.bps`')
+          else
+            NOTES="${NOTES}"$(printf '\n- Indie: patch indisponible pour ce build.')
           fi
 
-      - name: Fail if German ROM was not delivered
-        run: |
-          if [ ! -f artifacts/rom-de/GenedRom-de.gba ]; then
-            echo "::error::German ROM build/verify failed — FR was still released, but DE was skipped."
-            exit 1
+          if gh release view "${VERSION_TAG}" >/dev/null 2>&1; then
+            EXISTING_TARGET=$(gh release view "${VERSION_TAG}" --json targetCommitish --jq .targetCommitish)
+            if [ "${EXISTING_TARGET}" != "${GITHUB_SHA}" ]; then
+              echo "::error::Versioned release ${VERSION_TAG} targets another commit."
+              exit 1
+            fi
+            VERIFY_DIR=$(mktemp -d)
+            trap 'rm -rf "${VERIFY_DIR}"' EXIT
+            gh release download "${VERSION_TAG}" --dir "${VERIFY_DIR}"
+            for asset in "${ASSETS[@]}"; do
+              cmp -- "${asset}" "${VERIFY_DIR}/$(basename "${asset}")" || {
+                echo "::error::Versioned release ${VERSION_TAG} has different assets."
+                exit 1
+              }
+            done
+            if [ "$(find "${VERIFY_DIR}" -type f | wc -l | tr -d ' ')" -ne "${#ASSETS[@]}" ]; then
+              echo "::error::Versioned release ${VERSION_TAG} has unexpected assets."
+              exit 1
+            fi
+            echo "Versioned release ${VERSION_TAG} already verified; resuming latest."
+          else
+            gh release create "${VERSION_TAG}" --target "${GITHUB_SHA}" \
+              --title "Unbound 2.1.${RUN}" --notes "${NOTES}" --latest=false \
+              "${ASSETS[@]}"
           fi
+
+          gh release delete "${LATEST_TAG}" --yes --cleanup-tag 2>/dev/null || true
+          gh release create "${LATEST_TAG}" --target "${GITHUB_SHA}" \
+            --title "Unbound 2.1.${RUN} — latest" --notes "${NOTES}" \
+            --prerelease "${ASSETS[@]}"

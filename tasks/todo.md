@@ -1,3 +1,44 @@
+# F-608 — ROM vers patch BPS
+
+## Diagnostic et conception
+
+- Les releases et artefacts CI publient actuellement des `.gba` complets.
+- BPS est nécessaire pour couvrir les offsets d'une ROM Unbound de 32 Mio ;
+  IPS est limité aux offsets 24 bits.
+- Les ROMs restent des entrées privées et temporaires, vérifiées par SHA-256 ;
+  aucun fichier ROM ne doit sortir de la phase de build.
+- Une release immuable `v2.1.<build>` conserve chaque version et `latest` est
+  remplacée par la version la plus récente.
+
+## Plan validé
+
+- [x] Ajouter les gardes rouges du codec, du packager et du workflow.
+- [x] Implémenter la génération et la vérification BPS partagées.
+- [x] Convertir `release-all` et GitHub Actions en patch-only.
+- [x] Retirer les ROMs du nouvel état suivi par Git.
+- [x] Mettre à jour les guides d'utilisation et la configuration CI.
+- [x] Exécuter les validations, relire le diff et intégrer localement.
+
+## Revue
+
+- Le codec BPS passe un vecteur BPS1 vérifié à la main, refuse une mauvaise
+  source ou un patch corrompu et reproduit byte pour byte ses cibles.
+- Le patch FR réel est généré directement depuis la ROM anglaise propre :
+  1 875 008 octets pour reconstruire une cible de 32 Mio, round-trip exact.
+- Les quatre ROMs auparavant suivies sont retirées du nouvel état Git et
+  ignorées ; les fichiers locaux restent disponibles pour les builds.
+- GitHub Actions télécharge et vérifie les entrées privées, ne téléverse que
+  les BPS et leurs manifests, exige FR/IT/DE/Indie avant publication, conserve
+  `v2.1.<build>` et recrée `latest`. Un rerun vérifie la version immuable déjà
+  présente avant de reprendre l'alias.
+- La CI publique exclut les tests ROM ; un job réservé aux pushes de confiance
+  télécharge les entrées privées, construit les quatre langues et exécute les
+  tests ROM non-émulateur.
+- Validation : 1 799 tests rapides réussis et un skip ; 611 tests ROM réussis
+  et 34 skips ; 68 tests Vitest réussis. Les builds IT, DE et Indie passent,
+  les quatre BPS font chacun un round-trip exact. `actionlint`, le parse YAML,
+  la compilation Python et `git diff --check` ne signalent aucune erreur.
+
 # Issue #170 — description « Retirer Pokémon » du PC
 
 ## Diagnostic et conception

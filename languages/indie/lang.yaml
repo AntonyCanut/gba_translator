@@ -21,6 +21,7 @@ build: generic                     # dedicated (make build-fr) | generic (build_
 combined: languages/indie/combined_indie.txt
 critical: languages/indie/critical_strings_indie.txt   # optional; created when needed
 output_rom: GenedRom-indie.gba
+patch_source: input/roms/englishrom.gba
 # Shown in-game on the NOT FOR SALE screen as INDIE.2.1.<build> (the trailing
 # component is the CI build number stamped by the `version` patch step).
 version_label: IN.2.1.0

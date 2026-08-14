@@ -33,7 +33,7 @@ REQUIRED_KEYS = (
 )
 
 # Keys required only for buildable languages (build ≠ none)
-BUILDABLE_REQUIRED_KEYS = ("builder_language", "output_rom")
+BUILDABLE_REQUIRED_KEYS = ("builder_language", "output_rom", "patch_source")
 
 VALID_STATUS = {"complete", "in_progress", "source", "reference"}
 VALID_BUILD = {"dedicated", "generic", "none"}
@@ -53,6 +53,7 @@ class LanguageConfig:
     build: str
     combined: str
     output_rom: str = ""          # empty for build: none languages
+    patch_source: str = ""        # empty for build: none languages
     builder_language: str = ""    # empty for build: none languages
     native_name: str = ""
     critical: Optional[str] = None
@@ -90,6 +91,12 @@ class LanguageConfig:
         if not self.output_rom:
             return None
         return (root / "output" / "roms" / self.output_rom).resolve()
+
+    def patch_source_path(self, root: Path = REPO_ROOT) -> Optional[Path]:
+        """Retourne la ROM privée depuis laquelle le BPS doit être appliqué."""
+        if not self.patch_source:
+            return None
+        return (root / self.patch_source).resolve()
 
     def translation_json_path(self, root: Path = REPO_ROOT) -> Path:
         """Where the generic driver writes this language's translation JSON."""
@@ -186,6 +193,7 @@ def _validate(data: dict, source: Path) -> LanguageConfig:
         build=build,
         combined=data["combined"],
         output_rom=raw_output_rom,
+        patch_source=data.get("patch_source", ""),
         native_name=data.get("native_name", ""),
         critical=data.get("critical"),
         version_label=data.get("version_label", ""),

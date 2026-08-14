@@ -391,7 +391,7 @@ build-lang:
 build-all: build-fr build-it build-de build-indie
 	@echo "✓ All languages built (FR, IT, DE, Indie)."
 
-# Build all three and package them into output/release/ (ROMs + zips + checksums).
+# Build every language and package verified BPS patches (never full ROMs).
 release-all: build-all
 	@$(PYTHON) scripts/package_release.py --build-number $(BUILD_NUMBER)
 	@echo "✓ Release ready in output/release/"
@@ -521,7 +521,7 @@ help:
 	@echo "    make build-indie     - Build Indie ROM (generic driver)"
 	@echo "    make build-lang LANG_CODE=it - Build any generic language"
 	@echo "    make build-all       - Build FR + IT + DE + Indie"
-	@echo "    make release-all     - Build all three and package output/release/"
+	@echo "    make release-all     - Build all languages and package BPS patches"
 	@echo ""
 	@echo "  Tests:"
 	@echo "    make test            - Alias for test-python-fast"

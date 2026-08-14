@@ -21,6 +21,7 @@ descriptor_fields:
     status: excluded
     reason: Le fichier critique DE est optionnel et sera créé avec les futurs offsets bloquants.
   - {source: output_rom, classification: rom_test, status: equivalent, target: output_rom}
+  - {source: patch_source, classification: format_control, status: equivalent, target: patch_source}
   - {source: version_label, classification: fixed_table, status: equivalent, target: version_label}
   - {source: font_glyphs, classification: font, status: equivalent, target: font_glyphs}
   - {source: status_abbrev, classification: fixed_table, status: equivalent, target: status_abbrev}

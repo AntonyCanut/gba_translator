@@ -14,6 +14,7 @@ build: generic                    # dedicated (make build-fr) | generic (build_l
 combined: languages/it/combined_it.txt
 critical: languages/it/critical_strings_it.txt   # optional; created when needed
 output_rom: GenedRom-it.gba
+patch_source: input/roms/englishrom.gba
 # Shown in-game on the NOT FOR SALE screen as IT.2.1.<build> (the trailing
 # component is the CI build number stamped by the `version` patch step).
 version_label: IT.2.1.0

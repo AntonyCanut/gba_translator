@@ -9,6 +9,8 @@ from pathlib import Path
 
 import pytest
 
+pytestmark = pytest.mark.rom
+
 from src.core.collision_check import live_target, plausible_sites
 from src.core.text_codec import GERMAN_UMLAUT_CHARS, TextDecoder, TextEncoder
 
