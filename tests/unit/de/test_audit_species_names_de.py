@@ -31,6 +31,15 @@ def test_finds_french_species_names_without_touching_dynamic_variables():
     assert "{B_ATK_NAME_WITH_PREFIX}" in text
 
 
+def test_french_name_shared_with_german_localisation_is_still_a_leak():
+    aliases = load_french_aliases()
+
+    assert aliases["Kapoera"] == "Hitmontop"
+    assert find_french_species_names("Kapoera!", aliases) == [
+        ("Kapoera", "Hitmontop")
+    ]
+
+
 def test_combined_audit_obeys_last_entry_wins(tmp_path: Path):
     combined = tmp_path / "combined_de.txt"
     combined.write_text(

@@ -32,7 +32,6 @@ from src.core.collision_check import (  # noqa: E402
 from src.core.text_codec import TextDecoder  # noqa: E402
 
 DE_COMBINED = REPO_ROOT / "languages/de/combined_de.txt"
-DE_NAME_REFERENCE = REPO_ROOT / "languages/de/data/species_names_de_fallback.json"
 FR_NAME_MAP = REPO_ROOT / "languages/fr/data/pokemon_names_en_fr.json"
 DEFAULT_ROM = REPO_ROOT / "output/roms/GenedRom-de.gba"
 LINE_RE = re.compile(r"^0x([0-9A-Fa-f]+):\s?(.*)$")
@@ -64,17 +63,18 @@ class RomLeak:
 
 def load_french_aliases(
     name_map: Path = FR_NAME_MAP,
-    german_reference: Path = DE_NAME_REFERENCE,
 ) -> dict[str, str]:
-    """Return unambiguous French-only species name -> canonical EN name."""
+    """Return every localized French species name -> canonical EN name.
+
+    Some French names are also official German localisations (for example
+    ``Kapoera``).  They remain leaks here because the DE build deliberately
+    uses the canonical English species names rather than either localisation.
+    """
     french = json.loads(name_map.read_text(encoding="utf-8"))["pokemon_names"]
-    german_names = set(
-        json.loads(german_reference.read_text(encoding="utf-8")).values()
-    )
     return {
         fr_name: en_name
         for en_name, fr_name in french.items()
-        if fr_name != en_name and fr_name not in german_names
+        if fr_name != en_name
     }
 
 

@@ -1964,11 +1964,23 @@ d’annulation dans le reste du jeu.
   depuis la ROM EN et déplacer l'étape à la fin de `languages/de/lang.yaml`.
 - [x] Corriger uniquement les entrées DE vivantes contenant des noms d'espèces
   français et couvrir leur absence par l'audit partagé.
-- [ ] Construire `GenedRom-de.gba`, comparer les 14 223 octets avec la ROM EN et
+- [x] Construire `GenedRom-de.gba`, comparer les 14 223 octets avec la ROM EN et
   suivre les pointeurs vivants des occurrences littérales auditées.
-- [ ] Vérifier les tests ciblés puis la régression partagée FR/IT, relire le diff,
+- [x] Vérifier les tests ciblés puis la régression partagée FR/IT, relire le diff,
   committer et intégrer localement sans push.
 
 ## Revue
 
-- À compléter après les preuves ROM et les validations finales.
+- Le build DE applique désormais `species_names` après tous les autres écrivains
+  de tables : il copie les 14 223 octets bruts de `englishrom.gba`, sans charger
+  ni la liste allemande de fallback ni `combined_de.txt`.
+- Les tranches EN et DE ont le même SHA-256
+  `4ec67ea87c3799a3d34aad3d9a0271d26fa278112353c714ca0f3f2bd2e375d9` ;
+  le test E2E contrôle aussi chacune des 1 293 cellules.
+- L'audit couvre tous les noms français localisés, y compris les sept également
+  officiels en allemand (`Kapoera`, `Cosmovum`, etc.), tout en ignorant les
+  variables dynamiques. Les 221 entrées DE corrigées sont protégées par le
+  manifeste d'intégrité.
+- Sur `GenedRom-de.gba`, l'audit trouve zéro fuite dans les sources vivantes et
+  zéro fuite via les pointeurs ROM. Les 2 preuves E2E et les 29 régressions
+  ciblées DE/FR/IT passent ; aucun fichier de langue FR ou IT n'est modifié.

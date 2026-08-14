@@ -1442,9 +1442,10 @@ entries:
 - offset: '0x1f85a66'
   name: 'B-597 : nom d’espèce EN canonique'
   issue: B-597
-  expected: 'Ein Lickitung wurde gegen Le Top,\nden Kapoera, getauscht.'
+  expected: 'Ein Lickitung wurde gegen Le Top,\nden Hitmontop, getauscht.'
   forbidden:
   - 'Ein Excelangue wurde gegen Le Top,\nden Kapoera, getauscht.'
+  - 'Ein Lickitung wurde gegen Le Top,\nden Kapoera, getauscht.'
 - offset: '0x1f85ab4'
   name: 'B-597 : nom d’espèce EN canonique'
   issue: B-597
@@ -1493,3 +1494,15 @@ entries:
   expected: 'Staraptor!\pLass uns von hier verschwinden!'
   forbidden:
   - 'Étouraptor!\pLass uns von hier verschwinden!'
+- offset: '0x74bcad'
+  name: 'B-597 : nom d’espèce EN canonique'
+  issue: B-597
+  expected: 'Wir werden sehen, ob sie es wagen, Fallen zu\nstellen, wenn du da bist, Hitmontop!\pWir werden den Tier <0xFC><0x01><0x06>OU Doubles<0xFC><0x01><0x08> dominieren!\pSie werden alle unter deiner Kopf-\nspitze fallen!'
+  forbidden:
+  - 'Wir werden sehen, ob sie es wagen, Fallen zu\nstellen, wenn du da bist, Kapoera!\pWir werden den Tier <0xFC><0x01><0x06>OU Doubles<0xFC><0x01><0x08> dominieren!\pSie werden alle unter deiner Kopf-\nspitze fallen!'
+- offset: '0x1665483'
+  name: 'B-597 : nom d’espèce EN canonique'
+  issue: B-597
+  expected: 'Indem es Licht absorbiert,\nwächst Cosmoem immer weiter.\nSeine goldene Schale ist sehr widerstandsfähig.'
+  forbidden:
+  - 'Indem es Licht absorbiert,\nwächst Cosmovum immer weiter.\nSeine goldene Schale ist sehr widerstandsfähig.'
