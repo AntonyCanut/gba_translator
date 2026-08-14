@@ -107,6 +107,27 @@ def _contains(raw: bytes, text: str) -> bool:
     return TextEncoder.encode_pokemon(text)[:-1] in raw
 
 
+def source_grounded_referrers(
+    english_rom: bytes,
+    german_rom: bytes,
+    german_offset: int,
+    canonical: str,
+) -> list[int]:
+    """Return DE referrers whose matching EN consumer names this place.
+
+    The ROM contains pointer-shaped constants that can accidentally target a
+    newly allocated DE string.  Requiring the same pointer cell to consume the
+    canonical name in the English ROM keeps those coincidences out of the
+    anti-leak audit without exempting a real visible surface.
+    """
+    grounded: list[int] = []
+    for slot in _referrers(german_rom, german_offset):
+        _target, english_raw = read_live_string(english_rom, slot)
+        if english_raw is not None and _contains(english_raw, canonical):
+            grounded.append(slot)
+    return grounded
+
+
 def audit_rom(
     english_rom: bytes,
     german_rom: bytes,
@@ -164,17 +185,24 @@ def audit_rom(
     # Anti-leak sweep for standalone legacy labels.  Exact-string matching
     # avoids treating common words or aliases inside their English canonical
     # replacement (``Magnolia`` in ``Magnolia Town``) as violations.
-    aliases = sorted({alias for record in records for alias in record.aliases})
-    for alias in aliases:
-        try:
-            encoded = TextEncoder.encode_pokemon(alias)
-        except (KeyError, ValueError):
-            continue
-        start = 0
-        while (hit := german_rom.find(encoded, start)) >= 0:
-            if _referrers(german_rom, hit):
-                violations.append(f"0x{hit:08X}: live standalone forbidden {alias!r}")
-            start = hit + 1
+    reported_alias_hits: set[tuple[int, str]] = set()
+    for record in records:
+        for alias in record.aliases:
+            try:
+                encoded = TextEncoder.encode_pokemon(alias)
+            except (KeyError, ValueError):
+                continue
+            start = 0
+            while (hit := german_rom.find(encoded, start)) >= 0:
+                key = (hit, alias)
+                if key not in reported_alias_hits and source_grounded_referrers(
+                    english_rom, german_rom, hit, record.canonical
+                ):
+                    violations.append(
+                        f"0x{hit:08X}: live standalone forbidden {alias!r}"
+                    )
+                    reported_alias_hits.add(key)
+                start = hit + 1
 
     # Every English-grounded map panel must keep identical break/arrow controls.
     for offset in range(0x1F70D00, 0x1F72950):

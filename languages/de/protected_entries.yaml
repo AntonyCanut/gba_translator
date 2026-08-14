@@ -440,13 +440,13 @@ entries:
 - offset: '0x75d44b'
   name: 'B-597 : nom d’espèce EN canonique'
   issue: B-597
-  expected: Wer hätte gedacht, dass es noch eine\nHöhle in der Stalaktitenhöhle gibt?\pOhne diesen Sandslash wäre dieser Ort\nwohl für immer verborgen geblieben.\pJetzt, da er zugänglich ist, stell dir\nall die Geheimnisse vor!\pNimm zum Beispiel diese Tafel.\pSie ist mindestens tausend Jahre alt.\pIch will alle Geheimnisse entdecken.\pKommst du zurück, zeigt sich\nvielleicht die Wahrheit…
+  expected: Wer hätte gedacht, dass es noch eine\nHöhle in der Icicle Cave gibt?\pOhne diesen Sandslash wäre dieser Ort\nwohl für immer verborgen geblieben.\pJetzt, da er zugänglich ist, stell dir\nall die Geheimnisse vor!\pNimm zum Beispiel diese Tafel.\pSie ist mindestens tausend Jahre alt.\pIch will alle Geheimnisse entdecken.\pKommst du zurück, zeigt sich\nvielleicht die Wahrheit…
   forbidden:
   - Wer hätte gedacht, dass es noch eine\nHöhle in der Stalaktitenhöhle gibt?\pOhne diesen Sablaireau wäre dieser Ort\nwohl für immer verborgen geblieben.\pJetzt, da er zugänglich ist, stell dir\nall die Geheimnisse vor!\pNimm zum Beispiel diese Tafel.\pSie ist mindestens tausend Jahre alt.\pIch will alle Geheimnisse entdecken.\pKommst du zurück, zeigt sich\nvielleicht die Wahrheit…
 - offset: '0x75d5fc'
   name: 'B-597 : nom d’espèce EN canonique'
   issue: B-597
-  expected: Wer hätte gedacht, dass die\nStalaktitenhöhle noch eine weitere\lHöhle verbirgt? Ohne den Sandslash\nwäre sie verborgen geblieben.\pStell dir die Geheimnisse vor, die\nsie birgt – wie diese Tafel, schon\lüber tausend Jahre alt.\pIch will alles entdecken.\pKomm zurück, dann zeigt sich\nvielleicht die Wahrheit…
+  expected: Wer hätte gedacht, dass die\nIcicle Cave noch eine weitere\lHöhle verbirgt? Ohne den Sandslash\nwäre sie verborgen geblieben.\pStell dir die Geheimnisse vor, die\nsie birgt – wie diese Tafel, schon\lüber tausend Jahre alt.\pIch will alles entdecken.\pKomm zurück, dann zeigt sich\nvielleicht die Wahrheit…
   forbidden:
   - Wer hätte gedacht, dass die\nStalaktitenhöhle noch eine weitere\lHöhle verbirgt? Ohne den Sablaireau\nwäre sie verborgen geblieben.\pStell dir die Geheimnisse vor, die\nsie birgt – wie diese Tafel, schon\lüber tausend Jahre alt.\pIch will alles entdecken.\pKomm zurück, dann zeigt sich\nvielleicht die Wahrheit…
 - offset: '0x75dc8d'
@@ -482,19 +482,19 @@ entries:
 - offset: '0x7a8133'
   name: 'B-597 : nom d’espèce EN canonique'
   issue: B-597
-  expected: 'Jax: {COLOR}ËARGH!\pKomm, Staraptor. Es muss einen\nanderen Zugang zur Straße geben.\pVielleicht gibt es einen geheimen\nunterirdischen Gang…\pSchauen wir nach.'
+  expected: 'Jax: {COLOR}ËARGH!\pKomm, Staraptor. Es muss einen\nanderen Zugang zur Straße geben.\pVielleicht gibt es einen geheimen\nUnderground Pass…\pSchauen wir nach.'
   forbidden:
   - 'Jax: {COLOR}ËARGH!\pKomm, Étouraptor. Es muss einen\nanderen Zugang zur Straße geben.\pVielleicht gibt es einen geheimen\nunterirdischen Gang…\pSchauen wir nach.'
 - offset: '0x7aab5e'
   name: 'B-597 : nom d’espèce EN canonique'
   issue: B-597
-  expected: 9Ich trainierte neulich meinen\n{COLOR}ÉNosepass{COLOR}Ë am\l{COLOR}ÉMont Foudroyant{COLOR}Ë, als er\lplötzlich zu leuchten begann!\pEine Minute später hatte er sich zu\nProbopass entwickelt!\pDieser Berg muss seltsame\nEigenschaften haben.
+  expected: 9Ich trainierte neulich meinen\n{COLOR}ÉNosepass{COLOR}Ë am\l{COLOR}ÉThundercap Mountain{COLOR}Ë, als er\lplötzlich zu leuchten begann!\pEine Minute später hatte er sich zu\nProbopass entwickelt!\pDieser Berg muss seltsame\nEigenschaften haben.
   forbidden:
   - 9Ich trainierte neulich meinen\n{COLOR}ÉTarinor{COLOR}Ë am\l{COLOR}ÉMont Foudroyant{COLOR}Ë, als er\lplötzlich zu leuchten begann!\pEine Minute später hatte er sich zu\nTarinorme entwickelt!\pDieser Berg muss seltsame\nEigenschaften haben.
 - offset: '0x7aab5f'
   name: 'B-597 : nom d’espèce EN canonique'
   issue: B-597
-  expected: Neulich trainierte ich meinen\n<0xFC><0x01><0x06>Nosepass<0xFC><0x01><0x08> in <0xFC><0x01><0x06>Mont Foudroyant<0xFC><0x01><0x08>,\lals er plötzlich zu leuchten\lbegann!\pIm nächsten Moment hatte er sich zu\nProbopass entwickelt!\pDieser Berg muss lustige\nEigenschaften haben.
+  expected: Neulich trainierte ich meinen\n<0xFC><0x01><0x06>Nosepass<0xFC><0x01><0x08> in <0xFC><0x01><0x06>Thundercap Mountain<0xFC><0x01><0x08>,\lals er plötzlich zu leuchten\lbegann!\pIm nächsten Moment hatte er sich zu\nProbopass entwickelt!\pDieser Berg muss lustige\nEigenschaften haben.
   forbidden:
   - Neulich trainierte ich meinen\n<0xFC><0x01><0x06>Tarinor<0xFC><0x01><0x08> in <0xFC><0x01><0x06>Mont Foudroyant<0xFC><0x01><0x08>,\lals er plötzlich zu leuchten\lbegann!\pIm nächsten Moment hatte er sich zu\nTarinorme entwickelt!\pDieser Berg muss lustige\nEigenschaften haben.
 - offset: '0x7b3a3f'
@@ -536,7 +536,7 @@ entries:
 - offset: '0x7de806'
   name: 'B-597 : nom d’espèce EN canonique'
   issue: B-597
-  expected: Ihr werdet niemals mein\nsuperseltenes, geniales Sandslash\lbesiegen können!\pIch habe alles in der\nStalaktitenhöhle verstanden!
+  expected: Ihr werdet niemals mein\nsuperseltenes, geniales Sandslash\lbesiegen können!\pIch habe alles in der\nIcicle Cave verstanden!
   forbidden:
   - Ihr werdet niemals mein\nsuperseltenes, geniales Sablaireau\lbesiegen können!\pIch habe alles in der\nStalaktitenhöhle verstanden!
 - offset: '0x7ec795'
@@ -1160,7 +1160,7 @@ entries:
 - offset: '0x1eedaa2'
   name: 'B-597 : nom d’espèce EN canonique'
   issue: B-597
-  expected: Durchbrich mit dem ADM die Tore des\nKBT-Expresswegs und\nfang {STR_VAR_1} Carbink.
+  expected: Durchbrich mit dem ADM die Tore des\nKBT Expressway und\nfang {STR_VAR_1} Carbink.
   forbidden:
   - Durchbrich mit dem ADM die Tore des\nKBT-Expresswegs und\nfang {STR_VAR_1} Strassie.
 - offset: '0x1eedb03'
@@ -1172,13 +1172,13 @@ entries:
 - offset: '0x1eedcfb'
   name: 'B-597 : nom d’espèce EN canonique'
   issue: B-597
-  expected: 'Fantastisch !\pMeine Aufgabe: die\n{COLOR}Éeingestürzten Tore{COLOR}Ë des\l{COLOR}ÉKBT-Expresswegs{COLOR}Ë\lmit deinem {COLOR}ÉADM{COLOR}Ë zerstören und\l{COLOR}É3 Carbink{COLOR}Ë fangen.\pUm ein Tor zu sprengen, lade dein\nADM auf.\lLade es mit {COLOR}É3 Licht-\plehm{COLOR}Ë auf, damit es\nstark genug ist.\lLichtlehm findet man beim\pGraben in den Wänden des KBT-Expresswegs.\pWenn das erledigt ist, komm zurück\nfür eine Belohnung.\l\p\n'
+  expected: 'Fantastisch !\pMeine Aufgabe: die\n{COLOR}Éeingestürzten Tore{COLOR}Ë des\l{COLOR}ÉKBT Expressway{COLOR}Ë\lmit deinem {COLOR}ÉADM{COLOR}Ë zerstören und\l{COLOR}É3 Carbink{COLOR}Ë fangen.\pUm ein Tor zu sprengen, lade dein\nADM auf.\lLade es mit {COLOR}É3 Licht-\plehm{COLOR}Ë auf, damit es\nstark genug ist.\lLichtlehm findet man beim\pGraben in den Wänden des KBT Expressway.\pWenn das erledigt ist, komm zurück\nfür eine Belohnung.\l\p\n'
   forbidden:
   - 'Fantastisch !\pMeine Aufgabe: die\n{COLOR}Éeingestürzten Tore{COLOR}Ë des\l{COLOR}ÉKBT-Expresswegs{COLOR}Ë\lmit deinem {COLOR}ÉADM{COLOR}Ë zerstören und\l{COLOR}É3 Strassie{COLOR}Ë fangen.\pUm ein Tor zu sprengen, lade dein\nADM auf.\lLade es mit {COLOR}É3 Licht-\plehm{COLOR}Ë auf, damit es\nstark genug ist.\lLichtlehm findet man beim\pGraben in den Wänden des KBT-Expresswegs.\pWenn das erledigt ist, komm zurück\nfür eine Belohnung.\l\p\n'
 - offset: '0x1eedf8d'
   name: 'B-597 : nom d’espèce EN canonique'
   issue: B-597
-  expected: Zerstöre die\n{COLOR}Éeingestürzten Tore{COLOR}Ë des\l{COLOR}ÉKBT-Expresswegs{COLOR}Ë\lmit deinem {COLOR}ÉADM{COLOR}Ë und\pfang noch mehr\n{COLOR}É{STR_VAR_1}\lCarbink{COLOR}Ë.\pUm ein Tor zu sprengen, lade\nzuerst dein ADM auf.\lLade es mit {COLOR}É3 Licht-\plehm{COLOR}Ë auf, damit es\pstark genug ist.\nLichtlehm findet man beim\lGraben in den Wänden des KBT-Expresswegs.\pWenn das erledigt ist, komm zurück\nfür eine Belohnung.
+  expected: Zerstöre die\n{COLOR}Éeingestürzten Tore{COLOR}Ë des\l{COLOR}ÉKBT Expressway{COLOR}Ë\lmit deinem {COLOR}ÉADM{COLOR}Ë und\pfang noch mehr\n{COLOR}É{STR_VAR_1}\lCarbink{COLOR}Ë.\pUm ein Tor zu sprengen, lade\nzuerst dein ADM auf.\lLade es mit {COLOR}É3 Licht-\plehm{COLOR}Ë auf, damit es\pstark genug ist.\nLichtlehm findet man beim\lGraben in den Wänden des KBT Expressway.\pWenn das erledigt ist, komm zurück\nfür eine Belohnung.
   forbidden:
   - Zerstöre die\n{COLOR}Éeingestürzten Tore{COLOR}Ë des\l{COLOR}ÉKBT-Expresswegs{COLOR}Ë\lmit deinem {COLOR}ÉADM{COLOR}Ë und\pfang noch mehr\n{COLOR}É{STR_VAR_1}\lStrassie{COLOR}Ë.\pUm ein Tor zu sprengen, lade\nzuerst dein ADM auf.\lLade es mit {COLOR}É3 Licht-\plehm{COLOR}Ë auf, damit es\pstark genug ist.\nLichtlehm findet man beim\lGraben in den Wänden des KBT-Expresswegs.\pWenn das erledigt ist, komm zurück\nfür eine Belohnung.
 - offset: '0x1ef1137'
@@ -1460,7 +1460,7 @@ entries:
 - offset: '0x1f64a71'
   name: 'B-597 : nom d’espèce EN canonique'
   issue: B-597
-  expected: Mein Smeargle hat seine Attacken\nvon den Pokémon des Frostbergs gelernt.\pAußer Sporen.\pDie hat es von einem Shroomish\nauf Route 9 gelernt.
+  expected: Mein Smeargle hat seine Attacken\nvon den Pokémon des Frost Mountain gelernt.\pAußer Sporen.\pDie hat es von einem Shroomish\nauf Route 9 gelernt.
   forbidden:
   - Mein Queulorior hat seine Attacken\nvon den Pokémon des Frostbergs gelernt.\pAußer Sporen.\pDie hat es von einem Balignon\nauf Route 9 gelernt.
 - offset: '0x1f680c3'
@@ -1647,7 +1647,7 @@ entries:
 - offset: '0x1fa0253'
   name: 'B-597 : nom d’espèce EN canonique'
   issue: B-597
-  expected: Mein Typ in {COLOR}ÉDresco{COLOR}Ë kann die\lRauflaub-Blätter in noch mehr\p{COLOR}ÉTraumnebel{COLOR}Ë verwandeln.\nBring ihm\lOddish, er macht das gerne.
+  expected: Mein Typ in {COLOR}ÉDresco Town{COLOR}Ë kann die\lRauflaub-Blätter in noch mehr\p{COLOR}ÉTraumnebel{COLOR}Ë verwandeln.\nBring ihm\lOddish, er macht das gerne.
   forbidden:
   - Mein Typ in {COLOR}ÉDresco{COLOR}Ë kann die\lRauflaub-Blätter in noch mehr\p{COLOR}ÉTraumnebel{COLOR}Ë verwandeln.\nBring ihm\lMystherbe, er macht das gerne.
 - offset: '0x1fa0a96'
@@ -1925,7 +1925,7 @@ entries:
 - offset: '0x1f734e9'
   name: English toponym canonicalisation 0x1F734E9
   issue: DE — English toponyms
-  expected: Trainertipps!\pAchte auf Bäume mit Schatten dazwischen!\pDort findest du <0xFC><0x01><0x06>Versteckte Höhlen<0xFC><0x01><0x02>!\pSie tauchen seit dem Meteoriteneinschlag massenhaft auf.\pSprich sie an und stell dich einem starken Pokémon!\pMit <0xFC><0x01><0x06>Zerschneider<0xFC><0x01><0x02> findest du sogar eine auf dieser Route!\pHol dir den Unlicht-Orden aus Crater Town und komm zurück!
+  expected: Trainertipps!\pAchte auf Bäume mit Schatten dazwischen!\pDort findest du <0xFC><0x01><0x06>Hidden Grottos<0xFC><0x01><0x02>!\pSie tauchen seit dem Meteoriteneinschlag massenhaft auf.\pSprich sie an und stell dich einem starken Pokémon!\pMit <0xFC><0x01><0x06>Zerschneider<0xFC><0x01><0x02> findest du sogar eine auf dieser Route!\pHol dir den Unlicht-Orden aus Crater Town und komm zurück!
 - offset: '0x1f73cd7'
   name: English toponym canonicalisation 0x1F73CD7
   issue: DE — English toponyms
@@ -1961,15 +1961,15 @@ entries:
 - offset: '0x1f783e6'
   name: English toponym canonicalisation 0x1F783E6
   issue: DE — English toponyms
-  expected: Tarmigan Town liegt auf dem\n„Donnerplateau“.\pAber wenn du gekommen bist, um die\nGewitter zu sehen, hast du\lPech gehabt.\pSie schlagen nur östlich von hier ein,\nin der Nähe von Bourg Épidimy.
+  expected: Tarmigan Town liegt auf dem\n„Epidimy Town“.\pAber wenn du gekommen bist, um die\nGewitter zu sehen, hast du\lPech gehabt.\pSie schlagen nur östlich von hier ein,\nin der Nähe von Epidimy Town.
 - offset: '0x1f7880c'
   name: English toponym canonicalisation 0x1F7880C
   issue: DE — English toponyms
-  expected: Tarmigan Town liegt isoliert in den\nBergen und hat keine\leigene Auffahrt zum {COLOR}ÉKBT-Expressweg{COLOR}Ç!\pWenn du den Berg hinunter willst,\nmusst du laufen oder den\lTeleporter bitten, dich dorthin zu schicken.
+  expected: Tarmigan Town liegt isoliert in den\nBergen und hat keine\leigene Auffahrt zum {COLOR}ÉKBT Expressway{COLOR}Ç!\pWenn du den Berg hinunter willst,\nmusst du laufen oder den\lTeleporter bitten, dich dorthin zu schicken.
 - offset: '0x1f7896e'
   name: English toponym canonicalisation 0x1F7896E
   issue: DE — English toponyms
-  expected: Meine Familie besitzt das Herrenhaus\nTarmigan Town seit Generationen.\pTatsächlich haben meine Vorfahren\nTarmigan Town\lselbst gegründet!\pDeshalb sitze ich gerne hier und\nschaue mir ab und zu die Stadt an.\pBleib nicht so sitzen wie ich,\njunger Mann.\pCarpe diem, Kind!\nNutze den Tag!
+  expected: Meine Familie besitzt das Tarmigan Mansion\nTarmigan Town seit Generationen.\pTatsächlich haben meine Vorfahren\nTarmigan Town\lselbst gegründet!\pDeshalb sitze ich gerne hier und\nschaue mir ab und zu die Stadt an.\pBleib nicht so sitzen wie ich,\njunger Mann.\pCarpe diem, Kind!\nNutze den Tag!
 - offset: '0x1f79aff'
   name: English toponym canonicalisation 0x1F79AFF
   issue: DE — English toponyms
@@ -2049,7 +2049,7 @@ entries:
 - offset: '0x1f833e6'
   name: English toponym canonicalisation 0x1F833E6
   issue: DE — English toponyms
-  expected: Heh, heh, heh…\pWillkommen, Trainer.\pDieser Teil der Victory Road heißt die
+  expected: Heh, heh, heh…\pWillkommen, Trainer.\pDieser Teil der Victory Road heißt „Folterkammer“.\pNur ein Eisfeld trennt dich von der Pokémon League.
 - offset: '0x1f838bb'
   name: English toponym canonicalisation 0x1F838BB
   issue: DE — English toponyms
@@ -2145,7 +2145,7 @@ entries:
 - offset: '0x1f8add8'
   name: English toponym canonicalisation 0x1F8ADD8
   issue: DE — English toponyms
-  expected: Der Battle Circus ist ein Ort für\ndie Solo-, Duo- und Multi-\lHerausforderungen im Kampf.\pIst deine Herausforderung erst gestartet, dauert sie\nan, bis du die Zirkusdirektorin\ldes Zirkus besiegst oder dich zum Ausruhen entscheidest.\pDie Multi-Show des Battle Circus\nist für Multi-Kämpfe mit einem\lPartner.\pUm teilzunehmen, schließ dich einem anderen\nTrainer an und tretet mit zwei oder\ldrei Pokémon pro Person an.\pUnter dem Zirkus befindet sich ein Raum\nnamens Kampf-Lounge, wo du\landere Trainer treffen kannst.\pDort kannst du einen Partner\nfür Multi-\lKämpfe finden.\pDu kannst dich auch mit einem\nFreund über ein Link-Kabel zusammentun.\pSeid ihr zu zweit, werdet ihr\nzur Hauptarena gebracht.\pIn der Arena werden dich Staffel-Teams\nherausfordern.\pVor jedem Kampf aktiviert die\nZirkusdirektorin einen zufälligen Effekt\lfür die gesamte Dauer des Kampfes.\pDieser Effekt ist dauerhaft und kann\nnicht entfernt oder ignoriert werden.\pDiese Effekte können auch an\nIntensität gewinnen und sich verstärken, wenn deine\lSiegesserie steigt.\pWenn du jedes Team besiegst,\nerhältst du Kampfpunkte (BP).\pWenn du deine Herausforderung unterbrechen willst, wird dein\nFortschritt\lgespeichert, für wann immer du\lfortsetzen möchtest.\pWenn du gehst, ohne zu speichern,\nwirst du von deiner\lHerausforderung disqualifiziert.\pWenn du mit einem Freund im Duo bist,\nkannst du die Herausforderung nicht\lunterbrechen.\pBitte denk daran!
+  expected: Der Battle Circus ist ein Ort für\ndie Solo-, Duo- und Multi-\lHerausforderungen im Kampf.\pIst deine Herausforderung erst gestartet, dauert sie\nan, bis du die Zirkusdirektorin\ldes Battle Circus besiegst oder dich zum Ausruhen entscheidest.\pDie Multi-Show des Battle Circus\nist für Multi-Kämpfe mit einem\lPartner.\pUm teilzunehmen, schließ dich einem anderen\nTrainer an und tretet mit zwei oder\ldrei Pokémon pro Person an.\pUnter dem Battle Circus befindet sich ein Raum\nnamens Kampf-Lounge, wo du\landere Trainer treffen kannst.\pDort kannst du einen Partner\nfür Multi-\lKämpfe finden.\pDu kannst dich auch mit einem\nFreund über ein Link-Kabel zusammentun.\pSeid ihr zu zweit, werdet ihr\nzur Hauptarena gebracht.\pIn der Arena werden dich Staffel-Teams\nherausfordern.\pVor jedem Kampf aktiviert die\nZirkusdirektorin einen zufälligen Effekt\lfür die gesamte Dauer des Kampfes.\pDieser Effekt ist dauerhaft und kann\nnicht entfernt oder ignoriert werden.\pDiese Effekte können auch an\nIntensität gewinnen und sich verstärken, wenn deine\lSiegesserie steigt.\pWenn du jedes Team besiegst,\nerhältst du Kampfpunkte (BP).\pWenn du deine Herausforderung unterbrechen willst, wird dein\nFortschritt\lgespeichert, für wann immer du\lfortsetzen möchtest.\pWenn du gehst, ohne zu speichern,\nwirst du von deiner\lHerausforderung disqualifiziert.\pWenn du mit einem Freund im Duo bist,\nkannst du die Herausforderung nicht\lunterbrechen.\pBitte denk daran!
 - offset: '0x1f8ba67'
   name: English toponym canonicalisation 0x1F8BA67
   issue: DE — English toponyms
@@ -2221,7 +2221,7 @@ entries:
 - offset: '0x1f8fbef'
   name: English toponym canonicalisation 0x1F8FBEF
   issue: DE — English toponyms
-  expected: Der Battle Tower ist ein Ort für\nSolo-, Duo-, Multi- und\lMetronom-Herausforderungen.\pEinmal begonnen, dauert deine Herausforderung\nan, bis du den Turmkönig besiegst,\loder du dich entscheidest, dich auszuruhen.\pDie Multi-Kampfräume des Kampfturms\ndienen für Multi-Kämpfe mit einem\lPartner.\pUm einzutreten, schließe dich einem anderen\nTrainer an und tretet mit zwei oder\ldrei Pokémon pro Person an.\pIm Turm gibt es einen Raum,\nder Kampfsalon genannt wird, wo du\landere Trainer treffen kannst.\pDort kannst du einen Trainer\nfinden, der dein Partner in Multi-\lKämpfen wird.\pDu kannst dich auch mit einem\nFreund über ein Link-Kabel zusammentun.\pSobald du im Duo bist, wirst du\nzu einem Kampfraum gebracht.\pIm Multi-Kampfraum warten\nStaffel-Teams auf dich.\pWenn du jedes Team besiegst,\nerhältst du {COLOR}ÉKampfpunkte{COLOR}Ç ({COLOR}ÉBP{COLOR}Ç).\pWenn du deine Herausforderung\nunterbrechen möchtest, wird dein Fortschritt\lgespeichert, damit du später\lfortfahren kannst.\pWenn du ohne zu speichern gehst,\nwirst du von deiner Herausforderung\ldisqualifiziert.\pAußerdem kannst du, wenn du dich mit\neinem Freund zusammentust, deine\lHerausforderung nicht unterbrechen.\pBitte denk daran!
+  expected: Der Battle Tower ist ein Ort für\nSolo-, Duo-, Multi- und\lMetronom-Herausforderungen.\pEinmal begonnen, dauert deine Herausforderung\nan, bis du den Turmkönig besiegst,\loder du dich entscheidest, dich auszuruhen.\pDie Multi-Kampfräume des Battle Tower\ndienen für Multi-Kämpfe mit einem\lPartner.\pUm einzutreten, schließe dich einem anderen\nTrainer an und tretet mit zwei oder\ldrei Pokémon pro Person an.\pIm Turm gibt es einen Raum,\nder Kampfsalon genannt wird, wo du\landere Trainer treffen kannst.\pDort kannst du einen Trainer\nfinden, der dein Partner in Multi-\lKämpfen wird.\pDu kannst dich auch mit einem\nFreund über ein Link-Kabel zusammentun.\pSobald du im Duo bist, wirst du\nzu einem Kampfraum gebracht.\pIm Multi-Kampfraum warten\nStaffel-Teams auf dich.\pWenn du jedes Team besiegst,\nerhältst du {COLOR}ÉKampfpunkte{COLOR}Ç ({COLOR}ÉBP{COLOR}Ç).\pWenn du deine Herausforderung\nunterbrechen möchtest, wird dein Fortschritt\lgespeichert, damit du später\lfortfahren kannst.\pWenn du ohne zu speichern gehst,\nwirst du von deiner Herausforderung\ldisqualifiziert.\pAußerdem kannst du, wenn du dich mit\neinem Freund zusammentust, deine\lHerausforderung nicht unterbrechen.\pBitte denk daran!
 - offset: '0x1f9000d'
   name: English toponym canonicalisation 0x1F9000D
   issue: DE — English toponyms
@@ -2233,7 +2233,7 @@ entries:
 - offset: '0x1f92a22'
   name: English toponym canonicalisation 0x1F92A22
   issue: DE — English toponyms
-  expected: Als Nächstes, hinter dir, am Ausgang\ndes Kampfturms, befindet sich die\lBattle Frontier.\pDort warten weitere Läden und\nKampfeinrichtungen nur darauf,\lvon dir entdeckt zu werden!
+  expected: Als Nächstes, hinter dir, am Ausgang\ndes Battle Tower, befindet sich die\lBattle Frontier.\pDort warten weitere Läden und\nKampfeinrichtungen nur darauf,\lvon dir entdeckt zu werden!
 - offset: '0x1f93296'
   name: English toponym canonicalisation 0x1F93296
   issue: DE — English toponyms
@@ -2297,7 +2297,7 @@ entries:
 - offset: '0x1f98c6e'
   name: English toponym canonicalisation 0x1F98C6E
   issue: DE — English toponyms
-  expected: So eine Mine wie die {COLOR}ÉKampfmine{COLOR}Ë\ngibt's nicht noch mal, sag ich dir.\pIn den meisten Minen… weißt du\nschon, was dich erwartet.\pNicht in der Battle Mine, sag ich dir.\pJeder Stock stellt\nalles auf den Kopf.\pDas ist schon eine Erfahrung für sich!
+  expected: So eine Mine wie die {COLOR}ÉBattle Mine{COLOR}Ë\ngibt's nicht noch mal, sag ich dir.\pIn den meisten Minen… weißt du\nschon, was dich erwartet.\pNicht in der Battle Mine, sag ich dir.\pJeder Stock stellt\nalles auf den Kopf.\pDas ist schon eine Erfahrung für sich!
 - offset: '0x1f9b402'
   name: English toponym canonicalisation 0x1F9B402
   issue: DE — English toponyms
@@ -2521,7 +2521,7 @@ entries:
 - offset: '0x1facfc6'
   name: English toponym canonicalisation 0x1FACFC6
   issue: DE — English toponyms
-  expected: Ich schulde dir was dafür, dass du\nmeinem Elevoltek geholfen hast.\pIch kann dir hier nichts geben, also\ntriff mich im {COLOR}ÉPokémon-Center\lvon Epidimy Town{COLOR}Ë, wenn du eine\lBelohnung für deine Hilfe willst.
+  expected: Ich schulde dir was dafür, dass du\nmeinem Elevoltek geholfen hast.\pIch kann dir hier nichts geben, also\ntriff mich im {COLOR}ÉPokémon Center\lvon Epidimy Town{COLOR}Ë, wenn du eine\lBelohnung für deine Hilfe willst.
 - offset: '0x1fadc75'
   name: English toponym canonicalisation 0x1FADC75
   issue: DE — English toponyms
@@ -2609,7 +2609,7 @@ entries:
 - offset: '0x1f3316d'
   name: English toponym canonicalisation 0x1F3316D
   issue: DE — English toponyms
-  expected: Nun, wärst du nicht entführt worden,\nhättest du es viel leichter gehabt,\lden Thundercap Mt. zu erreichen.\pSiehst du, ein Teil der Decke ist\nkürzlich eingestürzt und blockiert\lden Weg!\pOhne die VM {COLOR}ÉSteinhieb{COLOR}Ë wird es\nschwer, durchzukommen.\pAber…{PAUSE} ich nehme an, du hast sie nicht,\nsonst würdest du nicht mehr mit mir reden.\pEin Freund von mir in {COLOR}ÉCimistral{COLOR}Ë\nkann dir helfen und dir Steinhieb geben.\pAlso nimm diese VM und geh zu ihm.
+  expected: Nun, wärst du nicht entführt worden,\nhättest du es viel leichter gehabt,\lden Thundercap Mt. zu erreichen.\pSiehst du, ein Teil der Decke ist\nkürzlich eingestürzt und blockiert\lden Weg!\pOhne die VM {COLOR}ÉSteinhieb{COLOR}Ë wird es\nschwer, durchzukommen.\pAber…{PAUSE} ich nehme an, du hast sie nicht,\nsonst würdest du nicht mehr mit mir reden.\pEin Freund von mir in {COLOR}ÉBlizzard City{COLOR}Ë\nkann dir helfen und dir Steinhieb geben.\pAlso nimm diese VM und geh zu ihm.
 - offset: '0x1f3356e'
   name: English toponym canonicalisation 0x1F3356E
   issue: DE — English toponyms
@@ -2633,15 +2633,15 @@ entries:
 - offset: '0x1f37b33'
   name: English toponym canonicalisation 0x1F37B33
   issue: DE — English toponyms
-  expected: '{PLAYER}, Arthur hat mir von deinen Abenteuern erzählt.\pZuerst: Glückwunsch zur Rettung von Zapdos.\pIch habe nie an dir gezweifelt, {PLAYER}! Ho ho ho!\pNun, falls du auch zu den Schatten willst:\nEin alter Kollege von mir lebt in Dehara City, ein\lpenibler Erforscher der Ruinen der Leere.\lJax ist wohl schon losgezogen, um ihn zu suchen.\pEr kann dir nötigenfalls die Surf-Route zeigen.'
+  expected: '{PLAYER}, Arthur hat mir von deinen Abenteuern erzählt.\pZuerst: Glückwunsch zur Rettung von Zapdos.\pIch habe nie an dir gezweifelt, {PLAYER}! Ho ho ho!\pNun, falls du auch zu den Schatten willst:\nEin alter Kollege von mir lebt in Dehara City, ein\lpenibler Erforscher der Ruins of Void.\lJax ist wohl schon losgezogen, um ihn zu suchen.\pEr kann dir nötigenfalls die Surf-Route zeigen.'
 - offset: '0x1f37d04'
   name: English toponym canonicalisation 0x1F37D04
   issue: DE — English toponyms
-  expected: Ein alter Mann in Dehara City\nkennt den Weg zu den Ruinen\pder Leere? Das klärt, wohin ich als\nNächstes gehe. Danke, Log, dass du mal\petwas gesagt hast, das es wert war,\ngehört zu werden.
+  expected: Ein alter Mann in Dehara City\nkennt den Weg zu den Ruins of Void? Das klärt, wohin ich als\nNächstes gehe. Danke, Log, dass du mal\petwas gesagt hast, das es wert war,\ngehört zu werden.
 - offset: '0x1f38c8f'
   name: English toponym canonicalisation 0x1F38C8F
   issue: DE — English toponyms
-  expected: 'Aber bevor das passiert, erstens\n: du solltest den Arenaorden\lvon Dehara City holen.\pDu wirst ihn brauchen, um zu den\nRuinen der Leere zu surfen\lmit mir, da es\lunmöglich ist, zu Fuß dorthin zu gelangen.\pIn Ordnung, ich gehe meine\nPokémon vorbereiten. In der\pZwischenzeit hol\ndir diesen Orden.'
+  expected: 'Aber bevor das passiert, erstens\n: du solltest den Arenaorden\lvon Dehara City holen.\pDu wirst ihn brauchen, um zu den\nRuins of Void zu surfen\lmit mir, da es\lunmöglich ist, zu Fuß dorthin zu gelangen.\pIn Ordnung, ich gehe meine\nPokémon vorbereiten. In der\pZwischenzeit hol\ndir diesen Orden.'
 - offset: '0x1f3ce79'
   name: English toponym canonicalisation 0x1F3CE79
   issue: DE — English toponyms
@@ -2905,7 +2905,7 @@ entries:
 - offset: '0x1f565eb'
   name: English toponym canonicalisation 0x1F565EB
   issue: DE — English toponyms
-  expected: Sprich mit Jax im Game Corner von\nDaherapolis!
+  expected: Sprich mit Jax im Dehara Game Corner!
 - offset: '0x1f56612'
   name: English toponym canonicalisation 0x1F56612
   issue: DE — English toponyms
@@ -2953,7 +2953,7 @@ entries:
 - offset: '0x1f568f7'
   name: English toponym canonicalisation 0x1F568F7
   issue: DE — English toponyms
-  expected: Frag einen Seemann in Portuaire,\num nach Polder Town zu gelangen!
+  expected: Frag einen Seemann in Seaport City,\num nach Polder Town zu gelangen!
 - offset: '0x1f5694a'
   name: English toponym canonicalisation 0x1F5694A
   issue: DE — English toponyms
@@ -2977,27 +2977,27 @@ entries:
 - offset: '0x1f574fd'
   name: English toponym canonicalisation 0x1F574FD
   issue: DE — English toponyms
-  expected: Höhle gefunden in einem Hohlen Baum,\nnach Zerschneider außerhalb des\nwestlichen Ausgangs von Grim Woods.
+  expected: Hidden Grotto gefunden in einem Hidden Grotto,\nnach Zerschneider außerhalb des\nwestlichen Ausgangs von Grim Woods.
 - offset: '0x1f5771f'
   name: English toponym canonicalisation 0x1F5771F
   issue: DE — English toponyms
-  expected: Höhle gefunden in einem Hohlen Baum,\nwenn man direkt nach Norden von Tehl Town geht.
+  expected: Hidden Grotto gefunden in einem Hidden Grotto,\nwenn man direkt nach Norden von Tehl Town geht.
 - offset: '0x1f5787f'
   name: English toponym canonicalisation 0x1F5787F
   issue: DE — English toponyms
-  expected: Höhle gefunden in einem Hohlen Baum,\nnach Kraxler über dem\nKBT Expressway.
+  expected: Hidden Grotto gefunden in einem Hidden Grotto,\nnach Kraxler über dem\nKBT Expressway.
 - offset: '0x1f57925'
   name: English toponym canonicalisation 0x1F57925
   issue: DE — English toponyms
-  expected: Höhle gefunden in einem Hohlen Baum,\nnach Kraxler in der Nähe des Eingangs des\nVivill Woods.
+  expected: Hidden Grotto gefunden in einem Hidden Grotto,\nnach Kraxler in der Nähe des Eingangs des\nVivill Woods.
 - offset: '0x1f57988'
   name: English toponym canonicalisation 0x1F57988
   issue: DE — English toponyms
-  expected: Höhle gefunden in einem Hohlen Baum,\nnach Surfer nördlich des Ausgangs von Antisis City.
+  expected: Hidden Grotto gefunden in einem Hidden Grotto,\nnach Surfer nördlich des Ausgangs von Antisis City.
 - offset: '0x1f57a38'
   name: English toponym canonicalisation 0x1F57A38
   issue: DE — English toponyms
-  expected: Höhle gefunden in einem Hohlen Baum,\nin der Nähe des Eingangs von Crystal Peak,\nnach Surfer.
+  expected: Hidden Grotto gefunden in einem Hidden Grotto,\nin der Nähe des Eingangs von Crystal Peak,\nnach Surfer.
 - offset: '0x1f57e87'
   name: English toponym canonicalisation 0x1F57E87
   issue: DE — English toponyms
@@ -3077,7 +3077,7 @@ entries:
 - offset: '0x1f5e166'
   name: English toponym canonicalisation 0x1F5E166
   issue: DE — English toponyms
-  expected: Dieser Teil des KBT-Expresswegs führt\nvon Crater Town nach Tehl Town.
+  expected: Dieser Teil des KBT Expressway führt\nvon Crater Town nach Tehl Town.
 - offset: '0x1f5eb58'
   name: English toponym canonicalisation 0x1F5EB58
   issue: DE — English toponyms
@@ -3169,7 +3169,7 @@ entries:
 - offset: '0x1f68460'
   name: English toponym canonicalisation 0x1F68460
   issue: DE — English toponyms
-  expected: Willkommen in der Safari Zone!\pFür nur ¥500 kannst du das\nSafari-Spiel spielen.\pMöchtest du spielen?
+  expected: Willkommen in der Safari Zone!\pFür nur ¥500 kannst du das\nSafari Zone-Spiel spielen.\pMöchtest du spielen?
 - offset: '0x1f68555'
   name: English toponym canonicalisation 0x1F68555
   issue: DE — English toponyms
@@ -3177,7 +3177,7 @@ entries:
 - offset: '0x1f687b9'
   name: English toponym canonicalisation 0x1F687B9
   issue: DE — English toponyms
-  expected: Willkommen in der Safari Zone!\pFür nur {COLOR}É{STR_VAR_1}{COLOR}Ë BP kannst du\ndas Safari-Spiel spielen.\pMöchtest du spielen?\nDu hast {COLOR}É{STR_VAR_2}{COLOR}Ë BP.
+  expected: Willkommen in der Safari Zone!\pFür nur {COLOR}É{STR_VAR_1}{COLOR}Ë BP kannst du\ndas Safari Zone-Spiel spielen.\pMöchtest du spielen?\nDu hast {COLOR}É{STR_VAR_2}{COLOR}Ë BP.
 - offset: '0x1f6885b'
   name: English toponym canonicalisation 0x1F6885B
   issue: DE — English toponyms
@@ -3193,7 +3193,7 @@ entries:
 - offset: '0x1f692d1'
   name: English toponym canonicalisation 0x1F692D1
   issue: DE — English toponyms
-  expected: Ich erinnere mich, vor Jahren\nfing Seaport City gerade erst an,\lsich zu entwickeln!\pDamals kam die Legende,\nAros, um beim Bau\lder Kampf-Zone zu helfen.
+  expected: Ich erinnere mich, vor Jahren\nfing Seaport City gerade erst an,\lsich zu entwickeln!\pDamals kam die Legende,\nAros, um beim Bau\lder Battle Frontier zu helfen.
 - offset: '0x1f69376'
   name: English toponym canonicalisation 0x1F69376
   issue: DE — English toponyms
@@ -3225,7 +3225,7 @@ entries:
 - offset: '0x1f6d883'
   name: English toponym canonicalisation 0x1F6D883
   issue: DE — English toponyms
-  expected: Wenn du ein ADM hast, kannst du es benutzen\num\pnach Schätzen zu graben! Es gibt drei\nOrte zum Minen in Borrius:\lder KBT Expressway, unter Wasser, oder in\leinem\pRaum des Kristallgipfels. Minen auf\ndem KBT Expressway gibt eine gute\lAuswahl an Gegenständen, Minen unter Wasser\lgibt mehr Fossilien, und Minen am\lCrystal Peak gibt mehr\lEdelsteine.
+  expected: Wenn du ein ADM hast, kannst du es benutzen\num\pnach Schätzen zu graben! Es gibt drei\nOrte zum Minen in Borrius:\lder KBT Expressway, unter Wasser, oder in\leinem\pRaum des Crystal Peak. Minen auf\ndem KBT Expressway gibt eine gute\lAuswahl an Gegenständen, Minen unter Wasser\lgibt mehr Fossilien, und Minen am\lCrystal Peak gibt mehr\lEdelsteine.
 - offset: '0x1f6e029'
   name: English toponym canonicalisation 0x1F6E029
   issue: DE — English toponyms
@@ -3257,11 +3257,11 @@ entries:
 - offset: '0x1f7091d'
   name: English toponym canonicalisation 0x1F7091D
   issue: DE — English toponyms
-  expected: Route 1\n«Schneepass»\p<0x79> Frozen Heights\n<0x7A> Bellin Town, Stalaktitenhöhle
+  expected: Route 1\n«Schneepass»\p<0x79> Frozen Heights\n<0x7A> Bellin Town, Icicle Cave
 - offset: '0x1f70967'
   name: English toponym canonicalisation 0x1F70967
   issue: DE — English toponyms
-  expected: Route 1\n«Schneepass»\p<0x79> Frozen Heights\n<0x7A> Bellin Town\l<0x7B> Stalaktitenhöhle
+  expected: Route 1\n«Schneepass»\p<0x79> Frozen Heights\n<0x7A> Bellin Town\l<0x7B> Icicle Cave
 - offset: '0x1f709b2'
   name: English toponym canonicalisation 0x1F709B2
   issue: DE — English toponyms
@@ -3269,7 +3269,7 @@ entries:
 - offset: '0x1f709ea'
   name: English toponym canonicalisation 0x1F709EA
   issue: DE — English toponyms
-  expected: Das ist eine Statue des legendären Eis-\nPokémon Arktos. Hier steht\pgeschrieben, dass Arktos früher\ndazu diente, ein Siegel über\leine große Dunkelheit zu verstärken, aber dass es\ljetzt gerne zwischen dem\lKalten Berg und Frozen Heights reist.
+  expected: Das ist eine Statue des legendären Eis-\nPokémon Arktos. Hier steht\pgeschrieben, dass Arktos früher\ndazu diente, ein Siegel über\leine große Dunkelheit zu verstärken, aber dass es\ljetzt gerne zwischen dem\lFrost Mountain und Frozen Heights reist.
 - offset: '0x1f70ad1'
   name: English toponym canonicalisation 0x1F70AD1
   issue: DE — English toponyms
@@ -3361,7 +3361,7 @@ entries:
 - offset: '0x1f7109d'
   name: English toponym canonicalisation 0x1F7109D
   issue: DE — English toponyms
-  expected: Route 8\n«Gipfel des Frost Mountain»\p<0x79> Blizzard City\n<0x7A> Frost Mountain, Route 7
+  expected: Route 8\n«Frost Mountain Peak»\p<0x79> Blizzard City\n<0x7A> Frost Mountain, Route 7
 - offset: '0x1f710e5'
   name: English toponym canonicalisation 0x1F710E5
   issue: DE — English toponyms
@@ -3501,7 +3501,7 @@ entries:
 - offset: '0x1f71f45'
   name: English toponym canonicalisation 0x1F71F45
   issue: DE — English toponyms
-  expected: Hafen von Antisis City\p<0x7B> Antisis City
+  expected: Antisis City Port\p<0x7B> Antisis City
 - offset: '0x1f71f66'
   name: English toponym canonicalisation 0x1F71F66
   issue: DE — English toponyms
@@ -4129,11 +4129,11 @@ entries:
 - offset: '0x1f049e7'
   name: English toponym canonicalisation 0x1F049E7
   issue: DE — English toponyms
-  expected: Ja, ich habe gerade die\nWaren an die Pokémon-Märkte geliefert.\pBald kehre ich für die Nacht nach Antisis City zurück.
+  expected: Ja, ich habe gerade die\nWaren an die Poké Mart geliefert.\pBald kehre ich für die Nacht nach Antisis City zurück.
 - offset: '0x1f050bb'
   name: English toponym canonicalisation 0x1F050BB
   issue: DE — English toponyms
-  expected: Mel, der Arenaleiter, ist im\nMoment nicht da.\pVermutlich ist er unterwegs, um den\nKopf frei zu bekommen, in der Nähe des <0xFC><0x01><0x06>KBT-Expresswegs<0xFC><0x01><0x04>\lbei <0xFC><0x01><0x06>Tehl Town<0xFC><0x01><0x04>.
+  expected: Mel, der Arenaleiter, ist im\nMoment nicht da.\pVermutlich ist er unterwegs, um den\nKopf frei zu bekommen, in der Nähe des <0xFC><0x01><0x06>KBT Expressway<0xFC><0x01><0x04>\lbei <0xFC><0x01><0x06>Tehl Town<0xFC><0x01><0x04>.
 - offset: '0x1f055ad'
   name: English toponym canonicalisation 0x1F055AD
   issue: DE — English toponyms
@@ -4145,7 +4145,7 @@ entries:
 - offset: '0x1f08005'
   name: English toponym canonicalisation 0x1F08005
   issue: DE — English toponyms
-  expected: Arbeiter aller Länder,\nvereinigt euch!\pDu musst dich nur <0xFC><0x01><0x06><0xFD><0x02><0xFC><0x01><0x04>\nMal in irgendeinem Pokémon-\lCenter heilen.\pAußer dem in Antisis City nehmen sie\nalle an der Revolution teil.
+  expected: Arbeiter aller Länder,\nvereinigt euch!\pDu musst dich nur <0xFC><0x01><0x06><0xFD><0x02><0xFC><0x01><0x04>\nMal in irgendeinem Pokémon Center heilen.\pAußer dem in Antisis City nehmen sie\nalle an der Revolution teil.
 - offset: '0x1f08691'
   name: English toponym canonicalisation 0x1F08691
   issue: DE — English toponyms
@@ -4153,7 +4153,7 @@ entries:
 - offset: '0x1f099c2'
   name: English toponym canonicalisation 0x1F099C2
   issue: DE — English toponyms
-  expected: Das {COLOR}ÉHaus der Umkehrkämpfe{COLOR}Ë\nist berühmt.\pViele kommen nach Fallshore City, nur um mit\lumgekehrten Typen zu kämpfen.
+  expected: Das {COLOR}ÉTrainer House{COLOR}Ë\nist berühmt.\pViele kommen nach Fallshore City, nur um mit\lumgekehrten Typen zu kämpfen.
 - offset: '0x1f0af31'
   name: English toponym canonicalisation 0x1F0AF31
   issue: DE — English toponyms
@@ -4181,7 +4181,7 @@ entries:
 - offset: '0x1f0c46e'
   name: English toponym canonicalisation 0x1F0C46E
   issue: DE — English toponyms
-  expected: '{PLAYER}! Auf der Durchreise?\pBeeil dich, nach\n{COLOR}ÉRougebois{COLOR}Ë zu gehen!\pJe schneller du die Arena besiegst,\ndesto schneller kannst du\ldie Pokémon League fordern und der\nneue\lChampion werden.'
+  expected: '{PLAYER}! Auf der Durchreise?\pBeeil dich, nach\n{COLOR}ÉRedwood Village{COLOR}Ë zu gehen!\pJe schneller du die Arena besiegst,\ndesto schneller kannst du\ldie Pokémon League fordern und der\nneue\lChampion werden.'
 - offset: '0x1f0c886'
   name: English toponym canonicalisation 0x1F0C886
   issue: DE — English toponyms
@@ -4189,7 +4189,7 @@ entries:
 - offset: '0x1f0cd3a'
   name: English toponym canonicalisation 0x1F0CD3A
   issue: DE — English toponyms
-  expected: Wunderbar, wunderbar.\pDer nächste Pokémon-Laden ist\nin Bellin Town, und er sollte\lreichlich Gegengifte vorrätig haben!
+  expected: Wunderbar, wunderbar.\pDer nächste Poké Mart ist\nin Bellin Town, und er sollte\lreichlich Gegengifte vorrätig haben!
 - offset: '0x1f0ce14'
   name: English toponym canonicalisation 0x1F0CE14
   issue: DE — English toponyms
@@ -4377,7 +4377,7 @@ entries:
 - offset: '0x1f2350c'
   name: English toponym canonicalisation 0x1F2350C
   issue: DE — English toponyms
-  expected: Ich hab noch eine letzte Aufgabe\nfür dich, {PLAYER}.\pEin alter Freund von mir lebt\nin {COLOR}ÉDresco{COLOR}Ë.\pEr kennt sich bestens mit der\nGeschichte von Borrius aus.\pErzähl ihm alles, was bisher\npassiert ist.\pIch hab eine Theorie, aber er\nmuss sie bestätigen.\pDu hast jetzt eigene Pokémon,\ndas sollte kein Problem sein.\pDu erreichst Dresco Town durch die\n{COLOR}ÉStalaktiten-Höhle{COLOR}Ë.
+  expected: Ich hab noch eine letzte Aufgabe\nfür dich, {PLAYER}.\pEin alter Freund von mir lebt\nin {COLOR}ÉDresco Town{COLOR}Ë.\pEr kennt sich bestens mit der\nGeschichte von Borrius aus.\pErzähl ihm alles, was bisher\npassiert ist.\pIch hab eine Theorie, aber er\nmuss sie bestätigen.\pDu hast jetzt eigene Pokémon,\ndas sollte kein Problem sein.\pDu erreichst Dresco Town durch die\n{COLOR}ÉIcicle Cave{COLOR}Ë.
 - offset: '0x1f2375b'
   name: English toponym canonicalisation 0x1F2375B
   issue: DE — English toponyms
@@ -4921,11 +4921,11 @@ entries:
 - offset: '0x7a3344'
   name: English toponym canonicalisation 0x7A3344
   issue: DE — English toponyms
-  expected: Ein Freund hat mir erzählt, dass\nunter <0xFC><0x01><0x06>Tehl Town<0xFC><0x01><0x04>, diesem kleinen\lDorf westlich von hier, ein geheimer unterirdischer Gang zur\l<0xFC><0x01><0x06>Route 9<0xFC><0x01><0x04> liegt.\pAber das kann doch nicht sein…\nNa los! Wer würde das schon glauben?
+  expected: Ein Freund hat mir erzählt, dass\nunter <0xFC><0x01><0x06>Tehl Town<0xFC><0x01><0x04>, diesem kleinen\lDorf westlich von hier, ein geheimer underground pass zur\l<0xFC><0x01><0x06>Route 9<0xFC><0x01><0x04> liegt.\pAber das kann doch nicht sein…\nNa los! Wer würde das schon glauben?
 - offset: '0x7a352b'
   name: English toponym canonicalisation 0x7A352B
   issue: DE — English toponyms
-  expected: Das {COLOR}ÉHaus der Invertierten\nTrainer{COLOR}Ë ist berühmt.\pViele kommen nach Fallshore City nur,\num dort zu kämpfen.
+  expected: Das {COLOR}ÉTrainer House{COLOR}Ë ist berühmt.\pViele kommen nach Fallshore City nur,\num dort zu kämpfen.
 - offset: '0x7a3dc5'
   name: English toponym canonicalisation 0x7A3DC5
   issue: DE — English toponyms
@@ -4941,7 +4941,7 @@ entries:
 - offset: '0x7a6b49'
   name: English toponym canonicalisation 0x7A6B49
   issue: DE — English toponyms
-  expected: Route 6\p<0x79> Valley Cave\n<0x7A> Aubrun-Kanal\l<0x7B> Route 7, Frost Mountain\l<0x7C> Route 14
+  expected: Route 6\p<0x79> Valley Cave\n<0x7A> Auburn Waterway\l<0x7B> Route 7, Frost Mountain\l<0x7C> Route 14
 - offset: '0x7a6d09'
   name: English toponym canonicalisation 0x7A6D09
   issue: DE — English toponyms
@@ -4969,7 +4969,7 @@ entries:
 - offset: '0x7ab17d'
   name: English toponym canonicalisation 0x7AB17D
   issue: DE — English toponyms
-  expected: '{COLOR}ËDie Bewohner von Epidimy Town\nbeschweren sich, weil sie nicht mehr zum\lMont Foudroyant können.\pEin komischer Typ blockiert den\nEingang und will dich\lam Reinkommen hindern.\pIch weiß nicht, was los ist, aber diese\nBeschwerden gehen mir auf die Nerven.\pDa das wohl deine Schuld ist, triff\nmich in {COLOR}ÉÉpidia{COLOR}Ë,\ldamit wir das klären.\pIch hab nicht ewig Zeit, nimm das,\num schneller dort zu sein.'
+  expected: '{COLOR}ËDie Bewohner von Epidimy Town\nbeschweren sich, weil sie nicht mehr zum\lThundercap Mountain können.\pEin komischer Typ blockiert den\nEingang und will dich\lam Reinkommen hindern.\pIch weiß nicht, was los ist, aber diese\nBeschwerden gehen mir auf die Nerven.\pDa das wohl deine Schuld ist, triff\nmich in {COLOR}ÉEpidimy Town{COLOR}Ë,\ldamit wir das klären.\pIch hab nicht ewig Zeit, nimm das,\num schneller dort zu sein.'
 - offset: '0x7ac678'
   name: English toponym canonicalisation 0x7AC678
   issue: DE — English toponyms
@@ -5013,11 +5013,11 @@ entries:
 - offset: '0x7b8a54'
   name: English toponym canonicalisation 0x7B8A54
   issue: DE — English toponyms
-  expected: Tarmigan Town liegt auf dem\n\p"Plateau Foudre". Aber wenn du\n\lnur gekommen bist, um die Gewitter zu sehen,\nmusst du nicht weitergehen.
+  expected: Tarmigan Town liegt auf dem\n\p"Plateau Foudre". Aber wenn du\n\lnur gekommen bist, um die Gewitter zu sehen,\nmusst du nicht weitergehen.\pDie Gewitter treten nur östlich von\nhier bei Epidimy Town auf.
 - offset: '0x7b8b24'
   name: English toponym canonicalisation 0x7B8B24
   issue: DE — English toponyms
-  expected: Meine Familie besitzt das Anwesen\n\pTarmigan Town seit Generationen. In\n\lder Tat haben meine Vorfahren\n\pTarmigan Town gegründet! Deshalb sitze ich\n\pgerne hier und schaue mir ab und zu\n\pdie Stadt an. Mach es nicht wie\nich, Kleiner. Carpe diem, mein Kind!
+  expected: Meine Familie besitzt das Tarmigan Mansion\n\pTarmigan Town seit Generationen. In\n\lder Tat haben meine Vorfahren\n\pTarmigan Town gegründet! Deshalb sitze ich\n\pgerne hier und schaue mir ab und zu\n\pdie Stadt an. Mach es nicht wie\nich, Kleiner. Carpe diem, mein Kind!
 - offset: '0x7bafed'
   name: English toponym canonicalisation 0x7BAFED
   issue: DE — English toponyms
@@ -5037,7 +5037,7 @@ entries:
 - offset: '0x7c0b71'
   name: English toponym canonicalisation 0x7C0B71
   issue: DE — English toponyms
-  expected: Mel, der Arenaleiter, ist nicht da.\n\pEr macht seinen Kopf frei auf dem SES Expressway.
+  expected: Mel, der Arenaleiter, ist nicht da.\n\pEr macht seinen Kopf frei am SES Expressway in Tehl Town.
 - offset: '0x7c0c54'
   name: English toponym canonicalisation 0x7C0C54
   issue: DE — English toponyms
@@ -5093,7 +5093,7 @@ entries:
 - offset: '0x7c68e8'
   name: English toponym canonicalisation 0x7C68E8
   issue: DE — English toponyms
-  expected: Ja, ich hab gerade die Waren an\ndie Pokémon-Läden geliefert.\pBald geht's zurück nach Antisis City für die Nacht.
+  expected: Ja, ich hab gerade die Waren an\ndie Poké Mart geliefert.\pBald geht's zurück nach Antisis City für die Nacht.
 - offset: '0x7c7cf5'
   name: English toponym canonicalisation 0x7C7CF5
   issue: DE — English toponyms
@@ -5101,7 +5101,7 @@ entries:
 - offset: '0x7c7dfa'
   name: English toponym canonicalisation 0x7C7DFA
   issue: DE — English toponyms
-  expected: Nun, ohne diese Entführung\nhättest du weniger Mühe\lgehabt, den Thundercap Mt. zu erreichen.\pWeißt du, ein Teil der Decke ist\nvor kurzem eingestürzt und hat\lden Weg versperrt!\pUnd ohne die VM {COLOR}ÉGesteins-\nhieb{COLOR}Ë wirst du es schwer\lhaben, durchzukommen.\pAber…\pIch wette, du hast sie nicht,\nsonst würdest du nicht mit mir reden.\pIn {COLOR}ÉCimistral{COLOR}Ë kann dir\nein Freund helfen, indem er\ldir Gesteinshieb gibt.\pAlso nimm diese VM, um ihn\nzu erreichen.
+  expected: Nun, ohne diese Entführung\nhättest du weniger Mühe\lgehabt, den Thundercap Mt. zu erreichen.\pWeißt du, ein Teil der Decke ist\nvor kurzem eingestürzt und hat\lden Weg versperrt!\pUnd ohne die VM {COLOR}ÉGesteins-\nhieb{COLOR}Ë wirst du es schwer\lhaben, durchzukommen.\pAber…\pIch wette, du hast sie nicht,\nsonst würdest du nicht mit mir reden.\pIn {COLOR}ÉBlizzard City{COLOR}Ë kann dir\nein Freund helfen, indem er\ldir Gesteinshieb gibt.\pAlso nimm diese VM, um ihn\nzu erreichen.
 - offset: '0x7c898c'
   name: English toponym canonicalisation 0x7C898C
   issue: DE — English toponyms
@@ -5141,11 +5141,11 @@ entries:
 - offset: '0x7d7750'
   name: English toponym canonicalisation 0x7D7750
   issue: DE — English toponyms
-  expected: '{COLOR}ËNicht schlecht, {PLAYER}.\pJetzt verstehe ich, warum Arceus\nauch dich zurückgeschickt hat.\pAber von jetzt an muss ich die\nDinge allein erledigen.\pWenn ihr auch zu unserer Basis in\n{COLOR}ÉCimes Gelées{COLOR}Ë kommt, wird Zeph mir\lnicht helfen, die Schattenkrieger\nzu finden.\pIch bin dankbar für eure Hilfe,\naber bitte,\l{COLOR}Ëmeidet unsere Basis in Frozen Heights{COLOR}Ë.'
+  expected: '{COLOR}ËNicht schlecht, {PLAYER}.\pJetzt verstehe ich, warum Arceus\nauch dich zurückgeschickt hat.\pAber von jetzt an muss ich die\nDinge allein erledigen.\pWenn ihr auch zu unserer Basis in\n{COLOR}ÉFrozen Heights{COLOR}Ë kommt, wird Zeph mir\lnicht helfen, die Schattenkrieger\nzu finden.\pIch bin dankbar für eure Hilfe,\naber bitte,\l{COLOR}Ëmeidet unsere Basis in Frozen Heights{COLOR}Ë.'
 - offset: '0x7da4c9'
   name: English toponym canonicalisation 0x7DA4C9
   issue: DE — English toponyms
-  expected: 'Marlon: {COLOR}ËZum Glück weiß ich,\nwo ihre Basis ist.\pAls ich mit {PLAYER} am Volcan\nCendré war, befahl Vega seinen\lGrunzern, sich nach Vivill Town\nzurückzuziehen.\pDort verstecken sie sich\nbestimmt.'
+  expected: 'Marlon: {COLOR}ËZum Glück weiß ich,\nwo ihre Basis ist.\pAls ich mit {PLAYER} am Cinder Volcano war, befahl Vega seinen\lGrunzern, sich nach Vivill Town\nzurückzuziehen.\pDort verstecken sie sich\nbestimmt.'
 - offset: '0x7dd0ed'
   name: English toponym canonicalisation 0x7DD0ED
   issue: DE — English toponyms
@@ -5446,3 +5446,1457 @@ entries:
   expected: Blizzard City
   forbidden:
   - Cimistral
+- offset: '0x3EF193'
+  name: 'Toponym EN: Cliff Cave'
+  issue: DE — noms originaux des lieux
+  expected: Cliff Cave
+  forbidden:
+  - Spalthöhle
+  - Grotte Faille
+  - Grotte Falaise
+- offset: '0x41854A'
+  name: 'Toponym EN court: PokéCenter'
+  issue: DE — noms originaux des lieux
+  expected: PokéCenter
+  forbidden:
+  - Pokémon-Center
+  - Centre Pokémon
+- offset: '0x1EE0B56'
+  name: 'Toponym EN court: Frontier'
+  issue: DE — noms originaux des lieux
+  expected: Frontier
+  forbidden:
+  - Kampfzone
+  - Kampfgrenze
+- offset: '0x192079'
+  name: English toponym canonicalisation 0x192079
+  issue: DE — English toponyms
+  expected: Der Arena-Leiter Mirskle\nnutzt Pokémon, die man im\l{COLOR}ÉFlower Paradise{COLOR}Ë findet.\pGute Eis-Pokémon in der\n{COLOR}ÉIcicle Cave{COLOR}Ë zu fangen, kann\ldir wirklich einen Vorteil gegen\lihn verschaffen.
+- offset: '0x1a6046'
+  name: English toponym canonicalisation 0x1A6046
+  issue: DE — English toponyms
+  expected: Ah, perfekt! Du und deine Pokémon\nseht viel besser aus.\pWenn die KP deiner Pokémon niedrig sind,\nheile sie in einem\p{COLOR}ÉPokémon Center{COLOR}Ç!\nDas nächste von hier ist in\p{COLOR}ÉBellin Town{COLOR}Ç.\nOder kauf\p{COLOR}ÉTränke{COLOR}Ç im\n{COLOR}ÉPoké Mart{COLOR}Ç!\pEs ist immer gut, sich auf das\nSchlimmste vorzubereiten.\pMach mich stolz, Schatz!\pPass auf dich auf!
+- offset: '0x750af3'
+  name: English toponym canonicalisation 0x750AF3
+  issue: DE — English toponyms
+  expected: 'Log: {COLOR}ËIch kehre zu den\n{COLOR}ÉFrozen Heights{COLOR}Ë zurück,\pIch werde deiner Mutter sagen, wie es\nsteht.'
+- offset: '0x773613'
+  name: English toponym canonicalisation 0x773613
+  issue: DE — English toponyms
+  expected: Bring mich zurück nach {COLOR}ÉBlizzard City{COLOR}Ë.\pIch folge dir dorthin.
+- offset: '0x7760f8'
+  name: English toponym canonicalisation 0x7760F8
+  issue: DE — English toponyms
+  expected: Das Pokémon scheint in Richtung der\n{COLOR}ÉIcicle Cave zu gehen.
+- offset: '0x77fc48'
+  name: English toponym canonicalisation 0x77FC48
+  issue: DE — English toponyms
+  expected: Man hätte diesen Ort\nCliff Cave nennen sollen.
+- offset: '0x77fc7b'
+  name: English toponym canonicalisation 0x77FC7B
+  issue: DE — English toponyms
+  expected: Dieser Ort erinnert mich an die Cliff Cave aus Johto.\pWarum Thundercap Mountain und nicht\nCliff Cave? Ein Rätsel.
+- offset: '0x78d43d'
+  name: English toponym canonicalisation 0x78D43D
+  issue: DE — English toponyms
+  expected: '9Marlon: {COLOR}ËGut, Schergen.\pUnser Ziel ist es, zum\n{COLOR}ÉCinder Volcano {COLOR}Ë zu gehen und Ivory zu helfen,\ldas TRES-Exemplar zu bekommen.'
+- offset: '0x78df49'
+  name: English toponym canonicalisation 0x78DF49
+  issue: DE — English toponyms
+  expected: Hast du schon mal von einem\nPokémon namens {COLOR}ÉEvoli{COLOR}Ç gehört?\pEs würde sich entwickeln, wenn du\nhier einen Felsen berührst.\pMan sagt auch, dass es sich über\neinen Felsen im {COLOR}ÉGrim Woods{COLOR}Ç\lentwickeln würde.\pIch würde so gerne eines Tages\nein Evoli sehen…
+- offset: '0x78e0c6'
+  name: English toponym canonicalisation 0x78E0C6
+  issue: DE — English toponyms
+  expected: Du kannst dein Evoli entwickeln,\nindem du hier oder im\l{COLOR}ÉGrim Woods{COLOR}Ç einen Felsen berührst.
+- offset: '0x78e287'
+  name: English toponym canonicalisation 0x78E287
+  issue: DE — English toponyms
+  expected: Diese VM enthält {COLOR}ÉSteinhieb{COLOR}Ë,\nfalls das nicht schon klar war!\pDamit kannst du rissige Felsen auf\ndeinem Weg zerschlagen.\pDenk daran, um Steinhieb zu\nnutzen, brauchst du zuerst den\l{COLOR}ÉBlizzard City-Orden{COLOR}Ë.
+- offset: '0x78f87d'
+  name: English toponym canonicalisation 0x78F87D
+  issue: DE — English toponyms
+  expected: Oh, entschuldige!\nIch habe vergessen, mich\lvorzustellen!\pIch bin Mel, der Arenaleiter von\n{COLOR}ÉFallshore City{COLOR}Ë.\pBist du ein Herausforderer?\nDann triff mich in der Arena.\pIch habe gerade keine Lust,\nheimzugehen, also wenn du mir\lkeinen guten Kampf lieferst, lasse\lich meinen Megahieb los!
+- offset: '0x7a8589'
+  name: English toponym canonicalisation 0x7A8589
+  issue: DE — English toponyms
+  expected: '{PLAYER}!\pDas hast du hoffentlich nicht\ngesehen…\pÄh, ich wurde nur überrumpelt.\pBevor du zum Thundercap Mountain gehst,\nhilf mir auf der {COLOR}ÉRoute 9{COLOR}Ë?\pDie Schatten haben dort eine\npsychische Barriere errichtet, die\lmich am Fliegen hindert.'
+- offset: '0x7a99c5'
+  name: English toponym canonicalisation 0x7A99C5
+  issue: DE — English toponyms
+  expected: Danke, {PLAYER}.\nDas weiß ich wirklich zu schätzen.\pIch werde versuchen, von\n{COLOR}ÉTehl Town{COLOR}Ë aus einen Zugang zur\l{COLOR}ÉRoute 9{COLOR}Ë zu finden.\pDu solltest wahrscheinlich etwas\nÄhnliches versuchen.
+- offset: '0x7aaeca'
+  name: English toponym canonicalisation 0x7AAECA
+  issue: DE — English toponyms
+  expected: '{COLOR}ËWunderbar!\pIn {COLOR}ÉBellin Town{COLOR}Ë wartet im\n{COLOR}ÉPoké Mart{COLOR}Ë ein Paket für mich.\pHol es bitte ab, ich bin selbst\nzu alt zum Reisen.\pDer Verkäufer weiß das, besteht\naber darauf, dass es in\l{COLOR}ÉBellin Town{COLOR}Ë abgeholt wird.\pMit deinen Pokémon ist das kein\nProblem. Ho ho ho!\pIch bin sonst im Labor, die Straße\nrunter. Schau vorher bei deiner\lMutter vorbei, sie macht sich sicher\lSorgen.\pViel Glück, {PLAYER}. Meine Forschung\nhängt von dir ab.'
+- offset: '0x7bbe83'
+  name: English toponym canonicalisation 0x7BBE83
+  issue: DE — English toponyms
+  expected: '??? : {COLOR}ÇEpidimy Town,\n\psagst du… Dann muss ich dorthin…\nfür die Wissenschaft…'
+- offset: '0x7c194d'
+  name: English toponym canonicalisation 0x7C194D
+  issue: DE — English toponyms
+  expected: Man erreicht Thundercap Mountain durch dieses Loch unten an der\lTreppe.\pEs ist sehr gefährlich, also nimm,\nwenn du hingehst, viele Wiederbelebungen und\lParalyse-Heiler mit!
+- offset: '0x7c19f0'
+  name: English toponym canonicalisation 0x7C19F0
+  issue: DE — English toponyms
+  expected: Ich will unbedingt den Thundercap Mountain erkunden!\pAber Mama sagt, das ist zu\ngefährlich, weil es auf der anderen\lSeite viele böse Gestalten gibt.
+- offset: '0x7c24a9'
+  name: English toponym canonicalisation 0x7C24A9
+  issue: DE — English toponyms
+  expected: 9Hast du vor, den Thundercap Mountain zu erkunden?\pWenn ja, wirst du das hier\nbrauchen!
+- offset: '0x7c24aa'
+  name: English toponym canonicalisation 0x7C24AA
+  issue: DE — English toponyms
+  expected: Hast du vor, Thundercap Mountain zu erkunden?\pWenn ja, wirst du das hier\nbrauchen!
+- offset: '0x7c2540'
+  name: English toponym canonicalisation 0x7C2540
+  issue: DE — English toponyms
+  expected: Der Thundercap Mountain ist ein\ngefährlicher Ort!\pIch hab's einmal versucht, und\nautsch, ich wurde gegrillt!\pSeitdem gibt meine liebe Frau\njeden Tag Top-Abwehrsprays an\lReisende, die mit ihr reden.
+- offset: '0x7c6dab'
+  name: English toponym canonicalisation 0x7C6DAB
+  issue: DE — English toponyms
+  expected: Nein?\pDie {COLOR}ÉSandan{COLOR}Ë und {COLOR}ÉSandamer{COLOR}Ë aus dem\n{COLOR}ÉGreat Desert{COLOR}Ë können Erdraserei.
+- offset: '0x7c804b'
+  name: English toponym canonicalisation 0x7C804B
+  issue: DE — English toponyms
+  expected: Benutze {COLOR}ÉZerschneider{COLOR}Ë, um diesen\nBaum zu entfernen, der die {COLOR}ÉValley Cave{COLOR}Ë blockiert.
+- offset: '0x7c80c9'
+  name: English toponym canonicalisation 0x7C80C9
+  issue: DE — English toponyms
+  expected: 'Handlanger: {COLOR}ËIch weigere mich,\nmeinen Posten zu verlassen.\pIch muss {PLAYER} um jeden Preis\ndavon abhalten, den Thundercap Mountain zu betreten.'
+- offset: '0x7c8456'
+  name: English toponym canonicalisation 0x7C8456
+  issue: DE — English toponyms
+  expected: Was ist das?\pDu weißt nicht, was eine VM ist?\pOhh!\pEine {COLOR}ÉVM{COLOR}Ë, eine Versteckte\nMaschine, hilft Pokémon über\lHindernisse.\pLernt ein Pokémon sie, reicht ein\neinziger {COLOR}ÉSchritt{COLOR}Ë, und es\lkann sie im Feld nutzen -\nauch wenn sie im Kampf nicht wirkt!\pKurz gesagt, {COLOR}Édein Pokémon muss\ndie VM nicht kennen{COLOR}Ë.\pPraktisch!\pBenutz die VM {COLOR}ÉZerschneider{COLOR}Ë\ngegen den Baum vor der\l{COLOR}ÉValley Cave{COLOR}Ë.\pDann geh nach {COLOR}ÉCimistral{COLOR}Ë,\nhol {COLOR}ÉGesteinshieb{COLOR}Ë von meinem Freund.\pViel Glück!
+- offset: '0x7c9239'
+  name: English toponym canonicalisation 0x7C9239
+  issue: DE — English toponyms
+  expected: '{COLOR}ËEs ist endlich Zeit, zu den\n{COLOR}ÉRuins of Void{COLOR}Ë zu gehen…'
+- offset: '0x7cdd11'
+  name: English toponym canonicalisation 0x7CDD11
+  issue: DE — English toponyms
+  expected: Während ich das erledige, solltest du\ndich auf den Weg machen zum {COLOR}ÉThundercap Mt.{COLOR}Ë.\pDie Attacke {COLOR}ÉStärke{COLOR}Ë wird gebraucht,\num überall hinzukommen. Besiege\lzuerst die {COLOR}ÉArena von Rivapolis{COLOR}Ë.\pIch glaube, ich habe den Arenaleiter\nirgendwo in der Nähe gesehen. {COLOR}ÉTehl Town{COLOR}Ë,\lum genau zu sein…\pIch hole dich wieder ein, nachdem\ndu {COLOR}ÉZapdos{COLOR}Ë gerettet hast.
+- offset: '0x7d6c5a'
+  name: English toponym canonicalisation 0x7D6C5A
+  issue: DE — English toponyms
+  expected: 'Véga: {COLOR}ËAlle Rüpel,\nzurück zur Basis in {COLOR}ÉVivill Town{COLOR}Ë!\pWir sind im Moment nicht ausgerüstet,\num gegen diese… Zombies anzutreten!'
+- offset: '0x7d752f'
+  name: English toponym canonicalisation 0x7D752F
+  issue: DE — English toponyms
+  expected: 'Marlon: {COLOR}ËSelbst wenn du stirbst, Vega,\nwerde ich den Ort deiner Basis\limmer noch kennen.\pDu hast deinen Grunzern befohlen,\nsich nach {COLOR}ÉVivill Town{COLOR}Ë zurückzuziehen,\lnicht wahr?\pNachdem ich Zeph aus {COLOR}ÉFrozen Heights{COLOR}Ë zurückgeholt habe, werde ich dorthin gehen, um die\lSchattenkrieger zu suchen.'
+- offset: '0x7d8bea'
+  name: English toponym canonicalisation 0x7D8BEA
+  issue: DE — English toponyms
+  expected: Meine Vorgesetzten haben mich\ngebeten, dieses VM an alle\lTrainer weiterzugeben, die hier\lvorbeikommen.\pBis die Brücke repariert ist,\nmüssen Sie dieses VM für\lKlettern benutzen, wenn Sie nach\l{COLOR}ÉSeaport City{COLOR}Ë wollen.\pSie müssen nur diese Felswand\ndort oben angehen, um es zu\lbenutzen.
+- offset: '0x7da8fb'
+  name: English toponym canonicalisation 0x7DA8FB
+  issue: DE — English toponyms
+  expected: '{COLOR}ËUnd, {PLAYER}? Ich weiß, dass wir\nnie wirklich einer Meinung\lwaren, aber willst du dich unserem\nAngriff auf die\l{COLOR}ÉBasis des Lichts der Leere{COLOR}Ë in\l{COLOR}ÉVivill Town{COLOR}Ë anschließen?'
+- offset: '0x7de155'
+  name: English toponym canonicalisation 0x7DE155
+  issue: DE — English toponyms
+  expected: '{COLOR}ËBegib dich so schnell wie möglich\nnach {COLOR}ÉVivill Town{COLOR}Ë. Wir haben nicht viel\lZeit.\pGeh nach {COLOR}ÉNordosten{COLOR}Ë von {COLOR}ÉDehara City{COLOR}Ë aus,\num schnell dort anzukommen.'
+- offset: '0x7eec7a'
+  name: English toponym canonicalisation 0x7EEC7A
+  issue: DE — English toponyms
+  expected: Super.\pDie {COLOR}ÉHarten Steine{COLOR}Ë fallen,\nwenn du Felsen zerschlägst.\lIn der {COLOR}ÉGreat Desert{COLOR}Ë.\pFinde 5 davon und bring sie mir,\nbitte.
+- offset: '0x7f80cb'
+  name: English toponym canonicalisation 0x7F80CB
+  issue: DE — English toponyms
+  expected: 'Jax : {COLOR}ËHier finden wir nichts.\nWir müssen von {COLOR}ÉSeaport City{COLOR}Ë aus ein\nSchiff nach {COLOR}ÉOst-Borrius{COLOR}Ë nehmen !'
+- offset: '0x8cb260'
+  name: English toponym canonicalisation 0x8CB260
+  issue: DE — English toponyms
+  expected: Noch eine Aufgabe\nfür dich, {PLAYER}.\pEin alter Freund lebt in\n{COLOR}ÉDresco Town{COLOR}Ë.\pEr kennt sich gut mit der Geschichte\nvon Borrius aus.\pErzähl ihm alles, was bisher\npassiert ist.\pIch habe eine Theorie darüber, was vor sich\ngeht, aber ich brauche seine Bestätigung.\pDu hast jetzt deine eigenen Pokémon, also\nwird es nicht allzu schwer sein.\pGeh über {COLOR}ÉIcicle Cave{COLOR}Ë\nnach {COLOR}ÉDresco Town{COLOR}Ë.
+- offset: '0x8cb3f5'
+  name: English toponym canonicalisation 0x8CB3F5
+  issue: DE — English toponyms
+  expected: Oh! Wie schusselig von mir!\nWie soll ich dich bitten, die\p{COLOR}ÉIcicle Cave{COLOR}Ë zu finden, wenn du\nden Weg nicht kennst?\pDiese {COLOR}ÉKarte{COLOR}Ë sollte dir sehr\nhelfen!
+- offset: '0x8cb82c'
+  name: English toponym canonicalisation 0x8CB82C
+  issue: DE — English toponyms
+  expected: Geh zu meinem Freund\nin {COLOR}ÉDresco Town{COLOR}Ë.\pIch zähle auf dich.
+- offset: '0x8cb872'
+  name: English toponym canonicalisation 0x8CB872
+  issue: DE — English toponyms
+  expected: '{PLAYER}, schnell zum\n{COLOR}ÉThundercap Mountain{COLOR}Ë!\pWenn die Schatten vor dir dort ankommen,\nist Borrius verloren!\pÜber den {COLOR}ÉSES Expressway{COLOR}Ë\nschnell nach {COLOR}ÉSüden{COLOR}Ë.'
+- offset: '0x8cbb58'
+  name: English toponym canonicalisation 0x8CBB58
+  issue: DE — English toponyms
+  expected: Leider, {PLAYER}, habe ich\nkeine weiteren Aufgaben für dich.\pHast du daran gedacht, die\n{COLOR}ÉPokémon League{COLOR}Ë herauszufordern?
+- offset: '0x8cd70a'
+  name: English toponym canonicalisation 0x8CD70A
+  issue: DE — English toponyms
+  expected: Ausgezeichnet.\pWie du weißt, wurde die dunkle Kraft\nvon Borrius vor Jahren versiegelt.\pMan sagt, sammeln sich bei den\n{COLOR}ÉRuins of Void{COLOR}Ë die drei Siegel-Pokémon,\lwird die Macht wieder befreit.\pDas ist sicher das, wonach die\nGauner suchen.\pSie wollen Borrius wieder\nin die Schatten stürzen.\pIhr nächstes Ziel dürfte sein…
+- offset: '0x8cd8dc'
+  name: English toponym canonicalisation 0x8CD8DC
+  issue: DE — English toponyms
+  expected: 'Jax : {COLOR}ËHabe Typen\nin Schwarz beim {COLOR}ÉCinder Volcano{COLOR}Ë gesehen!'
+- offset: '0x8cde49'
+  name: English toponym canonicalisation 0x8CDE49
+  issue: DE — English toponyms
+  expected: Begib dich zum {COLOR}ÉCinder Volcano{COLOR}Ë und\nsieh zu, wie Jax {COLOR}ÉLavados{COLOR}Ë rettet.\pSo könntest du wertvolle\nErfahrung sammeln.
+- offset: '0x8cdebb'
+  name: English toponym canonicalisation 0x8CDEBB
+  issue: DE — English toponyms
+  expected: Die Zeit drängt,\n<0xFD><0x01>.\pDu musst dich beeilen, zum\n<0xFC><0x01><0x06>Thundercap Mountain<0xFC><0x01><0x08> zu gehen und\l<0xFC><0x01><0x06>Zapdos<0xFC><0x01><0x08> zu retten!\pWenn es auch gefangen wird, sind wir\nalle verloren…
+- offset: '0x8cdf4b'
+  name: English toponym canonicalisation 0x8CDF4B
+  issue: DE — English toponyms
+  expected: Mit den drei Legendären Pokémon\nin der Hand sind die Schatten nur\lnoch wenige Augenblicke davon entfernt,\ldie dunkle Macht zu befreien.\pJax ist in {COLOR}ÉDehara City{COLOR}Ë,\nbereit, dich zu den {COLOR}ÉRuins of Void{COLOR}Ë zu bringen\lund die Schatten davon abzuhalten,\lihren Plan zu vollenden.
+- offset: '0x8ce141'
+  name: English toponym canonicalisation 0x8CE141
+  issue: DE — English toponyms
+  expected: Jetzt, wo wieder Frieden\nherrscht, warum forderst du nicht\ldie {COLOR}ÉPokémon League{COLOR}Ë heraus?\pMit deinem Niveau könntest du\nleicht Champ werden.
+- offset: '0x8d0f8a'
+  name: English toponym canonicalisation 0x8D0F8A
+  issue: DE — English toponyms
+  expected: '{COLOR}ËDa das offiziell deine\n„Mission“ ist, werde ich in\l{COLOR}ÉVivill Town{COLOR}Ë warten.\pUnd dir zuliebe werde ich sogar so tun,\nals wäre ich „nett“ zu den Schatten,\lbis wir fertig sind.\pSei nicht zu spät, {PLAYER}.'
+- offset: '0xb531a0'
+  name: English toponym canonicalisation 0xB531A0
+  issue: DE — English toponyms
+  expected: Hidden Grotto
+- offset: '0x1ee6115'
+  name: English toponym canonicalisation 0x1EE6115
+  issue: DE — English toponyms
+  expected: Hast du dir die Zeit genommen,\ndie örtlichen Einrichtungen anzusehen?\pDas {COLOR}ÉPokémon Center{COLOR}Ë heilt deine\nPokémon kostenlos.\pDer {COLOR}ÉPoké Mart{COLOR}Ë verkauft nützliche\nGegenstände für Trainer.\pIn den meisten Städten erkennt man\ndiese beiden Gebäude an ihren\lroten und blauen Farben.
+- offset: '0x1eea61b'
+  name: English toponym canonicalisation 0x1EEA61B
+  issue: DE — English toponyms
+  expected: 'Diese VM enthält {COLOR}ÉZertrümmerer{COLOR}Ë,\nfalls das nicht offensichtlich war!\pDu kannst es benutzen, um\neingerissene Felsen auf deinem Weg zu zerschlagen.\pDenk dran: Um\nZertrümmerer zu benutzen, brauchst du zuerst den\lArenaorden von {COLOR}ÉBlizzard City{COLOR}Ë.'
+- offset: '0x1eea777'
+  name: English toponym canonicalisation 0x1EEA777
+  issue: DE — English toponyms
+  expected: Hey! Hör mal.\pHast du auf deiner Reise Felsen gesehen,\ndie dir im Weg waren und\ldie du nicht bewegen konntest?\pEs gibt einen Typen in {COLOR}ÉEpidimy Town{COLOR}Ë,\nder Pokémon beibringt,\lgroße Felsen zu bewegen.\pSprich schnell mit ihm, wenn du\ndiese lästigen Dinger wegräumen willst.
+- offset: '0x1eed7f3'
+  name: English toponym canonicalisation 0x1EED7F3
+  issue: DE — English toponyms
+  expected: Ich habe gehört, dass in {COLOR}ÉTarmigan Town{COLOR}Ç\njemand die Kunst der\l{COLOR}ÉMega-Entwicklung{COLOR}Ç lehrt!
+- offset: '0x1ef3256'
+  name: English toponym canonicalisation 0x1EF3256
+  issue: DE — English toponyms
+  expected: Ich habe mit {COLOR}ÉSilberkronkorken{COLOR}Ç bezahlt,\num das Potenzial der Pokémon zu steigern…\pUnd ich habe einen Wissenschaftler der\n{COLOR}ÉBattle Frontier{COLOR}Ç bezahlt, um das\l{COLOR}ÉWesen{COLOR}Ç meiner Pokémon zu ändern…\pUnd was, wenn ich ihr Wohl-\nergehen und Glück opfere?\pWas zählt, ist, dass sie einen\nKampf gewinnen!
+- offset: '0x1ef382e'
+  name: English toponym canonicalisation 0x1EF382E
+  issue: DE — English toponyms
+  expected: Nieder mit Cube GmbH!\nNieder mit Cube GmbH!\pIch protestiere gegen die Untaten\nder Cube GmbH, besonders die\lWissenschaftsgesellschaft.\pSie experimentieren grausam an\nPokémon, auch an denen,\lum die ich mich kümmere!\pHmm…? Ich hab {COLOR}ÉSchneeschuppen{COLOR}Ë\nan der Kleidung kleben?\pJa… ich füttere eines ihrer\nimportierten Versuchstiere hier\lin Borrius, in der {COLOR}ÉIcicle Cave{COLOR}Ë.\pDen Namen hab ich vergessen…\nein Pokémon aus der\l{COLOR}ÉAlola-Region{COLOR}Ë…\pWie hießen die noch mal?
+- offset: '0x1ef3ef6'
+  name: English toponym canonicalisation 0x1EF3EF6
+  issue: DE — English toponyms
+  expected: Bring diesen {COLOR}ÉMagmastein{COLOR}Ë\nzum {COLOR}ÉCinder Volcano{COLOR}Ë.\pMan sagt, ein seltenes Pokémon erscheint,\nwenn es einen in deinem Cube spürt.
+- offset: '0x1ef5005'
+  name: English toponym canonicalisation 0x1EF5005
+  issue: DE — English toponyms
+  expected: Ah, der Champion geruht, unser\nbescheidenes Hauptquartier zu besuchen.\pEs gibt ein Pokémon, das einem\n{COLOR}ÉRanger{COLOR}Ç in {COLOR}ÉFallshore City{COLOR}Ç anvertraut wurde.\pWenn du fürsorglich genug bist,\nes zu zähmen, zeig es\lmir.
+- offset: '0x1ef94ce'
+  name: English toponym canonicalisation 0x1EF94CE
+  issue: DE — English toponyms
+  expected: Anscheinend hat {STR_VAR_2} keinen\nPlatz mehr, um neue\lAttacken zu erlernen.\pWenn ich nicht die Attacken oben\nauf seiner Liste löschen soll,\ldann lass welche beim\l{COLOR}ÉAttacken-Verlerner{COLOR}Ë in {COLOR}ÉEpidimy Town{COLOR}Ë vergessen.
+- offset: '0x1ef9df9'
+  name: English toponym canonicalisation 0x1EF9DF9
+  issue: DE — English toponyms
+  expected: Ich versuchte, die\n{COLOR}ÉGreat Desert{COLOR}Ç östlich der Stadt zu durchqueren,\laber der Sandsturm war zu stark.\pEr peitschte mir ins Gesicht,\nund ich sah nichts.\pOhne {COLOR}ÉSandbrille{COLOR}Ç zum Schutz\nmeiner Augen kam ich unmöglich\lweiter.\pIch weiß, dass ein Kerl von hier\neine ganze Sammlung hat, aber er ist\lsehr wählerisch, wem er sie\lgibt.
+- offset: '0x1ef9f60'
+  name: English toponym canonicalisation 0x1EF9F60
+  issue: DE — English toponyms
+  expected: Ich versuchte, die\n{COLOR}ÉGreat Desert{COLOR}Ç östlich der Stadt zu durchqueren,\laber der Sandsturm war zu stark.\pEr peitschte mir ins Gesicht,\nund ich sah nichts.\pMit einer Sandbrille wie deiner\nkönnte ich sorglos erkunden !
+- offset: '0x1efbe01'
+  name: English toponym canonicalisation 0x1EFBE01
+  issue: DE — English toponyms
+  expected: Lass mich dir was sagen, junger Mann.\pÖstlich von hier liegt eine gewaltige Wüste, die {COLOR}ÉGreat Desert{COLOR}Ë.\pKaum in Worte zu fassen!\pDoch ohne die richtige Ausrüstung ist sie schwer zu durchqueren, zieh also nicht einfach so los.\pDeine Kleidung ist etwas warm, schützt deinen Körper aber gut.\pFür die Augen empfehl ich eine gute {COLOR}ÉSandbrille{COLOR}Ë.\pIch geb dir sogar meine, wenn du mir zeigst, wie stark du bist, indem du {COLOR}Édie Arena besiegst{COLOR}Ë.
+- offset: '0x1efd8a6'
+  name: English toponym canonicalisation 0x1EFD8A6
+  issue: DE — English toponyms
+  expected: Man könnte meinen, diese Typen da\nunten bleiben den ganzen Tag zu Hause?\pFALSCH!\pIch sehe sie jeden Tag rausgehen!\pSie verbringen Zeit damit, gegen\nTrainer in der {COLOR}ÉBattle Frontier{COLOR}Ç\lbei {COLOR}ÉSeaport City{COLOR}Ç zu kämpfen.
+- offset: '0x1efe42d'
+  name: English toponym canonicalisation 0x1EFE42D
+  issue: DE — English toponyms
+  expected: Um die Effekte von Statuswert-\nBoosts zu kontern, empfehle\lich, Beeren wie die\l{COLOR}ÉGranabeere{COLOR}Ë und {COLOR}ÉSetangbeere{COLOR}Ë zu kaufen.\pSie werden hier nicht verkauft, aber\nich habe gehört, dass Pokémon in den\l{COLOR}ÉHidden Grottos{COLOR}Ë sie manchmal\lnach einem Kampf zurücklassen.
+- offset: '0x1f0090b'
+  name: English toponym canonicalisation 0x1F0090B
+  issue: DE — English toponyms
+  expected: Hast du schon das Dresco Town\n{COLOR}ÉTrainer House{COLOR}Ë besucht?\pEs ist das schwarz-blaue Gebäude im\nSüden der Stadt.\pDort kannst du gegen Trainer\nkämpfen, so oft du willst.\pIch hörte sogar, dass sie mit dir\nzusammen stärker werden können.
+- offset: '0x1f0115c'
+  name: English toponym canonicalisation 0x1F0115C
+  issue: DE — English toponyms
+  expected: Jax,\n\nIch habe deinen Großvater in die\n{COLOR}ÉTiefen{COLOR}Á der {COLOR}ÉRuins of Void{COLOR}Á gebracht.\n\nKomm allein, wenn du ihn\nwiedersehen willst.\n\n-A
+- offset: '0x1f02ffa'
+  name: English toponym canonicalisation 0x1F02FFA
+  issue: DE — English toponyms
+  expected: Das {COLOR}ÉFlower Paradise{COLOR}Ç ist so schön!\pÜberall Blumen in allen\nFarben, und Pokémon\ldarin versteckt!\pDort fing ich mein {COLOR}ÉWommel{COLOR}Ç und\nnutzte {COLOR}ÉLockduft{COLOR}Ç, um\lmeine Attacken in der Arena zu erleichtern!
+- offset: '0x1f04b37'
+  name: English toponym canonicalisation 0x1F04B37
+  issue: DE — English toponyms
+  expected: Ich habe gehört, dass sich unter\n{COLOR}ÉTehl Town{COLOR}Ç, dieser kleinen Stadt\lwestlich von hier, ein\lunderground pass zur {COLOR}ÉRoute 9{COLOR}Ç befindet.\pAber das kann nicht wahr sein…\nAch komm! Wer würde das glauben?
+- offset: '0x1f0c2cc'
+  name: English toponym canonicalisation 0x1F0C2CC
+  issue: DE — English toponyms
+  expected: '{PLAYER},\n\nIch habe deine Mutter in die\n{COLOR}ÉTiefen{COLOR}Á der {COLOR}ÉRuins of Void{COLOR}Á gebracht.\n\nKomm allein, wenn du sie\nwiedersehen willst.\n\n-A'
+- offset: '0x1f0c52e'
+  name: English toponym canonicalisation 0x1F0C52E
+  issue: DE — English toponyms
+  expected: '{PLAYER}! Auf der Durchreise?\pBeeil dich, zur\n{COLOR}ÉPokémon League{COLOR}Ë zu gehen!\pJe schneller du hingehst, desto\nschneller kannst du der neue\lChampion werden!\pGeh {COLOR}Énach Osten{COLOR}Ë von {COLOR}ÉGurun Town{COLOR}Ë\nentlang der {COLOR}ÉRoute 18{COLOR}Ë, um dorthin zu gelangen.'
+- offset: '0x1f21c8f'
+  name: English toponym canonicalisation 0x1F21C8F
+  issue: DE — English toponyms
+  expected: Nutze {COLOR}ÉZerschneider{COLOR}Ë, um diesen\nBaum zu entfernen, der die {COLOR}ÉValley Cave{COLOR}Ë blockiert.\pGeh dann nach {COLOR}ÉBlizzard City{COLOR}Ë, um\n{COLOR}ÉZertrümmerer{COLOR}Ë von meinem Freund zu bekommen.\pViel Glück bei deiner Suche !
+- offset: '0x1f21db2'
+  name: English toponym canonicalisation 0x1F21DB2
+  issue: DE — English toponyms
+  expected: Hoooo weeee !\pDu hast dir einen Durchgang\ngeöffnet.\pGeh weiter nach {COLOR}ÉOsten{COLOR}Ë, bis\ndu den {COLOR}ÉThundercap Mt.{COLOR}Ë erreichst
+- offset: '0x1f23bad'
+  name: English toponym canonicalisation 0x1F23BAD
+  issue: DE — English toponyms
+  expected: Geh zu meinem Freund in {COLOR}ÉDresco Town{COLOR}Ë, {PLAYER}.\pIch verlasse mich auf dich.
+- offset: '0x1f23bf3'
+  name: English toponym canonicalisation 0x1F23BF3
+  issue: DE — English toponyms
+  expected: '{PLAYER}, beeil dich und geh\nzum {COLOR}ÉThundercap Mt.{COLOR}Ë!\pWenn die Schatten vor dir ankommen,\nist Borrius verloren!\pIm Norden, nimm schnell den {COLOR}ÉKBT Expressway{COLOR}Ë ganz nach Süden.'
+- offset: '0x1f2657d'
+  name: English toponym canonicalisation 0x1F2657D
+  issue: DE — English toponyms
+  expected: Wenn das Fell meines Coiffwaff\nganz verfilzt ist, frage ich\lFurfrité,\nes ihm im {COLOR}ÉMagnolia Cafe{COLOR}Ë zu stutzen.\pLass mich dir sagen!\pDiese Frau ist so mysteriös!\pSie\nkommt und geht, wann sie will.
+- offset: '0x1f28d8b'
+  name: English toponym canonicalisation 0x1F28D8B
+  issue: DE — English toponyms
+  expected: Falls du jemals einen starken Partner\nfür eine Hidden Grotto suchst, sind mein\lBisaflor und ich eine ausgezeichnete\lWahl.
+- offset: '0x1f2ecd5'
+  name: English toponym canonicalisation 0x1F2ECD5
+  issue: DE — English toponyms
+  expected: Ah, ja, {PLAYER}. Du wirkst fähig…{PAUSE} du solltest mir helfen!\pDein Vater war fürs Helfen bekannt, das passt gut.\pEs gibt ein Paket in {COLOR}ÉBellin Town{COLOR}Ë, im {COLOR}ÉPoké Mart{COLOR}Ë.\pIch würde es selbst holen, aber meine Assistenten und ich sind zu sehr mit der Forschung beschäftigt…\pDer Verkäufer weiß, dass jemand es für mich abholt.\pMit deinem Pokémon sollte das einfach sein! Dieses Repel erleichtert dir die Reise.
+- offset: '0x1f2fb19'
+  name: English toponym canonicalisation 0x1F2FB19
+  issue: DE — English toponyms
+  expected: Gut, Rüpel.\pFür unsere nächste Operation gehen\nwir zum {COLOR}ÉCinder Volcano{COLOR}Ë, und\lIvory soll sein Ziel bekommen.
+- offset: '0x1f2fe44'
+  name: English toponym canonicalisation 0x1F2FE44
+  issue: DE — English toponyms
+  expected: Ausgezeichnet. Die Macht von Borrius wurde vor langer Zeit versiegelt.\pMan sagt, werden die drei legendären Pokémon, die sie versiegelten, bei {COLOR}ÉRuins of Void{COLOR}Ë wieder vereint, wird sie frei.\pGenau das suchen wohl die Schurken, um Borrius wieder in Dunkelheit zu stürzen.\pStimmt das, ist ihr nächstes Ziel sicher…
+- offset: '0x1f30020'
+  name: English toponym canonicalisation 0x1F30020
+  issue: DE — English toponyms
+  expected: Ich habe gerade gesehen, wie diese Typen in Schwarz\nsich zum\l{COLOR}ÉCinder Volcano{COLOR}Ë bewegt haben!
+- offset: '0x1f30933'
+  name: English toponym canonicalisation 0x1F30933
+  issue: DE — English toponyms
+  expected: Wir haben keine Zeit mehr, {PLAYER}.\pDu musst schnell zum {COLOR}ÉThundercap Mt.{COLOR}Ë und {COLOR}ÉZapdos{COLOR}Ë retten!\pWenn er auch gefangen wird, sind wir\nalle verloren…
+- offset: '0x1f309be'
+  name: English toponym canonicalisation 0x1F309BE
+  issue: DE — English toponyms
+  expected: Jax hat mir die Neuigkeiten erzählt.\pGute Arbeit, dass du\nZapdos gerettet hast, {PLAYER}!\pJetzt müssen nur noch Lavados und\nArktos aus den Händen der\lSchatten zurückgeholt werden.\pJax ist in {COLOR}ÉDehara City{COLOR}Ë,\nund wartet, um über die nächsten Schritte zu sprechen.
+- offset: '0x1f30b8f'
+  name: English toponym canonicalisation 0x1F30B8F
+  issue: DE — English toponyms
+  expected: Jetzt, wo wieder Frieden\nherrscht, warum versuchst du dich nicht an der\l{COLOR}ÉPokémon League{COLOR}Ë?\pIch bin sicher, dass jemand mit deinem\nKönnen Meister werden könnte.
+- offset: '0x1f31f9f'
+  name: English toponym canonicalisation 0x1F31F9F
+  issue: DE — English toponyms
+  expected: Zapdos…\pEr lebt am {COLOR}ÉThundercap Mt.{COLOR}Ë, oder?\pIch breche sofort auf.
+- offset: '0x1f32141'
+  name: English toponym canonicalisation 0x1F32141
+  issue: DE — English toponyms
+  expected: Gut, gut.\pUnterdessen rettet {PLAYER} {COLOR}ÉZapdos{COLOR}Ë am {COLOR}ÉThundercap Mt.{COLOR}Ë.\p{PLAYER}…{PAUSE} du hast dich bei Jax im Cinder Volcano bewährt, du bist bereit.\pDu erreichst ihn über die Autobahn südöstlich von {COLOR}ÉCrater Town{COLOR}Ë.\pDu brauchst dort den Orden für {COLOR}ÉThundercap Mt.{COLOR}Ë – oberste Priorität.
+- offset: '0x1f336c0'
+  name: English toponym canonicalisation 0x1F336C0
+  issue: DE — English toponyms
+  expected: Hmm…\pUm eine stabile Barriere zu errichten,\nmüsste ich zum Gipfel\ldes {COLOR}ÉFrost Mountain{COLOR}Ç gehen…
+- offset: '0x1f3463c'
+  name: English toponym canonicalisation 0x1F3463C
+  issue: DE — English toponyms
+  expected: Danke, {PLAYER}.\nIch weiß das wirklich zu schätzen.\pIch werde versuchen, einen Zugang zur\n{COLOR}ÉRoute 9{COLOR}Ë von {COLOR}ÉTehl Town{COLOR}Ë aus zu finden.\pDu solltest wahrscheinlich etwas\nÄhnliches versuchen.
+- offset: '0x1f346d6'
+  name: English toponym canonicalisation 0x1F346D6
+  issue: DE — English toponyms
+  expected: Oh!\pDu wirst die {COLOR}ÉRoute 10{COLOR}Ë nehmen müssen,\num nach {COLOR}ÉTehl Town{COLOR}Ë zu gelangen, also\lsollte dir das helfen, schnell dorthin zu kommen.
+- offset: '0x1f358ce'
+  name: English toponym canonicalisation 0x1F358CE
+  issue: DE — English toponyms
+  expected: Wenn sie das Siegel\nauf dem Stein brechen wollen, gehen sie\lzu den {COLOR}ÉRuins of Void{COLOR}Ë.\pNur dort kann man\ndie darin enthaltene Flasche erhalten.
+- offset: '0x1f3595f'
+  name: English toponym canonicalisation 0x1F3595F
+  issue: DE — English toponyms
+  expected: Die {COLOR}ÉRuins of Void{COLOR}Ë, hat er gesagt…\p{PLAYER}, ich gehe zurück, um Opa über\ndas Geschehene zu informieren.\pIn der Zwischenzeit solltest du zum\n{COLOR}ÉThundercap Mt.{COLOR}Ë gehen.\pSolange sie Zapdos nicht haben,\nkönnen wir sie aufhalten!\pOh ja…{PAUSE} da du die Attacke\n{COLOR}ÉStärke{COLOR}Ë für den Bergpfad brauchst…\pGeh zurück nach {COLOR}ÉFallshore City{COLOR}Ë\nund hol den Arenaorden.\pDen Arenaleiter sah ich zuletzt\nin {COLOR}ÉTehl Town{COLOR}Ë.\pSobald Zapdos gerettet ist, treffe\nich dich in {COLOR}ÉÉpidia{COLOR}Ë.
+- offset: '0x1f35db2'
+  name: English toponym canonicalisation 0x1F35DB2
+  issue: DE — English toponyms
+  expected: Tut mir leid, ich bin Mel, der\nArenaleiter von {COLOR}ÉFallshore City{COLOR}Ë.\pTut mir leid, dass ich nicht da war,\naber naja…{PAUSE} mein Training wartet\lauf niemanden.\pStressig, aber den Mädels in der\nArena macht's nichts…\pIch bin für heute fast fertig, ich hab\nZeit, wenn du kämpfen willst.\pBis bald, Partner.
+- offset: '0x1f35f2d'
+  name: English toponym canonicalisation 0x1F35F2D
+  issue: DE — English toponyms
+  expected: Kurz bevor du hier ankamst, hörte ich,\ndass Gauner die Leute davon abhalten,\ldas alte {COLOR}ÉThundercap Mt.{COLOR}Ë von\l{COLOR}ÉÉpidia{COLOR}Ë aus zu erkunden.\pIch wollte bei diesen Gesetzlosen für\nOrdnung sorgen.\pWeil ich Stil habe, tue ich auch Gutes.\pUnd ich tue es mit Stil!\pEiner von ihnen sagte, sie bewachen\nden Berg, um dich fernzuhalten.\pEr hat sogar deinen Namen erwähnt.\pIch weiß nicht genau, in was für einen\nSchlamassel du steckst, aber ich helfe\ldir dabei.\pAlso nimm das und flieg schneller\nnach Épidia.
+- offset: '0x1f372c3'
+  name: English toponym canonicalisation 0x1F372C3
+  issue: DE — English toponyms
+  expected: Lass uns nicht zu lange\npausieren.\pDie Schatten lauern noch da draußen\nund haben immer noch Lavados und\lArktos.\pZum Glück habe ich mit Papy geredet\nund glaube, ich weiß, wie wir sie\lzurückholen.\pSobald du mit der {COLOR}ÉTarmigan Mansion{COLOR}Ë fertig bist, geh nach\l{COLOR}ÉNorden{COLOR}Ë zur {COLOR}ÉRoute 12{COLOR}Ë.\pIch treffe dich in {COLOR}ÉDehara City{COLOR}Ë.\pDort besprechen wir den Plan, um sie\nvor den Schatten zu retten.\pAlso gut, bis bald!
+- offset: '0x1f3e84e'
+  name: English toponym canonicalisation 0x1F3E84E
+  issue: DE — English toponyms
+  expected: 'Ich bin dankbar. Aber diese Aufgabe{PAUSE} muss ich allein erledigen.\pIch brauche Zephs Hilfe, um die neue Basis des Lichts des Verderbens zu finden.\pFolgtest du mir zu unserer Basis in {COLOR}ÉFrozen Heights{COLOR}Ë, würde Zeph nie helfen.\pAlso bitte, {PLAYER}: Bleib uns fern.'
+- offset: '0x1f419e6'
+  name: English toponym canonicalisation 0x1F419E6
+  issue: DE — English toponyms
+  expected: Hast du etwas, um über Wasser zu kommen, die\nVM Surfer? Wenn du sie nicht\pbenutzen kannst, solltest du zuerst\nden Arenaorden von {COLOR}ÉDehara City{COLOR}Ë holen, bevor du dich uns anschließt.\lWir müssen {COLOR}ÉVivill Town{COLOR}Ë\pso schnell wie möglich erreichen, also beeil dich.\nDas ist {COLOR}Énordöstlich{COLOR}Ë von {COLOR}ÉDehara City{COLOR}Ë, wenn du\nbereit bist.
+- offset: '0x1f425c7'
+  name: English toponym canonicalisation 0x1F425C7
+  issue: DE — English toponyms
+  expected: '{PLAYER}, da das offiziell\ndeine «Mission» ist, werde ich\ldich in {COLOR}ÉVivill Town{COLOR}Ë erwarten. Und für\pdich werde ich sogar nett zu den\nSchatten sein, bis wir fertig sind.\lSei nicht zu spät,\p{PLAYER}.'
+- offset: '0x1f4dcbf'
+  name: English toponym canonicalisation 0x1F4DCBF
+  issue: DE — English toponyms
+  expected: Nur Frontier
+- offset: '0x1f57497'
+  name: English toponym canonicalisation 0x1F57497
+  issue: DE — English toponyms
+  expected: Hidden Grotto gefunden in einem Hidden Grotto,\nnach Kraxler in der Nähe des Eingangs\ndes Flower Paradise.
+- offset: '0x1f5755d'
+  name: English toponym canonicalisation 0x1F5755D
+  issue: DE — English toponyms
+  expected: Hidden Grotto gefunden in einem Hidden Grotto,\nnach Zerschneider südlich der\nRoute.
+- offset: '0x1f575b8'
+  name: English toponym canonicalisation 0x1F575B8
+  issue: DE — English toponyms
+  expected: Hidden Grotto gefunden in einem Hidden Grotto,\nnach der Brücke östlich der\nRoute.
+- offset: '0x1f5761c'
+  name: English toponym canonicalisation 0x1F5761C
+  issue: DE — English toponyms
+  expected: Hidden Grotto gefunden in einem Hidden Grotto,\nauf der Route, die Route 7\nmit Route 6 verbindet.
+- offset: '0x1f57675'
+  name: English toponym canonicalisation 0x1F57675
+  issue: DE — English toponyms
+  expected: Hidden Grotto gefunden in einem Hidden Grotto,\nnach Zertrümmerer in der Mitte der\nRoute.
+- offset: '0x1f576d3'
+  name: English toponym canonicalisation 0x1F576D3
+  issue: DE — English toponyms
+  expected: Hidden Grotto gefunden in einem Hidden Grotto,\nauf der Westseite des\nSees.
+- offset: '0x1f57777'
+  name: English toponym canonicalisation 0x1F57777
+  issue: DE — English toponyms
+  expected: Hidden Grotto gefunden in einem Hidden Grotto,\nnach Surfer in der Nähe des Eingangs der\nCliff Cave.
+- offset: '0x1f577d2'
+  name: English toponym canonicalisation 0x1F577D2
+  issue: DE — English toponyms
+  expected: Hidden Grotto gefunden in einem Hidden Grotto,\nin der Nähe des geheimen Ausgangs des Anwesens\nim Erdgeschoss.
+- offset: '0x1f57826'
+  name: English toponym canonicalisation 0x1F57826
+  issue: DE — English toponyms
+  expected: Hidden Grotto gefunden in einem Hidden Grotto,\nauf der Westseite der Route\nin der Nähe des Bergsteigers.
+- offset: '0x1f579e4'
+  name: English toponym canonicalisation 0x1F579E4
+  issue: DE — English toponyms
+  expected: Hidden Grotto gefunden in einem Hidden Grotto,\nnach der Brücke und\nZerschneider.
+- offset: '0x1f57a95'
+  name: English toponym canonicalisation 0x1F57A95
+  issue: DE — English toponyms
+  expected: Hidden Grotto gefunden in einem Hidden Grotto,\nauf der südlichen Hälfte der Ostseite\nder Route.
+- offset: '0x1f57af4'
+  name: English toponym canonicalisation 0x1F57AF4
+  issue: DE — English toponyms
+  expected: Hidden Grotto gefunden in einem Hidden Grotto,\nneben dem Schild nördlich des\nPokémon Center.
+- offset: '0x1f57b53'
+  name: English toponym canonicalisation 0x1F57B53
+  issue: DE — English toponyms
+  expected: Hidden Grotto gefunden in einem Hidden Grotto,\nnach Surfer ostwärts von den\nAnlegestellen.
+- offset: '0x1f5bd05'
+  name: English toponym canonicalisation 0x1F5BD05
+  issue: DE — English toponyms
+  expected: Cliff Cave
+- offset: '0x1f6421a'
+  name: English toponym canonicalisation 0x1F6421A
+  issue: DE — English toponyms
+  expected: Ich suche nach Hidden Grottos.\nHast du welche gesehen?
+- offset: '0x1f69525'
+  name: English toponym canonicalisation 0x1F69525
+  issue: DE — English toponyms
+  expected: Na, alter Knochen?\pIch komme direkt aus\n{COLOR}ÉMagnolia Town{COLOR}Ç im Osten von Borrius,\lum diese {COLOR}ÉBattle Frontier{COLOR}Ç zu sehen!\pMan kann hier stundenlang\nununterbrochen kämpfen!
+- offset: '0x1f69e6c'
+  name: English toponym canonicalisation 0x1F69E6C
+  issue: DE — English toponyms
+  expected: Holla!\pWenn du Kurs auf {COLOR}ÉPolder Town{COLOR}Ë nehmen willst, brauchst du ein {COLOR}ÉS.S.-Ticket{COLOR}Ë.
+- offset: '0x1f6e4bb'
+  name: English toponym canonicalisation 0x1F6E4BB
+  issue: DE — English toponyms
+  expected: Ich plane, das\n{COLOR}ÉTomb of Borrius{COLOR}Ë zu erkunden.\pMan sagt, dass Reichtümer auf\ndiejenigen warten, die mutig genug sind,\lin seine Tiefen hinabzusteigen.
+- offset: '0x1f74189'
+  name: English toponym canonicalisation 0x1F74189
+  issue: DE — English toponyms
+  expected: Trainertipps!\pDunkle Flecken im Meer\nzeigen an, dass ein Pokémon\ptauchen kann! Hast du ein\n{COLOR}ÉADM{COLOR}Á bei der {COLOR}ÉWerft von Kapitän\lDavy{COLOR}Á in {COLOR}ÉSeaport City{COLOR}Á gekauft,\pdrück {SE_SHOP} auf dem\nFleck, um zu tauchen. Unter\lWasser eine helle Stelle?\n{B_BUTTON}, um aufzutauchen.
+- offset: '0x1f747e7'
+  name: English toponym canonicalisation 0x1F747E7
+  issue: DE — English toponyms
+  expected: Trainertipps!\p{SE_SHOP} am Baum links vom Schild,\num ein Hidden Grotto zu betreten!
+- offset: '0x1f79fff'
+  name: English toponym canonicalisation 0x1F79FFF
+  issue: DE — English toponyms
+  expected: Beeren wie die {COLOR}ÉFeuerbeere{COLOR}Ë und\ndie {COLOR}ÉWasserbeere{COLOR}Ë verringern den Schaden,\lden Pokémon durch {COLOR}Ésuper effektive{COLOR}Ë\lAttacken erleiden.\pWie alle Beeren werden sie im normalen\nKampf nur {COLOR}Éeinmal verwendet{COLOR}Ë.\pAber in den {COLOR}ÉHidden Grottos{COLOR}Ë\nfindet man sie\loft nach Kämpfen…
+- offset: '0x1f7cf76'
+  name: English toponym canonicalisation 0x1F7CF76
+  issue: DE — English toponyms
+  expected: Mal sehen…\pOh oh! Du hast erst {COLOR}É{STR_VAR_3}{COLOR}Ç Pokémon-Spezies\ngefangen!\pDu brauchst {COLOR}É{STR_VAR_1}{COLOR}Ç.\pHast du den {COLOR}ÉDexNav{COLOR}Ç von {COLOR}ÉNat Log{COLOR}Ç\nin {COLOR}ÉBlizzard City{COLOR}Ç bekommen?\pDas ist ein praktisches Werkzeug, um\nneue Spezies zu finden.
+- offset: '0x1f82262'
+  name: English toponym canonicalisation 0x1F82262
+  issue: DE — English toponyms
+  expected: Der R-Tasten-Modus ist auf\nMinen-Analyse eingestellt.\pAuf dem {COLOR}ÉKBT Expressway{COLOR}Á, im\n{COLOR}ÉSeitenraum{COLOR}Á von {COLOR}ÉCrystal Peak 1F{COLOR}Á, oder\l{COLOR}Éunter Wasser{COLOR}Á, drück {R_BUTTON}, um\nnach versteckten Objekten\lzu suchen.\pWenn ein Schimmer an der Wand erscheint,\ndrück {SE_SHOP}, um dort zu graben.{PAUSE_UNTIL_PRESS}
+- offset: '0x1f9337d'
+  name: English toponym canonicalisation 0x1F9337D
+  issue: DE — English toponyms
+  expected: '{COLOR}ÇWillkommen in der {COLOR}ÉBattle Frontier{COLOR}Ç!\pDies ist ein Bereich, der\nausschließlich für Kämpfe gedacht ist.\pUm hier kämpfen zu\ndürfen, brauchst du das hier.'
+- offset: '0x1f93c43'
+  name: English toponym canonicalisation 0x1F93C43
+  issue: DE — English toponyms
+  expected: Frontier erklären
+- offset: '0x1f987b1'
+  name: English toponym canonicalisation 0x1F987B1
+  issue: DE — English toponyms
+  expected: Ich bin hier so etwas wie eine\nKampf-Expertin.\pWenn du heute insgesamt {COLOR}É{STR_VAR_1}{COLOR}Ç\nKämpfe im {COLOR}ÉBattle Tower{COLOR}Ç, in der\l{COLOR}ÉBattle Mine{COLOR}Ç und im {COLOR}ÉBattle Circus{COLOR}Ç\lzusammen gewinnst, gebe ich dir\lBP für deine Mühe.
+- offset: '0x1f989b4'
+  name: English toponym canonicalisation 0x1F989B4
+  issue: DE — English toponyms
+  expected: Mir ist ein zwielichtiger Typ aufgefallen, der\nspät abends vor dem {COLOR}ÉBattle Tower{COLOR}Ë\lherumlungert.\pAngeblich bietet er tolle\nAngebote an, bevor er dich abzockt.\pAn deiner Stelle wäre ich vorsichtig.
+- offset: '0x1f98a6b'
+  name: English toponym canonicalisation 0x1F98A6B
+  issue: DE — English toponyms
+  expected: Ich liebe den {COLOR}ÉBattle Sands{COLOR}Ç!\pAnderen dabei zuzusehen, wie sie mit deinen\nLieblings-Pokémon kämpfen, macht so viel Spaß!\pGanz zu schweigen davon, dass es sehr\neinfach ist, BP zu verdienen.\pKeine andere Kampfeinrichtung\nwäre mein Lieblingsort.
+- offset: '0x1f98b4d'
+  name: English toponym canonicalisation 0x1F98B4D
+  issue: DE — English toponyms
+  expected: Der {COLOR}ÉBattle Circus{COLOR}Ë!\pSo viel Spaß!\pWas passiert wohl als Nächstes?\pWarte es ab!
+- offset: '0x1f98b99'
+  name: English toponym canonicalisation 0x1F98B99
+  issue: DE — English toponyms
+  expected: Manche Händler wechseln\nregelmäßig im Laufe des Tages.\pWenn du einkaufen willst, bleib\nso viel wie möglich draußen,\lum einzukaufen.\pIch finde, der {COLOR}ÉBattle Sands{COLOR}Ë ist\neine gute Möglichkeit, die Zeit zu überbrücken.
+- offset: '0x1f9d1c3'
+  name: English toponym canonicalisation 0x1F9D1C3
+  issue: DE — English toponyms
+  expected: Bitte bring mich nach\n{COLOR}ÉBlizzard City{COLOR}Ë. Ich werde dir\pdorthin folgen.
+- offset: '0x1f9fc8c'
+  name: English toponym canonicalisation 0x1F9FC8C
+  issue: DE — English toponyms
+  expected: '{PLAYER}, mein {STR_VAR_1}! Ich hab\peine Lieferung von äh…{PAUSE}\nRosenweihrauch, die eines dieser\lAbende im {COLOR}ÉAntisis Port{COLOR}Ë\pankommt. Aber es ist zu\nschwer, sie alleine aus dem\pHafen zu schmuggeln. Da kommst\pdu ins Spiel. Du triffst mich\nan den Docks, nimmst die Lieferung\lund bringst sie zur\pBasis. Capisce?'
+- offset: '0x1fa3ecd'
+  name: English toponym canonicalisation 0x1FA3ECD
+  issue: DE — English toponyms
+  expected: Diese Wissenschaftlerin sagte, wir brauchen\nden {COLOR}ÉMondflügel{COLOR}Ë von der\l{COLOR}ÉFullmoon Island{COLOR}Ë,\pum meinen Sohn zu heilen. Würdet ihr zur\n{COLOR}ÉFullmoon Island{COLOR}Ë gehen,\pfür mich? Wenn nicht für mich, dann für meinen Sohn?
+- offset: '0x1fac222'
+  name: English toponym canonicalisation 0x1FAC222
+  issue: DE — English toponyms
+  expected: Meine Güte! Meine Tochter! Sie ist\nzur {COLOR}ÉRift Cave{COLOR}Ë gerannt! Ich hab ihr\pimmer und immer wieder gesagt, sie soll\nsich von diesem gefährlichen Ort fernhalten, aber\lsie hört mir nie zu! Bitte,\pMeister! Bring sie nach\nHause zurück!
+- offset: '0x1fac2e6'
+  name: English toponym canonicalisation 0x1FAC2E6
+  issue: DE — English toponyms
+  expected: Danke, Meister! Sei sehr\pvorsichtig bei der Suche… Die\n{COLOR}ÉRift Cave{COLOR}Ë ist\pdafür bekannt, nicht immer den\nGesetzen unserer Welt zu gehorchen…
+- offset: '0x1fac3ab'
+  name: English toponym canonicalisation 0x1FAC3AB
+  issue: DE — English toponyms
+  expected: Sei sehr vorsichtig bei der Suche nach\nmeiner Tochter in der {COLOR}ÉRift Cave{COLOR}Ë. Sie ist dafür bekannt,\nnicht immer den natürlichen Gesetzen unserer Welt zu gehorchen…
+- offset: '0x1fad067'
+  name: English toponym canonicalisation 0x1FAD067
+  issue: DE — English toponyms
+  expected: '{COLOR}ÇEpidimy Town, sagt ihr…\pDann muss ich dorthin… für das\nWohl der Wissenschaftsgesellschaft…'
+- offset: '0x1fad2a1'
+  name: English toponym canonicalisation 0x1FAD2A1
+  issue: DE — English toponyms
+  expected: Ob ich eine Ahnung habe, wo\nElevoltek sein könnte?\pIch hab gehört, wie diese Wissenschaftlerin\netwas davon sagte, nach {COLOR}ÉSeaport City{COLOR}Ë zu gehen, um Experimente durchzuführen…\pAber das ist alles, was ich sagen kann.
+- offset: '0x1fae1ff'
+  name: English toponym canonicalisation 0x1FAE1FF
+  issue: DE — English toponyms
+  expected: Ahaha, ich wusste, dass ich mich auf dich\nverlassen konnte!\pMan sagt, die Pokémon wurden\nrund um die {COLOR}ÉVictory Road{COLOR}Ë gesichtet.
+- offset: '0x1fae28d'
+  name: English toponym canonicalisation 0x1FAE28D
+  issue: DE — English toponyms
+  expected: Fang die Schwertkrieger und bring\nsie hierher!\pSie wurden bei der\n{COLOR}ÉVictory Road{COLOR}Ë gesichtet.\pSie fürchten Menschen und fühlen\nsich nur zusammen sicher.\pBesiegst du eines aus Versehen,\nkeine Sorge!\pWie die meisten legendären Pokémon\ntauchen sie wieder auf, wenn du\lerneut das Pantheon betrittst.
+- offset: '0x1faeae2'
+  name: English toponym canonicalisation 0x1FAEAE2
+  issue: DE — English toponyms
+  expected: Ah, gut, gut.\pBorrius' Kriminalität betrifft vor allem die\nBanden, die einst in {COLOR}ÉAntisis City{COLOR}Ë\leingesperrt waren.\pKürzlich verließ die Bande mit den meisten\nGebieten dort, „Terror Granbull“, ihre Basis.\pZudem versammeln sich Mitglieder und machen\nandernorts Ärger.\pUnsere Polizei ist zu dünn verteilt; wir\nbrauchen einen starken Trainer wie Sie, um\ldiese Ganoven einzusammeln.
+- offset: '0x19073f'
+  name: English toponym canonicalisation 0x19073F
+  issue: DE — English toponyms
+  expected: Manche Gegenstände gibt es nur,\num verkauft zu werden.\pWenn du einen dieser Gegenstände\nbekommst, solltest du ihn sofort verkaufen.\pIch habe sogar gehört, dass Sammler\ndiese Gegenstände noch teurer kaufen\lwürden als in\lden Poké Mart.
+- offset: '0x192a79'
+  name: English toponym canonicalisation 0x192A79
+  issue: DE — English toponyms
+  expected: Versuche, so viele Arenen wie\nmöglich zu besiegen.\pDie Poké Mart verkaufen mehr\nGegenstände, wenn du mehr Orden hast.
+- offset: '0x1bfbe9'
+  name: English toponym canonicalisation 0x1BFBE9
+  issue: DE — English toponyms
+  expected: Möchtet ihr den Safari Zone jetzt verlassen?
+- offset: '0x3d90d7'
+  name: English toponym canonicalisation 0x3D90D7
+  issue: DE — English toponyms
+  expected: Schlüssel, der die elektrische\nBarriere von Team Shadow am\nThundercap Mt. ausschaltet.
+- offset: '0x3ef183'
+  name: English toponym canonicalisation 0x3EF183
+  issue: DE — English toponyms
+  expected: Autl Woods
+- offset: '0x41b25b'
+  name: English toponym canonicalisation 0x41B25B
+  issue: DE — English toponyms
+  expected: VICTORY ROAD
+- offset: '0x74bb9b'
+  name: English toponym canonicalisation 0x74BB9B
+  issue: DE — English toponyms
+  expected: Ich komme gerade erst aus der\nIcicle Cave, aber ich habe noch
+- offset: '0x74bc3b'
+  name: English toponym canonicalisation 0x74BC3B
+  issue: DE — English toponyms
+  expected: Kommst du aus der Icicle Cave?\nKann ich ein Quiekel haben?
+- offset: '0x75b4bb'
+  name: English toponym canonicalisation 0x75B4BB
+  issue: DE — English toponyms
+  expected: 9Sei vorsichtig in der Great Desert
+- offset: '0x788429'
+  name: English toponym canonicalisation 0x788429
+  issue: DE — English toponyms
+  expected: Jetzt, wo der Eingang zur\nSES Expressway frei ist, können\pReisende sich den\nAufstieg sparen, wenn sie hier durchgehen!
+- offset: '0x78d322'
+  name: English toponym canonicalisation 0x78D322
+  issue: DE — English toponyms
+  expected: Das Haus zu meiner Linken ist als\ndas Trainer House bekannt.\pDu kannst die Trainer darin\nso oft herausfordern, wie du willst.\pDas ist perfekt, um deine\nPokémon zu trainieren, wenn du\ldie Arena versuchen willst.
+- offset: '0x7944d4'
+  name: English toponym canonicalisation 0x7944D4
+  issue: DE — English toponyms
+  expected: 'Ivory: {COLOR}ÇHmm…\pUm eine solide Barriere zu\nerrichten, muss ich zum Gipfel\ldes Frost Mountain…'
+- offset: '0x7a4390'
+  name: English toponym canonicalisation 0x7A4390
+  issue: DE — English toponyms
+  expected: Man sagt, es gibt versteckte\nItems im {COLOR}ÉUnderground Pass{COLOR}Ë!
+- offset: '0x7a9ea3'
+  name: English toponym canonicalisation 0x7A9EA3
+  issue: DE — English toponyms
+  expected: '<0xFC><0x01><0x04>Seltsamerweise ist der Eingang\ndes SES Expressway komplett\lzugefroren.\pAls Arenaleiter dieser Stadt ist es\nmeine Pflicht zu handeln.\pSchau: Mit der Attacke\nSteinhieb zerschlage ich dieses Eis!'
+- offset: '0x7b45a3'
+  name: English toponym canonicalisation 0x7B45A3
+  issue: DE — English toponyms
+  expected: Trainer House, beliebig oft\nkämpfen!
+- offset: '0x7ba4c4'
+  name: English toponym canonicalisation 0x7BA4C4
+  issue: DE — English toponyms
+  expected: '??? : <0xFC><0x01><0x08>Marlon, schick jemanden los,\num die Wochenvorräte\lvom Poké Mart zu holen.\pEr soll auch ein Sonderpaket\nabholen, das heute ankommt.\pDas ist entscheidend für unsere\nOperation zum Fang von Exemplar UNO.'
+- offset: '0x7c6e34'
+  name: English toponym canonicalisation 0x7C6E34
+  issue: DE — English toponyms
+  expected: M <0x0F> <0x51><0x6E><0x7C><0x08><0x09><0x06>à<0x0C><0x80><0x02> ó<0x11><0x87>À<0x08>à<0x9F><0x50><0x01> <0x25>  <0x02>Hier!\nDer Lost Tunnel…\pEs ist ziemlich feucht hier…\nUnd wirklich dunkel.\pIch glaube nicht mal, dass ein\nPokémon das beleuchten könnte.\pNa gut, gehen wir besser!\pEs gibt irgendwo hier eine Leiter.\pIch heile dich nach jedem\nKampf.
+- offset: '0x7c89e2'
+  name: English toponym canonicalisation 0x7C89E2
+  issue: DE — English toponyms
+  expected: Bist du hergekommen, um die\nMacht der {COLOR}ÉMega-Entwicklung{COLOR}Ë vom\l{COLOR}ÉTarmigan Mansion{COLOR}Ë zu erlangen?\pDie meisten Leute kommen deswegen.\pAbgesehen davon bietet diese Stadt\nnur schreckliche Albträume.
+- offset: '0x7d0133'
+  name: English toponym canonicalisation 0x7D0133
+  issue: DE — English toponyms
+  expected: 'Looker: {COLOR}ËAh, {PLAYER}, dich sah\nich gar nicht.\pIch wollte nur diesen Automaten\nknacken.\pKanto hat auch so eine Game Corner –\nnur war sie eine Tarnung für Team\lRocket…\pDanke fürs Kommen. Gehen wir raus,\nwo es ruhiger ist.'
+- offset: '0x7e5c7c'
+  name: English toponym canonicalisation 0x7E5C7C
+  issue: DE — English toponyms
+  expected: Man sagt, dass die hässlichsten\nim Poké Mart einkaufen.\pEs heißt sogar, dass eine Website\nsie alle auflistet.
+- offset: '0x7e7677'
+  name: English toponym canonicalisation 0x7E7677
+  issue: DE — English toponyms
+  expected: Man erzählt, dass manche nie\naus der Rift Cave zurückkehren.\pEs heißt sogar, dass ganze Gruppen\nnie wieder\lgesehen wurden.
+- offset: '0x7e7b78'
+  name: English toponym canonicalisation 0x7E7B78
+  issue: DE — English toponyms
+  expected: Es sieht so aus, als hättest du\nkeine Gelben Scherben.\pMan findet sie manchmal in der\nGreat Desert.\pWenn du mit welchen zurückkommst,\nbringe ich deinen Pokémon eine\lAttacke bei.
+- offset: '0x7e88d7'
+  name: English toponym canonicalisation 0x7E88D7
+  issue: DE — English toponyms
+  expected: 'Ich habe Jahre damit verbracht,\ndas Geheimnis der Regi-Pokémon zu\lsuchen!\pKürzlich habe ich Fortschritte\ngemacht: Regirock muss in dieser\lseltsamen Felsformation in der\lGreat Desert leben.\pWenn wir es doch nur\nbefreien könnten…'
+- offset: '0x7e89c1'
+  name: English toponym canonicalisation 0x7E89C1
+  issue: DE — English toponyms
+  expected: Das ist eine Statue des legendären\nGesteins-Pokémon Regirock.\pEs steht geschrieben, dass Regirock\neinst Regigigas half, die Region\lBorrius zu formen und\lzusammenzusetzen.\pEs lebt jetzt irgendwo in der\nGreat Desert.
+- offset: '0x7f7cd9'
+  name: English toponym canonicalisation 0x7F7CD9
+  issue: DE — English toponyms
+  expected: 'Jax : {COLOR}ËBeladonis hat mir alles\nerzählt. Es ist einiges passiert,\lseit ich in die Distortion World\ngeschickt wurde…\pIch war nur ein paar Stunden dort,\nals du ankamst, aber in der\lwirklichen Welt war viel mehr\lZeit vergangen.'
+- offset: '0x7f981f'
+  name: English toponym canonicalisation 0x7F981F
+  issue: DE — English toponyms
+  expected: Steig in die Kanalisation und hol\nmeine Socken.\pDer Haupteingang ist in der Nähe\ndes SES Expressway.
+- offset: '0xa4c562'
+  name: English toponym canonicalisation 0xA4C562
+  issue: DE — English toponyms
+  expected: '{RIVAL} aus der Distortion World\nerscheint!\p'
+- offset: '0xa4e930'
+  name: English toponym canonicalisation 0xA4E930
+  issue: DE — English toponyms
+  expected: Die Macht der Hidden Grottos !\nSie gehorcht mir !\p
+- offset: '0xb50350'
+  name: English toponym canonicalisation 0xB50350
+  issue: DE — English toponyms
+  expected: Vivill Warehouse
+- offset: '0xb504d0'
+  name: English toponym canonicalisation 0xB504D0
+  issue: DE — English toponyms
+  expected: Tarmigan Mansion
+- offset: '0xb52274'
+  name: English toponym canonicalisation 0xB52274
+  issue: DE — English toponyms
+  expected: Pokémon Day Care
+- offset: '0xeb1de2'
+  name: English toponym canonicalisation 0xEB1DE2
+  issue: DE — English toponyms
+  expected: 'Karte für den Zutritt zum Gasthaus\nvon Tarmigan Town. Letztes Datum: vor 30\nJahren.'
+- offset: '0xeb1f16'
+  name: English toponym canonicalisation 0xEB1F16
+  issue: DE — English toponyms
+  expected: Ticket für die Überfahrt zur\nGlimmer Isle. Es schimmert im\nMondlicht.
+- offset: '0xeb1fcc'
+  name: English toponym canonicalisation 0xEB1FCC
+  issue: DE — English toponyms
+  expected: Gerät, um den Zustand der Pokémon\nim Pokémon Day Care auf Route 5 zu verfolgen.\n
+- offset: '0xeb2f48'
+  name: English toponym canonicalisation 0xEB2F48
+  issue: DE — English toponyms
+  expected: Macht ein Pokémon leichter zu\nfangen im Safari Zone.
+- offset: '0xeb2f87'
+  name: English toponym canonicalisation 0xEB2F87
+  issue: DE — English toponyms
+  expected: Zwei Objekte lassen ein Pokémon im\nSafari Zone seltener flüchten.
+- offset: '0xeb3008'
+  name: English toponym canonicalisation 0xEB3008
+  issue: DE — English toponyms
+  expected: Verringert den Bewegungsradius\neines Pokémon im Safari Zone.
+- offset: '0xeb3043'
+  name: English toponym canonicalisation 0xEB3043
+  issue: DE — English toponyms
+  expected: Macht ein Pokémon eher bereit, ein\nObjekt im Safari Zone zu tragen.
+- offset: '0x1ee22c9'
+  name: English toponym canonicalisation 0x1EE22C9
+  issue: DE — English toponyms
+  expected: Na sieh mal einer an…\pWenn das nicht {PLAYER} ist.\pDer Aufruhr nach dem Thundercap Mt.\nhat sich wohl gelohnt, was?\pDu hast dich seitdem verändert – so\nschön wie ich wirst du zwar nie…\pAber entspannter, das schon.\nIn meiner Arena wart ihr gespannt\lwie ein Lasso.\pWie wär's mit einer Revanche gegen\ndiesen schönen Kerl, ganz ohne\lAblenkungen?\pWas sagst du? Noch ein Rodeo?
+- offset: '0x1eec292'
+  name: English toponym canonicalisation 0x1EEC292
+  issue: DE — English toponyms
+  expected: Ich werde die Geheimnisse des\nCinder Volcano lüften!
+- offset: '0x1eec53e'
+  name: English toponym canonicalisation 0x1EEC53E
+  issue: DE — English toponyms
+  expected: Dass du hier bist, bedeutet, dass du\nmindestens vier\lArenaorden hast.\pAber Orden allein reichen nicht,\num deinen Wert zu beweisen.\pIch werde nur dann gegen dich kämpfen,\nwenn, und nur wenn, du alle\lTrainer des Cinder Volcano besiegst.
+- offset: '0x1eec79b'
+  name: English toponym canonicalisation 0x1EEC79B
+  issue: DE — English toponyms
+  expected: Hilf einem Wissenschaftler bei den\nPokémon des Cootes Bog!\nFang sie mit dem DexNav.
+- offset: '0x1eec801'
+  name: English toponym canonicalisation 0x1EEC801
+  issue: DE — English toponyms
+  expected: Hallo, Trainer.\pOh! Ich sehe, du hast einen DexNav.\nIch habe genau die richtige Aufgabe für dich.\pWürdest du deinen DexNav benutzen, um\ndir zu helfen, alle\lPokémon dieser Zone zu fangen?\pIch will alles über die\nPokémon des Cootes Bog wissen.
+- offset: '0x1eed32e'
+  name: English toponym canonicalisation 0x1EED32E
+  issue: DE — English toponyms
+  expected: Crater Town
+- offset: '0x1eedc0b'
+  name: English toponym canonicalisation 0x1EEDC0B
+  issue: DE — English toponyms
+  expected: Das ADM, das du hast, ist genau die Maschine,\ndie ich brauche!\pIch versuche, die eingestürzten\nTore des KBT Expressway zu zerstören, und du\lkannst mir helfen!\lBitte benutze dein\p{COLOR}ÉADM{COLOR}Ë und hilf mir!\n
+- offset: '0x1ef7070'
+  name: English toponym canonicalisation 0x1EF7070
+  issue: DE — English toponyms
+  expected: Diese Person war in der Küche\nder Tarmigan Mansion, im zweiten Stock.
+- offset: '0x1ef73f3'
+  name: English toponym canonicalisation 0x1EF73F3
+  issue: DE — English toponyms
+  expected: Diese Person war nördlich des\nPokémon Center, hinter Zerschneider.
+- offset: '0x1ef98ca'
+  name: English toponym canonicalisation 0x1EF98CA
+  issue: DE — English toponyms
+  expected: 'Die Geschichtsbücher sagen, dass der\nalte König von Borrius sein Schloss\lhier erbauen ließ !\pDas ergibt Sinn: Sein Grab ist\nnah, in der Great Desert,\lschließlich.'
+- offset: '0x1ef9ac9'
+  name: English toponym canonicalisation 0x1EF9AC9
+  issue: DE — English toponyms
+  expected: Diese Höhle heißt {COLOR}ÉRift Cave{COLOR}Ë.\pBei meiner Forschung fand ich\nheraus, dass sie der {COLOR}ÉWendehöhle{COLOR}Ë\laus Sinnoh ähnelt.\pOb sie mit der geheimnisvollen\nWelt namens\l{COLOR}ÉDistortion World{COLOR}Ë verbunden ist ?
+- offset: '0x1efbc05'
+  name: English toponym canonicalisation 0x1EFBC05
+  issue: DE — English toponyms
+  expected: Anscheinend hast du keine\nGelbe Scherbe.\pManchmal tauchen welche in der\nGreat Desert auf.\pWenn du welche mitbringst, unterrichte\nich gern deine Pokémon.
+- offset: '0x1efdc8f'
+  name: English toponym canonicalisation 0x1EFDC8F
+  issue: DE — English toponyms
+  expected: Oh, wer bist du?\p…\p{PLAYER}?\pDu suchst\n{RIVAL}, richtig?\pEr war vor einer Weile hier und\nwollte schnell zu den\l{COLOR}ÉRuins of Void{COLOR}Ë.\pIch sage dir genau,\nwas ich ihm gesagt habe.\pDer einzige Weg, den ich kenne, ist\nein Boot zu nehmen oder auf\l{COLOR}ÉRoute 14{COLOR}Ë zu surfen.
+- offset: '0x1efdf59'
+  name: English toponym canonicalisation 0x1EFDF59
+  issue: DE — English toponyms
+  expected: Guten Tag!\nWillkommen im Dehara Dept.!\pDas Schild an der Wand beschreibt\ndie Aufteilung des Kaufhauses.
+- offset: '0x1efeb34'
+  name: English toponym canonicalisation 0x1EFEB34
+  issue: DE — English toponyms
+  expected: <0xFC><0x01><0x02>Zurück zu den <0xFC><0x01><0x06>Ruins of Void<0xFC><0x01><0x02>?
+- offset: '0x1efecd7'
+  name: English toponym canonicalisation 0x1EFECD7
+  issue: DE — English toponyms
+  expected: Sei vorsichtig in der Great Desert!
+- offset: '0x1efecf6'
+  name: English toponym canonicalisation 0x1EFECF6
+  issue: DE — English toponyms
+  expected: F<0x46>Distortion World
+- offset: '0x1efed64'
+  name: English toponym canonicalisation 0x1EFED64
+  issue: DE — English toponyms
+  expected: '{COLOR}Á{STR_VAR_1} ist in die\nDistortion World entschwunden.'
+- offset: '0x1efeda8'
+  name: English toponym canonicalisation 0x1EFEDA8
+  issue: DE — English toponyms
+  expected: Oh, hallo… Ich bin Nex.\pÄhm… was machst du hier?\pIch selbst warte auf einen Freund, aber…\pWie bitte? Niemand sonst würde in der Distortion World leben?\pHa ha… stimmt, aber mein Freund ist ein besonderer Fall.\pKommt er jetzt nicht, dann wohl nie mehr - hier vergeht ja kaum Zeit.\pSag… du musst stark sein, um aus eigenem Willen herzukommen.\pWürdest du gegen mich antreten?
+- offset: '0x1eff0e3'
+  name: English toponym canonicalisation 0x1EFF0E3
+  issue: DE — English toponyms
+  expected: Damit kann Giratina seine\nUrsprungsform behalten, selbst außerhalb\lder Distortion World.\pIch wollte es jemandem geben,\naber da er nicht\lda ist, sollte ich es jemandem\lgeben, der es verdient.\pIch sollte in meine eigene\nWelt zurückkehren.\pDanke für den Kampf, das war schön.
+- offset: '0x1f0025e'
+  name: English toponym canonicalisation 0x1F0025E
+  issue: DE — English toponyms
+  expected: Trainertipp-Schild gelesen auf\ndem Weg zur Stadt, südlich des\nPokémon Center.
+- offset: '0x1f05b72'
+  name: English toponym canonicalisation 0x1F05B72
+  issue: DE — English toponyms
+  expected: Wenn ein Pokémon einen <0xFC><0x01><0x06>Ewigstein<0xFC><0x01><0x08> trägt,\nentwickelt es sich nicht!\pTrägt es einen während der\nZucht, vererbt es sein\lWesen!\pSie sind genial, diese\nEwigsteine, nicht wahr?\pWenn du mehr willst, es heißt,\nes stecken jede Menge davon\lin den <0xFC><0x01><0x06>Wänden<0xFC><0x01><0x08> des <0xFC><0x01><0x06>KBT Expressway<0xFC><0x01><0x08>.\pWie man sie herausholt, aber?\nKeine Ahnung…
+- offset: '0x1f07c20'
+  name: English toponym canonicalisation 0x1F07C20
+  issue: DE — English toponyms
+  expected: Das Smettbo, das ich dir gegeben\nhabe, kann {COLOR}ÉGigadynamaximieren{COLOR}Ë!\pWas das ist?\pProbier es in einem {COLOR}ÉRaid der\nHidden Grotto{COLOR}Ë aus, du wirst sehen!
+- offset: '0x1f082e2'
+  name: English toponym canonicalisation 0x1F082E2
+  issue: DE — English toponyms
+  expected: Pst, ganz leise.\pWusstest du, dass die Borrius-Region\nheimlich von einem kommunistischen\lKonsortium geführt wird, das\lkommunistische Dinge treibt?\pWir können sie bekämpfen, indem wir\ngenug nicht gelistete Waren in den\lPoké Mart kaufen.\pAlle Poké Mart stehen auf unserer Seite.\nBist du bereit für die Revolution?
+- offset: '0x1f09cf0'
+  name: English toponym canonicalisation 0x1F09CF0
+  issue: DE — English toponyms
+  expected: Willkommen im Flower Paradise!\pAchtet während eures Besuchs\ndarauf, die Blumen und die\lPokémon zu respektieren, die hier leben.
+- offset: '0x1f0a086'
+  name: English toponym canonicalisation 0x1F0A086
+  issue: DE — English toponyms
+  expected: Ein großes Festmahl naht!\nKämpfe im Flower Paradise\nund sammle 3 Töpfe Honig.
+- offset: '0x1f0a273'
+  name: English toponym canonicalisation 0x1F0A273
+  issue: DE — English toponyms
+  expected: Großartig!\nDanke, dass du hilfst!\pWadribie findet man überall\nim Flower Paradise.\pAber du hast mehr Glück\nin der Nähe der {COLOR}Ëblauen{COLOR}Ç Blumen.\pDu kannst auch versuchen, ein\n{COLOR}ÉWommel{COLOR}Ç mit {COLOR}ÉHonigmaul{COLOR}Ç zu fangen.\pEs kann nach jedem Kampf Honig\nfinden, und du wirst\lbenachrichtigt, wenn es soweit ist!
+- offset: '0x1f0a436'
+  name: English toponym canonicalisation 0x1F0A436
+  issue: DE — English toponyms
+  expected: 'Wadribie findet man überall im\nFlower Paradise, aber sie\ltauchen häufiger bei den {COLOR}Ëblauen\lBlumen{COLOR}Ç auf.\pFang ein {COLOR}ÉWommel{COLOR}Ç mit {COLOR}ÉHonig-\nmaul{COLOR}Ç, das hilft.\pDenk dran: Ich brauche {COLOR}É3\nTöpfe Honig{COLOR}Ç.'
+- offset: '0x1f0aece'
+  name: English toponym canonicalisation 0x1F0AECE
+  issue: DE — English toponyms
+  expected: Es heißt, ein seltener blauer Vogel\nlebt auf dem Gipfel des Frost Mountain.
+- offset: '0x1f0c34f'
+  name: English toponym canonicalisation 0x1F0C34F
+  issue: DE — English toponyms
+  expected: 'Trophäe: Du hast den\nKopf des Battle Tower im\lStandard-Einzelkampf besiegt!'
+- offset: '0x1f0c3af'
+  name: English toponym canonicalisation 0x1F0C3AF
+  issue: DE — English toponyms
+  expected: 'Trophäe: Du hast den\nKopf des Battle Tower im\lStandard-Doppelkampf besiegt!'
+- offset: '0x1f0c40f'
+  name: English toponym canonicalisation 0x1F0C40F
+  issue: DE — English toponyms
+  expected: 'Trophäe: Du hast den\nKopf des Battle Tower im\lStandard-Multikampf besiegt!'
+- offset: '0x1f0ca95'
+  name: English toponym canonicalisation 0x1F0CA95
+  issue: DE — English toponyms
+  expected: Dein Nachbar braucht Hilfe!\nBring ihm ein Gegengift\naus dem Poké Mart.
+- offset: '0x1f0caf5'
+  name: English toponym canonicalisation 0x1F0CAF5
+  issue: DE — English toponyms
+  expected: Oh, hallo, <0xFD><0x01>!\pDeine Mutter sagte mir, dass du\nendlich die Stadt verlässt!\pDas sind wunderbare Neuigkeiten!\pDarf ich dich nun um einen\nGefallen bitten?\pMir geht es in letzter Zeit nicht\nso gut, und ich hoffte, dass\ldu mir ein\l<0xFC><0x01><0x06>Gegengift<0xFC><0x01><0x08> im Poké Mart kaufst.
+- offset: '0x1f0cbff'
+  name: English toponym canonicalisation 0x1F0CBFF
+  issue: DE — English toponyms
+  expected: Oh, hallo, {PLAYER}!\pGlückwunsch,\ndass du Champion bist!\pDas sind tolle Neuigkeiten!\pDarf ich dich um einen Gefallen bitten?\pMir geht es nicht so\ngut, kannst du mir ein {COLOR}ÉGegengift{COLOR}Ë\laus dem\lPoké Mart bringen.
+- offset: '0x1f13b6a'
+  name: English toponym canonicalisation 0x1F13B6A
+  issue: DE — English toponyms
+  expected: Die Wüste zieht sich nicht mehr\nlange hin, wenn man südlich\lder Stadt geht.\pSei vorsichtig, wenn du\ndort hingehst.\pDu landest in Antisis City,\nwenn du zu weit gehst.\pUnd jeder weiß, dass man ihr\nlieber nicht zu nahe kommt…
+- offset: '0x1f143ca'
+  name: English toponym canonicalisation 0x1F143CA
+  issue: DE — English toponyms
+  expected: Yee haw!\pAus {COLOR}ÉHartsteine{COLOR}Ë können beim\nZerschlagen von Fels in der {COLOR}ÉGreat Desert{COLOR}Ë kommen.\pUnd wenn du die Wände des\n{COLOR}ÉKBT Expressway{COLOR}Ë durchgräbst,\lfindest du auch welche.
+- offset: '0x1f14516'
+  name: English toponym canonicalisation 0x1F14516
+  issue: DE — English toponyms
+  expected: '{COLOR}ÉHartsteine{COLOR}Ë können beim\nZerschlagen von Fels in der {COLOR}ÉGreat Desert{COLOR}Ë kommen.\pUnd wenn du die Wände des\n{COLOR}ÉKBT Expressway{COLOR}Ë durchgräbst,\lfindest du auch welche.\pMach eines von beiden und\nbring mir {COLOR}É{STR_VAR_1}{COLOR}Ë davon.'
+- offset: '0x1f14870'
+  name: English toponym canonicalisation 0x1F14870
+  issue: DE — English toponyms
+  expected: '{COLOR}ÉHartsteine{COLOR}Ë können beim\nZerschlagen von Fels in der {COLOR}ÉGreat Desert{COLOR}Ë kommen.\pUnd wenn du die Wände des\n{COLOR}ÉKBT Expressway{COLOR}Ë durchgräbst,\lfindest du auch welche.\pMach eines von beiden und\nbring mir {COLOR}É{STR_VAR_1}{COLOR}Ë davon.\pIch gebe dir einen Edelstein\nach Wahl.'
+- offset: '0x1f14989'
+  name: English toponym canonicalisation 0x1F14989
+  issue: DE — English toponyms
+  expected: Du hast weniger als {COLOR}É{STR_VAR_1} Hartsteine{COLOR}Ë,\nmein Junge.\p{COLOR}ÉHartsteine{COLOR}Ë können beim\nZerschlagen von Fels in der {COLOR}ÉGreat Desert{COLOR}Ë kommen.\pUnd wenn du die Wände des\n{COLOR}ÉKBT Expressway{COLOR}Ë durchgräbst,\lfindest du auch welche.
+- offset: '0x1f14ce2'
+  name: English toponym canonicalisation 0x1F14CE2
+  issue: DE — English toponyms
+  expected: Kehr zur Tomb of Borrius zurück und finde alle\nverborgenen Gegenstände!
+- offset: '0x1f14d23'
+  name: English toponym canonicalisation 0x1F14D23
+  issue: DE — English toponyms
+  expected: Während du durch die Wüste\ngeirrt bist, hast du\lden Eingang zur Tomb of Borrius gefunden?\pHier heißt es, die Alten\nvon Borrius hätten dort\lviele Schätze versteckt.
+- offset: '0x1f14dfc'
+  name: English toponym canonicalisation 0x1F14DFC
+  issue: DE — English toponyms
+  expected: Du bist es!\pDer Trainer, der die\nGrabkammer der Tomb of Borrius fand!\pAlle reden davon!\pAlso, nimm meine\nBitte an!
+- offset: '0x1f14e8b'
+  name: English toponym canonicalisation 0x1F14E8B
+  issue: DE — English toponyms
+  expected: Du weißt nicht mal, worum's geht,\nund sagst schon zu?\pMutig!\pKein Wunder, dass du die Tomb of Borrius\ngemeistert hast!\pHier ist meine Bitte.\pDir ist sicher aufgefallen, dass\nin der Tomb of Borrius kaum Schätze lagen.\pMan sagt, die Alten von Borrius\nhätten sie mit Materialien\lgetarnt.\pGeh zurück und finde jeden\nGegenstand, den sie versteckt\lhaben.\pTraust du dir das zu?
+- offset: '0x1f17f82'
+  name: English toponym canonicalisation 0x1F17F82
+  issue: DE — English toponyms
+  expected: Wenn du in der Klemme steckst, nutze\n{COLOR}ÉVoltwechsel{COLOR}Ë, um rauszukommen!\pUnd weißt du was?\nWir holen das eines Tages nach!\pWenn du mit dem alten Galavan\nplaudern willst, treib dich bei den\lPokémon Center herum.\pIch baue mein Metall-'mon\nfür den Rückkampf wieder auf!
+- offset: '0x1f1c376'
+  name: English toponym canonicalisation 0x1F1C376
+  issue: DE — English toponyms
+  expected: Oh, du bist es !\nAngehender Champion !\pIch hab dich gar nicht gesehen !\pWillkommen in der Arena Crater Town !\pFangen wir mit etwas\nSprudel an.
+- offset: '0x1f1f4c3'
+  name: English toponym canonicalisation 0x1F1F4C3
+  issue: DE — English toponyms
+  expected: Weißt du, diese Tessy ist ziemlich\njung, aber lass dich nicht täuschen.\pSie ist eine Frau, die keine Angst hat,\nso schmutzig zu spielen wie Cootes Bog !\pAber nun, du hast alles, um sie in\nihrem eigenen Spiel zu schlagen, oder ?\pHa ha ha !
+- offset: '0x1f204a1'
+  name: English toponym canonicalisation 0x1F204A1
+  issue: DE — English toponyms
+  expected: Diese Tafel wurde gefunden,\nnachdem man mit Kraxler über\nTaucher zu den Ruins of Void gelangte.
+- offset: '0x1f21ae3'
+  name: English toponym canonicalisation 0x1F21AE3
+  issue: DE — English toponyms
+  expected: Es gibt keine Pokémon in der\nPokémon Day Care.
+- offset: '0x1f22663'
+  name: English toponym canonicalisation 0x1F22663
+  issue: DE — English toponyms
+  expected: Arbeiter von Borrius, vereinigt euch!\pLasst uns uns organisieren, um\ngegen die Einstürze der Wände\ldes KBT Expressway zu kämpfen!
+- offset: '0x1f236a3'
+  name: English toponym canonicalisation 0x1F236A3
+  issue: DE — English toponyms
+  expected: Oh!\nWie zerstreut von mir!\pWie willst du die\n{COLOR}ÉIcicle Cave{COLOR}Ë ohne Karte finden?\pDiese {COLOR}ÉRegionskarte{COLOR}Ë sollte\ndir enorm helfen!
+- offset: '0x1f260ae'
+  name: English toponym canonicalisation 0x1F260AE
+  issue: DE — English toponyms
+  expected: Bändige diese wilden Bestien:\nStelle einen Rekord von\n25 im Safari Zone auf.
+- offset: '0x1f26110'
+  name: English toponym canonicalisation 0x1F26110
+  issue: DE — English toponyms
+  expected: Trainer, ich suche einen Meister der\ngefährlichsten Bestien…\lPokémon.\pSie spucken Feuer, beschwören\nBlitze, kontrollieren den Geist.\pDas ultimative Wild.\pKannst du eine Serie von mindestens\n{COLOR}É{STR_VAR_1}{COLOR}Ë Pokémon im Safari Zone erreichen\lund diese Kreaturen\lbändigen?
+- offset: '0x1f2633d'
+  name: English toponym canonicalisation 0x1F2633D
+  issue: DE — English toponyms
+  expected: Ich sehe, dass du nur eine\nSerie von {COLOR}É{STR_VAR_2}{COLOR}Ë im Safari Zone erreicht hast.\pLeider ist das weniger als die\n{COLOR}É{STR_VAR_1}{COLOR}Ë, die nötig sind, um das\lgefährlichste Wild zu bändigen.
+- offset: '0x1f263e0'
+  name: English toponym canonicalisation 0x1F263E0
+  issue: DE — English toponyms
+  expected: Du beherrschst wirklich die Kunst der\nPokémon-Jagd.\pHier ist eine Belohnung, um deine\nMeisterschaft zu zeigen.\pVielleicht hilft dir das, noch wildere Bestien\nzu bändigen als die im\lSafari Zone.
+- offset: '0x1f30627'
+  name: English toponym canonicalisation 0x1F30627
+  issue: DE — English toponyms
+  expected: Ist das…{PAUSE} der Orden von\nDresco Town Arena?\pWenn ich daran denke, wie sehr du\nso schnell vorangekommen bist…
+- offset: '0x1f33f55'
+  name: English toponym canonicalisation 0x1F33F55
+  issue: DE — English toponyms
+  expected: Aus einem seltsamen Grund ist der Eingang\ndes KBT Expressway zugefroren.\pAls Arenaleiterin dieser\nStadt ist es meine Aufgabe, das zu regeln.\pSchau, wie ich\nSteinhieb einsetzen kann, um das Eis zu zerbrechen!
+- offset: '0x1f3487e'
+  name: English toponym canonicalisation 0x1F3487E
+  issue: DE — English toponyms
+  expected: ARGH!\pKomm schon, Staraptor. Es muss doch\neinen anderen Zugang zur Straße geben.\pVielleicht einen geheimen\n{COLOR}ÉUnderground Pass{COLOR}Ë in der Stadt…\pSuchen wir mal.
+- offset: '0x1f36b4b'
+  name: English toponym canonicalisation 0x1F36B4B
+  issue: DE — English toponyms
+  expected: Es bleibt nur noch, sich zu\nden {COLOR}ÉRuins of Void{COLOR}Ë zu begeben…
+- offset: '0x1f379d3'
+  name: English toponym canonicalisation 0x1F379D3
+  issue: DE — English toponyms
+  expected: Surfen, was…\nJa, das wird mir nützlich sein.\pIch habe herausgefunden, dass die Schatten\nmit dem Verschwinden meiner Eltern\lzu tun hatten, und ich konnte sie\lbis zu den Ruins of Void\pverfolgen. Sobald ich die Hinweise habe,\ngehe ich mit Surfen dorthin, um herauszufinden\lwas ihnen zugestoßen ist, ein für alle\lMal!\pAlso… danke, nehme ich an, Log.
+- offset: '0x1f3832d'
+  name: English toponym canonicalisation 0x1F3832D
+  issue: DE — English toponyms
+  expected: Hallo, hört ihr mich?…{PAUSE}îHier ist der Schergen von vorhin.\pIch habe soeben das letzte\nnötige Pokémon gesichert.\pGleich geht es weiter zu den Ruins of Void.\n…{PAUSE}îJa, natürlich. Wie versprochen:\pDu übernimmst das Kommando über die Zweigstelle?\n…{PAUSE}îGewiss, solange Hoopa\lunversehrt bleibt, könnt ihr\pherausfinden, was ihr wollt.\n…{PAUSE}îKeine Sorge, die Schattenkrieger\lwerden schnell und spurlos beseitigt.\p…{PAUSE}îVerstanden. Wir sprechen uns,\nsobald ich Bericht erstatte.
+- offset: '0x1f389bb'
+  name: English toponym canonicalisation 0x1F389BB
+  issue: DE — English toponyms
+  expected: 'Gut, das reicht. Hör zu:\pWährend ich auf dich gewartet habe, sah ich\neine Gruppe Schatten-Schergen nach Westen\laufbrechen, Richtung Ruins of Void.\pLaut Papy gibt es dafür nur einen Grund…{PAUSE}\nsie haben alles Nötige für das\lEntfesselungsritual - das Ritual, das die\ldunkle Macht befreit.\pAber das sollte ohne Zapdos unmöglich sein…\nDeshalb glaubt Papy, sie versuchen es trotzdem\lund hoffen, das unvollständige Ritual reicht.\pDas ist unsere Chance, auch dorthin zu gehen\nund Arktos und Lavados zurückzuholen!\pPerfekt: Sie sind dort ganz allein,\nalso müssen wir nicht befürchten, dass sie\lUnschuldige in diese Monster verwandeln!'
+- offset: '0x1f38e6b'
+  name: English toponym canonicalisation 0x1F38E6B
+  issue: DE — English toponyms
+  expected: Wo sind wir? Warte…{PAUSE}î ist\pdas…{PAUSE}î sind das die Ruins of Void?
+- offset: '0x1f460e7'
+  name: English toponym canonicalisation 0x1F460E7
+  issue: DE — English toponyms
+  expected: Das ist die Rift Cave…{PAUSE} das heißt… !\pWir müssen zurück in unserer\pWelt sein! Aber, warum… ?… Ach ja.\pMan sagt, die Rift Cave trotzt ebenfalls\pden Gesetzen der\nRealität.
+- offset: '0x1f469e1'
+  name: English toponym canonicalisation 0x1F469E1
+  issue: DE — English toponyms
+  expected: Wir haben wenig Zeit, Jax. Ich\pwerde eine Überfahrt nach\nBorrius Est von Seaport City aus organisieren.
+- offset: '0x1f53820'
+  name: English toponym canonicalisation 0x1F53820
+  issue: DE — English toponyms
+  expected: Nach deiner tollen Leistung\nwartet noch eine letzte Aufgabe auf dich.\pBewirb weiterhin die Cube Corp.-Angelruten, indem du\lPokémon mindestens 50 Mal öfter fängst,\lalso insgesamt <0xFC><0x01><0x06><0xFD><0x02><0xFC><0x01><0x08> Mal!\pDas wird für einen so guten\nAngler wie dich ein Leichtes sein.
+- offset: '0x1f55274'
+  name: English toponym canonicalisation 0x1F55274
+  issue: DE — English toponyms
+  expected: Diese TM wurde nördlich des\nPokémon Center mittels Schneider gefunden.
+- offset: '0x1f561ce'
+  name: English toponym canonicalisation 0x1F561CE
+  issue: DE — English toponyms
+  expected: Geh zur Icicle Cave,\nbring {RIVAL} den Pokédex!
+- offset: '0x1f567f6'
+  name: English toponym canonicalisation 0x1F567F6
+  issue: DE — English toponyms
+  expected: Erkunde das Vivill Warehouse und\nfinde einen Zugang zum Kommando!
+- offset: '0x1f57bca'
+  name: English toponym canonicalisation 0x1F57BCA
+  issue: DE — English toponyms
+  expected: Höhle gefunden in einem versteckten Bereich\nder Icicle Cave hinter der\nBraille-Tafel.
+- offset: '0x1f5ad8a'
+  name: English toponym canonicalisation 0x1F5AD8A
+  issue: DE — English toponyms
+  expected: Rift Cave
+- offset: '0x1f65360'
+  name: English toponym canonicalisation 0x1F65360
+  issue: DE — English toponyms
+  expected: Das nette Paar in der Nähe des\nFrost Mountain hat meine Pokémon geheilt!\pJetzt kann ich gegen so viele\nTrainer antreten, wie ich will!\pAngefangen mit dir!
+- offset: '0x1f6bb64'
+  name: English toponym canonicalisation 0x1F6BB64
+  issue: DE — English toponyms
+  expected: Ich habe eine {COLOR}ÉADM{COLOR}Ë bei der {COLOR}ÉWerft\nvon Kapitän Davy{COLOR}Ë gekauft.\pEs war teuer, aber ich habe sie benutzt,\num die Wände des {COLOR}ÉKBT Expressway{COLOR}Ë aufzubrechen, und das gefunden!
+- offset: '0x1f6bc0d'
+  name: English toponym canonicalisation 0x1F6BC0D
+  issue: DE — English toponyms
+  expected: Wenn du eine <0xFC><0x01><0x06>ADM<0xFC><0x01><0x08> von <0xFC><0x01><0x06>Captain Davy<0xFC><0x01><0x08> bekommst,\nkannst du die eingestürzten Türen\ldes <0xFC><0x01><0x06>KBT Expressway<0xFC><0x01><0x08> aufbrechen.\pManchmal findest du dahinter\nsogar seltene Pokémon.
+- offset: '0x1f6d080'
+  name: English toponym canonicalisation 0x1F6D080
+  issue: DE — English toponyms
+  expected: Das <0xFC><0x01><0x06>ADM<0xFC><0x01><0x08> ersetzt VMs und findet auch Schätze!\pDie Wände des <0xFC><0x01><0x06>KBT Expressway<0xFC><0x01><0x08> und des <0xFC><0x01><0x06>Meeresgrunds<0xFC><0x01><0x08> stecken voller Schätze!\pStell dort im <0xFC><0x01><0x06>menu Options<0xFC><0x01><0x08> den <0xFC><0x01><0x06>R-Button Mode<0xFC><0x01><0x08> auf <0xFC><0x01><0x06>Mining Scan<0xFC><0x01><0x08> und drücke <0xF8><0x03>.\pGrabstellen in deiner Nähe lässt das ADM aufleuchten.\pDrücke <0xF8>  daneben, um zu graben.
+- offset: '0x1f6ddfc'
+  name: English toponym canonicalisation 0x1F6DDFC
+  issue: DE — English toponyms
+  expected: Man findet leicht Splitter, indem man\nFelsen in der\lGreat Desert zerbricht, oder über das ADM.
+- offset: '0x1f6e44f'
+  name: English toponym canonicalisation 0x1F6E44F
+  issue: DE — English toponyms
+  expected: Ich komme aus dem Ausland, um\nmehr über das legendäre Pokémon zu\lerfahren, das angeblich in der\l{COLOR}ÉCave of Being{COLOR}Ë lebt.
+- offset: '0x1f6e54e'
+  name: English toponym canonicalisation 0x1F6E54E
+  issue: DE — English toponyms
+  expected: Psst…\pHör zu, Freund.\nIch habe ein tolles Geschäft für dich.\pIn meiner Hand, ein Ticket\nzu einem besonderen Ort.\p{COLOR}ÉGlimmer Isle{COLOR}Ë.\pIch kann es dir verkaufen, aber es wird dich\n¥{COLOR}É999999999{COLOR}Ë kosten.\pBist du dabei, Freund?\pDas Geschäft des Jahrhunderts?
+- offset: '0x1f70abd'
+  name: English toponym canonicalisation 0x1F70ABD
+  issue: DE — English toponyms
+  expected: Icicle Cave\nDurchgang
+- offset: '0x1f71546'
+  name: English toponym canonicalisation 0x1F71546
+  issue: DE — English toponyms
+  expected: Tarmigan Mansion Fordert\pdie Macht der Mega-Entwicklung!
+- offset: '0x1f71749'
+  name: English toponym canonicalisation 0x1F71749
+  issue: DE — English toponyms
+  expected: Finde alles, was du brauchst, im\nDehara Dept.!
+- offset: '0x1f71885'
+  name: English toponym canonicalisation 0x1F71885
+  issue: DE — English toponyms
+  expected: Wolken-Game Corner\pDer Spielplatz für Erwachsene!
+- offset: '0x1f76fdb'
+  name: English toponym canonicalisation 0x1F76FDB
+  issue: DE — English toponyms
+  expected: Ich will nur einen einfachen Kampf,\nbei dem alle gleich sind. Deshalb\pwill ich, so seltsam es auch\nklingen mag, nach Antisis City gehen.\pMan sagt, dort gibt es einen Ort,\nder das ermöglicht.
+- offset: '0x1f77a3b'
+  name: English toponym canonicalisation 0x1F77A3B
+  issue: DE — English toponyms
+  expected: Du bekommst diesen Rosenweihrauch nicht…\nden ich nicht habe… Weil\pich absolut kein\nSchmuggler aus Antisis City bin.\pNein, überhaupt nicht.
+- offset: '0x1f78073'
+  name: English toponym canonicalisation 0x1F78073
+  issue: DE — English toponyms
+  expected: Oh?\pSieht so aus, als hätte der Assistent von Prof. Log\nVerbesserungen für den Stat-Scanner!\pGeh zurück zu den Frozen Heights, um\nsie abzuholen.{PAUSE_UNTIL_PRESS}
+- offset: '0x1f78ce2'
+  name: English toponym canonicalisation 0x1F78CE2
+  issue: DE — English toponyms
+  expected: Du wirst niemals meinen super seltenen\nund viel zu starken Sandamer besiegen!\pIch habe ihn ganz oben in dieser\ngeheimen Ecke der Icicle Cave gefunden!
+- offset: '0x1f78d62'
+  name: English toponym canonicalisation 0x1F78D62
+  issue: DE — English toponyms
+  expected: Ach ja?\pNun, mein Miltank ist auch super\nstark!\pIch habe sie auf den Magnolia Fields gefunden!\nDu bist erledigt!
+- offset: '0x1f79d90'
+  name: English toponym canonicalisation 0x1F79D90
+  issue: DE — English toponyms
+  expected: Tarmigan Mansion
+- offset: '0x1f7be70'
+  name: English toponym canonicalisation 0x1F7BE70
+  issue: DE — English toponyms
+  expected: Ein Mann sucht Inspiration\nfür seine Statue! Bring ihm das\nPokémon, das unter Bellin Town schläft.
+- offset: '0x1f7c123'
+  name: English toponym canonicalisation 0x1F7C123
+  issue: DE — English toponyms
+  expected: Gut, du bist ein echter Champion.\pWarst du schon mal ganz unten\nin Bellin Town?\pDort wirst du ihn sehen.\pWie gesagt, er bleibt einfach sitzen.\nEr bewegt sich nicht, greift nicht an.\pEin echtes Rätsel.\pTut mir leid, ich kann dir nicht helfen,\nihn zu bewegen, aber wenn du es schaffst,\lbring ihn hierher.
+- offset: '0x1f7c97e'
+  name: English toponym canonicalisation 0x1F7C97E
+  issue: DE — English toponyms
+  expected: Obwohl es Privateigentum ist,\ncampen Leute\lin unserem underground pass\lund veranstalten jeden Tag einen Wettbewerb.\pIch bin sicher, das ist getürkt,\nhabe noch nie jemanden ohne\lultraschnelles {COLOR}ÉMotorrad{COLOR}Ë\lgesehen, der es geschafft hat.
+- offset: '0x1f861e0'
+  name: English toponym canonicalisation 0x1F861E0
+  issue: DE — English toponyms
+  expected: Vivill Warehouse
+- offset: '0x1f88dbb'
+  name: English toponym canonicalisation 0x1F88DBB
+  issue: DE — English toponyms
+  expected: Zygarde-Zelle im B1F der Höhle\nunter Bellin Town, nachdem du\nKraxler eingesetzt hast.
+- offset: '0x1f894e3'
+  name: English toponym canonicalisation 0x1F894E3
+  issue: DE — English toponyms
+  expected: Zygarde-Zelle neben einem Baum\nnahe dem Eingang des\nKBT Expressway.
+- offset: '0x1f895f8'
+  name: English toponym canonicalisation 0x1F895F8
+  issue: DE — English toponyms
+  expected: Zygarde-Zelle bei der Felswand\nwestlich des Eingangs\ndes KBT Expressway.
+- offset: '0x1f89c89'
+  name: English toponym canonicalisation 0x1F89C89
+  issue: DE — English toponyms
+  expected: Zygarde-Zelle auf dem Gipfel des\nKBT Expressway.
+- offset: '0x1f8ee2c'
+  name: English toponym canonicalisation 0x1F8EE2C
+  issue: DE — English toponyms
+  expected: Du wirst gegen den Battle Sands antreten.\nMöchtest du fortfahren?\pDu hast derzeit {COLOR}É{STR_VAR_2}{COLOR}Ë BP\ngespeichert.
+- offset: '0x1f98d59'
+  name: English toponym canonicalisation 0x1F98D59
+  issue: DE — English toponyms
+  expected: Hallo!\nBist du wegen des {COLOR}ÉBattle Tower{COLOR}Ç hier?\pDas ist das ultimative\nFrontier-Erlebnis!\pSo viele Wege, die Hitze\ndes Kampfes zu spüren!
+- offset: '0x1f9d5c0'
+  name: English toponym canonicalisation 0x1F9D5C0
+  issue: DE — English toponyms
+  expected: Danke! Du findest meinen Bruder\pwahrscheinlich im\nNorden des KBT Expressway.\pIch würde ja selbst gehen, aber\nich bin ein zu schwacher\pTrainer. Man sagt, die Leute von Schwarzer\nFlambirex sind verdammt fies.
+- offset: '0x1fa64ee'
+  name: English toponym canonicalisation 0x1FA64EE
+  issue: DE — English toponyms
+  expected: Rettet die von den Granbull\nan den Magnolia Fields\ngestohlenen Molunk!
+- offset: '0x1fa67cc'
+  name: English toponym canonicalisation 0x1FA67CC
+  issue: DE — English toponyms
+  expected: Danke, Schatz, du rettest uns! Diese\nGauner können nicht weit gekommen sein. Ich\pwette, sie sind gerade in den\p{COLOR}ÉMagnolia Fields{COLOR}Ç\nunterwegs.
+- offset: '0x1fa6852'
+  name: English toponym canonicalisation 0x1FA6852
+  issue: DE — English toponyms
+  expected: Unsere Molunk sind nicht sehr klug. Wenn\ndu dich ihnen in den\p{COLOR}ÉMagnolia Fields{COLOR}Ç näherst,\lrennen sie, bis sie gegen eine Wand laufen.\pBring sie zurück in die Stadt und wir\nübernehmen den Rest.
+- offset: '0x1fa692e'
+  name: English toponym canonicalisation 0x1FA692E
+  issue: DE — English toponyms
+  expected: Manche Molunk\nsind zur Muhmuh-Farm\pzurückgekehrt, aber es sind noch welche in den\n{COLOR}ÉMagnolia Fields{COLOR}Ç.
+- offset: '0x1fa9651'
+  name: English toponym canonicalisation 0x1FA9651
+  issue: DE — English toponyms
+  expected: Nein? {COLOR}ÉSandan{COLOR}Ë\pund {COLOR}ÉSandamer{COLOR}Ë in\nder {COLOR}ÉGreat Desert{COLOR}Ë kennen normalerweise Graben.
+- offset: '0x1faab26'
+  name: English toponym canonicalisation 0x1FAAB26
+  issue: DE — English toponyms
+  expected: Eine ganze Ladung dieser besonderen\nBälle ist gerade mit der\pPost angekommen. Der Poké Mart hat endlich\neinen Lieferservice eingeführt, also\lmuss ich nie wieder\lLeute losschicken, um meine\pPakete für mich abzuholen! Ho ho ho!
+- offset: '0x1fad737'
+  name: English toponym canonicalisation 0x1FAD737
+  issue: DE — English toponyms
+  expected: Elevoltek!\nZeit für die zweite Runde!\pKannst du es spüren?\pIch hab die Luft mit der Kraft erfüllt,\ndie ich angezapft habe!\pDie Kraft der Hidden Grottos!\nNutze sie, um diesen Trainer anzugreifen!
+- offset: '0x1fad816'
+  name: English toponym canonicalisation 0x1FAD816
+  issue: DE — English toponyms
+  expected: '{COLOR}ÁDynamax ist ein Phänomen, das\nein Pokémon nur an besonderen\lOrten wie Hidden Grottos\lerleben kann.\pFast jedes Pokémon kann dynamaxen,\naber trägt es einen Mega-Stein oder\lZ-Kristall, geht das nicht.\pUm ein Pokémon zu dynamaxen, drück\n{START_BUTTON}, wenn das rote Dynamax-Symbol\lerscheint.\pEntscheidest du dich dafür, hält der\nEffekt drei Runden an.\pDabei werden alle Attacken deines\nPokémon zu besonderen Varianten,\lden {COLOR}ÉMaxi-Attacken{COLOR}Á.\pDiese sind viel stärker als normale\nAttacken.'
+- offset: '0x1fadb4f'
+  name: English toponym canonicalisation 0x1FADB4F
+  issue: DE — English toponyms
+  expected: Urk…\pDie Wissenschaftsgesellschaft wird\nextrem enttäuscht sein, wenn sie\lvon meinen gescheiterten Versuchen erfährt.\pAber… Es ist mir trotzdem gelungen, die\nKraft der Hidden Grottos anzuzapfen, also\list es vielleicht kein völliger Verlust…\pAuf Wiedersehen, für den Moment, Trainer.\pEines Tages in der Zukunft werde ich dir\ndie wahre Macht der Wissenschaft zeigen!
+- offset: '0x1954dd'
+  name: English toponym canonicalisation 0x1954DD
+  issue: DE — English toponyms
+  expected: Hallo!\nWillkommen im Dehara Dept.!\pDas Schild an der Wand zeigt\ndie Aufteilung des Geschäfts.
+- offset: '0x454901'
+  name: English toponym canonicalisation 0x454901
+  issue: DE — English toponyms
+  expected: Verliehen für 50 aufeinanderfolgende\nSiege im Battle TOWER.
+- offset: '0x454933'
+  name: English toponym canonicalisation 0x454933
+  issue: DE — English toponyms
+  expected: Verliehen für 100 aufeinanderfolgende\nSiege im Battle TOWER.
+- offset: '0x7b85b9'
+  name: English toponym canonicalisation 0x7B85B9
+  issue: DE — English toponyms
+  expected: Wenn du den Pokédex vervollständigen\nwillst, besuch den Thundercap Mountain. Dort leben viele\lseltene Elektro-Pokémon. Man sagt\lsogar, dass Zapdos auf dem\lGipfel nistet!
+- offset: '0x7dd149'
+  name: English toponym canonicalisation 0x7DD149
+  issue: DE — English toponyms
+  expected: 'Zeph: <0xFC><0x01><0x08>Ein Freund von mir, ein\nPokémon-Biologe, lebt auch in Frozen Heights.\pHier nennt man ihn den „Wächter\nvon Borrius“.\pEr hat es sogar geschafft, Arceus\nzu fangen!\pIch glaube, seine Frau hat gerade\nerst ein Baby bekommen.\pIch kann mich kaum an seinen\nVornamen erinnern…\pÜbrigens, wie heißen eure Kinder?'
+- offset: '0x8cb932'
+  name: English toponym canonicalisation 0x8CB932
+  issue: DE — English toponyms
+  expected: Mit Zapdos in ihrem Besitz\nmüssen die Schatten nur noch\ldie drei Vögel bei den {COLOR}ÉRuins of Void{COLOR}Ë vereinen, um die dunkle\pKraft freizusetzen.\nWenn es ihnen gelingt und sie das\pSiegel brechen…\nIch wage nicht, daran zu denken.\pBeeil dich, mit Jax dorthin zu gehen für\neinen letzten Versuch.\pDie Zukunft liegt in deinen Händen,\n{PLAYER}!
+- offset: '0x8d0933'
+  name: English toponym canonicalisation 0x8D0933
+  issue: DE — English toponyms
+  expected: 'Looker: <0xFC><0x01><0x08>…\p<0xFD><0x01>, du fragst dich sicher,\nwarum ich Jax nicht durchs Portal\lfolgte.\pEs machte mich misstrauisch, ich wich\nzurück und verlor eure Spur. Tut mir\lleid.\pIch dachte, ihr wärt zu den Ruins of Void teleportiert, und versuchte\lauch dorthin zu gelangen, doch ohne\leigenes Pokémon kam ich nicht hinein.\pSag mir, <0xFD><0x01>, was geschah euch\nhinter diesem Portal?\p…\pIch verstehe…\pDann sollten wir nach\n<0xFC><0x01><0x06>Viville<0xFC><0x01><0x08> gehen und den\lSchatten helfen.\pTreffen sie auf die Light of Ruin,\nkönnen wir eingreifen und alle\lverhaften.\pHilf ihnen bei der letzten Mission.\pNach dem Sieg erwarte ich dich\ndraußen mit einem Polizeiteam,\lum dem Wahnsinn ein Ende zu setzen.'
+- offset: '0x1eef808'
+  name: English toponym canonicalisation 0x1EEF808
+  issue: DE — English toponyms
+  expected: Man sagt, dass kürzlich {COLOR}Ériesenhafte{COLOR}Ç\nPokémon gesichtet wurden.\pFrüher dachte man, sie seien\nnur in den {COLOR}ÉHidden Grottos{COLOR}Ç zu finden.\pAber manche Trainer\nhaben einen Weg gefunden, diese\lKraft auch in normalen Kämpfen zu nutzen.
+- offset: '0x1ef6904'
+  name: English toponym canonicalisation 0x1EF6904
+  issue: DE — English toponyms
+  expected: Dieses kleine Ding heißt\n{COLOR}ÉZeitwender{COLOR}Ë, glaub ich…\pEs dreht die Zeit\num {COLOR}É12 Stunden{COLOR}Ë.\pAlso wird aus Nacht Tag,\nund aus Tag Nacht!\pZumindest die meiste Zeit,\nhoh, hoh…\pMan sagt, sein Schöpfer sammelte\nriesige Energie an einem Ort\lnamens…{PAUSE}î der Cave of Being…\pEnergie von einem Pokémon, das\ndie Zeit verzerren kann, namens…\lhmm, ja…{PAUSE}î Dialga.\pEs funktioniert nur, wenn sein\nTrainer eines gefangen und seine\lEnergie gesammelt hat… hoh, hoh.\p…\pHoh, hoh? Du hast es gefangen?\nUnd sogar aus dieser Höhle!\pDann kannst du es sicher\nbenutzen… hmm, ja.
+- offset: '0x1efddb3'
+  name: English toponym canonicalisation 0x1EFDDB3
+  issue: DE — English toponyms
+  expected: Ich sage dir genau, was ich\n{RIVAL} gesagt habe.\pDer einzige Weg zu den Ruins of Void ist, ein Boot zu nehmen\loder auf {COLOR}ÉRoute 14{COLOR}Ë zu surfen.
+- offset: '0x1f3853f'
+  name: English toponym canonicalisation 0x1F3853F
+  issue: DE — English toponyms
+  expected: Gut…{PAUSE} keine Zeit mehr.\nMit Zapdos in meinen Händen hat Zeph\pdas letzte Teil fürs Entfesselungsritual.\nJetzt…{PAUSE} öffne ein Portal zu den Ruins of Void, Hoopa.\pDu hast sicher noch Kraft dafür, selbst nach\nder Beschwörung eines so mächtigen Pokémon…\pSobald deine Kraft zurück ist, wird\nErschöpfung kein Problem mehr sein…\pSchöpf neue Kraft und komm dann auch dorthin.\nDu findest mich am Signal meines Cubes.\pUnd zur Erinnerung…{PAUSE}î bleib unauffällig.\nZeph hat noch treue Anhänger, die sich als…{PAUSE}\lProblem erweisen könnten.\pEr darf nichts wissen, sonst ist alles ruiniert.\nIch vertraue dir ein letztes Mal, Hoopa -\lvermassle es nicht!
+- offset: '0x1f41b1f'
+  name: English toponym canonicalisation 0x1F41B1F
+  issue: DE — English toponyms
+  expected: Du verlässt Daherapolis erst\njetzt? Na so was, du bist wirklich\plangsam! Während du getrödelt hast, habe ich\peinen Weg zu den Ruins of Void gefunden. Natürlich, als ich dort\lankam, war es zu spät, um\pirgendetwas zu\ntun…
+- offset: '0x1f49d19'
+  name: English toponym canonicalisation 0x1F49D19
+  issue: DE — English toponyms
+  expected: Es ist eigentlich ganz einfach.\pDein Hoopa hatte Hundemon\nin eine leere Höhle im Cinder Volcano geschickt, einen Ort ohne jede\lGefahr für ihn.\pDu hast mich danach auch dorthin geschickt.\nZusammen konnten wir fliehen.\pEinmal draußen, habe ich Fey kontaktiert,\nund sie beauftragte Agent Véga,\lmich hierher zu führen.\pEs scheint, sie wollte nie,\ndass du Zerstörung säst<0xB0>
+- offset: '0x1f4c2ed'
+  name: English toponym canonicalisation 0x1F4C2ED
+  issue: DE — English toponyms
+  expected: <0xFD><0x01>, meinen herzlichsten\nGlückwunsch!\pIch habe von der Neuigkeit gehört!\pZu denken, dass ich nach all dieser Zeit\nendlich den alten Arthur besiegt habe!\pHo ho ho!\pÄh… entschuldige.\pNun, kommen wir zum Grund\nmeines Besuchs.\pIch habe noch eine Mission, die ich dir\nanvertrauen möchte!\pDu dachtest, du wärst mit\ndenen durch, nicht wahr?\pHo ho ho!\pÄh… wie auch immer, seit du\nHoopa auf dem Gipfel von Crystal Peak besiegt hast, sind mysteriöse Portale\lüberall in Borrius aufgetaucht.\pWenn man sich ihnen nähert, sollen\nmächtige Pokémon erscheinen.\pAls Wächter von Borrius,\ndem Namen wie auch dem Rang nach, obliegt\les dir, über diese\lPokémon zu wachen.\pIch nehme an, dass in vielen Fällen, wenn du\ndas Pokémon fängst, das Portal\lendgültig verschwinden wird.\pAllerdings ist es unwahrscheinlich,\ndass sie für immer geschlossen bleiben…\pWie dem auch sei!\pFang die Pokémon, die sich in\ndiesen mysteriösen Portalen verstecken.\pManche Portale erscheinen nur\nmit bestimmten Pokémon, aber\ldie Pokémon, die sie beherbergen,\lmüssen trotzdem gefangen werden.\pUnd falls ein Portal sich weigert,\nnach dem Fang zu verschwinden,\lreicht es, es\lin deinem Pokédex zu registrieren.
+- offset: '0x1f55d51'
+  name: English toponym canonicalisation 0x1F55D51
+  issue: DE — English toponyms
+  expected: Diese TM wurde in der Grasecke\nneben dem Eingang des Frost Mountain gefunden.
+- offset: '0x1f70b84'
+  name: English toponym canonicalisation 0x1F70B84
+  issue: DE — English toponyms
+  expected: Trainer House Kämpft, so viel ihr wollt!
+- offset: '0x1fa5cc5'
+  name: English toponym canonicalisation 0x1FA5CC5
+  issue: DE — English toponyms
+  expected: Wir werden das\pGebiet scannen, um\nHinweise auf Pokémon zu\pfinden, die\nin der Cave of Being leben\lkönnten.
+- offset: '0x1fa96da'
+  name: English toponym canonicalisation 0x1FA96DA
+  issue: DE — English toponyms
+  expected: Nun, da wären wir! Der Lost Tunnel… Es ist ziemlich feucht hier… Es\pist auch sehr\ndunkel. Ich glaube nicht\peinmal, dass ein Pokémon\ndas hier erhellen könnte. Na gut, wir sollten\pbesser weitergehen!\pIrgendwo hier gibt es eine Leiter\nnach oben.
+- offset: '0x4192e2'
+  name: English toponym canonicalisation 0x4192E2
+  issue: DE — English toponyms
+  expected: Eine geheimnisvolle Höhle voller\ngefährlicher Pokémon.\nSo gefährlich, dass die POKÉMON-\nPokémon League sie überwacht.
+- offset: '0x7808dd'
+  name: English toponym canonicalisation 0x7808DD
+  issue: DE — English toponyms
+  expected: 9Epidimy Town\pDie Stadt des Glücks und der Freude.
+- offset: '0x78e7ac'
+  name: English toponym canonicalisation 0x78E7AC
+  issue: DE — English toponyms
+  expected: 9Great Desert
+- offset: '0x7b4787'
+  name: English toponym canonicalisation 0x7B4787
+  issue: DE — English toponyms
+  expected: 9Dresco Town Das Archipel der\n\pBorrius-Region.\n
+- offset: '0x7c16ab'
+  name: English toponym canonicalisation 0x7C16AB
+  issue: DE — English toponyms
+  expected: 9Epidimy town ist der Inbegriff\ndes Glücks!\p…\p…\pWas? Findest du das nicht lustig?\nTut mir leid…\pJetzt fühle ich mich schlecht…\pWeißt du was? Nimm das. Das wird\nmir guttun.
+- offset: '0xeb2fc7'
+  name: English toponym canonicalisation 0xEB2FC7
+  issue: DE — English toponyms
+  expected: Macht ein Pokémon schneller und\nleichter zu fangen im Safari Zone.
+- offset: '0x1eed170'
+  name: English toponym canonicalisation 0x1EED170
+  issue: DE — English toponyms
+  expected: Klettere einfach diesen Wasserfall hoch,\nund du stehst am Fuß des Crystal Peak.
+- offset: '0x1ef2a61'
+  name: English toponym canonicalisation 0x1EF2A61
+  issue: DE — English toponyms
+  expected: Ich heiße Krystal.\pJa… meine Eltern liebten diesen\nOrt sehr.\pAlso ist es nur natürlich, dass ich\ndie stärkste Trainerin geworden bin.\pWenn du alle anderen\nTrainer des Crystal Peak besiegst, lasse ich\ldich meinen Titel herausfordern.
+- offset: '0x1f0be99'
+  name: English toponym canonicalisation 0x1F0BE99
+  issue: DE — English toponyms
+  expected: 'Falls du es vergessen hast: der {COLOR}ÉCube{COLOR}Ç funktioniert wie eine Tasche, fasst aber anders als die 42er-Taschen im Poké Mart unendlich viel!\pEr digitalisiert die Gegenstände, du trägst also praktisch nichts extra!\pMit {START_BUTTON} sortierst du ihn sogar automatisch - praktisch, oder?\pScheint er trotzdem voll, nutz {L_BUTTON} und {R_BUTTON}, um schnell durchzublättern.\pOh, und leg ruhig das Abschiedsgeschenk hinein, das ich vorbereitet habe!'
+- offset: '0x1f12ff3'
+  name: English toponym canonicalisation 0x1F12FF3
+  issue: DE — English toponyms
+  expected: Grim Woods
+- offset: '0x1f13071'
+  name: English toponym canonicalisation 0x1F13071
+  issue: DE — English toponyms
+  expected: 'Hilf einem reichen Boss: schneide\ndas ganze Gras von Grim Woods für seine Crêperie.'
+- offset: '0x1f13463'
+  name: English toponym canonicalisation 0x1F13463
+  issue: DE — English toponyms
+  expected: Yo!\nWillkommen in Grim Woods!\pWir reißen alles ab,\nja?
+- offset: '0x1f1c8df'
+  name: English toponym canonicalisation 0x1F1C8DF
+  issue: DE — English toponyms
+  expected: Oh, du bist es !\nAngehender Champion !\pWie findest du das Wetter\nhier oben ?\pWillkommen in der Blizzard City !\pFangen wir mit etwas\nSprudel an.
+- offset: '0x1f1edba'
+  name: English toponym canonicalisation 0x1F1EDBA
+  issue: DE — English toponyms
+  expected: 'Tarmigan Mansion Somnia\nNachfolgerin : Maxima\pSiegreiche Trainer :\nJax'
+- offset: '0x1f1edf3'
+  name: English toponym canonicalisation 0x1F1EDF3
+  issue: DE — English toponyms
+  expected: 'Tarmigan Mansion Somnia\nNachfolgerin : Maxima\pSiegreiche Trainer :\nJax, {PLAYER}'
+- offset: '0x1f1ee30'
+  name: English toponym canonicalisation 0x1F1EE30
+  issue: DE — English toponyms
+  expected: 'Tarmigan Mansion Somnia\nNachfolgerin : Maxima\pSiegreiche Trainer :\nJax, {PLAYER}, {RIVAL}'
+- offset: '0x1f1f647'
+  name: English toponym canonicalisation 0x1F1F647
+  issue: DE — English toponyms
+  expected: Du bist fast da, {PLAYER} !\pDer finale Aufstieg zur Pokémon-\nPokémon League beginnt gleich !\pUnd so wie ich dich kenne, kommst du\nsicher heil an !\pDas kann ich von den Trainern, die\ndu unterwegs triffst, allerdings\lnicht behaupten…\pHa ha ha !
+- offset: '0x1f1f728'
+  name: English toponym canonicalisation 0x1F1F728
+  issue: DE — English toponyms
+  expected: '{PLAYER}, du hast die Pokémon-\nPokémon League erreicht !\pAlso, willst du Galavans Klatsch\nüber die Top Vier, was ?\pWenn du Zeit zum Plaudern hast, ist das\nZeit, den finalen Angriff besser\lvorzubereiten, oder ?\pKeine Sorge !\pDer alte Galavan steht die ganze\nZeit hinter dir, also los !\pHa ha ha !'
+- offset: '0x1f4b14c'
+  name: English toponym canonicalisation 0x1F4B14C
+  issue: DE — English toponyms
+  expected: 'In Borrius gibt es Tesson-Fans, die auch Meister der Fähigkeiten sind.\pSie sammeln Tessons: Können sie deinen Pokémon nützliche Techniken für die Pokémon League beibringen, zögere nicht, sie zu suchen.\pIch sollte zu meiner Forschung zurück.\pIch sehe derweil nach, ob Arthur eine Spur des Flüchtlings hat<0xB0>\pViel Glück, <0xFD><0x01>! Ich hoffe, du glänzt!'
+- offset: '0x1f51f11'
+  name: English toponym canonicalisation 0x1F51F11
+  issue: DE — English toponyms
+  expected: 'Da bist du ja, <0xFD><0x01>.\pIch<0xB0><0xFC><0x08><0x18> als ich hörte, du bist\nzur Pokémon League zurück<0xB0>\pdachte ich, das wäre meine\nChance, dich noch mal zu fordern.\pIch weiß selbst nicht recht, warum -\nwill ich Marlon beeindrucken, oder\lgar <0xFD><0x06>? Oder ist es etwas\nganz anderes<0xB0>?\pIch weiß es nicht, doch bin ich hier.\pWie dem auch sei: entgehe meiner\nHerausforderung nicht. Mach dich bereit!'
+- offset: '0x1f564d8'
+  name: English toponym canonicalisation 0x1F564D8
+  issue: DE — English toponyms
+  expected: Erhalte die Kraft der\nMega-Entwicklung im Tarmigan Mansion Somnia!
+- offset: '0x1f5c7a4'
+  name: English toponym canonicalisation 0x1F5C7A4
+  issue: DE — English toponyms
+  expected: Dieser Ort erinnert mich an die The Cliff Caves aus der Johto-Region.\pHä? Ich hätte mir was anderes\nausdenken können?\pWie was? The Cliff Caves Remastered?\nThe Cliff Caves Originalrezept?
+- offset: '0x1f5fea1'
+  name: English toponym canonicalisation 0x1F5FEA1
+  issue: DE — English toponyms
+  expected: Ich schwimme zur Pokémon-\nPokémon League.\pWohin schwimmst du?
+- offset: '0x1f5fee0'
+  name: English toponym canonicalisation 0x1F5FEE0
+  issue: DE — English toponyms
+  expected: Schwimmst du auch zur Pokémon-\nPokémon League?
+- offset: '0x1f5ff0d'
+  name: English toponym canonicalisation 0x1F5FF0D
+  issue: DE — English toponyms
+  expected: Machen wir ein Rennen?\pMal sehen, wer zuerst die Pokémon-\nPokémon League erreicht!
+- offset: '0x1f60f7e'
+  name: English toponym canonicalisation 0x1F60F7E
+  issue: DE — English toponyms
+  expected: 'Kennst du das Pantheon?\pDort kommt man rein, wenn man die Pokémon League besiegt hat!\pMeister Artie war so oft dort, dass er sich vornahm, es mit jedem Typ als Team zu betreten.\pSein Ziel erreichte er nie: nur 17 von 18 Typen schaffte er.\pVielleicht willst du das übernehmen?'
+- offset: '0x1f651cb'
+  name: English toponym canonicalisation 0x1F651CB
+  issue: DE — English toponyms
+  expected: Nach Süden gelangst du zum Auburn Waterway, einer Route, die die\lRouten 6 und 10 verbindet.\pDu brauchst {COLOR}ÉSurfer{COLOR}Ç, um\ndorthin zu gelangen.
+- offset: '0x1eefaca'
+  name: English toponym canonicalisation 0x1EEFACA
+  issue: DE — English toponyms
+  expected: Manche\nGegenstände sind nur zum Verkaufen da.\pWenn du einen\nfindest, verkauf ihn sofort.\pIch habe sogar gehört,\ndass Fanatiker sie noch\lteurer aufkaufen\lals die Poké Mart.
+- offset: '0x1f07e7e'
+  name: English toponym canonicalisation 0x1F07E7E
+  issue: DE — English toponyms
+  expected: Erhebt euch im Namen des\nKommunismus! Heile dich\n{STR_VAR_1}-mal in den Pokémon Center.
+- offset: '0x1f083f2'
+  name: English toponym canonicalisation 0x1F083F2
+  issue: DE — English toponyms
+  expected: Es lebe die Revolution!\pWenn du {COLOR}É{STR_VAR_1}{COLOR}Ç Einkäufe in den\nPoké Mart tätigst, wird das kommunistische\lSystem zusammenbrechen, und unsere\lkapitalistische Revolution kann beginnen.
+- offset: '0x1f288b0'
+  name: English toponym canonicalisation 0x1F288B0
+  issue: DE — English toponyms
+  expected: Ich kämpfe gerne in den Hidden Grottos\nmit Turtok, also wenn du mich dort\ltriffst, lass uns ein Team bilden\lund gemeinsam kämpfen!\pWir sind ein starkes Team.\pAber ich setze Turtok lieber nur\nim Notfall ein.
+- offset: '0x1f28a3d'
+  name: English toponym canonicalisation 0x1F28A3D
+  issue: DE — English toponyms
+  expected: Du siehst aus wie ein netter Trainer -\nlass uns eines Tages ein Team bilden!\pIch kämpfe gerne in den Hidden Grottos,\nalso wenn du mich dort siehst, wähl mich\laus, um mit dir zu kämpfen!\pIch fange gerne damit an, den Gegner\nzu schwächen, und sobald das erledigt ist,\lgeht's richtig los!\pYeah!
+- offset: '0x1f33e54'
+  name: English toponym canonicalisation 0x1F33E54
+  issue: DE — English toponyms
+  expected: Zeph?\pJa, hier ist Ivory.\pEs ist mir gelungen, eine Barriere\nauf der Route 9 von Blizzard City aus zu errichten.\p…\pVerstanden.\pIch komme sofort wieder runter.
+- offset: '0x1f370d2'
+  name: English toponym canonicalisation 0x1F370D2
+  issue: DE — English toponyms
+  expected: Gut, wenn Zapdos in Sicherheit ist,\nkönnen wir erstmal durchatmen.\pAch ja…{PAUSE} du machst doch die\nArena-Herausforderung, oder?\pDann solltest du zur {COLOR}ÉTarmigan Mansion{COLOR}Ë\ngehen.\pSie ist keine offizielle Arena, aber\nsieh sie als Arena 4,5!\pIch hörte, wenn du die Nachfolgerin der\nVilla besiegst, erhältst du eine\lunglaubliche neue Kraft!\pWelche? Ha ha, das würde die\nÜberraschung verderben!
+- offset: '0x1f4639b'
+  name: English toponym canonicalisation 0x1F4639B
+  issue: DE — English toponyms
+  expected: Ja, {PLAYER}, ich bin erleichtert zu\nsehen, dass du und Jax wohlauf\pseid. Ihr habt mir beiden\pgroße Sorgen bereitet! Auch wenn es euch\nnicht sehr lang vorkam, ist hier\lviel Zeit vergangen, während\lihr in der Distortion World wart.
+- offset: '0x1f54b5d'
+  name: English toponym canonicalisation 0x1F54B5D
+  issue: DE — English toponyms
+  expected: Diese TM wurde über dem\nTomb of Borrius mittels Klettern gefunden.
+- offset: '0x1f56353'
+  name: English toponym canonicalisation 0x1F56353
+  issue: DE — English toponyms
+  expected: Fordere die Arena von Blizzard City heraus!
+- offset: '0x1f5684d'
+  name: English toponym canonicalisation 0x1F5684D
+  issue: DE — English toponyms
+  expected: Entkomme aus der Distortion World!
+- offset: '0x1f578db'
+  name: English toponym canonicalisation 0x1F578DB
+  issue: DE — English toponyms
+  expected: Höhle gefunden über dem Tomb of Borrius nach\nKraxler.
+- offset: '0x1f70ce4'
+  name: English toponym canonicalisation 0x1F70CE4
+  issue: DE — English toponyms
+  expected: Flower Paradise\pEine Zuflucht für Blumen.
+- offset: '0x1f78ac8'
+  name: English toponym canonicalisation 0x1F78AC8
+  issue: DE — English toponyms
+  expected: Bist du hierhergekommen, um die\nKraft der {COLOR}ÉMega-Entwicklung{COLOR}Ë des\l{COLOR}ÉTarmigan Mansion{COLOR}Ë zu erhalten?\pDie meisten Leute, die herkommen,\nsind deswegen hier.\pDiese Stadt hat nicht viel zu\nbieten, außer natürlich\lfurchtbaren Albträumen.
+- offset: '0x1f78dc8'
+  name: English toponym canonicalisation 0x1F78DC8
+  issue: DE — English toponyms
+  expected: Da ist dieses verschlossene Haus\nin der Nähe des {COLOR}ÉTarmigan Mansion{COLOR}Ç seit\lsehr langer Zeit.\pIch glaube, das war früher ein Gasthaus\nfür Besucher dieser Stadt.\pAber es hat geschlossen, als die Gäste\nanfingen, furchtbare\lAlbträume zu haben.
+- offset: '0x1f78ea8'
+  name: English toponym canonicalisation 0x1F78EA8
+  issue: DE — English toponyms
+  expected: Es gibt ein verschlossenes Haus\nin der Nähe des Tarmigan Mansion seit\lsehr langer Zeit.\pAber jetzt ist es offen…
+- offset: '0x1f88e8e'
+  name: English toponym canonicalisation 0x1F88E8E
+  issue: DE — English toponyms
+  expected: Zygarde-Zelle am Strand nach\nder Icicle Cave.
+- offset: '0x1f899a3'
+  name: English toponym canonicalisation 0x1F899A3
+  issue: DE — English toponyms
+  expected: Zygarde-Zelle nach der versteckten\nAusgang des Tarmigan Mansion.
+- offset: '0x1f89d03'
+  name: English toponym canonicalisation 0x1F89D03
+  issue: DE — English toponyms
+  expected: Zygarde-Zelle zwischen Kakteen\nnahe dem Eingang des Tomb of Borrius.
+- offset: '0x1f9fc2a'
+  name: English toponym canonicalisation 0x1F9FC2A
+  issue: DE — English toponyms
+  expected: Finde die Rauflaub-Blätter,\ndie im Westen des Antisis Port versteckt sind,\nund schmuggle sie heimlich zu
+- offset: '0x7ce573'
+  name: English toponym canonicalisation 0x7CE573
+  issue: DE — English toponyms
+  expected: 9Na so was… Sieh mal einer\nan, {PLAYER}!\pDer Boss hat mir gesagt, ich soll dich\nnicht auf den Thundercap Mountain lassen, du\lkannst unsere Pläne nicht\nstören.\pSelbst wenn ich dich reinlassen würde,\nwärst du ohne die Macht der\lEvolution erledigt.\pSiehst du das nicht?\pDu solltest zu deinem eigenen\nBesten hierbleiben.
+- offset: '0x7d61ad'
+  name: English toponym canonicalisation 0x7D61AD
+  issue: DE — English toponyms
+  expected: MARLON!\pADEPT DER VERBOTENEN KUNST.\pDIE AUFERSTEHUNG.\pDIE SÜNDE.\pIHR KEHRT ZURÜCK, UNSTERBLICH,\nBIS DIE WELT GEREINIGT IST.\pNUR EIN ANDERER TRUG DIESE STRAFE\nUND DURCHSTREIFT SIE NOCH HEUTE,\lTAUSEND JAHRE SPÄTER!\pMACHT DAS WIEDER GUT!\pBEFREIT DIE SEELEN IM {COLOR}ÉCINDER VOLCANO{COLOR}Ë!\pBEVOR ES ZU SPÄT IST…\pDIES IST MEIN URTEIL!\pBEGINNT!
+- offset: '0x1ef99d3'
+  name: English toponym canonicalisation 0x1EF99D3
+  issue: DE — English toponyms
+  expected: Dieses Haus hier ist bekannt\nunter dem Namen <0xFC><0x01><0x06>Haus der Doppel-\lkämpfe<0xFC><0x01><0x08>.\pWie in den anderen Trainer Houses kannst du dort die\lTrainer so oft bekämpfen, wie du\lwillst.\pEs ist ein idealer Ort, um\ndeine Pokémon zu trainieren, wenn du\ldie Arena herausfordern willst.
+- offset: '0x1f605a2'
+  name: English toponym canonicalisation 0x1F605A2
+  issue: DE — English toponyms
+  expected: Meine beiden Freunde halten mich für\nverrückt, weil ich hier warte.\pAber was wissen die schon?\pSie starren sich den ganzen Tag\nam Fuß des Cinder Volcano an…
+- offset: '0x1f6424d'
+  name: English toponym canonicalisation 0x1F6424D
+  issue: DE — English toponyms
+  expected: Wenn ich ein Pokémon in einer\nHidden Grotto gefangen hätte, hätte ich gewonnen!
+- offset: '0x1f83765'
+  name: English toponym canonicalisation 0x1F83765
+  issue: DE — English toponyms
+  expected: Die Vorrichtung ist raffiniert.\pUm die Trainer auf die Probe zu stellen,\nhaben die Erbauer der Victory Road ein Rätsel eingebaut,\ldas man lösen muss,\lum weiterzukommen.\pSo werden all jene, denen der Mut fehlt,\nzur Umkehr gezwungen.
+- offset: '0x1f8b752'
+  name: English toponym canonicalisation 0x1F8B752
+  issue: DE — English toponyms
+  expected: Meine Damen und Herren, Jungen und\nMädchen…\pVerzeiht die Unterbrechung, aber ich,\nZirkusdirektorin Paula…\p…steige in den Ring, um unseren\nneuen Star zu testen!\pUnd ich muss sagen, junger Herausforderer:\nJeder Kampf mit dir war großartig!\pAber! Das Publikum im Battle Circus will etwas\nwirklich Besonderes sehen…\pDie stärksten Trainer! Die besten\nTaktiken! Die mächtigsten Pokémon!\pDeshalb sind für diesen Kampf\ndie Fähigkeiten versiegelt.\pAuch Attacken ohne direkten Schaden\nsind verboten, und die meisten\lItems wirkungslos!\pEin roher Kampf mit den stärksten\nPokémon - auch das ist eine Show!\pUnd jetzt, unsere ultimative Künstlerin!\pBiete uns noch eine große Show!
+- offset: '0x1f8f3d2'
+  name: English toponym canonicalisation 0x1F8F3D2
+  issue: DE — English toponyms
+  expected: Weißt du, was ich an den Kämpfen und diesem Battle Sands liebe?
+- offset: '0x1fa3d4b'
+  name: English toponym canonicalisation 0x1FA3D4B
+  issue: DE — English toponyms
+  expected: Ein kleiner Junge hat einen Albtraum!\nNehmt ein Boot zur Fullmoon Island und holt den Mondflügel.
+- offset: '0x1fa406a'
+  name: English toponym canonicalisation 0x1FA406A
+  issue: DE — English toponyms
+  expected: Ich brauche den\nMondflügel von Fullmoon Island, um ihm zu helfen.
+- offset: '0x1fa54ac'
+  name: English toponym canonicalisation 0x1FA54AC
+  issue: DE — English toponyms
+  expected: Das Pokémon geht zur {COLOR}ÉIcicle Cave{COLOR}Á.
+- offset: '0x1faa781'
+  name: English toponym canonicalisation 0x1FAA781
+  issue: DE — English toponyms
+  expected: Dieses Pokémon wurde tagsüber\noberhalb des Cinder Volcano gefunden, nachdem\nder Wasserfall hinaufgeschwommen wurde.

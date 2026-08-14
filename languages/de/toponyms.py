@@ -30,6 +30,7 @@ class Toponym:
     canonical: str
     anchors: tuple[int, ...]
     aliases: tuple[str, ...]
+    strict_presence: bool = True
 
 
 def load_catalog(path: Path = DEFAULT_CATALOG) -> tuple[Toponym, ...]:
@@ -39,6 +40,7 @@ def load_catalog(path: Path = DEFAULT_CATALOG) -> tuple[Toponym, ...]:
             canonical=item["canonical"],
             anchors=tuple(item.get("anchors", [])),
             aliases=tuple(item.get("aliases", [])),
+            strict_presence=item.get("strict_presence", True),
         )
         for item in raw["toponyms"]
     )
@@ -59,12 +61,27 @@ def _replace_alias(text: str, alias: str, canonical: str) -> str:
     # ``combined_*.txt`` stores line controls as the two literal characters
     # ``\\n``/``\\l``/``\\p``.  Their final letter is a word character, so a
     # plain ``(?<!\\w)`` boundary would miss a name beginning on the next line.
-    pattern = re.compile(
-        rf"(?:(?<=\\n)|(?<=\\l)|(?<=\\p)|(?<!\w))"
-        rf"{re.escape(alias)}(?!\w)",
-        re.IGNORECASE,
+    separator = r"(?:\s|\\[nlp]|<0x(?:FA|FB|FE)>)+"
+    alias_pattern = separator.join(re.escape(part) for part in alias.split())
+    pattern = re.compile(rf"{alias_pattern}(?!\w)", re.IGNORECASE)
+    control_boundaries = (
+        r"\n", r"\l", r"\p",
+        "}É", "}Á", "}Ç", "}Ë",
+        "ÀÉ", "ÀÁ", "ÀÇ", "ÀË",
     )
-    return pattern.sub(canonical, text)
+
+    def replace_if_bounded(match: re.Match[str]) -> str:
+        prefix = text[: match.start()]
+        if (
+            not prefix
+            or prefix == "9"
+            or not (prefix[-1].isalnum() or prefix[-1] == "_")
+            or prefix.endswith(control_boundaries)
+        ):
+            return canonical
+        return match.group(0)
+
+    return pattern.sub(replace_if_bounded, text)
 
 
 def _source_spelling(english_text: str, canonical: str) -> str | None:
@@ -135,4 +152,17 @@ def audit_combined(
         expected = restore_toponyms(en_text, de_text, records)
         if expected != de_text:
             violations.append(f"0x{offset:08X}: {de_text!r} -> {expected!r}")
+            continue
+        missing = sorted(
+            {
+                spelling
+                for record in records
+                if record.strict_presence
+                if (spelling := _source_spelling(en_text, record.canonical))
+                and _source_spelling(de_text, spelling) is None
+            }
+        )
+        if missing:
+            rendered = ", ".join(repr(name) for name in missing)
+            violations.append(f"0x{offset:08X}: missing canonical {rendered}")
     return violations
