@@ -65,6 +65,7 @@ def apply(rom: bytearray, source_rom: bytes) -> dict[str, int]:
     """Écrit les 95 cellules connues et refuse toute préimage corrompue."""
     if len(rom) != len(source_rom):
         raise ValueError("les ROM source et cible doivent avoir la même taille")
+    candidate = bytearray(rom)
     stats = {"written": 0, "unchanged": 0, "preserved": 0}
     for index in range(FIRST_CLASS_INDEX, CLASS_COUNT):
         offset = TABLE_BASE + index * CELL_STRIDE
@@ -73,7 +74,7 @@ def apply(rom: bytearray, source_rom: bytes) -> dict[str, int]:
             stats["preserved"] += 1
             continue
         source_cell = source_rom[offset : offset + CELL_STRIDE]
-        current = bytes(rom[offset : offset + CELL_STRIDE])
+        current = bytes(candidate[offset : offset + CELL_STRIDE])
         if current == target:
             stats["unchanged"] += 1
             continue
@@ -81,8 +82,10 @@ def apply(rom: bytearray, source_rom: bytes) -> dict[str, int]:
             raise ValueError(
                 f"classe Dresseur {index} inattendue à 0x{offset:X}: {current.hex()}"
             )
-        rom[offset : offset + CELL_STRIDE] = target
+        candidate[offset : offset + CELL_STRIDE] = target
         stats["written"] += 1
+    if stats["written"]:
+        rom[:] = candidate
     return stats
 
 

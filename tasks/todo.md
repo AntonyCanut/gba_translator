@@ -2116,19 +2116,24 @@ d’annulation dans le reste du jeu.
 
 ## Revue
 
-- Six étapes DE dédiées couvrent désormais le titre et l'onglet Missions, le
-  libellé courrier PC, les statistiques Pokédex, les classes de Dresseurs et
-  les noms de zones. Tous les patchs refusent une préimage inconnue, créent une
+- Six étapes DE dédiées couvrent désormais le titre et les onglets Missions,
+  le libellé courrier PC, les statistiques Pokédex, les classes de Dresseurs et
+  les noms de zones. L'onglet résiduel `All` devient `Alle` dans une cellule
+  morte vérifiée, tandis que le suffixe runtime est neutralisé. Tous les patchs
+  refusent une préimage inconnue, valident sur une copie atomique, créent une
   sauvegarde avant écriture et sont idempotents.
 - Les zones repointent explicitement vers les cellules anglaises originales :
   `Blizzard City`, `Antisis Port`, `Crater Town` et `Cinder Volcano West`.
 - La matrice justifie les exclusions `floor_indicators`, `nickname_prompt`,
   `money_amount_order`, `party_cancel_button`, `party_lv_label` et
   `summary_lv_labels`; les deux patchs de carte DE déjà présents restent actifs.
-- Les gardes ciblées et la preuve sur ROM construite passent avec 20 tests
-  (134 avec dispatch/parité), puis 1 778 tests Python et 68 tests Vitest passent
-  via le hook. Les builds FR, IT et DE aboutissent sans collision.
+- Les gardes ciblées et la preuve sur ROM construite passent avec 21 tests
+  (171 avec dispatch/parité/graphismes), puis 1 855 tests Python passent dans la suite
+  rapide et 68 tests Vitest passent. Les builds FR, IT et DE aboutissent sans
+  collision.
 - Deux builds DE `BUILD_NUMBER=0` produisent le même SHA-256
-  `82df99d07cc4aea450211795b24626e4e9b7e8d3377ebefcefdc9bb61dd78989`.
-  La ROM FR reconstruite est octet-identique à l'artefact livré ; un build IT
-  avant/après F-602 est aussi octet-identique (`6df94bf6…bb42c`).
+  `6abbfea682ff02910b25d34e5ba6a2a61fc25b2eca714ceb9d6e7da2fa393053` après
+  rebase sur les tickets DE parallèles.
+  Après rebase, les builds FR et IT passent aussi ; le diff F-602 reste borné
+  à `languages/de`, aux gardes DE et à cette revue, sans source ni étape de
+  pipeline FR/IT modifiée.

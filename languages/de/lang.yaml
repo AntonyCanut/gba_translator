@@ -213,7 +213,7 @@ patches:
   - worldmap_labels
   - zone_names           # restaure les cinq noms de zones originaux EN
   - world_map_action_labels
-  - mission_tab_labels   # supprime le suffixe runtime « Missionen »
+  - mission_tab_labels   # « All » → « Alle » et supprime le suffixe runtime
   - mission_titles       # « The Food Thief » → « Der Essensdieb » in-place
   - mission_descriptions
   - worldmap_junction_panels

@@ -93,11 +93,27 @@ def test_mission_tab_suffix_is_removed_through_its_live_pointer() -> None:
     suffix = TextEncoder.encode("Missionen", "pokemon")
     struct.pack_into("<I", rom, mod.SUFFIX_PTR_OFFSET, ROM_BASE + target)
     rom[target : target + len(suffix)] = suffix
+    rom[
+        mod.ALL_INLINE_OFFSET : mod.ALL_INLINE_OFFSET + len(mod.ENGLISH_ALL_CELL)
+    ] = mod.ENGLISH_ALL_CELL
+    rom[
+        mod.ALL_RELOCATION_OFFSET :
+        mod.ALL_RELOCATION_OFFSET + len(mod.ENGLISH_COMPLETED_CELL)
+    ] = mod.ENGLISH_COMPLETED_CELL
+    completed = 0x1F11000
+    completed_text = TextEncoder.encode("Abgeschlossen", "pokemon")
+    rom[completed : completed + len(completed_text)] = completed_text
+    struct.pack_into("<I", rom, mod.ALL_TAB_PTR_OFFSET, ROM_BASE + mod.ALL_INLINE_OFFSET)
+    struct.pack_into("<I", rom, mod.COMPLETED_TAB_PTR_OFFSET, ROM_BASE + completed)
 
     changed = mod.apply(rom)
 
-    assert changed == 1
+    assert changed == 2
     assert rom[target] == 0xFF
+    assert struct.unpack_from("<I", rom, mod.ALL_TAB_PTR_OFFSET)[0] == (
+        ROM_BASE + mod.ALL_RELOCATION_OFFSET
+    )
+    assert _decode(rom, mod.ALL_RELOCATION_OFFSET) == "Alle"
     first = bytes(rom)
     assert mod.apply(rom) == 0
     assert bytes(rom) == first
@@ -112,6 +128,28 @@ def test_mission_tab_suffix_rejects_an_unrelated_string() -> None:
     rom[target : target + len(payload)] = payload
 
     with pytest.raises(ValueError, match="Suffix"):
+        mod.apply(rom)
+
+
+def test_mission_tab_rejects_reusing_a_live_completed_cell() -> None:
+    mod = _module("mission_tab_labels")
+    rom = bytearray(b"\x00" * 0x2000000)
+    empty_suffix = 0x1F12000
+    struct.pack_into("<I", rom, mod.SUFFIX_PTR_OFFSET, ROM_BASE + empty_suffix)
+    rom[empty_suffix] = 0xFF
+    rom[
+        mod.ALL_INLINE_OFFSET : mod.ALL_INLINE_OFFSET + len(mod.ENGLISH_ALL_CELL)
+    ] = mod.ENGLISH_ALL_CELL
+    rom[
+        mod.ALL_RELOCATION_OFFSET :
+        mod.ALL_RELOCATION_OFFSET + len(mod.ENGLISH_COMPLETED_CELL)
+    ] = mod.ENGLISH_COMPLETED_CELL
+    struct.pack_into("<I", rom, mod.ALL_TAB_PTR_OFFSET, ROM_BASE + mod.ALL_INLINE_OFFSET)
+    struct.pack_into(
+        "<I", rom, mod.COMPLETED_TAB_PTR_OFFSET, ROM_BASE + mod.ALL_RELOCATION_OFFSET
+    )
+
+    with pytest.raises(ValueError, match="Completed"):
         mod.apply(rom)
 
 
@@ -171,11 +209,14 @@ def test_pokedex_stats_use_bounded_german_abbreviations() -> None:
 def test_pokedex_stats_reject_unknown_entry_bytes() -> None:
     mod = _module("pokedex_stat_labels")
     rom = _pokedex_rom(mod)
-    first = struct.unpack_from("<I", rom, mod.PTR_TABLE_OFFSETS[0])[0] - ROM_BASE
-    rom[first : first + 7] = b"BROKEN!"
+    last_site = mod.PTR_TABLE_OFFSETS[-1] + (len(mod.STAT_ORDER) - 1) * 4
+    last = struct.unpack_from("<I", rom, last_site)[0] - ROM_BASE
+    rom[last : last + 7] = b"BROKEN!"
+    before = bytes(rom)
 
     with pytest.raises(ValueError, match="inattendus"):
         mod.apply(rom)
+    assert bytes(rom) == before
 
 
 def test_trainer_classes_patch_every_available_german_cell_strictly() -> None:
@@ -207,11 +248,13 @@ def test_trainer_classes_reject_a_corrupted_source_cell() -> None:
     mod = _module("trainer_class_names")
     source = (ROOT / "input/roms/englishrom.gba").read_bytes()
     rom = bytearray(source)
-    offset = mod.TABLE_BASE + mod.FIRST_TRANSLATED_INDEX * mod.CELL_STRIDE
+    offset = mod.TABLE_BASE + max(mod.TARGET_CELLS) * mod.CELL_STRIDE
     rom[offset : offset + mod.CELL_STRIDE] = b"X" * mod.CELL_STRIDE
+    before = bytes(rom)
 
     with pytest.raises(ValueError, match="classe Dresseur"):
         mod.apply(rom, source)
+    assert bytes(rom) == before
 
 
 def test_zone_names_restore_english_strings_and_known_referrers() -> None:
@@ -240,14 +283,22 @@ def test_zone_names_reject_an_unknown_relocated_preimage() -> None:
     mod = _module("zone_names")
     source = (ROOT / "input/roms/englishrom.gba").read_bytes()
     rom = bytearray(source)
-    translated = 0x1F10000
+    valid_target = 0x1F10000
+    valid = TextEncoder.encode("Hafen von Antésia", "pokemon")
+    rom[valid_target : valid_target + len(valid)] = valid
+    valid_site = mod.POINTER_SITES[0x0B51EAC][0]
+    struct.pack_into("<I", rom, valid_site, ROM_BASE + valid_target)
+
+    translated = 0x1F10100
     bad = TextEncoder.encode("Nom inventé", "pokemon")
     rom[translated : translated + len(bad)] = bad
-    slot = mod.POINTER_SITES[0x0B51EAC][0]
+    slot = mod.POINTER_SITES[0x078D7C8][0]
     struct.pack_into("<I", rom, slot, ROM_BASE + translated)
+    before = bytes(rom)
 
     with pytest.raises(ValueError, match="pointeur de zone"):
         mod.apply(rom, source)
+    assert bytes(rom) == before
 
 
 @pytest.mark.rom
@@ -282,6 +333,17 @@ def test_built_de_rom_contains_every_port_and_is_idempotent() -> None:
     assert _decode(rom, mission_title.TITLE_OFFSET) == "Der Essensdieb"
     suffix = struct.unpack_from("<I", rom, mission_tabs.SUFFIX_PTR_OFFSET)[0] - ROM_BASE
     assert rom[suffix] == 0xFF
+    all_tab = struct.unpack_from("<I", rom, mission_tabs.ALL_TAB_PTR_OFFSET)[0] - ROM_BASE
+    assert all_tab == mission_tabs.ALL_RELOCATION_OFFSET
+    assert _decode(rom, all_tab) == "Alle"
+    expected_tabs = {
+        mission_tabs.ACTIVE_TAB_PTR_OFFSET: "Aktiv",
+        mission_tabs.INACTIVE_TAB_PTR_OFFSET: "Inaktiv",
+        mission_tabs.COMPLETED_TAB_PTR_OFFSET: "Abgeschlossen",
+    }
+    for pointer_site, expected in expected_tabs.items():
+        target = struct.unpack_from("<I", rom, pointer_site)[0] - ROM_BASE
+        assert _decode(rom, target) == expected
     assert _decode(rom, pc_labels.MAIL_OFFSET) == "Zum Beutel"
     for offset, expected in zones.ENGLISH_NAMES.items():
         assert _decode(rom, offset) == expected

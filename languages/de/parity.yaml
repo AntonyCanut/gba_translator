@@ -95,7 +95,7 @@ de_only_build_steps:
   - {source: hp_labels, classification: lz77_graphic, status: excluded, reason: Déjà couvert directement par la recette DE.}
   - {source: menu_sprites, classification: lz77_graphic, status: excluded, reason: Assets menus et monde couverts directement par la recette DE.}
   - {source: move_names, classification: fixed_table, status: excluded, reason: Déjà couvert directement par la recette DE.}
-  - {source: mission_tab_labels, classification: fixed_table, status: excluded, reason: Port DE du module dédié FR exécuté hors descripteur FR.}
+  - {source: mission_tab_labels, classification: fixed_table, status: excluded, reason: Port DE du module dédié FR; il traduit All en Alle et neutralise le suffixe runtime.}
   - {source: nature_names, classification: fixed_table, status: excluded, reason: Déjà couvert directement par la recette DE.}
   - {source: options_footer, classification: fixed_table, status: excluded, reason: Déjà couvert directement par la recette DE.}
   - {source: pc_messages, classification: fixed_table, status: excluded, reason: Déjà couvert directement par la recette DE.}
