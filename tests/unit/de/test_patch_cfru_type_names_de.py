@@ -17,7 +17,6 @@ ROOT = Path(__file__).resolve().parent.parent.parent.parent
 sys.path.insert(0, str(ROOT / "scripts"))
 sys.path.insert(0, str(ROOT))
 
-from src.text.charmap_data import CHAR_TO_BYTE  # noqa: E402
 from languages.de.patches import cfru_type_names as mod  # noqa: E402
 
 CONDITION_PATCHES = mod.CONDITION_PATCHES
@@ -73,6 +72,16 @@ class TestCfruTypeNamesDe(unittest.TestCase):
     def test_ice_type_is_eis(self):
         de_by_offset = {off: de for off, _en, de in TYPE_PATCHES}
         self.assertEqual(de_by_offset[ICE_OFFSET], "EIS")
+
+    def test_constrained_type_cells_use_stable_official_stems(self):
+        de_by_english = {en: de for _off, en, de in TYPE_PATCHES}
+        self.assertEqual(de_by_english["ROCK"], "GES")
+        self.assertEqual(de_by_english["BUG"], "KÄF")
+        self.assertEqual(de_by_english["FIRE"], "FEU")
+        self.assertEqual(de_by_english["WATER"], "WAS")
+        self.assertEqual(de_by_english["GRASS"], "PFL")
+        self.assertEqual(de_by_english["DARK"], "UNL")
+        self.assertEqual(CONDITION_PATCHES, [(0x3FE846, "ice", "gef")])
 
     def test_applies_from_english_and_is_idempotent(self):
         n, patched = _apply_on(_seed_rom())

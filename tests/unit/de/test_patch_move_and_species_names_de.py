@@ -16,7 +16,7 @@ from languages.fr.patches import move_names as base_move_names  # noqa: E402
 from languages.fr.patches import species_names as base_species_names  # noqa: E402
 
 
-def test_move_names_loads_fallback_for_missing_early_moves():
+def test_move_names_loads_cfru_aligned_official_names():
     translations = de_move_names.load_translations()
 
     pound = base_move_names.LEGACY_TABLE_OFFSET + 1 * base_move_names.MOVE_STRIDE
@@ -24,8 +24,8 @@ def test_move_names_loads_fallback_for_missing_early_moves():
     brick_break = base_move_names.LEGACY_TABLE_OFFSET + 280 * base_move_names.MOVE_STRIDE
 
     assert translations[pound] == "Klaps"
-    assert translations[karate_chop] == "Karateschl"
-    assert translations[brick_break] == "Ziegelbruch"
+    assert translations[karate_chop] == "Karateschlag"
+    assert translations[brick_break] == "Durchbruch"
     assert de_move_names._fits_cell(translations[brick_break])
 
 
@@ -47,8 +47,8 @@ def test_species_names_uses_fallback_when_combined_entry_is_too_long():
     assert de_species_names._fits_cell(translations[yungoos])
 
 
-def test_fallback_tables_are_cell_width_safe():
-    for name in de_move_names._load_fallback().values():
+def test_glossary_display_names_are_cell_width_safe():
+    for name in de_move_names.load_translations().values():
         assert de_move_names._fits_cell(name), name
     for name in de_species_names._load_fallback().values():
         assert de_species_names._fits_cell(name), name

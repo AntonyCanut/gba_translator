@@ -10,10 +10,11 @@ offset, independently of the pointer table repointed by the main pipeline.
 Unlike French, almost none of the 18 CFRU type words happen to already match
 their German spelling (only NORMAL is identical), so every type is patched
 here (French only needed to patch the handful where FR and EN differ). Each
-slot is only as wide as the *English* original, so official German type names
-longer than their slot are abbreviated (documented per-entry below).
+slot is only as wide as the *English* original. The stable constrained form
+uses three-letter stems of the official German names, never an improvised
+synonym or a term inherited from another language.
 
-Also fixes the frozen-status condition word "ice" -> "fro" (Frost) at
+Also fixes the frozen-status condition word "ice" -> "gef" (Gefroren) at
 0x3FE846 (same 3-byte slot, direct in-place patch; unrelated to the "GEF"
 battle-HUD abbreviation from patch_status_abbrevs_fr.py / lang.yaml
 status_abbrev, which lives in a different table entirely).
@@ -40,33 +41,30 @@ def encode(text: str) -> bytes:
 # DE name must be <= len(EN_name) bytes to fit in-place. NORMAL is omitted:
 # the German word is spelled identically, so the slot needs no change.
 TYPE_PATCHES: list[tuple[int, str, str]] = [
-    (0x3FE8A2, "FIGHTING", "KAMPF"),    # 8 -> 5 chars
-    (0x3FE8B2, "FLYING",   "FLUG"),     # 6 -> 4 chars
-    (0x3FE8C0, "POISON",   "GIFT"),     # 6 -> 4 chars
-    (0x3FE8CE, "GROUND",   "BODEN"),    # 6 -> 5 chars
-    (0x3FE8DC, "ROCK",     "FELS"),     # 4 -> 4 exact fit (Fels = rock/boulder)
-    (0x3FE8E8, "BUG",      "KÄF"),      # 3 -> 3 exact fit (abbrev of Käfer)
-    (0x3FE8F3, "GHOST",    "GEIST"),    # 5 -> 5 exact fit
-    (0x3FE900, "STEEL",    "STAHL"),    # 5 -> 5 exact fit
-    (0x3FE918, "FIRE",     "FEUR"),     # 4 -> 4 exact fit (abbrev of Feuer)
-    (0x3FE924, "WATER",    "WASS"),     # 5 -> 4 chars (abbrev of Wasser)
-    (0x3FE931, "GRASS",    "PFLAN"),    # 5 -> 5 exact fit (abbrev of Pflanze)
-    (0x3FE93F, "ELECTRIC", "ELEKTRO"),  # 8 -> 7 chars
-    (0x3FE94F, "PSYCHIC",  "PSYCHO"),   # 7 -> 6 chars
-    (0x3FE95F, "ICE",      "EIS"),      # 3 -> 3 exact fit
-    (0x3FE96A, "DRAGON",   "DRACHE"),   # 6 -> 6 exact fit
-    (0x3FE978, "DARK",     "BÖSE"),     # 4 -> 4 exact fit
-    # NOTE: Dark is "Böse" here (the Gen 3-era German localisation term this
-    # base game shipped with), not the modern "Unlicht" renamed in Gen 6+ —
-    # matches the vintage of the FireRed/CFRU engine Unbound builds on.
+    (0x3FE8A2, "FIGHTING", "KAM"),
+    (0x3FE8B2, "FLYING",   "FLU"),
+    (0x3FE8C0, "POISON",   "GIF"),
+    (0x3FE8CE, "GROUND",   "BOD"),
+    (0x3FE8DC, "ROCK",     "GES"),
+    (0x3FE8E8, "BUG",      "KÄF"),
+    (0x3FE8F3, "GHOST",    "GEI"),
+    (0x3FE900, "STEEL",    "STA"),
+    (0x3FE918, "FIRE",     "FEU"),
+    (0x3FE924, "WATER",    "WAS"),
+    (0x3FE931, "GRASS",    "PFL"),
+    (0x3FE93F, "ELECTRIC", "ELE"),
+    (0x3FE94F, "PSYCHIC",  "PSY"),
+    (0x3FE95F, "ICE",      "EIS"),
+    (0x3FE96A, "DRAGON",   "DRA"),
+    (0x3FE978, "DARK",     "UNL"),
 ]
 
-# Frozen-status condition word: "ice" -> "fro" (Frost) at 0x3FE846 (3 chars,
+# Frozen-status condition word: "ice" -> "gef" (Gefroren) at 0x3FE846 (3 chars,
 # exact fit). This is a generic condition NOUN used inline in body text
 # ("... is <condition> ..."), distinct from the 3-4 letter battle-HUD status
 # abbreviations (GIF/VBR/GEF/SCH/PAR/KO) configured in languages/de/lang.yaml.
 CONDITION_PATCHES: list[tuple[int, str, str]] = [
-    (0x3FE846, "ice", "fro"),
+    (0x3FE846, "ice", "gef"),
 ]
 
 

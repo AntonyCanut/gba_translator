@@ -18,11 +18,9 @@ German differs from French in three extra ways:
     German set also redraws POISON→GIFT, DRAGON→DRACHE and ELECTR→ELEKTR — three
     badges the French port left untouched because their French names coincided
     with the English art.  NORMAL is identical in German and is left alone.
-  * German needs four glyphs absent from the English badge font (K, D, W, Z); D
-    is lifted pixel-for-pixel from the English DARK/DRAGON art, the other three
-    are hand-drawn in the same 7px style.
-  * Umlauts have no badge glyph (the pill font is ASCII-only), so « Käfer » is
-    written « KAEFER » (the standard ae transliteration).
+  * German needs K, D, W, Z and Ä glyphs absent from the English badge font.
+  * Long official names use zero inter-letter spacing when required; the redraw
+    keeps PFLANZE and ELEKTRO intact instead of inventing abbreviations.
 
 Only types whose German name differs from the English art are redrawn; NORMAL
 and the ??? icon already read correctly and are left untouched.  Idempotent:
@@ -66,15 +64,12 @@ def _tileoff(base: int, icon: str) -> int:
     return TILEOFF_OVERRIDE.get(base, {}).get(icon, TILEOFF[icon])
 
 
-# German type names (uppercase, no umlaut — the badge font is ASCII-only).
-# Seven-letter names that would overflow the 32-px pill are abbreviated:
-#   « PFLANZE » (Grass) -> « PFLANZ »,  « Elektro » -> « ELEKTR »
-# « KAEFER » transliterates « Käfer » (Bug).  « GESTEIN » and « UNLICHT » fit the
-# pill exactly (32 px).  NORMAL is unchanged from the English art and is omitted.
+# Official German type names. Long words are compacted by spacing, not renamed.
+# NORMAL is unchanged from the English art and is omitted.
 DE_NAME = {
     "Fight": "KAMPF", "Flying": "FLUG", "Poison": "GIFT", "Ground": "BODEN",
-    "Rock": "GESTEIN", "Bug": "KAEFER", "Ghost": "GEIST", "Steel": "STAHL",
-    "Fire": "FEUER", "Water": "WASSER", "Grass": "PFLANZ", "Electric": "ELEKTR",
+    "Rock": "GESTEIN", "Bug": "KÄFER", "Ghost": "GEIST", "Steel": "STAHL",
+    "Fire": "FEUER", "Water": "WASSER", "Grass": "PFLANZE", "Electric": "ELEKTRO",
     "Psychic": "PSYCHO", "Ice": "EIS", "Dragon": "DRACHE", "Dark": "UNLICHT",
     "Fairy": "FEE",
 }
@@ -94,6 +89,7 @@ _TEXT_ROWS = range(10, 18)
 # verbatim from the English DARK/DRAGON art.
 _FONT = {
     "A": ["0110", "1001", "1001", "1111", "1001", "1001", "1001"],
+    "Ä": ["1001", "0110", "1001", "1111", "1001", "1001", "1001"],
     "B": ["1110", "1001", "1001", "1110", "1001", "1001", "1110"],
     "C": ["0110", "1001", "1000", "1000", "1001", "1001", "0110"],
     "D": ["1110", "1001", "1001", "1001", "1001", "1001", "1110"],
@@ -123,8 +119,14 @@ def _glyph_w(ch: str) -> int:
     return len(_FONT[ch][0])
 
 
+def _letter_spacing(name: str) -> int:
+    """Conserve l'espacement du jeu, ou compacte d'un pixel si nécessaire."""
+    normal_width = sum(_glyph_w(c) for c in name) + (len(name) - 1)
+    return 1 if normal_width <= 32 else 0
+
+
 def _name_width(name: str) -> int:
-    return sum(_glyph_w(c) for c in name) + (len(name) - 1)
+    return sum(_glyph_w(c) for c in name) + _letter_spacing(name) * (len(name) - 1)
 
 
 def _read_icon(rom: bytearray, base: int, tileoff: int) -> list[list[int]]:
@@ -166,7 +168,7 @@ def _stamp_name(g: list[list[int]], name: str, pill: int) -> None:
                     px, py = x + gx, _TEXT_TOP + gy
                     if 0 <= px < 32 and py < 24:
                         g[py][px] = _FILL
-        x += w + 1
+        x += w + _letter_spacing(name)
     # drop shadow: pill pixel just below/right of a fill becomes the shadow colour
     for r in _TEXT_ROWS:
         for c in range(32):

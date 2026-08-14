@@ -1,0 +1,147 @@
+schema_version: 1
+frozen_on: '2026-08-14'
+
+# Les URL et la révision sont figées : une mise à jour amont ne change jamais
+# silencieusement la terminologie d'une ROM reconstruite.
+sources:
+  pokemon_type_chart:
+    label: Tableau des types Pokémon officiel allemand
+    url: https://assets.pokemon.com/assets/cms2-de-de/pdf/video-game/Link_Battle_Type_Chart_DE.pdf
+  pokeapi:
+    label: Noms localisés extraits des jeux Pokémon
+    repository: https://github.com/PokeAPI/pokeapi
+    commit: c0a9bc75af3a455cdfa27dde21e4ec95aedd3f25
+    move_names: https://raw.githubusercontent.com/PokeAPI/pokeapi/c0a9bc75af3a455cdfa27dde21e4ec95aedd3f25/data/v2/csv/move_names.csv
+    ability_names: https://raw.githubusercontent.com/PokeAPI/pokeapi/c0a9bc75af3a455cdfa27dde21e4ec95aedd3f25/data/v2/csv/ability_names.csv
+    item_names: https://raw.githubusercontent.com/PokeAPI/pokeapi/c0a9bc75af3a455cdfa27dde21e4ec95aedd3f25/data/v2/csv/item_names.csv
+    nature_names: https://raw.githubusercontent.com/PokeAPI/pokeapi/c0a9bc75af3a455cdfa27dde21e4ec95aedd3f25/data/v2/csv/nature_names.csv
+    type_names: https://raw.githubusercontent.com/PokeAPI/pokeapi/c0a9bc75af3a455cdfa27dde21e4ec95aedd3f25/data/v2/csv/type_names.csv
+    stat_names: https://raw.githubusercontent.com/PokeAPI/pokeapi/c0a9bc75af3a455cdfa27dde21e4ec95aedd3f25/data/v2/csv/stat_names.csv
+  pokewiki:
+    label: Contre-vérification allemande des termes et objets historiques
+    url: https://www.pokewiki.de/
+
+constrained_cells:
+  fallback_languages: []
+  rule: >-
+    Employer le nom officiel s'il tient. Sinon conserver l'entrée CFRU,
+    tronquer à max_glyphs-1 glyphes et ajouter un point. Ne jamais remplacer
+    par l'entrée de même index d'une autre nomenclature ni par du français.
+  move_names: {cell_bytes: 13, max_glyphs: 12}
+  item_names: {cell_bytes: 14, max_glyphs: 13}
+  ability_names: {cell_bytes: 17, max_glyphs: 16}
+  cfru_type_names:
+    max_glyphs: 3
+    display: {Fighting: KAM, Flying: FLU, Poison: GIF, Ground: BOD, Rock: GES, Bug: KÄF, Ghost: GEI, Steel: STA, Fire: FEU, Water: WAS, Grass: PFL, Electric: ELE, Psychic: PSY, Ice: EIS, Dragon: DRA, Dark: UNL}
+
+bulk_tables:
+  move_names:
+    canonical_file: languages/de/data/move_names_de_official.json
+    entries: 894
+  ability_names:
+    canonical_source: languages/de/combined_de.txt
+    table: {offset: '0xA36398', stride: 17, entries: 293}
+  item_names:
+    canonical_source: languages/de/patches/item_names.py
+    table: {offset: '0x876074', stride: 44, name_bytes: 14}
+
+types:
+  Normal: Normal
+  Fighting: Kampf
+  Flying: Flug
+  Poison: Gift
+  Ground: Boden
+  Rock: Gestein
+  Bug: Käfer
+  Ghost: Geist
+  Steel: Stahl
+  Fire: Feuer
+  Water: Wasser
+  Grass: Pflanze
+  Electric: Elektro
+  Psychic: Psycho
+  Ice: Eis
+  Dragon: Drache
+  Dark: Unlicht
+  Fairy: Fee
+
+natures:
+  Hardy: Robust
+  Lonely: Solo
+  Brave: Mutig
+  Adamant: Hart
+  Naughty: Frech
+  Bold: Kühn
+  Docile: Sanft
+  Relaxed: Locker
+  Impish: Pfiffig
+  Lax: Lasch
+  Timid: Scheu
+  Hasty: Hastig
+  Serious: Ernst
+  Jolly: Froh
+  Naive: Naiv
+  Modest: Mäßig
+  Mild: Mild
+  Quiet: Ruhig
+  Bashful: Zaghaft
+  Rash: Hitzig
+  Calm: Still
+  Gentle: Zart
+  Sassy: Forsch
+  Careful: Sacht
+  Quirky: Kauzig
+
+statuses:
+  poison: {name: Vergiftung, badge: GIF}
+  burn: {name: Verbrennung, badge: VBR}
+  freeze: {name: Gefroren, badge: GEF}
+  paralysis: {name: Paralyse, badge: PAR}
+  sleep: {name: Schlaf, badge: SCH}
+  faint: {name: Kampfunfähig, badge: KO}
+
+stats:
+  HP: KP
+  Attack: Angriff
+  Defense: Verteidigung
+  Special Attack: Spezialangriff
+  Special Defense: Spezialverteidigung
+  Speed: Initiative
+  accuracy: Genauigkeit
+  evasion: Fluchtwert
+
+system_terms:
+  move: Attacke
+  ability: Fähigkeit
+  item: Item
+  nature: Wesen
+  type: Typ
+  status: Status
+  trainer: Trainer
+  party: Team
+  bag: Beutel
+
+ability_corrections:
+  Own Tempo: Tempomacher
+  Poison Heal: Aufheber
+  Tangled Feet: Fußangel
+  Battle Bond: Freundschaftsakt
+  Prism Armor: Prismarüstung
+  Electric Surge: Elektro-Erzeuger
+  Symbiosis: Nutznießer
+  Vital Spirit: Munterkeit
+
+# `display` reste dans le dictionnaire du patch ; `official` documente le nom
+# intégral lorsqu'une cellule de 13 glyphes impose une forme contrainte.
+item_official_names:
+  Focus Band: Fokusband
+  Sharp Beak: Spitzer Schnabel
+  Shell Bell: Muschelglocke
+  Member Card: Mitgliedskarte
+  Letter: Brief an Troy
+item_corrections:
+  Focus Band: Fokusband
+  Sharp Beak: Spitz.Schnab.
+  Shell Bell: Muschelglocke
+  Member Card: Mitgl.Karte
+  Letter: Brief an Troy

@@ -1859,3 +1859,29 @@ d’annulation dans le reste du jeu.
   DexNav conserve son nettoyage des tuiles fantômes et son budget LZ77 strict.
 - Le hook valide 1 715 tests Python, 68 tests Vitest et les builds FR/IT/DE ;
   les audits de collisions IT/DE ne trouvent aucune collision.
+# F-599 — Terminologie officielle allemande
+
+## Diagnostic et conception
+
+- Les cinq patchs DE existent déjà, mais leurs vérités sont dispersées entre
+  `combined_de.txt`, des dictionnaires Python et un fallback d'attaques indexé
+  sur les IDs PokeAPI. L'ordre CFRU diverge de ces IDs : une attaque trop longue
+  peut donc recevoir le nom d'une autre attaque.
+- Le glossaire versionné distinguera le nom officiel du libellé d'affichage.
+  Une cellule contrainte conserve l'entrée CFRU correspondante, applique une
+  abréviation déterministe et ne consulte jamais une autre langue.
+- Les badges de type sont redessinables : ils doivent afficher les appellations
+  allemandes complètes, avec `Ä` et un espacement compact si nécessaire.
+
+## Plan validé
+
+- [ ] Ajouter les gardes rouges du glossaire et des substitutions dangereuses.
+- [ ] Figer les sources et les termes canoniques DE dans `languages/de/data/`.
+- [ ] Aligner attaques, talents, objets, natures et types sur ce glossaire.
+- [ ] Construire la ROM DE et décoder les tables réellement lues par le moteur.
+- [ ] Prouver que les artefacts FR/IT restent octet-identiques.
+- [ ] Exécuter les suites source, relire le diff, committer et intégrer localement.
+
+## Revue
+
+- À compléter après les vérifications finales.

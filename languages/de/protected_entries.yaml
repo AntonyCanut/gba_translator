@@ -85,3 +85,43 @@ entries:
   expected: '<0xFC><0x01><0x02>Solange du mit <0xFD><0x06> im Team bist,\nwerden die <0xFC><0x01><0x06>ersten 3<0xFC><0x01><0x02> kampffähigen Pokémon\laus deinem Team für den Kampf gewählt.\p<0xFD><0x06> kann außerdem Surfer und\nKraxler einsetzen.'
   forbidden:
   - While teamed up with Ace, the first 3 viable Pokémon in your party will be selected for battle.
+- offset: '0xa364ec'
+  name: 'Talent Own Tempo'
+  issue: F-599
+  expected: Tempomacher
+  forbidden: [Gleichmut]
+- offset: '0xa36a80'
+  name: 'Talent Poison Heal'
+  issue: F-599
+  expected: Aufheber
+  forbidden: [Giftheilung]
+- offset: '0xa36ae6'
+  name: 'Talent Tangled Feet'
+  issue: F-599
+  expected: Fußangel
+  forbidden: [Taumelschritt]
+- offset: '0xa36df4'
+  name: 'Talent Battle Bond'
+  issue: F-599
+  expected: Freundschaftsakt
+  forbidden: [Freundschaftakt]
+- offset: '0xa36e9e'
+  name: 'Talent Prism Armor'
+  issue: F-599
+  expected: Prismarüstung
+  forbidden: [Prisma-Rüstung]
+- offset: '0xa36f9d'
+  name: 'Talent Electric Surge'
+  issue: F-599
+  expected: Elektro-Erzeuger
+  forbidden: [Elek-Erzeuger]
+- offset: '0xa372cd'
+  name: 'Talent Symbiosis'
+  issue: F-599
+  expected: Nutznießer
+  forbidden: [Symbiose]
+- offset: '0xa374a9'
+  name: 'Talent Vital Spirit'
+  issue: F-599
+  expected: Munterkeit
+  forbidden: [Anspannung]

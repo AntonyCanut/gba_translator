@@ -2,8 +2,8 @@
 
 German port of test_type_icons_fr. Same 4bpp two-copy sheet (0xB1EC64 summary,
 0x961A00 battle); Fairy sits at a per-copy offset (0x100 summary, 0xA8 battle).
-German additionally redraws POISON→GIFT, DRAGON→DRACHE and ELECTR→ELEKTR (badges
-the French port left untouched) and needs the extra glyphs K/D/W/Z. Tests run
+German additionally redraws POISON→GIFT, DRAGON→DRACHE and ELECTR→ELEKTRO (badges
+the French port left untouched) and needs the extra glyphs K/D/W/Z/Ä. Tests run
 against a synthetic ROM so they need no real ROM fixture.
 """
 
@@ -73,8 +73,8 @@ def test_all_glyphs_present():
 
 
 def test_extra_german_glyphs_defined():
-    """German type names introduce four letters the English badge font lacks."""
-    for ch in "KDWZ":
+    """German type names introduce glyphs the English badge font lacks."""
+    for ch in "KDWZÄ":
         assert ch in mod._FONT, f"glyph '{ch}' missing — needed by a German name"
 
 
@@ -91,9 +91,10 @@ def test_official_german_type_names():
     """Spot-check the German localisation the badges must display."""
     assert mod.DE_NAME["Poison"] == "GIFT"
     assert mod.DE_NAME["Dragon"] == "DRACHE"
-    assert mod.DE_NAME["Electric"] == "ELEKTR"
+    assert mod.DE_NAME["Electric"] == "ELEKTRO"
     assert mod.DE_NAME["Fight"] == "KAMPF"
-    assert mod.DE_NAME["Bug"] == "KAEFER"  # Käfer, ASCII transliteration
+    assert mod.DE_NAME["Bug"] == "KÄFER"
+    assert mod.DE_NAME["Grass"] == "PFLANZE"
     # NORMAL is identical to the English art and must not be redrawn.
     assert "Normal" not in mod.DE_NAME
 

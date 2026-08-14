@@ -1,12 +1,11 @@
 #!/usr/bin/env python3
 """Patch the German fixed-width move-name table.
 
-``combined_de.txt`` remains the curated source of truth. Issue #81 exposed
-that it does not contain every move-name cell, especially the early canonical
-move IDs, so this patch merges in an offline fallback table generated from
-official German names. Curated combined-file entries win when they fit the
-13-byte cell; otherwise the fallback keeps the game from shipping English
-move names.
+The versioned glossary is aligned to the CFRU table index, not to upstream
+move IDs. This matters because CFRU diverges from PokeAPI's numbering: the
+old numeric fallback could replace an overflowing move with the German name
+of a completely different move. Official glossary names win; Unbound-only
+entries fall back to the curated combined file at the same CFRU offset.
 """
 
 from __future__ import annotations
@@ -22,14 +21,15 @@ sys.path.insert(0, str(REPO_ROOT))
 from languages.fr.patches import move_names as base_patch  # noqa: E402
 
 DE_COMBINED = REPO_ROOT / "languages/de/combined_de.txt"
-DE_FALLBACK = REPO_ROOT / "languages/de/data/move_names_de_fallback.json"
+DE_OFFICIAL = REPO_ROOT / "languages/de/data/move_names_de_official.json"
 
 
-def _load_fallback(path: Path = DE_FALLBACK) -> dict[int, str]:
+def _load_official(path: Path = DE_OFFICIAL) -> dict[int, str]:
     raw = json.loads(path.read_text(encoding="utf-8"))
     return {
-        base_patch.LEGACY_TABLE_OFFSET + int(move_id) * base_patch.MOVE_STRIDE: name
-        for move_id, name in raw.items()
+        base_patch.LEGACY_TABLE_OFFSET + int(move_id) * base_patch.MOVE_STRIDE:
+        entry["official"]
+        for move_id, entry in raw.items()
     }
 
 
@@ -41,15 +41,30 @@ def _fits_cell(text: str) -> bool:
     return len(encoded) + 1 <= base_patch.MOVE_STRIDE
 
 
+def _constrained_display(text: str) -> str:
+    """Produit la forme stable d'une cellule CFRU de 12 glyphes maximum."""
+    if _fits_cell(text):
+        return text
+    max_glyphs = base_patch.MOVE_STRIDE - 1
+    display = text[: max_glyphs - 1].rstrip(" -") + "."
+    if not _fits_cell(display):
+        raise ValueError(f"cannot constrain move name {text!r}")
+    return display
+
+
 def load_translations(
     combined: Path = DE_COMBINED,
-    fallback: Path = DE_FALLBACK,
+    official: Path = DE_OFFICIAL,
 ) -> dict[int, str]:
-    translations = base_patch._parse_combined(combined)
-    for offset, name in _load_fallback(fallback).items():
-        current = translations.get(offset)
-        if current is None or not _fits_cell(current):
-            translations[offset] = name
+    start = base_patch.LEGACY_TABLE_OFFSET
+    end = start + base_patch.MOVE_STRIDE * base_patch.MOVE_COUNT
+    translations = {
+        offset: _constrained_display(name)
+        for offset, name in base_patch._parse_combined(combined).items()
+        if start <= offset < end and (offset - start) % base_patch.MOVE_STRIDE == 0
+    }
+    for offset, name in _load_official(official).items():
+        translations[offset] = _constrained_display(name)
     return translations
 
 
