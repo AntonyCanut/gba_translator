@@ -38,6 +38,20 @@ def test_round_trip_odd_width(tmp_path):
     assert read_grid == grid
 
 
+def test_round_trip_8bpp_preserves_all_palette_indices(tmp_path):
+    width, height = 17, 3
+    grid = [[(x + y * width) % 256 for x in range(width)] for y in range(height)]
+    palette = [(index, 255 - index, index // 2) for index in range(256)]
+    out = tmp_path / "screen.bmp"
+
+    write_indexed_bmp(out, width, height, grid, palette)
+    read_w, read_h, read_grid = read_indexed_bmp(out)
+
+    assert (read_w, read_h) == (width, height)
+    assert read_grid == grid
+    assert int.from_bytes(out.read_bytes()[28:30], "little") == 8
+
+
 def test_file_header_fields(tmp_path):
     width, height = 8, 8
     grid = [[0] * width for _ in range(height)]
@@ -72,14 +86,14 @@ def test_rejects_non_bmp(tmp_path):
 
 
 def test_rejects_wrong_bit_depth(tmp_path):
-    # A valid 8bpp BMP header should be rejected — this tool only handles 4bpp.
+    # Seuls les BMP indexés 4/8 bpp correspondent aux sprites GBA pris en charge.
     import struct
     width, height = 8, 8
-    off_bits = 14 + 40 + 256 * 4
+    off_bits = 14 + 40 + 2 * 4
     file_header = struct.pack("<2sIHHI", b"BM", off_bits + width * height, 0, 0, off_bits)
-    info_header = struct.pack("<IiiHHIIiiII", 40, width, height, 1, 8, 0,
-                               width * height, 0, 0, 256, 0)
-    path = tmp_path / "eightbpp.bmp"
-    path.write_bytes(file_header + info_header + b"\x00" * (256 * 4) + b"\x00" * width * height)
+    info_header = struct.pack("<IiiHHIIiiII", 40, width, height, 1, 1, 0,
+                               width * height, 0, 0, 2, 0)
+    path = tmp_path / "onebpp.bmp"
+    path.write_bytes(file_header + info_header + b"\x00" * (2 * 4) + b"\x00" * width * height)
     with pytest.raises(ValueError):
         read_indexed_bmp(path)

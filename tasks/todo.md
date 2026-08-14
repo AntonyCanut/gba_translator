@@ -1715,3 +1715,37 @@ d’annulation dans le reste du jeu.
   598 tests ROM réussis et 36 ignorés, sans échec.
 - Revue finale : aucun constat critique, important ou mineur ; correctif prêt
   pour l’intégration linéaire locale.
+# Ticket DE — assets titre et Carte Dresseur
+
+## Diagnostic et conception
+
+- Les trois écrans FR utilisent déjà le moteur générique de sprites mappés ; DE ne
+  possède ni registre `sprites.py` ni sources éditables équivalentes.
+- Le patch DE doit être déclaré après les deux réparations LZ77 afin que ses tuiles
+  ne soient pas restaurées depuis l’anglais.
+- Les seuls libellés remplacés sont « START DRÜCKEN », « TRAINERPASS » et
+  « LIGA-ORDEN » ; le reste des grilles vient octet pour octet de la ROM anglaise.
+
+## Plan validé par la consigne autonome
+
+- [x] Localiser les blocs, tilemaps, palettes et pointeurs déjà prouvés côté FR.
+- [x] Écrire et exécuter les gardes rouges DE.
+- [x] Générer les BMP/PNG DE reproductibles depuis la ROM source.
+- [x] Brancher le patch après les réparations LZ77 de `build-de`.
+- [x] Vérifier pixels, tuiles, pointeurs vivants, déterminisme et isolation FR/IT.
+- [x] Committer et documenter la revue finale.
+
+## Revue
+
+- Les six sources indexées PNG/BMP sont régénérées byte pour byte depuis
+  `englishrom.gba`; hors des trois rectangles de libellé, leurs 40 960 pixels
+  restent identiques à la source.
+- Les planches 4/8 bpp, tilemaps, palettes et pointeurs vivants des trois écrans
+  sont validés. Le titre reste dans son slot LZ77 fixe, sans dépendre d'une
+  relocalisation devenue impossible dans la ROM DE remplie.
+- `make build-de` injecte les trois écrans après les réparations LZ77 et livre
+  `DE.2.1.0`; la ROM finale rend chaque asset au pixel près.
+- Deux builds DE consécutifs produisent le SHA-256 identique
+  `588d2694f9ca6d16cf0ed8de1ed775d4117bb2680c8ee59c236ee591043b8033`.
+- Les 17 tests ciblés passent. Aucun fichier sous `languages/fr`,
+  `languages/it` ni aucune ROM FR/IT n'est modifié par ce ticket.

@@ -1,12 +1,12 @@
 #!/usr/bin/env python3
-"""4bpp indexed BMP <-> GBA tile pixel-grid conversion.
+"""4/8bpp indexed BMP <-> GBA tile pixel-grid conversion.
 
 UI sprites (buttons, status badges, …) are stored in the ROM as 4bpp
 (16-color) tiles inside LZ77-compressed blocks. The palette index (0-15) *is*
 the tile's pixel value — the ROM never stores RGB. This module reads/writes a
-standard Windows 4bpp indexed BMP whose raw pixel indices map 1:1 onto those
-tile values, so any editor that can open/save 16-color indexed BMPs (Aseprite,
-GIMP, Usenti, …) can be used to redraw a sprite by hand.
+standard Windows indexed BMP whose raw pixel indices map 1:1 onto those tile
+values, so any editor that preserves 16/256-color palettes can redraw a sprite
+by hand. Les écrans 8 bpp, comme le titre, utilisent 256 couleurs.
 
 The BMP's own embedded palette is cosmetic only — it exists so the image
 looks reasonable while editing — and is never read back on insert. Only the
@@ -35,34 +35,34 @@ DEFAULT_PALETTE: Palette = [
 
 _FILE_HEADER_SIZE = 14
 _INFO_HEADER_SIZE = 40
-_PALETTE_SIZE = 16 * 4  # 16 entries x BGRA
-
-
 def write_indexed_bmp(path: Path, width: int, height: int, grid: Grid,
                        palette: Palette = DEFAULT_PALETTE) -> None:
-    """Write *grid* (height rows x width cols, values 0-15) as a 4bpp BMP.
+    """Write *grid* as a 4/8bpp BMP selected from the palette length.
 
     ``grid[0]`` is the top row, ``grid[y][0]`` the leftmost pixel — BMP's
     bottom-up row order is handled internally.
     """
-    if len(palette) != 16:
-        raise ValueError("palette must have exactly 16 entries")
+    if len(palette) not in (16, 256):
+        raise ValueError("palette must have exactly 16 or 256 entries")
     if len(grid) != height or any(len(row) != width for row in grid):
         raise ValueError(f"grid must be {height}x{width}")
-    if any(pixel < 0 or pixel > 15 for row in grid for pixel in row):
-        raise ValueError("BMP pixel indices must be in 0..15")
+    max_index = len(palette) - 1
+    if any(pixel < 0 or pixel > max_index for row in grid for pixel in row):
+        raise ValueError(f"BMP pixel indices must be in 0..{max_index}")
 
-    row_bytes = (width + 1) // 2
+    bits_per_pixel = 4 if len(palette) == 16 else 8
+    row_bytes = (width * bits_per_pixel + 7) // 8
     stride = (row_bytes + 3) & ~3
     img_size = stride * height
-    off_bits = _FILE_HEADER_SIZE + _INFO_HEADER_SIZE + _PALETTE_SIZE
+    palette_size = len(palette) * 4
+    off_bits = _FILE_HEADER_SIZE + _INFO_HEADER_SIZE + palette_size
     file_size = off_bits + img_size
 
     file_header = struct.pack("<2sIHHI", b"BM", file_size, 0, 0, off_bits)
     info_header = struct.pack(
         "<IiiHHIIiiII",
-        _INFO_HEADER_SIZE, width, height, 1, 4, 0,
-        img_size, 2835, 2835, 16, 0,
+        _INFO_HEADER_SIZE, width, height, 1, bits_per_pixel, 0,
+        img_size, 2835, 2835, len(palette), 0,
     )
     pal_bytes = b"".join(
         struct.pack("<BBBB", b, g, r, 0) for (r, g, b) in palette
@@ -72,19 +72,22 @@ def write_indexed_bmp(path: Path, width: int, height: int, grid: Grid,
     for y in range(height):
         src_row = grid[height - 1 - y]  # BMP stores rows bottom-up
         base = y * stride
-        for x in range(width):
-            val = src_row[x]
-            byte_off = base + x // 2
-            if x % 2 == 0:
-                body[byte_off] |= val << 4  # BMP: high nibble = left pixel
-            else:
-                body[byte_off] |= val
+        if bits_per_pixel == 8:
+            body[base:base + width] = bytes(src_row)
+        else:
+            for x in range(width):
+                val = src_row[x]
+                byte_off = base + x // 2
+                if x % 2 == 0:
+                    body[byte_off] |= val << 4  # BMP: high nibble = left pixel
+                else:
+                    body[byte_off] |= val
 
     path.write_bytes(file_header + info_header + pal_bytes + bytes(body))
 
 
 def read_indexed_bmp(path: Path) -> Tuple[int, int, Grid]:
-    """Return ``(width, height, grid)`` for a 4bpp indexed BMP.
+    """Return ``(width, height, grid)`` for a 4/8bpp indexed BMP.
 
     The embedded palette is ignored — only pixel indices are returned.
     """
@@ -96,21 +99,24 @@ def read_indexed_bmp(path: Path) -> Tuple[int, int, Grid]:
     width, raw_height = struct.unpack("<ii", data[18:26])
     bpp = struct.unpack("<H", data[28:30])[0]
     compression = struct.unpack("<I", data[30:34])[0]
-    if bpp != 4:
-        raise ValueError(f"{path}: expected a 4bpp indexed BMP, got {bpp}bpp")
+    if bpp not in (4, 8):
+        raise ValueError(f"{path}: expected a 4/8bpp indexed BMP, got {bpp}bpp")
     if compression != 0:
         raise ValueError(f"{path}: compressed BMPs are not supported")
 
     bottom_up = raw_height > 0
     height = abs(raw_height)
-    row_bytes = (width + 1) // 2
+    row_bytes = (width * bpp + 7) // 8
     stride = (row_bytes + 3) & ~3
 
     grid: Grid = [[0] * width for _ in range(height)]
     for y in range(height):
         base = off_bits + y * stride
         dest_row = grid[height - 1 - y] if bottom_up else grid[y]
-        for x in range(width):
-            byte = data[base + x // 2]
-            dest_row[x] = (byte >> 4) if x % 2 == 0 else (byte & 0xF)
+        if bpp == 8:
+            dest_row[:] = data[base:base + width]
+        else:
+            for x in range(width):
+                byte = data[base + x // 2]
+                dest_row[x] = (byte >> 4) if x % 2 == 0 else (byte & 0xF)
     return width, height, grid

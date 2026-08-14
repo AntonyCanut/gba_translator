@@ -161,6 +161,9 @@ patches:
   # with German labels (SUCHLEVEL / METHODE / VERST. FAEH. / ITEMS) via
   # languages/de/patches/dexnav_headers.py.
   - dexnav_headers
+  # Inject the editable German title and Trainer Card screens only after both
+  # LZ77 repair passes, so English reference restoration cannot erase them.
+  - screen_graphics
   - version
   # Fixed-width name/description tables carrying baked official German
   # localisation content (Berries/items, natures, CFRU type names, Pokédex
