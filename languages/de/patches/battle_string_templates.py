@@ -53,16 +53,19 @@ EXPECTED_TEMPLATE = bytes.fromhex("fd24ff")  # {FD24} + terminator
 
 def apply_to_rom(rom: bytearray, en: bytes, dry_run: bool = False) -> int:
     """Restore the EN battle-string cluster into `rom`. Returns change count."""
-    # Sanity: the table entry must point at the known body offset (EN & target).
-    for name, blob in (("target", rom), ("english", en)):
-        ptr = struct.unpack_from("<I", blob, STRINGID0_PTR_OFF)[0]
-        if ptr != GBA_BASE + STRINGID0_BODY_OFF:
-            print(
-                f"  WARN STRINGID0 pointer in {name} is 0x{ptr:08X}, expected "
-                f"0x{GBA_BASE + STRINGID0_BODY_OFF:08X} — skip",
-                file=sys.stderr,
-            )
-            return 0
+    # The pristine reference proves the fixed table layout.  The generic
+    # reinserter may nevertheless relocate STRINGID0 before this post-build
+    # repair runs; that target pointer is part of the corruption to undo, not
+    # a reason to skip the repair.
+    expected_ptr = GBA_BASE + STRINGID0_BODY_OFF
+    en_ptr = struct.unpack_from("<I", en, STRINGID0_PTR_OFF)[0]
+    if en_ptr != expected_ptr:
+        print(
+            f"  WARN STRINGID0 pointer in english is 0x{en_ptr:08X}, expected "
+            f"0x{expected_ptr:08X} — skip",
+            file=sys.stderr,
+        )
+        return 0
 
     en_cluster = en[CLUSTER_START:CLUSTER_END]
     # Guard: the EN reference must be the canonical {FD24}-led template, else we
@@ -76,15 +79,19 @@ def apply_to_rom(rom: bytearray, en: bytes, dry_run: bool = False) -> int:
         return 0
 
     cur = rom[CLUSTER_START:CLUSTER_END]
-    if cur == en_cluster:
+    cur_ptr = struct.unpack_from("<I", rom, STRINGID0_PTR_OFF)[0]
+    if cur == en_cluster and cur_ptr == expected_ptr:
         return 0  # already correct (idempotent)
 
     if not dry_run:
         rom[CLUSTER_START:CLUSTER_END] = en_cluster
+        struct.pack_into("<I", rom, STRINGID0_PTR_OFF, expected_ptr)
 
     print(
         f"  0x{CLUSTER_START:06X}..0x{CLUSTER_END - 1:06X}  STRINGID0 "
-        f"{cur[:6].hex()} → {en_cluster[:3].hex()} ({{FD24}} defeat-speech template restored)"
+        f"{cur[:6].hex()} → {en_cluster[:3].hex()}, pointer "
+        f"0x{cur_ptr:08X} → 0x{expected_ptr:08X} "
+        f"({{FD24}} defeat-speech template restored)"
     )
     return 1
 

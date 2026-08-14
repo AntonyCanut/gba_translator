@@ -63,6 +63,18 @@ class TestBattleStringTemplatesDe(unittest.TestCase):
         n = apply_to_rom(rom, bytes(en))
         self.assertEqual(n, 0)
 
+    def test_restores_fixed_pointer_after_generic_relocation(self):
+        en = _make_en()
+        rom = _make_corrupted(en)
+        struct.pack_into("<I", rom, STRINGID0_PTR_OFF, GBA_BASE + 0x1000)
+
+        self.assertEqual(apply_to_rom(rom, bytes(en)), 1)
+        self.assertEqual(
+            struct.unpack_from("<I", rom, STRINGID0_PTR_OFF)[0],
+            GBA_BASE + STRINGID0_BODY_OFF,
+        )
+        self.assertEqual(rom[CLUSTER_START:CLUSTER_END], en[CLUSTER_START:CLUSTER_END])
+
 
 if __name__ == "__main__":
     unittest.main()
