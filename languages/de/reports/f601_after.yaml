@@ -1,0 +1,84 @@
+schema_version: 1
+ticket: F-601
+snapshot: after
+date: '2026-08-14'
+
+source_coverage:
+  english_reference_offsets: 25524
+  de_present: 21731
+  de_translated: 21199
+  de_untranslated: 532
+  de_missing: 3793
+  de_orphan: 95
+  coverage_percent: 83.1
+  delta_translated: 24
+  note: 30 des 54 nouveaux offsets sont absents de combined_en.txt mais atteignables dans l'extraction ROM.
+
+live_rom:
+  english_residues_cfru: 303
+  english_residues_delta: -230
+  english_residues_reduction_percent: 43.2
+  corrected_live_pointers: 54
+  corrected_live_pointers_decoded: 54
+  collisions: 0
+  live_neighbour_collisions: 0
+  build:
+    total_texts: 18381
+    replaced: 18110
+    replaced_delta: 263
+    unchanged: 269
+    relocation_failed: 0
+    skipped_too_long: 0
+    fallback_shortened: 30
+
+corrected_batches:
+  - {name: menus_and_travel_prompts, entries: 6}
+  - {name: croagunk_dialogues, entries: 7}
+  - {name: fishing_and_tm_missions, entries: 12}
+  - {name: tm_descriptions, entries: 25}
+  - {name: ev_battle_texts, entries: 3}
+  - {name: french_mission_title_leak, entries: 1}
+
+residual_classification:
+  english_credits:
+    count: 41
+    range: ['0x1EEFE4C', '0x1EF0C4C']
+    justification: Crédits et rôles des contributeurs, sans incidence sur le jeu.
+  english_competitive_and_diagnostic_labels:
+    count: 20
+    range: ['0x1F932F9', '0x1F95153']
+    justification: Noms canoniques de formats et écran RTC regroupés pour un futur lot interface.
+  english_follow_up_content:
+    count: 242
+    justification: Résidus vivants documentés pour les lots suivants; aucune fausse cellule morte n'est comptée.
+  french_non_proper:
+    count: 0
+    justification: Le titre hybride Troupeau F mais non vu est remplacé par Nicht gesehene Herde.
+  french_locked_proper_names:
+    occurrences: 101
+    examples: [Antésia, Bélenbourg, Cimes Gelées, Déflaisan, Noirépine]
+    justification: Noms propres verrouillés non modifiés par F-601, conformément au périmètre.
+  literal_or_grammar_in_corrected_batches:
+    count: 0
+    justification: Relecture allemande des 54 valeurs, dont quatre phrases de provenance de CT réordonnées.
+  overlong:
+    relocation_failed: 0
+    skipped_too_long: 0
+    fallback_shortened: 30
+    justification: Les fallbacks existants restent terminés et bornés; aucun dépassement ni fusion de cellule.
+
+invariants:
+  protected_last_wins_entries: 54
+  control_order_and_arity_checked: 54
+  page_and_variable_sequences_checked: 54
+  pokemon_and_place_names_changed: 0
+  fr_or_it_translation_sources_changed: 0
+
+validation:
+  targeted_python: 42
+  full_python: 1746
+  vitest: 68
+  builds: [fr, it, de]
+  collision_audit: pass
+  live_pointer_decode: pass
+  french_non_proper_audit: pass

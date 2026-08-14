@@ -1918,13 +1918,27 @@ d’annulation dans le reste du jeu.
 
 ## Plan validé
 
-- [ ] Versionner la baseline de couverture et classer les résidus DE vivants.
-- [ ] Ajouter les gardes rouges sur les lots de dialogues, menus et missions.
-- [ ] Corriger chirurgicalement les valeurs last-wins et leur manifeste.
-- [ ] Reconstruire la ROM DE et décoder chaque pointeur vivant corrigé.
-- [ ] Auditer collisions, budgets, tokens et résidus français/anglais.
-- [ ] Versionner le rapport après, exécuter les validations et relire le diff.
+- [x] Versionner la baseline de couverture et classer les résidus DE vivants.
+- [x] Ajouter les gardes rouges sur les lots de dialogues, menus et missions.
+- [x] Corriger chirurgicalement les valeurs last-wins et leur manifeste.
+- [x] Reconstruire la ROM DE et décoder chaque pointeur vivant corrigé.
+- [x] Auditer collisions, budgets, tokens et résidus français/anglais.
+- [x] Versionner le rapport après, exécuter les validations et relire le diff.
 
 ## Revue
 
-- En attente des preuves de build et d'audit.
+- Le garde anti-collision ignore désormais les offsets de fragments internes :
+  205 échecs de relocalisation et 4 textes trop longs tombent à zéro. Les
+  builds FR, IT et DE ainsi que les régressions partagées passent.
+- 54 valeurs last-wins couvrent six lots (menus/voyage, Croagunk, pêche et
+  missions, descriptions de CT, combat EV et fuite française) ; elles sont
+  toutes protégées et leurs séquences de contrôle restent dans l'ordre exact.
+- Les 54 pointeurs vivants décodent leur texte allemand dans la ROM. L'audit
+  anglais passe de 533 à 303 résidus (-43,2 %) et la couverture source de
+  83,0 % à 83,1 % ; les rapports classent explicitement ce qui reste.
+- Le titre hybride « Troupeau F mais non vu » n'est plus visible. Les 101
+  détections françaises restantes sont exclusivement des noms propres
+  verrouillés, hors périmètre de F-601 ; aucune source FR/IT n'est modifiée.
+- La réparation STRINGID0 reprend aussi son pointeur fixe après une relocalisation
+  générique. L'audit final compte 0 collision, 0 voisin vivant fusionné,
+  0 échec de relocalisation et 0 dépassement ignoré.

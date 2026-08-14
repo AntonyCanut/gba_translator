@@ -7,12 +7,17 @@ import json
 import re
 from pathlib import Path
 
-from src.core.text_codec import TextEncoder
+import pytest
+
+from src.core.collision_check import live_target, plausible_sites
+from src.core.text_codec import GERMAN_UMLAUT_CHARS, TextDecoder, TextEncoder
 
 
 ROOT = Path(__file__).resolve().parents[3]
 COMBINED_DE = ROOT / "languages" / "de" / "combined_de.txt"
 ENGLISH_TEXTS = ROOT / "output" / "extracted" / "extracted_texts" / "englishrom_texts.json"
+ENGLISH_ROM = ROOT / "input" / "roms" / "englishrom.gba"
+BUILT_DE_ROM = ROOT / "output" / "roms" / "GenedRom-de.gba"
 Builder = importlib.import_module(
     "src.translators.19_build_translated_rom_generic"
 ).TranslatedROMBuilder
@@ -105,7 +110,16 @@ def _controls(raw: bytes) -> list[bytes]:
 
 
 def _encode_combined(value: str) -> bytes:
-    return TextEncoder.encode_pokemon(value.replace(r"\n", "<0xFE>"))
+    return TextEncoder.encode_pokemon(
+        value.replace(r"\n", "<0xFE>"), skip_aliases=GERMAN_UMLAUT_CHARS
+    )
+
+
+def _without_layout(raw: bytes) -> str:
+    if raw.endswith(b"\xFF"):
+        raw = raw[:-1]
+    text = TextDecoder.decode_pokemon(raw, preserve_unknown=True)
+    return re.sub(r" +", " ", text.replace("\n", " ").replace("<0xFA>", " ")).strip()
 
 
 def test_f601_batches_are_exact_last_wins_values() -> None:
@@ -120,3 +134,43 @@ def test_f601_batches_preserve_control_order_and_arity() -> None:
         assert _controls(_encode_combined(expected)) == _controls(sources[offset]), (
             f"0x{offset:X}: séquences de contrôle différentes"
         )
+
+
+@pytest.mark.rom
+def test_f601_batches_are_decoded_from_live_de_pointers() -> None:
+    if not BUILT_DE_ROM.exists():
+        pytest.skip("GenedRom-de.gba non construite")
+
+    english_rom = ENGLISH_ROM.read_bytes()
+    german_rom = BUILT_DE_ROM.read_bytes()
+    payload = json.loads(ENGLISH_TEXTS.read_text(encoding="utf-8"))
+    entries = payload.get("texts", payload)
+    by_offset = {
+        int(entry["offset"]): entry
+        for entry in entries
+        if int(entry.get("offset", -1)) in EXPECTED
+    }
+
+    for offset, expected in EXPECTED.items():
+        raw_sites = by_offset[offset].get("pointer_offsets") or []
+        if not isinstance(raw_sites, list):
+            raw_sites = [raw_sites]
+        sites = plausible_sites(
+            english_rom,
+            offset,
+            [int(site, 0) if isinstance(site, str) else int(site) for site in raw_sites],
+        )
+        wanted = _without_layout(_encode_combined(expected))
+        delivered = []
+        for site in sites:
+            target = live_target(german_rom, site)
+            if target is None:
+                continue
+            end = german_rom.find(b"\xFF", target, min(len(german_rom), target + 0x1000))
+            if end < 0:
+                continue
+            decoded = _without_layout(german_rom[target : end + 1])
+            if decoded == wanted:
+                delivered.append((site, target))
+
+        assert delivered, f"0x{offset:X}: aucune valeur allemande au pointeur vivant"

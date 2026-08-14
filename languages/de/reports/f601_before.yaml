@@ -1,0 +1,49 @@
+schema_version: 1
+ticket: F-601
+snapshot: before
+date: '2026-08-14'
+
+source_coverage:
+  english_reference_offsets: 25524
+  de_present: 21707
+  de_translated: 21175
+  de_untranslated: 532
+  de_missing: 3817
+  de_orphan: 65
+  coverage_percent: 83.0
+
+live_rom:
+  english_residues_cfru: 533
+  collisions: 0
+  live_neighbour_collisions: 0
+  build:
+    total_texts: 18327
+    replaced: 17847
+    unchanged: 269
+    relocation_failed: 205
+    skipped_too_long: 4
+    fallback_shortened: 31
+
+classification:
+  english:
+    count: 533
+    reason: Dialogues, menus, missions, descriptions et libellés encore identiques à la ROM EN.
+  french_non_proper:
+    count: 1
+    offsets: ['0x1FA64DC']
+    text: Herd But Not Seen
+    source_leak: Troupeau F mais non vu
+  french_locked_proper_names:
+    occurrences: 101
+    examples: [Antésia, Bélenbourg, Cimes Gelées, Déflaisan, Noirépine]
+    reason: Noms propres verrouillés, explicitement exclus de F-601 et réservés au lot dédié du parent F-595.
+  literal_or_grammar:
+    status: present
+    reason: Les lots retenus contenaient des calques anglais et des syntaxes nominales incorrectes.
+  overlong:
+    count: 209
+    breakdown:
+      relocation_failed: 205
+      skipped_too_long: 4
+    root_cause: Des offsets de fragments internes étaient traités comme des frontières de cellule.
+
