@@ -208,10 +208,8 @@ test.describe('Barres de vie — issue #84', () => {
       test.setTimeout(400_000);
       const translated = await captureOnce(build.code);
 
-      // The Skills page was located by the DEFENSE and EXP. labels, the only
-      // two that stay identical in every build, so they must match in both
-      // runs — that is what proves both ROMs are on the same page before
-      // anything is asserted about the bar.
+      // Stable stat-icon/value bands prove both ROMs reached the same page;
+      // unlike the six word-images, those bands are language-independent.
       expect(
         regionsMatchAll(translated.skills, english.skills, PAGE_ANCHOR_REGIONS),
         `la ROM ${build.label} doit être sur la page Capacités`,

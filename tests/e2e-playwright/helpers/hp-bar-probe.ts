@@ -8,10 +8,10 @@
  * The main-menu entry that opens the party is *searched*, not hardcoded: for
  * each candidate the probe restores a save-state, walks the cursor down, opens
  * the entry, picks the first party slot, opens its summary, flips to the second
- * page and compares the stat-label column to a reference crop. That column is
- * made of word-image tiles that no translation touches, so the same reference
- * recognises the page in the English ROM and in every translated build — and it
- * shares no pixel with the HP bar the test asserts on.
+ * page and compares two stat-icon/value bands to a reference crop. Those
+ * pixels are stable for the exact save fixture in every translated build,
+ * share no pixel with the translated word-images and share no pixel with the
+ * HP bar the test asserts on.
  *
  * Waiting a fixed number of frames after loading the save is not enough: the
  * quest reminder that pops up over the overworld does not appear at the same

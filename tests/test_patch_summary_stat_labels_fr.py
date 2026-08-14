@@ -130,22 +130,11 @@ class TestCapsuleGeometry(unittest.TestCase):
 
 
 class TestE2eAnchorAvoidsTranslatedLabels(unittest.TestCase):
-    """Le scénario e2e barre-de-vie repère la page « Capacités » par ses libellés.
-
-    Il compare la capture traduite à la capture anglaise sur ces bandes : tout
-    libellé qu'on traduit doit donc en sortir, sinon le scénario échoue en
-    prétendant que la ROM n'est pas sur la bonne page. Ce test relie les deux
-    fichiers pour que la prochaine traduction de libellé le remarque tout de
-    suite plutôt qu'en CI Playwright.
-    """
+    """L'ancre e2e reste hors des six images-mots traduisibles."""
 
     REGIONS_TS = (Path(__file__).parent.parent / "tests" / "e2e-playwright"
                   / "helpers" / "hp-bar-regions.ts")
-    # Les gélules vivent 16 px plus bas dans la feuille que sur l'écran :
-    # ATTAQUE en y=54 dans la planche s'affiche en y=38 à l'écran.
-    SHEET_TO_SCREEN = 16
-
-    def _anchor_bands(self) -> list[tuple[int, int]]:
+    def _anchor_bands(self) -> list[tuple[int, int, int, int]]:
         import re
 
         source = self.REGIONS_TS.read_text(encoding="utf-8")
@@ -155,41 +144,28 @@ class TestE2eAnchorAvoidsTranslatedLabels(unittest.TestCase):
         )
         self.assertIsNotNone(block, "PAGE_ANCHOR_REGIONS introuvable")
         bands = [
-            (int(y), int(constants.get(height, height)))
-            for y, height in re.findall(r"y:\s*(\d+).*?height:\s*(\w+)",
-                                        block.group(1))
+            (int(x), int(y), int(width), int(constants.get(height, height)))
+            for x, y, width, height in re.findall(
+                r"x:\s*(\d+),\s*y:\s*(\d+),\s*width:\s*(\d+),\s*height:\s*(\w+)",
+                block.group(1),
+            )
         ]
         self.assertTrue(bands, "aucune bande d'ancrage lue")
         return bands
 
     def test_no_anchor_band_covers_a_translated_label(self):
-        """Aucune bande ne doit mordre sur une gélule traduite, bords compris.
+        """Chaque bande commence après la colonne de libellés x=0..55."""
+        for x, y, width, height in self._anchor_bands():
+            with self.subTest(band=(x, y)):
+                self.assertGreaterEqual(x, 56)
+                self.assertGreater(width, 0)
+                self.assertEqual(height, PILL_HEIGHT)
 
-        Les rangées haute et basse d'une gélule épousent son mot : déborder
-        d'un seul pixel sur la voisine suffit à ce que la sonde ne reconnaisse
-        plus la page. C'est ce qui est arrivé avec des bandes de 12 px.
-        """
-        translated = {row
-                      for y0, _, _ in LABELS
-                      for row in range(y0 - self.SHEET_TO_SCREEN,
-                                       y0 - self.SHEET_TO_SCREEN + PILL_HEIGHT)}
-        for y, height in self._anchor_bands():
-            with self.subTest(band=y):
-                overlap = sorted(set(range(y, y + height)) & translated)
-                self.assertFalse(
-                    overlap,
-                    f"la bande d'ancrage y={y} recouvre les lignes {overlap} "
-                    "d'un libellé traduit",
-                )
-
-    def test_anchor_bands_land_on_untranslated_labels(self):
-        """Les bandes couvrent exactement DEFENSE (y=66) et EXP. (y=114)."""
-        bands = self._anchor_bands()
-        self.assertEqual({y + self.SHEET_TO_SCREEN for y, _ in bands}, {66, 114})
-        for y, height in bands:
-            with self.subTest(band=y):
-                self.assertEqual(height, PILL_HEIGHT,
-                                 "une bande doit faire la hauteur d'une gélule")
+    def test_anchor_bands_cover_stable_attack_and_speed_icons(self):
+        self.assertEqual(
+            self._anchor_bands(),
+            [(64, 38, 18, PILL_HEIGHT), (64, 86, 18, PILL_HEIGHT)],
+        )
 
 
 @pytest.mark.rom

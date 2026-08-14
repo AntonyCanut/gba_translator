@@ -17,28 +17,22 @@ export const FULL_SCREEN_REGION: Region = {
 };
 
 /**
- * The two stat labels of the « Pokémon Skills » page that stay byte-identical
- * in every build, used together as a language-independent way to recognise the
- * page. They are deliberately disjoint from {@link HP_BAR_REGION}: the screen
- * is identified by pixels that the fix under test cannot influence.
+ * Two stat-icon/value bands of the « Pokémon Skills » page, used together as a
+ * language-independent way to recognise the page. They are deliberately
+ * disjoint from both the translated word-images (x=0..55) and
+ * {@link HP_BAR_REGION}: the screen is identified by pixels that neither fix
+ * under test can influence.
  *
- * The label column is six capsules on a 12-pixel pitch from y 38 — ATTACK,
- * DEFENSE, SP.ATK, SP.DEF, SPEED, EXP. All six are word-image tiles that the
- * *text* pipeline leaves untouched, so the whole column used to be a single
- * anchor. GitHub issue #145 ended that: `languages/fr/patches/
- * summary_stat_labels.py` now redraws four of them in French (ATTAQUE,
- * ATT SPE., DEF SPE., VITESSE) and the hand-drawn sheet keeps them. Only
- * DEFENSE — transparent in French — and EXP. are still shared.
- *
- * Each band is exactly the 9 rows of its capsule, nothing more: a capsule's
- * top and bottom rows hug its word, so a band one row too tall reaches into
- * the neighbouring French capsule and the page stops being recognised.
+ * GitHub issue #145 translated four French capsules and F-600 translated all
+ * six German capsules, so no label pixel remains a valid cross-language
+ * anchor. The attack and speed icon/value bands stay stable for the exact save
+ * fixture in EN/FR/IT/DE and remain outside every translated graphic.
  */
 export const STAT_CAPSULE_HEIGHT = 9;
 
 export const PAGE_ANCHOR_REGIONS: Region[] = [
-  { x: 0, y: 50, width: 56, height: STAT_CAPSULE_HEIGHT },  // DEFENSE
-  { x: 0, y: 98, width: 56, height: STAT_CAPSULE_HEIGHT },  // EXP.
+  { x: 64, y: 38, width: 18, height: STAT_CAPSULE_HEIGHT },  // Attack icon/value
+  { x: 64, y: 86, width: 18, height: STAT_CAPSULE_HEIGHT },  // Speed icon/value
 ];
 
 /**

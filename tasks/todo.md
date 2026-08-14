@@ -1769,9 +1769,21 @@ d’annulation dans le reste du jeu.
 - [x] Ajouter les gardes rouges healthbox et résidus HP/PS/PV.
 - [x] Étendre chirurgicalement le patch graphique DE aux quatre healthbox.
 - [x] Traduire les six images-mots du résumé et protéger les badges/statistiques.
-- [ ] Reconstruire la ROM DE et vérifier les octets/tuiles réellement livrés.
-- [ ] Exécuter les validations, relire le diff, committer et intégrer localement.
+- [x] Reconstruire la ROM DE et vérifier les octets/tuiles réellement livrés.
+- [x] Exécuter les validations, relire le diff, committer et intégrer localement.
 
 ## Revue
 
-- À compléter après les vérifications finales.
+- Les trois feuilles KP historiques, les quatre healthbox LZ77 et les deux
+  variantes de la table graphique brute affichent désormais KP ; les bordures,
+  palettes et glyphes voisins restent pixel-identiques.
+- Le résumé livre `ANGRIFF`, `VERT.`, `SP.-ANG.`, `SP.-VERT.`, `INIT.` et `EP.`
+  dans six capsules bornées, sans toucher au KP gris adjacent. La montée de
+  niveau déréférence `MAX. KP`, `Angriff`, `Verteidigung`, `Ang.Sp.`, `Ver.Sp.`
+  et `Initiative`; les quatre planches de statut livrent GIF/PAR/SCH/GEF/VBR/KO.
+- L'audit négatif interdit HP/PS/PV dans `combined_de.txt` et les surfaces
+  fixes ciblées. La relecture ROM/pixel passe 50 tests ciblés, sans collision.
+- Le hook valide 1 709 tests Python (1 ignoré), 68 tests Vitest et les builds
+  FR/IT/DE. Playwright mGBA valide les barres et libellés FR/DE/IT (13/13),
+  après remplacement de l'ancienne ancre textuelle par deux bandes d'icônes de
+  stats indépendantes de la langue. Aucune source de traduction FR/IT modifiée.
