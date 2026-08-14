@@ -311,6 +311,7 @@ rom_test_exclusions:
     - tests/e2e/fr/test_live_english_audit.py
     - tests/e2e/fr/test_location_names.py
     - tests/e2e/fr/test_mission_tab_labels.py
+    - tests/e2e/fr/test_move_names.py
     - tests/e2e/fr/test_next_pokemon_prompt.py
     - tests/e2e/fr/test_nodulithe_passive.py
     - tests/e2e/fr/test_object_gain_sequence.py

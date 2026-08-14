@@ -36,6 +36,7 @@ MAKEFILE = ROOT / "Makefile"
 
 # Script basenames the recipe must invoke, in pipeline order.
 INLINE_OVERRIDE_SCRIPT = "apply_inline_overrides_fr.py"
+MOVE_NAMES_SCRIPT = "move_names.py"
 REPAIR_STABLE_SCRIPT = "repair_stable_lz77_blocks.py"
 REPAIR_LOCALIZED_SCRIPT = "repair_localized_lz77_blocks.py"
 DETERMINISM_TARGET = "verify-fr-determinism"
@@ -208,6 +209,14 @@ class TestBuildFrPipeline(unittest.TestCase):
             INLINE_OVERRIDE_SCRIPT,
             self.recipe_expanded,
             "build-fr must run the inline override step",
+        )
+
+    def test_build_fr_patches_fixed_width_move_names(self) -> None:
+        """Les noms de capacités FR doivent atteindre leur table fixe vivante."""
+        self.assertIn(
+            MOVE_NAMES_SCRIPT,
+            self.recipe_expanded,
+            "build-fr must patch the fixed-width move-name table",
         )
 
     def test_build_fr_runs_both_lz77_repair_steps(self) -> None:

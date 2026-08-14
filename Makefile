@@ -36,6 +36,7 @@ REPOINT_STALE_SCRIPT := scripts/repoint_stale_text_pointers.py
 PATCH_RITUAL_SCRIPT := languages/fr/patches/legendary_ritual.py
 PATCH_FIXED_NAMES_SCRIPT := languages/fr/patches/fixed_table_names.py
 PATCH_ABILITY_NAMES_SCRIPT := languages/fr/patches/ability_names.py
+PATCH_MOVE_NAMES_SCRIPT := languages/fr/patches/move_names.py
 PATCH_ITEM_NAMES_SCRIPT := languages/fr/patches/item_names.py
 PATCH_TIME_FORMAT_SCRIPT := languages/fr/patches/time_format.py
 PATCH_BATTLE_PREFIX_SCRIPT := languages/fr/patches/battle_prefix.py
@@ -217,6 +218,7 @@ build-fr: check-translations-fr ensure-fr-translation $(FRENCH_EXTRACT) $(SPANIS
 	@$(PYTHON) $(PATCH_FONT_FR_SCRIPT) --rom $(FR_BUILD)
 	@$(PYTHON) $(PATCH_FIXED_NAMES_SCRIPT) --rom $(FR_BUILD)
 	@$(PYTHON) $(PATCH_ABILITY_NAMES_SCRIPT) --rom $(FR_BUILD)
+	@$(PYTHON) $(PATCH_MOVE_NAMES_SCRIPT) --rom $(FR_BUILD) --combined languages/fr/combined_fr.txt
 	@$(PYTHON) $(PATCH_ITEM_NAMES_SCRIPT) --rom $(FR_BUILD)
 	@$(PYTHON) $(PATCH_TRAINER_CLASS_NAMES_FR_SCRIPT) --rom $(FR_BUILD) --combined languages/fr/combined_fr.txt
 	@$(PYTHON) $(PATCH_TIME_FORMAT_SCRIPT) --rom $(FR_BUILD)
