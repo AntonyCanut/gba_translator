@@ -1821,3 +1821,32 @@ d’annulation dans le reste du jeu.
   Vérifications : 19 tests ciblés, suites rapides et standard sans échec ; lint
   ciblé, CLI de garde et `git diff --check` propres.
 - Aucun texte, asset ni artefact ROM FR/IT n'est modifié.
+
+# F-605 — Assets graphiques DE des menus et du monde
+
+## Diagnostic et conception
+
+- Le pipeline DE possède déjà les correctifs graphiques `status_badges`,
+  `type_icons`, `hp_labels` et `dexnav_headers`, tous exécutés après les deux
+  réparations LZ77 ; le correctif DexNav efface déjà les pixels fantômes.
+- Il manque le registre et les sources raster DE pour `cube_sort_hint`,
+  `pc_box_labels`, `pokemon_mart_sign`, `selection` et
+  `start_menu_move_hint` ; le build générique ne les injecte donc jamais.
+- Les panneaux de jonction sont déjà câblés, mais les labels et actions fixes
+  de carte n'ont pas encore leur garde post-build DE.
+- La solution garde le pipeline FR dédié et IT inchangés : un patch DE unique
+  injecte des PNG indexés, puis deux patchs DE stabilisent les cellules carte.
+
+## Plan validé
+
+- [x] Ajouter les tests rouges sur registre, pixels, compression, ordre et ROM.
+- [x] Créer les cinq familles de sources éditables dans `languages/de/sprites`.
+- [x] Câbler un patch DE idempotent après les réparations LZ77.
+- [x] Porter les labels/actions carte sans traduire les noms propres.
+- [x] Documenter la parité FR/DE, y compris DexNav et jonctions.
+- [ ] Construire la ROM DE et vérifier les assets, la suite et FR/IT inchangées.
+- [ ] Relire, committer, rebaser et intégrer localement sans push.
+
+## Revue
+
+- À compléter après vérification.

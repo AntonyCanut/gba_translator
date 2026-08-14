@@ -2,8 +2,16 @@
 
 from __future__ import annotations
 
+from languages.fr.sprites import SPRITES as REFERENCE_SPRITES
 from languages.fr.sprites import SpriteDef
 
+_MENU_SPRITES = (
+    "cube_sort_hint",
+    "pc_box_labels",
+    "pokemon_mart_sign",
+    "selection",
+    "start_menu_move_hint",
+)
 
 SPRITES: dict[str, SpriteDef] = {
     "trainer_card_front": SpriteDef(
@@ -32,3 +40,8 @@ SPRITES: dict[str, SpriteDef] = {
         palette=0x01FD699C,
     ),
 }
+
+# La géométrie, les pointeurs et les budgets appartiennent à la ROM Unbound et
+# sont identiques entre langues. Seules les images dans languages/de/sprites
+# sont spécifiques à l'allemand.
+SPRITES.update({name: REFERENCE_SPRITES[name] for name in _MENU_SPRITES})

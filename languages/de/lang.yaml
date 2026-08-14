@@ -133,6 +133,9 @@ patches:
   - battle_prefix
   - repair_lz77
   - repair_localized_lz77
+  # Sources raster DE éditables des menus hors combat. Cette étape doit rester
+  # après les deux réparations LZ77, qui restaureraient sinon l'art anglais.
+  - menu_sprites
   - repoint_stale
   - legendary_ritual
   - givecs_gift_item
@@ -197,6 +200,10 @@ patches:
   # languages/de/patches/mission_descriptions.py for the full rationale.
   #   mission_descriptions   47 bounty-mission descriptions, verbatim 3-line box
   #   worldmap_junction_panels  9 arrow-prefixed World-Map junction signs
+  # Cellules fixes de la carte : conserver les noms propres EN et stabiliser
+  # les actions DE après toutes les relocalisations.
+  - worldmap_labels
+  - world_map_action_labels
   - mission_descriptions
   - worldmap_junction_panels
   # Post-build audit: flag any translated cell not terminated before its
