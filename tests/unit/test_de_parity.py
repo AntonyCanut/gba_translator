@@ -67,6 +67,20 @@ def test_manifest_includes_non_python_and_long_language_test_names() -> None:
     assert "tests/e2e-playwright/german-translation.spec.ts" in de_sources
 
 
+def test_manifest_preserves_de_graphics_coverage_landed_in_parallel() -> None:
+    """Le rebase ne doit pas faire recréer les traitements graphiques DE existants."""
+    manifest = DeParityManifest.load(MANIFEST_PATH)
+    de_steps = {entry.source for entry in manifest.de_only_build_steps}
+    de_tests = {entry.source for entry in manifest.de_only_rom_tests}
+
+    assert {"screen_graphics", "summary_stat_labels"} <= de_steps
+    assert {
+        "tests/unit/de/test_interface_labels_de.py",
+        "tests/unit/de/test_screen_graphics_de.py",
+        "tests/unit/de/test_summary_stat_labels_de.py",
+    } <= de_tests
+
+
 def test_every_required_gap_has_a_supported_classification() -> None:
     """Une catégorie libre masquerait le type de travail restant à porter."""
     manifest = DeParityManifest.load(MANIFEST_PATH)

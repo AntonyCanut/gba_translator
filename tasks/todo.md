@@ -1811,7 +1811,7 @@ d’annulation dans le reste du jeu.
 ## Revue
 
 - `languages/de/parity.yaml` recense 12 champs de descripteur, 35 étapes FR,
-  12 étapes propres à DE, 55 modules FR, 18 assets, 133 tests FR et 38 tests DE.
+  14 étapes propres à DE, 55 modules FR, 18 assets, 133 tests FR et 41 tests DE.
 - Les traitements DE déjà présents et les mécanismes partagés sont référencés ;
   chaque écart restant porte une exclusion versionnée et justifiée.
 - La garde Git bloque `languages/fr`, `languages/it` et leurs ROM livrées, puis

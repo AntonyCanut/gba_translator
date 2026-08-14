@@ -99,7 +99,9 @@ de_only_build_steps:
   - {source: nature_names, classification: fixed_table, status: excluded, reason: Déjà couvert directement par la recette DE.}
   - {source: options_footer, classification: fixed_table, status: excluded, reason: Déjà couvert directement par la recette DE.}
   - {source: pc_messages, classification: fixed_table, status: excluded, reason: Déjà couvert directement par la recette DE.}
+  - {source: screen_graphics, classification: lz77_graphic, status: excluded, reason: Écrans titre et Carte Dresseur déjà couverts directement par la recette DE.}
   - {source: species_names, classification: fixed_table, status: excluded, reason: Déjà couvert directement par la recette DE.}
+  - {source: summary_stat_labels, classification: lz77_graphic, status: excluded, reason: Libellés graphiques du résumé déjà couverts directement par la recette DE.}
   - {source: trainer_card_date, classification: asm_patch, status: excluded, reason: Déjà couvert directement par la recette DE.}
 
 patches:
@@ -453,6 +455,9 @@ de_only_rom_tests:
     - tests/unit/de/test_patch_pc_messages_de.py
     - tests/unit/de/test_patch_shop_de.py
     - tests/unit/de/test_pokecenter_upper_floor_de.py
+    - tests/unit/de/test_interface_labels_de.py
+    - tests/unit/de/test_screen_graphics_de.py
+    - tests/unit/de/test_summary_stat_labels_de.py
     - tests/unit/test_de_parity.py
     - tests/unit/test_de_scope_guard.py
     - tests/unit/test_patch_de_wrappers.py
