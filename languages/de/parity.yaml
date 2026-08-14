@@ -414,6 +414,7 @@ de_only_rom_tests:
     - tests/e2e-playwright/german-translation.spec.ts
     - tests/e2e/de/test_build.py
     - tests/e2e/de/test_official_terminology.py
+    - tests/e2e/de/test_species_names_de.py
     - tests/e2e/test_rival_battle_victory_line_de_it.py
     - tests/e2e/test_safari_zone_npc_dialogue_de.py
     - tests/test_egg_strings_de.py
@@ -421,6 +422,7 @@ de_only_rom_tests:
     - tests/test_patch_gendered_buffers_de.py
     - tests/test_patch_givecs_gift_item_de.py
     - tests/test_pc_menu_descriptions_de.py
+    - tests/unit/de/test_audit_species_names_de.py
     - tests/unit/de/test_f601_content_batches_de.py
     - tests/unit/de/test_patch_cry_label_de.py
     - tests/unit/de/test_patch_fixed_table_names_de.py

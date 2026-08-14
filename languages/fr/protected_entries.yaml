@@ -2081,3 +2081,9 @@ entries:
   expected: Surnom de<0x00>
   forbidden:
   - ': surnom ?'
+- offset: '0xA42186'
+  name: Capacité — Regard Touchant abrégé
+  issue: '#183'
+  expected: RegarTouchan
+  forbidden:
+  - RegarTouchnt
