@@ -1902,3 +1902,29 @@ d’annulation dans le reste du jeu.
 - Un second `make build-de` conserve exactement les SHA-256 FR
   `3ed46e26…fc10` et IT `6df94bf6…b42c`; le build DE ne réécrit donc aucun de
   ces deux artefacts.
+
+# F-601 — reprise des dialogues, menus et missions DE
+
+## Diagnostic et conception
+
+- La source cumulée `languages/de/combined_de.txt` et ses doublons restent la
+  source last-wins ; chaque valeur nouvelle ou corrigée est verrouillée dans
+  `languages/de/protected_entries.yaml`.
+- L'audit compare les chaînes réellement atteintes par les pointeurs EN et DE,
+  afin de ne pas classer comme résidu une ancienne cellule devenue morte après
+  relocalisation.
+- Les corrections sont groupées par surface visible et conservent exactement
+  les tokens, contrôles, variables et ruptures structurelles de la source.
+
+## Plan validé
+
+- [ ] Versionner la baseline de couverture et classer les résidus DE vivants.
+- [ ] Ajouter les gardes rouges sur les lots de dialogues, menus et missions.
+- [ ] Corriger chirurgicalement les valeurs last-wins et leur manifeste.
+- [ ] Reconstruire la ROM DE et décoder chaque pointeur vivant corrigé.
+- [ ] Auditer collisions, budgets, tokens et résidus français/anglais.
+- [ ] Versionner le rapport après, exécuter les validations et relire le diff.
+
+## Revue
+
+- En attente des preuves de build et d'audit.

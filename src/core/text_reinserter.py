@@ -250,19 +250,25 @@ class SmartReinserter:
             'warnings': []
         }
 
-    def _next_cell_boundary(self, offset: int) -> Optional[int]:
-        """Smallest known cell start strictly greater than ``offset``.
+    def _next_cell_boundary(self, offset: int, encoding: str) -> Optional[int]:
+        """Smallest real cell start strictly greater than ``offset``.
 
         Used by the collision guard as the hard wall an in-place write must
-        terminate before. ``None`` when the guard is off, no boundaries were
-        supplied, or ``offset`` is past the last known cell.
+        terminate before.  Extracted tables can also contain offsets that point
+        inside a longer source string.  Such fragment starts are not cell walls:
+        a real neighbour must have a source terminator before its offset.
+
+        ``None`` is returned when the guard is off, no boundaries were supplied,
+        or no later boundary follows a terminator in the pristine source.
         """
         if not self.collision_guard or not self._cell_boundaries:
             return None
-        idx = bisect.bisect_right(self._cell_boundaries, offset)
-        if idx >= len(self._cell_boundaries):
+        terminator = 0x00 if encoding == 'ascii' else 0xFF
+        source_end = self._source_snapshot.find(bytes([terminator]), offset)
+        if source_end < 0:
             return None
-        return self._cell_boundaries[idx]
+        idx = bisect.bisect_right(self._cell_boundaries, source_end)
+        return self._cell_boundaries[idx] if idx < len(self._cell_boundaries) else None
 
     def _infer_original_length(self, offset: int, encoding: str, max_length: int = 1000) -> int:
         # Measured against the pristine snapshot, never the live ROM, so the
@@ -578,7 +584,7 @@ class SmartReinserter:
             # run must never let this write spill into a neighbour; when the
             # capped budget no longer fits, the block below relocates or falls
             # back instead of overwriting the next cell.
-            next_boundary = self._next_cell_boundary(offset)
+            next_boundary = self._next_cell_boundary(offset, encoding)
             if next_boundary is not None:
                 cap = next_boundary - offset - 1
                 max_length = cap if max_length is None else min(max_length, cap)

@@ -33,6 +33,33 @@ BASE_TL = {
 
 
 class CollisionGuardTests(unittest.TestCase):
+    def test_guard_ignores_fragment_start_inside_source_string(self):
+        offset = 0x20
+        rom = _rom_with_cell(offset=offset)
+        source = TextEncoder.encode_pokemon('Hello world')
+        rom[offset:offset + len(source)] = source
+        tl = {
+            **BASE_TL,
+            'offset': offset,
+            'translation': 'Guten Tag',
+            'original_length': len(source) - 1,
+            'pointer_offsets': [0],
+        }
+
+        reinserter = SmartReinserter(
+            rom,
+            allow_relocate=False,
+            collision_guard=True,
+            # ``offset + 4`` is an extracted fragment inside the live source
+            # string.  Only ``offset + 16``, after its terminator, is a cell
+            # wall that may constrain an in-place translation.
+            cell_boundaries=[offset, offset + 4, offset + 16],
+        )
+
+        self.assertTrue(reinserter.reinsert_text(tl))
+        encoded = TextEncoder.encode_pokemon('Guten Tag')
+        self.assertEqual(bytes(rom[offset:offset + len(encoded)]), encoded)
+
     def test_guard_relocates_overrunning_write(self):
         offset = 0x20
         rom = _rom_with_cell(offset=offset)
