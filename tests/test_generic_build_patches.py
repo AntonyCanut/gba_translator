@@ -199,7 +199,7 @@ def test_dexnav_headers_in_de_descriptor():
     assert "dexnav_headers" in REGISTRY.get("de").patches
 
 
-# ─── pokedex_categories / pokedex_category_order / pokedex_metrics / pokedex_rewrap ──
+# ─── Pokédex categories / order / metrics / labels / rewrap ─────────────────
 
 def test_pokedex_categories_dispatches_per_language_script():
     for code in ("de", "it"):
@@ -229,6 +229,22 @@ def test_pokedex_metrics_dispatches_per_language_script():
         assert any(c.endswith(f"languages/{code}/patches/pokedex_metrics.py") for c in cmd)
 
 
+def test_pokedex_stat_labels_dispatches_german_script(monkeypatch):
+    expected = Path(__file__).resolve().parents[1] / "languages/de/patches/pokedex_stat_labels.py"
+    original_exists = Path.exists
+    monkeypatch.setattr(
+        Path,
+        "exists",
+        lambda path: True if path == expected else original_exists(path),
+    )
+    config = REGISTRY.get("de")
+    calls = _collected_calls(config, ["pokedex_stat_labels"])
+    assert len(calls) == 1
+    cmd = calls[0]
+    assert any(c.endswith("languages/de/patches/pokedex_stat_labels.py") for c in cmd)
+    assert "--rom" in cmd
+
+
 def test_pokedex_rewrap_dispatches_per_language_script():
     fake_json = Path("/tmp/fake_translation_ready.json")
     for code in ("de", "it"):
@@ -254,6 +270,8 @@ def test_pokedex_steps_in_it_and_de_descriptors():
     ):
         assert step in REGISTRY.get("de").patches
         assert step in REGISTRY.get("it").patches
+
+    assert "pokedex_stat_labels" in REGISTRY.get("de").patches
 
 
 # ─── version ─────────────────────────────────────────────────────────────────

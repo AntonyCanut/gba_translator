@@ -100,6 +100,7 @@ de_only_build_steps:
   - {source: nature_names, classification: fixed_table, status: excluded, reason: Déjà couvert directement par la recette DE.}
   - {source: options_footer, classification: fixed_table, status: excluded, reason: Déjà couvert directement par la recette DE.}
   - {source: pc_messages, classification: fixed_table, status: excluded, reason: Déjà couvert directement par la recette DE.}
+  - {source: pokedex_stat_labels, classification: fixed_table, status: excluded, reason: Libellés statistiques pointés couverts directement par la recette DE.}
   - {source: screen_graphics, classification: lz77_graphic, status: excluded, reason: Écrans titre et Carte Dresseur déjà couverts directement par la recette DE.}
   - {source: species_names, classification: fixed_table, status: excluded, reason: Déjà couvert directement par la recette DE.}
   - {source: summary_stat_labels, classification: lz77_graphic, status: excluded, reason: Libellés graphiques du résumé déjà couverts directement par la recette DE.}
@@ -187,10 +188,7 @@ patches:
   - {source: languages/fr/patches/pokedex_categories.py, classification: fixed_table, status: equivalent, target: languages/de/patches/pokedex_categories.py}
   - {source: languages/fr/patches/pokedex_category_order.py, classification: asm_patch, status: equivalent, target: languages/de/patches/pokedex_category_order.py}
   - {source: languages/fr/patches/pokedex_metrics.py, classification: asm_patch, status: equivalent, target: languages/de/patches/pokedex_metrics.py}
-  - source: languages/fr/patches/pokedex_stat_labels.py
-    classification: fixed_table
-    status: excluded
-    reason: Les libellés statistiques Pokédex DE restent au ticket Pokédex/UI.
+  - {source: languages/fr/patches/pokedex_stat_labels.py, classification: fixed_table, status: equivalent, target: languages/de/patches/pokedex_stat_labels.py}
   - {source: languages/fr/patches/shop.py, classification: fixed_table, status: equivalent, target: languages/de/patches/shop.py}
   - {source: languages/fr/patches/species_names.py, classification: fixed_table, status: equivalent, target: languages/de/patches/species_names.py}
   - {source: languages/fr/patches/status_abbrevs.py, classification: fixed_table, status: shared, target: languages/fr/patches/status_abbrevs.py}
@@ -283,6 +281,7 @@ rom_tests:
   - {source: tests/test_patch_pokedex_category_order_fr.py, classification: rom_test, status: equivalent, target: tests/unit/de/test_patch_pokedex_category_order_de.py}
   - {source: tests/test_patch_pokedex_fr.py, classification: rom_test, status: equivalent, target: tests/unit/de/test_patch_pokedex_de.py}
   - {source: tests/test_patch_pokedex_metrics_fr.py, classification: rom_test, status: equivalent, target: tests/unit/de/test_patch_pokedex_metrics_de.py}
+  - {source: tests/test_patch_pokedex_stat_labels_fr.py, classification: rom_test, status: equivalent, target: tests/unit/de/test_patch_pokedex_stat_labels_de.py}
   - source: tests/e2e/fr/test_version_display.py
     classification: rom_test
     status: excluded
@@ -368,7 +367,6 @@ rom_test_exclusions:
     - tests/test_patch_party_cancel_button_fr.py
     - tests/test_patch_party_lv_label_fr.py
     - tests/test_patch_pc_move_labels_fr.py
-    - tests/test_patch_pokedex_stat_labels_fr.py
     - tests/test_patch_species_names_fr.py
     - tests/test_patch_status_abbrevs_fr.py
     - tests/test_patch_summary_lv_labels_fr.py

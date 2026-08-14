@@ -618,6 +618,13 @@ def apply_patches(config, out_rom: Path, translation_json: Path | None = None,
             else:
                 print(f"⚠ skipping pokedex_metrics: {script.name} not found")
 
+        elif step == "pokedex_stat_labels":
+            script = REPO_ROOT / f"languages/{config.code}/patches/pokedex_stat_labels.py"
+            if script.exists():
+                run([PYTHON, script, "--rom", out_rom])
+            else:
+                print(f"⚠ skipping pokedex_stat_labels: {script.name} not found")
+
         elif step == "pokedex_rewrap":
             if translation_json is None:
                 print("⚠ skipping pokedex_rewrap: translation_json not available")

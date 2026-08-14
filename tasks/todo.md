@@ -2002,3 +2002,27 @@ d’annulation dans le reste du jeu.
 - Les panneaux routiers reprennent exactement les contrôles de ligne et glyphes-flèches EN ; 23 cibles sont relocalisées et repointées.
 - L’audit ROM vérifie les pointeurs vivants, les noms canoniques, l’absence d’alias FR/DE, les terminateurs et la position des flèches.
 - Les tests Python/Vitest, les trois builds FR/IT/DE, l’audit de collisions et le test E2E DE sont verts. Aucun contenu FR/IT n’est modifié.
+# F-603 — finaliser le Pokédex allemand et les unités métriques
+
+## Diagnostic et conception
+
+- Les catégories, l'ordre allemand et la conversion métrique sont déjà câblés,
+  mais les six libellés statistiques pointés restent en anglais.
+- Parmi les 896 descriptions réellement indexées, une retombe en anglais,
+  quatre sont rejetées à cause de ponctuation non encodable et douze dépassent
+  encore la largeur réelle de 232 px malgré la limite verticale de trois lignes.
+- Le correctif reste exclusivement DE : patch dédié des libellés, réécritures
+  courtes dans les overrides Pokédex et gardes ROM exhaustives.
+
+## Plan validé
+
+- [x] Ajouter les tests rouges de dispatch et libellés statistiques.
+- [x] Porter les six libellés statistiques allemands et les câbler au build.
+- [ ] Compléter les descriptions et ramener chaque ligne à 232 px maximum.
+- [ ] Construire puis décoder la ROM DE : catégories, métriques et descriptions.
+- [ ] Vérifier les 1 293 noms d'espèces via le correctif dédié B-597 intégré.
+- [ ] Prouver les non-régressions FR/IT, committer et intégrer localement.
+
+## Revue
+
+- En attente des preuves finales.
