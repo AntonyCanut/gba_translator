@@ -257,13 +257,13 @@ class TestBuildFrPipeline(unittest.TestCase):
                 f"scripts/{name} is missing",
             )
 
-    def test_rom_suite_checks_consecutive_fr_builds_are_identical(self) -> None:
-        """A no-change FR rebuild must never produce a binary-only diff."""
-        rom_prereqs, _ = _extract_target_block(self.text, "test-rom")
+    def test_private_build_suite_checks_consecutive_fr_builds_are_identical(self) -> None:
+        """The maintainer build must still prove deterministic FR output."""
+        rom_prereqs, _ = _extract_target_block(self.text, "test-private-build")
         self.assertIn(
             DETERMINISM_TARGET,
             rom_prereqs.split(),
-            "test-rom must compare two consecutive build-fr artifacts",
+            "test-private-build must compare two consecutive build-fr artifacts",
         )
 
         _, recipe = _extract_target_block(self.text, DETERMINISM_TARGET)

@@ -77,6 +77,17 @@ npx playwright install chromium
 make install-playwright
 ```
 
+### ROM source locale
+
+Les tests ROM et Playwright ne téléchargent plus de ROM en CI. Placez la ROM
+anglaise compatible sous `input/roms/englishrom.gba`, puis laissez les
+commandes de test appliquer les BPS suivis :
+
+```bash
+make verify-patches
+make materialize-test-roms
+```
+
 ### Variables d'environnement
 
 | Variable | Usage | Valeur par défaut |
@@ -105,7 +116,7 @@ make test-python
 # Tests Vitest (emulator-web, < 5s)
 make test-vitest
 
-# Tests Playwright E2E (démarre le serveur automatiquement)
+# Tests Playwright E2E (matérialise FR puis démarre le serveur)
 make test-playwright
 
 # Tout d'un coup
@@ -297,14 +308,16 @@ La config (`playwright.config.ts`) définit 9 projets indépendants :
 ### Commandes
 
 ```bash
-# Lancer tous les projets
+# Lancer tous les projets (applique d'abord le patch FR)
 make test-playwright
 # ou
-npx playwright test
+npm run test:e2e
 
-# Lancer un projet spécifique
-npx playwright test --project=boot
-npx playwright test --project=menu-navigation
+# Lancer un projet spécifique avec matérialisation
+npm run test:e2e:boot
+npm run test:e2e:translation
+npm run test:e2e:german
+npm run test:e2e:hp-bar
 
 # Lancer un fichier spécifique
 npx playwright test tests/e2e-playwright/boot.spec.ts

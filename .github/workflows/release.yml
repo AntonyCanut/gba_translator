@@ -1,31 +1,18 @@
-name: Build & Release BPS patches (FR + IT + DE + Indie)
+name: Publish tracked BPS patches (FR + IT + DE + Indie)
 
 on:
   push:
     branches: [unbound, master]
+    paths:
+      - "patches/**"
   workflow_dispatch:
 
 jobs:
-  build:
-    name: Build ${{ matrix.lang_label }} patch
+  release:
+    name: Validate and publish persistent patches
     runs-on: ubuntu-latest
-    continue-on-error: ${{ !matrix.mandatory }}
-    strategy:
-      fail-fast: false
-      matrix:
-        include:
-          - lang: fr
-            lang_label: French
-            mandatory: true
-          - lang: it
-            lang_label: Italian
-            mandatory: false
-          - lang: de
-            lang_label: German
-            mandatory: false
-          - lang: indie
-            lang_label: Indie
-            mandatory: false
+    permissions:
+      contents: write
     steps:
       - name: Checkout
         uses: actions/checkout@v6
@@ -38,140 +25,46 @@ jobs:
       - name: Install dependencies
         run: pip install -e ".[dev]"
 
-      - name: Download and verify private ROM inputs
-        env:
-          UNBOUND_ENGLISH_ROM_URL: ${{ secrets.UNBOUND_ENGLISH_ROM_URL }}
-          UNBOUND_PATCHED_FRENCH_ROM_URL: ${{ secrets.UNBOUND_PATCHED_FRENCH_ROM_URL }}
-          UNBOUND_SPANISH_ROM_URL: ${{ secrets.UNBOUND_SPANISH_ROM_URL }}
+      - name: Validate tracked patch bundle
         run: |
-          test -n "${UNBOUND_ENGLISH_ROM_URL}" || { echo "::error::UNBOUND_ENGLISH_ROM_URL is missing"; exit 1; }
-          test -n "${UNBOUND_PATCHED_FRENCH_ROM_URL}" || { echo "::error::UNBOUND_PATCHED_FRENCH_ROM_URL is missing"; exit 1; }
-          test -n "${UNBOUND_SPANISH_ROM_URL}" || { echo "::error::UNBOUND_SPANISH_ROM_URL is missing"; exit 1; }
-          mkdir -p input/roms
-          curl --fail --location --retry 3 --silent --show-error \
-            "${UNBOUND_ENGLISH_ROM_URL}" --output input/roms/englishrom.gba
-          curl --fail --location --retry 3 --silent --show-error \
-            "${UNBOUND_PATCHED_FRENCH_ROM_URL}" --output input/roms/patchedfrenchrom.gba
-          curl --fail --location --retry 3 --silent --show-error \
-            "${UNBOUND_SPANISH_ROM_URL}" --output input/roms/spanishrom.gba
-          make verify-roms
-
-      - name: Prepare French translation JSON
-        if: matrix.lang == 'fr'
-        run: make prepare-fr
-
-      - name: Build ${{ matrix.lang_label }} ROM locally
-        run: make build-${{ matrix.lang }} BUILD_NUMBER=${{ github.run_number }}
-
-      - name: Verify ${{ matrix.lang_label }} version display
-        run: |
-          python3 scripts/verify_version_display.py \
-            --rom output/roms/GenedRom-${{ matrix.lang }}.gba \
-            --lang-code ${{ matrix.lang }} \
-            --build-number ${{ github.run_number }}
-
-      - name: Create verified BPS and remove generated ROM
-        run: |
-          python3 scripts/package_release.py \
-            ${{ matrix.lang }} --build-number ${{ github.run_number }}
-          rm -f output/roms/GenedRom-${{ matrix.lang }}.gba
-
-      - name: Upload ${{ matrix.lang_label }} patch artifact
-        id: upload_patch
-        continue-on-error: true
-        uses: actions/upload-artifact@v4
-        with:
-          name: patch-${{ matrix.lang }}
-          path: |
-            output/release/pokemon_unbound_${{ matrix.lang }}.bps
-            output/release/RELEASE_MANIFEST.json
-          if-no-files-found: error
-
-      - name: Retry ${{ matrix.lang_label }} patch artifact upload
-        id: retry_upload_patch
-        if: steps.upload_patch.outcome == 'failure'
-        uses: actions/upload-artifact@v4
-        with:
-          name: patch-${{ matrix.lang }}
-          path: |
-            output/release/pokemon_unbound_${{ matrix.lang }}.bps
-            output/release/RELEASE_MANIFEST.json
-          if-no-files-found: error
-          overwrite: true
-
-  release:
-    name: Publish persistent and latest releases
-    needs: [build]
-    if: always()
-    runs-on: ubuntu-latest
-    permissions:
-      contents: write
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v6
-
-      - name: Download BPS artifacts
-        uses: actions/download-artifact@v4
-        continue-on-error: true
-        with:
-          pattern: patch-*
-          path: artifacts
-
-      - name: Assemble verified release metadata
-        run: |
-          python3 scripts/assemble_patch_release.py artifacts \
-            --output artifacts/release \
-            --build-number ${{ github.run_number }} \
+          python3 scripts/verify_patch_bundle.py patches \
             --required fr it de indie
+
+      - name: Resolve bundle version
+        id: bundle
+        run: |
+          BUILD_NUMBER=$(python3 -c \
+            'import json; print(json.load(open("patches/RELEASE_MANIFEST.json"))["build_number"])')
+          case "${BUILD_NUMBER}" in
+            ''|*[!0-9]*) echo "::error::Invalid patch build number"; exit 1 ;;
+          esac
+          test "${BUILD_NUMBER}" -gt 0 || {
+            echo "::error::Patch build number must be positive"
+            exit 1
+          }
+          echo "build_number=${BUILD_NUMBER}" >> "${GITHUB_OUTPUT}"
+          echo "version_tag=v2.1.${BUILD_NUMBER}" >> "${GITHUB_OUTPUT}"
 
       - name: Publish versioned release and replace latest
         id: publish_releases
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          VERSION_TAG: v2.1.${{ github.run_number }}
+          VERSION_TAG: ${{ steps.bundle.outputs.version_tag }}
           LATEST_TAG: latest
+          BUILD_NUMBER: ${{ steps.bundle.outputs.build_number }}
         run: |
           SHA=$(git rev-parse --short HEAD)
           MSG=$(git log -1 --pretty=%s)
-          RUN=${{ github.run_number }}
-
-          if [ ! -f artifacts/release/pokemon_unbound_fr.bps ]; then
-            echo "::error::French BPS artifact missing — FR must succeed."
-            exit 1
-          fi
-
           ASSETS=(
-            "artifacts/release/pokemon_unbound_fr.bps"
-            "artifacts/release/RELEASE_MANIFEST.json"
-            "artifacts/release/SHA256SUMS.txt"
+            "patches/pokemon_unbound_fr.bps"
+            "patches/pokemon_unbound_it.bps"
+            "patches/pokemon_unbound_de.bps"
+            "patches/pokemon_unbound_indie.bps"
+            "patches/RELEASE_MANIFEST.json"
+            "patches/SHA256SUMS.txt"
           )
-          # shellcheck disable=SC2016
-          NOTES=$(printf '**Commit :** `%s` — %s\n\nBuild automatique depuis `%s` (build #%s). Tous les BPS utilisent la ROM anglaise propre SHA-256 `7aa25bbf568f7cfcf6ee1cf2e9e6ff637350b3d0705c2375cabb6baa7d9739f7`.\n\n- 🇫🇷 `pokemon_unbound_fr.bps`' \
-            "${SHA}" "${MSG}" "${GITHUB_REF_NAME}" "${RUN}")
-
-          if [ -f artifacts/release/pokemon_unbound_it.bps ]; then
-            ASSETS+=( "artifacts/release/pokemon_unbound_it.bps" )
-            # shellcheck disable=SC2016
-            NOTES="${NOTES}"$(printf '\n- 🇮🇹 `pokemon_unbound_it.bps`')
-          else
-            NOTES="${NOTES}"$(printf '\n- 🇮🇹 patch indisponible pour ce build.')
-          fi
-
-          if [ -f artifacts/release/pokemon_unbound_de.bps ]; then
-            ASSETS+=( "artifacts/release/pokemon_unbound_de.bps" )
-            # shellcheck disable=SC2016
-            NOTES="${NOTES}"$(printf '\n- 🇩🇪 `pokemon_unbound_de.bps`')
-          else
-            NOTES="${NOTES}"$(printf '\n- 🇩🇪 patch indisponible pour ce build.')
-          fi
-
-          if [ -f artifacts/release/pokemon_unbound_indie.bps ]; then
-            ASSETS+=( "artifacts/release/pokemon_unbound_indie.bps" )
-            # shellcheck disable=SC2016
-            NOTES="${NOTES}"$(printf '\n- Indie: `pokemon_unbound_indie.bps`')
-          else
-            NOTES="${NOTES}"$(printf '\n- Indie: patch indisponible pour ce build.')
-          fi
+          NOTES=$(printf '**Commit :** %s — %s\n\nBundle BPS suivi et validé sans ROM (build #%s).\n\n- FR: pokemon_unbound_fr.bps\n- IT: pokemon_unbound_it.bps\n- DE: pokemon_unbound_de.bps\n- Indie: pokemon_unbound_indie.bps' \
+            "${SHA}" "${MSG}" "${BUILD_NUMBER}")
 
           if gh release view "${VERSION_TAG}" >/dev/null 2>&1; then
             EXISTING_TARGET=$(gh release view "${VERSION_TAG}" --json targetCommitish --jq .targetCommitish)
@@ -195,11 +88,11 @@ jobs:
             echo "Versioned release ${VERSION_TAG} already verified; resuming latest."
           else
             gh release create "${VERSION_TAG}" --target "${GITHUB_SHA}" \
-              --title "Unbound 2.1.${RUN}" --notes "${NOTES}" --latest=false \
+              --title "Unbound 2.1.${BUILD_NUMBER}" --notes "${NOTES}" --latest=false \
               "${ASSETS[@]}"
           fi
 
           gh release delete "${LATEST_TAG}" --yes --cleanup-tag 2>/dev/null || true
           gh release create "${LATEST_TAG}" --target "${GITHUB_SHA}" \
-            --title "Unbound 2.1.${RUN} — latest" --notes "${NOTES}" \
+            --title "Unbound 2.1.${BUILD_NUMBER} — latest" --notes "${NOTES}" \
             --prerelease "${ASSETS[@]}"

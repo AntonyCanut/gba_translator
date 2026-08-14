@@ -7,6 +7,7 @@ import argparse
 import hashlib
 import json
 import sys
+import zlib
 from collections.abc import Iterable
 from pathlib import Path
 
@@ -26,6 +27,11 @@ def sha256(path: Path) -> str:
         for chunk in iter(lambda: handle.read(1 << 20), b""):
             digest.update(chunk)
     return digest.hexdigest()
+
+
+def crc32(payload: bytes) -> str:
+    """Retourne un CRC32 canonique sur huit chiffres hexadécimaux."""
+    return f"{zlib.crc32(payload):08x}"
 
 
 class PatchReleasePackager:
@@ -96,18 +102,22 @@ class PatchReleasePackager:
                     "name": config.name,
                     "native_name": config.native_name,
                     "status": config.status,
-                    "version_label": config.version_label,
+                    "version_label": (
+                        f"{config.version_label.rsplit('.', 1)[0]}.{build_number}"
+                    ),
                     "patch": patch_name,
                     "patch_sha256": patch_hash,
                     "patch_size_bytes": len(patch_bytes),
                     "source": {
                         "file": source.name,
                         "sha256": sha256(source),
+                        "crc32": crc32(source_bytes),
                         "size_bytes": source.stat().st_size,
                     },
                     "target": {
                         "file": target.name,
                         "sha256": sha256(target),
+                        "crc32": crc32(target_bytes),
                         "size_bytes": target.stat().st_size,
                     },
                 }

@@ -1,5 +1,16 @@
 # F-608 — ROM vers patch BPS
 
+## Suivi — aucune ROM en entrée CI
+
+- [x] Auditer le comportement réel de Simopich et le pipeline livré.
+- [x] Retenir un bundle BPS versionné comme unique entrée de publication.
+- [ ] Ajouter les tests rouges BPS/bundle/workflows/E2E local.
+- [ ] Implémenter la validation, la matérialisation et la promotion locale.
+- [ ] Retirer les téléchargements et builds ROM de GitHub Actions.
+- [ ] Adapter Make/npm pour reconstruire les ROMs de test depuis les patchs.
+- [ ] Mettre à jour README et documentation.
+- [ ] Refaire les validations complètes et committer.
+
 ## Diagnostic et conception
 
 - Les releases et artefacts CI publient actuellement des `.gba` complets.

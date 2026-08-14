@@ -97,16 +97,18 @@ French must stay isolated from the generic driver. The dedicated French build ex
 
 ## Released patches
 
-GitHub releases contain BPS patches only. Download
-`pokemon_unbound_<language>.bps`, verify the SHA-256 of the required private
-source ROM in the release notes, then apply the patch with a BPS-compatible
-patcher. Keep the source ROM unchanged and save the generated ROM under a new
-name.
+GitHub releases and the tracked `patches/` directory contain BPS patches
+only. Download `pokemon_unbound_<language>.bps`, verify the SHA-256 of the
+required source ROM in `RELEASE_MANIFEST.json`, then apply the patch with a
+BPS-compatible patcher. Keep the source ROM unchanged and save the generated
+ROM under a new name.
 
 Every build remains available under `v2.1.<build>`. The `latest` release is a
 rolling alias replaced by the newest build. Both releases also include the
 global `RELEASE_MANIFEST.json` and `SHA256SUMS.txt`; publication starts only
-after the FR, IT, DE and Indie artifacts have all been verified.
+after the FR, IT, DE and Indie artifacts have all been verified. GitHub
+Actions validates and publishes these tracked files without downloading,
+building or uploading any ROM.
 
 ## Translation methods
 
@@ -176,8 +178,10 @@ The game has strict constraints around line length, control codes, context, gend
 - Python 3.11+
 - Make
 - Node.js and npm for emulator and Playwright-based tests
-- A legally obtained Pokémon Unbound-compatible English ROM
-- The Spanish reference ROM when running the Spanish reproduction pipeline
+- A legally obtained Pokémon Unbound-compatible English ROM, only for local
+  ROM/E2E tests or maintainer builds
+- The private patched-FR and Spanish reference ROMs only when regenerating the
+  translation patches as a maintainer
 
 Install project dependencies:
 
@@ -191,22 +195,53 @@ Install Playwright browsers when running E2E tests:
 make install-playwright
 ```
 
-## ROM setup
+## Patch-first setup for local work
 
 ROM files are not provided by this repository.
 
-Place your ROMs here:
+For ordinary work and E2E validation, place only the compatible English
+Pokémon Unbound ROM here:
 
 ```text
 input/roms/englishrom.gba
+```
+
+The expected SHA-256 is
+`7aa25bbf568f7cfcf6ee1cf2e9e6ff637350b3d0705c2375cabb6baa7d9739f7`.
+The file remains local and ignored by Git. It is never sent to GitHub Actions.
+
+Validate the tracked bundle without any ROM, then materialize the four local
+test ROMs:
+
+```bash
+make verify-patches
+make materialize-test-roms
+```
+
+The BPS source CRC, source SHA-256, target CRC and target SHA-256 are all
+checked. Generated files are written under `output/roms/`; an existing target
+is preserved as `.gba.bak` before replacement.
+
+Playwright commands perform this materialization automatically:
+
+```bash
+npm run test:e2e:boot
+npm run test:e2e:translation
+npm run test:e2e:german
+npm run test:e2e:hp-bar
+```
+
+No network access is used by the materializer.
+
+### Maintainer-only patch regeneration
+
+Regenerating a release bundle still exercises the historical source builder.
+For that operation only, also place:
+
+```text
 input/roms/patchedfrenchrom.gba
 input/roms/spanishrom.gba
 ```
-
-These files are local, ignored by Git, and never included in CI artifacts or
-releases. In GitHub Actions they are downloaded from the private secrets
-`UNBOUND_ENGLISH_ROM_URL`, `UNBOUND_PATCHED_FRENCH_ROM_URL`, and
-`UNBOUND_SPANISH_ROM_URL`, then verified against `docs/roms_baseline.json`.
 
 `englishrom.gba` must be a clean vanilla Unbound ROM — it is the base for
 `build-es`, the generic multi-language driver (`build-it`/`build-de`/
@@ -215,6 +250,20 @@ releases. In GitHub Actions they are downloaded from the private secrets
 into it; it is the base for `build-fr` only (see docs/ROM_SOURCES.md). The
 Spanish ROM is required for the original reproduction pipeline and for
 validation / pointer-proof workflows.
+
+Choose a new positive build number, rebuild and test locally, then promote the
+verified BPS into the tracked bundle:
+
+```bash
+make update-patches BUILD_NUMBER=43
+make test-private-build
+make materialize-test-roms
+make test-rom
+make test-playwright
+```
+
+Review and commit `patches/` together with the source changes. CI only
+revalidates and publishes that exact bundle as `v2.1.43` and `latest`.
 
 ## Build commands
 
@@ -258,16 +307,23 @@ Create redistributable BPS patches:
 make release-all
 ```
 
-Release packaging writes BPS patches, checksums, and a manifest into:
+This maintainer command writes a candidate bundle into:
 
 ```text
 output/release/
 ```
 
-No ROM is published. Each BPS must be applied to the exact private source ROM
-listed in `RELEASE_MANIFEST.json`; the patch verifies the source CRC before
+Promote it only after local validation:
+
+```bash
+python3 scripts/promote_patch_bundle.py
+```
+
+No ROM is published. Each BPS must be applied to the exact local source listed
+in `RELEASE_MANIFEST.json`; the patch verifies the source CRC before
 producing the translated ROM. The GitHub workflow keeps every
-`v2.1.<build>` release and replaces the rolling `latest` release.
+`v2.1.<build>` release and replaces the rolling `latest` release without
+requiring any ROM secret.
 
 ## Spanish reproduction pipeline
 
@@ -307,6 +363,9 @@ Run ROM-specific tests:
 make test-rom
 ```
 
+This first reconstructs FR, IT, DE and Indie from `patches/` and the local
+`input/roms/englishrom.gba`; it does not rerun the private source builder.
+
 Run Vitest checks for the emulator web tooling:
 
 ```bash
@@ -318,6 +377,10 @@ Run Playwright E2E tests:
 ```bash
 make test-playwright
 ```
+
+The command applies the tracked FR patch locally before starting Playwright.
+Language-specific npm commands do the same for DE and for the multi-ROM
+HP-bar scenario.
 
 Run the full available test suite:
 

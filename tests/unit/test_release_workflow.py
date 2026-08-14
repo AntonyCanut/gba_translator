@@ -11,26 +11,22 @@ CI_WORKFLOW = ROOT / ".github" / "workflows" / "ci.yml"
 
 def _build_steps() -> list[dict]:
     workflow = yaml.safe_load(WORKFLOW.read_text(encoding="utf-8"))
-    return workflow["jobs"]["build"]["steps"]
+    return workflow["jobs"]["release"]["steps"]
 
 
-def test_patch_artifact_upload_retries_a_transient_failure_safely() -> None:
-    """A failed finalize (for example HTTP 403) must get one clean retry."""
+def test_release_validates_the_tracked_bundle_without_private_inputs() -> None:
+    """Réintroduire un téléchargement ou build ROM doit casser cette garde."""
+    workflow = yaml.safe_load(WORKFLOW.read_text(encoding="utf-8"))
     steps = _build_steps()
-    primary = next(step for step in steps if step.get("id") == "upload_patch")
-    retry = next(step for step in steps if step.get("id") == "retry_upload_patch")
+    script = "\n".join(str(step.get("run", "")) for step in steps)
 
-    assert primary["uses"] == "actions/upload-artifact@v4"
-    assert primary["continue-on-error"] is True
-    assert primary["with"]["if-no-files-found"] == "error"
-
-    assert retry["uses"] == primary["uses"]
-    assert retry["if"] == "steps.upload_patch.outcome == 'failure'"
-    assert retry.get("continue-on-error") is not True
-    assert retry["with"]["name"] == primary["with"]["name"]
-    assert retry["with"]["path"] == primary["with"]["path"]
-    assert retry["with"]["if-no-files-found"] == "error"
-    assert retry["with"]["overwrite"] is True
+    assert set(workflow["jobs"]) == {"release"}
+    assert "verify_patch_bundle.py" in script
+    assert "patches" in script
+    assert "curl" not in script
+    assert "ROM_URL" not in script
+    assert "build-fr" not in script
+    assert "build-all" not in script
 
 
 def test_workflow_never_uploads_a_rom() -> None:
@@ -43,11 +39,8 @@ def test_workflow_never_uploads_a_rom() -> None:
         if step.get("uses", "").startswith("actions/upload-artifact@")
     ]
 
-    assert uploads
-    assert all(".gba" not in step["with"]["path"] for step in uploads)
-    assert all(".bps" in step["with"]["path"] for step in uploads)
-    assert all("RELEASE_MANIFEST.json" in step["with"]["path"] for step in uploads)
-    assert all("patch" in step["with"]["name"] for step in uploads)
+    assert uploads == []
+    assert ".gba" not in WORKFLOW.read_text(encoding="utf-8")
 
 
 def test_workflow_publishes_an_immutable_version_and_a_rolling_latest() -> None:
@@ -59,7 +52,7 @@ def test_workflow_publishes_an_immutable_version_and_a_rolling_latest() -> None:
         if step.get("id") == "publish_releases"
     )
 
-    assert publish["env"]["VERSION_TAG"] == "v2.1.${{ github.run_number }}"
+    assert publish["env"]["VERSION_TAG"] == "${{ steps.bundle.outputs.version_tag }}"
     assert publish["env"]["LATEST_TAG"] == "latest"
     script = publish["run"]
     assert 'gh release view "${VERSION_TAG}"' in script
@@ -74,23 +67,14 @@ def test_workflow_publishes_an_immutable_version_and_a_rolling_latest() -> None:
     assert "SHA256SUMS.txt" in script
 
 
-def test_release_matrix_covers_every_buildable_language() -> None:
-    """Une langue buildable ne doit pas disparaître silencieusement des releases."""
-    workflow = yaml.safe_load(WORKFLOW.read_text(encoding="utf-8"))
-    entries = workflow["jobs"]["build"]["strategy"]["matrix"]["include"]
-
-    assert {entry["lang"] for entry in entries} == {"fr", "it", "de", "indie"}
-
-
 def test_release_requires_every_patch_before_creating_an_immutable_version() -> None:
-    workflow = yaml.safe_load(WORKFLOW.read_text(encoding="utf-8"))
-    steps = workflow["jobs"]["release"]["steps"]
-    assemble = next(
-        step for step in steps if step.get("name") == "Assemble verified release metadata"
-    )
-    assert "--required fr it de indie" in assemble["run"]
-    publish_index = next(i for i, step in enumerate(steps) if step.get("id") == "publish_releases")
-    assert not any(step.get("name", "").startswith("Fail if") for step in steps[publish_index + 1 :])
+    steps = _build_steps()
+    verify = next(step for step in steps if step.get("name") == "Validate tracked patch bundle")
+    resolve = next(step for step in steps if step.get("id") == "bundle")
+
+    assert "--required fr it de indie" in verify["run"]
+    assert "build_number" in resolve["run"]
+    assert "version_tag=v2.1." in resolve["run"]
 
 
 def test_ci_without_private_roms_keeps_fast_and_standard_suites_rom_free() -> None:
@@ -111,24 +95,29 @@ def test_ci_without_private_roms_keeps_fast_and_standard_suites_rom_free() -> No
     assert "not rom" in standard_run
 
 
-def test_playwright_ci_uses_private_inputs_only_on_trusted_pushes() -> None:
-    """Les secrets ROM ne doivent jamais être demandés aux PR de forks."""
+def test_ci_never_downloads_or_builds_a_private_rom() -> None:
+    """Les E2E ROM sont locaux ; la CI publique reste entièrement ROM-less."""
     workflow = yaml.safe_load(CI_WORKFLOW.read_text(encoding="utf-8"))
-    job = workflow["jobs"]["playwright-tests"]
-    names = {step.get("name") for step in job["steps"]}
+    text = CI_WORKFLOW.read_text(encoding="utf-8")
 
-    assert job["if"] == "github.event_name == 'push' && github.ref == 'refs/heads/master'"
-    assert "Download and verify private ROM inputs" in names
-    assert "Build French ROM locally" in names
+    assert "python-tests-rom" not in workflow["jobs"]
+    assert "playwright-tests" not in workflow["jobs"]
+    assert "ROM_URL" not in text
+    assert "input/roms" not in text
+    patch_job = workflow["jobs"]["patch-bundle"]
+    script = "\n".join(str(step.get("run", "")) for step in patch_job["steps"])
+    assert "verify_patch_bundle.py" in script
 
 
-def test_trusted_ci_runs_python_rom_tests_with_private_inputs() -> None:
-    workflow = yaml.safe_load(CI_WORKFLOW.read_text(encoding="utf-8"))
-    job = workflow["jobs"]["python-tests-rom"]
-    names = {step.get("name") for step in job["steps"]}
+def test_local_e2e_commands_materialize_the_patch_before_playwright() -> None:
+    package = yaml.safe_load((ROOT / "package.json").read_text(encoding="utf-8"))
 
-    assert job["if"] == "github.event_name == 'push' && github.ref == 'refs/heads/master'"
-    assert "Download and verify private ROM inputs" in names
-    assert "Build French ROM locally" in names
-    run = next(step["run"] for step in job["steps"] if step.get("name") == "Run ROM tests")
-    assert 'rom and not emulator' in run
+    assert package["scripts"]["test:e2e"].startswith(
+        "python3 scripts/materialize_test_roms.py fr && "
+    )
+    assert package["scripts"]["test:e2e:german"].startswith(
+        "python3 scripts/materialize_test_roms.py de && "
+    )
+    assert package["scripts"]["test:e2e:hp-bar"].startswith(
+        "python3 scripts/materialize_test_roms.py fr it de && "
+    )

@@ -1,7 +1,19 @@
 # ROM Sources and Baseline
 
-This project uses three private ROMs as build inputs. They are ignored by Git,
-must be obtained legally, and are never uploaded as CI or release artifacts:
+The public CI and release workflows use no ROM input. Their only release
+inputs are the four tracked BPS files and metadata under `patches/`.
+
+For ordinary local tests, the developer supplies one legally obtained,
+compatible English Unbound ROM:
+
+- input/roms/englishrom.gba — source of the tracked FR/IT/DE/Indie BPS.
+
+`make materialize-test-roms` verifies that local source against the manifest,
+applies every patch, verifies each target and writes only ignored files under
+`output/roms/`.
+
+The historical source builder still uses three private ROMs when a maintainer
+intentionally regenerates the tracked patch bundle. They are ignored by Git:
 - input/roms/englishrom.gba — clean vanilla Unbound base. Used by build-es, the
   generic multi-language driver (build-it/build-de/build-indie/build-lang) and
   all shared extraction/diff tooling.
@@ -20,16 +32,19 @@ Baseline metadata (size + sha256):
 Baseline metrics (text counts and diffs):
 - docs/baseline_report.json
 
-Verify inputs before any build:
+Verify maintainer inputs before a source rebuild:
 - python3 scripts/verify_roms.py --baseline docs/roms_baseline.json
 
-GitHub Actions downloads the same inputs from `UNBOUND_ENGLISH_ROM_URL`,
-`UNBOUND_PATCHED_FRENCH_ROM_URL`, and `UNBOUND_SPANISH_ROM_URL`. These secrets
-must be private URLs. The workflow verifies all three inputs before building.
+GitHub Actions never downloads these inputs. Python ROM and Playwright suites
+are local because applying a BPS necessarily requires the source ROM bytes.
+The public CI runs ROM-less pytest/Vitest checks plus
+`scripts/verify_patch_bundle.py`.
 
 Release packaging compares each built target with its declared source and
-publishes only `pokemon_unbound_<lang>.bps`. Tous les patchs distribués sont
+produces only `pokemon_unbound_<lang>.bps`. All distributed patches are
 calculés depuis `englishrom.gba`, y compris FR : `patchedfrenchrom.gba` reste
-strictement une base de compilation interne. If the ROMs ever change, create a
+strictement une base de compilation interne. Le candidat est écrit sous
+`output/release/`, puis `scripts/promote_patch_bundle.py` copie seulement un
+bundle complet et vérifié vers `patches/`. If the ROMs ever change, create a
 separate compatibility migration; never silently regenerate the baseline for
 a different source lineage.

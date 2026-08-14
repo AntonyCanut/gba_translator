@@ -4,6 +4,7 @@ from __future__ import annotations
 
 import hashlib
 import json
+import zlib
 
 import pytest
 
@@ -49,9 +50,12 @@ def test_packager_writes_only_a_verified_bps_and_metadata(tmp_path) -> None:
     assert manifest["format"] == "BPS1"
     assert manifest["build_number"] == 42
     entry = manifest["languages"][0]
+    assert entry["version_label"] == "FR.2.1.42"
     assert entry["patch"] == "pokemon_unbound_fr.bps"
     assert entry["source"]["sha256"] == hashlib.sha256(source.read_bytes()).hexdigest()
+    assert entry["source"]["crc32"] == f"{zlib.crc32(source.read_bytes()):08x}"
     assert entry["target"]["sha256"] == hashlib.sha256(target.read_bytes()).hexdigest()
+    assert entry["target"]["crc32"] == f"{zlib.crc32(target.read_bytes()):08x}"
     assert entry["target"]["file"] == "target.gba"
     assert json.loads((release_dir / "RELEASE_MANIFEST.json").read_text()) == manifest
     checksums = (release_dir / "SHA256SUMS.txt").read_text()

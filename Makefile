@@ -9,6 +9,7 @@
 
 PYTHON ?= python3
 BUILD_NUMBER ?= 0
+PATCH_DIR := patches
 
 ROM_DIR := input/roms
 # Clean vanilla base — used by build-es, the generic multi-language driver
@@ -110,8 +111,8 @@ SPANISH_BUILD := $(ROM_OUT_DIR)/GenedRom-es.gba
 .DEFAULT_GOAL := pipeline
 
 .PHONY: pipeline verify-roms extract extract-en extract-es extract-fr diff build-es build-fr verify-fr-determinism prepare-fr ensure-fr-translation validate-es trilingual-csv \
-	build-it build-de build-indie build-lang build-all release-all langs audit-toponyms-de \
-	test test-python-fast test-python test-rom test-fr-rebuild check-translations check-de-parity check-de-scope test-vitest test-playwright test-all \
+	build-it build-de build-indie build-lang build-all release-all update-patches verify-patches materialize-test-roms materialize-test-rom-fr langs audit-toponyms-de \
+	test test-python-fast test-python test-rom test-private-build test-fr-rebuild check-translations check-de-parity check-de-scope test-vitest test-playwright test-all \
 	sync-charmap sync-charmap-check install install-playwright lint tickets report \
 	clean help
 
@@ -456,6 +457,20 @@ release-all: build-all
 	@$(PYTHON) scripts/package_release.py --build-number $(BUILD_NUMBER)
 	@echo "✓ Release ready in output/release/"
 
+# Maintainer-only: rebuild locally, then promote the verified artifacts tracked
+# by Git. GitHub Actions only validates and publishes this canonical bundle.
+update-patches: release-all
+	@$(PYTHON) scripts/promote_patch_bundle.py
+
+verify-patches:
+	@$(PYTHON) scripts/verify_patch_bundle.py $(PATCH_DIR) --required fr it de indie
+
+materialize-test-roms: verify-patches
+	@$(PYTHON) scripts/materialize_test_roms.py fr it de indie
+
+materialize-test-rom-fr: verify-patches
+	@$(PYTHON) scripts/materialize_test_roms.py fr
+
 # List the languages declared in the languages/ registry.
 langs:
 	@$(PYTHON) -c "import sys; sys.path.insert(0, '.'); from src.i18n import load_registry; \
@@ -490,8 +505,12 @@ test-python-fast:
 test-python:
 	@$(PYTHON) -m pytest tests/ -m "not emulator and not stress and not benchmark and not rom" -v
 
-test-rom: verify-fr-determinism test-fr-rebuild
+test-rom: materialize-test-roms
 	@$(PYTHON) -m pytest tests/ -m rom -v
+
+# Maintainer-only source-pipeline checks. Unlike test-rom, this target requires
+# the patched-FR and Spanish private inputs and rebuilds FR twice.
+test-private-build: verify-fr-determinism test-fr-rebuild
 
 test-fr-rebuild:
 	@$(PYTHON) -m pytest -q --tb=short \
@@ -524,7 +543,7 @@ test-vitest:
 	@cd emulator-web && npx vitest run
 
 test-playwright:
-	@npx playwright test
+	@npm run test:e2e
 
 test-all: test-python-fast test-vitest test-playwright
 
@@ -582,12 +601,16 @@ help:
 	@echo "    make build-lang LANG_CODE=it - Build any generic language"
 	@echo "    make build-all       - Build FR + IT + DE + Indie"
 	@echo "    make release-all     - Build all languages and package BPS patches"
+	@echo "    make update-patches  - Rebuild locally and promote the tracked BPS bundle"
+	@echo "    make verify-patches  - Validate the tracked BPS bundle without a ROM"
+	@echo "    make materialize-test-roms - Apply tracked BPS locally for ROM/E2E tests"
 	@echo ""
 	@echo "  Tests:"
 	@echo "    make test            - Alias for test-python-fast"
 	@echo "    make test-python-fast - pytest rapide (unit, sans benchmarks/stress/e2e/emulator)"
 	@echo "    make test-python     - pytest standard (sans emulator/stress/benchmark)"
 	@echo "    make test-rom        - Vérification des traductions dans la ROM buildée (pytest -m rom)"
+	@echo "    make test-private-build - Determinism/rebuild checks with maintainer ROM inputs"
 	@echo "    make test-fr-rebuild - Régressions FR/ES après reconstruction de ROM"
 	@echo "    make test-vitest     - Vitest (emulator-web)"
 	@echo "    make test-playwright - Playwright E2E"

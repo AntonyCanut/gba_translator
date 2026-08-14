@@ -5,7 +5,7 @@
 | Niveau       | Dossier              | Durée cible | Description                                       |
 | ------------ | -------------------- | ----------- | ------------------------------------------------- |
 | Unit         | `tests/`             | < 30s       | Tests unitaires sans ROM ni émulateur              |
-| Integration  | `tests/`             | < 2min      | Tests nécessitant une ROM (`@pytest.mark.rom`)     |
+| Integration  | `tests/`             | < 2min      | Tests ROM locaux après matérialisation BPS          |
 | E2E          | `tests/e2e/`         | < 10min     | Pipeline complet, validation ROM traduite          |
 | Stress       | `tests/` (`-m stress`) | > 30min   | Soak tests, fuzzing, endurance                     |
 | Benchmarks   | `tests/benchmarks/`  | < 5min      | Performance injection, allocation, pipeline        |
@@ -18,7 +18,7 @@
 | `stress`     | Tests de stress (très long)                          |
 | `slow`       | Tests lents (> 30s)                                  |
 | `emulator`   | Nécessite mGBA sur le PATH                           |
-| `rom`        | Nécessite une ROM GBA (variable `GBA_TEST_ROM`)      |
+| `rom`        | Nécessite la source locale puis les cibles BPS         |
 
 ## Variables d'environnement
 
@@ -46,9 +46,24 @@ python3 -m pytest tests/benchmarks/ -v -s
 # Stress tests
 python3 -m pytest tests/ -m "stress" -v
 
-# Avec ROM
-GBA_TEST_ROM=path/to/rom.gba python3 -m pytest tests/ -v
+# Avec ROMs matérialisées localement depuis les patchs suivis
+make materialize-test-roms
+make test-rom
 ```
+
+## CI sans ROM
+
+GitHub Actions ne possède aucun secret, téléchargement ou artefact ROM. Elle
+exécute les profils pytest sans marker `rom`, Vitest et la validation
+structurelle de `patches/`. Les tests ROM et Playwright sont locaux :
+
+```bash
+make test-rom
+make test-playwright
+```
+
+Ces commandes appliquent les BPS à `input/roms/englishrom.gba` avant de
+consommer les cibles sous `output/roms/`.
 
 ## Stratégie mGBA headless
 

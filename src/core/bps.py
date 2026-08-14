@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import zlib
+from dataclasses import dataclass
 
 BPS_MAGIC = b"BPS1"
 SOURCE_READ = 0
@@ -12,6 +13,17 @@ FOOTER_SIZE = 12
 
 class BpsError(ValueError):
     """Signale un patch BPS invalide ou incompatible avec sa ROM source."""
+
+
+@dataclass(frozen=True)
+class BpsPatchInfo:
+    """Métadonnées vérifiées d'un patch BPS, lisibles sans sa source."""
+
+    source_size: int
+    target_size: int
+    source_crc32: str
+    target_crc32: str
+    patch_crc32: str
 
 
 def _encode_number(value: int) -> bytes:
@@ -93,6 +105,66 @@ def create_bps_patch(source: bytes, target: bytes) -> bytes:
     return bytes(patch)
 
 
+def inspect_bps_patch(patch: bytes) -> BpsPatchInfo:
+    """Valide la structure d'un BPS et retourne son contrat source/cible.
+
+    Cette inspection ne reconstruit pas la cible et ne nécessite donc aucune
+    ROM. Elle contrôle le CRC du patch, les tailles, les actions prises en
+    charge et l'absence de données superflues.
+
+    Args:
+        patch: Contenu complet du fichier BPS1.
+
+    Returns:
+        Tailles et CRC32 déclarés par le patch validé.
+
+    Raises:
+        BpsError: Si le patch est corrompu, tronqué ou non pris en charge.
+    """
+    if len(patch) < len(BPS_MAGIC) + 3 + FOOTER_SIZE or not patch.startswith(BPS_MAGIC):
+        raise BpsError("en-tête BPS1 invalide")
+    expected_patch_crc = int.from_bytes(patch[-4:], "little")
+    if zlib.crc32(patch[:-4]) != expected_patch_crc:
+        raise BpsError("CRC du patch invalide")
+
+    footer_start = len(patch) - FOOTER_SIZE
+    cursor = len(BPS_MAGIC)
+    source_size, cursor = _decode_number(patch, cursor, footer_start)
+    target_size, cursor = _decode_number(patch, cursor, footer_start)
+    metadata_size, cursor = _decode_number(patch, cursor, footer_start)
+    cursor += metadata_size
+    if cursor > footer_start:
+        raise BpsError("métadonnées BPS tronquées")
+
+    target_offset = 0
+    while target_offset < target_size:
+        action_value, cursor = _decode_number(patch, cursor, footer_start)
+        action = action_value & 3
+        length = (action_value >> 2) + 1
+        if target_offset + length > target_size:
+            raise BpsError("action BPS au-delà de la taille cible")
+        if action == SOURCE_READ:
+            if target_offset + length > source_size:
+                raise BpsError("lecture BPS au-delà de la source")
+        elif action == TARGET_READ:
+            cursor += length
+            if cursor > footer_start:
+                raise BpsError("payload BPS tronqué")
+        else:
+            raise BpsError("action BPS de copie relative non prise en charge")
+        target_offset += length
+
+    if cursor != footer_start:
+        raise BpsError("données superflues avant le pied BPS")
+    return BpsPatchInfo(
+        source_size=source_size,
+        target_size=target_size,
+        source_crc32=f"{int.from_bytes(patch[-12:-8], 'little'):08x}",
+        target_crc32=f"{int.from_bytes(patch[-8:-4], 'little'):08x}",
+        patch_crc32=f"{expected_patch_crc:08x}",
+    )
+
+
 def apply_bps_patch(source: bytes, patch: bytes) -> bytes:
     """Réapplique un patch produit par :func:`create_bps_patch`.
 
@@ -111,11 +183,7 @@ def apply_bps_patch(source: bytes, patch: bytes) -> bytes:
         BpsError: Si le patch est corrompu, tronqué, non pris en charge ou si
             la source n'est pas exactement celle attendue.
     """
-    if len(patch) < len(BPS_MAGIC) + 3 + FOOTER_SIZE or not patch.startswith(BPS_MAGIC):
-        raise BpsError("en-tête BPS1 invalide")
-    expected_patch_crc = int.from_bytes(patch[-4:], "little")
-    if zlib.crc32(patch[:-4]) != expected_patch_crc:
-        raise BpsError("CRC du patch invalide")
+    info = inspect_bps_patch(patch)
 
     footer_start = len(patch) - FOOTER_SIZE
     cursor = len(BPS_MAGIC)
@@ -125,6 +193,8 @@ def apply_bps_patch(source: bytes, patch: bytes) -> bytes:
     cursor += metadata_size
     if cursor > footer_start:
         raise BpsError("métadonnées BPS tronquées")
+    if source_size != info.source_size or target_size != info.target_size:
+        raise BpsError("en-tête BPS incohérent")
     if len(source) != source_size:
         raise BpsError("taille de la source incompatible")
     expected_source_crc = int.from_bytes(patch[-12:-8], "little")
