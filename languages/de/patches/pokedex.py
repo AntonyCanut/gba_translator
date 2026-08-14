@@ -15,7 +15,7 @@ is immune to the repair/repoint passes that run before it:
 1. For every Pokédex entry it takes the authoritative German text — a
    curated short rewrite from ``languages/de/data/pokedex_de_overrides.json``
    when the description is too verbose to fit three lines, otherwise the
-   full translation from the translation JSON.
+   full translation from ``combined_de.txt`` (merged over the generated JSON).
 2. It re-wraps that text to <= 3 lines within the window width and encodes
    it.
 3. It writes the result at the entry's current description pointer when it
@@ -38,6 +38,7 @@ from __future__ import annotations
 
 import argparse
 import json
+import re
 import struct
 import sys
 from pathlib import Path
@@ -53,6 +54,10 @@ DEFAULT_OVERRIDES = (
     Path(__file__).resolve().parents[3]
     / "languages" / "de" / "data" / "pokedex_de_overrides.json"
 )
+DEFAULT_COMBINED = (
+    Path(__file__).resolve().parents[3] / "languages" / "de" / "combined_de.txt"
+)
+_COMBINED_LINE_RE = re.compile(r"^0x([0-9A-Fa-f]+):\s?(.*)$")
 
 
 def _deref(rom, offset: int):
@@ -72,11 +77,30 @@ def _slot_capacity(data, offset: int, limit: int = 400) -> int:
     return end - offset + 1
 
 
-def load_text_map(translations_path: Path) -> dict:
-    """offset -> full German translation, from the build's translation JSON."""
+def load_text_map(translations_path: Path, combined_path: Path | None = None) -> dict:
+    """Return the authoritative German translations keyed by source offset.
+
+    The generated JSON omits source strings absent from the pointer extraction,
+    including a few live Pokédex descriptions.  Merge the last-wins combined
+    source on top so those entries can never silently fall back to English.
+    """
     payload = json.loads(translations_path.read_text(encoding="utf-8"))
     items = payload["translations"] if isinstance(payload, dict) else payload
-    return {item["offset"]: item["translation"] for item in items}
+    entries = {item["offset"]: item["translation"] for item in items}
+    if combined_path is not None:
+        for line in combined_path.read_text(
+            encoding="utf-8", errors="replace"
+        ).splitlines():
+            match = _COMBINED_LINE_RE.match(line)
+            if match:
+                text = match.group(2)
+                text = (
+                    text.replace(r"\n", "\n")
+                    .replace(r"\l", "\n")
+                    .replace(r"\p", "\n")
+                )
+                entries[int(match.group(1), 16)] = text
+    return entries
 
 
 def apply(
@@ -184,6 +208,8 @@ def main() -> int:
     parser.add_argument("--rom", required=True, help="Built German ROM to patch in place")
     parser.add_argument("--source", required=True, help="Source English ROM (description layout)")
     parser.add_argument("--translations", required=True, help="Build translation_ready.json")
+    parser.add_argument("--combined", default=str(DEFAULT_COMBINED),
+                        help="Authoritative last-wins combined_de.txt source")
     parser.add_argument("--overrides", default=str(DEFAULT_OVERRIDES),
                         help="Curated short-description overrides JSON")
     parser.add_argument("--reference-rom", default=None,
@@ -193,7 +219,7 @@ def main() -> int:
     rom_path = Path(args.rom)
     rom = bytearray(rom_path.read_bytes())
     source = Path(args.source).read_bytes()
-    text_map = load_text_map(Path(args.translations))
+    text_map = load_text_map(Path(args.translations), Path(args.combined))
     overrides_path = Path(args.overrides)
     overrides = json.loads(overrides_path.read_text(encoding="utf-8")) if overrides_path.exists() else {}
     reserved = Path(args.reference_rom).read_bytes() if args.reference_rom else None

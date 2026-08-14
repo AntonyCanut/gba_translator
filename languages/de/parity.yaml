@@ -414,6 +414,7 @@ de_only_rom_tests:
     - tests/e2e/de/test_build.py
     - tests/e2e/de/test_official_terminology.py
     - tests/e2e/de/test_species_names_de.py
+    - tests/e2e/de/test_pokedex.py
     - tests/e2e/test_rival_battle_victory_line_de_it.py
     - tests/e2e/test_safari_zone_npc_dialogue_de.py
     - tests/test_egg_strings_de.py
