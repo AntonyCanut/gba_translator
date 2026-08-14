@@ -9,10 +9,7 @@ from __future__ import annotations
 
 import sys
 from pathlib import Path
-from typing import List
-from unittest.mock import call, patch as mock_patch
-
-import pytest
+from unittest.mock import patch as mock_patch
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 
@@ -22,7 +19,6 @@ from scripts.build_language import (
     ENGLISH_ROM,
     PATCH_RITUAL_SCRIPT,
     PATCH_STATUS_ABBREVS_SCRIPT,
-    PATCH_TM_ITEM_DESC_SCRIPT,
     PATCH_VERSION_SCRIPT,
     PYTHON,
     REPAIR_LOCALIZED_LZ77_SCRIPT,
@@ -33,6 +29,11 @@ from scripts.build_language import (
     check_translation_integrity,
 )
 from src.i18n import load_registry
+
+
+def test_build_language_cli_is_executable():
+    script = Path(__file__).resolve().parents[1] / "scripts" / "build_language.py"
+    assert script.stat().st_mode & 0o111
 
 REGISTRY = load_registry()
 
@@ -49,7 +50,7 @@ def test_generic_build_integrity_guard_dispatches_for_language():
     assert calls_made == [[PYTHON, str(CHECK_TRANSLATION_INTEGRITY_SCRIPT), "--lang", "de"]]
 
 
-def _collected_calls(config, steps: List[str], translation_json=None,
+def _collected_calls(config, steps: list[str], translation_json=None,
                      build_number=0) -> list:
     """Run apply_patches with a patched ``run()`` and collect calls."""
 

@@ -2089,3 +2089,6 @@ d’annulation dans le reste du jeu.
   `092505980b071a2ea9424c8167f187acf6aa9f11f0e7d1725072937683ac320c`.
 - La revue indépendante finale ne relève aucun problème Critical, Important ou
   Minor après vérification des rasters, de la ROM et des captures runtime.
+- Après rebase sur B-597/F-603, le build DE reste vert et produit le SHA-256
+  `aaacc3e3e62434aa955c2613b258440699aae19ed5e847bca91139c7753b914f` ;
+  l'évolution est due aux changements DE intégrés sur la branche de base.
