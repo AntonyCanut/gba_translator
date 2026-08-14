@@ -1942,3 +1942,33 @@ d’annulation dans le reste du jeu.
 - La réparation STRINGID0 reprend aussi son pointeur fixe après une relocalisation
   générique. L'audit final compte 0 collision, 0 voisin vivant fusionné,
   0 échec de relocalisation et 0 dépassement ignoré.
+# B-597 — DE : restaurer les noms originaux des Pokémon
+
+## Diagnostic et conception
+
+- La table fixe `0x166A997..0x166E126` contient 1 293 cellules de 11 octets.
+- Le patch DE actuel fusionne 1 260 entrées de `combined_de.txt` avec un fallback
+  allemand et réencode les cellules ; il ne garantit donc ni les octets EN ni
+  leur padding original.
+- La correction minimale remplace ce mécanisme par la copie brute de la tranche
+  canonique de `input/roms/englishrom.gba`, exécutée en dernier dans le build DE.
+- Les textes DE contiennent aussi des noms d'espèces français littéraux. Ils
+  seront remplacés chirurgicalement par les noms EN correspondants ; les
+  variables dynamiques (`{STR_VAR_*}`, `{B_*}`, `<0xFD>...`) resteront intactes.
+
+## Plan TDD
+
+- [x] Ajouter les gardes rouges : copie des 1 293 cellules, absence de fallback,
+  audit source/ROM des noms français et ordre final du patch DE.
+- [x] Remplacer `languages/de/patches/species_names.py` par une restauration brute
+  depuis la ROM EN et déplacer l'étape à la fin de `languages/de/lang.yaml`.
+- [x] Corriger uniquement les entrées DE vivantes contenant des noms d'espèces
+  français et couvrir leur absence par l'audit partagé.
+- [ ] Construire `GenedRom-de.gba`, comparer les 14 223 octets avec la ROM EN et
+  suivre les pointeurs vivants des occurrences littérales auditées.
+- [ ] Vérifier les tests ciblés puis la régression partagée FR/IT, relire le diff,
+  committer et intégrer localement sans push.
+
+## Revue
+
+- À compléter après les preuves ROM et les validations finales.

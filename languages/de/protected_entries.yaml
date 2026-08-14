@@ -179,3 +179,1317 @@ entries:
 - {offset: '0x1f970d7', name: 'EV-Erhöhung Bestätigung', issue: F-601, expected: 'Huah!<0xFB>Ich habe bei <0xFC><0x01><0x06><0xFD><0x02><0xFC><0x01><0x08> den <0xFC><0x01><0x06><0xFD><0x03><0xFC><0x01><0x08>-Wert\nauf <0xFC><0x01><0x06><0xFD><0x04><0xFC><0x01><0x08> FP erhöht!<0xFB>Gern geschehen!'}
 - {offset: '0x1f9712f', name: 'EV-Senkung Bestätigung', issue: F-601, expected: 'Huah!<0xFB>Ich habe bei <0xFC><0x01><0x06><0xFD><0x02><0xFC><0x01><0x08> den <0xFC><0x01><0x06><0xFD><0x03><0xFC><0x01><0x08>-Wert\nauf <0xFC><0x01><0x06>null<0xFC><0x01><0x08> FP gesenkt!<0xFB>Gern geschehen!'}
 - {offset: '0x1fa64dc', name: 'Mission Nicht gesehene Herde', issue: F-601, expected: 'Nicht gesehene Herde'}
+- offset: '0x237503'
+  name: 'B-597 : nom d’espèce EN canonique'
+  issue: B-597
+  expected: 'Hawlucha{CLEAR_TO}{FONT_SMALL}500 Mü.'
+  forbidden:
+  - 'Brutalibré{CLEAR_TO}{FONT_SMALL}500 Mü.'
+- offset: '0x3ef1e8'
+  name: 'B-597 : nom d’espèce EN canonique'
+  issue: B-597
+  expected: 'Terres Ferrothorn'
+  forbidden:
+  - 'Terres Noacier'
+- offset: '0x447607'
+  name: 'B-597 : nom d’espèce EN canonique'
+  issue: B-597
+  expected: 'Es wirft seinen Knochen, um\nMandibuzz zu erlegen. Man glaubt,\nes tut dies, um seine Mutter zu rächen.'
+  forbidden:
+  - 'Es wirft seinen Knochen, um\nVaututrice zu erlegen. Man glaubt,\nes tut dies, um seine Mutter zu rächen.'
+- offset: '0x44be58'
+  name: 'B-597 : nom d’espèce EN canonique'
+  issue: B-597
+  expected: 'Schon der Anblick eines Slakoth\nnimmt einem jede Lust an Bewegung,\nund man schläft ein.'
+  forbidden:
+  - 'Schon der Anblick eines Parecool\nnimmt einem jede Lust an Bewegung,\nund man schläft ein.'
+- offset: '0x44c333'
+  name: 'B-597 : nom d’espèce EN canonique'
+  issue: B-597
+  expected: 'Seine magnetische Nase zeigt\nstets nach Norden. Reisende schauen\nauf Nosepass, um sich zu orientieren.'
+  forbidden:
+  - 'Seine magnetische Nase zeigt\nstets nach Norden. Reisende schauen\nauf Tarinor, um sich zu orientieren.'
+- offset: '0x44d4a8'
+  name: 'B-597 : nom d’espèce EN canonique'
+  issue: B-597
+  expected: 'Es bewegt sich, indem es sich auf\nseinem einzigen Fuß dreht. Manche\nBaltoy drehen sich sogar auf dem Kopf.'
+  forbidden:
+  - 'Es bewegt sich, indem es sich auf\nseinem einzigen Fuß dreht. Manche\nBalbuto drehen sich sogar auf dem Kopf.'
+- offset: '0x44dd28'
+  name: 'B-597 : nom d’espèce EN canonique'
+  issue: B-597
+  expected: 'Es berührt alles mit seiner\nNase, um zu riechen und zu testen.\nEs spielt damit, Spheal auf seiner Nase zu drehen.'
+  forbidden:
+  - 'Es berührt alles mit seiner\nNase, um zu riechen und zu testen.\nEs spielt damit, Obalie auf seiner Nase zu drehen.'
+- offset: '0x44e199'
+  name: 'B-597 : nom d’espèce EN canonique'
+  issue: B-597
+  expected: 'Wenn zwei Beldum fusionieren, verbindet\nein magnetisches Nervensystem ihre\nGehirne.'
+  forbidden:
+  - 'Wenn zwei Terhal fusionieren, verbindet\nein magnetisches Nervensystem ihre\nGehirne.'
+- offset: '0x7502a5'
+  name: 'B-597 : nom d’espèce EN canonique'
+  issue: B-597
+  expected: '{COLOR}ÇMagcargo!\pSetze Lavaglut ein!'
+  forbidden:
+  - '{COLOR}ÇVolcaropod!\pSetze Lavaglut ein!'
+- offset: '0x75034d'
+  name: 'B-597 : nom d’espèce EN canonique'
+  issue: B-597
+  expected: 'Jax: {COLOR}ËStaraptor, benutze'
+  forbidden:
+  - 'Jax: {COLOR}ËÉtouraptor, benutze'
+- offset: '0x750b5e'
+  name: 'B-597 : nom d’espèce EN canonique'
+  issue: B-597
+  expected: 'Jax: {COLOR}ËMein Staraptor ist\nnach dem Kampf noch ziemlich schwach,\lich kann dich zum Volcan Cendré bringen.\pWir haben nicht viel Zeit, also\nlass uns sofort aufbrechen.'
+  forbidden:
+  - 'Jax: {COLOR}ËMein Étouraptor ist\nnach dem Kampf noch ziemlich schwach,\lich kann dich zum Volcan Cendré bringen.\pWir haben nicht viel Zeit, also\nlass uns sofort aufbrechen.'
+- offset: '0x75c101'
+  name: 'B-597 : nom d’espèce EN canonique'
+  issue: B-597
+  expected: 'Gliscor! Komm zurück\n!'
+  forbidden:
+  - 'Scorvol! Komm zurück\n!'
+- offset: '0x75c112'
+  name: 'B-597 : nom d’espèce EN canonique'
+  issue: B-597
+  expected: '{COLOR}ÇGliscor! Steinlawine\n!'
+  forbidden:
+  - '{COLOR}ÇScorvol! Steinlawine\n!'
+- offset: '0x75c12e'
+  name: 'B-597 : nom d’espèce EN canonique'
+  issue: B-597
+  expected: '{COLOR}ÇGliscor! Komm zurück\n!'
+  forbidden:
+  - '{COLOR}ÇScorvol! Komm zurück\n!'
+- offset: '0x75d44b'
+  name: 'B-597 : nom d’espèce EN canonique'
+  issue: B-597
+  expected: 'Wer hätte gedacht, dass es noch eine\nHöhle in der Stalaktitenhöhle gibt?\pOhne diesen Sandslash wäre dieser Ort\nwohl für immer verborgen geblieben.\pJetzt, da er zugänglich ist, stell dir\nall die Geheimnisse vor!\pNimm zum Beispiel diese Tafel.\pSie ist mindestens tausend Jahre alt.\pIch will alle Geheimnisse entdecken.\pKommst du zurück, zeigt sich\nvielleicht die Wahrheit…'
+  forbidden:
+  - 'Wer hätte gedacht, dass es noch eine\nHöhle in der Stalaktitenhöhle gibt?\pOhne diesen Sablaireau wäre dieser Ort\nwohl für immer verborgen geblieben.\pJetzt, da er zugänglich ist, stell dir\nall die Geheimnisse vor!\pNimm zum Beispiel diese Tafel.\pSie ist mindestens tausend Jahre alt.\pIch will alle Geheimnisse entdecken.\pKommst du zurück, zeigt sich\nvielleicht die Wahrheit…'
+- offset: '0x75d5fc'
+  name: 'B-597 : nom d’espèce EN canonique'
+  issue: B-597
+  expected: 'Wer hätte gedacht, dass die\nStalaktitenhöhle noch eine weitere\lHöhle verbirgt? Ohne den Sandslash\nwäre sie verborgen geblieben.\pStell dir die Geheimnisse vor, die\nsie birgt – wie diese Tafel, schon\lüber tausend Jahre alt.\pIch will alles entdecken.\pKomm zurück, dann zeigt sich\nvielleicht die Wahrheit…'
+  forbidden:
+  - 'Wer hätte gedacht, dass die\nStalaktitenhöhle noch eine weitere\lHöhle verbirgt? Ohne den Sablaireau\nwäre sie verborgen geblieben.\pStell dir die Geheimnisse vor, die\nsie birgt – wie diese Tafel, schon\lüber tausend Jahre alt.\pIch will alles entdecken.\pKomm zurück, dann zeigt sich\nvielleicht die Wahrheit…'
+- offset: '0x75dc8d'
+  name: 'B-597 : nom d’espèce EN canonique'
+  issue: B-597
+  expected: 'Okay!\pDu wirst sehen, wie stark mein Sandslash\nist!'
+  forbidden:
+  - 'Okay!\pDu wirst sehen, wie stark mein Sablaireau\nist!'
+- offset: '0x7638e1'
+  name: 'B-597 : nom d’espèce EN canonique'
+  issue: B-597
+  expected: 'Staraptor!'
+  forbidden:
+  - 'Étouraptor!'
+- offset: '0x765196'
+  name: 'B-597 : nom d’espèce EN canonique'
+  issue: B-597
+  expected: 'Unter meinen Kämpfen sticht einer heraus.\nEr bleibt mir in Erinnerung.\pEs herrschte brütende Hitze und\nmein Gegner schickte seinen\lRotom-Ventilator mit einem Ballon.\pBis dahin hielt ich durch,\ndoch als\l ich ihn sah, brach ich zusammen.\pIch wurde ohnmächtig und verlor.\pUnterschätze niemals einen\n{COLOR}ÉRotom-Ventilator {COLOR}Ç\lmit\neinem'
+  forbidden:
+  - 'Unter meinen Kämpfen sticht einer heraus.\nEr bleibt mir in Erinnerung.\pEs herrschte brütende Hitze und\nmein Gegner schickte seinen\lMotisma-Ventilator mit einem Ballon.\pBis dahin hielt ich durch,\ndoch als\l ich ihn sah, brach ich zusammen.\pIch wurde ohnmächtig und verlor.\pUnterschätze niemals einen\n{COLOR}ÉMotisma-Ventilator {COLOR}Ç\lmit\neinem'
+- offset: '0x7787f5'
+  name: 'B-597 : nom d’espèce EN canonique'
+  issue: B-597
+  expected: 'Entschuldige, hilfst du mir kurz?\pWir halten bald ein Festmahl und\nbrauchen noch Honig.\pIch habe sieben Töpfe, brauche aber\nmindestens drei mehr.\pMan findet ihn bei wilden Combee,\naber ich fange kaum welche.\pFängst du drei und gibst mir ihren\nHonig?'
+  forbidden:
+  - 'Entschuldige, hilfst du mir kurz?\pWir halten bald ein Festmahl und\nbrauchen noch Honig.\pIch habe sieben Töpfe, brauche aber\nmindestens drei mehr.\pMan findet ihn bei wilden Apitrini,\naber ich fange kaum welche.\pFängst du drei und gibst mir ihren\nHonig?'
+- offset: '0x7789b9'
+  name: 'B-597 : nom d’espèce EN canonique'
+  issue: B-597
+  expected: 'Großartig!\nDanke, dass du mir hilfst!\pMan findet Combee überall in\nParadis Floral, aber sie\lerscheinen häufiger in den\l<0xFC><0x01><0x06>blauen Blumen<0xFC><0x01><0x04>.\pUnd vergiss nicht, ich brauche\nmindestens <0xFC><0x01><0x06>3 Honigtöpfe<0xFC><0x01><0x04>.'
+  forbidden:
+  - 'Großartig!\nDanke, dass du mir hilfst!\pMan findet Apitrini überall in\nParadis Floral, aber sie\lerscheinen häufiger in den\l<0xFC><0x01><0x06>blauen Blumen<0xFC><0x01><0x04>.\pUnd vergiss nicht, ich brauche\nmindestens <0xFC><0x01><0x06>3 Honigtöpfe<0xFC><0x01><0x04>.'
+- offset: '0x7a8133'
+  name: 'B-597 : nom d’espèce EN canonique'
+  issue: B-597
+  expected: 'Jax: {COLOR}ËARGH!\pKomm, Staraptor. Es muss einen\nanderen Zugang zur Straße geben.\pVielleicht gibt es einen geheimen\nunterirdischen Gang…\pSchauen wir nach.'
+  forbidden:
+  - 'Jax: {COLOR}ËARGH!\pKomm, Étouraptor. Es muss einen\nanderen Zugang zur Straße geben.\pVielleicht gibt es einen geheimen\nunterirdischen Gang…\pSchauen wir nach.'
+- offset: '0x7aab5e'
+  name: 'B-597 : nom d’espèce EN canonique'
+  issue: B-597
+  expected: '9Ich trainierte neulich meinen\n{COLOR}ÉNosepass{COLOR}Ë am\l{COLOR}ÉMont Foudroyant{COLOR}Ë, als er\lplötzlich zu leuchten begann!\pEine Minute später hatte er sich zu\nProbopass entwickelt!\pDieser Berg muss seltsame\nEigenschaften haben.'
+  forbidden:
+  - '9Ich trainierte neulich meinen\n{COLOR}ÉTarinor{COLOR}Ë am\l{COLOR}ÉMont Foudroyant{COLOR}Ë, als er\lplötzlich zu leuchten begann!\pEine Minute später hatte er sich zu\nTarinorme entwickelt!\pDieser Berg muss seltsame\nEigenschaften haben.'
+- offset: '0x7aab5f'
+  name: 'B-597 : nom d’espèce EN canonique'
+  issue: B-597
+  expected: 'Neulich trainierte ich meinen\n<0xFC><0x01><0x06>Nosepass<0xFC><0x01><0x08> in <0xFC><0x01><0x06>Mont Foudroyant<0xFC><0x01><0x08>,\lals er plötzlich zu leuchten\lbegann!\pIm nächsten Moment hatte er sich zu\nProbopass entwickelt!\pDieser Berg muss lustige\nEigenschaften haben.'
+  forbidden:
+  - 'Neulich trainierte ich meinen\n<0xFC><0x01><0x06>Tarinor<0xFC><0x01><0x08> in <0xFC><0x01><0x06>Mont Foudroyant<0xFC><0x01><0x08>,\lals er plötzlich zu leuchten\lbegann!\pIm nächsten Moment hatte er sich zu\nTarinorme entwickelt!\pDieser Berg muss lustige\nEigenschaften haben.'
+- offset: '0x7b3a3f'
+  name: 'B-597 : nom d’espèce EN canonique'
+  issue: B-597
+  expected: 'Ich bin froh, dass ich heute meine\n\pGummiausrüstung angezogen habe\n! Diese Tynamo hören nicht auf, mich'
+  forbidden:
+  - 'Ich bin froh, dass ich heute meine\n\pGummiausrüstung angezogen habe\n! Diese Anchwatt hören nicht auf, mich'
+- offset: '0x7b4772'
+  name: 'B-597 : nom d’espèce EN canonique'
+  issue: B-597
+  expected: 'Gehen wir, Staraptor.\n'
+  forbidden:
+  - 'Gehen wir, Étouraptor.\n'
+- offset: '0x7bc608'
+  name: 'B-597 : nom d’espèce EN canonique'
+  issue: B-597
+  expected: 'Dieser Schrei… den habe ich schon\n\pmal gehört… Ah! Du musst einer der\n\pseltenen Sandslash de Glace sein,\n\pdie hier leben! Haben die Pokémon-\n\pRanger aufgehört, dich zu füttern?\n\pJetzt, wo ich darüber nachdenke,\nhabe ich sie eine Weile nicht gesehen…'
+  forbidden:
+  - 'Dieser Schrei… den habe ich schon\n\pmal gehört… Ah! Du musst einer der\n\pseltenen Sablaireau de Glace sein,\n\pdie hier leben! Haben die Pokémon-\n\pRanger aufgehört, dich zu füttern?\n\pJetzt, wo ich darüber nachdenke,\nhabe ich sie eine Weile nicht gesehen…'
+- offset: '0x7bc6ef'
+  name: 'B-597 : nom d’espèce EN canonique'
+  issue: B-597
+  expected: 'Dann hatte ich recht. Du hattest\n\pHunger, weil kein Essen mehr kam.\n\pMachen wir einen Deal, Sandslash.\n\pWenn du mein Pokémon wirst und mir\n\lhilfst, Kämpfe zu gewinnen, werde ich\n\ldich, deine Freunde und deine Familie\n\lmit dem Geld unterstützen, das wir\n\pverdienen. Einverstanden?\n'
+  forbidden:
+  - 'Dann hatte ich recht. Du hattest\n\pHunger, weil kein Essen mehr kam.\n\pMachen wir einen Deal, Sablaireau.\n\pWenn du mein Pokémon wirst und mir\n\lhilfst, Kämpfe zu gewinnen, werde ich\n\ldich, deine Freunde und deine Familie\n\lmit dem Geld unterstützen, das wir\n\pverdienen. Einverstanden?\n'
+- offset: '0x7cf05f'
+  name: 'B-597 : nom d’espèce EN canonique'
+  issue: B-597
+  expected: 'Die Fähigkeit {COLOR}ÉSaugnapf{COLOR}Ë meines\nMalamar hilft mir, Pokémon\lzurückzuholen!\pNun ja, ich glaube, er hat wirklich\nSaugnapf…'
+  forbidden:
+  - 'Die Fähigkeit {COLOR}ÉSaugnapf{COLOR}Ë meines\nSepiatroce hilft mir, Pokémon\lzurückzuholen!\pNun ja, ich glaube, er hat wirklich\nSaugnapf…'
+- offset: '0x7d3a22'
+  name: 'B-597 : nom d’espèce EN canonique'
+  issue: B-597
+  expected: 'Das ist ganz allein die Schuld\nvon Claydol…'
+  forbidden:
+  - 'Das ist ganz allein die Schuld\nvon Kaorine…'
+- offset: '0x7de806'
+  name: 'B-597 : nom d’espèce EN canonique'
+  issue: B-597
+  expected: 'Ihr werdet niemals mein\nsuperseltenes, geniales Sandslash\lbesiegen können!\pIch habe alles in der\nStalaktitenhöhle verstanden!'
+  forbidden:
+  - 'Ihr werdet niemals mein\nsuperseltenes, geniales Sablaireau\lbesiegen können!\pIch habe alles in der\nStalaktitenhöhle verstanden!'
+- offset: '0x7ec795'
+  name: 'B-597 : nom d’espèce EN canonique'
+  issue: B-597
+  expected: 'Hawlucha{CLEAR_TO}{FONT_SMALL} 1.000 Jetons'
+  forbidden:
+  - 'Brutalibré{CLEAR_TO}{FONT_SMALL} 1.000 Jetons'
+- offset: '0x8aa96d'
+  name: 'B-597 : nom d’espèce EN canonique'
+  issue: B-597
+  expected: 'Dieses Rotom ist bereits in\ndas Gerät dieses Apparats eingetreten.'
+  forbidden:
+  - 'Dieses Motisma ist bereits in\ndas Gerät dieses Apparats eingetreten.'
+- offset: '0x8aa9bd'
+  name: 'B-597 : nom d’espèce EN canonique'
+  issue: B-597
+  expected: 'Das ist kein gültiges Rotom.'
+  forbidden:
+  - 'Das ist kein gültiges Motisma.'
+- offset: '0xa4422a'
+  name: 'B-597 : nom d’espèce EN canonique'
+  issue: B-597
+  expected: 'Smogon Benjamin Butterfree'
+  forbidden:
+  - 'Smogon Benjamin Papilusion'
+- offset: '0xeb69c3'
+  name: 'B-597 : nom d’espèce EN canonique'
+  issue: B-597
+  expected: 'Mega-Stein für Lopunny. Ermöglicht\ndie Mega-Entwicklung im Kampf.\n'
+  forbidden:
+  - 'Mega-Stein für Lockpin. Ermöglicht\ndie Mega-Entwicklung im Kampf.\n'
+- offset: '0xeb8334'
+  name: 'B-597 : nom d’espèce EN canonique'
+  issue: B-597
+  expected: 'Süßigkeit in Erdbeerform. Bei\nMilcery dreht sie sich fröhlich.\n'
+  forbidden:
+  - 'Süßigkeit in Erdbeerform. Bei\nCrèmy dreht sie sich fröhlich.\n'
+- offset: '0xeb8384'
+  name: 'B-597 : nom d’espèce EN canonique'
+  issue: B-597
+  expected: 'Süßigkeit in Beerenform. Bei\nMilcery dreht sie sich fröhlich.\n'
+  forbidden:
+  - 'Süßigkeit in Beerenform. Bei\nCrèmy dreht sie sich fröhlich.\n'
+- offset: '0xeb83cf'
+  name: 'B-597 : nom d’espèce EN canonique'
+  issue: B-597
+  expected: 'Süßigkeit in Herzform. Bei\nMilcery dreht sie sich fröhlich.\n'
+  forbidden:
+  - 'Süßigkeit in Herzform. Bei\nCrèmy dreht sie sich fröhlich.\n'
+- offset: '0xeb841a'
+  name: 'B-597 : nom d’espèce EN canonique'
+  issue: B-597
+  expected: 'Süßigkeit in Kleeblattform. Bei\nMilcery dreht sie sich fröhlich.\n'
+  forbidden:
+  - 'Süßigkeit in Kleeblattform. Bei\nCrèmy dreht sie sich fröhlich.\n'
+- offset: '0xeb8466'
+  name: 'B-597 : nom d’espèce EN canonique'
+  issue: B-597
+  expected: 'Süßigkeit in Blütenform. Bei\nMilcery dreht sie sich fröhlich.\n'
+  forbidden:
+  - 'Süßigkeit in Blütenform. Bei\nCrèmy dreht sie sich fröhlich.\n'
+- offset: '0xeb84b2'
+  name: 'B-597 : nom d’espèce EN canonique'
+  issue: B-597
+  expected: 'Süßigkeit in Schleifenform. Bei\nMilcery dreht sie sich fröhlich.\n'
+  forbidden:
+  - 'Süßigkeit in Schleifenform. Bei\nCrèmy dreht sie sich fröhlich.\n'
+- offset: '0xeb84fe'
+  name: 'B-597 : nom d’espèce EN canonique'
+  issue: B-597
+  expected: 'Süßigkeit in Sternform. Bei\nMilcery dreht sie sich fröhlich.\n'
+  forbidden:
+  - 'Süßigkeit in Sternform. Bei\nCrèmy dreht sie sich fröhlich.\n'
+- offset: '0x165cbaf'
+  name: 'B-597 : nom d’espèce EN canonique'
+  issue: B-597
+  expected: 'Man sagt, eine Wormadam, die\nbei großer Kälte entwickelt, erhalte\neinen dickeren Mantel.'
+  forbidden:
+  - 'Man sagt, eine Cheniselle, die\nbei großer Kälte entwickelt, erhalte\neinen dickeren Mantel.'
+- offset: '0x165cc00'
+  name: 'B-597 : nom d’espèce EN canonique'
+  issue: B-597
+  expected: 'Es fliegt nachts und stiehlt den\nHonig aus dem Bau der Combee.'
+  forbidden:
+  - 'Es fliegt nachts und stiehlt den\nHonig aus dem Bau der Apitrini.'
+- offset: '0x165cc43'
+  name: 'B-597 : nom d’espèce EN canonique'
+  issue: B-597
+  expected: 'Aus drei Individuen gebildet,\nbringt es süßen Blütenhonig\nzu Vespiquen.'
+  forbidden:
+  - 'Aus drei Individuen gebildet,\nbringt es süßen Blütenhonig\nzu Apireine.'
+- offset: '0x165cc98'
+  name: 'B-597 : nom d’espèce EN canonique'
+  issue: B-597
+  expected: 'Es zieht Larven in seinem Körper\ngroß. Es sondert Pheromone ab,\num Combee zu kontrollieren.'
+  forbidden:
+  - 'Es zieht Larven in seinem Körper\ngroß. Es sondert Pheromone ab,\num Apitrini zu kontrollieren.'
+- offset: '0x165ce04'
+  name: 'B-597 : nom d’espèce EN canonique'
+  issue: B-597
+  expected: 'Die kleine Kugel ist nahrhaft\nund schmackhaft. Die Starly\nversuchen, daran zu picken.'
+  forbidden:
+  - 'Die kleine Kugel ist nahrhaft\nund schmackhaft. Die Étourmi\nversuchen, daran zu picken.'
+- offset: '0x165d138'
+  name: 'B-597 : nom d’espèce EN canonique'
+  issue: B-597
+  expected: 'Nachts aktiv, sieht man es oft\nin Begleitung zahlreicher Murkrow.'
+  forbidden:
+  - 'Nachts aktiv, sieht man es oft\nin Begleitung zahlreicher Cornèbre.'
+- offset: '0x165d392'
+  name: 'B-597 : nom d’espèce EN canonique'
+  issue: B-597
+  expected: 'Die Menschen der Antike glaubten,\ndass ein Gebet an Bronzong um\nRegen die Ernte wachsen ließ.'
+  forbidden:
+  - 'Die Menschen der Antike glaubten,\ndass ein Gebet an Archéodong um\nRegen die Ernte wachsen ließ.'
+- offset: '0x165d4a4'
+  name: 'B-597 : nom d’espèce EN canonique'
+  issue: B-597
+  expected: 'Es liebt runde, weiße Dinge. Es\nträgt einen eiförmigen Stein bei\nsich, um Chansey nachzuahmen.'
+  forbidden:
+  - 'Es liebt runde, weiße Dinge. Es\nträgt einen eiförmigen Stein bei\nsich, um Leveinard nachzuahmen.'
+- offset: '0x165da5e'
+  name: 'B-597 : nom d’espèce EN canonique'
+  issue: B-597
+  expected: 'In der Dunkelheit der Tiefsee\nähneln Lumineon den Sternen\nam Nachthimmel.'
+  forbidden:
+  - 'In der Dunkelheit der Tiefsee\nähneln Luminéon den Sternen\nam Nachthimmel.'
+- offset: '0x165e1a7'
+  name: 'B-597 : nom d’espèce EN canonique'
+  issue: B-597
+  expected: 'Legenden aus verschneiten Regionen\nbesagen, eine auf einem eisigen Berg\nverlorene Frau werde als Froslass wiedergeboren.'
+  forbidden:
+  - 'Legenden aus verschneiten Regionen\nbesagen, eine auf einem eisigen Berg\nverlorene Frau werde als Momartik wiedergeboren.'
+- offset: '0x165f5f5'
+  name: 'B-597 : nom d’espèce EN canonique'
+  issue: B-597
+  expected: 'Man vermutet, dass Conkeldurr den\nMenschen vor über 2.000 Jahren\ndie Herstellung von Beton beibrachte.'
+  forbidden:
+  - 'Man vermutet, dass Bétochef den\nMenschen vor über 2.000 Jahren\ndie Herstellung von Beton beibrachte.'
+- offset: '0x165f759'
+  name: 'B-597 : nom d’espèce EN canonique'
+  issue: B-597
+  expected: 'Wenn es seinen Gürtel enger\nschnürt, wird es stärker. Wilde\nThroh flechten sich ihre Gürtel selbst.'
+  forbidden:
+  - 'Wenn es seinen Gürtel enger\nschnürt, wird es stärker. Wilde\nJudokrak flechten sich ihre Gürtel selbst.'
+- offset: '0x165fcfa'
+  name: 'B-597 : nom d’espèce EN canonique'
+  issue: B-597
+  expected: 'Es verbirgt sich in den\nSandstürmen von Flygon\nund wartet auf seine Beute.'
+  forbidden:
+  - 'Es verbirgt sich in den\nSandstürmen von Libégon\nund wartet auf seine Beute.'
+- offset: '0x16603ab'
+  name: 'B-597 : nom d’espèce EN canonique'
+  issue: B-597
+  expected: 'Minccino begrüßen sich,\nindem sie sich sorgfältig\nmit ihrem Schwanz putzen.'
+  forbidden:
+  - 'Chinchidou begrüßen sich,\nindem sie sich sorgfältig\nmit ihrem Schwanz putzen.'
+- offset: '0x1660637'
+  name: 'B-597 : nom d’espèce EN canonique'
+  issue: B-597
+  expected: 'Wenn sich Reuniclus die\nHand reichen, verbindet ein Netzwerk ihre Gehirne\nund verstärkt ihre Psychokraft.'
+  forbidden:
+  - 'Wenn sich Symbios die\nHand reichen, verbindet ein Netzwerk ihre Gehirne\nund verstärkt ihre Psychokraft.'
+- offset: '0x16606f1'
+  name: 'B-597 : nom d’espèce EN canonique'
+  issue: B-597
+  expected: 'Swanna beginnt in der\nDämmerung zu tanzen. Wer in der\nMitte tanzt, ist der Anführer des Schwarms.'
+  forbidden:
+  - 'Lakmécygne beginnt in der\nDämmerung zu tanzen. Wer in der\nMitte tanzt, ist der Anführer des Schwarms.'
+- offset: '0x16608cc'
+  name: 'B-597 : nom d’espèce EN canonique'
+  issue: B-597
+  expected: 'Sie ziehen je nach\nJahreszeit, daher der Beiname\n„Sawsbuck, Zeichen des Frühlings“.'
+  forbidden:
+  - 'Sie ziehen je nach\nJahreszeit, daher der Beiname\n„Haydaim, Zeichen des Frühlings“.'
+- offset: '0x166098e'
+  name: 'B-597 : nom d’espèce EN canonique'
+  issue: B-597
+  expected: 'Aus unbekanntem Grund entwickeln\nsie sich weiter, wenn sie beim Angriff\nauf Shelmet elektrische Energie erhalten.'
+  forbidden:
+  - 'Aus unbekanntem Grund entwickeln\nsie sich weiter, wenn sie beim Angriff\nauf Escargaume elektrische Energie erhalten.'
+- offset: '0x16609f0'
+  name: 'B-597 : nom d’espèce EN canonique'
+  issue: B-597
+  expected: 'Mit der von Shelmet gestohlenen\nSchalenhülle verteidigen sie sich\nund greifen mit zwei Speeren an.'
+  forbidden:
+  - 'Mit der von Escargaume gestohlenen\nSchalenhülle verteidigen sie sich\nund greifen mit zwei Speeren an.'
+- offset: '0x1660b6f'
+  name: 'B-597 : nom d’espèce EN canonique'
+  issue: B-597
+  expected: 'Jellicent streift um\nLuxusliner und Öltanker,\nin der Hoffnung, Beute zu erwischen.'
+  forbidden:
+  - 'Moyade streift um\nLuxusliner und Öltanker,\nin der Hoffnung, Beute zu erwischen.'
+- offset: '0x1660bd0'
+  name: 'B-597 : nom d’espèce EN canonique'
+  issue: B-597
+  expected: 'Die spezielle\nMembran, die Alomomola umhüllt, hat die\nFähigkeit, Wunden zu heilen.'
+  forbidden:
+  - 'Die spezielle\nMembran, die Mamanbo umhüllt, hat die\nFähigkeit, Wunden zu heilen.'
+- offset: '0x1660c1a'
+  name: 'B-597 : nom d’espèce EN canonique'
+  issue: B-597
+  expected: 'Die Joltik der Städte\nsaugen die Elektrizität\naus den Steckdosen der Häuser.'
+  forbidden:
+  - 'Die Statitik der Städte\nsaugen die Elektrizität\naus den Steckdosen der Häuser.'
+- offset: '0x1660ea3'
+  name: 'B-597 : nom d’espèce EN canonique'
+  issue: B-597
+  expected: 'Allein ist es nicht\nsonderlich stark, doch eine Kette\naus Tynamo gleicht einem Blitz.'
+  forbidden:
+  - 'Allein ist es nicht\nsonderlich stark, doch eine Kette\naus Anchwatt gleicht einem Blitz.'
+- offset: '0x166111d'
+  name: 'B-597 : nom d’espèce EN canonique'
+  issue: B-597
+  expected: 'Wird man von der Flamme\nvon Chandelure verzehrt, verbrennt der Geist,\nwährend der Körper zurückbleibt.'
+  forbidden:
+  - 'Wird man von der Flamme\nvon Lugulabre verzehrt, verbrennt der Geist,\nwährend der Körper zurückbleibt.'
+- offset: '0x16611da'
+  name: 'B-597 : nom d’espèce EN canonique'
+  issue: B-597
+  expected: 'Ihre Hauer zerschmettern\nFelsen. Die Territorialkämpfe\nzwischen Fraxure sind gewalttätig.'
+  forbidden:
+  - 'Ihre Hauer zerschmettern\nFelsen. Die Territorialkämpfe\nzwischen Incisache sind gewalttätig.'
+- offset: '0x16613ac'
+  name: 'B-597 : nom d’espèce EN canonique'
+  issue: B-597
+  expected: 'Wenn es mit Karrablast zusammen ist\nund beide elektrisch\nstimuliert werden, entwickeln sich beide weiter.'
+  forbidden:
+  - 'Wenn es mit Carabing zusammen ist\nund beide elektrisch\nstimuliert werden, entwickeln sich beide weiter.'
+- offset: '0x166157c'
+  name: 'B-597 : nom d’espèce EN canonique'
+  issue: B-597
+  expected: 'Es durchquert die engen Tunnel,\ndie Excadrill und Onix graben. Es\nfängt seine Beute mit seinen Krallen.'
+  forbidden:
+  - 'Es durchquert die engen Tunnel,\ndie Minotaupe und Onix graben. Es\nfängt seine Beute mit seinen Krallen.'
+- offset: '0x166163f'
+  name: 'B-597 : nom d’espèce EN canonique'
+  issue: B-597
+  expected: 'Golurk wurde erschaffen, um\nMenschen und Pokémon zu beschützen. Sie funktionieren\ndank einer geheimnisvollen Energie.'
+  forbidden:
+  - 'Golemastoc wurde erschaffen, um\nMenschen und Pokémon zu beschützen. Sie funktionieren\ndank einer geheimnisvollen Energie.'
+- offset: '0x16616f9'
+  name: 'B-597 : nom d’espèce EN canonique'
+  issue: B-597
+  expected: 'Bisharp verfolgt seine\nBeute mit einer großen Gruppe\nvon Pawniard und erledigt sie dann.'
+  forbidden:
+  - 'Scalproie verfolgt seine\nBeute mit einer großen Gruppe\nvon Scalpion und erledigt sie dann.'
+- offset: '0x16618de'
+  name: 'B-597 : nom d’espèce EN canonique'
+  issue: B-597
+  expected: 'Es arrangiert geschickt die Knochen\nseiner Beute, um sein Nest zu bauen.\nDie meisten Knochen stammen von Cubone.'
+  forbidden:
+  - 'Es arrangiert geschickt die Knochen\nseiner Beute, um sein Nest zu bauen.\nDie meisten Knochen stammen von Osselait.'
+- offset: '0x1661940'
+  name: 'B-597 : nom d’espèce EN canonique'
+  issue: B-597
+  expected: 'Es atmet durch ein Loch in seinem\nSchwanz, während es innerlich\nbrennt. Durant ist seine Beute.'
+  forbidden:
+  - 'Es atmet durch ein Loch in seinem\nSchwanz, während es innerlich\nbrennt. Fermite ist seine Beute.'
+- offset: '0x16619a1'
+  name: 'B-597 : nom d’espèce EN canonique'
+  issue: B-597
+  expected: 'Durant gräbt Nester in Bergen.\nSie bauen komplexe Tunnel,\nso verschlungen wie Labyrinthe.'
+  forbidden:
+  - 'Fermite gräbt Nester in Bergen.\nSie bauen komplexe Tunnel,\nso verschlungen wie Labyrinthe.'
+- offset: '0x1661b27'
+  name: 'B-597 : nom d’espèce EN canonique'
+  issue: B-597
+  expected: 'Es schützt sich mit einer\nFlamme. Früher glaubte man,\nLarvesta hätte ein Nest in der Sonne.'
+  forbidden:
+  - 'Es schützt sich mit einer\nFlamme. Früher glaubte man,\nPyronille hätte ein Nest in der Sonne.'
+- offset: '0x1661b86'
+  name: 'B-597 : nom d’espèce EN canonique'
+  issue: B-597
+  expected: 'Als vulkanische Asche\ndie Atmosphäre verdunkelte, ersetzte\ndas Feuer von Volcarona die Sonne.'
+  forbidden:
+  - 'Als vulkanische Asche\ndie Atmosphäre verdunkelte, ersetzte\ndas Feuer von Pyrax die Sonne.'
+- offset: '0x1661d41'
+  name: 'B-597 : nom d’espèce EN canonique'
+  issue: B-597
+  expected: 'Unzählige verkohlte Überreste\nverwüsten die Landschaft an\nOrten, die Thundurus durchquert hat.'
+  forbidden:
+  - 'Unzählige verkohlte Überreste\nverwüsten die Landschaft an\nOrten, die Fulguris durchquert hat.'
+- offset: '0x1661e5f'
+  name: 'B-597 : nom d’espèce EN canonique'
+  issue: B-597
+  expected: 'Die von Landorus besuchten Länder\nbringen reiche Ernten hervor. Man\nnennt es ehrfürchtig „Hüter der Felder“.'
+  forbidden:
+  - 'Die von Démétéros besuchten Länder\nbringen reiche Ernten hervor. Man\nnennt es ehrfürchtig „Hüter der Felder“.'
+- offset: '0x16628ce'
+  name: 'B-597 : nom d’espèce EN canonique'
+  issue: B-597
+  expected: 'Es wächst heran, indem es\ndas Verhalten von Pangoro nachahmt,\nden es als Anführer ansieht.'
+  forbidden:
+  - 'Es wächst heran, indem es\ndas Verhalten von Pandarbare nachahmt,\nden es als Anführer ansieht.'
+- offset: '0x1662e1f'
+  name: 'B-597 : nom d’espèce EN canonique'
+  issue: B-597
+  expected: 'Zwei Binacle leben auf\ndemselben Felsen. Wenn sie kämpfen,\nklettert eines auf das andere.'
+  forbidden:
+  - 'Zwei Opermine leben auf\ndemselben Felsen. Wenn sie kämpfen,\nklettert eines auf das andere.'
+- offset: '0x1662e82'
+  name: 'B-597 : nom d’espèce EN canonique'
+  issue: B-597
+  expected: 'Wenn sie sich entwickeln, werden\naus zwei Binacle sieben. Sie kämpfen\nmit der Kraft von sieben.'
+  forbidden:
+  - 'Wenn sie sich entwickeln, werden\naus zwei Opermine sieben. Sie kämpfen\nmit der Kraft von sieben.'
+- offset: '0x16631db'
+  name: 'B-597 : nom d’espèce EN canonique'
+  issue: B-597
+  expected: 'Dieses\nruhige Pokémon lebte in der Kälte ohne\ngewalttätige Fressfeinde wie Tyrantrum.'
+  forbidden:
+  - 'Dieses\nruhige Pokémon lebte in der Kälte ohne\ngewalttätige Fressfeinde wie Rexillius.'
+- offset: '0x1663dc6'
+  name: 'B-597 : nom d’espèce EN canonique'
+  issue: B-597
+  expected: 'Für Primarina ist jeder Kampf\neine Bühne. Es bezwingt seine Beute\nmit prächtigem Gesang und Tanz.'
+  forbidden:
+  - 'Für Oratoria ist jeder Kampf\neine Bühne. Es bezwingt seine Beute\nmit prächtigem Gesang und Tanz.'
+- offset: '0x16641bf'
+  name: 'B-597 : nom d’espèce EN canonique'
+  issue: B-597
+  expected: 'Dieses Oricorio hat roten Nektar getrunken.\nSein leidenschaftlicher Tanz lässt\nKörper und Geist seiner Feinde brennen.'
+  forbidden:
+  - 'Dieses Plumeline hat roten Nektar getrunken.\nSein leidenschaftlicher Tanz lässt\nKörper und Geist seiner Feinde brennen.'
+- offset: '0x1664233'
+  name: 'B-597 : nom d’espèce EN canonique'
+  issue: B-597
+  expected: 'Unzählige\nCutiefly fliegen über Menschen mit\neiner Aura, die der von Blumen ähnelt.'
+  forbidden:
+  - 'Unzählige\nBombydou fliegen über Menschen mit\neiner Aura, die der von Blumen ähnelt.'
+- offset: '0x1664295'
+  name: 'B-597 : nom d’espèce EN canonique'
+  issue: B-597
+  expected: 'Manche Pollenkugeln\nvon Ribombee sind sehr nahrhaft.\nSie werden manchmal verkauft.'
+  forbidden:
+  - 'Manche Pollenkugeln\nvon Rubombelle sind sehr nahrhaft.\nSie werden manchmal verkauft.'
+- offset: '0x166445c'
+  name: 'B-597 : nom d’espèce EN canonique'
+  issue: B-597
+  expected: 'Es kriecht auf dem Grund\ndes Ozeans mit seinen 12 Beinen. Es hinterlässt\neine Spur aus Corsola-Stücken.'
+  forbidden:
+  - 'Es kriecht auf dem Grund\ndes Ozeans mit seinen 12 Beinen. Es hinterlässt\neine Spur aus Corayon-Stücken.'
+- offset: '0x16644c5'
+  name: 'B-597 : nom d’espèce EN canonique'
+  issue: B-597
+  expected: 'Der an den Hufen\nvon Mudbray klebende Schlamm verstärkt\nseinen Halt und seinen kraftvollen Lauf.'
+  forbidden:
+  - 'Der an den Hufen\nvon Tiboudet klebende Schlamm verstärkt\nseinen Halt und seinen kraftvollen Lauf.'
+- offset: '0x1664839'
+  name: 'B-597 : nom d’espèce EN canonique'
+  issue: B-597
+  expected: 'Es bestraft Salandit, das keine\nNahrung bringt, mit einer heftigen\nOhrfeige seiner feuerspeienden Pfote.'
+  forbidden:
+  - 'Es bestraft Tritox, das keine\nNahrung bringt, mit einer heftigen\nOhrfeige seiner feuerspeienden Pfote.'
+- offset: '0x1664898'
+  name: 'B-597 : nom d’espèce EN canonique'
+  issue: B-597
+  expected: 'Stufful hasst es, umarmt\noder berührt zu werden. Es wehrt sich\nmit unglaublicher Kraft.'
+  forbidden:
+  - 'Nounourson hasst es, umarmt\noder berührt zu werden. Es wehrt sich\nmit unglaublicher Kraft.'
+- offset: '0x16650ac'
+  name: 'B-597 : nom d’espèce EN canonique'
+  issue: B-597
+  expected: 'Es taucht in der Stadt auf und\nspielt mit den Kindern. Drampa\nbeschützt sie, wenn sie in Gefahr sind.'
+  forbidden:
+  - 'Es taucht in der Stadt auf und\nspielt mit den Kindern. Draïeul\nbeschützt sie, wenn sie in Gefahr sind.'
+- offset: '0x1665232'
+  name: 'B-597 : nom d’espèce EN canonique'
+  issue: B-597
+  expected: 'Es kämpft tapfer mit seinen\nFäusten, die mit Stahlschuppen bedeckt sind.\nKommo-o ist ein Meister des Aufwärtshakens.'
+  forbidden:
+  - 'Es kämpft tapfer mit seinen\nFäusten, die mit Stahlschuppen bedeckt sind.\nÉkaïser ist ein Meister des Aufwärtshakens.'
+- offset: '0x1665601'
+  name: 'B-597 : nom d’espèce EN canonique'
+  issue: B-597
+  expected: 'Buzzwole\nposiert und zeigt seine\nübermäßig aufgepumpten Muskeln. Es ist eine UB.'
+  forbidden:
+  - 'Mouscoto\nposiert und zeigt seine\nübermäßig aufgepumpten Muskeln. Es ist eine UB.'
+- offset: '0x1665c98'
+  name: 'B-597 : nom d’espèce EN canonique'
+  issue: B-597
+  expected: 'Je mehr Thwackey\nmit seinen beiden Stöcken den Takt schlägt,\ndesto mehr respektieren ihn seine Artgenossen.'
+  forbidden:
+  - 'Je mehr Badabouin\nmit seinen beiden Stöcken den Takt schlägt,\ndesto mehr respektieren ihn seine Artgenossen.'
+- offset: '0x1666a6c'
+  name: 'B-597 : nom d’espèce EN canonique'
+  issue: B-597
+  expected: 'Dieses hungrige Pokémon verschlingt Arrokuda\nim Ganzen. Manchmal irrt es sich\nund versucht, andere Pokémon zu verschlingen.'
+  forbidden:
+  - 'Dieses hungrige Pokémon verschlingt Embrochet\nim Ganzen. Manchmal irrt es sich\nund versucht, andere Pokémon zu verschlingen.'
+- offset: '0x1666ade'
+  name: 'B-597 : nom d’espèce EN canonique'
+  issue: B-597
+  expected: 'Es\nwird nach dem Vollfressen sehr langsam.\nGenau dann verschlingt es Cramorant.'
+  forbidden:
+  - 'Es\nwird nach dem Vollfressen sehr langsam.\nGenau dann verschlingt es Nigosier.'
+- offset: '0x166741c'
+  name: 'B-597 : nom d’espèce EN canonique'
+  issue: B-597
+  expected: 'Man sagt, dass\njede Konditorei, die Milcery besucht,\nErfolg und Glück erfährt.'
+  forbidden:
+  - 'Man sagt, dass\njede Konditorei, die Crèmy besucht,\nErfolg und Glück erfährt.'
+- offset: '0x1667474'
+  name: 'B-597 : nom d’espèce EN canonique'
+  issue: B-597
+  expected: 'Es entwickelte sich aus einer\nMilcery, die ein Erdbeerbonbon trug.\nSein Geschmack hängt von der Mischung ab.'
+  forbidden:
+  - 'Es entwickelte sich aus einer\nCrèmy, die ein Erdbeerbonbon trug.\nSein Geschmack hängt von der Mischung ab.'
+- offset: '0x166782d'
+  name: 'B-597 : nom d’espèce EN canonique'
+  issue: B-597
+  expected: 'Erfordert eine Aufgabe Kraft,\nglänzt Cufant dabei. Sein Körper\naus Kupfer wird im Regen grün.'
+  forbidden:
+  - 'Erfordert eine Aufgabe Kraft,\nglänzt Charibari dabei. Sein Körper\naus Kupfer wird im Regen grün.'
+- offset: '0x1667b19'
+  name: 'B-597 : nom d’espèce EN canonique'
+  issue: B-597
+  expected: 'Als Geist wiedergeboren, streift Dreepy\ndurch die Gebiete, in denen es einst lebte,\nin den urzeitlichen Meeren.'
+  forbidden:
+  - 'Als Geist wiedergeboren, streift Fantyrm\ndurch die Gebiete, in denen es einst lebte,\nin den urzeitlichen Meeren.'
+- offset: '0x1667b90'
+  name: 'B-597 : nom d’espèce EN canonique'
+  issue: B-597
+  expected: 'Es kann mit über 120 mph fliegen.\nEs kämpft an der Seite von Dreepy und\nkümmert sich um es bis zu dessen Entwicklung.'
+  forbidden:
+  - 'Es kann mit über 120 mph fliegen.\nEs kämpft an der Seite von Fantyrm und\nkümmert sich um es bis zu dessen Entwicklung.'
+- offset: '0x1667bfd'
+  name: 'B-597 : nom d’espèce EN canonique'
+  issue: B-597
+  expected: 'Die Dreepy\nin seinen Hörnern warten ungeduldig\ndarauf, mit Mach-Geschwindigkeit abgeschossen zu werden.'
+  forbidden:
+  - 'Die Fantyrm\nin seinen Hörnern warten ungeduldig\ndarauf, mit Mach-Geschwindigkeit abgeschossen zu werden.'
+- offset: '0x1667feb'
+  name: 'B-597 : nom d’espèce EN canonique'
+  issue: B-597
+  expected: 'Glastrier besitzt enorme\nKraft. Die Maske seines Gesichts ist\n100-mal härter als Diamant.'
+  forbidden:
+  - 'Blizzeval besitzt enorme\nKraft. Die Maske seines Gesichts ist\n100-mal härter als Diamant.'
+- offset: '0x166896a'
+  name: 'B-597 : nom d’espèce EN canonique'
+  issue: B-597
+  expected: 'Der Körper von Graveler wird\ndurch die Steine, die es frisst, elektrisch\naufgeladen. Es ist sehr reizbar.'
+  forbidden:
+  - 'Der Körper von Gravalanch wird\ndurch die Steine, die es frisst, elektrisch\naufgeladen. Es ist sehr reizbar.'
+- offset: '0x16689d9'
+  name: 'B-597 : nom d’espèce EN canonique'
+  issue: B-597
+  expected: 'Da es Felsen nicht schnell werfen\nkann, fängt es Geodude\nund schleudert sie von seinem Rücken.'
+  forbidden:
+  - 'Da es Felsen nicht schnell werfen\nkann, fängt es Racaillou\nund schleudert sie von seinem Rücken.'
+- offset: '0x1668b9d'
+  name: 'B-597 : nom d’espèce EN canonique'
+  issue: B-597
+  expected: 'Ein Biss von Shellder löste\neine Reaktion mit den Gewürzen aus,\ndie Slowbro zum Gift-Typ machte.'
+  forbidden:
+  - 'Ein Biss von Kokiyas löste\neine Reaktion mit den Gewürzen aus,\ndie Flagadoss zum Gift-Typ machte.'
+- offset: '0x1668c82'
+  name: 'B-597 : nom d’espèce EN canonique'
+  issue: B-597
+  expected: 'Ein\nGrimer, das zur Müllentsorgung gebracht wurde,\nentwickelte sich schließlich zu dieser Form.'
+  forbidden:
+  - 'Ein\nTadmorv, das zur Müllentsorgung gebracht wurde,\nentwickelte sich schließlich zu dieser Form.'
+- offset: '0x1668d53'
+  name: 'B-597 : nom d’espèce EN canonique'
+  issue: B-597
+  expected: 'Es\npeitscht seine Feinde mit seinem langen\nHals. Das betäubt auch Exeggutor.'
+  forbidden:
+  - 'Es\npeitscht seine Feinde mit seinem langen\nHals. Das betäubt auch Noadkoko.'
+- offset: '0x1668db9'
+  name: 'B-597 : nom d’espèce EN canonique'
+  issue: B-597
+  expected: 'Es betrauert seine verlorenen Freunde.\nErdhügel am Straßenrand\nkennzeichnen die Gräber von Marowak.'
+  forbidden:
+  - 'Es betrauert seine verlorenen Freunde.\nErdhügel am Straßenrand\nkennzeichnen die Gräber von Ossatueur.'
+- offset: '0x1668f01'
+  name: 'B-597 : nom d’espèce EN canonique'
+  issue: B-597
+  expected: 'Als Articuno\nbekannt, verschießt dieses Pokémon\nStrahlen, die Gegner einfrieren.'
+  forbidden:
+  - 'Als Artikodin\nbekannt, verschießt dieses Pokémon\nStrahlen, die Gegner einfrieren.'
+- offset: '0x1669055'
+  name: 'B-597 : nom d’espèce EN canonique'
+  issue: B-597
+  expected: 'Während es singt, vermischt Slowking\nseine inneren Gifte mit dem, was es\ngefressen hat, und braut seltsame Tränke.'
+  forbidden:
+  - 'Während es singt, vermischt Roigada\nseine inneren Gifte mit dem, was es\ngefressen hat, und braut seltsame Tränke.'
+- offset: '0x16690ca'
+  name: 'B-597 : nom d’espèce EN canonique'
+  issue: B-597
+  expected: 'Ein Klimawandel löschte diesen\nuralten Corsola aus. Es saugt\nLebenskraft über seine Äste auf.'
+  forbidden:
+  - 'Ein Klimawandel löschte diesen\nuralten Corayon aus. Es saugt\nLebenskraft über seine Äste auf.'
+- offset: '0x1669142'
+  name: 'B-597 : nom d’espèce EN canonique'
+  issue: B-597
+  expected: 'Es bewegt sich im Zickzack und stiftet\nrundherum Chaos. Man vermutet, dass es die\nälteste Form von Zigzagoon ist.'
+  forbidden:
+  - 'Es bewegt sich im Zickzack und stiftet\nrundherum Chaos. Man vermutet, dass es die\nälteste Form von Zigzaton ist.'
+- offset: '0x16694f5'
+  name: 'B-597 : nom d’espèce EN canonique'
+  issue: B-597
+  expected: 'Dieses Oricorio trank gelben\nNektar. Sein lebhafter, fröhlicher Tanz\nlässt die Herzen der Feinde dahinschmelzen.'
+  forbidden:
+  - 'Dieses Plumeline trank gelben\nNektar. Sein lebhafter, fröhlicher Tanz\nlässt die Herzen der Feinde dahinschmelzen.'
+- offset: '0x1669560'
+  name: 'B-597 : nom d’espèce EN canonique'
+  issue: B-597
+  expected: 'Dieses Oricorio trank rosa Nektar.\nDas sanfte Wiegen seiner Hüften\nlässt die Herzen der Feinde dahinschmelzen.'
+  forbidden:
+  - 'Dieses Plumeline trank rosa Nektar.\nDas sanfte Wiegen seiner Hüften\nlässt die Herzen der Feinde dahinschmelzen.'
+- offset: '0x16695c8'
+  name: 'B-597 : nom d’espèce EN canonique'
+  issue: B-597
+  expected: 'Dieses Oricorio\ntrank violetten Nektar. Sein anmutiger\nTanz inspiriert manche Tänzer.'
+  forbidden:
+  - 'Dieses Plumeline\ntrank violetten Nektar. Sein anmutiger\nTanz inspiriert manche Tänzer.'
+- offset: '0x1669947'
+  name: 'B-597 : nom d’espèce EN canonique'
+  issue: B-597
+  expected: 'Der\nkleinste Schock lässt es das in seinem\nHals steckende Arrokuda wieder ausspucken.'
+  forbidden:
+  - 'Der\nkleinste Schock lässt es das in seinem\nHals steckende Embrochet wieder ausspucken.'
+- offset: '0x16699b2'
+  name: 'B-597 : nom d’espèce EN canonique'
+  issue: B-597
+  expected: 'Dieses Cramorant hat sich\nein Pikachu in der Kehle verklemmt. Es\nscheint zu ersticken, ohne sich daran zu stören.'
+  forbidden:
+  - 'Dieses Nigosier hat sich\nein Pikachu in der Kehle verklemmt. Es\nscheint zu ersticken, ohne sich daran zu stören.'
+- offset: '0x1669b75'
+  name: 'B-597 : nom d’espèce EN canonique'
+  issue: B-597
+  expected: 'Es entwickelte sich aus einer Milcery,\ndie ein Beerenbonbon trug. Der Geschmack\nseiner Creme hängt von der Mischung ab.'
+  forbidden:
+  - 'Es entwickelte sich aus einer Crèmy,\ndie ein Beerenbonbon trug. Der Geschmack\nseiner Creme hängt von der Mischung ab.'
+- offset: '0x1669be2'
+  name: 'B-597 : nom d’espèce EN canonique'
+  issue: B-597
+  expected: 'Es entwickelte sich aus einer Milcery,\ndie ein Kleeblattbonbon trug. Der Geschmack\nseiner Creme hängt von der Mischung ab.'
+  forbidden:
+  - 'Es entwickelte sich aus einer Crèmy,\ndie ein Kleeblattbonbon trug. Der Geschmack\nseiner Creme hängt von der Mischung ab.'
+- offset: '0x1669c50'
+  name: 'B-597 : nom d’espèce EN canonique'
+  issue: B-597
+  expected: 'Es entwickelte sich aus einer Milcery,\ndie ein Blütenbonbon trug. Der Geschmack\nseiner Creme hängt von der Mischung ab.'
+  forbidden:
+  - 'Es entwickelte sich aus einer Crèmy,\ndie ein Blütenbonbon trug. Der Geschmack\nseiner Creme hängt von der Mischung ab.'
+- offset: '0x1669cbe'
+  name: 'B-597 : nom d’espèce EN canonique'
+  issue: B-597
+  expected: 'Es entwickelte sich aus einer Milcery,\ndie ein Herzbonbon trug. Der Geschmack\nseiner Creme hängt von der Mischung ab.'
+  forbidden:
+  - 'Es entwickelte sich aus einer Crèmy,\ndie ein Herzbonbon trug. Der Geschmack\nseiner Creme hängt von der Mischung ab.'
+- offset: '0x1669d2a'
+  name: 'B-597 : nom d’espèce EN canonique'
+  issue: B-597
+  expected: 'Es entwickelte sich aus einer Milcery,\ndie ein Schleifenbonbon trug. Der Geschmack\nseiner Creme hängt von der Mischung ab.'
+  forbidden:
+  - 'Es entwickelte sich aus einer Crèmy,\ndie ein Schleifenbonbon trug. Der Geschmack\nseiner Creme hängt von der Mischung ab.'
+- offset: '0x1669d98'
+  name: 'B-597 : nom d’espèce EN canonique'
+  issue: B-597
+  expected: 'Es entwickelte sich aus einer Milcery,\ndie ein Sternbonbon trug. Der Geschmack\nseiner Creme hängt von der Mischung ab.'
+  forbidden:
+  - 'Es entwickelte sich aus einer Crèmy,\ndie ein Sternbonbon trug. Der Geschmack\nseiner Creme hängt von der Mischung ab.'
+- offset: '0x166a590'
+  name: 'B-597 : nom d’espèce EN canonique'
+  issue: B-597
+  expected: 'Dieses Basculin unterscheidet\nsich im Verhalten: Dieses hier ist sanftmütig.\n'
+  forbidden:
+  - 'Dieses Bargantua unterscheidet\nsich im Verhalten: Dieses hier ist sanftmütig.\n'
+- offset: '0x166a874'
+  name: 'B-597 : nom d’espèce EN canonique'
+  issue: B-597
+  expected: 'Die Luft, die im Inneren der\nFederkiele von Decidueye gespeichert\nist, isoliert das Pokémon gegen extreme Kälte.'
+  forbidden:
+  - 'Die Luft, die im Inneren der\nFederkiele von Archéduc gespeichert\nist, isoliert das Pokémon gegen extreme Kälte.'
+- offset: '0x1ee0b70'
+  name: 'B-597 : nom d’espèce EN canonique'
+  issue: B-597
+  expected: 'Argh! Die Bullen sind da!\pWarte<0xB0><0xFC><0x08><0x18> nee, nicht<0xB0>\pAch, du bist doch der Trainer<0xB0>\pWar nur kurz draußen<0xB0>\n<0xFC><0x08><0x18> und plötzlich war ich hier<0xB0>\pStarkes Oddish, keine Ahnung,\nwie ich zurückkomme, <0xFD><0x04>.\pHey<0xB0><0xFC><0x08><0x18> man sagt,\ndu bist jetzt groß raus.\pMach dir ''ne Freude<0xB0><0xFC><0x08><0x18>\nnoch ein Kampf.\pBist du dabei?\pWeil <0xFD><0x04>, im Ernst<0xB0>\nkönnen wir''s gleich machen.'
+  forbidden:
+  - 'Argh! Die Bullen sind da!\pWarte<0xB0><0xFC><0x08><0x18> nee, nicht<0xB0>\pAch, du bist doch der Trainer<0xB0>\pWar nur kurz draußen<0xB0>\n<0xFC><0x08><0x18> und plötzlich war ich hier<0xB0>\pStarkes Mystherbe, keine Ahnung,\nwie ich zurückkomme, <0xFD><0x04>.\pHey<0xB0><0xFC><0x08><0x18> man sagt,\ndu bist jetzt groß raus.\pMach dir ''ne Freude<0xB0><0xFC><0x08><0x18>\nnoch ein Kampf.\pBist du dabei?\pWeil <0xFD><0x04>, im Ernst<0xB0>\nkönnen wir''s gleich machen.'
+- offset: '0x1ee0fcf'
+  name: 'B-597 : nom d’espèce EN canonique'
+  issue: B-597
+  expected: 'Oh, hey, <0xFD><0x04><0xB0>\pNicht mal Oddish\nklärt den Kopf<0xB0>\pIch komm nur schwer über\nmeine Niederlage hinweg, <0xFD><0x04><0xB0>\pVersuchen wir''s nochmal?'
+  forbidden:
+  - 'Oh, hey, <0xFD><0x04><0xB0>\pNicht mal Mystherbe\nklärt den Kopf<0xB0>\pIch komm nur schwer über\nmeine Niederlage hinweg, <0xFD><0x04><0xB0>\pVersuchen wir''s nochmal?'
+- offset: '0x1ee44ac'
+  name: 'B-597 : nom d’espèce EN canonique'
+  issue: B-597
+  expected: 'Ooh hoo hoo… es sind Jahre\nvergangen, in denen ich mir\lwünschte, einem anderen\lTrainer zu begegnen.\pSei gegrüßt, und meinen herzlichsten\nGlückwunsch, Champion zu sein.\pUnd meinen aufrichtigen Dank,\ndass du die Welt von einem\lschrecklichen Übel befreit hast.\pIch erinnere mich an unseren\nletzten Kampf, gegen Ende\ldeiner Reise zur Pokémon-Liga.\pDu warst wie ein frisch\ngeschlüpfter Butterfree, der nur\lauf trockene, feste Flügel wartete.\pAber jetzt möchte ich deine Stärke\nauf ihrem Höhepunkt sehen.\pWas hast du erlebt?\pWelchen Weg bist du gegangen?\pIch wünsche mir einen weiteren Kampf,\num das Ergebnis zu sehen.\pErfüllst du diesem alten Mann\ndiesen Wunsch?'
+  forbidden:
+  - 'Ooh hoo hoo… es sind Jahre\nvergangen, in denen ich mir\lwünschte, einem anderen\lTrainer zu begegnen.\pSei gegrüßt, und meinen herzlichsten\nGlückwunsch, Champion zu sein.\pUnd meinen aufrichtigen Dank,\ndass du die Welt von einem\lschrecklichen Übel befreit hast.\pIch erinnere mich an unseren\nletzten Kampf, gegen Ende\ldeiner Reise zur Pokémon-Liga.\pDu warst wie ein frisch\ngeschlüpfter Papilusion, der nur\lauf trockene, feste Flügel wartete.\pAber jetzt möchte ich deine Stärke\nauf ihrem Höhepunkt sehen.\pWas hast du erlebt?\pWelchen Weg bist du gegangen?\pIch wünsche mir einen weiteren Kampf,\num das Ergebnis zu sehen.\pErfüllst du diesem alten Mann\ndiesen Wunsch?'
+- offset: '0x1ee71a0'
+  name: 'B-597 : nom d’espèce EN canonique'
+  issue: B-597
+  expected: 'Kann der Mensch fliegen?\nKlau 20 schöne Federn\nvon Wingull oder Pelipper!'
+  forbidden:
+  - 'Kann der Mensch fliegen?\nKlau 20 schöne Federn\nvon Goélise oder Bekipan!'
+- offset: '0x1ee71f5'
+  name: 'B-597 : nom d’espèce EN canonique'
+  issue: B-597
+  expected: 'Ah, {PLAYER}!\pDanke, dass du vorbeikommst.\pHast du schon mal den Spruch gehört,\nden meine Großmutter so liebte?\p«Wenn Menschen fliegen sollten,\nhätten sie Flügel wie ein Gligar\lund Federn wie ein Pidgeotto.»\pDen ersten Teil hab ich sicher\nschon, aber…\pFür den zweiten brauch ich noch\netwas Hilfe.\pWenn du also etwas Zeit hast,\nkönntest du einer\lguten Dame helfen?'
+  forbidden:
+  - 'Ah, {PLAYER}!\pDanke, dass du vorbeikommst.\pHast du schon mal den Spruch gehört,\nden meine Großmutter so liebte?\p«Wenn Menschen fliegen sollten,\nhätten sie Flügel wie ein Scorplane\lund Federn wie ein Roucoups.»\pDen ersten Teil hab ich sicher\nschon, aber…\pFür den zweiten brauch ich noch\netwas Hilfe.\pWenn du also etwas Zeit hast,\nkönntest du einer\lguten Dame helfen?'
+- offset: '0x1ee7369'
+  name: 'B-597 : nom d’espèce EN canonique'
+  issue: B-597
+  expected: 'Ah, ausgezeichnet!\pIch erklär dir kurz das Problem.\pFür meine Flügel fehlen mir noch Federn - aber nicht irgendwelche: {COLOR}ÉSchöne Federn{COLOR}Ç.\p{COLOR}É{STR_VAR_2}{COLOR}Ç Stück, genau gesagt.\pIch könnte andere nehmen, aber eine Dame mag schöne Sachen, oder?\pBring mir {COLOR}É{STR_VAR_2}{COLOR}Ç {COLOR}ÉSchöne Federn{COLOR}Ç hierher, und es gibt eine Belohnung!\pDu findest sie bei wilden {COLOR}ÉWingull{COLOR}Ç und {COLOR}ÉPelipper{COLOR}Ç.\pMit Diebstahl, Betteln oder Sabotage geht es leichter.\pAm besten {COLOR}ÉSabotage{COLOR}Ç, da du nichts zurückgeben musst.\pEin Pokémon mit {COLOR}ÉFacettenauge{COLOR}Ç oder {COLOR}ÉGlückspilz{COLOR}Ç vorn im Team erhöht zudem die Chance auf getragene Gegenstände!'
+  forbidden:
+  - 'Ah, ausgezeichnet!\pIch erklär dir kurz das Problem.\pFür meine Flügel fehlen mir noch Federn - aber nicht irgendwelche: {COLOR}ÉSchöne Federn{COLOR}Ç.\p{COLOR}É{STR_VAR_2}{COLOR}Ç Stück, genau gesagt.\pIch könnte andere nehmen, aber eine Dame mag schöne Sachen, oder?\pBring mir {COLOR}É{STR_VAR_2}{COLOR}Ç {COLOR}ÉSchöne Federn{COLOR}Ç hierher, und es gibt eine Belohnung!\pDu findest sie bei wilden {COLOR}ÉGoélise{COLOR}Ç und {COLOR}ÉBekipan{COLOR}Ç.\pMit Diebstahl, Betteln oder Sabotage geht es leichter.\pAm besten {COLOR}ÉSabotage{COLOR}Ç, da du nichts zurückgeben musst.\pEin Pokémon mit {COLOR}ÉFacettenauge{COLOR}Ç oder {COLOR}ÉGlückspilz{COLOR}Ç vorn im Team erhöht zudem die Chance auf getragene Gegenstände!'
+- offset: '0x1ee76d5'
+  name: 'B-597 : nom d’espèce EN canonique'
+  issue: B-597
+  expected: '{STR_VAR_1}, diese Menge reicht\nnicht…\pIch brauche {COLOR}É{STR_VAR_2} Schöne Federn{COLOR}Ç.\pMein Rat: Nutz den {COLOR}ÉDexNav{COLOR}Ç\nfür ein {COLOR}ÉSkorupi{COLOR}Ç mit {COLOR}ÉVersteckter Fähigkeit{COLOR}Ç\lauf {COLOR}ÉRoute 9{COLOR}Ç.\pEs lernt {COLOR}ÉSabotage{COLOR}Ç, und wird\nseine Fähigkeit zu {COLOR}ÉGlückspilz{COLOR}Ç!\pSo klaust du {COLOR}ÉSchöne Federn{COLOR}Ç\nvon wilden {COLOR}ÉWingull{COLOR}Ç und\l{COLOR}ÉPelipper{COLOR}Ç.\pIch verlass mich auf dich, {STR_VAR_1}!'
+  forbidden:
+  - '{STR_VAR_1}, diese Menge reicht\nnicht…\pIch brauche {COLOR}É{STR_VAR_2} Schöne Federn{COLOR}Ç.\pMein Rat: Nutz den {COLOR}ÉDexNav{COLOR}Ç\nfür ein {COLOR}ÉRapion{COLOR}Ç mit {COLOR}ÉVersteckter Fähigkeit{COLOR}Ç\lauf {COLOR}ÉRoute 9{COLOR}Ç.\pEs lernt {COLOR}ÉSabotage{COLOR}Ç, und wird\nseine Fähigkeit zu {COLOR}ÉGlückspilz{COLOR}Ç!\pSo klaust du {COLOR}ÉSchöne Federn{COLOR}Ç\nvon wilden {COLOR}ÉGoélise{COLOR}Ç und\l{COLOR}ÉBekipan{COLOR}Ç.\pIch verlass mich auf dich, {STR_VAR_1}!'
+- offset: '0x1eedaa2'
+  name: 'B-597 : nom d’espèce EN canonique'
+  issue: B-597
+  expected: 'Durchbrich mit dem ADM die Tore des\nKBT-Expresswegs und\nfang {STR_VAR_1} Carbink.'
+  forbidden:
+  - 'Durchbrich mit dem ADM die Tore des\nKBT-Expresswegs und\nfang {STR_VAR_1} Strassie.'
+- offset: '0x1eedb03'
+  name: 'B-597 : nom d’espèce EN canonique'
+  issue: B-597
+  expected: 'Gerüchte erzählen von\nseltenen Pokémon namens {COLOR}ÉCarbink{COLOR}Ë in\ldem KBT-Expressweg.\pAber sie sagen,\ndass man sie nur\lhinter eingestürzten Toren findet,\ldie den Tunnel versperren.\pWenn wir doch nur\ndie Trümmer {COLOR}Éabbauen{COLOR}Ë könnten…'
+  forbidden:
+  - 'Gerüchte erzählen von\nseltenen Pokémon namens {COLOR}ÉStrassie{COLOR}Ë in\ldem KBT-Expressweg.\pAber sie sagen,\ndass man sie nur\lhinter eingestürzten Toren findet,\ldie den Tunnel versperren.\pWenn wir doch nur\ndie Trümmer {COLOR}Éabbauen{COLOR}Ë könnten…'
+- offset: '0x1eedcfb'
+  name: 'B-597 : nom d’espèce EN canonique'
+  issue: B-597
+  expected: 'Fantastisch !\pMeine Aufgabe: die\n{COLOR}Éeingestürzten Tore{COLOR}Ë des\l{COLOR}ÉKBT-Expresswegs{COLOR}Ë\lmit deinem {COLOR}ÉADM{COLOR}Ë zerstören und\l{COLOR}É3 Carbink{COLOR}Ë fangen.\pUm ein Tor zu sprengen, lade dein\nADM auf.\lLade es mit {COLOR}É3 Licht-\plehm{COLOR}Ë auf, damit es\nstark genug ist.\lLichtlehm findet man beim\pGraben in den Wänden des KBT-Expresswegs.\pWenn das erledigt ist, komm zurück\nfür eine Belohnung.\l\p\n'
+  forbidden:
+  - 'Fantastisch !\pMeine Aufgabe: die\n{COLOR}Éeingestürzten Tore{COLOR}Ë des\l{COLOR}ÉKBT-Expresswegs{COLOR}Ë\lmit deinem {COLOR}ÉADM{COLOR}Ë zerstören und\l{COLOR}É3 Strassie{COLOR}Ë fangen.\pUm ein Tor zu sprengen, lade dein\nADM auf.\lLade es mit {COLOR}É3 Licht-\plehm{COLOR}Ë auf, damit es\nstark genug ist.\lLichtlehm findet man beim\pGraben in den Wänden des KBT-Expresswegs.\pWenn das erledigt ist, komm zurück\nfür eine Belohnung.\l\p\n'
+- offset: '0x1eedf8d'
+  name: 'B-597 : nom d’espèce EN canonique'
+  issue: B-597
+  expected: 'Zerstöre die\n{COLOR}Éeingestürzten Tore{COLOR}Ë des\l{COLOR}ÉKBT-Expresswegs{COLOR}Ë\lmit deinem {COLOR}ÉADM{COLOR}Ë und\pfang noch mehr\n{COLOR}É{STR_VAR_1}\lCarbink{COLOR}Ë.\pUm ein Tor zu sprengen, lade\nzuerst dein ADM auf.\lLade es mit {COLOR}É3 Licht-\plehm{COLOR}Ë auf, damit es\pstark genug ist.\nLichtlehm findet man beim\lGraben in den Wänden des KBT-Expresswegs.\pWenn das erledigt ist, komm zurück\nfür eine Belohnung.'
+  forbidden:
+  - 'Zerstöre die\n{COLOR}Éeingestürzten Tore{COLOR}Ë des\l{COLOR}ÉKBT-Expresswegs{COLOR}Ë\lmit deinem {COLOR}ÉADM{COLOR}Ë und\pfang noch mehr\n{COLOR}É{STR_VAR_1}\lStrassie{COLOR}Ë.\pUm ein Tor zu sprengen, lade\nzuerst dein ADM auf.\lLade es mit {COLOR}É3 Licht-\plehm{COLOR}Ë auf, damit es\pstark genug ist.\nLichtlehm findet man beim\lGraben in den Wänden des KBT-Expresswegs.\pWenn das erledigt ist, komm zurück\nfür eine Belohnung.'
+- offset: '0x1ef1137'
+  name: 'B-597 : nom d’espèce EN canonique'
+  issue: B-597
+  expected: 'Ein kleines Mädchen wurde\nvon einem Drifloon entführt! Finde sie\nund bring sie zurück zu ihrer Mutter.'
+  forbidden:
+  - 'Ein kleines Mädchen wurde\nvon einem Baudrive entführt! Finde sie\nund bring sie zurück zu ihrer Mutter.'
+- offset: '0x1ef2d07'
+  name: 'B-597 : nom d’espèce EN canonique'
+  issue: B-597
+  expected: '{COLOR}ËGastrodon! Setze {STR_VAR_1} ein!'
+  forbidden:
+  - '{COLOR}ËTritosor! Setze {STR_VAR_1} ein!'
+- offset: '0x1f0a83e'
+  name: 'B-597 : nom d’espèce EN canonique'
+  issue: B-597
+  expected: '<0xFC><0x01><0x02>Aggron stößt dich mit seinem\nmächtigen Brüller zurück!'
+  forbidden:
+  - '<0xFC><0x01><0x02>Galeking stößt dich mit seinem\nmächtigen Brüller zurück!'
+- offset: '0x1f0a86e'
+  name: 'B-597 : nom d’espèce EN canonique'
+  issue: B-597
+  expected: '<0xFC><0x01><0x02>Aggron ist auf mysteriöse\nWeise verschwunden.'
+  forbidden:
+  - '<0xFC><0x01><0x02>Galeking ist auf mysteriöse\nWeise verschwunden.'
+- offset: '0x1f2261a'
+  name: 'B-597 : nom d’espèce EN canonique'
+  issue: B-597
+  expected: 'Alles klar, los geht''s!\pSolosis, Duosion, Alakazam!'
+  forbidden:
+  - 'Alles klar, los geht''s!\pNucléos, Méios, Alakazam!'
+- offset: '0x1f25990'
+  name: 'B-597 : nom d’espèce EN canonique'
+  issue: B-597
+  expected: 'Hey, wolltest du schon mal direkt\nauf deinen Gegner losstürmen wie ein\lwütender Mudsdale?\pKein Problem, ich bringe\n{COLOR}ÉSchwere Kavallerie{COLOR}Ç für {COLOR}É{STR_VAR_2} {STR_VAR_1}s{COLOR}Ç bei!'
+  forbidden:
+  - 'Hey, wolltest du schon mal direkt\nauf deinen Gegner losstürmen wie ein\lwütender Bourrinos?\pKein Problem, ich bringe\n{COLOR}ÉSchwere Kavallerie{COLOR}Ç für {COLOR}É{STR_VAR_2} {STR_VAR_1}s{COLOR}Ç bei!'
+- offset: '0x1f26880'
+  name: 'B-597 : nom d’espèce EN canonique'
+  issue: B-597
+  expected: 'Wusstest du das?\pMännliche Unfezant unterscheiden sich\nvon weiblichen Unfezant.\pHier, lass es mich dir zeigen!'
+  forbidden:
+  - 'Wusstest du das?\pMännliche Déflaisan unterscheiden sich\nvon weiblichen Déflaisan.\pHier, lass es mich dir zeigen!'
+- offset: '0x1f268d8'
+  name: 'B-597 : nom d’espèce EN canonique'
+  issue: B-597
+  expected: 'Oder ich hätte es dir gezeigt, wenn ich\nunterschiedliche Unfezant hätte…'
+  forbidden:
+  - 'Oder ich hätte es dir gezeigt, wenn ich\nunterschiedliche Déflaisan hätte…'
+- offset: '0x1f26911'
+  name: 'B-597 : nom d’espèce EN canonique'
+  issue: B-597
+  expected: 'Weibliche Unfezant sind bekannt\nfür ihre Ausdauer, die Männchen\lübertreffen sie an Geschwindigkeit.\pUnter uns, ich habe im Kampf nie einen\nechten Unterschied gesehen.'
+  forbidden:
+  - 'Weibliche Déflaisan sind bekannt\nfür ihre Ausdauer, die Männchen\lübertreffen sie an Geschwindigkeit.\pUnter uns, ich habe im Kampf nie einen\nechten Unterschied gesehen.'
+- offset: '0x1f269ab'
+  name: 'B-597 : nom d’espèce EN canonique'
+  issue: B-597
+  expected: 'Vorsicht!\pOder die Jellicent hier werden\ndich schocken!'
+  forbidden:
+  - 'Vorsicht!\pOder die Moyade hier werden\ndich schocken!'
+- offset: '0x1f269e1'
+  name: 'B-597 : nom d’espèce EN canonique'
+  issue: B-597
+  expected: 'Was? Jellicent lernt nicht\nnatürlich Elektro-Attacken?'
+  forbidden:
+  - 'Was? Moyade lernt nicht\nnatürlich Elektro-Attacken?'
+- offset: '0x1f26a1e'
+  name: 'B-597 : nom d’espèce EN canonique'
+  issue: B-597
+  expected: 'Ich habe etwas Stechendes gespürt,\nwährend ich geschwommen bin!\pWurde dieses Gefühl nicht\nvon Jellicent verursacht?'
+  forbidden:
+  - 'Ich habe etwas Stechendes gespürt,\nwährend ich geschwommen bin!\pWurde dieses Gefühl nicht\nvon Moyade verursacht?'
+- offset: '0x1f275f5'
+  name: 'B-597 : nom d’espèce EN canonique'
+  issue: B-597
+  expected: 'Dieses Vivillon wurde direkt über\ndem Eis auf der Route gefunden,\nnachdem Klettern eingesetzt wurde.'
+  forbidden:
+  - 'Dieses Prismillon wurde direkt über\ndem Eis auf der Route gefunden,\nnachdem Klettern eingesetzt wurde.'
+- offset: '0x1f2764f'
+  name: 'B-597 : nom d’espèce EN canonique'
+  issue: B-597
+  expected: 'Dieses Vivillon wurde versteckt\nin ein paar Bäumen am nördlichen\nEnde des Flusses gefunden.'
+  forbidden:
+  - 'Dieses Prismillon wurde versteckt\nin ein paar Bäumen am nördlichen\nEnde des Flusses gefunden.'
+- offset: '0x1f276a6'
+  name: 'B-597 : nom d’espèce EN canonique'
+  issue: B-597
+  expected: 'Dieses Vivillon wurde oben auf\ndem südlichen Canyon gefunden, der\nmit Klettern erreichbar ist.'
+  forbidden:
+  - 'Dieses Prismillon wurde oben auf\ndem südlichen Canyon gefunden, der\nmit Klettern erreichbar ist.'
+- offset: '0x1f276fe'
+  name: 'B-597 : nom d’espèce EN canonique'
+  issue: B-597
+  expected: 'Dieses Vivillon wurde versteckt\nam Ende eines schmalen Pfades auf\nder Südostseite der Route gefunden.'
+  forbidden:
+  - 'Dieses Prismillon wurde versteckt\nam Ende eines schmalen Pfades auf\nder Südostseite der Route gefunden.'
+- offset: '0x1f27767'
+  name: 'B-597 : nom d’espèce EN canonique'
+  issue: B-597
+  expected: 'Dieses Vivillon\nwurde oben auf dem nordöstlichen\nCanyon gefunden, der mit Klettern erreichbar ist.'
+  forbidden:
+  - 'Dieses Prismillon\nwurde oben auf dem nordöstlichen\nCanyon gefunden, der mit Klettern erreichbar ist.'
+- offset: '0x1f277c2'
+  name: 'B-597 : nom d’espèce EN canonique'
+  issue: B-597
+  expected: 'Dieses Vivillon wurde\nin der Nähe eines Felsens auf halber\nHöhe der Route gefunden, die mit Klettern erreichbar ist.'
+  forbidden:
+  - 'Dieses Prismillon wurde\nin der Nähe eines Felsens auf halber\nHöhe der Route gefunden, die mit Klettern erreichbar ist.'
+- offset: '0x1f2782f'
+  name: 'B-597 : nom d’espèce EN canonique'
+  issue: B-597
+  expected: 'Dieses Vivillon wurde\nin der Nähe des Hauses im Osten gefunden.'
+  forbidden:
+  - 'Dieses Prismillon wurde\nin der Nähe des Hauses im Osten gefunden.'
+- offset: '0x1f2aab5'
+  name: 'B-597 : nom d’espèce EN canonique'
+  issue: B-597
+  expected: 'WROOOOOAR!\p…\pTut mir leid, {PLAYER}, ich komme gerade von\nder DragonCon.\pDas ist das Geräusch eines Drachen\nnamens\l„Eternatus".\pEin echter Albtraum. Sieht überhaupt nicht\naus wie ein Drache!\pZum Glück ist er nicht in\nBorrius!\pAber DU\nkannst das hier finden!'
+  forbidden:
+  - 'WROOOOOAR!\p…\pTut mir leid, {PLAYER}, ich komme gerade von\nder DragonCon.\pDas ist das Geräusch eines Drachen\nnamens\l„Éthernatos".\pEin echter Albtraum. Sieht überhaupt nicht\naus wie ein Drache!\pZum Glück ist er nicht in\nBorrius!\pAber DU\nkannst das hier finden!'
+- offset: '0x1f2bf16'
+  name: 'B-597 : nom d’espèce EN canonique'
+  issue: B-597
+  expected: '{COLOR}ÇHinweis!\nEs ist nicht Smeargle!'
+  forbidden:
+  - '{COLOR}ÇHinweis!\nEs ist nicht Queulorior!'
+- offset: '0x1f2bf39'
+  name: 'B-597 : nom d’espèce EN canonique'
+  issue: B-597
+  expected: 'Druddigon'
+  forbidden:
+  - 'Drakkarmin'
+- offset: '0x1f2c171'
+  name: 'B-597 : nom d’espèce EN canonique'
+  issue: B-597
+  expected: 'Mudbray ist eine große Hilfe\nin diesem schönen Lokal!\pEr hilft nicht nur bei der\nZubereitung der Gerichte, sondern\list auch hervorragend darin, den Kunden die Gerichte zu bringen!\pWürdest du nicht auch gerne einen\nMudbray haben, der das alles kann?'
+  forbidden:
+  - 'Tiboudet ist eine große Hilfe\nin diesem schönen Lokal!\pEr hilft nicht nur bei der\nZubereitung der Gerichte, sondern\list auch hervorragend darin, den Kunden die Gerichte zu bringen!\pWürdest du nicht auch gerne einen\nTiboudet haben, der das alles kann?'
+- offset: '0x1f2d942'
+  name: 'B-597 : nom d’espèce EN canonique'
+  issue: B-597
+  expected: 'Ihr geht mir jetzt wirklich\nauf die Nerven!\pInkay! Skorupi!\pZeigt ihnen, warum man sich nicht mit\nder {COLOR}ÁTeam Ombres{COLOR}Ë anlegt!'
+  forbidden:
+  - 'Ihr geht mir jetzt wirklich\nauf die Nerven!\pSepiatop! Rapion!\pZeigt ihnen, warum man sich nicht mit\nder {COLOR}ÁTeam Ombres{COLOR}Ë anlegt!'
+- offset: '0x1f2db7d'
+  name: 'B-597 : nom d’espèce EN canonique'
+  issue: B-597
+  expected: 'Nein!\nMein Inkay!'
+  forbidden:
+  - 'Nein!\nMein Sepiatop!'
+- offset: '0x1f2f759'
+  name: 'B-597 : nom d’espèce EN canonique'
+  issue: B-597
+  expected: 'Eins mit dem Wind,\neins mit dem Schnee…\pEin gefrorenes Herz im\nabsoluten Nullpunkt!\pWerde nun zum Schnee,\nder den schlimmsten Sturm bringt!\pSankren fimbulvetr!\pSteig zu mir herab, Articuno!'
+  forbidden:
+  - 'Eins mit dem Wind,\neins mit dem Schnee…\pEin gefrorenes Herz im\nabsoluten Nullpunkt!\pWerde nun zum Schnee,\nder den schlimmsten Sturm bringt!\pSankren fimbulvetr!\pSteig zu mir herab, Artikodin!'
+- offset: '0x1f2f82b'
+  name: 'B-597 : nom d’espèce EN canonique'
+  issue: B-597
+  expected: 'Jetzt, Articuno, ist es Zeit,\ndass du uns gehörst.'
+  forbidden:
+  - 'Jetzt, Artikodin, ist es Zeit,\ndass du uns gehörst.'
+- offset: '0x1f39495'
+  name: 'B-597 : nom d’espèce EN canonique'
+  issue: B-597
+  expected: 'Ich habe ein schlechtes Gefühl\nwegen dieses Claydol…'
+  forbidden:
+  - 'Ich habe ein schlechtes Gefühl\nwegen dieses Kaorine…'
+- offset: '0x1f399a0'
+  name: 'B-597 : nom d’espèce EN canonique'
+  issue: B-597
+  expected: 'Dieser Claydol hat uns vielleicht\nvorhin niedergestreckt, aber wir\lwerden dich trotzdem nicht ohne Kampf\lvorbeilassen! Wir können nicht\pzulassen, dass die Entfesselung\ngestört wird!'
+  forbidden:
+  - 'Dieser Kaorine hat uns vielleicht\nvorhin niedergestreckt, aber wir\lwerden dich trotzdem nicht ohne Kampf\lvorbeilassen! Wir können nicht\pzulassen, dass die Entfesselung\ngestört wird!'
+- offset: '0x1f39a35'
+  name: 'B-597 : nom d’espèce EN canonique'
+  issue: B-597
+  expected: 'Das ist die Schuld dieses Claydol…'
+  forbidden:
+  - 'Das ist die Schuld dieses Kaorine…'
+- offset: '0x1f3e2fe'
+  name: 'B-597 : nom d’espèce EN canonique'
+  issue: B-597
+  expected: 'Ganz einfach: Dann gräbt mich Krookodile raus.\pSelbst gefangen, Vega - ich kenne Fey. Nur wenige Orte in Borrius wären ihr sicher genug für die Schattenkrieger.\pMit Zeph in Cimes Gelées durchsuchen wir jeden Ort, bis wir sie finden!'
+  forbidden:
+  - 'Ganz einfach: Dann gräbt mich Crocorible raus.\pSelbst gefangen, Vega - ich kenne Fey. Nur wenige Orte in Borrius wären ihr sicher genug für die Schattenkrieger.\pMit Zeph in Cimes Gelées durchsuchen wir jeden Ort, bis wir sie finden!'
+- offset: '0x1f3e757'
+  name: 'B-597 : nom d’espèce EN canonique'
+  issue: B-597
+  expected: 'Krookodile! Zerstöre die Felsen\n! Setze Steinhieb ein!'
+  forbidden:
+  - 'Crocorible! Zerstöre die Felsen\n! Setze Steinhieb ein!'
+- offset: '0x1f456b5'
+  name: 'B-597 : nom d’espèce EN canonique'
+  issue: B-597
+  expected: 'Hey…{PAUSE} sag mir wenigstens, dass wir gegen\ndie Schatten gewonnen haben. Haben wir\pArticuno und Moltres gerettet?'
+  forbidden:
+  - 'Hey…{PAUSE} sag mir wenigstens, dass wir gegen\ndie Schatten gewonnen haben. Haben wir\pArtikodin und Sulfura gerettet?'
+- offset: '0x1f46e37'
+  name: 'B-597 : nom d’espèce EN canonique'
+  issue: B-597
+  expected: 'Toucannon! Auf geht''s!'
+  forbidden:
+  - 'Bazoucan! Auf geht''s!'
+- offset: '0x1f48620'
+  name: 'B-597 : nom d’espèce EN canonique'
+  issue: B-597
+  expected: 'Nein, Krookodile!\nDu kannst nicht drücken!\pEin Felsen blockiert den Weg!\pArgh<0xB0><0xFC><0x08><0x18> wenn nur eines meiner\nPokémon Grabenzug könnte<0xB0>'
+  forbidden:
+  - 'Nein, Crocorible!\nDu kannst nicht drücken!\pEin Felsen blockiert den Weg!\pArgh<0xB0><0xFC><0x08><0x18> wenn nur eines meiner\nPokémon Grabenzug könnte<0xB0>'
+- offset: '0x1f49330'
+  name: 'B-597 : nom d’espèce EN canonique'
+  issue: B-597
+  expected: 'Gastrodon! Halt mich fest mit\ndeinem Leim!'
+  forbidden:
+  - 'Tritosor! Halt mich fest mit\ndeinem Leim!'
+- offset: '0x1f50f90'
+  name: 'B-597 : nom d’espèce EN canonique'
+  issue: B-597
+  expected: 'Hi, ich bin Penny!\p<0xB0>was?\nDas hier?\pDas sind keine Klamotten, das ist\nmeine patentierte Goodra-Hose!\pIch liebe Drachen-Pokémon,\ndeshalb sehe ich gern aus wie sie!\pIch weiß alles über sie, und\nes gibt keinen Drachen-Fanartikel,\lden ich nicht besitze!\pDrachen sind einfach das Größte!\pMit Schwanz, Flügeln\nund FEUERATEM!\pEin Amateur wie du hat\nkeine Chance gegen mich!\pDas beweise ich dir sofort!\pGRAWR!'
+  forbidden:
+  - 'Hi, ich bin Penny!\p<0xB0>was?\nDas hier?\pDas sind keine Klamotten, das ist\nmeine patentierte Muplodocus-Hose!\pIch liebe Drachen-Pokémon,\ndeshalb sehe ich gern aus wie sie!\pIch weiß alles über sie, und\nes gibt keinen Drachen-Fanartikel,\lden ich nicht besitze!\pDrachen sind einfach das Größte!\pMit Schwanz, Flügeln\nund FEUERATEM!\pEin Amateur wie du hat\nkeine Chance gegen mich!\pDas beweise ich dir sofort!\pGRAWR!'
+- offset: '0x1f51218'
+  name: 'B-597 : nom d’espèce EN canonique'
+  issue: B-597
+  expected: 'Noch nicht fertig, was?\nGeh und tritt gegen den Rest der Top 4 an!\pIch? Ich hol mir meinen Unys-\nHaxorus-Edition-Becher und die\ldazu passende Mousepad.\pBeeil dich, die gibt''s nur noch\ndrei Tage lang zu kaufen!'
+  forbidden:
+  - 'Noch nicht fertig, was?\nGeh und tritt gegen den Rest der Top 4 an!\pIch? Ich hol mir meinen Unys-\nTranchodon-Edition-Becher und die\ldazu passende Mousepad.\pBeeil dich, die gibt''s nur noch\ndrei Tage lang zu kaufen!'
+- offset: '0x1f5152f'
+  name: 'B-597 : nom d’espèce EN canonique'
+  issue: B-597
+  expected: 'Neeein<0xB0> dieses Ekans war\nnicht kündbar<0xB0> und\lich konnte dich nicht besiegen<0xB0>\pIch kauf mir jetzt einen Noivern-\nJogginganzug zum Trost.\pUnd nein, den bekommst du nicht.\pDer Titel des doppelten Meisters von\nBorrius reicht dir doch,\loder?\pVerlier nicht gegen die anderen<0xB0>\nbevor ich dich selbst besiege!'
+  forbidden:
+  - 'Neeein<0xB0> dieses Abo war\nnicht kündbar<0xB0> und\lich konnte dich nicht besiegen<0xB0>\pIch kauf mir jetzt einen Bruyverne-\nJogginganzug zum Trost.\pUnd nein, den bekommst du nicht.\pDer Titel des doppelten Meisters von\nBorrius reicht dir doch,\loder?\pVerlier nicht gegen die anderen<0xB0>\nbevor ich dich selbst besiege!'
+- offset: '0x1f58c29'
+  name: 'B-597 : nom d’espèce EN canonique'
+  issue: B-597
+  expected: 'Wenn du einen {COLOR}Éfreien Platz in deinem\nTeam{COLOR}Ë hast, plus einen {COLOR}Éextra\lPoké Ball{COLOR}Ë, wenn du ein\nhier wild vorkommendes Nincada\lentwickelst, findest du danach ein\lPokémon in deinem Team\lnach der Entwicklung!\pAber dafür brauchst du einen\n{COLOR}ÉPoké Ball{COLOR}Ë in deinem Würfel, okay?\pKEINEN Superball oder Hyperball,\nnur einen {COLOR}ÉPoké Ball{COLOR}Ë.'
+  forbidden:
+  - 'Wenn du einen {COLOR}Éfreien Platz in deinem\nTeam{COLOR}Ë hast, plus einen {COLOR}Éextra\lPoké Ball{COLOR}Ë, wenn du ein\nhier wild vorkommendes Ningale\lentwickelst, findest du danach ein\lPokémon in deinem Team\lnach der Entwicklung!\pAber dafür brauchst du einen\n{COLOR}ÉPoké Ball{COLOR}Ë in deinem Würfel, okay?\pKEINEN Superball oder Hyperball,\nnur einen {COLOR}ÉPoké Ball{COLOR}Ë.'
+- offset: '0x1f599dc'
+  name: 'B-597 : nom d’espèce EN canonique'
+  issue: B-597
+  expected: 'Wusstest du das?\pKarpador ist nicht wirklich\ndas schwächste Pokémon!\pDieser Titel gehört der Solo-Form von\nWishiwashi!\pAuch ein nutzloser Fisch, bis\nes erwachsen wird!'
+  forbidden:
+  - 'Wusstest du das?\pKarpador ist nicht wirklich\ndas schwächste Pokémon!\pDieser Titel gehört der Solo-Form von\nFroussardine!\pAuch ein nutzloser Fisch, bis\nes erwachsen wird!'
+- offset: '0x1f5b90a'
+  name: 'B-597 : nom d’espèce EN canonique'
+  issue: B-597
+  expected: 'Dieses {COLOR}ÉCharminite{COLOR}Ë dient dazu, das Pokémon\n{COLOR}ÉMedicham{COLOR}Ë mega-entwickeln zu lassen.\pMit dem richtigen Trainer kann auch es\nso stark kämpfen wie das Meer.'
+  forbidden:
+  - 'Dieses {COLOR}ÉCharminite{COLOR}Ë dient dazu, das Pokémon\n{COLOR}ÉCharmina{COLOR}Ë mega-entwickeln zu lassen.\pMit dem richtigen Trainer kann auch es\nso stark kämpfen wie das Meer.'
+- offset: '0x1f648d0'
+  name: 'B-597 : nom d’espèce EN canonique'
+  issue: B-597
+  expected: 'Wenn du sehr früh aufstehst,\nwirst du die Kricketot hören!'
+  forbidden:
+  - 'Wenn du sehr früh aufstehst,\nwirst du die Crikzik hören!'
+- offset: '0x1f6490a'
+  name: 'B-597 : nom d’espèce EN canonique'
+  issue: B-597
+  expected: 'Die Kricketot müssen länger wach\nbleiben als die anderen.'
+  forbidden:
+  - 'Die Crikzik müssen länger wach\nbleiben als die anderen.'
+- offset: '0x1f649fb'
+  name: 'B-597 : nom d’espèce EN canonique'
+  issue: B-597
+  expected: 'Wenn die Smeargle schwärmen,\nist es auf dieser Route!'
+  forbidden:
+  - 'Wenn die Queulorior schwärmen,\nist es auf dieser Route!'
+- offset: '0x1f64a2f'
+  name: 'B-597 : nom d’espèce EN canonique'
+  issue: B-597
+  expected: 'Ich habe mein Smeargle hier gefangen,\naber es hat seine Attacken anderswo gelernt.'
+  forbidden:
+  - 'Ich habe mein Queulorior hier gefangen,\naber es hat seine Attacken anderswo gelernt.'
+- offset: '0x1f64a71'
+  name: 'B-597 : nom d’espèce EN canonique'
+  issue: B-597
+  expected: 'Mein Smeargle hat seine Attacken\nvon den Pokémon des Frostbergs gelernt.\pAußer Sporen.\pDie hat es von einem Shroomish\nauf Route 9 gelernt.'
+  forbidden:
+  - 'Mein Queulorior hat seine Attacken\nvon den Pokémon des Frostbergs gelernt.\pAußer Sporen.\pDie hat es von einem Balignon\nauf Route 9 gelernt.'
+- offset: '0x1f680c3'
+  name: 'B-597 : nom d’espèce EN canonique'
+  issue: B-597
+  expected: 'SCHALTER UNTEN\nDANN DEM DUSCLOPS\nAUSWEICHEN\nIST DER SCHLÜSSEL.'
+  forbidden:
+  - 'SCHALTER UNTEN\nDANN DEM TÉRACLOPE\nAUSWEICHEN\nIST DER SCHLÜSSEL.'
+- offset: '0x1f6c15e'
+  name: 'B-597 : nom d’espèce EN canonique'
+  issue: B-597
+  expected: 'Teehee… doofer Zangoose.\nIch suche kein Ei!\pIch will ein {COLOR}Éweibliches{COLOR}Ç Pokémon sehen, das\n{COLOR}ÉCharme{COLOR}Ç kennt.'
+  forbidden:
+  - 'Teehee… doofer Mangriff.\nIch suche kein Ei!\pIch will ein {COLOR}Éweibliches{COLOR}Ç Pokémon sehen, das\n{COLOR}ÉCharme{COLOR}Ç kennt.'
+- offset: '0x1f6c1d4'
+  name: 'B-597 : nom d’espèce EN canonique'
+  issue: B-597
+  expected: 'Teehee… doofer Zangoose.\nDas ist nicht, was ich suche!\pIch will ein {COLOR}Éweibliches{COLOR}Ç Pokémon sehen, das\n{COLOR}ÉCharme{COLOR}Ç kennt.'
+  forbidden:
+  - 'Teehee… doofer Mangriff.\nDas ist nicht, was ich suche!\pIch will ein {COLOR}Éweibliches{COLOR}Ç Pokémon sehen, das\n{COLOR}ÉCharme{COLOR}Ç kennt.'
+- offset: '0x1f70672'
+  name: 'B-597 : nom d’espèce EN canonique'
+  issue: B-597
+  expected: 'Dieser Z-Kristall ist für das Pokémon\n{COLOR}ÉDecidueye{COLOR}Ë bestimmt.\pWenn es\n{STR_VAR_1} kennt, ist die Z-Attacke garantiert.'
+  forbidden:
+  - 'Dieser Z-Kristall ist für das Pokémon\n{COLOR}ÉArchéduc{COLOR}Ë bestimmt.\pWenn es\n{STR_VAR_1} kennt, ist die Z-Attacke garantiert.'
+- offset: '0x1f7d066'
+  name: 'B-597 : nom d’espèce EN canonique'
+  issue: B-597
+  expected: 'Hilf einem Forscher bei den\nsaisonalen Formen, indem du ihm\nverschiedene Sawsbuck bringst.'
+  forbidden:
+  - 'Hilf einem Forscher bei den\nsaisonalen Formen, indem du ihm\nverschiedene Haydaim bringst.'
+- offset: '0x1f7d0c5'
+  name: 'B-597 : nom d’espèce EN canonique'
+  issue: B-597
+  expected: 'Hilf einem Forscher, die\nsaisonalen Formen zu erforschen, indem du ihm\nein Frühlings-Sawsbuck bringst.'
+  forbidden:
+  - 'Hilf einem Forscher, die\nsaisonalen Formen zu erforschen, indem du ihm\nein Frühlings-Haydaim bringst.'
+- offset: '0x1f7d122'
+  name: 'B-597 : nom d’espèce EN canonique'
+  issue: B-597
+  expected: 'Hilf einem Forscher, die\nsaisonalen Formen zu erforschen, indem du ihm\nein Sommer-Sawsbuck bringst.'
+  forbidden:
+  - 'Hilf einem Forscher, die\nsaisonalen Formen zu erforschen, indem du ihm\nein Sommer-Haydaim bringst.'
+- offset: '0x1f7d17f'
+  name: 'B-597 : nom d’espèce EN canonique'
+  issue: B-597
+  expected: 'Hilf einem Forscher, die\nsaisonalen Formen zu erforschen, indem du ihm\nein Herbst-Sawsbuck bringst.'
+  forbidden:
+  - 'Hilf einem Forscher, die\nsaisonalen Formen zu erforschen, indem du ihm\nein Herbst-Haydaim bringst.'
+- offset: '0x1f7d1dc'
+  name: 'B-597 : nom d’espèce EN canonique'
+  issue: B-597
+  expected: 'Hilf einem Forscher, die\nsaisonalen Formen zu erforschen, indem du ihm\nein Winter-Sawsbuck bringst.'
+  forbidden:
+  - 'Hilf einem Forscher, die\nsaisonalen Formen zu erforschen, indem du ihm\nein Winter-Haydaim bringst.'
+- offset: '0x1f7d56d'
+  name: 'B-597 : nom d’espèce EN canonique'
+  issue: B-597
+  expected: 'Interessant…\pEs scheint, dass aus irgendeinem Grund\ndie auftauchenden Pokémon\lnicht die richtigen sind…\pWar das dein Werk?\p…\pIn dem Fall ist das mehr als\ngenug!\pWer braucht schon Deerling?\pDieses Phänomen ist es wert,\nerforscht zu werden!'
+  forbidden:
+  - 'Interessant…\pEs scheint, dass aus irgendeinem Grund\ndie auftauchenden Pokémon\lnicht die richtigen sind…\pWar das dein Werk?\p…\pIn dem Fall ist das mehr als\ngenug!\pWer braucht schon Vivaldaim?\pDieses Phänomen ist es wert,\nerforscht zu werden!'
+- offset: '0x1f7d668'
+  name: 'B-597 : nom d’espèce EN canonique'
+  issue: B-597
+  expected: 'Vielen Dank!\pDu warst eine große Hilfe für meine\nForschung!\pAuch wenn das Klima in Borrius\nkonstant bleibt, haben Deerling und\lSawsbuck Formen,\ldie von ihrer Umgebung\labhängen, nicht von der Jahreszeit…\pAch ja, deine Belohnung.'
+  forbidden:
+  - 'Vielen Dank!\pDu warst eine große Hilfe für meine\nForschung!\pAuch wenn das Klima in Borrius\nkonstant bleibt, haben Vivaldaim und\lHaydaim Formen,\ldie von ihrer Umgebung\labhängen, nicht von der Jahreszeit…\pAch ja, deine Belohnung.'
+- offset: '0x1f7f8de'
+  name: 'B-597 : nom d’espèce EN canonique'
+  issue: B-597
+  expected: 'Zum Glück habe ich meinen\nGummianzug angezogen!\pDiese Tynamo wollen mich ständig\nschocken!'
+  forbidden:
+  - 'Zum Glück habe ich meinen\nGummianzug angezogen!\pDiese Anchwatt wollen mich ständig\nschocken!'
+- offset: '0x1f82bbb'
+  name: 'B-597 : nom d’espèce EN canonique'
+  issue: B-597
+  expected: '{COLOR}ÁToxapex hat sich mit\ngiftigen Flüssigkeiten vollgesogen, um\lseine Größe zu erhöhen!'
+  forbidden:
+  - '{COLOR}ÁPrédastérie hat sich mit\ngiftigen Flüssigkeiten vollgesogen, um\lseine Größe zu erhöhen!'
+- offset: '0x1f82bbc'
+  name: 'B-597 : nom d’espèce EN canonique'
+  issue: B-597
+  expected: '<0xFC><0x01><0x02>Toxapex hat sich mit Gift\nvollgesogen, um\lseine Größe zu erhöhen!'
+  forbidden:
+  - '<0xFC><0x01><0x02>Prédastérie hat sich mit Gift\nvollgesogen, um\lseine Größe zu erhöhen!'
+- offset: '0x1f82c04'
+  name: 'B-597 : nom d’espèce EN canonique'
+  issue: B-597
+  expected: '<0xFC><0x01><0x02>Toxapex ist unter dem Sand geflohen.'
+  forbidden:
+  - '<0xFC><0x01><0x02>Prédastérie ist unter dem Sand geflohen.'
+- offset: '0x1f82c4e'
+  name: 'B-597 : nom d’espèce EN canonique'
+  issue: B-597
+  expected: 'TOXAPEX\nBESIEGEN\nIST DER SCHLÜSSEL.'
+  forbidden:
+  - 'PRÉDASTÉRIE\nBESIEGEN\nIST DER SCHLÜSSEL.'
+- offset: '0x1f83fbc'
+  name: 'B-597 : nom d’espèce EN canonique'
+  issue: B-597
+  expected: 'Druddigon ist das Höhlen-Pokémon!\pMeins habe ich hier gefangen, in den\nHöhlen der Siegesstraße!'
+  forbidden:
+  - 'Drakkarmin ist das Höhlen-Pokémon!\pMeins habe ich hier gefangen, in den\nHöhlen der Siegesstraße!'
+- offset: '0x1f84027'
+  name: 'B-597 : nom d’espèce EN canonique'
+  issue: B-597
+  expected: 'Gabite ist auch ein Höhlen-\nPokémon, aber im Gegensatz zu ihm\list Druddigon rein vom Typ Drache.'
+  forbidden:
+  - 'Carmache ist auch ein Höhlen-\nPokémon, aber im Gegensatz zu ihm\list Drakkarmin rein vom Typ Drache.'
+- offset: '0x1f84135'
+  name: 'B-597 : nom d’espèce EN canonique'
+  issue: B-597
+  expected: 'Ich habe meinen Cousin überzeugt, dass\ndie besten Käfer-Pokémon in diesem\lAbschnitt der Siegesstraße zu finden sind.\pIch hätte nicht gedacht, dass das einzige\nKäfer-Pokémon hier Durant wäre.'
+  forbidden:
+  - 'Ich habe meinen Cousin überzeugt, dass\ndie besten Käfer-Pokémon in diesem\lAbschnitt der Siegesstraße zu finden sind.\pIch hätte nicht gedacht, dass das einzige\nKäfer-Pokémon hier Fermite wäre.'
+- offset: '0x1f84245'
+  name: 'B-597 : nom d’espèce EN canonique'
+  issue: B-597
+  expected: 'Warum ist das einzige Käfer-Pokémon\nhier Durant?\pMein Cousin hatte mir tolle\nKäfer-Pokémon hier versprochen!'
+  forbidden:
+  - 'Warum ist das einzige Käfer-Pokémon\nhier Fermite?\pMein Cousin hatte mir tolle\nKäfer-Pokémon hier versprochen!'
+- offset: '0x1f842b1'
+  name: 'B-597 : nom d’espèce EN canonique'
+  issue: B-597
+  expected: 'Cousin!\pDein Heatmor versucht schon wieder,\nmein Durant zu fressen!'
+  forbidden:
+  - 'Cousin!\pDein Aflamanoir versucht schon wieder,\nmein Fermite zu fressen!'
+- offset: '0x1f842e7'
+  name: 'B-597 : nom d’espèce EN canonique'
+  issue: B-597
+  expected: 'Das Heatmor meines Cousins\nwill mein gefangenes Durant fressen.'
+  forbidden:
+  - 'Das Aflamanoir meines Cousins\nwill mein gefangenes Fermite fressen.'
+- offset: '0x1f84328'
+  name: 'B-597 : nom d’espèce EN canonique'
+  issue: B-597
+  expected: 'Wir suchen hier nach Käfer-Pokémon.\nAber ich finde nur Durant!\pWenn du mehr Pokémon hättest, würde\nich gegen dich kämpfen, um Dampf abzulassen.'
+  forbidden:
+  - 'Wir suchen hier nach Käfer-Pokémon.\nAber ich finde nur Fermite!\pWenn du mehr Pokémon hättest, würde\nich gegen dich kämpfen, um Dampf abzulassen.'
+- offset: '0x1f859c2'
+  name: 'B-597 : nom d’espèce EN canonique'
+  issue: B-597
+  expected: 'Ein Alola-Sandshrew wurde gegen\nCoincoin, das Ducklett, getauscht.'
+  forbidden:
+  - 'Ein Alola-Sabelette wurde gegen\nCoincoin, das Couaneton, getauscht.'
+- offset: '0x1f85a16'
+  name: 'B-597 : nom d’espèce EN canonique'
+  issue: B-597
+  expected: 'Ein Onix wurde gegen Culbuto,\ndas Electrode, getauscht.'
+  forbidden:
+  - 'Ein Onix wurde gegen Culbuto,\ndas Électrode, getauscht.'
+- offset: '0x1f85a66'
+  name: 'B-597 : nom d’espèce EN canonique'
+  issue: B-597
+  expected: 'Ein Lickitung wurde gegen Le Top,\nden Kapoera, getauscht.'
+  forbidden:
+  - 'Ein Excelangue wurde gegen Le Top,\nden Kapoera, getauscht.'
+- offset: '0x1f85ab4'
+  name: 'B-597 : nom d’espèce EN canonique'
+  issue: B-597
+  expected: 'Manectric wurde gegen Écureuil,\nden Pachirisu, getauscht.'
+  forbidden:
+  - 'Élecsprint wurde gegen Écureuil,\nden Pachirisu, getauscht.'
+- offset: '0x1f85b1e'
+  name: 'B-597 : nom d’espèce EN canonique'
+  issue: B-597
+  expected: 'Ein Amoonguss wurde gegen Shin,\ndas Shiinotic, getauscht.'
+  forbidden:
+  - 'Ein Gaulet wurde gegen Shin,\ndas Lampignon, getauscht.'
+- offset: '0x1f85b56'
+  name: 'B-597 : nom d’espèce EN canonique'
+  issue: B-597
+  expected: 'Shiinotic wurde gegen Parmi eux,\ndas Amoonguss, getauscht.'
+  forbidden:
+  - 'Lampignon wurde gegen Parmi eux,\ndas Gaulet, getauscht.'
+- offset: '0x1f85ba8'
+  name: 'B-597 : nom d’espèce EN canonique'
+  issue: B-597
+  expected: 'Ein Zweilous wurde gegen Torche,\ndas Lampent, getauscht.'
+  forbidden:
+  - 'Ein Diamat wurde gegen Torche,\ndas Mélancolux, getauscht.'
+- offset: '0x1fa0253'
+  name: 'B-597 : nom d’espèce EN canonique'
+  issue: B-597
+  expected: 'Mein Typ in {COLOR}ÉDresco{COLOR}Ë kann die\lRauflaub-Blätter in noch mehr\p{COLOR}ÉTraumnebel{COLOR}Ë verwandeln.\nBring ihm\lOddish, er macht das gerne.'
+  forbidden:
+  - 'Mein Typ in {COLOR}ÉDresco{COLOR}Ë kann die\lRauflaub-Blätter in noch mehr\p{COLOR}ÉTraumnebel{COLOR}Ë verwandeln.\nBring ihm\lMystherbe, er macht das gerne.'
+- offset: '0x1fa0a96'
+  name: 'B-597 : nom d’espèce EN canonique'
+  issue: B-597
+  expected: 'Halt! Führen Sie\pillegale\nWare\pmit sich? Slowpoke-Schwänze\noder Rauflaub-\pBlätter?…\pNein, Sie sehen\nsauber aus. Weiterfahren.'
+  forbidden:
+  - 'Halt! Führen Sie\pillegale\nWare\pmit sich? Ramoloss-Schwänze\noder Rauflaub-\pBlätter?…\pNein, Sie sehen\nsauber aus. Weiterfahren.'
+- offset: '0x1fa0c16'
+  name: 'B-597 : nom d’espèce EN canonique'
+  issue: B-597
+  expected: 'Halt! Führen Sie\pillegale\pWare\pmit sich? Slowpoke-Schwänze\noder Rauflaub-\pBlätter?…\pHmm… Sie stinken nach\nRauflaub-Blättern…'
+  forbidden:
+  - 'Halt! Führen Sie\pillegale\pWare\pmit sich? Ramoloss-Schwänze\noder Rauflaub-\pBlätter?…\pHmm… Sie stinken nach\nRauflaub-Blättern…'
+- offset: '0x1fa4b5d'
+  name: 'B-597 : nom d’espèce EN canonique'
+  issue: B-597
+  expected: 'Staraptor!\pLass uns von hier verschwinden!'
+  forbidden:
+  - 'Étouraptor!\pLass uns von hier verschwinden!'

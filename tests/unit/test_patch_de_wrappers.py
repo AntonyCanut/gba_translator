@@ -108,7 +108,11 @@ def test_de_descriptor_wires_wrapper_at_end(name):
     assert patches.index("inline") < patches.index(name), (
         f"{name} must run after `inline` so reserved=None stays safe"
     )
-    # Only the report-only collision_check is allowed to follow it.
+    # Only non-relocating finalizers may follow: the species-table restore is
+    # deliberately last among writers so no earlier pass can relocalise names.
     assert set(patches[patches.index(name) + 1:]) <= {
-        "mission_descriptions", "worldmap_junction_panels", "collision_check",
+        "mission_descriptions",
+        "worldmap_junction_panels",
+        "species_names",
+        "collision_check",
     }, f"{name} must be among the last relocation steps: {patches}"

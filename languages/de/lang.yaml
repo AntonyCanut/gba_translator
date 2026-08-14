@@ -112,9 +112,9 @@ status_abbrev:
 #                            ← combined_de.txt (languages/de/patches/move_names.py,
 #                            delegates to languages/fr/patches/move_names.py — #81)
 #   species_names            fixed-width 11-byte, 1293-entry species-name
-#                            table @ 0x166A997 ← combined_de.txt
-#                            (languages/de/patches/species_names.py, delegates to
-#                            languages/fr/patches/species_names.py — #81)
+#                            table @ 0x166A997, restored byte-for-byte from
+#                            input/roms/englishrom.gba after every writing pass
+#                            (languages/de/patches/species_names.py)
 #   fixed_table_names        one-off class-2 fixed cells unreachable by any
 #                            translation pass (Parcel/Package/Berry Pouch/Town
 #                            Map/Hard Stone/TM Case bag names + the Weak Armor
@@ -179,7 +179,6 @@ patches:
   - item_names
   - ability_names
   - move_names       # fixed 13-byte move-name table (live base resolved from ROM ptr) — #81
-  - species_names    # fixed 11-byte species-name table @ 0x166A997 — #81
   - nature_names
   - cfru_type_names
   - pokedex_categories
@@ -207,6 +206,9 @@ patches:
   - world_map_action_labels
   - mission_descriptions
   - worldmap_junction_panels
+  # Restore all 1,293 fixed species-name cells from the canonical EN ROM after
+  # every writing patch.  No German/FR name list participates in this copy.
+  - species_names
   # Post-build audit: flag any translated cell not terminated before its
   # neighbour (fusion / freeze risk). Report-only, never fails the build.
   - collision_check
