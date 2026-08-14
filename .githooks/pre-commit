@@ -17,6 +17,12 @@ fail_commit() {
 echo "→ Vérification de la présence d’un test unitaire dans le commit…"
 python3 scripts/check_staged_translation_tests.py || fail_commit
 
+echo "→ Vérification de la matrice de parité FR→DE…"
+python3 scripts/check_de_parity.py || fail_commit
+
+echo "→ Vérification du périmètre des tickets DE…"
+python3 scripts/check_de_scope.py --staged || fail_commit
+
 echo "→ Vérification du mécanisme de reprise des artefacts de release…"
 python3 -m pytest -q tests/unit/test_release_workflow.py || fail_commit
 

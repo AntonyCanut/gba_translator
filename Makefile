@@ -110,7 +110,7 @@ SPANISH_BUILD := $(ROM_OUT_DIR)/GenedRom-es.gba
 
 .PHONY: pipeline verify-roms extract extract-en extract-es extract-fr diff build-es build-fr verify-fr-determinism prepare-fr ensure-fr-translation validate-es trilingual-csv \
 	build-it build-de build-indie build-lang build-all release-all langs \
-	test test-python-fast test-python test-rom test-fr-rebuild check-translations test-vitest test-playwright test-all \
+	test test-python-fast test-python test-rom test-fr-rebuild check-translations check-de-parity check-de-scope test-vitest test-playwright test-all \
 	sync-charmap sync-charmap-check install install-playwright lint tickets report \
 	clean help
 
@@ -411,6 +411,12 @@ trilingual-csv:
 ## --------------- Test targets ---------------
 
 test: test-python-fast
+
+check-de-parity:
+	@$(PYTHON) scripts/check_de_parity.py
+
+check-de-scope:
+	@$(PYTHON) scripts/check_de_scope.py --base-ref "$${DE_SCOPE_BASE:-origin/unbound}"
 
 test-python-fast:
 	@$(PYTHON) -m pytest tests/ -x --ignore=tests/benchmarks --ignore=tests/e2e \

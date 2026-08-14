@@ -1787,3 +1787,36 @@ d’annulation dans le reste du jeu.
   FR/IT/DE. Playwright mGBA valide les barres et libellés FR/DE/IT (13/13),
   après remplacement de l'ancienne ancre textuelle par deux bandes d'icônes de
   stats indépendantes de la langue. Aucune source de traduction FR/IT modifiée.
+# T-596 — Matrice de parité FR→DE et gardes de périmètre
+
+## Diagnostic et conception
+
+- Le pipeline FR dédié expose ses étapes dans `languages/fr/lang.yaml`, mais le
+  dépôt ne possède aucune source exécutable reliant ces étapes, les modules et
+  les assets FR à leur état DE.
+- Le build DE couvre déjà de nombreux écarts par modules propres ou mécanismes
+  partagés ; la matrice doit les déclarer sans les recréer.
+- La garde de portée s'applique aux branches/tickets DE, bloque toute source ou
+  ROM livrée FR/IT et exige une régression non exclusivement DE pour le code
+  partagé.
+
+## Plan validé
+
+- [x] Inventorier les descripteurs, patches, assets et tests FR/DE.
+- [x] Ajouter les tests rouges du manifeste et de la garde de portée.
+- [x] Implémenter le manifeste versionné et ses validateurs CLI.
+- [x] Brancher les gardes au hook puis exécuter les validations ciblées et larges.
+- [ ] Relire le diff, committer, rebaser et intégrer localement sans push.
+
+## Revue
+
+- `languages/de/parity.yaml` recense 12 champs de descripteur, 35 étapes de
+  build, 55 modules FR, 18 assets et 10 correspondances de tests ROM.
+- Les 30 modules DE déjà présents et les mécanismes partagés sont référencés ;
+  les écarts restants portent une exclusion et une destination de ticket.
+- La garde Git bloque `languages/fr`, `languages/it` et leurs ROM livrées, puis
+  exige un test non exclusivement DE pour tout changement de code partagé.
+- Cycle TDD observé sur le module absent, l'exécution directe des CLI et les
+  cibles DE manquantes. Vérifications : 15 tests ciblés, 1 709 tests rapides et
+  1 839 tests standard sans échec ; lint ciblé et `git diff --check` propres.
+- Aucun texte, asset ni artefact ROM FR/IT n'est modifié.
