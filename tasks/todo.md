@@ -1806,17 +1806,18 @@ d’annulation dans le reste du jeu.
 - [x] Ajouter les tests rouges du manifeste et de la garde de portée.
 - [x] Implémenter le manifeste versionné et ses validateurs CLI.
 - [x] Brancher les gardes au hook puis exécuter les validations ciblées et larges.
-- [ ] Relire le diff, committer, rebaser et intégrer localement sans push.
+- [x] Relire le diff et préparer l'intégration linéaire locale sans push.
 
 ## Revue
 
-- `languages/de/parity.yaml` recense 12 champs de descripteur, 35 étapes de
-  build, 55 modules FR, 18 assets et 10 correspondances de tests ROM.
-- Les 30 modules DE déjà présents et les mécanismes partagés sont référencés ;
-  les écarts restants portent une exclusion et une destination de ticket.
+- `languages/de/parity.yaml` recense 12 champs de descripteur, 35 étapes FR,
+  12 étapes propres à DE, 55 modules FR, 18 assets, 133 tests FR et 38 tests DE.
+- Les traitements DE déjà présents et les mécanismes partagés sont référencés ;
+  chaque écart restant porte une exclusion versionnée et justifiée.
 - La garde Git bloque `languages/fr`, `languages/it` et leurs ROM livrées, puis
   exige un test non exclusivement DE pour tout changement de code partagé.
-- Cycle TDD observé sur le module absent, l'exécution directe des CLI et les
-  cibles DE manquantes. Vérifications : 15 tests ciblés, 1 709 tests rapides et
-  1 839 tests standard sans échec ; lint ciblé et `git diff --check` propres.
+- Cycle TDD observé sur le module absent, l'exécution directe des CLI, les
+  cibles DE manquantes, l'inventaire inverse et les renommages hors périmètre.
+  Vérifications : 19 tests ciblés, suites rapides et standard sans échec ; lint
+  ciblé, CLI de garde et `git diff --check` propres.
 - Aucun texte, asset ni artefact ROM FR/IT n'est modifié.

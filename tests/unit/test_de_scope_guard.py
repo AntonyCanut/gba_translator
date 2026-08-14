@@ -4,7 +4,12 @@ from __future__ import annotations
 
 from pathlib import Path
 
-from src.i18n.de_parity import ChangedPath, DeParityManifest, validate_de_scope
+from src.i18n.de_parity import (
+    ChangedPath,
+    DeParityManifest,
+    parse_name_status,
+    validate_de_scope,
+)
 
 ROOT = Path(__file__).resolve().parents[2]
 POLICY = DeParityManifest.load(ROOT / "languages/de/parity.yaml").scope
@@ -34,6 +39,18 @@ def test_de_ticket_rejects_fr_and_it_language_sources() -> None:
     assert failures == [
         "chemin FR/IT interdit dans un ticket DE: languages/fr/patches/font.py",
         "chemin FR/IT interdit dans un ticket DE: languages/it/combined_it.txt",
+    ]
+
+
+def test_rename_out_of_fr_keeps_the_forbidden_source_in_the_diff() -> None:
+    changes = parse_name_status(
+        "R100\tlanguages/fr/patches/font.py\tlanguages/de/patches/font.py\n"
+    )
+
+    failures = validate_de_scope(changes, DE_BRANCH, POLICY)
+
+    assert failures == [
+        "chemin FR/IT interdit dans un ticket DE: languages/fr/patches/font.py"
     ]
 
 
@@ -92,3 +109,15 @@ def test_non_de_branch_is_outside_the_guard() -> None:
     changes = [change("languages/fr/combined_fr.txt")]
 
     assert validate_de_scope(changes, "worktree/f-123-correction-fr", POLICY) == []
+
+
+def test_german_named_ticket_still_activates_the_de_guard() -> None:
+    changes = [change("languages/fr/combined_fr.txt")]
+
+    failures = validate_de_scope(
+        changes, "worktree/b-211-german-letters", POLICY
+    )
+
+    assert failures == [
+        "chemin FR/IT interdit dans un ticket DE: languages/fr/combined_fr.txt"
+    ]

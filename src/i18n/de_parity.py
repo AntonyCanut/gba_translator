@@ -21,7 +21,14 @@ ALLOWED_CLASSIFICATIONS = {
     "rom_test",
 }
 ALLOWED_STATUSES = {"equivalent", "shared", "excluded"}
-DE_BRANCH_PATTERN = re.compile(r"(?:^|[/_-])de(?:[/_-]|$)", re.IGNORECASE)
+DE_BRANCH_PATTERN = re.compile(
+    r"(?:^|[/_-])(?:de|german|allemand|deutsch)(?:[/_-]|$)", re.IGNORECASE
+)
+LANGUAGE_TEST_TOKENS = {
+    "fr": ("fr", "french", "francais"),
+    "de": ("de", "german", "allemand", "deutsch"),
+}
+TEST_SUFFIXES = {".py", ".ts", ".tsx", ".js", ".jsx"}
 
 
 @dataclass(frozen=True)
@@ -58,9 +65,11 @@ class DeParityManifest:
 
     descriptor_fields: tuple[ParityEntry, ...]
     build_steps: tuple[ParityEntry, ...]
+    de_only_build_steps: tuple[ParityEntry, ...]
     patches: tuple[ParityEntry, ...]
     assets: tuple[ParityEntry, ...]
     rom_tests: tuple[ParityEntry, ...]
+    de_only_rom_tests: tuple[ParityEntry, ...]
     scope: ScopePolicy
 
     @classmethod
@@ -81,6 +90,19 @@ class DeParityManifest:
         def entries(section: str) -> tuple[ParityEntry, ...]:
             return tuple(ParityEntry(**item) for item in data.get(section, ()))
 
+        def test_exclusions(section: str) -> tuple[ParityEntry, ...]:
+            raw = data.get(section) or {}
+            reason = raw.get("reason", "")
+            return tuple(
+                ParityEntry(
+                    source=source,
+                    classification="rom_test",
+                    status="excluded",
+                    reason=reason,
+                )
+                for source in raw.get("sources", ())
+            )
+
         raw_scope = data.get("scope_guard") or {}
         scope = ScopePolicy(
             forbidden_prefixes=tuple(raw_scope.get("forbidden_prefixes") or ()),
@@ -90,9 +112,11 @@ class DeParityManifest:
         return cls(
             descriptor_fields=entries("descriptor_fields"),
             build_steps=entries("build_steps"),
+            de_only_build_steps=entries("de_only_build_steps"),
             patches=entries("patches"),
             assets=entries("assets"),
-            rom_tests=entries("rom_tests"),
+            rom_tests=entries("rom_tests") + test_exclusions("rom_test_exclusions"),
+            de_only_rom_tests=test_exclusions("de_only_rom_tests"),
             scope=scope,
         )
 
@@ -153,13 +177,43 @@ class DeParityManifest:
             )
         )
 
-        file_sections = (self.patches, self.assets, self.rom_tests)
-        for section in (
-            self.descriptor_fields,
-            self.build_steps,
+        expected_fr_tests = _discover_language_tests(root, "fr")
+        failures.extend(
+            _compare_inventory(
+                expected_fr_tests,
+                {entry.source for entry in self.rom_tests},
+                "test FR absent de la matrice",
+                "test FR inconnu dans la matrice",
+            )
+        )
+
+        expected_de_tests = _discover_language_tests(root, "de")
+        covered_de_tests = {
+            entry.target for entry in self.rom_tests if entry.status != "excluded"
+        }
+        failures.extend(
+            _compare_inventory(
+                expected_de_tests - covered_de_tests,
+                {entry.source for entry in self.de_only_rom_tests},
+                "test propre à DE absent de la matrice",
+                "test propre à DE inconnu dans la matrice",
+            )
+        )
+
+        file_sections = (
             self.patches,
             self.assets,
             self.rom_tests,
+            self.de_only_rom_tests,
+        )
+        for section in (
+            self.descriptor_fields,
+            self.build_steps,
+            self.de_only_build_steps,
+            self.patches,
+            self.assets,
+            self.rom_tests,
+            self.de_only_rom_tests,
         ):
             failures.extend(_validate_entries(section))
         for section in file_sections:
@@ -183,6 +237,17 @@ class DeParityManifest:
                 failures.append(
                     f"étape DE déclarée absente de languages/de/lang.yaml: {entry.target}"
                 )
+        covered_de_steps = {
+            entry.target for entry in self.build_steps if entry.status != "excluded"
+        }
+        failures.extend(
+            _compare_inventory(
+                de_steps - covered_de_steps,
+                {entry.source for entry in self.de_only_build_steps},
+                "étape propre à DE absente de la matrice",
+                "étape propre à DE inconnue dans la matrice",
+            )
+        )
         return failures
 
 
@@ -200,6 +265,35 @@ def _compare_inventory(
     failures = [f"{missing_label}: {item}" for item in sorted(expected - actual)]
     failures.extend(f"{extra_label}: {item}" for item in sorted(actual - expected))
     return failures
+
+
+def _discover_language_tests(root: Path, language: str) -> set[str]:
+    """Découvre les tests explicitement rattachés à une langue par chemin ou nom."""
+    tests_root = root / "tests"
+    aliases = LANGUAGE_TEST_TOKENS[language]
+    token = re.compile(
+        rf"(?:^|[_-])(?:{'|'.join(map(re.escape, aliases))})(?:[_-]|$)"
+    )
+    discovered: set[str] = set()
+    for path in tests_root.rglob("*"):
+        is_test_file = (
+            path.is_file()
+            and path.suffix in TEST_SUFFIXES
+            and (
+                path.name.startswith("test_")
+                or ".test." in path.name
+                or ".spec." in path.name
+            )
+        )
+        if not is_test_file:
+            continue
+        relative_to_tests = path.relative_to(tests_root)
+        language_directory = any(
+            part.lower() in aliases for part in relative_to_tests.parts[:-1]
+        )
+        if language_directory or token.search(path.stem.lower()):
+            discovered.add(path.relative_to(root).as_posix())
+    return discovered
 
 
 def _validate_entries(entries: Sequence[ParityEntry]) -> list[str]:
@@ -236,7 +330,12 @@ def parse_name_status(output: str) -> list[ChangedPath]:
         parts = line.split("\t")
         if len(parts) < 2:
             continue
-        changes.append(ChangedPath(status=parts[0], path=parts[-1]))
+        status = parts[0]
+        if status.startswith("R") and len(parts) >= 3:
+            changes.append(ChangedPath(status="D", path=parts[-2]))
+            changes.append(ChangedPath(status="A", path=parts[-1]))
+        else:
+            changes.append(ChangedPath(status=status, path=parts[-1]))
     return changes
 
 

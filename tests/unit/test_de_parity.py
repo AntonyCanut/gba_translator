@@ -34,10 +34,50 @@ def test_manifest_lists_every_fr_patch_and_asset_exactly_once() -> None:
     assert any("patch FR absent de la matrice" in failure for failure in failures)
 
 
+def test_manifest_lists_every_localized_fr_test_exactly_once() -> None:
+    """Un nouveau test FR doit recevoir un équivalent DE ou une exclusion."""
+    manifest = DeParityManifest.load(MANIFEST_PATH)
+    truncated = replace(manifest, rom_tests=manifest.rom_tests[1:])
+
+    failures = truncated.validate(ROOT)
+
+    assert any("test FR absent de la matrice" in failure for failure in failures)
+
+
+def test_manifest_accounts_for_de_only_build_steps_and_tests() -> None:
+    """Les traitements déjà présents uniquement en DE ne doivent pas être recréés."""
+    manifest = DeParityManifest.load(MANIFEST_PATH)
+    without_step = replace(manifest, de_only_build_steps=())
+    without_test = replace(manifest, de_only_rom_tests=())
+
+    step_failures = without_step.validate(ROOT)
+    test_failures = without_test.validate(ROOT)
+
+    assert any("étape propre à DE absente de la matrice" in failure for failure in step_failures)
+    assert any("test propre à DE absent de la matrice" in failure for failure in test_failures)
+
+
+def test_manifest_includes_non_python_and_long_language_test_names() -> None:
+    """Playwright et les alias `german`/`french` appartiennent aussi à l'inventaire."""
+    manifest = DeParityManifest.load(MANIFEST_PATH)
+    fr_sources = {entry.source for entry in manifest.rom_tests}
+    de_sources = {entry.source for entry in manifest.de_only_rom_tests}
+
+    assert "tests/unit/test_audit_english_rom_french_leak.py" in fr_sources
+    assert "tests/e2e-playwright/german-translation.spec.ts" in de_sources
+
+
 def test_every_required_gap_has_a_supported_classification() -> None:
     """Une catégorie libre masquerait le type de travail restant à porter."""
     manifest = DeParityManifest.load(MANIFEST_PATH)
-    entries = (*manifest.build_steps, *manifest.patches, *manifest.assets)
+    entries = (
+        *manifest.build_steps,
+        *manifest.de_only_build_steps,
+        *manifest.patches,
+        *manifest.assets,
+        *manifest.rom_tests,
+        *manifest.de_only_rom_tests,
+    )
 
     assert {entry.classification for entry in entries} <= ALLOWED_CLASSIFICATIONS
     assert ALLOWED_CLASSIFICATIONS == {
