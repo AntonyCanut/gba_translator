@@ -1,4 +1,16 @@
 entries:
+- offset: '0x419C62'
+  name: Capacités connues — navigation et sortie
+  issue: '#181'
+  expected: '{DPAD_RIGHT}Page {SE_SHOP}Sortir'
+  forbidden:
+  - '{DPAD_RIGHT}Page {SE_SHOP}Annuler'
+- offset: '0x419C72'
+  name: Infos Pokémon — sortie
+  issue: '#181'
+  expected: '{SE_SHOP}Sortir'
+  forbidden:
+  - '{SE_SHOP}Annuler'
 - offset: '0x3FD7A2'
   name: Message de capture principal au présent
   issue: '#177'

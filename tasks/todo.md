@@ -1680,3 +1680,38 @@ d’annulation dans le reste du jeu.
   valide 1 680 tests Python, 68 tests Vitest et les builds FR/IT/DE ; Playwright
   `hp-bar` passe 13/13 ; `make test-rom` confirme deux builds FR identiques et
   termine avec 588 succès et 36 skips.
+
+# Issue #181 — « Annuler » → « Sortir » dans les écrans Pokémon
+
+## Diagnostic et conception
+
+- La chaîne générique « Annuler » reste nécessaire aux vraies actions
+  d’annulation et n’est pas utilisée par les deux captures du ticket.
+- Les chaînes dédiées `0x419C62` et `0x419C72` alimentent respectivement les
+  cellules vivantes `0x137D80` et `0x137D88` des écrans « Capacités connues »
+  et « Infos Pokémon ».
+- Le correctif minimal remplace uniquement « Annuler » par « Sortir » dans ces
+  deux entrées source, puis protège leurs valeurs exactes et leur rendu ROM.
+
+## Plan validé
+
+- [x] Identifier les deux pointeurs vivants et reproduire l’affichage actuel.
+- [x] Ajouter une garde rouge qui exige « Sortir » aux deux nouveaux sites.
+- [x] Corriger chirurgicalement les deux entrées et faire passer la garde ciblée.
+- [x] Committer les sources avant de reconstruire la ROM FR.
+- [x] Vérifier les octets décodés dans la ROM et lancer les validations globales.
+- [x] Relire, intégrer localement, commenter et clôturer l’issue GitHub #181.
+
+## Revue
+
+- La garde TDD a d’abord échoué sur les deux valeurs « Annuler », puis réussi
+  après la correction des seules entrées `0x419C62` et `0x419C72`.
+- Dans la ROM reconstruite, les cellules `0x137D80` et `0x137D88` pointent
+  respectivement vers les chaînes terminées `f809cad5dbd900f800cde3e6e8dde6ff`
+  et `f800cde3e6e8dde6ff`, toutes deux décodées avec « Sortir ».
+- Le hook de commit a validé 1 696 tests Python (1 ignoré), 68 tests Vitest,
+  les constructions FR/IT/DE et les audits de collisions sans erreur.
+- `make test-rom` a confirmé deux reconstructions FR byte-identiques, puis
+  598 tests ROM réussis et 36 ignorés, sans échec.
+- Revue finale : aucun constat critique, important ou mineur ; correctif prêt
+  pour l’intégration linéaire locale.
