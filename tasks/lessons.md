@@ -1,5 +1,17 @@
 # Leçons de tickets
 
+## R-608 — distinguer le build public de la régénération mainteneur
+
+- Publier uniquement un patch ne suffit pas si la CI télécharge encore une ROM
+  pour le fabriquer : un vrai flux sans ROM prend le bundle BPS suivi comme
+  unique entrée de validation et de publication.
+- Les E2E de l'artefact doivent matérialiser localement leurs ROMs depuis la
+  seule source anglaise de l'utilisateur. Les gardes qui dépendent des bases
+  historiques patched-FR/ES appartiennent à un profil `private_build` séparé.
+- Un manifeste BPS fiable lie une source commune, le numéro de version, les
+  tailles, CRC32 et SHA-256. La promotion locale doit refaire le round-trip
+  contre les cibles du builder avant un remplacement transactionnel.
+
 ## Issue #169 — employer « lettre » pour l’objet Courrier
 
 - Dans le message d’absence du stockage d’objets du PC, la formulation

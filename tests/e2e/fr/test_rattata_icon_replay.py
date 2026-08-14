@@ -30,7 +30,7 @@ pytestmark = pytest.mark.rom
 
 PROJECT_ROOT = pathlib.Path(__file__).resolve().parent.parent.parent.parent
 FR_ROM = PROJECT_ROOT / "output" / "roms" / "GenedRom-fr.gba"
-SOURCE_ROM = PROJECT_ROOT / "input" / "roms" / "patchedfrenchrom.gba"
+SOURCE_ROM = PROJECT_ROOT / "input" / "roms" / "englishrom.gba"
 SAVE_FIXTURE = PROJECT_ROOT / "tests" / "fixtures" / "saves" / "rattata_levelup.sav"
 VERIFY_SCRIPT = PROJECT_ROOT / "scripts" / "verify_rattata_icon_fix.mts"
 TSX = PROJECT_ROOT / "emulator-web" / "node_modules" / ".bin" / "tsx"

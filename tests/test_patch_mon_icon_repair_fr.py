@@ -24,7 +24,7 @@ from languages.fr.patches.mon_icon_repair import (
 )
 
 BUILT_FR_ROM = Path(__file__).parent.parent / "output" / "roms" / "GenedRom-fr.gba"
-SOURCE_ROM = Path(__file__).parent.parent / "input" / "roms" / "patchedfrenchrom.gba"
+SOURCE_ROM = Path(__file__).parent.parent / "input" / "roms" / "englishrom.gba"
 
 # The confirmed Rattata frame-1 corruption window (from the mGBA investigation).
 RATTATA_FRAME1 = 0xE2C400  # duplicate icon copy; the live one is inside the region

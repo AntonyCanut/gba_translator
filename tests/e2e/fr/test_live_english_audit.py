@@ -21,6 +21,7 @@ TM_HOUSE_TRANSLATIONS = {
 }
 
 
+@pytest.mark.private_build
 def test_every_live_english_string_has_an_explicit_review():
     """Toute nouvelle chaîne anglaise vivante doit être triée explicitement."""
     required = {

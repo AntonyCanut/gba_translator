@@ -319,14 +319,15 @@ npm run test:e2e:translation
 npm run test:e2e:german
 npm run test:e2e:hp-bar
 
-# Lancer un fichier spécifique
-npx playwright test tests/e2e-playwright/boot.spec.ts
+# Lancer un scénario spécifique après matérialisation
+npm run test:e2e:boot
 
-# Mode debug (navigateur visible + inspecteur)
-npx playwright test --debug
+# Mode debug (matérialiser puis fixer explicitement la ROM)
+make materialize-test-roms
+ROM_PATH="$PWD/output/roms/GenedRom-fr.gba" npx playwright test --debug
 
 # Mettre à jour les screenshots de référence
-npx playwright test --update-snapshots
+npm run test:e2e:update-snapshots
 ```
 
 ### Configuration clé

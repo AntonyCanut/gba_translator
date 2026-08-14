@@ -506,11 +506,14 @@ test-python:
 	@$(PYTHON) -m pytest tests/ -m "not emulator and not stress and not benchmark and not rom" -v
 
 test-rom: materialize-test-roms
-	@$(PYTHON) -m pytest tests/ -m rom -v
+	@$(PYTHON) -m pytest tests/ -m "rom and not private_build" -v
 
 # Maintainer-only source-pipeline checks. Unlike test-rom, this target requires
 # the patched-FR and Spanish private inputs and rebuilds FR twice.
-test-private-build: verify-fr-determinism test-fr-rebuild
+test-private-build: verify-fr-determinism test-fr-rebuild test-private-build-tests
+
+test-private-build-tests:
+	@$(PYTHON) -m pytest tests/ -m private_build -v
 
 test-fr-rebuild:
 	@$(PYTHON) -m pytest -q --tb=short \

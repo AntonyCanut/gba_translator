@@ -159,6 +159,7 @@ def _latest_translation():
 
 
 @pytest.mark.rom
+@pytest.mark.private_build
 @unittest.skipUnless(
     os.path.isfile(FR_ROM) and os.path.isfile(SOURCE_ROM) and _latest_translation(),
     "ROM FR/source ou JSON de traduction absents",

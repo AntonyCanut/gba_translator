@@ -13,7 +13,7 @@ import pytest
 
 from src.core.text_codec import TextDecoder
 
-SOURCE_ROM = Path("input/roms/patchedfrenchrom.gba")
+SOURCE_ROM = Path("input/roms/englishrom.gba")
 FR_ROM = Path("output/roms/GenedRom-fr.gba")
 GBA_BASE = 0x08000000
 TITLE_OFFSET = 0x1FA4E10

@@ -1,6 +1,6 @@
 import pytest
 
-pytestmark = pytest.mark.rom
+pytestmark = [pytest.mark.rom, pytest.mark.private_build]
 
 import unittest
 from pathlib import Path

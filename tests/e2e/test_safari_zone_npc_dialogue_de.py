@@ -22,7 +22,7 @@ DIALOGUES = (
     (
         0x1E80AB6,
         0x1F53C21,
-        "Ich habe meinen geliebten Partner\nin der {FC:0106}Safari-Zone{FC:0108} gefangen."
+        "Ich habe meinen geliebten Partner\nin der {FC:0106}Safari Zone{FC:0108} gefangen."
         "{PAGE}Sie liegt gleich {FC:0106}östlich{FC:0108} der Stadt.",
     ),
     (

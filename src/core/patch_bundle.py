@@ -77,6 +77,7 @@ class PatchBundle:
 
             expected_checksums: dict[str, str] = {}
             seen_codes: set[str] = set()
+            common_source: tuple[object, ...] | None = None
             expected_files = {MANIFEST_NAME, CHECKSUMS_NAME}
             for entry in languages:
                 if not isinstance(entry, dict):
@@ -101,6 +102,23 @@ class PatchBundle:
 
                 source = _metadata(entry.get("source"), f"source {code}")
                 target = _metadata(entry.get("target"), f"cible {code}")
+                source_identity = (
+                    source["file"],
+                    source["size_bytes"],
+                    source["sha256"],
+                    source["crc32"],
+                )
+                if common_source is None:
+                    common_source = source_identity
+                elif source_identity != common_source:
+                    raise PatchBundleError("source commune incohérente entre les langues")
+                version_label = entry.get("version_label")
+                if (
+                    not isinstance(version_label, str)
+                    or not version_label.startswith(f"{code[:2].upper()}.")
+                    or version_label.rsplit(".", 1)[-1] != str(build_number)
+                ):
+                    raise PatchBundleError(f"{code}: version du manifeste incohérente")
                 info = inspect_bps_patch(patch)
                 if (
                     info.source_size != source["size_bytes"]
@@ -140,6 +158,8 @@ class PatchBundle:
                 parts = line.split("  ")
                 if len(parts) != 2 or Path(parts[1]).name != parts[1]:
                     raise PatchBundleError("ligne SHA256SUMS invalide")
+                if parts[1] in actual_checksums:
+                    raise PatchBundleError("ligne SHA256SUMS dupliquée")
                 actual_checksums[parts[1]] = parts[0]
             if actual_checksums != expected_checksums:
                 raise PatchBundleError("SHA256SUMS incohérent")
@@ -197,28 +217,97 @@ class PatchBundle:
         return output_path
 
     def promote_from(
-        self, generated_directory: Path, required_codes: set[str]
+        self,
+        generated_directory: Path,
+        required_codes: set[str],
+        *,
+        source_path: Path,
+        target_directory: Path,
     ) -> dict:
-        """Copie un bundle local validé vers l'emplacement canonique suivi."""
+        """Promeut atomiquement un bundle après preuve sur les ROMs locales."""
         source_bundle = PatchBundle(generated_directory)
         manifest = source_bundle.verify(required_codes=required_codes)
+        try:
+            source_payload = source_path.read_bytes()
+        except OSError as exc:
+            raise PatchBundleError(f"ROM source de promotion absente: {source_path}") from exc
+
+        for entry in manifest["languages"]:
+            code = entry["code"]
+            source_metadata = _metadata(entry["source"], f"source {code}")
+            if (
+                len(source_payload) != source_metadata["size_bytes"]
+                or _sha256_bytes(source_payload) != source_metadata["sha256"]
+                or f"{zlib.crc32(source_payload):08x}" != source_metadata["crc32"]
+            ):
+                raise PatchBundleError(f"{code}: source locale de promotion incompatible")
+            try:
+                built_target = (target_directory / entry["target"]["file"]).read_bytes()
+                reconstructed = apply_bps_patch(
+                    source_payload,
+                    (generated_directory / entry["patch"]).read_bytes(),
+                )
+            except (BpsError, OSError) as exc:
+                raise PatchBundleError(f"{code}: round-trip de promotion impossible") from exc
+            if reconstructed != built_target:
+                raise PatchBundleError(
+                    f"{code}: round-trip différent de la ROM construite locale"
+                )
+            target_metadata = _metadata(entry["target"], f"cible {code}")
+            if (
+                len(reconstructed) != target_metadata["size_bytes"]
+                or _sha256_bytes(reconstructed) != target_metadata["sha256"]
+                or f"{zlib.crc32(reconstructed):08x}" != target_metadata["crc32"]
+            ):
+                raise PatchBundleError(
+                    f"{code}: round-trip incohérent avec les métadonnées cible"
+                )
+
         source_files = {
             MANIFEST_NAME,
             CHECKSUMS_NAME,
             *(entry["patch"] for entry in manifest["languages"]),
         }
-        self.directory.mkdir(parents=True, exist_ok=True)
-        unexpected = [
-            path
-            for path in self.directory.iterdir()
-            if path.is_file()
-            and path.name not in source_files
-            and not path.name.startswith("pokemon_unbound_")
-        ]
-        if unexpected:
-            raise PatchBundleError("fichier inattendu dans la destination canonique")
-        for path in self.directory.glob("pokemon_unbound_*.bps"):
-            path.unlink()
-        for name in source_files:
-            shutil.copyfile(generated_directory / name, self.directory / name)
-        return self.verify(required_codes=required_codes)
+        parent = self.directory.parent
+        parent.mkdir(parents=True, exist_ok=True)
+        staged = Path(tempfile.mkdtemp(prefix=f".{self.directory.name}.stage-", dir=parent))
+        backup: Path | None = None
+        try:
+            for name in source_files:
+                shutil.copyfile(generated_directory / name, staged / name)
+            staged_manifest = PatchBundle(staged).verify(required_codes=required_codes)
+
+            if self.directory.exists():
+                unexpected = [
+                    path.name
+                    for path in self.directory.iterdir()
+                    if not path.is_file()
+                    or (
+                        path.name not in source_files
+                        and not path.name.startswith("pokemon_unbound_")
+                    )
+                ]
+                if unexpected:
+                    raise PatchBundleError(
+                        "fichier inattendu dans la destination canonique"
+                    )
+                backup = Path(
+                    tempfile.mkdtemp(
+                        prefix=f".{self.directory.name}.backup-", dir=parent
+                    )
+                )
+                backup.rmdir()
+                self.directory.replace(backup)
+            staged.replace(self.directory)
+            if backup is not None:
+                shutil.rmtree(backup)
+            return staged_manifest
+        except BaseException:
+            if backup is not None and backup.exists():
+                if self.directory.exists():
+                    shutil.rmtree(self.directory)
+                backup.replace(self.directory)
+            raise
+        finally:
+            if staged.exists():
+                shutil.rmtree(staged)

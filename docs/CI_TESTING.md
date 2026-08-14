@@ -19,6 +19,7 @@
 | `slow`       | Tests lents (> 30s)                                  |
 | `emulator`   | Nécessite mGBA sur le PATH                           |
 | `rom`        | Nécessite la source locale puis les cibles BPS         |
+| `private_build` | Nécessite les anciennes bases patched-FR ou espagnole |
 
 ## Variables d'environnement
 
@@ -64,6 +65,8 @@ make test-playwright
 
 Ces commandes appliquent les BPS à `input/roms/englishrom.gba` avant de
 consommer les cibles sous `output/roms/`.
+`make test-rom` exclut `private_build`; `make test-private-build` est le seul
+point d'entrée des contrôles liés aux bases historiques.
 
 ## Stratégie mGBA headless
 

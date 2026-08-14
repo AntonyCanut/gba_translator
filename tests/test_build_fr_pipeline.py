@@ -274,6 +274,20 @@ class TestBuildFrPipeline(unittest.TestCase):
         )
         self.assertIn('cmp -s "$$tmp_rom" "$(FR_BUILD)"', recipe)
 
+    def test_patch_materialized_rom_suite_excludes_private_builder_inputs(self) -> None:
+        rom_prereqs, rom_recipe = _extract_target_block(self.text, "test-rom")
+        private_prereqs, _private_recipe = _extract_target_block(
+            self.text, "test-private-build"
+        )
+        _, private_recipe = _extract_target_block(
+            self.text, "test-private-build-tests"
+        )
+
+        self.assertIn("materialize-test-roms", rom_prereqs)
+        self.assertIn("not private_build", rom_recipe)
+        self.assertIn("test-private-build-tests", private_prereqs)
+        self.assertIn("-m private_build", private_recipe)
+
     def test_build_fr_runs_all_parent_regressions(self) -> None:
         """Le build doit échouer si l'une des cinq régressions P-548 revient."""
         invocation = f"$(MAKE) --no-print-directory {PARENT_REGRESSION_TARGET}"

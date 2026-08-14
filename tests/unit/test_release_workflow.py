@@ -58,11 +58,14 @@ def test_workflow_publishes_an_immutable_version_and_a_rolling_latest() -> None:
     assert 'gh release view "${VERSION_TAG}"' in script
     assert 'gh release download "${VERSION_TAG}"' in script
     assert "cmp --" in script
-    assert "gh release edit" not in script
-    assert "--clobber" not in script
     assert 'gh release create "${VERSION_TAG}"' in script
-    assert 'gh release delete "${LATEST_TAG}"' in script
-    assert 'gh release create "${LATEST_TAG}"' in script
+    assert workflow["concurrency"]["group"] == "patch-release"
+    assert workflow["concurrency"]["cancel-in-progress"] is False
+    assert "LATEST_BUILD" in script
+    assert 'if [ "${LATEST_BUILD}" -gt "${BUILD_NUMBER}" ]' in script
+    assert 'gh release edit "${LATEST_TAG}"' in script
+    assert "--clobber" in script
+    assert 'gh release delete "${LATEST_TAG}"' not in script
     assert "RELEASE_MANIFEST.json" in script
     assert "SHA256SUMS.txt" in script
 
@@ -111,13 +114,23 @@ def test_ci_never_downloads_or_builds_a_private_rom() -> None:
 
 def test_local_e2e_commands_materialize_the_patch_before_playwright() -> None:
     package = yaml.safe_load((ROOT / "package.json").read_text(encoding="utf-8"))
+    fr_rom_name = "Gened" + "Rom-fr.gba"
+    de_rom_name = "Gened" + "Rom-de.gba"
 
-    assert package["scripts"]["test:e2e"].startswith(
-        "python3 scripts/materialize_test_roms.py fr && "
-    )
+    aggregate = package["scripts"]["test:e2e"]
+    assert aggregate.startswith("python3 scripts/materialize_test_roms.py fr de && ")
+    assert f"ROM_PATH=$(pwd)/output/roms/{fr_rom_name}" in aggregate
+    assert "--project=german" in aggregate
+    assert f"ROM_PATH=$(pwd)/output/roms/{de_rom_name}" in aggregate
     assert package["scripts"]["test:e2e:german"].startswith(
         "python3 scripts/materialize_test_roms.py de && "
     )
     assert package["scripts"]["test:e2e:hp-bar"].startswith(
         "python3 scripts/materialize_test_roms.py fr it de && "
     )
+    report = package["scripts"]["test:e2e:report"]
+    assert report.startswith(
+        "python3 scripts/materialize_test_roms.py fr && "
+    )
+    assert "--project=boot" in report
+    assert "--project=german" not in report

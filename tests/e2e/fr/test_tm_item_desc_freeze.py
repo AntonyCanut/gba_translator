@@ -129,6 +129,7 @@ def test_ct108_description_is_complete(fr_rom):
     )
 
 
+@pytest.mark.private_build
 def test_machine_description_patch_is_idempotent_on_built_rom(fr_rom):
     """La ROM livrée ne doit réserver aucun nouvel espace à la seconde passe."""
     rebuilt = bytearray(fr_rom)

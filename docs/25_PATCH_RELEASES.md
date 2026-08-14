@@ -89,8 +89,9 @@ reste une preuve locale, puisqu'il exige nécessairement la source.
 Le workflow de release lit le numéro du manifeste, valide le bundle suivi et
 publie directement ces six fichiers. Il ne contient aucun secret de ROM,
 `curl`, appel au builder ou chemin `.gba`. La version immuable est
-`v2.1.<build_number>` ; `latest` est recréé avec exactement les mêmes
-assets.
+`v2.1.<build_number>` ; `latest` est mis à jour sur place avec exactement les
+mêmes assets. Un groupe de concurrence sérialise les publications et le
+workflow refuse de faire régresser `latest` vers un numéro de build inférieur.
 
 La CI publique conserve les suites Python sans ROM, Vitest et la validation du
 bundle. Les jobs Python ROM et Playwright hébergés disparaissent : reproduire

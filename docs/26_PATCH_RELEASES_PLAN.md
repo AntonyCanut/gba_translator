@@ -39,17 +39,17 @@ même commit.
 
 ## Suivi R-608 — flux patch-first sans ROM en CI
 
-- [ ] Ajouter les gardes rouges d'inspection BPS et de bundle canonique sans
+- [x] Ajouter les gardes rouges d'inspection BPS et de bundle canonique sans
   charger de ROM source.
-- [ ] Ajouter les gardes rouges de matérialisation locale et d'échec sur une
+- [x] Ajouter les gardes rouges de matérialisation locale et d'échec sur une
   mauvaise source.
-- [ ] Inverser les gardes des workflows : aucun secret/téléchargement/build
+- [x] Inverser les gardes des workflows : aucun secret/téléchargement/build
   ROM, publication depuis `patches/` et version issue du manifeste.
-- [ ] Implémenter la validation, la promotion locale et l'application du
+- [x] Implémenter la validation, la promotion locale et l'application du
   bundle BPS.
-- [ ] Faire dépendre pytest ROM et Playwright de la matérialisation locale des
+- [x] Faire dépendre pytest ROM et Playwright de la matérialisation locale des
   ROMs éphémères.
-- [ ] Versionner les quatre BPS reconstruits depuis le HEAD courant.
-- [ ] Documenter le fonctionnement contributeur et mainteneur dans le README.
-- [ ] Exécuter les suites ciblées, rapides, Vitest, ROM et Playwright
+- [x] Versionner les quatre BPS reconstruits depuis le HEAD courant.
+- [x] Documenter le fonctionnement contributeur et mainteneur dans le README.
+- [x] Exécuter les suites ciblées, rapides, Vitest, ROM et Playwright
   applicables, puis relire et intégrer sans push.

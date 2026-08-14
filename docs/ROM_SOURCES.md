@@ -48,3 +48,7 @@ strictement une base de compilation interne. Le candidat est écrit sous
 bundle complet et vérifié vers `patches/`. If the ROMs ever change, create a
 separate compatibility migration; never silently regenerate the baseline for
 a different source lineage.
+
+La promotion est une opération locale forte : elle réapplique les quatre BPS
+à la source anglaise, exige une égalité octet par octet avec les sorties du
+builder, prépare le nouveau dossier à part puis échange le bundle canonique.

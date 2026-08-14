@@ -7,6 +7,10 @@ on:
       - "patches/**"
   workflow_dispatch:
 
+concurrency:
+  group: patch-release
+  cancel-in-progress: false
+
 jobs:
   release:
     name: Validate and publish persistent patches
@@ -92,7 +96,24 @@ jobs:
               "${ASSETS[@]}"
           fi
 
-          gh release delete "${LATEST_TAG}" --yes --cleanup-tag 2>/dev/null || true
-          gh release create "${LATEST_TAG}" --target "${GITHUB_SHA}" \
-            --title "Unbound 2.1.${BUILD_NUMBER} — latest" --notes "${NOTES}" \
-            --prerelease "${ASSETS[@]}"
+          if gh release view "${LATEST_TAG}" >/dev/null 2>&1; then
+            LATEST_DIR=$(mktemp -d)
+            gh release download "${LATEST_TAG}" --dir "${LATEST_DIR}" \
+              --pattern RELEASE_MANIFEST.json
+            LATEST_BUILD=$(python3 -c \
+              'import json,sys; print(json.load(open(sys.argv[1]))["build_number"])' \
+              "${LATEST_DIR}/RELEASE_MANIFEST.json")
+            rm -rf "${LATEST_DIR}"
+            if [ "${LATEST_BUILD}" -gt "${BUILD_NUMBER}" ]; then
+              echo "latest reste sur le build supérieur ${LATEST_BUILD}."
+              exit 0
+            fi
+            gh release edit "${LATEST_TAG}" --target "${GITHUB_SHA}" \
+              --title "Unbound 2.1.${BUILD_NUMBER} — latest" --notes "${NOTES}" \
+              --prerelease
+            gh release upload "${LATEST_TAG}" "${ASSETS[@]}" --clobber
+          else
+            gh release create "${LATEST_TAG}" --target "${GITHUB_SHA}" \
+              --title "Unbound 2.1.${BUILD_NUMBER} — latest" --notes "${NOTES}" \
+              --prerelease "${ASSETS[@]}"
+          fi

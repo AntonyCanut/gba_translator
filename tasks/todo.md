@@ -4,14 +4,34 @@
 
 - [x] Auditer le comportement réel de Simopich et le pipeline livré.
 - [x] Retenir un bundle BPS versionné comme unique entrée de publication.
-- [ ] Ajouter les tests rouges BPS/bundle/workflows/E2E local.
-- [ ] Implémenter la validation, la matérialisation et la promotion locale.
-- [ ] Retirer les téléchargements et builds ROM de GitHub Actions.
-- [ ] Adapter Make/npm pour reconstruire les ROMs de test depuis les patchs.
-- [ ] Mettre à jour README et documentation.
-- [ ] Refaire les validations complètes et committer.
+- [x] Ajouter les tests rouges BPS/bundle/workflows/E2E local.
+- [x] Implémenter la validation, la matérialisation et la promotion locale.
+- [x] Retirer les téléchargements et builds ROM de GitHub Actions.
+- [x] Adapter Make/npm pour reconstruire les ROMs de test depuis les patchs.
+- [x] Mettre à jour README et documentation.
+- [x] Refaire les validations complètes et committer.
 
-## Diagnostic et conception
+## Revue du suivi patch-first
+
+- La revue historique plus bas est désormais remplacée : GitHub Actions ne
+  télécharge ni ne construit plus aucune ROM. La CI et la release consomment
+  uniquement le bundle suivi `patches/`.
+- Le build 43 contient FR (1 875 019 octets), IT (1 318 245), DE (1 651 637)
+  et Indie (20 151), plus un manifeste et `SHA256SUMS.txt`. Aucun `.gba` n'est
+  suivi ; chaque BPS reconstruit exactement sa cible depuis la même ROM EN.
+- `make test-rom` matérialise les quatre cibles et exclut les contrôles du
+  builder privé. La preuve avec patched-FR et ES temporairement absentes passe
+  623 tests ROM (38 skips) ; le profil privé séparé passe ses 5 tests.
+- Playwright matérialise et sélectionne explicitement FR ou DE : 3 scénarios
+  boot FR et 5 scénarios allemands passent dans mGBA.
+- La promotion est transactionnelle et valide taille, CRC32, SHA-256 et égalité
+  octet par octet. La release sérialise les runs, conserve les versions
+  immuables et refuse de faire régresser `latest`.
+- Validation finale : 1 886 tests Python rapides et 1 skip, 68 tests Vitest,
+  34 contrats ciblés, `actionlint`, JSON/YAML, compilation Python et diff
+  propres. La revue indépendante ne signale plus aucun point important.
+
+## Diagnostic et conception initiale (remplacée par le suivi ci-dessus)
 
 - Les releases et artefacts CI publient actuellement des `.gba` complets.
 - BPS est nécessaire pour couvrir les offsets d'une ROM Unbound de 32 Mio ;

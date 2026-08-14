@@ -231,6 +231,12 @@ npm run test:e2e:german
 npm run test:e2e:hp-bar
 ```
 
+`make test-rom` fait de même et n'exécute que les gardes de l'artefact livré.
+Les contrôles qui dépendent des anciennes bases patched-FR/ES portent le
+marker `private_build` et restent isolés derrière `make test-private-build`.
+La suite Playwright globale exécute les projets FR avec la ROM FR, puis le
+projet allemand avec la ROM DE explicitement sélectionnée.
+
 No network access is used by the materializer.
 
 ### Maintainer-only patch regeneration
@@ -318,6 +324,10 @@ Promote it only after local validation:
 ```bash
 python3 scripts/promote_patch_bundle.py
 ```
+
+La promotion réapplique chaque candidat à `englishrom.gba`, compare le résultat
+octet par octet à la ROM locale construite, puis remplace `patches/` de façon
+transactionnelle.
 
 No ROM is published. Each BPS must be applied to the exact local source listed
 in `RELEASE_MANIFEST.json`; the patch verifies the source CRC before

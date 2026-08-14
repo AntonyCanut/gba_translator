@@ -194,6 +194,12 @@ def main() -> int:
         help="Do not start the server (already running)",
     )
     parser.add_argument(
+        "--project",
+        action="append",
+        default=[],
+        help="Playwright project to run (repeatable)",
+    )
+    parser.add_argument(
         "playwright_args",
         nargs="*",
         help="Extra arguments for Playwright",
@@ -206,7 +212,8 @@ def main() -> int:
         if not args.no_server:
             server_proc = start_emulator_server(args.port, args.rom)
 
-        exit_code = run_playwright_tests(args.playwright_args or None)
+        project_args = [f"--project={project}" for project in args.project]
+        exit_code = run_playwright_tests(project_args + args.playwright_args or None)
 
         report_path = find_latest_report()
         summary_code = display_summary(report_path)
