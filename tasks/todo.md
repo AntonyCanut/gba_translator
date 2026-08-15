@@ -2346,3 +2346,26 @@ d’annulation dans le reste du jeu.
   (`5446362e0e4c7c49021709c169aa6b9c8965106310f4b6a5116913797b1a9b04`),
   35 tests ROM DE, 16 scénarios Playwright DE et 13 scénarios PV partagés.
   Le correctif reste intégré localement, sans push distant.
+
+# B-608 — suivi : le push du correctif ne déclenche pas la publication
+
+## Diagnostic et plan TDD
+
+- [x] Comparer le SHA poussé aux exécutions GitHub Actions et aux releases distantes.
+- [x] Isoler le filtre `paths` qui ignore un commit modifiant seulement le workflow.
+- [x] Ajouter une garde rouge pour le push de `.github/workflows/release.yml`.
+- [x] Étendre minimalement le filtre, puis valider le workflow et les suites du dépôt.
+- [x] Relire, documenter le résultat, committer et intégrer sans push.
+
+## Revue
+
+- Le push `65ab5393` n’a créé aucune exécution `push` : son diff ne contenait pas
+  `patches/**`, seul chemin surveillé. Le lancement manuel `31877023936` a ensuite
+  réussi et migré `latest` vers les six assets BPS du build 43.
+- `release.yml` surveille désormais aussi son propre chemin ; le commit qui livre
+  un correctif de publication déclenche donc immédiatement sa validation distante.
+- La nouvelle garde a été observée rouge avec `['patches/**']`, puis verte après
+  l’ajout du chemin. Les 11 contrats du workflow et les 17 tests bundle/packaging
+  passent, ainsi que 1 901 tests Python rapides (1 skip historique) et 68 tests
+  Vitest. `actionlint`, le parsing YAML et `git diff --check` sont propres.
+- Aucun push ni lancement distant supplémentaire n’a été effectué.

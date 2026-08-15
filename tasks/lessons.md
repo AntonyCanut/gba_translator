@@ -12,6 +12,16 @@
   tailles, CRC32 et SHA-256. La promotion locale doit refaire le round-trip
   contre les cibles du builder avant un remplacement transactionnel.
 
+## B-608 — un workflow de publication corrigé doit s’auto-déclencher
+
+- Un filtre `on.push.paths` limité aux artefacts ignore aussi un push qui ne
+  modifie que le workflow censé réparer leur publication.
+- Si le prochain push doit appliquer la correction distante, inclure le fichier
+  du workflow dans ses propres chemins surveillés et verrouiller ce contrat par
+  un test de structure YAML.
+- Un `workflow_dispatch` réussi ne prouve pas le déclenchement sur push : pour
+  diagnostiquer, comparer systématiquement `event`, `headSha` et fichiers du commit.
+
 ## Issue #169 — employer « lettre » pour l’objet Courrier
 
 - Dans le message d’absence du stockage d’objets du PC, la formulation

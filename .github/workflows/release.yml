@@ -5,6 +5,7 @@ on:
     branches: [unbound, master]
     paths:
       - "patches/**"
+      - ".github/workflows/release.yml"
   workflow_dispatch:
 
 concurrency:

@@ -25,6 +25,22 @@ def _build_steps() -> list[dict]:
     return workflow["jobs"]["release"]["steps"]
 
 
+def test_release_runs_when_its_own_workflow_changes() -> None:
+    """Un correctif de publication poussé doit déclencher sa propre exécution."""
+    # Arrange
+    workflow = yaml.safe_load(WORKFLOW.read_text(encoding="utf-8"))
+    triggers = workflow.get("on", workflow.get(True))
+
+    # Act
+    watched_paths = triggers["push"]["paths"]
+
+    # Assert
+    assert set(watched_paths) == {
+        "patches/**",
+        ".github/workflows/release.yml",
+    }
+
+
 def test_release_validates_the_tracked_bundle_without_private_inputs() -> None:
     """Réintroduire un téléchargement ou build ROM doit casser cette garde."""
     workflow = yaml.safe_load(WORKFLOW.read_text(encoding="utf-8"))
