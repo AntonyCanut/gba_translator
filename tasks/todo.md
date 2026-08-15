@@ -1,5 +1,36 @@
 # F-608 — ROM vers patch BPS
 
+## Réouverture — migration du tag `latest` historique
+
+- [x] Reproduire l'échec à partir du journal GitHub Actions et de l'inventaire distant.
+- [x] Ajouter une garde rouge exécutant la publication face à un `latest` sans manifeste.
+- [x] Traiter ce `latest` comme un bundle historique et retirer ses assets ROM obsolètes.
+- [x] Valider les contrats de release, le workflow et l'absence de ROM publiée.
+- [x] Committer, rebaser et intégrer localement sans push.
+
+### Diagnostic
+
+- La release immuable `v2.1.43` a bien été créée avec les six assets BPS attendus.
+- Le tag roulant `latest` contient encore trois ROMs et aucun
+  `RELEASE_MANIFEST.json` ; le téléchargement obligatoire du manifeste échoue donc avec
+  `no assets match the file pattern` avant que le bundle BPS puisse le remplacer.
+
+### Revue de la réouverture
+
+- Une version immuable déjà créée peut provenir d'un ancien commit : ses six assets sont
+  comparés octet par octet, sans exiger qu'elle cible le commit du rerun.
+- Un `latest` sans manifeste vaut build historique 0 ; ses assets ROM inattendus sont
+  supprimés, les six assets canoniques sont téléversés, puis `refs/tags/latest` est déplacé
+  explicitement sur le commit courant. Un manifeste présent mais invalide est refusé avant
+  toute mutation, et un build plus récent reste intact.
+- Les cycles rouges/verts couvrent la panne jointe, l'ancien SHA de `v2.1.43`, le tag
+  roulant, un build invalide et la non-régression. La revue indépendante finale ne trouve
+  aucun point critique ou important.
+- Validation : 1 900 tests Python rapides réussis et 1 ignoré, 68 tests Vitest réussis,
+  32 contrats release/patch réussis, bundle build 43 vérifié, `actionlint`, YAML,
+  compilation Python et `git diff --check` propres.
+- Aucun workflow distant n'a été relancé et aucun push n'a été effectué.
+
 ## Suivi — aucune ROM en entrée CI
 
 - [x] Auditer le comportement réel de Simopich et le pipeline livré.

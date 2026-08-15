@@ -71,11 +71,6 @@ jobs:
             "${SHA}" "${MSG}" "${BUILD_NUMBER}")
 
           if gh release view "${VERSION_TAG}" >/dev/null 2>&1; then
-            EXISTING_TARGET=$(gh release view "${VERSION_TAG}" --json targetCommitish --jq .targetCommitish)
-            if [ "${EXISTING_TARGET}" != "${GITHUB_SHA}" ]; then
-              echo "::error::Versioned release ${VERSION_TAG} targets another commit."
-              exit 1
-            fi
             VERIFY_DIR=$(mktemp -d)
             trap 'rm -rf "${VERIFY_DIR}"' EXIT
             gh release download "${VERSION_TAG}" --dir "${VERIFY_DIR}"
@@ -97,21 +92,55 @@ jobs:
           fi
 
           if gh release view "${LATEST_TAG}" >/dev/null 2>&1; then
-            LATEST_DIR=$(mktemp -d)
-            gh release download "${LATEST_TAG}" --dir "${LATEST_DIR}" \
-              --pattern RELEASE_MANIFEST.json
-            LATEST_BUILD=$(python3 -c \
-              'import json,sys; print(json.load(open(sys.argv[1]))["build_number"])' \
-              "${LATEST_DIR}/RELEASE_MANIFEST.json")
-            rm -rf "${LATEST_DIR}"
+            LATEST_ASSETS=()
+            LATEST_ASSET_NAMES=$(gh release view "${LATEST_TAG}" \
+              --json assets --jq '.assets[].name')
+            while IFS= read -r latest_asset; do
+              [ -n "${latest_asset}" ] && LATEST_ASSETS+=("${latest_asset}")
+            done <<< "${LATEST_ASSET_NAMES}"
+            LATEST_BUILD=0
+            for latest_asset in "${LATEST_ASSETS[@]}"; do
+              if [ "${latest_asset}" = "RELEASE_MANIFEST.json" ]; then
+                LATEST_DIR=$(mktemp -d)
+                gh release download "${LATEST_TAG}" --dir "${LATEST_DIR}" \
+                  --pattern RELEASE_MANIFEST.json
+                LATEST_BUILD=$(python3 -c \
+                  'import json,sys; print(json.load(open(sys.argv[1]))["build_number"])' \
+                  "${LATEST_DIR}/RELEASE_MANIFEST.json")
+                rm -rf "${LATEST_DIR}"
+                case "${LATEST_BUILD}" in
+                  ''|*[!0-9]*) echo "::error::Invalid latest patch build number"; exit 1 ;;
+                esac
+                test "${LATEST_BUILD}" -gt 0 || {
+                  echo "::error::Latest patch build number must be positive"
+                  exit 1
+                }
+                break
+              fi
+            done
             if [ "${LATEST_BUILD}" -gt "${BUILD_NUMBER}" ]; then
               echo "latest reste sur le build supérieur ${LATEST_BUILD}."
               exit 0
             fi
-            gh release edit "${LATEST_TAG}" --target "${GITHUB_SHA}" \
+            gh release edit "${LATEST_TAG}" \
               --title "Unbound 2.1.${BUILD_NUMBER} — latest" --notes "${NOTES}" \
               --prerelease
+            for latest_asset in "${LATEST_ASSETS[@]}"; do
+              expected=false
+              for asset in "${ASSETS[@]}"; do
+                if [ "${latest_asset}" = "$(basename "${asset}")" ]; then
+                  expected=true
+                  break
+                fi
+              done
+              if [ "${expected}" = false ]; then
+                gh release delete-asset "${LATEST_TAG}" "${latest_asset}" --yes
+              fi
+            done
             gh release upload "${LATEST_TAG}" "${ASSETS[@]}" --clobber
+            gh api --method PATCH \
+              "repos/${GITHUB_REPOSITORY}/git/refs/tags/${LATEST_TAG}" \
+              -f sha="${GITHUB_SHA}" -F force=true
           else
             gh release create "${LATEST_TAG}" --target "${GITHUB_SHA}" \
               --title "Unbound 2.1.${BUILD_NUMBER} — latest" --notes "${NOTES}" \
