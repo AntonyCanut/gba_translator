@@ -5,6 +5,12 @@ entries:
   expected: '{B_ATK_NAME_WITH_PREFIX} est frappé\npar la grêle !'
   forbidden:
   - '{B_ATK_NAME_WITH_PREFIX} est cinglé\npar la grêle !'
+- offset: '0x1F0B026'
+  name: Réplique de lancement du combat du Peintre Gogh
+  issue: '#185'
+  expected: Ne bouge pas…
+  forbidden:
+  - Ne bouge…
 - offset: '0x419C62'
   name: Capacités connues — navigation et sortie
   issue: '#181'
