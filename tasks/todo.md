@@ -1,3 +1,40 @@
+# B-617 — pipeline de publication BPS run #107
+
+## Diagnostic et conception
+
+- [x] Lire le journal du run et comparer le commit déclencheur aux assets `v2.1.43`.
+- [x] Confirmer que le workflow protège correctement l’immuabilité des versions publiées.
+- [x] Ajouter une garde rouge reproduisant un patch modifié sans incrément de build.
+- [x] Bloquer ce cas dans le hook pre-commit avec un message exploitable localement.
+- [x] Régénérer le bundle multilingue sous un numéro de build inédit.
+- [x] Valider le bundle, les tests release, le hook, puis la suite pertinente.
+- [x] Committer et préparer l’intégration locale sans pousser hors autorisation.
+
+### Cause racine
+
+- Le commit `d91b330d` a remplacé `pokemon_unbound_fr.bps` et ses empreintes tout en
+  conservant `build_number: 43` et `FR.2.1.43`.
+- La release immuable `v2.1.43`, créée depuis `c92787dd`, contient donc légitimement un
+  autre asset FR ; le `cmp` du workflow a refusé d’écraser cette version publiée.
+- Le commit déclencheur `b2780173` ne modifie que le README : il a exposé la divergence
+  lors d’un lancement manuel, mais ne l’a pas introduite.
+
+### Revue
+
+- Le bundle suivi passe au build 44 pour FR, IT, DE et Indie ; son manifeste et ses
+  sommes SHA-256 sont cohérents avec les quatre patchs BPS régénérés.
+- `scripts/check_staged_patch_version.py`, appelé par le hook pre-commit, refuse
+  désormais tout asset BPS staged dont le build n’est pas strictement supérieur à
+  celui de `HEAD`. Les tests couvrent le rejet du build réutilisé, l’acceptation du
+  build suivant, les commits sans patch et le branchement effectif du hook.
+- Validation : bundle build 44 vérifié, 28 tests release/patch ciblés réussis,
+  1 912 tests Python rapides réussis et 1 ignoré, 68 tests Vitest réussis, builds
+  FR/IT/DE réussis, `actionlint`, YAML, compilation Python et `git diff --check`
+  propres.
+- Aucun push ni relancement distant n’a été effectué : la garde de publication
+  distante interdit de pousser sans demande explicite, et les outils pipelines MCP
+  annoncés n’étaient pas exposés dans cette session.
+
 # F-608 — ROM vers patch BPS
 
 ## Réouverture — migration du tag `latest` historique
