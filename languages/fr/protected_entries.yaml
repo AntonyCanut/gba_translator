@@ -1,4 +1,10 @@
 entries:
+- offset: '0x3FBC4C'
+  name: Dégâts infligés par la grêle en combat
+  issue: '#187'
+  expected: '{B_ATK_NAME_WITH_PREFIX} est frappé\npar la grêle !'
+  forbidden:
+  - '{B_ATK_NAME_WITH_PREFIX} est cinglé\npar la grêle !'
 - offset: '0x419C62'
   name: Capacités connues — navigation et sortie
   issue: '#181'
