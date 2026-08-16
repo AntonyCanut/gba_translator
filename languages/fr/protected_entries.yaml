@@ -20,6 +20,12 @@ entries:
   - Chineur
   - Collectionneur
   - Collector
+- offset: '0x3FC913'
+  name: Message de soin du talent Corps Gel
+  issue: '#188'
+  expected: '{B_ATK_ABILITY} de {B_ATK_NAME_WITH_PREFIX}\nrestaure ses PV !'
+  forbidden:
+  - '{B_ATK_NAME_WITH_PREFIX} : {B_ATK_ABILITY}\nrestaure ses PV !'
 - offset: '0x419C62'
   name: Capacités connues — navigation et sortie
   issue: '#181'

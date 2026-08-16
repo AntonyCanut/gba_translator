@@ -313,6 +313,7 @@ rom_test_exclusions:
     - tests/test_gender_neutral_child_fr.py
     - tests/test_gender_neutral_hoopa_estate_fr.py
     - tests/test_gender_neutral_zeph_grunt_fr.py
+    - tests/unit/fr/test_ice_body_message_fr.py
     - tests/test_intro_legendary_pokemon_fr.py
     - tests/test_item_name_braille_converter_fr.py
     - tests/test_level_up_message_spacing_fr.py

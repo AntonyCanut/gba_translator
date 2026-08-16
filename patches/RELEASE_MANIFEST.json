@@ -9,8 +9,8 @@
       "status": "complete",
       "version_label": "FR.2.1.43",
       "patch": "pokemon_unbound_fr.bps",
-      "patch_sha256": "b3e87112ad3faebee26753536908a7fb71276180b06c8528f9e44949ab7bbd40",
-      "patch_size_bytes": 1875014,
+      "patch_sha256": "945de8baf15c4a3b4e91d5f4c55ceb00dbe96ef4c68a410e5c5316c0e2e5f4dd",
+      "patch_size_bytes": 1875033,
       "source": {
         "file": "englishrom.gba",
         "sha256": "7aa25bbf568f7cfcf6ee1cf2e9e6ff637350b3d0705c2375cabb6baa7d9739f7",
@@ -19,8 +19,8 @@
       },
       "target": {
         "file": "GenedRom-fr.gba",
-        "sha256": "ad526c62c1961ff630800f7f8554728e5d630c0cae7ab50595277cec6c9299d4",
-        "crc32": "4abfc63a",
+        "sha256": "fe162c40e255f729e268087474f23c09b0a4d915d0a012b3150b90cf4e0ca3f4",
+        "crc32": "a6eb5a4f",
         "size_bytes": 33554432
       }
     },
