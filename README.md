@@ -8,6 +8,83 @@ The project started from a Spanish reproduction / reverse-engineering pipeline a
 
 French is the reference translation: it is complete, byte-perfect, and built through a dedicated recipe to avoid regressions. Other languages are driven by the generic multi-language pipeline.
 
+## Install the French patch
+
+### English
+
+1. Obtain the ROM `1636 - Pokemon Fire Red (U)(Squirrels).gba`.
+
+   ⚠️ Any other version will not work.
+
+2. Apply the Pokémon Unbound 2.1.1.1 patch with [HackDex](https://www.hackdex.app/hack/pokemon-unbound). The site expects the `1636 - Pokemon Fire Red (U)(Squirrels).gba` ROM.
+
+   At this point, you have the English Pokémon Unbound ROM.
+
+3. Apply the French patch to the English Pokémon Unbound ROM:
+
+   - Download the [French BPS patch](https://github.com/AntonyKervazoCanut/gba_translator/releases/download/latest/pokemon_unbound_fr.bps).
+   - Open [Rom Patcher JS](https://www.marcrobledo.com/RomPatcher.js/) and provide the English Pokémon Unbound ROM together with the downloaded BPS file.
+
+### Français
+
+1. Procurez-vous la ROM `1636 - Pokemon Fire Red (U)(Squirrels).gba`.
+
+   ⚠️ Toute autre version ne fonctionnera pas.
+
+2. Appliquez le patch Pokémon Unbound 2.1.1.1 avec [HackDex](https://www.hackdex.app/hack/pokemon-unbound). Le site attend la ROM `1636 - Pokemon Fire Red (U)(Squirrels).gba`.
+
+   À ce stade, vous disposez de la ROM Pokémon Unbound en anglais.
+
+3. Appliquez le patch français à la ROM Pokémon Unbound en anglais :
+
+   - Téléchargez le [patch BPS français](https://github.com/AntonyKervazoCanut/gba_translator/releases/download/latest/pokemon_unbound_fr.bps).
+   - Ouvrez [Rom Patcher JS](https://www.marcrobledo.com/RomPatcher.js/) et fournissez la ROM Pokémon Unbound en anglais ainsi que le fichier BPS téléchargé.
+
+### Italiano
+
+1. Procurati la ROM `1636 - Pokemon Fire Red (U)(Squirrels).gba`.
+
+   ⚠️ Qualsiasi altra versione non funzionerà.
+
+2. Applica la patch Pokémon Unbound 2.1.1.1 con [HackDex](https://www.hackdex.app/hack/pokemon-unbound). Il sito richiede la ROM `1636 - Pokemon Fire Red (U)(Squirrels).gba`.
+
+   A questo punto avrai la ROM di Pokémon Unbound in inglese.
+
+3. Applica la patch francese alla ROM inglese di Pokémon Unbound:
+
+   - Scarica la [patch BPS francese](https://github.com/AntonyKervazoCanut/gba_translator/releases/download/latest/pokemon_unbound_fr.bps).
+   - Apri [Rom Patcher JS](https://www.marcrobledo.com/RomPatcher.js/) e inserisci la ROM inglese di Pokémon Unbound insieme al file BPS scaricato.
+
+### Deutsch
+
+1. Besorge dir die ROM `1636 - Pokemon Fire Red (U)(Squirrels).gba`.
+
+   ⚠️ Keine andere Version wird funktionieren.
+
+2. Wende den Pokémon-Unbound-Patch 2.1.1.1 mit [HackDex](https://www.hackdex.app/hack/pokemon-unbound) an. Die Website erwartet die ROM `1636 - Pokemon Fire Red (U)(Squirrels).gba`.
+
+   Nun hast du die englische Pokémon-Unbound-ROM.
+
+3. Wende den französischen Patch auf die englische Pokémon-Unbound-ROM an:
+
+   - Lade den [französischen BPS-Patch](https://github.com/AntonyKervazoCanut/gba_translator/releases/download/latest/pokemon_unbound_fr.bps) herunter.
+   - Öffne [Rom Patcher JS](https://www.marcrobledo.com/RomPatcher.js/) und gib dort die englische Pokémon-Unbound-ROM zusammen mit der heruntergeladenen BPS-Datei an.
+
+### Español
+
+1. Consigue la ROM `1636 - Pokemon Fire Red (U)(Squirrels).gba`.
+
+   ⚠️ Ninguna otra versión funcionará.
+
+2. Aplica el parche Pokémon Unbound 2.1.1.1 con [HackDex](https://www.hackdex.app/hack/pokemon-unbound). El sitio requiere la ROM `1636 - Pokemon Fire Red (U)(Squirrels).gba`.
+
+   En este punto tendrás la ROM de Pokémon Unbound en inglés.
+
+3. Aplica el parche francés a la ROM inglesa de Pokémon Unbound:
+
+   - Descarga el [parche BPS francés](https://github.com/AntonyKervazoCanut/gba_translator/releases/download/latest/pokemon_unbound_fr.bps).
+   - Abre [Rom Patcher JS](https://www.marcrobledo.com/RomPatcher.js/) y proporciona la ROM inglesa de Pokémon Unbound junto con el archivo BPS descargado.
+
 ## Community
 
 The Discord server is the main place to discuss the project, ask questions, report translation issues, share screenshots, and coordinate contributions.
