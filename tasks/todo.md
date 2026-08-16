@@ -2377,9 +2377,19 @@ d’annulation dans le reste du jeu.
 - [x] Identifier la cellule fixe et reproduire « Collecteur » à `0x23E787`.
 - [x] Ajouter une garde rouge exigeant l’abréviation « Collec ».
 - [x] Corriger la source FR et protéger l’entrée contre les régressions.
-- [ ] Reconstruire la ROM, décoder la cellule et valider les suites pertinentes.
-- [ ] Relire le diff, committer, rebaser et clore l’issue sans push.
+- [x] Reconstruire la ROM, décoder la cellule et valider les suites pertinentes.
+- [x] Relire le diff, committer et préparer l’intégration sans push.
 
 ## Revue
 
-- À compléter après validation.
+- La garde TDD a d’abord échoué avec « Collecteur » au lieu de « Collec »,
+  puis passe après la correction chirurgicale de l’entrée active `0x23E787`.
+- « Collectionneur » occuperait 13 caractères avant le terminateur et dépasserait
+  la cellule fixe de 13 octets ; « Collec » tient en 6 octets plus `0xFF`.
+- La garde d’intégrité protège désormais le libellé contre « Collecteur »,
+  « Chineur », « Collectionneur » et le résidu anglais « Collector ».
+- `make build-fr` réussit ; la ROM reconstruite contient
+  `bd e3 e0 e0 d9 d7 ff 00 00 00 00 00 00` et se décode exactement en
+  « Collec ». Les tests ciblés et les 29 gardes d’intégrité passent.
+- Le hook de commit valide 1 901 tests Python rapides (1 skip historique),
+  68 tests Vitest et les builds complets FR/IT/DE. Aucun push n’est effectué.

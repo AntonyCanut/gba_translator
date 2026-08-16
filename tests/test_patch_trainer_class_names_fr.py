@@ -1,4 +1,4 @@
-"""Régression des classes de dresseurs aquatiques françaises (issue #161)."""
+"""Régressions des classes de dresseurs françaises (issues #161 et #184)."""
 
 from __future__ import annotations
 
