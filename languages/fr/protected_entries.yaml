@@ -2099,3 +2099,10 @@ entries:
   expected: RegarTouchan
   forbidden:
   - RegarTouchnt
+- offset: '0xA4B24E'
+  name: Combat — dégâts du gel
+  issue: '#186'
+  expected: '{B_ATK_NAME_WITH_PREFIX} souffre du gel !'
+  forbidden:
+  - '{B_ATK_NAME_WITH_PREFIX} souffre de\nson engelure !'
+  - '{B_ATK_NAME_WITH_PREFIX} souffre\ndu gel !'
