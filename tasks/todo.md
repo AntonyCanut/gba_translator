@@ -2369,3 +2369,17 @@ d’annulation dans le reste du jeu.
   passent, ainsi que 1 901 tests Python rapides (1 skip historique) et 68 tests
   Vitest. `actionlint`, le parsing YAML et `git diff --check` sont propres.
 - Aucun push ni lancement distant supplémentaire n’a été effectué.
+
+# Issue #184 — Classe de dresseur de Cooper
+
+## Plan TDD
+
+- [x] Identifier la cellule fixe et reproduire « Collecteur » à `0x23E787`.
+- [x] Ajouter une garde rouge exigeant l’abréviation « Collec ».
+- [x] Corriger la source FR et protéger l’entrée contre les régressions.
+- [ ] Reconstruire la ROM, décoder la cellule et valider les suites pertinentes.
+- [ ] Relire le diff, committer, rebaser et clore l’issue sans push.
+
+## Revue
+
+- À compléter après validation.

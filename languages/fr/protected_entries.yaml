@@ -11,6 +11,15 @@ entries:
   expected: Ne bouge pas…
   forbidden:
   - Ne bouge…
+- offset: '0x23E787'
+  name: Classe de dresseur Collector — abréviation troisième génération
+  issue: '#184'
+  expected: Collec
+  forbidden:
+  - Collecteur
+  - Chineur
+  - Collectionneur
+  - Collector
 - offset: '0x419C62'
   name: Capacités connues — navigation et sortie
   issue: '#181'
