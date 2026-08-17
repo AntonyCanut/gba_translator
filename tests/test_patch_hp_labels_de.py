@@ -37,6 +37,7 @@ from languages.de.patches.hp_labels import (
     PARTY_KP_FILL,
     PARTY_NCOLS,
     PARTY_OLD_TILES,
+    TEXT_HP_LABELS,
     _draw_green_label,
     _draw_grey_label,
     _draw_party_label,
@@ -45,6 +46,7 @@ from languages.de.patches.hp_labels import (
     _hpel_rows,
     _make_draw_battle_label,
     _patch_hp_element,
+    _patch_text_hp_labels,
     _tiles_hex,
 )
 from languages.fr.patches import hp_labels as fr_hp_labels
@@ -210,6 +212,39 @@ class TestRawHealthboxElements(unittest.TestCase):
         self.assertTrue(_hpel_is_h(bytes.fromhex(HPEL_OLD_H_ALT_HEX)))
 
 
+class TestFixedTextHpLabels(unittest.TestCase):
+    def test_every_fixed_hp_cell_becomes_kp_and_patch_is_idempotent(self):
+        end = max(TEXT_HP_LABELS) + 8
+        rom = bytearray(b"\x5A" * end)
+        for offset, (old, _new) in TEXT_HP_LABELS.items():
+            rom[offset : offset + len(old)] = old
+
+        self.assertEqual(_patch_text_hp_labels(rom), len(TEXT_HP_LABELS))
+        after_first = bytes(rom)
+        self.assertEqual(_patch_text_hp_labels(rom), 0)
+        self.assertEqual(bytes(rom), after_first)
+
+        for offset, (_old, new) in TEXT_HP_LABELS.items():
+            self.assertEqual(bytes(rom[offset : offset + len(new)]), new)
+
+    def test_fixed_text_patch_preserves_adjacent_bytes(self):
+        for offset, (old, _new) in TEXT_HP_LABELS.items():
+            rom = bytearray(b"\x5A" * (offset + len(old) + 2))
+            rom[offset : offset + len(old)] = old
+            before = (rom[offset - 1], rom[offset + len(old)])
+
+            self.assertEqual(_patch_text_hp_labels(rom), 1)
+            self.assertEqual((rom[offset - 1], rom[offset + len(old)]), before)
+
+    def test_unknown_fixed_text_cell_is_never_overwritten(self):
+        end = max(TEXT_HP_LABELS) + 8
+        rom = bytearray(b"\x5A" * end)
+        before = bytes(rom)
+
+        self.assertEqual(_patch_text_hp_labels(rom), 0)
+        self.assertEqual(bytes(rom), before)
+
+
 @pytest.mark.rom
 class TestBuiltDeRomShowsKp(unittest.TestCase):
     """The shipped DE ROM must contain the « KP » tiles in all three blocks."""
@@ -274,6 +309,26 @@ class TestBuiltDeRomShowsKp(unittest.TestCase):
             "residual « HP » healthbox H tiles at "
             + ", ".join(f"0x{off:08X}" for off in residual),
         )
+
+    def test_fixed_text_labels_are_kp(self):
+        for offset, (_old, new) in TEXT_HP_LABELS.items():
+            self.assertEqual(
+                bytes(self.rom[offset : offset + len(new)]),
+                new,
+                f"0x{offset:08X} ne contient pas « KP »",
+            )
+
+    def test_shared_hp_label_pointer_consumers_still_target_kp(self):
+        shared_label = 0x004169C2
+        for pointer_site in (0x00125174, 0x008C0FFC, 0x008C980C):
+            target = int.from_bytes(
+                self.rom[pointer_site : pointer_site + 4], "little"
+            ) - 0x08000000
+            self.assertEqual(target, shared_label)
+            self.assertEqual(
+                bytes(self.rom[target : target + 3]),
+                TEXT_HP_LABELS[shared_label][1],
+            )
 
 
 if __name__ == "__main__":

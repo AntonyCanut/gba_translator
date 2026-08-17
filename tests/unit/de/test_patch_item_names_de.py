@@ -83,6 +83,7 @@ class TestItemNameData(unittest.TestCase):
         self.assertEqual(ITEM_NAMES["Heart Scale"], "Herzschuppe")
         self.assertEqual(ITEM_NAMES["Bug Gem"], "Käferjuwel")
         self.assertEqual(ITEM_NAMES["HM01"], "VM01")
+        self.assertEqual(ITEM_NAMES["HP Up"], "KP-Plus")
 
     def test_documented_exclusions_are_absent(self):
         # These official German names exceed the 13-glyph cell and must not
@@ -118,7 +119,9 @@ class TestItemNameData(unittest.TestCase):
             missing,
             {"Room Service", "Bottle Cap", "Purp Nectar"} | fr_only_source_keys,
         )
-        self.assertEqual(extra, standard_ball_keys)
+        # FR receives this medicine name through its legacy translation data;
+        # DE must patch the fixed gItems cell explicitly.
+        self.assertEqual(extra, standard_ball_keys | {"HP Up"})
         self.assertEqual(set(fr.BERRY_NAMES), set(BERRY_NAMES))
 
 
@@ -156,6 +159,12 @@ class TestApplyItemNameFixes(unittest.TestCase):
             self.assertEqual(decode_name(data, off), ALL_NAMES[en], en)
             data_off = off + NAME_FIELD
             self.assertEqual(bytes(data[data_off : data_off + 2]), b"\xAB\x01", en)
+
+    def test_patches_hp_up_to_official_kp_plus(self):
+        data = _make_item_rom([(0, "HP Up")])
+
+        self.assertEqual(apply_item_name_fixes(data, ALL_NAMES), 1)
+        self.assertEqual(decode_name(data, ITEM_TABLE_BASE), "KP-Plus")
 
 
 class TestItemDescOverrides(unittest.TestCase):

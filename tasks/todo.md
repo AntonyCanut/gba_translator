@@ -1,3 +1,27 @@
+# B-600 — suivi des libellés KP allemands
+
+## Diagnostic et plan
+
+- [x] Reconstruire la ROM DE et comparer les surfaces HP avec les mécanismes FR.
+- [x] Identifier les cellules fixes encore hors du pipeline de réinsertion.
+- [x] Ajouter des régressions rouges pour les libellés courts et `HP Up`.
+- [x] Corriger uniquement les sources DE ; reconstruire ensuite la ROM.
+- [ ] Vérifier les pointeurs consommateurs, l'idempotence et les non-régressions FR/IT.
+- [ ] Relire, committer, rebaser et intégrer localement sans push.
+
+### Cause racine
+
+- Deux libellés CFRU `HP` sont stockés dans des cellules fixes : l'un à
+  `0x3FD590`, l'autre à `0x4169C2` et partagé par trois tables de pointeurs.
+  Même lorsque `combined_de.txt` contient `KP`, le réinjecteur ne remplace pas
+  ces cellules non repointables.
+- Le nom d'objet fixe `HP Up` à `0x876CD4` n'était pas enregistré dans le patch
+  allemand `item_names.py`; il restait donc anglais après un build propre.
+
+### Revue
+
+- À compléter après validation.
+
 # B-617 — pipeline de publication BPS run #107
 
 ## Diagnostic et conception

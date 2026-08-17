@@ -10,6 +10,7 @@ import pytest
 from languages.de.patches import (
     dexnav_headers,
     levelup_stat_abbreviations,
+    item_names,
     options_footer,
     pc_messages,
     shop,
@@ -130,3 +131,14 @@ def test_summary_word_images_follow_hp_labels_in_the_de_pipeline() -> None:
     descriptor = (ROOT / "languages" / "de" / "lang.yaml").read_text(encoding="utf-8")
 
     assert descriptor.index("- hp_labels") < descriptor.index("- summary_stat_labels")
+
+
+@pytest.mark.rom
+def test_built_rom_uses_kp_in_every_fixed_hp_surface() -> None:
+    if not BUILT_DE_ROM.exists():
+        pytest.skip("GenedRom-de.gba non construite")
+    rom = BUILT_DE_ROM.read_bytes()
+
+    assert item_names.decode_name(rom, 0x876CD4) == "KP-Plus"
+    for offset in (0x3FD590, 0x4169C2):
+        assert rom[offset : offset + 3] == bytes((0xC5, 0xCA, 0xFF))

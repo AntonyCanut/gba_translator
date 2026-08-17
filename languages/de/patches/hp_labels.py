@@ -1,11 +1,11 @@
 #!/usr/bin/env python3
-"""Patch every HP/PS label graphic to the official German « KP » (Kraftpunkte).
+"""Patch every fixed HP/PS label surface to German « KP » (Kraftpunkte).
 
 Sibling of ``patch_hp_labels_fr.py`` — identical LZ77 block layout and
 verification machinery, different letters (French draws « PV », German draws
 « KP »). The interface uses three shared label sheets, four battle-healthbox
-sheets and one raw healthbox-element table. None is text, so the translation
-pipeline never touches them:
+sheets, one raw healthbox-element table and two fixed CFRU text cells. The
+generic translation pipeline cannot rewrite these fixed surfaces:
 
 1. Party-menu label (CFRU custom party screen) — LZ77 block 0x008001D0.
    The green « HP » is drawn across four tiles of an 8-tile-wide sheet:
@@ -28,6 +28,11 @@ pipeline never touches them:
 4. Battle healthboxes — four LZ77 sheets plus the raw element table used when
    a status badge refreshes the box. Every « H » tile is redrawn as « K »;
    the existing « P » tile and all pill/bar pixels remain byte-exact.
+
+5. Fixed CFRU labels — ``0x3FD590`` is a compact battle/interface label and
+   ``0x4169C2`` is shared by three pointer tables. Both remain ``HP`` after a
+   clean generic build even though the first translation exists in
+   ``combined_de.txt``; their three-byte cells cannot be relocated.
 
 All compressed patches are strict: the current label tiles must byte-match a known
 variant (EN « HP » / ES « PS ») or the already-patched « KP »; anything else
@@ -52,8 +57,20 @@ ROOT_DIR = Path(__file__).resolve().parents[3]
 sys.path.insert(0, str(ROOT_DIR))
 
 from languages.fr.patches.font import lz77_compress, lz77_decompress
+from src.text.charmap_data import CHAR_TO_BYTE
 
 TILE = 32  # bytes per 4bpp 8×8 tile
+
+
+def _encode_fixed_label(text: str) -> bytes:
+    return bytes(CHAR_TO_BYTE[char] for char in text) + b"\xFF"
+
+
+# Fixed three-byte CFRU cells outside the normal repointable text flow.
+TEXT_HP_LABELS: dict[int, tuple[bytes, bytes]] = {
+    0x003FD590: (_encode_fixed_label("HP"), _encode_fixed_label("KP")),
+    0x004169C2: (_encode_fixed_label("HP"), _encode_fixed_label("KP")),
+}
 
 
 # ---------------------------------------------------------------------------
@@ -402,6 +419,25 @@ def _patch_hp_element(rom: bytearray) -> int:
     return patched
 
 
+def _patch_text_hp_labels(rom: bytearray) -> int:
+    """Rewrite byte-exact fixed ``HP`` cells to ``KP`` without relocation."""
+    patched = 0
+    for offset, (old, new) in TEXT_HP_LABELS.items():
+        current = bytes(rom[offset : offset + len(old)])
+        if current == new:
+            continue
+        if current != old:
+            print(
+                f"  fixed HP text label (0x{offset:08X}): unknown bytes, skip",
+                file=sys.stderr,
+            )
+            continue
+        rom[offset : offset + len(new)] = new
+        patched += 1
+        print(f"  fixed HP text label (0x{offset:08X}) « HP » → « KP »")
+    return patched
+
+
 # ---------------------------------------------------------------------------
 # Patch driver
 # ---------------------------------------------------------------------------
@@ -493,7 +529,7 @@ def apply_patches(rom_path: Path) -> int:
     if rom[0xB2] != 0x96:
         raise SystemExit(f"Not a valid GBA ROM: {rom_path}")
 
-    patched = 0
+    patched = _patch_text_hp_labels(rom)
     patched += _patch_label(
         rom, PARTY_BLOCK, PARTY_OLD_TILES.keys(),
         {"EN « HP »": PARTY_OLD_TILES}, _draw_party_label,

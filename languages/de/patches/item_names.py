@@ -150,6 +150,8 @@ BERRY_NAMES = {
 # "Silberkronkorken" is 16, "Purp Nectar"/Purple Nectar -> "Purpurner Nektar"
 # is 16 with the space).
 ITEM_NAMES = {
+    # Fixed medicine name cell; the generic text reinserter does not touch it.
+    "HP Up": "KP-Plus",
     # Evolution & special stones
     "Sun Stone": "Sonnenstein",
     "Moon Stone": "Mondstein",
