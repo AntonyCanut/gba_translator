@@ -148,7 +148,8 @@ def test_versioned_assets_match_the_deterministic_generators(tmp_path: Path) -> 
 
     assert status_badges.apply_patches(generated) == 8
     assert type_icons.apply_patches(generated) == 34
-    assert hp_labels.apply_patches(generated) == 9
+    # 9 graphics/raw healthbox surfaces + 2 fixed CFRU text cells.
+    assert hp_labels.apply_patches(generated) == 11
     assert summary_stat_labels.apply_patches(generated) == 11
 
     _assert_rom_matches_assets(generated.read_bytes())

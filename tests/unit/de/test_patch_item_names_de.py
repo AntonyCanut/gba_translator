@@ -165,6 +165,7 @@ class TestApplyItemNameFixes(unittest.TestCase):
 
         self.assertEqual(apply_item_name_fixes(data, ALL_NAMES), 1)
         self.assertEqual(decode_name(data, ITEM_TABLE_BASE), "KP-Plus")
+        self.assertEqual(apply_item_name_fixes(data, ALL_NAMES), 0)
 
 
 class TestItemDescOverrides(unittest.TestCase):

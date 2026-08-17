@@ -5,9 +5,9 @@
 - [x] Reconstruire la ROM DE et comparer les surfaces HP avec les mécanismes FR.
 - [x] Identifier les cellules fixes encore hors du pipeline de réinsertion.
 - [x] Ajouter des régressions rouges pour les libellés courts et `HP Up`.
-- [x] Corriger uniquement les sources DE ; reconstruire ensuite la ROM.
-- [ ] Vérifier les pointeurs consommateurs, l'idempotence et les non-régressions FR/IT.
-- [ ] Relire, committer, rebaser et intégrer localement sans push.
+- [x] Corriger uniquement les sources DE et reconstruire la ROM.
+- [x] Vérifier les pointeurs consommateurs, l'idempotence et les non-régressions FR/IT.
+- [x] Relire, committer, rebaser et intégrer localement sans push.
 
 ### Cause racine
 
@@ -20,7 +20,22 @@
 
 ### Revue
 
-- À compléter après validation.
+- `hp_labels.py` remplace désormais les cellules CFRU fixes `0x3FD590` et
+  `0x4169C2` par `KP` en plus des neuf surfaces graphiques/raw déjà couvertes.
+  Les trois pointeurs consommateurs de `0x4169C2` restent inchangés et décodent
+  tous `KP`; les octets voisins sont préservés et une seconde application ne
+  modifie rien.
+- `item_names.py` traduit la cellule `HP Up` en nom officiel `KP-Plus`, dans le
+  même patch fixe que les autres noms d'objets DE. Aucune source FR ou IT n'a
+  été modifiée.
+- La revue indépendante a détecté l'ancien compteur de neuf surfaces dans le
+  test des assets ROM; il attend maintenant explicitement neuf surfaces
+  graphiques/raw plus deux cellules texte.
+- Validation : hook complet avec 1 915 tests Python réussis et 2 ignorés,
+  68 tests Vitest et builds FR/IT/DE réussis; audit DE à 0 collision; matrice
+  ciblée DE/ROM/E2E à 320 tests réussis. La ROM finale décode `KP` aux deux
+  offsets, `KP-Plus` à `0x876CD4` et `KP` via les trois pointeurs partagés.
+- Aucun push distant n'a été effectué.
 
 # B-617 — pipeline de publication BPS run #107
 
